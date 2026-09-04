@@ -22,7 +22,21 @@ CommitMoEは、GPUメモリに全expert重みを保持できないMixture-of-Exp
 ## 手法のあらまし
 中核はCommit RouterとOutput-Weight Adjustment（OWA）である。Commit Routerは現在のtoken状態から次のMoE layerで選択されるexpertを予測する軽量MLPで、同一tokenの隣接層相関を使う1層MLP版と、cross-token情報も扱う2層MLP版を検討する。元モデルと予測器は分離され、native routerは凍結したまま、教師router分布とのKL divergenceを最小化する蒸留で予測器だけを学習する。推論時は予測結果に基づき次層expertを非同期にCPUからGPUへ転送し、native routerの確定を待たずに準備する。次層到達後、予測集合とnative Top-kが一致すれば通常のrouter重みで実行し、一部だけ一致した場合はOWAがnative routerの確率質量を実際に常駐・先読み済みのexpertへ再配分する。完全不一致でも追加のcache-miss expertをロードせず、準備済みexpertを使うため転送待ちが復活しない。実装はPyTorchとMoE-Infinityを拡張し、expert transferとGPU計算を別CUDA streamで重ねる。これは「高精度な予測を目指すだけ」のprefetchではなく、router certaintyとsubstitution toleranceの相関を利用して、予測ミス処理そのものを排除する設計である。代償として出力は厳密には元モデルと同一でなく、品質保証は統計的評価に依存する。
 ## 評価
+
+### まず見るところ
+- **結論:** 予測ミス時のfallback loadを完全に捨てるとoffload待ちは大きく減るが、**予測expertをnative expertの代わりに実行する近似手法**になる。
+- **速度・効率:** 条件次第で非常に大きなspeedupが出る。headline値はlossless prefetchとは同列比較しない方がよい。
+- **品質:** 平均benchmarkでは元モデルに近い一方、token単位の出力一致やworst-case品質は保証しない。
+- **研究上の意味:** cache miss時にresident/prefetched expertへ置換するquality–I/O trade-offを真正面から扱うため、native miss expertの一部だけロードする研究と近い。
+- **評価の強さ／注意点:** **RTX 4090/2080 Ti実機**。CPU DRAM offloadのみで、長文の累積誤差・SSD・energyは未評価、公式コードも未確認。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
 Qwen1.5-MoE-Chat、DeepSeek-V2-Lite-Chat、Mixtral-8x7B-Instructを、RTX 4090＋Xeon W5-3435X（PCIe 4.0 x16）およびRTX 2080 Ti＋Xeon E5-2680 v4（PCIe 3.0 x16）で評価している。MoE-Infinityを含むoffloading baselineに対し、end-to-end推論を1.3〜9.4倍高速化しながら、複数の言語理解・推論ベンチマークで元モデルに近い品質を維持した。特に、予測expertがnative Top-kと一つも一致しないケースを置換しても、QwenのGSM8Kは53.22から54.51、BBHは36.67から36.75、DeepSeekでは69.59から69.74、49.12から49.16となり、低確信度tokenでの置換が必ずしも品質低下につながらないという観察を支える。ただし、この結果は平均的なtask scoreであり、個々のtoken出力の一致やworst-case品質を保証しない。速度向上幅はPCIe世代、cache容量、モデルのrouting予測可能性に大きく依存する。評価は実機で、trace-driven simulationのみではないが、SSD読出し量、energy/token、長文での累積誤差は主要指標として扱われていない。コード公開は論文一次資料から確認できず、再現性と他runtimeへの移植コストは今後の課題である。
+
+</details>
+
 ## 引用関係
 登録済みの [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](../01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)、[MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](../01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)、[Fast Inference of Mixture-of-Experts Language Models with Offloading](../01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md) などを参考文献に含み、MoE-Infinity上で実装・比較している。
 ## 一次資料

@@ -24,8 +24,22 @@ D-LLMは、入力トークンごとにTransformer層を実行するかskipする
 hard decisionは順伝播時だけ使い、逆伝播ではGumbelノイズとsoft probabilityを通すため、skip/executeの離散選択をend-to-endで最適化できる。KV evictionを行わない設定は計算を節約しても、次tokenが参照できる文脈を残す必要から品質が落ちる。文頭m tokenを予約するのはこの長距離依存への安全策である。
 層lへの入力x_lを2線形層＋活性化のdecision module g_lへ入れ、skip/execute確率を得る。argmaxでhardな二値b_lを作るが非微分なので、学習時はGumbel-Softmaxとstraight-through estimatorを使う。順伝播はx_\{l+1\}=b_skip x_l+b_exec f_l(x_l)で、実行しない層のattention/FFNを丸ごと省く。平均skip率ω_nと指定ΩのL1差をacceleration-ratio lossにし、通常のlanguage-model cross-entropyと重みαで合算する。事前学習から動的モデルを作れるほか、LoRAで既存Llamaに追加する。KV evictionでは、ある層でskipした過去トークンのK/Vをattention maskで後続queryから隠す。ただし文頭トークンは後続予測への寄与が大きく、最初のmトークンを常時保持する。本実験はm=2、最初の2層は安定化のためdecision対象外、最大文脈1024、decision hidden dimension 512。skipトークンを隠すことでKV容量もskip率に比例して減るが、文脈情報を失う危険があり、保持数を明示的に調整する。
 ## 評価
+
+### まず見るところ
+- **結論:** tokenごとに実行層を変えることで、full-depth LoRAと同程度の品質をかなり少ない計算予算で狙える。
+- **計算効率:** headlineは**FLOPsが約半分**という結果で、token-adaptive computeの効果は明確。
+- **実速度:** **wall-clock speedupは主評価ではない**。不規則なlayer分岐・decision module・mask生成のoverheadがあるため、FLOPs半減＝2倍高速ではない。
+- **品質/KV:** KV evictionも組み合わせて容量を減らすが、長距離文脈を失うtrade-offがある。
+- **評価の強さ／注意点:** LoRA等でdynamic decision moduleを学習する必要があり、既存checkpointへのtraining-free最適化ではない。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
 D-LLMの表はFLOPsをLlama 2 7B LoRA full-depth=1.00に正規化した平均値であり、壁時計ではない。従って0.55という値は理論計算量が約半分という意味で、decision moduleやmask生成の実装費用を別途考慮する必要がある。
 Llama 2 7Bの表では、D-LLMのPPL/FLOPsはAlpaca 6.01/0.59、SAMSum 3.18/0.55、GSM8K accuracy 0.29/0.59、MaWPS 0.74/0.56、BoolQ 0.73/0.52、PIQA 0.84/0.52、SIQA 0.82/0.54、OBQA 0.80/0.53、MMLU 0.53/0.55（LoRA full-depth FLOPs=1.00）。比較対象MoD、Shortened-LLaMA（PPL/Taylor）、Ada-Inferはいずれも0.56〜0.90のFLOPsで、D-LLMは全9データセットで概ね最良または同等。Llama 3 8Bでも5データセット以上で55%未満の計算量でLoRAを上回る。MaWPS/OBQAでは40%/30% FLOPsでも100% FLOPs baselineを超える一方、SAMSumは計算量を増やしすぎると過学習でPPLが悪化。m=0,1,2,4,8を比べm=2が最良で、KV evictionなしでは精度が下がる。限界はdecision moduleとGumbel温度、α・Ωのデータ/端末依存、層ごと・tokenごとの不規則分岐がGPU実効速度を下げること。報告速度は主にFLOPs/KV容量で、壁時計での大規模バッチ実証は限定的である。浅いモデルや複雑な数学では過剰skipが誤りを増幅し、skip層のKVを捨てる積極策は長文文脈を損ねうる。
+
+</details>
+
 ## 一次資料
 - [論文](https://proceedings.neurips.cc/paper_files/paper/2024/hash/03469b1a66e351b18272be23baf3b809-Abstract-Conference.html)
 - [公式コード](https://github.com/Jyk-122/D-LLM)

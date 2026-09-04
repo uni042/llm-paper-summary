@@ -26,8 +26,22 @@ LayerSkipは、同じdecoderの途中層を小さいdraftモデルとして使�
 学習では各sampleごとにdropout maskを変えるため、同じ重みが複数の出口深度を経験する。推論時は出口層Eでd個を連続生成し、残り層を一回のparallel forwardにまとめる。受理率が十分高ければ、浅層draftの計算を低コストで再利用できる。
 各層lを確率的にdropoutするが、後段ほど最大dropout率pmaxを大きくする。学習中のlayer-dropoutは異なる深さの共有重みsubmodelを同時に訓練する効果があり、early-exit lossは層lのhidden stateを共通LM headに通したcross-entropyを加える。学習は全層の能力を保ちつつ浅い層の予測精度を押し上げる。推論のearly exitではE層まで計算して候補をdトークン生成し、残りL−E層で候補をparallel verificationする。正しいprefixはそのまま受理し、最初の不一致位置は検証分布から訂正するので、理想的には完全モデルと同じ分布を保つ。前半層はdraftとverifyで同じ順に通るため、activation/KVを共有できる。出口層Eとspeculation長dは品質と速度のトレードオフを作る。layer dropout率、時間方向のcurriculum、early-exit loss重み、rotational curriculum（各層を順番に重視）を調整し、浅層が過度に弱くならないようにする。
 ## 評価
+
+### まず見るところ
+- **結論:** 同一モデルの浅い層をdraft、残りをverifierに使うと、別draftモデルなしでself-speculative decodingを成立させられる。
+- **速度・効率:** **H100で実token/sを測定**し、taskにより概ね1.3〜2倍超のspeedupが出る。
+- **品質:** self-speculative verificationで最終分布を補正するため、単純early exitより品質を守りやすい。
+- **メモリ:** 別draft modelを常駐させず前半層/KVを共有できるのが利点。
+- **評価の強さ／注意点:** 専用のlayer-dropout＋early-exit学習レシピが必要で、既存checkpointを無変更で使う方式ではない。exit深度とdraft長の調整も必要。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
 本実験では継続事前学習とスクラッチ学習を分け、CNN/DM・XSUM・HumanEvalでROUGE/受理率/毎秒tokenを比較する。自己推測の速度は出口層Eとdraft長dの組合せに依存し、浅すぎる出口では訂正が増え、深すぎる出口ではdraft計算が重くなる。
 継続事前学習ではLlama 2 7B/13Bを52Bトークンの自然言語・コード混合コーパスで訓練し、CNN/DM、XSUM、HumanEvalをNVIDIA H100で評価。7BのCNN/DMは自己推測E=8,d=12でROUGE-2 0.078（自回帰0.079）、受理率68.9%、62.7→127.9 token/s、1.86倍。XSUMはROUGE-2 0.073を保ち1.54倍、HumanEvalは0.042で1.83倍。13BはCNN/DM1.81倍、XSUM1.34倍、HumanEval1.66倍。スクラッチ26BトークンではLlama 2 1.5BがCNN/DM 1.76倍、7Bが2.16倍で、同一トークン数の非LayerSkip学習より浅層精度が高い。論文の要約ではCNN/DM最大2.16倍、コード1.82倍、TOPv2 2.0倍。early exit単独は高速でも品質を失い、self-speculationが補正する。限界は、self-speculationには専用レシピで再学習/fine-tuningが必要（Draft&Verifyは重み変更不要）、pmax・escale・rotational間隔・出口層・dの調整が必要、スクラッチ時は学習率を上げないと精度を維持しにくいこと。受理率が低い出口やd過大では検証計算が増え、深層モデルでは速度利得が小さくなる。
+
+</details>
+
 ## 一次資料
 - [論文](https://aclanthology.org/2024.acl-long.681/)
 - [公式コード](https://github.com/facebookresearch/LayerSkip)
