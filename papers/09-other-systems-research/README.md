@@ -1,7 +1,9 @@
 # その他システム研究
 
-収録論文: 13本。公開日が新しい順。
+収録論文: 14本。公開日が新しい順。
 
+- 2026-09-03 — [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)
+  - 軽量な追加weightで複数tokenを並列提案し、元の自己回帰分布を保つlossless samplerで最大3倍の生成高速化を狙うUno方式。
 - 2025-11-18 — [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)
   - GPU・CPU・SSD間でtensorの再利用価値と移動コストを見積もり、LLM学習のcache配置とmigrationを動的に最適化する方式。
 - 2025-08-18 — [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)
