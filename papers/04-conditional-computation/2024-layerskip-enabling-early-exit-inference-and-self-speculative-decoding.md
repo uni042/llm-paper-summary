@@ -18,27 +18,137 @@ last_checked: "2026-09-02"
 > 学習時のlayer dropoutとearly-exit損失により、同一モデルで早期終了とself-speculative decodingを可能にする手法。
 
 ## 概要
-この構成は追加分類器を持たない。
-通常の別モデルdraftでは、draftの重み・KV・メモリを別に持つため、速度向上と引き換えに常駐メモリが増える。LayerSkipは同じ前半層を共有するため、このコストを抑えつつ、残り層を検証器として再利用できる。さらに一つの共有LM headで全出口を採点するため、出口ごとの追加分類器を設計しなくてよい。
-LayerSkipは、同じdecoderの途中層を小さいdraftモデルとして使い、早期退出（early exit）とself-speculative decodingを一体化する端到端手法である。通常のLLMは全層を通すまで各トークンの予測を確定できないが、途中層の表現が十分に読出し可能なら、そこから候補列を出し、残り層で一括検証・訂正できる。推論時に別draftモデルをロードしないため、通常のspeculative decodingよりメモリが小さく、draft/verifyで前半層の計算とactivationを共有できる。核心は学習レシピで、層dropout率を前半で低く後半で高くし、全層に同一LM headでearly-exit lossを課す。これによって途中層の出力分布を最終層へ整列させる。Llama系の複数サイズ、スクラッチ事前学習・継続事前学習・コード/タスクfine-tuningに適用し、重みを専用推論器へ変換せずに速度を上げる。論文は要約CNN/DM最大2.16倍、コード1.82倍、TOPv2 semantic parsing 2.0倍を報告する。
+LayerSkipは、同じLLMの浅い層を**draft modelの代わり**に使い、残りの層でそのdraft tokenを検証する `self-speculative decoding` を成立させる学習レシピである。
+
+通常のspeculative decodingでは別の小型draft modelを常駐させるため、重み・KV・メモリが追加で必要になる。LayerSkipは同一モデルの前半層をdraft、後半層をverifierとして使うので、別モデルを持たなくてよい。
+
+ただし既存checkpointの中間層はそのままでは次token予測精度が低い。そこで学習時に `layer dropout` と `early-exit loss` を加え、中間層からでもLM headで予測しやすい表現を作る。
+
+H100実機でtoken/sまで測定しており、taskにより約1.3〜2.16倍のspeedupを示す。単純な層skipではなく、**浅い推測を後段で検証するため品質を守りやすい**のが特徴である。
+
 ## 手法のあらまし
-また、検証層は同一モデルの残り層であり、別モデルのロードや重み転送を要しない。この共有がメモリ削減と速度向上の根拠になる。
-学習では各sampleごとにdropout maskを変えるため、同じ重みが複数の出口深度を経験する。推論時は出口層Eでd個を連続生成し、残り層を一回のparallel forwardにまとめる。受理率が十分高ければ、浅層draftの計算を低コストで再利用できる。
-各層lを確率的にdropoutするが、後段ほど最大dropout率pmaxを大きくする。学習中のlayer-dropoutは異なる深さの共有重みsubmodelを同時に訓練する効果があり、early-exit lossは層lのhidden stateを共通LM headに通したcross-entropyを加える。学習は全層の能力を保ちつつ浅い層の予測精度を押し上げる。推論のearly exitではE層まで計算して候補をdトークン生成し、残りL−E層で候補をparallel verificationする。正しいprefixはそのまま受理し、最初の不一致位置は検証分布から訂正するので、理想的には完全モデルと同じ分布を保つ。前半層はdraftとverifyで同じ順に通るため、activation/KVを共有できる。出口層Eとspeculation長dは品質と速度のトレードオフを作る。layer dropout率、時間方向のcurriculum、early-exit loss重み、rotational curriculum（各層を順番に重視）を調整し、浅層が過度に弱くならないようにする。
+
+### 1. `Layer Dropout`：学習中にいろいろな深さのsubmodelを経験させる
+
+学習時、Transformer層を確率的にskipする。
+
+後段ほどdropout率を高くすることで、前半層だけでもある程度意味の通る表現を作れるようにする。
+
+これはinference時の単純なlayer pruningとは違い、**同じ重みを複数のdepthで使えるよう事前に慣らす学習**である。
+
+### 2. `Early-Exit Loss`：中間層から直接next-token予測を学習する
+
+各中間層のhidden stateを、最終層と同じLM headへ通してcross-entropy lossを追加する。
+
+出口ごとに別classifierを持つのではなく、**全出口が同じLM headを共有する**点が重要。
+
+これにより中間層の表現を最終的な語彙logitへ直接読み出しやすくする。
+
+### 3. `Self-Speculative Decoding`
+
+推論時は出口層 `E` までで数tokenをdraft生成する。
+
+その後、残りの `L-E` 層を使ってdraft token列をまとめて検証する。
+
+- draftが正しい部分 → そのままaccept
+- 最初の不一致 → full model側の予測で修正
+
+という通常のspeculative decodingと同じ考え方だが、draftとtargetが**一つのmodelの前半／後半**に分かれている。
+
+### 4. `Shared Weights / Shared KV`
+
+別draft modelを持たないので、前半層のweightを二重に常駐させる必要がない。
+
+またdraft時に作った前半層のactivation/KVをverificationでも再利用できる。
+
+この共有が、外部draft model方式に対するmemory上の主な利点になる。
+
+### 5. `Exit Layer E` と `Draft Length d`
+
+速度を決める主な2パラメータ。
+
+- `E`が浅すぎる → draft精度が下がりrejectが増える
+- `E`が深すぎる → draft自体が重くなる
+- `d`が短すぎる → parallel verificationの利得が小さい
+- `d`が長すぎる → reject後の無駄計算が増える
+
+つまり最適点は単なる「浅いほど速い」ではなく、acceptanceとのバランスで決まる。
+
+### 6. 既存checkpointをそのまま使う方式ではない
+
+LayerSkipの中間層がdraftとして強いのは、専用のlayer-dropout＋early-exit trainingをした結果である。
+
+既存Llama checkpointへruntimeだけ追加して同じ結果が出るわけではない。
+
 ## 評価
 
 ### まず見るところ
-- **結論:** 同一モデルの浅い層をdraft、残りをverifierに使うと、別draftモデルなしでself-speculative decodingを成立させられる。
-- **速度・効率:** **H100で実token/sを測定**し、taskにより概ね1.3〜2倍超のspeedupが出る。
-- **品質:** self-speculative verificationで最終分布を補正するため、単純early exitより品質を守りやすい。
-- **メモリ:** 別draft modelを常駐させず前半層/KVを共有できるのが利点。
-- **評価の強さ／注意点:** 専用のlayer-dropout＋early-exit学習レシピが必要で、既存checkpointを無変更で使う方式ではない。exit深度とdraft長の調整も必要。
+- **結論:** 同じモデルの前半層をdraftへ使うことで、別draft modelなしのspeculative decodingを実現できる。
+- **実速度:** **H100で実token/sを測定**し、1.3〜2倍超の改善を確認。
+- **品質:** verifierが後半層で修正するため、early exit単独より品質を保ちやすい。
+- **メモリ:** 別draft modelのweight/KVが不要。
+- **注意点:** 専用学習とexit depth / draft lengthの調整が必要。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
 
-本実験では継続事前学習とスクラッチ学習を分け、CNN/DM・XSUM・HumanEvalでROUGE/受理率/毎秒tokenを比較する。自己推測の速度は出口層Eとdraft長dの組合せに依存し、浅すぎる出口では訂正が増え、深すぎる出口ではdraft計算が重くなる。
-継続事前学習ではLlama 2 7B/13Bを52Bトークンの自然言語・コード混合コーパスで訓練し、CNN/DM、XSUM、HumanEvalをNVIDIA H100で評価。7BのCNN/DMは自己推測E=8,d=12でROUGE-2 0.078（自回帰0.079）、受理率68.9%、62.7→127.9 token/s、1.86倍。XSUMはROUGE-2 0.073を保ち1.54倍、HumanEvalは0.042で1.83倍。13BはCNN/DM1.81倍、XSUM1.34倍、HumanEval1.66倍。スクラッチ26BトークンではLlama 2 1.5BがCNN/DM 1.76倍、7Bが2.16倍で、同一トークン数の非LayerSkip学習より浅層精度が高い。論文の要約ではCNN/DM最大2.16倍、コード1.82倍、TOPv2 2.0倍。early exit単独は高速でも品質を失い、self-speculationが補正する。限界は、self-speculationには専用レシピで再学習/fine-tuningが必要（Draft&Verifyは重み変更不要）、pmax・escale・rotational間隔・出口層・dの調整が必要、スクラッチ時は学習率を上げないと精度を維持しにくいこと。受理率が低い出口やd過大では検証計算が増え、深層モデルでは速度利得が小さくなる。
+### 評価環境
+
+| 項目 | 設定 |
+|---|---|
+| GPU | NVIDIA H100 |
+| Models | Llama 2 7B / 13B、scratch 1.5B / 7B |
+| Tasks | CNN/DailyMail, XSUM, HumanEval, TOPv2 |
+| 主指標 | token/s, acceptance rate, ROUGE / task score |
+
+### Llama 2 7B：代表結果
+
+| Task | 設定 | 品質 | Acceptance | Speedup |
+|---|---|---:|---:|---:|
+| CNN/DM | E=8, d=12 | ROUGE-2 0.078 vs 0.079 | 68.9% | **1.86×** |
+| XSUM | tuned | ROUGE-2 0.073維持 | — | 1.54× |
+| HumanEval | tuned | score 0.042 | — | 1.83× |
+
+CNN/DMでは62.7 token/sから127.9 token/sまで上がる。
+
+### Llama 2 13B
+
+| Task | Speedup |
+|---|---:|
+| CNN/DM | 1.81× |
+| XSUM | 1.34× |
+| HumanEval | 1.66× |
+
+### scratch trainingの代表値
+
+| Model | CNN/DM speedup |
+|---|---:|
+| 1.5B | 1.76× |
+| 7B | **2.16×** |
+
+論文全体ではコードで最大約1.82倍、TOPv2で約2.0倍も報告する。
+
+### Early exit単独との違い
+
+単に途中層のlogitをそのまま採用すると、浅い出口ほど品質が落ちる。
+
+LayerSkipでは浅い出口を**確定出力ではなくdraft**として使い、残り層でverificationするため、speedupと品質の両立がしやすい。
+
+### 速度を決めるもの
+
+| 要因 | 影響 |
+|---|---|
+| Exit layerが浅い | draftは速いがacceptance低下 |
+| Exit layerが深い | acceptance向上、draft cost増加 |
+| Draft lengthが長い | parallelism増加、reject時の無駄も増加 |
+| LayerSkip training | 中間層精度を上げacceptance改善 |
+
+### 制約
+
+- 専用の継続事前学習／fine-tuningが必要。
+- exit layerとdraft lengthはmodel/task依存。
+- acceptanceが低いtaskではspeedupが縮む。
+- 追加training costまで含めたtotal cost比較ではない。
 
 </details>
 
@@ -47,4 +157,4 @@ LayerSkipは、同じdecoderの途中層を小さいdraftモデルとして使�
 - [公式コード](https://github.com/facebookresearch/LayerSkip)
 ## 更新履歴
 - 2026-09-02: 概要・手法・評価を一次資料に基づき拡充。
-
+- 2026-09-04: Layer Dropout / Early-Exit Loss / self-speculationを補足し、実token/s評価を表形式へ整理。
