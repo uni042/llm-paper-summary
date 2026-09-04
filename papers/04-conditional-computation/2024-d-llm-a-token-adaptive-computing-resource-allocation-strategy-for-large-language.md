@@ -18,25 +18,138 @@ last_checked: "2026-09-02"
 > トークンの難度に応じて使用するTransformer層を動的に割り当て、LLMの計算量を細粒度に制御する方式。
 
 ## 概要
-D-LLMの「動的」は文全体を一つの出口で止める意味ではなく、同一層であってもtokenごとに実行/skipが違うという意味である。そのため数学記号や難しい内容語は多層を使い、冗長な機能語は少層で処理する。Ωを学習時に指定するので、精度一定の単一モデルを作るより、端末ごとに計算予算を変えたモデルを同じ枠組みで生成できる。
-D-LLMは、入力トークンごとにTransformer層を実行するかskipするかを決める動的推論パラダイムである。従来のLLMは簡単な語や問題にも一律に全層を割り当てるが、D-LLMはトークン難度に応じて計算資源を配分する。各層の前に小さなdynamic decision moduleを置き、hidden stateからskip/executeのカテゴリ確率を出力。ユーザーが目標acceleration rate Ωを指定できるため、端末・GPU性能に合わせて平均計算量を調整できる。Llama 2 7BとLlama 3 8B（各32層）をLoRAでfew-shot fine-tuningし、Alpaca/SAMSum、GSM8K/MaWPS、BoolQ/PIQA/SIQA/OBQA/MMLUの9ベンチマークで評価した。結論としてLlama 2では約55〜59%、Llama 3では約52〜55%のFLOPsで、LoRA full-depthと同等以上の精度を得る。さらにskipされたトークンのKVを捨てるevictionによりKVストレージを約45%削減する。条件計算をトークン単位に実装し、通常の層pruningより入力・問題ごとの適応性が高い点が新規性である。
+D-LLMは、**各token・各層ごとに「この層を実行するか」を学習する**dynamic depth方式である。
+
+系列全体を同じ深度で処理するlayer pruningとは異なり、同じlayerでもtoken Aは実行、token Bはskipという分岐が起こる。難しいtokenへ多くの計算を割き、単純なtokenは浅く処理することを狙う。
+
+各層の前に小型のdecision moduleを追加し、目標計算量 `Ω` に近づくようskip率を学習する。さらに、skipしたtokenのKVを後続attentionから隠す `KV eviction` を組み合わせ、computeだけでなくKV容量も削る。
+
+Llama 2 7Bではfull-depth LoRAの約55〜59%のFLOPs、Llama 3 8Bでは約52〜55%程度まで減らしながら、多くのtaskで同等以上の品質を示す。ただし論文の中心指標はFLOPsで、**FLOPs半減＝wall-clock 2倍高速化を実証した研究ではない**。
+
 ## 手法のあらまし
-hard decisionは順伝播時だけ使い、逆伝播ではGumbelノイズとsoft probabilityを通すため、skip/executeの離散選択をend-to-endで最適化できる。KV evictionを行わない設定は計算を節約しても、次tokenが参照できる文脈を残す必要から品質が落ちる。文頭m tokenを予約するのはこの長距離依存への安全策である。
-層lへの入力x_lを2線形層＋活性化のdecision module g_lへ入れ、skip/execute確率を得る。argmaxでhardな二値b_lを作るが非微分なので、学習時はGumbel-Softmaxとstraight-through estimatorを使う。順伝播はx_\{l+1\}=b_skip x_l+b_exec f_l(x_l)で、実行しない層のattention/FFNを丸ごと省く。平均skip率ω_nと指定ΩのL1差をacceleration-ratio lossにし、通常のlanguage-model cross-entropyと重みαで合算する。事前学習から動的モデルを作れるほか、LoRAで既存Llamaに追加する。KV evictionでは、ある層でskipした過去トークンのK/Vをattention maskで後続queryから隠す。ただし文頭トークンは後続予測への寄与が大きく、最初のmトークンを常時保持する。本実験はm=2、最初の2層は安定化のためdecision対象外、最大文脈1024、decision hidden dimension 512。skipトークンを隠すことでKV容量もskip率に比例して減るが、文脈情報を失う危険があり、保持数を明示的に調整する。
+
+### 1. `Dynamic Decision Module`：tokenごとにexecute / skipを決める
+
+各Transformer層の直前に小型moduleを置き、現在のhidden stateから
+
+- この層を実行する
+- この層をskipする
+
+の2択を出す。
+
+この判定がtoken単位なので、同一batch・同一layerでも実行経路が分かれる。
+
+### 2. `Gumbel-Softmax + Straight-Through`：離散判定を学習可能にする
+
+execute / skipは本来0/1の離散判断なので、そのままではgradientを流せない。
+
+D-LLMは学習中だけGumbel-Softmaxでsoftな確率を作り、forwardではhardな0/1選択、backwardではsoft値を使うstraight-through estimatorで学習する。
+
+要するに、**推論時は本当に層を飛ばすが、学習時だけ微分可能な近似を使う**。
+
+### 3. `Acceleration-Ratio Loss`：目標計算量 Ω に寄せる
+
+単に「skipできるところは全部skip」と学習すると、品質重視ならほぼ全層実行、計算量重視なら過剰skipへ崩れやすい。
+
+そこで平均skip率と指定した目標 `Ω` の差をlossへ加え、全体の計算量を狙ったbudgetへ寄せる。
+
+`Ω`を変えることで、同じ設計から品質重視・計算量重視のモデルを作れる。
+
+### 4. 最初の2層は固定実行
+
+初期層まで動的にskipすると表現形成が不安定になるため、実験では最初の2層をdecision対象外にする。
+
+これはD-LLM固有の安全策で、全32層を完全自由にrouteしているわけではない。
+
+### 5. `KV Eviction`：skipしたtokenのKVも削る
+
+D-LLMでは、あるtokenが層lをskipした場合、そのtokenのK/Vを後続queryから隠す。
+
+これにより層計算だけでなくKV storageも減らせる。
+
+ただし長距離文脈を失いやすくなるため、文頭の最初 `m` tokenは必ずKVを残す。本実験では `m=2` が最良だった。
+
+### 6. 追加学習が必要
+
+元checkpointへ推論時だけ差し込むtraining-free手法ではない。
+
+Llama本体をLoRAで適応しつつdecision moduleも学習するため、導入コストは固定layer pruningより高い。
+
 ## 評価
 
 ### まず見るところ
-- **結論:** tokenごとに実行層を変えることで、full-depth LoRAと同程度の品質をかなり少ない計算予算で狙える。
-- **計算効率:** headlineは**FLOPsが約半分**という結果で、token-adaptive computeの効果は明確。
-- **実速度:** **wall-clock speedupは主評価ではない**。不規則なlayer分岐・decision module・mask生成のoverheadがあるため、FLOPs半減＝2倍高速ではない。
-- **品質/KV:** KV evictionも組み合わせて容量を減らすが、長距離文脈を失うtrade-offがある。
-- **評価の強さ／注意点:** LoRA等でdynamic decision moduleを学習する必要があり、既存checkpointへのtraining-free最適化ではない。
+- **結論:** tokenごとのlayer skippingで、品質を大きく落とさずFLOPsを約半分まで減らせる。
+- **重要な注意:** **主結果はFLOPsでありwall-clockではない**。
+- **KV:** evictionを併用するとKV容量も約45%削減できるが、長文文脈とのtrade-offがある。
+- **実装上の課題:** tokenごとの不規則分岐はGPUで効率よくまとまらないため、理論計算削減を速度へ変換する専用runtimeが必要。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
 
-D-LLMの表はFLOPsをLlama 2 7B LoRA full-depth=1.00に正規化した平均値であり、壁時計ではない。従って0.55という値は理論計算量が約半分という意味で、decision moduleやmask生成の実装費用を別途考慮する必要がある。
-Llama 2 7Bの表では、D-LLMのPPL/FLOPsはAlpaca 6.01/0.59、SAMSum 3.18/0.55、GSM8K accuracy 0.29/0.59、MaWPS 0.74/0.56、BoolQ 0.73/0.52、PIQA 0.84/0.52、SIQA 0.82/0.54、OBQA 0.80/0.53、MMLU 0.53/0.55（LoRA full-depth FLOPs=1.00）。比較対象MoD、Shortened-LLaMA（PPL/Taylor）、Ada-Inferはいずれも0.56〜0.90のFLOPsで、D-LLMは全9データセットで概ね最良または同等。Llama 3 8Bでも5データセット以上で55%未満の計算量でLoRAを上回る。MaWPS/OBQAでは40%/30% FLOPsでも100% FLOPs baselineを超える一方、SAMSumは計算量を増やしすぎると過学習でPPLが悪化。m=0,1,2,4,8を比べm=2が最良で、KV evictionなしでは精度が下がる。限界はdecision moduleとGumbel温度、α・Ωのデータ/端末依存、層ごと・tokenごとの不規則分岐がGPU実効速度を下げること。報告速度は主にFLOPs/KV容量で、壁時計での大規模バッチ実証は限定的である。浅いモデルや複雑な数学では過剰skipが誤りを増幅し、skip層のKVを捨てる積極策は長文文脈を損ねうる。
+### 評価設定
+
+| 項目 | 設定 |
+|---|---|
+| Models | Llama 2 7B / Llama 3 8B |
+| Layers | 32 |
+| Training | LoRA + decision module |
+| Tasks | Alpaca, SAMSum, GSM8K, MaWPS, BoolQ, PIQA, SIQA, OBQA, MMLU |
+| FLOPs baseline | Full-depth LoRA = 1.00 |
+
+### Llama 2 7B：代表結果
+
+| Task | D-LLM品質 | 正規化FLOPs |
+|---|---:|---:|
+| Alpaca | PPL 6.01 | 0.59 |
+| SAMSum | PPL 3.18 | 0.55 |
+| GSM8K | Acc 0.29 | 0.59 |
+| MaWPS | Acc 0.74 | 0.56 |
+| BoolQ | Acc 0.73 | 0.52 |
+| PIQA | Acc 0.84 | 0.52 |
+| SIQA | Acc 0.82 | 0.54 |
+| OBQA | Acc 0.80 | 0.53 |
+| MMLU | Acc 0.53 | 0.55 |
+
+多くのtaskで**full-depthの約半分強の計算量**へ落としている。
+
+### Llama 3 8B
+
+複数taskで55%未満のFLOPsでもfull-depth LoRAと同等以上を維持する。
+
+### さらに強くskipした場合
+
+MaWPSやOBQAでは30〜40% FLOPsでもbaselineを上回る条件がある一方、SAMSumのようにtaskによっては計算量を削りすぎるとPPLが悪化する。
+
+### KV evictionの効果
+
+| 設定 | 傾向 |
+|---|---|
+| m=0 | 文頭文脈を失いやすい |
+| m=1 | 改善 |
+| **m=2** | 最良 |
+| m=4 / 8 | 保護量が増えmemory削減が小さくなる |
+
+KV evictionなしでは精度が下がり、単純にskip層のKV扱いを無視できないことを示す。
+
+### FLOPsとwall-clockを分けて読む理由
+
+D-LLMではtokenごとに経路が違うため、GPU側では
+
+- branch divergence
+- decision module実行
+- attention mask生成
+- token groupingの不規則性
+
+が追加される。
+
+そのため `FLOPs 0.55` を「1.82倍高速」と読み替えることはできない。大規模batchのwall-clock speedupは主評価ではない。
+
+### 制約
+
+- decision moduleの学習が必要。
+- `Ω`、loss重み、Gumbel温度に依存。
+- 長文ではKV evictionが文脈を損ねる可能性。
+- dynamic branchをGPUで高速化する専用kernel/runtimeが必要。
 
 </details>
 
@@ -45,4 +158,4 @@ Llama 2 7Bの表では、D-LLMのPPL/FLOPsはAlpaca 6.01/0.59、SAMSum 3.18/0.55
 - [公式コード](https://github.com/Jyk-122/D-LLM)
 ## 更新履歴
 - 2026-09-02: 概要・手法・評価を一次資料に基づき拡充。
-
+- 2026-09-04: decision module / Gumbel-Softmax / KV evictionを補足し、FLOPsと実速度を分離して整理。
