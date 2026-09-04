@@ -78,7 +78,7 @@
   - 複数batchのroutingを層横断で予測し、legacy server上のexpert転送と計算を共同スケジューリングする方式。
 - 2025-09-02 — [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](01-offload-hierarchical-memory/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)
   - optimizer stateをGPU・DRAM・NVMe・並列ファイルシステムへ多階層・多経路配置し、汎用HPC環境でLLM事前学習のI/Oを並列化する。
-- 2025-09-02 — [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](02-adaptive-computation-cache-aware-moe/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-mixture-of-exp.md)
+- 2025-09-02 — [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](02-adaptive-computation-cache-aware-moe/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)
   - 層ごとの重要度に合わせてactive expert数を変え、固定Top-kより少ない計算で品質維持を狙うMoE推論手法。
 - 2025-08-18 — [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](09-other-systems-research/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)
   - 新しいMoE構造をHPCクラスタへ拡張するため、expert parallelism・通信・負荷分散を共同最適化する分散学習システム。
