@@ -1,6 +1,6 @@
 ---
 title: "FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference"
-summary: "expertを行列単位のsub-expertへ分解し、複数前層の合意予測と資源適応型prefetchでCPU–GPU転送量を抑えるMoE推論方式。"
+summary: "expertをsub-expertへ分解し、複数前層の合意予測と資源適応prefetchでCPU→GPU weight trafficを細粒度に制御するMoE推論方式。"
 authors_affiliations: "Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng, Shibo He／Zhejiang University, Zhejiang University of Technology"
 published: "2026-03-14"
 publication_status: "Published"
@@ -15,31 +15,147 @@ last_checked: "2026-09-03"
 
 # FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference
 
-> expertを行列単位のsub-expertへ分解し、複数前層の合意予測と資源適応型prefetchでCPU–GPU転送量を抑えるMoE推論方式。
+> expertをsub-expertへ分解し、複数前層の合意予測と資源適応prefetchでCPU→GPU weight trafficを細粒度に制御するMoE推論方式。
 
 ## 概要
-FIRM-MoEは、expert全体を一つの不可分な転送単位とする従来のMoE offloadingが、実際に必要な計算以上のweight trafficを生む点を問題にする。Transformerのexpert FFNはgate、up、down projectionなど複数の行列から成り、選択されたexpertでも各成分の寄与や転送タイミングは一様ではない。そこでexpertを独立にロード可能なfine-grained sub-expertへ分解し、GPUメモリ容量とCPU–GPU帯域に応じて、必要な部分だけをcache／prefetch（キャッシュ／先読み）する。さらに、単一の直前層だけから予測すると外れやすく、予測数を増やすと無駄な転送が増えるという問題に対し、複数の先行層による合意を使って高信頼候補を選ぶ。システムは利用可能なVRAM、計算時間、転送コストに合わせて予測範囲とprefetch数を自動調整する。対象はCPU DRAMからGPUへのexpert weight offloadであり、KV cache offloadではない。通常のPCIe 4.0接続を用いた実機評価で、SSD／NVMe、HBF、CXLは使わない。AAAI 2026の掲載論文で、resource-constrained GPU上のMoE inferenceにおいて、予測精度だけでなく転送粒度とcache効率を同時に設計した点が重要である。
+
+FIRM-MoEは、通常のexpert offloadが**expert全体を一つの転送単位として扱うため粒度が粗すぎる**点を問題にする。
+
+MoE expert FFNはgate / up / down projectionなど複数weight matrixから構成される。FIRM-MoEはこれらを独立にload可能なsub-expertへ分解し、限られたVRAMへ必要部分だけをcache / prefetchする。
+
+さらに、単一前層からのpredictionはmissが多く、候補を増やすだけでは無駄transferが増える。そこで複数前層の予測が一致したexpertを高信頼とする`Meeting-of-Layers (MoL)`を使う。
+
+最後に`HEOP`がlayer群ごとのrouting特性とhardware resourceを見て、予測範囲・prefetch数を自動調整する。
+
+native router / Top-k / expert計算は維持するため、expert substitution型ではなくlossless寄りのsystem optimizationである。
+
 ## 手法のあらまし
-第一の構成要素はFine-Grained Expert Decompositionである。各expertのWgate、Wup、Wdownを独立したsub-expertとして扱い、runtimeが必要部分を別々にCPUからGPUへロードできるようにする。これにより、expert単位のprefetchで発生する過剰転送を減らし、限られたVRAMをより細かく配分できる。第二はMeeting-of-Layers（MoL）で、対象層より前のP層がそれぞれ次層のexpert候補をK個予測し、複数層で一致する高信頼候補を優先して先読みする。単一予測器のTop-kをそのまま転送する方式より、外れ候補を減らしつつ利用頻度の偏りにも耐える設計である。第三はHierarchical Expert Offloading and Prefetching（HEOP）で、浅層・中層・深層ごとにrouting特性と計算余裕が異なることを利用し、各groupのKとPを自動調整する。探索目的は未使用prefetchのコストとcache missのコストを重み付きで最小化することで、hill-climbingにより資源条件に適した設定を求める。cache residency、予測信頼度、転送可能時間をまとめて扱う一方、tokenごとにnative Top-k自体を変える手法ではなく、元routerの選択結果を満たすためのロードを細粒度化・前倒しする方式である。
+
+### 1. `Fine-Grained Expert Decomposition`
+
+各expertを、
+
+- `W_gate`
+- `W_up`
+- `W_down`
+
+などのprojection単位へ分け、それぞれ独立したsub-expertとして管理する。
+
+expert丸ごとloadする方式よりcache allocationを細かくでき、不要なweight trafficを減らす。
+
+### 2. Sub-expert単位のcache / prefetch
+
+GPU VRAMにはexpert全体ではなく、必要なprojectionを個別にresident化できる。
+
+cache missでもexpert全体を移す必要がなく、必要sub-expertだけをCPU DRAMから送る。
+
+### 3. `Meeting-of-Layers (MoL)`
+
+対象layerより前の複数layer `P` が、それぞれ次expert候補を`K`個ずつ予測する。
+
+複数layerで同じexpertが候補に現れた場合、そのcandidateを高confidenceとみなしてprefetch priorityを上げる。
+
+単一predictor top-kよりfalse positiveを減らす狙いである。
+
+### 4. Prediction数を増やしすぎない
+
+prefetch候補を増やせばrecallは上がるが、unused weight transferも増える。
+
+MoLは単純にcandidate unionを広げるのではなく、複数layerのagreementで絞り込む。
+
+### 5. `HEOP`：Hierarchical Expert Offloading and Prefetching
+
+浅層・中層・深層でrouting predictabilityとcompute slackが異なるため、全層へ同じ`P`,`K`を使わない。
+
+HEOPはlayer groupごとに、
+
+- 何層前から見るか `P`
+- 何expert候補を出すか `K`
+- cache / prefetch量
+
+を調整する。
+
+### 6. Resource-adaptive search
+
+VRAM容量、transfer cost、cache miss costを含むobjectiveを作り、hill-climbingで設定を探索する。
+
+GPU memoryが小さい環境では細粒度cacheを強く使い、bandwidthに余裕があればprefetchを増やす、といった適応を行う。
+
 ## 評価
 
 ### まず見るところ
-- **結論:** expertを行列単位へ分解し、複数前層の合意でprefetchすると、小さいcacheでも無駄なweight transferを減らせる。
-- **速度・効率:** 平均では中程度、cacheが厳しい条件ではより大きな速度改善が出る。
-- **品質:** native routerと元expert計算を保持するため**lossless寄り**で、置換・pruning型とは異なる。
-- **メモリ・I/O:** CPU DRAM→GPUの転送粒度をexpert全体からsub-expertへ細かくすることでVRAM効率を上げる。SSDは対象外。
-- **評価の強さ／注意点:** **RTX 3090実機**。細かい転送が別hardwareではmetadata/launch overheadになり得る。公式コードは未確認。
+- **結論:** expertをprojection単位へ細分化し、複数前層のagreementで先読みすると、小cacheほど無駄transferを減らしやすい。
+- **速度:** baseline比平均約1.31×、最大約1.5×。厳しいcache条件ではprefetch baseline比最大約1.8×。
+- **メモリ:** 最大約2.8×のmemory savingを報告。
+- **品質:** native routerと元expert計算を維持するためlossless寄り。
+- **注意点:** sub-expert管理のmetadata / small-transfer overheadがhardware次第で不利になり得る。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
 
-RTX 3090 24GB、32-core CPU、64GB host memory、PCIe 4.0の単一マシンで、Qwen1.5-MoE-A2.7B、Qwen3-30B-A3B、DeepSeek-MoE-16B、DeepSeek-V2-Lite、OLMoE-1B-7Bを評価し、TruthfulQAとShareGPT由来workloadを用いる。Fiddlerやllama.cppなどのbaselineに対し、平均1.31倍、最大1.5倍の速度向上と、最大2.8倍のmemory savingsを報告する。Qwen系でexpert cache容量を128に制限した条件では、基本的なprefetch方式に対して最大1.8倍となり、細粒度分解とMoLが小容量cacheで特に効くことを示す。評価はend-to-end実機であり、simulation-onlyではない。ただし速度向上はモデルのexpert構造、sub-expert転送の実装効率、層間routing相関に依存し、細粒度化によるmetadata管理や小さな転送の増加が別のhardwareで不利になる可能性がある。品質面ではnative routerと元expert計算を保持するため、置換・pruning型より原理上の劣化は小さいが、論文の中心はthroughputとmemoryで、PPLやKL divergenceを横断的にPareto評価する構成ではない。公式コードは一次資料上で確認できず、再現可能なruntime統合は未解決である。
+### 実機環境
+
+| 項目 | 設定 |
+|---|---|
+| GPU | RTX 3090 24GB |
+| CPU | 32-core |
+| Host memory | 64GB |
+| PCIe | Gen4 |
+
+### Models
+
+- Qwen1.5-MoE-A2.7B
+- Qwen3-30B-A3B
+- DeepSeek-MoE-16B
+- DeepSeek-V2-Lite
+- OLMoE-1B-7B
+
+TruthfulQAとShareGPT系workloadを使用。
+
+### End-to-end speed
+
+Fiddler / llama.cppなどに対し、
+
+- 平均：約1.31×
+- 最大：約1.5×
+
+のspeedup。
+
+### 厳しいcache条件
+
+Qwen系でexpert cache容量を128に制限した条件では、基本prefetch方式比で最大約1.8×。
+
+cacheが小さいほどexpert丸ごとtransferの無駄が相対的に大きくなり、fine-grained decompositionの利点が増える。
+
+### Memory savings
+
+最大約2.8×のmemory savingを報告する。
+
+これはexpert数をpruneするのではなく、**residentにするweight単位を細かくして必要部分だけ保持する**ことで得る。
+
+### Ablation的な意味
+
+性能向上は主に、
+
+1. fine-grained decomposition
+2. MoLによるfalse-positive prefetch削減
+3. HEOPによるlayer別resource tuning
+
+の組み合わせで出る。
+
+### 制約
+
+- sub-expert metadata管理が増える。
+- small DMA transferが多すぎるhardwareでは効率低下の可能性。
+- routing correlationが弱いmodelではMoL利得が縮む。
+- SSD/NVMe未評価。
+- official codeは一次資料で確認できない。
 
 </details>
 
-## 引用関係
-登録済みの [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](../01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)、[MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](../01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)、[Fast Inference of Mixture-of-Experts Language Models with Offloading](../01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md) などを引用し、expert単位offloadをsub-expert単位へ細粒度化する後続研究である。
 ## 一次資料
 - [AAAI公式ページ](https://ojs.aaai.org/index.php/AAAI/article/view/39106)
 - [AAAI公式PDF](https://ojs.aaai.org/index.php/AAAI/article/view/39106/43068)
 
+## 更新履歴
+- 2026-09-04: fine-grained decomposition / MoL / HEOPを分離し、cache制約下の速度・memory評価を表形式へ整理。
