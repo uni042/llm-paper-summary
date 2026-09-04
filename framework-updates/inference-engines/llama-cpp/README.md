@@ -2,6 +2,10 @@
 
 llama.cppの主要な機能・性能更新を継続的に記録する集約ページです。memory management、MoE、speculative decoding、kernel、同期削減など本質的な更新を扱います。
 
+## 2026-09-05
+
+- **GPU-resident LRU cache for host-offloaded MoE expert weights — Draft / Open**: CPU host memoryへoffloadしたMoE expertの最近使用分をVRAMへLRU cacheする提案。`--moe-expert-cache N`でopt-inし、decode-onlyで動作する。Qwen3.8-Flash-Next UD-Q4_K_XL、2×RTX 3090で **18.4 → 24.2 tok/s（+31%）**。54k-record workloadのrouting traceではstaticなhot expert偏りは弱い一方、時間局所性が強く、推定LRU hit率は64 slotsで約67%、128 slotsで約81%。48 slots/layer（約4.1 GiB VRAM）・2 uploads/layer/stepで測定。現状はmulti-token decode（speculative / MTP）をbypassする。[PR #27861](https://github.com/ggml-org/llama.cpp/pull/27861)
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
@@ -10,7 +14,7 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 要点
 
-CUDA Graphの適用範囲拡大、MoE kernel fusion、DSpark speculative decoding、CPU FFN offloadが主要な前進。特にDSparkはRTX 4090で通常decode比1.88倍、設定別geomean 1.81〜3.35倍を報告した。
+CUDA Graphの適用範囲拡大、MoE kernel fusion、DSpark speculative decoding、CPU FFN offloadが主要な前進。加えて2026-09-05時点では、host-offloaded MoE expertをVRAMへ時間局所性ベースでcacheするDraft PRが公開されている。
 
 ## 主要更新
 
