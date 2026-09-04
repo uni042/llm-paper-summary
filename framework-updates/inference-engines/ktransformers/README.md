@@ -1,14 +1,14 @@
 # KTransformers
 
-KTransformersの主要な機能・性能更新を記録します。
+KTransformersの主要な機能・性能更新を継続的に記録する集約ページです。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+## 主要更新
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+- **2026-07-23 — v0.6.4（released）**: CPU/GPU heterogeneous full-parameter／LoRA SFTと、packed INT4・AVX-VNNI・blocked matmulによるRAWINT4 CPU expert pathを追加。2×EPYC 9355＋2×RTX 5090でFull-FT約400 tok/s、LoRA約600 tok/s、RTX 4090＋AMX CPUで700 tok/s超を報告。[release](https://github.com/kvcache-ai/ktransformers/releases/tag/v0.6.4)
+- **2026-08-17 — v0.7.0（released）**: Native FP8 LoRA SFTを追加し、routed expertのE4M3 weight／scaleをblockwiseに直接ロード。BF16全展開を避け、host RAMを約1.4 TBから約800 GBへ削減。CPU activation retentionも追加。[release](https://github.com/kvcache-ai/ktransformers/releases/tag/v0.7.0)
+
+v0.6.3はモデル対応中心のため掲載対象外とした。

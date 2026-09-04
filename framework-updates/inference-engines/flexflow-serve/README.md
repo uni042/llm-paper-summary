@@ -1,14 +1,14 @@
 # FlexFlow Serve
 
-FlexFlow Serveの主要な機能・性能更新を記録します。
+FlexFlow Serveの主要な機能・性能更新を継続的に記録する集約ページです。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+## 該当なし
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+対象期間内にrelease、tag、commit、PRで掲載基準を満たす本質的更新は確認できなかった。最新tagは期間前のv25.2.1、default branchの最新commitも2025-04-12である。
+
+- [repository](https://github.com/flexflow/flexflow-serve)
+- [tags](https://github.com/flexflow/flexflow-serve/tags)

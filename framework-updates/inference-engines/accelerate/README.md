@@ -1,14 +1,13 @@
 # Accelerate
 
-Accelerateの主要な機能・性能更新を記録します。
+Accelerateの主要な機能・性能更新を継続的に記録する集約ページです。日付・期間ごとの別ファイルは作らず、このページへ追記します。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+## 主要更新
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+- **2026-06-19 — v1.8.0（released）**: FSDP2 FP8 training、DeepSpeed regional compilation、CPU offloadを追加。同型decoder blockのcompile再利用により構築コストを抑える。Intel CPU distributed trainingのCCL/KMP tuningは4th Gen XeonのTransformer tensor-parallel trainingで最大40%向上。個別機能の追加benchmarkは未掲載。[releases](https://github.com/huggingface/accelerate/releases)
+
+v1.8.1には掲載基準を満たす独立した新規項目を確認できなかった。
