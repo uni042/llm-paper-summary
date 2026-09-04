@@ -4,5 +4,6 @@
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-09-03 | GPT-6 Astra | GPT-6世代のflagship model。computer use、browsing、software engineering、cybersecurity、science、professional workを強化。API modelは`gpt-6-astra`で、1,050,000 token context / 128,000 max outputを提供。 | https://openai.com/index/gpt-6-astra/ |
 | 2026-07-09 | GPT-5.6 Sol / Terra / Luna | GPT-5.6世代の一般提供。Solを最上位、Terraをバランス型、Lunaを低コスト型として展開し、coding・knowledge work・science・agentic workを強化。 | https://openai.com/index/gpt-5-6/ |
 | 2026-04-23 | GPT-5.5 / GPT-5.5 Pro | 複雑な実務、agentic coding、online research、文書・表計算作成、tool useを重点強化した世代。API提供は4月24日開始。 | https://openai.com/index/introducing-gpt-5-5/ |
