@@ -8,14 +8,22 @@
 - [Conditional computation](04-conditional-computation/) — 8本
 - [Speculative decoding × MoE](05-speculative-decoding-moe/) — 6本
 - [Quantization × MoE × Offload](06-quantization-moe-offload/) — 13本
-- [Quality-cost optimization](07-quality-cost-optimization/) — 1本
+- [Quality-cost optimization](07-quality-cost-optimization/) — 4本
 - [Edge／on-device MoE](08-edge-on-device-moe/) — 4本
-- [その他システム研究](09-other-systems-research/) — 13本
+- [その他システム研究](09-other-systems-research/) — 14本
 
 ## 全論文
 
-収録論文: 80本。公開日が新しい順。
+収録論文: 84本。公開日が新しい順。
 
+- 2026-09-03 — [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](09-other-systems-research/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)
+  - 軽量な追加weightで複数tokenを並列提案し、元の自己回帰分布を保つlossless samplerで最大3倍の生成高速化を狙うUno方式。
+- 2026-09-03 — [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](07-quality-cost-optimization/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)
+  - decode-time KV evictionでEMAによる時間集約とranking保持を利用し、score refresh頻度を下げながら品質とthroughputを両立する。
+- 2026-09-03 — [GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving](07-quality-cost-optimization/2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md)
+  - reasoning中のattention需要変化をonline signalから推定し、KV cache予算をpage単位で必要時だけ増やす。
+- 2026-09-03 — [SGD-KV: Summarization Guided KV Cache Compression](07-quality-cost-optimization/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md)
+  - summarization能力の高いattention headへKV budgetを重点配分し、long-context品質を保ちながらKV memoryを削減する。
 - 2026-08-17 — [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](08-edge-on-device-moe/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)
   - GPU・CPU・RAM・PCIeを統合資源として扱い、global expert cache、帯域適応CPU/GPU実行、KV再利用を一体化した個人PC向けMoE runtime。
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
@@ -70,7 +78,7 @@
   - 複数batchのroutingを層横断で予測し、legacy server上のexpert転送と計算を共同スケジューリングする方式。
 - 2025-09-02 — [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](01-offload-hierarchical-memory/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)
   - optimizer stateをGPU・DRAM・NVMe・並列ファイルシステムへ多階層・多経路配置し、汎用HPC環境でLLM事前学習のI/Oを並列化する。
-- 2025-09-02 — [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](02-adaptive-computation-cache-aware-moe/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)
+- 2025-09-02 — [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](02-adaptive-computation-cache-aware-moe/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-mixture-of-exp.md)
   - 層ごとの重要度に合わせてactive expert数を変え、固定Top-kより少ない計算で品質維持を狙うMoE推論手法。
 - 2025-08-18 — [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](09-other-systems-research/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)
   - 新しいMoE構造をHPCクラスタへ拡張するため、expert parallelism・通信・負荷分散を共同最適化する分散学習システム。
