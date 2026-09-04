@@ -1,6 +1,6 @@
 ---
 title: "CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices"
-summary: "学習済み予測器と過去routing patternの検索器をcascadeし、promptから全層のexpertを先読みして資源制約下のMoE推論を高速化する。"
+summary: "routing履歴検索と学習型predictorをcascadeし、promptから全層expert候補を早期生成してresource-constrained MoEのprefetchを効率化する。"
 authors_affiliations: "Chengcheng Wang, Haowen He, Liang Zhao, Xiaoheng Deng, Lixin Duan, Shaohua Wan／UESTC, Shenyang Aerospace University, Central South University"
 published: "2026-03-14"
 publication_status: "Published"
@@ -15,31 +15,136 @@ last_checked: "2026-09-03"
 
 # CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices
 
-> 学習済み予測器と過去routing patternの検索器をcascadeし、promptから全層のexpertを先読みして資源制約下のMoE推論を高速化する。
+> routing履歴検索と学習型predictorをcascadeし、promptから全層expert候補を早期生成してresource-constrained MoEのprefetchを効率化する。
 
 ## 概要
-CasMoEは、メモリの小さいconsumer／edge deviceでMoEを動かす際、expertのcache missとCPU–GPU weight transferがdecode遅延を支配する問題を扱う。既存の予測型prefetchは、モデルごとに学習したpredictorの推論コストが無視できない一方、単純な履歴照合だけでは未知入力やrouting変化へ弱い。CasMoEは、parametricなExpert Activation Predictor（EAP）とnon-parametricなExpert Activation Matcher（EAM）をcascade（段階接続）し、入力に応じて安価な検索と学習済み予測を使い分ける。promptを一度解析して全MoE layerのexpert activationを先に推定するため、layerごとに予測器を呼び出すoverheadと転送開始の遅れを抑える。過去と類似したrouting patternならdatabase検索を使い、未知性が高い入力では学習型predictorへ切り替える設計である。対象はexpert weightのCPU–GPU offload／prefetchで、KV cache offloadではない。通常のhost memoryとGPUを想定し、SSD／NVMe、HBF、CXL固有のI/O mechanismは扱わない。AAAI 2026掲載で、既存のMoE-Infinity、Fiddler、DAOP、ProMoE、SiDA-MoE、FineMoEを引用し、予測方式を二者択一ではなくcascadeとして統合した後続研究に位置付けられる。
+
+CasMoEは、expert prefetchの予測方法を1つに固定せず、**過去routing patternの検索**と**学習型predictor**を段階接続する。
+
+類似promptが過去databaseに存在する場合は検索結果をそのまま使い、未知性が高いpromptだけ学習型predictorへ回す。
+
+これにより、毎回predictorを実行する方式より予測overheadを下げつつ、履歴検索だけでは弱いdomain shiftにも対応する。
+
+さらにpromptを一度処理して全MoE layerの候補expertをまとめて予測するため、深いlayerのprefetchを早く開始できる。
+
+native router / Top-kは変更せず、予測はcache warming専用なのでlossless型である。
+
 ## 手法のあらまし
-EAPは軽量encoderと複数のprediction headからなり、prompt表現から各層で活性化されるexpert集合を一括予測する。学習ではcontrastive learningを用いて、routing patternが近い入力を表現空間でも近づけ、異なるpatternを分離する。これにより単純なmulti-label classificationより入力意味とexpert activationの対応を捉えやすくする。EAMは過去のprompt表現と全層activation patternを格納したdatabaseを検索し、十分近い既知patternがあれば学習済みEAPを実行せず、そのpatternをprefetch計画として再利用する。cascade gateはretrieval confidenceや入力の難しさを基にEAMで確定するかEAPへ送るかを選ぶ。得られた全層のexpert候補を早い段階からCPU→GPUへ非同期転送し、native routerが実際に選ぶ前にcacheを暖める。元モデルのrouterやTop-kは変更せず、予測はresource allocationにのみ用いるため、推論意味論を直接書き換えるexpert substitutionではない。一方、適応粒度は主にprompt／sequenceとlayerであり、各decode tokenのcache状態を見て必要native miss数Kを変える方式ではない。固定の層別候補数とcascade選択により、予測コストとcache hit率を均衡させる。
+
+### 1. `EAM`：Expert Activation Matcher
+
+過去promptの表現と、それに対応する全layerのexpert activation patternをdatabaseへ保存する。
+
+新しいpromptが来たら近い表現を検索し、十分近い既知patternがあれば、そのrouting patternをprefetch計画として再利用する。
+
+non-parametricなので追加predictor推論を省ける。
+
+### 2. `EAP`：Expert Activation Predictor
+
+EAMで十分なmatchが得られないpromptは、学習型EAPへ送る。
+
+EAPは軽量encoderとlayer別prediction headからなり、prompt表現から全layerのexpert候補を一括予測する。
+
+### 3. Contrastive learning
+
+EAPの表現空間では、routing patternが似るpromptを近づけ、異なるpromptを離す。
+
+単純multi-label classificationより、prompt semanticとexpert activation patternの対応を学びやすくする狙いがある。
+
+### 4. Cascade gate
+
+retrieval confidenceやinput noveltyを見て、
+
+- EAMだけで確定
+- EAPへfallback
+
+を切り替える。
+
+類似promptでは検索の低cost性、未知promptではpredictorのgeneralizationを使う。
+
+### 5. 全層candidateを早期prefetch
+
+prompt段階で全layerのcandidateを出すため、layerごとにpredictorを待つ方式より深いlayerのtransferを早く始められる。
+
+CPU DRAMからGPUへcandidate expertを非同期transferし、native gate到達時のcache hitを高める。
+
+### 6. Lossless型
+
+予測候補が外れてもnative routerが最終selectionを行う。
+
+予測expertをnative expertの代わりに確定実行するCommitMoEとは異なる。
+
 ## 評価
 
 ### まず見るところ
-- **結論:** 類似promptはrouting履歴検索、未知promptは学習型predictorへ回すcascadeで、予測コストを抑えながら全層のprefetchを早く始められる。
-- **速度・効率:** on-demandより大きくthroughputを改善するが、効果はrouting-pattern databaseがworkloadをどれだけ覆うかに依存する。
-- **品質:** native router/Top-kは変更せず、予測はprefetch用なので原理上は**lossless型**。ただし報告は平均task performance保持率中心。
-- **メモリ・I/O:** CPU DRAM→GPUのexpert weight prefetch。SSD/NVMeは対象外。
-- **評価の強さ／注意点:** **実機runtimeあり**。database構築範囲、類似度threshold、workload driftに敏感で、公式コードは確認できない。
+- **結論:** 類似promptは履歴検索、未知promptはpredictorへ回すcascadeで、prediction costとprefetch開始時刻を両立する。
+- **速度:** on-demand baseline比throughput約65.13%改善を報告。
+- **品質:** native routingを維持し、平均task performanceを96.6%以上保持。
+- **I/O:** CPU DRAM→GPU expert prefetch。SSD/NVMeは扱わない。
+- **注意点:** database coverage、類似度threshold、workload driftへ依存し、公式codeは確認できない。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
 
-論文は複数のMoEモデルとresource-constrained device条件で、on-demand loading、cache型、学習型prefetch型を比較する。主要結果として、on-demand baselineに対してthroughputを65.13%改善しながら、元モデルのtask performanceを96.6%以上保持したと報告する。EAMを利用できる既知・類似promptでは予測器の計算を省けるため、EAP単独よりprefetch開始が早く、全層予測によって深い層の転送を前倒しできる。未知入力ではEAPへfallbackするため、履歴検索だけの方式よりactivation recallを維持しやすい。評価は実機runtimeを含み、純粋なtrace-driven simulationのみではないが、報告値はprompt分布、pattern databaseの構築範囲、類似度thresholdに依存する。databaseが大きくなると検索memoryと更新コストが増え、workload driftが強い場合にはEAMの利点が薄れる。また、品質保持率は平均benchmark scoreであり、長いgenerationにおける誤予測のtail behaviorやPCIe bytes/tokenの詳細なPareto frontierは十分ではない。公式コードは一次資料から確認できず、database構築、predictor training、runtime連携まで含めた再現性は今後の課題である。
+### 主要比較
+
+論文ではresource-constrained device上で、
+
+- on-demand loading
+- cache型
+- 学習型prefetch型
+
+と比較する。
+
+### Throughput
+
+on-demand baselineに対し、throughputを約65.13%改善。
+
+主な利得は、
+
+- EAM hit時にpredictor計算を省ける
+- prompt時点で深いlayerまでprefetch開始できる
+
+ことによる。
+
+### 品質
+
+元モデルのtask performanceを96.6%以上保持したと報告する。
+
+ただしこれは平均benchmark scoreであり、per-token output identityやtail-qualityを直接示す指標ではない。
+
+### EAM / EAPの役割分担
+
+| Input type | 主経路 | 利点 |
+|---|---|---|
+| 過去と類似 | EAM | predictor latencyを省ける |
+| 未知性が高い | EAP | retrieval-onlyよりgeneralizeしやすい |
+
+### Databaseのtrade-off
+
+routing pattern databaseを大きくするとcoverageは増える一方、
+
+- retrieval memory
+- search cost
+- update cost
+
+も増える。
+
+workload driftが強い場合、古いEAM patternの価値は低下する。
+
+### 制約
+
+- database構築が必要。
+- similarity threshold tuningが必要。
+- predictor trainingが必要。
+- official runtime codeは一次資料で確認できない。
+- PCIe bytes/tokenやtail missの詳細Paretoは限定的。
 
 </details>
 
-## 引用関係
-登録済みの [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](../01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)、[ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](../02-adaptive-computation-cache-aware-moe/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)、[Fast Inference of Mixture-of-Experts Language Models with Offloading](../01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md) などの系譜を引き、予測と履歴照合をcascadeする。
 ## 一次資料
 - [AAAI公式ページ](https://ojs.aaai.org/index.php/AAAI/article/view/39816)
 - [AAAI公式PDF](https://ojs.aaai.org/index.php/AAAI/article/view/39816/43777)
 
+## 更新履歴
+- 2026-09-04: EAM / EAP / cascade gate / all-layer predictionを分離して説明し、評価を表形式へ整理。
