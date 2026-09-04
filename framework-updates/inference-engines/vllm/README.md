@@ -2,6 +2,10 @@
 
 vLLMの主要な機能・性能更新を継続的に記録する集約ページです。KV cache階層化、disaggregated serving、MoE、speculative decoding、kernel改善などを扱います。
 
+## 2026-09-05
+
+- **Manual `ActivationQuantFusionPass` initial application — merged 2026-09-03**: static FP8 activation quantizationのmanual fusion migrationを開始。producer側で`maybe_fused_act_quant`を使い、linearが対応する`input_quant_key`を公開している場合、`SiluAndMul + kFp8StaticTensorSym`を`fused silu_and_mul_quant` kernelへ流す。Llama MLPの`down_proj`から利用し、manual fusionが発火した場合はcompiler側の`ActivationQuantFusionPass`と二重fusionしない。PR本文には速度benchmarkはない。[PR #51415](https://github.com/vllm-project/vllm/pull/51415)
+
 ## 2026-09-04
 
 - **[Perf] Prefetch the weight before the PDL wait in fused_q_kv_rmsnorm — merged 2026-09-03**: Programmatic Dependent Launch (PDL) の待機前に依存しないgamma weight loadを先行させ、幅2048以上では8 warp化。Kimi-K3 / DeepSeek-V4のattention frontendで使うfused Q/KV RMSNorm kernelを **4.02 → 3.55 µs（約12%短縮）**。[PR #55020](https://github.com/vllm-project/vllm/pull/55020)
@@ -13,7 +17,7 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 ## 要点
 
-3か月でv0.23.0〜v0.28.0が公開され、multi-tier KV cache、NIXL P/D分離、DeepEP v2、dynamic speculative decoding、tiered disk KV、weight offloadまで一続きのserving基盤へ拡張された。
+3か月でv0.23.0〜v0.28.0が公開され、multi-tier KV cache、NIXL P/D分離、DeepEP v2、dynamic speculative decoding、tiered disk KV、weight offloadまで一続きのserving基盤へ拡張された。2026-09-05時点ではactivation quantizationのmanual fusion経路も追加されている。
 
 ## 主要更新
 
