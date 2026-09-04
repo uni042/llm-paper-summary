@@ -2,7 +2,7 @@
 
 主要LLMフレームワークの、本質的な機能・性能更新を**この1ページで継続管理**する。
 
-最終更新: **2026-09-04**
+最終更新: **2026-09-05**
 
 ## 掲載方針
 
@@ -15,6 +15,24 @@ offload、MoE、expert cache／prefetch、dynamic routing、speculative decoding
 ---
 
 ## 最新更新
+
+### 2026-09-05
+
+#### llama.cpp
+
+- **GPU-resident LRU cache for host-offloaded MoE expert weights — Draft / Open**  
+  CPU host memoryへoffloadしたMoE expertのうち最近使われたexpertをVRAM側のLRU cacheへ保持し、decode時のhost RAM bandwidth依存を減らす提案。`--moe-expert-cache N`でopt-inし、decode-onlyで動作する。Qwen3.8-Flash-Next UD-Q4_K_XL、2×RTX 3090で **18.4 → 24.2 tok/s（+31%）**。routing traceではstatic hot expertの偏りは弱い一方、時間局所性が強く、推定LRU hit率は64 slotsで約67%、128 slotsで約81%。現状はDraftで、multi-token decode（speculative / MTP）はcacheをbypassする。  
+  一次資料: https://github.com/ggml-org/llama.cpp/pull/27861
+
+#### vLLM
+
+- **Manual `ActivationQuantFusionPass` initial application — merged 2026-09-03**  
+  static FP8 activation quantizationをcompiler passだけに任せず、producer側で`maybe_fused_act_quant`を使って手動fusionできる経路を追加。Llama MLPの`down_proj`で`SiluAndMul + kFp8StaticTensorSym`を`fused silu_and_mul_quant` kernelへ流し、既存compiler passとの二重fusionを避ける。PR本文には独立した速度benchmarkはなく、現段階ではfusion基盤の拡張として記録する。  
+  一次資料: https://github.com/vllm-project/vllm/pull/51415
+
+#### その他
+
+- CPU offload / SSD・NVMe offload: 前回確認以降に新規論文・重要revision・upstream統合として追加すべき差分なし。
 
 ### 2026-09-04
 
@@ -43,8 +61,8 @@ offload、MoE、expert cache／prefetch、dynamic routing、speculative decoding
 
 ### Inference engines
 
-- [llama.cpp](inference-engines/llama-cpp/) — MoE fusion、DSpark、CUDA Graph、CPU FFN offload
-- [vLLM](inference-engines/vllm/) — multi-tier KV、P/D分離、adaptive speculative decoding、weight offload、PDL待機とweight loadのoverlap、MLA decode cache epilogue短縮
+- [llama.cpp](inference-engines/llama-cpp/) — MoE fusion、DSpark、CUDA Graph、CPU FFN offload、host-offloaded MoE expert向けGPU LRU cache（Draft）
+- [vLLM](inference-engines/vllm/) — multi-tier KV、P/D分離、adaptive speculative decoding、weight offload、PDL待機とweight loadのoverlap、MLA decode cache epilogue短縮、manual activation-quant fusion
 - [SGLang](inference-engines/sglang/) — Spec V2、HiCache、DSpark、MoE／通信kernel
 - [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、DFlash／DSpark、disaggregated serving（pre-release）
 - [KTransformers](inference-engines/ktransformers/) — RAWINT4 CPU expert、heterogeneous SFT、FP8 LoRA
