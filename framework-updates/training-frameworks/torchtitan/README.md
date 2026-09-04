@@ -1,14 +1,16 @@
 # TorchTitan
 
-TorchTitanの主要な機能・性能更新を記録します。
+TorchTitanの主要な機能・性能更新を継続的に記録する集約ページです。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+## 主要更新
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+- **2026-09-03 — v0.3.0（released）**: Standard／MinimalAsyncEP／DeepEP／HybridEPを束ねるunified token-dispatcher、communication overlap、CUDA Graphを追加。
+- GraphTrainer／GraphPPにwhole-step graph、FSDP／EP overlap、activation-memory pass、pipeline partition、DualPipeVを追加。
+- BF16 optimizer state、MXFP8、NVFP4、Float8、composable activation-checkpoint policy、declarative `spmd_types`を導入。
+- release noteに比較可能なthroughput／memory benchmark値はない。
+
+[release](https://github.com/pytorch/torchtitan/releases/tag/v0.3.0)

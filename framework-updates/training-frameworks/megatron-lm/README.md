@@ -1,14 +1,17 @@
 # Megatron-LM
 
-Megatron-LMの主要な機能・性能更新を記録します。
+Megatron-LM repository全体の主要なシステム更新を継続的に記録する集約ページです。Megatron-Core固有の詳細は[Megatron-Core](../megatron-core/)を参照してください。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+Megatron-LM repositoryの主要システム更新はMegatron-Core releaseと`dev` PRとして提供された。
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+## 要点
+
+- Core 0.18.0／0.19.0でMoE A2A overlap、HybridEP／DeepEP、fused MoE MLP、CUDA Graph、低精度parameter gather、Quantile Balancing routerを追加。
+- `dev`へactivation recomputeとchunked optimizer-state／master-weight CPU offloadがmergeされた。
+- inference-only DeepEP v2 dispatcherは期間末時点でOpen。
+
+- [Megatron-LM releases](https://github.com/NVIDIA/Megatron-LM/releases)
