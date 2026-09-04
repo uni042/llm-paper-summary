@@ -1,14 +1,15 @@
 # OpenVINO GenAI
 
-OpenVINO GenAIの主要な機能・性能更新を記録します。
+OpenVINO GenAIの主要な機能・性能更新を継続的に記録する集約ページです。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+## 主要更新
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+- **2026-08-05 — 2026.3.0.0（released）**: EAGLE系Dynamic Tree Search speculative decodingを正式releaseへ収録。draftが候補木を作りtargetが一括検証する。実装PRのmergeは期間前だが、製品提供は期間内。[PR #3451](https://github.com/openvinotoolkit/openvino.genai/pull/3451)
+- **同 — TaylorSeer cache**: LTXVideoでtemporal cacheを既定有効化し、再利用可能stepをskip。性能値なし。[PR #3642](https://github.com/openvinotoolkit/openvino.genai/pull/3642)
+- **同 — LTO**: GenAI objectのlink-time optimizationを有効化。公式数値なし。[PR #3672](https://github.com/openvinotoolkit/openvino.genai/pull/3672)
+
+2026.2.1.0は製品version更新中心のため掲載対象外。[releases](https://github.com/openvinotoolkit/openvino.genai/releases)

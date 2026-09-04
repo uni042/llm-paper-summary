@@ -1,14 +1,15 @@
 # ONNX Runtime GenAI
 
-ONNX Runtime GenAIの主要な機能・性能更新を記録します。
+ONNX Runtime GenAIの主要な機能・性能更新を継続的に記録する集約ページです。
 
-## 対象
+## 初期収録期間
 
-- 新しいruntime／kernel／memory management
-- offload、MoE、cache、prefetch、quantization、speculative decoding
-- parallelism、I/O、hardware利用効率の明確な改善
-- 未マージからマージ、正式release、研究実装のupstream統合
+2026-06-03〜2026-09-03
 
-## 更新履歴
+## 主要更新
 
-- [2026-06-03〜2026-09-03](2026-06-03_to_2026-09-03.md)
+- **2026-07-30 — v0.15.0（released）**: 1つのmodel packageに複数build variantを収め、load時にhardware／Execution Providerへ適合するvariantを選ぶ仕組みを追加。[PR #2227](https://github.com/microsoft/onnxruntime-genai/pull/2227)
+- **同 — QNN GPU zero-copy**: CPU-accessible GPU memoryへKV cacheを置くshared-memory allocatorで不要copyを除去。公式説明はlarge speedupだが数値なし。[PR #2105](https://github.com/microsoft/onnxruntime-genai/pull/2105)
+- **同 — INT8 model builder**: model builderにINT8 precisionを追加。[PR #2275](https://github.com/microsoft/onnxruntime-genai/pull/2275)
+
+WebGPU KV cacheを4-bit packするTurboQuantはchangelogに言及がある一方、対応PRは期間末時点でDraft/WIPのため正式実装として扱わない。[PR #2084](https://github.com/microsoft/onnxruntime-genai/pull/2084) [releases](https://github.com/microsoft/onnxruntime-genai/releases)
