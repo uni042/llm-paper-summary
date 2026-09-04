@@ -8,6 +8,7 @@
 
 | リリース日 | モデル | 系統 | 概要 | 詳細 |
 |---|---|---|---|---|
+| 2026-09-03 | GPT-6 Astra | OpenAI GPT | GPT-6世代flagship。computer use・coding・research・science・professional workを強化し、API modelは`gpt-6-astra`。 | [OpenAI GPT系](openai-gpt.md) |
 | 2026-09-02 | GLM-5.3-Flash | GLM | 320B total / 18B activeのnative multimodal MoE。efficient long-context / agent用途。 | [GLM系](glm.md) |
 | 2026-09-01 | Claude Fable 5.1 / Mythos 5.1 | Claude | coding・knowledge work・科学研究を中心に更新されたAnthropic上位モデル。 | [Claude系](claude.md) |
 | 2026-08-26 | Qwen3.8-Flash-Next | Qwen | Qwen4向け次世代architectureを先行採用した125B main / 6B activeのmultimodal MoE。 | [Qwen系](qwen.md) |
@@ -15,7 +16,6 @@
 | 2026-08-13 | Gemini 3.7 Flash | Gemini | coding / agentsを重点強化したGoogleの最新Flash model。 | [Gemini系](gemini.md) |
 | 2026-08-12 | Grok 4.6 | Grok | long-running agents、coding、visual workを強化した最新flagship。 | [Grok系](grok.md) |
 | 2026-07-16 | Kimi K3 | Kimi | 2.8T open-weight native multimodal MoE、1M context。 | [Kimi系](kimi.md) |
-| 2026-07-09 | GPT-5.6 Sol / Terra / Luna | OpenAI GPT | GPT-5.6世代。Solを最上位としてagentic work・coding・scienceを強化。 | [OpenAI GPT系](openai-gpt.md) |
 | 2026-07-09 | Muse Spark 1.1 | Meta Muse | tool/computer use・coding・multimodal agent性能を強化。 | [Meta Muse系](meta-muse.md) |
 | 2026-06-03 | Gemma 4 12B Unified | Gemma | Gemma 4世代の12B級Unified open model。 | [Gemma系](gemma.md) |
 | 2026-06-01 | MiniMax M3 | MiniMax | coding・agentic work・1M context・native multimodalityを統合したopen-weight model。 | [MiniMax系](minimax.md) |
