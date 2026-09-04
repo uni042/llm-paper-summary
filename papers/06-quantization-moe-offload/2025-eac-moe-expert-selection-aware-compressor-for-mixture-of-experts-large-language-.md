@@ -18,22 +18,80 @@ last_checked: "2026-09-03"
 > 量子化後のexpert-shiftをTopK-MSEで校正し、入力系列のexpert頻度に応じた動的pruningを組み合わせてMoEを圧縮する。
 
 ## 概要
-EAC-MoEはMoE型LLMへquantization（量子化）とexpert pruning（専門家削減）を同時適用する圧縮手法である。MoEはtokenごとのactive parameterは少ないが、全expert重みを保持する総memoryは大きい。また低bit化の誤差はexpert出力だけでなく後続router入力へ伝わり、元モデルと違うexpertが選ばれるexpert-shiftを起こす。EAC-MoEはこれを主要な品質劣化源と捉え、Quantization with Expert-Selection Calibration（QESC）で量子化前後のTop-k選択を揃える。さらに入力sequenceによってexpert頻度が異なることを利用し、現在のprefillでほぼ使われないexpertをPruning based on Expert-Selection Frequency（PESF）により動的に省く。量子化でmodel weight memoryを、pruningでactive computeを減らす二段構成である。登録済みPTQ benchmark、MC-MoE、Not All Experts Are Equalを引用し、同じbit予算でrouting挙動まで校正する後続研究である。Mixtral、Phi、DeepSeek、QwenをRTX 3090で実測する。CPU／SSDからのoffloadは提案せず、低bit化によりGPUへ収める研究で、KV cache offload、HBF、CXLは対象外。
+EAC-MoEは、量子化誤差を「expertの出力値が少しずれる」だけでなく、**そのずれによって次のrouterが別expertを選んでしまうこと**まで含めて扱う。これをexpert-shiftと呼び、QESCで補正する。さらにprefill中のexpert利用頻度を見て、ほとんど使われないexpertをPESFでpruneする。
+
 ## 手法のあらまし
-QESCはGPTQ系weight-only quantizationを基礎に、Transformer／MoE layerを順に校正する。通常のMSEは全出力誤差を均等に扱うが、TopK-MSEはrouter上位に入るexpertとその出力を重く扱い、量子化後も元のexpert rankingを維持させる。Mixtral分析ではFPかつshiftなしPPL 3.84に対し、FPでもshiftを許すと4.17、量子化のみ4.21、量子化＋shiftで4.65となり、routing変化が独立の損失要因である。PESFはprefill中のexpert selection frequencyをsequence単位で集計し、頻度threshold以下のexpertを実行集合から除く。タスクごとに頻出expertが違うため、model-globalな静的pruningより入力適応性がある。QESC後にPESFを適用し、低bit weightと小さいactive expert集合を組み合わせる。ただしfrequencyを得るにはsequence内の複数tokenが必要で、1 tokenずつ進むdecodeへそのまま適用できない。適応粒度はsequence／prefillで、tokenごとの必要K予測ではない。
+
+### 1. `expert-shift`
+
+MoEではあるlayerの量子化誤差がhidden stateへ入り、そのhidden stateを次layerのrouterが読む。
+
+その結果、元モデルではexpert A/BがTop-kだったのに、量子化後はA/Cになることがある。これが **expert-shift** である。
+
+つまり量子化誤差は、単にexpert出力の近似誤差として終わらず、**routing経路そのものを変えて後段へ増幅する**。
+
+### 2. `QESC` と `TopK-MSE`
+
+Quantization with Expert-Selection Calibration（QESC）は、通常のMSEだけでなく、routerのTop-k選択を保つことを重視して量子化する。
+
+`TopK-MSE` は、全expert出力を同じ重みで合わせるのではなく、**router上位へ入るexpertとその出力のずれを重点的に小さくする**損失である。
+
+狙いは「全出力を平均的に近づける」よりも、**元モデルと同じexpert rankingを維持すること**にある。
+
+### 3. expert-shiftが独立に品質を悪化させる
+
+Mixtralの分析では、FPでrouting shiftを起こさない状態のPPL 3.84に対し、FPでもshiftを許すと4.17、量子化だけで4.21、量子化＋shiftで4.65となる。
+
+このため、routing shiftを別の誤差要因として扱う意味がある。
+
+### 4. `PESF`：prefill系列でほぼ使われないexpertを落とす
+
+Pruning based on Expert-Selection Frequency（PESF）は、現在の入力sequenceのprefill中に各expertが何回選ばれたかを集計し、頻度が極端に低いexpertを実行集合から外す。
+
+model-globalな静的pruningではなく、**入力sequenceごとにprune対象が変わる**。
+
+ただしfrequencyを集めるには複数tokenが必要なので、1 tokenずつ進むdecodeへそのまま適用する方式ではない。
+
 ## 評価
 
 ### まず見るところ
-- **結論:** 量子化後にrouterのTop-kがずれる「expert-shift」まで校正すると、同じ低bitでも品質を守りやすく、prefillでは低頻度expert pruningも追加できる。
-- **圧縮:** MixtralをRTX 3090へ収まる程度まで大きく軽量化できる。
-- **品質:** moderateなpruningなら平均低下を小さく抑えられるが、強く削ると明確に崩れる。
-- **実速度:** **RTX 3090で実speedupを確認**し、低bit化＋prefill pruningの双方が効く。
-- **評価の強さ／注意点:** pruningはsequence/prefill頻度に依存し、1 tokenずつのdecodeへそのまま適用できない。CPU/SSD offload研究ではない。
+- **結論:** 量子化後のroutingずれまで校正すると、同じ低bitでも品質を守りやすい。prefillでは低頻度expert pruningも追加できる。
+- **圧縮:** MixtralをRTX 3090へ収められる規模まで軽量化。
+- **品質:** moderate pruningなら低下は小さいが、強く削ると明確に崩れる。
+- **実速度:** RTX 3090で低bit化＋pruningによる実speedupを確認。
+- **注意点:** PESFはsequence/prefill単位で、tokenごとのdecode pruningではない。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
 
-Mixtral-8x7B、Phi-3.5-MoE、DeepSeek-MoE-16B、Qwen1.5-MoE-A2.7BをWikiText2と8 zero-shot tasksで評価し、RTX 3090実機でmemory／speedを測る。Mixtralはmemoryを4.92倍削減して3090へ収め、量子化＋pruningで1.68倍高速化、平均accuracy lossを1%未満に抑えた。2.06-bitでMC-MoEのPPL 5.51、accuracy 62.56、1.80倍に対し、EAC-MoEは5.14、65.90、1.82倍。2.56-bitではPPL 4.58対4.74、accuracy 68.60対68.65、speed 1.74対1.71倍である。DeepSeek 2.06-bitではGPTQ 54.88、PMQ 54.79に対し57.05、Qwenでは57.76／57.79に対し59.52。PESF約30% pruning時のMixtralはfull precision 72.64に対し72.19だが、攻撃的設定では58.22まで低下し、明確なquality–compute trade-offがある。実機評価でsimulation-onlyではないが、decode適用、大規模671B、offload trafficは未評価。公式codeは確認できない。
+### Mixtralの主要結果
+
+| 項目 | 結果 |
+|---|---:|
+| memory削減 | 4.92倍 |
+| end-to-end speedup | 1.68倍 |
+| 平均accuracy低下 | 1%未満 |
+
+### 低bit条件でMC-MoEと比較
+
+| 平均bit | 方式 | PPL | accuracy | speedup |
+|---:|---|---:|---:|---:|
+| 2.06 | MC-MoE | 5.51 | 62.56 | 1.80倍 |
+| 2.06 | EAC-MoE | 5.14 | 65.90 | 1.82倍 |
+| 2.56 | MC-MoE | 4.74 | 68.65 | 1.71倍 |
+| 2.56 | EAC-MoE | 4.58 | 68.60 | 1.74倍 |
+
+2.06 bitの厳しい条件ではrouting-aware calibrationの差が大きい。
+
+### PESFのquality–compute trade-off
+
+Mixtralで約30% pruningした条件では、full precision平均72.64に対し72.19と低下は小さい。一方、より攻撃的に削ると58.22まで落ちる。
+
+したがってPESFは「不要expertを無料で削れる」方式ではなく、**sequence frequencyを使って品質劣化を抑えながらpruning量を増やす方式**である。
+
+### 適用範囲
+
+評価はMixtral、Phi-3.5-MoE、DeepSeek-MoE-16B、Qwen1.5-MoE-A2.7B、RTX 3090。CPU/SSD offload trafficや671B級、decode時の逐次pruningは未評価である。
 
 </details>
 
