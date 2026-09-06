@@ -8,10 +8,12 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 
 ## 収録論文
 
-収録論文: 3本。公開日が新しい順。
+収録論文: 4本。公開日が新しい順。
 
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
   - prefill / decode clusterを分離し、CPU DRAM・SSD・RDMAを跨ぐglobal KV cacheとcache-aware schedulerを組み合わせて、長context servingのSLO付きrequest capacityを高める。
+- 2024-03-04 — [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)
+  - 長いprefillを小さいchunkへ分け、既存decodeを毎iteration先に処理して残りtoken budgetへprefillを詰めることで、generation stallを防ぎながらserving capacityを高める。
 - 2024-01-17 — [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)
   - prefillとdecodeを別GPUへ分離し、各phaseのGPU数・parallelism・physical placementをTTFT / TPOT SLOとnetwork帯域に合わせて別々に最適化する。
 - 2023-11-30 — [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)
@@ -19,8 +21,9 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 
 ## 主な技術の分岐
 
+- **Colocated stall-free scheduling:** Sarathi-ServeはP/Dを同じGPUへ残したままprefillをchunk化し、decode latencyを保護する。
 - **P/D resource disaggregation:** DistServeはprefill / decodeを別resource poolとしてprovisionし、SLO付きgoodputを最大化する。
 - **Hardware specialization:** SplitwiseはphaseごとにGPU世代・power budgetを変え、Perf/$・Perf/Wまでcluster designへ取り込む。
 - **Global KV-centric serving:** MooncakeはP/D分離の上にdistributed KV cache poolを置き、prefix reuse・replication・RDMA transferをglobal schedulerで扱う。
 
-この系統は3本以上の明確な研究群になったため、通常の独立系統として継続する。Sarathi-Serve等のcolocated schedulingもcluster-level serving設計として境界を確認しながら追加する。
+この系統は独立した研究群として継続し、request migration、preemption、elastic routingなどの後続serving schedulerも引用鎖から追加する。
