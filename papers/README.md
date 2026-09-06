@@ -1,12 +1,12 @@
 # 論文カタログ
 
-収録論文: **116本**。
+収録論文: **120本**。
 
 論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。各系統READMEには、**その系統が何を効率化する研究群かという説明**と、**収録する全論文の一文説明**を掲載する。
 
 一文説明ではTransformer、MoE、KV cache、quantization、speculative decodingなどLLMの基礎知識は説明なしで使う。一方、特定論文・狭い研究領域でしか通じにくい名称はそのまま並べず、できるだけ「何をどう変えて、何を減らす・改善するのか」が分かる表現へ言い換える。
 
-## Inference / 推論 — 100本
+## Inference / 推論 — 104本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 14本
   - GPUに収まらないmodel weight / expertなどをCPU・peer GPU・SSD・Flashへ置き、転送・協調計算・near-data処理を最適化してmemory容量とI/O待ちを減らす。
@@ -20,16 +20,16 @@
   - speculative decodingで増えるMoEのexpert実行・weight転送・verification costを、branch選択やexpert再利用・先読みで抑える。
 - [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 13本
   - expertごとの重要度・利用頻度・量子化耐性に合わせてbit幅やexpert数を調整し、memoryと計算量を減らす。
-- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 6本
-  - KV cacheを削除・圧縮・動的budgetingで小さくする、またはHBM→L2 prefetchでGPU内部のaccess待ちを隠す。
+- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 7本
+  - KV cacheを削除・圧縮・動的budgetingで小さくする、HBM→L2 prefetchでGPU内部のaccess待ちを隠す、またはshared prefixへの重複KV readをまとめて減らす。
 - [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 4本
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実行する。
 - [Other Inference Systems](inference/09-other-inference-systems/) — 2本
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
 - [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 12本
   - KV cacheをCPU DRAM・peer GPU HBM・storageへ置く、attentionをKVの近くへ移す、またはKV転送を部分再計算・dynamic placementへ置き換えてlocal HBM容量とdata movementを抑える。
-- [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 13本
-  - batching・fairness・stateful session reuse・P/D分離・request migration・serverless startup・global KV共有・elastic resource管理を組み合わせ、servingのlatency / SLO / goodput / costを改善する。
+- [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 16本
+  - batching・SLO-aware queueing・fairness・application-aware scheduling・stateful session reuse・P/D分離・request migration・serverless startup・global KV共有・elastic resource管理を組み合わせ、servingのlatency / SLO / goodput / costを改善する。
 
 → [Inference一覧](inference/)
 
