@@ -1,12 +1,12 @@
 # 論文カタログ
 
-収録論文: **100本**。
+収録論文: **102本**。
 
 論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。各系統READMEには、**その系統が何を効率化する研究群かという説明**と、**収録する全論文の一文説明**を掲載する。
 
 一文説明ではTransformer、MoE、KV cache、quantization、speculative decodingなどLLMの基礎知識は説明なしで使う。一方、特定論文・狭い研究領域でしか通じにくい名称はそのまま並べず、できるだけ「何をどう変えて、何を減らす・改善するのか」が分かる表現へ言い換える。
 
-## Inference / 推論 — 84本
+## Inference / 推論 — 86本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 14本
   - GPUに収まらないmodel weight / expertなどをCPU・peer GPU・SSD・Flashへ置き、転送・協調計算・near-data処理を最適化してmemory容量とI/O待ちを減らす。
@@ -20,8 +20,8 @@
   - speculative decodingで増えるMoEのexpert実行・weight転送・verification costを、branch選択やexpert再利用・先読みで抑える。
 - [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 13本
   - expertごとの重要度・利用頻度・量子化耐性に合わせてbit幅やexpert数を調整し、memoryと計算量を減らす。
-- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 4本
-  - 長contextやreasoningで増えるKV cacheを、重要度に応じた削除・圧縮・動的budgetingで小さく保つ。
+- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 6本
+  - KV cacheを削除・圧縮・動的budgetingで小さくする、またはHBM→L2 prefetchでGPU内部のaccess待ちを隠す。
 - [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 4本
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実行する。
 - [Other Inference Systems](inference/09-other-inference-systems/) — 2本
