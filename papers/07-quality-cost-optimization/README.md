@@ -1,4 +1,4 @@
-# Quality-cost optimization
+# Adaptive Resource / Quality-Cost Optimization
 
 収録論文: 4本。公開日が新しい順。
 
