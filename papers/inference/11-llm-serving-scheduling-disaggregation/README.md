@@ -8,7 +8,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 
 ## 収録論文
 
-収録論文: 20本。公開日が新しい順。
+収録論文: 21本。公開日が新しい順。
 
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
   - client間のservice deficitをboundedに保ちながら、その許容範囲でshared prefixが長いrequestをまとめるDLPMと、複数GPUでfairness・prefix locality・load balanceを両立するD²LPMを提案する。
@@ -16,6 +16,8 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - promptから出力長の絶対値ではなくrequest間の相対順位を小型予測器で学習し、短いrequestを優先してSJF / SRTFへ近づけることでHOL blockingを減らす。
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
   - prefill / decode clusterを分離し、CPU DRAM・SSD・RDMAを跨ぐglobal KV cacheとcache-aware schedulerを組み合わせて、長context servingのSLO付きrequest capacityを高める。
+- 2024-06-25 — [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)
+  - GPU HBM・CPU DRAM上のKVをinstance横断で管理・検索・転送するMemPoolを導入し、context cachingとP/D分離を同じmemory substrate上で組み合わせる。
 - 2024-06-05 — [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)
   - batch / interactive request、複数model、異なるSLOを同じqueueで扱い、待ち時間予測を使ってrequest groupの順序とinstance割当を組み替える。
 - 2024-06-05 — [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)
@@ -64,6 +66,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Application / program-aware serving:** Parrotはrequest DAGとSemantic Variableを使ってapplication全体をscheduleし、SGLangはLM program構造とpersistent prefix cacheをruntime最適化へ利用する。
 - **Stateful conversation serving:** PensieveはGPU / CPU cacheでconversation KVをrequest間保持し、CachedAttentionはDRAM / SSD hierarchyとscheduler hintまで使って同じreuseを大規模化する。
 - **P/D resource disaggregation:** DistServeはprefill / decodeを別resource poolとしてprovisionし、SLO付きgoodputを最大化する。
+- **Distributed stateful P/D serving:** MemServeはGPU HBM・CPU DRAMを跨ぐMemPoolでhistorical KVをinstance横断管理し、context cachingとP/D分離を同時に成立させる。
 - **Hardware specialization:** SplitwiseはphaseごとにGPU世代・power budgetを変え、Perf/$・Perf/Wまでcluster designへ取り込む。
 - **Serverless model startup:** ServerlessLLMはcheckpoint localityとloading timeをplacement costに含め、高速checkpoint loadingとlive migrationでcold startを抑える。
 - **Elastic / preemptible serving:** SpotServeは利用可能GPU数の変動に合わせてparallel topologyを再構成し、weight / KV stateを再利用しながらspot instance上でserveする。
