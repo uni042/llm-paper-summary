@@ -6,7 +6,7 @@ CPU offload、KV-cache offload、通常のNVMe SSD、Computational Storage Drive
 
 ## 収録論文
 
-収録論文: 18本。公開日が新しい順。
+収録論文: 19本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 高帯域Flashから必要なexpertをGPU / HBMへ直接送り、通常のNVMeより大きなMoEをI/O待ちを抑えて推論する。
@@ -18,6 +18,8 @@ CPU offload、KV-cache offload、通常のNVMe SSD、Computational Storage Drive
   - 複数batchのGPU計算を利用して、GPUにないexpertをCPU / SSDから読み込む時間を隠し、巨大MoEのI/O待ちを減らす。
 - 2025-02-07 — [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)
   - expertをより小さなblockに分割し、必要な部分だけをGPUへ読み込むことで、VRAM使用量と転送遅延のバランスを調整する。
+- 2025-01-03 — [Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md)
+  - 過去tokenをKVと中間activationの2形式で混在保存し、weight転送中の空きGPUでactivationからKVを再生成して、PCIe転送量と再計算量を釣り合わせる。
 - 2024-11-26 — [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)
   - CPU上のKV cacheの一部を小さいactivationからGPUで再計算し、残りのKV転送と同時実行することでPCIe待ちをGPU computeへ置き換える。
 - 2024-11-18 — [MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)
@@ -28,7 +30,7 @@ CPU offload、KV-cache offload、通常のNVMe SSD、Computational Storage Drive
   - operationごとにCPUで直接計算するcostとGPUへdataを運んで計算するcostを比較して配置し、CPU計算の裏にPCIe転送を隠す。
 - 2024-09-08 — [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)
   - KV cacheとdecode attentionをComputational Storage Drive内へ置き、flash内部帯域で処理してstorage↔GPUの巨大なKV転送を避ける。
-- 2024-05-29 — [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-via-near-data-processing.md)
+- 2024-05-29 — [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)
   - storageの近くでexpert計算の一部を実行し、expert重みをGPUまで運ぶ量を減らして大規模MoEを推論する。
 - 2024-03-18 — [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)
   - KV cacheとattention計算を複数CPU nodeへ置き、GPUにはlinear / MLP計算を集中させてKV転送を避けながら大batch throughputを高める。
