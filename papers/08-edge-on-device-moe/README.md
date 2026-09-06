@@ -1,4 +1,4 @@
-# Edge／on-device MoE
+# Edge / On-device LLM Systems
 
 収録論文: 4本。公開日が新しい順。
 
