@@ -1,12 +1,12 @@
 # 論文カタログ
 
-収録論文: **95本**。
+収録論文: **96本**。
 
 論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。各系統READMEには、**その系統が何を効率化する研究群かという説明**と、**収録する全論文の一文説明**を掲載する。
 
 一文説明ではTransformer、MoE、KV cache、quantization、speculative decodingなどLLMの基礎知識は説明なしで使う。一方、特定論文・狭い研究領域でしか通じにくい名称はそのまま並べず、できるだけ「何をどう変えて、何を減らす・改善するのか」が分かる表現へ言い換える。
 
-## Inference / 推論 — 79本
+## Inference / 推論 — 80本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 13本
   - GPUに収まらないmodel weight / expertなどをCPU・SSD・Flashへ置き、転送・CPU/GPU協調・near-data処理を最適化してmemory容量とI/O待ちを減らす。
@@ -26,7 +26,7 @@
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実行する。
 - [Other Inference Systems](inference/09-other-inference-systems/) — 2本
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
-- [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 7本
+- [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 8本
   - KV cacheをCPU DRAM・storageへ置く、attention計算をKVの近くへ移す、またはKV転送を部分再計算へ置き換え、HBM容量とhost-device I/Oを抑える。
 
 → [Inference一覧](inference/)
