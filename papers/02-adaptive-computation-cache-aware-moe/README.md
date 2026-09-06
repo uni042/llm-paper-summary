@@ -1,4 +1,4 @@
-# Adaptive computation／cache-aware MoE
+# Adaptive Expert Computation / Compression
 
 収録論文: 9本。公開日が新しい順。
 
