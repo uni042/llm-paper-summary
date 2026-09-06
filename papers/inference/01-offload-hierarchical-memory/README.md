@@ -1,19 +1,21 @@
 # Offload / Hierarchical Memory
 
-GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。単純にcapacityを増やすだけでなく、転送とGPU計算のoverlap、access頻度に応じたplacement、near-data processingなどによって**memory容量とI/O待ちの両方を減らす**ことが中心課題となる。
+GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。単純にcapacityを増やすだけでなく、転送とGPU計算のoverlap、access頻度に応じたplacement、near-data processingなどによって**memory容量とI/O待ちの両方を減らす**ことが中心課題となる。
 
-KV cache固有のoffload、attention compute placement、KV recomputationを主題とする研究は [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離している。FlexGenのようにweight・activation・KVをまとめたsystem-wide memory hierarchyを扱う研究は本系統に残す。
+KV cache固有のoffload、attention compute placement、KV recomputationを主題とする研究は [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離している。FlexGenやHarvestのようにweight / expertを含む複数種類のinference stateを同じ階層memoryで扱う研究は本系統に残す。
 
-CPU offload、通常NVMe SSD、High-Bandwidth Flash、near-data processingなどは、同じ階層memoryでも帯域・遅延・実行場所が異なるため区別して扱う。
+CPU offload、peer GPU HBM、通常NVMe SSD、High-Bandwidth Flash、near-data processingなどは、同じ階層memoryでも帯域・遅延・実行場所が異なるため区別して扱う。
 
 ## 収録論文
 
-収録論文: 13本。公開日が新しい順。
+収録論文: 14本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 高帯域Flashから必要なexpertをGPU / HBMへ直接送り、通常のNVMeより大きなMoEをI/O待ちを抑えて推論する。
 - 2026-05-18 — [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md)
   - expertへ送られたtokenを大きなまとまりに集約し、CPUとGPUへ分担して実行することで、重みをすべてGPUへ載せずにthroughputを高める。
+- 2026-01-30 — [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)
+  - 余っているpeer GPUのHBMを一時cacheとして使い、MoE expertとKV cacheのmissをNVLink経由で高速化し、memory回収時はhost fallbackや再構築で正しさを保つ。
 - 2025-02-09 — [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)
   - 複数batchのGPU計算を利用して、GPUにないexpertをCPU / SSDから読み込む時間を隠し、巨大MoEのI/O待ちを減らす。
 - 2025-02-07 — [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)
