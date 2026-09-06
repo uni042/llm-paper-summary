@@ -3,13 +3,13 @@
 ## 系統別
 
 - [オフロード／階層メモリ](01-offload-hierarchical-memory/) — 14本
-- [Adaptive computation／cache-aware MoE](02-adaptive-computation-cache-aware-moe/) — 9本
+- [Adaptive Expert Computation / Compression](02-adaptive-computation-cache-aware-moe/) — 9本
 - [Expert prefetch](03-expert-prefetch/) — 12本
 - [Conditional computation](04-conditional-computation/) — 8本
 - [Speculative decoding × MoE](05-speculative-decoding-moe/) — 6本
-- [Quantization × MoE × Offload](06-quantization-moe-offload/) — 13本
-- [Quality-cost optimization](07-quality-cost-optimization/) — 4本
-- [Edge／on-device MoE](08-edge-on-device-moe/) — 4本
+- [MoE Quantization / Compression](06-quantization-moe-offload/) — 13本
+- [Adaptive Resource / Quality-Cost Optimization](07-quality-cost-optimization/) — 4本
+- [Edge / On-device LLM Systems](08-edge-on-device-moe/) — 4本
 - [その他システム研究](09-other-systems-research/) — 14本
 
 ## 全論文
