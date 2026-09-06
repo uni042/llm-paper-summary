@@ -1,6 +1,6 @@
 ---
 title: "EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models"
-summary: "量子化後のexpert-shiftをTopK-MSEで校正し、入力系列のexpert頻度に応じた動的pruningを組み合わせてMoEを圧縮する。"
+summary: "量子化後も元モデルと近いexpertが選ばれるようrouter上位expertの誤差を重点的に補正し、prefillでほとんど使われないexpertを入力ごとに省く圧縮手法。"
 authors_affiliations: "Yuanteng Chen, Yuantian Shao, Peisong Wang, Jian Cheng／Chinese Academy of Sciences, UCAS, Nanjing University of Science and Technology, AIRIA, [Maicro.ai](http://Maicro.ai)"
 published: "2025-08-03"
 publication_status: "Published"
@@ -15,30 +15,30 @@ last_checked: "2026-09-03"
 
 # EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models
 
-> 量子化後のexpert-shiftをTopK-MSEで校正し、入力系列のexpert頻度に応じた動的pruningを組み合わせてMoEを圧縮する。
+> 量子化後も元モデルと近いexpertが選ばれるようrouter上位expertの誤差を重点的に補正し、prefillでほとんど使われないexpertを入力ごとに省く圧縮手法。
 
 ## 概要
-EAC-MoEは、量子化誤差を「expertの出力値が少しずれる」だけでなく、**そのずれによって次のrouterが別expertを選んでしまうこと**まで含めて扱う。これをexpert-shiftと呼び、QESCで補正する。さらにprefill中のexpert利用頻度を見て、ほとんど使われないexpertをPESFでpruneする。
+EAC-MoEは、量子化誤差を「expertの出力値が少しずれる」だけでなく、**そのずれによって次のrouterが別expertを選んでしまうこと**まで含めて扱う。論文ではこのroutingのずれを `expert-shift` と呼び、QESCで補正する。さらにprefill中のexpert利用頻度を見て、ほとんど使われないexpertをPESFでpruneする。
 
 ## 手法のあらまし
 
-### 1. `expert-shift`
+### 1. 量子化誤差で次layerのexpert選択まで変わる
 
 MoEではあるlayerの量子化誤差がhidden stateへ入り、そのhidden stateを次layerのrouterが読む。
 
-その結果、元モデルではexpert A/BがTop-kだったのに、量子化後はA/Cになることがある。これが **expert-shift** である。
+その結果、元モデルではexpert A/BがTop-kだったのに、量子化後はA/Cになることがある。論文ではこれを **expert-shift** と呼ぶ。
 
 つまり量子化誤差は、単にexpert出力の近似誤差として終わらず、**routing経路そのものを変えて後段へ増幅する**。
 
-### 2. `QESC` と `TopK-MSE`
+### 2. `QESC`：router上位expertの順位を保つように量子化する
 
 Quantization with Expert-Selection Calibration（QESC）は、通常のMSEだけでなく、routerのTop-k選択を保つことを重視して量子化する。
 
-`TopK-MSE` は、全expert出力を同じ重みで合わせるのではなく、**router上位へ入るexpertとその出力のずれを重点的に小さくする**損失である。
+QESC内の `TopK-MSE` は、全expert出力を同じ重みで合わせるのではなく、**router上位へ入るexpertとその出力のずれを重点的に小さくする**損失である。
 
 狙いは「全出力を平均的に近づける」よりも、**元モデルと同じexpert rankingを維持すること**にある。
 
-### 3. expert-shiftが独立に品質を悪化させる
+### 3. routingのずれだけでも品質が悪化する
 
 Mixtralの分析では、FPでrouting shiftを起こさない状態のPPL 3.84に対し、FPでもshiftを許すと4.17、量子化だけで4.21、量子化＋shiftで4.65となる。
 
@@ -81,7 +81,7 @@ model-globalな静的pruningではなく、**入力sequenceごとにprune対象�
 | 2.56 | MC-MoE | 4.74 | 68.65 | 1.71倍 |
 | 2.56 | EAC-MoE | 4.58 | 68.60 | 1.74倍 |
 
-2.06 bitの厳しい条件ではrouting-aware calibrationの差が大きい。
+2.06 bitの厳しい条件ではroutingを保つ量子化補正の差が大きい。
 
 ### PESFのquality–compute trade-off
 
@@ -100,4 +100,5 @@ Mixtralで約30% pruningした条件では、full precision平均72.64に対し7
 ## 一次資料
 - [ACL Anthology](https://aclanthology.org/2025.acl-long.633/)
 - [arXiv](https://arxiv.org/abs/2508.01625)
-
+## 更新履歴
+- 2026-09-07: expert-shift / TopK-MSE / QESCをrouter上位expertの保持という具体的な処理として説明し直した。
