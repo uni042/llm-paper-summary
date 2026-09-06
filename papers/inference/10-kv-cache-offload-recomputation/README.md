@@ -8,12 +8,14 @@ weight / expert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ## 収録論文
 
-収録論文: 11本。公開日が新しい順。
+収録論文: 12本。公開日が新しい順。
 
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200のNVLink-C2Cを使い、GPU kernelがCPU pinned memory上のKVをstaging bufferなしで直接読み、専用tilingとkernel fusionでremote-memory trafficを抑える。
 - 2026-01-28 — [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)
   - GH200のHBMとCPU DRAMの間でrequestのKVをSLO進捗に応じて能動的に入れ替え、細切れKVをまとめたfull-duplex転送でC2C帯域を使う。
+- 2025-12-16 — [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md)
+  - cached KV量と新規prefill量の比からI/O-boundへ変わる境界を定式化し、実効PCIe帯域ではKV offloadが理論peak想定より大幅に早くbottleneck化することを実測する。
 - 2025-07-01 — [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md)
   - attentionの将来accessを既知としたsimulationでKVをHBM / off-package DRAMへ動的配置し、static placementとの間に残る理論的なperformance改善余地を測る。
 - 2025-06-03 — [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md)
@@ -42,5 +44,6 @@ weight / expert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **Dynamic fast/slow-tier placement:** Fang et al.はtoken importanceに応じたKV migrationの理論上限をsimulationで評価する。
 - **SLO-aware rotation:** SuperInferはrequestごとのTTFT / TBT進捗を見てHBMとCPU DRAMのKV residencyを能動的に入れ替える。
 - **Zero-copy remote access:** DirectKVは高速CPU-GPU interconnectを前提に、KVをCPUに置いたままGPU kernelから直接読む。
+- **Bottleneck characterization:** Meng et al.はcached KV / new token比と実効interconnect bandwidthから、offloadがI/O-boundになる境界を定量化する。
 
-これらは実行場所こそ異なるが、共通して**KVをlocal GPU HBMだけへ固定することによるcapacity / I/O bottleneckを避ける**ことを目的とする。
+これらは実行場所こそ異なるが、共通して**KVをlocal GPU HBMだけへ固定することによるcapacity / I/O bottleneckを避ける、またはその限界を定量化する**ことを目的とする。
