@@ -1,14 +1,14 @@
 # LLM Serving / Scheduling / Disaggregation
 
-複数request・複数GPU / nodeを使うLLM servingで、**prefillとdecodeの資源配分、request scheduling、KV cache共有、cluster間data transfer**をまとめて設計し、TTFT / TBTなどのSLOを守りながらgoodputを高める研究をまとめる。
+複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、request scheduling、prefillとdecodeの資源配分、KV cache共有、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率を高める研究をまとめる。
 
-単一requestのkernel高速化や単一GPUのmemory節約ではなく、**serving cluster全体で「どのrequestを、どのstageで、どのinstanceに割り当てるか」**が主題となる。prefill / decode disaggregation、chunked prefill、request migration、global KV cache、load balancing、admission control、phaseごとのhardware provisioningなどを含む。
+単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「実行中stateをどこへ動かすか」**が主題となる。continuous batching、preemption、chunked prefill、prefill / decode disaggregation、request migration、global KV cache、load balancing、admission control、elastic / spot-instance servingなどを含む。
 
 KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache Offload / Recomputation`、MoE expert placementが主目的なら各MoE系統に分類する。
 
 ## 収録論文
 
-収録論文: 5本。公開日が新しい順。
+収録論文: 9本。公開日が新しい順。
 
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
   - prefill / decode clusterを分離し、CPU DRAM・SSD・RDMAを跨ぐglobal KV cacheとcache-aware schedulerを組み合わせて、長context servingのSLO付きrequest capacityを高める。
@@ -20,13 +20,25 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - prefillとdecodeを別GPUへ分離し、各phaseのGPU数・parallelism・physical placementをTTFT / TPOT SLOとnetwork帯域に合わせて別々に最適化する。
 - 2023-11-30 — [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)
   - promptとtoken generationを別machine poolへ分け、phaseごとにA100 / H100やpower capを選んでcluster throughput・cost・powerを最適化する。
+- 2023-11-27 — [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)
+  - spot GPUの増減に合わせてmodel parallel構成を動的に組み替え、既存weight・KVを再利用するmigrationとtoken単位のstate recoveryで安価なpreemptible instanceを活用する。
+- 2023-09-12 — [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)
+  - KV cacheを固定長blockへ分けて必要な分だけ非連続memoryへ配置・共有し、fragmentationと過剰予約を減らしてcontinuous batchへ載せられるrequest数を増やす。
+- 2023-05-10 — [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)
+  - output tokenごとにrequestをpreemptし、入力長を使ったpriority schedulingと先回りKV swapで長いrequestによるqueueing delayを抑える。
+- 2022-07-11 — [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)
+  - 1 token generationごとにbatchを組み替え、attention以外をtoken単位でまとめて実行することで、異なる長さ・進行位置のrequestを同じbatchへ柔軟に混在させる。
 
 ## 主な技術の分岐
 
+- **Iteration-level flexible batching:** Orcaはrequest全体ではなく1 token generationをscheduling boundaryとし、continuous batchingの基礎を作る。
+- **Paged KV memory:** vLLMはKV cacheをpage-like blockで管理・共有し、continuous batchingをmemory側から大きくする。
+- **Preemptive priority scheduling:** FastServeはiteration boundaryでrunning requestをpreemptし、priorityとproactive KV swappingでhead-of-line blockingを抑える。
 - **Colocated stall-free scheduling:** Sarathi-ServeはP/Dを同じGPUへ残したままprefillをchunk化し、decode latencyを保護する。
 - **P/D resource disaggregation:** DistServeはprefill / decodeを別resource poolとしてprovisionし、SLO付きgoodputを最大化する。
 - **Hardware specialization:** SplitwiseはphaseごとにGPU世代・power budgetを変え、Perf/$・Perf/Wまでcluster designへ取り込む。
+- **Elastic / preemptible serving:** SpotServeは利用可能GPU数の変動に合わせてparallel topologyを再構成し、weight / KV stateを再利用しながらspot instance上でserveする。
 - **Runtime request migration:** Llumnixはrunning requestとKVをinstance間で移し、dispatch後に判明したload imbalanceやfragmentationを修正する。
 - **Global KV-centric serving:** MooncakeはP/D分離の上にdistributed KV cache poolを置き、prefix reuse・replication・RDMA transferをglobal schedulerで扱う。
 
-この系統は独立した研究群として継続し、preemption、request migration、elastic routing、queueing-theory based schedulingなどの後続研究も引用鎖から追加する。
+この系統は独立した研究群として継続し、fairness、SLO-aware scheduling、serverless / autoscaling、heterogeneous routingなどの引用鎖も引き続き確認する。
