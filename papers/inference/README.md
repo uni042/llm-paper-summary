@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **76本**。
+収録論文: **78本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**モデルを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -10,7 +10,7 @@
 
 ## 系統
 
-- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 18本
+- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 19本
   - GPUに収まらないweight / expert / KV cacheをCPU・SSD・Flashなどへ置き、必要時の転送やGPU外計算を最適化してmemory容量とI/O待ちを減らす。
 - [Adaptive Expert Computation / Compression](02-adaptive-expert-computation-compression/) — 10本
   - token・layer・expertの重要度やcostに応じて、実行するexpert数やexpert自体を変え、MoEの計算量・転送量・model容量を削減する。
@@ -22,7 +22,7 @@
   - speculative decodingで増えるMoEのexpert実行・weight転送・verification costを、branch選択やexpert再利用・先読みで抑える。
 - [MoE Quantization / Compression](06-moe-quantization-compression/) — 13本
   - expertごとの重要度・利用頻度・量子化耐性に合わせてbit幅やexpert数を調整し、memoryと計算量を減らす。
-- [KV Cache Optimization / Compression](07-kv-cache-optimization-compression/) — 3本
+- [KV Cache Optimization / Compression](07-kv-cache-optimization-compression/) — 4本
   - 長contextやreasoningで増えるKV cacheを、重要度に応じた削除・圧縮・動的budgetingで小さく保つ。
 - [Edge / On-device LLM Systems](08-edge-on-device-llm-systems/) — 4本
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実用速度で動かす。
