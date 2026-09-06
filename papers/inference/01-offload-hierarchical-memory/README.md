@@ -2,11 +2,11 @@
 
 GPUメモリに収まらないLLMを動かすため、重みやexpertをCPUメモリ、SSD / Flashなどへ置き、必要な部分だけをGPUへ移す、またはGPU外で直接計算する研究をまとめる。単純に容量を増やすだけでなく、転送とGPU計算を重ねる、アクセス頻度に応じて配置を変える、storage側で計算するなどして、**メモリ容量とI/O待ちの両方を減らす**ことが中心課題となる。
 
-CPU offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingなどは、同じ階層メモリ系でも帯域・遅延・実行場所が異なるため区別して扱う。
+CPU offload、KV-cache offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingなどは、同じ階層メモリ系でも移動するdata・帯域・遅延・実行場所が異なるため区別して扱う。
 
 ## 収録論文
 
-収録論文: 12本。公開日が新しい順。
+収録論文: 13本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 高帯域Flashから必要なexpertをGPU / HBMへ直接送り、通常のNVMeより大きなMoEをI/O待ちを抑えて推論する。
@@ -20,6 +20,8 @@ CPU offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingな
   - expertの配置、CPUからの読み出し、GPU計算をpipeline化し、重みI/Oと計算を重ねて待ち時間を隠す。
 - 2024-05-29 — [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)
   - storageの近くでexpert計算の一部を実行し、expert重みをGPUまで運ぶ量を減らして大規模MoEを推論する。
+- 2024-03-18 — [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)
+  - KV cacheとattention計算を複数CPU nodeへ置き、GPUにはlinear / MLP計算を集中させてKV転送を避けながら大batch throughputを高める。
 - 2024-03-02 — [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)
   - linear weightをCPU計算分とGPU計算分へ分け、CPU計算・weight転送・GPU計算を重ねることでbatch=1のoffload latencyを下げる。
 - 2024-02-10 — [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)
