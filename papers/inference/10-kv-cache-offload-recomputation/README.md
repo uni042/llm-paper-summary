@@ -1,14 +1,14 @@
 # KV Cache Offload / Recomputation
 
-GPU HBMに収まらないKV cacheを**CPU DRAM・storageなどへ置く、KVを使うattention計算をdataの近くへ移す、またはKV転送の一部をGPU再計算へ置き換える**研究をまとめる。
+local GPU HBMに収まらないKV cacheを**CPU DRAM・peer GPU HBM・storageなどへ置く、KVを使うattention計算をdataの近くへ移す、またはKV転送の一部をGPU再計算へ置き換える**研究をまとめる。
 
-`KV Cache Optimization / Compression` が「どのKVを残すか・どれだけ小さくするか」を主に扱うのに対し、この系統は**KVをGPU外へ置いたときのdata movementと実行場所**が中心課題である。CPU attention、in-storage attention、partial recomputation、activation checkpoint、zero-copy remote accessなど、KVを毎token HBMへ戻すcostを避ける手法を含む。
+`KV Cache Optimization / Compression` が「どのKVを残すか・どれだけ小さくするか」を主に扱うのに対し、この系統は**KVをlocal HBM以外へ置いたときのdata movementと実行場所**が中心課題である。CPU attention、peer-GPU paging、in-storage attention、partial recomputation、activation checkpoint、zero-copy remote accessなどを含む。
 
-weight / expert全般のCPU・SSD offloadは `Offload / Hierarchical Memory` に残し、KV cache固有のplacement・attention execution・recomputationを主題とする論文はこちらへ分類する。
+weight / expert全般を含む汎用memory hierarchyは `Offload / Hierarchical Memory` に残し、KV cache固有のplacement・attention execution・recomputationを主題とする論文はこちらへ分類する。
 
 ## 収録論文
 
-収録論文: 9本。公開日が新しい順。
+収録論文: 10本。公開日が新しい順。
 
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200のNVLink-C2Cを使い、GPU kernelがCPU pinned memory上のKVをstaging bufferなしで直接読み、専用tilingとkernel fusionでremote-memory trafficを抑える。
@@ -26,6 +26,8 @@ weight / expert全般のCPU・SSD offloadは `Offload / Hierarchical Memory` に
   - requestの一部だけdecode attentionとKV cacheをCPUへ移し、GPU側sub-batchと並行実行しながら毎iterationの負荷に応じてoffload量を変える。
 - 2024-09-08 — [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)
   - KV cacheとdecode attentionをComputational Storage Drive内へ置き、flash内部帯域で処理してstorage↔GPUの巨大なKV転送を避ける。
+- 2024-07-31 — [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md)
+  - 同じNVLink / NVSwitch domainで余っている別GPUのHBMをKVなどのswap先として借り、host DRAMより高速なpagingでpreemptive fair schedulingを実用化する。
 - 2024-03-18 — [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)
   - KV cacheとattentionを複数CPU nodeへ置き、GPUにはlinear / MLP計算を集中させてKV転送を避けながら大batch throughputを高める。
 
@@ -33,8 +35,9 @@ weight / expert全般のCPU・SSD offloadは `Offload / Hierarchical Memory` に
 
 - **Compute-to-data:** FastDecode / NEO / APEXはKVがあるCPUへattentionを寄せる。InstAttentionは同じ発想をstorage内部へ進める。
 - **Recompute instead of transfer:** KVPR / CAPTUREは、KVそのものを運ぶ代わりに小さいactivationを保持・転送しGPUで一部KVを再生成する。
+- **Peer-GPU paging:** Aquaは別GPUの余剰HBMを高速swap tierとして使う。
 - **Prefetch before use:** Pieはlayer access順序を利用し、CPU上のKVを必要になる前にGPUへswapして転送をcomputeで隠す。
 - **SLO-aware rotation:** SuperInferはrequestごとのTTFT / TBT進捗を見てHBMとCPU DRAMのKV residencyを能動的に入れ替える。
 - **Zero-copy remote access:** DirectKVは高速CPU-GPU interconnectを前提に、KVをCPUに置いたままGPU kernelから直接読む。
 
-これらは実行場所こそ異なるが、共通して**KVを毎decode stepでGPU HBMへ完全にstageするcostを避ける**ことを目的とする。
+これらは実行場所こそ異なるが、共通して**KVをlocal GPU HBMだけへ固定することによるcapacity / I/O bottleneckを避ける**ことを目的とする。
