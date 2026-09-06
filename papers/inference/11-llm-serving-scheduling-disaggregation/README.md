@@ -1,14 +1,14 @@
 # LLM Serving / Scheduling / Disaggregation
 
-複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、token-budget / chunked-prefill scheduling、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、application-level dependency、model startup、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairnessを高める研究をまとめる。
+複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、token-budget / chunked-prefill scheduling、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、application-level dependency、model startup、cluster間data transfer、elastic resource管理、user-perceived streaming QoE**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairness・体感品質を高める研究をまとめる。
 
-単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「複数LLM callの依存関係や共有contextをどう使うか」**が主題となる。continuous batching、preemption、chunked prefill、SLO-aware queueing、prefill / decode disaggregation、request migration、stateful conversation、application-aware scheduling、global KV cache、prefix-locality-aware routing、fair scheduling、predictive job-size scheduling、serverless / elastic servingなどを含む。
+単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「複数LLM callの依存関係や共有contextをどう使うか」「どのrequestへ次のtokenを与えるとuser experienceが改善するか」**が主題となる。continuous batching、preemption、chunked prefill、SLO-aware queueing、prefill / decode disaggregation、request migration、stateful conversation、application-aware scheduling、global KV cache、prefix-locality-aware routing、fair scheduling、predictive job-size scheduling、QoE-aware streaming、serverless / elastic servingなどを含む。
 
 KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache Offload / Recomputation`、MoE expert placementが主目的なら各MoE系統に分類する。
 
 ## 収録論文
 
-収録論文: 21本。公開日が新しい順。
+収録論文: 22本。公開日が新しい順。
 
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
   - client間のservice deficitをboundedに保ちながら、その許容範囲でshared prefixが長いrequestをまとめるDLPMと、複数GPUでfairness・prefix locality・load balanceを両立するD²LPMを提案する。
@@ -26,6 +26,8 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - 複数LLM callのprompt構造・依存関係・共有prefixをbackendへ伝え、request DAG全体を見ながら並列化・batching・prefix reuse・schedulingを共同最適化する。
 - 2024-05-08 — [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)
   - shared prefixを持つrequestのKV再利用量とGPU負荷を同じ計算costで比較するE2 schedulerにより、cluster-level prefix localityとload balanceを共同最適化する。
+- 2024-04-25 — [Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services](2024-2404.16283-andes-qoe-text-streaming-serving.md)
+  - streaming responseのuser consumption timelineをQoEとして定式化し、token-level preemptionとclient-side pacingで、先行生成に使うGPUをTTFT待ちやtoken不足が近いrequestへ振り替える。
 - 2024-03-23 — [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)
   - multi-turn history KVをDRAM / SSDへ階層保存し、scheduler-awareなlayer-wise preloadと非同期saveで次turnのhistory再prefillとslow-tier待ちを減らす。
 - 2024-03-04 — [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)
@@ -61,6 +63,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Predictive job-size scheduling:** Efficient LLM Scheduling by Learning to Rankはpromptからgeneration lengthの相対順位を予測し、実行前から短いrequestを優先してSJF / SRTFへ近づける。
 - **Token-budget / chunked-prefill scheduling:** DeepSpeed-FastGenは長promptをsplitし短promptをfuseしてforwardの総token数をtargetへ揃え、Sarathi-Serveはdecodeを保護した上で残りtoken budgetへprefill chunkを詰めてgeneration stallを抑える。
 - **SLO-aware queue management:** QLMはrequest waiting time、SLO slack、model locality、instance loadを見てmulti-model queue順序と割当を最適化する。
+- **QoE-aware text streaming:** Andesは人間がtokenを消費するtimelineを目的関数へ入れ、十分先まで生成済みのrequestをpreemptして、そのGPU時間をTTFT待ちやstream starvationが近いrequestへ回す。
 - **Prefix-locality-aware cluster routing:** Prebleはprefix reuseで節約できるprefill計算とGPU load / KV eviction costを共同評価し、shared-prefix requestを同じGPUへ集める利得とhotspot回避を両立する。
 - **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。DLPM / D²LPMはそのfairness boundを緩めた範囲でprefix localityを優先し、distributed settingではload balanceも同時に扱う。
 - **Application / program-aware serving:** Parrotはrequest DAGとSemantic Variableを使ってapplication全体をscheduleし、SGLangはLM program構造とpersistent prefix cacheをruntime最適化へ利用する。
@@ -73,4 +76,4 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Runtime request migration:** Llumnixはrunning requestとKVをinstance間で移し、dispatch後に判明したload imbalanceやfragmentationを修正する。
 - **Global KV-centric serving:** MooncakeはP/D分離の上にdistributed KV cache poolを置き、prefix reuse・replication・RDMA transferをglobal schedulerで扱う。
 
-この系統は独立した研究群として継続し、SLO-aware fairness、agent / program-aware serving、serverless / autoscaling、stateful prefix reuse、heterogeneous routing、predictive schedulingなどの引用鎖も引き続き確認する。
+この系統は独立した研究群として継続し、SLO-aware fairness、QoE / deadline-aware streaming、agent / program-aware serving、serverless / autoscaling、stateful prefix reuse、heterogeneous routing、predictive schedulingなどの引用鎖も引き続き確認する。
