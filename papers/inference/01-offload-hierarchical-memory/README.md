@@ -6,7 +6,7 @@ CPU offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingな
 
 ## 収録論文
 
-収録論文: 10本。公開日が新しい順。
+収録論文: 11本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 高帯域Flashから必要なexpertをGPU / HBMへ直接送り、通常のNVMeより大きなMoEをI/O待ちを抑えて推論する。
@@ -28,3 +28,5 @@ CPU offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingな
   - MoE expertをCPUへ置き、実際の利用頻度に応じたGPU cacheと先読みで必要な重み転送を減らす。
 - 2023-12-12 — [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)
   - Flash上の重みからその時に必要な部分だけを読み出し、DRAM容量が小さい端末でも大きなLLMを実行できるようにする。
+- 2023-03-13 — [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)
+  - weight・activation・KV cacheをGPU / CPU / SSDへ分散配置し、同じlayer weightを複数batchで使い回す計算順とI/O重畳で単一GPUのoffline throughputを高める。
