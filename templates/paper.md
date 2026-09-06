@@ -17,33 +17,48 @@ last_checked: YYYY-MM-DD
 
 > 一文要約
 
+## 記述ルール
+
+Transformer、MoE、KV cache、quantization、speculative decoding、tensor / pipeline parallelismなど、LLM分野で広く使われる基礎用語は説明なしで使ってよい。
+
+一方、**特定論文や狭い研究分野でしか通じにくい方式名・略語・scheduler名・数理最適化名・hardware固有語を、説明の前提として使わない**。正式名称を残す場合は最初の出現で、
+
+1. 何を入力として見るのか
+2. 具体的に何を動かす・選ぶ・削る・予測するのか
+3. その結果、何の計算・転送・memory使用量・待ち時間が減るのか
+
+が分かる文章を添える。
+
+例えば `head-of-line blocking` とだけ書かず「先頭の長いrequestが後続requestを待たせる状態」、`goodput` とだけ書かず「SLOを満たして処理できるrequest数」のように書く。このルールは一文要約だけでなく、概要、手法、評価、既存研究との差、限界、実装上の含意の**全文章**に適用する。
+
 ## 概要
 
-研究が解こうとしている問題、既存方式との差、対象となるモデル／runtime／memory hierarchyを簡潔にまとめる。
+研究が解こうとしている問題、既存方式との差、対象となるmodel / runtime / memory階層を簡潔にまとめる。論文独自の名称を先に出すより、まず「何をどう改善する研究か」を説明する。
 
-## 手法のあらまし
+## 手法
 
 最初に手法全体の流れを数文で示す。
 
-### 1. 論文固有の主要概念
+### 1. 主要な仕組み
 
-一般的なLLM用語そのものではなく、この論文を読む際に引っかかりやすい固有名・狭い専門用語を説明する。
+論文固有の名称を使う場合は、名前そのものではなく実際の動作を主文にする。
 
-- **用語が何を指すか**
-- **具体的に何をしているか**
-- **単純なbaselineと比べてなぜ有効か**
+- 何を観測するか
+- 何を変更するか
+- どのbottleneckを減らすか
+- 誤予測やresource不足時にどうなるか
 
-の順で理解できるようにする。原論文との対応が分かるよう英語名も残す。
+を明示する。
 
 ### 2. 次の主要機構
 
-アルゴリズム、scheduler、cache policy、predictor、量子化器など、独立した構成要素ごとに分けて説明する。
+algorithm、scheduler、cache policy、predictor、量子化器など、独立した構成要素ごとに分けて説明する。ただし固有名だけを見出しにせず、必要なら「固有名 — 何をする仕組みか」の形にする。
 
-必要なら以下のような小さな表で役割を整理する。
+必要なら小さな表で役割を整理する。
 
-| 構成要素 | 役割 | 主なtrade-off |
-|---|---|---|
-|  |  |  |
+| 構成要素 | 具体的な動作 | 改善対象 | 主なtrade-off |
+|---|---|---|---|
+|  |  |  |  |
 
 ### 3. 適応・予測・近似がある場合
 
@@ -51,8 +66,8 @@ last_checked: YYYY-MM-DD
 
 特に、
 
-- native計算へfallbackするlossless型
-- expert substitution / pruning / quantizationなどの近似型
+- 誤予測時に通常計算へ戻れるlossless型
+- expert置換 / pruning / quantizationなど結果が近似になる型
 
 を区別する。
 
@@ -60,9 +75,9 @@ last_checked: YYYY-MM-DD
 
 ### まず見るところ
 - **結論:** 何が分かったかを1〜2文で。単なる数値列ではなく、実用上の意味を書く。
-- **速度・効率:** FLOPs／理論計算量とwall-clock／tokens/s／latencyを区別する。training論文ではstep time／throughput／time-to-qualityを明記する。
+- **速度・効率:** FLOPs／理論計算量と実測のtokens/s／latencyを区別する。training論文ではstep time／throughput／目標品質までの時間を明記する。
 - **品質:** losslessか近似か、PPL／accuracy／task品質の変化を要約する。
-- **メモリ・I/O:** CPU DRAM、通常SSD/NVMe、GDS、CXL、HBF、KV cache、weight／activation／optimizer offloadを区別する。
+- **memory・I/O:** CPU DRAM、通常SSD/NVMe、GDS、CXL、HBF、KV cache、weight／activation／optimizer offloadを区別する。狭いhardware機構は最初に意味を説明する。
 - **評価の強さ／注意点:** 実機かsimulationか、hardware・batch・model・公開code・主な一般化限界を書く。
 
 <details>
@@ -89,7 +104,7 @@ last_checked: YYYY-MM-DD
 |---|---:|---:|---:|
 |  |  |  |  |
 
-表の直後に、倍率が大きい理由や何がbottleneckだったかを短く説明する。
+表の直後に、倍率が大きい理由や、何が処理時間を支配していたのかを短く説明する。
 
 ### 品質・精度
 
@@ -107,7 +122,7 @@ last_checked: YYYY-MM-DD
 
 必要に応じてweight、KV、activation、optimizer stateを分ける。
 
-### Ablation
+### 構成要素ごとの効果
 
 | 構成 | 結果 | 読み取れること |
 |---|---:|---|
@@ -121,7 +136,15 @@ last_checked: YYYY-MM-DD
 
 </details>
 
+## 既存研究との差
+
+比較対象の固有名を並べるだけでなく、「先行研究は何を動かす／削る研究で、この論文はどこを追加・変更したか」を説明する。
+
 ## 限界・実装状況
+
+## 一般的な実装上の含意
+
+## 引用関係
 
 ## 一次資料
 
