@@ -8,10 +8,12 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 
 ## 収録論文
 
-収録論文: 22本。公開日が新しい順。
+収録論文: 23本。公開日が新しい順。
 
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
   - client間のservice deficitをboundedに保ちながら、その許容範囲でshared prefixが長いrequestをまとめるDLPMと、複数GPUでfairness・prefix locality・load balanceを両立するD²LPMを提案する。
+- 2025-01-14 — [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)
+  - interactive / batch requestのSLOを区別し、instance内batch sizeとcluster全体のinstance数を二階層のbackpressureで調整してSLO attainmentとGPU効率を両立する。
 - 2024-08-28 — [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)
   - promptから出力長の絶対値ではなくrequest間の相対順位を小型予測器で学習し、短いrequestを優先してSJF / SRTFへ近づけることでHOL blockingを減らす。
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
@@ -63,6 +65,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Predictive job-size scheduling:** Efficient LLM Scheduling by Learning to Rankはpromptからgeneration lengthの相対順位を予測し、実行前から短いrequestを優先してSJF / SRTFへ近づける。
 - **Token-budget / chunked-prefill scheduling:** DeepSpeed-FastGenは長promptをsplitし短promptをfuseしてforwardの総token数をtargetへ揃え、Sarathi-Serveはdecodeを保護した上で残りtoken budgetへprefill chunkを詰めてgeneration stallを抑える。
 - **SLO-aware queue management:** QLMはrequest waiting time、SLO slack、model locality、instance loadを見てmulti-model queue順序と割当を最適化する。
+- **Hierarchical SLO-aware autoscaling:** Chironはinteractive / batch requestのSLO差を使い、local batch sizeとglobal instance countを別々のbackpressure loopで制御して、spare capacityへのbatch multiplexingと必要時のscale-outを両立する。
 - **QoE-aware text streaming:** Andesは人間がtokenを消費するtimelineを目的関数へ入れ、十分先まで生成済みのrequestをpreemptして、そのGPU時間をTTFT待ちやstream starvationが近いrequestへ回す。
 - **Prefix-locality-aware cluster routing:** Prebleはprefix reuseで節約できるprefill計算とGPU load / KV eviction costを共同評価し、shared-prefix requestを同じGPUへ集める利得とhotspot回避を両立する。
 - **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。DLPM / D²LPMはそのfairness boundを緩めた範囲でprefix localityを優先し、distributed settingではload balanceも同時に扱う。
