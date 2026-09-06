@@ -1,10 +1,10 @@
 ---
 title: "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding"
-summary: "学習時のlayer dropoutとearly-exit損失により、同一モデルで早期終了とself-speculative decodingを可能にする手法。"
+summary: "学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。"
 authors_affiliations: "Meta AIほか（ACL 2024、著者詳細は一次資料参照）"
 published: "2024-08-12"
 publication_status: "Published"
-lineage: "Conditional computation"
+lineage: "Conditional Computation"
 topics: ["Dynamic depth","Speculative decoding","Quality-cost"]
 importance: "中"
 hardware_evaluation: "実機"
@@ -15,77 +15,77 @@ last_checked: "2026-09-02"
 
 # LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding
 
-> 学習時のlayer dropoutとearly-exit損失により、同一モデルで早期終了とself-speculative decodingを可能にする手法。
+> 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。
 
 ## 概要
-LayerSkipは、同じLLMの浅い層を**draft modelの代わり**に使い、残りの層でそのdraft tokenを検証する `self-speculative decoding` を成立させる学習レシピである。
+LayerSkipは、同じLLMの浅いlayerを**draft modelの代わり**に使い、残りlayerでそのdraft tokenを検証するself-speculative decodingを成立させる学習レシピである。
 
-通常のspeculative decodingでは別の小型draft modelを常駐させるため、重み・KV・メモリが追加で必要になる。LayerSkipは同一モデルの前半層をdraft、後半層をverifierとして使うので、別モデルを持たなくてよい。
+通常のspeculative decodingでは別の小型draft modelを常駐させるため、weight・KV・memoryが追加で必要になる。LayerSkipは同一modelの前半layerをdraft、後半layerをverifierとして使うので、別modelを持たなくてよい。
 
-ただし既存checkpointの中間層はそのままでは次token予測精度が低い。そこで学習時に `layer dropout` と `early-exit loss` を加え、中間層からでもLM headで予測しやすい表現を作る。
+ただし既存checkpointの中間layerは、そのままではnext-token予測精度が低い。そこで学習時に、**一部layerをランダムに飛ばす訓練**と、**途中layerからも正解tokenを予測させるloss**を加え、中間layerからでもLM headで予測しやすい表現を作る。
 
-H100実機でtoken/sまで測定しており、taskにより約1.3〜2.16倍のspeedupを示す。単純な層skipではなく、**浅い推測を後段で検証するため品質を守りやすい**のが特徴である。
+H100実機でtoken/sまで測定しており、taskにより約1.3〜2.16倍のspeedupを示す。単純なlayer skipではなく、**浅い予測を後段で検証して誤りを修正するため品質を守りやすい**のが特徴である。
 
 ## 手法のあらまし
 
-### 1. `Layer Dropout`：学習中にいろいろな深さのsubmodelを経験させる
+### 1. 学習中にいろいろな深さのsubmodelを経験させる
 
-学習時、Transformer層を確率的にskipする。
+学習時、Transformer layerを確率的にskipする。
 
-後段ほどdropout率を高くすることで、前半層だけでもある程度意味の通る表現を作れるようにする。
+後段ほどdropout率を高くすることで、前半layerだけでもある程度next-token予測に使える表現を作れるようにする。
 
-これはinference時の単純なlayer pruningとは違い、**同じ重みを複数のdepthで使えるよう事前に慣らす学習**である。
+これは推論時の単純なlayer pruningとは違い、**同じweightを複数のdepthで使えるよう事前に慣らす学習**である。
 
-### 2. `Early-Exit Loss`：中間層から直接next-token予測を学習する
+### 2. 中間layerから直接next-token予測を学習する
 
-各中間層のhidden stateを、最終層と同じLM headへ通してcross-entropy lossを追加する。
+各中間layerのhidden stateを、最終layerと同じLM headへ通してcross-entropy lossを追加する。
 
-出口ごとに別classifierを持つのではなく、**全出口が同じLM headを共有する**点が重要。
+exitごとに別classifierを持つのではなく、**全exitが同じLM headを共有する**。
 
-これにより中間層の表現を最終的な語彙logitへ直接読み出しやすくする。
+これにより中間layerの表現を語彙logitへ直接読み出しやすくする。
 
-### 3. `Self-Speculative Decoding`
+### 3. 前半layerだけでdraftし、後半layerでまとめて検証する
 
-推論時は出口層 `E` までで数tokenをdraft生成する。
+推論時はexit layer `E` までで数tokenをdraft生成する。
 
-その後、残りの `L-E` 層を使ってdraft token列をまとめて検証する。
+その後、残りの `L-E` layerを使ってdraft token列をまとめて検証する。
 
 - draftが正しい部分 → そのままaccept
 - 最初の不一致 → full model側の予測で修正
 
 という通常のspeculative decodingと同じ考え方だが、draftとtargetが**一つのmodelの前半／後半**に分かれている。
 
-### 4. `Shared Weights / Shared KV`
+### 4. Weightと前半layerのKVを別draft model用に複製しなくてよい
 
-別draft modelを持たないので、前半層のweightを二重に常駐させる必要がない。
+別draft modelを持たないので、前半layerのweightを二重に常駐させる必要がない。
 
-またdraft時に作った前半層のactivation/KVをverificationでも再利用できる。
+またdraft時に作った前半layerのactivation/KVをverificationでも再利用できる。
 
 この共有が、外部draft model方式に対するmemory上の主な利点になる。
 
-### 5. `Exit Layer E` と `Draft Length d`
+### 5. Exit layer `E` とdraft token数 `d` のバランス
 
-速度を決める主な2パラメータ。
+速度を決める主な2parameter。
 
 - `E`が浅すぎる → draft精度が下がりrejectが増える
 - `E`が深すぎる → draft自体が重くなる
-- `d`が短すぎる → parallel verificationの利得が小さい
-- `d`が長すぎる → reject後の無駄計算が増える
+- `d`が短すぎる → まとめてverificationする利得が小さい
+- `d`が長すぎる → 途中でrejectされた時の無駄計算が増える
 
-つまり最適点は単なる「浅いほど速い」ではなく、acceptanceとのバランスで決まる。
+最適点は単なる「浅いほど速い」ではなく、draft acceptanceとのバランスで決まる。
 
 ### 6. 既存checkpointをそのまま使う方式ではない
 
-LayerSkipの中間層がdraftとして強いのは、専用のlayer-dropout＋early-exit trainingをした結果である。
+LayerSkipの中間layerがdraftとして強いのは、専用のlayer-dropout＋early-exit trainingをした結果である。
 
 既存Llama checkpointへruntimeだけ追加して同じ結果が出るわけではない。
 
 ## 評価
 
 ### まず見るところ
-- **結論:** 同じモデルの前半層をdraftへ使うことで、別draft modelなしのspeculative decodingを実現できる。
+- **結論:** 同じmodelの前半layerをdraftへ使うことで、別draft modelなしのspeculative decodingを実現できる。
 - **実速度:** **H100で実token/sを測定**し、1.3〜2倍超の改善を確認。
-- **品質:** verifierが後半層で修正するため、early exit単独より品質を保ちやすい。
+- **品質:** verifierが後半layerで修正するため、early exit単独より品質を保ちやすい。
 - **メモリ:** 別draft modelのweight/KVが不要。
 - **注意点:** 専用学習とexit depth / draft lengthの調整が必要。
 
@@ -130,9 +130,9 @@ CNN/DMでは62.7 token/sから127.9 token/sまで上がる。
 
 ### Early exit単独との違い
 
-単に途中層のlogitをそのまま採用すると、浅い出口ほど品質が落ちる。
+単に途中layerのlogitをそのまま確定出力へ使うと、浅いexitほど品質が落ちる。
 
-LayerSkipでは浅い出口を**確定出力ではなくdraft**として使い、残り層でverificationするため、speedupと品質の両立がしやすい。
+LayerSkipでは浅いexitを**確定出力ではなくdraft**として使い、残りlayerでverificationするため、speedupと品質の両立がしやすい。
 
 ### 速度を決めるもの
 
@@ -140,8 +140,8 @@ LayerSkipでは浅い出口を**確定出力ではなくdraft**として使い�
 |---|---|
 | Exit layerが浅い | draftは速いがacceptance低下 |
 | Exit layerが深い | acceptance向上、draft cost増加 |
-| Draft lengthが長い | parallelism増加、reject時の無駄も増加 |
-| LayerSkip training | 中間層精度を上げacceptance改善 |
+| Draft lengthが長い | まとめて検証できるtoken数が増えるが、reject時の無駄も増加 |
+| LayerSkip training | 中間layer精度を上げacceptance改善 |
 
 ### 制約
 
@@ -158,3 +158,4 @@ LayerSkipでは浅い出口を**確定出力ではなくdraft**として使い�
 ## 更新履歴
 - 2026-09-02: 概要・手法・評価を一次資料に基づき拡充。
 - 2026-09-04: Layer Dropout / Early-Exit Loss / self-speculationを補足し、実token/s評価を表形式へ整理。
+- 2026-09-07: layer dropout / early-exit loss / shared weights / acceptance等を、draft生成と検証の具体的な流れへ平易化。
