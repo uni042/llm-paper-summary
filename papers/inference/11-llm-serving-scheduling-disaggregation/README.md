@@ -8,8 +8,10 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 
 ## 収録論文
 
-収録論文: 17本。公開日が新しい順。
+収録論文: 18本。公開日が新しい順。
 
+- 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
+  - client間のservice deficitをboundedに保ちながら、その許容範囲でshared prefixが長いrequestをまとめるDLPMと、複数GPUでfairness・prefix locality・load balanceを両立するD²LPMを提案する。
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
   - prefill / decode clusterを分離し、CPU DRAM・SSD・RDMAを跨ぐglobal KV cacheとcache-aware schedulerを組み合わせて、長context servingのSLO付きrequest capacityを高める。
 - 2024-06-05 — [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)
@@ -52,7 +54,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Preemptive priority scheduling:** FastServeはiteration boundaryでrunning requestをpreemptし、priorityとproactive KV swappingでhead-of-line blockingを抑える。
 - **Token-budget / chunked-prefill scheduling:** DeepSpeed-FastGenは長promptをsplitし短promptをfuseしてforwardの総token数をtargetへ揃え、Sarathi-Serveはdecodeを保護した上で残りtoken budgetへprefill chunkを詰めてgeneration stallを抑える。
 - **SLO-aware queue management:** QLMはrequest waiting time、SLO slack、model locality、instance loadを見てmulti-model queue順序と割当を最適化する。
-- **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。
+- **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。DLPM / D²LPMはそのfairness boundを緩めた範囲でprefix localityを優先し、distributed settingではload balanceも同時に扱う。
 - **Application / program-aware serving:** Parrotはrequest DAGとSemantic Variableを使ってapplication全体をscheduleし、SGLangはLM program構造とpersistent prefix cacheをruntime最適化へ利用する。
 - **Stateful conversation serving:** PensieveはGPU / CPU cacheでconversation KVをrequest間保持し、CachedAttentionはDRAM / SSD hierarchyとscheduler hintまで使って同じreuseを大規模化する。
 - **P/D resource disaggregation:** DistServeはprefill / decodeを別resource poolとしてprovisionし、SLO付きgoodputを最大化する。
