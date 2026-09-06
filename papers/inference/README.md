@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **84本**。
+収録論文: **86本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**モデルを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -22,8 +22,8 @@
   - speculative decodingで増えるMoEのexpert実行・weight転送・verification costを、branch選択やexpert再利用・先読みで抑える。
 - [MoE Quantization / Compression](06-moe-quantization-compression/) — 13本
   - expertごとの重要度・利用頻度・量子化耐性に合わせてbit幅やexpert数を調整し、memoryと計算量を減らす。
-- [KV Cache Optimization / Compression](07-kv-cache-optimization-compression/) — 4本
-  - 長contextやreasoningで増えるKV cacheを、重要度に応じた削除・圧縮・動的budgetingで小さく保つ。
+- [KV Cache Optimization / Compression](07-kv-cache-optimization-compression/) — 6本
+  - KV cacheを削除・圧縮・動的budgetingで小さくする、またはHBM→L2 prefetchでGPU内部のaccess待ちを隠す。
 - [Edge / On-device LLM Systems](08-edge-on-device-llm-systems/) — 4本
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実用速度で動かす。
 - [Other Inference Systems](09-other-inference-systems/) — 2本
