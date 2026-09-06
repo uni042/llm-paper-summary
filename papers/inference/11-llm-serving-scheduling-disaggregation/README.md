@@ -1,19 +1,23 @@
 # LLM Serving / Scheduling / Disaggregation
 
-複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、model startup、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairnessを高める研究をまとめる。
+複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、application-level dependency、model startup、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairnessを高める研究をまとめる。
 
-単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「client間でserviceをどう配分するか」**が主題となる。continuous batching、preemption、chunked prefill、prefill / decode disaggregation、request migration、stateful conversation、global KV cache、fair scheduling、admission control、serverless / elastic servingなどを含む。
+単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「複数LLM callの依存関係や共有contextをどう使うか」**が主題となる。continuous batching、preemption、chunked prefill、SLO-aware queueing、prefill / decode disaggregation、request migration、stateful conversation、application-aware scheduling、global KV cache、fair scheduling、serverless / elastic servingなどを含む。
 
 KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache Offload / Recomputation`、MoE expert placementが主目的なら各MoE系統に分類する。
 
 ## 収録論文
 
-収録論文: 13本。公開日が新しい順。
+収録論文: 16本。公開日が新しい順。
 
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
   - prefill / decode clusterを分離し、CPU DRAM・SSD・RDMAを跨ぐglobal KV cacheとcache-aware schedulerを組み合わせて、長context servingのSLO付きrequest capacityを高める。
+- 2024-06-05 — [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)
+  - batch / interactive request、複数model、異なるSLOを同じqueueで扱い、待ち時間予測を使ってrequest groupの順序とinstance割当を組み替える。
 - 2024-06-05 — [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)
   - requestとKV cacheを実行中のmodel instance間でlive migrationし、load imbalance・memory fragmentation・priority差・auto-scalingに応じてplacementをruntimeで組み替える。
+- 2024-05-30 — [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)
+  - 複数LLM callのprompt構造・依存関係・共有prefixをbackendへ伝え、request DAG全体を見ながら並列化・batching・prefix reuse・schedulingを共同最適化する。
 - 2024-03-23 — [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)
   - multi-turn history KVをDRAM / SSDへ階層保存し、scheduler-awareなlayer-wise preloadと非同期saveで次turnのhistory再prefillとslow-tier待ちを減らす。
 - 2024-03-04 — [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)
@@ -24,6 +28,8 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - prefillとdecodeを別GPUへ分離し、各phaseのGPU数・parallelism・physical placementをTTFT / TPOT SLOとnetwork帯域に合わせて別々に最適化する。
 - 2023-12-31 — [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)
   - clientごとの入力・出力tokenに基づく累積service量を追跡し、serviceが少ないclientを優先するVTCでGPUをidleにせずclient-level fairnessを保つ。
+- 2023-12-12 — [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)
+  - 複数generation callやcontrol flowを含むLM programをruntimeが理解し、RadixAttentionによるprefix KV reuse、cache-aware scheduling、structured decodingをまとめて最適化する。
 - 2023-12-09 — [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)
   - multi-turn conversationの過去history KVをrequest間で保持し、GPU / CPU tiered cacheと非連続KV対応attentionで毎turnのhistory再prefillを避ける。
 - 2023-11-30 — [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)
@@ -42,7 +48,9 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Iteration-level flexible batching:** Orcaはrequest全体ではなく1 token generationをscheduling boundaryとし、continuous batchingの基礎を作る。
 - **Paged KV memory:** vLLMはKV cacheをpage-like blockで管理・共有し、continuous batchingをmemory側から大きくする。
 - **Preemptive priority scheduling:** FastServeはiteration boundaryでrunning requestをpreemptし、priorityとproactive KV swappingでhead-of-line blockingを抑える。
+- **SLO-aware queue management:** QLMはrequest waiting time、SLO slack、model locality、instance loadを見てmulti-model queue順序と割当を最適化する。
 - **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。
+- **Application / program-aware serving:** Parrotはrequest DAGとSemantic Variableを使ってapplication全体をscheduleし、SGLangはLM program構造とpersistent prefix cacheをruntime最適化へ利用する。
 - **Stateful conversation serving:** PensieveはGPU / CPU cacheでconversation KVをrequest間保持し、CachedAttentionはDRAM / SSD hierarchyとscheduler hintまで使って同じreuseを大規模化する。
 - **Colocated stall-free scheduling:** Sarathi-ServeはP/Dを同じGPUへ残したままprefillをchunk化し、decode latencyを保護する。
 - **P/D resource disaggregation:** DistServeはprefill / decodeを別resource poolとしてprovisionし、SLO付きgoodputを最大化する。
@@ -52,4 +60,4 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Runtime request migration:** Llumnixはrunning requestとKVをinstance間で移し、dispatch後に判明したload imbalanceやfragmentationを修正する。
 - **Global KV-centric serving:** MooncakeはP/D分離の上にdistributed KV cache poolを置き、prefix reuse・replication・RDMA transferをglobal schedulerで扱う。
 
-この系統は独立した研究群として継続し、SLO-aware fairness、serverless / autoscaling、stateful prefix reuse、heterogeneous routingなどの引用鎖も引き続き確認する。
+この系統は独立した研究群として継続し、SLO-aware fairness、agent / program-aware serving、serverless / autoscaling、stateful prefix reuse、heterogeneous routingなどの引用鎖も引き続き確認する。
