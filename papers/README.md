@@ -1,14 +1,14 @@
 # 論文カタログ
 
-収録論文: **87本**。
+収録論文: **88本**。
 
 論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。各系統READMEには、**その系統が何を効率化する研究群かという説明**と、**収録する全論文の一文説明**を掲載する。
 
 一文説明ではTransformer、MoE、KV cache、quantization、speculative decodingなどLLMの基礎知識は説明なしで使う。一方、特定論文・狭い研究領域でしか通じにくい名称はそのまま並べず、できるだけ「何をどう変えて、何を減らす・改善するのか」が分かる表現へ言い換える。
 
-## Inference / 推論 — 71本
+## Inference / 推論 — 72本
 
-- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 13本
+- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 14本
   - GPUに収まらないweight / expert / KV cacheをCPU・SSD・Flashなどへ置き、転送やGPU外計算を最適化してmemory容量とI/O待ちを減らす。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 10本
   - token・layer・expertの重要度やcostに応じて、実行するexpert数やexpert自体を変え、MoEの計算量・転送量・model容量を削減する。
