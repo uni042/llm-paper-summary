@@ -6,15 +6,15 @@ LLM推論・学習システムに関する論文サーベイ、主要フレー�
 
 ## 構成
 
-- [papers/](papers/) — 9つの研究系統で整理した論文ページ
+- [papers/](papers/) — 複数の研究系統で整理した論文ページ
   - オフロード／階層メモリ
-  - Adaptive computation／cache-aware MoE
+  - Adaptive Expert Computation / Compression
   - Expert prefetch
   - Conditional computation
   - Speculative decoding × MoE
-  - Quantization × MoE × Offload
-  - Quality-cost optimization
-  - Edge／on-device MoE
+  - MoE Quantization / Compression
+  - Adaptive Resource / Quality-Cost Optimization
+  - Edge / On-device LLM Systems
   - その他システム研究
 - [framework-updates/](framework-updates/) — 主要フレームワークの本質的な機能・性能更新
 - [llm-releases/](llm-releases/) — 新LLMリリースの最新一覧と系統別履歴
