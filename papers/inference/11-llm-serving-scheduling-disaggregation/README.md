@@ -2,13 +2,13 @@
 
 複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、token-budget / chunked-prefill scheduling、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、application-level dependency、model startup、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairnessを高める研究をまとめる。
 
-単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「複数LLM callの依存関係や共有contextをどう使うか」**が主題となる。continuous batching、preemption、chunked prefill、SLO-aware queueing、prefill / decode disaggregation、request migration、stateful conversation、application-aware scheduling、global KV cache、fair scheduling、serverless / elastic servingなどを含む。
+単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「複数LLM callの依存関係や共有contextをどう使うか」**が主題となる。continuous batching、preemption、chunked prefill、SLO-aware queueing、prefill / decode disaggregation、request migration、stateful conversation、application-aware scheduling、global KV cache、prefix-locality-aware routing、fair scheduling、serverless / elastic servingなどを含む。
 
 KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache Offload / Recomputation`、MoE expert placementが主目的なら各MoE系統に分類する。
 
 ## 収録論文
 
-収録論文: 18本。公開日が新しい順。
+収録論文: 19本。公開日が新しい順。
 
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
   - client間のservice deficitをboundedに保ちながら、その許容範囲でshared prefixが長いrequestをまとめるDLPMと、複数GPUでfairness・prefix locality・load balanceを両立するD²LPMを提案する。
@@ -20,6 +20,8 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - requestとKV cacheを実行中のmodel instance間でlive migrationし、load imbalance・memory fragmentation・priority差・auto-scalingに応じてplacementをruntimeで組み替える。
 - 2024-05-30 — [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)
   - 複数LLM callのprompt構造・依存関係・共有prefixをbackendへ伝え、request DAG全体を見ながら並列化・batching・prefix reuse・schedulingを共同最適化する。
+- 2024-05-08 — [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)
+  - shared prefixを持つrequestのKV再利用量とGPU負荷を同じ計算costで比較するE2 schedulerにより、cluster-level prefix localityとload balanceを共同最適化する。
 - 2024-03-23 — [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)
   - multi-turn history KVをDRAM / SSDへ階層保存し、scheduler-awareなlayer-wise preloadと非同期saveで次turnのhistory再prefillとslow-tier待ちを減らす。
 - 2024-03-04 — [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)
@@ -54,6 +56,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Preemptive priority scheduling:** FastServeはiteration boundaryでrunning requestをpreemptし、priorityとproactive KV swappingでhead-of-line blockingを抑える。
 - **Token-budget / chunked-prefill scheduling:** DeepSpeed-FastGenは長promptをsplitし短promptをfuseしてforwardの総token数をtargetへ揃え、Sarathi-Serveはdecodeを保護した上で残りtoken budgetへprefill chunkを詰めてgeneration stallを抑える。
 - **SLO-aware queue management:** QLMはrequest waiting time、SLO slack、model locality、instance loadを見てmulti-model queue順序と割当を最適化する。
+- **Prefix-locality-aware cluster routing:** Prebleはprefix reuseで節約できるprefill計算とGPU load / KV eviction costを共同評価し、shared-prefix requestを同じGPUへ集める利得とhotspot回避を両立する。
 - **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。DLPM / D²LPMはそのfairness boundを緩めた範囲でprefix localityを優先し、distributed settingではload balanceも同時に扱う。
 - **Application / program-aware serving:** Parrotはrequest DAGとSemantic Variableを使ってapplication全体をscheduleし、SGLangはLM program構造とpersistent prefix cacheをruntime最適化へ利用する。
 - **Stateful conversation serving:** PensieveはGPU / CPU cacheでconversation KVをrequest間保持し、CachedAttentionはDRAM / SSD hierarchyとscheduler hintまで使って同じreuseを大規模化する。
