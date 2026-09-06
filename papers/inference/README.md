@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **79本**。
+収録論文: **80本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**モデルを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -28,5 +28,5 @@
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実用速度で動かす。
 - [Other Inference Systems](09-other-inference-systems/) — 2本
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
-- [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — 7本
+- [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — 8本
   - KV cacheをCPU DRAM・storageへ置く、attention計算をKVの近くへ移す、またはKV転送を部分再計算へ置き換え、HBM容量とhost-device I/Oを抑える。
