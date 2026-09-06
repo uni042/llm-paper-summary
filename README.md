@@ -7,7 +7,7 @@ LLM推論・学習システムに関する論文サーベイ、主要フレー�
 ## 構成
 
 - [papers/](papers/) — 論文カタログ。まず推論／学習に分け、その下を研究系統別に整理
-  - [Inference / 推論](papers/inference/) — 74本
+  - [Inference / 推論](papers/inference/) — 76本
   - [Training / 学習](papers/training/) — 16本
 - [framework-updates/](framework-updates/) — 主要フレームワークの本質的な機能・性能更新
 - [llm-releases/](llm-releases/) — 新LLMリリースの最新一覧と系統別履歴
@@ -31,4 +31,4 @@ LLM推論・学習システムに関する論文サーベイ、主要フレー�
 
 各ページは一文要約、書誌情報、概要、手法のあらまし、評価、限界、一次資料を含みます。weight offloadとKV cache offload、CPU DRAMと通常NVMe、HBF、CXL、実機評価とsimulationを区別します。
 
-現在の論文収録数: **90本**
+現在の論文収録数: **92本**
