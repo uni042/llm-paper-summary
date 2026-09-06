@@ -1,186 +1,36 @@
 # 論文カタログ
 
-## 系統別
+収録論文: **84本**。
 
-- [オフロード／階層メモリ](01-offload-hierarchical-memory/) — 14本
-- [Adaptive Expert Computation / Compression](02-adaptive-computation-cache-aware-moe/) — 9本
-- [Expert prefetch](03-expert-prefetch/) — 12本
-- [Conditional computation](04-conditional-computation/) — 8本
-- [Speculative decoding × MoE](05-speculative-decoding-moe/) — 6本
-- [MoE Quantization / Compression](06-quantization-moe-offload/) — 13本
-- [Adaptive Resource / Quality-Cost Optimization](07-quality-cost-optimization/) — 4本
-- [Edge / On-device LLM Systems](08-edge-on-device-moe/) — 4本
-- [その他システム研究](09-other-systems-research/) — 14本
+論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。
 
-## 全論文
+## Inference / 推論 — 68本
 
-収録論文: 84本。公開日が新しい順。
+- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 10本
+- [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 10本
+- [Expert Prefetch](inference/03-expert-prefetch/) — 12本
+- [Conditional Computation](inference/04-conditional-computation/) — 8本
+- [Speculative Decoding × MoE](inference/05-speculative-decoding-moe/) — 6本
+- [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 13本
+- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 3本
+- [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 4本
+- [Other Inference Systems](inference/09-other-inference-systems/) — 2本
 
-- 2026-09-03 — [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](09-other-systems-research/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)
-  - 軽量な追加weightで複数tokenを並列提案し、元の自己回帰分布を保つlossless samplerで最大3倍の生成高速化を狙うUno方式。
-- 2026-09-03 — [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](07-quality-cost-optimization/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)
-  - decode-time KV evictionでEMAによる時間集約とranking保持を利用し、score refresh頻度を下げながら品質とthroughputを両立する。
-- 2026-09-03 — [GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving](07-quality-cost-optimization/2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md)
-  - reasoning中のattention需要変化をonline signalから推定し、KV cache予算をpage単位で必要時だけ増やす。
-- 2026-09-03 — [SGD-KV: Summarization Guided KV Cache Compression](07-quality-cost-optimization/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md)
-  - summarization能力の高いattention headへKV budgetを重点配分し、long-context品質を保ちながらKV memoryを削減する。
-- 2026-08-17 — [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](08-edge-on-device-moe/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)
-  - GPU・CPU・RAM・PCIeを統合資源として扱い、global expert cache、帯域適応CPU/GPU実行、KV再利用を一体化した個人PC向けMoE runtime。
-- 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
-  - High-Bandwidth FlashからexpertをGPU／HBMへ直接供給し、従来NVMeを超える大容量MoE推論を狙う階層メモリ設計。
-- 2026-08-04 — [AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding](05-speculative-decoding-moe/2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md)
-  - draft nodeの受理確率とtarget router scoreから検証expert集合を層ごとに縮小し、offload時はresident expertを優先して転送量を削減する。
-- 2026-07-17 — [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](06-quantization-moe-offload/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md)
-  - KV cache増加で変動する空きVRAMに合わせ、expert weightをpage／bit-plane単位で低bit化・復元し、品質損失当たりの解放byteを最適化する。
-- 2026-07-14 — [Less Experts, Faster Decoding: Cost-Aware Speculative Decoding for Mixture-of-Experts](05-speculative-decoding-moe/2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md)
-  - 受理確率／新規expertコスト比でdraft nodeを選び、buffer内expertを再利用することでlossless verificationのexpert scatteringとHBM trafficを抑える。
-- 2026-06-29 — [Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference](07-quality-cost-optimization/2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md)
-  - router寄与が小さく転送・実行コストが高いexpertをstraggler-awareに省き、既存active expertへ寄与を再配分して多デバイスMoEを高速化する。
-- 2026-06-24 — [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)
-  - 低ランク予測器で次層expertの優先順位を推定し、転送可能時間から先読み数を動的制限して、native routingを変えずにedge MoEのI/O待ちを減らす。
-- 2026-05-21 — [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](06-quantization-moe-offload/2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)
-  - 全layer・expertを一つのbit budgetで大域最適化し、量子化後のrouter微調整と段階的低bit化でrouting shiftを補償する。
-- 2026-05-18 — [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md)
-  - expert tokenを大きなcoalesced batchに集約し、AMX対応CPUとGPUへ処理を分担して、メモリ制約下のMoE serving throughputを高める。
-- 2026-05-01 — [Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding](05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md)
-  - 各draft nodeの受理確率と実測verification costから、期待受理token／コストが最大となるtree prefixだけを動的検証する。
-- 2026-04-29 — [Efficient Training on Multiple Consumer GPUs with RoundPipe](01-offload-hierarchical-memory/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md)
-  - consumer GPU群をstateless worker poolとしてlayer stageをround-robin dispatchし、非対称分割と優先転送でpipeline bubbleとoffload待ちを減らす。
-- 2026-04-09 — [Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference](02-adaptive-computation-cache-aware-moe/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md)
-  - モデル全体のexpert activation予算をlayer感度とtokenのrouter分布に基づいて再配分し、固定Top-kより品質を保って計算量を削減する。
-- 2026-03-14 — [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)
-  - expertを行列単位のsub-expertへ分解し、複数前層の合意予測と資源適応型prefetchでCPU–GPU転送量を抑えるMoE推論方式。
-- 2026-03-14 — [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md)
-  - 次層expertを先読みし、予測が外れても追加ロードへ戻らず予測expertを確定実行することで、MoE重みオフロードの待ち時間を除く手法。
-- 2026-03-14 — [CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices](03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md)
-  - 学習済み予測器と過去routing patternの検索器をcascadeし、promptから全層のexpertを先読みして資源制約下のMoE推論を高速化する。
-- 2026-03-09 — [Speculating Experts Accelerates Inference for Mixture-of-Experts](03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md)
-  - 現在層の隠れ状態から次層router入力を近似し、expert転送だけでなく投機実行まで前倒ししてCPUオフロードMoEのTPOTを下げる。
-- 2026-02-12 — [MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios](05-speculative-decoding-moe/2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md)
-  - speculative decodingの検証で観測したexpert需要を先読み信号にし、utility推定・整数最適化・非同期実行でedgeのprefetchとCPU/GPU分担を制御する。
-- 2025-12-19 — [GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping](01-offload-hierarchical-memory/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md)
-  - 同一layerの全microbatchをまとめる垂直スケジューリングと次iterationへのoptimizer重畳で、NVMeオフロード学習のI/O回数と待ち時間を減らす。
-- 2025-12-03 — [OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference](03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md)
-  - 常設cacheを持たないedge分散環境で、予測した必要expertだけをオンデマンドにロードして転送量を抑える手法。
-- 2025-11-19 — [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](06-quantization-moe-offload/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)
-  - router traceのhotnessに応じてexpertを実行中に高bitへ昇格・低bitへ降格し、versioned residencyでprecision移行を非同期化する。
-- 2025-11-18 — [MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts](05-speculative-decoding-moe/2025-2511.14102-moe-speq-speculative-quantized-decoding-with-proactive-expert-prefetching-and-of.md)
-  - 量子化draftによる投機生成とproactive expert prefetch／offloadを協調させ、MoE検証時の重みI/Oを削減する方式。
-- 2025-11-18 — [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](09-other-systems-research/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)
-  - GPU・CPU・SSD間でtensorの再利用価値と移動コストを見積もり、LLM学習のcache配置とmigrationを動的に最適化する方式。
-- 2025-11-13 — [BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference](02-adaptive-computation-cache-aware-moe/2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md)
-  - expert間の冗長性を利用してcache missしたexpertをresidentなbuddy expertで近似し、重み転送を減らす方式。
-- 2025-10-13 — [MC#: Mixture Compressor for Mixture-of-Experts Large Models](06-quantization-moe-offload/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md)
-  - expert別mixed-precision量子化とGumbel-Softmaxによるtoken別Top-any pruningを統合し、MoE-LLM/VLMの重みと活性計算を同時に削る。
-- 2025-10-11 — [SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference](05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md)
-  - speculative decodingとexpert prefetchを統合し、ドラフト生成中に検証で必要なMoE重みを先読みして待ち時間を減らす手法。
-- 2025-09-28 — [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)
-  - 複数batchのroutingを層横断で予測し、legacy server上のexpert転送と計算を共同スケジューリングする方式。
-- 2025-09-02 — [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](01-offload-hierarchical-memory/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)
-  - optimizer stateをGPU・DRAM・NVMe・並列ファイルシステムへ多階層・多経路配置し、汎用HPC環境でLLM事前学習のI/Oを並列化する。
-- 2025-09-02 — [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](02-adaptive-computation-cache-aware-moe/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)
-  - 層ごとの重要度に合わせてactive expert数を変え、固定Top-kより少ない計算で品質維持を狙うMoE推論手法。
-- 2025-08-18 — [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](09-other-systems-research/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)
-  - 新しいMoE構造をHPCクラスタへ拡張するため、expert parallelism・通信・負荷分散を共同最適化する分散学習システム。
-- 2025-08-03 — [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](06-quantization-moe-offload/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)
-  - 量子化後のexpert-shiftをTopK-MSEで校正し、入力系列のexpert頻度に応じた動的pruningを組み合わせてMoEを圧縮する。
-- 2025-07-27 — [DiffSkip: Differential Layer Skipping in Large Language Models](04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md)
-  - 隣接層の表現差分を指標に冗長な層を選択的に飛ばし、品質劣化を抑えてLLM推論を高速化する方式。
-- 2025-06-06 — [Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage](09-other-systems-research/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md)
-  - tensorの生存期間を基にNVMeオフロード対象とI/O時機を決め、GPUDirect StorageでLLM学習の転送待ちを抑える方式。
-- 2025-05-29 — [MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning](09-other-systems-research/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md)
-  - buffer fragmentation削減・direct NVMe I/O・低精度optimizerを組み合わせ、SSD-offloaded LLM fine-tuningの容量と速度を改善する方式。
-- 2025-05-18 — [ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates](09-other-systems-research/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md)
-  - 重要な勾配だけをGPUで即時更新し残りをCPUで非同期蓄積・更新して、LLM fine-tuningのoffload stallを抑える方式。
-- 2025-05-09 — [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](06-quantization-moe-offload/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)
-  - linear-block単位の量子化感度・routing頻度・GPU kernel時間を共同最適化し、MoEのbit配置と実行速度を両立する方式。
-- 2025-05-02 — [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](06-quantization-moe-offload/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)
-  - expert間の較正不均衡を自己生成データで補い、router affinityを量子化誤差へ反映して低bit品質を回復する手法。
-- 2025-04-28 — [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](09-other-systems-research/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)
-  - expert重みとoptimizer stateを分離し、動的なexpert複製・再配置時の状態移送を避けてMoE学習を効率化するシステム。
-- 2025-04-22 — [Dynamic Early Exit in Reasoning Models](04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md)
-  - 推論途中の確信度から終了可否を動的に判定し、容易な問題ではreasoning modelの計算を早く打ち切る手法。
-- 2025-04-21 — [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](09-other-systems-research/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)
-  - data・tensor・expert・pipeline parallelismを層や段階ごとにfoldし、通信量とメモリ制約へ柔軟に適応するMoE学習方式。
-- 2025-04-21 — [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](08-edge-on-device-moe/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)
-  - トークン単位とデバイス単位の二段階routingを協調させ、edge環境でMoEの計算量とデータ移動を抑える手法。
-- 2025-04-04 — [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](09-other-systems-research/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)
-  - 高速GPUへattention、旧GPUへexpertを分離配置し、非対称割当てとpipelineで異種GPUのMoE学習を高速化する方式。
-- 2025-03-31 — [Adaptive Layer-skipping in Pre-trained LLMs](04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)
-  - 入力と層の状態に応じたlayer skippingで、事前学習済みLLMの品質を保ちながら実行深度を削減する方式。
-- 2025-03-27 — [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）](06-quantization-moe-offload/2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)
-  - データ分布に応じてexpertのbit群とsalient channelを実行時に切り替え、再較正コストを抑えるMoE量子化方式。
-- 2025-03-11 — [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md)
-  - 生成位置が後ろになるほど実行深度を減衰させ、KV cacheを保ちながら自己回帰デコードを高速化する手法。
-- 2025-02-27 — [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](09-other-systems-research/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)
-  - MoEのall-to-all通信をtile単位のGEMMと融合・重畳し、複数GPU学習／推論の通信待ちを隠すkernelランタイム。
-- 2025-02-17 — [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)
-  - 前層で次層のgateを先行評価するcross-layer gatingにより、edge MoEのexpert先読みと転送隠蔽を行う手法。
-- 2025-02-09 — [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)
-  - 複数batchのhot expert計算でcold expertのCPU／SSD I/Oを隠し、巨大MoEを単一GPUで動かすexpert-aware pipeline。
-- 2025-02-07 — [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](01-offload-hierarchical-memory/2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)
-  - expertを細粒度blockへ分割して必要部分だけをロードし、MoE servingのメモリ削減と転送遅延を調整する方式。
-- 2024-12-16 — [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)
-  - sequence固有のexpert配置と次層routing予測によるCPU先行計算を組み合わせ、単一GPUのMoE推論を高速化するシステム。
-- 2024-12-15 — [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md)
-  - トークンの難度に応じて使用するTransformer層を動的に割り当て、LLMの計算量を細粒度に制御する方式。
-- 2024-11-18 — [MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)
-  - expertの配置・ロード・GPU計算をデータ中心にpipeline化し、メモリ制約GPUでMoEのI/O待ちを隠す推論システム。
-- 2024-10-29 — [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)
-  - 軽量予測器で将来のexpert選択を先読みし、proactive cachingでCPU–GPU転送を計算に重ねるMoE serving方式。
-- 2024-10-23 — [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](02-adaptive-computation-cache-aware-moe/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)
-  - expert活性化とtoken割当てを共同最適化し、MoE推論の負荷不均衡と不要計算を抑えるフレームワーク。
-- 2024-10-09 — [MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts](02-adaptive-computation-cache-aware-moe/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md)
-  - zero-computation expertをMoEへ導入し、入力難度に応じて実計算を担うexpert数を動的に削減する手法。
-- 2024-10-08 — [Mixture Compressor for Mixture-of-Experts LLMs Gains More](06-quantization-moe-offload/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)
-  - expert別mixed-precision量子化とtoken単位の動的pruningを組み合わせ、保存容量と実行FLOPsを同時に削減する手法。
-- 2024-08-19 — [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](09-other-systems-research/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)
-  - 学習時activationをNVMe SSDへ非同期退避・先読みし、GPUDirect StorageでGPUメモリと再計算を減らすシステム。
-- 2024-08-12 — [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)
-  - 学習時のlayer dropoutとearly-exit損失により、同一モデルで早期終了とself-speculative decodingを可能にする手法。
-- 2024-07-19 — [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](06-quantization-moe-offload/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md)
-  - expertの4／16bit精度とCPU／GPU配置をメモリ予算に応じて切り替え、品質・throughput・容量を調整するserving方式。
-- 2024-07-19 — [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)
-  - 長文入力で重要トークンだけを層ごとに選び、後段で再活性化も許す動的token pruningにより推論を高速化する手法。
-- 2024-06-19 — [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](02-adaptive-computation-cache-aware-moe/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md)
-  - 計算を行わないnull expertをルーティング先に加え、容易なトークンほど実expertの実行数を減らす適応型MoE。
-- 2024-06-14 — [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](09-other-systems-research/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md)
-  - 疎な低次元projected updateをCPUへオフロードし、layer-wise転送とGPU計算を重ねてconsumer GPUでLLM学習を可能にする手法。
-- 2024-06-12 — [Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark](06-quantization-moe-offload/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)
-  - MoEのpost-training quantizationを体系比較し、expert頻度・block位置・linear層ごとの量子化感度を示すベンチマーク。
-- 2024-06-10 — [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](08-edge-on-device-moe/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)
-  - 活性疎性を利用してNPU・GPU・CPUを協調させ、メモリ制約の厳しいモバイル端末で大規模LLMを動かす推論システム。
-- 2024-05-29 — [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](01-offload-hierarchical-memory/2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)
-  - computational storage上でexpert計算を行うnear-data executionにより、巨大MoEのストレージ帯域とGPU転送を削減する方式。
-- 2024-03-11 — [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](09-other-systems-research/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)
-  - SmartSSD上でoptimizer更新をnear-storage処理し、LLM学習のSSD–CPU／GPU間データ移動を削減する実機システム。
-- 2024-02-27 — [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](02-adaptive-computation-cache-aware-moe/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md)
-  - ルータ確率の累積質量に応じてトークンごとの活性expert数を変え、品質とMoE計算量を適応的に両立する手法。
-- 2024-02-22 — [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](02-adaptive-computation-cache-aware-moe/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)
-  - 層出力の再構成誤差で不要expertを恒久pruningし、低router weightの第二expertをtoken単位でskipする学習不要の圧縮手法。
-- 2024-02-10 — [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)
-  - GPUに常駐しないexpertをCPUで直接計算し、重いweight transferをactivation転送へ置き換えるCPU–GPU協調MoE推論方式。
-- 2024-01-25 — [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)
-  - sequenceごとのexpert活性局所性を使うsparsity-aware cacheと先読みで、個人PC上の階層メモリMoE推論を高速化するシステム。
-- 2023-12-28 — [Fast Inference of Mixture-of-Experts Language Models with Offloading](01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)
-  - MoE expertをCPUへ置き、activation-awareなcacheと先読みでGPUメモリ制約下の重み転送を抑える推論手法。
-- 2023-12-12 — [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)
-  - Flashから必要な重み行列部分だけを読み、windowingとrow-column bundlingで端末上LLMのI/OとDRAM使用量を減らす手法。
-- 2023-10-29 — [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)
-  - LSTM予測器で次batchの活性expertを推定し、必要重みだけをCPUからGPUへ先読みするdata-aware MoE serving方式。
-- 2023-10-25 — [QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models](06-quantization-moe-offload/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md)
-  - trillion-parameter級MoEのexpert重みを専用形式とkernelでsub-1-bitまで圧縮し、実用的な推論を可能にする方式。
-- 2023-10-13 — [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](01-offload-hierarchical-memory/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)
-  - GPU memoryとhost memory・storageを統合し、tensorの生存期間と再利用を基に階層間migrationを自動化する学習システム。
-- 2023-10-03 — [Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness](06-quantization-moe-offload/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md)
-  - MoEのexpert FFNだけを低bit化し、共有部を高精度に保つことでメモリ削減と量子化耐性を両立する基準手法。
-- 2023-10-02 — [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](02-adaptive-computation-cache-aware-moe/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md)
-  - router出力が似るexpertを整列・統合してから低rank＋sparse残差へ圧縮し、MoEのexpert数とモデル容量を削減する手法。
-- 2023-08-29 — [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](08-edge-on-device-moe/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)
-  - 実expertを少数のvirtual expert枠へ動的に写像し、指定メモリ予算内で既成MoEの品質とswap遅延を調整する方式。
-- 2023-08-23 — [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)
-  - 次層のroutingを前段で確定するpre-gatingにより、expert通信を計算と重ねて分散MoE推論を高速化する手法。
-- 2023-07-05 — [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)
-  - 生成位置とともに実行深度を単調減少させ、batchingとKV cacheを維持したまま自己回帰デコードを高速化する手法。
-- 2023-04-08 — [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](09-other-systems-research/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)
-  - routing負荷に応じてexpertのGPU配置・複製数を動的に変え、token dropなしで分散MoE学習の不均衡を緩和するシステム。
+→ [Inference一覧](inference/)
+
+## Training / 学習 — 16本
+
+- [Training Offload / Memory Systems](training/01-training-offload-memory-systems/) — 11本
+- [Distributed / Heterogeneous MoE Training](training/02-distributed-heterogeneous-moe-training/) — 5本
+
+→ [Training一覧](training/)
+
+## 分類ルール
+
+分類は「手法の中で何を使うか」ではなく、**最終的に何を効率化する研究か**で決める。
+
+- 推論・serving・decodingを高速化するために、予測器の学習、蒸留、追加学習、calibrationなどを使う場合 → `inference/`
+- 事前学習、fine-tuning、optimizer update、分散学習そのものを効率化する場合 → `training/`
+- 学習・推論の両方へ適用できる場合 → 論文の主目的、主要評価、主要metricを優先して分類する
+
+研究系統は固定しない。独立した問題設定・主要技術・評価軸を持つ論文群が増えた場合は、適宜新しい系統を追加・分割・統合する。
