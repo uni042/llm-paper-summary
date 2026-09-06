@@ -24,10 +24,10 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - 長いprefillを小さいchunkへ分け、既存decodeを毎iteration先に処理して残りtoken budgetへprefillを詰めることで、generation stallを防ぎながらserving capacityを高める。
 - 2024-01-25 — [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)
   - model checkpointをlocal SSD / DRAMへcacheし、高速loader・token-based live migration・checkpoint locality-aware schedulingでserverless cold startを短縮する。
-- 2024-01-09 — [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)
-  - 長promptをchunkへ分割し、短prompt・prefill・decodeをtarget token budgetへ融合するDynamic SplitFuseでforward work量を均し、generation stallとtail latencyを抑える。
 - 2024-01-17 — [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)
   - prefillとdecodeを別GPUへ分離し、各phaseのGPU数・parallelism・physical placementをTTFT / TPOT SLOとnetwork帯域に合わせて別々に最適化する。
+- 2024-01-09 — [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)
+  - 長promptをchunkへ分割し、短prompt・prefill・decodeをtarget token budgetへ融合するDynamic SplitFuseでforward work量を均し、generation stallとtail latencyを抑える。
 - 2023-12-31 — [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)
   - clientごとの入力・出力tokenに基づく累積service量を追跡し、serviceが少ないclientを優先するVTCでGPUをidleにせずclient-level fairnessを保つ。
 - 2023-12-12 — [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)
