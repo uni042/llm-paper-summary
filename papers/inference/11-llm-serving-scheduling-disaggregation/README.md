@@ -1,6 +1,6 @@
 # LLM Serving / Scheduling / Disaggregation
 
-複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、application-level dependency、model startup、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairnessを高める研究をまとめる。
+複数request・複数GPU / nodeを使うLLM servingで、**iteration-level batching、token-budget / chunked-prefill scheduling、request scheduling、prefillとdecodeの資源配分、conversation / KV state再利用、application-level dependency、model startup、cluster間data transfer、elastic resource管理**をまとめて設計し、latency / SLOを守りながらgoodput・throughput・cost効率・fairnessを高める研究をまとめる。
 
 単一requestのkernel高速化や単一GPUのmemory節約ではなく、**「いつどのrequestを実行するか」「batchをどう組み替えるか」「どのinstance / phaseへ配置するか」「modelや実行中stateをどこへ動かすか」「複数LLM callの依存関係や共有contextをどう使うか」**が主題となる。continuous batching、preemption、chunked prefill、SLO-aware queueing、prefill / decode disaggregation、request migration、stateful conversation、application-aware scheduling、global KV cache、fair scheduling、serverless / elastic servingなどを含む。
 
@@ -8,7 +8,7 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 
 ## 収録論文
 
-収録論文: 16本。公開日が新しい順。
+収録論文: 17本。公開日が新しい順。
 
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
   - prefill / decode clusterを分離し、CPU DRAM・SSD・RDMAを跨ぐglobal KV cacheとcache-aware schedulerを組み合わせて、長context servingのSLO付きrequest capacityを高める。
@@ -24,6 +24,8 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
   - 長いprefillを小さいchunkへ分け、既存decodeを毎iteration先に処理して残りtoken budgetへprefillを詰めることで、generation stallを防ぎながらserving capacityを高める。
 - 2024-01-25 — [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)
   - model checkpointをlocal SSD / DRAMへcacheし、高速loader・token-based live migration・checkpoint locality-aware schedulingでserverless cold startを短縮する。
+- 2024-01-09 — [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)
+  - 長promptをchunkへ分割し、短prompt・prefill・decodeをtarget token budgetへ融合するDynamic SplitFuseでforward work量を均し、generation stallとtail latencyを抑える。
 - 2024-01-17 — [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)
   - prefillとdecodeを別GPUへ分離し、各phaseのGPU数・parallelism・physical placementをTTFT / TPOT SLOとnetwork帯域に合わせて別々に最適化する。
 - 2023-12-31 — [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)
@@ -48,11 +50,11 @@ KV cacheをCPU / storageへ退避すること自体が主目的なら `KV Cache 
 - **Iteration-level flexible batching:** Orcaはrequest全体ではなく1 token generationをscheduling boundaryとし、continuous batchingの基礎を作る。
 - **Paged KV memory:** vLLMはKV cacheをpage-like blockで管理・共有し、continuous batchingをmemory側から大きくする。
 - **Preemptive priority scheduling:** FastServeはiteration boundaryでrunning requestをpreemptし、priorityとproactive KV swappingでhead-of-line blockingを抑える。
+- **Token-budget / chunked-prefill scheduling:** DeepSpeed-FastGenは長promptをsplitし短promptをfuseしてforwardの総token数をtargetへ揃え、Sarathi-Serveはdecodeを保護した上で残りtoken budgetへprefill chunkを詰めてgeneration stallを抑える。
 - **SLO-aware queue management:** QLMはrequest waiting time、SLO slack、model locality、instance loadを見てmulti-model queue順序と割当を最適化する。
 - **Client-level fair scheduling:** VTCはclientごとの累積serviceをtoken costでaccountingし、work-conservingなままservice差をboundedに保つ。
 - **Application / program-aware serving:** Parrotはrequest DAGとSemantic Variableを使ってapplication全体をscheduleし、SGLangはLM program構造とpersistent prefix cacheをruntime最適化へ利用する。
 - **Stateful conversation serving:** PensieveはGPU / CPU cacheでconversation KVをrequest間保持し、CachedAttentionはDRAM / SSD hierarchyとscheduler hintまで使って同じreuseを大規模化する。
-- **Colocated stall-free scheduling:** Sarathi-ServeはP/Dを同じGPUへ残したままprefillをchunk化し、decode latencyを保護する。
 - **P/D resource disaggregation:** DistServeはprefill / decodeを別resource poolとしてprovisionし、SLO付きgoodputを最大化する。
 - **Hardware specialization:** SplitwiseはphaseごとにGPU世代・power budgetを変え、Perf/$・Perf/Wまでcluster designへ取り込む。
 - **Serverless model startup:** ServerlessLLMはcheckpoint localityとloading timeをplacement costに含め、高速checkpoint loadingとlive migrationでcold startを抑える。
