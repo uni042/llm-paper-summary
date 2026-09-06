@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **72本**。
+収録論文: **74本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**モデルを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -10,7 +10,7 @@
 
 ## 系統
 
-- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 14本
+- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 16本
   - GPUに収まらないweight / expert / KV cacheをCPU・SSD・Flashなどへ置き、必要時の転送やGPU外計算を最適化してmemory容量とI/O待ちを減らす。
 - [Adaptive Expert Computation / Compression](02-adaptive-expert-computation-compression/) — 10本
   - token・layer・expertの重要度やcostに応じて、実行するexpert数やexpert自体を変え、MoEの計算量・転送量・model容量を削減する。
