@@ -1,4 +1,4 @@
-# Quantization × MoE × Offload
+# MoE Quantization / Compression
 
 収録論文: 13本。公開日が新しい順。
 
