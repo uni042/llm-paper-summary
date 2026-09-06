@@ -1,10 +1,10 @@
 ---
 title: "DiffSkip: Differential Layer Skipping in Large Language Models"
-summary: "隣接層の表現差分を指標に冗長な層を選択的に飛ばし、品質劣化を抑えてLLM推論を高速化する方式。"
+summary: "tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。"
 authors_affiliations: "一次資料記載の著者ら（Findings of ACL 2025）"
 published: "2025-07-27"
 publication_status: "Published"
-lineage: "Conditional computation"
+lineage: "Conditional Computation"
 topics: ["Dynamic depth","Quality-cost","Edge／on-device"]
 importance: "高"
 hardware_evaluation: "実機"
@@ -15,48 +15,48 @@ last_checked: "2026-09-02"
 
 # DiffSkip: Differential Layer Skipping in Large Language Models
 
-> 隣接層の表現差分を指標に冗長な層を選択的に飛ばし、品質劣化を抑えてLLM推論を高速化する方式。
+> tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。
 
 ## 概要
-DiffSkipは、元LLMのFFNを消さずに残し、**tokenごとに各FFNを実行するかskipするか**を小型routerで選ぶdynamic skipping手法である。
+DiffSkipは、元LLMのFFNをmodelから削除せずに残し、**tokenごとに各FFNを実行するか、小さい代替変換だけで済ませるか**をrouterで選ぶdynamic skipping手法である。
 
-着眼点は、あるtokenに対してFFN前後の表現差が小さい層は、そのtokenにとって変換寄与が小さく、skip余地があるというもの。
+着眼点は、あるtokenに対してFFN前後のhidden state差が小さいlayerは、そのtokenの表現をほとんど変えておらず、重いFFN計算を省ける可能性があるというもの。
 
-元LLMのweightは凍結し、後半層へrouterとadapterだけを追加学習する。4 FFN skip程度なら固定layer削除よりかなり品質を守れる。
+元LLMのweightは固定し、後半layerへrouterと小型adapterだけを追加学習する。4 FFN skip程度なら固定layer削除よりかなり品質を守れる。
 
-一方、論文の重要な結果は速度面で、**FLOPsを減らしても連続decodeのwall-clockはほぼ速くならない**。routerとadapterのweight fetch、tokenごとの分岐、I/OがFFN削減分を相殺するためである。
+一方、論文の重要な結果は速度面で、**FLOPsを減らしても連続decodeのwall-clockはほぼ速くならない**。routerとadapterのweight read、tokenごとの分岐、GPU batchの分割がFFN削減分を相殺するためである。
 
 ## 手法のあらまし
 
-### 1. `Differential Signal`：FFNの入出力差を冗長性の手掛かりにする
+### 1. FFN前後の表現差を冗長性の手掛かりにする
 
 各FFNについて、入力hidden stateと出力hidden stateの差を見る。
 
 差が小さいtokenは、そのFFNが表現をほとんど変えていないと考え、skipしやすい候補とする。
 
-論文名の `Differential` はこの**層変換前後の差分**を利用することに由来する。
+論文名の`Differential`はこの**layer変換前後の差分**を利用することに由来する。
 
-### 2. Routerは後半層だけに置く
+### 2. Routerは後半layerだけに置く
 
-初期層は文脈形成への寄与が大きく、skipすると影響が広がりやすい。
+初期layerは文脈形成への寄与が大きく、skipすると後続layerへ影響が広がりやすい。
 
-そこでrouterは後半16層にだけ配置し、前半は常にfull executionする。
+そこでrouterは後半16 layerにだけ配置し、前半は常にfull executionする。
 
-### 3. `Skip Adapter`
+### 3. `Skip Adapter`：重いFFNを飛ばす時も小さな補正だけは行う
 
-FFNを飛ばしたhidden stateをそのまま次層へ送ると表現分布がずれるため、skip側には小型adapterを通す。
+FFNを完全に飛ばしたhidden stateをそのまま次layerへ送ると表現分布がずれるため、skip側では小型adapterを通す。
 
 adapterは元FFNよりかなり小さいが、完全なidentityではない。
 
 このためDiffSkipは「FFNをゼロコストで飛ばす」というより、**大きいFFNを小さい近似変換へ置き換える**方式と見る方が正確である。
 
-### 4. `SparseMixer`
+### 4. Skip / executeの離散判断を学習できるようにする
 
-routerのhardなskip/execute選択を学習可能にするためSparseMixerを使う。
+推論時には「FFNを実行する / skipする」の二択だが、そのままでは通常のgradientでrouterを学習しにくい。
 
-推論時は離散的な経路選択をしつつ、学習時にはgradientが流れるようにする役割を持つ。
+そこで学習時だけ、離散選択を滑らかに近似してgradientをrouterへ流し、推論時にはhardな二択へ戻す。論文ではこの仕組みに`SparseMixer`を使う。
 
-### 5. `Target Skip Count k`
+### 5. `Target Skip Count k`：平均で何FFN省くかを学習時に指定する
 
 lossには、平均skip数を目標 `k` に近づけるpenaltyを入れる。
 
@@ -66,18 +66,18 @@ lossには、平均skip数を目標 `k` に近づけるpenaltyを入れる。
 
 ### 6. FFNだけをskipし、attentionは残す
 
-比較を公平にするため、主にFFN blockをskip対象とする。
+主にFFN blockをskip対象とし、attentionは毎layer残す。
 
-attentionは毎層残すので、文脈接続を維持しながらFFN計算だけを削る設計になっている。
+これにより文脈接続を維持しながら、計算量の大きいFFNだけをtokenごとに減らす。
 
 ## 評価
 
 ### まず見るところ
-- **結論:** token-adaptive FFN skipは固定skipより品質を守れる。
+- **結論:** tokenごとにFFNを省くか判断すると、同じ数のFFNを固定的に省く方法より品質を守れる。
 - **品質:** 4 skipではかなり良好、8 skipでは数学・推論taskから劣化が見える。
 - **理論計算:** FFN FLOPsは減る。
 - **実速度:** **連続decodeではほぼspeedupなし**。
-- **重要な示唆:** conditional computationは専用kernel/token groupingなしではGPU速度に直結しない。
+- **重要な示唆:** conditional computationは、異なる経路を通るtokenを効率よくまとめる専用kernelがないとGPU速度へ直結しにくい。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
@@ -112,15 +112,15 @@ attentionは毎層残すので、文脈接続を維持しながらFFN計算だ�
 | Llama-2-7B | 4.3 |
 | Llama-2-13B | **9.1** |
 
-大きいmodelほど冗長性が高く、skip余地も増える傾向。
+大きいmodelほどFFN前後の表現差が小さいlayerが多く、skip余地も増える傾向。
 
 ### 数学data不足の影響
 
 Tulu-v2に数学dataが少ないため、Llama-3-8BのGSM8Kは8 skipで67.9→57.2まで低下する。
 
-数学強化dataを入れると改善するため、routerの「難しいtoken判定」は学習data分布に依存する。
+数学強化dataを入れると改善するため、routerが「どのtokenならFFNを省いてよいか」を学ぶ能力はtraining data分布に依存する。
 
-### Adapter ablation
+### Adapterの必要性
 
 | Skip補正 | 品質保持率 |
 |---|---:|
@@ -139,17 +139,17 @@ FFNをただ飛ばすだけでは成立しない。
 
 | Overhead | 内容 |
 |---|---|
-| Router | 毎token・毎可変層で判定 |
-| Adapter | skipしても別weightを読む |
-| Branching | tokenごとに経路が異なる |
-| Weight I/O | FFNとadapter双方のfetchが発生 |
-| Kernel inefficiency | dense batchが分割される |
+| Router | 毎token・毎可変layerでskip判断が必要 |
+| Adapter | skipしても小さい別weightを読む |
+| Branching | tokenごとに実行経路が異なる |
+| Weight I/O | FFNとadapter双方のweight accessが発生 |
+| GPU効率 | 同じbatch内のtokenが別経路へ分かれて一括計算しにくい |
 
 FLOPsだけ見れば削減していても、memory-boundなdecodeでは計算量が主ボトルネックではない。
 
 ### 制約
 
-- specialized kernel未実装。
+- conditional routeを効率よく処理する専用kernel未実装。
 - training data分布に依存。
 - budget `k` ごとに学習が必要。
 - 小型modelではskip余地が少ない。
@@ -161,3 +161,4 @@ FLOPsだけ見れば削減していても、memory-boundなdecodeでは計算量
 ## 更新履歴
 - 2026-09-02: 概要・手法・評価を一次資料に基づき拡充。
 - 2026-09-04: differential signal / skip adapterを補足し、品質とwall-clockの差を表形式へ整理。
+- 2026-09-07: SparseMixer / branching / kernel inefficiency等を、skip判断とGPU実行への具体的な影響として平易化。
