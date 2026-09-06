@@ -6,7 +6,7 @@ CPU offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingな
 
 ## 収録論文
 
-収録論文: 11本。公開日が新しい順。
+収録論文: 12本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 高帯域Flashから必要なexpertをGPU / HBMへ直接送り、通常のNVMeより大きなMoEをI/O待ちを抑えて推論する。
@@ -20,6 +20,8 @@ CPU offload、通常のNVMe SSD、High-Bandwidth Flash、near-data processingな
   - expertの配置、CPUからの読み出し、GPU計算をpipeline化し、重みI/Oと計算を重ねて待ち時間を隠す。
 - 2024-05-29 — [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)
   - storageの近くでexpert計算の一部を実行し、expert重みをGPUまで運ぶ量を減らして大規模MoEを推論する。
+- 2024-03-02 — [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)
+  - linear weightをCPU計算分とGPU計算分へ分け、CPU計算・weight転送・GPU計算を重ねることでbatch=1のoffload latencyを下げる。
 - 2024-02-10 — [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)
   - GPUにないexpertは重みを転送せずCPU上で直接計算し、CPU-GPU間では小さいactivationだけを渡して転送量を減らす。
 - 2024-01-25 — [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)
