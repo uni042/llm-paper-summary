@@ -1,39 +1,29 @@
 # Offload / Hierarchical Memory
 
-GPUメモリに収まらないLLMを動かすため、重みやexpertをCPUメモリ、SSD / Flashなどへ置き、必要な部分だけをGPUへ移す、またはGPU外で直接計算する研究をまとめる。単純に容量を増やすだけでなく、転送とGPU計算を重ねる、アクセス頻度に応じて配置を変える、storage側で計算するなどして、**メモリ容量とI/O待ちの両方を減らす**ことが中心課題となる。
+GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。単純にcapacityを増やすだけでなく、転送とGPU計算のoverlap、access頻度に応じたplacement、near-data processingなどによって**memory容量とI/O待ちの両方を減らす**ことが中心課題となる。
 
-CPU offload、KV-cache offload、通常のNVMe SSD、Computational Storage Drive、High-Bandwidth Flash、near-data processingなどは、同じ階層メモリ系でも移動するdata・帯域・遅延・実行場所が異なるため区別して扱う。
+KV cache固有のoffload、attention compute placement、KV recomputationを主題とする研究は [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離している。FlexGenのようにweight・activation・KVをまとめたsystem-wide memory hierarchyを扱う研究は本系統に残す。
+
+CPU offload、通常NVMe SSD、High-Bandwidth Flash、near-data processingなどは、同じ階層memoryでも帯域・遅延・実行場所が異なるため区別して扱う。
 
 ## 収録論文
 
-収録論文: 19本。公開日が新しい順。
+収録論文: 13本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 高帯域Flashから必要なexpertをGPU / HBMへ直接送り、通常のNVMeより大きなMoEをI/O待ちを抑えて推論する。
 - 2026-05-18 — [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md)
   - expertへ送られたtokenを大きなまとまりに集約し、CPUとGPUへ分担して実行することで、重みをすべてGPUへ載せずにthroughputを高める。
-- 2025-06-03 — [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md)
-  - CPU/GPU requestのlinear計算を一つのGPU batchへまとめ、CPU attention結果の同期を遅らせてGPU処理と長く重ねることで、batch splittingなしにKV-cache offloadを活用する。
 - 2025-02-09 — [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)
   - 複数batchのGPU計算を利用して、GPUにないexpertをCPU / SSDから読み込む時間を隠し、巨大MoEのI/O待ちを減らす。
 - 2025-02-07 — [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)
   - expertをより小さなblockに分割し、必要な部分だけをGPUへ読み込むことで、VRAM使用量と転送遅延のバランスを調整する。
-- 2025-01-03 — [Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md)
-  - 過去tokenをKVと中間activationの2形式で混在保存し、weight転送中の空きGPUでactivationからKVを再生成して、PCIe転送量と再計算量を釣り合わせる。
-- 2024-11-26 — [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)
-  - CPU上のKV cacheの一部を小さいactivationからGPUで再計算し、残りのKV転送と同時実行することでPCIe待ちをGPU computeへ置き換える。
 - 2024-11-18 — [MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)
   - expertの配置、CPUからの読み出し、GPU計算をpipeline化し、重みI/Oと計算を重ねて待ち時間を隠す。
-- 2024-11-02 — [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)
-  - requestの一部だけdecode attentionとKV cacheをCPUへ移し、GPU側sub-batchと並行実行しながら毎iterationの負荷に応じてoffload量を変える。
 - 2024-09-16 — [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)
   - operationごとにCPUで直接計算するcostとGPUへdataを運んで計算するcostを比較して配置し、CPU計算の裏にPCIe転送を隠す。
-- 2024-09-08 — [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)
-  - KV cacheとdecode attentionをComputational Storage Drive内へ置き、flash内部帯域で処理してstorage↔GPUの巨大なKV転送を避ける。
 - 2024-05-29 — [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)
   - storageの近くでexpert計算の一部を実行し、expert重みをGPUまで運ぶ量を減らして大規模MoEを推論する。
-- 2024-03-18 — [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)
-  - KV cacheとattention計算を複数CPU nodeへ置き、GPUにはlinear / MLP計算を集中させてKV転送を避けながら大batch throughputを高める。
 - 2024-03-02 — [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)
   - linear weightをCPU計算分とGPU計算分へ分け、CPU計算・weight転送・GPU計算を重ねることでbatch=1のoffload latencyを下げる。
 - 2024-02-10 — [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)
