@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **96本**。
+収録論文: **99本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**モデルを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -30,5 +30,5 @@
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
 - [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — 12本
   - KV cacheをCPU DRAM・peer GPU HBM・storageへ置く、attentionをKVの近くへ移す、またはKV転送を部分再計算・dynamic placementへ置き換えてlocal HBM容量とdata movementを抑える。
-- [LLM Serving / Scheduling / Disaggregation](11-llm-serving-scheduling-disaggregation/) — 9本
-  - iteration-level batching、preemption、chunked prefill、request migration、P/D分離、global KV共有、elastic resource管理を組み合わせ、latency / SLOを守りながらserving goodputとcost効率を高める。
+- [LLM Serving / Scheduling / Disaggregation](11-llm-serving-scheduling-disaggregation/) — 12本
+  - batching・fairness・stateful session reuse・P/D分離・request migration・serverless startup・global KV共有・elastic resource管理を組み合わせ、servingのlatency / SLO / goodput / costを改善する。
