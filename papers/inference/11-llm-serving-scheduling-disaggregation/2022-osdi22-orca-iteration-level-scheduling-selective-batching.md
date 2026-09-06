@@ -1,155 +1,112 @@
 ---
 title: "Orca: A Distributed Serving System for Transformer-Based Generative Models"
-summary: "request全体ではなくoutput token生成1 iterationごとにbatchを組み替え、attention以外はtoken単位でまとめて計算することで、異なる長さ・進行位置のrequestを同じbatchで効率よくserveする分散LLM serving system。"
+summary: "output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。"
 authors_affiliations: "Gyeong-In Yu, Joo Seong Jeong（Seoul National University）; Geon-Woo Kim（FriendliAI / Seoul National University）; Soojeong Kim（FriendliAI）; Byung-Gon Chun（FriendliAI / Seoul National University）"
 published: "2022-07-11"
 publication_status: "OSDI 2022"
 lineage: "LLM Serving / Scheduling / Disaggregation"
-topics: ["Iteration-level scheduling","Selective batching","Continuous batching","Distributed inference","Tensor parallelism","Pipeline parallelism"]
+topics: ["Continuous batching","Selective batching","Distributed inference","Tensor parallelism","Pipeline parallelism"]
 importance: "高"
 hardware_evaluation: "実機"
 source: "https://www.usenix.org/conference/osdi22/presentation/yu"
 code: ""
-last_checked: "2026-09-06"
+last_checked: "2026-09-07"
 ---
 
 # Orca: A Distributed Serving System for Transformer-Based Generative Models
 
-> request全体ではなくoutput token生成1 iterationごとにbatchを組み替え、attention以外はtoken単位でまとめて計算することで、異なる長さ・進行位置のrequestを同じbatchで効率よくserveする分散LLM serving system。
+> output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。
 
 ## 概要
 
-Orcaは、従来のinference serverが**batchをrequest単位で固定し、batch内の全requestが終わるまで組み替えない**ことがautoregressive generationに合わない点を問題にした研究である。
+従来のinference serverでは、一度batchを作ると、そのbatch内のrequestがすべて終了するまで中身を変えない方式が一般的だった。しかしLLMの生成ではrequestごとにoutput長が異なるため、短いrequestが終わっても長いrequestを待つことになり、その間に新しく来たrequestも参加できない。
 
-生成requestは必要なoutput token数が異なる。固定batchでは短いrequestが終わっても長いrequestを待つ必要があり、その間に到着したrequestもbatch終了まで参加できない。
+Orcaは、**request全体ではなく「output tokenを1つ生成する処理」を1回の単位としてschedulerへ戻す**。1 token生成するたびに終了したrequestを外し、新着requestを加えられるため、batchを継続的に組み替えられる。現在一般的なcontinuous batchingの基礎になった考え方である。
 
-Orcaはschedulerとexecution engineの境界を変更し、engineを**1 iterationだけ**実行して毎回schedulerへ戻す。各iterationの終了時点でfinished requestを外し、新着requestを加えられるため、batchを継続的に組み替えられる。
-
-一方、異なる時点から参加したrequestはsequence lengthや現在位置が揃わないため、通常のbatch tensorにはまとめにくい。そこでOrcaは**selective batching**を導入し、attentionだけrequest別に実行し、Linear・LayerNorm・GeLUなどは全requestのtokenを平坦化してまとめて計算する。
-
-このiteration-level schedulingは、後のvLLMやFastServeなどLLM serving systemで広く使われるcontinuous batchingの基礎となった。
+ただし途中からbatchへ入ったrequestはsequence長が揃わない。そこでOrcaは、attentionだけrequestごとに処理し、LinearやLayerNormなどは全requestのtokenをまとめて計算する。論文ではこの方法を **selective batching** と呼ぶ。
 
 ## 問題設定
 
-一般的なrequest-level batchingでは、一度engineへbatchを渡すと各requestの全generationが終わるまでschedulerが介入できない。
+LLM生成は1 tokenごとにmodel全体を繰り返し実行するため、本来はtoken生成の間にrequestを入れ替えられる。ところがrequest単位でbatchを固定すると、
 
-autoregressive generationでは1 tokenごとにmodel全体を繰り返し実行するため、本来はiteration間にrequestを入れ替えられる。しかし既存interfaceはこの性質を利用できず、
+- 短いrequestが終わっても長いrequestが終わるまでGPU枠が空かない
+- batch開始後に来たrequestが長く待つ
+- input / output長の差が大きいほどGPU利用効率が下がる
 
-- 早く終了したrequestが長いrequestを待つ
-- batch開始後に来たrequestが長時間queueで待つ
-- requestごとのinput / output length差がbatch efficiencyを悪化させる
+という問題が起きる。
 
-という問題が生じる。
-
-ただしiterationごとに任意のrequestをbatchへ入れると、requestごとに処理済みtoken数が異なる。特にattentionは各requestの過去tokenだけを参照するため、単純に全requestを同じdense batch tensorへまとめられない。
-
-Orcaは**scheduler granularityとoperator batchingを同時に変える**ことで、この2つの問題を解く。
+一方で、requestを自由に途中参加させると各requestの処理済みtoken数が異なる。特にattentionはrequestごとに参照する過去token数が違うため、すべてを同じ形のtensorへ単純にまとめることはできない。
 
 ## 手法
 
-### 1. Iteration-level scheduling
+### 1. 1 token生成ごとにbatchを見直す
 
-schedulerはbatchを「requestが完了するまで」engineへ渡すのではなく、**1回のmodel iterationだけ**実行させる。
+Orcaは1回のmodel実行が終わるたびにschedulerへ制御を戻す。schedulerは、
 
-iterationが終わるたびにschedulerは、
+- 終了したrequestを除く
+- 新しいrequestを追加する
+- memoryとbatch sizeを見て次に実行するrequestを決める
 
-- EOSなどで終了したrequestを除く
-- 新着requestを追加する
-- memoryやmax batch sizeを考慮して次のbatchを決める
+という処理を行う。
 
-という判断を行う。
+これにより、新着requestは現在の長いrequestが完全に終わるまで待つ必要がなくなる。
 
-これにより新着requestは現在のbatch全体が終わるのではなく、最長でも現在の1 iteration程度待てばbatchへ参加できる。
+### 2. attention以外はまとめて計算する
 
-### 2. Selective batching
+requestごとにsequence長が違っても、Linear、LayerNorm、GeLUなどは各tokenを独立にまとめて処理できる。そこでOrcaは全requestのtokenを1つの2次元tensorへ並べて、これらの演算を一括実行する。
 
-異なるrequestはsequence lengthが違うため、attention inputを通常の `[batch, sequence, hidden]` tensorに揃えにくい。
+attentionだけはrequestごとに過去K/Vの長さが違うため個別に計算し、その後また結果をまとめる。
 
-Orcaは非attention operatorについて、各requestのtokenをまとめて`[total_tokens, hidden]`の2次元tensorへ平坦化する。Linear、LayerNorm、Add、GeLUなどはrequest境界を意識しなくても計算できるため、この形で一括実行できる。
+つまり、**model全体を無理に同じbatch形式へ合わせるのではなく、まとめやすい演算だけをbatch化する**。
 
-attention直前でtensorをrequestごとにsplitし、それぞれの過去K/Vに対してattentionを実行した後、結果をmergeして再び他operatorをbatch処理する。
+### 3. 複数GPUへmodelを分割する
 
-attention自体にはmodel parameterがないため、weight reuseの観点ではLinear等ほどbatching benefitが大きくなく、個別実行による損失を比較的小さく抑えられる。
-
-### 3. Distributed execution
-
-数百B parameter modelを扱うため、Orcaはintra-layer parallelismとinter-layer parallelismを組み合わせる。
-
-schedulerはiterationごとのrequest setに加え、pipeline stage間のmemory allocationとexecution orderも管理する。341B modelまでscaleする構成を評価している。
-
-### 4. Schedulerとengineを密結合する
-
-一般的なserving systemではschedulerとexecution engineを抽象化されたrequest-level interfaceで分離するが、そのinterfaceではiteration-level controlやselective batchingを表現しにくい。
-
-Orcaは両者を密に統合し、batch metadata、sequence position、request completionなどをiterationごとに共有する。論文では、この機能を保ったまま一般的なscheduler-engine interfaceを設計することはfuture workとして残している。
+大規模modelではtensor parallelismとpipeline parallelismを組み合わせる。schedulerは各GPUのmemoryとpipelineの実行順も考慮し、341B modelまで評価している。
 
 ## 評価
 
-### 条件
+主な環境はAzureのA100 40GB clusterで、GPT 13B / 101B / 175B / 341BをFP16で評価した。baselineはNVIDIA FasterTransformer。
 
-| 項目 | 条件 |
-|---|---|
-| Cloud | Azure ND96asr A100 v4 |
-| GPU | 1 VMあたり8× NVIDIA A100 40GB |
-| GPU interconnect | NVLink |
-| Node network | 8× Mellanox 200Gbps HDR InfiniBand / VM |
-| Models | GPT 13B / 101B / 175B / 341B |
-| Precision | FP16 |
-| Max context | 2048 tokens |
-| Baseline | NVIDIA FasterTransformer |
+GPT-3 175Bで、1 tokenあたりのlatencyを同程度に揃えた比較では、FasterTransformerの0.185 request/sに対してOrcaは6.81 request/sで、**36.9倍のthroughput**を報告している。
 
-13Bは1 GPU、101Bは8 GPU、175Bは16 GPU、341Bは32 GPUを使う構成で評価している。
-
-end-to-end workloadは当時公開のproduction LLM traceがなかったためsynthetic traceを使用し、input lengthは32〜512 token、最大generation lengthは1〜128 tokenから生成している。
-
-### 主要結果
-
-GPT-3 175Bで、median normalized latencyを約190ms/tokenに合わせた比較では、FasterTransformerの**0.185 request/s**に対しOrcaは**6.81 request/s**で、**36.9倍のthroughput**を達成した。
-
-101B / 175B / 341Bのような大規模構成では、arrival time、input length、generation lengthが異なるrequestをiterationごとにbatchへ取り込める効果が大きく、同程度のlatencyでorder-of-magnitudeのthroughput差が生じる条件がある。
-
-engine単体ではselective batchingによりattentionを個別実行するため、単純で均一なbatchではFasterTransformerと同等またはやや不利な条件もある。一方、175Bのdistributed構成ではcontrol / data planeの設計も効き、engine単体でも最大約47%高速な条件を報告している。
+この差の主因は、requestの終了を待たずにbatchの空きへ新しいrequestを入れられることにある。
 
 ## 既存研究との差
 
-### 従来のrequest-level batchingとの違い
+### 従来の固定batchとの違い
 
-Triton + FasterTransformerのような構成では、schedulerがbatchを作った後はbatch全体のgenerationが終わるまでrequest setを変えにくい。
+従来方式はbatch全体のgeneration終了まで中身を変えにくい。Orcaは**output tokenを1つ生成するたびにbatchを変更できる**。
 
-Orcaは**1 token generationごとにschedulerへcontrolを戻す**ため、finished requestの即時返却とlate-arriving requestの途中参加を可能にする。
+### vLLMとの関係
 
-### vLLM / PagedAttentionとの関係
-
-Orcaはiteration-level schedulingを導入したが、KV cache memory自体は後のvLLMほど柔軟には管理しない。vLLMはこのscheduling modelの上にPagedAttentionを導入し、KV memory fragmentationとcopy duplicationを大幅に減らす。
+Orcaはbatchを柔軟に組み替えられるようにしたが、KV cacheのmemory割当は後のvLLMほど柔軟ではない。vLLMはOrca型のcontinuous batchingに、KV cacheを固定長blockで必要な分だけ確保する仕組みを加えた。
 
 ### FastServeとの関係
 
-FastServeもiteration boundaryを使うが、Orcaよりさらに進めて**running requestをpreemptしpriorityを変更する**。Orcaが「batch membershipを毎iteration変えられる」基盤を作り、FastServeがそれをpriority schedulingへ拡張した関係にある。
+FastServeはOrcaのようにtoken生成ごとにschedulerへ戻る仕組みを使い、さらに**実行中requestを一時停止して優先順位を変える**ところまで拡張した。
 
 ## 限界
 
-- 評価modelはGPT系列のみで、GQA / MLAなど現代的attention architectureは対象外。
-- max sequence lengthは2048で、現在のlong-context servingとはmemory / attention bottleneckの比率が異なる。
-- end-to-end workloadはsynthetic traceであり、production traceでの評価ではない。
-- selective batchingはexecution engine側のoperator-awareな変更が必要で、既存engineへschedulerだけ追加する方式ではない。
-- schedulerとengineを密結合しており、一般的なserving abstractionを維持したまま同じ制御を行うinterfaceは未解決。
-- 公式の一般公開実装repositoryは確認できなかった。
+- 評価modelはGPT系列が中心で、現在のGQA / MLAなどは対象外。
+- 最大contextは2048 tokenで、現在のlong-context servingとは条件が異なる。
+- end-to-end workloadはsynthetic traceで、production traceではない。
+- attentionとそれ以外でbatching方法を変えるため、execution engine側の変更が必要。
+- 著者による一般公開のOrca実装は確認できない。
 
 ## 一般的な実装上の含意
 
-Orcaの重要な示唆は、autoregressive servingでは**requestをschedulerの最小単位にする必要がない**ことである。1 token generationを自然なscheduling boundaryとして使えば、異なるarrival timeやoutput lengthを持つrequestを高頻度にbatchへ出し入れできる。
+Orcaの重要な点は、LLM servingでは**request全体をschedulerの最小単位にする必要がない**と示したことにある。output tokenを1つ生成する区切りでrequestを入れ替えれば、到着時刻やoutput長が異なるrequestを同じGPUで効率よく混在させられる。
 
-また、batchingをmodel全体へ一律適用せず、parameter reuseのbenefitが大きいoperatorだけをまとめることで、irregular sequence shapeとGPU効率を両立できる。この「operatorごとにbatching strategyを変える」という考え方は、後続のcontinuous batching / paged attention runtimeにもつながる。
+また、すべての演算を同じ方法でbatch化する必要もない。attentionのようにrequestごとの差が大きい演算は個別に扱い、それ以外だけをまとめる設計でも十分な効率を得られる。
 
 ## コード
 
-論文・USENIX公式ページから、著者による一般公開のOrca実装repositoryは確認できなかった。
+著者による一般公開のOrca実装repositoryは確認できなかった。
 
 ## 引用関係
 
-- FastServe / Sarathi-Serve / vLLM周辺の引用鎖から基礎研究として追加。
-- 主要な先行研究: Triton Inference Server、FasterTransformer、Megatron-LM、DeepSpeed。
-- 主要な後続方向: vLLM / PagedAttention、FastServe、Sarathi-Serveなどのcontinuous batching・memory management・preemptive scheduling。
+- FastServe、Sarathi-Serve、vLLMなどから基礎研究として引用される。
+- 後続研究では、Orcaのcontinuous batchingを土台にKV memory管理、request優先順位、prefill分割などが追加された。
 
 ## 一次資料
 
@@ -158,4 +115,5 @@ Orcaの重要な示唆は、autoregressive servingでは**requestをschedulerの
 
 ## 更新履歴
 
-- 2026-09-06: Serving / Scheduling系統の引用探索から追加。OSDI 2022最終版を基準に概要・手法・評価・限界を整理。
+- 2026-09-07: 狭い専門用語を減らし、手法の動作が分かる表現へ全面的に整理。
+- 2026-09-06: Serving / Scheduling系統の引用探索から追加。
