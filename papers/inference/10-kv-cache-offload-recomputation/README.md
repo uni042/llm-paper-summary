@@ -2,18 +2,20 @@
 
 local GPU HBMに収まらないKV cacheを**CPU DRAM・peer GPU HBM・storageなどへ置く、KVを使うattention計算をdataの近くへ移す、またはKV転送の一部をGPU再計算へ置き換える**研究をまとめる。
 
-`KV Cache Optimization / Compression` が「どのKVを残すか・どれだけ小さくするか」を主に扱うのに対し、この系統は**KVをlocal HBM以外へ置いたときのdata movementと実行場所**が中心課題である。CPU attention、peer-GPU paging、in-storage attention、partial recomputation、activation checkpoint、zero-copy remote accessなどを含む。
+`KV Cache Optimization / Compression` が「どのKVを残すか・どれだけ小さくするか」を主に扱うのに対し、この系統は**KVをlocal HBM以外へ置いたときのdata movementと実行場所**が中心課題である。CPU attention、peer-GPU paging、in-storage attention、partial recomputation、activation checkpoint、zero-copy remote access、fast / slow memory間のdynamic placementなどを含む。
 
 weight / expert全般を含む汎用memory hierarchyは `Offload / Hierarchical Memory` に残し、KV cache固有のplacement・attention execution・recomputationを主題とする論文はこちらへ分類する。
 
 ## 収録論文
 
-収録論文: 10本。公開日が新しい順。
+収録論文: 11本。公開日が新しい順。
 
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200のNVLink-C2Cを使い、GPU kernelがCPU pinned memory上のKVをstaging bufferなしで直接読み、専用tilingとkernel fusionでremote-memory trafficを抑える。
 - 2026-01-28 — [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)
   - GH200のHBMとCPU DRAMの間でrequestのKVをSLO進捗に応じて能動的に入れ替え、細切れKVをまとめたfull-duplex転送でC2C帯域を使う。
+- 2025-07-01 — [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md)
+  - attentionの将来accessを既知としたsimulationでKVをHBM / off-package DRAMへ動的配置し、static placementとの間に残る理論的なperformance改善余地を測る。
 - 2025-06-03 — [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md)
   - CPU/GPU requestのlinear計算を一つのGPU batchへまとめ、CPU attention結果の同期を遅らせてGPU処理と長く重ね、KV-cache offload時のCPU待ちを減らす。
 - 2025-01-03 — [Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md)
@@ -34,9 +36,10 @@ weight / expert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ## 主な技術の分岐
 
 - **Compute-to-data:** FastDecode / NEO / APEXはKVがあるCPUへattentionを寄せる。InstAttentionは同じ発想をstorage内部へ進める。
-- **Recompute instead of transfer:** KVPR / CAPTUREは、KVそのものを運ぶ代わりに小さいactivationを保持・転送しGPUで一部KVを再生成する。
+- **Recompute instead of transfer:** KVPR / CAPTUREはKVを運ぶ代わりに小さいactivationを保持・転送しGPUで一部KVを再生成する。
 - **Peer-GPU paging:** Aquaは別GPUの余剰HBMを高速swap tierとして使う。
 - **Prefetch before use:** Pieはlayer access順序を利用し、CPU上のKVを必要になる前にGPUへswapして転送をcomputeで隠す。
+- **Dynamic fast/slow-tier placement:** Fang et al.はtoken importanceに応じたKV migrationの理論上限をsimulationで評価する。
 - **SLO-aware rotation:** SuperInferはrequestごとのTTFT / TBT進捗を見てHBMとCPU DRAMのKV residencyを能動的に入れ替える。
 - **Zero-copy remote access:** DirectKVは高速CPU-GPU interconnectを前提に、KVをCPUに置いたままGPU kernelから直接読む。
 
