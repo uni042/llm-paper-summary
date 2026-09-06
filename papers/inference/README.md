@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **78本**。
+収録論文: **79本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**モデルを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -10,8 +10,8 @@
 
 ## 系統
 
-- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 19本
-  - GPUに収まらないweight / expert / KV cacheをCPU・SSD・Flashなどへ置き、必要時の転送やGPU外計算を最適化してmemory容量とI/O待ちを減らす。
+- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 13本
+  - GPUに収まらないmodel weight / expertなどをCPU・SSD・Flashへ置き、転送・CPU/GPU協調・near-data処理を最適化してmemory容量とI/O待ちを減らす。
 - [Adaptive Expert Computation / Compression](02-adaptive-expert-computation-compression/) — 10本
   - token・layer・expertの重要度やcostに応じて、実行するexpert数やexpert自体を変え、MoEの計算量・転送量・model容量を削減する。
 - [Expert Prefetch](03-expert-prefetch/) — 12本
@@ -28,3 +28,5 @@
   - smartphoneや個人PCなど制約の強いdeviceで、CPU / GPU / NPU / memoryを協調させてLLMを実用速度で動かす。
 - [Other Inference Systems](09-other-inference-systems/) — 2本
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
+- [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — 7本
+  - KV cacheをCPU DRAM・storageへ置く、attention計算をKVの近くへ移す、またはKV転送を部分再計算へ置き換え、HBM容量とhost-device I/Oを抑える。
