@@ -6,7 +6,7 @@
 
 ## 収録論文
 
-収録論文: 3本。公開日が新しい順。
+収録論文: 4本。公開日が新しい順。
 
 - 2026-09-03 — [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)
   - KVの重要度を毎tokenで一から計算せず、過去のattention傾向を滑らかに蓄積して順位を長めに使い回し、cache削減判断の計算負荷を下げる。
@@ -14,3 +14,5 @@
   - KV cacheを最初から大きく確保せず、reasoning中に過去contextへのattention需要が増えた時だけpage単位で容量を追加する。
 - 2026-09-03 — [SGD-KV: Summarization Guided KV Cache Compression](2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md)
   - 長いcontextの要点を保持する能力が高いattention headへ多くのKV容量を与え、冗長なheadのcacheを強く削減する。
+- 2024-03-26 — [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md)
+  - attentionに効きやすいtokenだけを残し、sequenceが伸びるにつれてKVをGPU保持→CPU offload→GPU再計算へ切り替えて、cache容量とPCIe trafficを減らす。
