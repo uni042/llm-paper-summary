@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T18:57:39+09:00",
+  "last_run": "2026-09-07T19:26:23+09:00",
   "last_completed_paper": {
-    "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
-    "id": "arXiv:2603.27138; DAC 2026",
-    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md"
+    "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+    "id": "arXiv:2608.21240",
+    "path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md"
   },
-  "last_lineage": "inference/kv-cache-offload-recomputation/gpu-cpu-co-attention-layer-ahead-precomputation",
+  "last_lineage": "inference/expert-prefetch/speculative-prefetch-miss-recovery-cpu-gpu-orchestration",
   "last_morning_report_cutoff": null,
   "recently_checked": [
     {
@@ -51,6 +51,12 @@
       "id": "arXiv:2603.27138; DAC 2026",
       "result": "added",
       "reason": "Splits sparse attention between GPU-resident and CPU-resident KV blocks, starts CPU attention one Transformer layer early using a predicted next-layer query, and periodically recalls hot blocks asynchronously to hide CPU compute and PCIe latency."
+    },
+    {
+      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+      "id": "arXiv:2608.21240",
+      "result": "added",
+      "reason": "Predicts experts several layers ahead, uses a resident shared expert plus low-rank surrogates for low-confidence misses, and schedules exact residual work between CPU execution and GPU weight fetch to reduce PCIe stalls."
     }
   ]
 }
