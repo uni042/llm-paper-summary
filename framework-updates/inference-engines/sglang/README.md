@@ -4,14 +4,18 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 現在できること
 
-- continuous batching、paged attention、chunked prefillを使って低遅延・高throughputのLLM servingを行える。
-- RadixAttention系のprefix cacheで、同じprefixを持つrequest間のKV計算を再利用できる。
-- prefill/decode分離、tensor / pipeline / expert / data parallelismを組み合わせ、単一GPUから大規模clusterまで拡張できる。
-- speculative decoding、MTP、structured output、multi-LoRA batching、FP4 / FP8 / INT4 / AWQ / GPTQ量子化を扱える。
-- GPU外を含む階層cacheやMoE負荷分散を使い、長context・MoE・高並列requestのmemoryと通信を制御できる。
-- RL / post-trainingではrollout backendとして利用でき、学習系frameworkからserving側を呼び出せる。
+- **高throughput serving**: continuous batching、paged attention、chunked prefillを使い、長prompt requestと短いdecode requestを同じGPU上で効率よく混在させられる。
+- **prefix cache**: RadixAttention系のcacheで同じprefixを持つrequestのKVを共有し、system prompt、tool履歴、tree状のagent workflowでprefill再計算を減らせる。
+- **階層cache**: KVやhybrid / recurrent stateをGPUだけでなくCPU等の下位tierへ保持し、必要なblockだけGPUへ戻せる。長contextや高並列servingでHBM使用量を抑えられる。
+- **prefill / decode分離と分散serving**: prefillとdecodeを別workerへ分け、tensor / pipeline / expert / data parallelismと組み合わせてclusterを構成できる。
+- **MoE serving**: expert parallelism、token dispatcher、負荷分散、shared expert最適化を使い、routingの偏りとGPU間All-to-All通信を抑えられる。
+- **投機的デコード**: draft model、MTP、DSpark等で複数token候補を先に作り、target verify回数を減らせる。長context向けにはdraft stepのmetadata再利用やcache削減も行う。
+- **量子化と低bit execution**: FP4 / FP8 / INT4 / AWQ / GPTQ等を使い、weight・activation・KVのmemory trafficを削減できる。
+- **structured output / multi-LoRA**: grammar / JSON等の制約付き生成や、複数LoRA adapterを同一serverでbatch処理する運用に対応する。
+- **RL / post-training rollout**: 学習frameworkからrollout backendとして呼び出し、policy modelの生成を高速serving側で処理できる。
+- **CUDA Graph / kernel最適化**: recurrentなdecode stepやMoE前後処理をGraph / fused kernelへまとめ、CPU同期と小kernel起動を減らせる。
 
-以下の更新履歴は、主に**階層cache、投機的デコード、長文attention、MoE通信、CUDA Graph、CPU/GPU同期削減**がどう改善されたかを示す。
+以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
 ## 初期収録期間
 
