@@ -6,12 +6,14 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 ## 収録論文
 
-収録論文: 11本。公開日が新しい順。
+収録論文: 12本。公開日が新しい順。
 
 - 2026-08-04 — [AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding](2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md)
   - draft branchが受理される見込みとtarget側expertの重要度から、検証時に実行するexpert集合を必要最小限まで縮める。
 - 2026-07-14 — [Less Experts, Faster Decoding: Cost-Aware Speculative Decoding for Mixture-of-Experts](2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md)
   - 受理される見込みに対して新しく読み込むexpertが少ないdraft branchを優先し、すでにGPU上にあるexpertを再利用する。
+- 2026-05-04 — [SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference](2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md)
+  - 低稼働の小型model serviceを共有remote drafterとして再利用し、rollback率に応じて通常型と並列型のspeculative decodingを切り替える。
 - 2026-05-01 — [Making Every Verified Token Count: Adaptive Verification for MoE Speculative Decoding](2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md)
   - 各draft branchについて期待できる受理token数と実測検証コストを比較し、費用対効果の高い範囲だけを検証する。
 - 2026-02-12 — [MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios](2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md)
