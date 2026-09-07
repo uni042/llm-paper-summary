@@ -2,6 +2,17 @@
 
 TorchTitanの主要な機能・性能更新を継続的に記録する集約ページ。PyTorch-nativeな大規模LLM学習で、MoE token dispatcher、通信と計算の重ね合わせ、CUDA Graph、pipeline parallelism、FSDP、activation checkpointing、低精度optimizerなどを扱う。
 
+## 現在できること
+
+- PyTorch-nativeな大規模LLM training stackとして、FSDP、tensor parallelism、pipeline parallelism、expert parallelismを組み合わせられる。
+- dense TransformerとMoEをmulti-GPU / multi-nodeで学習し、MoE token dispatcherを差し替えてclusterに合う通信方式を選べる。
+- activation checkpointing / recomputationと低精度optimizer stateを使い、GPU memoryを削減できる。
+- communication overlapでFSDP parameter通信、gradient通信、MoE token交換をcomputeと重ね、GPU idleを減らせる。
+- CUDA Graph / whole-step graph化でPython / CPU schedulingとkernel launch overheadを削減できる。
+- FP8 / FP4等の低精度trainingとPyTorch compiler / graph transformationを組み合わせ、model codeを保ちながら実行を最適化できる。
+
+以下の更新履歴は、主に**unified MoE dispatcher、GraphTrainer、FSDP / EP overlap、低精度training、activation checkpoint policy**の統合を記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
