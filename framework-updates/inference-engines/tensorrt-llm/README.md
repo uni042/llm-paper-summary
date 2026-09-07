@@ -6,15 +6,29 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 現在できること
 
-- **NVIDIA GPU向け高性能LLM serving**: model graphをTensorRT-LLM向けにbuildし、continuous batching、paged KV cache、専用attention / GEMM kernelで高throughput・低latency servingを行える。
-- **multi-GPU / multi-node実行**: tensor / pipeline / expert parallelismを組み合わせ、dense modelとMoEを複数GPUへ分割できる。cluster規模ではprefill / decode workerも分離できる。
-- **KV cacheの階層化**: KVをpage単位で管理し、GPU HBMだけでなくCPUやdisk等の下位tierへoffload・prefetchできる。conversation単位のKV reuseにも対応する。
-- **低bit weight / activation / KV**: FP8 / FP4 / NVFP4 / INT8等でmodelとcacheを低bit化し、HBM使用量とmemory bandwidthを削減できる。MoE expertにも低bit executionを適用できる。
-- **投機的デコード**: EAGLE、DFlash、DSpark等のdraft / verify方式でtarget model forward回数を減らせる。tree状候補やmulti-token verifyにも対応する。
-- **long-context serving**: chunked prefill、context parallelism、paged attention等で長promptを複数GPUへ分割し、prefillのmemory peakと1 workerあたりのKV量を抑えられる。
-- **multimodal execution**: text decoderだけでなくvision encoder等を含むpipelineにもCUDA Graphや専用kernelを適用できる。
-- **CUDA Graph / fused kernel**: 繰り返すdecode kernel列をGraph化し、attention・normalization・quantization・MoE処理をfusionしてCPU launchとHBM trafficを減らせる。
-- **分離serving用data movement**: KV transceiver / connectorを介してworker間でKV blockを送受信し、P/D分離や外部cacheとの連携を構成できる。
+- **NVIDIA GPU向けcompiled LLM serving**: modelをTensorRT-LLM向けengine / runtimeへbuildし、NVIDIA GPU用に選ばれたattention、GEMM、normalization、MoE等のkernelで実行できる。Python model codeをそのまま逐次実行するより、graph・precision・kernelをまとめて最適化することを狙う。
+- **continuous / in-flight batching**: 生成途中のrequestをbatchへ出し入れし、終了したrequestのslotへ新着requestを入れられる。固定batchの終了待ちを減らし、GPU throughputを高く保ちやすい。
+- **paged KV cache**: KVをpage / block単位で確保し、長さの違うrequestが混在しても大きな連続領域をrequestごとに予約せずに済む。block reuseとprefix reuseにより同じKVを再利用できる。
+- **KV cacheの階層化**: GPU HBMだけでなくCPU memory、disk等の下位tierへKVをoffloadし、必要なblockだけprefetch / onloadできる。GPU memory容量を超えるconversation / contextを保持できる一方、PCIe / storage I/Oがlatencyへ効く。
+- **cold KV compression**: しばらく使わないKV pageを低bit / codecで圧縮し、下位tierの保存容量と再転送量を減らせる。hot pageとcold pageでprecision / storage costを分ける考え方。
+- **conversation / prefix KV reuse**: 過去conversationや同じprefixから作ったKV blockを再利用し、system promptや長い共通contextを繰り返しprefillする計算を減らせる。
+- **prefill / decode分離**: promptをまとめて処理するprefill workerと、1 tokenずつ生成するdecode workerを別GPU群へ分けられる。phaseごとのcompute / bandwidth特性に合わせ、cluster resourceを別々に割り当てられる。
+- **KV transceiver / connector**: prefill側で生成したKVをdecode側や外部cacheへ送受信できる。NIXL等を使ってGPU間 / node間data movementを行い、CPU stagingや再計算を減らせる。
+- **tensor / pipeline parallelism**: dense modelを複数GPUへ分割し、単一GPUに収まらないmodelを実行できる。model size、layer構成、GPU間linkに応じて分割方法を選ぶ。
+- **expert parallelism / MoE**: MoE expertを複数GPUへ分散し、routingされたtokenだけを対応expertへ送る。All-to-All通信でpaddingや不要writeを減らし、低bit expert kernelも使える。
+- **低bit weight / activation**: FP8、FP4、NVFP4、INT8等のprecisionでweightやactivationを扱い、HBM使用量・HBM traffic・matrix compute costを削減できる。hardware世代ごとのTensor Core対応が性能を左右する。
+- **低bit KV cache**: FP8 / FP4等でKV自体を保持し、長contextで支配的になるcache memoryとworker間転送量を減らせる。model weightとKVを別precisionで最適化できる。
+- **投機的デコード**: EAGLE、DFlash、DSpark等で複数token候補をdraftし、target modelでまとめて検証できる。候補が受理されればtarget forward回数を減らせる。
+- **tree型speculative decoding**: draft候補を単一列ではなくtree状に展開し、複数branchを1回のtarget実行で検証できる。途中tokenが外れても別branchを採用できる可能性を残し、acceptanceを上げる狙いがある。
+- **chunked / fine-grained prefill**: 長いpromptを小さいchunkへ分け、schedulerがdecode requestと混ぜて実行できる。巨大prefillによるmemory peakとdecodeの長時間stallを減らせる。
+- **context / sequence parallel系実行**: 長いsequenceのattention / KVを複数GPUへ分割し、1 GPU当たりのKV memoryとattention workを減らせる。long-context modelをmulti-GPUへ拡張する手段。
+- **CUDA Graph**: decode等で繰り返すkernel列をcaptureし、CPUから毎token大量のkernelをlaunchするoverheadを減らせる。prefillもshape bucketごとにcaptureし、適用範囲を広げられる。
+- **breakable / dynamic Graph利用**: Graph化できない一部operationだけ通常kernel pathへ逃がし、それ以外をGraphのまま実行できる。完全固定shapeを要求する場合よりproduction workloadへ適用しやすい。
+- **fused kernel**: attention前後のnormalization、quantization、MoE routing / MLP等をまとめ、中間tensorのHBM書き戻しとkernel launch回数を減らせる。
+- **memory pool / VMM管理**: GPU仮想memoryを使って大きなKV / workspace poolを柔軟に割り当て、長時間servingの断片化やprocess間memory共有を改善できる。
+- **multimodal pipeline**: vision encoder等を含むmodelも実行し、encoder側にもCUDA Graph等の最適化を適用できる。text decoder以外の前処理計算も同じruntime stackへ統合できる。
+- **distributed serving coordination**: Ray等を使って複数workerを管理し、P/D分離、multi-GPU parallelism、KV poolをclusterとして構成できる。単一engineだけでなく大規模NVIDIA serving stackとして使える。
+- **production向けC++ runtime**: cache managerやcritical pathをC++側へ寄せ、Python scheduling / object overheadを減らす方向の設計を取る。TensorRT / CUDA ecosystemと密接に連携することが強み。
 
 以下の更新履歴は、**KVCacheManager、tiered KV、P/D分離、低bit KV / MoE、投機的デコード、Graph実行**がstable / RCでどう広がったかを追う。
 
