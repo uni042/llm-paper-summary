@@ -4,13 +4,17 @@ Accelerateの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- 通常のPyTorch training loopを大きく書き換えず、single CPU / GPU、multi-GPU、TPU、multi-nodeへ同じcodeを展開できる。
-- DDP、FSDP、DeepSpeedなどの分散学習backendを共通のlauncher / configurationから利用できる。
-- FP16 / BF16 / FP8などのmixed precision、gradient accumulation、device placement、checkpoint保存・再開を統一的に扱える。
-- 大きなmodelのinferenceでは、weightを複数GPU・CPU DRAM・diskへ配置するdevice mapとCPU / disk offloadを使い、単一GPU memoryを超えるmodelをloadできる。
-- notebook、MPI multi-CPU、cluster launcherなど実行環境差を吸収し、既存PyTorch codeの分散化を薄い抽象化で行える。
+- **既存PyTorch codeの分散化**: 通常のPyTorch training loopを大きく書き換えず、single CPU / GPU、multi-GPU、TPU、multi-nodeへ同じcodeを展開できる。device移動、process起動、gradient同期など環境依存処理を`Accelerator`側へまとめるため、local実験からcluster実行へ移るときのcode差分を小さくできる。
+- **複数の分散backendを共通設定で利用**: DDP、FSDP、DeepSpeedなどをlauncher / configurationから選択できる。model codeをbackendごとに別実装へ分岐させず、parameter shardingやoptimizer offloadなどbackend固有機能を利用しやすい。
+- **mixed precisionとtraining loop管理**: FP16 / BF16 / FP8などのmixed precision、gradient accumulation、gradient clipping、device placementを共通interfaceで扱える。数値精度とmemory / throughputのtrade-offをhardwareに合わせて変更しやすい。
+- **checkpoint保存・再開**: modelだけでなくoptimizer、scheduler、random stateなどtraining再開に必要な状態をまとめて保存・復元できる。multi-process trainingでもrankごとの状態管理を利用者側で個別実装する負担を減らす。
+- **大規模modelのdevice map配置**: inferenceではlayer / moduleごとにGPU、CPU DRAM、diskへweightを配置し、単一GPUのVRAMを超えるmodelをloadできる。利用可能memoryから自動配置を作ることも、利用者がdevice mapを指定することもできる。
+- **CPU / disk offload**: 常時GPUへ置く必要がないweightやstateをCPU DRAM、さらにdiskへ退避し、必要なlayerだけGPUへ移す構成を取れる。VRAM節約と引き換えにPCIeやstorage I/Oがlatencyへ効くため、速度より「modelを載せられること」を優先する用途で有効。
+- **FSDP / DeepSpeedとの大規模学習連携**: parameter・gradient・optimizer stateのsharding、CPU offload、ZeRO等をAccelerateの設定から有効化できる。Accelerate自身がすべての低level kernelを持つのではなく、各backendの主要機能を薄い統合層から利用する位置づけ。
+- **compileとの併用**: PyTorch compileやregional compilationを分散trainingと組み合わせ、同形状のTransformer blockでcompile結果を再利用できる。初回compile costやPython / kernel launch overheadを減らす方向の最適化に使える。
+- **多様な実行環境の吸収**: notebook、MPI multi-CPU、SLURM等のcluster、通常のcommand line launcherを同じ設定系へ寄せられる。特に研究codeを環境ごとに書き換えず再利用したい場合に強い。
 
-以下の更新履歴は、これらの機能のうち**FSDP、低精度学習、compile、CPU offload、CPU分散実行**が最近どう拡張されたかを記録している。
+以下の更新履歴は、これらの主要能力について**どの分散backend・精度・offload構成まで共通interfaceから使えるようになったか、初回compileやCPU/GPU memory制約をどこまで減らせるようになったか**を追う。
 
 ## 初期収録期間
 
