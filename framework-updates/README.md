@@ -7,6 +7,49 @@
 
 この2つは分けて扱う。2026-09-07の編集は既存記録の説明改善が中心であり、9月5日以降の全upstream差分を再調査したという意味ではない。
 
+## 現在の機能マップ
+
+ここでは「直近に何が変わったか」より先に、**現在そのフレームワークで何ができるか**を整理する。更新履歴は、その能力がどの方向へ拡張・高速化されたかとして読む。
+
+### 推論・serving
+
+| Framework | 現在できること | 最近の更新が強化している部分 |
+|---|---|---|
+| [llama.cpp](inference-engines/llama-cpp/) | CPU / GPUをまたぐローカル推論、量子化、複数GPU分割、KV cache管理、投機的デコード、部分的weight offload | MoE kernel fusion、CUDA Graph、CPU offloadしたexpertのVRAM cache、multi-GPU同時実行 |
+| [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |
+| [SGLang](inference-engines/sglang/) | prefix cache、continuous batching、P/D分離、投機的デコード、paged attention、TP/PP/EP/DP、量子化、multi-LoRA、RL rollout | 階層cache、MTP、sparse attention、MoE負荷分散、CUDA Graph、通信同期削減 |
+| [TensorRT-LLM](inference-engines/tensorrt-llm/) | NVIDIA GPU向け高性能serving、paged KV、量子化、投機的デコード、P/D分離、multi-GPU | KVCacheManagerV2、disk KV、KV圧縮、NIXL転送、CUDA Graph拡張、低bit MoE |
+| [LMDeploy](inference-engines/lmdeploy/) | GPU serving、prefix / object cache、paged attention、MoE、P/D分離、外部KV connector | object cache再設計、SSM state再利用、DeepEPv2、Mooncake接続、低精度GEMM |
+| [LightLLM](inference-engines/lightllm/) | GPU→CPU→diskの多段cache、P/D分離、MoE、投機的デコード、RL rollout向けonline weight更新 | Hybrid Radix Cache、量子化KV、NIXL、disk cache、MoE fusion |
+| [ExLlama](inference-engines/exllama/) | 低bit GPU推論、MoE expert / KVのCPU offload、投機的デコード、複数GPU | expert単位の動的offload、CPU KV tier、draft自動調整、VRAM slab allocator |
+| [KTransformers](inference-engines/ktransformers/) | CPU/GPU異種推論、CPU上の低bit MoE expert実行、full-parameter / LoRA SFT | INT4 CPU expert、FP8 LoRA、CPU activation保持、巨大MoEのhost memory削減 |
+| [Mistral.rs](inference-engines/mistral-rs/) | CPU/GPU推論、量子化、MoE、LoRA、複数request serving、投機的デコード | CPU量子化kernel、GQA KV streaming、MTP / DFlash、dynamic adapter、CUDA Graph |
+| [Ollama](inference-engines/ollama/) | ローカルmodel管理・API serving、Apple / NVIDIA等での推論、量子化model、MTP | Apple MTP、MoE / NVFP4高速化、metadata cache、prefill再利用 |
+| [MLX LM](inference-engines/mlx-lm/) | Apple Silicon上のLLM推論、量子化、KV cache、batch generation、server | stableの大更新は少なく、MLA multi-token decode、KV量子化、recurrent rollbackをOpen PRで追跡 |
+| [MLX](inference-engines/mlx/) | Apple Siliconの統一memoryを使うtensor / neural-network実行、GPU kernel、量子化 | GQA / attention / quantized MoE kernel、zero-copy import |
+| [Hugging Face Transformers](inference-engines/hugging-face-transformers/) | 多数modelの標準推論・学習API、KV cache、attention backend、生成制御、投機的デコード | StaticCache prefill高速化、ensemble speculative decoding |
+| [ONNX Runtime GenAI](inference-engines/onnx-runtime-genai/) | ONNX modelの生成runtime、複数Execution Provider、hardware別build、KV cache、低bit model | hardware variant同梱、QNN zero-copy KV、INT8 builder |
+| [OpenVINO GenAI](inference-engines/openvino-genai/) | Intel CPU / GPU向け生成AI推論、LLM・画像/動画生成、投機的デコード | tree型speculative decoding、temporal cache、build最適化 |
+| [Modular MAX](inference-engines/modular-max/) | GPU serving、低bit KV、tiered KV、MoE並列、投機的デコード、compile済みgraph実行 | VMM allocator、async KV onload、FP8 / MXint8 KV、DFlash、shared expert overlap |
+| [Accelerate](inference-engines/accelerate/) | PyTorch分散学習のlaunch / device配置、FSDP / DeepSpeed連携、CPU offload | FSDP2 FP8、regional compilation、CPU offload、Intel CPU分散学習 |
+| [TGI](inference-engines/tgi/) | continuous batching、tensor parallelism、量子化、streamingを備えた既存serving stack | repository archive済みで、新規機能追加は停止状態 |
+| [FlexFlow Serve](inference-engines/flexflow-serve/) | speculative serving、複数GPU配置、serving schedulingを扱う既存runtime | 追跡期間内は本質的更新なし |
+
+### 学習
+
+| Framework | 現在できること | 最近の更新が強化している部分 |
+|---|---|---|
+| [DeepSpeed](training-frameworks/deepspeed/) | ZeRO、CPU / NVMe offload、MoE、分散学習、RLHF向けHybridEngine | AutoEP、TP+EP folding、grouped-GEMM、gradient / activation非同期offload |
+| [Megatron-Core](training-frameworks/megatron-core/) | TP / PP / DP / EP、FSDP、MoE、activation recomputation、CUDA Graph、低精度学習 | HybridEP / DeepEP、通信と計算のoverlap、低bit parameter gather、activation / optimizer offload |
+| [Megatron-LM](training-frameworks/megatron-lm/) | Megatron-Coreを使った大規模Transformer / MoE事前学習・fine-tuning | Core統合、細粒度recompute、chunked optimizer-state / master-weight CPU offload |
+| [TorchTitan](training-frameworks/torchtitan/) | PyTorch-nativeなFSDP / TP / PP / EP、MoE、activation checkpointing、低精度学習 | unified token dispatcher、GraphTrainer、通信overlap、whole-step graph化 |
+
+### Hardware runtime
+
+| Runtime | 現在できること | 最近の更新が強化している部分 |
+|---|---|---|
+| [ROCm](hardware-runtimes/rocm/) | AMD GPU向けHIP runtime、RCCL集合通信、AITER / Composable KernelによるLLM kernel | low-bit MoE、paged / compressed KV、sparse MLA、Graph replay、storage→GPU direct transfer |
+
 ## 掲載方針
 
 主に以下を対象とする。
