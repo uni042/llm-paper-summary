@@ -6,8 +6,10 @@
 
 ## 収録論文
 
-収録論文: 4本。公開日が新しい順。
+収録論文: 5本。公開日が新しい順。
 
+- 2026-09-01 — [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)
+  - 他applicationがRAMを要求したとき、weightとKV cacheを必要量だけ細かく退避し、KVを圧縮RAMとFlashへ分散、後ろのlayerから退避して前から復帰することで、memoryを空けながらLLM再開時の待ち時間を短くする。
 - 2026-08-17 — [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)
   - よく使うexpertをmemoryへ残す量、CPU / GPUのどちらでexpertを計算するか、過去のKVをどこまで再利用するかをまとめて調整し、その時に使えるmemory bandwidthへ実行方法を合わせる。
 - 2025-04-21 — [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)
