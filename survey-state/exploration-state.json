@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T20:12:04+09:00",
+  "last_run": "2026-09-07T21:01:55+09:00",
   "last_completed_paper": {
-    "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
-    "id": "arXiv:2608.07974",
-    "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md"
+    "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+    "id": "arXiv:2605.08151",
+    "path": "papers/inference/99-other-inference-systems/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md"
   },
-  "last_lineage": "training/pipeline-parallel/modular-local-objective",
+  "last_lineage": "inference/speculative-decoding/remote-multi-tenant-drafter",
   "last_morning_report_cutoff": null,
   "recently_checked": [
     {
@@ -69,6 +69,12 @@
       "id": "arXiv:2608.07974",
       "result": "added",
       "reason": "Decouples pipeline stages with chunk-local objectives so downstream forward work can start before upstream local backward; this shortens activation lifetimes, removes cross-stage backward-gradient transfer, and enables stage-local recovery."
+    },
+    {
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "id": "arXiv:2605.08151",
+      "result": "added",
+      "reason": "Reuses an underutilized small-model service as a remote drafter and switches between overlapped and ordinary speculative decoding according to observed rollback cost, reducing draft waiting without committing to wasteful parallel speculation."
     }
   ]
 }
