@@ -4,15 +4,15 @@ ExLlama系の主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- consumer NVIDIA GPU向けに、EXL3を含む低bit量子化modelを高速実行できる。
-- tensor parallelismとexpert parallelismを組み合わせ、複数GPUへdense部分とMoE expertを柔軟に配置できる。
-- continuous / dynamic batchingで複数requestを同時処理し、server workloadのGPU利用率を上げられる。
-- speculative decoding、MTP、2〜8 bit KV cache量子化を使い、decode回数とKV memoryを削減できる。
-- MoE expertやKV cacheの一部をCPU DRAMへ退避し、VRAMを超えるmodel / contextを動かせる。
-- multimodal modelとLoRAを扱え、TabbyAPI経由ではOpenAI互換API、model download、chat template、embedding servingも利用できる。
-- Hugging Face Transformers pluginとして組み込み、既存Transformers workflowからExLlamaV3 backendを使える。
+- **consumer GPUでの低bit推論**: NVIDIA GPUを中心に、EXL3などの2〜8 bit級weight量子化を使ってmodel本体のVRAM使用量とweight読出し量を削減できる。量子化形式に合わせた専用kernelでdecode速度を維持することを狙う。
+- **複数requestの同時serving**: continuous / dynamic batchingで、到着時刻や生成長が異なるrequestを同じGPU上で継続的にbatchへ出し入れできる。固定batchの終了待ちを減らし、対話serverでGPUが空く時間を減らせる。
+- **複数GPUへのmodel配置**: tensor parallelismでdense計算を複数GPUへ分割し、MoEではexpert parallelismでexpert群を別GPUへ配置できる。dense部分とexpert部分を同じ分割規則へ固定せず、GPU枚数とVRAM容量に合わせて配置を変えられる。
+- **MoE expertのCPU offload**: 全expertをVRAMへ常駐させず、一部をCPU DRAMへ置いて必要なexpertを利用する構成を取れる。巨大MoEを少ないVRAMで動かせる代わりに、CPU memory帯域とPCIe転送が新しい律速になり得る。
+- **KV cacheの容量削減と階層化**: KVを2〜8 bitへ量子化してtoken当たりのcache量を減らせるほか、VRAMに収まらないKV pageをCPU DRAMへ退避できる。長contextや複数conversationを同時保持するときのVRAM pressureを下げられる。
+- **投機的デコード**: draft model、MTP、n-gram等で複数token候補を先に作り、target modelでまとめて検証できる。draft量やconfidence thresholdも動的に調整でき、外れた候補を大量に計算する無駄を抑えられる。
+- **LoRA・multimodal・API serving**: LoRA adapter、画像等を含むmultimodal modelを扱え、TabbyAPI等と組み合わせればOpenAI互換APIとして複数clientへ提供できる。Hugging Face Transformers pluginとして既存workflowからbackend利用することもできる。
 
-以下の更新履歴は、特に**expert / KVのCPU offload、draft量の自動調整、CPU kernel、VRAM allocator**がどう改善されたかを示す。
+以下の更新履歴は、これらの主要能力が**どのhardware構成まで使えるようになったか、VRAM / CPU RAM / PCIeをどう使い分けられるようになったか、decodeの無駄やallocator断片化をどこまで減らしたか**という観点で追う。
 
 ## 初期収録期間
 
