@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **113本**。
+収録論文: **114本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -24,7 +24,7 @@
   - expertごとの重要度・利用頻度・量子化への強さに合わせてbit幅やexpert数を調整し、memoryと計算量を減らす。
 - [KV Cache Optimization / Compression](07-kv-cache-optimization-compression/) — 7本
   - KV cacheの不要部分を削る・圧縮する、必要量を動的に変える、GPU内部で先読みする、共有prefixへの重複したKV読み出しをまとめるなどして、memory使用量とaccess待ちを減らす。
-- [Edge / On-device LLM Systems](08-edge-on-device-llm-systems/) — 4本
+- [Edge / On-device LLM Systems](08-edge-on-device-llm-systems/) — 5本
   - smartphoneや個人PCなどresourceが限られたdeviceで、CPU / GPU / NPU / memoryを分担させてLLMを実用速度で動かす。
 - [Other Inference Systems](09-other-inference-systems/) — 3本
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
