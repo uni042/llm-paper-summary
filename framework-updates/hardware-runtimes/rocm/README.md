@@ -2,6 +2,17 @@
 
 ROCm Core SDK、RCCL、AITER、Composable Kernelのうち、LLM推論・学習へ直接関係する主要更新を継続的に記録する集約ページ。GPU実行runtime、集合通信、MoE / attention kernel、低bit計算、storage→GPU転送などを扱う。
 
+## 現在できること
+
+- HIPでAMD GPU上のcompute kernelを実行し、PyTorch等の上位frameworkからCUDAに近いprogramming modelでAMD GPUを利用できる。
+- RCCLでAllReduce、AllGather、Reduce-Scatter、All-to-All等のmulti-GPU集合通信を行い、data / tensor / expert parallelismを支えられる。
+- AITERとComposable Kernelでattention、GEMM、MoE、quantization、paged KV等のLLM向け専用kernelを利用できる。
+- FP8 / FP4等の低bit weight・activation・KVを扱い、memory trafficと保存容量を削減できる。
+- HIP Graphで繰り返すkernel列を再利用し、decodeやtraining stepのCPU launch overheadを減らせる。
+- 対応環境ではstorage→GPU direct transferを使い、checkpoint / offload dataをCPU DRAM経由せずGPUへ移すdata pathを構成できる。
+
+以下の更新履歴は、**集合通信、low-bit MoE、paged / compressed KV、sparse attention、Graph実行、storage I/O**の主要改善を記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
