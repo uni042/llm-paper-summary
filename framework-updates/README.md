@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-05**
+- フレームワーク差分の最終確認: **2026-09-08**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-07の編集は既存記録の説明改善が中心であり、9月5日以降の全upstream差分を再調査したという意味ではない。
+この2つは分けて扱う。2026-09-08の差分確認では、公式release・開発元repositoryを基準に9月5日以降の主要な性能・量子化・memory関連変更を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,26 @@
 ---
 
 ## 最新更新
+
+### 2026-09-08
+
+#### llama.cpp
+
+- **VulkanでTQ1_0量子化weightを直接実行 — merged / release b10831**
+
+  Vulkan backendにTQ1_0の行列積、行列ベクトル積、MoE向けID付き行列積、逆量子化、行抽出を追加した。これによりTQ1_0 weightをVulkan対応GPUでCPU fallbackせず処理できる範囲が広がる。AMD gfx1151でbackend testの対象演算が通過している。Metalは対応kernelがないため、この型の該当演算を明示的にCPU fallbackする。
+
+  一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b10831
+
+- **VulkanのRMSNorm周辺fusion拡張 — merged / release b10833**
+
+  RMSNormの後に続く乗算・加算・view・row書込みなどを融合できるパターンを追加し、中間tensorの書戻しとkernel起動を減らす。release記載の開発者環境ではGemma 4で約4%の改善。環境依存の単一測定値なので一般性能値とは区別する。
+
+  一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b10833
+
+#### その他
+
+- 9月5日以降の確認範囲では、単なるmodel対応、bug / correctness修正だけの変更は掲載対象から除外した。
 
 ### 2026-09-05
 
@@ -133,7 +153,7 @@
 
 ### 推論エンジン（inference engines）
 
-- [llama.cpp](inference-engines/llama-cpp/) — MoE kernel fusion、DSpark投機的デコード、CUDA Graph、dense FFN CPU offload、CPUへ退避したMoE expert向けGPU LRU cache（Draft）
+- [llama.cpp](inference-engines/llama-cpp/) — MoE kernel fusion、DSpark投機的デコード、CUDA Graph、dense FFN CPU offload、CPUへ退避したMoE expert向けGPU LRU cache（Draft）、Vulkan TQ1_0、RMSNorm fusion
 - [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion
 - [SGLang](inference-engines/sglang/) — Spec V2、階層cache（HiCache）、MTP、sparse attention、MoE負荷分散、CUDA Graph
 - [TensorRT-LLM](inference-engines/tensorrt-llm/) — KVCacheManagerV2、disk KV、投機的デコード、prefill/decode分離、paged attention（v1.3.0 RC群）

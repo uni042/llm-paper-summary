@@ -25,6 +25,12 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 以下の更新履歴は、これらの主要能力について**GPU外memoryをどこまで使えるか、低bit / fusionでmemory trafficをどこまで減らせるか、投機的デコードとmulti-GPUでtokenごとの待ち時間をどこまで削減できるか**を追う。
 
+## 2026-09-08
+
+- **VulkanでTQ1_0量子化weightを直接実行 — merged / release b10831**: TQ1_0について、行列積（matrix multiplication）、行列ベクトル積（matrix-vector multiplication）、MoEで使うID付き行列積、逆量子化（dequantization）、行抽出をVulkan backendへ実装した。AMD gfx1151で対象backend testが通過している。Metalには対応kernelがないため、該当演算はCPUへfallbackする。[release b10831](https://github.com/ggml-org/llama.cpp/releases/tag/b10831)
+
+- **VulkanのRMSNorm周辺fusion拡張 — merged / release b10833**: RMSNorm後の乗算・加算・view・row書込み等を融合できるパターンを増やし、中間memory trafficとkernel launchを削減する。release記載の開発者環境ではGemma 4で約4%改善したが、単一環境の測定値として扱う。[release b10833](https://github.com/ggml-org/llama.cpp/releases/tag/b10833)
+
 ## 2026-09-05
 
 - **CPUへ退避したMoE expert向けGPU常駐LRU cache — Draft / Open**: CPUメモリへ置いたMoE expertのうち、直近で使われたexpertだけをVRAMにも一時保持する提案。2026-09-07時点でもDraft / Open。`--moe-expert-cache N`で有効化し、現在は1 tokenずつ生成する通常decodeだけに適用される。
