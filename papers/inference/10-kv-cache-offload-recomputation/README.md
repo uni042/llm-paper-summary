@@ -8,7 +8,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ## 収録論文
 
-収録論文: 16本。公開日が新しい順。
+収録論文: 17本。公開日が新しい順。
 
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200の高速CPU-GPU接続を使い、KVをいったんGPUの作業用bufferへコピーせずCPU memory上に置いたままGPUから直接読み、読み出し単位やkernelを調整してremote memory accessを減らす。
@@ -20,6 +20,8 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   - CPU DRAM上のKV cacheをvector storageとして検索し、現在のqueryに重要なKVだけをGPUへ戻す。検索・転送・attentionをGPU–CPU間で重ね、全KV転送によるmemory bandwidth待ちを減らす。
 - 2026-03-18 — [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md)
   - attentionで一緒に参照されやすいKVをcluster化し、そのcluster内部を複数SSDへ分散する。同時に必要なKVを複数deviceから並列に読み、単一SSDの帯域上限を超えるaggregate I/O bandwidthを利用する。
+- 2026-02-07 — [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)
+  - full-precision KVをCPU DRAMへ置き、GPU上の固定方向cluster IDと4-bit key要約で重要tokenを二段階検索する。最終Top-kだけをGPUからCPU memoryへ直接読んで、CPU検索・明示転送と長いdecode中のindex driftを減らす。
 - 2026-01-28 — [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)
   - requestごとのTTFT / TBTの遅れを見ながらKVをHBMとCPU DRAMの間で入れ替え、小さな転送をまとめて双方向のCPU-GPU帯域を使いやすくする。
 - 2025-12-16 — [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md)
@@ -53,6 +55,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **SLOの遅れに応じてKVを入れ替える:** SuperInferはrequestごとのTTFT / TBT進捗を見て、HBMへ残すKVとCPU DRAMへ出すKVを変える。
 - **CPU上のKVをコピーせず直接読む:** DirectKVは高速CPU-GPU接続を前提に、KVをCPUに置いたままGPUから読み出す。
 - **CPU上のKVをvector検索する:** RetroInferはCPU DRAM上のKV全体をGPUへ戻さず、queryに重要なtokenだけをwave indexで検索して転送し、残りのattention寄与はcluster単位で推定する。
+- **GPU上の圧縮metadataでCPU KVを検索する:** ParisKVはfull-precision KVをCPUへ置いたまま、GPU上の固定方向cluster IDと4-bit key要約だけで候補選択・再順位付けを行い、最終Top-kだけをUVAで直接読む。
 - **SSDへのI/O制御をGPUへ移す:** TuttiはKV dataだけをdirect transferするのではなく、I/O requestの発行・管理もGPU側へ寄せ、多数の断片化したKVをNVMe SSDから戻す際のCPU bottleneckを避ける。
 - **複数SSDの帯域を束ねる:** Swarmは同時に参照されやすいKVを複数SSDへ分散し、1回のcluster retrievalで複数deviceを並列に読んでaggregate bandwidthを高める。
 - **attention sparsityと3階層storageを協調させる:** KVDriveは直近で重要だったKVをHBMへ再利用cacheとして残し、必要blockだけをDRAM/SSDから読みながらselection・fetch・computeをpipeline化して、転送量と待ち時間の両方を減らす。
