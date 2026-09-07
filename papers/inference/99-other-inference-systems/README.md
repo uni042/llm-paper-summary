@@ -4,10 +4,12 @@
 
 ## 収録論文
 
-収録論文: 6本。公開日が新しい順。
+収録論文: 7本。公開日が新しい順。
 
 - 2026-09-03 — [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)
   - 軽量な追加moduleで複数token候補をまとめて提案し、元の自己回帰modelと同じ出力分布になるよう検証・補正して生成を高速化する。
+- 2026-05-19 — [SpecSA: Bridging Speculative Decoding and Sparse Attention for Efficient LLM Inference](2026-2605.19893-specsa-sparse-speculative-verification.md)
+  - 投機的検証query間で重なるsparse KV blockをまとめて読み、layer間でselection indexを再利用し、draft構成まで含めて適応選択する。
 - 2026-05-04 — [SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference](2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md)
   - 低利用率の小型model serviceをremote drafterとして共有し、rollback率に応じてdraft生成とtarget検証を並列実行するか通常の逐次実行へ戻すかを切り替え、投機計算の無駄とdraft待ちを両方抑える。
 - 2026-01-21 — [RadixMLP — Intra-batch Deduplication for Causal Transformers](2026-2601.15013-radixmlp-intra-batch-deduplication.md)
