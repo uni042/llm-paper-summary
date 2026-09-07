@@ -2,6 +2,24 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 08:38–08:40 JST
+- planned slot: `manual recovery of 08:00 morning slot`
+- run_id: `manual-morning-20260908T083800+0900`
+- workflow_version: `2`
+- mode: `morning`
+- status: `completed`
+- research / audit: not applicable in morning mode; existing queues were not processed or reordered
+- morning report cutoff: previous cutoff was unset; initial lower bound = 2026-09-07 08:38 JST (24 hours before start), current cutoff = 2026-09-08 08:38 JST
+- paper aggregation: completed from repository change history for the initial 24-hour window
+- framework updates: completed; llama.cpp Vulkan TQ1_0 execution support (b10831) and RMSNorm fusion expansion (b10833) recorded
+- major LLM releases: completed; existing Qwen3.8-Flash-Next open-weight entry revalidated and expanded with official architecture / parameter / runtime details; no newer Qwen family release superseded Qwen3.8-Max-0902 in the family-latest table
+- consistency check: pass — recursive tree contains 158 inference paper Markdown files including 6 moved stubs; identity registry has 152 active studies; training count remains 19; Other lineage remains 99-last; state files present
+- pending_research remains 2; pending_audit remains 1
+- batch size unchanged: research 2 / audit 2; full_batch_streak unchanged: 0
+- rejected ledger: unchanged
+- result commits: `14194947`, `791d5744`
+- error / bottleneck: none
+
 ## 2026-09-08 07:56–08:07 JST
 - planned slot: `manual hourly test (07:00 hour)`
 - run_id: `manual-20260908T075610+0900`
