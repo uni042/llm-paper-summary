@@ -4,13 +4,16 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- CPUのみ、GPUのみ、CPU+GPU混在でLLMを実行し、weightを量子化してmemory使用量を下げられる。
-- model layerやFFNの一部をCPUへ置き、VRAMに収まらないmodelをCPU DRAMと併用して実行できる。
-- 複数GPUへmodelを分割し、tensor / pipeline型の実行やCUDA Graphでdecode時のlaunch overheadを減らせる。
-- KV cacheを管理・量子化し、投機的デコードやMTP対応modelでは1回の本体forwardで複数tokenを進められる。
-- MoEではrouting後のexpert計算をGPU kernelへまとめ、CPUへ退避したexpertを必要時に読み込む構成も取れる。
+- **CPU・GPUをまたぐローカル推論**: CPUのみ、GPUのみ、またはCPU+GPU混在でmodelを実行できる。全layerをGPUへ載せる必要はなく、一部layerやFFNをCPU DRAMへ置いて、VRAM容量を超えるmodelも実行できる。代わりにCPU memory帯域とPCIe転送が性能へ効く。
+- **広範なweight量子化**: GGUFと各種低bit量子化を使い、model weightの保存量・RAM/VRAM使用量・memory bandwidthを削減できる。CPU向けとGPU向けの専用kernelを使い、単なる保存圧縮ではなく実行時の低bit計算まで行う。
+- **複数GPU配置**: tensor / pipeline型の分割でmodelを複数GPUへ配置できる。GPUごとのVRAM容量に応じてlayerやtensorを分担し、単一GPUに収まらないmodelを複数GPUで実行できる。
+- **KV cache管理**: KV cacheの型・量子化・保持方法を調整し、長context時のmemory量を削減できる。recurrent / hybrid modelではKV以外のstateもcacheとして扱い、次tokenへ状態を持ち越せる。
+- **MoE実行とexpert offload**: routed expert計算を専用GPU kernelでまとめて実行し、一部expertをCPUへ退避する構成も取れる。巨大MoEではVRAM節約とhost memory帯域のtrade-offを調整できる。
+- **投機的デコードとMTP**: draft model、n-gram、MTP等で複数token候補を先に作り、target modelでまとめて検証できる。target forward回数を減らしてdecodeを高速化する。
+- **GPU launch overhead削減**: CUDA Graphやkernel fusionで、1 tokenごとに繰り返す小kernelのCPU launch回数と中間tensorのVRAM書き戻しを減らせる。
+- **server / embedding / multimodal利用**: CLIだけでなくserverとしてmodelを常駐させ、chat completion、embedding、画像入力対応model等をローカルAPIとして提供できる。
 
-以下の更新履歴は、主に**CPU/GPU間の転送、MoE expert処理、GPU kernel起動、投機的デコード**のどこが改善されたかを記録している。
+以下の更新履歴は、これらの能力について**どこまでGPU外memoryを使えるか、どの計算を低bit化・fusionできるか、decode時のCPU/GPU同期や転送をどれだけ減らせるか**を追う。
 
 ## 2026-09-05
 
