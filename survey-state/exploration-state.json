@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T15:01:38+09:00",
+  "last_run": "2026-09-07T16:02:42+09:00",
   "last_completed_paper": {
-    "title": "Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs",
-    "id": "arXiv:2603.17803",
-    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md"
+    "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+    "id": "arXiv:2605.18071",
+    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md"
   },
-  "last_lineage": "inference/kv-cache-offload-recomputation/ssd-multi-device-io",
+  "last_lineage": "inference/kv-cache-offload-recomputation/multi-tier-attention-aware-cache",
   "last_morning_report_cutoff": null,
   "recently_checked": [
     {
@@ -21,6 +21,18 @@
       "id": "arXiv:2603.17803",
       "result": "added",
       "reason": "Multi-SSD KV-cache offloading uses stable co-activation patterns to distribute concurrently accessed KV entries across devices and aggregate storage bandwidth."
+    },
+    {
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "id": "arXiv:2605.03375",
+      "result": "already_recorded",
+      "reason": "Primary arXiv material was checked; the paper is already indexed in the KV-cache offload lineage."
+    },
+    {
+      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+      "id": "arXiv:2605.18071",
+      "result": "added",
+      "reason": "Coordinates attention-aware GPU KV reuse, pipelined selection/fetch/compute, and HBM-DRAM-SSD sparse block movement for long-context decoding."
     }
   ]
 }
