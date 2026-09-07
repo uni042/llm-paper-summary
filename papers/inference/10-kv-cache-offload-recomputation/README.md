@@ -8,7 +8,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ## 収録論文
 
-収録論文: 17本。公開日が新しい順。
+収録論文: 18本。公開日が新しい順。
 
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200の高速CPU-GPU接続を使い、KVをいったんGPUの作業用bufferへコピーせずCPU memory上に置いたままGPUから直接読み、読み出し単位やkernelを調整してremote memory accessを減らす。
@@ -18,6 +18,8 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   - NVMe SSD上のKVを戻すI/O要求をCPUが大量に発行する構成をやめ、GPU自身が非同期SSD I/Oを制御してKVをまとめてHBMへ戻し、storage bandwidthを使い切りながらGPUのI/O待ちを減らす。
 - 2026-05-05 — [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)
   - CPU DRAM上のKV cacheをvector storageとして検索し、現在のqueryに重要なKVだけをGPUへ戻す。検索・転送・attentionをGPU–CPU間で重ね、全KV転送によるmemory bandwidth待ちを減らす。
+- 2026-03-28 — [ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference](2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md)
+  - KVの大部分をCPU DRAMへ置き、重要blockのうちGPUにある分はGPU、CPUにしかない少数blockはCPUでattentionを計算する。次layerのqueryを近似してCPU attentionを1 layer早く始め、CPU計算待ちをGPU処理の裏へ隠す。
 - 2026-03-18 — [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md)
   - attentionで一緒に参照されやすいKVをcluster化し、そのcluster内部を複数SSDへ分散する。同時に必要なKVを複数deviceから並列に読み、単一SSDの帯域上限を超えるaggregate I/O bandwidthを利用する。
 - 2026-02-07 — [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)
@@ -48,6 +50,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ## 主な技術の分岐
 
 - **KVのある場所でattentionする:** FastDecode / NEO / APEXはKVがあるCPUへattentionを寄せ、InstAttentionは同じ発想を計算機能付きSSDまで進める。
+- **CPU attentionを前倒ししてGPU待ちを隠す:** ScoutAttentionは重要KV blockだけをGPU/CPUへ分担し、次layerのCPU attentionを予測queryで1 layer早く開始して、CPU計算をTransformer layer全体と重ねる。
 - **KV転送の一部を再計算へ置き換える:** KVPR / CAPTUREはKVそのものより小さいactivationを保存・転送し、GPUで必要なKVだけを作り直す。
 - **別GPUの空きHBMを借りる:** Aquaは別GPUの余剰HBMを高速な退避先として使う。
 - **使う直前にCPUからGPUへ先読みする:** Pieはlayerの実行順が分かっていることを利用し、必要になる前にKVをGPUへ戻して転送待ちを計算と重ねる。
