@@ -4,16 +4,28 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 現在できること
 
-- **高throughput serving**: continuous batching、paged attention、chunked prefillを使い、長prompt requestと短いdecode requestを同じGPU上で効率よく混在させられる。
-- **prefix cache**: RadixAttention系のcacheで同じprefixを持つrequestのKVを共有し、system prompt、tool履歴、tree状のagent workflowでprefill再計算を減らせる。
-- **階層cache**: KVやhybrid / recurrent stateをGPUだけでなくCPU等の下位tierへ保持し、必要なblockだけGPUへ戻せる。長contextや高並列servingでHBM使用量を抑えられる。
-- **prefill / decode分離と分散serving**: prefillとdecodeを別workerへ分け、tensor / pipeline / expert / data parallelismと組み合わせてclusterを構成できる。
-- **MoE serving**: expert parallelism、token dispatcher、負荷分散、shared expert最適化を使い、routingの偏りとGPU間All-to-All通信を抑えられる。
-- **投機的デコード**: draft model、MTP、DSpark等で複数token候補を先に作り、target verify回数を減らせる。長context向けにはdraft stepのmetadata再利用やcache削減も行う。
-- **量子化と低bit execution**: FP4 / FP8 / INT4 / AWQ / GPTQ等を使い、weight・activation・KVのmemory trafficを削減できる。
-- **structured output / multi-LoRA**: grammar / JSON等の制約付き生成や、複数LoRA adapterを同一serverでbatch処理する運用に対応する。
-- **RL / post-training rollout**: 学習frameworkからrollout backendとして呼び出し、policy modelの生成を高速serving側で処理できる。
-- **CUDA Graph / kernel最適化**: recurrentなdecode stepやMoE前後処理をGraph / fused kernelへまとめ、CPU同期と小kernel起動を減らせる。
+- **高throughput multi-request serving**: continuous batchingで生成途中のrequestをbatchへ出し入れし、paged attentionで長さの異なるKVをpage単位に管理できる。固定batchの終了待ちとKVの過剰予約を減らし、GPUを多数requestで共有しやすい。
+- **chunked prefill**: 長いpromptを小さいchunkへ分け、decode requestと混ぜて処理できる。1件の巨大prefillが他requestのtoken生成を長時間止める問題を抑え、TTFTとTPOTのbalanceを取りやすくする。
+- **RadixAttention / prefix cache**: token prefixをradix treeとして管理し、同じsystem prompt、tool履歴、document prefix等を持つrequest間でKVを共有できる。agent treeやmulti-turn chatで同じprefixを何度もprefillする計算を減らせる。
+- **階層cache**: KVやhybrid / recurrent stateをGPU HBMだけでなくCPU等の下位tierへ置き、必要なblockだけGPUへ戻せる。HBM容量を超えるcontext / session stateを保持できる一方、host-device転送量が新しい律速になる。
+- **hybrid / recurrent state cache**: full attentionのKVだけでなく、linear attention、SSM、convolution等が持つstateもmodelに合う形式で保持できる。通常KVとは違うstateを一律pageへ押し込まず、memoryの無駄を減らせる。
+- **prefill / decode分離**: prefill workerとdecode workerを別GPU群へ分け、KVをworker間で転送できる。prefillは大きいmatrix throughput、decodeは低latency / memory bandwidthを重視するなどphaseごとに最適化できる。
+- **tensor / pipeline / data parallelism**: dense modelを複数GPU / nodeへ分割し、model sizeとrequest throughputの両方を拡張できる。parallel groupをserving topologyへ合わせて組み合わせられる。
+- **expert parallelism / MoE serving**: MoE expertをGPU間へ分散し、routingされたtokenを対応expertへ送る。token dispatcher、All-to-All通信backend、shared expert最適化を組み合わせられる。
+- **MoE load balancing**: expertごとのtoken偏りを観測し、重いexpertへの集中を緩和するrouting / placement調整を利用できる。平均負荷だけでなくtail側の混雑を減らし、遅いexpertがlayer全体を待たせる時間を抑える。
+- **投機的デコード**: draft model、MTP、DSpark等で複数token候補を先に生成し、target modelでまとめてverifyできる。受理率が高ければtarget forward回数を減らせる。
+- **adaptive draft制御**: confidenceや過去の受理状況を使って候補数を増減し、外れtokenを大量に作る無駄を減らせる。長contextではdraft用index / metadataを再利用して補助処理costも抑える。
+- **recurrent model向けspeculative verify**: draft tokenが拒否されたときにrecurrent stateを正しい位置へ戻しながら、Transformer以外のstateful architectureでもmulti-token verifyを扱える。
+- **sparse / long-context attention**: 長いcontextの全位置を毎回attentionせず、重要なsubsetだけ読むsparse attention / sparse MLA系kernelを利用できる。KV read量とattention計算をcontext長に対して削減できる。
+- **context parallelism**: 長contextのKV / attentionを複数GPUへ分割し、1 GPU当たりのcache memoryを減らせる。長文modelを単一GPUのHBM制約から拡張するための手段。
+- **量子化**: FP4、FP8、INT4、AWQ、GPTQ等のweight / activation / KV形式を利用できる。model memory、HBM traffic、KV capacityを用途に応じて削減できる。
+- **multi-LoRA serving**: 複数LoRA adapterを同じbase model上でrequestごとに切り替え、batch内で処理できる。base weightを複製せず複数tenant / taskを1 serverへ載せられる。
+- **structured output**: grammar、JSON schema等でtoken候補を制約し、parse可能なresponseを直接生成できる。tool callingやdata extractionで後処理failureを減らせる。
+- **CUDA Graph**: decodeや投機的verifyの繰り返しkernel列をcaptureし、1 tokenごとのCPU launch overheadを削減できる。dynamic servingと固定Graphを両立するため、shape / buffer管理もruntime側で行う。
+- **kernel fusion / CPU-GPU同期削減**: routing、metadata処理、D2H / H2D copy前後の小operationをまとめ、GPUがCPUの判断を待つ回数や中間tensorのHBM trafficを減らせる。
+- **RL / post-training rollout backend**: RLHF / RL training frameworkからpolicy modelのgeneration backendとして呼び出し、高throughput rolloutを生成できる。trainingとservingを別runtimeへ分けつつ、weight更新後のrolloutへつなげる用途に使える。
+- **OpenAI互換API / production serving**: applicationからchat / completion endpointとして利用でき、単一GPUからdistributed clusterまで同じserving stackで構成できる。
+- **structured LLM program実行の系譜**: 単純な1 request = 1 promptだけでなく、branch、tool call、共有prefixを持つLLM applicationの実行をruntime側で効率化する設計を持つことがSGLangの特徴。
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
