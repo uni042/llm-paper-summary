@@ -2,6 +2,24 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 03:59 JST
+- mode: `hourly-inference`
+- status: `partial`
+- research: assigned 4 / completed 1 / added 0 / updated 0 / already_recorded 1 / not_selected 0 / carried_over 3
+- audit: assigned 4 / completed 0 / changed 0 / no_change 0 / carried_over 4
+- pending_research: 3
+- pending_audit: 4
+- batch size: research 5 / audit 5
+- full_batch_streak: 0
+- discovery: `arxiv-new`
+- validation: partial — research pages for OUTLETS / AceSpec / Random Attention were created and AceSpec / Random Attention lineage indexes were updated, but top-level count synchronization and OUTLETS serving index remain for recovery before these three are marked complete
+- recovery: `mzCache` was found already recorded in the Edge lineage and was therefore not duplicated
+- rejected ledger: added 0 / updated 0
+- already recorded: `mzCache: On-Device LLM Memory Management under Multitasking`
+- staged additions awaiting index completion: `OUTLETS`, `AceSpec`, `Random Attention`
+- carried over audit: `DistServe`, `Sarathi-Serve`, `SGLang`, `Pensieve`
+- commits: `3e2bfff`, `632a497`, `ec4824c`, `8b6b5d5`, `cfb3829`
+
 ## 2026-09-08 03:02–03:06 JST
 - mode: `hourly-inference`
 - status: `partial`
