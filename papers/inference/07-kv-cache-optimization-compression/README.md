@@ -8,12 +8,14 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ## 収録論文
 
-収録論文: 9本。公開日が新しい順。
+収録論文: 10本。公開日が新しい順。
 
 - 2026-09-03 — [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)
   - KVの重要度を毎tokenで一から計算せず、過去のattention傾向を少しずつ平均して重要度順位を長めに使い回し、どのKVを捨てるか決める計算負荷を下げる。
 - 2026-09-03 — [GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving](2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md)
   - KV cacheを最初から大きく確保せず、reasoning中に過去contextへのattention需要が増えた時だけpage単位で容量を追加する。
+- 2026-09-03 — [Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning](2026-2609.03430-random-attention-kv-cache-eviction.md)
+  - promptを固定保護したうえで生成済みreasoning tokenのKVをheadごとにランダム保持し、重要度score計算なしで品質とserving throughputを両立する。
 - 2026-09-03 — [SGD-KV: Summarization Guided KV Cache Compression](2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md)
   - 長いcontextの要点を保持する能力が高いattention headへ多くのKV容量を与え、冗長なheadのcacheを強く削減する。
 - 2026-06-23 — [CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference](2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md)
@@ -31,7 +33,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ## 主な技術の分岐
 
-- **KVを減らす:** InertiaKV、SGD-KV、CompressKV、KARA、ALISAは重要なKVを優先して残し、不要なKVの保存や読み出しを減らす。
+- **KVを減らす:** InertiaKV、Random Attention、SGD-KV、CompressKV、KARA、ALISAはKVを選別して保存や読み出しを減らす。Random Attentionは重要度score自体を使わない点が異なる。
 - **必要な時だけ容量を増やす:** GrowPageはreasoning中のattention需要が増えた時だけKV容量を追加する。
 - **GPU内で先読みする:** Asynchronous KV Cache PrefetchingとPRESERVEは、HBM上のKVを使う直前にL2 cacheへ運び、HBMから読み出す待ち時間を別の計算や通信と重ねる。
 - **shared prefixの重複計算を減らす:** Hydragenは共有KVを保存するだけでなく、複数sequenceのattentionをまとめて計算し、同じprefix KVの重複読み出しを減らす。
