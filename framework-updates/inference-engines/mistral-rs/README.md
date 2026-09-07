@@ -2,6 +2,17 @@
 
 Mistral.rsの主要な機能・性能更新を継続的に記録する集約ページ。CPU量子化kernel、attention、MoE、LoRA、投機的デコード（speculative decoding）、CUDA Graph、同時request schedulingなどを扱う。
 
+## 現在できること
+
+- CPU、CUDA GPU、Apple MetalでLLM / multimodal modelを実行し、continuous batchingとpaged attentionで複数requestをservingできる。
+- Hugging Face checkpoint、GGUF、独自量子化形式を扱い、2〜8 bit、GPTQ、AWQ、HQQ、FP8等の量子化を利用できる。
+- multi-GPU / distributed inference、prefix cache、per-layer device / quantization配置を使い、hardwareに合わせてmodelを分割できる。
+- LoRA / X-LoRAをrequest単位で切り替え、serverを止めずにadapterをload / unloadできる。
+- MTP / DFlash等のspeculative decodingとCUDA Graphを使い、decodeのtarget forward回数とlaunch overheadを減らせる。
+- OpenAI互換・Anthropic互換API、web UI、tool calling、MCP client、code / shell executionを備え、agentic servingまで単一runtimeで扱える。
+
+以下の更新履歴は、この主要機能群のうち**CPU量子化kernel、KV streaming、LoRA serving、concurrent scheduling、speculative decoding**の性能面の更新を記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
