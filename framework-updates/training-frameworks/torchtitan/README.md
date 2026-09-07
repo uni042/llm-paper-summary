@@ -4,17 +4,30 @@ TorchTitanの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- **PyTorch-native大規模training**: PyTorchのmodel codeを中心に保ちながら、FSDP、tensor / pipeline / expert parallelismを組み合わせてmulti-GPU / multi-node trainingを構成できる。
-- **dense / MoE両対応**: dense TransformerだけでなくMoEを学習でき、routing後のtokenをexpert GPUへ送るdispatcherを複数backendから選べる。
-- **FSDPとparameter sharding**: parameter・gradient・optimizer stateをGPU間へ分割し、data parallel replicaごとの重複memoryを削減できる。
-- **communication overlap**: parameter gather、gradient通信、MoE token交換をcomputeと重ね、GPUがnetwork完了を待つ時間を減らせる。
-- **activation checkpoint / recomputation**: どのactivationを保持し、どこを再計算するかをpolicyとして構成し、長sequence時のpeak VRAMを下げられる。
-- **低精度training**: FP8 / FP4 / BF16 optimizer state等を使い、matrix演算・state保持・通信量を削減できる。数値精度と収束のtrade-offは別途評価が必要。
-- **CUDA Graph / whole-step graph**: forward、backward、optimizer周辺まで広い範囲をGraph化し、Python schedulingとkernel launch overheadを減らせる。
-- **pipeline schedule最適化**: model layerを複数stageへ分割し、microbatchのforward / backwardを重ねてpipeline bubbleを減らせる。
-- **compiler / graph transformation連携**: graph解析からactivation memory、pipeline partition、parallel executionを調整し、手作業のparallel tuningを減らせる。
+- **PyTorch-nativeな大規模training stack**: PyTorchのmodel / optimizer codeを中心に保ちながら、multi-GPU / multi-node trainingへ拡張できる。専用DSLへmodel全体を書き換えず、PyTorch ecosystemのcompiler・distributed機能を組み合わせることを重視する。
+- **FSDPによるstate sharding**: parameter・gradient・optimizer stateをdata-parallel rank間へ分割し、各GPUがmodel stateを完全複製するmemory costを減らせる。大きいmodelをdata parallelで学習する際の基本的なmemory削減手段。
+- **tensor parallelism**: 1 layer内の大きなmatrix計算を複数GPUへ分割し、hidden size / FFNが単一GPUに収まりにくいmodelを学習できる。node内高速linkを使う構成と相性がよい。
+- **pipeline parallelism**: model layerを複数stageへ分け、異なるmicrobatchのforward / backwardをstage間で重ねられる。model depthを分散しつつ、scheduleによってpipeline bubbleを減らす。
+- **expert parallelism / MoE training**: MoE expertをGPU間へ分散し、routingされたtokenを対応expertへ送って戻す。総parameter数の大きいMoEを全GPUへexpert複製せず学習できる。
+- **複数parallelismの合成**: FSDP / data parallelism、tensor、pipeline、expert parallelismを組み合わせられる。model size、expert数、cluster topologyに合わせてparallel axesを選べる。
+- **unified token dispatcher**: MoE routing後のtoken交換を共通interfaceとして扱い、Standard、MinimalAsyncEP、DeepEP、HybridEP等の通信backendを上位model codeを変えず切り替えられる。
+- **communication overlap**: FSDP parameter gather、gradient通信、MoE token交換等をcomputeと重ね、GPUがnetwork完了を待つ時間を減らせる。通信量そのものだけでなくcritical path上の待ち時間を隠す。
+- **activation checkpointing / recomputation**: forward中間値をすべて保存せずbackward時に再計算し、長sequenceや大modelのpeak VRAMを下げられる。どのoperator / layerを保存するかpolicyとして組み合わせられる。
+- **activation-memory解析**: graphを解析し、どのactivationがmemoryを多く占めるかを見ながらrecompute対象を決める仕組みを使える。単純な「全layer再計算」よりcompute追加を抑えやすい。
+- **低精度training**: Float8、MXFP8、NVFP4等でmatrix計算やparameter / activationを低bit化し、HBM trafficとTensor Core compute costを削減できる。数値精度・収束とのtrade-offを確認する必要がある。
+- **低精度optimizer state**: optimizer stateの一部をBF16等で保持し、FP32常駐よりmemoryを減らせる。optimizer stateはparameter本体の複数倍になることがあるため大規模modelで効く。
+- **CUDA Graph**: 繰り返すforward / backward / optimizer周辺のkernel列をcaptureし、Python / CPUから毎step大量のkernelをlaunchするoverheadを減らせる。
+- **whole-step graph**: layer単位ではなくtraining step全体に近い範囲をgraph化し、Python scheduling、dispatcher、optimizer周辺を含むhost overheadを広く削減できる。
+- **GraphTrainer / graph transformation**: training graphを解析・変換し、parallelism、activation memory、communication overlapをprogrammaticに調整できる。手作業でmodel codeへ通信やcheckpoint logicを散在させる量を減らす。
+- **automatic / assisted pipeline partition**: graph情報を基にmodel layerをpipeline stageへどう分けるか調整できる。各stageのcompute / memoryを均し、遅いstageが全体throughputを制限する問題を減らす。
+- **advanced pipeline scheduling**: DualPipeV等でforward / backward microbatchを複数方向に重ね、pipeline bubbleを減らせる。単純な1F1Bよりnetwork / computeの空白時間を抑えることを狙う。
+- **declarative SPMD configuration**: `spmd_types`等でrankごとのparallel roleを宣言し、model code内へrank判定やgroup生成を大量に埋め込まずTP / DP / EPを構成しやすい。
+- **dense / MoE共通training framework**: dense TransformerとMoEを同じPyTorch-native stackで扱い、model architectureによってtraining infrastructureを全面的に分けずに済む。
+- **checkpoint / job restart**: distributed training stateを保存・復元し、長時間jobの再開へ使える。FSDPや複数parallelismを使う場合でもsharded stateを扱うことが前提になる。
+- **PyTorch compiler ecosystemとの連携**: `torch.compile`やgraph transformation等をtraining stackへ統合し、PyTorch自体のcompiler改善を大規模LLM trainingへ取り込みやすい。
+- **研究用parallelism実験基盤**: 新しいdispatcher、pipeline schedule、low-precision format、Graph変換を比較的PyTorchに近い形で試せるため、production pretrainingだけでなくsystems researchの実装基盤としても使える。
 
-以下の更新履歴は、**PyTorch-nativeなままどこまでparallelism・MoE通信・graph化・低精度学習を統合できるか**を中心に追う。
+以下の更新履歴は、**PyTorch-nativeなままparallelism、MoE通信、graph化、activation memory、低精度学習をどこまで一体化できるか**を中心に追う。
 
 ## 初期収録期間
 
