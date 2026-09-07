@@ -1,22 +1,19 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T23:57:03+09:00",
-  "last_completed_paper": {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","id":"arXiv:2608.15171","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md"},
+  "last_run": "2026-09-08T00:57:41+09:00",
+  "last_completed_paper": {"title":"Adaptive Context Parallelism for Production LLM Serving","id":"arXiv:2609.04774","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md"},
   "last_lineage": "inference/serving/scheduling",
   "last_morning_report_cutoff": null,
-  "pending_research": [
-    {"title":"Adaptive Context Parallelism for Production LLM Serving","canonical_id":"arXiv:2609.04774","discovery_source":"arxiv-new"}
-  ],
-  "pending_audit": [
-    {"title":"ProMoE: Fast MoE-based LLM Serving using Proactive Caching","path":"papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md","canonical_id":"arXiv:2410.22134"},
-    {"title":"Orca: A Distributed Serving System for Transformer-Based Generative Models","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md","canonical_id":"DOI:10.5555/3600237.3600268"},
-    {"title":"Efficient Memory Management for Large Language Model Serving with PagedAttention","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md","canonical_id":"DOI:10.1145/3600006.3613165"}
-  ],
+  "pending_research": [],
+  "pending_audit": [],
   "research_batch_size": 5,
   "audit_batch_size": 5,
   "full_batch_streak": 0,
-  "recent_batch_history": [{"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":2,"carried_over_audit":3}],
+  "recent_batch_history": [
+    {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":2,"carried_over_audit":3},
+    {"assigned_research":1,"completed_research":1,"carried_over_research":0,"assigned_audit":3,"completed_audit":3,"carried_over_audit":0}
+  ],
   "recently_checked": [
     {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","id":"arXiv:2604.02715","result":"added","discovery_source":"arxiv-search"},
     {"title":"MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference","canonical_id":"arXiv:2607.09686","id":"arXiv:2607.09686","result":"added","discovery_source":"arxiv-search"},
@@ -24,6 +21,10 @@
     {"title":"MoEless: Efficient MoE LLM Serving via Serverless Computing","canonical_id":"arXiv:2603.06350","id":"arXiv:2603.06350","result":"added","discovery_source":"arxiv-search"},
     {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","canonical_id":"arXiv:2608.15171","id":"arXiv:2608.15171","result":"added","discovery_source":"arxiv-search"},
     {"title":"FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU","canonical_id":"arXiv:2303.06865","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit metadata added; ICML 2023 source and official code retained."},
-    {"title":"LLM in a Flash: Efficient Large Language Model Inference with Limited Memory","canonical_id":"arXiv:2312.11514","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit metadata added; primary arXiv source and real-hardware evaluation retained."}
+    {"title":"LLM in a Flash: Efficient Large Language Model Inference with Limited Memory","canonical_id":"arXiv:2312.11514","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit metadata added; primary arXiv source and real-hardware evaluation retained."},
+    {"title":"Adaptive Context Parallelism for Production LLM Serving","canonical_id":"arXiv:2609.04774","id":"arXiv:2609.04774","result":"added","discovery_source":"arxiv-new"},
+    {"title":"ProMoE: Fast MoE-based LLM Serving using Proactive Caching","canonical_id":"arXiv:2410.22134","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against arXiv v3 and official code."},
+    {"title":"Orca: A Distributed Serving System for Transformer-Based Generative Models","canonical_id":"DOI:10.5555/3600237.3600268","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against OSDI 2022 primary source."},
+    {"title":"Efficient Memory Management for Large Language Model Serving with PagedAttention","canonical_id":"DOI:10.1145/3600006.3613165","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against SOSP 2023 DOI, arXiv, and official vLLM code."}
   ]
 }
