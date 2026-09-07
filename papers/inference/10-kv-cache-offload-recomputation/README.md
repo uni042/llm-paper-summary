@@ -8,8 +8,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ## 収録論文
 
-収録論文: 19本。公開日が新しい順。
+収録論文: 20本。公開日が新しい順。
 
+- 2026-09-04 — [KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU](2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md)
+  - GPU・CPU DRAM・NVMeへ退避した過去のKV状態をattention空間の索引で検索し、必要blockだけを現在のcontextへ再構成してnative contextを超えるagent workspaceを扱う。
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200でCPU DRAM上のKVをGPU HBMへ一度copyせずattention kernelから直接読み、計算順とkernelを変えてCPU memoryの重複readを減らす。
 - 2026-05-18 — [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md)
