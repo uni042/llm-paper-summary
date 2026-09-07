@@ -2,6 +2,17 @@
 
 Modular MAXの主要な機能・性能更新を継続的に記録する集約ページ。FP8 / INT8系低精度KV、tiered KV cache、仮想memory allocator、MoE並列、投機的デコード（speculative decoding）、compile cacheなどを扱う。
 
+## 現在できること
+
+- NVIDIA / AMD GPU向けにLLM serving graphをcompileし、continuous batching、paged / tiered KV cache、multi-GPU実行を構成できる。
+- FP8 / MXint8等の低bit KV cacheを使い、同じGPU memoryで保持できるcontext長や同時request数を増やせる。
+- GPU、CPU、disk等へKVを階層化し、非同期onloadで必要なKVを計算と重ねてGPUへ戻せる。
+- tensor / data / expert parallelismを組み合わせ、MoEのrouted / shared expertを複数GPUへ分散できる。
+- EAGLE / DFlash系speculative decodingを使い、draft生成とtarget verifyを重ねてdecodeを高速化できる。
+- compile済みartifactとCUDA Graph系実行を再利用し、初回compileと繰り返しlaunchのoverheadを減らせる。
+
+以下の更新履歴は、特に**低bit KV、tiered KV、VMM allocator、MoE並列、speculative decoding、compile cache**がどう拡張されたかを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
