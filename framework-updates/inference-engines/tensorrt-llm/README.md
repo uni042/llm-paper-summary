@@ -6,13 +6,17 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 現在できること
 
-- NVIDIA GPU向けにLLMをcompile・最適化し、paged KV cache、continuous batching、量子化、multi-GPUで高throughput servingできる。
-- tensor / pipeline / expert parallelismやprefill/decode分離を使い、複数GPU・複数nodeへ拡張できる。
-- KV cacheをpage単位で管理し、CPUやdiskなどGPU外tierへ退避・再利用する構成を取れる。
-- FP8 / FP4 / NVFP4等の低bit weight・KV・MoE実行と、EAGLE系を含む投機的デコードを利用できる。
-- CUDA Graphや専用kernelを使って、decode時のCPU launch overheadとGPU memory trafficを削減できる。
+- **NVIDIA GPU向け高性能LLM serving**: model graphをTensorRT-LLM向けにbuildし、continuous batching、paged KV cache、専用attention / GEMM kernelで高throughput・低latency servingを行える。
+- **multi-GPU / multi-node実行**: tensor / pipeline / expert parallelismを組み合わせ、dense modelとMoEを複数GPUへ分割できる。cluster規模ではprefill / decode workerも分離できる。
+- **KV cacheの階層化**: KVをpage単位で管理し、GPU HBMだけでなくCPUやdisk等の下位tierへoffload・prefetchできる。conversation単位のKV reuseにも対応する。
+- **低bit weight / activation / KV**: FP8 / FP4 / NVFP4 / INT8等でmodelとcacheを低bit化し、HBM使用量とmemory bandwidthを削減できる。MoE expertにも低bit executionを適用できる。
+- **投機的デコード**: EAGLE、DFlash、DSpark等のdraft / verify方式でtarget model forward回数を減らせる。tree状候補やmulti-token verifyにも対応する。
+- **long-context serving**: chunked prefill、context parallelism、paged attention等で長promptを複数GPUへ分割し、prefillのmemory peakと1 workerあたりのKV量を抑えられる。
+- **multimodal execution**: text decoderだけでなくvision encoder等を含むpipelineにもCUDA Graphや専用kernelを適用できる。
+- **CUDA Graph / fused kernel**: 繰り返すdecode kernel列をGraph化し、attention・normalization・quantization・MoE処理をfusionしてCPU launchとHBM trafficを減らせる。
+- **分離serving用data movement**: KV transceiver / connectorを介してworker間でKV blockを送受信し、P/D分離や外部cacheとの連携を構成できる。
 
-以下の更新履歴は、特に**KVCacheManagerV2、disk / tiered KV、P/D分離、CUDA Graph、MoE通信、低bit KV**の拡張を追っている。RC機能はstable releaseと分けて扱う。
+以下の更新履歴は、**KVCacheManager、tiered KV、P/D分離、低bit KV / MoE、投機的デコード、Graph実行**がstable / RCでどう広がったかを追う。
 
 ## 初期収録期間
 
