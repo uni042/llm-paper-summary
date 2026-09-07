@@ -2,6 +2,24 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 03:02–03:06 JST
+- mode: `hourly-inference`
+- status: `partial`
+- research: assigned 5 / completed 1 / added 1 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 4
+- audit: assigned 4 / completed 0 / changed 0 / no_change 0 / carried_over 4
+- pending_research: 4
+- pending_audit: 4
+- batch size: research 5 / audit 5
+- full_batch_streak: 0
+- discovery: `arxiv-new`
+- validation: pass for completed KVMem/index changes; unfinished research and audits retained in queue
+- rejected ledger: added 0 / updated 0
+- added: `KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU` (arXiv:2609.04852)
+- carried over research: `OUTLETS`, `mzCache`, `AceSpec`, `Random Attention`
+- carried over audit: `DistServe`, `Sarathi-Serve`, `SGLang`, `Pensieve`
+- validation detail: Inference 145本 / Training 19本 / total 164本へ同期。KVMem pageはcanonical_id / last_verifiedを保持し、KV Offload lineage READMEへ一言説明付きで追加。Training配下は変更なし。
+- commits: `8927008`, `8a43a3e`, `b647276`, `b0ede3e`, `00eac55`, `075674f`
+
 ## 2026-09-08 02:02–02:05 JST
 - mode: `hourly-inference`
 - status: `partial`
