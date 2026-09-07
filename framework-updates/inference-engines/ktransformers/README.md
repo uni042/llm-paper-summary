@@ -2,6 +2,17 @@
 
 KTransformersの主要な機能・性能更新を継続的に記録する集約ページ。CPUとGPUへmodel計算を分担させる異種実行（heterogeneous execution）、MoE expertのCPU実行、full-parameter / LoRA fine-tuning、FP8学習などを扱う。
 
+## 現在できること
+
+- 1つのmodel operatorをCPUとGPUへ分ける異種実行により、GPUへ収まりきらない巨大LLM / MoEをCPU RAMと併用して推論できる。
+- attentionなどGPU向きの計算をGPUへ残し、大容量を占めるMoE expertをCPUで低bit実行する構成を取れる。
+- operator injectionにより、model全体を作り直さず特定layer / operatorだけをKTransformersのCPU / GPU実装へ差し替えられる。
+- CPU側ではINT4等の低bit expert計算を使い、host memory帯域と容量を抑えながらMoEを実行できる。
+- full-parameter SFTとLoRA SFTにもCPU/GPU異種配置を使い、VRAMだけでは難しい大規模modelの追加学習を行える。
+- FP8 expert weightやCPU activation保持を組み合わせ、training時のhost RAM / VRAM peakを抑えられる。
+
+以下の更新履歴は、主に**CPU expert実行、低bit表現、異種fine-tuning、activation配置**がどう拡張されたかを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
