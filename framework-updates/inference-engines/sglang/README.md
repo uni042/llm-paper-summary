@@ -2,6 +2,17 @@
 
 SGLangの主要な機能・性能更新を継続的に記録する集約ページ。投機的デコード（speculative decoding）、階層KV cache（hierarchical KV cache）、MoE負荷分散、GPU間通信、CUDA Graph、長文向けattention最適化などを扱う。
 
+## 現在できること
+
+- continuous batching、paged attention、chunked prefillを使って低遅延・高throughputのLLM servingを行える。
+- RadixAttention系のprefix cacheで、同じprefixを持つrequest間のKV計算を再利用できる。
+- prefill/decode分離、tensor / pipeline / expert / data parallelismを組み合わせ、単一GPUから大規模clusterまで拡張できる。
+- speculative decoding、MTP、structured output、multi-LoRA batching、FP4 / FP8 / INT4 / AWQ / GPTQ量子化を扱える。
+- GPU外を含む階層cacheやMoE負荷分散を使い、長context・MoE・高並列requestのmemoryと通信を制御できる。
+- RL / post-trainingではrollout backendとして利用でき、学習系frameworkからserving側を呼び出せる。
+
+以下の更新履歴は、主に**階層cache、投機的デコード、長文attention、MoE通信、CUDA Graph、CPU/GPU同期削減**がどう改善されたかを示す。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
