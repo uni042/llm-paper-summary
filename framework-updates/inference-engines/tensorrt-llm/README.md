@@ -4,6 +4,16 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 この期間は、**KV cacheをGPU外へ階層化すること、prefill / decodeを別workerへ分離すること、CUDA Graph適用範囲を広げること、MoE通信と低bit KVを強化すること**が中心。
 
+## 現在できること
+
+- NVIDIA GPU向けにLLMをcompile・最適化し、paged KV cache、continuous batching、量子化、multi-GPUで高throughput servingできる。
+- tensor / pipeline / expert parallelismやprefill/decode分離を使い、複数GPU・複数nodeへ拡張できる。
+- KV cacheをpage単位で管理し、CPUやdiskなどGPU外tierへ退避・再利用する構成を取れる。
+- FP8 / FP4 / NVFP4等の低bit weight・KV・MoE実行と、EAGLE系を含む投機的デコードを利用できる。
+- CUDA Graphや専用kernelを使って、decode時のCPU launch overheadとGPU memory trafficを削減できる。
+
+以下の更新履歴は、特に**KVCacheManagerV2、disk / tiered KV、P/D分離、CUDA Graph、MoE通信、低bit KV**の拡張を追っている。RC機能はstable releaseと分けて扱う。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
