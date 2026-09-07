@@ -1,24 +1,29 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T22:05:10+09:00",
+  "last_run": "2026-09-07T23:18:00+09:00",
   "last_completed_paper": {
-    "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
-    "id": "arXiv:2408.08147",
-    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
+    "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+    "id": "arXiv:2607.16892",
+    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md"
   },
-  "last_lineage": "inference/serving/prefill-decode-disaggregation-and-kv-transfer",
+  "last_lineage": "inference/serving/kv-reservation-under-output-length-uncertainty",
   "last_morning_report_cutoff": null,
+  "pending_research": [],
+  "pending_audit": [],
+  "research_batch_size": 5,
+  "audit_batch_size": 5,
+  "full_batch_streak": 1,
   "recently_checked": [
-    {"title":"SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer","id":"arXiv:2607.28150","result":"added","reason":"Selective proactive, on-demand, and speculative KV transfer reduces P/D stage-transition stalls on bandwidth-limited deployments."},
-    {"title":"SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding","id":"arXiv:2506.11309","result":"added","reason":"Disaggregates and asynchronously scales draft generation and target verification to remove draft latency from the critical path."},
-    {"title":"SPIRe: Boosting LLM Inference Throughput with Speculative Decoding","id":"arXiv:2504.06419","result":"added","reason":"Uses sparse-attention draft architecture and feedback memory to reduce draft KV/compute cost for large-batch speculative decoding."},
-    {"title":"SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs","id":"arXiv:2503.16163","result":"added","reason":"Keeps full KV in CPU DRAM, selects via low-bit GPU copies, and prefetches predicted next-step KV to overlap PCIe transfer with decoding."},
-    {"title":"P/D-Serve: Serving Disaggregated Large Language Model at Scale","id":"arXiv:2408.08147","result":"added","reason":"Combines fine-grained P/D grouping, on-demand rerouting, optimized KV transfer, and production-scale fault/network control."},
-    {"title":"Preble: Efficient Distributed Prompt Scheduling for LLM Serving","id":"arXiv:2407.00023; ICLR 2025","result":"already_recorded","reason":"Audit confirmed publication status, official code, evaluation hardware, and main latency claims are already recorded."},
-    {"title":"Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve","id":"arXiv:2403.02310; OSDI 2024","result":"already_recorded","reason":"Audit confirmed OSDI final status, official code, hardware conditions, and serving-capacity results are already recorded."},
-    {"title":"KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference","id":"arXiv:2605.18071","result":"already_recorded","reason":"Audit found detailed HBM/DRAM/NVMe conditions, prototype results, and limitations already present."},
-    {"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving","id":"arXiv:2401.09670; OSDI 2024","result":"already_recorded","reason":"Audit confirmed final publication, official artifact, hardware/network conditions, and goodput results are already recorded."},
-    {"title":"Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot","id":"arXiv:2407.00079; FAST 2025","result":"already_recorded","reason":"Audit confirmed FAST 2025 status, official code, production evaluation, and KV transfer/cache results are already recorded."}
+    {"title":"SpecSA: Bridging Speculative Decoding and Sparse Attention for Efficient LLM Inference","id":"arXiv:2605.19893","result":"added","reason":"Sparse speculative verification reuses overlapping selected KV blocks across verifier queries and selection indices across layers."},
+    {"title":"CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation","id":"arXiv:2606.24506","result":"added","reason":"Separates cold-MoE FFN weights from attention/KV GPU pools so dynamic KV demand can be shared across hosted models."},
+    {"title":"CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference","id":"arXiv:2606.24467","result":"added","reason":"Uses semantic-retrieval heads for token retention and offline layer-error estimates for non-uniform KV budget allocation."},
+    {"title":"KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression","id":"arXiv:2607.01237","result":"added","reason":"Compresses only newly generated KV windows and integrates periodic incremental compression with PagedAttention serving."},
+    {"title":"Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty","id":"arXiv:2607.16892","result":"added","reason":"Jointly optimizes KV reservation, GPU configuration, routing, and prefix caching under output-length uncertainty and distribution shift."},
+    {"title":"Hydragen: High-Throughput LLM Inference with Shared Prefixes","id":"arXiv:2402.05099","result":"already_recorded","reason":"Audit confirmed exact shared-prefix attention mechanism, official code, and 32x/55% headline results are already recorded."},
+    {"title":"ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching","id":"arXiv:2403.17312; ISCA 2024","result":"already_recorded","reason":"Audit confirmed publication status, sparse-KV plus CPU offload/recomputation distinction, hardware conditions, and throughput claims are already recorded."},
+    {"title":"PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving","id":"arXiv:2501.08192; SPAA 2026 Brief Announcement","result":"already_recorded","reason":"Audit confirmed communication-overlapped L2 prefetch scope, Ascend hardware conditions, publication status, and simulation/real-hardware distinction are already recorded."},
+    {"title":"Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching","id":"arXiv:2504.06319; AAAI 2026","result":"already_recorded","reason":"Audit confirmed Hopper L2-prefetch mechanism, official code, H20 evaluation, and 2.15x kernel / up to 1.97x end-to-end claims are represented."},
+    {"title":"SGD-KV: Summarization Guided KV Cache Compression","id":"arXiv:2609.03235","result":"already_recorded","reason":"Audit confirmed head-aware summarization diagnostic, Qwen long-context evaluation, and up-to-75% KV-memory reduction are already recorded."}
   ]
 }
