@@ -1,28 +1,20 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-08T03:06:17+09:00",
-  "last_completed_paper": {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","id":"arXiv:2609.04852","path":"papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md"},
-  "last_lineage": "inference/kv-cache-offload-recomputation",
+  "last_run": "2026-09-08T05:00:00+09:00",
+  "last_completed_paper": {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","id":"arXiv:2609.03430","path":"papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md"},
+  "last_lineage": "inference/kv-cache-optimization-compression",
   "last_morning_report_cutoff": null,
-  "pending_research": [
-    {"title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","canonical_id":"arXiv:2609.01068","discovery_source":"arxiv-new"},
-    {"title":"AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference","canonical_id":"arXiv:2609.02514","discovery_source":"arxiv-new"},
-    {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","discovery_source":"arxiv-new"}
-  ],
-  "pending_audit": [
-    {"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"},
-    {"title":"Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"},
-    {"title":"SGLang: Efficient Execution of Structured Language Model Programs","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"},
-    {"title":"Stateful Large Language Model Serving with Pensieve","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md"}
-  ],
+  "pending_research": [],
+  "pending_audit": [],
   "research_batch_size": 5,
   "audit_batch_size": 5,
   "full_batch_streak": 0,
   "recent_batch_history": [
     {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4},
     {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4},
-    {"assigned_research":4,"completed_research":1,"carried_over_research":3,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4}
+    {"assigned_research":4,"completed_research":1,"carried_over_research":3,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4},
+    {"assigned_research":3,"completed_research":3,"carried_over_research":0,"assigned_audit":4,"completed_audit":4,"carried_over_audit":0}
   ],
   "recently_checked": [
     {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","result":"added","discovery_source":"arxiv-search"},
@@ -38,6 +30,9 @@
     {"title":"REST: Retrieval-Based Speculative Decoding","canonical_id":"arXiv:2311.08252","result":"added","discovery_source":"arxiv-search"},
     {"title":"Splitwise: Efficient Generative LLM Inference Using Phase Splitting","canonical_id":"arXiv:2311.18677","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against ISCA 2024 metadata and official artifact."},
     {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","canonical_id":"arXiv:2609.04852","result":"added","discovery_source":"arxiv-new"},
-    {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","result":"already_recorded","discovery_source":"arxiv-new","reason_code":"already_recorded","reason":"Existing Edge lineage page and README entry found during recovery check."}
+    {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","result":"already_recorded","discovery_source":"arxiv-new","reason_code":"already_recorded","reason":"Existing Edge lineage page and README entry found during recovery check."},
+    {"title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","canonical_id":"arXiv:2609.01068","result":"added","discovery_source":"arxiv-new"},
+    {"title":"AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference","canonical_id":"arXiv:2609.02514","result":"added","discovery_source":"arxiv-new"},
+    {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","result":"added","discovery_source":"arxiv-new"}
   ]
 }
