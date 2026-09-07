@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **117本**。
+収録論文: **118本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -28,7 +28,7 @@
   - smartphoneや個人PCなどresourceが限られたdeviceで、CPU / GPU / NPU / memoryを分担させてLLMを実用速度で動かす。
 - [Other Inference Systems](09-other-inference-systems/) — 3本
   - 推論効率化を主目的とするが、まだ独立系統を作るほど同種研究が集まっていない手法を一時的に収録する。
-- [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — 15本
-  - KV cacheをCPU DRAM・別GPUのHBM・storageへ置く、attentionをKVの近くへ移す、転送するKVの一部を再計算する、SSD I/O制御をGPU側へ移す、複数SSDの帯域を束ねる、またはHBM/DRAM/SSDをattention-awareに協調管理することで、local HBM使用量とdata transfer / I/O待ちを減らす。
+- [KV Cache Offload / Recomputation](10-kv-cache-offload-recomputation/) — 16本
+  - KV cacheをCPU DRAM・別GPUのHBM・storageへ置く、CPU上のKVから必要subsetだけを検索する、attentionをKVの近くへ移す、転送するKVの一部を再計算する、SSD I/O制御をGPU側へ移す、複数SSDの帯域を束ねる、またはHBM/DRAM/SSDをattention-awareに協調管理することで、local HBM使用量とdata transfer / I/O待ちを減らす。
 - [LLM Serving / Scheduling / Disaggregation](11-llm-serving-scheduling-disaggregation/) — 24本
   - requestの実行順、batchの組み方、prefill / decodeへのGPU配分、共有prefixやconversation KVの再利用、requestのGPU間移動、GPU数の増減などを調整し、latency・SLOを満たせるrequest数・cost・公平性・利用者の待ち時間を改善する。
