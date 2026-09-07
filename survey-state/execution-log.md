@@ -2,15 +2,24 @@
 
 直近24時間の客観的な実行記録を保持する。
 
-## 2026-09-08 02:02 JST
+## 2026-09-08 02:02–02:05 JST
 - mode: `hourly-inference`
-- status: `running`
-- research: assigned 5 / completed 0 / carried_over 5
-- audit: assigned 5 / completed 0 / carried_over 5
+- status: `partial`
+- research: assigned 5 / completed 5 / added 5 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 0
+- audit: assigned 5 / completed 1 / changed 1 / no_change 0 / carried_over 4
+- pending_research: 0
+- pending_audit: 4
 - batch size: research 5 / audit 5
+- full_batch_streak: 0
 - discovery: `arxiv-search`
-- validation: pending
-- checkpoint commit: `8a270ac`
+- validation: pass for completed research/index changes; unfinished audits retained in queue
+- rejected ledger: added 0 / updated 0
+- added: `SpecInfer`, `Medusa`, `EAGLE`, `Lookahead Decoding`, `REST`
+- lineage update: `Speculative Decoding × MoE` を一般のspeculative decodingも含む `Speculative Decoding / MoE` へ拡張。6本→11本。
+- audited: `Splitwise` — ISCA 2024書誌、公式artifact、evaluation typeを確認しcanonical/audit metadataを追加。
+- carried over audit: `DistServe`, `Sarathi-Serve`, `SGLang`, `Pensieve`
+- validation detail: Inference 144本 / Training 19本 / total 163本へ同期。新規5ページはcanonical_id / last_verifiedを保持し、lineage READMEは全entryに一言説明付き。Training配下は変更なし。
+- commits: `8a270ac`, `8c93ebb`, `4daab3c`, `23351d1`, `4c735ea`, `0a6dfe0`, `e9cf37c`, `7c1f59c`, `d92147c`, `0fdf48c`, `6d588e2`, `338c1b6`, `055cc99`
 
 ## 2026-09-08 00:57 JST
 - mode: `hourly-inference`
