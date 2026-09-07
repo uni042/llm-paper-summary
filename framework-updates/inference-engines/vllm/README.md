@@ -2,6 +2,17 @@
 
 vLLMの主要な機能・性能更新を継続的に記録する集約ページ。KV cacheの階層化、prefill / decode分離、MoE、投機的デコード（speculative decoding）、weight offload、GPU kernel改善など、実際のserving性能や必要memoryへ影響する更新を扱う。
 
+## 現在できること
+
+- continuous batchingとpaged KV cacheを使い、多数requestを同時に高throughputでservingできる。
+- KV cacheをGPU HBMだけでなくCPU DRAM、remote memory、object storage、diskなど複数階層へ置ける。
+- prefillとdecodeを別GPU群へ分けるP/D分離、さらにMoE expert処理も分離する構成を扱える。
+- tensor / pipeline / data / expert parallelism、MoE、低bit weight / activation / KV、投機的デコードを組み合わせられる。
+- weight offloadや外部KV connectorを使い、単一GPU memoryを超えるmodel・context・request数へ対応できる。
+- OpenAI互換serving基盤として、単一GPUから分散clusterまで同じruntime系で構成できる。
+
+以下の更新履歴は、これらの能力のうち**KV階層化、分離serving、投機的デコード、MoE通信、offload、GPU kernel fusion**がどう拡張されたかを記録している。
+
 ## 2026-09-05
 
 - **手動activation quantization fusionの適用開始 — merged 2026-09-03**: これまでcompiler passが後から検出して融合していた「活性化関数の実行 → FP8量子化」を、model実装側から明示的に1つのfused kernelへ流せる経路を追加した。
