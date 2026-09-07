@@ -4,13 +4,17 @@ Megatron-LM repository全体の主要なsystem更新を継続的に記録する�
 
 ## 現在できること
 
-- Megatron-Coreを基盤として、巨大なGPT系dense TransformerとMoEのpretraining / fine-tuningをmulti-GPU / multi-nodeで実行できる。
-- tensor / pipeline / data / context / expert parallelismを組み合わせ、model shapeとcluster topologyに合わせて並列構成を作れる。
-- distributed optimizer、activation checkpointing / recomputation、CPU offload等でtraining stateとactivationのGPU memoryを削減できる。
-- FP8等の低精度学習、fused Transformer / MoE kernel、communication overlapを利用し、演算量とGPU間待ち時間を削減できる。
-- checkpoint save / load、distributed checkpoint、model state変換を使い、大規模training jobの再開・移行を行える。
+- **大規模pretraining / fine-tuning**: Megatron-Coreを基盤に、巨大なdense TransformerとMoEをmulti-GPU / multi-nodeで事前学習・追加学習できる。model sizeだけでなく長sequenceや多数expertにも対応する。
+- **多次元parallelism**: tensor / pipeline / data / context / expert parallelismを組み合わせ、modelのどの軸をどのGPUへ分けるかをcluster topologyに合わせて設計できる。
+- **学習stateの分割とoffload**: distributed optimizer、FSDP系sharding、CPU offloadでparameter・gradient・optimizer stateのGPU常駐量を減らせる。optimizer stateやmaster weightをCPU正本として保持する構成も取れる。
+- **activation memory削減**: activation checkpointing / recomputationでforward中間値を保持せずbackward時に再計算し、長sequence trainingのpeak VRAMを削減できる。layer / segment単位で適用範囲も調整できる。
+- **MoE training**: expert parallelism、token dispatcher、DeepEP / NCCL系通信、grouped-GEMM、shared expertを組み合わせ、routing後のtoken交換とexpert計算を最適化できる。
+- **通信と計算のoverlap**: parameter gather、gradient reduction、pipeline通信、MoE All-to-All等をcomputeと重ね、network待ちを隠せる。
+- **低精度training**: FP8 / FP4等でmatrix計算・parameter通信・checkpoint loadを低bit化し、HBM trafficとnetwork transferを削減できる。
+- **CUDA Graph / fused kernel**: 繰り返すtraining stepやMoE MLPをGraph / fused kernelへまとめ、CPU launchと中間tensor書き戻しを減らせる。
+- **distributed checkpoint / resume**: 大規模jobのcheckpoint save / load、shard変換、再開を行え、cluster構成変更を伴う運用にも対応する。
 
-詳細なkernel / parallelism機能はMegatron-Core側に実装されることが多いため、このページでは**Megatron-LM全体として利用できるtraining能力と、Core統合・offload・recomputeの大きな変化**を中心に追う。
+このページでは、Megatron-Core単体のkernel詳細よりも、**Megatron-LM全体としてtraining workflowで何が使えるか、Core側の新機能が上位trainingへどう反映されるか**を追う。
 
 ## 初期収録期間
 
