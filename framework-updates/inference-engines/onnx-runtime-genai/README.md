@@ -4,14 +4,19 @@ ONNX Runtime GenAIの主要な機能・性能更新を継続的に記録する�
 
 ## 現在できること
 
-- ONNX Runtime上でdecoder-only LLM等のautoregressive generationを行い、sampling、beam search、KV cache管理をruntime APIから制御できる。
-- CUDA、DirectML、QNN、CPU等のExecution Providerを使い、同じ上位APIから異なるhardware backendへ展開できる。
-- 同じlogical modelにhardware別build variantを持たせ、実行deviceに応じて適切なgraph / precisionを選択できる。
-- INT8等の低bit modelをbuildし、weight memoryとstorage量を削減できる。
-- 対応backendではCPUとacceleratorが共有するmemoryへKVを置き、不要なhost-device copyを避けられる。
-- C++ / Python等からgeneration loopへ組み込み、desktop / edge application向けのlocal inference runtimeとして利用できる。
+- **ONNX graph上でautoregressive generation**: decoder-only LLM等をONNX Runtime上で実行し、token生成loop、KV cache更新、samplingをruntime APIから制御できる。通常のONNX graph inferenceだけでなく「1 token生成→cache更新→次token」の状態fulな生成処理をまとめて扱う。
+- **複数Execution Providerへの展開**: CUDA、DirectML、QNN、CPU等のExecution Providerを使い、同じ上位APIからNVIDIA GPU、Windows GPU、Qualcomm accelerator、CPU等へmodelを展開できる。hardwareごとにapplication code全体を書き直す必要を減らす。
+- **hardware別model variant**: 同じlogical modelについて、backendやprecisionの異なる複数buildを1 packageへ持たせ、実行deviceに応じて適切なvariantを選べる。deviceごとに別model directoryを配布・管理する負担を減らせる。
+- **generation制御**: greedy / sampling / beam search等のdecoding設定、stop condition、sequence stateをruntime APIから制御できる。application側でtoken loopを完全に自前実装せずに済む。
+- **KV cache管理**: 過去tokenのK/Vをruntimeが保持し、decodeごとにprompt全体を再計算せず次tokenだけ処理できる。backendによってはcache memoryの配置方法まで最適化できる。
+- **zero-copy KV**: 対応deviceではCPUとacceleratorが同じbacking memoryを参照するshared allocationへKVを置き、host bufferとdevice buffer間のcopyを減らせる。特にtokenごとにread / writeするKVでcopy削減がlatencyへ効く。
+- **低bit model build**: INT8等へmodelを変換し、weight memoryとstorage量を削減できる。model packageのdownload size、device memory、weight bandwidthを減らせる一方、精度とbackend kernel対応を確認する必要がある。
+- **backend別graph最適化**: Execution Providerに応じてoperator fusion、precision、memory allocationを変えられる。上位modelは同じでも、実際のgraph / kernelをhardwareへ合わせてbuildできる。
+- **C++ / Python applicationへの組込み**: desktop、edge、native applicationからgeneration APIを呼び出せる。server専用runtimeではなく、application process内でlocal inferenceする用途にも向く。
+- **edge / client deployment**: DirectMLやQNN等を使い、datacenter GPUだけでなくWindows PCやQualcomm系deviceへ生成modelを持ち込める。model sizeとdevice memoryが制約になるため量子化との組合せが重要。
+- **portable model packageの位置づけ**: 高throughput multi-tenant servingのschedulerより、ONNX Runtime ecosystemを使って同じapplication / model familyを複数hardwareへ展開することに強みがある。
 
-以下の更新履歴は、**hardware variant、zero-copy KV、低bit model build**など、device展開とmemory効率を変える主要機能だけを記録している。
+以下の更新履歴は、対応model追加ではなく、**同じmodelをどれだけ多様なdeviceへ持ち運べるか、KVやweightのcopy / memory量をどこまで減らせるか、hardwareごとのbuild管理をどこまで簡素化できるか**を変える主要機能だけを記録する。
 
 ## 初期収録期間
 
