@@ -4,17 +4,31 @@ Megatron-LM repository全体の主要なsystem更新を継続的に記録する�
 
 ## 現在できること
 
-- **大規模pretraining / fine-tuning**: Megatron-Coreを基盤に、巨大なdense TransformerとMoEをmulti-GPU / multi-nodeで事前学習・追加学習できる。model sizeだけでなく長sequenceや多数expertにも対応する。
-- **多次元parallelism**: tensor / pipeline / data / context / expert parallelismを組み合わせ、modelのどの軸をどのGPUへ分けるかをcluster topologyに合わせて設計できる。
-- **学習stateの分割とoffload**: distributed optimizer、FSDP系sharding、CPU offloadでparameter・gradient・optimizer stateのGPU常駐量を減らせる。optimizer stateやmaster weightをCPU正本として保持する構成も取れる。
-- **activation memory削減**: activation checkpointing / recomputationでforward中間値を保持せずbackward時に再計算し、長sequence trainingのpeak VRAMを削減できる。layer / segment単位で適用範囲も調整できる。
-- **MoE training**: expert parallelism、token dispatcher、DeepEP / NCCL系通信、grouped-GEMM、shared expertを組み合わせ、routing後のtoken交換とexpert計算を最適化できる。
-- **通信と計算のoverlap**: parameter gather、gradient reduction、pipeline通信、MoE All-to-All等をcomputeと重ね、network待ちを隠せる。
-- **低精度training**: FP8 / FP4等でmatrix計算・parameter通信・checkpoint loadを低bit化し、HBM trafficとnetwork transferを削減できる。
-- **CUDA Graph / fused kernel**: 繰り返すtraining stepやMoE MLPをGraph / fused kernelへまとめ、CPU launchと中間tensor書き戻しを減らせる。
-- **distributed checkpoint / resume**: 大規模jobのcheckpoint save / load、shard変換、再開を行え、cluster構成変更を伴う運用にも対応する。
+- **大規模LLM pretraining**: Megatron-Coreを基盤に、数十億〜さらに大きいparameter規模のdense TransformerやMoEをmulti-GPU / multi-nodeで事前学習できる。model definitionだけでなくdata loading、optimizer、parallelism、checkpointまでtraining job全体を構成する上位stack。
+- **fine-tuning / continued pretraining**: pretrained checkpointから追加学習し、domain adaptationやinstruction tuning等へつなげられる。大規模pretrainingと同じparallelism / memory機能を利用できるため、modelが単一GPUに収まらない場合でもfine-tuningできる。
+- **tensor parallelism**: 1 layer内のmatrixを複数GPUへ分割し、hidden size / FFNが大きいmodelを学習できる。layerごとにcollective通信が必要になるため、node内の高速interconnectを活用する構成に向く。
+- **pipeline parallelism**: layer群を複数stageへ分け、異なるmicrobatchをpipelineへ流せる。model depthを複数GPUへ分散しつつ、microbatch schedulingでpipeline bubbleを減らす。
+- **data parallelism / FSDP系sharding**: batchをGPU間へ分けると同時に、parameter・gradient・optimizer stateのshardingを利用できる。全GPUがmodel stateを完全複製するmemory costを減らせる。
+- **context parallelism**: 長いsequenceを複数GPUへ分け、activationやattentionの1 GPU当たりmemoryを減らせる。長context pretrainingでsequence lengthがmemory制約になる場合に使う。
+- **expert parallelism**: MoE expertをGPU間へ分散し、token routing後に必要expertだけ計算する。expert数を増やして総parameter数を大きくしつつ、token当たりactive computeを抑えるMoE学習をclusterへ展開できる。
+- **複数parallelismの同時利用**: tensor / pipeline / data / context / expert parallelismを組み合わせ、node内高速linkとnode間networkに合わせてparallel groupを作れる。model size、sequence、expert数のどこが主制約かに応じて構成を変えられる。
+- **distributed optimizer**: optimizer stateやgradientをdata-parallel rank間へshardし、Adam等が持つ大きなstateのVRAM重複を減らせる。大規模modelではparameter本体以上にoptimizer stateがmemoryを占めるため重要。
+- **activation checkpointing / recomputation**: forward中間値をすべて保存せずbackwardで再計算し、activation memoryを削減できる。layer / segment単位で再計算範囲を調整し、追加computeとVRAM節約のtrade-offを選べる。
+- **activation CPU offload**: activationの一部をCPU DRAMへ移し、backward前にGPUへ戻す構成を取れる。長sequence時のpeak VRAMをさらに下げられるが、host-device bandwidthがstep timeへ効く。
+- **optimizer-state / master-weight CPU offload**: optimizer stateと高精度master weightをCPU pinned memoryに正本として保持し、updateするchunkだけGPUへ戻せる。GPUへ全optimizer stateを常駐させずに済む。
+- **MoE token dispatch**: routingされたtokenをexpertが置かれたGPUへ送って戻すAll-to-All通信をDeepEP / NCCL系backendで実行できる。通信とexpert計算をoverlapし、network待ちを隠すこともできる。
+- **MoE load balancing / shared expert**: expertへのtoken偏りを減らすrouter調整や、全tokenが通るshared expertを組み合わせられる。特定expertの混雑によるstragglerを減らしながらmodel capacityを利用する。
+- **grouped / fused MoE kernel**: 複数expertのGEMM、activation、quantization等をまとめ、小さなkernelをexpertごとに起動するoverheadと中間HBM trafficを減らせる。
+- **communication overlap**: parameter gather、gradient reduce-scatter、pipeline send / recv、MoE All-to-All等をcomputeと重ね、GPUがnetwork完了だけを待つ時間を減らせる。
+- **FP8 / FP4等の低精度training**: matrix計算、parameter / activation、場合によっては通信を低bit化し、Tensor Core throughput、HBM使用量、network trafficを削減できる。scale管理と収束精度の検証が必要。
+- **低bit parameter gather**: sharded parameterをGPU間で集める際にMXFP8 / NVFP4等へ圧縮し、通信量を減らせる。compute precisionとcommunication precisionを分けて最適化する。
+- **CUDA Graph**: 繰り返すtraining step / model区間をcaptureし、Python / CPUが毎step大量のGPU kernelをlaunchするoverheadを減らせる。固定bufferやoffload pathとの互換性が実用範囲を左右する。
+- **distributed checkpoint**: model / optimizerをrankごとのshardとして保存・復元し、巨大stateを1 processへ集約せずcheckpointできる。job再開やparallelism構成の変更へ対応するための変換も行える。
+- **quantized checkpointのstreaming load**: checkpoint全体を一度CPU RAMへ展開せず、blockごとに読み込んでtarget precision / GPUへ送れる。巨大modelのstartup時host memory peakを抑えられる。
+- **training recipe / data pipeline**: Megatron-Coreの低level building blockに加え、実際のpretraining jobとしてmodel config、dataset、optimizer、scheduler、checkpoint cadence等をまとめて実行できる。
+- **性能計測と大規模job運用**: throughput、loss、memory、parallelism設定を大規模training jobとして管理し、研究用kernel単体ではなくend-to-end pretraining systemとして使える。
 
-このページでは、Megatron-Core単体のkernel詳細よりも、**Megatron-LM全体としてtraining workflowで何が使えるか、Core側の新機能が上位trainingへどう反映されるか**を追う。
+このページでは、Megatron-Core単体のkernel詳細よりも、**Megatron-LM全体としてtraining workflowで何が使えるか、Core側の新機能が実際のpretraining / fine-tuningへどう組み込まれるか**を追う。
 
 ## 初期収録期間
 
