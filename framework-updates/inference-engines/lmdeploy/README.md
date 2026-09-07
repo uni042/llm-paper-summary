@@ -2,6 +2,17 @@
 
 LMDeployの主要な機能・性能更新を継続的に記録する集約ページ。KV cache管理、prefix cache、recurrent / SSM state、CUDA Graph、MoE、prefill/decode分離、外部KV connectorなどを扱う。
 
+## 現在できること
+
+- TurboMind / PyTorch系backendでLLMをservingし、continuous batchingとpaged KV cacheで複数requestを処理できる。
+- tensor parallelism、data parallelism、MoE expert parallelismを使い、複数GPUへmodelとrequestを分散できる。
+- prefix cacheで共通promptのKVを再利用し、SSM / recurrent modelではattention KV以外のstateもcache objectとして管理できる。
+- prefill / decode分離と外部KV connectorを使い、別worker間でKVを共有・転送できる。
+- FP8 / INT4等の量子化、speculative decoding、CUDA Graphを利用し、memory trafficとdecode launch overheadを抑えられる。
+- OpenAI互換serverとして利用でき、単一GPUから分散servingまで同じruntime系で構成できる。
+
+以下の更新履歴は、**cache管理の再設計、SSM state再利用、MoE通信、P/D分離、外部KV連携、低精度kernel**がどう拡張されたかを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
