@@ -2,21 +2,23 @@
 
 直近24時間の客観的な実行記録を保持する。
 
-## 2026-09-08 07:56–08:02 JST
+## 2026-09-08 07:56–08:07 JST
 - planned slot: `manual hourly test (07:00 hour)`
-- run_id: `manual-medium-20260908T075610+0900`
+- run_id: `manual-20260908T075610+0900`
 - workflow_version: `2`
 - mode: `hourly-inference`
 - status: `completed`
 - research: assigned 2 / completed 2 / added 2 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 0
 - audit: assigned 2 / completed 2 / changed 2 / no_change 0 / carried_over 0
-- pending_research at end: 0
+- pending_research at end: 2（独立新着確認で次回候補へ追加: HeadWiseKV, SwiftCache）
 - pending_audit at end: 1（今回未着手の既存queue: DeepSpeed-FastGen）
 - batch size: research 2 / audit 2
 - full_batch_streak: 0（未着手queueが残るため増加条件外）
 - discovery: `arxiv-search` + independent new-source quick scan
+- newly queued after identity check: `HeadWiseKV` (arXiv:2609.02029), `SwiftCache` (arXiv:2606.16135)
 - validation: pass for identities/counts/README/audit metadata — identity registry 152 active / Inference 152 / Training 19 / total 171。新規2 IDは各1 active lineage、Serving 35本、一言説明付き。Training配下変更なし。
 - rejected ledger: added 0 / updated 0
+- result commits: `dfcfe937`, `95196398`, `b73bfe48`, `7a75357c`, `fd69d347`, `52a92598`, `ef4532ae`, `63430eaf`, `50668a90`, `0c0fd17c`
 - added: `Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice` (arXiv:2606.22327), `Online Linear Programming for Multi-Objective Routing in LLM Serving` (arXiv:2607.03948)
 - audited: `SpotServe` — ASPLOS 2024、公式artifact、主要評価値、canonical/audit metadataを確認。`ServerlessLLM` — OSDI 2024最終版、著者所属、公式code、canonical/audit metadataを確認。
 - save note: content processing completed, but this manual test used multiple Contents API commits instead of the runbook-preferred Git Data API batched result commits. A temporary test marker was created and immediately removed before survey data changes; no final repository file remains from it.
