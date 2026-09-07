@@ -4,14 +4,16 @@ DeepSpeedの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- ZeROでparameter、gradient、optimizer stateをGPU間へ分割し、data parallel trainingのGPU memory複製を大幅に減らせる。
-- ZeRO-Offload / ZeRO-Infinity系のCPU / NVMe offloadでoptimizer state、parameter等をGPU外へ置き、単一nodeのVRAM総量を超えるmodelを学習できる。
-- tensor / pipeline / data / expert parallelismを組み合わせ、dense TransformerとMoEをmulti-GPU / multi-nodeで学習できる。
-- activation checkpointing / offload、gradient accumulation、mixed precision、communication overlapを使い、memoryと通信待ちを調整できる。
-- MoEではexpert parallelism、grouped-GEMM、routing / communication最適化を使い、多数expertの計算とGPU間token交換を効率化できる。
-- HybridEngineでtrainingとinferenceを切り替えるRLHF / rollout workloadを扱い、同じmodel stateを学習と生成で共有できる。
+- **ZeROによる学習state分割**: data parallel replicaごとにparameter・gradient・optimizer stateを丸ごと複製せず、ZeROのstageに応じてGPU間へ分割保持できる。optimizer stateやparameter複製を減らし、同じGPU枚数でより大きいmodel / batchを学習できる。
+- **CPU / NVMe offload**: ZeRO-Offload / ZeRO-Infinity系ではparameterやoptimizer state等をCPU DRAM、さらにNVMeへ置ける。VRAM容量をhost memory / storage容量で補える一方、PCIeとstorage I/Oを隠すためprefetch・buffer再利用・非同期転送を使う。
+- **複数parallelismの組合せ**: data / tensor / pipeline / expert parallelismを組み合わせ、dense TransformerとMoEをmulti-GPU / multi-nodeへ配置できる。model部分ごとに適したparallel groupを使い分けられる。
+- **MoE training**: expert parallelismでexpertをGPU間へ分散し、routingされたtokenだけを対応expertへ送る。grouped-GEMMや通信最適化で、多数の小さいexpert計算とAll-to-All通信のoverheadを減らせる。
+- **activation memoryの削減**: activation checkpointing / recomputationでforward中間値を捨ててbackward時に再計算したり、activationをCPU DRAMへ非同期offloadしたりできる。追加計算・PCIe転送と引き換えにpeak VRAMを下げる。
+- **mixed precisionとkernel最適化**: FP16 / BF16等のmixed precision、fused optimizer / activation kernel、Triton kernel、CUDA Graphを使い、memory traffic・kernel launch・演算costを削減できる。
+- **RLHF / rollout workload**: HybridEngineでtrainingとgenerationを切り替え、同じmodel stateを学習側と推論側で使える。「生成→評価→更新」を反復する処理でmodelの再配置costを抑えられる。
+- **既存PyTorch trainingへの統合**: optimizer、distributed launch、checkpoint等をengine側でまとめて扱え、model実装を全面的に専用runtimeへ移さず大規模学習機能を導入できる。
 
-以下の更新履歴は、主に**expert parallelism自動化、MoE kernel、gradient / activation offload、NVMe buffer、RLHF向けCUDA Graph**の拡張を記録している。
+以下の更新履歴は、**GPU memoryをどこまでCPU/NVMeへ逃がせるか、通信と計算をどこまで重ねられるか、MoEとRLHFの実行overheadをどこまで削減できるか**を追う。
 
 ## 初期収録期間
 
