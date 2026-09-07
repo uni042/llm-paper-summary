@@ -4,14 +4,18 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 ## 現在できること
 
-- continuous batchingとpaged KV cacheを使い、多数requestを同時に高throughputでservingできる。
-- KV cacheをGPU HBMだけでなくCPU DRAM、remote memory、object storage、diskなど複数階層へ置ける。
-- prefillとdecodeを別GPU群へ分けるP/D分離、さらにMoE expert処理も分離する構成を扱える。
-- tensor / pipeline / data / expert parallelism、MoE、低bit weight / activation / KV、投機的デコードを組み合わせられる。
-- weight offloadや外部KV connectorを使い、単一GPU memoryを超えるmodel・context・request数へ対応できる。
-- OpenAI互換serving基盤として、単一GPUから分散clusterまで同じruntime系で構成できる。
+- **高throughput serving**: continuous batchingでrequestを生成途中でもbatchへ出し入れし、paged KV cacheでrequestごとのKVをpage単位に割り当てる。固定batchの終了待ちとKVの過剰予約を減らし、多数requestを同時処理できる。
+- **階層KV cache**: GPU HBMだけでなくCPU DRAM、remote memory、object storage、disk等をKVの下位tierとして使える。GPUに全contextを置かず、再利用価値の高いKVだけを高速tierへ残す構成を取れる。
+- **prefix / context再利用**: 同じprefixを持つrequest間で既計算KVを再利用し、長いsystem promptやagent履歴のprefillを繰り返さずに済む。
+- **prefill / decode分離**: 長promptを処理するprefill workerと、1 tokenずつ生成するdecode workerを別GPU群へ分け、KVをworker間で転送できる。prefillとdecodeの異なるcompute / memory特性に合わせてclusterを構成できる。
+- **多次元parallelism**: tensor / pipeline / data / expert parallelismを組み合わせ、dense modelとMoEをmulti-GPU / multi-nodeへ分散できる。MoEではtoken dispatch / combine通信を専用backendで高速化できる。
+- **量子化**: weight、activation、KVをFP8 / INT8 / INT4 / FP4等へ低bit化し、model footprintとHBM trafficを削減できる。hardwareとmodelに応じて複数quantization backendを選べる。
+- **投機的デコード**: draft model、MTP等で候補tokenを先に作り、target modelの1回のverifyで複数tokenを確定する。受理率に応じてdraft量を動的に変える方式も使える。
+- **weight offload / external memory連携**: model weightやcacheの一部をGPU外へ置き、単一GPU memoryを超えるmodel・context・同時request数へ対応できる。
+- **OpenAI互換APIと分散運用**: 単一GPUのlocal serverから複数nodeのclusterまで同じserving stackで構成でき、OpenAI互換endpointとしてapplicationから利用できる。
+- **GPU実行最適化**: CUDA Graph、FlashAttention系kernel、fused activation / quantization、MLA専用kernel等でdecode時のlaunch overheadとHBM trafficを削減できる。
 
-以下の更新履歴は、これらの能力のうち**KV階層化、分離serving、投機的デコード、MoE通信、offload、GPU kernel fusion**がどう拡張されたかを記録している。
+以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
 ## 2026-09-05
 
