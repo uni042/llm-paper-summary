@@ -2,6 +2,17 @@
 
 ONNX Runtime GenAIの主要な機能・性能更新を継続的に記録する集約ページ。hardware別model variant、Execution Provider、KV cache共有memory、低bit model builderなど、同じmodelを複数deviceへ展開しやすくする変更を扱う。
 
+## 現在できること
+
+- ONNX Runtime上でdecoder-only LLM等のautoregressive generationを行い、sampling、beam search、KV cache管理をruntime APIから制御できる。
+- CUDA、DirectML、QNN、CPU等のExecution Providerを使い、同じ上位APIから異なるhardware backendへ展開できる。
+- 同じlogical modelにhardware別build variantを持たせ、実行deviceに応じて適切なgraph / precisionを選択できる。
+- INT8等の低bit modelをbuildし、weight memoryとstorage量を削減できる。
+- 対応backendではCPUとacceleratorが共有するmemoryへKVを置き、不要なhost-device copyを避けられる。
+- C++ / Python等からgeneration loopへ組み込み、desktop / edge application向けのlocal inference runtimeとして利用できる。
+
+以下の更新履歴は、**hardware variant、zero-copy KV、低bit model build**など、device展開とmemory効率を変える主要機能だけを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
