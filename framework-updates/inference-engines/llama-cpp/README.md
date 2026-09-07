@@ -4,16 +4,26 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- **CPU・GPUをまたぐローカル推論**: CPUのみ、GPUのみ、またはCPU+GPU混在でmodelを実行できる。全layerをGPUへ載せる必要はなく、一部layerやFFNをCPU DRAMへ置いて、VRAM容量を超えるmodelも実行できる。代わりにCPU memory帯域とPCIe転送が性能へ効く。
-- **広範なweight量子化**: GGUFと各種低bit量子化を使い、model weightの保存量・RAM/VRAM使用量・memory bandwidthを削減できる。CPU向けとGPU向けの専用kernelを使い、単なる保存圧縮ではなく実行時の低bit計算まで行う。
-- **複数GPU配置**: tensor / pipeline型の分割でmodelを複数GPUへ配置できる。GPUごとのVRAM容量に応じてlayerやtensorを分担し、単一GPUに収まらないmodelを複数GPUで実行できる。
-- **KV cache管理**: KV cacheの型・量子化・保持方法を調整し、長context時のmemory量を削減できる。recurrent / hybrid modelではKV以外のstateもcacheとして扱い、次tokenへ状態を持ち越せる。
-- **MoE実行とexpert offload**: routed expert計算を専用GPU kernelでまとめて実行し、一部expertをCPUへ退避する構成も取れる。巨大MoEではVRAM節約とhost memory帯域のtrade-offを調整できる。
-- **投機的デコードとMTP**: draft model、n-gram、MTP等で複数token候補を先に作り、target modelでまとめて検証できる。target forward回数を減らしてdecodeを高速化する。
-- **GPU launch overhead削減**: CUDA Graphやkernel fusionで、1 tokenごとに繰り返す小kernelのCPU launch回数と中間tensorのVRAM書き戻しを減らせる。
-- **server / embedding / multimodal利用**: CLIだけでなくserverとしてmodelを常駐させ、chat completion、embedding、画像入力対応model等をローカルAPIとして提供できる。
+- **CPU中心のローカル推論**: x86 / ARM CPU上でGGUF modelを実行でき、GPUを持たないPCや大容量RAMを優先する環境でもLLMを動かせる。低bit weightとCPU向けSIMD / matrix kernelを使い、memory bandwidth律速になりやすいdecodeをできるだけ効率化する。
+- **GPU推論とCPU/GPU混在配置**: CUDA、Metal等のbackendで一部または全部のlayerをGPUへ載せられる。全layerをVRAMへ置けない場合は残りをCPU DRAMへ置き、VRAM容量とCPU RAM容量を合わせてmodelを実行できる。
+- **細粒度weight offload**: layer単位だけでなくFFN等の特定部分をCPU側へ置ける構成があり、attentionはGPU、容量の大きいFFNはCPUといった配置を取れる。VRAM節約とPCIe / CPU memory帯域のtrade-offを細かく調整できる。
+- **GGUFと広範なweight量子化**: 2〜8 bit級を含む多数の量子化形式を使い、model file、RAM / VRAM使用量、weight読出し量を削減できる。単なるstorage圧縮ではなく、量子化weightを直接扱うCPU / GPU kernelを持つためdecodeのmemory traffic削減にもつながる。
+- **複数GPUへのmodel分割**: modelをtensor / pipeline型に複数GPUへ配置し、単一GPUに収まらないmodelを実行できる。GPUごとのVRAM量に合わせてsplit比率を変えられ、multi-GPU streamを重ねて通信・計算の直列待ちを減らす方向の最適化も利用できる。
+- **KV cacheの型・精度・容量制御**: K/Vを低bit化し、長contextで線形に増えるcache memoryを削減できる。cache領域を起動時のmemory planningへ含め、model load後にKV確保でVRAM不足になる問題を避けやすくする。
+- **recurrent / hybrid state管理**: TransformerのKVだけでなく、GDN等のrecurrent architectureがtoken間で持ち越すstateもruntime cacheとして管理できる。MTPや投機的デコードで候補を巻き戻す際にもstate整合性が必要になる。
+- **MoE実行**: routingされたexpertだけを計算し、Top-k選択、expert projection、weighted reduction等を専用kernelで処理できる。細かいMoE処理をfusionし、中間tensorのVRAM書き戻しとkernel launchを減らせる。
+- **MoE expertのCPU offload**: 全expertをGPUへ常駐させず、一部をCPU RAMへ置くことで巨大MoEを少ないVRAMで実行できる。tokenごとに選ばれたexpertをCPU側から読むためhost memory bandwidthが律速になりやすく、hot expertだけGPUへcacheする方式も検討されている。
+- **投機的デコード**: draft model、n-gram、DSpark、MTP等で複数token候補を先に作り、target modelでまとめて検証できる。候補受理率が高いほどtarget forward回数を減らせる。
+- **MTP対応**: model自身の複数token予測headをdraftとして使い、別draft modelをloadせず投機的デコードできる構成を取れる。追加model memoryを抑えつつdecodeを高速化できる可能性がある。
+- **CUDA Graph / kernel fusion**: decodeで繰り返すkernel列をGraphとして再利用し、CPU launch overheadを下げられる。MoEやactivation処理をfused kernelへまとめ、中間memory trafficも減らせる。
+- **非同期copy / concurrent stream**: CPU→GPU copyやmulti-GPU処理を別streamへ載せ、copy・通信・計算を可能な範囲で同時進行できる。GPUがCPU側のcopy完了を待つidle時間を減らす。
+- **server運用**: modelを常駐させてHTTP serverとして提供し、chat completion、text generation、embedding等をlocal / LAN applicationから利用できる。単発CLI実行だけでなく長時間常駐runtimeとして使える。
+- **embedding / reranking等の非生成用途**: generationだけでなくembeddingやmodelによってはreranking系のforwardにも使え、RAG pipelineのlocal backendとして利用できる。
+- **multimodal model**: 対応modelでは画像入力等をtext promptと組み合わせて処理できる。vision encoderとLLM部分のmemory配置が異なるため、CPU/GPU splitの調整が重要になる。
+- **grammar / structured generation**: grammarやschemaに沿って生成token候補を制約し、JSON等の構造化出力を作りやすくできる。自由生成後のparse failureを減らせる。
+- **広いplatform対応**: desktop、server、Apple Silicon、consumer NVIDIA GPU等で同じGGUF ecosystemを利用できるため、model配布形式とlocal inference runtimeの事実上の共通基盤の1つになっている。
 
-以下の更新履歴は、これらの能力について**どこまでGPU外memoryを使えるか、どの計算を低bit化・fusionできるか、decode時のCPU/GPU同期や転送をどれだけ減らせるか**を追う。
+以下の更新履歴は、これらの主要能力について**GPU外memoryをどこまで使えるか、低bit / fusionでmemory trafficをどこまで減らせるか、投機的デコードとmulti-GPUでtokenごとの待ち時間をどこまで削減できるか**を追う。
 
 ## 2026-09-05
 
