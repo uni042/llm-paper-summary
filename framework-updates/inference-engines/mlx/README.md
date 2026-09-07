@@ -2,6 +2,17 @@
 
 MLXの主要な機能・性能更新を継続的に記録する集約ページ。Apple Silicon向けGPU kernel、統一memory（unified memory）、attention、量子化MoE、CPU↔GPU data共有など、MLX基盤そのものの性能改善を扱う。
 
+## 現在できること
+
+- NumPyに近いarray APIとPyTorchに近いmlx.nn / optimizer APIで、Apple Silicon上の機械学習modelを構築・学習・推論できる。
+- automatic differentiation、vectorization、computation graph最適化を組み合わせて使える。
+- lazy executionとdynamic graphを使い、必要になるまでtensorをmaterializeせず実行できる。
+- CPUとGPUが同じ統一memoryを共有するため、device間copyを明示せず同じarrayを両deviceから利用できる。
+- CPU / GPUへoperationを配置し、LLM、画像生成、音声認識など上位libraryの計算backendとして使える。
+- 低bit matrix multiply、attention、MoE等の専用kernelを提供し、LLM runtime側から高速operatorとして利用できる。
+
+以下の更新履歴は、基盤機能のうち**attention、GQA、量子化MoE、zero-copy memory、GPU kernel効率**の改善を記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
