@@ -4,7 +4,7 @@
 
 ## 収録論文
 
-収録論文: 31本。公開日が新しい順。
+収録論文: 33本。公開日が新しい順。
 
 - 2026-09-04 — [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)
   - requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。
@@ -12,6 +12,8 @@
   - speculative decodingで既に計算されるdraft表現へ軽量な回帰headを付けて出力長を予測し、短いrequestの優先処理とdecode instance間の負荷分散へ使うことでtail latencyを下げる。
 - 2026-08-15 — [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md)
   - concurrent prefillとactive decodeからtoken budgetを動的に切り替え、長prefillの効率とdecode interferenceを調整する。
+- 2026-08-06 — [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md)
+  - requestごとの残りlatency budgetを継続推定し、実行順とHBM / CPU DRAM / NVMe間のKV復元・先読み・保持・再計算を同じbudgetで決めて、SLO達成量と長context requestへの公平性を両立する。
 - 2026-07-30 — [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)
   - prefill / decode分離でKV全体を転送せず、使われやすいKVを先送りし、不足分のremote取得とlocal読出しを並列化してstage切替待ちを減らす。
 - 2026-07-18 — [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)
@@ -66,5 +68,7 @@
   - KV cacheを固定長blockへ分けて必要分だけ割り当て・共有し、memory fragmentationと予約浪費を減らして同時request数を増やす。
 - 2023-05-10 — [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)
   - token生成iterationごとにrequestをpreempt / resumeし、短いrequestを優先しながらKVのCPU退避とprefetchで待ち時間を減らす。
+- 2023-02-22 — [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)
+  - modelを複数GPUへ分割して配置し、model間で偏るtrafficを共有GPU poolへ統計的に多重化して、特定modelだけqueueが伸びるのを抑える。
 - 2022-07-11 — [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)
   - output tokenを1つ生成するたびbatchを組み替え、進行位置や長さが異なるrequestを途中から出し入れできるcontinuous batchingの基礎を示す。
