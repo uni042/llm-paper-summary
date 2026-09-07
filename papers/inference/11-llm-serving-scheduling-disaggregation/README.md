@@ -4,18 +4,18 @@
 
 ## 収録論文
 
-収録論文: 27本。公開日が新しい順。
+収録論文: 29本。公開日が新しい順。
 
+- 2026-08-15 — [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md)
+  - concurrent prefillとactive decodeからtoken budgetを動的に切り替え、長prefillの効率とdecode interferenceを調整する。
 - 2026-07-30 — [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)
-  - P/D分離時に全KVを送らず、重要KVをprefill中に先送りし、不足分をlocal読出しと並列remote取得、残りをnetwork idle時に転送してstage切替待ちを減らす。
 - 2026-07-18 — [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)
-  - 未知の出力長に対するKV予約量、GPU並列構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemption costを抑える。
 - 2026-06-23 — [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md)
-  - cold MoE群のFFN weight用GPU poolとKV/attention用GPU poolを分け、変動するKV需要をmodel横断で共有して長contextとtail latencyを改善する。
+- 2026-03-06 — [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md)
+  - hot expertを予測しserverless replicaを動的にscale・配置してexpert stragglerを減らす。
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
 - 2025-01-14 — [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)
 - 2024-08 — [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)
-  - scenario別にP/D groupと比率を調整し、idle prefillへのrerouteと連続bufferを使うKV転送を統合して数万NPU規模のproduction servingを扱う。
 - 2024-08-28 — [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)
 - 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
 - 2024-06-25 — [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)
@@ -37,12 +37,3 @@
 - 2023-09-12 — [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)
 - 2023-05-10 — [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)
 - 2022-07-11 — [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)
-
-## 主な技術の分岐
-
-- continuous batching / preemption: Orca、vLLM、FastServe。
-- chunked prefill: DeepSpeed-FastGen、Sarathi-Serve。
-- prefix-aware routing / cache reuse: SGLang、Preble、Pensieve、CachedAttention、Mooncake。
-- P/D disaggregation: Splitwise、DistServe、Mooncake、P/D-Serve、SmartGen。
-- multi-model memory disaggregation: CrossPoolはcold MoEのFFN weight poolとKV/attention poolを分離する。
-- uncertainty-aware KV reservation: Robust KV Cache Managementは出力長分布のshiftを考慮して予約・routing・GPU構成を共同最適化する。
