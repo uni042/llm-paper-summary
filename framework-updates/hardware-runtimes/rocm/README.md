@@ -4,14 +4,17 @@ ROCm Core SDK、RCCL、AITER、Composable Kernelのうち、LLM推論・学習�
 
 ## 現在できること
 
-- HIPでAMD GPU上のcompute kernelを実行し、PyTorch等の上位frameworkからCUDAに近いprogramming modelでAMD GPUを利用できる。
-- RCCLでAllReduce、AllGather、Reduce-Scatter、All-to-All等のmulti-GPU集合通信を行い、data / tensor / expert parallelismを支えられる。
-- AITERとComposable Kernelでattention、GEMM、MoE、quantization、paged KV等のLLM向け専用kernelを利用できる。
-- FP8 / FP4等の低bit weight・activation・KVを扱い、memory trafficと保存容量を削減できる。
-- HIP Graphで繰り返すkernel列を再利用し、decodeやtraining stepのCPU launch overheadを減らせる。
-- 対応環境ではstorage→GPU direct transferを使い、checkpoint / offload dataをCPU DRAM経由せずGPUへ移すdata pathを構成できる。
+- **AMD GPU上のLLM compute基盤**: HIPでAMD GPU向けkernelを実行し、PyTorch等の上位frameworkからCUDAに近いprogramming modelでGPUを利用できる。
+- **multi-GPU集合通信**: RCCLでAllReduce、AllGather、Reduce-Scatter、All-to-All等を実行し、data / tensor / expert parallelismの通信基盤として使える。
+- **LLM向け専用kernel**: AITER / Composable Kernelでattention、GEMM、MoE、routing、quantization、paged KV等のkernelを利用できる。framework側がこれらをbackendとして呼び出せる。
+- **低bit execution**: FP8 / FP4等のweight・activation・KVを低bitのまま保持・計算し、HBM使用量とmemory trafficを削減できる。
+- **MoE通信とkernel fusion**: routing、quantization、scatter / gather、expert GEMM等をまとめ、MoEで多発する小kernelとGPU間token交換のoverheadを減らせる。
+- **paged / compressed KV**: KVをpage単位で管理し、FP4等へ圧縮して長context・高並列serving時のHBM使用量を抑えられる。
+- **Graph replay**: HIP Graphで繰り返すdecode / training kernel列を再利用し、CPU launch overheadを減らせる。
+- **storage→GPU direct I/O**: 対応環境ではcheckpointやoffload dataをCPU DRAMへ一度copyせずstorageからGPU memoryへ移し、CPU memory bandwidth消費を減らせる。
+- **topology-aware通信**: node内linkとnode間networkを分けて集合通信を組み、multi-node training / servingでnetwork topologyに合わせたdata movementを行える。
 
-以下の更新履歴は、**集合通信、low-bit MoE、paged / compressed KV、sparse attention、Graph実行、storage I/O**の主要改善を記録している。
+以下の更新履歴は、**LLM frameworkがAMD GPUで使える実行primitiveそのものがどう増えたか**を、通信・低bit・MoE・KV・Graph・storage I/Oの観点から追う。
 
 ## 初期収録期間
 
