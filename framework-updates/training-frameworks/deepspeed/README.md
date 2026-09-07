@@ -2,6 +2,17 @@
 
 DeepSpeedの主要な機能・性能更新を継続的に記録する集約ページ。MoE並列、ZeRO、CPU / NVMe offload、activation offload、CUDA Graph、Triton kernelなど、大規模学習のGPU memoryと通信・待ち時間へ影響する変更を扱う。
 
+## 現在できること
+
+- ZeROでparameter、gradient、optimizer stateをGPU間へ分割し、data parallel trainingのGPU memory複製を大幅に減らせる。
+- ZeRO-Offload / ZeRO-Infinity系のCPU / NVMe offloadでoptimizer state、parameter等をGPU外へ置き、単一nodeのVRAM総量を超えるmodelを学習できる。
+- tensor / pipeline / data / expert parallelismを組み合わせ、dense TransformerとMoEをmulti-GPU / multi-nodeで学習できる。
+- activation checkpointing / offload、gradient accumulation、mixed precision、communication overlapを使い、memoryと通信待ちを調整できる。
+- MoEではexpert parallelism、grouped-GEMM、routing / communication最適化を使い、多数expertの計算とGPU間token交換を効率化できる。
+- HybridEngineでtrainingとinferenceを切り替えるRLHF / rollout workloadを扱い、同じmodel stateを学習と生成で共有できる。
+
+以下の更新履歴は、主に**expert parallelism自動化、MoE kernel、gradient / activation offload、NVMe buffer、RLHF向けCUDA Graph**の拡張を記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
