@@ -4,7 +4,7 @@
 
 ## 収録論文
 
-収録論文: 33本。公開日が新しい順。
+収録論文: 35本。公開日が新しい順。
 
 - 2026-09-04 — [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)
   - requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。
@@ -18,8 +18,12 @@
   - prefill / decode分離でKV全体を転送せず、使われやすいKVを先送りし、不足分のremote取得とlocal読出しを並列化してstage切替待ちを減らす。
 - 2026-07-18 — [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)
   - 未知の出力長に対するKV予約量、GPU構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemptionを抑える。
+- 2026-07-04 — [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md)
+  - batch枠とKV cacheをresource budgetとして価格付けし、SLO便益とshadow priceを比較してworker routingを決め、latency・TTFT・throughput・tail SLOを同じonline最適化で調整する。
 - 2026-06-23 — [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md)
   - 低頻度な複数MoEでFFN weight用GPU poolとKV / attention用GPU poolを分離し、model間で変動するKV需要を共有してHBM利用率を上げる。
+- 2026-06-21 — [Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice](2026-2606.22327-geometry-aware-online-scheduling.md)
+  - requestの処理時間だけでなく生成中に増えるKV cacheの占有量を含む時空間volumeで優先順位を決め、memory pressure下の平均・tail latencyを下げる。
 - 2026-03-06 — [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md)
   - hot expertを予測しserverless replicaを動的にscale・配置してexpert stragglerを減らす。
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
