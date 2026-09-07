@@ -4,8 +4,10 @@
 
 ## 収録論文
 
-収録論文: 29本。公開日が新しい順。
+収録論文: 30本。公開日が新しい順。
 
+- 2026-09-04 — [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)
+  - requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。
 - 2026-08-15 — [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md)
   - concurrent prefillとactive decodeからtoken budgetを動的に切り替え、長prefillの効率とdecode interferenceを調整する。
 - 2026-07-30 — [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)
