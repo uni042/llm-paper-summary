@@ -2,6 +2,17 @@
 
 Ollamaの主要な機能・性能更新を継続的に記録する集約ページ。Apple Silicon向け投機的デコード（speculative decoding）、MoE kernel、低bit model、model metadata cache、prefill cacheなど、ローカルLLM実行時の速度・memory・再試行costへ影響する変更を扱う。
 
+## 現在できること
+
+- ローカルLLMをdownload・管理し、CLIまたはHTTP APIからchat / generationを実行できる。
+- OpenAI互換APIを含むserverとして利用し、local applicationやagentからmodelを呼び出せる。
+- tool calling、structured output、embedding、multimodal inputなど、単純なtext completion以外の一般的なLLM application機能を扱える。
+- GGUF等の量子化modelを利用し、CPU / GPUへmodelを配置してconsumer hardware上で推論できる。
+- modelごとのtemplate、system prompt、parameter、adapter等をModelfileとしてまとめ、再現可能なlocal model packageを作れる。
+- 対応modelがMTP等を持つ場合はspeculative decodingを利用し、Apple Silicon等でdecodeを高速化できる。
+
+以下の更新履歴は、model追加そのものではなく、**MTP、MoE / low-bit kernel、request開始overhead、prefill再利用**の主要改善だけを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
