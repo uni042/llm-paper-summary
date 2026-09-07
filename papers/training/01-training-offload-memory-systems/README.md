@@ -16,7 +16,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 ## 収録論文
 
-収録論文: 11本。公開日が新しい順。
+収録論文: 12本。公開日が新しい順。
 
 - 2026-04-29 — [Efficient Training on Multiple Consumer GPUs with RoundPipe](2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md)
   - 複数のconsumer GPUへ担当層を固定せず、空いたGPUへ処理段階を順番に割り当てる。層ごとの実測負荷と転送優先度も調整し、GPUの遊休時間とCPU↔GPU転送待ちを減らす。
@@ -40,3 +40,6 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   - SSDに置いた最適化状態をCPU/GPUへ毎回運ぶ代わりに、演算機能付きSSD側で最適化器更新を実行し、データ移動量を減らす。
 - 2023-10-13 — [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)
   - 各テンソルがいつ使われ、どれくらい長く不要になるかを実行計画から求め、GPUメモリ・CPUメモリ・ストレージのどこへ置くかと移動時刻を自動で決める。
+
+- 2021-11-13 — [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)
+  - parameter・gradient・optimizer stateをGPUだけでなくCPU DRAMとNVMe SSDへ分散し、各nodeのI/Oを並列利用しながら必要なdataを先読みしてGPU計算と重ね、GPU memoryを超える巨大modelを学習できるようにする。
