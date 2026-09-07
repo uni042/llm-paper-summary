@@ -6,8 +6,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 ## 収録論文
 
-収録論文: 12本。公開日が新しい順。
+収録論文: 13本。公開日が新しい順。
 
+- 2026-08-21 — [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)
+  - 数layer先のexpertを予測して先読みし、予測外れを低rank近似、CPU上のexact計算、GPUへのweight transferへ振り分けることでPCIe待ちを減らす。
 - 2026-06-24 — [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)
   - 軽量な予測器で次layerのexpertを必要そうな順に並べ、実際に転送できる時間から先読み数を決めてI/O待ちを減らす。
 - 2026-03-14 — [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md)
