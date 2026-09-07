@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T17:58:37+09:00",
+  "last_run": "2026-09-07T18:57:39+09:00",
   "last_completed_paper": {
-    "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
-    "id": "arXiv:2602.07721; ICML 2026",
-    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md"
+    "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+    "id": "arXiv:2603.27138; DAC 2026",
+    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md"
   },
-  "last_lineage": "inference/kv-cache-offload-recomputation/gpu-native-cpu-kv-retrieval",
+  "last_lineage": "inference/kv-cache-offload-recomputation/gpu-cpu-co-attention-layer-ahead-precomputation",
   "last_morning_report_cutoff": null,
   "recently_checked": [
     {
@@ -45,6 +45,12 @@
       "id": "arXiv:2602.07721; ICML 2026",
       "result": "added",
       "reason": "Keeps full-precision KV in CPU DRAM while GPU-resident fixed-direction and 4-bit key summaries perform drift-robust coarse-to-fine Top-k retrieval; selected KV is fetched on demand through UVA."
+    },
+    {
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "id": "arXiv:2603.27138; DAC 2026",
+      "result": "added",
+      "reason": "Splits sparse attention between GPU-resident and CPU-resident KV blocks, starts CPU attention one Transformer layer early using a predicted next-layer query, and periodically recalls hot blocks asynchronously to hide CPU compute and PCIe latency."
     }
   ]
 }
