@@ -4,14 +4,14 @@ KTransformersの主要な機能・性能更新を継続的に記録する集約�
 
 ## 現在できること
 
-- 1つのmodel operatorをCPUとGPUへ分ける異種実行により、GPUへ収まりきらない巨大LLM / MoEをCPU RAMと併用して推論できる。
-- attentionなどGPU向きの計算をGPUへ残し、大容量を占めるMoE expertをCPUで低bit実行する構成を取れる。
-- operator injectionにより、model全体を作り直さず特定layer / operatorだけをKTransformersのCPU / GPU実装へ差し替えられる。
-- CPU側ではINT4等の低bit expert計算を使い、host memory帯域と容量を抑えながらMoEを実行できる。
-- full-parameter SFTとLoRA SFTにもCPU/GPU異種配置を使い、VRAMだけでは難しい大規模modelの追加学習を行える。
-- FP8 expert weightやCPU activation保持を組み合わせ、training時のhost RAM / VRAM peakを抑えられる。
+- **CPU/GPU異種推論**: 1つのmodelをlayer単位で単純分割するだけでなく、operator単位でCPU実装とGPU実装を組み合わせられる。attentionなどGPU向きの計算をGPUへ残し、大容量を占めるMoE expertをCPUへ置く構成が代表的。
+- **巨大MoEのCPU expert実行**: routed expertをINT4等の低bit表現でCPU RAMへ保持し、CPUの行列演算命令で直接計算できる。全expertをVRAMへ置かないため、GPU容量より大幅に大きいMoEをhost memory容量で支えられる。
+- **operator injectionによる部分置換**: model architecture全体を書き換えず、特定layer / operatorだけをKTransformers実装へ差し替えられる。どの処理をCPUへ移すかをmodelごとに調整し、VRAM節約とCPU↔GPU転送costの均衡を取れる。
+- **低bit weightのままの異種実行**: CPU側expertを毎回BF16等へ完全展開せず、packed INT4やFP8等の表現を保ったまま計算へ流せる経路を持つ。host RAM容量だけでなくCPU memory trafficも抑えられる。
+- **full-parameter / LoRA fine-tuning**: 推論だけでなく、全parameterを更新するSFTとLoRA SFTでもCPU RAMとGPU VRAMを併用できる。巨大modelのweight・activation・学習stateをGPUだけへ常駐させず追加学習できる。
+- **training時のactivation / weight配置制御**: activationの一部をCPU側へ保持したり、FP8 expert weightをblock単位で読み込んだりして、backwardまで含むpeak VRAMとhost RAMを調整できる。代償としてCPU演算性能とhost-device帯域への依存が大きくなる。
 
-以下の更新履歴は、主に**CPU expert実行、低bit表現、異種fine-tuning、activation配置**がどう拡張されたかを記録している。
+以下の更新履歴は、**CPUへ何を置けるか、低bitのままどこまで計算できるか、推論だけでなくtrainingまで異種実行を広げられるか**という機能拡張を中心に追う。
 
 ## 初期収録期間
 
