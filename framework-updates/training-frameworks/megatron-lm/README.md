@@ -2,6 +2,16 @@
 
 Megatron-LM repository全体の主要なsystem更新を継続的に記録する集約ページ。Megatron-Core固有のrelease内容やkernel・parallelism詳細は [Megatron-Core](../megatron-core/) を参照する。
 
+## 現在できること
+
+- Megatron-Coreを基盤として、巨大なGPT系dense TransformerとMoEのpretraining / fine-tuningをmulti-GPU / multi-nodeで実行できる。
+- tensor / pipeline / data / context / expert parallelismを組み合わせ、model shapeとcluster topologyに合わせて並列構成を作れる。
+- distributed optimizer、activation checkpointing / recomputation、CPU offload等でtraining stateとactivationのGPU memoryを削減できる。
+- FP8等の低精度学習、fused Transformer / MoE kernel、communication overlapを利用し、演算量とGPU間待ち時間を削減できる。
+- checkpoint save / load、distributed checkpoint、model state変換を使い、大規模training jobの再開・移行を行える。
+
+詳細なkernel / parallelism機能はMegatron-Core側に実装されることが多いため、このページでは**Megatron-LM全体として利用できるtraining能力と、Core統合・offload・recomputeの大きな変化**を中心に追う。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
