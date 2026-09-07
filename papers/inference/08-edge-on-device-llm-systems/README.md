@@ -4,8 +4,10 @@
 
 ## 収録論文
 
-収録論文: 6本。公開日が新しい順。
+収録論文: 7本。公開日が新しい順。
 
+- 2026-09-02 — [AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference](2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md)
+  - edgeで将来状態を先回りcacheし、speculative reject時のedge-cloud全体rollbackをlocal lookupへ置き換えながらWAN転送量を抑える。
 - 2026-09-01 — [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)
   - 他applicationがRAMを要求したとき、LLMのweightとKVを必要量だけ圧縮RAM / Flashへ退避し、実行順を考えた復帰でmobile multitasking時のTTFT悪化を抑える。
 - 2026-08-17 — [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)
