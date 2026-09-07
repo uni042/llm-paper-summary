@@ -4,17 +4,30 @@ ROCm Core SDK、RCCL、AITER、Composable Kernelのうち、LLM推論・学習�
 
 ## 現在できること
 
-- **AMD GPU上のLLM compute基盤**: HIPでAMD GPU向けkernelを実行し、PyTorch等の上位frameworkからCUDAに近いprogramming modelでGPUを利用できる。
-- **multi-GPU集合通信**: RCCLでAllReduce、AllGather、Reduce-Scatter、All-to-All等を実行し、data / tensor / expert parallelismの通信基盤として使える。
-- **LLM向け専用kernel**: AITER / Composable Kernelでattention、GEMM、MoE、routing、quantization、paged KV等のkernelを利用できる。framework側がこれらをbackendとして呼び出せる。
-- **低bit execution**: FP8 / FP4等のweight・activation・KVを低bitのまま保持・計算し、HBM使用量とmemory trafficを削減できる。
-- **MoE通信とkernel fusion**: routing、quantization、scatter / gather、expert GEMM等をまとめ、MoEで多発する小kernelとGPU間token交換のoverheadを減らせる。
-- **paged / compressed KV**: KVをpage単位で管理し、FP4等へ圧縮して長context・高並列serving時のHBM使用量を抑えられる。
-- **Graph replay**: HIP Graphで繰り返すdecode / training kernel列を再利用し、CPU launch overheadを減らせる。
-- **storage→GPU direct I/O**: 対応環境ではcheckpointやoffload dataをCPU DRAMへ一度copyせずstorageからGPU memoryへ移し、CPU memory bandwidth消費を減らせる。
-- **topology-aware通信**: node内linkとnode間networkを分けて集合通信を組み、multi-node training / servingでnetwork topologyに合わせたdata movementを行える。
+- **AMD GPU上の汎用compute**: HIPでAMD GPU向けkernelを実行し、PyTorch等の上位frameworkからCUDAに近いprogramming modelでAMD GPUを利用できる。LLM frameworkはHIP / ROCm backendを通じて同じmodel codeをAMD hardwareへ持ち込める。
+- **device memory管理**: GPU memory allocation、copy、stream、event、async operationを扱い、model weight、activation、KV cache、workspaceをruntime側で配置できる。LLMでは細かいallocationとcopyが頻繁なためasync APIとpool管理が性能へ効く。
+- **HIP Graph**: 繰り返すdecode / training kernel列をcaptureして再生し、token / stepごとにCPUから大量のkernelをlaunchするoverheadを減らせる。固定shape / bufferを使うhot pathほど効果が出やすい。
+- **GPU resource partitioning**: execution context等でCompute Unitを複数workloadへ分け、同一GPU上で推論、通信、別kernelを干渉を抑えながら共存させる基盤を利用できる。servingでcompute resourceを分ける用途へつながる。
+- **multi-GPU集合通信**: RCCLでAllReduce、AllGather、Reduce-Scatter、All-to-All等を実行し、data / tensor / expert parallelismを支えられる。LLM training / servingのdistributed executionで不可欠なdata movement層。
+- **topology-aware collective**: node内高速linkとnode間networkを階層的に使い、AllGather等をhardware topologyへ合わせて実行できる。multi-nodeで全通信を同じ経路へ流すよりnetwork bottleneckを抑えられる。
+- **computeと通信のoverlap**: Copy Engineや別streamを使い、collective communication / memory copyをmatrix computeと重ねられる。通信量そのものを減らせなくてもGPU idle時間を隠せる。
+- **AITERによるLLM専用kernel**: attention、GEMM、MoE、routing、quantization、KV cache等のLLM hot pathをAMD GPU向けに最適化したkernelを利用できる。vLLM等の上位runtimeがbackendとして呼び出せる。
+- **Composable Kernel**: GEMM、attention等のtile / layout / precisionをtemplate化し、GPU architectureとtensor shapeに合うkernelを生成・選択できる。汎用kernel1本では性能が出にくいLLM shapeをhardware別に最適化する基盤。
+- **low-bit GEMM**: FP8、FP4等のweight / activationを低bitのままmatrix multiplyへ流し、HBM使用量、weight読出し、Tensor / Matrix Core compute costを削減できる。hardware世代ごとの対応precisionが重要。
+- **low-bit MoE**: MoE expert weight / activationをFP8 / FP4等で扱い、expert数が多いmodelのHBM footprintとexpert GEMMのmemory trafficを減らせる。
+- **fused MoE routing path**: routing、token index整理、activation quantization、scatter等を複数kernelに分けずfusionし、routing後にtokenをexpert GPUへ送るまでのlaunch / HBM trafficを削減できる。
+- **expert-parallel passthrough**: All-to-All前後で低bit activationを不要にdequantize→requantizeせず、そのまま通信・次kernelへ渡せる。数値本体の再変換を省き、scale metadataだけを新layoutへ合わせる方式を利用できる。
+- **paged KV cache kernel**: requestごとのKVをpage単位で管理し、長さの違うrequestが混在しても大きな連続memoryを予約せずに済む。LLM servingのmemory断片化とcache allocationを抑えられる。
+- **low-bit KV compression**: FP4等へKVを圧縮し、長contextで増えるHBM使用量とworker / tier間転送量を削減できる。同じGPU memoryで保持できるtoken数を増やせる。
+- **MQA / GQA向けattention**: K/V head共有を前提としたpaged attention kernelを利用し、同じK/Vを不要に複製して読むmemory trafficを減らせる。
+- **MLA / sparse attention**: MLAの圧縮latentやsparse top-k位置だけを処理するkernelを利用できる。長contextで全positionへdense attention / backwardを行うcomputeとmemory trafficを減らせる。
+- **training backward専用kernel**: sparse MLA backward等、forwardだけでなくgradient計算のhot pathにも専用kernelを持つ。AMD GPUをinferenceだけでなく大規模LLM trainingへ使うための基盤になる。
+- **architecture-specific kernel tuning**: gfx系architectureごとにtile shape、wave scheduling、memory layoutを専用化し、汎用kernelでは使い切れないGPU resourceを利用できる。
+- **storage→GPU direct transfer**: 対応環境ではcheckpoint / offload dataをCPU DRAMへ一度copyせずstorageからGPU memoryへ移せる。NVMe offload、checkpoint load、large-model startupでCPU memory bandwidthとcopy回数を減らせる。
+- **async memory / batched operation**: 複数copy / allocation操作をまとめて非同期発行し、CPU API callと同期回数を削減できる。token単位で細かいdata movementが起こるservingでhost overheadを下げる。
+- **PyTorch / serving frameworkのhardware層**: ROCm自身はvLLMのようなrequest schedulerやMegatronのtraining recipeを提供するのではなく、それらがAMD GPU上で使うruntime、collective、kernel、memory / I/O primitiveを提供する位置づけ。
 
-以下の更新履歴は、**LLM frameworkがAMD GPUで使える実行primitiveそのものがどう増えたか**を、通信・低bit・MoE・KV・Graph・storage I/Oの観点から追う。
+以下の更新履歴は、**LLM frameworkがAMD GPUで利用できる実行primitiveそのものがどう増えたか、通信・低bit・MoE・KV・Graph・storage I/Oのcritical pathをどこまで短くできるか**を追う。
 
 ## 初期収録期間
 
