@@ -8,12 +8,14 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ## 収録論文
 
-収録論文: 13本。公開日が新しい順。
+収録論文: 14本。公開日が新しい順。
 
 - 2026-07-13 — [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)
   - GH200の高速CPU-GPU接続を使い、KVをいったんGPUの作業用bufferへコピーせずCPU memory上に置いたままGPUから直接読み、読み出し単位やkernelを調整してremote memory accessを減らす。
 - 2026-05-05 — [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md)
   - NVMe SSD上のKVを戻すI/O要求をCPUが大量に発行する構成をやめ、GPU自身が非同期SSD I/Oを制御してKVをまとめてHBMへ戻し、storage bandwidthを使い切りながらGPUのI/O待ちを減らす。
+- 2026-03-18 — [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md)
+  - attentionで一緒に参照されやすいKVをcluster化し、そのcluster内部を複数SSDへ分散する。同時に必要なKVを複数deviceから並列に読み、単一SSDの帯域上限を超えるaggregate I/O bandwidthを利用する。
 - 2026-01-28 — [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)
   - requestごとのTTFT / TBTの遅れを見ながらKVをHBMとCPU DRAMの間で入れ替え、小さな転送をまとめて双方向のCPU-GPU帯域を使いやすくする。
 - 2025-12-16 — [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md)
@@ -47,6 +49,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **SLOの遅れに応じてKVを入れ替える:** SuperInferはrequestごとのTTFT / TBT進捗を見て、HBMへ残すKVとCPU DRAMへ出すKVを変える。
 - **CPU上のKVをコピーせず直接読む:** DirectKVは高速CPU-GPU接続を前提に、KVをCPUに置いたままGPUから読み出す。
 - **SSDへのI/O制御をGPUへ移す:** TuttiはKV dataだけをdirect transferするのではなく、I/O requestの発行・管理もGPU側へ寄せ、多数の断片化したKVをNVMe SSDから戻す際のCPU bottleneckを避ける。
+- **複数SSDの帯域を束ねる:** Swarmは同時に参照されやすいKVを複数SSDへ分散し、1回のcluster retrievalで複数deviceを並列に読んでaggregate bandwidthを高める。
 - **offloadが遅くなる条件を定量化する:** Meng et al.はKV量と実効CPU-GPU帯域から、計算よりKV転送待ちが支配的になる境界を求める。
 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
