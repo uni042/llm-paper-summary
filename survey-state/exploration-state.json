@@ -1,11 +1,16 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-08T02:05:52+09:00",
-  "last_completed_paper": {"title":"REST: Retrieval-Based Speculative Decoding","id":"arXiv:2311.08252","path":"papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md"},
-  "last_lineage": "inference/speculative-decoding",
+  "last_run": "2026-09-08T03:06:17+09:00",
+  "last_completed_paper": {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","id":"arXiv:2609.04852","path":"papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md"},
+  "last_lineage": "inference/kv-cache-offload-recomputation",
   "last_morning_report_cutoff": null,
-  "pending_research": [],
+  "pending_research": [
+    {"title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","canonical_id":"arXiv:2609.01068","discovery_source":"arxiv-new"},
+    {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","discovery_source":"arxiv-new"},
+    {"title":"AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference","canonical_id":"arXiv:2609.02514","discovery_source":"arxiv-new"},
+    {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","discovery_source":"arxiv-new"}
+  ],
   "pending_audit": [
     {"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"},
     {"title":"Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"},
@@ -16,9 +21,9 @@
   "audit_batch_size": 5,
   "full_batch_streak": 0,
   "recent_batch_history": [
-    {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":2,"carried_over_audit":3},
     {"assigned_research":1,"completed_research":1,"carried_over_research":0,"assigned_audit":3,"completed_audit":3,"carried_over_audit":0},
-    {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4}
+    {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4},
+    {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4}
   ],
   "recently_checked": [
     {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","result":"added","discovery_source":"arxiv-search"},
@@ -26,17 +31,13 @@
     {"title":"Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference","canonical_id":"arXiv:2608.12103","result":"added","discovery_source":"arxiv-search"},
     {"title":"MoEless: Efficient MoE LLM Serving via Serverless Computing","canonical_id":"arXiv:2603.06350","result":"added","discovery_source":"arxiv-search"},
     {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","canonical_id":"arXiv:2608.15171","result":"added","discovery_source":"arxiv-search"},
-    {"title":"FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU","canonical_id":"arXiv:2303.06865","result":"already_recorded","reason_code":"already_recorded"},
-    {"title":"LLM in a Flash: Efficient Large Language Model Inference with Limited Memory","canonical_id":"arXiv:2312.11514","result":"already_recorded","reason_code":"already_recorded"},
     {"title":"Adaptive Context Parallelism for Production LLM Serving","canonical_id":"arXiv:2609.04774","result":"added","discovery_source":"arxiv-new"},
-    {"title":"ProMoE: Fast MoE-based LLM Serving using Proactive Caching","canonical_id":"arXiv:2410.22134","result":"already_recorded","reason_code":"already_recorded"},
-    {"title":"Orca: A Distributed Serving System for Transformer-Based Generative Models","canonical_id":"DOI:10.5555/3600237.3600268","result":"already_recorded","reason_code":"already_recorded"},
-    {"title":"Efficient Memory Management for Large Language Model Serving with PagedAttention","canonical_id":"DOI:10.1145/3600006.3613165","result":"already_recorded","reason_code":"already_recorded"},
     {"title":"SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification","canonical_id":"arXiv:2305.09781","result":"added","discovery_source":"arxiv-search"},
     {"title":"Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads","canonical_id":"arXiv:2401.10774","result":"added","discovery_source":"arxiv-search"},
     {"title":"EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty","canonical_id":"arXiv:2401.15077","result":"added","discovery_source":"arxiv-search"},
     {"title":"Break the Sequential Dependency of LLM Inference Using Lookahead Decoding","canonical_id":"arXiv:2402.02057","result":"added","discovery_source":"arxiv-search"},
     {"title":"REST: Retrieval-Based Speculative Decoding","canonical_id":"arXiv:2311.08252","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Splitwise: Efficient Generative LLM Inference Using Phase Splitting","canonical_id":"arXiv:2311.18677","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against ISCA 2024 metadata and official artifact."}
+    {"title":"Splitwise: Efficient Generative LLM Inference Using Phase Splitting","canonical_id":"arXiv:2311.18677","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against ISCA 2024 metadata and official artifact."},
+    {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","canonical_id":"arXiv:2609.04852","result":"added","discovery_source":"arxiv-new"}
   ]
 }
