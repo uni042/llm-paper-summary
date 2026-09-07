@@ -4,14 +4,15 @@ LMDeployの主要な機能・性能更新を継続的に記録する集約ペー
 
 ## 現在できること
 
-- TurboMind / PyTorch系backendでLLMをservingし、continuous batchingとpaged KV cacheで複数requestを処理できる。
-- tensor parallelism、data parallelism、MoE expert parallelismを使い、複数GPUへmodelとrequestを分散できる。
-- prefix cacheで共通promptのKVを再利用し、SSM / recurrent modelではattention KV以外のstateもcache objectとして管理できる。
-- prefill / decode分離と外部KV connectorを使い、別worker間でKVを共有・転送できる。
-- FP8 / INT4等の量子化、speculative decoding、CUDA Graphを利用し、memory trafficとdecode launch overheadを抑えられる。
-- OpenAI互換serverとして利用でき、単一GPUから分散servingまで同じruntime系で構成できる。
+- **高throughput LLM serving**: TurboMind / PyTorch系backendでcontinuous batchingとpaged KV cacheを使い、生成長の異なる複数requestを同時処理できる。KVをpage単位で割り当て、requestごとに最大context分を先取りするよりGPU memoryの無駄を減らせる。
+- **prefix / state cacheの再利用**: 共通promptのKVをrequest間で再利用できる。SSM / recurrent modelではattention KVだけでなくrecurrent stateもcache objectとして扱い、同じprefixの再計算を減らせる。
+- **分散servingとP/D分離**: tensor / data / expert parallelismで複数GPUへmodel・request・MoE expertを分散できる。prefillとdecodeを別workerへ分け、外部KV connector経由でKVを転送する構成にも対応する。
+- **MoEの分散実行**: expert parallelismとDeepEP系通信backendで、routing後のtokenをexpertが置かれたGPUへ送り、計算後に戻せる。低精度MoE kernelやcompact layoutでexpert weight読出しとpaddingも削減できる。
+- **量子化と低精度cache**: FP8 / INT4等のweight・演算量子化とFP8 KV cacheを使い、modelとcontextのmemory footprintを削減できる。GPU世代に応じた低精度GEMMも利用する。
+- **投機的デコードとGPU実行最適化**: draft / MTP等の投機的デコードに加え、CUDA Graphや小kernelのfusionで1-token decode時のCPU launch overheadを抑えられる。
+- **OpenAI互換APIでの運用**: 単一GPUのlocal serverからmulti-GPU / disaggregated servingまで、同じserving系からAPIとして提供できる。
 
-以下の更新履歴は、**cache管理の再設計、SSM state再利用、MoE通信、P/D分離、外部KV連携、低精度kernel**がどう拡張されたかを記録している。
+以下の更新履歴は、**cache対象の拡大、worker間KV移動、MoE通信、低精度実行、decode時のlaunch / memory overhead**がどう改善されたかを追う。
 
 ## 初期収録期間
 
