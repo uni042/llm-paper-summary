@@ -2,6 +2,23 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 04:59–05:00 JST
+- mode: `hourly-inference`
+- status: `completed`
+- research: assigned 3 / completed 3 / added 3 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 0
+- audit: assigned 4 / completed 4 / changed 4 / no_change 0 / carried_over 0
+- pending_research: 0
+- pending_audit: 0
+- batch size: research 5 / audit 5
+- full_batch_streak: 0
+- discovery: `arxiv-new`
+- validation: repaired — 前回途中だったOUTLETSのServing indexと、AceSpec / Random Attentionを含むtop-level件数を同期。Inference 148本 / Training 19本 / total 167本。影響したlineage READMEは一言説明付きentryを維持。
+- recovery: 前回すでに作成済みだった `OUTLETS` / `AceSpec` / `Random Attention` のpaper pageを再作成せず、欠けていたindex/count/stateだけを補完。
+- rejected ledger: added 0 / updated 0
+- added: `OUTLETS`, `AceSpec`, `Random Attention`
+- audited: `DistServe`, `Sarathi-Serve`, `SGLang`, `Pensieve` — canonical identityとaudit metadataを追加し、一次資料・publication / code状態・評価形態を再確認。
+- commits: `90d4eb1`, `2cddd30`, `6fdff10`, `fca1948`, `710340e`, `d507478`, `5d59127`, `98a9303`, `2713eeb`
+
 ## 2026-09-08 03:59 JST
 - mode: `hourly-inference`
 - status: `partial`
