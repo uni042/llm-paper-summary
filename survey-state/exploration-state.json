@@ -1,42 +1,27 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T23:18:00+09:00",
-  "last_completed_paper": {
-    "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
-    "id": "arXiv:2607.16892",
-    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md"
-  },
-  "last_lineage": "inference/serving/kv-reservation-under-output-length-uncertainty",
+  "last_run": "2026-09-07T23:57:03+09:00",
+  "last_completed_paper": {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","id":"arXiv:2608.15171","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md"},
+  "last_lineage": "inference/serving/scheduling",
   "last_morning_report_cutoff": null,
-  "pending_research": [
-    {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","id":"arXiv:2604.02715","discovery_source":"arxiv-search"},
-    {"title":"MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference","canonical_id":"arXiv:2607.09686","id":"arXiv:2607.09686","discovery_source":"arxiv-search"},
-    {"title":"Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference","canonical_id":"arXiv:2608.12103","id":"arXiv:2608.12103","discovery_source":"arxiv-search"},
-    {"title":"MoEless: Efficient MoE LLM Serving via Serverless Computing","canonical_id":"arXiv:2603.06350","id":"arXiv:2603.06350","discovery_source":"arxiv-search"},
-    {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","canonical_id":"arXiv:2608.15171","id":"arXiv:2608.15171","discovery_source":"arxiv-search"}
-  ],
+  "pending_research": [],
   "pending_audit": [
-    {"title":"FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU","path":"papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md","canonical_id":"arXiv:2303.06865"},
-    {"title":"LLM in a Flash: Efficient Large Language Model Inference with Limited Memory","path":"papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md","canonical_id":"arXiv:2312.11514"},
     {"title":"ProMoE: Fast MoE-based LLM Serving using Proactive Caching","path":"papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md","canonical_id":"arXiv:2410.22134"},
     {"title":"Orca: A Distributed Serving System for Transformer-Based Generative Models","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md","canonical_id":"DOI:10.5555/3600237.3600268"},
     {"title":"Efficient Memory Management for Large Language Model Serving with PagedAttention","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md","canonical_id":"DOI:10.1145/3600006.3613165"}
   ],
   "research_batch_size": 5,
   "audit_batch_size": 5,
-  "full_batch_streak": 1,
-  "recent_batch_history": [],
+  "full_batch_streak": 0,
+  "recent_batch_history": [{"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":2,"carried_over_audit":3}],
   "recently_checked": [
-    {"title":"SpecSA: Bridging Speculative Decoding and Sparse Attention for Efficient LLM Inference","id":"arXiv:2605.19893","result":"added","reason":"Sparse speculative verification reuses overlapping selected KV blocks across verifier queries and selection indices across layers."},
-    {"title":"CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation","id":"arXiv:2606.24506","result":"added","reason":"Separates cold-MoE FFN weights from attention/KV GPU pools so dynamic KV demand can be shared across hosted models."},
-    {"title":"CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference","id":"arXiv:2606.24467","result":"added","reason":"Uses semantic-retrieval heads for token retention and offline layer-error estimates for non-uniform KV budget allocation."},
-    {"title":"KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression","id":"arXiv:2607.01237","result":"added","reason":"Compresses only newly generated KV windows and integrates periodic incremental compression with PagedAttention serving."},
-    {"title":"Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty","id":"arXiv:2607.16892","result":"added","reason":"Jointly optimizes KV reservation, GPU configuration, routing, and prefix caching under output-length uncertainty and distribution shift."},
-    {"title":"Hydragen: High-Throughput LLM Inference with Shared Prefixes","id":"arXiv:2402.05099","result":"already_recorded","reason":"Audit confirmed exact shared-prefix attention mechanism, official code, and 32x/55% headline results are already recorded."},
-    {"title":"ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching","id":"arXiv:2403.17312; ISCA 2024","result":"already_recorded","reason":"Audit confirmed publication status, sparse-KV plus CPU offload/recomputation distinction, hardware conditions, and throughput claims are already recorded."},
-    {"title":"PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving","id":"arXiv:2501.08192; SPAA 2026 Brief Announcement","result":"already_recorded","reason":"Audit confirmed communication-overlapped L2 prefetch scope, Ascend hardware conditions, publication status, and simulation/real-hardware distinction are already recorded."},
-    {"title":"Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching","id":"arXiv:2504.06319; AAAI 2026","result":"already_recorded","reason":"Audit confirmed Hopper L2-prefetch mechanism, official code, H20 evaluation, and 2.15x kernel / up to 1.97x end-to-end claims are represented."},
-    {"title":"SGD-KV: Summarization Guided KV Cache Compression","id":"arXiv:2609.03235","result":"already_recorded","reason":"Audit confirmed head-aware summarization diagnostic, Qwen long-context evaluation, and up-to-75% KV-memory reduction are already recorded."}
+    {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","id":"arXiv:2604.02715","result":"added","discovery_source":"arxiv-search"},
+    {"title":"MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference","canonical_id":"arXiv:2607.09686","id":"arXiv:2607.09686","result":"added","discovery_source":"arxiv-search"},
+    {"title":"Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference","canonical_id":"arXiv:2608.12103","id":"arXiv:2608.12103","result":"added","discovery_source":"arxiv-search"},
+    {"title":"MoEless: Efficient MoE LLM Serving via Serverless Computing","canonical_id":"arXiv:2603.06350","id":"arXiv:2603.06350","result":"added","discovery_source":"arxiv-search"},
+    {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","canonical_id":"arXiv:2608.15171","id":"arXiv:2608.15171","result":"added","discovery_source":"arxiv-search"},
+    {"title":"FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU","canonical_id":"arXiv:2303.06865","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit metadata added; ICML 2023 source and official code retained."},
+    {"title":"LLM in a Flash: Efficient Large Language Model Inference with Limited Memory","canonical_id":"arXiv:2312.11514","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit metadata added; primary arXiv source and real-hardware evaluation retained."}
   ]
 }
