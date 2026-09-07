@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T16:02:42+09:00",
+  "last_run": "2026-09-07T16:58:37+09:00",
   "last_completed_paper": {
-    "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
-    "id": "arXiv:2605.18071",
-    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md"
+    "title": "RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference",
+    "id": "DOI:10.14778/3796195.3796212; arXiv:2505.02922",
+    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
   },
-  "last_lineage": "inference/kv-cache-offload-recomputation/multi-tier-attention-aware-cache",
+  "last_lineage": "inference/kv-cache-offload-recomputation/cpu-vector-retrieval",
   "last_morning_report_cutoff": null,
   "recently_checked": [
     {
@@ -33,6 +33,12 @@
       "id": "arXiv:2605.18071",
       "result": "added",
       "reason": "Coordinates attention-aware GPU KV reuse, pipelined selection/fetch/compute, and HBM-DRAM-SSD sparse block movement for long-context decoding."
+    },
+    {
+      "title": "RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference",
+      "id": "DOI:10.14778/3796195.3796212; arXiv:2505.02922",
+      "result": "added",
+      "reason": "Treats CPU-resident KV cache as attention-aware vector storage, retrieves only query-relevant KV to GPU, and overlaps retrieval, transfer, and attention with a GPU-CPU buffer manager."
     }
   ]
 }
