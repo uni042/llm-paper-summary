@@ -4,12 +4,28 @@ Megatron-Coreの主要な機能・性能更新を継続的に記録する集約�
 
 ## 現在できること
 
-- tensor / pipeline / data / context / expert parallelismを組み合わせ、大規模dense TransformerとMoEをmulti-GPU / multi-nodeで学習できる。
-- FSDP系parameter sharding、sequence parallelism、distributed optimizerを使い、parameter・gradient・optimizer stateのmemory複製を減らせる。
-- MoEではexpert parallelism、token dispatcher、DeepEP / NCCL等の通信backend、shared expertを組み合わせてrouting後のtoken交換を制御できる。
-- communication overlapでparameter gather、gradient reduction、MoE All-to-All等をcomputeと重ね、network待ちを隠せる。
-- activation checkpointing / recomputation / CPU offloadとoptimizer-state offloadを使い、GPU memoryと追加計算・host transferをtrade-offできる。
-- FP8 / FP4等の低精度training、低bit parameter通信、fused kernel、CUDA Graphを利用し、演算・通信・launch overheadを削減できる。
+- **tensor parallelism**: 1 layer内の大きなmatrix計算を複数GPUへ分割し、単一GPUに収まらないhidden sizeやFFNを学習できる。各layerでGPU間collective通信が入るため、NVLink / high-bandwidth interconnectが重要。
+- **pipeline parallelism**: model layerを複数stageへ分け、異なるmicrobatchをstage間でpipeline実行できる。model depthを複数GPUへ分散できる一方、stageが仕事をしていないpipeline bubbleを減らすschedule設計が性能を左右する。
+- **data parallelism / FSDP**: batchをGPU間へ分けるdata parallelismに加え、parameter・gradient・optimizer stateをGPU間へshardするFSDP系実行を使える。model stateの重複を減らし、data parallel replicaごとのVRAM使用量を下げられる。
+- **context / sequence parallelism**: 長いsequenceのactivationやattention計算をGPU間へ分割し、1 GPU当たりのactivation / KV相当stateを減らせる。長context trainingでsequence length由来のmemory増加を抑えるために使う。
+- **expert parallelism**: MoE expertをGPU間へ分散し、routingされたtokenだけを対応expertへ送る。全GPUが全expertを持つ必要をなくし、expert数が大きいmodelをmulti-GPUへ拡張できる。
+- **複数parallelismの合成**: tensor / pipeline / data / context / expert parallelismを同時に組み合わせられる。model size、sequence長、expert数、GPU topologyのどれが主制約かに応じて分割軸を変えられることがMegatron-Coreの中心機能。
+- **distributed optimizer**: optimizer stateやgradientをGPU間で分割し、data parallel replicaごとの重複memoryを減らせる。計算に必要なstateだけを集め、update後に再びshardする。
+- **MoE token dispatcher**: routing結果を見てtokenをexpertが置かれたGPUへ送り、expert計算後に元のtoken順へ戻す通信層を持つ。NCCL、DeepEP、HybridEP等をcluster構成に応じて選べる。
+- **MoE load balancing**: expertごとのtoken負荷を観測し、特定expertだけが混雑してlayer全体を待たせる状況を減らすrouter調整を利用できる。平均だけでなくtail側の偏りを抑える方式も扱う。
+- **shared expert**: routed expertとは別に全tokenが通るshared expertをMoE layerへ組み込み、routed expertと並行 / fused実行する構成を取れる。shared expertが追加するcomputeをcritical pathへ載せすぎないことが重要。
+- **grouped GEMM / fused MoE MLP**: 複数expertの小さいmatrix multiply、SwiGLU、quantization等をまとめて実行し、expertごとのkernel launchと中間tensorのHBM書き戻しを減らせる。
+- **communication overlap**: parameter gather、gradient reduction、pipeline通信、MoE All-to-All等をcomputeと別stream / chunkで進め、network完了を待つ時間をGPU計算の裏へ隠せる。
+- **FSDPとMoE通信のoverlap**: parameter sharding通信とexpert token交換を直列に待たず、可能な部分を同時進行できる。FSDPとEPを組み合わせたときのnetwork serializationを減らす。
+- **activation checkpointing / recomputation**: forward中間値をすべて保持せず、backward時に必要部分を再計算してVRAMを節約できる。layer / segment単位で保持と再計算を選び、追加computeとmemory削減を調整できる。
+- **activation CPU offload**: backwardまで必要なactivationの一部をCPU DRAMへ退避し、GPU memoryを空けられる。CUDA Graph対応pathでは固定buffer等を使い、offloadを有効にしてもGraph captureを壊しにくくする。
+- **optimizer-state / master-weight offload**: optimizer stateと高精度master weightの正本をCPU pinned memoryへ置き、update対象chunkだけGPUへ戻せる。optimizer stepで全stateを同時にVRAMへ載せる必要をなくす。
+- **FP8 / FP4 training**: weight / activation / matrix計算を低精度化し、Tensor Core throughputとHBM trafficを改善できる。低bit化による数値誤差・scale管理と収束への影響を確認する必要がある。
+- **低bit parameter communication**: sharded parameterをGPU間でgatherするときMXFP8 / NVFP4等へ圧縮し、network trafficを減らせる。通信後に必要precisionへ戻すcostと精度がtrade-offになる。
+- **CUDA Graph**: 繰り返すtraining stepやmodel区間をcaptureし、Python / CPUから大量のGPU kernelを毎step launchするoverheadを減らせる。full-model Graphへ適用範囲を広げることもできる。
+- **streaming checkpoint load**: quantized checkpoint全体をCPU RAMへ展開せず、必要blockを順に読み込んでtarget format / GPUへ送れる。巨大modelの起動時host-memory peakを抑えられる。
+- **distributed checkpoint**: multi-GPUにshardされたmodel / optimizer stateを保存・復元し、parallelism構成やjob再開へ使える。大規模trainingで1 processに全stateを集めて保存する必要を減らす。
+- **上位training stack向けbuilding block**: transformer layer、parallel linear、MoE、distributed optimizer等をlibraryとして提供し、Megatron-LM等がmodel recipe / data pipelineを載せる基盤になる。
 
 以下の更新履歴は、**MoE通信とfusion、CUDA Graph、低精度parameter gather、activation / optimizer offload**が最近どう拡張されたかを記録している。
 
