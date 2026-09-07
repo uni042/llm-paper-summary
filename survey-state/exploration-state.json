@@ -1,80 +1,24 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-07T21:01:55+09:00",
+  "last_run": "2026-09-07T22:05:10+09:00",
   "last_completed_paper": {
-    "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
-    "id": "arXiv:2605.08151",
-    "path": "papers/inference/99-other-inference-systems/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md"
+    "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+    "id": "arXiv:2408.08147",
+    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md"
   },
-  "last_lineage": "inference/speculative-decoding/remote-multi-tenant-drafter",
+  "last_lineage": "inference/serving/prefill-decode-disaggregation-and-kv-transfer",
   "last_morning_report_cutoff": null,
   "recently_checked": [
-    {
-      "title": "Horizon-LM: A RAM-Centric Architecture for LLM Training",
-      "id": "arXiv:2602.04816",
-      "result": "updated",
-      "reason": "arXiv v3 (2026-04-06) is withdrawn because the experimental training-FLOPs calculation omitted a term, invalidating reported throughput values as confirmed results."
-    },
-    {
-      "title": "Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs",
-      "id": "arXiv:2603.17803",
-      "result": "added",
-      "reason": "Multi-SSD KV-cache offloading uses stable co-activation patterns to distribute concurrently accessed KV entries across devices and aggregate storage bandwidth."
-    },
-    {
-      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
-      "id": "arXiv:2605.03375",
-      "result": "already_recorded",
-      "reason": "Primary arXiv material was checked; the paper is already indexed in the KV-cache offload lineage."
-    },
-    {
-      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
-      "id": "arXiv:2605.18071",
-      "result": "added",
-      "reason": "Coordinates attention-aware GPU KV reuse, pipelined selection/fetch/compute, and HBM-DRAM-SSD sparse block movement for long-context decoding."
-    },
-    {
-      "title": "RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference",
-      "id": "DOI:10.14778/3796195.3796212; arXiv:2505.02922",
-      "result": "added",
-      "reason": "Treats CPU-resident KV cache as attention-aware vector storage, retrieves only query-relevant KV to GPU, and overlaps retrieval, transfer, and attention with a GPU-CPU buffer manager."
-    },
-    {
-      "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
-      "id": "arXiv:2602.07721; ICML 2026",
-      "result": "added",
-      "reason": "Keeps full-precision KV in CPU DRAM while GPU-resident fixed-direction and 4-bit key summaries perform drift-robust coarse-to-fine Top-k retrieval; selected KV is fetched on demand through UVA."
-    },
-    {
-      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
-      "id": "arXiv:2603.27138; DAC 2026",
-      "result": "added",
-      "reason": "Splits sparse attention between GPU-resident and CPU-resident KV blocks, starts CPU attention one Transformer layer early using a predicted next-layer query, and periodically recalls hot blocks asynchronously to hide CPU compute and PCIe latency."
-    },
-    {
-      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
-      "id": "arXiv:2608.21240",
-      "result": "added",
-      "reason": "Predicts experts several layers ahead, uses a resident shared expert plus low-rank surrogates for low-confidence misses, and schedules exact residual work between CPU execution and GPU weight fetch to reduce PCIe stalls."
-    },
-    {
-      "title": "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
-      "id": "arXiv:2608.06557",
-      "result": "added",
-      "reason": "Uses a continuously updated per-request latency budget to jointly order requests and decide HBM/DRAM/NVMe KV restore, prefetch, retention, or recomputation, improving SLO-satisfied goodput while preserving fairness."
-    },
-    {
-      "title": "ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling",
-      "id": "arXiv:2608.07974",
-      "result": "added",
-      "reason": "Decouples pipeline stages with chunk-local objectives so downstream forward work can start before upstream local backward; this shortens activation lifetimes, removes cross-stage backward-gradient transfer, and enables stage-local recovery."
-    },
-    {
-      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
-      "id": "arXiv:2605.08151",
-      "result": "added",
-      "reason": "Reuses an underutilized small-model service as a remote drafter and switches between overlapped and ordinary speculative decoding according to observed rollback cost, reducing draft waiting without committing to wasteful parallel speculation."
-    }
+    {"title":"SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer","id":"arXiv:2607.28150","result":"added","reason":"Selective proactive, on-demand, and speculative KV transfer reduces P/D stage-transition stalls on bandwidth-limited deployments."},
+    {"title":"SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding","id":"arXiv:2506.11309","result":"added","reason":"Disaggregates and asynchronously scales draft generation and target verification to remove draft latency from the critical path."},
+    {"title":"SPIRe: Boosting LLM Inference Throughput with Speculative Decoding","id":"arXiv:2504.06419","result":"added","reason":"Uses sparse-attention draft architecture and feedback memory to reduce draft KV/compute cost for large-batch speculative decoding."},
+    {"title":"SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs","id":"arXiv:2503.16163","result":"added","reason":"Keeps full KV in CPU DRAM, selects via low-bit GPU copies, and prefetches predicted next-step KV to overlap PCIe transfer with decoding."},
+    {"title":"P/D-Serve: Serving Disaggregated Large Language Model at Scale","id":"arXiv:2408.08147","result":"added","reason":"Combines fine-grained P/D grouping, on-demand rerouting, optimized KV transfer, and production-scale fault/network control."},
+    {"title":"Preble: Efficient Distributed Prompt Scheduling for LLM Serving","id":"arXiv:2407.00023; ICLR 2025","result":"already_recorded","reason":"Audit confirmed publication status, official code, evaluation hardware, and main latency claims are already recorded."},
+    {"title":"Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve","id":"arXiv:2403.02310; OSDI 2024","result":"already_recorded","reason":"Audit confirmed OSDI final status, official code, hardware conditions, and serving-capacity results are already recorded."},
+    {"title":"KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference","id":"arXiv:2605.18071","result":"already_recorded","reason":"Audit found detailed HBM/DRAM/NVMe conditions, prototype results, and limitations already present."},
+    {"title":"DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving","id":"arXiv:2401.09670; OSDI 2024","result":"already_recorded","reason":"Audit confirmed final publication, official artifact, hardware/network conditions, and goodput results are already recorded."},
+    {"title":"Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot","id":"arXiv:2407.00079; FAST 2025","result":"already_recorded","reason":"Audit confirmed FAST 2025 status, official code, production evaluation, and KV transfer/cache results are already recorded."}
   ]
 }
