@@ -2,6 +2,17 @@
 
 Megatron-Coreの主要な機能・性能更新を継続的に記録する集約ページ。大規模Transformer / MoE学習のparallelism、GPU間通信、CUDA Graph、activation recomputation、CPU offload、低精度parameter通信などを扱う。
 
+## 現在できること
+
+- tensor / pipeline / data / context / expert parallelismを組み合わせ、大規模dense TransformerとMoEをmulti-GPU / multi-nodeで学習できる。
+- FSDP系parameter sharding、sequence parallelism、distributed optimizerを使い、parameter・gradient・optimizer stateのmemory複製を減らせる。
+- MoEではexpert parallelism、token dispatcher、DeepEP / NCCL等の通信backend、shared expertを組み合わせてrouting後のtoken交換を制御できる。
+- communication overlapでparameter gather、gradient reduction、MoE All-to-All等をcomputeと重ね、network待ちを隠せる。
+- activation checkpointing / recomputation / CPU offloadとoptimizer-state offloadを使い、GPU memoryと追加計算・host transferをtrade-offできる。
+- FP8 / FP4等の低精度training、低bit parameter通信、fused kernel、CUDA Graphを利用し、演算・通信・launch overheadを削減できる。
+
+以下の更新履歴は、**MoE通信とfusion、CUDA Graph、低精度parameter gather、activation / optimizer offload**が最近どう拡張されたかを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
