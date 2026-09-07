@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **120本**。
+収録論文: **121本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -14,7 +14,7 @@
   - GPUに収まらないmodel weightやMoE expertなどをCPU・別GPU・SSD・Flashへ置き、data転送とCPU / GPUの分担を工夫して必要VRAMとI/O待ちを減らす。
 - [Adaptive Expert Computation / Compression](02-adaptive-expert-computation-compression/) — 10本
   - token・layer・expertの重要度やcostに応じて実行するexpert数や保持するexpertを変え、MoEの計算量・転送量・model容量を削減する。
-- [Expert Prefetch](03-expert-prefetch/) — 12本
+- [Expert Prefetch](03-expert-prefetch/) — 13本
   - 次に使うexpertをrouting確定前に予測してGPUへ先読みし、CPU / storageからのweight転送を現在の計算と重ねて待ち時間を減らす。
 - [Conditional Computation](04-conditional-computation/) — 8本
   - 入力やtokenの難しさに応じて使うlayer・token・終了位置を選び、不要なTransformer計算を最初から実行しない。
