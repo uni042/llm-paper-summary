@@ -4,14 +4,17 @@ TorchTitanの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- PyTorch-nativeな大規模LLM training stackとして、FSDP、tensor parallelism、pipeline parallelism、expert parallelismを組み合わせられる。
-- dense TransformerとMoEをmulti-GPU / multi-nodeで学習し、MoE token dispatcherを差し替えてclusterに合う通信方式を選べる。
-- activation checkpointing / recomputationと低精度optimizer stateを使い、GPU memoryを削減できる。
-- communication overlapでFSDP parameter通信、gradient通信、MoE token交換をcomputeと重ね、GPU idleを減らせる。
-- CUDA Graph / whole-step graph化でPython / CPU schedulingとkernel launch overheadを削減できる。
-- FP8 / FP4等の低精度trainingとPyTorch compiler / graph transformationを組み合わせ、model codeを保ちながら実行を最適化できる。
+- **PyTorch-native大規模training**: PyTorchのmodel codeを中心に保ちながら、FSDP、tensor / pipeline / expert parallelismを組み合わせてmulti-GPU / multi-node trainingを構成できる。
+- **dense / MoE両対応**: dense TransformerだけでなくMoEを学習でき、routing後のtokenをexpert GPUへ送るdispatcherを複数backendから選べる。
+- **FSDPとparameter sharding**: parameter・gradient・optimizer stateをGPU間へ分割し、data parallel replicaごとの重複memoryを削減できる。
+- **communication overlap**: parameter gather、gradient通信、MoE token交換をcomputeと重ね、GPUがnetwork完了を待つ時間を減らせる。
+- **activation checkpoint / recomputation**: どのactivationを保持し、どこを再計算するかをpolicyとして構成し、長sequence時のpeak VRAMを下げられる。
+- **低精度training**: FP8 / FP4 / BF16 optimizer state等を使い、matrix演算・state保持・通信量を削減できる。数値精度と収束のtrade-offは別途評価が必要。
+- **CUDA Graph / whole-step graph**: forward、backward、optimizer周辺まで広い範囲をGraph化し、Python schedulingとkernel launch overheadを減らせる。
+- **pipeline schedule最適化**: model layerを複数stageへ分割し、microbatchのforward / backwardを重ねてpipeline bubbleを減らせる。
+- **compiler / graph transformation連携**: graph解析からactivation memory、pipeline partition、parallel executionを調整し、手作業のparallel tuningを減らせる。
 
-以下の更新履歴は、主に**unified MoE dispatcher、GraphTrainer、FSDP / EP overlap、低精度training、activation checkpoint policy**の統合を記録している。
+以下の更新履歴は、**PyTorch-nativeなままどこまでparallelism・MoE通信・graph化・低精度学習を統合できるか**を中心に追う。
 
 ## 初期収録期間
 
