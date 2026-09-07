@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **149本**。
+収録論文: **150本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -8,7 +8,7 @@
 
 ## 系統
 
-- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 16本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
+- [Offload / Hierarchical Memory](01-offload-hierarchical-memory/) — 17本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](02-adaptive-expert-computation-compression/) — 10本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
 - [Expert Prefetch](03-expert-prefetch/) — 13本 — 将来使うexpertをrouting確定前に予測してGPUへ先読みし、weight転送待ちを現在の計算へ隠す。
 - [Conditional Computation](04-conditional-computation/) — 8本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。

@@ -4,12 +4,14 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 
 ## 収録論文
 
-収録論文: 16本。公開日が新しい順。
+収録論文: 17本。公開日が新しい順。
 
 - 2026-08-14 — [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)
   - 通常SSDより高帯域な将来型HBFをGPU / HBM近傍へ接続し、expert weightの直接転送とHBM buffer経由転送を並行して大容量MoEのI/O待ちを減らす。
 - 2026-08-12 — [Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference](2026-2608.12103-kernel-managed-expert-cache-tiering.md)
   - 1.45 TB expert poolでOS page cacheをDRAM tierとして評価し、kernel recencyと専用frequency cacheを比較する。
+- 2026-06-24 — [Cache-Resident LLM Inference in GB-Scale Last-Level Caches](2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md)
+  - GB級CPU LLCへweightを常駐させ、weight計算とattention/KVを別socketへ分けてcache pollutionとoperator同期costを減らす。
 - 2026-05-18 — [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md)
   - 複数microbatchから同じexpertへ来るtokenをまとめて大きなGEMMとして実行し、Intel AMX対応CPUとGPUへexpert計算を分担してoffloaded MoEのthroughputを高める。
 - 2026-04-03 — [FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving](2026-2604.02715-fluxmoe-decoupling-expert-residency.md)

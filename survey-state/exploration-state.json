@@ -3,16 +3,14 @@
   "workflow_version": 2,
   "bootstrap_required": false,
   "last_run": "2026-09-08T05:58:37+09:00",
-  "last_completed_paper": {"title":"An Interpretable Latency Model for Speculative Decoding in LLM Serving","id":"arXiv:2605.15051","path":"papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md"},
-  "last_lineage": "inference/speculative-decoding-moe",
+  "last_completed_paper": {"title":"Cache-Resident LLM Inference in GB-Scale Last-Level Caches","id":"arXiv:2606.25353","path":"papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md"},
+  "last_lineage": "inference/offload-hierarchical-memory",
   "last_morning_report_cutoff": null,
   "pending_research": [
-    {"title":"Cache-Resident LLM Inference in GB-Scale Last-Level Caches","canonical_id":"arXiv:2606.25353","discovery_source":"arxiv-search"},
     {"title":"Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice","canonical_id":"arXiv:2606.22327","discovery_source":"arxiv-search"},
     {"title":"Online Linear Programming for Multi-Objective Routing in LLM Serving","canonical_id":"arXiv:2607.03948","discovery_source":"arxiv-search"}
   ],
   "pending_audit": [
-    {"title":"FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference","canonical_id":"arXiv:2305.05920","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md"},
     {"title":"SpotServe: Serving Generative Large Language Models on Preemptible Instances","canonical_id":"arXiv:2311.15566","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"},
     {"title":"ServerlessLLM: Low-Latency Serverless Inference for Large Language Models","canonical_id":"arXiv:2401.14351","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"},
     {"title":"DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference","canonical_id":"arXiv:2401.08671","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"}
@@ -28,6 +26,7 @@
     {"assigned_research":3,"completed_research":3,"carried_over_research":0,"assigned_audit":4,"completed_audit":4,"carried_over_audit":0}
   ],
   "recently_checked": [
+    {"title":"Cache-Resident LLM Inference in GB-Scale Last-Level Caches","canonical_id":"arXiv:2606.25353","result":"added","discovery_source":"arxiv-search"},
     {"title":"An Interpretable Latency Model for Speculative Decoding in LLM Serving","canonical_id":"arXiv:2605.15051","result":"added","discovery_source":"arxiv-search"},
     {"title":"SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference","canonical_id":"arXiv:2605.08151","result":"added","discovery_source":"arxiv-search"}
   ]
