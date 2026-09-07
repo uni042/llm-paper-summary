@@ -2,6 +2,16 @@
 
 llama.cppの主要な機能・性能更新を継続的に記録する集約ページ。メモリ管理（memory management）、MoE、投機的デコード（speculative decoding）、GPUカーネル（kernel）、CPU/GPU間転送、同期削減など、実際の推論速度・必要メモリ・対応できるモデル規模へ影響する変更を扱う。
 
+## 現在できること
+
+- CPUのみ、GPUのみ、CPU+GPU混在でLLMを実行し、weightを量子化してmemory使用量を下げられる。
+- model layerやFFNの一部をCPUへ置き、VRAMに収まらないmodelをCPU DRAMと併用して実行できる。
+- 複数GPUへmodelを分割し、tensor / pipeline型の実行やCUDA Graphでdecode時のlaunch overheadを減らせる。
+- KV cacheを管理・量子化し、投機的デコードやMTP対応modelでは1回の本体forwardで複数tokenを進められる。
+- MoEではrouting後のexpert計算をGPU kernelへまとめ、CPUへ退避したexpertを必要時に読み込む構成も取れる。
+
+以下の更新履歴は、主に**CPU/GPU間の転送、MoE expert処理、GPU kernel起動、投機的デコード**のどこが改善されたかを記録している。
+
 ## 2026-09-05
 
 - **CPUへ退避したMoE expert向けGPU常駐LRU cache — Draft / Open**: CPUメモリへ置いたMoE expertのうち、直近で使われたexpertだけをVRAMにも一時保持する提案。2026-09-07時点でもDraft / Open。`--moe-expert-cache N`で有効化し、現在は1 tokenずつ生成する通常decodeだけに適用される。
