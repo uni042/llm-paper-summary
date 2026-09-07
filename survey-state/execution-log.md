@@ -2,6 +2,28 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 07:43–07:53 JST
+- planned slot: `manual hourly test (07:00 hour)`
+- run_id: `manual-20260908T074337+0900`
+- workflow_version: `2`
+- mode: `hourly-inference`
+- status: `completed`
+- research: assigned 2 / completed 2 / added 2 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 0
+- audit: assigned 2 / completed 2 / changed 2 / no_change 0 / carried_over 0
+- pending_research at end: 2（今回未着手の既存queue）
+- pending_audit at end: 3（今回未着手の既存queue）
+- batch size: research 2 / audit 2
+- full_batch_streak: 0（queueに未着手作業が残るため増加条件外）
+- discovery: `arxiv-search` + independent new-source quick scan; 今回の固定対象を増やす追加候補は登録なし
+- validation: pass — identity registry 150 active / Inference 150 / Training 19 / total 169。新規2 IDは各1 active lineage、README件数・一言説明を同期、Training配下変更なし。
+- recovery / migration: Workflow v2へ初回移行し、pending queueを保持したまま research/audit batch sizeを5/5→2/2、streakを0としてcheckpoint。
+- rejected ledger: added 0 / updated 0
+- added: `An Interpretable Latency Model for Speculative Decoding in LLM Serving` (arXiv:2605.15051), `Cache-Resident LLM Inference in GB-Scale Last-Level Caches` (arXiv:2606.25353)
+- audited: `AlpaServe` — OSDI 2023最終版・著者所属・公式code・canonical/audit metadataを確認。`FastServe` — NSDI 2026最終版・公式code・canonical/audit metadataを確認し、arXiv prepublicationと最終版のheadline評価値を分離。
+- result commits: `46981baa`, `e34b112f`
+- checkpoint commit: `256a1097`
+- error / bottleneck: none observed in this manual run
+
 ## 2026-09-08 05:58 JST
 - mode: `hourly-inference`
 - status: `partial`
@@ -106,5 +128,5 @@
 - rejected ledger: added 0 / updated 0
 - added: `Adaptive Context Parallelism for Production LLM Serving` (arXiv:2609.04774)
 - audited: `ProMoE`, `Orca`, `Efficient Memory Management for Large Language Model Serving with PagedAttention`
-- validation detail: Inference 139本 / Training 19本 / total 158本へ同期。Serving lineage 30本。一言説明付きentryを維持し、Training配下は変更なし。
+- validation detail: Inference 139本 / Training 19本 / total 158本へ同期。Serving lineage 30本。一言説明付きentryを維持し、Training配下変更なし。
 - commits: `3f62197`, `6e7bb41`, `56f03e6`, `e9fe36f`, `f2216d9`
