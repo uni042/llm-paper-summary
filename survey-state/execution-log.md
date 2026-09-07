@@ -2,6 +2,23 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 05:58 JST
+- mode: `hourly-inference`
+- status: `partial`
+- research: assigned 5 / completed 1 / added 1 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 4
+- audit: assigned 0 / completed 0 / changed 0 / no_change 0 / carried_over 0
+- pending_research: 4
+- pending_audit: 0
+- batch size: research 5 / audit 5
+- full_batch_streak: 0
+- discovery: `arxiv-search`
+- validation: pass for completed SPECTRE page/index/count changes; remaining research candidates retained in queue
+- rejected ledger: added 0 / updated 0
+- added: `SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference` (arXiv:2605.08151)
+- carried over research: `An Interpretable Latency Model for Speculative Decoding in LLM Serving`, `Cache-Resident LLM Inference in GB-Scale Last-Level Caches`, `Geometry-Aware Online Scheduling for LLM Serving`, `Online Linear Programming for Multi-Objective Routing in LLM Serving`
+- validation detail: Inference 149本 / Training 19本 / total 168本へ同期。Speculative Decoding / MoEは12本。SPECTRE pageはcanonical_id / last_verified / verified_arxiv_versionを保持し、lineage READMEへ一言説明付きで追加。Training配下は変更なし。
+- commits: `c550c45`, `0173687`, `8312aa5`, `bc0d3b2`, `7ea5864`, `aab3e3f`
+
 ## 2026-09-08 04:59–05:00 JST
 - mode: `hourly-inference`
 - status: `completed`
