@@ -2,6 +2,16 @@
 
 Accelerateの主要な機能・性能更新を継続的に記録する集約ページ。分散学習、CPUへの状態退避（CPU offload）、FSDP、DeepSpeed連携、compileなど、複数GPU / CPUを使う学習実行基盤の変更を扱う。
 
+## 現在できること
+
+- 通常のPyTorch training loopを大きく書き換えず、single CPU / GPU、multi-GPU、TPU、multi-nodeへ同じcodeを展開できる。
+- DDP、FSDP、DeepSpeedなどの分散学習backendを共通のlauncher / configurationから利用できる。
+- FP16 / BF16 / FP8などのmixed precision、gradient accumulation、device placement、checkpoint保存・再開を統一的に扱える。
+- 大きなmodelのinferenceでは、weightを複数GPU・CPU DRAM・diskへ配置するdevice mapとCPU / disk offloadを使い、単一GPU memoryを超えるmodelをloadできる。
+- notebook、MPI multi-CPU、cluster launcherなど実行環境差を吸収し、既存PyTorch codeの分散化を薄い抽象化で行える。
+
+以下の更新履歴は、これらの機能のうち**FSDP、低精度学習、compile、CPU offload、CPU分散実行**が最近どう拡張されたかを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
