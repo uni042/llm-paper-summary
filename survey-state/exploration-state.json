@@ -1,16 +1,22 @@
 {
   "schema_version": 1,
   "bootstrap_required": false,
-  "last_run": "2026-09-08T05:00:00+09:00",
-  "last_completed_paper": {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","id":"arXiv:2609.03430","path":"papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md"},
-  "last_lineage": "inference/kv-cache-optimization-compression",
+  "last_run": "2026-09-08T05:58:37+09:00",
+  "last_completed_paper": {"title":"SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference","id":"arXiv:2605.08151","path":"papers/inference/05-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md"},
+  "last_lineage": "inference/speculative-decoding-moe",
   "last_morning_report_cutoff": null,
-  "pending_research": [],
+  "pending_research": [
+    {"title":"An Interpretable Latency Model for Speculative Decoding in LLM Serving","canonical_id":"arXiv:2605.15051","discovery_source":"arxiv-search"},
+    {"title":"Cache-Resident LLM Inference in GB-Scale Last-Level Caches","canonical_id":"arXiv:2606.25353","discovery_source":"arxiv-search"},
+    {"title":"Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice","canonical_id":"arXiv:2606.22327","discovery_source":"arxiv-search"},
+    {"title":"Online Linear Programming for Multi-Objective Routing in LLM Serving","canonical_id":"arXiv:2607.03948","discovery_source":"arxiv-search"}
+  ],
   "pending_audit": [],
   "research_batch_size": 5,
   "audit_batch_size": 5,
   "full_batch_streak": 0,
   "recent_batch_history": [
+    {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":0,"completed_audit":0,"carried_over_audit":0},
     {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4},
     {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4},
     {"assigned_research":4,"completed_research":1,"carried_over_research":3,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4},
@@ -33,6 +39,7 @@
     {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","result":"already_recorded","discovery_source":"arxiv-new","reason_code":"already_recorded","reason":"Existing Edge lineage page and README entry found during recovery check."},
     {"title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","canonical_id":"arXiv:2609.01068","result":"added","discovery_source":"arxiv-new"},
     {"title":"AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference","canonical_id":"arXiv:2609.02514","result":"added","discovery_source":"arxiv-new"},
-    {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","result":"added","discovery_source":"arxiv-new"}
+    {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","result":"added","discovery_source":"arxiv-new"},
+    {"title":"SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference","canonical_id":"arXiv:2605.08151","result":"added","discovery_source":"arxiv-search"}
   ]
 }
