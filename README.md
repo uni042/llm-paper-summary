@@ -9,13 +9,13 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 ## リポジトリ構成
 
 - [papers/](papers/) — **論文サーベイ**
-  - [Inference / 推論](papers/inference/) — **149本**
+  - [Inference / 推論](papers/inference/) — **148本**
   - [Training / 学習](papers/training/) — **19本（凍結）**
 - [framework-updates/](framework-updates/) — 主要runtime / frameworkの重要機能更新
 - [llm-releases/](llm-releases/) — 主要model familyのrelease情報
 - [templates/](templates/) — 記述template
 
-現在の論文収録数: **168本**（推論149本 + 学習19本）
+現在の論文収録数: **167本**（推論148本 + 学習19本）
 
 ## 運用対象
 
