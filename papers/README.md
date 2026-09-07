@@ -1,12 +1,12 @@
 # 論文カタログ
 
-収録論文: **137本**。
+収録論文: **138本**。
 
 論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。各系統READMEには、**その系統が何を効率化する研究群かという説明**と、**収録する全論文の一文説明**を掲載する。
 
 Transformer、MoE、KV cache、quantization、speculative decodingなどLLMの基礎知識は説明なしで使う。一方、特定論文・狭い研究領域でしか通じにくい名称や略語は、それだけで説明を終えない。最初に出す時点で「何をどう変える仕組みか」を説明し、できるだけ**何の計算・転送・memory使用量・待ち時間を減らすのか**が分かる表現にする。この方針は一文説明だけでなく各論文本文にも適用する。
 
-## Inference / 推論 — 119本
+## Inference / 推論 — 120本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 14本
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 10本
@@ -17,8 +17,8 @@ Transformer、MoE、KV cache、quantization、speculative decodingなどLLMの�
 - [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 7本
 - [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 5本
 - [Other Inference Systems](inference/09-other-inference-systems/) — 3本
-- [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 17本
-  - KV cacheをCPU DRAM・別GPU HBM・storageへ置く、CPU上のKVから必要subsetだけを検索する、attentionをKVの近くへ移す、再計算へ置き換える、複数SSDの並列I/Oを使う、またはHBM/DRAM/SSDを協調管理してlocal HBM容量と転送待ちを減らす。
+- [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 18本
+  - KV cacheをCPU DRAM・別GPU HBM・storageへ置く、CPU上のKVから必要subsetだけを検索する、attentionをKVの近くへ移す、CPU attentionを前倒しする、再計算へ置き換える、複数SSDの並列I/Oを使う、またはHBM/DRAM/SSDを協調管理してlocal HBM容量と転送・計算待ちを減らす。
 - [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 24本
 
 → [Inference一覧](inference/)
