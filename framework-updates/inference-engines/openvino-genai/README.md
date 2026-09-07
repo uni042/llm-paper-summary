@@ -2,6 +2,17 @@
 
 OpenVINO GenAIの主要な機能・性能更新を継続的に記録する集約ページ。Intel CPU / GPU向けLLM・生成model実行、投機的デコード（speculative decoding）、temporal cache、compile / link最適化などを扱う。
 
+## 現在できること
+
+- Intel CPU / GPU / NPU上でLLM、vision-language model、embedding / reranking、画像・動画生成などの生成AIpipelineを実行できる。
+- LLM generationではKV cache、continuous batching、streaming、prefix / prompt再利用等を使い、複数requestや長contextを効率化できる。
+- speculative decodingを利用し、小さいdraftまたはtree状の候補をtarget modelでまとめて検証してdecode回数を減らせる。
+- OpenVINOのmodel変換・低精度最適化と組み合わせ、INT8 / INT4等の圧縮modelをIntel hardwareへ展開できる。
+- C++ / Python APIからpipelineとして組み込み、local applicationやserver backendに利用できる。
+- diffusion / video系ではstep間の中間結果を再利用するcacheも扱い、LLM以外の生成modelの反復計算も削減できる。
+
+以下の更新履歴は、model追加ではなく、**speculative decoding、temporal cache、compile / link最適化**など実行方式を変える主要機能だけを記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
