@@ -4,14 +4,21 @@ MLXの主要な機能・性能更新を継続的に記録する集約ページ�
 
 ## 現在できること
 
-- NumPyに近いarray APIとPyTorchに近いmlx.nn / optimizer APIで、Apple Silicon上の機械学習modelを構築・学習・推論できる。
-- automatic differentiation、vectorization、computation graph最適化を組み合わせて使える。
-- lazy executionとdynamic graphを使い、必要になるまでtensorをmaterializeせず実行できる。
-- CPUとGPUが同じ統一memoryを共有するため、device間copyを明示せず同じarrayを両deviceから利用できる。
-- CPU / GPUへoperationを配置し、LLM、画像生成、音声認識など上位libraryの計算backendとして使える。
-- 低bit matrix multiply、attention、MoE等の専用kernelを提供し、LLM runtime側から高速operatorとして利用できる。
+- **Apple Silicon向け汎用array / ML基盤**: NumPyに近いarray APIとPyTorchに近い`mlx.nn` / optimizer APIで、modelの構築・学習・推論を行える。LLM専用runtimeではなく、MLX LMなど上位libraryが使う低level tensor / neural-network基盤。
+- **automatic differentiation**: forward計算からgradientを自動構築し、training loopを実装できる。手書きbackwardを避けつつ、custom functionや低level operatorと組み合わせられる。
+- **lazy execution**: operationを呼んだ時点ですぐ全tensorを計算せず、結果が必要になるまでgraphとして保持する。複数operationをまとめて最適化したり、不要な中間計算を省いたりできる余地を作る。
+- **dynamic graphとcompile**: Pythonの柔軟なmodel codeを保ちながら、繰り返し部分をcompileして実行overheadを減らせる。shapeやcontrol flowによって再compile costが発生するため、固定的なhot pathほど利得が大きい。
+- **統一memoryの直接利用**: CPUとGPUが同じphysical memory poolを共有するApple Siliconの構成を前提に、同じarrayをCPU / GPUから参照できる。従来型discrete GPUのような明示的host→device copyを減らせる一方、CPUとGPUは同じmemory bandwidthを奪い合う。
+- **zero-copy host data import**: CPU側に既にあるbufferをcopyせずMLX arrayとして参照できる。token buffer、preprocessing結果、外部libraryから渡されたdataなどで不要なmemory duplicationを減らせる。
+- **CPU / GPU operation配置**: operationごとにCPUまたはGPUへ配置できるため、GPU向きの大きいmatrix計算とCPU向きの軽い処理を使い分けられる。上位runtime側でdevice placementを組むための基盤になる。
+- **量子化matrix演算**: 低bit weightを展開しきらずmatrix multiplyへ使うoperatorを持ち、LLMのweight memoryとmemory trafficを削減できる。量子化形式ごとのscale管理と専用kernelが性能を左右する。
+- **attention専用kernel**: full attention、GQA等でscore tensorを完全にmaterializeせずblock単位に計算するkernelを利用できる。長contextでは中間memoryとHBM trafficの削減が大きい。
+- **MoE向けoperator**: routingされたexpertだけを処理する量子化matrix multiply等を使い、tokenが届いていないexpertへ不要なGPU workを割り当てない実行ができる。
+- **vectorization / batching変換**: 同じfunctionを複数sampleへ自動的にvectorizeする仕組みを使い、Python loopを減らしてdevice上の並列計算へ変換できる。
+- **distributed computationの基盤**: 上位MLX ecosystemから複数device / hostを使う分散実行へ接続できる。MLX自体はtensor・通信・graph実行の土台であり、LLM固有schedulerやserving APIは上位libraryが担う。
+- **LLM以外の上位workload**: image generation、speech、vision等でも同じtensor / kernel基盤を利用できるため、multimodal pipeline内で複数modelをApple Silicon上へまとめて載せる用途にも使える。
 
-以下の更新履歴は、基盤機能のうち**attention、GQA、量子化MoE、zero-copy memory、GPU kernel効率**の改善を記録している。
+以下の更新履歴は、これらの基盤能力のうち**統一memoryをどこまでcopyなしで使えるか、attention / GQA / MoEのHBM trafficをどこまで減らせるか、GPU occupancyをどこまで改善できるか**を中心に追う。
 
 ## 初期収録期間
 
