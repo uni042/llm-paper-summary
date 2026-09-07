@@ -2,24 +2,16 @@
 
 LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値（activation）、最適化器が保持する最適化状態（optimizer state）、モデルのパラメータ（parameter）などがGPUメモリへ収まりきらないことがある。
 
-この系統では、それらを**CPUメモリやNVMe SSDへ一時的に逃がし、次に必要になる前にGPUへ戻す**ことで、限られたGPUメモリでも大きなモデルやバッチを学習する研究をまとめる。
-
-単に「GPUから外へ置いて容量を増やす」だけでは、CPUやSSDとのデータ転送待ちでGPUが止まり、学習が極端に遅くなり得る。そのため、
-
-- GPU計算中に別データを読み書きする
-- テンソル（tensor）が長く使われない時間だけSSDへ逃がす
-- CPU側のバッファ浪費を減らす
-- 最適化器更新を別処理と同時進行させる
-- ストレージ側や複数I/O経路を使ってデータ移動量を減らす
-
-といった方法で、**メモリ容量を増やしつつ転送待ちをどこまで隠せるか**が主要な課題になる。
+この系統では、それらを**CPUメモリやNVMe SSDへ一時的に逃がし、次に必要になる前にGPUへ戻す**方式に加え、CPU DRAMそのものをモデル状態の正本としてGPUへ必要な層だけを流す方式もまとめる。GPU計算中の非同期I/O、未使用時間を利用したSSD退避、CPUバッファ削減、最適化器更新との重畳、複数I/O経路、層単位のstreamingなどにより、**容量を増やしつつ転送待ちをどこまで隠せるか**が主要な課題になる。
 
 ## 収録論文
 
-収録論文: 12本。公開日が新しい順。
+収録論文: 13本。公開日が新しい順。
 
 - 2026-04-29 — [Efficient Training on Multiple Consumer GPUs with RoundPipe](2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md)
   - 複数のconsumer GPUへ担当層を固定せず、空いたGPUへ処理段階を順番に割り当てる。層ごとの実測負荷と転送優先度も調整し、GPUの遊休時間とCPU↔GPU転送待ちを減らす。
+- 2026-02-04 — [Horizon-LM: A RAM-Centric Architecture for LLM Training](2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md)
+  - CPU DRAMをパラメータと最適化状態の正本にし、GPUには計算する層だけを順次転送する。モデル全体のGPU常駐と完全な自動微分グラフを避け、単一GPUで100B級モデルを扱えるようにする。
 - 2025-12-19 — [GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping](2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md)
   - 同じ層の全マイクロバッチ（microbatch）をまとめて処理し、一度SSDから読んだ重みを使い回す。最適化器更新も次の学習反復と重ねて待ち時間を減らす。
 - 2025-11-18 — [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)
@@ -40,6 +32,5 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   - SSDに置いた最適化状態をCPU/GPUへ毎回運ぶ代わりに、演算機能付きSSD側で最適化器更新を実行し、データ移動量を減らす。
 - 2023-10-13 — [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)
   - 各テンソルがいつ使われ、どれくらい長く不要になるかを実行計画から求め、GPUメモリ・CPUメモリ・ストレージのどこへ置くかと移動時刻を自動で決める。
-
 - 2021-11-13 — [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)
   - parameter・gradient・optimizer stateをGPUだけでなくCPU DRAMとNVMe SSDへ分散し、各nodeのI/Oを並列利用しながら必要なdataを先読みしてGPU計算と重ね、GPU memoryを超える巨大modelを学習できるようにする。
