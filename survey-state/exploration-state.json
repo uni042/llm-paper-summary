@@ -7,7 +7,6 @@
   "last_morning_report_cutoff": null,
   "pending_research": [
     {"title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","canonical_id":"arXiv:2609.01068","discovery_source":"arxiv-new"},
-    {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","discovery_source":"arxiv-new"},
     {"title":"AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference","canonical_id":"arXiv:2609.02514","discovery_source":"arxiv-new"},
     {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","discovery_source":"arxiv-new"}
   ],
@@ -21,9 +20,9 @@
   "audit_batch_size": 5,
   "full_batch_streak": 0,
   "recent_batch_history": [
-    {"assigned_research":1,"completed_research":1,"carried_over_research":0,"assigned_audit":3,"completed_audit":3,"carried_over_audit":0},
     {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4},
-    {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4}
+    {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4},
+    {"assigned_research":4,"completed_research":1,"carried_over_research":3,"assigned_audit":4,"completed_audit":0,"carried_over_audit":4}
   ],
   "recently_checked": [
     {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","result":"added","discovery_source":"arxiv-search"},
@@ -38,6 +37,7 @@
     {"title":"Break the Sequential Dependency of LLM Inference Using Lookahead Decoding","canonical_id":"arXiv:2402.02057","result":"added","discovery_source":"arxiv-search"},
     {"title":"REST: Retrieval-Based Speculative Decoding","canonical_id":"arXiv:2311.08252","result":"added","discovery_source":"arxiv-search"},
     {"title":"Splitwise: Efficient Generative LLM Inference Using Phase Splitting","canonical_id":"arXiv:2311.18677","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against ISCA 2024 metadata and official artifact."},
-    {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","canonical_id":"arXiv:2609.04852","result":"added","discovery_source":"arxiv-new"}
+    {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","canonical_id":"arXiv:2609.04852","result":"added","discovery_source":"arxiv-new"},
+    {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","result":"already_recorded","discovery_source":"arxiv-new","reason_code":"already_recorded","reason":"Existing Edge lineage page and README entry found during recovery check."}
   ]
 }
