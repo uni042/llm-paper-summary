@@ -4,10 +4,14 @@
 
 ## 収録論文
 
-収録論文: 25本。公開日が新しい順。
+収録論文: 27本。公開日が新しい順。
 
 - 2026-07-30 — [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)
   - P/D分離時に全KVを送らず、重要KVをprefill中に先送りし、不足分をlocal読出しと並列remote取得、残りをnetwork idle時に転送してstage切替待ちを減らす。
+- 2026-07-18 — [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)
+  - 未知の出力長に対するKV予約量、GPU並列構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemption costを抑える。
+- 2026-06-23 — [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md)
+  - cold MoE群のFFN weight用GPU poolとKV/attention用GPU poolを分け、変動するKV需要をmodel横断で共有して長contextとtail latencyを改善する。
 - 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
 - 2025-01-14 — [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)
 - 2024-08 — [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)
@@ -40,4 +44,5 @@
 - chunked prefill: DeepSpeed-FastGen、Sarathi-Serve。
 - prefix-aware routing / cache reuse: SGLang、Preble、Pensieve、CachedAttention、Mooncake。
 - P/D disaggregation: Splitwise、DistServe、Mooncake、P/D-Serve、SmartGen。
-- SmartGenはP/D間KV transfer量をattention sparsityで削減し、P/D-Serveはproduction scaleのgrouping・ratio調整・network controlを扱う。
+- multi-model memory disaggregation: CrossPoolはcold MoEのFFN weight poolとKV/attention poolを分離する。
+- uncertainty-aware KV reservation: Robust KV Cache Managementは出力長分布のshiftを考慮して予約・routing・GPU構成を共同最適化する。
