@@ -2,6 +2,18 @@
 
 ExLlama系の主要な機能・性能更新を継続的に記録する集約ページ。ExLlamaV2の後継であるExLlamaV3も同じ系統として扱う。GPU memoryへ収まりきらないMoE expert / KV cacheのCPU offload、投機的デコード（speculative decoding）、MTP、VRAM allocatorなどを中心に記録する。
 
+## 現在できること
+
+- consumer NVIDIA GPU向けに、EXL3を含む低bit量子化modelを高速実行できる。
+- tensor parallelismとexpert parallelismを組み合わせ、複数GPUへdense部分とMoE expertを柔軟に配置できる。
+- continuous / dynamic batchingで複数requestを同時処理し、server workloadのGPU利用率を上げられる。
+- speculative decoding、MTP、2〜8 bit KV cache量子化を使い、decode回数とKV memoryを削減できる。
+- MoE expertやKV cacheの一部をCPU DRAMへ退避し、VRAMを超えるmodel / contextを動かせる。
+- multimodal modelとLoRAを扱え、TabbyAPI経由ではOpenAI互換API、model download、chat template、embedding servingも利用できる。
+- Hugging Face Transformers pluginとして組み込み、既存Transformers workflowからExLlamaV3 backendを使える。
+
+以下の更新履歴は、特に**expert / KVのCPU offload、draft量の自動調整、CPU kernel、VRAM allocator**がどう改善されたかを示す。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
