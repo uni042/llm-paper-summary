@@ -2,6 +2,17 @@
 
 LightLLMの主要な機能・性能更新を継続的に記録する集約ページ。GPU / CPU / diskへまたがるKV・recurrent state cache、prefill/decode分離、MoE kernel、投機的デコード（speculative decoding）、RL serving向けweight更新などを扱う。
 
+## 現在できること
+
+- continuous batchingとtoken単位schedulerで多数requestを同時に進めるGPU servingを行える。
+- Radix / prefix cacheで同じprompt prefixのKVをrequest間再利用し、prefillの再計算を減らせる。
+- KVやhybrid modelのrecurrent stateをGPU、CPU、diskへ階層化し、長contextや多数sessionのmemoryを拡張できる。
+- prefillとdecodeを別workerへ分離し、必要なKVをworker間で転送するdisaggregated servingを構成できる。
+- tensor / data / expert parallelism、MoE、FP8 / INT8 / AWQ等の低bit実行、MTP / EAGLE系speculative decodingを利用できる。
+- RL / post-trainingではserverを止めずにweightを更新し、cacheを無効化してrolloutを再開するonline weight updateを使える。
+
+以下の更新履歴は、主に**Hybrid Radix Cache、GPU→CPU→disk階層、P/D分離、MoE kernel、RL rollout連携**の拡張を記録している。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
