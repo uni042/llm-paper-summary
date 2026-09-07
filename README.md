@@ -1,6 +1,6 @@
 # LLM Inference and Training Systems Research Survey
 
-LLMの**推論・学習システム研究**を中心に、論文サーベイ、主要フレームワーク（framework）の重要更新、新しいLLMリリースを整理するリポジトリです。
+LLMの**推論システム研究**を中心に、論文サーベイ、主要フレームワーク（framework）の重要更新、新しいLLMリリースを整理するリポジトリです。Training論文は既存内容を参照用として保持し、通常更新は凍結しています。
 
 単なる論文リンク集ではなく、各手法について「何をCPU / GPU / storageへ置くのか」「どの計算・通信を省くのか」「何と何を同時進行させるのか」「どのhardware条件で効果が出たのか」が、個別方式の名前を知らなくても追えることを目標にしています。
 
@@ -8,43 +8,17 @@ LLMの**推論・学習システム研究**を中心に、論文サーベイ、�
 
 ## リポジトリ構成
 
-- [papers/](papers/) — **論文サーベイ**。最終目的を基準に推論 / 学習へ分け、その下を研究系統別に整理
-  - [Inference / 推論](papers/inference/) — **123本**
-  - [Training / 学習](papers/training/) — **19本**
-- [framework-updates/](framework-updates/) — **実装側の更新追跡**。vLLM、llama.cpp、SGLang、DeepSpeed、ROCmなどで、性能・memory・offload・通信方式を実質的に変えるrelease / PRを記録
-- [llm-releases/](llm-releases/) — **model公開の更新追跡**。主要model familyのAPI / open-weight releaseと、MoE構造、context length、multimodal対応などを整理
-- [templates/](templates/) — 新しい論文・項目を追加するときの記述template
+- [papers/](papers/) — **論文サーベイ**
+  - [Inference / 推論](papers/inference/) — **128本**
+  - [Training / 学習](papers/training/) — **19本（凍結）**
+- [framework-updates/](framework-updates/) — 主要runtime / frameworkの重要機能更新
+- [llm-releases/](llm-releases/) — 主要model familyのrelease情報
+- [templates/](templates/) — 記述template
 
-現在の論文収録数: **142本**（推論123本 + 学習19本）
+現在の論文収録数: **147本**（推論128本 + 学習19本）
 
-## 3種類の情報を分けて扱う
+## 運用対象
 
-### 1. 論文サーベイ
+通常の論文探索は、推論・serving・decoding・runtime・実行時memory / I/O・on-device inferenceの効率化を最終目的とする研究を対象にします。学習を内部手段として利用していても最終目的が推論効率化ならInferenceへ収録します。
 
-新しい推論・学習手法そのものを扱う。
-
-例:
-
-- GPUに収まらないweight / KV cacheをCPUやSSDへ退避する
-- MoE expertを予測して先読みする
-- KV cacheを圧縮する
-- request schedulingやprefill / decode分離を改善する
-- activationやoptimizer stateをCPU / storageへoffloadして学習memoryを減らす
-
-### 2. フレームワーク更新
-
-論文とは別に、既存runtimeへ実際に入った重要実装を追う。
-
-たとえば、
-
-- CUDA kernelを融合して中間memory accessを減らす
-- KV cacheをGPU → CPU → diskの複数階層へ拡張する
-- MoEのGPU間通信を高速化する
-- 投機的デコード（speculative decoding）をruntimeへ統合する
-- weight / activation / optimizer stateのoffloadを正式機能へ入れる
-
-といった変更を対象にする。
-
-### 3. LLMリリース
-
-新しいmodelが出たこと自体を追う。
+Framework更新とLLMリリースは論文サーベイとは別に整理します。
