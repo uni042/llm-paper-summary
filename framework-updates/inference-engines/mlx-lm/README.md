@@ -6,14 +6,20 @@ MLX LMの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 現在できること
 
-- Apple Silicon上でLLMのtext generation、chat、streaming、batch generationを実行できる。
-- Hugging Face HubのmodelをMLX形式へ変換・量子化し、量子化済みmodelを再配布できる。
-- LoRAとfull-parameter fine-tuningを量子化modelを含めて実行できる。
-- mx.distributedを使ったdistributed inference / fine-tuningに対応する。
-- rotating KV cache、prompt cache、prefill step分割を使い、長promptのmemory量と再計算を調整できる。
-- Python API、CLI、serverとして利用し、Appleの統一memory上でmodelとKVを運用できる。
+- **Apple Silicon上でのLLM推論**: Appleの統一memoryを使い、text generation、chat、streaming、batch generationを実行できる。CPUとGPUが同じphysical memoryを共有するため、GPU専用VRAMへweightを丸ごとcopyする構成とは異なり、大容量RAMをmodelとKVで共同利用できる。
+- **Hugging Face modelの変換**: Hugging Face Hub等のcheckpointをMLX向けweight / configへ変換し、Apple GPUで実行しやすい形式へ持ち込める。既存open-weight modelをApple Siliconへ移す入口として使える。
+- **weight量子化**: model weightを低bit化し、統一memory使用量とweight読出し量を減らせる。量子化済みmodelを保存・再配布できるため、毎回変換し直さずlocal inferenceへ使える。
+- **KV / prompt cache管理**: rotating KV cacheで保持する過去token量へ上限を設けたり、prompt cacheを保存して共通prefixのprefill結果を再利用したりできる。長context時のmemory増加と再計算のどちらを優先するか調整できる。
+- **prefillの分割実行**: 長いpromptを小さいstepへ分けてprefillし、一度に作るactivationやtemporary tensorのpeak memoryを抑えられる。統一memory容量は大きくてもbandwidthと一時memoryは有限なので、長文処理で重要になる。
+- **LoRA fine-tuning**: base weightを固定し、小さいadapterだけ学習するLoRAを実行できる。full fine-tuningよりoptimizer stateとgradient memoryを大幅に減らし、Mac上で現実的な追加学習を行いやすい。
+- **full-parameter fine-tuning**: model全parameterを更新するtrainingにも対応する。LoRAよりmemory要求は大きいが、Apple Siliconを推論専用ではなく研究用training環境としても利用できる。
+- **量子化modelを使った追加学習**: 量子化済みbase modelとadapter trainingを組み合わせ、base weightのmemory footprintを抑えながらfine-tuningする構成を取れる。
+- **distributed inference / training**: `mx.distributed`を使い、複数device / hostへ計算やparameterを分散できる。単一deviceの計算・memory制約を超える構成へ拡張できる一方、network / inter-device通信costが追加される。
+- **Python API / CLI / server**: libraryとしてgeneration loopへ組み込む、CLIでlocal chatする、serverとして常駐させる、といった複数の使い方ができる。library APIとserver CLIでは公開されているcache / quantization optionが一致しない場合があるため、利用可能機能を区別して扱う必要がある。
+- **投機的デコード関連の基盤**: modelのMTP headや外部draftを使って複数tokenをまとめて検証する経路を扱える。MLAやrecurrent architectureでは通常のTransformer KVと異なるcache処理が必要なため、multi-token attention経路やrollback対応が性能・対応範囲を左右する。
+- **Apple Silicon向け研究・試作の位置づけ**: datacenter servingのmulti-tenant schedulerより、Mac上でopen-weight modelをload・量子化・fine-tune・serveまで一貫して試す用途に強い。
 
-以下の更新履歴では、stable機能に加え、**MLA multi-token decode、KV cache量子化、recurrent state rollback**のように今後主要能力になり得る未マージPRをstableと分離して追跡する。
+以下の更新履歴では、stable機能に加え、**MLA multi-token decode、KV cache量子化、recurrent state rollbackのように「Apple Silicon上で長contextや投機的デコードをどこまで実用化できるか」を変える未マージPR**をstableと分離して追跡する。
 
 ## 初期収録期間
 
