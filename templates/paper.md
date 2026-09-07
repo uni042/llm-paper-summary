@@ -15,25 +15,53 @@ last_checked: YYYY-MM-DD
 
 # 論文名
 
-> 一文要約
+> 一文要約。方式名だけで終えず、「何を観測し、何を動かす／削る／予測することで、何の計算・memory・I/O・待ち時間を減らすか」が1文で分かるようにする。
 
 ## 記述ルール
 
-Transformer、MoE、KV cache、quantization、speculative decoding、tensor / pipeline parallelismなど、LLM分野で広く使われる基礎用語は説明なしで使ってよい。
+### 用語
 
-一方、**特定論文や狭い研究分野でしか通じにくい方式名・略語・scheduler名・数理最適化名・hardware固有語を、説明の前提として使わない**。正式名称を残す場合は最初の出現で、
+Transformer、MoE、KV cacheなどLLM分野で広く使われる基礎概念は使用してよい。ただし、**特定論文や狭い研究分野でしか通じにくい方式名・略語・scheduler名・数理最適化名・hardware固有語を、説明の前提としてそのまま使わない**。
 
-1. 何を入力として見るのか
+専門用語を残す場合は最初の出現で、日本語による意味を先に示し、必要なら正式な英語名を括弧内に残す。
+
+例:
+
+- 「先頭の長いrequestが後続requestまで待たせる状態（head-of-line blocking）」
+- 「SLOを満たして処理できるrequest量（goodput）」
+- 「GPUとstorageがCPU DRAMを中継せず直接data transferするGPUダイレクトストレージ（GPUDirect Storage; GDS）」
+- 「別々なら中間tensorを書き戻す複数処理を1 kernelへまとめる融合（fusion）」
+
+正式名称を残す場合は、最初の出現で最低限、
+
+1. 何を入力・観測するのか
 2. 具体的に何を動かす・選ぶ・削る・予測するのか
 3. その結果、何の計算・転送・memory使用量・待ち時間が減るのか
+4. 失敗・誤予測・resource不足時にどうなるのか
 
 が分かる文章を添える。
 
-例えば `head-of-line blocking` とだけ書かず「先頭の長いrequestが後続requestを待たせる状態」、`goodput` とだけ書かず「SLOを満たして処理できるrequest数」のように書く。このルールは一文要約だけでなく、概要、手法、評価、既存研究との差、限界、実装上の含意の**全文章**に適用する。
+このルールは一文要約だけでなく、概要、手法、評価、既存研究との差、限界、実装上の含意の**全文章**に適用する。
+
+### 数値と証拠の区別
+
+以下を混同しない。
+
+- kernel単体benchmark と end-to-end throughput / latency
+- simulation と 実機測定
+- preprint / Open PR / Draft PR と 正式release / conference版
+- theoretical FLOPs削減 と 実測speedup
+- memory capacity削減 と 実際のpeak allocated memory
+- GPU HBM、CPU DRAM、別GPU memory、通常NVMe、remote storage、CXL等の異なるmemory tier
+- weight offload、KV cache offload、activation offload、optimizer-state offload
+
+大きな倍率を書くときは、**何と何を比較した倍率か**を同じ段落で明示する。
 
 ## 概要
 
 研究が解こうとしている問題、既存方式との差、対象となるmodel / runtime / memory階層を簡潔にまとめる。論文独自の名称を先に出すより、まず「何をどう改善する研究か」を説明する。
+
+必要なら、変更前のdata flowと提案後のdata flowを簡単に書く。
 
 ## 手法
 
@@ -46,6 +74,7 @@ Transformer、MoE、KV cache、quantization、speculative decoding、tensor / pi
 - 何を観測するか
 - 何を変更するか
 - どのbottleneckを減らすか
+- 追加で何のresourceを消費するか
 - 誤予測やresource不足時にどうなるか
 
 を明示する。
@@ -75,9 +104,9 @@ algorithm、scheduler、cache policy、predictor、量子化器など、独立�
 
 ### まず見るところ
 - **結論:** 何が分かったかを1〜2文で。単なる数値列ではなく、実用上の意味を書く。
-- **速度・効率:** FLOPs／理論計算量と実測のtokens/s／latencyを区別する。training論文ではstep time／throughput／目標品質までの時間を明記する。
-- **品質:** losslessか近似か、PPL／accuracy／task品質の変化を要約する。
-- **memory・I/O:** CPU DRAM、通常SSD/NVMe、GDS、CXL、HBF、KV cache、weight／activation／optimizer offloadを区別する。狭いhardware機構は最初に意味を説明する。
+- **速度・効率:** 理論計算量と実測tokens/s / latencyを区別する。training論文ではstep time / throughput / 目標品質までの時間を明記する。
+- **品質:** losslessか近似か、PPL / accuracy / task品質の変化を要約する。
+- **memory・I/O:** GPU HBM、CPU DRAM、通常NVMe SSD、GPU-direct storage、CXL / remote memory等を区別する。狭いhardware機構は最初に意味を説明する。
 - **評価の強さ／注意点:** 実機かsimulationか、hardware・batch・model・公開code・主な一般化限界を書く。
 
 <details>
@@ -104,7 +133,7 @@ algorithm、scheduler、cache policy、predictor、量子化器など、独立�
 |---|---:|---:|---:|
 |  |  |  |  |
 
-表の直後に、倍率が大きい理由や、何が処理時間を支配していたのかを短く説明する。
+表の直後に、倍率が大きい理由、何が処理時間を支配していたのか、kernel単体かend-to-endかを短く説明する。
 
 ### 品質・精度
 
@@ -142,7 +171,17 @@ algorithm、scheduler、cache policy、predictor、量子化器など、独立�
 
 ## 限界・実装状況
 
+- hardware依存条件
+- model / workload依存条件
+- upstream runtimeへ統合済みか、fork / prototypeか
+- code公開の有無
+- approximationを使う場合の品質risk
+
+を必要に応じて記録する。
+
 ## 一般的な実装上の含意
+
+論文固有systemを離れても再利用できる設計原理があれば記録する。
 
 ## 引用関係
 
