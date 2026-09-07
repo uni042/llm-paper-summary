@@ -4,6 +4,17 @@ MLX LMの主要な機能・性能更新を継続的に記録する集約ペー�
 
 未マージPRは正式releaseと明確に分け、**提案段階の性能値をstable機能として扱わない**。
 
+## 現在できること
+
+- Apple Silicon上でLLMのtext generation、chat、streaming、batch generationを実行できる。
+- Hugging Face HubのmodelをMLX形式へ変換・量子化し、量子化済みmodelを再配布できる。
+- LoRAとfull-parameter fine-tuningを量子化modelを含めて実行できる。
+- mx.distributedを使ったdistributed inference / fine-tuningに対応する。
+- rotating KV cache、prompt cache、prefill step分割を使い、長promptのmemory量と再計算を調整できる。
+- Python API、CLI、serverとして利用し、Appleの統一memory上でmodelとKVを運用できる。
+
+以下の更新履歴では、stable機能に加え、**MLA multi-token decode、KV cache量子化、recurrent state rollback**のように今後主要能力になり得る未マージPRをstableと分離して追跡する。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
