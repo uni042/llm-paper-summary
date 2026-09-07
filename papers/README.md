@@ -1,6 +1,6 @@
 # 論文カタログ
 
-収録論文: **140本**。
+収録論文: **141本**。
 
 論文はまず最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。各系統READMEには、**その系統が何を効率化する研究群かという説明**と、**収録する全論文の一文説明**を掲載する。
 
@@ -23,12 +23,14 @@ Transformer、MoE、KV cache、quantization、speculative decodingなどLLMの�
 
 → [Inference一覧](inference/)
 
-## Training / 学習 — 18本
+## Training / 学習 — 19本
 
 - [Training Offload / Memory Systems](training/01-training-offload-memory-systems/) — 13本
   - activation、optimizer state、parameterなどをCPU / SSDへ退避する方式に加え、CPU DRAMを状態の正本としてGPUへ必要な層だけを流す方式も扱う。転送・更新をGPU計算と重ね、限られたGPU memoryで大規模学習を行う。
 - [Distributed / Heterogeneous MoE Training](training/02-distributed-heterogeneous-moe-training/) — 5本
   - expertの配置・複製・GPU間通信・parallelism・GPU性能差を調整し、多数または異種GPU上でMoE trainingを効率化する。
+- [Pipeline-Parallel / Modular Training Systems](training/03-pipeline-parallel-modular-training/) — 1本
+  - modelをstageへ分割したtrainingで、実行順、stage間dependency、activation lifetime、通信、checkpoint / replayを変え、pipeline bubble・memory・待ち時間・recovery costを減らす。
 
 → [Training一覧](training/)
 

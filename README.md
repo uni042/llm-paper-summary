@@ -10,12 +10,12 @@ LLMの**推論・学習システム研究**を中心に、論文サーベイ、�
 
 - [papers/](papers/) — **論文サーベイ**。最終目的を基準に推論 / 学習へ分け、その下を研究系統別に整理
   - [Inference / 推論](papers/inference/) — **122本**
-  - [Training / 学習](papers/training/) — **18本**
+  - [Training / 学習](papers/training/) — **19本**
 - [framework-updates/](framework-updates/) — **実装側の更新追跡**。vLLM、llama.cpp、SGLang、DeepSpeed、ROCmなどで、性能・memory・offload・通信方式を実質的に変えるrelease / PRを記録
 - [llm-releases/](llm-releases/) — **model公開の更新追跡**。主要model familyのAPI / open-weight releaseと、MoE構造、context length、multimodal対応などを整理
 - [templates/](templates/) — 新しい論文・項目を追加するときの記述template
 
-現在の論文収録数: **140本**（推論122本 + 学習18本）
+現在の論文収録数: **141本**（推論122本 + 学習19本）
 
 ## 3種類の情報を分けて扱う
 
