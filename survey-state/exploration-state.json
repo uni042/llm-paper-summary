@@ -11,7 +11,13 @@
     {"title":"Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice","canonical_id":"arXiv:2606.22327","discovery_source":"arxiv-search"},
     {"title":"Online Linear Programming for Multi-Objective Routing in LLM Serving","canonical_id":"arXiv:2607.03948","discovery_source":"arxiv-search"}
   ],
-  "pending_audit": [],
+  "pending_audit": [
+    {"title":"AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving","canonical_id":"arXiv:2302.11665","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md"},
+    {"title":"FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference","canonical_id":"arXiv:2305.05920","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md"},
+    {"title":"SpotServe: Serving Generative Large Language Models on Preemptible Instances","canonical_id":"arXiv:2311.15566","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"},
+    {"title":"ServerlessLLM: Low-Latency Serverless Inference for Large Language Models","canonical_id":"arXiv:2401.14351","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"},
+    {"title":"DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference","canonical_id":"arXiv:2401.08671","path":"papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"}
+  ],
   "research_batch_size": 5,
   "audit_batch_size": 5,
   "full_batch_streak": 0,
@@ -23,23 +29,6 @@
     {"assigned_research":3,"completed_research":3,"carried_over_research":0,"assigned_audit":4,"completed_audit":4,"carried_over_audit":0}
   ],
   "recently_checked": [
-    {"title":"FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving","canonical_id":"arXiv:2604.02715","result":"added","discovery_source":"arxiv-search"},
-    {"title":"MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference","canonical_id":"arXiv:2607.09686","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference","canonical_id":"arXiv:2608.12103","result":"added","discovery_source":"arxiv-search"},
-    {"title":"MoEless: Efficient MoE LLM Serving via Serverless Computing","canonical_id":"arXiv:2603.06350","result":"added","discovery_source":"arxiv-search"},
-    {"title":"P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving","canonical_id":"arXiv:2608.15171","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Adaptive Context Parallelism for Production LLM Serving","canonical_id":"arXiv:2609.04774","result":"added","discovery_source":"arxiv-new"},
-    {"title":"SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification","canonical_id":"arXiv:2305.09781","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads","canonical_id":"arXiv:2401.10774","result":"added","discovery_source":"arxiv-search"},
-    {"title":"EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty","canonical_id":"arXiv:2401.15077","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Break the Sequential Dependency of LLM Inference Using Lookahead Decoding","canonical_id":"arXiv:2402.02057","result":"added","discovery_source":"arxiv-search"},
-    {"title":"REST: Retrieval-Based Speculative Decoding","canonical_id":"arXiv:2311.08252","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Splitwise: Efficient Generative LLM Inference Using Phase Splitting","canonical_id":"arXiv:2311.18677","result":"already_recorded","reason_code":"already_recorded","reason":"Formal audit completed against ISCA 2024 metadata and official artifact."},
-    {"title":"KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU","canonical_id":"arXiv:2609.04852","result":"added","discovery_source":"arxiv-new"},
-    {"title":"mzCache: On-Device LLM Memory Management under Multitasking","canonical_id":"arXiv:2609.01338","result":"already_recorded","discovery_source":"arxiv-new","reason_code":"already_recorded","reason":"Existing Edge lineage page and README entry found during recovery check."},
-    {"title":"OUTLETS: Output-Length Prediction from Speculative Decoding Backbones","canonical_id":"arXiv:2609.01068","result":"added","discovery_source":"arxiv-new"},
-    {"title":"AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference","canonical_id":"arXiv:2609.02514","result":"added","discovery_source":"arxiv-new"},
-    {"title":"Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning","canonical_id":"arXiv:2609.03430","result":"added","discovery_source":"arxiv-new"},
     {"title":"SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference","canonical_id":"arXiv:2605.08151","result":"added","discovery_source":"arxiv-search"}
   ]
 }
