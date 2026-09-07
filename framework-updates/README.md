@@ -52,20 +52,13 @@
 
 ## 掲載方針
 
-主に以下を対象とする。
+対象は特定の最適化方式に限定せず、**LLMの推論・serving・学習・runtime・hardware実行基盤で、そのフレームワークの能力、利用可能な構成、性能特性、memory / I/O / 通信特性、運用方法を実質的に変える主要機能**を広く扱う。
 
-- **CPU / SSD offload**: weight、KV cache、activation、optimizer stateなどをGPU外へ置く変更
-- **MoE / expert cache**: expertの配置・複製・cache・routing・GPU間通信を変える変更
-- **先読み（prefetch）**: 次に必要なdataを計算中に先にmemoryへ戻し、I/O待ちを減らす変更
-- **動的routing（dynamic routing）**: workloadに応じてexpertやrequestの処理先を変える変更
-- **投機的デコード（speculative decoding）**: 将来token候補を先に作り、本体modelでまとめて検証する変更
-- **量子化（quantization）**: weight、activation、KV cache等をFP8 / INT8 / FP4など低bit形式で保持・計算する変更
-- **GPU kernel / fusion**: 複数処理を1 kernelへまとめる、memory accessを減らすなどの変更
-- **並列化（parallelism）**: tensor / data / pipeline / expert parallelismやprefill/decode分離を変える変更
-- **memory management**: KV allocator、paged cache、VMM、buffer poolなどの変更
-- **I/O / communication**: CPU↔GPU、GPU↔GPU、storage↔GPUの転送経路を変える変更
+たとえば、推論・生成方式、batchingとscheduling、KV / prefix cache、memory管理、CPU・storage・peer GPUへのoffload、量子化、投機的デコード、MoE、各種parallelismと分散実行、prefill / decode分離、GPU kernelとcompiler最適化、通信・I/O、LoRAやfine-tuning、distributed training、FSDP / ZeRO、activation / optimizer管理、RL rollout連携、multimodal処理、API / serving機能、modelのload・配置・実行方式などを含む。ここに挙げたものは例示であり、**新しい種類の主要機能も、そのフレームワークで「何ができるか」を実質的に広げるなら対象とする**。
 
-単なる新model対応、allowlist・chat template追加、軽微な互換性変更、bug / crash / correctness / security fixだけの変更は原則として除外する。
+「現在できること」は、直近の更新履歴に登場した機能だけではなく、公式documentation・repository・releaseなどから確認できる主要機能全体をまとめる。更新履歴では、その主要機能が新設された場合だけでなく、適用範囲の拡大、構成自由度の向上、性能・memory効率・latency・throughput・通信量・I/O・運用性を実質的に改善する変更も扱う。
+
+一方、単なる対応model追加、allowlist・chat template追加、軽微な互換性変更、既存機能を変えないhardware対応追加、bug / crash / correctness / security修正など、**フレームワークの主要能力を実質的に変えない変更は原則として除外する**。
 
 情報源は公式release、公式PR、公式documentationなど一次資料を優先する。未マージPRはstable機能と分け、Open / Draft状態を明示する。
 
