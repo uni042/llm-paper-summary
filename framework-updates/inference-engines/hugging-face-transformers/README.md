@@ -2,6 +2,17 @@
 
 Hugging Face Transformersの主要な機能・性能更新を継続的に記録する集約ページ。model実装、KV cache、attention backend、投機的デコード（speculative decoding）など、一般的な推論経路へ影響する変更を扱う。
 
+## 現在できること
+
+- text、vision、audio、multimodalを含む多数のTransformer系modelを共通APIでloadし、inference・fine-tuning・generationへ使える。
+- generation APIでsampling、beam search、constraint付き生成、streaming、assistant modelを使うspeculative decodingなど複数のdecoding方式を扱える。
+- Dynamic / Static / Sliding Windowなど複数のKV cache実装を選び、compileしやすさ、memory量、長context向け挙動を調整できる。
+- SDPA、FlashAttention等のattention backendをmodel側から選択し、hardwareに応じた高速kernelを利用できる。
+- bitsandbytes、GPTQ、AWQ、FP8等の量子化ecosystemと連携し、低bit modelをload・推論できる。
+- Trainer / PEFT等の周辺libraryと組み合わせ、full fine-tuning、LoRA、分散学習へつなげられる。
+
+以下の更新履歴は、この広い機能群のうち**KV cacheを使うprefill高速化とspeculative decoding**の最近の主要変更だけを記録している。model追加や互換修正は対象外とする。
+
 ## 初期収録期間
 
 2026-06-03〜2026-09-03
