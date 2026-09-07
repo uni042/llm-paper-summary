@@ -4,14 +4,20 @@ Mistral.rsの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 現在できること
 
-- CPU、CUDA GPU、Apple MetalでLLM / multimodal modelを実行し、continuous batchingとpaged attentionで複数requestをservingできる。
-- Hugging Face checkpoint、GGUF、独自量子化形式を扱い、2〜8 bit、GPTQ、AWQ、HQQ、FP8等の量子化を利用できる。
-- multi-GPU / distributed inference、prefix cache、per-layer device / quantization配置を使い、hardwareに合わせてmodelを分割できる。
-- LoRA / X-LoRAをrequest単位で切り替え、serverを止めずにadapterをload / unloadできる。
-- MTP / DFlash等のspeculative decodingとCUDA Graphを使い、decodeのtarget forward回数とlaunch overheadを減らせる。
-- OpenAI互換・Anthropic互換API、web UI、tool calling、MCP client、code / shell executionを備え、agentic servingまで単一runtimeで扱える。
+- **複数hardware backendでのlocal / server inference**: CPU、CUDA GPU、Apple MetalでLLM / multimodal modelを実行できる。desktopからGPU serverまで同じruntime系で扱える一方、利用できるkernelや量子化形式はbackendごとに異なる。
+- **continuous batchingとpaged attention**: 複数requestを同時に進め、生成が終わったrequestをbatchから外しながら新しいrequestを追加できる。KVをpage単位で管理することで、最大context分の連続領域をrequestごとに先取りするmemory浪費を減らせる。
+- **多様なmodel / weight形式**: Hugging Face checkpoint、GGUF、独自量子化形式を扱える。2〜8 bit、GPTQ、AWQ、HQQ、FP8等を選び、VRAM / RAM容量と速度・精度のtrade-offを調整できる。
+- **layer単位のdevice / precision配置**: layerごとにCPU / GPU、量子化精度を変えられるため、全modelを同じdevice・同じbit幅へ固定せずhardware容量に合わせて配置できる。大きいmodelでは一部layerをCPUへ逃がしてVRAM不足を回避できる。
+- **multi-GPU / distributed inference**: 複数GPUへmodelや計算を分け、単一GPUに収まらないmodelや高いserving並列度へ拡張できる。通信costが増えるため、GPU間linkとmodel shapeに応じて利得が変わる。
+- **prefix cacheとKV streaming**: 共通prefixのKVを再利用し、同じsystem prompt等を繰り返しprefillする計算を減らせる。GQAでは共有K/Vを不要に複製せずstreamしながら使い、memory trafficを減らす経路も持つ。
+- **LoRA / X-LoRA serving**: base modelを再loadせず、request単位でadapterを切り替えられる。dynamic load / unloadにより、複数用途のadapterを1つのserverへ載せつつ、使っていないadapterのmemoryを解放できる。
+- **MoE向け低bit実行**: routingされたexpertだけをindexで選び、量子化weightのままGEMV / GEMMを実行できる。全expertを毎token計算せず、decode時のweight読出し量を抑える。
+- **投機的デコード**: MTP / DFlash等で複数token候補を先に生成し、target modelでまとめて検証できる。acceptance rateを見てdraft depthを自動調整し、候補を作りすぎる無駄を抑えられる。
+- **GPU側でのverifyとCUDA Graph**: draft tokenの受理判定やargmaxをGPU上でまとめて行い、CPUとの同期を減らせる。CUDA Graphで繰り返すdraft / verify kernel列をcaptureし、tokenごとのlaunch overheadも下げられる。
+- **recurrent modelのrollback**: GDN等のrecurrent stateを持つmodelでも、投機候補が拒否されたとき最後に確定したtoken位置へstateを巻き戻せる。KV cacheだけを持つTransformer以外にもspeculative decodingを広げるための機能。
+- **API / agentic serving**: OpenAI互換・Anthropic互換API、web UI、tool calling、MCP client、code / shell executionを備え、単なるtext completionだけでなくtool-using agentのruntimeとして使える。
 
-以下の更新履歴は、この主要機能群のうち**CPU量子化kernel、KV streaming、LoRA serving、concurrent scheduling、speculative decoding**の性能面の更新を記録している。
+以下の更新履歴は、これらの主要能力について**CPU / GPUそれぞれの低bit kernel、cacheとdevice配置、adapter切替、複数request scheduling、投機的デコードのGPU完結度**がどう改善されたかを追う。
 
 ## 初期収録期間
 
