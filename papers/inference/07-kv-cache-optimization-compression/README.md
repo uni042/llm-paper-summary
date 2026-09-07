@@ -8,7 +8,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ## 収録論文
 
-収録論文: 7本。公開日が新しい順。
+収録論文: 9本。公開日が新しい順。
 
 - 2026-09-03 — [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)
   - KVの重要度を毎tokenで一から計算せず、過去のattention傾向を少しずつ平均して重要度順位を長めに使い回し、どのKVを捨てるか決める計算負荷を下げる。
@@ -16,6 +16,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   - KV cacheを最初から大きく確保せず、reasoning中に過去contextへのattention需要が増えた時だけpage単位で容量を追加する。
 - 2026-09-03 — [SGD-KV: Summarization Guided KV Cache Compression](2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md)
   - 長いcontextの要点を保持する能力が高いattention headへ多くのKV容量を与え、冗長なheadのcacheを強く削減する。
+- 2026-06-23 — [CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference](2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md)
+  - 意味検索に強いattention headで重要tokenを選び、圧縮誤差が大きいlayerへ多くのKV budgetを配ってlong-context品質を保つ。
+- 2026-05-01 — [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md)
+  - reasoning中に新しく増えたKVだけをwindow単位で周期圧縮し、重要token周辺を可変長chunkとして残してcompression overheadと情報欠落を抑える。
 - 2025-04-08 — [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md)
   - attentionが現在のKV blockを計算している間に次のK/V blockをHBMからGPUのL2 cacheへ先読みし、次のblockを読む時にGPUがHBM待ちで止まる時間を減らす。
 - 2025-01-14 — [PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving](2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md)
@@ -27,7 +31,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ## 主な技術の分岐
 
-- **KVを減らす:** InertiaKV、SGD-KV、ALISAは重要なKVを優先して残し、不要なKVの保存や読み出しを減らす。
+- **KVを減らす:** InertiaKV、SGD-KV、CompressKV、KARA、ALISAは重要なKVを優先して残し、不要なKVの保存や読み出しを減らす。
 - **必要な時だけ容量を増やす:** GrowPageはreasoning中のattention需要が増えた時だけKV容量を追加する。
 - **GPU内で先読みする:** Asynchronous KV Cache PrefetchingとPRESERVEは、HBM上のKVを使う直前にL2 cacheへ運び、HBMから読み出す待ち時間を別の計算や通信と重ねる。
 - **shared prefixの重複計算を減らす:** Hydragenは共有KVを保存するだけでなく、複数sequenceのattentionをまとめて計算し、同じprefix KVの重複読み出しを減らす。
