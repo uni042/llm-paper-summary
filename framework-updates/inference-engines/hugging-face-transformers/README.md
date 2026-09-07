@@ -4,14 +4,18 @@ Hugging Face Transformersの主要な機能・性能更新を継続的に記録�
 
 ## 現在できること
 
-- text、vision、audio、multimodalを含む多数のTransformer系modelを共通APIでloadし、inference・fine-tuning・generationへ使える。
-- generation APIでsampling、beam search、constraint付き生成、streaming、assistant modelを使うspeculative decodingなど複数のdecoding方式を扱える。
-- Dynamic / Static / Sliding Windowなど複数のKV cache実装を選び、compileしやすさ、memory量、長context向け挙動を調整できる。
-- SDPA、FlashAttention等のattention backendをmodel側から選択し、hardwareに応じた高速kernelを利用できる。
-- bitsandbytes、GPTQ、AWQ、FP8等の量子化ecosystemと連携し、低bit modelをload・推論できる。
-- Trainer / PEFT等の周辺libraryと組み合わせ、full fine-tuning、LoRA、分散学習へつなげられる。
+- **多数architectureを共通APIで扱う**: text、vision、audio、multimodalを含む多数のTransformer系modelを`AutoModel` / task-specific class等からloadし、inference・generation・fine-tuningへ使える。modelごとの細かな実装差を共通interfaceへ寄せるため、新しいarchitectureを試す基盤として使われる。
+- **複数のgeneration方式**: greedy、sampling、beam search、top-k / top-p、temperature、constraint付き生成、streamingなどをgeneration APIから選べる。用途に応じて決定的生成、探索、確率的生成を切り替えられる。
+- **投機的デコード**: assistant / draft modelで複数token候補を先に生成し、target modelでまとめて検証できる。候補受理率が高ければtarget modelのforward回数を減らし、品質を基本的にtarget model側へ保ったままdecode latencyを下げられる。
+- **複数種類のKV cache**: Dynamic、Static、Sliding Window等のcache実装を選び、memory使用量、最大context、compileしやすさを調整できる。StaticCacheのようにshapeを固定するとcompile / graph最適化を適用しやすい一方、最大長分の領域を先に確保するcostがある。
+- **attention backend切替**: PyTorch SDPA、FlashAttention等のbackendを選び、hardwareやsequence長に合うkernelを使える。model codeを大きく書き換えず、attention scoreの中間memoryやHBM trafficを削減できる。
+- **量子化ecosystemとの連携**: bitsandbytes、GPTQ、AWQ、FP8等の量子化backendと連携して低bit weightをloadできる。model memoryを減らして小さいGPUへ載せたり、weight読出し量を抑えてdecodeを高速化したりできるが、方式ごとに対応hardware・精度・kernelが異なる。
+- **device map / offload**: Accelerate等と連携し、layerごとに複数GPU、CPU DRAM、diskへweightを配置できる。単一GPUを超えるmodelをloadできる代わりに、CPU / storageからの転送がlatencyへ影響する。
+- **fine-tuningとadapter連携**: Trainer、PEFT等と組み合わせ、full fine-tuning、LoRA、QLoRAなどへつなげられる。Transformers自身はmodel定義とtraining / generation interfaceの中心を担い、distributed trainingやparameter-efficient trainingは周辺libraryと統合して使う。
+- **multimodal preprocessingから生成まで**: tokenizer、image processor、audio processor、processor統合を通じて、text以外の入力をmodel形式へ変換してgenerationまで接続できる。LLM単体だけでなくVLMやspeech-language modelの標準実行層としても使える。
+- **compile / optimized kernelとの接続点**: `torch.compile`や固定shape cache、optimized attentionを組み合わせ、Python / dynamic shape由来のoverheadを減らせる。Transformersはserving schedulerそのものより、上位runtimeが利用するmodel implementation層として重要。
 
-以下の更新履歴は、この広い機能群のうち**KV cacheを使うprefill高速化とspeculative decoding**の最近の主要変更だけを記録している。model追加や互換修正は対象外とする。
+以下の更新履歴は、この広い機能群のうち**model対応追加ではなく、既存modelの一般的なKV cache・attention・decoding経路そのものを変える更新**を中心に記録する。
 
 ## 初期収録期間
 
