@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "workflow_version": 5,
+  "workflow_version": 7,
   "items": [
     {
       "id": "maint-20260908-serving-readme-sync",
@@ -21,6 +21,21 @@
       "resolved_at": "2026-09-08T11:54:13.313821+00:00",
       "resolution": "Deterministically rebuilt all inference lineage lists and parent counts from 160 active paper artifacts; verified locally with survey.py validate.",
       "repair_commit": "f75f06bd20cbd31a3bf5c963b7f4183d136b63e0"
+    },
+    {
+      "id": "identity-index-compaction",
+      "kind": "generated_index_compaction",
+      "affected_paths": [
+        "survey-state/paper-identity-index.json",
+        "survey-state/identity-deltas/"
+      ],
+      "detected_at": "2026-09-08T23:26:51+09:00",
+      "source_commit": "1583d21dc5f564b79f2faa3a7c4655c2c229a078",
+      "evidence": "Workflow v7 published a connector-safe identity delta for arXiv:2607.02043 without rewriting the large format-3 snapshot.",
+      "attempt_count": 0,
+      "last_error": null,
+      "next_action": "On a checkout-capable maintenance run, execute identity_delta.py validate and compact, then survey.py build and validate.",
+      "status": "open"
     }
   ]
 }
