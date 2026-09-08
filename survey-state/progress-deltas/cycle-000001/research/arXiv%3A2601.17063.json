@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 8,
+  "cycle_id": "cycle-000001",
+  "plan_id": "daily-20260908T093000+0900",
+  "side": "research",
+  "canonical_id": "arXiv:2601.17063",
+  "status": "completed",
+  "result": "added",
+  "artifact_paths": [
+    "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md",
+    "survey-state/identity-deltas/arxiv/2601.17063.json"
+  ],
+  "verified_commits": [
+    "cf427c09aab97540b8fb71d4856180b60853095e",
+    "03ae6e41fad4958ee4f862ffe8994b844b69c76f"
+  ],
+  "recovery_only": true,
+  "recovered_from_runs": [
+    "20260909T043122-reading",
+    "hourly-20260909T043000-0900"
+  ],
+  "note": "Reconciles already-read and already-saved FlashMoE work. This is recovery of prior work, not a completion created by workflow migration."
+}

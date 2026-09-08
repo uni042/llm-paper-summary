@@ -1,42 +1,34 @@
 # 成果の保存と検証
 
-## 成果の種類
+## 小さい正本を優先する
 
-| 種類 | 内容 | 完了への影響 |
-|---|---|---|
-| 研究成果 | 論文本体または採否記録、必要な識別差分、当該計画と未完了一覧 | 保存・整合性確認が研究の完了条件 |
-| compact済み索引 | `paper-identity-index.json` 形式3。論文本体＋差分から再生成可能なスナップショット | 通常の論文保存で全体更新を必須にしない |
-| 派生表示 | 系統一覧、件数、一文要約の一覧同期、比較表、表示用集計 | 不整合は保守へ送り、研究の完了を取り消さない |
-| 観測記録 | 実行記録、夜間点検結果 | 実行状況を説明する。既読の正本にしない |
+通常runでは巨大な派生ファイルやplan全体を書き換えず、以下の小さい正本を優先する。
 
-論文は1研究1ファイル。ひな型の必須属性、一次資料、評価条件、主要結果の出典、既存との差、限界を持つ。分類変更は新規追加ではなく移動とし、移動案内を有効論文数に数えない。
+- 論文本体または監査済み論文ページ
+- `identity-deltas/`（必要な場合）
+- `progress-deltas/<cycle_id>/<side>/...`
+- run記録
+- cycle claim/state
 
-## 論文保存前の確認
+`paper-identity-index.json`、各系統README、比較表、STATUSは再生成可能な派生物として24回目の整合性チェックへ回せる。
 
-- 正規識別子・arXiv基本識別子・DOI・OpenReviewと有効保存先が、形式3スナップショットと未compact差分を合わせた論理索引上で一対一である。
-- 本文を実際に確認済みで、取得不能や採否の理由が正しい記録先にある。
-- 論文本体、必要な識別差分、当日計画、未完了一覧に二重完了・欠落がない。
-- 凍結した学習領域を変更していない。
-- 作業権の所有者と有効期限を保存直前の先頭版で確認した。
+## progress delta
 
-巨大な `paper-identity-index.json` を完全な編集可能payloadとして取得できないことだけを保存不能理由にしない。新規・識別子変更では小さい `identity-deltas/` を使う。論理索引自体に衝突がある、または既存研究との同一性を確認できない場合だけ、その研究変更を公開せず未完了として残す。
+必須:
+`schema_version`, `workflow_version`, `cycle_id`, `plan_id`, `side`, `canonical_id`, `status`, `run_id`, `run_index`.
 
-## 保存順序
+成果保存時は現在の `claim_token` も記録し、最新cycle claimと一致することを保存前に確認する。古いtokenのdeltaは完了確定に使わない。
 
-1. 最新先頭版へ自分の項目差分だけを適用する。
-2. 新規論文または識別子・保存先変更なら、`reliability.md` のschemaで識別差分を用意する。完全checkoutがあれば `python scripts/identity_delta.py prepare --paper <path>` を使う。
-3. **論文本体/採否 + 識別差分 + 当日計画 + 未完了一覧**を一つの変更として保存する。形式3スナップショット全体の書換えはこの原子的変更に含めなくてよい。競合時は最新状態から再適用する。
-4. リモートの論文本体、差分、計画、queueを再取得し、論理索引に衝突がないことを確認して初めて完了に数える。
-5. 完全checkoutが使える場合は差分をcompactして形式3を再生成してよい。できない場合は `maintenance-queue.json` の `identity-index-compaction` を重複なくopenにし、研究完了は戻さない。
-6. 系統一覧・件数・比較表等の派生表示を同期する。短時間で修復できなければmaintenanceへ送る。
-7. 実行記録と進捗表示を更新し、作業権を解放する。
+既に旧runで論文本体が保存済みの場合は、既存成果とrun記録を検証して `recovery_only` / `recovered_from_run` を付けたdeltaを作成できる。再読や二重加算をしない。
 
-`verified_commit` は実在確認した研究成果の変更識別子を後続の観測記録へ書く。変更自身の識別子を同じ変更内へ自己参照させない。
+## identity delta
 
-## connectorのみの実行
+形式3のidentity indexはcompact済みsnapshotとして維持する。通常runは小さいidentity deltaを使い、巨大snapshot全体を書き換えない。別canonical IDとの識別子衝突だけは保存前に止める。
 
-完全checkoutやPythonがなくても、新規論文を保存できる。正規化した識別子について、(1) `identity-deltas/`、(2) 形式3スナップショットまたは既存論文frontmatterを完全一致検索し、別canonical IDへの衝突がないことを確認する。その上で小さい識別差分を論文本体・計画・queueと同じ変更へ含める。自動生成範囲を推測編集しない。
+## connector-only
 
-## 夜間の修復保存
+完全checkoutがなくても、論文本体・identity delta・progress deltaの小さい変更を順に保存できる。可能ならGit data APIで一つのcommitへまとめる。途中まで保存された場合は、次runが成果をreconcileする。plan/queueの巨大更新ができないことだけで論文成果を未完了に戻さない。
 
-固定版での検査後に先頭版が進んでいた場合は、変更されたファイルを再取得してから修復差分を適用する。完全checkoutとPythonが使える場合、未compact差分を `identity_delta.py validate` → `identity_delta.py compact` → `survey.py build` → `survey.py validate` の順で処理する。推測による研究内容の修正、学習領域の書換え、古い状態の一括上書きはしない。修復後の検査結果と保存確認版を夜間記録へ残す。
+## 生成物
+
+各系統READMEが大きくなっても、生成範囲は `survey.py build` を優先する。非生成の局所修正には `repo_edit.py` を使える。24回目にidentity delta compact、生成README/件数/比較表/STATUSの再生成と検証を行う。

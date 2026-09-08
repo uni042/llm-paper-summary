@@ -1,33 +1,35 @@
 {
   "schema_version": 1,
-  "workflow_version": 7,
-  "layout": "split-state-v1",
+  "workflow_version": 8,
+  "layout": "cycle-state-v1",
   "legacy_snapshot": "survey-state/exploration-state.json",
   "paths": {
+    "cycle_state": "survey-state/cycle-state.json",
+    "cycle_plans_dir": "survey-state/cycle-plans/",
+    "cycle_history_dir": "survey-state/cycle-history/",
+    "progress_deltas_dir": "survey-state/progress-deltas/",
     "runtime": "survey-state/runtime.json",
-    "daily_plans_dir": "survey-state/daily-plans/",
+    "legacy_daily_plans_dir": "survey-state/daily-plans/",
     "research_queue": "survey-state/queues/research.json",
     "audit_queue": "survey-state/queues/audit.json",
-    "daily_history": "survey-state/daily-history.json",
-    "recently_checked": "survey-state/recently-checked.json",
-    "maintenance_queue": "survey-state/maintenance-queue.json",
-    "blockers": "survey-state/blockers.json",
     "identity_index": "survey-state/paper-identity-index.json",
     "identity_deltas_dir": "survey-state/identity-deltas/",
-    "rejected_papers": "survey-state/rejected-papers.json",
-    "logs_dir": "survey-state/log/",
     "retry_papers": "survey-state/retry-papers.json",
+    "rejected_papers": "survey-state/rejected-papers.json",
+    "maintenance_queue": "survey-state/maintenance-queue.json",
+    "blockers": "survey-state/blockers.json",
     "leases": "survey-state/leases.json",
     "runs_dir": "survey-state/runs/",
-    "status_page": "survey-state/STATUS.md",
+    "logs_dir": "survey-state/log/",
     "integrity_dir": "survey-state/integrity/",
-    "frozen_training": "survey-state/frozen-training.json"
+    "frozen_training": "survey-state/frozen-training.json",
+    "status_page": "survey-state/STATUS.md"
   },
   "migration": {
-    "from_workflow_version": 3,
-    "legacy_snapshot_read_only": true,
-    "migrated_at": "2026-09-08",
-    "to_workflow_version": 7,
-    "note": "workflow v7 keeps format-3 as a compacted snapshot and adds connector-safe identity deltas; no completion counts were changed"
+    "from_workflow_version": 7,
+    "to_workflow_version": 8,
+    "legacy_progress_preserved": true,
+    "current_plan_selection_treated_as_cycle_run_1": true,
+    "note": "Workflow v8 moves run ordering and ownership from wall-clock time to GitHub-persisted cycle_id/run_index. Migration itself does not add completed readings or audits."
   }
 }

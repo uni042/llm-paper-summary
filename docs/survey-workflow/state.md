@@ -1,60 +1,58 @@
 # 開始処理と実行状態
 
-## 開始処理
+## 制御の正本
 
-1. 実時刻、予定実行枠、手順の変更識別子、読み書き手段を確認する。予定枠は起動元のタイムゾーンで受け取る。
-2. `state-layout.json` と今回必要な状態を読む。Pythonと同じ版のリポジトリファイルを実行環境で使える場合は、[補助プログラム](reliability.md)の `run_bootstrap.py` を優先して使い、Python・依存・ローカル読書き・外部から観測したGitHub読書き可否、予定枠からのモード判定、精読時のroute判定、新しいrun開始記録、開始時点で対象を一意に決められる作業権をまとめて準備する。
-3. `run_bootstrap.py` を使った場合もローカル準備だけでは開始成功としない。出力された `files_to_publish` を最新先頭版へ一つの非force変更として保存し、run記録と作業権をリモートで再取得して一致を確認する。完全checkoutやPythonがない場合は、同じ確認・判定・開始記録保存を接続機能で個別に行う。ヘルパーを使えないこと自体をblockerにしない。
-4. 予定枠から確定したモードに従う。夜間は `nightly.md`、他のモードは対応する手順へ進む。精読で論文対象がこの時点では未確定なら、paper leaseは対象確定後に通常の作業権手順で取得する。
-5. 論文に着手する前に、日次計画・未完了一覧・実成果・形式3スナップショット・未compact識別差分を照合する。保存済み成果は再作成せず、未記録の進捗だけを復旧する。復旧を新たな精読・監査件数に数えない。
+`survey-state/cycle-state.json` が実行順序の唯一の正本である。
 
-## 状態の正本
+必須属性:
+- `cycle_number`, `cycle_id`
+- `max_runs: 24`
+- `next_run_index`
+- `active_claim`
+- `targets.research`, `targets.audit`
+- `current_plan_id`, `current_plan_path`
+- `previous_cycle_id`, `previous_plan_path`
 
-すべて `survey-state/` 以下。ファイル配置は `state-layout.json` に集約する。
+時刻は制御に使わない。`scheduled_at`、`started_at`、`finished_at` は観測用で、取得できない場合は省略してよい。モデルが推測した時刻を正本にしない。
 
-| ファイル | 内容と更新主体 |
-|---|---|
-| `runtime.json` | 現在計画への参照、日次目標、最終実行、朝の報告境界 |
-| `daily-plans/YYYY-MM-DD.json` | 期間・選定対象・項目ごとの進捗。締め済みも履歴として保持 |
-| `queues/research.json`、`queues/audit.json` | 未完了・繰越・候補。当日計画と識別子で整合させる |
-| `daily-history.json` | 実在する計画ごとの締め結果。一つの計画を二度締めない |
-| `paper-identity-index.json` | 形式3のcompact済み識別索引スナップショット |
-| `identity-deltas/` | スナップショット未反映の小さい識別変更。論理索引の一部 |
-| `retry-papers.json` | 本文取得不能の試行履歴・7日後の再確認日 |
-| `rejected-papers.json` | 一次資料の根拠と再評価条件を備えた永久除外 |
-| `recently-checked.json` | 直近約100件の確認結果。永続記録の代用にしない |
-| `maintenance-queue.json` | 安全に再生成できる表示・一覧・索引compact・リンクの修復待ち |
-| `blockers.json` | 外部復旧・権限・利用者判断が必要な問題。解決まで保持 |
-| `leases.json` | 期限付き作業権 |
-| `runs/<run_id>.json` | 開始・途中・終了の観測記録。成果の正本ではない |
-| `integrity/` | 夜間点検の範囲・指摘・修復・未検査・再開位置 |
-| `frozen-training.json` | 凍結した学習領域のファイル指紋。通常実行で更新しない |
-| `STATUS.md` | 表示用の進捗ページ。ここから完了を推測しない |
+## run claim
 
-旧 `exploration-state.json` と旧 `log/` は読取り互換用。新規進捗を書き込まない。
+開始時に最新HEADのcycle stateを読み、次のrunをclaimする。
 
-## 期限付き作業権
+- claimが無い場合: `next_run_index` を取得
+- 未終了claimが残る場合: 同じ `run_index` をrecovery対象とし、新しい `claim_token` でsupersedeする
+- `mode` はrun 1=`planning`、2〜23=`reading`、24=`integrity`
+- claim保存と `runs/<run_id>.json` の開始記録を同一変更に入れる
+- 保存後にリモート再取得し、`cycle_id/run_index/run_id/claim_token` が一致してから着手する
 
-`leases.json` の `items[resource]` に `run_id`, `updated_at`, `expires_at` を持つ。論文は `paper:<canonical_id>` を精読・監査で共有し、日次選定は `planning:<period_start>`、夜間保守は `maintenance` を使う。有効期間45分。長い作業は20分以内を目安に更新する。
+古いrunはsupersede後のtokenで成果を完了確定できない。古いrunが論文本体だけ保存していた場合は、次runが成果を照合してreconcileし、再読や二重加算をしない。
 
-1. 最新先頭版と作業権を取得する。他実行の権利が有効なら別対象へ進むか未完了で終了する。
-2. 取得した先頭版を親として作業権を保存し、強制なしで参照を更新する。単独ファイル更新なら取得済み内容SHAを条件にする。
-3. 競合したら最新版から再判断する。リモートで自分の権利と有効期限を再確認してから着手する。ローカル更新だけでは取得成功としない。
-4. 成果保存直前にも所有者と期限を確認し、その確認版を親に保存する。期限切れ・所有権喪失後は公開せず、既存成果を照合する。
-5. 保存確認後に解放する。別実行が引き継いだ権利を旧実行が解放・上書きしない。
+## 作業権
 
-実行ごとに独立したローカル作業場所を使う。夜間の読取りは固定版で行い、修復前に最新差分を再照合する。他実行が更新した論文・状態へ古い内容を上書きしない。
+45分などの時刻期限は制御に使わない。`leases.json` はworkflow 8ではrun claimに従属する作業権として扱い、各resourceに `cycle_id`, `run_index`, `run_id`, `claim_token` を記録する。有効性は最新 `cycle-state.active_claim.claim_token` との一致で判定する。
 
-## 開始・途中・終了記録
+resource:
+- `paper:<canonical_id>`: 精読・監査
+- `planning:<cycle_id>`: 選定
+- `maintenance:<cycle_id>`: 24回目整合性
 
-必須属性は `run_id`, `started_at`, `scheduled_at`, `mode`, `stage`, `status`, `last_progress_at`, `next_action`, `capabilities`。対象確定後に `canonical_id` や `plan_id`、保存確認後に `verified_commit` を追加する。
+別tokenが現在のclaimなら古い作業権は失効する。保存前に最新HEADのclaim tokenを再確認する。
 
-開始直後、対象確保時、論文保存ごと、長い処理の工程境界、終了時に更新し保存確認する。強制終了した実行の終了時刻を捏造しない。古い途中記録は「停止の疑い」であり、成果の実在を確認して復旧する。開始記録なしだけでは未起動と最初の保存失敗を区別できない。
+## 進捗の正本
 
-`run_bootstrap.py` が記録する `github_read` / `github_write` は起動元が実際に観測した値を渡す。ヘルパー自身はリモート権限を推測しない。`git_checkout` は `.git` の存在、`repository_files` は同じ版の必要ファイルの存在を表し、両者を同一視しない。
+選定planはsnapshotであり、毎論文の完了で巨大plan/queueを書き換えない。動的進捗は `survey-state/progress-deltas/<cycle_id>/<side>/<canonical_id>.json` を正本とする。
 
-## 日次選定の代行
+論理状態は「plan snapshot + progress delta」。旧planに既に `status: completed` がある場合はその完了を保持する。progress deltaは同じ項目を二度完了にしない。
 
-精読モードで当該期間の計画が欠落・期限切れ・選定途中なら、日次選定の作業権を取得して `planning.md` を代行する。朝・夜間は代行しない。計画がreadyになってから精読へ戻り、時間が足りなければ選定結果を保存して終了する。
+## 互換状態
 
-旧期間の遅延実行は新しい計画を巻き戻さない。複数日空いても未実行の仮想日を作って目標を繰り返し減らさず、実在する前計画を一度だけ締める。
+`runtime.json`, `daily-plans/`, `queues/`, `daily-history.json` はworkflow 7以前の履歴・表示・移行用。workflow 8ではcycle stateとcycle plan/historyを優先する。queueは繰越backlogの保持と選定時の補助に使えるが、毎論文の完了更新は要求しない。
+
+## run記録
+
+run記録の必須属性:
+`run_id`, `cycle_id`, `run_index`, `mode`, `claim_token`, `status`, `stage`, `workflow_commit`, `workflow_version`.
+
+朝報告対象なら `overlays: ["morning"]` を持てる。時刻は観測できたものだけ追加する。
+
+実行終了時は `cycle_state.py finish` と同じ規則でclaimを解放し、通常runなら次indexへ進める。早期完了ならcycleを閉じて次cycle run 1へ、run 24なら必ずcycleを閉じて次cycle run 1へ進める。
