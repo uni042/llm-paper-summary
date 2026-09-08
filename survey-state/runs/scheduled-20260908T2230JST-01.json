@@ -3,10 +3,12 @@
   "started_at": "2026-09-08T22:27:18+09:00",
   "scheduled_at": "2026-09-08T22:30:00+09:00",
   "mode": "reading",
-  "stage": "started",
+  "stage": "primary_source_read",
   "status": "in_progress",
-  "last_progress_at": "2026-09-08T22:27:18+09:00",
-  "next_action": "reconcile current plan and acquire a paper lease",
+  "last_progress_at": "2026-09-08T22:31:00+09:00",
+  "next_action": "persist arXiv:2607.02043 only when paper, identity index, plan and queue can be updated consistently",
+  "canonical_id": "arXiv:2607.02043",
+  "plan_id": "daily-20260908T093000+0900",
   "capabilities": {
     "github_read": true,
     "github_write": true,
@@ -14,5 +16,10 @@
     "dependency_check": false,
     "primary_source_web_fetch": true
   },
-  "workflow_commit": "438572deddf34b9b845ffdb4ca6239201cef48c4"
+  "workflow_commit": "438572deddf34b9b845ffdb4ca6239201cef48c4",
+  "observations": [
+    "Primary arXiv HTML v1 was read through system design, implementation, evaluation and limitations.",
+    "The current connector can replace complete UTF-8 files but the generated identity index is too large to retrieve as a complete editable payload in this runtime; publishing.md requires the paper, identity index, plan and queue to remain consistent.",
+    "No research completion was counted and no partial paper artifact was published."
+  ]
 }
