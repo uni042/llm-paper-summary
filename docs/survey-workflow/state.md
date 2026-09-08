@@ -9,10 +9,10 @@
 
 ## 4. 状態・識別情報の正本
 既存の形式と値を尊重し、存在しない項目だけ初期化する。ただし運用方式の第2版への移行は次の1回だけ行う。
-状態の `workflow_version` が2未満または未設定なら、未完了候補・論文実体・過去実績を保全したまま `research_batch_size=2`, `audit_batch_size=2`, `full_batch_streak=0`, `workflow_version=2` にする。これは負荷安定化のための計画的な設定移行であり、キューや既存成果の初期化ではない。第2版以降は[第10章](completion.md)の規則だけで増減する。移行と通常の中間保存はまとめてよい。
+状態の `workflow_version` が2未満または未設定なら、未完了候補・論文実体・過去実績を保全したまま `research_batch_size=1`, `audit_batch_size=1`, `full_batch_streak=0`, `workflow_version=2` にする。これは負荷安定化のための計画的な設定移行であり、キューや既存成果の初期化ではない。第2版以降は[第10章](completion.md)の規則だけで増減する。移行と通常の中間保存はまとめてよい。
 - `survey-state/exploration-state.json`：再開位置と処理状態。
   `last_run`, `last_completed_paper`, `last_lineage`, `last_morning_report_cutoff`, `recently_checked`, `pending_research`, `pending_audit`, `research_batch_size`, `audit_batch_size`, `full_batch_streak`, `recent_batch_history`。
-  新規状態の初期値は調査2、監査2、連続成功0、履歴空。直近6回の割当・完了・繰越・件数設定・実行方式版・実行識別子を履歴に残す。同じ実行の複数巡回を複数回の成功に数えない。
+  新規状態の初期値は調査1、監査1、連続成功0、履歴空。直近6回の割当・完了・繰越・件数設定・実行方式版・実行識別子を履歴に残す。同じ実行の複数巡回を複数回の成功に数えない。
   `last_completed_paper` は最後に正常追加または実質更新した推論論文。変更なし監査では置換しない。
 - `survey-state/paper-identity-index.json`：1研究につき有効なパス1つを対応させる機械可読索引。本文の正本は論文ページ。
   各項目は `canonical_id`, `path`, `title`, `normalized_title`, 存在する `arxiv_id` / `doi` / `openreview_id`, 確認済み識別子 `aliases`, `status: active`。
