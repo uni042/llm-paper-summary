@@ -9,10 +9,12 @@ workflow 8では制御を時刻からGitHub上の回数へ移す。管理用の�
 ```bash
 python .survey/scripts/run_bootstrap.py --run-id <id> --workflow-commit <commit> [--scheduled-at <metadata>] [--morning-overlay] --apply
 python .survey/scripts/cycle_state.py status
+python .survey/scripts/next_work.py
 python .survey/scripts/cycle_state.py claim --run-id <id> --workflow-commit <commit> --apply
 python .survey/scripts/cycle_state.py finish --run-id <id> --claim-token <token> --apply
 python .survey/scripts/cycle_state.py planning-seed
 python .survey/scripts/cycle_state.py lease acquire --resource <resource> --run-id <id> --claim-token <token> --apply
+python .survey/scripts/prepare_result.py --side research --paper papers/inference/<lineage>/<paper>.md --apply
 python .survey/scripts/progress_delta.py prepare --side research --canonical-id <id> --status completed --run-id <id> --claim-token <token> --artifact <path> --verified-commit <sha> --apply
 python .survey/scripts/identity_delta.py validate
 python .survey/scripts/identity_delta.py compact
@@ -33,7 +35,15 @@ python -m unittest discover -s .survey/tests
 
 `planning-seed` は前cycleのplanとprogress deltaを統合し、現在目標Nに対して古い繰越、overflow、新規探索可能枠を出力する。
 
-## progress delta / identity delta
+## next_work
+
+`.survey/scripts/next_work.py` はplan snapshotと当cycleのprogress deltaを統合し、研究側/監査側の `target/done/pending` と次に処理すべき1件をJSONで返す。優先規則は決定的で、片側だけ未完了ならその側、両側未完了なら完了率 `done/target` が低い側、同率ならresearchを選び、side内はplan順を維持する。
+
+このhelperで代替するのは進捗集計と次対象の機械的選択だけであり、論文の関連性・採否、本文解釈、監査品質の判断は自動化しない。
+
+## prepare_result / progress delta / identity delta
+
+`.survey/scripts/prepare_result.py` は保存済みpaper frontmatterと現在のactive claimを読み、canonical ID、必要なidentity delta、progress delta、同時に公開すべきファイル一覧を生成する。run_id / run_index / claim_tokenを手入力しないため、古いclaimを誤ってprogressへ埋め込む作業を減らす。GitHubへのpublish自体は行わないので、callerは生成物を論文本体と同じcommitへまとめ、リモート再取得で確認する。
 
 plan/queueの大きい書換えを毎論文で行わず、`.survey/survey-state/progress-deltas/` に1研究1小ファイルを保存する。論理進捗はplan snapshotとdeltaを重ねて算出する。既存plan内の旧 `completed` も保持する。
 

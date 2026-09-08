@@ -4,7 +4,9 @@ run 2〜23だけが通常の精読・監査を担当する。
 
 ## 対象選択
 
-plan snapshotと当cycleの `.survey/survey-state/progress-deltas/` を統合して未完了を算出する。精読と監査の進行差が大きい側を優先し、同程度なら精読→監査の順に進む。保存済み論文本体があるのにprogress deltaだけ欠ける場合は、一次資料を再読せず成果・識別子・既存run記録を照合してreconcileする。
+plan snapshotと当cycleの `.survey/survey-state/progress-deltas/` を統合して未完了を算出する。checkout/Pythonが使える場合は、まず `.survey/scripts/next_work.py` を実行し、正規化済み進捗・優先side・次のcanonical IDを機械的に決める。helperが使えない場合だけ同じ規則を接続機能で再現する。
+
+優先規則は、片側だけ未完了ならその側、両側未完了なら `done/target` が低い側、同率なら精読を先にする。各side内ではplan順の最初の未完了を選ぶ。保存済み論文本体があるのにprogress deltaだけ欠ける場合は、一次資料を再読せず成果・識別子・既存run記録を照合してreconcileする。
 
 ## 精読
 
@@ -16,7 +18,7 @@ plan snapshotと当cycleの `.survey/survey-state/progress-deltas/` を統合し
 
 ## 保存
 
-1論文ごとに論文本体/監査変更、必要なidentity delta、progress deltaを保存する。大きいplan/queue全体の更新は通常runの完了条件にしない。progress deltaをリモート再取得できた時点で論理完了に数える。余裕があれば同一runで複数本進める。
+1論文ごとに論文本体/監査変更、必要なidentity delta、progress deltaを保存する。checkout/Pythonが使える場合は `.survey/scripts/prepare_result.py` を優先し、paper frontmatterと現在claimからidentity/progress deltaを機械生成する。大きいplan/queue全体の更新は通常runの完了条件にしない。progress deltaをリモート再取得できた時点で論理完了に数える。余裕があれば同一runで複数本進める。
 
 ## 早期繰上げ
 
