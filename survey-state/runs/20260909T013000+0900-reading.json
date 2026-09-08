@@ -3,10 +3,11 @@
   "started_at": "2026-09-09T01:27:48+09:00",
   "scheduled_at": "2026-09-09T01:30:00+09:00",
   "mode": "reading",
-  "stage": "bootstrap",
-  "status": "running",
-  "last_progress_at": "2026-09-09T01:27:48+09:00",
-  "next_action": "reconcile current plan and continue selected reading/audit work",
+  "stage": "completed",
+  "status": "completed",
+  "last_progress_at": "2026-09-09T01:43:00+09:00",
+  "finished_at": "2026-09-09T01:43:00+09:00",
+  "next_action": "continue remaining selected reading/audit work on the next reading slot",
   "capabilities": {
     "python": true,
     "dependencies": "not_checked",
@@ -20,5 +21,8 @@
   "workflow_commit": "9675ae9975caed31f5e6b497eb4f881fb3754e99",
   "workflow_version": 7,
   "plan_id": "daily-20260908T093000+0900",
-  "route": "reading"
+  "route": "reading",
+  "canonical_id": "arXiv:2504.11320",
+  "result": "added",
+  "verified_commit": "12d701b6e4a701e55ff24e83d98a6a520bc40275"
 }
