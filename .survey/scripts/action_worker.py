@@ -17,7 +17,7 @@ REPO = Path(__file__).resolve().parents[2]
 MGMT = REPO / ".survey"
 REQUESTS = MGMT / "requests"
 RESULTS = MGMT / "results"
-ALLOWED = {"status", "validate", "prepare_result"}
+ALLOWED = {"status", "validate", "prepare_result", "claim_run", "finish_run", "planning_seed"}
 
 
 def run_json(cmd: list[str]) -> dict:
@@ -45,6 +45,39 @@ def handle(req: dict) -> dict:
     py = sys.executable
     if op == "status":
         payload = run_json([py, ".survey/scripts/next_work.py", "--root", ".survey"])
+        return {"operation": op, "ok": True, "payload": payload}
+
+    if op == "planning_seed":
+        payload = run_json([py, ".survey/scripts/cycle_state.py", "--root", ".survey", "planning-seed"])
+        return {"operation": op, "ok": True, "payload": payload}
+
+    if op == "claim_run":
+        run_id = req.get("run_id")
+        workflow_commit = req.get("workflow_commit")
+        if not isinstance(run_id, str) or not run_id:
+            raise ValueError("claim_run requires run_id")
+        if not isinstance(workflow_commit, str) or len(workflow_commit) < 7:
+            raise ValueError("claim_run requires workflow_commit")
+        cmd = [py, ".survey/scripts/cycle_state.py", "--root", ".survey", "claim",
+               "--run-id", run_id, "--workflow-commit", workflow_commit, "--apply"]
+        if req.get("scheduled_at"):
+            cmd += ["--scheduled-at", str(req["scheduled_at"])]
+        if req.get("morning_overlay"):
+            cmd += ["--morning-overlay"]
+        payload = run_json(cmd)
+        return {"operation": op, "ok": True, "payload": payload}
+
+    if op == "finish_run":
+        run_id = req.get("run_id")
+        claim_token = req.get("claim_token")
+        if not isinstance(run_id, str) or not run_id:
+            raise ValueError("finish_run requires run_id")
+        if not isinstance(claim_token, str) or not claim_token:
+            raise ValueError("finish_run requires claim_token")
+        cmd = [py, ".survey/scripts/cycle_state.py", "--root", ".survey", "finish",
+               "--run-id", run_id, "--claim-token", claim_token,
+               "--status", str(req.get("status") or "completed"), "--apply"]
+        payload = run_json(cmd)
         return {"operation": op, "ok": True, "payload": payload}
 
     if op == "validate":
