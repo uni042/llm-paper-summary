@@ -36,6 +36,25 @@
       "last_error": null,
       "next_action": "On a checkout-capable maintenance run, execute identity_delta.py validate and compact, then survey.py build and validate.",
       "status": "open"
+    },
+    {
+      "id": "maint-20260908-kairos-derived-sync",
+      "kind": "derived_readme_sync",
+      "affected_paths": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/README.md",
+        "papers/inference/README.md",
+        "papers/README.md",
+        "README.md",
+        "papers/inference/comparison.md",
+        "survey-state/STATUS.md"
+      ],
+      "detected_at": "2026-09-08T23:32:29+09:00",
+      "source_commit": "e3a8dc28ad2abce2610ce53f70d30e20736f63f6",
+      "evidence": "Kairos was added as a core research artifact through workflow v7; generated lineage lists, counts, comparison display and status have not yet been rebuilt from that artifact.",
+      "attempt_count": 0,
+      "last_error": null,
+      "next_action": "Rebuild generated lists/counts/comparison/status from current active artifacts after identity-delta validation or compaction. Use repo_edit.py only for non-generated local emergency edits, not to hand-edit generated ranges.",
+      "status": "open"
     }
   ]
 }
