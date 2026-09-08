@@ -2,15 +2,26 @@
 
 直近24時間の客観的な実行記録を保持する。
 
-## 2026-09-08 08:58 JST
+## 2026-09-08 08:58–09:11 JST
 - planned slot: `2026-09-08 09:00 JST`
 - run_id: `scheduled-20260908T090000+0900`
 - workflow_version: `2`
 - mode: `hourly-inference`
-- status: `running`
-- fixed research targets: `HeadWiseKV` (arXiv:2609.02029), `SwiftCache` (arXiv:2606.16135)
-- fixed audit targets: `DeepSpeed-FastGen` (arXiv:2401.08671), `MoE-Infinity` (arXiv:2401.14361)
-- checkpoint: target queue persisted before primary-source review
+- status: `completed`
+- research: assigned 2 / completed 2 / added 2 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 0
+- audit: assigned 2 / completed 2 / changed 2 / no_change 0 / carried_over 0
+- pending_research at end: 1（独立新着確認で次回候補へ追加: Pallas, arXiv:2608.16477）
+- pending_audit at end: 0
+- batch size: research 2 / audit 2
+- full_batch_streak: 0（独立新着確認後のqueueに未着手作業が残るため増加条件外）
+- discovery: existing queue primary-source review + independent arXiv search
+- validation: pass — recursive tree has 160 inference paper Markdown files including 6 moved stubs; identity registry has 154 active studies（144 arXiv + 10 other）, all arXiv IDs unique; Inference 154 / Training 19 / total 173; lineage counts KV Optimization 11 and KV Offload 21; required new-paper and audit metadata present
+- rejected ledger: added 0 / updated 0
+- added: `HeadWiseKV` (arXiv:2609.02029), `SwiftCache` (arXiv:2606.16135)
+- audited: `DeepSpeed-FastGen` — arXiv v1、Microsoft DeepSpeed所属、公式code、Llama-2/A100・H100・A6000実機評価を確認。`MoE-Infinity` — arXiv v3、著者6名と所属、RTX A5000実機評価、公式codeを確認
+- result commits: `ad6b6c43`, `6b88dd4f`
+- checkpoint commit: `bf5ac824`
+- error / bottleneck: none
 
 ## 2026-09-08 08:38–08:40 JST
 - planned slot: `manual recovery of 08:00 morning slot`
