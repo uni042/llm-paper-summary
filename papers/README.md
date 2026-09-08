@@ -1,14 +1,14 @@
 # 論文カタログ
 
-収録論文: **175本**。
+収録論文: **176本**。
 
 論文は最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。
 
-## Inference / 推論 — 156本
+## Inference / 推論 — 157本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 17本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 10本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
-- [Expert Prefetch](inference/03-expert-prefetch/) — 13本 — 将来使うexpertをrouting確定前に予測してGPUへ先読みし、weight転送待ちを現在の計算へ隠す。
+- [Expert Prefetch](inference/03-expert-prefetch/) — 14本 — 将来使うexpertをrouting確定前に予測し、GPU cacheの保持や先読みを制御してweight転送待ち・転送量を減らす。
 - [Conditional Computation](inference/04-conditional-computation/) — 8本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
 - [Speculative Decoding / MoE](inference/05-speculative-decoding-moe/) — 13本 — draft候補を並列生成・検証して1回のtarget実行で複数tokenを確定し、MoEではexpert読込・検証costも抑える。
 - [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 13本 — expert weightを低bit化・pruning・mixed precision等で小さくし、VRAM・bandwidth・計算量を削減する。
