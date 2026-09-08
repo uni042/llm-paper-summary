@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "workflow_version": 6,
+  "workflow_version": 7,
   "layout": "split-state-v1",
   "legacy_snapshot": "survey-state/exploration-state.json",
   "paths": {
@@ -13,6 +13,7 @@
     "maintenance_queue": "survey-state/maintenance-queue.json",
     "blockers": "survey-state/blockers.json",
     "identity_index": "survey-state/paper-identity-index.json",
+    "identity_deltas_dir": "survey-state/identity-deltas/",
     "rejected_papers": "survey-state/rejected-papers.json",
     "logs_dir": "survey-state/log/",
     "retry_papers": "survey-state/retry-papers.json",
@@ -26,6 +27,7 @@
     "from_workflow_version": 3,
     "legacy_snapshot_read_only": true,
     "migrated_at": "2026-09-08",
-    "to_workflow_version": 6
+    "to_workflow_version": 7,
+    "note": "workflow v7 keeps format-3 as a compacted snapshot and adds connector-safe identity deltas; no completion counts were changed"
   }
 }

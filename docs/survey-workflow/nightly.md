@@ -10,10 +10,15 @@
 
 1. 開始記録を保存し、保守の作業権 `maintenance` を取得する。
 2. 検査対象の先頭版を固定し、再帰的な全ファイル一覧（パス・内容SHA）を取得する。途中で切れた一覧を全件として扱わない。`source_commit` と `files: [{path, sha}]` の取得一覧を一時ファイルへ保存する。
-3. 全ファイルを同じ版で取得する。Python・依存が使える場合は次の全体検査を実行する。取得漏れがあれば全体合格にしない。
+3. 全ファイルを同じ版で取得する。Python・依存・完全checkoutが使える場合、未compact識別差分を先に検査・compactしてから全体生成と検査を行う。
 
 ```bash
+python scripts/identity_delta.py validate
+python scripts/identity_delta.py compact
+python scripts/survey.py build
+python scripts/survey.py validate
 python scripts/check_repository.py --inventory /tmp/repository-inventory.json --report /tmp/integrity-before.json
+python -m unittest discover -s tests
 ```
 
 4. 下表の全領域を確認する。プログラムが確認できない意味上の矛盾は、手順・状態の定義と照合して記録する。
@@ -27,7 +32,7 @@ python scripts/check_repository.py --inventory /tmp/repository-inventory.json --
 | 領域 | 確認内容 | 修復方針 |
 |---|---|---|
 | 全ファイル | 取得一覧との照合、取得漏れ、JSON/YAMLの読取り、Markdownの内部ファイル参照 | 欠落・破損を記録し、根拠のあるものだけ修復 |
-| 推論論文 | 識別子と有効パス、別識別子の重複、必須属性、分類、移動案内 | 索引は再生成。研究同一性が曖昧なら監査へ |
+| 推論論文 | 識別子と有効パス、形式3＋未compact差分の重複、必須属性、分類、移動案内 | 差分を検証し形式3へcompact。研究同一性が曖昧なら監査へ |
 | 一覧・比較 | 件数、一文説明、リンク、その他分類が最後、再生成結果との差分 | `survey.py build` で生成 |
 | 分割状態 | 現在計画・全日次計画・未完了一覧・締め履歴・再確認・永久除外・作業権・途中記録 | 成果と照合し、未実施作業を完了にしない |
 | 手順書・ひな型・補助処理 | 参照切れ、版の整合、モードの競合、必須属性の定義 | 意味変更が必要なら指摘を残す。通常点検で運用を自己変更しない |
@@ -38,7 +43,7 @@ python scripts/check_repository.py --inventory /tmp/repository-inventory.json --
 
 ## Pythonが使えない・一枠で終わらない場合
 
-接続機能で同じ固定版の全一覧とファイルを読み、対象を区切って確認する。`coverage` に検査済みパス・未検査パス・検査項目を記録し、`next_action` と再開位置を永続保存する。読めただけで自動検査を実行済みにしない。
+接続機能で同じ固定版の全一覧とファイルを読み、対象を区切って確認する。未compact識別差分があっても、形式3全体を書き換えられないことだけで研究成果を巻き戻さない。compactは保守待ちとして残す。`coverage` に検査済みパス・未検査パス・検査項目を記録し、`next_action` と再開位置を永続保存する。読めただけで自動検査を実行済みにしない。
 
 未取得・未検査が一つでもある場合は `partial`。単純な生成処理ができない場合は保守待ちとして残す。次の夜間枠で未完了部分を優先し、前回以降の変更ファイルも確認する。朝はこの結果を報告する。
 
