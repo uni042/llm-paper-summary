@@ -1,4 +1,12 @@
 ---
+canonical_id: "NeurIPS2024:03469b1a66e351b18272be23baf3b809"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models"
 summary: "各token・各layerで『このlayerを実行するか』を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。"
 authors_affiliations: "一次資料記載の著者ら（NeurIPS 2024）"

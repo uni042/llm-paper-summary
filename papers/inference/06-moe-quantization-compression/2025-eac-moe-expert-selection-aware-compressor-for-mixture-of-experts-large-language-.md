@@ -1,4 +1,12 @@
 ---
+canonical_id: "ACL:2025.acl-long.633"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models"
 summary: "量子化後も元モデルと近いexpertが選ばれるようrouter上位expertの誤差を重点的に補正し、prefillでほとんど使われないexpertを入力ごとに省く圧縮手法。"
 authors_affiliations: "Yuanteng Chen, Yuantian Shao, Peisong Wang, Jian Cheng／Chinese Academy of Sciences, UCAS, Nanjing University of Science and Technology, AIRIA, [Maicro.ai](http://Maicro.ai)"

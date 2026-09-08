@@ -1,4 +1,12 @@
 ---
+canonical_id: "AAAI:39816"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices"
 summary: "過去に似たpromptがあればその時のexpert利用履歴を再利用し、似た履歴がなければ学習済みpredictorで全layerのexpert候補を予測して、CPUからGPUへの先読みを早く始める。"
 authors_affiliations: "Chengcheng Wang, Haowen He, Liang Zhao, Xiaoheng Deng, Lixin Duan, Shaohua Wan／UESTC, Shenyang Aerospace University, Central South University"

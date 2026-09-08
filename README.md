@@ -6,6 +6,8 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 
 > このリポジトリの内容作成・要約・継続更新には、リポジトリ所有者の依頼に基づいてOpenAIのChatGPTを使用しています。生成AIによる整理を含むため、論文の数値・model仕様・release状態など重要な判断では、各ページに記載した一次資料も確認してください。
 
+[今日の進捗](survey-state/STATUS.md) ／ [研究の横断比較](papers/inference/comparison.md) ／ [運用手順](docs/survey-workflow/README.md)
+
 ## リポジトリ構成
 
 - [papers/](papers/) — **論文サーベイ**
@@ -22,3 +24,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 通常の論文探索は、推論・serving・decoding・runtime・実行時memory / I/O・on-device inferenceの効率化を最終目的とする研究を対象にします。学習を内部手段として利用していても最終目的が推論効率化ならInferenceへ収録します。
 
 Framework更新とLLMリリースは論文サーベイとは別に整理します。
+
+<!-- survey:auto:start -->
+推論論文：**160本**。 [全一覧](papers/inference/README.md) ／ [研究比較](papers/inference/comparison.md)
+<!-- survey:auto:end -->

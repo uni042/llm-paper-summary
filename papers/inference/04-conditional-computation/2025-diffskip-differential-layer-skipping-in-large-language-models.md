@@ -1,4 +1,12 @@
 ---
+canonical_id: "ACL:2025.findings-acl.377"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "DiffSkip: Differential Layer Skipping in Large Language Models"
 summary: "tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。"
 authors_affiliations: "一次資料記載の著者ら（Findings of ACL 2025）"

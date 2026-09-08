@@ -1,12 +1,13 @@
 # 当日の精読・監査対象の選定
 
 ## 1. 前日の確定と本数
-日次選定枠でだけ前期間を締め、[日次件数調整](completion.md) に従って精読・監査それぞれの次目標を独立して決める。初回は各10本。予定選定枠から次の選定枠直前までを1読書日とする。前planは `daily-history.json` へ1回だけ締め、同一planを二重に増減しない。
+選定・締めは当該期間の作業権を取得してから開始する。選定済み項目を再利用し、同時に選定しない。前計画の有効な論文作業権が残っていれば解放または期限切れを待って保存済み成果を照合する。
+通常の日次選定枠、または当日計画欠落時の選定代行で前期間を締め、[日次件数調整](completion.md) に従って精読・監査それぞれの次目標を独立して決める。初回は各10本。予定選定枠から次の選定枠直前までを1読書日とする。前planは `daily-history.json` へ1回だけ締め、同一planを二重に増減しない。
 
 ## 2. 精読対象の選定
 1. `runtime.json` が指す当日planを確認する。同じ `plan_id` が確定済みなら再選定しない。選定途中なら保存済み候補から再開する。
 2. `queues/research.json` の未読繰越を最優先し、原則として古い順にn本まで当日planへ入れる。永続見送り済みは繰越へ戻さない。
-3. 空き枠だけ新たに探す。arXiv、OpenReview、会議公式一覧、引用・被引用などを併用し、同じ引用鎖だけに偏らない。識別索引と見送り記録を照合する。
+3. 期限の来た `retry-papers.json` の候補を各公式経路1回ずつ再確認し、本文取得可能なものを通常の優先順位で候補へ戻す。新規探索は空き枠だけ行う。arXiv、OpenReview、会議公式一覧、引用・被引用などを併用し、同じ引用鎖だけに偏らない。識別索引と見送り記録を照合する。
 4. 新規候補は以下の属性を確認できる範囲で記録する：`publication_date`, `last_revision_date`, `venue`, `venue_status`, `venue_verified_url`, `priority_tier`, `priority_reason`。
 5. 優先順位は決定論的に以下のtierで付ける。
    - `A`: 直近180日以内に公開または大幅改訂され、かつ主要な査読付き会議・論文誌で正式採択／出版を公式情報で確認できる。
@@ -14,7 +15,7 @@
    - `C`: 主要会議・論文誌で正式採択／出版され、既存カタログの重要な空白を埋めるがAより古い。
    - `D`: 上記以外の重要候補。
    tier内では `last_revision_date`、なければ `publication_date` が新しい順。同日なら推論システムへの直接性、既存との差、実機評価の有無を選定理由として比較する。主要会議の例はSOSP、OSDI、NSDI、EuroSys、ASPLOS、ISCA、MICRO、HPCA、MLSys、NeurIPS、ICML、ICLR、ACL、EMNLP等。会議名の自己申告だけで採択済みにしない。
-6. **一次資料preflightを選定時に行う。** 通常の一次資料本文URLを実際に取得確認し、失敗した場合は同一研究の別の公式配布経路を1つ確認する。本文を取得できる候補だけ当日planへ採用し、`primary_source_preflight` に `checked_at`, `status`, `preferred_url`, `fallback_url`, `retrieval_kind` を保存する。双方取得不能ならその場で `insufficient_primary_source` として `rejected-papers.json` へ記録し、当日枠を消費せず別候補を探す。
+6. **一次資料preflightを選定時に行う。** 通常の一次資料本文URLを実際に取得確認し、失敗した場合は同一研究の別の公式配布経路を1つ確認する。本文を取得できる候補だけ当日planへ採用し、`primary_source_preflight` に `checked_at`, `status`, `preferred_url`, `fallback_url`, `retrieval_kind` を保存する。双方取得不能ならその場で `insufficient_primary_source` として `retry-papers.json` へ7日後の再確認日とともに記録し、当日枠を消費せず別候補を探す。
 7. preflightは本文を最後まで読む作業ではない。実在・識別子・関連性・本文取得可能性・公開／改訂日・採択状態の簡易確認だけを行い、詳細精読は毎時へ回す。
 8. 質を落として数合わせしない。有望候補不足ならn未満で確定し、不足数と理由を残す。
 9. 選定結果は `survey-state/daily-plans/YYYY-MM-DD.json` に保存し、`queues/research.json` と識別子で整合させる。保存を再取得して確認後にplanを `ready` / `in_progress` とする。
@@ -26,3 +27,6 @@
 
 ## 完了条件
 精読・監査それぞれ前日の増減が最大1回、繰越欠落なし、各選定数が各目標以下、重複なし、候補の識別子・題名・一次資料URLあり。新規精読候補は `priority_tier` と一次資料preflightを持ち、preflight `available` の候補だけ当日planへ入っていること。探索不足・保存失敗を全件読了と扱わない。
+
+## 保存の単位
+前期間の締め履歴・次目標・当日計画・未完了一覧・runtimeの参照を同じ変更で公開する。候補は選定途中でも小分けに保存できるが、選定数・不足理由の確定前にreadyにしない。複数日の欠落を架空の未完了日として何回も減算しない。

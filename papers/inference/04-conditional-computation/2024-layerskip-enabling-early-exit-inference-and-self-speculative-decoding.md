@@ -1,4 +1,12 @@
 ---
+canonical_id: "ACL:2024.acl-long.681"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding"
 summary: "学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。"
 authors_affiliations: "Meta AIほか（ACL 2024、著者詳細は一次資料参照）"

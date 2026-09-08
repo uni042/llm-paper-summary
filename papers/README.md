@@ -25,3 +25,7 @@
 既存内容を参照用として保持するが、通常サーベイでは新規追加・監査・本文更新を行わない。
 
 → [Training一覧](training/)
+
+<!-- survey:auto:start -->
+推論論文：**160本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
+<!-- survey:auto:end -->

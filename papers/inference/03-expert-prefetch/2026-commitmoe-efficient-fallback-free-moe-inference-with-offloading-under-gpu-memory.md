@@ -1,4 +1,12 @@
 ---
+canonical_id: "AAAI:39454"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints"
 summary: "次layerで使うexpertを予測してGPUへ先読みし、予測が外れても正しいexpertを読み直さず、準備済みexpertをそのまま使うことでoffload待ちをなくす近似MoE方式。"
 authors_affiliations: "Han Li, Jingwei Sun, Junqing Lin, Guangzhong Sun／University of Science and Technology of China"

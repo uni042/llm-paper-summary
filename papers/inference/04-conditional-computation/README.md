@@ -4,23 +4,17 @@
 
 MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり、この系統では主にTransformer本体の実行深度や処理対象tokenを動的に変える。
 
-## 収録論文
+<!-- survey:auto:start -->
+## 自動生成の論文一覧（8本）
 
-収録論文: 8本。公開日が新しい順。
-
-- 2025-07-27 — [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)
-  - 前後のlayerで表現がほとんど変わらない箇所を冗長とみなし、そのlayerを選択的に飛ばして計算量を減らす。
-- 2025-04-22 — [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md)
-  - reasoning途中の内部状態から答えが十分固まったかを判定し、容易な問題では追加の思考token生成を早く終了する。
-- 2025-03-31 — [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)
-  - 入力内容と現在のhidden stateに応じて通過するlayerを変え、必要な計算だけを実行する。
-- 2025-03-11 — [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md)
-  - 生成が進むほど使用するlayer数を段階的に減らし、KV cacheの利用を維持したまま後半tokenの計算を軽くする。
-- 2024-12-15 — [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md)
-  - tokenごとの難しさを見積もり、難しいtokenには多く、容易なtokenには少ないlayerを割り当てる。
-- 2024-08-12 — [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)
-  - 学習時に途中layerからでもtoken予測できるようにしておき、推論では途中終了や同一モデル内のspeculative decodingに利用する。
-- 2024-07-19 — [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)
-  - 長いpromptの中からlayerごとに重要なtokenだけを残して処理し、必要になったtokenは後のlayerで再び使えるようにする。
-- 2023-07-05 — [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)
-  - 生成位置が後ろになるほど通過layerを減らす固定ルールを使い、batchingやKV cacheを崩さずdecode計算を削減する。
+| 論文 | 一文要約 |
+|---|---|
+| [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md) | tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。 |
+| [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md) | reasoning途中で一度final answerを試しに生成し、その答えのtoken確率が十分高ければCoTを終了、低ければ試行回答を捨てて元の地点からreasoningを続けるtraining-free手法。 |
+| [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md) | tokenごと・layerごとに通常のattention+FFNを実行するか小型adapterだけで済ませるかを選び、skipしたtokenのKVは残すことで文脈を保ちながら計算量を減らす。 |
+| [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md) | 生成後半ほど実行するlayer数を減らすが、最初と最後のlayerは常に残し、中間layerだけを段階的にskipすることで、KV cacheを保ちながらdecode計算を減らすtraining-free手法。 |
+| [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md) | 各token・各layerで『このlayerを実行するか』を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。 |
+| [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md) | 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。 |
+| [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md) | 長文入力で現在の生成に重要なtokenだけを後続layerへ通し、外したtokenもhidden stateを別cacheへ保存して後で必要になれば途中layerから復帰できるようにすることで、主にprefill計算を減らす。 |
+| [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md) | 生成が後ろへ進むほど実行するTransformer layer数を段階的に減らし、同じ生成位置ではbatch全体で同じ深度を使うことで、batchingとKV cacheを壊さずdecode計算を減らす。 |
+<!-- survey:auto:end -->

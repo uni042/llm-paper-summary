@@ -1,32 +1,1303 @@
 {
-  "schema_version": 2,
-  "generated_from_commit": "8d5c3c265cd9509a12c8d5a70368385b60edc232",
-  "base_path": "papers/inference/",
+  "schema_version": 3,
   "active_count": 160,
-  "arxiv_by_lineage": {
-    "01-offload-hierarchical-memory": ["2303.06865","2312.11514","2312.17238","2401.14361","2402.07033","2403.01164","2405.18832","2411.11217","2502.05370","2502.06888","2602.00328","2604.02715","2605.17889","2606.25353","2608.12103","2608.14333"],
-    "02-adaptive-expert-computation-compression": ["2310.01334","2402.14800","2403.18926","2406.13233","2410.07348","2410.17954","2509.02753","2511.10054","2604.08133","2606.29982"],
-    "03-expert-prefetch": ["2308.12066","2310.18859","2410.22134","2501.10375","2502.12224","2509.23638","2512.03927","2603.19289","2607.24787","2608.21240","2609.04895"],
-    "04-conditional-computation": ["2307.02628","2407.14057","2503.08524","2503.23798","2504.15895"],
-    "05-speculative-decoding-moe": ["2305.09781","2311.08252","2401.10774","2401.15077","2402.02057","2510.10302","2511.14102","2603.09983","2605.00342","2605.08151","2605.15051","2607.12696","2608.02989"],
-    "06-moe-quantization-compression": ["2310.02410","2310.16795","2406.08155","2407.14417","2410.06270","2503.21135","2505.03804","2505.05799","2510.10962","2511.15015","2605.23078","2607.16184"],
-    "07-kv-cache-optimization-compression": ["2402.05099","2403.17312","2501.08192","2504.06319","2606.24467","2607.01237","2609.02029","2609.03235","2609.03430","2609.03494","2609.03515"],
-    "08-edge-on-device-llm-systems": ["2308.15030","2406.06282","2504.15299","2607.09686","2607.10183","2608.16157","2609.01338","2609.02514"],
-    "10-kv-cache-offload-recomputation": ["2403.11421","2407.21255","2409.04992","2411.01142","2411.09317","2411.17089","2501.01792","2502.12574","2503.16163","2505.02922","2506.03296","2508.13231","2601.19910","2601.20309","2602.07721","2603.17803","2603.27138","2605.03375","2605.18071","2606.16135","2609.04852"],
-    "11-llm-serving-scheduling-disaggregation": ["2302.11665","2305.05920","2309.06180","2311.15566","2311.18677","2312.05516","2312.07104","2401.00588","2401.08671","2401.09670","2401.14351","2403.02310","2403.19708","2404.16283","2405.19888","2406.03243","2406.17565","2407.00023","2407.00047","2407.00079","2408.08147","2408.15792","2501.08090","2501.14312","2603.06350","2604.07609","2606.01839","2606.22327","2606.24506","2607.03948","2607.16892","2607.28150","2608.06557","2608.15171","2608.16477","2609.01068","2609.04774"],
-    "99-other-inference-systems": ["2502.19811","2504.06419","2506.11309","2601.15013","2605.19893","2609.04010"]
+  "papers": {
+    "arXiv:2303.06865": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "identifiers": [
+        "arXiv:2303.06865"
+      ],
+      "source_hash": "7cbc2422ef96ce284f35f0df1b21da2cbcc0f53b5d7ccef3cd23af74b0be449d"
+    },
+    "arXiv:2312.11514": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "identifiers": [
+        "arXiv:2312.11514"
+      ],
+      "source_hash": "04ff48da9ed6d621d5686cafc21bda08a6bc4a835a2fc926c87da66b42fdfe35"
+    },
+    "arXiv:2312.17238": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+      "identifiers": [
+        "arXiv:2312.17238"
+      ],
+      "source_hash": "9071a59af88301bcfd79e8d5a05f165ab1b3ad37dca1677518a08474d3469cef"
+    },
+    "arXiv:2401.14361": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md",
+      "identifiers": [
+        "arXiv:2401.14361"
+      ],
+      "source_hash": "a4d3176db8f06bcbca09b48917c8940c64b0f183ffe60132b9cbdb2d7db472e6"
+    },
+    "arXiv:2402.07033": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md",
+      "identifiers": [
+        "arXiv:2402.07033"
+      ],
+      "source_hash": "56b4eaa2f30aaa99d06d68d22d73a0bd4e866cee89a913ef64477e42bf39bfb5"
+    },
+    "arXiv:2403.01164": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md",
+      "identifiers": [
+        "arXiv:2403.01164"
+      ],
+      "source_hash": "c59709c89704947787a1fab12dc19d115d388dc6ca98899e8431220cc1727c75"
+    },
+    "arXiv:2405.18832": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md",
+      "identifiers": [
+        "arXiv:2405.18832"
+      ],
+      "source_hash": "3756e9fc39ff3f330b7c777041976667c236a44f94652fd94db32b0412025a3d"
+    },
+    "arXiv:2411.11217": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+      "identifiers": [
+        "arXiv:2411.11217"
+      ],
+      "source_hash": "c31f92b15e6270f7c624924b43edcc2ad92d9cdbf772ff0520da2374d7e48357"
+    },
+    "DOI:10.1145/3688351.3689164": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
+      "identifiers": [
+        "DOI:10.1145/3688351.3689164"
+      ],
+      "source_hash": "a7100c38561a72577587cf8a72a3bd240e64f17b2f2033f586999af0e6ac9c2c"
+    },
+    "arXiv:2502.05370": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md",
+      "identifiers": [
+        "arXiv:2502.05370"
+      ],
+      "source_hash": "740afdf5a8fd56d67dd58f57c6615c2e2451962fd36c88986acd12d3b683a47c"
+    },
+    "arXiv:2502.06888": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md",
+      "identifiers": [
+        "arXiv:2502.06888"
+      ],
+      "source_hash": "5f3db6a95fc64cc6a23985a1ec802e8716c4ccc0036a936c47a9f856f8ee15a4"
+    },
+    "arXiv:2602.00328": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md",
+      "identifiers": [
+        "arXiv:2602.00328"
+      ],
+      "source_hash": "d097aa9a3b2fc35f3072b5c82e346b435eed633efecfc954787f7f6133dde9e1"
+    },
+    "arXiv:2604.02715": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+      "identifiers": [
+        "arXiv:2604.02715"
+      ],
+      "source_hash": "b80709b4b4d2e3ab6a6b16642933f072365274eb2d98737d9df18ed3cf6e5fe1"
+    },
+    "arXiv:2605.17889": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
+      "identifiers": [
+        "arXiv:2605.17889"
+      ],
+      "source_hash": "df2bef0b9862797f48e1d8a20eb03491105d2c2b437d9cda27b435d8e9aaa3cd"
+    },
+    "arXiv:2606.25353": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
+      "identifiers": [
+        "arXiv:2606.25353"
+      ],
+      "source_hash": "d4b1909feabe0ea34537acbe32a085f04112f2abef62ef2b2e5156ead1f63d02"
+    },
+    "arXiv:2608.12103": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.12103-kernel-managed-expert-cache-tiering.md",
+      "identifiers": [
+        "arXiv:2608.12103"
+      ],
+      "source_hash": "c813f3398d1f58a1182e3c2fc22c5c0bc303d421d535b407ace261c776b93f3d"
+    },
+    "arXiv:2608.14333": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md",
+      "identifiers": [
+        "arXiv:2608.14333"
+      ],
+      "source_hash": "3a2571352a9e5fbe3b20cfcbc0b12f84822172743e3472622cd702dc2c693d8c"
+    },
+    "arXiv:2310.01334": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+      "identifiers": [
+        "arXiv:2310.01334"
+      ],
+      "source_hash": "2e236cbe54f347a59842f4bf58880571e59f7a9cc0a7408713432849077048aa"
+    },
+    "arXiv:2402.14800": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+      "identifiers": [
+        "arXiv:2402.14800"
+      ],
+      "source_hash": "397e7f472c41bc8c2f1a475cea1780dd91026af19568fcf53aa74b22031e8d08"
+    },
+    "arXiv:2403.18926": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+      "identifiers": [
+        "arXiv:2403.18926"
+      ],
+      "source_hash": "8a5ed52825887940a8d7ef192500b17189f502741b143c4e66e696f8e286111f"
+    },
+    "arXiv:2406.13233": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+      "identifiers": [
+        "arXiv:2406.13233"
+      ],
+      "source_hash": "0af99cae87a6e93d4de129e5be3b06d44016c2791213e8d9a7dc06397849a1b3"
+    },
+    "arXiv:2410.07348": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+      "identifiers": [
+        "arXiv:2410.07348"
+      ],
+      "source_hash": "e3b5c10bc335440e2a26cfec1f7a798fb05d8f8e3e1254ba1955df8877fb9f95"
+    },
+    "arXiv:2410.17954": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+      "identifiers": [
+        "arXiv:2410.17954"
+      ],
+      "source_hash": "832e9e72c5aec9f115b9e36df729704a1054375f776de21cc99c900cc08c26d7"
+    },
+    "arXiv:2509.02753": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+      "identifiers": [
+        "arXiv:2509.02753"
+      ],
+      "source_hash": "7d8951b1dc1afe6bdb464f884aca2dc65eced65acc9dbcbfd38db49a4fe7b0ed"
+    },
+    "arXiv:2511.10054": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md",
+      "identifiers": [
+        "arXiv:2511.10054"
+      ],
+      "source_hash": "f0de9541350c6c4c40cdc2d13d26fdcbb9222d920c5756945225ea1525a2336f"
+    },
+    "arXiv:2604.08133": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md",
+      "identifiers": [
+        "arXiv:2604.08133"
+      ],
+      "source_hash": "c9d6154aae1f86be2e60839861ad5ec34ec7cdf8ef1f9a2de18ff331cdcd76b6"
+    },
+    "arXiv:2606.29982": {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md",
+      "identifiers": [
+        "arXiv:2606.29982"
+      ],
+      "source_hash": "a0ef8cad7e749b6acf35ae060f87af1192103836f1f9b0ca08b5a8f6ac81dceb"
+    },
+    "arXiv:2308.12066": {
+      "path": "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+      "identifiers": [
+        "arXiv:2308.12066"
+      ],
+      "source_hash": "381805d7f177393692a2ff2acc5d8c234a9cf912b2eea4375fb3210a4df09d19"
+    },
+    "arXiv:2310.18859": {
+      "path": "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+      "identifiers": [
+        "arXiv:2310.18859"
+      ],
+      "source_hash": "5a473c38c3b7c5f2fc1dfeaa4b14568ffb2d2e8532047673f7d9cc6df101a301"
+    },
+    "arXiv:2410.22134": {
+      "path": "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md",
+      "identifiers": [
+        "arXiv:2410.22134"
+      ],
+      "source_hash": "464ea70d72cd09b2c71b537173dc4915fe5bbbc0fffccc5792c2460afc7e5696"
+    },
+    "arXiv:2501.10375": {
+      "path": "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
+      "identifiers": [
+        "arXiv:2501.10375"
+      ],
+      "source_hash": "ae64d9c454a895e2350444b97ef0b5c3c06e30e6bb70a0957cefaea9d2b83686"
+    },
+    "arXiv:2502.12224": {
+      "path": "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
+      "identifiers": [
+        "arXiv:2502.12224"
+      ],
+      "source_hash": "159fb3ae8222025b0234863589cf6f8ccc17e878fc66dbe7f25a98851e8969af"
+    },
+    "arXiv:2509.23638": {
+      "path": "papers/inference/03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md",
+      "identifiers": [
+        "arXiv:2509.23638"
+      ],
+      "source_hash": "f06fd2fe3fe08fd5a2ffe84d1f7d0a2266c8a0cb068c212d2dc18b080e748963"
+    },
+    "arXiv:2512.03927": {
+      "path": "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
+      "identifiers": [
+        "arXiv:2512.03927"
+      ],
+      "source_hash": "ec153b3cc300b29ba2a68c494ebdba28044c8bcd5915b542edc847991a6a0a07"
+    },
+    "arXiv:2603.19289": {
+      "path": "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
+      "identifiers": [
+        "arXiv:2603.19289"
+      ],
+      "source_hash": "7988405d2be52b0fadb97b13e7aa8bb60927bcb8fdbf6a3e2f0772312ea9bd77"
+    },
+    "arXiv:2607.24787": {
+      "path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md",
+      "identifiers": [
+        "arXiv:2607.24787"
+      ],
+      "source_hash": "59367e51b5809d3d348c47623c84c2f5d84a4e19bf36bff9bc9a1f1bab93894b"
+    },
+    "arXiv:2608.21240": {
+      "path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md",
+      "identifiers": [
+        "arXiv:2608.21240"
+      ],
+      "source_hash": "26455da529e2d7fee7336dd67655a3bb563d66afde7a83894be6b208d46d8cee"
+    },
+    "arXiv:2609.04895": {
+      "path": "papers/inference/03-expert-prefetch/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+      "identifiers": [
+        "arXiv:2609.04895"
+      ],
+      "source_hash": "bcadcfdcd8a54fc2b0c010b0629fc22ef129ccc33bc6a177fe83c318ad30f1fd"
+    },
+    "AAAI:39816": {
+      "path": "papers/inference/03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md",
+      "identifiers": [
+        "AAAI:39816"
+      ],
+      "source_hash": "c09ffd502738a3e413c9518cd0fb91c5fed45dba7e862a0a3847cf83f0df9e37"
+    },
+    "AAAI:39454": {
+      "path": "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md",
+      "identifiers": [
+        "AAAI:39454"
+      ],
+      "source_hash": "aa3949f6e1c6de917223d698657d49bd5d0e12b7e3d637f451dcf5734ad48d7b"
+    },
+    "AAAI:39106": {
+      "path": "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md",
+      "identifiers": [
+        "AAAI:39106"
+      ],
+      "source_hash": "e1cf079e1f21f0786c2eb49116f5b8e53d0a8023fc9f80f3630560950f721b87"
+    },
+    "arXiv:2307.02628": {
+      "path": "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+      "identifiers": [
+        "arXiv:2307.02628"
+      ],
+      "source_hash": "f01d1eefd5e44814e2c6b97719f7577bf3633044bfbf16fda1438f1ef4d054c7"
+    },
+    "arXiv:2407.14057": {
+      "path": "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+      "identifiers": [
+        "arXiv:2407.14057"
+      ],
+      "source_hash": "d937287aee83405c8ada859734c387045701ac754541a3577278aa212a479f4a"
+    },
+    "NeurIPS2024:03469b1a66e351b18272be23baf3b809": {
+      "path": "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+      "identifiers": [
+        "NeurIPS2024:03469b1a66e351b18272be23baf3b809"
+      ],
+      "source_hash": "308780fef11cd8588164a340c516a448573414285659271e961acd7bc0af2940"
+    },
+    "ACL:2024.acl-long.681": {
+      "path": "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "identifiers": [
+        "ACL:2024.acl-long.681"
+      ],
+      "source_hash": "1f63524da59d59e8a64ad2210aeed630c3f2b78ca5123458d7f411d4a52e1ffd"
+    },
+    "arXiv:2503.08524": {
+      "path": "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
+      "identifiers": [
+        "arXiv:2503.08524"
+      ],
+      "source_hash": "607323d44b34112c099eab811ad62b9aa5f2c2905a16c896cbc80ed77fabe448"
+    },
+    "arXiv:2503.23798": {
+      "path": "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+      "identifiers": [
+        "arXiv:2503.23798"
+      ],
+      "source_hash": "686346b658cd12dfe998e96087d98679133b464b63e22a5aeec438b4cc7c7b85"
+    },
+    "arXiv:2504.15895": {
+      "path": "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "identifiers": [
+        "arXiv:2504.15895"
+      ],
+      "source_hash": "79e3ab3dbe7b95a2bcac42ef8261ff59d0388796de5d5255ae3f30bace9ad93d"
+    },
+    "ACL:2025.findings-acl.377": {
+      "path": "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md",
+      "identifiers": [
+        "ACL:2025.findings-acl.377"
+      ],
+      "source_hash": "1bf368b994eb4107ed7447703be06ee53ecc8edc962c0ebc9f1f940c96098d9c"
+    },
+    "arXiv:2305.09781": {
+      "path": "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "identifiers": [
+        "DOI:10.1145/3620666.3651335",
+        "arXiv:2305.09781"
+      ],
+      "source_hash": "1fd3d005f033d1c085952aabb919022bb4a3d3a8dfddfd346e36d0814eccb30a"
+    },
+    "arXiv:2311.08252": {
+      "path": "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+      "identifiers": [
+        "arXiv:2311.08252"
+      ],
+      "source_hash": "3da6b88e33f79ad0db6788575e27f94c3f409fcd097151b319a54ab5a02962f4"
+    },
+    "arXiv:2401.10774": {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "identifiers": [
+        "arXiv:2401.10774"
+      ],
+      "source_hash": "a218f98467a05a3fa136895b620034b51d23c4b8e2357d8d0bd7f20d3c54fa4d"
+    },
+    "arXiv:2401.15077": {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "identifiers": [
+        "arXiv:2401.15077"
+      ],
+      "source_hash": "b5a35acc7b4579067a0c2aa64c279f4248731eeccedf21c3f11b3a60b4d1429a"
+    },
+    "arXiv:2402.02057": {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "identifiers": [
+        "arXiv:2402.02057"
+      ],
+      "source_hash": "cfee6cd7e3aff0eac3816144e5893145ffac96a94ed6c2d3b2c9579b780b5ca4"
+    },
+    "arXiv:2510.10302": {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
+      "identifiers": [
+        "arXiv:2510.10302"
+      ],
+      "source_hash": "466565444e1670d9a53eb791960de320d1bc46b80b8830cc11701b3e94c4b58b"
+    },
+    "arXiv:2511.14102": {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2511.14102-moe-speq-speculative-quantized-decoding-with-proactive-expert-prefetching-and-of.md",
+      "identifiers": [
+        "arXiv:2511.14102"
+      ],
+      "source_hash": "210ec3b2158511b2765c3a6328c426e385e023873b41d80fb0e37a60f7f9285a"
+    },
+    "arXiv:2603.09983": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md",
+      "identifiers": [
+        "arXiv:2603.09983"
+      ],
+      "source_hash": "feb54929d5ff2e7d998773e2d7f0207b10df95fba511cd6a72bb2b19dc7b3c4b"
+    },
+    "arXiv:2605.00342": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+      "identifiers": [
+        "arXiv:2605.00342"
+      ],
+      "source_hash": "52e478aee400fe57ae0abca1825e0f981ebec936f3c6a798f75d620b5ecd697d"
+    },
+    "arXiv:2605.08151": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md",
+      "identifiers": [
+        "arXiv:2605.08151"
+      ],
+      "source_hash": "6de477aba016b60cc4bb703fcbf8de31627483089b98bdf10a514b7521226ee4"
+    },
+    "arXiv:2605.15051": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md",
+      "identifiers": [
+        "arXiv:2605.15051"
+      ],
+      "source_hash": "7d04300bc08dd1f893947201cc80f12178755b6978fa6533328b2e6996e5affb"
+    },
+    "arXiv:2607.12696": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md",
+      "identifiers": [
+        "arXiv:2607.12696"
+      ],
+      "source_hash": "3513189cb817560a5fd9e29d79d718e565fa08af21af1c9e0f06397a48a4f3e8"
+    },
+    "arXiv:2608.02989": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md",
+      "identifiers": [
+        "arXiv:2608.02989"
+      ],
+      "source_hash": "f453824ff1ba7999c3238b16451f6be09110d03112349bd079c459760c59259f"
+    },
+    "arXiv:2310.02410": {
+      "path": "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
+      "identifiers": [
+        "arXiv:2310.02410"
+      ],
+      "source_hash": "98da125e9db8c27085e01ed89fc4897a01da5ecd921a8fc3c4ccbed0a0f6e7a4"
+    },
+    "arXiv:2310.16795": {
+      "path": "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+      "identifiers": [
+        "arXiv:2310.16795"
+      ],
+      "source_hash": "87ac23feacf7096660140c2ada7586ab9bedd90b1cb42cd021ea890c6e527b5d"
+    },
+    "arXiv:2406.08155": {
+      "path": "papers/inference/06-moe-quantization-compression/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md",
+      "identifiers": [
+        "arXiv:2406.08155"
+      ],
+      "source_hash": "4e893fc3e265cd9b19d093043dee46bf23f7c7e75911252bae3cffc63785b736"
+    },
+    "arXiv:2407.14417": {
+      "path": "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md",
+      "identifiers": [
+        "arXiv:2407.14417"
+      ],
+      "source_hash": "b4f9ed39c9c12500a3a8f7754ac874adf408d50a5108efa5039ff0e518919101"
+    },
+    "arXiv:2410.06270": {
+      "path": "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+      "identifiers": [
+        "arXiv:2410.06270"
+      ],
+      "source_hash": "a5ef4862bdbe677923fc9b5e9f96a4f69abf03e3665455193bc1bf427c201fa6"
+    },
+    "arXiv:2503.21135": {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md",
+      "identifiers": [
+        "arXiv:2503.21135"
+      ],
+      "source_hash": "ee15f138f3ebf4ff2aa5eabb61e2cd787fccc861d453bde1f5da357888fbe24e"
+    },
+    "arXiv:2505.03804": {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+      "identifiers": [
+        "arXiv:2505.03804"
+      ],
+      "source_hash": "bab1f5b878f90891aca81318674b5020fdb9e5a76c706f13a8c0ead9c760c5d1"
+    },
+    "arXiv:2505.05799": {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+      "identifiers": [
+        "arXiv:2505.05799"
+      ],
+      "source_hash": "419cb4a96122a170811015446b21f16c97d25b4f763ca88d957b2e6ac217d9bd"
+    },
+    "arXiv:2510.10962": {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
+      "identifiers": [
+        "arXiv:2510.10962"
+      ],
+      "source_hash": "8156107d2ff812020a5c0616bb232e4a4a52bfe723d464db6f17e53bf03c6ec4"
+    },
+    "arXiv:2511.15015": {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md",
+      "identifiers": [
+        "arXiv:2511.15015"
+      ],
+      "source_hash": "f5fea2dc51a940465ef47d03dae2cad3bd3b16bfd3aade33645059d0971790ad"
+    },
+    "ACL:2025.acl-long.633": {
+      "path": "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+      "identifiers": [
+        "ACL:2025.acl-long.633"
+      ],
+      "source_hash": "a1cd6372297d176b0c6e44942869c2ac9a95381f825ffb836f695894f433debf"
+    },
+    "arXiv:2605.23078": {
+      "path": "papers/inference/06-moe-quantization-compression/2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md",
+      "identifiers": [
+        "arXiv:2605.23078"
+      ],
+      "source_hash": "98f59a596acd15c5e1cee241f8dfe7c22a4dd57d4e823efa8520710c6dae0982"
+    },
+    "arXiv:2607.16184": {
+      "path": "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md",
+      "identifiers": [
+        "arXiv:2607.16184"
+      ],
+      "source_hash": "7de69e6eed6bfb1ad94fc0eecc3b88ce2705c77d07ad09ad5d9123ec90f3a35a"
+    },
+    "arXiv:2402.05099": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+      "identifiers": [
+        "arXiv:2402.05099"
+      ],
+      "source_hash": "b05055c6ca09097a61706d364506539ba171a686b26b590d5ba25d87cf3011f2"
+    },
+    "arXiv:2403.17312": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+      "identifiers": [
+        "DOI:10.1109/isca59077.2024.00077",
+        "arXiv:2403.17312"
+      ],
+      "source_hash": "931dff5d568831ff612af13f67ed12cfe733305e2518418b835c2634599bb383"
+    },
+    "arXiv:2501.08192": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
+      "identifiers": [
+        "arXiv:2501.08192"
+      ],
+      "source_hash": "e0da93ed82f19c84cb318b6e7275797b4e3bb233ea814da2527bbc680e63022e"
+    },
+    "arXiv:2504.06319": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md",
+      "identifiers": [
+        "arXiv:2504.06319"
+      ],
+      "source_hash": "62c9be856016f2cef5bfe90064197f8777aaba296ff207954b27e42e412ece21"
+    },
+    "arXiv:2606.24467": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md",
+      "identifiers": [
+        "arXiv:2606.24467"
+      ],
+      "source_hash": "5efa9e5920cfde1e4d5e9f01fe7324ad26c6bd1da30d70b023a85b4512983789"
+    },
+    "arXiv:2607.01237": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+      "identifiers": [
+        "arXiv:2607.01237"
+      ],
+      "source_hash": "6db09957c00e2e935f765986a134b512624dde5955e564b759e8cd3118ad6ed4"
+    },
+    "arXiv:2609.02029": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+      "identifiers": [
+        "arXiv:2609.02029"
+      ],
+      "source_hash": "b25f4d02ce0e64f9935cd933d9dcc4395638c2051c086bbfb4fed1f38aabcb86"
+    },
+    "arXiv:2609.03235": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+      "identifiers": [
+        "arXiv:2609.03235"
+      ],
+      "source_hash": "9fd2418a241dffe4ba60669424cb3e890c0c9e37b29129701842c6f28139fcea"
+    },
+    "arXiv:2609.03430": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md",
+      "identifiers": [
+        "arXiv:2609.03430"
+      ],
+      "source_hash": "679f018ffd327e2e0e11eb5dd90d2ed550ac2d64fcfe3ab5b2782ae1427d5910"
+    },
+    "arXiv:2609.03494": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md",
+      "identifiers": [
+        "arXiv:2609.03494"
+      ],
+      "source_hash": "306b58795da7a2f0f31be3e52dac9065b304002171b7d5e231c8beeb82068f72"
+    },
+    "arXiv:2609.03515": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+      "identifiers": [
+        "arXiv:2609.03515"
+      ],
+      "source_hash": "4846ad0150685467feed96f90d5bb29de6cb82e9f5c8711812a75564bc88a960"
+    },
+    "arXiv:2308.15030": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+      "identifiers": [
+        "DOI:10.18653/v1/2024.acl-long.363",
+        "arXiv:2308.15030"
+      ],
+      "source_hash": "00480be0fefcff6f58188c34b58d8cf5931e0da415270ad1ce52d31a9ede3b3a"
+    },
+    "arXiv:2406.06282": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+      "identifiers": [
+        "arXiv:2406.06282"
+      ],
+      "source_hash": "aa9b8db62044166bd868950aa0e2498ce357fa3756b892d6ca1420a9e3ef6135"
+    },
+    "arXiv:2504.15299": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+      "identifiers": [
+        "arXiv:2504.15299"
+      ],
+      "source_hash": "6e635accba1801f9d070715d2dbad3f3ebc06f432fb1ad823bd53d326d5fdf28"
+    },
+    "arXiv:2607.09686": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2607.09686-mawforge-memory-bounded-expert-materialization.md",
+      "identifiers": [
+        "arXiv:2607.09686"
+      ],
+      "source_hash": "caab12322f50356bc82ff5ca555b27ae80c99d9e9ac10227e1ecc80dbfea01a0"
+    },
+    "arXiv:2607.10183": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md",
+      "identifiers": [
+        "arXiv:2607.10183"
+      ],
+      "source_hash": "bf7aa8a192fc3732e98987d056cc4f79d846365f6f2336a4389c490adf09323b"
+    },
+    "arXiv:2608.16157": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md",
+      "identifiers": [
+        "arXiv:2608.16157"
+      ],
+      "source_hash": "aa912092cb4d65ffc3e2cd6e60945d30a4c02d8c418e0c05b917268a181d3327"
+    },
+    "arXiv:2609.01338": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md",
+      "identifiers": [
+        "arXiv:2609.01338"
+      ],
+      "source_hash": "316d02b99d83a8cb0aabf867bf9caa91a03e8f8ddf2cd4411eb0cf105573d3f5"
+    },
+    "arXiv:2609.02514": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md",
+      "identifiers": [
+        "arXiv:2609.02514"
+      ],
+      "source_hash": "72f1de194fddf97069d27a0cbaef15accf1c03fe83fb135bd942feaf918c1ec7"
+    },
+    "arXiv:2403.11421": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
+      "identifiers": [
+        "arXiv:2403.11421"
+      ],
+      "source_hash": "81ec046d1967b6ebb2267e3e99770bbd9462f3f499dc79d4424684800bceb09b"
+    },
+    "arXiv:2407.21255": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
+      "identifiers": [
+        "arXiv:2407.21255"
+      ],
+      "source_hash": "130be5fd4f3286ba3dcf35e833ed5735124f534ace54beb17d6c7984e1f8eac0"
+    },
+    "arXiv:2409.04992": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+      "identifiers": [
+        "arXiv:2409.04992"
+      ],
+      "source_hash": "77f7f6c5d52d0b296b4b7cc888ecce269e35395f5e37580c1bc314108a4a7eaa"
+    },
+    "arXiv:2411.01142": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+      "identifiers": [
+        "arXiv:2411.01142"
+      ],
+      "source_hash": "0d80483614c09af18f6f3216a71d1d962d18aaefec33d20bf1af0a99803fe455"
+    },
+    "arXiv:2411.09317": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md",
+      "identifiers": [
+        "arXiv:2411.09317"
+      ],
+      "source_hash": "e52de5223da9248f883957b34bde2442de5206bd43e21b51c74e6f16a807f45d"
+    },
+    "arXiv:2411.17089": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md",
+      "identifiers": [
+        "arXiv:2411.17089"
+      ],
+      "source_hash": "32c18ae826e77d591fc1eed5c912abaa220d6776bc4b41ba9a74dfec3e60d668"
+    },
+    "arXiv:2501.01792": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md",
+      "identifiers": [
+        "arXiv:2501.01792"
+      ],
+      "source_hash": "88db1d4e1a932236be87252b35c30c611de74f818a56932184860b02479f8f0b"
+    },
+    "arXiv:2502.12574": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+      "identifiers": [
+        "arXiv:2502.12574"
+      ],
+      "source_hash": "d268ae61b54ad7713100ad58db23b2497725e0c14841c210ff70d5b6655812c3"
+    },
+    "arXiv:2503.16163": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md",
+      "identifiers": [
+        "arXiv:2503.16163"
+      ],
+      "source_hash": "11b55deb613f48611a8275b05565b4bf668f65ac0d8f20637cb045a753fe344c"
+    },
+    "arXiv:2506.03296": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
+      "identifiers": [
+        "arXiv:2506.03296"
+      ],
+      "source_hash": "ea01e2ddf08ac514e00dcf3739c97fd10de98c471516db43a2528f1f237edebe"
+    },
+    "arXiv:2508.13231": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md",
+      "identifiers": [
+        "arXiv:2508.13231"
+      ],
+      "source_hash": "b4d4ab36cade10fe33eb6e8af64a8213f562c22c593d8d955dd5c34d40228ad8"
+    },
+    "arXiv:2601.19910": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2601.19910-understanding-bottlenecks-kv-offloading.md",
+      "identifiers": [
+        "arXiv:2601.19910"
+      ],
+      "source_hash": "6bd1c1d7c3391850db5efed0b3cbf1def30dc27bd5a94dc759fecbde30915e12"
+    },
+    "arXiv:2601.20309": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md",
+      "identifiers": [
+        "arXiv:2601.20309"
+      ],
+      "source_hash": "7d0a7707491addbe1e75a269e37108cc3d63cb44e98c0e7f67d602ae29606fd4"
+    },
+    "arXiv:2602.07721": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+      "identifiers": [
+        "arXiv:2602.07721"
+      ],
+      "source_hash": "9e7a5dfcc6b8efb009322e295e8d3ca617bc8a2313563360d0b716a5dd211e05"
+    },
+    "arXiv:2603.17803": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
+      "identifiers": [
+        "arXiv:2603.17803"
+      ],
+      "source_hash": "75312c7ba9ff8418322175f0978f0efd9b8da6a61a74490a5faac3fa2ec4c0a1"
+    },
+    "arXiv:2603.27138": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
+      "identifiers": [
+        "arXiv:2603.27138"
+      ],
+      "source_hash": "35f164dc38edf5ccffc93db62ddc56748e0cdff3aa33fd19888a1fe7ecb82f96"
+    },
+    "arXiv:2605.03375": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
+      "identifiers": [
+        "arXiv:2605.03375"
+      ],
+      "source_hash": "761db7fafe30ec27572cdf78ad8ac27b99ecd0dcc05b319ccd3f7bdc755b6be6"
+    },
+    "arXiv:2605.18071": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
+      "identifiers": [
+        "arXiv:2605.18071"
+      ],
+      "source_hash": "f32f9b34226428fcdaf235f1067c5bcc180ba6ae454e0dfdc6878d28844a4aa6"
+    },
+    "arXiv:2606.16135": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "identifiers": [
+        "arXiv:2606.16135"
+      ],
+      "source_hash": "5f02a395c2fa63a71d94a946b141e2af99ca13e8fa417c4937419209a859cc7e"
+    },
+    "arXiv:2609.04852": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md",
+      "identifiers": [
+        "arXiv:2609.04852"
+      ],
+      "source_hash": "324343d5336eab3bcbc523d05660872d0c15daf8bf922f4c107174f49c73617e"
+    },
+    "USENIX:OSDI26:luo": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md",
+      "identifiers": [
+        "USENIX:OSDI26:luo"
+      ],
+      "source_hash": "e97678854ebcf97abe1369287c5b232f26161c926ba5625ac9522be4601d6268"
+    },
+    "arXiv:2505.02922": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
+      "identifiers": [
+        "arXiv:2505.02922"
+      ],
+      "source_hash": "9847eb0bec1bc5168bb1c895930d1177b26f13f1520c1c525b62a052efb90f65"
+    },
+    "DOI:10.5555/3600237.3600268": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
+      "identifiers": [
+        "DOI:10.5555/3600237.3600268"
+      ],
+      "source_hash": "65eedac1c7cb9ac80242bc0392c285106ca11147cf1a0bc28eedd031b377b0d6"
+    },
+    "arXiv:2302.11665": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+      "identifiers": [
+        "arXiv:2302.11665"
+      ],
+      "source_hash": "978459694f07c66f8e465cf77a1b6c4961b861478d5b62937175f1a3910705eb"
+    },
+    "arXiv:2305.05920": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+      "identifiers": [
+        "arXiv:2305.05920"
+      ],
+      "source_hash": "d3689011f2781e4151e91934216efc40fa31f342f2d66236d4e72d854931873f"
+    },
+    "DOI:10.1145/3600006.3613165": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "identifiers": [
+        "DOI:10.1145/3600006.3613165",
+        "arXiv:2309.06180"
+      ],
+      "source_hash": "b2effcff8ee4127907877922688335695f843e160117278c57f3ed7f042e1bf3"
+    },
+    "arXiv:2311.15566": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "identifiers": [
+        "arXiv:2311.15566"
+      ],
+      "source_hash": "b1aa0a940fd2b47e1019e6765632b699a7ee9b4feec667d21a9f87510f32c881"
+    },
+    "arXiv:2311.18677": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "identifiers": [
+        "DOI:10.1109/isca59077.2024.00019",
+        "arXiv:2311.18677"
+      ],
+      "source_hash": "b5926c1908c2aa5a30c2ab313d400951098f387b43f15511090171525b5eda71"
+    },
+    "arXiv:2312.05516": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+      "identifiers": [
+        "DOI:10.1145/3689031.3696086",
+        "arXiv:2312.05516"
+      ],
+      "source_hash": "23d681d41689b309a18cddaf3c405e7d81596d4dbe2feb33733247054581852f"
+    },
+    "arXiv:2312.07104": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "identifiers": [
+        "OpenReview:VqkAKQibpq",
+        "arXiv:2312.07104"
+      ],
+      "source_hash": "362fabc01166cd0fb9f3efdc5ffd92f3e49654b865d7c868a2ea60008b8e6961"
+    },
+    "arXiv:2401.00588": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+      "identifiers": [
+        "arXiv:2401.00588"
+      ],
+      "source_hash": "adf5a947c39a198602c584f3893a0c276e631936af5ad1781ec45da6bcfef53d"
+    },
+    "arXiv:2401.08671": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+      "identifiers": [
+        "arXiv:2401.08671"
+      ],
+      "source_hash": "e9a817520ef8e9986c95669c8c251768081d10955612e184b3dedd76aacdabb8"
+    },
+    "arXiv:2401.09670": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "identifiers": [
+        "arXiv:2401.09670"
+      ],
+      "source_hash": "deea6e70923aa810f079589b495d84b0b1182589a08b1e373738c6cfab3c3c72"
+    },
+    "arXiv:2401.14351": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+      "identifiers": [
+        "arXiv:2401.14351"
+      ],
+      "source_hash": "8fd8da3e3fbffb7e45bddedcd4d16f0fa5eac8b12088cacd6abe5802bbace85f"
+    },
+    "arXiv:2403.02310": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "identifiers": [
+        "arXiv:2403.02310"
+      ],
+      "source_hash": "3303cc95c0ca1724465d61e044abbd560586eedc6a109fd4975938d090133fcd"
+    },
+    "arXiv:2403.19708": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+      "identifiers": [
+        "arXiv:2403.19708"
+      ],
+      "source_hash": "9989eef6f4218ae94db52783e0b7e8f535068b460df5373e346e6f11d999695f"
+    },
+    "arXiv:2404.16283": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+      "identifiers": [
+        "arXiv:2404.16283"
+      ],
+      "source_hash": "b666251bda843a16bc7f3e4f17a5ebaff060a46c7d8ce4f51338c486907c9097"
+    },
+    "arXiv:2405.19888": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+      "identifiers": [
+        "arXiv:2405.19888"
+      ],
+      "source_hash": "3d076889bdac169c807f09b9cb496d2e980cec75651d06317d771b88026c7ea0"
+    },
+    "arXiv:2406.03243": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "identifiers": [
+        "arXiv:2406.03243"
+      ],
+      "source_hash": "d245ff1ed83d064f6c7e2f6e6e1624095c1814be83167fbc49fc4f45cbb4c0a1"
+    },
+    "arXiv:2406.17565": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+      "identifiers": [
+        "arXiv:2406.17565"
+      ],
+      "source_hash": "65a273d61c66c0dc98837b1c79e15b20ebfe88b6867546eb61e92b7a770fb59c"
+    },
+    "arXiv:2407.00023": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "identifiers": [
+        "arXiv:2407.00023"
+      ],
+      "source_hash": "29cafe30efc388242ac6793e0557ed5903b635fcb90b10b2691e1e60a83af3e7"
+    },
+    "arXiv:2407.00047": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+      "identifiers": [
+        "arXiv:2407.00047"
+      ],
+      "source_hash": "8c8989d9f53e2c046ace756159510c8f14d90f5d05dafa688bf8941bfdea1c91"
+    },
+    "arXiv:2407.00079": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+      "identifiers": [
+        "arXiv:2407.00079"
+      ],
+      "source_hash": "2d8516378b38e1c4846ec064c55d4745f6925d1621727dd0e0b9907355ba212a"
+    },
+    "arXiv:2408.08147": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+      "identifiers": [
+        "arXiv:2408.08147"
+      ],
+      "source_hash": "cd80de232c38b73b147e3853558bee724632e4f53bceb961f40f012acc124b5b"
+    },
+    "arXiv:2408.15792": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+      "identifiers": [
+        "arXiv:2408.15792"
+      ],
+      "source_hash": "5af897326abdb7d3a1727ebc32178a86db8998400fb32ce0842ce736427199d0"
+    },
+    "arXiv:2501.08090": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.08090-chiron-hierarchical-autoscaling.md",
+      "identifiers": [
+        "arXiv:2501.08090"
+      ],
+      "source_hash": "a858fc6d29f86ce71ad8182b06e729205132c70631c60efd5b32101986dd699d"
+    },
+    "arXiv:2501.14312": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling-dlpm.md",
+      "identifiers": [
+        "arXiv:2501.14312"
+      ],
+      "source_hash": "462c15ae4c45451fd4997c2936129229de28cd055c6e8dd5dfeadd560b012929"
+    },
+    "arXiv:2603.06350": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.06350-moeless-serverless-moe-serving.md",
+      "identifiers": [
+        "arXiv:2603.06350"
+      ],
+      "source_hash": "79061237a872795d99bdf052b6b0ba4b52c6d1e24fe57e0c6f48e56045459bc6"
+    },
+    "arXiv:2604.07609": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md",
+      "identifiers": [
+        "arXiv:2604.07609"
+      ],
+      "source_hash": "86ac6cf3d22727343f82ecb7bedb66c9d55e8f1ce0a6d29b441e5b61c5c03987"
+    },
+    "arXiv:2606.01839": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01839-conserve-conversation-level-agentic-serving.md",
+      "identifiers": [
+        "arXiv:2606.01839"
+      ],
+      "source_hash": "1d6dc0b58339efe133ec43c3068529ee62ef6cbd3795ca3a0f63a88149879b11"
+    },
+    "arXiv:2606.22327": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+      "identifiers": [
+        "arXiv:2606.22327"
+      ],
+      "source_hash": "52a58c0c41a3fb2dc3ed088f9e428bc5267a9375fba9cf6dea9c7add13a5a4bc"
+    },
+    "arXiv:2606.24506": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.24506-crosspool-cold-moe-serving.md",
+      "identifiers": [
+        "arXiv:2606.24506"
+      ],
+      "source_hash": "007e6b318ba67d4feedbba05de15040e3cca18d88c8a6a31b8fad93975232398"
+    },
+    "arXiv:2607.03948": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03948-online-linear-programming-multi-objective-routing.md",
+      "identifiers": [
+        "arXiv:2607.03948"
+      ],
+      "source_hash": "36cb12c5dd7c162f6c38653f4e93d4aa90697ea86cf58eae368f59e8bed196a4"
+    },
+    "arXiv:2607.16892": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
+      "identifiers": [
+        "arXiv:2607.16892"
+      ],
+      "source_hash": "b9f0b4c4a5ca89322a7c329bd736e6a7ab5e419f703dedb3bb8eafe4ea4b44d0"
+    },
+    "arXiv:2607.28150": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+      "identifiers": [
+        "arXiv:2607.28150"
+      ],
+      "source_hash": "6f7221e886e740d14582816bb602eb7101e7d6f58542658603ba2d7b3497a587"
+    },
+    "arXiv:2608.06557": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+      "identifiers": [
+        "arXiv:2608.06557"
+      ],
+      "source_hash": "39d6cd860dd6f5d9dcc7c646249f011bd44e2b50b313278d80ed32cfba6cb6d0"
+    },
+    "arXiv:2608.15171": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md",
+      "identifiers": [
+        "arXiv:2608.15171"
+      ],
+      "source_hash": "d2a010de20f2f173358765c86fbd539e799c4c538996d1bf9783c955e4cc81d4"
+    },
+    "arXiv:2608.16477": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md",
+      "identifiers": [
+        "arXiv:2608.16477"
+      ],
+      "source_hash": "3aa7bbe94919a72717271fdb179ab431ae4efadf8eb09da22a7532583b040645"
+    },
+    "arXiv:2609.01068": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md",
+      "identifiers": [
+        "arXiv:2609.01068"
+      ],
+      "source_hash": "2dbe4bead657a4365da5df641b6c5e72d9a6ff9862589bafef3693a958a3a0bb"
+    },
+    "arXiv:2609.04774": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+      "identifiers": [
+        "arXiv:2609.04774"
+      ],
+      "source_hash": "23261ba13120f4a16b2aa5e67c9d1a4f72633f232369e142d61a186cc4869ea5"
+    },
+    "arXiv:2502.19811": {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+      "identifiers": [
+        "arXiv:2502.19811"
+      ],
+      "source_hash": "207a9471db1e84965e25248e3f2e892f85cc3e302931e2aef6096c0496ebd7f5"
+    },
+    "arXiv:2504.06419": {
+      "path": "papers/inference/99-other-inference-systems/2025-2504.06419-spire-throughput-speculative-decoding.md",
+      "identifiers": [
+        "arXiv:2504.06419"
+      ],
+      "source_hash": "663a0241d4e5203d1bba5fabad5e2e82413373903219fba5fc84e35a2dc79793"
+    },
+    "arXiv:2506.11309": {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+      "identifiers": [
+        "arXiv:2506.11309"
+      ],
+      "source_hash": "013bff4495ef79638f9417283767b20e14191efd2c1c7bd016c9c531b6889736"
+    },
+    "arXiv:2601.15013": {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.15013-radixmlp-intra-batch-deduplication.md",
+      "identifiers": [
+        "arXiv:2601.15013"
+      ],
+      "source_hash": "adfb832a6bf0b0efd9c019c002bb60ba71cfa681fd12c5a1ed16d7840a695c15"
+    },
+    "arXiv:2605.19893": {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.19893-specsa-sparse-speculative-verification.md",
+      "identifiers": [
+        "arXiv:2605.19893"
+      ],
+      "source_hash": "8b6054d15db2eb069e5c9c56a8e9a4ec4cf6729e7e025e4ab80371c143397f96"
+    },
+    "arXiv:2609.04010": {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md",
+      "identifiers": [
+        "arXiv:2609.04010"
+      ],
+      "source_hash": "60cedbc0ee9c6b761fbd387734041eca672cfd96a51138e620c61ddc3e6f1289"
+    }
   },
-  "other": {
-    "AAAI:39106": "03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md",
-    "AAAI:39454": "03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md",
-    "AAAI:39816": "03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md",
-    "ACL:2024.acl-long.681": "04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
-    "ACL:2025.acl-long.633": "06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
-    "ACL:2025.findings-acl.377": "04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md",
-    "DOI:10.1145/3688351.3689164": "01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
-    "DOI:10.5555/3600237.3600268": "11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
-    "NeurIPS2024:03469b1a66e351b18272be23baf3b809": "04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
-    "USENIX:OSDI26:luo": "10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md"
+  "identifier_to_canonical": {
+    "arXiv:2303.06865": "arXiv:2303.06865",
+    "arXiv:2312.11514": "arXiv:2312.11514",
+    "arXiv:2312.17238": "arXiv:2312.17238",
+    "arXiv:2401.14361": "arXiv:2401.14361",
+    "arXiv:2402.07033": "arXiv:2402.07033",
+    "arXiv:2403.01164": "arXiv:2403.01164",
+    "arXiv:2405.18832": "arXiv:2405.18832",
+    "arXiv:2411.11217": "arXiv:2411.11217",
+    "DOI:10.1145/3688351.3689164": "DOI:10.1145/3688351.3689164",
+    "arXiv:2502.05370": "arXiv:2502.05370",
+    "arXiv:2502.06888": "arXiv:2502.06888",
+    "arXiv:2602.00328": "arXiv:2602.00328",
+    "arXiv:2604.02715": "arXiv:2604.02715",
+    "arXiv:2605.17889": "arXiv:2605.17889",
+    "arXiv:2606.25353": "arXiv:2606.25353",
+    "arXiv:2608.12103": "arXiv:2608.12103",
+    "arXiv:2608.14333": "arXiv:2608.14333",
+    "arXiv:2310.01334": "arXiv:2310.01334",
+    "arXiv:2402.14800": "arXiv:2402.14800",
+    "arXiv:2403.18926": "arXiv:2403.18926",
+    "arXiv:2406.13233": "arXiv:2406.13233",
+    "arXiv:2410.07348": "arXiv:2410.07348",
+    "arXiv:2410.17954": "arXiv:2410.17954",
+    "arXiv:2509.02753": "arXiv:2509.02753",
+    "arXiv:2511.10054": "arXiv:2511.10054",
+    "arXiv:2604.08133": "arXiv:2604.08133",
+    "arXiv:2606.29982": "arXiv:2606.29982",
+    "arXiv:2308.12066": "arXiv:2308.12066",
+    "arXiv:2310.18859": "arXiv:2310.18859",
+    "arXiv:2410.22134": "arXiv:2410.22134",
+    "arXiv:2501.10375": "arXiv:2501.10375",
+    "arXiv:2502.12224": "arXiv:2502.12224",
+    "arXiv:2509.23638": "arXiv:2509.23638",
+    "arXiv:2512.03927": "arXiv:2512.03927",
+    "arXiv:2603.19289": "arXiv:2603.19289",
+    "arXiv:2607.24787": "arXiv:2607.24787",
+    "arXiv:2608.21240": "arXiv:2608.21240",
+    "arXiv:2609.04895": "arXiv:2609.04895",
+    "AAAI:39816": "AAAI:39816",
+    "AAAI:39454": "AAAI:39454",
+    "AAAI:39106": "AAAI:39106",
+    "arXiv:2307.02628": "arXiv:2307.02628",
+    "arXiv:2407.14057": "arXiv:2407.14057",
+    "NeurIPS2024:03469b1a66e351b18272be23baf3b809": "NeurIPS2024:03469b1a66e351b18272be23baf3b809",
+    "ACL:2024.acl-long.681": "ACL:2024.acl-long.681",
+    "arXiv:2503.08524": "arXiv:2503.08524",
+    "arXiv:2503.23798": "arXiv:2503.23798",
+    "arXiv:2504.15895": "arXiv:2504.15895",
+    "ACL:2025.findings-acl.377": "ACL:2025.findings-acl.377",
+    "DOI:10.1145/3620666.3651335": "arXiv:2305.09781",
+    "arXiv:2305.09781": "arXiv:2305.09781",
+    "arXiv:2311.08252": "arXiv:2311.08252",
+    "arXiv:2401.10774": "arXiv:2401.10774",
+    "arXiv:2401.15077": "arXiv:2401.15077",
+    "arXiv:2402.02057": "arXiv:2402.02057",
+    "arXiv:2510.10302": "arXiv:2510.10302",
+    "arXiv:2511.14102": "arXiv:2511.14102",
+    "arXiv:2603.09983": "arXiv:2603.09983",
+    "arXiv:2605.00342": "arXiv:2605.00342",
+    "arXiv:2605.08151": "arXiv:2605.08151",
+    "arXiv:2605.15051": "arXiv:2605.15051",
+    "arXiv:2607.12696": "arXiv:2607.12696",
+    "arXiv:2608.02989": "arXiv:2608.02989",
+    "arXiv:2310.02410": "arXiv:2310.02410",
+    "arXiv:2310.16795": "arXiv:2310.16795",
+    "arXiv:2406.08155": "arXiv:2406.08155",
+    "arXiv:2407.14417": "arXiv:2407.14417",
+    "arXiv:2410.06270": "arXiv:2410.06270",
+    "arXiv:2503.21135": "arXiv:2503.21135",
+    "arXiv:2505.03804": "arXiv:2505.03804",
+    "arXiv:2505.05799": "arXiv:2505.05799",
+    "arXiv:2510.10962": "arXiv:2510.10962",
+    "arXiv:2511.15015": "arXiv:2511.15015",
+    "ACL:2025.acl-long.633": "ACL:2025.acl-long.633",
+    "arXiv:2605.23078": "arXiv:2605.23078",
+    "arXiv:2607.16184": "arXiv:2607.16184",
+    "arXiv:2402.05099": "arXiv:2402.05099",
+    "DOI:10.1109/isca59077.2024.00077": "arXiv:2403.17312",
+    "arXiv:2403.17312": "arXiv:2403.17312",
+    "arXiv:2501.08192": "arXiv:2501.08192",
+    "arXiv:2504.06319": "arXiv:2504.06319",
+    "arXiv:2606.24467": "arXiv:2606.24467",
+    "arXiv:2607.01237": "arXiv:2607.01237",
+    "arXiv:2609.02029": "arXiv:2609.02029",
+    "arXiv:2609.03235": "arXiv:2609.03235",
+    "arXiv:2609.03430": "arXiv:2609.03430",
+    "arXiv:2609.03494": "arXiv:2609.03494",
+    "arXiv:2609.03515": "arXiv:2609.03515",
+    "DOI:10.18653/v1/2024.acl-long.363": "arXiv:2308.15030",
+    "arXiv:2308.15030": "arXiv:2308.15030",
+    "arXiv:2406.06282": "arXiv:2406.06282",
+    "arXiv:2504.15299": "arXiv:2504.15299",
+    "arXiv:2607.09686": "arXiv:2607.09686",
+    "arXiv:2607.10183": "arXiv:2607.10183",
+    "arXiv:2608.16157": "arXiv:2608.16157",
+    "arXiv:2609.01338": "arXiv:2609.01338",
+    "arXiv:2609.02514": "arXiv:2609.02514",
+    "arXiv:2403.11421": "arXiv:2403.11421",
+    "arXiv:2407.21255": "arXiv:2407.21255",
+    "arXiv:2409.04992": "arXiv:2409.04992",
+    "arXiv:2411.01142": "arXiv:2411.01142",
+    "arXiv:2411.09317": "arXiv:2411.09317",
+    "arXiv:2411.17089": "arXiv:2411.17089",
+    "arXiv:2501.01792": "arXiv:2501.01792",
+    "arXiv:2502.12574": "arXiv:2502.12574",
+    "arXiv:2503.16163": "arXiv:2503.16163",
+    "arXiv:2506.03296": "arXiv:2506.03296",
+    "arXiv:2508.13231": "arXiv:2508.13231",
+    "arXiv:2601.19910": "arXiv:2601.19910",
+    "arXiv:2601.20309": "arXiv:2601.20309",
+    "arXiv:2602.07721": "arXiv:2602.07721",
+    "arXiv:2603.17803": "arXiv:2603.17803",
+    "arXiv:2603.27138": "arXiv:2603.27138",
+    "arXiv:2605.03375": "arXiv:2605.03375",
+    "arXiv:2605.18071": "arXiv:2605.18071",
+    "arXiv:2606.16135": "arXiv:2606.16135",
+    "arXiv:2609.04852": "arXiv:2609.04852",
+    "USENIX:OSDI26:luo": "USENIX:OSDI26:luo",
+    "arXiv:2505.02922": "arXiv:2505.02922",
+    "DOI:10.5555/3600237.3600268": "DOI:10.5555/3600237.3600268",
+    "arXiv:2302.11665": "arXiv:2302.11665",
+    "arXiv:2305.05920": "arXiv:2305.05920",
+    "DOI:10.1145/3600006.3613165": "DOI:10.1145/3600006.3613165",
+    "arXiv:2309.06180": "DOI:10.1145/3600006.3613165",
+    "arXiv:2311.15566": "arXiv:2311.15566",
+    "DOI:10.1109/isca59077.2024.00019": "arXiv:2311.18677",
+    "arXiv:2311.18677": "arXiv:2311.18677",
+    "DOI:10.1145/3689031.3696086": "arXiv:2312.05516",
+    "arXiv:2312.05516": "arXiv:2312.05516",
+    "OpenReview:VqkAKQibpq": "arXiv:2312.07104",
+    "arXiv:2312.07104": "arXiv:2312.07104",
+    "arXiv:2401.00588": "arXiv:2401.00588",
+    "arXiv:2401.08671": "arXiv:2401.08671",
+    "arXiv:2401.09670": "arXiv:2401.09670",
+    "arXiv:2401.14351": "arXiv:2401.14351",
+    "arXiv:2403.02310": "arXiv:2403.02310",
+    "arXiv:2403.19708": "arXiv:2403.19708",
+    "arXiv:2404.16283": "arXiv:2404.16283",
+    "arXiv:2405.19888": "arXiv:2405.19888",
+    "arXiv:2406.03243": "arXiv:2406.03243",
+    "arXiv:2406.17565": "arXiv:2406.17565",
+    "arXiv:2407.00023": "arXiv:2407.00023",
+    "arXiv:2407.00047": "arXiv:2407.00047",
+    "arXiv:2407.00079": "arXiv:2407.00079",
+    "arXiv:2408.08147": "arXiv:2408.08147",
+    "arXiv:2408.15792": "arXiv:2408.15792",
+    "arXiv:2501.08090": "arXiv:2501.08090",
+    "arXiv:2501.14312": "arXiv:2501.14312",
+    "arXiv:2603.06350": "arXiv:2603.06350",
+    "arXiv:2604.07609": "arXiv:2604.07609",
+    "arXiv:2606.01839": "arXiv:2606.01839",
+    "arXiv:2606.22327": "arXiv:2606.22327",
+    "arXiv:2606.24506": "arXiv:2606.24506",
+    "arXiv:2607.03948": "arXiv:2607.03948",
+    "arXiv:2607.16892": "arXiv:2607.16892",
+    "arXiv:2607.28150": "arXiv:2607.28150",
+    "arXiv:2608.06557": "arXiv:2608.06557",
+    "arXiv:2608.15171": "arXiv:2608.15171",
+    "arXiv:2608.16477": "arXiv:2608.16477",
+    "arXiv:2609.01068": "arXiv:2609.01068",
+    "arXiv:2609.04774": "arXiv:2609.04774",
+    "arXiv:2502.19811": "arXiv:2502.19811",
+    "arXiv:2504.06419": "arXiv:2504.06419",
+    "arXiv:2506.11309": "arXiv:2506.11309",
+    "arXiv:2601.15013": "arXiv:2601.15013",
+    "arXiv:2605.19893": "arXiv:2605.19893",
+    "arXiv:2609.04010": "arXiv:2609.04010"
   },
   "ignored_moved_stubs": [
     "01-offload-hierarchical-memory/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
@@ -35,6 +1306,5 @@
     "01-offload-hierarchical-memory/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md",
     "01-offload-hierarchical-memory/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md",
     "01-offload-hierarchical-memory/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md"
-  ],
-  "path_resolution": "For arXiv IDs, locate the single active paper file in the recorded lineage whose filename/front matter contains the base arXiv ID; moved stubs are excluded."
+  ]
 }

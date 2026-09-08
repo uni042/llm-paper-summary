@@ -1,4 +1,15 @@
 ---
+canonical_id: ""
+arxiv_id: null
+doi: null
+openreview_id: null
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: ""
 summary: ""
 authors_affiliations: ""
@@ -186,4 +197,3 @@ algorithm、scheduler、cache policy、predictor、量子化器など、独立�
 ## 引用関係
 
 ## 一次資料
-

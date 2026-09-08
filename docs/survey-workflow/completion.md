@@ -18,10 +18,8 @@
 ## blockers
 `blockers.json` は自力で解消できない問題だけを保持する。実行ごとの一時失敗やREADME不整合を入れない。各実行で既存blockerの状態を悪化させず、解決確認時だけcloseする。朝の集約ではopen blockerを要約対象にする。
 
-## 実行ログ
-各実行の終了時に `survey-state/log/` へ1実行1ファイルで保存する。ファイル名は予定実行枠を先頭に `YYYY-MM-DDTHH-MM+0900_<run_id>.md` とする。
-各ログに `started_at`, `finished_at`, 予定枠, `run_id`, `workflow_version`, mode, status, plan_id、精読・監査進捗、取得不能見送り、core保存結果、派生更新またはmaintenance登録、blocker追加／解消、確認commit、支障を記録する。
-
-新しいログを保存・再取得して確認した後、`survey-state/log/` を列挙し、各ログの `finished_at` を基準に現在時刻から24時間を超えたログを古い順に削除する。README等の運用説明は削除対象外。ログは成果・queue・blocker・日次履歴の正本にしない。
+## 実行記録
+開始・途中・終了を `survey-state/runs/<run_id>.json` に保存する。詳細な属性・保存順・旧ログとの互換・24時間整理は[安定実行・復旧仕様](reliability.md)に従う。
+保存確認済みの成果commit、対象、次の処理を記録し、進捗ページを更新する。成果・再開位置・永久除外・日次履歴を実行記録から推測しない。未解決の開始記録は24時間で消さない。
 
 通知は起動元の指示に従う。

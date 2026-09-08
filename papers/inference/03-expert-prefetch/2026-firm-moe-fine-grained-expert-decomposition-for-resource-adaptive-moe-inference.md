@@ -1,4 +1,12 @@
 ---
+canonical_id: "AAAI:39106"
+last_audited: null
+audit_version: 0
+storage_targets: []
+bottlenecks: []
+hardware_details: null
+quality_effect: null
+evidence_locations: []
 title: "FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference"
 summary: "expert weightを複数の小さな行列単位へ分け、複数の前layerが共通して必要と予測したexpert部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。"
 authors_affiliations: "Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng, Shibo He／Zhejiang University, Zhejiang University of Technology"

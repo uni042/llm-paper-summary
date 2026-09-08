@@ -2,79 +2,47 @@
 
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
-## 収録論文
+<!-- survey:auto:start -->
+## 自動生成の論文一覧（38本）
 
-収録論文: 36本。公開日が新しい順。
-
-- 2026-09-04 — [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)
-  - requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。
-- 2026-09-01 — [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md)
-  - speculative decodingで既に計算されるdraft表現へ軽量な回帰headを付けて出力長を予測し、短いrequestの優先処理とdecode instance間の負荷分散へ使うことでtail latencyを下げる。
-- 2026-08-17 — [Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN](2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md)
-  - handover前に安定prefixを移行先で再計算し、生成中suffix KVを移行元から転送して、切替後の生成停止と遠隔経路のITLを減らす。
-- 2026-08-15 — [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md)
-  - concurrent prefillとactive decodeからtoken budgetを動的に切り替え、長prefillの効率とdecode interferenceを調整する。
-- 2026-08-06 — [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md)
-  - requestごとの残りlatency budgetを継続推定し、実行順とHBM / CPU DRAM / NVMe間のKV復元・先読み・保持・再計算を同じbudgetで決めて、SLO達成量と長context requestへの公平性を両立する。
-- 2026-07-30 — [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)
-  - prefill / decode分離でKV全体を転送せず、使われやすいKVを先送りし、不足分のremote取得とlocal読出しを並列化してstage切替待ちを減らす。
-- 2026-07-18 — [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)
-  - 未知の出力長に対するKV予約量、GPU構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemptionを抑える。
-- 2026-07-04 — [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md)
-  - batch枠とKV cacheをresource budgetとして価格付けし、SLO便益とshadow priceを比較してworker routingを決め、latency・TTFT・throughput・tail SLOを同じonline最適化で調整する。
-- 2026-06-23 — [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md)
-  - 低頻度な複数MoEでFFN weight用GPU poolとKV / attention用GPU poolを分離し、model間で変動するKV需要を共有してHBM利用率を上げる。
-- 2026-06-21 — [Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice](2026-2606.22327-geometry-aware-online-scheduling.md)
-  - requestの処理時間だけでなく生成中に増えるKV cacheの占有量を含む時空間volumeで優先順位を決め、memory pressure下の平均・tail latencyを下げる。
-- 2026-03-06 — [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md)
-  - hot expertを予測しserverless replicaを動的にscale・配置してexpert stragglerを減らす。
-- 2025-01-24 — [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)
-  - client間のGPU利用公平性を保ちながら、許容範囲だけ実行順を変えて同じprefixを持つrequestを続け、KV再利用を増やす。
-- 2025-01-14 — [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)
-  - GPU内のconcurrencyを速い周期、cluster全体のinstance数を遅い周期で制御し、interactive SLOを守りつつ余剰capacityをbatch処理へ使う。
-- 2024-08 — [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)
-  - 大規模prefill / decode分離clusterでP/D比をworkloadごとに調整し、request再転送とblock-free KV transferで固定構成のmismatchを減らす。
-- 2024-08-28 — [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)
-  - 出力token数の絶対値ではなくrequest同士の長さ順位を小型modelで予測し、短く終わりそうなrequestを先に処理してqueue待ちを減らす。
-- 2024-07-01 — [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)
-  - prefill / decodeを別poolへ分け、CPU DRAM・SSDへ保存したKVをcluster全体で再利用し、KV取得・queue待ち・再計算costを見てrequest配置を決める。
-- 2024-06-25 — [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)
-  - GPU / CPU上のKVをinstance横断で検索・共有・転送できるmemory poolを作り、prefix reuseとprefill→decode KV移動を同じ仕組みで扱う。
-- 2024-06-05 — [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md)
-  - request groupのSLO残余時間とmodel配置を見てqueue順序と実行先を調整し、interactive / batch・複数model混在時のSLO達成率を上げる。
-- 2024-06-05 — [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)
-  - 実行中requestのKVを別instanceへ段階移動し、load imbalance・memory不足・priority変更後でも配置をruntimeで修正する。
-- 2024-05-30 — [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)
-  - 複数LLM callのdataflowと共有promptをbackendへ伝え、application全体を見て並列実行・batching・prefix KV reuseを最適化する。
-- 2024-05-08 — [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)
-  - prefix KV再利用で節約できるprefill計算とGPU混雑による待ち時間を比較し、distributed servingでrequestの送り先を決める。
-- 2024-04-25 — [Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services](2024-2404.16283-andes-qoe-text-streaming-serving.md)
-  - token生成速度だけでなく人間の読解速度に対するstreaming QoEを見て、十分先行生成済みのrequestからGPU時間を必要なrequestへ回す。
-- 2024-03-23 — [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)
-  - multi-turn会話のKVをrequest終了後もDRAM / SSDへ保存し、次turnでprefetchしてhistoryの再prefillとstorage待ちを減らす。
-- 2024-03-04 — [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)
-  - 長いprefillをchunk化し、毎iterationでdecodeを先に処理して残りtoken budgetへprefillを入れ、generation stallを防ぐ。
-- 2024-01-25 — [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)
-  - local SSD / DRAMにmodel checkpointをcacheし、model localityを考慮したrequest配置とrunning request移動でserverless cold startを短縮する。
-- 2024-01-17 — [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)
-  - prefillとdecodeを別GPU群へ分け、各phaseのGPU数・parallelism・物理配置をTTFT / TPOT SLOに合わせて独立最適化する。
-- 2024-01-09 — [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)
-  - 長promptを小分けにし、prefill chunk・短prompt・decode tokenを総token数が揃うよう混ぜてGPU利用率とtail latencyを両立する。
-- 2023-12-31 — [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)
-  - clientごとの累積input / output token処理量を重み付きで追跡し、service量が少ないclientを優先してGPUを遊ばせず公平性を保つ。
-- 2023-12-12 — [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)
-  - 複数LLM callや条件分岐を一つのprogramとしてruntimeが理解し、共有prefix KV、並列実行、structured output生成をまとめて効率化する。
-- 2023-12-09 — [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md)
-  - multi-turn conversationの過去KVをrequest終了後もGPU / CPUへ保持し、次turnでhistory全体を再prefillする重複計算を避ける。
-- 2023-11-30 — [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)
-  - prefillとdecodeを別machine poolへ分け、各phaseに向くGPU世代・power setting・台数を使い分けてcostとthroughputを改善する。
-- 2023-11-27 — [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)
-  - spot GPUの増減に合わせてmodel parallel構成を組み替え、既存weightとKVを再利用してpreemption下でもservingを継続する。
-- 2023-09-12 — [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)
-  - KV cacheを固定長blockへ分けて必要分だけ割り当て・共有し、memory fragmentationと予約浪費を減らして同時request数を増やす。
-- 2023-05-10 — [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)
-  - token生成iterationごとにrequestをpreempt / resumeし、短いrequestを優先しながらKVのCPU退避とprefetchで待ち時間を減らす。
-- 2023-02-22 — [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)
-  - modelを複数GPUへ分割して配置し、model間で偏るtrafficを共有GPU poolへ統計的に多重化して、特定modelだけqueueが伸びるのを抑える。
-- 2022-07-11 — [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)
-  - output tokenを1つ生成するたびbatchを組み替え、進行位置や長さが異なるrequestを途中から出し入れできるcontinuous batchingの基礎を示す。
+| 論文 | 一文要約 |
+|---|---|
+| [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md) | requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。 |
+| [Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN](2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md) | 移動端末の基地局切替前に、安定した履歴prefixは移行先GPUで再計算し、増え続けるsuffix KVは移行元から転送して、切替後の生成停止と遠隔転送遅延を抑える。 |
+| [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md) | vLLMの1 iteration当たりtoken budgetを固定せず、同時prefill数とactive decode状態からscheduling pressureを見て大きいbudgetと小さいbudgetを切り替え、長context prefillの効率とdecode interferenceを両立する。 |
+| [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md) | 未知の出力長に対するKV予約量、GPU並列構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemptionのcostを抑えるcontrol-plane手法。 |
+| [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md) | batch枠とKV cacheをresource budgetとして価格付けし、各requestのSLO便益がresourceのshadow priceを上回るworkerへroutingすることで、latency・TTFT・throughput・tail SLOを同じonline最適化で調整するLLM router。 |
+| [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md) | 低頻度な複数MoEを同時提供する際、FFN weight用GPU poolとKV/attention用GPU poolを分離し、変動するKV需要を共有poolへ集約して長contextとtail latencyを改善する。 |
+| [Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice](2026-2606.22327-geometry-aware-online-scheduling.md) | requestの実行時間だけでなく、生成中に時間とともに増えるKV cacheの占有量を含む『時空間volume』で優先順位を決め、memory pressure下の平均・tail latencyを下げるLLM serving scheduler。 |
+| [Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving](2026-2606.01839-conserve-conversation-level-agentic-serving.md) | agentの各turnを個別予測して配置せず、conversation全体を初回の重いprefillと長いmemory-bound tailの2段階として扱い、観測可能なinput長とKV占有量だけで配置してKV転送と誤予測を減らす。 |
+| [Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC](2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md) | request処理をSmartNIC、tokenごとのbatching・scheduling・KV cache管理をGPU常駐制御へ移し、steady-state推論のcritical pathからhost CPUを外してlatency・throughputとCPU干渉耐性を改善する。 |
+| [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md) | 将来layerのexpert負荷分布を軽量predictorで予測し、stragglerになりそうなexpertをserverless replicaとして動的にscale・配置して、distributed MoE servingのload imbalanceを減らす。 |
+| [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md) | prefillとdecodeを別GPU群へ分け、cluster内のCPU DRAM・SSDへ過去KVを保存して別nodeからも再利用できるようにし、KV取得時間・queue待ち・残りprefill計算を比較してrequestの実行先を決める大規模serving system。 |
+| [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md) | interactive / batch requestや複数modelを同じclusterで扱うとき、各request groupがあと何秒待てるかとmodelがどのGPUに載っているかを見て、queue順序と実行先を組み替え、latency目標を守れるrequest数を増やすsystem。 |
+| [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md) | 実行中requestのKV cacheを別model instanceへ段階的に移し、GPU間の混雑差・memory不足・priority変更・instance削減が起きた後でもrequest配置を修正できるmulti-instance serving scheduler。 |
+| [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md) | 複数LLM callから成るapplicationについて、どのcallの出力を次のcallが使うか、どのprompt部分を共有するかをbackendへ伝え、application全体を見て並列実行・batching・prefix KV再利用を調整するserving system。 |
+| [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md) | multi-turn conversationの過去KVをrequest終了後もDRAM / SSDへ保存し、次turnで使うlayerのKVを少し前からGPUへ戻すことで、history全体の再prefillとstorage待ちを減らすstateful serving手法。 |
+| [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md) | 長いprefillを小さいchunkへ分け、毎回まず進行中requestのdecode tokenを処理し、残った総token枠へprefillを入れることで、新requestを受けながらdecodeの長時間停止を防ぐserving scheduler。 |
+| [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md) | request到着時にmodelをGPUへ読み込むserverless環境で、checkpointをGPU近くのSSD / DRAMへcacheし、高速loaderとmodel所在地を考慮したrequest配置、生成途中requestの移動を組み合わせてmodel起動待ちを短縮するsystem。 |
+| [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md) | prefillとdecodeを別GPU群へ分け、それぞれのGPU数・model分割方法・配置場所を、最初のtokenまでの時間とその後のtoken間隔の目標に合わせて別々に決めることで、両phaseの干渉をなくすserving system。 |
+| [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md) | 長いプロンプト（prompt）を分割し、短いプロンプト・事前充填チャンク（prefill chunk）・復号トークン（decode token）を一定のトークン予算へ混合して、生成停止を抑えつつGPU利用率を高めるLLMサービングシステム（serving system）。 |
+| [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md) | clientごとの累積input / output token処理量を重み付きで追跡し、service量が少ないclientを優先してGPUを遊ばせず公平性を保つ。 |
+| [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md) | 複数のLLM callや条件分岐をruntimeが1つのprogramとして理解し、共有prefixのKV再利用・並列実行・structured output生成をまとめて効率化するinference system。 |
+| [Stateful Large Language Model Serving with Pensieve](2023-2312.05516-pensieve-stateful-large-language-model-serving.md) | multi-turn conversationの過去KV cacheをrequest終了後もGPU / CPUへ残し、次のturnで同じhistoryを再びprefillする計算を避けるstateful LLM serving system。 |
+| [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md) | prefillとdecodeを別machine poolへ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、cluster全体のthroughput・cost・消費電力を改善するserving設計。 |
+| [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md) | 安価だが突然利用できなくなるspot GPUの増減に合わせてmodelの分割方法を組み替え、既存weightとKV cacheをできるだけ再利用してLLM servingを継続するsystem。 |
+| [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md) | KV cacheを固定長blockへ分け、必要になった分だけGPU memoryを割り当てて複数sequence間でも共有し、未使用領域を減らして同時に処理できるrequest数を増やすvLLM serving system。 |
+| [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md) | output tokenを1つ生成する区切りでrequestを一時停止・再開できるようにし、短いrequestを優先しながらKV cacheをCPUへ退避・先読みして待ち時間を減らすLLM serving scheduler。 |
+| [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md) | 複数modelへ届くrequest数が時間ごとに偏る環境で、modelを複数GPUへ分割して置き、空いているGPUをmodel間で共有しやすくすることで、特定modelだけqueueが伸びるのを抑えるserving配置手法。 |
+| [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md) | output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。 |
+| [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md) | speculative decodingで既に計算されるdraft表現へ軽量な回帰headを付けて出力長を予測し、短いrequestの優先処理とdecode instance間の負荷分散へ使うことでtail latencyを下げる。 |
+| [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md) | requestごとに「SLOまであと何秒の遅延を許容できるか」を残りlatency budgetとして継続推定し、その同じbudgetでrequestの実行順とHBM / CPU DRAM / NVMe間のKV cache復元・先読み・保持・再計算をまとめて決めることで、SLOを満たす処理量と長context requestへの公平性を両立するserving system。 |
+| [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md) | prefill / decode分離で巨大なKV cacheを丸ごとnode間転送する代わりに、**decodeで使われやすいKVだけをprefill中に先送りし、足りないKVはdecode中にlocal読出しと並列でremote取得し、残りはnetworkの空き時間に送る**ことで、低帯域cloud上のstage切替待ちを減らす。 |
+| [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md) | clientごとのGPU利用量を公平に保ちつつ、**公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じprefixを持つrequestを続けて処理しKV再利用を増やす**scheduler。複数GPUではさらにprefix localityとGPU間load balanceも同時に調整する。 |
+| [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md) | interactive requestのlatency目標を守りながら余ったGPU capacityをbatch requestへ使うため、**各GPUで同時処理するrequest数を素早く増減する制御**と、**cluster全体のGPU instance数を遅い周期で増減する制御**を分けたLLM autoscaler。 |
+| [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md) | 最終的な出力token数を正確に当てる代わりに、promptから**どのrequestが他より短く終わりそうかという順位だけ**を小型modelで予測し、短そうなrequestを先に処理して長いrequestによるqueue待ちを減らすscheduler。 |
+| [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md) | 大規模prefill / decode分離clusterで、**workloadごとにP/D groupと比率を細かく組み替え、idle prefillへのrequest再転送とblock-freeなKV device-to-device転送を組み合わせる**ことで、固定P/D構成のmismatchと大規模network転送待ちを減らすproduction serving system。 |
+| [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md) | 同じprefixのKVをすでに持つGPUへrequestを送ればprefillを省ける一方、そのGPUだけ混むことがあるため、**KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してrequestの送り先を決める**distributed serving scheduler。 |
+| [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md) | prefillとdecodeを別instanceへ分けるservingで、GPU / CPU上のKV cacheをinstance横断で検索・共有・転送できる共通memory poolを作り、過去prefixの再利用とphase間KV移動を同じ仕組みで扱うsystem。 |
+| [Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services](2024-2404.16283-andes-qoe-text-streaming-serving.md) | LLMのstreaming responseを単純な生成速度ではなく、**最初のtokenが早く届き、その後もユーザーが読む速度に間に合うようtokenが途切れず届くか**で評価し、十分先まで生成済みのrequestを一時停止して、今すぐGPU時間が必要なrequestへ回すserving system。 |
+<!-- survey:auto:end -->
