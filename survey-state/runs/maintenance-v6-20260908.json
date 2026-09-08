@@ -3,11 +3,11 @@
   "started_at": "2026-09-08T12:11:18.257137+00:00",
   "scheduled_at": "2026-09-08T12:11:18.193516+00:00",
   "mode": "maintenance",
-  "status": "running",
+  "status": "completed",
   "workflow_version": 6,
-  "last_progress_at": "2026-09-08T12:11:18.257137+00:00",
-  "stage": "final_integrity_check",
-  "next_action": "全体検査結果を保存",
+  "last_progress_at": "2026-09-08T12:13:12.464946+00:00",
+  "stage": "finished",
+  "next_action": "既存チャット側で起動プロンプトを更新",
   "capabilities": {
     "python": true,
     "python_version": "3.12.13",
@@ -16,5 +16,7 @@
     "repository_write": "verified_in_previous_migration"
   },
   "trigger": "manual",
-  "observation_scope": "Final repository verification and publication; earlier preparation is not reconstructed."
+  "observation_scope": "Final repository verification and publication; earlier preparation is not reconstructed.",
+  "verified_commit": "9a4ef01463d11799f9736c7b502ddf006b9fd246",
+  "finished_at": "2026-09-08T12:13:12.464946+00:00"
 }
