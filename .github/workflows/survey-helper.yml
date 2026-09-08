@@ -1,0 +1,46 @@
+name: Survey helper worker
+
+on:
+  push:
+    paths:
+      - '.survey/requests/*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-helper-main
+  cancel-in-progress: false
+
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install helper dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Process pending requests
+        run: python .survey/scripts/action_worker.py
+
+      - name: Commit worker results
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo 'No result changes to commit.'
+            exit 0
+          fi
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add .survey/results .survey/survey-state papers
+          git commit -m 'survey-helper: process requests'
+          git push
