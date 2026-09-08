@@ -2,6 +2,24 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 13:30 JST
+- planned slot: `2026-09-08 09:30 JST`（manual catch-up）
+- run_id: `manual-daily-20260908T133029+0900`
+- workflow_version: `3`
+- mode: `daily-selection`
+- status: `completed`
+- plan_id: `daily-20260908T093000+0900`
+- period: `2026-09-08 09:30 JST` to `2026-09-09 09:30 JST` (end exclusive)
+- reading: previous-day adjustment not applicable (initial plan); target 10 / selected 10 / carried over 2 / newly selected 8 / shortfall 0 / completed 0 / remaining 10
+- audit: previous-day adjustment not applicable (initial plan); target 10 / selected 10 / carried over 0 / newly selected 10 / shortfall 0 / completed 0 / remaining 10
+- recovery: stale `pending_audit` entries for FlexGen and PagedAttention/vLLM were removed after artifact reconciliation because their formal audit metadata was already saved; they were not re-audited.
+- reading carry-over: `VestigeKV` (arXiv:2609.03949), `Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference` (arXiv:2609.04895)
+- reading new selection: `Blink` (2604.07609), `Observation, Not Prediction` (2606.01839), `Automated Tensor Scheduling` / ATSInfer (2607.10183), `KVServe` (2605.13734), `Towards Load-Aware Prefill Deflection` (2607.02043), `Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints` (2504.11320), `FlashMoE` (2601.17063), `Taming Request Imbalance` / Kairos (2605.02329)
+- audit selection: `Merge, Then Compress` (2310.01334), `Pre-gated MoE` (2308.12066), `SkipDecode` (2307.02628), `SpecInfer` (2305.09781), `MoQE` (2310.02410), `ALISA` (2403.17312), `SwapMoE` (2308.15030), `Fairness in Serving Large Language Models` (2401.00588), `Fast Inference of Mixture-of-Experts Language Models with Offloading` (2312.17238), `QMoE` (2310.16795)
+- validation: pass — daily plan persisted, re-read with 10 unique reading targets and 10 unique audit targets, both shortfalls 0; plan marked `ready` after save verification.
+- selection commits: `4beb129b`, `d79fbd7d`
+- error / bottleneck: none
+
 ## 2026-09-08 10:00–10:09 JST
 - planned slot: `2026-09-08 10:00 JST`
 - run_id: `scheduled-20260908T100000+0900`
@@ -95,7 +113,7 @@
 - pending_research at end: 2（今回未着手の既存queue）
 - pending_audit at end: 3（今回未着手の既存queue）
 - batch size: research 2 / audit 2
-- full_batch_streak: 0（queueに未着手作業が残るため増加条件外）
+- full_batch_streak: 0
 - discovery: `arxiv-search` + independent new-source quick scan; 今回の固定対象を増やす追加候補は登録なし
 - validation: pass — identity registry 150 active / Inference 150 / Training 19 / total 169。新規2 IDは各1 active lineage、README件数・一言説明を同期、Training配下変更なし。
 - recovery / migration: Workflow v2へ初回移行し、pending queueを保持したまま research/audit batch sizeを5/5→2/2、streakを0としてcheckpoint。
@@ -173,7 +191,7 @@
 - added: `KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU` (arXiv:2609.04852)
 - carried over research: `OUTLETS`, `mzCache`, `AceSpec`, `Random Attention`
 - carried over audit: `DistServe`, `Sarathi-Serve`, `SGLang`, `Pensieve`
-- validation detail: Inference 145本 / Training 19本 / total 164本へ同期。KVMem pageはcanonical_id / last_verifiedを保持し、KV Offload lineage READMEへ一言説明付きで追加。Training配下は変更なし。
+- validation detail: Inference 145本 / Training 19本 / total 164本へ同期。KVMem pageはcanonical_id / last_verifiedを保持し、KV Offload lineage READMEへ一言説明付きで追加。Training配下変更なし。
 - commits: `8927008`, `8a43a3e`, `b647276`, `b0ede3e`, `00eac55`, `075674f`
 
 ## 2026-09-08 02:02–02:05 JST
@@ -192,7 +210,7 @@
 - lineage update: `Speculative Decoding × MoE` を一般のspeculative decodingも含む `Speculative Decoding / MoE` へ拡張。6本→11本。
 - audited: `Splitwise` — ISCA 2024書誌、公式artifact、evaluation typeを確認しcanonical/audit metadataを追加。
 - carried over audit: `DistServe`, `Sarathi-Serve`, `SGLang`, `Pensieve`
-- validation detail: Inference 144本 / Training 19本 / total 163本へ同期。新規5ページはcanonical_id / last_verifiedを保持し、lineage READMEは全entryに一言説明付き。Training配下は変更なし。
+- validation detail: Inference 144本 / Training 19本 / total 163本へ同期。新規5ページはcanonical_id / last_verifiedを保持し、lineage READMEは全entryに一言説明付き。Training配下変更なし。
 - commits: `8a270ac`, `8c93ebb`, `4daab3c`, `23351d1`, `4c735ea`, `0a6dfe0`, `e9cf37c`, `7c1f59c`, `d92147c`, `0fdf48c`, `6d588e2`, `338c1b6`, `055cc99`
 
 ## 2026-09-08 00:57 JST
