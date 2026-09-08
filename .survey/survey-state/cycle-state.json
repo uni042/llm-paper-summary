@@ -5,8 +5,17 @@
   "cycle_id": "cycle-000001",
   "max_runs": 24,
   "next_run_index": 4,
-  "active_claim": null,
-  "targets": {"research": 10, "audit": 10},
+  "active_claim": {
+    "cycle_id": "cycle-000001",
+    "run_index": 4,
+    "run_id": "manual-cycle-000001-run-04-qmoe",
+    "claim_token": "0c0d0eaa0e864958b407591ef1267af0",
+    "workflow_commit": "57e4b9b9da7f3722c2ab5502d773363331adda6e"
+  },
+  "targets": {
+    "research": 10,
+    "audit": 10
+  },
   "current_plan_id": "daily-20260908T093000+0900",
   "current_plan_path": "survey-state/daily-plans/2026-09-08.json",
   "previous_cycle_id": null,
