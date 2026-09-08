@@ -13,7 +13,7 @@
 - pending_research at end: 1（独立新着確認で次回候補へ追加: Pallas, arXiv:2608.16477）
 - pending_audit at end: 0
 - batch size: research 2 / audit 2
-- full_batch_streak: 0（独立新着確認後のqueueに未着手作業が残るため増加条件外）
+- full_batch_streak: 1（今回開始時の固定対象は調査2/2・監査2/2を全件保存確認まで完了。実行中に新規発見したPallasは次回候補のため増加判定から除外）
 - discovery: existing queue primary-source review + independent arXiv search
 - validation: pass — recursive tree has 160 inference paper Markdown files including 6 moved stubs; identity registry has 154 active studies（144 arXiv + 10 other）, all arXiv IDs unique; Inference 154 / Training 19 / total 173; lineage counts KV Optimization 11 and KV Offload 21; required new-paper and audit metadata present
 - rejected ledger: added 0 / updated 0
