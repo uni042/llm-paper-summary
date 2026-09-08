@@ -12,6 +12,7 @@ Python 3.10以上と `scripts/requirements.txt` の依存を使う。実行前�
 
 ```bash
 python -m pip install -r scripts/requirements.txt
+python scripts/run_bootstrap.py --run-id <run_id> --scheduled-at <offset-aware-time> --started-at <offset-aware-time> --workflow-commit <commit> --nightly-hour <h> --morning-hour <h> --morning-minute <m> --planning-hour <h> --planning-minute <m> [--period-start <offset-aware-time>] [--auto-lease] --github-read <true|false|unknown> --github-write <true|false|unknown> --apply
 python scripts/identity_delta.py validate
 python scripts/identity_delta.py compact
 python scripts/repo_edit.py read --path <file> --start-line 1 --end-line 20 --number
@@ -23,6 +24,7 @@ python -m unittest discover -s tests
 
 | コマンド | 役割 |
 |---|---|
+| `run_bootstrap.py` | 開始時の能力記録、mode/route判定、run開始記録、開始時点で一意に決められるleaseを一括準備し、同一remote変更へ載せるべきファイル一覧を返す |
 | `identity_delta.py prepare --paper <path>` | 論文frontmatterから小さい識別差分を生成し、既存スナップショット・差分との衝突を検査 |
 | `identity_delta.py lookup <identifier>` | 形式3スナップショットと未compact差分を統合して正規識別子を検索 |
 | `identity_delta.py validate` | 未compact差分が論文本体と一致し、識別子衝突がないことを検査 |
@@ -40,6 +42,23 @@ python -m unittest discover -s tests
 | `cleanup` | 終了済み詳細記録の24時間整理。夜間だけ実施 |
 
 全件の `build` / `validate` と差分compactは夜間または明示的な保守で使う。通常の論文保存では当該論文、対応する識別差分、関連状態だけを検査する。`scripts/migrate_v5.py` は旧形式からの移行専用で、通常実行で呼ばない。
+
+## 起動処理の集約ヘルパー
+
+`scripts/run_bootstrap.py` は、開始直後に分散していた小さい判定を一つにまとめる。内部では同じrootの `scripts/survey.py` を読み、`select_mode`, `route`, `lease` の既存ロジックを再利用する。modeやlease規則を別実装として複製しない。
+
+ヘルパーへ渡す時刻・モード境界・GitHub可否は起動元の観測値であり、公開repo側に個人向けの実行時刻や通知条件を固定しない。`--scheduled-at`, `--started-at`, `--period-start` はoffset付き時刻を使う。`--github-read` と `--github-write` はヘルパーが推測せず、起動元が実際に確認した値を `true`, `false`, `unknown` で渡す。
+
+`--apply` ありでは、次をローカルでまとめて行う。
+
+1. `state-layout.json` から現行workflow versionと状態パスを読む。
+2. Python実行、依存読込、同版repoファイル、ローカル読書き、`.git` の有無、外部から渡されたGitHub読書き可否を `capabilities` にまとめる。
+3. `survey.py select_mode` と同じロジックでmodeを確定する。精読かつ `--period-start` があれば `route` も判定する。
+4. 新しい `runs/<run_id>.json` を作る。workflow versionはhardcodeせず `state-layout.json` から取得する。
+5. `--auto-lease` では夜間の `maintenance`、日次選定または精読から選定回復へ入る場合の `planning:<period_start>` だけを開始時に自動準備する。精読・監査の `paper:<canonical_id>` は対象確定前に推測せず、対象決定後に通常のlease手順で取得する。明示的な `--lease-resource` を渡した場合はそのresourceを使う。
+6. ローカル保存後にrunとleaseを再読込し、`files_to_publish` とリモート再確認条件をJSONで返す。
+
+ローカル保存はリモート取得成功ではない。呼出側は `files_to_publish` を最新HEADへ一つの非force変更として保存し、run記録とlease所有者・期限をリモートで再取得する。競合したら古いbundleをforceせず、最新状態からbootstrapをやり直す。connector-only、Pythonなし、完全checkoutなしではこのヘルパーを必須にせず、[state.md](state.md)の同等手順を接続機能で行う。
 
 ## 汎用行編集ヘルパー
 
