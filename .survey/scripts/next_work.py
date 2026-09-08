@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emit the next deterministic survey work item for workflow v8."""
+"""Emit deterministic next work and an end-of-step continuation directive."""
 from __future__ import annotations
 import argparse, importlib.util, json
 from pathlib import Path
@@ -32,7 +32,6 @@ def choose(summary):
     elif a["pending"] == 0:
         side = "research"
     else:
-        # Prefer the side with lower normalized completion. Ties prefer research.
         rr = r["done"] / max(1, r["target"])
         ar = a["done"] / max(1, a["target"])
         side = "research" if rr <= ar else "audit"
@@ -45,6 +44,59 @@ def choose(summary):
         "title": item.get("title"),
         "source_url": item.get("source_url"),
         "next_action": item.get("next_action") or ("perform formal audit" if side == "audit" else "read primary source in full"),
+    }
+
+
+def processed_in_active_run(root: Path, state: dict) -> int:
+    claim = state.get("active_claim") or {}
+    run_id = claim.get("run_id")
+    if not run_id:
+        return 0
+    path = root / "survey-state/runs" / f"{run_id}.json"
+    if not path.exists():
+        return 0
+    try:
+        run = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return 0
+    return len(run.get("processed") or [])
+
+
+def continuation(state: dict, summary: dict, recommendation: dict | None, root: Path):
+    claim = state.get("active_claim")
+    exhausted = summary["research"]["pending"] == 0 and summary["audit"]["pending"] == 0
+    if not claim:
+        return {
+            "action": "claim_next_run",
+            "optional": False,
+            "reason": "no active claim; normal work must start by claiming cycle-state.next_run_index",
+        }
+    run_index = int(claim.get("run_index", state.get("next_run_index") or 0))
+    if run_index == 24:
+        return {
+            "action": "integrity_only",
+            "optional": False,
+            "reason": "run 24 is reserved for integrity/compaction/repair and cycle closing",
+        }
+    if exhausted:
+        return {
+            "action": "close_cycle",
+            "optional": False,
+            "reason": "research and audit plans are both terminal; close early instead of consuming more run indices",
+        }
+    if recommendation:
+        return {
+            "action": "continue_same_run",
+            "optional": True,
+            "reason": "another selected item is ready; continue immediately when execution capacity and safe access remain",
+            "processed_in_this_run": processed_in_active_run(root, state),
+            "next": recommendation,
+            "fallback": "finish_run_without_advancing_extra_work; the next scheduled run will claim the following run index and resume from the same logical progress",
+        }
+    return {
+        "action": "finish_run",
+        "optional": False,
+        "reason": "no deterministic next selected item is available",
     }
 
 
@@ -62,6 +114,7 @@ def status(root: Path):
         "progress": {k: {x: summary[k][x] for x in ("target", "done", "pending")} for k in ("research", "audit")},
         "plan_exhausted": summary["research"]["pending"] == 0 and summary["audit"]["pending"] == 0,
         "recommended": rec,
+        "after_action": continuation(st, summary, rec, root),
     }
 
 
