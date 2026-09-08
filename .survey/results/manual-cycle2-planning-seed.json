@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "request_file": ".survey/requests/manual-cycle2-planning-seed.json",
+  "request": {
+    "schema_version": 1,
+    "operation": "planning_seed",
+    "purpose": "continue immediately from the claimed cycle-000002 planning run"
+  },
+  "operation": "planning_seed",
+  "ok": true,
+  "payload": {
+    "cycle_id": "cycle-000002",
+    "targets": {
+      "research": 11,
+      "audit": 11
+    },
+    "research": {
+      "carryover": [],
+      "overflow": [],
+      "new_slots": 11
+    },
+    "audit": {
+      "carryover": [],
+      "overflow": [],
+      "new_slots": 11
+    }
+  }
+}
