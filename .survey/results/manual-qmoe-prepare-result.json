@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "request_file": ".survey/requests/manual-qmoe-prepare-result.json",
+  "request": {
+    "schema_version": 1,
+    "operation": "prepare_result",
+    "side": "audit",
+    "paper": "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+    "status": "completed",
+    "result": "audited",
+    "note": "Formal audit completed against arXiv v1 full text and the official IST-DASLab/qmoe implementation; idealized BF16 baseline limitation recorded."
+  },
+  "operation": "prepare_result",
+  "ok": true,
+  "payload": {
+    "cycle_id": "cycle-000001",
+    "run_id": "manual-cycle-000001-run-04-qmoe",
+    "run_index": 4,
+    "claim_token": "0c0d0eaa0e864958b407591ef1267af0",
+    "side": "audit",
+    "canonical_id": "arXiv:2310.16795",
+    "identity_delta": null,
+    "progress_delta": "survey-state/progress-deltas/cycle-000001/audit/arXiv%3A2310.16795.json",
+    "files_to_publish": [
+      "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+      "survey-state/progress-deltas/cycle-000001/audit/arXiv%3A2310.16795.json"
+    ]
+  }
+}
