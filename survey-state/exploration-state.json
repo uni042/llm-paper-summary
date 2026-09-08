@@ -2,17 +2,12 @@
   "schema_version": 1,
   "workflow_version": 3,
   "bootstrap_required": false,
-  "last_run": "2026-09-08T13:30:29+09:00",
-  "last_completed_paper": {
-    "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
-    "id": "arXiv:2502.12574",
-    "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md"
-  },
-  "last_lineage": "inference/kv-cache-offload-recomputation",
+  "last_run": "2026-09-08T14:32:20+09:00",
+  "last_completed_paper": {"title":"Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference","id":"arXiv:2609.04895","path":"papers/inference/03-expert-prefetch/2026-2609.04895-cache-aware-joint-router-adaptation.md"},
+  "last_lineage": "inference/expert-prefetch",
   "last_morning_report_cutoff": "2026-09-08T08:38:00+09:00",
   "pending_research": [
-    {"title":"VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch","canonical_id":"arXiv:2609.03949","discovery_source":"arxiv-independent-scan","status":"assigned"},
-    {"title":"Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference","canonical_id":"arXiv:2609.04895","discovery_source":"arxiv-independent-scan","status":"assigned"},
+    {"title":"VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch","canonical_id":"arXiv:2609.03949","discovery_source":"arxiv-independent-scan","status":"assigned","last_error":"primary source unavailable during 2026-09-08 14:30 run","next_action":"retry primary source on a later hourly run"},
     {"title":"Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC","canonical_id":"arXiv:2604.07609","discovery_source":"independent-arxiv-planning","status":"assigned"},
     {"title":"Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving","canonical_id":"arXiv:2606.01839","discovery_source":"independent-arxiv-planning","status":"assigned"},
     {"title":"Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices","canonical_id":"arXiv:2607.10183","discovery_source":"independent-arxiv-planning","status":"assigned"},
@@ -23,7 +18,6 @@
     {"title":"Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference","canonical_id":"arXiv:2605.02329","discovery_source":"independent-arxiv-planning","status":"assigned"}
   ],
   "pending_audit": [
-    {"canonical_id":"arXiv:2310.01334","status":"assigned","reason":"missing current formal-audit metadata"},
     {"canonical_id":"arXiv:2308.12066","status":"assigned","reason":"missing current formal-audit metadata"},
     {"canonical_id":"arXiv:2307.02628","status":"assigned","reason":"missing current formal-audit metadata"},
     {"canonical_id":"arXiv:2305.09781","status":"assigned","reason":"missing current formal-audit metadata"},
@@ -46,26 +40,21 @@
     {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4}
   ],
   "recently_checked": [
+    {"title":"Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference","canonical_id":"arXiv:2609.04895","result":"added","discovery_source":"arxiv-independent-scan"},
     {"title":"HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading","canonical_id":"arXiv:2502.12574","result":"added","discovery_source":"arxiv-independent-scan"},
     {"title":"Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN","canonical_id":"arXiv:2608.16477","result":"added","discovery_source":"arxiv-independent-scan"},
     {"title":"SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing","canonical_id":"arXiv:2606.16135","result":"added","discovery_source":"arxiv-independent-scan"},
     {"title":"HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models","canonical_id":"arXiv:2609.02029","result":"added","discovery_source":"arxiv-independent-scan"},
     {"title":"Online Linear Programming for Multi-Objective Routing in LLM Serving","canonical_id":"arXiv:2607.03948","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice","canonical_id":"arXiv:2606.22327","result":"added","discovery_source":"arxiv-search"},
-    {"title":"Cache-Resident LLM Inference in GB-Scale Last-Level Caches","canonical_id":"arXiv:2606.25353","result":"added","discovery_source":"arxiv-search"}
+    {"title":"Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice","canonical_id":"arXiv:2606.22327","result":"added","discovery_source":"arxiv-search"}
   ],
   "daily_reading_target": 10,
   "daily_audit_target": 10,
   "daily_plan": {
-    "plan_id": "daily-20260908T093000+0900",
-    "period_start": "2026-09-08T09:30:00+09:00",
-    "period_end": "2026-09-09T09:30:00+09:00",
-    "target": 10,
-    "audit_target": 10,
-    "status": "ready",
-    "selected_papers": [
-      {"canonical_id":"arXiv:2609.03949","title":"VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch","source_url":"https://arxiv.org/abs/2609.03949","source_version":"v1","discovery_source":"arxiv-independent-scan","carried_from":"pre-v3 pending_research","status":"pending","next_action":"read primary source in full and persist result"},
-      {"canonical_id":"arXiv:2609.04895","title":"Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference","source_url":"https://arxiv.org/abs/2609.04895","source_version":"v1","discovery_source":"arxiv-independent-scan","carried_from":"pre-v3 pending_research","status":"pending","next_action":"read primary source in full and persist result"},
+    "plan_id":"daily-20260908T093000+0900","period_start":"2026-09-08T09:30:00+09:00","period_end":"2026-09-09T09:30:00+09:00","target":10,"audit_target":10,"status":"in_progress",
+    "selected_papers":[
+      {"canonical_id":"arXiv:2609.03949","title":"VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch","source_url":"https://arxiv.org/abs/2609.03949","source_version":"v1","discovery_source":"arxiv-independent-scan","carried_from":"pre-v3 pending_research","status":"pending","last_error":"primary source unavailable during 2026-09-08 14:30 run","next_action":"retry primary source on a later hourly run"},
+      {"canonical_id":"arXiv:2609.04895","title":"Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference","source_url":"https://arxiv.org/abs/2609.04895","source_version":"v1","discovery_source":"arxiv-independent-scan","carried_from":"pre-v3 pending_research","status":"completed","completed_at":"2026-09-08T14:40:00+09:00","result":"added","path":"papers/inference/03-expert-prefetch/2026-2609.04895-cache-aware-joint-router-adaptation.md"},
       {"canonical_id":"arXiv:2604.07609","title":"Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC","source_url":"https://arxiv.org/abs/2604.07609","source_version":null,"discovery_source":"independent-arxiv-planning","carried_from":null,"status":"pending","next_action":"read primary source in full and persist result"},
       {"canonical_id":"arXiv:2606.01839","title":"Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving","source_url":"https://arxiv.org/abs/2606.01839","source_version":null,"discovery_source":"independent-arxiv-planning","carried_from":null,"status":"pending","next_action":"read primary source in full and persist result"},
       {"canonical_id":"arXiv:2607.10183","title":"Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices","source_url":"https://arxiv.org/abs/2607.10183","source_version":null,"discovery_source":"independent-arxiv-planning","carried_from":null,"status":"pending","next_action":"read primary source in full and persist result"},
@@ -75,8 +64,8 @@
       {"canonical_id":"arXiv:2601.17063","title":"FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices","source_url":"https://arxiv.org/abs/2601.17063","source_version":null,"discovery_source":"independent-arxiv-planning","carried_from":null,"status":"pending","next_action":"read primary source in full and persist result"},
       {"canonical_id":"arXiv:2605.02329","title":"Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference","source_url":"https://arxiv.org/abs/2605.02329","source_version":null,"discovery_source":"independent-arxiv-planning","carried_from":null,"status":"pending","next_action":"read primary source in full and persist result"}
     ],
-    "selected_audits": [
-      {"canonical_id":"arXiv:2310.01334","title":"Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy","source_url":"https://arxiv.org/abs/2310.01334","source_version":null,"discovery_source":"audit-metadata-gap","carried_from":null,"status":"pending","next_action":"perform formal audit against primary source and update metadata"},
+    "selected_audits":[
+      {"canonical_id":"arXiv:2310.01334","title":"Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy","source_url":"https://arxiv.org/abs/2310.01334","source_version":"v2","discovery_source":"audit-metadata-gap","carried_from":null,"status":"completed","completed_at":"2026-09-08T14:40:00+09:00","result":"updated","path":"papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"},
       {"canonical_id":"arXiv:2308.12066","title":"Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference","source_url":"https://arxiv.org/abs/2308.12066","source_version":null,"discovery_source":"audit-metadata-gap","carried_from":null,"status":"pending","next_action":"perform formal audit against primary source and update metadata"},
       {"canonical_id":"arXiv:2307.02628","title":"SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference","source_url":"https://arxiv.org/abs/2307.02628","source_version":null,"discovery_source":"audit-metadata-gap","carried_from":null,"status":"pending","next_action":"perform formal audit against primary source and update metadata"},
       {"canonical_id":"arXiv:2305.09781","title":"SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification","source_url":"https://arxiv.org/abs/2305.09781","source_version":null,"discovery_source":"audit-metadata-gap","carried_from":null,"status":"pending","next_action":"perform formal audit against primary source and update metadata"},
@@ -87,10 +76,7 @@
       {"canonical_id":"arXiv:2312.17238","title":"Fast Inference of Mixture-of-Experts Language Models with Offloading","source_url":"https://arxiv.org/abs/2312.17238","source_version":null,"discovery_source":"audit-metadata-gap","carried_from":null,"status":"pending","next_action":"perform formal audit against primary source and update metadata"},
       {"canonical_id":"arXiv:2310.16795","title":"QMoE: Practical Sub-1-Bit Compression of Trillion-Parameter Models","source_url":"https://arxiv.org/abs/2310.16795","source_version":null,"discovery_source":"audit-metadata-gap","carried_from":null,"status":"pending","next_action":"perform formal audit against primary source and update metadata"}
     ],
-    "selection_shortfall": 0,
-    "audit_selection_shortfall": 0,
-    "selection_error": null,
-    "audit_selection_error": null
+    "selection_shortfall":0,"audit_selection_shortfall":0,"selection_error":null,"audit_selection_error":null
   },
   "daily_reading_history": []
 }
