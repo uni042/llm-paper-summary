@@ -2,6 +2,10 @@
 
 workflow 8では制御を時刻からGitHub上の回数へ移す。管理用の実ファイルは `.survey/` 配下に置く。checkout環境では `.survey` を管理root、リポジトリrootを公開コンテンツrootとして扱う。
 
+## 共通実行基盤
+
+Scheduled Task側のPython・shell・checkout可否はrunごとに保証されないため、deterministicな補助処理は [GitHub Actions共通補助実行基盤](actions-worker.md) を優先する。`.survey/requests/*.json` をcommitするとActionsがcheckout＋Pythonで処理し、`.survey/results/*.json` を返す。request/resultが使えない場合に限り、下記スクリプトをローカルで直接実行するか、同じ規則をconnectorで再現する。
+
 ## 主な補助プログラム
 
 リポジトリrootから実行する。
@@ -39,11 +43,15 @@ python -m unittest discover -s .survey/tests
 
 `.survey/scripts/next_work.py` はplan snapshotと当cycleのprogress deltaを統合し、研究側/監査側の `target/done/pending` と次に処理すべき1件をJSONで返す。優先規則は決定的で、片側だけ未完了ならその側、両側未完了なら完了率 `done/target` が低い側、同率ならresearchを選び、side内はplan順を維持する。
 
+同時に `after_action` を返す。callerはこれを単なる提案として表示して終了せず、安全に実行可能なら同じrun内で実行する。`continue_same_run` なら次論文/監査、`close_cycle` ならcycle締め、`claim_next_run` なら次run claim、`integrity_only` ならrun24処理、`finish_run` なら終了する。成果保存後に再評価し、余裕がある限りループできる。
+
 このhelperで代替するのは進捗集計と次対象の機械的選択だけであり、論文の関連性・採否、本文解釈、監査品質の判断は自動化しない。
 
 ## prepare_result / progress delta / identity delta
 
 `.survey/scripts/prepare_result.py` は保存済みpaper frontmatterと現在のactive claimを読み、canonical ID、必要なidentity delta、progress delta、同時に公開すべきファイル一覧を生成する。run_id / run_index / claim_tokenを手入力しないため、古いclaimを誤ってprogressへ埋め込む作業を減らす。GitHubへのpublish自体は行わないので、callerは生成物を論文本体と同じcommitへまとめ、リモート再取得で確認する。
+
+Actions workerの `prepare_result` operationを使う場合はworkerがcheckout上でこのhelperを実行し、生成差分とresultをcommitする。callerは同名resultの `ok: true` とpayloadを確認する。
 
 plan/queueの大きい書換えを毎論文で行わず、`.survey/survey-state/progress-deltas/` に1研究1小ファイルを保存する。論理進捗はplan snapshotとdeltaを重ねて算出する。既存plan内の旧 `completed` も保持する。
 
@@ -51,7 +59,7 @@ plan/queueの大きい書換えを毎論文で行わず、`.survey/survey-state/
 
 ## 汎用行編集
 
-`.survey/scripts/repo_edit.py` は非生成UTF-8テキストの局所修正用非常工具。公開コンテンツを編集するときは `--root .` を明示する。root外禁止、dry-run、SHA前提、原子的保存を維持する。専用helperがある状態操作や自動生成範囲を迂回しない。
+`.survey/scripts/repo_edit.py` は非生成UTF-8テキストの局所修正用非常工具。公開コンテンツを編集するときは `--root .` を明示する。root外禁止、dry-run、SHA前提、原子的保存を維持する。専用helperがある状態操作や自動生成範囲を迂回しない。Actions requestから任意編集を許可せず、必要なら入力検証付き専用operationを追加する。
 
 ## build / validate
 
