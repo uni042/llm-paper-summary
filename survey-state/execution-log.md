@@ -2,15 +2,26 @@
 
 直近24時間の客観的な実行記録を保持する。
 
-## 2026-09-08 10:00 JST
+## 2026-09-08 10:00–10:09 JST
 - planned slot: `2026-09-08 10:00 JST`
 - run_id: `scheduled-20260908T100000+0900`
 - workflow_version: `2`
 - mode: `hourly-inference`
-- status: `running`
-- fixed research targets: `Pallas` (arXiv:2608.16477), `HeadInfer` (arXiv:2502.12574)
-- fixed audit targets: `Fiddler` (arXiv:2402.07033), `Hydragen` (arXiv:2402.05099)
-- checkpoint: target queue persisted before primary-source review
+- status: `completed`
+- research: assigned 2 / completed 2 / added 2 / updated 0 / already_recorded 0 / not_selected 0 / carried_over 0
+- audit: assigned 2 / completed 2 / changed 2 / no_change 0 / carried_over 0
+- pending_research at end: 0
+- pending_audit at end: 0
+- batch size: research 2 / audit 2
+- full_batch_streak: 2（開始時の固定対象を2/2・2/2完了し、保存後確認まで成功）
+- discovery: existing queue + independent arXiv search; no additional next-run candidate queued after identity screening
+- validation: pass — recursive tree has 162 inference paper Markdown files including 6 moved stubs; identity registry has 156 active studies（146 arXiv + 10 other）, all arXiv IDs unique; Inference 156 / Training 19 / total 175; Serving 36 / KV Offload 22; required new-paper and audit metadata present
+- rejected ledger: added 0 / updated 0
+- added: `Pallas` (arXiv:2608.16477), `HeadInfer` (arXiv:2502.12574)
+- audited: `Fiddler` — ICLR 2025、arXiv v3、著者・所属、公式code、RTX 6000 / RTX 6000 Ada実機評価を確認。`Hydragen` — arXiv v2、著者・所属、公式code、A100/H100/L40S実機評価と主要値の条件を確認
+- result commits: `6705967e`, `f7b85c37`
+- checkpoint commit: `286b3a93`
+- error / bottleneck: none
 
 ## 2026-09-08 08:58–09:11 JST
 - planned slot: `2026-09-08 09:00 JST`
