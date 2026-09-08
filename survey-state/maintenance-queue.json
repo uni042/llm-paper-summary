@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "workflow_version": 4,
+  "items": [
+    {
+      "id": "maint-20260908-serving-readme-sync",
+      "kind": "derived_readme_sync",
+      "affected_paths": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/README.md",
+        "papers/inference/README.md",
+        "papers/README.md",
+        "README.md"
+      ],
+      "detected_at": "2026-09-08T19:36:00+09:00",
+      "source_commit": "4db5c5c96a4b032e76db470c236ca5e48bd3e98d",
+      "evidence": "Serving lineage README still displays 36 papers while recently saved Blink and ConServe paper artifacts are not listed there. Rebuild derived lists/counts from active paper artifacts and the identity index rather than trusting the displayed count.",
+      "attempt_count": 0,
+      "last_error": null,
+      "next_action": "Rebuild the serving lineage README and propagate derived counts/links upward from current active paper artifacts and paper-identity-index.json.",
+      "status": "open"
+    }
+  ]
+}

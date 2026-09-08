@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 4,
+  "layout": "split-state-v1",
+  "legacy_snapshot": "survey-state/exploration-state.json",
+  "paths": {
+    "runtime": "survey-state/runtime.json",
+    "daily_plans_dir": "survey-state/daily-plans/",
+    "research_queue": "survey-state/queues/research.json",
+    "audit_queue": "survey-state/queues/audit.json",
+    "daily_history": "survey-state/daily-history.json",
+    "recently_checked": "survey-state/recently-checked.json",
+    "maintenance_queue": "survey-state/maintenance-queue.json",
+    "blockers": "survey-state/blockers.json",
+    "identity_index": "survey-state/paper-identity-index.json",
+    "rejected_papers": "survey-state/rejected-papers.json",
+    "logs_dir": "survey-state/log/"
+  },
+  "migration": {
+    "from_workflow_version": 3,
+    "legacy_snapshot_read_only": true,
+    "migrated_at": "2026-09-08"
+  }
+}
