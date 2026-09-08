@@ -4,12 +4,14 @@
 
 ## 収録論文
 
-収録論文: 35本。公開日が新しい順。
+収録論文: 36本。公開日が新しい順。
 
 - 2026-09-04 — [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)
   - requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。
 - 2026-09-01 — [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md)
   - speculative decodingで既に計算されるdraft表現へ軽量な回帰headを付けて出力長を予測し、短いrequestの優先処理とdecode instance間の負荷分散へ使うことでtail latencyを下げる。
+- 2026-08-17 — [Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN](2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md)
+  - handover前に安定prefixを移行先で再計算し、生成中suffix KVを移行元から転送して、切替後の生成停止と遠隔経路のITLを減らす。
 - 2026-08-15 — [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md)
   - concurrent prefillとactive decodeからtoken budgetを動的に切り替え、長prefillの効率とdecode interferenceを調整する。
 - 2026-08-06 — [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md)

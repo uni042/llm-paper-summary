@@ -4,18 +4,13 @@
   "bootstrap_required": false,
   "last_run": "2026-09-08T09:11:00+09:00",
   "last_completed_paper": {
-    "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
-    "id": "arXiv:2606.16135",
-    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md"
+    "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+    "id": "arXiv:2608.16477",
+    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md"
   },
-  "last_lineage": "inference/kv-cache-offload-recomputation",
+  "last_lineage": "inference/llm-serving-scheduling-disaggregation",
   "last_morning_report_cutoff": "2026-09-08T08:38:00+09:00",
   "pending_research": [
-    {
-      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
-      "canonical_id": "arXiv:2608.16477",
-      "discovery_source": "arxiv-independent-scan"
-    },
     {
       "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
       "canonical_id": "arXiv:2502.12574",
@@ -23,11 +18,6 @@
     }
   ],
   "pending_audit": [
-    {
-      "title": "Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models",
-      "canonical_id": "arXiv:2402.07033",
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md"
-    },
     {
       "title": "Hydragen: High-Throughput LLM Inference with Shared Prefixes",
       "canonical_id": "arXiv:2402.05099",
@@ -94,6 +84,12 @@
     }
   ],
   "recently_checked": [
+    {
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "canonical_id": "arXiv:2608.16477",
+      "result": "added",
+      "discovery_source": "arxiv-independent-scan"
+    },
     {
       "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
       "canonical_id": "arXiv:2606.16135",
