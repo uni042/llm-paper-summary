@@ -1,5 +1,21 @@
 {
   "schema_version": 1,
-  "workflow_version": 5,
-  "items": []
+  "workflow_version": 6,
+  "items": [
+    {
+      "id": "runtime-large-generated-index-write-20260908",
+      "status": "open",
+      "first_seen": "2026-09-08T22:31:00+09:00",
+      "last_seen": "2026-09-08T22:31:00+09:00",
+      "severity": "high",
+      "impact": "Normal reading runs can read primary sources but cannot safely mark a new or modified paper complete when the generated identity index must change, because this runtime cannot retrieve the entire large index as an editable payload.",
+      "attempted_fixes": [
+        "Verified GitHub read and write operations separately.",
+        "Fetched the identity index through the available connector; the response was truncated before a complete editable payload was available.",
+        "Avoided publishing a partial paper artifact because publishing.md requires paper, identity index, plan and queue consistency."
+      ],
+      "next_action": "Use an execution environment where the repository helper can run against a complete checkout and publish the generated index, or provide a connector operation that can apply the helper-generated full-file result without truncation.",
+      "user_action_required": false
+    }
+  ]
 }
