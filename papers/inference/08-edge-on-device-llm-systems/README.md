@@ -4,7 +4,7 @@
 
 ## 収録論文
 
-収録論文: 7本。公開日が新しい順。
+収録論文: 8本。公開日が新しい順。
 
 - 2026-09-02 — [AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference](2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md)
   - edgeで将来状態を先回りcacheし、speculative reject時のedge-cloud全体rollbackをlocal lookupへ置き換えながらWAN転送量を抑える。
@@ -12,6 +12,8 @@
   - 他applicationがRAMを要求したとき、LLMのweightとKVを必要量だけ圧縮RAM / Flashへ退避し、実行順を考えた復帰でmobile multitasking時のTTFT悪化を抑える。
 - 2026-08-17 — [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)
   - 個人PCのGPU・CPU・RAM・PCIe帯域をまとめて見て、expert cache、CPU/GPU分担、KVとのVRAM配分をhardware条件に合わせて変えるMoE runtime。
+- 2026-07-11 — [Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md)
+  - CPU/GPUでの実測速度と実行中の負荷をテンソル単位で見て、限られたVRAMへの常駐と一時転送を選び、個人PCでのLLMオフロード待ちとCPU律速を減らす。
 - 2026-06-17 — [MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference](2026-2607.09686-mawforge-memory-bounded-expert-materialization.md)
   - full MoEをdiskへ置き、routingされたexpertだけを上限付きcacheへmaterializeしてlocal memory budgetを守る。
 - 2025-04-21 — [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)
