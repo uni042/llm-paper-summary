@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "request_file": ".survey/requests/smoke-validate-actions.json",
+  "request": {
+    "schema_version": 1,
+    "operation": "validate",
+    "purpose": "verify helper scripts and workflow-v8 validation in the GitHub Actions checkout environment"
+  },
+  "operation": "validate",
+  "ok": false,
+  "checks": {
+    "identity_delta": {
+      "returncode": 0,
+      "stdout": "{\"delta_count\": 4}\n",
+      "stderr": ""
+    },
+    "survey": {
+      "returncode": 0,
+      "stdout": "{\"status\": \"ok\", \"workflow_version\": 8, \"papers\": 165}\n",
+      "stderr": ""
+    },
+    "tests": {
+      "returncode": 1,
+      "stdout": "OK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\n[\"survey-state/runs/done.json\"]\n",
+      "stderr": "................EEEEE.....................\n======================================================================\nERROR: test_existing_run_rejected (test_run_bootstrap.BootstrapTests.test_existing_run_rejected)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 108, in test_existing_run_rejected\n    self.call(root)\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 67, in call\n    return b.prepare_bootstrap(**args)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'run_bootstrap' has no attribute 'prepare_bootstrap'\n\n======================================================================\nERROR: test_nightly_auto_lease (test_run_bootstrap.BootstrapTests.test_nightly_auto_lease)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 83, in test_nightly_auto_lease\n    result = self.call(\n             ^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 67, in call\n    return b.prepare_bootstrap(**args)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'run_bootstrap' has no attribute 'prepare_bootstrap'\n\n======================================================================\nERROR: test_preview_does_not_write (test_run_bootstrap.BootstrapTests.test_preview_does_not_write)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 115, in test_preview_does_not_write\n    result = self.call(root, apply=False)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 67, in call\n    return b.prepare_bootstrap(**args)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'run_bootstrap' has no attribute 'prepare_bootstrap'\n\n======================================================================\nERROR: test_reading_run_is_written (test_run_bootstrap.BootstrapTests.test_reading_run_is_written)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 72, in test_reading_run_is_written\n    result = self.call(root)\n             ^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 67, in call\n    return b.prepare_bootstrap(**args)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'run_bootstrap' has no attribute 'prepare_bootstrap'\n\n======================================================================\nERROR: test_recovery_auto_lease (test_run_bootstrap.BootstrapTests.test_recovery_auto_lease)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 98, in test_recovery_auto_lease\n    result = self.call(root, auto_lease=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/tests/test_run_bootstrap.py\", line 67, in call\n    return b.prepare_bootstrap(**args)\n           ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'run_bootstrap' has no attribute 'prepare_bootstrap'\n\n----------------------------------------------------------------------\nRan 42 tests in 0.139s\n\nFAILED (errors=5)\n"
+    }
+  }
+}
