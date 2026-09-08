@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "request_file": ".survey/requests/smoke-validate-actions-v2.json",
+  "request": {
+    "schema_version": 1,
+    "operation": "validate",
+    "purpose": "re-run validation after updating run_bootstrap tests to workflow v8 count-driven semantics"
+  },
+  "operation": "validate",
+  "ok": true,
+  "checks": {
+    "identity_delta": {
+      "returncode": 0,
+      "stdout": "{\"delta_count\": 4}\n",
+      "stderr": ""
+    },
+    "survey": {
+      "returncode": 0,
+      "stdout": "{\"status\": \"ok\", \"workflow_version\": 8, \"papers\": 165}\n",
+      "stderr": ""
+    },
+    "tests": {
+      "returncode": 0,
+      "stdout": "OK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\nOK: 0 papers; index, metadata, plan, queue, retry state\n[\"survey-state/runs/done.json\"]\n",
+      "stderr": ".............................................\n----------------------------------------------------------------------\nRan 45 tests in 0.214s\n\nOK\n"
+    }
+  }
+}
