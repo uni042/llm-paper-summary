@@ -2,6 +2,16 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 10:00 JST
+- planned slot: `2026-09-08 10:00 JST`
+- run_id: `scheduled-20260908T100000+0900`
+- workflow_version: `2`
+- mode: `hourly-inference`
+- status: `running`
+- fixed research targets: `Pallas` (arXiv:2608.16477), `HeadInfer` (arXiv:2502.12574)
+- fixed audit targets: `Fiddler` (arXiv:2402.07033), `Hydragen` (arXiv:2402.05099)
+- checkpoint: target queue persisted before primary-source review
+
 ## 2026-09-08 08:58–09:11 JST
 - planned slot: `2026-09-08 09:00 JST`
 - run_id: `scheduled-20260908T090000+0900`
