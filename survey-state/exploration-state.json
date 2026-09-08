@@ -4,26 +4,20 @@
   "bootstrap_required": false,
   "last_run": "2026-09-08T08:40:16+09:00",
   "last_completed_paper": {
-    "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
-    "id": "arXiv:2609.02029",
-    "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
+    "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+    "id": "arXiv:2606.16135",
+    "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md"
   },
-  "last_lineage": "inference/kv-cache-optimization-compression",
+  "last_lineage": "inference/kv-cache-offload-recomputation",
   "last_morning_report_cutoff": "2026-09-08T08:38:00+09:00",
   "pending_research": [
     {
-      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
-      "canonical_id": "arXiv:2606.16135",
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "canonical_id": "arXiv:2608.16477",
       "discovery_source": "arxiv-independent-scan"
     }
   ],
-  "pending_audit": [
-    {
-      "title": "MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache",
-      "canonical_id": "arXiv:2401.14361",
-      "path": "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md"
-    }
-  ],
+  "pending_audit": [],
   "research_batch_size": 2,
   "audit_batch_size": 2,
   "full_batch_streak": 0,
@@ -83,6 +77,12 @@
   ],
   "recently_checked": [
     {
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "canonical_id": "arXiv:2606.16135",
+      "result": "added",
+      "discovery_source": "arxiv-independent-scan"
+    },
+    {
       "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
       "canonical_id": "arXiv:2609.02029",
       "result": "added",
@@ -103,12 +103,6 @@
     {
       "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
       "canonical_id": "arXiv:2606.25353",
-      "result": "added",
-      "discovery_source": "arxiv-search"
-    },
-    {
-      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
-      "canonical_id": "arXiv:2605.15051",
       "result": "added",
       "discovery_source": "arxiv-search"
     }
