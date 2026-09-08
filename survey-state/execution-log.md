@@ -2,6 +2,23 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 15:30–15:40 JST
+- planned slot: `2026-09-08 15:30 JST`
+- run_id: `recovery-20260908T154012+0900`
+- workflow_version: `3`
+- mode: `hourly-inference` + state/log recovery
+- status: `partial`
+- plan_id: `daily-20260908T093000+0900`
+- reading: target 10 / selected 10 / cumulative completed 1 / remaining 9 / completed in this slot 0
+- reading attempt: `VestigeKV` (arXiv:2609.03949) — primary-source body unavailable; not counted as completed. State reconciled to `blocked`, `attempt_count: 2`, next retry `2026-09-08 16:30 JST`. Future runs must skip an unavailable item within that run and continue to another processable paper in the same daily list.
+- audit: target 10 / selected 10 / cumulative completed 2 / remaining 8 / completed in this slot 1
+- audited: `Pre-gated MoE` (arXiv:2308.12066) — formal audit artifact was already saved in commit `039c23fcd2ddef55e0cee2766066807a000f1982`; recovery updated the daily plan to `completed` and removed the stale `pending_audit` entry without re-auditing.
+- recovery: state/artifact mismatch from the interrupted 15:30 completion record was repaired from repository artifacts; saved paper work was not repeated.
+- workflow update: primary-source acquisition failure is now an explicit same-run skip condition; it does not by itself end an hourly execution while another processable daily-list item remains.
+- validation: pass — Pre-gated MoE artifact has formal audit metadata; daily audit completion is 2/10 and `pending_audit` has 8 items; reading completion remains 1/10 with VestigeKV uncompleted and 8 other processable reading items.
+- commits: audit `039c23fc`; workflow `af7a3503`, `9f6fdc2f`, `0dcbd54c`; state `a1d1b40f`
+- error / bottleneck: VestigeKV primary-source body remained unavailable. Previous behavior allowed the failed item to consume the research portion of the run; procedure has been corrected so later runs continue to the next paper.
+
 ## 2026-09-08 13:30 JST
 - planned slot: `2026-09-08 09:30 JST`（manual catch-up）
 - run_id: `manual-daily-20260908T133029+0900`
