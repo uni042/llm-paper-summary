@@ -10,111 +10,32 @@
   },
   "last_lineage": "inference/kv-cache-offload-recomputation",
   "last_morning_report_cutoff": "2026-09-08T08:38:00+09:00",
-  "pending_research": [],
-  "pending_audit": [],
+  "pending_research": [
+    {"title":"VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch","canonical_id":"arXiv:2609.03949","discovery_source":"arxiv-independent-scan","status":"assigned"},
+    {"title":"Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference","canonical_id":"arXiv:2609.04895","discovery_source":"arxiv-independent-scan","status":"assigned"}
+  ],
+  "pending_audit": [
+    {"canonical_id":"arXiv:2303.06865","status":"assigned","reason":"missing current formal-audit metadata"},
+    {"canonical_id":"arXiv:2309.06180","status":"assigned","reason":"missing current formal-audit metadata"}
+  ],
   "research_batch_size": 2,
   "audit_batch_size": 2,
   "full_batch_streak": 2,
   "recent_batch_history": [
-    {
-      "run_id": "scheduled-20260908T100000+0900",
-      "workflow_version": 2,
-      "assigned_research": 2,
-      "completed_research": 2,
-      "carried_over_research": 0,
-      "assigned_audit": 2,
-      "completed_audit": 2,
-      "carried_over_audit": 0
-    },
-    {
-      "run_id": "scheduled-20260908T090000+0900",
-      "workflow_version": 2,
-      "assigned_research": 2,
-      "completed_research": 2,
-      "carried_over_research": 0,
-      "assigned_audit": 2,
-      "completed_audit": 2,
-      "carried_over_audit": 0
-    },
-    {
-      "run_id": "manual-20260908T075610+0900",
-      "workflow_version": 2,
-      "assigned_research": 2,
-      "completed_research": 2,
-      "carried_over_research": 0,
-      "assigned_audit": 2,
-      "completed_audit": 2,
-      "carried_over_audit": 0
-    },
-    {
-      "run_id": "manual-20260908T074337+0900",
-      "workflow_version": 2,
-      "assigned_research": 2,
-      "completed_research": 2,
-      "carried_over_research": 0,
-      "assigned_audit": 2,
-      "completed_audit": 2,
-      "carried_over_audit": 0
-    },
-    {
-      "assigned_research": 5,
-      "completed_research": 1,
-      "carried_over_research": 4,
-      "assigned_audit": 0,
-      "completed_audit": 0,
-      "carried_over_audit": 0
-    },
-    {
-      "assigned_research": 5,
-      "completed_research": 5,
-      "carried_over_research": 0,
-      "assigned_audit": 5,
-      "completed_audit": 1,
-      "carried_over_audit": 4
-    }
+    {"run_id":"scheduled-20260908T100000+0900","workflow_version":2,"assigned_research":2,"completed_research":2,"carried_over_research":0,"assigned_audit":2,"completed_audit":2,"carried_over_audit":0},
+    {"run_id":"scheduled-20260908T090000+0900","workflow_version":2,"assigned_research":2,"completed_research":2,"carried_over_research":0,"assigned_audit":2,"completed_audit":2,"carried_over_audit":0},
+    {"run_id":"manual-20260908T075610+0900","workflow_version":2,"assigned_research":2,"completed_research":2,"carried_over_research":0,"assigned_audit":2,"completed_audit":2,"carried_over_audit":0},
+    {"run_id":"manual-20260908T074337+0900","workflow_version":2,"assigned_research":2,"completed_research":2,"carried_over_research":0,"assigned_audit":2,"completed_audit":2,"carried_over_audit":0},
+    {"assigned_research":5,"completed_research":1,"carried_over_research":4,"assigned_audit":0,"completed_audit":0,"carried_over_audit":0},
+    {"assigned_research":5,"completed_research":5,"carried_over_research":0,"assigned_audit":5,"completed_audit":1,"carried_over_audit":4}
   ],
   "recently_checked": [
-    {
-      "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
-      "canonical_id": "arXiv:2502.12574",
-      "result": "added",
-      "discovery_source": "arxiv-independent-scan"
-    },
-    {
-      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
-      "canonical_id": "arXiv:2608.16477",
-      "result": "added",
-      "discovery_source": "arxiv-independent-scan"
-    },
-    {
-      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
-      "canonical_id": "arXiv:2606.16135",
-      "result": "added",
-      "discovery_source": "arxiv-independent-scan"
-    },
-    {
-      "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
-      "canonical_id": "arXiv:2609.02029",
-      "result": "added",
-      "discovery_source": "arxiv-independent-scan"
-    },
-    {
-      "title": "Online Linear Programming for Multi-Objective Routing in LLM Serving",
-      "canonical_id": "arXiv:2607.03948",
-      "result": "added",
-      "discovery_source": "arxiv-search"
-    },
-    {
-      "title": "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
-      "canonical_id": "arXiv:2606.22327",
-      "result": "added",
-      "discovery_source": "arxiv-search"
-    },
-    {
-      "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
-      "canonical_id": "arXiv:2606.25353",
-      "result": "added",
-      "discovery_source": "arxiv-search"
-    }
+    {"title":"HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading","canonical_id":"arXiv:2502.12574","result":"added","discovery_source":"arxiv-independent-scan"},
+    {"title":"Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN","canonical_id":"arXiv:2608.16477","result":"added","discovery_source":"arxiv-independent-scan"},
+    {"title":"SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing","canonical_id":"arXiv:2606.16135","result":"added","discovery_source":"arxiv-independent-scan"},
+    {"title":"HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models","canonical_id":"arXiv:2609.02029","result":"added","discovery_source":"arxiv-independent-scan"},
+    {"title":"Online Linear Programming for Multi-Objective Routing in LLM Serving","canonical_id":"arXiv:2607.03948","result":"added","discovery_source":"arxiv-search"},
+    {"title":"Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice","canonical_id":"arXiv:2606.22327","result":"added","discovery_source":"arxiv-search"},
+    {"title":"Cache-Resident LLM Inference in GB-Scale Last-Level Caches","canonical_id":"arXiv:2606.25353","result":"added","discovery_source":"arxiv-search"}
   ]
 }
