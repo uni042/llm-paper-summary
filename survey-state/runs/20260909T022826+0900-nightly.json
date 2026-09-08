@@ -4,10 +4,10 @@
   "started_at": "2026-09-09T02:28:26+09:00",
   "scheduled_at": "2026-09-09T02:30:00+09:00",
   "mode": "nightly",
-  "stage": "bootstrap",
+  "stage": "integrity_checked",
   "status": "running",
-  "last_progress_at": "2026-09-09T02:28:26+09:00",
-  "next_action": "resume nightly integrity coverage from the previous partial run",
+  "last_progress_at": "2026-09-09T02:31:00+09:00",
+  "next_action": "persist partial integrity result and release maintenance lease",
   "capabilities": {
     "python": false,
     "dependencies": false,
@@ -19,5 +19,6 @@
     "github_write": true
   },
   "workflow_commit": "5e3d6d166e694cd0d2dc238d5c0b3034d952b5f3",
-  "workflow_version": 7
+  "workflow_version": 7,
+  "verified_commit": "482691f825cdf13ed2e17fde00a0c905dfed76f0"
 }
