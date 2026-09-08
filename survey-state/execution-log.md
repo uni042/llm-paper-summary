@@ -2,6 +2,16 @@
 
 直近24時間の客観的な実行記録を保持する。
 
+## 2026-09-08 08:58 JST
+- planned slot: `2026-09-08 09:00 JST`
+- run_id: `scheduled-20260908T090000+0900`
+- workflow_version: `2`
+- mode: `hourly-inference`
+- status: `running`
+- fixed research targets: `HeadWiseKV` (arXiv:2609.02029), `SwiftCache` (arXiv:2606.16135)
+- fixed audit targets: `DeepSpeed-FastGen` (arXiv:2401.08671), `MoE-Infinity` (arXiv:2401.14361)
+- checkpoint: target queue persisted before primary-source review
+
 ## 2026-09-08 08:38–08:40 JST
 - planned slot: `manual recovery of 08:00 morning slot`
 - run_id: `manual-morning-20260908T083800+0900`
