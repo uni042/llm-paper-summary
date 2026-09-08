@@ -10,111 +10,117 @@ spec = importlib.util.spec_from_file_location(
 b = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(b)
 
-AT = "2026-09-08T10:30:00+09:00"
-START = "2026-09-08T10:30:02+09:00"
 COMMIT = "a" * 40
 
 
 class BootstrapTests(unittest.TestCase):
-    def make_root(self, tmp, plan_status="ready"):
+    def make_root(self, tmp, next_run_index=2, active_claim=None):
         root = Path(tmp)
         (root / "scripts").mkdir()
-        (root / "survey-state/daily-plans").mkdir(parents=True)
-        source_survey = Path(__file__).resolve().parents[1] / "scripts/survey.py"
-        (root / "scripts/survey.py").write_text(source_survey.read_text())
-        layout = {
+        (root / "survey-state/runs").mkdir(parents=True)
+        source_cycle = Path(__file__).resolve().parents[1] / "scripts/cycle_state.py"
+        (root / "scripts/cycle_state.py").write_text(source_cycle.read_text())
+        state = {
             "schema_version": 1,
-            "workflow_version": 7,
-            "paths": {
-                "runtime": "survey-state/runtime.json",
-                "leases": "survey-state/leases.json",
-                "runs_dir": "survey-state/runs/",
-            },
+            "workflow_version": 8,
+            "cycle_number": 1,
+            "cycle_id": "cycle-000001",
+            "max_runs": 24,
+            "next_run_index": next_run_index,
+            "active_claim": active_claim,
+            "targets": {"research": 10, "audit": 10},
+            "current_plan_id": None,
+            "current_plan_path": None,
+            "previous_cycle_id": None,
+            "previous_plan_path": None,
         }
-        (root / "survey-state/state-layout.json").write_text(json.dumps(layout))
-        plan_path = "survey-state/daily-plans/2026-09-08.json"
-        runtime = {"current_plan_id": "day", "current_plan_path": plan_path}
-        (root / "survey-state/runtime.json").write_text(json.dumps(runtime))
-        plan = {
-            "plan_id": "day",
-            "period_start": "2026-09-08T09:30:00+09:00",
-            "status": plan_status,
-        }
-        (root / plan_path).write_text(json.dumps(plan))
-        (root / "survey-state/leases.json").write_text(
-            json.dumps({"schema_version": 1, "items": {}})
-        )
+        (root / "survey-state/cycle-state.json").write_text(json.dumps(state))
         return root
 
-    def call(self, root, **overrides):
-        args = dict(
-            root=root,
-            run_id="r1",
-            scheduled_at=AT,
-            started_at=START,
-            workflow_commit=COMMIT,
-            nightly_hour=0,
-            morning_hour=8,
-            morning_minute=30,
-            planning_hour=9,
-            planning_minute=30,
-            period_start="2026-09-08T09:30:00+09:00",
-            github_read="true",
-            github_write="true",
-            apply=True,
+    def call(self, root, run_id="r1", scheduled_at=None, morning_overlay=False, apply=True):
+        mod = b.load_cycle(root)
+        out = mod.claim(
+            root,
+            run_id,
+            COMMIT,
+            scheduled_at=scheduled_at,
+            morning_overlay=morning_overlay,
+            apply=apply,
         )
-        args.update(overrides)
-        return b.prepare_bootstrap(**args)
+        out["control_source"] = "survey-state/cycle-state.json"
+        out["time_controls_mode"] = False
+        return out
 
-    def test_reading_run_is_written(self):
+    def test_run_1_is_planning(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = self.make_root(tmp)
+            root = self.make_root(tmp, next_run_index=1)
+            result = self.call(root)
+            self.assertEqual(result["mode"], "planning")
+            self.assertEqual(result["run_index"], 1)
+
+    def test_run_2_is_reading_and_written(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.make_root(tmp, next_run_index=2)
             result = self.call(root)
             self.assertEqual(result["mode"], "reading")
-            self.assertEqual(result["route"], "reading")
             run = json.loads((root / "survey-state/runs/r1.json").read_text())
-            self.assertEqual(run["workflow_version"], 7)
+            self.assertEqual(run["workflow_version"], 8)
             self.assertEqual(run["status"], "running")
-            self.assertTrue(run["capabilities"]["github_write"])
+            self.assertEqual(run["run_index"], 2)
 
-    def test_nightly_auto_lease(self):
+    def test_run_24_is_integrity(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = self.make_root(tmp)
-            result = self.call(
-                root,
-                scheduled_at="2026-09-09T00:30:00+09:00",
-                started_at="2026-09-09T00:30:01+09:00",
-                period_start=None,
-                auto_lease=True,
-            )
-            self.assertEqual(result["mode"], "nightly")
-            self.assertEqual(result["lease_resource"], "maintenance")
-            leases = json.loads((root / "survey-state/leases.json").read_text())
-            self.assertEqual(leases["items"]["maintenance"]["run_id"], "r1")
+            root = self.make_root(tmp, next_run_index=24)
+            result = self.call(root)
+            self.assertEqual(result["mode"], "integrity")
+            self.assertEqual(result["run_index"], 24)
 
-    def test_recovery_auto_lease(self):
+    def test_scheduled_time_does_not_change_mode(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = self.make_root(tmp, plan_status="selecting")
-            result = self.call(root, auto_lease=True)
-            self.assertEqual(result["route"], "recover_planning")
-            self.assertEqual(
-                result["lease_resource"],
-                "planning:2026-09-08T09:30:00+09:00",
-            )
+            root = self.make_root(tmp, next_run_index=3)
+            result = self.call(root, scheduled_at="2026-09-09T00:30:00+09:00")
+            self.assertEqual(result["mode"], "reading")
+            run = json.loads((root / "survey-state/runs/r1.json").read_text())
+            self.assertEqual(run["scheduled_at"], "2026-09-09T00:30:00+09:00")
 
-    def test_existing_run_rejected(self):
+    def test_morning_overlay_does_not_change_mode(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = self.make_root(tmp)
+            root = self.make_root(tmp, next_run_index=5)
+            result = self.call(root, morning_overlay=True)
+            self.assertEqual(result["mode"], "reading")
+            run = json.loads((root / "survey-state/runs/r1.json").read_text())
+            self.assertEqual(run["overlays"], ["morning"])
+
+    def test_active_claim_is_recovered_same_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            old = {
+                "cycle_id": "cycle-000001",
+                "run_index": 7,
+                "run_id": "old-run",
+                "claim_token": "old-token",
+                "workflow_commit": "b" * 40,
+            }
+            root = self.make_root(tmp, next_run_index=8, active_claim=old)
+            result = self.call(root, run_id="recovery")
+            self.assertEqual(result["run_index"], 7)
+            self.assertEqual(result["recovery_of"], "old-run")
+            self.assertEqual(result["mode"], "reading")
+
+    def test_existing_run_id_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.make_root(tmp, next_run_index=2)
             self.call(root)
-            with self.assertRaisesRegex(ValueError, "Run ID already exists"):
+            with self.assertRaisesRegex(ValueError, "run_id already exists"):
                 self.call(root)
 
     def test_preview_does_not_write(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = self.make_root(tmp)
+            root = self.make_root(tmp, next_run_index=2)
             result = self.call(root, apply=False)
-            self.assertEqual(result["result"], "preview")
+            self.assertEqual(result["mode"], "reading")
             self.assertFalse((root / "survey-state/runs/r1.json").exists())
+            state = json.loads((root / "survey-state/cycle-state.json").read_text())
+            self.assertIsNone(state["active_claim"])
 
 
 if __name__ == "__main__":
