@@ -1,47 +1,57 @@
-# 開始処理と状態
+# 開始処理と実行状態
 
-### 3.1 毎回最初にすること
-1. 開始時刻、対象リポジトリの最新先頭版（HEAD）、現在利用できる読み書き手段を確認する。[安定実行・復旧仕様](reliability.md)に従い、開始記録を保存確認する。
-2. `survey-state/state-layout.json` を読み、今回必要な分割状態だけを読む。精読・監査なら `runtime.json`、当日plan、該当queue、`rejected-papers.json`、`paper-identity-index.json`、`leases.json` を基本とする。日次選定ならさらに `daily-history.json`、朝は `maintenance-queue.json` と `blockers.json` も読む。
-3. 未完了queueと実ファイルを照合し、前回保存済みの成果を再作成せず、未完了部分だけ復旧する。復旧だけを今回の調査・監査件数に数えない。
-4. 予定実行枠を基に、起動元の規則で日次選定・精読・朝の更新確認のいずれかを確定する。開始の遅れでモードを切り替えない。通常は日次切替を選定モードで行う。当日計画が欠落・期限切れ・選定途中なら、精読モードが作業権を取って選定処理を代行できる。旧期間の遅延実行で現行計画を巻き戻さない。
-5. 識別索引が欠落・形式不明・現行ファイルと不整合なら、新規論文作成前に `papers/inference/*/*.md`（README除外）から再構築する。再構築が終わるまで新規作成は禁止。
+## 開始処理
 
-## 4. 状態・識別情報の正本
-workflow v5では、巨大な単一JSONを通常更新しない。状態は用途別に分ける。
+1. 実時刻、予定実行枠、手順の変更識別子、読み書き手段を確認する。予定枠は起動元のタイムゾーンで受け取る。
+2. Pythonの実行可否、必要な依存、リポジトリの読取り・書込み可否を実際に確認し、`capabilities` として実行記録に残す。通常チャットで使える機能を予定タスクでも使えると仮定しない。
+3. `state-layout.json` と今回必要な状態を読む。新しい一意な実行識別子で開始記録を保存し、リモートで再取得して確認する。
+4. 予定枠からモードを決める。夜間は `nightly.md`、他のモードは対応する手順へ進む。
+5. 論文に着手する前に、日次計画・未完了一覧・実成果・識別索引を照合する。保存済み成果は再作成せず、未記録の進捗だけを復旧する。復旧を新たな精読・監査件数に数えない。
 
-- `survey-state/state-layout.json`：状態ファイルの配置と方式版。最初に読む。
-- `survey-state/runtime.json`：`workflow_version`, `last_run`, `last_completed_paper`, `last_lineage`, `last_morning_report_cutoff`, 当日目標、現在planへの参照など、頻繁に変わる小さい実行状態。
-- `survey-state/daily-plans/YYYY-MM-DD.json`：1読書日につき1ファイル。当日plan本体。`selected_papers`, `selected_audits`, 期間、目標、shortfall、statusを保持する。項目ごとの完了はこのファイルだけを書き換え、全履歴を巻き込まない。
-- `survey-state/queues/research.json`：精読の未完了・翌日以降の候補。
-- `survey-state/queues/audit.json`：監査の未完了・翌日以降の候補。
-- `survey-state/daily-history.json`：締め済みplanの増減判定だけを永続保持する。実行中の細かな進捗は入れない。
-- `survey-state/recently-checked.json`：直近の調査結果。永続見送りの代用にしない。
-- `survey-state/maintenance-queue.json`：README件数、一覧、一言説明、派生索引、リンク、表示上の整合性など、研究成果そのものと切り離して後で自力修復できる保守項目。論文の精読queueへ混ぜない。
-- `survey-state/blockers.json`：通常の再試行や保守処理だけでは解消できず、外部条件・権限・利用者判断などが必要な未解決問題。解決するまで24時間ログとは独立して保持する。
-- `survey-state/paper-identity-index.json`：1研究につき有効なパス1つを対応させる機械可読索引。論文本文と合わせて同一性の正本。
-- `survey-state/rejected-papers.json`：根拠付きの永久除外記録。取得不能は含めない。
-- `survey-state/runs/`：開始・途中・終了の観測記録。状態の正本ではない。旧 `log/` は移行前形式。
-- `survey-state/leases.json`：期限付きの作業権。
-- `survey-state/retry-papers.json`：本文取得の再確認日と履歴。
-- `survey-state/STATUS.md`：上記から生成する進捗表示。
-- `survey-state/exploration-state.json`：workflow v3までの移行スナップショット。v5以降は読み取り専用。新しい進捗を書き込まない。
+## 状態の正本
 
-### 4.1 当日plan項目
-`selected_papers` / `selected_audits` は `canonical_id`, `title`, `source_url`, `source_version`, `discovery_source`, `carried_from`, `status`, `next_action` を基本とする。新規選定する精読候補はさらに `publication_date`, `last_revision_date`, `venue`, `venue_status`, `venue_verified_url`, `priority_tier`, `priority_reason`, `primary_source_preflight` を確認できる範囲で持つ。
+すべて `survey-state/` 以下。ファイル配置は `state-layout.json` に集約する。
 
-`primary_source_preflight` は `checked_at`, `status: available|unavailable`, `preferred_url`, `fallback_url`, `retrieval_kind` を持つ。選定時点で通常の一次資料経路と別の公式経路の双方から本文を取得できない候補は当日planへ入れず、`retry-papers.json` に `insufficient_primary_source` として保存し、7日後に再確認する。当日選定では別候補を探す。
+| ファイル | 内容と更新主体 |
+|---|---|
+| `runtime.json` | 現在計画への参照、日次目標、最終実行、朝の報告境界 |
+| `daily-plans/YYYY-MM-DD.json` | 期間・選定対象・項目ごとの進捗。締め済みも履歴として保持 |
+| `queues/research.json`、`queues/audit.json` | 未完了・繰越・候補。当日計画と識別子で整合させる |
+| `daily-history.json` | 実在する計画ごとの締め結果。一つの計画を二度締めない |
+| `paper-identity-index.json` | 論文の冒頭属性から生成する識別子→保存先の索引 |
+| `retry-papers.json` | 本文取得不能の試行履歴・7日後の再確認日 |
+| `rejected-papers.json` | 一次資料の根拠と再評価条件を備えた永久除外 |
+| `recently-checked.json` | 直近約100件の確認結果。永続記録の代用にしない |
+| `maintenance-queue.json` | 安全に再生成できる表示・一覧・リンクの修復待ち |
+| `blockers.json` | 外部復旧・権限・利用者判断が必要な問題。解決まで保持 |
+| `leases.json` | 期限付き作業権 |
+| `runs/<run_id>.json` | 開始・途中・終了の観測記録。成果の正本ではない |
+| `integrity/` | 夜間点検の範囲・指摘・修復・未検査・再開位置 |
+| `frozen-training.json` | 凍結した学習領域のファイル指紋。通常実行で更新しない |
+| `STATUS.md` | 表示用の進捗ページ。ここから完了を推測しない |
 
-精読完了時は `result`, `completed_at`, `artifact_paths`, `verified_commit` を残す。一次資料本文を精読した採用・更新・見送りと、本文取得不能の見送りを混同しない。`blocked` はGitHub保存競合、認証・権限、実行基盤障害など後で再開すべき処理障害に使う。
+旧 `exploration-state.json` と旧 `log/` は読取り互換用。新規進捗を書き込まない。
 
-### 4.2 maintenance と blocker の境界
-- 自力で再生成・再照合・再保存できる問題は `maintenance-queue.json`。
-- 利用者判断、権限付与、外部サービス復旧など自力解消できない問題だけ `blockers.json`。
-- 研究成果の保存成功後に派生README更新だけ失敗した場合、論文成果を巻き戻さずmaintenanceへ送る。
-- blockerは `id`, `first_seen`, `last_seen`, `severity`, `problem`, `impact`, `attempted_fixes`, `user_action_required`, `requested_action`, `status` を持ち、解決時に `resolved_at` を追加する。
+## 期限付き作業権
 
-### 4.3 見送りと最近確認
-`rejected-papers.json` には可能な範囲で `canonical_id`, `title`, `identifiers`, `checked_at`, `checked_source_version`, `reason_code`, 客観的な理由、`discovery_source`, `duplicate_of` を残す。取得不能は永久見送りへ入れず `retry-papers.json` に試行経路・エラー・7日後の再確認日を残す。永久除外の基準は[安定実行・復旧仕様](reliability.md)に従う。
-`recently-checked.json` は直近約100件を目安とし、永続見送り・日次履歴・queueの代用にしない。
+`leases.json` の `items[resource]` に `run_id`, `updated_at`, `expires_at` を持つ。論文は `paper:<canonical_id>` を精読・監査で共有し、日次選定は `planning:<period_start>`、夜間保守は `maintenance` を使う。有効期間45分。長い作業は20分以内を目安に更新する。
 
-識別索引は形式3を用い、`papers[canonical_id].path` と `identifier_to_canonical` で直接照合する。論文の必須属性と比較属性は[共通仕様](reliability.md)に従う。
+1. 最新先頭版と作業権を取得する。他実行の権利が有効なら別対象へ進むか未完了で終了する。
+2. 取得した先頭版を親として作業権を保存し、強制なしで参照を更新する。単独ファイル更新なら取得済み内容SHAを条件にする。
+3. 競合したら最新版から再判断する。リモートで自分の権利と有効期限を再確認してから着手する。ローカル更新だけでは取得成功としない。
+4. 成果保存直前にも所有者と期限を確認し、その確認版を親に保存する。期限切れ・所有権喪失後は公開せず、既存成果を照合する。
+5. 保存確認後に解放する。別実行が引き継いだ権利を旧実行が解放・上書きしない。
+
+実行ごとに独立したローカル作業場所を使う。夜間の読取りは固定版で行い、修復前に最新差分を再照合する。他実行が更新した論文・状態へ古い内容を上書きしない。
+
+## 開始・途中・終了記録
+
+必須属性は `run_id`, `started_at`, `scheduled_at`, `mode`, `stage`, `status`, `last_progress_at`, `next_action`, `capabilities`。対象確定後に `canonical_id` や `plan_id`、保存確認後に `verified_commit` を追加する。
+
+開始直後、対象確保時、論文保存ごと、長い処理の工程境界、終了時に更新し保存確認する。強制終了した実行の終了時刻を捏造しない。古い途中記録は「停止の疑い」であり、成果の実在を確認して復旧する。開始記録なしだけでは未起動と最初の保存失敗を区別できない。
+
+## 日次選定の代行
+
+精読モードで当該期間の計画が欠落・期限切れ・選定途中なら、日次選定の作業権を取得して `planning.md` を代行する。朝・夜間は代行しない。計画がreadyになってから精読へ戻り、時間が足りなければ選定結果を保存して終了する。
+
+旧期間の遅延実行は新しい計画を巻き戻さない。複数日空いても未実行の仮想日を作って目標を繰り返し減らさず、実在する前計画を一度だけ締める。

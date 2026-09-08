@@ -68,6 +68,17 @@ class SafetyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             s.route({}, '2026-09-09T09:30:00+09:00', AT)
 
+    def test_midnight_hour_is_dedicated_to_integrity(self):
+        for minute in ['00', '30', '59']:
+            self.assertEqual(s.select_mode('2026-09-09T00:' + minute + ':00+09:00', 0, 8, 30, 9, 30), 'nightly')
+
+    def test_midnight_takes_precedence_over_other_modes(self):
+        self.assertEqual(s.select_mode('2026-09-09T00:30:00+09:00', 0, 0, 30, 0, 30), 'nightly')
+
+    def test_non_midnight_slots_keep_their_roles(self):
+        for hour, expected in [('08', 'morning'), ('09', 'planning'), ('10', 'reading')]:
+            self.assertEqual(s.select_mode('2026-09-09T' + hour + ':30:00+09:00', 0, 8, 30, 9, 30), expected)
+
     def test_timezone_required(self):
         with self.assertRaises(ValueError):
             s.timestamp('2026-09-08T09:30:00')

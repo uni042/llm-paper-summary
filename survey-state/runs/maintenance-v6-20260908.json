@@ -1,0 +1,20 @@
+{
+  "run_id": "maintenance-v6-20260908",
+  "started_at": "2026-09-08T12:11:18.257137+00:00",
+  "scheduled_at": "2026-09-08T12:11:18.193516+00:00",
+  "mode": "maintenance",
+  "status": "running",
+  "workflow_version": 6,
+  "last_progress_at": "2026-09-08T12:11:18.257137+00:00",
+  "stage": "final_integrity_check",
+  "next_action": "全体検査結果を保存",
+  "capabilities": {
+    "python": true,
+    "python_version": "3.12.13",
+    "yaml": "6.0.3",
+    "repository_read": true,
+    "repository_write": "verified_in_previous_migration"
+  },
+  "trigger": "manual",
+  "observation_scope": "Final repository verification and publication; earlier preparation is not reconstructed."
+}

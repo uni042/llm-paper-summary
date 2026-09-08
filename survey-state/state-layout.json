@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "workflow_version": 5,
+  "workflow_version": 6,
   "layout": "split-state-v1",
   "legacy_snapshot": "survey-state/exploration-state.json",
   "paths": {
@@ -18,12 +18,14 @@
     "retry_papers": "survey-state/retry-papers.json",
     "leases": "survey-state/leases.json",
     "runs_dir": "survey-state/runs/",
-    "status_page": "survey-state/STATUS.md"
+    "status_page": "survey-state/STATUS.md",
+    "integrity_dir": "survey-state/integrity/",
+    "frozen_training": "survey-state/frozen-training.json"
   },
   "migration": {
     "from_workflow_version": 3,
     "legacy_snapshot_read_only": true,
     "migrated_at": "2026-09-08",
-    "to_workflow_version": 5
+    "to_workflow_version": 6
   }
 }

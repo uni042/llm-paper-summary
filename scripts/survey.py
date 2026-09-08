@@ -285,6 +285,17 @@ def route(plan, scheduled_at, boundary):
         return 'recover_planning'
     return 'reading'
 
+def select_mode(scheduled_at, nightly_hour, morning_hour, morning_minute, planning_hour, planning_minute):
+    slot = timestamp(scheduled_at)
+    # Nightly owns the entire configured hour; it cannot fall through into reading/planning.
+    if slot.hour == nightly_hour:
+        return 'nightly'
+    if (slot.hour, slot.minute) == (morning_hour, morning_minute):
+        return 'morning'
+    if (slot.hour, slot.minute) == (planning_hour, planning_minute):
+        return 'planning'
+    return 'reading'
+
 def closing_result(plan, history):
     """Pure result; caller publishes history + next plan + queues atomically."""
     existing = next((x for x in history.get('entries', []) if x['plan_id'] == plan['plan_id']), None)
@@ -351,6 +362,12 @@ def main():
     a = s.add_parser('route')
     a.add_argument('--scheduled-at', required=True)
     a.add_argument('--period-start', required=True)
+    a = s.add_parser('select-mode')
+    a.add_argument('--scheduled-at', required=True)
+    for field in ['nightly-hour', 'morning-hour', 'planning-hour']:
+        a.add_argument('--' + field, type=int, choices=range(24), required=True)
+    for field in ['morning-minute', 'planning-minute']:
+        a.add_argument('--' + field, type=int, choices=range(60), required=True)
     args = p.parse_args()
     global ROOT
     if args.root:
@@ -378,6 +395,8 @@ def main():
     elif args.cmd == 'route':
         runtime = read(STATE + 'runtime.json', {})
         print(route(read(runtime.get('current_plan_path', STATE + 'none'), {}), args.scheduled_at, args.period_start))
+    elif args.cmd == 'select-mode':
+        print(select_mode(args.scheduled_at, args.nightly_hour, args.morning_hour, args.morning_minute, args.planning_hour, args.planning_minute))
     elif args.cmd == 'run':
         if not re.fullmatch(r'[A-Za-z0-9_-]{1,100}', args.run_id):
             raise ValueError('Unsafe run ID')
@@ -389,7 +408,7 @@ def main():
             if r or not args.scheduled_at or not args.mode:
                 raise ValueError('Start requires a new ID, scheduled-at and mode')
             timestamp(args.scheduled_at)
-            r = {'run_id': args.run_id, 'started_at': at, 'scheduled_at': args.scheduled_at, 'mode': args.mode, 'status': 'running', 'workflow_version': 5}
+            r = {'run_id': args.run_id, 'started_at': at, 'scheduled_at': args.scheduled_at, 'mode': args.mode, 'status': 'running', 'workflow_version': 6}
         elif not r or r['status'] != 'running':
             raise ValueError('No active run')
         r.update(last_progress_at=at, stage=args.stage, next_action=args.next_action)
