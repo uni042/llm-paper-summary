@@ -4,13 +4,21 @@ Scheduled Task側のPython・shell・checkout可否に依存しない補助処�
 
 ## 基本フロー
 
-1. callerが `.survey/requests/<unique>.json` をcommitする。
+1. callerが `.survey/requests/<unique>.json` をcommitする。Scheduled Task / ChatからGitHub connectorのファイル作成操作を利用できる場合は、それをrequest commitの第一経路とし、caller自身のPython・shell・checkoutには依存しない。
 2. `.github/workflows/survey-helper.yml` がpushを検知してcheckout＋Pythonを起動する。
 3. `.survey/scripts/action_worker.py` が許可済みoperationだけを処理する。
 4. workerは `.survey/results/<same-name>.json` と、operationが生成した状態差分をcommitする。
 5. callerはresultを再取得し、`ok: true` を確認してから次へ進む。
 
 request/resultは観測・受渡し用であり、論文本文の精読や科学的判断そのものをActionsへ委譲しない。
+
+### request commit経路の優先順位
+
+1. GitHub connectorで `.survey/requests/<unique>.json` を新規作成してdefault branchへcommitする。
+2. connectorによる新規ファイル作成が利用不能な場合だけ、caller環境のローカルhelper / Python / shellを使う。
+3. それも利用不能な場合は、workflow本文に定めたconnector再現経路へフォールバックする。
+
+request名はrun / operation / 一意識別子を含めて衝突を避け、作成前に同名request/resultの存在を確認する。connectorからcommitできた場合は、その後のworker起動・result待ち・`ok: true`確認は通常の基本フローと同じである。
 
 ## 許可operation
 
