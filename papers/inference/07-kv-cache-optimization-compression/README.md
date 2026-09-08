@@ -8,7 +8,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ## 収録論文
 
-収録論文: 10本。公開日が新しい順。
+収録論文: 11本。公開日が新しい順。
+
+- 2026-09-02 — [HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models](2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md)
+  - hybrid long-context modelのglobal-attention KV headごとに異なる履歴窓を物理割当し、品質を保ちながらGPU上のKV常駐量を減らす。
 
 - 2026-09-03 — [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)
   - KVの重要度を毎tokenで一から計算せず、過去のattention傾向を少しずつ平均して重要度順位を長めに使い回し、どのKVを捨てるか決める計算負荷を下げる。

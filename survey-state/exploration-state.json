@@ -4,18 +4,13 @@
   "bootstrap_required": false,
   "last_run": "2026-09-08T08:40:16+09:00",
   "last_completed_paper": {
-    "title": "Online Linear Programming for Multi-Objective Routing in LLM Serving",
-    "id": "arXiv:2607.03948",
-    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03948-online-linear-programming-multi-objective-routing.md"
+    "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+    "id": "arXiv:2609.02029",
+    "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md"
   },
-  "last_lineage": "inference/llm-serving-scheduling-disaggregation",
+  "last_lineage": "inference/kv-cache-optimization-compression",
   "last_morning_report_cutoff": "2026-09-08T08:38:00+09:00",
   "pending_research": [
-    {
-      "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
-      "canonical_id": "arXiv:2609.02029",
-      "discovery_source": "arxiv-independent-scan"
-    },
     {
       "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
       "canonical_id": "arXiv:2606.16135",
@@ -23,11 +18,6 @@
     }
   ],
   "pending_audit": [
-    {
-      "title": "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference",
-      "canonical_id": "arXiv:2401.08671",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"
-    },
     {
       "title": "MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache",
       "canonical_id": "arXiv:2401.14361",
@@ -93,6 +83,12 @@
   ],
   "recently_checked": [
     {
+      "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+      "canonical_id": "arXiv:2609.02029",
+      "result": "added",
+      "discovery_source": "arxiv-independent-scan"
+    },
+    {
       "title": "Online Linear Programming for Multi-Objective Routing in LLM Serving",
       "canonical_id": "arXiv:2607.03948",
       "result": "added",
@@ -113,12 +109,6 @@
     {
       "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
       "canonical_id": "arXiv:2605.15051",
-      "result": "added",
-      "discovery_source": "arxiv-search"
-    },
-    {
-      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
-      "canonical_id": "arXiv:2605.08151",
       "result": "added",
       "discovery_source": "arxiv-search"
     }
