@@ -25,4 +25,4 @@
   可能な範囲で `canonical_id`, `title`, `identifiers`, `checked_at`, `checked_source_version`, `reason_code`, 客観的な理由、`discovery_source`, `duplicate_of` を残す。`insufficient_primary_source` では `attempted_sources` と `retrieval_error` も残す。
   理由の例：`out_of_scope_training`, `out_of_scope_non_llm`, `duplicate_same_work`, `duplicate_newer_version_exists`, `insufficient_inference_systems_contribution`, `insufficient_primary_source`, `low_incremental_value`, `already_recorded`, `other_objective_reason`。
 - `recently_checked` は一次資料確認済みの直近約100件。識別子、判定結果、探索経路、理由を保持する。永続の見送り記録の代用にしない。一次資料本文未取得で `insufficient_primary_source` にした候補は、本文確認済みと誤解しないようその旨を結果に明示する。
-- `survey-state/execution-log.md`：利用者向けの観測記録。現在から直近24時間分だけ保持。成果・復旧・既読判定の正本にしない。未完了キュー、識別索引、見送り記録は24時間で削除しない。
+- `survey-state/log/`：利用者向けの観測ログ置き場。1実行につき1ファイルとし、集約ファイルへ追記しない。ログは成果・復旧・既読判定の正本にせず、状態や実ファイルから完了を推測するためにも使わない。各実行の終了時に24時間保持ルールを適用し、終了時刻が現在時刻より24時間を超えて古いログから削除する。日次履歴・未完了・見送り・識別索引はこの削除対象に含めない。
