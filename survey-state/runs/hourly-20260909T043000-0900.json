@@ -1,0 +1,24 @@
+{
+  "run_id": "hourly-20260909T043000-0900",
+  "started_at": "2026-09-09T05:27:50+09:00",
+  "scheduled_at": "2026-09-09T04:30:00+09:00",
+  "mode": "reading",
+  "stage": "bootstrap",
+  "status": "running",
+  "last_progress_at": "2026-09-09T05:27:50+09:00",
+  "next_action": "reconcile the current plan and continue selected reading/audit work",
+  "capabilities": {
+    "python": false,
+    "dependencies": false,
+    "repository_files": false,
+    "git_checkout": false,
+    "local_read": false,
+    "local_write": false,
+    "github_read": true,
+    "github_write": true
+  },
+  "workflow_commit": "bc812c7fd3b0f4e4c4a15a0696b423d6614b0c63",
+  "workflow_version": 7,
+  "plan_id": "daily-20260908T093000+0900",
+  "route": "reading"
+}
