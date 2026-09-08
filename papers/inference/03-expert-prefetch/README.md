@@ -2,12 +2,14 @@
 
 MoEで次に使われるexpertを**routing結果が確定する前に予測して先にGPUへ読み込む**ことで、CPU / storageからの重み転送待ちを隠す研究をまとめる。予測器、過去のrouting履歴、前のlayerの状態などを使って将来のexpert需要を見積もり、現在の計算と次の転送を重ねるのが基本形となる。
 
-一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
+一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。将来需要の予測をcache保持判断に使い、必ずしも先読み転送しない方式も含む。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
 
 ## 収録論文
 
-収録論文: 13本。公開日が新しい順。
+収録論文: 14本。公開日が新しい順。
 
+- 2026-09-04 — [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md)
+  - 次token・次layerのexpert需要を学習してcache保持と限定的な先読みを制御し、MoE expert weightの転送回数を減らす。
 - 2026-08-21 — [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)
   - 数layer先のexpertを予測して先読みし、予測外れを低rank近似、CPU上のexact計算、GPUへのweight transferへ振り分けることでPCIe待ちを減らす。
 - 2026-06-24 — [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)
