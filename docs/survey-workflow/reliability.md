@@ -14,6 +14,7 @@ Python 3.10以上と `scripts/requirements.txt` の依存を使う。実行前�
 python -m pip install -r scripts/requirements.txt
 python scripts/identity_delta.py validate
 python scripts/identity_delta.py compact
+python scripts/repo_edit.py read --path <file> --start-line 1 --end-line 20 --number
 python scripts/survey.py build
 python scripts/survey.py validate
 python scripts/check_repository.py --inventory /tmp/repository-inventory.json --report /tmp/integrity.json
@@ -26,6 +27,7 @@ python -m unittest discover -s tests
 | `identity_delta.py lookup <identifier>` | 形式3スナップショットと未compact差分を統合して正規識別子を検索 |
 | `identity_delta.py validate` | 未compact差分が論文本体と一致し、識別子衝突がないことを検査 |
 | `identity_delta.py compact` | 論文本体から形式3スナップショットを再生成し、適用済み差分を削除 |
+| `repo_edit.py read/insert/replace/delete/append` | 任意のroot配下のUTF-8テキストを行単位で読取り・局所修正する非常用ヘルパー |
 | `survey.py build` | 識別索引、系統一覧、上位件数、比較表、進捗を決定的に生成 |
 | `survey.py validate` | 推論索引、必須属性、現在計画、未完了一覧、除外・再確認を検査 |
 | `check_repository.py` | 全ファイルの構造・参照・状態・凍結・生成差分を読取り専用で検査 |
@@ -38,6 +40,30 @@ python -m unittest discover -s tests
 | `cleanup` | 終了済み詳細記録の24時間整理。夜間だけ実施 |
 
 全件の `build` / `validate` と差分compactは夜間または明示的な保守で使う。通常の論文保存では当該論文、対応する識別差分、関連状態だけを検査する。`scripts/migrate_v5.py` は旧形式からの移行専用で、通常実行で呼ばない。
+
+## 汎用行編集ヘルパー
+
+`scripts/repo_edit.py` は、通常の専用補助処理で対処できない小さいテキスト修正を安全に通すための応急処置用である。デフォルトrootはリポジトリ直下だが、`--root` で別の作業ディレクトリを明示できる。対象パスはroot外へ逸脱できず、UTF-8テキストだけを扱う。
+
+例：
+
+```bash
+# 読取。SHA-256もJSONで取得できる
+python scripts/repo_edit.py read --path survey-state/runtime.json --start-line 1 --end-line 40 --json
+
+# 10〜12行を置換。--applyなしではdiff表示だけ
+python scripts/repo_edit.py replace --path some/file.md --start-line 10 --end-line 12 --text-file /tmp/replacement.txt --expect-sha256 <sha256>
+python scripts/repo_edit.py replace --path some/file.md --start-line 10 --end-line 12 --text-file /tmp/replacement.txt --expect-sha256 <sha256> --apply
+
+# 20行目の前へ挿入、5〜8行を削除、末尾へ追記
+python scripts/repo_edit.py insert --path some/file.md --line 20 --position before --text '追加文' --apply
+python scripts/repo_edit.py delete --path some/file.md --start-line 5 --end-line 8 --apply
+python scripts/repo_edit.py append --path some/file.md --text '追記文' --apply
+```
+
+変更操作は `--apply` がない限り書き込まずunified diffだけを出す。`--expect-sha256` を使えば読取後に他実行が変更したファイルへの古い上書きを防げる。実書込みは同じディレクトリ内の一時ファイルから `os.replace` し、保存後SHA-256を再確認する。
+
+このヘルパーは作業権、正本関係、JSON/YAMLの意味的整合性、複数ファイルの原子的commit、自動生成物の編集禁止を迂回しない。`survey.py build` 等で再生成すべき範囲を手編集する用途には使わない。専用ヘルパーがある処理は専用ヘルパーを優先し、局所的な復旧・小さい状態修正・手順書の限定行修正などに使う。
 
 ## 論文属性と識別索引
 
