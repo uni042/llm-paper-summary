@@ -6,7 +6,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 
 > このリポジトリの内容作成・要約・継続更新には、リポジトリ所有者の依頼に基づいてOpenAIのChatGPTを使用しています。生成AIによる整理を含むため、論文の数値・model仕様・release状態など重要な判断では、各ページに記載した一次資料も確認してください。
 
-[今日の進捗](survey-state/STATUS.md) ／ [研究の横断比較](papers/inference/comparison.md) ／ [運用手順](docs/survey-workflow/README.md) ／ [全体点検](survey-state/integrity/README.md)
+[進捗](.survey/survey-state/STATUS.md) ／ [研究の横断比較](papers/inference/comparison.md) ／ [運用手順](.survey/docs/survey-workflow/README.md) ／ [全体点検](.survey/survey-state/integrity/README.md)
 
 ## リポジトリ構成
 
@@ -15,7 +15,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
   - [Training / 学習](papers/training/) — **19本（凍結）**
 - [framework-updates/](framework-updates/) — 主要runtime / frameworkの重要機能更新
 - [llm-releases/](llm-releases/) — 主要model familyのrelease情報
-- [templates/](templates/) — 記述template
+- [.survey/](.survey/) — 運用手順・状態・補助スクリプト・テスト・templateなどの管理用領域
 
 現在の論文収録数: **179本**（推論160本 + 学習19本）
 

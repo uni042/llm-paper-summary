@@ -4,7 +4,7 @@ run 2〜23だけが通常の精読・監査を担当する。
 
 ## 対象選択
 
-plan snapshotと当cycleのprogress deltaを統合して未完了を算出する。精読と監査の進行差が大きい側を優先し、同程度なら精読→監査の順に進む。保存済み論文本体があるのにprogress deltaだけ欠ける場合は、一次資料を再読せず成果・識別子・既存run記録を照合してreconcileする。
+plan snapshotと当cycleの `.survey/survey-state/progress-deltas/` を統合して未完了を算出する。精読と監査の進行差が大きい側を優先し、同程度なら精読→監査の順に進む。保存済み論文本体があるのにprogress deltaだけ欠ける場合は、一次資料を再読せず成果・識別子・既存run記録を照合してreconcileする。
 
 ## 精読
 
@@ -16,9 +16,7 @@ plan snapshotと当cycleのprogress deltaを統合して未完了を算出する
 
 ## 保存
 
-1論文ごとに論文本体/監査変更、必要なidentity delta、progress deltaを保存する。大きいplan/queue全体の更新は通常runの完了条件にしない。progress deltaをリモート再取得できた時点で論理完了に数える。
-
-余裕があれば同一runで複数本進める。
+1論文ごとに論文本体/監査変更、必要なidentity delta、progress deltaを保存する。大きいplan/queue全体の更新は通常runの完了条件にしない。progress deltaをリモート再取得できた時点で論理完了に数える。余裕があれば同一runで複数本進める。
 
 ## 早期繰上げ
 

@@ -5,17 +5,16 @@
 通常runでは巨大な派生ファイルやplan全体を書き換えず、以下の小さい正本を優先する。
 
 - 論文本体または監査済み論文ページ
-- `identity-deltas/`（必要な場合）
-- `progress-deltas/<cycle_id>/<side>/...`
-- run記録
-- cycle claim/state
+- `.survey/survey-state/identity-deltas/`（必要な場合）
+- `.survey/survey-state/progress-deltas/<cycle_id>/<side>/...`
+- `.survey/survey-state/runs/` のrun記録
+- `.survey/survey-state/cycle-state.json` のclaim/state
 
-`paper-identity-index.json`、各系統README、比較表、STATUSは再生成可能な派生物として24回目の整合性チェックへ回せる。
+`.survey/survey-state/paper-identity-index.json`、各系統README、比較表、STATUSは再生成可能な派生物として24回目の整合性チェックへ回せる。
 
 ## progress delta
 
-必須:
-`schema_version`, `workflow_version`, `cycle_id`, `plan_id`, `side`, `canonical_id`, `status`, `run_id`, `run_index`.
+必須: `schema_version`, `workflow_version`, `cycle_id`, `plan_id`, `side`, `canonical_id`, `status`, `run_id`, `run_index`。
 
 成果保存時は現在の `claim_token` も記録し、最新cycle claimと一致することを保存前に確認する。古いtokenのdeltaは完了確定に使わない。
 
@@ -31,4 +30,4 @@
 
 ## 生成物
 
-各系統READMEが大きくなっても、生成範囲は `survey.py build` を優先する。非生成の局所修正には `repo_edit.py` を使える。24回目にidentity delta compact、生成README/件数/比較表/STATUSの再生成と検証を行う。
+各系統READMEが大きくなっても、生成範囲は `.survey/scripts/survey_v8.py build` を優先する。非生成の局所修正には `.survey/scripts/repo_edit.py` を `--root .` 付きで使える。24回目にidentity delta compact、生成README/件数/比較表/STATUSの再生成と検証を行う。

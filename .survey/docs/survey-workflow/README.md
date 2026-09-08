@@ -1,6 +1,6 @@
 # 研究サーベイの運用手順
 
-実行方式：8（`workflow_version: 8`）。実処理の順序は時刻ではなく、GitHub上の `survey-state/cycle-state.json` に保存された `cycle_id` と `run_index` を正本として決める。時刻は通知、朝報告、本文再確認期限、観測メタデータにだけ使い、モード判定・作業権・進捗加算には使わない。
+実行方式：8（`workflow_version: 8`）。管理用ファイルは `.survey/` 配下に集約する。実処理の順序は時刻ではなく、GitHub上の `.survey/survey-state/cycle-state.json` に保存された `cycle_id` と `run_index` を正本として決める。時刻は通知、朝報告、本文再確認期限、観測メタデータにだけ使い、モード判定・作業権・進捗加算には使わない。
 
 ## 1周の構成
 
@@ -16,8 +16,8 @@
 
 ## 毎回の開始
 
-1. 既定ブランチの最新変更識別子を取得し、その同じ版のこのREADMEと必要な手順だけを読む。
-2. `cycle-state.json` を取得し、`run_bootstrap.py` が使えるなら同じ版で実行する。使えない場合も同じ規則を接続機能で再現する。
+1. 既定ブランチの最新変更識別子を取得し、その同じ版の `.survey/docs/survey-workflow/README.md` と必要な手順だけを読む。
+2. `.survey/survey-state/cycle-state.json` を取得し、`.survey/scripts/run_bootstrap.py` が使えるなら同じ版で実行する。使えない場合も同じ規則を接続機能で再現する。
 3. `cycle_state.active_claim` を最新HEADへ保存してから作業を始める。開始スクリプトは `cycle_id`, `run_index`, `mode`, `claim_token` を出力する。
 4. 実行中の成果保存は現在のclaim tokenに結び付ける。別runがclaimを更新した後の古いtokenでは完了を確定しない。
 5. 編集時は [保存と検証](publishing.md)、終了時は [完了判定](completion.md) を読む。
@@ -35,7 +35,7 @@
 ## 共通仕様
 
 - [開始・状態](state.md)：cycle state、claim、run記録、復旧
-- [日次/周選定](planning.md)：繰越＋新規でN本、一次資料preflight、優先度
+- [周選定](planning.md)：繰越＋新規でN本、一次資料preflight、優先度
 - [精読・監査](hourly.md)：progress deltaによる小さい完了記録
 - [保存と検証](publishing.md)：identity delta / progress delta / 生成物
 - [本文再確認](retries.md)：7日間隔の本文再確認と根拠付き永久除外
@@ -45,4 +45,4 @@
 
 ## 保全
 
-移行だけで精読・監査件数を増減しない。保存済み成果は再読せず、progress deltaが欠けた実成果だけを根拠付きでreconcileする。旧 `daily-plans/`、`runtime.json`、`queues/` は互換情報として利用できるが、workflow 8の制御正本は `cycle-state.json`、選定snapshot、progress delta、cycle historyである。通常実行で予定タスクや手順書を自己変更しない。
+移行だけで精読・監査件数を増減しない。保存済み成果は再読せず、progress deltaが欠けた実成果だけを根拠付きでreconcileする。旧 `.survey/survey-state/daily-plans/`、`runtime.json`、`queues/` は互換情報として利用できるが、workflow 8の制御正本はcycle state、選定snapshot、progress delta、cycle historyである。通常実行で予定タスクや手順書を自己変更しない。

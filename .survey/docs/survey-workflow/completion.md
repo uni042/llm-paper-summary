@@ -33,4 +33,4 @@ run 1は前cycleの未完了を最優先し、繰越＋新規を合わせて新�
 
 ## cycle history
 
-閉じたcycleは `cycle-history/<cycle_id>.json` に一度だけ記録し、close reason、run index、各目標、done/pending、次目標、plan pathを保存する。移行・reconcileだけで同じ成果を再加算しない。
+閉じたcycleは `.survey/survey-state/cycle-history/<cycle_id>.json` に一度だけ記録し、close reason、run index、各目標、done/pending、次目標、plan pathを保存する。移行・reconcileだけで同じ成果を再加算しない。
