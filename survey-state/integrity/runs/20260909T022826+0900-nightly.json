@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "run_id": "20260909T022826+0900-nightly",
+  "source_commit": "482691f825cdf13ed2e17fde00a0c905dfed76f0",
+  "started_at": "2026-09-09T02:28:26+09:00",
+  "finished_at": "2026-09-09T02:32:00+09:00",
+  "status": "partial",
+  "coverage": {
+    "inventory_source": "GitHub recursive tree at source_commit",
+    "inventory_complete": false,
+    "reason": "The connector returned the recursive tree with response truncation; no complete checkout was available in this run.",
+    "resumed_from": "survey-state/integrity/runs/20260909T003208+0900-nightly.json",
+    "changes_since_previous_source": 26,
+    "new_changes_before_integrity_work": [
+      "survey-state/runs/20260909T013000+0900-reading.json",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+      "survey-state/identity-deltas/arxiv/2504.11320.json",
+      "survey-state/runs/20260909T022826+0900-nightly.json",
+      "survey-state/leases.json"
+    ]
+  },
+  "checks": [
+    "workflow version and nightly-mode procedure consistency",
+    "maintenance lease ownership and remote verification",
+    "previous partial integrity result and continuation point",
+    "open maintenance queue",
+    "frozen training baseline change scan",
+    "recent completed reading run record",
+    "recursive repository inventory request"
+  ],
+  "not_checked": [
+    "Complete all-file inventory coverage",
+    "Runtime identity_delta.py validate/compact",
+    "Runtime survey.py build/validate",
+    "Runtime check_repository.py full repository scan",
+    "Runtime unit test suite",
+    "External URL reachability",
+    "Fragment anchors",
+    "Scientific validity / full paper audits",
+    "Scheduler startup guarantees"
+  ],
+  "findings_before": [
+    {
+      "code": "identity_index_compaction_pending",
+      "detail": "Open maintenance item identity-index-compaction remains; connector-only maintenance cannot safely compact the format-3 snapshot."
+    },
+    {
+      "code": "derived_views_pending",
+      "detail": "Open Kairos derived-view rebuild remains pending until checkout-capable deterministic generation is available."
+    },
+    {
+      "code": "inventory_truncated",
+      "detail": "Recursive GitHub tree was requested but the connector response was truncated, so complete inventory coverage cannot be claimed."
+    },
+    {
+      "code": "runtime_full_scan_unavailable",
+      "detail": "No complete repository checkout was available to run repository scripts and unit tests."
+    }
+  ],
+  "repairs": [],
+  "findings_after": [
+    {"code": "identity_index_compaction_pending", "status": "open"},
+    {"code": "derived_views_pending", "status": "open"},
+    {"code": "inventory_truncated", "status": "open"},
+    {"code": "runtime_full_scan_unavailable", "status": "open"}
+  ],
+  "next_action": "At the next checkout-capable nightly maintenance run, validate and compact identity deltas, rebuild generated views, run full validation/tests, and complete inventory coverage. Preserve open maintenance items until then.",
+  "verified_commit": null,
+  "check_result": "partial"
+}
