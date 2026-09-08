@@ -8,7 +8,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ## 収録論文
 
-収録論文: 21本。公開日が新しい順。
+収録論文: 22本。公開日が新しい順。
 
 - 2026-09-04 — [KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU](2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md)
   - GPU・CPU DRAM・NVMeへ退避した過去のKV状態をattention空間の索引で検索し、必要blockだけを現在のcontextへ再構成してnative contextを超えるagent workspaceを扱う。
@@ -38,6 +38,8 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   - 一部requestのKVとdecode attentionをCPUへ移し、attention前のGPU計算を大batch化したままCPU結果との同期を遅らせてCPU計算を隠す。
 - 2025-03-20 — [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md)
   - full-precision KVをCPU DRAMへ保持し、GPU上のlow-bit KV要約で重要KVを選び、次stepのKVを先読みしてCPU→GPU転送とdecode計算を重ねる。
+- 2025-02-18 — [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md)
+  - KV cacheをattention head単位でCPU RAMへ退避し、GPUには同時に使うheadだけを置いて、近似なしの超長文脈推論を小容量GPUで可能にする。
 - 2025-01-03 — [Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md)
   - 過去tokenをKVそのものと小さい中間activationの2形式で混在保存し、weight転送中にactivationからKVを再生成して転送量と再計算量を釣り合わせる。
 - 2024-11-26 — [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)

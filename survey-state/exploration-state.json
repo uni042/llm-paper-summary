@@ -4,26 +4,14 @@
   "bootstrap_required": false,
   "last_run": "2026-09-08T09:11:00+09:00",
   "last_completed_paper": {
-    "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
-    "id": "arXiv:2608.16477",
-    "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md"
+    "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
+    "id": "arXiv:2502.12574",
+    "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md"
   },
-  "last_lineage": "inference/llm-serving-scheduling-disaggregation",
+  "last_lineage": "inference/kv-cache-offload-recomputation",
   "last_morning_report_cutoff": "2026-09-08T08:38:00+09:00",
-  "pending_research": [
-    {
-      "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
-      "canonical_id": "arXiv:2502.12574",
-      "discovery_source": "arxiv-independent-scan"
-    }
-  ],
-  "pending_audit": [
-    {
-      "title": "Hydragen: High-Throughput LLM Inference with Shared Prefixes",
-      "canonical_id": "arXiv:2402.05099",
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
-    }
-  ],
+  "pending_research": [],
+  "pending_audit": [],
   "research_batch_size": 2,
   "audit_batch_size": 2,
   "full_batch_streak": 1,
@@ -84,6 +72,12 @@
     }
   ],
   "recently_checked": [
+    {
+      "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
+      "canonical_id": "arXiv:2502.12574",
+      "result": "added",
+      "discovery_source": "arxiv-independent-scan"
+    },
     {
       "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
       "canonical_id": "arXiv:2608.16477",
