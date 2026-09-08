@@ -17,7 +17,7 @@
 ## 毎回の開始
 
 1. 既定ブランチの最新変更識別子を取得し、その同じ版の `.survey/docs/survey-workflow/README.md` と必要な手順だけを読む。
-2. deterministicな状態処理は、可能なら [GitHub Actions共通補助実行基盤](actions-worker.md) を優先する。callerは `.survey/requests/*.json` をcommitし、`.survey/results/*.json` を再取得して結果を確認する。Scheduled Task自身のPython/shell/checkout可否に依存しない。
+2. deterministicな状態処理は、可能なら [GitHub Actions共通補助実行基盤](actions-worker.md) を優先する。callerは `.survey/requests/*.json` をcommitし、`.survey/results/*.json` を再取得して結果を確認する。GitHub connectorで新規ファイルをcommitできる場合は、それをrequest作成の第一経路とし、Scheduled Task自身のPython/shell/checkout可否に依存しない。
 3. Actions経路を使えない場合だけ `.survey/scripts/run_bootstrap.py` 等をローカルで実行し、それも使えなければ同じ規則をGitHub connectorで再現する。
 4. `cycle_state.active_claim` をリモートへ保存・再取得してから作業を始める。開始処理は `cycle_id`, `run_index`, `mode`, `claim_token` を確定する。
 5. 実行中の成果保存は現在のclaim tokenに結び付ける。別runがclaimを更新した後の古いtokenでは完了を確定しない。
