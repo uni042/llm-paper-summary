@@ -4,10 +4,11 @@
   "started_at": "2026-09-09T02:28:26+09:00",
   "scheduled_at": "2026-09-09T02:30:00+09:00",
   "mode": "nightly",
-  "stage": "integrity_checked",
-  "status": "running",
-  "last_progress_at": "2026-09-09T02:31:00+09:00",
-  "next_action": "persist partial integrity result and release maintenance lease",
+  "stage": "completed",
+  "status": "partial",
+  "last_progress_at": "2026-09-09T02:33:00+09:00",
+  "finished_at": "2026-09-09T02:33:00+09:00",
+  "next_action": "resume unresolved nightly maintenance at the next nightly slot",
   "capabilities": {
     "python": false,
     "dependencies": false,
@@ -20,5 +21,6 @@
   },
   "workflow_commit": "5e3d6d166e694cd0d2dc238d5c0b3034d952b5f3",
   "workflow_version": 7,
-  "verified_commit": "482691f825cdf13ed2e17fde00a0c905dfed76f0"
+  "verified_commit": "f6cd48b76a710f682d83d4a36a5b0d2913da33ad",
+  "integrity_result": "survey-state/integrity/runs/20260909T022826+0900-nightly.json"
 }
