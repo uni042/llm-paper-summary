@@ -13,7 +13,7 @@
 - `survey-state/exploration-state.json`：既存の再開位置と処理状態に以下を追加する。
   - `daily_reading_target` と `daily_audit_target`：精読・監査それぞれの当日目標（最小1、初期各10）。日次選定時に側ごとに独立して変更する。
   - `daily_plan`：未作成ならnull。作成後は `plan_id`, `period_start`, `period_end`, `target`（精読目標）, `audit_target`（監査目標）, `status: selecting|ready|closed`, `selected_papers`, `selected_audits`, `selection_shortfall`, `audit_selection_shortfall`, `selection_error`, `audit_selection_error` を持つ。期間は起動元指定の選定枠から次の選定枠直前まで。途中保存して選定を再開できるようにする。
-  - 各 `selected_papers` と `selected_audits`：`canonical_id`, `title`, `source_url`, `source_version`（確認できる場合）, `discovery_source`, `carried_from`（繰越時）, `status: pending|reading|completed|blocked`, `next_action`。完了時は `result`, `completed_at`, `artifact_paths` を残し、保存確認後に `verified_commit` を補完する。
+  - 各 `selected_papers` と `selected_audits`：`canonical_id`, `title`, `source_url`, `source_version`（確認できる場合）, `discovery_source`, `carried_from`（繰越時）, `status: pending|reading|completed|blocked`, `next_action`。完了時は `result`, `completed_at`, `artifact_paths` を残し、保存確認後に `verified_commit` を補完する。`blocked` は一次資料取得不能などで現在の実行では処理不能だが未完了である状態を表し、可能なら `attempt_count`, `last_error`, `next_retry_at` を併記する。`next_retry_at` が未来の `blocked` 項目はその実行では選ばず、同じ側の別候補へ進む。
   - `daily_reading_history`：日次確定結果。期間・精読と監査それぞれの目標・選定数・完了数・未完了識別子・次目標・判定理由を `plan_id` ごとに1件保存し、同一日の増減を二重適用しない。日次履歴は24時間で削除しない。
   - `pending_research`：当日未完了・次回候補・枠外の繰越を保持。識別子で当日計画と照合し、別の独立した割当にはしない。読了済みだけ除く。
   - `pending_audit`：当日監査未完了と枠外繰越。`selected_audits` と識別子で照合し、監査完了だけ除く。精読本数に混ぜない。
