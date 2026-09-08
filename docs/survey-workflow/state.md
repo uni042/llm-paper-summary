@@ -4,16 +4,20 @@
 1. 開始時刻、対象リポジトリの最新先頭版（HEAD）、現在利用できる読み書き手段を確認する。
 2. [第4章](state.md)の状態ファイル、識別索引、見送り記録を読む。過去の会話や実行ログから状態を推測しない。
 3. 未完了キューと実ファイルを照合し、前回保存済みの成果を再作成せず、未完了部分だけ復旧する。復旧だけを今回の調査・監査件数に数えない。
-4. 今回の実行枠とモードを、起動元が指定する予定実行枠・モード規則から確定する。予定実行時刻が取得できるならその日本時間を使い、起動元が朝モードとして指定した枠は朝モード、それ以外は毎時モードとする。予定実行枠が取得できない場合は起動元の明示的なモード指定を使い、それもなければ通常の毎時モードとして扱う。公開手順書側で特定の時計時刻を朝モードに固定しない。開始後に時刻が変わってもモードを変更しない。
+4. 予定実行枠を基に、起動元の規則で日次選定・精読・朝の更新確認のいずれかを確定する。開始の遅れでモードを切り替えない。予定枠が不明なら起動元の明示指定を使い、それもなければ精読モードとする。日次切替は選定モードだけで行う。
 5. 識別索引が欠落・形式不明・現行ファイルと不整合なら、新規論文作成前に `papers/inference/*/*.md`（README除外）から再構築する。再構築が終わるまで新規作成は禁止。必要なら調査件数を減らし、未完了を残す。
 
 ## 4. 状態・識別情報の正本
-既存の形式と値を尊重し、存在しない項目だけ初期化する。ただし運用方式の第2版への移行は次の1回だけ行う。
-状態の `workflow_version` が2未満または未設定なら、未完了候補・論文実体・過去実績を保全したまま `research_batch_size=1`, `audit_batch_size=1`, `full_batch_streak=0`, `workflow_version=2` にする。これは負荷安定化のための計画的な設定移行であり、キューや既存成果の初期化ではない。第2版以降は[第10章](completion.md)の規則だけで増減する。移行と通常の中間保存はまとめてよい。
-- `survey-state/exploration-state.json`：再開位置と処理状態。
-  `last_run`, `last_completed_paper`, `last_lineage`, `last_morning_report_cutoff`, `recently_checked`, `pending_research`, `pending_audit`, `research_batch_size`, `audit_batch_size`, `full_batch_streak`, `recent_batch_history`。
-  新規状態の初期値は調査1、監査1、連続成功0、履歴空。直近6回の割当・完了・繰越・件数設定・実行方式版・実行識別子を履歴に残す。同じ実行の複数巡回を複数回の成功に数えない。
-  `last_completed_paper` は最後に正常追加または実質更新した推論論文。変更なし監査では置換しない。
+既存成果・未完了候補・監査キュー・実績は保全する。第3版移行は1回だけ行い、`workflow_version=3`、`daily_reading_target=10`、`daily_audit_target=10`、`daily_plan=null`、`daily_reading_history=[]` を設定する。日次本数を毎回10に戻さない。旧 `research_batch_size`, `audit_batch_size`, `full_batch_streak`, `recent_batch_history` は履歴として残すが、第3版の制御には使わない。
+
+- `survey-state/exploration-state.json`：既存の再開位置と処理状態に以下を追加する。
+  - `daily_reading_target` と `daily_audit_target`：精読・監査それぞれの当日目標（最小1、初期各10）。日次選定時に側ごとに独立して変更する。
+  - `daily_plan`：未作成ならnull。作成後は `plan_id`, `period_start`, `period_end`, `target`（精読目標）, `audit_target`（監査目標）, `status: selecting|ready|closed`, `selected_papers`, `selected_audits`, `selection_shortfall`, `audit_selection_shortfall`, `selection_error`, `audit_selection_error` を持つ。期間は起動元指定の選定枠から次の選定枠直前まで。途中保存して選定を再開できるようにする。
+  - 各 `selected_papers` と `selected_audits`：`canonical_id`, `title`, `source_url`, `source_version`（確認できる場合）, `discovery_source`, `carried_from`（繰越時）, `status: pending|reading|completed|blocked`, `next_action`。完了時は `result`, `completed_at`, `artifact_paths` を残し、保存確認後に `verified_commit` を補完する。
+  - `daily_reading_history`：日次確定結果。期間・精読と監査それぞれの目標・選定数・完了数・未完了識別子・次目標・判定理由を `plan_id` ごとに1件保存し、同一日の増減を二重適用しない。日次履歴は24時間で削除しない。
+  - `pending_research`：当日未完了・次回候補・枠外の繰越を保持。識別子で当日計画と照合し、別の独立した割当にはしない。読了済みだけ除く。
+  - `pending_audit`：当日監査未完了と枠外繰越。`selected_audits` と識別子で照合し、監査完了だけ除く。精読本数に混ぜない。
+  - `last_run`, `last_completed_paper`, `last_lineage`, `last_morning_report_cutoff`, `recently_checked` は既存意味を維持する。変更なし監査で `last_completed_paper` を置換しない。
 - `survey-state/paper-identity-index.json`：1研究につき有効なパス1つを対応させる機械可読索引。本文の正本は論文ページ。
   各項目は `canonical_id`, `path`, `title`, `normalized_title`, 存在する `arxiv_id` / `doi` / `openreview_id`, 確認済み識別子 `aliases`, `status: active`。
 - `survey-state/rejected-papers.json`：一次資料まで調査したが収録しなかった研究の永続記録。要旨だけの簡易選別は記録しない。
