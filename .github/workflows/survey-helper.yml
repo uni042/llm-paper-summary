@@ -3,19 +3,13 @@ name: Survey helper worker
 on:
   push:
     paths:
-      - '.survey/requests/*.json'
       - '.survey/work-queue/submissions/*.json'
-  issues:
-    types: [opened, edited]
-  issue_comment:
-    types: [created]
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
 
 permissions:
   contents: write
-  issues: read
 
 concurrency:
   group: survey-helper-main
@@ -23,23 +17,9 @@ concurrency:
 
 jobs:
   worker:
-    if: >
-      github.event_name == 'push' ||
-      github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'schedule' ||
-      (github.event_name == 'issues' &&
-       github.actor == github.repository_owner &&
-       (
-         (github.event.action == 'opened' && startsWith(github.event.issue.title, '[survey-helper]')) ||
-         (github.event.action == 'edited' && github.event.issue.title == '[survey-helper] command inbox' && startsWith(github.event.issue.body, '[survey-request]'))
-       )) ||
-      (github.event_name == 'issue_comment' &&
-       github.actor == github.repository_owner &&
-       github.event.issue.title == '[survey-helper] command inbox' &&
-       startsWith(github.event.comment.body, '[survey-request]'))
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
         with:
           ref: main
@@ -50,80 +30,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install helper dependencies
+      - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Materialize event request
-        if: github.run_attempt == 1 && (github.event_name == 'issues' || github.event_name == 'issue_comment')
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          ISSUE_ACTION: ${{ github.event.action }}
-          ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          COMMENT_BODY: ${{ github.event.comment.body }}
-          COMMENT_ID: ${{ github.event.comment.id }}
-        run: |
-          python - <<'PY'
-          import json
-          import os
-          from pathlib import Path
-
-          event = os.environ["EVENT_NAME"]
-          action = os.environ.get("ISSUE_ACTION", "")
-          if event == "issue_comment":
-              raw = (os.environ.get("COMMENT_BODY") or "").strip()
-              prefix = "[survey-request]"
-              if not raw.startswith(prefix):
-                  raise SystemExit("invalid issue comment request prefix")
-              body = raw[len(prefix):].strip()
-              name = f"comment-{os.environ['COMMENT_ID']}.json"
-          elif action == "edited":
-              raw = (os.environ.get("ISSUE_BODY") or "").strip()
-              prefix = "[survey-request]"
-              if not raw.startswith(prefix):
-                  raise SystemExit("invalid edited issue request prefix")
-              body = raw[len(prefix):].strip()
-              name = f"edit-{os.environ['ISSUE_NUMBER']}-{os.environ.get('GITHUB_RUN_ID','run')}.json"
-          else:
-              body = (os.environ.get("ISSUE_BODY") or "").strip()
-              name = f"issue-{os.environ['ISSUE_NUMBER']}.json"
-
-          req = json.loads(body)
-          if not isinstance(req, dict):
-              raise SystemExit("request must be one JSON object")
-          path = Path(".survey/requests") / name
-          if path.exists():
-              raise SystemExit(f"request already exists: {path}")
-          path.parent.mkdir(parents=True, exist_ok=True)
-          path.write_text(json.dumps(req, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          print(path)
-          Path("/tmp/request-path").write_text(str(path), encoding="utf-8")
-          PY
-
-      - name: Process event request
-        if: github.run_attempt == 1 && (github.event_name == 'issues' || github.event_name == 'issue_comment')
-        run: python .survey/scripts/action_worker.py --request "$(cat /tmp/request-path)"
-
-      - name: Process pending file requests
-        if: github.run_attempt == 1 && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-        run: python .survey/scripts/action_worker.py
-
-      - name: Process pending submissions
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.run_attempt > 1
-        run: python .survey/scripts/submission_worker.py
-
-      - name: Run queue state worker
+      - name: Process queue
         run: python .survey/scripts/queue_worker.py --root .survey
 
-      - name: Commit worker results
+      - name: Commit queue results
         run: |
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
-            echo 'No result changes to commit.'
+            echo 'No queue changes to commit.'
             exit 0
           fi
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
           git add -A
-          git commit -m 'survey-helper: process requests'
+          git commit -m 'survey-helper: process queue'
           git pull --rebase origin main
           git push origin HEAD:main
