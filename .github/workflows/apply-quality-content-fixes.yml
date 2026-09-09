@@ -30,9 +30,27 @@ jobs:
       - name: Apply idempotent content fixes
         run: python .survey/migrations/quality_content_fixes_20260910.py
 
+      - name: Run checker regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_audit_paper_quality.py'
+
+      - name: Audit updated working tree
+        run: |
+          mkdir -p audit-output
+          python .survey/scripts/audit_paper_quality.py \
+            --no-fail-exit \
+            --markdown-out audit-output/paper-quality-audit.md \
+            --json-out audit-output/paper-quality-audit.json
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-quality-audit-after-content-fixes
+          path: audit-output/
+          retention-days: 7
+
       - name: Commit changes
         run: |
-          if git diff --quiet; then
+          if git diff --quiet -- papers/inference; then
             echo "No paper changes required."
             exit 0
           fi
