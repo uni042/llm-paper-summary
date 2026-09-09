@@ -2,69 +2,73 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
-  "job_id": "job-research-0b935acaddfdc935",
+  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
+  "job_id": "job-research-bf598cfa965b8925",
   "data": {
-    "overview": "Jacap is strongest under high KV compression. LongBench and NIAH show more robust retention than heuristic baselines, while AIME25 decode-time eviction is mixed across cache budgets.",
+    "overview": "Standard reduced-k renormalization exaggerates the cost of using fewer experts. An interior reference set restores most downstream quality, whereas both k2=k1 and k2=E can be harmful. Perplexity and MMLU prefer different k2 on the 35B model.",
     "key_results": [
       {
-        "metric": "LongBench average",
-        "value": "40.91",
-        "baseline": "CapKV 36.57; EA 36.35",
-        "condition": "Qwen3-8B, compression ratio 0.9",
-        "interpretation": "+4.34 points over CapKV under extreme compression."
+        "metric": "Qwen3.6 MMLU, 8→4 experts",
+        "value": "81.30%, -0.35pt",
+        "baseline": "native 81.65%; standard k2=4 77.00% (-4.65pt)",
+        "condition": "k1=4,k2=16,n=2000",
+        "interpretation": "halves routed-expert compute with no statistically detectable loss (p=0.66)."
       },
       {
-        "metric": "LongBench average",
-        "value": "35.98",
-        "baseline": "KeyDiff 34.89; EA 34.51; CapKV 30.48",
-        "condition": "Llama3.1-8B, compression ratio 0.9",
-        "interpretation": "Smaller but positive gain over the next-best listed baseline."
+        "metric": "Qwen3.5-397B MMLU,10→5",
+        "value": "88.90%, -0.55pt",
+        "baseline": "native 89.45%; standard k2=5 87.35% (-2.10pt)",
+        "condition": "k1=5,k2=10,n=2000",
+        "interpretation": "same mechanism at 11× model scale; p=0.24."
       },
       {
-        "metric": "AIME25 score",
-        "value": "0.30",
-        "baseline": "CapKV 0.20; EA 0.17; KeyDiff 0.07; KNorm 0",
-        "condition": "Nemotron-7B, 2048 reserved tokens",
-        "interpretation": "Best result at the tightest tested decode-cache budget."
+        "metric": "No-renormalization failure",
+        "value": "35B MMLU -27.45pt; WikiText PPL +356%",
+        "baseline": "native",
+        "condition": "k1=6,k2=E=256",
+        "interpretation": "gain is essential; simply disabling normalization is catastrophic."
       },
       {
-        "metric": "AIME25 score",
-        "value": "0.50",
-        "baseline": "CapKV 0.50",
-        "condition": "Nemotron-7B, 4096 reserved tokens",
-        "interpretation": "Ties CapKV."
+        "metric": "35B PPL optimum",
+        "value": "k1=6,k2=8: -1.61% WikiText PPL vs native",
+        "baseline": "native top-8",
+        "condition": "25% fewer routed experts",
+        "interpretation": "trained-k reference mass preserves PPL."
       },
       {
-        "metric": "AIME25 score",
-        "value": "0.73",
-        "baseline": "CapKV 0.67; KeyDiff 0.67; EA 0.63",
-        "condition": "Nemotron-7B, 16384 reserved tokens",
-        "interpretation": "Best result at the largest tested budget."
+        "metric": "GSM8K 35B half experts",
+        "value": "94.40%, -0.60pt",
+        "baseline": "native 95.00%; standard k2=4 88.40% (-6.60pt)",
+        "condition": "k1=4,k2=16,n=500",
+        "interpretation": "effect survives autoregressive generation."
       },
       {
-        "metric": "NIAH retrieval",
-        "value": "best overall robustness",
-        "baseline": "CapKV, SnapKV, KeyDiff, EA, KNorm",
-        "condition": "Qwen3-8B; 10k-120k contexts; needle depths 0.15-0.95; C.R. 0.75 main and 0.5 appendix",
-        "interpretation": "Jacap remains stronger for long contexts and deep needle positions."
+        "metric": "Compute accounting",
+        "value": "routed expert params/token 1.006B→0.503B; total expert term 1.132B→0.629B",
+        "baseline": "k1=8",
+        "condition": "35B k1=4",
+        "interpretation": "50% routed-expert compute reduction, 44% expert-term reduction, estimated 17% end-to-end active-parameter reduction."
       }
     ],
     "negative_results": [
       {
-        "name": "AIME25 8192-token reversal",
-        "description": "Jacap scores 0.53 while CapKV reaches 0.73; Jacap is not uniformly best across budgets."
+        "name": "Perplexity mis-ranks k2",
+        "description": "35B PPL prefers k2=8 while MMLU prefers k2=16; k2=8 is significantly -1.10 MMLU points (p=0.021)."
       },
       {
-        "name": "Approximation boundary",
-        "description": "The practical score diagonalizes softmax competition and query covariance, so pairwise and higher-order interactions are omitted."
+        "name": "No memory saving",
+        "description": "all E experts remain resident; method only reduces executed expert compute and related weight traffic."
       },
       {
-        "name": "Extra scoring cost",
-        "description": "Per-layer eviction complexity is O(N d_h^2 + d_h^3), higher than typical independent heuristic scoring."
+        "name": "Same-series evidence",
+        "description": "two main models are Qwen family; cross-architecture generalization remains hypothesis."
+      },
+      {
+        "name": "Coarse router boundary",
+        "description": "mechanism predicts smaller benefit when top-k mass is less flat; Gemma top-8 mass 0.302 shows weaker normalization sensitivity."
       }
     ],
-    "interpretation": "The contribution is improved robustness under aggressive lossy compression rather than universal dominance. Softmax sensitivity discounts saturated attention, and the leverage term discourages redundant output directions.",
-    "quality_impact": "KV eviction is lossy and can change task accuracy. Jacap generally degrades more gracefully at high compression, but the AIME25 8192-token condition is a clear counterexample."
+    "interpretation": "Gain calibration is a hidden confounder in post-training k reduction. Expert identity matters substantially more than precise weighting, enabling a cheap amplitude correction while preserving exact router ranking.",
+    "quality_impact": "Selected k2 recovers most downstream quality, but exact equivalence is not shown and k2 should be validated on downstream tasks."
   }
 }
