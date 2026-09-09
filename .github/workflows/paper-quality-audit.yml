@@ -1,0 +1,48 @@
+name: Paper quality audit
+
+on:
+  push:
+    paths:
+      - ".survey/scripts/audit_paper_quality.py"
+      - ".survey/scripts/japanese_style.py"
+      - ".survey/tests/test_audit_paper_quality.py"
+      - "papers/inference/**/*.md"
+      - ".github/workflows/paper-quality-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-quality-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_audit_paper_quality.py'
+
+      - name: Run repository audit
+        run: |
+          mkdir -p audit-output
+          python .survey/scripts/audit_paper_quality.py \
+            --no-fail-exit \
+            --markdown-out audit-output/paper-quality-audit.md \
+            --json-out audit-output/paper-quality-audit.json
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-quality-audit
+          path: audit-output/
+          retention-days: 7
