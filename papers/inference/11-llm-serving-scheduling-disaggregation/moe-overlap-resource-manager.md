@@ -2,97 +2,212 @@
 canonical_id: "arXiv:2609.07536"
 arxiv_id: "2609.07536"
 title: "Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap"
-summary: "分散MoEの細粒度な計算・通信重畳で競合する計算CTAと通信CTAのGPU常駐資源を、依存関係と離散的な実行waveを明示した解析モデルから起動時に配分し、COMETの固定通信CTA数をworkload適応型に置き換える。"
+summary: "分散MoEでは、専門家の計算が終わった部分からGPU間通信を始めれば待ち時間を隠せるが、計算担当と通信担当は同じGPUの実行資源を取り合う。本研究は、入力長や専門家へのトークン偏りに応じて『通信へGPU資源をどれだけ予約するか』を起動直前に解析式で決め、固定配分のCOMETよりモデル全体のプリフィルを平均1.185倍高速化する。"
 source: "https://arxiv.org/abs/2609.07536"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-09"
+audit_version: 1
 ---
 
 # Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap
+
+> 分散MoEでは、専門家の計算が終わった部分からGPU間通信を始めれば待ち時間を隠せるが、計算担当と通信担当は同じGPUの実行資源を取り合う。本研究は、入力長や専門家へのトークン偏りに応じて「通信へGPU資源をどれだけ予約するか」を起動直前に解析式で決め、固定配分のCOMETよりモデル全体のプリフィルを平均1.185倍高速化する。
+
 ## 書誌情報
+
 - **著者**: Hongyu Liu, Minyu Cui, Miquel Pericàs
-- **公開**: arXiv:2609.07536v1, 2026-09-07; accepted at AI on HPC Workshop at SC26
-- **種別**: workshop paper / arXiv preprint
-- **対象**: Mixture-of-Experts inference、computation-communication overlap、GPU resource management、analytical performance modeling、CTA residency
-- **実装**: 公開COMET A100実装をFLUX codebase内で拡張し、起動時の解析的resource managerを統合。評価はCOMET A100 V2 commit 19831caを基準に実施。
+- **公開**: arXiv:2609.07536v1, 2026-09-07
+- **採択**: AI on HPC Workshop at SC26
+- **対象**: 分散混合専門家モデル（distributed Mixture of Experts; MoE）、計算・通信重畳（computation-communication overlap）、GPU資源配分、解析性能モデル
+- **実装**: 公開されているCOMETのA100実装をFLUXコードベース上で拡張し、起動直前に資源配分を決める処理を追加して評価している。
+
+## 概要
+
+大規模な混合専門家モデル（Mixture of Experts; MoE）では、多数の専門家（expert）を複数GPUへ分散して置く。各トークンはルーターによって使う専門家を選ぶため、選ばれた専門家を持つGPUへトークンを送り、計算後の結果を元のGPUへ戻す必要がある。このGPU間通信は分散MoEの主要な待ち時間になり得る。
+
+通信待ちを減らす代表的な方法が、**計算・通信重畳（computation-communication overlap）**である。すべての専門家計算が終わるまで待ってから通信するのではなく、計算が終わった小さな部分から順番に通信を開始する。うまくいけば、後半の計算をしている間に前半の通信が終わり、通信時間の大部分を計算の裏へ隠せる。
+
+ただし、ここには直感に反する問題がある。通信を増やせば増やすほど良いわけではない。GPU上では、行列計算をする処理と通信を進める処理が、同じストリーミングマルチプロセッサ（Streaming Multiprocessor; SM）の実行資源を使う。通信担当を増やしすぎると、今度は行列計算へ割ける資源が減って計算が遅くなる。反対に通信担当が少なすぎると、計算済みデータが通信待ちの列にたまる。
+
+既存のCOMETは細かい単位で計算と通信を重ねる仕組み自体を持っているが、通信へ割り当てるGPU資源量は固定である。本論文はここを変更し、**その時の入力長、専門家ごとの仕事量、カーネルの形状を見て、通信担当を何個走らせるかを毎回決める**。新しい通信アルゴリズムを作るのではなく、既存の重畳機構をどの比率で走らせるかを適応させる研究である。
+
 ## 問題設定
-細粒度重畳ではGEMM2計算CTAとGatherRS通信CTAが同じSM常駐資源を競合する。通信CTA不足ではready splitが滞留し、多すぎるとGEMM2並列度が落ちる。CTAは整数waveで進むため最適配分はtoken数、expert負荷、kernel shape、split数に対して不連続に変わり、固定CTA数では適応できない。
-## 新規性
-workload、kernel occupancy、GPU常駐制約、split-level readiness依存から候補kernelを実行・計測せず通信CTA数Cを起動直前に解析選択する。計算・通信のwave数と依存関係を同一timelineに置くwave-quantized makespan modelを用いる。
+
+### GPU上では「計算担当」と「通信担当」が同じ場所を取り合う
+
+CUDAでは、処理はスレッドブロック、論文では協調スレッド配列（Cooperative Thread Array; CTA）と呼ばれる単位でSMへ配置される。1つのCTAは実行中、スレッド数、レジスタ、共有メモリなどの資源を占有する。資源が空くまで後続CTAは開始できない。
+
+COMETの対象演算では、大きく2種類のCTAが同時に存在する。
+
+- **計算CTA**: 専門家の第2行列積（GEMM2）を小さなタイル単位で計算する。
+- **通信CTA**: 計算済みのタイルを集約し、他GPUとのReduceScatterを含む結果返送（GatherRS）を進める。
+
+計算CTAが一部分を終えると「この部分は送ってよい」と通知し、通信CTAがそれを受け取って転送する。このため、計算と通信は生産者・消費者のような関係になる。
+
+通信CTAを増やすと、準備済みデータを早くさばける。一方、そのCTAがSMへ常駐するぶん、同時に走れる計算CTAが減る。したがって最適値は「通信単体を最速にする値」でも「計算単体を最速にする値」でもなく、**最後の通信まで含めてパイプライン全体が最も早く終わる配分**になる。
+
+### 最適な配分は入力ごとに変わる
+
+入力トークン数が増えれば専門家計算のタイル数が増える。さらにMoEではルーターによって専門家ごとの担当トークン数が偏るため、同じモデルでも要求によって仕事量が変わる。テンソル並列や専門家並列の設定が変われば通信量も変わる。
+
+そのため、固定で「通信CTAを16個」と決めた設定が、ある入力では最適でも別の入力では過剰または不足になる。
+
+さらにGPUではCTAを連続量として0.3個ずつ増減できない。実行は「同時に載るCTAのまとまり」が終わって次のまとまりへ進む**波（wave）**のような離散動作になる。CTAを1個増やしただけで波の回数が1段減ることもあれば、まったく変わらないこともある。この不連続性が、単純な比例配分を難しくする。
+
+## 手法のあらまし
+
+提案法は、COMETがGPUカーネルを起動する直前に小さなCPU側の解析器を挟む。
+
+解析器はまず、現在のルーティング結果から「各専門家に何個の計算タイルがあるか」を数える。次に、候補となる通信CTA数を1個から16個まで変え、それぞれについて「通信CTAをこれだけ常駐させると、残りのSM資源で計算CTAはいくつ同時に走れるか」を求める。
+
+そのうえで、計算タイルが何波で終わるか、各分割の結果が何時点で通信可能になるか、通信側が何波でそれを消化するかを時系列で予測する。最後の結果が書き戻される時刻が最小になる通信CTA数を選び、その値で既存のGEMM2とGatherRSを起動する。
+
+重要なのは、候補ごとにGPUカーネルを実際に試し打ちして時間を測るわけではない点である。入力から分かる仕事量とGPU常駐制約から解析的に選ぶため、未知の入力形状でも毎回ごく小さいCPU計算だけで配分を決められる。
+
 ## 手法
-Cから通信常駐予約R(C)と残存計算容量P(C)を導出し、router由来expert tile数とcommunication tile数を整数waveへ写像する。split公開時刻と通信完了時刻の再帰から最終makespan T(C)を計算し、C=1..16で最小候補を選ぶ。
 
-### Dependency-constrained residency partition
-R(C)=ceil(C/o_comm)、P(C)=o_comp(G-R(C))。A100ではo_comm=1、o_comp=2、G=108。
+### 1. 通信へ資源を予約した後、計算側に何個のCTAを置けるか求める
 
-### Wave-quantized workload model
-routed expert countとkernel tile shapeからcompute tile数、token数・world size・hidden dimensionからcommunication tile数を求め、離散wave数へ変換。
+最初に候補となる通信CTA数 `C` を仮定する。通信CTAはSM上に常駐するため、そのぶんSMを占有する。A100の評価対象カーネルでは、通信CTAと計算CTAで1 SMあたりに同時常駐できる個数が異なる。
 
-### Split-readiness recurrence
-compute公開時刻と先行split通信完了を結合してpipeline fill・steady state・drainを予測。
+解析器は、`C` 個の通信CTAを置くために必要なSM資源を計算し、GPU全体のSM数からその分を引く。残ったSMへ、計算CTAを何個同時に置けるかを求める。
 
-### Relative service-rate normalization
-固定C=16で得た基準service rateをreduction dimension、compute tile size、world sizeで補正。
+これにより「通信CTAを増やすと通信能力は上がるが、計算CTAの同時実行数は下がる」という競合を直接モデルへ入れる。単に通信と計算を別々に速さ評価するのではなく、一方へ資源を渡すと他方が減ることを最初から扱う。
 
-### Launch-time CPU selector
-最大16候補をO(E+L|C|)で評価。候補GPU kernelの試行やper-shape winner tableは不要。
+### 2. 実際のルーティング結果を計算・通信タイル数へ変換する
 
-既存dispatch後にtile shape、resident blocks/SM、host routed counts、GPU SM数を読み、選択したCでGatherRS通信CTA gridと計算側常駐上限を設定する。元のGEMM2/GatherRS kernel、routing、通信量、readiness protocolは変更しない。
-## 評価条件
-- **Hardware**: single node with four NVIDIA A100-SXM4-40GB GPUs、NVLink interconnect、108 SMs available to target operator
-- **Software**: PyTorch 2.7.1、CUDA 12.6、NCCL 2.26.2、CUTLASS commit df8a550、COMET A100 V2 commit 19831ca、FLUX codebase
-- **Model**: Granite-3.1-1B-A400M、Qwen1.5-MoE-A2.7B、DeepSeek-V2-Lite
-- **Dataset / Trace**: LMSYS-Chat-1M router traces、uniform routing、real-router p50、real-router p90
-- **Baseline**: upstream COMET、Megatron core-TE、FastMoE TP+NCCL、measured oracle sweep C=1..16 for predictor accuracy
-- **Correctness**: COMETと提案法は同一input、weight、router assignment、GEMM tile、通信量を使い、4-rank allcloseとcomplete-model出力一致を確認。Hugging Face参照に対して全モデルでlast-token top-1を保持し、Qwen/DeepSeek-V2-Liteはelementwise allcloseも通過。
-- **precision**: BF16
-- **parallelism**: TP=4/EP=1, TP=2/EP=2, TP=1/EP=4; TP×EP=4
-- **batch and sequence**: B=4; S in {1024,2048,4096,8192,16384}
-- **routing matrix**: 3 models × uniform/p50/p90 × 5 lengths = 45 configurations per TP/EP configuration
-- **measurement**: 20 warmups; operator/layer 60 ABBA-interleaved samples; complete-model/multi-backend 20 samples; median maximum-rank latency; 20,000 block-stratified bootstrap replicates for 95% CI
-predictor accuracyはTP=4/EP=1のreal-p90 15 workloadでC=1..16を実測sweepしたoracleと比較。性能はtarget operator、complete post-router MoE layer、complete-model prefillの3境界で評価。
-single-node A100/NVLinkのprefill中心。complete-model評価はonline-serving全体やdecode throughputを表さない。
-## 主要結果
-解析selectorは実測oracleに近いCを低overheadで選び、COMETの固定resource partitionを全評価configurationで改善した。効果はtarget operatorで最大だが、layer全体とcomplete-model prefillにも残る。
+MoEではトークンが専門家へ均等に配られるとは限らない。そこで平均的な専門家負荷ではなく、実際のルーターが生成した各専門家のトークン数を使う。
 
-- mean predictor regret / 3.22% (baseline: measured oracle; condition: 15 real-p90 TP=4/EP=1 workloads; maximum 10.21%) — per-shape計測なしでもoracle近傍を選択。
+専門家ごとのトークン数とGEMMカーネルのタイル形状から、GEMM2で何個の計算タイルが必要かを求める。同様に、トークン数、隠れ次元、GPU数などからGatherRS側の通信タイル数を求める。
 
-- mean solver overhead / 0.157 µs (baseline: standalone analytical selector; condition: launch-time CPU selection) — dispatch経路に対して小さい。
+この仕事量を、同時常駐可能なCTA数で割ることで「計算は何波必要か」「通信は何波必要か」に変換する。ここで切り上げが入るため、CTA数の小さな変化でも所要時間が段階的に変わる。
 
-- GEMM2+GatherRS geometric-mean speedup / 2.528× (baseline: COMET; condition: all TP/EP configurations) — maximum 4.218×。
+### 3. 「計算が終わった部分しか通信できない」という依存関係を時系列で追う
 
-- complete post-router MoE layer geometric-mean speedup / 1.771× (baseline: COMET; condition: all TP/EP configurations) — maximum 2.584×。
+通信側には、単純な通信帯域だけでは決まらない制約がある。ある分割の通信は、その分割に属する計算タイルがすべて終わるまで開始できない。
 
-- complete-model prefill geometric-mean speedup / 1.185× (baseline: COMET; condition: all TP/EP configurations) — maximum 1.439×。
+解析モデルは、各分割について
 
-- TP=2/EP=2 model-level geometric means / 1.336× / 1.211× / 1.232× (baseline: COMET; condition: Granite / Qwen / DeepSeek-V2-Lite) — S>=4096の全feasible pointでCOMET、Megatron core-TE、FastMoE TP+NCCLより高速。
+1. 計算側が結果を公開できる時刻
+2. 通信CTAが前の分割を処理し終える時刻
 
-- lowest observed speedup / 1.058× (baseline: COMET; condition: Qwen complete-model prefill, TP=4/EP=1, S=1024) — 全3測定境界・全TP/EP構成でpointwise minimumが1×超。
+の遅い方を、その分割の通信開始時刻にする。そして通信時間を足し、次の分割へ進む。
+
+この再帰を最後まで追うことで、最初の通信が始まるまでの立ち上がり、計算と通信が重なる定常部分、最後に残る通信の後処理まで含めた終了時刻を予測する。
+
+通信CTAが少なすぎる場合は準備済み分割がたまり、最後に大きな通信尾部が残る。多すぎる場合は計算側の公開時刻そのものが遅くなる。モデルはこの両方を同じ時間軸で比較する。
+
+### 4. 通信CTA数を1〜16で比較し、最短予測のものだけを実行する
+
+実装では合法な通信CTA数の候補を最大16通り評価する。各候補について上の解析を行い、予測される全体完了時間が最も短いものを選ぶ。
+
+候補ごとにGPUベンチマークを走らせる探索ではないため、起動直前でも使える。論文の測定では、このCPU側選択処理の平均時間は0.157マイクロ秒だった。
+
+選択後に変えるのは、GatherRSを担当する通信CTAのグリッド数と、それに応じた計算側常駐上限である。専門家ルーティング、GEMMそのもの、通信データ量、数値計算内容は変えない。
+
+### 5. なぜ既存COMETより速くなるのか
+
+COMETの細粒度重畳は「計算済み部分からすぐ送る」という仕組みをすでに持っている。しかし固定資源配分では、短い入力と長い入力、均等ルーティングと偏ったルーティングで同じ通信CTA数を使う。
+
+提案法は重畳方式を作り直すのではなく、入力ごとにパイプラインの律速側を見て資源を動かす。通信待ちが大きい入力なら通信へ多く、計算側の波が増えすぎる入力なら通信を減らす。このため、FLOPsや通信バイト数を1バイトも減らさなくても、GPU内部で「片方が待っている時間」を減らせる。
+
+## 評価
+
+### まず見るところ
+
+- **直接最適化する演算**ではCOMET比幾何平均2.528倍と大きい。
+- その効果はMoE層全体では1.771倍、モデル全体のプリフィルでは1.185倍まで薄まる。注意機構など変更していない処理もモデル全体には含まれるためである。
+- 解析器が選ぶCTA数は、16候補を実測して最良を選ぶ理想値に対して平均後悔率3.22%で、毎形状の実測探索をほぼ不要にできる。
+- FLOPs、ルーティング、通信量は変えないため、モデル品質との交換条件は導入しない。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
+### 評価環境
+
+- 4× NVIDIA A100-SXM4-40GB、NVLink、対象演算で108 SMを利用
+- PyTorch 2.7.1、CUDA 12.6、NCCL 2.26.2
+- COMET A100 V2 / FLUXを基盤として実装
+- モデル: Granite-3.1-1B-A400M、Qwen1.5-MoE-A2.7B、DeepSeek-V2-Lite
+- ルーティング: 均等、実トレース中央値相当、実トレース90パーセンタイル相当
+- 系列長: 1024〜16384
+- 並列化: TP=4/EP=1、TP=2/EP=2、TP=1/EP=4
+
+### 解析器自体の精度
+
+実トレース90パーセンタイル相当の15ワークロードについて、通信CTA数1〜16を実際に全部測った最良値と比較した。
+
+- 平均後悔率: **3.22%**
+- 最大後悔率: **10.21%**
+- 平均選択時間: **0.157 µs**
+
+ここで後悔率は、「実測で最良のCTA数を知っていた場合に比べて、解析器の選択がどれだけ遅かったか」を表す。つまり3.22%はモデル全体の速度低下率ではなく、資源配分選択器の最適値からのずれである。
+
+### 速度向上
+
+COMETに対する幾何平均高速化は、測定範囲を広げるほど小さくなる。
+
+| 測定範囲 | 幾何平均 | 最大 |
+|---|---:|---:|
+| GEMM2 + GatherRS | 2.528× | 4.218× |
+| ルーティング後MoE層全体 | 1.771× | 2.584× |
+| モデル全体のプリフィル | 1.185× | 1.439× |
+
+これは自然な希釈である。提案法が直接変えるのはGEMM2+GatherRSだけなので、注意機構や他の線形層まで含むモデル全体では改善率が小さくなる。
+
+TP=2/EP=2では、系列長4096以上の実行可能な全点でCOMET、Megatron core-TE、FastMoE TP+NCCLを上回った。
 
 ### 負の結果・境界条件
-- **short-input backend crossover**: S=1024ではMegatron core-TEが3モデルすべてで最速。Qwen S=2048でもMegatron core-TEが提案法より高速。
-- **DeepSeek memory boundary**: DeepSeek-V2-Lite complete-model prefillのB=4,S=16384はA100 40GBでOOM。
-- **architecture scope**: service-rate parameterとlegal C rangeはA100/NVLink kernel family向けに再導出されており、他GPU/多nodeへそのまま移植できない。
 
-主因はwork量削減ではなく同一計算・通信仕事の常駐資源再配分。token tileが増え複数waveになるほど固定partitionの不整合が顕在化し、モデル全体でも利益が蓄積する。
-## 品質への影響
-FLOPs、routing、通信量、model semanticsを変えずnumerical correctnessを保持するため、accuracy trade-offを導入しない。
+- 系列長1024ではMegatron core-TEが3モデルすべてで最速。Qwenでは2048でもMegatronが速い。
+- DeepSeek-V2-Liteの系列長16384・バッチ4はA100 40GBでメモリ不足（OOM）。
+- 評価は単一ノードA100/NVLinkのプリフィル中心で、デコードや複数ノードは未評価。
+
+</details>
+
+## 主要結果の読み方
+
+この論文の2.5倍という数字は「MoEモデル全体が2.5倍速くなる」という意味ではない。2.528倍は、提案法が直接資源配分を変えるGEMM2+GatherRS演算だけを切り出した値である。モデル全体へ広げると平均1.185倍になる。
+
+それでも重要なのは、仕事量を削減せずにこの改善を得ている点である。同じタイルを計算し、同じデータを通信している。速くなる理由は、固定資源配分によって生じていた計算待ち・通信待ちを、その入力に合わせて減らしたためである。
+
+また、入力が長いほど効果が出やすい。仕事量が少ないと計算・通信とも数波で終わり、固定配分の不整合が大きな差になりにくい。仕事量が増えると波の数が増え、少しの資源配分ミスが何度も積み重なるため、適応配分の価値が大きくなる。
+
 ## 既存研究との差
-- COMET/FLUX/TileLinkなどが細粒度重畳の実行機構や依存表現を作るのに対し、本研究はその機構が存在する前提でcompute/communication CTAの常駐比を起動時に決める。
-- NanoFlowやLagomのprofiling・measurement-guided searchと異なり、per-shape candidate executionなしの解析選択を行う。
-- DeepEP V2の通信資源解析やStream-Kのwave quantizationと関連するが、非preemptive CTA residencyとsplit-level readiness依存を結合したMoE operator固有のmakespan最適化を対象とする。
+
+COMETやFLUXは、計算結果が部分的に完成した時点から通信を開始する**細粒度重畳の実行機構**を作る研究である。本研究はその機構を前提に、「計算担当と通信担当へGPU資源を何対何で割り当てるか」を実行時に決める。
+
+実測プロファイルから最適カーネルを選ぶ方式と違い、候補を実行して測定する必要がない。入力のルーティング結果、タイル数、常駐可能CTA数から解析的に決めるため、新しい形状にもその場で対応できる。
+
 ## 限界
-- 現実装とservice-rate calibrationはsingle-node A100/NVLink kernel family向け。他GPUではoccupancy、tile work、dependency recurrence、legal C range、service rateを再導出する必要がある。
-- 最適化対象はGEMM2+GatherRSで、AllGather+GEMM1やattention等は変更しない。
-- complete-model評価はprefillのみで、decodeやonline-serving throughputは未評価。
-- 短いinputではMegatron core-TEが速い点があり、全backendに対して全shapeで最速ではない。
-- DeepSeek-V2-Liteの最長complete-model条件は40GB A100でOOM。
+
+- 現在の常駐数、サービス速度、合法なCTA数範囲はA100/NVLink向けに導出されている。H100/B200など別GPUでは再較正が必要。
+- 最適化対象はMoE後半のGEMM2+GatherRSであり、前半のAllGather+GEMM1、注意機構、KVキャッシュ管理などは変更しない。
+- モデル全体の評価はプリフィルのみ。逐次生成（decode）やオンライン提供時の要求到着・待ち行列は評価していない。
+- 複数ノード通信では、単一ノードNVLinkと異なるネットワーク特性が加わる。
+- 短い入力では別実装の方が速い条件があり、すべての形状で最速という結果ではない。
+
 ## 実装状態
-公開COMET A100 implementation in FLUXへ統合済みと論文が明記。論文評価はCOMET A100 V2 commit 19831ca、CUTLASS df8a550で実施。
-## 研究上の位置づけ
-分散MoEの細粒度計算・通信重畳に対するlaunch-time resource allocation研究。実行機構そのものより、GPU resident CTAという有限・非preemptive資源とdependency pipelineを解析的に結ぶ点が中心。
-## 監査メモ
-arXiv v1全文をIntroductionからConclusionまで再確認。system design、hardware/software、3 model、3 TP/EP、router trace、oracle regret、3測定境界、negative result、correctness、portability/decode limitationを確認し、追加auditを必須とする明確な未確認事項はない。
+
+公開COMET A100実装をFLUXコードベース上で拡張している。論文評価はCOMET A100 V2 commit `19831ca` とCUTLASS commit `df8a550` を基準としている。
+
+## 一般的な実装上の含意
+
+計算とI/Oまたは通信を重ねるシステムでは、「重ねられるようにした」だけでは十分ではない。両者が同じGPU資源を共有する場合、通信を進めるために確保した資源が計算を遅くすることがある。
+
+したがって、重畳方式を設計するときは
+
+1. 計算側と通信側が何の有限資源を共有しているか
+2. 仕事量が変わったとき最適配分も変わるか
+3. 実行が連続的ではなく波・タイル・キュー深度のような離散単位で変化しないか
+4. 候補を実測せずに実行時特性から配分を推定できないか
+
+を見る価値がある。
+
 ## 一次資料
-- https://arxiv.org/abs/2609.07536
-- https://arxiv.org/html/2609.07536
+
+- arXiv: https://arxiv.org/abs/2609.07536
+- arXiv HTML: https://arxiv.org/html/2609.07536
+
+## 更新履歴
+
+- 2026-09-09: 論文未読者向けに全面改稿。CTA/SM、細粒度重畳、波状実行、資源競合、解析選択器の流れと数値の読み方を説明。
