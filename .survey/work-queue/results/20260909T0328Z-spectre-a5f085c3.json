@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "workflow_version": 9,
+  "submission": "work-queue/submissions/20260909T0328Z-spectre-a5f085c3.json",
+  "ok": false,
+  "error": "RuntimeError: identity delta failed: Traceback (most recent call last):\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 161, in <module>\n    main()\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 149, in main\n    print(prepare(args.paper))\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 90, in prepare\n    assert_no_conflicts(record)\n  File \"/home/runner/work/llm-paper-summary/llm-paper-summary/.survey/scripts/identity_delta.py\", line 78, in assert_no_conflicts\n    raise ValueError(f\"Canonical ID already points to another path: {cid}\")\nValueError: Canonical ID already points to another path: arXiv:2605.08151\n"
+}
