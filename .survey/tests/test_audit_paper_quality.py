@@ -96,12 +96,14 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
     def test_structured_method_equivalent_accepts_detailed_multi_section_summary(self) -> None:
         paragraph = (
             "入力状態を観測して処理対象を決め、その判断結果に応じて配置を変更する。"
-            "失敗時は通常経路へ戻し、余分な転送だけが増えるようにする。"
+            "判断には現在の負荷、利用可能なメモリ量、転送に必要な時間を使い、次に実行する処理を選択する。"
+            "失敗時は通常経路へ戻し、正しさを保ったまま余分な転送だけが増えるようにする。"
         )
         parts = ["# Example", "", "## 背景", "", paragraph]
         for title in ["大粒度チャンクへまとめる", "層単位で先読みする", "動的に配置を変更する"]:
             parts += ["", f"## {title}", ""]
-            parts += [paragraph, "", paragraph, "", paragraph, "", paragraph, "", paragraph, "", paragraph, ""]
+            for _ in range(15):
+                parts += [paragraph, ""]
         lines = parts
         blocks, _, _ = AUDIT.prose_blocks(lines)
         prose_chars = sum(len(x) for x in blocks)
