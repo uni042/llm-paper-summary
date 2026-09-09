@@ -449,6 +449,14 @@ def process_submissions(st: dict):
         try:
             sub = read_json(p, {})
             sub["_file"] = str(p.relative_to(ROOT))
+            if sub.get("operation") == "request_jobs":
+                result.update({
+                    "ok": True,
+                    "operation": "request_jobs",
+                    "requested_at": now(),
+                })
+                write_json(rp, result)
+                continue
             jid = sub.get("job_id")
             if not jid:
                 raise ValueError("job_id required")
