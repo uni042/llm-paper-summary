@@ -1,37 +1,39 @@
 {
-  "job_id": "job-f42851d550437c61",
-  "candidates": [
+  "submission_id": "submission-jacap-20260909-2320-v10-a1",
+  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
+  "job_id": "job-research-0b935acaddfdc935",
+  "status": "completed",
+  "record_bank": "a",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.08131-jacap.md",
+  "expected_blob_sha": null,
+  "record_slots": [
     {
-      "canonical_id": "arxiv:2609.08131",
-      "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
-      "source_url": "https://arxiv.org/abs/2609.08131",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/jacap.md",
-      "priority": 93,
-      "reason": "softmax attentionを非線形通信channelとしてJacobian information capacityを導出し、query relevance・softmax sensitivity・structural diversityを同時に扱うKV eviction。2026-09-09新着でidentity indexに未登録。"
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record/metadata.json",
+      "blob_sha": "4baa289ff190f545c0f6432991b4644d4f28590d"
     },
     {
-      "canonical_id": "arxiv:2609.05228",
-      "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
-      "source_url": "https://arxiv.org/abs/2609.05228",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/ace.md",
-      "priority": 90,
-      "reason": "training/calibration不要でtokenごとにexpert slotをskipし、offline spectral proxyとrouter-conditioned refinementをruntime gateに統合する。MoE adaptive computationの中心テーマ。"
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record/problem_method.json",
+      "blob_sha": "04fa6c3f2e45cb4ada3db75cb52751d48c12b49c"
     },
     {
-      "canonical_id": "arxiv:2609.04575",
-      "title": "Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models",
-      "source_url": "https://arxiv.org/abs/2609.04575",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/training-free-halving-activated-experts.md",
-      "priority": 88,
-      "reason": "active expert数とrouter probability renormalization gainを分離し、Qwen fine-grained MoEでexpert compute半減時の品質劣化を大幅に抑えるtraining-free inference手法。"
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record/evaluation.json",
+      "blob_sha": "7c5d05c0a341a25c9b568a0b0d5f81fd3fdeb432"
     },
     {
-      "canonical_id": "arxiv:2609.00355",
-      "title": "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models",
-      "source_url": "https://arxiv.org/abs/2609.00355",
-      "paper_path": "papers/inference/05-speculative-decoding-moe/glance-vlm-speculative-decoding.md",
-      "priority": 86,
-      "reason": "targetのfused vision-language stateを使うone-pass block-diffusion drafterとwide-tree verificationでVLM speculative decodingをlosslessに高速化する。コード公開済み。"
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record/results.json",
+      "blob_sha": "5b0bb6b407c1bcfbf55254827a2143b86211cf1c"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record/positioning.json",
+      "blob_sha": "cbf4513ae993942c7cb44f851b9f5b300ba36f46"
     }
-  ]
+  ],
+  "audit_required": false,
+  "audit_reason": null,
+  "audit_flags": []
 }
