@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path, PurePosixPath
 from typing import Any
@@ -14,10 +15,6 @@ sys.path.insert(0, str(HERE))
 from render_paper import render_paper  # noqa: E402
 
 TRANSPORT_VERSION = 10
-# Keep writes small, but do not force the scientifically densest sections into an
-# 8 KiB ceiling. Japanese prose is multi-byte in UTF-8, so problem/method and
-# evaluation/results need modestly larger envelopes to reach the reader-first
-# quality standard in .survey/templates/paper.md.
 MAX_SLOT_BYTES = {
     "metadata": 8192,
     "problem_method": 16384,
@@ -69,7 +66,6 @@ def nonempty(value: Any) -> bool:
 
 
 def prose_chars(value: Any) -> int:
-    """Approximate human-readable prose amount without caring about language."""
     if value is None:
         return 0
     if isinstance(value, str):
@@ -89,8 +85,14 @@ def prose_chars(value: Any) -> int:
     return len(str(value))
 
 
+def paragraph_count(value: Any) -> int:
+    if not isinstance(value, str):
+        return 0
+    return len([p for p in re.split(r"\n\s*\n", value.strip()) if p.strip()])
+
+
 def validate_record(record: dict[str, Any]) -> None:
-    """Reject structurally incomplete or note-like completed research artifacts."""
+    """Reject completed artifacts that are structurally complete but below paper.md quality."""
     meta = record.get("metadata") or {}
     pm = record.get("problem_method") or {}
     ev = record.get("evaluation") or {}
@@ -107,42 +109,64 @@ def validate_record(record: dict[str, Any]) -> None:
     for key in ("problem", "novelty"):
         if not nonempty(pm.get(key)):
             raise ValueError(f"problem_method.{key} is required")
-    if not nonempty(pm.get("method_overview")):
+    overview = pm.get("method_overview")
+    components = pm.get("components")
+    system_design = pm.get("system_design")
+    if not nonempty(overview):
         raise ValueError("problem_method.method_overview is required for reader-first explanation")
-    if not nonempty(pm.get("components")):
+    if prose_chars(overview) < 300:
+        raise ValueError("problem_method.method_overview is too terse; explain the processing order and data flow")
+    if not isinstance(components, list) or not components:
         raise ValueError("problem_method.components is required")
+    if not nonempty(system_design) or prose_chars(system_design) < 250:
+        raise ValueError("problem_method.system_design must explain the end-to-end data/control flow")
 
-    # A completed paper must contain enough explanatory prose to be useful to a
-    # reader who has not read the source. This is deliberately a low floor, not
-    # a target: complex systems should usually be substantially longer.
-    method_chars = (
-        prose_chars(pm.get("method_overview"))
-        + prose_chars(pm.get("components"))
-        + prose_chars(pm.get("system_design"))
-    )
-    if method_chars < 900:
+    complex_paper = len(components) >= 3
+    for index, comp in enumerate(components):
+        if not isinstance(comp, dict) or not nonempty(comp.get("name")) or not nonempty(comp.get("description")):
+            raise ValueError(f"problem_method.components[{index}] requires name and description")
+        desc = comp.get("description")
+        if complex_paper and prose_chars(desc) < 220:
+            raise ValueError(f"problem_method.components[{index}] is too terse for a multi-stage system paper")
+        if complex_paper and paragraph_count(desc) < 2:
+            raise ValueError(f"problem_method.components[{index}] should use at least two explanatory paragraphs")
+
+    method_chars = prose_chars(overview) + prose_chars(components) + prose_chars(system_design)
+    method_floor = 1800 if complex_paper else 1000
+    if method_chars < method_floor:
         raise ValueError(
-            "problem_method is too terse for repository publication; explain the "
-            "method, component roles, data/control flow, why it helps, and failure/boundary conditions"
+            "problem_method is too terse for repository publication; explain component roles, "
+            "data/control flow, why each mechanism helps, and failure/boundary conditions"
         )
 
     if not nonempty(ev.get("baselines")):
         raise ValueError("evaluation.baselines is required")
-    if not (
-        nonempty(ev.get("hardware"))
-        or nonempty(ev.get("software"))
-        or nonempty(ev.get("methodology"))
-    ):
+    if not (nonempty(ev.get("hardware")) or nonempty(ev.get("software")) or nonempty(ev.get("methodology"))):
         raise ValueError("evaluation requires hardware/software/methodology evidence")
+    if not nonempty(ev.get("scope")):
+        raise ValueError("evaluation.scope is required to distinguish real-hardware/simulation and generalization limits")
 
-    if not nonempty(rs.get("key_results")):
+    key_results = rs.get("key_results")
+    if not isinstance(key_results, list) or not key_results:
         raise ValueError("results.key_results requires at least one quantitative result")
-    if not nonempty(rs.get("overview")):
-        raise ValueError("results.overview is required; explain the main result before listing numbers")
-    if not nonempty(pos.get("limitations")):
-        raise ValueError("positioning.limitations is required")
-    if not nonempty(pos.get("differences")):
-        raise ValueError("positioning.differences is required")
+    if not nonempty(rs.get("overview")) or prose_chars(rs.get("overview")) < 180:
+        raise ValueError("results.overview must explain the main result and its practical meaning")
+    for index, item in enumerate(key_results):
+        if not isinstance(item, dict):
+            raise ValueError(f"results.key_results[{index}] must be an object")
+        missing = [k for k in ("metric", "value", "baseline", "condition", "interpretation") if not nonempty(item.get(k))]
+        if missing:
+            raise ValueError(f"results.key_results[{index}] missing: " + ", ".join(missing))
+    if not nonempty(rs.get("negative_results")):
+        raise ValueError("results.negative_results is required; record degradation and boundary conditions")
+    if not nonempty(rs.get("interpretation")):
+        raise ValueError("results.interpretation is required; explain why gains change across conditions")
+    if not nonempty(rs.get("quality_impact")):
+        raise ValueError("results.quality_impact is required; distinguish lossless from approximate methods")
+
+    for key in ("limitations", "differences", "implementation_status", "research_positioning"):
+        if not nonempty(pos.get(key)):
+            raise ValueError(f"positioning.{key} is required")
 
 
 def assemble(repo_root: Path) -> bool:
