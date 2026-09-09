@@ -2,24 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
-  "job_id": "job-research-85c54a348e38b072",
+  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
+  "job_id": "job-research-7a4628493bc11731",
   "data": {
-    "hardware": ["parameterized custom NPU design space: 25-20000 TFLOPS with SRAM/HBM/DDR/LPDDR/GDDR capacity-bandwidth choices", "commercial AWS EC2 GPU design space including H100, A100, L40S, L4, A10G, T4, V100, M60", "8x NVIDIA B200 component-level validation platform", "NVSwitch-class intra-domain interconnect up to 3600 GB/s bidirectional and 50 GB/s InfiniBand-class cross-domain link in NPU experiments"],
-    "software": ["HeteroPanacea event-driven simulator", "PLENA-derived parameterized NPU model", "roofline-based stage performance and power models", "MASE-based MXint stage-wise quantization with PhaseAutoSwitch"],
-    "model": ["DeepSeek-V4 Pro", "DeepSeek-V4 Flash", "Llama-3.1-405B", "Llama 4 Maverick", "Llama 4 Scout", "GLM-4.6", "GPT-OSS", "Qwen3-235B-A22B", "Qwen 32B-class model for quantization sensitivity"],
-    "datasets": ["synthetic serving workloads parameterized by input/output token ratio", "BFCL for stage-wise quantization accuracy", "GSM8K for stage-wise quantization accuracy"],
-    "baselines": ["ND: non-disaggregated serving", "PD: prefill/decode disaggregation", "AF: attention/FFN disaggregation", "PDAF: prefill/decode plus attention/FFN four-stage disaggregation", "real B200 kernel/communication measurements for component validation"],
+    "hardware": ["evaluation servers: Linux 5.10 x86_64, 64 CPU cores, 600 GB RAM, 8 GPUs per server", "PD production evaluation: 5 nodes x 8 GPUs; 4 prefill nodes and 1 decode node", "NCCL IBRC over InfiniBand for prefill-to-decode KV transfer", "NVLink-class high-speed intra-node interconnect assumed for tensor parallel communication"],
+    "software": ["RTP-LLM C++ serving engine", "Alibaba 3FS distributed storage", "RDMA remote CPU KV cache", "DeepEP for MoE All2All", "IBM fastsafetensors integration plus RTP fastsafetensors", "NCCL", "official open-source alibaba/rtp-llm"],
+    "model": ["Qwen 7B and Qwen 4B production traffic services", "Qwen3-Coder-480B-A35B-Instruct-FP8", "DeepSeek-V3-0324", "Qwen3-235B-A22B with MTP", "Qwen3-32B", "Qwen/Qwen2.5-VL-7B-Instruct", "additional 8B-32B models including Qwen3-8B, Qwen2.5-14B-Instruct and Moonlight-16B-A3B for loading"],
+    "datasets": ["real Alibaba internal Robot Q&A traffic", "real Taobao Merchant Service traffic", "1,000 real merchant data-agent queries", "WikiText-2 sampled subset for quantization perplexity", "GQA for multimodal framework comparison"],
+    "baselines": ["vLLM", "SGLang", "traffic scheduling disabled within RTP-LLM for production scheduling ablation", "multiple TP/DP deployment configurations under equal GPU budget"],
     "settings": [
-      {"name": "request workload", "description": "500 requests per configuration at fixed 125 requests/s; output length fixed at 1000 tokens and input length varied through I/O ratios, with request lengths sampled around target values."},
-      {"name": "workload sweep", "description": "I/O ratios span strongly decode-heavy to strongly prefill-heavy regimes, including 0.01, 1, 10, 100, 500 and 1000 cases discussed in results."},
-      {"name": "parallelism", "description": "TP, PP, DP and EP are independently selectable per execution pool; D2D and N2N links model different communication domains."},
-      {"name": "main precision", "description": "main NPU/GPU design sweeps use full precision; stage-wise quantization is evaluated separately because joint MoE quantization search is expensive."},
-      {"name": "GPU budget", "description": "commercial GPU search uses fixed USD/hour budget and provider instance/device catalog rather than arbitrary custom compute-memory ratios."},
-      {"name": "NPU budget", "description": "custom NPU search uses fixed installed-power budget and stage-specific compute/memory choices."}
+      {"name": "production comparison workload", "description": "For PD disaggregation and speculative sampling framework comparisons, paper states input 200K tokens and output 16K tokens throughout."},
+      {"name": "PD large-MoE deployment", "description": "Qwen3-Coder-480B-A35B-Instruct-FP8 with FP8 KV cache; 5 nodes, each 8 GPUs; prefill 4 nodes/decode 1 node; TP=8, EP=8, DP=1 per node; prefill batch 64, decode concurrency 128."},
+      {"name": "speculative controlled test", "description": "DeepSeek-V3-0324, TP=8/DP=1, max_batch_size=32, max_new_tokens=500, FP8 KV cache, speculative step size 1."},
+      {"name": "real MTP test", "description": "Qwen3-235B-A22B, 1,000 production queries, average input 19.5K and output 800 tokens, concurrency 64-512; compares 4TPx4, 1TP8DP, 2TP4DP, 2TP8DP."},
+      {"name": "quantization test", "description": "Qwen3-32B single GPU, max_batch_size=64, top-p=1, top-k=1, temperature=0; max_new_tokens 500/800/1000/1200; Baseline, AWQ(FP8), FP8 KV cache."},
+      {"name": "multimodal test", "description": "Qwen2.5-VL-7B-Instruct on GQA, TP=2 across two GPUs, max_batch_size=64, max_new_tokens=500, top-p=1, top-k=1, temperature=0."}
     ],
-    "correctness": "Simulator components are compared with measurements on B200 hardware. Reported simulated/real ratios for tensor-parallel execution are 0.79x, 1.00x, 1.06x and 1.02x for 1/2/4/8 GPUs; pipeline-parallel ratios are 0.67x, 0.77x, 0.84x and 0.90x. Communication checks report P2P ratios 0.82x-1.00x and expert all-to-all 0.86x-1.21x across tested message sizes. Quantization quality is checked empirically on BFCL and GSM8K.",
-    "methodology": "For each topology the search first scores feasible hardware candidates analytically against stage demand, allocates the fixed budget across stages, keeps promising joint configurations, and then performs detailed event-driven simulation; throughput in tokens/s selects the winner. Model ablations vary KV/attention and expert-compute characteristics to identify which architectural dimensions control the crossover.",
-    "scope": "Primary conclusions are simulation-based hardware/software design-space results rather than end-to-end deployed serving measurements. Component models are validated on real B200 hardware, but scheduling/batching/topology results themselves are not reproduced as a full production deployment."
+    "correctness": "Speculative sampling follows proposal-score-verify-update semantics intended to preserve target-model output distribution. Quantization fidelity is measured by WikiText-2 perplexity: reported configurations span PPL 7.59-8.09 versus baseline 7.59-7.67, with RTP-LLM within 0.01 PPL of baseline in the compared AWQ/FP8-KV settings described by the paper. Multimodal framework comparison uses identical decoding parameters.",
+    "methodology": "Evaluation intentionally mixes production A/B-style workloads and controlled framework benchmarks. Traffic scheduling is measured against the same service with scheduling disabled; PD and speculative decoding use real online models/workloads as well as framework baselines; model loading, quantization, and EPD use controlled comparisons against vLLM/SGLang.",
+    "scope": "Strongest evidence is production deployment and end-to-end engineering effectiveness, but different subsections use different models/workloads/configurations. The paper does not establish that every RTP-LLM component individually causes the full headline speedups, and does not report broad statistical confidence intervals across repeated deployments."
   }
 }
