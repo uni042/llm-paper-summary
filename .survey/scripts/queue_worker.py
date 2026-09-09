@@ -401,7 +401,10 @@ def apply_artifact(sub: dict, job: dict):
     paper = sub.get("paper_path") or job.get("paper_path")
     if not paper or not str(paper).startswith("papers/") or ".." in Path(paper).parts:
         raise ValueError("safe papers/... paper_path required")
-    loaded = submission_content(sub)\n    if not isinstance(loaded, str):\n        raise ValueError("completed artifact requires content or payload_path")\n    content = loaded.rstrip() + "\\n"
+    loaded = submission_content(sub)
+    if not isinstance(loaded, str):
+        raise ValueError("completed artifact requires content or payload_path")
+    content = loaded.rstrip() + "\n"
     target = ROOT.parent / paper
     expected_sha = sub.get("expected_blob_sha")
     if target.exists():
