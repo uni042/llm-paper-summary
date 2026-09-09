@@ -8,7 +8,7 @@
     "canonical_id": "arXiv:2606.06302",
     "arxiv_id": "2606.06302",
     "title": "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving",
-    "summary": "非一様KVキャッシュ圧縮が持つattention headごとの異なる保持量を、実行時に追跡するのではなく少数サンプルで事前較正し、固定予算・head-group単位のragged paging・事前負荷分散へ落とし込むvLLMベースのserving system。動的な非一様圧縮の精度をほぼ保ったまま、ページ断片化・再回収・attention kernelの負荷不均衡を解消し、実機で最大2.6倍のthroughputを報告する。",
+    "summary": "非一様KVキャッシュ圧縮のhead別保持量を少数サンプルで事前較正し、固定予算・head-group単位のragged paging・事前負荷分散へ落とし込むvLLMベースのserving system。動的な非一様圧縮の精度をほぼ保ちながらfragmentation、page reclaim、decode workload imbalanceを解消し、実機で最大2.6倍のthroughputを報告する。",
     "source": "https://arxiv.org/abs/2606.06302",
     "authors": [
       "Hyungmin Kim",
@@ -27,7 +27,7 @@
       "memory management",
       "load balancing"
     ],
-    "implementation": "Official code is public at https://github.com/aiha-lab/TANGRAM; it is a vLLM-based implementation with ragged paging and multiple KV compression scorers.",
+    "implementation": "Official code is public at https://github.com/aiha-lab/TANGRAM; vLLM-based and Apache-2.0.",
     "sources": [
       "https://arxiv.org/html/2606.06302v2",
       "https://arxiv.org/abs/2606.06302",
