@@ -14,8 +14,8 @@
 1. default branchの最新HEADを取得する。
 2. **同じHEAD** のこのREADME、[queue-v9.md](queue-v9.md)、`.survey/work-queue/next-jobs.json` を読む。
 3. ready jobがあればpriority順に処理する。安全にsubmission保存まで完走できる範囲なら複数件処理してよい。
-4. research/auditの完成Markdownは、通常は `.survey/work-queue/submissions/chat-inbox.json` の `content` に直接入れる。
-5. Chat workerは `chat-inbox.json` を**新規作成しない**。毎回現在のblob SHAを取得して、既存ファイルを上書き更新する。これを通常経路とする。
+4. research/auditの完成Markdownは、事前作成済み `.survey/work-queue/payloads/chat-payload.md` を現在blob SHA付きで上書きする。
+5. その後、小さい `.survey/work-queue/submissions/chat-inbox.json` を現在blob SHA付きで上書きし、`payload_path` に固定payloadを指定する。予定Chat workerは通常運用で新規ファイルを作成しない。
 6. `chat-inbox.json` のpushで `Survey helper worker` が自動起動する。Actionsはこの固定inboxが変化したpushだけ前回の `results/chat-inbox.json` を破棄して再処理する。
 7. Actionsはsubmission処理後にready queueを確認し、**0件なら同じActions実行内でdiscovery jobを1件補充する**。
 8. ChatはActions反映後の最新HEADとqueueを読み直し、生成済みの次jobをそのまま処理する。通常は `request_jobs` を作らない。
@@ -24,13 +24,12 @@
 
 ## transport
 
-通常経路は **reusable inbox → push-triggered Actions**。新規payload/submissionファイルの作成は通常運用では行わない。
+通常経路は **reusable payload → reusable inbox → push-triggered Actions**。新規payload/submissionファイルの作成は通常運用では行わない。
 
 ```text
 Chat
+  ├─ update existing payloads/chat-payload.md
   └─ update existing submissions/chat-inbox.json
-       ├─ job metadata
-       └─ complete Markdown in `content`
                          │ push
                          ▼
                  Survey helper worker
@@ -42,13 +41,13 @@ Chat
                     ready=0なら即discovery補充
 ```
 
+この2段階は意図的である。長いMarkdownをJSON updateへ埋め込まず、本文保存と制御情報を分離する。payload更新後にinbox更新が失敗してもjobは未完了のままで、本文は固定payloadに残るため次回再利用できる。
+
 GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。通常処理の成立条件ではない。
 
-旧来の `.survey/work-queue/payloads/<unique>.md` + `.survey/work-queue/submissions/<unique>.json` 経路は互換用として残すが、Chatのファイル新規作成が実行環境の安全検査で拒否される可能性があるため、予定タスクでは使用しない。
+旧来の `.survey/work-queue/payloads/<unique>.md` + `.survey/work-queue/submissions/<unique>.json` 新規作成経路は互換用として残すが、Chatのファイル新規作成が実行環境の安全検査で拒否される可能性があるため、予定タスクでは使用しない。
 
 ## queue policy
-
-判断基準は以下だけにする。
 
 - ready jobがある → priority順に可能な限り処理する。
 - 最後のready jobをActionsが完了させて0件になる → 同じActions実行内でdiscovery jobを1件補充する。
