@@ -2,34 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
-  "job_id": "job-research-db7f6bec1b5bf488",
+  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
+  "job_id": "job-research-85c54a348e38b072",
   "data": {
-    "problem": "細粒度重畳ではGEMM2計算CTAとGatherRS通信CTAが同じSM常駐資源を競合する。通信CTA不足ではready splitが滞留し、多すぎるとGEMM2並列度が落ちる。CTAは整数waveで進むため最適配分はtoken数、expert負荷、kernel shape、split数に対して不連続に変わり、固定CTA数では適応できない。",
-    "novelty": "workload、kernel occupancy、GPU常駐制約、split-level readiness依存から候補kernelを実行・計測せず通信CTA数Cを起動直前に解析選択する。計算・通信のwave数と依存関係を同一timelineに置くwave-quantized makespan modelを用いる。",
-    "method_overview": "Cから通信常駐予約R(C)と残存計算容量P(C)を導出し、router由来expert tile数とcommunication tile数を整数waveへ写像する。split公開時刻と通信完了時刻の再帰から最終makespan T(C)を計算し、C=1..16で最小候補を選ぶ。",
+    "problem": "エージェント型LLMは長い反復コンテキストを持ち、prefillとdecodeだけでなくattentionとFFNでも演算量・メモリ容量・帯域要求が大きく異なる。従来のPD分離はdecode-attentionとdecode-FFN等を同じpoolに残すため、各段に最適なhardwareを独立選択できず、分離通信のoverheadが利得を上回る条件も明確でない。",
+    "novelty": "ND、PD、AF、4段PDAFを同一のsystem-level simulatorで比較し、各stageのNPU/GPU構成、TP/PP/DP/EP、memory/interconnect、precisionを横断的に扱う。単に分離方式を提案するのではなく、workload geometryとhardware specializationの双方から『いつ分離が得か』を探索する点が中心。",
+    "method_overview": "各stageをroofline型のcompute/memoryモデルで評価し、D2D/N2N通信、batching、KV容量、decode反復をevent-driven simulationで結合する。hardware searchは解析的なstage demand scoreで候補を絞り、power/cost budget内でstageごとの候補を割り当てた後、上位構成だけを詳細simulationしてtokens/s最大の設計を選ぶ。量子化はPA/PF/DA/DFごとに独立precisionを設定し、task accuracyも測定する。",
     "components": [
-      {
-        "name": "Dependency-constrained residency partition",
-        "description": "R(C)=ceil(C/o_comm)、P(C)=o_comp(G-R(C))。A100ではo_comm=1、o_comp=2、G=108。"
-      },
-      {
-        "name": "Wave-quantized workload model",
-        "description": "routed expert countとkernel tile shapeからcompute tile数、token数・world size・hidden dimensionからcommunication tile数を求め、離散wave数へ変換。"
-      },
-      {
-        "name": "Split-readiness recurrence",
-        "description": "compute公開時刻と先行split通信完了を結合してpipeline fill・steady state・drainを予測。"
-      },
-      {
-        "name": "Relative service-rate normalization",
-        "description": "固定C=16で得た基準service rateをreduction dimension、compute tile size、world sizeで補正。"
-      },
-      {
-        "name": "Launch-time CPU selector",
-        "description": "最大16候補をO(E+L|C|)で評価。候補GPU kernelの試行やper-shape winner tableは不要。"
-      }
+      {"name": "ND/PD/AF/PDAF topology", "description": "prefill/decode分離に加えattention/FFNを分離し、PDAFではprefill-attention、prefill-FFN、decode-attention、decode-FFNを独立pool化する。"},
+      {"name": "Stage roofline and power model", "description": "stage実行時間をFLOPs/実効computeとbytes/実効bandwidthの最大値で近似し、MHA/GQA/MLA、dense/MoE、memory technology、device powerをparameterizeする。"},
+      {"name": "Parallelism and interconnect model", "description": "TP/PP/DP/EPをpool単位で設定し、intra-node D2Dとinter-node N2Nを分離してall-reduce、all-to-all、activation、KV transferを表現する。"},
+      {"name": "Event-driven serving simulator", "description": "request arrival、prefill batching、decode FIFO admission、stage completion、transfer、KV容量制約をeventとして進め、memory-aware continuous batchingを模擬する。"},
+      {"name": "Hardware and parallelism search", "description": "stage demandに対する解析scoreとbudget allocationで探索空間を縮小し、top-Kだけをsimulationして最終throughputを比較する。"},
+      {"name": "Stage-wise mixed precision", "description": "MXint系precisionをPA/PF/DA/DFごとに切り替え、MASEのPhaseAutoSwitchでprefill/decodeに応じた設定を適用し、accuracy sensitivityを実測する。"}
     ],
-    "system_design": "既存dispatch後にtile shape、resident blocks/SM、host routed counts、GPU SM数を読み、選択したCでGatherRS通信CTA gridと計算側常駐上限を設定する。元のGEMM2/GatherRS kernel、routing、通信量、readiness protocolは変更しない。"
+    "system_design": "各requestは選択したdisaggregation topologyに従いstage poolを移動する。pool内ではstage専用hardwareとparallelismで実行し、pool間ではactivation/KVをN2N転送する。simulationはstageのservice capabilityとbatch/KV制約を統合し、search layerが同じworkloadに対してND/PD/AF/PDAFの最適構成を比較する。"
   }
 }
