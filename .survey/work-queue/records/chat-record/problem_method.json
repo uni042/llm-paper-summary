@@ -5,27 +5,27 @@
   "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
   "job_id": "job-research-bf598cfa965b8925",
   "data": {
-    "problem": "fine-grained MoEではtop-k probability massが小さく、selected weightsをsum=1へ再正規化すると大きなgainが掛かる。訓練後にkを減らして同じ方式で再正規化すると、expertを減らす効果とsurvivorのgain過大化が混ざり、単純なtop-k削減を実際以上に有害に見せる。",
-    "novelty": "FFNを実行するtop-k1と、分母のprobability massを計算するtop-k2を分離する。k1がcomputeを、k2がexpert branch gainを独立に制御し、追加学習・parameter・実質的compute overheadなしで訓練時gainへ近づける。",
-    "method_overview": "routerは全E expertのsoftmax probabilityを通常どおり計算する。出力expertはtop-k1だけ選び、その各weightをtop-k1 massではなくtop-k2 massで割る。k2=k1は標準再正規化、k2=trained kは訓練時gainへのanchor、k2=Eは再正規化なしに対応する。k2>k1では残存weight sumが1未満となりtokenごとのadaptive down-scalingになる。実際に評価するFFNはk1個だけなのでcompute savingはk1削減分そのままで、k2増加は既計算router logits上のwider top-kだけである。",
+    "problem": "細粒度Mixture-of-Experts（MoE）では、routerが多数のexpertへ確率を割り当てた後、上位k個だけを実行し、その選択expertの重みを合計1へ再正規化する実装が一般的である。細粒度MoEではtop-kが受け持つ確率質量がもともと小さいため、この再正規化はexpert branch全体へ大きなgainを掛ける役割も持つ。訓練後に実行expert数だけをkからk1へ減らして同じ再正規化を行うと、少数expertへさらに大きなgainが掛かり、純粋なexpert削減によるcapacity lossと、訓練時と異なるbranch amplitudeによるgain miscalibrationが混ざる。したがって単純なtop-k削減で見える品質低下の一部は、expertを半分にしたこと自体ではなく、survivorへ過大な重みを掛けた副作用である可能性がある。",
+    "novelty": "本手法は、実際にFFN計算を行うexpert集合の大きさk1と、router確率の正規化分母を作るreference集合の大きさk2を分離する。expert identityやrouter rankingは変更せず、k1が計算量を、k2がexpert branchのgainを独立に制御する。k2を訓練時top-kやその近傍へ置けば、k1を減らしても訓練時に近いbranch amplitudeを保てる。追加学習、追加parameter、補助routerを必要とせず、既に計算済みのrouter logitsからより広いtop-k2の確率質量を求めるだけなので、追加costはexpert FFN削減量に比べ小さい。",
+    "method_overview": "各tokenのhidden stateは、まず元モデルと同じrouterへ入り、全E expertに対するsoftmax probabilityを得る。次に、その確率順位の上位k1個をactivation setとして選び、実際にFFNを実行するexpertはこのk1個だけに限定する。同時に、同じrouter probabilityからより広い上位k2個をreference setとして取り、その確率質量の合計を正規化分母に使う。activation set内の各expert weightは、従来のようにtop-k1 massで割るのではなくtop-k2 massで割るため、k2>k1ではsurvivor weightの合計は1未満となり、expert branch全体がtokenごとにdown-scaleされる。k2=k1なら標準的なreduced-k再正規化へ戻り、k2を訓練時kへ置けば訓練時に近いgainへanchorでき、k2=Eならほぼ再正規化なしの端点になる。重要なのは、k2に含めた追加expertは分母計算に使うだけでFFNを実行しないため、実際のexpert computeはk1個のままである。残ったk1 expertの出力は調整済みrouter weightで加重和され、shared expertを持つモデルではその出力と通常どおり合成される。論文はk1を固定したままk2を掃引することで、expert capacity不足とgain miscalibrationを分離して評価する。結果として、半数のexpertしか実行しなくても、適切なk2なら標準reduced-kより大幅に品質を回復できる一方、k2を大きくしすぎて再正規化を実質的に外すと品質が壊れるため、gainそのものは不可欠である。",
     "components": [
       {
-        "name": "Activation set k1",
-        "description": "実際にFFNを実行するexpert数。computeを直接決める。"
+        "name": "Activation set k1 — 実際に計算するexpert数",
+        "description": "router rankingの上位k1個だけをFFNへ送る集合で、token当たりのrouted-expert computeと関連するweight trafficを直接決める。k1を8から4、10から5のように減らせば実行expert計算はほぼ比例して減るが、expert parameter自体は削除しないのでresident VRAM/RAM容量は減らない。expert identityは元routerのtop-k順位をそのまま使うため、別の選択器を学習する方式ではない。"
       },
       {
-        "name": "Reference set k2",
-        "description": "router probability正規化の分母だけに使うexpert集合。expert branch amplitude/gainを独立に決める。"
+        "name": "Reference set k2 — 正規化gainだけを決めるexpert集合",
+        "description": "上位k2個のrouter probability massを分母として使い、activation set内のweight振幅を決める。k2はFFN実行集合ではないため、k2>k1でも追加expertのFFN計算は発生しない。k2=k1は標準再正規化、k2を訓練時kへ戻す設定は訓練時gainへのanchor、k2=Eは再正規化をほぼ外す端点として解釈できる。"
       },
       {
-        "name": "Gain anchoring",
-        "description": "k2をtrained kまたはその近傍へ置き、k1削減時にsurvivorへ過剰gainが掛かるのを防ぐ。"
+        "name": "Gain anchoring — expert削減と振幅ずれを分離",
+        "description": "k1を減らしただけでtop-k1 massへ再正規化すると、survivorへ訓練時より大きいgainが掛かる。本手法は分母だけ広いk2へ戻すことで、その過剰gainを抑えながらexpert数削減のcompute savingを維持する。Qwen系ではこれにより半数expert時のMMLU低下が標準reduced-kより大幅に縮小したが、k2=Eのようにgainを落としすぎると逆に大幅劣化する。"
       },
       {
-        "name": "Paired downstream selection",
-        "description": "perplexityとdownstream accuracyの最適k2が一致しないため、k2∈{k1,k,2k}をpaired testingで選ぶことを推奨する。"
+        "name": "Paired downstream selection — k2を品質指標で検証",
+        "description": "最適なk2はperplexityとdownstream accuracyで一致しない場合があり、35Bモデルではperplexityがk2=8を好む一方、MMLUはk2=16を好む。したがってk2は単一のunlabeled perplexityだけで決め切るのではなく、k1、訓練時k、2kなど少数候補をdownstream taskでpairedに比較することが推奨される。これは追加学習ではないが、deployment時の設定選択という実務上の境界条件になる。"
       }
     ],
-    "system_design": "hidden state→router softmax over E→top-k1を実行集合、top-k2をreference集合として取得→top-k1 probabilityをtop-k2 massで割る→k1 expert FFNだけ実行→shared expertを含むMoE出力へ合成。model weightsやresident expert数は変えないためmemory削減ではなくcompute/decode-bandwidth側のleverである。"
+    "system_design": "1 tokenの流れは、hidden state→元routerの全E expert softmax→同じ順位からactivation set top-k1とreference set top-k2を取得→top-k2 probability massでtop-k1 weightを割る→k1個のexpert FFNだけを実行→調整済みweightで加重和→shared expert等の既存branchと合成、となる。制御信号はrouter probabilityだけで、新しいpredictorや履歴stateは持たないためdrop-in変更として実装できる。k1を小さくするほどcompute削減は大きいがcapacity lossは増え、k2を小さくしすぎるとsurvivor gainが過大、大きくしすぎるとbranch gain不足になる。したがって本手法が効くのは、元routerのexpert ranking自体は十分良い一方、post-trainingのk変更で主にnormalization gainがずれる細粒度MoEであり、coarse routerや異なるarchitectureへ同じk2規則がそのまま一般化する保証はない。"
   }
 }
