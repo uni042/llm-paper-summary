@@ -1,31 +1,15 @@
 {
-  "submission_id": "submission-discovery-20260910-0437",
-  "job_id": "job-39c486a83ed17926",
+  "submission_id": "submission-discovery-20260910-0439",
+  "job_id": "job-c8dfad4c1356a14f",
   "status": "completed",
   "candidates": [
     {
-      "canonical_id": "arXiv:2605.03375",
-      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
-      "source_url": "https://arxiv.org/abs/2605.03375",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
-      "priority": 93,
-      "reason": "GPU-centric NVMe KV-cache path with GPU io_uring and slack-aware I/O scheduling; directly relevant to SSD-backed inference and reports real vLLM integration, TTFT/request-rate/cost gains."
-    },
-    {
-      "canonical_id": "arXiv:2606.16135",
-      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
-      "source_url": "https://arxiv.org/abs/2606.16135",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
-      "priority": 88,
-      "reason": "Cross-model GPU-memory donation and NVLink KV sharing avoid CPU/SSD reloads while extending context length; strong heterogeneous-memory serving-system contribution with real-workload evaluation."
-    },
-    {
-      "canonical_id": "arXiv:2607.16892",
-      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
-      "source_url": "https://arxiv.org/abs/2607.16892",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
-      "priority": 84,
-      "reason": "Joint KV reservation, serving-group configuration, routing and prefix caching under uncertain output lengths using distributionally robust optimization; reports trace-driven cost and SLO gains."
+      "canonical_id": "arXiv:2606.06302",
+      "title": "Tangram: Unlocking Non-Uniform KV Cache for Efficient Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.06302",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+      "priority": 90,
+      "reason": "Serving-system design that makes non-uniform KV retention practical via deterministic per-head budgets, head-group pages and ahead-of-time load balancing; reports up to 2.6x throughput with preserved accuracy and has official code."
     }
   ]
 }
