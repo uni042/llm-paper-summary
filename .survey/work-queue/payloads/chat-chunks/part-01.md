@@ -1,36 +1,47 @@
 ---
-canonical_id: "arXiv:2609.00891"
-arxiv_id: "2609.00891"
-title: "CacheBridge: Efficient Cross-Model KV Cache Transfer"
-summary: "モデル間KVキャッシュ転送の全head回帰をarchitecture対応headへ局所化し、attention感度重み付けとfused GPU fittingを組み合わせ、Qwen3 14B→32Bで99.83%のtarget retentionを維持しつつmapperを8分の1、適用を最大3.0×高速化する。"
-source: "https://arxiv.org/abs/2609.00891"
+canonical_id: "arXiv:2606.26666"
+arxiv_id: "2606.26666"
+title: "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs"
+summary: "native paged KV layoutを維持したまま、長文decodeのsequence splitとragged batch向けcompact workqueueをrequest状態に応じてFlashInferと切り替え、RTX 3060でB1長文を1.403×、B8長文を1.044–1.080×高速化する。"
+source: "https://arxiv.org/abs/2606.26666"
 last_audited: null
 audit_version: 0
 ---
 
-# CacheBridge: Efficient Cross-Model KV Cache Transfer
+# PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs
 
 ## 書誌情報
-- **著者**: Xingyu Qu, Siyuan Lu, Zhiyu Chen, Sheng Wang, Tao Lin
-- **所属**: Westlake University, Wuhan University, Amazon（論文記載）
-- **公開日**: 2026-09-01
-- **状態**: arXiv preprint v1
-- **コード**: arXiv本文・著者公開ページから公式実装repositoryは確認できず。
+- **著者**: Muhammad Ahmed
+- **公開**: arXiv:2606.26666。v1 2026-06-25、v2 2026-07-01
+- **種別**: workshop paper / arXiv preprint
+- **対象**: long-context decode、paged KV cache、GQA、GPU scheduling
+- **実装**: 論文はCUDA kernel、serving harness、calibration artifact、external trace入力経路を評価している。arXiv landing pageから独立した公式code repository URLは確認できず、公開artifactの所在は未確認。
 
 ## 問題設定
-複数LLMをrouting、cost-quality cascade、agent pipelineなどで切り替える場合、同じprefixを引き継いでもKVキャッシュはモデル固有表現なので受信側モデルが再prefillしなければならない。長文になるほどこの再計算がhandoff latencyを支配する。
+LLMのdecodeでは各requestが1 stepにつき1 query tokenしか生成しない一方、prefix全体のKV cacheをstreamするためarithmetic intensityが低い。特にconsumer GPU上のlow-active long-context servingでは、単一requestや少数requestだけではGPUへ十分な独立workを供給できない。
 
-直前研究のFull-Head Mappingは、source/targetのaligned KV traceからtraining-freeなaffine ridge mapperをclosed formで作り、target側prefillを省く。しかし各target KV headを、選択したsource layer内の**全source KV head**から予測するため、(1) architecture差に弱い、(2) coordinate-wiseなKV再構成誤差と実際のcontinuation品質が一致しない、(3) mapper容量とonline affine計算量がsupport幅に比例する、(4) target layerごとに異なるtop-k source layerを使うためoffline fitting時のgather/materializationが重い、という問題がある。
+PagedAttention系のruntimeはKV cacheをpage tableで管理して断片化を抑え、FlashInferなどはnative paged decodeを高度に最適化している。しかし「最速の単一attention kernel」が必ずしも「request trace全体で最速のschedule」ではない。長いsequenceではsequence方向の並列性を追加したい一方、ragged batchではsequence長ごとのlaunchを増やすとhost/launch overheadが大きくなり、粗いbucketへまとめるとshort rowへ無駄なsplit workを割り当てる。
+
+PersistentKVの主張は万能kernelではなく、**request状態に応じてFlashInferとPersistentKVのwork decompositionを切り替えるadaptive page-aware scheduling**である。
 
 ## 手法
-CacheBridgeはオンライン時のinterfaceをaffine mappingのまま維持しつつ、mapper support、calibration objective、construction pathの3点を同時に変える。
 
-### Head-Local
-Full-Head Mappingではtarget headごとに、選択された各source layerの全KV headをfeatureへ連結する。Head-Localは各target KV headをarchitecture metadataから決めた**対応source KV head 1個**だけに制約し、cross-layer aggregationだけを残す。評価した3方向はいずれもsource/targetが8 KV headsなので対応はidentity assignmentを使う。
+### Native block-table GQA decode
+KVをcontiguous tensorへrepackせず、serving runtimeのnative block tableを直接参照する。評価shapeは `Hq=32`, `Hkv=8`, `G=Hq/Hkv=4`, head dimension `d=128`。CTAを `(request, KV head, sequence split)` へ割り当て、同じKV headを共有する4 query headsを同一work assignment内で処理する。
 
-source KV head数を `H_s` とすると、K/V両方の非bias係数数はfull-headに対して理論上 `1/H_s` となる。今回の評価では `H_s=8` なのでmapper係数・storageと主要affine workを8分の1へ削減する。これは単なる圧縮ではなく、GQAのquery-to-KV ownershipに沿わないcross-head相関を回帰から排除する構造的制約でもある。
+attention loopは32-token tileを処理し、page accessorでlogical tokenからphysical pageを引き、FP32のonline-softmax stateを維持する。したがってsupplied KVに対するattention自体は近似・pruningではなくexactで、sequence split後のpartial softmax stateもmerge kernelで数学的に正しく結合する。
 
-### Attn-Repair
-通常のridge fittingはすべてのKV coordinate誤差を同等に扱うが、実際のdecode出力への影響はreceiver側のquery・attention mass・downstream layerによって異なる。Attn-Repairはtarget modelのcausal attentionからK/V誤差の一次近似感度を求め、tokenごとのsample weightとしてridge regressionへ入れる。
+### Sequence splittingとrow-local bounds
+B1などlow-active状態ではrequest×KV-headだけではCTA数が不足するため、sequenceを `S` 個のrangeへsplitして並列度を増やす。split数が多すぎればmerge overheadが増えるため、これは主要なoccupancy knobになる。
 
-KとVで別々の感度を計算し、32個の対数間隔prefix boundaryでfirst-future-queryを観測する。極端な重み集中でeffective sample sizeが崩れないよう、raw weightを一様重みへshrinkし、Kish effective sample sizeがfeature widthに応じたfloor以上になる最大係数を使う。オンライン時のmapper supportや適用コードは変わらず、変化するのはofflineで得られる係数値だけである。
+bucket長ではなく各rowの真の `seq_len` からtile数、split境界、prefetch sizeを決める。tileを1つも持たないsplitはneutral softmax stateを書いて早期returnし、不要なQ loadやshared-memory stagingを避ける。
+
+### Compact workqueue
+ragged B8でexact-length bucketを使うと、active sequence長の種類に応じて多数のCUDA launchが発生する。PersistentKVは `(row, KV head, split, begin, end)` のうち実際にnon-emptyなtaskだけをcompact queueへmaterializeし、1次元gridで実行する。partial stateはcompact slotへ保存し、2つ目のmerge kernelでrow-local segmented reductionを行う。
+
+これにより一つのroute bucketを維持しつつ、short rowのempty splitを排除し、long rowにはsequence parallelismを残す。
+
+### Calibrated cost model
+各decode stepでFlashInfer、PersistentKV length-bucket、PersistentKV workqueueの推定costを比較する軽量roofline-style policyを使う。RTX 3060 artifactではstreaming bandwidth 331.2 GB/s、minimum occupancy 4 CTA/SM、launch overhead 8.19 µsをcalibrationから得る。
+
+PersistentKVへpromotionするにはB8で推定1.05×、B4では1.50×のmarginを要求する。さらに `G=4` 以外と16K未満のshort contextはFlashInferへgateする。B1 long-contextはlength-bucket split、supported B8 long-contextはworkqueue、B4はdefaultでFlashInferを選ぶ。
