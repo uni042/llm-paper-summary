@@ -2,45 +2,58 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
-  "job_id": "job-research-0b935acaddfdc935",
+  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
+  "job_id": "job-research-bf598cfa965b8925",
   "data": {
     "hardware": [
-      "4x NVIDIA RTX Pro 6000 GPUs",
-      "1024 GB system memory",
-      "runtime appendix: Qwen3-8B generation-time benchmark uses a single NVIDIA RTX Pro 6000 GPU"
+      "Qwen3.6-35B-A3B: single 98GB accelerator (~72GB resident)",
+      "Qwen3.5-397B-A17B: sharded across machine (~752GB bf16)"
     ],
     "software": [
-      "Ubuntu 22.04",
-      "Jacap-specific official code repository was not linked in arXiv v1"
+      "PyTorch",
+      "Hugging Face Transformers 5.3–5.14",
+      "bf16"
     ],
     "model": [
-      "Qwen3-8B",
-      "Qwen3-14B",
-      "Llama3.1-8B",
-      "Nemotron-7B"
+      "Qwen3.6-35B-A3B",
+      "Qwen3.5-397B-A17B",
+      "Gemma-4-26B-A4B preliminary appendix"
     ],
     "datasets": [
-      "LongBench",
-      "Needle-in-a-Haystack (NIAH)",
-      "AIME25"
+      "WikiText-103",
+      "CodeParrot Python subset",
+      "MMLU",
+      "C-Eval",
+      "GSM8K"
     ],
     "baselines": [
-      "CapKV",
-      "SnapKV",
-      "KeyDiff",
-      "Expected Attention (EA)",
-      "KNorm"
+      "native trained-k",
+      "standard reduced-k renormalization k2=k1",
+      "no renormalization k2=E",
+      "uniform expert weights",
+      "router-probability sampling",
+      "random expert selection"
     ],
     "settings": [
-      {"name": "LongBench", "description": "Qwen3-8B, Qwen3-14B, Llama3.1-8B; compression ratios 0.25, 0.5, 0.75, 0.9; main discussion emphasizes 0.75/0.9."},
-      {"name": "NIAH", "description": "Qwen3-8B; compression ratio 0.75 in main text and 0.5 in appendix; context lengths 10k-120k tokens; needle depths 0.15-0.95."},
-      {"name": "decoding eviction", "description": "AIME25 with Nemotron-7B; reserved-token budgets 2048, 4096, 8192, 16384."},
-      {"name": "temperature ablation", "description": "Qwen3-8B LongBench; best overall behavior around tau=10."},
-      {"name": "runtime", "description": "Generate 100 tokens with Qwen3-8B on one RTX Pro 6000; input contexts 8k-64k; compression ratios 0.6 and 0.8."}
+      {
+        "name": "MMLU",
+        "description": "2000 fixed-seed questions across 57 subjects, 5-shot, A–D single-token logits, paired McNemar test."
+      },
+      {
+        "name": "GSM8K",
+        "description": "500 questions, 0-shot, greedy up to 512 tokens, reasoning disabled, exact final-number match."
+      },
+      {
+        "name": "perplexity",
+        "description": "100K-token WikiText-103 and CodeParrot samples, context 2048, byte-identical chunks; held-out WikiText checks k2 selection."
+      },
+      {
+        "name": "routing analysis",
+        "description": "500K tokens/domain with forward hooks over all gates."
+      }
     ],
-    "correctness": "Jacap is a lossy KV-cache eviction method: discarded states can change model outputs, so equivalence to the uncompressed model is not guaranteed. Quality is measured on LongBench, NIAH, and AIME25. No retraining is required.",
-    "methodology": "Three long-context model architectures are compared on LongBench, sparse long-range retrieval is stressed with NIAH, dynamic decode-time eviction is tested with AIME25, and Appendix C measures runtime overhead. Query statistics are estimated from historical decoding queries; diagonal covariance is used in practice.",
-    "scope": "Evidence supports retention quality under KV compression rather than a complete serving-system speedup claim. Runtime is described as comparable to mainstream baselines, but exact Figure 5 timings are not tabulated in the HTML text. Theoretical per-layer/eviction complexity is O(N d_h^2 + d_h^3)."
+    "correctness": "Lossy compute reduction; statistically non-significant downstream difference is not proof of exact equivalence.",
+    "methodology": "Scan k2 while holding k1 fixed to separate expert capacity loss from gain miscalibration; paired tests are used because effects are sub-percent to few-percent.",
+    "scope": "Main matched k1/k2 evidence is two Qwen fine-grained MoEs from same series; third-architecture Gemma uses earlier scalar-gain formulation and is directional only."
   }
 }
