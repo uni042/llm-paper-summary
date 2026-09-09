@@ -2,7 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
+  "job_id": "job-research-bebbfc5f119d619b",
+  "data": {
+    "hardware": ["dual-socket AMD EPYC 7T83", "128 physical cores / 256 logical threads", "8× NVIDIA RTX 4090 server; each serving experiment uses a single GPU"],
+    "software": ["Linux CFS / nice / cgroup v2 / SCHED_FIFO / NUMA affinity", "NVIDIA Nsight Systems + NVTX", "vLLM", "SGLang"],
+    "model": ["Primary: DeepSeek-R1-Distill-Qwen-7B on vLLM", "Held-out: Llama-3.1-8B on vLLM", "Held-out: Mistral-7B on vLLM", "Held-out: DeepSeek-R1-Distill-Qwen-7B on SGLang"],
+    "datasets": ["stress-ng and seven application-level CPU co-tenants spanning compute/cache/I/O/network/mixed behavior", "Held-out CPU workloads: image-preprocess, sqlite-txn, text-search, zstd-compress"],
+    "baselines": ["none", "nice", "cgroup CPU weighting", "EngineCore-targeted rt", "NUMA isolation", "targeted mixed-risk validation: rt+numa", "selector baselines: Always-rt, Hardware-only, Macro-only"],
+    "settings": [
+      {"name": "Serving mode", "description": "single-GPU LLM serving on a multi-GPU server; tensor/pipeline parallel multi-GPU inferenceは対象外"},
+      {"name": "Client", "description": "closed-loop batched client、batch size 32、最大512 generated tokens/request"},
+      {"name": "Measurement", "description": "10 measurement rounds、8 s warmup。throughput、TTFT、TPOTとNVTX stage latency distributionを収集"},
+      {"name": "rt", "description": "framework-specific EngineCore TIDのみSCHED_FIFO priority 50。他thread/co-tenantはCFS"},
+      {"name": "nice", "description": "LLM serving processを概ねnice=-15、interfering workloadはdefault"},
+      {"name": "cgroup", "description": "LLM cpu.weight=5000、interfering workload cpu.weight=50"},
+      {"name": "numa", "description": "GPU1ではLLMをCPUs 0–63,128–191、workloadを64–127,192–255へ分離"},
+      {"name": "Held-out validation", "description": "threshold/risk label/policy-selection rulesをprimary vLLM/DeepSeek条件で固定してから別model/frameworkおよび4 unseen CPU workloadsで評価"}
+    ],
+    "correctness": "本研究の対象はmodel output品質ではなくserving性能とco-location SLOである。protectionはmodel計算を近似・変更せずOS scheduling/localityを制御する。tail diagnosisの妥当性はservice-stage tailとmacro degradationの相関、CTSと回復の整合、schedstat/delay-injection等の補助検証で確認するが、著者らは全干渉経路のformal causal proofとは主張しない。",
+    "methodology": "CPTIはscheduler.step、batch.construct、model.execute、model.forwardのP95/P99正規化tail amplificationをuniform weightで集約する。primary experimentでmechanismとdecision ruleを作り、held-outでは保護結果を見る前にCoTail recommendationを決める。小標本のbootstrap confidence intervalは10,000 resamplesで計算するが、formal inferenceではなくdescriptive robustness summaryとして扱う。",
+    "scope": "同一dual-socket GPU server上の外部host-CPU co-location interferenceを対象とする。GPU memory oversubscriptionを前提とせず、主にGPU work submission前のCPU-side serving path、OS scheduler、NUMA/localityの干渉を扱う。"
+  }
 }
