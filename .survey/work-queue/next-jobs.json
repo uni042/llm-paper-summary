@@ -1,30 +1,42 @@
 {
   "counts": {
     "discovery": {
-      "completed": 8,
-      "ready": 1
+      "completed": 9
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "completed": 12,
-      "superseded": 3
+      "superseded": 3,
+      "ready": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-b85aa562e0f7a2d9",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-85c54a348e38b072",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arxiv:2608.03741",
+      "title": "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.03741",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/heteropanacea.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-7a4628493bc11731",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arxiv:2605.29639",
+      "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+      "source_url": "https://arxiv.org/abs/2605.29639",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/rtp-llm.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T12:46:07+00:00"
+  "generated_at": "2026-09-09T13:33:05+00:00"
 }
