@@ -2,20 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
-  "job_id": "job-research-85c54a348e38b072",
+  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
+  "job_id": "job-research-7a4628493bc11731",
   "data": {
-    "problem": "エージェント型LLMは長い反復コンテキストを持ち、prefillとdecodeだけでなくattentionとFFNでも演算量・メモリ容量・帯域要求が大きく異なる。従来のPD分離はdecode-attentionとdecode-FFN等を同じpoolに残すため、各段に最適なhardwareを独立選択できず、分離通信のoverheadが利得を上回る条件も明確でない。",
-    "novelty": "ND、PD、AF、4段PDAFを同一のsystem-level simulatorで比較し、各stageのNPU/GPU構成、TP/PP/DP/EP、memory/interconnect、precisionを横断的に扱う。単に分離方式を提案するのではなく、workload geometryとhardware specializationの双方から『いつ分離が得か』を探索する点が中心。",
-    "method_overview": "各stageをroofline型のcompute/memoryモデルで評価し、D2D/N2N通信、batching、KV容量、decode反復をevent-driven simulationで結合する。hardware searchは解析的なstage demand scoreで候補を絞り、power/cost budget内でstageごとの候補を割り当てた後、上位構成だけを詳細simulationしてtokens/s最大の設計を選ぶ。量子化はPA/PF/DA/DFごとに独立precisionを設定し、task accuracyも測定する。",
+    "problem": "production LLM servingではrequest長・load・model architectureが大きく変動し、prefill/decodeのresource mismatch、KV cache容量、600B級modelのloading、MoE/multimodal/speculative decodingなどを個別最適化だけで同時に扱いにくい。特に長文と高concurrencyではKV cache reuseとtraffic routingがTTFT、必要machine数、memory効率へ直結する。",
+    "novelty": "単一の新algorithmより、model loading、PD serving、4階層KV cache、cache-aware global scheduling、speculative decoding、TP/PP/DP/EP、weight/KV quantization、ViT-LLM分離をproduction-ready inference stackへ統合し、Alibabaの実trafficで各機構を評価した点に価値がある。",
+    "method_overview": "Frontendがtoken/block hashを生成し、Masterがworker load、KV cache分布、latency予測を見てbatch/routingを決める。PD-FusionとPD-Disaggregationを選択でき、KVはGPU→local CPU→RDMA remote CPU→3FSの順で探索する。model loadingはfile-order sequential I/O、single-reader+broadcast、shared pinned buffer reuse、I/O/broadcast overlapで高速化する。decode acceleration、quantization、multimodalも同じengineに統合する。",
     "components": [
-      {"name": "ND/PD/AF/PDAF topology", "description": "prefill/decode分離に加えattention/FFNを分離し、PDAFではprefill-attention、prefill-FFN、decode-attention、decode-FFNを独立pool化する。"},
-      {"name": "Stage roofline and power model", "description": "stage実行時間をFLOPs/実効computeとbytes/実効bandwidthの最大値で近似し、MHA/GQA/MLA、dense/MoE、memory technology、device powerをparameterizeする。"},
-      {"name": "Parallelism and interconnect model", "description": "TP/PP/DP/EPをpool単位で設定し、intra-node D2Dとinter-node N2Nを分離してall-reduce、all-to-all、activation、KV transferを表現する。"},
-      {"name": "Event-driven serving simulator", "description": "request arrival、prefill batching、decode FIFO admission、stage completion、transfer、KV容量制約をeventとして進め、memory-aware continuous batchingを模擬する。"},
-      {"name": "Hardware and parallelism search", "description": "stage demandに対する解析scoreとbudget allocationで探索空間を縮小し、top-Kだけをsimulationして最終throughputを比較する。"},
-      {"name": "Stage-wise mixed precision", "description": "MXint系precisionをPA/PF/DA/DFごとに切り替え、MASEのPhaseAutoSwitchでprefill/decodeに応じた設定を適用し、accuracy sensitivityを実測する。"}
+      {"name": "Global Master and traffic scheduling", "description": "Prefillはlength-similar batchingとpredicted completion time、Decodeはchat/cache affinity、load、KV occupancyを用いてroutingする。worker状態は高頻度に収集する。"},
+      {"name": "Four-tier KV cache", "description": "GPU block cache、local CPU memory、RDMA remote CPU memory、distributed 3FSを階層化し、hash prefix matchingとLRU/reference countでreuseする。local/remote lookupを並列実行してworker scoreへ統合する。"},
+      {"name": "PD deployment", "description": "PD-FusionとPD-Disaggregationをサポートし、分離時はPrefill/Decodeを独立nodeへ置いて個別scaleし、KVをNCCL/InfiniBand等で転送する。"},
+      {"name": "Optimized model loading", "description": "model-structure順ではなくfile順に読み、1 processだけがfileを読みdistributed broadcast、shared pinned memory再利用、I/Oとbroadcastのpipeline overlapでFUSE/cloud storageのsequential accessを活かす。"},
+      {"name": "Modular speculative decoding", "description": "ProposeExecutor、ScoreExecutor、SpeculativeSampler、SpeculativeUpdaterをC++で分離し、naive、Prompt Lookup、Eagle、MTP等を差し替え可能にする。"},
+      {"name": "Parallelism and quantization", "description": "TP/PP/DP/EPを統合し、weight-only INT4/INT8、FP8、on-the-fly KV quantizationを提供する。"},
+      {"name": "EPD multimodal disaggregation", "description": "ViT encoderをLLM serving nodeから分離し、vision embedding生成とlanguage generationをpipeline化して異種resourceを独立配分する。"}
     ],
-    "system_design": "各requestは選択したdisaggregation topologyに従いstage poolを移動する。pool内ではstage専用hardwareとparallelismで実行し、pool間ではactivation/KVをN2N転送する。simulationはstageのservice capabilityとbatch/KV制約を統合し、search layerが同じworkloadに対してND/PD/AF/PDAFの最適構成を比較する。"
+    "system_design": "requestはFrontend→Master→Inference Nodeへ流れ、Masterがprefix cache matchとcluster stateを統合してplacementを決める。必要KVは最速tierから段階的にGPUへstageし、実行後metadata/LRUを更新する。Name Serviceはservice discovery/heartbeat、Carbonはnode failure時の自動restartを担当し、Masterがglobal schedulingを担う。"
   }
 }
