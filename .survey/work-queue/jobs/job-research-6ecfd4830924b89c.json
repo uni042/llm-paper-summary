@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-6ecfd4830924b89c",
+  "type": "research",
+  "parent_job_id": "job-b22cbbabe99c6344",
+  "priority": 88,
+  "canonical_id": "arxiv:2512.03927",
+  "title": "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
+  "source_url": "https://arxiv.org/abs/2512.03927",
+  "paper_path": "papers/inference/03-expert-prefetch/od-moe.md",
+  "selection_reason": "expert cacheを廃止し、複数layer先のactivation予測とedge node間のload/compute pipelineでJIT expert loadingを行う。MoE expert prefetch/offloadの設計点として既存cache型方式との差が明確。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T14:11:28+00:00",
+  "completed_at": "2026-09-09T14:11:29+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2512.03927",
+  "duplicate_of_path": "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2512.03927"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-e55a858106ae9f1a",
+  "type": "research",
+  "parent_job_id": "job-b22cbbabe99c6344",
+  "priority": 94,
+  "canonical_id": "arxiv:2605.03375",
+  "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+  "source_url": "https://arxiv.org/abs/2605.03375",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/tutti.md",
+  "selection_reason": "GPU-centric object I/OとGPU io_uringでCPUをKV-cache SSD I/Oのcritical pathから外し、vLLM統合・LMCache比較まで実機評価する。SSD/NVMe活用とKV offloadの中心テーマに直接対応。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T14:11:28+00:00",
+  "completed_at": "2026-09-09T14:11:29+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2605.03375",
+  "duplicate_of_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2605.03375"
+  }
+}
