@@ -13,13 +13,14 @@
 
 1. default branchの最新HEADを取得する。
 2. **同じHEAD** のこのREADME、[queue-v9.md](queue-v9.md)、`.survey/work-queue/next-jobs.json` を読む。
-3. priority順にready jobを処理する。安全にsubmission保存まで完走できる範囲なら複数件処理してよい。
+3. ready jobがあればpriority順に処理する。安全にsubmission保存まで完走できる範囲なら複数件処理してよい。
 4. research/auditの完成Markdownは、原則として新規の `.survey/work-queue/payloads/<unique>.md` に保存する。
 5. 続けて小さい `.survey/work-queue/submissions/<unique>.json` を新規作成し、`payload_path` からpayloadを参照する。
 6. submissionのpushで `Survey helper worker` が自動起動する。ChatからActionsを直接起動しない。
-7. `next-jobs.json` の ready job が0件なら、`{"operation":"request_jobs"}` の小さいsubmissionを1件だけ新規作成する。pushでActionsが即座にdiscovery jobを補充する。
-8. **同じChat実行内で** Actions反映後の最新 `next-jobs.json` を読み直し、生成されたdiscovery jobをそのまま処理する。空queueを理由にその回を終了しない。
-9. 次回も必ず最新HEADからqueueを読み直す。同じsubmissionを再送しない。
+7. ready jobが0件なら、`{"operation":"request_jobs"}` の小さいsubmissionを1件だけ新規作成する。Actionsがdiscovery jobを1件生成する。
+8. 同じChat実行に余裕があれば最新HEADとqueueを読み直し、そのdiscovery jobを処理する。
+9. 1件終わるたび最新queueを確認して次へ進む。次成果を安全に保存できない見込みなら着手せず終了する。
+10. 次回も必ず最新HEADからqueueを読み直す。同じsubmissionを再送しない。
 
 ## transport
 
@@ -40,6 +41,16 @@ Chat
 
 GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。通常処理の成立条件ではない。
 
+## queue policy
+
+判断基準は以下だけにする。
+
+- ready jobがある → priority順に可能な限り処理する。
+- ready jobがない → discovery jobを1件生成する。
+- discoveryは有望論文を0〜5件返す。5件はノルマではない。
+- research後、明確な確認事項が残った場合だけaudit jobを作る。
+- 固定の探索周期、research/audit比率、backlog維持目標、固定割合監査は使わない。
+
 ## 品質原則
 
 - 候補0件は正常。数合わせで弱い論文を追加しない。
@@ -47,15 +58,6 @@ GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。
 - auditは一次資料・正式公開情報・公式実装を使って書誌、版、code、評価条件、主要値、実機/模擬、分類、差分、限界まで確認する。
 - 既存paper更新では現在blob SHAを取得し、submissionに `expected_blob_sha` を付ける。
 - Chatは通常処理で既存paper、`.survey/survey-state/`、queue state、identity index、README、集約viewを直接更新しない。
-
-## queue policy
-
-- 新着探索: 2時間ごと
-- 引用・follow-up探索: 6時間ごと
-- gap/隣接分野探索: 24時間ごと
-- ready research: 最大12
-- ready audit: 最大6
-- 正式監査: 高重要度、明示的不確実性、版・書誌問題、決定的20%サンプル
 
 詳細なsubmission schema、冪等性、状態遷移は [queue-v9.md](queue-v9.md) を正本とする。
 
