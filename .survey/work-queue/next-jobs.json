@@ -7,8 +7,9 @@
       "completed": 1
     },
     "research": {
-      "ready": 2,
-      "completed": 1
+      "ready": 1,
+      "completed": 1,
+      "blocked": 1
     }
   },
   "next_jobs": [
@@ -23,19 +24,7 @@
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/spectre.md",
       "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
       "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-ca0b817c2ba85ba8",
-      "type": "research",
-      "lane": null,
-      "priority": 72,
-      "canonical_id": "arxiv:2606.26666",
-      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs",
-      "source_url": "https://arxiv.org/abs/2606.26666",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/persistentkv.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
-      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T04:01:07+00:00"
+  "generated_at": "2026-09-09T04:17:00+00:00"
 }
