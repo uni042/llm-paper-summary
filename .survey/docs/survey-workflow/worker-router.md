@@ -17,7 +17,7 @@ GitHub readができない場合は、repo状態に依存する新規処理を�
 
 正本: [README.md](README.md)、[queue-v10.md](queue-v10.md)、`.survey/work-queue/next-jobs.json`。
 
-Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditは5つの事前作成済み固定JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。paper/state/README/identity/queueをChatから直接編集しない。
+Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditはqueue-v10で定義されたA/B固定record bankのうち安全に使える1 bankの5 JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。通常はA、Aに別jobの途中保存が残る場合だけBを使う。paper/state/README/identity/queueをChatから直接編集しない。
 
 Discovery / blocked / deferred / rejectedは長文artifact不要なので、固定inboxだけを小さくupdateしてよい。
 
