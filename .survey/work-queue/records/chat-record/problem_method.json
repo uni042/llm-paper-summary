@@ -2,19 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
-  "job_id": "job-research-bebbfc5f119d619b",
+  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
+  "job_id": "job-research-c57bf9d456b4f061",
   "data": {
-    "problem": "GPUサーバではLLM推論中もhost CPU資源が余るためCPU workloadのco-locationは利用率向上に有効だが、外部CPU workloadがLLM serving pathのどこを阻害し、どのOS-level protectionを選ぶべきかは十分整理されていない。著者らは、単純なGPU kernel時間やCUDA launch指標だけではend-to-endのthroughput/TTFT/TPOT悪化を説明できず、GPU work submissionより前のCPU-side service-stage tailが主要な診断信号になることを示す。",
-    "novelty": "CPU co-location干渉をmacro metricだけで分類せず、NVTXで観測したcore serving stageのP95/P99 tail amplificationをCPTIとして集約し、保護後の抑制率をCTSとして定量化する。さらにworkload-only hardware screening、service-stage診断、OS protection選択、common-baseline decode SLO validationを1つの運用手順CoTailへ統合し、primary setupで凍結したルールをheld-out model/framework/workloadへ適用する。",
-    "method_overview": "CoTailは、まずCPU workload単体のhardware profileからLOW/MEDIUM/HIGH riskをscreeningする。非自明なcaseではunprotected co-locationをNVTX付きでprofileし、scheduler.step、batch.construct、model.execute、model.forwardのtailからCPTIとdominant stageを求める。service-tail支配ならEngineCoreだけをreal-time化するrt、cache/topology感度かつTTFT支配ならNUMA isolation、両方のsignalが強いmixed caseならrt+numaを候補とし、最後にcommon-baseline decode SLOと必要に応じCTS>0を確認して採否を決める。",
+    "problem": "MoEは各tokenで少数の専門家だけを選ぶが、複数tokenのprefillでは要求全体として専門家集合の大半を触るため、専門家重みがモバイルDRAMへほぼ全量常駐しやすい。一方、モバイルNPUの一般的なグラフ実行系はトポロジ、tensor容量、parameter bindingを事前確定するため、実行時に変わる専門家・route数・parameter位置を効率よく扱えない。CPU/GPUへroutingやexpert実行を逃がすとNPUの高い行列演算性能を活かせず、既存offloadもdecode localityやCPU/GPU計算中心である。",
+    "novelty": "専門家間で演算トポロジが不変であることと、論理的に活性化された専門家が同時に物理常駐する必要はないことを利用する。1つの共有専門家NPUグラフに実行時route extentとparameter addressを束縛し、専門家全体をUFS上に置いたまま固定サイズのNPU可視arenaへgroup単位で流す。さらにUFS読出しとNPU計算を有限buffer producer-consumer pipelineとしてモデル化し、group size・I/O queue depth・bank countを自動選択する。",
+    "method_overview": "offlineでは専門家重みをNPUが直接消費するtile-major layoutへ変換し、専門家をgroup化してUFSへ配置する。onlineではnon-expert処理中からgroup読出しを開始し、route確定後に不要groupを捨て、必要groupだけを固定bankへ読み込む。bankがReadyになった後だけ共有専門家グラフへparameter bindingを公開し、NPU完了後にbankを再利用する。routeのgather、gate/up、SwiGLU、down、scatter-addは1つのroute-aware fused operatorへ統合する。",
     "components": [
-      {"name": "Core Path Tail Index (CPTI)", "description": "4つのcore serving stageについて、同一protectionのno-interference baselineに対する正のP95/P99 normalized tail amplificationを平均する。各stageはuniform weight 1/4。値が大きいほどCPU-side serving pathのtail amplificationが強い。"},
-      {"name": "Core Tail Suppression (CTS)", "description": "CTS=1-CPTI(w,p)/(CPTI(w,none)+1e-6)として、protection pがunprotected時のtail amplificationをどれだけ抑えたかを測る。負値はprotectionがtailを悪化させたことを示す。"},
-      {"name": "EngineCore-targeted rt", "description": "framework-specific EngineCore Linux TIDだけをSCHED_FIFO priority 50へ昇格し、他のserving threadとco-tenantは通常のCFSに残す。vLLMではVLLM::EngineCore、SGLangではsglang::EngineCoreをruntimeで同定する。"},
-      {"name": "NUMA isolation", "description": "LLM serverを選択GPUにlocalなNUMA nodeへ固定し、interfering workloadを反対socketへ隔離する。scheduler latencyではなくlocality/cache/memory/topology由来の干渉を狙う。"},
-      {"name": "Frozen decision procedure", "description": "primary vLLM/DeepSeek条件だけでthreshold・risk label・policy ruleをcalibrateし、その後held-out model/frameworkと未使用CPU workloadへ固定ルールを適用してpost-hoc fittingを避ける。"}
+      {
+        "name": "Topology-invariant expert graph sharing",
+        "description": "同じshape classの専門家で1つのNPUグラフを共有し、route descriptor、valid extent、placement map、parameter addressだけを呼出し時に変更する。専門家ごとのgraph再構築やtensor再確保を避ける。"
+      },
+      {
+        "name": "Composed sparse route and parameter binding",
+        "description": "routing結果とexpert-to-slot placement mapをNPU内で結合し、物理slotごとのCSR風route表を構築する。empty slotを飛ばし、token row・router weight・parameter addressを直接fused operatorへ渡す。"
+      },
+      {
+        "name": "Fused intra-NPU expert pipeline",
+        "description": "DMA、HVX、HMXをVTCM上で重畳し、gatherからweighted scatter-addまでを1演算に融合する。中間tensorのDRAM materializationとdispatch境界を減らす。"
+      },
+      {
+        "name": "Bounded expert arena",
+        "description": "B個のbank×G専門家だけをNPU可視memoryへ保持し、Available→Filling→Ready→InUse→Availableのstateで安全に再利用する。論理的な専門家数に依存せず物理常駐量をBGWeへ制限する。"
+      },
+      {
+        "name": "UFS–NPU pipeline auto-configuration",
+        "description": "group size G、queue depth Q、bank count Bをmax-plus recurrenceで評価し、memory budget内で予測latencyを最小化する。UFS bandwidth profileでQを先に決め、各GについてBを探索する。"
+      }
     ],
-    "system_design": "CoTailはuniversal cluster schedulerではなくsame-platformのmeasurement-driven operator procedureとして設計される。候補protectionはnone/nice/cgroup/rt/numaを基本とし、mixed-riskのみrt+numaを追加検証する。候補がcommon-baseline SLOを満たさなければco-locationをrejectし、tail-diagnosed caseではpositive CTSも要求する。"
+    "system_design": "Qualcomm Hexagon HTPのscalar/HVX/HMX/DMA資源を直接協調させ、UDMABUF-backed DMA-BUFへO_DIRECT preadvでoffline-packed weightを直接読込む。non-FFN実行中にroute確定前prefetchを始め、実行中groupと次groupのUFS loadを重ねる。初期prefetch順序はoffline group順で、route確定後はinactive groupをskipする。"
   }
 }
