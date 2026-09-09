@@ -2,7 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
+  "job_id": "job-research-bebbfc5f119d619b",
+  "data": {
+    "canonical_id": "arXiv:2609.05425",
+    "arxiv_id": "2609.05425",
+    "doi": "10.48550/arXiv.2609.05425",
+    "title": "Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server",
+    "summary": "GPUサーバの余剰host CPUへCPU workloadをco-locationした際のLLM serving劣化を、GPU kernel遅延ではなくGPU投入前のCPU-side serving stageのtail amplificationとして診断する。Core Path Tail Index（CPTI）とCore Tail Suppression（CTS）を導入し、workload risk、NVTX stage tail、OS-level protection、decode SLOを組み合わせるCoTail手順により、held-out条件でも固定ルールで保護方式を選択する。",
+    "source": "https://arxiv.org/abs/2609.05425",
+    "authors": ["Guanjie Cheng", "Guowei Li", "Yingying Wen", "Xinkui Zhao", "Zhe Liu", "Shuiguang Deng"],
+    "publication": "arXiv:2609.05425v1, 2026-05-26",
+    "publication_type": "arXiv preprint / cs.DC",
+    "topics": ["LLM serving", "CPU co-location interference", "tail latency diagnosis", "OS resource control", "NUMA", "real-time scheduling"],
+    "implementation": "実験手順・launch/profiling command・workload定義・OS protection設定は本文/付録に詳述される。arXiv本文およびGitHub検索で著者公式コードrepositoryは確認できず、公開実装URLは未確認。",
+    "sources": ["https://arxiv.org/abs/2609.05425", "https://arxiv.org/html/2609.05425v1"]
+  }
 }
