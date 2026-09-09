@@ -1,25 +1,38 @@
-### Offline construction
-Qwen3 14B→32B、500 calibration sequencesのmapper constructionは、generic pathの **92.63秒**からFused-Fitのmedian **8.63秒**へ短縮され、**10.7×高速**。この値はend-to-end servingではなく、十分統計生成からsolverへ渡すmapper construction経路の改善を測る。
+## Hardware counterとablation
+短いB8 bimodal G=4 traceのNsight Computeでは、FlashInfer decodeに対してPersistentKV decodeはSM throughput指標 **9.55→17.21**、memory-throughput指標 **62.72→74.48**。ただしprofiler replayを使ったshort traceであり、main 5-seed wall speedupの直接測定ではない。
+
+CUDA graph replayはB4のtwo-kernel decode+merge overheadを解消できなかった。最終split CTAがatomic counterで完了検出してmergeまで行うfused variantも正しいがRTX 3060では遅く、saved launchよりatomic/in-kernel merge costが大きかった。このnegative resultからもB4をFlashInferへ戻すpolicyが妥当とされる。
 
 ## 既存研究との差
-前身のClosed-Form Linear Mapping / Full-Head Mappingは「異なるモデル間でもKV表現に線形構造があり、training-free ridge mappingでprefill reuseが可能」という点を示した。CacheBridgeはその基本interfaceを変えず、**どのheadをfeatureへ入れるか**、**どの誤差を重視してfitするか**、**不規則supportをGPU上でどう構築するか**をsystem-levelに再設計している。
+PagedAttention/vLLMはKV cache allocationとpaging、FlashInferは高速native-paged attention kernelを中心に扱う。PersistentKVはKV量を減らすのではなく、**native page layout上のdecode workをrequest/KV-head/sequence-splitへどう割り当てるか**をserving stateに応じて変える。
 
-Cache-to-Cacheやlearned latent communicationのようにtranslator networkを学習する方式とは異なり、task-specificなtranslator trainingを追加せずclosed-form affine artifactを使う。そのためonline pathは軽いが、source-target pairごとにoffline mapperを構築・保持する必要は残る。
+H2O等のKV eviction/pruningとは補完的で、PersistentKVは与えられたKVに対してdense exact attentionを維持する。Sarathi/Sarathi-Serveがprefill/decodeの混在scheduleを扱うのに対し、本研究はdecode内部のpage-aware work decompositionに焦点を絞る。
 
-リポジトリ内のLMCache、Cake、CacheFlow等が主に**同一モデル内**でKVをmemory/storage階層へ退避・復元して再計算を避けるのに対し、CacheBridgeは**モデルを切り替えるとKV表現自体が互換でない**問題を対象とする。したがって、階層memory/offloadとcross-model conversionは競合というより補完関係にあり、変換後KVをどこへ置くか・どう転送するかは別のsystems問題として残る。
+特に重要なのは、FlashInferを全面置換しない設計である。isolated kernelやB4、未校正GQA shapeでは強いbaselineをそのまま使い、PersistentKVが有利とcalibrationされたlong-context regimeだけ新routeへ送る。
 
-## 品質・適用範囲・限界
-- 実証は**同一model family内**の3 transfer directionに限定され、すべてdense GQAかつsource/targetが8 KV headsである。
-- 異なるKV-head数、cross-family transfer、sparse/sliding-window attention、linear/hybrid attentionへの一般化は未実証。
-- mapperはdirectionalで、source→targetごとに別artifactが必要。多数modelを自由に切り替える環境ではpair数に応じたoffline管理costが発生する。
-- 評価はhandoff直後のcontinuation品質が中心で、長いmulti-turn chainで異モデル間handoffを何度も繰り返した際の誤差蓄積は十分検証されていない。
-- Attn-Repairはfull receiver Jacobianではなくattention-localな一次近似とdiagonal surrogateを使う。cross-tokenやK-V間のoff-diagonal項は捨てている。
-- Fused-Fitの10.7×はmapper construction区間だけの値で、trace収集などを含むend-to-end calibration時間ではない。
-- approximationされたKVを利用するため、同一modelのexact KV reuseと異なり品質riskはゼロではない。特に未評価architectureへ外挿する根拠はまだない。
+## 品質への影響
+KV compression、token pruning、近似attentionは使わない。split-local online-softmaxを数学的にmergeするため、対象attention演算はexactである。serving tableの最大誤差は報告上 **6.104e-5**で、設定したFlashInfer-equivalence toleranceを満たす。
+
+したがってmodel quality trade-offを狙う方式ではないが、full model generation品質をtask benchmarkで評価した研究でもない。正しさの中心はkernel output equivalenceである。
+
+## 限界
+- main評価は**RTX 3060 1機種**。A100、L4/L40S、H100等での再calibration/再現は未実施。
+- B8改善は4–8%程度と比較的小さく、hardware/runtime更新で閾値が変わる可能性が高い。
+- main traceはsynthetic。external fixtureはあるがproduction serving logではない。
+- harnessはdecode loopであり、admission control、prefill/decode interference、sampling、network、CPU queue、full transformer stack、実際のKV allocator pressureを含まない。
+- model-level評価もattention + 1 synthetic MLP tailのproxyに留まる。
+- physical page allocationはseeded synthetic permutationで、production allocatorのeviction/reuse/locality特性は再現しない。
+- PersistentKVのpositive resultは現在 `G=4` に限定され、G=1/8はFlashInferへのfallbackでno-regressionを達成しているだけ。
+- baseline versionはFlashInfer 0.2.5、vLLM 0.6.4.post1、TensorRT-LLM 0.8であり、将来/current stack全般への優位性は主張できない。
 
 ## 実装状態
-論文は新しいfused GPU kernelを実装して性能評価しているが、arXiv本文および確認した著者公開ページでは公式code repositoryへのリンクを確認できなかった。再現性評価ではこの点を未確認事項として扱う。
+論文v2はCUDA kernel、serving harness、calibration JSON、CSV/JSON trace path、Nsight captureなどのartifactを明示し、CLI ablation flagも記述している。ただしarXivのCode/Data欄および本文から独立した公式GitHub repository URLを確認できなかったため、公開コードの入手先は**未確認**とする。論文中でartifactが存在することと、第三者が公開repositoryから取得できることは区別する。
+
+## 研究上の位置づけ
+consumer GPUでlong-context LLMをservingするとき、最適化対象を「attention kernelの計算式」だけでなく「1 decode stepでGPUへ露出するwork量とlaunch構造」まで広げた点が有用。特に、最速baselineをfallbackとして保持しながら狭い勝ちregimeをcalibrated routerで利用する設計は、異なるGPUやruntimeへ展開する際にも現実的なsystem design patternである。
+
+一方で現時点のevidenceはworkshop-levelで、production integrationと複数hardwareでの検証が次の主要課題となる。
 
 ## 一次資料
-- https://arxiv.org/abs/2609.00891
-- https://arxiv.org/html/2609.00891
+- https://arxiv.org/abs/2606.26666
+- https://arxiv.org/pdf/2606.26666v2
