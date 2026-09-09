@@ -21,7 +21,19 @@ Chat側の固定入口:
 - trigger: `.survey/work-queue/submissions/chat-inbox.json`
 - result: `.survey/work-queue/results/chat-inbox.json`
 
-Chatは新規payload/submissionを作らず、既存固定ファイルを現在blob SHA付きでupdateする。trigger push後は `Survey helper worker` が論文本体反映、job/state遷移、派生view更新、ready=0時のdiscovery補充を行う。
+Chatは新規payload/submissionを作らず、既存固定ファイルを現在blob SHA付きでupdateする。trigger push後は `Survey helper worker` が論文本体反映、job/state遷移、派生view更新、duplicate suppression、ready=0時のdiscovery補充を行う。
+
+### 論文重複の必須チェック
+
+Discovery候補を提出する前、およびresearch着手前に、GitHub code searchだけで未登録判定をしない。次を正本として確認する。
+
+1. `.survey/survey-state/paper-identity-index.json`
+2. `.survey/survey-state/identity-deltas/**/*.json`
+3. `papers/inference/**` のfrontmatter
+
+canonical ID / arXiv ID / DOI / OpenReview IDを最優先し、arXiv/DOI URLしかない場合はURLからidentifierを抽出して照合する。identityで既登録ならdiscovery候補から外す。
+
+さらにActions側の `.survey/scripts/dedupe_queue.py` がqueue処理の前後でdiscovery由来ready research jobを再照合する。重複ならChatのreject submissionを待たず自動で `superseded` にする。これにより、Chatの事前確認が漏れても重複全文精読を防ぐ。
 
 ---
 
@@ -103,6 +115,18 @@ match数が0または2以上ならworkerは失敗扱いにして対象ファイ�
 固定payloadのupdateだけ成功してtrigger updateが失敗した場合、対象更新は未反映なので完了扱いにしない。次回、対象blob SHAとpayload内容がまだ有効ならtriggerだけ再送してよい。
 
 Actions実行後は `.survey/update-worker/result.json` を確認する。`ok: true` と同じ `attempt_id` を確認して初めて完了とする。`ok: false` の場合は対象ファイルへ反映済みとみなさない。
+
+### 共通の安全運用
+
+予定タスクの書き込みは以下を優先する。
+
+- 新規ファイル作成ではなく事前作成済み固定slotのupdate
+- 長文と制御JSONの分離
+- 既存ファイルは現在blob SHA付きupdate
+- 一意なattempt_id
+- 大きい既存ファイルは全文置換よりcompact edit
+- 安全検査/SHA競合時は最新状態を再取得して有効性確認後に1回だけ再試行
+- 単一失敗で予定タスクを停止しない
 
 ### 安全境界
 
