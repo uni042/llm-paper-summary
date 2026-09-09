@@ -1,30 +1,54 @@
 {
   "counts": {
     "discovery": {
-      "completed": 7,
-      "ready": 1
+      "completed": 8
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "completed": 9,
-      "superseded": 3
+      "superseded": 3,
+      "ready": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-47c0986a7df1a7c1",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-c57bf9d456b4f061",
+      "type": "research",
+      "lane": null,
+      "priority": 92,
+      "canonical_id": "arxiv:2609.06551",
+      "title": "EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs",
+      "source_url": "https://arxiv.org/abs/2609.06551",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/estream.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-db7f6bec1b5bf488",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arxiv:2609.07536",
+      "title": "Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap",
+      "source_url": "https://arxiv.org/abs/2609.07536",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/moe-overlap-resource-manager.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-bebbfc5f119d619b",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arxiv:2609.05425",
+      "title": "Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server",
+      "source_url": "https://arxiv.org/abs/2609.05425",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/cotail.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T10:22:49+00:00"
+  "generated_at": "2026-09-09T10:35:54+00:00"
 }
