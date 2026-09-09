@@ -60,3 +60,8 @@
 ## 保全
 
 移行だけで精読・監査件数を増減しない。保存済み成果は再読せず、progress deltaが欠けた実成果だけを根拠付きでreconcileする。旧 `.survey/survey-state/daily-plans/`、`runtime.json`、`queues/` は互換情報として利用できるが、workflow 8の制御正本はcycle state、選定snapshot、progress delta、cycle historyである。通常実行で予定タスクや手順書を自己変更しない。
+
+
+## transport診断
+
+request transportに障害が疑われる場合、実作業operationを複数経路で重複発行しない。まず状態を変更しない `status` を各候補transportで実行し、resultの `ok: true` まで確認して経路ごとの成否を比較する。診断対象は、利用可能な範囲で (1) requestファイル直接commit、(2) owner-only新規Issue、(3) command inboxへのowner-only Issue comment、(4) command inbox本文のowner-only edit とする。実際の `claim_run` / `finish_run` / `prepare_result` 等の状態変更operationは、診断で成功確認できた1経路だけから発行する。
