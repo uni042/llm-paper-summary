@@ -2,34 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
-  "job_id": "job-research-c57bf9d456b4f061",
+  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
+  "job_id": "job-research-db7f6bec1b5bf488",
   "data": {
-    "problem": "MoEは各tokenで少数の専門家だけを選ぶが、複数tokenのprefillでは要求全体として専門家集合の大半を触るため、専門家重みがモバイルDRAMへほぼ全量常駐しやすい。一方、モバイルNPUの一般的なグラフ実行系はトポロジ、tensor容量、parameter bindingを事前確定するため、実行時に変わる専門家・route数・parameter位置を効率よく扱えない。CPU/GPUへroutingやexpert実行を逃がすとNPUの高い行列演算性能を活かせず、既存offloadもdecode localityやCPU/GPU計算中心である。",
-    "novelty": "専門家間で演算トポロジが不変であることと、論理的に活性化された専門家が同時に物理常駐する必要はないことを利用する。1つの共有専門家NPUグラフに実行時route extentとparameter addressを束縛し、専門家全体をUFS上に置いたまま固定サイズのNPU可視arenaへgroup単位で流す。さらにUFS読出しとNPU計算を有限buffer producer-consumer pipelineとしてモデル化し、group size・I/O queue depth・bank countを自動選択する。",
-    "method_overview": "offlineでは専門家重みをNPUが直接消費するtile-major layoutへ変換し、専門家をgroup化してUFSへ配置する。onlineではnon-expert処理中からgroup読出しを開始し、route確定後に不要groupを捨て、必要groupだけを固定bankへ読み込む。bankがReadyになった後だけ共有専門家グラフへparameter bindingを公開し、NPU完了後にbankを再利用する。routeのgather、gate/up、SwiGLU、down、scatter-addは1つのroute-aware fused operatorへ統合する。",
+    "problem": "細粒度重畳ではGEMM2計算CTAとGatherRS通信CTAが同じSM常駐資源を競合する。通信CTA不足ではready splitが滞留し、多すぎるとGEMM2並列度が落ちる。CTAは整数waveで進むため最適配分はtoken数、expert負荷、kernel shape、split数に対して不連続に変わり、固定CTA数では適応できない。",
+    "novelty": "workload、kernel occupancy、GPU常駐制約、split-level readiness依存から候補kernelを実行・計測せず通信CTA数Cを起動直前に解析選択する。計算・通信のwave数と依存関係を同一timelineに置くwave-quantized makespan modelを用いる。",
+    "method_overview": "Cから通信常駐予約R(C)と残存計算容量P(C)を導出し、router由来expert tile数とcommunication tile数を整数waveへ写像する。split公開時刻と通信完了時刻の再帰から最終makespan T(C)を計算し、C=1..16で最小候補を選ぶ。",
     "components": [
       {
-        "name": "Topology-invariant expert graph sharing",
-        "description": "同じshape classの専門家で1つのNPUグラフを共有し、route descriptor、valid extent、placement map、parameter addressだけを呼出し時に変更する。専門家ごとのgraph再構築やtensor再確保を避ける。"
+        "name": "Dependency-constrained residency partition",
+        "description": "R(C)=ceil(C/o_comm)、P(C)=o_comp(G-R(C))。A100ではo_comm=1、o_comp=2、G=108。"
       },
       {
-        "name": "Composed sparse route and parameter binding",
-        "description": "routing結果とexpert-to-slot placement mapをNPU内で結合し、物理slotごとのCSR風route表を構築する。empty slotを飛ばし、token row・router weight・parameter addressを直接fused operatorへ渡す。"
+        "name": "Wave-quantized workload model",
+        "description": "routed expert countとkernel tile shapeからcompute tile数、token数・world size・hidden dimensionからcommunication tile数を求め、離散wave数へ変換。"
       },
       {
-        "name": "Fused intra-NPU expert pipeline",
-        "description": "DMA、HVX、HMXをVTCM上で重畳し、gatherからweighted scatter-addまでを1演算に融合する。中間tensorのDRAM materializationとdispatch境界を減らす。"
+        "name": "Split-readiness recurrence",
+        "description": "compute公開時刻と先行split通信完了を結合してpipeline fill・steady state・drainを予測。"
       },
       {
-        "name": "Bounded expert arena",
-        "description": "B個のbank×G専門家だけをNPU可視memoryへ保持し、Available→Filling→Ready→InUse→Availableのstateで安全に再利用する。論理的な専門家数に依存せず物理常駐量をBGWeへ制限する。"
+        "name": "Relative service-rate normalization",
+        "description": "固定C=16で得た基準service rateをreduction dimension、compute tile size、world sizeで補正。"
       },
       {
-        "name": "UFS–NPU pipeline auto-configuration",
-        "description": "group size G、queue depth Q、bank count Bをmax-plus recurrenceで評価し、memory budget内で予測latencyを最小化する。UFS bandwidth profileでQを先に決め、各GについてBを探索する。"
+        "name": "Launch-time CPU selector",
+        "description": "最大16候補をO(E+L|C|)で評価。候補GPU kernelの試行やper-shape winner tableは不要。"
       }
     ],
-    "system_design": "Qualcomm Hexagon HTPのscalar/HVX/HMX/DMA資源を直接協調させ、UDMABUF-backed DMA-BUFへO_DIRECT preadvでoffline-packed weightを直接読込む。non-FFN実行中にroute確定前prefetchを始め、実行中groupと次groupのUFS loadを重ねる。初期prefetch順序はoffline group順で、route確定後はinactive groupをskipする。"
+    "system_design": "既存dispatch後にtile shape、resident blocks/SM、host routed counts、GPU SM数を読み、選択したCでGatherRS通信CTA gridと計算側常駐上限を設定する。元のGEMM2/GatherRS kernel、routing、通信量、readiness protocolは変更しない。"
   }
 }
