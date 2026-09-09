@@ -81,6 +81,18 @@ canonical ID / arXiv ID / DOI / OpenReview IDを優先する。Actions側の `.s
 - 既存研究との差
 - 一次資料URL
 
+### Paper path / filename
+
+論文ファイル名は、リポジトリで以前から使っている**年始まりの旧形式を正本**とする。researchで新規ファイルを作る場合、候補探索時の仮名をそのまま `paper_path` に使わず、一次資料から識別子と発表年を確認してから確定する。
+
+- arXiv論文: `papers/inference/<lineage>/YYYY-YYMM.NNNNN-<slug>.md`
+  - 例: `papers/inference/01-offload-hierarchical-memory/2026-2608.13127-hbf-llm-serving.md`
+  - `YYMM.NNNNN` は frontmatter の `arxiv_id` と一致させる。
+- arXiv IDを持たない論文: 既存互換の `YYYY-<stable-key>-<slug>.md` または `YYYY-<slug>.md` とし、DOI・会議ID・プロジェクト名など一次資料から安定して決められる識別子があれば使う。
+- `<slug>` は小文字英数字とハイフンを基本とし、人間が論文・システムを識別できる短い名前にする。
+- `heteropanacea.md`、`estream.md`、`cacheflow.md` のような**年・識別子を欠く題名スラッグ単独の新規ファイルは禁止**する。
+- auditでは既存pathを原則維持する。識別子誤りや本規則から外れたpathを修正する場合だけ改名し、カテゴリREADME、`papers/inference/comparison.md`、identity indexなどの派生viewも同時に再生成する。
+
 ## 5. Structured record transport
 
 research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。Chatは同じ5 slotを持つ固定A/B bankを使用する。
