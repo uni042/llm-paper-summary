@@ -3,112 +3,342 @@ canonical_id: "arXiv:2609.05425"
 arxiv_id: "2609.05425"
 doi: "10.48550/arXiv.2609.05425"
 title: "Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server"
-summary: "GPUサーバの余剰host CPUへCPU workloadをco-locationした際のLLM serving劣化を、GPU kernel遅延ではなくGPU投入前のCPU-side serving stageのtail amplificationとして診断する。Core Path Tail Index（CPTI）とCore Tail Suppression（CTS）を導入し、workload risk、NVTX stage tail、OS-level protection、decode SLOを組み合わせるCoTail手順により、held-out条件でも固定ルールで保護方式を選択する。"
+summary: "LLM本体はGPUで計算していても、要求の受付・バッチ作成・GPUへの仕事投入はCPUが担当するため、同じサーバの空きCPUで別処理を動かすとLLMが大きく遅くなることがある。CoTailはCPU側の各処理段階のP95/P99遅延を測り、CPUスケジューラ競合ならLLMの中核スレッドだけをリアルタイム優先し、NUMA・キャッシュ・メモリ局所性の競合ならCPU配置を分離する、という診断と保護選択を自動化する手順。"
 source: "https://arxiv.org/abs/2609.05425"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-09"
+audit_version: 1
 ---
 
 # Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server
+
+> LLM本体はGPUで計算していても、要求の受付・バッチ作成・GPUへの仕事投入はCPUが担当するため、同じサーバの空きCPUで別処理を動かすとLLMが大きく遅くなることがある。CoTailはCPU側の各処理段階のP95/P99遅延を測り、CPUスケジューラ競合ならLLMの中核スレッドだけをリアルタイム優先し、NUMA・キャッシュ・メモリ局所性の競合ならCPU配置を分離する、という診断と保護選択を自動化する手順。
+
 ## 書誌情報
+
 - **著者**: Guanjie Cheng, Guowei Li, Yingying Wen, Xinkui Zhao, Zhe Liu, Shuiguang Deng
 - **公開**: arXiv:2609.05425v1, 2026-05-26
-- **種別**: arXiv preprint / cs.DC
-- **対象**: LLM serving、CPU co-location interference、tail latency diagnosis、OS resource control、NUMA、real-time scheduling
-- **実装**: 実験手順・launch/profiling command・workload定義・OS protection設定は本文/付録に詳述される。arXiv本文およびGitHub検索で著者公式コードrepositoryは確認できず、公開実装URLは未確認。
+- **種別**: プレプリント（preprint）
+- **主題**: LLM提供基盤（LLM serving）、CPU同居干渉（CPU co-location interference）、裾遅延（tail latency）、OS資源制御、NUMA、リアルタイムスケジューリング
+- **実装**: 実験手順、起動・計測コマンド、OS保護設定は本文・付録に詳しい。arXiv v1時点で著者公式コードリポジトリは確認できない。
+
+## 概要
+
+この論文の出発点は、GPUサーバにありがちな「GPUは忙しいがCPUは余っている」という状況である。
+
+LLM推論の主要な行列計算はGPUで行うため、CPU利用率だけを見ると多くのCPUコアが空いているように見える。そこで画像前処理、圧縮、Webサーバ、データベース処理など別のCPU仕事を同じマシンで動かせば、ハードウェア利用率を上げられそうに見える。このように一つのサーバへ複数の仕事を同居させることを**同居実行（co-location）**と呼ぶ。
+
+ところがLLM提供基盤は、GPUだけで完結しているわけではない。GPUが計算を始める前にCPU側で、
+
+1. 新しい要求を受け取る
+2. 今回一緒に処理する要求を選ぶ
+3. バッチを組み立てる
+4. KVキャッシュや要求状態を管理する
+5. GPUへカーネル実行を指示する
+
+といった制御処理が走る。
+
+このCPU側の仕事は、一回あたりは短くても、出力トークンを生成するたびに何度も通る。したがって別のCPU仕事に邪魔され、たまに数十倍遅い回が混ざると、GPUが「次に何を計算するか」の指示を待つことになる。
+
+CoTailの重要な観察は、**LLMが遅くなったとき、GPUカーネル自体が遅くなっているとは限らない**という点である。むしろ、GPUへ仕事を渡す前のCPU側処理の「遅い外れ値」が増えることが、スループットやTTFT、TPOT悪化の強い手掛かりになる。
+
+そこで著者らは、CPU側の主要段階を細かく計測し、どこで裾遅延が増えたかから原因を分類して、適切なOS保護を選ぶCoTailという手順を提案する。
+
 ## 問題設定
-GPUサーバではLLM推論中もhost CPU資源が余るためCPU workloadのco-locationは利用率向上に有効だが、外部CPU workloadがLLM serving pathのどこを阻害し、どのOS-level protectionを選ぶべきかは十分整理されていない。著者らは、単純なGPU kernel時間やCUDA launch指標だけではend-to-endのthroughput/TTFT/TPOT悪化を説明できず、GPU work submissionより前のCPU-side service-stage tailが主要な診断信号になることを示す。
-## 新規性
-CPU co-location干渉をmacro metricだけで分類せず、NVTXで観測したcore serving stageのP95/P99 tail amplificationをCPTIとして集約し、保護後の抑制率をCTSとして定量化する。さらにworkload-only hardware screening、service-stage診断、OS protection選択、common-baseline decode SLO validationを1つの運用手順CoTailへ統合し、primary setupで凍結したルールをheld-out model/framework/workloadへ適用する。
+
+### GPU推論なのに、なぜCPUがボトルネックになるのか
+
+LLMの1トークン生成を単純化すると、CPUとGPUの間で次のような往復がある。
+
+```text
+CPU: 次に処理するrequestを決める
+  ↓
+CPU: batchを作る・GPUへ仕事を投入する
+  ↓
+GPU: attention / FFNなどを計算する
+  ↓
+CPU: 結果を受け取り、次iterationの状態を更新する
+  ↓
+次のtokenへ
+```
+
+GPU計算が非常に速い場合、CPU側の数ミリ秒の遅れでも相対的に大きくなる。特に逐次生成（decode）では、この経路を出力トークンごとに繰り返す。
+
+CPUで同居処理が走ると、OSスケジューラがLLM用スレッドをすぐ実行できなかったり、CPUキャッシュやメモリ帯域を奪ったり、GPUに近いCPU・メモリから遠い場所へ処理が移ったりする。どの干渉が支配的かによって、有効な対策は異なる。
+
+### 平均値ではなくP95/P99を見る理由
+
+LLM提供では平均遅延だけでなく、遅い要求がどの程度発生するかが重要である。
+
+例えばあるCPU段階が99回は1 ms、1回だけ50 msなら、平均は約1.5 msに見える。しかし、その50 msの間GPUが仕事待ちになれば、ユーザーが見るTTFTやTPOTの裾が大きく悪化する。
+
+そこで論文は、**95パーセンタイル（P95）**や**99パーセンタイル（P99）**を見る。P99が20 msなら「99%の処理は20 ms以内だが、残り1%はそれより遅い」という意味である。
+
+CoTailは、この裾が同居処理なしの状態からどれだけ増えたかを主要な診断信号にする。
+
+## 手法のあらまし
+
+CoTailは、新しいGPUカーネルや新しいLLMアルゴリズムではなく、**CPU同居を許してよいか、許すならどのOS保護を使うかを決める運用手順**である。
+
+大きく次の流れで動く。
+
+1. まず同居させたいCPU仕事単体を測り、CPU演算・キャッシュ・メモリ・I/Oのどこを強く使うかを見る。
+2. 危険性が低くない場合、LLMと実際に同居させてCPU側提供経路を計測する。
+3. `scheduler.step`、`batch.construct`、`model.execute`、`model.forward` など主要段階のP95/P99が、干渉なし状態よりどれだけ伸びたかを調べる。
+4. CPUスケジューラ待ちが中心なら、LLM提供の中核スレッドだけを強く優先する。
+5. NUMA・キャッシュ・メモリ局所性が中心なら、LLMと同居処理を別ソケット・別CPU領域へ分離する。
+6. 最後にTTFT/TPOTなど実際のSLOを満たすか確認する。満たさなければ同居そのものを拒否する。
+
+ポイントは、**常に最強の保護を掛けるのではなく、症状に合わせて必要最小限の保護を選ぶ**ことにある。
+
 ## 手法
-CoTailは、まずCPU workload単体のhardware profileからLOW/MEDIUM/HIGH riskをscreeningする。非自明なcaseではunprotected co-locationをNVTX付きでprofileし、scheduler.step、batch.construct、model.execute、model.forwardのtailからCPTIとdominant stageを求める。service-tail支配ならEngineCoreだけをreal-time化するrt、cache/topology感度かつTTFT支配ならNUMA isolation、両方のsignalが強いmixed caseならrt+numaを候補とし、最後にcommon-baseline decode SLOと必要に応じCTS>0を確認して採否を決める。
 
-### Core Path Tail Index (CPTI)
-4つのcore serving stageについて、同一protectionのno-interference baselineに対する正のP95/P99 normalized tail amplificationを平均する。各stageはuniform weight 1/4。値が大きいほどCPU-side serving pathのtail amplificationが強い。
+### 1. CPU側の提供経路を4段階に分けて計測する
 
-### Core Tail Suppression (CTS)
-CTS=1-CPTI(w,p)/(CPTI(w,none)+1e-6)として、protection pがunprotected時のtail amplificationをどれだけ抑えたかを測る。負値はprotectionがtailを悪化させたことを示す。
+著者らはNVIDIA Nsight SystemsとNVTXを使い、LLM提供基盤のCPU処理を主要段階へ分けて時間を取る。
 
-### EngineCore-targeted rt
-framework-specific EngineCore Linux TIDだけをSCHED_FIFO priority 50へ昇格し、他のserving threadとco-tenantは通常のCFSに残す。vLLMではVLLM::EngineCore、SGLangではsglang::EngineCoreをruntimeで同定する。
+代表的には、
 
-### NUMA isolation
-LLM serverを選択GPUにlocalなNUMA nodeへ固定し、interfering workloadを反対socketへ隔離する。scheduler latencyではなくlocality/cache/memory/topology由来の干渉を狙う。
+- `scheduler.step`: 次にどの要求を実行するか決める
+- `batch.construct`: GPUへ渡すバッチを組み立てる
+- `model.execute`: モデル実行を開始するための制御処理
+- `model.forward`: GPU計算を含むforward呼出し周辺のCPU側制御
 
-### Frozen decision procedure
-primary vLLM/DeepSeek条件だけでthreshold・risk label・policy ruleをcalibrateし、その後held-out model/frameworkと未使用CPU workloadへ固定ルールを適用してpost-hoc fittingを避ける。
+を観測する。
 
-CoTailはuniversal cluster schedulerではなくsame-platformのmeasurement-driven operator procedureとして設計される。候補protectionはnone/nice/cgroup/rt/numaを基本とし、mixed-riskのみrt+numaを追加検証する。候補がcommon-baseline SLOを満たさなければco-locationをrejectし、tail-diagnosed caseではpositive CTSも要求する。
-## 評価条件
-- **Hardware**: dual-socket AMD EPYC 7T83、128 physical cores / 256 logical threads、8× NVIDIA RTX 4090 server; each serving experiment uses a single GPU
-- **Software**: Linux CFS / nice / cgroup v2 / SCHED_FIFO / NUMA affinity、NVIDIA Nsight Systems + NVTX、vLLM、SGLang
-- **Model**: Primary: DeepSeek-R1-Distill-Qwen-7B on vLLM、Held-out: Llama-3.1-8B on vLLM、Held-out: Mistral-7B on vLLM、Held-out: DeepSeek-R1-Distill-Qwen-7B on SGLang
-- **Dataset / Trace**: stress-ng and seven application-level CPU co-tenants spanning compute/cache/I/O/network/mixed behavior、Held-out CPU workloads: image-preprocess, sqlite-txn, text-search, zstd-compress
-- **Baseline**: none、nice、cgroup CPU weighting、EngineCore-targeted rt、NUMA isolation、targeted mixed-risk validation: rt+numa、selector baselines: Always-rt, Hardware-only, Macro-only
-- **Correctness**: 本研究の対象はmodel output品質ではなくserving性能とco-location SLOである。protectionはmodel計算を近似・変更せずOS scheduling/localityを制御する。tail diagnosisの妥当性はservice-stage tailとmacro degradationの相関、CTSと回復の整合、schedstat/delay-injection等の補助検証で確認するが、著者らは全干渉経路のformal causal proofとは主張しない。
-- **Serving mode**: single-GPU LLM serving on a multi-GPU server; tensor/pipeline parallel multi-GPU inferenceは対象外
-- **Client**: closed-loop batched client、batch size 32、最大512 generated tokens/request
-- **Measurement**: 10 measurement rounds、8 s warmup。throughput、TTFT、TPOTとNVTX stage latency distributionを収集
-- **rt**: framework-specific EngineCore TIDのみSCHED_FIFO priority 50。他thread/co-tenantはCFS
-- **nice**: LLM serving processを概ねnice=-15、interfering workloadはdefault
-- **cgroup**: LLM cpu.weight=5000、interfering workload cpu.weight=50
-- **numa**: GPU1ではLLMをCPUs 0–63,128–191、workloadを64–127,192–255へ分離
-- **Held-out validation**: threshold/risk label/policy-selection rulesをprimary vLLM/DeepSeek条件で固定してから別model/frameworkおよび4 unseen CPU workloadsで評価
-CPTIはscheduler.step、batch.construct、model.execute、model.forwardのP95/P99正規化tail amplificationをuniform weightで集約する。primary experimentでmechanismとdecision ruleを作り、held-outでは保護結果を見る前にCoTail recommendationを決める。小標本のbootstrap confidence intervalは10,000 resamplesで計算するが、formal inferenceではなくdescriptive robustness summaryとして扱う。
-同一dual-socket GPU server上の外部host-CPU co-location interferenceを対象とする。GPU memory oversubscriptionを前提とせず、主にGPU work submission前のCPU-side serving path、OS scheduler、NUMA/localityの干渉を扱う。
-## 主要結果
-最も強い干渉ではCPU co-locationがserving性能を数倍悪化させる一方、GPU kernelそのものの遅延よりCPU-side serving stageのtail amplificationが強い診断信号だった。EngineCore-targeted rtはscheduler/batch/execution tail型で大きくCPTIを抑え、NUMA isolationはcache/memory/topology-sensitiveなTTFT型で有効だった。CoTailは両者をworkloadとstage diagnosisに応じて選択し、held-out条件でも固定ルールでSLO達成率とdeployment costを改善した。
+ここで見たいのは「平均で何msか」ではなく、同居処理を入れたことでP95/P99がどれだけ伸びたかである。
 
-- Unprotected nginx throughput degradation / -78.8% (baseline: no-interference LLM-alone; condition: primary vLLM / DeepSeek-R1-Distill-Qwen-7B setup) — host CPU co-locationだけでserving throughputが大幅に低下する代表例。
+例えば通常は`batch.construct`が0.2 ms前後なのに、同居時だけP99が10 msへ伸びるなら、GPUカーネルを最適化しても根本原因は消えない。CPUがバッチを作るのを待っているからである。
 
-- Unprotected nginx TTFT increase / +429.5% (baseline: no-interference LLM-alone; condition: primary setup) — request admission/batching等を含むlatencyへの影響が大きい。
+### 2. CPTI — CPU提供経路全体の裾悪化を一つの数値へまとめる
 
-- Unprotected nginx TPOT increase / +362.4% (baseline: no-interference LLM-alone; condition: primary setup) — decode pathもCPU-side interferenceで深刻に悪化する。
+論文は各段階の裾悪化をまとめるため、**Core Path Tail Index（CPTI）**を導入する。
 
-- nginx throughput recovery / up to 4.4× (baseline: unprotected nginx co-location; condition: CoTail-guided protection) — 適切なOS protectionで大部分のthroughput lossを回復できる。
+考え方は単純で、4つの主要段階それぞれについて、
 
-- nginx TPOT recovery / up to 4.5× reduction (baseline: unprotected nginx co-location; condition: CoTail-guided protection) — tail型干渉へのtargeted protectionがdecode latencyを大きく改善する。
+`同居時のP95/P99 - 干渉なしP95/P99`
 
-- Common-baseline held-out SLO success / 12/12 oracle-feasible cases (baseline: Always-rt 10/12; Macro-only 11/12; condition: held-out model/framework/workload set; frozen CoTail rules) — primary conditionで決めたruleを凍結しても、評価可能caseすべてでdeployment SLOを満たした。
+を干渉なし値で正規化し、悪化した分だけを平均する。
 
-- RT exposure / 22/28 cases (baseline: Always-rt 28/28; condition: cost-aware selector evaluation) — 常時real-time schedulingよりRT利用を減らしながらSLOを維持する。
+CPTIが小さければCPU側提供経路の裾はほとんど変わっていない。大きければ、どこかの段階で遅い外れ値が頻発している。
 
-- Mean co-tenant slowdown / 51.21% (baseline: Always-rt 56.65%; condition: cost-aware selector evaluation) — LLM保護だけでなくco-tenant utilityの損失も抑える。
+この指標の目的は「CPU使用率が80%だから危険」のような粗い判断を避け、**実際にLLMのクリティカルパスがどれだけ乱されたか**を見ることにある。
 
-- EngineCore RT-covered CPU time / 310.22 s (baseline: Always-rt 403.46 s; condition: evaluated deployment cases) — real-time schedulingを必要なcaseへ限定できる。
+### 3. CTS — 保護を入れた後、裾悪化をどれだけ消せたか測る
 
-- Held-out image-preprocess CPTI suppression / CPTI 15.62 → 0.24; CTS 98.5% (baseline: unprotected → rt; condition: held-out workload) — batch.construct-dominant tailをEngineCore-targeted rtがほぼ除去した。
+ある保護方式を入れた後の効果は、**Core Tail Suppression（CTS）**で表す。
 
-- Held-out zstd-compress protection / CPTI 5.56 → 1.07; CTS 80.7% (baseline: unprotected → rt+numa; condition: mixed-risk held-out workload) — scheduler/service-tailとtopology signalを併せ持つcaseではcombined policyが選択された。
+概念的には、
 
-### 負の結果・境界条件
-- **nice / cgroup**: 多くのworkloadでunprotectedに近いまま、soft priorityやproportional CPU weightだけではcore-path tailを十分抑えられなかった。held-outではcgroupによりCPTIが悪化するcaseもある。
-- **rt is not universal**: rtはTPOT/throughput recoveryに強いがTTFTで常に最良ではない。ffmpegではNUMA isolationがTTFT increaseを103.6%から9.4%へ抑え、rtの58.4%より良かった。
-- **CTS does not capture every NUMA benefit**: NUMAはlocality/topology経路でmacro metricを改善できるため、CTSが小さい・負でもTTFT等が改善するcaseがある。CoTailはCTS単独ではなくworkload hardware signalとmacro SLO validationを併用する。
-- **Causality scope**: service-stage tailとmacro degradationの相関・介入整合性は強いが、著者らはすべてのinterference channelを形式的に因果証明したとは主張しない。
+`CTS = 1 - 保護後CPTI / 無保護CPTI`
 
-本研究の中心は新しいLLM kernelではなく、host-side interferenceをservice-stage tailへ分解し、既存OS mechanismを症状に応じて選択するdiagnosis/control loopにある。特に『常にrt』ではclean protection overheadとco-tenant costが発生するため、CPTI/CTSとworkload signalを用いて必要なcaseだけ強い保護へ上げる点が実運用上重要。
+である。
+
+CTSが100%に近ければ、無保護時に増えたCPU側の裾遅延をほぼ消せたことになる。0%ならほとんど改善していない。負なら、保護したせいでむしろ悪化した。
+
+ただし後述するNUMA分離は、CPU段階の裾だけではなくメモリ局所性やTTFTを改善する場合があるため、CTSだけで全対策を評価しない。
+
+### 4. CPUスケジューラ競合には「EngineCoreだけ」リアルタイム優先を付ける
+
+CPUスレッドがOSからなかなか実行時間をもらえないタイプの干渉には、Linuxのリアルタイムスケジューリングを使う。
+
+しかしLLMプロセス全体を強く優先すると、同居処理がほとんどCPUを使えなくなり、サーバ利用率を上げる目的と矛盾する。
+
+そこでCoTailは、提供基盤で特に重要な**EngineCoreスレッドだけ**を`SCHED_FIFO`優先度50へ昇格する。vLLMなら`VLLM::EngineCore`、SGLangなら対応する中核スレッドを実行時に特定する。
+
+他のLLMスレッドと同居処理は通常のCFSスケジューラに残す。
+
+これは「LLMを丸ごと最優先する」のではなく、**GPUへ仕事を供給するクリティカルな制御スレッドだけを割り込みにくくする**方法である。
+
+### 5. キャッシュ・メモリ・配置競合にはNUMA分離を使う
+
+デュアルソケットサーバでは、CPUとメモリは完全に均一ではない。各CPUソケットには近いメモリとPCIe/GPUがあり、別ソケットのメモリへアクセスすると追加遅延が発生する。
+
+この構造を**非一様メモリアクセス（Non-Uniform Memory Access; NUMA）**という。
+
+同居処理がLLMと同じソケットのCPUコア、キャッシュ、メモリ帯域を激しく使うと、単にスレッド優先度を上げても改善しない場合がある。
+
+そこでCoTailは、LLM提供プロセスを使用GPUに近いNUMAノードへ固定し、同居CPU仕事を反対側のソケットへ隔離する。
+
+これにより、
+
+- CPUキャッシュ競合
+- ローカルメモリ帯域競合
+- NUMAをまたぐ遠隔アクセス
+
+を減らす。
+
+### 6. niceやcgroupだけでは足りない場合がある
+
+Linuxには`nice`値やcgroupの`cpu.weight`でCPU優先度を調整する仕組みもある。
+
+これらは一般用途には有効だが、CFSの中で「平均的に多くCPU時間を与える」仕組みであり、**数十〜数百マイクロ秒のクリティカルなタイミングで必ずEngineCoreを即時実行する**保証ではない。
+
+論文では、niceやcgroupをかなり強くLLM側へ寄せても、CPU側P99悪化が十分消えないケースが多い。逆にターゲットを絞ったリアルタイム優先は、同居処理を完全に止めずに裾を大きく抑えられる。
+
+### 7. 症状から保護方式を選び、最後に実SLOで検証する
+
+CoTailはCPTIだけで機械的に対策を決めない。
+
+大まかには、
+
+- CPU側提供段階の裾が大きい → EngineCoreリアルタイム優先
+- キャッシュ・メモリ・NUMA感度が強くTTFTが悪い → NUMA分離
+- 両方の信号が強い → リアルタイム優先 + NUMA分離
+
+を候補にする。
+
+そのうえで、最終的に実際のTTFT・TPOT・スループットが共通基準のSLOを満たすか確認する。
+
+つまり診断指標は「なぜ遅いか」を絞るための道具であり、**利用者が見る性能指標で合格しなければ保護成功とはしない**。
+
+### 8. 学習したルールを固定して別モデル・別基盤で試す
+
+診断ルールを評価データへ後付けすれば、都合よく当たって見える。
+
+そこで著者らは、主要条件であるvLLM + DeepSeek-R1-Distill-Qwen-7B上で閾値や選択ルールを決めた後、それを凍結する。
+
+その後、Llama、Mistral、SGLang、未使用のCPU同居仕事へ同じルールを適用する。評価結果を見てから閾値を調整しない。
+
+この**固定ルール検証（frozen decision procedure）**により、「特定実験だけに合わせた診断表ではないか」を確認する。
+
+## 評価
+
+### まず見るところ
+
+- **結論**: GPUカーネルが正常でも、CPU側提供経路の裾遅延だけでLLM性能は数倍悪化し得る。
+- **対策**: CPUスケジューラ待ちには中核スレッドだけのリアルタイム優先、局所性・メモリ競合にはNUMA分離が効く。
+- **万能策ではない**: 常時リアルタイム優先は同居処理を余計に遅くし、TTFTではNUMAの方が良いケースもある。
+- **品質**: モデル計算自体は変更しないため、生成品質とのトレードオフは導入しない。
+- **適用範囲**: 単一GPUでLLMを動かすマルチGPUサーバ上のhost CPU同居問題が中心。分散マルチGPU推論そのものの研究ではない。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
+### 実機環境
+
+| 項目 | 設定 |
+|---|---|
+| CPU | dual-socket AMD EPYC 7T83 |
+| CPUコア | 128 physical / 256 logical threads |
+| GPU | NVIDIA RTX 4090 ×8 |
+| 推論時GPU数 | 1 GPU / experiment |
+| Framework | vLLM / SGLang |
+| 計測 | Nsight Systems + NVTX |
+
+主要条件はDeepSeek-R1-Distill-Qwen-7B + vLLM。
+
+保持条件としてLlama-3.1-8B、Mistral-7B、同じDeepSeek系モデルのSGLang実行を使う。同居CPU仕事にはstress-ngに加えて画像前処理、SQLite、テキスト検索、zstd圧縮など性質の異なる処理を含む。
+
+クライアントはclosed-loop、batch size 32、最大512生成トークン。各条件で8秒ウォームアップ後、10測定ラウンドを行う。
+
+### 無保護のCPU同居だけでLLMが大きく遅くなる
+
+代表的なnginx同居では、LLM単独時に対して
+
+- スループット: **78.8%低下**
+- TTFT: **429.5%増加**
+- TPOT: **362.4%増加**
+
+を観測する。
+
+つまり「GPUを共有していないから安全」ではない。CPU側の制御経路だけでも、GPUを大幅に遊ばせるほどの干渉を起こせる。
+
+### 症状に合った保護で大部分を回復できる
+
+nginx条件ではCoTailが選んだ保護により、無保護同居に対してスループットを最大約4.4倍へ回復し、TPOTを最大約4.5分の1へ短縮する。
+
+保持条件のimage-preprocessではCPTIが15.62から0.24へ下がり、CTSは98.5%。これはCPU提供経路の裾悪化をリアルタイム優先がほぼ除去した例である。
+
+zstd-compressではCPTI 5.56から1.07、CTS 80.7%で、リアルタイム優先とNUMA分離の組合せが選ばれる。
+
+### ルールを固定しても保持条件で機能する
+
+CoTailは、対策可能な保持条件12件すべてで共通SLOを達成した。
+
+| Selector | SLO達成 |
+|---|---:|
+| CoTail | 12 / 12 |
+| Always-RT | 10 / 12 |
+| Macro-only | 11 / 12 |
+
+常にリアルタイム優先を使う方式より、CoTailはRTを使うケースを28件中22件へ減らす。
+
+同居処理の平均 slowdown もAlways-RTの56.65%に対し51.21%、EngineCoreがリアルタイム優先下にいたCPU時間も403.46秒から310.22秒へ減る。
+
+つまり目的はLLMだけを最速にすることではなく、**LLMのSLOを守りつつ、余剰CPUをなるべく他処理へ使わせること**である。
+
+### リアルタイム優先が常に最良ではない
+
+ffmpeg条件では無保護時のTTFT増加が103.6%。
+
+- EngineCore RT: 58.4%増加まで改善
+- NUMA分離: 9.4%増加まで改善
+
+となり、NUMAの方が大幅に良い。
+
+この例は「CPU干渉=全部スケジューラ問題」ではなく、キャッシュ・メモリ・配置も別の原因になることを示す。
+
+</details>
+
+## 主要結果の読み方
+
+この論文の実務的なメッセージは、GPU使用率やGPUカーネル時間だけを見てLLM提供の原因調査を終えてはいけない、ということである。
+
+CPU側では短い制御処理が多数走るため、平均CPU使用率が低くても、クリティカルな瞬間にEngineCoreが実行されないだけでGPUが空転する。
+
+一方、リアルタイム優先ですべて解決するわけでもない。NUMA・キャッシュ・メモリ局所性が原因なら、スレッドを早く起こしても必要なデータアクセス自体が遅い。
+
+したがって、
+
+1. **どのCPU段階の裾が増えたか**
+2. **CPUスケジューラ待ちなのか、配置・メモリ競合なのか**
+3. **その対策で実際のSLOが戻ったか**
+
+を順に見ることが重要になる。
+
 ## 品質への影響
-model weight、attention、sampling、KV cache内容などmodel計算自体は変更しないため、推論品質の近似trade-offを導入する方式ではない。評価対象はserving throughput/TTFT/TPOTとco-tenant utilityであり、生成品質benchmarkは主題ではない。
+
+モデル重み、注意機構、サンプリング、KVキャッシュの内容は変えない。OS上のCPU実行順序と配置を変えるだけなので、近似計算やモデル品質低下を導入する方式ではない。
+
+評価対象は生成品質ではなく、スループット、TTFT、TPOT、同居処理への影響である。
+
 ## 既存研究との差
-- vLLM/SGLang等のserving engine内部最適化やbatch/KV管理を直接改造するのではなく、外部CPU co-tenantが既存serving pathへ与える干渉をOS側から診断・緩和する。
-- CUDA kernel execution timeやlaunch/queue metricだけで原因推定せず、NVTXでinstrumentしたscheduler.step、batch.construct、model.execute、model.forwardのP95/P99 tailを主要信号にする。
-- 単一のisolation policyを常用するのではなく、service-tail型はEngineCore-targeted rt、cache/topology-sensitive TTFT型はNUMA、mixed型はrt+numaへ分岐し、最後にcommon-baseline SLOで採否を検証する。
-- CPTI/CTSはresource utilizationそのものではなく、no-interference baselineからのservice-stage tail amplificationと、そのprotectionによる抑制を明示的に測る。
+
+- vLLMやSGLang内部のバッチング・KV管理を改良する研究ではなく、**既存の提供基盤がhost CPU上で受ける外部干渉**を対象にする。
+- GPUカーネル時間やGPUキュー長だけで原因推定せず、CPU側提供段階のP95/P99を直接計測する。
+- `nice`やcgroupのような一律の優先度調整ではなく、原因に応じてリアルタイム優先とNUMA分離を使い分ける。
+- 最強保護を常時掛けるのではなく、LLM SLOと同居処理の利用価値の両方を考え、必要なケースだけ強い保護へ上げる。
+
 ## 限界
-- primary hardwareはdual-socket AMD EPYC 7T83 + RTX 4090の1 server platformで、著者自身もhardware-counter/CPTI thresholdは異なるCPU topology、GPU interconnect、kernel、serving engine、background workload mixでrecalibrationが必要としている。
-- multi-GPU server上でのsingle-GPU servingを評価対象とし、tensor parallelismやpipeline parallelismを使うdistributed inferenceのhost-side interferenceは直接評価していない。
-- CoTailはsame-platform diagnostic procedureであり、global cluster scheduler、tenant fairness policy、admission-control systemとしての完全な設計ではない。
-- EngineCore-targeted SCHED_FIFOは強いOS mechanismであり、production利用ではruntime limit、priority ceiling、watchdog rollback、admission controlとの併用が必要と著者らが明記する。
-- bootstrap confidence intervalは反復数が小さいためdescriptive robustness summaryであり、formal statistical inferenceの保証ではない。
-- CPTI/CTSはCPU-side service-tail経路を要約するためNUMA/locality由来の改善を完全には表現せず、macro SLO validationとの併用が必要。
-- 評価したcandidate protection集合内でoracleを定義しているため、未評価のOS/runtime protectionがより良い可能性は残る。
-## 実装状態
-論文はserving launch command、Nsight/NVTX profiling、CPU workload構成、nice/cgroup/rt/NUMA設定、CoTail decision algorithmを付録まで具体的に記載する。rtはruntimeでframework-specific EngineCore TIDを同定してSCHED_FIFO priority 50へ昇格する。公開GitHub code repositoryはarXiv本文・landing page・GitHub検索から確認できず、第三者が取得可能な公式実装は未確認。
-## 研究上の位置づけ
-LLM serving scheduling/disaggregation系統のうち、GPU内のbatch schedulingやKV placementではなく、GPU serverのhost CPUを他workloadへ開放した際のcross-workload interference controlを扱う。『GPUが速いままでも、GPUへ仕事を渡す前のCPU serving pathがtail化してsystem throughputを壊す』ことを定量化し、OS scheduler/NUMA protectionをserving-specific observabilityで選択する点が特徴。GPU資源だけでなくhost-side resource managementをLLM serving SLOの一部として扱う研究として位置づけられる。
-## 監査メモ
-一次資料v1本文・付録まで確認。著者/所属、primary/held-out hardware・model/framework、protection設定、CPTI/CTS定義、主要macro result、held-out selector result、negative result、scope/caveatを照合した。公開コードURLのみ確認できなかったため、その点を未確認として明記し、現時点では追加auditを必須とはしない。
+
+- 主な実機はdual-socket AMD EPYC + RTX 4090環境であり、CPUトポロジやOSスケジューラが異なる環境では閾値を再較正する必要がある。
+- 各実験は単一GPU推論であり、テンソル並列・パイプライン並列などを含むマルチGPU推論のCPU経路は直接評価していない。
+- CPTI/CTSと性能悪化の対応は測定・介入で強く裏付けるが、すべてのCPU干渉経路を形式的に因果証明したわけではない。
+- NUMA分離の利点はCPTIへ完全には現れないため、一つの指標だけで対策可否を判断できない。
+- nice/cgroupの有効性は設定やLinuxバージョンでも変わり得る。
+- リアルタイム優先は設定を誤ると他処理を長時間飢餓させる危険があるため、論文のように対象スレッドを限定する前提が重要である。
+
+## 一般的な実装上の含意
+
+LLM推論のボトルネック調査では、GPUとCPUを別々のシステムとして見ない方がよい。
+
+特にGPUが高速になるほど、CPU側の小さな制御遅延が相対的に目立つ。提供基盤を調べるときは、
+
+1. GPUカーネル時間
+2. GPUが仕事を待っている空白時間
+3. その直前のCPU提供段階
+4. CPUスケジューラ待ち
+5. NUMA・キャッシュ・メモリ局所性
+
+まで一本のクリティカルパスとして見る必要がある。
+
+これはGPU推論サーバでCPUへ別仕事を載せる場合だけでなく、CPUオフロード、SSD I/O管理、ネットワーク制御などhost側処理が増えるシステムにも当てはまる。GPU計算を高速化した結果、**次の仕事をGPUへ供給する制御面（control plane）が新しい律速になる**ことがあるためである。
+
 ## 一次資料
-- https://arxiv.org/abs/2609.05425
-- https://arxiv.org/html/2609.05425v1
+
+- arXiv: https://arxiv.org/abs/2609.05425
+- PDF: https://arxiv.org/pdf/2609.05425
+
+## 更新履歴
+
+- 2026-09-09: MoE-Infinity基準に合わせて全面改稿。GPU推論でもCPUが律速になる理由、P95/P99、CPTI/CTS、EngineCore限定RT、NUMA分離、保護選択の因果関係を論文未読者向けに説明。
