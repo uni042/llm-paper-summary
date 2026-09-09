@@ -10,6 +10,7 @@
 - NotionはGitHub書き込み不能時だけ使う**一時配送キュー**であり、研究正本・paper正本・queue正本にはしない。
 - 固定の日次件数、旧cycle/run、10本/11本、固定research/audit比率は使わない。
 - 予約済みworkerは1つのまま維持し、08:30 JSTだけその他更新、それ以外の毎時:30は論文workerを選ぶ。
+- 論文workerは**探索だけで終了せず、探索した候補の全文精読・保存まで同一runで連続処理する**。queueが再び空になって新しいdiscovery jobが補充された場合も処理を続け、プラットフォーム上限または実処理上の阻害要因に当たるまで繰り返す。
 
 ## v10で変わった点
 
@@ -54,12 +55,15 @@ Scheduled Chat worker
 
 1. 最新HEADのrouter、queue-v10、next-jobsを読む。
 2. GitHub writeが利用可能なら、まずNotion退避キューの `pending` を確認し、現在queueと整合する未反映成果があれば新規jobより先に再投入する。
-3. ready jobをpriority順に処理する。research着手前とdiscovery候補提出前にidentity正本で重複確認する。
-4. research/auditは一次資料全文を読み、選択したbankの5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。
-5. 固定slotを順番に小さくupdateする。途中失敗なら成功済みslotを保持し、失敗slotだけ安全に1回再試行する。
-6. 全slot成功後だけinboxをupdateする。
-7. `chat-inbox.json` のpush時に旧resultがresetされ、その後生成された `.survey/work-queue/results/chat-inbox.json` が同一 `job_id` で `ok: true`、かつ最新queueでjob完了になるまで完了扱いにしない。
-8. 1件完了ごとに最新queueを読み直し、安全に保存完了できる範囲で次jobへ進む。
+3. ready research/auditがあればpriority順に処理する。research着手前とdiscovery候補提出前にidentity正本で重複確認する。
+4. readyがdiscoveryなら探索を実行し、候補を固定inboxへ保存する。**discovery送信だけでrunを終了しない。** Actions反映後の最新queueを読み直し、生成されたresearch jobへ直ちに進む。
+5. research/auditは一次資料全文を読み、選択したbankの5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。
+6. 固定slotを順番に小さくupdateする。途中失敗なら成功済みslotを保持し、失敗slotだけ安全に1回再試行する。
+7. 全slot成功後だけinboxをupdateする。
+8. `chat-inbox.json` のpush時に旧resultがresetされ、その後生成された `.survey/work-queue/results/chat-inbox.json` が同一 `job_id` で `ok: true`、かつ最新queueでjob完了になるまで完了扱いにしない。
+9. 1件完了ごとに最新queueを読み直す。researchからauditが生成されたら同じrunで処理する。
+10. readyが0件になりActionsが次のdiscovery jobを補充したら、同じrunで再び探索へ進む。**discovery → research → 必要ならaudit → queue再取得 → 次discovery** を、実行環境が許す限り繰り返す。固定件数・固定バッチ数は設けない。
+11. 次回へ残してよいのは、全文取得不能、GitHub/Notion/Libraryへの保存不能、未解決依存、または時間・実行回数・コンテキスト等のプラットフォーム上限で継続不能になった分だけとする。停止時点のqueueを次回runがそのまま引き継ぐ。
 
 ## GitHub write障害時
 
