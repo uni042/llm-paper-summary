@@ -70,15 +70,13 @@ canonical ID / arXiv ID / DOI / OpenReview IDを優先する。Actions側の `.s
 
 ## 5. Structured record transport
 
-research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。Chatは次の固定5 slotを使用する。
+research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。Chatは同じ5 slotを持つ固定A/B bankを使用する。
 
-| slot | path | 内容 |
-|---|---|---|
-| `metadata` | `.survey/work-queue/records/chat-record/metadata.json` | 書誌・frontmatter・一次資料 |
-| `problem_method` | `.survey/work-queue/records/chat-record/problem_method.json` | 問題設定・新規性・手法 |
-| `evaluation` | `.survey/work-queue/records/chat-record/evaluation.json` | hardware/model/baseline/評価条件 |
-| `results` | `.survey/work-queue/records/chat-record/results.json` | 主要結果・負の結果・品質影響 |
-| `positioning` | `.survey/work-queue/records/chat-record/positioning.json` | 差分・限界・実装状態・位置づけ |
+- bank A: `.survey/work-queue/records/chat-record/`
+- bank B: `.survey/work-queue/records/chat-record-b/`
+- 各bankのslot: `metadata.json`, `problem_method.json`, `evaluation.json`, `results.json`, `positioning.json`
+
+通常はAを使う。Aに別jobの途中保存が残り、そのjobを今すぐ完了できずAを上書きすると成果を失う場合だけBを使う。単に負荷分散するため交互利用しない。
 
 各slot envelope:
 
@@ -185,12 +183,12 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
 
 ## 6. Save protocol
 
-1. 同一job用の一意な `attempt_id` を決める。
+1. 同一job用の一意な `attempt_id` を決め、使用bank `a` / `b` を選ぶ。
 2. `metadata` → `problem_method` → `evaluation` → `results` → `positioning` の順に処理する。
 3. 各固定slotを直前fetchし、現在blob SHA付きでupdateする。
 4. update成功後に返った新blob SHAを記録する。
 5. 途中失敗ならinboxを送らない。成功済みslotは保持し、job/attemptがまだ有効なら失敗slotだけ1回安全に再試行する。
-6. 5 slotすべて保存成功後だけ固定 `.survey/work-queue/submissions/chat-inbox.json` をupdateする。
+6. 選択bankの5 slotすべて保存成功後だけ固定 `.survey/work-queue/submissions/chat-inbox.json` をupdateする。
 7. inboxの `record_slots` は5件固定・上記順序で、各 `slot`, `path`, `blob_sha` を入れる。
 8. Actionsの `.survey/scripts/assemble_research_record.py` が全slotを検証し、`.survey/scripts/render_paper.py` でrunner内だけにMarkdownを生成する。
 9. 既存 `queue_worker.py` へ一時 `payload_path` として渡す。
@@ -205,6 +203,7 @@ Inbox例:
   "attempt_id": "attempt-...",
   "job_id": "job-...",
   "status": "completed",
+  "record_bank": "a",
   "paper_path": "papers/inference/...md",
   "expected_blob_sha": "existing paper update時のみ",
   "record_slots": [
@@ -219,6 +218,8 @@ Inbox例:
   "audit_flags": []
 }
 ```
+
+`record_bank` と各 `record_slots[].path` は一致させる。bank Bではpath rootを `.survey/work-queue/records/chat-record-b/` に置き換える。
 
 ## 7. Discovery / blocked / deferred / rejected
 
@@ -279,7 +280,7 @@ GitHub blob SHAはNotionへ固定しない。replay時に各固定slotを改め�
 1. pending pageを読む。
 2. 最新queue/identity/対象paperを再確認する。
 3. 同じ成果が未反映でjobがまだ適用可能なら `replaying` にする。
-4. v10固定slot/inboxへ通常protocolで再投入する。
+4. 空いているv10 record bankを選び、固定slot/inboxへ通常protocolで再投入する。
 5. Actions resultとqueueを確認する。
 6. 成功時だけNotionを `replayed` にする。
 7. jobがすでにterminal/superseded、identity衝突、成果がstaleで安全に適用不能なら `dead_letter` とし、盲目的に反映しない。
@@ -291,7 +292,7 @@ Notion保存成功はGitHub publication成功ではない。queue上のjobをcom
 
 - Scheduled Chatから `create_file` を通常運用で使わない。
 - paper/state/README/identity/queueを直接updateしない。
-- 予定タスクから書けるGitHub pathを固定record slots、固定inbox、08:30用固定payload/inboxに限定する。
+- 予定タスクから書けるGitHub pathをA/B固定record slots、固定inbox、08:30用固定payload/inboxに限定する。
 - Base64、圧縮、難読化などを安全検査回避のために使わない。
 - 構造化JSONは操作サイズ・再試行粒度・検証性を改善するための形式であり、安全境界を迂回するためのものではない。
 - 単一write失敗で予定タスクを停止/無効化/自己変更しない。
