@@ -2,25 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
-  "job_id": "job-research-db7f6bec1b5bf488",
+  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
+  "job_id": "job-research-85c54a348e38b072",
   "data": {
-    "overview": "解析selectorは実測oracleに近いCを低overheadで選び、COMETの固定resource partitionを全評価configurationで改善した。効果はtarget operatorで最大だが、layer全体とcomplete-model prefillにも残る。",
+    "overview": "HeteroPanaceaは『分離そのもの』よりもworkload shapeとstage専用hardwareの組合せが性能を決めることを示す。custom NPUではprefill-heavyになるとPDAFが一貫して強くなる一方、commercial GPU catalogでは4段分離の自由度をhardware構成に変換しにくく、PDがPDAFと同等以上になる条件が多い。",
     "key_results": [
-      {"metric": "mean predictor regret", "value": "3.22%", "baseline": "measured oracle", "condition": "15 real-p90 TP=4/EP=1 workloads; maximum 10.21%", "interpretation": "per-shape計測なしでもoracle近傍を選択。"},
-      {"metric": "mean solver overhead", "value": "0.157 µs", "baseline": "standalone analytical selector", "condition": "launch-time CPU selection", "interpretation": "dispatch経路に対して小さい。"},
-      {"metric": "GEMM2+GatherRS geometric-mean speedup", "value": "2.528×", "baseline": "COMET", "condition": "all TP/EP configurations", "interpretation": "maximum 4.218×。"},
-      {"metric": "complete post-router MoE layer geometric-mean speedup", "value": "1.771×", "baseline": "COMET", "condition": "all TP/EP configurations", "interpretation": "maximum 2.584×。"},
-      {"metric": "complete-model prefill geometric-mean speedup", "value": "1.185×", "baseline": "COMET", "condition": "all TP/EP configurations", "interpretation": "maximum 1.439×。"},
-      {"metric": "TP=2/EP=2 model-level geometric means", "value": "1.336× / 1.211× / 1.232×", "baseline": "COMET", "condition": "Granite / Qwen / DeepSeek-V2-Lite", "interpretation": "S>=4096の全feasible pointでCOMET、Megatron core-TE、FastMoE TP+NCCLより高速。"},
-      {"metric": "lowest observed speedup", "value": "1.058×", "baseline": "COMET", "condition": "Qwen complete-model prefill, TP=4/EP=1, S=1024", "interpretation": "全3測定境界・全TP/EP構成でpointwise minimumが1×超。"}
+      {"metric": "custom-NPU PDAF throughput vs ND", "value": "1.05-1.92×", "baseline": "ND", "condition": "I/O=100, 8 evaluated models", "interpretation": "PDAFは8/8でNDを上回り、6/8モデルで最良topology。Llama 4 Maverick 1.81×、Scout 1.77×。"},
+      {"metric": "average PDAF crossover", "value": "0.48× -> 2.10×", "baseline": "ND", "condition": "custom NPU; average changes from I/O=1 to I/O=10", "interpretation": "prefill比率の上昇で分離overheadからstage specialization利得へ急速に反転する。I/O=1000ではdecode underutilizationで1.27×まで低下。"},
+      {"metric": "commercial-GPU PD throughput vs ND", "value": "1.18-2.50×", "baseline": "ND", "condition": "I/O=0.01, 8 models", "interpretation": "PDは8/8でNDを上回るが、別workloadでは非一様。I/O=100では6/8モデルでPDがPDAF以上。"},
+      {"metric": "AF-only performance", "value": "0.20-0.65×", "baseline": "ND", "condition": "custom NPU, I/O=100", "interpretation": "attention/FFNだけの分離は通信overheadを回収できず常に不利。GPU sweepでもAFのbestは0.96×でNDを超えない。"},
+      {"metric": "tensor-parallel component validation", "value": "0.79× / 1.00× / 1.06× / 1.02×", "baseline": "real B200 measurement", "condition": "simulated/real latency ratio at 1/2/4/8 GPUs", "interpretation": "roofline/communication component modelはTPで概ね実測近傍。"},
+      {"metric": "pipeline-parallel component validation", "value": "0.67× / 0.77× / 0.84× / 0.90×", "baseline": "real B200 measurement", "condition": "simulated/real latency ratio at 1/2/4/8 GPUs", "interpretation": "PPではsimulationが実測latencyをより強く過小評価し、end-to-end結果の不確実性要因となる。"},
+      {"metric": "stage-specific 4-bit accuracy sensitivity", "value": "BFCL 20/11/12/20%, GSM8K 47/79/80/15%", "baseline": "8-bit BFCL 21%, GSM8K 75%", "condition": "only PF/DA/PA/DF respectively changed to 4-bit on Qwen 32B-class experiment", "interpretation": "どのstageを低精度化できるかはmodelだけでなくworkload/taskに依存する。"}
     ],
     "negative_results": [
-      {"name": "short-input backend crossover", "description": "S=1024ではMegatron core-TEが3モデルすべてで最速。Qwen S=2048でもMegatron core-TEが提案法より高速。"},
-      {"name": "DeepSeek memory boundary", "description": "DeepSeek-V2-Lite complete-model prefillのB=4,S=16384はA100 40GBでOOM。"},
-      {"name": "architecture scope", "description": "service-rate parameterとlegal C rangeはA100/NVLink kernel family向けに再導出されており、他GPU/多nodeへそのまま移植できない。"}
+      {"name": "low/balanced-ratio custom NPU", "description": "I/O=0.01および1ではNDが全モデルで最良。分離通信とpool fragmentationがspecialization利得を上回る。"},
+      {"name": "commercial GPU limits four-stage specialization", "description": "PDAFのstage assignmentはほぼH100に収束し、compute/memory比をstageごとに独立設計できないためcustom NPUほど4段分離が効かない。"},
+      {"name": "active-expert growth", "description": "active expertsを増やしてFFN compute/weight trafficを増大させるとPDAF利得が崩れ、例としてDeepSeek-V4-Flashは1.41×から4x active expertsで0.43×、8xで0.38×まで低下する。"}
     ],
-    "interpretation": "主因はwork量削減ではなく同一計算・通信仕事の常駐資源再配分。token tileが増え複数waveになるほど固定partitionの不整合が顕在化し、モデル全体でも利益が蓄積する。",
-    "quality_impact": "FLOPs、routing、通信量、model semanticsを変えずnumerical correctnessを保持するため、accuracy trade-offを導入しない。"
+    "interpretation": "PDAFの価値はstage間のresource mismatchが大きく、かつそれを異種hardwareへ実際に写像できる場合に生まれる。decode-attentionは大容量・高帯域memoryと比較的低compute、prefill stagesとdecode-FFNは高computeを要求するため、custom hardwareでは分離がresource right-sizingにつながる。commercial GPUでは同じ自由度が得にくい。",
+    "quality_impact": "main throughput sweepはfull precisionでquality trade-offを避けている。別のstage-wise quantization実験では4-bit化するstageとtaskによってaccuracy低下が極端に異なり、performance-onlyなprecision選択は安全でないことを示す。"
   }
 }
