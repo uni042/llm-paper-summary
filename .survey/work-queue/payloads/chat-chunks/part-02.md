@@ -1,1 +1,7 @@
-<!-- Fixed reusable Chat payload chunk 02. Scheduled Chat workers overwrite this existing file; do not delete. -->
+## Second chunk
+
+この第二chunkには後半だけを保存する。Actions runnerはpart-01、part-02の順番を固定して連結し、連結結果を一時的な互換payloadへ置く。queue workerが処理した後、その一時payloadはcheckout状態へ戻すため、連結済み長文そのものはrepositoryへcommitされない。
+
+このテストでは実際のresearch jobを完了させない。inboxはrequest_jobs操作として送り、分割transportの検証だけを行う。現在ready jobが存在する場合は新しいdiscovery jobを増やさないため、既存queueを壊さず経路だけ確認できる。
+
+以上で、複数の既存小ファイルを更新し、各blob SHAをmanifestで固定してからActionsへ渡す一連の経路を検証する。
