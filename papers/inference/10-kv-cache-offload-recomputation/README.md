@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（22本）
+## 自動生成の論文一覧（23本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -30,6 +30,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | [SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing](2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md) | 同一serverでKV需要が低い別modelの空きHBMへprefix KVをNVLink経由で退避し、local GPUには実行中layerのKVだけを流し込んで、multi-turn servingの再読込待ちと文脈長制約を減らす。 |
 | [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md) | GH200のHBMが混雑したとき、応答開始やtoken間隔の目標に遅れそうなrequestを優先してKV cacheをCPU DRAMとの間で入れ替え、小さいKV blockをまとめて双方向転送することで高速C2C linkを使い切るonline serving system。 |
 | [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md) | CPUから戻すcached KVの量が、新しく計算するprefill token量に対してどれくらい増えるとPCIe転送の方がGPU計算より遅くなるかを式とH100実測で示し、prefix reuseが多いほどKV offloadが早くI/O律速になることを分析した研究。 |
+| [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](lmcache.md) | vLLM/SGLangのKV cacheをGPU外へ抽出し、CPU・disk・remote storage・networkを跨いで再利用/転送する汎用KV cache layer。大粒度chunk転送、compute-I/O overlap、zero-copy、標準connector APIによりprefix reuseとprefill-decode分離を実用化する。 |
 | [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md) | 頻繁に参照されるKVを高速HBM、そうでないKVを大容量DRAMへ置く配置問題をモデル化し、未来のattention参照先を完全に知る理想条件との比較から、実用schedulerにどれだけ改善余地が残るかを測るsimulation研究。 |
 | [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md) | 一部requestのKV cacheとdecode attentionをCPUへ移しつつ、attention前のlinear計算はCPU/GPU向けrequestを一つのGPU batchでまとめ、CPU結果を必要になる直前まで待たないことでCPU attentionをGPU計算の裏へ隠す方式。 |
 | [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md) | KVキャッシュをlayer単位より細かいattention head単位でCPU RAMへ退避し、GPUには同時に使うheadだけを置いて、近似なしの超長文脈推論を小容量GPUで可能にする。 |

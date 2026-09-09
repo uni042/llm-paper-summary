@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（17本）
+## 自動生成の論文一覧（18本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -13,6 +13,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 | [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md) | 複数microbatchから同じexpertへ送られるtokenをまとめて大きなmatrix multiplicationとして実行し、Intel AMX対応CPUとGPUへexpert計算を分担して、offloaded MoEのthroughputを高める。 |
 | [FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving](2026-2604.02715-fluxmoe-decoupling-expert-residency.md) | MoE expertを永続的なGPU常駐weightではなく一時的にmaterializeするstreamed parameterとして扱い、圧縮GPU memoryとCPU DRAMから必要layerのexpertだけを供給してKV cacheへGPU memoryを優先配分する。 |
 | [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md) | NVLinkで接続された別GPUの空きHBMを、失ってもCPU copyや再計算から復旧できる一時cacheとして使い、MoE expert weightやKV cacheをhost DRAMから戻すより高速に再取得するoffload framework。 |
+| [FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices](2026-2601.17063-flashmoe-ssd-io-cache-replacement.md) | 大規模MoEの非活性expertをSSDへ置き、recencyとfrequencyから将来再利用距離を推定する軽量学習cacheでSSD I/Oを削減し、メモリ制約下の実機推論を高速化する。 |
 | [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md) | 複数batchで共通して使われるexpertを先にGPUで計算し、その計算中にまだGPUにないexpertをCPU RAM / SSDから読み込むことで、巨大MoEのI/O待ちを隠す単一GPU向け推論system。 |
 | [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md) | 生成iterationごとのrouting履歴とpromptの類似性から近い過去requestを探し、次に使われそうなexpertだけを先読み・GPU cacheへ保持して、小さいVRAMでもexpert転送待ちを減らすlossless offload方式。 |
 | [MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md) | expert weightとKV cacheをCPU DRAMへ置き、次のweight転送・CPU attention・GPU MoE計算をmicro-batch間で同時進行させて、低VRAM GPUのI/O待ちを減らす推論system。 |
@@ -21,7 +22,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 | [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md) | GPUに載らないlinear weightの一部をCPUで直接計算し、残りのweight転送・GPU計算と並行実行することで、batch=1の低遅延offload推論を高速化するCPU-GPU協調system。 |
 | [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md) | GPUに常駐しないexpertをCPUで直接計算し、重いweight transferをactivation転送へ置き換えるCPU–GPU協調MoE推論方式。 |
 | [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) | 同じrequestでは使われるexpertに偏りが続きやすい性質を利用し、過去のrouting履歴から再利用されそうなexpertをGPUへ残して先読みすることで、個人PC上のMoE offload待ちを減らすシステム。 |
-| [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md) | MoE expertをCPUへ置き、最近使ったexpertをGPUへ残すcacheと、将来使いそうなexpertの先読みを組み合わせて、GPU memory制約下の重み転送待ちを減らす推論手法。 |
+| [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md) | MoE expertをCPUへ置き、最近使ったexpertをGPUへ残すLRU cacheと、将来使いそうなexpertの投機的先読みを組み合わせて、GPU memory制約下の重み転送待ちを減らす推論手法。 |
 | [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md) | 直近tokenで使ったFFN weightをDRAMへ残し、同じニューロンに必要なweightをFlash上でまとめて配置して、必要部分だけを少ないread回数で読み出すことでI/OとDRAM使用量を減らす手法。 |
 | [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md) | GPU・CPU DRAM・NVMe SSDを一つのmemory hierarchyとして扱い、weight・activation・KV cacheの配置と計算順を探索して、単一commodity GPUで巨大LLMのbatch throughputを引き上げるoffload system。 |
 <!-- survey:auto:end -->

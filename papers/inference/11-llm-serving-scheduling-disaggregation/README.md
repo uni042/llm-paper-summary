@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（38本）
+## 自動生成の論文一覧（41本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -12,11 +12,14 @@
 | [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md) | vLLMの1 iteration当たりtoken budgetを固定せず、同時prefill数とactive decode状態からscheduling pressureを見て大きいbudgetと小さいbudgetを切り替え、長context prefillの効率とdecode interferenceを両立する。 |
 | [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md) | 未知の出力長に対するKV予約量、GPU並列構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemptionのcostを抑えるcontrol-plane手法。 |
 | [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md) | batch枠とKV cacheをresource budgetとして価格付けし、各requestのSLO便益がresourceのshadow priceを上回るworkerへroutingすることで、latency・TTFT・throughput・tail SLOを同じonline最適化で調整するLLM router。 |
+| [Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving](2026-2607.02043-kairos-load-aware-prefill-deflection.md) | 分離型LLM servingでprefill queueとKV転送がTTFTを支配する時、decode nodeの余剰computeへprefillをTBT-safeな可変chunkでdeflectし、KVをdecode側で直接構築してtail TTFTを削減する。 |
 | [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md) | 低頻度な複数MoEを同時提供する際、FFN weight用GPU poolとKV/attention用GPU poolを分離し、変動するKV需要を共有poolへ集約して長contextとtail latencyを改善する。 |
 | [Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice](2026-2606.22327-geometry-aware-online-scheduling.md) | requestの実行時間だけでなく、生成中に時間とともに増えるKV cacheの占有量を含む『時空間volume』で優先順位を決め、memory pressure下の平均・tail latencyを下げるLLM serving scheduler。 |
 | [Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving](2026-2606.01839-conserve-conversation-level-agentic-serving.md) | agentの各turnを個別予測して配置せず、conversation全体を初回の重いprefillと長いmemory-bound tailの2段階として扱い、観測可能なinput長とKV占有量だけで配置してKV転送と誤予測を減らす。 |
+| [Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference](2026-2605.02329-taming-request-imbalance-slo-aware-scheduling.md) | 長短requestが混在するprefill/decode分離型servingで、prefill完了予測とSLO残余時間からurgentなrequestを先に処理し、decodeではTPOT SLOまでのslack内に短いrequestを選択的に詰めることで、head-of-line blockingとstraggler待ちを減らす。 |
 | [Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC](2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md) | request処理をSmartNIC、tokenごとのbatching・scheduling・KV cache管理をGPU常駐制御へ移し、steady-state推論のcritical pathからhost CPUを外してlatency・throughputとCPU干渉耐性を改善する。 |
 | [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md) | 将来layerのexpert負荷分布を軽量predictorで予測し、stragglerになりそうなexpertをserverless replicaとして動的にscale・配置して、distributed MoE servingのload imbalanceを減らす。 |
+| [Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints](2025-2504.11320-fluid-guided-online-scheduling.md) | 生成に伴って増えるKV cacheを内生的メモリ制約として流体近似し、均衡batch構成から導くWAIT/Nested WAITの閾値制御でeviction cascadeを抑え、特に高負荷域の安定性とlatencyを改善する。 |
 | [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md) | prefillとdecodeを別GPU群へ分け、cluster内のCPU DRAM・SSDへ過去KVを保存して別nodeからも再利用できるようにし、KV取得時間・queue待ち・残りprefill計算を比較してrequestの実行先を決める大規模serving system。 |
 | [Queue Management for SLO-Oriented Large Language Model Serving](2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md) | interactive / batch requestや複数modelを同じclusterで扱うとき、各request groupがあと何秒待てるかとmodelがどのGPUに載っているかを見て、queue順序と実行先を組み替え、latency目標を守れるrequest数を増やすsystem。 |
 | [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md) | 実行中requestのKV cacheを別model instanceへ段階的に移し、GPU間の混雑差・memory不足・priority変更・instance削減が起きた後でもrequest配置を修正できるmulti-instance serving scheduler。 |
