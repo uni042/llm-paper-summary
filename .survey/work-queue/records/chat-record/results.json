@@ -2,7 +2,30 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
+  "job_id": "job-research-bebbfc5f119d619b",
+  "data": {
+    "overview": "最も強い干渉ではCPU co-locationがserving性能を数倍悪化させる一方、GPU kernelそのものの遅延よりCPU-side serving stageのtail amplificationが強い診断信号だった。EngineCore-targeted rtはscheduler/batch/execution tail型で大きくCPTIを抑え、NUMA isolationはcache/memory/topology-sensitiveなTTFT型で有効だった。CoTailは両者をworkloadとstage diagnosisに応じて選択し、held-out条件でも固定ルールでSLO達成率とdeployment costを改善した。",
+    "key_results": [
+      {"metric": "Unprotected nginx throughput degradation", "value": "-78.8%", "baseline": "no-interference LLM-alone", "condition": "primary vLLM / DeepSeek-R1-Distill-Qwen-7B setup", "interpretation": "host CPU co-locationだけでserving throughputが大幅に低下する代表例。"},
+      {"metric": "Unprotected nginx TTFT increase", "value": "+429.5%", "baseline": "no-interference LLM-alone", "condition": "primary setup", "interpretation": "request admission/batching等を含むlatencyへの影響が大きい。"},
+      {"metric": "Unprotected nginx TPOT increase", "value": "+362.4%", "baseline": "no-interference LLM-alone", "condition": "primary setup", "interpretation": "decode pathもCPU-side interferenceで深刻に悪化する。"},
+      {"metric": "nginx throughput recovery", "value": "up to 4.4×", "baseline": "unprotected nginx co-location", "condition": "CoTail-guided protection", "interpretation": "適切なOS protectionで大部分のthroughput lossを回復できる。"},
+      {"metric": "nginx TPOT recovery", "value": "up to 4.5× reduction", "baseline": "unprotected nginx co-location", "condition": "CoTail-guided protection", "interpretation": "tail型干渉へのtargeted protectionがdecode latencyを大きく改善する。"},
+      {"metric": "Common-baseline held-out SLO success", "value": "12/12 oracle-feasible cases", "baseline": "Always-rt 10/12; Macro-only 11/12", "condition": "held-out model/framework/workload set; frozen CoTail rules", "interpretation": "primary conditionで決めたruleを凍結しても、評価可能caseすべてでdeployment SLOを満たした。"},
+      {"metric": "RT exposure", "value": "22/28 cases", "baseline": "Always-rt 28/28", "condition": "cost-aware selector evaluation", "interpretation": "常時real-time schedulingよりRT利用を減らしながらSLOを維持する。"},
+      {"metric": "Mean co-tenant slowdown", "value": "51.21%", "baseline": "Always-rt 56.65%", "condition": "cost-aware selector evaluation", "interpretation": "LLM保護だけでなくco-tenant utilityの損失も抑える。"},
+      {"metric": "EngineCore RT-covered CPU time", "value": "310.22 s", "baseline": "Always-rt 403.46 s", "condition": "evaluated deployment cases", "interpretation": "real-time schedulingを必要なcaseへ限定できる。"},
+      {"metric": "Held-out image-preprocess CPTI suppression", "value": "CPTI 15.62 → 0.24; CTS 98.5%", "baseline": "unprotected → rt", "condition": "held-out workload", "interpretation": "batch.construct-dominant tailをEngineCore-targeted rtがほぼ除去した。"},
+      {"metric": "Held-out zstd-compress protection", "value": "CPTI 5.56 → 1.07; CTS 80.7%", "baseline": "unprotected → rt+numa", "condition": "mixed-risk held-out workload", "interpretation": "scheduler/service-tailとtopology signalを併せ持つcaseではcombined policyが選択された。"}
+    ],
+    "negative_results": [
+      {"name": "nice / cgroup", "description": "多くのworkloadでunprotectedに近いまま、soft priorityやproportional CPU weightだけではcore-path tailを十分抑えられなかった。held-outではcgroupによりCPTIが悪化するcaseもある。"},
+      {"name": "rt is not universal", "description": "rtはTPOT/throughput recoveryに強いがTTFTで常に最良ではない。ffmpegではNUMA isolationがTTFT increaseを103.6%から9.4%へ抑え、rtの58.4%より良かった。"},
+      {"name": "CTS does not capture every NUMA benefit", "description": "NUMAはlocality/topology経路でmacro metricを改善できるため、CTSが小さい・負でもTTFT等が改善するcaseがある。CoTailはCTS単独ではなくworkload hardware signalとmacro SLO validationを併用する。"},
+      {"name": "Causality scope", "description": "service-stage tailとmacro degradationの相関・介入整合性は強いが、著者らはすべてのinterference channelを形式的に因果証明したとは主張しない。"}
+    ],
+    "interpretation": "本研究の中心は新しいLLM kernelではなく、host-side interferenceをservice-stage tailへ分解し、既存OS mechanismを症状に応じて選択するdiagnosis/control loopにある。特に『常にrt』ではclean protection overheadとco-tenant costが発生するため、CPTI/CTSとworkload signalを用いて必要なcaseだけ強い保護へ上げる点が実運用上重要。",
+    "quality_impact": "model weight、attention、sampling、KV cache内容などmodel計算自体は変更しないため、推論品質の近似trade-offを導入する方式ではない。評価対象はserving throughput/TTFT/TPOTとco-tenant utilityであり、生成品質benchmarkは主題ではない。"
+  }
 }
