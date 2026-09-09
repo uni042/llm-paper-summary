@@ -2,101 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
-  "job_id": "job-research-c57bf9d456b4f061",
+  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
+  "job_id": "job-research-db7f6bec1b5bf488",
   "data": {
-    "overview": "EStreamは短いpromptではNPU dispatch/pipeline fillを償却できずCPU runtimeが速い場合があるが、promptが長くなるほどUFS loadをNPU計算で隠せるため優位が拡大する。主要18設定では非offload baselineより大幅に高速かつ省memoryで、PowerInferにも全設定で勝ち、最大46.7B MoEを商用スマートフォン上でfull-NPU prefillできた。",
+    "overview": "解析selectorは実測oracleに近いCを低overheadで選び、COMETの固定resource partitionを全評価configurationで改善した。効果はtarget operatorで最大だが、layer全体とcomplete-model prefillにも残る。",
     "key_results": [
-      {
-        "metric": "Pure-prefill TTFT speedup",
-        "value": "2.25–27.57×",
-        "baseline": "fastest completed non-offloading baseline at each point",
-        "condition": "OLMoE/LFM2.5/DeepSeek-V2-Lite, 256–4096 tokens, 18 settings",
-        "interpretation": "input長の増加に伴いNPU計算でexpert I/Oを隠せるため優位が大きくなる。"
-      },
-      {
-        "metric": "Peak physical memory reduction",
-        "value": "6.45–12.29×",
-        "baseline": "fastest completed non-offloading baseline",
-        "condition": "same 18 settings",
-        "interpretation": "expert residencyを固定arenaへ制限する効果。"
-      },
-      {
-        "metric": "Against PowerInfer",
-        "value": "2.96–50.78× faster; 1.16–1.69× less memory",
-        "baseline": "PowerInfer",
-        "condition": "same 18 settings",
-        "interpretation": "CPU/GPU-oriented parameter streamingよりfull-NPU streamingが優位。"
-      },
-      {
-        "metric": "4K TTFT",
-        "value": "2.12 / 2.14 / 9.53 s",
-        "baseline": "58.45 / 51.15 / 120.02 s fastest non-offloading competitors",
-        "condition": "OLMoE / LFM2.5 / DeepSeek-V2-Lite at 4096 tokens",
-        "interpretation": "long prefillで大きな速度差。"
-      },
-      {
-        "metric": "Large-model scaling",
-        "value": "Qwen3 211.7–599.1 tok/s at 1.46–1.87 GiB; Mixtral 144.5–301.5 tok/s at 2.77–4.11 GiB",
-        "baseline": "EStream standalone",
-        "condition": "Qwen3-30B-A3B and Mixtral-8x7B, 1K–4K",
-        "interpretation": "30.5B/46.7B total parametersをスマートフォンmemory内で処理。"
-      },
-      {
-        "metric": "Energy efficiency",
-        "value": "1.19–8.41×; geometric mean 4.08×",
-        "baseline": "strongest completed baseline",
-        "condition": "21 model-length settings, 128–2048 tokens",
-        "interpretation": "全完了設定で最高のtokens/J。"
-      },
-      {
-        "metric": "Application workload crossover",
-        "value": "within 8% at ToxicChat; 1.03–1.21× faster at HellaSwag; 3.79–5.75× faster on ARC-C/NFCorpus/SciFact",
-        "baseline": "latency-leading baseline",
-        "condition": "mean prompt lengths 66, 80, 368–405 tokens",
-        "interpretation": "非常に短いrequestではCPUが有利だが、およそ66–80 tokens付近でcrossover。"
-      },
-      {
-        "metric": "Pipeline bubble rate",
-        "value": "34.41% → 21.36% → 9.05%",
-        "baseline": "on-demand → post-routing prefetch → pre-routing prefetch",
-        "condition": "1024-token OLMoE",
-        "interpretation": "non-FFN中からのprefetchでUFS待ちを大きく隠す。"
-      },
-      {
-        "metric": "Auto-configurator quality",
-        "value": "9/12 exact minima; zero median regret; 3.45% worst-case regret",
-        "baseline": "exhaustive Q/B/G sweep",
-        "condition": "12 model-budget pairs",
-        "interpretation": "短いhardware profileでPareto近傍を再現。"
-      },
-      {
-        "metric": "Resident-NPU tradeoff at 4K",
-        "value": "3.73–5.41× less memory with 4.3–23.0% higher latency",
-        "baseline": "same-backend I/O-free resident NPU",
-        "condition": "4K inputs",
-        "interpretation": "bounded residencyのI/O overheadがlong promptでかなり隠れる。"
-      }
+      {"metric": "mean predictor regret", "value": "3.22%", "baseline": "measured oracle", "condition": "15 real-p90 TP=4/EP=1 workloads; maximum 10.21%", "interpretation": "per-shape計測なしでもoracle近傍を選択。"},
+      {"metric": "mean solver overhead", "value": "0.157 µs", "baseline": "standalone analytical selector", "condition": "launch-time CPU selection", "interpretation": "dispatch経路に対して小さい。"},
+      {"metric": "GEMM2+GatherRS geometric-mean speedup", "value": "2.528×", "baseline": "COMET", "condition": "all TP/EP configurations", "interpretation": "maximum 4.218×。"},
+      {"metric": "complete post-router MoE layer geometric-mean speedup", "value": "1.771×", "baseline": "COMET", "condition": "all TP/EP configurations", "interpretation": "maximum 2.584×。"},
+      {"metric": "complete-model prefill geometric-mean speedup", "value": "1.185×", "baseline": "COMET", "condition": "all TP/EP configurations", "interpretation": "maximum 1.439×。"},
+      {"metric": "TP=2/EP=2 model-level geometric means", "value": "1.336× / 1.211× / 1.232×", "baseline": "COMET", "condition": "Granite / Qwen / DeepSeek-V2-Lite", "interpretation": "S>=4096の全feasible pointでCOMET、Megatron core-TE、FastMoE TP+NCCLより高速。"},
+      {"metric": "lowest observed speedup", "value": "1.058×", "baseline": "COMET", "condition": "Qwen complete-model prefill, TP=4/EP=1, S=1024", "interpretation": "全3測定境界・全TP/EP構成でpointwise minimumが1×超。"}
     ],
     "negative_results": [
-      {
-        "name": "Very short prompts",
-        "description": "MASSIVE 16 tokensとWinoGrande 23 tokensではoptimized CPU runtimeが速く、NPU dispatchとpipeline fillを償却できない。"
-      },
-      {
-        "name": "Numerical alignment",
-        "description": "Qwen3はHost referenceに対しC4 PPLが相対5.51%悪化し、task score差も最大3.0 point。exact arithmetic orderは保持されない。"
-      },
-      {
-        "name": "Full residency remains faster",
-        "description": "I/O-free NPU-residentは1.04–5.63×高速だが、3.73–6.36×多いmemoryを使う。"
-      },
-      {
-        "name": "More banks are not always better",
-        "description": "producerがNPUを十分供給できると追加bankはlatencyを改善せずmemoryだけ増やす。"
-      }
+      {"name": "short-input backend crossover", "description": "S=1024ではMegatron core-TEが3モデルすべてで最速。Qwen S=2048でもMegatron core-TEが提案法より高速。"},
+      {"name": "DeepSeek memory boundary", "description": "DeepSeek-V2-Lite complete-model prefillのB=4,S=16384はA100 40GBでOOM。"},
+      {"name": "architecture scope", "description": "service-rate parameterとlegal C rangeはA100/NVLink kernel family向けに再導出されており、他GPU/多nodeへそのまま移植できない。"}
     ],
-    "interpretation": "中心的な利点は、MoEのrequest-level densificationを『全expert同時常駐』へ結びつけず、動的routeとparameter addressを共有NPU graphへ結びつけたことである。storage streamingをNPU executionと共同設計した結果、memory capacityとeffective model capacityを切り離している。",
-    "quality_impact": "approximation-based sparsityやrouting変更は行わないが、finite-precision operation order変更による数値差は存在する。3モデルでは概ね小さいがQwen3で相対PPL 5.51%差があり、完全なbitwise同等性はない。"
+    "interpretation": "主因はwork量削減ではなく同一計算・通信仕事の常駐資源再配分。token tileが増え複数waveになるほど固定partitionの不整合が顕在化し、モデル全体でも利益が蓄積する。",
+    "quality_impact": "FLOPs、routing、通信量、model semanticsを変えずnumerical correctnessを保持するため、accuracy trade-offを導入しない。"
   }
 }
