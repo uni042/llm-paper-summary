@@ -8,7 +8,7 @@ This is the authoritative workflow for continuous LLM inference-system paper col
 - Quality and relevance dominate volume.
 - GitHub Actions owns queue/state transitions and repository publication.
 - Chat/Scheduled Task owns literature search, full-text reading, scientific judgment, and audit judgment.
-- Chat writes only small immutable submission files.
+- Chat writes only small immutable submission files. Large completed Markdown may be stored separately as an immutable payload file.
 - GitHub Actions runs every 10 minutes and is idempotent.
 - Re-running the worker must never double-count or duplicate completed work.
 
@@ -21,7 +21,7 @@ This is the authoritative workflow for continuous LLM inference-system paper col
 5. It creates follow-up jobs when needed.
 6. It writes `.survey/work-queue/next-jobs.json`.
 7. Chat reads ready jobs and processes as many as can be safely completed.
-8. Chat writes one new submission file per completed job.
+8. Chat writes one new submission file per completed job. For large research/audit Markdown, Chat first writes an immutable `.survey/work-queue/payloads/<unique>.md` and the submission references it.
 9. The next 10-minute worker run consumes those submissions.
 
 ## Discovery lanes
@@ -109,14 +109,14 @@ Research/audit submission:
   "status": "completed",
   "paper_path": "papers/...md",
   "expected_blob_sha": "required when updating an existing paper",
-  "content": "complete Markdown",
+  "payload_path": ".survey/work-queue/payloads/<unique>.md",
   "audit_required": false,
   "audit_reason": null,
   "audit_flags": []
 }
 ```
 
-For blocked/deferred/rejected work, omit `content` and provide `reason`.
+For research/audit, exactly one of inline `content` or `payload_path` may supply the complete Markdown. Prefer `payload_path` for normal completed paper pages so the JSON stays small. Payload paths must be new immutable `.md` files under `.survey/work-queue/payloads/`. For blocked/deferred/rejected work, omit both and provide `reason`.
 
 ## Idempotency and concurrency
 
