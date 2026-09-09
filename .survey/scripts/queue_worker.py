@@ -75,9 +75,9 @@ def load_state():
         "policy": {
             "fixed_daily_quota": False,
             "quality_over_quantity": True,
-            "max_ready_research": MAX_READY_RESEARCH,
-            "max_ready_audit": MAX_READY_AUDIT,
-            "discovery_refresh_hours": DISCOVERY_REFRESH_HOURS,
+            "decision_rule": "process_ready_else_discover",
+            "max_discovery_candidates": MAX_DISCOVERY_CANDIDATES,
+            "worker_poll_minutes": 10,
         },
         "stats": {
             "discovered": 0,
@@ -156,20 +156,19 @@ def ensure_discovery_job():
         "completion": "Submit 0-5 strong candidates. Empty is valid.",
     })
 
+
 def candidate_key(c: dict) -> str:
     return str(c.get("canonical_id") or c.get("source_url") or c.get("title") or "").strip().lower()
 
 
 def existing_candidate_keys():
     keys = set()
-    # Queue history.
     for j in iter_jobs():
         for k in ("canonical_id", "source_url", "title"):
             v = j.get(k)
             if v:
                 keys.add(str(v).strip().lower())
 
-    # Identity snapshot and deltas.
     identity = read_json(ROOT / "survey-state" / "paper-identity-index.json", {})
     if isinstance(identity, dict):
         records = identity.get("papers") or {}
@@ -191,8 +190,6 @@ def existing_candidate_keys():
                 if v:
                     keys.add(str(v).strip().lower())
 
-    # Final guard: scan current paper frontmatter so stale/absent snapshots cannot
-    # allow a paper already present in the repository back into the queue.
     survey.ROOT = ROOT
     for rel in survey.papers():
         try:
@@ -235,8 +232,6 @@ def make_research_job(c: dict, parent: str):
 
 
 def make_audit_job(sub: dict, research_job: dict):
-    # Audit only when the research result explicitly leaves something important
-    # to verify. No fixed sampling ratio and no automatic audit by paper priority.
     need = bool(sub.get("audit_required") or sub.get("audit_flags") or sub.get("audit_reason"))
     if not need:
         return False
@@ -245,13 +240,7 @@ def make_audit_job(sub: dict, research_job: dict):
     return add_job({
         "job_id": jid,
         "type": "audit",
-        "priority": max(
-            40,
-            min(
-                74,
-                int(research_job.get("priority") or 50) - 10,
-            ),
-        ),
+        "priority": max(40, min(74, int(research_job.get("priority") or 50) - 10)),
         "canonical_id": research_job.get("canonical_id"),
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
@@ -286,7 +275,6 @@ def process_discovery(sub: dict, job: dict, st: dict):
 
 
 def submission_content(sub: dict) -> str | None:
-    """Return inline Markdown or load an immutable payload Markdown file."""
     content = sub.get("content")
     payload = sub.get("payload_path")
     if content is not None and payload is not None:
@@ -296,11 +284,7 @@ def submission_content(sub: dict) -> str | None:
     if not isinstance(payload, str):
         raise ValueError("payload_path must be a string")
     pp = Path(payload)
-    if (
-        not payload.startswith(".survey/work-queue/payloads/")
-        or ".." in pp.parts
-        or pp.suffix.lower() != ".md"
-    ):
+    if not payload.startswith(".survey/work-queue/payloads/") or ".." in pp.parts or pp.suffix.lower() != ".md":
         raise ValueError("unsafe payload_path")
     target = ROOT.parent / pp
     if not target.is_file():
@@ -350,7 +334,6 @@ def process_audit(sub: dict, job: dict, st: dict):
 
 
 def apply_artifact(sub: dict, job: dict):
-    """Publish research/audit Markdown if supplied, with optimistic SHA check."""
     if job.get("type") not in {"research", "audit"} or sub.get("status", "completed") != "completed":
         return None
     paper = sub.get("paper_path") or job.get("paper_path")
@@ -375,8 +358,6 @@ def apply_artifact(sub: dict, job: dict):
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(content, encoding="utf-8")
 
-    # Keep connector-safe identity state current without rewriting the compact
-    # index. Roll back the paper if identity validation fails.
     import subprocess
     p = subprocess.run(
         [sys.executable, ".survey/scripts/identity_delta.py", "prepare", "--paper", paper],
@@ -445,9 +426,7 @@ def process_submissions(st: dict):
 
 
 def reconcile_v9_identity_deltas():
-    """Repair missing identity deltas for v9-published completed jobs."""
     import subprocess
-    repaired = 0
     seen = set()
     for j in iter_jobs():
         if j.get("status") != "completed" or j.get("type") not in {"research", "audit"}:
@@ -464,22 +443,15 @@ def reconcile_v9_identity_deltas():
         )
         if p.returncode != 0:
             raise RuntimeError("identity reconciliation failed for " + paper + ": " + (p.stderr or p.stdout))
-        repaired += 1
-    return repaired
 
 
 def maybe_rebuild_views(st):
-    """Batch large derived-view rewrites; never do them on every 10-minute poll."""
     import subprocess
     m = st.setdefault("maintenance", {})
     dirty = bool(m.get("views_dirty"))
     last = m.get("last_view_build_at")
-    # On migration, a completed v9 research artifact with no recorded build means dirty.
     if not dirty and not last:
-        dirty = any(
-            j.get("type") in {"research", "audit"} and j.get("status") == "completed"
-            for j in iter_jobs()
-        )
+        dirty = any(j.get("type") in {"research", "audit"} and j.get("status") == "completed" for j in iter_jobs())
     if not dirty:
         return False
     current = datetime.now(timezone.utc)
@@ -542,7 +514,6 @@ def main():
     JOBS, SUBMISSIONS, RESULTS = QUEUE / "jobs", QUEUE / "submissions", QUEUE / "results"
     STATE, ARCHIVE = QUEUE / "state.json", QUEUE / "archive"
     st = load_state()
-    previous_state = json.loads(json.dumps(st))
     st.setdefault("policy", {}).update({
         "fixed_daily_quota": False,
         "quality_over_quantity": True,
@@ -551,6 +522,9 @@ def main():
         "worker_poll_minutes": 10,
     })
     process_submissions(st)
+    # Important: replenish in the same worker run that consumed the last ready job.
+    # This removes the normal need for a separate request_jobs round-trip.
+    ensure_discovery_job()
     reconcile_v9_identity_deltas()
     normalize_ready_jobs()
     maybe_rebuild_views(st)
