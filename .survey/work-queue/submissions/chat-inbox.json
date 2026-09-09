@@ -1,39 +1,31 @@
 {
-  "submission_id": "submission-ace-20260910-0038-v10-a1-replay3",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "submission_id": "submission-discovery-20260910-0437",
+  "job_id": "job-39c486a83ed17926",
   "status": "completed",
-  "record_bank": "b",
-  "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.05228-ace.md",
-  "expected_blob_sha": null,
-  "record_slots": [
+  "candidates": [
     {
-      "slot": "metadata",
-      "path": ".survey/work-queue/records/chat-record-b/metadata.json",
-      "blob_sha": "f7921ff3e94793e96a14c02c7b551c4ab36a1268"
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 93,
+      "reason": "GPU-centric NVMe KV-cache path with GPU io_uring and slack-aware I/O scheduling; directly relevant to SSD-backed inference and reports real vLLM integration, TTFT/request-rate/cost gains."
     },
     {
-      "slot": "problem_method",
-      "path": ".survey/work-queue/records/chat-record-b/problem_method.json",
-      "blob_sha": "d6e05131f565ffc249fbc24a0f51a094a72723ca"
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "priority": 88,
+      "reason": "Cross-model GPU-memory donation and NVLink KV sharing avoid CPU/SSD reloads while extending context length; strong heterogeneous-memory serving-system contribution with real-workload evaluation."
     },
     {
-      "slot": "evaluation",
-      "path": ".survey/work-queue/records/chat-record-b/evaluation.json",
-      "blob_sha": "facd4bb41d4f634b3da8d9aca8e9ab83749ea635"
-    },
-    {
-      "slot": "results",
-      "path": ".survey/work-queue/records/chat-record-b/results.json",
-      "blob_sha": "72a1c9db86690e1db1a77953f2c9281076742ea8"
-    },
-    {
-      "slot": "positioning",
-      "path": ".survey/work-queue/records/chat-record-b/positioning.json",
-      "blob_sha": "9c4d3a71471ff04ae695e7d92663fa23f554b55c"
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
+      "priority": 84,
+      "reason": "Joint KV reservation, serving-group configuration, routing and prefix caching under uncertain output lengths using distributionally robust optimization; reports trace-driven cost and SLO gains."
     }
-  ],
-  "audit_required": false,
-  "audit_reason": null,
-  "audit_flags": []
+  ]
 }
