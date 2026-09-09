@@ -51,10 +51,10 @@ def read_json(path: Path) -> dict[str, Any]:
     return value
 
 
-def safe_rel(path_text: str) -> str:
+def validated_rel(path_text: str) -> str:
     p = PurePosixPath(path_text)
     if p.is_absolute() or ".." in p.parts:
-        raise ValueError(f"unsafe path: {path_text}")
+        raise ValueError(f"path must be repository-relative without parent traversal: {path_text}")
     return p.as_posix()
 
 
@@ -174,7 +174,7 @@ def assemble(repo_root: Path) -> bool:
             raise ValueError(f"record_slots[{index - 1}] must be an object")
         if ref.get("slot") != slot_name:
             raise ValueError(f"record_slots[{index - 1}] must declare slot={slot_name}")
-        path_text = safe_rel(str(ref.get("path") or ""))
+        path_text = validated_rel(str(ref.get("path") or ""))
         if path_text != expected_path:
             raise ValueError(f"slot {slot_name} must use fixed path {expected_path}")
         expected_sha = ref.get("blob_sha")
