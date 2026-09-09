@@ -40,8 +40,16 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
+      - name: Suppress stale duplicate research jobs
+        run: python .survey/scripts/dedupe_queue.py --root .survey
+
       - name: Process queue
         run: python .survey/scripts/queue_worker.py --root .survey
+
+      - name: Suppress duplicates created by discovery and refresh queue
+        run: |
+          python .survey/scripts/dedupe_queue.py --root .survey
+          python .survey/scripts/queue_worker.py --root .survey
 
       - name: Commit queue results
         run: |
