@@ -15,24 +15,19 @@
 
 v9では完成Markdownを複数chunkへ分割してGitHubへ送っていた。v10では**完成MarkdownをChatからGitHubへ送らない**。research/auditの内容を5つの小さいJSON record slotへ分割し、GitHub Actions内の `.survey/scripts/render_paper.py` が最終Markdownを生成する。
 
-固定slot:
+固定slotはA/Bの2 bankを事前作成する。通常はbank A（`.survey/work-queue/records/chat-record/`）を使い、別jobの途中保存がAに残っていて上書きできない場合だけbank B（`.survey/work-queue/records/chat-record-b/`）を使う。各bankは `metadata.json` / `problem_method.json` / `evaluation.json` / `results.json` / `positioning.json` の5 slotを持つ。
 
-1. `.survey/work-queue/records/chat-record/metadata.json`
-2. `.survey/work-queue/records/chat-record/problem_method.json`
-3. `.survey/work-queue/records/chat-record/evaluation.json`
-4. `.survey/work-queue/records/chat-record/results.json`
-5. `.survey/work-queue/records/chat-record/positioning.json`
-
-すべてのslot保存に成功した後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。各slotは直前fetchしたblob SHAで既存ファイルをupdateし、manifestには保存後のblob SHAを入れる。Actionsは5 slotのpath・順序・サイズ・SHA・attempt_id・job_idを検証してからMarkdownを生成する。
+選択したbankのすべてのslot保存に成功した後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。各slotは直前fetchしたblob SHAで既存ファイルをupdateし、manifestには保存後のblob SHAを入れる。Actionsは5 slotのpath・順序・サイズ・SHA・attempt_id・job_idを検証してからMarkdownを生成する。
 
 ```text
 Scheduled Chat worker
       │
-      ├─ metadata.json
-      ├─ problem_method.json
-      ├─ evaluation.json
-      ├─ results.json
-      └─ positioning.json
+      ├─ bank A または B
+      │   ├─ metadata.json
+      │   ├─ problem_method.json
+      │   ├─ evaluation.json
+      │   ├─ results.json
+      │   └─ positioning.json
               │ 全5件成功後
               ▼
          chat-inbox.json
@@ -60,7 +55,7 @@ Scheduled Chat worker
 1. 最新HEADのrouter、queue-v10、next-jobsを読む。
 2. GitHub writeが利用可能なら、まずNotion退避キューの `pending` を確認し、現在queueと整合する未反映成果があれば新規jobより先に再投入する。
 3. ready jobをpriority順に処理する。research着手前とdiscovery候補提出前にidentity正本で重複確認する。
-4. research/auditは一次資料全文を読み、5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。
+4. research/auditは一次資料全文を読み、選択したbankの5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。
 5. 固定slotを順番に小さくupdateする。途中失敗なら成功済みslotを保持し、失敗slotだけ安全に1回再試行する。
 6. 全slot成功後だけinboxをupdateする。
 7. `chat-inbox.json` のpush時に旧resultがresetされ、その後生成された `.survey/work-queue/results/chat-inbox.json` が同一 `job_id` で `ok: true`、かつ最新queueでjob完了になるまで完了扱いにしない。
