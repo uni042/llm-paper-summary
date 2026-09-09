@@ -2,25 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
-  "job_id": "job-research-85c54a348e38b072",
+  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
+  "job_id": "job-research-7a4628493bc11731",
   "data": {
-    "overview": "HeteroPanaceaは『分離そのもの』よりもworkload shapeとstage専用hardwareの組合せが性能を決めることを示す。custom NPUではprefill-heavyになるとPDAFが一貫して強くなる一方、commercial GPU catalogでは4段分離の自由度をhardware構成に変換しにくく、PDがPDAFと同等以上になる条件が多い。",
+    "overview": "RTP-LLMはproduction stack全体を対象とし、loading、cache-aware scheduling、PD、speculative decoding、quantization、multimodal分離でそれぞれ改善を示す。特にPD評価ではTTFT/cache hitは大幅改善する一方、raw throughputはSGLang/vLLMとほぼ同等であり、利得の中心がprefix reuseとlatency/SLO側である点が重要。",
     "key_results": [
-      {"metric": "custom-NPU PDAF throughput vs ND", "value": "1.05-1.92×", "baseline": "ND", "condition": "I/O=100, 8 evaluated models", "interpretation": "PDAFは8/8でNDを上回り、6/8モデルで最良topology。Llama 4 Maverick 1.81×、Scout 1.77×。"},
-      {"metric": "average PDAF crossover", "value": "0.48× -> 2.10×", "baseline": "ND", "condition": "custom NPU; average changes from I/O=1 to I/O=10", "interpretation": "prefill比率の上昇で分離overheadからstage specialization利得へ急速に反転する。I/O=1000ではdecode underutilizationで1.27×まで低下。"},
-      {"metric": "commercial-GPU PD throughput vs ND", "value": "1.18-2.50×", "baseline": "ND", "condition": "I/O=0.01, 8 models", "interpretation": "PDは8/8でNDを上回るが、別workloadでは非一様。I/O=100では6/8モデルでPDがPDAF以上。"},
-      {"metric": "AF-only performance", "value": "0.20-0.65×", "baseline": "ND", "condition": "custom NPU, I/O=100", "interpretation": "attention/FFNだけの分離は通信overheadを回収できず常に不利。GPU sweepでもAFのbestは0.96×でNDを超えない。"},
-      {"metric": "tensor-parallel component validation", "value": "0.79× / 1.00× / 1.06× / 1.02×", "baseline": "real B200 measurement", "condition": "simulated/real latency ratio at 1/2/4/8 GPUs", "interpretation": "roofline/communication component modelはTPで概ね実測近傍。"},
-      {"metric": "pipeline-parallel component validation", "value": "0.67× / 0.77× / 0.84× / 0.90×", "baseline": "real B200 measurement", "condition": "simulated/real latency ratio at 1/2/4/8 GPUs", "interpretation": "PPではsimulationが実測latencyをより強く過小評価し、end-to-end結果の不確実性要因となる。"},
-      {"metric": "stage-specific 4-bit accuracy sensitivity", "value": "BFCL 20/11/12/20%, GSM8K 47/79/80/15%", "baseline": "8-bit BFCL 21%, GSM8K 75%", "condition": "only PF/DA/PA/DF respectively changed to 4-bit on Qwen 32B-class experiment", "interpretation": "どのstageを低精度化できるかはmodelだけでなくworkload/taskに依存する。"}
+      {"metric": "production TTFT P95 reduction", "value": "37.2% / 35.4%", "baseline": "traffic scheduling off", "condition": "Internal Robot Q&A: 83.3->52.3 ms; Taobao Merchant Service: 350->226 ms", "interpretation": "cache-aware traffic schedulingがreal serviceのTTFTを安定して改善。Taobaoではinference P95も1760->1210 ms、31.3%削減。"},
+      {"metric": "prefix cache reuse length", "value": "26.6 -> 83.8 tokens (+215%)", "baseline": "traffic scheduling off", "condition": "Internal Robot Q&A production workload", "interpretation": "同条件でprefill machineを80->20へ75%削減しつつ平均TTFTを維持。Taobao workloadのreuseは833->840で改善幅は小さい。"},
+      {"metric": "PD cache hit rate", "value": "45.09%", "baseline": "SGLang 28.70%; vLLM 19.10%", "condition": "Qwen3-Coder-480B-A35B-Instruct-FP8, 5-node PD production deployment", "interpretation": "1.57x/2.36x高いcache hit。"},
+      {"metric": "PD TTFT", "value": "1338.38 ms", "baseline": "SGLang 6322.7 ms; vLLM 7134.8 ms", "condition": "same Qwen3-Coder production evaluation", "interpretation": "4.72x/5.33x短いTTFT。ただしthroughputは1081.72 tokens/sでSGLang 1152.95、vLLM 1084.58とほぼ同等。"},
+      {"metric": "speculative decoding throughput", "value": "187.53 tokens/s", "baseline": "vLLM 167.95; SGLang 75.785 tokens/s", "condition": "DeepSeek-V3-0324, TP=8, FP8 KV, max_new_tokens=500", "interpretation": "1.12x/2.48x throughput。direct C++ launchによるoperator invocation overhead削減も寄与。"},
+      {"metric": "large-model loading speedup", "value": "4.70-6.27x", "baseline": "SGLang/vLLM", "condition": "Qwen3-235B-A22B; TP=4: RTP 37.1s vs 177.4/174.3s, TP=8: 33.0s vs 206.7/204.0s", "interpretation": "parallel shared readingとI/O-broadcast overlapによりTP増加でloadingが悪化せず、baselineはTP4->8で約16.5-17.0%悪化。"},
+      {"metric": "quantized inference TTFT", "value": "1.9-3.0x reduction", "baseline": "SGLang/vLLM", "condition": "Qwen3-32B across AWQ(FP8), FP8 KV Cache and baseline configurations", "interpretation": "長sequenceでも低TTFTを維持。WikiText-2 PPLは7.59-8.09でbaseline 7.59-7.67に近い。"},
+      {"metric": "EPD multimodal throughput", "value": "6288.48 tokens/s", "baseline": "SGLang 3374.24; vLLM 2492.69 tokens/s", "condition": "Qwen2.5-VL-7B-Instruct on GQA, TP=2", "interpretation": "1.86x/2.52x throughput。TTFT 1737.48 msはSGLang 4103.1、vLLM 3688.3より2.36x/2.12x短い。"}
     ],
     "negative_results": [
-      {"name": "low/balanced-ratio custom NPU", "description": "I/O=0.01および1ではNDが全モデルで最良。分離通信とpool fragmentationがspecialization利得を上回る。"},
-      {"name": "commercial GPU limits four-stage specialization", "description": "PDAFのstage assignmentはほぼH100に収束し、compute/memory比をstageごとに独立設計できないためcustom NPUほど4段分離が効かない。"},
-      {"name": "active-expert growth", "description": "active expertsを増やしてFFN compute/weight trafficを増大させるとPDAF利得が崩れ、例としてDeepSeek-V4-Flashは1.41×から4x active expertsで0.43×、8xで0.38×まで低下する。"}
+      {"name": "PD throughput is not higher", "description": "Qwen3-Coder PD評価のtokens/sはRTP-LLM 1081.72、SGLang 1152.95、vLLM 1084.58で、RTP-LLMの主な利得はthroughputではなくcache hitとTTFT。"},
+      {"name": "cache-reuse gain is workload-dependent", "description": "Internal Robot Q&Aでは26.6->83.8 tokensだが、Taobao Merchant Serviceでは833->840 tokensに留まる。"},
+      {"name": "parallelism trade-off in production", "description": "real 235B MoE+MTPでは4TPx4が低concurrency TPOT、1TP8DPが高concurrency latency、2TP4DPがthroughputに有利で、単一配置が全load域で最良ではない。"}
     ],
-    "interpretation": "PDAFの価値はstage間のresource mismatchが大きく、かつそれを異種hardwareへ実際に写像できる場合に生まれる。decode-attentionは大容量・高帯域memoryと比較的低compute、prefill stagesとdecode-FFNは高computeを要求するため、custom hardwareでは分離がresource right-sizingにつながる。commercial GPUでは同じ自由度が得にくい。",
-    "quality_impact": "main throughput sweepはfull precisionでquality trade-offを避けている。別のstage-wise quantization実験では4-bit化するstageとtaskによってaccuracy低下が極端に異なり、performance-onlyなprecision選択は安全でないことを示す。"
+    "interpretation": "RTP-LLMの強みは単一kernelの絶対性能より、cache localityをglobal schedulerへ組み込み、phase/model modalityごとにresourceを分離し、loadingからdecodeまでproduction lifecycle全体を最適化する点にある。各最適化の利得はworkloadごとに異なるため、headline speedupをsystem全体の一様な倍率として解釈すべきではない。",
+    "quality_impact": "speculative decodingはtarget-model verificationを用い、quantizationではWikiText-2 PPLを併記する。FP8/weight-only/KV quantizationはmemory/latencyを改善するが、precision lossはconfiguration依存であり、paperもPPLを別指標として評価する。"
   }
 }
