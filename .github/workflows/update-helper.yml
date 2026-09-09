@@ -1,0 +1,47 @@
+name: Framework and LLM update worker
+
+on:
+  push:
+    paths:
+      - '.survey/update-worker/update-inbox.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Share the same concurrency group as the paper worker so both workers never
+# commit to main at the same time.
+concurrency:
+  group: survey-helper-main
+  cancel-in-progress: false
+
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Process framework and LLM update
+        run: python .survey/scripts/update_worker.py --root .survey
+
+      - name: Commit update results
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo 'No update changes to commit.'
+            exit 0
+          fi
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'survey-helper: apply framework and LLM updates'
+          git pull --rebase origin main
+          git push origin HEAD:main
