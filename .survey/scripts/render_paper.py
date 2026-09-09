@@ -9,7 +9,6 @@ from typing import Any
 
 
 def q(value: Any) -> str:
-    """YAML-safe double-quoted scalar via JSON string encoding."""
     if value is None:
         return "null"
     return json.dumps(str(value), ensure_ascii=False)
@@ -30,7 +29,7 @@ def bullets(items: Any) -> str:
         return ""
     if not isinstance(items, list):
         items = [items]
-    out = []
+    out: list[str] = []
     for item in items:
         if isinstance(item, dict):
             name = text(item.get("name") or item.get("label") or item.get("metric"))
@@ -55,7 +54,7 @@ def render_result(item: dict[str, Any]) -> str:
     condition = text(item.get("condition"))
     interpretation = text(item.get("interpretation"))
     head = " / ".join(x for x in [metric, value] if x)
-    details = []
+    details: list[str] = []
     if baseline:
         details.append(f"比較対象: {baseline}")
     if condition:
@@ -104,7 +103,7 @@ def render_paper(record: dict[str, Any]) -> str:
         "",
     ]
 
-    bib = []
+    bib: list[str] = []
     authors = meta.get("authors")
     if authors:
         if isinstance(authors, list):
@@ -128,14 +127,12 @@ def render_paper(record: dict[str, Any]) -> str:
     parts.append(section("書誌情報", "\n".join(bib)))
     if meta.get("overview"):
         parts.append(section("概要", text(meta["overview"])))
-    problem = text(pm.get("problem"))
-    novelty = text(pm.get("novelty"))
-    if problem:
-        parts.append(section("問題設定", problem))
-    if novelty:
-        parts.append(section("新規性", novelty))
+    if pm.get("problem"):
+        parts.append(section("問題設定", text(pm["problem"])))
+    if pm.get("novelty"):
+        parts.append(section("新規性", text(pm["novelty"])))
 
-    method_body = []
+    method_body: list[str] = []
     if pm.get("method_overview"):
         method_body.append("### 手法のあらまし\n" + text(pm["method_overview"]))
     for comp in pm.get("components") or []:
@@ -154,15 +151,23 @@ def render_paper(record: dict[str, Any]) -> str:
         method_body.append("### 全体のデータ／制御の流れ\n" + text(pm["system_design"]))
     parts.append(section("手法", "\n\n".join(method_body)))
 
-    eval_lines = []
+    eval_lines: list[str] = []
     for label, key in [
-        ("Hardware", "hardware"), ("Software", "software"), ("Model", "model"),
-        ("Dataset / Trace", "datasets"), ("Baseline", "baselines"), ("Correctness", "correctness"),
+        ("ハードウェア", "hardware"),
+        ("ソフトウェア", "software"),
+        ("モデル", "model"),
+        ("データセット／トレース", "datasets"),
+        ("比較対象", "baselines"),
+        ("正確性・品質", "correctness"),
     ]:
         value = ev.get(key)
         if value:
             if isinstance(value, list):
-                value = "、".join(text(x) if not isinstance(x, dict) else text(x.get("description") or x.get("name")) for x in value)
+                value = "、".join(
+                    text(x) if not isinstance(x, dict)
+                    else text(x.get("description") or x.get("name"))
+                    for x in value
+                )
             eval_lines.append(f"- **{label}**: {text(value)}")
     if ev.get("settings"):
         eval_lines.append(bullets(ev["settings"]))
@@ -172,7 +177,7 @@ def render_paper(record: dict[str, Any]) -> str:
         eval_lines.append(text(ev["scope"]))
     parts.append(section("評価条件", "\n".join(x for x in eval_lines if x)))
 
-    result_lines = []
+    result_lines: list[str] = []
     if rs.get("overview"):
         result_lines.append(text(rs["overview"]))
     for item in rs.get("key_results") or []:
@@ -188,12 +193,12 @@ def render_paper(record: dict[str, Any]) -> str:
 
     if rs.get("quality_impact"):
         parts.append(section("品質への影響", text(rs["quality_impact"])))
-    differences = pos.get("differences")
-    if differences:
-        parts.append(section("既存研究との差", bullets(differences) if isinstance(differences, list) else text(differences)))
-    limitations = pos.get("limitations")
-    if limitations:
-        parts.append(section("限界", bullets(limitations) if isinstance(limitations, list) else text(limitations)))
+    if pos.get("differences"):
+        value = pos["differences"]
+        parts.append(section("既存研究との差", bullets(value) if isinstance(value, list) else text(value)))
+    if pos.get("limitations"):
+        value = pos["limitations"]
+        parts.append(section("限界", bullets(value) if isinstance(value, list) else text(value)))
     if pos.get("implementation_status"):
         parts.append(section("実装状態", text(pos["implementation_status"])))
     if pos.get("research_positioning"):
@@ -202,7 +207,8 @@ def render_paper(record: dict[str, Any]) -> str:
         parts.append(section("監査メモ", text(pos["audit_notes"])))
 
     sources = meta.get("sources") or [source]
-    src_lines, seen = [], set()
+    src_lines: list[str] = []
+    seen: set[str] = set()
     for s in sources:
         u = text(s)
         if u and u not in seen:
