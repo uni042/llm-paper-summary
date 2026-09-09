@@ -2,19 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
-  "job_id": "job-research-db7f6bec1b5bf488",
+  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
+  "job_id": "job-research-85c54a348e38b072",
   "data": {
-    "canonical_id": "arXiv:2609.07536",
-    "arxiv_id": "2609.07536",
-    "title": "Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap",
-    "summary": "分散MoEの細粒度な計算・通信重畳で競合する計算CTAと通信CTAのGPU常駐資源を、依存関係と離散的な実行waveを明示した解析モデルから起動時に配分し、COMETの固定通信CTA数をworkload適応型に置き換える。",
-    "source": "https://arxiv.org/abs/2609.07536",
-    "authors": ["Hongyu Liu", "Minyu Cui", "Miquel Pericàs"],
-    "publication": "arXiv:2609.07536v1, 2026-09-07; accepted at AI on HPC Workshop at SC26",
-    "publication_type": "workshop paper / arXiv preprint",
-    "topics": ["Mixture-of-Experts inference", "computation-communication overlap", "GPU resource management", "analytical performance modeling", "CTA residency"],
-    "implementation": "公開COMET A100実装をFLUX codebase内で拡張し、起動時の解析的resource managerを統合。評価はCOMET A100 V2 commit 19831caを基準に実施。",
-    "sources": ["https://arxiv.org/abs/2609.07536", "https://arxiv.org/html/2609.07536"]
+    "canonical_id": "arXiv:2608.03741",
+    "arxiv_id": "2608.03741",
+    "title": "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference",
+    "summary": "エージェント型LLM推論でprefill/decodeだけでなくattention/FFNまで分離する4段PDAFを、段ごとの異種NPU、並列度、相互接続、量子化と合わせて探索するイベント駆動シミュレータHeteroPanaceaを提案する。分離の利得はworkloadとhardware design spaceに強く依存し、prefill-heavy領域ではcustom NPU上のPDAFが有利になる一方、商用GPUではPDが多くの条件でPDAFと同等以上になる。",
+    "source": "https://arxiv.org/abs/2608.03741",
+    "authors": ["Przemyslaw Forys", "Haoran Wu", "Can Xiao", "Jiayi Nie", "Tony Liu", "Rika Antonova", "Timothy Jones", "Robert Mullins", "Wayne Luk", "Aaron Zhao", "George A. Constantinides"],
+    "publication": "arXiv:2608.03741v1, 2026-08-04",
+    "publication_type": "arXiv preprint",
+    "topics": ["LLM serving", "prefill-decode disaggregation", "attention-FFN disaggregation", "agentic inference", "heterogeneous NPU", "hardware-software co-design", "mixed precision", "parallelism search"],
+    "implementation": "論文はHeteroPanacea simulator、configuration、evaluation scriptsをacceptance後に公開予定と記載している。arXiv v1本文では公開済みartifactを確認できない。",
+    "sources": ["https://arxiv.org/abs/2608.03741", "https://arxiv.org/pdf/2608.03741"]
   }
 }
