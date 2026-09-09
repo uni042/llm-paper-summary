@@ -1,7 +1,8 @@
 {
   "counts": {
     "discovery": {
-      "completed": 3
+      "completed": 3,
+      "ready": 1
     },
     "audit": {
       "completed": 2
@@ -11,6 +12,19 @@
       "blocked": 1
     }
   },
-  "next_jobs": [],
-  "generated_at": "2026-09-09T04:40:32+00:00"
+  "next_jobs": [
+    {
+      "job_id": "job-421367df2f6cb34d",
+      "type": "discovery",
+      "lane": "discovery_fresh",
+      "priority": 80,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Find genuinely new inference-system papers or important revisions from primary sources. As a rule, require the paper or meaningful revision to be within the last 30 days. Older missing work belongs in the gap lane. Prefer papers not already represented in the repository.",
+      "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers."
+    }
+  ],
+  "generated_at": "2026-09-09T05:40:21+00:00"
 }

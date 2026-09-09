@@ -1,0 +1,29 @@
+{
+  "job_id": "job-421367df2f6cb34d",
+  "type": "discovery",
+  "lane": "discovery_fresh",
+  "priority": 80,
+  "instructions": "Find genuinely new inference-system papers or important revisions from primary sources. As a rule, require the paper or meaningful revision to be within the last 30 days. Older missing work belongs in the gap lane. Prefer papers not already represented in the repository.",
+  "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers.",
+  "output_schema": {
+    "operation": "discovery_result",
+    "job_id": "job-421367df2f6cb34d",
+    "candidates": [
+      {
+        "canonical_id": "preferred stable ID if known",
+        "title": "paper title",
+        "source_url": "primary source URL",
+        "paper_path": "planned papers/...md path if selected",
+        "priority": "0-100",
+        "reason": "why it deserves full reading",
+        "evidence": [
+          "primary-source facts used for selection"
+        ]
+      }
+    ]
+  },
+  "schema_version": 1,
+  "workflow_version": 9,
+  "status": "ready",
+  "created_at": "2026-09-09T05:40:21+00:00"
+}
