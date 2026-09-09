@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "workflow_version": 9,
+  "mode": "queue",
+  "created_at": "2026-09-09T02:44:33+00:00",
+  "updated_at": "2026-09-09T02:44:33+00:00",
+  "policy": {
+    "fixed_daily_quota": false,
+    "quality_over_quantity": true,
+    "max_ready_research": 12,
+    "max_ready_audit": 6,
+    "discovery_refresh_hours": 6
+  },
+  "stats": {
+    "discovered": 0,
+    "selected": 0,
+    "research_completed": 0,
+    "audit_completed": 0,
+    "rejected": 0
+  },
+  "discovery_lanes": {
+    "discovery_fresh": {
+      "last_issued_at": "2026-09-09T02:44:33+00:00"
+    },
+    "discovery_citation": {
+      "last_issued_at": "2026-09-09T02:44:33+00:00"
+    },
+    "discovery_gap": {
+      "last_issued_at": "2026-09-09T02:44:33+00:00"
+    }
+  }
+}

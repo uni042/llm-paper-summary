@@ -1,0 +1,29 @@
+{
+  "job_id": "job-b128275b1d0b55bb",
+  "type": "discovery",
+  "lane": "discovery_gap",
+  "priority": 60,
+  "instructions": "Search for missing lineages or adjacent-system techniques that plausibly matter to LLM inference systems. Prefer high-impact gaps over novelty for its own sake.",
+  "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers.",
+  "output_schema": {
+    "operation": "discovery_result",
+    "job_id": "job-b128275b1d0b55bb",
+    "candidates": [
+      {
+        "canonical_id": "preferred stable ID if known",
+        "title": "paper title",
+        "source_url": "primary source URL",
+        "paper_path": "planned papers/...md path if selected",
+        "priority": "0-100",
+        "reason": "why it deserves full reading",
+        "evidence": [
+          "primary-source facts used for selection"
+        ]
+      }
+    ]
+  },
+  "schema_version": 1,
+  "workflow_version": 9,
+  "status": "ready",
+  "created_at": "2026-09-09T02:44:33+00:00"
+}
