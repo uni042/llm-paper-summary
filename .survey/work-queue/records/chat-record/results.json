@@ -2,26 +2,69 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
-  "job_id": "job-research-7a4628493bc11731",
+  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
+  "job_id": "job-research-0b935acaddfdc935",
   "data": {
-    "overview": "RTP-LLMはproduction stack全体を対象とし、loading、cache-aware scheduling、PD、speculative decoding、quantization、multimodal分離でそれぞれ改善を示す。特にPD評価ではTTFT/cache hitは大幅改善する一方、raw throughputはSGLang/vLLMとほぼ同等であり、利得の中心がprefix reuseとlatency/SLO側である点が重要。",
+    "overview": "Jacap is strongest under high KV compression. LongBench and NIAH show more robust retention than heuristic baselines, while AIME25 decode-time eviction is mixed across cache budgets.",
     "key_results": [
-      {"metric": "production TTFT P95 reduction", "value": "37.2% / 35.4%", "baseline": "traffic scheduling off", "condition": "Internal Robot Q&A: 83.3->52.3 ms; Taobao Merchant Service: 350->226 ms", "interpretation": "cache-aware traffic schedulingがreal serviceのTTFTを安定して改善。Taobaoではinference P95も1760->1210 ms、31.3%削減。"},
-      {"metric": "prefix cache reuse length", "value": "26.6 -> 83.8 tokens (+215%)", "baseline": "traffic scheduling off", "condition": "Internal Robot Q&A production workload", "interpretation": "同条件でprefill machineを80->20へ75%削減しつつ平均TTFTを維持。Taobao workloadのreuseは833->840で改善幅は小さい。"},
-      {"metric": "PD cache hit rate", "value": "45.09%", "baseline": "SGLang 28.70%; vLLM 19.10%", "condition": "Qwen3-Coder-480B-A35B-Instruct-FP8, 5-node PD production deployment", "interpretation": "1.57x/2.36x高いcache hit。"},
-      {"metric": "PD TTFT", "value": "1338.38 ms", "baseline": "SGLang 6322.7 ms; vLLM 7134.8 ms", "condition": "same Qwen3-Coder production evaluation", "interpretation": "4.72x/5.33x短いTTFT。ただしthroughputは1081.72 tokens/sでSGLang 1152.95、vLLM 1084.58とほぼ同等。"},
-      {"metric": "speculative decoding throughput", "value": "187.53 tokens/s", "baseline": "vLLM 167.95; SGLang 75.785 tokens/s", "condition": "DeepSeek-V3-0324, TP=8, FP8 KV, max_new_tokens=500", "interpretation": "1.12x/2.48x throughput。direct C++ launchによるoperator invocation overhead削減も寄与。"},
-      {"metric": "large-model loading speedup", "value": "4.70-6.27x", "baseline": "SGLang/vLLM", "condition": "Qwen3-235B-A22B; TP=4: RTP 37.1s vs 177.4/174.3s, TP=8: 33.0s vs 206.7/204.0s", "interpretation": "parallel shared readingとI/O-broadcast overlapによりTP増加でloadingが悪化せず、baselineはTP4->8で約16.5-17.0%悪化。"},
-      {"metric": "quantized inference TTFT", "value": "1.9-3.0x reduction", "baseline": "SGLang/vLLM", "condition": "Qwen3-32B across AWQ(FP8), FP8 KV Cache and baseline configurations", "interpretation": "長sequenceでも低TTFTを維持。WikiText-2 PPLは7.59-8.09でbaseline 7.59-7.67に近い。"},
-      {"metric": "EPD multimodal throughput", "value": "6288.48 tokens/s", "baseline": "SGLang 3374.24; vLLM 2492.69 tokens/s", "condition": "Qwen2.5-VL-7B-Instruct on GQA, TP=2", "interpretation": "1.86x/2.52x throughput。TTFT 1737.48 msはSGLang 4103.1、vLLM 3688.3より2.36x/2.12x短い。"}
+      {
+        "metric": "LongBench average",
+        "value": "40.91",
+        "baseline": "CapKV 36.57; EA 36.35",
+        "condition": "Qwen3-8B, compression ratio 0.9",
+        "interpretation": "+4.34 points over CapKV under extreme compression."
+      },
+      {
+        "metric": "LongBench average",
+        "value": "35.98",
+        "baseline": "KeyDiff 34.89; EA 34.51; CapKV 30.48",
+        "condition": "Llama3.1-8B, compression ratio 0.9",
+        "interpretation": "Smaller but positive gain over the next-best listed baseline."
+      },
+      {
+        "metric": "AIME25 score",
+        "value": "0.30",
+        "baseline": "CapKV 0.20; EA 0.17; KeyDiff 0.07; KNorm 0",
+        "condition": "Nemotron-7B, 2048 reserved tokens",
+        "interpretation": "Best result at the tightest tested decode-cache budget."
+      },
+      {
+        "metric": "AIME25 score",
+        "value": "0.50",
+        "baseline": "CapKV 0.50",
+        "condition": "Nemotron-7B, 4096 reserved tokens",
+        "interpretation": "Ties CapKV."
+      },
+      {
+        "metric": "AIME25 score",
+        "value": "0.73",
+        "baseline": "CapKV 0.67; KeyDiff 0.67; EA 0.63",
+        "condition": "Nemotron-7B, 16384 reserved tokens",
+        "interpretation": "Best result at the largest tested budget."
+      },
+      {
+        "metric": "NIAH retrieval",
+        "value": "best overall robustness",
+        "baseline": "CapKV, SnapKV, KeyDiff, EA, KNorm",
+        "condition": "Qwen3-8B; 10k-120k contexts; needle depths 0.15-0.95; C.R. 0.75 main and 0.5 appendix",
+        "interpretation": "Jacap remains stronger for long contexts and deep needle positions."
+      }
     ],
     "negative_results": [
-      {"name": "PD throughput is not higher", "description": "Qwen3-Coder PD評価のtokens/sはRTP-LLM 1081.72、SGLang 1152.95、vLLM 1084.58で、RTP-LLMの主な利得はthroughputではなくcache hitとTTFT。"},
-      {"name": "cache-reuse gain is workload-dependent", "description": "Internal Robot Q&Aでは26.6->83.8 tokensだが、Taobao Merchant Serviceでは833->840 tokensに留まる。"},
-      {"name": "parallelism trade-off in production", "description": "real 235B MoE+MTPでは4TPx4が低concurrency TPOT、1TP8DPが高concurrency latency、2TP4DPがthroughputに有利で、単一配置が全load域で最良ではない。"}
+      {
+        "name": "AIME25 8192-token reversal",
+        "description": "Jacap scores 0.53 while CapKV reaches 0.73; Jacap is not uniformly best across budgets."
+      },
+      {
+        "name": "Approximation boundary",
+        "description": "The practical score diagonalizes softmax competition and query covariance, so pairwise and higher-order interactions are omitted."
+      },
+      {
+        "name": "Extra scoring cost",
+        "description": "Per-layer eviction complexity is O(N d_h^2 + d_h^3), higher than typical independent heuristic scoring."
+      }
     ],
-    "interpretation": "RTP-LLMの強みは単一kernelの絶対性能より、cache localityをglobal schedulerへ組み込み、phase/model modalityごとにresourceを分離し、loadingからdecodeまでproduction lifecycle全体を最適化する点にある。各最適化の利得はworkloadごとに異なるため、headline speedupをsystem全体の一様な倍率として解釈すべきではない。",
-    "quality_impact": "speculative decodingはtarget-model verificationを用い、quantizationではWikiText-2 PPLを併記する。FP8/weight-only/KV quantizationはmemory/latencyを改善するが、precision lossはconfiguration依存であり、paperもPPLを別指標として評価する。"
+    "interpretation": "The contribution is improved robustness under aggressive lossy compression rather than universal dominance. Softmax sensitivity discounts saturated attention, and the leverage term discourages redundant output directions.",
+    "quality_impact": "KV eviction is lossy and can change task accuracy. Jacap generally degrades more gracefully at high compression, but the AIME25 8192-token condition is a clear counterexample."
   }
 }
