@@ -2,7 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
+  "job_id": "job-research-622ec47c37b83739",
+  "data": {
+    "problem": "固定top-k MoEではtokenごとの実寄与が違っても同数のexpert slotを実行するため、低寄与expertにもFFN計算とdispatchが発生する。router gateは候補間の相対的割当嗜好であり、expert固有の非線形変換能力や方向特化を直接表さない。既存の動的削減にはrouter再学習、補助module、calibration/sensitivity profiling、batch前提などを要する方式が多い。",
+    "novelty": "ACEは元routerとtop-k候補集合を維持し、Global Spectral Proxy (GSP)とRouter-Conditioned Refinement (RCR)の2つのparameter-only proxyをoffline計算する。runtimeではtokenのrouter gateで両proxyを条件付けし、max融合により両方が低寄与と判断したslotだけをskipする。",
+    "method_overview": "deployment前にGSP/RCR tableを作る。GSPはSwiGLUのgate/up/down投影とRMSNorm scalingを結合したspectral surrogateをlayer内正規化してexpert全体の変換能力を表す。RCRはrouter weightをlayer平均からcenterし、その方向をRMS正規化したprototypeとしてexpertへoffline forwardし、routing-preferred方向の増幅率をtable化する。推論時は元routerのtop-k候補ごとにgate×GSPとgate×RCRを計算して候補集合内で正規化し、そのmaxを最終scoreとする。budgetに対応するthreshold未満だけskipし、top-1 expertは必ず残しminimum-active制約も適用できる。残存expertだけFFNを実行し、gateを再正規化してMoE出力を合成する。",
+    "components": [
+      {
+        "name": "Global Spectral Proxy (GSP)",
+        "description": "SwiGLUの三投影の結合を保つbranch-symmetric spectral surrogateとRMSNorm scalingから、real sampleなしでglobal amplificationを推定しlayer内正規化する。"
+      },
+      {
+        "name": "Router-Conditioned Refinement (RCR)",
+        "description": "centered router weightからexpert固有routing方向を作り、そのprototypeに対するexpert応答増幅をoffline評価してGSPの方向盲性を補う。"
+      },
+      {
+        "name": "Conservative dual-view fusion",
+        "description": "GSP/RCR寄与分布のmaxを使うため、skip setは両低寄与集合のintersectionとなる。片方が重要とみなしたexpertは保持する。"
+      },
+      {
+        "name": "Budget-to-threshold mapping",
+        "description": "estimatorはdata-freeだが、報告された10–60%のbudgetをthresholdへ変換する際はunlabeled full-model passでcandidate scoreを集めquantile mappingする。"
+      },
+      {
+        "name": "Safeguards",
+        "description": "top-1を常時保持し、必要ならminimum-active数を課し、surviving gateを再正規化する。"
+      }
+    ],
+    "system_design": "token→元router top-k/gate→GSP/RCR table lookupとscalar score→threshold/top-1 safeguard→残存expertだけFFN→gate再正規化→MoE outputの順に処理する。offline tableはcheckpointごとに再利用できるが、所定skip率のthresholdは報告実験ではworkload score分布に対応付けている。"
+  }
 }
