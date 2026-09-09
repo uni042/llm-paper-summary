@@ -7,24 +7,12 @@
       "completed": 3
     },
     "research": {
-      "ready": 4,
-      "completed": 14,
-      "superseded": 6
+      "completed": 15,
+      "superseded": 6,
+      "ready": 3
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-0b935acaddfdc935",
-      "type": "research",
-      "lane": null,
-      "priority": 93,
-      "canonical_id": "arxiv:2609.08131",
-      "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
-      "source_url": "https://arxiv.org/abs/2609.08131",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/jacap.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-622ec47c37b83739",
       "type": "research",
@@ -62,5 +50,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T14:16:03+00:00"
+  "generated_at": "2026-09-09T15:35:40+00:00"
 }
