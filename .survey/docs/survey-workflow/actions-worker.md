@@ -66,3 +66,18 @@ requestファイル直接commitと新規Issue作成に加え、公開repo上の�
 - **Issue edit経路**: command inbox本文を `[survey-request]` + JSON requestへ一時更新する。workflowはownerによる当該Issueのeditedイベントだけを受理し、run単位のrequestへ変換する。処理確認後は説明文へ戻してよい。
 - いずれも `action_worker.py` のallowlist・入力検証をそのまま通し、resultの `ok: true` を確認するまで成功扱いしない。
 - transport診断では状態を変更しない `status` を使い、複数経路を同一runで比較してよい。実作業operationは、診断済みの1経路だけで発行して二重実行を避ける。
+
+
+## 再実行 + 小さいsubmission経路
+
+Scheduled Taskからrequest/Issue系の新規操作が制限される場合は、既存の成功済み `Survey helper worker` ジョブを再実行してworkerを起動できる。再実行時は最新 `main` をcheckoutし、通常イベントを再処理せず次を行う。
+
+1. `.survey/submissions/*.json` のうち、同名の `.survey/submission-results/*.json` がまだ無いものを処理する。
+2. 各submissionは不変の小さい受渡しファイルとして扱う。
+3. 精読・監査成果の `operation=publish_result` は、`claim_token`、任意の `cycle_id/run_id`、対象 `papers/...md`、既存paperの `expected_blob_sha`、完成後Markdown本文を含める。
+4. workerは最新active claimとの一致、paper path、既存blob SHA、本文サイズを検証してからpaperを書き、既存 `prepare_result.py` でidentity/progress deltaを生成する。
+5. 結果は `.survey/submission-results/<same-name>.json` へ保存し、`ok: true` をcallerが再取得してから完了扱いする。
+6. 既存paperを更新する場合は `expected_blob_sha` 必須。古いclaimや競合したpaperへの上書きは拒否する。
+7. submission本文はpaper単位に分割し、512 KiB以下とする。巨大なidentity index、plan、queue、README集約物をsubmissionとして直接置かない。
+
+この経路では「Chatが科学的判断と完成Markdownを作る」「Actionsが検証・保存・delta生成を行う」を分離する。新規submissionファイル自体の作成が可能なら、巨大ファイル更新をScheduled Task側で行う必要はない。
