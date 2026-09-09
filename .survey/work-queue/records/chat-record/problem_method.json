@@ -2,18 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
-  "job_id": "job-research-ad144841ea01b7c6",
+  "attempt_id": "attempt-orbitflow-20260910-0634-v10-a1",
+  "job_id": "job-research-07d36385670389ef",
   "data": {
-    "problem": "複数ターン会話では過去履歴を再計算しないためKV cacheを保持するが、会話ターン数と同時request数に比例して容量が増える。非一様KV圧縮は長距離情報を保持すべきattention headへ多く、局所的なheadへ少なくbudgetを配るため一様圧縮より品質を保ちやすい。しかし既存serving stackは全headのKV長が同じことを前提にする。PagedAttentionのmonolithic pageでは短いheadが解放した領域も長いheadとpageを共有するため返却できず、dynamic compressionではforward後に散在pageを回収・remapするhost-side処理が必要になる。さらにheadごとのKV長差はGPU workload imbalanceを生む。論文の測定ではpage reclamationがprefill時間の最大25%、静的partitionではdecode attentionが最大1.7倍遅くなり、FlashInfer型の動的re-planningもdecode stepの15–20%をCPU planningに費やす。",
-    "novelty": "Tangramは非一様圧縮後のhead別retention profileに、headの順位はほぼinput-invariantで各headの絶対保持率も狭い範囲に収まる二段階の構造的規則性があると観察する。これを50個のpilot sampleからoffline calibrationし、実行時に未知だったhead別memory footprintを事前既知のstatic blueprintへ変換する。この静的化を利用してBudget Reservation、Ragged Paging、Ahead-of-Time Load Balancingを同じprofileで結び、圧縮score自体ではなく高throughput servingで実際に回収可能なmemory layoutとkernel schedulingをco-designする。",
-    "method_overview": "まず対象modelと圧縮方式ごとにcalibration contextを流し、元の非一様圧縮が各layer・各KV headへ割り当てたretention ratioを記録する。各headについて平均μと標準偏差σを求め、B_l,h=min(1, μ_l,h+α·σ_l,h)という安全余裕付きの固定budgetを作る。online prefillではchunked prefillとcontinuous batchingを維持し、各chunkのKV生成直後に元のimportance scorerでtokenを採点する。ただし保持個数はoffline B_l,hに従うためschedulerはforward前からpost-compression page数を予約でき、over-allocation後のcompress-and-reclaimを不要にする。次にRagged Pagingでは全headを一つのpage tableで管理せず、budgetの近いheadをH_p個ずつgroup化し、layer・groupごとに独立page tableを持つ。group内で最長のheadにだけ合わせればよいため、短いheadから解放されたcapacityをphysical page poolへ戻せる。headはbudget順にoffline sortし、group数増加によるCPU管理costはVectorized Block TableをOpenMPとSIMDで並列処理して抑える。decode attentionでは各head-groupの固定budget比から計算量を事前推定し、GPUが同時実行できるCTA数へ比例配分したWorkload Split Mapをoffline作成する。runtimeではこのmapを読むだけでper-layer re-planningを行わない。context lengthが変わっても各group長は同じ比率で伸びるためrelative workloadはほぼ不変で、batchingしてもstatic planを再利用できる。",
+    "problem": "長文LLMの逐次生成では、過去トークンの注意計算に使うKVキャッシュ（KV cache）がトークン数に比例して増え、継続的バッチ処理では同時要求数の増減によってもGPUメモリ需要が変動する。GPU容量を超えるKVをCPUメモリへ退避すれば容量不足は避けられるが、従来の多くの方式は「全要求に同じ間隔で層を退避する」固定的な配置を使うため、生成が進んでKVが成長したり、新しい要求がバッチへ入ったりした時に最適配置から外れる。特に、ある要求は短くKVが小さい一方、別の要求は長くKVが大きいというバッチでは、長い要求に合わせた一律配置が短い要求にも不要なCPU→GPU転送を課す。転送が直前層のGPU計算に隠れなくなるとGPUがKV到着を待つ停止時間が生じ、その遅れは後続層へ連鎖して1トークンの生成時間を押し上げる。平均的な1トークン時間だけを良くしても、一部トークンの遅延がサービス品質目標（service-level objective; SLO）を超えると対話品質が悪化するため、OrbitFlowはGPU容量だけでなくトークン単位の遅延SLOを同時に満たす配置を求める。",
+    "novelty": "OrbitFlowの中心的な新規性は、KV退避を「バッチ全体で同じ層を退避する固定方針」ではなく、各要求×各層についてGPU常駐かCPU常駐かを個別に選べるオンライン配置問題として扱う点にある。ただし全組合せを直接探索すると指数的に大きくなるため、要求ごとには等間隔の退避パターンという規則性を残しつつ、要求間では異なる退避間隔を許す。この制約付き探索を整数線形計画（integer linear programming; ILP）で解き、GPU容量、PCIe帯域、層ごとの計算時間、現在のKV量、SLO余裕から次の配置を決める。さらに、生成が進むことによるKV増大とバッチ構成変化を監視し、現在の計画が古くなった時だけ再計算する。SLOを満たす配置自体が存在しない過負荷時には、先に高速生成できたトークンを一時的な配信余裕として蓄えるToken-Depositと、大きなKVを持つ要求を一時停止するPause-Resumeを組み合わせ、全要求を無理に走らせて全体の遅延を悪化させる代わりに一部要求を遅らせてシステム全体のSLO達成率を守る。",
+    "method_overview": "1回のdecodeでは、Runtime Executorが現在の配置表に従って各要求・各層を順に実行する。ある層のKVがGPUに残っていればそのまま注意計算を行い、CPU側にある場合は要求ごとに用意した非同期転送ストリームで将来必要な層のKVを先読みする。複数要求が同時に転送するとPCIe帯域を分け合うため、Placement Plannerは層計算と転送が時間軸上でどう重なるかをモデル化し、KV到着が間に合わずGPUが停止する時間まで含めてバッチのdecode遅延を予測する。Plannerは各要求のKVブロック数、GPUに置けるブロック数、実効PCIe帯域、層ごとのGPU計算時間を入力にし、SLO違反数に上限を置きながら予測decode遅延を最小化する配置をILPで求める。探索量を抑えるため、要求内の任意の層組合せではなく「N層ごとに1層を退避する」等間隔パターンだけを候補とするが、Nは要求ごとに異なってよい。これにより32層・4要求の例では自由配置の約3.4×10^38候補を6,561候補まで縮める。PlannerはGPU処理と別のCPUスレッドで1 decode step先を解き、求めた配置には、そのKV成長によって再計算が必要になる見込みstepである有効期限も含める。Adaptive Controllerは実測decode時間とPlanner予測のずれ、新規要求の到着、要求完了を監視し、計画が早く古くなった場合だけPlannerを再実行する。KV Managerは新旧配置の差分だけを移動し、GPU上には次層を読むための連続したprefetch bufferを確保して、配置変更時の余分な転送を抑える。通常の配置ではSLOを満たせない場合、Token-Depositに早く生成できたトークンをFIFOとして蓄え、一定のSLO間隔でユーザーへ配信する。その配信余裕がある要求のうち、KV量と蓄積トークン量が大きいものをPause-Resumeで一時停止し、必要になった層のKVだけ段階的にCPUへ追い出す。別要求が完了して実行可能な配置が再び得られれば停止要求を再開する。この一連の処理により、OrbitFlowはKV配置、転送、要求の一時停止、ユーザーへのトークン配信を閉ループで調整する。",
     "components": [
-      {"name": "Budget Reservation", "description": "50 pilot sampleでhead別retention ratioを測り、平均と分散から安全係数α付き固定budgetを算出する。schedulerが必要pageを事前予約でき、compress-and-reclaim pathを除去する。評価ではα=2。"},
-      {"name": "Ragged Paging", "description": "同一layerのH_p個のKV headを一groupとして独立page tableを持たせる。budgetが近いheadをoffline clusteringし、monolithic pageで閉じ込められていたmemoryを実際に解放する。adjacent groupingよりfull KVの12–25%を追加回収する。"},
-      {"name": "Vectorized Block Table", "description": "細粒度group化で増えるhost-side mapping costをOpenMPとSIMD/AVX-512で並列化し、fragmentation削減とCPU管理overheadのtrade-offを改善する。"},
-      {"name": "Ahead-of-Time Load Balancing", "description": "固定budgetからhead-group workloadを求め、GPU CTA数へwork量比例で配分するWorkload Split Mapをoffline計算する。decode時はmapを読み、static heuristicのstragglerとdynamic planner costを避ける。"}
+      {
+        "name": "要求単位の細粒度KV配置（request-wise fine-grained KV placement）",
+        "description": "各要求r・各Transformer層lについて、その層のKVブロックをGPUに保持するかCPUへ置くかを配置変数として扱う。従来の一律方式では同じ層番号のKVが全要求で同じ場所になるが、OrbitFlowでは長い要求だけ多く退避し、短い要求はGPU常駐を増やすなど、要求ごとのKV量とSLO余裕に合わせられる。実装ではvLLMの層ごとのKVレイアウトを連続した1次元領域へ平坦化し、層情報を持つ2次元表から参照することで、要求ごとに異なる層集合を割り当てられるようにする。"
+      },
+      {
+        "name": "配置計画器（Placement Planner）と転送・計算時間モデル",
+        "description": "Plannerは各候補配置について、層計算の順序とCPU→GPU KV先読みを同一タイムライン上で評価する。各要求は最大1本の非同期転送ストリームを持ち、複数ストリームが動く時は利用可能帯域を分け合うと仮定する。次に必要なKVが前層計算終了までに届かなければ、その不足時間をGPU停止として積算する。このモデルから得たバッチdecode時間を目的関数にし、GPU常駐KVとprefetch bufferの合計が容量を超えないこと、許容SLO違反数を超えないことを制約としてILPを解く。"
+      },
+      {
+        "name": "探索空間の削減と先行solver実行",
+        "description": "要求×層の完全自由配置は2^(要求数×層数)となりオンラインでは扱えない。OrbitFlowは各要求内では等間隔に層を退避するdistance-driven patternだけを候補に残す。32層の場合は可能な退避数が9種類程度となり、4要求なら9^4=6,561候補まで縮小できる。評価では完全探索がより良い配置を見つける場合の中央値改善は2.29%に対しsolver時間は平均7.74倍となるため、この削減は実行時SLOを守るための意図的な近似である。solverはCPUの別スレッドで1 step先を解くため、多くの場合その時間をGPU decode計算の裏に隠せる。"
+      },
+      {
+        "name": "適応制御器（Adaptive Controller）",
+        "description": "現在の配置を毎step無条件に解き直すのではなく、Planner自身がdecode window Δを決め、その期間は現在配置を使う。SLO余裕が小さければΔを短くして早く再最適化し、余裕が大きければ長くしてsolver呼出しを減らす。さらに各stepで予測decode時間と実測値を比較し、差が一定率を超えればGPU競合や実効帯域変化が起きたと判断して指数移動平均で計算時間・帯域プロファイルを更新する。要求の到着・完了でもバッチ構成が変わるため即座に再計算する。"
+      },
+      {
+        "name": "KV Managerと段階的配置反映",
+        "description": "Plannerの新配置を受け取ると、KV Managerは現在配置との差分だけを調べ、必要最小限のGPU↔CPU移動を行う。今後もCPU側に置く層では生成したKVを直接指定host slotへ書くことでGPU容量を使わない。GPUに常駐するKVと、直近層を先読みするprefetch bufferの境界が変わった時には連続領域を再調整する。停止要求についても全KVを一括退避せず、他要求がメモリを必要とした時に層単位で段階的に追い出すため、再開時に戻すデータ量を抑える。"
+      },
+      {
+        "name": "Token-DepositとPause-Resume",
+        "description": "高速だった初期decodeでSLOより早く生成できたトークンをCPU上の小さなFIFOへ蓄え、ユーザーには所定のtime-between-tokens間隔で1個ずつ配信する。後のKV成長で一時的に生成が遅れても、depositが残っていればユーザー側では配信間隔を維持できる。PlannerがGPU容量とSLO制約を同時に満たせないと判断した場合、KVブロック数とdeposit量の合計が大きい要求を一時停止する。大きな要求を止めることで最もGPUメモリを解放しやすく、depositにより停止中も一定期間はトークン配信を続けられる。負荷が下がり実行可能な計画が得られた時に再開する。"
+      }
     ],
-    "system_design": "offline calibrationでhead budget、grouping、Workload Split Mapを決める。onlineではschedulerが固定budgetからpageを先取りし、chunked prefillでimportance scoring→head別圧縮→ragged page格納を行う。decodeはgroup別実効KV長でattentionを計算し、thread-block配分はoffline mapから決める。memory allocation、compression、paging、GPU schedulingが同じstatic retention profileで接続される。成立条件はhead retention profileの安定性とH_pをfragmentationとCPU管理costの中間へ置けること。H_pが小さすぎるとpage-table管理が増え、大きすぎるとfragmentationが戻る。underlying compressorのtoken選択誤りはTangramでは修正しない。"
+    "system_design": "実行時は、Runtime Executorが1 stepのdecodeを進めながらKV Managerの配置に従って注意計算と先読みを重ねる。同時に計算時間・転送時間・GPUメモリ使用量を測り、その信号をAdaptive Controllerへ送る。Controllerは現在計画のdecode window満了、予測と実測の乖離、バッチ構成変更のいずれかを検出するとPlacement Plannerを呼ぶ。Plannerは次stepのKV量を見越し、各要求の等間隔退避パターンを組み合わせてGPU容量とSLO制約を満たす計画を選ぶ。計画は次step開始時にKV Managerへ渡され、差分だけを反映する。通常配置で制約を満たせない時だけPause-Resumeへ移り、Token-Depositでユーザーへの見かけ上の配信を維持しながら大きな要求を一時退避する。この設計では予測・最適化が外れてもモデル計算自体を近似せず、変わるのはKVの保管場所と実行順序であるため、生成品質を変えるアルゴリズムではない。一方、過負荷時には一部要求のend-to-end完了時間を意図的に延ばしてトークン単位SLOを優先する。"
   }
 }
