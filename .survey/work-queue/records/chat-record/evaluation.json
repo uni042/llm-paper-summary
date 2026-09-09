@@ -2,81 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
-  "job_id": "job-research-c57bf9d456b4f061",
+  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
+  "job_id": "job-research-db7f6bec1b5bf488",
   "data": {
-    "hardware": [
-      "OnePlus PLK110 smartphone",
-      "Snapdragon 8 Elite Gen 5 (SM8850)",
-      "Hexagon v81 HTP",
-      "Adreno GPU",
-      "2 prime + 6 performance Oryon CPU cores",
-      "15.1 GiB memory",
-      "UFS 4.1 storage"
-    ],
-    "software": [
-      "Android 16",
-      "C++20 EStream runtime",
-      "llama.cpp Hexagon support extension",
-      "Qualcomm FastRPC / DSPQueue / cDSP",
-      "O_DIRECT preadv + UDMABUF-backed DMA-BUF",
-      "Qualcomm QPT for SoC energy"
-    ],
-    "model": [
-      "OLMoE-1B-7B",
-      "LFM2.5-8B-A1B",
-      "DeepSeek-V2-Lite",
-      "Qwen3-30B-A3B",
-      "Mixtral-8x7B"
-    ],
-    "datasets": [
-      "C4 prefixes",
-      "MASSIVE",
-      "WinoGrande",
-      "ToxicChat",
-      "HellaSwag",
-      "ARC-Challenge",
-      "NFCorpus",
-      "SciFact",
-      "LAMBADA",
-      "BoolQ"
-    ],
-    "baselines": [
-      "llama.cpp-CPU",
-      "MNN-CPU",
-      "MNN-OpenCL",
-      "ONNX Runtime GenAI CPU",
-      "EdgeMoE reproduction",
-      "PowerInfer parameter-streaming backend port",
-      "same-backend fully resident NPU reference",
-      "QNN-switch per-expert contexts",
-      "naive streaming",
-      "coarse layer streaming"
-    ],
+    "hardware": ["single node with four NVIDIA A100-SXM4-40GB GPUs", "NVLink interconnect", "108 SMs available to target operator"],
+    "software": ["PyTorch 2.7.1", "CUDA 12.6", "NCCL 2.26.2", "CUTLASS commit df8a550", "COMET A100 V2 commit 19831ca", "FLUX codebase"],
+    "model": ["Granite-3.1-1B-A400M", "Qwen1.5-MoE-A2.7B", "DeepSeek-V2-Lite"],
+    "datasets": ["LMSYS-Chat-1M router traces", "uniform routing", "real-router p50", "real-router p90"],
+    "baselines": ["upstream COMET", "Megatron core-TE", "FastMoE TP+NCCL", "measured oracle sweep C=1..16 for predictor accuracy"],
     "settings": [
-      {
-        "name": "Precision",
-        "description": "expertとlarge non-expert matrixはGGUF Q4_0、activationはFP32、HMX operandとKV cacheはFP16。OLMoE output headはQ6_K、DeepSeek MLAの一部はFP16。activation quantizationやapproximation-based sparsityは不使用。"
-      },
-      {
-        "name": "Primary input lengths",
-        "description": "C4 prefix 256–4096 tokens。主要比較は3モデル×6長さ=18設定。TTFTはOS page cacheをdropしたfresh process 3回のmedian。"
-      },
-      {
-        "name": "Application tests",
-        "description": "7 dataset、各32 length-stratified examplesを共通sourceとしてmodelごとにtokenize。1 warm-up後のmean request latencyとpeak physical memoryを測定。"
-      },
-      {
-        "name": "Energy",
-        "description": "128–2048 tokenのsteady-state prefillでQPTがgross SoC energyを積算。"
-      },
-      {
-        "name": "Auto-tuning",
-        "description": "1K C4 calibrationでGごとのservice profileを採取。platformでは95% peak grouped-read bandwidthを満たす最小Q=2を固定し、memory budgetごとにG/Bを選ぶ。"
-      }
+      {"name": "precision", "description": "BF16"},
+      {"name": "parallelism", "description": "TP=4/EP=1, TP=2/EP=2, TP=1/EP=4; TP×EP=4"},
+      {"name": "batch and sequence", "description": "B=4; S in {1024,2048,4096,8192,16384}"},
+      {"name": "routing matrix", "description": "3 models × uniform/p50/p90 × 5 lengths = 45 configurations per TP/EP configuration"},
+      {"name": "measurement", "description": "20 warmups; operator/layer 60 ABBA-interleaved samples; complete-model/multi-backend 20 samples; median maximum-rank latency; 20,000 block-stratified bootstrap replicates for 95% CI"}
     ],
-    "correctness": "model weightとrouting decisionは保持するが、fused NPU pathとstreamingにより有限精度演算順序は変わる。200例/benchmarkのHost reference比較ではOLMoE/LFM2.5のC4 PPL差は0.1%未満、DeepSeekもPPLは安定しARC-Cのみ3.0 point差、Qwen3は相対PPL 5.51%悪化・task score差最大3.0 pointだった。",
-    "methodology": "latency、peak physical memory、energy、qualityを別々に評価し、baselinesは対応するmodel/runtime pairを調整して比較する。大規模modelでは起動・初期化を含むより厳しいenergy boundaryも示す。auto-configuratorは184個のproduction-supported Q/B/G sweepと比較する。",
-    "scope": "prefill-only workloadを対象にし、autoregressive decodeは最適化対象外。commercial Qualcomm smartphone上のsingle-device full-NPU MoE prefillを主対象とする。"
+    "correctness": "COMETと提案法は同一input、weight、router assignment、GEMM tile、通信量を使い、4-rank allcloseとcomplete-model出力一致を確認。Hugging Face参照に対して全モデルでlast-token top-1を保持し、Qwen/DeepSeek-V2-Liteはelementwise allcloseも通過。",
+    "methodology": "predictor accuracyはTP=4/EP=1のreal-p90 15 workloadでC=1..16を実測sweepしたoracleと比較。性能はtarget operator、complete post-router MoE layer、complete-model prefillの3境界で評価。",
+    "scope": "single-node A100/NVLinkのprefill中心。complete-model評価はonline-serving全体やdecode throughputを表さない。"
   }
 }
