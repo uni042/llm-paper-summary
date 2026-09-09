@@ -1,18 +1,21 @@
 {
-  "submission_id": "chat-job-research-db7f6bec1b5bf488-moe-overlap-v10-a1",
-  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
-  "job_id": "job-research-db7f6bec1b5bf488",
-  "status": "completed",
-  "record_bank": "a",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/moe-overlap-resource-manager.md",
-  "record_slots": [
-    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "bd30282479226c44acd50ee828419d2560a352c5"},
-    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "cace7b7ae93fa3b41f8b02668d1fa6ea3dc24ed9"},
-    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "aa09b9ed23407d2805dae8f7525d8a48932c7066"},
-    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "f0dfc59f8dc4af33cbbed0811ad44df053c14317"},
-    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "d956f0b6ae04fbab506947cae99f55721919a432"}
-  ],
-  "audit_required": false,
-  "audit_reason": null,
-  "audit_flags": []
+  "job_id": "job-b85aa562e0f7a2d9",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2608.03741",
+      "title": "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.03741",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/heteropanacea.md",
+      "priority": 88,
+      "reason": "Agentic serving向けにprefill/decode/attention/FFN分離を異種ハードウェア上で評価する新しい設計空間を扱う。"
+    },
+    {
+      "canonical_id": "arxiv:2605.29639",
+      "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+      "source_url": "https://arxiv.org/abs/2605.29639",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/rtp-llm.md",
+      "priority": 84,
+      "reason": "Alibaba実運用の統合推論エンジンで、分離serving、多階層KV cache、投機的デコード、量子化等を横断的に評価する。"
+    }
+  ]
 }
