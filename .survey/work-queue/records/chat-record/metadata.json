@@ -2,19 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
-  "job_id": "job-research-85c54a348e38b072",
+  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
+  "job_id": "job-research-7a4628493bc11731",
   "data": {
-    "canonical_id": "arXiv:2608.03741",
-    "arxiv_id": "2608.03741",
-    "title": "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference",
-    "summary": "エージェント型LLM推論でprefill/decodeだけでなくattention/FFNまで分離する4段PDAFを、段ごとの異種NPU、並列度、相互接続、量子化と合わせて探索するイベント駆動シミュレータHeteroPanaceaを提案する。分離の利得はworkloadとhardware design spaceに強く依存し、prefill-heavy領域ではcustom NPU上のPDAFが有利になる一方、商用GPUではPDが多くの条件でPDAFと同等以上になる。",
-    "source": "https://arxiv.org/abs/2608.03741",
-    "authors": ["Przemyslaw Forys", "Haoran Wu", "Can Xiao", "Jiayi Nie", "Tony Liu", "Rika Antonova", "Timothy Jones", "Robert Mullins", "Wayne Luk", "Aaron Zhao", "George A. Constantinides"],
-    "publication": "arXiv:2608.03741v1, 2026-08-04",
+    "canonical_id": "arXiv:2605.29639",
+    "arxiv_id": "2605.29639",
+    "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+    "summary": "Alibabaの大規模実運用LLM inference engine。model loading、prefill/decode分離、cache-aware traffic scheduling、GPU/CPU/RDMA/3FSの4階層KV cache、speculative decoding、TP/PP/DP/EP、weight/KV quantization、ViT-LLM分離を単一serving stackへ統合する。vLLM/SGLangとのcontrolled benchmarkに加えAlibaba実trafficを使い、個別最適化だけでなくproduction orchestrationを含む統合systemとして評価する。",
+    "source": "https://arxiv.org/abs/2605.29639",
+    "authors": ["Boyu Tan", "Jiarui Guo", "Zongwei Lv", "Haobo Sun", "Tong Yang", "Kan Liu", "Xinfei Shi", "Zetao Hu", "Yaxin Yu", "Chi Zhang", "Jianning Zhang", "Xi Yang", "Wei Zhang", "Bo Cai", "Silu Zhou", "Xiyu Wang", "Na He", "Yinghao Yu", "Wending Bao", "Guiyang Huang", "Yuxing Yuan", "Juncheng Yin", "Nan Wang", "Lin Yang", "Zechao Zhang", "Lu Chen", "Guoding Li", "Tao Lan", "Lin Qu"],
+    "publication": "arXiv:2605.29639v1, 2026-05-28",
     "publication_type": "arXiv preprint",
-    "topics": ["LLM serving", "prefill-decode disaggregation", "attention-FFN disaggregation", "agentic inference", "heterogeneous NPU", "hardware-software co-design", "mixed precision", "parallelism search"],
-    "implementation": "論文はHeteroPanacea simulator、configuration、evaluation scriptsをacceptance後に公開予定と記載している。arXiv v1本文では公開済みartifactを確認できない。",
-    "sources": ["https://arxiv.org/abs/2608.03741", "https://arxiv.org/pdf/2608.03741"]
+    "topics": ["LLM inference engine", "production serving", "prefill-decode disaggregation", "hierarchical KV cache", "traffic scheduling", "model loading", "speculative decoding", "quantization", "multimodal serving", "MoE parallelism"],
+    "implementation": "公式implementationは https://github.com/alibaba/rtp-llm でApache-2.0公開。Alibaba Group内のTaobao、Tmall、Cainiao等を含むproduction serviceで利用されると論文・公式repositoryが記載する。",
+    "sources": ["https://arxiv.org/abs/2605.29639", "https://arxiv.org/pdf/2605.29639", "https://github.com/alibaba/rtp-llm"]
   }
 }
