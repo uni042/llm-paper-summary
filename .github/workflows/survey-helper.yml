@@ -5,7 +5,9 @@ on:
     paths:
       - '.survey/requests/*.json'
   issues:
-    types: [opened]
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
   workflow_dispatch:
 
 permissions:
@@ -18,7 +20,19 @@ concurrency:
 
 jobs:
   worker:
-    if: github.event_name != 'issues' || (github.actor == github.repository_owner && startsWith(github.event.issue.title, '[survey-helper]'))
+    if: >
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' &&
+       github.actor == github.repository_owner &&
+       (
+         (github.event.action == 'opened' && startsWith(github.event.issue.title, '[survey-helper]')) ||
+         (github.event.action == 'edited' && github.event.issue.title == '[survey-helper] command inbox' && startsWith(github.event.issue.body, '[survey-request]'))
+       )) ||
+      (github.event_name == 'issue_comment' &&
+       github.actor == github.repository_owner &&
+       github.event.issue.title == '[survey-helper] command inbox' &&
+       startsWith(github.event.comment.body, '[survey-request]'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,37 +48,59 @@ jobs:
       - name: Install helper dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Materialize issue request
-        if: github.event_name == 'issues'
+      - name: Materialize event request
+        if: github.event_name == 'issues' || github.event_name == 'issue_comment'
         env:
+          EVENT_NAME: ${{ github.event_name }}
+          ISSUE_ACTION: ${{ github.event.action }}
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          COMMENT_ID: ${{ github.event.comment.id }}
         run: |
           python - <<'PY'
           import json
           import os
           from pathlib import Path
 
-          body = (os.environ.get("ISSUE_BODY") or "").strip()
+          event = os.environ["EVENT_NAME"]
+          action = os.environ.get("ISSUE_ACTION", "")
+          if event == "issue_comment":
+              raw = (os.environ.get("COMMENT_BODY") or "").strip()
+              prefix = "[survey-request]"
+              if not raw.startswith(prefix):
+                  raise SystemExit("invalid issue comment request prefix")
+              body = raw[len(prefix):].strip()
+              name = f"comment-{os.environ['COMMENT_ID']}.json"
+          elif action == "edited":
+              raw = (os.environ.get("ISSUE_BODY") or "").strip()
+              prefix = "[survey-request]"
+              if not raw.startswith(prefix):
+                  raise SystemExit("invalid edited issue request prefix")
+              body = raw[len(prefix):].strip()
+              name = f"edit-{os.environ['ISSUE_NUMBER']}-{os.environ.get('GITHUB_RUN_ID','run')}.json"
+          else:
+              body = (os.environ.get("ISSUE_BODY") or "").strip()
+              name = f"issue-{os.environ['ISSUE_NUMBER']}.json"
+
           req = json.loads(body)
           if not isinstance(req, dict):
-              raise SystemExit("issue body must be one JSON object")
-          path = Path(".survey/requests") / f"issue-{os.environ['ISSUE_NUMBER']}.json"
+              raise SystemExit("request must be one JSON object")
+          path = Path(".survey/requests") / name
           if path.exists():
               raise SystemExit(f"request already exists: {path}")
           path.parent.mkdir(parents=True, exist_ok=True)
           path.write_text(json.dumps(req, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
           print(path)
+          Path("/tmp/request-path").write_text(str(path), encoding="utf-8")
           PY
 
-      - name: Process issue request
-        if: github.event_name == 'issues'
-        env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: python .survey/scripts/action_worker.py --request ".survey/requests/issue-${ISSUE_NUMBER}.json"
+      - name: Process event request
+        if: github.event_name == 'issues' || github.event_name == 'issue_comment'
+        run: python .survey/scripts/action_worker.py --request "$(cat /tmp/request-path)"
 
       - name: Process pending file requests
-        if: github.event_name != 'issues'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: python .survey/scripts/action_worker.py
 
       - name: Commit worker results
