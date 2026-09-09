@@ -17,7 +17,8 @@
 4. research/auditの完成Markdownは、原則として新規の `.survey/work-queue/payloads/<unique>.md` に保存する。
 5. 続けて小さい `.survey/work-queue/submissions/<unique>.json` を新規作成し、`payload_path` からpayloadを参照する。
 6. submissionのpushで `Survey helper worker` が自動起動する。ChatからActionsを直接起動しない。
-7. 次回は必ず最新HEADからqueueを読み直す。同じsubmissionを再送しない。
+7. `next-jobs.json` の ready job が0件なら、研究を自己生成せず `{"operation":"request_jobs"}` の小さいsubmissionを1件だけ新規作成して終了する。pushでActionsが起動し、期限到来したdiscovery jobを生成する。
+8. 次回は必ず最新HEADからqueueを読み直す。同じsubmissionを再送しない。
 
 ## transport
 
