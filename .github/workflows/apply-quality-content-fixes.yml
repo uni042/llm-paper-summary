@@ -3,7 +3,7 @@ name: Apply quality content fixes
 on:
   push:
     paths:
-      - ".survey/migrations/quality_content_fixes_20260910.py"
+      - ".survey/migrations/quality_content_fixes_*.py"
       - ".github/workflows/apply-quality-content-fixes.yml"
 
 permissions:
@@ -28,7 +28,11 @@ jobs:
           python-version: "3.11"
 
       - name: Apply idempotent content fixes
-        run: python .survey/migrations/quality_content_fixes_20260910.py
+        run: |
+          for f in .survey/migrations/quality_content_fixes_*.py; do
+            echo "Applying $f"
+            python "$f"
+          done
 
       - name: Run checker regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_audit_paper_quality.py'
