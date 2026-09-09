@@ -2,23 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
-  "job_id": "job-research-db7f6bec1b5bf488",
+  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
+  "job_id": "job-research-85c54a348e38b072",
   "data": {
-    "hardware": ["single node with four NVIDIA A100-SXM4-40GB GPUs", "NVLink interconnect", "108 SMs available to target operator"],
-    "software": ["PyTorch 2.7.1", "CUDA 12.6", "NCCL 2.26.2", "CUTLASS commit df8a550", "COMET A100 V2 commit 19831ca", "FLUX codebase"],
-    "model": ["Granite-3.1-1B-A400M", "Qwen1.5-MoE-A2.7B", "DeepSeek-V2-Lite"],
-    "datasets": ["LMSYS-Chat-1M router traces", "uniform routing", "real-router p50", "real-router p90"],
-    "baselines": ["upstream COMET", "Megatron core-TE", "FastMoE TP+NCCL", "measured oracle sweep C=1..16 for predictor accuracy"],
+    "hardware": ["parameterized custom NPU design space: 25-20000 TFLOPS with SRAM/HBM/DDR/LPDDR/GDDR capacity-bandwidth choices", "commercial AWS EC2 GPU design space including H100, A100, L40S, L4, A10G, T4, V100, M60", "8x NVIDIA B200 component-level validation platform", "NVSwitch-class intra-domain interconnect up to 3600 GB/s bidirectional and 50 GB/s InfiniBand-class cross-domain link in NPU experiments"],
+    "software": ["HeteroPanacea event-driven simulator", "PLENA-derived parameterized NPU model", "roofline-based stage performance and power models", "MASE-based MXint stage-wise quantization with PhaseAutoSwitch"],
+    "model": ["DeepSeek-V4 Pro", "DeepSeek-V4 Flash", "Llama-3.1-405B", "Llama 4 Maverick", "Llama 4 Scout", "GLM-4.6", "GPT-OSS", "Qwen3-235B-A22B", "Qwen 32B-class model for quantization sensitivity"],
+    "datasets": ["synthetic serving workloads parameterized by input/output token ratio", "BFCL for stage-wise quantization accuracy", "GSM8K for stage-wise quantization accuracy"],
+    "baselines": ["ND: non-disaggregated serving", "PD: prefill/decode disaggregation", "AF: attention/FFN disaggregation", "PDAF: prefill/decode plus attention/FFN four-stage disaggregation", "real B200 kernel/communication measurements for component validation"],
     "settings": [
-      {"name": "precision", "description": "BF16"},
-      {"name": "parallelism", "description": "TP=4/EP=1, TP=2/EP=2, TP=1/EP=4; TP×EP=4"},
-      {"name": "batch and sequence", "description": "B=4; S in {1024,2048,4096,8192,16384}"},
-      {"name": "routing matrix", "description": "3 models × uniform/p50/p90 × 5 lengths = 45 configurations per TP/EP configuration"},
-      {"name": "measurement", "description": "20 warmups; operator/layer 60 ABBA-interleaved samples; complete-model/multi-backend 20 samples; median maximum-rank latency; 20,000 block-stratified bootstrap replicates for 95% CI"}
+      {"name": "request workload", "description": "500 requests per configuration at fixed 125 requests/s; output length fixed at 1000 tokens and input length varied through I/O ratios, with request lengths sampled around target values."},
+      {"name": "workload sweep", "description": "I/O ratios span strongly decode-heavy to strongly prefill-heavy regimes, including 0.01, 1, 10, 100, 500 and 1000 cases discussed in results."},
+      {"name": "parallelism", "description": "TP, PP, DP and EP are independently selectable per execution pool; D2D and N2N links model different communication domains."},
+      {"name": "main precision", "description": "main NPU/GPU design sweeps use full precision; stage-wise quantization is evaluated separately because joint MoE quantization search is expensive."},
+      {"name": "GPU budget", "description": "commercial GPU search uses fixed USD/hour budget and provider instance/device catalog rather than arbitrary custom compute-memory ratios."},
+      {"name": "NPU budget", "description": "custom NPU search uses fixed installed-power budget and stage-specific compute/memory choices."}
     ],
-    "correctness": "COMETと提案法は同一input、weight、router assignment、GEMM tile、通信量を使い、4-rank allcloseとcomplete-model出力一致を確認。Hugging Face参照に対して全モデルでlast-token top-1を保持し、Qwen/DeepSeek-V2-Liteはelementwise allcloseも通過。",
-    "methodology": "predictor accuracyはTP=4/EP=1のreal-p90 15 workloadでC=1..16を実測sweepしたoracleと比較。性能はtarget operator、complete post-router MoE layer、complete-model prefillの3境界で評価。",
-    "scope": "single-node A100/NVLinkのprefill中心。complete-model評価はonline-serving全体やdecode throughputを表さない。"
+    "correctness": "Simulator components are compared with measurements on B200 hardware. Reported simulated/real ratios for tensor-parallel execution are 0.79x, 1.00x, 1.06x and 1.02x for 1/2/4/8 GPUs; pipeline-parallel ratios are 0.67x, 0.77x, 0.84x and 0.90x. Communication checks report P2P ratios 0.82x-1.00x and expert all-to-all 0.86x-1.21x across tested message sizes. Quantization quality is checked empirically on BFCL and GSM8K.",
+    "methodology": "For each topology the search first scores feasible hardware candidates analytically against stage demand, allocates the fixed budget across stages, keeps promising joint configurations, and then performs detailed event-driven simulation; throughput in tokens/s selects the winner. Model ablations vary KV/attention and expert-compute characteristics to identify which architectural dimensions control the crossover.",
+    "scope": "Primary conclusions are simulation-based hardware/software design-space results rather than end-to-end deployed serving measurements. Component models are validated on real B200 hardware, but scheduling/batching/topology results themselves are not reproduced as a full production deployment."
   }
 }
