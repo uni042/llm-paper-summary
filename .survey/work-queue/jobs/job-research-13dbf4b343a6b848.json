@@ -8,10 +8,12 @@
   "source_url": "https://arxiv.org/abs/2608.13127",
   "paper_path": "papers/inference/01-offload-hierarchical-memory/hbf-llm-serving.md",
   "selection_reason": "Examines High-Bandwidth Flash as an additional serving-memory tier for MoE expert residency and multi-model serving. It directly targets capacity pressure in model-state residency and is relevant to SSD/flash-aware inference-system design.",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
   "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 9,
-  "created_at": "2026-09-09T05:43:28+00:00"
+  "created_at": "2026-09-09T05:43:28+00:00",
+  "completed_at": "2026-09-09T06:19:35+00:00",
+  "artifact_submission": "work-queue/submissions/hbf-260813127-20260909-1458.json"
 }
