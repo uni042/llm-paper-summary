@@ -2,41 +2,31 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
+  "job_id": "job-research-bf598cfa965b8925",
   "data": {
-    "canonical_id": "arXiv:2609.05228",
-    "arxiv_id": "2609.05228",
-    "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
-    "summary": "固定top-kルーティングで選ばれたexpertのうち実際の寄与が小さいslotをtokenごとに省く、学習不要・checkpoint保持型のMoE推論手法。Global Spectral Proxy (GSP) がSwiGLU expertのgate/up/down投影とRMSNorm scalingから全体的な変換能力を推定し、Router-Conditioned Refinement (RCR) がcentered router weightからrouting-preferred方向を作って方向依存のexpert応答を補正する。実行時はrouter gateと2つのoffline tableを組み合わせ、両方で低寄与と判断されたslotだけをskipしtop-1 expertは必ず残す。高いskipping率ほどrouter-score単独方式に対する品質優位が大きく、60% skippingではA100上でTTFT 1.72–2.25×、TPOT 1.31–1.41×の高速化を報告する。",
-    "source": "https://arxiv.org/abs/2609.05228",
+    "canonical_id": "arXiv:2609.04575",
+    "arxiv_id": "2609.04575",
+    "title": "Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models",
+    "summary": "実行expert数k1とrouter正規化分母のreference set k2を分離し、fine-grained MoEでexpert computeを減らしつつ訓練時のexpert-branch gainを保つ。Qwen3.6-35B-A3Bの8→4 expertでMMLU低下を4.65ptから0.35ptへ縮小する。",
+    "source": "https://arxiv.org/abs/2609.04575",
     "authors": [
-      "Zukang Xu",
-      "Zhixiong Zhao",
-      "Xing Hu",
-      "Jiangyong Yu",
-      "Houji Wen",
-      "Jun Li",
-      "Zhe Jiang",
-      "Dawei Yang"
+      "Xing Chen",
+      "Hengshuai Yao"
     ],
-    "publication": "arXiv:2609.05228v1, submitted 2026-09-04",
+    "publication": "arXiv:2609.04575v1, 2026-09-04",
     "publication_type": "arXiv preprint",
     "topics": [
       "Mixture-of-Experts",
-      "adaptive computation",
-      "expert skipping",
-      "training-free inference",
-      "router",
-      "SwiGLU",
-      "expert sparsity",
-      "inference acceleration"
+      "router renormalization",
+      "expert activation reduction",
+      "training-free inference"
     ],
-    "implementation": "arXiv v1本文にはACE固有の公式GitHub repositoryへのリンクを確認できない。評価用実装はHugging Face系pipelineとEvalScope 1.4.1を使用し、latencyはNVIDIA A100で測定。",
+    "implementation": "PyTorch/Hugging Face Transformersのrouter forward差し替え。weights変更なし。Transformers 5.3–5.14でrouter computation一致を確認。公式code linkはarXiv v1本文で未確認。",
     "sources": [
-      "https://arxiv.org/abs/2609.05228",
-      "https://arxiv.org/html/2609.05228",
-      "https://arxiv.org/pdf/2609.05228"
+      "https://arxiv.org/abs/2609.04575",
+      "https://arxiv.org/html/2609.04575v1",
+      "https://arxiv.org/pdf/2609.04575"
     ]
   }
 }
