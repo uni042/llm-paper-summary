@@ -1,7 +1,8 @@
 {
   "counts": {
     "discovery": {
-      "completed": 4
+      "completed": 4,
+      "ready": 1
     },
     "audit": {
       "completed": 3
@@ -11,6 +12,19 @@
       "blocked": 1
     }
   },
-  "next_jobs": [],
-  "generated_at": "2026-09-09T06:22:50+00:00"
+  "next_jobs": [
+    {
+      "job_id": "job-bba4e604b37306a7",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
+    }
+  ],
+  "generated_at": "2026-09-09T06:23:32+00:00"
 }
