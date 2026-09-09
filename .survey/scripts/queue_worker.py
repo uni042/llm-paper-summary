@@ -285,7 +285,7 @@ def submission_content(sub: dict) -> str | None:
         raise ValueError("payload_path must be a string")
     pp = Path(payload)
     if not payload.startswith(".survey/work-queue/payloads/") or ".." in pp.parts or pp.suffix.lower() != ".md":
-        raise ValueError("unsafe payload_path")
+        raise ValueError("payload_path must stay within .survey/work-queue/payloads/ and use a .md file")
     target = ROOT.parent / pp
     if not target.is_file():
         raise ValueError("payload_path does not exist")
@@ -338,7 +338,7 @@ def apply_artifact(sub: dict, job: dict):
         return None
     paper = sub.get("paper_path") or job.get("paper_path")
     if not paper or not str(paper).startswith("papers/") or ".." in Path(paper).parts:
-        raise ValueError("safe papers/... paper_path required")
+        raise ValueError("paper_path must stay under papers/ without parent traversal")
     loaded = submission_content(sub)
     if not isinstance(loaded, str):
         raise ValueError("completed artifact requires content or payload_path")
