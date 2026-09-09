@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（44本）
+## 自動生成の論文一覧（45本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -39,6 +39,7 @@
 | [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md) | output tokenを1つ生成する区切りでrequestを一時停止・再開できるようにし、短いrequestを優先しながらKV cacheをCPUへ退避・先読みして待ち時間を減らすLLM serving scheduler。 |
 | [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md) | 複数modelへ届くrequest数が時間ごとに偏る環境で、modelを複数GPUへ分割して置き、空いているGPUをmodel間で共有しやすくすることで、特定modelだけqueueが伸びるのを抑えるserving配置手法。 |
 | [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md) | output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。 |
+| [Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap](moe-overlap-resource-manager.md) | 分散MoEの細粒度な計算・通信重畳で競合する計算CTAと通信CTAのGPU常駐資源を、依存関係と離散的な実行waveを明示した解析モデルから起動時に配分し、COMETの固定通信CTA数をworkload適応型に置き換える。 |
 | [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](cotail.md) | GPUサーバの余剰host CPUへCPU workloadをco-locationした際のLLM serving劣化を、GPU kernel遅延ではなくGPU投入前のCPU-side serving stageのtail amplificationとして診断する。Core Path Tail Index（CPTI）とCore Tail Suppression（CTS）を導入し、workload risk、NVTX stage tail、OS-level protection、decode SLOを組み合わせるCoTail手順により、held-out条件でも固定ルールで保護方式を選択する。 |
 | [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md) | speculative decodingで既に計算されるdraft表現へ軽量な回帰headを付けて出力長を予測し、短いrequestの優先処理とdecode instance間の負荷分散へ使うことでtail latencyを下げる。 |
 | [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md) | requestごとに「SLOまであと何秒の遅延を許容できるか」を残りlatency budgetとして継続推定し、その同じbudgetでrequestの実行順とHBM / CPU DRAM / NVMe間のKV cache復元・先読み・保持・再計算をまとめて決めることで、SLOを満たす処理量と長context requestへの公平性を両立するserving system。 |
