@@ -46,7 +46,7 @@ def validate_common(sub: dict) -> tuple[str, str, str, str]:
     if sub.get("schema_version") != 1:
         raise ValueError("schema_version must be 1")
     if sub.get("operation") != "publish_result":
-        raise ValueError("only operation=publish_result is supported")
+        raise ValueError("operation is not publish_result")
 
     side = sub.get("side")
     if side not in {"research", "audit"}:
@@ -84,6 +84,21 @@ def apply_submission(path: Path) -> Path:
         "ok": False,
     }
     try:
+        if sub.get("schema_version") != 1:
+            raise ValueError("schema_version must be 1")
+        if sub.get("operation") == "probe":
+            result.update({
+                "ok": True,
+                "operation": "probe",
+                "payload": sub.get("payload"),
+            })
+            RESULTS.mkdir(parents=True, exist_ok=True)
+            result_path.write_text(
+                json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            return result_path
+
         side, paper, claim_token, content = validate_common(sub)
 
         state = load_json(CYCLE_STATE)
