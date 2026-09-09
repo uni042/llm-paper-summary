@@ -17,11 +17,15 @@ Chatの予定タスクは、実行時刻を見て**論文worker**か**その他�
 
 Chat側の固定入口:
 
-- 本文: `.survey/work-queue/payloads/chat-payload.md`
+- 本文chunk: `.survey/work-queue/payloads/chat-chunks/part-01.md` 〜 `part-08.md`
 - trigger: `.survey/work-queue/submissions/chat-inbox.json`
 - result: `.survey/work-queue/results/chat-inbox.json`
 
-Chatは新規payload/submissionを作らず、既存固定ファイルを現在blob SHA付きでupdateする。trigger push後は `Survey helper worker` が論文本体反映、job/state遷移、派生view更新、duplicate suppression、ready=0時のdiscovery補充を行う。
+**完成Markdown全文を1つのGitHub updateへ渡さない。** 完成Markdownを章・節の自然な境界で分割し、必要数の固定chunk slotを `part-01` から連番で現在blob SHA付きupdateする。1chunkは最大8 KiB、通常2〜5 KiB程度を目安とする。各update後の新blob SHAを保持し、全chunk保存成功後だけ固定inboxの `payload_chunks` にpathとblob SHAを順番に指定してtriggerする。
+
+`Survey helper worker` は各chunkのpath・順番・size・blob SHAを検証し、runner内だけで一時連結して論文本体へ反映する。連結済み長文はGitHubへcommitしない。途中chunkの保存に失敗した場合はinboxを送らず、成功済みchunkを保持して失敗chunkから再開する。
+
+旧 `.survey/work-queue/payloads/chat-payload.md` はActions内部の一時連結用互換scratchであり、予定Chat workerは直接更新しない。
 
 ### 論文重複の必須チェック
 
@@ -121,11 +125,12 @@ Actions実行後は `.survey/update-worker/result.json` を確認する。`ok: t
 予定タスクの書き込みは以下を優先する。
 
 - 新規ファイル作成ではなく事前作成済み固定slotのupdate
-- 長文と制御JSONの分離
+- 長文は複数の小さい固定slotへ分割
+- 制御JSONは小さく保つ
 - 既存ファイルは現在blob SHA付きupdate
 - 一意なattempt_id
 - 大きい既存ファイルは全文置換よりcompact edit
-- 安全検査/SHA競合時は最新状態を再取得して有効性確認後に1回だけ再試行
+- 安全検査/SHA競合時は最新状態を再取得して有効性確認後に失敗単位だけ1回再試行
 - 単一失敗で予定タスクを停止しない
 
 ### 安全境界
