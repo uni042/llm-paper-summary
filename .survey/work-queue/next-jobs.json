@@ -3,22 +3,26 @@
     "discovery": {
       "completed": 3
     },
+    "audit": {
+      "ready": 1
+    },
     "research": {
-      "ready": 3
+      "ready": 2,
+      "completed": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-bb044a241b6edbdd",
-      "type": "research",
+      "job_id": "job-audit-bb044a241b6edbdd",
+      "type": "audit",
       "lane": null,
       "priority": 88,
       "canonical_id": "arxiv:2510.09665",
       "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
       "source_url": "https://arxiv.org/abs/2510.09665",
       "paper_path": "papers/inference/10-kv-cache-offload-recomputation/lmcache.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
-      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quoted quantitative results, simulation vs real hardware, classification, differences and limitations. Update the full Markdown page.",
+      "completion": null
     },
     {
       "job_id": "job-research-a5f085c33ba9818e",
@@ -45,5 +49,5 @@
       "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T02:51:41+00:00"
+  "generated_at": "2026-09-09T02:54:26+00:00"
 }
