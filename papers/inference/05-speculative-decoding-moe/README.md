@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（13本）
+## 自動生成の論文一覧（14本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -22,4 +22,5 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 | [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md) | 別のdraft LLMを常駐させず、target LLMの最後のhidden stateへ複数の軽量decoding headを追加して1〜数token先の候補を同時予測し、候補をsparse token treeへまとめてbackbone自身で一括検証することで、1回の巨大model forwardから複数tokenを確定する。 |
 | [REST: Retrieval-Based Speculative Decoding](2023-2311.08252-rest-retrieval-speculative-decoding.md) | 小型draft modelを別途学習・実行する代わりに、既存text corpusから現在contextの末尾と一致する過去断片を検索し、その続き候補をTrieへまとめてtarget LLMで一括検証することで、1回のtarget-model passで複数tokenをlosslessに確定する。 |
 | [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md) | 複数の小型draft modelやretrievalが作る候補token列を共通prefixでtreeへまとめ、target LLMにtree全体を1回で並列検証させることで、target modelの巨大weightを読む回数や分散通信回数を減らし、1 verification stepで複数tokenを確定するspeculative inference system。 |
+| [Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models](2026-2609.00355-glance-vlm-speculative-decoding.md) | GLANCEはfrozen VLM targetの融合済みvision-language stateからfuture token blockを1 passでdraftし、wide treeを1 target passで検証するlossless speculative decoder。grounded taskでautoregressive比最大2.93x。free-running textではchain drafterが優位となる境界も示す。 |
 <!-- survey:auto:end -->
