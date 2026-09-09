@@ -2,7 +2,73 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-glance-20260910-0058-v10-a1",
+  "job_id": "job-research-e581510120d7ae4c",
+  "data": {
+    "overview": "Grounded image-anchored tasks favor one-pass block drafting, while free-running captioning/TextVQA favor autoregressive chain drafting. GLANCE reaches 2.93x AR speedup on ChartQA and exceeds production EAGLE3-VL on all three grounded tasks, but is slower on the two open tasks.",
+    "key_results": [
+      {
+        "metric": "same-engine ChartQA speedup",
+        "value": "2.93x over AR, 8.26 ms/token",
+        "baseline": "EAGLE3-VL 2.77x, 8.75 ms/token",
+        "condition": "32 draft tokens/round, SGLang 0.5.6",
+        "interpretation": "GLANCE +6.0% faster than production head."
+      },
+      {
+        "metric": "InfographicVQA/DocVQA margin",
+        "value": "+7.6% / +5.4% vs EAGLE3-VL",
+        "baseline": "production EAGLE3-VL",
+        "condition": "same engine/card/budget",
+        "interpretation": "all paired bootstrap intervals exclude zero."
+      },
+      {
+        "metric": "matched-training acceptance",
+        "value": "2.7x longer pooled; 4.0x on ChartQA",
+        "baseline": "EAGLE-3 head trained on same corpus",
+        "condition": "same frozen target/training framework/schedule",
+        "interpretation": "block form provides acceptance advantage beyond data."
+      },
+      {
+        "metric": "tree-vs-chain",
+        "value": "1.36x geomean wall-clock advantage",
+        "baseline": "identical GLANCE head as width-1 chain",
+        "condition": "same harness",
+        "interpretation": "wide-tree use of one-pass block output is independently valuable."
+      },
+      {
+        "metric": "entropy fit",
+        "value": "pooled b1=0.63, R²=0.71 over 7,751 rounds",
+        "baseline": "task-wise slopes 0.46 caption→1.71 templated ChartQA",
+        "condition": "five main tasks",
+        "interpretation": "lower next-token entropy predicts longer accepted blocks, increasingly with grounding."
+      },
+      {
+        "metric": "conditioning ablation",
+        "value": "acceptance collapses to 1.11 when fused state zeroed",
+        "baseline": "full GLANCE",
+        "condition": "drafter context ablation",
+        "interpretation": "head genuinely uses target context/vision grounding."
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "Free-running text loses",
+        "description": "captioning: GLANCE 1.81x vs AR but EAGLE3-VL 2.16x; TextVQA GLANCE 2.02x vs EAGLE3-VL 2.49x. Deep block candidates drift when token dependencies are not image-pinned."
+      },
+      {
+        "name": "Short-answer no amortization",
+        "description": "ScienceQA single-letter outputs fall below parity; method targets generation rather than classification."
+      },
+      {
+        "name": "Long context parity",
+        "description": "around 6.7K context same-engine CUDA-graph comparison is -2.3% with CI spanning zero; GLANCE acceptance declines more than EAGLE3-VL."
+      },
+      {
+        "name": "Graph capture dependency",
+        "description": "at 2K, CUDA graph converts saved draft passes to +5.8% margin; eager mode is roughly parity (-1.0%, CI spans zero)."
+      }
+    ],
+    "interpretation": "The speedup comes from removing sequential draft depth and exploiting low-entropy grounded spans with wide trees. Vision is an inherited source of predictability rather than repeated drafter overhead.",
+    "quality_impact": "Greedy quality is unchanged by construction/audit; a weak draft affects only acceptance. Sampling preserves distribution rather than byte identity."
+  }
 }
