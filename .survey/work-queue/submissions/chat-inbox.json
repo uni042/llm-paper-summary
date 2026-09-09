@@ -1,1 +1,14 @@
-{"attempt_id":"discovery-1732","job_id":"job-3bd8eeeead9cf279","status":"completed","candidates":[{"canonical_id":"arXiv:2609.00891","title":"CacheBridge: Efficient Cross-Model KV Cache Transfer","source_url":"https://arxiv.org/abs/2609.00891","paper_path":"papers/inference/10-kv-cache-offload-recomputation/cachebridge.md","priority":82,"reason":"Training-free cross-model KV-cache transfer is directly relevant to inference-system reuse. It reduces mapper storage by 8x, application time by up to 3x, and construction time by 10.7x on Qwen3 transfer while preserving high target retention."}]}
+{
+  "operation": "request_jobs",
+  "attempt_id": "chunk-smoke-20260909-1849",
+  "payload_chunks": [
+    {
+      "path": ".survey/work-queue/payloads/chat-chunks/part-01.md",
+      "blob_sha": "642d0602c82b5ae63d32debe31764b70291e62a3"
+    },
+    {
+      "path": ".survey/work-queue/payloads/chat-chunks/part-02.md",
+      "blob_sha": "76caa30200614e70b51c37c7f42dae571ff91c2f"
+    }
+  ]
+}
