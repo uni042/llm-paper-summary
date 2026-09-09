@@ -2,26 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
-  "job_id": "job-research-c57bf9d456b4f061",
+  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
+  "job_id": "job-research-db7f6bec1b5bf488",
   "data": {
     "differences": [
-      "FlexGenやLLM in a Flashのようなdense modelのmemory/storage offloadではなく、request単位でほぼ全expertを触るMoE prefillをモバイルNPU上で扱う。",
-      "MoE-Infinity、PowerInfer、KTransformers等のCPU/GPU中心のexpert offload/prefetchとは異なり、routingからexpert演算までfull-NPU pathを維持し、UFSからNPU可視arenaへ直接重みを流す。",
-      "NPUMoEはApple NPU上のprefillに近いが、expert graph容量がprecompiledでrouting/aggregationはCPU、全weight常駐を前提とする。EStreamはruntime route extentとstreamed parameter addressを共有graphへ束縛し、resident memoryを固定する。",
-      "PowerInfer-2はUFS readとNPU-centric prefillのoverlapに近いが、precompiled graph variantsを使い、本文によれば公開mobile implementationがない。EStreamはdynamic parameter bindingとbounded residencyを統合する。"
+      "COMET/FLUX/TileLinkなどが細粒度重畳の実行機構や依存表現を作るのに対し、本研究はその機構が存在する前提でcompute/communication CTAの常駐比を起動時に決める。",
+      "NanoFlowやLagomのprofiling・measurement-guided searchと異なり、per-shape candidate executionなしの解析選択を行う。",
+      "DeepEP V2の通信資源解析やStream-Kのwave quantizationと関連するが、非preemptive CTA residencyとsplit-level readiness依存を結合したMoE operator固有のmakespan最適化を対象とする。"
     ],
     "limitations": [
-      "autoregressive MoE decodeは対象外。1 token/stepではHMXを飽和させたりstorage loadを隠したりしにくく、decode-specific expert cache/prediction/batchingが必要。",
-      "実装と主要評価はQualcomm Hexagon v81 / Snapdragon 8 Elite Gen 5に依存し、他NPUへのportabilityはprogrammable vector/matrix/DMA interfaceを仮定する。",
-      "異なるexpert dimensionsやexpert-specific operatorを持つmodelでは複数shared graph templateが必要。",
-      "現在のweight-only Q4_0より強い量子化はUFS trafficを減らせる一方、HVX dequantization costが増えpipeline balanceを崩し得る。",
-      "短いpromptではCPU runtimeが依然速い。prefill-onlyの全request長で一律優位ではない。",
-      "Qwen3ではHost referenceとの数値差が他modelより大きく、C4 PPL相対5.51%悪化を報告する。",
-      "独立した公開コードrepositoryは本文/arXivページから確認できず、再現可能な完全artifact公開状況は不明。"
+      "現実装とservice-rate calibrationはsingle-node A100/NVLink kernel family向け。他GPUではoccupancy、tile work、dependency recurrence、legal C range、service rateを再導出する必要がある。",
+      "最適化対象はGEMM2+GatherRSで、AllGather+GEMM1やattention等は変更しない。",
+      "complete-model評価はprefillのみで、decodeやonline-serving throughputは未評価。",
+      "短いinputではMegatron core-TEが速い点があり、全backendに対して全shapeで最速ではない。",
+      "DeepSeek-V2-Liteの最長complete-model条件は40GB A100でOOM。"
     ],
-    "implementation_status": "約23K物理行のC/C++を追加したC++20 host runtimeとllama.cpp Hexagon拡張を実装。FastRPC、DSPQueue、HVX/HMX/DMA、UDMABUF-backed DMA-BUF、O_DIRECT preadvを使用する。論文は実装詳細を開示するが、公式公開repository URLは確認できない。",
-    "research_positioning": "edge/on-device LLM systemの中でも、storage-backed expert virtualizationとprogrammable NPU executionを直接組み合わせる系統。『MoE sparse activationでもprefill request全体ではexpert working setがほぼdenseになる』点を出発点に、capacity不足をcache hit率の問題としてではなく、固定arena上のvirtualized residencyとUFS–NPU overlap問題として扱う。SSD/NVMe offload研究に対しても、flash tierを単なる低速backing storeではなくNPU execution scheduleと共同最適化する設計例として有用。",
-    "audit_notes": "arXiv v1本文をIntroductionからDiscussion/Conclusionまで確認し、system design、implementation、18 primary settings、application workload、energy、quality、auto-tuning、ablation、negative results、portability/decode limitationsを照合した。追加auditを必須とする明確な未確認事項はない。"
+    "implementation_status": "公開COMET A100 implementation in FLUXへ統合済みと論文が明記。論文評価はCOMET A100 V2 commit 19831ca、CUTLASS df8a550で実施。",
+    "research_positioning": "分散MoEの細粒度計算・通信重畳に対するlaunch-time resource allocation研究。実行機構そのものより、GPU resident CTAという有限・非preemptive資源とdependency pipelineを解析的に結ぶ点が中心。",
+    "audit_notes": "arXiv v1全文をIntroductionからConclusionまで再確認。system design、hardware/software、3 model、3 TP/EP、router trace、oracle regret、3測定境界、negative result、correctness、portability/decode limitationを確認し、追加auditを必須とする明確な未確認事項はない。"
   }
 }
