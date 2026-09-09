@@ -2,26 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-glance-20260910-0058-v10-a1",
-  "job_id": "job-research-e581510120d7ae4c",
+  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
+  "job_id": "job-research-622ec47c37b83739",
   "data": {
     "differences": [
-      "EAGLE/EAGLE3-VL drafts autoregressively and pays one drafter pass per depth; GLANCE emits the block in one pass so tree width does not add sequential draft steps.",
-      "Prior VLM speculation compresses/prunes/hides vision or gives a small drafter its own vision path; GLANCE reads target fused states and incurs no second visual encoding path.",
-      "Block-diffusion VLM methods modify the target itself and can change model outputs; GLANCE keeps target frozen and uses diffusion only in the auxiliary drafter plus exact verifier.",
-      "Classic two-model speculation may accept more tokens but is slower because drafter cost per accepted token dominates; GLANCE emphasizes round cost rather than acceptance alone."
+      "Score/NAEEなどrouter中心のimportanceに対し、ACEはrouter preferenceとexpert parameter structureを分けて測ってruntime gateで再結合する。",
+      "Top-P/Ada-Kのvariable-cardinality routingと違い、元top-k候補を維持して候補内secondary slotのみskipする。",
+      "AIMER/DiEP等のstatic compressionと違い、expert poolを恒久削除せずtokenごとに実行集合を変える。",
+      "MoDES等に対しGSP/RCR estimator自体はweight/router geometryだけで構築する。ただしbudget threshold mappingはunlabeled workload passを使う。",
+      "SERE/XShareのbatch-level sharing/re-routingと違いtoken-localでbatch compositionに依存しない。"
     ],
     "limitations": [
-      "batch-one/decode-only claims; no larger-batch evidence.",
-      "greedy bitwise theorem is fp32; production bf16 needs tie-aware gate.",
-      "sampling rows preserve distribution, not byte identity, and use one run/temperature with small samples.",
-      "two of three cross-target fits use proxy drafters rather than trained block adapters.",
-      "grounding task ordering is architecture-scoped and inverts under cross-attention fusion.",
-      "free-running text can favor autoregressive chain; ScienceQA has too little decode loop; long-context margin approaches parity.",
-      "head is 1.05B vs EAGLE3-VL ~0.40B, although one-pass form avoids sequential depth cost."
+      "reported thresholdはworkload-matchedで未知domain transferの保証なし。",
+      "single deterministic seedでconfidence intervalなし。",
+      "RCRはrouter-derived prototypeを1方向しか使わず単独では高skip率で劣化。",
+      "A100 single-GPU latency中心でdistributed all-to-all/load balance未評価。",
+      "arXiv v1本文・pageでACE固有の公式GitHub repositoryを確認できない。",
+      "top-1保持でもlossyでoriginal outputとのexact equivalenceなし。"
     ],
-    "implementation_status": "Official open-source repository: https://github.com/js-lee-AI/GLANCE. Primary implementation attaches a 5-layer 1.05B DFlash-family block head to frozen Qwen3-VL-8B; production comparison uses SGLang 0.5.6.",
-    "research_positioning": "Speculative Decoding系。VLM speculative decodingのvision-access問題をdrafter小型化ではなくone-pass parallel block draftingで解消し、target fused multimodal stateをそのままdraft conditioningへ再利用する。lossless verifierを維持しながらgrounded generationの低entropy/copied spansを速度へ変換する。",
-    "audit_notes": "arXiv full HTMLをIntroduction、Related Work、Preliminaries、Method/Training、all Experiments、entropy analysis、Conclusion、Limitations、losslessness proof、timing/correctness appendicesまで確認。free-running/ScienceQA/long-context/graph-capture境界とfp32/bf16 exactness条件を保持。追加audit必須事項なし。"
+    "implementation_status": "arXiv:2609.05228v1。pseudocodeとthreshold mappingを付録に記載。BF16/Hugging Face/EvalScope 1.4.1で評価しA100 latencyを報告。2026-09-10時点でarXiv本文から公式ACE code linkは確認できない。",
+    "research_positioning": "Adaptive Expert Computation / Compression系。pretrained top-k routerの後段でtoken-adaptiveにexpert実行を間引くinference-time sparsification。weight-only structural proxyへrouter-geometry directional correctionを加える点がrouter-only skippingとstatic pruningの中間に位置する。",
+    "audit_notes": "arXiv v1のIntroduction、Related Work、Method、GSP/RCR、main results、component/fusion ablation、efficiency、Conclusion、Appendix A algorithm/proof、Appendix B threshold mappingを確認。50% headline、10% low-sparsity negative result、RCR単独劣化、single-run/workload-matched thresholdを保持。追加audit必須事項なし。"
   }
 }
