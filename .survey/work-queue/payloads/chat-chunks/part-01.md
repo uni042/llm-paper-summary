@@ -1,1 +1,6 @@
-<!-- Fixed reusable Chat payload chunk 01. Scheduled Chat workers overwrite this existing file; do not delete. -->
+# Chunk transport smoke test
+
+これは論文成果物ではなく、分割payload transportの動作確認用テキストである。目的は、予定Chat workerが完成Markdown全文を単一ファイルへ送らず、複数の固定slotを個別に既存ファイルupdateできることを確認することにある。
+
+この第一chunkには、前半の無害な検証文だけを保存する。GitHub Actions側ではinbox manifestに記録されたblob SHAと、このファイルの実際のGit blob SHAが一致することを確認する。不一致なら連結せず失敗し、古いslotや別jobの内容が混ざらないことを保証する。
+
