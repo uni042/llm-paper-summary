@@ -53,7 +53,11 @@ def read_json(path: Path, default: Any = None):
 
 def write_json(path: Path, obj: Any):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    text = json.dumps(obj, ensure_ascii=False, indent=2) + "\n"
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    path.write_text(text, encoding="utf-8")
+    return True
 
 
 def stable_id(prefix: str, *parts: str) -> str:
@@ -439,6 +443,18 @@ def process_submissions(st: dict):
         write_json(rp, result)
 
 
+def normalize_ready_jobs():
+    changed = False
+    for j in iter_jobs():
+        if j.get("status") != "ready":
+            continue
+        if j.get("type") == "audit" and int(j.get("priority") or 0) > 74:
+            j["priority"] = 74
+            update_job(j)
+            changed = True
+    return changed
+
+
 def queue_snapshot():
     jobs = list(iter_jobs())
     counts = {}
@@ -466,6 +482,7 @@ def main():
     JOBS, SUBMISSIONS, RESULTS = QUEUE / "jobs", QUEUE / "submissions", QUEUE / "results"
     STATE, ARCHIVE = QUEUE / "state.json", QUEUE / "archive"
     st = load_state()
+    previous_state = json.loads(json.dumps(st))
     st.setdefault("policy", {}).update({
         "fixed_daily_quota": False,
         "quality_over_quantity": True,
