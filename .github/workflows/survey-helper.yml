@@ -104,6 +104,10 @@ jobs:
         if: github.run_attempt == 1 && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         run: python .survey/scripts/action_worker.py
 
+      - name: Process pending submissions
+        if: github.run_attempt > 1
+        run: python .survey/scripts/submission_worker.py
+
       - name: Re-run status probe
         if: github.run_attempt > 1
         env:
@@ -146,7 +150,7 @@ jobs:
           fi
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add .survey/requests .survey/results .survey/survey-state papers
+          git add .survey/requests .survey/results .survey/submissions .survey/submission-results .survey/survey-state papers
           git commit -m 'survey-helper: process requests'
           git pull --rebase origin main
           git push origin HEAD:main
