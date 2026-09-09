@@ -63,7 +63,7 @@ Scheduled Chat worker
 4. research/auditは一次資料全文を読み、5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。
 5. 固定slotを順番に小さくupdateする。途中失敗なら成功済みslotを保持し、失敗slotだけ安全に1回再試行する。
 6. 全slot成功後だけinboxをupdateする。
-7. `.survey/work-queue/results/chat-inbox.json` が同一job/attemptで `ok: true` かつ最新queueでjob完了になるまで完了扱いにしない。
+7. `chat-inbox.json` のpush時に旧resultがresetされ、その後生成された `.survey/work-queue/results/chat-inbox.json` が同一 `job_id` で `ok: true`、かつ最新queueでjob完了になるまで完了扱いにしない。
 8. 1件完了ごとに最新queueを読み直し、安全に保存完了できる範囲で次jobへ進む。
 
 ## GitHub write障害時
