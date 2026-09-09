@@ -2,19 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
-  "job_id": "job-research-7a4628493bc11731",
+  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
+  "job_id": "job-research-0b935acaddfdc935",
   "data": {
-    "canonical_id": "arXiv:2605.29639",
-    "arxiv_id": "2605.29639",
-    "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
-    "summary": "Alibabaの大規模実運用LLM inference engine。model loading、prefill/decode分離、cache-aware traffic scheduling、GPU/CPU/RDMA/3FSの4階層KV cache、speculative decoding、TP/PP/DP/EP、weight/KV quantization、ViT-LLM分離を単一serving stackへ統合する。vLLM/SGLangとのcontrolled benchmarkに加えAlibaba実trafficを使い、個別最適化だけでなくproduction orchestrationを含む統合systemとして評価する。",
-    "source": "https://arxiv.org/abs/2605.29639",
-    "authors": ["Boyu Tan", "Jiarui Guo", "Zongwei Lv", "Haobo Sun", "Tong Yang", "Kan Liu", "Xinfei Shi", "Zetao Hu", "Yaxin Yu", "Chi Zhang", "Jianning Zhang", "Xi Yang", "Wei Zhang", "Bo Cai", "Silu Zhou", "Xiyu Wang", "Na He", "Yinghao Yu", "Wending Bao", "Guiyang Huang", "Yuxing Yuan", "Juncheng Yin", "Nan Wang", "Lin Yang", "Zechao Zhang", "Lu Chen", "Guoding Li", "Tao Lan", "Lin Qu"],
-    "publication": "arXiv:2605.29639v1, 2026-05-28",
+    "canonical_id": "arXiv:2609.08131",
+    "arxiv_id": "2609.08131",
+    "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
+    "summary": "KV cache evictionをsoftmax attentionの非線形通信channelとして捉え、future queryからattention outputへの局所Jacobianに基づく情報容量を導出する。実用版Jacapはquery relevance、softmax sensitivity、value/output方向のdiversityを統合した重み付きleverage scoreでtokenを選び、高圧縮LongBench、NIAH、decoding-stage AIME25で既存法より頑健な保持性能を示す。",
+    "source": "https://arxiv.org/abs/2609.08131",
+    "authors": ["Jiaming Yang", "Chenwei Tang", "Liangli Zhen", "Chenyang Zhang", "Jiancheng Lv"],
+    "publication": "arXiv:2609.08131v1, 2026-09-08",
     "publication_type": "arXiv preprint",
-    "topics": ["LLM inference engine", "production serving", "prefill-decode disaggregation", "hierarchical KV cache", "traffic scheduling", "model loading", "speculative decoding", "quantization", "multimodal serving", "MoE parallelism"],
-    "implementation": "公式implementationは https://github.com/alibaba/rtp-llm でApache-2.0公開。Alibaba Group内のTaobao、Tmall、Cainiao等を含むproduction serviceで利用されると論文・公式repositoryが記載する。",
-    "sources": ["https://arxiv.org/abs/2605.29639", "https://arxiv.org/pdf/2605.29639", "https://github.com/alibaba/rtp-llm"]
+    "topics": ["KV cache eviction", "KV cache compression", "long-context inference", "information theory", "softmax attention", "Jacobian", "leverage score", "decoding memory"],
+    "implementation": "arXiv v1本文ではJacap固有の公式code repository公開を確認できない。実験は4x NVIDIA RTX Pro 6000、Ubuntu 22.04、1024 GB system memoryで実施。",
+    "sources": ["https://arxiv.org/abs/2609.08131", "https://arxiv.org/pdf/2609.08131"]
   }
 }
