@@ -2,7 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
+  "job_id": "job-research-bebbfc5f119d619b",
+  "data": {
+    "differences": [
+      "vLLM/SGLang等のserving engine内部最適化やbatch/KV管理を直接改造するのではなく、外部CPU co-tenantが既存serving pathへ与える干渉をOS側から診断・緩和する。",
+      "CUDA kernel execution timeやlaunch/queue metricだけで原因推定せず、NVTXでinstrumentしたscheduler.step、batch.construct、model.execute、model.forwardのP95/P99 tailを主要信号にする。",
+      "単一のisolation policyを常用するのではなく、service-tail型はEngineCore-targeted rt、cache/topology-sensitive TTFT型はNUMA、mixed型はrt+numaへ分岐し、最後にcommon-baseline SLOで採否を検証する。",
+      "CPTI/CTSはresource utilizationそのものではなく、no-interference baselineからのservice-stage tail amplificationと、そのprotectionによる抑制を明示的に測る。"
+    ],
+    "limitations": [
+      "primary hardwareはdual-socket AMD EPYC 7T83 + RTX 4090の1 server platformで、著者自身もhardware-counter/CPTI thresholdは異なるCPU topology、GPU interconnect、kernel、serving engine、background workload mixでrecalibrationが必要としている。",
+      "multi-GPU server上でのsingle-GPU servingを評価対象とし、tensor parallelismやpipeline parallelismを使うdistributed inferenceのhost-side interferenceは直接評価していない。",
+      "CoTailはsame-platform diagnostic procedureであり、global cluster scheduler、tenant fairness policy、admission-control systemとしての完全な設計ではない。",
+      "EngineCore-targeted SCHED_FIFOは強いOS mechanismであり、production利用ではruntime limit、priority ceiling、watchdog rollback、admission controlとの併用が必要と著者らが明記する。",
+      "bootstrap confidence intervalは反復数が小さいためdescriptive robustness summaryであり、formal statistical inferenceの保証ではない。",
+      "CPTI/CTSはCPU-side service-tail経路を要約するためNUMA/locality由来の改善を完全には表現せず、macro SLO validationとの併用が必要。",
+      "評価したcandidate protection集合内でoracleを定義しているため、未評価のOS/runtime protectionがより良い可能性は残る。"
+    ],
+    "implementation_status": "論文はserving launch command、Nsight/NVTX profiling、CPU workload構成、nice/cgroup/rt/NUMA設定、CoTail decision algorithmを付録まで具体的に記載する。rtはruntimeでframework-specific EngineCore TIDを同定してSCHED_FIFO priority 50へ昇格する。公開GitHub code repositoryはarXiv本文・landing page・GitHub検索から確認できず、第三者が取得可能な公式実装は未確認。",
+    "research_positioning": "LLM serving scheduling/disaggregation系統のうち、GPU内のbatch schedulingやKV placementではなく、GPU serverのhost CPUを他workloadへ開放した際のcross-workload interference controlを扱う。『GPUが速いままでも、GPUへ仕事を渡す前のCPU serving pathがtail化してsystem throughputを壊す』ことを定量化し、OS scheduler/NUMA protectionをserving-specific observabilityで選択する点が特徴。GPU資源だけでなくhost-side resource managementをLLM serving SLOの一部として扱う研究として位置づけられる。",
+    "audit_notes": "一次資料v1本文・付録まで確認。著者/所属、primary/held-out hardware・model/framework、protection設定、CPTI/CTS定義、主要macro result、held-out selector result、negative result、scope/caveatを照合した。公開コードURLのみ確認できなかったため、その点を未確認として明記し、現時点では追加auditを必須とはしない。"
+  }
 }
