@@ -1,7 +1,7 @@
 ---
 canonical_id: "ACL:2024.acl-long.681"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -69,6 +69,8 @@ exitごとに別classifierを持つのではなく、**全exitが同じLM head�
 
 またdraft時に作った前半layerのactivation/KVをverificationでも再利用できる。
 
+同一モデルを使う利点は、重みの共有だけではない。下書き段階で終了層まで計算済みの各トークンについて、検証時は同じ前半層をもう一度通さず、その中間表現から残りの層だけをまとめて実行できる。別の小型下書きモデルを使う方式では下書き側の計算結果を標的モデルの途中状態として直接再利用できないため、この共有計算がLayerSkip固有の速度・メモリ利点になる。
+
 この共有が、外部draft model方式に対するmemory上の主な利点になる。
 
 ### 5. Exit layer `E` とdraft token数 `d` のバランス
@@ -82,11 +84,15 @@ exitごとに別classifierを持つのではなく、**全exitが同じLM head�
 
 最適点は単なる「浅いほど速い」ではなく、draft acceptanceとのバランスで決まる。
 
+例えば終了層を浅くすると1個の下書きトークンを作る費用は小さくなるが、後段層で否認される割合が増えれば、まとめて作った後続下書きも無駄になる。逆に終了層を深くすると受理率は上がるが、下書き生成そのものが完全モデルに近い費用へ戻る。したがって最適な終了層と下書き長は、下書き1トークンの費用、受理される連続長、検証を一括実行する効率の積で決まる。
+
 ### 6. 既存checkpointをそのまま使う方式ではない
 
 LayerSkipの中間layerがdraftとして強いのは、専用のlayer-dropout＋early-exit trainingをした結果である。
 
 既存Llama checkpointへruntimeだけ追加して同じ結果が出るわけではない。
+
+学習時の層ドロップアウト（layer dropout）は複数の深さで残る層を使う経験を与え、途中終了損失（early-exit loss）は各中間表現を同じ語彙出力へ読み出せるようにする。前者だけでは浅い表現が次トークン予測へ十分整列する保証がなく、後者だけでは後半層を抜いた経路に本体が慣れない。二つを組み合わせることで、前半層を独立した下書き器として使える状態を作る。
 
 ## 評価
 
