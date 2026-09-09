@@ -2,19 +2,41 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
-  "job_id": "job-research-0b935acaddfdc935",
+  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
+  "job_id": "job-research-622ec47c37b83739",
   "data": {
-    "canonical_id": "arXiv:2609.08131",
-    "arxiv_id": "2609.08131",
-    "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
-    "summary": "KV cache evictionをsoftmax attentionの非線形通信channelとして捉え、future queryからattention outputへの局所Jacobianに基づく情報容量を導出する。実用版Jacapはquery relevance、softmax sensitivity、value/output方向のdiversityを統合した重み付きleverage scoreでtokenを選び、高圧縮LongBench、NIAH、decoding-stage AIME25で既存法より頑健な保持性能を示す。",
-    "source": "https://arxiv.org/abs/2609.08131",
-    "authors": ["Jiaming Yang", "Chenwei Tang", "Liangli Zhen", "Chenyang Zhang", "Jiancheng Lv"],
-    "publication": "arXiv:2609.08131v1, 2026-09-08",
+    "canonical_id": "arXiv:2609.05228",
+    "arxiv_id": "2609.05228",
+    "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+    "summary": "固定top-kルーティングで選ばれたexpertのうち実際の寄与が小さいslotをtokenごとに省く、学習不要・checkpoint保持型のMoE推論手法。Global Spectral Proxy (GSP) がSwiGLU expertのgate/up/down投影とRMSNorm scalingから全体的な変換能力を推定し、Router-Conditioned Refinement (RCR) がcentered router weightからrouting-preferred方向を作って方向依存のexpert応答を補正する。実行時はrouter gateと2つのoffline tableを組み合わせ、両方で低寄与と判断されたslotだけをskipしtop-1 expertは必ず残す。高いskipping率ほどrouter-score単独方式に対する品質優位が大きく、60% skippingではA100上でTTFT 1.72–2.25×、TPOT 1.31–1.41×の高速化を報告する。",
+    "source": "https://arxiv.org/abs/2609.05228",
+    "authors": [
+      "Zukang Xu",
+      "Zhixiong Zhao",
+      "Xing Hu",
+      "Jiangyong Yu",
+      "Houji Wen",
+      "Jun Li",
+      "Zhe Jiang",
+      "Dawei Yang"
+    ],
+    "publication": "arXiv:2609.05228v1, submitted 2026-09-04",
     "publication_type": "arXiv preprint",
-    "topics": ["KV cache eviction", "KV cache compression", "long-context inference", "information theory", "softmax attention", "Jacobian", "leverage score", "decoding memory"],
-    "implementation": "arXiv v1本文ではJacap固有の公式code repository公開を確認できない。実験は4x NVIDIA RTX Pro 6000、Ubuntu 22.04、1024 GB system memoryで実施。",
-    "sources": ["https://arxiv.org/abs/2609.08131", "https://arxiv.org/pdf/2609.08131"]
+    "topics": [
+      "Mixture-of-Experts",
+      "adaptive computation",
+      "expert skipping",
+      "training-free inference",
+      "router",
+      "SwiGLU",
+      "expert sparsity",
+      "inference acceleration"
+    ],
+    "implementation": "arXiv v1本文にはACE固有の公式GitHub repositoryへのリンクを確認できない。評価用実装はHugging Face系pipelineとEvalScope 1.4.1を使用し、latencyはNVIDIA A100で測定。",
+    "sources": [
+      "https://arxiv.org/abs/2609.05228",
+      "https://arxiv.org/html/2609.05228",
+      "https://arxiv.org/pdf/2609.05228"
+    ]
   }
 }
