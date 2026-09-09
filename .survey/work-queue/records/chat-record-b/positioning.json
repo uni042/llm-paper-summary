@@ -2,7 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-glance-20260910-0058-v10-a1",
+  "job_id": "job-research-e581510120d7ae4c",
+  "data": {
+    "differences": [
+      "EAGLE/EAGLE3-VL drafts autoregressively and pays one drafter pass per depth; GLANCE emits the block in one pass so tree width does not add sequential draft steps.",
+      "Prior VLM speculation compresses/prunes/hides vision or gives a small drafter its own vision path; GLANCE reads target fused states and incurs no second visual encoding path.",
+      "Block-diffusion VLM methods modify the target itself and can change model outputs; GLANCE keeps target frozen and uses diffusion only in the auxiliary drafter plus exact verifier.",
+      "Classic two-model speculation may accept more tokens but is slower because drafter cost per accepted token dominates; GLANCE emphasizes round cost rather than acceptance alone."
+    ],
+    "limitations": [
+      "batch-one/decode-only claims; no larger-batch evidence.",
+      "greedy bitwise theorem is fp32; production bf16 needs tie-aware gate.",
+      "sampling rows preserve distribution, not byte identity, and use one run/temperature with small samples.",
+      "two of three cross-target fits use proxy drafters rather than trained block adapters.",
+      "grounding task ordering is architecture-scoped and inverts under cross-attention fusion.",
+      "free-running text can favor autoregressive chain; ScienceQA has too little decode loop; long-context margin approaches parity.",
+      "head is 1.05B vs EAGLE3-VL ~0.40B, although one-pass form avoids sequential depth cost."
+    ],
+    "implementation_status": "Official open-source repository: https://github.com/js-lee-AI/GLANCE. Primary implementation attaches a 5-layer 1.05B DFlash-family block head to frozen Qwen3-VL-8B; production comparison uses SGLang 0.5.6.",
+    "research_positioning": "Speculative Decoding系。VLM speculative decodingのvision-access問題をdrafter小型化ではなくone-pass parallel block draftingで解消し、target fused multimodal stateをそのままdraft conditioningへ再利用する。lossless verifierを維持しながらgrounded generationの低entropy/copied spansを速度へ変換する。",
+    "audit_notes": "arXiv full HTMLをIntroduction、Related Work、Preliminaries、Method/Training、all Experiments、entropy analysis、Conclusion、Limitations、losslessness proof、timing/correctness appendicesまで確認。free-running/ScienceQA/long-context/graph-capture境界とfp32/bf16 exactness条件を保持。追加audit必須事項なし。"
+  }
 }
