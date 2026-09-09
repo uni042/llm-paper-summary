@@ -2,25 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
-  "job_id": "job-research-bf598cfa965b8925",
+  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
+  "job_id": "job-research-ad144841ea01b7c6",
   "data": {
     "differences": [
-      "LExI等のactive-expert削減はsurviving probabilitiesを通常再正規化するため、本論文のparameterizationではk2=k1となる。本手法は実行数とgainを分離する。",
-      "self-distillation等のelastic-k/post-trained MoEは訓練でk変化へ適応させるのに対し、本手法はrouter forwardの小変更だけでweightsを更新しない。",
-      "expert pruning/mergingはresident memoryを減らすがk不変ならcomputeを減らさない。本手法は逆にmemoryを変えずexecuted expert computeだけを減らし、quantization/pruningと直交する。",
-      "router approximationやstochastic selectionではなくtop-k argmax expert identityを保ち、weight amplitudeだけ補正する。"
+      "Existing KV compressors choose tokens/budgets; Tangram makes their heterogeneous output practical in a serving system.",
+      "PagedAttention reduces request-level external fragmentation but assumes uniform head lengths; Tangram targets internal fragmentation caused by non-uniform head retention.",
+      "Jenga handles coarser layer heterogeneity and DiffKV differentiated head management; Tangram exploits cross-head retention regularity to static-plan budget, paging, and kernel partition together.",
+      "Unlike FlashDecoding static heuristics or FlashInfer runtime planning, Tangram moves partitioning fully offline using calibrated budget ratios."
     ],
     "limitations": [
-      "main evidenceは同じQwen seriesの2 models。",
-      "English/Python corpora中心でlong-contextとlong-form generation未評価。",
-      "k2はgeometric grid scanでper-layer/per-domain最適化は未検討。",
-      "perplexityとdownstream accuracyでbest k2が異なりunlabeled tuningだけでは安全でない。",
-      "all experts remain resident so VRAM/RAM capacity is unchanged。",
-      "Gemma appendixはscalar gainでprotocolも異なりmatched k1/k2 replicationではない。"
+      "Depends on offline-calibrated retention stability.",
+      "Main real-system evaluation is one 4×A100 server; transfer to other GPU/CPU/multi-node systems is unproven.",
+      "Optimal H_p is hardware-dependent.",
+      "2.6× headline includes underlying compression capacity gain.",
+      "Does not fix quality loss caused by the compression scorer itself."
     ],
-    "implementation_status": "PyTorch/Hugging Face Transformersでrouter forwardをdrop-in置換しweights不変。Transformers 5.3–5.14でrouter計算一致を検証。arXiv v1本文に専用code repository linkは確認できない。",
-    "research_positioning": "Adaptive Expert Computation / Compression系。fine-grained MoEのactivated expert削減を、routing identityではなくrenormalization gain calibrationの問題として再定式化するcompute-side lever。",
-    "audit_notes": "arXiv v1 HTMLをIntroductionからDiscussion/Conclusion、router behavior、selection-vs-weighting、PPL/MMLU/GSM8K/C-Eval、cost accounting、Gemma appendix、reproducibility notesまで確認。no-renormalization catastrophic case、PPL-vs-MMLU disagreement、same-series/long-context limitationsを保持。追加audit必須事項なし。"
+    "implementation_status": "Official aiha-lab/TANGRAM repository is public, vLLM-based and Apache-2.0. It documents installation, reproduction, ragged paging, multiple scorers, Ampere/sm_80+ requirement, and verified Qwen/Llama/Gemma/GPT-OSS models with some tensor-parallel restrictions.",
+    "research_positioning": "KV-cache optimization/compressionとLLM servingの境界に位置するsystems paper。algorithmic evictionより、non-uniform compressionをcontinuous batching/PagedAttentionへ載せるmemory allocator・page table・scheduler・attention-kernel co-designが主題。",
+    "audit_notes": "arXiv v2 HTMLをmethodology、evaluation、related work、conclusionまで精読し、official GitHubも確認。実機評価でsimulationではない。別auditを要求する未解決点はない。"
   }
 }
