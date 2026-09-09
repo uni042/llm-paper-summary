@@ -2,28 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
-  "job_id": "job-research-7a4628493bc11731",
+  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
+  "job_id": "job-research-0b935acaddfdc935",
   "data": {
     "differences": [
-      "DistServeはprefill/decode分離とSLO-goodput、phase別parallelism/placementを主問題とするのに対し、RTP-LLMはPDをproduction engineの一要素として、global traffic scheduling、prefix-cache affinity、4階層KV cache、fault recovery、model loadingまで統合する。",
-      "Mooncake/MemServe系のKV-centric disaggregated servingと近いが、RTP-LLMはGPU/local CPU/RDMA remote CPU/3FSのstorage hierarchyをMaster schedulingへ直接結び、同時にspeculative decoding、quantization、MoE parallelism、multimodal servingを一つのengineで提供する。",
-      "vLLM/SGLangのような汎用open-source serving engineと直接競合するproduction frameworkであり、単一paper algorithmではなく多数のengineering optimizationを統合したsystem reportという性格が強い。",
-      "HeteroPanaceaがP/D/A/F分離とstage専用hardwareの設計空間をsimulationで探索するのに対し、RTP-LLM paperは実cluster上のPD、ViT-LLM EPD、cache-aware routingをproduction trafficで検証する。hardware stage specializationの体系的searchは主題ではない。",
-      "model-loading側ではfile-order I/O、single-reader distributed broadcast、shared pinned-buffer reuse、I/O-communication overlapを組み合わせ、serving開始前のelastic deployment latencyもsystem objectiveへ含める点が特徴。"
+      "H2O/SnapKVなどのattention heuristicは主に観測attentionや頻度でtokenを個別採点するのに対し、Jacapはfuture-query分布に対するsoftmax局所感度と、保持subset内のoutput方向の重複を同時に扱う。",
+      "KeyDiff/KNormはkey geometryやnormなど軽量proxyを使うのに対し、Jacapは非線形attention channelの情報容量から重みを導出し、weighted leverage scoreでsubset diversityを評価する。",
+      "CapKVがlinear-Gaussian attention surrogateのlog-det information capacityを使うのに対し、Jacapはsoftmax Jacobian S=Diag(alpha)-alpha alpha^Tを導入し、飽和とtoken competitionを理論目的へ明示的に含める。",
+      "PagedAttentionやKV quantizationのような配置・表現圧縮とは異なり、Jacapは保持するtokenそのものを選ぶstructural KV compressionであり、system-level memory managementと原理上は併用可能。"
     ],
     "limitations": [
-      "広範な機能を異なるmodel/workloadで個別評価しており、全機能を同一条件で逐次ablationした統一end-to-end実験ではないため、headline改善を単一機構へ帰属できない。",
-      "production workloadの一部はAlibaba内部serviceで、trace、request distribution、cluster運用条件を外部から完全再現できない。",
-      "PD評価ではTTFT/cache hitが大幅改善する一方tokens/sはSGLang/vLLMとほぼ同等で、throughput優位を一般化できない。",
-      "cache reuse改善はworkload依存で、Internal Robot Q&Aは+215%だがTaobao Merchant Serviceは833->840 tokensに留まる。",
-      "汎用評価serverは8 GPU/node等を示すが、すべてのsubexperimentでGPU型、baseline version、tuning条件、繰り返し回数やconfidence intervalが十分詳細に示されるわけではない。",
-      "3FS、Carbon等Alibaba固有infrastructureとの統合がproduction設計の一部であり、他環境で同等のhierarchical cache/fault-recovery behaviorを得るには代替実装が必要。",
-      "quantization qualityは主にsampled WikiText-2 PPLで評価され、reasoning/code/multimodal等のdownstream quality影響は広く検証されていない。",
-      "cost、energy、multi-tenant isolationの定量比較やfailure/recovery時間の詳細benchmarkは本論文の中心評価に含まれない。"
+      "理論は代表query周辺の一次Taylor近似であり、future query分布が大きく移動する高度に動的なdecodingでは高次非線形性を取り逃がす可能性がある。",
+      "実用Jacapはsoftmax competition matrixとK Lambda_Q K^Tを対角近似するため、理論式が持つtoken間pairwise couplingを完全には保持しない。",
+      "capacity matrix構築・逆行列・leverage scoreによりO(N d_h^2 + d_h^3)の追加計算があり、単純attention/norm heuristicより重い。",
+      "LongBench/NIAH/AIME25中心の評価で、production servingのthroughput、batching、memory allocator、multi-tenant workloadまで含むend-to-end system評価ではない。",
+      "AIME25の8192 reserved-token条件ではCapKV 0.73に対しJacap 0.53で、budgetによって順位が反転する。",
+      "arXiv v1本文・arXiv pageではJacap固有の公式code repositoryを確認できず、現時点の再現性は論文記述に依存する。"
     ],
-    "implementation_status": "Alibaba公式repository `alibaba/rtp-llm` がApache-2.0で公開されている。公式READMEはproduction利用、PD disaggregation、speculative decoding、DeepEP、FP8 KV cache、quantization等を案内する。ただし論文中の全production configurationと公開main branchのexact commit対応は明記されていないため、再現時はversion固定が必要。",
-    "research_positioning": "主系統はLLM Serving / Scheduling / Disaggregation。production-proven serving engineとしてPD、hierarchical KV cache、cache-aware schedulingを核に、model loading、speculative decoding、MoE parallelism、quantization、multimodal EPDまでcross-layer統合する。個別最適化論文の寄せ集めではなく、production orchestrationと実traffic validationを持つ総合serving systemとして位置づける。",
-    "audit_notes": "arXiv v1をIntroductionからConclusionまで確認し、system architecture、4-tier KV cache、loading、traffic scheduling、speculative framework、parallelism、quantization、multimodal、全evaluation subsectionとnegative resultを照合した。公式GitHubとApache-2.0公開も確認済み。PDではTTFT優位とthroughput非優位を分離して記録し、production schedulingの+215% cache reuseも対象workloadを限定した。追加auditを必須とする明確な未確認事項はない。"
+    "implementation_status": "arXiv:2609.08131v1 (2026-09-08)。再学習不要のKV eviction algorithmとして記述され、実験はUbuntu 22.04、4x NVIDIA RTX Pro 6000、1024 GB system memoryで実施。arXiv本文/pageにはJacap固有の公式実装linkを確認できない。",
+    "research_positioning": "主系統はKV cache optimization/compression。既存のattention-based evictionとlinear information-capacity evictionの間をつなぎ、softmax非線形性を局所Jacobianとして情報理論objectiveに戻した研究。system contributionよりもselection criterionの理論化とhigh-compression robustnessが中心。",
+    "audit_notes": "arXiv v1 HTML full textをIntroduction、Related Work、Methodology、LongBench、NIAH、AIME25 decoding eviction、temperature ablation、Conclusion、Appendix A-Cまで確認。LongBenchの高圧縮average、AIME25の全4 budget、NIAHのcontext/depth条件、計算量、runtime setup、明示的limitationsを照合した。AIME25 8192-tokenでCapKVが優位というnegative resultを保持した。追加auditを必須とする未解決事項はない。"
   }
 }
