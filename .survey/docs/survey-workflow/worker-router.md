@@ -19,6 +19,10 @@ GitHub readができない場合は、repo状態に依存する新規処理を�
 
 Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditはqueue-v10で定義されたA/B固定record bankのうち安全に使える1 bankの5 JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。通常はA、Aに別jobの途中保存が残る場合だけBを使う。paper/state/README/identity/queueをChatから直接編集しない。
 
+**同一run完結を優先する。** 開始時に既存ready research/auditがあれば先に処理し、readyが尽きたらそのrunでdiscoveryを最大1バッチ実行する。discoveryのinbox送信で終了してはならない。Actions反映後の最新queueを読み直し、そのdiscoveryから生成されたresearch jobをpriority順に同じrunで直ちに全文精読・構造化record保存・Actions結果確認まで進める。researchからauditが生成された場合も、安全に完了できる範囲で同じrunに処理する。各job完了後に最新queueを再取得し、今回の既存backlogと今回のdiscovery由来jobを可能な限りdrainする。
+
+次回へ残してよいのは、全文取得不能、connector/write障害、明確な時間・実行上限、未解決の依存、または次成果を安全に保存完了できない場合だけとする。単にdiscoveryが終わった、1本処理した、あるいは次jobが新たにqueueへ現れたことを終了理由にしない。1 run内で2回目の新規discoveryは開始せず、Actionsがready=0で次のdiscovery jobを自動補充しても次回へ残す。
+
 Discovery / blocked / deferred / rejectedは長文artifact不要なので、固定inboxだけを小さくupdateしてよい。
 
 ## B. その他更新worker（08:30専用）
