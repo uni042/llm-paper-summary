@@ -149,7 +149,7 @@ def active_jobs(job_type=None, lane=None):
 
 def ensure_discovery_jobs(st):
     prompts = {
-        "discovery_fresh": "Find genuinely new inference-system papers or important revisions from primary sources. Prefer papers not already represented in the repository.",
+        "discovery_fresh": "Find genuinely new inference-system papers or important revisions from primary sources. As a rule, require the paper or meaningful revision to be within the last 30 days. Older missing work belongs in the gap lane. Prefer papers not already represented in the repository.",
         "discovery_citation": "Follow citations, follow-up work, and descendant papers from important inference-system papers already in the repository. Return only candidates with meaningful system-level relevance.",
         "discovery_gap": "Search for missing lineages or adjacent-system techniques that plausibly matter to LLM inference systems. Prefer high-impact gaps over novelty for its own sake.",
     }
