@@ -10,6 +10,7 @@ workflow v10は、queue/state/identityをGitHub Actions側で管理し、Schedul
 4. discoveryは有望候補0〜5件。5件はノルマではない。
 5. research後に明確な追加確認が必要な場合だけauditを生成する。
 6. 同一runでは `discovery → research → 必要ならaudit → queue再取得 → 次discovery` を、実行環境が許す限り繰り返す。
+7. pending再投入の失敗を理由に新規ready jobを飢餓させない。同一pendingの再投入は1 runにつき最大1回とし、同じ `Failure Class` の失敗が確認された後はそのrunで同原因のpending再試行を繰り返さない。
 
 固定の日次件数、固定research/audit比率、固定バッチ数、旧cycle/runは使わない。
 
@@ -300,7 +301,7 @@ GitHub blob SHAは一時配送キューへ固定しない。再投入時に各sl
 
 各scheduled runの開始時に `pending` を確認する。
 
-1. pending payloadを読む。
+1. pending payloadを古いものから読む。
 2. 最新queue/identity/対象paperを確認する。
 3. 成果が未反映でjobがまだ適用可能なら `replaying` とする。
 4. 利用可能なv10 record bankへ通常protocolで再投入する。
@@ -308,6 +309,10 @@ GitHub blob SHAは一時配送キューへ固定しない。再投入時に各sl
 6. 成功時だけ `replayed` とする。
 7. jobがterminal/superseded、identity衝突、成果がstale等で適用対象外なら理由を残して `dead_letter` とする。
 8. 再投入を完了できなければ `pending` のまま残す。
+9. 同一pending payloadの再投入試行は1 runにつき最大1回とする。失敗後に同じpayloadをそのrun内で再度先頭から試さない。
+10. 失敗が権限、connector write不能、操作検証など複数payloadに共通する `Failure Class` と判断できる場合、そのrunでは同じ `Failure Class` の他pendingを個別に再試行しない。完全payloadが耐久保存済みでGitHub readが可能なら、pendingを保持したまま通常のready job処理へ切り替える。
+11. payload固有のstale/identity/dependency問題は対象payloadだけ処理し、別 `Failure Class` のpendingまたは通常jobまで不必要に止めない。
+12. 再投入成功が続いている間は古いpendingから順に回復してよいが、再送回復だけでrunを使い切り新規research/audit/discoveryが恒常的に実行されない状態を避ける。
 
 ## 9. Transport integrity / connector rules
 
