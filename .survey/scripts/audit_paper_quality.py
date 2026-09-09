@@ -341,11 +341,27 @@ def parse_args() -> argparse.Namespace:
     return ap.parse_args()
 
 
+def is_paper_summary(path: Path) -> bool:
+    """Return whether *path* is an actual paper summary, not navigation metadata."""
+    if path.name == "README.md":
+        return False
+    raw = path.read_text(encoding="utf-8")
+    if raw.startswith("# Moved\n"):
+        return False
+    raw_lines = raw.splitlines()
+    _, offset = strip_frontmatter(raw_lines)
+    if offset == 0:
+        return False
+    return bool(
+        re.search(r'^canonical_id:\s*["\']?\S+', "\n".join(raw_lines[:offset]), re.M)
+    )
+
+
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     papers_root = (repo_root / args.papers_root).resolve()
-    files = sorted(papers_root.rglob("*.md"))
+    files = sorted(path for path in papers_root.rglob("*.md") if is_paper_summary(path))
     results = [audit_file(path, repo_root, args) for path in files]
     report = markdown_report(results, args)
 

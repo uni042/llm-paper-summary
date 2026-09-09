@@ -1,6 +1,6 @@
 # Paper mechanical quality audit
 
-`.survey/scripts/audit_paper_quality.py` は `papers/inference/**/*.md` を全件走査し、`.survey/templates/paper.md` のうち機械的に判定できる品質条件を一覧化する。
+`.survey/scripts/audit_paper_quality.py` は `papers/inference/**/*.md` にある実体付きの論文要約を全件走査し、`.survey/templates/paper.md` のうち機械的に判定できる品質条件を一覧化する。論文要約はfrontmatterに空でない `canonical_id` を持つファイルと定義する。カテゴリ索引の `README.md`、横断比較表、正規の移動先だけを示す `# Moved` ファイルは論文要約ではないため対象外とする。移動先の実体ファイルは通常どおり監査する。
 
 ## 実行
 
