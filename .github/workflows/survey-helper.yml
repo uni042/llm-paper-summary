@@ -25,6 +25,13 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Reset reusable Chat inbox result when inbox changed
+        if: github.event_name == 'push'
+        run: |
+          if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -Fxq '.survey/work-queue/submissions/chat-inbox.json'; then
+            rm -f .survey/work-queue/results/chat-inbox.json
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
