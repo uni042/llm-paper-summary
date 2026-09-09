@@ -1,59 +1,55 @@
 ---
-canonical_id: "arXiv:2608.23658"
-arxiv_id: "2608.23658"
-title: "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap"
-summary: "prefill activation reserveをdecode中だけKVへ貸すCUDA VMM機構を実装しつつ、small chunkでもTTFTがほぼ悪化せず単純なchunk縮小の方が有利というnegative resultを示す。"
-source: "https://arxiv.org/abs/2608.23658"
+canonical_id: "arXiv:2608.16157"
+arxiv_id: "2608.16157"
+title: "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution"
+summary: "GPU・CPU・host memory・PCIeを一体として扱い、prefillのexpert転送重畳とdecode missの帯域適応CPU/GPU分担でconsumer hardware上の大規模MoE servingを高速化する。"
+source: "https://arxiv.org/abs/2608.16157"
 last_audited: null
 audit_version: 0
 ---
 
-# Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap
+# FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution
 
 ## 書誌情報
-- **著者**: Sathishkumar Sivashanmugam
-- **公開日**: 2026-08-24
+- **著者**: Shuo Yang, Xiaoze Fan, Melissa Pan, Haocheng Xi, Zhe Wang, Shanlin Sun, Kurt Keutzer, Song Han, Matei Zaharia, Chenfeng Xu, Ion Stoica
+- **公開日**: 2026-08-17
 - **状態**: arXiv preprint v1
-- **実装**: userspace CUDA VMM、torch pluggable allocator、block-pool gate、scheduler controller。attention kernel/driver patch不要。
-
-## 一文要約
-vLLMが大prefill用に常時確保するactivation reserveをdecode中だけKV poolへ貸し、prefill直前に返す仕組みを実装した。しかし8192-token chunkでも32768-token chunkよりmedian TTFTが約1%遅いだけで、単にmax_num_batched_tokensを下げる方がKV容量を多く確保でき、Elastic controllerは実用上の優位を示せなかった。
+- **コード**: https://github.com/FlashML-org/FreeToken
 
 ## 問題設定
-vLLMは起動時に最大prefillのactivation peakを予約し、残りをKV cacheにする。Qwen2.5-7B、TP1ではchunk 2048→32768でKV容量が約366K→308K tokenへ減り、約3.1 GiBのreserveが生じる。このreserveはdecode-only時には遊休するため、KVへ時間貸しできるかを検証する。
+MoEはtokenごとのactive expertが少なく計算量は小さいが、完全expert poolはconsumer GPUのVRAMを超える。prefillでは長promptがほぼ全expertをactivateして大量転送が発生し、decodeではcache miss、agent workloadではcontext編集による再prefillが支配的になる。
 
 ## 手法
-各layerでbase+elastic分の連続virtual addressを予約し、CUDA VMMでbase handleとelastic handleを同じrangeへmapする。baseは常駐、elasticだけ上位sub-rangeをmap/unmapするため、attention kernelには常に単一連続pointerとして見える。elastic領域のblock-idはcommit時だけpoolへ追加し、decommit前にdrainする。
+**Prefill**では2つのfull-layer bufferを使い、GPUがlayer lを計算中にlayer l+1の全expertをPCIe転送する。hybrid-attention model向けにはthinking/tool call/tool output等のsemantic boundaryへrecurrent-state checkpointを置き、context編集後に新suffixだけ再prefillする。
 
-schedulerは次batchがdecode-onlyかprefillを含むか1 step先に知るため、decode-onlyでcommit、prefill直前にdecommitする。CUDA graphsとprefix caching併用でも動作し、toggle前後でbit-identical generationを確認。
+**Decode**では共有LRU expert cacheをrouting localityへ追従させる。miss数m、実測PCIe帯域B_P、CPU expert処理帯域B_HからGPUへfetchする数を概ね q*=m×B_P/B_H とし、残りをCPU上で直接計算する。transferとCPU branchを並行実行し、partial outputをexactにmergeする。
 
-## 評価条件
-**A100-SXM4 40GB、Qwen2.5-7B-Instruct FP16、vLLM 0.23.0、gpu_memory_utilization=0.9、max_model_len=32768**。3.09 GiB / 28 layersでlive controllerのdecommitは**3.8 ms**、recommitは**23.8 ms**。
+scheduler safe pointではGPU expert cacheを再構成し、変動するVRAM budgetや増大するKV cache需要へ適応する。expert poolはhost側をsource of truthとする。
 
-staticにreserve全量をKVへ足すと約314K→370K tokenへ増えるが、62K-token prefill burstで約2.3 GiB activationが必要になりOOM。dynamic toggleはprefill直前に4.4 msでdecommitして同burstを完走した。
+## 実装
+GPU側でrouting-dependent cache controlを行い、fixed-shape bufferとvalid countを使ってCUDA Graph互換を維持する。CPU branchもpersistent C++ workerを介してgraph実行へ統合。FreeToken Weight形式でexpertを最終host layoutへdirect I/Oし、startup時のrepackを減らす。
 
-## 決定的な結果
-40 background decode sequence中へ約25K-token promptを6本投入してTTFTを比較。
+## 評価
+RTX 4060 Laptop 8GBからRTX PRO 6000 96GBまで6環境。Qwen3.6-35B-A3B、DeepSeek-V4-Flash 284B/13B active、GLM-5.2 753B/40B activeを用い、AIME、SWE-bench coding agent、Claude Code、OpenClaw email/calendarを評価。比較はllama.cpp、Ollama、KTransformers、MoE-Infinity。
 
-| Mode | median TTFT | max TTFT | KV capacity |
-|---|---:|---:|---:|
-| chunk 8192 | 4.97 s | 6.07 s | 375K |
-| chunk 32768 | 4.91 s | 5.79 s | 314K |
-| Elastic 32768 | 4.90 s | 5.76 s | 364K |
-
-small chunkのmedian penaltyは約1%で、Elasticはlatencyを維持してもKV容量で8192 chunkに負ける。prefillはcompute-boundで総FLOPsがほぼ不変、decodeは280 sequenceでも8192-token budgetの約3%しか消費しないため、chunk分割によるhead-of-line penaltyが小さい。
-
-## Scope
-decode-only時間はchat 95–97%、bursty 72–97%、long-context 90–99.8%で十分長い。問題はtensor parallelismでreserve比率が薄まることで、**7B TP1 16%、32B TP4 7.7%、7B TP4 2.7%**。著者は評価範囲でElasticが単純なchunk縮小を上回る構成を見つけられなかった。
-
-有効条件は「small chunkがprefill throughputを明確に落とし、同時にKVがscarce」である。
+## 主要結果
+- RTX 5090: Qwen3.6 **77–83 tok/s**、DeepSeek-V4-Flash **22–25 tok/s**。
+- strongest baseline比decode throughput **1.5–2.3×**。
+- agent workloadでもsingle-turn比decode低下を**12%以内**に維持。
+- worst-turn TTFTは全条件**44秒未満**、各baselineは少なくとも1条件で150秒超。
+- 8GB RTX 4060 laptopで35B modelを**39.3 tok/s**。
+- consumer 5環境でstrongest baseline比**1.3–2.1×**。
+- RTX PRO 6000 1枚でGLM-5.2 753Bを**14.9 tok/s**、llama.cpp 7.3 tok/s。
+- full-layer overlap無効時に対しprefill throughputを4k/8k/16k promptで**19/25/26%**改善。
+- 同一cache容量でexpert miss率はQwen/DeepSeekで**16/39%**、KTransformers 41/59%、llama.cpp 62/89%。
 
 ## 既存研究との差
-vAttentionはdriver patchを用いるUVM demand paging、Jengaはfixed budget内のKV sizingが中心。本論文はactivation reserveとKV poolを時間共有するkernel-transparent VMM機構を作り、さらに**機構は正しく動くが現在のvLLMでは機会が薄い**ことをnegative resultとして示した点が重要。
+既存expert offload/prefetchはmiss率削減が中心だが、FreeTokenは残るmissをPCIe transferとCPU direct executionへ実測帯域比で分ける。静的CPU expert配置とも異なり、routingに追従するcache、prefill transfer overlap、agent state reuse、runtime memory resizeを統合する。
 
-## 限界
-評価は単一A100-40GB、Qwen2.5-7B、vLLM 0.23.0中心。別GPU、別model、memory-bound prefillや異なるschedulerでは結論が変わる可能性がある。
+## 品質と限界
+CPU/GPUで同じexpert weightをexactに計算し、expert skip等の近似は導入しない。完全expert poolを置けるhost memoryは必要で、巨大modelではworkstation級RAMが要る。高速pathはpinned memoryとPCIe/host bandwidthに依存し、評価はNVIDIA discrete GPU中心。
 
 ## 一次資料
-- https://arxiv.org/abs/2608.23658
-- https://arxiv.org/pdf/2608.23658
+- https://arxiv.org/abs/2608.16157
+- https://arxiv.org/html/2608.16157v1
+- https://github.com/FlashML-org/FreeToken
