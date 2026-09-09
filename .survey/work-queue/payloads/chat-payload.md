@@ -1,60 +1,59 @@
 ---
-canonical_id: "arXiv:2608.14624"
-arxiv_id: "2608.14624"
-title: "Learning Agent Execution for KV-Cache Management in Agentic Serving"
-summary: "CacheScoutはagent実行遷移をオンライン学習し、再利用されやすい固定文脈KVを予測的に保持・事前取得するvLLM上のruntime。"
-source: "https://arxiv.org/abs/2608.14624"
+canonical_id: "arXiv:2608.23658"
+arxiv_id: "2608.23658"
+title: "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap"
+summary: "prefill activation reserveをdecode中だけKVへ貸すCUDA VMM機構を実装しつつ、small chunkでもTTFTがほぼ悪化せず単純なchunk縮小の方が有利というnegative resultを示す。"
+source: "https://arxiv.org/abs/2608.23658"
 last_audited: null
 audit_version: 0
 ---
 
-# Learning Agent Execution for KV-Cache Management in Agentic Serving
+# Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap
 
 ## 書誌情報
-- **著者**: Rui Zhang, Chaeeun Kim, Shaoting Feng, Kuntai Du, Yuhan Liu, Yi Zhong, Cheng-Wei Ching, Junchen Jiang, Liting Hu
-- **公開日**: 2026-07-16
-- **状態**: arXiv preprint v1, cs.AI
-- **実装**: vLLM v0.11 V1 engine上。約2,300行のruntime logicと約800行のpatch。本文ではcode/benchmark suiteは将来公開予定。
+- **著者**: Sathishkumar Sivashanmugam
+- **公開日**: 2026-08-24
+- **状態**: arXiv preprint v1
+- **実装**: userspace CUDA VMM、torch pluggable allocator、block-pool gate、scheduler controller。attention kernel/driver patch不要。
 
 ## 一文要約
-マルチエージェントLLMで「次にどのagentが呼ばれるか」を軽量なonline transition modelで学習し、その予測をKV-cache evictionとbackground prefetchへ使うことで、同じsystem prompt・tool定義等の再prefillを減らす。
+vLLMが大prefill用に常時確保するactivation reserveをdecode中だけKV poolへ貸し、prefill直前に返す仕組みを実装した。しかし8192-token chunkでも32768-token chunkよりmedian TTFTが約1%遅いだけで、単にmax_num_batched_tokensを下げる方がKV容量を多く確保でき、Elastic controllerは実用上の優位を示せなかった。
 
 ## 問題設定
-各agentのsystem prompt、tool definitions、skills、few-shot例からなる固定prefix（agent anchor）は繰り返し利用される。4 workloadでは固定文脈がprompt tokenの53–62%を占め、anchor blockの平均再利用回数は49–173回で、session-history blockの12–15回より4–13倍高い。一方vLLM等のprefix cacheはcontent hashとrecency中心で、blockのagent identityや将来reuseを知らないため、別agent実行中に価値の高いanchorをLRUで追い出し再計算する。
+vLLMは起動時に最大prefillのactivation peakを予約し、残りをKV cacheにする。Qwen2.5-7B、TP1ではchunk 2048→32768でKV容量が約366K→308K tokenへ減り、約3.1 GiBのreserveが生じる。このreserveはdecode-only時には遊休するため、KVへ時間貸しできるかを検証する。
 
 ## 手法
-### Transition Learner
-prompt-prefix fingerprintでagentを識別し、現在agentから次agentへのtransition countをonline更新する。1次Markov modelで遷移確率を推定し、offline trainingや事前定義workflow graphを不要にする。Pipeline/Debate/SelectorGroupChatのentropy reductionは1.0/0.78/0.57で、単純なonline counterでも約50 dispatch以内に次agent top-1精度76–86%へ達する。
+各layerでbase+elastic分の連続virtual addressを予約し、CUDA VMMでbase handleとelastic handleを同じrangeへmapする。baseは常駐、elasticだけ上位sub-rangeをmap/unmapするため、attention kernelには常に単一連続pointerとして見える。elastic領域のblock-idはcommit時だけpoolへ追加し、decommit前にdrainする。
 
-### Survival-guided eviction
-学習したtransition graph上で現在agentから近いagentほど高いsurvival scoreを与え、そのanchor KVを保護する。最終priorityはsurvival、recency、reconstruction costを組み合わせるため、予測性が弱いとLRU寄りへ戻る。
-
-### Background prefetch
-request間のidle時間に最有力の次agentへwarmup requestを発行し、固定prefixを通常prefill pipelineで先にKV化する。entropy reductionが閾値未満ならprefetchを止めるadaptive gatingで誤予測時のGPU浪費を抑える。
+schedulerは次batchがdecode-onlyかprefillを含むか1 step先に知るため、decode-onlyでcommit、prefill直前にdecommitする。CUDA graphsとprefix caching併用でも動作し、toggle前後でbit-identical generationを確認。
 
 ## 評価条件
-6-agent supervisor frameworkでLlama-3.1-8B-Instructを用い、GSM8K、MT-Bench、GAIA、SWE-benchを評価。比較はvanilla vLLMとContinuum。さらにQwen3-235B-A22B-FP8を4×H200で評価した。
+**A100-SXM4 40GB、Qwen2.5-7B-Instruct FP16、vLLM 0.23.0、gpu_memory_utilization=0.9、max_model_len=32768**。3.09 GiB / 28 layersでlive controllerのdecommitは**3.8 ms**、recommitは**23.8 ms**。
 
-## 主要結果
-- KV-cache hit rate: vanilla vLLM比 **+10–18ポイント**、**81–85%**。
-- 平均TTFT: **18–45%削減**。
-- median TTFT: GAIA **231→114 ms**、GSM8K **239→115 ms**。
-- SWE-bench P99 TTFT: **711→342 ms**。
-- 平均per-turn latency: **29–38%削減**。
-- peak throughput: **19–57%向上**。
-- 同一平均latency budget下でvanilla vLLMの**1.7–12×**のarrival load。
-- Qwen3-235B-A22B-FP8 / 4×H200では平均TTFT **33–54%削減**、throughput **37%向上**。
-- runtime stateは数十agentでも**25 KB未満**、hot-path処理P99は**6 µs未満**。
+staticにreserve全量をKVへ足すと約314K→370K tokenへ増えるが、62K-token prefill burstで約2.3 GiB activationが必要になりOOM。dynamic toggleはprefill直前に4.4 msでdecommitして同burstを完走した。
 
-## 品質への影響
-同一prefixの正確なKVを再利用するcache policyであり、KV圧縮・量子化や近似attentionは導入しないため、機構自体にmodel品質trade-offはない。誤prefetchの影響は品質ではなくGPU競合・throughput側に現れる。
+## 決定的な結果
+40 background decode sequence中へ約25K-token promptを6本投入してTTFTを比較。
+
+| Mode | median TTFT | max TTFT | KV capacity |
+|---|---:|---:|---:|
+| chunk 8192 | 4.97 s | 6.07 s | 375K |
+| chunk 32768 | 4.91 s | 5.79 s | 314K |
+| Elastic 32768 | 4.90 s | 5.76 s | 364K |
+
+small chunkのmedian penaltyは約1%で、Elasticはlatencyを維持してもKV容量で8192 chunkに負ける。prefillはcompute-boundで総FLOPsがほぼ不変、decodeは280 sequenceでも8192-token budgetの約3%しか消費しないため、chunk分割によるhead-of-line penaltyが小さい。
+
+## Scope
+decode-only時間はchat 95–97%、bursty 72–97%、long-context 90–99.8%で十分長い。問題はtensor parallelismでreserve比率が薄まることで、**7B TP1 16%、32B TP4 7.7%、7B TP4 2.7%**。著者は評価範囲でElasticが単純なchunk縮小を上回る構成を見つけられなかった。
+
+有効条件は「small chunkがprefill throughputを明確に落とし、同時にKVがscarce」である。
 
 ## 既存研究との差
-vLLM/SGLang等はprefix内容の一致を扱うが将来agent reuseを予測しない。Continuum/InferCeptは主にsession内tool call中のKV保持、KVFlow/Parrot等はstatic graphやannotation依存が強い。近接するPBKVもfuture invocationを予測するが、CacheScoutは1次Markov counterという極めて軽いonline modelに寄せ、µs級hot-path overheadを狙う。Tutti/LMCache/KVDrive等のoffload系とは補完的で、CacheScoutは主に「GPU内で何を残すか」をagent semanticsで決める。
+vAttentionはdriver patchを用いるUVM demand paging、Jengaはfixed budget内のKV sizingが中心。本論文はactivation reserveとKV poolを時間共有するkernel-transparent VMM機構を作り、さらに**機構は正しく動くが現在のvLLMでは機会が薄い**ことをnegative resultとして示した点が重要。
 
 ## 限界
-1次Markovなので長履歴やtask context依存の分岐は捉えにくい。固定prefixが頻繁に変わるとcross-session reuseが減る。Randomに近いworkflowでは予測利益が小さい。主実装はvLLMのみ。論文時点では公式code公開を確認できず第三者再現性は未確立。高負荷でidle時間が少ない場合はprefetch効果も縮小する。
+評価は単一A100-40GB、Qwen2.5-7B、vLLM 0.23.0中心。別GPU、別model、memory-bound prefillや異なるschedulerでは結論が変わる可能性がある。
 
 ## 一次資料
-- https://arxiv.org/abs/2608.14624
-- https://arxiv.org/pdf/2608.14624
+- https://arxiv.org/abs/2608.23658
+- https://arxiv.org/pdf/2608.23658
