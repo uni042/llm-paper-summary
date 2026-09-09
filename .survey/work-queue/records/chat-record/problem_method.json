@@ -2,19 +2,30 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
-  "job_id": "job-research-0b935acaddfdc935",
+  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
+  "job_id": "job-research-bf598cfa965b8925",
   "data": {
-    "problem": "attention score、recency、value norm等のKV eviction heuristicはtokenを独立に評価しやすく、retained subset内の冗長性・補完性を十分扱えない。CapKVはinformation capacityを導入したがlinear-Gaussian surrogateのため、softmaxの正規化・飽和・token間competitionという本来の非線形性を捨てている。",
-    "novelty": "retained attentionをfuture queryからoutputへの非線形Gaussian channelとして定式化し、代表query周辺の局所Jacobianからmutual-information型のJacobian Information Capacityを導出する。実用algorithmではsoftmax sensitivityとquery-response varianceをtoken重みに落とし、output-space diversityをleverage scoreで保持する。",
-    "method_overview": "future queryを平均mu_Q、共分散Lambda_Qの局所分布とみなし、f_C(q)=U_C softmax(K_C q/sqrt(d_k))を一次Taylor展開する。J_C=U_C S_C K_C/sqrt(d_k)から0.5 logdet(I+Sigma_noise^-1 J_C Lambda_Q J_C^T)を容量とする。online subset searchを避けるためpre-eviction poolでattention priorを計算し、softmax Jacobianとquery covarianceを対角近似してw_i=(1/d_k) alpha_i^2(1-alpha_i)^2 kappa_iを得る。A=I+sum w_i u_i u_i^Tを作り、score_i=w_i u_i^T A^-1 u_iで上位tokenを保持する。",
+    "problem": "fine-grained MoEではtop-k probability massが小さく、selected weightsをsum=1へ再正規化すると大きなgainが掛かる。訓練後にkを減らして同じ方式で再正規化すると、expertを減らす効果とsurvivorのgain過大化が混ざり、単純なtop-k削減を実際以上に有害に見せる。",
+    "novelty": "FFNを実行するtop-k1と、分母のprobability massを計算するtop-k2を分離する。k1がcomputeを、k2がexpert branch gainを独立に制御し、追加学習・parameter・実質的compute overheadなしで訓練時gainへ近づける。",
+    "method_overview": "routerは全E expertのsoftmax probabilityを通常どおり計算する。出力expertはtop-k1だけ選び、その各weightをtop-k1 massではなくtop-k2 massで割る。k2=k1は標準再正規化、k2=trained kは訓練時gainへのanchor、k2=Eは再正規化なしに対応する。k2>k1では残存weight sumが1未満となりtokenごとのadaptive down-scalingになる。実際に評価するFFNはk1個だけなのでcompute savingはk1削減分そのままで、k2増加は既計算router logits上のwider top-kだけである。",
     "components": [
-      {"name": "Local nonlinear attention channel", "description": "retained KV subsetが定義するsoftmax attention mappingをnoise付き非線形channelとして扱い、future queryの局所分布を導入する。"},
-      {"name": "Jacobian Information Capacity", "description": "Jacobian J_C=U_C S_C K_C/sqrt(d_k)によりkey accessibility、output direction、softmax competition、query statistics、model uncertaintyを同じlog-det objectiveへ統合する。"},
-      {"name": "Softmax-sensitive token weight", "description": "subset依存attentionをfull candidate poolで近似し、S_CとK Lambda_Q K^Tを対角化。alpha^2(1-alpha)^2により低attentionだけでなく飽和した高attention tokenも局所感度が低いことを表現する。"},
-      {"name": "Capacity matrix and leverage score", "description": "A_Jac=I+sum_j w_j u_j u_j^Tを構成し、w_i u_i^T A^-1 u_iで重要性とstructural diversityを同時評価する。"},
-      {"name": "Query-statistics estimation and temperature", "description": "historical queryからmu_Q/Lambda_Qを推定し、temperature tauでattention priorのsharpnessを調整。LongBench ablationではtau≈10が最良。"}
+      {
+        "name": "Activation set k1",
+        "description": "実際にFFNを実行するexpert数。computeを直接決める。"
+      },
+      {
+        "name": "Reference set k2",
+        "description": "router probability正規化の分母だけに使うexpert集合。expert branch amplitude/gainを独立に決める。"
+      },
+      {
+        "name": "Gain anchoring",
+        "description": "k2をtrained kまたはその近傍へ置き、k1削減時にsurvivorへ過剰gainが掛かるのを防ぐ。"
+      },
+      {
+        "name": "Paired downstream selection",
+        "description": "perplexityとdownstream accuracyの最適k2が一致しないため、k2∈{k1,k,2k}をpaired testingで選ぶことを推奨する。"
+      }
     ],
-    "system_design": "既存LLMを再学習せず、各layer/headのeviction時にcandidate KVとquery statisticsからscoreを算出してbudget Bのsubsetを残す。prefill後の圧縮だけでなくautoregressive decoding中の動的evictionにも適用でき、KV量そのものを削減するためquantizationやPagedAttention等のsystem-level memory managementと直交的に併用可能。"
+    "system_design": "hidden state→router softmax over E→top-k1を実行集合、top-k2をreference集合として取得→top-k1 probabilityをtop-k2 massで割る→k1 expert FFNだけ実行→shared expertを含むMoE出力へ合成。model weightsやresident expert数は変えないためmemory削減ではなくcompute/decode-bandwidth側のleverである。"
   }
 }
