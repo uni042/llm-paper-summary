@@ -31,6 +31,8 @@ DEFAULT_MIN_COMPONENT_PARAGRAPHS = 2
 
 EXCLUDED_SECTIONS = {"一次資料", "参考文献", "References", "更新履歴", "監査メモ"}
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
+METHOD_HEADING_RE = re.compile(r"^(?:提案)?手法(?:$|[\sの：:（(・])")
+MOVED_HEADING_RE = re.compile(r"^#\s+Moved(?:\s|$)", re.I)
 LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+")
 TABLE_RE = re.compile(r"^\s*\|.*\|\s*$")
 DETAILS_RE = re.compile(r"^\s*</?(?:details|summary)[^>]*>\s*$", re.I)
@@ -67,11 +69,13 @@ class PaperResult:
 
 
 def strip_frontmatter(lines: list[str]) -> tuple[list[str], int]:
+    """Return body lines and the original-line offset of a valid YAML front matter."""
     if not lines or lines[0].strip() != "---":
         return lines, 0
     for idx in range(1, len(lines)):
         if lines[idx].strip() == "---":
             return lines[idx + 1 :], idx + 1
+    # Malformed front matter must not hide the file from the audit.
     return lines, 0
 
 
@@ -81,9 +85,39 @@ def normalize_heading(text: str) -> str:
     return text.strip()
 
 
+def is_method_heading(title: str) -> bool:
+    """Accept the current heading and legacy equivalents used by existing summaries."""
+    return bool(METHOD_HEADING_RE.match(normalize_heading(title)))
+
+
 def is_excluded_section(title: str) -> bool:
     title = normalize_heading(title)
     return any(title == x or title.startswith(x + " ") for x in EXCLUDED_SECTIONS)
+
+
+def is_moved_stub(raw_lines: list[str]) -> bool:
+    """Detect migration stubs even when they retain YAML front matter."""
+    body, _ = strip_frontmatter(raw_lines)
+    for line in body:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        return bool(MOVED_HEADING_RE.match(stripped))
+    return False
+
+
+def is_paper_summary(path: Path) -> bool:
+    """Return whether *path* should be audited as a paper summary.
+
+    Inclusion deliberately does not depend on front-matter validity or canonical_id.
+    Broken or missing metadata must not make a real paper silently disappear from the
+    repository-wide quality audit. Navigation README files and migration stubs are
+    the only Markdown files excluded under papers/inference.
+    """
+    if path.name.casefold() == "readme.md":
+        return False
+    raw_lines = path.read_text(encoding="utf-8", errors="ignore").splitlines()
+    return not is_moved_stub(raw_lines)
 
 
 def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None, int | None]]:
@@ -93,6 +127,7 @@ def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None
     current_h3_index: int | None = None
     h3_counter = 0
     excluded = False
+
     for local_idx, line in enumerate(lines, start=1):
         lineno = local_idx + offset
         if FENCE_RE.match(line):
@@ -100,6 +135,7 @@ def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None
             continue
         if in_fence:
             continue
+
         hm = HEADING_RE.match(line)
         if hm:
             level = len(hm.group(1))
@@ -108,12 +144,14 @@ def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None
                 current_h2 = title
                 excluded = is_excluded_section(title)
                 current_h3_index = None
+                h3_counter = 0
             elif level == 3:
                 h3_counter += 1
                 current_h3_index = h3_counter
             if not excluded:
                 yield lineno, line, current_h2, current_h3_index
             continue
+
         if not excluded:
             yield lineno, line, current_h2, current_h3_index
 
@@ -146,7 +184,7 @@ def prose_blocks(raw_lines: list[str]) -> tuple[list[str], list[str], dict[int, 
         if len(block) < 20:
             return
         all_blocks.append(block)
-        if current_h2 and (current_h2 == "手法" or current_h2.startswith("手法 ")):
+        if current_h2 and is_method_heading(current_h2):
             method_blocks.append(block)
             if current_h3 is not None:
                 method_components.setdefault(current_h3, []).append(block)
@@ -159,11 +197,12 @@ def prose_blocks(raw_lines: list[str]) -> tuple[list[str], list[str], dict[int, 
             if (
                 len(hm.group(1)) == 3
                 and current_h2
-                and (current_h2 == "手法" or current_h2.startswith("手法 "))
+                and is_method_heading(current_h2)
                 and current_h3 is not None
             ):
                 method_components.setdefault(current_h3, [])
             continue
+
         if not line.strip() or TABLE_RE.match(line) or DETAILS_RE.match(line) or LIST_RE.match(line):
             flush()
             continue
@@ -173,6 +212,7 @@ def prose_blocks(raw_lines: list[str]) -> tuple[list[str], list[str], dict[int, 
             continue
         current_h2, current_h3 = h2, h3
         current.append(cleaned)
+
     flush()
     return all_blocks, method_blocks, method_components
 
@@ -212,7 +252,7 @@ def find_bare_english_terms(raw_lines: list[str]) -> list[TermHit]:
 
 
 def audit_file(path: Path, repo_root: Path, args: argparse.Namespace) -> PaperResult:
-    raw = path.read_text(encoding="utf-8")
+    raw = path.read_text(encoding="utf-8", errors="ignore")
     raw_lines = raw.splitlines()
     blocks, method_blocks, method_components = prose_blocks(raw_lines)
     prose = clean_for_language_ratio(prose_text_for_ratio(raw_lines))
@@ -235,11 +275,11 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace) -> PaperRe
         failures.append(f"説明段落数 {len(blocks)} < {args.min_paragraphs}")
 
     has_method = any(
-        h2 and (h2 == "手法" or h2.startswith("手法 "))
+        h2 and is_method_heading(h2)
         for _, _, h2, _ in iter_body_lines(raw_lines)
     )
     if not has_method:
-        failures.append("「## 手法」節がない")
+        failures.append("手法節（「## 手法」または互換見出し）がない")
     elif len(method_blocks) < args.min_method_paragraphs:
         failures.append(f"手法段落数 {len(method_blocks)} < {args.min_method_paragraphs}")
 
@@ -293,6 +333,8 @@ def markdown_report(results: list[PaperResult], args: argparse.Namespace) -> str
         f"- 合格: {len(passed)}件 / 警告: {len(warned)}件 / 不合格: {len(failed)}件",
         f"- 日本語比率: 不合格 < {args.min_japanese_ratio:.0%}、警告 < {args.warn_japanese_ratio:.0%}",
         "- 英語専門語: 日本語・カタカナに置換可能な語が裸で1件でも残れば不合格",
+        "- 対象判定: papers/inference 配下の Markdown から README と # Moved 移動元だけを除外",
+        "- 手法見出し: 「手法」「手法のあらまし」「提案手法」など互換見出しを同一扱い",
         "",
         "## 基準未達",
         "",
@@ -341,22 +383,6 @@ def parse_args() -> argparse.Namespace:
     return ap.parse_args()
 
 
-def is_paper_summary(path: Path) -> bool:
-    """Return whether *path* is an actual paper summary, not navigation metadata."""
-    if path.name == "README.md":
-        return False
-    raw = path.read_text(encoding="utf-8")
-    if raw.startswith("# Moved\n"):
-        return False
-    raw_lines = raw.splitlines()
-    _, offset = strip_frontmatter(raw_lines)
-    if offset == 0:
-        return False
-    return bool(
-        re.search(r'^canonical_id:\s*["\']?\S+', "\n".join(raw_lines[:offset]), re.M)
-    )
-
-
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
@@ -376,7 +402,7 @@ def main() -> int:
         out = repo_root / args.json_out
         out.parent.mkdir(parents=True, exist_ok=True)
         payload = {
-            "schema_version": 2,
+            "schema_version": 3,
             "criteria": {
                 "min_bytes": args.min_bytes,
                 "min_prose_chars": args.min_prose_chars,
@@ -386,6 +412,8 @@ def main() -> int:
                 "min_japanese_ratio": args.min_japanese_ratio,
                 "warn_japanese_ratio": args.warn_japanese_ratio,
                 "bare_english_terms_allowed": 0,
+                "paper_target_policy": "all Markdown under papers/inference except README and # Moved stubs",
+                "method_heading_compatibility": ["手法", "手法の…", "提案手法"],
             },
             "results": [asdict(r) for r in results],
         }
