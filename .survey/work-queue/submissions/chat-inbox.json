@@ -1,37 +1,37 @@
 {
-  "job_id": "job-b22cbbabe99c6344",
+  "job_id": "job-f42851d550437c61",
   "candidates": [
     {
-      "canonical_id": "arxiv:2605.03375",
-      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
-      "source_url": "https://arxiv.org/abs/2605.03375",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/tutti.md",
-      "priority": 94,
-      "reason": "GPU-centric object I/OとGPU io_uringでCPUをKV-cache SSD I/Oのcritical pathから外し、vLLM統合・LMCache比較まで実機評価する。SSD/NVMe活用とKV offloadの中心テーマに直接対応。"
+      "canonical_id": "arxiv:2609.08131",
+      "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
+      "source_url": "https://arxiv.org/abs/2609.08131",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/jacap.md",
+      "priority": 93,
+      "reason": "softmax attentionを非線形通信channelとしてJacobian information capacityを導出し、query relevance・softmax sensitivity・structural diversityを同時に扱うKV eviction。2026-09-09新着でidentity indexに未登録。"
     },
     {
-      "canonical_id": "arxiv:2608.23658",
-      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
-      "source_url": "https://arxiv.org/abs/2608.23658",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/elastic-kv-cache.md",
-      "priority": 91,
-      "reason": "CUDA VMMでprefill reserveをdecode時にKVへ貸し出す実装を作った上で、chunked prefillで多くの利得が消えるnegative resultまで実測しており、KV memory設計の境界条件として価値が高い。"
+      "canonical_id": "arxiv:2609.05228",
+      "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+      "source_url": "https://arxiv.org/abs/2609.05228",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/ace.md",
+      "priority": 90,
+      "reason": "training/calibration不要でtokenごとにexpert slotをskipし、offline spectral proxyとrouter-conditioned refinementをruntime gateに統合する。MoE adaptive computationの中心テーマ。"
     },
     {
-      "canonical_id": "arxiv:2512.03927",
-      "title": "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
-      "source_url": "https://arxiv.org/abs/2512.03927",
-      "paper_path": "papers/inference/03-expert-prefetch/od-moe.md",
+      "canonical_id": "arxiv:2609.04575",
+      "title": "Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2609.04575",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/training-free-halving-activated-experts.md",
       "priority": 88,
-      "reason": "expert cacheを廃止し、複数layer先のactivation予測とedge node間のload/compute pipelineでJIT expert loadingを行う。MoE expert prefetch/offloadの設計点として既存cache型方式との差が明確。"
+      "reason": "active expert数とrouter probability renormalization gainを分離し、Qwen fine-grained MoEでexpert compute半減時の品質劣化を大幅に抑えるtraining-free inference手法。"
     },
     {
-      "canonical_id": "arxiv:2607.16892",
-      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
-      "source_url": "https://arxiv.org/abs/2607.16892",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/robust-kv-cache-management.md",
-      "priority": 84,
-      "reason": "未知のoutput length下でKV reservation、parallelism、routing、prefix cachingをWasserstein DROとして共同最適化し、production tracesでcost/P99/SLOを評価する。"
+      "canonical_id": "arxiv:2609.00355",
+      "title": "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.00355",
+      "paper_path": "papers/inference/05-speculative-decoding-moe/glance-vlm-speculative-decoding.md",
+      "priority": 86,
+      "reason": "targetのfused vision-language stateを使うone-pass block-diffusion drafterとwide-tree verificationでVLM speculative decodingをlosslessに高速化する。コード公開済み。"
     }
   ]
 }
