@@ -2,26 +2,81 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
-  "job_id": "job-research-bebbfc5f119d619b",
+  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
+  "job_id": "job-research-c57bf9d456b4f061",
   "data": {
-    "hardware": ["dual-socket AMD EPYC 7T83", "128 physical cores / 256 logical threads", "8× NVIDIA RTX 4090 server; each serving experiment uses a single GPU"],
-    "software": ["Linux CFS / nice / cgroup v2 / SCHED_FIFO / NUMA affinity", "NVIDIA Nsight Systems + NVTX", "vLLM", "SGLang"],
-    "model": ["Primary: DeepSeek-R1-Distill-Qwen-7B on vLLM", "Held-out: Llama-3.1-8B on vLLM", "Held-out: Mistral-7B on vLLM", "Held-out: DeepSeek-R1-Distill-Qwen-7B on SGLang"],
-    "datasets": ["stress-ng and seven application-level CPU co-tenants spanning compute/cache/I/O/network/mixed behavior", "Held-out CPU workloads: image-preprocess, sqlite-txn, text-search, zstd-compress"],
-    "baselines": ["none", "nice", "cgroup CPU weighting", "EngineCore-targeted rt", "NUMA isolation", "targeted mixed-risk validation: rt+numa", "selector baselines: Always-rt, Hardware-only, Macro-only"],
-    "settings": [
-      {"name": "Serving mode", "description": "single-GPU LLM serving on a multi-GPU server; tensor/pipeline parallel multi-GPU inferenceは対象外"},
-      {"name": "Client", "description": "closed-loop batched client、batch size 32、最大512 generated tokens/request"},
-      {"name": "Measurement", "description": "10 measurement rounds、8 s warmup。throughput、TTFT、TPOTとNVTX stage latency distributionを収集"},
-      {"name": "rt", "description": "framework-specific EngineCore TIDのみSCHED_FIFO priority 50。他thread/co-tenantはCFS"},
-      {"name": "nice", "description": "LLM serving processを概ねnice=-15、interfering workloadはdefault"},
-      {"name": "cgroup", "description": "LLM cpu.weight=5000、interfering workload cpu.weight=50"},
-      {"name": "numa", "description": "GPU1ではLLMをCPUs 0–63,128–191、workloadを64–127,192–255へ分離"},
-      {"name": "Held-out validation", "description": "threshold/risk label/policy-selection rulesをprimary vLLM/DeepSeek条件で固定してから別model/frameworkおよび4 unseen CPU workloadsで評価"}
+    "hardware": [
+      "OnePlus PLK110 smartphone",
+      "Snapdragon 8 Elite Gen 5 (SM8850)",
+      "Hexagon v81 HTP",
+      "Adreno GPU",
+      "2 prime + 6 performance Oryon CPU cores",
+      "15.1 GiB memory",
+      "UFS 4.1 storage"
     ],
-    "correctness": "本研究の対象はmodel output品質ではなくserving性能とco-location SLOである。protectionはmodel計算を近似・変更せずOS scheduling/localityを制御する。tail diagnosisの妥当性はservice-stage tailとmacro degradationの相関、CTSと回復の整合、schedstat/delay-injection等の補助検証で確認するが、著者らは全干渉経路のformal causal proofとは主張しない。",
-    "methodology": "CPTIはscheduler.step、batch.construct、model.execute、model.forwardのP95/P99正規化tail amplificationをuniform weightで集約する。primary experimentでmechanismとdecision ruleを作り、held-outでは保護結果を見る前にCoTail recommendationを決める。小標本のbootstrap confidence intervalは10,000 resamplesで計算するが、formal inferenceではなくdescriptive robustness summaryとして扱う。",
-    "scope": "同一dual-socket GPU server上の外部host-CPU co-location interferenceを対象とする。GPU memory oversubscriptionを前提とせず、主にGPU work submission前のCPU-side serving path、OS scheduler、NUMA/localityの干渉を扱う。"
+    "software": [
+      "Android 16",
+      "C++20 EStream runtime",
+      "llama.cpp Hexagon support extension",
+      "Qualcomm FastRPC / DSPQueue / cDSP",
+      "O_DIRECT preadv + UDMABUF-backed DMA-BUF",
+      "Qualcomm QPT for SoC energy"
+    ],
+    "model": [
+      "OLMoE-1B-7B",
+      "LFM2.5-8B-A1B",
+      "DeepSeek-V2-Lite",
+      "Qwen3-30B-A3B",
+      "Mixtral-8x7B"
+    ],
+    "datasets": [
+      "C4 prefixes",
+      "MASSIVE",
+      "WinoGrande",
+      "ToxicChat",
+      "HellaSwag",
+      "ARC-Challenge",
+      "NFCorpus",
+      "SciFact",
+      "LAMBADA",
+      "BoolQ"
+    ],
+    "baselines": [
+      "llama.cpp-CPU",
+      "MNN-CPU",
+      "MNN-OpenCL",
+      "ONNX Runtime GenAI CPU",
+      "EdgeMoE reproduction",
+      "PowerInfer parameter-streaming backend port",
+      "same-backend fully resident NPU reference",
+      "QNN-switch per-expert contexts",
+      "naive streaming",
+      "coarse layer streaming"
+    ],
+    "settings": [
+      {
+        "name": "Precision",
+        "description": "expertとlarge non-expert matrixはGGUF Q4_0、activationはFP32、HMX operandとKV cacheはFP16。OLMoE output headはQ6_K、DeepSeek MLAの一部はFP16。activation quantizationやapproximation-based sparsityは不使用。"
+      },
+      {
+        "name": "Primary input lengths",
+        "description": "C4 prefix 256–4096 tokens。主要比較は3モデル×6長さ=18設定。TTFTはOS page cacheをdropしたfresh process 3回のmedian。"
+      },
+      {
+        "name": "Application tests",
+        "description": "7 dataset、各32 length-stratified examplesを共通sourceとしてmodelごとにtokenize。1 warm-up後のmean request latencyとpeak physical memoryを測定。"
+      },
+      {
+        "name": "Energy",
+        "description": "128–2048 tokenのsteady-state prefillでQPTがgross SoC energyを積算。"
+      },
+      {
+        "name": "Auto-tuning",
+        "description": "1K C4 calibrationでGごとのservice profileを採取。platformでは95% peak grouped-read bandwidthを満たす最小Q=2を固定し、memory budgetごとにG/Bを選ぶ。"
+      }
+    ],
+    "correctness": "model weightとrouting decisionは保持するが、fused NPU pathとstreamingにより有限精度演算順序は変わる。200例/benchmarkのHost reference比較ではOLMoE/LFM2.5のC4 PPL差は0.1%未満、DeepSeekもPPLは安定しARC-Cのみ3.0 point差、Qwen3は相対PPL 5.51%悪化・task score差最大3.0 pointだった。",
+    "methodology": "latency、peak physical memory、energy、qualityを別々に評価し、baselinesは対応するmodel/runtime pairを調整して比較する。大規模modelでは起動・初期化を含むより厳しいenergy boundaryも示す。auto-configuratorは184個のproduction-supported Q/B/G sweepと比較する。",
+    "scope": "prefill-only workloadを対象にし、autoregressive decodeは最適化対象外。commercial Qualcomm smartphone上のsingle-device full-NPU MoE prefillを主対象とする。"
   }
 }
