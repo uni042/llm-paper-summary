@@ -16,7 +16,9 @@ request/resultは観測・受渡し用であり、論文本文の精読や科学
 
 1. GitHub connectorで `.survey/requests/<unique>.json` を新規作成してdefault branchへcommitする。
 2. connectorによる新規ファイル作成が利用不能な場合だけ、caller環境のローカルhelper / Python / shellを使う。
-3. それも利用不能な場合は、workflow本文に定めたconnector再現経路へフォールバックする。
+3. connectorでrequestファイルを作成できない場合は、GitHub Issue作成が利用できれば非常用Issue経路を使う。タイトルを `[survey-helper] ...` とし、本文を許可operationのJSONオブジェクトだけにする。Actionsはrepository ownerが作成した当該タイトルのIssueだけを受理し、`.survey/requests/issue-<number>.json` と同名resultへ変換する。
+4. Issue経路も利用不能な場合だけ、caller環境のローカルhelper / Python / shellを使う。
+5. それも利用不能な場合は、workflow本文に定めたconnector再現経路へフォールバックする。
 
 request名はrun / operation / 一意識別子を含めて衝突を避け、作成前に同名request/resultの存在を確認する。connectorからcommitできた場合は、その後のworker起動・result待ち・`ok: true`確認は通常の基本フローと同じである。
 
@@ -50,3 +52,7 @@ request commit直後にresultがまだ無いことは正常。Actions実行に�
 ## commitトリガ
 
 workflowは `.survey/requests/*.json` のpushだけで起動する。worker自身がresults/stateをcommitしてもrequest pathを変更しないため、自己再帰起動しない。
+
+## 非常用Issue経路
+
+`.survey/requests/*.json` の直接commitが実行環境の制約で拒否される場合に限り使う。公開repositoryから第三者が状態処理を起動できないよう、workflowは `github.actor == github.repository_owner` かつタイトルが `[survey-helper]` で始まる新規Issueだけを受理する。Issue本文はJSONオブジェクトそのものとし、`action_worker.py` の既存allowlistと入力検証をそのまま適用する。Issue番号をrequest IDとして使うため重複作成を避けやすい。Issue経路で生成したrequest/resultもrepositoryへcommitし、callerはresultの `ok: true` を確認してから続行する。
