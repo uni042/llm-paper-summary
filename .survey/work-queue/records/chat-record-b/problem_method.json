@@ -2,34 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "attempt_id": "attempt-glance-20260910-0058-v10-a1",
+  "job_id": "job-research-e581510120d7ae4c",
   "data": {
-    "problem": "固定top-k MoEではtokenごとの実寄与が違っても同数のexpert slotを実行するため、低寄与expertにもFFN計算とdispatchが発生する。router gateは候補間の相対的割当嗜好であり、expert固有の非線形変換能力や方向特化を直接表さない。既存の動的削減にはrouter再学習、補助module、calibration/sensitivity profiling、batch前提などを要する方式が多い。",
-    "novelty": "ACEは元routerとtop-k候補集合を維持し、Global Spectral Proxy (GSP)とRouter-Conditioned Refinement (RCR)の2つのparameter-only proxyをoffline計算する。runtimeではtokenのrouter gateで両proxyを条件付けし、max融合により両方が低寄与と判断したslotだけをskipする。",
-    "method_overview": "deployment前にGSP/RCR tableを作る。GSPはSwiGLUのgate/up/down投影とRMSNorm scalingを結合したspectral surrogateをlayer内正規化してexpert全体の変換能力を表す。RCRはrouter weightをlayer平均からcenterし、その方向をRMS正規化したprototypeとしてexpertへoffline forwardし、routing-preferred方向の増幅率をtable化する。推論時は元routerのtop-k候補ごとにgate×GSPとgate×RCRを計算して候補集合内で正規化し、そのmaxを最終scoreとする。budgetに対応するthreshold未満だけskipし、top-1 expertは必ず残しminimum-active制約も適用できる。残存expertだけFFNを実行し、gateを再正規化してMoE出力を合成する。",
+    "problem": "VLM speculative decodingはdrafterがautoregressiveなためdraft depthだけsequential passesが必要で、小型化すると毎stepでimageを処理できずvisionを圧縮・削除しがちである。しかしDoc/Chart系ではimageがnext tokenを強く拘束し、visionを失うと最もdraftしやすい部分で精度が落ちる。",
+    "novelty": "GLANCEはtargetがprefillで既に作ったfused vision-language hidden statesをblock-diffusion headへcross-attentionで渡すので追加vision encoderを持たず、16-token blockをone passでdraftする。offset-wise marginalsからwide prefix treeを作り、ancestor-masked target passでtarget自身のgreedy pathだけをcommitする。",
+    "method_overview": "frozen Qwen3-VL-8Bのlayers {1,9,17,25,33}からfused statesを取得し、5-layer 1.05B block headがblock size16のmasked future positionsへoffset-wise token marginalsを一度に出す。prefix probability productで候補prefixをrankしprefix-closed treeを固定budgetまで構成する。tree全nodeをancestor-only maskでtargetへpackして1 forwardで検証し、target greedy continuationと一致するlongest represented prefixをcommitし、最後のverified rowからbonus tokenを出す。draft headが誤っても受理長が短くなるだけでtarget outputは変わらない。trainingはtarget/vision towerをfreezeし、target自身のgreedy generations 16K rowsでheadだけ1 epoch学習する。",
     "components": [
       {
-        "name": "Global Spectral Proxy (GSP)",
-        "description": "SwiGLUの三投影の結合を保つbranch-symmetric spectral surrogateとRMSNorm scalingから、real sampleなしでglobal amplificationを推定しlayer内正規化する。"
+        "name": "Fused-state block drafter",
+        "description": "targetのvision-language fusion済みhidden statesを再利用しraw image encodingなしで16-token blockをparallel draftする。"
       },
       {
-        "name": "Router-Conditioned Refinement (RCR)",
-        "description": "centered router weightからexpert固有routing方向を作り、そのprototypeに対するexpert応答増幅をoffline評価してGSPの方向盲性を補う。"
+        "name": "Wide candidate tree",
+        "description": "offset-wise marginalsのproduct scoreからprefix-closed treeを作り、one-pass draftのwidthをaccepted lengthへ変換する。"
       },
       {
-        "name": "Conservative dual-view fusion",
-        "description": "GSP/RCR寄与分布のmaxを使うため、skip setは両低寄与集合のintersectionとなる。片方が重要とみなしたexpertは保持する。"
+        "name": "Ancestor-masked verifier",
+        "description": "tree nodeを1 target forwardへpackし各nodeでexact autoregressive conditionalを再現、target greedy pathだけをcommitする。"
       },
       {
-        "name": "Budget-to-threshold mapping",
-        "description": "estimatorはdata-freeだが、報告された10–60%のbudgetをthresholdへ変換する際はunlabeled full-model passでcandidate scoreを集めquantile mappingする。"
+        "name": "Tie-aware losslessness gate",
+        "description": "fp32ではargmax margin条件下でbitwise greedy equivalence、production bf16ではtie近傍をtarget tokenへdeferしてbyte identityを守る。"
       },
       {
-        "name": "Safeguards",
-        "description": "top-1を常時保持し、必要ならminimum-active数を課し、surviving gateを再正規化する。"
+        "name": "Entropy-guided regime characterization",
+        "description": "accepted lengthがtarget next-token entropyに強く支配され、grounded/copied spansほど長くなることをtask横断で定量化する。"
       }
     ],
-    "system_design": "token→元router top-k/gate→GSP/RCR table lookupとscalar score→threshold/top-1 safeguard→残存expertだけFFN→gate再正規化→MoE outputの順に処理する。offline tableはcheckpointごとに再利用できるが、所定skip率のthresholdは報告実験ではworkload score分布に対応付けている。"
+    "system_design": "prefillでtarget vision encoderとdecoder fusion→decode round root→block head 1 pass→candidate tree構築→target tree verification 1 pass→longest target-greedy prefix+bonus token commit→次round。autoregressive drafterのdepth分passを除去しつつtargetは無改造。"
   }
 }
