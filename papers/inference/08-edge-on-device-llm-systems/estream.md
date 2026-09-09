@@ -2,107 +2,308 @@
 canonical_id: "arXiv:2609.06551"
 arxiv_id: "2609.06551"
 title: "EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs"
-summary: "モバイルNPUの静的グラフ制約とMoEの要求単位での専門家集合の高密度化を、共有専門家グラフ、実行時ルート・重みアドレス束縛、UFS上の専門家仮想化、UFS–NPUパイプラインで解消し、スマートフォン上の全NPU MoEプリフィルを実現する。"
+summary: "スマートフォンのNPUでMoEの入力処理を行うとき、全専門家重みをDRAMへ常駐させず、必要な専門家群だけをUFSストレージから固定サイズの作業領域へ順番に読み込み、NPU計算と重み読出しを重ねるシステム。動的に変わる専門家選択を静的グラフ型NPUで扱うため、全専門家で同じ計算グラフを共有し、実行時にはルート情報と重みアドレスだけを差し替える。"
 source: "https://arxiv.org/abs/2609.06551"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-09"
+audit_version: 1
 ---
 
 # EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs
+
+> スマートフォンのNPUでMoEの入力処理を行うとき、全専門家重みをDRAMへ常駐させず、必要な専門家群だけをUFSストレージから固定サイズの作業領域へ順番に読み込み、NPU計算と重み読出しを重ねるシステム。動的に変わる専門家選択を静的グラフ型NPUで扱うため、全専門家で同じ計算グラフを共有し、実行時にはルート情報と重みアドレスだけを差し替える。
+
 ## 書誌情報
+
 - **著者**: Junming Zhang, Zhenzhe Zheng, Fan Wu, Xiaoyao Huang, Jie Wu
 - **公開**: arXiv:2609.06551v1, 2026-09-06
-- **種別**: arXiv preprint
-- **対象**: on-device LLM、MoE prefill、mobile NPU、expert virtualization、UFS streaming、edge inference
-- **実装**: C++20ホストランタイムとllama.cppのHexagon対応を拡張した低水準HTPバックエンド。約23K物理行のC/C++を追加。独立した公式公開コードURLは本文・arXivページでは確認できない。
+- **種別**: プレプリント（preprint）
+- **主題**: 端末内LLM（on-device LLM）、混合専門家モデル（Mixture of Experts; MoE）、NPU、UFSストリーミング、専門家オフロード（expert offload）
+- **実装**: C++20ホストランタイムと llama.cpp の Qualcomm Hexagon 対応を拡張した低水準バックエンド。論文では約23K物理行のC/C++追加を報告する。独立した公式公開コードURLはarXiv v1では確認できない。
+
+## 概要
+
+EStreamが解こうとしている問題は、**「MoEは1トークンごとには少数の専門家しか使わないのに、長い入力をまとめて処理すると結局ほとんどの専門家を使ってしまい、スマートフォンのメモリへ収まらない」**という問題である。
+
+混合専門家モデル（Mixture of Experts; MoE）では、FFN部分を多数の専門家（expert）へ分け、各トークンにはルータ（router）が選んだ少数の専門家だけを実行する。逐次生成（decode）のように1回に扱うトークンが少ない場合は、「今回は専門家3と7だけ必要」という疎性をそのまま利用しやすい。
+
+ところが入力処理（prefill）では、数百〜数千トークンを一度に処理する。各トークンが別々の専門家を選ぶため、**個々のトークンでは疎でも、要求全体では多数の専門家が一度は選ばれる**。論文はこの現象を要求単位の高密度化として問題視している。結果として「MoEだから使う重みは少ないはず」という期待に反して、ほぼ全専門家の重みをDRAMへ置きたくなる。
+
+PCならCPUメモリやGPUメモリを大きく取れるが、スマートフォンでは十数GiB程度の共有メモリをOSや他アプリとも分け合う。一方、UFS（Universal Flash Storage）には数十〜数百GBの容量がある。そこでEStreamは、**UFSを巨大な専門家重み置き場として使い、今計算する専門家だけを小さなNPU可視メモリへ入れ替える**。
+
+ただし、単純に重みをUFSから読むだけでは遅い。さらにモバイルNPUはGPUのように実行時に自由な動的カーネルを組み立てるのではなく、事前に計算グラフやテンソル形状をある程度固定する実行方式が多い。MoEでは毎回「どの専門家を何トークンが使うか」が変わるため、この二つは相性が悪い。
+
+EStreamの中心は、次の二問題を同時に解くことにある。
+
+1. **容量問題**: 全専門家をDRAMへ置かず、UFSから必要分だけ流す。
+2. **NPUの静的実行問題**: 専門家ごとに別グラフを作らず、一つの共有グラフへ実行時のルートと重み位置だけを渡す。
+
+そのうえで、UFS読出しをNPU計算の裏へ隠すパイプラインを構成する。
+
 ## 問題設定
-MoEは各tokenで少数の専門家だけを選ぶが、複数tokenのprefillでは要求全体として専門家集合の大半を触るため、専門家重みがモバイルDRAMへほぼ全量常駐しやすい。一方、モバイルNPUの一般的なグラフ実行系はトポロジ、tensor容量、parameter bindingを事前確定するため、実行時に変わる専門家・route数・parameter位置を効率よく扱えない。CPU/GPUへroutingやexpert実行を逃がすとNPUの高い行列演算性能を活かせず、既存offloadもdecode localityやCPU/GPU計算中心である。
-## 新規性
-専門家間で演算トポロジが不変であることと、論理的に活性化された専門家が同時に物理常駐する必要はないことを利用する。1つの共有専門家NPUグラフに実行時route extentとparameter addressを束縛し、専門家全体をUFS上に置いたまま固定サイズのNPU可視arenaへgroup単位で流す。さらにUFS読出しとNPU計算を有限buffer producer-consumer pipelineとしてモデル化し、group size・I/O queue depth・bank countを自動選択する。
+
+### なぜMoEでも入力処理ではメモリを節約しにくいのか
+
+例えば64個の専門家があり、各トークンが2個だけを選ぶMoEを考える。1トークンだけなら必要なのは2専門家であり、62専門家は触らない。
+
+しかし1024トークンを同時に処理すると、それぞれが別の専門家を選ぶ。最終的には64個のうち大部分が少なくとも一度は選ばれる可能性が高い。つまり、**トークン単位の疎性は高くても、バッチ・要求単位では重みアクセスが高密度化する**。
+
+このため、逐次生成向けの「人気専門家を数個だけキャッシュしておく」方式を、そのまま長い入力処理へ持ってきても効きにくい。
+
+### なぜCPUやGPUへ逃がさずNPUで処理したいのか
+
+スマートフォンのNPUは、大規模行列積を電力効率よく実行するための専用回路を持つ。MoEのFFNは大きな行列積が中心なので、本来NPUと相性がよい。
+
+しかしルーティングや専門家の入れ替えをCPU側へ大きく依存すると、
+
+- CPUとNPUの間で中間データを往復する
+- CPU側の計算が律速になる
+- NPUの行列演算器がデータ待ちになる
+
+といった問題が起きる。
+
+EStreamは、**専門家計算の経路をできるだけNPU内部に保ったまま、重みだけをUFSから入れ替える**ことを狙う。
+
+## 手法のあらまし
+
+EStreamでは、専門家を「論理的には数十〜数百個存在するが、物理的には数個分の作業領域しか持たない仮想化された資源」として扱う。
+
+事前処理では各専門家の重みを、NPUがそのまま読みやすい並びへ変換してUFSへ保存する。実行時には専門家を数個ずつのグループに分け、必要になりそうなグループをUFSから読み込む。NPUが現在のグループを計算している間に、次のグループを別バッファへ読み込む。
+
+一方、NPU側では専門家ごとに別の計算グラフを作らない。専門家のFFN構造自体は同じで、違うのは重みと「どのトークンを処理するか」だけだからである。そこで一つの共有専門家グラフを作り、呼び出しごとに
+
+- どのトークンがこの専門家へ来たか
+- 何トークン有効か
+- 今の専門家重みが物理メモリのどこにあるか
+
+だけを差し替える。
+
+この設計により、**巨大な論理モデル容量と、実際に端末DRAMへ常駐する量を切り離す**。
+
 ## 手法
-offlineでは専門家重みをNPUが直接消費するtile-major layoutへ変換し、専門家をgroup化してUFSへ配置する。onlineではnon-expert処理中からgroup読出しを開始し、route確定後に不要groupを捨て、必要groupだけを固定bankへ読み込む。bankがReadyになった後だけ共有専門家グラフへparameter bindingを公開し、NPU完了後にbankを再利用する。routeのgather、gate/up、SwiGLU、down、scatter-addは1つのroute-aware fused operatorへ統合する。
 
-### Topology-invariant expert graph sharing
-同じshape classの専門家で1つのNPUグラフを共有し、route descriptor、valid extent、placement map、parameter addressだけを呼出し時に変更する。専門家ごとのgraph再構築やtensor再確保を避ける。
+### 1. 専門家重みをUFS向けではなく「NPUがそのまま使える形」で保存する
 
-### Composed sparse route and parameter binding
-routing結果とexpert-to-slot placement mapをNPU内で結合し、物理slotごとのCSR風route表を構築する。empty slotを飛ばし、token row・router weight・parameter addressを直接fused operatorへ渡す。
+普通にモデルファイルをUFSから読み出すと、読み出した後に転置や量子化形式の変換、タイル分割などが必要になる場合がある。ストレージI/Oを削減しても、その後の変換がCPU上で重ければ意味がない。
 
-### Fused intra-NPU expert pipeline
-DMA、HVX、HMXをVTCM上で重畳し、gatherからweighted scatter-addまでを1演算に融合する。中間tensorのDRAM materializationとdispatch境界を減らす。
+EStreamはオフライン時に専門家重みを**タイル優先配置（tile-major layout）**へ変換する。これはNPUの行列演算器が実際に消費する小さな行列ブロックの順に、重みをファイル上へ並べ直したものと考えればよい。
 
-### Bounded expert arena
-B個のbank×G専門家だけをNPU可視memoryへ保持し、Available→Filling→Ready→InUse→Availableのstateで安全に再利用する。論理的な専門家数に依存せず物理常駐量をBGWeへ制限する。
+実行時にはUFSから読んだデータを大きく並べ替えず、そのままNPU側の演算へ渡せる。つまりストレージ形式と計算形式を合わせ、**「読む→変換する→計算する」ではなく「読む→ほぼそのまま計算する」**経路にしている。
 
-### UFS–NPU pipeline auto-configuration
-group size G、queue depth Q、bank count Bをmax-plus recurrenceで評価し、memory budget内で予測latencyを最小化する。UFS bandwidth profileでQを先に決め、各GについてBを探索する。
+### 2. 全専門家で一つのNPUグラフを共有する
 
-Qualcomm Hexagon HTPのscalar/HVX/HMX/DMA資源を直接協調させ、UDMABUF-backed DMA-BUFへO_DIRECT preadvでoffline-packed weightを直接読込む。non-FFN実行中にroute確定前prefetchを始め、実行中groupと次groupのUFS loadを重ねる。初期prefetch順序はoffline group順で、route確定後はinactive groupをskipする。
-## 評価条件
-- **Hardware**: OnePlus PLK110 smartphone、Snapdragon 8 Elite Gen 5 (SM8850)、Hexagon v81 HTP、Adreno GPU、2 prime + 6 performance Oryon CPU cores、15.1 GiB memory、UFS 4.1 storage
-- **Software**: Android 16、C++20 EStream runtime、llama.cpp Hexagon support extension、Qualcomm FastRPC / DSPQueue / cDSP、O_DIRECT preadv + UDMABUF-backed DMA-BUF、Qualcomm QPT for SoC energy
-- **Model**: OLMoE-1B-7B、LFM2.5-8B-A1B、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral-8x7B
-- **Dataset / Trace**: C4 prefixes、MASSIVE、WinoGrande、ToxicChat、HellaSwag、ARC-Challenge、NFCorpus、SciFact、LAMBADA、BoolQ
-- **Baseline**: llama.cpp-CPU、MNN-CPU、MNN-OpenCL、ONNX Runtime GenAI CPU、EdgeMoE reproduction、PowerInfer parameter-streaming backend port、same-backend fully resident NPU reference、QNN-switch per-expert contexts、naive streaming、coarse layer streaming
-- **Correctness**: model weightとrouting decisionは保持するが、fused NPU pathとstreamingにより有限精度演算順序は変わる。200例/benchmarkのHost reference比較ではOLMoE/LFM2.5のC4 PPL差は0.1%未満、DeepSeekもPPLは安定しARC-Cのみ3.0 point差、Qwen3は相対PPL 5.51%悪化・task score差最大3.0 pointだった。
-- **Precision**: expertとlarge non-expert matrixはGGUF Q4_0、activationはFP32、HMX operandとKV cacheはFP16。OLMoE output headはQ6_K、DeepSeek MLAの一部はFP16。activation quantizationやapproximation-based sparsityは不使用。
-- **Primary input lengths**: C4 prefix 256–4096 tokens。主要比較は3モデル×6長さ=18設定。TTFTはOS page cacheをdropしたfresh process 3回のmedian。
-- **Application tests**: 7 dataset、各32 length-stratified examplesを共通sourceとしてmodelごとにtokenize。1 warm-up後のmean request latencyとpeak physical memoryを測定。
-- **Energy**: 128–2048 tokenのsteady-state prefillでQPTがgross SoC energyを積算。
-- **Auto-tuning**: 1K C4 calibrationでGごとのservice profileを採取。platformでは95% peak grouped-read bandwidthを満たす最小Q=2を固定し、memory budgetごとにG/Bを選ぶ。
-latency、peak physical memory、energy、qualityを別々に評価し、baselinesは対応するmodel/runtime pairを調整して比較する。大規模modelでは起動・初期化を含むより厳しいenergy boundaryも示す。auto-configuratorは184個のproduction-supported Q/B/G sweepと比較する。
-prefill-only workloadを対象にし、autoregressive decodeは最適化対象外。commercial Qualcomm smartphone上のsingle-device full-NPU MoE prefillを主対象とする。
-## 主要結果
-EStreamは短いpromptではNPU dispatch/pipeline fillを償却できずCPU runtimeが速い場合があるが、promptが長くなるほどUFS loadをNPU計算で隠せるため優位が拡大する。主要18設定では非offload baselineより大幅に高速かつ省memoryで、PowerInferにも全設定で勝ち、最大46.7B MoEを商用スマートフォン上でfull-NPU prefillできた。
+モバイルNPUでは、実行前に「この演算をこの大きさのテンソルで行う」というグラフをコンパイルする方式が一般的である。MoEで専門家ごとにグラフを作ると、専門家数に比例してグラフ管理・メモリ確保・切替コストが増える。
 
-- Pure-prefill TTFT speedup / 2.25–27.57× (baseline: fastest completed non-offloading baseline at each point; condition: OLMoE/LFM2.5/DeepSeek-V2-Lite, 256–4096 tokens, 18 settings) — input長の増加に伴いNPU計算でexpert I/Oを隠せるため優位が大きくなる。
+しかしMoEの専門家は、同じ層の中では基本的に同じ形のFFNである。違うのは数値としての重みだけである。
 
-- Peak physical memory reduction / 6.45–12.29× (baseline: fastest completed non-offloading baseline; condition: same 18 settings) — expert residencyを固定arenaへ制限する効果。
+そこでEStreamは同じ形状の専門家について**一つの共有計算グラフ**だけを用意する。実行時には、現在の専門家について
 
-- Against PowerInfer / 2.96–50.78× faster; 1.16–1.69× less memory (baseline: PowerInfer; condition: same 18 settings) — CPU/GPU-oriented parameter streamingよりfull-NPU streamingが優位。
+- 有効なルート数
+- トークン位置
+- ルータ重み
+- 専門家重みが置かれた物理アドレス
 
-- 4K TTFT / 2.12 / 2.14 / 9.53 s (baseline: 58.45 / 51.15 / 120.02 s fastest non-offloading competitors; condition: OLMoE / LFM2.5 / DeepSeek-V2-Lite at 4096 tokens) — long prefillで大きな速度差。
+を差し替える。
 
-- Large-model scaling / Qwen3 211.7–599.1 tok/s at 1.46–1.87 GiB; Mixtral 144.5–301.5 tok/s at 2.77–4.11 GiB (baseline: EStream standalone; condition: Qwen3-30B-A3B and Mixtral-8x7B, 1K–4K) — 30.5B/46.7B total parametersをスマートフォンmemory内で処理。
+これは仮想メモリに近い考え方で、プログラム側からは多数の専門家が存在するが、実際の計算器は同じ演算器と小さな物理領域を繰り返し使う。
 
-- Energy efficiency / 1.19–8.41×; geometric mean 4.08× (baseline: strongest completed baseline; condition: 21 model-length settings, 128–2048 tokens) — 全完了設定で最高のtokens/J。
+### 3. ルーティング結果と「今どの専門家が物理領域にいるか」を結合する
 
-- Application workload crossover / within 8% at ToxicChat; 1.03–1.21× faster at HellaSwag; 3.79–5.75× faster on ARC-C/NFCorpus/SciFact (baseline: latency-leading baseline; condition: mean prompt lengths 66, 80, 368–405 tokens) — 非常に短いrequestではCPUが有利だが、およそ66–80 tokens付近でcrossover。
+ルータは「トークン17は専門家5へ行く」のような論理的な専門家番号を出す。しかし、EStreamでは専門家5が常に同じDRAMアドレスへいるわけではない。現在どの物理バンクへ読み込まれたかを別途対応付ける必要がある。
 
-- Pipeline bubble rate / 34.41% → 21.36% → 9.05% (baseline: on-demand → post-routing prefetch → pre-routing prefetch; condition: 1024-token OLMoE) — non-FFN中からのprefetchでUFS待ちを大きく隠す。
+EStreamは、ルーティング結果と**専門家→物理スロット対応表**をNPU側で組み合わせる。これにより「専門家5を使うトークン群」から「現在バンク1にある重みを使って処理するトークン群」へ変換する。
 
-- Auto-configurator quality / 9/12 exact minima; zero median regret; 3.45% worst-case regret (baseline: exhaustive Q/B/G sweep; condition: 12 model-budget pairs) — 短いhardware profileでPareto近傍を再現。
+空の物理スロットは飛ばし、有効なトークンだけを専門家演算へ渡す。この部分をCPUへ戻さないことで、CPU/NPU間の同期を減らす。
 
-- Resident-NPU tradeoff at 4K / 3.73–5.41× less memory with 4.3–23.0% higher latency (baseline: same-backend I/O-free resident NPU; condition: 4K inputs) — bounded residencyのI/O overheadがlong promptでかなり隠れる。
+### 4. gatherからscatter-addまでをNPU内で融合する
 
-### 負の結果・境界条件
-- **Very short prompts**: MASSIVE 16 tokensとWinoGrande 23 tokensではoptimized CPU runtimeが速く、NPU dispatchとpipeline fillを償却できない。
-- **Numerical alignment**: Qwen3はHost referenceに対しC4 PPLが相対5.51%悪化し、task score差も最大3.0 point。exact arithmetic orderは保持されない。
-- **Full residency remains faster**: I/O-free NPU-residentは1.04–5.63×高速だが、3.73–6.36×多いmemoryを使う。
-- **More banks are not always better**: producerがNPUを十分供給できると追加bankはlatencyを改善せずmemoryだけ増やす。
+MoEの専門家処理では、概念的に
 
-中心的な利点は、MoEのrequest-level densificationを『全expert同時常駐』へ結びつけず、動的routeとparameter addressを共有NPU graphへ結びつけたことである。storage streamingをNPU executionと共同設計した結果、memory capacityとeffective model capacityを切り離している。
-## 品質への影響
-approximation-based sparsityやrouting変更は行わないが、finite-precision operation order変更による数値差は存在する。3モデルでは概ね小さいがQwen3で相対PPL 5.51%差があり、完全なbitwise同等性はない。
+1. 各専門家へ送るトークンを集める
+2. FFNのgate/up projectionを計算する
+3. SwiGLUなどの活性化を行う
+4. down projectionを計算する
+5. 結果を元のトークン位置へ戻し、ルータ重み付きで加算する
+
+という処理が必要になる。
+
+これらを別々の演算として実行すると、中間結果をDRAMへ書いて次の演算で読み直す回数が増える。モバイルSoCではこの外部メモリ往復が高コストである。
+
+EStreamはこれらを**ルート認識型融合演算（route-aware fused operator）**としてまとめ、Hexagonのスカラ処理、ベクトル演算器HVX、行列演算器HMX、DMAを協調させる。中間データは可能な限りVTCMなどNPU近傍の高速メモリに留める。
+
+したがって利点は単にNPUのFLOPSを使うことではなく、**中間テンソルをDRAMへ何度も実体化しないこと**にもある。
+
+### 5. 固定サイズの専門家作業領域だけをDRAMに置く
+
+EStreamは全専門家を常駐させず、`B`個のバンクに各`G`専門家ずつ入る固定サイズ領域だけを確保する。
+
+各バンクは概念的に
+
+`空き → UFSから読込中 → 使用可能 → NPU計算中 → 空き`
+
+という状態を循環する。
+
+NPUがバンクAの専門家を処理している間、UFSはバンクBへ次の専門家群を読み込める。計算が終わったバンクAは次の重みで上書きされる。
+
+このため常駐メモリ量はモデル全体の専門家数ではなく、**バンク数×1バンクに置く専門家数**で決まる。これが「専門家仮想化（expert virtualization）」の中核である。
+
+### 6. ルーティング結果が分かる前から先読みを始める
+
+最大の問題は、ルータが専門家を決めてからUFS読出しを始めると、その間NPUが完全に待つことである。
+
+そこでEStreamは、MoE層へ到達する前の注意機構などを実行している間から、次に必要になりそうな専門家グループを読み始める。ルーティングが確定した後、不要だったグループは捨て、必要なものだけ残す。
+
+予測が完璧でなくても、早めにI/Oを開始できれば待ち時間の一部を前段計算へ隠せる。論文のアブレーションでは、1024トークンのOLMoEでパイプライン空転率が
+
+- オンデマンド読出し: 34.41%
+- ルーティング後先読み: 21.36%
+- ルーティング前先読み: 9.05%
+
+まで下がる。
+
+ここで重要なのは「UFSが速くなった」のではなく、**UFSを待つ時間とNPUで計算する時間を重ねた**ことである。
+
+### 7. グループ数・バンク数・I/O深度を自動調整する
+
+専門家を大きなグループで読むと、連続I/OになってUFS帯域を使いやすい。一方、不要な専門家まで読む量が増え、バンクも大きくなる。
+
+バンク数を増やせば先読みできる距離は伸びるが、DRAM使用量も増える。しかもI/Oがすでに計算へ完全に隠れているなら、バンクを増やしても速くならない。
+
+EStreamはこのトレードオフを、UFS側のサービス時間とNPU側の計算時間を組み合わせた待ち行列モデルで評価し、
+
+- 専門家グループサイズ `G`
+- I/Oキュー深度 `Q`
+- バンク数 `B`
+
+をメモリ予算内で選ぶ。
+
+論文では184個の実行可能構成を総当たりした結果と比較し、12個のモデル・メモリ予算条件のうち9個で厳密な最良値を選び、中央値の後悔率（regret）は0%、最悪でも3.45%としている。
+
+## 評価
+
+### まず見るところ
+
+- **結論**: 長めの入力処理では、全専門家をDRAMへ置かなくても、UFS読出しをNPU計算へ重ねることで実用的な速度を出せる。
+- **メモリ**: 専門家用DRAM量を固定バンクへ制限するため、モデル全体が端末メモリよりかなり大きくても処理できる。
+- **短い入力**: 16〜23トークン程度ではNPU起動とパイプライン充填の固定費を回収できず、CPUの方が速い。
+- **品質**: ルーティングや重みそのものは変えないが、NPU融合実装による有限精度の演算順序差があり、完全な数値同一性ではない。
+- **対象範囲**: 主対象は入力処理（prefill）。逐次生成（decode）の高速化を示す論文ではない。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
+### 実機環境
+
+| 項目 | 設定 |
+|---|---|
+| 端末 | OnePlus PLK110 |
+| SoC | Snapdragon 8 Elite Gen 5 (SM8850) |
+| NPU | Hexagon v81 HTP |
+| メモリ | 15.1 GiB |
+| ストレージ | UFS 4.1 |
+| OS | Android 16 |
+
+評価モデルは OLMoE-1B-7B、LFM2.5-8B-A1B、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral-8x7B。
+
+専門家と大きな非専門家行列は主にGGUF Q4_0、活性値はFP32、HMX入力とKVキャッシュはFP16を使用する。
+
+### 長い入力ほどEStreamが有利になる
+
+OLMoE、LFM2.5、DeepSeek-V2-Liteの256〜4096トークン、計18条件では、完走した非オフロード方式のうち最速のものに対して**2.25〜27.57倍**の入力処理TTFT改善を報告する。
+
+4096トークンでは代表的に、
+
+| Model | EStream | 最速の非オフロード比較 |
+|---|---:|---:|
+| OLMoE | 2.12 s | 58.45 s |
+| LFM2.5 | 2.14 s | 51.15 s |
+| DeepSeek-V2-Lite | 9.53 s | 120.02 s |
+
+となる。
+
+入力が長いほど1回読み込んだ専門家重みで処理するトークン数が増え、NPU計算時間も長くなる。そのため次のUFS読出しを計算の裏へ隠しやすくなる。
+
+### メモリ削減
+
+同じ18条件で、ピーク物理メモリは最速の非オフロード比較に対して**6.45〜12.29分の1**。PowerInfer系のストリーミング比較に対しても1.16〜1.69倍少ないメモリを使用する。
+
+Qwen3-30B-A3Bでは約1.46〜1.87 GiB、Mixtral-8x7Bでは約2.77〜4.11 GiBの物理メモリ範囲で入力処理を実行し、総パラメータ30.5B〜46.7B級のMoEをスマートフォン上で扱う。
+
+### 完全常駐NPUとの比較
+
+同じNPUバックエンドで、重みがすべてメモリに入ってI/Oが不要な理想的常駐構成は当然速い。4K条件では常駐版に対してEStreamは4.3〜23.0%遅い一方、メモリ使用量を3.73〜5.41分の1へ削減する。
+
+つまりEStreamの主張は「ストレージから読む方がDRAM常駐より速い」ではなく、**少量の追加遅延で、常駐できないサイズのモデルを実行可能にする**ことである。
+
+### 短い要求ではCPUが勝つ
+
+MASSIVEの平均16トークン、WinoGrandeの平均23トークンでは最適化CPU実装の方が速い。ToxicChatの平均66トークンでは差が8%以内、HellaSwagの平均80トークン付近からEStreamが1.03〜1.21倍優位になる。
+
+ARC-C、NFCorpus、SciFactのように平均368〜405トークン程度になると3.79〜5.75倍の速度差になる。
+
+したがってこの方式には明確な**入力長クロスオーバー**がある。
+
+### 電力効率
+
+128〜2048トークンの21条件では、完走した最強比較に対し1.19〜8.41倍、幾何平均4.08倍のtokens/Jを報告する。
+
+### 数値品質
+
+重みやルーティングは変えないが、融合NPU実装では演算順序がホスト参照実装と変わる。
+
+- OLMoE / LFM2.5: C4 perplexity差0.1%未満
+- DeepSeek: perplexityは概ね安定、ARC-Cで最大3.0ポイント差
+- Qwen3: C4 perplexityが相対5.51%悪化、タスク得点差最大3.0ポイント
+
+したがって「数学的には同じモデルを実行している」ことと「ビット単位で同じ数値結果になる」ことは区別する必要がある。
+
+</details>
+
+## 主要結果の読み方
+
+EStreamの重要な点は、MoEの疎性を「毎回少数の専門家しか使わないからキャッシュしよう」とだけ捉えていないことである。
+
+入力処理では要求全体として多くの専門家を使うため、キャッシュヒット率だけで問題を解くのは難しい。そこで発想を変え、**全部使う可能性があるなら、全部を常駐させるのではなく順番に流し、I/Oを計算へ隠す**。
+
+これはMoE-Infinityのような逐次生成向けの「将来再利用されそうな専門家をGPUへ残す」方式とは性格が異なる。EStreamでは長い入力の中で多数専門家が必要になること自体を受け入れ、その大量アクセスをストリーミングパイプラインへ変換する。
+
+また、性能改善はNPUカーネルだけの効果ではない。ストレージ上のレイアウト、UFS読出し、物理バンク管理、動的ルート束縛、NPU内融合演算を一つのデータ経路として設計していることが重要である。
+
 ## 既存研究との差
-- FlexGenやLLM in a Flashのようなdense modelのmemory/storage offloadではなく、request単位でほぼ全expertを触るMoE prefillをモバイルNPU上で扱う。
-- MoE-Infinity、PowerInfer、KTransformers等のCPU/GPU中心のexpert offload/prefetchとは異なり、routingからexpert演算までfull-NPU pathを維持し、UFSからNPU可視arenaへ直接重みを流す。
-- NPUMoEはApple NPU上のprefillに近いが、expert graph容量がprecompiledでrouting/aggregationはCPU、全weight常駐を前提とする。EStreamはruntime route extentとstreamed parameter addressを共有graphへ束縛し、resident memoryを固定する。
-- PowerInfer-2はUFS readとNPU-centric prefillのoverlapに近いが、precompiled graph variantsを使い、本文によれば公開mobile implementationがない。EStreamはdynamic parameter bindingとbounded residencyを統合する。
+
+- **MoE-Infinity**: 逐次生成中心で、過去のルーティング履歴から再利用されそうな専門家を予測しキャッシュする。EStreamは長い入力処理で多数専門家を使う前提に立ち、UFSから順次ストリーミングする。
+- **PowerInfer / PowerInfer-2**: CPU/GPU/NPUとストレージを使う端末推論という問題意識は近いが、EStreamはMoE専門家を静的グラフ型モバイルNPUへ動的に束縛し、専門家演算全体をNPU側に留める点が中心。
+- **FlexGen / LLM in a Flash**: ストレージを大容量重み置き場として使う点は共通するが、EStreamはMoE入力処理とモバイルNPUの静的グラフ制約へ特化する。
+- **NPU向けMoE実装**: 全専門家を事前コンパイル・常駐する方式に対し、EStreamはグラフを共有し、重みアドレスと有効ルートを実行時に差し替えるため、論理専門家数を物理常駐量から切り離す。
+
 ## 限界
-- autoregressive MoE decodeは対象外。1 token/stepではHMXを飽和させたりstorage loadを隠したりしにくく、decode-specific expert cache/prediction/batchingが必要。
-- 実装と主要評価はQualcomm Hexagon v81 / Snapdragon 8 Elite Gen 5に依存し、他NPUへのportabilityはprogrammable vector/matrix/DMA interfaceを仮定する。
-- 異なるexpert dimensionsやexpert-specific operatorを持つmodelでは複数shared graph templateが必要。
-- 現在のweight-only Q4_0より強い量子化はUFS trafficを減らせる一方、HVX dequantization costが増えpipeline balanceを崩し得る。
-- 短いpromptではCPU runtimeが依然速い。prefill-onlyの全request長で一律優位ではない。
-- Qwen3ではHost referenceとの数値差が他modelより大きく、C4 PPL相対5.51%悪化を報告する。
-- 独立した公開コードrepositoryは本文/arXivページから確認できず、再現可能な完全artifact公開状況は不明。
-## 実装状態
-約23K物理行のC/C++を追加したC++20 host runtimeとllama.cpp Hexagon拡張を実装。FastRPC、DSPQueue、HVX/HMX/DMA、UDMABUF-backed DMA-BUF、O_DIRECT preadvを使用する。論文は実装詳細を開示するが、公式公開repository URLは確認できない。
-## 研究上の位置づけ
-edge/on-device LLM systemの中でも、storage-backed expert virtualizationとprogrammable NPU executionを直接組み合わせる系統。『MoE sparse activationでもprefill request全体ではexpert working setがほぼdenseになる』点を出発点に、capacity不足をcache hit率の問題としてではなく、固定arena上のvirtualized residencyとUFS–NPU overlap問題として扱う。SSD/NVMe offload研究に対しても、flash tierを単なる低速backing storeではなくNPU execution scheduleと共同最適化する設計例として有用。
-## 監査メモ
-arXiv v1本文をIntroductionからDiscussion/Conclusionまで確認し、system design、implementation、18 primary settings、application workload、energy、quality、auto-tuning、ablation、negative results、portability/decode limitationsを照合した。追加auditを必須とする明確な未確認事項はない。
+
+- 主対象は入力処理（prefill）であり、逐次生成（decode）の専門家キャッシュ・KVキャッシュ管理は別問題として残る。
+- Qualcomm Hexagon HTPを深く利用した設計で、他社NPUへそのまま移植できるとは限らない。
+- 短い入力ではCPU実装が速く、常にNPUストリーミングが優位ではない。
+- UFS帯域、NPU計算速度、メモリ予算の比率が変われば最適なグループ・バンク構成も変わる。
+- 完全常駐NPU構成より遅延は残る。EStreamは容量との交換でその差を小さくする方式である。
+- 融合演算による有限精度差があり、Qwen3評価では相対perplexity 5.51%の差が観測される。
+- 独立した公式コード公開はarXiv v1時点で確認できない。
+
+## 一般的な実装上の含意
+
+SSD/UFSオフロードでは、「何バイト読むか」だけでなく**読んだデータをどの計算と重ねられるか**が重要である。
+
+EStreamから一般化すると、ストレージ階層を使う推論システムでは次の順で考えるとよい。
+
+1. 実行時に本当に同時常駐が必要な重み量を求める。
+2. 論理モデル容量と物理作業領域を分離する。
+3. ストレージ上の形式を計算器が直接使う形式へ近づける。
+4. 現在の重みで計算している間に次の重みを読む。
+5. バッファを増やしたとき、I/O待ちが本当にさらに減るかを確認する。
+
+特に4はSSD/NVMeを使ったサーバ向けMoEオフロードにもそのまま通じる。単純なキャッシュヒット率だけでなく、**I/Oと計算のパイプライン化によってストレージ待ちをどこまで隠せるか**が性能を決める。
+
 ## 一次資料
-- https://arxiv.org/abs/2609.06551
-- https://arxiv.org/html/2609.06551
+
+- arXiv: https://arxiv.org/abs/2609.06551
+- PDF: https://arxiv.org/pdf/2609.06551
+
+## 更新履歴
+
+- 2026-09-09: MoE-Infinity基準に合わせて全面改稿。要求単位でMoEが高密度化する理由、静的NPUグラフとの衝突、専門家仮想化、共有グラフ、固定バンク、UFS–NPU重畳を論文未読者向けに説明。
