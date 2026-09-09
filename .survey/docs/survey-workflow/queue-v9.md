@@ -45,6 +45,18 @@ Chatは毎回、default branch最新HEADの `.survey/work-queue/next-jobs.json` 
 
 ready jobはpriority降順。1回1件に固定しないが、次jobの成果を安全に保存できない見込みなら着手しない。
 
+### Empty queue
+
+ready jobが0件なら、その回を終了しない。Chatはjobそのものを直接作らず、次の一意なsubmissionを1件作る。
+
+```json
+{
+  "operation": "request_jobs"
+}
+```
+
+このpushでActionsが起動し、ready queueが空なら探索jobを1件補充する。通常cadenceで期限到来laneがあればそれを優先し、何も期限到来していなければ `discovery_fresh` を例外的に1件生成する。Chatは**同じ実行内で**最新HEADと `next-jobs.json` を読み直し、生成されたdiscovery jobをそのまま処理する。空queueはChat workerの終了条件ではない。
+
 ### Discovery lanes
 
 - `discovery_fresh`: 2h。原則30日以内の新規論文・重要改訂。
