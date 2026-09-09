@@ -1,0 +1,17 @@
+{
+  "job_id": "job-research-bb044a241b6edbdd",
+  "type": "research",
+  "parent_job_id": "job-b128275b1d0b55bb",
+  "priority": 88,
+  "canonical_id": "arxiv:2510.09665",
+  "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+  "source_url": "https://arxiv.org/abs/2510.09665",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/lmcache.md",
+  "selection_reason": "Cross-engine KV-cache storage/communication layer spanning GPU, CPU, storage and network; fills a systems-infrastructure gap beyond per-engine cache optimization.",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T02:51:41+00:00"
+}

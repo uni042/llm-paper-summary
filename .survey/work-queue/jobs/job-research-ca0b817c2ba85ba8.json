@@ -1,0 +1,17 @@
+{
+  "job_id": "job-research-ca0b817c2ba85ba8",
+  "type": "research",
+  "parent_job_id": "job-3049052c6224ad37",
+  "priority": 72,
+  "canonical_id": "arxiv:2606.26666",
+  "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs",
+  "source_url": "https://arxiv.org/abs/2606.26666",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/persistentkv.md",
+  "selection_reason": "Long-context decode scheduling on commodity GPUs; directly studies page-aware work assignment and adaptive scheduling rather than only attention kernels.",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T02:51:41+00:00"
+}

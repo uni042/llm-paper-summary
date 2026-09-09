@@ -1,46 +1,49 @@
 {
-  "generated_at": "2026-09-09T02:44:33+00:00",
   "counts": {
     "discovery": {
+      "completed": 3
+    },
+    "research": {
       "ready": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-3049052c6224ad37",
-      "type": "discovery",
-      "lane": "discovery_fresh",
-      "priority": 80,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Find genuinely new inference-system papers or important revisions from primary sources. Prefer papers not already represented in the repository.",
-      "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers."
+      "job_id": "job-research-bb044a241b6edbdd",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arxiv:2510.09665",
+      "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.09665",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/lmcache.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-0bff13202a6e5ac1",
-      "type": "discovery",
-      "lane": "discovery_citation",
-      "priority": 60,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Follow citations, follow-up work, and descendant papers from important inference-system papers already in the repository. Return only candidates with meaningful system-level relevance.",
-      "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers."
+      "job_id": "job-research-a5f085c33ba9818e",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arxiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/spectre.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-b128275b1d0b55bb",
-      "type": "discovery",
-      "lane": "discovery_gap",
-      "priority": 60,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search for missing lineages or adjacent-system techniques that plausibly matter to LLM inference systems. Prefer high-impact gaps over novelty for its own sake.",
-      "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers."
+      "job_id": "job-research-ca0b817c2ba85ba8",
+      "type": "research",
+      "lane": null,
+      "priority": 72,
+      "canonical_id": "arxiv:2606.26666",
+      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2606.26666",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/persistentkv.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
-  ]
+  ],
+  "generated_at": "2026-09-09T02:51:41+00:00"
 }
