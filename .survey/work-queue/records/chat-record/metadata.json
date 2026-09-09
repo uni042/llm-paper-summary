@@ -2,35 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
-  "job_id": "job-research-c57bf9d456b4f061",
+  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
+  "job_id": "job-research-db7f6bec1b5bf488",
   "data": {
-    "canonical_id": "arXiv:2609.06551",
-    "arxiv_id": "2609.06551",
-    "title": "EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs",
-    "summary": "モバイルNPUの静的グラフ制約とMoEの要求単位での専門家集合の高密度化を、共有専門家グラフ、実行時ルート・重みアドレス束縛、UFS上の専門家仮想化、UFS–NPUパイプラインで解消し、スマートフォン上の全NPU MoEプリフィルを実現する。",
-    "source": "https://arxiv.org/abs/2609.06551",
-    "authors": [
-      "Junming Zhang",
-      "Zhenzhe Zheng",
-      "Fan Wu",
-      "Xiaoyao Huang",
-      "Jie Wu"
-    ],
-    "publication": "arXiv:2609.06551v1, 2026-09-06",
-    "publication_type": "arXiv preprint",
-    "topics": [
-      "on-device LLM",
-      "MoE prefill",
-      "mobile NPU",
-      "expert virtualization",
-      "UFS streaming",
-      "edge inference"
-    ],
-    "implementation": "C++20ホストランタイムとllama.cppのHexagon対応を拡張した低水準HTPバックエンド。約23K物理行のC/C++を追加。独立した公式公開コードURLは本文・arXivページでは確認できない。",
-    "sources": [
-      "https://arxiv.org/abs/2609.06551",
-      "https://arxiv.org/html/2609.06551"
-    ]
+    "canonical_id": "arXiv:2609.07536",
+    "arxiv_id": "2609.07536",
+    "title": "Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap",
+    "summary": "分散MoEの細粒度な計算・通信重畳で競合する計算CTAと通信CTAのGPU常駐資源を、依存関係と離散的な実行waveを明示した解析モデルから起動時に配分し、COMETの固定通信CTA数をworkload適応型に置き換える。",
+    "source": "https://arxiv.org/abs/2609.07536",
+    "authors": ["Hongyu Liu", "Minyu Cui", "Miquel Pericàs"],
+    "publication": "arXiv:2609.07536v1, 2026-09-07; accepted at AI on HPC Workshop at SC26",
+    "publication_type": "workshop paper / arXiv preprint",
+    "topics": ["Mixture-of-Experts inference", "computation-communication overlap", "GPU resource management", "analytical performance modeling", "CTA residency"],
+    "implementation": "公開COMET A100実装をFLUX codebase内で拡張し、起動時の解析的resource managerを統合。評価はCOMET A100 V2 commit 19831caを基準に実施。",
+    "sources": ["https://arxiv.org/abs/2609.07536", "https://arxiv.org/html/2609.07536"]
   }
 }
