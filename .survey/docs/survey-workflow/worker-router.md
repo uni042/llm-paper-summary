@@ -9,7 +9,7 @@
 
 ## 実行前の共通回復
 
-GitHub writeが利用可能な場合、外部設定されたNotion退避キューの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。再投入中は `replaying`、Actionsの成功確認後のみ `replayed` とする。すでにterminal/supersededで安全に適用できないものは盲目的に反映せず `dead_letter` とし理由を残す。
+GitHub writeが利用可能な場合、外部設定されたNotion退避キューの `pending` と、private設定で指定されたChatGPT Library fallbackの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。再投入中は `replaying`、Actionsの成功確認後のみ `replayed` とする。すでにterminal/supersededで安全に適用できないものは盲目的に反映せず `dead_letter` とし理由を残す。
 
 GitHub readができない場合は、repo状態に依存する新規処理を開始しない。
 
@@ -27,7 +27,9 @@ Chatは探索・全文精読・科学的判断・監査判断と**構造化resea
 
 queueが再び空になりActionsが新しいdiscovery jobを補充した場合も、そのrunを終了せず次のdiscoveryへ進む。つまり **discovery → research → 必要ならaudit → 最新queue再取得 → 次discovery** を、実行環境が許す限り繰り返す。固定件数・固定バッチ数・「1本終わったら終了」の上限は設けない。
 
-次回へ残してよいのは、全文取得不能、connector/write障害、明確な時間・実行回数・コンテキスト等のプラットフォーム上限、未解決の依存、または次成果を安全に保存完了できない場合だけとする。単にdiscoveryが終わった、1本処理した、queueへ次jobが現れた、あるいは一度queueが空になったことを終了理由にしない。停止時点でqueueに残ったjobは次回runがそのまま引き継ぐ。
+GitHubへの成果保存が失敗しても、完全な再送可能logical payloadをNotionまたはChatGPT Libraryのfallbackへ耐久保存できた時点ではrunを停止しない。そのjobはqueue上では未完了のまま残すが、fallback保存を**後続jobへ進むための耐久チェックポイント**として扱い、同じrunで次のready jobへ進む。fallback保存済みpayloadがそのattemptの完全な再送情報を持つなら、GitHub固定record bankに残ったpartial slotは唯一の成果コピーではないため、後続jobのためにそのbankを再利用してよい。inbox未送信のpartial slotだけを理由にA/B bankを恒久占有しない。
+
+次回へ残してよいのは、全文取得不能、GitHub read不能、明確な時間・実行回数・コンテキスト等のプラットフォーム上限、未解決の依存、またはGitHub/Notion/Libraryのいずれにも次成果を安全に耐久保存できない場合だけとする。単にGitHub writeが失敗した、Notion writeが失敗した、discoveryが終わった、1本処理した、queueへ次jobが現れた、あるいは一度queueが空になったことを終了理由にしない。停止時点でqueueに残ったjobとfallback pendingは次回runが引き継ぐ。
 
 Discovery / blocked / deferred / rejectedは長文artifact不要なので、固定inboxだけを小さくupdateしてよい。
 
@@ -42,8 +44,10 @@ Discovery / blocked / deferred / rejectedは長文artifact不要なので、固�
 
 ## GitHub connector障害
 
-書き込みが403/permission denied、write tool unavailable、安全検査、接続障害、またはSHA再取得後の再試行でも失敗した場合、成果を完了扱いにしない。論理payloadを外部設定されたNotion退避キューへ `pending` として保存し、次回以降のworkerが復旧後に再投入する。
+書き込みが403/permission denied、write tool unavailable、安全検査、接続障害、またはSHA再取得後の再試行でも失敗した場合、成果を完了扱いにしない。論理payloadを外部設定されたNotion退避キューへ `pending` として保存する。Notionにも保存できない場合は、private設定で指定されたChatGPT Library fallbackへ再送可能な完全payloadを `pending` 保存する。
 
-NotionはGitHubの代替正本ではない。GitHub Actions内のpush失敗はGitHub入力済みなのでNotionへ重複退避しない。
+NotionまたはLibraryへのfallback保存が成功した場合、GitHub publication成功とは扱わずqueue上のjobは未完了のままにする一方、同じrunの後続job処理は継続する。GitHub/Notion/Libraryの全保存先が失敗した場合だけ、その成果を安全に保持できないため後続処理を停止して報告する。
+
+Notion/LibraryはGitHubの代替正本ではない。GitHub Actions内のpush失敗はGitHub入力済みなので外部fallbackへ重複退避しない。
 
 単一失敗を理由に予定タスク自身を停止・無効化・再作成しない。
