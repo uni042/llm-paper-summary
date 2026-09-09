@@ -1,31 +1,31 @@
 {
   "counts": {
     "discovery": {
-      "completed": 7
+      "completed": 7,
+      "ready": 1
     },
     "audit": {
       "completed": 3
     },
     "research": {
-      "completed": 7,
+      "completed": 8,
       "superseded": 3,
-      "blocked": 1,
-      "ready": 1
+      "blocked": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-ff1e36e99bba654a",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2609.00891",
-      "title": "CacheBridge: Efficient Cross-Model KV Cache Transfer",
-      "source_url": "https://arxiv.org/abs/2609.00891",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/cachebridge.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
-      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-47c0986a7df1a7c1",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-09T08:33:20+00:00"
+  "generated_at": "2026-09-09T10:17:42+00:00"
 }
