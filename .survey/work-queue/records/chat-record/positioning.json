@@ -2,25 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
-  "job_id": "job-research-0b935acaddfdc935",
+  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
+  "job_id": "job-research-bf598cfa965b8925",
   "data": {
     "differences": [
-      "H2O/SnapKVなどのattention heuristicは主に観測attentionや頻度でtokenを個別採点するのに対し、Jacapはfuture-query分布に対するsoftmax局所感度と、保持subset内のoutput方向の重複を同時に扱う。",
-      "KeyDiff/KNormはkey geometryやnormなど軽量proxyを使うのに対し、Jacapは非線形attention channelの情報容量から重みを導出し、weighted leverage scoreでsubset diversityを評価する。",
-      "CapKVがlinear-Gaussian attention surrogateのlog-det information capacityを使うのに対し、Jacapはsoftmax Jacobian S=Diag(alpha)-alpha alpha^Tを導入し、飽和とtoken competitionを理論目的へ明示的に含める。",
-      "PagedAttentionやKV quantizationのような配置・表現圧縮とは異なり、Jacapは保持するtokenそのものを選ぶstructural KV compressionであり、system-level memory managementと原理上は併用可能。"
+      "LExI等のactive-expert削減はsurviving probabilitiesを通常再正規化するため、本論文のparameterizationではk2=k1となる。本手法は実行数とgainを分離する。",
+      "self-distillation等のelastic-k/post-trained MoEは訓練でk変化へ適応させるのに対し、本手法はrouter forwardの小変更だけでweightsを更新しない。",
+      "expert pruning/mergingはresident memoryを減らすがk不変ならcomputeを減らさない。本手法は逆にmemoryを変えずexecuted expert computeだけを減らし、quantization/pruningと直交する。",
+      "router approximationやstochastic selectionではなくtop-k argmax expert identityを保ち、weight amplitudeだけ補正する。"
     ],
     "limitations": [
-      "理論は代表query周辺の一次Taylor近似であり、future query分布が大きく移動する高度に動的なdecodingでは高次非線形性を取り逃がす可能性がある。",
-      "実用Jacapはsoftmax competition matrixとK Lambda_Q K^Tを対角近似するため、理論式が持つtoken間pairwise couplingを完全には保持しない。",
-      "capacity matrix構築・逆行列・leverage scoreによりO(N d_h^2 + d_h^3)の追加計算があり、単純attention/norm heuristicより重い。",
-      "LongBench/NIAH/AIME25中心の評価で、production servingのthroughput、batching、memory allocator、multi-tenant workloadまで含むend-to-end system評価ではない。",
-      "AIME25の8192 reserved-token条件ではCapKV 0.73に対しJacap 0.53で、budgetによって順位が反転する。",
-      "arXiv v1本文・arXiv pageではJacap固有の公式code repositoryを確認できず、現時点の再現性は論文記述に依存する。"
+      "main evidenceは同じQwen seriesの2 models。",
+      "English/Python corpora中心でlong-contextとlong-form generation未評価。",
+      "k2はgeometric grid scanでper-layer/per-domain最適化は未検討。",
+      "perplexityとdownstream accuracyでbest k2が異なりunlabeled tuningだけでは安全でない。",
+      "all experts remain resident so VRAM/RAM capacity is unchanged。",
+      "Gemma appendixはscalar gainでprotocolも異なりmatched k1/k2 replicationではない。"
     ],
-    "implementation_status": "arXiv:2609.08131v1 (2026-09-08)。再学習不要のKV eviction algorithmとして記述され、実験はUbuntu 22.04、4x NVIDIA RTX Pro 6000、1024 GB system memoryで実施。arXiv本文/pageにはJacap固有の公式実装linkを確認できない。",
-    "research_positioning": "主系統はKV cache optimization/compression。既存のattention-based evictionとlinear information-capacity evictionの間をつなぎ、softmax非線形性を局所Jacobianとして情報理論objectiveに戻した研究。system contributionよりもselection criterionの理論化とhigh-compression robustnessが中心。",
-    "audit_notes": "arXiv v1 HTML full textをIntroduction、Related Work、Methodology、LongBench、NIAH、AIME25 decoding eviction、temperature ablation、Conclusion、Appendix A-Cまで確認。LongBenchの高圧縮average、AIME25の全4 budget、NIAHのcontext/depth条件、計算量、runtime setup、明示的limitationsを照合した。AIME25 8192-tokenでCapKVが優位というnegative resultを保持した。追加auditを必須とする未解決事項はない。"
+    "implementation_status": "PyTorch/Hugging Face Transformersでrouter forwardをdrop-in置換しweights不変。Transformers 5.3–5.14でrouter計算一致を検証。arXiv v1本文に専用code repository linkは確認できない。",
+    "research_positioning": "Adaptive Expert Computation / Compression系。fine-grained MoEのactivated expert削減を、routing identityではなくrenormalization gain calibrationの問題として再定式化するcompute-side lever。",
+    "audit_notes": "arXiv v1 HTMLをIntroductionからDiscussion/Conclusion、router behavior、selection-vs-weighting、PPL/MMLU/GSM8K/C-Eval、cost accounting、Gemma appendix、reproducibility notesまで確認。no-renormalization catastrophic case、PPL-vs-MMLU disagreement、same-series/long-context limitationsを保持。追加audit必須事項なし。"
   }
 }
