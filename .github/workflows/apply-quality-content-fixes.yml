@@ -1,0 +1,43 @@
+name: Apply quality content fixes
+
+on:
+  push:
+    paths:
+      - ".survey/migrations/quality_content_fixes_20260910.py"
+      - ".github/workflows/apply-quality-content-fixes.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-quality-content-fixes
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Apply idempotent content fixes
+        run: python .survey/migrations/quality_content_fixes_20260910.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No paper changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add papers/inference
+          git commit -m "Expand paper summaries failing content quality audit"
+          git push
