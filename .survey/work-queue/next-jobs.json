@@ -7,24 +7,12 @@
       "completed": 3
     },
     "research": {
-      "completed": 4,
-      "ready": 2,
+      "completed": 5,
+      "ready": 1,
       "blocked": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-edb84784fdfd5067",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arxiv:2608.14624",
-      "title": "Learning Agent Execution for KV-Cache Management in Agentic Serving",
-      "source_url": "https://arxiv.org/abs/2608.14624",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/cachescout.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
-      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-90d20f705fff0d04",
       "type": "research",
@@ -38,5 +26,5 @@
       "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T06:25:36+00:00"
+  "generated_at": "2026-09-09T07:32:56+00:00"
 }
