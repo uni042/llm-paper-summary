@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-0b935acaddfdc935",
+  "type": "research",
+  "parent_job_id": "job-f42851d550437c61",
+  "priority": 93,
+  "canonical_id": "arxiv:2609.08131",
+  "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
+  "source_url": "https://arxiv.org/abs/2609.08131",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/jacap.md",
+  "selection_reason": "softmax attentionを非線形通信channelとしてJacobian information capacityを導出し、query relevance・softmax sensitivity・structural diversityを同時に扱うKV eviction。2026-09-09新着でidentity indexに未登録。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-09T14:16:01+00:00",
+  "artifact_transport": "structured_record_v10"
+}

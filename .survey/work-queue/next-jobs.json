@@ -1,30 +1,66 @@
 {
   "counts": {
     "discovery": {
-      "completed": 10,
-      "ready": 1
+      "completed": 11
     },
     "audit": {
       "completed": 3
     },
     "research": {
+      "ready": 4,
       "completed": 14,
       "superseded": 6
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-f42851d550437c61",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-0b935acaddfdc935",
+      "type": "research",
+      "lane": null,
+      "priority": 93,
+      "canonical_id": "arxiv:2609.08131",
+      "title": "Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation",
+      "source_url": "https://arxiv.org/abs/2609.08131",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/jacap.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-622ec47c37b83739",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arxiv:2609.05228",
+      "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+      "source_url": "https://arxiv.org/abs/2609.05228",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/ace.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-bf598cfa965b8925",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arxiv:2609.04575",
+      "title": "Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2609.04575",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/training-free-halving-activated-experts.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-e581510120d7ae4c",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arxiv:2609.00355",
+      "title": "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.00355",
+      "paper_path": "papers/inference/05-speculative-decoding-moe/glance-vlm-speculative-decoding.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T14:11:30+00:00"
+  "generated_at": "2026-09-09T14:16:03+00:00"
 }
