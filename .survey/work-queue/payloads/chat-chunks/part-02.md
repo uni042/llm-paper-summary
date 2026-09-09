@@ -1,34 +1,46 @@
-## Fused-Fit
-Head-Localでもtarget layerごとに選択source layer集合が異なるため、素朴な実装では非連続gather、centering、weighting用tensorのmaterializeが大量に発生する。Fused-Fitはridge solverが必要とするweighted mean、covariance、cross-covarianceという十分統計だけを構築する。
-
-2-passの新しいGPU kernelで、最初にweighted meanを求め、2回目に観測をbounded chunkで走査する。kernel内で選択されたhead-local blockのgather・center・weightを行い、連続したper-head panelへ出力してhead-batched matrix multiplicationで統計量を蓄積する。したがってfull observation tensorを保持せず、scratch memoryはchunk sizeに対してboundedになる。ridge solver、regularization、serialized mapper schema、online affine interfaceは維持される。
-
 ## 評価条件
-- **Transfer directions**:
-  - Ministral 3 3B → 14B
-  - Ministral 3 8B → 14B
-  - Qwen3 14B → 32B
-- **Attention**: すべてdense GQA、source/targetとも8 KV heads
-- **Calibration**: FineWeb-Edu、長さ1,024 token。主要比較は500 sequence、4 tokenごとにsampleして128,000 token position
-- **Selected source layers**: 3B→14Bで20、8B→14Bで12、Qwen3で8
-- **Ridge**: `lambda=0.01`。比較法でcalibration row、layer selection、ridge strength、token sampling、evaluation exampleを固定
-- **Quality**: HellaSwagを含むtask accuracy、target standaloneに対するmean target retention、NLL、KV reconstruction R²
-- **System metrics**: serialized mapper storage、1,024-token prefixのmapper application latency、offline mapper construction time
-- **Construction timing**: Qwen3の500-sequence構築は4×NVIDIA H800で測定。trace collection、layer selection、attention-weight生成、evaluation、scheduler delayは除外し、mapper construction部分のみを測る
+- **GPU**: NVIDIA RTX 3060 12 GB、28 SM
+- **Software**: CUDA 12.1、PyTorch 2.5.1
+- **Attention shape**: FP16、`Hq=32`, `Hkv=8`, `G=4`, `d=128`
+- **Page size**: 16。main serving tracesではhole fraction 0、isolated native-paged benchmarkでは50% holes
+- **Primary baseline**: FlashInfer 0.2.5
+- **Isolated comparison**: vLLM 0.6.4.post1、TensorRT-LLM 0.8 MMHA、repack + PyTorch SDPA
+- **Correctness**: FlashInfer出力に対し `max |e| < 2e-3`, `mean |e| < 3e-4`
+- **Timing**: CUDA-event timingと、Python planning・metadata construction・launch・synchronizationを含むsynchronized wall timingを併記
+- **Trace**: bucketed、homogeneous、bimodal、uniform、Zipf。main結果はsynthetic trace。外部CSV/JSON trace入力も実装し、redistributable mixed fixtureで確認
+- **Calibration**: seed 20260622でpolicy/split operating pointを固定し、20260623–20260627の5 held-out seedsで評価
 
 ## 主要結果
 
-### Quality recovery
-Full-Head Mappingは同じ8-head KV interfaceでもMinistral 3で大きく崩れる。HellaSwagでは、
-- Ministral 3 3B→14B: **52.2% → 72.6%**（CacheBridge、+20.4 pt）
-- Ministral 3 8B→14B: **44.4% → 76.0%**（+31.6 pt）
+### 単一native-paged kernelではFlashInferが最速
+B1 isolated attentionではPersistentKV自体がFlashInferを上回るわけではない。8K / 32K / 64KでFlashInferは **0.1201 / 0.4404 / 0.8686 ms**、PersistentKV auto-splitは **0.1255 / 0.4597 / 0.9069 ms**。PersistentKVはそれぞれ約1.044–1.045×遅い。一方、同じ環境のvLLM PagedAttentionよりは低latencyだった。
 
-mean target retentionはそれぞれ **65.89% → 88.23%**、**59.43% → 97.57%**へ改善する。一方Qwen3 14B→32Bでは既存full-headも比較的良好で、CacheBridgeは**99.83%**を維持し、Full-Head Mappingの99.72%と同等以上だった。
+したがってmain resultはkernel単体の優位性ではなく、low-active/ragged servingでの**work assignment**の改善として解釈する必要がある。
 
-### Mapper容量とonline cost
-Qwen3 14B→32Bではserialized mapper storageを **4.296 GB → 0.538 GB**へ削減し、理論どおり約8分の1になった。1,024-token prefixでのapplication latencyは **65.12 ms → 21.66 ms**で、最大**3.0×高速**。target側re-prefillを避ける目的に対して、mapper自体のsupport幅がhandoff costを食い潰す問題を抑えている。
+### B1 long-context
+Bucketed B1ではPersistentKV bucket、split 32を選択し、5 held-out seeds平均でFlashInfer比:
+- CUDA decode-token throughput: **1.471±0.037×**
+- synchronized wall throughput: **1.403±0.065×**
 
-### Calibration効率とAttn-Repair
-Qwen3では50 calibration sequencesでもCacheBridgeは**99.89% mean retention**を得て、Full-Head Mappingの500 sequencesでの99.44%を上回るbudget sweep結果を報告する。attention weightingはKV R²自体をほぼ改善しない一方、continuation retentionやlong-prefix NLLを改善しており、「coordinate reconstructionが良いこと」と「receiverの生成品質が良いこと」を分離して示している。
+sequence方向へworkを分割してlow occupancyを改善した効果が最も大きいregimeである。
 
-具体例としてQwen3でK/V R²はおおむね **0.678/0.655 → 0.672/0.654**と変わらないが、4KでのNLLは **2.446 → 2.350**へ低下した。
+### B8 long-context
+compact workqueueを使うB8ではwall throughputが:
+- bimodal: **1.080±0.050×**
+- uniform: **1.044±0.022×**
+- Zipf: **1.068±0.028×**
+
+となり、平均改善幅は**1.044–1.080×**。B1ほど大きくないが、異なる長さのrequestが混在するtraceでも5 seedsでpositiveだった。
+
+### B4境界とGQA gate
+B4 workqueueのsplit sweepでは最良mean wall ratioでも **1.005×**、seedごとは **0.964–1.026×**で安定した勝ちにならなかった。このためdefault policyはB4をFlashInferへrouteし、regressionを避ける。
+
+同様にsmall B8 sweepで `G=1` と `G=8` はPersistentKVへ送らずFlashInferへgateし、`G=4`のみPersistentKV workqueueを使う。これはsystem-levelにはno-regressionだが、PersistentKV kernelそのものがG=1/8で高速化したことを意味しない。
+
+### Raggednessとlaunch fan-out
+held-out bimodal B8でexact-length bucketsは**16.00 launches/step**、compact workqueueは**2.00 launches/step**。merge trafficも **4.06→2.54 MB/step**、merge launchesは **8.00→1.00**へ減る。workqueueはragged batchでsequence splitを残しながらroute数増加を抑えることが主要効果。
+
+### Attention + MLP proxy
+synthetic Llama-style gated MLP tailをattention後へ追加したproxyでも、B8 bimodal 5 seedsでwall decode-token throughputは **1.105±0.061×**。ただしこれはfull LLM serverでもfull transformer stackでもない。
+
+外部mixed trace fixtureではadaptive workqueue routeがwall throughput **1.212×**を示すが、production trafficの代替ではない。
