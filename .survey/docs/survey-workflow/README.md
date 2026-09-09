@@ -1,76 +1,81 @@
 # 研究サーベイ運用手順
 
-現在の正本は **workflow v9（queue-based）**。通常運用はこのファイルと [queue-v9.md](queue-v9.md) だけを読む。
+現在の正本は **workflow v10（structured-record transport + queue）**。予定されたChat workerは、毎回default branchの最新HEADを取得し、同じHEADの [worker-router.md](worker-router.md)、[queue-v10.md](queue-v10.md)、`.survey/work-queue/next-jobs.json` を読む。
 
-## 役割分担
+## 設計原則
 
-- **Chat研究worker**: 一次資料の検索・取得、全文精読、科学的判断、正式監査、完成Markdown作成。
-- **GitHub Actions worker**: submission検証、分割payloadの連結、論文本体への反映、job/state遷移、identity delta、集約view更新、次job生成。
-- Notionは使わない。正本はこのGitHub repository。
-- 固定の日次件数、cycle、run、10本/11本、日次targetは使わない。
+- **Chat研究worker**: 一次資料の検索・取得、全文精読、科学的判断、正式監査、構造化research record作成。
+- **GitHub Actions worker**: record検証、Markdownレンダリング、paper反映、job/state遷移、identity delta、派生view更新、次job生成。
+- GitHub repositoryを唯一の正本とする。
+- NotionはGitHub書き込み不能時だけ使う**一時配送キュー**であり、研究正本・paper正本・queue正本にはしない。
+- 固定の日次件数、旧cycle/run、10本/11本、固定research/audit比率は使わない。
+- 予約済みworkerは1つのまま維持し、08:30 JSTだけその他更新、それ以外の毎時:30は論文workerを選ぶ。
 
-## 1回のChat worker
+## v10で変わった点
 
-1. default branchの最新HEADを取得する。
-2. **同じHEAD** のこのREADME、[queue-v9.md](queue-v9.md)、`.survey/work-queue/next-jobs.json` を読む。
-3. ready jobがあればpriority順に処理する。安全にsubmission保存まで完走できる範囲なら複数件処理してよい。
-4. research/auditの完成Markdownは、章・節の自然な境界で小分けし、事前作成済み `.survey/work-queue/payloads/chat-chunks/part-01.md` 〜 `part-08.md` を必要数だけ現在blob SHA付きで順番に上書きする。**完成Markdown全文を1ファイルへ丸ごと送らない。**
-5. 各chunkのupdate後に返った最新blob SHAを記録する。1chunkは最大8 KiB、通常は2〜5 KiB程度を目安とする。
-6. 全chunk保存成功後、小さい `.survey/work-queue/submissions/chat-inbox.json` を現在blob SHA付きで上書きし、`payload_chunks` に使用したchunk pathとblob SHAを順番に指定する。予定Chat workerは通常運用で新規ファイルを作成しない。
-7. `chat-inbox.json` のpushで `Survey helper worker` が自動起動する。Actionsは各chunkのblob SHAを検証し、runner内だけで連結してqueue workerへ渡す。連結済み長文はGitHubへcommitしない。
-8. Actionsはsubmission処理後にready queueを確認し、**0件なら同じActions実行内でdiscovery jobを1件補充する**。
-9. ChatはActions反映後のresultと最新queueを読み直し、生成済みの次jobへ進む。通常は `request_jobs` を作らない。
-10. 1件終わるたび最新queueを確認する。次成果を安全に保存できない見込みなら着手せず終了する。terminal jobを再完了しない。
+v9では完成Markdownを複数chunkへ分割してGitHubへ送っていた。v10では**完成MarkdownをChatからGitHubへ送らない**。research/auditの内容を5つの小さいJSON record slotへ分割し、GitHub Actions内の `.survey/scripts/render_paper.py` が最終Markdownを生成する。
 
-## transport
+固定slot:
 
-通常経路は **reusable chunk slots → reusable inbox manifest → push-triggered Actions**。新規payload/submissionファイルの作成は通常運用では行わない。
+1. `.survey/work-queue/records/chat-record/metadata.json`
+2. `.survey/work-queue/records/chat-record/problem_method.json`
+3. `.survey/work-queue/records/chat-record/evaluation.json`
+4. `.survey/work-queue/records/chat-record/results.json`
+5. `.survey/work-queue/records/chat-record/positioning.json`
+
+すべてのslot保存に成功した後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。各slotは直前fetchしたblob SHAで既存ファイルをupdateし、manifestには保存後のblob SHAを入れる。Actionsは5 slotのpath・順序・サイズ・SHA・attempt_id・job_idを検証してからMarkdownを生成する。
 
 ```text
-Chat
-  ├─ update part-01.md
-  ├─ update part-02.md
-  ├─ ... 必要数だけ
-  └─ update submissions/chat-inbox.json
-                 │ push
-                 ▼
-          Survey helper worker
-                 │
-        chunk SHAを全件検証
-                 │
-        runner内で一時連結
-                 │
-       ┌─────────┼─────────┐
-       ▼         ▼         ▼
-   paper反映  job/state  next-jobs
-                          │
-                  ready=0ならdiscovery補充
+Scheduled Chat worker
+      │
+      ├─ metadata.json
+      ├─ problem_method.json
+      ├─ evaluation.json
+      ├─ results.json
+      └─ positioning.json
+              │ 全5件成功後
+              ▼
+         chat-inbox.json
+              │ push
+              ▼
+        Survey helper worker
+              │
+       record SHA/schema検証
+              │
+       render_paper.py
+              │ runner内のみ
+              ▼
+       transient Markdown
+              │
+       stable queue worker
+       ┌──────┼─────────┐
+       ▼      ▼         ▼
+     paper   state    next-jobs
 ```
 
-分割は安全検査対策だけではなく、途中失敗からの回復単位でもある。例えばpart-01〜03が保存済みでpart-04だけ失敗した場合、成功済み3chunkを上書きし直さず、最新状態を確認してpart-04から再開できる。inboxを送るのは**全使用chunkが保存成功した後だけ**。
+旧 `part-01.md`〜`part-08.md` と `assemble_chat_chunks.py` は復旧互換用として残すが、予定タスクの通常経路では使わない。
 
-GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。通常処理の成立条件ではない。
+## 1回の論文worker
 
-旧 `.survey/work-queue/payloads/chat-payload.md` はActionsがrunner内で一時的に連結結果を渡す互換scratchとして残す。予定Chat workerはこのファイルを直接更新しない。旧来の一意な `.survey/work-queue/payloads/<unique>.md` + `.survey/work-queue/submissions/<unique>.json` 新規作成経路も復旧互換用であり、予定タスクでは使用しない。
+1. 最新HEADのrouter、queue-v10、next-jobsを読む。
+2. GitHub writeが利用可能なら、まずNotion退避キューの `pending` を確認し、現在queueと整合する未反映成果があれば新規jobより先に再投入する。
+3. ready jobをpriority順に処理する。research着手前とdiscovery候補提出前にidentity正本で重複確認する。
+4. research/auditは一次資料全文を読み、5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。
+5. 固定slotを順番に小さくupdateする。途中失敗なら成功済みslotを保持し、失敗slotだけ安全に1回再試行する。
+6. 全slot成功後だけinboxをupdateする。
+7. `.survey/work-queue/results/chat-inbox.json` が同一job/attemptで `ok: true` かつ最新queueでjob完了になるまで完了扱いにしない。
+8. 1件完了ごとに最新queueを読み直し、安全に保存完了できる範囲で次jobへ進む。
 
-## queue policy
+## GitHub write障害時
 
-- ready jobがある → priority順に可能な限り処理する。
-- 最後のready jobをActionsが完了させて0件になる → 同じActions実行内でdiscovery jobを1件補充する。
-- discoveryは有望論文を0〜5件返す。5件はノルマではない。
-- research後、明確な確認事項が残った場合だけaudit jobを作る。
-- 固定の探索周期、research/audit比率、backlog維持目標、固定割合監査は使わない。
+GitHub readはできるがconnector writeが403、write tool unavailable、安全検査、または再取得後もwriteに失敗する場合、完成済みの論理payloadをNotionの退避キューへ保存して `pending` とする。**Notionへ保存できたことをjob完了とは扱わない。** 次回以降のworkerがGitHub write復旧を確認したら、pending成果を現在queue/identityと再照合して固定slot/inboxへ再投入し、Actions結果確認後にNotion側を `replayed` にする。
 
-## 品質原則
+GitHub Actions内の最終 `git push` だけが失敗した場合は、入力自体はすでにGitHubへ届いているためNotionへ二重退避しない。10分schedule/再実行でActions側の回復を優先する。
 
-- 候補0件は正常。数合わせで弱い論文を追加しない。
-- researchは一次資料本文を最後まで読む。全文取得不能なら抄録・検索断片から推測せずblocked/deferred。
-- auditは一次資料・正式公開情報・公式実装を使って書誌、版、code、評価条件、主要値、実機/模擬、分類、差分、限界まで確認する。
-- 既存paper更新では現在blob SHAを取得し、submissionに `expected_blob_sha` を付ける。
-- Chatは通常処理で既存paper、`.survey/survey-state/`、queue state、identity index、README、集約viewを直接更新しない。
+GitHub read自体ができず最新queue・identityを確認できない場合は、新しいrepo依存jobへ着手しない。
 
-詳細なsubmission schema、分割payload、重複防止、冪等性、状態遷移は [queue-v9.md](queue-v9.md) を正本とする。
+詳細は [queue-v10.md](queue-v10.md)。GitHub connector / scheduled taskの制約根拠は [references/github-connector-reliability.md](references/github-connector-reliability.md) に固定リンクで記録する。
 
-## legacy
+## 08:30 JST
 
-workflow v8以前の文書、state、request/result、cycle/run helperは履歴・復旧資料。過去の `request_jobs` submissionも互換用途だけで、新しい通常フローでは使わない。
+08:30だけは論文queueを処理せず、[worker-router.md](worker-router.md) のその他更新workerに従う。フレームワーク／新規LLM更新のGitHub transportは既存の固定 `update-payload.json` + `update-inbox.json` を維持する。GitHub connector writeが使えない場合のみ同じNotion退避キューへ論理payloadを保存し、復旧後に再投入する。
