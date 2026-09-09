@@ -94,6 +94,14 @@ def load_state():
 
 
 def save_state(st):
+    old = read_json(STATE, {}) or {}
+    old_cmp = dict(old)
+    new_cmp = dict(st)
+    old_cmp.pop("updated_at", None)
+    new_cmp.pop("updated_at", None)
+    if old_cmp == new_cmp:
+        st["updated_at"] = old.get("updated_at", st.get("updated_at", now()))
+        return
     st["updated_at"] = now()
     write_json(STATE, st)
 
@@ -387,7 +395,6 @@ def queue_snapshot():
     ready = [j for j in jobs if j.get("status") == "ready"]
     ready.sort(key=lambda j: (-int(j.get("priority") or 0), j.get("created_at", "")))
     return {
-        "generated_at": now(),
         "counts": counts,
         "next_jobs": [{
             k: j.get(k) for k in ("job_id", "type", "lane", "priority", "canonical_id", "title", "source_url", "paper_path", "instructions", "completion")
@@ -416,8 +423,17 @@ def main():
     process_submissions(st)
     ensure_discovery_jobs(st)
     save_state(st)
-    write_json(QUEUE / "next-jobs.json", queue_snapshot())
-    print(json.dumps(queue_snapshot(), ensure_ascii=False, indent=2))
+    snap = queue_snapshot()
+    snap_path = QUEUE / "next-jobs.json"
+    old_snap = read_json(snap_path, {}) or {}
+    old_cmp = dict(old_snap)
+    old_cmp.pop("generated_at", None)
+    if old_cmp == snap:
+        snap["generated_at"] = old_snap.get("generated_at", now())
+    else:
+        snap["generated_at"] = now()
+        write_json(snap_path, snap)
+    print(json.dumps(snap, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
