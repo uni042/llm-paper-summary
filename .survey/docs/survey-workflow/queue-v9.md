@@ -1,12 +1,22 @@
 # Queue-based survey workflow v9
 
-LLM inference-system research surveyの**機械可読な運用契約**。READMEと矛盾する場合は本書を優先する。
+LLM inference-system research surveyの運用契約。判断基準は意図的に単純に保つ。
+
+## 基本ルール
+
+Chat research workerは毎回、default branch最新HEADの `.survey/work-queue/next-jobs.json` を読む。
+
+1. ready jobがある → priority順に、成果を安全に保存できる範囲で可能な限り処理する。
+2. ready jobがない → discovery jobを1件生成して論文を探す。
+3. discoveryでは有望論文を最大5件まで返す。0件でも正常。件数合わせをしない。
+4. research後、明確な確認事項が残った場合だけaudit jobを作る。
+5. 1件終わったら最新queueを確認して次へ進む。次成果を安全に保存できない見込みなら終了する。
+
+固定の日次件数、探索レーン別周期、research/audit比率、backlog維持目標は使わない。
 
 ## Ownership
 
 ### Chat research worker
-
-Chatだけが行う:
 
 - literature discovery
 - primary-source retrieval
@@ -17,8 +27,6 @@ Chatだけが行う:
 
 ### GitHub Actions worker
 
-Actionsだけが行う:
-
 - submission validation
 - paper publication/update
 - job/state transitions
@@ -26,28 +34,11 @@ Actionsだけが行う:
 - derived-view rebuild
 - ready-job generation
 
-Chatは通常処理で共有stateや既存paperを直接更新しない。
+Actions workerは10分ごとにも起動するが、主目的は未処理submissionの回収・整合性維持。Chatがsubmissionをpushした場合はpushでも起動する。
 
-## Trigger model
+## Empty queue
 
-通常の制御経路は**push-driven**。
-
-1. Chatが成果をimmutable payload/submissionとしてcommitする。
-2. `.survey/work-queue/submissions/*.json` のpushで `Survey helper worker` が起動する。
-3. `queue_worker.py` が未処理submissionを検証・反映する。
-4. workerがresult、job/state、next-jobsを更新してcommitする。
-
-10分scheduleはfallback/reconciliation用。Chatから `workflow_dispatch` やjob rerunを通常経路として呼ばない。
-
-## Queue
-
-Chatは毎回、default branch最新HEADの `.survey/work-queue/next-jobs.json` を読む。同じ実行内で参照するREADME、job、queue-v9も同一HEADに固定する。
-
-ready jobはpriority降順。1回1件に固定しないが、次jobの成果を安全に保存できない見込みなら着手しない。
-
-### Empty queue
-
-ready jobが0件なら、その回を終了しない。Chatはjobそのものを直接作らず、次の一意なsubmissionを1件作る。
+ready jobが0件ならChatは一意なsubmissionを作る。
 
 ```json
 {
@@ -55,40 +46,15 @@ ready jobが0件なら、その回を終了しない。Chatはjobそのものを
 }
 ```
 
-このpushでActionsが起動し、ready queueが空なら探索jobを1件補充する。通常cadenceで期限到来laneがあればそれを優先し、何も期限到来していなければ `discovery_fresh` を例外的に1件生成する。Chatは**同じ実行内で**最新HEADと `next-jobs.json` を読み直し、生成されたdiscovery jobをそのまま処理する。空queueはChat workerの終了条件ではない。
+Actionsはready queueが本当に空なら単純なdiscovery jobを1件作る。Chatは同じ予定実行に余裕があれば最新HEADとqueueを読み直してそのdiscoveryを処理する。
 
-### Discovery lanes
+## Discovery
 
-- `discovery_fresh`: 2h。原則30日以内の新規論文・重要改訂。
-- `discovery_citation`: 6h。既存重要論文の引用、後継、実装。
-- `discovery_gap`: 24h。欠落系統・隣接system技術。
+一次情報を中心に、repo未登録のLLM推論システム関連研究を探す。新着を優先するが、重要な取りこぼしがあれば古い論文も可。
 
-research backlogは最大12、audit backlogは最大6。候補0件は正常。
+1回のdiscovery submissionは**0〜5件**。弱い候補で5件を埋めない。
 
-## Job contracts
-
-### discovery
-
-一次情報中心に探索し、既存repoとの重複を可能な範囲で確認する。
-
-```json
-{
-  "job_id": "job-...",
-  "candidates": [
-    {
-      "canonical_id": "stable id if known",
-      "title": "...",
-      "source_url": "primary source URL",
-      "paper_path": "papers/...md",
-      "priority": 80,
-      "reason": "...",
-      "evidence": ["primary-source fact"]
-    }
-  ]
-}
-```
-
-### research
+## Research
 
 一次資料本文を最後まで読み、完成済み日本語Markdownを作る。最低限:
 
@@ -104,40 +70,31 @@ research backlogは最大12、audit backlogは最大6。候補0件は正常。
 - 既存系統との差
 - 一次資料
 
-全文取得不能ならcompletedにしない。
+全文取得不能ならcompletedにせずblocked/deferredとする。抄録や検索断片から欠落部分を推測しない。
 
-### audit
+## Audit
 
-一次資料・正式公開情報・公式実装を用い、少なくとも以下を正式監査する:
+全論文を機械的に監査しない。research時に、書誌・版、実装状態、評価条件、主要数値、実機/シミュレーション区別などについて**明確に確認すべき事項が残った場合だけ**auditを要求する。
 
-- identity / bibliography
-- authors / affiliations
-- publication / final version
-- code / implementation status
-- hardware / model / dataset / baseline
-- quoted quantitative results
-- real hardware vs simulation
-- classification / lineage
-- differences / limitations
-
-priority >= 75、明示audit要求、不確実性、または決定的20% quality-control sampleで生成する。
+重要度だけを理由に自動監査しない。固定割合の抜取監査もしない。
 
 ## Artifact transport
 
-### Completed research/audit
+完成research/auditは原則として:
 
-完成Markdownは**原則payload分離**する。
+1. `.survey/work-queue/payloads/<unique>.md`
+2. `.survey/work-queue/submissions/<unique>.json`
 
-1. 新規 `.survey/work-queue/payloads/<unique>.md` を作る。
-2. 新規 `.survey/work-queue/submissions/<unique>.json` を作る。
-3. submissionはpayloadを `payload_path` で参照する。
+の2ファイルに分ける。
+
+submission例:
 
 ```json
 {
   "job_id": "job-...",
   "status": "completed",
   "paper_path": "papers/...md",
-  "expected_blob_sha": "required for existing paper",
+  "expected_blob_sha": "existing paper update時のみ必須",
   "payload_path": ".survey/work-queue/payloads/<unique>.md",
   "audit_required": false,
   "audit_reason": null,
@@ -145,53 +102,21 @@ priority >= 75、明示audit要求、不確実性、または決定的20% qualit
 }
 ```
 
-inline `content` は後方互換・小規模診断用に受理するが、通常のresearch/auditでは使わない。`content` と `payload_path` の同時指定は禁止。
-
-payloadは:
-
-- `.survey/work-queue/payloads/` 配下
-- `.md`
-- immutable
-- submissionごとに一意
-- 完成paper全体
-
-とする。既存paperを更新する場合は、そのsubmission作成直前のblob SHAを `expected_blob_sha` に入れる。競合した場合はworkerが拒否し、Chatが最新HEADから再判断する。
-
-### blocked / deferred / rejected
-
-Markdownを捏造しない。
-
-```json
-{
-  "job_id": "job-...",
-  "status": "blocked",
-  "paper_path": "papers/...md",
-  "reason": "primary full text could not be obtained; ..."
-}
-```
+既存paper更新では最新blob SHAを必須とする。
 
 ## Idempotency
 
 - submission/result filenameは一意で再利用しない。
-- 同名resultが存在するsubmissionは再処理しない。
-- terminal jobは再完了させない。
-- workerは単一concurrency group、`cancel-in-progress: false`。
-- worker commit前にpull --rebaseする。
+- 同名resultがあれば再処理しない。
+- terminal jobを再完了しない。
+- paper更新はblob SHAで競合検査する。
 - Chatはsubmission保存後に同じ成果を再送しない。
-- paper更新はoptimistic blob SHA checkを使う。
+- Actionsは単一concurrency groupで動く。
 
 ## Derived data
 
-paper反映後、Actionsがidentity deltaを生成する。大きい集約viewはdirty flagを立て、最大でも概ね1時間単位でbatch rebuildする。Chatはこれらを直接書かない。
+paper反映後のidentity delta、README、比較表等の派生データはActions側で処理する。Chatは大きい共有ファイルを通常処理で直接更新しない。
 
 ## Legacy boundary
 
-以下はworkflow v8以前の履歴・復旧互換であり、v9 control planeではない:
-
-- cycle/run/daily target
-- 10本/11本等の固定件数
-- `.survey/requests/` / `.survey/results/`
-- `.survey/submissions/` / `.survey/submission-results/`
-- v8 state/helper scripts
-
-旧成果は削除せず保持してよいが、新規job生成・優先順位・通常transportに使わない。
+workflow v8以前のcycle/run/daily target、10本/11本等の固定件数、旧request/result群は履歴・復旧互換であり、v9の仕事量や優先順位には使わない。
