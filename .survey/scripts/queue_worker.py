@@ -387,11 +387,13 @@ def apply_artifact(sub: dict, job: dict):
         current = p.stdout.strip() if p.returncode == 0 else None
         if current != expected_sha:
             raise ValueError(f"paper blob changed: expected {expected_sha}, current {current}")
+    existed = target.exists()
+    previous_text = target.read_text(encoding="utf-8") if existed else None
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(content, encoding="utf-8")
 
     # Keep connector-safe identity state current without rewriting the compact
-    # index. The normal 10-minute worker may compact deltas separately later.
+    # index. Roll back the paper if identity validation fails.
     import subprocess
     p = subprocess.run(
         [sys.executable, ".survey/scripts/identity_delta.py", "prepare", "--paper", paper],
@@ -400,6 +402,10 @@ def apply_artifact(sub: dict, job: dict):
         capture_output=True,
     )
     if p.returncode != 0:
+        if existed:
+            target.write_text(previous_text, encoding="utf-8")
+        else:
+            target.unlink(missing_ok=True)
         raise RuntimeError("identity delta failed: " + (p.stderr or p.stdout))
     return {"paper": paper, "identity_delta": p.stdout.strip()}
 
@@ -441,6 +447,30 @@ def process_submissions(st: dict):
         except Exception as exc:
             result["error"] = f"{type(exc).__name__}: {exc}"
         write_json(rp, result)
+
+
+def reconcile_v9_identity_deltas():
+    """Repair missing identity deltas for v9-published completed jobs."""
+    import subprocess
+    repaired = 0
+    seen = set()
+    for j in iter_jobs():
+        if j.get("status") != "completed" or j.get("type") not in {"research", "audit"}:
+            continue
+        paper = j.get("paper_path")
+        if not paper or paper in seen or not (ROOT.parent / paper).exists():
+            continue
+        seen.add(paper)
+        p = subprocess.run(
+            [sys.executable, ".survey/scripts/identity_delta.py", "prepare", "--paper", paper],
+            cwd=ROOT.parent,
+            text=True,
+            capture_output=True,
+        )
+        if p.returncode != 0:
+            raise RuntimeError("identity reconciliation failed for " + paper + ": " + (p.stderr or p.stdout))
+        repaired += 1
+    return repaired
 
 
 def normalize_ready_jobs():
@@ -493,6 +523,8 @@ def main():
     })
     process_submissions(st)
     ensure_discovery_jobs(st)
+    reconcile_v9_identity_deltas()
+    normalize_ready_jobs()
     save_state(st)
     snap = queue_snapshot()
     snap_path = QUEUE / "next-jobs.json"
