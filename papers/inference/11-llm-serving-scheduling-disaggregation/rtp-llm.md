@@ -2,112 +2,281 @@
 canonical_id: "arXiv:2605.29639"
 arxiv_id: "2605.29639"
 title: "RTP-LLM: High-Performance Alibaba LLM Inference Engine"
-summary: "Alibabaの大規模実運用LLM inference engine。model loading、prefill/decode分離、cache-aware traffic scheduling、GPU/CPU/RDMA/3FSの4階層KV cache、speculative decoding、TP/PP/DP/EP、weight/KV quantization、ViT-LLM分離を単一serving stackへ統合する。vLLM/SGLangとのcontrolled benchmarkに加えAlibaba実trafficを使い、個別最適化だけでなくproduction orchestrationを含む統合systemとして評価する。"
+summary: "Alibabaで実運用されているLLM推論基盤。単一の高速化手法ではなく、入力処理と逐次生成の分離、GPUから分散ストレージまでのKVキャッシュ階層、キャッシュを再利用しやすい要求振り分け、大規模モデルの高速読込、投機的復号、量子化、MoE・画像入力対応を一つの提供基盤へ統合し、実トラフィックを使って各機構の効果を評価する。"
 source: "https://arxiv.org/abs/2605.29639"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-09"
+audit_version: 1
 ---
 
 # RTP-LLM: High-Performance Alibaba LLM Inference Engine
+
+> Alibabaで実運用されているLLM推論基盤。単一の高速化手法ではなく、入力処理と逐次生成の分離、GPUから分散ストレージまでのKVキャッシュ階層、キャッシュを再利用しやすい要求振り分け、大規模モデルの高速読込、投機的復号、量子化、MoE・画像入力対応を一つの提供基盤へ統合し、実トラフィックを使って各機構の効果を評価する。
+
 ## 書誌情報
-- **著者**: Boyu Tan, Jiarui Guo, Zongwei Lv, Haobo Sun, Tong Yang, Kan Liu, Xinfei Shi, Zetao Hu, Yaxin Yu, Chi Zhang, Jianning Zhang, Xi Yang, Wei Zhang, Bo Cai, Silu Zhou, Xiyu Wang, Na He, Yinghao Yu, Wending Bao, Guiyang Huang, Yuxing Yuan, Juncheng Yin, Nan Wang, Lin Yang, Zechao Zhang, Lu Chen, Guoding Li, Tao Lan, Lin Qu
+
+- **著者**: Boyu Tan, Jiarui Guo, Zongwei Lv, Haobo Sun, Tong Yang, Kan Liu, Xinfei Shi, Zetao Hu ほか
+- **所属**: Alibaba Group / Peking University / Zhejiang University
 - **公開**: arXiv:2605.29639v1, 2026-05-28
-- **種別**: arXiv preprint
-- **対象**: LLM inference engine、production serving、prefill-decode disaggregation、hierarchical KV cache、traffic scheduling、model loading、speculative decoding、quantization、multimodal serving、MoE parallelism
-- **実装**: 公式implementationは https://github.com/alibaba/rtp-llm でApache-2.0公開。Alibaba Group内のTaobao、Tmall、Cainiao等を含むproduction serviceで利用されると論文・公式repositoryが記載する。
+- **種別**: プレプリント（preprint）／実運用システム報告
+- **対象**: LLM提供基盤（LLM serving）、入力処理・逐次生成分離、KVキャッシュ、要求スケジューリング、モデル読込、投機的復号、量子化、MoE、マルチモーダル推論
+- **実装**: Apache-2.0で `alibaba/rtp-llm` として公開。論文ではTaobao、Tmall、CainiaoなどAlibaba Group内で実運用され、1億人超へサービスしていると報告する。
+
+## 概要
+
+RTP-LLMは、1つの新しいカーネルやスケジューリング手法を提案する論文ではない。大規模LLMを実際のサービスとして長期間運用するときに必要になる複数の問題を、一つの推論エンジンでまとめて扱う**統合型の実運用システム**である。
+
+論文が出発点として挙げる問題は大きく4つある。
+
+1. 要求の長さや同時接続数が時々刻々変わるため、GPUが安定して高稼働しない。
+2. 長文になるほど注意機構用のKVキャッシュ（KV cache）が増え、GPUメモリが先に不足する。
+3. 600B級の混合専門家モデル（Mixture of Experts; MoE）や画像入力モデルなど、モデル構造ごとに必要な並列化・計算資源が異なる。
+4. 実運用ではモデル更新や障害復旧も必要で、巨大な重みの読込に数十分〜数時間かかると運用そのものが難しくなる。
+
+RTP-LLMはこれらを個別の機能として実装するだけでなく、**同じマスターが要求の配置、キャッシュ位置、GPU負荷をまとめて見て判断する**構成にしている。例えば、ある要求の共通プロンプトに対応するKVキャッシュが特定ワーカーに残っているなら、そのワーカーを優先して再利用する。一方、そのワーカーが混雑しているならキャッシュ再利用と待ち時間を比較し、別ワーカーへ送る。
+
+したがって、この論文の読みどころは「RTP-LLMがvLLMより何倍速い」という単一の数字ではない。モデル読込、最初の1トークンまでの時間、キャッシュ再利用、投機的復号、量子化、画像処理などで**別々の最適化がどの境界に効くか**を見る必要がある。
+
 ## 問題設定
-production LLM servingではrequest長・load・model architectureが大きく変動し、prefill/decodeのresource mismatch、KV cache容量、600B級modelのloading、MoE/multimodal/speculative decodingなどを個別最適化だけで同時に扱いにくい。特に長文と高concurrencyではKV cache reuseとtraffic routingがTTFT、必要machine数、memory効率へ直結する。
-## 新規性
-単一の新algorithmより、model loading、PD serving、4階層KV cache、cache-aware global scheduling、speculative decoding、TP/PP/DP/EP、weight/KV quantization、ViT-LLM分離をproduction-ready inference stackへ統合し、Alibabaの実trafficで各機構を評価した点に価値がある。
+
+### 入力処理と逐次生成は同じGPUの使い方をしない
+
+LLM推論は、最初に入力トークンをまとめて処理する**入力処理（prefill）**と、その後1トークンずつ生成する**逐次生成（decode）**に大きく分かれる。
+
+入力処理は大きな行列演算をまとめて実行しやすいため演算性能を使いやすい。一方、逐次生成では過去のKVキャッシュを毎ステップ読み直すため、メモリ帯域とKVキャッシュ容量の影響が大きい。
+
+両者を同じワーカー群へ固定すると、入力処理が急増したときに逐次生成が巻き込まれたり、逐次生成用に確保したメモリのために入力処理のバッチを大きくできなかったりする。RTP-LLMは両者を分離して独立に台数調整できる。
+
+### KVキャッシュは「容量問題」であると同時に「再利用配置問題」でもある
+
+長いシステムプロンプト、検索拡張生成（Retrieval-Augmented Generation; RAG）の共通文書、継続チャットなどでは、複数要求の先頭部分が同じになることがある。この共通部分のKVキャッシュを再利用できれば、同じ入力を再計算する必要がない。
+
+しかし再利用できるキャッシュが別ワーカーにある場合、単純な最短キュー方式ではその価値を捨ててしまう。逆にキャッシュのあるワーカーだけへ要求を集中すると待ち行列が伸びる。
+
+RTP-LLMは、**キャッシュ局所性と負荷分散を同じスケジューリング問題として扱う**。
+
+### 実運用ではモデルの起動時間も重要
+
+数百Bパラメータのモデルは、重みファイルをストレージから読むだけでも巨大なI/Oになる。テンソル並列（tensor parallelism; TP）で複数GPUへ載せる場合、各プロセスが同じファイルを別々に読む実装では、並列度を増やすほどストレージへ同じ読み込みが集中する。
+
+推論中の速度だけを速くしても、新版モデルへの切替や障害復旧に長時間かかればサービス運用のボトルネックになる。そのためRTP-LLMはモデル読込も推論基盤の一部として最適化する。
+
+## 手法のあらまし
+
+要求はまずフロントエンドでトークン化され、プロンプトを固定サイズのブロックへ分け、それぞれの内容からハッシュ値を作る。このハッシュ値が「同じ先頭部分のKVキャッシュをどこかのワーカーが持っているか」を探す鍵になる。
+
+中央のマスターは、各ワーカーのキュー長、処理中要求、GPUメモリ使用量、KVキャッシュの位置などを継続的に集める。新しい要求が来ると、単に最も空いているGPUへ送るのではなく、キャッシュがどこまで再利用できるかと、そこで待つ時間の両方を見て実行先を決める。
+
+入力処理と逐次生成を別ノード群へ分ける構成では、まず入力処理側でプロンプトを処理し、生成されたKVキャッシュを逐次生成側へ渡す。逐次生成側では新しいトークンを生成しながらKVキャッシュを増やしていく。
+
+GPUメモリへ入りきらないKVキャッシュは、ローカルCPUメモリ、遠隔CPUメモリ、分散ストレージへ段階的に退避できる。再利用時には、どの階層に目的のKVがあるかを探し、必要な部分をGPUへ戻す。
+
+この通常推論経路に、モデル読込高速化、投機的復号、量子化、MoE向け並列化、画像エンコーダ分離などを差し込めるようにしている。
+
 ## 手法
-Frontendがtoken/block hashを生成し、Masterがworker load、KV cache分布、latency予測を見てbatch/routingを決める。PD-FusionとPD-Disaggregationを選択でき、KVはGPU→local CPU→RDMA remote CPU→3FSの順で探索する。model loadingはfile-order sequential I/O、single-reader+broadcast、shared pinned buffer reuse、I/O/broadcast overlapで高速化する。decode acceleration、quantization、multimodalも同じengineに統合する。
 
-### Global Master and traffic scheduling
-Prefillはlength-similar batchingとpredicted completion time、Decodeはchat/cache affinity、load、KV occupancyを用いてroutingする。worker状態は高頻度に収集する。
+### 1. 中央マスター — 「空いているGPU」だけでなくキャッシュ位置まで見て要求を振り分ける
 
-### Four-tier KV cache
-GPU block cache、local CPU memory、RDMA remote CPU memory、distributed 3FSを階層化し、hash prefix matchingとLRU/reference countでreuseする。local/remote lookupを並列実行してworker scoreへ統合する。
+RTP-LLMの中心にあるのは、クラスタ全体の状態を見るマスターである。
 
-### PD deployment
-PD-FusionとPD-Disaggregationをサポートし、分離時はPrefill/Decodeを独立nodeへ置いて個別scaleし、KVをNCCL/InfiniBand等で転送する。
+各推論ワーカーは、自分のキュー、実行中バッチ、GPUメモリ、保持しているKVキャッシュなどをマスターへ報告する。マスターはこれを使い、新しい要求をどのワーカーへ送るか決める。
 
-### Optimized model loading
-model-structure順ではなくfile順に読み、1 processだけがfileを読みdistributed broadcast、shared pinned memory再利用、I/Oとbroadcastのpipeline overlapでFUSE/cloud storageのsequential accessを活かす。
+入力処理では、入力長の近い要求をまとめることで、極端に長い要求が短い要求の計算を引き伸ばすのを抑える。さらに、現在のキューと要求長から処理完了時刻を予測し、待ち時間が小さくなるワーカーを選ぶ。
 
-### Modular speculative decoding
-ProposeExecutor、ScoreExecutor、SpeculativeSampler、SpeculativeUpdaterをC++で分離し、naive、Prompt Lookup、Eagle、MTP等を差し替え可能にする。
+継続チャットではキャッシュ局所性も加える。同じ会話の過去KVキャッシュがあるワーカーを優先すれば、過去文脈を再計算せずに済む。ただし負荷が高すぎれば別ワーカーへ逃がす。つまり「再計算を減らすこと」と「キューを均等にすること」の両方を同じ配置判断で扱う。
 
-### Parallelism and quantization
-TP/PP/DP/EPを統合し、weight-only INT4/INT8、FP8、on-the-fly KV quantizationを提供する。
+### 2. 入力処理・逐次生成分離 — 2種類の仕事を独立に増減できるようにする
 
-### EPD multimodal disaggregation
-ViT encoderをLLM serving nodeから分離し、vision embedding生成とlanguage generationをpipeline化して異種resourceを独立配分する。
+RTP-LLMは、入力処理と逐次生成を同じノードで行う**融合構成（PD-Fusion）**と、別ノード群へ分ける**分離構成（PD-Disaggregation）**の両方をサポートする。
 
-requestはFrontend→Master→Inference Nodeへ流れ、Masterがprefix cache matchとcluster stateを統合してplacementを決める。必要KVは最速tierから段階的にGPUへstageし、実行後metadata/LRUを更新する。Name Serviceはservice discovery/heartbeat、Carbonはnode failure時の自動restartを担当し、Masterがglobal schedulingを担う。
-## 評価条件
-- **Hardware**: evaluation servers: Linux 5.10 x86_64, 64 CPU cores, 600 GB RAM, 8 GPUs per server、PD production evaluation: 5 nodes x 8 GPUs; 4 prefill nodes and 1 decode node、NCCL IBRC over InfiniBand for prefill-to-decode KV transfer、NVLink-class high-speed intra-node interconnect assumed for tensor parallel communication
-- **Software**: RTP-LLM C++ serving engine、Alibaba 3FS distributed storage、RDMA remote CPU KV cache、DeepEP for MoE All2All、IBM fastsafetensors integration plus RTP fastsafetensors、NCCL、official open-source alibaba/rtp-llm
-- **Model**: Qwen 7B and Qwen 4B production traffic services、Qwen3-Coder-480B-A35B-Instruct-FP8、DeepSeek-V3-0324、Qwen3-235B-A22B with MTP、Qwen3-32B、Qwen/Qwen2.5-VL-7B-Instruct、additional 8B-32B models including Qwen3-8B, Qwen2.5-14B-Instruct and Moonlight-16B-A3B for loading
-- **Dataset / Trace**: real Alibaba internal Robot Q&A traffic、real Taobao Merchant Service traffic、1,000 real merchant data-agent queries、WikiText-2 sampled subset for quantization perplexity、GQA for multimodal framework comparison
-- **Baseline**: vLLM、SGLang、traffic scheduling disabled within RTP-LLM for production scheduling ablation、multiple TP/DP deployment configurations under equal GPU budget
-- **Correctness**: Speculative sampling follows proposal-score-verify-update semantics intended to preserve target-model output distribution. Quantization fidelity is measured by WikiText-2 perplexity: reported configurations span PPL 7.59-8.09 versus baseline 7.59-7.67, with RTP-LLM within 0.01 PPL of baseline in the compared AWQ/FP8-KV settings described by the paper. Multimodal framework comparison uses identical decoding parameters.
-- **production comparison workload**: For PD disaggregation and speculative sampling framework comparisons, paper states input 200K tokens and output 16K tokens throughout.
-- **PD large-MoE deployment**: Qwen3-Coder-480B-A35B-Instruct-FP8 with FP8 KV cache; 5 nodes, each 8 GPUs; prefill 4 nodes/decode 1 node; TP=8, EP=8, DP=1 per node; prefill batch 64, decode concurrency 128.
-- **speculative controlled test**: DeepSeek-V3-0324, TP=8/DP=1, max_batch_size=32, max_new_tokens=500, FP8 KV cache, speculative step size 1.
-- **real MTP test**: Qwen3-235B-A22B, 1,000 production queries, average input 19.5K and output 800 tokens, concurrency 64-512; compares 4TPx4, 1TP8DP, 2TP4DP, 2TP8DP.
-- **quantization test**: Qwen3-32B single GPU, max_batch_size=64, top-p=1, top-k=1, temperature=0; max_new_tokens 500/800/1000/1200; Baseline, AWQ(FP8), FP8 KV cache.
-- **multimodal test**: Qwen2.5-VL-7B-Instruct on GQA, TP=2 across two GPUs, max_batch_size=64, max_new_tokens=500, top-p=1, top-k=1, temperature=0.
-Evaluation intentionally mixes production A/B-style workloads and controlled framework benchmarks. Traffic scheduling is measured against the same service with scheduling disabled; PD and speculative decoding use real online models/workloads as well as framework baselines; model loading, quantization, and EPD use controlled comparisons against vLLM/SGLang.
-Strongest evidence is production deployment and end-to-end engineering effectiveness, but different subsections use different models/workloads/configurations. The paper does not establish that every RTP-LLM component individually causes the full headline speedups, and does not report broad statistical confidence intervals across repeated deployments.
-## 主要結果
-RTP-LLMはproduction stack全体を対象とし、loading、cache-aware scheduling、PD、speculative decoding、quantization、multimodal分離でそれぞれ改善を示す。特にPD評価ではTTFT/cache hitは大幅改善する一方、raw throughputはSGLang/vLLMとほぼ同等であり、利得の中心がprefix reuseとlatency/SLO側である点が重要。
+分離構成では、入力処理ノードがプロンプトを一括計算し、そこで生成したKVキャッシュをネットワーク経由で逐次生成ノードへ渡す。逐次生成ノードはそのKVを受け取り、1トークンずつ生成を続ける。
 
-- production TTFT P95 reduction / 37.2% / 35.4% (baseline: traffic scheduling off; condition: Internal Robot Q&A: 83.3->52.3 ms; Taobao Merchant Service: 350->226 ms) — cache-aware traffic schedulingがreal serviceのTTFTを安定して改善。Taobaoではinference P95も1760->1210 ms、31.3%削減。
+分けることで、入力が長いサービスなら入力処理ノードを増やし、出力が長いサービスなら逐次生成ノードを増やす、といった独立拡張ができる。一方でKVキャッシュ転送という新しい通信が増えるため、すべてのワークロードで分離が有利とは限らない。
 
-- prefix cache reuse length / 26.6 -> 83.8 tokens (+215%) (baseline: traffic scheduling off; condition: Internal Robot Q&A production workload) — 同条件でprefill machineを80->20へ75%削減しつつ平均TTFTを維持。Taobao workloadのreuseは833->840で改善幅は小さい。
+RTP-LLMではこの分離を単独機能として使うのではなく、後述する階層KVキャッシュと要求振り分けに接続している。
 
-- PD cache hit rate / 45.09% (baseline: SGLang 28.70%; vLLM 19.10%; condition: Qwen3-Coder-480B-A35B-Instruct-FP8, 5-node PD production deployment) — 1.57x/2.36x高いcache hit。
+### 3. 4階層KVキャッシュ — GPUにないキャッシュも捨てずに再利用する
 
-- PD TTFT / 1338.38 ms (baseline: SGLang 6322.7 ms; vLLM 7134.8 ms; condition: same Qwen3-Coder production evaluation) — 4.72x/5.33x短いTTFT。ただしthroughputは1081.72 tokens/sでSGLang 1152.95、vLLM 1084.58とほぼ同等。
+KVキャッシュの保存先を、速度と容量の異なる4階層へ広げる。
 
-- speculative decoding throughput / 187.53 tokens/s (baseline: vLLM 167.95; SGLang 75.785 tokens/s; condition: DeepSeek-V3-0324, TP=8, FP8 KV, max_new_tokens=500) — 1.12x/2.48x throughput。direct C++ launchによるoperator invocation overhead削減も寄与。
+1. **GPUメモリ** — 最速だが容量が小さい。
+2. **同一マシンのCPUメモリ** — GPUより遅いが大容量。
+3. **RDMAでアクセスする別マシンのCPUメモリ** — さらに遠いがクラスタ全体で容量を増やせる。
+4. **3FS分散ストレージ** — 最も遅いが非常に大きい永続的な退避先。
 
-- large-model loading speedup / 4.70-6.27x (baseline: SGLang/vLLM; condition: Qwen3-235B-A22B; TP=4: RTP 37.1s vs 177.4/174.3s, TP=8: 33.0s vs 206.7/204.0s) — parallel shared readingとI/O-broadcast overlapによりTP増加でloadingが悪化せず、baselineはTP4->8で約16.5-17.0%悪化。
+プロンプトをブロック単位でハッシュ化しておくため、新しい要求が来たとき「先頭から何ブロック分のKVが既に存在するか」を照合できる。
 
-- quantized inference TTFT / 1.9-3.0x reduction (baseline: SGLang/vLLM; condition: Qwen3-32B across AWQ(FP8), FP8 KV Cache and baseline configurations) — 長sequenceでも低TTFTを維持。WikiText-2 PPLは7.59-8.09でbaseline 7.59-7.67に近い。
+キャッシュがGPUにあればそのまま使い、CPUや遠隔メモリにある場合は必要なブロックだけを戻す。ローカルと遠隔の検索を並行して行い、その結果も要求の配置スコアへ入れる。
 
-- EPD multimodal throughput / 6288.48 tokens/s (baseline: SGLang 3374.24; vLLM 2492.69 tokens/s; condition: Qwen2.5-VL-7B-Instruct on GQA, TP=2) — 1.86x/2.52x throughput。TTFT 1737.48 msはSGLang 4103.1、vLLM 3688.3より2.36x/2.12x短い。
+ここで重要なのは、階層キャッシュを単なる退避機構にしていない点である。**どのワーカーへ要求を送るかという判断と、どこにKVがあるかを同時に扱う**ことで、再利用率を上げる。
+
+### 4. 大規模モデル読込 — 同じ重みを各GPUプロセスが何度も読まない
+
+一般的な実装では、モデル内部のレイヤー順に必要なテンソルを読み出す。しかし重みファイル上の並びとモデル構造上の並びが一致しないと、ストレージ上で細かな飛び飛び読み込みが増える。
+
+RTP-LLMはまず**ファイル上の並び順で連続して読む**。これによりクラウドストレージやFUSEファイルシステムで大きな連続I/Oを使いやすくする。
+
+さらに、テンソル並列で複数プロセスが同じファイルを読むのではなく、代表プロセスが1回読み、そのデータを他プロセスへ配る。転送用の固定メモリ領域も使い回し、毎テンソルで確保・解放しない。
+
+最後に、次の重みをストレージから読んでいる間に、前の重みをGPU群へ配る。I/OとGPU間配布をパイプライン化することで、片方の待ち時間をもう片方の裏へ隠す。
+
+この最適化は推論の1トークンを速くするものではないが、モデル更新、オートスケール、障害復旧で必要な「サービスを立ち上げる時間」を短くする。
+
+### 5. 投機的復号 — 将来トークン候補をまとめて提案し、本体モデルで検証する
+
+通常の逐次生成は1回の本体モデル計算で1トークンしか確定できない。投機的復号（speculative decoding）では、より軽い方法で複数トークン候補を先に作り、本体モデルがまとめて採点する。候補が正しければ1回の本体計算で複数トークンを確定できる。
+
+RTP-LLMは特定の1方式だけを固定せず、
+
+- 候補を作る処理
+- 本体モデルで採点する処理
+- 受理・棄却する処理
+- 次ステップ用の状態更新
+
+を別モジュールに分ける。これによりPrompt Lookup、EAGLE、MTPなど異なる候補生成方式を同じ推論基盤へ接続できる。
+
+本体モデルによる検証を残すため、単純に小型モデルの出力へ置き換える方式ではない。一方、候補受理率が低いワークロードでは候補生成分が無駄になるため、効果はモデルと要求に依存する。
+
+### 6. 並列化と量子化 — モデル構造に応じて実行方法を組み替える
+
+巨大モデルでは1種類の並列化だけでは足りないため、RTP-LLMは複数方式を組み合わせる。
+
+- **テンソル並列（tensor parallelism; TP）**: 一つの行列を複数GPUへ分割。
+- **パイプライン並列（pipeline parallelism; PP）**: モデルの層を複数GPU群へ分割。
+- **データ並列（data parallelism; DP）**: 同じモデル複製へ別要求を振り分ける。
+- **専門家並列（expert parallelism; EP）**: MoE専門家を複数GPUへ分散。
+
+さらに重みのINT4/INT8、FP8、KVキャッシュの低精度化をサポートする。これはメモリ使用量と転送量を減らすが、数値精度が変わるため、論文ではWikiText-2のパープレキシティ（perplexity; PPL）も併記して品質差を確認している。
+
+### 7. 画像処理とLLMを分離する — 異なる計算を同じGPUで奪い合わせない
+
+画像入力モデルでは、まず画像を視覚変換器（Vision Transformer; ViT）で埋め込みへ変換し、その埋め込みとテキストをLLMへ渡す。
+
+ViTとLLMは計算パターンが異なるため、RTP-LLMでは両者を別サービスとして配置できる。画像処理ノードが埋め込みを生成し、言語モデルノードへ渡す。
+
+高並行時には、ある要求のViT処理と別要求のLLM生成を別GPU群で同時に進められる。また、LLMノードにViT重みを常駐させなくてよいため、GPUメモリも節約できる。
+
+## 評価
+
+### まず見るところ
+
+- 実トラフィックの要求振り分けでは、最初の1トークンまでの95パーセンタイル時間（TTFT P95）が約35〜37%短縮した。
+- ただし大規模MoEの入力処理・逐次生成分離評価では、**生のトークン毎秒はvLLM/SGLangより高くない**。主な改善はキャッシュ再利用率とTTFTである。
+- モデル読込は大規模モデルでvLLM/SGLang比約4.7〜6.3倍の高速化を示す。
+- 各節でモデル・要求・評価条件が異なるため、これらを「RTP-LLM全体が常に6倍速い」とまとめてはいけない。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
+### 実運用トラフィックスケジューリング
+
+Alibabaの内部Robot Q&Aでは、Qwen 7B・平均入力340トークン程度の実要求を使う。
+
+- TTFT P95: **83.3 ms → 52.3 ms**（37.2%削減）
+- キャッシュ再利用長: **26.6 → 83.8 tokens**（約215%増加）
+- 平均TTFTを維持しながら入力処理用マシン数: **80 → 20**
+
+Taobao Merchant ServiceでもTTFT P95は350 msから226 msへ、推論P95は1760 msから1210 msへ改善した。
+
+この結果は「GPUカーネルが37%速くなった」のではない。共通先頭部分を持つ要求をキャッシュのある場所へ送り、同じ入力の再計算を減らした効果が大きい。
+
+### 大規模MoEの入力処理・逐次生成分離
+
+Qwen3-Coder-480B-A35B-Instruct-FP8を5ノード×8 GPUで評価し、4ノードを入力処理、1ノードを逐次生成に使う。
+
+- KVキャッシュヒット率: RTP-LLM **45.09%**、SGLang 28.70%、vLLM 19.10%
+- TTFT: RTP-LLM **1338.38 ms**、SGLang 6322.7 ms、vLLM 7134.8 ms
+- スループット: RTP-LLM **1081.72 tokens/s**、SGLang 1152.95、vLLM 1084.58
+
+TTFTは大きく改善している一方、スループットはSGLangより低い。このため、この比較から読み取るべき主効果は「全計算が高速」ではなく、キャッシュ再利用とフェーズ分離による初動遅延の改善である。
+
+### モデル読込
+
+Qwen3-235B-A22Bでは、TP=4でRTP-LLM 37.1秒に対しSGLang 177.4秒、vLLM 174.3秒。TP=8ではRTP-LLM 33.0秒に対しSGLang 206.7秒、vLLM 204.0秒。
+
+大きな差は、各プロセスが同じファイルを独立に読むのを避け、連続I/Oとプロセス間配布を重ねているためである。
+
+### 投機的復号
+
+DeepSeek-V3-0324、TP=8、FP8 KVキャッシュ、最大500生成トークンの比較で、
+
+- RTP-LLM: **187.53 tokens/s**
+- vLLM: 167.95 tokens/s
+- SGLang: 75.785 tokens/s
+
+論文はvLLMとの差の一部を、PythonからC++を経由する呼出しを減らし、C++側から直接演算を起動する実装差として説明している。
+
+### 量子化
+
+Qwen3-32Bで重み量子化とFP8 KVキャッシュを比較し、TTFTをvLLM/SGLang比約1.9〜3.0倍改善する条件を報告する。一方、品質確認のWikiText-2 PPLは構成により7.59〜8.09で、基準7.59〜7.67から完全に同一ではない。
+
+### マルチモーダル分離
+
+Qwen2.5-VL-7B-Instruct、GQA、TP=2で、
+
+- RTP-LLM: **6288.48 tokens/s**
+- SGLang: 3374.24 tokens/s
+- vLLM: 2492.69 tokens/s
+
+TTFTもRTP-LLM 1737.48 msに対しSGLang 4103.1 ms、vLLM 3688.3 msだった。
 
 ### 負の結果・境界条件
-- **PD throughput is not higher**: Qwen3-Coder PD評価のtokens/sはRTP-LLM 1081.72、SGLang 1152.95、vLLM 1084.58で、RTP-LLMの主な利得はthroughputではなくcache hitとTTFT。
-- **cache-reuse gain is workload-dependent**: Internal Robot Q&Aでは26.6->83.8 tokensだが、Taobao Merchant Serviceでは833->840 tokensに留まる。
-- **parallelism trade-off in production**: real 235B MoE+MTPでは4TPx4が低concurrency TPOT、1TP8DPが高concurrency latency、2TP4DPがthroughputに有利で、単一配置が全load域で最良ではない。
 
-RTP-LLMの強みは単一kernelの絶対性能より、cache localityをglobal schedulerへ組み込み、phase/model modalityごとにresourceを分離し、loadingからdecodeまでproduction lifecycle全体を最適化する点にある。各最適化の利得はworkloadごとに異なるため、headline speedupをsystem全体の一様な倍率として解釈すべきではない。
-## 品質への影響
-speculative decodingはtarget-model verificationを用い、quantizationではWikiText-2 PPLを併記する。FP8/weight-only/KV quantizationはmemory/latencyを改善するが、precision lossはconfiguration依存であり、paperもPPLを別指標として評価する。
+- PD比較ではRTP-LLMのスループットがSGLangを上回らない。
+- キャッシュ再利用の改善幅はワークロード依存。Robot Q&Aでは大きいが、もともと再利用長が長いTaobaoでは833→840トークンと小さい。
+- 235B MoE+MTPの実運用では、低並行・高並行・最大スループットで最適なTP/DP構成が異なる。単一構成が全負荷域で最良ではない。
+
+</details>
+
+## 主要結果の読み方
+
+RTP-LLMの特徴は、ある一つの演算を極端に高速化することより、**実運用で別々に発生するボトルネックを同じ制御面から扱うこと**にある。
+
+例えば、KVキャッシュ階層だけあっても、要求スケジューラがその場所を知らなければ再利用率は上がらない。入力処理・逐次生成を分けても、KV転送と負荷配分が悪ければ遅延が増える。モデル読込が速くても、推論ノードの障害復旧や再配置と接続されなければ運用効果は限定される。
+
+この論文は、そうした機能間の接続を含めた「推論基盤の全ライフサイクル」を報告している。一方、各評価で条件が異なるため、個々の倍率を足したり、一つの総合倍率として扱ったりするのは不適切である。
+
 ## 既存研究との差
-- DistServeはprefill/decode分離とSLO-goodput、phase別parallelism/placementを主問題とするのに対し、RTP-LLMはPDをproduction engineの一要素として、global traffic scheduling、prefix-cache affinity、4階層KV cache、fault recovery、model loadingまで統合する。
-- Mooncake/MemServe系のKV-centric disaggregated servingと近いが、RTP-LLMはGPU/local CPU/RDMA remote CPU/3FSのstorage hierarchyをMaster schedulingへ直接結び、同時にspeculative decoding、quantization、MoE parallelism、multimodal servingを一つのengineで提供する。
-- vLLM/SGLangのような汎用open-source serving engineと直接競合するproduction frameworkであり、単一paper algorithmではなく多数のengineering optimizationを統合したsystem reportという性格が強い。
-- HeteroPanaceaがP/D/A/F分離とstage専用hardwareの設計空間をsimulationで探索するのに対し、RTP-LLM paperは実cluster上のPD、ViT-LLM EPD、cache-aware routingをproduction trafficで検証する。hardware stage specializationの体系的searchは主題ではない。
-- model-loading側ではfile-order I/O、single-reader distributed broadcast、shared pinned-buffer reuse、I/O-communication overlapを組み合わせ、serving開始前のelastic deployment latencyもsystem objectiveへ含める点が特徴。
+
+DistServeなどは入力処理・逐次生成分離そのものと、フェーズ別資源配置を中心に研究する。RTP-LLMはそれを一機能として取り込み、キャッシュ階層、要求振り分け、モデル読込、障害対応、投機的復号、量子化、画像入力まで同じ実運用基盤へ統合する。
+
+MooncakeやMemServeのようなKVキャッシュ中心の分離型提供基盤に近い部分もあるが、RTP-LLMではGPU、ローカルCPU、遠隔CPU、3FSのキャッシュ位置を中央スケジューラの配置判断へ直接使う。
+
+vLLMやSGLangとは、研究用の単一機構ではなく、汎用の公開推論エンジンとして直接比較される位置づけである。
+
 ## 限界
-- 広範な機能を異なるmodel/workloadで個別評価しており、全機能を同一条件で逐次ablationした統一end-to-end実験ではないため、headline改善を単一機構へ帰属できない。
-- production workloadの一部はAlibaba内部serviceで、trace、request distribution、cluster運用条件を外部から完全再現できない。
-- PD評価ではTTFT/cache hitが大幅改善する一方tokens/sはSGLang/vLLMとほぼ同等で、throughput優位を一般化できない。
-- cache reuse改善はworkload依存で、Internal Robot Q&Aは+215%だがTaobao Merchant Serviceは833->840 tokensに留まる。
-- 汎用評価serverは8 GPU/node等を示すが、すべてのsubexperimentでGPU型、baseline version、tuning条件、繰り返し回数やconfidence intervalが十分詳細に示されるわけではない。
-- 3FS、Carbon等Alibaba固有infrastructureとの統合がproduction設計の一部であり、他環境で同等のhierarchical cache/fault-recovery behaviorを得るには代替実装が必要。
-- quantization qualityは主にsampled WikiText-2 PPLで評価され、reasoning/code/multimodal等のdownstream quality影響は広く検証されていない。
-- cost、energy、multi-tenant isolationの定量比較やfailure/recovery時間の詳細benchmarkは本論文の中心評価に含まれない。
+
+- 論文は多数の機構を扱うため、すべてを同じモデル・同じ要求・同じクラスタで一括比較した評価ではない。
+- 各最適化の寄与を完全に分離した要因分析ではなく、統合システムとしての比較が多い。
+- 実トラフィック評価はAlibaba内部サービスを含み、同じ要求分布を外部から完全再現するのは難しい。
+- PD評価のようにTTFTは大幅改善してもスループットは競合と同等以下の条件がある。
+- 量子化はメモリと遅延を改善するが、PPL差が残るため完全な無損失最適化ではない。
+- ハードウェア構成、クラウドストレージ、RDMA、3FSなどAlibabaの運用環境に依存する設計も含む。
+
 ## 実装状態
-Alibaba公式repository `alibaba/rtp-llm` がApache-2.0で公開されている。公式READMEはproduction利用、PD disaggregation、speculative decoding、DeepEP、FP8 KV cache、quantization等を案内する。ただし論文中の全production configurationと公開main branchのexact commit対応は明記されていないため、再現時はversion固定が必要。
-## 研究上の位置づけ
-主系統はLLM Serving / Scheduling / Disaggregation。production-proven serving engineとしてPD、hierarchical KV cache、cache-aware schedulingを核に、model loading、speculative decoding、MoE parallelism、quantization、multimodal EPDまでcross-layer統合する。個別最適化論文の寄せ集めではなく、production orchestrationと実traffic validationを持つ総合serving systemとして位置づける。
-## 監査メモ
-arXiv v1をIntroductionからConclusionまで確認し、system architecture、4-tier KV cache、loading、traffic scheduling、speculative framework、parallelism、quantization、multimodal、全evaluation subsectionとnegative resultを照合した。公式GitHubとApache-2.0公開も確認済み。PDではTTFT優位とthroughput非優位を分離して記録し、production schedulingの+215% cache reuseも対象workloadを限定した。追加auditを必須とする明確な未確認事項はない。
+
+公式実装: https://github.com/alibaba/rtp-llm
+
+Apache-2.0で公開されており、論文ではAlibaba Group内の複数サービスで実運用されていると記載する。
+
+## 一般的な実装上の含意
+
+大規模LLM提供では、カーネル単体性能だけでなく、**キャッシュ位置・要求配置・モデル起動・障害復旧を同じシステム問題として見る必要がある**。
+
+特に再利用可能な状態を持つサービスでは、単純な負荷分散より
+
+1. その要求をどこで実行すれば既存状態を再利用できるか
+2. 再利用の計算節約と待ち行列増加のどちらが大きいか
+3. 高速メモリから低速大容量層まで状態をどう退避するか
+4. ノード追加・復旧時に巨大モデルをどれだけ早く載せられるか
+
+をまとめて考える方が、実運用の総コストに効きやすい。
+
 ## 一次資料
-- https://arxiv.org/abs/2605.29639
-- https://arxiv.org/pdf/2605.29639
-- https://github.com/alibaba/rtp-llm
+
+- arXiv: https://arxiv.org/abs/2605.29639
+- PDF: https://arxiv.org/pdf/2605.29639
+- code: https://github.com/alibaba/rtp-llm
+
+## 更新履歴
+
+- 2026-09-09: 論文未読者向けに全面改稿。統合システムとしての位置づけ、中央スケジューリング、4階層KV、PD分離、モデル読込、投機的復号、量子化、マルチモーダル分離を処理順と因果関係で説明。
