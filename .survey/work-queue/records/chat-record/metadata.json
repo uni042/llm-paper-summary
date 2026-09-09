@@ -2,36 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
-  "job_id": "job-research-ad144841ea01b7c6",
+  "attempt_id": "attempt-orbitflow-20260910-0634-v10-a1",
+  "job_id": "job-research-07d36385670389ef",
   "data": {
-    "canonical_id": "arXiv:2606.06302",
-    "arxiv_id": "2606.06302",
-    "title": "Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving",
-    "summary": "非一様KVキャッシュ圧縮のhead別保持量を少数サンプルで事前較正し、固定予算・head-group単位のragged paging・事前負荷分散へ落とし込むvLLMベースのserving system。動的な非一様圧縮の精度をほぼ保ちながらfragmentation、page reclaim、decode workload imbalanceを解消し、実機で最大2.6倍のthroughputを報告する。",
-    "source": "https://arxiv.org/abs/2606.06302",
+    "canonical_id": "arXiv:2601.10729",
+    "arxiv_id": "2601.10729",
+    "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+    "summary": "長文LLM推論で要求ごとに異なるKVキャッシュ量と生成進行に合わせ、各要求・各層のKVをGPUかCPUへ置くかを整数線形計画で動的に決め、実行時の計算時間・転送帯域の変化を監視して再配置することで、静的なKVオフロードに伴う転送待ちとSLO違反を減らすservingシステム。",
+    "source": "https://arxiv.org/abs/2601.10729",
     "authors": [
-      "Hyungmin Kim",
-      "Minsoo Kim",
-      "Hongseok Kim",
-      "Jungwook Choi"
+      "Xinyue Ma",
+      "Heelim Hong",
+      "Taegeon Um",
+      "Jongseop Lee",
+      "Seoyeong Choy",
+      "Woo-Yeon Lee",
+      "Myeongjae Jeon"
     ],
-    "publication": "arXiv v2, 2026-06-15 (v1: 2026-06-04)",
-    "publication_type": "preprint",
+    "publication": "PVLDB 19(5):1046-1059, 2026; DOI 10.14778/3796195.3796214",
+    "publication_type": "PVLDB paper",
     "topics": [
-      "KV cache compression",
-      "LLM serving",
-      "non-uniform KV cache",
-      "PagedAttention",
-      "multi-turn serving",
-      "memory management",
-      "load balancing"
+      "KV cache offloading",
+      "long-context serving",
+      "SLO-aware scheduling",
+      "adaptive placement",
+      "GPU/CPU heterogeneous memory",
+      "vLLM"
     ],
-    "implementation": "Official code is public at https://github.com/aiha-lab/TANGRAM; vLLM-based and Apache-2.0.",
+    "implementation": "公式コード公開: https://github.com/omnia-postech/OrbitFlow。vLLM v0.6.6を基盤に実装。",
     "sources": [
-      "https://arxiv.org/html/2606.06302v2",
-      "https://arxiv.org/abs/2606.06302",
-      "https://github.com/aiha-lab/TANGRAM"
+      "https://arxiv.org/abs/2601.10729",
+      "https://doi.org/10.14778/3796195.3796214",
+      "https://github.com/omnia-postech/OrbitFlow"
     ]
   }
 }
