@@ -83,40 +83,61 @@ Chatは成果submissionを保存した後、Actions反映済みの最新HEADと 
 
 重要度だけを理由に自動監査しない。固定割合の抜取監査もしない。
 
-## Artifact transport
+## Artifact transport（通常経路）
 
-完成research/auditは原則として:
+予定されたChat workerは**新規ファイルを作成しない**。事前作成済みの固定受け渡し箱:
 
-1. `.survey/work-queue/payloads/<unique>.md`
-2. `.survey/work-queue/submissions/<unique>.json`
+`.survey/work-queue/submissions/chat-inbox.json`
 
-の2ファイルに分ける。
+を毎回上書きする。
+
+手順:
+
+1. 最新HEADから `chat-inbox.json` を取得し、現在のblob SHAを得る。
+2. research/audit/discoveryのsubmission JSON全体を組み立てる。
+3. research/auditの完成Markdownは `payload_path` を使わず、submissionの `content` フィールドへ直接入れる。
+4. GitHub Contents APIのupdateで、取得したSHAを指定して `chat-inbox.json` を上書きする。
+5. このpushでActionsが起動する。Actionsはhead commitで `chat-inbox.json` が変更されたことを確認した場合だけ、古い `.survey/work-queue/results/chat-inbox.json` を削除してからworkerを実行する。
+6. schedule起動や他submissionのpushでは古いinbox resultを削除しないため、同じinboxを再処理しない。
+
+この経路では、Chat側の保存操作は**既存1ファイルのupdate 1回**で完了する。ファイル新規作成の安全検査、payload作成成功後にsubmission作成だけ失敗する部分成功、同名新規ファイル衝突を通常経路から除外できる。
 
 submission例:
 
 ```json
 {
+  "submission_id": "chat-<job-id>-<unique>",
   "job_id": "job-...",
   "status": "completed",
   "paper_path": "papers/...md",
   "expected_blob_sha": "existing paper update時のみ必須",
-  "payload_path": ".survey/work-queue/payloads/<unique>.md",
+  "content": "<complete Markdown>",
   "audit_required": false,
   "audit_reason": null,
   "audit_flags": []
 }
 ```
 
-既存paper更新では最新blob SHAを必須とする。
+`submission_id` はChat側の追跡用であり、workerが未知フィールドを無視してもよい。既存paper更新では最新blob SHAを必須とする。
+
+### 互換経路
+
+従来の:
+
+1. `.survey/work-queue/payloads/<unique>.md`
+2. `.survey/work-queue/submissions/<unique>.json`
+
+という2ファイル新規作成方式は、手動作業・復旧互換用として残す。予定Chat workerでは使わない。
 
 ## Idempotency
 
-- submission/result filenameは一意で再利用しない。
-- 同名resultがあれば再処理しない。
+- 固定inbox以外のsubmission/result filenameは一意で再利用しない。
+- 固定inboxは更新pushのときだけ対応resultをリセットして再処理する。
+- schedule起動では処理済み固定inboxを再処理しない。
 - terminal jobを再完了しない。
 - discovery補充はready jobが0件のときだけ行い、同時に複数作らない。
 - paper更新はblob SHAで競合検査する。
-- Chatはsubmission保存後に同じ成果を再送しない。
+- Chatはsubmission保存成功後、Actions反映を確認する前に同一jobを別経路で再送しない。
 - Actionsは単一concurrency groupで動く。
 
 ## Derived data
