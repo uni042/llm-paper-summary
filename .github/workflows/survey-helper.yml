@@ -9,6 +9,8 @@ on:
   issue_comment:
     types: [created]
   workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
 
 permissions:
   contents: write
@@ -23,6 +25,7 @@ jobs:
     if: >
       github.event_name == 'push' ||
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
       (github.event_name == 'issues' &&
        github.actor == github.repository_owner &&
        (
@@ -142,6 +145,9 @@ jobs:
           print(path)
           PY
 
+      - name: Run queue state worker
+        run: python .survey/scripts/queue_worker.py --root .survey
+
       - name: Commit worker results
         run: |
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
@@ -150,7 +156,7 @@ jobs:
           fi
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add .survey/requests .survey/results .survey/submissions .survey/survey-state papers
+          git add .survey/requests .survey/results .survey/submissions .survey/survey-state .survey/work-queue papers
           git add .survey/submission-results 2>/dev/null || true
           git commit -m 'survey-helper: process requests'
           git pull --rebase origin main
