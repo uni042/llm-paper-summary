@@ -29,7 +29,11 @@ LANE_TARGETS = {
 }
 MAX_READY_RESEARCH = 12
 MAX_READY_AUDIT = 6
-DISCOVERY_REFRESH_HOURS = 6
+DISCOVERY_REFRESH_HOURS = {
+    "discovery_fresh": 2,
+    "discovery_citation": 6,
+    "discovery_gap": 24,
+}
 
 
 def now() -> str:
@@ -141,7 +145,7 @@ def ensure_discovery_jobs(st):
         if last:
             try:
                 last_dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
-                due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS * 3600
+                due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS[lane] * 3600
             except Exception:
                 due = True
         if current or not due:
@@ -180,11 +184,26 @@ def candidate_key(c: dict) -> str:
 
 def existing_candidate_keys():
     keys = set()
+    # Queue history.
     for j in iter_jobs():
         for k in ("canonical_id", "source_url", "title"):
             v = j.get(k)
             if v:
                 keys.add(str(v).strip().lower())
+    # Compact identity snapshot from the existing repository, when available.
+    identity = read_json(ROOT / "survey-state" / "paper-identity-index.json", {})
+    if isinstance(identity, dict):
+        records = identity.get("papers") or identity.get("records") or identity.get("items") or []
+        if isinstance(records, dict):
+            records = list(records.values())
+        if isinstance(records, list):
+            for rec in records:
+                if not isinstance(rec, dict):
+                    continue
+                for k in ("canonical_id", "arxiv_id", "doi", "openreview_id", "source_url", "title"):
+                    v = rec.get(k)
+                    if v:
+                        keys.add(str(v).strip().lower())
     return keys
 
 
@@ -210,10 +229,15 @@ def make_research_job(c: dict, parent: str):
 
 
 def make_audit_job(sub: dict, research_job: dict):
-    # Audits are conditional, not one-for-one. Trigger when uncertainty/important
-    # publication-state checks are explicitly requested by the research result.
-    need = sub.get("audit_required")
-    if not need:
+    # Formal audits are targeted rather than one-for-one: important papers,
+    # explicit uncertainty, or a deterministic quality-control sample.
+    priority = int(research_job.get("priority") or 50)
+    explicit = bool(sub.get("audit_required"))
+    uncertainty = bool(sub.get("audit_flags") or sub.get("audit_reason"))
+    sample_key = str(research_job.get("canonical_id") or research_job.get("job_id"))
+    sampled = int(hashlib.sha256(sample_key.encode()).hexdigest()[:8], 16) % 5 == 0
+    need = explicit or uncertainty or priority >= 75 or sampled
+    if not need or len(active_jobs("audit")) >= MAX_READY_AUDIT:
         return False
     key = str(research_job.get("canonical_id") or research_job.get("job_id"))
     jid = stable_id("job-audit", key)
@@ -225,7 +249,7 @@ def make_audit_job(sub: dict, research_job: dict):
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
         "paper_path": research_job.get("paper_path"),
-        "reason": sub.get("audit_reason") or "research result requested formal audit",
+        "reason": sub.get("audit_reason") or ("high-priority paper" if priority >= 75 else "deterministic quality-control sample"),
         "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quoted quantitative results, simulation vs real hardware, classification, differences and limitations. Update the full Markdown page.",
     })
 
