@@ -405,6 +405,14 @@ def main():
     JOBS, SUBMISSIONS, RESULTS = QUEUE / "jobs", QUEUE / "submissions", QUEUE / "results"
     STATE, ARCHIVE = QUEUE / "state.json", QUEUE / "archive"
     st = load_state()
+    st.setdefault("policy", {}).update({
+        "fixed_daily_quota": False,
+        "quality_over_quantity": True,
+        "max_ready_research": MAX_READY_RESEARCH,
+        "max_ready_audit": MAX_READY_AUDIT,
+        "discovery_refresh_hours": DISCOVERY_REFRESH_HOURS,
+        "worker_poll_minutes": 10,
+    })
     process_submissions(st)
     ensure_discovery_jobs(st)
     save_state(st)
