@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（13本）
+## 自動生成の論文一覧（14本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -33,4 +33,5 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 | [GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving](2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md) | 推論中に注意参照範囲の広がりをオンライン推定し、固定KV容量の中で圧縮を続けるか、PagedAttentionの物理pageを1枚追加するかをrequestごとに動的決定するKV cache budget制御。 |
 | [Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning](2026-2609.03430-random-attention-kv-cache-eviction.md) | promptを固定保護したうえで生成済みreasoning tokenのKVをattention headごとにランダム保持し、重要度score計算なしで高い品質とserving throughputを両立する。 |
 | [SGD-KV: Summarization Guided KV Cache Compression](2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md) | 長文の意味をまとめて扱うのに寄与するattention headを診断taskで特定し、そのheadへKV cache budgetを重点配分するhead-aware圧縮。25%のKV budget（75%削減）でも長文taskの精度低下を抑える。 |
+| [Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving](2026-2606.06302-tangram-non-uniform-kv-cache.md) | 非一様KVキャッシュ圧縮のhead別保持量を少数サンプルで事前較正し、固定予算・head-group単位のragged paging・事前負荷分散へ落とし込むvLLMベースのserving system。動的な非一様圧縮の精度をほぼ保ちながらfragmentation、page reclaim、decode workload imbalanceを解消し、実機で最大2.6倍のthroughputを報告する。 |
 <!-- survey:auto:end -->

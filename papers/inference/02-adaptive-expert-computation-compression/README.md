@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（10本）
+## 自動生成の論文一覧（12本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -19,4 +19,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 | [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md) | router確率を高い順に足し、合計が設定値に達するまでexpertを選ぶことで、routerが確信しているtokenでは少数、判断が分散しているtokenでは多数のexpertを使う。 |
 | [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md) | 削除してもlayer出力があまり変わらないexpertをモデルから恒久的に除き、さらにtokenごとにrouter寄与が小さい第2expertを省いて、memoryとFFN計算を減らす学習不要の手法。 |
 | [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md) | routerの利用履歴から『似た入力を担当しているexpert』を見つけ、ニューロンの並びを揃えてから代表expertへ統合し、統合後weightをlow-rank成分と構造的に疎な残差へ分解することでMoEのmemory footprintを大幅に減らす。 |
+| [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md) | 固定top-kルーティングで選ばれたexpertのうち実際の寄与が小さいslotをtokenごとに省く、学習不要・checkpoint保持型のMoE推論手法。Global Spectral Proxy (GSP)がSwiGLU expertのgate/up/down投影とRMSNorm scalingから全体的な変換能力を推定し、Router-Conditioned Refinement (RCR)がcentered router weightからrouting-preferred方向を作って方向依存のexpert応答を補正する。実行時はrouter gateと2つのoffline tableを組み合わせ、両方で低寄与と判断されたslotだけをskipしtop-1 expertは必ず残す。 |
+| [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md) | 実行expert数k1とrouter正規化分母のreference set k2を分離し、fine-grained MoEでexpert computeを減らしつつ訓練時のexpert-branch gainを保つ。Qwen3.6-35B-A3Bの8→4 expertでMMLU低下を4.65ptから0.35ptへ縮小する。 |
 <!-- survey:auto:end -->

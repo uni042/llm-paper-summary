@@ -1,18 +1,18 @@
 # 論文カタログ
 
-収録論文: **199本**。
+収録論文: **202本**。
 
 論文は最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。
 
-## Inference / 推論 — 180本
+## Inference / 推論 — 183本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 19本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
-- [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 10本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
+- [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 12本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
 - [Expert Prefetch](inference/03-expert-prefetch/) — 14本 — 将来使うexpertをrouting確定前に予測し、GPU cacheの保持や先読みを制御してweight転送待ち・転送量を減らす。
 - [Conditional Computation](inference/04-conditional-computation/) — 8本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
 - [Speculative Decoding / MoE](inference/05-speculative-decoding-moe/) — 14本 — draft候補を並列生成・検証して1回のtarget実行で複数tokenを確定し、MoEではexpert読込・検証costも抑える。
 - [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 13本 — expert weightを低bit化・pruning・mixed precision等で小さくし、VRAM・bandwidth・計算量を削減する。
-- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 13本 — KV cacheを圧縮・選別・動的配分・GPU内prefetchして、容量とmemory bandwidthの負荷を減らす。
+- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 14本 — KV cacheを圧縮・選別・動的配分・GPU内prefetchして、容量とmemory bandwidthの負荷を減らす。
 - [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 9本 — smartphoneや個人PCなど、memory・bandwidth・電力制約の厳しい端末でLLMを実行するsystem研究。
 - [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 27本 — KVをCPU・peer GPU・SSD等へ置き、必要な転送・attention実行場所・再計算を最適化する。
 - [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 47本 — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
@@ -27,5 +27,5 @@
 → [Training一覧](training/)
 
 <!-- survey:auto:start -->
-推論論文：**180本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
+推論論文：**183本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->
