@@ -2,31 +2,36 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
-  "job_id": "job-research-bf598cfa965b8925",
+  "attempt_id": "attempt-glance-20260910-0058-v10-a1",
+  "job_id": "job-research-e581510120d7ae4c",
   "data": {
-    "canonical_id": "arXiv:2609.04575",
-    "arxiv_id": "2609.04575",
-    "title": "Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models",
-    "summary": "実行expert数k1とrouter正規化分母のreference set k2を分離し、fine-grained MoEでexpert computeを減らしつつ訓練時のexpert-branch gainを保つ。Qwen3.6-35B-A3Bの8→4 expertでMMLU低下を4.65ptから0.35ptへ縮小する。",
-    "source": "https://arxiv.org/abs/2609.04575",
+    "canonical_id": "arXiv:2609.00355",
+    "arxiv_id": "2609.00355",
+    "title": "Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models",
+    "summary": "GLANCEはfrozen VLM targetの融合済みvision-language stateからfuture token blockを1 passでdraftし、wide treeを1 target passで検証するlossless speculative decoder。grounded taskでautoregressive比最大2.93x。free-running textではchain drafterが優位となる境界も示す。",
+    "source": "https://arxiv.org/abs/2609.00355",
     "authors": [
-      "Xing Chen",
-      "Hengshuai Yao"
+      "Jungseob Lee",
+      "Seongtae Hong",
+      "Dongyub Jude Lee",
+      "Chanjun Park",
+      "Jaehyung Seo",
+      "Sugyeong Eo",
+      "Heuiseok Lim"
     ],
-    "publication": "arXiv:2609.04575v1, 2026-09-04",
+    "publication": "arXiv:2609.00355v1, 2026-08-31",
     "publication_type": "arXiv preprint",
     "topics": [
-      "Mixture-of-Experts",
-      "router renormalization",
-      "expert activation reduction",
-      "training-free inference"
+      "speculative decoding",
+      "vision-language model",
+      "block diffusion",
+      "tree verification",
+      "lossless decoding"
     ],
-    "implementation": "PyTorch/Hugging Face Transformersのrouter forward差し替え。weights変更なし。Transformers 5.3–5.14でrouter computation一致を確認。公式code linkはarXiv v1本文で未確認。",
+    "implementation": "Official code: https://github.com/js-lee-AI/GLANCE. SGLang 0.5.6 production comparison.",
     "sources": [
-      "https://arxiv.org/abs/2609.04575",
-      "https://arxiv.org/html/2609.04575v1",
-      "https://arxiv.org/pdf/2609.04575"
+      "https://arxiv.org/abs/2609.00355",
+      "https://github.com/js-lee-AI/GLANCE"
     ]
   }
 }
