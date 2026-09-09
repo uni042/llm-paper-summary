@@ -195,7 +195,7 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
 8. Actionsの `.survey/scripts/assemble_research_record.py` が全slotを検証し、`.survey/scripts/render_paper.py` でrunner内だけにMarkdownを生成する。
 9. 既存 `queue_worker.py` へ一時 `payload_path` として渡す。
 10. transient Markdown/inbox変換はcommit前にrestoreする。
-11. resultが同じjob/attemptで `ok: true`、かつ最新queueでjob terminalになるまでslotを次jobで上書きしない。
+11. inbox push時に旧resultがresetされた後、新しく生成されたresultが同一 `job_id` で `ok: true`、かつ最新queueでjob terminalになるまでslotを次jobで上書きしない。
 
 Inbox例:
 
