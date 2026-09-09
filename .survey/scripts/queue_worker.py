@@ -300,7 +300,7 @@ def make_audit_job(sub: dict, research_job: dict):
         "canonical_id": research_job.get("canonical_id"),
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
-        "paper_path": research_job.get("paper_path"),
+        "paper_path": sub.get("paper_path") or research_job.get("paper_path"),
         "reason": sub.get("audit_reason") or ("high-priority paper" if priority >= 75 else "deterministic quality-control sample"),
         "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quoted quantitative results, simulation vs real hardware, classification, differences and limitations. Update the full Markdown page.",
     })
