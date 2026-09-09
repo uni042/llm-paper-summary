@@ -2,30 +2,101 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
-  "job_id": "job-research-bebbfc5f119d619b",
+  "attempt_id": "attempt-estream-20260909-2031-v10-a1",
+  "job_id": "job-research-c57bf9d456b4f061",
   "data": {
-    "overview": "最も強い干渉ではCPU co-locationがserving性能を数倍悪化させる一方、GPU kernelそのものの遅延よりCPU-side serving stageのtail amplificationが強い診断信号だった。EngineCore-targeted rtはscheduler/batch/execution tail型で大きくCPTIを抑え、NUMA isolationはcache/memory/topology-sensitiveなTTFT型で有効だった。CoTailは両者をworkloadとstage diagnosisに応じて選択し、held-out条件でも固定ルールでSLO達成率とdeployment costを改善した。",
+    "overview": "EStreamは短いpromptではNPU dispatch/pipeline fillを償却できずCPU runtimeが速い場合があるが、promptが長くなるほどUFS loadをNPU計算で隠せるため優位が拡大する。主要18設定では非offload baselineより大幅に高速かつ省memoryで、PowerInferにも全設定で勝ち、最大46.7B MoEを商用スマートフォン上でfull-NPU prefillできた。",
     "key_results": [
-      {"metric": "Unprotected nginx throughput degradation", "value": "-78.8%", "baseline": "no-interference LLM-alone", "condition": "primary vLLM / DeepSeek-R1-Distill-Qwen-7B setup", "interpretation": "host CPU co-locationだけでserving throughputが大幅に低下する代表例。"},
-      {"metric": "Unprotected nginx TTFT increase", "value": "+429.5%", "baseline": "no-interference LLM-alone", "condition": "primary setup", "interpretation": "request admission/batching等を含むlatencyへの影響が大きい。"},
-      {"metric": "Unprotected nginx TPOT increase", "value": "+362.4%", "baseline": "no-interference LLM-alone", "condition": "primary setup", "interpretation": "decode pathもCPU-side interferenceで深刻に悪化する。"},
-      {"metric": "nginx throughput recovery", "value": "up to 4.4×", "baseline": "unprotected nginx co-location", "condition": "CoTail-guided protection", "interpretation": "適切なOS protectionで大部分のthroughput lossを回復できる。"},
-      {"metric": "nginx TPOT recovery", "value": "up to 4.5× reduction", "baseline": "unprotected nginx co-location", "condition": "CoTail-guided protection", "interpretation": "tail型干渉へのtargeted protectionがdecode latencyを大きく改善する。"},
-      {"metric": "Common-baseline held-out SLO success", "value": "12/12 oracle-feasible cases", "baseline": "Always-rt 10/12; Macro-only 11/12", "condition": "held-out model/framework/workload set; frozen CoTail rules", "interpretation": "primary conditionで決めたruleを凍結しても、評価可能caseすべてでdeployment SLOを満たした。"},
-      {"metric": "RT exposure", "value": "22/28 cases", "baseline": "Always-rt 28/28", "condition": "cost-aware selector evaluation", "interpretation": "常時real-time schedulingよりRT利用を減らしながらSLOを維持する。"},
-      {"metric": "Mean co-tenant slowdown", "value": "51.21%", "baseline": "Always-rt 56.65%", "condition": "cost-aware selector evaluation", "interpretation": "LLM保護だけでなくco-tenant utilityの損失も抑える。"},
-      {"metric": "EngineCore RT-covered CPU time", "value": "310.22 s", "baseline": "Always-rt 403.46 s", "condition": "evaluated deployment cases", "interpretation": "real-time schedulingを必要なcaseへ限定できる。"},
-      {"metric": "Held-out image-preprocess CPTI suppression", "value": "CPTI 15.62 → 0.24; CTS 98.5%", "baseline": "unprotected → rt", "condition": "held-out workload", "interpretation": "batch.construct-dominant tailをEngineCore-targeted rtがほぼ除去した。"},
-      {"metric": "Held-out zstd-compress protection", "value": "CPTI 5.56 → 1.07; CTS 80.7%", "baseline": "unprotected → rt+numa", "condition": "mixed-risk held-out workload", "interpretation": "scheduler/service-tailとtopology signalを併せ持つcaseではcombined policyが選択された。"}
+      {
+        "metric": "Pure-prefill TTFT speedup",
+        "value": "2.25–27.57×",
+        "baseline": "fastest completed non-offloading baseline at each point",
+        "condition": "OLMoE/LFM2.5/DeepSeek-V2-Lite, 256–4096 tokens, 18 settings",
+        "interpretation": "input長の増加に伴いNPU計算でexpert I/Oを隠せるため優位が大きくなる。"
+      },
+      {
+        "metric": "Peak physical memory reduction",
+        "value": "6.45–12.29×",
+        "baseline": "fastest completed non-offloading baseline",
+        "condition": "same 18 settings",
+        "interpretation": "expert residencyを固定arenaへ制限する効果。"
+      },
+      {
+        "metric": "Against PowerInfer",
+        "value": "2.96–50.78× faster; 1.16–1.69× less memory",
+        "baseline": "PowerInfer",
+        "condition": "same 18 settings",
+        "interpretation": "CPU/GPU-oriented parameter streamingよりfull-NPU streamingが優位。"
+      },
+      {
+        "metric": "4K TTFT",
+        "value": "2.12 / 2.14 / 9.53 s",
+        "baseline": "58.45 / 51.15 / 120.02 s fastest non-offloading competitors",
+        "condition": "OLMoE / LFM2.5 / DeepSeek-V2-Lite at 4096 tokens",
+        "interpretation": "long prefillで大きな速度差。"
+      },
+      {
+        "metric": "Large-model scaling",
+        "value": "Qwen3 211.7–599.1 tok/s at 1.46–1.87 GiB; Mixtral 144.5–301.5 tok/s at 2.77–4.11 GiB",
+        "baseline": "EStream standalone",
+        "condition": "Qwen3-30B-A3B and Mixtral-8x7B, 1K–4K",
+        "interpretation": "30.5B/46.7B total parametersをスマートフォンmemory内で処理。"
+      },
+      {
+        "metric": "Energy efficiency",
+        "value": "1.19–8.41×; geometric mean 4.08×",
+        "baseline": "strongest completed baseline",
+        "condition": "21 model-length settings, 128–2048 tokens",
+        "interpretation": "全完了設定で最高のtokens/J。"
+      },
+      {
+        "metric": "Application workload crossover",
+        "value": "within 8% at ToxicChat; 1.03–1.21× faster at HellaSwag; 3.79–5.75× faster on ARC-C/NFCorpus/SciFact",
+        "baseline": "latency-leading baseline",
+        "condition": "mean prompt lengths 66, 80, 368–405 tokens",
+        "interpretation": "非常に短いrequestではCPUが有利だが、およそ66–80 tokens付近でcrossover。"
+      },
+      {
+        "metric": "Pipeline bubble rate",
+        "value": "34.41% → 21.36% → 9.05%",
+        "baseline": "on-demand → post-routing prefetch → pre-routing prefetch",
+        "condition": "1024-token OLMoE",
+        "interpretation": "non-FFN中からのprefetchでUFS待ちを大きく隠す。"
+      },
+      {
+        "metric": "Auto-configurator quality",
+        "value": "9/12 exact minima; zero median regret; 3.45% worst-case regret",
+        "baseline": "exhaustive Q/B/G sweep",
+        "condition": "12 model-budget pairs",
+        "interpretation": "短いhardware profileでPareto近傍を再現。"
+      },
+      {
+        "metric": "Resident-NPU tradeoff at 4K",
+        "value": "3.73–5.41× less memory with 4.3–23.0% higher latency",
+        "baseline": "same-backend I/O-free resident NPU",
+        "condition": "4K inputs",
+        "interpretation": "bounded residencyのI/O overheadがlong promptでかなり隠れる。"
+      }
     ],
     "negative_results": [
-      {"name": "nice / cgroup", "description": "多くのworkloadでunprotectedに近いまま、soft priorityやproportional CPU weightだけではcore-path tailを十分抑えられなかった。held-outではcgroupによりCPTIが悪化するcaseもある。"},
-      {"name": "rt is not universal", "description": "rtはTPOT/throughput recoveryに強いがTTFTで常に最良ではない。ffmpegではNUMA isolationがTTFT increaseを103.6%から9.4%へ抑え、rtの58.4%より良かった。"},
-      {"name": "CTS does not capture every NUMA benefit", "description": "NUMAはlocality/topology経路でmacro metricを改善できるため、CTSが小さい・負でもTTFT等が改善するcaseがある。CoTailはCTS単独ではなくworkload hardware signalとmacro SLO validationを併用する。"},
-      {"name": "Causality scope", "description": "service-stage tailとmacro degradationの相関・介入整合性は強いが、著者らはすべてのinterference channelを形式的に因果証明したとは主張しない。"}
+      {
+        "name": "Very short prompts",
+        "description": "MASSIVE 16 tokensとWinoGrande 23 tokensではoptimized CPU runtimeが速く、NPU dispatchとpipeline fillを償却できない。"
+      },
+      {
+        "name": "Numerical alignment",
+        "description": "Qwen3はHost referenceに対しC4 PPLが相対5.51%悪化し、task score差も最大3.0 point。exact arithmetic orderは保持されない。"
+      },
+      {
+        "name": "Full residency remains faster",
+        "description": "I/O-free NPU-residentは1.04–5.63×高速だが、3.73–6.36×多いmemoryを使う。"
+      },
+      {
+        "name": "More banks are not always better",
+        "description": "producerがNPUを十分供給できると追加bankはlatencyを改善せずmemoryだけ増やす。"
+      }
     ],
-    "interpretation": "本研究の中心は新しいLLM kernelではなく、host-side interferenceをservice-stage tailへ分解し、既存OS mechanismを症状に応じて選択するdiagnosis/control loopにある。特に『常にrt』ではclean protection overheadとco-tenant costが発生するため、CPTI/CTSとworkload signalを用いて必要なcaseだけ強い保護へ上げる点が実運用上重要。",
-    "quality_impact": "model weight、attention、sampling、KV cache内容などmodel計算自体は変更しないため、推論品質の近似trade-offを導入する方式ではない。評価対象はserving throughput/TTFT/TPOTとco-tenant utilityであり、生成品質benchmarkは主題ではない。"
+    "interpretation": "中心的な利点は、MoEのrequest-level densificationを『全expert同時常駐』へ結びつけず、動的routeとparameter addressを共有NPU graphへ結びつけたことである。storage streamingをNPU executionと共同設計した結果、memory capacityとeffective model capacityを切り離している。",
+    "quality_impact": "approximation-based sparsityやrouting変更は行わないが、finite-precision operation order変更による数値差は存在する。3モデルでは概ね小さいがQwen3で相対PPL 5.51%差があり、完全なbitwise同等性はない。"
   }
 }
