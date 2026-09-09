@@ -150,7 +150,8 @@ jobs:
           fi
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add .survey/requests .survey/results .survey/submissions .survey/submission-results .survey/survey-state papers
+          git add .survey/requests .survey/results .survey/submissions .survey/survey-state papers
+          git add .survey/submission-results 2>/dev/null || true
           git commit -m 'survey-helper: process requests'
           git pull --rebase origin main
           git push origin HEAD:main
