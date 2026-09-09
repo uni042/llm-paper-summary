@@ -1,0 +1,17 @@
+{
+  "job_id": "job-research-3e742fcb3cf3edec",
+  "type": "research",
+  "parent_job_id": "job-14452434d2e24d1f",
+  "priority": 80,
+  "canonical_id": "arxiv:2608.16477",
+  "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+  "source_url": "https://arxiv.org/abs/2608.16477",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/pallas.md",
+  "selection_reason": "Proactive KV migration for serving handover; combines recomputation and suffix KV streaming in vLLM.",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T07:37:11+00:00"
+}

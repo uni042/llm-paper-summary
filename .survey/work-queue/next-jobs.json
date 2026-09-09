@@ -1,30 +1,66 @@
 {
   "counts": {
     "discovery": {
-      "completed": 5,
-      "ready": 1
+      "completed": 6
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "completed": 6,
+      "ready": 4,
       "blocked": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-14452434d2e24d1f",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-30bf922dbb908cc7",
+      "type": "research",
+      "lane": null,
+      "priority": 85,
+      "canonical_id": "arxiv:2608.16157",
+      "title": "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution",
+      "source_url": "https://arxiv.org/abs/2608.16157",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/freetoken.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-3e742fcb3cf3edec",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arxiv:2608.16477",
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "source_url": "https://arxiv.org/abs/2608.16477",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/pallas.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-f9bad9763c840b43",
+      "type": "research",
+      "lane": null,
+      "priority": 73,
+      "canonical_id": "arxiv:2607.28150",
+      "title": "SmartGen: Selective KV Transfer for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/smartgen.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-5554b2da78256a75",
+      "type": "research",
+      "lane": null,
+      "priority": 70,
+      "canonical_id": "arxiv:2604.25080",
+      "title": "CacheFlow: Efficient KV Cache Restoration for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/cacheflow.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+      "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T07:34:47+00:00"
+  "generated_at": "2026-09-09T07:37:12+00:00"
 }
