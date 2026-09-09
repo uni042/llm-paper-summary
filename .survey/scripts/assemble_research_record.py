@@ -12,6 +12,12 @@ from typing import Any
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+from japanese_style import (  # noqa: E402
+    DEFAULT_MIN_JAPANESE_RATIO,
+    find_bare_english,
+    japanese_ratio,
+    record_prose_text,
+)
 from render_paper import render_paper  # noqa: E402
 
 TRANSPORT_VERSION = 10
@@ -167,6 +173,23 @@ def validate_record(record: dict[str, Any]) -> None:
     for key in ("limitations", "differences", "implementation_status", "research_positioning"):
         if not nonempty(pos.get(key)):
             raise ValueError(f"positioning.{key} is required")
+
+    prose = record_prose_text(record)
+    ratio, jp_chars, latin_chars = japanese_ratio(prose)
+    if ratio < DEFAULT_MIN_JAPANESE_RATIO:
+        raise ValueError(
+            f"Japanese-first prose ratio is too low: {ratio:.1%} "
+            f"< {DEFAULT_MIN_JAPANESE_RATIO:.0%} (Japanese={jp_chars}, Latin={latin_chars})"
+        )
+    bare = find_bare_english(prose)
+    if bare:
+        preview = ", ".join(
+            f"{hit.term}->{hit.preferred} x{hit.count}" for hit in bare[:12]
+        )
+        raise ValueError(
+            "Japanese-first terminology violation; replace ordinary English prose "
+            f"with Japanese/katakana or put the formal English name only in the first parentheses: {preview}"
+        )
 
 
 def assemble(repo_root: Path) -> bool:
