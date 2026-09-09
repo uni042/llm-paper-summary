@@ -14,6 +14,20 @@
 - 論文本文の品質正本は [paper template](../../templates/paper.md) とする。**論文を読んでいない読者でも背景、手法、処理の流れ、なぜ効くか、効かない条件まで追える文章**を生成する。
 - 説明密度のお手本は [MoE-Infinity のまとめ](../../../papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) とする。論文固有の略語や狭い分野の語を、それ自体を知っている前提で使わない。
 
+## 論文ファイルの命名規則
+
+**既存の旧形式を正本とし、新規論文も同じ形式へ統一する。題名スラッグだけのファイル名は作らない。**
+
+- arXiv論文: `YYYY-YYMM.NNNNN-<slug>.md`
+  - 例: `2026-2608.13127-hbf-llm-serving.md`
+  - `YYMM.NNNNN` は frontmatter の `arxiv_id` をそのまま使う。
+  - 先頭の `YYYY` はリポジトリで採用する発表年。既存ファイルの年表記は不用意に変更しない。
+- arXiv IDを持たない論文: 既存の旧形式に合わせ、少なくとも `YYYY-<stable-key>-<slug>.md` または既存互換の `YYYY-<slug>.md` とする。DOI、会議ID、プロジェクト名など一次資料から安定して決められる識別子がある場合は `stable-key` に用いる。
+- `<slug>` は小文字英数字とハイフンを基本とし、論文・システムを人間が識別できる短い名前にする。既存の長い題名スラッグを短くするためだけの改名は行わない。
+- **禁止:** `heteropanacea.md`、`estream.md`、`cacheflow.md` のような年・識別子を欠く新規ファイル名。
+- `paper_path` は候補探索時の仮名ではなく、一次資料から `canonical_id`、`arxiv_id`、発表年を確認した後に確定する。
+- auditで本文を更新するときは原則として同じpathを維持する。識別子誤りや本規則から外れた既存ファイルを直す場合だけ改名し、カテゴリREADME・比較表・identity indexなどの派生viewも同時に再生成する。
+
 ## v10で変わった点
 
 v9では完成Markdownを複数chunkへ分割してGitHubへ送っていた。v10では**完成MarkdownをChatからGitHubへ送らない**。research/auditの内容を5つの小さいJSON record slotへ分割し、GitHub Actions内の `.survey/scripts/render_paper.py` が最終Markdownを生成する。
@@ -61,7 +75,7 @@ Scheduled Chat worker
 2. GitHub writeが利用可能なら、まずNotion退避キューの `pending` を確認し、現在queueと整合する未反映成果があれば新規jobより先に再投入する。
 3. ready research/auditがあればpriority順に処理する。research着手前とdiscovery候補提出前にidentity正本で重複確認する。
 4. readyがdiscoveryなら探索を実行し、候補を固定inboxへ保存する。**discovery送信だけでrunを終了しない。** Actions反映後の最新queueを読み直し、生成されたresearch jobへ直ちに進む。
-5. research/auditは一次資料全文を読み、選択したbankの5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。複雑な手法は、背景→全体像→主要機構→データ／制御の流れ→なぜ効くか→失敗・境界条件の順で説明し、数段落の研究メモに圧縮しない。
+5. research/auditは一次資料全文を読み、選択したbankの5 slot用の構造化recordを作る。抄録や検索断片から欠落を推測しない。複雑な手法は、背景→全体像→主要機構→データ／制御の流れ→なぜ効くか→失敗・境界条件の順で説明し、数段落の研究メモに圧縮しない。新規researchでは一次資料の識別子と発表年を確定してから、上記命名規則に従う `paper_path` を決める。
 6. 評価は数値を並べるだけでなく、比較対象と条件を明示し、その数値が出る理由、別条件で利得が消える理由、実機かシミュレーションかを説明する。
 7. 固定slotを順番に小さくupdateする。途中失敗なら成功済みslotを保持し、失敗slotだけ安全に1回再試行する。
 8. 全slot成功後だけinboxをupdateする。
