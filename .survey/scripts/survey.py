@@ -159,10 +159,10 @@ def dashboard():
         pending = sum(x.get('status') != 'completed' for x in items)
         lines.append(f'| {label} | {done} | {plan.get(target, 0)} | {pending} |')
     runs = [read(p.relative_to(ROOT).as_posix()) for p in sorted((ROOT / STATE / 'runs').glob('*.json'))]
-    runs.sort(key=lambda r: r.get('last_progress_at', r['started_at']), reverse=True)
+    runs.sort(key=lambda r: r.get('last_progress_at') or r.get('started_at') or r.get('created_at') or '', reverse=True)
     lines += ['', '## 直近の実行', '']
     for r in runs[:10]:
-        lines.append(f"- {r['run_id']}：{r['status']}／{r.get('stage', '未記録')}／最終進捗 {r.get('last_progress_at')}／次：{r.get('next_action', '未記録')}")
+        lines.append(f"- {r.get('run_id', 'unknown-run')}：{r.get('status', 'unknown')}／{r.get('stage', '未記録')}／最終進捗 {r.get('last_progress_at') or r.get('started_at') or r.get('created_at', '未記録')}／次：{r.get('next_action', '未記録')}")
     if not runs:
         lines.append('実行記録なし。過去の実行を推測して補完しない。')
     lines += ['', '## 次の選定済み対象', '']
