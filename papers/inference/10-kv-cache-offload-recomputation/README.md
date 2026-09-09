@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（26本）
+## 自動生成の論文一覧（27本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -41,6 +41,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md) | KV cacheを計算機能付きSSD内へ置き、decode attentionもSSD内部で実行することで、巨大なKVをSSDからGPUへ毎token読み戻す転送を避けるlong-context推論system。 |
 | [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md) | 同じNVLink / NVSwitch接続内で余っている別GPUのHBMを、KV cacheなどの一時退避先として借り、CPU DRAMへ退避するより高速にrequestを入れ替えて公平なonline servingを行うmemory system。 |
 | [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md) | KV cacheとそれを読むattention計算を複数CPU nodeへ置き、GPUにはmodel weightを使う計算を集中させることで、KV転送を避けながら大batchでGPU throughputを高めるheterogeneous serving system。 |
+| [CacheBridge: Efficient Cross-Model KV Cache Transfer](cachebridge.md) | モデル間KVキャッシュ転送の全head回帰をarchitecture対応headへ局所化し、attention感度重み付けとfused GPU fittingを組み合わせ、Qwen3 14B→32Bで99.83%のtarget retentionを維持しつつmapperを8分の1、適用を最大3.0×高速化する。 |
 | [Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap](elastic-kv-cache.md) | prefill activation reserveをdecode中だけKVへ貸すCUDA VMM機構を実装しつつ、small chunkでもTTFTがほぼ悪化せず単純なchunk縮小の方が有利というnegative resultを示す。 |
 | [Learning Agent Execution for KV-Cache Management in Agentic Serving](cachescout.md) | CacheScoutはagent実行遷移をオンライン学習し、再利用されやすい固定文脈KVを予測的に保持・事前取得するvLLM上のruntime。 |
 | [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md) | GPU HBM・CPU DRAM・NVMe SSDの3階層へKV cacheを置き、**直近のattentionで再利用されそうなKVだけをGPUへ残すこと、必要KVの選択・転送・GPU計算を小さなbatch単位で並行実行すること、SSDから必要blockだけを疎に読むこと**を組み合わせ、長contextでKV全体を毎回転送するI/O待ちを減らす。 |

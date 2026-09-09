@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（42本）
+## 自動生成の論文一覧（44本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -39,9 +39,11 @@
 | [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md) | output tokenを1つ生成する区切りでrequestを一時停止・再開できるようにし、短いrequestを優先しながらKV cacheをCPUへ退避・先読みして待ち時間を減らすLLM serving scheduler。 |
 | [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md) | 複数modelへ届くrequest数が時間ごとに偏る環境で、modelを複数GPUへ分割して置き、空いているGPUをmodel間で共有しやすくすることで、特定modelだけqueueが伸びるのを抑えるserving配置手法。 |
 | [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md) | output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。 |
+| [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](cotail.md) | GPUサーバの余剰host CPUへCPU workloadをco-locationした際のLLM serving劣化を、GPU kernel遅延ではなくGPU投入前のCPU-side serving stageのtail amplificationとして診断する。Core Path Tail Index（CPTI）とCore Tail Suppression（CTS）を導入し、workload risk、NVTX stage tail、OS-level protection、decode SLOを組み合わせるCoTail手順により、held-out条件でも固定ルールで保護方式を選択する。 |
 | [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md) | speculative decodingで既に計算されるdraft表現へ軽量な回帰headを付けて出力長を予測し、短いrequestの優先処理とdecode instance間の負荷分散へ使うことでtail latencyを下げる。 |
 | [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md) | requestごとに「SLOまであと何秒の遅延を許容できるか」を残りlatency budgetとして継続推定し、その同じbudgetでrequestの実行順とHBM / CPU DRAM / NVMe間のKV cache復元・先読み・保持・再計算をまとめて決めることで、SLOを満たす処理量と長context requestへの公平性を両立するserving system。 |
 | [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md) | prefill / decode分離で巨大なKV cacheを丸ごとnode間転送する代わりに、**decodeで使われやすいKVだけをprefill中に先送りし、足りないKVはdecode中にlocal読出しと並列でremote取得し、残りはnetworkの空き時間に送る**ことで、低帯域cloud上のstage切替待ちを減らす。 |
+| [PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs](persistentkv.md) | native paged KV layoutを維持したまま、長文decodeのsequence splitとragged batch向けcompact workqueueをrequest状態に応じてFlashInferと切り替え、RTX 3060でB1長文を1.403×、B8長文を1.044–1.080×高速化する。 |
 | [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md) | clientごとのGPU利用量を公平に保ちつつ、**公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じprefixを持つrequestを続けて処理しKV再利用を増やす**scheduler。複数GPUではさらにprefix localityとGPU間load balanceも同時に調整する。 |
 | [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md) | interactive requestのlatency目標を守りながら余ったGPU capacityをbatch requestへ使うため、**各GPUで同時処理するrequest数を素早く増減する制御**と、**cluster全体のGPU instance数を遅い周期で増減する制御**を分けたLLM autoscaler。 |
 | [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md) | 最終的な出力token数を正確に当てる代わりに、promptから**どのrequestが他より短く終わりそうかという順位だけ**を小型modelで予測し、短そうなrequestを先に処理して長いrequestによるqueue待ちを減らすscheduler。 |
