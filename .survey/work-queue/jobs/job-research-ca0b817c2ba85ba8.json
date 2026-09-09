@@ -8,12 +8,13 @@
   "source_url": "https://arxiv.org/abs/2606.26666",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/persistentkv.md",
   "selection_reason": "Long-context decode scheduling on commodity GPUs; directly studies page-aware work assignment and adaptive scheduling rather than only attention kernels.",
-  "status": "blocked",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
   "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 9,
   "created_at": "2026-09-09T02:51:41+00:00",
-  "completed_at": "2026-09-09T04:16:59+00:00",
-  "blocker": "Primary-source full text could not be obtained reliably in this run. The arXiv abstract was accessible, but the arXiv PDF endpoint and source/e-print retrieval were unavailable from the current retrieval path. Secondary mirrors/search snippets were available, but workflow v9 forbids reconstructing a research page from abstracts or secondary snippets. Retry when the primary full text is retrievable."
+  "completed_at": "2026-09-09T10:22:49+00:00",
+  "blocker": "Primary-source full text could not be obtained reliably in this run. The arXiv abstract was accessible, but the arXiv PDF endpoint and source/e-print retrieval were unavailable from the current retrieval path. Secondary mirrors/search snippets were available, but workflow v9 forbids reconstructing a research page from abstracts or secondary snippets. Retry when the primary full text is retrievable.",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
