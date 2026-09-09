@@ -2,130 +2,321 @@
 canonical_id: "arXiv:2606.26666"
 arxiv_id: "2606.26666"
 title: "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs"
-summary: "native paged KV layoutを維持したまま、長文decodeのsequence splitとragged batch向けcompact workqueueをrequest状態に応じてFlashInferと切り替え、RTX 3060でB1長文を1.403×、B8長文を1.044–1.080×高速化する。"
+summary: "長い文脈の逐次生成では1回に1トークンしか計算しないため、少数要求だとGPUへ十分な仕事を出せない。PersistentKVは既存のページ化KVキャッシュを作り直さず、長い系列を複数区間へ分けて同時処理し、長さの違う要求が混ざる場合は実際に必要な区間だけを小さな作業キューへ詰める。常に独自カーネルを使うのではなく、推定上得な条件だけFlashInferから切り替えることでRTX 3060上の長文decodeを改善する。"
 source: "https://arxiv.org/abs/2606.26666"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-09"
+audit_version: 1
 ---
 
 # PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs
 
+> 長い文脈の逐次生成では1回に1トークンしか計算しないため、少数要求だとGPUへ十分な仕事を出せない。PersistentKVは既存のページ化KVキャッシュを作り直さず、長い系列を複数区間へ分けて同時処理し、長さの違う要求が混ざる場合は実際に必要な区間だけを小さな作業キューへ詰める。常に独自カーネルを使うのではなく、推定上得な条件だけFlashInferから切り替えることでRTX 3060上の長文decodeを改善する。
+
 ## 書誌情報
+
 - **著者**: Muhammad Ahmed
 - **公開**: arXiv:2606.26666。v1 2026-06-25、v2 2026-07-01
 - **種別**: workshop paper / arXiv preprint
-- **対象**: long-context decode、paged KV cache、GQA、GPU scheduling
-- **実装**: 論文はCUDA kernel、serving harness、calibration artifact、external trace入力経路を評価している。arXiv landing pageから独立した公式code repository URLは確認できず、公開artifactの所在は未確認。
+- **主題**: 長文逐次生成（long-context decode）、ページ化KVキャッシュ（paged KV cache）、GQA、GPUスケジューリング
+- **実装**: 論文はCUDAカーネル、提供用ハーネス、較正データ、外部トレース入力経路を評価している。arXivページから独立した公式コードURLは確認できない。
+
+## 概要
+
+PersistentKVが扱うのは、**長い文脈を持つLLMの逐次生成で、GPUの計算器を十分埋められない**という問題である。
+
+LLMの注意機構（attention）は、これまでの全トークンについて保存してある**KVキャッシュ（KV cache）**を読み、新しく生成する1トークンが過去のどこを見るべきかを計算する。文脈が長くなるほど読むKV量は増える。
+
+しかし逐次生成（decode）では、1回の反復で各要求につき原則1個の新しいqueryしかない。例えば1ユーザーしか生成していない場合、64Kトークン分のKVを大量に読むのに、新しいqueryは1個だけである。演算量に対してメモリ読み出しが多く、さらに同時に走らせられる独立した仕事も少ない。
+
+GPUは、小さな仕事を1個だけ実行するより、多数の独立した仕事を同時に並べた方が性能を出しやすい。そこで長い1系列の注意計算を複数区間へ分け、「過去トークン0〜1999」「2000〜3999」…のように並列処理すれば、1要求しかなくてもGPUへ多くの仕事を供給できる。
+
+ただし単純に分割数を増やすと、最後に部分結果を結合する処理が増える。また複数要求を同時処理すると、各要求の文脈長がバラバラなので、短い要求にも長い要求と同じ数の区間を割り当てると空仕事が大量に生まれる。
+
+PersistentKVはこの二つを調整する研究である。特に、
+
+1. 既存サーバが使うページ化KV配置をそのまま読む
+2. 長い系列だけを複数区間へ分割する
+3. 長さが不揃いなバッチでは、実際に存在する区間だけを作業キューへ詰める
+4. 既存のFlashInferが速い条件では無理に置き換えない
+
+という設計を組み合わせる。
 
 ## 問題設定
-LLMのdecodeでは各requestが1 stepにつき1 query tokenしか生成しない一方、prefix全体のKV cacheをstreamするためarithmetic intensityが低い。特にconsumer GPU上のlow-active long-context servingでは、単一requestや少数requestだけではGPUへ十分な独立workを供給できない。
 
-PagedAttention系のruntimeはKV cacheをpage tableで管理して断片化を抑え、FlashInferなどはnative paged decodeを高度に最適化している。しかし「最速の単一attention kernel」が必ずしも「request trace全体で最速のschedule」ではない。長いsequenceではsequence方向の並列性を追加したい一方、ragged batchではsequence長ごとのlaunchを増やすとhost/launch overheadが大きくなり、粗いbucketへまとめるとshort rowへ無駄なsplit workを割り当てる。
+### ページ化KVキャッシュとは何か
 
-PersistentKVの主張は万能kernelではなく、**request状態に応じてFlashInferとPersistentKVのwork decompositionを切り替えるadaptive page-aware scheduling**である。
+長文LLMでは、要求ごとのKVキャッシュを巨大な連続配列として確保すると扱いにくい。要求は生成中に少しずつ伸び、終了時刻も異なるため、大きな連続領域を取ると空き領域や断片化が増える。
+
+そこでvLLMなどの提供基盤では、KVキャッシュを固定サイズの小さな**ページ（page）**へ分割する。各要求は「論理トークン0〜15は物理ページ12、16〜31はページ91」のような表を持つ。
+
+これはOSの仮想メモリに近い。論理的には連続した長いKV列に見えるが、実際のGPUメモリ上では離れたページに置ける。
+
+PersistentKVは、この既存レイアウトを一度連続配列へ詰め直してから計算する方式ではない。**ページ表を直接参照してattentionを実行する**。したがって提供基盤側のKV管理方式を大きく壊さず組み込めることが重要な特徴である。
+
+### なぜ少数requestだとGPUが遊ぶのか
+
+GPUでは多数のスレッドブロックを複数のストリーミングマルチプロセッサ（Streaming Multiprocessor; SM）へ配る。
+
+例えばRTX 3060には多数のSMがあるが、1要求について「request × KV head」程度の仕事しか作れないと、同時に動かせるブロック数が少なくなり、一部SMが空く。
+
+ここで長いsequenceを複数の**分割（split）**へ分ければ、
+
+`request × KV head × split`
+
+まで独立仕事を増やせる。
+
+しかし分割は無料ではない。各splitはattentionの部分的なsoftmax結果を作るため、最後にそれらを統合する必要がある。短いsequenceまで細かく分けると、並列化で得るより結合コストの方が大きくなる。
+
+したがって「splitすれば速い」ではなく、**GPUが仕事不足になる長文・低並列条件だけsplitする**必要がある。
+
+## 手法のあらまし
+
+PersistentKVは、注意計算の数学自体を近似しない。変更するのは「どの過去トークン範囲を、どのGPU作業単位が担当するか」である。
+
+単一長文要求では、sequenceを複数区間へ分け、各区間のattentionを並列実行する。各区間は部分的なsoftmax状態を出し、最後に正確に結合する。
+
+複数要求があり長さも違う場合、各要求へ一律のsplit数を割り当てるのではなく、**本当にデータが存在するsplitだけ**を一覧化する。この一覧がcompact workqueueである。
+
+最後に、実行時のbatch size、sequence長、GQA構成、推定メモリ帯域・launch overheadなどから、FlashInferとPersistentKVのどちらが速そうかを比較してrouteする。
+
+つまりPersistentKVは単一の高速attentionカーネルというより、**既存カーネルと新しい仕事分割を切り替える提供時スケジューラ**として読む方が正確である。
 
 ## 手法
 
-### Native block-table GQA decode
-KVをcontiguous tensorへrepackせず、serving runtimeのnative block tableを直接参照する。評価shapeは `Hq=32`, `Hkv=8`, `G=Hq/Hkv=4`, head dimension `d=128`。CTAを `(request, KV head, sequence split)` へ割り当て、同じKV headを共有する4 query headsを同一work assignment内で処理する。
+### 1. 既存のページ表を直接たどるattention
 
-attention loopは32-token tileを処理し、page accessorでlogical tokenからphysical pageを引き、FP32のonline-softmax stateを維持する。したがってsupplied KVに対するattention自体は近似・pruningではなくexactで、sequence split後のpartial softmax stateもmerge kernelで数学的に正しく結合する。
+評価ではquery head 32個、KV head 8個の**Grouped Query Attention（GQA）**を使う。4つのquery headが1つのKV headを共有する構成である。
 
-### Sequence splittingとrow-local bounds
-B1などlow-active状態ではrequest×KV-headだけではCTA数が不足するため、sequenceを `S` 個のrangeへsplitして並列度を増やす。split数が多すぎればmerge overheadが増えるため、これは主要なoccupancy knobになる。
+PersistentKVは各GPU作業単位へ、
 
-bucket長ではなく各rowの真の `seq_len` からtile数、split境界、prefetch sizeを決める。tileを1つも持たないsplitはneutral softmax stateを書いて早期returnし、不要なQ loadやshared-memory stagingを避ける。
+- どのrequestか
+- どのKV headか
+- sequenceのどの範囲を担当するか
 
-### Compact workqueue
-ragged B8でexact-length bucketを使うと、active sequence長の種類に応じて多数のCUDA launchが発生する。PersistentKVは `(row, KV head, split, begin, end)` のうち実際にnon-emptyなtaskだけをcompact queueへmaterializeし、1次元gridで実行する。partial stateはcompact slotへ保存し、2つ目のmerge kernelでrow-local segmented reductionを行う。
+を割り当てる。
 
-これにより一つのroute bucketを維持しつつ、short rowのempty splitを排除し、long rowにはsequence parallelismを残す。
+過去トークンを32トークン程度のtile単位で読み、論理トークン位置からページ表を使って物理KVページを引く。途中で連続KV配列へコピーし直さない。
 
-### Calibrated cost model
-各decode stepでFlashInfer、PersistentKV length-bucket、PersistentKV workqueueの推定costを比較する軽量roofline-style policyを使う。RTX 3060 artifactではstreaming bandwidth 331.2 GB/s、minimum occupancy 4 CTA/SM、launch overhead 8.19 µsをcalibrationから得る。
+softmaxはFP32のオンライン状態を維持しながら処理するため、与えられたKVに対するattentionはpruningや近似ではない。
 
-PersistentKVへpromotionするにはB8で推定1.05×、B4では1.50×のmarginを要求する。さらに `G=4` 以外と16K未満のshort contextはFlashInferへgateする。B1 long-contextはlength-bucket split、supported B8 long-contextはworkqueue、B4はdefaultでFlashInferを選ぶ。
-## 評価条件
-- **GPU**: NVIDIA RTX 3060 12 GB、28 SM
-- **Software**: CUDA 12.1、PyTorch 2.5.1
-- **Attention shape**: FP16、`Hq=32`, `Hkv=8`, `G=4`, `d=128`
-- **Page size**: 16。main serving tracesではhole fraction 0、isolated native-paged benchmarkでは50% holes
-- **Primary baseline**: FlashInfer 0.2.5
-- **Isolated comparison**: vLLM 0.6.4.post1、TensorRT-LLM 0.8 MMHA、repack + PyTorch SDPA
-- **Correctness**: FlashInfer出力に対し `max |e| < 2e-3`, `mean |e| < 3e-4`
-- **Timing**: CUDA-event timingと、Python planning・metadata construction・launch・synchronizationを含むsynchronized wall timingを併記
-- **Trace**: bucketed、homogeneous、bimodal、uniform、Zipf。main結果はsynthetic trace。外部CSV/JSON trace入力も実装し、redistributable mixed fixtureで確認
-- **Calibration**: seed 20260622でpolicy/split operating pointを固定し、20260623–20260627の5 held-out seedsで評価
+### 2. Sequence splitting — 長い1要求を複数GPU仕事へ分ける
 
-## 主要結果
+例えば64Kトークンの過去文脈を1つのGPUブロック群だけで順番に読む代わりに、32個のsplitへ分ける。
 
-### 単一native-paged kernelではFlashInferが最速
-B1 isolated attentionではPersistentKV自体がFlashInferを上回るわけではない。8K / 32K / 64KでFlashInferは **0.1201 / 0.4404 / 0.8686 ms**、PersistentKV auto-splitは **0.1255 / 0.4597 / 0.9069 ms**。PersistentKVはそれぞれ約1.044–1.045×遅い。一方、同じ環境のvLLM PagedAttentionよりは低latencyだった。
+各splitは自分の範囲だけについて、
 
-したがってmain resultはkernel単体の優位性ではなく、low-active/ragged servingでの**work assignment**の改善として解釈する必要がある。
+- 最大score
+- softmaxの正規化和
+- valueの重み付き和
 
-### B1 long-context
-Bucketed B1ではPersistentKV bucket、split 32を選択し、5 held-out seeds平均でFlashInfer比:
-- CUDA decode-token throughput: **1.471±0.037×**
-- synchronized wall throughput: **1.403±0.065×**
+に相当する部分状態を計算する。
 
-sequence方向へworkを分割してlow occupancyを改善した効果が最も大きいregimeである。
+最後にmerge kernelが各splitの状態を数学的に正しく統合する。
 
-### B8 long-context
-compact workqueueを使うB8ではwall throughputが:
-- bimodal: **1.080±0.050×**
-- uniform: **1.044±0.022×**
-- Zipf: **1.068±0.028×**
+ここで重要なのは、64Kのattention結果を32個の近似attentionへ置き換えるのではないことだ。**同じattention計算を区間分割して並列実行しているだけ**で、最終結果は元の全sequence softmaxへ戻す。
 
-となり、平均改善幅は**1.044–1.080×**。B1ほど大きくないが、異なる長さのrequestが混在するtraceでも5 seedsでpositiveだった。
+### 3. 各rowの本当の長さからsplit範囲を決める
 
-### B4境界とGQA gate
-B4 workqueueのsplit sweepでは最良mean wall ratioでも **1.005×**、seedごとは **0.964–1.026×**で安定した勝ちにならなかった。このためdefault policyはB4をFlashInferへrouteし、regressionを避ける。
+複数requestを一緒に処理すると、例えばsequence長が64K、40K、8K、2Kのように混在する。
 
-同様にsmall B8 sweepで `G=1` と `G=8` はPersistentKVへ送らずFlashInferへgateし、`G=4`のみPersistentKV workqueueを使う。これはsystem-levelにはno-regressionだが、PersistentKV kernelそのものがG=1/8で高速化したことを意味しない。
+単純に「このbatchは64K級」と見て全requestへ32 splitを割り当てると、2K requestではほとんどのsplitが空になる。
 
-### Raggednessとlaunch fan-out
-held-out bimodal B8でexact-length bucketsは**16.00 launches/step**、compact workqueueは**2.00 launches/step**。merge trafficも **4.06→2.54 MB/step**、merge launchesは **8.00→1.00**へ減る。workqueueはragged batchでsequence splitを残しながらroute数増加を抑えることが主要効果。
+PersistentKVはbucketの代表長ではなく、**requestごとの実際のsequence length**からsplit境界を決める。
+
+担当tileが1つもないsplitはすぐ終了し、query読込やshared memory準備を避ける。これだけでも無駄は減るが、GPU launch自体は残るので、次のcompact workqueueを使う。
+
+### 4. Compact workqueue — 空仕事そのものを起動しない
+
+長さの違う8要求があるとき、従来のexact-length bucket方式では同じ長さの要求群ごとに別CUDA launchが必要になり、長さの種類が多いほどlaunch回数が増える。
+
+PersistentKVは実際に必要な
+
+`(request, KV head, split, begin, end)`
+
+だけを小さな1次元配列へ並べる。この配列が**コンパクト作業キュー（compact workqueue）**である。
+
+GPUはキューの各項目を1つずつ処理するため、
+
+- 空splitを起動しない
+- sequence長が違うrequestを同じkernel launchへまとめる
+- 長いrequestには多数split、短いrequestには少数splitを割り当てる
+
+ことができる。
+
+部分softmax状態もこのcompact slotへ書き、最後にrequestごとにsegment reductionして結合する。
+
+### 5. なぜlaunch回数削減が重要なのか
+
+GPUカーネルの起動には固定のCPU/GPU制御コストがある。各kernelが数十マイクロ秒程度しかかからない場合、8〜16回余計に起動するだけでも無視できない。
+
+論文のheld-out bimodal B8では、exact-length bucket方式は平均16 launch/stepだったのに対し、compact workqueueは2 launch/stepまで減る。merge側も8 launchから1 launchへ減る。
+
+つまりworkqueueの利点は、attentionそのもののFLOPsを劇的に削ることではなく、**不揃いなbatchを一つのGPU仕事列へ詰め直し、空仕事とlaunch fan-outを減らすこと**にある。
+
+### 6. コストモデルでFlashInferと切り替える
+
+PersistentKVの独自kernelは、すべての条件でFlashInferより速いわけではない。実際、単一attention kernelだけ比較するとFlashInferが速い条件がある。
+
+そこでGPUのストリーミング帯域、必要CTA数、launch overheadなどを事前較正し、各decode stepで
+
+- FlashInfer
+- PersistentKV length-bucket split
+- PersistentKV compact workqueue
+
+の推定costを比較する。
+
+RTX 3060評価では、短い16K未満のcontextや対応外GQA構成はFlashInferへ戻す。B4ではPersistentKVが安定して勝たなかったため、defaultでFlashInferを使う。
+
+これは「新しいものを常に使う」のではなく、**no-regressionを優先して得なregimeだけpromotionする設計**である。
+
+## 評価
+
+### まず見るところ
+
+- **単体kernel**: PersistentKVのattention kernel自体は、B1 isolated条件でFlashInferより約4〜5%遅い。
+- **B1長文**: sequence splitでGPU並列度を増やすと、serving wall throughputが平均1.403倍。
+- **B8 ragged**: compact workqueueで空splitとlaunch回数を減らし、1.044〜1.080倍。
+- **B4**: 優位が安定しないためFlashInferへ戻す。ここは提案法の重要な境界条件。
+- **品質**: attentionは数学的に同じで、近似KV削減はしない。
+- **評価範囲**: RTX 3060中心で、full production serverではなくattention + serving harnessおよび一部MLP proxy評価。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
+### 環境
+
+| 項目 | 設定 |
+|---|---|
+| GPU | NVIDIA RTX 3060 12 GB, 28 SM |
+| CUDA | 12.1 |
+| PyTorch | 2.5.1 |
+| 精度 | FP16 |
+| Query / KV heads | Hq=32 / Hkv=8 |
+| GQA group | 4 |
+| Head dimension | 128 |
+| KV page size | 16 tokens |
+| 主baseline | FlashInfer 0.2.5 |
+
+比較にはvLLM PagedAttention、TensorRT-LLM MMHA、repack + PyTorch SDPAも含む。
+
+### 単一kernel比較
+
+B1 isolated attentionでは、8K / 32K / 64Kで
+
+| Context | FlashInfer | PersistentKV |
+|---|---:|---:|
+| 8K | 0.1201 ms | 0.1255 ms |
+| 32K | 0.4404 ms | 0.4597 ms |
+| 64K | 0.8686 ms | 0.9069 ms |
+
+となり、PersistentKVは約1.044〜1.045倍遅い。
+
+したがって主要成果を「FlashInferより速いattention kernel」と読むのは誤りである。
+
+### B1長文
+
+B1では長文をsplit 32へ分けるrouteが選ばれ、5 held-out seeds平均でFlashInfer比
+
+- CUDA decode-token throughput: **1.471±0.037倍**
+- synchronized wall throughput: **1.403±0.065倍**
+
+となる。
+
+wall測定にはPython planning、metadata construction、kernel launch、同期も含むので、後者の方が実利用に近い。
+
+### B8 ragged workload
+
+compact workqueueを使うB8ではwall throughputが
+
+- bimodal: **1.080±0.050倍**
+- uniform: **1.044±0.022倍**
+- Zipf: **1.068±0.028倍**
+
+となる。
+
+B1より改善幅が小さいのは、B8では元からrequest間並列性があり、GPUがB1ほど仕事不足ではないためである。
+
+### B4では安定して勝たない
+
+B4 workqueue sweepの最良mean wall ratioは約**1.005倍**で、seedごとには0.964〜1.026倍。
+
+勝ったり負けたりする程度なので、default policyはB4をFlashInferへrouteする。
+
+このnegative resultを含めて初めて、「どこでPersistentKVが効くか」が分かる。
+
+### Ragged batchでのlaunch削減
+
+held-out bimodal B8では
+
+| 指標 | Exact-length buckets | Compact workqueue |
+|---|---:|---:|
+| Launches / step | 16.00 | 2.00 |
+| Merge launches | 8.00 | 1.00 |
+| Merge traffic | 4.06 MB | 2.54 MB |
+
+まで減る。
 
 ### Attention + MLP proxy
-synthetic Llama-style gated MLP tailをattention後へ追加したproxyでも、B8 bimodal 5 seedsでwall decode-token throughputは **1.105±0.061×**。ただしこれはfull LLM serverでもfull transformer stackでもない。
 
-外部mixed trace fixtureではadaptive workqueue routeがwall throughput **1.212×**を示すが、production trafficの代替ではない。
-## Hardware counterとablation
-短いB8 bimodal G=4 traceのNsight Computeでは、FlashInfer decodeに対してPersistentKV decodeはSM throughput指標 **9.55→17.21**、memory-throughput指標 **62.72→74.48**。ただしprofiler replayを使ったshort traceであり、main 5-seed wall speedupの直接測定ではない。
+attention後へLlama風gated MLPを付けたproxyでも、B8 bimodal 5 seedsでwall decode-token throughputは**1.105±0.061倍**。
 
-CUDA graph replayはB4のtwo-kernel decode+merge overheadを解消できなかった。最終split CTAがatomic counterで完了検出してmergeまで行うfused variantも正しいがRTX 3060では遅く、saved launchよりatomic/in-kernel merge costが大きかった。このnegative resultからもB4をFlashInferへ戻すpolicyが妥当とされる。
+ただしこれはfull transformer stackやproduction LLM server全体の測定ではない。
 
-## 既存研究との差
-PagedAttention/vLLMはKV cache allocationとpaging、FlashInferは高速native-paged attention kernelを中心に扱う。PersistentKVはKV量を減らすのではなく、**native page layout上のdecode workをrequest/KV-head/sequence-splitへどう割り当てるか**をserving stateに応じて変える。
+</details>
 
-H2O等のKV eviction/pruningとは補完的で、PersistentKVは与えられたKVに対してdense exact attentionを維持する。Sarathi/Sarathi-Serveがprefill/decodeの混在scheduleを扱うのに対し、本研究はdecode内部のpage-aware work decompositionに焦点を絞る。
+## 主要結果の読み方
 
-特に重要なのは、FlashInferを全面置換しない設計である。isolated kernelやB4、未校正GQA shapeでは強いbaselineをそのまま使い、PersistentKVが有利とcalibrationされたlong-context regimeだけ新routeへ送る。
+この論文の面白い点は、「最速kernelを作ればservingも最速になる」とは限らないことを実測で示しているところにある。
+
+PersistentKVのisolated kernelはFlashInferより遅い。それでもB1長文servingでは勝てる。理由は、1回のkernel内部の処理速度よりも、**GPUへ何個の独立仕事を渡せるか**の方が支配的になるからである。
+
+逆にB4や短文では元から十分な並列性があり、split・merge・metadata構築の追加費用を回収できない。
+
+したがってPersistentKVは「新attentionアルゴリズム」より、**request geometryに応じてGPU仕事の切り方を変えるスケジューリング研究**と理解するのが適切である。
 
 ## 品質への影響
-KV compression、token pruning、近似attentionは使わない。split-local online-softmaxを数学的にmergeするため、対象attention演算はexactである。serving tableの最大誤差は報告上 **6.104e-5**で、設定したFlashInfer-equivalence toleranceを満たす。
 
-したがってmodel quality trade-offを狙う方式ではないが、full model generation品質をtask benchmarkで評価した研究でもない。正しさの中心はkernel output equivalenceである。
+KVを捨てたり圧縮したりせず、sequence分割後のsoftmax状態を正確に結合する。
+
+FlashInfer出力との比較では`max |e| < 2e-3`、`mean |e| < 3e-4`を確認している。差はFP16/FP32演算順序などの数値差で、意図的な近似attentionではない。
+
+## 既存研究との差
+
+- **FlashInfer / PagedAttention**: 高速なpaged attention kernelが主対象。PersistentKVはそれらを置換するだけでなく、request状態を見てどちらを使うか選ぶ。
+- **Sequence parallel attention**: 長いsequenceを分割する考え方自体は既存だが、PersistentKVはnative paged KV、ragged batch、launch fan-outまで含めてserving routeへ統合する。
+- **KV offload研究**: KVをCPU/SSDへ逃がす研究ではなく、KVがGPUにある条件で**どうGPUへattention仕事を割り当てるか**が中心である。
+- **Long-context serving scheduler**: request数・長さ・GQA形状を使ってkernel routeを変える点で、kernel最適化とserving schedulerの中間に位置する。
 
 ## 限界
-- main評価は**RTX 3060 1機種**。A100、L4/L40S、H100等での再calibration/再現は未実施。
-- B8改善は4–8%程度と比較的小さく、hardware/runtime更新で閾値が変わる可能性が高い。
-- main traceはsynthetic。external fixtureはあるがproduction serving logではない。
-- harnessはdecode loopであり、admission control、prefill/decode interference、sampling、network、CPU queue、full transformer stack、実際のKV allocator pressureを含まない。
-- model-level評価もattention + 1 synthetic MLP tailのproxyに留まる。
-- physical page allocationはseeded synthetic permutationで、production allocatorのeviction/reuse/locality特性は再現しない。
-- PersistentKVのpositive resultは現在 `G=4` に限定され、G=1/8はFlashInferへのfallbackでno-regressionを達成しているだけ。
-- baseline versionはFlashInfer 0.2.5、vLLM 0.6.4.post1、TensorRT-LLM 0.8であり、将来/current stack全般への優位性は主張できない。
 
-## 実装状態
-論文v2はCUDA kernel、serving harness、calibration JSON、CSV/JSON trace path、Nsight captureなどのartifactを明示し、CLI ablation flagも記述している。ただしarXivのCode/Data欄および本文から独立した公式GitHub repository URLを確認できなかったため、公開コードの入手先は**未確認**とする。論文中でartifactが存在することと、第三者が公開repositoryから取得できることは区別する。
+- 主評価GPUはRTX 3060であり、H100/B200などSM数・帯域・launch特性が異なるGPUでは再較正が必要。
+- 有効性はGQA形状に依存し、評価上`G=4`以外はFlashInferへ戻す条件がある。
+- B4では優位が安定せず、全batch sizeで高速化する方式ではない。
+- 主結果はsynthetic serving trace中心。外部trace入力経路はあるが、大規模production traceによる評価ではない。
+- Attention + MLP proxyはfull modelではないため、実LLM全体のspeedupが同率になるとは限らない。
+- sequence splitを増やすほどmerge overheadも増えるので、GPU仕事不足がない環境では逆効果になり得る。
 
-## 研究上の位置づけ
-consumer GPUでlong-context LLMをservingするとき、最適化対象を「attention kernelの計算式」だけでなく「1 decode stepでGPUへ露出するwork量とlaunch構造」まで広げた点が有用。特に、最速baselineをfallbackとして保持しながら狭い勝ちregimeをcalibrated routerで利用する設計は、異なるGPUやruntimeへ展開する際にも現実的なsystem design patternである。
+## 一般的な実装上の含意
 
-一方で現時点のevidenceはworkshop-levelで、production integrationと複数hardwareでの検証が次の主要課題となる。
+GPU最適化では「1 kernelの実行時間」だけでなく、**そのkernelを何個並べられるか、何回launchするか、空仕事をどれだけ作るか**まで含めて見る必要がある。
+
+特に長文decodeのような低演算強度処理では、
+
+1. request間並列性が足りるか
+2. 足りなければsequence方向へ分割できるか
+3. ragged batchで空splitが増えないか
+4. split結果のmergeとlaunch overheadを回収できるか
+5. 既存kernelの方が速いregimeを明示的に残しているか
+
+が重要になる。
+
+これはKVオフロードでも同じで、データ転送を細かく分割して並列化するとき、細分化しすぎるとlaunch・metadata・merge・I/O request overheadが支配的になる。**粒度は常にworkload依存で選ぶべき**というのが一般化できる教訓である。
 
 ## 一次資料
-- https://arxiv.org/abs/2606.26666
-- https://arxiv.org/pdf/2606.26666v2
+
+- arXiv: https://arxiv.org/abs/2606.26666
+- PDF: https://arxiv.org/pdf/2606.26666
+
+## 更新履歴
+
+- 2026-09-09: MoE-Infinity基準に合わせて全面改稿。paged KV、GPU仕事不足、sequence split、compact workqueue、launch回数、FlashInferとのadaptive routingを論文未読者向けに説明。
