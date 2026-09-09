@@ -43,21 +43,11 @@ Actions workerは10分ごとにも起動するが、主目的は未処理submiss
 
 Actions workerはsubmission処理後、必ずready jobの有無を確認する。readyが1件以上なら何もしない。0件なら、その実行の中で単純なdiscovery jobを1件だけ生成してから `next-jobs.json` を確定する。
 
-したがって通常は次のようになる。
-
 `最後のresearch/audit/discovery完了 → 同じActions runでqueue確認 → ready=0ならdiscovery生成 → next-jobsへ掲載`
-
-Chatは成果submissionを保存した後、Actions反映済みの最新HEADと `next-jobs.json` を読み直せばよい。別の `request_jobs` 往復を挟まない。
-
-過去に作成済みの `request_jobs` submissionは互換のため処理可能でもよいが、新規通常運用では使用しない。
 
 ## Discovery
 
-一次情報を中心に、repo未登録のLLM推論システム関連研究を探す。新着を優先するが、重要な取りこぼしがあれば古い論文も可。
-
-1回のdiscovery submissionは**0〜5件**。弱い候補で5件を埋めない。
-
-候補0件だった場合、そのdiscovery jobが完了してreadyが0になるため、同じActions実行で次のdiscovery jobが1件補充される。これによりqueueは原則として空のまま確定しない。
+一次情報を中心に、repo未登録のLLM推論システム関連研究を探す。新着を優先するが、重要な取りこぼしがあれば古い論文も可。1回のdiscovery submissionは**0〜5件**。弱い候補で5件を埋めない。
 
 ## Research
 
@@ -81,26 +71,21 @@ Chatは成果submissionを保存した後、Actions反映済みの最新HEADと 
 
 全論文を機械的に監査しない。research時に、書誌・版、実装状態、評価条件、主要数値、実機/シミュレーション区別などについて**明確に確認すべき事項が残った場合だけ**auditを要求する。
 
-重要度だけを理由に自動監査しない。固定割合の抜取監査もしない。
-
 ## Artifact transport（通常経路）
 
-予定されたChat workerは**新規ファイルを作成しない**。事前作成済みの固定受け渡し箱:
+予定されたChat workerは**新規ファイルを作成しない**。事前作成済みの固定2ファイルだけを使う。
 
-`.survey/work-queue/submissions/chat-inbox.json`
+- `.survey/work-queue/payloads/chat-payload.md`
+- `.survey/work-queue/submissions/chat-inbox.json`
 
-を毎回上書きする。
+### research / audit
 
-手順:
-
-1. 最新HEADから `chat-inbox.json` を取得し、現在のblob SHAを得る。
-2. research/audit/discoveryのsubmission JSON全体を組み立てる。
-3. research/auditの完成Markdownは `payload_path` を使わず、submissionの `content` フィールドへ直接入れる。
-4. GitHub Contents APIのupdateで、取得したSHAを指定して `chat-inbox.json` を上書きする。
-5. このpushでActionsが起動する。Actionsはhead commitで `chat-inbox.json` が変更されたことを確認した場合だけ、古い `.survey/work-queue/results/chat-inbox.json` を削除してからworkerを実行する。
-6. schedule起動や他submissionのpushでは古いinbox resultを削除しないため、同じinboxを再処理しない。
-
-この経路では、Chat側の保存操作は**既存1ファイルのupdate 1回**で完了する。ファイル新規作成の安全検査、payload作成成功後にsubmission作成だけ失敗する部分成功、同名新規ファイル衝突を通常経路から除外できる。
+1. 最新HEADから固定payloadをfetchし、現在blob SHAを取得する。
+2. 完成Markdownを固定payloadへupdateする。
+3. 最新HEADから固定inboxをfetchし、現在blob SHAを取得する。
+4. 小さいsubmission JSONを固定inboxへupdateする。`payload_path` は `.survey/work-queue/payloads/chat-payload.md` を指定する。
+5. inbox pushでActionsが起動する。Actionsはhead commitで `chat-inbox.json` が変更された場合だけ古い `.survey/work-queue/results/chat-inbox.json` を削除して再処理する。
+6. resultとqueueを確認するまで、次の固定payload/inbox上書きを開始しない。
 
 submission例:
 
@@ -111,33 +96,40 @@ submission例:
   "status": "completed",
   "paper_path": "papers/...md",
   "expected_blob_sha": "existing paper update時のみ必須",
-  "content": "<complete Markdown>",
+  "payload_path": ".survey/work-queue/payloads/chat-payload.md",
   "audit_required": false,
   "audit_reason": null,
   "audit_flags": []
 }
 ```
 
-`submission_id` はChat側の追跡用であり、workerが未知フィールドを無視してもよい。既存paper更新では最新blob SHAを必須とする。
+### discovery / blocked / deferred / rejected
+
+長いMarkdownが不要なため、固定inboxだけを上書きしてよい。新規submissionファイルは作らない。
+
+### なぜ固定2ファイルか
+
+- 新規ファイル作成の安全検査を通常経路から除外する。
+- 長いMarkdownをJSONに直接埋め込まず、長文updateと小さい制御updateを分離する。
+- payload更新後にinbox更新が失敗しても、jobは未完了のままで完成Markdownは固定payloadに残る。
+- 次回はpayloadの内容と対象jobを確認し、まだ有効ならinbox更新だけ再試行できる。
+
+### update競合
+
+updateは必ず直前にfetchしたblob SHAで行う。SHA競合時は最新HEADと対象ファイルSHAを再取得し、対象jobがまだreadyで内容が有効な場合だけ1回再試行する。競合が続く場合は保存失敗として終了し、jobを完了扱いにしない。
 
 ### 互換経路
 
-従来の:
-
-1. `.survey/work-queue/payloads/<unique>.md`
-2. `.survey/work-queue/submissions/<unique>.json`
-
-という2ファイル新規作成方式は、手動作業・復旧互換用として残す。予定Chat workerでは使わない。
+従来の一意な `.survey/work-queue/payloads/<unique>.md` + `.survey/work-queue/submissions/<unique>.json` 新規作成方式は復旧互換用として残すが、予定Chat workerでは使用しない。
 
 ## Idempotency
 
-- 固定inbox以外のsubmission/result filenameは一意で再利用しない。
 - 固定inboxは更新pushのときだけ対応resultをリセットして再処理する。
 - schedule起動では処理済み固定inboxを再処理しない。
+- 固定payload/inboxは、前回result確認前に次jobで上書きしない。
 - terminal jobを再完了しない。
 - discovery補充はready jobが0件のときだけ行い、同時に複数作らない。
 - paper更新はblob SHAで競合検査する。
-- Chatはsubmission保存成功後、Actions反映を確認する前に同一jobを別経路で再送しない。
 - Actionsは単一concurrency groupで動く。
 
 ## Derived data
