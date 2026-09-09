@@ -1,55 +1,57 @@
 ---
-canonical_id: "arXiv:2608.16157"
-arxiv_id: "2608.16157"
-title: "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution"
-summary: "GPU・CPU・host memory・PCIeを一体として扱い、prefillのexpert転送重畳とdecode missの帯域適応CPU/GPU分担でconsumer hardware上の大規模MoE servingを高速化する。"
-source: "https://arxiv.org/abs/2608.16157"
+canonical_id: "arXiv:2604.25080"
+arxiv_id: "2604.25080"
+title: "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration"
+summary: "KVキャッシュ復元をトークン・層・GPUの3軸並列問題として扱い、バッチ認識スケジューリングで再計算とI/Oを重畳してTTFTを10–62%削減する。"
+source: "https://arxiv.org/abs/2604.25080"
 last_audited: null
 audit_version: 0
 ---
 
-# FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution
+# CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration
 
 ## 書誌情報
-- **著者**: Shuo Yang, Xiaoze Fan, Melissa Pan, Haocheng Xi, Zhe Wang, Shanlin Sun, Kurt Keutzer, Song Han, Matei Zaharia, Chenfeng Xu, Ion Stoica
-- **公開日**: 2026-08-17
+- **著者**: Sean Nian, Jiahao Fang, Qilong Feng, Zhiyu Wu, Fan Lai
+- **所属**: University of Illinois Urbana-Champaign, National University of Singapore
+- **公開日**: 2026-04-28
 - **状態**: arXiv preprint v1
-- **コード**: https://github.com/FlashML-org/FreeToken
+- **コード**: 公式公開repositoryは確認できず。論文実装はvLLMとLMCache上。
 
 ## 問題設定
-MoEはtokenごとのactive expertが少なく計算量は小さいが、完全expert poolはconsumer GPUのVRAMを超える。prefillでは長promptがほぼ全expertをactivateして大量転送が発生し、decodeではcache miss、agent workloadではcontext編集による再prefillが支配的になる。
+長文chat、RAG、agent pipelineではGPU外へ退避したKVキャッシュの復元がTTFTを支配する。再計算はattentionにより長さとともに超線形に増え、I/Oは帯域制約を受ける。既存hybrid方式は主にrequest単位で両者を選び、token位置・layer・multi-GPU・batch内resource contentionを十分利用しない。
 
 ## 手法
-**Prefill**では2つのfull-layer bufferを使い、GPUがlayer lを計算中にlayer l+1の全expertをPCIe転送する。hybrid-attention model向けにはthinking/tool call/tool output等のsemantic boundaryへrecurrent-state checkpointを置き、context編集後に新suffixだけ再prefillする。
+**Token-wise**: cached prefixを通常512-token chunkに分け、先頭から再計算するpointerと末尾からKVを読むpointerを同時に進める。後方tokenほど再計算costが高いため、長いprefixで有利。
 
-**Decode**では共有LRU expert cacheをrouting localityへ追従させる。miss数m、実測PCIe帯域B_P、CPU expert処理帯域B_HからGPUへfetchする数を概ね q*=m×B_P/B_H とし、残りをCPU上で直接計算する。transferとCPU branchを並行実行し、partial outputをexactにmergeする。
+**Layer-wise**: layer 0からの再計算と最終layerからのKV読み込みを並行する。offline profilingでtoken-wiseとのcrossover lengthを求め、短いsequenceではlayer-wiseを選ぶ。
 
-scheduler safe pointではGPU expert cacheを再構成し、変動するVRAM budgetや増大するKV cache需要へ適応する。expert poolはhost側をsource of truthとする。
+**Multi-GPU**: pipeline stage境界のhidden activationを保存し、各GPUが自身のmodel shardのKVを独立復元することでstage間の逐次依存を緩和する。
 
-## 実装
-GPU側でrouting-dependent cache controlを行い、fixed-shape bufferとvalid countを使ってCUDA Graph互換を維持する。CPU branchもpersistent C++ workerを介してgraph実行へ統合。FreeToken Weight形式でexpertを最終host layoutへdirect I/Oし、startup時のrepackを減らす。
+**Batch-aware scheduler**: 各requestのcompute/I/O pointerをglobalに調停し、残り再計算costの大きい長prefixへI/Oを優先配分する。
 
-## 評価
-RTX 4060 Laptop 8GBからRTX PRO 6000 96GBまで6環境。Qwen3.6-35B-A3B、DeepSeek-V4-Flash 284B/13B active、GLM-5.2 753B/40B activeを用い、AIME、SWE-bench coding agent、Claude Code、OpenClaw email/calendarを評価。比較はllama.cpp、Ollama、KTransformers、MoE-Infinity。
+## 評価条件
+- **Models**: Qwen3-8B、Llama-3.1-8B、Qwen3-30B-A3B
+- **Workloads**: LMSYS-Chat、WildChat、SWE-Bench
+- **GPU**: L40S 46GB、A100 40GB、H100 80GB
+- **I/O**: 10 / 40 / 80 Gbps、default 10 Gbps
+- **Baselines**: vLLM、SGLang HiCache、LMCache v0.3.1、Cake
+- **Metric**: TTFT、GPU利用率、I/O利用率
 
 ## 主要結果
-- RTX 5090: Qwen3.6 **77–83 tok/s**、DeepSeek-V4-Flash **22–25 tok/s**。
-- strongest baseline比decode throughput **1.5–2.3×**。
-- agent workloadでもsingle-turn比decode低下を**12%以内**に維持。
-- worst-turn TTFTは全条件**44秒未満**、各baselineは少なくとも1条件で150秒超。
-- 8GB RTX 4060 laptopで35B modelを**39.3 tok/s**。
-- consumer 5環境でstrongest baseline比**1.3–2.1×**。
-- RTX PRO 6000 1枚でGLM-5.2 753Bを**14.9 tok/s**、llama.cpp 7.3 tok/s。
-- full-layer overlap無効時に対しprefill throughputを4k/8k/16k promptで**19/25/26%**改善。
-- 同一cache容量でexpert miss率はQwen/DeepSeekで**16/39%**、KTransformers 41/59%、llama.cpp 62/89%。
+- TTFTを既存方式比 **10–62%削減**、全体で **1.1–1.7×**改善。
+- 長さ6K→30KでvLLM/SGLangとの差は **1.1×→1.7×**へ拡大。
+- KV復元中の平均利用率は **GPU 88% / I/O 78%**。LMCacheはGPU 10%、vLLMはGPU 91%だがI/Oはほぼ未使用。
+- multi-GPU最適化を外すと平均復元latencyは **0.21→0.29秒**へ38%増加。2DのみでもvLLMより24%高速。
+- H100で40 / 80 Gbps時に **1.7× / 1.5×**改善。
+- Qwen3-30B-A3B、10 Gbpsで2×L40S / A100でも **1.6× / 1.5×**改善。
+- batch size 2 / 4 / 8で **1.6–2.6×**改善。
 
 ## 既存研究との差
-既存expert offload/prefetchはmiss率削減が中心だが、FreeTokenは残るmissをPCIe transferとCPU direct executionへ実測帯域比で分ける。静的CPU expert配置とも異なり、routingに追従するcache、prefill transfer overlap、agent state reuse、runtime memory resizeを統合する。
+LMCache等はKVを階層memoryへ置く仕組み、Cakeはtoken軸のcompute/load hybridが中心。CacheFlowはtoken・layer・GPUの3軸を統合し、さらにbatch内の共有compute/I/O競合を同じschedulerで扱う。HCacheのhidden-state restorationやMooncakeのKV transfer overlapとも補完的。
 
 ## 品質と限界
-CPU/GPUで同じexpert weightをexactに計算し、expert skip等の近似は導入しない。完全expert poolを置けるhost memoryは必要で、巨大modelではworkstation級RAMが要る。高速pathはpinned memoryとPCIe/host bandwidthに依存し、評価はNVIDIA discrete GPU中心。
+KV圧縮・量子化・token pruning等の近似は使わないためmodel品質への直接trade-offはない。理論上のmulti-GPU線形scaleは均等partition等を仮定し、実機ではload imbalanceで弱まる。評価はNVIDIA GPUと10–80 Gbps中心で、異なるstorage/runtimeへの一般化は未検証。公式code公開も確認できない。
 
 ## 一次資料
-- https://arxiv.org/abs/2608.16157
-- https://arxiv.org/html/2608.16157v1
-- https://github.com/FlashML-org/FreeToken
+- https://arxiv.org/abs/2604.25080
+- https://arxiv.org/html/2604.25080v1
