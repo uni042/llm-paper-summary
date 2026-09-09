@@ -1,34 +1,17 @@
 {
-  "submission_id":"chat-job-47c0986a7df1a7c1-20260909-1932",
-  "attempt_id":"discovery-20260909-1932-02",
-  "job_id":"job-47c0986a7df1a7c1",
-  "candidates":[
-    {
-      "canonical_id":"arxiv:2609.06551",
-      "title":"EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs",
-      "source_url":"https://arxiv.org/abs/2609.06551",
-      "paper_path":"papers/inference/08-edge-on-device-llm-systems/estream.md",
-      "priority":92,
-      "reason":"Mobile NPU MoE serving with UFS-backed expert virtualization.",
-      "evidence":["2.25-27.57x pure-prefill TTFT speedup; 1.19-12.29x lower peak memory."]
-    },
-    {
-      "canonical_id":"arxiv:2609.07536",
-      "title":"Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap",
-      "source_url":"https://arxiv.org/abs/2609.07536",
-      "paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/moe-overlap-resource-manager.md",
-      "priority":89,
-      "reason":"Launch-time SM resource management for fine-grained MoE inference overlap.",
-      "evidence":["3.22% mean oracle regret; 1.185x geometric-mean complete-model prefill speedup over COMET."]
-    },
-    {
-      "canonical_id":"arxiv:2609.05425",
-      "title":"Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server",
-      "source_url":"https://arxiv.org/abs/2609.05425",
-      "paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/cotail.md",
-      "priority":82,
-      "reason":"Diagnoses and mitigates host-CPU co-location interference in LLM serving.",
-      "evidence":["Unprotected co-location cuts throughput 78.8%; guided protection reduces TPOT up to 4.5x."]
-    }
-  ]
+  "submission_id": "chat-job-research-bebbfc5f119d619b-v10-e2e-a1",
+  "attempt_id": "attempt-cotail-v10-e2e-20260909-a1",
+  "job_id": "job-research-bebbfc5f119d619b",
+  "status": "completed",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/cotail.md",
+  "record_slots": [
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "e82e6172d032782e29eb7c5a15937ea44f5d2a07"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "57705f68cc6fa56384f4cf0d2169e06f14de99e1"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "5f6a05cb83cd1bab7ae17ca7db5117ec26a9607e"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "ee703810e830ec4fbc2f0f2266bbbe368b5d1dc9"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "03e41cefba093d6dab1411c118795c7eb55acb2a"}
+  ],
+  "audit_required": false,
+  "audit_reason": null,
+  "audit_flags": []
 }
