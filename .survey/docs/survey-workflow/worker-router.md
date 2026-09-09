@@ -15,9 +15,13 @@ GitHub readができない場合は、repo状態に依存する新規処理を�
 
 ## A. 論文worker
 
-正本: [README.md](README.md)、[queue-v10.md](queue-v10.md)、`.survey/work-queue/next-jobs.json`。
+正本: [README.md](README.md)、[queue-v10.md](queue-v10.md)、[paper template](../../templates/paper.md)、`.survey/work-queue/next-jobs.json`。
+
+**research / auditに着手する前に `.survey/templates/paper.md` を必ず読む。** テンプレート内で品質基準として指定されている [MoE-Infinity のまとめ](../../../papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) も、少なくとも新しい実行環境・新しい会話で最初に1回は確認する。以降の論文は、論文未読者が背景・手法・データの流れ・なぜ効くか・効かない条件まで追える説明密度を基準にする。
 
 Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditはqueue-v10で定義されたA/B固定record bankのうち安全に使える1 bankの5 JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。通常はA、Aに別jobの途中保存が残る場合だけBを使う。paper/state/README/identity/queueをChatから直接編集しない。
+
+構造化recordは「後でMarkdown rendererが文章を補ってくれる」前提で短縮しない。特に `problem_method` は、論文固有の略語や機構名を列挙するメモではなく、**そのまま人間向け本文として読める説明文**を入れる。狭い分野の語は最初に平易な日本語で意味を説明し、手法が複数段ある場合は各段の入力・処理・出力・次段との接続・ボトルネックへの効果を書く。
 
 **同一runで継続処理する。** 開始時に既存ready research/auditがあればpriority順に処理する。readyが尽きたらdiscoveryを実行し、Actions反映後の最新queueを読み直して、そのdiscoveryから生成されたresearch jobを同じrunで直ちに全文精読・構造化record保存・Actions結果確認まで進める。researchからauditが生成された場合も同じrunで処理する。各job完了後に必ず最新queueを再取得する。
 
