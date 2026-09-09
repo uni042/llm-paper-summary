@@ -2,73 +2,91 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-glance-20260910-0058-v10-a1",
-  "job_id": "job-research-e581510120d7ae4c",
+  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
+  "job_id": "job-research-622ec47c37b83739",
   "data": {
-    "overview": "Grounded image-anchored tasks favor one-pass block drafting, while free-running captioning/TextVQA favor autoregressive chain drafting. GLANCE reaches 2.93x AR speedup on ChartQA and exceeds production EAGLE3-VL on all three grounded tasks, but is slower on the two open tasks.",
+    "overview": "ACE gains become clearer under aggressive skipping. Qwen3.6 at 50% reaches PPL 8.67 / avg accuracy 75.57 versus MoDES 9.42 / 71.42. At 60% it remains 9.98 / 70.70. A100 measurements show actual latency gains, not only reduced expert count.",
     "key_results": [
       {
-        "metric": "same-engine ChartQA speedup",
-        "value": "2.93x over AR, 8.26 ms/token",
-        "baseline": "EAGLE3-VL 2.77x, 8.75 ms/token",
-        "condition": "32 draft tokens/round, SGLang 0.5.6",
-        "interpretation": "GLANCE +6.0% faster than production head."
+        "metric": "Qwen3.6 PPL @50%",
+        "value": "8.67",
+        "baseline": "MoDES 9.42",
+        "condition": "50% expert-slot skipping",
+        "interpretation": "7.96% relative PPL reduction."
       },
       {
-        "metric": "InfographicVQA/DocVQA margin",
-        "value": "+7.6% / +5.4% vs EAGLE3-VL",
-        "baseline": "production EAGLE3-VL",
-        "condition": "same engine/card/budget",
-        "interpretation": "all paired bootstrap intervals exclude zero."
+        "metric": "Qwen3.6 average accuracy @50%",
+        "value": "75.57",
+        "baseline": "MoDES 71.42",
+        "condition": "seven downstream tasks",
+        "interpretation": "+4.15 points."
       },
       {
-        "metric": "matched-training acceptance",
-        "value": "2.7x longer pooled; 4.0x on ChartQA",
-        "baseline": "EAGLE-3 head trained on same corpus",
-        "condition": "same frozen target/training framework/schedule",
-        "interpretation": "block form provides acceptance advantage beyond data."
+        "metric": "Qwen3.6 @60%",
+        "value": "PPL 9.98; avg 70.70",
+        "baseline": "MoDES 10.87/69.04; Score 13.38/54.66",
+        "condition": "60% skipping",
+        "interpretation": "quality gap persists at aggressive budget."
       },
       {
-        "metric": "tree-vs-chain",
-        "value": "1.36x geomean wall-clock advantage",
-        "baseline": "identical GLANCE head as width-1 chain",
-        "condition": "same harness",
-        "interpretation": "wide-tree use of one-pass block output is independently valuable."
+        "metric": "Qwen3-30B @50%",
+        "value": "PPL 8.85; avg 74.30",
+        "baseline": "Top-P 8.85/74.17; AIMER 8.86/73.40; GSP 8.99/74.10",
+        "condition": "50% skipping",
+        "interpretation": "ties best external PPL and has highest average accuracy."
       },
       {
-        "metric": "entropy fit",
-        "value": "pooled b1=0.63, R²=0.71 over 7,751 rounds",
-        "baseline": "task-wise slopes 0.46 caption→1.71 templated ChartQA",
-        "condition": "five main tasks",
-        "interpretation": "lower next-token entropy predicts longer accepted blocks, increasingly with grounding."
+        "metric": "fusion ablation @50%",
+        "value": "max/ACE 8.85/74.30",
+        "baseline": "mean 8.97/74.01; min 9.20/73.12",
+        "condition": "Qwen3-30B",
+        "interpretation": "conservative max is best."
       },
       {
-        "metric": "conditioning ablation",
-        "value": "acceptance collapses to 1.11 when fused state zeroed",
-        "baseline": "full GLANCE",
-        "condition": "drafter context ablation",
-        "interpretation": "head genuinely uses target context/vision grounding."
+        "metric": "threshold preparation",
+        "value": "1.8 min",
+        "baseline": "binary search 16.5; MoDES frontier 18.9 min",
+        "condition": "Qwen3-30B 10%",
+        "interpretation": "9.2–10.5x faster deployment preparation."
+      },
+      {
+        "metric": "A100 TTFT speedup @60%",
+        "value": "1.72–2.25x",
+        "baseline": "BF16",
+        "condition": "length 256–1024, batch 1–4",
+        "interpretation": "e.g. 1024/b1 270.9→120.3 ms."
+      },
+      {
+        "metric": "A100 TPOT speedup @60%",
+        "value": "1.31–1.41x",
+        "baseline": "BF16",
+        "condition": "same suite",
+        "interpretation": "e.g. 1024/b1 85.1→63.0 ms/token."
       }
     ],
     "negative_results": [
       {
-        "name": "Free-running text loses",
-        "description": "captioning: GLANCE 1.81x vs AR but EAGLE3-VL 2.16x; TextVQA GLANCE 2.02x vs EAGLE3-VL 2.49x. Deep block candidates drift when token dependencies are not image-pinned."
+        "name": "low-sparsity exception",
+        "description": "Qwen3.6 at 10%: router Score avg 81.66 > ACE 81.41."
       },
       {
-        "name": "Short-answer no amortization",
-        "description": "ScienceQA single-letter outputs fall below parity; method targets generation rather than classification."
+        "name": "RCR alone weak",
+        "description": "Qwen3-30B at 50%: RCR 11.62/67.01 vs GSP 8.99/74.10 because one router prototype does not represent full conditional input distribution."
       },
       {
-        "name": "Long context parity",
-        "description": "around 6.7K context same-engine CUDA-graph comparison is -2.3% with CI spanning zero; GLANCE acceptance declines more than EAGLE3-VL."
+        "name": "workload-matched threshold",
+        "description": "reported budget mapping uses an unlabeled workload score pass; threshold transfer is future work."
       },
       {
-        "name": "Graph capture dependency",
-        "description": "at 2K, CUDA graph converts saved draft passes to +5.8% margin; eager mode is roughly parity (-1.0%, CI spans zero)."
+        "name": "single-run uncertainty",
+        "description": "single deterministic seed; repeated-run uncertainty is future work."
+      },
+      {
+        "name": "distributed serving missing",
+        "description": "distributed expert dispatch is future work."
       }
     ],
-    "interpretation": "The speedup comes from removing sequential draft depth and exploiting low-entropy grounded spans with wide trees. Vision is an inherited source of predictability rather than repeated drafter overhead.",
-    "quality_impact": "Greedy quality is unchanged by construction/audit; a weak draft affects only acceptance. Sampling preserves distribution rather than byte identity."
+    "interpretation": "ACE is a safer selection rule at fixed expert-execution budget rather than a new router. GSP supplies the dominant global signal and RCR protects directionally specialized experts.",
+    "quality_impact": "Lossy; generally better retention than baselines at equal skip ratio, with low-sparsity exceptions and threshold-transfer uncertainty."
   }
 }
