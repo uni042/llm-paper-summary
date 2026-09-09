@@ -65,3 +65,10 @@
 ## transport診断
 
 request transportに障害が疑われる場合、実作業operationを複数経路で重複発行しない。まず状態を変更しない `status` を各候補transportで実行し、resultの `ok: true` まで確認して経路ごとの成否を比較する。診断対象は、利用可能な範囲で (1) requestファイル直接commit、(2) owner-only新規Issue、(3) command inboxへのowner-only Issue comment、(4) command inbox本文のowner-only edit とする。実際の `claim_run` / `finish_run` / `prepare_result` 等の状態変更operationは、診断で成功確認できた1経路だけから発行する。
+
+
+## 小さい成果submission + Actions再実行
+
+Scheduled Taskから大きい正本ファイルの直接更新やrequest/Issue系transportが制限される場合、論文単位の小さい成果を `.survey/submissions/<unique>.json` として新規作成し、既存の成功済み `Survey helper worker` ジョブを再実行する経路を優先候補にできる。再実行workerは最新mainで未処理submissionだけを検証・反映し、`.survey/submission-results/<same-name>.json` に結果を保存する。
+
+精読・監査成果はChat側で一次資料に基づき完成Markdownまで作成し、submissionには現在claim token、対象paper、既存blob SHA、完成本文を入れる。Actions側は古いclaim・競合SHA・不正パスを拒否し、保存後に既存 `prepare_result.py` でidentity/progress deltaを生成する。callerはsubmission resultの `ok: true` と生成deltaを再取得確認してから完了に数える。
