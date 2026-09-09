@@ -2,23 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-moe-overlap-20260909-2127-v10-a1",
-  "job_id": "job-research-db7f6bec1b5bf488",
+  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
+  "job_id": "job-research-85c54a348e38b072",
   "data": {
     "differences": [
-      "COMET/FLUX/TileLinkなどが細粒度重畳の実行機構や依存表現を作るのに対し、本研究はその機構が存在する前提でcompute/communication CTAの常駐比を起動時に決める。",
-      "NanoFlowやLagomのprofiling・measurement-guided searchと異なり、per-shape candidate executionなしの解析選択を行う。",
-      "DeepEP V2の通信資源解析やStream-Kのwave quantizationと関連するが、非preemptive CTA residencyとsplit-level readiness依存を結合したMoE operator固有のmakespan最適化を対象とする。"
+      "Splitwise、DistServe、PD-Serve等のprefill/decode分離研究に対し、HeteroPanaceaはattention/FFNまで独立pool化したAF/PDAFを含め、stageごとのhardware構成とparallelismを設計変数として比較する。",
+      "MooncakeやMemServeがKV cache中心のdisaggregated memory/transfer architectureを主眼とするのに対し、本研究はcompute、memory bandwidth/capacity、interconnect、precisionを含むstage-level hardware-software co-designを主眼とする。",
+      "ConServe等のagentic serving研究とは長期multi-turn/agentic workloadという動機を共有するが、主対象はconversation-level schedulingではなく、workload geometryに応じたdisaggregation topologyと異種hardwareの設計空間である。",
+      "production serving engineではなくsimulation frameworkとして、分離方式の優劣とhardware specializationの効果を分解して調べることが主な貢献。"
     ],
     "limitations": [
-      "現実装とservice-rate calibrationはsingle-node A100/NVLink kernel family向け。他GPUではoccupancy、tile work、dependency recurrence、legal C range、service rateを再導出する必要がある。",
-      "最適化対象はGEMM2+GatherRSで、AllGather+GEMM1やattention等は変更しない。",
-      "complete-model評価はprefillのみで、decodeやonline-serving throughputは未評価。",
-      "短いinputではMegatron core-TEが速い点があり、全backendに対して全shapeで最速ではない。",
-      "DeepSeek-V2-Liteの最長complete-model条件は40GB A100でOOM。"
+      "主要throughput結論はsystem-level simulationであり、ND/PD/AF/PDAF全体を実機clusterでend-to-end再現した結果ではない。",
+      "component validationではTPは概ね実測に近いがPPはsimulationが実測latencyを0.67-0.90×に過小評価しており、pipeline-heavy設計の絶対値には不確実性がある。",
+      "量子化評価は1モデル相当とBFCL/GSM8Kの2 taskに限定され、全8モデルのjoint topology/hardware/precision searchは行っていない。",
+      "commercial GPU結果は特定cloud providerのcatalogとprice/budgetに依存し、別provider、最新GPU、将来価格でPDAFとPDの優劣が変わり得る。",
+      "500 requests/configurationのsimulation結果について本文から反復run、seed sweep、confidence intervalを確認できず、stochastic workloadに対する統計的頑健性は限定的。",
+      "simulator/config/evaluation scriptsはacceptance後公開予定とされ、arXiv v1時点では再現用artifactを直接検証できない。"
     ],
-    "implementation_status": "公開COMET A100 implementation in FLUXへ統合済みと論文が明記。論文評価はCOMET A100 V2 commit 19831ca、CUTLASS df8a550で実施。",
-    "research_positioning": "分散MoEの細粒度計算・通信重畳に対するlaunch-time resource allocation研究。実行機構そのものより、GPU resident CTAという有限・非preemptive資源とdependency pipelineを解析的に結ぶ点が中心。",
-    "audit_notes": "arXiv v1全文をIntroductionからConclusionまで再確認。system design、hardware/software、3 model、3 TP/EP、router trace、oracle regret、3測定境界、negative result、correctness、portability/decode limitationを確認し、追加auditを必須とする明確な未確認事項はない。"
+    "implementation_status": "HeteroPanaceaは論文中で実装されたevent-driven simulatorとして記述されるが、arXiv v1はfull simulator/configuration/evaluation scriptsをacceptance後に公開予定としており、公開済みrepositoryは本文から確認できない。",
+    "research_positioning": "主系統はLLM serving/scheduling/disaggregation。既存のPD-servingを、prefill/decode×attention/FFNの4段分離とstage専用異種hardwareまで拡張し、agentic workloadでdisaggregationが得になる条件をcross-stack simulationで特定するhardware-software co-design研究。MoE、mixed precision、parallelism searchも横断テーマとして含む。",
+    "audit_notes": "arXiv v1全文を確認し、main sweep、component validation、model ablation、stage-wise quantization、limitationsまで照合した。abstractの『up to 75%』、本文introの『up to 2.06×』、NPU average crossoverの『2.10× at I/O=10』は異なる比較/集約条件のheadline値として扱い、単一の最大値に統合しない。条件を分けて記録したため追加auditを必須とする未解決事項はない。"
   }
 }
