@@ -1,16 +1,17 @@
 # Queue-based survey workflow v10
 
-workflow v10は、v9で安定しているqueue/state/identity処理を維持しつつ、Chat→GitHubのartifact transportを**完成Markdown chunk**から**構造化research record**へ置き換える。
+workflow v10は、queue/state/identityをGitHub Actions側で管理し、Scheduled Chatは探索・全文精読・科学的判断・構造化research record作成を担当する。GitHub repositoryを唯一の正本とする。
 
 ## 1. Queue policy
 
-1. ready jobがある → priority順に、安全にsubmission保存まで完了できる範囲で可能な限り処理する。
-2. research / audit / discoveryの成果をActionsが反映した結果、ready jobが0件になる → 同じActions実行内でdiscovery jobを1件だけ生成する。
-3. discoveryは有望候補0〜5件。5件はノルマではない。
-4. research後、明確な確認事項が残った場合だけauditを要求する。
-5. 1件終わるたびActions反映後の最新queueを読む。
+1. ready jobがある場合はpriority順に処理する。
+2. 1件処理するたび、Actions反映後の最新queueを読む。
+3. readyが0件になればActionsがdiscovery jobを1件補充する。
+4. discoveryは有望候補0〜5件。5件はノルマではない。
+5. research後に明確な追加確認が必要な場合だけauditを生成する。
+6. 同一runでは `discovery → research → 必要ならaudit → queue再取得 → 次discovery` を、実行環境が許す限り繰り返す。
 
-固定の日次件数、旧cycle/run、固定research/audit比率、backlog数合わせは使わない。
+固定の日次件数、固定research/audit比率、固定バッチ数、旧cycle/runは使わない。
 
 ## 2. Ownership
 
@@ -24,7 +25,7 @@ workflow v10は、v9で安定しているqueue/state/identity処理を維持し�
 - duplicate pre-check
 - structured research record authoring
 - fixed record slot transport
-- GitHub connector write不能時のNotion temporary fallback
+- GitHub反映保留時のtemporary transport
 
 ### GitHub Actions
 
@@ -37,34 +38,32 @@ workflow v10は、v9で安定しているqueue/state/identity処理を維持し�
 - duplicate research suppression
 - ready=0時のdiscovery補充
 
-GitHub repositoryが唯一の正本。Notionはtransport failure時の一時保管のみ。
+NotionとChatGPT Libraryは一時配送キューとしてのみ使い、研究・paper・queueの正本にはしない。
 
 ## 3. Duplicate prevention
 
-未登録判定をGitHub code searchだけに依存しない。次をidentity正本として、Discovery候補提出前とresearch着手前に照合する。
+Discovery候補提出前とresearch着手前に、次をidentity正本として照合する。
 
 1. `.survey/survey-state/paper-identity-index.json`
 2. `.survey/survey-state/identity-deltas/**/*.json`
 3. `papers/inference/**` frontmatter
 
-canonical ID / arXiv ID / DOI / OpenReview IDを優先する。Actions側の `.survey/scripts/dedupe_queue.py` もdiscovery由来ready researchを再照合し、重複なら `superseded` にする。
+canonical ID / arXiv ID / DOI / OpenReview IDを優先する。GitHub code searchだけで未登録判定をしない。Actions側の `.survey/scripts/dedupe_queue.py` もdiscovery由来researchを再照合し、重複なら `superseded` にする。
 
 ## 4. Research quality
 
 一次資料本文を最後まで読む。全文取得不能ならcompletedにせずblocked/deferredとする。抄録・検索断片から欠落情報を推測しない。
 
-**本文の品質基準は `.survey/templates/paper.md` を正本とする。research / audit開始前に必ず読む。** テンプレート内でお手本として指定されている `papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md` を、論文未読者向け説明の基準にする。
+本文の品質基準は `.survey/templates/paper.md` を正本とする。新しい会話・実行環境では、テンプレートで例示する `papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md` も最初に確認する。
 
-構造化recordは内部メモではなく、rendererがほぼそのまま人間向け本文へ変換する原稿である。したがって、`problem_method` を略語・固有名・数式・箇条書きだけで圧縮しない。狭い分野の語は最初に平易な日本語で説明し、次の順で因果関係を文章化する。
+構造化recordは内部メモではなく、rendererが人間向け本文へ変換する原稿である。特に `problem_method` は次を文章で説明する。
 
 1. 何がボトルネックで、既存方式ではなぜ残るか。
-2. 手法全体で要求／トークン／重み／KV cache／activation等がどう流れるか。
-3. 各機構が何を観測し、何を保持し、何を選択・移動・削除・予測するか。
+2. request / token / weight / KV cache / activation等がどう流れるか。
+3. 各機構が何を観測・保持し、何を選択・移動・削除・予測するか。
 4. その処理がどの計算・memory・I/O・待ち時間を減らすか。
-5. 誤予測、通信増、resource不足、workload変化などで何が起きるか。
-6. 評価数値がなぜその条件で出たか、別条件でなぜ悪化するか。
-
-複数機構を持つsystem論文では、手法節が数段落の短い研究メモで終わらないようにする。`problem_method` の説明文量は最低限の自動検査も行うが、**文字数の下限を満たすこと自体を目標にしない**。MoE-Infinityのように、論文固有の概念を一つずつ噛み砕き、最後に全体の流れがつながることを優先する。
+5. 誤予測、通信増、resource不足、workload変化等で何が起きるか。
+6. 評価値がなぜその条件で出て、どの条件で悪化するか。
 
 最低限確認する情報:
 
@@ -83,25 +82,24 @@ canonical ID / arXiv ID / DOI / OpenReview IDを優先する。Actions側の `.s
 
 ### Paper path / filename
 
-論文ファイル名は、リポジトリで以前から使っている**年始まりの旧形式を正本**とする。researchで新規ファイルを作る場合、候補探索時の仮名をそのまま `paper_path` に使わず、一次資料から識別子と発表年を確認してから確定する。
+論文ファイル名は年始まりの既存形式へ統一する。
 
 - arXiv論文: `papers/inference/<lineage>/YYYY-YYMM.NNNNN-<slug>.md`
-  - 例: `papers/inference/01-offload-hierarchical-memory/2026-2608.13127-hbf-llm-serving.md`
-  - `YYMM.NNNNN` は frontmatter の `arxiv_id` と一致させる。
-- arXiv IDを持たない論文: 既存互換の `YYYY-<stable-key>-<slug>.md` または `YYYY-<slug>.md` とし、DOI・会議ID・プロジェクト名など一次資料から安定して決められる識別子があれば使う。
-- `<slug>` は小文字英数字とハイフンを基本とし、人間が論文・システムを識別できる短い名前にする。
-- `heteropanacea.md`、`estream.md`、`cacheflow.md` のような**年・識別子を欠く題名スラッグ単独の新規ファイルは禁止**する。
-- auditでは既存pathを原則維持する。識別子誤りや本規則から外れたpathを修正する場合だけ改名し、カテゴリREADME、`papers/inference/comparison.md`、identity indexなどの派生viewも同時に再生成する。
+- arXiv IDを持たない論文: `YYYY-<stable-key>-<slug>.md` または既存互換の `YYYY-<slug>.md`
+- `<slug>` は小文字英数字とハイフンを基本とする。
+- 年・識別子を欠く題名スラッグ単独の新規ファイルは作らない。
+- `paper_path` は一次資料から識別子と発表年を確認してから確定する。
+- auditでは既存pathを原則維持する。改名が必要な場合は派生viewもActionsで再生成する。
 
 ## 5. Structured record transport
 
-research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。Chatは同じ5 slotを持つ固定A/B bankを使用する。
+research/auditの通常経路では完成MarkdownをChatからGitHubへ送らない。固定A/B bankの5 JSON slotを使用する。
 
 - bank A: `.survey/work-queue/records/chat-record/`
 - bank B: `.survey/work-queue/records/chat-record-b/`
-- 各bankのslot: `metadata.json`, `problem_method.json`, `evaluation.json`, `results.json`, `positioning.json`
+- slots: `metadata.json`, `problem_method.json`, `evaluation.json`, `results.json`, `positioning.json`
 
-通常はAを使う。Aに別jobの途中保存が残り、そのjobを今すぐ完了できずAを上書きすると成果を失う場合だけBを使う。単に負荷分散するため交互利用しない。
+通常はAを使う。Aに別jobの途中保存があり、その内容がまだ他に耐久保存されていない場合だけBを使う。一時配送キューへ完全payloadを保存済みなら、partial slotは唯一の成果コピーではないためbankを後続jobへ再利用してよい。
 
 各slot envelope:
 
@@ -116,9 +114,19 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
 }
 ```
 
-slot上限は、`metadata` 8192 bytes、`problem_method` 16384 bytes、`evaluation` 12288 bytes、`results` 12288 bytes、`positioning` 8192 bytes。大きな単一Markdownを送る方式へ戻す意図ではなく、日本語の説明文を8 KiBに無理に圧縮しないための余裕である。冗長な重複は避けるが、事実・条件・重要な説明をサイズ合わせのために削らない。
+slot上限:
+
+- `metadata`: 8192 bytes
+- `problem_method`: 16384 bytes
+- `evaluation`: 12288 bytes
+- `results`: 12288 bytes
+- `positioning`: 8192 bytes
 
 ### metadata.data
+
+必須: `title`, `canonical_id`, `source`, `summary`。
+
+主なfield:
 
 ```json
 {
@@ -136,26 +144,21 @@ slot上限は、`metadata` 8192 bytes、`problem_method` 16384 bytes、`evaluati
 }
 ```
 
-`title`, `canonical_id`, `source`, `summary` は必須。
-
 ### problem_method.data
+
+`method_overview` と `components` は必須。複雑な論文では必要数のcomponentを使い、入力・状態・処理・出力・次段との接続・効果・境界条件が追える説明にする。
 
 ```json
 {
-  "problem": "論文未読者向けに、何が遅い／難しいかと既存方式の不足を説明する文章",
-  "novelty": "方式名の列挙ではなく、何を新たに分離・観測・予測・探索できるようにしたかを説明する文章",
-  "method_overview": "処理開始から終了までを5〜10文以上で追える手法全体の説明",
+  "problem": "...",
+  "novelty": "...",
+  "method_overview": "...",
   "components": [
-    {
-      "name": "固有名 — 何をする仕組みか",
-      "description": "入力・保持状態・処理・出力・なぜ効くか・外れた場合まで含む説明"
-    }
+    {"name": "...", "description": "..."}
   ],
-  "system_design": "各componentを通して1 request / 1 decode stepがどう進むかをつなぐ文章"
+  "system_design": "..."
 }
 ```
-
-`method_overview` と `components` は必須。複雑な論文ではcomponentsを必要数だけ増やし、略語を1行説明で済ませない。
 
 ### evaluation.data
 
@@ -166,35 +169,31 @@ slot上限は、`metadata` 8192 bytes、`problem_method` 16384 bytes、`evaluati
   "model": ["..."],
   "datasets": ["..."],
   "baselines": ["..."],
-  "settings": [
-    {"name": "page size", "description": "16"}
-  ],
+  "settings": [{"name": "...", "description": "..."}],
   "correctness": "...",
-  "methodology": "実機／simulation、測定方法、比較条件と注意点を説明",
-  "scope": "どこまで一般化できる評価かを説明"
+  "methodology": "...",
+  "scope": "..."
 }
 ```
 
 ### results.data
 
-主要値は可能な限り自由文へ埋めず、比較条件と一緒にレコード化する。ただし数値表だけにせず、まず `overview` で結果の意味を説明する。
+主要値は比較条件と一緒に構造化し、`overview` / `interpretation` で意味も説明する。
 
 ```json
 {
-  "overview": "何が分かり、なぜその条件で改善したかを先に説明する文章",
+  "overview": "...",
   "key_results": [
     {
-      "metric": "B1 decode speedup",
-      "value": "1.403±0.065×",
-      "baseline": "FlashInfer",
-      "condition": "5 held-out seeds, synchronized wall throughput",
-      "interpretation": "この倍率が何を意味し、何がbottleneckだったか"
+      "metric": "...",
+      "value": "...",
+      "baseline": "...",
+      "condition": "...",
+      "interpretation": "..."
     }
   ],
-  "negative_results": [
-    {"name": "B4", "description": "悪化条件と、その理由"}
-  ],
-  "interpretation": "複数結果をまとめて、どの条件なら採用価値があるかを説明",
+  "negative_results": [{"name": "...", "description": "..."}],
+  "interpretation": "...",
   "quality_impact": "..."
 }
 ```
@@ -203,7 +202,7 @@ slot上限は、`metadata` 8192 bytes、`problem_method` 16384 bytes、`evaluati
 
 ```json
 {
-  "differences": ["先行研究が何をして、この論文が何を追加したかを文章で説明"],
+  "differences": ["..."],
   "limitations": ["..."],
   "implementation_status": "...",
   "research_positioning": "...",
@@ -213,17 +212,17 @@ slot上限は、`metadata` 8192 bytes、`problem_method` 16384 bytes、`evaluati
 
 ## 6. Save protocol
 
-1. 同一job用の一意な `attempt_id` を決め、使用bank `a` / `b` を選ぶ。
+1. 同一job用の一意な `attempt_id` と使用bankを決める。
 2. `metadata` → `problem_method` → `evaluation` → `results` → `positioning` の順に処理する。
-3. 各固定slotを直前fetchし、現在blob SHA付きでupdateする。
-4. update成功後に返った新blob SHAを記録する。
-5. 途中失敗ならinboxを送らない。成功済みslotは保持し、job/attemptがまだ有効なら失敗slotだけ1回安全に再試行する。
-6. 選択bankの5 slotすべて保存成功後だけ固定 `.survey/work-queue/submissions/chat-inbox.json` をupdateする。
+3. 各slotは直前fetchした現在blob SHA付きでupdateする。
+4. update後のblob SHAを記録する。
+5. 途中で反映が保留になった場合はinboxを送らず、最新状態を取得して対象slotだけ1回再試行する。
+6. 5 slotすべて反映後だけ固定 `.survey/work-queue/submissions/chat-inbox.json` をupdateする。
 7. inboxの `record_slots` は5件固定・上記順序で、各 `slot`, `path`, `blob_sha` を入れる。
-8. Actionsの `.survey/scripts/assemble_research_record.py` が全slotを検証し、`.survey/scripts/render_paper.py` でrunner内だけにMarkdownを生成する。
+8. `.survey/scripts/assemble_research_record.py` がrecordを検証し、`.survey/scripts/render_paper.py` がrunner内でMarkdownを生成する。
 9. 既存 `queue_worker.py` へ一時 `payload_path` として渡す。
 10. transient Markdown/inbox変換はcommit前にrestoreする。
-11. inbox push時に旧resultがresetされた後、新しく生成されたresultが同一 `job_id` で `ok: true`、かつ最新queueでjob terminalになるまでslotを次jobで上書きしない。
+11. 新しいresultが同一 `job_id` で `ok: true`、かつ最新queueでjob terminalになるまで次jobでslotを上書きしない。ただし、そのattemptの完全payloadを一時配送キューへ耐久保存済みならbankは再利用できる。
 
 Inbox例:
 
@@ -235,7 +234,7 @@ Inbox例:
   "status": "completed",
   "record_bank": "a",
   "paper_path": "papers/inference/...md",
-  "expected_blob_sha": "existing paper update時のみ",
+  "expected_blob_sha": null,
   "record_slots": [
     {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "..."},
     {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "..."},
@@ -249,33 +248,27 @@ Inbox例:
 }
 ```
 
-`record_bank` と各 `record_slots[].path` は一致させる。bank Bではpath rootを `.survey/work-queue/records/chat-record-b/` に置き換える。
+bank Bではpath rootを `.survey/work-queue/records/chat-record-b/` に置き換える。
 
 ## 7. Discovery / blocked / deferred / rejected
 
-長いartifactが不要なので固定inboxだけをupdateする。新規submissionファイルを通常経路で作らない。
+長いartifactは不要なので固定inboxだけをupdateする。新規submissionファイルを通常経路で作らない。
 
-## 8. Notion transport fallback
+## 8. Temporary transport
 
-Notion接続先は公開repoへIDを書かず、予定タスクのprivate設定に保持する。
+接続先IDは公開repoへ書かず、予定タスクのprivate設定に保持する。
 
-### 退避する条件
+研究成果/更新payloadが完成しているがGitHubへの反映を完了できない場合（権限状態、接続状態、操作検証、SHA競合等）は、最新状態を取得して対象単位を1回再試行する。それでも反映できなければ、再投入に必要な完全logical payloadをNotion一時配送キューへ `pending` 保存する。Notionへ保存できなければChatGPT Libraryのprivate一時配送キューへ保存する。
 
-研究成果/更新payloadが完成しているが、次の理由でChat→GitHub transportを完了できない場合:
+Notion/Libraryへの一時保管はGitHub publication成功ではない。queue上のjobは未完了のままにする。ただし完全payloadの一時保管が成功した時点を後続jobへ進む耐久チェックポイントとし、同じrunを継続する。3つの保存先のいずれにも成果を保持できない場合のみ後続処理を停止する。
 
-- connector writeが403 / permission denied
-- GitHub write toolが実行中に利用不能になった
-- GitHub connector接続障害
-- write操作が安全検査で停止
-- SHA競合後、最新状態を取り直して1回再試行しても保存不能
+GitHub Actions内で最終反映が保留になった場合は入力済みなので外部キューへ重複保存せず、Actions側の再処理を優先する。
 
-GitHub Actions内部の最終push失敗はNotion退避対象外。入力はGitHubに届いているため、Actions側の再実行/10分scheduleで回復する。
+### Temporary payload
 
-### Notionに保存する論理payload
+1 attempt = 1 payload。少なくとも `Status=pending`, `Kind`, `Job ID`, `Attempt ID`, `Paper Path`, `Failure Class` と再投入に必要なlogical dataを保持する。
 
-1ページ=1 attempt。propertiesには少なくとも `Status=pending`, `Kind`, `Job ID`, `Attempt ID`, `Paper Path`, `Failure Class` を持たせる。本文には再投入に必要な論理データをJSONとして保存する。
-
-research/audit:
+research/audit例:
 
 ```json
 {
@@ -301,32 +294,30 @@ research/audit:
 }
 ```
 
-GitHub blob SHAはNotionへ固定しない。replay時に各固定slotを改めてfetch/updateし、その時に返った新SHAからinbox manifestを作る。
+GitHub blob SHAは一時配送キューへ固定しない。再投入時に各slotを改めてfetch/updateし、その時のblob SHAからinbox manifestを作る。
 
 ### Replay protocol
 
-各scheduled runの開始時、GitHub writeが使えるなら `pending` を確認する。
+各scheduled runの開始時に `pending` を確認する。
 
-1. pending pageを読む。
-2. 最新queue/identity/対象paperを再確認する。
-3. 同じ成果が未反映でjobがまだ適用可能なら `replaying` にする。
-4. 空いているv10 record bankを選び、固定slot/inboxへ通常protocolで再投入する。
+1. pending payloadを読む。
+2. 最新queue/identity/対象paperを確認する。
+3. 成果が未反映でjobがまだ適用可能なら `replaying` とする。
+4. 利用可能なv10 record bankへ通常protocolで再投入する。
 5. Actions resultとqueueを確認する。
-6. 成功時だけNotionを `replayed` にする。
-7. jobがすでにterminal/superseded、identity衝突、成果がstaleで安全に適用不能なら `dead_letter` とし、盲目的に反映しない。
-8. 再度connector障害なら `pending` のまま残す。
+6. 成功時だけ `replayed` とする。
+7. jobがterminal/superseded、identity衝突、成果がstale等で適用対象外なら理由を残して `dead_letter` とする。
+8. 再投入を完了できなければ `pending` のまま残す。
 
-Notion保存成功はGitHub publication成功ではない。queue上のjobをcompletedにしない。
+## 9. Transport integrity / connector rules
 
-## 9. Safety / connector rules
-
-- Scheduled Chatから `create_file` を通常運用で使わない。
-- paper/state/README/identity/queueを直接updateしない。
-- 予定タスクから書けるGitHub pathをA/B固定record slots、固定inbox、08:30用固定payload/inboxに限定する。
-- Base64、圧縮、難読化などを安全検査回避のために使わない。
-- 構造化JSONは操作サイズ・再試行粒度・検証性を改善するための形式であり、安全境界を迂回するためのものではない。
-- 単一write失敗で予定タスクを停止/無効化/自己変更しない。
-- completionはresult + latest queueで検証する。
+- Scheduled Chatから新規GitHub transport fileを通常運用で作らない。
+- paper/state/README/identity/queueをChatから直接updateしない。
+- 予定タスクから書けるpathはA/B固定record slots、固定inbox、08:30用固定payload/inboxに限定する。
+- 転送データは通常のUTF-8 JSON/Markdownとして扱い、既定の検証・承認条件を維持する。
+- 構造化JSONはpayload size、validation、partial retry、idempotencyを改善するために使用する。
+- 単一の反映保留で予定タスクを停止/無効化/自己変更しない。
+- completionはActions result + latest queueで検証する。
 
 ## 10. Compatibility
 
@@ -339,4 +330,4 @@ v10予定workerの通常経路では使わない。Actionsはv10 structured reco
 
 ## 11. Rationale / external evidence
 
-Scheduled Tasks / GitHub connectorの実効能力は、接続権限・実行環境・承認境界・API endpointごとに非対称になり得る。設計判断の根拠と固定URLは [references/github-connector-reliability.md](references/github-connector-reliability.md) を参照する。
+Scheduled Tasks / GitHub connectorの実効能力は、接続権限・実行環境・承認条件・API endpointごとに非対称になり得る。設計判断の根拠と固定URLは [references/github-connector-reliability.md](references/github-connector-reliability.md) を参照する。
