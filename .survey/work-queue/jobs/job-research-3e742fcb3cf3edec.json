@@ -8,10 +8,18 @@
   "source_url": "https://arxiv.org/abs/2608.16477",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/pallas.md",
   "selection_reason": "Proactive KV migration for serving handover; combines recomputation and suffix KV streaming in vLLM.",
-  "status": "ready",
+  "status": "superseded",
   "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
   "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 9,
-  "created_at": "2026-09-09T07:37:11+00:00"
+  "created_at": "2026-09-09T07:37:11+00:00",
+  "completed_at": "2026-09-09T07:58:17+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2608.16477",
+  "duplicate_of_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2608.16477"
+  }
 }
