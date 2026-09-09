@@ -25,6 +25,8 @@ Chatは探索・全文精読・科学的判断・監査判断と**構造化resea
 
 構造化recordは「後でMarkdown rendererが文章を補ってくれる」前提で短縮しない。特に `problem_method` は、論文固有の略語や機構名を列挙するメモではなく、**そのまま人間向け本文として読める説明文**を入れる。狭い分野の語は最初に平易な日本語で意味を説明し、手法が複数段ある場合は各段の入力・処理・出力・次段との接続・ボトルネックへの効果を書く。
 
+**GitHubへslotを書き始める前に `.survey/templates/paper.md` に対する最終品質チェックを行う。** 複数機構を持つsystem論文では、主要機構ごとの `components[].description` を原則2〜4段落程度の説明文にし、少なくとも「何を入力・観測するか」「何を選択・移動・削除・予測するか」「前後の機構とどう接続するか」「なぜボトルネックが減るか」「追加costと失敗・資源不足時の挙動」を読者が追える状態にする。論文固有または狭い分野の用語・略語・評価指標は初出で平易に説明する。`results` は数値ごとに比較対象・条件・結果の読み方を持たせ、悪化条件・negative resultも省略しない。`metadata.overview` が使える場合は、問題・従来方式・提案・対象環境・実機/simulationの別を数段落で記述する。これらを満たさないrecordは完成扱いにせず、そのrunで本文へ戻って補強してから送信する。
+
 **同一runで継続処理する。** 開始時に既存ready research/auditがあればpriority順に処理する。readyが尽きたらdiscoveryを実行し、Actions反映後の最新queueを読み直して、そのdiscoveryから生成されたresearch jobを同じrunで直ちに全文精読・構造化record保存・Actions結果確認まで進める。researchからauditが生成された場合も同じrunで処理する。各job完了後に必ず最新queueを再取得する。
 
 queueが再び空になりActionsが新しいdiscovery jobを補充した場合も、そのrunを終了せず次のdiscoveryへ進む。つまり **discovery → research → 必要ならaudit → 最新queue再取得 → 次discovery** を、実行環境が許す限り繰り返す。固定件数・固定バッチ数・「1本終わったら終了」の上限は設けない。
