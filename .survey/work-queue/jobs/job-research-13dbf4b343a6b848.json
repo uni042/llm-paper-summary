@@ -1,0 +1,17 @@
+{
+  "job_id": "job-research-13dbf4b343a6b848",
+  "type": "research",
+  "parent_job_id": "job-421367df2f6cb34d",
+  "priority": 76,
+  "canonical_id": "arxiv:2608.13127",
+  "title": "Potential Applications of HBF in LLM Serving Systems",
+  "source_url": "https://arxiv.org/abs/2608.13127",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/hbf-llm-serving.md",
+  "selection_reason": "Examines High-Bandwidth Flash as an additional serving-memory tier for MoE expert residency and multi-model serving. It directly targets capacity pressure in model-state residency and is relevant to SSD/flash-aware inference-system design.",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T05:43:28+00:00"
+}
