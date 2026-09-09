@@ -4,13 +4,14 @@ on:
   push:
     paths:
       - '.survey/requests/*.json'
+      - '.survey/work-queue/submissions/*.json'
   issues:
     types: [opened, edited]
   issue_comment:
     types: [created]
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '3/10 * * * *'
 
 permissions:
   contents: write
@@ -108,7 +109,7 @@ jobs:
         run: python .survey/scripts/action_worker.py
 
       - name: Process pending submissions
-        if: github.run_attempt > 1
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.run_attempt > 1
         run: python .survey/scripts/submission_worker.py
 
       - name: Run queue state worker
