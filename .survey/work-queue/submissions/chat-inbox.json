@@ -1,24 +1,34 @@
 {
-  "submission_id": "chat-job-research-ca0b817c2ba85ba8-20260909-recover",
-  "attempt_id": "persistentkv-recover-20260909-01",
-  "job_id": "job-research-ca0b817c2ba85ba8",
-  "status": "completed",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/persistentkv.md",
-  "payload_chunks": [
+  "submission_id":"chat-job-47c0986a7df1a7c1-20260909-1932",
+  "attempt_id":"discovery-20260909-1932-02",
+  "job_id":"job-47c0986a7df1a7c1",
+  "candidates":[
     {
-      "path": ".survey/work-queue/payloads/chat-chunks/part-01.md",
-      "blob_sha": "cc9d4f8cd226cb2f095e257b717c507bfd79cb52"
+      "canonical_id":"arxiv:2609.06551",
+      "title":"EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs",
+      "source_url":"https://arxiv.org/abs/2609.06551",
+      "paper_path":"papers/inference/08-edge-on-device-llm-systems/estream.md",
+      "priority":92,
+      "reason":"Mobile NPU MoE serving with UFS-backed expert virtualization.",
+      "evidence":["2.25-27.57x pure-prefill TTFT speedup; 1.19-12.29x lower peak memory."]
     },
     {
-      "path": ".survey/work-queue/payloads/chat-chunks/part-02.md",
-      "blob_sha": "a8f964637e28aeba4f4381ab6551f9713985e805"
+      "canonical_id":"arxiv:2609.07536",
+      "title":"Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap",
+      "source_url":"https://arxiv.org/abs/2609.07536",
+      "paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/moe-overlap-resource-manager.md",
+      "priority":89,
+      "reason":"Launch-time SM resource management for fine-grained MoE inference overlap.",
+      "evidence":["3.22% mean oracle regret; 1.185x geometric-mean complete-model prefill speedup over COMET."]
     },
     {
-      "path": ".survey/work-queue/payloads/chat-chunks/part-03.md",
-      "blob_sha": "957e7917f07169958981a5875945883d95897f9f"
+      "canonical_id":"arxiv:2609.05425",
+      "title":"Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server",
+      "source_url":"https://arxiv.org/abs/2609.05425",
+      "paper_path":"papers/inference/11-llm-serving-scheduling-disaggregation/cotail.md",
+      "priority":82,
+      "reason":"Diagnoses and mitigates host-CPU co-location interference in LLM serving.",
+      "evidence":["Unprotected co-location cuts throughput 78.8%; guided protection reduces TPOT up to 4.5x."]
     }
-  ],
-  "audit_required": false,
-  "audit_reason": null,
-  "audit_flags": []
+  ]
 }
