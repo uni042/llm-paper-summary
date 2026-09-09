@@ -1,21 +1,18 @@
 {
-  "job_id": "job-b85aa562e0f7a2d9",
-  "candidates": [
-    {
-      "canonical_id": "arxiv:2608.03741",
-      "title": "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference",
-      "source_url": "https://arxiv.org/abs/2608.03741",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/heteropanacea.md",
-      "priority": 88,
-      "reason": "Agentic serving向けにprefill/decode/attention/FFN分離を異種ハードウェア上で評価する新しい設計空間を扱う。"
-    },
-    {
-      "canonical_id": "arxiv:2605.29639",
-      "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
-      "source_url": "https://arxiv.org/abs/2605.29639",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/rtp-llm.md",
-      "priority": 84,
-      "reason": "Alibaba実運用の統合推論エンジンで、分離serving、多階層KV cache、投機的デコード、量子化等を横断的に評価する。"
-    }
-  ]
+  "submission_id": "chat-job-research-85c54a348e38b072",
+  "attempt_id": "attempt-heteropanacea-20260909-2258-v10-a1",
+  "job_id": "job-research-85c54a348e38b072",
+  "status": "completed",
+  "record_bank": "a",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/heteropanacea.md",
+  "record_slots": [
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "2899ff013a353104687e796930fe3299487923e2"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "3737ea13261adad595053c2bb2c757816ea0fe79"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "7b0fcd64e189cf35420de6091b63919171670cb5"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "7cddb0b4f060408e7ad4e07b2ea767a99888cdf4"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "049ef1ac56b15069700bd1fc1540cdae4f25a93b"}
+  ],
+  "audit_required": false,
+  "audit_reason": null,
+  "audit_flags": []
 }
