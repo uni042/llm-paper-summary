@@ -9,7 +9,7 @@
 
 ## 実行前の共通回復
 
-GitHub writeが利用可能な場合、外部設定されたNotion退避キューの `pending` と、private設定で指定されたChatGPT Library fallbackの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。再投入中は `replaying`、Actionsの成功確認後のみ `replayed` とする。すでにterminal/supersededで安全に適用できないものは盲目的に反映せず `dead_letter` とし理由を残す。
+GitHubへの反映が利用可能な場合、外部設定されたNotion一時配送キューの `pending` と、private設定で指定されたChatGPT Library一時配送キューの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。再投入中は `replaying`、Actionsの成功確認後のみ `replayed` とする。すでにterminal/supersededで適用対象外になったものは盲目的に反映せず `dead_letter` とし理由を残す。
 
 GitHub readができない場合は、repo状態に依存する新規処理を開始しない。
 
@@ -19,7 +19,7 @@ GitHub readができない場合は、repo状態に依存する新規処理を�
 
 **research / auditに着手する前に `.survey/templates/paper.md` を必ず読む。** テンプレート内で品質基準として指定されている [MoE-Infinity のまとめ](../../../papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) も、少なくとも新しい実行環境・新しい会話で最初に1回は確認する。以降の論文は、論文未読者が背景・手法・データの流れ・なぜ効くか・効かない条件まで追える説明密度を基準にする。
 
-Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditはqueue-v10で定義されたA/B固定record bankのうち安全に使える1 bankの5 JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。通常はA、Aに別jobの途中保存が残る場合だけBを使う。paper/state/README/identity/queueをChatから直接編集しない。
+Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditはqueue-v10で定義されたA/B固定record bankのうち利用可能な1 bankの5 JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。通常はA、Aに別jobの途中保存が残る場合だけBを使う。paper/state/README/identity/queueをChatから直接編集しない。
 
 構造化recordは「後でMarkdown rendererが文章を補ってくれる」前提で短縮しない。特に `problem_method` は、論文固有の略語や機構名を列挙するメモではなく、**そのまま人間向け本文として読める説明文**を入れる。狭い分野の語は最初に平易な日本語で意味を説明し、手法が複数段ある場合は各段の入力・処理・出力・次段との接続・ボトルネックへの効果を書く。
 
@@ -27,9 +27,9 @@ Chatは探索・全文精読・科学的判断・監査判断と**構造化resea
 
 queueが再び空になりActionsが新しいdiscovery jobを補充した場合も、そのrunを終了せず次のdiscoveryへ進む。つまり **discovery → research → 必要ならaudit → 最新queue再取得 → 次discovery** を、実行環境が許す限り繰り返す。固定件数・固定バッチ数・「1本終わったら終了」の上限は設けない。
 
-GitHubへの成果保存が失敗しても、完全な再送可能logical payloadをNotionまたはChatGPT Libraryのfallbackへ耐久保存できた時点ではrunを停止しない。そのjobはqueue上では未完了のまま残すが、fallback保存を**後続jobへ進むための耐久チェックポイント**として扱い、同じrunで次のready jobへ進む。fallback保存済みpayloadがそのattemptの完全な再送情報を持つなら、GitHub固定record bankに残ったpartial slotは唯一の成果コピーではないため、後続jobのためにそのbankを再利用してよい。inbox未送信のpartial slotだけを理由にA/B bankを恒久占有しない。
+GitHubへの成果反映を完了できなくても、完全な再送可能logical payloadをNotionまたはChatGPT Libraryの一時配送キューへ耐久保存できた時点ではrunを停止しない。そのjobはqueue上では未完了のまま残すが、一時保管を**後続jobへ進むための耐久チェックポイント**として扱い、同じrunで次のready jobへ進む。一時保管済みpayloadがそのattemptの完全な再送情報を持つなら、GitHub固定record bankに残ったpartial slotは唯一の成果コピーではないため、後続jobのためにそのbankを再利用してよい。inbox未送信のpartial slotだけを理由にA/B bankを恒久占有しない。
 
-次回へ残してよいのは、全文取得不能、GitHub read不能、明確な時間・実行回数・コンテキスト等のプラットフォーム上限、未解決の依存、またはGitHub/Notion/Libraryのいずれにも次成果を安全に耐久保存できない場合だけとする。単にGitHub writeが失敗した、Notion writeが失敗した、discoveryが終わった、1本処理した、queueへ次jobが現れた、あるいは一度queueが空になったことを終了理由にしない。停止時点でqueueに残ったjobとfallback pendingは次回runが引き継ぐ。
+次回へ残してよいのは、全文取得不能、GitHub read不能、明確な時間・実行回数・コンテキスト等のプラットフォーム上限、未解決の依存、またはGitHub/Notion/Libraryのいずれにも次成果を耐久保存できない場合だけとする。単にGitHubやNotionへの反映が保留になった、discoveryが終わった、1本処理した、queueへ次jobが現れた、あるいは一度queueが空になったことを終了理由にしない。停止時点でqueueに残ったjobと一時配送キューのpendingは次回runが引き継ぐ。
 
 Discovery / blocked / deferred / rejectedは長文artifact不要なので、固定inboxだけを小さくupdateしてよい。
 
@@ -42,12 +42,12 @@ Discovery / blocked / deferred / rejectedは長文artifact不要なので、固�
 
 論文queueには触れない。Chatは対象ファイルを直接編集せず、既存の固定 `.survey/update-worker/update-payload.json` と `.survey/update-worker/update-inbox.json` だけを使い、Actionsへ反映を委譲する。既存ファイルは現在blob SHA付きcompact editを優先する。
 
-## GitHub connector障害
+## GitHub反映保留時の扱い
 
-書き込みが403/permission denied、write tool unavailable、安全検査、接続障害、またはSHA再取得後の再試行でも失敗した場合、成果を完了扱いにしない。論理payloadを外部設定されたNotion退避キューへ `pending` として保存する。Notionにも保存できない場合は、private設定で指定されたChatGPT Library fallbackへ再送可能な完全payloadを `pending` 保存する。
+GitHub側でwriteを完了できない場合（権限状態、接続状態、操作検証、SHA競合など）は、最新状態を取り直して対象単位を1回再試行する。それでも反映できなければ成果を完了扱いにせず、論理payloadを外部設定されたNotion一時配送キューへ `pending` として保存する。Notionにも保存できない場合は、private設定で指定されたChatGPT Library一時配送キューへ再送可能な完全payloadを `pending` 保存する。
 
-NotionまたはLibraryへのfallback保存が成功した場合、GitHub publication成功とは扱わずqueue上のjobは未完了のままにする一方、同じrunの後続job処理は継続する。GitHub/Notion/Libraryの全保存先が失敗した場合だけ、その成果を安全に保持できないため後続処理を停止して報告する。
+NotionまたはLibraryへの一時保管が成功した場合、GitHub publication成功とは扱わずqueue上のjobは未完了のままにする一方、同じrunの後続job処理は継続する。3つの保存先のいずれにも成果を保持できない場合だけ、その成果を保持できないため後続処理を停止して報告する。
 
-Notion/LibraryはGitHubの代替正本ではない。GitHub Actions内のpush失敗はGitHub入力済みなので外部fallbackへ重複退避しない。
+Notion/LibraryはGitHubの代替正本ではない。GitHub Actions内のpushが保留になった場合は入力がGitHubに届いているため外部の一時配送キューへ重複保存せず、Actions側の再処理を優先する。
 
-単一失敗を理由に予定タスク自身を停止・無効化・再作成しない。
+単一の反映保留を理由に予定タスク自身を停止・無効化・再作成しない。
