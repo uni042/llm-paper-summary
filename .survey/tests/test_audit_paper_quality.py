@@ -26,6 +26,11 @@ class PaperTargetDetectionTests(unittest.TestCase):
             path = self._write(Path(tmp), "README.md", "# Index\n")
             self.assertFalse(AUDIT.is_paper_summary(path))
 
+    def test_comparison_page_is_excluded(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self._write(Path(tmp), "comparison.md", "# 推論研究の横断比較\n")
+            self.assertFalse(AUDIT.is_paper_summary(path))
+
     def test_plain_moved_stub_is_excluded(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             path = self._write(Path(tmp), "old.md", "# Moved\n\nSee new path.\n")
@@ -81,11 +86,43 @@ class MethodHeadingCompatibilityTests(unittest.TestCase):
         self.assertEqual(len(method_blocks), 4)
         self.assertEqual(sorted(len(v) for v in method_components.values()), [2, 2])
 
-    def test_proposed_method_heading_counts_as_method(self) -> None:
+    def test_method_heading_variants(self) -> None:
         self.assertTrue(AUDIT.is_method_heading("提案手法"))
         self.assertTrue(AUDIT.is_method_heading("手法のあらまし"))
         self.assertTrue(AUDIT.is_method_heading("手法：全体像"))
+        self.assertTrue(AUDIT.is_method_heading("手法1: シナリオごとのグループ"))
         self.assertFalse(AUDIT.is_method_heading("評価手法"))
+
+    def test_structured_method_equivalent_accepts_detailed_multi_section_summary(self) -> None:
+        paragraph = (
+            "入力状態を観測して処理対象を決め、その判断結果に応じて配置を変更する。"
+            "失敗時は通常経路へ戻し、余分な転送だけが増えるようにする。"
+        )
+        parts = ["# Example", "", "## 背景", "", paragraph]
+        for title in ["大粒度チャンクへまとめる", "層単位で先読みする", "動的に配置を変更する"]:
+            parts += ["", f"## {title}", ""]
+            parts += [paragraph, "", paragraph, "", paragraph, "", paragraph, "", paragraph, "", paragraph, ""]
+        lines = parts
+        blocks, _, _ = AUDIT.prose_blocks(lines)
+        prose_chars = sum(len(x) for x in blocks)
+        self.assertGreaterEqual(prose_chars, AUDIT.STRUCTURED_METHOD_MIN_PROSE_CHARS)
+        self.assertGreaterEqual(len(blocks), AUDIT.STRUCTURED_METHOD_MIN_PARAGRAPHS)
+        self.assertTrue(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
+
+    def test_short_summary_without_method_is_not_structured_equivalent(self) -> None:
+        lines = """# Example
+
+## 背景
+
+短い説明文だけがあり、手法を十分には説明していない。
+
+## 評価
+
+結果だけを書く。
+""".splitlines()
+        blocks, _, _ = AUDIT.prose_blocks(lines)
+        prose_chars = sum(len(x) for x in blocks)
+        self.assertFalse(AUDIT.structured_method_equivalent(lines, prose_chars, len(blocks)))
 
 
 if __name__ == "__main__":
