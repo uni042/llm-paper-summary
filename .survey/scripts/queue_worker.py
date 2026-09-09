@@ -9,9 +9,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import survey  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "work-queue"
@@ -198,10 +203,11 @@ def existing_candidate_keys():
             v = j.get(k)
             if v:
                 keys.add(str(v).strip().lower())
-    # Compact identity snapshot from the existing repository, when available.
+
+    # Identity snapshot and deltas.
     identity = read_json(ROOT / "survey-state" / "paper-identity-index.json", {})
     if isinstance(identity, dict):
-        records = identity.get("papers") or identity.get("records") or identity.get("items") or []
+        records = identity.get("papers") or {}
         if isinstance(records, dict):
             records = list(records.values())
         if isinstance(records, list):
@@ -212,6 +218,33 @@ def existing_candidate_keys():
                     v = rec.get(k)
                     if v:
                         keys.add(str(v).strip().lower())
+    delta_root = ROOT / "survey-state" / "identity-deltas"
+    if delta_root.exists():
+        for p in delta_root.rglob("*.json"):
+            rec = read_json(p, {})
+            for v in [rec.get("canonical_id"), *(rec.get("identifiers") or [])]:
+                if v:
+                    keys.add(str(v).strip().lower())
+
+    # Final guard: scan current paper frontmatter so stale/absent snapshots cannot
+    # allow a paper already present in the repository back into the queue.
+    survey.ROOT = ROOT
+    for rel in survey.papers():
+        try:
+            meta, _ = survey.front(ROOT / rel)
+        except Exception:
+            continue
+        for k in ("canonical_id", "arxiv_id", "doi", "openreview_id", "source", "title"):
+            v = meta.get(k)
+            if not v:
+                continue
+            keys.add(str(v).strip().lower())
+            if k == "arxiv_id":
+                keys.add(("arxiv:" + str(v)).strip().lower())
+            elif k == "doi":
+                keys.add(("doi:" + str(v)).strip().lower())
+            elif k == "openreview_id":
+                keys.add(("openreview:" + str(v)).strip().lower())
     return keys
 
 
@@ -252,7 +285,14 @@ def make_audit_job(sub: dict, research_job: dict):
     return add_job({
         "job_id": jid,
         "type": "audit",
-        "priority": max(40, int(research_job.get("priority") or 50)),
+        "priority": max(
+            40,
+            min(
+                74,
+                int(research_job.get("priority") or 50) - 15
+                + (10 if sub.get("audit_flags") else 0),
+            ),
+        ),
         "canonical_id": research_job.get("canonical_id"),
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
@@ -335,7 +375,9 @@ def apply_artifact(sub: dict, job: dict):
     content = sub["content"].rstrip() + "\n"
     target = ROOT.parent / paper
     expected_sha = sub.get("expected_blob_sha")
-    if target.exists() and expected_sha:
+    if target.exists():
+        if not expected_sha:
+            raise ValueError("expected_blob_sha is required when updating an existing paper")
         import subprocess
         p = subprocess.run(["git", "rev-parse", f"HEAD:{paper}"], cwd=ROOT.parent, text=True, capture_output=True)
         current = p.stdout.strip() if p.returncode == 0 else None
@@ -343,7 +385,19 @@ def apply_artifact(sub: dict, job: dict):
             raise ValueError(f"paper blob changed: expected {expected_sha}, current {current}")
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(content, encoding="utf-8")
-    return paper
+
+    # Keep connector-safe identity state current without rewriting the compact
+    # index. The normal 10-minute worker may compact deltas separately later.
+    import subprocess
+    p = subprocess.run(
+        [sys.executable, ".survey/scripts/identity_delta.py", "prepare", "--paper", paper],
+        cwd=ROOT.parent,
+        text=True,
+        capture_output=True,
+    )
+    if p.returncode != 0:
+        raise RuntimeError("identity delta failed: " + (p.stderr or p.stdout))
+    return {"paper": paper, "identity_delta": p.stdout.strip()}
 
 
 def process_submissions(st: dict):
