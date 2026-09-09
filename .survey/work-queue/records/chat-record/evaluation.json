@@ -2,24 +2,45 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
-  "job_id": "job-research-7a4628493bc11731",
+  "attempt_id": "attempt-jacap-20260909-2320-v10-a1",
+  "job_id": "job-research-0b935acaddfdc935",
   "data": {
-    "hardware": ["evaluation servers: Linux 5.10 x86_64, 64 CPU cores, 600 GB RAM, 8 GPUs per server", "PD production evaluation: 5 nodes x 8 GPUs; 4 prefill nodes and 1 decode node", "NCCL IBRC over InfiniBand for prefill-to-decode KV transfer", "NVLink-class high-speed intra-node interconnect assumed for tensor parallel communication"],
-    "software": ["RTP-LLM C++ serving engine", "Alibaba 3FS distributed storage", "RDMA remote CPU KV cache", "DeepEP for MoE All2All", "IBM fastsafetensors integration plus RTP fastsafetensors", "NCCL", "official open-source alibaba/rtp-llm"],
-    "model": ["Qwen 7B and Qwen 4B production traffic services", "Qwen3-Coder-480B-A35B-Instruct-FP8", "DeepSeek-V3-0324", "Qwen3-235B-A22B with MTP", "Qwen3-32B", "Qwen/Qwen2.5-VL-7B-Instruct", "additional 8B-32B models including Qwen3-8B, Qwen2.5-14B-Instruct and Moonlight-16B-A3B for loading"],
-    "datasets": ["real Alibaba internal Robot Q&A traffic", "real Taobao Merchant Service traffic", "1,000 real merchant data-agent queries", "WikiText-2 sampled subset for quantization perplexity", "GQA for multimodal framework comparison"],
-    "baselines": ["vLLM", "SGLang", "traffic scheduling disabled within RTP-LLM for production scheduling ablation", "multiple TP/DP deployment configurations under equal GPU budget"],
-    "settings": [
-      {"name": "production comparison workload", "description": "For PD disaggregation and speculative sampling framework comparisons, paper states input 200K tokens and output 16K tokens throughout."},
-      {"name": "PD large-MoE deployment", "description": "Qwen3-Coder-480B-A35B-Instruct-FP8 with FP8 KV cache; 5 nodes, each 8 GPUs; prefill 4 nodes/decode 1 node; TP=8, EP=8, DP=1 per node; prefill batch 64, decode concurrency 128."},
-      {"name": "speculative controlled test", "description": "DeepSeek-V3-0324, TP=8/DP=1, max_batch_size=32, max_new_tokens=500, FP8 KV cache, speculative step size 1."},
-      {"name": "real MTP test", "description": "Qwen3-235B-A22B, 1,000 production queries, average input 19.5K and output 800 tokens, concurrency 64-512; compares 4TPx4, 1TP8DP, 2TP4DP, 2TP8DP."},
-      {"name": "quantization test", "description": "Qwen3-32B single GPU, max_batch_size=64, top-p=1, top-k=1, temperature=0; max_new_tokens 500/800/1000/1200; Baseline, AWQ(FP8), FP8 KV cache."},
-      {"name": "multimodal test", "description": "Qwen2.5-VL-7B-Instruct on GQA, TP=2 across two GPUs, max_batch_size=64, max_new_tokens=500, top-p=1, top-k=1, temperature=0."}
+    "hardware": [
+      "4x NVIDIA RTX Pro 6000 GPUs",
+      "1024 GB system memory",
+      "runtime appendix: Qwen3-8B generation-time benchmark uses a single NVIDIA RTX Pro 6000 GPU"
     ],
-    "correctness": "Speculative sampling follows proposal-score-verify-update semantics intended to preserve target-model output distribution. Quantization fidelity is measured by WikiText-2 perplexity: reported configurations span PPL 7.59-8.09 versus baseline 7.59-7.67, with RTP-LLM within 0.01 PPL of baseline in the compared AWQ/FP8-KV settings described by the paper. Multimodal framework comparison uses identical decoding parameters.",
-    "methodology": "Evaluation intentionally mixes production A/B-style workloads and controlled framework benchmarks. Traffic scheduling is measured against the same service with scheduling disabled; PD and speculative decoding use real online models/workloads as well as framework baselines; model loading, quantization, and EPD use controlled comparisons against vLLM/SGLang.",
-    "scope": "Strongest evidence is production deployment and end-to-end engineering effectiveness, but different subsections use different models/workloads/configurations. The paper does not establish that every RTP-LLM component individually causes the full headline speedups, and does not report broad statistical confidence intervals across repeated deployments."
+    "software": [
+      "Ubuntu 22.04",
+      "Jacap-specific official code repository was not linked in arXiv v1"
+    ],
+    "model": [
+      "Qwen3-8B",
+      "Qwen3-14B",
+      "Llama3.1-8B",
+      "Nemotron-7B"
+    ],
+    "datasets": [
+      "LongBench",
+      "Needle-in-a-Haystack (NIAH)",
+      "AIME25"
+    ],
+    "baselines": [
+      "CapKV",
+      "SnapKV",
+      "KeyDiff",
+      "Expected Attention (EA)",
+      "KNorm"
+    ],
+    "settings": [
+      {"name": "LongBench", "description": "Qwen3-8B, Qwen3-14B, Llama3.1-8B; compression ratios 0.25, 0.5, 0.75, 0.9; main discussion emphasizes 0.75/0.9."},
+      {"name": "NIAH", "description": "Qwen3-8B; compression ratio 0.75 in main text and 0.5 in appendix; context lengths 10k-120k tokens; needle depths 0.15-0.95."},
+      {"name": "decoding eviction", "description": "AIME25 with Nemotron-7B; reserved-token budgets 2048, 4096, 8192, 16384."},
+      {"name": "temperature ablation", "description": "Qwen3-8B LongBench; best overall behavior around tau=10."},
+      {"name": "runtime", "description": "Generate 100 tokens with Qwen3-8B on one RTX Pro 6000; input contexts 8k-64k; compression ratios 0.6 and 0.8."}
+    ],
+    "correctness": "Jacap is a lossy KV-cache eviction method: discarded states can change model outputs, so equivalence to the uncompressed model is not guaranteed. Quality is measured on LongBench, NIAH, and AIME25. No retraining is required.",
+    "methodology": "Three long-context model architectures are compared on LongBench, sparse long-range retrieval is stressed with NIAH, dynamic decode-time eviction is tested with AIME25, and Appendix C measures runtime overhead. Query statistics are estimated from historical decoding queries; diagonal covariance is used in practice.",
+    "scope": "Evidence supports retention quality under KV compression rather than a complete serving-system speedup claim. Runtime is described as comparable to mainstream baselines, but exact Figure 5 timings are not tabulated in the HTML text. Theoretical per-layer/eviction complexity is O(N d_h^2 + d_h^3)."
   }
 }
