@@ -53,6 +53,19 @@ canonical ID / arXiv ID / DOI / OpenReview IDを優先する。Actions側の `.s
 
 一次資料本文を最後まで読む。全文取得不能ならcompletedにせずblocked/deferredとする。抄録・検索断片から欠落情報を推測しない。
 
+**本文の品質基準は `.survey/templates/paper.md` を正本とする。research / audit開始前に必ず読む。** テンプレート内でお手本として指定されている `papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md` を、論文未読者向け説明の基準にする。
+
+構造化recordは内部メモではなく、rendererがほぼそのまま人間向け本文へ変換する原稿である。したがって、`problem_method` を略語・固有名・数式・箇条書きだけで圧縮しない。狭い分野の語は最初に平易な日本語で説明し、次の順で因果関係を文章化する。
+
+1. 何がボトルネックで、既存方式ではなぜ残るか。
+2. 手法全体で要求／トークン／重み／KV cache／activation等がどう流れるか。
+3. 各機構が何を観測し、何を保持し、何を選択・移動・削除・予測するか。
+4. その処理がどの計算・memory・I/O・待ち時間を減らすか。
+5. 誤予測、通信増、resource不足、workload変化などで何が起きるか。
+6. 評価数値がなぜその条件で出たか、別条件でなぜ悪化するか。
+
+複数機構を持つsystem論文では、手法節が数段落の短い研究メモで終わらないようにする。`problem_method` の説明文量は最低限の自動検査も行うが、**文字数の下限を満たすこと自体を目標にしない**。MoE-Infinityのように、論文固有の概念を一つずつ噛み砕き、最後に全体の流れがつながることを優先する。
+
 最低限確認する情報:
 
 - 書誌・版・著者/所属
@@ -91,7 +104,7 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
 }
 ```
 
-各slot最大8192 bytes。通常は数百〜数千byteを目安とし、冗長な重複を避ける。ただし事実・条件・重要な説明を削ってサイズ合わせをしない。
+slot上限は、`metadata` 8192 bytes、`problem_method` 16384 bytes、`evaluation` 12288 bytes、`results` 12288 bytes、`positioning` 8192 bytes。大きな単一Markdownを送る方式へ戻す意図ではなく、日本語の説明文を8 KiBに無理に圧縮しないための余裕である。冗長な重複は避けるが、事実・条件・重要な説明をサイズ合わせのために削らない。
 
 ### metadata.data
 
@@ -117,15 +130,20 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
 
 ```json
 {
-  "problem": "...",
-  "novelty": "...",
-  "method_overview": "...",
+  "problem": "論文未読者向けに、何が遅い／難しいかと既存方式の不足を説明する文章",
+  "novelty": "方式名の列挙ではなく、何を新たに分離・観測・予測・探索できるようにしたかを説明する文章",
+  "method_overview": "処理開始から終了までを5〜10文以上で追える手法全体の説明",
   "components": [
-    {"name": "component", "description": "..."}
+    {
+      "name": "固有名 — 何をする仕組みか",
+      "description": "入力・保持状態・処理・出力・なぜ効くか・外れた場合まで含む説明"
+    }
   ],
-  "system_design": "..."
+  "system_design": "各componentを通して1 request / 1 decode stepがどう進むかをつなぐ文章"
 }
 ```
+
+`method_overview` と `components` は必須。複雑な論文ではcomponentsを必要数だけ増やし、略語を1行説明で済ませない。
 
 ### evaluation.data
 
@@ -140,31 +158,31 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
     {"name": "page size", "description": "16"}
   ],
   "correctness": "...",
-  "methodology": "...",
-  "scope": "..."
+  "methodology": "実機／simulation、測定方法、比較条件と注意点を説明",
+  "scope": "どこまで一般化できる評価かを説明"
 }
 ```
 
 ### results.data
 
-主要値は可能な限り自由文へ埋めず、比較条件と一緒にレコード化する。
+主要値は可能な限り自由文へ埋めず、比較条件と一緒にレコード化する。ただし数値表だけにせず、まず `overview` で結果の意味を説明する。
 
 ```json
 {
-  "overview": "...",
+  "overview": "何が分かり、なぜその条件で改善したかを先に説明する文章",
   "key_results": [
     {
       "metric": "B1 decode speedup",
       "value": "1.403±0.065×",
       "baseline": "FlashInfer",
       "condition": "5 held-out seeds, synchronized wall throughput",
-      "interpretation": "..."
+      "interpretation": "この倍率が何を意味し、何がbottleneckだったか"
     }
   ],
   "negative_results": [
-    {"name": "B4", "description": "..."}
+    {"name": "B4", "description": "悪化条件と、その理由"}
   ],
-  "interpretation": "...",
+  "interpretation": "複数結果をまとめて、どの条件なら採用価値があるかを説明",
   "quality_impact": "..."
 }
 ```
@@ -173,7 +191,7 @@ research/auditの通常経路では完成MarkdownをGitHub APIへ送らない。
 
 ```json
 {
-  "differences": ["..."],
+  "differences": ["先行研究が何をして、この論文が何を追加したかを文章で説明"],
   "limitations": ["..."],
   "implementation_status": "...",
   "research_positioning": "...",
