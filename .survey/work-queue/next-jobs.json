@@ -7,24 +7,12 @@
       "completed": 3
     },
     "research": {
-      "completed": 12,
+      "completed": 13,
       "superseded": 3,
-      "ready": 2
+      "ready": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-85c54a348e38b072",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arxiv:2608.03741",
-      "title": "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference",
-      "source_url": "https://arxiv.org/abs/2608.03741",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/heteropanacea.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-7a4628493bc11731",
       "type": "research",
@@ -38,5 +26,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-09T13:33:05+00:00"
+  "generated_at": "2026-09-09T14:03:04+00:00"
 }
