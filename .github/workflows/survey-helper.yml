@@ -40,7 +40,10 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Assemble chunked Chat payload transiently
+      - name: Render structured Chat research record transiently
+        run: python .survey/scripts/assemble_research_record.py --repo-root .
+
+      - name: Assemble legacy chunked Chat payload transiently
         run: python .survey/scripts/assemble_chat_chunks.py --repo-root .
 
       - name: Suppress stale duplicate research jobs
