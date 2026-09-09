@@ -27,18 +27,7 @@ STATE = QUEUE / "state.json"
 ARCHIVE = QUEUE / "archive"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
-LANE_TARGETS = {
-    "discovery_fresh": 1,
-    "discovery_citation": 1,
-    "discovery_gap": 1,
-}
-MAX_READY_RESEARCH = 12
-MAX_READY_AUDIT = 6
-DISCOVERY_REFRESH_HOURS = {
-    "discovery_fresh": 2,
-    "discovery_citation": 6,
-    "discovery_gap": 24,
-}
+MAX_DISCOVERY_CANDIDATES = 5
 
 
 def now() -> str:
@@ -147,74 +136,25 @@ def active_jobs(job_type=None, lane=None):
     return out
 
 
-def ensure_discovery_jobs(st, force_if_no_ready=False):
-    prompts = {
-        "discovery_fresh": "Find genuinely new inference-system papers or important revisions from primary sources. As a rule, require the paper or meaningful revision to be within the last 30 days. Older missing work belongs in the gap lane. Prefer papers not already represented in the repository.",
-        "discovery_citation": "Follow citations, follow-up work, and descendant papers from important inference-system papers already in the repository. Return only candidates with meaningful system-level relevance.",
-        "discovery_gap": "Search for missing lineages or adjacent-system techniques that plausibly matter to LLM inference systems. Prefer high-impact gaps over novelty for its own sake.",
-    }
-    history = st.setdefault("discovery_lanes", {})
-    current_time = datetime.now(timezone.utc)
-    ready_exists = any(j.get("status") == "ready" for j in iter_jobs())
-    forced_lane = None
-    if force_if_no_ready and not ready_exists:
-        # Prefer a normally-due lane; otherwise create one fresh-discovery job
-        # so an empty Chat run can continue with real literature search.
-        due_lanes = []
-        for lane in LANE_TARGETS:
-            last = history.get(lane, {}).get("last_issued_at")
-            due = True
-            if last:
-                try:
-                    last_dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
-                    due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS[lane] * 3600
-                except Exception:
-                    due = True
-            if due and not active_jobs("discovery", lane):
-                due_lanes.append(lane)
-        forced_lane = due_lanes[0] if due_lanes else "discovery_fresh"
-
-    for lane, target in LANE_TARGETS.items():
-        current = active_jobs("discovery", lane)
-        last = history.get(lane, {}).get("last_issued_at")
-        due = True
-        if last:
-            try:
-                last_dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
-                due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS[lane] * 3600
-            except Exception:
-                due = True
-        if current:
-            continue
-        if not due and lane != forced_lane:
-            continue
-        while len(current) < target:
-            issued = now()
-            jid = stable_id("job", lane, issued, str(len(current)))
-            add_job({
-                "job_id": jid,
-                "type": "discovery",
-                "lane": lane,
-                "priority": 80 if lane == "discovery_fresh" else 60,
-                "instructions": prompts[lane],
-                "completion": "Submit 0 or more candidates. Empty is valid when no strong candidates are found; never fill a quota with weak papers.",
-                "output_schema": {
-                    "operation": "discovery_result",
-                    "job_id": jid,
-                    "candidates": [{
-                        "canonical_id": "preferred stable ID if known",
-                        "title": "paper title",
-                        "source_url": "primary source URL",
-                        "paper_path": "planned papers/...md path if selected",
-                        "priority": "0-100",
-                        "reason": "why it deserves full reading",
-                        "evidence": ["primary-source facts used for selection"]
-                    }]
-                },
-            })
-            history[lane] = {"last_issued_at": issued}
-            current = active_jobs("discovery", lane)
-
+def ensure_discovery_job():
+    """Keep exactly one simple discovery job only when no ready work exists."""
+    if any(j.get("status") == "ready" for j in iter_jobs()):
+        return False
+    issued = now()
+    jid = stable_id("job", "discovery", issued)
+    return add_job({
+        "job_id": jid,
+        "type": "discovery",
+        "lane": "discovery",
+        "priority": 50,
+        "instructions": (
+            "Search primary sources for strong LLM inference-system papers not already "
+            "represented in the repository. Prefer recent work, but include an older "
+            "important omission when clearly worthwhile. Return at most 5 candidates. "
+            "Do not fill the list with weak papers."
+        ),
+        "completion": "Submit 0-5 strong candidates. Empty is valid.",
+    })
 
 def candidate_key(c: dict) -> str:
     return str(c.get("canonical_id") or c.get("source_url") or c.get("title") or "").strip().lower()
@@ -295,15 +235,10 @@ def make_research_job(c: dict, parent: str):
 
 
 def make_audit_job(sub: dict, research_job: dict):
-    # Formal audits are targeted rather than one-for-one: important papers,
-    # explicit uncertainty, or a deterministic quality-control sample.
-    priority = int(research_job.get("priority") or 50)
-    explicit = bool(sub.get("audit_required"))
-    uncertainty = bool(sub.get("audit_flags") or sub.get("audit_reason"))
-    sample_key = str(research_job.get("canonical_id") or research_job.get("job_id"))
-    sampled = int(hashlib.sha256(sample_key.encode()).hexdigest()[:8], 16) % 5 == 0
-    need = explicit or uncertainty or priority >= 75 or sampled
-    if not need or len(active_jobs("audit")) >= MAX_READY_AUDIT:
+    # Audit only when the research result explicitly leaves something important
+    # to verify. No fixed sampling ratio and no automatic audit by paper priority.
+    need = bool(sub.get("audit_required") or sub.get("audit_flags") or sub.get("audit_reason"))
+    if not need:
         return False
     key = str(research_job.get("canonical_id") or research_job.get("job_id"))
     jid = stable_id("job-audit", key)
@@ -314,15 +249,14 @@ def make_audit_job(sub: dict, research_job: dict):
             40,
             min(
                 74,
-                int(research_job.get("priority") or 50) - 15
-                + (10 if sub.get("audit_flags") else 0),
+                int(research_job.get("priority") or 50) - 10,
             ),
         ),
         "canonical_id": research_job.get("canonical_id"),
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
         "paper_path": sub.get("paper_path") or research_job.get("paper_path"),
-        "reason": sub.get("audit_reason") or ("high-priority paper" if priority >= 75 else "deterministic quality-control sample"),
+        "reason": sub.get("audit_reason") or "research result left an explicit verification need",
         "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quoted quantitative results, simulation vs real hardware, classification, differences and limitations. Update the full Markdown page.",
     })
 
@@ -331,11 +265,11 @@ def process_discovery(sub: dict, job: dict, st: dict):
     candidates = sub.get("candidates") or []
     if not isinstance(candidates, list):
         raise ValueError("candidates must be a list")
+    if len(candidates) > MAX_DISCOVERY_CANDIDATES:
+        raise ValueError("discovery submission may contain at most 5 candidates")
     seen = existing_candidate_keys()
     added = 0
     for c in sorted(candidates, key=lambda x: int(x.get("priority") or 0), reverse=True):
-        if len(active_jobs("research")) >= MAX_READY_RESEARCH:
-            break
         key = candidate_key(c)
         if not key or key in seen:
             continue
@@ -472,7 +406,7 @@ def process_submissions(st: dict):
             sub["_file"] = str(p.relative_to(ROOT))
             if sub.get("operation") == "request_jobs":
                 before = {j["job_id"] for j in iter_jobs() if j.get("status") == "ready"}
-                ensure_discovery_jobs(st, force_if_no_ready=True)
+                ensure_discovery_job()
                 after = [j["job_id"] for j in iter_jobs() if j.get("status") == "ready" and j["job_id"] not in before]
                 result.update({
                     "ok": True,
@@ -612,13 +546,11 @@ def main():
     st.setdefault("policy", {}).update({
         "fixed_daily_quota": False,
         "quality_over_quantity": True,
-        "max_ready_research": MAX_READY_RESEARCH,
-        "max_ready_audit": MAX_READY_AUDIT,
-        "discovery_refresh_hours": DISCOVERY_REFRESH_HOURS,
+        "decision_rule": "process_ready_else_discover",
+        "max_discovery_candidates": MAX_DISCOVERY_CANDIDATES,
         "worker_poll_minutes": 10,
     })
     process_submissions(st)
-    ensure_discovery_jobs(st)
     reconcile_v9_identity_deltas()
     normalize_ready_jobs()
     maybe_rebuild_views(st)
