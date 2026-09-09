@@ -1,138 +1,39 @@
-# Chat worker router
+# Chat worker router — workflow v10
 
-Chatの予定タスクは、実行時刻を見て**論文worker**か**その他更新worker**のどちらか一方だけを選ぶ。
+予定されたChat workerは**1つだけ**。実行時刻で次のどちらか一方を選び、同じ枠で両方を処理しない。
 
-## ルーティング
+- **08:30 JST** → その他更新worker
+- **それ以外の毎時 :30** → 論文worker
 
-- **08:30 JST** → その他更新workerだけを使う。論文queueの research / audit / discovery は処理しない。
-- **それ以外の毎時 :30** → 論文workerだけを使う。フレームワーク／新規LLM更新は行わない。
+毎回default branch最新HEADを取得し、このrouterと [queue-v10.md](queue-v10.md) を同じHEADから読む。
 
-同じ実行枠で両方を叩かない。
+## 実行前の共通回復
 
----
+GitHub writeが利用可能な場合、外部設定されたNotion退避キューの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。再投入中は `replaying`、Actionsの成功確認後のみ `replayed` とする。すでにterminal/supersededで安全に適用できないものは盲目的に反映せず `dead_letter` とし理由を残す。
+
+GitHub readができない場合は、repo状態に依存する新規処理を開始しない。
 
 ## A. 論文worker
 
-正本: [README.md](README.md) と [queue-v9.md](queue-v9.md)
+正本: [README.md](README.md)、[queue-v10.md](queue-v10.md)、`.survey/work-queue/next-jobs.json`。
 
-Chat側の固定入口:
+Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditは5つの事前作成済み固定JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。paper/state/README/identity/queueをChatから直接編集しない。
 
-- 本文chunk: `.survey/work-queue/payloads/chat-chunks/part-01.md` 〜 `part-08.md`
-- trigger: `.survey/work-queue/submissions/chat-inbox.json`
-- result: `.survey/work-queue/results/chat-inbox.json`
-
-**完成Markdown全文を1つのGitHub updateへ渡さない。** 完成Markdownを章・節の自然な境界で分割し、必要数の固定chunk slotを `part-01` から連番で現在blob SHA付きupdateする。1chunkは最大8 KiB、通常2〜5 KiB程度を目安とする。各update後の新blob SHAを保持し、全chunk保存成功後だけ固定inboxの `payload_chunks` にpathとblob SHAを順番に指定してtriggerする。
-
-`Survey helper worker` は各chunkのpath・順番・size・blob SHAを検証し、runner内だけで一時連結して論文本体へ反映する。連結済み長文はGitHubへcommitしない。途中chunkの保存に失敗した場合はinboxを送らず、成功済みchunkを保持して失敗chunkから再開する。
-
-旧 `.survey/work-queue/payloads/chat-payload.md` はActions内部の一時連結用互換scratchであり、予定Chat workerは直接更新しない。
-
-### 論文重複の必須チェック
-
-Discovery候補を提出する前、およびresearch着手前に、GitHub code searchだけで未登録判定をしない。次を正本として確認する。
-
-1. `.survey/survey-state/paper-identity-index.json`
-2. `.survey/survey-state/identity-deltas/**/*.json`
-3. `papers/inference/**` のfrontmatter
-
-canonical ID / arXiv ID / DOI / OpenReview IDを最優先し、arXiv/DOI URLしかない場合はURLからidentifierを抽出して照合する。identityで既登録ならdiscovery候補から外す。
-
-さらにActions側の `.survey/scripts/dedupe_queue.py` がqueue処理の前後でdiscovery由来ready research jobを再照合する。重複ならChatのreject submissionを待たず自動で `superseded` にする。これにより、Chatの事前確認が漏れても重複全文精読を防ぐ。
-
----
+Discovery / blocked / deferred / rejectedは長文artifact不要なので、固定inboxだけを小さくupdateしてよい。
 
 ## B. その他更新worker（08:30専用）
 
 対象は以下だけ。
 
-1. `framework-updates/**` — LLM推論・serving・runtime等の本質的な更新
-2. `llm-releases/**` — 新規LLMの正式公開・一般提供・主要モデル更新
+1. `framework-updates/**` — LLM推論・serving・runtime等の本質的更新
+2. `llm-releases/**` — 新規LLMの正式公開・一般提供・主要更新
 
-論文、paper queue、survey stateはこのworkerから変更できない。
+論文queueには触れない。Chatは対象ファイルを直接編集せず、既存の固定 `.survey/update-worker/update-payload.json` と `.survey/update-worker/update-inbox.json` だけを使い、Actionsへ反映を委譲する。既存ファイルは現在blob SHA付きcompact editを優先する。
 
-Chat側の固定入口:
+## GitHub connector障害
 
-- payload: `.survey/update-worker/update-payload.json`
-- trigger: `.survey/update-worker/update-inbox.json`
-- result: `.survey/update-worker/result.json`
-- Actions: `Framework and LLM update worker`
+書き込みが403/permission denied、write tool unavailable、安全検査、接続障害、またはSHA再取得後の再試行でも失敗した場合、成果を完了扱いにしない。論理payloadを外部設定されたNotion退避キューへ `pending` として保存し、次回以降のworkerが復旧後に再投入する。
 
-### 08:30の調査対象
+NotionはGitHubの代替正本ではない。GitHub Actions内のpush失敗はGitHub入力済みなのでNotionへ重複退避しない。
 
-フレームワークは vLLM、SGLang、TensorRT-LLM、llama.cpp、Ollama、ExLlama、LightLLM 等を中心に、性能、memory、KV cache、MoE、offload、I/O、分散、kernel、schedulingなど能力・性能特性を実質的に変える更新を確認する。軽微なbug修正、allowlist追加、chat template追加、単なる対応model/device追加だけの変更は原則除外する。
-
-新規LLMは公式公開・一般提供された主要modelを対象にする。噂、リーク、ティザーだけでは登録しない。Qwen系MoE、小型高性能model、推論効率に大きく関わるmodelは重点確認する。
-
-一次資料は公式release、公式repository / PR、公式blog、公式model配布ページを優先する。
-
-### update payload schema
-
-Chatは対象ファイルを直接編集しない。最新HEADから対象ファイルのblob SHAを取得し、固定payloadをupdateした後、固定inboxをupdateしてActionsへ処理を渡す。
-
-```json
-{
-  "schema_version": 1,
-  "attempt_id": "update-<unique>",
-  "kind": "framework_llm_update",
-  "artifacts": [
-    {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "<current blob sha>",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "<exact old text>",
-          "new": "<replacement>"
-        },
-        {
-          "op": "insert_after_once",
-          "anchor": "<unique exact anchor>",
-          "text": "<new text>"
-        }
-      ]
-    }
-  ],
-  "summary": "<short summary>"
-}
-```
-
-既存ファイルでは `expected_blob_sha` が必須。新規ファイルの場合だけ `expected_blob_sha` を省略し、`content` に完成内容を入れる。既存ファイルも必要なら `content` による全文置換を使えるが、通常はpayloadを小さくするため `edits` を優先する。
-
-対応edit:
-
-- `replace_once`: exact `old` を1箇所だけ `new` に置換
-- `insert_after_once`: exact `anchor` が1箇所だけ存在する場合、その直後へ `text` を挿入
-- `insert_before_once`: exact `anchor` が1箇所だけ存在する場合、その直前へ `text` を挿入
-
-match数が0または2以上ならworkerは失敗扱いにして対象ファイルを変更しない。すべてのartifactを検証してから書き込む。
-
-固定inboxは次の形で、payloadと同じ一意な `attempt_id` を使う。
-
-```json
-{
-  "schema_version": 1,
-  "attempt_id": "update-<unique>",
-  "payload_path": ".survey/update-worker/update-payload.json"
-}
-```
-
-固定payloadのupdateだけ成功してtrigger updateが失敗した場合、対象更新は未反映なので完了扱いにしない。次回、対象blob SHAとpayload内容がまだ有効ならtriggerだけ再送してよい。
-
-Actions実行後は `.survey/update-worker/result.json` を確認する。`ok: true` と同じ `attempt_id` を確認して初めて完了とする。`ok: false` の場合は対象ファイルへ反映済みとみなさない。
-
-### 共通の安全運用
-
-予定タスクの書き込みは以下を優先する。
-
-- 新規ファイル作成ではなく事前作成済み固定slotのupdate
-- 長文は複数の小さい固定slotへ分割
-- 制御JSONは小さく保つ
-- 既存ファイルは現在blob SHA付きupdate
-- 一意なattempt_id
-- 大きい既存ファイルは全文置換よりcompact edit
-- 安全検査/SHA競合時は最新状態を再取得して有効性確認後に失敗単位だけ1回再試行
-- 単一失敗で予定タスクを停止しない
-
-### 安全境界
-
-その他更新workerは `framework-updates/**` と `llm-releases/**` 以外を拒否する。2つのGitHub Actions workerは同じconcurrency groupを使い、mainへのcommitを同時実行しない。
+単一失敗を理由に予定タスク自身を停止・無効化・再作成しない。
