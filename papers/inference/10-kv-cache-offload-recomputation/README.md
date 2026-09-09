@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（25本）
+## 自動生成の論文一覧（26本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -45,6 +45,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | [Learning Agent Execution for KV-Cache Management in Agentic Serving](cachescout.md) | CacheScoutはagent実行遷移をオンライン学習し、再利用されやすい固定文脈KVを予測的に保持・事前取得するvLLM上のruntime。 |
 | [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md) | GPU HBM・CPU DRAM・NVMe SSDの3階層へKV cacheを置き、**直近のattentionで再利用されそうなKVだけをGPUへ残すこと、必要KVの選択・転送・GPU計算を小さなbatch単位で並行実行すること、SSDから必要blockだけを疎に読むこと**を組み合わせ、長contextでKV全体を毎回転送するI/O待ちを減らす。 |
 | [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md) | NVMe SSD上へ退避したKV cacheを戻す際、CPUが大量の小さなI/O要求を発行する従来方式をやめ、GPU自身がSSDへの非同期I/Oを制御してKVをまとめて転送することで、SSD容量を使いながらDRAM-backed cacheに近い推論性能を狙うsystem。 |
+| [CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration](cacheflow.md) | KVキャッシュ復元をトークン・層・GPUの3軸並列問題として扱い、バッチ認識スケジューリングで再計算とI/Oを重畳してTTFTを10–62%削減する。 |
 | [ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference](2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md) | 長contextのKV cacheの大部分をCPU DRAMへ置きながら、GPUにある重要blockはGPU、CPUにしかない重要blockだけはCPUでattentionを計算し、さらに**次layerでCPUが担当するattentionを1 layer早く開始する**ことで、KV転送待ちとCPU計算待ちの両方を減らす。 |
 | [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md) | attentionで一緒に参照されやすいKV cacheを事前にまとめ、そのグループ内のKVを複数SSDへ分散配置することで、1回のKV読み出しを複数SSDから並列に行い、単一SSDの帯域上限を超える実効I/O帯域を得る方式。 |
 | [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md) | full-precisionのKV cacheをCPU DRAMへ置いたまま、GPU上の小さなkey要約だけで現在のqueryに重要なtokenを二段階検索し、選ばれたKVだけをGPUからCPU memoryへ直接読みに行くことで、長い生成中に検索indexが古くなる問題とCPU検索・CPU主導転送の待ち時間を同時に減らすKV retrieval system。 |
