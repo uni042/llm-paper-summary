@@ -2,103 +2,256 @@
 canonical_id: "arXiv:2608.03741"
 arxiv_id: "2608.03741"
 title: "When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference"
-summary: "エージェント型LLM推論でprefill/decodeだけでなくattention/FFNまで分離する4段PDAFを、段ごとの異種NPU、並列度、相互接続、量子化と合わせて探索するイベント駆動シミュレータHeteroPanaceaを提案する。分離の利得はworkloadとhardware design spaceに強く依存し、prefill-heavy領域ではcustom NPU上のPDAFが有利になる一方、商用GPUではPDが多くの条件でPDAFと同等以上になる。"
+summary: "LLM推論を一台・一種類のGPUでまとめて処理する代わりに、入力処理と逐次生成、さらに注意機構とFFNを最大4種類の計算機群へ分けたとき、通信コストを払ってでも速くなる条件をシミュレーションで調べた研究。各段に計算重視・メモリ帯域重視の異なるハードウェアを割り当てられる場合ほど4段分離が効き、同じGPUしか選べない環境では細かく分ける意味が小さくなる。"
 source: "https://arxiv.org/abs/2608.03741"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-09"
+audit_version: 1
 ---
 
 # When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference
+
+> LLM推論を一台・一種類のGPUでまとめて処理する代わりに、入力処理と逐次生成、さらに注意機構とFFNを最大4種類の計算機群へ分けたとき、通信コストを払ってでも速くなる条件をシミュレーションで調べた研究。各段に計算重視・メモリ帯域重視の異なるハードウェアを割り当てられる場合ほど4段分離が効き、同じGPUしか選べない環境では細かく分ける意味が小さくなる。
+
 ## 書誌情報
+
 - **著者**: Przemyslaw Forys, Haoran Wu, Can Xiao, Jiayi Nie, Tony Liu, Rika Antonova, Timothy Jones, Robert Mullins, Wayne Luk, Aaron Zhao, George A. Constantinides
+- **所属**: Imperial College London / University of Cambridge
 - **公開**: arXiv:2608.03741v1, 2026-08-04
-- **種別**: arXiv preprint
-- **対象**: LLM serving、prefill-decode disaggregation、attention-FFN disaggregation、agentic inference、heterogeneous NPU、hardware-software co-design、mixed precision、parallelism search
-- **実装**: 論文はHeteroPanacea simulator、configuration、evaluation scriptsをacceptance後に公開予定と記載している。arXiv v1本文では公開済みartifactを確認できない。
+- **種別**: プレプリント（preprint）
+- **主題**: LLM提供基盤（LLM serving）、処理分離（disaggregation）、異種アクセラレータ、並列化探索、段階別量子化
+- **実装**: 論文ではシミュレータ、設定、評価スクリプトを採択後に公開予定としている。v1時点では公開済み実装を確認できない。
+
+## 概要
+
+この論文が扱うのは、「LLMの推論処理を細かく分け、それぞれに向いたハードウェアを割り当てた方が速いのか」という問題である。
+
+LLMの生成は大きく、最初に入力文をまとめて処理する**入力処理（prefill）**と、その後1トークンずつ出力する**逐次生成（decode）**に分かれる。入力処理は長い行列計算をまとめて実行できるため計算性能を使いやすい。一方、逐次生成では各ユーザーについて過去トークンのKVキャッシュ（KV cache）やモデル重みを繰り返し読むため、演算器の速さよりメモリ帯域が支配的になりやすい。
+
+そこで既存の提供基盤では、入力処理用GPU群と逐次生成用GPU群を分ける**入力処理・逐次生成分離（Prefill/Decode disaggregation; PD）**が使われる。しかし著者らは、これでもまだ粗いと考える。逐次生成の中だけを見ても、**注意機構（attention）**は長くなるKVキャッシュを読む処理が重く、**全結合ネットワーク（feed-forward network; FFN）**はモデル重みを読みながら行列計算する処理が重い。必要な「演算性能とメモリ帯域の比率」が違うため、両方を同じGPUへ載せると片方に合わせた資源がもう片方では余る可能性がある。
+
+HeteroPanaceaはこの違いを調べるため、推論を最大で
+
+1. 入力処理の注意機構
+2. 入力処理のFFN
+3. 逐次生成の注意機構
+4. 逐次生成のFFN
+
+の4段へ分け、それぞれに異なる計算性能、メモリ種類・容量・帯域、並列化方式、数値精度を割り当てられるシミュレータである。この4段分離を論文では **PDAF** と呼ぶ。
+
+重要なのは、PDAFそのものを「常に速い新方式」と主張しているわけではない点である。処理を分けると、中間の活性値（activation）やKVキャッシュを計算機群の間で転送する必要があり、通信待ちも増える。したがって論文の中心課題は、**分離によるハードウェア最適化の利得が、追加通信と資源分断の損失を上回るのはいつか**を調べることである。 citeturn305949view0turn305949view1
+
 ## 問題設定
-エージェント型LLMは長い反復コンテキストを持ち、prefillとdecodeだけでなくattentionとFFNでも演算量・メモリ容量・帯域要求が大きく異なる。従来のPD分離はdecode-attentionとdecode-FFN等を同じpoolに残すため、各段に最適なhardwareを独立選択できず、分離通信のoverheadが利得を上回る条件も明確でない。
-## 新規性
-ND、PD、AF、4段PDAFを同一のsystem-level simulatorで比較し、各stageのNPU/GPU構成、TP/PP/DP/EP、memory/interconnect、precisionを横断的に扱う。単に分離方式を提案するのではなく、workload geometryとhardware specializationの双方から『いつ分離が得か』を探索する点が中心。
+
+### なぜ入力処理と逐次生成で欲しいハードウェアが違うのか
+
+入力処理では多数の入力トークンをまとめて計算できるため、大規模な行列積を効率良く実行できる。長文になるほど注意機構の計算も大きくなり、演算器を高稼働させやすい。このため高い演算性能が価値を持ちやすい。
+
+逐次生成では1回の反復で各要求につき原則1トークンしか増えない。特に注意機構は、過去トークンに対応するKVキャッシュを毎回読む。文脈が長くなるほど読む量が増えるため、計算能力よりメモリ容量と帯域が効きやすい。
+
+逐次生成のFFNはまた別の性質を持つ。混合専門家モデル（Mixture of Experts; MoE）では、各トークンが一部の専門家（expert）だけを使う。1専門家へ十分なトークンをまとめないと大きな行列演算を効率良く回せないため、専門家の疎な選択とバッチサイズによって演算器の利用率が変わる。
+
+つまり「逐次生成」という一括りの中でも、注意機構はKVキャッシュ帯域寄り、FFNは重み転送と行列計算寄りである。この二つを同一ハードウェアへ固定すると、片方には過剰な演算器、もう片方には不足するメモリ帯域、といった不整合が起こり得る。 citeturn305949view0
+
+### エージェント型LLMで差が広がる理由
+
+エージェント型LLMでは、ツール実行結果、コード、Webページ、スクリーンショットなどを会話履歴へ追加しながら何度もLLMを呼び出す。そのたびに長くなった入力を再び処理するため、通常の短いチャットより入力処理の比率が大きくなりやすい。
+
+論文ではOSWorldの例として平均約38Kトークン、最大100Kトークンの文脈を挙げている。入力が長くなるほど入力処理側の計算量が増え、逐次生成側ではKVキャッシュ量も増えるため、各段が要求するハードウェア特性の差がさらに目立つ。 citeturn792872view0
+
+## 手法のあらまし
+
+HeteroPanaceaは、実際に巨大な異種アクセラレータクラスタを何百通りも組んで測る代わりに、各処理段の「必要演算量」「読み書きするデータ量」「段間通信量」を計算し、それらをイベント駆動シミュレーション（event-driven simulation）でつなぐ。
+
+まず、同じLLMと同じ要求列に対して、処理を分けない構成、入力処理と逐次生成だけを分ける構成、注意機構とFFNだけを分ける構成、4段すべてを分ける構成を用意する。次に各段へ、どの程度の演算性能・メモリ容量・帯域を持つ装置を何台割り当てるか、どの並列化を使うかを探索する。
+
+候補を一つずつ完全シミュレーションすると組合せが多すぎるため、最初は簡易な性能式で「この段の要求量を処理できそうか」を採点する。その時点で明らかに遅い構成や、重みがメモリへ入らない構成、電力・料金予算を超える構成を捨てる。残った上位候補だけを要求到着、バッチ形成、通信、KVキャッシュ容量まで含めて詳細シミュレーションし、最終的なトークン毎秒（tokens/s）が最大の構成を選ぶ。 citeturn305949view4
+
+このため、この論文の結果は「特定GPU上でHeteroPanaceaという提供基盤を実際に動かした速度」ではなく、**実機測定で部分的に較正したモデルを使い、多数の将来ハードウェア構成を比較した設計空間探索**として読む必要がある。
+
 ## 手法
-各stageをroofline型のcompute/memoryモデルで評価し、D2D/N2N通信、batching、KV容量、decode反復をevent-driven simulationで結合する。hardware searchは解析的なstage demand scoreで候補を絞り、power/cost budget内でstageごとの候補を割り当てた後、上位構成だけを詳細simulationしてtokens/s最大の設計を選ぶ。量子化はPA/PF/DA/DFごとに独立precisionを設定し、task accuracyも測定する。
 
-### ND/PD/AF/PDAF topology
-prefill/decode分離に加えattention/FFNを分離し、PDAFではprefill-attention、prefill-FFN、decode-attention、decode-FFNを独立pool化する。
+### 1. 4種類の分離方法 — 何を別の計算機群へ置くか
 
-### Stage roofline and power model
-stage実行時間をFLOPs/実効computeとbytes/実効bandwidthの最大値で近似し、MHA/GQA/MLA、dense/MoE、memory technology、device powerをparameterizeする。
+論文では、比較のため4種類の構成を使う。
 
-### Parallelism and interconnect model
-TP/PP/DP/EPをpool単位で設定し、intra-node D2Dとinter-node N2Nを分離してall-reduce、all-to-all、activation、KV transferを表現する。
+| 略称 | 日本語での意味 | 何を分けるか |
+|---|---|---|
+| ND | 非分離（No Disaggregation） | 入力処理も逐次生成も同じ計算機群 |
+| PD | 入力処理・逐次生成分離（Prefill/Decode） | 入力処理と逐次生成を別群へ分ける |
+| AF | 注意機構・FFN分離（Attention/FFN） | 注意機構とFFNを別群へ分ける |
+| PDAF | 4段分離 | 入力処理注意、入力処理FFN、逐次生成注意、逐次生成FFNをすべて別群へ分ける |
 
-### Event-driven serving simulator
-request arrival、prefill batching、decode FIFO admission、stage completion、transfer、KV容量制約をeventとして進め、memory-aware continuous batchingを模擬する。
+PDAFでは4群を独立に増減できる。例えば、逐次生成の注意機構には演算性能は低めでも大容量・高帯域メモリを持つ装置を多く割り当て、入力処理には高演算性能の装置を割り当てる、といった構成が可能になる。
 
-### Hardware and parallelism search
-stage demandに対する解析scoreとbudget allocationで探索空間を縮小し、top-Kだけをsimulationして最終throughputを比較する。
+ただし群をまたぐたびに通信が発生する。入力処理から逐次生成へ移るときはKVキャッシュを渡す必要があり、注意機構とFFNを別群にすれば各層で中間活性値を往復させる必要がある。PDAFは最適化の自由度が最大になる一方、通信箇所も最も多い。
 
-### Stage-wise mixed precision
-MXint系precisionをPA/PF/DA/DFごとに切り替え、MASEのPhaseAutoSwitchでprefill/decodeに応じた設定を適用し、accuracy sensitivityを実測する。
+### 2. 各段の実行時間を「計算待ちかメモリ待ちか」で近似する
 
-各requestは選択したdisaggregation topologyに従いstage poolを移動する。pool内ではstage専用hardwareとparallelismで実行し、pool間ではactivation/KVをN2N転送する。simulationはstageのservice capabilityとbatch/KV制約を統合し、search layerが同じworkloadに対してND/PD/AF/PDAFの最適構成を比較する。
-## 評価条件
-- **Hardware**: parameterized custom NPU design space: 25-20000 TFLOPS with SRAM/HBM/DDR/LPDDR/GDDR capacity-bandwidth choices、commercial AWS EC2 GPU design space including H100, A100, L40S, L4, A10G, T4, V100, M60、8x NVIDIA B200 component-level validation platform、NVSwitch-class intra-domain interconnect up to 3600 GB/s bidirectional and 50 GB/s InfiniBand-class cross-domain link in NPU experiments
-- **Software**: HeteroPanacea event-driven simulator、PLENA-derived parameterized NPU model、roofline-based stage performance and power models、MASE-based MXint stage-wise quantization with PhaseAutoSwitch
-- **Model**: DeepSeek-V4 Pro、DeepSeek-V4 Flash、Llama-3.1-405B、Llama 4 Maverick、Llama 4 Scout、GLM-4.6、GPT-OSS、Qwen3-235B-A22B、Qwen 32B-class model for quantization sensitivity
-- **Dataset / Trace**: synthetic serving workloads parameterized by input/output token ratio、BFCL for stage-wise quantization accuracy、GSM8K for stage-wise quantization accuracy
-- **Baseline**: ND: non-disaggregated serving、PD: prefill/decode disaggregation、AF: attention/FFN disaggregation、PDAF: prefill/decode plus attention/FFN four-stage disaggregation、real B200 kernel/communication measurements for component validation
-- **Correctness**: Simulator components are compared with measurements on B200 hardware. Reported simulated/real ratios for tensor-parallel execution are 0.79x, 1.00x, 1.06x and 1.02x for 1/2/4/8 GPUs; pipeline-parallel ratios are 0.67x, 0.77x, 0.84x and 0.90x. Communication checks report P2P ratios 0.82x-1.00x and expert all-to-all 0.86x-1.21x across tested message sizes. Quantization quality is checked empirically on BFCL and GSM8K.
-- **request workload**: 500 requests per configuration at fixed 125 requests/s; output length fixed at 1000 tokens and input length varied through I/O ratios, with request lengths sampled around target values.
-- **workload sweep**: I/O ratios span strongly decode-heavy to strongly prefill-heavy regimes, including 0.01, 1, 10, 100, 500 and 1000 cases discussed in results.
-- **parallelism**: TP, PP, DP and EP are independently selectable per execution pool; D2D and N2N links model different communication domains.
-- **main precision**: main NPU/GPU design sweeps use full precision; stage-wise quantization is evaluated separately because joint MoE quantization search is expensive.
-- **GPU budget**: commercial GPU search uses fixed USD/hour budget and provider instance/device catalog rather than arbitrary custom compute-memory ratios.
-- **NPU budget**: custom NPU search uses fixed installed-power budget and stage-specific compute/memory choices.
-For each topology the search first scores feasible hardware candidates analytically against stage demand, allocates the fixed budget across stages, keeps promising joint configurations, and then performs detailed event-driven simulation; throughput in tokens/s selects the winner. Model ablations vary KV/attention and expert-compute characteristics to identify which architectural dimensions control the crossover.
-Primary conclusions are simulation-based hardware/software design-space results rather than end-to-end deployed serving measurements. Component models are validated on real B200 hardware, but scheduling/batching/topology results themselves are not reproduced as a full production deployment.
-## 主要結果
-HeteroPanaceaは『分離そのもの』よりもworkload shapeとstage専用hardwareの組合せが性能を決めることを示す。custom NPUではprefill-heavyになるとPDAFが一貫して強くなる一方、commercial GPU catalogでは4段分離の自由度をhardware構成に変換しにくく、PDがPDAFと同等以上になる条件が多い。
+シミュレータは各アクセラレータを命令単位まで再現しない。代わりに、ピーク演算性能、メモリ種類、メモリ容量、メモリ帯域という少数の特性で表す。
 
-- custom-NPU PDAF throughput vs ND / 1.05-1.92× (baseline: ND; condition: I/O=100, 8 evaluated models) — PDAFは8/8でNDを上回り、6/8モデルで最良topology。Llama 4 Maverick 1.81×、Scout 1.77×。
+各処理段について、モデル構造から必要な浮動小数点演算数（FLOPs）と読み書きするバイト数を計算する。そして
 
-- average PDAF crossover / 0.48× -> 2.10× (baseline: ND; condition: custom NPU; average changes from I/O=1 to I/O=10) — prefill比率の上昇で分離overheadからstage specialization利得へ急速に反転する。I/O=1000ではdecode underutilizationで1.27×まで低下。
+- 演算量 ÷ 実効演算性能
+- データ量 ÷ 実効メモリ帯域
 
-- commercial-GPU PD throughput vs ND / 1.18-2.50× (baseline: ND; condition: I/O=0.01, 8 models) — PDは8/8でNDを上回るが、別workloadでは非一様。I/O=100では6/8モデルでPDがPDAF以上。
+のうち遅い方を、その段の所要時間とみなす。これは屋根線モデル（roofline model）と呼ばれる近似である。
 
-- AF-only performance / 0.20-0.65× (baseline: ND; condition: custom NPU, I/O=100) — attention/FFNだけの分離は通信overheadを回収できず常に不利。GPU sweepでもAFのbestは0.96×でNDを超えない。
+この考え方なら、「この段は演算器を増やしてもメモリ読み込みが支配的なので速くならない」「この段はメモリ帯域より行列演算が支配的なので演算性能を上げる価値がある」と区別できる。逐次生成の注意機構とFFNを別ハードウェアへ分ける意味も、この支配資源の違いとして数値化される。 citeturn305949view2
 
-- tensor-parallel component validation / 0.79× / 1.00× / 1.06× / 1.02× (baseline: real B200 measurement; condition: simulated/real latency ratio at 1/2/4/8 GPUs) — roofline/communication component modelはTPで概ね実測近傍。
+一方で、カーネル起動遅延、細かな占有率変動、実装固有の待ちなどはこの段階では直接モデル化しない。そのため実機を完全再現するモデルではない。
 
-- pipeline-parallel component validation / 0.67× / 0.77× / 0.84× / 0.90× (baseline: real B200 measurement; condition: simulated/real latency ratio at 1/2/4/8 GPUs) — PPではsimulationが実測latencyをより強く過小評価し、end-to-end結果の不確実性要因となる。
+### 3. 通信と4種類の並列化も別々にモデル化する
 
-- stage-specific 4-bit accuracy sensitivity / BFCL 20/11/12/20%, GSM8K 47/79/80/15% (baseline: 8-bit BFCL 21%, GSM8K 75%; condition: only PF/DA/PA/DF respectively changed to 4-bit on Qwen 32B-class experiment) — どのstageを低精度化できるかはmodelだけでなくworkload/taskに依存する。
+処理を複数装置へ広げると、計算だけでなく通信が増える。HeteroPanaceaは同一ノード内の装置間通信と、別ノード間の通信を別帯域として扱う。
 
-### 負の結果・境界条件
-- **low/balanced-ratio custom NPU**: I/O=0.01および1ではNDが全モデルで最良。分離通信とpool fragmentationがspecialization利得を上回る。
-- **commercial GPU limits four-stage specialization**: PDAFのstage assignmentはほぼH100に収束し、compute/memory比をstageごとに独立設計できないためcustom NPUほど4段分離が効かない。
-- **active-expert growth**: active expertsを増やしてFFN compute/weight trafficを増大させるとPDAF利得が崩れ、例としてDeepSeek-V4-Flashは1.41×から4x active expertsで0.43×、8xで0.38×まで低下する。
+さらに各処理群ごとに、次の並列化方式を選べる。
 
-PDAFの価値はstage間のresource mismatchが大きく、かつそれを異種hardwareへ実際に写像できる場合に生まれる。decode-attentionは大容量・高帯域memoryと比較的低compute、prefill stagesとdecode-FFNは高computeを要求するため、custom hardwareでは分離がresource right-sizingにつながる。commercial GPUでは同じ自由度が得にくい。
-## 品質への影響
-main throughput sweepはfull precisionでquality trade-offを避けている。別のstage-wise quantization実験では4-bit化するstageとtaskによってaccuracy低下が極端に異なり、performance-onlyなprecision選択は安全でないことを示す。
+- **テンソル並列（tensor parallelism; TP）**: 一つの大きな行列演算を複数GPUへ分ける。1要求の計算を短縮できるが、途中で集約通信が必要になる。
+- **パイプライン並列（pipeline parallelism; PP）**: モデル層を順番に複数装置へ分ける。1要求そのものが速くなるわけではなく、複数マイクロバッチを重ねて処理して全体処理量を上げる。
+- **専門家並列（expert parallelism; EP）**: MoEの専門家を複数装置へ分散する。トークンを担当専門家の装置へ送受信する全対全通信（all-to-all）が増える。
+- **データ並列（data parallelism; DP）**: 同じ処理群を複数コピーし、要求列を別々に処理する。1要求の時間は変えず、同時処理能力を増やす。
+
+つまり「PDAFにするか」だけでなく、「4段のそれぞれを何台にし、どの並列化で動かすか」まで探索する。 citeturn305949view3
+
+### 4. イベント駆動シミュレータ — 実際の要求列を時間順に流す
+
+単純に各段の理論速度を足すだけでは、提供基盤の性能は分からない。速い入力処理群が大量の要求を処理しても、逐次生成群が追いつかなければ待ち行列ができる。逆に入力処理が遅ければ逐次生成用装置が遊ぶ。
+
+そこでHeteroPanaceaは、
+
+- 新しい要求の到着
+- 入力処理用バッチの形成
+- 各段の計算完了
+- 別群への転送完了
+- 逐次生成1ステップの完了
+
+などを「イベント」として時刻順に進める。
+
+入力処理側は、ある程度要求をまとめつつ待たせすぎないよう時間切れでバッチを出す。逐次生成側は先着順（FIFO）を基本に、KVキャッシュを保持できるメモリ容量の範囲だけ要求を受け入れる。これにより、単体演算性能だけではなく、バッチ形成、段間の速度差、KV容量不足、通信待ちまでスループットへ反映する。 citeturn305949view3
+
+### 5. ハードウェア探索 — 全組合せを試さず、まず「処理能力÷需要」で候補を削る
+
+PDAFでは4段それぞれに装置種類、台数、並列化を選べるため、全組合せを詳細シミュレーションすると探索量が大きすぎる。
+
+著者らはまず各段について、その構成が持つ処理能力を、その段へ流れ込む要求量で割った**余裕度に相当するスコア**を計算する。入力処理段なら要求到着率、逐次生成段なら要求到着率に出力トークン数を掛けた量が需要になる。
+
+重みを保持できない構成や予算超過構成を捨てた後、全段が最低限需要へ追いつくように電力・料金予算を配る。余った予算は最も弱い段へ回す。システム全体は一番遅い段で律速されるため、4段の中で最も低い余裕度を構成全体の評価に使う。
+
+この簡易評価で上位だけを残し、最後にイベント駆動シミュレーションへ通す。そこで実際に最も高いトークン毎秒を出した構成を採用する。つまり簡易式は最終性能を断定するためではなく、**詳細シミュレーションする候補を現実的な数へ減らす前処理**である。 citeturn305949view4
+
+### 6. 段階別量子化 — 4段すべてを同じビット幅にする必要があるか調べる
+
+HeteroPanaceaは、4段ごとに別の数値精度を設定する実験も行う。重みと活性値を小さいビット幅へすると、演算量とメモリ転送量を減らせる可能性があるが、精度低下の危険がある。
+
+注意機構とFFNの違いはMASEの量子化機構で区別し、入力処理と逐次生成の違いはテンソルの系列長を見て切り替える。系列長が1より大きければ入力処理、1なら逐次生成と判断し、その段に設定した精度を使う。
+
+ただし精度低下は性能式だけでは予測できないため、量子化候補については実際にベンチマーク精度を測る。論文では全設計空間を量子化込みで探索するのではなく、Qwen 32B級モデルで「どの段を4ビット化するとどのタスクが壊れるか」という感度実験に絞っている。 citeturn305949view3turn697836view0
+
+## 評価
+
+### まず見るところ
+
+- **結論**: 4段分離が効くのは、各段で必要な演算性能とメモリ帯域の差が大きく、その差に合わせて本当に異なるハードウェアを割り当てられる場合である。
+- **カスタムNPU**: 入力処理が十分大きい条件ではPDAFが有利だが、入力処理が小さい条件では分離通信の損失が勝つ。
+- **既製GPU**: H100等のGPUでは演算性能とメモリ帯域の組合せを独立に設計できないため、4段へ細分化してもほぼ同じGPUが選ばれ、PDだけで十分な条件が多い。
+- **注意点**: 主結果はシミュレーションである。個別計算・通信モデルはB200実機で比較しているが、PDAFクラスタ全体を実機でエンドツーエンド検証したわけではない。
+
+<details>
+<summary>評価条件・詳細な数値を開く</summary>
+
+### 評価環境
+
+**シミュレータの部品検証**は8×NVIDIA B200、Intel Xeon 6960P、CUDA 12.8、PyTorch 2.10、NCCL 2.27.5で行う。
+
+**カスタムNPU探索**では、演算性能25〜20,000 TFLOPSと、SRAM／HBM／DDR／LPDDR／GDDRなど複数のメモリ容量・帯域点を組み合わせる。段間通信はNVSwitch級の高速領域と50 GB/s級InfiniBand領域をモデル化する。 citeturn196325view3turn305949view1
+
+**既製GPU探索**ではAWS上のH100、A100、L40S、L4、A10G、T4、V100、M60などを候補にし、電力ではなく時間当たり料金の予算内で比較する。
+
+モデルはDeepSeek-V4 Pro / Flash、Llama-3.1-405B、Llama 4 Maverick / Scout、GLM-4.6、GPT-OSS、Qwen3-235B-A22Bなど8モデル。出力長を1000トークンに固定し、入力長を変えて入力／出力比を広く掃引する。
+
+### カスタムNPUでは「入力処理が十分大きい」と4段分離が効く
+
+入力／出力比が0.01または1の条件では、非分離（ND）が8モデルすべてで最良だった。分離によって得られる専門化より、KV・活性値転送や計算機群の分断による損失の方が大きい。 citeturn196325view2
+
+一方、入力／出力比100ではPDAFが8モデルすべてでNDを上回り、改善幅は1.05〜1.92倍。8モデル中6モデルではPDAFが最良だった。Llama 4 Maverickは1.81倍、Scoutは1.77倍。 citeturn196325view2
+
+平均値で見ると、PDAFは入力／出力比1ではNDの0.48倍しか出ないが、比10では2.10倍へ急に反転する。ただし入力が極端に大きい比1000では1.27倍まで下がる。これは入力処理側が大きくなりすぎると、別に確保した逐次生成側装置が十分使われず、分離した資源の一部が遊ぶためである。 citeturn196325view2
+
+### 既製GPUでは4段分離の自由度を生かしにくい
+
+既製GPU探索では、入力／出力比100でPDがPDAF以上になるモデルが8個中6個だった。AFだけの分離はどの条件でもNDを超えず、最良でも0.96倍。 citeturn196325view2
+
+理由は選ばれたハードウェアを見ると分かりやすい。カスタムNPUでは逐次生成注意に低演算・高帯域、入力処理には高演算、と段ごとに大きく違う構成を選べる。ところがGPUではPDAFの32段割当のうち31がH100、残り1つがA100になった。注意機構とFFNを別群へ分けても結局ほぼ同じGPUを置くため、通信だけ増えて専門化の利得が小さい。 citeturn196325view2
+
+### どんなモデルほどPDAFが効くか
+
+論文のアブレーションでは、逐次生成注意のKV転送量が大きいほどPDAFが効きやすい。KV転送が小さいと、逐次生成注意もFFNも「重みを読む処理」という似た性質になり、別ハードウェアへ分ける意味が薄い。KV転送が増えると注意機構だけが強くメモリ帯域依存になり、FFNとの差が広がるため4段分離の価値が上がる。 citeturn697836view0
+
+逆に1トークンで実際に動かすMoE専門家数を増やすとFFN計算量と重み読み出しが増え、PDAFの利得が崩れる。DeepSeek-V4-Flashでは基準1.41倍から、活性専門家数4倍で0.43倍、8倍で0.38倍まで低下した。つまり「総専門家数が多いこと」より、**1トークンで何個の専門家を実際に計算するか**の方が分離価値へ強く効く。 citeturn697836view0
+
+### 段階別4ビット化はタスクごとに壊れる場所が違う
+
+Qwen 32B級モデルで全段8ビットを基準にし、一段だけ4ビットへ落とす実験では、BFCLとGSM8Kで感度が逆になった。
+
+- FFN段の4ビット化はGSM8Kを大きく悪化させる一方、BFCLではほぼ変わらない。
+- 注意機構段の4ビット化はBFCLを大きく悪化させる一方、GSM8Kでは8ビット基準付近を保つ。
+- 全段4ビットは両タスクで大きく崩れる。
+
+したがって「入力処理だけ低精度なら安全」「注意機構だけ低精度なら安全」とモデルだけから決めることはできず、実際のワークロードに依存する。 citeturn697836view0
+
+### シミュレータ検証の読み方
+
+テンソル並列の実測／シミュレーション比は1、2、4、8 GPUで0.79、1.00、1.06、1.02倍と比較的近い。一方、パイプライン並列では0.67、0.77、0.84、0.90倍で、シミュレーションが実測遅延を過小評価する傾向がある。 citeturn305949view2
+
+この差は、PDAFの最終スループット値を「実クラスタでも同じ倍率になる」と読むべきではない理由の一つである。
+
+</details>
+
+## 主要結果の読み方
+
+この研究の一番重要なメッセージは、「細かく分離するほど良い」ではない。
+
+PDAFが価値を持つのは、**分けた後の段が本当に違う資源を必要としており、その違いに合わせた装置を用意できるとき**である。逐次生成注意がKVキャッシュ帯域を大量に必要とし、FFNがより演算・重み転送寄りなら、両者を別装置へ割り当てる余地がある。
+
+逆に両段が似た資源要求を持つモデル、あるいは候補装置がH100のような同型GPUばかりなら、4段に分けても配置先がほとんど変わらない。その場合は追加通信の方が目立つ。
+
+したがって実運用でこの論文を使うなら、「PDAFを採用するか」を先に決めるのではなく、まず各段の演算強度、KV転送量、FFN活性専門家数、利用可能ハードウェアの演算／帯域比の幅を調べ、**段間の資源要求差が十分大きいか**を見るのが筋になる。
+
 ## 既存研究との差
-- Splitwise、DistServe、PD-Serve等のprefill/decode分離研究に対し、HeteroPanaceaはattention/FFNまで独立pool化したAF/PDAFを含め、stageごとのhardware構成とparallelismを設計変数として比較する。
-- MooncakeやMemServeがKV cache中心のdisaggregated memory/transfer architectureを主眼とするのに対し、本研究はcompute、memory bandwidth/capacity、interconnect、precisionを含むstage-level hardware-software co-designを主眼とする。
-- ConServe等のagentic serving研究とは長期multi-turn/agentic workloadという動機を共有するが、主対象はconversation-level schedulingではなく、workload geometryに応じたdisaggregation topologyと異種hardwareの設計空間である。
-- production serving engineではなくsimulation frameworkとして、分離方式の優劣とhardware specializationの効果を分解して調べることが主な貢献。
+
+SplitwiseやDistServeなどの入力処理・逐次生成分離は、「入力処理と逐次生成が違う」というところまで分ける。この論文はそこからさらに、各フェーズ内部の注意機構とFFNも別ハードウェアへ割り当てられる設計空間へ広げる。
+
+また、単に新しい提供スケジューラを実装する研究ではなく、異種ハードウェア、並列化、通信、量子化を同じシミュレータ上で横断的に変え、「どの条件ならどの分離方法を選ぶべきか」を比較する設計探索が中心である。 citeturn594154view0turn196325view0
+
 ## 限界
-- 主要throughput結論はsystem-level simulationであり、ND/PD/AF/PDAF全体を実機clusterでend-to-end再現した結果ではない。
-- component validationではTPは概ね実測に近いがPPはsimulationが実測latencyを0.67-0.90×に過小評価しており、pipeline-heavy設計の絶対値には不確実性がある。
-- 量子化評価は1モデル相当とBFCL/GSM8Kの2 taskに限定され、全8モデルのjoint topology/hardware/precision searchは行っていない。
-- commercial GPU結果は特定cloud providerのcatalogとprice/budgetに依存し、別provider、最新GPU、将来価格でPDAFとPDの優劣が変わり得る。
-- 500 requests/configurationのsimulation結果について本文から反復run、seed sweep、confidence intervalを確認できず、stochastic workloadに対する統計的頑健性は限定的。
-- simulator/config/evaluation scriptsはacceptance後公開予定とされ、arXiv v1時点では再現用artifactを直接検証できない。
-## 実装状態
-HeteroPanaceaは論文中で実装されたevent-driven simulatorとして記述されるが、arXiv v1はfull simulator/configuration/evaluation scriptsをacceptance後に公開予定としており、公開済みrepositoryは本文から確認できない。
-## 研究上の位置づけ
-主系統はLLM serving/scheduling/disaggregation。既存のPD-servingを、prefill/decode×attention/FFNの4段分離とstage専用異種hardwareまで拡張し、agentic workloadでdisaggregationが得になる条件をcross-stack simulationで特定するhardware-software co-design研究。MoE、mixed precision、parallelism searchも横断テーマとして含む。
-## 監査メモ
-arXiv v1全文を確認し、main sweep、component validation、model ablation、stage-wise quantization、limitationsまで照合した。abstractの『up to 75%』、本文introの『up to 2.06×』、NPU average crossoverの『2.10× at I/O=10』は異なる比較/集約条件のheadline値として扱い、単一の最大値に統合しない。条件を分けて記録したため追加auditを必須とする未解決事項はない。
+
+- 主なPDAF／PD／AF比較はシステムレベルのシミュレーションであり、4段分離クラスタ全体を実機で再現した結果ではない。
+- 実機検証は計算・通信など構成要素単位が中心で、待ち行列、バッチ形成、段間の速度差を含むエンドツーエンド挙動は未検証。
+- パイプライン並列のモデルは実測遅延を0.67〜0.90倍に過小評価しており、パイプライン依存の強い構成では誤差要因になる。
+- 量子化感度は1モデル、2タスク、限定された段階別設定に絞られており、一般的な最適ビット幅を示したものではない。
+- GPU比較は特定クラウド事業者の機種・価格体系に依存し、将来のGPUや料金ではPDとPDAFの優劣が変わり得る。
+- 論文自身も、精度感度の差は反復実験を十分行った校正済みの絶対値というより、方向性として読むべきだとしている。 citeturn697836view0
+
+## 一般的な実装上の含意
+
+処理分離の価値は、単に「別GPUへ分けられる」ことではなく、**分離した後にそれぞれを違う構成へ最適化できる自由度**から生まれる。
+
+この考え方はPDAF以外にも使える。例えばCPU／GPU／SSDへ処理やデータを分ける場合でも、各段の律速資源が同じなら分離通信だけ増える。一方、ある段が容量依存、別段が帯域依存、さらに別段が演算依存なら、異種資源へ割り当てる意味が出る。
+
+そのため、分離方式を検討するときは「分離できるか」だけでなく、
+
+1. 分離前の各処理の律速資源は何か
+2. 分離後に本当に異なるハードウェアを選べるか
+3. 段間転送量はどの程度か
+4. 最も遅い段へ資源を再配分できるか
+
+を見る必要がある。
+
 ## 一次資料
-- https://arxiv.org/abs/2608.03741
-- https://arxiv.org/pdf/2608.03741
+
+- arXiv: https://arxiv.org/abs/2608.03741
+- PDF: https://arxiv.org/pdf/2608.03741
+
+## 更新履歴
+
+- 2026-09-09: 論文未読者向けに全面改稿。PD/AF/PDAF、屋根線モデル、並列化、イベント駆動シミュレーション、探索手順、評価結果の因果関係を噛み砕いて説明。
