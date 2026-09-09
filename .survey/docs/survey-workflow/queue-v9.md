@@ -25,16 +25,18 @@ Chat research workerは毎回、default branch最新HEADの `.survey/work-queue/
 - formal audit judgment
 - complete Japanese Markdown authoring
 - discovery候補を出す前のidentity事前確認
+- 完成Markdownを小さい固定chunkへ分割して保存
 
 ### GitHub Actions worker
 
 - submission validation
+- chunk SHA validation / transient assembly
 - paper publication/update
 - job/state transitions
 - identity delta maintenance
 - derived-view rebuild
 - ready-job generation
-- **duplicate research job suppression**
+- duplicate research job suppression
 - **最後のready jobを消費した直後のdiscovery補充**
 
 Actions workerは10分ごとにも起動するが、主目的は未処理submissionの回収・整合性維持。Chatがsubmissionをpushした場合はpushでも起動する。
@@ -59,27 +61,21 @@ Actions workerはsubmission処理後、必ずready jobの有無を確認する�
 
 Discovery候補をsubmissionへ入れる前に、候補ごとに可能な限り canonical ID / arXiv ID / DOI / OpenReview ID を確定し、上記identity情報と照合する。特にarXiv URLからはIDを抽出して比較する。**GitHub code searchで論文名が見つからないことを「未登録」の根拠にしない。**
 
-identity上ですでに登録済みなら候補から除外する。タイトル一致だけの場合は同名異論文の可能性があるためidentifierを確認する。
+identity上ですでに登録済みなら候補から除外する。research着手前にもcanonical IDを再照合する。
 
 ### Actions側の強制ガード
 
 `.survey/scripts/dedupe_queue.py` をqueue処理の前後に実行する。
 
 - queue処理前: 過去runから残った重複ready research jobを `superseded` にする。
-- queue処理後: discoveryが新しく生成したresearch jobを再度identity照合し、重複なら**同じActions run内で** `superseded` にする。
+- queue処理後: discoveryが新しく生成したresearch jobを再度identity照合し、重複なら同じActions run内で `superseded` にする。
 - その後queue workerを再実行して `next-jobs.json` を再生成する。
 
-自動supersede対象は**discovery由来のready research jobだけ**。auditや意図的な既存paper更新は既存identityを対象にするため、自動除外しない。
-
-照合はcanonical/identifierを最優先し、arXiv/DOI URLからもidentifierを抽出する。compact identity snapshotにtitleがないため、current paper frontmatterをfallbackとしてtitle照合にも使う。
-
-これによりChat側の事前チェックに漏れがあっても、重複論文を全文精読する前にActions側で止める。
+自動supersede対象はdiscovery由来のready research jobだけ。auditや意図的な既存paper更新は自動除外しない。
 
 ## Discovery
 
-一次情報を中心に、repo未登録のLLM推論システム関連研究を探す。新着を優先するが、重要な取りこぼしがあれば古い論文も可。1回のdiscovery submissionは**0〜5件**。弱い候補で5件を埋めない。
-
-候補作成時は上記Duplicate preventionを必ず適用する。
+一次情報を中心に、repo未登録のLLM推論システム関連研究を探す。新着を優先するが、重要な取りこぼしがあれば古い論文も可。1回のdiscovery submissionは**0〜5件**。弱い候補で5件を埋めない。候補作成時はDuplicate preventionを必ず適用する。
 
 ## Research
 
@@ -99,29 +95,41 @@ identity上ですでに登録済みなら候補から除外する。タイトル
 
 全文取得不能ならcompletedにせずblocked/deferredとする。抄録や検索断片から欠落部分を推測しない。
 
-research着手前にもcanonical IDをidentityと再照合する。Actionsのduplicate guardにより通常は重複jobはreadyから消えるが、最新HEADとの競合等が疑われる場合は精読前に確認する。
-
 ## Audit
 
 全論文を機械的に監査しない。research時に、書誌・版、実装状態、評価条件、主要数値、実機/シミュレーション区別などについて**明確に確認すべき事項が残った場合だけ**auditを要求する。
 
-## Artifact transport（通常経路）
+# Artifact transport（通常経路）
 
-予定されたChat workerは**新規ファイルを作成しない**。事前作成済みの固定2ファイルだけを使う。
+## 原則
 
-- `.survey/work-queue/payloads/chat-payload.md`
-- `.survey/work-queue/submissions/chat-inbox.json`
+予定されたChat workerは**完成Markdown全文を1回のGitHub updateへ渡さない**。また、通常運用では新規payload/submissionファイルを作らない。
 
-### research / audit
+事前作成済みの固定slotを使う。
 
-1. 最新HEADから固定payloadをfetchし、現在blob SHAを取得する。
-2. 完成Markdownを固定payloadへupdateする。
-3. 最新HEADから固定inboxをfetchし、現在blob SHAを取得する。
-4. 小さいsubmission JSONを固定inboxへupdateする。`payload_path` は `.survey/work-queue/payloads/chat-payload.md` を指定する。
-5. inbox pushでActionsが起動する。Actionsはhead commitで `chat-inbox.json` が変更された場合だけ古い `.survey/work-queue/results/chat-inbox.json` を削除して再処理する。
-6. resultとqueueを確認するまで、次の固定payload/inbox上書きを開始しない。
+- `.survey/work-queue/payloads/chat-chunks/part-01.md`
+- `.survey/work-queue/payloads/chat-chunks/part-02.md`
+- ...
+- `.survey/work-queue/payloads/chat-chunks/part-08.md`
+- trigger: `.survey/work-queue/submissions/chat-inbox.json`
 
-submission例:
+旧 `.survey/work-queue/payloads/chat-payload.md` はActions runner内の一時連結先としてのみ使う。予定Chat workerは直接更新しない。
+
+## research / audit 保存手順
+
+1. 完成Markdownを章・節・表などの自然な境界で分割する。
+2. 使用するslotは必ず `part-01` から連番にする。飛び番を使わない。
+3. 各chunkは最大 **8192 bytes**。安全検査の実績を考慮し、通常は **2〜5 KiB程度**を目安にする。必要以上に長いchunkを作らない。
+4. `part-01.md` を最新HEADからfetchし、現在blob SHAで既存ファイルupdateする。成功後に返った**新しいblob SHA**を保持する。
+5. `part-02.md` 以降も同様に、必要数だけ順番にupdateする。
+6. 途中のchunk updateが失敗したら、**まだinboxを送らない**。成功済みchunkは保持し、最新HEAD/SHAと内容を確認したうえで失敗chunkから再開する。成功済みchunkを無意味に再送しない。
+7. すべての使用chunkが保存できたら、固定inboxを小さいmanifestでupdateする。各chunkについてpathと**保存後blob SHA**を指定する。
+8. inbox pushでActionsが起動する。`.survey/scripts/assemble_chat_chunks.py` が使用chunkを順番・path・size・blob SHAまで検証する。
+9. 検証成功時だけrunner内で旧 `chat-payload.md` へ一時連結し、local inboxをqueue worker互換の `payload_path` 形式へ変換する。
+10. queue workerがpaperへ反映した後、Actionsは一時連結した `chat-payload.md` とlocal変換したinboxをcheckout状態へ戻してからcommitする。**連結済み長文そのものはGitHubへcommitしない。**
+11. `.survey/work-queue/results/chat-inbox.json` が同じjobに対して `ok: true` となり、最新queueからjob完了を確認するまで、同じslot群を次jobで上書きしない。
+
+### inbox例
 
 ```json
 {
@@ -131,54 +139,87 @@ submission例:
   "status": "completed",
   "paper_path": "papers/...md",
   "expected_blob_sha": "existing paper update時のみ必須",
-  "payload_path": ".survey/work-queue/payloads/chat-payload.md",
+  "payload_chunks": [
+    {
+      "path": ".survey/work-queue/payloads/chat-chunks/part-01.md",
+      "blob_sha": "<saved blob sha 01>"
+    },
+    {
+      "path": ".survey/work-queue/payloads/chat-chunks/part-02.md",
+      "blob_sha": "<saved blob sha 02>"
+    }
+  ],
   "audit_required": false,
   "audit_reason": null,
   "audit_flags": []
 }
 ```
 
-### discovery / blocked / deferred / rejected
+`payload_chunks` と `payload_path` は同時に指定しない。通常の予定Chat workerは `payload_chunks` を使う。
+
+## 分割境界
+
+文字数均等分割より意味境界を優先する。推奨例:
+
+- chunk 1: frontmatter + 概要 + 問題設定
+- chunk 2: 新規性 + 設計概要
+- chunk 3: 詳細手法
+- chunk 4: 評価条件 + baseline
+- chunk 5: 主要結果
+- chunk 6: 限界 + 関連研究との差 + 一次資料
+
+短い論文ページなら2〜3chunkでよい。8chunkを埋めることは目的ではない。
+
+## Partial-save recovery
+
+分割slotは**回復単位**でもある。
+
+- part-01〜03成功、part-04失敗 → 01〜03を保持し、04から再試行。
+- chunk保存は全部成功、inboxだけ失敗 → chunkのblob SHAと内容が現在HEADでも同じことを確認してinboxだけ再試行。
+- inbox成功後にActions error → slotを上書きせずresult原因を確認し、内容が有効なら修正対象だけ更新して新しいattempt_idで再送。
+
+前回途中保存済みのjobがまだreadyで内容も有効なら、**新しいpriority jobより先に途中保存jobを完了させる**。固定slotを別jobで上書きして完成済み部分を失わないため。
+
+## discovery / blocked / deferred / rejected
 
 長いMarkdownが不要なため、固定inboxだけを上書きしてよい。新規submissionファイルは作らない。
 
-ただし**既登録重複の整理をChat submissionで行う必要は通常ない**。Actionsのduplicate guardがdiscovery由来ready research jobを自動supersedeする。安全検査で小さいreject submissionまで拒否される可能性があるため、重複整理はActions側へ寄せる。
+既登録重複の整理をChat submissionで行う必要は通常ない。Actionsのduplicate guardがdiscovery由来ready research jobを自動supersedeする。
 
-### Connector-safe write rules
+## Connector-safe write rules
 
 予定タスク環境では次を正式ルールとする。
 
 - `create_file` を通常経路で使わない。
-- 長いMarkdownと小さい制御JSONを分離する。
+- **完成Markdown全文を1ファイルupdateしない。**
+- 長文は固定chunkへ分ける。1chunk最大8 KiB、通常2〜5 KiB程度。
+- 制御JSONは最小限にする。
 - 大きい共有READMEやstateをChatから直接書き換えない。
 - 既存ファイルupdateは直前fetchしたblob SHAを使う。
+- 各chunkの保存後blob SHAをinboxに固定し、Actions側で再検証する。
 - 同一内容の再送を避けるため一意な `attempt_id` を使う。
 - 安全検査・接続・SHA競合で失敗してもjobを完了扱いにしない。
-- 失敗時は最新HEAD/SHAを取り直し、内容がまだ有効なら**1回だけ**再試行する。
+- 失敗時は最新HEAD/SHAを取り直し、内容がまだ有効ならその失敗単位だけ1回再試行する。
 - 単一失敗を理由に予定タスクを停止・無効化しない。
 
-経験上、長大な既存Markdown全文や大きいJSONのupdateは安全検査で拒否される可能性がある。論文本文は必要十分な完成Markdownに保ち、制御JSONは最小限にする。フレームワーク／LLM更新側では全文置換よりcompactなedit操作を優先する。
+## update競合
 
-### なぜ固定2ファイルか
+chunk updateは必ず直前にfetchしたblob SHAで行う。SHA競合時は最新HEADと対象slot SHAを再取得し、対象jobがまだreadyでchunk内容が有効な場合だけそのchunkを1回再試行する。競合が続く場合は保存失敗として終了し、jobを完了扱いにしない。
 
-- 新規ファイル作成の安全検査を通常経路から除外する。
-- 長いMarkdownをJSONに直接埋め込まず、長文updateと小さい制御updateを分離する。
-- payload更新後にinbox更新が失敗しても、jobは未完了のままで完成Markdownは固定payloadに残る。
-- 次回はpayloadの内容と対象jobを確認し、まだ有効ならinbox更新だけ再試行できる。
+## 互換経路
 
-### update競合
+以下は復旧互換用で、予定Chat workerの通常経路では使わない。
 
-updateは必ず直前にfetchしたblob SHAで行う。SHA競合時は最新HEADと対象ファイルSHAを再取得し、対象jobがまだreadyで内容が有効な場合だけ1回再試行する。競合が続く場合は保存失敗として終了し、jobを完了扱いにしない。
-
-### 互換経路
-
-従来の一意な `.survey/work-queue/payloads/<unique>.md` + `.survey/work-queue/submissions/<unique>.json` 新規作成方式は復旧互換用として残すが、予定Chat workerでは使用しない。
+- `.survey/work-queue/payloads/chat-payload.md` の直接更新
+- 一意な `.survey/work-queue/payloads/<unique>.md` + `.survey/work-queue/submissions/<unique>.json` 新規作成
+- inline `content` に完成Markdown全文を埋め込む方式
 
 ## Idempotency
 
 - 固定inboxは更新pushのときだけ対応resultをリセットして再処理する。
 - schedule起動では処理済み固定inboxを再処理しない。
-- 固定payload/inboxは、前回result確認前に次jobで上書きしない。
+- 使用chunk/inboxは、前回result確認前に次jobで上書きしない。
+- inboxは各chunkのblob SHAを固定するため、別内容へのすり替わりや古いslot混在をActionsが拒否できる。
 - terminal jobを再完了しない。
 - discovery補充はready jobが0件のときだけ行い、同時に複数作らない。
 - paper更新はblob SHAで競合検査する。
