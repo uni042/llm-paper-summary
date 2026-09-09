@@ -2,58 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
-  "job_id": "job-research-bf598cfa965b8925",
+  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
+  "job_id": "job-research-ad144841ea01b7c6",
   "data": {
-    "hardware": [
-      "Qwen3.6-35B-A3B: single 98GB accelerator (~72GB resident)",
-      "Qwen3.5-397B-A17B: sharded across machine (~752GB bf16)"
-    ],
-    "software": [
-      "PyTorch",
-      "Hugging Face Transformers 5.3–5.14",
-      "bf16"
-    ],
-    "model": [
-      "Qwen3.6-35B-A3B",
-      "Qwen3.5-397B-A17B",
-      "Gemma-4-26B-A4B preliminary appendix"
-    ],
-    "datasets": [
-      "WikiText-103",
-      "CodeParrot Python subset",
-      "MMLU",
-      "C-Eval",
-      "GSM8K"
-    ],
-    "baselines": [
-      "native trained-k",
-      "standard reduced-k renormalization k2=k1",
-      "no renormalization k2=E",
-      "uniform expert weights",
-      "router-probability sampling",
-      "random expert selection"
-    ],
+    "hardware": ["Intel Xeon Gold 6326 @ 2.90 GHz, 16 physical cores", "4× NVIDIA A100 80GB"],
+    "software": ["Tangram on vLLM", "custom CUDA kernels based on FlashAttention", "OpenMP/SIMD vectorized block table"],
+    "model": ["Qwen3-4B", "Llama-3.1-8B", "Gemma-3-12B", "GPT-OSS-20B", "Qwen3-30B-A3B"],
+    "datasets": ["SCBench: Many-Shot, RepoQA, Multi-Choice QA, MathFind, Retrieve Prefix-Suffix, KV, Summary", "50 pilot samples for calibration"],
+    "baselines": ["vLLM Full-KV", "original dynamic Ada-SnapKV, Expected Attention, FastKVzip", "FlashDecoding", "FlashInfer"],
     "settings": [
-      {
-        "name": "MMLU",
-        "description": "2000 fixed-seed questions across 57 subjects, 5-shot, A–D single-token logits, paired McNemar test."
-      },
-      {
-        "name": "GSM8K",
-        "description": "500 questions, 0-shot, greedy up to 512 tokens, reasoning disabled, exact final-number match."
-      },
-      {
-        "name": "perplexity",
-        "description": "100K-token WikiText-103 and CodeParrot samples, context 2048, byte-identical chunks; held-out WikiText checks k2 selection."
-      },
-      {
-        "name": "routing analysis",
-        "description": "500K tokens/domain with forward hooks over all gates."
-      }
+      {"name": "retention ratios", "description": "accuracy ρ=0.7/0.5/0.3; throughput includes ρ=0.25"},
+      {"name": "calibration", "description": "50 samples, α=2"},
+      {"name": "context", "description": "Short <20K, Mid 20K–100K, Long >100K"},
+      {"name": "H_p", "description": "4–8 best measured trade-off; breakdown at H_p=4"}
     ],
-    "correctness": "Lossy compute reduction; statistically non-significant downstream difference is not proof of exact equivalence.",
-    "methodology": "Scan k2 while holding k1 fixed to separate expert capacity loss from gain miscalibration; paired tests are used because effects are sub-percent to few-percent.",
-    "scope": "Main matched k1/k2 evidence is two Qwen fine-grained MoEs from same series; third-architecture Gemma uses earlier scalar-gain formulation and is directional only."
+    "correctness": "Tangram is compared with each compression method's original dynamic implementation while keeping the scorer fixed. Static budgets closely track and sometimes exceed original accuracy across three methods and five models.",
+    "methodology": "All throughput, latency and fragmentation results are actual execution on the stated A100 server, not simulation. Evaluation separates quality, throughput, prefill reclaim cost, decode attention latency, TTFT, and fragmentation/management trade-offs.",
+    "scope": "Strong evidence for vLLM on one A100 server and SCBench multi-turn workloads; no proof that calibration profile or optimal H_p transfers unchanged to other GPU generations, engines, or large workload shifts."
   }
 }
