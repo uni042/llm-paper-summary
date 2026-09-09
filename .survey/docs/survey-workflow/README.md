@@ -17,8 +17,8 @@
 4. research/auditの完成Markdownは、原則として新規の `.survey/work-queue/payloads/<unique>.md` に保存する。
 5. 続けて小さい `.survey/work-queue/submissions/<unique>.json` を新規作成し、`payload_path` からpayloadを参照する。
 6. submissionのpushで `Survey helper worker` が自動起動する。ChatからActionsを直接起動しない。
-7. ready jobが0件なら、`{"operation":"request_jobs"}` の小さいsubmissionを1件だけ新規作成する。Actionsがdiscovery jobを1件生成する。
-8. 同じChat実行に余裕があれば最新HEADとqueueを読み直し、そのdiscovery jobを処理する。
+7. Actionsはsubmission処理後にready queueを確認し、**0件なら同じActions実行内でdiscovery jobを1件補充する**。
+8. ChatはActions反映後の最新HEADとqueueを読み直し、生成済みの次jobをそのまま処理する。通常は `request_jobs` を作らない。
 9. 1件終わるたび最新queueを確認して次へ進む。次成果を安全に保存できない見込みなら着手せず終了する。
 10. 次回も必ず最新HEADからqueueを読み直す。同じsubmissionを再送しない。
 
@@ -37,6 +37,8 @@ Chat
        ┌─────────────────┼─────────────────┐
        ▼                 ▼                 ▼
    paper反映          job/state更新      next-jobs生成
+                            │
+                    ready=0なら即discovery補充
 ```
 
 GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。通常処理の成立条件ではない。
@@ -46,7 +48,7 @@ GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。
 判断基準は以下だけにする。
 
 - ready jobがある → priority順に可能な限り処理する。
-- ready jobがない → discovery jobを1件生成する。
+- 最後のready jobをActionsが完了させて0件になる → 同じActions実行内でdiscovery jobを1件補充する。
 - discoveryは有望論文を0〜5件返す。5件はノルマではない。
 - research後、明確な確認事項が残った場合だけaudit jobを作る。
 - 固定の探索周期、research/audit比率、backlog維持目標、固定割合監査は使わない。
@@ -63,4 +65,4 @@ GitHubの10分scheduleは未処理submission回収とqueue保守の**保険**。
 
 ## legacy
 
-workflow v8以前の文書、state、request/result、cycle/run helperは履歴・復旧資料。新しい仕事量・優先順位・通常transportの決定には使わない。
+workflow v8以前の文書、state、request/result、cycle/run helperは履歴・復旧資料。過去の `request_jobs` submissionも互換用途だけで、新しい通常フローでは使わない。
