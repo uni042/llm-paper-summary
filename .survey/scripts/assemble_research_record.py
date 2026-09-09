@@ -14,7 +14,17 @@ sys.path.insert(0, str(HERE))
 from render_paper import render_paper  # noqa: E402
 
 TRANSPORT_VERSION = 10
-MAX_SLOT_BYTES = 8192
+# Keep writes small, but do not force the scientifically densest sections into an
+# 8 KiB ceiling. Japanese prose is multi-byte in UTF-8, so problem/method and
+# evaluation/results need modestly larger envelopes to reach the reader-first
+# quality standard in .survey/templates/paper.md.
+MAX_SLOT_BYTES = {
+    "metadata": 8192,
+    "problem_method": 16384,
+    "evaluation": 12288,
+    "results": 12288,
+    "positioning": 8192,
+}
 FIXED_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 LEGACY_PAYLOAD = ".survey/work-queue/payloads/chat-payload.md"
 SLOT_NAMES = ["metadata", "problem_method", "evaluation", "results", "positioning"]
@@ -58,8 +68,29 @@ def nonempty(value: Any) -> bool:
     return True
 
 
+def prose_chars(value: Any) -> int:
+    """Approximate human-readable prose amount without caring about language."""
+    if value is None:
+        return 0
+    if isinstance(value, str):
+        return len(value.strip())
+    if isinstance(value, list):
+        total = 0
+        for item in value:
+            if isinstance(item, dict):
+                total += prose_chars(item.get("description"))
+                total += prose_chars(item.get("interpretation"))
+                total += prose_chars(item.get("text"))
+            else:
+                total += prose_chars(item)
+        return total
+    if isinstance(value, dict):
+        return sum(prose_chars(v) for v in value.values())
+    return len(str(value))
+
+
 def validate_record(record: dict[str, Any]) -> None:
-    """Reject structurally incomplete completed research/audit artifacts."""
+    """Reject structurally incomplete or note-like completed research artifacts."""
     meta = record.get("metadata") or {}
     pm = record.get("problem_method") or {}
     ev = record.get("evaluation") or {}
@@ -76,8 +107,24 @@ def validate_record(record: dict[str, Any]) -> None:
     for key in ("problem", "novelty"):
         if not nonempty(pm.get(key)):
             raise ValueError(f"problem_method.{key} is required")
-    if not (nonempty(pm.get("method_overview")) or nonempty(pm.get("components"))):
-        raise ValueError("problem_method requires method_overview or components")
+    if not nonempty(pm.get("method_overview")):
+        raise ValueError("problem_method.method_overview is required for reader-first explanation")
+    if not nonempty(pm.get("components")):
+        raise ValueError("problem_method.components is required")
+
+    # A completed paper must contain enough explanatory prose to be useful to a
+    # reader who has not read the source. This is deliberately a low floor, not
+    # a target: complex systems should usually be substantially longer.
+    method_chars = (
+        prose_chars(pm.get("method_overview"))
+        + prose_chars(pm.get("components"))
+        + prose_chars(pm.get("system_design"))
+    )
+    if method_chars < 900:
+        raise ValueError(
+            "problem_method is too terse for repository publication; explain the "
+            "method, component roles, data/control flow, why it helps, and failure/boundary conditions"
+        )
 
     if not nonempty(ev.get("baselines")):
         raise ValueError("evaluation.baselines is required")
@@ -90,6 +137,8 @@ def validate_record(record: dict[str, Any]) -> None:
 
     if not nonempty(rs.get("key_results")):
         raise ValueError("results.key_results requires at least one quantitative result")
+    if not nonempty(rs.get("overview")):
+        raise ValueError("results.overview is required; explain the main result before listing numbers")
     if not nonempty(pos.get("limitations")):
         raise ValueError("positioning.limitations is required")
     if not nonempty(pos.get("differences")):
@@ -136,8 +185,9 @@ def assemble(repo_root: Path) -> bool:
         if not path.is_file():
             raise ValueError(f"missing record slot: {path_text}")
         raw = path.read_bytes()
-        if len(raw) > MAX_SLOT_BYTES:
-            raise ValueError(f"record slot too large: {path_text} ({len(raw)} bytes)")
+        limit = MAX_SLOT_BYTES[slot_name]
+        if len(raw) > limit:
+            raise ValueError(f"record slot too large: {path_text} ({len(raw)} bytes > {limit})")
         if git_blob_sha(raw) != expected_sha:
             raise ValueError(f"record slot blob mismatch: {path_text}")
 
