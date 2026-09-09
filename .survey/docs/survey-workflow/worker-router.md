@@ -25,6 +25,14 @@ Chatは探索・全文精読・科学的判断・監査判断と**構造化resea
 
 構造化recordは「後でMarkdown rendererが文章を補ってくれる」前提で短縮しない。特に `problem_method` は、論文固有の略語や機構名を列挙するメモではなく、**そのまま人間向け本文として読める説明文**を入れる。狭い分野の語は最初に平易な日本語で意味を説明し、手法が複数段ある場合は各段の入力・処理・出力・次段との接続・ボトルネックへの効果を書く。
 
+### 日本語優先
+
+**人間が読む説明文は、可能な限り日本語または一般的なカタカナ表記で書く。** `request`、`placement`、`dynamic`、`latency` のような英単語を日本語文へそのまま差し込まない。例えば「各requestのplacementをdynamicに変える」ではなく「各リクエストの配置を動的に変える」と書く。
+
+英語を残してよいのは、固有名詞、定着した略語、コード/API/変数、または**初出で日本語説明の直後に正式名称を示す括弧内**に限る。初出後は日本語・カタカナまたは略語へ戻す。機械用JSONのkey名は英語のままでよいが、`summary`、`overview`、`problem_method`、`evaluation`、`results`、`positioning` 内の人間向け文章にはこの規則を適用する。
+
+`.survey/scripts/japanese_style.py` と `.survey/scripts/assemble_research_record.py` が、固有名詞・URL・コード・略語・初出括弧内の正式英語名を除外した説明文について日本語比率と裸の英語専門語を検査する。日本語比率は80%以上を目標、70〜80%を警告相当、70%未満を不合格とし、日本語・カタカナへ置換できる英語専門語が括弧外に残っていれば比率に関係なく不合格とする。
+
 **GitHubへslotを書き始める前に `.survey/templates/paper.md` に対する最終品質チェックを行う。** 複数機構を持つsystem論文では、主要機構ごとの `components[].description` を原則2〜4段落程度の説明文にし、少なくとも「何を入力・観測するか」「何を選択・移動・削除・予測するか」「前後の機構とどう接続するか」「なぜボトルネックが減るか」「追加costと失敗・資源不足時の挙動」を読者が追える状態にする。論文固有または狭い分野の用語・略語・評価指標は初出で平易に説明する。`results` は数値ごとに比較対象・条件・結果の読み方を持たせ、悪化条件・negative resultも省略しない。`metadata.overview` が使える場合は、問題・従来方式・提案・対象環境・実機/simulationの別を数段落で記述する。これらを満たさないrecordは完成扱いにせず、そのrunで本文へ戻って補強してから送信する。
 
 **同一runで継続処理する。** 開始時に既存ready research/auditがあればpriority順に処理する。readyが尽きたらdiscoveryを実行し、Actions反映後の最新queueを読み直して、そのdiscoveryから生成されたresearch jobを同じrunで直ちに全文精読・構造化record保存・Actions結果確認まで進める。researchからauditが生成された場合も同じrunで処理する。各job完了後に必ず最新queueを再取得する。
