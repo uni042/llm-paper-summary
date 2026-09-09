@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-53a642a3c05df9ed",
+  "type": "research",
+  "parent_job_id": "job-96f12c7bc8f9af18",
+  "priority": 90,
+  "canonical_id": "arXiv:2605.18071",
+  "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+  "source_url": "https://arxiv.org/abs/2605.18071",
+  "paper_path": null,
+  "selection_reason": "GPU HBM、CPU DRAM、SSDの三階層でKVキャッシュ配置と実行パイプラインを統合管理する推論システム。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-09T21:33:25+00:00",
+  "completed_at": "2026-09-09T21:33:26+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2605.18071",
+  "duplicate_of_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2605.18071"
+  }
+}
