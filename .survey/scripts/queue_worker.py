@@ -147,7 +147,7 @@ def active_jobs(job_type=None, lane=None):
     return out
 
 
-def ensure_discovery_jobs(st):
+def ensure_discovery_jobs(st, force_if_no_ready=False):
     prompts = {
         "discovery_fresh": "Find genuinely new inference-system papers or important revisions from primary sources. As a rule, require the paper or meaningful revision to be within the last 30 days. Older missing work belongs in the gap lane. Prefer papers not already represented in the repository.",
         "discovery_citation": "Follow citations, follow-up work, and descendant papers from important inference-system papers already in the repository. Return only candidates with meaningful system-level relevance.",
@@ -155,6 +155,25 @@ def ensure_discovery_jobs(st):
     }
     history = st.setdefault("discovery_lanes", {})
     current_time = datetime.now(timezone.utc)
+    ready_exists = any(j.get("status") == "ready" for j in iter_jobs())
+    forced_lane = None
+    if force_if_no_ready and not ready_exists:
+        # Prefer a normally-due lane; otherwise create one fresh-discovery job
+        # so an empty Chat run can continue with real literature search.
+        due_lanes = []
+        for lane in LANE_TARGETS:
+            last = history.get(lane, {}).get("last_issued_at")
+            due = True
+            if last:
+                try:
+                    last_dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
+                    due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS[lane] * 3600
+                except Exception:
+                    due = True
+            if due and not active_jobs("discovery", lane):
+                due_lanes.append(lane)
+        forced_lane = due_lanes[0] if due_lanes else "discovery_fresh"
+
     for lane, target in LANE_TARGETS.items():
         current = active_jobs("discovery", lane)
         last = history.get(lane, {}).get("last_issued_at")
@@ -165,7 +184,9 @@ def ensure_discovery_jobs(st):
                 due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS[lane] * 3600
             except Exception:
                 due = True
-        if current or not due:
+        if current:
+            continue
+        if not due and lane != forced_lane:
             continue
         while len(current) < target:
             issued = now()
@@ -450,10 +471,14 @@ def process_submissions(st: dict):
             sub = read_json(p, {})
             sub["_file"] = str(p.relative_to(ROOT))
             if sub.get("operation") == "request_jobs":
+                before = {j["job_id"] for j in iter_jobs() if j.get("status") == "ready"}
+                ensure_discovery_jobs(st, force_if_no_ready=True)
+                after = [j["job_id"] for j in iter_jobs() if j.get("status") == "ready" and j["job_id"] not in before]
                 result.update({
                     "ok": True,
                     "operation": "request_jobs",
                     "requested_at": now(),
+                    "generated_ready_jobs": after,
                 })
                 write_json(rp, result)
                 continue
