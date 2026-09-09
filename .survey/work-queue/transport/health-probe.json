@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "kind": "github_write_health_probe",
+  "probe_id": "bootstrap",
+  "attempt_id": null,
+  "target_path": null,
+  "note": "Fixed low-risk probe target. Scheduled Chat updates this only after a GitHub write failure to distinguish target/payload-specific rejection from run-wide connector write failure."
+}
