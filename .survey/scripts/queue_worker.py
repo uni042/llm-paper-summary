@@ -126,16 +126,29 @@ def active_jobs(job_type=None, lane=None):
     return out
 
 
-def ensure_discovery_jobs():
+def ensure_discovery_jobs(st):
     prompts = {
         "discovery_fresh": "Find genuinely new inference-system papers or important revisions from primary sources. Prefer papers not already represented in the repository.",
         "discovery_citation": "Follow citations, follow-up work, and descendant papers from important inference-system papers already in the repository. Return only candidates with meaningful system-level relevance.",
         "discovery_gap": "Search for missing lineages or adjacent-system techniques that plausibly matter to LLM inference systems. Prefer high-impact gaps over novelty for its own sake.",
     }
+    history = st.setdefault("discovery_lanes", {})
+    current_time = datetime.now(timezone.utc)
     for lane, target in LANE_TARGETS.items():
         current = active_jobs("discovery", lane)
+        last = history.get(lane, {}).get("last_issued_at")
+        due = True
+        if last:
+            try:
+                last_dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
+                due = (current_time - last_dt).total_seconds() >= DISCOVERY_REFRESH_HOURS * 3600
+            except Exception:
+                due = True
+        if current or not due:
+            continue
         while len(current) < target:
-            jid = stable_id("job", lane, now(), str(len(current)))
+            issued = now()
+            jid = stable_id("job", lane, issued, str(len(current)))
             add_job({
                 "job_id": jid,
                 "type": "discovery",
@@ -157,6 +170,7 @@ def ensure_discovery_jobs():
                     }]
                 },
             })
+            history[lane] = {"last_issued_at": issued}
             current = active_jobs("discovery", lane)
 
 
@@ -358,17 +372,17 @@ def queue_snapshot():
 
 
 def main():
+    global ROOT, QUEUE, JOBS, SUBMISSIONS, RESULTS, STATE, ARCHIVE
     p = argparse.ArgumentParser()
     p.add_argument("--root", type=Path, default=ROOT)
     args = p.parse_args()
-    global ROOT, QUEUE, JOBS, SUBMISSIONS, RESULTS, STATE, ARCHIVE
     ROOT = args.root.resolve()
     QUEUE = ROOT / "work-queue"
     JOBS, SUBMISSIONS, RESULTS = QUEUE / "jobs", QUEUE / "submissions", QUEUE / "results"
     STATE, ARCHIVE = QUEUE / "state.json", QUEUE / "archive"
     st = load_state()
     process_submissions(st)
-    ensure_discovery_jobs()
+    ensure_discovery_jobs(st)
     save_state(st)
     write_json(QUEUE / "next-jobs.json", queue_snapshot())
     print(json.dumps(queue_snapshot(), ensure_ascii=False, indent=2))
