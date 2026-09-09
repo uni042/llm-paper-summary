@@ -4,10 +4,13 @@ on:
   push:
     paths:
       - '.survey/requests/*.json'
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: read
 
 concurrency:
   group: survey-helper-main
@@ -15,6 +18,7 @@ concurrency:
 
 jobs:
   worker:
+    if: github.event_name != 'issues' || (github.actor == github.repository_owner && startsWith(github.event.issue.title, '[survey-helper]'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,7 +34,37 @@ jobs:
       - name: Install helper dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Process pending requests
+      - name: Materialize issue request
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          body = (os.environ.get("ISSUE_BODY") or "").strip()
+          req = json.loads(body)
+          if not isinstance(req, dict):
+              raise SystemExit("issue body must be one JSON object")
+          path = Path(".survey/requests") / f"issue-{os.environ['ISSUE_NUMBER']}.json"
+          if path.exists():
+              raise SystemExit(f"request already exists: {path}")
+          path.parent.mkdir(parents=True, exist_ok=True)
+          path.write_text(json.dumps(req, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(path)
+          PY
+
+      - name: Process issue request
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .survey/scripts/action_worker.py --request ".survey/requests/issue-${ISSUE_NUMBER}.json"
+
+      - name: Process pending file requests
+        if: github.event_name != 'issues'
         run: python .survey/scripts/action_worker.py
 
       - name: Commit worker results
@@ -41,6 +75,6 @@ jobs:
           fi
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add .survey/results .survey/survey-state papers
+          git add .survey/requests .survey/results .survey/survey-state papers
           git commit -m 'survey-helper: process requests'
           git push
