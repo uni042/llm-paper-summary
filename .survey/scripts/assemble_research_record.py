@@ -48,6 +48,54 @@ def safe_rel(path_text: str) -> str:
     return p.as_posix()
 
 
+def nonempty(value: Any) -> bool:
+    if value is None:
+        return False
+    if isinstance(value, str):
+        return bool(value.strip())
+    if isinstance(value, (list, dict)):
+        return bool(value)
+    return True
+
+
+def validate_record(record: dict[str, Any]) -> None:
+    """Reject structurally incomplete completed research/audit artifacts."""
+    meta = record.get("metadata") or {}
+    pm = record.get("problem_method") or {}
+    ev = record.get("evaluation") or {}
+    rs = record.get("results") or {}
+    pos = record.get("positioning") or {}
+
+    required_meta = ("canonical_id", "title", "summary", "source")
+    missing_meta = [k for k in required_meta if not nonempty(meta.get(k))]
+    if missing_meta:
+        raise ValueError("metadata missing required fields: " + ", ".join(missing_meta))
+    if not nonempty(meta.get("sources")):
+        raise ValueError("metadata.sources requires at least one primary-source URL")
+
+    for key in ("problem", "novelty"):
+        if not nonempty(pm.get(key)):
+            raise ValueError(f"problem_method.{key} is required")
+    if not (nonempty(pm.get("method_overview")) or nonempty(pm.get("components"))):
+        raise ValueError("problem_method requires method_overview or components")
+
+    if not nonempty(ev.get("baselines")):
+        raise ValueError("evaluation.baselines is required")
+    if not (
+        nonempty(ev.get("hardware"))
+        or nonempty(ev.get("software"))
+        or nonempty(ev.get("methodology"))
+    ):
+        raise ValueError("evaluation requires hardware/software/methodology evidence")
+
+    if not nonempty(rs.get("key_results")):
+        raise ValueError("results.key_results requires at least one quantitative result")
+    if not nonempty(pos.get("limitations")):
+        raise ValueError("positioning.limitations is required")
+    if not nonempty(pos.get("differences")):
+        raise ValueError("positioning.differences is required")
+
+
 def assemble(repo_root: Path) -> bool:
     inbox_path = repo_root / FIXED_INBOX
     inbox = read_json(inbox_path)
@@ -108,6 +156,7 @@ def assemble(repo_root: Path) -> bool:
         record[slot_name] = data
         total_bytes += len(raw)
 
+    validate_record(record)
     markdown = render_paper(record)
     (repo_root / LEGACY_PAYLOAD).write_text(markdown, encoding="utf-8")
 
