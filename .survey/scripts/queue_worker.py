@@ -340,6 +340,7 @@ def process_research(sub: dict, job: dict, st: dict):
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
         st["stats"]["research_completed"] += 1
+        st.setdefault("maintenance", {})["views_dirty"] = True
         make_audit_job(sub, job)
     elif status in {"blocked", "deferred", "rejected"}:
         job["status"] = status
@@ -361,6 +362,7 @@ def process_audit(sub: dict, job: dict, st: dict):
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
         st["stats"]["audit_completed"] += 1
+        st.setdefault("maintenance", {})["views_dirty"] = True
     elif status in {"blocked", "deferred", "rejected"}:
         job["status"] = status
         job["completed_at"] = now()
@@ -473,6 +475,41 @@ def reconcile_v9_identity_deltas():
     return repaired
 
 
+def maybe_rebuild_views(st):
+    """Batch large derived-view rewrites; never do them on every 10-minute poll."""
+    import subprocess
+    m = st.setdefault("maintenance", {})
+    dirty = bool(m.get("views_dirty"))
+    last = m.get("last_view_build_at")
+    # On migration, a completed v9 research artifact with no recorded build means dirty.
+    if not dirty and not last:
+        dirty = any(
+            j.get("type") in {"research", "audit"} and j.get("status") == "completed"
+            for j in iter_jobs()
+        )
+    if not dirty:
+        return False
+    current = datetime.now(timezone.utc)
+    if last:
+        try:
+            last_dt = datetime.fromisoformat(last.replace("Z", "+00:00"))
+            if (current - last_dt).total_seconds() < 3600:
+                return False
+        except Exception:
+            pass
+    p = subprocess.run(
+        [sys.executable, ".survey/scripts/survey.py", "--root", ".survey", "build"],
+        cwd=ROOT.parent,
+        text=True,
+        capture_output=True,
+    )
+    if p.returncode != 0:
+        raise RuntimeError("derived view build failed: " + (p.stderr or p.stdout))
+    m["views_dirty"] = False
+    m["last_view_build_at"] = now()
+    return True
+
+
 def normalize_ready_jobs():
     changed = False
     for j in iter_jobs():
@@ -525,6 +562,7 @@ def main():
     ensure_discovery_jobs(st)
     reconcile_v9_identity_deltas()
     normalize_ready_jobs()
+    maybe_rebuild_views(st)
     save_state(st)
     snap = queue_snapshot()
     snap_path = QUEUE / "next-jobs.json"
