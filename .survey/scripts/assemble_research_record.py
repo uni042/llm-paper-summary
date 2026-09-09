@@ -17,13 +17,16 @@ TRANSPORT_VERSION = 10
 MAX_SLOT_BYTES = 8192
 FIXED_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 LEGACY_PAYLOAD = ".survey/work-queue/payloads/chat-payload.md"
-SLOTS = [
-    ("metadata", ".survey/work-queue/records/chat-record/metadata.json"),
-    ("problem_method", ".survey/work-queue/records/chat-record/problem_method.json"),
-    ("evaluation", ".survey/work-queue/records/chat-record/evaluation.json"),
-    ("results", ".survey/work-queue/records/chat-record/results.json"),
-    ("positioning", ".survey/work-queue/records/chat-record/positioning.json"),
-]
+SLOT_NAMES = ["metadata", "problem_method", "evaluation", "results", "positioning"]
+BANK_ROOTS = {
+    "a": ".survey/work-queue/records/chat-record",
+    "b": ".survey/work-queue/records/chat-record-b",
+}
+
+
+def slots_for_bank(bank: str) -> list[tuple[str, str]]:
+    root = BANK_ROOTS[bank]
+    return [(name, f"{root}/{name}.json") for name in SLOT_NAMES]
 
 
 def git_blob_sha(data: bytes) -> str:
@@ -53,8 +56,12 @@ def assemble(repo_root: Path) -> bool:
         return False
     if inbox.get("payload_chunks") is not None or inbox.get("payload_path") is not None:
         raise ValueError("record_slots cannot be combined with legacy payload fields")
-    if not isinstance(refs, list) or len(refs) != len(SLOTS):
-        raise ValueError(f"record_slots must contain exactly {len(SLOTS)} entries")
+    bank = str(inbox.get("record_bank") or "a").lower()
+    if bank not in BANK_ROOTS:
+        raise ValueError("record_bank must be a or b")
+    slots = slots_for_bank(bank)
+    if not isinstance(refs, list) or len(refs) != len(slots):
+        raise ValueError(f"record_slots must contain exactly {len(slots)} entries")
 
     attempt_id = inbox.get("attempt_id")
     job_id = inbox.get("job_id")
@@ -65,7 +72,7 @@ def assemble(repo_root: Path) -> bool:
 
     record: dict[str, Any] = {}
     total_bytes = 0
-    for index, ((slot_name, expected_path), ref) in enumerate(zip(SLOTS, refs), start=1):
+    for index, ((slot_name, expected_path), ref) in enumerate(zip(slots, refs), start=1):
         if not isinstance(ref, dict):
             raise ValueError(f"record_slots[{index - 1}] must be an object")
         if ref.get("slot") != slot_name:
@@ -112,7 +119,8 @@ def assemble(repo_root: Path) -> bool:
     print(json.dumps({
         "assembled": True,
         "transport_version": TRANSPORT_VERSION,
-        "slots": len(SLOTS),
+        "bank": bank,
+        "slots": len(slots),
         "structured_bytes": total_bytes,
         "rendered_bytes": len(markdown.encode("utf-8")),
     }, ensure_ascii=False))
