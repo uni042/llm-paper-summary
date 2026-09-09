@@ -3,13 +3,14 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（41本）
+## 自動生成の論文一覧（42本）
 
 | 論文 | 一文要約 |
 |---|---|
 | [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md) | requestごとにcontext parallelism（文脈並列）のdegreeを選び、workload変化に合わせてGPU群のCP構成をsplit / mergeしつつprefix cacheも配置・複製して、長context servingのTTFTとSLO達成率を改善する。 |
 | [Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN](2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md) | 移動端末の基地局切替前に、安定した履歴prefixは移行先GPUで再計算し、増え続けるsuffix KVは移行元から転送して、切替後の生成停止と遠隔転送遅延を抑える。 |
 | [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md) | vLLMの1 iteration当たりtoken budgetを固定せず、同時prefill数とactive decode状態からscheduling pressureを見て大きいbudgetと小さいbudgetを切り替え、長context prefillの効率とdecode interferenceを両立する。 |
+| [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](agentsysbench.md) | 10種類のagentic applicationと24時間のproduction traceを統一計測し、LLM推論だけでは説明できないtool、state、communication、control-planeのbottleneckを体系化するAgentSysBench。task-disaggregated serving、communication-aware placement、state offloading、tool-result cachingの独立PoCも評価する。 |
 | [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md) | 未知の出力長に対するKV予約量、GPU並列構成、routing、prefix cachingを分布変化まで考慮して共同最適化し、過剰予約とpreemptionのcostを抑えるcontrol-plane手法。 |
 | [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md) | batch枠とKV cacheをresource budgetとして価格付けし、各requestのSLO便益がresourceのshadow priceを上回るworkerへroutingすることで、latency・TTFT・throughput・tail SLOを同じonline最適化で調整するLLM router。 |
 | [Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving](2026-2607.02043-kairos-load-aware-prefill-deflection.md) | 分離型LLM servingでprefill queueとKV転送がTTFTを支配する時、decode nodeの余剰computeへprefillをTBT-safeな可変chunkでdeflectし、KVをdecode側で直接構築してtail TTFTを削減する。 |

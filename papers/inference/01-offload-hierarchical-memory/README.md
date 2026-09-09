@@ -3,11 +3,12 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（18本）
+## 自動生成の論文一覧（19本）
 
 | 論文 | 一文要約 |
 |---|---|
 | [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md) | 通常SSDよりはるかに高帯域な将来型FlashをGPU/HBMの近くへ接続し、expert weightをGPUへ直接送る経路とHBMをbufferにする経路を同時利用して、大容量MoEのweight転送待ちを減らす設計。 |
+| [Potential Applications of HBF in LLM Serving Systems](hbf-llm-serving.md) | High-Bandwidth FlashをHBMの代替ではなく容量拡張として統合し、MoE expert replica増加とmulti-model weight residency拡大により通信・model loading・load imbalanceを減らす設計を検討する。実HBF評価ではなく、HBM側実行帯域を損なわない理想化条件のシミュレーションで容量効果を分離評価する。 |
 | [Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference](2026-2608.12103-kernel-managed-expert-cache-tiering.md) | DRAMを超えるMoE expert poolで、user-spaceのexpert cacheではなくOS page cacheにevictionを任せ、router固有情報はadmissionやreadahead adviceへ限定する設計を実機で検証する。 |
 | [Cache-Resident LLM Inference in GB-Scale Last-Level Caches](2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md) | GB級のCPU last-level cacheへmodel weightを常駐させ、weight計算とattention/KV stateを別socketへ分離し、core-localな配置と細粒度同期でDRAM往復とoperator barrierを減らすCPU LLM inference system。 |
 | [CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution](2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md) | 複数microbatchから同じexpertへ送られるtokenをまとめて大きなmatrix multiplicationとして実行し、Intel AMX対応CPUとGPUへexpert計算を分担して、offloaded MoEのthroughputを高める。 |
