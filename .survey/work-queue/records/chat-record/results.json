@@ -2,73 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-training-free-halving-20260910-0048-v10-a1",
-  "job_id": "job-research-bf598cfa965b8925",
+  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
+  "job_id": "job-research-ad144841ea01b7c6",
   "data": {
-    "overview": "Standard reduced-k renormalization exaggerates the cost of using fewer experts. An interior reference set restores most downstream quality, whereas both k2=k1 and k2=E can be harmful. Perplexity and MMLU prefer different k2 on the 35B model.",
+    "overview": "Tangram converts irregular non-uniform KV retention into allocatable memory and balanced GPU work. Static profiles remove reclaim/planning overhead while preserving underlying compression accuracy. The 2.6× headline combines compression capacity gain and Tangram system efficiency; cumulative ablations isolate the latter.",
     "key_results": [
-      {
-        "metric": "Qwen3.6 MMLU, 8→4 experts",
-        "value": "81.30%, -0.35pt",
-        "baseline": "native 81.65%; standard k2=4 77.00% (-4.65pt)",
-        "condition": "k1=4,k2=16,n=2000",
-        "interpretation": "halves routed-expert compute with no statistically detectable loss (p=0.66)."
-      },
-      {
-        "metric": "Qwen3.5-397B MMLU,10→5",
-        "value": "88.90%, -0.55pt",
-        "baseline": "native 89.45%; standard k2=5 87.35% (-2.10pt)",
-        "condition": "k1=5,k2=10,n=2000",
-        "interpretation": "same mechanism at 11× model scale; p=0.24."
-      },
-      {
-        "metric": "No-renormalization failure",
-        "value": "35B MMLU -27.45pt; WikiText PPL +356%",
-        "baseline": "native",
-        "condition": "k1=6,k2=E=256",
-        "interpretation": "gain is essential; simply disabling normalization is catastrophic."
-      },
-      {
-        "metric": "35B PPL optimum",
-        "value": "k1=6,k2=8: -1.61% WikiText PPL vs native",
-        "baseline": "native top-8",
-        "condition": "25% fewer routed experts",
-        "interpretation": "trained-k reference mass preserves PPL."
-      },
-      {
-        "metric": "GSM8K 35B half experts",
-        "value": "94.40%, -0.60pt",
-        "baseline": "native 95.00%; standard k2=4 88.40% (-6.60pt)",
-        "condition": "k1=4,k2=16,n=500",
-        "interpretation": "effect survives autoregressive generation."
-      },
-      {
-        "metric": "Compute accounting",
-        "value": "routed expert params/token 1.006B→0.503B; total expert term 1.132B→0.629B",
-        "baseline": "k1=8",
-        "condition": "35B k1=4",
-        "interpretation": "50% routed-expert compute reduction, 44% expert-term reduction, estimated 17% end-to-end active-parameter reduction."
-      }
+      {"metric": "end-to-end throughput", "value": "up to 2.6×", "baseline": "vLLM Full-KV", "condition": "SCBench with FastKVzip; Short-to-Long contexts", "interpretation": "Compression increases capacity and Tangram converts it into realized serving throughput."},
+      {"metric": "page reclamation overhead", "value": "up to 25% of prefill time eliminated", "baseline": "dynamic allocation/compress-and-reclaim", "condition": "dynamic vs static budget allocation", "interpretation": "Known footprint removes host reclaim path."},
+      {"metric": "additional memory reclaimed", "value": "12–25% of full KV cache", "baseline": "adjacent grouping", "condition": "budget-aware clustering at same H_p", "interpretation": "Similar-budget head grouping reduces slack."},
+      {"metric": "runtime planning overhead avoided", "value": "15–20% of decode step", "baseline": "FlashInfer-style dynamic planning", "condition": "heterogeneous head lengths", "interpretation": "AOT map removes per-layer planning."},
+      {"metric": "static imbalance avoided", "value": "up to 1.7× latency inflation in baseline", "baseline": "FlashDecoding-style static split", "condition": "non-uniform head lengths", "interpretation": "CTA allocation follows calibrated workload."}
     ],
     "negative_results": [
-      {
-        "name": "Perplexity mis-ranks k2",
-        "description": "35B PPL prefers k2=8 while MMLU prefers k2=16; k2=8 is significantly -1.10 MMLU points (p=0.021)."
-      },
-      {
-        "name": "No memory saving",
-        "description": "all E experts remain resident; method only reduces executed expert compute and related weight traffic."
-      },
-      {
-        "name": "Same-series evidence",
-        "description": "two main models are Qwen family; cross-architecture generalization remains hypothesis."
-      },
-      {
-        "name": "Coarse router boundary",
-        "description": "mechanism predicts smaller benefit when top-k mass is less flat; Gemma top-8 mass 0.302 shows weaker normalization sensitivity."
-      }
+      {"name": "group-size trade-off", "description": "H_p too small raises CPU/page-table cost; H_p too large restores fragmentation. H_p=4–8 is the measured sweet spot."},
+      {"name": "speedup attribution", "description": "2.6× includes the capacity effect of compression and is not Tangram-only speedup."},
+      {"name": "static-profile dependency", "description": "Offline calibration assumes stable retention patterns; arbitrary domain shifts or unseen architectures are not proven."}
     ],
-    "interpretation": "Gain calibration is a hidden confounder in post-training k reduction. Expert identity matters substantially more than precise weighting, enabling a cheap amplitude correction while preserving exact router ranking.",
-    "quality_impact": "Selected k2 recovers most downstream quality, but exact equivalence is not shown and k2 should be validated on downstream tasks."
+    "interpretation": "Most valuable when KV memory limits batch size and a quality-preserving non-uniform compressor creates heterogeneous head lengths. Less useful if KV memory is not limiting or retention profiles vary strongly.",
+    "quality_impact": "Across Ada-SnapKV, Expected Attention and FastKVzip on five models, Tangram closely tracks and sometimes exceeds original dynamic-compression accuracy at ρ=0.7/0.5/0.3; it does not repair the compressor's own quality failures."
   }
 }
