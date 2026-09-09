@@ -2,7 +2,40 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "idle",
-  "job_id": "idle",
-  "data": {}
+  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
+  "job_id": "job-research-622ec47c37b83739",
+  "data": {
+    "canonical_id": "arXiv:2609.05228",
+    "arxiv_id": "2609.05228",
+    "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+    "summary": "固定top-kルーティングで選ばれたexpertのうち実際の寄与が小さいslotをtokenごとに省く、学習不要・checkpoint保持型のMoE推論手法。Global Spectral Proxy (GSP)がSwiGLU expertのgate/up/down投影とRMSNorm scalingから全体的な変換能力を推定し、Router-Conditioned Refinement (RCR)がcentered router weightからrouting-preferred方向を作って方向依存のexpert応答を補正する。実行時はrouter gateと2つのoffline tableを組み合わせ、両方で低寄与と判断されたslotだけをskipしtop-1 expertは必ず残す。",
+    "source": "https://arxiv.org/abs/2609.05228",
+    "authors": [
+      "Zukang Xu",
+      "Zhixiong Zhao",
+      "Xing Hu",
+      "Jiangyong Yu",
+      "Houji Wen",
+      "Jun Li",
+      "Zhe Jiang",
+      "Dawei Yang"
+    ],
+    "publication": "arXiv:2609.05228v1, submitted 2026-09-04",
+    "publication_type": "arXiv preprint",
+    "topics": [
+      "Mixture-of-Experts",
+      "adaptive computation",
+      "expert skipping",
+      "training-free inference",
+      "router",
+      "SwiGLU",
+      "expert sparsity"
+    ],
+    "implementation": "arXiv v1本文にはACE固有の公式GitHub repositoryへのリンクを確認できない。評価はBF16、Hugging Face系pipeline、EvalScope 1.4.1を使用し、latencyはNVIDIA A100で測定。",
+    "sources": [
+      "https://arxiv.org/abs/2609.05228",
+      "https://arxiv.org/html/2609.05228",
+      "https://arxiv.org/pdf/2609.05228"
+    ]
+  }
 }
