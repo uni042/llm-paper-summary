@@ -330,12 +330,35 @@ def process_discovery(sub: dict, job: dict, st: dict):
     st["stats"]["selected"] += added
 
 
+def submission_content(sub: dict) -> str | None:
+    """Return inline Markdown or load an immutable payload Markdown file."""
+    content = sub.get("content")
+    payload = sub.get("payload_path")
+    if content is not None and payload is not None:
+        raise ValueError("use either content or payload_path, not both")
+    if payload is None:
+        return content
+    if not isinstance(payload, str):
+        raise ValueError("payload_path must be a string")
+    pp = Path(payload)
+    if (
+        not payload.startswith(".survey/work-queue/payloads/")
+        or ".." in pp.parts
+        or pp.suffix.lower() != ".md"
+    ):
+        raise ValueError("unsafe payload_path")
+    target = ROOT.parent / pp
+    if not target.is_file():
+        raise ValueError("payload_path does not exist")
+    return target.read_text(encoding="utf-8")
+
+
 def process_research(sub: dict, job: dict, st: dict):
     status = sub.get("status", "completed")
     if status == "completed":
-        content = sub.get("content")
+        content = submission_content(sub)
         if not isinstance(content, str) or len(content.strip()) < 500:
-            raise ValueError("completed research requires complete Markdown content")
+            raise ValueError("completed research requires complete Markdown content or payload_path")
         job["status"] = "completed"
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
@@ -355,9 +378,9 @@ def process_research(sub: dict, job: dict, st: dict):
 def process_audit(sub: dict, job: dict, st: dict):
     status = sub.get("status", "completed")
     if status == "completed":
-        content = sub.get("content")
+        content = submission_content(sub)
         if not isinstance(content, str) or len(content.strip()) < 500:
-            raise ValueError("completed audit requires complete Markdown content")
+            raise ValueError("completed audit requires complete Markdown content or payload_path")
         job["status"] = "completed"
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
@@ -378,7 +401,7 @@ def apply_artifact(sub: dict, job: dict):
     paper = sub.get("paper_path") or job.get("paper_path")
     if not paper or not str(paper).startswith("papers/") or ".." in Path(paper).parts:
         raise ValueError("safe papers/... paper_path required")
-    content = sub["content"].rstrip() + "\n"
+    loaded = submission_content(sub)\n    if not isinstance(loaded, str):\n        raise ValueError("completed artifact requires content or payload_path")\n    content = loaded.rstrip() + "\\n"
     target = ROOT.parent / paper
     expected_sha = sub.get("expected_blob_sha")
     if target.exists():
