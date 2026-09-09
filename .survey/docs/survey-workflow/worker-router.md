@@ -11,6 +11,8 @@
 
 GitHubへの反映が利用可能な場合、外部設定されたNotion一時配送キューの `pending` と、private設定で指定されたChatGPT Library一時配送キューの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。再投入中は `replaying`、Actionsの成功確認後のみ `replayed` とする。すでにterminal/supersededで適用対象外になったものは盲目的に反映せず `dead_letter` とし理由を残す。
 
+pending再投入は新規研究を飢餓させない。各pending payloadの再投入試行は**1 runにつき最大1回**とする。さらに、権限状態・connector write不能・同種の操作検証失敗など、複数pendingに共通すると判断できる `Failure Class` で1件の再投入が失敗した場合、そのrunでは同じ `Failure Class` の残りpendingを個別に再試行しない。失敗したpayloadは `pending` のまま保持し、完全payloadが耐久保存済みでGitHub readが可能なら、直ちに通常のready job処理へ進む。再投入成功が続く場合は古いpendingから順に回復してよいが、同じ原因の失敗を反復してrun時間を消費しない。
+
 GitHub readができない場合は、repo状態に依存する新規処理を開始しない。
 
 ## A. 論文worker
@@ -29,7 +31,7 @@ queueが再び空になりActionsが新しいdiscovery jobを補充した場合�
 
 GitHubへの成果反映を完了できなくても、完全な再送可能logical payloadをNotionまたはChatGPT Libraryの一時配送キューへ耐久保存できた時点ではrunを停止しない。そのjobはqueue上では未完了のまま残すが、一時保管を**後続jobへ進むための耐久チェックポイント**として扱い、同じrunで次のready jobへ進む。一時保管済みpayloadがそのattemptの完全な再送情報を持つなら、GitHub固定record bankに残ったpartial slotは唯一の成果コピーではないため、後続jobのためにそのbankを再利用してよい。inbox未送信のpartial slotだけを理由にA/B bankを恒久占有しない。
 
-次回へ残してよいのは、全文取得不能、GitHub read不能、明確な時間・実行回数・コンテキスト等のプラットフォーム上限、未解決の依存、またはGitHub/Notion/Libraryのいずれにも次成果を耐久保存できない場合だけとする。単にGitHubやNotionへの反映が保留になった、discoveryが終わった、1本処理した、queueへ次jobが現れた、あるいは一度queueが空になったことを終了理由にしない。停止時点でqueueに残ったjobと一時配送キューのpendingは次回runが引き継ぐ。
+次回へ残してよいのは、全文取得不能、GitHub read不能、明確な時間・実行回数・コンテキスト等のプラットフォーム上限、未解決の依存、またはGitHub/Notion/Libraryのいずれにも次成果を耐久保存できない場合だけとする。単にGitHubやNotionへの反映が保留になった、pending再投入が失敗した、discoveryが終わった、1本処理した、queueへ次jobが現れた、あるいは一度queueが空になったことを終了理由にしない。停止時点でqueueに残ったjobと一時配送キューのpendingは次回runが引き継ぐ。
 
 Discovery / blocked / deferred / rejectedは長文artifact不要なので、固定inboxだけを小さくupdateしてよい。
 
