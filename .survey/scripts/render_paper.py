@@ -110,6 +110,8 @@ def render_paper(record: dict[str, Any]) -> str:
         if isinstance(authors, list):
             authors = ", ".join(text(x) for x in authors if text(x))
         bib.append(f"- **著者**: {text(authors)}")
+    if meta.get("authors_affiliations"):
+        bib.append(f"- **著者・所属**: {text(meta['authors_affiliations'])}")
     if meta.get("publication"):
         bib.append(f"- **公開**: {text(meta['publication'])}")
     if meta.get("publication_type"):
@@ -124,6 +126,8 @@ def render_paper(record: dict[str, Any]) -> str:
 
     parts = ["\n".join(front)]
     parts.append(section("書誌情報", "\n".join(bib)))
+    if meta.get("overview"):
+        parts.append(section("概要", text(meta["overview"])))
     problem = text(pm.get("problem"))
     novelty = text(pm.get("novelty"))
     if problem:
