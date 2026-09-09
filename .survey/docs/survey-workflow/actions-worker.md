@@ -56,3 +56,13 @@ workflowは `.survey/requests/*.json` のpushだけで起動する。worker自�
 ## 非常用Issue経路
 
 `.survey/requests/*.json` の直接commitが実行環境の制約で拒否される場合に限り使う。公開repositoryから第三者が状態処理を起動できないよう、workflowは `github.actor == github.repository_owner` かつタイトルが `[survey-helper]` で始まる新規Issueだけを受理する。Issue本文はJSONオブジェクトそのものとし、`action_worker.py` の既存allowlistと入力検証をそのまま適用する。Issue番号をrequest IDとして使うため重複作成を避けやすい。Issue経路で生成したrequest/resultもrepositoryへcommitし、callerはresultの `ok: true` を確認してから続行する。
+
+
+## 追加フォールバック輸送
+
+requestファイル直接commitと新規Issue作成に加え、公開repo上の恒久Issue `[survey-helper] command inbox` を使うowner-only経路を持つ。
+
+- **Issue comment経路**: command inboxへ `[survey-request]` に続けてJSON requestをコメントする。workflowはownerの新規コメントだけを受理し、`.survey/requests/comment-<comment_id>.json` へ変換する。
+- **Issue edit経路**: command inbox本文を `[survey-request]` + JSON requestへ一時更新する。workflowはownerによる当該Issueのeditedイベントだけを受理し、run単位のrequestへ変換する。処理確認後は説明文へ戻してよい。
+- いずれも `action_worker.py` のallowlist・入力検証をそのまま通し、resultの `ok: true` を確認するまで成功扱いしない。
+- transport診断では状態を変更しない `status` を使い、複数経路を同一runで比較してよい。実作業operationは、診断済みの1経路だけで発行して二重実行を避ける。
