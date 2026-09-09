@@ -1,15 +1,18 @@
 {
-  "submission_id": "submission-discovery-20260910-0439",
-  "job_id": "job-c8dfad4c1356a14f",
+  "submission_id": "chat-job-research-ad144841ea01b7c6",
+  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
+  "job_id": "job-research-ad144841ea01b7c6",
   "status": "completed",
-  "candidates": [
-    {
-      "canonical_id": "arXiv:2606.06302",
-      "title": "Tangram: Unlocking Non-Uniform KV Cache for Efficient Multi-turn LLM Serving",
-      "source_url": "https://arxiv.org/abs/2606.06302",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
-      "priority": 90,
-      "reason": "Serving-system design that makes non-uniform KV retention practical via deterministic per-head budgets, head-group pages and ahead-of-time load balancing; reports up to 2.6x throughput with preserved accuracy and has official code."
-    }
-  ]
+  "record_bank": "a",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+  "record_slots": [
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "b7af8816e3d5291164280f8e56a41aa144d7086a"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "41cca1bd71873129e4bdd9ab48f1e82578dbe74a"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "1c51b98e7d0a7f63806e6c142855fa72e9f34e45"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "6edee8241ec3d565ebc35cea555bab4c5c7f8ca3"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "1a97ba4e8bd3d0f3e133fc4b8a4a6ff7a44e2d59"}
+  ],
+  "audit_required": false,
+  "audit_reason": null,
+  "audit_flags": []
 }
