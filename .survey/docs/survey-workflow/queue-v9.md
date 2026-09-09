@@ -1,88 +1,63 @@
 # Queue-based survey workflow v9
 
-This is the authoritative workflow for continuous LLM inference-system paper collection.
+LLM inference-system research surveyの**機械可読な運用契約**。READMEと矛盾する場合は本書を優先する。
 
-## Design goals
+## Ownership
 
-- No fixed daily paper quota.
-- Quality and relevance dominate volume.
-- GitHub Actions owns queue/state transitions and repository publication.
-- Chat/Scheduled Task owns literature search, full-text reading, scientific judgment, and audit judgment.
-- Chat writes only small immutable submission files. Large completed Markdown may be stored separately as an immutable payload file.
-- GitHub Actions runs every 10 minutes and is idempotent.
-- Re-running the worker must never double-count or duplicate completed work.
+### Chat research worker
 
-## Pipeline
+Chatだけが行う:
 
-1. GitHub Actions runs `.survey/scripts/queue_worker.py`.
-2. The worker consumes unprocessed files in `.survey/work-queue/submissions/`.
-3. It validates and publishes accepted research/audit Markdown.
-4. It updates the matching job to a terminal state.
-5. It creates follow-up jobs when needed.
-6. It writes `.survey/work-queue/next-jobs.json`.
-7. Chat reads ready jobs and processes as many as can be safely completed.
-8. Chat writes one new submission file per completed job. For large research/audit Markdown, Chat first writes an immutable `.survey/work-queue/payloads/<unique>.md` and the submission references it.
-9. The next 10-minute worker run consumes those submissions.
+- literature discovery
+- primary-source retrieval
+- full-text reading
+- scientific judgment
+- formal audit judgment
+- complete Japanese Markdown authoring
 
-## Discovery lanes
+### GitHub Actions worker
 
-Discovery is decoupled from the 10-minute polling interval.
+Actionsだけが行う:
 
-- `discovery_fresh`: every 2 hours when no outstanding job exists. Search genuinely new inference-system papers and important revisions from primary sources.
-- `discovery_citation`: every 6 hours. Follow citations, descendants, follow-up work, and implementations around important papers already in the repository.
-- `discovery_gap`: every 24 hours. Search missing lineages and adjacent-system ideas that materially matter to inference systems.
+- submission validation
+- paper publication/update
+- job/state transitions
+- identity delta maintenance
+- derived-view rebuild
+- ready-job generation
 
-An empty discovery result is valid. Never add a weak paper to satisfy volume.
+Chatは通常処理で共有stateや既存paperを直接更新しない。
 
-## Backpressure
+## Trigger model
 
-The queue is intentionally bounded.
+通常の制御経路は**push-driven**。
 
-- At most 12 ready research jobs.
-- At most 6 ready audit jobs.
-- If the research backlog is full, discovery results remain recorded but do not create unlimited reading work.
-- Frequent worker polling must not increase discovery frequency.
+1. Chatが成果をimmutable payload/submissionとしてcommitする。
+2. `.survey/work-queue/submissions/*.json` のpushで `Survey helper worker` が起動する。
+3. `queue_worker.py` が未処理submissionを検証・反映する。
+4. workerがresult、job/state、next-jobsを更新してcommitする。
 
-## Research job
+10分scheduleはfallback/reconciliation用。Chatから `workflow_dispatch` やjob rerunを通常経路として呼ばない。
 
-A research job requires reading the primary source in full. The output is a complete Japanese repository page covering at least:
+## Queue
 
-- problem and motivation
-- novelty
-- system/algorithm design
-- hardware/model/dataset conditions
-- baselines
-- key quantitative results
-- quality trade-offs
-- memory/I/O effects where relevant
-- limitations
-- relationship to existing repository lineages
-- primary-source evidence
+Chatは毎回、default branch最新HEADの `.survey/work-queue/next-jobs.json` を読む。同じ実行内で参照するREADME、job、queue-v9も同一HEADに固定する。
 
-If full text cannot be obtained, return a blocked/deferred result with retrieval evidence. Never infer missing content from abstracts or search snippets.
+ready jobはpriority降順。1回1件に固定しないが、次jobの成果を安全に保存できない見込みなら着手しない。
 
-## Audit job
+### Discovery lanes
 
-Formal audit is targeted rather than one-to-one with research.
+- `discovery_fresh`: 2h。原則30日以内の新規論文・重要改訂。
+- `discovery_citation`: 6h。既存重要論文の引用、後継、実装。
+- `discovery_gap`: 24h。欠落系統・隣接system技術。
 
-Generate an audit when any of the following holds:
+research backlogは最大12、audit backlogは最大6。候補0件は正常。
 
-- priority >= 75
-- the research result explicitly requests an audit
-- there are uncertainty flags or publication/version questions
-- deterministic 20% quality-control sampling selects the paper
+## Job contracts
 
-Audit checks identity, bibliography, authors/affiliations, publication/final version, code, hardware/model/dataset/baseline details, quoted quantitative results, simulation versus real hardware, classification, differences, and limitations.
+### discovery
 
-## Submission contract
-
-Chat writes one immutable JSON file under:
-
-`.survey/work-queue/submissions/<unique>.json`
-
-Every submission must include `job_id`.
-
-Discovery submission:
+一次情報中心に探索し、既存repoとの重複を可能な範囲で確認する。
 
 ```json
 {
@@ -91,24 +66,66 @@ Discovery submission:
     {
       "canonical_id": "stable id if known",
       "title": "...",
-      "source_url": "primary source",
+      "source_url": "primary source URL",
       "paper_path": "papers/...md",
-      "priority": 0,
+      "priority": 80,
       "reason": "...",
-      "evidence": ["..."]
+      "evidence": ["primary-source fact"]
     }
   ]
 }
 ```
 
-Research/audit submission:
+### research
+
+一次資料本文を最後まで読み、完成済み日本語Markdownを作る。最低限:
+
+- 問題設定・動機
+- 新規性
+- 手法・system設計
+- hardware/model/dataset
+- baseline・比較条件
+- 主要定量結果
+- 品質trade-off
+- memory/I/O効果
+- 限界
+- 既存系統との差
+- 一次資料
+
+全文取得不能ならcompletedにしない。
+
+### audit
+
+一次資料・正式公開情報・公式実装を用い、少なくとも以下を正式監査する:
+
+- identity / bibliography
+- authors / affiliations
+- publication / final version
+- code / implementation status
+- hardware / model / dataset / baseline
+- quoted quantitative results
+- real hardware vs simulation
+- classification / lineage
+- differences / limitations
+
+priority >= 75、明示audit要求、不確実性、または決定的20% quality-control sampleで生成する。
+
+## Artifact transport
+
+### Completed research/audit
+
+完成Markdownは**原則payload分離**する。
+
+1. 新規 `.survey/work-queue/payloads/<unique>.md` を作る。
+2. 新規 `.survey/work-queue/submissions/<unique>.json` を作る。
+3. submissionはpayloadを `payload_path` で参照する。
 
 ```json
 {
   "job_id": "job-...",
   "status": "completed",
   "paper_path": "papers/...md",
-  "expected_blob_sha": "required when updating an existing paper",
+  "expected_blob_sha": "required for existing paper",
   "payload_path": ".survey/work-queue/payloads/<unique>.md",
   "audit_required": false,
   "audit_reason": null,
@@ -116,19 +133,53 @@ Research/audit submission:
 }
 ```
 
-For research/audit, exactly one of inline `content` or `payload_path` may supply the complete Markdown. Prefer `payload_path` for normal completed paper pages so the JSON stays small. Payload paths must be new immutable `.md` files under `.survey/work-queue/payloads/`. For blocked/deferred/rejected work, omit both and provide `reason`.
+inline `content` は後方互換・小規模診断用に受理するが、通常のresearch/auditでは使わない。`content` と `payload_path` の同時指定は禁止。
 
-## Idempotency and concurrency
+payloadは:
 
-- A submission is processed only when the same filename does not already exist in `.survey/work-queue/results/`.
-- A terminal job cannot be completed twice.
-- GitHub Actions uses a single concurrency group with `cancel-in-progress: false`.
-- The worker always checks out the latest `main`.
-- Existing paper updates can use `expected_blob_sha` to reject stale writes.
-- Worker commits use pull-rebase before push.
+- `.survey/work-queue/payloads/` 配下
+- `.md`
+- immutable
+- submissionごとに一意
+- 完成paper全体
 
-## Legacy workflow
+とする。既存paperを更新する場合は、そのsubmission作成直前のblob SHAを `expected_blob_sha` に入れる。競合した場合はworkerが拒否し、Chatが最新HEADから再判断する。
 
-Workflow v8 cycle/run/target files are historical compatibility data. They are not the control plane for v9 and fixed targets such as 10/10 or 11/11 must not influence new job generation.
+### blocked / deferred / rejected
 
-The old helpers remain available for recovery of historical state, but new survey execution follows `.survey/work-queue/`.
+Markdownを捏造しない。
+
+```json
+{
+  "job_id": "job-...",
+  "status": "blocked",
+  "paper_path": "papers/...md",
+  "reason": "primary full text could not be obtained; ..."
+}
+```
+
+## Idempotency
+
+- submission/result filenameは一意で再利用しない。
+- 同名resultが存在するsubmissionは再処理しない。
+- terminal jobは再完了させない。
+- workerは単一concurrency group、`cancel-in-progress: false`。
+- worker commit前にpull --rebaseする。
+- Chatはsubmission保存後に同じ成果を再送しない。
+- paper更新はoptimistic blob SHA checkを使う。
+
+## Derived data
+
+paper反映後、Actionsがidentity deltaを生成する。大きい集約viewはdirty flagを立て、最大でも概ね1時間単位でbatch rebuildする。Chatはこれらを直接書かない。
+
+## Legacy boundary
+
+以下はworkflow v8以前の履歴・復旧互換であり、v9 control planeではない:
+
+- cycle/run/daily target
+- 10本/11本等の固定件数
+- `.survey/requests/` / `.survey/results/`
+- `.survey/submissions/` / `.survey/submission-results/`
+- v8 state/helper scripts
+
+旧成果は削除せず保持してよいが、新規job生成・優先順位・通常transportに使わない。
