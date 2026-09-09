@@ -57,9 +57,9 @@ def render_result(item: dict[str, Any]) -> str:
     head = " / ".join(x for x in [metric, value] if x)
     details = []
     if baseline:
-        details.append(f"baseline: {baseline}")
+        details.append(f"比較対象: {baseline}")
     if condition:
-        details.append(f"condition: {condition}")
+        details.append(f"条件: {condition}")
     if details:
         head += f" ({'; '.join(details)})"
     if interpretation:
@@ -100,6 +100,8 @@ def render_paper(record: dict[str, Any]) -> str:
         "",
         f"# {title}",
         "",
+        f"> {summary}",
+        "",
     ]
 
     bib = []
@@ -131,7 +133,7 @@ def render_paper(record: dict[str, Any]) -> str:
 
     method_body = []
     if pm.get("method_overview"):
-        method_body.append(text(pm["method_overview"]))
+        method_body.append("### 手法のあらまし\n" + text(pm["method_overview"]))
     for comp in pm.get("components") or []:
         if isinstance(comp, dict):
             name = text(comp.get("name"))
@@ -145,7 +147,7 @@ def render_paper(record: dict[str, Any]) -> str:
             if s:
                 method_body.append(s)
     if pm.get("system_design"):
-        method_body.append(text(pm["system_design"]))
+        method_body.append("### 全体のデータ／制御の流れ\n" + text(pm["system_design"]))
     parts.append(section("手法", "\n\n".join(method_body)))
 
     eval_lines = []
@@ -177,7 +179,7 @@ def render_paper(record: dict[str, Any]) -> str:
     if rs.get("negative_results"):
         result_lines.append("### 負の結果・境界条件\n" + bullets(rs["negative_results"]))
     if rs.get("interpretation"):
-        result_lines.append(text(rs["interpretation"]))
+        result_lines.append("### 結果の読み方\n" + text(rs["interpretation"]))
     parts.append(section("主要結果", "\n\n".join(result_lines)))
 
     if rs.get("quality_impact"):
