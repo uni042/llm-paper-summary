@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
-"""Repository-wide mechanical quality audit for paper summaries.
-
-This script complements the semantic paper.md review. It intentionally checks
-only properties that can be measured reliably: document size, explanatory
-paragraph density, Japanese-vs-Latin character balance, required section
-presence, and bare English technical terms that violate the repository's
-Japanese-first terminology rule.
-"""
+"""Repository-wide mechanical quality audit for Japanese paper summaries."""
 from __future__ import annotations
 
 import argparse
@@ -18,93 +11,40 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from japanese_style import (  # noqa: E402
+    DEFAULT_MIN_JAPANESE_RATIO,
+    DEFAULT_WARN_JAPANESE_RATIO,
+    JP_RE,
+    LATIN_RE,
+    PREFERRED_TERMS,
+    TERM_PATTERNS,
+    clean_for_language_ratio,
+)
+
 DEFAULT_MIN_BYTES = 4500
 DEFAULT_MIN_PROSE_CHARS = 2200
 DEFAULT_MIN_PARAGRAPHS = 10
 DEFAULT_MIN_METHOD_PARAGRAPHS = 4
-DEFAULT_MIN_JAPANESE_RATIO = 0.50
-DEFAULT_WARN_JAPANESE_RATIO = 0.60
 DEFAULT_MIN_COMPONENT_PARAGRAPHS = 2
 
-EXCLUDED_SECTIONS = {
-    "一次資料",
-    "参考文献",
-    "References",
-    "更新履歴",
-    "監査メモ",
-}
-
-# English terms that should normally be introduced as
-# "日本語（English term）" and then written in Japanese or as an established acronym.
-# Proper names, model names, framework names, acronyms, units, and URLs are not
-# covered here.
-TERM_RULES: dict[str, tuple[str, ...]] = {
-    "request": ("request", "requests", "request-wise"),
-    "token": ("token", "tokens", "token-level", "per-token"),
-    "layer": ("layer", "layers", "layer-wise", "per-layer"),
-    "batch": ("batch", "batches"),
-    "decode": ("decode", "decoding"),
-    "prefill": ("prefill",),
-    "offload": ("offload", "offloading", "offloaded"),
-    "cache": ("cache", "caching"),
-    "prefetch": ("prefetch", "prefetching"),
-    "eviction": ("eviction", "evict", "evicted"),
-    "scheduler": ("scheduler", "scheduling"),
-    "placement": ("placement",),
-    "runtime": ("runtime",),
-    "latency": ("latency", "latencies"),
-    "throughput": ("throughput",),
-    "bandwidth": ("bandwidth",),
-    "memory": ("memory",),
-    "stream": ("stream", "streams"),
-    "buffer": ("buffer", "buffers"),
-    "solver": ("solver",),
-    "pipeline": ("pipeline",),
-    "routing": ("routing", "router"),
-    "expert": ("expert", "experts"),
-    "kernel": ("kernel", "kernels"),
-    "fusion": ("fusion",),
-    "quantization": ("quantization", "quantized"),
-    "pruning": ("pruning", "pruned"),
-    "activation": ("activation", "activations"),
-    "weight": ("weight", "weights"),
-    "benchmark": ("benchmark", "benchmarks"),
-    "baseline": ("baseline", "baselines"),
-    "trace": ("trace", "traces"),
-    "workload": ("workload", "workloads"),
-    "bottleneck": ("bottleneck", "bottlenecks"),
-    "overhead": ("overhead",),
-    "speedup": ("speedup",),
-    "goodput": ("goodput",),
-    "stall": ("stall", "stalls", "stalled"),
-    "lossless": ("lossless",),
-    "synthetic": ("synthetic",),
-    "adaptive": ("adaptive",),
-    "dynamic": ("dynamic",),
-    "static": ("static",),
-    "host": ("host",),
-    "resident": ("resident",),
-    "infeasible": ("infeasible",),
-    "end-to-end": ("end-to-end",),
-}
-
-URL_RE = re.compile(r"https?://\S+")
-INLINE_CODE_RE = re.compile(r"`[^`]*`")
-MD_LINK_DEST_RE = re.compile(r"\]\((?:https?://|[^)]*/)[^)]*\)")
-HTML_TAG_RE = re.compile(r"<[^>]+>")
-JP_CLASS = r"\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヶ"
-JP_RE = re.compile(f"[{JP_CLASS}]")
-LATIN_RE = re.compile(r"[A-Za-z]")
+EXCLUDED_SECTIONS = {"一次資料", "参考文献", "References", "更新履歴", "監査メモ"}
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+")
 TABLE_RE = re.compile(r"^\s*\|.*\|\s*$")
 DETAILS_RE = re.compile(r"^\s*</?(?:details|summary)[^>]*>\s*$", re.I)
 FENCE_RE = re.compile(r"^\s*```")
+URL_RE = re.compile(r"https?://\S+")
+INLINE_CODE_RE = re.compile(r"`[^`]*`")
+MD_LINK_DEST_RE = re.compile(r"\]\((?:https?://|[^)]*/)[^)]*\)")
+HTML_TAG_RE = re.compile(r"<[^>]+>")
 
 
 @dataclass
 class TermHit:
     term: str
+    preferred: str
     count: int
     lines: list[int] = field(default_factory=list)
 
@@ -147,14 +87,12 @@ def is_excluded_section(title: str) -> bool:
 
 
 def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None, int | None]]:
-    """Yield line number, line, current H2 title, current H3 ordinal marker."""
     lines, offset = strip_frontmatter(raw_lines)
     in_fence = False
     current_h2: str | None = None
     current_h3_index: int | None = None
     h3_counter = 0
     excluded = False
-
     for local_idx, line in enumerate(lines, start=1):
         lineno = local_idx + offset
         if FENCE_RE.match(line):
@@ -162,7 +100,6 @@ def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None
             continue
         if in_fence:
             continue
-
         hm = HEADING_RE.match(line)
         if hm:
             level = len(hm.group(1))
@@ -174,27 +111,18 @@ def iter_body_lines(raw_lines: list[str]) -> Iterable[tuple[int, str, str | None
             elif level == 3:
                 h3_counter += 1
                 current_h3_index = h3_counter
-            if excluded:
-                continue
+            if not excluded:
+                yield lineno, line, current_h2, current_h3_index
+            continue
+        if not excluded:
             yield lineno, line, current_h2, current_h3_index
-            continue
-
-        if excluded:
-            continue
-        yield lineno, line, current_h2, current_h3_index
 
 
-def clean_inline(text: str, *, mask_parentheses: bool = False) -> str:
+def clean_inline(text: str) -> str:
     text = URL_RE.sub(" ", text)
     text = MD_LINK_DEST_RE.sub("]", text)
     text = INLINE_CODE_RE.sub(" ", text)
     text = HTML_TAG_RE.sub(" ", text)
-    if mask_parentheses:
-        # Only parenthetical English immediately following Japanese is considered
-        # compliant with the repository's "日本語（English）" rule. Parentheses
-        # appearing without a Japanese lead-in remain visible to the term linter.
-        text = re.sub(rf"(?<=[{JP_CLASS}])（[^（）]*）", " ", text)
-        text = re.sub(rf"(?<=[{JP_CLASS}])\([^()]*\)", " ", text)
     text = re.sub(r"!\[[^\]]*\]", " ", text)
     text = re.sub(r"\[([^\]]+)\]", r"\1", text)
     text = re.sub(r"[*_~>#]", " ", text)
@@ -202,7 +130,6 @@ def clean_inline(text: str, *, mask_parentheses: bool = False) -> str:
 
 
 def prose_blocks(raw_lines: list[str]) -> tuple[list[str], list[str], dict[int, list[str]]]:
-    """Return all prose paragraphs, method paragraphs, and per-H3 method paragraphs."""
     all_blocks: list[str] = []
     method_blocks: list[str] = []
     method_components: dict[int, list[str]] = {}
@@ -228,8 +155,7 @@ def prose_blocks(raw_lines: list[str]) -> tuple[list[str], list[str], dict[int, 
         hm = HEADING_RE.match(line)
         if hm:
             flush()
-            current_h2 = h2
-            current_h3 = h3
+            current_h2, current_h3 = h2, h3
             if (
                 len(hm.group(1)) == 3
                 and current_h2
@@ -238,22 +164,14 @@ def prose_blocks(raw_lines: list[str]) -> tuple[list[str], list[str], dict[int, 
             ):
                 method_components.setdefault(current_h3, [])
             continue
-        if not line.strip():
-            flush()
-            continue
-        if TABLE_RE.match(line) or DETAILS_RE.match(line):
-            flush()
-            continue
-        if LIST_RE.match(line):
-            # Bullets/tables are useful evidence but are not explanatory paragraphs.
+        if not line.strip() or TABLE_RE.match(line) or DETAILS_RE.match(line) or LIST_RE.match(line):
             flush()
             continue
         cleaned = clean_inline(line)
         if not cleaned.strip():
             flush()
             continue
-        current_h2 = h2
-        current_h3 = h3
+        current_h2, current_h3 = h2, h3
         current.append(cleaned)
     flush()
     return all_blocks, method_blocks, method_components
@@ -272,31 +190,23 @@ def prose_text_for_ratio(raw_lines: list[str]) -> str:
     return "\n".join(parts)
 
 
-def term_patterns() -> dict[str, re.Pattern[str]]:
-    patterns: dict[str, re.Pattern[str]] = {}
-    for canonical, variants in TERM_RULES.items():
-        alt = "|".join(re.escape(v) for v in sorted(variants, key=len, reverse=True))
-        patterns[canonical] = re.compile(
-            rf"(?<![A-Za-z0-9])(?:{alt})(?![A-Za-z0-9])", re.I
-        )
-    return patterns
-
-
-TERM_PATTERNS = term_patterns()
-
-
 def find_bare_english_terms(raw_lines: list[str]) -> list[TermHit]:
     hits: dict[str, list[int]] = {}
     for lineno, line, _, _ in iter_body_lines(raw_lines):
         if HEADING_RE.match(line) or TABLE_RE.match(line):
             continue
-        cleaned = clean_inline(line, mask_parentheses=True)
+        cleaned = clean_for_language_ratio(clean_inline(line))
         for canonical, pattern in TERM_PATTERNS.items():
-            if pattern.search(cleaned):
-                count = len(pattern.findall(cleaned))
+            count = len(pattern.findall(cleaned))
+            if count:
                 hits.setdefault(canonical, []).extend([lineno] * count)
     return [
-        TermHit(term=term, count=len(lines), lines=sorted(set(lines))[:8])
+        TermHit(
+            term=term,
+            preferred=PREFERRED_TERMS[term][0],
+            count=len(lines),
+            lines=sorted(set(lines))[:8],
+        )
         for term, lines in sorted(hits.items(), key=lambda kv: (-len(kv[1]), kv[0]))
     ]
 
@@ -305,7 +215,7 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace) -> PaperRe
     raw = path.read_text(encoding="utf-8")
     raw_lines = raw.splitlines()
     blocks, method_blocks, method_components = prose_blocks(raw_lines)
-    prose = prose_text_for_ratio(raw_lines)
+    prose = clean_for_language_ratio(prose_text_for_ratio(raw_lines))
     jp_chars = len(JP_RE.findall(prose))
     latin_chars = len(LATIN_RE.findall(prose))
     denominator = jp_chars + latin_chars
@@ -318,43 +228,39 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace) -> PaperRe
     prose_chars = sum(len(b) for b in blocks)
 
     if size < args.min_bytes:
-        failures.append(f"file_bytes {size} < {args.min_bytes}")
+        failures.append(f"ファイルサイズ {size} < {args.min_bytes} bytes")
     if prose_chars < args.min_prose_chars:
-        failures.append(f"prose_chars {prose_chars} < {args.min_prose_chars}")
+        failures.append(f"説明文文字数 {prose_chars} < {args.min_prose_chars}")
     if len(blocks) < args.min_paragraphs:
-        failures.append(f"paragraphs {len(blocks)} < {args.min_paragraphs}")
+        failures.append(f"説明段落数 {len(blocks)} < {args.min_paragraphs}")
 
     has_method = any(
         h2 and (h2 == "手法" or h2.startswith("手法 "))
         for _, _, h2, _ in iter_body_lines(raw_lines)
     )
     if not has_method:
-        failures.append("missing ## 手法 section")
+        failures.append("「## 手法」節がない")
     elif len(method_blocks) < args.min_method_paragraphs:
-        failures.append(
-            f"method_paragraphs {len(method_blocks)} < {args.min_method_paragraphs}"
-        )
+        failures.append(f"手法段落数 {len(method_blocks)} < {args.min_method_paragraphs}")
 
     if len(method_components) >= 3:
         for component_id, paragraphs in sorted(method_components.items()):
             if len(paragraphs) < args.min_component_paragraphs:
                 failures.append(
-                    f"method_component#{component_id} paragraphs {len(paragraphs)} "
+                    f"手法構成要素#{component_id} の段落数 {len(paragraphs)} "
                     f"< {args.min_component_paragraphs}"
                 )
 
     if jp_ratio < args.min_japanese_ratio:
-        failures.append(
-            f"japanese_ratio {jp_ratio:.1%} < {args.min_japanese_ratio:.1%}"
-        )
+        failures.append(f"日本語比率 {jp_ratio:.1%} < {args.min_japanese_ratio:.1%}")
     elif jp_ratio < args.warn_japanese_ratio:
-        warnings.append(
-            f"japanese_ratio {jp_ratio:.1%} < warning {args.warn_japanese_ratio:.1%}"
-        )
+        warnings.append(f"日本語比率 {jp_ratio:.1%} < 警告基準 {args.warn_japanese_ratio:.1%}")
 
     if bare_terms:
-        preview = ", ".join(f"{x.term}×{x.count}" for x in bare_terms[:8])
-        failures.append(f"bare English technical terms: {preview}")
+        preview = ", ".join(
+            f"{x.term}→{x.preferred} ×{x.count}" for x in bare_terms[:8]
+        )
+        failures.append(f"日本語化できる英語専門語が裸で残っている: {preview}")
 
     status = "FAIL" if failures else ("WARN" if warnings else "PASS")
     return PaperResult(
@@ -379,62 +285,42 @@ def markdown_report(results: list[PaperResult], args: argparse.Namespace) -> str
     warned = [r for r in results if r.status == "WARN"]
     passed = [r for r in results if r.status == "PASS"]
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-
     lines = [
-        "# Paper mechanical quality audit",
+        "# 論文要約の機械的品質監査",
         "",
-        f"- Generated: {now}",
-        f"- Scanned: {len(results)}",
-        f"- FAIL: {len(failed)}",
-        f"- WARN: {len(warned)}",
-        f"- PASS: {len(passed)}",
+        f"- 生成日時: {now}",
+        f"- 対象: {len(results)}件",
+        f"- 合格: {len(passed)}件 / 警告: {len(warned)}件 / 不合格: {len(failed)}件",
+        f"- 日本語比率: 不合格 < {args.min_japanese_ratio:.0%}、警告 < {args.warn_japanese_ratio:.0%}",
+        "- 英語専門語: 日本語・カタカナに置換可能な語が裸で1件でも残れば不合格",
         "",
-        "## Criteria",
-        "",
-        f"- Minimum UTF-8 file size: {args.min_bytes} bytes",
-        f"- Minimum explanatory prose: {args.min_prose_chars} characters",
-        f"- Minimum prose paragraphs: {args.min_paragraphs}",
-        f"- Minimum method paragraphs: {args.min_method_paragraphs}",
-        f"- Minimum paragraphs per method component when 3+ components exist: {args.min_component_paragraphs}",
-        f"- Minimum Japanese character ratio: {args.min_japanese_ratio:.0%}",
-        f"- Japanese ratio warning threshold: {args.warn_japanese_ratio:.0%}",
-        "- Bare English technical terms listed in TERM_RULES are failures unless they are in a compliant Japanese-led parenthetical, inline code, URLs, headings, or tables.",
-        "",
-        "The Japanese ratio is diagnostic only: URLs, frontmatter, fenced/inline code, "
-        "Markdown link destinations, headings, tables, and source/history sections are excluded. "
-        "The terminology check is the stronger enforcement for the Japanese-first rule.",
-        "",
-        "## Non-conforming papers",
+        "## 基準未達",
         "",
     ]
-    nonconforming = failed + warned
-    if not nonconforming:
-        lines.append("No failures or warnings.")
-    else:
+    if not failed:
+        lines.append("なし")
+    for r in failed:
         lines += [
-            "| Status | Paper | Bytes | Prose chars | Paras | Method paras | JP ratio | Bare terms |",
-            "|---|---|---:|---:|---:|---:|---:|---:|",
+            f"### `{r.path}`",
+            "",
+            f"- 日本語比率: {r.japanese_ratio:.1%}",
+            f"- 説明段落: {r.paragraphs} / 手法段落: {r.method_paragraphs}",
+            f"- ファイルサイズ: {r.file_bytes} bytes / 説明文: {r.prose_chars}文字",
         ]
-        for r in nonconforming:
+        for reason in r.failures:
+            lines.append(f"- **不合格理由:** {reason}")
+        for hit in r.bare_english_terms:
+            loc = ", ".join(f"L{x}" for x in hit.lines)
             lines.append(
-                f"| {r.status} | `{r.path}` | {r.file_bytes} | {r.prose_chars} | "
-                f"{r.paragraphs} | {r.method_paragraphs} | {r.japanese_ratio:.1%} | "
-                f"{sum(x.count for x in r.bare_english_terms)} |"
+                f"- 用語: `{hit.term}` → **{hit.preferred}** "
+                f"（{hit.count}件; {loc or '行番号なし'}）"
             )
-
-        lines += ["", "## Details", ""]
-        for r in nonconforming:
-            lines += [f"### {r.status}: `{r.path}`", ""]
-            for item in r.failures:
-                lines.append(f"- FAIL: {item}")
-            for item in r.warnings:
-                lines.append(f"- WARN: {item}")
-            if r.bare_english_terms:
-                lines.append("- Bare English term locations:")
-                for hit in r.bare_english_terms:
-                    loc = ", ".join(str(x) for x in hit.lines)
-                    lines.append(f"  - `{hit.term}` × {hit.count}: lines {loc}")
-            lines.append("")
+        lines.append("")
+    if warned:
+        lines += ["## 警告のみ", ""]
+        for r in warned:
+            lines.append(f"- `{r.path}` — " + "; ".join(r.warnings))
+        lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -447,58 +333,34 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--min-bytes", type=int, default=DEFAULT_MIN_BYTES)
     ap.add_argument("--min-prose-chars", type=int, default=DEFAULT_MIN_PROSE_CHARS)
     ap.add_argument("--min-paragraphs", type=int, default=DEFAULT_MIN_PARAGRAPHS)
-    ap.add_argument(
-        "--min-method-paragraphs", type=int, default=DEFAULT_MIN_METHOD_PARAGRAPHS
-    )
-    ap.add_argument(
-        "--min-component-paragraphs",
-        type=int,
-        default=DEFAULT_MIN_COMPONENT_PARAGRAPHS,
-    )
-    ap.add_argument(
-        "--min-japanese-ratio", type=float, default=DEFAULT_MIN_JAPANESE_RATIO
-    )
-    ap.add_argument(
-        "--warn-japanese-ratio", type=float, default=DEFAULT_WARN_JAPANESE_RATIO
-    )
-    ap.add_argument(
-        "--no-fail-exit",
-        action="store_true",
-        help="Always exit 0 even when FAIL papers exist.",
-    )
+    ap.add_argument("--min-method-paragraphs", type=int, default=DEFAULT_MIN_METHOD_PARAGRAPHS)
+    ap.add_argument("--min-component-paragraphs", type=int, default=DEFAULT_MIN_COMPONENT_PARAGRAPHS)
+    ap.add_argument("--min-japanese-ratio", type=float, default=DEFAULT_MIN_JAPANESE_RATIO)
+    ap.add_argument("--warn-japanese-ratio", type=float, default=DEFAULT_WARN_JAPANESE_RATIO)
+    ap.add_argument("--no-fail-exit", action="store_true")
     return ap.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
-    papers_root = repo_root / args.papers_root
-    if not papers_root.is_dir():
-        raise SystemExit(f"papers root not found: {papers_root}")
-
-    paths = sorted(p for p in papers_root.rglob("*.md") if p.is_file())
-    results = [audit_file(p, repo_root, args) for p in paths]
-    results.sort(
-        key=lambda r: (
-            0 if r.status == "FAIL" else 1 if r.status == "WARN" else 2,
-            r.japanese_ratio,
-            r.path,
-        )
-    )
-
+    papers_root = (repo_root / args.papers_root).resolve()
+    files = sorted(papers_root.rglob("*.md"))
+    results = [audit_file(path, repo_root, args) for path in files]
     report = markdown_report(results, args)
-    print(report, end="")
 
     if args.markdown_out:
         out = repo_root / args.markdown_out
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(report, encoding="utf-8")
+    else:
+        print(report, end="")
 
     if args.json_out:
         out = repo_root / args.json_out
         out.parent.mkdir(parents=True, exist_ok=True)
         payload = {
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "schema_version": 2,
             "criteria": {
                 "min_bytes": args.min_bytes,
                 "min_prose_chars": args.min_prose_chars,
@@ -507,23 +369,15 @@ def main() -> int:
                 "min_component_paragraphs": args.min_component_paragraphs,
                 "min_japanese_ratio": args.min_japanese_ratio,
                 "warn_japanese_ratio": args.warn_japanese_ratio,
+                "bare_english_terms_allowed": 0,
             },
-            "summary": {
-                "scanned": len(results),
-                "fail": sum(r.status == "FAIL" for r in results),
-                "warn": sum(r.status == "WARN" for r in results),
-                "pass": sum(r.status == "PASS" for r in results),
-            },
-            "papers": [asdict(r) for r in results],
+            "results": [asdict(r) for r in results],
         }
-        out.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
+        out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    has_fail = any(r.status == "FAIL" for r in results)
-    return 0 if args.no_fail_exit or not has_fail else 1
+    failed = any(r.status == "FAIL" for r in results)
+    return 0 if args.no_fail_exit or not failed else 1
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())
