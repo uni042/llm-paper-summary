@@ -1,18 +1,37 @@
 {
-  "submission_id": "chat-job-research-7a4628493bc11731",
-  "attempt_id": "attempt-rtp-llm-20260909-2305-v10-a1",
-  "job_id": "job-research-7a4628493bc11731",
-  "status": "completed",
-  "record_bank": "a",
-  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/rtp-llm.md",
-  "record_slots": [
-    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "74313da0451b098eaa31479c6df7770816a4342c"},
-    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "ffe6504af8d66a2f644d08ec794f54221e0ee77a"},
-    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "6dc3d241213a5d09563727457ee24101e7ea46c0"},
-    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "eb20d19f179b236d11f4b3f09a315fc853fdf2c6"},
-    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "678f3de6501fc270586738bb89355076b1deaf52"}
-  ],
-  "audit_required": false,
-  "audit_reason": null,
-  "audit_flags": []
+  "job_id": "job-b22cbbabe99c6344",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/tutti.md",
+      "priority": 94,
+      "reason": "GPU-centric object I/OとGPU io_uringでCPUをKV-cache SSD I/Oのcritical pathから外し、vLLM統合・LMCache比較まで実機評価する。SSD/NVMe活用とKV offloadの中心テーマに直接対応。"
+    },
+    {
+      "canonical_id": "arxiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/elastic-kv-cache.md",
+      "priority": 91,
+      "reason": "CUDA VMMでprefill reserveをdecode時にKVへ貸し出す実装を作った上で、chunked prefillで多くの利得が消えるnegative resultまで実測しており、KV memory設計の境界条件として価値が高い。"
+    },
+    {
+      "canonical_id": "arxiv:2512.03927",
+      "title": "OD-MoE: On-Demand Expert Loading for Cacheless Edge-Distributed MoE Inference",
+      "source_url": "https://arxiv.org/abs/2512.03927",
+      "paper_path": "papers/inference/03-expert-prefetch/od-moe.md",
+      "priority": 88,
+      "reason": "expert cacheを廃止し、複数layer先のactivation予測とedge node間のload/compute pipelineでJIT expert loadingを行う。MoE expert prefetch/offloadの設計点として既存cache型方式との差が明確。"
+    },
+    {
+      "canonical_id": "arxiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/robust-kv-cache-management.md",
+      "priority": 84,
+      "reason": "未知のoutput length下でKV reservation、parallelism、routing、prefix cachingをWasserstein DROとして共同最適化し、production tracesでcost/P99/SLOを評価する。"
+    }
+  ]
 }
