@@ -1,67 +1,72 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20260910-library-recovery-b2",
+  "attempt_id": "update-20260911-0830",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "44761f17983b56376a53d08d11d5d327d9d0a451",
+      "expected_blob_sha": "91bc1caed305203ec8229b35500096306e7fa6c8",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-08**",
-          "new": "- フレームワーク差分の最終確認: **2026-09-10**"
+          "old": "- フレームワーク差分の最終確認: **2026-09-10**",
+          "new": "- フレームワーク差分の最終確認: **2026-09-11**"
         },
         {
           "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-08の差分確認では、公式release・開発元repositoryを基準に9月5日以降の主要な性能・量子化・memory関連変更を再確認した。",
-          "new": "この2つは分けて扱う。2026-09-10の差分確認では、公式リリースと開発元リポジトリを基準に9月9日以降の主要な性能・メモリ配置・量子化関連変更を再確認した。"
+          "old": "この2つは分けて扱う。2026-09-10の差分確認では、公式リリースと開発元リポジトリを基準に9月9日以降の主要な性能・メモリ配置・量子化関連変更を再確認した。",
+          "new": "この2つは分けて扱う。2026-09-11の差分確認では、公式リリースと開発元リポジトリを基準に9月10日以降の主要な性能・メモリ使用量・MoE実行関連変更を再確認した。"
         },
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-09-08\n",
-          "text": "### 2026-09-10\n\n#### llama.cpp\n\n- **SYCLでIQ量子化MoEのホスト直列化を解消 — merged / release b10868**\n\n  SYCL経路のMoE向け量子化行列ベクトル積にIQ量子化型の処理を追加した。Qwen3.8-Flash-Next UD-IQ3_XXS、3×Intel Arc Pro B60では、トークン生成が **11.17→17.92 tok/s（+60.4%）**、別条件でも **11.59→17.24 tok/s（+48.7%）**。131072トークンのプリフィルは+0.1%で、主に生成経路の改善。\n\n  一次資料: https://github.com/ggml-org/llama.cpp/pull/28476\n\n- **Intel Vulkanの協調行列積を高速化 — merged / release b10870**\n\n  Intel GPUの協調行列演算向けにFP16右辺の行列積パイプラインとワープタイル調整を追加。Windows / Xe1-ARL_Hの512トークン・プリフィルでGemma 4 31Bは約30%、Qwen3 8Bは約29%、Qwen3.8 27Bは約21%改善。\n\n  一次資料: https://github.com/ggml-org/llama.cpp/pull/27471\n\n#### vLLM\n\n- **Qwen3.8 PLEをCPU固定メモリへ退避し、TP×DPで分割可能に — merged 2026-09-09**\n\n  Qwen3.8-Flash-NextのPLE埋め込み表をページ固定したCPUメモリへ置き、GPUがCUDAの統一仮想アドレス（Unified Virtual Addressing; UVA）から必要行を専用ストリームで直接読む経路を追加。Engramテンソル並列（Engram Tensor Parallelism; ETP）もTP×DPへ拡張した。単一実測ではCPU退避後も性能は概ね横ばいで、主目的はGPUメモリ圧迫の緩和。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/54371\n\n#### 新規LLM\n\n- 9月9日付の主要提供元公式発表を再確認したが、追加すべき新規の正式公開・一般提供モデルは確認できなかった。\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "d9e3e69eaef1c0d2f73a6e037a8c62d06ba424ed",
-      "edits": [
-        {
-          "op": "insert_before_once",
-          "anchor": "## 2026-09-08\n",
-          "text": "## 2026-09-10\n\n- **SYCLでIQ量子化MoEのホスト直列化を解消 — merged 2026-09-09 / release b10868**: Qwen3.8-Flash-Next UD-IQ3_XXS、3×Intel Arc Pro B60で生成 **+48.7〜60.4%**。プリフィルはほぼ不変。[PR #28476](https://github.com/ggml-org/llama.cpp/pull/28476)\n\n- **Intel Vulkan協調行列積を高速化 — merged 2026-09-09 / release b10870**: Windows / Xe1-ARL_Hの512トークン・プリフィルでGemma 4 31B約30%、Qwen3 8B約29%、Qwen3.8 27B約21%改善。[PR #27471](https://github.com/ggml-org/llama.cpp/pull/27471)\n\n"
+          "anchor": "### 2026-09-10\n",
+          "text": "### 2026-09-11\n\n#### vLLM\n\n- **ROCmで共有expertの複数stream重ね合わせ範囲を拡大 — merged 2026-09-11 JST**\n\n  ROCmのMoE decodeで共有expert計算を別streamへ重ねる条件を再調整し、gfx950向けskinny GEMMの並行実行安全性も修正した。Qwen3.5-35B-A3BのTP8/DP1では出力throughputが同時実行64で **4,566→5,967 tok/s（+30.7%）**、DeepSeek-V4-Proでは **2,010→2,374 tok/s（+18.1%）**。条件依存だが、MoE shared expert overlapの実用範囲を広げる更新。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/56098\n\n- **batched CUTLASSのMoE workspace過剰確保を解消 — merged 2026-09-11 JST**\n\n  dispatch rank数を二重に掛けていたworkspace算出を修正。DeepSeek-V3、DP32、local expert 16の例では共有workspaceが **112 GiB→3.5 GiB / GPU** まで減る。速度向上というより、大規模expert parallel構成で不要なGPUメモリ予約を大幅に減らす変更。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/55579\n\n#### 新規LLM\n\n- **DeepSeek-V4.1-Flash正式公開 — 2026-09-10**: 552B総parameterのMoEで、入力時8B・出力時16B activeの非対称Causal Encoder-Decoder構造を採用。前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8とし、native multimodal対応でAPIとopen-weightを公開。詳細は `llm-releases/deepseek.md`。\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/vllm/README.md",
-      "expected_blob_sha": "448e3e5d285b9d670595e706356e298823d0457d",
+      "expected_blob_sha": "5c4b003a0510e41167a7c5bbc9d326be1d4e3ddd",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 2026-09-05\n",
-          "text": "## 2026-09-10\n\n- **Qwen3.8 PLEのCPU退避とEngram並列化 — merged 2026-09-09**: PLE埋め込み表をページ固定したCPUメモリへ保持し、GPUがCUDAの統一仮想アドレス（Unified Virtual Addressing; UVA）から必要行を直接読む経路を追加。Engramテンソル並列（Engram Tensor Parallelism; ETP）もTP×DPへ拡張。単一実測ではCPU退避後も性能は概ね横ばいで、GPUメモリ配置の自由度を高める更新。[PR #54371](https://github.com/vllm-project/vllm/pull/54371)\n\n"
+          "anchor": "## 2026-09-10\n",
+          "text": "## 2026-09-11\n\n- **ROCm共有expertの複数stream重ね合わせ範囲を拡大 — merged 2026-09-10 UTC**: Qwen3.5-35B-A3Bのgfx950・TP8/DP1・同時実行64で出力throughput **4,566→5,967 tok/s（+30.7%）**、DeepSeek-V4-Proでは **2,010→2,374 tok/s（+18.1%）**。共有expert計算を別streamへ重ねる条件を拡張し、skinny GEMMの並行実行安全性も修正。[PR #56098](https://github.com/vllm-project/vllm/pull/56098)\n\n- **batched CUTLASSのMoE workspace過剰確保を解消 — merged 2026-09-10 UTC**: dispatch rank数の二重計上を除去し、DeepSeek-V3・DP32・local expert 16の例で共有workspaceを **112 GiB→3.5 GiB / GPU** に削減。大規模expert parallel時の不要なGPUメモリ予約を大幅に減らす。[PR #55579](https://github.com/vllm-project/vllm/pull/55579)\n\n"
         }
       ]
     },
     {
       "path": "llm-releases/README.md",
-      "expected_blob_sha": "f9899692c25d5d1b18ff86e1ae44136443d55271",
+      "expected_blob_sha": "ddbebcac86388f7b514d8db5b73135dd9f94c135",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-08**",
-          "new": "- リリース情報の最終確認: **2026-09-10**"
+          "old": "- リリース情報の最終確認: **2026-09-10**",
+          "new": "- リリース情報の最終確認: **2026-09-11**"
         },
         {
           "op": "replace_once",
-          "old": "2026-09-08に主要公式公開を再確認し、既存のQwen3.8-Flash-Nextについてopen-weight構成と主要runtime対応の詳細を補完した。トップ表は各model familyの最新リリースを示すため、Qwen行はより新しいQwen3.8-Max-0902のままとする。",
-          "new": "2026-09-10に主要提供元の公式公開を再確認した。9月9日付で追加すべき新規の正式公開・一般提供モデルは確認できなかった。トップ表は各model familyの最新リリースを示す。"
+          "old": "2026-09-10に主要提供元の公式公開を再確認した。9月9日付で追加すべき新規の正式公開・一般提供モデルは確認できなかった。トップ表は各model familyの最新リリースを示す。",
+          "new": "2026-09-11に主要提供元の公式公開を再確認し、9月10日に正式公開されたDeepSeek-V4.1-Flashを追加した。トップ表は各model familyの最新リリースを示す。"
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-08-21 | DeepSeek-V4-Flash-Vision-Exp | DeepSeek | V4-Flash系へimage入力を統合した**experimental** multimodal model。production modelとは分けて記録。 | [DeepSeek系](deepseek.md) |",
+          "new": "| 2026-09-10 | DeepSeek-V4.1-Flash | DeepSeek | 総552BのMoE。入力8B・出力16B activeの非対称構造を採用し、前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8へ削減。native multimodal対応でAPIとopen-weightを公開。 | [DeepSeek系](deepseek.md) |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/deepseek.md",
+      "expected_blob_sha": "f89bd8508cdef315c22a26ed2455ebf19775b759",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "| 2026-08-21 | DeepSeek-V4-Flash-Vision-Exp",
+          "text": "| 2026-09-10 | DeepSeek-V4.1-Flash | 総552B parameterのMoE。新しい非対称Causal Encoder-Decoder構造で入力時8B、出力時16B parameterをactiveにする。前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8とし、native multimodal対応。DeepSeek APIの`deepseek-flash`として一般提供され、open-weightも公開。 | https://deepseek.com/en/news/deepseek-v4-1-flash/ |\n"
         }
       ]
     }
   ],
-  "summary": "2026-09-10確認: llama.cppのSYCL IQ量子化MoE高速化とIntel Vulkan行列積高速化、vLLMのQwen3.8 PLE CPU退避/Engram並列化を追加。主要LLMの新規正式公開はなし。"
+  "summary": "2026-09-11確認: vLLMのROCm shared-expert multi-stream高速化とMoE CUTLASS workspace大幅削減を追加。新規LLMとしてDeepSeek-V4.1-Flash（552B MoE、8B/16B active、KV cache HBM 1/4・SSD 1/8）を追加。"
 }
