@@ -2,26 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-expertstreaming-20260910-2355-v10-a1",
-  "job_id": "job-research-11443ee95cff6866",
+  "attempt_id": "attempt-ssdenergy-20260910-2359-v10-a1",
+  "job_id": "job-research-35c9432189855703",
   "data": {
-    "overview": "FSE-DPは標準EPおよびmulti-chiplet向けHydraに対して、4種類のMoEと16〜1024 tokens-per-iterationにわたり1.22〜2.00倍の高速化を報告し、オンチップ専門家保持量を最大78.8%削減する。単一MoE層ではマイクロスライスを巡回させることでオンチップ重みバッファを32MB未満、EP/Hydraのおよそ5分の1まで圧縮できる。利得は低トークン数でpaired-loadによるDDR待ち隠蔽が大きく、高トークン数では豊富なD2D帯域を使った分散計算が効く。token bufferingは適度なQoS余裕では重み再利用を改善するが、延期を増やしすぎるとトークン数減少でDDR律速が強まり逆効果になる。",
+    "overview": "現在のSSDへMoE専門家重みを退避すると、プリフェッチで遅延をかなり隠せても1トークン生成当たりの総エネルギーは大きく悪化する。MixtralではHBM常駐比3.8〜12.5倍、DeepSeek-R1では4.7〜9.8倍となり、CPUメモリ退避と比べてもSSDは2.1〜3.6倍高い。バッチ増加で専門家重み読出しを複数トークンへ償却できるため倍率は縮むが、バッチ1024でもSSD重みアクセスが総エネルギーの73%以上または80%を占める。一方、Flash読出しエネルギーを現状の約10分の1まで下げれば、低バッチ時のMoE疎性により大規模Llama 4が小規模密モデルLlama 3.3をエネルギー面で下回る領域が現れる。",
     "key_results": [
-      {"metric": "既存方式に対する総合高速化", "value": "1.22〜2.00倍", "baseline": "EPおよびHydraを含む最先端比較方式", "condition": "Phi-3.5-MoE、Yuan2.0-M32、DeepSeek-MoE、Qwen3-30B-A3B、WikiText-2/C4、低バッチ設定", "interpretation": "専門家重みを固定chipletへ置く代わりに、D2D上の動的軌跡として流し、DDR・D2D・演算を異なる専門家同士で補完させることで長尾負荷を利用率改善へ変換している。"},
-      {"metric": "オンチップメモリ削減", "value": "最大78.8%削減、代表条件では32MB未満でEP/Hydraのおよそ5分の1", "baseline": "EPおよびHydra", "condition": "単一MoE層の性能を維持するための専門家重みバッファ", "interpretation": "一つの専門家断片をパッケージ内で複製せず、マイクロスライスが必要chipletを巡った直後に解放されるため、通信重畳のための二重保持も大幅に減る。"},
-      {"metric": "専用スケジューラ実装費", "value": "0.43 mm²、サブマイクロ秒スケジューリング遅延", "baseline": "UMC 28nm RTL合成", "condition": "trajectory-aware scheduler", "interpretation": "細粒度データフローの制御を中央ソフトウェアの巨大な状態管理へせず、Expert Information Table、Idle Chiplet Vector、matcherと局所規則に縮約できることを示す。"},
-      {"metric": "設計空間の帯域・容量条件", "value": "利用率60%超には代表探索で各die 48GB/s DDR帯域と16MB以上のオンチップメモリが必要", "baseline": "Qwen3-MoE-A3B/C4のDSE", "condition": "D2D 288GB/s固定、die area上限30mm²、package power 60W未満", "interpretation": "D2Dを増やせばオンチップ容量を無制限に削れるわけではなく、DDRから来た重みを受け止めて通信・演算を重ねる弾力的バッファが一定量必要である。"},
-      {"metric": "小容量をD2Dで補う際の要求", "value": "オンチップ14MBでは最大512GB/s級D2Dが必要になる条件", "baseline": "DSE制約を満たす高利用率領域", "condition": "Qwen3/C4、固定14MB buffer", "interpretation": "SRAM削減を通信帯域だけで代替しようとすると複数UCIeモジュール相当の非常に高いD2Dが必要になり、面積・電力上の成立領域が狭くなる。"},
-      {"metric": "マイクロスライス粒度", "value": "経験的に10分割未満が好ましい", "baseline": "複数分割数の感度分析", "condition": "Phi-3.5とQwen3/C4", "interpretation": "分割を細かくしすぎると制御・ヘッダ費が一断片の演算で隠せず、特に小さいexpertを持つQwen3で悪化する。粗すぎても通信重畳が減るため中間粒度が必要である。"},
-      {"metric": "大規模chiplet arrayでの利用率", "value": "2×2から4×4へ拡張した際、EPより利用率低下が小さくHydraに対しても競争力を維持", "baseline": "EP、Hydra", "condition": "Qwen3/C4、2D mesh上の複数論理ring trajectories", "interpretation": "all-to-allではなくpoint-to-point軌跡を使うため、chiplet数増加時の通信混雑とidle時間の増え方を抑えられる。論文は利用率でスケール傾向を示し、遅延へのhop影響もシミュレータへ含める。"}
+      {"metric": "SSD退避時の1トークン当たり総エネルギー", "value": "MixtralでHBM常駐比3.8〜12.5倍、DeepSeek-R1で4.7〜9.8倍", "baseline": "全専門家重みをHBMへ常駐", "condition": "入力長1024後の最初のデコード、バッチ1〜1024、ゲート専門家重みをSSDへ退避", "interpretation": "低バッチでは読み込んだ専門家重みを少数トークンでしか再利用できず、Flash読出しエネルギーがほぼそのまま1トークンへ乗る。バッチが増えると重み読出しを償却できるため倍率は縮むが、SSDの物理読出し費は残る。"},
+      {"metric": "CPUメモリ退避に対するSSDのエネルギー増加", "value": "2.1〜3.6倍", "baseline": "ゲート専門家重みをCPU側DDRへ退避", "condition": "MixtralおよびDeepSeek-R1、各バッチサイズ", "interpretation": "GPU HBMへ全量置けない場合でも、現在技術ではSSDよりCPU DRAMへ退避する方がエネルギー面で有利であり、容量単価だけを理由にSSDを選ぶとシステム電力を大きく悪化させる。"},
+      {"metric": "バッチ1024時のSSD重みアクセス割合", "value": "Mixtralで総エネルギーの73%以上、DeepSeek-R1で80%", "baseline": "同じSSD退避構成の総エネルギー", "condition": "バッチ1024", "interpretation": "大バッチで専門家読出しを十分償却してもFlashアクセスが主成分のままであり、単なるバッチ拡大ではSSDのエネルギー問題を解消できない。HBM常駐では対応するMoE重みアクセスは11%と15%まで下がる。"},
+      {"metric": "SSD専門家重みアクセスの単位エネルギー", "value": "110.8pJ/bit、HBM常駐4.2pJ/bitの約26倍", "baseline": "HBMから直接読出し", "condition": "Flash読出し102.4pJ/bit + HBM書込み4.2pJ/bit + HBM再読出し4.2pJ/bit", "interpretation": "GDSなどでCPU中継を省いてもNAND Flash内部読出しが支配的であり、通信経路短縮だけでは根本差を消せない。"},
+      {"metric": "プリフェッチ後の遅延ペナルティ", "value": "NVLink 5.0相当では最小1.32倍（Mixtral）、1.25倍（DeepSeek-R1）", "baseline": "HBM常駐", "condition": "効率的な専門家プリフェッチと高速接続", "interpretation": "SSD退避の転送待ちはかなり隠せるため、速度だけを見ると実用に近づく。しかし同じ条件でもFlash読出しエネルギーは残り、遅延最適化とエネルギー最適化が別問題であることを示す。"},
+      {"metric": "将来Flashのエネルギー損益分岐点", "value": "現状の約0.1倍、約10pJ/bit", "baseline": "Llama 3.3 70BをHBMへ全量常駐", "condition": "Llama 4 400BをSSD退避、特にバッチ3未満", "interpretation": "低バッチではLlama 4が1トークン当たり約17B、総量の4.3%だけを活性化するため、Flash自体が約10倍省エネルギー化すれば巨大な総容量を毎回読む必要がないMoE疎性が有利に働く。"},
+      {"metric": "Llama 4のバッチ1活性化量", "value": "約17Bパラメータ、総400Bの4.3%。そのうち17.8%がSSD上のゲート専門家重み", "baseline": "Llama 3.3は70B全量を毎トークン参照", "condition": "バッチ1", "interpretation": "SSDが将来改善したときに大規模MoEが密モデルへ勝てる根拠は総モデル容量ではなく、1トークンで実際に読み出す重み量の少なさにある。"}
     ],
     "negative_results": [
-      {"name": "過剰なtoken bufferingは逆効果", "description": "QoS slacknessを大きくしてcold expertの処理を延期しすぎると、現在iterationで処理するトークン量自体が減り、重み一回読込あたりの計算量が小さくなってDDR律速が強まる。したがって延期余裕が多いほど常に高速になるわけではない。"},
-      {"name": "Rule 5の追加利得は小さい", "description": "DDR controllerが最も空きの多いchipletへマイクロスライスを送るRule 5は理論上バッファ均衡を改善するが、paired-loadとflow fusionがある条件では増分利得が限定的で、実装に複雑なmetadata trackingを要するため主システムでは採用していない。"},
-      {"name": "細粒度化しすぎると制御費が支配", "description": "マイクロスライス数を増やしすぎると各transfer header、dispatch、trajectory制御の固定費が断片の演算時間より大きくなる。小expertのQwen3ほどこの影響が強く、単純に最小粒度まで分割する設計は不適切である。"},
-      {"name": "D2D帯域が不足する一般機器には適用しにくい", "description": "本方式はUCIe級の高速・低遅延D2Dとchipletごとの独立制御を前提とする。単一GPU、PCIe接続の独立GPU、低帯域chipletでは重みを巡回させる通信費を演算で隠せず、論文自身も適用可能platformが限定されると述べる。"}
+      {"name": "プリフェッチではエネルギーを隠せない", "description": "専門家重みの転送を他層の計算と重ねると待ち時間は小さくできるが、SSDから読み出したビット数は変わらない。したがって高速接続で観測遅延がHBM常駐へ近づいても、Flash内部読出しに必要なエネルギーはそのまま残り、速度改善を省エネルギー化とみなせない。"},
+      {"name": "大バッチでもSSD読出しが支配的", "description": "バッチが増えると専門家重みを複数トークンで共有でき、1トークン当たりのメモリ費は低下する。しかしバッチ1024でもSSD上のMoE重みアクセスが総エネルギーの大部分を占めるため、再利用だけでは現在のFlashとHBMの単位エネルギー差を埋められない。"},
+      {"name": "現行Flashでは大規模MoEの容量優位がエネルギー優位にならない", "description": "SSDを使えばHBMに収まらないLlama 4のような大規模MoEを実行できるが、現状102.4pJ/bit級のFlash読出しでは小規模Llama 3.3をHBMから読む方が1トークン当たりエネルギーは低い。Flashを約10分の1へ改善するまで逆転領域は限定される。"},
+      {"name": "一様な専門家割当は実運用の偏りを表さない", "description": "シミュレーションでは各デコーダのトークンから専門家への割当を一様分布と仮定しており、実際の要求で頻出専門家が偏る場合のキャッシュ再利用や読出し量は異なる可能性がある。結果は保存階層のエネルギー差を明確にする一方、個々の実サービスの絶対値としては追加検証が必要である。"}
     ],
-    "interpretation": "Expert Streamingの核心は、専門家の長尾負荷を消すのではなく、異なるexpertのcompute-to-communication比を混ぜて資源利用を平準化することにある。高帯域D2Dがあるなら重み移動は単なる損失ではなく、オンチップ複製をなくしDDR読込を隠すための媒体になる。ただしD2D、SRAM、DDRの三資源には代替可能範囲があり、どれか一つを極端に削ると成立領域が急に狭くなる。",
-    "quality_impact": "選択expertや数値演算を近似しないためモデル品質は原則不変である。token bufferingも同じ中間状態を後で処理するので品質ではなく要求遅延とthroughputのトレードオフである。"
+    "interpretation": "SSDオフロードの主要な設計論点は『帯域が足りるか』だけではなく『必要な重みを何ジュールで取り出せるか』である。低バッチではMoE疎性が高いので読み出す専門家数は少ないが、一回のSSD読出しを共有するトークン数も少なく、現状Flashの高い単位エネルギーが強く効く。バッチ増加は償却を改善する反面、活性化する専門家数も増やす。将来Flashが十分に省エネルギー化した場合だけ、低バッチMoEの疎性が容量とエネルギーの両方で利益へ転じる。",
+    "quality_impact": "同一モデル内の保存階層比較では計算内容、重み、専門家選択を変更しないため品質劣化はない。Llama 4とLlama 3.3の将来比較は異なるモデル同士であり、本論文は精度差を実験していないため、エネルギー比が1未満になっても品質優位まで直接証明したものではない。"
   }
 }
