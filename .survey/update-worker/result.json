@@ -1,10 +1,20 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "smoke-20260909-1552",
+  "attempt_id": "update-20260910-library-recovery-b2",
   "kind": "framework_llm_update",
-  "updated_paths": [],
+  "updated_paths": [
+    "framework-updates/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
+    "llm-releases/README.md"
+  ],
   "created_paths": [],
-  "updated_existing_paths": [],
-  "summary": "Smoke test after enabling compact patch operations."
+  "updated_existing_paths": [
+    "framework-updates/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
+    "llm-releases/README.md"
+  ],
+  "summary": "2026-09-10確認: llama.cppのSYCL IQ量子化MoE高速化とIntel Vulkan行列積高速化、vLLMのQwen3.8 PLE CPU退避/Engram並列化を追加。主要LLMの新規正式公開はなし。"
 }

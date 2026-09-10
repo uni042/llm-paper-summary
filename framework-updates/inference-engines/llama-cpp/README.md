@@ -25,6 +25,12 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 以下の更新履歴は、これらの主要能力について**GPU外memoryをどこまで使えるか、低bit / fusionでmemory trafficをどこまで減らせるか、投機的デコードとmulti-GPUでtokenごとの待ち時間をどこまで削減できるか**を追う。
 
+## 2026-09-10
+
+- **SYCLでIQ量子化MoEのホスト直列化を解消 — merged 2026-09-09 / release b10868**: Qwen3.8-Flash-Next UD-IQ3_XXS、3×Intel Arc Pro B60で生成 **+48.7〜60.4%**。プリフィルはほぼ不変。[PR #28476](https://github.com/ggml-org/llama.cpp/pull/28476)
+
+- **Intel Vulkan協調行列積を高速化 — merged 2026-09-09 / release b10870**: Windows / Xe1-ARL_Hの512トークン・プリフィルでGemma 4 31B約30%、Qwen3 8B約29%、Qwen3.8 27B約21%改善。[PR #27471](https://github.com/ggml-org/llama.cpp/pull/27471)
+
 ## 2026-09-08
 
 - **VulkanでTQ1_0量子化weightを直接実行 — merged / release b10831**: TQ1_0について、行列積（matrix multiplication）、行列ベクトル積（matrix-vector multiplication）、MoEで使うID付き行列積、逆量子化（dequantization）、行抽出をVulkan backendへ実装した。AMD gfx1151で対象backend testが通過している。Metalには対応kernelがないため、該当演算はCPUへfallbackする。[release b10831](https://github.com/ggml-org/llama.cpp/releases/tag/b10831)

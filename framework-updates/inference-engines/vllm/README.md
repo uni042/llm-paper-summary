@@ -30,6 +30,10 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-10
+
+- **Qwen3.8 PLEのCPU退避とEngram並列化 — merged 2026-09-09**: PLE埋め込み表をページ固定したCPUメモリへ保持し、GPUがCUDAの統一仮想アドレス（Unified Virtual Addressing; UVA）から必要行を直接読む経路を追加。Engramテンソル並列（Engram Tensor Parallelism; ETP）もTP×DPへ拡張。単一実測ではCPU退避後も性能は概ね横ばいで、GPUメモリ配置の自由度を高める更新。[PR #54371](https://github.com/vllm-project/vllm/pull/54371)
+
 ## 2026-09-05
 
 - **手動activation quantization fusionの適用開始 — merged 2026-09-03**: これまでcompiler passが後から検出して融合していた「活性化関数の実行 → FP8量子化」を、model実装側から明示的に1つのfused kernelへ流せる経路を追加した。
