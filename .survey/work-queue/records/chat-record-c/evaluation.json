@@ -1,8 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-karat-20260910-1558-v10","job_id":"job-research-1849c8e13a444e6b","data":{"hardware":["H200 GPU実機プロファイル","KARAT想定デバイス: 18 GPNM cores, LPDDR5X 512GB/1.2TB/s, 175W","64 H200 GPU相当の8ノード系"],"software":["自作イベント駆動LLMサービングシミュレータ","ASTRA-sim","既存AttAcc/Duplex/SPNM/STARCの公開シミュレータ"],"model":["GLM-5.2","MiniMax-M3","DeepSeek-V3.2","LLaMA3-70B"],"datasets":["SWE-Bench-Pro agent trace","SWE-chat","KV-cache-tester"],"baselines":["GPU-only H200","HiSparse","Duplex","AttAcc","SPNM","training-free: Quest/STARC/MagicPIG"],"settings":[{"name":"サービス品質","description":"固定同時実行数の閉ループ負荷で、ウォームアップ後にP99 time-between-tokens 100msを満たす最高デコード処理量を探索し、システム電力が異なるためTDPで正規化。"},{"name":"規模","description":"8ノード。GPU-onlyは64 H200。比較方式は総TDPが基準へ最も近い有効ノード構成を選択。ノード間帯域は400GB/s。"},{"name":"シミュレーション","description":"H200操作遅延は実機測定。KARATはH200 MIG 1g.35gbの帯域特性からSM数を換算。通信はASTRA-simでCXLスイッチ接続、600ns往復を仮定。各runは250K生成tokenまたは300秒、最初の20%を除外。"}],"correctness":"KARATはモデル固有または学習不要の疎注意アルゴリズムを変更せず、その計算配置を変える。品質指標ではなく同一注意方式下のシステム性能を比較する設計。","methodology":"三つのモデル固有検索型疎注意モデルとLLaMA3-70B上の三種の学習不要疎注意を、実エージェントトレースで比較。GPU/KARAT比とEP/TPをワークロードごとに探索し、100ms P99 TBT制約下のtokens/s/Wを主指標とする。さらにOFMS/CMR、expert skew、リンク帯域・遅延、コア数、電力一定の構成空間をアブレーションする。","scope":"主結果は専用KARAT実チップ上の実測ではなく、実機プロファイルを入力とするシミュレーション。対象はprefill/decode分離後のdecode pool、長文・検索型疎注意・主にMoEモデルであり、短文や完全実機クラスタで同倍率が得られる保証はない。"}}
