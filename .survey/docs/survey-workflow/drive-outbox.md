@@ -15,6 +15,18 @@ GitHub writeがrun-wideで利用不能なときに、完成済みの再送可能
 
 Chat workerが書くのは `pending` だけ。ActionsがGitHubへ正常投入できたものを `processed` へ移す。不正JSON、許可外path、破損payloadは `failed` へ移す。
 
+## ChatGPTからDriveへ書く経路
+
+ChatGPTのLibraryにはGoogle Driveが `/Google Drive` としてマウントされている。workerはenvelopeをローカル一時ファイルとして生成した後、LibraryのGoogle Drive領域へuploadする。
+
+保存先は必ず次とする。
+
+`/Google Drive/llm-paper-summary-outbox/pending/<unique-id>.json`
+
+Google Drive connectorで直接upload可能な実行環境では、pending folder id `1zrP-RoQFa1-ElGsYKps5FwXkWXkkoe_k` を親folderとして使ってもよい。どちらの経路でも保存されるDrive folderは同一である。
+
+2026-09-10にChatGPTからこのpending folderへのJSON uploadを実動確認済み。テストファイルは確認後に削除した。
+
 ## envelope schema v1
 
 Driveへは完成Markdownではなく、既存Actionsへ渡すtransport JSONを包んだenvelopeを1ファイルずつ保存する。
@@ -77,7 +89,7 @@ ActionsからDrive APIを読むため、repository secretとして次を1つ設�
 
 そのservice accountにDrive root `llm-paper-summary-outbox` の編集権限を付与する。既存のDrive/Sheets用service accountを再利用してよい。
 
-このsecretが未設定ならworkflowは明示的に失敗し、Drive payloadを消費しない。
+このsecretが未設定の間、workflowは成功扱いでidleになり、Drive payloadを消費しない。secret設定後の次回scheduleまたは手動実行から回収を開始する。
 
 ## 運用上の正本
 
