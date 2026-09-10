@@ -2,91 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "attempt_id": "attempt-metakv-20260910-1411-v10-test",
+  "job_id": "job-research-5b8bc3f2f1ab32c5",
   "data": {
-    "overview": "ACE gains become clearer under aggressive skipping. Qwen3.6 at 50% reaches PPL 8.67 / avg accuracy 75.57 versus MoDES 9.42 / 71.42. At 60% it remains 9.98 / 70.70. A100 measurements show actual latency gains, not only reduced expert count.",
+    "overview": "全制約組合せで最良の静的設定よりCSRを改善し、平均で約+0.07、最大+0.135。改善理由は、制約が緩いプロンプトではFP16や弱い圧縮を選んで精度を保ち、長いプロンプトや厳しいメモリ制約では強い量子化・追い出しへ移り、厳しい遅延制約では低オーバーヘッド方式へ寄せるためである。",
     "key_results": [
-      {
-        "metric": "Qwen3.6 PPL @50%",
-        "value": "8.67",
-        "baseline": "MoDES 9.42",
-        "condition": "50% expert-slot skipping",
-        "interpretation": "7.96% relative PPL reduction."
-      },
-      {
-        "metric": "Qwen3.6 average accuracy @50%",
-        "value": "75.57",
-        "baseline": "MoDES 71.42",
-        "condition": "seven downstream tasks",
-        "interpretation": "+4.15 points."
-      },
-      {
-        "metric": "Qwen3.6 @60%",
-        "value": "PPL 9.98; avg 70.70",
-        "baseline": "MoDES 10.87/69.04; Score 13.38/54.66",
-        "condition": "60% skipping",
-        "interpretation": "quality gap persists at aggressive budget."
-      },
-      {
-        "metric": "Qwen3-30B @50%",
-        "value": "PPL 8.85; avg 74.30",
-        "baseline": "Top-P 8.85/74.17; AIMER 8.86/73.40; GSP 8.99/74.10",
-        "condition": "50% skipping",
-        "interpretation": "ties best external PPL and has highest average accuracy."
-      },
-      {
-        "metric": "fusion ablation @50%",
-        "value": "max/ACE 8.85/74.30",
-        "baseline": "mean 8.97/74.01; min 9.20/73.12",
-        "condition": "Qwen3-30B",
-        "interpretation": "conservative max is best."
-      },
-      {
-        "metric": "threshold preparation",
-        "value": "1.8 min",
-        "baseline": "binary search 16.5; MoDES frontier 18.9 min",
-        "condition": "Qwen3-30B 10%",
-        "interpretation": "9.2–10.5x faster deployment preparation."
-      },
-      {
-        "metric": "A100 TTFT speedup @60%",
-        "value": "1.72–2.25x",
-        "baseline": "BF16",
-        "condition": "length 256–1024, batch 1–4",
-        "interpretation": "e.g. 1024/b1 270.9→120.3 ms."
-      },
-      {
-        "metric": "A100 TPOT speedup @60%",
-        "value": "1.31–1.41x",
-        "baseline": "BF16",
-        "condition": "same suite",
-        "interpretation": "e.g. 1024/b1 85.1→63.0 ms/token."
-      }
+      {"metric": "制約付き成功率（CSR）", "value": "平均約+0.07、最大+0.135", "baseline": "最良の静的設定", "condition": "評価した遅延×ピークメモリ制約全体", "interpretation": "プロンプトと支配制約ごとに圧縮方式を変える利得。"},
+      {"metric": "30MBメモリ閾値でのCSR改善", "value": "+0.10〜+0.13", "baseline": "StaticBaseline", "condition": "複数の遅延上限", "interpretation": "中程度のメモリ制約では候補間の実現可能性が分かれ、適応選択の余地が大きい。"},
+      {"metric": "厳しい遅延 2s / 80MB", "value": "CSR 0.314→0.366、違反45.9%→35.8%", "baseline": "StaticBaseline", "condition": "Lmax=2s, Mmax=80MB", "interpretation": "低遅延方式へ切り替えて違反を約10.1ポイント削減し、正答率低下は2.2ポイントに抑える。"},
+      {"metric": "厳しいメモリ 5MB / 50s", "value": "正答率+5.3ポイント、違反+3.1ポイント", "baseline": "StaticBaseline", "condition": "Lmax=50s, Mmax=5MB", "interpretation": "精度を保つ候補選択は改善するが、非常に厳しいメモリ上限では候補集合自体に実現不能なプロンプトが多い。"},
+      {"metric": "中程度制約 10s / 30MB", "value": "正答率+10.6ポイント、違反+0.9ポイント", "baseline": "StaticBaseline", "condition": "Lmax=10s, Mmax=30MB", "interpretation": "わずかな制約違反増と引き換えに大きな精度改善。"},
+      {"metric": "オラクルとの差", "value": "違反率+0〜6ポイント、正答率-0.2〜-1.8ポイント", "baseline": "実測Oracle", "condition": "代表制約", "interpretation": "利用可能候補の上限に比較的近い選択を実現。"}
     ],
     "negative_results": [
-      {
-        "name": "low-sparsity exception",
-        "description": "Qwen3.6 at 10%: router Score avg 81.66 > ACE 81.41."
-      },
-      {
-        "name": "RCR alone weak",
-        "description": "Qwen3-30B at 50%: RCR 11.62/67.01 vs GSP 8.99/74.10 because one router prototype does not represent full conditional input distribution."
-      },
-      {
-        "name": "workload-matched threshold",
-        "description": "reported budget mapping uses an unlabeled workload score pass; threshold transfer is future work."
-      },
-      {
-        "name": "single-run uncertainty",
-        "description": "single deterministic seed; repeated-run uncertainty is future work."
-      },
-      {
-        "name": "distributed serving missing",
-        "description": "distributed expert dispatch is future work."
-      }
+      {"name": "遅延予測誤差", "description": "遅延予測のMAPEは38.19%で、境界付近では予測誤差による制約違反が残る。"},
+      {"name": "候補集合の実現不能", "description": "オラクルでも最大35%違反する条件があり、選択器だけでは候補方式が満たせない制約を解消できない。"},
+      {"name": "再較正コスト", "description": "別モデル・別ハードウェアではプロファイルと予測器再学習が必要。"}
     ],
-    "interpretation": "ACE is a safer selection rule at fixed expert-execution budget rather than a new router. GSP supplies the dominant global signal and RCR protects directionally specialized experts.",
-    "quality_impact": "Lossy; generally better retention than baselines at equal skip ratio, with low-sparsity exceptions and threshold-transfer uncertainty."
+    "interpretation": "選択分布も制約に応じて大きく変わる。緩い50s/80MBではFP16が74.9%、厳しい2s/80MBではFP16 63.6%、H2O 60%が22.8%、RocketKVが9.8%。5MB制約ではFP16 18.5%まで下がり、H2O 20% 29.2%、KVQuant 2-bit 28.6%、4-bit 15.3%へ分散する。単一方式の優位ではなく、異なる方式の交換関係を利用すること自体が結果の中心である。",
+    "quality_impact": "圧縮により品質低下は起こり得る。MetaKVは正答確率を選択目的へ含め、制約の余裕がある場合はFP16または弱い圧縮を優先して不要な劣化を避ける。"
   }
 }
