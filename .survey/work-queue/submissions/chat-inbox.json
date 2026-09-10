@@ -1,19 +1,19 @@
 {
-  "submission_id": "chat-attempt-audit-cxlspeckv-20260911-0430-v10-a1-repair1",
-  "attempt_id": "attempt-audit-cxlspeckv-20260911-0430-v10-a1",
-  "job_id": "job-audit-7d719b9748e9000a",
+  "submission_id": "chat-attempt-research-rexpert-20260911-0430-v10-a1",
+  "attempt_id": "attempt-research-rexpert-20260911-0430-v10-a1",
+  "job_id": "job-research-fa65d3c5c4fce1a2",
   "status": "completed",
   "record_bank": "f",
-  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
-  "expected_blob_sha": "52fdf04dcdfe9adf8df4ea2e0d6b0158963fefbb",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
+  "expected_blob_sha": null,
   "record_slots": [
-    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record-f/metadata.json", "blob_sha": "a60d17a9ac55b49ee2749a9a2abdeab02fdf8c65"},
-    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record-f/problem_method.json", "blob_sha": "a07756c58ffeb45d0c325120ed486946a3642539"},
-    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record-f/evaluation.json", "blob_sha": "3bed81730b32ed8d0692d3012ab7c106a77ba971"},
-    {"slot": "results", "path": ".survey/work-queue/records/chat-record-f/results.json", "blob_sha": "7153926d8f3769e9bacd948655da2dabc6d6af51"},
-    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record-f/positioning.json", "blob_sha": "8b7e3c98a46231693489778d263dd57bdf9dc279"}
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record-f/metadata.json", "blob_sha": "d70acb4526ce6af0210e4f8f4ae3ebc00e49a364"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record-f/problem_method.json", "blob_sha": "79d017d7d518e481216c4f4cafb79cb9977bc140"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record-f/evaluation.json", "blob_sha": "d76db35cde2341e3bf4fb198614c0436c0719311"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record-f/results.json", "blob_sha": "443e131a8841d7d38dde6900dbff3ca5a3861c40"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record-f/positioning.json", "blob_sha": "402497126c48419332197a4bd84016a9ad526464"}
   ],
-  "audit_required": false,
-  "audit_outcome": "要注意で監査完了。CXL階層化とFPGA圧縮の収録は維持するが、投機的未来KV先読みは因果的意味が未解決で、公式公開コードも論文評価を再現する完成実装ではない。",
-  "audit_flags": ["technical_consistency_unresolved", "published_code_incomplete_for_speculative_prefetch", "reported_results_not_independently_reproduced"]
+  "audit_required": true,
+  "audit_outcome": null,
+  "audit_flags": []
 }
