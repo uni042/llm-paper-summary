@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 62,
-      "ready": 1
+      "completed": 63
     },
     "audit": {
       "completed": 4
     },
     "research": {
       "completed": 61,
-      "superseded": 30
+      "superseded": 30,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-ccc820e8748a6b32",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-fa65d3c5c4fce1a2",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2608.13962",
+      "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture",
+      "source_url": "https://arxiv.org/abs/2608.13962",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T19:35:48+00:00"
+  "generated_at": "2026-09-10T19:38:41+00:00"
 }

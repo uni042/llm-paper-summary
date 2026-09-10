@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T19:35:51.230857+00:00",
+  "updated_at": "2026-09-10T19:38:41.092690+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T19:35:51.230857+00:00",
+      "last_recorded_at": "2026-09-10T19:38:41.092690+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1593,9 +1593,9 @@
       "counts": {
         "research_completed": 0,
         "audit_completed": 1,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1629,6 +1629,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34521605782:1",
+          "recorded_at": "2026-09-10T19:38:41.092690+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34521605782",
+            "run_attempt": "1",
+            "source_sha": "319b75890df5e1c93e82faeb541fed8440b66a69"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1642,6 +1656,14 @@
         },
         {
           "job_id": "job-0c1f66c072921e49",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ccc820e8748a6b32",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -1663,6 +1685,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-fa65d3c5c4fce1a2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.13962",
+          "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture"
         }
       ],
       "new_paper_ids": [
@@ -1674,12 +1703,13 @@
         "arXiv:2609.05764"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T0435JST-discovery-0c1f66c072921e49.json"
+        ".survey/work-queue/results/20260911T0435JST-discovery-0c1f66c072921e49.json",
+        ".survey/work-queue/results/20260911T0437JST-discovery-ccc820e8748a6b32.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 221,
       "paper_active_count_after": 227,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
