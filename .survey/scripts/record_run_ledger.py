@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Capture and record meaningful survey-helper state transitions.
+"""Capture meaningful survey-helper transitions into a bounded Scheduled Chat run ledger.
 
-The ledger is intentionally bounded and append-like. Scheduled no-op helper runs
-do not change the ledger, avoiding a commit every ten minutes.
+A Scheduled Chat run may trigger survey-helper many times. Events sharing the same
+maintenance-cycle ``last_counted_run_key`` are merged into one ledger entry so the
+48-entry retention limit means roughly 48 Scheduled Chat runs, not 48 helper jobs.
+Scheduled helper no-ops do not touch the ledger.
 """
 
 from __future__ import annotations
@@ -14,8 +16,8 @@ import os
 from pathlib import Path
 from typing import Any
 
-
 DEFAULT_HISTORY_LIMIT = 48
+MAX_EVENTS_PER_RUN = 64
 
 
 def load_json(path: Path) -> dict[str, Any] | None:
@@ -30,8 +32,8 @@ def load_json(path: Path) -> dict[str, Any] | None:
 
 def collect_snapshot(root: Path) -> dict[str, Any]:
     survey = root / ".survey"
-    jobs_dir = survey / "work-queue/jobs"
     jobs: dict[str, dict[str, Any]] = {}
+    jobs_dir = survey / "work-queue/jobs"
     if jobs_dir.is_dir():
         for path in sorted(jobs_dir.glob("*.json")):
             data = load_json(path)
@@ -58,39 +60,39 @@ def collect_snapshot(root: Path) -> dict[str, Any]:
         p.relative_to(root).as_posix() for p in archive_dir.glob("*.json")
     ) if archive_dir.is_dir() else []
 
-    state = load_json(survey / "work-queue/maintenance-cycle.json") or {}
+    maintenance = load_json(survey / "work-queue/maintenance-cycle.json") or {}
     return {
         "captured_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "jobs": jobs,
-        "paper_ids": sorted(str(k) for k in papers.keys()),
+        "paper_ids": sorted(str(k) for k in papers),
         "active_count": identity.get("active_count"),
         "result_files": result_files,
         "fallback_archive_files": archive_files,
-        "source_run_key": state.get("last_counted_run_key"),
+        "source_run_key": maintenance.get("last_counted_run_key"),
     }
 
 
 def write_snapshot(root: Path, output: Path) -> int:
-    snapshot = collect_snapshot(root)
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output.write_text(
+        json.dumps(collect_snapshot(root), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     print(json.dumps({"action": "snapshot", "output": str(output)}))
     return 0
 
 
 def terminal_transitions(before: dict[str, Any], after: dict[str, Any]) -> list[dict[str, Any]]:
-    out: list[dict[str, Any]] = []
     before_jobs = before.get("jobs") if isinstance(before.get("jobs"), dict) else {}
     after_jobs = after.get("jobs") if isinstance(after.get("jobs"), dict) else {}
+    out: list[dict[str, Any]] = []
     for job_id, current in sorted(after_jobs.items()):
         if not isinstance(current, dict):
             continue
         current_status = current.get("status")
         previous = before_jobs.get(job_id)
         previous_status = previous.get("status") if isinstance(previous, dict) else None
-        if current_status not in {"completed", "blocked"}:
-            continue
-        if previous_status == current_status:
+        if current_status not in {"completed", "blocked"} or previous_status == current_status:
             continue
         out.append({
             "job_id": job_id,
@@ -103,13 +105,25 @@ def terminal_transitions(before: dict[str, Any], after: dict[str, Any]) -> list[
     return out
 
 
-def record(root: Path, baseline_path: Path) -> int:
-    before = load_json(baseline_path)
-    if before is None:
-        print(json.dumps({"action": "skipped", "reason": "baseline_unreadable"}))
-        return 0
-    after = collect_snapshot(root)
+def unique_dicts(items: list[dict[str, Any]], key_fields: tuple[str, ...]) -> list[dict[str, Any]]:
+    seen: set[tuple[Any, ...]] = set()
+    out: list[dict[str, Any]] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        key = tuple(item.get(field) for field in key_fields)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(item)
+    return out
 
+
+def unique_strings(items: list[Any]) -> list[str]:
+    return list(dict.fromkeys(str(item) for item in items if item is not None))
+
+
+def build_event(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any] | None:
     transitions = terminal_transitions(before, after)
     before_jobs = before.get("jobs") if isinstance(before.get("jobs"), dict) else {}
     after_jobs = after.get("jobs") if isinstance(after.get("jobs"), dict) else {}
@@ -120,18 +134,13 @@ def record(root: Path, baseline_path: Path) -> int:
         if isinstance(after_jobs.get(job_id), dict)
     ]
 
-    before_papers = set(before.get("paper_ids") or [])
-    after_papers = set(after.get("paper_ids") or [])
-    new_paper_ids = sorted(after_papers - before_papers)
-
-    before_results = set(before.get("result_files") or [])
-    after_results = set(after.get("result_files") or [])
-    new_results = sorted(after_results - before_results)
+    new_paper_ids = sorted(set(after.get("paper_ids") or []) - set(before.get("paper_ids") or []))
+    new_results = sorted(set(after.get("result_files") or []) - set(before.get("result_files") or []))
     new_discovery_results = [p for p in new_results if "discovery" in Path(p).name.lower()]
-
-    before_archive = set(before.get("fallback_archive_files") or [])
-    after_archive = set(after.get("fallback_archive_files") or [])
-    new_archive = sorted(after_archive - before_archive)
+    new_archive = sorted(
+        set(after.get("fallback_archive_files") or [])
+        - set(before.get("fallback_archive_files") or [])
+    )
 
     completed = [t for t in transitions if t.get("to") == "completed"]
     blocked = [t for t in transitions if t.get("to") == "blocked"]
@@ -139,21 +148,8 @@ def record(root: Path, baseline_path: Path) -> int:
     audit_completed = [t for t in completed if t.get("type") == "audit"]
     discovery_completed = [t for t in completed if t.get("type") == "discovery"]
 
-    meaningful = any([
-        transitions,
-        new_jobs,
-        new_paper_ids,
-        new_discovery_results,
-        new_archive,
-    ])
-    if not meaningful:
-        print(json.dumps({"action": "noop", "meaningful": False}))
-        return 0
-
-    workflow_run_id = os.environ.get("GITHUB_RUN_ID")
-    workflow_attempt = os.environ.get("GITHUB_RUN_ATTEMPT", "1")
-    event_id = f"{workflow_run_id}:{workflow_attempt}" if workflow_run_id else None
-    now = dt.datetime.now(dt.timezone.utc).isoformat()
+    if not any((transitions, new_jobs, new_paper_ids, new_discovery_results, new_archive)):
+        return None
 
     signals: list[str] = []
     if research_completed:
@@ -169,10 +165,12 @@ def record(root: Path, baseline_path: Path) -> int:
     if new_paper_ids:
         signals.append("paper_materialized")
 
-    entry = {
+    workflow_run_id = os.environ.get("GITHUB_RUN_ID")
+    workflow_attempt = os.environ.get("GITHUB_RUN_ATTEMPT", "1")
+    event_id = f"{workflow_run_id}:{workflow_attempt}" if workflow_run_id else None
+    return {
         "event_id": event_id,
-        "recorded_at": now,
-        "source_run_key": after.get("source_run_key") or before.get("source_run_key"),
+        "recorded_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "github": {
             "event_name": os.environ.get("GITHUB_EVENT_NAME"),
             "workflow": os.environ.get("GITHUB_WORKFLOW"),
@@ -200,34 +198,122 @@ def record(root: Path, baseline_path: Path) -> int:
         "last_successful_action": signals[-1] if signals else "queue_state_changed",
     }
 
+
+def merge_event(entry: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
+    existing_events = entry.get("events") if isinstance(entry.get("events"), list) else []
+    event_id = event.get("event_id")
+    if event_id and any(isinstance(e, dict) and e.get("event_id") == event_id for e in existing_events):
+        return entry
+
+    existing_events.append({
+        "event_id": event_id,
+        "recorded_at": event.get("recorded_at"),
+        "github": event.get("github"),
+        "signals": event.get("signals", []),
+    })
+    entry["events"] = existing_events[-MAX_EVENTS_PER_RUN:]
+    entry["last_recorded_at"] = event.get("recorded_at")
+    entry["signals"] = unique_strings((entry.get("signals") or []) + (event.get("signals") or []))
+
+    counts = entry.get("counts") if isinstance(entry.get("counts"), dict) else {}
+    for key, value in (event.get("counts") or {}).items():
+        counts[key] = int(counts.get(key, 0) or 0) + int(value or 0)
+    entry["counts"] = counts
+
+    entry["terminal_transitions"] = unique_dicts(
+        (entry.get("terminal_transitions") or []) + (event.get("terminal_transitions") or []),
+        ("job_id", "to"),
+    )
+    entry["new_jobs"] = unique_dicts(
+        (entry.get("new_jobs") or []) + (event.get("new_jobs") or []),
+        ("job_id",),
+    )
+    entry["new_paper_ids"] = unique_strings(
+        (entry.get("new_paper_ids") or []) + (event.get("new_paper_ids") or [])
+    )
+    entry["new_discovery_results"] = unique_strings(
+        (entry.get("new_discovery_results") or []) + (event.get("new_discovery_results") or [])
+    )
+    entry["new_fallback_archive_files"] = unique_strings(
+        (entry.get("new_fallback_archive_files") or []) + (event.get("new_fallback_archive_files") or [])
+    )
+    if entry.get("paper_active_count_before") is None:
+        entry["paper_active_count_before"] = event.get("paper_active_count_before")
+    entry["paper_active_count_after"] = event.get("paper_active_count_after")
+    entry["last_successful_action"] = event.get("last_successful_action")
+    return entry
+
+
+def record(root: Path, baseline_path: Path) -> int:
+    before = load_json(baseline_path)
+    if before is None:
+        print(json.dumps({"action": "skipped", "reason": "baseline_unreadable"}))
+        return 0
+    after = collect_snapshot(root)
+    event = build_event(before, after)
+    if event is None:
+        print(json.dumps({"action": "noop", "meaningful": False}))
+        return 0
+
+    run_key = after.get("source_run_key") or before.get("source_run_key")
+    if not run_key:
+        github = event.get("github") or {}
+        run_key = f"unattributed:{github.get('run_id') or event.get('recorded_at')}"
+
     ledger_path = root / ".survey/work-queue/run-ledger.json"
     ledger = load_json(ledger_path) or {
-        "schema_version": 1,
+        "schema_version": 2,
         "history_limit": DEFAULT_HISTORY_LIMIT,
         "updated_at": None,
         "entries": [],
     }
+    ledger["schema_version"] = 2
     limit = ledger.get("history_limit")
     if not isinstance(limit, int) or limit < 1:
         limit = DEFAULT_HISTORY_LIMIT
         ledger["history_limit"] = limit
-    entries = ledger.get("entries")
-    if not isinstance(entries, list):
-        entries = []
+    entries = ledger.get("entries") if isinstance(ledger.get("entries"), list) else []
 
-    if event_id:
-        entries = [e for e in entries if not (isinstance(e, dict) and e.get("event_id") == event_id)]
-    entries.append(entry)
+    target = None
+    for candidate in entries:
+        if isinstance(candidate, dict) and candidate.get("run_key") == run_key:
+            target = candidate
+            break
+    if target is None:
+        target = {
+            "run_key": run_key,
+            "first_recorded_at": event.get("recorded_at"),
+            "last_recorded_at": event.get("recorded_at"),
+            "signals": [],
+            "counts": {},
+            "events": [],
+            "terminal_transitions": [],
+            "new_jobs": [],
+            "new_paper_ids": [],
+            "new_discovery_results": [],
+            "new_fallback_archive_files": [],
+            "paper_active_count_before": event.get("paper_active_count_before"),
+            "paper_active_count_after": event.get("paper_active_count_after"),
+            "last_successful_action": None,
+        }
+        entries.append(target)
+
+    before_serialized = json.dumps(target, sort_keys=True, ensure_ascii=False)
+    merge_event(target, event)
+    after_serialized = json.dumps(target, sort_keys=True, ensure_ascii=False)
+    if before_serialized == after_serialized:
+        print(json.dumps({"action": "noop", "reason": "event_already_recorded"}))
+        return 0
+
     ledger["entries"] = entries[-limit:]
-    ledger["updated_at"] = now
-    ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    ledger["updated_at"] = event.get("recorded_at")
     ledger_path.write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
     print(json.dumps({
         "action": "recorded",
-        "event_id": event_id,
-        "signals": signals,
-        "counts": entry["counts"],
+        "run_key": run_key,
+        "event_id": event.get("event_id"),
+        "signals": event.get("signals"),
+        "counts": event.get("counts"),
     }, ensure_ascii=False))
     return 0
 
