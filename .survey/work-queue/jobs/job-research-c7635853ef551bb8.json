@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-c7635853ef551bb8",
+  "type": "research",
+  "parent_job_id": "job-4b5ba04bbda09d40",
+  "priority": 82,
+  "canonical_id": "arXiv:2510.13668",
+  "title": "Adaptive Rescheduling in Prefill-Decode Disaggregated LLM Inference",
+  "source_url": "https://arxiv.org/abs/2510.13668",
+  "paper_path": null,
+  "selection_reason": "プリフィル・デコード分離サービングで出力長のばらつきがデコードGPU間の負荷不均衡を生む問題に対し、LLM隠れ状態から残り生成長を継続予測し、現在負荷と予測将来負荷を合わせてデコード要求を再配置する。予測平均絶対誤差49.42%削減、予測器パラメータ93.28%削減、P99 TPOT 74.77%削減、最大2.24倍の有効スループットを報告し、分離サービングの動的再スケジューリング系統として未収録。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T07:48:48+00:00",
+  "artifact_transport": "structured_record_v10"
+}
