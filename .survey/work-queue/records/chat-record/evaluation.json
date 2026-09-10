@@ -2,24 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-saem-20260910-2346-v10-a1",
-  "job_id": "job-research-53e88cd1653ca310",
+  "attempt_id": "attempt-expertstreaming-20260910-2355-v10-a1",
+  "job_id": "job-research-11443ee95cff6866",
   "data": {
-    "hardware": ["NVIDIA A100 80GB HBM2e", "Intel Xeon Gold 6326 16コア 2.9GHz", "512GB DDR4", "PCIe 4.0 x16"],
-    "software": ["Hugging Face Transformers", "PyTorch", "非同期DMA", "Intel MKL/OpenBLAS", "NUMA-aware CPU実行"],
-    "model": ["Qwen3-30B-A3B", "ERNIE-4.5-21B-A3B-Thinking"],
-    "datasets": ["MATH-500", "AIME 2024", "GPQA-Diamond"],
-    "baselines": ["MoE-OnDemand", "Mixtral-Offloading", "Fiddler", "DAOP", "ECR 100%の全GPU常駐参照", "予測オラクル"],
+    "hardware": ["2×2 5nm multi-chip module test chip", "Samsung 5nm compute dies at 800MHz", "2048 MACs / die, 4.865 TOPS", "288GB/s UCIe-class D2D", "DDR3-1600 4×25.6GB/s", "UMC 28nm synthesized scheduler"],
+    "software": ["cycle-accurate RTL-calibrated simulator", "behavioral design-space simulator", "spatiotemporal trajectory scheduler", "token buffering scheduler"],
+    "model": ["Phi-3.5-MoE", "Yuan2.0-M32", "DeepSeek-MoE-16B", "Qwen3-30B-A3B"],
+    "datasets": ["WikiText-2", "C4", "WinoGrande for motivation profiling"],
+    "baselines": ["Expert Parallelism (EP)", "Hydra chiplet-aware expert placement", "naive FSE-DP variants"],
     "settings": [
-      {"name": "モデルとキャッシュ制約", "description": "Qwen3-30B-A3Bは48ブロック、128 routed expert、Top-8、expert重み29.0B、総30.5B。ERNIE-4.5-21B-A3B-Thinkingは28ブロック、2 shared expert、64 routed expert、Top-6、expert重み21.0B、総21.8B。バッチサイズを1〜8、GPU常駐専門家割合をECRとして複数段階に変え、メモリ制約が強まった際の処理速度を測る。"},
-      {"name": "実機構成", "description": "単一A100 80GBとXeon Gold 6326、512GB DDR4をPCIe 4.0 x16で接続する。CPU側専門家実行は単一ソケットへ限定し、スレッドを同じソケットのコアへ固定、関連重みと活性値も対応NUMAノードへ置く。OSスケジュールや遠隔NUMAアクセスの揺らぎを抑え、CPU-GPU協調方式そのものの差を測る。"},
-      {"name": "校正一致と不一致", "description": "MATH-500は初期高頻度エキスパート集合と段階遷移語の選別に使用するため、校正分布と実行分布が一致する条件である。AIME 2024とGPQA-Diamondは校正には使わず、前者は別の数学問題、後者は物理・化学・生物の大学院級多肢選択であり、遷移表現や推論構造の分布がずれた場合にも段階局所性が移るかを見る。"},
-      {"name": "比較方式", "description": "MoE-OnDemandは支配的専門家だけをGPUへ置いて他を必要時転送する。Mixtral-Offloadingはトークン単位LRUでCPU-GPU間を動的移動する。Fiddlerは非常駐専門家をCPUで直接計算する。DAOPは系列単位の活性化統計からCPU/GPU配置と予測的CPU計算を行う。SAEMはこれらと同じECR制約下でエンドツーエンドのトークン毎秒を比較する。"},
-      {"name": "予測オラクル", "description": "オンラインSAEMは段階s-1の活性化頻度を段階sの予測として使うが、オラクルは生成を一度記録した後、段階sの真の活性化頻度を知っているものとして固定系列を再生する。ECR、境界イベント、キャッシュ機構は同一とし、予測情報だけを差し替える。これにより予測誤差と容量不足のどちらが性能差の主因かを切り分ける。"},
-      {"name": "アブレーション", "description": "Qwen3、ECR 12.5%で段階認識キャッシュ更新だけ、CPU直接実行だけ、トークン再配置だけ、三機構すべてを比較する。さらに完全構成からCPU直接実行だけを外し、非常駐専門家を予約スロットへオンデマンド転送する条件も測り、単独では遅いCPU経路が統合時に必要な理由を検証する。"}
+      {"name": "低バッチのtokens-per-iteration", "description": "要求数そのものではなく、prefillとdecodeを混ぜた1 forward iterationへ集約される入力トークン数を16、64、256、1024に固定する。これは単一要求の文脈長や生成長ではなく、低並行オンデバイス環境における実効micro-batch pressureを表す。WikiText-2とC4から要求を抽出し、専門家活性化の長尾性と重み再利用率が入力トークン数でどう変わるかを比較する。"},
+      {"name": "試作チップ校正シミュレーション", "description": "主要性能値は2×2 5nmテープアウト試作チップとRTL合成スケジューラの特性を使って校正したサイクル精度シミュレータで算出する。基準構成は800MHz、各die 2048 MAC、DDRは4×25.6GB/s、D2Dは288GB/s。実チップが存在する一方、4モデルの全エンドツーエンド結果を実チップで直接計測したわけではない点を区別する。"},
+      {"name": "比較方式", "description": "標準のEPは専門家をdeviceへ固定配置しトークンをall-to-allで送る。Hydraはmulti-chiplet向けに層間人気度を使って専門家位置を変え、EPの通信を改善する。FSE-DPはトークンを固定的に再配送せず、専門家マイクロスライスをpoint-to-point軌跡として流すため、通信形態とオンチップ複製量が根本的に異なる。"},
+      {"name": "エンドツーエンドとアブレーション", "description": "attentionへhead parallelismを追加し、100連続forward iterationでMoE部分を含む処理速度を測る。A1 naive FSE-DP、A2 Rules 1-4のfine-grained flow、A3 paired-load追加、A4 optional Rule 5追加、A5 A3 + 20% token bufferingを比較する。token bufferingは10%、20%、30%のQoS slacknessも評価し、延期量が大きすぎる場合の悪化も確認する。"},
+      {"name": "設計空間とスケーラビリティ", "description": "Qwen3/C4を中心にオンチップバッファ、DDR帯域、D2D帯域、マイクロスライス数を振り、面積30mm²/dieとパッケージ60W未満の制約下で利用率を評価する。さらに2×2から3×3、4×4へ拡張し、論理ring trajectoryを2D mesh上で複数並行させた際の利用率低下をEP/Hydraと比較する。"}
     ],
-    "correctness": "SAEMはルータ出力や生成トークンの意味的計算を変えず、同じ専門家演算をCPUかGPUのどちらで行うかと重み・トークンの配置だけを変える。予測オラクル比較では通常の自回帰生成だと原子加算の微小な数値差から生成系列が分岐し得るため、一度記録したトークン系列と境界イベントを固定して再生し、配置予測だけの差を比較する。",
-    "methodology": "評価は三つのデータセットと二つのMoEモデルで、バッチサイズとECRを変えながら最強比較対象に対するエンドツーエンド処理速度を測る。MATH-500で校正一致条件を詳しく分析し、AIME 2024とGPQA-Diamondで分布外一般化を確認する。さらに予測オラクルで一段遅れの段階予測がどれだけ性能を残しているかを測り、アブレーションで段階キャッシュ、CPU直接実行、トークン再配置の単独・統合効果を分離する。主要値は実CPU・GPU上の測定であり、シミュレーションだけの結果ではない。",
-    "scope": "単一ノードのCPU DRAMとGPU HBM間に専門家重みを置くMoE推論が対象で、SSDやCXLを直接キャッシュ階層へ入れる方式ではない。境界検出は明示的な言語遷移表現を主に使い、論文自身もその表現が出ない推論では精度が落ちる可能性を認める。また校正一致時の利得が最も大きく、異分布でも優位は残るが縮小するため、モデル・タスク固有の遷移語選別が性能へ影響する。"
+    "correctness": "FSE-DPはゲートが選んだ専門家と専門家演算を変更せず、重み断片をどの順でどのchipletへ流すかを変える。token bufferingも要求を現在のMoE層で後のiterationへ延期するだけで、保存した中間活性値とゲート結果をそのまま再開するため計算結果を近似しない。ただし浮動小数点演算順序による通常の実装差はあり得る。",
+    "methodology": "まずattentionを除いた単一MoE FFN層でEP、Hydra、FSE-DPの遅延・利用率・メモリを比較し、重みストリーミング自体の効果を切り分ける。次にattentionを含む100 iterationのエンドツーエンド評価と5構成のアブレーションを行い、token bufferingを加える。さらにD2D/DDR/バッファ容量とマイクロスライス粒度の感度を設計空間探索し、最後に3×3・4×4のchiplet arrayへ拡張する。試作チップとRTL合成の特性でサイクル精度モデルを校正しているため、純粋な解析モデルより実装制約を反映する。",
+    "scope": "対象は高速D2Dリンクと独立制御を持つmulti-chiplet acceleratorであり、一般的な単一GPUやCPU-GPU PCIeオフロードへそのまま適用できる方式ではない。下位ストレージは主にDDRで、NVMe SSDからの専門家読込は評価していない。性能は低バッチかつ専門家活性化が長尾になる条件を主眼とし、大バッチのクラウドMoEや標準GPUクラスタのall-to-all通信環境とは最適点が異なる。"
   }
 }
