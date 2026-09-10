@@ -1,17 +1,18 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T14:33:05.581963+00:00",
+  "updated_at": "2026-09-10T14:39:31.551759+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
       "first_recorded_at": "2026-09-10T14:33:05.581963+00:00",
-      "last_recorded_at": "2026-09-10T14:33:05.581963+00:00",
+      "last_recorded_at": "2026-09-10T14:39:31.551759+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
@@ -33,6 +34,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34490475119:1",
+          "recorded_at": "2026-09-10T14:39:31.551759+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34490475119",
+            "run_attempt": "1",
+            "source_sha": "81a93a20235c52342ab09e637ff98d2c35279e0e"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -41,6 +56,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-66083cca6d53c9c6",
+          "type": "research",
+          "canonical_id": "arxiv:2602.03495",
+          "title": "DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs",
           "from": "ready",
           "to": "completed"
         }
@@ -75,7 +98,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 203,
       "paper_active_count_after": 203,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
