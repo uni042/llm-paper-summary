@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-cbafd4e803a329a5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2409.04992",
+      "title": "InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2409.04992",
+      "paper_path": "papers/inference/02-ssd-nvme-offload/2024-2409.04992-instinfer-in-storage-attention-offloading.md",
+      "priority": 96,
+      "reason": "長文脈推論のKVキャッシュとデコード時注意計算を計算ストレージドライブへ移し、PCIe越しに巨大KVを往復させる代わりにフラッシュ内部帯域を使う。GPUとストレージ間の直接転送も組み合わせ、A6000上の13BモデルでFlexGen系SSD方式に対して最大11.1倍のスループット改善を報告しており、SSD/NVMe活用の系譜で重要な未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2502.12574",
+      "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
+      "source_url": "https://arxiv.org/abs/2502.12574",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+      "priority": 92,
+      "reason": "KVキャッシュを注意ヘッド単位でCPU RAMへ退避し、どのTransformer層でも全KVをGPUへ載せずに注意計算する細粒度方式。Llama-3-8Bの100万トークンでKVのGPU使用量を128GBから1GBへ削減し、24GB級単一GPUで400万トークン推論を可能にするため、長文脈KVオフロードの重要な未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2403.01164",
+      "title": "HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
+      "source_url": "https://arxiv.org/abs/2403.01164",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-heterogeneous-parallel-inference.md",
+      "priority": 88,
+      "reason": "資源制約端末でCPUとGPUを単なる保存先・計算先に分けず異種並列計算へ参加させ、非同期重畳でCPU-GPU入出力の待ちを隠す推論システム。MLSys 2024採択で、最大317%超の推論速度改善を報告しており、FlexGen以降のCPU/GPU協調オフロード系統を埋める価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2402.01869",
+      "title": "INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+      "priority": 84,
+      "reason": "外部ツールや人間応答待ちで生成が中断される拡張LLMに対し、休止要求のKVを保持・CPU退避・破棄再計算のどれにするか動的に選び、再開要求の待ちとGPUメモリ浪費を抑える。ICML 2024の実システム研究で、既存推論基盤に対して1.6〜2倍のスループットと毎秒完了要求数約2倍を報告しており、エージェント時代のKV管理・スケジューリングに直結する。"
+    }
+  ]
+}
