@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T16:44:48.822559+00:00",
+  "updated_at": "2026-09-10T16:50:30.112141+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -358,18 +358,18 @@
     {
       "run_key": "2026-09-11T01:30:00+09:00",
       "first_recorded_at": "2026-09-10T16:29:58.387004+00:00",
-      "last_recorded_at": "2026-09-10T16:44:48.822559+00:00",
+      "last_recorded_at": "2026-09-10T16:50:30.112141+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -431,6 +431,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34504534599:1",
+          "recorded_at": "2026-09-10T16:50:30.112141+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34504534599",
+            "run_attempt": "1",
+            "source_sha": "596d92a16c41c12ffb6c5c359e1ee3de51392318"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -465,6 +480,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-0128b9e7e743cda7",
+          "type": "research",
+          "canonical_id": "arXiv:2604.25699",
+          "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -495,6 +518,13 @@
           "type": "research",
           "canonical_id": "arXiv:2604.25699",
           "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference"
+        },
+        {
+          "job_id": "job-06f2169ce2ecebe4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
