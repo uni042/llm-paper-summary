@@ -2,38 +2,46 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-moespec-20260910-1620-v10",
-  "job_id": "job-research-f9f62bef5889e903",
+  "attempt_id": "attempt-hybridgen-20260910-1632-v10",
+  "job_id": "job-research-a297f1776b1a8b16",
   "data": {
-    "hardware": ["NVIDIA A100 80GB ×1（OLMoE-1B-7B、Qwen3-30B-A3B）", "NVIDIA A100 80GB ×2（Mixtral-8x7B）"],
-    "software": ["PyTorch 2.1", "CUDA 12.1", "Hugging Face公開重み", "EAGLE / EAGLE-3公式アダプタ"],
-    "model": ["OLMoE-1B-7B（64専門家、上位8、7B総パラメータ/1B活性）", "Qwen3-30B-A3B（128専門家、上位8、30B総パラメータ/3B活性）", "Mixtral-8x7B（8専門家、上位2、47B総パラメータ/13B活性）"],
-    "datasets": ["GSM8K", "MATH-500", "HumanEval", "MBPP", "CNN/DailyMail"],
-    "baselines": ["自己回帰デコード", "EAGLE-3（OLMoE、Qwen3）", "EAGLE（Mixtral）"],
+    "hardware": [
+      "Machine A: Intel Xeon Gold 5320 + NVIDIA A100 80GB + 128GB CPU DRAM、Linux 5.14、CUDA 12.1",
+      "Machine B: Intel Xeon Gold 6530 + NVIDIA H100 NVL 94GB + 512GB CPU DRAM、CUDA 12.5",
+      "Machine C: Intel Xeon 6960P + NVIDIA RTX 5090 32GB + 128GB CPU DRAM + 128GB CXLメモリ（DDR4-3200、PCIe 5.0）、CUDA 12.8"
+    ],
+    "software": ["FlexGen基盤のHybridGen試作", "PyTorch（CPUアロケータをmbind対応へ変更）", "Linux NUMAメモリ配置", "LM Evaluation Harness（品質評価）"],
+    "model": ["OPT 1.3B〜13B", "Llama系 1B/3B/7B/8B級", "Qwen2.5 1.5B〜14B"],
+    "datasets": ["PIQA", "OpenBookQA", "COPA", "RTE"],
+    "baselines": ["FlexGen", "MoE-Lightning", "Keyformer", "H2O", "StreamingLLM", "InfiniGen"],
     "settings": [
       {
-        "name": "主要投機設定",
-        "description": "主評価は63トークンのドラフト木を使用。温度0と温度1を評価し、温度1では5乱数種を平均する。各ベンチマーク80例、最大生成1024トークン。"
+        "name": "通常性能評価",
+        "description": "三つのCPU-GPU構成でOPT、Llama、Qwen系を評価する。既定は系列長2K、バッチ1で、モデルサイズ・GPU世代・バッチ数を変えて既存の全量KV退避、CPU注意、前段・後段KV選択方式と比較する。"
       },
       {
-        "name": "専門家予算探索",
-        "description": "OLMoEはB=8,16,24,32,40,48,56、Qwen3は16,24,32,48,64、Mixtralは2,3,4,5,6,7を探索。温度1の5乱数種でEAGLE品質の1標準偏差以内を保つ候補から処理量最大の予算を主要結果に用いる。"
+        "name": "長文評価",
+        "description": "Qwen2.5-7BとLlama-3.1-8B級モデルを中心に系列長を2Kから32Kへ伸ばし、CPU注意計算とCPU-GPU転送が増える条件でHybridGenの動的K制御と選択方式切替が速度を維持できるか測る。"
       },
       {
-        "name": "木サイズ解析",
-        "description": "ドラフト木サイズ3〜511を掃引し、通常EAGLEの専門家和集合増加とMoE-Specの固定予算が速度へ与える影響を測る。OLMoEではB=32を代表条件として分析。"
+        "name": "バッチ拡大",
+        "description": "OPT-13Bなどでバッチを増やし、GPU計算・CPU計算・転送の相対比が変化したときの速度向上を確認する。固定したCPU/GPU分担ではなく、実測フィードバックでKを変える効果を見る。"
       },
       {
-        "name": "選択方式解析",
-        "description": "現在木のルーター確率を合算する動的方式、校正データ頻度による静的方式、完全専門家出力から再構成誤差を貪欲最小化するOracleを比較する。切り捨てと置換の専門家被覆方式も比較する。"
+        "name": "CXL階層評価",
+        "description": "RTX 5090機の128GB DRAM + 128GB CXLメモリで、K/Vを意味に関係なくページ単位で交互配置する方式と、KをDRAMへ優先しVをCXLへ置くHybridGenの意味別配置を比較する。モデルが大きくなりCXL利用量が増える条件ほど差を見る。"
       },
       {
-        "name": "公平なMoE実装最適化",
-        "description": "活性トークンを専門家ごとにまとめて行列積するバッチ化MoE計算を自己回帰・EAGLE・MoE-Specすべてへ同一適用する。逐次専門家実行に対し約1.4〜1.5倍高速化するが、MoE-Spec固有の利得として数えない。"
+        "name": "品質評価",
+        "description": "LM Evaluation HarnessでPIQA、OpenBookQA、COPA、RTEを3-shot評価し、完全注意と選択型方式の精度差を比較する。HybridGenはK_minを事前品質測定で決め、実行時制御がその下限を下回らない。"
+      },
+      {
+        "name": "スケジューラ分解評価",
+        "description": "前段選択を固定する高速設定、後段選択を固定する高精度設定、選択方式だけを適応する設定、Kも適応する完全設定を比較し、速度と精度の寄与を分離する。"
       }
     ],
-    "correctness": "MoE-Specは対象MoEの検証専門家を予算集合へ制限する近似方式であり、厳密な対象モデル出力一致を保証しない。品質はGSM8K/MATH-500精度、HumanEval/MBPP pass@1、CNN/DailyMail ROUGE-L F1で直接評価する。温度1では使用EAGLE実装が提案分布q(x)=1を使う簡略化を含むため、EAGLEおよびMoE-Spec双方に対象分布からの追加偏りがある。",
-    "methodology": "三つの異なるMoE構造、五つの生成タスク、決定論・確率的生成、複数専門家予算、広い木サイズを組み合わせ、速度と品質を同時評価する。主要予算は品質制約下の処理量最大化で選び、追加分析で専門家数、受理長、ランキング費用、再構成誤差、専門家共同活性化を測ることで、速度向上が受理率ではなく検証時の専門家読み出し削減から生じることを確認する。",
-    "scope": "単一要求を中心としたA100実機評価で、専門家重みはGPU HBMに収まる条件を主対象とする。多数要求をバッチ化すると異なる要求間で専門家重み読み出しを共有できるため、専門家予算の相対利得は小さくなる可能性がある。ルーティングは上位k softmaxを前提とし、DeepSeek-V3系のsigmoidルーティングには適応が必要。層ごとの適応予算や共同活性化を利用した選択は未実装。"
+    "correctness": "HybridGenはCPU側の全トークンへ常に厳密な注意計算を行う方式ではなく、トークン選択と層間入力の投機的近似を含む。したがって完全注意とビット単位に同一ではない。著者らはK_minをオフライン品質評価から決め、実行時にそれを下回らない制約を設ける。PIQA、OpenBookQA、COPA、RTEの3-shotでは完全注意との平均精度差0.02を報告し、固定・攻撃的な選択方式より品質低下を抑えている。",
+    "methodology": "評価は単一GPU世代に限定せずA100、H100 NVL、RTX 5090を用い、サーバCPUとCXL拡張メモリを含む三つの実機構成で行う。比較対象はGPU側で全KVを処理する退避方式、CPU注意方式、注意前に候補を減らす方式、注意スコア後に候補を減らす方式を含む。系列長、モデルサイズ、バッチ、メモリ階層を変え、さらに品質とスケジューラ分解を測ることで、単なる1構成の最適化ではなくCPU/GPUの負荷不均衡へ適応する設計の効果を検証する。",
+    "scope": "中心評価は生成時デコードのKVキャッシュ処理であり、プリフィル全体の最適化が主題ではない。CXLの意味別配置はCXL搭載Machine Cでの評価に基づき、他のCXL製品・遠隔メモリ構成へ一般化できるかは未検証である。試作はFlexGenとPyTorch CPUアロケータ改変に基づき、vLLM/SGLangなど本番サービング基盤への統合性能は評価していない。"
   }
 }
