@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-eb88ecf4113289b0",
+  "type": "research",
+  "parent_job_id": "job-80761b12c62667c8",
+  "priority": 86,
+  "canonical_id": "arXiv:2603.17456",
+  "title": "Multi-stage Flow Scheduling for LLM Serving",
+  "source_url": "https://arxiv.org/abs/2603.17456",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+  "selection_reason": "分離型LLMサービングでは、再利用KVブロック取得、集団通信、プリフィルからデコードへの転送など依存関係を持つ複数段階の通信が同じネットワークを競合する。MFSは段階を無視した個別フロー制御ではなく、要求全体の初回トークン時間サービス水準目標（Time-To-First-Token Service Level Objective; TTFT SLO）達成を目的に、猶予の小さい段階を動的に昇格させる逆多段キューで近似的な最小猶予優先制御を行う。vLLMへ差し込み可能なモジュールとして実装され、8サーバ・32GPU実機と大規模シミュレーションで既存方式比1.2〜2.4倍のTTFT SLO達成率を報告する。分離サービング、KV再利用、通信スケジューリングを横断するシステム研究として収録価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T18:47:15+00:00",
+  "artifact_transport": "structured_record_v10"
+}
