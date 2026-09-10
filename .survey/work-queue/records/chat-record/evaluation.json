@@ -2,23 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-remoe-20260910-2341-v10-a1",
-  "job_id": "job-research-f0c19ed4ae256352",
+  "attempt_id": "attempt-saem-20260910-2346-v10-a1",
+  "job_id": "job-research-53e88cd1653ca310",
   "data": {
-    "hardware": ["24GB RTX 3090級GPU + PCIe Gen3 x16", "Jetson Orin NX 16GB", "aigo DP35 256GB NVMe SSD + PCIe Gen3 x4", "2基のBI-V150 GPU", "Kunpeng 920 + Ascend 910B3 NPU"],
-    "software": ["vLLM MoE expert offloading", "llama.cpp", "expert-kit", "lm-eval-harness", "トレース駆動エキスパートキャッシュシミュレータ"],
-    "model": ["DeepSeek-V2-Lite 15.7B/2.4B activated", "Qwen1.5-MoE-A2.7B"],
-    "datasets": ["OpenHermes-2.5", "ShareGPT", "GSM8K", "HumanEval", "MMLU", "IFEval"],
-    "baselines": ["事前学習済み元ルータ", "同じ条件で交差エントロピーだけを使うCE-only微調整", "LRU/LFU/FIFO/Beladyキャッシュ置換"],
+    "hardware": ["NVIDIA A100 80GB HBM2e", "Intel Xeon Gold 6326 16コア 2.9GHz", "512GB DDR4", "PCIe 4.0 x16"],
+    "software": ["Hugging Face Transformers", "PyTorch", "非同期DMA", "Intel MKL/OpenBLAS", "NUMA-aware CPU実行"],
+    "model": ["Qwen3-30B-A3B", "ERNIE-4.5-21B-A3B-Thinking"],
+    "datasets": ["MATH-500", "AIME 2024", "GPQA-Diamond"],
+    "baselines": ["MoE-OnDemand", "Mixtral-Offloading", "Fiddler", "DAOP", "ECR 100%の全GPU常駐参照", "予測オラクル"],
     "settings": [
-      {"name": "ルータ限定微調整", "description": "主モデルDeepSeek-V2-Liteは総15.7B、1トークンあたり2.4Bを活性化し、26個のMoE層で各64 routed expertと2 shared expertを持ちTop-6を選ぶ。OpenHermes-2.5を100,000件学習、1,000件評価に使い、非ルータ重みを固定したままAdamW、学習率5e-5、BF16、系列長2048、micro-batch 1、勾配累積8で2,000ステップ微調整する。"},
-      {"name": "トレース駆動キャッシュ評価", "description": "ShareGPTから128プロンプトを取り、バッチ1、greedy decoding、最大64生成トークンで各層のTop-K専門家系列を記録する。各要求開始時は空キャッシュへ戻し、容量4、6、8、12などでLRUを中心に、LFU、FIFO、理想的なBelady置換でも固有ヒット率と固有ミス数を集計する。これにより特定ランタイムの実装差を外してルータ系列そのもののI/O圧力を測る。"},
-      {"name": "vLLM GPU-CPUオフロード", "description": "24GB GPUをPCIe Gen3 x16でホストへ接続し、vLLMのMoEエキスパートオフロードを使う。最大同時系列1、専門家キャッシュ6、prefix cachingとchunked prefillを無効化し、並行数1でShareGPT要求を処理する。出力処理速度、先頭トークン時間、トークン間遅延、固有専門家ヒット率を元ルータと比較する。"},
-      {"name": "Jetson SSD-backed評価", "description": "Jetson Orin NX 16GBでllama.cppを使い、モデルをaigo DP35 256GB NVMe SSDへ置いてPCIe Gen3 x4経由で読み込む。-np 1、-n 128、--mmap条件でShareGPT、GSM8K、HumanEvalを実行し、SSDからの専門家ミスが高価な端末条件で先頭トークン時間とトークン間遅延を測る。"},
-      {"name": "モデル・アクセラレータ一般化", "description": "同じハイパーパラメータでQwen1.5-MoE-A2.7Bへ適用し、さらに2基のBI-V150 GPU + expert-kit + NVMe SSD、Kunpeng 920 + Ascend 910B3 NPU + NVMe SSDでも2,000ステップのゲート適応後に実行する。特定のNVIDIA GPUやDeepSeekのゲート構造だけに依存しないかを確認する。"}
+      {"name": "モデルとキャッシュ制約", "description": "Qwen3-30B-A3Bは48ブロック、128 routed expert、Top-8、expert重み29.0B、総30.5B。ERNIE-4.5-21B-A3B-Thinkingは28ブロック、2 shared expert、64 routed expert、Top-6、expert重み21.0B、総21.8B。バッチサイズを1〜8、GPU常駐専門家割合をECRとして複数段階に変え、メモリ制約が強まった際の処理速度を測る。"},
+      {"name": "実機構成", "description": "単一A100 80GBとXeon Gold 6326、512GB DDR4をPCIe 4.0 x16で接続する。CPU側専門家実行は単一ソケットへ限定し、スレッドを同じソケットのコアへ固定、関連重みと活性値も対応NUMAノードへ置く。OSスケジュールや遠隔NUMAアクセスの揺らぎを抑え、CPU-GPU協調方式そのものの差を測る。"},
+      {"name": "校正一致と不一致", "description": "MATH-500は初期高頻度エキスパート集合と段階遷移語の選別に使用するため、校正分布と実行分布が一致する条件である。AIME 2024とGPQA-Diamondは校正には使わず、前者は別の数学問題、後者は物理・化学・生物の大学院級多肢選択であり、遷移表現や推論構造の分布がずれた場合にも段階局所性が移るかを見る。"},
+      {"name": "比較方式", "description": "MoE-OnDemandは支配的専門家だけをGPUへ置いて他を必要時転送する。Mixtral-Offloadingはトークン単位LRUでCPU-GPU間を動的移動する。Fiddlerは非常駐専門家をCPUで直接計算する。DAOPは系列単位の活性化統計からCPU/GPU配置と予測的CPU計算を行う。SAEMはこれらと同じECR制約下でエンドツーエンドのトークン毎秒を比較する。"},
+      {"name": "予測オラクル", "description": "オンラインSAEMは段階s-1の活性化頻度を段階sの予測として使うが、オラクルは生成を一度記録した後、段階sの真の活性化頻度を知っているものとして固定系列を再生する。ECR、境界イベント、キャッシュ機構は同一とし、予測情報だけを差し替える。これにより予測誤差と容量不足のどちらが性能差の主因かを切り分ける。"},
+      {"name": "アブレーション", "description": "Qwen3、ECR 12.5%で段階認識キャッシュ更新だけ、CPU直接実行だけ、トークン再配置だけ、三機構すべてを比較する。さらに完全構成からCPU直接実行だけを外し、非常駐専門家を予約スロットへオンデマンド転送する条件も測り、単独では遅いCPU経路が統合時に必要な理由を検証する。"}
     ],
-    "correctness": "ルータを変えるため生成結果の数学的同一性は保証しない。その代わりGSM8K、HumanEval、MMLU、IFEvalと次トークン指標を測定し、Trust-KLを外した場合との比較も行う。MMLUは57.72から57.81、HumanEvalは26.83から29.27へ変化し、GSM8K strictは38.89から38.13へ0.76ポイント低下した。CE-onlyが局所性と能力の両方を悪化させることも確認し、改善を単なる追加学習の効果と区別する。",
-    "methodology": "評価はアクセス系列、キャッシュ挙動、実システム性能、モデル能力の四段階で行う。まずteacher forcingで隣接トークンのTop-K重複とルーティング集中度を測り、次に同じ系列を複数置換方式のキャッシュシミュレータへ流して固有重み読込数を測る。その後vLLMのGPU-CPUオフロードとJetsonのNVMe SSD-backed llama.cppで実際の遅延へ変換されることを確認し、最後に標準ベンチマークとアブレーションで品質維持の原因を検証する。加えて別MoEモデル、GPU、NPUにも広げている。",
-    "scope": "主眼は単一要求・バッチ1のメモリ制約推論である。大規模データセンターの専門家並列では負荷集中が通信・計算不均衡を悪化させる可能性があり、同じ目的関数がそのまま適切とは限らない。JetsonではSSD-backed実測を行う一方、キャッシュ容量ごとの広い比較はトレースシミュレーションである。またゲート微調整に100,000件のデータと2,000ステップを要するため、完全な学習不要方式ではない。"
+    "correctness": "SAEMはルータ出力や生成トークンの意味的計算を変えず、同じ専門家演算をCPUかGPUのどちらで行うかと重み・トークンの配置だけを変える。予測オラクル比較では通常の自回帰生成だと原子加算の微小な数値差から生成系列が分岐し得るため、一度記録したトークン系列と境界イベントを固定して再生し、配置予測だけの差を比較する。",
+    "methodology": "評価は三つのデータセットと二つのMoEモデルで、バッチサイズとECRを変えながら最強比較対象に対するエンドツーエンド処理速度を測る。MATH-500で校正一致条件を詳しく分析し、AIME 2024とGPQA-Diamondで分布外一般化を確認する。さらに予測オラクルで一段遅れの段階予測がどれだけ性能を残しているかを測り、アブレーションで段階キャッシュ、CPU直接実行、トークン再配置の単独・統合効果を分離する。主要値は実CPU・GPU上の測定であり、シミュレーションだけの結果ではない。",
+    "scope": "単一ノードのCPU DRAMとGPU HBM間に専門家重みを置くMoE推論が対象で、SSDやCXLを直接キャッシュ階層へ入れる方式ではない。境界検出は明示的な言語遷移表現を主に使い、論文自身もその表現が出ない推論では精度が落ちる可能性を認める。また校正一致時の利得が最も大きく、異分布でも優位は残るが縮小するため、モデル・タスク固有の遷移語選別が性能へ影響する。"
   }
 }
