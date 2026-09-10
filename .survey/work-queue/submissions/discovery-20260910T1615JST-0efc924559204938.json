@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission_id": "discovery-20260910T1615JST-0efc924559204938",
+  "job_id": "job-0efc924559204938",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.24434",
+      "title": "DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference",
+      "source_url": "https://arxiv.org/abs/2607.24434",
+      "priority": 78,
+      "reason": "CPU→GPUおよびFlash→NPUへ専門家をオンデマンド搬送する端末MoE推論で、自己投機デコードが専門家集合の膨張を招く問題を扱う。固定フットプリントのドラフト専門家、展開量を考慮した打ち切り、対象専門家プリフェッチを組み合わせ、オフロード・プリフェッチ・投機デコードを同時最適化するため重点テーマとの重なりが大きい。"
+    },
+    {
+      "canonical_id": "arXiv:2602.16052",
+      "title": "MoE-Spec: Expert Budgeting for Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2602.16052",
+      "priority": 72,
+      "reason": "MoEの投機検証で大きなドラフト木が多数の専門家を同時活性化し、メモリ圧力と帯域負荷を増やす問題に対し、検証時の専門家予算を固定して長い裾の専門家を落とす学習不要方式。投機デコードとMoE専門家メモリ管理の接点として未登録。"
+    }
+  ]
+}
