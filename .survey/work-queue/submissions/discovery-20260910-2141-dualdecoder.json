@@ -1,0 +1,13 @@
+{
+  "job_id": "job-4f5f13f924223c05",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2607.26475",
+      "title": "DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch",
+      "source_url": "https://arxiv.org/abs/2607.26475",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.26475-dualdecoder-predictive-prefetch.md",
+      "priority": 90,
+      "reason": "長文推論の疎KVキャッシュ方式で、重要KVをCPUメモリから毎デコード時に取得する際、検索用の補助状態自体がGPUメモリを圧迫する問題を扱う。直前に投機したトークンから次トークンが必要とするKVを予測し、層ごとの転送計画で先読みを計算へ重ね、GPU側の補助バッファを層単位へ縮小する。最新比較対象に対しデコードスループット最大2.62倍を報告し、KVオフロードと予測先読みを直接結び付けるため優先度が高い。"
+    }
+  ]
+}
