@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:18:58.427415+00:00",
+  "updated_at": "2026-09-10T18:34:40.618679+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1045,6 +1045,76 @@
       "paper_active_count_before": 211,
       "paper_active_count_after": 214,
       "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-11T03:30:00+09:00",
+      "first_recorded_at": "2026-09-10T18:34:40.618679+00:00",
+      "last_recorded_at": "2026-09-10T18:34:40.618679+00:00",
+      "signals": [
+        "research_completed",
+        "discovery_or_queue_expanded",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 7,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34515167152:1",
+          "recorded_at": "2026-09-10T18:34:40.618679+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34515167152",
+            "run_attempt": "1",
+            "source_sha": "05de8ab6dc01742b406506ab80e45e00f26a0c98"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-eccffc20cbe9c15a",
+          "type": "research",
+          "canonical_id": "arXiv:2511.00321",
+          "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-e22703146ab852cf",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [
+        "arXiv:2509.07379",
+        "arXiv:2511.00321",
+        "arXiv:2605.17613",
+        "arXiv:2606.15453",
+        "arXiv:2608.03893",
+        "arXiv:2608.11688",
+        "arXiv:2608.23834"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 214,
+      "paper_active_count_after": 221,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

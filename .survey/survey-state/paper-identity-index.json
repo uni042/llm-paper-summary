@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 214,
+  "active_count": 221,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -421,6 +421,14 @@
       ],
       "source_hash": "dec80f43c7edd10b0540ffd13604651f962f8101e39ecd77311677fb7c5233b6"
     },
+    "arXiv:2511.00321": {
+      "path": "papers/inference/05-kv-cache-offloading/2025-2511.00321-cxl-pnm-kv-cache.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2511.00321",
+        "arXiv:2511.00321"
+      ],
+      "source_hash": "4334bcb7550ad024290ca5ba4d6bb629aa8f2a6c40c841ea869c724a19b986cb"
+    },
     "arXiv:2305.09781": {
       "path": "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
       "identifiers": [
@@ -533,6 +541,30 @@
         "arXiv:2609.00355"
       ],
       "source_hash": "b253ca457223408da24c652b122970bf4cd65c4b8365e805e655e998261ac8f1"
+    },
+    "arXiv:2509.07379": {
+      "path": "papers/inference/06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2509.07379",
+        "arXiv:2509.07379"
+      ],
+      "source_hash": "7edea27ddc2e457423e9d0aad68460b49a56680904824875de54ecd7f46b1e02"
+    },
+    "arXiv:2606.15453": {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2606.15453",
+        "arXiv:2606.15453"
+      ],
+      "source_hash": "894ae221c91c552159c66543046b3b53d18219c2b90a96180991dcd463ce9f6a"
+    },
+    "arXiv:2608.11688": {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2608.11688-apex-adaptive-expert-prefetching.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.11688",
+        "arXiv:2608.11688"
+      ],
+      "source_hash": "a1cdf3e1ce1857bb69ab5eac474d54f23c1ac6d923cf6c744fb8b381da5d12d4"
     },
     "arXiv:2310.02410": {
       "path": "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
@@ -1015,6 +1047,14 @@
       ],
       "source_hash": "6ce65b8dcfdd7e60e8749ccdac42cc099f05d7bd438477580ac3f1dea2da8023"
     },
+    "arXiv:2605.17613": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2605.17613",
+        "arXiv:2605.17613"
+      ],
+      "source_hash": "35ce405bc2729edbec1013e25a7d95277b74682b223d552a3b3d61f782f58c6a"
+    },
     "arXiv:2605.18071": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
       "identifiers": [
@@ -1059,6 +1099,14 @@
       ],
       "source_hash": "a5eb5f688d8a73af0b22b16469d3cf62d56b277d2176572bf91c1b80c42070dc"
     },
+    "arXiv:2608.03893": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03893-cross-model-kv-cache-transfer.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.03893",
+        "arXiv:2608.03893"
+      ],
+      "source_hash": "4061d028eef3c48d12a0de3f125146bab01331417e10de789ebe0d6cfb70bbb6"
+    },
     "arXiv:2608.14624": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.14624-cachescout.md",
       "identifiers": [
@@ -1072,6 +1120,14 @@
         "arXiv:2608.23658"
       ],
       "source_hash": "58013a539a71611ed0bfda15f4374a17e00db5b7ad0d30706d0f3f79b411223b"
+    },
+    "arXiv:2608.23834": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23834-minima-kv-mixed-format-paged-attention.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.23834",
+        "arXiv:2608.23834"
+      ],
+      "source_hash": "b4d3ce8e8182bf09c77b3c611da618f5658018ecf3a00435e263e341489f17cf"
     },
     "arXiv:2609.00891": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md",
@@ -1588,6 +1644,8 @@
     "ACL:2025.findings-acl.377": "ACL:2025.findings-acl.377",
     "DOI:10.48550/arxiv.2603.27624": "arXiv:2603.27624",
     "arXiv:2603.27624": "arXiv:2603.27624",
+    "DOI:10.48550/arxiv.2511.00321": "arXiv:2511.00321",
+    "arXiv:2511.00321": "arXiv:2511.00321",
     "DOI:10.1145/3620666.3651335": "arXiv:2305.09781",
     "arXiv:2305.09781": "arXiv:2305.09781",
     "arXiv:2311.08252": "arXiv:2311.08252",
@@ -1605,6 +1663,12 @@
     "arXiv:2607.24434": "arXiv:2607.24434",
     "arXiv:2608.02989": "arXiv:2608.02989",
     "arXiv:2609.00355": "arXiv:2609.00355",
+    "DOI:10.48550/arxiv.2509.07379": "arXiv:2509.07379",
+    "arXiv:2509.07379": "arXiv:2509.07379",
+    "DOI:10.48550/arxiv.2606.15453": "arXiv:2606.15453",
+    "arXiv:2606.15453": "arXiv:2606.15453",
+    "DOI:10.48550/arxiv.2608.11688": "arXiv:2608.11688",
+    "arXiv:2608.11688": "arXiv:2608.11688",
     "arXiv:2310.02410": "arXiv:2310.02410",
     "arXiv:2310.16795": "arXiv:2310.16795",
     "arXiv:2406.08155": "arXiv:2406.08155",
@@ -1678,6 +1742,8 @@
     "arXiv:2604.25080": "arXiv:2604.25080",
     "arXiv:2604.26557": "arXiv:2604.26557",
     "arXiv:2605.03375": "arXiv:2605.03375",
+    "DOI:10.48550/arxiv.2605.17613": "arXiv:2605.17613",
+    "arXiv:2605.17613": "arXiv:2605.17613",
     "arXiv:2605.18071": "arXiv:2605.18071",
     "arXiv:2606.16135": "arXiv:2606.16135",
     "DOI:10.48550/arxiv.2607.18141": "arXiv:2607.18141",
@@ -1686,8 +1752,12 @@
     "DOI:10.48550/arxiv.2607.27187": "arXiv:2607.27187",
     "arXiv:2607.27187": "arXiv:2607.27187",
     "arXiv:2608.03555": "arXiv:2608.03555",
+    "DOI:10.48550/arxiv.2608.03893": "arXiv:2608.03893",
+    "arXiv:2608.03893": "arXiv:2608.03893",
     "arXiv:2608.14624": "arXiv:2608.14624",
     "arXiv:2608.23658": "arXiv:2608.23658",
+    "DOI:10.48550/arxiv.2608.23834": "arXiv:2608.23834",
+    "arXiv:2608.23834": "arXiv:2608.23834",
     "arXiv:2609.00891": "arXiv:2609.00891",
     "arXiv:2609.04852": "arXiv:2609.04852",
     "USENIX:OSDI26:luo": "USENIX:OSDI26:luo",
