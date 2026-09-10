@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "test-library-seed-orbitflow-recovery-20260910",
+  "kind": "offline_job_seed",
+  "attempt_id": "seed-orbitflow-recovery-20260910",
+  "writes": [
+    {
+      "path": ".survey/work-queue/transport/offline-job-seed.json",
+      "content": "{\n  \"schema_version\": 1,\n  \"transport_version\": 10,\n  \"seed_id\": \"seed-orbitflow-recovery-20260910\",\n  \"candidates\": [\n    {\n      \"canonical_id\": \"arXiv:2601.10729\",\n      \"title\": \"OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration\",\n      \"source_url\": \"https://arxiv.org/abs/2601.10729\",\n      \"priority\": 90,\n      \"reason\": \"Library-only recovery E2E for a fully read, checkpointed inference-serving paper.\"\n    }\n  ]\n}\n"
+    }
+  ]
+}
