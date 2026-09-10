@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-8d2a51801f75daca",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/05-kv-cache-offloading/2026-2609.05764-interface-aware-kv-quantization-nvm.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.05764.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-30ac53b1fd4b6037",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T18:44:50+00:00"
 }
