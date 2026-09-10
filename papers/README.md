@@ -1,10 +1,10 @@
 # 論文カタログ
 
-収録論文: **246本**。
+収録論文: **249本**。
 
 論文は最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。
 
-## Inference / 推論 — 227本
+## Inference / 推論 — 230本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 25本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 13本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
@@ -15,7 +15,7 @@
 - [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 18本 — KV cacheを圧縮・選別・動的配分・GPU内prefetchして、容量とmemory bandwidthの負荷を減らす。
 - [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 12本 — smartphoneや個人PCなど、memory・bandwidth・電力制約の厳しい端末でLLMを実行するsystem研究。
 - [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 39本 — KVをCPU・peer GPU・SSD等へ置き、必要な転送・attention実行場所・再計算を最適化する。
-- [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 51本 — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
+- [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 52本 — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
 - [Other Inference Systems](inference/99-other-inference-systems/) — 9本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 → [Inference一覧](inference/)
@@ -27,5 +27,5 @@
 → [Training一覧](training/)
 
 <!-- survey:auto:start -->
-推論論文：**227本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
+推論論文：**230本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->

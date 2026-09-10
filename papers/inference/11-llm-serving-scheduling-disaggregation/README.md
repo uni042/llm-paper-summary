@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（51本）
+## 自動生成の論文一覧（52本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -46,6 +46,7 @@
 | [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](2026-2609.05425-cotail.md) | LLM本体はGPUで計算していても、要求の受付・バッチ作成・GPUへの仕事投入はCPUが担当するため、同じサーバの空きCPUで別処理を動かすとLLMが大きく遅くなることがある。CoTailはCPU側の各処理段階のP95/P99遅延を測り、CPUスケジューラ競合ならLLMの中核スレッドだけをリアルタイム優先し、NUMA・キャッシュ・メモリ局所性の競合ならCPU配置を分離する、という診断と保護選択を自動化する手順。 |
 | [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md) | requestごとに「SLOまであと何秒の遅延を許容できるか」を残りlatency budgetとして継続推定し、その同じbudgetでrequestの実行順とHBM / CPU DRAM / NVMe間のKV cache復元・先読み・保持・再計算をまとめて決めることで、SLOを満たす処理量と長context requestへの公平性を両立するserving system。 |
 | [When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference](2026-2608.03741-heteropanacea.md) | LLM推論を一台・一種類のGPUでまとめて処理する代わりに、入力処理と逐次生成、さらに注意機構とFFNを最大4種類の計算機群へ分けたとき、通信コストを払ってでも速くなる条件をシミュレーションで調べた研究。各段に計算重視・メモリ帯域重視の異なるハードウェアを割り当てられる場合ほど4段分離が効き、同じGPUしか選べない環境では細かく分ける意味が小さくなる。 |
+| [Topology-Aware Data Movement for Disaggregated GPU Inference](2026-2607.28633-topology-aware-data-movement.md) | プリフィルとデコードを別GPU群へ分離するLLMサービングでは、プリフィルで生成したKVキャッシュをデコード側へ渡す転送が新たなボトルネックになる。TopKVは、GPU間の物理接続を検出し、NVLink、PCIe、RDMA、TCPから転送経路を選び、層ごとのKV転送を計算と重ねる。さらにMoEでは専門家配置とKV位置を同時に考え、GPU HBMに収まらないKVの退避先としてCXL 3.0メモリを組み込む。Llama-3-70Bで1要求1.3GBのKVを想定した解析では、RDMA一律転送に対して転送遅延を3〜18倍削減できると見積もる。ただし現在の実装は実転送を帯域制限付き模擬先で置き換え、層パイプラインとCXLも解析モデル中心であり、数値はエンドツーエンド実機高速化ではない。 |
 | [PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs](2026-2606.26666-persistentkv.md) | 長い文脈の逐次生成では1回に1トークンしか計算しないため、少数要求だとGPUへ十分な仕事を出せない。PersistentKVは既存のページ化KVキャッシュを作り直さず、長い系列を複数区間へ分けて同時処理し、長さの違う要求が混ざる場合は実際に必要な区間だけを小さな作業キューへ詰める。常に独自カーネルを使うのではなく、推定上得な条件だけFlashInferから切り替えることでRTX 3060上の長文decodeを改善する。 |
 | [RTP-LLM: High-Performance Alibaba LLM Inference Engine](2026-2605.29639-rtp-llm.md) | Alibabaで実運用されているLLM推論基盤。単一の高速化手法ではなく、入力処理と逐次生成の分離、GPUから分散ストレージまでのKVキャッシュ階層、キャッシュを再利用しやすい要求振り分け、大規模モデルの高速読込、投機的復号、量子化、MoE・画像入力対応を一つの提供基盤へ統合し、実トラフィックを使って各機構の効果を評価する。 |
 | [Multi-stage Flow Scheduling for LLM Serving](2026-2603.17456-multi-stage-flow-scheduling.md) | 分離型LLMサービングでは、初回トークンを返すまでに、再利用KVキャッシュの遠隔取得、テンソル・エキスパート・系列並列などの集団通信、プリフィルからデコードへのKV転送という複数段階の通信が発生する。これらは依存関係を持ちながら同じネットワークを共有するため、個々のフローを公平共有・短い順・締切順で最適化しても、後続計算を直ちに止める通信と十分余裕のあるKV転送を区別できず、初回トークン時間のサービス水準目標を悪化させる。MFSは要求全体の締切が処理進行に伴って個別フローの明示的締切へ具体化する性質を利用し、余裕がある通信を遅延させ、必要になった段階でのみ優先度を上げる『遅延・昇格』方式を逆多段キュー（Reverse Multi-Level Queue; RMLQ）で実装する。明示締切を持つプリフィル・デコード転送には必要最小リンク利用率、暗黙締切の初期段階には相対層番号と要求間の頑健締切を用いる。NCCLとMooncakeへ差し込み可能な約1万行の実装をvLLMと統合し、8サーバ32枚RTX 3090の実機と256サーバ規模シミュレーションで、最強比較方式に対して初回トークン時間SLO達成率を最大2.4倍改善する。 |
