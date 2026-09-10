@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T15:10:32.962043+00:00",
+  "updated_at": "2026-09-10T15:11:49.303719+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
       "first_recorded_at": "2026-09-10T14:33:05.581963+00:00",
-      "last_recorded_at": "2026-09-10T15:10:32.962043+00:00",
+      "last_recorded_at": "2026-09-10T15:11:49.303719+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -15,9 +15,9 @@
       "counts": {
         "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 10,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -122,6 +122,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34493958067:1",
+          "recorded_at": "2026-09-10T15:11:49.303719+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34493958067",
+            "run_attempt": "1",
+            "source_sha": "53b7af3e85a6e7b766394277d553f64288d940f5"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -178,6 +192,14 @@
           "type": "research",
           "canonical_id": "arxiv:2508.06978",
           "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-93a01902fba27898",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -238,6 +260,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-63905827eb5cf813",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.18755",
+          "title": "BiScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS"
+        },
+        {
+          "job_id": "job-research-dfe0eeb59b2bedb1",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2601.20309",
+          "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips"
         }
       ],
       "new_paper_ids": [
@@ -251,12 +287,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-20260910-2330-moe-storage.json",
-        ".survey/work-queue/results/discovery-20260910-2351-streaming-edge.json"
+        ".survey/work-queue/results/discovery-20260910-2351-streaming-edge.json",
+        ".survey/work-queue/results/20260911T0012JST-discovery-93a01902fba27898.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 203,
       "paper_active_count_after": 210,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

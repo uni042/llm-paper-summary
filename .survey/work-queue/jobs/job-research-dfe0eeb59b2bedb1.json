@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-dfe0eeb59b2bedb1",
+  "type": "research",
+  "parent_job_id": "job-93a01902fba27898",
+  "priority": 86,
+  "canonical_id": "arXiv:2601.20309",
+  "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+  "source_url": "https://arxiv.org/abs/2601.20309",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-rotary-scheduling-duplexkv.md",
+  "selection_reason": "NVIDIA GH200のNVLink-C2Cを利用し、KV容量逼迫時に要求をCPU側へ能動的に回転させるSLO対応スケジューリングと全二重KV転送を共同設計する。従来PCIe退避との差が明確で、階層メモリと配信SLOを結ぶ実機システムとして比較価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T15:11:46+00:00",
+  "completed_at": "2026-09-10T15:11:48+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2601.20309",
+  "duplicate_of_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2601.20309"
+  }
+}
