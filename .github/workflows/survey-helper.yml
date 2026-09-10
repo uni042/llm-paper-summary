@@ -45,7 +45,7 @@ jobs:
           if [ -f .survey/work-queue/results/chat-inbox.json ]; then
             echo 'Reusable Chat inbox already has a result; skip transport assembly.'
           else
-            python .survey/scripts/assemble_research_record.py --repo-root .
+            python .survey/scripts/assemble_research_record_v10.py --repo-root .
             python .survey/scripts/assemble_chat_chunks.py --repo-root .
           fi
 
