@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T20:02:27.547043+00:00",
+  "updated_at": "2026-09-10T20:09:14.647342+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T20:02:27.547043+00:00",
+      "last_recorded_at": "2026-09-10T20:09:14.647342+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1592,11 +1592,11 @@
         "research_completed"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 2,
         "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 8,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1702,6 +1702,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34524622375:1",
+          "recorded_at": "2026-09-10T20:09:14.647342+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34524622375",
+            "run_attempt": "1",
+            "source_sha": "5e5aaaf2c770e16048e75f98d614df143a4b90d4"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1760,6 +1775,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-9c7ee50477f0dd25",
+          "type": "research",
+          "canonical_id": "arXiv:2608.00577",
+          "title": "HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1811,6 +1834,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.00577",
           "title": "HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference"
+        },
+        {
+          "job_id": "job-0764aa7a60dcbf12",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
