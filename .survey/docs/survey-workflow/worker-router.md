@@ -1,103 +1,148 @@
 # Chat worker router — workflow v10
 
-予定されたChat workerは**1つだけ**。実行時刻で次のどちらか一方を選び、同じ枠で両方を処理しない。
+予定されたScheduled Chat workerは**1つだけ**。実行時刻で次のどちらか一方を選び、同じ枠で両方を処理しない。
 
 - **08:30 JST** → その他更新worker
 - **それ以外の毎時 :30** → 論文worker
 
-毎回default branch最新HEADを取得し、このrouter、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json) を同じHEADから読む。stop / continue判断は `continuation-policy.json` を正本とし、可能なら `.survey/scripts/continuation_gate.py` の判定に従う。
+毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、`.survey/work-queue/next-jobs.json` を同じHEADから読む。必要に応じて [drive-outbox.md](drive-outbox.md)、[backlog-resilience.md](backlog-resilience.md)、`.survey/work-queue/records/bank-registry.json` を読む。
 
-## 最重要: 問題が起きてもrun全体を止めない
+一時配送について古い文書と矛盾する場合は、**このrouter → fallback-routing.md → continuation-policy.json → backlog-resilience.md → drive-outbox.md** の新しい記述を優先する。Notionは使用しない。
 
-**個別jobの失敗・保留はrun全体の停止理由ではない。** 問題が起きたjobだけをblocked/pending/checkpoint扱いにし、独立して処理できるready jobがあれば必ず続行する。
+## 1. run全体を止める条件
 
-run全体を停止してよいのは、次のいずれかだけ。
+個別jobの失敗、単一transportの失敗、Drive pending増加、Library pending増加、record bank枯渇はrun停止理由ではない。
 
-1. GitHub read自体が利用できず、最新queue/identity/repo状態を確認できない。
-2. 完成済み成果があり、それをGitHubまたはGoogle Drive outboxのどちらにも耐久保存できない。
-3. 明確な時間・実行回数・コンテキスト等のプラットフォーム上限に達した。
-4. 独立して処理できる作業が残っておらず、残作業すべてが同じ未解決の全体依存でblockedになっている。
+run終了前に必ず `continuation-policy.json` を評価し、可能なら次を使う。
 
-全文取得不能、論文固有の依存不足、単一payloadのGitHub write失敗、Drive保存失敗、pending replay失敗は**そのjobまたは経路だけの問題**として扱う。別のready jobまで止めない。
+```bash
+python .survey/scripts/continuation_gate.py ...
+```
 
-### End-of-run Stop Gate
+少なくとも次を確認する。
 
-ユーザーへ最終報告を出す前、またはworkerが自発的に終了しようとする前に、必ず [continuation-policy.json](continuation-policy.json) を評価する。Python実行が利用可能なら `.survey/scripts/continuation_gate.py` を使う。
+1. GitHub readは可能か。
+2. 未反映の完成成果がGitHub / Drive / Libraryのいずれかへ耐久保存済みか、または保存可能か。
+3. GitHub readyのほか、fallback上のspillover候補を含めて独立作業が残るか。
+4. readyが実質空でも、fallbackへoffline job seedを保存して新規discoveryを安全に継続できるか。
+5. プラットフォーム上限に達していないか。
 
-`STOP_RUN` 条件が1つも成立せず、独立したready jobがある場合は、**最終報告を出して終了してはならない。処理を続ける。** 問題の通知はrun終了命令ではない。
+`CONTINUE` で独立作業がある場合、問題報告だけ出して終了してはならない。
 
-## 実行前の共通回復
+## 2. run開始時の回復とbacklog index
 
-GitHubへの反映が利用可能な場合、Google Drive outboxの `pending` は [drive-outbox.md](drive-outbox.md) と `.github/workflows/drive-outbox-import.yml` に従ってGitHub Actions側が回収する。Chat workerは同じpayloadをGitHubへ手動で二重投入しない。開始時は最新queue/identity/対象blobを読み、Driveからすでに再投入済みの成果が反映されていれば、その状態を正として新規作業へ進む。
+GitHub readが可能なら最新queue/identityを取得する。可能な範囲で次のoutboxも読む。
 
-Drive pendingの回収失敗は新規研究を飢餓させない。GitHub readが可能で、完成payloadがDriveへ耐久保存済みなら通常のready job処理へ進む。同じ `Failure Class` の共通障害が確認されたrunでは、同原因の保存・再投入を各jobごとに繰り返さない。
+- Google Drive: `/Google Drive/llm-paper-summary-outbox/pending/`
+- ChatGPT Library: `/LLM-survey-outbox/pending/`
 
-GitHub readができない場合はrepo状態に依存する新規処理を開始しない。
+そこから一時的に次を作る。
 
-## GitHub write失敗の診断プロトコル
+- `checkpointed_job_ids`: research/auditの完全payloadがoutboxへ耐久保存済みのjob
+- `spillover_candidates`: offline job seedに含まれ、まだ完成payloadがcheckpointされていない候補
 
-GitHub writeが失敗した場合は、失敗しただけでrunを終了しない。次を**機械的な順序**で行う。
+GitHub上で`ready`でも`checkpointed_job_ids`にあるjobは再精読しない。GitHub statusはActionsが反映するまで未完了のまま維持する。
+
+### replay所有権
+
+- **Drive pending** → `.github/workflows/drive-outbox-import.yml` だけが再投入する。Scheduled Chatは二重投入しない。
+- **Library pending** → Scheduled Chatだけが再投入する。GitHub writeが利用可能なrunで依存を満たす最古のpayloadから処理し、GitHub側の成功確認後だけ`processed`へ移す。
+
+Library replayで対応jobがまだGitHubに存在しないresearch/audit payloadはfailedにせずdependency待ちとしてpendingに残す。offline seedが先に反映されると `.survey/scripts/apply_offline_job_seed.py` がjobを実体化する。
+
+## 3. GitHub write失敗の診断
+
+GitHub writeが失敗したら `continuation-policy.json` の手順を唯一の正本とする。
 
 1. 失敗対象の最新blob SHA / repo状態を再取得し、その対象だけ1回再試行する。
-2. それでも失敗した場合、そのrunで最初のwrite失敗に限り、固定診断先 `.survey/work-queue/transport/health-probe.json` を最新SHA付きで1回だけ更新する。`probe_id` はrun/attemptを識別できる短い値に変え、元の論文payloadは書かない。
-3. 診断writeが成功した場合は `target_or_payload_specific` と分類する。GitHub write能力全体は生きているため、影響を受けたjobだけを一時保管し、後続の独立したGitHub writeは許可する。
-4. 診断writeも失敗した場合は `run_wide_github_write_unavailable` と分類する。そのrunでは以後GitHub writeを試さない。同じ失敗を各slot/jobで繰り返さない。
-5. GitHub writeを使えないrunでも、GitHub readが可能で、成果をGoogle Drive outboxへ耐久保存できる限り、既知のready research/auditを読み進めて一時保管し、次の独立jobへ進む。
-6. GitHub write不能のため新しいqueue遷移が必要な作業しか残っていない場合は、それを全体依存としてStop Gateで判定する。
+2. まだ失敗する場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新する。
+3. probe成功 → `target_or_payload_specific`。影響payloadだけfallbackへ保存し、他のGitHub writeは継続可。
+4. probe失敗 → `run_wide_github_write_unavailable`。そのrunでは以後GitHub writeを繰り返さず、完成成果とoffline seedをfallbackへ保存しながら研究を続ける。
 
-診断用固定ファイルは接続状態の切り分け専用であり、安全検査回避やpayload分割回避には使わない。
+fallbackは [fallback-routing.md](fallback-routing.md) に従い、Driveを先に試し、Driveが利用不能ならLibraryへ切り替える。同一runで経路全体が利用不能と判定済みなら各jobで同じ失敗を繰り返さない。
 
-## A. 論文worker
+Driveだけ失敗してもLibraryが使えれば続行する。Libraryだけ失敗してもDriveが使えれば続行する。
 
-正本: [README.md](README.md)、[queue-v10.md](queue-v10.md)、[paper template](../../templates/paper.md)、`.survey/work-queue/next-jobs.json`。
+## 4. 論文worker
 
-**research / auditに着手する前に `.survey/templates/paper.md` を必ず読む。** 新しい実行環境・新しい会話では、テンプレートが基準に指定する [MoE-Infinity のまとめ](../../../papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) も確認する。
+正本: [queue-v10.md](queue-v10.md)、[paper template](../../templates/paper.md)、`.survey/work-queue/next-jobs.json`。
 
-Chatは探索・全文精読・科学的判断・監査判断と**構造化research record**作成を担当する。完成Markdownは作成・送信しない。research/auditはqueue-v10で定義されたA/B固定record bankの5 JSON slotを使い、全slot成功後のみ固定 `chat-inbox.json` をtriggerする。paper/state/README/identity/queueをChatから直接編集しない。
+research / auditに着手する前に `.survey/templates/paper.md` を読む。新しい会話・実行環境ではテンプレートが例示する [MoE-Infinity のまとめ](../../../papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) も確認する。
 
-構造化recordは「rendererが後で文章を補う」前提で短縮しない。`problem_method` は、そのまま人間向け本文として読める説明量にする。複数機構を持つsystem論文では、各主要機構を原則2〜4段落程度で説明し、入力・観測・処理・出力・前後の接続・なぜ効くか・追加コスト・失敗条件まで書く。
+Chatは探索、一次資料全文取得、全文精読、科学的判断、監査判断、構造化research record作成を担当する。完成Markdownは作成・送信しない。
 
-### 日本語優先
+### 実行順
 
-人間が読む説明文は可能な限り日本語または一般的なカタカナ表記で書く。`request`、`placement`、`dynamic`、`latency` のような英単語を日本語文へそのまま差し込まない。
+1. GitHub readyから`checkpointed_job_ids`を除いた**実行可能ready**をpriority順に処理する。
+2. 実行可能readyがなければ、fallback seed由来の未処理`spillover_candidates`をpriority順に処理する。
+3. それもなければdiscoveryを行う。
+4. job完了、blocked化、checkpoint後はGitHub queueとbacklog indexを再取得し、再び1へ戻る。
+5. 固定件数・固定バッチ数・「1本終わったら終了」は設けない。
 
-英語を残してよいのは、固有名詞、定着した略語、コード/API/変数、または初出で日本語説明の直後に正式名称を示す括弧内に限る。初出後は日本語・カタカナまたは略語へ戻す。表のセルはこの裸英語チェック・日本語比率チェックの対象外としてよい。
+### GitHub write可能時にcheckpoint済みreadyがqueueを塞ぐ場合
 
-`.survey/scripts/japanese_style.py` と `.survey/scripts/assemble_research_record.py` が説明文を検査する。日本語比率は80%以上を目標、70〜80%を警告、70%未満を不合格とし、日本語・カタカナへ置換できる英語専門語が本文の括弧外に残っていれば比率に関係なく不合格とする。
+`.survey/work-queue/transport/request-jobs.json` を更新してよい。形式:
 
-**GitHubへslotを書き始める前に `.survey/templates/paper.md` に対する最終品質チェックを行う。** `results` は主要数値ごとに比較対象・条件・読み方を持たせ、悪化条件・negative resultも残す。基準未達recordは完成扱いにせず、そのrunで本文へ戻って補強する。
+```json
+{
+  "schema_version": 1,
+  "operation": "ensure_discovery_excluding_checkpointed",
+  "request_id": "request-unique",
+  "checkpointed_job_ids": ["job-research-..."]
+}
+```
 
-### 同一runで継続処理
+Actions側 `.survey/scripts/apply_transport_requests.py` は、指定jobを**status変更せず一時的に実行不能として除外**し、他に実行可能readyが無ければ新しいdiscovery jobを追加する。
 
-開始時に既存ready research/auditがあればpriority順に処理する。readyが尽きたらdiscoveryを実行し、Actions反映後の最新queueを読み直し、生成されたresearch jobを同じrunで全文精読・構造化record保存・Actions結果確認まで進める。researchからauditが生成された場合も同じrunで処理する。
+### GitHub write不能中のoffline discovery
 
-各job完了後、blocked化後、または一時保管後に、GitHub readが可能なら最新queueを再取得する。固定件数・固定バッチ数・「1本終わったら終了」の上限は設けない。
+GitHub writeがrun-wideで停止していても、DriveまたはLibraryへ保存可能なら新規探索を止めない。
 
-GitHubへの成果反映を完了できなくても、完全な再送可能logical payloadをGoogle Drive outboxへ耐久保存できた時点を**後続jobへ進むためのチェックポイント**とする。元jobはGitHub上では未完了のまま残す。
+1. identity正本、既存GitHub jobs、両outboxのseed/payloadと重複確認する。
+2. 候補0〜5件を選ぶ。弱い候補で埋めない。
+3. `.survey/work-queue/transport/offline-job-seed.json` を書くenvelopeを生きているfallbackへ保存する。
+4. 各候補のresearch job IDを決定論的に計算する。
+5. seed保存後、GitHub job実体化を待たず同じrunで候補を全文精読してよい。
+6. 完成したresearch recordを同じjob IDの5-slot + inbox envelopeとしてfallbackへ保存する。
+7. 次の候補、または次のdiscoveryへ進む。
 
-全文取得不能や論文固有の依存不足が発生した場合も、対象jobだけをblocked/deferredとして、次の独立ready jobへ進む。これらをrun全体の停止理由にしない。
+job ID規則は [fallback-routing.md](fallback-routing.md) を正本とする。
 
-Discovery / blocked / deferred / rejectedは長文artifact不要なので、GitHub writeが利用可能なら固定inboxだけを小さくupdateしてよい。
+## 5. record bankと品質
 
-## B. その他更新worker（08:30専用）
+利用可能bankは `.survey/work-queue/records/bank-registry.json` を正本とする。GitHubへ直接slotを書き始める前に、可能なら:
+
+```bash
+python .survey/scripts/select_record_bank.py --repo-root .
+```
+
+を使い`selected_bank`を採用する。見た目だけでbank空きを推測しない。
+
+A〜Hすべてがdirty/使用中でも、DriveまたはLibraryへ完全payloadを保存できれば研究を止めない。fallback backlogはbankを占有しない。
+
+構造化recordはrendererが後で内容を補う前提で短縮しない。`problem_method`は主要機構ごとに入力、観測、処理、出力、前後接続、なぜ効くか、追加コスト、失敗条件を説明する。
+
+GitHubへslotを書き始める前、またはfallbackへ完成payloadを保存する前に `.survey/templates/paper.md` に対する最終品質チェックを行う。基準未達recordは完成扱いにせず、そのrunで補強する。
+
+## 6. fallback envelope
+
+DriveとLibraryは同じ`schema_version: 1` envelope形式を使う。research/auditでは1論文につき1 envelope、5 slot + `chat-inbox.json` を完全に含める。完成Markdownを保存しない。
+
+offline seedも同じenvelopeの`writes`で `.survey/work-queue/transport/offline-job-seed.json` を配送する。
+
+保存成功はGitHub publication成功ではない。元jobは未完了のまま。ただし耐久checkpointとして後続研究へ進んでよい。
+
+## 7. その他更新worker（08:30専用）
 
 対象は以下だけ。
 
 1. `framework-updates/**` — LLM推論・serving・runtime等の本質的更新
 2. `llm-releases/**` — 新規LLMの正式公開・一般提供・主要更新
 
-論文queueには触れない。Chatは対象ファイルを直接編集せず、既存の固定 `.survey/update-worker/update-payload.json` と `.survey/update-worker/update-inbox.json` だけを使い、Actionsへ反映を委譲する。
+論文queueには触れない。既存の固定 `.survey/update-worker/update-payload.json` と `.survey/update-worker/update-inbox.json` を使う。
 
-GitHub write失敗時は論文workerと同じhealth probe / continuation policyを使う。更新成果を一時保管できた場合は、問題を報告してもScheduled task自体を停止・無効化・再作成しない。
+GitHub write失敗時は同じhealth probeとmulti-outbox fallbackを使う。更新payloadをDriveまたはLibraryへ耐久保存できればScheduled task自体を停止・無効化・再作成しない。
 
-## 一時配送キュー
+## 8. 通知
 
-GitHub側でwriteを完了できない成果は、再投入可能な完全logical payloadとしてGoogle Drive `llm-paper-summary-outbox/pending` へ一時保管する。詳細なenvelope形式・folder ID・許可pathは [drive-outbox.md](drive-outbox.md) を正本とする。
-
-DriveはGitHubの代替正本ではない。Drive保存成功をGitHub publication成功とは扱わず、queue上のjobは未完了のままにする。
-
-Chat workerは完成MarkdownをDriveへ置かない。GitHubへ本来送る予定だった固定transport JSONを `schema_version: 1` のDrive envelopeに格納し、同一logical submissionの複数slotは1 envelopeにまとめる。Drive `pending` からGitHubへの回収、検証、commit、`processed` への移動はActionsに任せる。
-
-GitHub Actions内のpushが失敗した場合は入力自体がGitHubへ届いているため、Driveへ重複保存せずActions側の再処理を優先する。
-
-**一時保管成功後はStop Gateへ直行して終了するのではなく、次の独立ready jobを処理する。** 単一の反映保留、Drive保存失敗、pending replay失敗、1本処理完了、queueが一度空になったことをrun終了理由にしない。
+予定タスク本文に通知条件が指定されている場合はそちらを優先する。問題報告はrun終了命令ではない。Stop Gateが`CONTINUE`なら、必要な通知を行った後も処理可能な範囲でjobを続ける。
