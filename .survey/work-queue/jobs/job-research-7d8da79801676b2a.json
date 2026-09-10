@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-7d8da79801676b2a",
+  "type": "research",
+  "parent_job_id": "job-e22703146ab852cf",
+  "priority": 82,
+  "canonical_id": "arXiv:2609.02029",
+  "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+  "source_url": "https://arxiv.org/abs/2609.02029",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.02029-headwisekv-per-head-cache-residency.md",
+  "selection_reason": "局所注意・再帰・線形経路を併用するハイブリッド長文脈モデルでも、残る大域注意層のKVキャッシュがGPUメモリを圧迫する問題を対象とする。HeadWiseKVは各物理KVヘッドへ静的な多段履歴窓を割り当て、SeqCalibが下位層で実際に使う方策を条件として層順に容量配分を決める。完全KVを単にマスクするのでなく実際の常駐量を減らす実行環境を持ち、Qwen3.6-27Bで112K文脈時のピーク装置メモリを8.59%削減し、検証済み最大文脈を114Kから161Kへ延長している。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T18:36:21+00:00",
+  "completed_at": "2026-09-10T18:36:23+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2609.02029",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2609.02029"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-72c439fe8470e743",
+  "type": "research",
+  "parent_job_id": "job-e22703146ab852cf",
+  "priority": 94,
+  "canonical_id": "arXiv:2609.04895",
+  "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+  "source_url": "https://arxiv.org/abs/2609.04895",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2026-2609.04895-cache-aware-router-adaptation-moe-inference.md",
+  "selection_reason": "GPUメモリへ全エキスパートを保持できないMoE推論で、キャッシュ管理を実行時の予測だけに任せず、軽量な補助ルータとMoE本体を事後学習してエキスパート再利用をキャッシュしやすくする研究。Temporal Routerは先読み転送を行わず同一層で再利用されるエキスパートを保持し、Spatio-Temporal Routerは前段の隠れ状態から次層アクセス前にキャッシュを補正する。Qwen3では強いプリフェッチ比較対象に対して調整済みヒット率を1.15〜18.03ポイント改善し、エキスパート重み転送量を4.6〜53.3%削減しており、MoEエキスパート退避・キャッシュ系統へ直接関係する。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T18:36:21+00:00",
+  "completed_at": "2026-09-10T18:36:23+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2609.04895",
+  "duplicate_of_path": "papers/inference/03-expert-prefetch/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2609.04895"
+  }
+}

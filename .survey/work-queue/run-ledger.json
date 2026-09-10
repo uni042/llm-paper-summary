@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:34:40.618679+00:00",
+  "updated_at": "2026-09-10T18:36:26.021365+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1049,7 +1049,7 @@
     {
       "run_key": "2026-09-11T03:30:00+09:00",
       "first_recorded_at": "2026-09-10T18:34:40.618679+00:00",
-      "last_recorded_at": "2026-09-10T18:34:40.618679+00:00",
+      "last_recorded_at": "2026-09-10T18:36:26.021365+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -1058,9 +1058,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 4,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -1080,6 +1080,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34515348651:1",
+          "recorded_at": "2026-09-10T18:36:26.021365+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34515348651",
+            "run_attempt": "1",
+            "source_sha": "62ae5c4925c396e703041c97c31580054caf4497"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1088,6 +1102,14 @@
           "type": "research",
           "canonical_id": "arXiv:2511.00321",
           "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e22703146ab852cf",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -1099,6 +1121,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-72c439fe8470e743",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04895",
+          "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference"
+        },
+        {
+          "job_id": "job-research-7d8da79801676b2a",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2609.02029",
+          "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models"
+        },
+        {
+          "job_id": "job-research-8d2a51801f75daca",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.05764",
+          "title": "Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding"
         }
       ],
       "new_paper_ids": [
@@ -1110,11 +1153,13 @@
         "arXiv:2608.11688",
         "arXiv:2608.23834"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T0335JST-discovery-e22703146ab852cf.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 214,
       "paper_active_count_after": 221,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
