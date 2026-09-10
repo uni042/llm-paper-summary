@@ -58,6 +58,23 @@
 
 目安箱への保存失敗は研究runの停止条件にしない。研究成果・queue状態・fallback checkpointの保存を常に優先する。
 
+## run終了時の終了フック
+
+通常runが終了する直前には、作業中に既に記録したかどうかに関係なく、最後に一度だけ「なぜこのrunはここで止まるのか」を評価する。
+
+- 実行時間・コンテキスト・プラットフォーム上限、tool/connector障害、保存不能、validation待ち、再試行待ち、workflow上の制約などが原因で、**その原因がなければ次の独立作業を続けていた**場合は `continuation_obstacle` を `pending/` に残す。
+- 必ず `stop_reason` に直接の終了原因、`would_have_continued_with` に次に行う予定だった具体的作業、`last_completed_work` に終了前に最後に完了した作業を記録する。
+- 原因が複数ある場合は、実際に終了を決定した主因を `stop_reason` とし、他は `secondary_factors` に簡潔に残す。
+- maintenance専用runや08:30専用runが所定の担当処理を完了して予定どおり終了した場合、または多軸discoveryを合理的に使い切り独立作業が本当に残っていない場合は、継続阻害ではないので記録しない。
+- hard limit等で終了直前の保存機会そのものが失われた場合、次回runでrun ledger・queue・直前の永続化イベントから原因を確実に特定できるときだけ遡及して登録する。原因を特定できない場合は推測で断定しない。
+- この終了フックのために研究成果やqueue checkpointの保存を遅らせない。終了が近い場合は成果の耐久保存を先に行う。
+
+`continuation_obstacle` の追加フィールド:
+
+- `stop_reason`: このrunを実際に終了させた直接原因
+- `last_completed_work`: 終了前に最後に完了・耐久保存できた作業
+- `secondary_factors`: 補助的な阻害要因。なければ `none`
+
 ## 08:30 JSTの扱い
 
 08:30のその他更新workerは通常のframework / LLM release報告に加え、`pending/` を確認する。
