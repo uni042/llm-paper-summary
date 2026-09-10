@@ -2,21 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-memspec-20260910-2133-v10-a1",
-  "job_id": "job-research-77ada603ffdfc560",
+  "attempt_id": "attempt-dualdecoder-20260910-2142-v10-a1",
+  "job_id": "job-research-ae22b40e02b2982f",
   "data": {
-    "hardware": ["NVIDIA Jetson Orin Nano: Ampere GPU 1024 CUDAコア・32 Tensorコア、6コアArm Cortex-A78AE、8GB LPDDR5 102GB/s", "1TB Samsung 990 PRO M.2 NVMe SSD", "常駐容量感度評価ではJetson AGX Orin"],
-    "software": ["PyTorch 2.9.1", "CUDA 12.6", "JetPack 6.2.1", "SpecExec系の投機的デコード基盤"],
-    "model": ["GPTQ INT4 LLaMA-2 7B対象モデル + 400Mドラフト5個", "GPTQ INT4 Qwen2.5 7B対象モデル + 0.5Bドラフト5個"],
-    "datasets": ["Alpaca 100プロンプト", "LiveCodeBench 100プロンプト", "Omni-MATH 100プロンプト", "MMLU-Law 100プロンプト", "MMLU-Medical 100プロンプト"],
-    "baselines": ["General-Static: 一般ドラフト固定", "Oracle-Static: 入力ごとの最良ドラフトを事前選択し固定", "MAB-Async: UCB型オンライン探索と非同期読み込み", "Oracle-Dynamic: 同一メモリ制約下で各時点の最良ドラフトを知る上限"],
+    "hardware": ["NVIDIA Hopper GPU 80GB HBM ×8", "Intel Xeon Platinum 8558 ×2・計96コア", "1.6TBホストメモリ", "PCIe 5.0・双方向最大128GB/s"],
+    "software": ["PyTorch 2.3.1", "CUDA 12.8", "ShadowKVを基盤とするDualDecoder実装"],
+    "model": ["Llama-3系 8B〜", "Qwen2.5系 8B〜32B"],
+    "datasets": ["RULER長文ベンチマーク", "64K〜512K文脈の長文推論ワークロード", "ポアソン到着で合成した0.1〜100要求/秒のサービング負荷"],
+    "baselines": ["vLLMの全KV保持", "SpeCache", "ShadowKV"],
     "settings": [
-      {"name": "主評価", "description": "常駐容量K=2、スケジュール間隔N=4、出力128トークン、貪欲デコード、バッチサイズ1。入力処理時間は定常生成スループット指標から除外し、各プロンプトでキャッシュ状態を初期化する。各条件は3回平均し、ワークロード横断の集約には幾何平均を使う。"},
-      {"name": "ドラフト学習", "description": "数学はGSM8KとMATH、コードはHumanEvalとMBPP、法律はLexGLUE、医療はMedQAとMedMCQAで蒸留・微調整する。予測器の学習データは評価データと分離し、BERTエンコーダは固定したまま順位付けヘッドのみ学習する。"},
-      {"name": "MAB比較", "description": "UCB探索係数0.1、0.5、1.0、2.0、3.0を評価し、最良の2.0を採用する。各ドラフトを最初に1回探索し、非常駐モデルの読み込みを生成と非同期に重ねるため、同期型より強い適応比較対象になっている。"}
+      {"name": "長文スループット", "description": "モデル規模8B〜32B、文脈64K〜256Kを中心に比較し、各方式がメモリ不足になる条件も含めて最大バッチとデコードスループットを測る。"},
+      {"name": "高負荷サービング", "description": "要求到着をポアソン過程で変化させ、要求完了時間のP99目標60秒を満たせる最大到着率を比較する。"},
+      {"name": "予測品質", "description": "投機トークンから予測した疎KV検索位置と次の実検索位置の重複を測り、文脈長128Kでも82.6%以上を確認する。RULERの最終精度もShadowKVと比較する。"},
+      {"name": "構成要素測定", "description": "二重トークンデコード、予測外れ時の優先転送、GPU側KV収集カーネルを個別に測定し、エンドツーエンド利得との関係を切り分ける。"}
     ],
-    "correctness": "ドラフト候補は対象モデルによる標準検証を受けるため、MemSpecの予測・常駐・切替は受理効率と実行時間を変えるだけで、対象モデルが受理しないトークンを採用しない。したがって近似による品質劣化を導入しない。",
-    "methodology": "主要指標は入力処理を除いた定常生成のトークン毎秒であり、ドラフト実行と対象モデル検証は含む。さらに希望ドラフト実行・代替ドラフト実行・予測の時間内訳、予測のみと完全MemSpecの構成要素比較、N・出力長・Kの感度、予測器の上位1精度と上位2再現率、入力処理と初期モデル読み込みを含むエンドツーエンド遅延も別途測定する。",
-    "scope": "主張の中心はJetson Orin Nano単一端末、バッチ1、7B対象モデルと5個の小型ドラフト、128トークン付近の逐次生成に対する実機結果である。定常生成スループットはプロンプト処理と初期読み込みを除くため、クラウドの高バッチ推論や多数同時要求へそのまま一般化できない。追加評価では起動費込み遅延とAGX Orinでの常駐容量感度を確認する。"
+    "correctness": "DualDecoderの投機トークンは将来KV位置の予測にだけ使い、通常出力からは因果マスクで不可視にする。予測外れ時は不足KVを緊急転送して実検索結果を満たすため、予測誤りをそのまま注意計算の欠落へ変換しない。疎注意そのものはShadowKVの近似を継承するので、密な全KV注意と完全同一という意味の無損失方式ではない。",
+    "methodology": "主指標はデコードスループット、要求完了時間、GPUメモリ使用量、先頭トークン時間、出力トークン当たり時間、KV位置予測精度である。最大メモリ容量だけでなく、文脈長・モデル規模・要求到着率を変え、比較対象がメモリ不足になる領域まで実機で評価する。RULER精度を別途確認し、メモリ・性能改善が疎注意精度の悪化だけで得られていないかを検査する。",
+    "scope": "主要結果は8台のHopper GPUを持つ単一サーバー上の実機評価であり、ホストCPUメモリからPCIe経由でKVを先読みする構成を対象とする。NVMe SSDや遠隔KVストアからの直接取得、多ノードネットワーク越しのKV転送、異なるGPU世代では同じ転送隠蔽条件が成立する保証はない。"
   }
 }
