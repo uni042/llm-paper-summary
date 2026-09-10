@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 231,
+  "active_count": 235,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -1046,6 +1046,14 @@
       ],
       "source_hash": "36c4d8e246cccc7729dc4fe7ace70a40cef771a66fc574691db6a6c533728db3"
     },
+    "arXiv:2602.03203": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.03203-foresightkv-long-term-contribution-eviction.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2602.03203",
+        "arXiv:2602.03203"
+      ],
+      "source_hash": "a3341554acc0659800a1cecc89adb6fc268694423e63c929bffa89f38d15d1af"
+    },
     "arXiv:2602.07721": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
       "identifiers": [
@@ -1059,6 +1067,14 @@
         "arXiv:2602.18750"
       ],
       "source_hash": "4f8e82330860089c0721fc75acd76f590cd80a269ba201f4bc2c8482ffe932c8"
+    },
+    "arXiv:2602.23592": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2602.23592",
+        "arXiv:2602.23592"
+      ],
+      "source_hash": "f961129ec366b50a602e1fd43107a2596a76c12b85767cec8d6f4cd0ef7defbf"
     },
     "arXiv:2603.17803": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
@@ -1116,6 +1132,14 @@
         "arXiv:2605.18071"
       ],
       "source_hash": "96a195ed3a53ea285f625a19e69e38456c9ed1134ceafa68772e0afb1a4d1e56"
+    },
+    "arXiv:2606.15157": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2606.15157",
+        "arXiv:2606.15157"
+      ],
+      "source_hash": "1bf621fb3508955644111b8ee2a1a67c544836e45bb7537985170a221fcb8e9f"
     },
     "arXiv:2606.16135": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
@@ -1592,6 +1616,14 @@
       ],
       "source_hash": "eb4e6c914e5f374a621b74c2342de7626a6d4b59ae802a088ea0130f5dbce3a2"
     },
+    "arXiv:2609.07883": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.07883",
+        "arXiv:2609.07883"
+      ],
+      "source_hash": "20e94d057d855d21ab4b6025a694b8f4adbe8f4c9402bc3e4f710d22afe5fb7a"
+    },
     "arXiv:2502.19811": {
       "path": "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
       "identifiers": [
@@ -1826,8 +1858,12 @@
     "arXiv:2512.11920": "arXiv:2512.11920",
     "arXiv:2601.19910": "arXiv:2601.19910",
     "arXiv:2601.20309": "arXiv:2601.20309",
+    "DOI:10.48550/arxiv.2602.03203": "arXiv:2602.03203",
+    "arXiv:2602.03203": "arXiv:2602.03203",
     "arXiv:2602.07721": "arXiv:2602.07721",
     "arXiv:2602.18750": "arXiv:2602.18750",
+    "DOI:10.48550/arxiv.2602.23592": "arXiv:2602.23592",
+    "arXiv:2602.23592": "arXiv:2602.23592",
     "arXiv:2603.17803": "arXiv:2603.17803",
     "arXiv:2603.27138": "arXiv:2603.27138",
     "arXiv:2604.18529": "arXiv:2604.18529",
@@ -1837,6 +1873,8 @@
     "DOI:10.48550/arxiv.2605.17613": "arXiv:2605.17613",
     "arXiv:2605.17613": "arXiv:2605.17613",
     "arXiv:2605.18071": "arXiv:2605.18071",
+    "DOI:10.48550/arxiv.2606.15157": "arXiv:2606.15157",
+    "arXiv:2606.15157": "arXiv:2606.15157",
     "arXiv:2606.16135": "arXiv:2606.16135",
     "DOI:10.48550/arxiv.2607.18141": "arXiv:2607.18141",
     "arXiv:2607.18141": "arXiv:2607.18141",
@@ -1916,6 +1954,8 @@
     "DOI:10.48550/arxiv.2609.05425": "arXiv:2609.05425",
     "arXiv:2609.05425": "arXiv:2609.05425",
     "arXiv:2609.07536": "arXiv:2609.07536",
+    "DOI:10.48550/arxiv.2609.07883": "arXiv:2609.07883",
+    "arXiv:2609.07883": "arXiv:2609.07883",
     "arXiv:2502.19811": "arXiv:2502.19811",
     "arXiv:2504.06419": "arXiv:2504.06419",
     "arXiv:2506.11309": "arXiv:2506.11309",

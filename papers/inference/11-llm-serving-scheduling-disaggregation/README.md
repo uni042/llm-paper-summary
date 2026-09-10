@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（53本）
+## 自動生成の論文一覧（54本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -42,6 +42,7 @@
 | [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md) | output tokenを1つ生成する区切りでrequestを一時停止・再開できるようにし、短いrequestを優先しながらKV cacheをCPUへ退避・先読みして待ち時間を減らすLLM serving scheduler。 |
 | [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md) | 複数modelへ届くrequest数が時間ごとに偏る環境で、modelを複数GPUへ分割して置き、空いているGPUをmodel間で共有しやすくすることで、特定modelだけqueueが伸びるのを抑えるserving配置手法。 |
 | [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md) | output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。 |
+| [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md) | 連続バッチ型LLMサービングでは、長い入力を一括プリフィルすると同じ反復にいるデコード要求の次トークンが遅れ、逆にプリフィルを小さく固定分割すると反復回数とカーネル起動費用が増えて初回応答が遅くなる。SLOWeaveは、各デコード要求の直前トークン完了時刻から次トークン期限を作り、最も早い期限までの残り時間に収まる最大のプリフィル分割長を反復ごとに二分探索する。単調な反復時間予測が正しければ、全デコード期限を守る選択肢の中でその反復のプリフィル進捗を最大化することを証明する。シミュレーションに加えてA100/H100の反復単位GPUランタイムでも測定し、25msの出力1トークン時間目標では混合・長文脈で固定分割より有効スループットを39%・38%改善した。 |
 | [Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap](2026-2609.07536-moe-overlap-resource-manager.md) | 分散MoEでは、専門家の計算が終わった部分からGPU間通信を始めれば待ち時間を隠せるが、計算担当と通信担当は同じGPUの実行資源を取り合う。本研究は、入力長や専門家へのトークン偏りに応じて『通信へGPU資源をどれだけ予約するか』を起動直前に解析式で決め、固定配分のCOMETよりモデル全体のプリフィルを平均1.185倍高速化する。 |
 | [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](2026-2609.05425-cotail.md) | LLM本体はGPUで計算していても、要求の受付・バッチ作成・GPUへの仕事投入はCPUが担当するため、同じサーバの空きCPUで別処理を動かすとLLMが大きく遅くなることがある。CoTailはCPU側の各処理段階のP95/P99遅延を測り、CPUスケジューラ競合ならLLMの中核スレッドだけをリアルタイム優先し、NUMA・キャッシュ・メモリ局所性の競合ならCPU配置を分離する、という診断と保護選択を自動化する手順。 |
 | [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md) | requestごとに「SLOまであと何秒の遅延を許容できるか」を残りlatency budgetとして継続推定し、その同じbudgetでrequestの実行順とHBM / CPU DRAM / NVMe間のKV cache復元・先読み・保持・再計算をまとめて決めることで、SLOを満たす処理量と長context requestへの公平性を両立するserving system。 |

@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 73
+      "completed": 73,
+      "ready": 1
     },
     "audit": {
       "completed": 5
     },
     "research": {
-      "completed": 68,
-      "superseded": 32,
-      "ready": 1
+      "completed": 69,
+      "superseded": 32
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-8f64e69f8308e6c7",
-      "type": "research",
-      "lane": null,
-      "priority": 80,
-      "canonical_id": "arXiv:2602.23592",
-      "title": "KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning",
-      "source_url": "https://arxiv.org/abs/2602.23592",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-cbafd4e803a329a5",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T21:51:05+00:00"
+  "generated_at": "2026-09-10T22:38:43+00:00"
 }
