@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:45:01.175891+00:00",
+  "updated_at": "2026-09-10T17:47:05.661931+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,7 +572,7 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:45:01.175891+00:00",
+      "last_recorded_at": "2026-09-10T17:47:05.661931+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -581,9 +581,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -660,6 +660,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34510301615:1",
+          "recorded_at": "2026-09-10T17:47:05.661931+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34510301615",
+            "run_attempt": "1",
+            "source_sha": "74ddfe87d145f187add8003e01ba0568a0f6a76a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -702,6 +716,14 @@
           "title": "Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-825a3fe8fd3b5c49",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -739,6 +761,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-c29465e80f450973",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.03893",
+          "title": "Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse"
         }
       ],
       "new_paper_ids": [
@@ -749,7 +778,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0232JST-discovery-905c587af00ec25c.json",
         ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json",
-        ".survey/work-queue/results/20260911T0240JST-discovery-4e0bc8f9d84a8444.json"
+        ".survey/work-queue/results/20260911T0240JST-discovery-4e0bc8f9d84a8444.json",
+        ".survey/work-queue/results/20260911T0248JST-discovery-825a3fe8fd3b5c49.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,
