@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（22本）
+## 自動生成の論文一覧（23本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -27,6 +27,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 | [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md) | 直近tokenで使ったFFN weightをDRAMへ残し、同じニューロンに必要なweightをFlash上でまとめて配置して、必要部分だけを少ないread回数で読み出すことでI/OとDRAM使用量を減らす手法。 |
 | [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md) | GPU・CPU DRAM・NVMe SSDを一つの階層メモリとして扱い、重み・中間活性・KV cacheをどこへ置くかと、どの順序で計算するかを同時に探索することで、単一commodity GPUでも巨大LLMのoffline throughputを引き上げるoffload system。 |
 | [SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning](2026-2608.21614-saem-stage-aware-expert-management-cot.md) | 長い連鎖思考（Chain-of-Thought; CoT）では同じ推論段階のあいだに似たエキスパート集合が繰り返し使われる一方、トークン単位のLRU型キャッシュは細かなルーティング変動のたびに重みを入れ替え、PCIe転送とキャッシュスラッシングを増やす。SAEMは「Alternatively」「Instead」などの遷移表現から推論段階境界を検出し、完了した段階の活性化頻度で次段階のGPU常駐エキスパートを更新する。さらにCPU上の低負荷エキスパートは移動せずその場で計算し、エキスパート別にトークンを詰め直して小さなカーネル起動を減らす。MATH-500では最強比較対象に対しQwen3で平均1.60倍、ERNIE-4.5で1.47倍の高速化を報告する。 |
+| [NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference](2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md) | 端末上でDRAM容量を超えるLLMを動かす場合、SSDからFFN重みを毎トークン読み戻す方式はPCIe帯域とデータ移動が支配的になり、GPUやNPUの演算器を十分に使えない。NVLLMは3D NANDを単なる保存先ではなくFFN重みの計算場所として扱い、静的で大容量なFFNをNAND側、動的な注意機構とKVキャッシュをDRAM・NPU側へ分離する。NAND面と演算レーンを対応付け、読出し誤りがあるセグメントだけを補正器へ迂回させながら他の積和演算を継続することで、生のNAND読出しと推論を重ねる。サイクル精度シミュレーションではA800を用いたSSD退避型推論に対して最大37.9倍、SSD型近傍計算アーキテクチャに対して最大4.7倍の生成速度改善、データ移動エネルギー最大5.63倍削減を報告する。ただし評価は3D NANDモデル、DRAMモデル、28nm RTL合成を統合したシミュレーションであり、製造済みNAND計算チップの実測ではない。 |
 | [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md) | GPUメモリに全エキスパートを置けないローカルPCで混合専門家モデル（Mixture of エキスパート; MoE）を実行すると、CPUとGPUの固定分担では入力ごとに変動するエキスパート負荷へ追随できず、PCIe転送も待ち時間になりやすい。DALIは各層で現在の負荷を見てCPU/GPU配置を動的に決め、隣接層の残差情報から次層の高負荷エキスパートを先読みし、直近トークンの負荷履歴でGPUキャッシュを入れ替える。RTX 3090とAMD EPYC上の実機評価で、強い比較対象HybriMoEに対してデコード平均1.32倍、プリフィル平均2.00倍の高速化を報告する。 |
 | [SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency](2025-2508.06978-ssd-moe-offloading-energy-efficiency.md) | MoEの専門家重みをSSDへ退避すると容量不足と転送遅延は扱いやすくなる一方、NAND Flashの読み出しエネルギーがHBMやCPU側DRAMより大幅に高い。本論文はデコード時の専門家重みアクセスをHBM、CPUメモリ、SSDで定量比較し、現在のSSDでは1トークン生成当たりの総エネルギーがMixtralで3.8〜12.5倍、DeepSeek-R1で4.7〜9.8倍まで増えることを示す。プリフェッチで転送遅延を隠しても読み出しエネルギー自体は消えず、SSDを有利にするにはFlash読み出しエネルギーをおよそ10分の1まで下げ、低バッチ時のMoE疎性を生かす必要があると分析する。 |
 <!-- survey:auto:end -->
