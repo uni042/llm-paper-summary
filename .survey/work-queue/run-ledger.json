@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T21:35:13.891068+00:00",
+  "updated_at": "2026-09-10T21:38:20.029819+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2058,10 +2058,11 @@
     {
       "run_key": "2026-09-11T06:30:00+09:00",
       "first_recorded_at": "2026-09-10T21:33:24.225342+00:00",
-      "last_recorded_at": "2026-09-10T21:35:13.891068+00:00",
+      "last_recorded_at": "2026-09-10T21:38:20.029819+00:00",
       "signals": [
         "research_completed",
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "paper_materialized"
       ],
       "counts": {
         "research_completed": 1,
@@ -2069,7 +2070,7 @@
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 0,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -2100,6 +2101,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34533253296:1",
+          "recorded_at": "2026-09-10T21:38:20.029819+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34533253296",
+            "run_attempt": "1",
+            "source_sha": "fd873356bf5b0fb3c3a1688d2bd3f2971cb3a420"
+          },
+          "signals": [
+            "paper_materialized"
           ]
         }
       ],
@@ -2144,14 +2159,16 @@
           "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving"
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2602.02987"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0638JST-discovery-01c3d3ead58cced3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 230,
-      "paper_active_count_after": 230,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 231,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（52本）
+## 自動生成の論文一覧（53本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -51,6 +51,7 @@
 | [RTP-LLM: High-Performance Alibaba LLM Inference Engine](2026-2605.29639-rtp-llm.md) | Alibabaで実運用されているLLM推論基盤。単一の高速化手法ではなく、入力処理と逐次生成の分離、GPUから分散ストレージまでのKVキャッシュ階層、キャッシュを再利用しやすい要求振り分け、大規模モデルの高速読込、投機的復号、量子化、MoE・画像入力対応を一つの提供基盤へ統合し、実トラフィックを使って各機構の効果を評価する。 |
 | [Multi-stage Flow Scheduling for LLM Serving](2026-2603.17456-multi-stage-flow-scheduling.md) | 分離型LLMサービングでは、初回トークンを返すまでに、再利用KVキャッシュの遠隔取得、テンソル・エキスパート・系列並列などの集団通信、プリフィルからデコードへのKV転送という複数段階の通信が発生する。これらは依存関係を持ちながら同じネットワークを共有するため、個々のフローを公平共有・短い順・締切順で最適化しても、後続計算を直ちに止める通信と十分余裕のあるKV転送を区別できず、初回トークン時間のサービス水準目標を悪化させる。MFSは要求全体の締切が処理進行に伴って個別フローの明示的締切へ具体化する性質を利用し、余裕がある通信を遅延させ、必要になった段階でのみ優先度を上げる『遅延・昇格』方式を逆多段キュー（Reverse Multi-Level Queue; RMLQ）で実装する。明示締切を持つプリフィル・デコード転送には必要最小リンク利用率、暗黙締切の初期段階には相対層番号と要求間の頑健締切を用いる。NCCLとMooncakeへ差し込み可能な約1万行の実装をvLLMと統合し、8サーバ32枚RTX 3090の実機と256サーバ規模シミュレーションで、最強比較方式に対して初回トークン時間SLO達成率を最大2.4倍改善する。 |
 | [DualScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS](2026-2602.18755-biscale-phase-aware-placement-dvfs.md) | プリフィルとデコードを別GPU群へ分離するLLM推論では、両段階の負荷特性が異なるため、単純な自動スケーリングや一律のGPU周波数制御ではサービス品質目標を守りつつ電力を下げにくい。DualScaleは、数分単位では両段階のGPU台数・テンソル並列度・基準周波数・振り分け比率を同時最適化し、反復単位ではプリフィルにモデル予測制御、デコードに余裕時間を使う軽量な周波数選択を適用する。Llama 3.3 70Bを16基のH100で評価し、DistServe比でプリフィル最大39%、デコード最大48%のエネルギー削減を、TTFTとTPOTの目標を維持しながら示した。 |
+| [Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control](2026-2602.02987-prefill-decode-contention-optimal-control.md) | 大規模LLM推論では、入力処理であるプリフィルをGPUへ入れるほど新規要求をデコード段階へ送り込める一方、同じGPU上の逐次生成を遅くするという競合が生じる。本論文は、入力長・出力長が異なる複数の要求クラスを多数GPUで処理する状況を待ち行列網としてモデル化し、流体近似から求めた最適占有率を目標に、プリフィル受入れとデコード配置を制御するゲート・アンド・ルート方式を提案する。A100上のQwen3-8B測定で反復時間モデルを校正し、Azure系トレースの10 GPU再生では代表的なヒューリスティックより収益率を高め、多数GPU極限では理論上の最適値へ漸近することを示す。ただし主要な比較は校正済みイベント駆動シミュレーションであり、本方式を実運用クラスタへ組み込んだ実機エンドツーエンド測定ではない。 |
 | [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md) | 外部APIや検索、外部モデルを呼び出す拡張LLMでは、生成が途中で停止して外部応答を待ち、その後に同じ要求が再開する。このため通常の到着順スケジューリングでは、長い要求や停止中要求が後続の短い要求を塞ぎ、GPU上に残す・CPUへ退避する・破棄して再計算するというKVキャッシュ処理によって実行時メモリも大きく変動する。AugServeは、出力長と外部呼び出し時間の軽量予測、実際の停止・再開状態を反映する状態認識型の要求優先順位、空きGPUメモリと回収可能な停止中KVを数える動的トークン予算を統合する。vLLM上の実装で、主要評価ではvLLM比7.5倍、INFERCEPT比5.7倍の有効スループットを示し、初回トークン待ち時間も約96%削減した。 |
 | [STAR: Decode-Phase Rescheduling for LLM Inference](2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md) | プリフィル・デコード分離サービングでは、プリフィル終了時に要求をデコードGPUへ一度割り当てても、その後の生成長が大きく異なるため時間経過とともにデコード負荷が崩れる。STARは対象LLM最終層の最後のトークンの隠れ状態を4層MLPへ入力し、残り生成長を低追加費で継続予測する。その予測と現在のトークン負荷を用いて過負荷・低負荷デコードインスタンスを識別し、KVキャッシュ移送費を回収できる要求だけを候補化して、負荷分散効果が最大の移行を周期的に実行する。vLLMのプリフィル・デコード分離構成に対して最大2.63倍の有効スループット、P99出力トークン時間75.1%削減を報告し、メモリ不足も防止する。 |
 | [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md) | clientごとのGPU利用量を公平に保ちつつ、**公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じprefixを持つrequestを続けて処理しKV再利用を増やす**scheduler。複数GPUではさらにprefix localityとGPU間load balanceも同時に調整する。 |

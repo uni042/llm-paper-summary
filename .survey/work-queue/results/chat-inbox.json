@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-bef0b595eec012ca",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2602.02987.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-25ca9c20c57d58e2",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T21:38:13+00:00"
 }
