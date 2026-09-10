@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T21:38:20.029819+00:00",
+  "updated_at": "2026-09-10T21:39:36.516317+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2058,18 +2058,18 @@
     {
       "run_key": "2026-09-11T06:30:00+09:00",
       "first_recorded_at": "2026-09-10T21:33:24.225342+00:00",
-      "last_recorded_at": "2026-09-10T21:38:20.029819+00:00",
+      "last_recorded_at": "2026-09-10T21:39:36.516317+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 4,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -2116,6 +2116,21 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34533369898:1",
+          "recorded_at": "2026-09-10T21:39:36.516317+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34533369898",
+            "run_attempt": "1",
+            "source_sha": "1cd83f852177d4a635fadd57bca1ef9a98e23e3b"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2132,6 +2147,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-25ca9c20c57d58e2",
+          "type": "research",
+          "canonical_id": "arXiv:2609.07883",
+          "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving",
           "from": "ready",
           "to": "completed"
         }
@@ -2157,6 +2180,13 @@
           "type": "research",
           "canonical_id": "arXiv:2609.07883",
           "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving"
+        },
+        {
+          "job_id": "job-e4fab7ab96322990",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -2168,7 +2198,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 230,
       "paper_active_count_after": 231,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
