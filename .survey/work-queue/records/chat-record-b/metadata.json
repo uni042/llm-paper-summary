@@ -1,1 +1,42 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-moe-resource-20260910-1411-v10-library-test","job_id":"job-research-db7f6bec1b5bf488","data":{"canonical_id":"arXiv:2609.07536","arxiv_id":"2609.07536","title":"Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap","summary":"分散MoEで計算CTAと通信CTAを細粒度に重ねる際、両者がGPUのSM常駐枠を奪い合って固定配分では通信詰まりかGEMM並列性低下が起きる問題に対し、ルーティング後のタイル数、CTA占有率、分割ごとの準備時刻を波単位の解析モデルへ入れ、カーネル起動直前に通信CTA数と計算・通信の常駐配分を約0.16マイクロ秒で選ぶ方式。","source":"https://arxiv.org/abs/2609.07536","authors":["Hongyu Liu","Minyu Cui","Miquel Pericas"],"publication":"arXiv:2609.07536v1; SC Workshops: AI on HPC 2026 accepted (Chalmers announcement)","publication_type":"workshop paper / preprint","topics":["MoE推論","計算通信オーバーラップ","GPU資源配分","CTA常駐","解析性能モデル","FLUX/COMET"],"implementation":"COMET A100の公開実装をFLUXコードベース上で拡張。論文は同じカーネルを用い通信CTA数だけを動的選択。","sources":["https://arxiv.org/abs/2609.07536","https://www.chalmers.se/en/departments/cse/our-research/computer-and-network-systems/chart-research-team/"],"published":"2026-09-07","publication_status":"Preprint / accepted SC Workshops AI on HPC 2026","lineage":"その他推論システム","importance":"高","hardware_evaluation":"実機","hardware_details":"4× NVIDIA A100-SXM4-40GB, NVLink","quality_effect":"計算量、ルーティング、通信量、数値演算を変えずCTA資源配分だけを変えるため数値品質は維持。4 rank allcloseと完全モデル出力一致を確認。","evidence_locations":["§I Introduction","§III Dependency-Constrained Wave-Quantized Resource Management","§IV-A Experimental Setup","§IV-B Predictor Accuracy","§IV-C–F Performance","§VI Conclusion"],"last_checked":"2026-09-10","code":"","authors_affiliations":"Hongyu Liu、Minyu Cui、Miquel Pericas。ChalmersのCHART研究チーム公式ページで本論文のSC Workshops採択を確認。","storage_targets":["GPU SM常駐資源"],"bottlenecks":["GPU間通信","通信CTA不足によるバックログ","計算CTA不足によるGEMM波数増加","CTA波量子化"]}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-orbitflow-20260910-1132-c1",
+  "job_id": "job-research-07d36385670389ef",
+  "data": {
+    "canonical_id": "arXiv:2601.10729",
+    "arxiv_id": "2601.10729",
+    "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+    "summary": "長文LLMサービングで、生成の進行や連続バッチングにより要求ごとのKVキャッシュ量が刻々と変わる状況に対し、要求ごと・層ごとにGPUへ残すKVキャッシュをオンラインで再計画する方式。軽量な整数線形計画でGPU容量、CPU–GPU転送、層計算時間、トークン単位のサービス品質目標（Service-Level Objective; SLO）を同時に考慮し、早い時点で得た遅延余裕を出力バッファへ蓄え、過負荷時は大きな要求を一時停止して全体のSLO達成率を守る。",
+    "source": "https://arxiv.org/abs/2601.10729",
+    "authors": [
+      "Xinyue Ma",
+      "Heelim Hong",
+      "Taegeon Um",
+      "Jongseop Lee",
+      "Seoyeong Choy",
+      "Woo-Yeon Lee",
+      "Myeongjae Jeon"
+    ],
+    "publication": "arXiv:2601.10729v2, 2026-03-02; PVLDB 19(5):1046-1059, VLDB 2026",
+    "publication_type": "VLDB 2026 / PVLDB",
+    "topics": [
+      "KVキャッシュ",
+      "CPUオフロード",
+      "長文LLMサービング",
+      "SLO",
+      "動的配置",
+      "連続バッチング",
+      "整数線形計画",
+      "vLLM"
+    ],
+    "implementation": "vLLM 0.6.6を基盤にした公式実装が公開済み。要求単位のKV配置、1次元化したKVレイアウト、配置計画器、要求の一時停止・再開、トークン出力バッファを実装している。",
+    "sources": [
+      "https://arxiv.org/abs/2601.10729",
+      "https://arxiv.org/html/2601.10729v2",
+      "https://doi.org/10.14778/3796195.3796214",
+      "https://github.com/omnia-postech/OrbitFlow"
+    ]
+  }
+}

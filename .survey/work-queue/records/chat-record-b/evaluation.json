@@ -1,1 +1,50 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-moe-resource-20260910-1411-v10-library-test","job_id":"job-research-db7f6bec1b5bf488","data":{"hardware":["4× NVIDIA A100-SXM4-40GB, NVLink"],"software":["PyTorch 2.7.1","CUDA 12.6","NCCL 2.26.2","CUTLASS commit df8a550","COMET A100 V2 commit 19831ca","FLUX"],"model":["Granite-3.1-1B-A400M","Qwen1.5-MoE-A2.7B","DeepSeek-V2-Lite"],"datasets":["LMSYS-Chat-1M由来の実ルーティングp50/p90","一様ルーティング","完全モデルでは自然な各層ルーティング"],"baselines":["upstream COMET","Megatron core-TE","FastMoE TP+NCCL","C=1..16実測oracle"],"settings":[{"name":"並列構成","description":"TP=4/EP=1、TP=2/EP=2、TP=1/EP=4。すべてTP×EP=4。バッチ=4、系列長=1024,2048,4096,8192,16384。"},{"name":"測定階層","description":"GEMM2+GatherRS演算子、ルータ後MoE層全体、完全モデルのプリフィルの3段階。局所カーネル改善がモデル全体へどこまで残るかを分離評価。"},{"name":"統計","description":"20回ウォームアップ。演算子/層は政策ごと60サンプルをABBA交互順、完全モデル/複数バックエンドは各20サンプル。最大rank遅延の中央値、20,000回ブートストラップ95%信頼区間。"}],"correctness":"COMETと同じ入力、カーネル、ルータ割当、演算量、通信量を維持。4 GPU allcloseに合格し完全モデル出力も一致。Hugging Face参照に対し全モデルの最終トークンtop-1を保持。","methodology":"15のreal-p90形状でC=1..16を全実測したoracleと解析選択のregretを比較。その後、3モデル×3ルーティング×5系列長×複数TP/EP構成でCOMET比を測定し、完全プリフィルではMegatron/FastMoEとも比較。","scope":"単一ノードA100/NVLink、プリフィル中心。新GPU、マルチノード、デコード、別の細粒度依存演算へ適用するには占有率、タイル仕事量、依存式、合法C範囲、サービス時間比を再導出する必要がある。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-orbitflow-20260910-1132-c1",
+  "job_id": "job-research-07d36385670389ef",
+  "data": {
+    "hardware": [
+      "既定評価: NVIDIA RTX A5000 24GB ×1、ホストメモリ384GB、PCIe 3.0×16",
+      "長文・分散評価: NVIDIA RTX A6000 48GBを用いた複数GPU構成、ホストメモリ256GB、PCIe 4.0×16"
+    ],
+    "software": [
+      "vLLM 0.6.6を改変",
+      "Gurobiによる整数線形計画",
+      "CUDA 12.1（公式実装READMEの再現環境）"
+    ],
+    "model": [
+      "LLaMA3 8B",
+      "LLaMA3 70B"
+    ],
+    "datasets": [
+      "ShareGPTから入力長・出力長を抽出した合成トレース",
+      "到着は主にポアソン過程、感度評価では到着の変動係数も変更"
+    ],
+    "baselines": [
+      "DeepSpeed-Inference: 全KVをCPUへ退避し現在層だけGPUへ置く",
+      "FlexGen: 事前プロファイルで固定配置",
+      "FlexGen+: バッチ構成変化時だけ再配置",
+      "SLO-aware Offloading: SLOを考慮するが要求間で同一の退避間隔",
+      "Dynamic Heuristic: 反復ごとに再配置するが最適化器を使わない"
+    ],
+    "settings": [
+      {
+        "name": "既定条件",
+        "description": "LLaMA3 8B、RTX A5000 1枚、バッチサイズ4、バッチ総系列長32K、到着率を変化。既定SLO倍率は1.5。"
+      },
+      {
+        "name": "長文条件",
+        "description": "LLaMA3 70Bで8K、32K、128K系列長を比較し、2-wayテンソル並列でも評価。"
+      },
+      {
+        "name": "感度評価",
+        "description": "要求到着のバースト性、バッチサイズ、テンソル並列度、先着順と残り時間最短優先の要求スケジューリングを変更。"
+      }
+    ],
+    "correctness": "KVキャッシュの削除・量子化・近似を行わず、配置場所と転送時刻だけを変えるため、モデル出力品質は原理上無損失である。トークン蓄積は送信時刻のみを変え、生成内容は変えない。",
+    "methodology": "公開本番トレースが乏しいため、ShareGPT由来の長さ分布から合成した要求を用い、要求到着率やSLO倍率を振ってSLO達成率、P95/P99遅延、要求完了スループット、平均GPUメモリ利用率を比較する。構成要素の切り分け、過負荷時の停止対象選択、最適化器の実行時間、探索空間枝刈りの損失も個別に測定する。",
+    "scope": "主要結果は実機の単一GPUおよび単一ノード複数GPU評価。長文サービングを対象とし、複数ノードのパイプライン並列・データ並列は将来課題。公式コードはvLLM 0.6.6派生実装として公開されている。"
+  }
+}

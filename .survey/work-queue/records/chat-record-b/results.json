@@ -1,1 +1,84 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-moe-resource-20260910-1411-v10-library-test","job_id":"job-research-db7f6bec1b5bf488","data":{"overview":"15 real-p90形状で実測oracleに対する平均regret 3.22%、最大10.21%、選択器単体0.157µs。COMET比では全TP/EP構成の幾何平均がGEMM2+GatherRS 2.528×、MoE層1.771×、完全プリフィル1.185×。最大はそれぞれ4.218×、2.584×、1.439×で、観測した最小高速化も1.058×だった。局所演算子で約2.5×でも完全モデルでは約1.19×へ薄まるため、改善範囲を区別する必要がある。","key_results":[{"metric":"解析選択regret","value":"mean 3.22%, max 10.21%","baseline":"C=1..16 measured oracle","condition":"15種類の実測p90ワークロード, TP=4/EP=1","interpretation":"GPU試走なしでも実測最適に近い資源配分を選択。"},{"metric":"ソルバーのオーバーヘッド","value":"0.157 µs mean","baseline":"launch path","condition":"standalone selector","interpretation":"各起動で使えるほど小さいCPU解析コスト。"},{"metric":"GEMM2+GatherRSの高速化倍率","value":"2.528× geometric mean, max 4.218×","baseline":"COMET","condition":"全3 TP/EP構成","interpretation":"固定通信CTA数による資源不均衡を直接解消するため演算子レベルの利得が大きい。"},{"metric":"ルータ後MoE層全体の高速化倍率","value":"1.771× geometric mean, max 2.584×","baseline":"COMET","condition":"全構成","interpretation":"非対象処理を含めると利得は縮むが層全体でも大きい。"},{"metric":"モデル全体プリフィルの高速化倍率","value":"1.185× geometric mean, max 1.439×","baseline":"COMET","condition":"全構成","interpretation":"モデル全体ではMoE以外の処理が残るためAmdahl効果で縮小。"},{"metric":"TP=2/EP=2 cross-backend","value":"S>=4096の全実行可能点でCOMET/Megatron core-TE/FastMoE TP+NCCLを上回る","baseline":"3 backends","condition":"4×A100 プリフィル全体","interpretation":"COMET内部の固定配分改善だけでなく代表実装間でも長め系列で優位。"}],"negative_results":[{"name":"Qwen predictor regret","description":"real-p90 5形状で平均7.14%、最大10.21%と他2モデルより誤差が大きい。"},{"name":"完全モデルでの利得希釈","description":"演算子2.528×に対し完全プリフィル幾何平均は1.185×。対象外の層・演算が支配するほど全体改善は小さくなる。"},{"name":"短系列の他バックエンド優位","description":"TP=2/EP=2のS=1024ではMegatron core-TEが3モデルすべてで最速、QwenではS=2048でもMegatronが最速。"},{"name":"適用範囲","description":"A100/NVLink向けパラメータをそのまま新GPU・マルチノードへ持ち込めない。"}],"interpretation":"最適な通信CTA数は通信量だけでは決まらず、計算タイル数が何波に切り上がるか、各分割がいつ準備できるか、通信キューが追いつくかで変わる。TP=2/EP=2が最も高い平均利得だったのは計算・通信の両方が十分大きく、固定配分のずれを修正する余地が大きいためと解釈できる。完全モデルではプリフィルのみを評価しており、オンラインサービングのデコードスループット値として読んではならない。","quality_impact":"数値計算・通信内容を変えず資源配分だけを変えるため品質劣化なし。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-orbitflow-20260910-1132-c1",
+  "job_id": "job-research-07d36385670389ef",
+  "data": {
+    "overview": "OrbitFlowは、静的またはバッチ境界だけで再配置する方式より高いトークン単位SLO達成率を維持し、特に長い要求と短い要求が混在する高負荷条件で差が大きい。主な利得は、要求別配置で転送待ちを減らす効果に、過負荷時の一時停止とトークン蓄積を重ねた結果である。一方、長い要求を意図的に延期するため、個々の要求のエンドツーエンド完了時間は一部の適応型比較対象より悪化する。",
+    "key_results": [
+      {
+        "metric": "TPOT SLO達成率",
+        "value": "最大62%向上",
+        "baseline": "既存KVオフロード方式群",
+        "condition": "ShareGPT由来トレース、到着率とSLO倍率を変化",
+        "interpretation": "平均トークン遅延の目標に対し、要求ごとのKV配置と実行時再計画が静的配置の転送待ちを減らす。"
+      },
+      {
+        "metric": "TBT SLO達成率",
+        "value": "最大66%向上",
+        "baseline": "既存KVオフロード方式群",
+        "condition": "ShareGPT由来トレース、到着率とSLO倍率を変化",
+        "interpretation": "トークン蓄積により早い反復で得た余裕を後の転送待ちへ回せるため、個々のトークン間隔の違反を隠せる。"
+      },
+      {
+        "metric": "P95遅延",
+        "value": "最大38%低減",
+        "baseline": "既存オフロード方式",
+        "condition": "高負荷を含む主要評価",
+        "interpretation": "長い要求がバッチ全体を遅らせる状況で、要求別配置と一時停止が裾遅延を抑える。"
+      },
+      {
+        "metric": "スループット",
+        "value": "DeepSpeed-Inference比3.3倍、その他比較対象比4〜52%向上",
+        "baseline": "DeepSpeed-Inference、FlexGen系、SLO-aware Offloading、Dynamic Heuristic",
+        "condition": "既定の単一GPU評価",
+        "interpretation": "大きなKVを持つ遅い要求を必要時に延期し、残りの要求を先に進めることでGPUをより有効に使う。"
+      },
+      {
+        "metric": "128K長文でのSLO達成率",
+        "value": "OrbitFlowは85%以上、FlexGen+は69.2%、Dynamic Heuristicは32.9%",
+        "baseline": "FlexGen+、Dynamic Heuristic",
+        "condition": "LLaMA3 70B、128K系列長、2-wayテンソル並列、SLO倍率2.5",
+        "interpretation": "系列長が増えてKV量の変化と要求間不均衡が大きくなるほど、実行時に配置を更新する価値が増える。"
+      },
+      {
+        "metric": "構成要素追加によるSLO達成率",
+        "value": "45.1% → 54.5% → 71.0% → 85.6%",
+        "baseline": "Batch-Uniformから順に要求別配置、一時停止、トークン蓄積を追加",
+        "condition": "最も厳しいSLO倍率1",
+        "interpretation": "単一の最適化器だけでなく、要求別配置、過負荷処理、余裕時間の再利用がそれぞれ積み上がっている。"
+      },
+      {
+        "metric": "配置計画器の実行負荷",
+        "value": "動的トレースで総実行時間の0.64%、1回あたり1デコード反復の28.49%",
+        "baseline": "OrbitFlow内部計測",
+        "condition": "長い出力と連続バッチングで要求・KV量の両方が変化",
+        "interpretation": "1反復先を別CPUスレッドで解くため通常はGPUのクリティカルパスへ現れない。"
+      },
+      {
+        "metric": "枝刈りによる最適性損失",
+        "value": "完全探索が厳密に良いケース16.7%、その中央値2.29%高速",
+        "baseline": "自由な層配置を許すFull探索",
+        "condition": "評価トレースから2,000個の最適化入力を抽出",
+        "interpretation": "自由配置は一部で少し速いが、平均7.74倍の計画時間が必要でSLO内のオンライン実行には不利。"
+      }
+    ],
+    "negative_results": [
+      {
+        "name": "要求完了時間の悪化",
+        "description": "一時停止・再開により、OrbitFlowのエンドツーエンド遅延は適応型比較対象より12〜21%高い。全体SLOとスループットを守る代わりに、延期された長い要求の完了を遅らせる明確な交換条件がある。"
+      },
+      {
+        "name": "極端なバーストでは全方式が飽和",
+        "description": "到着バースト性の変動係数が6を超えるとGPU自体が飽和し、OrbitFlowを含む各方式の改善が頭打ちになる。配置最適化だけでは待ち行列の過負荷を解消できない。"
+      },
+      {
+        "name": "残り時間最短優先の副作用",
+        "description": "短い要求をまとめる方式では平均・P95の先頭トークン遅延は改善する一方、長い要求が同時に集まりCPU–GPU転送が増える。OrbitFlow+同方式ではTPOT SLO達成率が4.8ポイント低下し、P95 TPOTは29%増、スループットは8%低下した。"
+      }
+    ],
+    "interpretation": "OrbitFlowの利得は、KVをどれだけCPUへ置くかという容量削減だけではなく、要求ごとに転送量を変えて計算との重なりを最大化する点にある。生成が進むほどKV転送時間が層計算時間より速く増えるため、固定配置は後半で破綻しやすい。さらに連続バッチングで要求の長さが混在すると、一つの長文要求が全要求の転送量を押し上げる。OrbitFlowはこの二つの時間変動を再計画で追い、SLO余裕をトークン蓄積へ変換し、最後に一時停止を使うことで全体性能を守る。",
+    "quality_impact": "KVを捨てたり近似したりしない無損失方式であり、モデルの数値計算結果や生成品質を変えることを目的としていない。変わるのはKVの配置、転送タイミング、要求の実行順、利用者へのトークン送信時刻である。"
+  }
+}
