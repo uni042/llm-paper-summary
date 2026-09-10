@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-hillinfer-20260910-2238-v10-a1",
-  "job_id": "job-research-d6f5d309a2038fcd",
+  "attempt_id": "attempt-hymcache-20260910-2259-v10-a1",
+  "job_id": "job-research-8d7a64859cb47bc2",
   "data": {
-    "hardware": ["NVIDIA GeForce RTX 4090 24GB", "Intel Xeon Platinum 8352V 2.10GHz", "ホストDRAM 64GB", "PCIe 4.0接続Intel SSD 300GB", "Samsung SmartSSD: Xilinx UltraScale+ FPGA、DDR4 4GB、NAND 4TB、約3.2GB/s、PCIe 3.0"],
-    "software": ["Ubuntu 22.04", "Flexオフロード推論基盤を500行超のPythonで拡張", "InfiniGen由来のデータ移動処理を一部利用", "SmartSSD FPGA向けHLS C++", "Xilinx Runtimeによるホスト・SmartSSD通信", "Hugging Face Transformersを試作基盤に使用"],
-    "model": ["LongChat-7B", "LLaMA-13B", "Qwen-7B", "OPT-6.7B"],
-    "datasets": ["OpenBookQA", "RTE", "PIQA", "COPA", "PG-19", "LongBench（最大36K文脈）"],
-    "baselines": ["全KV保持方式", "H2O型の重要度評価＋オフロード方式", "InfiniGen型の層単位重要度評価・先読み方式", "LeoAM型のKV抽象化を用いる重要度評価・転送方式"],
+    "hardware": ["Dell PowerEdge R770サーバー×6", "Intel Xeon 6730×2/ノード", "DDR5 256GB/ノード", "NVIDIA A100 80GB/ノード", "FPGAベースCXL-HM試作機: デバイスDRAM 64GB、1TB Gen5x4 SSD×2", "100Gbpsポート、集約側最大200Gbps"],
+    "software": ["vLLM 0.19.0", "Dynamo 1.1.0", "NIXL", "LMCache", "Mooncake"],
+    "model": ["Llama-3.1-8B", "Qwen2.5-32B"],
+    "datasets": ["Dynamo AIPerfによるMooncake系合成トレース", "LMSYS複数ターン会話データセット"],
+    "baselines": ["毎回再計算", "GPU接頭辞キャッシュ", "各ワーカー64GBローカルDRAMのLMCache", "1TB遠隔DRAMのDistributed Mooncake", "NVMe-oF遠隔SSDのMooncake"],
     "settings": [
-      {"name": "標準精度・保持率", "description": "KV本体はFP16で保存し、主要評価では重要度保持率α=20%、バッチサイズ8を基本条件とする。重要度スコア計算だけはSmartSSD FPGA上でINT8/INT4を利用する。"},
-      {"name": "長文性能", "description": "PG-19とLongBenchを用い、LongBenchでは文脈長を最大36Kまで伸ばして、モデル・データセット間でエンドツーエンド遅延と高速化倍率を比較する。"},
-      {"name": "バッチ拡張", "description": "OPT-6.7Bで入力1920・出力128トークンの条件を使い、通常のバッチ1〜10に加え、20〜25の極端なメモリ圧力条件も評価する。"},
-      {"name": "構成要素・感度評価", "description": "階層KV管理だけを追加した場合と適応先読みまで追加した場合を切り分け、CPU/SmartSSD容量比βを変えた感度評価で解析モデルが予測する最適点と実測最適点の一致を確認する。"}
+      {"name": "プリフィル・デコード分離構成", "description": "4台をプリフィル、1台をデコード兼制御、1台をストレージとして用いる4P-1D-1S構成。Qwen2.5-32BではKVブロック32MB、Llama-3.1-8Bでは16MB、ブロック長128トークン、KVはFP16/BF16。プリフィル側はNIXL用100GbpsとHyMCache用100Gbpsを分け、集約側は最大200Gbpsを使う。"},
+      {"name": "単一ノード構成", "description": "プリフィルとデコードを同居させ、Llama-3.1-8BとLMSYSから512会話、同時実行数32、最大10ターンで接頭辞再利用を測る。主評価では生成トークン数を1にして、デコード計算ではなく接頭辞の保存・再利用経路を重点的に測定する。"},
+      {"name": "遠隔階層比較", "description": "ローカルLMCacheは4ワーカーそれぞれ64GB DRAM、Distributed Mooncakeは1TBの共有遠隔DRAM、HyMCacheは64GBデバイスDRAMと2TB SSDを組み合わせる。容量、媒体遅延、ネットワーク転送の違いを、先頭トークン時間、エンドツーエンド遅延、遠隔命中率、帯域で比較する。"},
+      {"name": "プリフェッチ評価", "description": "LMSYSの入力2K文字超、512会話、同時実行数64を用い、プリフェッチ有無の単体測定と実ワークロード測定を行う。後半ターンでは外部KV命中率が90%を超える条件で、ネットワーク帯域と実行時間の改善を測る。"}
     ],
-    "correctness": "SmartSSD内の低精度演算は重要トークンの順位付けにだけ用い、GPUで最終注意計算に使うKVはFP16原本を取得する。論文は複数モデル・複数精度タスクで全KV保持、H2O型、先読み型と比較し、同程度の正解率を報告する。",
-    "methodology": "精度ではOpenBookQA、RTE、PIQA、COPA等を用いてKV保持率を変え、性能ではPG-19とLongBenchでエンドツーエンド遅延、高速化倍率、スループットを測る。単なる総時間比較だけでなく、SmartSSDを使わない場合、階層管理だけの場合、適応先読みまで入れた場合を切り分け、異種負荷分散式の容量比βも掃引して設計仮説を検証する。",
-    "scope": "単一の市販SmartSSDを備えた単一PCでの実機評価が中心。データセンター規模の複数GPU・複数ノードや複数SmartSSDの横展開ではなく、GPU 24GB＋DRAM 64GBでも長文KVが溢れるエッジPCを対象とする。"
+    "correctness": "保存済みKV値を近似・圧縮せずそのまま再利用する。遠隔KVが所定時間内に準備できない場合は通常のプリフィル再計算へ戻るため、キャッシュの準備失敗を生成内容の欠落へ変えない。",
+    "methodology": "主評価は実際のCXL-HM試作機とA100サーバー群で行い、接頭辞再利用の容量効果と媒体遅延を分離するため、再計算、GPUキャッシュ、ローカルDRAM、1TB遠隔DRAM、NVMe-oF SSDを比較する。さらにホスト転送バッファ容量、CXL-HMプリフェッチ、単一ノードとプリフィル・デコード分離を個別に変え、どの構成要素が性能差を作るかを確認する。",
+    "scope": "実機システム研究だが、CXL-HMはFPGAベースの試作機であり量産CXLメモリラックではない。多くのサービング評価は生成トークン数1として接頭辞再利用を強く切り出しており、長いデコードを伴う一般チャットや推論時のKV増加まで同じ比率で高速化するとは限らない。"
   }
 }
