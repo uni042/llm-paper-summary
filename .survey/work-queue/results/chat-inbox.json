@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-fa65d3c5c4fce1a2",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2608.13962.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-audit-983fdb437b0be018",
+  "validation_error": "ValueError: problem_method.components[1].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T19:46:26+00:00"
 }
