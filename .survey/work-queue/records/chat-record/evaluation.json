@@ -2,22 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.15157-20260911-0630-v10-a1",
-  "job_id": "job-research-9372a69997e30450",
+  "attempt_id": "attempt-2602.03203-20260911-0630-v10-a1",
+  "job_id": "job-research-2f3e800f884677dd",
   "data": {
-    "hardware": ["本文ではGPU機種、GPU数、CPU、HBM容量などの具体的な実行環境を報告していない。"],
-    "software": ["PolyKVはYAML設定と生成処理フックからなる実装として説明される。", "候補追い出し方式としてH2O、TOVA、CAM、PyramidKV、SnapKV、D2O、CAKE、ScissorHands、StreamingLLMを共通枠組みへ統合する。"],
-    "model": ["LLaMA-3.1-8B", "Qwen3-8B"],
-    "datasets": ["LongBench（21タスクのマクロ平均とカテゴリ別分析）", "RULER（検索・QA・語抽出・変数追跡などの制御された長文脈試験）", "評価データとは分離した小規模校正集合"],
-    "baselines": ["FullKV", "H2O", "TOVA", "CAM", "PyramidKV", "SnapKV", "D2O", "CAKE", "ScissorHands", "StreamingLLM", "各予算での最強単一方式"],
-    "correctness": "圧縮によってKVを削除するため、品質保存は保証ではなく経験的評価対象である。全方式は同じ総KV容量で比較する。LongBenchでは多くの条件で最強単一方式を上回るが、RULERのQwen3-8Bでは512平均予算で最強比較方式55.59に対しPolyKV 51.61となり、3.98点悪化する。したがって『同容量なら常に品質向上』とは結論できない。",
+    "hardware": ["Qwen3-4Bの生成効率は単一NVIDIA A800 GPUで測定。", "DeepSeek-R1-Distill-Qwen-7Bの32K向け評価器訓練費用はNVIDIA H800で教師あり約2 GPU×8時間、GRPO約8 GPU×6時間。", "より大規模なQwen3-14B/32Bでは品質・損失比の追加検証を行うが、個別ハードウェア構成は本文表で明示されない。"],
+    "software": ["公開実装: https://github.com/RUCAIBox/ForesightKV", "LLM本体を凍結し、注意グループ/層ごとの2層MLP評価器のみ訓練。", "教師あり順位学習の後にGRPOによる方策微調整を実行。"],
+    "model": ["Qwen3-1.7B", "Qwen3-4B", "DeepSeek-R1-Distill-Qwen-7B", "MiniCPM-4.1-8B（追加検証）", "Qwen3-14B/32B（拡張検証）"],
+    "datasets": ["STILL（訓練用正解長推論軌跡）", "AIME2024", "AIME2025", "GPQA", "LiveCodeBench-V3", "LongBench", "SCP-116K（報酬転移実験）"],
+    "baselines": ["FullKV", "H2O", "SnapKV", "R-KV", "追加比較でG-KV、DuoAttention、RPC"],
+    "correctness": "推論品質はpass@1を各AIMEベンチマーク32回独立評価した平均で比較する。圧縮は不可逆KV追い出しなので完全KVとの一致保証はない。主張は、同容量で既存方式より高い正答率、または半分の容量で同等以上の正答率を保つ経験的結果である。LongBench、GPQA、LiveCodeBench、MiniCPM、Qwen3-14B/32Bでも追加転移を検証する。",
     "settings": [
-      {"name": "512トークン平均KV予算", "description": "各層の平均容量を512トークン相当に固定し、総容量B=L×512を全方式で一致させる。PolyKVは層ごとの容量を変えてよいが総和は同じで、FullKVを選んだ層も完全保持分を予算へ計上する。"},
-      {"name": "予算掃引", "description": "LLaMA-3.1-8BのLongBenchで平均128、256、512、768、1024トークンを評価する。各予算で最強単一比較方式が変わるため、PolyKVは固定の弱い比較対象ではなく各予算の最良方式と比較される。"},
-      {"name": "信号反転アブレーション", "description": "方式選択の余弦類似度・パープレキシティ感度と、容量配分のエントロピー・パープレキシティ感度について、信号順序に従う構成と逆順構成を同一条件で比較し、校正信号が本当に有用な方向を示すか検証する。"},
-      {"name": "タスクカテゴリ分析", "description": "LongBenchを単一文書QA、複数文書QA、要約、few-shot、合成検索、コードへ、RULERをNIAH検索、QA、語抽出、変数追跡へ分解し、平均値だけでは見えない失敗モードを確認する。"}
+      {"name": "主推論設定", "description": "AIME2024/2025でtemperature=0.6、top-k=20、top-p=0.95。KV予算Bは1024、2048、4096など、追い出し間隔L=256。各ベンチマークを32回独立評価しpass@1平均を用いる。"},
+      {"name": "評価器", "description": "MLP中間幅16。推論時は低重要と予測した512 KVを候補にし、そこから256を多項抽選で追い出す主設定。Key/Value表現と複数の注意履歴特徴を連結する。"},
+      {"name": "教師あり学習", "description": "STILL上で生成した正解かつ4096トークン超の推論軌跡を利用。batch size 8、learning rate 1e-2、cosine scheduler、1000 steps、pairwise margin 0.01、B=1024、L=256。"},
+      {"name": "強化学習", "description": "batch/mini-batch 32、learning rate 3e-4、10 step warmup、200 steps、各試料8追い出し軌跡。12K未満は(B,L)=(1024,256)、長い列は(2048,512)。低エントロピー下位80%、損失差閾値1.5、GRPO clipping epsilon=0.2。"},
+      {"name": "効率測定", "description": "Qwen3-4Bを単一A800で8K/16K/32K生成し、最大同時バッチ数とスループットをFullKVと比較。DeepSeek-R1-Distill-Qwen-7Bではbatch size 8、各サンプル8回のエンドツーエンド所要時間を比較する。"}
     ],
-    "methodology": "校正集合上でFullKV参照と各候補方式の層単位摂動を比較し、方式選択・容量配分の固定戦略を構築する。評価時にはその戦略を変更せず、LLaMA-3.1-8BとQwen3-8BでLongBenchとRULERを実行する。主比較では各モデル・ベンチマークに対して同じ総KV容量を持つ候補方式群の最強値を基準とし、PolyKVの上位構成とのスコア差を見る。LLaMAではさらに128〜1024の容量掃引、信号順序を逆転させる対照実験、カテゴリ別分解、代表的層別構成の可視化を行い、改善が方式選択と容量再配分のどちらから来るかを切り分ける。",
-    "scope": "本評価はKV削減時のタスク品質を検証するもので、推論速度、TTFT、TPOT、スループット、実メモリ使用量、校正時間といったシステム性能を定量評価していない。モデルも8B級2種類で、校正集合の具体的サイズやハードウェアは本文に十分な記載がない。したがって、同じ論理KV容量で品質を改善できる証拠としては有効だが、その複雑なフック構成が実サービスでどの程度の速度・メモリ効率をもたらすかは別途評価が必要である。"
+    "methodology": "まず注意パターンと追い出し後損失を分析して、意味依存KVと低エントロピートークンが既存方式の弱点であることを特定する。次に未来注意を使うGolden Evictionの損失比をH2O/SnapKV/R-KVと比較し、教師信号の上限性能を確認する。主実験では3種類の推論モデルをAIME2024/2025へ適用し、1K〜4K KV予算で正答率を比較する。評価器入力、追い出し抽選法、報酬関数、教師ありのみ対GRPO付きの切り分けを行い、GPQA、LiveCodeBench、LongBench、MiniCPM、Qwen3-14B/32Bへ転移を検証する。システム面ではA800上で長生成の同時バッチ上限とスループット、7Bでエンドツーエンド時間、追い出し評価器自体の時間割合を測る。",
+    "scope": "学習型方式のため、モデルごとの評価器訓練費用と正解長推論軌跡が必要であり、訓練不要KV圧縮より導入負担が大きい。主品質評価は数学推論に偏るが科学、コード、LongBenchへの転移は補完されている。A800のスループット試験は単一GPUのQwen3-4Bで、分散サービングや多利用者キュー、KVオフロードとの統合は評価しない。また32Kまでの訓練・評価を中心とし、それより極端に長い生成や学習分布外の意味依存では誤追い出しの危険が残る。"
   }
 }
