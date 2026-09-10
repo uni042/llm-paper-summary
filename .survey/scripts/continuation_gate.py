@@ -3,7 +3,7 @@
 
 The gate decides only whether the whole run may stop. Transport backlogs and
 job-local failures are not stop conditions when independent work can continue
-and required state can be durably checkpointed in GitHub, Drive, or Library.
+and required state can be durably checkpointed in GitHub or ChatGPT Library.
 """
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ def yn(value: str) -> bool:
 
 def decide(args: argparse.Namespace) -> dict[str, object]:
     reasons: list[str] = []
-    fallback_writable = bool(args.drive_writable or args.library_writable)
+    fallback_writable = bool(args.library_writable)
     any_durable_transport = bool(args.github_write or fallback_writable)
 
     if args.platform_limit:
@@ -55,11 +55,11 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
     if args.write_failed:
         if args.probe == "success":
             write_scope = "target_or_payload_specific"
-            write_action = "checkpoint_affected_job_via_available_fallback_then_continue; github_writes_remain_allowed"
+            write_action = "checkpoint_affected_job_via_library_if_needed_then_continue; github_writes_remain_allowed"
         elif args.probe == "failure":
             write_scope = "run_wide_github_write_unavailable"
             if fallback_writable:
-                write_action = "disable_further_github_writes_this_run; checkpoint_to_fallback; continue_ready_spillover_or_offline_discovery"
+                write_action = "disable_further_github_writes_this_run; checkpoint_to_library; continue_ready_spillover_or_offline_discovery"
             else:
                 write_action = "disable_further_github_writes_this_run; do_not_start_uncheckpointable_new_work"
         else:
@@ -82,7 +82,6 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--github-read", type=yn, default=True)
     ap.add_argument("--github-write", type=yn, default=True)
-    ap.add_argument("--drive-writable", type=yn, default=False)
     ap.add_argument("--library-writable", type=yn, default=False)
     ap.add_argument("--result-durable", type=yn, default=True)
     ap.add_argument("--seed-durable", type=yn, default=True)
