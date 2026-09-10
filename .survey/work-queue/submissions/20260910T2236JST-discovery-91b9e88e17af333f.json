@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-91b9e88e17af333f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.18750",
+      "title": "HillInfer: Efficient Long-Context LLM Inference on the Edge with Hierarchical KV Eviction using SmartSSD",
+      "source_url": "https://arxiv.org/abs/2602.18750",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md",
+      "priority": 96,
+      "reason": "SmartSSD上でKV重要度評価を近データ処理し、CPU・GPU・SmartSSDの階層KV管理と適応先読みを統合する実機推論システム。SSD活用の重点テーマへ直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.18141",
+      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+      "source_url": "https://arxiv.org/abs/2607.18141",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md",
+      "priority": 95,
+      "reason": "少量DRAMとSSDをCXL背後で組み合わせたハイブリッドメモリをKV再利用に使い、接頭辞先読みと書込みバッファを実CXL試作機で評価する。SSDとCXL階層の重要な隣接研究。"
+    },
+    {
+      "canonical_id": "arXiv:2604.26837",
+      "title": "Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.26837",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+      "priority": 92,
+      "reason": "疎注意の粒度差を共通KVページ基盤へ写像し、GPU・CPU階層KV配置と実行パイプラインを共同設計するvLLM実装。階層メモリとKVアクセス削減を横断する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.25353",
+      "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
+      "source_url": "https://arxiv.org/abs/2606.25353",
+      "paper_path": "papers/inference/09-other-inference-systems/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
+      "priority": 82,
+      "reason": "GB級最終キャッシュへ重みを常駐させ、注意・KV管理を別資源領域へ分離するCPUクラスタ推論。GPU/CPU/SSDとは異なる階層メモリ設計点として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07396",
+      "title": "SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs",
+      "source_url": "https://arxiv.org/abs/2604.07396",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md",
+      "priority": 76,
+      "reason": "エッジNPU内のeDRAMをKVと一時活性値の寿命・ビット感度に応じて分割管理し、更新エネルギーを削減する。オンデバイス階層メモリ設計の隣接候補。"
+    }
+  ]
+}
