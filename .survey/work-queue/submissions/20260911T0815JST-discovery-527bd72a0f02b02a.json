@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-527bd72a0f02b02a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 98,
+      "reason": "NVMe SSD上のKVキャッシュをGPU中心のオブジェクト入出力へ再設計し、GPU io_uringと余裕時間を考慮したI/OスケジューリングでCPU介入を除く。LMCache比で厳しいSLO下のTTFTを78.3%削減し要求率2倍を報告しており、SSD活用の重点テーマに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 91,
+      "reason": "同一サーバ内の別モデルが余らせているGPUメモリとNVLink帯域を使ってKVキャッシュを共有し、CPU・SSDへの低速退避を減らす。P99 TTFT最大69%削減、最大文脈長3.98倍を報告し、GPU/CPU/SSD階層配置の隣接設計として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-transfer.md",
+      "priority": 89,
+      "reason": "プリフィル・デコード分離で全KVを送る代わりに、事前選択転送、並列オンデマンド取得、投機的な残り転送の3経路を組み合わせる。帯域制約のある分離推論で第2トークンまでの時間を最大4.3倍改善すると報告し、KV移送と分離実行の重要な新規系統である。"
+    },
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2603.06350-moeless-serverless-experts.md",
+      "priority": 84,
+      "reason": "MoEの専門家負荷偏りに対し、層別予測器でストラグラ専門家を予測し、サーバレス専門家の弾力的な増設と配置で対処する。8GPU実装で推論遅延43%、コスト84%削減を報告し、専門家配置・負荷分散の別アプローチとして比較価値がある。"
+    }
+  ]
+}
