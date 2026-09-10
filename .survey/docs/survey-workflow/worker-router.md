@@ -1,13 +1,29 @@
 # Chat worker router — workflow v10
 
-予定されたScheduled Chat workerは**1つだけ**。実行時刻で次のどちらか一方を選び、同じ枠で両方を処理しない。
+予定されたScheduled Chat workerは**1つだけ**。通常runは実行時刻で次のどちらか一方を選び、同じ枠で両方を処理しない。ただし、後述する24-run maintenance gateが最優先であり、maintenance runでは通常workerを実行しない。
 
+- **maintenance gateで24回目** → full GC + repository-wide consistency checkだけを要求して終了
 - **08:30 JST** → その他更新worker
 - **それ以外の毎時 :30** → 論文worker
 
-毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、`.survey/work-queue/next-jobs.json` を同じHEADから読む。必要に応じて [drive-outbox.md](drive-outbox.md)、[backlog-resilience.md](backlog-resilience.md)、`.survey/work-queue/records/bank-registry.json` を読む。
+毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json` を同じHEADから読む。必要に応じて [drive-outbox.md](drive-outbox.md)、[backlog-resilience.md](backlog-resilience.md)、`.survey/work-queue/records/bank-registry.json` を読む。
 
 一時配送について古い文書と矛盾する場合は、**このrouter → fallback-routing.md → continuation-policy.json → backlog-resilience.md → drive-outbox.md → queue-v10.md** の順で新しい記述を優先する。Notionと旧 `/LLM-survey-fallback/` は新規保存先に使わない。
+
+## 0. 24-run maintenance gate
+
+通常の時刻routingより先に `.survey/work-queue/maintenance-cycle.json` を処理する。
+
+1. 現在のScheduled Chat実行枠をJSTで一意な `run_key`（例 `2026-09-10T18:30:00+09:00`）として決める。
+2. `last_counted_run_key` が同じなら二重加算しない。同じrunの再試行として現在のcounterをそのまま使う。
+3. 新しいrunなら `total_runs_counted += 1`、`runs_since_maintenance += 1`、`last_counted_run_key = run_key` として、最新blob SHAを再取得したうえでstateを更新する。
+4. `runs_since_maintenance < cadence_runs`（現在24）なら通常routingへ進む。
+5. `runs_since_maintenance >= cadence_runs` になったrunはmaintenance runとする。その更新で `runs_since_maintenance = 0`、`maintenance_sequence += 1`、`maintenance_pending = true`、`last_maintenance_requested_at = 現在時刻` とする。
+6. maintenance runでは**論文worker、その他更新worker、fallback replay、discovery、research、auditを一切実行しない**。state更新によって `.github/workflows/maintenance.yml` を起動し、GitHub Actions側の `.survey/scripts/full_gc.py` → `.survey/scripts/check_repository.py` に full GC と repository-wide consistency check を任せ、そのrunは終了する。
+7. maintenance workflowは結果を `.survey/reports/full-gc-latest.json` と `.survey/reports/consistency-latest.json` に保存し、`maintenance_pending = false`、最終status、削除件数、完了時刻をstateへ戻す。
+8. maintenance workflowの失敗・遅延で `maintenance_pending = true` が残っていても、後続のScheduled Chat run全体を停止しない。新しいrunはcounterを通常どおり数え、同じmaintenance sequenceを再発行しない。問題は通知対象として扱う。
+
+full GCは保守対象だけを削除する。論文Markdown、docs、scripts、workflow、`next-jobs.json`、queue state、record banks、fallback inbox/archive、現在参照中のjobは削除禁止。terminal jobや旧runtime artifactも保持期間を満たし、かつlive stateから参照されていない場合だけ削除する。
 
 ## 1. run全体を止める条件
 
