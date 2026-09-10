@@ -6,7 +6,7 @@
 - 08:30 JST → その他更新worker
 - それ以外の毎時 :30 → 論文worker
 
-毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json`、`.survey/work-queue/discovery-state.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
+毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、[suggestion-box.md](suggestion-box.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json`、`.survey/work-queue/discovery-state.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
 
 一時配送について古い文書と矛盾する場合は **このrouter → fallback-routing.md → continuation-policy.json → backlog-resilience.md → queue-v10.md** の順で優先する。Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は新規保存先に使わない。Drive実装の保存版は `archive/drive-fallback-before-removal-20260910` ブランチにある。
 
@@ -158,6 +158,14 @@ fallback保存成功はGitHub publication成功ではないが、耐久checkpoin
 
 GitHub write失敗時は同じhealth probeを使い、更新payloadをLibraryへ耐久保存できればScheduled task自体を停止・無効化・再作成しない。復旧時はGitHub immutable intakeを経由する。
 
-## 8. 通知
+さらに08:30 runでは [suggestion-box.md](suggestion-box.md) に従い、ChatGPT Library `/LLM-survey-suggestion-box/pending/` の未報告提案を確認する。pendingが0件なら目安箱について余分な通知は出さない。pendingがある場合は実質重複をまとめ、重要度の高い順に「観測された問題・提案・期待効果・リスク」をユーザーへ簡潔に報告する。目安箱の提案を08:30 worker自身の判断で自動実装しない。ユーザーへの報告を生成した後に限り、報告済みファイルを `/LLM-survey-suggestion-box/reported/` へ移す。移動失敗時はpendingに残し、未報告のまま失うことを避ける。
+
+## 8. 作業中の改善知見
+
+maintenance runを除く通常workerは、実作業中に具体的な摩擦、失敗、重複作業、無駄、復旧コスト、品質低下リスクを観測し、具体的で実行可能な改善案を得た場合だけ [suggestion-box.md](suggestion-box.md) に従ってLibrary `/LLM-survey-suggestion-box/pending/` へ1提案1ファイルで保存する。提案を作るための追加探索や件数ノルマは設けない。既存pending・最近のreportedと実質重複する案は追加しない。重大障害は目安箱へ送って先送りせず、通常の問題報告・修復経路を使う。
+
+目安箱への保存はbest-effortの観測処理であり、失敗してもresearch、queue、fallback checkpoint、GitHub publicationを止めない。成果保存を常に目安箱より優先する。目安箱はresearch record、queue、fallback、run ledgerの代替にしない。
+
+## 9. 通知
 
 予定タスク本文に通知条件が指定されている場合はそちらを優先する。問題報告はrun終了命令ではない。Stop Gateが`CONTINUE`なら、必要な通知を行った後も処理可能な範囲でjobを続ける。
