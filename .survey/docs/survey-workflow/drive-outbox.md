@@ -37,30 +37,38 @@ Driveへは完成Markdownではなく、既存Actionsへ渡すtransport JSONを�
   "id": "20260910T090000JST-research-2609.12345",
   "writes": [
     {
-      "path": ".survey/work-queue/submissions/record-a-1.json",
+      "path": ".survey/work-queue/records/chat-record/metadata.json",
+      "content": "{\n  \"...\": \"...\"\n}\n"
+    },
+    {
+      "path": ".survey/work-queue/submissions/chat-inbox.json",
       "content": "{\n  \"...\": \"...\"\n}\n"
     }
   ]
 }
 ```
 
-`content` はJSON文字列であり、その中身自体も有効なJSONでなければならない。1つのlogical submissionが複数slotから成る場合は、同一envelopeの `writes` にまとめる。これにより部分的にDriveへ保存した状態を完成扱いしない。
+`content` はJSON文字列であり、その中身自体も有効なJSONでなければならない。research/auditでは5つのrecord slotと、全slotを参照する `chat-inbox.json` を**同一envelope**へまとめる。これにより、Drive上で一部slotだけ保存された状態を完成扱いしない。
 
 ## 許可されるGitHub path
 
 Drive importerは任意ファイルを書けない。以下のJSON transport領域だけを許可する。
 
+- `.survey/work-queue/records/chat-record/*.json`
+- `.survey/work-queue/records/chat-record-b/*.json`
 - `.survey/work-queue/submissions/*.json`
 - `.survey/work-queue/transport/*.json`
 - `.survey/update-worker/*.json`
 
 `papers/**`、README、queue state、workflow、scriptなどをDrive payloadから直接更新してはならない。論文本文やstate変更は既存のActions workerへ委譲する。
 
+research/auditのDrive envelopeでは、通常のGitHub transportと同様にA/B bankの5 slotを使う。Driveだから別形式の研究recordを作ったり、完成Markdownを保存したりしない。
+
 ## Chat worker fallback procedure
 
 1. GitHub write失敗時は `worker-router.md` のhealth probe手順で `target_or_payload_specific` と `run_wide_github_write_unavailable` を切り分ける。
 2. run-wide write不能の場合だけDrive outboxを使う。
-3. GitHubへ本来送る予定だった固定transport JSONを、上記envelopeにそのまま格納する。
+3. GitHubへ本来送る予定だった固定transport JSONを、上記envelopeにそのまま格納する。research/auditでは5 record slot + inboxを1 envelopeにまとめる。
 4. envelopeはUTF-8の `.json` としてDrive `pending` に保存する。
 5. Driveへの保存成功をGitHub publication成功とは扱わない。GitHub上のjobは未完了のままにする。
 6. 保存後は次の独立ready jobへ進む。
@@ -75,9 +83,10 @@ Drive importerは任意ファイルを書けない。以下のJSON transport領�
 1. Driveからenvelopeを取得。
 2. schema、サイズ、path allowlist、内部JSONを検証。
 3. transport JSONをworking treeへ適用。
-4. mainへcommit/push。
-5. push成功後にDriveファイルを `processed` へ移動。
-6. transport pathへのpushにより既存 `survey-helper.yml` が起動し、その後のrenderer、queue処理、品質検査を担当する。
+4. A/B record bank、submission、transport、update-workerの許可領域だけをstageする。
+5. mainへcommit/push。
+6. push成功後にDriveファイルを `processed` へ移動。
+7. `chat-inbox.json` 等のsubmission pathへのpushにより既存 `survey-helper.yml` が起動し、その後のrecord検証、renderer、queue処理、品質検査を担当する。
 
 push前に失敗した場合は `processed` へ移動しないため、次回再試行できる。内容がすでにGitHubと同一なら変更なしとして扱い、そのenvelopeも安全にacknowledgeできる。
 
