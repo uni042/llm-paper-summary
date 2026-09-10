@@ -1,19 +1,19 @@
 {
-  "submission_id": "chat-attempt-cxlndp-20260911-0418-v10-a1",
-  "attempt_id": "attempt-cxlndp-20260911-0418-v10-a1",
-  "job_id": "job-research-d714615ee2752483",
+  "submission_id": "chat-attempt-cxlspeckv-20260911-0430-v10-a1",
+  "attempt_id": "attempt-cxlspeckv-20260911-0430-v10-a1",
+  "job_id": "job-research-b3fb5681cc60fed2",
   "status": "completed",
   "record_bank": "a",
-  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
   "expected_blob_sha": null,
   "record_slots": [
-    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "99b43dfc7347f631602845d66ee5da45430ecf18"},
-    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "21009cd77049219395d88338cb3b0614367f82b5"},
-    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "9bd9f5ce1c4a622cf150e4113554dff8115a02b4"},
-    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "4fe2af5d5806f1bed95c2111df4956dc5a78d4b7"},
-    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "9fee7f65163b1c5c9d5067b53496d053b643d15c"}
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "33c65321b924d20eae134ea710fdd6c4f65e0c24"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "5600eef7219580412c0755330a5cabfd9789f7bd"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "24f97df3ef8e4d96e82769bcc383ffadd377d384"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "bfa80b7762f672506359195b5e64c52cecdc435e"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "0e015fd9aee01e731834e2b4cf244825cc496f08"}
   ],
-  "audit_required": false,
-  "audit_reason": null,
-  "audit_flags": []
+  "audit_required": true,
+  "audit_reason": "投機的KV先読みの因果的実行意味が標準的なKV生成順序と整合しないため、公開コードと最終会議版で技術的一貫性を検証する必要がある。",
+  "audit_flags": ["technical_consistency", "implementation_verification"]
 }
