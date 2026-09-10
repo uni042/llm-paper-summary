@@ -1,6 +1,72 @@
 {
   "schema_version": 1,
   "history_limit": 48,
-  "updated_at": null,
-  "entries": []
+  "updated_at": "2026-09-10T14:33:05.581963+00:00",
+  "entries": [
+    {
+      "event_id": "34489769706:1",
+      "recorded_at": "2026-09-10T14:33:05.581963+00:00",
+      "source_run_key": "2026-09-10T23:30:00+09:00",
+      "github": {
+        "event_name": "push",
+        "workflow": "Survey helper worker",
+        "run_id": "34489769706",
+        "run_attempt": "1",
+        "source_sha": "c49a600ad250d754ff0d5f22d5b2d11ae0320e4a"
+      },
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 3,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "terminal_transitions": [
+        {
+          "job_id": "job-b8950ae37173052f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-research-53e88cd1653ca310",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arxiv:2608.21614",
+          "title": "SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning"
+        },
+        {
+          "job_id": "job-research-66083cca6d53c9c6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arxiv:2602.03495",
+          "title": "DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs"
+        },
+        {
+          "job_id": "job-research-f0c19ed4ae256352",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arxiv:2605.27081",
+          "title": "ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/discovery-20260910-2330-moe-storage.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 203,
+      "paper_active_count_after": 203,
+      "last_successful_action": "discovery_or_queue_expanded"
+    }
+  ]
 }
