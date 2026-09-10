@@ -1,15 +1,41 @@
 {
   "schema_version": 2,
-  "updated_at": null,
-  "last_run_key": null,
-  "last_round": null,
+  "updated_at": "2026-09-10T13:08:00+00:00",
+  "last_run_key": "2026-09-10T21:30:00+09:00",
+  "last_round": "edge-moe-npu-adjacent-1",
   "paper_stock_zero_count": 0,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 24,
-  "history": [],
-  "axes": {},
+  "history": [
+    {
+      "run_key": "2026-09-10T21:30:00+09:00",
+      "round": "edge-moe-npu-adjacent-1",
+      "axis": "オンデバイスMoE・NPU実行系",
+      "query_summary": "最近のMoE推論、エッジNPU、KV管理の隣接軸を広めに探索し、既収録識別子と既存jobを詳細評価前に確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": ["arxiv:2604.18788"],
+      "duplicate_canonical_ids": ["arxiv:2607.16892"],
+      "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
+    }
+  ],
+  "axes": {
+    "オンデバイスMoE・NPU実行系": {
+      "last_run_key": "2026-09-10T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
+    }
+  },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
 }
