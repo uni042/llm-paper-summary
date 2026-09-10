@@ -22,7 +22,9 @@ workflow v10は、GitHubを唯一の正本としてqueue/state/identityをGitHub
 - 同一runでは実行環境が許す限り `discovery → research → 必要ならaudit → queue再取得` を継続する。
 - fallback backlog、record bank exhaustion、単一job失敗はrun終了理由にしない。
 
-GitHub上でreadyでも、完全payloadがDrive、Library、GitHub fallback-inboxのいずれかへcheckpoint済みなら、そのjobは再精読しない。checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` を使ってstatusを変更せずdiscovery補充を要求する。
+GitHub上でreadyでも、完全payloadがChatGPT LibraryまたはGitHub fallback-inboxへcheckpoint済みなら、そのjobは再精読しない。checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` を使ってstatusを変更せずdiscovery補充を要求する。
+
+Google Drive fallbackは廃止済みで、新規保存・replay・backlog判定には使わない。削除前実装は `archive/drive-fallback-before-removal-20260910` ブランチに保存している。
 
 ## 2. Ownership
 
@@ -36,7 +38,7 @@ GitHub上でreadyでも、完全payloadがDrive、Library、GitHub fallback-inbo
 - duplicate pre-check
 - structured research record authoring
 - normal GitHub transport
-- GitHub write不能時のDrive/Library checkpoint
+- GitHub write不能時のChatGPT Library checkpoint
 - Library pendingのGitHub immutable intakeへの回収
 
 ### GitHub Actions
@@ -50,7 +52,6 @@ GitHub上でreadyでも、完全payloadがDrive、Library、GitHub fallback-inbo
 - derived-view rebuild
 - offline job seed materialization
 - GitHub fallback-inboxの直列dispatch
-- Drive pendingのGitHub immutable intakeへの回収
 
 Notionは使用しない。旧 `/LLM-survey-fallback/` はlegacy移行元であり、新規保存には使わない。
 
@@ -62,7 +63,7 @@ Notionは使用しない。旧 `/LLM-survey-fallback/` はlegacy移行元であ�
 2. `.survey/survey-state/identity-deltas/**/*.json`
 3. `papers/inference/**` frontmatter
 4. `.survey/work-queue/jobs/*.json`
-5. Drive/Library/GitHub fallback-inbox上のseedとcheckpoint済みjob
+5. ChatGPT Library / GitHub fallback-inbox上のseedとcheckpoint済みjob
 
 canonical ID / arXiv ID / DOI / OpenReview IDを優先する。GitHub code searchだけで未登録判定をしない。Actions側の `.survey/scripts/dedupe_queue.py` も再確認する。
 
@@ -74,7 +75,7 @@ canonical ID / arXiv ID / DOI / OpenReview IDを優先する。GitHub code searc
 
 構造化recordは内部メモではなく、人間向けMarkdownへ変換する原稿である。特に`problem_method`は、入力、観測状態、処理、出力、前後接続、なぜ効くか、追加コスト、失敗条件が追える量を書く。
 
-GitHubへ送る前、またはfallbackへcheckpointする前に品質検査を行う。基準未達recordは完成扱いにしない。
+GitHubへ送る前、またはLibraryへcheckpointする前にActions側と同じvalidator基準でpreflightする。基準未達recordは完成扱いにしない。
 
 ## 5. Structured record transport
 
@@ -121,7 +122,7 @@ slot上限、必須field、文章量、日本語優先ルールは `.survey/scri
 4. 途中write失敗時は`continuation-policy.json`のretry/health-probe規則に従う。
 5. 5 slot成功後だけ固定`chat-inbox.json`をupdateする。
 6. Actions resultと最新queueでterminalを確認する。
-7. 完全payloadをfallbackへ耐久保存済みなら、そのbankは未送信論文の保存キューとして保持し続けない。
+7. 完全payloadをLibraryへ耐久保存済みなら、そのbankは未送信論文の保存キューとして保持し続けない。
 
 ## 7. Discovery / blocked / deferred / rejected
 
@@ -129,18 +130,17 @@ slot上限、必須field、文章量、日本語優先ルールは `.survey/scri
 
 個別論文の全文取得不能や依存不足は対象jobだけblocked/deferredとし、次の独立作業へ進む。
 
-## 8. Multi-outbox fallback
+## 8. Library fallback
 
 GitHub writeを完了できない場合の正本は `fallback-routing.md`。
 
-### 保存先
+保存先はChatGPT Libraryのみ:
 
-- Google Drive: `/Google Drive/llm-paper-summary-outbox/pending/<id>.json`
-- ChatGPT Library: `/LLM-survey-outbox/pending/<id>.json`
+`/LLM-survey-outbox/pending/<id>.json`
 
-Driveを先に試し、Driveが利用不能ならLibraryを使う。どちらかへ完全payloadまたはoffline job seedを耐久保存できれば研究を続ける。
+Libraryへ完全payloadまたはoffline job seedを耐久保存できれば研究を続ける。
 
-### 共通envelope
+共通envelope:
 
 ```json
 {
@@ -161,28 +161,23 @@ research/auditでは1論文につき1 envelopeに5 slot + `chat-inbox.json`を�
 
 ## 9. Recovery path
 
-DriveとLibraryは固定record bankへ直接replayしない。復旧したsourceはまず:
+Libraryから固定record bankへ直接replayしない。Scheduled Chatは復旧したLibrary sourceをまず:
 
 `.survey/work-queue/fallback-inbox/<envelope-id>.json`
 
-へ不変envelopeを送る。
+へ不変envelopeとして送る。
 
-- Drive: `.survey/scripts/import_drive_outbox_v4.py`
-- Library: Scheduled ChatがGitHub create/update能力を使って同じintake規則を実行する。
-
-同じ`id`がGitHub fallback-inbox/archiveにあり内容も同一なら再writeせずsource側をprocessedにできる。内容不一致なら衝突としてfailedへ隔離する。
+同じ`id`がGitHub fallback-inbox/archiveにあり内容も同一なら再writeせずLibrary側をprocessedにできる。内容不一致なら衝突としてfailedへ隔離する。
 
 `.survey/scripts/dispatch_fallback_inbox.py` がsurvey-helperの共通concurrency group内で1 run最大1件を固定transportへ展開する。job未実体化やchat transport busyはdependency待ちとしてinboxに残し、failedにしない。
 
-この二段階化によりDriveとLibraryが同時復旧しても固定bank/inboxの競合を防ぐ。
-
 ## 10. Offline discovery
 
-GitHub write不能中にactionable readyが尽きても、fallbackが1つ以上書けるなら探索を続ける。
+GitHub write不能中にactionable readyが尽きてもLibraryが書けるなら探索を続ける。
 
-候補0〜5件を `.survey/work-queue/transport/offline-job-seed.json` に格納するenvelopeとして保存する。候補のresearch job IDは`fallback-routing.md`の決定論的規則で計算する。
+候補0〜5件を `.survey/work-queue/transport/offline-job-seed.json` に格納するenvelopeとしてLibraryへ保存する。候補のresearch job IDは`fallback-routing.md`の決定論的規則で計算する。
 
-seed保存後はjob実体化を待たず同じrunで候補を精読し、完成research envelopeもfallbackへ保存してよい。復旧時はseedがjobを実体化するまでresearch envelopeをdependency待ちにする。
+seed保存後はjob実体化を待たず同じrunで候補を精読し、完成research envelopeもLibraryへ保存してよい。復旧時はseedがjobを実体化するまでresearch envelopeをdependency待ちにする。
 
 ## 11. Transport integrity
 
