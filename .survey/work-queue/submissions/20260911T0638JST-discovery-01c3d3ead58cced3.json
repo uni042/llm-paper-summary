@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-01c3d3ead58cced3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07883",
+      "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2609.07883",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md",
+      "priority": 96,
+      "reason": "固定プリフィル分割長では、短い分割がデコード遅延を守る代わりに起動オーバーヘッドを増やし、長い分割はプリフィル効率と引き換えにトークン間遅延を悪化させる。本論文はデコード要求の期限余裕を見ながら分割長を適応させる新しいサービング制御で、2026年9月の新着としてプリフィル・デコード干渉の系統に直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.01068",
+      "title": "OUTLETS: Output-Length Prediction from Speculative Decoding Backbones",
+      "source_url": "https://arxiv.org/abs/2609.01068",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-output-length-prediction-speculative-backbones.md",
+      "priority": 93,
+      "reason": "出力長の重い裾がクラスタ配置と待ち時間を不安定にする問題に対し、既に投機的デコードで計算しているドラフト表現を長さ予測へ再利用する。外部予測モデルの追加遅延を避けつつ、分離サービングで短要求のP99遅延を34.8%削減したと報告しており、推論スケジューリングへ直接使える。"
+    },
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28150-smartgen-selective-kv-transfer.md",
+      "priority": 91,
+      "reason": "プリフィル・デコード分離時のKVキャッシュ全量転送を、事前選択転送、並列オンデマンド取得、投機的全量転送の3経路へ分けてネットワーク帯域制約を緩和する。通常の全KV転送に対して2番目のトークンまでの時間を最大4.3倍改善し、その後のデコード性能と精度を維持すると報告しており、KV移送系統の強い候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.16892-robust-kv-cache-reservation-output-length-uncertainty.md",
+      "priority": 88,
+      "reason": "未知の出力長に対するKV予約不足は再計算を伴うプリエンプト、過剰予約はGPUメモリ浪費を生む。本論文は並列構成、クラス別KV予約、異種サービング群へのルーティング、接頭辞キャッシュを分布ロバスト最適化で共同決定し、BurstGPT・Azure・ShareGPTのトレースで固定分位点予約より最大56%低コストを報告している。"
+    }
+  ]
+}
