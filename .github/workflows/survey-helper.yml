@@ -45,6 +45,7 @@ jobs:
           python -m py_compile \
             .survey/scripts/fallback_transport.py \
             .survey/scripts/dispatch_fallback_inbox.py \
+            .survey/scripts/recover_archived_research.py \
             .survey/scripts/import_drive_outbox_v4.py
 
       - name: Install dependencies
@@ -52,6 +53,9 @@ jobs:
 
       - name: Dispatch one eligible fallback envelope
         run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root . | tee /tmp/fallback-dispatch.json
+
+      - name: Recover one archived completed research artifact when missing
+        run: python .survey/scripts/recover_archived_research.py --repo-root . | tee /tmp/archive-recovery.json
 
       - name: Reset reusable Chat result when fallback dispatch changed inbox
         run: |
