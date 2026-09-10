@@ -3,14 +3,21 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import yaml
 
 
+def raw_path_bytes(path):
+    if path.is_symlink():
+        return os.readlink(path).encode('utf-8')
+    return path.read_bytes()
+
+
 def blob_hash(path):
-    data = path.read_bytes()
+    data = raw_path_bytes(path)
     return hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
 
 
@@ -18,7 +25,7 @@ def local_files(root):
     return {
         p.relative_to(root).as_posix(): p
         for p in root.rglob('*')
-        if p.is_file()
+        if (p.is_symlink() or p.is_file())
         and not any(x in ('.git', '__pycache__', '.venv') for x in p.relative_to(root).parts)
         and not p.name.endswith(('.pyc', '.tmp'))
     }
@@ -53,6 +60,18 @@ def check(root, inventory):
     scanned = []
     for name, path in sorted(files.items()):
         scanned.append(name)
+
+        # Symlinks are repository navigation aliases. Validate the target itself,
+        # but never parse the target file as if its Markdown lived at the symlink path.
+        if path.is_symlink():
+            try:
+                destination = path.resolve(strict=True)
+                if not destination.is_relative_to(root):
+                    issue('symlink_outside_repository', name, os.readlink(path))
+            except (OSError, RuntimeError):
+                issue('broken_symlink', name, os.readlink(path))
+            continue
+
         if path.suffix not in ('.md', '.json', '.yaml', '.yml'):
             continue
         try:
@@ -98,9 +117,17 @@ def check(root, inventory):
             elif not destination.exists():
                 issue('broken_local_link', name, target)
 
-        if name.startswith('papers/inference/') and path.name != 'README.md':
+        # Active paper artifacts live exactly at papers/inference/<lineage>/<paper>.md.
+        # Index/aggregate files such as papers/inference/comparison.md are not papers.
+        parts = Path(name).parts
+        is_inference_paper = (
+            len(parts) == 4
+            and parts[0] == 'papers'
+            and parts[1] == 'inference'
+            and path.name != 'README.md'
+        )
+        if is_inference_paper:
             meta, body = frontmatter(path)
-            # A moved stub is navigation, not an active paper artifact.
             if body.lstrip().startswith('# Moved') or text.lstrip().startswith('# Moved'):
                 continue
             cid = meta.get('canonical_id')
@@ -157,8 +184,8 @@ def check(root, inventory):
         'missing_files': sorted(set(expected) - set(files)),
         'working_changes': sorted(n for n, p in files.items() if n not in expected or blob_hash(p) != expected[n]),
         'checks': [
-            'inventory_coverage', 'all_json_yaml', 'markdown_file_links', 'frozen_training',
-            'state_paths', 'paper_metadata_and_identity', 'maintenance_cycle'
+            'inventory_coverage', 'all_json_yaml', 'markdown_file_links', 'symlink_targets',
+            'frozen_training', 'state_paths', 'paper_metadata_and_identity', 'maintenance_cycle'
         ],
         'not_checked': [
             'External URL reachability', 'Fragment anchors', 'Scientific validity / full paper audits',
