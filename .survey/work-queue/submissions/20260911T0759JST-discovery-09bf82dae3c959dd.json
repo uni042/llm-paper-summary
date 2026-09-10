@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-09bf82dae3c959dd",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.18141",
+      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+      "source_url": "https://arxiv.org/abs/2607.18141",
+      "paper_path": "papers/inference/02-ssd-nvme-offload/2026-2607.18141-hymcache-cxl-hybrid-memory.md",
+      "priority": 98,
+      "reason": "CXL接続の小容量DRAM＋大容量SSDハイブリッドメモリをKV再利用層として使い、要求単位接頭辞先読みと機会的書き込みバッファでSSD容量をDRAMに近い効率で提供する。実CXL-HM試作機でLMCache比3.0倍、P/D分離時1.45倍を報告し、SSD/CXL階層メモリの重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 92,
+      "reason": "同一サーバ内でKV需要の低いモデルが余剰GPUメモリを高需要モデルへ提供し、NVLink越しに接頭辞KVを共有する。さらに現在層のKVだけをローカルGPUへ置くことで長文脈を支え、vLLM/SGLang比P99 TTFT最大69%削減、最大文脈長3.98倍を報告する。CPU/SSD退避の前に異種モデル間HBMを階層として使う点が新しい。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
+      "priority": 90,
+      "reason": "KV復元を再計算かI/Oの二択ではなく、トークン・層・GPUの3次元並列実行として捉え、バッチ内要求間の計算/I/O資源配分まで共同制御する。多様なモデル・ハードウェアでTTFTを既存方式比10〜62%削減し、階層メモリにおける復元スケジューリングの重要な未収録候補。"
+    }
+  ]
+}
