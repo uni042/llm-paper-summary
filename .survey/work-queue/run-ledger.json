@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T14:49:54.220575+00:00",
+  "updated_at": "2026-09-10T14:51:32.798477+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
       "first_recorded_at": "2026-09-10T14:33:05.581963+00:00",
-      "last_recorded_at": "2026-09-10T14:49:54.220575+00:00",
+      "last_recorded_at": "2026-09-10T14:51:32.798477+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
@@ -14,9 +14,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 7,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -77,6 +77,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34491801271:1",
+          "recorded_at": "2026-09-10T14:51:32.798477+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34491801271",
+            "run_attempt": "1",
+            "source_sha": "08d71ab2b3db8f49202f04ecdc05b5be3ff0e926"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -111,6 +125,14 @@
           "title": "SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-e7daaf93cae1285e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -141,11 +163,33 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-0b5ba8c01f86b1fe",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arxiv:2603.19289",
+          "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts"
+        },
+        {
+          "job_id": "job-research-11443ee95cff6866",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arxiv:2603.27624",
+          "title": "Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling"
+        },
+        {
+          "job_id": "job-research-35c9432189855703",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arxiv:2508.06978",
+          "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/discovery-20260910-2330-moe-storage.json"
+        ".survey/work-queue/results/discovery-20260910-2330-moe-storage.json",
+        ".survey/work-queue/results/discovery-20260910-2351-streaming-edge.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 203,

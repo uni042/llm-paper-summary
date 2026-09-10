@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-0b5ba8c01f86b1fe",
+  "type": "research",
+  "parent_job_id": "job-e7daaf93cae1285e",
+  "priority": 90,
+  "canonical_id": "arxiv:2603.19289",
+  "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+  "source_url": "https://arxiv.org/abs/2603.19289",
+  "paper_path": "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-prefetch-offloaded-moe.md",
+  "selection_reason": "CPUへオフロードしたMoE専門家を、現在計算中の内部表現から将来利用を予測してプリフェッチし、転送と計算を重ねる。さらに予測した専門家をそのまま実行することで正規ルータ結果の再取得を避ける設計も評価し、最適化推論エンジンでTPOT最大14%削減を報告する。既存expert prefetch系との直接比較価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T14:51:30+00:00",
+  "completed_at": "2026-09-10T14:51:31+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2603.19289",
+  "duplicate_of_path": "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2603.19289"
+  }
+}
