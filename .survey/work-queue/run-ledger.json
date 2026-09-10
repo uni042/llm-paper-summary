@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T15:11:49.303719+00:00",
+  "updated_at": "2026-09-10T15:33:22.083222+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -292,6 +292,66 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 203,
+      "paper_active_count_after": 210,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-11T00:30:00+09:00",
+      "first_recorded_at": "2026-09-10T15:33:22.083222+00:00",
+      "last_recorded_at": "2026-09-10T15:33:22.083222+00:00",
+      "signals": [
+        "research_completed",
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34496374686:1",
+          "recorded_at": "2026-09-10T15:33:22.083222+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34496374686",
+            "run_attempt": "1",
+            "source_sha": "42d2d111b9358c6c3a6dffb62a2823c182421cae"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-63905827eb5cf813",
+          "type": "research",
+          "canonical_id": "arXiv:2602.18755",
+          "title": "BiScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-7afb8a934b1edaa3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 210,
       "paper_active_count_after": 210,
       "last_successful_action": "discovery_or_queue_expanded"
     }

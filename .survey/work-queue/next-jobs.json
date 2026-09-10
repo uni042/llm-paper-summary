@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 41
+      "completed": 41,
+      "ready": 1
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "superseded": 25,
-      "completed": 44,
-      "ready": 1
+      "completed": 45
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-63905827eb5cf813",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2602.18755",
-      "title": "BiScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS",
-      "source_url": "https://arxiv.org/abs/2602.18755",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.18755-biscale-phase-aware-placement-dvfs.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-7afb8a934b1edaa3",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T15:11:49+00:00"
+  "generated_at": "2026-09-10T15:33:20+00:00"
 }
