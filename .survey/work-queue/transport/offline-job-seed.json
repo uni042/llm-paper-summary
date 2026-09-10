@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "test-all-access-smartgen-20260910",
+  "seed_id": "test-all-access-robust-kv-20260910",
   "candidates": [
     {
-      "canonical_id": "arXiv:2607.28150",
-      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
-      "source_url": "https://arxiv.org/abs/2607.28150",
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
       "priority": 85,
-      "reason": "Routing resilience test: strong recent disaggregated-serving paper using selective KV transfer; not present in repository identity/code search."
+      "reason": "Three-route resilience test: uncertainty-aware KV-cache reservation, routing, parallelism and prefix-caching control; no repository match found before job materialization."
     }
   ]
 }
