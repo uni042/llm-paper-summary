@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission_id": "discovery-20260910T1729JST-a2639626e127c791",
+  "job_id": "job-a2639626e127c791",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.21240",
+      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.21240",
+      "priority": 89,
+      "reason": "MoEオフロードでPCIe越しの専門家転送が遅延を支配する問題に対し、軽量draft modelによる信頼度付き先読み、低ランク専門家代理（LoRE）、CPU-GPU非同期残差実行を組み合わせる。DeepSeek-V2-LiteとQwen2-57B-A14Bで最大3.12倍のTPOT高速化を報告し、単なるexpert predictionではなく予測ミス時の近似・正確回復・異種実行配置まで統合した点が既存expert prefetch系統との比較に重要。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "priority": 86,
+      "reason": "出力長が事前に不明なためKVキャッシュを過少予約するとpreemptionと再計算、過大予約するとGPUメモリ浪費になる問題を、Wasserstein分布ロバスト最適化でGPU並列構成・要求クラス別予約量・異種serving groupへのrouting・prefix cacheまで共同最適化する。BurstGPT/Azure/ShareGPTのtrace評価で固定quantile予約比最大56%のコスト削減を報告し、KV容量管理と不確実性を直接結ぶ系統として有力。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "priority": 84,
+      "reason": "長文・multi-turn・RAG・agentic workloadでKV復元がTTFTを支配する問題に対し、再計算とI/Oをtoken・layer・GPUの3次元並列実行として統一し、batch-aware two-pointer schedulerで各要求の限界再計算削減量を基準にcompute/I/O資源を割り当てる。既存方式比TTFTを10〜62%削減しており、KV cache restorationを単一要求のoffload/recompute選択から多次元並列スケジューリングへ拡張する点が重要。"
+    }
+  ]
+}
