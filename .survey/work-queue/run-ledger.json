@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T16:29:58.387004+00:00",
+  "updated_at": "2026-09-10T16:36:51.627353+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -358,13 +358,14 @@
     {
       "run_key": "2026-09-11T01:30:00+09:00",
       "first_recorded_at": "2026-09-10T16:29:58.387004+00:00",
-      "last_recorded_at": "2026-09-10T16:29:58.387004+00:00",
+      "last_recorded_at": "2026-09-10T16:36:51.627353+00:00",
       "signals": [
         "discovery_or_queue_expanded",
-        "paper_materialized"
+        "paper_materialized",
+        "research_completed"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
@@ -387,6 +388,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34503146380:1",
+          "recorded_at": "2026-09-10T16:36:51.627353+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34503146380",
+            "run_attempt": "1",
+            "source_sha": "c5d2926a2d9a5175c9ca92b8c3ef50d9db516a21"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -395,6 +410,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-625f5d1a9588ab7f",
+          "type": "research",
+          "canonical_id": "arXiv:2607.27187",
+          "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -424,7 +447,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 210,
       "paper_active_count_after": 211,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
