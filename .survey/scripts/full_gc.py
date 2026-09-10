@@ -236,7 +236,7 @@ def main():
             ".survey/work-queue/fallback-inbox/**", ".survey/work-queue/fallback-archive/**",
             ".survey/work-queue/fallback-failed/**", ".survey/work-queue/submissions/chat-inbox.json",
             ".survey/work-queue/results/chat-inbox.json", ".survey/work-queue/payloads/chat-payload.md",
-            ".survey/work-queue/payloads/chat-chunks/**", ".survey/update-worker/**",
+            ".survey/update-worker/**",
         ],
     }
     text = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
