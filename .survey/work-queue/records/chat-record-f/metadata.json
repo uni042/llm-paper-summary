@@ -2,7 +2,37 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-audit-cxlspeckv-20260911-0430-v10-a1",
+  "job_id": "job-audit-7d719b9748e9000a",
+  "data": {
+    "canonical_id": "arXiv:2512.11920",
+    "arxiv_id": "2512.11920",
+    "doi": "10.1145/3748173.3779188",
+    "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
+    "summary": "長文脈LLMのKVキャッシュをGPU HBMだけに保持できない問題に対し、CXL接続メモリへ低温KVを退避し、FPGAで圧縮・展開とDMA制御を行う階層メモリ方式である。論文はさらに小型LSTMで将来トークンを予測し、将来位置のKVをGPU側へ投機的に先読みすると説明する。監査では、会議採録と公開実装の存在は確認できた一方、公開コードのLSTMは学習済み重みを読み込まず簡略計算で動き、DMA先読みも実転送せず要求を待ち行列へ積むだけであることを確認した。また標準的な自己回帰推論では未来位置のKVは未生成であり、予測トークンから既存の未来KVを取得する説明には因果的な不整合が残る。したがってCXL階層化とFPGA圧縮は独立した有用な設計要素として扱えるが、投機的KV先読みの性能寄与は再現可能な実装証拠が不足している。",
+    "source": "https://arxiv.org/abs/2512.11920",
+    "sources": [
+      "https://arxiv.org/abs/2512.11920",
+      "https://doi.org/10.1145/3748173.3779188",
+      "https://github.com/FastLM/CXL-SpecKV"
+    ],
+    "authors": ["Dong Liu", "Yanxuan Yu"],
+    "authors_affiliations": "Dong LiuはYale University、Yanxuan YuはColumbia University所属として最終会議版と公開資料で確認した。",
+    "publication": "Proceedings of the 2026 ACM/SIGDA International Symposium on Field Programmable Gate Arrays (FPGA '26), pp. 56–66",
+    "publication_type": "国際会議論文",
+    "publication_status": "FPGA '26採録済み。arXiv:2512.11920とDOI 10.1145/3748173.3779188を確認した。",
+    "published": "2026-02-22",
+    "topics": ["KVキャッシュ", "CXL", "FPGA", "階層メモリ", "KV圧縮", "投機的先読み", "LLMサービング"],
+    "implementation": "公式公開リポジトリFastLM/CXL-SpecKVにはドライバ、利用者空間ライブラリ、C API、Python連携、メモリ管理器、先読み器、FPGA RTL、試験コードがある。ただし先読み器の主要経路は論文評価を再現する完成実装ではなく、簡略化された参照実装である。具体的にはLSTM重みは学習済みファイルから読み込まれず、LSTM計算も固定ゲートを用いた簡略処理で、DMA発行関数も実際の転送ではなく要求の記録に留まる。",
+    "lineage": "KVキャッシュオフロード・CXLメモリ分離・FPGA近傍処理",
+    "importance": "高。ただし投機的KV先読み部分は監査上の重大な再現性・意味論上の注意事項を伴う。",
+    "hardware_evaluation": "論文は8基のNVIDIA A100 80GB、4基のIntel Agilex-7 FPGA、デュアルソケットIntel Sapphire Rapids、1TB DDR5を用いる物理評価基盤を記載する。GPUとFPGAはPCIe Gen4 x16で接続し、FPGA側がCXL Type-3メモリ拡張器を扱う構成であり、A100がCXLメモリへ直接アクセスする構成ではない。",
+    "hardware_details": "FPGA側にはCXLメモリ制御、アドレス変換、KV圧縮・展開、DMA制御を配置し、GPU HBM内の直近KV領域と先読み領域、CXL側の大容量KV領域を4KBページ単位で管理すると論文は説明する。",
+    "quality_effect": "KV圧縮の前段にFP16からINT8への近似量子化を含むため無損失ではない。論文はLLaMA-70BとWikiText-103でperplexityが無圧縮3.32から最大圧縮時3.36へ悪化すると報告する。投機的先読みは本来生成品質ではなく遅延へ影響する機構だが、公開実装ではその正当性を再現できない。",
+    "storage_targets": ["GPU HBM上の直近KV", "GPU HBM上の先読みKV領域", "CXL接続FPGAメモリプール上の低温KV"],
+    "bottlenecks": ["GPU HBM容量", "遠隔KV転送遅延", "CXL・PCIe帯域", "KV圧縮・展開処理", "投機先読みの再現性と因果的意味"],
+    "evidence_locations": ["論文のアーキテクチャ節", "論文の評価節", "FastLM/CXL-SpecKV src/prefetcher/speculative_prefetcher.cpp", "FastLM/CXL-SpecKV src/prefetcher/lstm_predictor.cpp"],
+    "last_checked": "2026-09-11",
+    "code": "https://github.com/FastLM/CXL-SpecKV"
+  }
 }
