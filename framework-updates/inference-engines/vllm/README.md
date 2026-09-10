@@ -30,6 +30,12 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-11
+
+- **ROCm共有expertの複数stream重ね合わせ範囲を拡大 — merged 2026-09-10 UTC**: Qwen3.5-35B-A3Bのgfx950・TP8/DP1・同時実行64で出力throughput **4,566→5,967 tok/s（+30.7%）**、DeepSeek-V4-Proでは **2,010→2,374 tok/s（+18.1%）**。共有expert計算を別streamへ重ねる条件を拡張し、skinny GEMMの並行実行安全性も修正。[PR #56098](https://github.com/vllm-project/vllm/pull/56098)
+
+- **batched CUTLASSのMoE workspace過剰確保を解消 — merged 2026-09-10 UTC**: dispatch rank数の二重計上を除去し、DeepSeek-V3・DP32・local expert 16の例で共有workspaceを **112 GiB→3.5 GiB / GPU** に削減。大規模expert parallel時の不要なGPUメモリ予約を大幅に減らす。[PR #55579](https://github.com/vllm-project/vllm/pull/55579)
+
 ## 2026-09-10
 
 - **Qwen3.8 PLEのCPU退避とEngram並列化 — merged 2026-09-09**: PLE埋め込み表をページ固定したCPUメモリへ保持し、GPUがCUDAの統一仮想アドレス（Unified Virtual Addressing; UVA）から必要行を直接読む経路を追加。Engramテンソル並列（Engram Tensor Parallelism; ETP）もTP×DPへ拡張。単一実測ではCPU退避後も性能は概ね横ばいで、GPUメモリ配置の自由度を高める更新。[PR #54371](https://github.com/vllm-project/vllm/pull/54371)

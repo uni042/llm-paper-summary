@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20260910-library-recovery-b2",
+  "attempt_id": "update-20260911-0830",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/vllm/README.md",
-    "llm-releases/README.md"
+    "llm-releases/README.md",
+    "llm-releases/deepseek.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md",
     "framework-updates/inference-engines/vllm/README.md",
-    "llm-releases/README.md"
+    "llm-releases/README.md",
+    "llm-releases/deepseek.md"
   ],
-  "summary": "2026-09-10確認: llama.cppのSYCL IQ量子化MoE高速化とIntel Vulkan行列積高速化、vLLMのQwen3.8 PLE CPU退避/Engram並列化を追加。主要LLMの新規正式公開はなし。"
+  "summary": "2026-09-11確認: vLLMのROCm shared-expert multi-stream高速化とMoE CUTLASS workspace大幅削減を追加。新規LLMとしてDeepSeek-V4.1-Flash（552B MoE、8B/16B active、KV cache HBM 1/4・SSD 1/8）を追加。"
 }

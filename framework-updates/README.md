@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-10**
+- フレームワーク差分の最終確認: **2026-09-11**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-10の差分確認では、公式リリースと開発元リポジトリを基準に9月9日以降の主要な性能・メモリ配置・量子化関連変更を再確認した。
+この2つは分けて扱う。2026-09-11の差分確認では、公式リリースと開発元リポジトリを基準に9月10日以降の主要な性能・メモリ使用量・MoE実行関連変更を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,26 @@
 ---
 
 ## 最新更新
+
+### 2026-09-11
+
+#### vLLM
+
+- **ROCmで共有expertの複数stream重ね合わせ範囲を拡大 — merged 2026-09-11 JST**
+
+  ROCmのMoE decodeで共有expert計算を別streamへ重ねる条件を再調整し、gfx950向けskinny GEMMの並行実行安全性も修正した。Qwen3.5-35B-A3BのTP8/DP1では出力throughputが同時実行64で **4,566→5,967 tok/s（+30.7%）**、DeepSeek-V4-Proでは **2,010→2,374 tok/s（+18.1%）**。条件依存だが、MoE shared expert overlapの実用範囲を広げる更新。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/56098
+
+- **batched CUTLASSのMoE workspace過剰確保を解消 — merged 2026-09-11 JST**
+
+  dispatch rank数を二重に掛けていたworkspace算出を修正。DeepSeek-V3、DP32、local expert 16の例では共有workspaceが **112 GiB→3.5 GiB / GPU** まで減る。速度向上というより、大規模expert parallel構成で不要なGPUメモリ予約を大幅に減らす変更。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/55579
+
+#### 新規LLM
+
+- **DeepSeek-V4.1-Flash正式公開 — 2026-09-10**: 552B総parameterのMoEで、入力時8B・出力時16B activeの非対称Causal Encoder-Decoder構造を採用。前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8とし、native multimodal対応でAPIとopen-weightを公開。詳細は `llm-releases/deepseek.md`。
 
 ### 2026-09-10
 

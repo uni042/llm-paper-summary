@@ -3,10 +3,10 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-09-10**
+- リリース情報の最終確認: **2026-09-11**
 - 用語・可読性の最終監査: **2026-09-07**
 
-2026-09-10に主要提供元の公式公開を再確認した。9月9日付で追加すべき新規の正式公開・一般提供モデルは確認できなかった。トップ表は各model familyの最新リリースを示す。
+2026-09-11に主要提供元の公式公開を再確認し、9月10日に正式公開されたDeepSeek-V4.1-Flashを追加した。トップ表は各model familyの最新リリースを示す。
 
 噂・リーク・単なる軽微variantは原則含めない。著名なmodel familyで直近半年に主要リリースがない場合は、その系統自体が一覧から消えないよう**直近の主要モデル1件だけ**を期間外として残す。
 
@@ -32,7 +32,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 | 2026-09-02 | Muse Spark 1.3 | Meta Muse | codingとエージェント型タスク（agentic tasks）を更新し、Muse Code / Meta APIへ展開されたMuse Spark系モデル。 | [Meta Muse系](meta-muse.md) |
 | 2026-08-26 | GLM-5.3-Flash | GLM | 総320B / 約18B activeのnative multimodal MoE。sparse / linear attentionを組み合わせ、長context時のattention計算とKV増加を抑える設計。 | [GLM系](glm.md) |
 | 2026-09-01 | Claude Fable 5.1 / Mythos 5.1 | Claude | coding・knowledge work・scienceなど長いmulti-step task向けの上位model群。Mythosはcybersecurity / biology等の専門領域を重点化。 | [Claude系](claude.md) |
-| 2026-08-21 | DeepSeek-V4-Flash-Vision-Exp | DeepSeek | V4-Flash系へimage入力を統合した**experimental** multimodal model。production modelとは分けて記録。 | [DeepSeek系](deepseek.md) |
+| 2026-09-10 | DeepSeek-V4.1-Flash | DeepSeek | 総552BのMoE。入力8B・出力16B activeの非対称構造を採用し、前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8へ削減。native multimodal対応でAPIとopen-weightを公開。 | [DeepSeek系](deepseek.md) |
 | 2026-08-12 | Grok 4.6 | Grok | 長時間agent、coding、visual / interactive taskを重点にした上位model。最大500K-token context。 | [Grok系](grok.md) |
 | 2026-07-16 | Kimi K3 | Kimi | 総2.8T、896 routed experts、16 experts/tokenのopen-weight native multimodal MoE。1M contextでimage / videoと長時間coding taskを対象。 | [Kimi系](kimi.md) |
 | 2026-06-03 | Gemma 4 12B Unified | Gemma | Gemma 4世代の12B級open-weight Unified model。大規模MoEよりweight規模が小さく、量子化時のローカル利用も検討しやすい帯域。 | [Gemma系](gemma.md) |

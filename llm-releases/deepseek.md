@@ -6,6 +6,7 @@ DeepSeekファミリーの主要リリースを新しい順に記録する。初
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-09-10 | DeepSeek-V4.1-Flash | 総552B parameterのMoE。新しい非対称Causal Encoder-Decoder構造で入力時8B、出力時16B parameterをactiveにする。前世代比でKV cacheのHBM要求を1/4、SSD保存量を1/8とし、native multimodal対応。DeepSeek APIの`deepseek-flash`として一般提供され、open-weightも公開。 | https://deepseek.com/en/news/deepseek-v4-1-flash/ |
 | 2026-08-21 | DeepSeek-V4-Flash-Vision-Exp | V4-Flash系のtext能力へimage入力を統合した**実験版（experimental）multimodal model**。正式production modelではなく、vision統合を試験する位置づけとして区別する。 | https://api-docs.deepseek.com/news/news260821/ |
 | 2026-08-13 | DeepSeek-V4-Pro | V4世代の上位production model。複数stepでtoolを使うエージェント能力（agent capability）と、taskに応じて推論量を調整するreasoning-effort controlを強化。App / Web / APIで一般提供。 | https://api-docs.deepseek.com/news/news260813/ |
 | 2026-07-31 | DeepSeek-V4-Flash | V4-Flashの公開beta（public beta）。V4-Proより高速・低cost側を狙いながら、codingやtoolを使うagent taskを対象とし、Responses APIにも対応。 | https://api-docs.deepseek.com/updates/ |
