@@ -7,24 +7,12 @@
       "completed": 5
     },
     "research": {
-      "completed": 67,
+      "completed": 68,
       "superseded": 32,
-      "ready": 2
+      "ready": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-2f3e800f884677dd",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2602.03203",
-      "title": "ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution",
-      "source_url": "https://arxiv.org/abs/2602.03203",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.03203-foresightkv-long-term-contribution-eviction.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-8f64e69f8308e6c7",
       "type": "research",
@@ -38,5 +26,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T21:47:04+00:00"
+  "generated_at": "2026-09-10T21:51:05+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T21:47:06.771570+00:00",
+  "updated_at": "2026-09-10T21:51:08.486755+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2058,14 +2058,14 @@
     {
       "run_key": "2026-09-11T06:30:00+09:00",
       "first_recorded_at": "2026-09-10T21:33:24.225342+00:00",
-      "last_recorded_at": "2026-09-10T21:47:06.771570+00:00",
+      "last_recorded_at": "2026-09-10T21:51:08.486755+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
@@ -2187,6 +2187,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34534370391:1",
+          "recorded_at": "2026-09-10T21:51:08.486755+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34534370391",
+            "run_attempt": "1",
+            "source_sha": "10449beb8c4835559305f5c4142579edd4660ab3"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2243,6 +2257,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.15157",
           "title": "PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2f3e800f884677dd",
+          "type": "research",
+          "canonical_id": "arXiv:2602.03203",
+          "title": "ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution",
           "from": "ready",
           "to": "completed"
         }
