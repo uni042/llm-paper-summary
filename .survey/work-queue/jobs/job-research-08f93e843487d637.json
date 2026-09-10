@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2606.26607",
   "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2606.26607-moebius-runtime-parallelism-switch.md",
   "selection_reason": "MoE推論で低並列時に有利なテンソル並列と高並列時に有利なエキスパート並列を、実行中要求を落とさず切り替える。8×H200のQwen3-235B-A22Bで切替215〜434ms、追加メモリ2.4%、RLロールアウト1.16〜1.25倍高速化を示し、固定並列方式では扱えない負荷変動を対象にする。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-10T22:56:48+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-10T23:04:29+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

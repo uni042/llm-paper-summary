@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T22:56:54.418432+00:00",
+  "updated_at": "2026-09-10T23:04:36.970151+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,14 +2351,14 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T22:56:54.418432+00:00",
+      "last_recorded_at": "2026-09-10T23:04:36.970151+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
@@ -2496,6 +2496,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34540465369:1",
+          "recorded_at": "2026-09-10T23:04:36.970151+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34540465369",
+            "run_attempt": "1",
+            "source_sha": "f78951dc1a2b8b17018428eda32d9a286bb2a4f8"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2568,6 +2582,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-08f93e843487d637",
+          "type": "research",
+          "canonical_id": "arXiv:2606.26607",
+          "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch",
           "from": "ready",
           "to": "completed"
         }
@@ -2695,7 +2717,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,
       "paper_active_count_after": 235,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
