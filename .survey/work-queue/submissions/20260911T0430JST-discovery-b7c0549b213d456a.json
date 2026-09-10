@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b7c0549b213d456a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+      "priority": 92,
+      "reason": "2026-09-04公開の新しいMoE推論研究。GPUに収まらない専門家重みの反復転送を、推論時の置換方策だけでなくルータ側の事後学習まで含めて削減する。Temporal Routerは同一層での時間的再利用を予測して専門家を保持し、Spatio-Temporal Routerは直前層の隠れ状態から次層アクセス前にキャッシュ候補を補正する。Qwen3では比較した先読み法に対し調整済みヒット率を1.15〜18.03ポイント改善し、専門家重み転送量を4.6〜53.3%削減している。既収録のReMoEの時間局所性誘導と近い問題設定だが、キャッシュ専用補助ルータとモデル本体を共同事後学習し、保持と先読みを分離評価する点が比較価値を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2608.11688",
+      "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.11688",
+      "paper_path": "papers/inference/03-expert-prefetch/2026-2608.11688-apex-adaptive-expert-prefetching.md",
+      "priority": 86,
+      "reason": "メモリ制約の強いエッジMoEで、attention実行前に軽量な先読みルータが候補専門家を予測し、信頼度に応じて追加fetch量を動的に決めて専門家ロードを計算と重ねる。固定top-k先読みより過剰転送を抑えつつ99%以上のoverlap accuracyを報告し、厳密なrouting意味論を維持するcorrectness-preserving modeでtoken latencyを最大26%、energy-delay productを最大41%改善する。予測精度だけでなく、正確性保証モードとstall-free近似モードを明示的に分けているため、既存expert prefetch系の実装・品質境界を整理するうえで有用。"
+    },
+    {
+      "canonical_id": "arXiv:2608.00577",
+      "title": "HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.00577",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md",
+      "priority": 80,
+      "reason": "分散エッジMoEで、ネットワーク転送、GPU-CPU専門家ロード、GPU計算と待ち行列、量子化品質損失を同一コストモデルに入れ、配置・常駐・精度とオンラインroutingを一体で最適化する。10サーバの異種testbedで平均推論レイテンシを最大59.0%、P99を最大58.0%、サーバ間通信量を最大72.1%削減し、throughputを2.13倍にしたと報告する。単一ノードのexpert offload/cache研究とは異なり、専門家ロード遅延を含む複数ノード協調routingとして位置付けられるため、MoE配置・通信・オフロードの接点を埋める候補。"
+    }
+  ]
+}
