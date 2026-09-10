@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T23:16:50.514798+00:00",
+  "updated_at": "2026-09-10T23:19:46.887025+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T23:16:50.514798+00:00",
+      "last_recorded_at": "2026-09-10T23:19:46.887025+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2363,7 +2363,7 @@
         "audit_completed": 1,
         "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 20,
+        "new_jobs": 21,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2565,6 +2565,20 @@
             "run_id": "34541415541",
             "run_attempt": "1",
             "source_sha": "ca38bca15dbecc7bf25ba24df97226ab8fe6c06b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34541632371:1",
+          "recorded_at": "2026-09-10T23:19:46.887025+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34541632371",
+            "run_attempt": "1",
+            "source_sha": "35e18a4b9ee86e5e2d1fd42e891c84cdf5f99722"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -2825,6 +2839,13 @@
           "type": "research",
           "canonical_id": "arXiv:2506.11309",
           "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding"
+        },
+        {
+          "job_id": "job-a07bff81409aa153",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
