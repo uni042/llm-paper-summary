@@ -13,7 +13,7 @@
     "paper_specific_dependency_unresolved",
     "github_write_failed_for_one_payload_or_target",
     "github_write_connector_unavailable_while_github_read_still_works",
-    "notion_fallback_unavailable_when_library_fallback_is_available",
+    "google_drive_outbox_save_failed_for_one_payload",
     "pending_replay_failed"
   ],
   "github_write_failure_protocol": {
@@ -26,7 +26,7 @@
     },
     "probe_failure": {
       "classification": "run_wide_github_write_unavailable",
-      "action": "disable further GitHub writes for the remainder of this run, preserve completed payloads via temporary transport, continue read/research/audit work that can be durably checkpointed"
+      "action": "disable further GitHub writes for the remainder of this run, preserve completed payloads via Google Drive outbox temporary transport, continue read/research/audit work that can be durably checkpointed"
     }
   },
   "end_of_run_gate": {
