@@ -13,7 +13,7 @@ Google DriveはGitHubへ直接反映できないtransport payloadを一時的に
 - failed
   - folder id: `1L-BFienHytuHMj5jvV1utsZk2eThRmSf`
 
-Scheduled Chatが書くのは`pending`だけ。Drive ImporterがGitHubへの投入に成功したものだけ`processed`へ移す。不正payloadは`failed`へ隔離する。
+Scheduled Chatが書くのは`pending`だけ。Drive importerがGitHub immutable fallback intakeへの受領を確認したものだけ`processed`へ移す。不正payloadは`failed`へ隔離する。
 
 保存先:
 
@@ -53,35 +53,48 @@ record bankは `.survey/work-queue/records/bank-registry.json` に定義され�
 ## fallback procedure
 
 1. GitHub write失敗時は`worker-router.md`と`continuation-policy.json`でfailure scopeを判定する。
-2. `target_or_payload_specific`なら影響payloadだけDriveへ保存して他のGitHub writeを続けてよい。
+2. `target_or_payload_specific`なら影響payloadだけfallbackへ保存して他のGitHub writeを続けてよい。
 3. `run_wide_github_write_unavailable`ならそのrunでは以後GitHub writeを繰り返さず、完成payloadをDriveへ積み続ける。
 4. Drive保存が失敗したらrun全体を止めず、`fallback-routing.md`に従ってChatGPT Libraryへ切り替える。
 5. Drive pending件数はrun停止理由にしない。
 
 ## offline job seed
 
-GitHub write不能中に実行可能readyが尽きても、Driveが書けるなら新規discoveryを継続する。候補0〜5件を `.survey/work-queue/transport/offline-job-seed.json` に格納し、そのファイルを書き込むenvelopeをpendingへ保存する。
+GitHub write不能中にactionable readyが尽きてもDriveが書けるなら新規discoveryを継続する。候補0〜5件を `.survey/work-queue/transport/offline-job-seed.json` に格納し、そのファイルを書き込むenvelopeをpendingへ保存する。
 
 seedを耐久保存した後は、`fallback-routing.md`の決定論的job IDを使って候補を同じrunで全文精読してよい。完成research payloadもDriveへ複数件積める。
 
-## Drive Importer v3
+## Drive Importer v4
 
-`.github/workflows/drive-outbox-import.yml`は `.survey/scripts/import_drive_outbox_v3.py` を使い、1 runにつき最大1 logical envelopeをGitHubへ投入する。
+`.github/workflows/drive-outbox-import.yml` は `.survey/scripts/import_drive_outbox_v4.py` を使う。
 
-1. oldest-firstでpendingを走査する。
-2. 不正payloadは`failed`へ隔離し、後続を止めない。
-3. Chat transportがbusyならresearch/auditをpendingに残す。
-4. research/auditの対応jobがGitHubにまだ存在しない場合は`deferred_dependency`としてpendingに残し、failedへ送らない。
-5. dependency待ちresearchの後ろにoffline seedや独立update payloadがあれば先に処理してよい。
-6. eligible envelopeを1件だけ適用し、許可領域だけcommit/pushする。
-7. push成功後だけそのDriveファイルを`processed`へ移す。
-8. offline seedが反映されると`survey-helper.yml`が `.survey/scripts/apply_offline_job_seed.py` を実行し、決定論的research jobをGitHubへ実体化する。
-9. 後続Importer runで対応research envelopeがeligibleになる。
+Importerは固定record bankや`chat-inbox.json`へ直接展開しない。1 runにつき最大1 logical envelopeを次へ受け入れる。
 
-この直列化と依存チェックにより、Driveに複数論文や複数seedが溜まっても固定bank/inboxを競合させず回復できる。
+`.survey/work-queue/fallback-inbox/<envelope-id>.json`
 
-## Importer設定
+手順:
 
-Drive Importerが未設定の間はworkflowはidleになるが、Chatからpendingへ保存できるならその保存は有効な耐久checkpointである。Importer設定が有効になった後のscheduleまたは手動実行からbacklogを順次排出する。
+1. oldest-firstでDrive pendingを走査する。
+2. schema、size、path allowlist、内部JSON、research bundle完全性を検証する。
+3. 不正payloadはDrive `failed`へ隔離し、後続を止めない。
+4. 同じ`id`がGitHub fallback-inbox/archiveにあり内容も同一なら、GitHubへ再writeせず重複copyとしてacknowledgeする。
+5. 同じ`id`で内容が異なる場合はID衝突としてfailedにする。
+6. 新規payloadならimmutable fallback-inbox fileを1件作ってcommit/pushする。
+7. GitHub intake成功後だけDriveファイルを`processed`へ移す。
+8. survey-helperが共通concurrency group内で `.survey/scripts/dispatch_fallback_inbox.py` を実行し、eligible envelopeを1件ずつ通常transportへ展開する。
 
-Drive pendingはDrive ImporterだけがGitHubへ再投入する。Scheduled ChatはDrive payloadを手動で二重投入しない。Library pendingだけをScheduled Chatが再投入する。
+この二段階化により、DriveとChatGPT Libraryが同時に復旧しても両者は固定bank/inboxを直接競合しない。
+
+## GitHub secret setup
+
+ActionsからDrive APIを読むため、repository secretとして次を設定する。
+
+- `GOOGLE_SERVICE_ACCOUNT_JSON`: Google service account key JSON全文
+
+そのservice accountにDrive root `llm-paper-summary-outbox` の編集権限を付与する。既存のDrive/Sheets用service accountを再利用してよい。
+
+secretが未設定の間、workflowは成功扱いでidleになり、Drive payloadを消費しない。secret設定後の次回scheduleまたは手動実行から回収を開始する。
+
+## 完了状態の意味
+
+Drive `processed` は**GitHub immutable intakeへの受領済み**を意味する。paper publication完了ではない。publication完了はActions resultと最新queueで判定する。
