@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-bb1862ac766cfb0e",
+  "type": "research",
+  "parent_job_id": "job-88eec749602f23c3",
+  "priority": 92,
+  "canonical_id": "arXiv:2609.03515",
+  "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+  "source_url": "https://arxiv.org/abs/2609.03515",
+  "paper_path": null,
+  "selection_reason": "デコード時KVキャッシュ圧縮で各トークンの重要度スコア設計より、時系列方向の指数移動平均集約とランキング保持が強く効くことを分離実験で示す。InertiaKV-Lazyは全ステップ更新版InertiaKV比1.34〜1.46倍のデコードスループットを報告し、Score-Free条件では初回ランキングを固定して以後のスコア計算を除去しても平均品質差+0.03。6つの公開モデル、LongBench/LongBench-v2/RULERで検証しており、既存KV eviction研究の設計仮定を再検討する重要な新着。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T08:47:40+00:00",
+  "completed_at": "2026-09-10T08:47:41+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2609.03515",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2609.03515"
+  }
+}

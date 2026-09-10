@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-b8ee43b6442cc08d",
+  "type": "research",
+  "parent_job_id": "job-88eec749602f23c3",
+  "priority": 91,
+  "canonical_id": "arXiv:2609.03430",
+  "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
+  "source_url": "https://arxiv.org/abs/2609.03430",
+  "paper_path": null,
+  "selection_reason": "推論過程のKV追い出しでは複雑な重要度スコアが必要という前提を検証し、プロンプト部だけ保護したうえで各attention head内を一様ランダムに追い出しても強い既存selectorと同等品質になると報告する。4モデル・6 reasoning taskで検証し、vLLM実装では強い既存evictorより32〜43%高いスループット。推論トレースの文章上・head間冗長性がランダム追い出しを成立させるという機構分析もあり、KV最適化系統で優先度が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T08:47:40+00:00",
+  "completed_at": "2026-09-10T08:47:41+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2609.03430",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2609.03430"
+  }
+}
