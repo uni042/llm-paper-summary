@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
+  "ok": true,
   "job_id": "job-research-30ac53b1fd4b6037",
-  "validation_error": "ValueError: problem_method.components[0].description is too short",
-  "repair_required": true,
-  "isolated_at": "2026-09-10T18:44:50+00:00"
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/06-moe-expert-offloading/2026-2609.00407-dynande-near-data-expert-scheduling.md",
+    "identity_delta": "survey-state/identity-deltas/arxiv/2609.00407.json"
+  },
+  "job_status": "completed"
 }

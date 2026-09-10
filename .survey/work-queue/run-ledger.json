@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:41:00.109068+00:00",
+  "updated_at": "2026-09-10T18:46:20.550420+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1049,18 +1049,18 @@
     {
       "run_key": "2026-09-11T03:30:00+09:00",
       "first_recorded_at": "2026-09-10T18:34:40.618679+00:00",
-      "last_recorded_at": "2026-09-10T18:41:00.109068+00:00",
+      "last_recorded_at": "2026-09-10T18:46:20.550420+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 7,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -1123,6 +1123,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34516345547:1",
+          "recorded_at": "2026-09-10T18:46:20.550420+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34516345547",
+            "run_attempt": "1",
+            "source_sha": "25596078bca3df1cca4f6b229f6a5ce7914fb817"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1155,6 +1170,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-30ac53b1fd4b6037",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00407",
+          "title": "DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -1201,6 +1224,13 @@
           "type": "research",
           "canonical_id": "arXiv:2609.00407",
           "title": "DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference"
+        },
+        {
+          "job_id": "job-80761b12c62667c8",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
