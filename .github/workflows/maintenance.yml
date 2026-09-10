@@ -1,0 +1,121 @@
+name: survey-maintenance
+
+on:
+  push:
+    paths:
+      - '.survey/work-queue/maintenance-cycle.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-maintenance
+  cancel-in-progress: false
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check whether maintenance is pending
+        id: pending
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          state = json.loads(Path('.survey/work-queue/maintenance-cycle.json').read_text())
+          pending = bool(state.get('maintenance_pending'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'pending={str(pending).lower()}\n')
+          PY
+
+      - name: Install consistency-check dependency
+        if: steps.pending.outputs.pending == 'true'
+        run: python -m pip install --disable-pip-version-check pyyaml
+
+      - name: Run full GC
+        if: steps.pending.outputs.pending == 'true'
+        run: |
+          python .survey/scripts/full_gc.py \
+            --repo-root . \
+            --apply \
+            --report .survey/reports/full-gc-latest.json
+
+      - name: Build post-GC inventory
+        if: steps.pending.outputs.pending == 'true'
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('.')
+          files = []
+          for p in sorted(root.rglob('*')):
+              if not p.is_file():
+                  continue
+              rel = p.relative_to(root)
+              if '.git' in rel.parts or '__pycache__' in rel.parts or '.venv' in rel.parts:
+                  continue
+              if p.name.endswith(('.pyc', '.tmp')):
+                  continue
+              data = p.read_bytes()
+              sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+              files.append({'path': rel.as_posix(), 'sha': sha})
+          Path('/tmp/repo-inventory.json').write_text(json.dumps({
+              'source_commit': 'post-gc-working-tree',
+              'files': files,
+          }, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+      - name: Run repository-wide consistency check
+        if: steps.pending.outputs.pending == 'true'
+        id: consistency
+        shell: bash
+        run: |
+          set +e
+          python .survey/scripts/check_repository.py \
+            --root . \
+            --inventory /tmp/repo-inventory.json \
+            --report .survey/reports/consistency-latest.json
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Finalize maintenance state
+        if: steps.pending.outputs.pending == 'true'
+        run: |
+          python - <<'PY'
+          import datetime as dt, json, os
+          from pathlib import Path
+          state_path = Path('.survey/work-queue/maintenance-cycle.json')
+          state = json.loads(state_path.read_text())
+          gc = json.loads(Path('.survey/reports/full-gc-latest.json').read_text())
+          consistency = json.loads(Path('.survey/reports/consistency-latest.json').read_text())
+          state['maintenance_pending'] = False
+          state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
+          state['last_gc_deleted'] = gc.get('deleted_count', 0)
+          state['last_consistency_status'] = consistency.get('status')
+          state['last_maintenance_status'] = 'passed' if consistency.get('status') == 'passed' else 'issues_found'
+          state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+      - name: Commit maintenance results
+        if: steps.pending.outputs.pending == 'true'
+        shell: bash
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'survey-maintenance: full GC and consistency check'
+          git push
