@@ -2,22 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-npumoe-20260910-2130-v10-a1",
-  "job_id": "job-research-5f7d3af3d5b5fdcc",
+  "attempt_id": "attempt-dualblade-20260910-2130-v10-a1",
+  "job_id": "job-research-fd9249ea2a86e3e2",
   "data": {
-    "hardware": ["Apple M2 Max: 64GB統合メモリ、12コアCPU、16コアApple Neural Engine", "Apple M2 Ultra: 192GB統合メモリ、24コアCPU、32コアApple Neural Engine"],
-    "software": ["Apple Core ML", "Swift実装", "ANEMLLによるモデル変換"],
-    "model": ["Phi-3.5-MoE-Instruct: 約42.6B、16専門家、上位2選択", "Phi-tiny-MoE-Instruct: 約3.8B", "Qwen3-30B-A3B: 48層、128専門家"],
-    "datasets": ["HellaSwag", "BoolQ", "RULER系長文タスク"],
-    "baselines": ["Core ML CPU実行", "Core MLの素朴な既定スケジューリング", "ANEMLLの密モデル向けNPU実行"],
-    "settings": [
-      {"name": "専門家容量とグループ数", "description": "固定専門家容量32/64/128、専門家グループ数4/8などを比較し、NPU起動費、パディング、グラフサイズの交換条件を測る。"},
-      {"name": "長文プリフィル", "description": "入力長1024および4096を中心に、チャンク長256/512/1024を変えてプリフィル遅延、エネルギー、CPUサイクルを比較する。"},
-      {"name": "品質評価", "description": "容量超過トークンを枝刈りした状態でHellaSwag、BoolQ、RULER系課題を評価し、元モデルとの差を測る。"},
-      {"name": "専門家人気度の汎化", "description": "校正時と未見入力・別データセットで上位専門家集合の重なりを測り、静的容量・配置が分布変化へどこまで耐えるか確認する。"}
+    "hardware": [
+      "Intel Core Ultra 7 265K（20コア、3.8GHz）、ホストメモリ16GB、NVIDIA RTX 5060 Ti 16GBの単一GPU構成",
+      "SSD A: Samsung PM9D3a、PCIe Gen5、4KiB LBA、256KiB最大データ転送サイズ",
+      "SSD B: Samsung 990 PRO、PCIe Gen4、512B LBA、2MiB最大データ転送サイズ"
     ],
-    "correctness": "容量超過トークンを重要度で枝刈りするため厳密な等価実行ではない。したがって高速化と品質を別々に評価し、精度低下が1.1%未満、RULER系課題で96.0%を保つことを確認している。",
-    "methodology": "同一チェックポイントとトークナイザを用い、主要演算をFP16で比較する。モデル規模、入力長、専門家容量、グループ数を変え、プリフィル遅延、トークン当たりエネルギー、CPUサイクル、精度を実機で測る。構成要素評価ではグループ化、容量段階、配置を段階的に追加し、GPUとの比較では速度だけでなく消費電力とエネルギーも分離する。",
-    "scope": "全モデル重みがAppleの統合メモリに収まる構成を対象とし、SSDやUFSから専門家重みを都度読み込む容量不足問題は扱わない。主な最適化対象は長文プリフィルで、トークン単位のデコードではNPU起動・同期を償却しにくく利得が小さい。Apple Core MLとApple Neural Engine固有のグラフ制約を前提とするため、他社NPUへの一般化には再設計が必要である。"
+    "software": ["Ubuntu 24.04.2", "Linux 6.8.0", "liburing 2.5", "PyTorch 2.8.0 + CUDA 12.8", "FlexLLMGen commit 004ffefを基盤に改変"],
+    "model": ["OPT-6.7B"],
+    "datasets": [
+      "標準評価は入力512トークン、生成32トークン、バッチサイズ32の合成サービング条件",
+      "実用エッジ評価ではデータ整形のEntity Matching、Data Imputation、Error Detection各タスクを使用"
+    ],
+    "baselines": [
+      "Baseline: 素のFlexLLMGenで全KVアクセスをページキャッシュ経路へ送る",
+      "CachePolicy-Only: ページキャッシュ予算を超えるKVをposix_fadviseで積極追い出しするが、入出力自体は通常ファイル経路",
+      "NVMe-direct-Only: 全KVをio_uring_cmdによるNVMe直接経路へ送り、ページキャッシュを使わない",
+      "DUAL-BLADE: ページキャッシュ予算内を通常経路、超過分をNVMe直接経路へ分離"
+    ],
+    "settings": [
+      {"name": "ホストメモリ制約", "description": "2〜11GBのホストメモリ上限を設定し、KV作業集合よりページキャッシュが小さい領域から余裕のある領域まで連続的に振る。これによりページキャッシュのスラッシングが起こる条件と、DRAMヒットを活用できる条件の双方で比較する。"},
+      {"name": "二種類のSSD", "description": "PCIe Gen5のPM9D3aとPCIe Gen4の990 PROを用い、論理ブロックサイズや最大データ転送サイズが異なる場合でも、ファイルシステム迂回と連続LBA配置の効果が維持されるかを確認する。"},
+      {"name": "KVのみオフロード", "description": "FlexLLMGenのパラメータ退避は無効化し、KVキャッシュだけをホストDRAMとNVMe SSDの間で管理する。したがって測定された差を重み転送ではなくKV入出力経路の差として解釈できる。"},
+      {"name": "パイプライン比較", "description": "2本のコピースレッドを使い、デコード時に同一経路内でSSD読出しを並列化する方式と、一方のSSD入出力を他方のGPU DMAへ重ねる方式を短い試行で比較し、その後は高スループット側を選択する。"}
+    ],
+    "correctness": "KVテンソルの値や注意計算を変更せず、保存場所、入出力経路、転送順序だけを変える。ページキャッシュ経路とNVMe直接経路のどちらから戻しても同じKVをGPUへ渡すため、生成品質は原理上無損失である。",
+    "methodology": "エンドツーエンドではプリフィル遅延とデコード遅延を主要指標とし、ホストメモリ上限を変えて4方式を比較する。構成要素評価ではページキャッシュヒット率、テンソル単位の平均・99パーセンタイル入出力遅延、NVMe busy率、ディスクスループット、LBAアクセス順序、キュー深度別遅延を測る。さらに適応パイプラインの有無をDRAM–SSD階層比率0.3、0.5、0.7で比較し、実用エッジのデータ整形タスクでも確認する。",
+    "scope": "実機の単一GPUエッジ構成を対象とし、GPUとSSDの直接P2P転送が使えない環境を主眼に置く。評価モデルはOPT-6.7B、基盤はFlexLLMGenであり、vLLMやLMCacheへの直接統合、複数GPU・複数ノード、GPU–SSD P2P環境は実証していない。"
   }
 }
