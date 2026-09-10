@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:33:12.602914+00:00",
+  "updated_at": "2026-09-10T17:38:58.526077+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,17 +572,18 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:33:12.602914+00:00",
+      "last_recorded_at": "2026-09-10T17:38:58.526077+00:00",
       "signals": [
         "discovery_or_queue_expanded",
-        "paper_materialized"
+        "paper_materialized",
+        "research_completed"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -615,6 +616,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34509473172:1",
+          "recorded_at": "2026-09-10T17:38:58.526077+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34509473172",
+            "run_attempt": "1",
+            "source_sha": "9b8602987ac0b92bb9fccc668310ffc35cdda74b"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -633,6 +649,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-3825f981fb90605e",
+          "type": "research",
+          "canonical_id": "arXiv:2605.17613",
+          "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -649,6 +673,13 @@
           "type": "research",
           "canonical_id": "arXiv:2605.17613",
           "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference"
+        },
+        {
+          "job_id": "job-4e0bc8f9d84a8444",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
