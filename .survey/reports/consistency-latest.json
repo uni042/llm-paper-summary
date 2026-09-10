@@ -1,17 +1,18 @@
 {
   "schema_version": 2,
-  "source_commit": "post-repair-working-tree",
-  "checked_at": "2026-09-10T09:40:04.202828+00:00",
-  "status": "issues_found",
+  "source_commit": "e9e5b4ab20a7e6b247892b831c5ad37d6b950f7a",
+  "checked_at": "2026-09-10T09:42:14.904735+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 682,
-  "checked_file_count": 682,
+  "inventory_file_count": 687,
+  "checked_file_count": 687,
   "missing_files": [],
   "working_changes": [],
   "checks": [
     "inventory_coverage",
     "all_json_yaml",
     "markdown_file_links",
+    "symlink_targets",
     "frozen_training",
     "state_paths",
     "paper_metadata_and_identity",
@@ -25,56 +26,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 265,
-  "findings": [
-    {
-      "code": "broken_local_link",
-      "path": ".survey/README.md",
-      "detail": ".survey/survey-state/STATUS.md"
-    },
-    {
-      "code": "broken_local_link",
-      "path": ".survey/README.md",
-      "detail": ".survey/docs/survey-workflow/README.md"
-    },
-    {
-      "code": "broken_local_link",
-      "path": ".survey/README.md",
-      "detail": ".survey/survey-state/integrity/README.md"
-    },
-    {
-      "code": "broken_local_link",
-      "path": ".survey/README.md",
-      "detail": ".survey/"
-    },
-    {
-      "code": "paper_missing_canonical_id",
-      "path": "papers/inference/comparison.md",
-      "detail": "Active inference paper requires canonical_id"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/comparison.md",
-      "detail": "title"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/comparison.md",
-      "detail": "summary"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/comparison.md",
-      "detail": "source"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/comparison.md",
-      "detail": "last_audited"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/comparison.md",
-      "detail": "audit_version"
-    }
-  ]
+  "findings": []
 }
