@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-06f2169ce2ecebe4",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "priority": 85,
+      "reason": "複数モデルを同居させるサーバで、KV需要の小さいモデルの未使用GPU HBMを別モデルのプリフィックスKV保存に提供し、NVLink経由で共有する。CPU/SSDへのKV退避を避けつつ、ローカルGPUには現在層のKVだけ残すことで、実ワークロードでP99初回トークン時間を最大69%短縮し最大文脈長を3.98倍に拡張すると報告している。既存のCPU/SSD/CXL階層とは異なる『他モデルの余剰HBM』を中間層として使うため、KV階層メモリの比較軸として重要。"
+    }
+  ]
+}
