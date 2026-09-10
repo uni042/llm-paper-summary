@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-62623041c7897e15",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2509.07379.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-eccffc20cbe9c15a",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 61.2% < 70% (Japanese=5882, Latin=3727)",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T18:28:47+00:00"
 }
