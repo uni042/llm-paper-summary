@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T19:09:27.110886+00:00",
+  "updated_at": "2026-09-10T19:13:42.928146+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1049,18 +1049,18 @@
     {
       "run_key": "2026-09-11T03:30:00+09:00",
       "first_recorded_at": "2026-09-10T18:34:40.618679+00:00",
-      "last_recorded_at": "2026-09-10T19:09:27.110886+00:00",
+      "last_recorded_at": "2026-09-10T19:13:42.928146+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 14,
+        "new_jobs": 15,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -1238,6 +1238,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34519108124:1",
+          "recorded_at": "2026-09-10T19:13:42.928146+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34519108124",
+            "run_attempt": "1",
+            "source_sha": "d8d67d6284de7aacaa36a94de2a0eeeb7011a1d0"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1334,6 +1349,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d714615ee2752483",
+          "type": "research",
+          "canonical_id": "arXiv:2512.04476",
+          "title": "Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems",
           "from": "ready",
           "to": "completed"
         }
@@ -1436,6 +1459,13 @@
           "type": "research",
           "canonical_id": "arXiv:2512.04476",
           "title": "Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems"
+        },
+        {
+          "job_id": "job-27f82c4b8a64d3b2",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
