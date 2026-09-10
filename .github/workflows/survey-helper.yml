@@ -6,6 +6,7 @@ on:
       - '.survey/work-queue/submissions/*.json'
       - '.survey/work-queue/transport/offline-job-seed.json'
       - '.survey/work-queue/transport/request-jobs.json'
+      - '.survey/work-queue/fallback-inbox/*.json'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
@@ -41,6 +42,9 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Dispatch one eligible fallback envelope
+        run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root .
 
       - name: Materialize offline spillover jobs
         run: python .survey/scripts/apply_offline_job_seed.py --root .survey
