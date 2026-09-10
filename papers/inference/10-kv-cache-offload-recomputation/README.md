@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（27本）
+## 自動生成の論文一覧（28本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -45,6 +45,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md) | 同じ長い入力を別のLLMへ引き継ぐと、通常は新しいモデルが最初からprefillして自分用のKVキャッシュを作り直す必要がある。CacheBridgeは元モデルのKVから受信モデルのKVを線形変換で近似し、この再計算を避ける。各KV headを全headから予測する従来法を対応headだけへ限定し、生成品質に効く誤差をattention感度で重く学習し、変換係数の構築もGPU上で融合することで、品質を保ちながら変換器の容量・適用時間・構築時間を削減する。 |
 | [Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap](2026-2608.23658-elastic-kv-cache.md) | vLLMは大きなprefillに備えて一時activation用GPUメモリを常時予約するため、decode中はその領域が遊ぶ。Elastic KV CacheはCUDA仮想メモリを使い、decode中だけその予約領域をKV cacheへ貸し、prefill直前に返す機構を実装する。しかし実験ではprefill chunkを小さくする単純設定でもほぼ同じTTFTでより多くKVを確保でき、複雑なelastic機構の実用上の優位を見つけられなかったというnegative resultが中心。 |
 | [Learning Agent Execution for KV-Cache Management in Agentic Serving](2026-2608.14624-cachescout.md) | 複数のLLMエージェントを順番に呼ぶシステムでは、各エージェント固有のsystem promptやtool定義が何度も再利用される。CacheScoutは『今のエージェントの次に誰が呼ばれやすいか』を実行履歴から軽量に学習し、近く再利用されそうなエージェントの固定prefix KVをGPUに残し、空き時間には次候補のKVを先に作ることで再prefillを減らす。 |
+| [Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention](2026-2608.03555-karat-pnm-retrieval-sparse-attention.md) | 100万トークン級の長文で検索型疎注意を使うLLMでは、毎ステップ読むKV量は減っても全KVキャッシュと索引キーの保存容量は減らない。KARATはKVと索引を大容量LPDDR搭載の汎用処理近傍メモリへ移し、GPUを重み・MoE計算へ専念させ、異種デバイス間をマイクロバッチでパイプライン化することで、同一電力制約下の同時実行数とデコード処理量を高める。 検索型疎注意は、各デコードステップで全履歴から重要な上位kトークンだけを選んで注意計算するため、KV読み出し量を全長Lからkへ減らせる。 |
 | [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md) | GPU HBM・CPU DRAM・NVMe SSDの3階層へKV cacheを置き、**直近のattentionで再利用されそうなKVだけをGPUへ残すこと、必要KVの選択・転送・GPU計算を小さなbatch単位で並行実行すること、SSDから必要blockだけを疎に読むこと**を組み合わせ、長contextでKV全体を毎回転送するI/O待ちを減らす。 |
 | [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md) | NVMe SSD上へ退避したKV cacheを戻す際、CPUが大量の小さなI/O要求を発行する従来方式をやめ、GPU自身がSSDへの非同期I/Oを制御してKVをまとめて転送することで、SSD容量を使いながらDRAM-backed cacheに近い推論性能を狙うsystem。 |
 | [CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration](2026-2604.25080-cacheflow.md) | 以前処理した長いprefixのKVキャッシュがGPU外に退避されているとき、全部をI/Oで戻すか全部を再計算するかの二択にせず、prefixの一部はGPUで再計算し、別部分は外部メモリから読み戻して同時進行させる手法。さらにこの分担をトークン方向だけでなく層方向・複数GPU方向にも広げ、同じバッチ内の複数要求がGPU計算資源とI/O帯域を奪い合う状況までまとめてスケジュールする。 |

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（14本）
+## 自動生成の論文一覧（16本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -23,4 +23,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 | [REST: Retrieval-Based Speculative Decoding](2023-2311.08252-rest-retrieval-speculative-decoding.md) | 小型draft modelを別途学習・実行する代わりに、既存text corpusから現在contextの末尾と一致する過去断片を検索し、その続き候補をTrieへまとめてtarget LLMで一括検証することで、1回のtarget-model passで複数tokenをlosslessに確定する。 |
 | [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md) | 複数の小型draft modelやretrievalが作る候補token列を共通prefixでtreeへまとめ、target LLMにtree全体を1回で並列検証させることで、target modelの巨大weightを読む回数や分散通信回数を減らし、1 verification stepで複数tokenを確定するspeculative inference system。 |
 | [Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models](2026-2609.00355-glance-vlm-speculative-decoding.md) | GLANCEはfrozen VLM targetの融合済みvision-language stateからfuture token blockを1 passでdraftし、wide treeを1 target passで検証するlossless speculative decoder。grounded taskでautoregressive比最大2.93x。free-running textではchain drafterが優位となる境界も示す。 |
+| [DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference](2026-2607.24434-draftexpert-expansion-aware-self-speculative-decoding.md) | 端末上のMixture-of-エキスパート（MoE）推論で、専門家重みをCPUメモリやフラッシュストレージからGPU/NPUへ都度搬送する場合、通常の投機デコードは候補トークンを増やすほどドラフト側・検証側で必要専門家の集合が膨らみ、搬送費が増えて高速化条件を失う。DraftExpertは各MoE層に小さな常駐ドラフト専門家を1個だけ追加し、共有経路＋上位1専門家＋ドラフト専門家という固定フットプリントで候補を作る。自己蒸留で受理率とルーター一致を回復し、予測した検証専門家集合を使う展開量考慮打ち切りと非同期プリフェッチを組み合わせることで、完全な対象モデル検証を保ったまま平均1.45倍のデコード処理量を得る。 |
+| [MoE-Spec: Expert Budgeting for Efficient Speculative Decoding](2026-2602.16052-moe-spec-expert-budgeting-speculative-decoding.md) | Mixture-of-エキスパート（MoE）モデルで木構造の投機デコードを行うと、候補トークンが増えるほど各層で必要になる専門家の和集合が膨らみ、疎な専門家活性化の利点が検証段階で失われる。MoE-Specは、ドラフト木全体のルーター確率を合算して各層で重要な専門家だけを固定予算B個へ絞り、その専門家集合の中で各候補トークンの上位k専門家を再選択して検証する学習不要方式。専門家予算により木の大きさと読み出す専門家数を切り離し、A100実機上のOLMoE、Qwen3-30B-A3B、MixtralでEAGLE系に対し27/30条件で速度を改善し、平均受理長をほぼ維持した。 |
 <!-- survey:auto:end -->

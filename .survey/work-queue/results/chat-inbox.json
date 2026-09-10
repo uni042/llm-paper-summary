@@ -2,12 +2,6 @@
   "schema_version": 1,
   "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-f9f62bef5889e903",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/05-speculative-decoding-moe/2026-2602.16052-moe-spec-expert-budgeting-speculative-decoding.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2602.16052.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "error": "ValueError: paper_path must stay under papers/ without parent traversal"
 }

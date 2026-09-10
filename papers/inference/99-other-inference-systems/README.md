@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（6本）
+## 自動生成の論文一覧（7本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -12,5 +12,6 @@
 | [SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding](2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md) | 通常の投機的decodeではdraft生成→target検証が直列なので、両modelを同じGPU群へ載せるとdraftが終わるまでtarget GPUが待ち、modelごとに最適なtensor parallelismも選べない。SwiftSpecはdraft用GPU群とtarget用GPU群を分離し、draftが次の候補treeを伸ばしている間にtargetが前のtreeを検証する。検証結果に応じてtreeとKV cacheを再rootして有効な枝を再利用し、さらにsmall-batch向け融合kernelで同期・通信overheadを削ることでsingle-request decodeを高速化する。 |
 | [SPIRe: Boosting LLM Inference Throughput with Speculative Decoding](2025-2504.06419-spire-throughput-speculative-decoding.md) | 大batch・長contextの投機的decodeでは、draft modelを極端に小さくするよりも、draft自身のKV cache読出し量を固定的に小さくしつつtargetに近い予測をさせる方がthroughput上有利になり得る。SPIReは、sliding-window型の疎KV、target modelからのpruned initialization、過去のtarget activationを使うfeedback memory、蒸留lossを組み合わせた浅いdraft modelを設計し、acceptance率とdraft 1回あたりのmemory/compute costの両方を最適化する。 |
 | [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md) | multi-GPU MoEで、他GPUから必要dataが全部届くまで待たず、届いた小さな行列単位からexpert GEMMを開始してGPU間通信待ちを計算の裏へ隠すruntime。 |
+| [Launch-Bound and Substitutable: Why Three Inference Optimizations Fail to Pay Off in Mixture-of-Experts Models](2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md) | Mixture-of-エキスパート（MoE）推論で一般的な高速化を局所性能だけで評価すると、実際のエンドツーエンド性能を誤って見積もる問題を実測した研究。OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3Bを用い、融合カーネル、4/8ビット量子化、PyTorchのグラフコンパイルを分解して検証する。融合RMSNormは単体で最大8.98倍高速でもモデル全体ではほぼ無効で、OLMoEが約1000回の小さな逐次カーネル起動に律速されることを示す。またINT4で専門家選択が変化しても、その変化自体が説明する品質低下は2.7%に留まり、ルーティング一致率を守ることが品質維持と同義ではないと因果介入で確認する。 |
 | [RadixMLP — Intra-batch Deduplication for Causal Transformers](2026-2601.15013-radixmlp-intra-batch-deduplication.md) | 同じprefixを含む複数sequenceを1つのbatchで処理するとき、共有prefix部分のMLP・LayerNorm・線形射影をsequenceごとに繰り返さず、同じtoken位置の計算を1回だけ行って結果を各sequenceへ戻すことでprefill計算を削減する。 |
 <!-- survey:auto:end -->
