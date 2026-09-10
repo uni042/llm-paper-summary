@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cxlndp-20260911-0418-v10-a1",
-  "job_id": "job-research-d714615ee2752483",
+  "attempt_id": "attempt-cxlspeckv-20260911-0430-v10-a1",
+  "job_id": "job-research-b3fb5681cc60fed2",
   "data": {
-    "hardware": ["性能評価は1基のH100相当GPUと1基のDDRベースNDPを組み合わせたシミュレーション構成。", "GPUは132 SM、989.4 TFLOP/s、80GB HBM3。", "NDPは512GB、内部帯域512GB/s、64個の4x4シストリック配列群、1GHz。", "GPU-NDP間はPCIe Gen4 x16。"],
-    "software": ["NDPはMoNDEと同じ設定・方法論に合わせてRamulator上に構築する。", "NDP側エキスパートの1〜4ビット重みはGPTQで事前量子化する。", "精度評価はEleutherAI LM Evaluation Harnessを使用する。"],
-    "model": ["Mixtral-8x7B", "Mixtral-8x22B"],
-    "datasets": ["C4（量子化誤差表の校正1024サンプル）", "MMLU 5-shot", "MathQA zero-shot", "HellaSwag zero-shot", "ARC-Easy zero-shot", "ARC-Challenge zero-shot", "BoolQ zero-shot", "WinoGrande zero-shot", "PIQA zero-shot", "TruthfulQA（プリフィル・デコード分布類似性観測）"],
-    "baselines": ["MoNDE: 同じGPU-NDP構成で比較する主要方式。", "HOBBIT: GPUのみで混合精度エキスパートオフロードを行う方式。", "元のフル精度Mixtral: 精度比較の基準でMoNDE相当。", "ビット幅選択器なしの同方式: 平均ビット幅だけを合わせ、重要度に応じた精度配分の効果を分離する。"],
-    "correctness": "性能はシミュレータ上の実行時間・スループットであり、実CXL-NDP試作機の測定ではない。品質については8種類の言語理解・推論課題でフル精度モデルと比較し、量子化による近似誤差を明示的に測る。",
+    "hardware": ["8×NVIDIA A100 80GB GPU、NVLink。", "4×Intel Agilex-7 FPGA、各64GB HBM、CXL 2.0制御器。", "デュアルソケットIntel Sapphire Rapids、計96コア、1TB DDR5。", "GPU-FPGAはPCIe Gen4 x16、FPGAからCXL 2.0 Type-3メモリ拡張器へ接続する構成を論文が記載する。"],
+    "software": ["GPU基準はvLLM。", "CPUオフロード比較はFlexGen、NVMeオフロード比較も含む。", "モデル重みはSmoothQuantによるINT8、活性値FP16設定。", "公開実装FastLM/CXL-SpecKVにはドライバ、C++/Python連携、FPGA RTL、機能試験が含まれる。"],
+    "model": ["LLaMA 2/3 7B〜70B", "Qwen 1.8B〜72B", "Mistral/Mixtral 7B〜47B MoE", "Gemma 2B〜7B", "GPT系1.5B〜13B", "CodeLLaMA/CodeQwen 7B〜34B"],
+    "datasets": ["ShareGPT chatbot", "CNN/DailyMail summarization", "HumanEval code generation", "SQuAD question answering", "WikiText-103 quality evaluation"],
+    "baselines": ["GPU-only vLLM", "FlexGen CPU offload", "NVMe offload", "compression-only", "CXL-NoSpec", "提案方式の圧縮なし・基本構成などのアブレーション"],
+    "correctness": "KV圧縮は近似的であるためWikiText-103のperplexityで品質を測る。投機先読みについては予測命中率、カバレッジ、精度、遠隔アクセス遅延を測るが、予測した将来トークンとまだ未生成の将来KVとの意味対応を検証する専用正当性実験は本文で明示されない。",
     "settings": [
-      {"name": "Mixtral-8x7B性能設定", "description": "32層、各層8エキスパート、上位2選択、総46.7Bパラメータ。各層4個の高重要度エキスパートをGPUへFP16で置き、残り4個をNDPへ置く。NDP側平均3ビットと2ビットを別々に評価し、複数の入力長・出力長でエンドツーエンド遅延とデコードスループットを比較する。"},
-      {"name": "Mixtral-8x22B性能設定", "description": "56層、各層8エキスパート、上位2選択、総140.6Bパラメータ。GPU容量を考慮して各層2個をGPU、6個をNDPへ配置する。平均3ビットと2ビットのNDP実行をMoNDEおよびHOBBITと比較する。"},
-      {"name": "精度設定", "description": "Mixtral-8x7Bで重要度混合係数を0.5とし、C4から1024サンプルを用いて各エキスパート・各ビット幅の損失表を構築する。MMLUのみ5-shot、他7課題はzero-shot。GPU側4エキスパートはFP16、NDP側4エキスパートだけを混合精度化する。"},
-      {"name": "文脈依存性観測", "description": "Mixtral-8x7Bの異なるC4入力でデコード段階のエキスパート選択が系列ごとに大きく異なることを可視化する。TruthfulQAではプリフィルとデコードの層別エキスパート活性確率分布を比較し、全層平均コサイン類似度0.89を報告する。"}
+      {"name": "サービング負荷", "description": "ShareGPTは入力128・出力256トークン級、CNN/DailyMailは入力1024〜2048・出力128〜256、HumanEvalは入力256〜512・出力512〜1024、SQuADは入力64〜128・出力32〜64を用いる。到着は毎秒5〜100要求のPoisson過程として負荷を変える。"},
+      {"name": "CXL-SpecKV階層", "description": "GPUローカルKV領域8〜16GB、GPU先読みバッファ2〜4GB、CXL側64〜256GBを基本とし、4KBページで管理する。既定の投機先読み距離kは4で、直近16トークンを入力する2層LSTMを用いる。"},
+      {"name": "LLaMA2-70B代表設定", "description": "チャットボット負荷でGPU-onlyはバッチ16、CXL-SpecKVはバッチ64など容量拡張を利用した比較を行う。スループット、TTFT、トークン間遅延、CXL/FPGA帯域、消費電力を測る。"},
+      {"name": "品質評価", "description": "LLaMA-70BのWikiText-103で、無圧縮、INT8、INT8+差分、INT8+差分+連長符号のperplexityと圧縮率を比較し、遠隔KV帯域削減が生成品質へ与える影響を分離する。"}
     ],
-    "methodology": "MoNDEのGPU-NDP構成をRamulatorで再現し、CXL接続NDPを大容量DDRと近傍演算器の組としてモデル化する。主要比較ではGPU/NDPの装置条件をMoNDEと揃え、提案方式だけがプリフィル誘導配置とNDP混合精度を使う。HOBBITはGPUのみで外部から重みを読み込む比較対象である。性能評価では入力・出力長を変えてエンドツーエンド遅延、デコードスループット、NDP部分単独の遅延を測る。品質評価はMixtral-8x7Bに限定し、平均3ビット・2ビットで重要度対応の有無を比較する。",
-    "scope": "最大高速化値は実機ベンチマークではなく、既存研究MoNDEと条件を揃えたRamulatorベースのGPU-NDPシミュレーションに基づく。精度は実モデルを評価するが、性能と品質を同一の実CXL-NDP装置上で同時測定したものではない。また評価モデルは各層8エキスパート・上位2選択のMixtral系2種類であり、DeepSeek型の多数エキスパートや共有エキスパートを持つ構成への一般化は実験されていない。"
+    "methodology": "22種類のモデル構成と複数の実サービス風ワークロードを使い、スループット、初回トークン時間、トークン間遅延の中央値/P95/P99、KV容量、装置費用、品質、消費電力を評価する。各測定は5回実行し95%信頼区間を報告するとする。投機機構はkを1、2、4、8、16へ変え、命中率・精度・スループットをアブレーションする。CXL-NoSpecとの比較で先読み効果、圧縮なし構成との比較でFPGA圧縮効果を分離する。",
+    "scope": "論文は実FPGAを含む物理評価基盤を記載し、公開コードも存在するため単純なシミュレーション研究ではない。一方、CXL Type-3メモリとA100間はFPGAを介する独自構成であり、一般的なGPU直接CXLメモリ構成ではない。また最大性能は容量拡張によってGPU-onlyより大きなバッチを実行できる効果も含む。最も重要な未解決点は、将来トークン予測で将来位置KVを先読みするアルゴリズムの因果的意味が本文だけでは成立条件を説明できていないことである。"
   }
 }
