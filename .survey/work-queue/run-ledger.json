@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T22:53:46.340122+00:00",
+  "updated_at": "2026-09-10T22:55:12.445697+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T22:53:46.340122+00:00",
+      "last_recorded_at": "2026-09-10T22:55:12.445697+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2360,9 +2360,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 12,
+        "new_jobs": 13,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2468,6 +2468,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34539724755:1",
+          "recorded_at": "2026-09-10T22:55:12.445697+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34539724755",
+            "run_attempt": "1",
+            "source_sha": "9bcecd4ed3b483dc3473b3c6d01d27643636c2dc"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2521,6 +2535,14 @@
         },
         {
           "job_id": "job-9ac4f6172daefb14",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-09bf82dae3c959dd",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -2612,6 +2634,13 @@
           "type": "research",
           "canonical_id": "arXiv:2408.08147",
           "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale"
+        },
+        {
+          "job_id": "job-f513abae44407875",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -2623,7 +2652,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0741JST-discovery-cbafd4e803a329a5.json",
         ".survey/work-queue/results/20260911T0748JST-discovery-2b92b80082f335b9.json",
-        ".survey/work-queue/results/20260911T0755JST-discovery-9ac4f6172daefb14.json"
+        ".survey/work-queue/results/20260911T0755JST-discovery-9ac4f6172daefb14.json",
+        ".survey/work-queue/results/20260911T0759JST-discovery-09bf82dae3c959dd.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,
