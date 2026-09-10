@@ -1,7 +1,7 @@
 ---
 canonical_id: "ACL:2025.acl-long.633"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -38,6 +38,8 @@ MoEではあるlayerの量子化誤差がhidden stateへ入り、そのhidden st
 
 つまり量子化誤差は、単にexpert出力の近似誤差として終わらず、**routing経路そのものを変えて後段へ増幅する**。
 
+この増幅がMoE量子化をdense FFN量子化より難しくする。dense modelならあるlayerの小さい出力誤差は次layerへ連続値として伝わるが、MoE routerにはTop-kという離散境界がある。2 expertのscoreが近いtokenでは小さなhidden-state誤差でも順位が反転し、その後は全く別のexpert weightを通るため誤差が不連続に大きくなる。EAC-MoEはこの選択境界を守ることを量子化目的へ直接入れる。
+
 ### 2. `QESC`：router上位expertの順位を保つように量子化する
 
 Quantization with Expert-Selection Calibration（QESC）は、通常のMSEだけでなく、routerのTop-k選択を保つことを重視して量子化する。
@@ -45,6 +47,8 @@ Quantization with Expert-Selection Calibration（QESC）は、通常のMSEだけ
 QESC内の `TopK-MSE` は、全expert出力を同じ重みで合わせるのではなく、**router上位へ入るexpertとその出力のずれを重点的に小さくする**損失である。
 
 狙いは「全出力を平均的に近づける」よりも、**元モデルと同じexpert rankingを維持すること**にある。
+
+TopK-MSEで上位候補を重視するのは、router下位expertのscoreを多少誤っても実際のforwardには選ばれず影響しない一方、Top-k境界付近の誤差はexpert-shiftを起こすためである。限られた量子化補正budgetをrouting decisionへ効く部分へ集中し、同じbit幅でもnative execution pathを維持しやすくする。したがってQESCは単なる低bit weight再構成ではなく、MoEの離散expert-selectionを保護するcalibrationである。
 
 ### 3. routingのずれだけでも品質が悪化する
 
@@ -59,6 +63,8 @@ Pruning based on Expert-Selection Frequency（PESF）は、現在の入力sequen
 model-globalな静的pruningではなく、**入力sequenceごとにprune対象が変わる**。
 
 ただしfrequencyを集めるには複数tokenが必要なので、1 tokenずつ進むdecodeへそのまま適用する方式ではない。
+
+PESFはprefill中に同じsequenceの多数tokenを観測できることを利用する。長いprompt内で一度も、あるいはほとんど選ばれなかったexpertはその入力domainでは重要度が低い可能性が高く、後続prefill処理から外すことで実GEMM数を減らせる。ただしdecodeでは将来tokenのroutingが変わる可能性があり、prefill頻度だけを根拠にexpertを恒久削除すると必要expertを失う危険がある。このため適用phaseを分けている。
 
 ## 評価
 

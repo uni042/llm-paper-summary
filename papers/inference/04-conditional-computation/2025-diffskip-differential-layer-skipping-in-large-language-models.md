@@ -1,7 +1,7 @@
 ---
 canonical_id: "ACL:2025.findings-acl.377"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -44,6 +44,8 @@ DiffSkipは、元LLMのFFNをmodelから削除せずに残し、**tokenごとに
 
 論文名の`Differential`はこの**layer変換前後の差分**を利用することに由来する。
 
+論文が利用するもう一つの観察は、同じlayer内でself-attentionによる変化量と後続FFNによる変化量に強い相関があることである。FFNを実際に計算してから『変化が小さかったのでskipすべきだった』と判断しても計算削減にならないため、先に得られるattention側の差分をrouter signalとして使い、これから来るFFNの必要性を予測する。つまり安い前段情報から高価な後段変換の価値を推定する構造になっている。
+
 ### 2. Routerは後半layerだけに置く
 
 初期layerは文脈形成への寄与が大きく、skipすると後続layerへ影響が広がりやすい。
@@ -58,6 +60,8 @@ adapterは元FFNよりかなり小さいが、完全なidentityではない。
 
 このためDiffSkipは「FFNをゼロコストで飛ばす」というより、**大きいFFNを小さい近似変換へ置き換える**方式と見る方が正確である。
 
+adapterが必要なのは、residual connectionがあってもFFNを完全identityにすると、後続layerが学習時に見てきたhidden-state分布からずれるためである。元LLMはfreezeしているので後続weight側をskip入力へ適応させられない。小型adapterだけをfine-tuneして、FFNを省いたtokenを元modelの表現空間へ近づけることで、dynamic routeを追加しても既存checkpointの大部分を変更せずに済む。
+
 ### 4. Skip / executeの離散判断を学習できるようにする
 
 推論時には「FFNを実行する / skipする」の二択だが、そのままでは通常のgradientでrouterを学習しにくい。
@@ -71,6 +75,8 @@ lossには、平均skip数を目標 `k` に近づけるpenaltyを入れる。
 論文では4 skip / 8 skipなど、計算budgetごとに別設定を学習する。
 
 つまり実行時に自由に任意kへ変える方式ではなく、**学習したbudget付近で使う**。
+
+budget penaltyはrouterが全tokenをexecuteして品質だけを最大化する退化解と、逆に全tokenをskipして計算だけを最小化する退化解の間へ誘導する。各token・layerの局所判断は自由でもbatch全体では平均skip数をk付近へ保つため、品質比較を同程度のcompute budgetで行える。kを変えるとrouterが学ぶ境界自体も変わるので、単一checkpointで連続的に任意のspeed-quality点を選べるわけではない。
 
 ### 6. FFNだけをskipし、attentionは残す
 
