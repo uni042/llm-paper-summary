@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
+      "ready": 1,
       "completed": 69
     },
     "audit": {
       "completed": 5
     },
     "research": {
-      "completed": 64,
-      "superseded": 31,
-      "ready": 1
+      "completed": 65,
+      "superseded": 31
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-bef0b595eec012ca",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2602.02987",
-      "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
-      "source_url": "https://arxiv.org/abs/2602.02987",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-01c3d3ead58cced3",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T20:35:50+00:00"
+  "generated_at": "2026-09-10T21:33:21+00:00"
 }
