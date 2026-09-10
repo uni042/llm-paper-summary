@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（28本）
+## 自動生成の論文一覧（29本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -49,6 +49,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md) | GPU HBM・CPU DRAM・NVMe SSDの3階層へKV cacheを置き、**直近のattentionで再利用されそうなKVだけをGPUへ残すこと、必要KVの選択・転送・GPU計算を小さなbatch単位で並行実行すること、SSDから必要blockだけを疎に読むこと**を組み合わせ、長contextでKV全体を毎回転送するI/O待ちを減らす。 |
 | [Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving](2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md) | NVMe SSD上へ退避したKV cacheを戻す際、CPUが大量の小さなI/O要求を発行する従来方式をやめ、GPU自身がSSDへの非同期I/Oを制御してKVをまとめて転送することで、SSD容量を使いながらDRAM-backed cacheに近い推論性能を狙うsystem。 |
 | [CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration](2026-2604.25080-cacheflow.md) | 以前処理した長いprefixのKVキャッシュがGPU外に退避されているとき、全部をI/Oで戻すか全部を再計算するかの二択にせず、prefixの一部はGPUで再計算し、別部分は外部メモリから読み戻して同時進行させる手法。さらにこの分担をトークン方向だけでなく層方向・複数GPU方向にも広げ、同じバッチ内の複数要求がGPU計算資源とI/O帯域を奪い合う状況までまとめてスケジュールする。 |
+| [HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing](2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md) | 長文生成では巨大化したKVキャッシュをCPUへ退避すると転送量が増え、CPU側で注意機構を計算すると今度はCPU計算が律速になる。HybridGenはKVキャッシュをCPU側とGPU側へ分け、各側が手元のKVに対する注意スコアを並列計算し、GPUで結合・正規化する。さらにCPUが次層の計算を投機的に先行し、実行時フィードバックでCPU処理トークン数と選択方式を切り替え、KベクトルをDRAM、VベクトルをCXL拡張メモリへ配置することで、CPU計算・PCIe転送・GPU計算を重ね合わせる。A100/H100/RTX 5090実機で既存のKV選択・退避方式に対し平均最大1.41〜3.2倍の速度向上を報告する。 |
 | [ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference](2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md) | 長contextのKV cacheの大部分をCPU DRAMへ置きながら、GPUにある重要blockはGPU、CPUにしかない重要blockだけはCPUでattentionを計算し、さらに**次layerでCPUが担当するattentionを1 layer早く開始する**ことで、KV転送待ちとCPU計算待ちの両方を減らす。 |
 | [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md) | attentionで一緒に参照されやすいKV cacheを事前にまとめ、そのグループ内のKVを複数SSDへ分散配置することで、1回のKV読み出しを複数SSDから並列に行い、単一SSDの帯域上限を超える実効I/O帯域を得る方式。 |
 | [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md) | full-precisionのKV cacheをCPU DRAMへ置いたまま、GPU上の小さなkey要約だけで現在のqueryに重要なtokenを二段階検索し、選ばれたKVだけをGPUからCPU memoryへ直接読みに行くことで、長い生成中に検索indexが古くなる問題とCPU検索・CPU主導転送の待ち時間を同時に減らすKV retrieval system。 |

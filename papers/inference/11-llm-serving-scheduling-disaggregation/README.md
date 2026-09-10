@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（47本）
+## 自動生成の論文一覧（49本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -48,6 +48,8 @@
 | [When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference](2026-2608.03741-heteropanacea.md) | LLM推論を一台・一種類のGPUでまとめて処理する代わりに、入力処理と逐次生成、さらに注意機構とFFNを最大4種類の計算機群へ分けたとき、通信コストを払ってでも速くなる条件をシミュレーションで調べた研究。各段に計算重視・メモリ帯域重視の異なるハードウェアを割り当てられる場合ほど4段分離が効き、同じGPUしか選べない環境では細かく分ける意味が小さくなる。 |
 | [PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs](2026-2606.26666-persistentkv.md) | 長い文脈の逐次生成では1回に1トークンしか計算しないため、少数要求だとGPUへ十分な仕事を出せない。PersistentKVは既存のページ化KVキャッシュを作り直さず、長い系列を複数区間へ分けて同時処理し、長さの違う要求が混ざる場合は実際に必要な区間だけを小さな作業キューへ詰める。常に独自カーネルを使うのではなく、推定上得な条件だけFlashInferから切り替えることでRTX 3060上の長文decodeを改善する。 |
 | [RTP-LLM: High-Performance Alibaba LLM Inference Engine](2026-2605.29639-rtp-llm.md) | Alibabaで実運用されているLLM推論基盤。単一の高速化手法ではなく、入力処理と逐次生成の分離、GPUから分散ストレージまでのKVキャッシュ階層、キャッシュを再利用しやすい要求振り分け、大規模モデルの高速読込、投機的復号、量子化、MoE・画像入力対応を一つの提供基盤へ統合し、実トラフィックを使って各機構の効果を評価する。 |
+| [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md) | 外部APIや検索、外部モデルを呼び出す拡張LLMでは、生成が途中で停止して外部応答を待ち、その後に同じ要求が再開する。このため通常の到着順スケジューリングでは、長い要求や停止中要求が後続の短い要求を塞ぎ、GPU上に残す・CPUへ退避する・破棄して再計算するというKVキャッシュ処理によって実行時メモリも大きく変動する。AugServeは、出力長と外部呼び出し時間の軽量予測、実際の停止・再開状態を反映する状態認識型の要求優先順位、空きGPUメモリと回収可能な停止中KVを数える動的トークン予算を統合する。vLLM上の実装で、主要評価ではvLLM比7.5倍、INFERCEPT比5.7倍の有効スループットを示し、初回トークン待ち時間も約96%削減した。 |
+| [STAR: Decode-Phase Rescheduling for LLM Inference](2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md) | プリフィル・デコード分離サービングでは、プリフィル終了時に要求をデコードGPUへ一度割り当てても、その後の生成長が大きく異なるため時間経過とともにデコード負荷が崩れる。STARは対象LLM最終層の最後のトークンの隠れ状態を4層MLPへ入力し、残り生成長を低追加費で継続予測する。その予測と現在のトークン負荷を用いて過負荷・低負荷デコードインスタンスを識別し、KVキャッシュ移送費を回収できる要求だけを候補化して、負荷分散効果が最大の移行を周期的に実行する。vLLMのプリフィル・デコード分離構成に対して最大2.63倍の有効スループット、P99出力トークン時間75.1%削減を報告し、メモリ不足も防止する。 |
 | [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md) | clientごとのGPU利用量を公平に保ちつつ、**公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じprefixを持つrequestを続けて処理しKV再利用を増やす**scheduler。複数GPUではさらにprefix localityとGPU間load balanceも同時に調整する。 |
 | [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md) | interactive requestのlatency目標を守りながら余ったGPU capacityをbatch requestへ使うため、**各GPUで同時処理するrequest数を素早く増減する制御**と、**cluster全体のGPU instance数を遅い周期で増減する制御**を分けたLLM autoscaler。 |
 | [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md) | 最終的な出力token数を正確に当てる代わりに、promptから**どのrequestが他より短く終わりそうかという順位だけ**を小型modelで予測し、短そうなrequestを先に処理して長いrequestによるqueue待ちを減らすscheduler。 |

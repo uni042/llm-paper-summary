@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（9本）
+## 自動生成の論文一覧（10本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -16,4 +16,5 @@
 | [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md) | 使われやすい部分だけをスマホの高速メモリへ置き、CPU・NPU・フラッシュストレージを役割分担させて大規模LLMを動かす推論システム。 |
 | [EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs](2026-2609.06551-estream.md) | スマートフォンのNPUでMoEの入力処理を行うとき、全専門家重みをDRAMへ常駐させず、必要な専門家群だけをUFSストレージから固定サイズの作業領域へ順番に読み込み、NPU計算と重み読出しを重ねるシステム。動的に変わる専門家選択を静的グラフ型NPUで扱うため、全専門家で同じ計算グラフを共有し、実行時にはルート情報と重みアドレスだけを差し替える。 |
 | [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md) | スマートフォンで他アプリがRAMを要求したとき、LLMのweightとKV cacheを必要量だけ細かく退避し、KVは圧縮RAMとFlash storageへ分散、weightは後ろのlayerから退避して前のlayerから推論を再開することで、memoryを空けながら復帰時のTime-to-First-Token（最初のtokenが出るまでの時間）を短縮するsystem。 |
+| [Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design](2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md) | 巨大な混合専門家モデル（Mixture-of-エキスパート; MoE）をローカル機で動かす際、従来は量子化やルーティング変更で容量を削るか、専門家計算をCPUへ置くため長い入力処理がCPU演算性能に律速され、デコードもDRAM帯域を十分使い切れない。著者らは重みの正本を大容量CPUメモリに保ちながら、入力処理では必要な重みをGPUへ細粒度に流して計算と転送を重ね、少数GPUでは通信量を減らす専門家並列を用いる。一方デコードではCPU側のFP8行列ベクトル積、NUMAを意識した細粒度並列、CPUのMoE計算とGPUの注意計算を二つの要求間で重ねる。2基のAMD EPYC 9355と1～2枚のRTX 5090を用いた実機で、元のFP8品質を保ったDeepSeek-R1級モデルについて32K入力を30秒以内、単一デコード21.5トークン/秒、二要求合計33.6トークン/秒を示し、ローカルMoEをクラウド級の応答目標へ近づける。 |
 <!-- survey:auto:end -->
