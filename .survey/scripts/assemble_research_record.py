@@ -20,6 +20,7 @@ from japanese_style import (  # noqa: E402
     japanese_ratio,
     record_prose_text,
 )
+from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 from render_paper import render_paper  # noqa: E402
 
 TRANSPORT_VERSION = 10
@@ -32,11 +33,6 @@ MAX_SLOT_BYTES = {
 }
 FIXED_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 LEGACY_PAYLOAD = ".survey/work-queue/payloads/chat-payload.md"
-SLOT_NAMES = ["metadata", "problem_method", "evaluation", "results", "positioning"]
-BANK_ROOTS = {
-    "a": ".survey/work-queue/records/chat-record",
-    "b": ".survey/work-queue/records/chat-record-b",
-}
 
 
 def slots_for_bank(bank: str) -> list[tuple[str, str]]:
@@ -94,13 +90,7 @@ def prose_chars(value: Any) -> int:
 
 
 def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
-    """Normalize ordinary English prose terms before final validation/rendering.
-
-    Transport slots remain immutable and blob-verified. This operates only on the
-    in-memory render record, so a mechanically fixable terminology miss does not
-    strand an otherwise complete fallback payload. Identifiers, URLs, titles,
-    names, and source metadata are intentionally left untouched.
-    """
+    """Normalize ordinary English prose terms before final validation/rendering."""
     protected_keys = {
         "canonical_id", "arxiv_id", "doi", "openreview_id", "source", "sources",
         "code", "paper_path", "attempt_id", "job_id", "published", "title",
@@ -217,9 +207,7 @@ def validate_record(record: dict[str, Any]) -> None:
         )
     bare = find_bare_english(prose)
     if bare:
-        preview = ", ".join(
-            f"{hit.term}->{hit.preferred} x{hit.count}" for hit in bare[:12]
-        )
+        preview = ", ".join(f"{hit.term}->{hit.preferred} x{hit.count}" for hit in bare[:12])
         raise ValueError(
             "Japanese-first terminology violation; replace ordinary English prose "
             f"with Japanese/katakana or put the formal English name only in the first parentheses: {preview}"
