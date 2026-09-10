@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 39
+      "completed": 39,
+      "ready": 1
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "superseded": 23,
-      "completed": 41,
-      "ready": 1
+      "completed": 42
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-53e88cd1653ca310",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arxiv:2608.21614",
-      "title": "SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning",
-      "source_url": "https://arxiv.org/abs/2608.21614",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.21614-saem-stage-aware-expert-management-cot.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-e7daaf93cae1285e",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T14:44:41+00:00"
+  "generated_at": "2026-09-10T14:49:52+00:00"
 }
