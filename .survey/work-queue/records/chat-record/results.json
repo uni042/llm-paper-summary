@@ -2,24 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-hillinfer-20260910-2238-v10-a1",
-  "job_id": "job-research-d6f5d309a2038fcd",
+  "attempt_id": "attempt-hymcache-20260910-2259-v10-a1",
+  "job_id": "job-research-8d7a64859cb47bc2",
   "data": {
-    "overview": "HillInferは、標準SSDから重要度評価用KVをホストへ繰り返し運ぶ方式や、CPU側で重要度評価して層ごとに先読みする方式に比べ、SmartSSD内で軽量評価を終えて選択KVだけを戻すことで長文条件の入出力待ちを大幅に削減する。LongBenchを中心とする評価ではエンドツーエンド遅延を76.25〜88.32%削減し、4.21〜8.56倍の高速化を報告する。OPT-6.7Bのバッチ10では既存ホスト中心方式が50秒を超える一方、HillInferは25秒未満を維持する。精度は全KV保持や既存重要度方式と同程度で、利得は低精度KV本体ではなく重要度評価と階層配置の効率化から得る。",
+    "overview": "HyMCacheは、SSDを容量層にしながら接頭辞読出しを内部DRAMへ先回りして置くことで、同じDRAM予算のローカルLMCacheより単一ノードで3.0倍、プリフィル・デコード分離構成で1.45倍の性能を示す。一方、1TBの遠隔DRAMだけを使うDistributed Mooncakeよりは約30%遅いが、必要DRAM量を16分の1に減らす。Qwen2.5-32Bの後半ターンでは遠隔命中率が74%に達し、容量不足で命中率が落ちるGPU・ローカルDRAM方式を上回る。つまり利得はSSDそのものをDRAM並みに速くするのではなく、容量をSSDで確保し、読出しの重要経路だけを小容量DRAMとプリフェッチで覆うことから得られる。",
     "key_results": [
-      {"metric": "エンドツーエンド推論遅延", "value": "76.25〜88.32%削減", "baseline": "H2O型、InfiniGen型先読み、LeoAM型を含む比較方式", "condition": "LongBenchを用いたLongChat-7B、Qwen-7B、OPT-6.7B等の長文評価", "interpretation": "SmartSSD側で低温KVの重要度を評価して生KVの往復を避け、DRAM高温プールと適応先読みで残った転送を隠す効果が合算される。"},
-      {"metric": "高速化倍率", "value": "4.21〜8.56倍", "baseline": "既存重要度評価・先読み方式群", "condition": "PG-19およびLongBench、複数モデル", "interpretation": "文脈が長いほど標準SSD経路の重要度評価用転送が増えるため、近データ評価の利得が拡大する。"},
-      {"metric": "大バッチ時遅延", "value": "バッチ10で25秒未満、ホスト中心方式は50秒超", "baseline": "H2O型およびInfiniGen型先読み", "condition": "OPT-6.7B、系列長2048（入力1920、出力128）、バッチ1〜10", "interpretation": "KV量が増えてPCIe入出力圧力が上がっても、重要度評価をストレージ内部へ残すため遅延増加が緩やかになる。"},
-      {"metric": "重要度評価用SSD転送の動機測定", "value": "12K文脈でKVの20〜30%転送が2秒超", "baseline": "通常SSDからホストへKVを読み出して評価する構成", "condition": "Qwen-7B、バッチ8、SSD実効帯域約6.85GB/s", "interpretation": "完全KVをSSDへ置けても、毎デコード段に評価用データをホストへ運ぶ方式ではストレージ帯域が注意計算時間を上回る根本原因を示す。"},
-      {"metric": "モデル精度", "value": "全KV保持・H2O型・先読み型と同程度", "baseline": "全KV保持、H2O型、先読み型", "condition": "OpenBookQA、RTE、PIQA、COPA、複数モデル、KV保持率を変更", "interpretation": "重要度スコアだけを低精度化し、実際の注意計算へ戻すKV本体はFP16原本を使うため、ストレージ処理による追加のモデル値近似を避けている。"}
+      {"metric": "同一DRAM予算での単一ノード性能", "value": "ローカルLMCache比3.0倍", "baseline": "ローカルLMCache", "condition": "Llama-3.1-8B、LMSYS複数ターン、同一DRAM予算", "interpretation": "ローカルLRUでは初期接頭辞が追い出されると連続した接頭辞命中が崩れるが、SSD容量を背後に持つHyMCacheは後半ターンでも高い再利用率を維持できる。"},
+      {"metric": "プリフィル・デコード分離構成の性能", "value": "ローカルLMCache比1.45倍", "baseline": "各プリフィルワーカー64GBのLMCache", "condition": "4P-1D-1S、実機CXL-HM、複数ターンKV再利用", "interpretation": "ワーカーごとのDRAM容量に閉じず、共有SSD容量へ接頭辞を残しつつ必要な部分だけデバイスDRAMへステージングすることで容量命中率を高める。"},
+      {"metric": "1TB遠隔DRAMとの交換条件", "value": "約30%低い性能、DRAM使用量は16分の1", "baseline": "Distributed Mooncake 1TB遠隔DRAM", "condition": "同じプリフィル・デコード分離評価", "interpretation": "純DRAMの低遅延には届かないが、64GB程度の内部DRAMをSSDのステージング窓として使うことでTB級KV容量を大幅に低いDRAM量で構成できる。"},
+      {"metric": "Qwen2.5-32B第7ターンの遠隔命中率", "value": "HyMCache 74%、Mooncake 65%、LMCache 20%、GPU接頭辞キャッシュ12%", "baseline": "Mooncake、LMCache、GPU接頭辞キャッシュ", "condition": "AIPerf合成トレース、再利用KVワーキングセット約1.5TBまで増加", "interpretation": "容量が増える後半ほどSSDを持つ共有階層の命中率が維持され、容量の小さい上位キャッシュとの差が広がる。"},
+      {"metric": "Qwen2.5-32B第7ターンの中央値TTFT", "value": "HyMCache 11.1秒、Mooncake 7.3秒、LMCache 16.1秒、GPU接頭辞キャッシュ17.2秒、再計算27.4秒", "baseline": "各比較方式", "condition": "同じAIPerf後半ターン", "interpretation": "HyMCacheは高い命中率で再計算を避けるがSSD読出しとステージングが残るため、純遠隔DRAMのMooncakeよりTTFTは長い。"},
+      {"metric": "プリフェッチ単体効果", "value": "単体測定で37%改善、LMSYSで平均帯域35%以上向上、実行時間14%短縮", "baseline": "プリフェッチ無効", "condition": "LMSYS 512会話、同時実行数64、後半ターンの外部命中率90%以上", "interpretation": "SSD読出しをRDMA消費より前に内部DRAMへ重ねることで、ピーク帯域を200Gbpsのネットワーク上限近くまで引き上げ、要求の重要経路から媒体待ちを部分的に隠す。"},
+      {"metric": "NVMe-oF経路差", "value": "生ブロック経路約23GB/s、XFS順次読出し約6.5GB/s", "baseline": "XFSを通るNVMe-oF構成", "condition": "プリフィルワーカー側遠隔SSD読出し", "interpretation": "SSD帯域だけでなく一般ファイルシステムとソフトウェア経路が重要経路を制限することを示し、CXL-HMの直接アドレス可能な構成が有利になる。"}
     ],
     "negative_results": [
-      {"name": "重要KV保持率には精度との交換条件が残る", "description": "論文は重要度保持率10〜20%が性能と精度の良い範囲とする。HillInfer固有の低精度スコアは精度を悪化させないと報告されるが、そもそもの疎なKV選択自体は全KV注意と完全に同一の計算ではなく、保持率を過度に下げれば精度影響が生じ得る。"},
-      {"name": "SmartSSDは通常SSDより特殊なハードウェア", "description": "単一の市販製品を用いているものの、FPGA付き計算ストレージが前提であり、一般的なNVMe SSDへソフトウェアだけで適用できる方式ではない。導入コストと利用可能な製品・開発環境が制約になる。"},
-      {"name": "評価は単一PC中心", "description": "RTX 4090、Xeon、64GB DRAM、1台のSamsung SmartSSDを中心とするため、複数GPUサーバーや共有SSD、複数テナント競合、異なるSmartSSD世代での再現性は別途必要である。"},
-      {"name": "異種負荷分散は事前プロファイルに依存", "description": "適応先読みの容量比はCPU・FPGA処理性能とPCIe帯域を初期プロファイルして求める。共存負荷や温度・SSD状態で実効性能が大きく変化する場合、補正式だけでは最適比から外れる可能性がある。"}
+      {"name": "純DRAMより遅い", "description": "1TB遠隔DRAMのDistributed Mooncakeに対してHyMCacheは約30%性能が低い。SSD媒体遅延、内部DRAMへのステージング、RDMA転送が残るため、容量単価の改善と引き換えに遅延を支払う。"},
+      {"name": "書込み見送りで将来命中を失う", "description": "読出しを守るため書込みバッファが満杯なら新しいKV挿入を見送り、高負荷条件では15%を超える潜在挿入が省略される。現在ターンの正しさは維持されるが、後続ターンではそのKVを再計算する可能性がある。"},
+      {"name": "ホストDRAMを完全には不要にしない", "description": "遠隔RDMA読出しからGPUへ渡す一時領域として既定5GB程度のホストバッファを使い、感度評価では10GB前後も扱う。SSDバック共有階層は大容量DRAMを減らすが、転送用ホストメモリまでゼロにする方式ではない。"},
+      {"name": "接頭辞予測性への依存", "description": "利得は複数ターンで同じ接頭辞を順に再利用する読み中心ワークロードを利用する。再利用先がランダムで将来読出しを予測できない場合、プリフェッチ窓へ持ち上げたデータが使われずSSD帯域と内部DRAMを浪費し得る。"}
     ],
-    "interpretation": "HillInferの中心的な示唆は、SSD階層を使うKV管理で『KVをどこに置くか』だけでなく、『重要度を判定するためにどこまでKVを動かすか』が支配項になることである。計算ストレージに完全注意を押し込むのではなく、順位付けに必要な最小演算だけをデータ近傍へ置けば、FPGA資源を抑えながら外部PCIe転送を削れる。そのうえで時間局所性と長期命中率を使ってDRAMへ高温KVを固定し、CPUとSmartSSDの非対称な処理性能を容量配分へ反映するため、単純なSSDオフロードよりシステム全体の待ちを小さくできる。",
-    "quality_impact": "SmartSSD側のINT8/INT4はトークン重要度の順位計算だけに適用し、選択されたKV本体はFP16原本をGPUへ転送する。ただしHillInferは重要トークンだけを保持する疎なKV方式を土台にするため、数学的に全KV注意と完全同一という意味での無損失ではない。論文の精度評価では10〜20%保持率で比較対象と同程度の品質を報告している。"
+    "interpretation": "結果は、共有KV階層で最も高価な資源を全ワーキングセット分用意する必要はなく、アクセス順序が予測可能なら重要経路に必要な短い時間だけDRAMを割り当てればよいことを示す。後半ターンほど保存KV量が増えるため、小容量GPUやローカルDRAMでは接頭辞の先頭が追い出され、途中のブロックが残っていても連続接頭辞として再利用できなくなる。HyMCacheはSSD容量によって接頭辞全体を残し、内部DRAMを循環窓として使うことでこの容量問題を解く。ただし媒体遅延そのものは消えないので、遠隔DRAMとの性能差は残る。",
+    "quality_impact": "KVキャッシュ内容を量子化・枝刈りせず保存済み値を再利用するため、近似による品質交換は導入しない。準備が遅いKVは10秒待った後に通常のプリフィル再計算へ戻るため、再利用失敗は遅延増加にはなるが生成内容を欠損させない。"
   }
 }
