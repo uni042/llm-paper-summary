@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T23:21:01.670446+00:00",
+  "updated_at": "2026-09-10T23:22:13.766962+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T23:21:01.670446+00:00",
+      "last_recorded_at": "2026-09-10T23:22:13.766962+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2361,9 +2361,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 1,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 24,
+        "new_jobs": 26,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2597,6 +2597,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34541807482:1",
+          "recorded_at": "2026-09-10T23:22:13.766962+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34541807482",
+            "run_attempt": "1",
+            "source_sha": "26fcfdfe4f785dd11694b5e927bd276604ffdf4c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2714,6 +2728,14 @@
         },
         {
           "job_id": "job-a07bff81409aa153",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e5f6131772d61147",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -2889,6 +2911,20 @@
           "type": "research",
           "canonical_id": "arXiv:2604.07609",
           "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC"
+        },
+        {
+          "job_id": "job-research-3359a87c6e6d5cd4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.03079",
+          "title": "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference"
+        },
+        {
+          "job_id": "job-research-6fd5366a48843732",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08682",
+          "title": "HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing"
         }
       ],
       "new_paper_ids": [
@@ -2905,7 +2941,8 @@
         ".survey/work-queue/results/20260911T0802JST-discovery-f513abae44407875.json",
         ".survey/work-queue/results/20260911T0815JST-discovery-527bd72a0f02b02a.json",
         ".survey/work-queue/results/20260911T0817JST-discovery-8d98bc0d01484eb6.json",
-        ".survey/work-queue/results/20260911T0821JST-discovery-a07bff81409aa153.json"
+        ".survey/work-queue/results/20260911T0821JST-discovery-a07bff81409aa153.json",
+        ".survey/work-queue/results/20260911T0823JST-discovery-e5f6131772d61147.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,

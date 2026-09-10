@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3359a87c6e6d5cd4",
+  "type": "research",
+  "parent_job_id": "job-e5f6131772d61147",
+  "priority": 82,
+  "canonical_id": "arXiv:2609.03079",
+  "title": "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
+  "source_url": "https://arxiv.org/abs/2609.03079",
+  "paper_path": "papers/inference/09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
+  "selection_reason": "モバイル・組み込み環境で推測と修正をストリーミング化し、限られた端末資源でLLM推論を高速化する実装系研究。データセンター中心の既存系統とは異なるオンデバイス推論の補完候補である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T23:22:08+00:00",
+  "artifact_transport": "structured_record_v10"
+}
