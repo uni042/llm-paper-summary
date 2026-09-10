@@ -21,31 +21,31 @@ code: "https://github.com/Jyk-122/D-LLM"
 last_checked: "2026-09-02"
 ---
 
-# D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models
+# D-LLM: A トークン 適応型 Computing Resource Allocation Strategy for Large Language Models
 
-> 各token・各layerで「このlayerを実行するか」を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。
+> 各トークン・各層で「この層を実行するか」を小型moduleが判断し、skipしたトークンのKVも後続attentionから外すことで、計算量とKV使用量をトークンごとに変える。
 
 ## 概要
-D-LLMは、**各token・各layerごとに「このlayerを実行するかskipするか」を学習する**dynamic depth方式である。
+D-LLMは、**各トークン・各層ごとに「この層を実行するかskipするか」を学習する**動的 depth方式である。
 
-系列全体を同じ深度で処理するlayer pruningとは異なり、同じlayerでもtoken Aは実行、token Bはskipという分岐が起こる。難しいtokenへ多くの計算を割き、単純なtokenは浅く処理することを狙う。
+系列全体を同じ深度で処理する層 枝刈りとは異なり、同じ層でもトークン Aは実行、トークン Bはskipという分岐が起こる。難しいトークンへ多くの計算を割き、単純なトークンは浅く処理することを狙う。
 
-各layerの前に小型decision moduleを追加し、目標計算量 `Ω` に近づくようskip率を学習する。さらに、skipしたtokenのKVを後続attentionから隠すことで、computeだけでなくKV容量も削る。
+各層の前に小型decision moduleを追加し、目標計算量 `Ω` に近づくようskip率を学習する。さらに、skipしたトークンのKVを後続attentionから隠すことで、computeだけでなくKV容量も削る。
 
 Llama 2 7Bではfull-depth LoRAの約55〜59%のFLOPs、Llama 3 8Bでは約52〜55%程度まで減らしながら、多くのtaskで同等以上の品質を示す。ただし論文の中心指標はFLOPsで、**FLOPs半減＝wall-clock 2倍高速化を実証した研究ではない**。
 
 ## 手法のあらまし
 
-### 1. 小型moduleがtokenごとにexecute / skipを決める
+### 1. 小型moduleがトークンごとにexecute / skipを決める
 
-各Transformer layerの直前に小型moduleを置き、現在のhidden stateから、
+各Transformer 層の直前に小型moduleを置き、現在のhidden stateから、
 
-- このlayerを実行する
-- このlayerをskipする
+- この層を実行する
+- この層をskipする
 
 の2択を出す。
 
-この判定がtoken単位なので、同一batch・同一layerでも実行経路が分かれる。
+この判定がトークン単位なので、同一バッチ・同一層でも実行経路が分かれる。
 
 ### 2. 0/1のskip判断を学習できるよう、学習時だけ滑らかな近似を使う
 
@@ -53,31 +53,31 @@ execute / skipは本来0/1の離散判断なので、そのままでは通常の
 
 D-LLMは学習中だけGumbel-Softmaxという方法で「execute寄り / skip寄り」の連続値を作り、forwardではhardな0/1選択を使いつつ、backwardでは連続値のgradientを利用する。
 
-要するに、**推論時は本当にlayerを飛ばすが、学習時だけ微分可能な近似を使う**。
+要するに、**推論時は本当に層を飛ばすが、学習時だけ微分可能な近似を使う**。
 
 ### 3. 平均skip率を目標計算量 `Ω` に近づける
 
-単に「skipできるところは全部skip」と学習すると、品質重視ならほぼ全layer実行、計算量重視なら過剰skipへ崩れやすい。
+単に「skipできるところは全部skip」と学習すると、品質重視ならほぼ全層実行、計算量重視なら過剰skipへ崩れやすい。
 
 そこで平均skip率と指定した目標 `Ω` の差をlossへ加え、全体の計算量を狙ったbudgetへ寄せる。
 
 `Ω`を変えることで、品質重視・計算量重視の別modelを作れる。
 
-### 4. 最初の2 layerは必ず実行する
+### 4. 最初の2 層は必ず実行する
 
-初期layerまで動的にskipすると表現形成が不安定になるため、実験では最初の2 layerをdecision対象外にする。
+初期層まで動的にskipすると表現形成が不安定になるため、実験では最初の2 層をdecision対象外にする。
 
-全32 layerを完全自由にrouteしているわけではない。
+全32 層を完全自由にrouteしているわけではない。
 
 先頭層を固定することは学習安定性だけでなく、すべてのトークンが共有する最低限の表現基盤を確保する役割も持つ。各トークンが最初から別経路へ分かれると、後段の決定モジュールが受け取る隠れ状態の分布まで大きくばらつくため、実行／スキップ判断の学習が難しくなる。固定前段を置くことで、動的分岐を後半の冗長性が大きい領域へ限定している。
 
-### 5. SkipしたtokenのKVも後続attentionから外す
+### 5. SkipしたトークンのKVも後続attentionから外す
 
-D-LLMでは、あるtokenがlayer `l` をskipした場合、そのtokenのK/Vを後続queryから参照させない。
+D-LLMでは、あるトークンが層 `l` をskipした場合、そのトークンのK/Vを後続queryから参照させない。
 
-これによりlayer計算だけでなくKV storageも減らせる。
+これにより層計算だけでなくKV storageも減らせる。
 
-ただし長距離文脈を失いやすくなるため、文頭の最初 `m` tokenは必ずKVを残す。本実験では `m=2` が最良だった。
+ただし長距離文脈を失いやすくなるため、文頭の最初 `m` トークンは必ずKVを残す。本実験では `m=2` が最良だった。
 
 このKV除外が必要なのは、あるトークンが層を飛ばした場合、その層にはそのトークンのK/Vが存在しないからである。後続トークンだけが同じ層を実行して欠損した位置を通常のAttention対象に含めると、系列内で参照可能な状態が不整合になる。D-LLMは欠損位置を明示的にAttention対象から外し、『計算しなかった状態を存在するものとして扱わない』ことで動的深度とKVキャッシュを整合させる。
 
@@ -87,15 +87,15 @@ D-LLMでは、あるtokenがlayer `l` をskipした場合、そのtokenのK/Vを
 
 決定モジュールの判断は、その判断によって途中層を飛ばした状態でも最終タスクを解けるようにモデル本体と共同で適応する必要がある。したがって既存チェックポイントへ未学習の判定器だけを追加しても、スキップ後の表現変化やKV除外に本体が適応しておらず、論文と同じ品質・計算量交換は期待できない。
 
-Llama本体をLoRAで適応しつつdecision moduleも学習するため、導入コストは固定layer pruningより高い。
+Llama本体をLoRAで適応しつつdecision moduleも学習するため、導入コストは固定層 枝刈りより高い。
 
 ## 評価
 
 ### まず見るところ
-- **結論:** tokenごとのlayer skippingで、品質を大きく落とさずFLOPsを約半分まで減らせる。
+- **結論:** トークンごとの層 skippingで、品質を大きく落とさずFLOPsを約半分まで減らせる。
 - **重要な注意:** **主結果はFLOPsでありwall-clockではない**。
-- **KV:** skip tokenのKVを後続attentionから外すとKV容量も約45%削減できるが、長文文脈とのtrade-offがある。
-- **実装上の課題:** tokenごとの不規則分岐はGPUでまとめて計算しにくいため、理論計算削減を速度へ変換する専用runtimeが必要。
+- **KV:** skip トークンのKVを後続attentionから外すとKV容量も約45%削減できるが、長文文脈とのtrade-offがある。
+- **実装上の課題:** トークンごとの不規則分岐はGPUでまとめて計算しにくいため、理論計算削減を速度へ変換する専用実行時が必要。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
@@ -105,10 +105,10 @@ Llama本体をLoRAで適応しつつdecision moduleも学習するため、導�
 | 項目 | 設定 |
 |---|---|
 | Models | Llama 2 7B / Llama 3 8B |
-| Layers | 32 |
+| 層 | 32 |
 | Training | LoRA + decision module |
 | Tasks | Alpaca, SAMSum, GSM8K, MaWPS, BoolQ, PIQA, SIQA, OBQA, MMLU |
-| FLOPs baseline | Full-depth LoRA = 1.00 |
+| FLOPs 比較対象 | Full-depth LoRA = 1.00 |
 
 ### Llama 2 7B：代表結果
 
@@ -132,7 +132,7 @@ Llama本体をLoRAで適応しつつdecision moduleも学習するため、導�
 
 ### さらに強くskipした場合
 
-MaWPSやOBQAでは30〜40% FLOPsでもbaselineを上回る条件がある一方、SAMSumのようにtaskによっては計算量を削りすぎるとPPLが悪化する。
+MaWPSやOBQAでは30〜40% FLOPsでも比較対象を上回る条件がある一方、SAMSumのようにtaskによっては計算量を削りすぎるとPPLが悪化する。
 
 ### KVをどこまで保護するか
 
@@ -141,22 +141,22 @@ MaWPSやOBQAでは30〜40% FLOPsでもbaselineを上回る条件がある一方�
 | m=0 | 文頭文脈を失いやすい |
 | m=1 | 改善 |
 | **m=2** | 最良 |
-| m=4 / 8 | 保護量が増えmemory削減が小さくなる |
+| m=4 / 8 | 保護量が増えメモリ削減が小さくなる |
 
-skipしたtokenのKVをどう扱うかは品質へ大きく影響し、単にlayerを飛ばすだけでは不十分である。
+skipしたトークンのKVをどう扱うかは品質へ大きく影響し、単に層を飛ばすだけでは不十分である。
 
 ### FLOPsとwall-clockを分けて読む理由
 
-D-LLMではtokenごとに経路が違うため、GPU側では、
+D-LLMではトークンごとに経路が違うため、GPU側では、
 
-- 毎tokenのdecision module実行
-- tokenごとに実行layerが違うことによるbatch分割
-- KVを参照させるtokenを変えるmask生成
-- 同じ演算へまとめにくい不規則なtoken grouping
+- 毎トークンのdecision module実行
+- トークンごとに実行層が違うことによるバッチ分割
+- KVを参照させるトークンを変えるmask生成
+- 同じ演算へまとめにくい不規則なトークン grouping
 
 が追加される。
 
-そのため `FLOPs 0.55` を「1.82倍高速」と読み替えることはできない。大規模batchのwall-clock speedupは主評価ではない。
+そのため `FLOPs 0.55` を「1.82倍高速」と読み替えることはできない。大規模バッチのwall-clock 高速化倍率は主評価ではない。
 
 実際のランタイムで速度へ変換するには、同じ層を実行するトークンをまとめ直して十分大きなGPU処理単位を作り、スキップしたトークンはそのカーネルへ投入しない仕組みが必要になる。分岐ごとに小さな処理を個別発行すると、FLOPsを減らしてもカーネル起動やトークン再配置の固定費が増える。したがってD-LLMは『どの計算を省けるか』を示すモデル側手法であり、その省略可能性を壁時計時間へ変える実行系最適化は別の重要課題である。
 
@@ -164,8 +164,8 @@ D-LLMではtokenごとに経路が違うため、GPU側では、
 
 - decision moduleの学習が必要。
 - `Ω`、loss重み、学習時の離散判断近似parameterに依存。
-- 長文ではKV evictionが文脈を損ねる可能性。
-- dynamic branchをGPUで高速化する専用kernel/runtimeが必要。
+- 長文ではKV 追い出しが文脈を損ねる可能性。
+- 動的 branchをGPUで高速化する専用カーネル/実行時が必要。
 
 </details>
 
@@ -174,5 +174,5 @@ D-LLMではtokenごとに経路が違うため、GPU側では、
 - [公式コード](https://github.com/Jyk-122/D-LLM)
 ## 更新履歴
 - 2026-09-02: 概要・手法・評価を一次資料に基づき拡充。
-- 2026-09-04: decision module / Gumbel-Softmax / KV evictionを補足し、FLOPsと実速度を分離して整理。
+- 2026-09-04: decision module / Gumbel-Softmax / KV 追い出しを補足し、FLOPsと実速度を分離して整理。
 - 2026-09-07: Gumbel-Softmax / straight-through / acceleration-ratio loss / branch divergence等を、skip判断とGPU実行の具体的な意味へ平易化。

@@ -23,136 +23,142 @@ last_checked: "2026-09-03"
 
 # CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices
 
-> 過去に似たpromptがあればその時のexpert利用履歴を再利用し、似た履歴がなければ学習済みpredictorで全layerのexpert候補を予測して、CPUからGPUへの先読みを早く始める。
+> 過去に似た入力文があればその時のエキスパート利用履歴を再利用し、似た履歴がなければ学習済み予測器で全層のエキスパート候補を予測して、CPUからGPUへの先読みを早く始める。
 
 ## 概要
 
-CasMoEは、expert prefetchの予測方法を1つに固定せず、**過去routing patternの検索**と**学習型predictor**を段階的に使い分ける。
+CasMoEは、エキスパート 先読みの予測方法を1つに固定せず、**過去ルーティング パターンの検索**と**学習型予測器**を段階的に使い分ける。
 
-類似promptが過去databaseに存在する場合は、そのpromptで使われたexpert履歴をそのまま利用する。十分似た履歴が見つからないpromptだけ学習型predictorへ回す。
+類似入力文が過去データベースに存在する場合は、その入力文で使われたエキスパート履歴をそのまま利用する。十分似た履歴が見つからない入力文だけ学習型予測器へ回す。
 
-これにより、毎回predictorを実行する方式より予測計算を減らしつつ、履歴検索だけでは対応しにくい新しい種類のpromptにも対応する。
+これにより、毎回予測器を実行する方式より予測計算を減らしつつ、履歴検索だけでは対応しにくい新しい種類の入力文にも対応する。
 
-さらにpromptを一度処理して全MoE layerの候補expertをまとめて予測するため、深いlayerで使うexpertも早い段階から転送を始められる。
+さらに入力文を一度処理して全MoE 層の候補エキスパートをまとめて予測するため、深い層で使うエキスパートも早い段階から転送を始められる。
 
-native router / Top-kは変更せず、予測はcache warming専用なのでlossless型である。
+元の ルータ / Top-kは変更せず、予測はキャッシュ warming専用なので無損失型である。
 
-二段構成の意味は、検索と学習予測を精度競争させるのではなくcostの違うfallbackとして使うことにある。既知workloadでは履歴検索だけで全layer候補を得られるため追加model実行を避けられ、未知promptだけ高costなEAPへ送る。database coverageが高まるほどonline predictor利用率を下げられる一方、workload shiftが大きい環境では検索hitを過信すると誤prefetchが増える。
+二段構成の意味は、検索と学習予測を精度競争させるのではなくコストの違うfallbackとして使うことにある。既知ワークロードでは履歴検索だけで全層候補を得られるため追加モデル実行を避けられ、未知入力文だけ高コストなEAPへ送る。データベース 被覆が高まるほどonline 予測器利用率を下げられる一方、ワークロード shiftが大きい環境では検索hitを過信すると誤先読みが増える。
 
 ## 手法のあらまし
 
 ### 1. `EAM`：似た過去promptからexpert利用履歴を探す
 
-過去promptの表現と、それに対応する全layerのexpert activation patternをdatabaseへ保存する。
+過去入力文の表現と、それに対応する全層のエキスパート 活性値 パターンをデータベースへ保存する。
 
-新しいpromptが来たら近い表現を検索し、十分似た既知promptがあれば、その時のexpert利用patternをprefetch計画として再利用する。
+新しい入力文が来たら近い表現を検索し、十分似た既知入力文があれば、その時のエキスパート利用パターンを先読み計画として再利用する。
 
-論文ではこの検索部を`Expert Activation Matcher (EAM)`と呼ぶ。追加modelを実行せず、**過去の似たrequestを検索するだけで将来expertを予測する**のが役割である。
+論文ではこの検索部を`Expert Activation Matcher (EAM)`と呼ぶ。追加モデルを実行せず、**過去の似たリクエストを検索するだけで将来エキスパートを予測する**のが役割である。
 
 ### 2. `EAP`：似た履歴がないpromptは学習済みpredictorで予測する
 
-EAMで十分なmatchが得られないpromptは、学習型の`Expert Activation Predictor (EAP)`へ送る。
+EAMで十分なmatchが得られない入力文は、学習型の`Expert Activation Predictor (EAP)`へ送る。
 
-EAPは軽量encoderとlayer別prediction headからなり、prompt表現から全layerのexpert候補を一括予測する。
+EAPは軽量encoderと層別prediction headからなり、入力文表現から全層のエキスパート候補を一括予測する。
 
 ### 3. 「似たroutingをするprompt」を近い表現へ学習する
 
-EAPのencoderは、意味が近いだけでなく**実際に似たexpert利用patternを持つprompt同士が近いvectorになるように学習する**。
+EAPのencoderは、意味が近いだけでなく**実際に似たエキスパート利用パターンを持つ入力文同士が近いvectorになるように学習する**。
 
-これにより、prompt表現をexpert activation predictionへ使いやすくする。論文ではcontrastive learningを使うが、目的はこのrouting類似性を表現へ反映することにある。
+これにより、入力文表現をエキスパート 活性値 predictionへ使いやすくする。論文ではcontrastive learningを使うが、目的はこのルーティング類似性を表現へ反映することにある。
 
 ### 4. 検索だけで済ませるかpredictorへ回すかを切り替える
 
-過去promptとの類似度や「どれくらい未知の入力か」を見て、
+過去入力文との類似度や「どれくらい未知の入力か」を見て、
 
 - 十分似た履歴がある → EAMの検索結果を使う
 - 似た履歴がない → EAPで新しく予測する
 
 を切り替える。
 
-論文ではcascade gateと呼ぶが、本質は**安い履歴検索で済むrequestと、predictorが必要なrequestを分ける判断**である。
+論文ではcascade gateと呼ぶが、本質は**安い履歴検索で済むリクエストと、予測器が必要なリクエストを分ける判断**である。
 
 ### 5. Prompt時点で全layerのcandidateを出して先読み開始を早める
 
-prompt段階で全layerのcandidate expertを出すため、layerごとにpredictorを待つ方式より深いlayerのtransferを早く始められる。
+入力文段階で全層のcandidate エキスパートを出すため、層ごとに予測器を待つ方式より深い層の転送を早く始められる。
 
-CPU DRAMからGPUへcandidate expertを非同期transferし、native gate到達時に必要expertがすでにGPUへある割合を高める。
+CPU DRAMからGPUへcandidate エキスパートを非同期転送し、元の gate到達時に必要エキスパートがすでにGPUへある割合を高める。
 
-全layerをprompt時点で予測する利点は、深いlayerほど長い先読み窓を確保できることである。ただし早く予測するほど実際のdecode hidden stateをまだ観測していないため、将来routingの不確実性も高い。CasMoEはprompt-level履歴やpredictorへ依存する代わりに、転送開始を大幅に前倒ししてPCIe latencyを多くの前段計算へ隠す設計といえる。
+全層を入力文時点で予測する利点は、深い層ほど長い先読み窓を確保できることである。ただし早く予測するほど実際のデコード 隠れ 状態をまだ観測していないため、将来ルーティングの不確実性も高い。CasMoEは入力文-level履歴や予測器へ依存する代わりに、転送開始を大幅に前倒ししてPCIe 遅延を多くの前段計算へ隠す設計といえる。
 
 ### 6. Lossless型
 
-予測候補が外れてもnative routerが最終selectionを行う。
+予測候補が外れても元の ルータが最終selectionを行う。
 
-予測expertをnative expertの代わりに確定実行するCommitMoEとは異なる。
+予測エキスパートを元の エキスパートの代わりに確定実行するCommitMoEとは異なる。
+
+このためCasMoEは、予測を外したときにモデル出力を近似する方式ではなく、候補の準備だけを早める方式として整理できる。最終的なエキスパート選択は元のゲートに任せ、先読みが外れた場合も正しい計算へ戻る。
+
+したがって評価では、候補が当たった割合だけでなく、候補が必要になるまでに転送を終えた割合も確認する必要がある。検索段階の精度と実行段階の待ち時間を分けて見ることで、カスケード構成の効果を正しく解釈できる。
+
+特に入力文の分布が変わる環境では、履歴の再利用率と予測器への切り替え率を同時に追うことが重要になる。
 
 ## 評価
 
 ### まず見るところ
-- **結論:** 類似promptは履歴検索、未知promptはpredictorへ回すことで、prediction costを抑えながら深いlayerのprefetchも早く開始できる。
-- **速度:** on-demand baseline比throughput約65.13%改善を報告。
-- **品質:** native routingを維持し、平均task performanceを96.6%以上保持。
-- **I/O:** CPU DRAM→GPU expert prefetch。SSD/NVMeは扱わない。
-- **注意点:** databaseにどれだけ過去patternが蓄積しているか、類似とみなすthreshold、workloadの変化へ依存し、公式codeは確認できない。
+- **結論:** 類似入力文は履歴検索、未知入力文は予測器へ回すことで、prediction コストを抑えながら深い層の先読みも早く開始できる。
+- **速度:** on-demand 比較対象比スループット約65.13%改善を報告。
+- **品質:** 元の ルーティングを維持し、平均タスク performanceを96.6%以上保持。
+- **I/O:** CPU DRAM→GPU エキスパート 先読み。SSD/NVMeは扱わない。
+- **注意点:** データベースにどれだけ過去パターンが蓄積しているか、類似とみなすthreshold、ワークロードの変化へ依存し、公式codeは確認できない。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
 
 ### 主要比較
 
-論文ではresource-constrained device上で、
+論文では資源-constrained device上で、
 
-- 必要になってからexpertを読む方式
-- expert cacheを使う方式
-- 学習型predictorで先読みする方式
+- 必要になってからエキスパートを読む方式
+- エキスパート キャッシュを使う方式
+- 学習型予測器で先読みする方式
 
 と比較する。
 
 ### Throughput
 
-on-demand baselineに対し、throughputを約65.13%改善。
+on-demand 比較対象に対し、スループットを約65.13%改善。
 
 主な利得は、
 
-- 過去に似たpromptがある時はpredictor計算を省ける
-- prompt時点で深いlayerまでprefetch開始できる
+- 過去に似た入力文がある時は予測器計算を省ける
+- 入力文時点で深い層まで先読み開始できる
 
 ことによる。
 
 ### 品質
 
-元modelのtask performanceを96.6%以上保持したと報告する。
+元モデルのタスク performanceを96.6%以上保持したと報告する。
 
-ただしこれは平均benchmark scoreであり、per-token output identityや最悪ケースの品質を直接示す指標ではない。
+ただしこれは平均ベンチマーク スコアであり、トークンごと 出力 identityや最悪ケースの品質を直接示す指標ではない。
 
 ### EAM / EAPの役割分担
 
-| Input type | 主経路 | 利点 |
+| 入力 type | 主経路 | 利点 |
 |---|---|---|
-| 過去と類似 | 過去履歴検索 | predictor latencyを省ける |
-| 未知性が高い | 学習型predictor | 検索だけより新しいpromptへ対応しやすい |
+| 過去と類似 | 過去履歴検索 | 予測器 遅延を省ける |
+| 未知性が高い | 学習型予測器 | 検索だけより新しい入力文へ対応しやすい |
 
 ### Databaseのtrade-off
 
-routing pattern databaseを大きくすると過去と似たpromptを見つけやすくなる一方、
+ルーティング パターン データベースを大きくすると過去と似た入力文を見つけやすくなる一方、
 
-- database memory
-- search cost
-- 古いpatternを更新するcost
+- データベース メモリ
+- 検索 コスト
+- 古いパターンを更新するコスト
 
 も増える。
 
-workloadが大きく変わる場合、古いrouting履歴の価値は低下する。
+ワークロードが大きく変わる場合、古いルーティング履歴の価値は低下する。
 
-そのためdatabaseは単なるcacheではなく、予測精度と検索costを同時に決める状態になる。小さすぎればEAP呼出しが増え、大きすぎれば近傍検索と更新の管理costが増える。また意味的に似ていてもroutingが異なるpromptを再利用すると不要expertを先読みするため、EAM表現はsemantic similarityだけでなくexpert activation similarityを反映する必要がある。
+そのためデータベースは単なるキャッシュではなく、予測精度と検索コストを同時に決める状態になる。小さすぎればEAP呼出しが増え、大きすぎれば近傍検索と更新の管理コストが増える。また意味的に似ていてもルーティングが異なる入力文を再利用すると不要エキスパートを先読みするため、EAM表現はsemantic similarityだけでなくエキスパート 活性値 similarityを反映する必要がある。
 
 ### 制約
 
-- database構築が必要。
+- データベース構築が必要。
 - どの程度似ていれば履歴を再利用するかのthreshold tuningが必要。
-- predictor trainingが必要。
-- official runtime codeは一次資料で確認できない。
-- PCIe bytes/tokenや予測missが多いrequestの詳細な速度・品質trade-offは限定的。
+- 予測器 trainingが必要。
+- 公式 実行時 codeは一次資料で確認できない。
+- PCIe bytes/トークンや予測ミスが多いリクエストの詳細な速度・品質trade-offは限定的。
 
 </details>
 
@@ -161,5 +167,5 @@ workloadが大きく変わる場合、古いrouting履歴の価値は低下す�
 - [AAAI公式PDF](https://ojs.aaai.org/index.php/AAAI/article/view/39816/43777)
 
 ## 更新履歴
-- 2026-09-04: EAM / EAP / cascade gate / all-layer predictionを分離して説明し、評価を表形式へ整理。
-- 2026-09-07: EAM / EAP / cascade / contrastive learning / database coverage等を、検索と予測の具体的な役割として平易化。
+- 2026-09-04: EAM / EAP / cascade gate / all-層 predictionを分離して説明し、評価を表形式へ整理。
+- 2026-09-07: EAM / EAP / cascade / contrastive learning / データベース 被覆等を、検索と予測の具体的な役割として平易化。
