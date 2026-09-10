@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-62623041c7897e15",
+  "type": "research",
+  "parent_job_id": "job-ed3be0b3453134d0",
+  "priority": 82,
+  "canonical_id": "arXiv:2509.07379",
+  "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Cache Scheduling for Efficient MoE LLM Inference",
+  "source_url": "https://arxiv.org/abs/2509.07379",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
+  "selection_reason": "プリフィルとデコードでエキスパート利用密度が異なる点を明示的に分け、プリフィルでは二本のCUDAストリームで非MoE計算と重み転送を重ね、デコードでは活性化トレースから学習した層単位予測器で必要候補だけを先読みする。4ビットMixtral-8x7B/8x22Bで、全モデルの15%のピークメモリに抑えながらエンドツーエンド遅延を1.42〜7.54倍改善する。MoEオフロードをフェーズ別スケジューリングとして整理する研究で、単一方式の予測先読みとは異なる系統上の価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T18:04:46+00:00",
+  "artifact_transport": "structured_record_v10"
+}

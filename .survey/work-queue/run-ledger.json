@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:02:31.405980+00:00",
+  "updated_at": "2026-09-10T18:04:48.405974+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,7 +572,7 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T18:02:31.405980+00:00",
+      "last_recorded_at": "2026-09-10T18:04:48.405974+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -581,9 +581,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 11,
+        "new_jobs": 14,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -718,6 +718,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34512089557:1",
+          "recorded_at": "2026-09-10T18:04:48.405974+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34512089557",
+            "run_attempt": "1",
+            "source_sha": "0aa9c96aa5f09546a658fa60a119dc3dda120d5c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -790,6 +804,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.15453",
           "title": "A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ed3be0b3453134d0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -871,6 +893,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-15e72c632f7301ef",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2510.10302",
+          "title": "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference"
+        },
+        {
+          "job_id": "job-research-2aadf97216681565",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.11688",
+          "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference"
+        },
+        {
+          "job_id": "job-research-62623041c7897e15",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.07379",
+          "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Cache Scheduling for Efficient MoE LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -883,7 +926,8 @@
         ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json",
         ".survey/work-queue/results/20260911T0240JST-discovery-4e0bc8f9d84a8444.json",
         ".survey/work-queue/results/20260911T0248JST-discovery-825a3fe8fd3b5c49.json",
-        ".survey/work-queue/results/20260911T0254JST-discovery-a0f9b155ba2cea14.json"
+        ".survey/work-queue/results/20260911T0254JST-discovery-a0f9b155ba2cea14.json",
+        ".survey/work-queue/results/20260911T0307JST-discovery-ed3be0b3453134d0.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,

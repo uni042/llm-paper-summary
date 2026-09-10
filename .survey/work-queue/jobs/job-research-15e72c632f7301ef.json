@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-15e72c632f7301ef",
+  "type": "research",
+  "parent_job_id": "job-ed3be0b3453134d0",
+  "priority": 80,
+  "canonical_id": "arXiv:2510.10302",
+  "title": "SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference",
+  "source_url": "https://arxiv.org/abs/2510.10302",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2025-2510.10302-sp-moe-speculative-decoding-prefetching.md",
+  "selection_reason": "投機的デコードをMoEオフロードへ組み合わせると、複数ドラフトトークン検証で活性化エキスパート集合が膨らみCPU-GPU帯域競合が悪化する問題を扱う。ドラフトモデルと対象モデルの構造対応から検証前にエキスパートを投機先読みし、層ごとの先読み深さを解析モデルで制限して過剰取得を抑え、非同期先読みと一括入出力で通信を隠す。既存方式比で出力トークン当たり時間を1.07〜3.5倍改善し、MoEオフロードと投機的デコードの相互作用を直接扱う点で未収録価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T18:04:46+00:00",
+  "completed_at": "2026-09-10T18:04:47+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2510.10302",
+  "duplicate_of_path": "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2510.10302"
+  }
+}
