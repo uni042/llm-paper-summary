@@ -1,11 +1,11 @@
 {
   "counts": {
     "discovery": {
-      "completed": 78
+      "completed": 78,
+      "ready": 1
     },
     "audit": {
-      "completed": 5,
-      "ready": 1
+      "completed": 6
     },
     "research": {
       "completed": 74,
@@ -14,17 +14,17 @@
   },
   "next_jobs": [
     {
-      "job_id": "job-audit-f8529110c08a2dcc",
-      "type": "audit",
-      "lane": null,
-      "priority": 74,
-      "canonical_id": "arXiv:2607.00466",
-      "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
-      "source_url": "https://arxiv.org/abs/2607.00466",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
-      "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing."
+      "job_id": "job-527bd72a0f02b02a",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T23:08:13+00:00"
+  "generated_at": "2026-09-10T23:13:24+00:00"
 }

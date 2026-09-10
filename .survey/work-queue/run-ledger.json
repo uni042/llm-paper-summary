@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T23:08:13.445541+00:00",
+  "updated_at": "2026-09-10T23:13:28.027534+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,18 +2351,19 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T23:08:13.445541+00:00",
+      "last_recorded_at": "2026-09-10T23:13:28.027534+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
-        "paper_materialized"
+        "paper_materialized",
+        "audit_completed"
       ],
       "counts": {
         "research_completed": 6,
-        "audit_completed": 0,
+        "audit_completed": 1,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 16,
+        "new_jobs": 17,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2525,6 +2526,21 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34541142169:1",
+          "recorded_at": "2026-09-10T23:13:28.027534+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34541142169",
+            "run_attempt": "1",
+            "source_sha": "5dca858a4a013413fcbfb07af64f2824ddb773fc"
+          },
+          "signals": [
+            "audit_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2611,6 +2627,14 @@
         {
           "job_id": "job-research-45b69cf81c1e8929",
           "type": "research",
+          "canonical_id": "arXiv:2607.00466",
+          "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-audit-f8529110c08a2dcc",
+          "type": "audit",
           "canonical_id": "arXiv:2607.00466",
           "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
           "from": "ready",
@@ -2729,6 +2753,13 @@
           "type": "audit",
           "canonical_id": "arXiv:2607.00466",
           "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving"
+        },
+        {
+          "job_id": "job-527bd72a0f02b02a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
