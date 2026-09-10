@@ -126,13 +126,14 @@ def put_text(path, text):
 
 def block(path, text):
     p = repository_root() / path
-    content = p.read_text(encoding="utf-8")
+    p.parent.mkdir(parents=True, exist_ok=True)
+    content = p.read_text(encoding="utf-8") if p.exists() else ""
     start, end = "<!-- survey:auto:start -->", "<!-- survey:auto:end -->"
     replacement = start + "\n" + text + "\n" + end
     if start in content:
         content = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda _: replacement, content, flags=re.S)
     else:
-        content = content.rstrip() + "\n\n" + replacement + "\n"
+        content = (content.rstrip() + "\n\n" if content.strip() else "") + replacement + "\n"
     p.write_text(content, encoding="utf-8")
 
 
