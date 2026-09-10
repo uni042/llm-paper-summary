@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T14:39:31.551759+00:00",
+  "updated_at": "2026-09-10T14:44:42.369950+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
       "first_recorded_at": "2026-09-10T14:33:05.581963+00:00",
-      "last_recorded_at": "2026-09-10T14:39:31.551759+00:00",
+      "last_recorded_at": "2026-09-10T14:44:42.369950+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
@@ -48,6 +48,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34491049634:1",
+          "recorded_at": "2026-09-10T14:44:42.369950+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34491049634",
+            "run_attempt": "1",
+            "source_sha": "9ac3635041dfaf1a2992949e5f4404e84cc97e15"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -64,6 +78,14 @@
           "type": "research",
           "canonical_id": "arxiv:2602.03495",
           "title": "DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f0c19ed4ae256352",
+          "type": "research",
+          "canonical_id": "arxiv:2605.27081",
+          "title": "ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference",
           "from": "ready",
           "to": "completed"
         }
