@@ -2,25 +2,27 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-memspec-20260910-2133-v10-a1",
-  "job_id": "job-research-77ada603ffdfc560",
+  "attempt_id": "attempt-dualdecoder-20260910-2142-v10-a1",
+  "job_id": "job-research-ae22b40e02b2982f",
   "data": {
-    "overview": "MemSpecの主な利得は、より良いドラフトを選ぶ予測精度そのものより、予測したドラフトを必要になる前に常駐させることで非常駐モデル待ちを減らす点にある。定常生成ではMAB-Asyncより平均40.7%高いスループットを示し、理想的に各時点の最良ドラフトを知るOracle-Dynamicの95〜97%へ到達する。予測だけ導入した構成は静的一般ドラフトより21.6%速いものの、完全MemSpecより30.5%遅く、常駐制御が独立に大きな寄与を持つ。入力処理や初期読み込みを含めてもMAB-Async比24.9%のエンドツーエンド遅延削減が残るため、定常区間だけの見かけ上の高速化ではない。",
+    "overview": "DualDecoderは、予測先読みでPCIe転送を計算へ重ねるだけでなく、全層分だった疎KV作業領域を2層分へ縮小することで、空いたGPUメモリをより大きいバッチへ変換する。Qwen2.5-32Bでは64K文脈で42トークン/秒となりShadowKV比1.14倍、128Kでは2.62倍、256Kでは1.32倍のデコードスループットを示す。メモリ使用量はShadowKVより最大36.4%、SpeCacheより最大62.0%小さい。高負荷条件ではP99要求完了時間60秒を守れる到着率がShadowKVの2.51倍になり、単発カーネル改善ではなく容量増加と転送隠蔽がサービング性能へ反映されている。",
     "key_results": [
-      {"metric": "定常生成スループット", "value": "MAB-Async比 平均+40.7%", "baseline": "MAB-Async", "condition": "LLaMA-2 7B / Qwen2.5 7B、5ワークロード、K=2、N=4、128生成トークン", "interpretation": "オンライン探索で首位モデルを知っても非常駐なら使えないため、先回り常駐により選択品質を実行可能な速度へ変換した効果。"},
-      {"metric": "動的オラクル到達率", "value": "95〜97%", "baseline": "Oracle-Dynamic", "condition": "同一メモリ制約・同一スケジュール間隔", "interpretation": "完全な未来知識がなくても、上位候補の常駐集合を予測するだけで理想動的切替の大半を回収できる。"},
-      {"metric": "静的比較対象からの改善", "value": "平均+58.8%", "baseline": "General-Staticを含む静的方式", "condition": "主要実機評価", "interpretation": "領域ごとの最適ドラフト差と生成途中の段階変化の両方を利用した結果。"},
-      {"metric": "代替ドラフト実行時間", "value": "MAB-Async 49.4% → MemSpec 5.5%未満", "baseline": "MAB-Async", "condition": "モデルファミリー横断の実行時間内訳", "interpretation": "性能差の主因が予測器の計算ではなく、希望ドラフトを実行時点までに用意できるかにあることを示す。"},
-      {"metric": "構成要素比較", "value": "Prediction-OnlyはGeneral-Static比+21.6%、完全MemSpecはPrediction-Only比+30.5%", "baseline": "General-Static / Prediction-Only", "condition": "主要評価", "interpretation": "予測だけでは非常駐待ちが残り、常駐管理との組合せが必要。"},
-      {"metric": "常駐容量感度", "value": "K=2→4でMemSpec 1.47×→1.51×、MAB-Async 1.13×→1.29×", "baseline": "General-Static正規化", "condition": "Jetson AGX Orin", "interpretation": "MemSpecはK=2でも上位候補をほぼ含めるため追加メモリへの依存が小さい。"},
-      {"metric": "エンドツーエンド遅延", "value": "General-Static比-32.3%、MAB-Async比-24.9%", "baseline": "General-Static / MAB-Async", "condition": "プロンプト処理、対象モデルプリフィル、初期ドラフト読み込み、準備を含む", "interpretation": "起動費を含めると相対利得は縮むが、繰り返し切替待ち削減の効果は残る。"}
+      {"metric": "Qwen2.5-32Bデコードスループット", "value": "64Kで42トークン/秒、ShadowKV比1.14倍", "baseline": "ShadowKV", "condition": "64K文脈", "interpretation": "比較的短い長文でも先読みとメモリ削減の利得が残る。"},
+      {"metric": "128Kデコードスループット", "value": "ShadowKV比2.62倍", "baseline": "ShadowKV", "condition": "Qwen2.5-32B、128K文脈", "interpretation": "補助状態の容量差が最大バッチへ効き始め、予測転送の重なりと合わせて利得が大きくなる。"},
+      {"metric": "GPUメモリ使用量", "value": "ShadowKV比最大36.4%削減、SpeCache比最大62.0%削減", "baseline": "ShadowKV / SpeCache", "condition": "8B〜32B、複数バッチ・文脈条件", "interpretation": "全層バッファを2層分へ縮小する効果が主要因。8B・バッチ12ではShadowKV 47.5GB、SpeCache 79GBに対しDualDecoder 30GB。"},
+      {"metric": "P99要求完了時間60秒を守る最大到着率", "value": "ShadowKV比2.51倍", "baseline": "ShadowKV", "condition": "32B・128Kの高負荷サービング", "interpretation": "同じGPU群でより多くの同時要求を処理でき、メモリ節約が実際のサービス容量へ転換される。"},
+      {"metric": "KV検索位置予測精度", "value": "平均約88%、128Kでも82.6%以上", "baseline": "次ステップの実際の疎KV検索位置", "condition": "投機トークンから次ステップを予測", "interpretation": "次トークンそのものを正確に当てなくてもKV位置には十分な時間的局所性があり、先読みが成立する。"},
+      {"metric": "二重トークン注意処理", "value": "0.035ms、別々の2回処理0.069msから49%削減", "baseline": "通常トークンと投機トークンを別処理", "condition": "構成要素単体評価", "interpretation": "予測用トークン生成を完全な追加デコードにしないことが固定費を抑える。"},
+      {"metric": "予測外れ時の転送待ち", "value": "34.8ms", "baseline": "優先度なし43.3ms", "condition": "8B、予測外れ率33%", "interpretation": "不足KVを高優先度ストリームへ回すことで、誤予測が背景先読みの後ろに詰まることを防ぐ。"},
+      {"metric": "KV収集・転送準備", "value": "3.25ms", "baseline": "CPU収集49.5ms", "condition": "疎文脈長2048", "interpretation": "GPU側組立によりホストの小粒度ランダム収集を93.4%削減する。"}
     ],
     "negative_results": [
-      {"name": "短い生成では利得が小さい", "description": "出力が短いほど生成途中のドラフト効率変化を利用する機会と、先読み費を償却する反復数が少ない。感度評価では出力長が長いほどMemSpecの改善幅が大きくなる。"},
-      {"name": "スケジュール間隔の両端で悪化", "description": "N=2では再スケジュールが頻繁でモデル読み込みをデコードへ重ねる時間が不足し、N=16では有利なドラフト切替が遅れる。N=4〜8は比較的平坦だが任意の間隔で同等ではない。"},
-      {"name": "大きい常駐容量では比較差が縮小", "description": "Kを2から4へ増やすとMAB-Asyncも非常駐選択が減り、1.13倍から1.29倍へ改善する一方、MemSpecは1.47倍から1.51倍の小幅改善に留まる。メモリ制約が緩いほど常駐予測の独自利得は相対的に小さくなる。"}
+      {"name": "予測は完全ではない", "description": "KV位置重複は平均約88%であり100%ではない。128Kでも82.6%以上を保つが、局所性が弱いワークロードでは緊急差分転送が増え、転送隠蔽の利得が縮む。"},
+      {"name": "疎注意の近似は継承する", "description": "DualDecoderは予測先読みの外れを補正するが、基盤のShadowKV自体は密な全KV注意を完全再現する方式ではない。したがって『無損失』はDualDecoder追加機構がShadowKV品質を落とさないという範囲で解釈する必要がある。"},
+      {"name": "短い文脈では倍率が小さい", "description": "64Kの32B評価ではShadowKV比1.14倍で、128Kの2.62倍より差が小さい。補助状態とKV容量がGPUを強く圧迫する長文ほどメモリ削減の価値が高い。"},
+      {"name": "PCIe環境依存", "description": "主評価はPCIe 5.0とHopper GPUの高性能サーバーであり、帯域が狭い環境や各層計算が短いモデルでは、数層先の転送を計算で隠し切れない可能性がある。"}
     ],
-    "interpretation": "Oracle-StaticがGeneral-Staticより平均22.5%速く、Oracle-Dynamicがさらに24.9%改善することから、入力ごとの専門化と生成途中の段階変化の双方に高速化余地がある。ただしMAB-Asyncは希望ドラフトが非常駐の時間が長く、その余地を実速度へ変換できない。MemSpecは上位2再現率95.7%の予測を用い、未来の最適モデルを一点で当てる代わりに『次に必要そうな2個』を常駐させることで、読み込み遅延と予測誤差の双方に余裕を持たせる。したがってメモリが厳しく、ドラフト間の効率差と生成段階変化が大きく、出力が十分長いほど利得が増える。",
-    "quality_impact": "対象モデルによる通常の投機的検証を維持する無損失の高速化である。ドラフト選択や先読みが外れても受理規則は変わらず、悪化するのは生成時間であってモデル出力品質ではない。"
+    "interpretation": "DualDecoderの高速化は、疎KV選択をさらに削ることより『選択結果が確定する前に転送を始める』ことと『そのための作業領域を全層分持たない』ことの組合せから生じる。文脈が長くなるほど既存方式では補助状態と作業バッファがバッチ容量を奪うため、2層分の定数バッファ化が効く。一方、予測精度が下がれば差分転送が増えるため、投機トークンと実トークンのKV検索位置が近いという時間的局所性が成立条件になる。",
+    "quality_impact": "予測トークンは通常出力から因果的に隔離され、予測外れで欠けたKVは差分転送する。したがってDualDecoderの予測・先読み機構そのものはShadowKVの選択結果を意図的に間引かない。RULERではShadowKVと同等以上の精度を示し、一部では低ランク再構成の利用削減により改善するが、密注意との完全一致を保証する研究ではない。"
   }
 }
