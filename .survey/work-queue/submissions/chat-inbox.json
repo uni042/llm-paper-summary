@@ -1,19 +1,19 @@
 {
-  "submission_id": "chat-attempt-research-rexpert-20260911-0430-v10-a1",
-  "attempt_id": "attempt-research-rexpert-20260911-0430-v10-a1",
-  "job_id": "job-research-fa65d3c5c4fce1a2",
+  "submission_id": "chat-attempt-audit-rexpert-20260911-0430-v10-a1",
+  "attempt_id": "attempt-audit-rexpert-20260911-0430-v10-a1",
+  "job_id": "job-audit-983fdb437b0be018",
   "status": "completed",
   "record_bank": "f",
   "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
-  "expected_blob_sha": null,
+  "expected_blob_sha": "8e066f1488601a765e98abe03b1dcb6a9ea912a7",
   "record_slots": [
-    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record-f/metadata.json", "blob_sha": "d70acb4526ce6af0210e4f8f4ae3ebc00e49a364"},
-    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record-f/problem_method.json", "blob_sha": "79d017d7d518e481216c4f4cafb79cb9977bc140"},
-    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record-f/evaluation.json", "blob_sha": "d76db35cde2341e3bf4fb198614c0436c0719311"},
-    {"slot": "results", "path": ".survey/work-queue/records/chat-record-f/results.json", "blob_sha": "443e131a8841d7d38dde6900dbff3ca5a3861c40"},
-    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record-f/positioning.json", "blob_sha": "402497126c48419332197a4bd84016a9ad526464"}
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record-f/metadata.json", "blob_sha": "8c03e9da177653ca6c60562c720b53afb79cdec3"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record-f/problem_method.json", "blob_sha": "9d1b0c5210e5c1b41b147161aa1f33909e3bd22b"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record-f/evaluation.json", "blob_sha": "6b0c1359f4966c351fdeaef72a2f0dad7cef61de"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record-f/results.json", "blob_sha": "55b85150cf9ed56d2eb40779b0cd5759563f37c8"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record-f/positioning.json", "blob_sha": "fc5d1758fa6ca7a8eaaec90ca298060af5f3e3cd"}
   ],
-  "audit_required": true,
-  "audit_outcome": null,
-  "audit_flags": []
+  "audit_required": false,
+  "audit_outcome": "監査済み。書誌・所属・プレプリント状態、アーキテクチャ、モデル、比較対象、主要数値に重大な矛盾は確認しなかった。完成ReRAMシリコンの実測ではなく、実ルーティングトレースとモデル化ハードウェアを組み合わせた評価であること、公式再現実装が未確認であることを明記する。",
+  "audit_flags": ["modeled_hardware_not_fabricated_silicon", "official_reproduction_artifacts_not_found"]
 }
