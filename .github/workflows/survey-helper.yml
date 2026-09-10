@@ -62,20 +62,61 @@ jobs:
 
           inbox_path = Path('.survey/work-queue/submissions/chat-inbox.json')
           result_path = Path('.survey/work-queue/results/chat-inbox.json')
-          if not inbox_path.exists() or not result_path.exists():
+          if not inbox_path.exists():
+              result_path.unlink(missing_ok=True)
               raise SystemExit(0)
           try:
               inbox = json.loads(inbox_path.read_text(encoding='utf-8'))
-              result = json.loads(result_path.read_text(encoding='utf-8'))
           except Exception:
               result_path.unlink(missing_ok=True)
-              print('Removed unreadable reusable Chat result.')
               raise SystemExit(0)
-          if inbox.get('job_id') != result.get('job_id'):
-              result_path.unlink(missing_ok=True)
-              print('Removed stale reusable Chat result whose job_id did not match the current inbox.')
-          else:
+
+          result = None
+          if result_path.exists():
+              try:
+                  result = json.loads(result_path.read_text(encoding='utf-8'))
+              except Exception:
+                  result_path.unlink(missing_ok=True)
+
+          job_id = inbox.get('job_id')
+          if result and result.get('job_id') == job_id:
               print('Reusable Chat result matches current inbox.')
+              raise SystemExit(0)
+
+          paper = inbox.get('paper_path')
+          job_path = Path('.survey/work-queue/jobs') / f'{job_id}.json' if job_id else None
+          job = None
+          if job_path and job_path.exists():
+              try:
+                  job = json.loads(job_path.read_text(encoding='utf-8'))
+              except Exception:
+                  job = None
+          if (
+              isinstance(paper, str)
+              and paper.startswith('papers/')
+              and Path(paper).is_file()
+              and job
+              and job.get('status') == 'completed'
+          ):
+              result_path.parent.mkdir(parents=True, exist_ok=True)
+              result_path.write_text(
+                  json.dumps({
+                      'schema_version': 1,
+                      'workflow_version': 9,
+                      'submission': 'work-queue/submissions/chat-inbox.json',
+                      'ok': True,
+                      'job_id': job_id,
+                      'job_type': job.get('type'),
+                      'artifact': {'paper': paper},
+                      'job_status': 'completed',
+                      'reconciled': True,
+                  }, ensure_ascii=False, indent=2) + '\n',
+                  encoding='utf-8',
+              )
+              print('Reconciled terminal reusable Chat inbox from its existing canonical paper.')
+          else:
+              result_path.unlink(missing_ok=True)
+              print('Removed stale reusable Chat result; current inbox still needs processing.')
           PY
 
       - name: Prepare current reusable Chat transport when pending
