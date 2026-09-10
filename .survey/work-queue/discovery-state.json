@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-10T17:46:00+00:00",
+  "updated_at": "2026-09-10T17:52:00+00:00",
   "last_run_key": "2026-09-11T02:30:00+09:00",
-  "last_round": "mixed-format-retention-kv-3",
+  "last_round": "model-transfer-kv-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -17,7 +17,8 @@
     {"run_key":"2026-09-10T23:30:00+09:00","round":"expert-streaming-edge-storage-2","axis":"expert streaming・分散edge・SSDエネルギー境界","query_summary":"前ラウンドの研究完了後、専門家ストリーミング、CPUオフロード予測先読み、キャッシュレスedge分散、SSD重み読出しのエネルギー限界へ探索を拡張し、repo検索で識別子・タイトルの既収録有無を先行確認した。","candidate_count":5,"duplicate_filtered_count":1,"novel_candidate_count":4,"accepted_count":4,"duplicate_ratio":0.2,"accepted_canonical_ids":["arxiv:2603.27624","arxiv:2603.19289","arxiv:2512.03927","arxiv:2508.06978"],"duplicate_canonical_ids":["arxiv:2601.17063"],"next_axis_hint":"Expert StreamingとSpeculating Expertsを優先精読し、その後OD-MoEとSSDエネルギー境界を確認する。ストック消化後はSSD expert I/O schedulingとCXL/Flash階層へ展開する"},
     {"run_key":"2026-09-11T02:30:00+09:00","round":"photonic-cxl-kv-1","axis":"Photonic-CXL・大容量共有KVメモリ","query_summary":"CXL/共有KVメモリへ軸を変更したが、2607.27187は探索中に並行Actions側で既収録化されたため、最新HEAD再確認時点では3候補すべて重複として扱った。","candidate_count":3,"duplicate_filtered_count":3,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"accepted_canonical_ids":[],"duplicate_canonical_ids":["arxiv:2607.18141","arxiv:2605.03375","arxiv:2607.27187"],"next_axis_hint":"重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"},
     {"run_key":"2026-09-11T02:30:00+09:00","round":"vericache-validation-kv-2","axis":"損失KV検証・正確性保証","query_summary":"圧縮KVを最終近似ではなく候補生成へ使い、完全KVを下位階層から検証用に戻す研究を探索し、未収録のVeriCacheを採用した。","candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"accepted_canonical_ids":["arxiv:2605.17613"],"duplicate_canonical_ids":[],"next_axis_hint":"保持型混在精度KVとPagedAttention実装へ軸をずらす"},
-    {"run_key":"2026-09-11T02:30:00+09:00","round":"mixed-format-retention-kv-3","axis":"保持型混在精度KV・PagedAttention","query_summary":"ライブKVページを削除せず精度階層だけを変え、混在形式を直接注意計算へ使う研究を探索し、未収録のMinima-KVを採用した。","candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"accepted_canonical_ids":["arxiv:2608.23834"],"duplicate_canonical_ids":[],"next_axis_hint":"次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"}
+    {"run_key":"2026-09-11T02:30:00+09:00","round":"mixed-format-retention-kv-3","axis":"保持型混在精度KV・PagedAttention","query_summary":"ライブKVページを削除せず精度階層だけを変え、混在形式を直接注意計算へ使う研究を探索し、未収録のMinima-KVを採用した。","candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"accepted_canonical_ids":["arxiv:2608.23834"],"duplicate_canonical_ids":[],"next_axis_hint":"次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"},
+    {"run_key":"2026-09-11T02:30:00+09:00","round":"model-transfer-kv-4","axis":"分離サービングKV転送・モデル間KV再利用","query_summary":"サービス状態に応じたKV圧縮、選択的KV転送、モデル間KV写像、移動環境でのKV移行を探索して4候補を送信した。queue正規化後は2608.03893のみ新規researchとして残り、他3候補は正本側で重複抑止された。","candidate_count":4,"duplicate_filtered_count":3,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.75,"accepted_canonical_ids":["arxiv:2608.03893"],"duplicate_canonical_ids":["arxiv:2605.13734","arxiv:2607.28150","arxiv:2608.16477"],"next_axis_hint":"モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"}
   ],
   "axes": {
     "オンデバイスMoE・NPU実行系":{"last_run_key":"2026-09-10T21:30:00+09:00","rounds":1,"candidate_count":2,"duplicate_filtered_count":1,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.5,"next_axis_hint":"専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"},
@@ -27,7 +28,8 @@
     "expert streaming・分散edge・SSDエネルギー境界":{"last_run_key":"2026-09-10T23:30:00+09:00","rounds":1,"candidate_count":5,"duplicate_filtered_count":1,"novel_candidate_count":4,"accepted_count":4,"duplicate_ratio":0.2,"next_axis_hint":"Expert StreamingとSpeculating Expertsを優先精読し、その後OD-MoEとSSDエネルギー境界を確認する。ストック消化後はSSD expert I/O schedulingとCXL/Flash階層へ展開する"},
     "Photonic-CXL・大容量共有KVメモリ":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":3,"duplicate_filtered_count":3,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"next_axis_hint":"重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"},
     "損失KV検証・正確性保証":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"next_axis_hint":"保持型混在精度KVとPagedAttention実装へ軸をずらす"},
-    "保持型混在精度KV・PagedAttention":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"next_axis_hint":"次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"}
+    "保持型混在精度KV・PagedAttention":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"next_axis_hint":"次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"},
+    "分離サービングKV転送・モデル間KV再利用":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":4,"duplicate_filtered_count":3,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.75,"next_axis_hint":"モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"}
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
 }
