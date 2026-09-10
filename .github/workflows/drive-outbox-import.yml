@@ -1,0 +1,73 @@
+name: Import Google Drive outbox
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drive-outbox-main
+  cancel-in-progress: false
+
+env:
+  DRIVE_PENDING_FOLDER_ID: '1zrP-RoQFa1-ElGsYKps5FwXkWXkkoe_k'
+  DRIVE_PROCESSED_FOLDER_ID: '1iH73yBkcdK8bm12eGUIa4g-tixs_s8B2'
+  DRIVE_FAILED_FOLDER_ID: '1L-BFienHytuHMj5jvV1utsZk2eThRmSf'
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Require Drive credentials
+        run: |
+          if [ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            echo 'Missing repository secret: GOOGLE_SERVICE_ACCOUNT_JSON' >&2
+            exit 2
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Drive client
+        run: python -m pip install -r .survey/scripts/drive_requirements.txt
+
+      - name: Pull pending Drive envelopes
+        run: |
+          python .survey/scripts/import_drive_outbox.py pull \
+            --repo-root . \
+            --manifest /tmp/drive-outbox-manifest.json
+
+      - name: Commit imported transport payloads
+        run: |
+          git config user.name 'drive-outbox[bot]'
+          git config user.email 'drive-outbox[bot]@users.noreply.github.com'
+          git add .survey/work-queue/submissions \
+                  .survey/work-queue/transport \
+                  .survey/update-worker
+          if git diff --cached --quiet; then
+            echo 'No allowed transport changes to commit.'
+            exit 0
+          fi
+          git commit -m 'survey: import Drive outbox'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Acknowledge imported Drive envelopes
+        if: ${{ success() }}
+        run: |
+          python .survey/scripts/import_drive_outbox.py ack \
+            --repo-root . \
+            --manifest /tmp/drive-outbox-manifest.json
