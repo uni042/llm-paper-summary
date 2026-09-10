@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T21:43:58.723787+00:00",
+  "updated_at": "2026-09-10T21:47:06.771570+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2058,14 +2058,14 @@
     {
       "run_key": "2026-09-11T06:30:00+09:00",
       "first_recorded_at": "2026-09-10T21:33:24.225342+00:00",
-      "last_recorded_at": "2026-09-10T21:43:58.723787+00:00",
+      "last_recorded_at": "2026-09-10T21:47:06.771570+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
@@ -2173,6 +2173,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34534029732:1",
+          "recorded_at": "2026-09-10T21:47:06.771570+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34534029732",
+            "run_attempt": "1",
+            "source_sha": "9b78067b72348aed8287e356f8461874e924cb0d"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2221,6 +2235,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-9372a69997e30450",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15157",
+          "title": "PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression",
           "from": "ready",
           "to": "completed"
         }
@@ -2302,7 +2324,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 230,
       "paper_active_count_after": 231,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
