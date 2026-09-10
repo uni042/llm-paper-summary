@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T20:09:14.647342+00:00",
+  "updated_at": "2026-09-10T20:10:23.595411+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T20:09:14.647342+00:00",
+      "last_recorded_at": "2026-09-10T20:10:23.595411+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1594,9 +1594,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 2,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 9,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1717,6 +1717,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34524731894:1",
+          "recorded_at": "2026-09-10T20:10:23.595411+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34524731894",
+            "run_attempt": "1",
+            "source_sha": "28fb3fe9db4f1df6ed4697ff5c6d90e7e56b0c28"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1783,6 +1797,14 @@
           "title": "HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-0764aa7a60dcbf12",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1841,6 +1863,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-187bb403232765d2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.28633",
+          "title": "Topology-Aware Data Movement for Disaggregated GPU Inference"
         }
       ],
       "new_paper_ids": [
@@ -1855,7 +1884,8 @@
         ".survey/work-queue/results/20260911T0435JST-discovery-0c1f66c072921e49.json",
         ".survey/work-queue/results/20260911T0437JST-discovery-ccc820e8748a6b32.json",
         ".survey/work-queue/results/20260911T0451JST-discovery-cee6fbbb4ad4d3b0.json",
-        ".survey/work-queue/results/20260911T0430JST-discovery-b7c0549b213d456a.json"
+        ".survey/work-queue/results/20260911T0430JST-discovery-b7c0549b213d456a.json",
+        ".survey/work-queue/results/20260911T0430JST-discovery-0764aa7a60dcbf12.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 221,
