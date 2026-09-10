@@ -1,12 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "A local job or transport failure is not a run stop condition. Preserve the affected result, classify the failure, then continue with the next independent ready job whenever possible.",
+  "principle": "A local job or transport failure is not a run stop condition. Preserve the affected result or spillover job seed in any available durable transport, classify the failure, then continue independent research whenever safe.",
   "stop_run_only_if": [
     "github_read_unavailable_for_repo_state",
-    "completed_result_cannot_be_durably_preserved_in_github_or_google_drive",
+    "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_drive_or_library",
     "platform_time_context_or_execution_limit_reached",
-    "no_independent_work_remains_and_all_remaining_jobs_share_an_unresolved_global_dependency"
+    "no_independent_work_remains_after_considering_github_ready_and_fallback_spillover_work"
   ],
   "job_local_failures": [
     "full_text_unavailable_for_one_paper",
@@ -14,15 +14,29 @@
     "github_write_failed_for_one_payload_or_target",
     "github_write_connector_unavailable_while_github_read_still_works",
     "google_drive_outbox_save_failed_for_one_payload",
-    "pending_replay_failed",
+    "chatgpt_library_outbox_save_failed_for_one_payload",
+    "drive_pending_replay_failed",
+    "library_pending_replay_failed",
+    "fallback_dependency_not_materialized_yet",
     "record_bank_exhausted_or_dirty",
-    "drive_pending_backlog_growing"
+    "drive_pending_backlog_growing",
+    "library_pending_backlog_growing"
   ],
+  "fallback_policy": {
+    "canonical_doc": ".survey/docs/survey-workflow/fallback-routing.md",
+    "backlog_doc": ".survey/docs/survey-workflow/backlog-resilience.md",
+    "drive_doc": ".survey/docs/survey-workflow/drive-outbox.md",
+    "library_pending_path": "/LLM-survey-outbox/pending/",
+    "preferred_fallback_order": [
+      "google_drive",
+      "chatgpt_library"
+    ],
+    "rule": "Fallbacks are independent transport queues. A failure or backlog in one fallback must not stop research while another durable path can accept the complete logical payload or offline job seed."
+  },
   "backlog_policy": {
-    "canonical_doc": ".survey/docs/survey-workflow/backlog-resilience.md",
     "bank_registry": ".survey/work-queue/records/bank-registry.json",
     "bank_selector": ".survey/scripts/select_record_bank.py",
-    "rule": "Record-bank count and Drive pending count are transport-state metrics, not research-capacity limits. If a complete result can be durably checkpointed to Drive, continue independent research even when no direct GitHub bank is selectable."
+    "rule": "Record-bank count, Drive pending count, Library pending count, and unsent-paper count are transport-state metrics, not research-capacity limits. If a complete result can be durably checkpointed to at least one fallback, continue independent research even when no direct GitHub bank is selectable."
   },
   "github_write_failure_protocol": {
     "retry_failed_target": 1,
@@ -30,15 +44,20 @@
     "probe_attempts_per_run_after_first_write_failure": 1,
     "probe_success": {
       "classification": "target_or_payload_specific",
-      "action": "checkpoint the affected complete logical payload to Google Drive outbox, leave its GitHub job incomplete, continue independent work, and allow later unrelated GitHub writes"
+      "action": "checkpoint only the affected complete logical payload through fallback routing, leave its GitHub job incomplete, continue independent work, and allow later unrelated GitHub writes"
     },
     "probe_failure": {
       "classification": "run_wide_github_write_unavailable",
-      "action": "disable further GitHub writes for the remainder of this run; checkpoint each completed logical payload to Google Drive outbox and continue read/research/audit work"
+      "action": "disable further GitHub writes for the remainder of this run; checkpoint each completed payload through fallback routing; when normal GitHub ready work is exhausted, continue from fallback spillover candidates or create an offline job seed and keep researching"
     }
   },
+  "fallback_failure_protocol": {
+    "google_drive_failed": "mark Drive unavailable for the relevant scope and try ChatGPT Library; do not stop if Library can durably save the logical payload",
+    "chatgpt_library_failed": "mark Library unavailable for the relevant scope and try Google Drive; do not stop if Drive can durably save the logical payload",
+    "both_failed": "continue only while GitHub direct write can durably preserve required state; otherwise STOP_RUN before producing an uncheckpointed completed result or undispatchable offline seed"
+  },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, evaluate stop_run_only_if. Unsent-paper count, Drive backlog size, a dirty bank, or exhaustion of all fixed banks does not satisfy STOP_RUN while complete results can still be durably saved to Drive and independent work exists.",
+    "rule": "Before emitting a final response or ending voluntarily, evaluate stop_run_only_if after considering GitHub actionable ready jobs, checkpointed jobs, fallback spillover candidates, and the ability to create a new offline job seed. Unsent-paper count, either fallback backlog size, a dirty bank, or exhaustion of all fixed banks does not satisfy STOP_RUN while at least one durable transport remains writable and independent research can continue.",
     "default_decision": "CONTINUE"
   }
 }
