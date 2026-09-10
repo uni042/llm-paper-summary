@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-77ada603ffdfc560",
+  "type": "research",
+  "parent_job_id": "job-ffe415b82d26cb48",
+  "priority": 88,
+  "canonical_id": "arxiv:2608.10362",
+  "title": "MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices",
+  "source_url": "https://arxiv.org/abs/2608.10362",
+  "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
+  "selection_reason": "メモリ制約の強いエッジ端末で、適応型投機的デコード（adaptive speculative decoding）がドラフトモデル切替時のロード費で逆に遅くなる問題を扱う実行時システム。予測器によるドラフト選択と、常駐ワーキングセットを先回り管理するメモリ認識スケジューラを分離し、Jetson Orin Nano実機で既存のバンディット型適応方式より定常生成スループットを平均40.7%改善する。モデル選択精度だけでなくドラフト可用性とロードコストを明示的に扱うため、投機的デコードのシステム実装として優先度が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T12:32:11+00:00",
+  "artifact_transport": "structured_record_v10"
+}

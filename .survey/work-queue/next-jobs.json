@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 32,
-      "ready": 1
+      "completed": 33
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "superseded": 22,
-      "completed": 30
+      "completed": 30,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-ffe415b82d26cb48",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-77ada603ffdfc560",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arxiv:2608.10362",
+      "title": "MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2608.10362",
+      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T12:30:51+00:00"
+  "generated_at": "2026-09-10T12:32:12+00:00"
 }
