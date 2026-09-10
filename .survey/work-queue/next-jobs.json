@@ -9,23 +9,10 @@
     },
     "research": {
       "superseded": 22,
-      "completed": 29,
-      "ready": 1
+      "completed": 30
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-175c317515b75ca5",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2606.02964",
-      "title": "Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving",
-      "source_url": "https://arxiv.org/abs/2606.02964",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-2894923eed2a0da9",
       "type": "discovery",
@@ -39,5 +26,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T11:40:14+00:00"
+  "generated_at": "2026-09-10T11:41:29+00:00"
 }

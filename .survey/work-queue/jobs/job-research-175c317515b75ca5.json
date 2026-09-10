@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2606.02964",
   "paper_path": null,
   "selection_reason": "損失のないKVキャッシュ管理で、どのブロックをGPUに残すかだけでなく、非連続な残存KVをGPU注意カーネルが効率よく処理できるかまで含めて最適化するAsymCacheを提案する。複数区間注意（Multi-Segment Attention; MSA）、位置を考慮した再計算費付き追い出し、適応チャンク化を組み合わせ、最新比較対象に対して先頭トークン時間を最大1.90〜2.03倍、出力トークン当たり時間を1.62〜1.71倍改善する。キャッシュ命中率だけでなくGPUカーネル効率を配置判断へ入れる点が既存KV管理と明確に異なる。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -17,5 +17,7 @@
   "artifact_transport": "structured_record_v10",
   "repair_required": true,
   "validation_error": "ValueError: slot metadata requires blob_sha",
-  "last_validation_failed_at": "2026-09-10T11:38:42+00:00"
+  "last_validation_failed_at": "2026-09-10T11:38:42+00:00",
+  "completed_at": "2026-09-10T11:41:28+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
