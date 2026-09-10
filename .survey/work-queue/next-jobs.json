@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 42
+      "completed": 42,
+      "ready": 1
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "superseded": 25,
-      "completed": 46,
-      "ready": 1
+      "completed": 47
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-3915d786aa386244",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2509.03377",
-      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
-      "source_url": "https://arxiv.org/abs/2509.03377",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-f6c4789f353a56da",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T16:36:49+00:00"
+  "generated_at": "2026-09-10T16:44:06+00:00"
 }
