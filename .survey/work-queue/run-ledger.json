@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T21:33:24.225342+00:00",
+  "updated_at": "2026-09-10T21:35:13.891068+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2058,7 +2058,7 @@
     {
       "run_key": "2026-09-11T06:30:00+09:00",
       "first_recorded_at": "2026-09-10T21:33:24.225342+00:00",
-      "last_recorded_at": "2026-09-10T21:33:24.225342+00:00",
+      "last_recorded_at": "2026-09-10T21:35:13.891068+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -2066,9 +2066,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 3,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -2087,6 +2087,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34532972250:1",
+          "recorded_at": "2026-09-10T21:35:13.891068+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34532972250",
+            "run_attempt": "1",
+            "source_sha": "9409646fbe6388f1af54838cf1233877379153ff"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2095,6 +2109,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.02987",
           "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-01c3d3ead58cced3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -2106,10 +2128,26 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-12c24f2cbe912261",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2609.01068",
+          "title": "OUTLETS: Output-Length Prediction from Speculative Decoding Backbones"
+        },
+        {
+          "job_id": "job-research-25ca9c20c57d58e2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.07883",
+          "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving"
         }
       ],
       "new_paper_ids": [],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T0638JST-discovery-01c3d3ead58cced3.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 230,
       "paper_active_count_after": 230,
