@@ -2,73 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "attempt_id": "attempt-metakv-20260910-1411-v10-test",
+  "job_id": "job-research-5b8bc3f2f1ab32c5",
   "data": {
-    "hardware": [
-      "NVIDIA A100 GPU for latency evaluation"
-    ],
-    "software": [
-      "BF16 inference",
-      "Hugging Face-based evaluation pipeline",
-      "EvalScope 1.4.1"
-    ],
-    "model": [
-      "Qwen3-30B-A3B-Instruct-2507",
-      "Qwen3.6-35B-A3B",
-      "Gemma-4-26B-A4B-it"
-    ],
-    "datasets": [
-      "WikiText-2",
-      "ARC-Challenge",
-      "ARC-Easy",
-      "PIQA",
-      "MATH-500",
-      "GPQA-Diamond",
-      "HumanEval",
-      "LiveCodeBench"
-    ],
-    "baselines": [
-      "Score",
-      "NAEE",
-      "MoDES",
-      "DiEP",
-      "AIMER (Qwen3-30B)",
-      "Top-P routing (Qwen3-30B)",
-      "SERE (Qwen3-30B)",
-      "XShare (Qwen3-30B)",
-      "ExpertSparsity (Qwen3-30B)",
-      "GSP-only",
-      "RCR-only"
-    ],
+    "hardware": ["NVIDIA RTX PRO 6000 Blackwell Server Edition 96GB ×1"],
+    "software": ["Hugging Face Transformers", "LightGBM", "KVQuant", "H2O", "RocketKV"],
+    "model": ["Meta Llama 3.1 8B"],
+    "datasets": ["GSM8K", "HellaSwag", "ARC-Challenge", "SQuAD 1.1"],
+    "baselines": ["最良の静的設定（StaticBaseline）", "全候補の実測結果を知るオラクル（Oracle）", "非圧縮FP16", "KVQuant 2/3/4-bit", "H2O 20/40/60%", "RocketKV 8/16/32×"],
     "settings": [
-      {
-        "name": "budgets",
-        "description": "10,20,30,40,50,60% of routed top-k expert slots skipped; top-1 always retained."
-      },
-      {
-        "name": "threshold mapping",
-        "description": "one unlabeled full-model pass collects selection scores and quantile-maps requested budgets; estimator tables remain parameter-only."
-      },
-      {
-        "name": "WikiText-2",
-        "description": "PPL at sequence length 2048."
-      },
-      {
-        "name": "downstream",
-        "description": "zero-shot, identical prompts/splits, greedy decoding; max generation 1024 for ARC-C/E/PIQA, 2048 for reasoning/coding."
-      },
-      {
-        "name": "reproducibility",
-        "description": "single deterministic run seed 42; paper cautions against overinterpreting sub-point differences."
-      },
-      {
-        "name": "latency",
-        "description": "60% skipping on A100; lengths 256–1024 and batch sizes 1–4; TTFT/TPOT."
-      }
+      {"name": "データ収集", "description": "4データセット各2,048プロンプト、合計8,192プロンプト×10候補をプロファイル。85%を学習、15%をテストとし、保持テストは合計1,232プロンプト。5分割交差検証も実施。"},
+      {"name": "制約評価", "description": "最大遅延と最大ピークKVメモリの複数組合せを評価。主指標は、正答かつ両制約を満たすプロンプト比率である制約付き成功率（Constrained Success Rate; CSR）。"},
+      {"name": "予測器", "description": "ピークメモリ予測 MAPE 7.7%、R² 0.9981。遅延予測 MAPE 38.19%、R² 0.9651。正答予測 AUROC 0.70。選択オーバーヘッド平均10.96ms/プロンプト。"}
     ],
-    "correctness": "Lossy expert skipping; exact BF16 output equivalence is not guaranteed. Top-1 is always retained and surviving gates renormalized.",
-    "methodology": "Equal realized expert-slot budgets across methods; three MoE models, eight benchmarks, component/fusion ablations, threshold-preparation timing, and A100 TTFT/TPOT.",
-    "scope": "Supports quality-vs-executed-expert and single-GPU latency claims. Distributed expert-parallel serving is not evaluated; thresholds are workload-matched and quality uses one deterministic run."
+    "correctness": "モデルの数値計算を近似する新手法ではなく既存圧縮設定を選ぶため、品質は選択された圧縮方式に依存する。正答率を評価に明示的に含める。",
+    "methodology": "保持テスト1,232プロンプトで静的設定、MetaKV、実測オラクルを比較し、CSR、制約違反率、正答率を報告する。生成タスクは完全一致、選択式は負の対数尤度が最小の選択肢で判定する。",
+    "scope": "1モデル、1GPU機種、4データセット、3種類のKV圧縮方式に限定。別モデル・別GPUへ一般化するには再プロファイルと予測器再学習が必要。"
   }
 }
