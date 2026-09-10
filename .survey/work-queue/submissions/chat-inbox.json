@@ -1,35 +1,19 @@
 {
-  "submission_id": "chat-job-96f12c7bc8f9af18",
-  "job_id": "job-96f12c7bc8f9af18",
+  "submission_id": "chat-metakv-20260910-1411-v10-test",
+  "attempt_id": "attempt-metakv-20260910-1411-v10-test",
+  "job_id": "job-research-5b8bc3f2f1ab32c5",
   "status": "completed",
-  "candidates": [
-    {
-      "canonical_id": "arXiv:2605.18071",
-      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
-      "source_url": "https://arxiv.org/abs/2605.18071",
-      "priority": 90,
-      "reason": "GPU HBM、CPU DRAM、SSDの三階層でKVキャッシュ配置と実行パイプラインを統合管理する推論システム。"
-    },
-    {
-      "canonical_id": "arXiv:2603.27138",
-      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
-      "source_url": "https://arxiv.org/abs/2603.27138",
-      "priority": 85,
-      "reason": "KVキャッシュ退避とCPU側の先行attention計算を組み合わせて待ち時間を減らす推論システム。"
-    },
-    {
-      "canonical_id": "arXiv:2606.16135",
-      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
-      "source_url": "https://arxiv.org/abs/2606.16135",
-      "priority": 80,
-      "reason": "同一サーバ内の未使用GPUメモリとNVLinkを活用し、モデル間でprefix KV cacheを共有するservingシステム。"
-    },
-    {
-      "canonical_id": "arXiv:2601.10729",
-      "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-      "source_url": "https://arxiv.org/abs/2601.10729",
-      "priority": 75,
-      "reason": "要求ごと・層ごとのKV配置を実行時に再構成する長文servingシステム。"
-    }
-  ]
+  "record_bank": "b",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression-for-constrained-llm-inference.md",
+  "expected_blob_sha": null,
+  "record_slots": [
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record-b/metadata.json", "blob_sha": "df10d839bcb35d1355cfdd86bd6eb0925f233a90"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record-b/problem_method.json", "blob_sha": "462c69698159a7742d0d125f8cd84a523a652bcb"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record-b/evaluation.json", "blob_sha": "b1296135f94de1014f753fdd93497327a9e477fb"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record-b/results.json", "blob_sha": "fc09f2828a901afea11c5fe80ea349e74eb8cf28"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record-b/positioning.json", "blob_sha": "52ed194450b899453fbbaf01cc394fd3274d1f19"}
+  ],
+  "audit_required": false,
+  "audit_reason": null,
+  "audit_flags": []
 }
