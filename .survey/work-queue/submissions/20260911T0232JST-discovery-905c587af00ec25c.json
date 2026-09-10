@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-905c587af00ec25c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance.md",
+      "priority": 82,
+      "reason": "KVキャッシュをTB級へ拡張する際のCXLメモリプールを、電気スイッチではなく受動光ファイバ・シャッフルを使うPhotonic-CXL構成へ置き換える研究。16ホスト間で32 TB共有メモリを提供し、電気CXLプール比で50%以上のレイテンシ削減、マルチターン会話でTTFT 6.6倍改善を報告している。既収録のSSD-backed KVやCXL-hybrid memoryとは異なり、CXLプール自体のネットワーク/スイッチ構成を光化して容量・距離・消費電力の壁を狙うため、階層KVサービングの比較対象として価値が高い。"
+    }
+  ]
+}
