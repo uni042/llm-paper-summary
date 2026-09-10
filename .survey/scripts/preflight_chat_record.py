@@ -2,7 +2,7 @@
 """Preflight the reusable Chat structured-record transport without publishing it.
 
 The preflight deliberately reuses assemble_research_record.assemble() inside a temporary
-repository tree so validation rules stay identical to the renderer path.  On validation
+repository tree so validation rules stay identical to the renderer path. On validation
 failure it can soft-isolate only the affected job: write a machine-readable result and
 reopen that job for repair while allowing the worker run to continue.
 """
@@ -19,6 +19,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import assemble_research_record as base  # noqa: E402
+from record_bank_config import BANK_ROOTS  # noqa: E402
+
+# Match the workflow-v10 assembler entrypoint exactly.
+base.BANK_ROOTS.clear()
+base.BANK_ROOTS.update(BANK_ROOTS)
 
 
 def now() -> str:
@@ -50,6 +55,9 @@ def copy_transport(repo_root: Path, temp_root: Path) -> dict:
         dst.parent.mkdir(parents=True, exist_ok=True)
         if src.is_file():
             shutil.copy2(src, dst)
+
+    # assemble() renders only inside the temporary tree; ensure its destination exists.
+    (temp_root / base.LEGACY_PAYLOAD).parent.mkdir(parents=True, exist_ok=True)
     return inbox
 
 
