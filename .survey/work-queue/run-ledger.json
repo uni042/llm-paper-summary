@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T15:33:22.083222+00:00",
+  "updated_at": "2026-09-10T16:29:58.387004+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -354,6 +354,77 @@
       "paper_active_count_before": 210,
       "paper_active_count_after": 210,
       "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-11T01:30:00+09:00",
+      "first_recorded_at": "2026-09-10T16:29:58.387004+00:00",
+      "last_recorded_at": "2026-09-10T16:29:58.387004+00:00",
+      "signals": [
+        "discovery_or_queue_expanded",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 2,
+        "new_papers": 1,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34502441779:1",
+          "recorded_at": "2026-09-10T16:29:58.387004+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34502441779",
+            "run_attempt": "1",
+            "source_sha": "522a1054862910d5105c658b593f712c39b4859a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-7afb8a934b1edaa3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-research-3915d786aa386244",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.03377",
+          "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing"
+        },
+        {
+          "job_id": "job-research-625f5d1a9588ab7f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.27187",
+          "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference"
+        }
+      ],
+      "new_paper_ids": [
+        "arXiv:2602.18755"
+      ],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T0128JST-discovery-7afb8a934b1edaa3.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 210,
+      "paper_active_count_after": 211,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3915d786aa386244",
+  "type": "research",
+  "parent_job_id": "job-7afb8a934b1edaa3",
+  "priority": 87,
+  "canonical_id": "arXiv:2509.03377",
+  "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+  "source_url": "https://arxiv.org/abs/2509.03377",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+  "selection_reason": "CXL拡張メモリの帯域不足に対し、モデルやCXL.memインターフェースを変えずにデバイス側で動的量子化と可逆圧縮を行う近データ処理を提案する。エンドツーエンド配信でスループット43%向上、最大コンテキスト長87%拡張、KVキャッシュ容量46.9%削減を報告しており、CXL容量拡張を帯域面から補強する実装指向の研究として価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T16:29:55+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-625f5d1a9588ab7f",
+  "type": "research",
+  "parent_job_id": "job-7afb8a934b1edaa3",
+  "priority": 88,
+  "canonical_id": "arXiv:2607.27187",
+  "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+  "source_url": "https://arxiv.org/abs/2607.27187",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+  "selection_reason": "大規模LLM推論のKVキャッシュを16ホスト・32TBの共有メモリへ拡張するフォトニックCXLメモリアプライアンスを提案する。電気CXLスイッチを受動光ファイバ構成へ置き換え、電気CXLプール比で50%以上の遅延削減、マルチターン会話で初回トークン時間を最大6.6倍改善と報告しており、CXL階層メモリとクラスタ規模KV再利用の境界を埋める候補として重要。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T16:29:55+00:00",
+  "artifact_transport": "structured_record_v10"
+}
