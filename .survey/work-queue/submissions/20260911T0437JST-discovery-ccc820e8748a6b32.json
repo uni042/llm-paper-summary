@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ccc820e8748a6b32",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.13962",
+      "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture",
+      "source_url": "https://arxiv.org/abs/2608.13962",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
+      "priority": 87,
+      "reason": "Attention-FFN分離型サービングでMoE専門家重みを高帯域ReRAM近傍メモリ側へ常駐させ、疎な専門家集合で生じる低占有率を局所マルチキャスト共有、共起を考慮した配置、負荷対応フェッチで改善するアーキテクチャ研究。Qwen3.5-35B-A3B、Qwen3.5-397B-A17B、GLM-5.2を対象とした実測＋モデル評価で、side-4 poolingにより占有率を0.328から0.519へ改善し、同一ピーク演算量条件でH20比のFFNプール1トークン遅延を9.5倍短縮、重み移動エネルギーを20分の1、H20注意機構＋ReRAM FFN構成で均一H20プール比のデコードTPOTをモデルに応じ1.25〜10.4倍短縮すると報告する。専門家オフロードの『予測して運ぶ』方式とは異なり、重みを近傍メモリへ常駐させて帯域密度と占有率を稼ぐ設計として比較価値が高い。最新identity index、identity delta、repo検索で未登録を確認した。"
+    }
+  ]
+}
