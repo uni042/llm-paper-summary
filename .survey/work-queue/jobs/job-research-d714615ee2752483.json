@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-d714615ee2752483",
+  "type": "research",
+  "parent_job_id": "job-3b8e09c2d256c523",
+  "priority": 87,
+  "canonical_id": "arXiv:2512.04476",
+  "title": "Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems",
+  "source_url": "https://arxiv.org/abs/2512.04476",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+  "selection_reason": "GPU HBMに収まらないMoEで、低頻度エキスパート重みをCXL接続のデータ近傍処理側へ置き、重み転送を活性値転送へ置き換える。プリフィル時の活性統計からデコード時の高頻度エキスパートをGPUへ固定し、残りをCXL-NDPで実行するほか、NDP計算能力に合わせてエキスパートごとの1〜4ビット精度も決める。GPU・外部メモリ間で何を移すべきかという階層配置問題をMoEルーティング文脈と結び付け、最大8.7倍のデコードスループット、平均0.13%精度低下を報告するため、オフロード・CXL・MoE配置系統として優先度が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T19:09:23+00:00",
+  "artifact_transport": "structured_record_v10"
+}
