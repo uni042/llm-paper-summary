@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 45,
-      "ready": 1
+      "completed": 46
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "completed": 48,
-      "superseded": 25
+      "superseded": 25,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-1eeaee8a7ab27e13",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-3825f981fb90605e",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2605.17613",
+      "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.17613",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T17:31:50+00:00"
+  "generated_at": "2026-09-10T17:33:12+00:00"
 }

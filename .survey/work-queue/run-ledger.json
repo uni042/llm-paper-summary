@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:31:52.609747+00:00",
+  "updated_at": "2026-09-10T17:33:12.602914+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,7 +572,7 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:31:52.609747+00:00",
+      "last_recorded_at": "2026-09-10T17:33:12.602914+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized"
@@ -580,9 +580,9 @@
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 2,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -601,11 +601,33 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34508884000:1",
+          "recorded_at": "2026-09-10T17:33:12.602914+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34508884000",
+            "run_attempt": "1",
+            "source_sha": "cfb18c8bd58a4cda41d999d32b20f1f0c9becaac"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
         {
           "job_id": "job-905c587af00ec25c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-1eeaee8a7ab27e13",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -620,6 +642,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-3825f981fb90605e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.17613",
+          "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -628,12 +657,13 @@
         "arXiv:2607.27187"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T0232JST-discovery-905c587af00ec25c.json"
+        ".survey/work-queue/results/20260911T0232JST-discovery-905c587af00ec25c.json",
+        ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,
       "paper_active_count_after": 214,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
