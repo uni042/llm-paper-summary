@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e22703146ab852cf",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2609.04895-cache-aware-router-adaptation-moe-inference.md",
+      "priority": 94,
+      "reason": "GPUメモリへ全エキスパートを保持できないMoE推論で、キャッシュ管理を実行時の予測だけに任せず、軽量な補助ルータとMoE本体を事後学習してエキスパート再利用をキャッシュしやすくする研究。Temporal Routerは先読み転送を行わず同一層で再利用されるエキスパートを保持し、Spatio-Temporal Routerは前段の隠れ状態から次層アクセス前にキャッシュを補正する。Qwen3では強いプリフェッチ比較対象に対して調整済みヒット率を1.15〜18.03ポイント改善し、エキスパート重み転送量を4.6〜53.3%削減しており、MoEエキスパート退避・キャッシュ系統へ直接関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.05764",
+      "title": "Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.05764",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2609.05764-interface-aware-kv-quantization-nvm.md",
+      "priority": 84,
+      "reason": "長文脈デコードのKVキャッシュを高密度オンチップ不揮発メモリへ置くことを前提に、GPU向け量子化で必要な群ごとのメタデータや疎な外れ値保持がメモリ回路では高コストになる問題を扱う。ランダム回転とベクトル単位正規化で固定符号帳を共有し、4ビットKVと約3%のメタデータだけで固定範囲の読み出し変換器へ適合させる。3B〜14B、最大32K文脈の評価で、同一NVMへ写像したKIVI/KVQuantよりKV読み出しエネルギーを3.1〜3.6倍削減し、KIVI比でメタデータ量を8分の1にする。メモリ階層と量子化の協調設計として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02029",
+      "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+      "source_url": "https://arxiv.org/abs/2609.02029",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.02029-headwisekv-per-head-cache-residency.md",
+      "priority": 82,
+      "reason": "局所注意・再帰・線形経路を併用するハイブリッド長文脈モデルでも、残る大域注意層のKVキャッシュがGPUメモリを圧迫する問題を対象とする。HeadWiseKVは各物理KVヘッドへ静的な多段履歴窓を割り当て、SeqCalibが下位層で実際に使う方策を条件として層順に容量配分を決める。完全KVを単にマスクするのでなく実際の常駐量を減らす実行環境を持ち、Qwen3.6-27Bで112K文脈時のピーク装置メモリを8.59%削減し、検証済み最大文脈を114Kから161Kへ延長している。"
+    }
+  ]
+}
