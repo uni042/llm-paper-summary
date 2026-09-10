@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:54:19.908134+00:00",
+  "updated_at": "2026-09-10T18:02:31.405980+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,18 +572,18 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:54:19.908134+00:00",
+      "last_recorded_at": "2026-09-10T18:02:31.405980+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 11,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -703,6 +703,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34511858581:1",
+          "recorded_at": "2026-09-10T18:02:31.405980+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34511858581",
+            "run_attempt": "1",
+            "source_sha": "e2a79a5c2eae8096a62bf3ffff1c17e22d0e8cdf"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -767,6 +782,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-80640e3855fad375",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15453",
+          "title": "A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -841,6 +864,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.24787",
           "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models"
+        },
+        {
+          "job_id": "job-ed3be0b3453134d0",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
