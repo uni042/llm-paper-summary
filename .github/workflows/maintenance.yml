@@ -93,7 +93,7 @@ jobs:
         if: steps.pending.outputs.pending == 'true'
         run: |
           python - <<'PY'
-          import datetime as dt, json, os
+          import datetime as dt, json
           from pathlib import Path
           state_path = Path('.survey/work-queue/maintenance-cycle.json')
           state = json.loads(state_path.read_text())
@@ -102,8 +102,11 @@ jobs:
           state['maintenance_pending'] = False
           state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
           state['last_gc_deleted'] = gc.get('deleted_count', 0)
+          state['last_gc_checked_at'] = gc.get('checked_at')
           state['last_consistency_status'] = consistency.get('status')
+          state['last_consistency_checked_at'] = consistency.get('checked_at')
           state['last_maintenance_status'] = 'passed' if consistency.get('status') == 'passed' else 'issues_found'
+          state['last_maintenance_status_source'] = 'maintenance_workflow'
           state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
           PY
 
