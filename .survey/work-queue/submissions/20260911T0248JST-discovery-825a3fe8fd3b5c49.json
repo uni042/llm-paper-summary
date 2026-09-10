@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-825a3fe8fd3b5c49",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.13734",
+      "title": "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.13734",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.13734-kvserve-service-aware-kv-compression.md",
+      "priority": 88,
+      "reason": "分離型LLMサービングでKV圧縮を固定設定にせず、ワークロード・帯域・品質予算に応じてオンライン選択するシステム。ベイズ型プロファイリングで圧縮戦略空間のPareto候補を抽出し、分析遅延モデルと軽量banditで実運用時のずれを補正する。PD分離で最大9.13倍のJCT高速化、KV分離で最大32.8倍のTTFT削減を報告し、圧縮アルゴリズム単体ではなくサービス状態を含む制御問題として扱う点が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28150-smartgen-selective-kv-transfer.md",
+      "priority": 84,
+      "reason": "プリフィル・デコード分離時に巨大KV全体を先に転送せず、プロファイル型の先行転送、デコード中のオンデマンド並列取得、最終的な投機転送という三経路を組み合わせる。帯域が限られたクラウド環境を対象に、完全KV転送方式より二番目のトークンまでの時間を最大4.3倍短縮し、その後のデコード性能と精度を維持すると報告する。KV転送の選択性とスケジューリングを扱うため、CXL/PCIe・遠隔階層の研究軸に近い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.03893",
+      "title": "Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse",
+      "source_url": "https://arxiv.org/abs/2608.03893",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03893-cross-model-kv-cache-transfer.md",
+      "priority": 73,
+      "reason": "同一モデル系列内でモデル切替する際にプリフィルを再計算せず、送信元KVから受信先KVへ閉形式のridge写像で変換して再利用する研究。Qwen3 14B→32Bなどで層間KVの線形構造を測り、6組のうち4組では単独プリフィル精度の73〜98%を維持しつつ再プリフィルより2.7〜25倍高速と報告する。モデルルーティングとKV移送を接続する隣接系統として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.16477",
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "source_url": "https://arxiv.org/abs/2608.16477",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.16477-pallas-proactive-kv-migration.md",
+      "priority": 66,
+      "reason": "移動端末の基地局ハンドオーバー前に、安定した履歴プリフィックスを移動先で再プリフィルし、増え続けるsuffixのKVだけを移動元からストリーミングする能動的状態移行。モビリティ予測と実行時観測から準備開始時刻を選び、100〜500Mbpsの基地局間リンクでサービス中断時間を2.28〜89.68倍削減すると報告する。一般データセンタ向けではないが、再計算と転送を同時利用するKV移行スケジューリングの特殊だが明確な設計点を持つ。"
+    }
+  ]
+}
