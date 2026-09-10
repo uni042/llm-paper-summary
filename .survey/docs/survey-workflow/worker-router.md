@@ -14,11 +14,11 @@
 run全体を停止してよいのは、次のいずれかだけ。
 
 1. GitHub read自体が利用できず、最新queue/identity/repo状態を確認できない。
-2. 完成済み成果があり、それをGitHub / Notion / ChatGPT Libraryのどこにも耐久保存できない。
+2. 完成済み成果があり、それをGitHubまたはGoogle Drive outboxのどちらにも耐久保存できない。
 3. 明確な時間・実行回数・コンテキスト等のプラットフォーム上限に達した。
 4. 独立して処理できる作業が残っておらず、残作業すべてが同じ未解決の全体依存でblockedになっている。
 
-全文取得不能、論文固有の依存不足、単一payloadのGitHub write失敗、Notion失敗、pending replay失敗は**そのjobまたは経路だけの問題**として扱う。別のready jobまで止めない。
+全文取得不能、論文固有の依存不足、単一payloadのGitHub write失敗、Drive保存失敗、pending replay失敗は**そのjobまたは経路だけの問題**として扱う。別のready jobまで止めない。
 
 ### End-of-run Stop Gate
 
@@ -28,9 +28,9 @@ run全体を停止してよいのは、次のいずれかだけ。
 
 ## 実行前の共通回復
 
-GitHubへの反映が利用可能な場合、外部設定されたNotion一時配送キューの `pending` と、private設定で指定されたChatGPT Library一時配送キューの `pending` を確認する。現在のqueue/identity/対象blobと整合する成果だけを、新規作業より先にGitHubへ再投入する。
+GitHubへの反映が利用可能な場合、Google Drive outboxの `pending` は [drive-outbox.md](drive-outbox.md) と `.github/workflows/drive-outbox-import.yml` に従ってGitHub Actions側が回収する。Chat workerは同じpayloadをGitHubへ手動で二重投入しない。開始時は最新queue/identity/対象blobを読み、Driveからすでに再投入済みの成果が反映されていれば、その状態を正として新規作業へ進む。
 
-pending再投入は新規研究を飢餓させない。各pending payloadの再投入は**1 runにつき最大1回**。同じ `Failure Class` の共通障害が1件で確認されたら、そのrunでは同原因の残りpendingを個別に再試行しない。失敗payloadはpendingのまま保持し、完全payloadが耐久保存済みでGitHub readが可能なら通常のready job処理へ進む。
+Drive pendingの回収失敗は新規研究を飢餓させない。GitHub readが可能で、完成payloadがDriveへ耐久保存済みなら通常のready job処理へ進む。同じ `Failure Class` の共通障害が確認されたrunでは、同原因の保存・再投入を各jobごとに繰り返さない。
 
 GitHub readができない場合はrepo状態に依存する新規処理を開始しない。
 
@@ -42,7 +42,7 @@ GitHub writeが失敗した場合は、失敗しただけでrunを終了しな�
 2. それでも失敗した場合、そのrunで最初のwrite失敗に限り、固定診断先 `.survey/work-queue/transport/health-probe.json` を最新SHA付きで1回だけ更新する。`probe_id` はrun/attemptを識別できる短い値に変え、元の論文payloadは書かない。
 3. 診断writeが成功した場合は `target_or_payload_specific` と分類する。GitHub write能力全体は生きているため、影響を受けたjobだけを一時保管し、後続の独立したGitHub writeは許可する。
 4. 診断writeも失敗した場合は `run_wide_github_write_unavailable` と分類する。そのrunでは以後GitHub writeを試さない。同じ失敗を各slot/jobで繰り返さない。
-5. GitHub writeを使えないrunでも、GitHub readが可能で、成果をNotionまたはLibraryへ耐久保存できる限り、既知のready research/auditを読み進めて一時保管し、次の独立jobへ進む。
+5. GitHub writeを使えないrunでも、GitHub readが可能で、成果をGoogle Drive outboxへ耐久保存できる限り、既知のready research/auditを読み進めて一時保管し、次の独立jobへ進む。
 6. GitHub write不能のため新しいqueue遷移が必要な作業しか残っていない場合は、それを全体依存としてStop Gateで判定する。
 
 診断用固定ファイルは接続状態の切り分け専用であり、安全検査回避やpayload分割回避には使わない。
@@ -73,7 +73,7 @@ Chatは探索・全文精読・科学的判断・監査判断と**構造化resea
 
 各job完了後、blocked化後、または一時保管後に、GitHub readが可能なら最新queueを再取得する。固定件数・固定バッチ数・「1本終わったら終了」の上限は設けない。
 
-GitHubへの成果反映を完了できなくても、完全な再送可能logical payloadをNotionまたはChatGPT Libraryへ耐久保存できた時点を**後続jobへ進むためのチェックポイント**とする。元jobはGitHub上では未完了のまま残す。
+GitHubへの成果反映を完了できなくても、完全な再送可能logical payloadをGoogle Drive outboxへ耐久保存できた時点を**後続jobへ進むためのチェックポイント**とする。元jobはGitHub上では未完了のまま残す。
 
 全文取得不能や論文固有の依存不足が発生した場合も、対象jobだけをblocked/deferredとして、次の独立ready jobへ進む。これらをrun全体の停止理由にしない。
 
@@ -92,10 +92,12 @@ GitHub write失敗時は論文workerと同じhealth probe / continuation policy�
 
 ## 一時配送キュー
 
-GitHub側でwriteを完了できない成果は、再投入可能な完全logical payloadとして一時保管する。原則はNotion temporary queue、Notionも利用不能ならChatGPT Library `/LLM-survey-fallback/pending/` を使う。
+GitHub側でwriteを完了できない成果は、再投入可能な完全logical payloadとしてGoogle Drive `llm-paper-summary-outbox/pending` へ一時保管する。詳細なenvelope形式・folder ID・許可pathは [drive-outbox.md](drive-outbox.md) を正本とする。
 
-Notion/LibraryはGitHubの代替正本ではない。GitHub publication成功とは扱わずqueue上のjobは未完了のままにする。
+DriveはGitHubの代替正本ではない。Drive保存成功をGitHub publication成功とは扱わず、queue上のjobは未完了のままにする。
 
-GitHub Actions内のpushが失敗した場合は入力自体がGitHubへ届いているため、外部キューへ重複保存せずActions側の再処理を優先する。
+Chat workerは完成MarkdownをDriveへ置かない。GitHubへ本来送る予定だった固定transport JSONを `schema_version: 1` のDrive envelopeに格納し、同一logical submissionの複数slotは1 envelopeにまとめる。Drive `pending` からGitHubへの回収、検証、commit、`processed` への移動はActionsに任せる。
 
-**一時保管成功後はStop Gateへ直行して終了するのではなく、次の独立ready jobを処理する。** 単一の反映保留、Notion失敗、pending replay失敗、1本処理完了、queueが一度空になったことをrun終了理由にしない。
+GitHub Actions内のpushが失敗した場合は入力自体がGitHubへ届いているため、Driveへ重複保存せずActions側の再処理を優先する。
+
+**一時保管成功後はStop Gateへ直行して終了するのではなく、次の独立ready jobを処理する。** 単一の反映保留、Drive保存失敗、pending replay失敗、1本処理完了、queueが一度空になったことをrun終了理由にしない。
