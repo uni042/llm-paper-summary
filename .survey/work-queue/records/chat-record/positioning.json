@@ -2,24 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
-  "job_id": "job-research-ad144841ea01b7c6",
+  "attempt_id": "attempt-launchbound-20260910-1612-v10",
+  "job_id": "job-research-bb4463d4f717f17c",
   "data": {
     "differences": [
-      "Existing KV compressors choose tokens/budgets; Tangram makes their heterogeneous output practical in a serving system.",
-      "PagedAttention reduces request-level external fragmentation but assumes uniform head lengths; Tangram targets internal fragmentation caused by non-uniform head retention.",
-      "Jenga handles coarser layer heterogeneity and DiffKV differentiated head management; Tangram exploits cross-head retention regularity to static-plan budget, paging, and kernel partition together.",
-      "Unlike FlashDecoding static heuristics or FlashInfer runtime planning, Tangram moves partitioning fully offline using calibrated budget ratios."
+      "新しいMoE高速化アルゴリズムを提案する研究ではなく、既存の融合カーネル、量子化、グラフコンパイルがエンドツーエンドで利得を失う条件を測定する負の結果中心のシステム研究である。",
+      "カーネル最適化研究が単体マイクロベンチマークを主結果にしがちな点に対し、対象モジュールの時間比、アムダール上限、モデル全体速度、残存カーネル起動数まで連続して追う。",
+      "MoE量子化研究で用いられるルーティング一致率やJaccard距離を品質代理指標とせず、FP16重みを固定したルーティング再生によって専門家選択変化の因果寄与を直接測る。",
+      "コンパイラ研究でグラフ切断数の削減を成功指標とする見方に対し、切断ゼロでも定常推論が大幅に遅くなる例を示し、捕捉可能性と実行効率を分離する。"
     ],
     "limitations": [
-      "Depends on offline-calibrated retention stability.",
-      "Main real-system evaluation is one 4×A100 server; transfer to other GPU/CPU/multi-node systems is unproven.",
-      "Optimal H_p is hardware-dependent.",
-      "2.6× headline includes underlying compression capacity gain.",
-      "Does not fix quality loss caused by the compression scorer itself."
+      "厳密なルーティング再生による因果分解はOLMoE-1B-7Bだけで実施され、DeepSeek-V2-LiteやQwen3-30B-A3Bでは観測的な跨モデル比較に留まる。",
+      "量子化構成横断の相関分析は16〜17構成程度で、同一チェックポイントと限定されたプロンプト集合に依存する。",
+      "DeepSeek-V2-Liteではルーターが量子化対象外となる設定があり、三モデル間の比較条件は完全には統一されていない。",
+      "MMLUとHellaSwagのタスク精度は各500例程度で検出力が低く、小さな品質差を確定できない。",
+      "量子化実装は主にbitsandbytes、GPUはA100 80GBに限定され、別量子化器、新世代GPU、分散MoEサービングでは律速構造が変わり得る。",
+      "PyTorchコンパイル評価では注意実装など一部環境制約があり、他のコンパイラや最新バージョンへそのまま一般化できない。"
     ],
-    "implementation_status": "Official aiha-lab/TANGRAM repository is public, vLLM-based and Apache-2.0. It documents installation, reproduction, ragged paging, multiple scorers, Ampere/sm_80+ requirement, and verified Qwen/Llama/Gemma/GPT-OSS models with some tensor-parallel restrictions.",
-    "research_positioning": "KV-cache optimization/compressionとLLM servingの境界に位置するsystems paper。algorithmic evictionより、non-uniform compressionをcontinuous batching/PagedAttentionへ載せるmemory allocator・page table・scheduler・attention-kernel co-designが主題。",
-    "audit_notes": "arXiv v2 HTMLをmethodology、evaluation、related work、conclusionまで精読し、official GitHubも確認。実機評価でsimulationではない。別auditを要求する未解決点はない。"
+    "implementation_status": "著者らは再現用コードを公開し、Modal上での実験ハーネス、融合Tritonカーネル、量子化設定、トークン単位ルーティング記録・解析を提供している。新しい推論ランタイムの製品実装ではなく、既存MoEモデルに対する計測・介入実験の研究コードである。",
+    "research_positioning": "本論文はMoE推論のカーネル融合、量子化、コンパイラ最適化という複数系統を横断し、それぞれの代表的な中間指標が最終性能の十分条件ではないことを示す診断研究として位置づけられる。リポジトリ内の高速化手法を比較する際に、単体カーネル倍率、ルーティング一致率、グラフ切断数だけでは実用価値を判断できないという反証データを提供するため、個別最適化方式とは別に参照価値が高い。特にMoEで約1000回の小粒度カーネル起動が残る場合、演算カーネル単体の高速化余地より起動・分配構造そのものを変える設計が必要だという研究課題を明確にする。",
+    "audit_notes": "arXiv v2本文の方法・結果・限界節と公式GitHubを確認。8.98倍はRMSNorm単体の最大値でありモデル全体の高速化ではない。2.7%はINT4品質劣化のうち、FP16重みでINT4ルーティングだけを再生した因果寄与。0.327倍はグラフ切断ゼロ設定のイーガー実行比で、約3倍高速ではなく約3倍遅いことに注意。"
   }
 }
