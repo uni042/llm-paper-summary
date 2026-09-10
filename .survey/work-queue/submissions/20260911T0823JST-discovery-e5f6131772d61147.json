@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e5f6131772d61147",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07883",
+      "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2609.07883",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-sloweave-deadline-aware-prefill-chunking.md",
+      "priority": 96,
+      "reason": "SLOWeaveは進行中デコード要求の次トークン期限を守れる最大プリフィルチャンクをオンラインで選び、固定チャンク調整を不要にする。25ms TPOT目標で混合・長文負荷のgoodputを38〜39%、10ms目標では2.4〜3.3倍改善し、サービング制御として新規性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.08682",
+      "title": "HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing",
+      "source_url": "https://arxiv.org/abs/2609.08682",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2609.08682-hda-moe-3d-near-memory-scheduling.md",
+      "priority": 93,
+      "reason": "3D近接メモリ処理上のMoEでハイブリッド並列化と動的適応スケジューリングを組み合わせ、専門家実行・通信・メモリ帯域を共同で扱う最新研究。MoE配置と近接メモリ系統の空白を埋める候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03079",
+      "title": "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.03079",
+      "paper_path": "papers/inference/09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
+      "priority": 82,
+      "reason": "モバイル・組み込み環境で推測と修正をストリーミング化し、限られた端末資源でLLM推論を高速化する実装系研究。データセンター中心の既存系統とは異なるオンデバイス推論の補完候補である。"
+    }
+  ]
+}
