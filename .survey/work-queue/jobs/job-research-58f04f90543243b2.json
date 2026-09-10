@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-58f04f90543243b2",
+  "type": "research",
+  "parent_job_id": "job-d7ae4619b26c6035",
+  "priority": 84,
+  "canonical_id": "arXiv:2607.01237",
+  "title": "Kara: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression",
+  "source_url": "https://arxiv.org/abs/2607.01237",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-cache-compression.md",
+  "selection_reason": "長い推論過程で膨張するKVキャッシュを、直近の窓だけを対象に重要度評価し可変長チャンクとして保持する方式。PagedAttentionへ統合したKvLLMをvLLM上に実装しており、推論時KV圧縮を実際のserving系へ落とし込んだ点に価値がある。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T20:34:34+00:00",
+  "completed_at": "2026-09-10T20:34:37+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2607.01237",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2607.01237"
+  }
+}
