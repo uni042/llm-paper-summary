@@ -1,0 +1,117 @@
+name: survey-consistency-repair-once
+
+on:
+  push:
+    paths:
+      - '.survey/work-queue/consistency-repair-request.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-consistency-repair-once
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: python -m pip install --disable-pip-version-check pyyaml
+
+      - name: Repair known legacy local links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              'papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md': [
+                  ('2024-2411.11217-moe-lightning-high-スループット-moe-推論-with-cpu-gpu-i-o-pipelining.md',
+                   '2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md'),
+                  ('2024-2401.14361-moe-infinity-efficient-moe-推論-on-personal-machines-with-疎性-考慮-ex.md',
+                   '2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md'),
+                  ('2023-2312.17238-fast-推論-of-mixture-of-エキスパート-language-models-with-オフロード.md',
+                   '2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md'),
+              ],
+              'papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md': [
+                  ('2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-適応型-エキスパート-selection.md',
+                   '2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md'),
+                  ('2025-2509.02753-lexi-層-適応型-active-エキスパート-for-efficient-moe-model-inference.md',
+                   '2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md'),
+              ],
+              'papers/inference/02-adaptive-expert-computation-compression/2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md': [
+                  ('2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-適応型-エキスパート-selection.md',
+                   '2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md'),
+              ],
+          }
+
+          for name, pairs in replacements.items():
+              path = Path(name)
+              text = path.read_text(encoding='utf-8')
+              for old, new in pairs:
+                  if old not in text:
+                      raise SystemExit(f'expected legacy link not found: {name}: {old}')
+                  text = text.replace(old, new)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Remove one-shot repair control files
+        run: |
+          rm -f .survey/work-queue/consistency-repair-request.json
+          rm -f .github/workflows/consistency-repair.yml
+
+      - name: Build post-repair inventory
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('.')
+          files = []
+          for p in sorted(root.rglob('*')):
+              if not p.is_file():
+                  continue
+              rel = p.relative_to(root)
+              if '.git' in rel.parts or '__pycache__' in rel.parts or '.venv' in rel.parts:
+                  continue
+              if p.name.endswith(('.pyc', '.tmp')):
+                  continue
+              data = p.read_bytes()
+              sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+              files.append({'path': rel.as_posix(), 'sha': sha})
+          Path('/tmp/repo-inventory.json').write_text(json.dumps({
+              'source_commit': 'post-repair-working-tree',
+              'files': files,
+          }, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+      - name: Re-run repository consistency check
+        id: check
+        shell: bash
+        run: |
+          set +e
+          python .survey/scripts/check_repository.py \
+            --root . \
+            --inventory /tmp/repo-inventory.json \
+            --report .survey/reports/consistency-latest.json
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Commit repair and report
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'survey: repair consistency findings and recheck'
+          git push
+
+      - name: Fail if consistency still has findings
+        if: steps.check.outputs.exit_code != '0'
+        run: exit 1
