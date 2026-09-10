@@ -1,0 +1,37 @@
+{
+  "job_id": "job-b8950ae37173052f",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2602.03495",
+      "title": "DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs",
+      "source_url": "https://arxiv.org/abs/2602.03495",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md",
+      "priority": 91,
+      "reason": "ローカルPCでMoEをCPU/GPUへオフロードする際の静的expert配置、先読み誤り、GPUキャッシュ置換の3問題を、実行時のworkload-aware assignment、residual-based prefetch、workload-aware cache replacementで同時に扱う。CPU/GPU異種実行とexpert cache/prefetchを結び付けるため、本サーベイの主要系統との比較価値が高い。"
+    },
+    {
+      "canonical_id": "arxiv:2605.27081",
+      "title": "ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.27081",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md",
+      "priority": 89,
+      "reason": "外部ストレージやCPUからexpertを頻繁に取得する原因そのものをrouter fine-tuningで変え、直近expertへの時間局所性を高める。expert cache方策だけを工夫する研究と異なり、モデル側routingとメモリ階層を協調させる設計点を持ち、vLLM GPU-CPU offloadとJetson上llama.cppで実システム評価もある。"
+    },
+    {
+      "canonical_id": "arxiv:2607.24434",
+      "title": "DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference",
+      "source_url": "https://arxiv.org/abs/2607.24434",
+      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2607.24434-draftexpert-expansion-aware-self-speculative-moe.md",
+      "priority": 88,
+      "reason": "CPU-GPUおよびFlash-NPUへのexpert offload下で投機的デコードを行うと、draftのexpert集合拡大自体が追加ロードを発生させる問題を明示的に扱う。固定footprint drafter、expansion-aware truncation、target expert prefetchを組み合わせ、MoE offloadとspeculative decodingの交差領域を埋める。"
+    },
+    {
+      "canonical_id": "arxiv:2608.21614",
+      "title": "SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2608.21614",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.21614-saem-stage-aware-expert-management-cot.md",
+      "priority": 86,
+      "reason": "Chain-of-Thoughtの推論段階ごとにexpert activationがまとまりやすい性質を利用し、stage-aware caching、expert-aligned token repacking、CPU in-situ executionでGPU-CPU転送とkernel fragmentationを削減する。単純なtoken-level LRU/LFUとは異なる長い推論軌跡の局所性利用として新しい比較軸になる。"
+    }
+  ]
+}
