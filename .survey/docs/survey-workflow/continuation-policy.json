@@ -1,12 +1,30 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "A local job or transport failure is not a run stop condition. Preserve the affected result or spillover job seed in GitHub when possible, otherwise in ChatGPT Library, then continue independent research whenever safe. External fallback recovery converges through the immutable GitHub fallback intake before reusable transport files are touched.",
+  "principle": "A normal paper-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
+  "always_on_policy": {
+    "canonical_doc": ".survey/docs/survey-workflow/always-on-worker.md",
+    "paper_stock_zero_action": "DISCOVER_NOW",
+    "empty_discovery_round_action": "CHANGE_AXIS_AND_DISCOVER_AGAIN",
+    "after_research_or_checkpoint": "REFRESH_STATE_AND_CONTINUE",
+    "rule": "For a normal paper-worker run, zero actionable paper stock means discovery work exists. A single discovery round yielding zero novel candidates never proves that no independent work remains."
+  },
   "stop_run_only_if": [
     "github_read_unavailable_for_repo_state",
     "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_or_library",
     "platform_time_context_or_execution_limit_reached",
-    "no_independent_work_remains_after_considering_github_ready_fallback_spillover_and_new_offline_discovery"
+    "no_independent_work_can_be_generated_after_multi_axis_discovery_exhaustion"
+  ],
+  "non_stop_conditions": [
+    "paper_stock_zero",
+    "github_ready_empty",
+    "spillover_candidates_empty",
+    "one_discovery_round_returned_zero_novel_candidates",
+    "one_discovery_round_returned_only_duplicates",
+    "one_search_axis_is_saturated",
+    "one_job_completed",
+    "one_job_blocked",
+    "one_payload_checkpointed"
   ],
   "job_local_failures": [
     "full_text_unavailable_for_one_paper",
@@ -63,7 +81,7 @@
     "id_conflict": "quarantine only the conflicting envelope; do not overwrite the GitHub ledger and do not stop unrelated work"
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, evaluate stop_run_only_if after considering GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, and the ability to create a new offline job seed. Unsent-paper count, any fallback backlog size, a dirty bank, exhaustion of all fixed banks, or a single replay failure does not satisfy STOP_RUN while at least one durable transport remains writable and independent research can continue.",
+    "rule": "Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. For a normal paper-worker run, refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, and discovery-state. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis and perform another discovery round. STOP_RUN for no-work is allowed only after multiple materially distinct search axes, citation/related-implementation expansion, and adjacent-topic expansion have been attempted and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
     "default_decision": "CONTINUE"
   }
 }
