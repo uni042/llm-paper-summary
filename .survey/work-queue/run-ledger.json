@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T22:49:57.615659+00:00",
+  "updated_at": "2026-09-10T22:52:33.099897+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,18 +2351,18 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T22:49:57.615659+00:00",
+      "last_recorded_at": "2026-09-10T22:52:33.099897+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 10,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2439,6 +2439,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34539520078:1",
+          "recorded_at": "2026-09-10T22:52:33.099897+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34539520078",
+            "run_attempt": "1",
+            "source_sha": "e8ea6925e2f8e37d9549bf65cfe98565f81e36ba"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2479,6 +2494,14 @@
           "type": "research",
           "canonical_id": "arXiv:2506.15155",
           "title": "eLLM: Elastic Memory Management Framework for Efficient LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4d0eaf46ad828a7d",
+          "type": "research",
+          "canonical_id": "arXiv:2501.06709",
+          "title": "Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management",
           "from": "ready",
           "to": "completed"
         }
@@ -2546,6 +2569,13 @@
           "type": "research",
           "canonical_id": "arXiv:2501.06709",
           "title": "Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management"
+        },
+        {
+          "job_id": "job-9ac4f6172daefb14",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -2561,7 +2591,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,
       "paper_active_count_after": 235,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
