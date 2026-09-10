@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-2f3e800f884677dd",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.03203-foresightkv-long-term-contribution-eviction.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2602.03203.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-8f64e69f8308e6c7",
+  "validation_error": "ValueError: metadata.topics is required",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T21:58:17+00:00"
 }
