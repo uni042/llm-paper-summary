@@ -2,7 +2,7 @@
 """Inspect reusable workflow-v10 record banks and choose a safe direct-write bank.
 
 This script is advisory for the Chat worker. Bank exhaustion is never a reason
-for STOP_RUN when the complete payload can be durably checkpointed to Drive.
+for STOP_RUN when the complete payload can be durably checkpointed to ChatGPT Library.
 """
 from __future__ import annotations
 
@@ -123,7 +123,7 @@ def inspect(repo_root: Path) -> dict[str, Any]:
         "schema_version": 1,
         "selected_bank": selectable[0] if selectable else None,
         "direct_bank_available": bool(selectable),
-        "if_no_bank": "checkpoint complete logical payload to Drive and continue; bank exhaustion is not STOP_RUN",
+        "if_no_bank": "checkpoint complete logical payload to ChatGPT Library and continue; bank exhaustion is not STOP_RUN",
         "ready_job_ids": sorted(ready_ids),
         "current_inbox_job_id": inbox.get("job_id") if inbox else None,
         "current_inbox_settled": settled,
