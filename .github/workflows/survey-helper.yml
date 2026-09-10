@@ -54,7 +54,6 @@ jobs:
           python -m py_compile \
             .survey/scripts/fallback_transport.py \
             .survey/scripts/dispatch_fallback_inbox.py \
-            .survey/scripts/recover_archived_research.py \
             .survey/scripts/preflight_chat_record.py \
             .survey/scripts/reconcile_maintenance_state.py \
             .survey/scripts/record_run_ledger.py
@@ -149,28 +148,6 @@ jobs:
             python .survey/scripts/assemble_research_record.py --repo-root .
             python .survey/scripts/assemble_chat_chunks.py --repo-root .
           fi
-
-      - name: Recover one archived completed research artifact when missing
-        run: python .survey/scripts/recover_archived_research.py --repo-root . | tee /tmp/archive-recovery.json
-
-      - name: Prepare archived recovery transport when dispatched
-        run: |
-          python - <<'PY'
-          import json
-          import subprocess
-          import sys
-          from pathlib import Path
-
-          result = json.loads(Path('/tmp/archive-recovery.json').read_text(encoding='utf-8'))
-          if result.get('action') != 'replayed_missing_artifact':
-              print('No archived research recovery transport to assemble.')
-              raise SystemExit(0)
-          try:
-              subprocess.run([sys.executable, '.survey/scripts/assemble_research_record.py', '--repo-root', '.'], check=True)
-              subprocess.run([sys.executable, '.survey/scripts/assemble_chat_chunks.py', '--repo-root', '.'], check=True)
-          except subprocess.CalledProcessError as exc:
-              print(f'Archived recovery transport failed validation/assembly (exit={exc.returncode}); isolated to this recovery and continuing worker.')
-          PY
 
       - name: Process fallback-dispatched framework and LLM update
         run: |
