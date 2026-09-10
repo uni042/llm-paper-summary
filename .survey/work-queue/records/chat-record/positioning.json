@@ -2,25 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-expertstreaming-20260910-2355-v10-a1",
-  "job_id": "job-research-11443ee95cff6866",
+  "attempt_id": "attempt-ssdenergy-20260910-2359-v10-a1",
+  "job_id": "job-research-35c9432189855703",
   "data": {
     "differences": [
-      "標準EPは専門家をchiplet/deviceへ固定し、必要トークンをall-to-allで専門家側へ送る。FSE-DPは逆にトークン配置を大きく動かさず、一つの専門家重み断片をpoint-to-point軌跡で必要chipletへ巡回させる。UCIe級D2Dが十分速いというhardware premiseを使い、従来避けていたweight communicationをオンチップ複製削減へ転換する。",
-      "Hydraなどmulti-chiplet向けexpert placementは層間人気度から専門家位置を最適化して通信を減らすが、専門家の物理配置を基本的に静的な単位として扱う。FSE-DPはiterationごとの活性化トークン集合からtrajectoryを動的に作り、micro-sliceが流れるため、長尾負荷と瞬間的なchiplet idleをより細かく吸収する。",
-      "MoE-Infinity、FlashMoE、DALIなどCPU/SSDオフロード系はGPU/CPU/SSD階層間のexpert cacheやprefetchを最適化する。本論文はoff-package DDRとon-chip SRAM/D2Dを主対象にし、D2D自体を高帯域の共有資源として使う。階層位置は異なるが、外部重みを読み込んだ後にどの計算器へどう流すかという上位・下位の連携点を提供する。",
-      "一般的な計算通信重畳が固定したcollectiveやpipeline stageを前提とするのに対し、FSE-DPは専門家ごとに異なるtoken countを利用してhot/cold expertを補完的に重ねる。負荷分散を均一化前処理で解くのではなく、異種dataflowを時空間に組み合わせて利用率を上げる点が特徴である。"
+      "MoE-InfinityやMixtral Offloadingのような既存研究は、専門家の活性化予測、キャッシュ、プリフェッチによってCPUメモリやストレージからの転送待ちを減らすことを主目標にする。本論文は同じ階層型実行をエネルギー側から評価し、待ち時間を計算で隠してもFlash読出しエネルギーは隠れないという独立した制約を示す。",
+      "Pre-gated MoEは次層の専門家をゲートで予測して先読みし、オフロードを高速化する。本論文はその種のプリフェッチを前提に、予測や重畳が理想的に機能してもSSDアクセスのジュール数が残ることを定量化するため、プリフェッチ機構の代替ではなく設計判断の評価軸を追加する研究である。",
+      "LLM in a FlashなどのFlash活用研究は容量不足をSSDで補い、アクセス順序やウィンドウ化で入出力量を削減する。本論文はMoEの疎性に注目し、現在のFlashでは必要量だけ読んでも単位読出しエネルギーが高すぎること、将来約10pJ/bitまで改善すれば低バッチの疎性が有利へ転じる可能性を示す。",
+      "一般的な推論性能評価では遅延、スループット、GPU台数、メモリ容量が中心だが、本論文は1トークン当たりエネルギーを保存階層選択の一次指標として扱う。特に『高速接続で遅延を隠せるのでSSD退避は実用的』という結論へ、消費エネルギーという別の成立条件を加える点が重要である。"
     ],
     "limitations": [
-      "十分なD2D帯域と低遅延、かつchipletごとの独立制御を前提とするため、一般的なPCIe接続GPUや単一GPUへ同じweight streaming trajectoryをそのまま移植できない。",
-      "主要性能値はテープアウト試作チップとRTL合成で校正したcycle-accurate simulatorによる。実シリコンの存在と校正は強みだが、4モデル・全workloadのエンドツーエンド実測値ではない。",
-      "外部重み階層はDDRを想定し、NVMe SSDやCXL memoryを含むさらに遅い・深い階層でmicro-slice streamingとtoken bufferingがどう変化するかは未評価である。",
-      "QoS slackを使うtoken bufferingは個別要求の完了を意図的に遅らせるため、厳密なper-token latency SLOや対話型単一要求では利用できる余地が小さい。過剰bufferingはthroughputまで悪化する。",
-      "マイクロスライス粒度、DDR帯域、D2D帯域、SRAM容量が強く結合し、最適設定はexpert dimensionやtoken countで変わる。小expertでは細粒度制御費が早く支配的になる。",
-      "4×4までのchiplet arrayでscalabilityを示すが、さらに大規模なmeshや複数packageでhop数・congestionが増えた場合の性能は未検証である。"
+      "主要結果はシミュレーションと既存データシート・先行研究のエネルギー値に基づき、SSD、GPU、CPUを組み合わせた実機サーバ全体の電力を直接測定したものではない。電源変換効率や実装固有の制御回路などは簡略化される。",
+      "専門家選択を各デコーダで一様分布とする合成条件なので、実モデルで見られる専門家人気の偏り、要求間相関、長期キャッシュ再利用がある場合には読出し量とエネルギーが変わり得る。",
+      "最初のデコード段階に焦点を当てており、長い生成中のKVキャッシュ増大、専門家キャッシュの時間変化、プリフィル側の大きなバッチ並列性を含む要求全体のエネルギーは評価していない。",
+      "Flash読出し102.4pJ/bitや将来約10pJ/bitという値は特定の技術前提に依存する。SSDコントローラ、NAND世代、ページサイズ、圧縮、近接計算などが変われば損益分岐点も動く。",
+      "CPUメモリとSSDからGPUへの集約帯域を接続帯域へ合わせた理想化が含まれ、実SSD台数、NVMeキュー深度、GDS実装、ファイルシステムなどによる帯域制約や待ちのばらつきは直接扱わない。",
+      "Llama 4とLlama 3.3の将来比較では大規模MoEの方が高精度であることを期待しているが、同じタスク上の品質対エネルギー曲線は測っていないため、約10倍改善という条件は品質込みの総合最適点ではない。"
     ],
-    "implementation_status": "2×2の5nm MCM試作チップをテープアウトし、UCIe準拠D2D interconnectとtransformer-oriented compute dieを実装している。trajectory-aware schedulerはUMC 28nmでRTL合成され0.43mm²、サブマイクロ秒のスケジュール時間を持つ。評価は実チップ/RTL特性で校正したcycle-accurate simulatorが中心で、3×3・4×4の設計探索にはbehavioral simulationを使う。",
-    "research_positioning": "MoE並列化・通信系統の中で、低バッチedge向けmulti-chiplet hardwareとexpert offloadingの交点に位置する。特に本サーベイのSSD・階層メモリ観点では、SSD/DRAMからexpertを取り込んだ後のon-chip stagingを一つの固定cacheではなく流動的なmicro-slice reservoirとして扱う発想が重要である。将来的にNVMe→DRAM→chiplet SRAMという三階層へ拡張するなら、SSD側prefetch/I/O schedulingが作る大きなexpert streamをFSE-DPのmicro-slice trajectoryへ分割し、hot/cold load pairingで下位I/OとD2D/computeを同時に隠す方向が考えられる。",
-    "audit_notes": "arXiv:2603.27624v1の動機、FSE-DP、micro-slice flow、paired-load、token buffering、virtualization rules、RTL scheduler、実験、DSE、scalabilityまで確認した。1.22〜2.00倍高速化と最大78.8%メモリ削減だけでなく、32MB未満の代表buffer、Rule 5の限定効果、過剰bufferingの逆効果、10未満のmicro-slice数が好ましい感度、試作チップ校正simulationという評価形態を区別して記録した。"
+    "implementation_status": "著者らは先行研究Duplexで使われたシミュレータを改変し、CPUメモリ・SSD読出し帯域、プリフェッチと競合するHBM帯域、GPU計算、メモリ静的電力、GPU待機電力をモデル化している。評価用コードはGitHubの scale-snu/SSD-offloading で公開されている。論文自体は新しいSSDランタイムを実装する研究ではなく、既存オフロード方式のエネルギー成立性を分析するモデル研究である。",
+    "research_positioning": "オフロード・階層メモリ系統で、SSD利用を『容量と遅延』だけで最適化しないための基準線となる研究である。特にSSDを積極活用する新手法を考える際、I/O回数削減、専門家キャッシュ、予測プリフェッチ、圧縮だけでなく、Flashから実際に読む総ビット数と1ビット当たりエネルギーを目的関数へ含める必要があることを示す。研究提案としては、SSDから毎回専門家全体を読む方式より、DRAM側に高頻度部分や圧縮差分を残す階層配置、複数トークン・要求で一回のFlash読出しを共有するバッチ形成、読み出した専門家を長く再利用するキャッシュ政策、SSD内部または近傍で不要部分を除く仕組みの価値を定量評価する際の比較対象になる。",
+    "audit_notes": "arXiv:2508.06978v1の全4ページを確認し、HBM 4.2pJ/bit、Flash 102.4pJ/bit、SSD経路110.8pJ/bit、Mixtral 3.8〜12.5倍、DeepSeek-R1 4.7〜9.8倍、CPUメモリ比2.1〜3.6倍、バッチ1024でもSSD重みアクセスが73%超/80%、NVLink 5.0相当で遅延ペナルティ最小1.32倍/1.25倍、Llama 4対Llama 3.3で約10pJ/bitが損益分岐点という主要数値を区別して記録した。実機測定ではなく、DGX H100相当構成をモデル化したシミュレーションであることも明記した。"
   }
 }
