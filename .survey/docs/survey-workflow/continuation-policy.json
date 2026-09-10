@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "A local job failure is not a run stop condition. Preserve the affected job/result, classify the failure, then continue with the next independent ready job whenever possible.",
+  "principle": "A local job or transport failure is not a run stop condition. Preserve the affected result, classify the failure, then continue with the next independent ready job whenever possible.",
   "stop_run_only_if": [
     "github_read_unavailable_for_repo_state",
-    "completed_result_cannot_be_durably_preserved_anywhere",
+    "completed_result_cannot_be_durably_preserved_in_github_or_google_drive",
     "platform_time_context_or_execution_limit_reached",
     "no_independent_work_remains_and_all_remaining_jobs_share_an_unresolved_global_dependency"
   ],
@@ -14,23 +14,31 @@
     "github_write_failed_for_one_payload_or_target",
     "github_write_connector_unavailable_while_github_read_still_works",
     "google_drive_outbox_save_failed_for_one_payload",
-    "pending_replay_failed"
+    "pending_replay_failed",
+    "record_bank_exhausted_or_dirty",
+    "drive_pending_backlog_growing"
   ],
+  "backlog_policy": {
+    "canonical_doc": ".survey/docs/survey-workflow/backlog-resilience.md",
+    "bank_registry": ".survey/work-queue/records/bank-registry.json",
+    "bank_selector": ".survey/scripts/select_record_bank.py",
+    "rule": "Record-bank count and Drive pending count are transport-state metrics, not research-capacity limits. If a complete result can be durably checkpointed to Drive, continue independent research even when no direct GitHub bank is selectable."
+  },
   "github_write_failure_protocol": {
     "retry_failed_target": 1,
     "then_probe_path": ".survey/work-queue/transport/health-probe.json",
     "probe_attempts_per_run_after_first_write_failure": 1,
     "probe_success": {
       "classification": "target_or_payload_specific",
-      "action": "preserve affected payload, skip only affected write path/job, continue independent work; later GitHub writes may still be attempted"
+      "action": "checkpoint the affected complete logical payload to Google Drive outbox, leave its GitHub job incomplete, continue independent work, and allow later unrelated GitHub writes"
     },
     "probe_failure": {
       "classification": "run_wide_github_write_unavailable",
-      "action": "disable further GitHub writes for the remainder of this run, preserve completed payloads via Google Drive outbox temporary transport, continue read/research/audit work that can be durably checkpointed"
+      "action": "disable further GitHub writes for the remainder of this run; checkpoint each completed logical payload to Google Drive outbox and continue read/research/audit work"
     }
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, evaluate stop_run_only_if. If none is true and independent work exists, the worker MUST continue instead of reporting the problem and stopping.",
+    "rule": "Before emitting a final response or ending voluntarily, evaluate stop_run_only_if. Unsent-paper count, Drive backlog size, a dirty bank, or exhaustion of all fixed banks does not satisfy STOP_RUN while complete results can still be durably saved to Drive and independent work exists.",
     "default_decision": "CONTINUE"
   }
 }
