@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-f1f6018ad729aa6f",
+  "type": "research",
+  "parent_job_id": "job-91b9e88e17af333f",
+  "priority": 82,
+  "canonical_id": "arXiv:2606.25353",
+  "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
+  "source_url": "https://arxiv.org/abs/2606.25353",
+  "paper_path": "papers/inference/09-other-inference-systems/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
+  "selection_reason": "GB級最終キャッシュへ重みを常駐させ、注意・KV管理を別資源領域へ分離するCPUクラスタ推論。GPU/CPU/SSDとは異なる階層メモリ設計点として比較価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T13:37:30+00:00",
+  "completed_at": "2026-09-10T13:37:31+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2606.25353",
+  "duplicate_of_path": "papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2606.25353"
+  }
+}
