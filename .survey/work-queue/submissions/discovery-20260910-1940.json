@@ -1,0 +1,29 @@
+{
+  "job_id": "job-6565d7576d4f6de8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-efficient-llm-serving-for-multi-turn-conversations-with-heterogeneous-kv-cache-sharing.md",
+      "priority": 90,
+      "reason": "同一サーバー内でKV需要が低いモデルの空きGPUメモリを別モデルの接頭辞KV保存へ貸し出し、PCIe経由CPU退避の代わりにNVLinkでGPU間共有する研究。モデル間のメモリ偏りをKV階層として利用し、層単位の局所KV保持と組み合わせて長文容量も伸ばす。",
+      "evidence": [
+        "需要の低い同居モデルが未使用GPUメモリを提供し、高需要モデルの接頭辞KVをNVLink越しに保持することでCPU/SSDからの低速再読込を避ける。",
+        "実ワークロード評価でvLLMとSGLangに対しP99先頭トークン時間を最大69%削減し、最大文脈長を最大3.98倍へ拡張したと報告する。"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.16892-robust-kv-cache-management-for-llm-serving-under-output-token-length-uncertainty.md",
+      "priority": 86,
+      "reason": "出力長が事前不明なためKV予約を過小にするとプリエンプションと再計算、過大にすると容量浪費が起きる問題を、GPU並列構成・要求クラス別予約・異種サービング群へのルーティング・接頭辞キャッシュまで共同最適化する。分布変化に頑健な容量予約という既存収録と異なる問題設定を持つ。",
+      "evidence": [
+        "Wasserstein分布頑健最適化とブロック座標降下を用い、出力長分布がずれた場合でも予約量とプリエンプション費の釣り合いを自動調整する。",
+        "BurstGPT、Azure、ShareGPTの本番由来トレースを使う評価で、固定分位点予約方式より費用を最大56%削減しつつP99遅延、有効スループット、サービス品質目標違反率を競争的に保つと報告する。"
+      ]
+    }
+  ]
+}
