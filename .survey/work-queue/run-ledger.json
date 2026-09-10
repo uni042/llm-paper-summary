@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:17:17.512667+00:00",
+  "updated_at": "2026-09-10T18:18:58.427415+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,7 +572,7 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T18:17:17.512667+00:00",
+      "last_recorded_at": "2026-09-10T18:18:58.427415+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -581,9 +581,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 16,
+        "new_jobs": 17,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -775,6 +775,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34513542946:1",
+          "recorded_at": "2026-09-10T18:18:58.427415+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34513542946",
+            "run_attempt": "1",
+            "source_sha": "5d263597dafbe11d01df3b5ffadf2d94bc8f477f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -876,6 +890,14 @@
         },
         {
           "job_id": "job-9f34569ffff872b2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-0c36e7e6318b3a35",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -995,6 +1017,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-eccffc20cbe9c15a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.00321",
+          "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits"
         }
       ],
       "new_paper_ids": [
@@ -1009,7 +1038,8 @@
         ".survey/work-queue/results/20260911T0248JST-discovery-825a3fe8fd3b5c49.json",
         ".survey/work-queue/results/20260911T0254JST-discovery-a0f9b155ba2cea14.json",
         ".survey/work-queue/results/20260911T0307JST-discovery-ed3be0b3453134d0.json",
-        ".survey/work-queue/results/20260911T0321JST-discovery-job-9f34569ffff872b2.json"
+        ".survey/work-queue/results/20260911T0321JST-discovery-job-9f34569ffff872b2.json",
+        ".survey/work-queue/results/20260911T0324JST-discovery-job-0c36e7e6318b3a35.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,

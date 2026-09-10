@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-eccffc20cbe9c15a",
+  "type": "research",
+  "parent_job_id": "job-0c36e7e6318b3a35",
+  "priority": 86,
+  "canonical_id": "arXiv:2511.00321",
+  "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+  "source_url": "https://arxiv.org/abs/2511.00321",
+  "paper_path": "papers/inference/05-kv-cache-offloading/2025-2511.00321-cxl-pnm-kv-cache.md",
+  "selection_reason": "1Mトークン級KVキャッシュをCXL拡張メモリへ置くだけでなく、トークンページ選択をCXL側PNMアクセラレータへ移してGPUへの大量KV呼戻しを回避する。PNM-onlyとGPU-PNM協調、steady-token選択を組み合わせ、405Bモデル・1Mコンテキストまで評価し、最大21.9倍スループット、60倍低いトークン当たりエネルギー、7.3倍コスト効率を報告する。単純CXLメモリプールではなく『KVを置いた場所の近くで選択・計算する』設計で、既存のKVオフロード系と差別化しやすい。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T18:18:56+00:00",
+  "artifact_transport": "structured_record_v10"
+}
