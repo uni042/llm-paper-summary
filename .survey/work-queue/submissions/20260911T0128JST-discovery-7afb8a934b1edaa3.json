@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7afb8a934b1edaa3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+      "priority": 88,
+      "reason": "大規模LLM推論のKVキャッシュを16ホスト・32TBの共有メモリへ拡張するフォトニックCXLメモリアプライアンスを提案する。電気CXLスイッチを受動光ファイバ構成へ置き換え、電気CXLプール比で50%以上の遅延削減、マルチターン会話で初回トークン時間を最大6.6倍改善と報告しており、CXL階層メモリとクラスタ規模KV再利用の境界を埋める候補として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+      "priority": 87,
+      "reason": "CXL拡張メモリの帯域不足に対し、モデルやCXL.memインターフェースを変えずにデバイス側で動的量子化と可逆圧縮を行う近データ処理を提案する。エンドツーエンド配信でスループット43%向上、最大コンテキスト長87%拡張、KVキャッシュ容量46.9%削減を報告しており、CXL容量拡張を帯域面から補強する実装指向の研究として価値が高い。"
+    }
+  ]
+}
