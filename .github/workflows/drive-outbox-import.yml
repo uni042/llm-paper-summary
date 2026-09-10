@@ -29,28 +29,35 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Require Drive credentials
+      - name: Check Drive credentials
+        id: credentials
         run: |
-          if [ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
-            echo 'Missing repository secret: GOOGLE_SERVICE_ACCOUNT_JSON' >&2
-            exit 2
+          if [ -n "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            echo 'configured=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'configured=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::Drive outbox importer is idle until GOOGLE_SERVICE_ACCOUNT_JSON is configured.'
           fi
 
       - name: Set up Python
+        if: steps.credentials.outputs.configured == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install Drive client
+        if: steps.credentials.outputs.configured == 'true'
         run: python -m pip install -r .survey/scripts/drive_requirements.txt
 
       - name: Pull pending Drive envelopes
+        if: steps.credentials.outputs.configured == 'true'
         run: |
           python .survey/scripts/import_drive_outbox.py pull \
             --repo-root . \
             --manifest /tmp/drive-outbox-manifest.json
 
       - name: Commit imported transport payloads
+        if: steps.credentials.outputs.configured == 'true'
         run: |
           git config user.name 'drive-outbox[bot]'
           git config user.email 'drive-outbox[bot]@users.noreply.github.com'
@@ -66,7 +73,7 @@ jobs:
           git push origin HEAD:main
 
       - name: Acknowledge imported Drive envelopes
-        if: ${{ success() }}
+        if: steps.credentials.outputs.configured == 'true' && success()
         run: |
           python .survey/scripts/import_drive_outbox.py ack \
             --repo-root . \
