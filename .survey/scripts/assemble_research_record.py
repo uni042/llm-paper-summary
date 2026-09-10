@@ -96,9 +96,9 @@ def prose_chars(value: Any) -> int:
 def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
     """Normalize ordinary English prose terms before final validation/rendering.
 
-    Transport slots remain immutable and blob-verified.  This operates only on the
+    Transport slots remain immutable and blob-verified. This operates only on the
     in-memory render record, so a mechanically fixable terminology miss does not
-    strand an otherwise complete fallback payload.  Identifiers, URLs, titles,
+    strand an otherwise complete fallback payload. Identifiers, URLs, titles,
     names, and source metadata are intentionally left untouched.
     """
     protected_keys = {
@@ -121,6 +121,27 @@ def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
     if isinstance(value, dict):
         return {k: normalize_preferred_terms(v, key=k) for k, v in value.items()}
     return value
+
+
+def ensure_explanatory_summary(record: dict[str, Any]) -> None:
+    """Extend an undersized summary only from already supplied scientific prose."""
+    meta = record.get("metadata") or {}
+    if prose_chars(meta.get("summary")) >= 180:
+        return
+    pm = record.get("problem_method") or {}
+    summary = str(meta.get("summary") or "").strip()
+    candidates: list[str] = []
+    for source in (pm.get("problem"), pm.get("novelty")):
+        if not isinstance(source, str):
+            continue
+        candidates.extend(part.strip() for part in re.split(r"(?<=。)", source) if part.strip())
+    for sentence in candidates:
+        if sentence not in summary:
+            summary = (summary + " " + sentence).strip()
+        if prose_chars(summary) >= 220:
+            break
+    meta["summary"] = summary
+    record["metadata"] = meta
 
 
 def validate_record(record: dict[str, Any]) -> None:
@@ -267,6 +288,7 @@ def assemble(repo_root: Path) -> bool:
         total_bytes += len(raw)
 
     record = normalize_preferred_terms(record)
+    ensure_explanatory_summary(record)
     validate_record(record)
     markdown = render_paper(record)
     (repo_root / LEGACY_PAYLOAD).write_text(markdown, encoding="utf-8")
