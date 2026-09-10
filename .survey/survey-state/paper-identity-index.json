@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 221,
+  "active_count": 227,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -87,6 +87,14 @@
       ],
       "source_hash": "0f2f8d31b348218b4edc3d8cd085272c83aa794604f6bcc490cd390984f0a665"
     },
+    "arXiv:2512.04476": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2512.04476",
+        "arXiv:2512.04476"
+      ],
+      "source_hash": "69edf6c1ff52016618c2173f27914a2a89f7292dac4fe1239d0bebeb794a7859"
+    },
     "arXiv:2601.17063": {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md",
       "identifiers": [
@@ -130,6 +138,14 @@
         "arXiv:2605.17889"
       ],
       "source_hash": "bca7f1f841f03cd95c02e238725c1df32eb994511ccdcc28deaf7f61e59e8ba8"
+    },
+    "arXiv:2606.21868": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.21868-wisp-working-set-moe-serving-low-resource-hardware.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2606.21868",
+        "arXiv:2606.21868"
+      ],
+      "source_hash": "ba4a71d98a78f3e5b180cce70226ecc644fffc552cc61fd7cf7e1d994238c418"
     },
     "arXiv:2606.25353": {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
@@ -429,6 +445,14 @@
       ],
       "source_hash": "4334bcb7550ad024290ca5ba4d6bb629aa8f2a6c40c841ea869c724a19b986cb"
     },
+    "arXiv:2609.05764": {
+      "path": "papers/inference/05-kv-cache-offloading/2026-2609.05764-interface-aware-kv-quantization-nvm.md",
+      "identifiers": [
+        "DOI:10.1145/3831252.3845860",
+        "arXiv:2609.05764"
+      ],
+      "source_hash": "773ade52a25223818b4b8293cc5aaf582ef8bb34f35c590f566e2fdf092b041f"
+    },
     "arXiv:2305.09781": {
       "path": "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
       "identifiers": [
@@ -565,6 +589,14 @@
         "arXiv:2608.11688"
       ],
       "source_hash": "a1cdf3e1ce1857bb69ab5eac474d54f23c1ac6d923cf6c744fb8b381da5d12d4"
+    },
+    "arXiv:2609.00407": {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2609.00407-dynande-near-data-expert-scheduling.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.00407",
+        "arXiv:2609.00407"
+      ],
+      "source_hash": "b77c67dabc5c13b57ae4505851f6c5cc25157740e9d6545b8ea90ea335aaaace"
     },
     "arXiv:2310.02410": {
       "path": "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
@@ -977,6 +1009,14 @@
       ],
       "source_hash": "517368e3371af388f6f3555669bfd09368792a7f5e1485f6538171c1adcfa924"
     },
+    "arXiv:2512.11920": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
+      "identifiers": [
+        "DOI:10.1145/3748173.3779188",
+        "arXiv:2512.11920"
+      ],
+      "source_hash": "cd3c3f1444c268c70f8e1ad0c520e7bfdacb8daa7e3f008959e64f6eb599cf99"
+    },
     "arXiv:2601.19910": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2601.19910-understanding-bottlenecks-kv-offloading.md",
       "identifiers": [
@@ -1372,6 +1412,14 @@
       ],
       "source_hash": "895a1c494a9f908b0d20ab9c763a0c9d1fa2cff3c4813223431dd51ef705576e"
     },
+    "arXiv:2603.17456": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2603.17456",
+        "arXiv:2603.17456"
+      ],
+      "source_hash": "278057eef918e0b5d953f4e7282ef2eee929cba51fd1b65aca9f0c14351cf98b"
+    },
     "arXiv:2604.07609": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md",
       "identifiers": [
@@ -1592,6 +1640,8 @@
     "arXiv:2502.06888": "arXiv:2502.06888",
     "DOI:10.48550/arxiv.2508.06978": "arXiv:2508.06978",
     "arXiv:2508.06978": "arXiv:2508.06978",
+    "DOI:10.48550/arxiv.2512.04476": "arXiv:2512.04476",
+    "arXiv:2512.04476": "arXiv:2512.04476",
     "arXiv:2601.17063": "arXiv:2601.17063",
     "arXiv:2602.00328": "arXiv:2602.00328",
     "DOI:10.48550/arxiv.2602.03495": "arXiv:2602.03495",
@@ -1600,6 +1650,8 @@
     "DOI:10.48550/arxiv.2604.25699": "arXiv:2604.25699",
     "arXiv:2604.25699": "arXiv:2604.25699",
     "arXiv:2605.17889": "arXiv:2605.17889",
+    "DOI:10.48550/arxiv.2606.21868": "arXiv:2606.21868",
+    "arXiv:2606.21868": "arXiv:2606.21868",
     "arXiv:2606.25353": "arXiv:2606.25353",
     "arXiv:2608.12103": "arXiv:2608.12103",
     "arXiv:2608.13127": "arXiv:2608.13127",
@@ -1646,6 +1698,8 @@
     "arXiv:2603.27624": "arXiv:2603.27624",
     "DOI:10.48550/arxiv.2511.00321": "arXiv:2511.00321",
     "arXiv:2511.00321": "arXiv:2511.00321",
+    "DOI:10.1145/3831252.3845860": "arXiv:2609.05764",
+    "arXiv:2609.05764": "arXiv:2609.05764",
     "DOI:10.1145/3620666.3651335": "arXiv:2305.09781",
     "arXiv:2305.09781": "arXiv:2305.09781",
     "arXiv:2311.08252": "arXiv:2311.08252",
@@ -1669,6 +1723,8 @@
     "arXiv:2606.15453": "arXiv:2606.15453",
     "DOI:10.48550/arxiv.2608.11688": "arXiv:2608.11688",
     "arXiv:2608.11688": "arXiv:2608.11688",
+    "DOI:10.48550/arxiv.2609.00407": "arXiv:2609.00407",
+    "arXiv:2609.00407": "arXiv:2609.00407",
     "arXiv:2310.02410": "arXiv:2310.02410",
     "arXiv:2310.16795": "arXiv:2310.16795",
     "arXiv:2406.08155": "arXiv:2406.08155",
@@ -1732,6 +1788,8 @@
     "DOI:10.48550/arxiv.2509.03377": "arXiv:2509.03377",
     "arXiv:2509.03377": "arXiv:2509.03377",
     "arXiv:2510.09665": "arXiv:2510.09665",
+    "DOI:10.1145/3748173.3779188": "arXiv:2512.11920",
+    "arXiv:2512.11920": "arXiv:2512.11920",
     "arXiv:2601.19910": "arXiv:2601.19910",
     "arXiv:2601.20309": "arXiv:2601.20309",
     "arXiv:2602.07721": "arXiv:2602.07721",
@@ -1797,6 +1855,8 @@
     "DOI:10.48550/arxiv.2602.18755": "arXiv:2602.18755",
     "arXiv:2602.18755": "arXiv:2602.18755",
     "arXiv:2603.06350": "arXiv:2603.06350",
+    "DOI:10.48550/arxiv.2603.17456": "arXiv:2603.17456",
+    "arXiv:2603.17456": "arXiv:2603.17456",
     "arXiv:2604.07609": "arXiv:2604.07609",
     "arXiv:2605.02329": "arXiv:2605.02329",
     "arXiv:2605.29639": "arXiv:2605.29639",

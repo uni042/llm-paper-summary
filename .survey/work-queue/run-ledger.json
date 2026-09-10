@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T19:34:07.529403+00:00",
+  "updated_at": "2026-09-10T19:35:51.230857+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,18 +1584,19 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T19:34:07.529403+00:00",
+      "last_recorded_at": "2026-09-10T19:35:51.230857+00:00",
       "signals": [
         "audit_completed",
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "paper_materialized"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 1,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
-        "new_papers": 0,
+        "new_jobs": 2,
+        "new_papers": 6,
         "fallback_archived": 0
       },
       "events": [
@@ -1613,6 +1614,21 @@
             "audit_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34521322880:1",
+          "recorded_at": "2026-09-10T19:35:51.230857+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34521322880",
+            "run_attempt": "1",
+            "source_sha": "20e35d3eb03ae6deb8d73c297f9c7a910faa2d8a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1621,6 +1637,14 @@
           "type": "audit",
           "canonical_id": "arXiv:2512.11920",
           "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-0c1f66c072921e49",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -1632,14 +1656,30 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-ccc820e8748a6b32",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
-      "new_paper_ids": [],
-      "new_discovery_results": [],
+      "new_paper_ids": [
+        "arXiv:2512.04476",
+        "arXiv:2512.11920",
+        "arXiv:2603.17456",
+        "arXiv:2606.21868",
+        "arXiv:2609.00407",
+        "arXiv:2609.05764"
+      ],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T0435JST-discovery-0c1f66c072921e49.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 221,
-      "paper_active_count_after": 221,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 227,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（38本）
+## 自動生成の論文一覧（39本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -61,6 +61,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | [Swarm: Co-Activation Aware KVCache Offloading Across Multiple SSDs](2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md) | attentionで一緒に参照されやすいKV cacheを事前にまとめ、そのグループ内のKVを複数SSDへ分散配置することで、1回のKV読み出しを複数SSDから並列に行い、単一SSDの帯域上限を超える実効I/O帯域を得る方式。 |
 | [HillInfer: Efficient Long-Context LLM Inference on the Edge with Hierarchical KV Eviction using SmartSSD](2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md) | 長文LLMをメモリ制約の厳しいPCで動かす際、GPU・CPUだけではKVキャッシュを保持しきれずSSDへ退避すると、毎デコード段で重要度評価のため大量KVを読み戻す入出力が支配的になる。HillInferは、完全な注意計算ではなくトークン重要度の軽量な内積評価だけをSamsung SmartSSD内のFPGAへ移し、CPU DRAMの高温KVとSmartSSDの低温KVを双方向管理する。さらにCPUとSmartSSDの評価・選択KV転送を適応的に釣り合わせてGPU計算へ重ね、単一SmartSSDの実機で長文推論を高速化する。 |
 | [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md) | full-precisionのKV cacheをCPU DRAMへ置いたまま、GPU上の小さなkey要約だけで現在のqueryに重要なtokenを二段階検索し、選ばれたKVだけをGPUからCPU memoryへ直接読みに行くことで、長い生成中に検索indexが古くなる問題とCPU検索・CPU主導転送の待ち時間を同時に減らすKV retrieval system。 |
+| [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md) | 長文脈LLMのKVキャッシュをGPU HBMだけに保持できない問題に対し、CXL接続メモリへ低温KVを退避し、FPGAで圧縮・展開とDMA制御を行う階層メモリ方式である。論文はさらに小型LSTMで将来トークンを予測し、将来位置のKVをGPU側へ投機的に先読みすると説明する。監査では、会議採録と公開実装の存在は確認できた一方、公開コードのLSTMは学習済み重みを読み込まず簡略計算で動き、DMA先読みも実転送せず要求を待ち行列へ積むだけであることを確認した。また標準的な自己回帰推論では未来位置のKVは未生成であり、予測トークンから既存の未来KVを取得する説明には因果的な不整合が残る。したがってCXL階層化とFPGA圧縮は独立した有用な設計要素として扱えるが、投機的KV先読みの性能寄与は再現可能な実装証拠が不足している。 |
 | [TRACE: Unlocking Effective CXL Bandwidth via Lossless Compression and Precision Scaling](2025-2509.03377-cxl-ndp-transparent-near-data-processing.md) | CXL拡張メモリはGPU HBMより大容量・低価格だが、リンク帯域と装置側DRAM帯域が低く、LLMの重みやKVキャッシュを退避すると転送量が性能を支配しやすい。トレースはホスト側のCXL.memインターフェースを変えず、装置内部で数値をビット位置ごとに並べ替えて高圧縮な無損失表現へ変換し、KVではトークンをまたぐチャネル相関も利用する。さらに同じ物理データへ異なる精度のアドレス別名を割り当て、実行時が低精度を選んだ場合だけ不要な下位ビット面のDRAM読出し自体を省く。最新版v3では128K文脈のGPT-OSS-120B-MXFP4でCXL帯域律速時の推定生成速度を16.28から68.99トークン/秒へ高める4.24倍の改善、BF16 KV容量46.9%削減、動的精度利用時のDRAMエネルギー最大40.3%削減を報告する。評価は帯域モデル、DRAMSim3、RTL合成であり、実CXL装置上のエンドツーエンド配信実測ではない。 |
 | [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md) | 長contextのKV cacheをCPU memory上の**vector storageとして検索対象にし、attentionに重要なtokenだけをGPUへ取り出す**ことで、全KVをGPUへ保持・走査するmemory容量とbandwidthを減らしつつ、検索誤差による精度低下を抑えるGPU–CPU協調推論system。 |
 <!-- survey:auto:end -->
