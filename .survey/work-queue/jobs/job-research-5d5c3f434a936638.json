@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-5d5c3f434a936638",
+  "type": "research",
+  "parent_job_id": "job-3ee2c1138a4cbd46",
+  "priority": 87,
+  "canonical_id": "arXiv:2605.13734",
+  "title": "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+  "source_url": "https://arxiv.org/abs/2605.13734",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression-for-communication-efficient-disaggregated-llm-serving.md",
+  "selection_reason": "プリフィル・デコード分離やKV分離構成ではKV転送量自体が通信ボトルネックになるため、圧縮率を固定せずサービス状態に応じて選ぶ研究。圧縮手法、事前プロファイル、実行時制御を一体化しており、分離サービングとKV圧縮の接点を埋める。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T10:36:04+00:00",
+  "completed_at": "2026-09-10T10:36:05+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2605.13734",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2605.13734"
+  }
+}
