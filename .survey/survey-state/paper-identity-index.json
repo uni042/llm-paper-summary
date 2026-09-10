@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 198,
+  "active_count": 203,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -577,6 +577,13 @@
       ],
       "source_hash": "910c82a8b1de17b4ae6ed7ff25841759650a9ea3fcbd5e26114bc88d528f1f44"
     },
+    "arXiv:2601.11652": {
+      "path": "papers/inference/06-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md",
+      "identifiers": [
+        "arXiv:2601.11652"
+      ],
+      "source_hash": "f80962eb62872a00c7384f53a7718797cce077df9975d88dd93713c3c82d1f94"
+    },
     "arXiv:2608.10362": {
       "path": "papers/inference/06-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
       "identifiers": [
@@ -725,6 +732,13 @@
         "arXiv:2504.15299"
       ],
       "source_hash": "58495df36089015a0f4eccddcc949f58e174d7fcf03c620e98cc2f8a951fe5b6"
+    },
+    "arXiv:2604.18788": {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md",
+      "identifiers": [
+        "arXiv:2604.18788"
+      ],
+      "source_hash": "ed39e5a4dfc46c8076dce689eaaecba673a78c0f955bfb22eb0a281708656ca2"
     },
     "arXiv:2606.10493": {
       "path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md",
@@ -880,6 +894,13 @@
       ],
       "source_hash": "446efd7a361345a0645402ebd615be226766d8de4d80df32d6e5af39d099cb16"
     },
+    "arXiv:2602.18750": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md",
+      "identifiers": [
+        "arXiv:2602.18750"
+      ],
+      "source_hash": "4f8e82330860089c0721fc75acd76f590cd80a269ba201f4bc2c8482ffe932c8"
+    },
     "arXiv:2603.17803": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
       "identifiers": [
@@ -908,6 +929,13 @@
       ],
       "source_hash": "4483258393659df1d7d2cc92d602c700a63b0d789ad34775545982d0a7e2c54d"
     },
+    "arXiv:2604.26557": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md",
+      "identifiers": [
+        "arXiv:2604.26557"
+      ],
+      "source_hash": "0c7b5d1ffc889017170f9ae08aa56ac669416bd0bd1275be74a4697d1255d9ea"
+    },
     "arXiv:2605.03375": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
       "identifiers": [
@@ -928,6 +956,14 @@
         "arXiv:2606.16135"
       ],
       "source_hash": "97441cbab2de4eb276afe31560e2e33a149e35d28508a30811642535d7ba2826"
+    },
+    "arXiv:2607.18141": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.18141",
+        "arXiv:2607.18141"
+      ],
+      "source_hash": "b1fcea286ac40e0fbc04ec8a39c3af8cd696fea1bf0599af0a5f4088e53d76e6"
     },
     "arXiv:2607.26475": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.26475-dualdecoder-predictive-prefetch.md",
@@ -1482,6 +1518,7 @@
     "ACL:2025.acl-long.633": "ACL:2025.acl-long.633",
     "arXiv:2605.23078": "arXiv:2605.23078",
     "arXiv:2607.16184": "arXiv:2607.16184",
+    "arXiv:2601.11652": "arXiv:2601.11652",
     "arXiv:2608.10362": "arXiv:2608.10362",
     "arXiv:2402.05099": "arXiv:2402.05099",
     "DOI:10.1109/isca59077.2024.00077": "arXiv:2403.17312",
@@ -1505,6 +1542,7 @@
     "arXiv:2308.15030": "arXiv:2308.15030",
     "arXiv:2406.06282": "arXiv:2406.06282",
     "arXiv:2504.15299": "arXiv:2504.15299",
+    "arXiv:2604.18788": "arXiv:2604.18788",
     "arXiv:2606.10493": "arXiv:2606.10493",
     "arXiv:2607.09686": "arXiv:2607.09686",
     "arXiv:2607.10183": "arXiv:2607.10183",
@@ -1527,13 +1565,17 @@
     "arXiv:2601.19910": "arXiv:2601.19910",
     "arXiv:2601.20309": "arXiv:2601.20309",
     "arXiv:2602.07721": "arXiv:2602.07721",
+    "arXiv:2602.18750": "arXiv:2602.18750",
     "arXiv:2603.17803": "arXiv:2603.17803",
     "arXiv:2603.27138": "arXiv:2603.27138",
     "arXiv:2604.18529": "arXiv:2604.18529",
     "arXiv:2604.25080": "arXiv:2604.25080",
+    "arXiv:2604.26557": "arXiv:2604.26557",
     "arXiv:2605.03375": "arXiv:2605.03375",
     "arXiv:2605.18071": "arXiv:2605.18071",
     "arXiv:2606.16135": "arXiv:2606.16135",
+    "DOI:10.48550/arxiv.2607.18141": "arXiv:2607.18141",
+    "arXiv:2607.18141": "arXiv:2607.18141",
     "arXiv:2607.26475": "arXiv:2607.26475",
     "arXiv:2608.03555": "arXiv:2608.03555",
     "arXiv:2608.14624": "arXiv:2608.14624",
