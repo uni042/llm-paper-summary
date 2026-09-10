@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T16:50:30.112141+00:00",
+  "updated_at": "2026-09-10T16:51:13.419266+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -358,7 +358,7 @@
     {
       "run_key": "2026-09-11T01:30:00+09:00",
       "first_recorded_at": "2026-09-10T16:29:58.387004+00:00",
-      "last_recorded_at": "2026-09-10T16:50:30.112141+00:00",
+      "last_recorded_at": "2026-09-10T16:51:13.419266+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -367,9 +367,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -446,6 +446,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34504607676:1",
+          "recorded_at": "2026-09-10T16:51:13.419266+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34504607676",
+            "run_attempt": "1",
+            "source_sha": "db06ad935d964334698145d9c8e5dbf1f7c26499"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -488,6 +502,14 @@
           "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-06f2169ce2ecebe4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -525,6 +547,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-905c587af00ec25c",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -532,7 +561,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0128JST-discovery-7afb8a934b1edaa3.json",
-        ".survey/work-queue/results/20260911T0145JST-discovery-f6c4789f353a56da.json"
+        ".survey/work-queue/results/20260911T0145JST-discovery-f6c4789f353a56da.json",
+        ".survey/work-queue/results/20260911T0151JST-discovery-06f2169ce2ecebe4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 210,
