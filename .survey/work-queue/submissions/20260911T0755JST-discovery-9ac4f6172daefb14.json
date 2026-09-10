@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9ac4f6172daefb14",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/02-ssd-nvme-offload/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 100,
+      "reason": "NVMe SSD上のKVキャッシュ復帰で、断片化したGPUメモリが大量の小粒度I/Oを生みCPUが入出力発行のボトルネックになる問題を、GPU中心のKVオブジェクト格納、GPU io_uring、余裕時間を考慮したI/Oスケジューリングで解く。vLLM統合実装でGDS対応LMCache比TTFT 78.3%削減、達成可能要求率2倍、提供コスト27%削減を報告し、SSD活用の重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-reservation.md",
+      "priority": 86,
+      "reason": "未知の出力長に対するKV予約で過小予約はプリエンプション・再計算、過大予約はGPUメモリ浪費になる問題を、Wasserstein分布ロバスト最適化で並列構成、要求クラス別予約量、異種サービング群へのルーティング、接頭辞キャッシュまで共同最適化する。BurstGPT、Azure、ShareGPTトレースで固定分位点予約比最大56%のコスト削減を報告し、Mellとは異なる『予測不確実性下の予約』系統を埋める。"
+    },
+    {
+      "canonical_id": "arXiv:2408.08147",
+      "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+      "source_url": "https://arxiv.org/abs/2408.08147",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+      "priority": 80,
+      "reason": "プリフィル・デコード分離を大規模xPUサービングで運用する際のプロンプト多様性、KV転送、段階別バッチ構成を扱う重要な初期研究。既存repoでID一致が見つからず、DistServe/Splitwise以外の分離サービング実装系譜を補完する候補として精査価値がある。"
+    }
+  ]
+}
