@@ -23,86 +23,94 @@ last_checked: "2026-09-03"
 
 # FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference
 
-> expert weightを複数の小さな行列単位へ分け、複数の前layerが共通して必要と予測したexpert部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。
+> エキスパート 重みを複数の小さな行列単位へ分け、複数の前層が共通して必要と予測したエキスパート部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。
 
 ## 概要
 
-FIRM-MoEは、通常のexpert offloadが**expert全体を一つの転送単位として扱うため、必要のないweightまでまとめて運びやすい**点を問題にする。
+FIRM-MoEは、通常のエキスパート オフロードが**エキスパート全体を一つの転送単位として扱うため、必要のない重みまでまとめて運びやすい**点を問題にする。
 
-MoE expert FFNはgate / up / down projectionなど複数weight matrixから構成される。FIRM-MoEはこれらを独立にload可能な小単位へ分け、限られたVRAMへ必要部分だけをcache / prefetchする。
+要するに、必要な部分だけを細かく運び、複数の予測が一致した時だけ先読みを強めることで、限られたメモリと転送帯域を無駄なく使う。
 
-さらに、単一前layerからのpredictionはmissが多く、候補を増やすだけでは無駄transferが増える。そこで**複数の前layerが同じexpertを必要と予測した時に、そのexpertを高信頼とみなして優先する**。
+MoE エキスパート FFNはgate / up / down projectionなど複数重み matrixから構成される。FIRM-MoEはこれらを独立に読み込み可能な小単位へ分け、限られたVRAMへ必要部分だけをキャッシュ / 先読みする。
 
-最後に、layerごとのrouting特性とhardware resourceを見て、何layer前から予測するか・何expert分を先読みするかを自動調整する。
+さらに、単一前層からのpredictionはミスが多く、候補を増やすだけでは無駄転送が増える。そこで**複数の前層が同じエキスパートを必要と予測した時に、そのエキスパートを高信頼とみなして優先する**。
 
-native router / Top-k / expert計算は維持するため、expert substitution型ではなくlossless寄りのsystem optimizationである。
+最後に、層ごとのルーティング特性とhardware 資源を見て、何層前から予測するか・何エキスパート分を先読みするかを自動調整する。
 
-## 手法のあらまし
+元の ルータ / Top-k / エキスパート計算は維持するため、エキスパート substitution型ではなく無損失寄りのsystem optimizationである。
+
+## 手法
 
 ### 1. Expertをprojection単位へ分ける
 
-各expertを、
+各エキスパートを、
 
 - `W_gate`
 - `W_up`
 - `W_down`
 
-などのprojection単位へ分け、それぞれ独立した小さなweight単位として管理する。
+などのprojection単位へ分け、それぞれ独立した小さな重み単位として管理する。
 
-expert丸ごとloadする方式よりGPU cache容量を細かく使え、不要なweight transferを減らせる。
+エキスパート丸ごと読み込みする方式よりGPU キャッシュ容量を細かく使え、不要な重み 転送を減らせる。
 
-細粒度化の利点は、予測が部分的に当たった場合にも転送済みbyteを無駄にしにくいことにある。expert全体を一単位にすると一部projectionだけ先に必要でも全weightを運ぶが、分解後は実行順や残りmemoryに合わせて必要部分から配置できる。ただし単位を小さくしすぎるとmetadataとDMA発行回数が増えるため、分解粒度自体にもhardware依存の最適点がある。
+細粒度化の利点は、予測が部分的に当たった場合にも転送済みbyteを無駄にしにくいことにある。エキスパート全体を一単位にすると一部projectionだけ先に必要でも全重みを運ぶが、分解後は実行順や残りメモリに合わせて必要部分から配置できる。ただし単位を小さくしすぎるとmetadataとDMA発行回数が増えるため、分解粒度自体にもhardware依存の最適点がある。
 
 ### 2. 小さいweight単位でcache / prefetchする
 
-GPU VRAMにはexpert全体ではなく、必要なprojectionを個別に置ける。
+GPU VRAMにはエキスパート全体ではなく、必要なprojectionを個別に置ける。
 
-cache missでもexpert全体を移す必要がなく、必要なweight部分だけをCPU DRAMから送る。
+キャッシュ ミスでもエキスパート全体を移す必要がなく、必要な重み部分だけをCPU DRAMから送る。
 
-この性質はVRAMが数expert分しか空いていない状況で特に効く。丸ごとcacheでは空き容量より少し大きいexpertを全く置けないが、projection単位なら一部だけresidentにして残りを後続計算と重ねて送れる。その結果、capacity制約を『何expert置けるか』という離散問題から『何byteのsub-expertを先に置くか』という連続に近い配分問題へ細かくできる。
+この性質はVRAMが数エキスパート分しか空いていない状況で特に効く。丸ごとキャッシュでは空き容量より少し大きいエキスパートを全く置けないが、projection単位なら一部だけ常駐にして残りを後続計算と重ねて送れる。その結果、capacity制約を『何エキスパート置けるか』という離散問題から『何byteのsub-エキスパートを先に置くか』という連続に近い配分問題へ細かくできる。
 
 ### 3. 複数前layerの予測が一致したexpertを優先する
 
-対象layerより前の複数layerが、それぞれ次expert候補を予測する。
+対象層より前の複数層が、それぞれ次エキスパート候補を予測する。
 
-複数layerで同じexpertが候補に現れた場合、そのexpertは将来実際に必要になる可能性が高いとみなし、prefetch priorityを上げる。
+複数層で同じエキスパートが候補に現れた場合、そのエキスパートは将来実際に必要になる可能性が高いとみなし、先読み 優先度を上げる。
 
-論文ではこの仕組みを`Meeting-of-Layers (MoL)`と呼ぶ。単一predictorの候補を全部先読みするより、**複数予測の合意で候補を絞り、誤予測transferを減らす**のが目的である。
+論文ではこの仕組みを`Meeting-of-Layers (MoL)`と呼ぶ。単一予測器の候補を全部先読みするより、**複数予測の合意で候補を絞り、誤予測転送を減らす**のが目的である。
 
 ### 4. Prediction数を増やしすぎない
 
-prefetch候補を増やせば本当に必要なexpertを含める割合は上がるが、使わないweight transferも増える。
+先読み候補を増やせば本当に必要なエキスパートを含める割合は上がるが、使わない重み 転送も増える。
 
-MoLは単純にcandidateの和集合を広げるのではなく、複数layerで一致した候補を優先してこのtrade-offを抑える。
+MoLは単純にcandidateの和集合を広げるのではなく、複数層で一致した候補を優先してこのtrade-offを抑える。
 
 ### 5. Layerごとに予測距離と先読み数を変える
 
-浅層・中層・深層でroutingの予測しやすさと、次layerまでに使える計算時間が異なるため、全layerへ同じ設定を使わない。
+浅層・中層・深層でルーティングの予測しやすさと、次層までに使える計算時間が異なるため、全層へ同じ設定を使わない。
 
-論文の`HEOP`はlayer groupごとに、
+論文の`HEOP`は層 groupごとに、
 
-- 何layer前から予測するか
-- 何expert候補を先読みするか
-- GPU cacheへどれだけ容量を割くか
+- 何層前から予測するか
+- 何エキスパート候補を先読みするか
+- GPU キャッシュへどれだけ容量を割くか
 
 を変える仕組みである。
 
+この層別設定により、予測しやすい層では先読みを厚くし、相関の弱い層では候補を絞るという使い分けができる。
+
 ### 6. VRAM・転送時間に合う設定を探索する
 
-GPU memory容量、expertを送る時間、cache missした時の待ち時間をcostとして、予測距離やprefetch数の候補を少しずつ変えながら速い設定を探す。
+GPU メモリ容量、エキスパートを送る時間、キャッシュ ミスした時の待ち時間をコストとして、予測距離や先読み数の候補を少しずつ変えながら速い設定を探す。
 
-GPU memoryが小さい環境ではweightを細かく保持する利点を重視し、PCIe帯域に余裕があればprefetchを増やす、といった適応を行う。
+GPU メモリが小さい環境では重みを細かく保持する利点を重視し、PCIe帯域に余裕があれば先読みを増やす、といった適応を行う。
 
-同じmodelでも最適な予測距離はdeviceによって変わる。遠いlayerを早く予測すればtransfer時間は長く確保できるが、routing相関が弱まり誤prefetchも増える。近いlayerだけなら予測は当たりやすいが転送を隠す時間が不足する。HEOPはこのaccuracy-versus-lookaheadのtrade-offをVRAMとPCIeの実測costへ結びつけ、固定の『n layer ahead』設定を全deviceへ押し付けない。
+同じモデルでも最適な予測距離はdeviceによって変わる。遠い層を早く予測すれば転送時間は長く確保できるが、ルーティング相関が弱まり誤先読みも増える。近い層だけなら予測は当たりやすいが転送を隠す時間が不足する。HEOPはこの精度-versus-lookaheadのtrade-offをVRAMとPCIeの実測コストへ結びつけ、固定の『n 層 ahead』設定を全deviceへ押し付けない。
+
+この探索により、同じモデルでも端末のメモリ容量や転送速度に応じて先読みの粒度を変えられる。細分化の利得は常に一定ではなく、分割管理の負担と実際の転送時間を合わせて判断する。
+
+実測で得た転送時間を設定探索へ戻すことで、静的な予測距離では扱えない端末差も反映できる。
 
 ## 評価
 
 ### まず見るところ
-- **結論:** expertをprojection単位へ細分化し、複数前layerの予測が一致したものを優先して先読みすると、小cacheほど無駄transferを減らしやすい。
-- **速度:** baseline比平均約1.31×、最大約1.5×。厳しいcache条件ではprefetch baseline比最大約1.8×。
-- **メモリ:** 最大約2.8×のmemory savingを報告。
-- **品質:** native routerと元expert計算を維持するためlossless寄り。
-- **注意点:** weightを細かく分け過ぎると、管理情報や小さいDMA transferの回数が増えて不利になる可能性がある。
+- **結論:** エキスパートをprojection単位へ細分化し、複数前層の予測が一致したものを優先して先読みすると、小キャッシュほど無駄転送を減らしやすい。
+- **速度:** 比較対象比平均約1.31×、最大約1.5×。厳しいキャッシュ条件では先読み 比較対象比最大約1.8×。
+- **メモリ:** 最大約2.8×のメモリ savingを報告。
+- **品質:** 元の ルータと元エキスパート計算を維持するため無損失寄り。
+- **注意点:** 重みを細かく分け過ぎると、管理情報や小さいDMA 転送の回数が増えて不利になる可能性がある。
 
 <details>
 <summary>評価条件・詳細な数値を開く</summary>
@@ -113,7 +121,7 @@ GPU memoryが小さい環境ではweightを細かく保持する利点を重視�
 |---|---|
 | GPU | RTX 3090 24GB |
 | CPU | 32-core |
-| Host memory | 64GB |
+| ホスト メモリ | 64GB |
 | PCIe | Gen4 |
 
 ### Models
@@ -124,7 +132,7 @@ GPU memoryが小さい環境ではweightを細かく保持する利点を重視�
 - DeepSeek-V2-Lite
 - OLMoE-1B-7B
 
-TruthfulQAとShareGPT系workloadを使用。
+TruthfulQAとShareGPT系ワークロードを使用。
 
 ### End-to-end speed
 
@@ -133,37 +141,37 @@ Fiddler / llama.cppなどに対し、
 - 平均：約1.31×
 - 最大：約1.5×
 
-のspeedup。
+の高速化倍率。
 
 ### 厳しいcache条件
 
-Qwen系でexpert cache容量を128に制限した条件では、基本prefetch方式比で最大約1.8×。
+Qwen系でエキスパート キャッシュ容量を128に制限した条件では、基本先読み方式比で最大約1.8×。
 
-cacheが小さいほどexpert丸ごとtransferの無駄が相対的に大きくなり、weight分割の利点が増える。
+キャッシュが小さいほどエキスパート丸ごと転送の無駄が相対的に大きくなり、重み分割の利点が増える。
 
 ### Memory savings
 
-最大約2.8×のmemory savingを報告する。
+最大約2.8×のメモリ savingを報告する。
 
-これはexpert数をpruneするのではなく、**GPUへ置くweight単位を細かくして必要部分だけ保持する**ことで得る。
+これはエキスパート数を枝刈りするのではなく、**GPUへ置く重み単位を細かくして必要部分だけ保持する**ことで得る。
 
 ### 各要素の役割
 
 性能向上は主に、
 
-1. expert weightを小単位へ分解する
-2. 複数前layerの予測合意で誤prefetchを減らす
-3. layerごとに予測距離・先読み量を調整する
+1. エキスパート 重みを小単位へ分解する
+2. 複数前層の予測合意で誤先読みを減らす
+3. 層ごとに予測距離・先読み量を調整する
 
 の組み合わせで出る。
 
 ### 制約
 
-- 小weight単位ごとの管理情報が増える。
-- small DMA transferが多すぎるhardwareでは効率低下の可能性。
-- routing correlationが弱いmodelでは複数layer合意の利得が縮む。
+- 小重み単位ごとの管理情報が増える。
+- small DMA 転送が多すぎるhardwareでは効率低下の可能性。
+- ルーティング correlationが弱いモデルでは複数層合意の利得が縮む。
 - SSD/NVMe未評価。
-- official codeは一次資料で確認できない。
+- 公式 codeは一次資料で確認できない。
 
 </details>
 
@@ -172,5 +180,5 @@ cacheが小さいほどexpert丸ごとtransferの無駄が相対的に大きく�
 - [AAAI公式PDF](https://ojs.aaai.org/index.php/AAAI/article/view/39106/43068)
 
 ## 更新履歴
-- 2026-09-04: fine-grained decomposition / MoL / HEOPを分離し、cache制約下の速度・memory評価を表形式へ整理。
-- 2026-09-07: sub-expert / MoL / HEOP / objective search等を、weight分割・予測合意・資源調整として平易化。
+- 2026-09-04: fine-grained decomposition / MoL / HEOPを分離し、キャッシュ制約下の速度・メモリ評価を表形式へ整理。
+- 2026-09-07: sub-エキスパート / MoL / HEOP / objective 検索等を、重み分割・予測合意・資源調整として平易化。
