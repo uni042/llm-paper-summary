@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-625f5d1a9588ab7f",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2607.27187.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-3915d786aa386244",
+  "validation_error": "ValueError: problem_method.components[2].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T16:42:35+00:00"
 }
