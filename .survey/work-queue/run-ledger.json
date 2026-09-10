@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:38:58.526077+00:00",
+  "updated_at": "2026-09-10T17:39:51.543265+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,7 +572,7 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:38:58.526077+00:00",
+      "last_recorded_at": "2026-09-10T17:39:51.543265+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -581,9 +581,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 4,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -631,6 +631,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34509572449:1",
+          "recorded_at": "2026-09-10T17:39:51.543265+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34509572449",
+            "run_attempt": "1",
+            "source_sha": "7c3ab0706dcbc6231ae03a41a8031373f74e1b33"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -657,6 +671,14 @@
           "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-4e0bc8f9d84a8444",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -680,6 +702,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-e31eb631f0bf054e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23834",
+          "title": "Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention"
         }
       ],
       "new_paper_ids": [
@@ -689,7 +718,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0232JST-discovery-905c587af00ec25c.json",
-        ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json"
+        ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json",
+        ".survey/work-queue/results/20260911T0240JST-discovery-4e0bc8f9d84a8444.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,
