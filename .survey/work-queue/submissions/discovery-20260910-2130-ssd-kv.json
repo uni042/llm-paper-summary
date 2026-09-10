@@ -1,0 +1,29 @@
+{
+  "job_id": "job-b0584a389afbe105",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache-gpu-io.md",
+      "priority": 94,
+      "reason": "長文LLMのKVキャッシュをNVMe SSDへ退避する際、断片化したGPUメモリから大量の小さな入出力をCPUが発行すること自体が律速になる問題を扱う。GPUネイティブなKVオブジェクト抽象、GPU側io_uring、余裕時間を考慮した入出力スケジューリングでCPUをデータ・制御経路から外し、vLLM統合実機でSSD版LMCache比の先頭トークン時間78.3%削減、達成可能要求率2倍、提供コスト27%削減を報告する。SSD階層を主対象にするため本サーベイの重点テーマとの整合性が非常に高い。"
+    },
+    {
+      "canonical_id": "arxiv:2604.26557",
+      "title": "DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.26557",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md",
+      "priority": 90,
+      "reason": "エッジLLMでKVキャッシュをNVMeへ退避すると、通常のファイル経路がページキャッシュを圧迫して待ち時間を不安定化する問題を扱う。実行時メモリ量に応じてページキャッシュ経路とファイルシステムを迂回するNVMe直接経路を選び、論理ブロックアドレスへKVを直接配置し、ストレージ入出力とGPU DMAを重ねる。プリフィル遅延最大33.1%、デコード遅延最大42.4%削減、SSD利用率2.2倍を報告し、Tuttiとは異なるOSページキャッシュ・直接ブロック配置の設計点を持つ。"
+    },
+    {
+      "canonical_id": "arxiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 87,
+      "reason": "複数ターン会話のKVキャッシュがGPU容量を超えたとき、CPUやSSDへ戻す代わりに、同一サーバー内でKV需要の小さい別モデルが余らせているGPUメモリとNVLink帯域を借りる異種モデル間共有を扱う。さらに現在層だけのKVをローカルGPUへ保持して最大文脈長を伸ばす。実ワークロードでP99先頭トークン時間最大69%削減、最大文脈長3.98倍を報告し、CPU/SSD退避とは異なるGPU間階層を利用するため比較軸として価値が高い。"
+    }
+  ]
+}
