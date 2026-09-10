@@ -26,6 +26,8 @@ from googleapiclient.http import MediaIoBaseDownload
 
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 ALLOWED_PREFIXES = (
+    ".survey/work-queue/records/chat-record/",
+    ".survey/work-queue/records/chat-record-b/",
     ".survey/work-queue/submissions/",
     ".survey/work-queue/transport/",
     ".survey/update-worker/",
