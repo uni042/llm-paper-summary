@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T20:16:08.040133+00:00",
+  "updated_at": "2026-09-10T20:17:02.154436+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T20:16:08.040133+00:00",
+      "last_recorded_at": "2026-09-10T20:17:02.154436+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1594,9 +1594,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 2,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 11,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1746,6 +1746,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34525419227:1",
+          "recorded_at": "2026-09-10T20:17:02.154436+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34525419227",
+            "run_attempt": "1",
+            "source_sha": "9a375f9ee63ade23e5d0ad1c45847b7f7af9b1fe"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1828,6 +1842,14 @@
           "title": "Topology-Aware Data Movement for Disaggregated GPU Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-07ca72ad7cc621a3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1900,6 +1922,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-d7ae4619b26c6035",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -1915,7 +1944,8 @@
         ".survey/work-queue/results/20260911T0437JST-discovery-ccc820e8748a6b32.json",
         ".survey/work-queue/results/20260911T0451JST-discovery-cee6fbbb4ad4d3b0.json",
         ".survey/work-queue/results/20260911T0430JST-discovery-b7c0549b213d456a.json",
-        ".survey/work-queue/results/20260911T0430JST-discovery-0764aa7a60dcbf12.json"
+        ".survey/work-queue/results/20260911T0430JST-discovery-0764aa7a60dcbf12.json",
+        ".survey/work-queue/results/20260911T0430JST-discovery-07ca72ad7cc621a3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 221,
