@@ -2,28 +2,28 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-localmoe-20260910-1732-v10",
-  "job_id": "job-research-ee6da232bd76e206",
+  "attempt_id": "attempt-zipserv-20260910-1741-v10",
+  "job_id": "job-research-5f3928ac49560aeb",
   "data": {
-    "overview": "このシステムは、長文プリフィルではCPU演算からGPUストリーム読込へ実行形を変え、デコードでは大容量DRAMに近いCPU専門家計算を残しつつ帯域効率とCPU/GPU重畳を改善することで、元精度の巨大MoEを単一ノードで実用的な応答域へ持ち込んだ。20～32KプリフィルでSLPはCPU AVXより10倍超、推定KTransformers AMXより2.8倍のスループットとなり、2 GPU DSLPはさらにSLPの1.64倍に達する。FP8 DeepSeek-R1 671Bは単一要求21.5トークン/秒、二要求合計33.6トークン/秒を示し、Q4_K_M版では短文28トークン/秒でKTransformersより25%高速だった。FP8行列ベクトル積単体は15.5µs・947GB/sで、品質評価は公式値から約1～1.2ポイント以内の差に留まる。",
+    "overview": "ZipServは無損失圧縮を保存容量削減だけでなくデコード高速化へ結び付けた。RTX4090ではZipGEMMが圧縮なしcuBLASに対して平均1.31倍・最大1.71倍、L40Sでは平均1.36倍・最大2.21倍となり、DietGPU・nvCOMP・DFloat11のような分離復号方式は平均でcuBLASを下回った。エンドツーエンドではvLLM比で平均17.60%の遅延削減、平均1.22倍のスループットを示す。LLaMA3.1-8Bでは静的重みを14.96GBから11.18GBへ減らし、空いた容量でKVキャッシュを5.07GBから8.60GBへ拡大した。一方A100/H800では高HBM帯域によりメモリ律速が弱く、融合復号が常にcuBLASを上回るわけではない。",
     "key_results": [
-      {"metric":"長文プリフィル性能","value":"20～32KでCPU AVX比10倍超、推定KTransformers AMX比2.8倍","baseline":"CPU AVX FP8およびKTransformers AMX INT4の長文推定値","condition":"DeepSeek-R1級FP8、20～32Kプリフィル、単一GPU SLP","interpretation":"長文ではCPU専門家行列計算を高速化するより、元精度重みをGPUへ流しながらGPU行列計算と転送を重ねる方が支配的な演算ボトルネックを外せる。"},
-      {"metric":"2 GPU分散プリフィル","value":"単一GPU SLPの最大1.64倍","baseline":"単一GPUのストリーム読込プリフィル","condition":"2枚RTX 5090、DSLP＋SmallEP、長文プリフィル","interpretation":"文脈計算を分けるだけではPCIe上の専門家並列通信が残るため、SmallEPでリンク当たり転送量を減らすことが少数GPUでも追加GPUを有効にする。"},
-      {"metric":"TTFTサービス目標","value":"SLPで32K、DSLPで約45Kの入力を30秒以内","baseline":"30秒TTFTをクラウド級の参照目標として設定","condition":"単一または2枚RTX 5090の長文プリフィル","interpretation":"元精度巨大MoEでも、プリフィルだけはGPU中心に再編すれば長文入力の待ち時間をCPU中心方式より大幅に抑えられる。"},
-      {"metric":"元精度FP8デコード速度","value":"DeepSeek-R1 671Bで短文21.5トークン/秒、32Kまで約20トークン/秒","baseline":"20トークン/秒を応答性の参照目標として設定","condition":"単一要求、二ソケットEPYC 9355、FP8元精度重み","interpretation":"FP8をDRAM上で圧縮状態のまま読み、細粒度NUMA並列でCPU専門家計算を行うことで、量子化に依存せず目標域へ到達した。"},
-      {"metric":"二要求デコード総スループット","value":"33.6トークン/秒、32Kでも31.1トークン/秒","baseline":"単一要求21.5トークン/秒","condition":"同じ長さの2要求を注意計算・MoE計算で重畳","interpretation":"単純バッチ化ではなく、別要求のGPU注意とCPU MoEを互いの遊休時間へ入れることで、各要求約16トークン/秒を保ちながら総処理量を増やした。"},
-      {"metric":"量子化DeepSeek-R1デコード","value":"短文28トークン/秒、KTransformers約22トークン/秒に対して25%高速","baseline":"KTransformers Q4_K_M","condition":"Q4_K_M DeepSeek-R1、1K～8K付近の短文領域","interpretation":"細粒度CPU並列と変換処理の融合は元精度専用ではなく、量子化版でもCPU側同期と変換費を減らせる。"},
-      {"metric":"FP8行列ベクトル積カーネル","value":"15.5µs、947GB/s","baseline":"著者標準FP8 21.7µs・678GB/s、OpenBLAS FP32 69.5µs、AOCL-BLAS FP32 59.2µs","condition":"MoE実形状のCPUカーネル単体評価","interpretation":"スケール適用をブロック後へ遅らせ、BF16ベクトル幅を活用することで元FP8をCPU上で高帯域に処理できる。これはエンドツーエンド倍率ではなくカーネル単体結果である。"},
-      {"metric":"品質差","value":"公式値との差は概ね1～1.2ポイント以内","baseline":"DeepSeek-V3.1・Kimi-K2-Instructの公式MMLU-Redux/MMLU-Pro値","condition":"元精度FP8経路のエンドツーエンド品質評価","interpretation":"重み転送・SmallEP・CPU FP8処理を組み合わせても大きな系統的品質低下は観測されず、速度改善を量子化や専門家選択変更だけに依存していない。"}
+      {"metric":"ZipGEMM対cuBLAS高速化","value":"RTX4090平均1.31倍・最大1.71倍、L40S平均1.36倍・最大2.21倍","baseline":"cuBLAS Tensor Core BF16 GEMM","condition":"実LLM線形層形状、バッチ8/16/32のカーネル単体評価","interpretation":"約30%少ない重み読込を整数ALU復号と重ね、復号済み重みの中間グローバルメモリ書込を消すことで、帯域律速領域では圧縮なしGEMMより速くなる。"},
+      {"metric":"エンドツーエンド遅延","value":"平均17.60%削減","baseline":"vLLM","condition":"LLaMA3.1-8B、Mistral-24B、LLaMA3.1-70B、バッチ8/32、出力長128～2048","interpretation":"全処理がZipGEMMになるわけではないためカーネル最大倍率より小さいが、デコードで線形層が支配する条件では重み帯域削減が要求全体の短縮へ波及する。"},
+      {"metric":"エンドツーエンドスループット","value":"vLLM比平均1.22倍、Transformers比3.18倍、DFloat11比8.52倍","baseline":"vLLM、Transformers、DFloat11","condition":"同じエンドツーエンド評価全体","interpretation":"無損失復号を別カーネルとして直列化するDFloat11に対して特に差が大きく、圧縮形式と行列積の協調設計がオンライン推論で重要であることを示す。"},
+      {"metric":"代表長文生成スループット","value":"LLaMA3.1-8Bで1105出力トークン/秒、vLLM比1.66倍","baseline":"vLLM","condition":"RTX4090、バッチ32、出力長2048","interpretation":"出力が長いほどデコード線形層で同じ重みを繰り返し読むため、圧縮読込の帯域削減を多数ステップで回収しやすい。"},
+      {"metric":"静的重み容量","value":"LLaMA3.1-8B 14.96→10.83GB、Mistral-24B 43.92→31.30GB、LLaMA3.1-70B 131.56→93.52GB","baseline":"BF16非圧縮重み","condition":"エンドツーエンドモデル配置","interpretation":"約27.6～28.9%の静的重み削減により、同じGPU容量でKVキャッシュやバッチへ使える余地が増える。"},
+      {"metric":"KVキャッシュ容量再配分","value":"5.07GB→8.60GB、1.70倍","baseline":"非圧縮vLLM","condition":"LLaMA3.1-8B、RTX4090、系列長1024の内訳評価","interpretation":"内訳評価では静的重みが14.96GBから11.18GBへ減った3.78GBをメモリ管理器がKVキャッシュへ回し、容量削減がサービング並行度へ直接つながる。"},
+      {"metric":"単体復号カーネル","value":"DietGPU比2.14倍、nvCOMP比1.83倍、DFloat11比1.10倍","baseline":"各無損失復号方式","condition":"LLaMA3.1-8BとMistral-24Bの1 Transformerブロック全重み","interpretation":"三重ビットマップの固定長・ワープ整列配置は、融合GEMMを使わないプリフィル用単体復号でも可変長符号よりGPU並列性を保ちやすい。"},
+      {"metric":"プリフィル復号追加費","value":"N=8192で約4%、N=16384で約2%","baseline":"cuBLAS GEMM時間","condition":"演算密度が高いプリフィルで単体復号＋cuBLASへ切替","interpretation":"融合復号が不利な大Nでは高速GEMMをそのまま使い、圧縮による追加処理を全体の数%へ抑える段階適応が機能する。"}
     ],
     "negative_results": [
-      {"name":"短いプリフィルではストリーム読込が有利でない","description":"SLP/DSLPには重み転送とストリーム準備の固定費があるため、256～2KではCPU方式やKTransformers AMXが競争力を持ち、4K付近でも明確な優位は小さい。著者実装は4K以下でCPU AVXを使い、それより長い入力でSLP/DSLPへ切り替える。つまり全入力長を一つの実行経路へ統一する方式ではない。"},
-      {"name":"プリフィルと二デコードの同時実行ではDRAM帯域競合が残る","description":"1プリフィル＋2デコードでは、二要求重畳によりデコード側DRAM読み出しが増え、SLPのCPU DRAMからGPUへの重み転送と競合する。その結果プリフィルTTFTは単独条件より18%増えた。フェーズ分離によりCPU計算競合は減らせても、共有DRAM帯域という物理資源は完全には分離できない。"},
-      {"name":"低DRAM帯域CPUではデコード速度が下がる","description":"小バッチCPU MoE計算の演算密度は現在CPUの演算対メモリ比より大幅に低く、著者測定ではCPU側MoEが総デコード時間の約60%を占める。このため下位CPUでは演算器数より実効DRAM帯域が主要制約となり、著者は単一要求・二要求とも速度が利用可能DRAM帯域に概ね比例すると予想している。"},
-      {"name":"低VRAM GPUでは中程度の長文で転送重畳が弱くなる","description":"DeepSeek-V3/Kimi-K2で1層全専門家を保持する標準リングバッファは11.3～16.9GB、2 GPUでも1枚5.6～8.5GBを要する。これを確保できないGPUでは中程度の長文プリフィルで先読み余裕が減り、重み転送を計算で隠しにくくなる。非常に長い入力では計算律速へ移るため影響の形も変わる。"},
-      {"name":"比較の一部はKTransformers長文値の推定","description":"KTransformers AMXの8K超プリフィルは著者機での同条件実測ではなく、短文測定の比率や理想的線形伸長から推定した値を含む。したがって20～32Kでの2.8倍という比較は、著者方式の実測値とKTransformers側推定値の比較として解釈する必要がある。"}
+      {"name":"小さい一部線形層ではZipGEMMがcuBLASより遅い","description":"L40S上のLLaMA3.1-8Bの注意出力射影ではZipGEMMがcuBLASの0.79倍まで低下した。小さい行列はsplit-Kやタイル設定を細かく調整しないとハードウェアを使い切れず、復号追加費の割合も大きい。ただし当該層はTransformerブロック全体のFLOPsでは小さく、ブロック全体では高速化を維持する。"},
+      {"name":"A100/H800では融合ZipGEMMが常にcuBLASを上回らない","description":"学習向けデータセンターGPUはHBM2e/HBM3帯域が豊富で、ZipServが狙う重み読込ボトルネックが弱い。一方A100のようにコア周波数がRTX4090より低い装置では整数ALU復号をメモリ待ちへ隠しにくいため、圧縮なしcuBLASの方が速い条件がある。手法の利得はGPUの演算対帯域比に依存する。"},
+      {"name":"損失ありFP8カーネルよりは遅い","description":"RTX4090、重み形状28672×4096、バッチ32でZipGEMMは0.194ms、Marlin W8A16 FP8は0.143msで、ZipGEMMが1.36倍遅い。これは実効約11ビット対8ビットの読込量差に近く、無損失性を保つ代わりに強い量子化と同じ帯域量までは減らせないことを示す。"},
+      {"name":"プリフィルでは融合復号が逆効果になる領域がある","description":"Nが大きいプリフィルは行列積が演算律速になるため、重み読込削減の恩恵よりその場復号のALU処理が支配しやすい。このためZipServ自身がZipGEMMを使わず単体復号＋cuBLASへ切り替える。単一カーネルが全推論段階で最適という方式ではない。"},
+      {"name":"オフライン圧縮準備が必要","description":"LLaMA-3.1-8BのTCA-TBE変換には16コアXeon 8352Vで約2.5分かかる。モデルごと・重み更新ごとに一度必要だが、デプロイ前処理のためオンライン要求の遅延には入らない。頻繁に重みを更新する用途では準備費を考慮する必要がある。"}
     ],
-    "interpretation": "性能改善は一つの万能カーネルによるものではなく、フェーズごとの演算密度と資源制約を見て『計算をデータへ寄せるか、データを計算へ寄せるか』を切り替えた結果である。プリフィルは長くなるほど行列行列積の演算量が増えるためGPUへ重みを運ぶ価値が高まり、デコードは小バッチで重み読み出しが支配するためCPU DRAM近傍で専門家を計算する方が有利になる。2 GPUでは演算分割だけでは通信が律速になるのでSmallEPが必要で、並行要求では単純バッチよりCPUとGPUの空き時間を別要求で埋める方がDRAM帯域増加を抑えられる。改善幅が入力長、VRAM、DRAM帯域、並行数によって変わるのは、この支配資源が条件ごとに入れ替わるためである。",
-    "quality_impact": "主要な主張は元のFP8巨大MoEを保ったまま高速化することであり、SLPやSmallEPは重み値・ルーティング意味を変更しない。CPU FP8経路ではBF16中間処理による有限精度差があるが、単体数値差に加えてMMLU-Redux/MMLU-Proを測り、公式結果から約1～1.2ポイント以内だった。別途評価したQ4_K_M版は必要RAMを404GBまで下げる代わりに量子化品質との交換関係があるため、元精度FP8の品質主張と混同しない。"
+    "interpretation": "ZipServの利得は『圧縮したから速い』だけでは説明できない。一般的な無損失圧縮は容量を減らしても、可変長復号の分岐と、完全重みを一度書いて再読込する二重通信で速度を失う。ZipServは固定長の三重ビットマップにより復号処理をワープで揃え、復号値をレジスタから直接Tensor Coreへ渡すことで中間通信を消す。結果として整数ALU仕事は増えるがDRAM読込が29.3%減り、その復号をメモリ待ちと行列積へ重ねられるGPUでは総時間が短くなる。逆にHBM帯域が十分なGPUや演算律速のプリフィルでは同じ交換関係が成立しないため、装置・段階に応じた切替が性能の条件となる。",
+    "quality_impact": "TCA-TBEは元のBF16重みを符号・仮数・指数まで復元する無損失表現であり、圧縮率のために重み値を丸める量子化とは異なる。したがってモデルパラメータの近似による品質劣化を導入しない。一方、損失あり8ビット方式はさらに小さい転送量で速くできるため、ZipServは『絶対に最速』ではなく、元BF16表現を保持する必要がある用途で容量と速度を同時改善する選択肢である。"
   }
 }
