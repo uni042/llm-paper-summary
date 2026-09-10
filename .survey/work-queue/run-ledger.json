@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T19:15:47.797317+00:00",
+  "updated_at": "2026-09-10T19:21:30.107160+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1049,18 +1049,18 @@
     {
       "run_key": "2026-09-11T03:30:00+09:00",
       "first_recorded_at": "2026-09-10T18:34:40.618679+00:00",
-      "last_recorded_at": "2026-09-10T19:15:47.797317+00:00",
+      "last_recorded_at": "2026-09-10T19:21:30.107160+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 6,
+        "research_completed": 7,
         "audit_completed": 0,
         "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 17,
+        "new_jobs": 18,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -1281,6 +1281,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34519901867:1",
+          "recorded_at": "2026-09-10T19:21:30.107160+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34519901867",
+            "run_attempt": "1",
+            "source_sha": "187f6d12672d609a2fd04a8566397d0ab448985d"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1403,6 +1418,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-b3fb5681cc60fed2",
+          "type": "research",
+          "canonical_id": "arXiv:2512.11920",
+          "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1522,6 +1545,13 @@
           "job_id": "job-research-b3fb5681cc60fed2",
           "status": "ready",
           "type": "research",
+          "canonical_id": "arXiv:2512.11920",
+          "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving"
+        },
+        {
+          "job_id": "job-audit-7d719b9748e9000a",
+          "status": "ready",
+          "type": "audit",
           "canonical_id": "arXiv:2512.11920",
           "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving"
         }

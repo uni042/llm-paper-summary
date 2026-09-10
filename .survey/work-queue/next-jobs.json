@@ -4,27 +4,27 @@
       "completed": 61
     },
     "audit": {
+      "ready": 1,
       "completed": 3
     },
     "research": {
-      "completed": 60,
-      "superseded": 30,
-      "ready": 1
+      "completed": 61,
+      "superseded": 30
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-b3fb5681cc60fed2",
-      "type": "research",
+      "job_id": "job-audit-7d719b9748e9000a",
+      "type": "audit",
       "lane": null,
-      "priority": 81,
+      "priority": 71,
       "canonical_id": "arXiv:2512.11920",
       "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
       "source_url": "https://arxiv.org/abs/2512.11920",
       "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing."
     }
   ],
-  "generated_at": "2026-09-10T19:15:47+00:00"
+  "generated_at": "2026-09-10T19:21:30+00:00"
 }
