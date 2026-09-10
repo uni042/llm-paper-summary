@@ -1,19 +1,19 @@
 {
-  "submission_id": "chat-attempt-cxlspeckv-20260911-0430-v10-a1-repair1",
-  "attempt_id": "attempt-cxlspeckv-20260911-0430-v10-a1",
-  "job_id": "job-research-b3fb5681cc60fed2",
+  "submission_id": "chat-attempt-audit-cxlspeckv-20260911-0430-v10-a1",
+  "attempt_id": "attempt-audit-cxlspeckv-20260911-0430-v10-a1",
+  "job_id": "job-audit-7d719b9748e9000a",
   "status": "completed",
-  "record_bank": "a",
+  "record_bank": "f",
   "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
   "expected_blob_sha": null,
   "record_slots": [
-    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "33c65321b924d20eae134ea710fdd6c4f65e0c24"},
-    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "7d54b8c1d8c0cb243bb2b99c617933184bf1ab98"},
-    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "24f97df3ef8e4d96e82769bcc383ffadd377d384"},
-    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "bfa80b7762f672506359195b5e64c52cecdc435e"},
-    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "0e015fd9aee01e731834e2b4cf244825cc496f08"}
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record-f/metadata.json", "blob_sha": "a60d17a9ac55b49ee2749a9a2abdeab02fdf8c65"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record-f/problem_method.json", "blob_sha": "a07756c58ffeb45d0c325120ed486946a3642539"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record-f/evaluation.json", "blob_sha": "3bed81730b32ed8d0692d3012ab7c106a77ba971"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record-f/results.json", "blob_sha": "7153926d8f3769e9bacd948655da2dabc6d6af51"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record-f/positioning.json", "blob_sha": "8b7e3c98a46231693489778d263dd57bdf9dc279"}
   ],
-  "audit_required": true,
-  "audit_reason": "投機的KV先読みの因果的実行意味が標準的なKV生成順序と整合しないため、公開コードと最終会議版で技術的一貫性を検証する必要がある。",
-  "audit_flags": ["technical_consistency", "implementation_verification"]
+  "audit_required": false,
+  "audit_outcome": "要注意で監査完了。CXL階層化とFPGA圧縮の収録は維持するが、投機的未来KV先読みは因果的意味が未解決で、公式公開コードも論文評価を再現する完成実装ではない。",
+  "audit_flags": ["technical_consistency_unresolved", "published_code_incomplete_for_speculative_prefetch", "reported_results_not_independently_reproduced"]
 }
