@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0c1f66c072921e49",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 94,
+      "reason": "NVMe SSD上のKVキャッシュ復元で、細かいランダムI/OをCPUが大量発行すること自体を主要ボトルネックとして扱い、GPU側から直接オブジェクトI/Oを制御する設計。GPU向けio_uring相当の非同期I/O、KVオブジェクト抽象、GPU競合を避ける余裕時間考慮スケジューリングを組み合わせ、GDS対応LMCache比で厳しいSLO下のTTFTを78.3%短縮、処理可能要求率を2倍、コストを27%削減と報告する。SSD活用を主題とする本リポジトリに非常に直接的で、未登録をidentity deltaと既存コード検索の両方で確認した。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 82,
+      "reason": "複数モデルを同居させるサーバーで、KV需要の小さいモデルが余剰GPUメモリを提供し、需要の大きいモデルのprefix KVをNVLink越しに保持する方式。CPU・SSDへの退避より高速な別GPU HBMを中間階層として使い、P99 TTFTを最大69%削減し、最大文脈長を最大3.98倍へ拡張すると報告する。GPU間帯域と異種モデルのメモリ余剰を組み合わせる点が階層メモリ配置研究として有用で、identity deltaに未登録であることを確認した。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-output-length-uncertainty.md",
+      "priority": 74,
+      "reason": "出力長が事前に分からないためKV予約を過小にするとプリエンプトと再計算、過大にするとメモリ浪費になる問題を、GPU並列構成、要求クラス別KV予約、異種サービング群へのルーティング、prefix cacheまで含む分布ロバスト最適化として扱う。BurstGPT、Azure、ShareGPT由来トレースで固定分位予約より最大56%低コストを報告し、SLOとP99遅延を維持する。I/Oそのものより資源予約・スケジューリング寄りだが、動的KV容量管理の重要な隣接研究で、identity deltaに未登録であることを確認した。"
+    }
+  ]
+}
