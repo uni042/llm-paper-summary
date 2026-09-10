@@ -4,8 +4,8 @@ arxiv_id: "2505.02922"
 title: "RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference"
 summary: "長contextのKV cacheをCPU memory上の**vector storageとして検索対象にし、attentionに重要なtokenだけをGPUへ取り出す**ことで、全KVをGPUへ保持・走査するmemory容量とbandwidthを減らしつつ、検索誤差による精度低下を抑えるGPU–CPU協調推論system。"
 source: "https://arxiv.org/abs/2505.02922"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -50,6 +50,8 @@ RetroInferはattention対象を大きく3種類に分ける。
 ### segmented clustering
 
 長いcontext全体を毎回大規模cluster化するとindex構築・更新自体が高costになる。そこでsequenceをsegmentへ分割し、各segment内でkeyをcluster化する。token生成に伴う新しいKVも局所的に追加できるため、巨大なglobal indexを繰り返し作り直す必要を減らす。
+
+segment単位に分けるもう一つの利点は、検索indexの更新costと検索精度を局所化できることである。長context全体を一つのcluster空間として再最適化すると、新token追加のたびに広い範囲のcentroidや割当が変化し得る。既存segmentを固定したまま末尾側だけ更新できれば、decodeのcritical pathで行うindex maintenanceを小さく保ち、CPU検索をGPU attentionと重ねやすくなる。
 
 ### wave buffer
 

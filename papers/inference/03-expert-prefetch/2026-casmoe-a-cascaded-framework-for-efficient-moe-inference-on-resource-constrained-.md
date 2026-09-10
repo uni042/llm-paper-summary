@@ -1,7 +1,7 @@
 ---
 canonical_id: "AAAI:39816"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -36,6 +36,8 @@ CasMoEは、expert prefetchの予測方法を1つに固定せず、**過去routi
 さらにpromptを一度処理して全MoE layerの候補expertをまとめて予測するため、深いlayerで使うexpertも早い段階から転送を始められる。
 
 native router / Top-kは変更せず、予測はcache warming専用なのでlossless型である。
+
+二段構成の意味は、検索と学習予測を精度競争させるのではなくcostの違うfallbackとして使うことにある。既知workloadでは履歴検索だけで全layer候補を得られるため追加model実行を避けられ、未知promptだけ高costなEAPへ送る。database coverageが高まるほどonline predictor利用率を下げられる一方、workload shiftが大きい環境では検索hitを過信すると誤prefetchが増える。
 
 ## 手法のあらまし
 
@@ -75,6 +77,8 @@ EAPのencoderは、意味が近いだけでなく**実際に似たexpert利用pa
 prompt段階で全layerのcandidate expertを出すため、layerごとにpredictorを待つ方式より深いlayerのtransferを早く始められる。
 
 CPU DRAMからGPUへcandidate expertを非同期transferし、native gate到達時に必要expertがすでにGPUへある割合を高める。
+
+全layerをprompt時点で予測する利点は、深いlayerほど長い先読み窓を確保できることである。ただし早く予測するほど実際のdecode hidden stateをまだ観測していないため、将来routingの不確実性も高い。CasMoEはprompt-level履歴やpredictorへ依存する代わりに、転送開始を大幅に前倒ししてPCIe latencyを多くの前段計算へ隠す設計といえる。
 
 ### 6. Lossless型
 
@@ -139,6 +143,8 @@ routing pattern databaseを大きくすると過去と似たpromptを見つけ�
 も増える。
 
 workloadが大きく変わる場合、古いrouting履歴の価値は低下する。
+
+そのためdatabaseは単なるcacheではなく、予測精度と検索costを同時に決める状態になる。小さすぎればEAP呼出しが増え、大きすぎれば近傍検索と更新の管理costが増える。また意味的に似ていてもroutingが異なるpromptを再利用すると不要expertを先読みするため、EAM表現はsemantic similarityだけでなくexpert activation similarityを反映する必要がある。
 
 ### 制約
 

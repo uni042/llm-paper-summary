@@ -1,7 +1,7 @@
 ---
 canonical_id: "AAAI:39106"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -51,11 +51,15 @@ native router / Top-k / expert計算は維持するため、expert substitution�
 
 expert丸ごとloadする方式よりGPU cache容量を細かく使え、不要なweight transferを減らせる。
 
+細粒度化の利点は、予測が部分的に当たった場合にも転送済みbyteを無駄にしにくいことにある。expert全体を一単位にすると一部projectionだけ先に必要でも全weightを運ぶが、分解後は実行順や残りmemoryに合わせて必要部分から配置できる。ただし単位を小さくしすぎるとmetadataとDMA発行回数が増えるため、分解粒度自体にもhardware依存の最適点がある。
+
 ### 2. 小さいweight単位でcache / prefetchする
 
 GPU VRAMにはexpert全体ではなく、必要なprojectionを個別に置ける。
 
 cache missでもexpert全体を移す必要がなく、必要なweight部分だけをCPU DRAMから送る。
+
+この性質はVRAMが数expert分しか空いていない状況で特に効く。丸ごとcacheでは空き容量より少し大きいexpertを全く置けないが、projection単位なら一部だけresidentにして残りを後続計算と重ねて送れる。その結果、capacity制約を『何expert置けるか』という離散問題から『何byteのsub-expertを先に置くか』という連続に近い配分問題へ細かくできる。
 
 ### 3. 複数前layerの予測が一致したexpertを優先する
 
@@ -88,6 +92,8 @@ MoLは単純にcandidateの和集合を広げるのではなく、複数layerで
 GPU memory容量、expertを送る時間、cache missした時の待ち時間をcostとして、予測距離やprefetch数の候補を少しずつ変えながら速い設定を探す。
 
 GPU memoryが小さい環境ではweightを細かく保持する利点を重視し、PCIe帯域に余裕があればprefetchを増やす、といった適応を行う。
+
+同じmodelでも最適な予測距離はdeviceによって変わる。遠いlayerを早く予測すればtransfer時間は長く確保できるが、routing相関が弱まり誤prefetchも増える。近いlayerだけなら予測は当たりやすいが転送を隠す時間が不足する。HEOPはこのaccuracy-versus-lookaheadのtrade-offをVRAMとPCIeの実測costへ結びつけ、固定の『n layer ahead』設定を全deviceへ押し付けない。
 
 ## 評価
 

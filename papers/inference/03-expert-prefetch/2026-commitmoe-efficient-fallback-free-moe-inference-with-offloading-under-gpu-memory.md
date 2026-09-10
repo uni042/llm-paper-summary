@@ -1,7 +1,7 @@
 ---
 canonical_id: "AAAI:39454"
-last_audited: null
-audit_version: 0
+last_audited: "2026-09-10"
+audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
@@ -63,6 +63,8 @@ native routerの確率が一つのexpertへ強く集中していないtokenで�
 
 この経験則を、fallbackを捨てる根拠に使う。ただし一般的な品質保証ではない。
 
+逆にrouter certaintyが高いtokenで予測を外すと、native modelが強く必要としていたexpertを置換するため影響が大きくなり得る。Commit Routerの予測精度だけでなく、native routerがどれだけ一つの選択へ集中しているかを品質riskの手掛かりとして見る理由はここにある。fallback-free化はすべてのmissを同価値として扱うのではなく、missが許容されやすい領域が存在するという経験的性質へ依存している。
+
 ### 4. `OWA`：本来のrouter weightを準備済みexpertへ振り分け直す
 
 predictionとnative Top-kが完全一致ならnative routing weightをそのまま使う。
@@ -80,6 +82,10 @@ predictionとnative Top-kが完全一致ならnative routing weightをそのま�
 | CommitMoE | native missをloadせず予測expertを実行 | **approximate** |
 
 CommitMoEの大きなspeedupは、このfallback elimination込みで解釈する必要がある。
+
+lossless prefetchではprediction missのたびに正しいexpertを追加loadするため、最悪時には予測transferとdemand transferの両方を支払う。CommitMoEは後者を完全に削るので、PCIeが遅いlegacy環境ほど相対利得が大きくなる。一方その速度は『予測をより早くした』だけでなく『正しいnative expertを待つことをやめた』結果でもあり、quality-preserving system optimizationと同じ条件で比較してはいけない。
+
+さらにOWAはmissしたnative expertの関数を再現するものではなく、利用可能なexpertの混合係数を調整して出力scaleやrouter preferenceの一部を残す補正である。準備済みexpertがnative集合と大きく異なれば、weightを再配分しても失われた非線形変換は戻らない。平均benchmarkが維持される結果はこの近似が多くの入力で許容されたことを示すが、token-level equivalenceや長期誤差の不存在を示すものではない。
 
 ## 評価
 
