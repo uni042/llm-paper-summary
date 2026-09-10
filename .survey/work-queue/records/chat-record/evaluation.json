@@ -2,24 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-localmoe-20260910-1732-v10",
-  "job_id": "job-research-ee6da232bd76e206",
+  "attempt_id": "attempt-zipserv-20260910-1741-v10",
+  "job_id": "job-research-5f3928ac49560aeb",
   "data": {
-    "hardware": ["AMD EPYC 9355 ×2", "DDR5-6400 48GB ×24・24メモリチャネル・総容量1.15TB", "NVIDIA RTX 5090 32GB ×2", "PCIe接続の単一ノード"],
-    "software": ["著者実装のCPU-GPU協調推論エンジン", "KTransformers", "llama.cpp", "ik_llama.cpp", "OpenBLAS", "AOCL-BLAS", "AVX-512", "AMX比較値"],
-    "model": ["DeepSeek-R1 671B FP8", "Kimi-K2 1T FP8", "DeepSeek-R1 Q4_K_M量子化版", "品質評価ではDeepSeek-V3.1とKimi-K2-Instruct"],
-    "datasets": ["MMLU-Redux", "MMLU-Pro", "長さ256～64Kのプリフィル合成条件", "1K～128Kのデコード文脈長条件", "プリフィルとデコードを組み合わせた同時要求マイクロベンチマーク"],
-    "baselines": ["CPU AVX FP8/INT4プリフィル", "KTransformers AMX INT4", "KTransformers Q4_K_M", "llama.cpp", "ik_llama.cpp", "OpenBLAS FP32", "AOCL-BLAS FP32/BF16"],
+    "hardware": ["RTX4090 24GB ×4＋Intel Xeon Platinum 8352V 512GB DDR4", "L40S 48GB ×4＋Intel Xeon Gold 6230R 512GB DDR4", "RTX5090 32GB", "境界条件評価のA100・H800"],
+    "software": ["vLLM統合ZipServ", "CUDA/C++ ZipGEMM", "cuBLAS Tensor Core GEMM 12.4.5", "DietGPU", "nvCOMP rANS", "DFloat11", "Transformers"],
+    "model": ["LLaMA3.1-8B/70B/405B", "Qwen2.5-7B/14B/32B/72B", "Gemma3-12B/27B", "Mistral-24B/123B"],
+    "datasets": ["実モデルから抽出したQKV・出力・Gate/Up・Down・LM head線形層形状", "エンドツーエンド生成ではバッチ8/32、出力長128～2048トークン"],
+    "baselines": ["cuBLAS Tensor Core BF16 GEMM", "DietGPU", "nvCOMP rANS", "DFloat11", "vLLM", "Transformers", "Marlin W8A16 FP8（損失あり比較）"],
     "settings": [
-      {"name":"長文プリフィル","description":"256～64Kトークンの入力長でCPU AVX、KTransformers AMX、単一GPU SLP、2 GPU DSLPを比較する。KTransformersの8K超は実測ではなく、短い領域の比率または理想的な線形伸長を用いた推定値として明示される。TTFT 30秒をローカルでのクラウド級目標として扱い、短文ではCPU、4K超ではSLP/DSLPへ切り替える境界も評価する。"},
-      {"name":"元精度デコード","description":"FP8 DeepSeek-R1 671BとKimi-K2 1Tについて、短文から32K級まで単一要求および二要求重畳時のトークン毎秒を測る。単一要求で20トークン/秒以上を応答性の基準とし、二要求では合計スループットだけでなく各要求の速度低下も確認する。"},
-      {"name":"量子化デコード比較","description":"Q4_K_M DeepSeek-R1を著者エンジン、KTransformers、llama.cpp、ik_llama.cppで1K～128K文脈まで比較する。元精度FP8の結果と量子化版の結果を分け、量子化により必要RAMが404GBまで下がる一方でモデル品質との交換関係があることを明示する。"},
-      {"name":"同時要求評価","description":"単独プリフィル、単独デコード、プリフィル＋1デコード、2デコード、プリフィル＋2デコードを比較する。単独で約20秒になるようKTransformersは4Kプリフィル、著者方式は24Kプリフィルを設定し、TTFT、平均TPOT、全要求完了時間を測って資源分離と二要求重畳の干渉を観察する。"},
-      {"name":"FP8カーネル単体","description":"MoEの実際の行列ベクトル積形状でOpenBLASとAOCL-BLASのFP32/BF16、および著者の標準・最適化FP8カーネルを比較する。カーネル単体の遅延と実効メモリ帯域を測り、エンドツーエンド高速化とは区別する。"},
-      {"name":"品質検証","description":"DeepSeek-V3.1とKimi-K2-Instructの元精度FP8運用についてMMLU-ReduxとMMLU-Proの完全一致率を公式公開値と比較し、転送・並列化・CPU FP8処理による系統的な能力低下がないか確認する。"}
+      {"name":"ZipGEMMカーネル単体","description":"RTX4090とL40Sで実際のLLM線形層形状を使い、バッチ8・16・32における融合ZipGEMMを圧縮なしcuBLAS、DietGPU、nvCOMP、DFloat11と比較する。100回のウォームアップ後に1000回計測し、カーネル単体の高速化と、復号を別段階に置く方式の遅延を切り分ける。"},
+      {"name":"復号カーネル単体","description":"LLaMA3.1-8BとMistral-24BのTransformerブロック全重みを対象に、行列積を含まないZipServ単体復号とDietGPU、nvCOMP、DFloat11の復号時間を比較する。固定長配置自体が融合GEMMだけでなく復号処理にも効くかを確認する。"},
+      {"name":"GPU世代・用途横断","description":"RTX5090へ特別なBlackwell新機能を使わずZipGEMMを移植し、RTX4090/5090とA100/H800のcuBLASを比較する。消費者・推論向けGPUの帯域制約では圧縮読込が効く一方、高帯域データセンターGPUでは利得が弱まる境界を測る。"},
+      {"name":"プリフィル追加費","description":"行列積のNを1～16384まで変え、デコードの小Nでは融合ZipGEMM、プリフィルの大Nでは単体復号＋cuBLASへ切り替える段階適応の妥当性を評価する。N=8192/16384で復号追加費がGEMM時間の約4%/2%かを測る。"},
+      {"name":"エンドツーエンドサービング","description":"LLaMA3.1-8BをRTX4090 1枚、Mistral-24BをL40S 2枚、LLaMA3.1-70BをL40S 4枚のテンソル並列で実行し、バッチ8/32、出力長128・256・512・1024・2048を各10回測定する。vLLM、Transformers、DFloat11と要求全体遅延および出力トークン毎秒を比較する。"},
+      {"name":"メモリ内訳","description":"RTX4090上のLLaMA3.1-8B、系列長1024で、線形層・注意・その他の遅延と静的重み・KVキャッシュのGPUメモリ内訳を比較し、重み圧縮で空いた容量が実際にKVキャッシュへ再配分されるか確認する。"}
     ],
-    "correctness": "主要な元精度経路では専門家選択やモデル重みを近似せず、FP8重みの正本をCPU DRAMに保持する。SLPは重みの置き場所と時刻だけを変え、SmallEPは同じルーティング結果を各GPUで再計算して部分和を合成する。CPU FP8カーネルでは中間をBF16で扱うため完全なビット一致ではないが、PyTorch BF16基準との差とエンドツーエンドベンチマークを別途測定している。",
-    "methodology": "評価は一つの総合倍率だけでなく、プリフィル、元精度デコード、量子化デコード、並行要求、FP8カーネル、品質を分解している。主な実機は二ソケットEPYC＋2枚RTX 5090で、プリフィルでは入力長、デコードでは文脈長とバッチ数を変える。KTransformersの長文プリフィル値の一部は別プラットフォームの公開値から推定しているため、その比較と著者機上の実測比較を区別して読む必要がある。",
-    "scope": "実機検証の中心は1.15TB DRAM、24チャネル、2基CPU、1～2枚のRTX 5090という比較的強力な単一ローカルノードである。一般のデスクトップ1ソケットCPUや低帯域DRAM、少容量GPUへの直接的な性能保証ではない。著者自身も低性能CPUではデコード速度が有効DRAM帯域にほぼ比例して下がり、低VRAM GPUではSLPリングバッファを小さくせざるを得ず中程度の長文TTFTが悪化すると議論している。"
+    "correctness": "TCA-TBEは頻出指数を3ビット差分で、例外指数を完全BF16値で保存し、符号と仮数も保持するため、圧縮した重みを元のBF16表現へ無損失復元する。評価は速度と容量が中心で、量子化による精度劣化との比較は動機付けおよびMarlinとの性能比較として扱う。",
+    "methodology": "カーネル単体、単体復号、GPU世代差、プリフィル追加費、エンドツーエンド、メモリ内訳を分けて測り、最大2.21倍というZipGEMMのカーネル倍率と、vLLM比平均1.22倍というサービング全体倍率を混同しない構成になっている。データセンターGPUでは同じ融合方式が常にcuBLASを上回らない負の条件も明示している。",
+    "scope": "BF16重みの統計的冗長性を利用するNVIDIA GPU向け実装であり、KVキャッシュ圧縮や活性値圧縮は将来課題。主な高速化対象はメモリ帯域律速のデコードで、高演算密度プリフィルは別経路へ切り替える。A100/H800のようにHBM帯域が豊富でコア周波数が低い装置では整数ALU復号を隠しにくく、融合ZipGEMMが圧縮なしcuBLASを下回る場合がある。"
   }
 }
