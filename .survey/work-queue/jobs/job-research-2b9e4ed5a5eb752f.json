@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-2b9e4ed5a5eb752f",
+  "type": "research",
+  "parent_job_id": "job-cbafd4e803a329a5",
+  "priority": 88,
+  "canonical_id": "arXiv:2403.01164",
+  "title": "HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices",
+  "source_url": "https://arxiv.org/abs/2403.01164",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-heterogeneous-parallel-inference.md",
+  "selection_reason": "資源制約端末でCPUとGPUを単なる保存先・計算先に分けず異種並列計算へ参加させ、非同期重畳でCPU-GPU入出力の待ちを隠す推論システム。MLSys 2024採択で、最大317%超の推論速度改善を報告しており、FlexGen以降のCPU/GPU協調オフロード系統を埋める価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T22:41:02+00:00",
+  "completed_at": "2026-09-10T22:41:04+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2403.01164",
+  "duplicate_of_path": "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2403.01164"
+  }
+}

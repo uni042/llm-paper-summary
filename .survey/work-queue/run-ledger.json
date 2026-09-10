@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T22:38:45.285188+00:00",
+  "updated_at": "2026-09-10T22:41:05.891839+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T22:38:45.285188+00:00",
+      "last_recorded_at": "2026-09-10T22:41:05.891839+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2360,9 +2360,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 5,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2382,6 +2382,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34538625461:1",
+          "recorded_at": "2026-09-10T22:41:05.891839+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34538625461",
+            "run_attempt": "1",
+            "source_sha": "40908af41e955b3fd5d774dca964eeff879f007e"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2390,6 +2404,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.23592",
           "title": "KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-cbafd4e803a329a5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -2401,6 +2423,34 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-2b9e4ed5a5eb752f",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2403.01164",
+          "title": "HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices"
+        },
+        {
+          "job_id": "job-research-5bd0f0a20ff446cb",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2502.12574",
+          "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading"
+        },
+        {
+          "job_id": "job-research-6e93d706a51287a4",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2409.04992",
+          "title": "InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference"
+        },
+        {
+          "job_id": "job-research-80128214f9b9bd24",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2402.01869",
+          "title": "INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference"
         }
       ],
       "new_paper_ids": [
@@ -2409,11 +2459,13 @@
         "arXiv:2606.15157",
         "arXiv:2609.07883"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T0741JST-discovery-cbafd4e803a329a5.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,
       "paper_active_count_after": 235,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

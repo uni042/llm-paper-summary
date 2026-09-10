@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-6e93d706a51287a4",
+  "type": "research",
+  "parent_job_id": "job-cbafd4e803a329a5",
+  "priority": 96,
+  "canonical_id": "arXiv:2409.04992",
+  "title": "InstInfer: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference",
+  "source_url": "https://arxiv.org/abs/2409.04992",
+  "paper_path": "papers/inference/02-ssd-nvme-offload/2024-2409.04992-instinfer-in-storage-attention-offloading.md",
+  "selection_reason": "長文脈推論のKVキャッシュとデコード時注意計算を計算ストレージドライブへ移し、PCIe越しに巨大KVを往復させる代わりにフラッシュ内部帯域を使う。GPUとストレージ間の直接転送も組み合わせ、A6000上の13BモデルでFlexGen系SSD方式に対して最大11.1倍のスループット改善を報告しており、SSD/NVMe活用の系譜で重要な未収録候補。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T22:41:02+00:00",
+  "completed_at": "2026-09-10T22:41:04+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2409.04992",
+  "duplicate_of_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2409.04992"
+  }
+}
