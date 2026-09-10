@@ -2,38 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-draftexpert-20260910-1617-v10",
-  "job_id": "job-research-fcb9e0b363722b52",
+  "attempt_id": "attempt-moespec-20260910-1620-v10",
+  "job_id": "job-research-f9f62bef5889e903",
   "data": {
-    "hardware": ["NVIDIA GeForce RTX 4090 24GB", "Xiaomi MIX Flip 2", "Snapdragon 8 Elite", "Hexagon HTP v81 NPU（約8MBオンチップSRAM）"],
-    "software": ["PyTorch 2.11.0+cu128（CPU→GPU）", "llama.cpp Q4_0（Flash→NPU）", "Android 16 API 36", "MIUI V816"],
-    "model": ["DeepSeek-V2-Lite", "Moonlight-16B-A3B"],
-    "datasets": ["Chat", "GSM8K", "MBPP", "要約", "指示追従"],
-    "baselines": ["専門家オフロード自己回帰デコード", "訓練不要の共有経路＋上位r専門家自己ドラフト（r=1,2,3）", "専門家がメモリ常駐する自己回帰参照値"],
+    "hardware": ["NVIDIA A100 80GB ×1（OLMoE-1B-7B、Qwen3-30B-A3B）", "NVIDIA A100 80GB ×2（Mixtral-8x7B）"],
+    "software": ["PyTorch 2.1", "CUDA 12.1", "Hugging Face公開重み", "EAGLE / EAGLE-3公式アダプタ"],
+    "model": ["OLMoE-1B-7B（64専門家、上位8、7B総パラメータ/1B活性）", "Qwen3-30B-A3B（128専門家、上位8、30B総パラメータ/3B活性）", "Mixtral-8x7B（8専門家、上位2、47B総パラメータ/13B活性）"],
+    "datasets": ["GSM8K", "MATH-500", "HumanEval", "MBPP", "CNN/DailyMail"],
+    "baselines": ["自己回帰デコード", "EAGLE-3（OLMoE、Qwen3）", "EAGLE（Mixtral）"],
     "settings": [
       {
-        "name": "CPU→GPU専門家オフロード",
-        "description": "RTX 4090 24GBへBF16の対象専門家をCPUメモリからオンデマンド転送する。非ルーティング部分とDraftExpert追加専門家はGPU常駐。DeepSeek-V2-LiteとMoonlight-16B-A3Bはいずれも27層、64ルーティング＋2共有専門家、各トークン上位6専門家を使用する。"
+        "name": "主要投機設定",
+        "description": "主評価は63トークンのドラフト木を使用。温度0と温度1を評価し、温度1では5乱数種を平均する。各ベンチマーク80例、最大生成1024トークン。"
       },
       {
-        "name": "Flash→NPU専門家オフロード",
-        "description": "Xiaomi MIX Flip 2上でQ4_0量子化重みをllama.cppからHexagon HTP v81 NPUへ実行し、ルーティング専門家はフラッシュから共有メモリへ段階搬送する。注意、埋め込み、出力層、共有専門家、ルーター、DraftExpert追加専門家は常駐する。"
+        "name": "専門家予算探索",
+        "description": "OLMoEはB=8,16,24,32,40,48,56、Qwen3は16,24,32,48,64、Mixtralは2,3,4,5,6,7を探索。温度1の5乱数種でEAGLE品質の1標準偏差以内を保つ候補から処理量最大の予算を主要結果に用いる。"
       },
       {
-        "name": "ドラフト側測定",
-        "description": "候補長K=4で一意な層専門家数、受理率、共有＋上位1自己ドラフトを1.0としたドラフト遅延を比較する。上位r増加による受理率改善と専門家搬送増加を分離する。"
+        "name": "木サイズ解析",
+        "description": "ドラフト木サイズ3〜511を掃引し、通常EAGLEの専門家和集合増加とMoE-Specの固定予算が速度へ与える影響を測る。OLMoEではB=32を代表条件として分析。"
       },
       {
-        "name": "検証側測定",
-        "description": "固定候補長、確信度＋専門家展開量打ち切り、さらにプリフェッチを加えた場合を比較する。費用は同一モデル・同一プラットフォームの1トークン自己回帰デコードで正規化し、プリフェッチのヒット率と無駄率も測る。"
+        "name": "選択方式解析",
+        "description": "現在木のルーター確率を合算する動的方式、校正データ頻度による静的方式、完全専門家出力から再構成誤差を貪欲最小化するOracleを比較する。切り捨てと置換の専門家被覆方式も比較する。"
       },
       {
-        "name": "学習損失アブレーション",
-        "description": "上位1ドラフトに残差蒸留、ロジット／トークン蒸留、ルーター一致蒸留を順に追加し、出力KL、受理率、ルーター一致、プリフェッチヒット率を測る。"
+        "name": "公平なMoE実装最適化",
+        "description": "活性トークンを専門家ごとにまとめて行列積するバッチ化MoE計算を自己回帰・EAGLE・MoE-Specすべてへ同一適用する。逐次専門家実行に対し約1.4〜1.5倍高速化するが、MoE-Spec固有の利得として数えない。"
       }
     ],
-    "correctness": "正確モードでは候補トークンを凍結済み対象MoEで必ず検証し、対象と一致する接頭辞だけを採用する。打ち切りは提案数を変えるだけで、プリフェッチは専門家の移動時刻だけを変えるため、対象モデルの最終出力を近似しない。モバイル側対象重み自体はQ4_0量子化された実行モデルである。",
-    "methodology": "二つのモデルを二種類の異種メモリ階層で同じ構造の評価へ掛け、自己回帰オフロードを基準にデコード処理量を比較する。さらに全体速度だけでなく、ドラフト専門家集合、受理率、検証費用、プリフェッチヒット率を個別に分解し、損失項のアブレーションで『受理率改善』と『検証専門家予測改善』の役割を区別する。",
-    "scope": "対象はバッチ処理や要求間キャッシュ再利用が少ない、遅延重視の単一利用者端末推論。CPU→GPUはRTX 4090、Flash→NPUは特定のSnapdragon 8 Elite端末で評価され、サーバー型多要求MoE、他GPU/NPU、SSD直結GPU、ネットワーク分散環境は未評価。追加ドラフト専門家の学習費用とモデルごとの再学習が必要。"
+    "correctness": "MoE-Specは対象MoEの検証専門家を予算集合へ制限する近似方式であり、厳密な対象モデル出力一致を保証しない。品質はGSM8K/MATH-500精度、HumanEval/MBPP pass@1、CNN/DailyMail ROUGE-L F1で直接評価する。温度1では使用EAGLE実装が提案分布q(x)=1を使う簡略化を含むため、EAGLEおよびMoE-Spec双方に対象分布からの追加偏りがある。",
+    "methodology": "三つの異なるMoE構造、五つの生成タスク、決定論・確率的生成、複数専門家予算、広い木サイズを組み合わせ、速度と品質を同時評価する。主要予算は品質制約下の処理量最大化で選び、追加分析で専門家数、受理長、ランキング費用、再構成誤差、専門家共同活性化を測ることで、速度向上が受理率ではなく検証時の専門家読み出し削減から生じることを確認する。",
+    "scope": "単一要求を中心としたA100実機評価で、専門家重みはGPU HBMに収まる条件を主対象とする。多数要求をバッチ化すると異なる要求間で専門家重み読み出しを共有できるため、専門家予算の相対利得は小さくなる可能性がある。ルーティングは上位k softmaxを前提とし、DeepSeek-V3系のsigmoidルーティングには適応が必要。層ごとの適応予算や共同活性化を利用した選択は未実装。"
   }
 }
