@@ -6,7 +6,7 @@
 - 08:30 JST → その他更新worker
 - それ以外の毎時 :30 → 論文worker
 
-毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
+毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json`、`.survey/work-queue/discovery-state.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
 
 一時配送について古い文書と矛盾する場合は **このrouter → fallback-routing.md → continuation-policy.json → backlog-resilience.md → queue-v10.md** の順で優先する。Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は新規保存先に使わない。Drive実装の保存版は `archive/drive-fallback-before-removal-20260910` ブランチにある。
 
@@ -89,6 +89,27 @@ Chatは探索、一次資料全文取得、全文精読、科学的判断、監�
 5. 固定件数・固定バッチ数・「1本終わったら終了」は設けない。
 
 checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` の `ensure_discovery_excluding_checkpointed` を使って新規discovery jobを発行してよい。元job statusは変更しない。
+
+### discoveryの重複回避と再探索
+
+探索開始前に、repo内の既収録論文から可能な範囲で識別集合を作る。最低限、arXiv ID、DOI、正規化タイトルを既収録ID集合として扱う。検索結果は全文取得や詳細評価の前にこの集合で先行フィルタし、既収録候補を除外する。
+
+- 検索ソース側で完全除外できない場合は、まず軽量に広めの候補集合を取得し、ローカル重複除去後の未収録候補だけを詳細評価する。
+- arXiv ID / DOIが一致するものは重複とする。IDがなくてもタイトル正規化で同一と判断できるものは重複扱いにしてよい。
+- 重複判定のためだけに本文精読は行わない。
+
+1回の探索ラウンドで候補が全て重複または有力な未収録候補が0件だった場合、それ自体をdiscovery終了理由にしない。同一run内で探索軸を変更して再探索する。
+
+推奨ラウンド:
+
+1. 通常の重点テーマ検索。
+2. 検索語・表現を変更した同テーマ再検索。
+3. 引用・被引用、関連実装、隣接技術語を使った展開検索。
+4. 隣接テーマへの拡張検索。
+
+同じ検索戦略・ほぼ同じクエリを反復しない。固定ラウンド数で機械的に埋める必要はないが、少なくとも通常検索が重複だけで終わった場合は1段以上探索軸を変えて再探索する。プラットフォーム上限、保存不能、または有望領域を合理的に使い切った場合のみそのrunのdiscoveryを終了する。
+
+各ラウンド終了時に `.survey/work-queue/discovery-state.json` を更新し、探索軸、検索概要、取得候補数、重複除外数、未収録候補数、採用数、重複率、次回推奨探索軸を記録する。高重複の探索軸は直後のrunで機械的に再使用せず、別軸を優先する。
 
 ### GitHub write不能中のoffline discovery
 
