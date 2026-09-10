@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-duoserve-20260911-0230-v10-a1",
-  "job_id": "job-research-62623041c7897e15",
+  "attempt_id": "attempt-cxlpnm-20260911-0230-v10-a1",
+  "job_id": "job-research-eccffc20cbe9c15a",
   "data": {
-    "hardware": ["NVIDIA RTX A5000 24GB + AMD Threadripper PRO 3945WX 12コア + 128GB RAM + Ubuntu 20.04", "NVIDIA RTX A6000 48GB + AMD Threadripper PRO 5955WX 16コア + 128GB RAM + Ubuntu 24.04", "両構成ともPCIe 4.0、16GT/s"],
-    "software": ["vLLMベースの推論実装", "CUDA固定ページメモリによるCPUオフロード", "複数CUDAストリームによる通信・計算・予測の並行化", "PyTorchによる7層ExpertMLPの学習・GPU推論", "Mixtralは4ビットAWQ、Qwen3-30B-A3BはFP8"],
-    "model": ["Mixtral-8x7B: 32層、2/8エキスパート活性、12.9B/46.7B活性/総パラメータ", "Mixtral-8x22B: 56層、2/8、39B/141B", "Qwen3-30B-A3B: 48層、8/128、3B/30B", "DeepSeekMoE-16B: 28層、8/66、2.8B/16.4B"],
-    "datasets": ["SQuAD: 質問応答", "Orca-Math: 数学推論"],
-    "baselines": ["On-Demand Fetch: ゲート確定後に必要エキスパートを取得", "Layer-wise Full Prefetch: 各層の全エキスパートを事前取得", "MoE-Infinity: 活性化トレースに基づく先読み・キャッシュ", "GPU Onlyはメモリ参考値として掲載されるが実用ベースラインには含めない"],
-    "correctness": "予測されたデコード候補と実ゲートTop-kを毎層比較し、不一致ならCPUから正しいエキスパートを再取得する。元LLMの重み・ゲートは変更しないため、予測ミスは追加通信へ変換され、最終計算のエキスパート集合は基準と一致する。",
+    "hardware": ["基準GPU: NVIDIA A100-80GB、HBM2E 2TB/s。最大8GPU DGX、405B評価は2×GPU node（各8GPU）", "CXL-PNM: 512GB LPDDR5X/台、1.1TB/s/台、CXL 3.0 switch + PCIe 6.0 physical layer想定", "CXL-PNM controller: 32 VPU tiles、ピーク8TFLOPS、2.25MB on-chip buffer、1MB DMA buffer、7nm、1GHz、FP16", "CXL-PNM電力: controller/accelerator約90W、DRAM約40W、platform約150W"],
+    "software": ["NVIDIA FasterTransformerによるGPU LLM推論", "Linux DAX拡張CXL-PNM device driver", "Python runtime libraryによるCXL memory allocation・register制御・instruction orchestration", "ArkVale型のnon-eviction dynamic KV page selectionを基準のKV管理に利用", "7nm合成timing/power modelでparameterizeしたcycle-level simulator"],
+    "model": ["Llama 3.1-8B", "Llama 3.1-70B", "Llama 3.1-405B"],
+    "datasets": ["InfiniteBench En.Sum long-book summarization"],
+    "baselines": ["GPU-CXL-Mem: A100 GPU + CXL memory expansionでKVを外部保持し必要ページをGPUへrecall", "GPU scaling: A100 GPU台数を増やす従来スケールアウト", "PNM-KV: attention/KV selectionをPNMへ全offload", "PnG-KV: PNM-KV + steady-token GPU hybrid attention"],
+    "correctness": "評価はfull KVを保持するnon-eviction dynamic selectionを共通前提とし、PNM-KVは同じ選択処理とattentionを実行場所だけCXL-PNMへ移す。PnG-KVもGPUとPNMのpartial softmaxを正規化統合するため、steady-token partition自体は追加近似を導入しない。最終品質は基盤となるdynamic Top-K token budgetの選択精度に依存する。",
     "settings": [
-      {"name": "主評価", "description": "資源制約付き単一GPUで単一要求を処理し、初回トークン時間、エンドツーエンド遅延、尾部遅延、ピークGPUメモリ、予測ヒット率を測る。A5000とA6000の二構成、SQuADとOrca-Math、4種類のMoEモデルを組み合わせ、GPU性能差や活性エキスパート数の違いを含めて比較する。"},
-      {"name": "バッチ処理拡張", "description": "A5000とSQuADでバッチサイズ1〜12の総トークン毎秒を測る。主対象は単一要求だが、バッチ化により一層の活性エキスパート集合が高密度化したとき、デコード予測先読みの優位がどこまで残るかを確認する。"},
-      {"name": "予測器評価", "description": "各タスクデータの2.5%のみを活性化トレース収集・学習に用いる。完全Top-k一致率と、実Top-kの少なくとも半分を予測できた率をMoE-Infinityと比較する。前処理全体はモデル・端末により5〜9時間以内、実行時予測器は約300MB、約0.6msである。"},
-      {"name": "メモリ評価", "description": "各モデルについてLayer-wise Full Prefetch、On-Demand Fetch、MoE-Infinity、DuoServe-MoEのピークGPUメモリを比較し、参考として全モデルGPU常駐量も示す。データセット差はKVキャッシュ由来の小差のみとしてモデル別代表値を報告する。"}
+      {"name": "サーバ内スケーリング", "description": "Llama3.1-8Bを1〜8 A100、128K〜1M context、Llama3.1-70Bを2〜8 A100、128K〜512K contextで評価する。各GPU構成にCXL-PNMを1〜8台程度追加し、GPU-CXL-Mem、PNM-KV、PnG-KVのdecode throughput、energy/token、runtime breakdownを比較する。GPU HBM capacityによりbaselineのbatchが制限される一方、PNM側KV容量追加でbatchを拡大できる条件を測る。"},
+      {"name": "ラック規模評価", "description": "Llama3.1-405B、1M-token contextを2×GPU node（1 node=8×A100-80GB）で動かし、PNM nodeを1〜4台へ増やす。1 PNM nodeは16 CXL-PNM devices。baselineはGPU-CXL-Mem、提案はPNM-KV/PnG-KVで、throughputとenergy/tokenがnear-memory device数に応じてどうscaleするかを確認する。"},
+      {"name": "PnG-KV steady比", "description": "GPUが担当するsteady-token割合はGPU数/(GPU数+PNM数)を経験的初期設定とする。比率を上げるとGPU idleを減らせるが、GPUへrecallするKVが増えすぎるとCXL communicationとmemory capacityの利点を失うため、throughputが悪化する境界を持つ。"},
+      {"name": "コスト評価", "description": "2025年3月CPIに基づく電力単価0.181ドル/kWhを使い、A100を最大約400W、CXL-PNMを約150Wとする。論文表ではdevice当たりoperating costを0.072/0.027ドル毎時、hardware costを0.761/0.266ドル毎時としてtokens-per-dollarを比較する。"}
     ],
-    "methodology": "実機上にvLLMベースのCPUオフロード実装を構築し、CUDA固定ページメモリでCPU-GPU転送を行う。プリフィルでは二本、デコードでは予測を含む複数ストリームを使い、同期点を設けて転送完了と正しいエキスパート利用を保証する。比較方式も未活性重みをCPUへオフロードする条件にそろえ、ODFはHugging Face Accelerate相当、LFPはMoESys型の層全先読み、MIFはMoE-Infinity型トレース先読みとして評価する。モデルに応じて現実的な量子化を用いるため、全モデルが同一数値形式ではないが、同一モデル内の方式比較では形式を共有する。",
-    "scope": "評価は単一ノード・単一GPUのCPUメモリオフロードを中心とし、分散GPU間エキスパート並列、NVLink/InfiniBand、SSD/NVMe階層は対象外である。主評価は単一要求で、バッチ処理は追加実験に留まる。MixtralとQwen3は量子化形式が異なり、モデル間の絶対値比較は方式差だけを示さない。また予測器はタスクに対応した少量トレースを前処理に用いるため、未観測ドメインへの頑健性や長期間の分布変化は詳細評価されていない。"
+    "methodology": "提案CXL-PNMはcustom moduleとしてLPDDR5XとCXL interface、near-memory LLM acceleratorを設計し、Intel第4世代Xeon serverへの統合を想定したsoftware stackを実装する。実験値のうちCXL-PNM性能は7nm ASIC設計のsynthesized timing/power modelで較正したcycle-level simulatorに基づき、GPU側はFasterTransformerを使ったA100構成を基準化する。decode stageを中心に、context増加で生じるrecall、attention、FC、Top-K、hidden-state communicationの内訳を測り、単なるmicrobenchmarkではなくbatch capacity変化を含むend-to-end throughputへ反映する。",
+    "scope": "対象はlong-context decodeで、Llama 3.1の8B/70B/405B、128K〜1M tokensと極端なKV容量制約を重点評価する。CXL-PNM deviceはcustom 7nm ASICのcycle-level modelであり、全構成を量産CXL製品の実測だけで評価したものではない。workloadはInfiniteBench En.Sumが中心で、異なるattention sparsityやinteractive serving arrival、prefix sharing、multi-tenant interferenceは広く評価していない。またCXL 3.0 switch/PCIe 6.0級構成を前提とするため、現在一般的な低世代CXL/PCIe環境へ性能倍率を直接外挿できない。"
   }
 }
