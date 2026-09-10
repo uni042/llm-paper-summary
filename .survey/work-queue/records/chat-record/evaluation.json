@@ -2,46 +2,42 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-hybridgen-20260910-1632-v10",
-  "job_id": "job-research-a297f1776b1a8b16",
+  "attempt_id": "attempt-augserve-20260910-1642-v10",
+  "job_id": "job-research-c17cf648935fd5ee",
   "data": {
-    "hardware": [
-      "Machine A: Intel Xeon Gold 5320 + NVIDIA A100 80GB + 128GB CPU DRAM、Linux 5.14、CUDA 12.1",
-      "Machine B: Intel Xeon Gold 6530 + NVIDIA H100 NVL 94GB + 512GB CPU DRAM、CUDA 12.5",
-      "Machine C: Intel Xeon 6960P + NVIDIA RTX 5090 32GB + 128GB CPU DRAM + 128GB CXLメモリ（DDR4-3200、PCIe 5.0）、CUDA 12.8"
-    ],
-    "software": ["FlexGen基盤のHybridGen試作", "PyTorch（CPUアロケータをmbind対応へ変更）", "Linux NUMAメモリ配置", "LM Evaluation Harness（品質評価）"],
-    "model": ["OPT 1.3B〜13B", "Llama系 1B/3B/7B/8B級", "Qwen2.5 1.5B〜14B"],
-    "datasets": ["PIQA", "OpenBookQA", "COPA", "RTE"],
-    "baselines": ["FlexGen", "MoE-Lightning", "Keyformer", "H2O", "StreamingLLM", "InfiniGen"],
+    "hardware": ["NVIDIA RTX 4090 24GB（GPT-J-6B）", "NVIDIA H800 80GB（OPT-13B）", "NVIDIA A100 40GB ×2（Vicuna-13B）", "NVIDIA A100 ×4（Llama-3-70B-Instruct）"],
+    "software": ["vLLM基盤のAugServe実装", "INFERCEPT比較実装", "BERT-base 110M予測器"],
+    "model": ["GPT-J-6B", "OPT-13B", "Vicuna-13B", "Llama-3-70B-Instruct"],
+    "datasets": ["INFERCEPT dataset", "ToolBench"],
+    "baselines": ["vLLM + FCFS", "INFERCEPT + FCFS", "予測出力長に基づく投機的Shortest-Job-First（SSJF）"],
     "settings": [
       {
-        "name": "通常性能評価",
-        "description": "三つのCPU-GPU構成でOPT、Llama、Qwen系を評価する。既定は系列長2K、バッチ1で、モデルサイズ・GPU世代・バッチ数を変えて既存の全量KV退避、CPU注意、前段・後段KV選択方式と比較する。"
+        "name": "主要エンドツーエンド評価",
+        "description": "INFERCEPTとToolBenchから外部呼び出しを含む要求を生成し、異なる要求到着率でvLLM、INFERCEPT、SSJF、AugServeを比較する。主要負荷は30分間のPoisson到着で、複数モデル・GPU構成を横断してTTFT、正規化遅延、有効スループットを測る。"
       },
       {
-        "name": "長文評価",
-        "description": "Qwen2.5-7BとLlama-3.1-8B級モデルを中心に系列長を2Kから32Kへ伸ばし、CPU注意計算とCPU-GPU転送が増える条件でHybridGenの動的K制御と選択方式切替が速度を維持できるか測る。"
+        "name": "SLO設定",
+        "description": "初回トークン待ち時間TTFTは1秒未満、正規化遅延は単一反復時間の10倍未満を満たすことをサービス水準目標とし、両条件を満たして処理された要求数を有効スループットとして集計する。倍率は実験条件全体の幾何平均を中心に報告する。"
       },
       {
-        "name": "バッチ拡大",
-        "description": "OPT-13Bなどでバッチを増やし、GPU計算・CPU計算・転送の相対比が変化したときの速度向上を確認する。固定したCPU/GPU分担ではなく、実測フィードバックでKを変える効果を見る。"
+        "name": "到着バースト耐性",
+        "description": "平均到着率だけでなくGamma分布の変動係数を変えて要求到着をバースト化し、停止要求が集中する状況でも状態認識型優先順位と動的トークン予算が有効かを確認する。"
       },
       {
-        "name": "CXL階層評価",
-        "description": "RTX 5090機の128GB DRAM + 128GB CXLメモリで、K/Vを意味に関係なくページ単位で交互配置する方式と、KをDRAMへ優先しVをCXLへ置くHybridGenの意味別配置を比較する。モデルが大きくなりCXL利用量が増える条件ほど差を見る。"
+        "name": "予測誤差耐性",
+        "description": "OPT-13B/H800/INFERCEPT条件で出力長と外部呼び出し時間の予測へ±10〜50%の人工誤差を注入し、初期予測が外れても外部呼び出し復帰時の実測フィードバックにより性能が維持されるか評価する。"
       },
       {
-        "name": "品質評価",
-        "description": "LM Evaluation HarnessでPIQA、OpenBookQA、COPA、RTEを3-shot評価し、完全注意と選択型方式の精度差を比較する。HybridGenはK_minを事前品質測定で決め、実行時制御がその下限を下回らない。"
+        "name": "分解評価",
+        "description": "INFERCEPTを基準に動的バッチ単位トークン予算だけを追加した構成、状態認識型スケジューリングだけを追加した構成、両方を使う完全AugServeを比較し、どちらがTTFTと有効スループットへ寄与するか分離する。"
       },
       {
-        "name": "スケジューラ分解評価",
-        "description": "前段選択を固定する高速設定、後段選択を固定する高精度設定、選択方式だけを適応する設定、Kも適応する完全設定を比較し、速度と精度の寄与を分離する。"
+        "name": "混合要求・大規模モデル評価",
+        "description": "外部呼び出しを持つ要求と持たない要求を50%ずつ混ぜる追加評価、およびLlama-3-70B-InstructをA100×4で動かす追加評価を行い、特定の小型モデルや全要求外部呼び出し条件だけに利得が依存しないかを確認する。"
       }
     ],
-    "correctness": "HybridGenはCPU側の全トークンへ常に厳密な注意計算を行う方式ではなく、トークン選択と層間入力の投機的近似を含む。したがって完全注意とビット単位に同一ではない。著者らはK_minをオフライン品質評価から決め、実行時にそれを下回らない制約を設ける。PIQA、OpenBookQA、COPA、RTEの3-shotでは完全注意との平均精度差0.02を報告し、固定・攻撃的な選択方式より品質低下を抑えている。",
-    "methodology": "評価は単一GPU世代に限定せずA100、H100 NVL、RTX 5090を用い、サーバCPUとCXL拡張メモリを含む三つの実機構成で行う。比較対象はGPU側で全KVを処理する退避方式、CPU注意方式、注意前に候補を減らす方式、注意スコア後に候補を減らす方式を含む。系列長、モデルサイズ、バッチ、メモリ階層を変え、さらに品質とスケジューラ分解を測ることで、単なる1構成の最適化ではなくCPU/GPUの負荷不均衡へ適応する設計の効果を検証する。",
-    "scope": "中心評価は生成時デコードのKVキャッシュ処理であり、プリフィル全体の最適化が主題ではない。CXLの意味別配置はCXL搭載Machine Cでの評価に基づき、他のCXL製品・遠隔メモリ構成へ一般化できるかは未検証である。試作はFlexGenとPyTorch CPUアロケータ改変に基づき、vLLM/SGLangなど本番サービング基盤への統合性能は評価していない。"
+    "correctness": "AugServeはモデルの数値計算や生成分布を近似する方式ではなく、要求の実行順、停止中KVキャッシュの保持・退避・破棄、反復ごとのトークン予算を変更する。したがって生成品質そのものの近似誤差ではなく、サービス水準目標を満たせる要求割合と遅延が主要な正しさ・有用性指標になる。待ち時間加点βを持たせることで資源効率だけを最大化して長い要求を恒久的に飢餓させることも抑える。",
+    "methodology": "評価は単一GPUだけでなくRTX 4090、H800、複数A100を用い、6Bから70Bまでのモデル、二つの実要求由来データセット、Poissonおよびバースト到着を含む。主要比較では同じSLO定義の下でFCFS、外部呼び出し対応KV管理、出力長ベース短要求優先と比較し、追加実験で予測誤差、β感度、停止要求数によるスケジューリング費、混合負荷、大規模モデルを調べている。",
+    "scope": "外部呼び出しで停止・再開する拡張LLMサービングが主対象で、通常の連続生成だけを行うワークロードに対する新しいGPUカーネルやモデル高速化ではない。実験はvLLMを基盤とした単一ノードまたは少数GPU構成で、巨大分散クラスタのネットワーク競合、複数テナント公平性、外部サービス側の障害制御までは評価しない。予測器はデータセットごとに学習・評価され、未知のツール分布への汎化は主要評価範囲外である。"
   }
 }
