@@ -112,7 +112,7 @@ slot上限、必須field、文章量、日本語優先ルールは `.survey/scri
 
 5 slotすべて反映後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。inboxの`record_slots`は5件固定で、各slotのpathと実際のGit blob SHAを持つ。
 
-`.survey/scripts/assemble_research_record_v10.py` がrecordを検証し、`.survey/scripts/render_paper.py` がrunner内でMarkdownを生成する。Scheduled Chatは完成Markdownを直接送らない。
+`.survey/scripts/assemble_research_record.py` がrecordを検証し、`.survey/scripts/render_paper.py` がrunner内でMarkdownを生成する。Scheduled Chatは完成Markdownを直接送らない。
 
 ## 6. Normal save protocol
 
