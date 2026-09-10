@@ -40,6 +40,13 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Validate fallback worker syntax
+        run: |
+          python -m py_compile \
+            .survey/scripts/fallback_transport.py \
+            .survey/scripts/dispatch_fallback_inbox.py \
+            .survey/scripts/import_drive_outbox_v4.py
+
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
