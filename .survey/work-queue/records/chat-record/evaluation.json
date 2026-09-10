@@ -2,22 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
-  "job_id": "job-research-ad144841ea01b7c6",
+  "attempt_id": "attempt-launchbound-20260910-1612-v10",
+  "job_id": "job-research-bb4463d4f717f17c",
   "data": {
-    "hardware": ["Intel Xeon Gold 6326 @ 2.90 GHz, 16 physical cores", "4× NVIDIA A100 80GB"],
-    "software": ["Tangram on vLLM", "custom CUDA kernels based on FlashAttention", "OpenMP/SIMD vectorized block table"],
-    "model": ["Qwen3-4B", "Llama-3.1-8B", "Gemma-3-12B", "GPT-OSS-20B", "Qwen3-30B-A3B"],
-    "datasets": ["SCBench: Many-Shot, RepoQA, Multi-Choice QA, MathFind, Retrieve Prefix-Suffix, KV, Summary", "50 pilot samples for calibration"],
-    "baselines": ["vLLM Full-KV", "original dynamic Ada-SnapKV, Expected Attention, FastKVzip", "FlashDecoding", "FlashInfer"],
+    "hardware": ["NVIDIA A100 80GB SXM4", "NVIDIA A100 80GB PCIe"],
+    "software": ["PyTorch 2.5.0+cu124", "CUDA 12.4", "cuDNN 9.1.0", "Transformers 4.46.0", "bitsandbytes 0.44.1", "Triton 3.1.0", "Python 3.11.12"],
+    "model": ["OLMoE-1B-7B", "DeepSeek-V2-Lite", "Qwen3-30B-A3B"],
+    "datasets": ["100件のMMLU形式プロンプトによるトークン単位ルーティング測定", "MMLU", "HellaSwag"],
+    "baselines": ["FP16イーガー実行", "INT8量子化", "INT4/NF4量子化", "標準PyTorchコンパイル", "動的出力形状を捕捉するPyTorchコンパイル"],
     "settings": [
-      {"name": "retention ratios", "description": "accuracy ρ=0.7/0.5/0.3; throughput includes ρ=0.25"},
-      {"name": "calibration", "description": "50 samples, α=2"},
-      {"name": "context", "description": "Short <20K, Mid 20K–100K, Long >100K"},
-      {"name": "H_p", "description": "4–8 best measured trade-off; breakdown at H_p=4"}
+      {
+        "name": "融合カーネル評価",
+        "description": "OLMoE-1B-7BのRMSNormとルーターsoftmaxをTriton実装へ置換し、単体カーネル、モジュール範囲、モデル全体の三段階で測定する。系列長128、512、1024とバッチ1、4を組み合わせ、局所高速化が全体遅延へ伝播するか確認する。"
+      },
+      {
+        "name": "量子化・ルーティング評価",
+        "description": "100件のMMLU形式プロンプトから119,952トークン位置のルーター出力を記録し、FP16に対する上位専門家集合のJaccard距離、選択変化率、ルーターロジット分布のKL距離、負の対数尤度変化を測る。17種類の量子化構成を比較し、INT4経路再生とルーターFP16保護による因果介入も行う。"
+      },
+      {
+        "name": "グラフコンパイル評価",
+        "description": "OLMoEで標準PyTorchコンパイルと、動的出力形状の捕捉を有効にしてグラフ切断をゼロにした設定を比較する。系列長512・1024、バッチ4を中心にイーガー実行比の定常遅延を測り、初回コンパイル時間も記録する。"
+      },
+      {
+        "name": "跨モデル評価",
+        "description": "DeepSeek-V2-Lite、OLMoE-1B-7B、Qwen3-30B-A3BについてINT4量子化前後の専門家選択を比較する。モデルごとに上位k数が異なるため、Jaccard距離だけでなく1トークン当たりの専門家入れ替わり数を用いる。"
+      }
     ],
-    "correctness": "Tangram is compared with each compression method's original dynamic implementation while keeping the scorer fixed. Static budgets closely track and sometimes exceed original accuracy across three methods and five models.",
-    "methodology": "All throughput, latency and fragmentation results are actual execution on the stated A100 server, not simulation. Evaluation separates quality, throughput, prefill reclaim cost, decode attention latency, TTFT, and fragmentation/management trade-offs.",
-    "scope": "Strong evidence for vLLM on one A100 server and SCBench multi-turn workloads; no proof that calibration profile or optimal H_p transfers unchanged to other GPU generations, engines, or large workload shifts."
+    "correctness": "性能実験は同一モデルの実装置換を比較する。量子化は近似なので出力同一性を仮定せず、負の対数尤度と限定的なMMLU/HellaSwag精度を品質指標にする。ルーティング再生ではFP16重みを固定し、専門家選択経路だけを差し替えることで因果効果を分離する。",
+    "methodology": "単一のベンチマーク値に依存せず、局所マイクロベンチマーク、モデル全体の遅延、GPUプロファイル、トークン単位ルーティング記録、因果的な経路再生、量子化構成横断比較、コンパイラ設定比較を組み合わせる。特に局所的な改善指標と利用者向け最終指標を別々に測り、相関が見えた場合でも介入実験で原因か共通要因かを確認する。",
+    "scope": "評価はNVIDIA A100 80GBの単一GPU環境、三つのMoEモデル、bitsandbytes中心の量子化実装に限定される。ルーティング再生による厳密な因果分解はOLMoEのみで実施され、タスク精度評価は各タスク500例程度と統計的検出力が低い。新世代GPU、別コンパイラ、別量子化器、分散サービングへの一般化は未検証。"
   }
 }
