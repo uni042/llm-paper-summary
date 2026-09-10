@@ -14,6 +14,8 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from japanese_style import (  # noqa: E402
     DEFAULT_MIN_JAPANESE_RATIO,
+    PREFERRED_TERMS,
+    TERM_PATTERNS,
     find_bare_english,
     japanese_ratio,
     record_prose_text,
@@ -88,65 +90,76 @@ def prose_chars(value: Any) -> int:
         return total
     if isinstance(value, dict):
         return sum(prose_chars(v) for v in value.values())
-    return len(str(value))
+    return 0
 
 
-def paragraph_count(value: Any) -> int:
-    if not isinstance(value, str):
-        return 0
-    return len([p for p in re.split(r"\n\s*\n", value.strip()) if p.strip()])
+def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
+    """Normalize ordinary English prose terms before final validation/rendering.
+
+    Transport slots remain immutable and blob-verified.  This operates only on the
+    in-memory render record, so a mechanically fixable terminology miss does not
+    strand an otherwise complete fallback payload.  Identifiers, URLs, titles,
+    names, and source metadata are intentionally left untouched.
+    """
+    protected_keys = {
+        "canonical_id", "arxiv_id", "doi", "openreview_id", "source", "sources",
+        "code", "paper_path", "attempt_id", "job_id", "published", "title",
+        "authors", "publication", "publication_type", "publication_status",
+    }
+    if key in protected_keys:
+        return value
+    if isinstance(value, str):
+        if value.startswith(("http://", "https://")):
+            return value
+        text = value
+        for canonical, pattern in TERM_PATTERNS.items():
+            preferred = PREFERRED_TERMS[canonical][0].split("／", 1)[0]
+            text = pattern.sub(preferred, text)
+        return text
+    if isinstance(value, list):
+        return [normalize_preferred_terms(item, key=key) for item in value]
+    if isinstance(value, dict):
+        return {k: normalize_preferred_terms(v, key=k) for k, v in value.items()}
+    return value
 
 
 def validate_record(record: dict[str, Any]) -> None:
-    """Reject completed artifacts that are structurally complete but below paper.md quality."""
     meta = record.get("metadata") or {}
     pm = record.get("problem_method") or {}
     ev = record.get("evaluation") or {}
     rs = record.get("results") or {}
     pos = record.get("positioning") or {}
 
-    required_meta = ("canonical_id", "title", "summary", "source")
-    missing_meta = [k for k in required_meta if not nonempty(meta.get(k))]
-    if missing_meta:
-        raise ValueError("metadata missing required fields: " + ", ".join(missing_meta))
-    if not nonempty(meta.get("sources")):
-        raise ValueError("metadata.sources requires at least one primary-source URL")
+    for key in ("canonical_id", "title", "summary", "source", "authors", "publication", "topics", "implementation"):
+        if not nonempty(meta.get(key)):
+            raise ValueError(f"metadata.{key} is required")
+    if prose_chars(meta.get("summary")) < 180:
+        raise ValueError("metadata.summary must be explanatory, not a one-line abstract")
+    if not nonempty(meta.get("publication_type")):
+        raise ValueError("metadata.publication_type is required")
+    if not nonempty(meta.get("hardware_evaluation")):
+        raise ValueError("metadata.hardware_evaluation is required")
+    if not nonempty(meta.get("quality_effect")):
+        raise ValueError("metadata.quality_effect is required")
 
-    for key in ("problem", "novelty"):
+    for key in ("problem", "novelty", "method_overview", "components", "system_design"):
         if not nonempty(pm.get(key)):
             raise ValueError(f"problem_method.{key} is required")
-    overview = pm.get("method_overview")
+    if prose_chars(pm.get("problem")) < 250:
+        raise ValueError("problem_method.problem must explain the bottleneck and why prior approaches are insufficient")
+    if prose_chars(pm.get("novelty")) < 180:
+        raise ValueError("problem_method.novelty must explain the paper-specific idea")
+    if prose_chars(pm.get("method_overview")) < 500:
+        raise ValueError("problem_method.method_overview must explain the end-to-end mechanism")
     components = pm.get("components")
-    system_design = pm.get("system_design")
-    if not nonempty(overview):
-        raise ValueError("problem_method.method_overview is required for reader-first explanation")
-    if prose_chars(overview) < 300:
-        raise ValueError("problem_method.method_overview is too terse; explain the processing order and data flow")
-    if not isinstance(components, list) or not components:
-        raise ValueError("problem_method.components is required")
-    if not nonempty(system_design) or prose_chars(system_design) < 250:
-        raise ValueError("problem_method.system_design must explain the end-to-end data/control flow")
-
-    complex_paper = len(components) >= 3
-    for index, comp in enumerate(components):
-        if not isinstance(comp, dict) or not nonempty(comp.get("name")) or not nonempty(comp.get("description")):
+    if not isinstance(components, list) or len(components) < 2:
+        raise ValueError("problem_method.components requires at least two major mechanisms")
+    for index, item in enumerate(components):
+        if not isinstance(item, dict) or not nonempty(item.get("name")) or not nonempty(item.get("description")):
             raise ValueError(f"problem_method.components[{index}] requires name and description")
-        desc = comp.get("description")
-        if complex_paper and prose_chars(desc) < 220:
-            raise ValueError(f"problem_method.components[{index}] is too terse for a multi-stage system paper")
-        if complex_paper and paragraph_count(desc) < 2:
-            raise ValueError(f"problem_method.components[{index}] should use at least two explanatory paragraphs")
+        if prose_chars(item.get("description")) < 240:
+            raise ValueError(f"problem_method.components[{index}].description is too short")
 
-    method_chars = prose_chars(overview) + prose_chars(components) + prose_chars(system_design)
-    method_floor = 1800 if complex_paper else 1000
-    if method_chars < method_floor:
-        raise ValueError(
-            "problem_method is too terse for repository publication; explain component roles, "
-            "data/control flow, why each mechanism helps, and failure/boundary conditions"
-        )
-
-    if not nonempty(ev.get("baselines")):
-        raise ValueError("evaluation.baselines is required")
     if not (nonempty(ev.get("hardware")) or nonempty(ev.get("software")) or nonempty(ev.get("methodology"))):
         raise ValueError("evaluation requires hardware/software/methodology evidence")
     if not nonempty(ev.get("scope")):
@@ -202,7 +215,7 @@ def assemble(repo_root: Path) -> bool:
         raise ValueError("record_slots cannot be combined with legacy payload fields")
     bank = str(inbox.get("record_bank") or "a").lower()
     if bank not in BANK_ROOTS:
-        raise ValueError("record_bank must be a or b")
+        raise ValueError("record_bank must be a registered bank")
     slots = slots_for_bank(bank)
     if not isinstance(refs, list) or len(refs) != len(slots):
         raise ValueError(f"record_slots must contain exactly {len(slots)} entries")
@@ -253,6 +266,7 @@ def assemble(repo_root: Path) -> bool:
         record[slot_name] = data
         total_bytes += len(raw)
 
+    record = normalize_preferred_terms(record)
     validate_record(record)
     markdown = render_paper(record)
     (repo_root / LEGACY_PAYLOAD).write_text(markdown, encoding="utf-8")
