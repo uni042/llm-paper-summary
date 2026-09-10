@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:04:48.405974+00:00",
+  "updated_at": "2026-09-10T18:08:49.416127+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,14 +572,14 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T18:04:48.405974+00:00",
+      "last_recorded_at": "2026-09-10T18:08:49.416127+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 6,
         "blocked": 0,
@@ -732,6 +732,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34512498909:1",
+          "recorded_at": "2026-09-10T18:08:49.416127+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34512498909",
+            "run_attempt": "1",
+            "source_sha": "d2c6d176a5e718a93aab9ba04894f398f8a4f9f4"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -812,6 +826,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2aadf97216681565",
+          "type": "research",
+          "canonical_id": "arXiv:2608.11688",
+          "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -932,7 +954,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,
       "paper_active_count_after": 214,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
