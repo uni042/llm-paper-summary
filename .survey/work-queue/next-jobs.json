@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 29,
-      "ready": 1
+      "completed": 30
     },
     "audit": {
       "completed": 3
@@ -25,19 +24,7 @@
       "paper_path": null,
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-6565d7576d4f6de8",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository or fallback spillover backlog. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates; weak filler is not required.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T10:38:47+00:00"
+  "generated_at": "2026-09-10T10:39:25+00:00"
 }
