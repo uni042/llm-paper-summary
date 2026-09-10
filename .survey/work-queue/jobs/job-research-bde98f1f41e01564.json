@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-bde98f1f41e01564",
+  "type": "research",
+  "parent_job_id": "job-f2be9d7ee1612849",
+  "priority": 87,
+  "canonical_id": "arxiv:2601.11652",
+  "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching",
+  "source_url": "https://arxiv.org/abs/2601.11652",
+  "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md",
+  "selection_reason": "エッジ端末をドラフト生成へ使う分散投機的デコードで、サーバー側の検証待ち中にも無駄なドラフト生成が続く問題と、投機検証要求が通常推論へ干渉する問題を共同で扱う。動的な投機制御、検証時間推定、サービス品質目標（Service-Level Objective; SLO）を考慮したバッチ制御を統合し、集中型サービング比でシステム容量最大2.1倍・有効スループット最大1.94倍を報告する。端末とGPUクラスタ間の資源協調を扱う実行時システムとして既存収録との差が大きい。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T12:51:48+00:00",
+  "artifact_transport": "structured_record_v10"
+}

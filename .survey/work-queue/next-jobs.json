@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 34,
-      "ready": 1
+      "completed": 35
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "superseded": 22,
-      "completed": 32
+      "completed": 32,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-f2be9d7ee1612849",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-bde98f1f41e01564",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arxiv:2601.11652",
+      "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching",
+      "source_url": "https://arxiv.org/abs/2601.11652",
+      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T12:50:15+00:00"
+  "generated_at": "2026-09-10T12:51:50+00:00"
 }
