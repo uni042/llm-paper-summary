@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-expertstreaming-20260910-2355-v10-a1",
-  "job_id": "job-research-11443ee95cff6866",
+  "attempt_id": "attempt-ssdenergy-20260910-2359-v10-a1",
+  "job_id": "job-research-35c9432189855703",
   "data": {
-    "hardware": ["2×2 5nm multi-chip module test chip", "Samsung 5nm compute dies at 800MHz", "2048 MACs / die, 4.865 TOPS", "288GB/s UCIe-class D2D", "DDR3-1600 4×25.6GB/s", "UMC 28nm synthesized scheduler"],
-    "software": ["cycle-accurate RTL-calibrated simulator", "behavioral design-space simulator", "spatiotemporal trajectory scheduler", "token buffering scheduler"],
-    "model": ["Phi-3.5-MoE", "Yuan2.0-M32", "DeepSeek-MoE-16B", "Qwen3-30B-A3B"],
-    "datasets": ["WikiText-2", "C4", "WinoGrande for motivation profiling"],
-    "baselines": ["Expert Parallelism (EP)", "Hydra chiplet-aware expert placement", "naive FSE-DP variants"],
+    "hardware": ["NVIDIA H100 SXM5 80GB を最大8基持つDGX H100相当ノード", "NVLink 4.0 片方向450GB/s", "DDR5-7200 CPUメモリ 256GB/GPU", "NVMe SSD", "複数ノード時は8ポート各50GB/s片方向のInfiniBand"],
+    "software": ["既存Duplex系シミュレータを改変した推論システムモデル", "MoEプリフェッチモデル", "メモリ・ストレージ・GPU計算・静的電力のエネルギー分解"],
+    "model": ["Mixtral 8x7B 47B", "DeepSeek-R1 671B", "Llama 4 Maverick 400B", "Llama 3.3 70B"],
+    "datasets": ["合成トークン・専門家割当。各デコーダで専門家選択を一様分布と仮定"],
+    "baselines": ["全重みHBM常駐", "ゲート専門家重みをCPUメモリへ退避", "ゲート専門家重みをSSDへ退避", "将来Flash評価ではLlama 3.3 70BをHBMへ全量常駐"],
     "settings": [
-      {"name": "低バッチのtokens-per-iteration", "description": "要求数そのものではなく、prefillとdecodeを混ぜた1 forward iterationへ集約される入力トークン数を16、64、256、1024に固定する。これは単一要求の文脈長や生成長ではなく、低並行オンデバイス環境における実効micro-batch pressureを表す。WikiText-2とC4から要求を抽出し、専門家活性化の長尾性と重み再利用率が入力トークン数でどう変わるかを比較する。"},
-      {"name": "試作チップ校正シミュレーション", "description": "主要性能値は2×2 5nmテープアウト試作チップとRTL合成スケジューラの特性を使って校正したサイクル精度シミュレータで算出する。基準構成は800MHz、各die 2048 MAC、DDRは4×25.6GB/s、D2Dは288GB/s。実チップが存在する一方、4モデルの全エンドツーエンド結果を実チップで直接計測したわけではない点を区別する。"},
-      {"name": "比較方式", "description": "標準のEPは専門家をdeviceへ固定配置しトークンをall-to-allで送る。Hydraはmulti-chiplet向けに層間人気度を使って専門家位置を変え、EPの通信を改善する。FSE-DPはトークンを固定的に再配送せず、専門家マイクロスライスをpoint-to-point軌跡として流すため、通信形態とオンチップ複製量が根本的に異なる。"},
-      {"name": "エンドツーエンドとアブレーション", "description": "attentionへhead parallelismを追加し、100連続forward iterationでMoE部分を含む処理速度を測る。A1 naive FSE-DP、A2 Rules 1-4のfine-grained flow、A3 paired-load追加、A4 optional Rule 5追加、A5 A3 + 20% token bufferingを比較する。token bufferingは10%、20%、30%のQoS slacknessも評価し、延期量が大きすぎる場合の悪化も確認する。"},
-      {"name": "設計空間とスケーラビリティ", "description": "Qwen3/C4を中心にオンチップバッファ、DDR帯域、D2D帯域、マイクロスライス数を振り、面積30mm²/dieとパッケージ60W未満の制約下で利用率を評価する。さらに2×2から3×3、4×4へ拡張し、論理ring trajectoryを2D mesh上で複数並行させた際の利用率低下をEP/Hydraと比較する。"}
+      {"name": "デコード評価条件", "description": "すべての要求は入力長1024トークンのプリフィルを終え、その直後の最初のデコード段階で1トークンを生成する条件を評価する。バッチサイズは1、4、16、64、256、1024を用い、各デコーダでトークンから専門家への割当は一様分布と仮定する。したがって実サービスの偏った専門家人気を再生したトレース評価ではない。"},
+      {"name": "メモリ・ストレージエネルギー", "description": "HBM、CPU側DDR、SSDから専門家重みを取り出す際の内部メモリ動作と外部入出力を積算する。HBM読出しは4.2pJ/bit、Flash内部読出しは102.4pJ/bitを代表値とし、SSDではさらにHBM書込みと計算時読出しを加える。CPUメモリについてもDDRアクセスとGPU側への転送を含め、保存階層だけを変えたときの差を比較する。"},
+      {"name": "システム全体エネルギー", "description": "専門家重みアクセスだけでなく、全結合層、注意機構、MoEのGPUキャッシュアクセスとMAC演算、CPUメモリの静的電力、GPU待機電力を合算する。CPUメモリは256GB当たり57W、GPU待機は1基70Wとし、SSD待機電力は無視できるとして除外する。これにより高いSSD読出しエネルギーが総エネルギー内訳のどこまで支配するかを算出する。"},
+      {"name": "遅延とプリフェッチ", "description": "専門家重みを次層の実行前に先読みし、他層の計算と転送を重ねる条件をモデル化する。NVLink 4.0に加え、帯域が倍のNVLink 5.0相当条件も比較し、SSDやCPUメモリからの転送待ちがどこまで隠せるかを確認する。エネルギー計算は実際に読み出したデータ量に基づくため、遅延が隠れたことをエネルギー削減として扱わない。"},
+      {"name": "将来Flash感度分析", "description": "Llama 4 400BをSSD退避して使う条件と、Llama 3.3 70BをHBMだけで使う条件を比較する。Flash読出しエネルギーを現状102.4pJ/bitの1.0倍から0.1倍まで変化させ、バッチ1〜4で1トークン当たり総エネルギー比が1を下回る境界を求める。これは将来デバイスの仮想感度分析であり、現行SSD実測結果ではない。"}
     ],
-    "correctness": "FSE-DPはゲートが選んだ専門家と専門家演算を変更せず、重み断片をどの順でどのchipletへ流すかを変える。token bufferingも要求を現在のMoE層で後のiterationへ延期するだけで、保存した中間活性値とゲート結果をそのまま再開するため計算結果を近似しない。ただし浮動小数点演算順序による通常の実装差はあり得る。",
-    "methodology": "まずattentionを除いた単一MoE FFN層でEP、Hydra、FSE-DPの遅延・利用率・メモリを比較し、重みストリーミング自体の効果を切り分ける。次にattentionを含む100 iterationのエンドツーエンド評価と5構成のアブレーションを行い、token bufferingを加える。さらにD2D/DDR/バッファ容量とマイクロスライス粒度の感度を設計空間探索し、最後に3×3・4×4のchiplet arrayへ拡張する。試作チップとRTL合成の特性でサイクル精度モデルを校正しているため、純粋な解析モデルより実装制約を反映する。",
-    "scope": "対象は高速D2Dリンクと独立制御を持つmulti-chiplet acceleratorであり、一般的な単一GPUやCPU-GPU PCIeオフロードへそのまま適用できる方式ではない。下位ストレージは主にDDRで、NVMe SSDからの専門家読込は評価していない。性能は低バッチかつ専門家活性化が長尾になる条件を主眼とし、大バッチのクラウドMoEや標準GPUクラスタのall-to-all通信環境とは最適点が異なる。"
+    "correctness": "重み保存階層、転送、プリフェッチだけを変え、モデル重みや専門家選択を近似しないため、同一モデル内のHBM・CPUメモリ・SSD比較は推論品質を変えない。Llama 4とLlama 3.3の比較は品質同等性を実測しておらず、大きなMoEが小さな密モデルより高精度である可能性を前提に、エネルギー面の成立条件だけを分析する。",
+    "methodology": "実機ベンチマークではなく、公開ハードウェア仕様、メモリデータシート、先行研究のエネルギー値とシミュレータを組み合わせたモデル評価である。MixtralとDeepSeek-R1ではHBM、CPUメモリ、SSDの三階層を直接比較し、バッチ増加で専門家読出しが償却される様子とプリフェッチ後の遅延を評価する。Llama 4対Llama 3.3ではFlash読出しエネルギーだけを変える感度分析を行い、SSD利用の将来損益分岐点を求める。",
+    "scope": "主対象はデータセンター級GPUと高速NVLinkを持つシステムで、評価は最初のデコード段階に限定される。専門家選択は一様分布の合成割当であり、実ワークロードの人気偏り、長時間のキャッシュ状態、SSD書込み耐久性、温度、実SSDのキューイング、電源変換損失などは直接評価していない。将来Flashの約10pJ/bit条件は技術目標を示す仮想値である。"
   }
 }
