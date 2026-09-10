@@ -1,30 +1,42 @@
 {
   "counts": {
     "discovery": {
-      "completed": 20,
-      "ready": 1
+      "completed": 21
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "completed": 24,
-      "superseded": 12
+      "superseded": 13,
+      "ready": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-7af7f0007f8f928b",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
+      "job_id": "job-research-a297f1776b1a8b16",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2604.18529",
+      "title": "HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing",
+      "source_url": "https://arxiv.org/abs/2604.18529",
       "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-c17cf648935fd5ee",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2512.04013",
+      "title": "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving",
+      "source_url": "https://arxiv.org/abs/2512.04013",
+      "paper_path": null,
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T07:23:52+00:00"
+  "generated_at": "2026-09-10T07:31:52+00:00"
 }

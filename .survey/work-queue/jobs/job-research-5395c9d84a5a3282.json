@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-5395c9d84a5a3282",
+  "type": "research",
+  "parent_job_id": "job-7af7f0007f8f928b",
+  "priority": 88,
+  "canonical_id": "arXiv:2603.09983",
+  "title": "MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios",
+  "source_url": "https://arxiv.org/abs/2603.09983",
+  "paper_path": null,
+  "selection_reason": "投機的復号を単なる生成高速化ではなく将来の専門家需要を観測する先読み信号として利用し、専門家のプリフェッチ・退避とCPU/GPU負荷分散を同じ効用尺度で統合する。MoE専門家オフロード、専門家キャッシュ、異種メモリ階層の重点領域に直接該当し、7ベンチマークで標準ベースライン比平均4.04倍、SD系SOTA比TPS 42%向上を報告する。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T07:31:51+00:00",
+  "completed_at": "2026-09-10T07:31:52+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2603.09983",
+  "duplicate_of_path": "papers/inference/05-speculative-decoding-moe/2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2603.09983"
+  }
+}
