@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission_id": "discovery-20260910T1648JST-4b5ba04bbda09d40",
+  "job_id": "job-4b5ba04bbda09d40",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "priority": 87,
+      "reason": "混合専門家モデル（Mixture-of-Experts; MoE）の専門家負荷が時間とともに偏り、静的な専門家並列配置では一部GPUが律速になる問題に対し、層別の軽量予測器で将来の専門家負荷を予測し、サーバレス専門家の増減と配置を動的に行う実機サービングシステム。Megatron-LM上の8 GPU試作で既存方式比の推論遅延43%削減、推論コスト84%削減を報告し、専門家配置・ロードバランス・弾力的サービング系統として未収録。"
+    },
+    {
+      "canonical_id": "arXiv:2603.27138",
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.27138",
+      "priority": 85,
+      "reason": "長文推論のKVキャッシュをCPUへ退避した際のPCIe転送とCPU注意計算の双方を、GPU-CPU協調ブロック疎注意と一層先行するCPU事前計算で隠す。HybridGenと近いCPU-GPU協調注意系統だが、ブロック疎化、周期的リコール、層先行計算という異なる機構を持ち、既存オフロード方式比2.1倍、基準精度との差2.4%以内を報告するため比較上重要。"
+    },
+    {
+      "canonical_id": "arXiv:2510.13668",
+      "title": "Adaptive Rescheduling in Prefill-Decode Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.13668",
+      "priority": 82,
+      "reason": "プリフィル・デコード分離サービングで出力長のばらつきがデコードGPU間の負荷不均衡を生む問題に対し、LLM隠れ状態から残り生成長を継続予測し、現在負荷と予測将来負荷を合わせてデコード要求を再配置する。予測平均絶対誤差49.42%削減、予測器パラメータ93.28%削減、P99 TPOT 74.77%削減、最大2.24倍の有効スループットを報告し、分離サービングの動的再スケジューリング系統として未収録。"
+    }
+  ]
+}
