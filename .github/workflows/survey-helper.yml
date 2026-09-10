@@ -5,6 +5,7 @@ on:
     paths:
       - '.survey/work-queue/submissions/*.json'
       - '.survey/work-queue/transport/offline-job-seed.json'
+      - '.survey/work-queue/transport/request-jobs.json'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
@@ -43,6 +44,9 @@ jobs:
 
       - name: Materialize offline spillover jobs
         run: python .survey/scripts/apply_offline_job_seed.py --root .survey
+
+      - name: Apply checkpoint-aware job requests
+        run: python .survey/scripts/apply_transport_requests.py --root .survey
 
       - name: Prepare reusable Chat transport when pending
         run: |
