@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T23:04:36.970151+00:00",
+  "updated_at": "2026-09-10T23:08:13.445541+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,18 +2351,18 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T23:04:36.970151+00:00",
+      "last_recorded_at": "2026-09-10T23:08:13.445541+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 15,
+        "new_jobs": 16,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2510,6 +2510,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34540747826:1",
+          "recorded_at": "2026-09-10T23:08:13.445541+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34540747826",
+            "run_attempt": "1",
+            "source_sha": "be2da92c13c0d586d30eb835db923f7d09468ca6"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2590,6 +2605,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.26607",
           "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-45b69cf81c1e8929",
+          "type": "research",
+          "canonical_id": "arXiv:2607.00466",
+          "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
           "from": "ready",
           "to": "completed"
         }
@@ -2699,6 +2722,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.00466",
           "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving"
+        },
+        {
+          "job_id": "job-audit-f8529110c08a2dcc",
+          "status": "ready",
+          "type": "audit",
+          "canonical_id": "arXiv:2607.00466",
+          "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving"
         }
       ],
       "new_paper_ids": [
@@ -2717,7 +2747,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,
       "paper_active_count_after": 235,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
