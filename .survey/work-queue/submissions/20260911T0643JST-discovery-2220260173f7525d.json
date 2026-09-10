@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2220260173f7525d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "priority": 92,
+      "reason": "複数モデルを同一サーバで提供する状況で、KV需要の低いモデルが余剰HBMを提供し、NVLink経由で高需要モデルの接頭辞KVを共有する。ローカルGPUには活動中レイヤーのKVだけを置く方式も組み合わせ、P99 TTFTを最大69%削減、最大文脈長を最大3.98倍へ拡張しており、GPU間・CPU/SSD間の階層KV配置に直接関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.24467",
+      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.24467",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.24467-compresskv-semantic-retrieval-guided-kv-compression.md",
+      "priority": 84,
+      "reason": "GQAモデルで意味検索を担う注意ヘッドを特定し、それらが示す重要トークンだけをKV保持対象へ選ぶ。層別の追い出し誤差から予算配分も行い、LongBench QAでKVの3%のみでフルキャッシュ性能の97%以上、Needle-in-a-Haystackで0.7% KVにより90%精度を報告しており、メモリ削減と品質維持の境界を示す。"
+    }
+  ]
+}
