@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-07dd1cd5952c339e",
+  "type": "research",
+  "parent_job_id": "job-9ac4f6172daefb14",
+  "priority": 80,
+  "canonical_id": "arXiv:2408.08147",
+  "title": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+  "source_url": "https://arxiv.org/abs/2408.08147",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+  "selection_reason": "プリフィル・デコード分離を大規模xPUサービングで運用する際のプロンプト多様性、KV転送、段階別バッチ構成を扱う重要な初期研究。既存repoでID一致が見つからず、DistServe/Splitwise以外の分離サービング実装系譜を補完する候補として精査価値がある。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T22:53:39+00:00",
+  "completed_at": "2026-09-10T22:53:43+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2408.08147",
+  "duplicate_of_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2408.08147"
+  }
+}
