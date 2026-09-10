@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-spin-20260910-2308-v10-a1",
-  "job_id": "job-research-e6f55224859fd360",
+  "attempt_id": "attempt-shield-20260910-2316-v10-a1",
+  "job_id": "job-research-0bfaa6b5c9f047d2",
   "data": {
-    "hardware": ["A100 80GB×4、AMD EPYC 7V12、DRAM 850GB、PCIe Gen4 32GB/s/GPU", "B200 180GB×4、Intel Xeon Platinum 8570、DRAM 1.5TB、PCIe Gen5 64GB/s/GPU"],
-    "software": ["vLLMベースSPIN", "約7千行のC++/CUDA中核", "約3千行のPython統合", "AIPerfオンライン評価"],
-    "model": ["Qwen3-14B", "Qwen3-32B", "Llama-3.1-70B"],
-    "datasets": ["LongBench-v2: 入力32K〜120K、平均55K、出力平均5K", "LongGenBench: 入力16K〜19K、平均18K、出力平均12K"],
-    "baselines": ["vLLM密注意", "CPUへKVを退避するvLLM-Offload", "GPUのみの疎注意LServe", "ShadowKV原実装", "RetroInfer原実装", "SeerAttention-R原実装"],
+    "hardware": ["NVIDIA H100によるQO寿命プロファイル", "3T-eDRAMセルモデル", "2MB活性値領域を想定したDESTINYメモリモデル"],
+    "software": ["BF16活性値への層単位故障注入", "WikiText-2、PIQA、ARC-Easy評価", "DESTINY"],
+    "model": ["Qwen3-1.7B", "Qwen3-4B", "Qwen3-8B", "Mistral-7B", "Llama-3-8B"],
+    "datasets": ["WikiText-2", "PIQA", "ARC-Easy", "文脈長2048のストーリー生成による寿命測定"],
+    "baselines": ["全領域45µs標準リフレッシュeDRAM", "KVだけを緩和するKelle型方針", "2MB SRAMとの漏れ電力比較"],
     "settings": [
-      {"name": "オンラインサービング", "description": "要求到着をポアソン過程で生成して到着率を変え、1・2・4 GPUで測定する。原則として1 GPUはQwen3-14B、2 GPUはQwen3-32B、4 GPUはLlama-3.1-70Bを用い、LongBench-v2とLongGenBenchの異なる入出力長比でオンラインスループット、TTFT、TPOT、平均バッチ数を比較する。"},
-      {"name": "3種類の疎注意統合", "description": "ShadowKVは取得予算1.56%、パーティション8トークン、物理ページ8トークン、RetroInferは取得予算1.8%、可変パーティション、ページ8トークン、SeerAttention-Rは固定2Kトークン取得、パーティション・ページ32トークンという原方式の既定条件を使う。"},
-      {"name": "オフライン段階別評価", "description": "Qwen3-14Bを中心に文脈長16K、32K、64K、さらに120K級まで変え、プリフィルとデコードを分離して測定する。オンラインスケジューラを持たない原疎注意実装やLServeとも、この制御条件で直接比較する。"},
-      {"name": "構成要素評価", "description": "GPUキャッシュなし、現在段の必須ページのみ保持、バケット化LRU追加を順に比較するほか、バッファ対必須ページ比と二階層索引のメタデータ量を測り、転送削減とHBM管理費の寄与を分離する。"}
+      {"name": "活性値寿命測定", "description": "文脈長2048のストーリー生成をH100上で実行し、Qwen、Mistral、Llama系1B〜9B級モデルの層処理時間からQと注意出力が必要な時間を測る。全評価モデルでQO寿命が1.5ms以内に収まることを無リフレッシュ領域の根拠とする。"},
+      {"name": "BF16故障注入", "description": "QOまたはKVへ層フックを入れ、指定誤り率でBF16ビットを反転する。全ビット一様、QO仮数のみ、KV仮数のみを分け、無故障時からパープレキシティが3%以上悪化する境界などを使って数値感度を評価する。"},
+      {"name": "eDRAM保持モデル", "description": "3T-eDRAMの保持時間とビット誤り率をモデル化し、標準周期45µsに対してKV仮数の許容誤り率10^-4を守る1216µsを緩和周期として採用する。QO仮数は1.5msの有効寿命内で想定誤り率が0.04%程度に留まるとして周期更新を行わない。"},
+      {"name": "推論場面別エネルギー", "description": "プリフィル中心、プリフィル・デコード均衡、長デコード中心の三場面に加え、プリフィル128段・デコード256段の生成トレースを用い、QOとKVの占有比が変化した時の標準eDRAM、Kelle型、SHIELDの正規化効率を比較する。"}
     ],
-    "correctness": "SPINはShadowKV、RetroInfer、SeerAttention-Rそれぞれの重要KV選択規則と既定取得量を保ち、主に実行・保存・転送を共通化する。したがってSPIN固有の比較では、元疎注意方式に対して新たなモデル近似を追加せず同じ選択KVで性能を改善する。",
-    "methodology": "A100とB200、三つのモデル規模、長入力中心と長出力中心の二つの長文ベンチマークを組み合わせ、オンラインとオフラインを分けて評価する。密注意、単純CPU退避、GPU疎注意、各疎注意原実装を比較し、単に疎性による理論計算削減ではなく、要求同時実行数、PCIe取得時間、GPUバッファ命中、メタデータHBM量まで測ってシステム寄与を検証する。",
-    "scope": "単一サーバー内のGPU・CPU DRAM階層を対象とする実機研究で、SSD、CXL、遠隔KVストアは評価対象ではない。B200の低負荷では密注意の高速なHBM・計算能力によりSPINがvLLMを下回る条件もあり、疎注意と階層転送の固定費が常に回収できるわけではない。"
+    "correctness": "品質評価は実メモリ上の自然故障ではなく、BF16の対象ビットへ確率的な故障を注入して行う。Qwen3、Mistral、Llamaの複数モデルでWikiText-2パープレキシティとPIQA、ARC-Easy精度を測り、SHIELD設定が無故障基準からほぼ変化しないことを確認する。",
+    "methodology": "実行時間の観測、ビット誤り耐性、セル保持モデル、電力モデルを段階的に組み合わせる評価である。まずQOの短寿命をGPUで測り、次にBF16のどのビットとテンソルが誤りに耐えるかを故障注入で測る。その安全境界から各eDRAMバンクのリフレッシュ周期を決め、最後にDESTINYと解析式でメモリエネルギーを算出する。したがって実チップの消費電力測定ではなく、モデルとプロファイルに基づく設計評価として解釈する必要がある。",
+    "scope": "対象はエッジNPU向けオンチップeDRAM活性値メモリのリフレッシュエネルギーであり、NPU全体のエンドツーエンド消費電力、推論速度、オフチップDRAM・SSD転送は評価していない。実NPUシリコンではなくモデル評価なので、温度、製造ばらつき、ECC、バンク切替・ビット再結合回路の実装費は今後の検証事項である。"
   }
 }
