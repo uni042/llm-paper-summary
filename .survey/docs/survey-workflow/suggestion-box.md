@@ -7,6 +7,7 @@ Library上の正本:
 - `/LLM-survey-suggestion-box/README.md`
 - `/LLM-survey-suggestion-box/pending/`
 - `/LLM-survey-suggestion-box/reported/`
+- `/LLM-survey-suggestion-box/archive/`
 
 ## 通常runでの登録
 
@@ -45,6 +46,20 @@ Library上の正本:
 - **ユーザーへの報告を生成した後でのみ**、その日に報告したファイルを `reported/` へ移す。報告前に移動しない。
 - 報告後の移動に失敗した場合はpendingに残す。重複報告の可能性より、未報告の提案を失うリスクを避ける。
 
+## reported の肥大化防止
+
+`reported/` は長期保存庫ではなく、直近履歴の短期バッファとする。08:30の報告処理後にbest-effortで次の圧縮を行う。
+
+1. `reported/` の個別提案ファイルは **新しい30件を上限**として保持する。
+2. 30件を超えた古い個別提案は、対象月ごとに `/LLM-survey-suggestion-box/archive/YYYY-MM.md` へ要点を統合する。
+3. 月次ダイジェストには、日付、component、観測問題、提案、期待効果、リスク、採否が分かる場合はその結果だけを残す。同系統の重複提案は1項目へまとめる。
+4. **月次ダイジェストの保存成功を確認してから**、対応する古い個別ファイルを `reported/` から削除する。圧縮保存に失敗した場合は原本を削除しない。
+5. `archive/` の月次ダイジェストは直近12か月分を保持する。12か月を超えたものは `/LLM-survey-suggestion-box/archive/history-summary.md` へ再要約してから元の月次ダイジェストを削除する。
+6. `history-summary.md` は恒久的な詳細ログにせず、再発しやすい失敗パターン、既に採用した有効な改善、避けるべき設計だけを簡潔に保持する。同じ知見を重複追記しない。
+7. 圧縮・削除は観測用の補助処理であり、失敗しても08:30の更新確認や通常研究を失敗扱いにしない。
+
+このため、通常時の個別履歴は最大30件、月次詳細は最大12か月程度に抑え、古い知見は小さな長期要約だけに残す。
+
 ## 非目標
 
-目安箱は論文候補、research record、fallback、queue、run ledgerの代替ではない。pending件数を研究容量やrun停止判断に使わない。
+目安箱は論文候補、research record、fallback、queue、run ledgerの代替ではない。pending件数やreported/archiveの整理失敗を研究容量やrun停止判断に使わない。
