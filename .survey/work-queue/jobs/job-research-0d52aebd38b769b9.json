@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-0d52aebd38b769b9",
+  "type": "research",
+  "parent_job_id": "job-a2639626e127c791",
+  "priority": 89,
+  "canonical_id": "arXiv:2608.21240",
+  "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+  "source_url": "https://arxiv.org/abs/2608.21240",
+  "paper_path": null,
+  "selection_reason": "MoEオフロードでPCIe越しの専門家転送が遅延を支配する問題に対し、軽量draft modelによる信頼度付き先読み、低ランク専門家代理（LoRE）、CPU-GPU非同期残差実行を組み合わせる。DeepSeek-V2-LiteとQwen2-57B-A14Bで最大3.12倍のTPOT高速化を報告し、単なるexpert predictionではなく予測ミス時の近似・正確回復・異種実行配置まで統合した点が既存expert prefetch系統との比較に重要。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T08:30:12+00:00",
+  "completed_at": "2026-09-10T08:30:12+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2608.21240",
+  "duplicate_of_path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2608.21240"
+  }
+}
