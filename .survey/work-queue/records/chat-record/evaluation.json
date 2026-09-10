@@ -2,21 +2,17 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-trace-cxl-20260911-0130-v10-a2",
-  "job_id": "job-research-3915d786aa386244",
+  "attempt_id": "attempt-nvllm-20260911-0130-v10-a3",
+  "job_id": "job-research-0128b9e7e743cda7",
   "data": {
-    "hardware": ["単一GPUとCXL 3.x Type-3メモリ装置を想定した帯域モデル", "CXLリンクは片方向512GB/s、装置側DDRは256GB/s", "DRAMSim3で4チャネル構成のDDR5-4800をモデル化", "ASAP7 7nm、2GHz、0.7VでSystemVerilog RTLを合成"],
-    "software": ["トレース駆動の一次帯域モデル", "DRAMSim3", "SystemVerilog RTL合成", "汎用LZ4/ZSTD圧縮器を比較対象・内部構成として利用"],
-    "model": ["GPT-OSS-120B-MXFP4", "GPT-OSS-120B BF16相当", "LLaMA 3.1 8B", "LLaMA 3.1 70B", "Mixtral 8x7B", "LLaMA-MoE-3.5B", "OPT-30B"],
-    "datasets": ["WikiText", "BookSum", "C4を精度校正に使用", "UltraChatを量子化校正に使用"],
-    "baselines": ["CXL-Plain: 通常の語単位配置で無圧縮", "CXL-GComp: 通常配置の4KBブロックへ汎用無損失圧縮を追加", "TRACE: ビット面配置・KV変換・精度別面選択を追加"],
-    "settings": [
-      {"name": "配信帯域モデル", "description": "各生成トークンでGPU HBMからあふれる重み・KVがCXLリンクと装置DRAMを何バイト通るかを数え、その最大帯域から生成速度の上限を求める。CXLは片方向512GB/s、装置DDRは256GB/sとし、KVの過去部分を読み戻す割合は固定パラメータとして与える。HBM命中量は利用可能容量と状態サイズから近似するため、要求待ち行列やカーネル実行の詳細を再現する完全な配信シミュレーションではない。"},
-      {"name": "KV無損失圧縮", "description": "LLaMA 3.1 8Bの全32層からBF16 KVを収集し、WikiTextとBookSumで通常配置の汎用圧縮とTRACEのチャネル変換・指数差分・ビット面配置を比較する。全ビットを復元する条件なので品質評価ではなく、圧縮率と容量削減を測る。層ごとの圧縮率も確認し、平均だけでなく最も圧縮しやすい層の上限を示す。"},
-      {"name": "動的精度とDRAMエネルギー", "description": "DRAMSim3上で、層・専門家・注意ヘッド・MLPニューロンごとに外部の重要度方針が指定した精度を用い、通常CXLが固定幅を読む場合とTRACEが必要ビット面だけを読む場合のDRAMエネルギーを比較する。LLaMA 3.1、Mixtral、LLaMA-MoE、OPT-30Bを用い、BF16、FP8、INT4など精度の違いで削減余地がどう変わるかを測る。"},
-      {"name": "RTL合成", "description": "CXL-GCompとTRACEはいずれも32レーンのLZ4圧縮器と一時バッファを持つ条件で比較し、TRACE固有のビット面変換、別名判定、メタデータ索引、DRAM要求整列の追加コストを分離する。ASAP7 7nm、2GHz、0.7Vで面積、電力、ロードから値が利用可能になるまでのサイクル数を合成結果から評価する。"}
-    ],
-    "methodology": "評価は三層に分かれる。第一に、配信時のCXL・DDR転送量をモデル化して生成速度と最大文脈長への影響を推定する。第二に、実モデルから得た重み・KVデータを用いて無損失圧縮率を測定し、DRAMSim3で選択的ビット面読出しのエネルギーを評価する。第三に、制御器RTLを合成して面積・電力・ロード遅延の追加量を測る。したがって数値の一部は実データ由来だが、エンドツーエンドの物理CXL装置上で測ったスループットではない。",
-    "scope": "配信速度は一次の帯域上限モデルであり、CXLプロトコルの細かな競合、GPUカーネル待ち、複数要求の待ち行列、実装固有のDMA・ページ管理を完全には含まない。KV履歴読出し率を固定値とし、HBM命中も容量比から近似する。DRAMエネルギーはシミュレータ、制御器は7nm合成であり、製造済み装置の電力測定ではない。低精度経路のモデル品質はTRACE自身が新しい精度方針を学習するのではなく、外部の精度選択方式に依存する。"
+    "hardware": ["3D NAND面モデル: 基本構成128GiB、32面、16KiBページバッファ、面読出し約5.12µs", "NAND CMOS側350MHz、外部NPU 500MHz、構成別総演算性能307〜486GOPS", "注意重みとKV用LPDDR5X", "比較用実機はNVIDIA A800 80GB、Intel Xeon Gold 6348、512GiB DRAM、5.2TB NVMe SSD"],
+    "software": ["3D-FPIMを基にしたNAND面モデル", "Ramulator2", "DRAMPower", "サイクル精度C++シミュレータ", "FlexGenによるGPU-SSD比較", "Verilog HDLとSynopsys Design CompilerによるTSMC 28nm合成"],
+    "model": ["OPT 1.3B", "OPT 2.7B", "OPT 6.7B", "OPT 13B", "OPT 30B", "LLaMA系モデル", "LLaMA2-7B"],
+    "baselines": ["GPU-DRAM", "GPU-SSD/FlexGen", "Cambricon-LLM", "AiF", "AiF--"],
+    "methodology": "著者らは3D-FPIMのNAND面モデルを商用3D NANDの技術値に合わせ、ウェハ間接合のロジック面積も既存製品の分解情報を参考に制約する。Q/K/V/O重みとKVを置くLPDDR5XはRamulator2とDRAMPowerで遅延・エネルギーをモデル化し、NANDとDRAM、NPU、スケジューラをサイクル精度C++シミュレータへ統合する。モデルは端末推論を想定してINT8化し、OPT 1.3B〜30BとLLaMA系を評価する。NANDの生読出し誤りについてはランダムなビット反転を注入し、誤り耐性積和演算器が訂正待ちを隠せるかを調べる。比較対象のGPU-SSDはA800 80GBと5.2TB NVMe SSD上のFlexGen、GPU-DRAMは重みが主記憶にある経路を用いる。SSD近傍計算系との比較ではNVLLM-16Cを16クラスタ・64面へ拡張し、Cambricon-LLM、AiF、AiF--と条件を揃える。主要回路はVerilog HDLで記述しTSMC 28nm条件で論理合成する。",
+    "metrics": ["生成速度（トークン/秒）", "推論遅延（秒）", "データ移動エネルギー（J/token）", "面積・電力", "NAND誤り訂正による待ち時間", "内部メモリ帯域"],
+    "workloads": "主なデコード生成速度比較では64トークン文脈を用い、モデルサイズを1.3Bから30Bまで変えて容量超過時の重み移動を比較する。プリフィルとデコードを含む遅延評価では16/16、64/64、256/256、1024/1024トークンなど系列長を増やし、長文化したときの注意・KV側負荷も含める。SSD型近傍計算比較ではLLaMA2-7Bを用い、公開論文に合わせた装置帯域・構成を再現する。",
+    "scope": "NVLLMの主要性能値はサイクル精度シミュレータによるアーキテクチャ評価である。NAND読出し特性と面積制約は既存モデル・商用品データで較正され、DRAMはRamulator2/DRAMPower、ロジックは28nm合成で評価されるが、ウェハ接合した物理NVLLMチップや端末上の実システムは製造・測定されていない。GPU-SSD基準は実機FlexGenを用いる一方、NVLLM側との比較はシミュレーションなので、絶対性能にはモデル化誤差が残る。主要モデルはINT8で、量子化による品質変化をNVLLM機構とは分離して扱う必要がある。",
+    "hardware_overhead": "合成結果では外部NPU相当が約0.46mm²・240.15mW、NAND CMOSロジックが約2.69mm²・895.68mWで、追加したin-Flash推論回路はNAND CMOS総面積の約2.7%に相当する。これにより大規模な演算アレイを追加せず、NAND面並列性とデータ近傍性を利用する設計を狙う。"
   }
 }
