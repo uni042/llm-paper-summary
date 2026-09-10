@@ -1,10 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated_at": null,
   "last_run_key": null,
   "last_round": null,
+  "paper_stock_zero_count": 0,
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
+  "next_action_when_stock_zero": "discover_now",
+  "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 24,
   "history": [],
   "axes": {},
-  "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run."
+  "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
 }
