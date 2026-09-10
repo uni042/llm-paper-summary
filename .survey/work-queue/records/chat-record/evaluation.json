@@ -2,17 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-asymcache-20260910-1802-v10",
-  "job_id": "job-research-175c317515b75ca5",
+  "attempt_id": "attempt-memspec-20260910-2133-v10-a1",
+  "job_id": "job-research-77ada603ffdfc560",
   "data": {
-    "hardware": ["AMD EPYC 9K84 96コアCPU","NVIDIA H20 96GB GPU×4","NVLink","CUDA 12.8"],
-    "software": ["vLLM拡張AsymCache","CUTLASS","FlashAttention/PagedAttention系MSA","POD-Attention比較基盤","Continuum統合"],
-    "model": ["Llama 3.1-8B-Instruct（1 GPU）","Llama 3.1-70B-Instruct（4 GPUテンソル並列）"],
-    "datasets": ["LongBench 300要求","LooGLE 300要求","BFCLv4 Web Searchエージェント評価"],
-    "baselines": ["vLLM-LRU","Max-score O(n)再利用スコア","Pensieve+MSA再実装","Continuum"],
-    "settings": [{"name":"長文複数セッション","description":"LongBenchとLooGLEから各300要求を構成し、ガンマ分布到着で複数セッション・複数ターンを再現する。LongBenchは平均入力約34.8K、出力約2.6Kトークン、LooGLEは約24.4K/0.7Kで、要求間隔の分散を変えて接頭辞共有と末尾再利用の混在条件を作る。"},{"name":"8B・70B実機サービング","description":"Llama 3.1-8BはH20 1枚、70Bは4枚のテンソル並列で動かし、先頭トークン時間、出力トークン当たり時間、要求・ブロックKV命中率を比較する。70Bでは利用可能KV容量を約505Kトークンに制限し、追い出しが実際に起きる条件で測る。"},{"name":"追い出し計算量アブレーション","description":"同じ期待遅延方針を全走査O(n)で実装した版と、AsymCacheのO(log n)管理版を比較し、方針そのものの効果とCPU管理費削減を分離する。約8千ブロック規模の追い出し処理時間も別途測定する。"},{"name":"MSAカーネル単体","description":"非連続接頭辞・末尾を別々の注意カーネルで処理する方式と、単一MSAカーネルを比較する。1Kと10Kトークン級系列を使い、短い系列ほど固定カーネル起動費が支配するかを検証する。"},{"name":"エージェント統合","description":"BFCLv4 Web Searchを用い、再現性のためGPT-5.1で出力を事前生成してサービング系の待ち・KV管理を比較する。AsymCache単独とContinuum統合の両方で平均ジョブ遅延とP90尾部遅延を測る。"}],
-    "correctness": "KV値を近似して捨てるのではなく、追い出した区間は必要になった時に元モデルで再計算するため、モデル出力を損失なく保持する。MSAも複数区間の注意を数学的に同じ結果へ結合する実装であり、性能と容量の交換で精度を落とす方式ではない。",
-    "methodology": "命中率だけではなくTTFTとTPOTを主要指標にし、LRU、全走査スコア、Pensieve系と比較する。さらにO(log n)候補管理、MSA、ハイパーパラメータ、エージェント統合を個別に切り分けることで、追い出し規則とカーネル・スケジューラの寄与を分離している。",
-    "scope": "現版はGPUメモリ内での損失なしKV保持・追い出し・再計算が対象で、CPU DRAM、SSD、遠隔KVストアへの多階層退避は実装していない。長文、多セッション、複数ターン、エージェントのようにKV再利用と容量圧力が同時にある条件を主対象とする。"
+    "hardware": ["NVIDIA Jetson Orin Nano: Ampere GPU 1024 CUDAコア・32 Tensorコア、6コアArm Cortex-A78AE、8GB LPDDR5 102GB/s", "1TB Samsung 990 PRO M.2 NVMe SSD", "常駐容量感度評価ではJetson AGX Orin"],
+    "software": ["PyTorch 2.9.1", "CUDA 12.6", "JetPack 6.2.1", "SpecExec系の投機的デコード基盤"],
+    "model": ["GPTQ INT4 LLaMA-2 7B対象モデル + 400Mドラフト5個", "GPTQ INT4 Qwen2.5 7B対象モデル + 0.5Bドラフト5個"],
+    "datasets": ["Alpaca 100プロンプト", "LiveCodeBench 100プロンプト", "Omni-MATH 100プロンプト", "MMLU-Law 100プロンプト", "MMLU-Medical 100プロンプト"],
+    "baselines": ["General-Static: 一般ドラフト固定", "Oracle-Static: 入力ごとの最良ドラフトを事前選択し固定", "MAB-Async: UCB型オンライン探索と非同期読み込み", "Oracle-Dynamic: 同一メモリ制約下で各時点の最良ドラフトを知る上限"],
+    "settings": [
+      {"name": "主評価", "description": "常駐容量K=2、スケジュール間隔N=4、出力128トークン、貪欲デコード、バッチサイズ1。入力処理時間は定常生成スループット指標から除外し、各プロンプトでキャッシュ状態を初期化する。各条件は3回平均し、ワークロード横断の集約には幾何平均を使う。"},
+      {"name": "ドラフト学習", "description": "数学はGSM8KとMATH、コードはHumanEvalとMBPP、法律はLexGLUE、医療はMedQAとMedMCQAで蒸留・微調整する。予測器の学習データは評価データと分離し、BERTエンコーダは固定したまま順位付けヘッドのみ学習する。"},
+      {"name": "MAB比較", "description": "UCB探索係数0.1、0.5、1.0、2.0、3.0を評価し、最良の2.0を採用する。各ドラフトを最初に1回探索し、非常駐モデルの読み込みを生成と非同期に重ねるため、同期型より強い適応比較対象になっている。"}
+    ],
+    "correctness": "ドラフト候補は対象モデルによる標準検証を受けるため、MemSpecの予測・常駐・切替は受理効率と実行時間を変えるだけで、対象モデルが受理しないトークンを採用しない。したがって近似による品質劣化を導入しない。",
+    "methodology": "主要指標は入力処理を除いた定常生成のトークン毎秒であり、ドラフト実行と対象モデル検証は含む。さらに希望ドラフト実行・代替ドラフト実行・予測の時間内訳、予測のみと完全MemSpecの構成要素比較、N・出力長・Kの感度、予測器の上位1精度と上位2再現率、入力処理と初期モデル読み込みを含むエンドツーエンド遅延も別途測定する。",
+    "scope": "主張の中心はJetson Orin Nano単一端末、バッチ1、7B対象モデルと5個の小型ドラフト、128トークン付近の逐次生成に対する実機結果である。定常生成スループットはプロンプト処理と初期読み込みを除くため、クラウドの高バッチ推論や多数同時要求へそのまま一般化できない。追加評価では起動費込み遅延とAGX Orinでの常駐容量感度を確認する。"
   }
 }
