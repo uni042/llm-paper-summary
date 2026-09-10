@@ -51,7 +51,26 @@ jobs:
         run: python -m pip install -r .survey/scripts/requirements.txt
 
       - name: Dispatch one eligible fallback envelope
-        run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root .
+        run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root . | tee /tmp/fallback-dispatch.json
+
+      - name: Process fallback-dispatched framework and LLM update
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          result = json.loads(Path('/tmp/fallback-dispatch.json').read_text(encoding='utf-8'))
+          changed = set(result.get('changed_paths') or [])
+          if '.survey/update-worker/update-inbox.json' not in changed:
+              print('No framework/LLM update was dispatched in this run.')
+              raise SystemExit(0)
+          subprocess.run(
+              [sys.executable, '.survey/scripts/update_worker.py', '--root', '.survey'],
+              check=True,
+          )
+          PY
 
       - name: Materialize offline spillover jobs
         run: python .survey/scripts/apply_offline_job_seed.py --root .survey
