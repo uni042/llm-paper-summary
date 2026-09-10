@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "submission_id": "discovery-20260910T1750JST-869d5f95a426be96",
+  "job_id": "job-869d5f95a426be96",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.03494",
+      "title": "GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving",
+      "source_url": "https://arxiv.org/abs/2609.03494",
+      "priority": 93,
+      "reason": "長い推論出力でKVキャッシュ需要が要求間・生成途中で変動するのに、従来圧縮法が要求ごとに固定容量を事前設定する問題を扱う。GrowPageは短期・長期のquery要約からattention working setの拡大を検出し、ページ境界ごとに現容量内で圧縮するか物理ページを追加取得するかを決める。PagedAttentionのページ抽象へ統合してcontinuous batchingとprefix cachingを維持するため、KV evictionの選択問題から容量自体の動的割当へ設計空間を広げる新着システム論文として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03236",
+      "title": "Speculative Macro Commit for Faster Tool-Using Agents",
+      "source_url": "https://arxiv.org/abs/2609.03236",
+      "priority": 85,
+      "reason": "ツール利用エージェントの遅延をモデル推論だけでなく逐次action-observationの壁時計時間として扱い、高速draft modelが隔離環境スナップショット上で複数将来アクションを先行実行し、authoritative actorの次行動と一致した時だけ残りの事前実行結果をまとめてcommitするruntime機構。Qwen3.5-27B INT4＋Qwen3.5-4Bでτ²-Benchは逐次実行比18.59%、AppWorldは44.9%壁時計時間を削減。エージェント実行系の推論高速化として通常のtoken speculative decodingとは異なる。"
+    }
+  ]
+}
