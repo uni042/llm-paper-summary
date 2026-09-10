@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "test-all-access-robust-kv-20260910",
+  "seed_id": "test-all-access-metakv-20260910",
   "candidates": [
     {
-      "canonical_id": "arXiv:2607.16892",
-      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
-      "source_url": "https://arxiv.org/abs/2607.16892",
-      "priority": 85,
-      "reason": "Three-route resilience test: uncertainty-aware KV-cache reservation, routing, parallelism and prefix-caching control; no repository match found before job materialization."
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "priority": 90,
+      "reason": "Three-route resilience test: prompt-aware selection among lossy KV-cache compression configurations under latency and peak-memory budgets; published 2026-09-07 with public code."
     }
   ]
 }
