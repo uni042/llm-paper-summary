@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 57,
-      "ready": 1
+      "completed": 58
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "completed": 58,
-      "superseded": 30
+      "superseded": 30,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-2e3a57c5ee1b198f",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-fc9e20450a2e3645",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arXiv:2606.21868",
+      "title": "WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware",
+      "source_url": "https://arxiv.org/abs/2606.21868",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2606.21868-wisp-working-set-moe-serving-low-resource-hardware.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T18:54:17+00:00"
+  "generated_at": "2026-09-10T18:59:18+00:00"
 }

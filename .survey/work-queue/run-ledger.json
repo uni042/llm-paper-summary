@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T18:54:20.202623+00:00",
+  "updated_at": "2026-09-10T18:59:18.361867+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1049,7 +1049,7 @@
     {
       "run_key": "2026-09-11T03:30:00+09:00",
       "first_recorded_at": "2026-09-10T18:34:40.618679+00:00",
-      "last_recorded_at": "2026-09-10T18:54:20.202623+00:00",
+      "last_recorded_at": "2026-09-10T18:59:18.361867+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -1058,9 +1058,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 11,
+        "new_jobs": 12,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -1195,6 +1195,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34517642666:1",
+          "recorded_at": "2026-09-10T18:59:18.361867+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34517642666",
+            "run_attempt": "1",
+            "source_sha": "4b2f6670c451f5b267ad3fc19fd2b20055cd616a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1264,6 +1278,14 @@
         },
         {
           "job_id": "job-4d630057e24cd28e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-2e3a57c5ee1b198f",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -1348,6 +1370,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-fc9e20450a2e3645",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.21868",
+          "title": "WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware"
         }
       ],
       "new_paper_ids": [
@@ -1364,7 +1393,8 @@
         ".survey/work-queue/results/20260911T0341JST-discovery-fe565c0916692e87.json",
         ".survey/work-queue/results/20260911T0348JST-discovery-80761b12c62667c8.json",
         ".survey/work-queue/results/20260911T0355JST-discovery-4d147d9508b33125.json",
-        ".survey/work-queue/results/20260911T0358JST-discovery-4d630057e24cd28e.json"
+        ".survey/work-queue/results/20260911T0358JST-discovery-4d630057e24cd28e.json",
+        ".survey/work-queue/results/20260911T0359JST-discovery-2e3a57c5ee1b198f.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 214,

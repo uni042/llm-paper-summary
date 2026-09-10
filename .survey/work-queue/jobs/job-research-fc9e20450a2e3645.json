@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-fc9e20450a2e3645",
+  "type": "research",
+  "parent_job_id": "job-2e3a57c5ee1b198f",
+  "priority": 82,
+  "canonical_id": "arXiv:2606.21868",
+  "title": "WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware",
+  "source_url": "https://arxiv.org/abs/2606.21868",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2606.21868-wisp-working-set-moe-serving-low-resource-hardware.md",
+  "selection_reason": "GPUに常駐できないMoEを、ルーティング対象expert重みとKV cacheが同じVRAM予算を奪い合うworking-set問題として扱う実装研究。24 GiB RTX 3090上でrouting-aware expert pagerを既存serving engineへ組み込み、static offload比でdecode throughput最大2.0倍を報告する。さらにexpert先読みを試した結果、単一stream decodeでは予測精度よりPCIe帯域が律速で、投機的転送がdemand transferと競合して改善しないことを実測し、VRAMをresident expertとKVへ限界遅延便益/byteで配分するMV-WSAを提案する。live controllerでは固定配分比でend-to-end time最大1.19倍改善し、byte-identical outputを維持する。expert offload・PCIe I/O scheduling・KV/expert共同メモリ配分の境界を同一実機系で示しており、SSD expert I/O schedulingへ進む前段の帯域律速・キャッシュ配分知見として価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T18:59:15+00:00",
+  "artifact_transport": "structured_record_v10"
+}
