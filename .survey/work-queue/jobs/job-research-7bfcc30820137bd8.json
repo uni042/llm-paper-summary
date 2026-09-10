@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-7bfcc30820137bd8",
+  "type": "research",
+  "parent_job_id": "job-8d98bc0d01484eb6",
+  "priority": 81,
+  "canonical_id": "arXiv:2506.11309",
+  "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+  "source_url": "https://arxiv.org/abs/2506.11309",
+  "paper_path": "papers/inference/05-speculative-decoding/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+  "selection_reason": "投機的デコードとテンソル並列を非同期・分離構成で組み合わせ、並列木生成、木構造対応KV管理、融合カーネルで単一要求遅延を削減する。5モデル系列・6データ集合で従来投機系比平均1.75倍を報告し、重要な未収録候補として価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T23:16:45+00:00",
+  "completed_at": "2026-09-10T23:16:47+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2506.11309",
+  "duplicate_of_path": "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2506.11309"
+  }
+}

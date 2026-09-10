@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T23:15:39.469895+00:00",
+  "updated_at": "2026-09-10T23:16:50.514798+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T23:15:39.469895+00:00",
+      "last_recorded_at": "2026-09-10T23:16:50.514798+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2361,9 +2361,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 1,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 18,
+        "new_jobs": 20,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2555,6 +2555,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34541415541:1",
+          "recorded_at": "2026-09-10T23:16:50.514798+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34541415541",
+            "run_attempt": "1",
+            "source_sha": "ca38bca15dbecc7bf25ba24df97226ab8fe6c06b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2656,6 +2670,14 @@
         },
         {
           "job_id": "job-527bd72a0f02b02a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-8d98bc0d01484eb6",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -2789,6 +2811,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-1015750e825f4035",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.18600",
+          "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters"
+        },
+        {
+          "job_id": "job-research-7bfcc30820137bd8",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2506.11309",
+          "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding"
         }
       ],
       "new_paper_ids": [
@@ -2803,7 +2839,8 @@
         ".survey/work-queue/results/20260911T0755JST-discovery-9ac4f6172daefb14.json",
         ".survey/work-queue/results/20260911T0759JST-discovery-09bf82dae3c959dd.json",
         ".survey/work-queue/results/20260911T0802JST-discovery-f513abae44407875.json",
-        ".survey/work-queue/results/20260911T0815JST-discovery-527bd72a0f02b02a.json"
+        ".survey/work-queue/results/20260911T0815JST-discovery-527bd72a0f02b02a.json",
+        ".survey/work-queue/results/20260911T0817JST-discovery-8d98bc0d01484eb6.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,

@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 79,
-      "ready": 1
+      "completed": 80
     },
     "audit": {
       "completed": 6
     },
     "research": {
       "completed": 74,
-      "superseded": 37
+      "superseded": 38,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-8d98bc0d01484eb6",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-1015750e825f4035",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.18600",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18600-shuntserve-heterogeneous-spot-gpu.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T23:15:35+00:00"
+  "generated_at": "2026-09-10T23:16:50+00:00"
 }
