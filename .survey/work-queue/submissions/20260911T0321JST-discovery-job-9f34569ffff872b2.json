@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9f34569ffff872b2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.21240",
+      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.21240",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.21240-spice-speculative-prefetching-lore.md",
+      "priority": 83,
+      "reason": "GPUメモリ不足時のMoEエキスパートCPUオフロードを対象に、軽量ドラフトモデルによる適応的な先読みと、予測ミス時のCPU-GPU異種実行を組み合わせる。低信頼ミスは常駐共有エキスパート＋低ランク専門家代理（LoRE）で近似し、高信頼で正確性が必要な残余計算はPCIe混雑を考慮してCPU実行とGPU取得へ振り分ける点が特徴。DeepSeek-V2-LiteとQwen2-57B-A14Bで出力トークン時間を最大3.12倍高速化する。ST-MoE/APEX/DuoServe-MoEとは、先読み失敗後の処理場所と近似可否まで同時最適化する点で明確に差別化できる。arXiv v2は2026-09-07改訂、ASP-DAC 2027採択。"
+    }
+  ]
+}
