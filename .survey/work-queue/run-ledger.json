@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T22:44:55.772383+00:00",
+  "updated_at": "2026-09-10T22:46:13.748982+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T22:44:55.772383+00:00",
+      "last_recorded_at": "2026-09-10T22:46:13.748982+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2360,9 +2360,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 9,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2411,6 +2411,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34539029332:1",
+          "recorded_at": "2026-09-10T22:46:13.748982+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34539029332",
+            "run_attempt": "1",
+            "source_sha": "e5f67dec2a70c556dba8f644a7c9be96d8ea4e07"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2435,6 +2449,14 @@
           "type": "research",
           "canonical_id": "arXiv:2402.01869",
           "title": "INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-2b92b80082f335b9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -2481,6 +2503,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-030ff71165103d61",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2407.00023",
+          "title": "Preble: Efficient Distributed Prompt Scheduling for LLM Serving"
+        },
+        {
+          "job_id": "job-research-27d914cb4915c8c2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.15155",
+          "title": "eLLM: Elastic Memory Management Framework for Efficient LLM Serving"
+        },
+        {
+          "job_id": "job-research-4d0eaf46ad828a7d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2501.06709",
+          "title": "Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management"
         }
       ],
       "new_paper_ids": [
@@ -2490,7 +2533,8 @@
         "arXiv:2609.07883"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T0741JST-discovery-cbafd4e803a329a5.json"
+        ".survey/work-queue/results/20260911T0741JST-discovery-cbafd4e803a329a5.json",
+        ".survey/work-queue/results/20260911T0748JST-discovery-2b92b80082f335b9.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,

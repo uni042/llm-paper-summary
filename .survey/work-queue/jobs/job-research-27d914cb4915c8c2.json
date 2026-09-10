@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-27d914cb4915c8c2",
+  "type": "research",
+  "parent_job_id": "job-2b92b80082f335b9",
+  "priority": 94,
+  "canonical_id": "arXiv:2506.15155",
+  "title": "eLLM: Elastic Memory Management Framework for Efficient LLM Serving",
+  "source_url": "https://arxiv.org/abs/2506.15155",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2506.15155-ellm-elastic-memory-management.md",
+  "selection_reason": "実行時メモリとKVキャッシュを別抽象で管理する既存サーバの断絶を、仮想テンソルと弾性メモリ機構で統合し、CPUメモリを伸縮可能な退避先として扱う。128K入力で最大3倍のバッチ規模と2.32倍のデコードスループットを報告しており、階層メモリとサービングを結ぶ重要な未収録候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T22:46:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}

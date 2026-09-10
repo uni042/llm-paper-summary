@@ -1,30 +1,42 @@
 {
   "counts": {
     "discovery": {
-      "completed": 74,
-      "ready": 1
+      "completed": 75
     },
     "audit": {
       "completed": 5
     },
     "research": {
       "completed": 70,
-      "superseded": 35
+      "superseded": 36,
+      "ready": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-2b92b80082f335b9",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-27d914cb4915c8c2",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2506.15155",
+      "title": "eLLM: Elastic Memory Management Framework for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2506.15155",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2506.15155-ellm-elastic-memory-management.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-4d0eaf46ad828a7d",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2501.06709",
+      "title": "Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2501.06709",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.06709-mell-multi-gpu-kv-cache-management.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T22:44:53+00:00"
+  "generated_at": "2026-09-10T22:46:13+00:00"
 }

@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-030ff71165103d61",
+  "type": "research",
+  "parent_job_id": "job-2b92b80082f335b9",
+  "priority": 86,
+  "canonical_id": "arXiv:2407.00023",
+  "title": "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+  "source_url": "https://arxiv.org/abs/2407.00023",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-distributed-prompt-scheduling.md",
+  "selection_reason": "共有接頭辞のKV再利用とGPU間負荷分散を同時に最適化する分散サービング基盤。複数要求に共通する長い指示・例示・文脈を計算再利用の対象としてGPU配置を決めるため、単純な要求均等分散では失われる接頭辞局所性を扱う。分散KV再利用系統の基礎的な重要論文として収録価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T22:46:07+00:00",
+  "completed_at": "2026-09-10T22:46:10+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2407.00023",
+  "duplicate_of_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2407.00023"
+  }
+}
