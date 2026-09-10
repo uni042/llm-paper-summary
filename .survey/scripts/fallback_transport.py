@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
 """Shared validation and GitHub intake helpers for survey fallback envelopes.
 
-Google Drive and ChatGPT Library use the same immutable envelope format.  Both
+Google Drive and ChatGPT Library use the same immutable envelope format. Both
 fallbacks recover by placing that envelope into a unique GitHub fallback inbox;
 only the normal survey-helper workflow expands transport writes into reusable
-record banks/inboxes.  This keeps cross-outbox recovery serialized and makes
-duplicate envelope IDs globally idempotent.
+record banks/inboxes. Cross-outbox recovery is serialized and duplicate envelope
+IDs are globally idempotent.
+
+Research envelopes keep their original immutable transport bundle in the intake
+ledger, but dispatch may remap that bundle to a different safe record bank. This
+prevents a delayed fallback replay from overwriting a newer uncheckpointed
+partial attempt that happened to reuse the bank named when the envelope was
+created.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path, PurePosixPath
 from typing import Any
 
-from record_bank_config import BANK_PATH_PREFIXES, SLOT_NAMES
+from record_bank_config import BANK_PATH_PREFIXES, BANK_ROOTS, SLOT_NAMES
 
 CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 CHAT_RESULT = ".survey/work-queue/results/chat-inbox.json"
@@ -149,7 +156,7 @@ def envelope_path(base: Path, envelope_id: str) -> Path:
 
 def _canonical_existing(path: Path) -> str | None:
     try:
-        envelope, text = parse_envelope(path.read_bytes())
+        _envelope, text = parse_envelope(path.read_bytes())
     except Exception:
         return None
     return text
@@ -239,6 +246,145 @@ def terminal_job_id(repo_root: Path, envelope: dict[str, Any]) -> str | None:
     if job and job.get("status") in TERMINAL_JOB_STATES:
         return job_id
     return None
+
+
+def _git_blob_sha(text: str) -> str:
+    raw = text.encode("utf-8")
+    header = f"blob {len(raw)}\0".encode("utf-8")
+    return hashlib.sha1(header + raw).hexdigest()
+
+
+def _record_identity(envelope: dict[str, Any]) -> tuple[str, str] | None:
+    payload = chat_payload(envelope)
+    if payload is None:
+        return None
+    job_id = payload.get("job_id")
+    attempt_id = payload.get("attempt_id")
+    if not isinstance(job_id, str) or not job_id or not isinstance(attempt_id, str) or not attempt_id:
+        return None
+    return job_id, attempt_id
+
+
+def _checkpointed_intake_job_ids(repo_root: Path) -> set[str]:
+    """Jobs whose complete fallback bundle is already durable in GitHub."""
+    out: set[str] = set()
+    for rel in (FALLBACK_INBOX, FALLBACK_ARCHIVE):
+        root = repo_root / rel
+        if not root.is_dir():
+            continue
+        for path in root.glob("*.json"):
+            try:
+                envelope, _text = parse_envelope(path.read_bytes())
+            except Exception:
+                continue
+            if not has_record_slots(envelope):
+                continue
+            payload = chat_payload(envelope)
+            job_id = payload.get("job_id") if payload else None
+            if isinstance(job_id, str) and job_id:
+                out.add(job_id)
+    return out
+
+
+def _choose_dispatch_bank(repo_root: Path, envelope: dict[str, Any]) -> tuple[str | None, str | None]:
+    """Choose a bank without overwriting an uncheckpointed partial attempt."""
+    identity = _record_identity(envelope)
+    if identity is None:
+        return None, "record bundle has no coherent job/attempt identity"
+    job_id, attempt_id = identity
+
+    # Import lazily to keep the common validation module lightweight.
+    from select_record_bank import inspect  # noqa: WPS433
+
+    state = inspect(repo_root)
+    banks = state.get("banks") or []
+
+    # Reusing a bank that already belongs coherently to the exact same attempt
+    # is always safe; completing that attempt cannot destroy another job's data.
+    for bank in banks:
+        slots = bank.get("slots") or []
+        if not slots:
+            continue
+        jobs = {slot.get("job_id") for slot in slots if slot.get("job_id")}
+        attempts = {slot.get("attempt_id") for slot in slots if slot.get("attempt_id")}
+        if jobs == {job_id} and attempts == {attempt_id}:
+            return str(bank.get("bank")), "same_attempt"
+
+    for bank in banks:
+        if bank.get("state") in {"free", "reusable"}:
+            return str(bank.get("bank")), str(bank.get("state"))
+
+    # An occupied ready job may still be safely reclaimable if its complete
+    # logical payload is already in the immutable GitHub fallback ledger. The
+    # bank is then only a staging copy, not the unique durable result.
+    checkpointed = _checkpointed_intake_job_ids(repo_root)
+    if not chat_transport_settled(repo_root):
+        return None, "reusable Chat transport is still busy"
+    for bank in banks:
+        if bank.get("state") != "occupied":
+            continue
+        slots = bank.get("slots") or []
+        jobs = {slot.get("job_id") for slot in slots if slot.get("job_id")}
+        if len(jobs) == 1 and next(iter(jobs)) in checkpointed:
+            return str(bank.get("bank")), "occupied_but_durably_checkpointed"
+
+    return None, "no safe record bank available yet"
+
+
+def remap_research_bank(repo_root: Path, envelope: dict[str, Any]) -> tuple[dict[str, Any] | None, str | None]:
+    """Return a transient dispatch copy mapped to a currently safe record bank.
+
+    The immutable intake/archive envelope is not modified. Only the working-tree
+    writes used for this dispatch are rewritten, including chat-inbox paths and
+    blob SHAs.
+    """
+    if not has_record_slots(envelope):
+        return envelope, None
+
+    bank, reason = _choose_dispatch_bank(repo_root, envelope)
+    if bank is None:
+        return None, reason
+    if bank not in BANK_ROOTS:
+        return None, f"selected unknown record bank: {bank}"
+
+    slot_content: dict[str, str] = {}
+    for write in envelope["writes"]:
+        if not any(write["path"].startswith(prefix) for prefix in BANK_PATH_PREFIXES):
+            continue
+        payload = json.loads(write["content"])
+        slot = payload.get("slot")
+        if slot in SLOT_NAMES:
+            slot_content[str(slot)] = write["content"]
+    if set(slot_content) != set(SLOT_NAMES):
+        raise ValueError("research envelope does not expose all five slot payloads")
+
+    inbox = chat_payload(envelope)
+    if inbox is None:
+        raise ValueError("research envelope has no chat-inbox payload")
+    inbox = dict(inbox)
+    root = BANK_ROOTS[bank]
+    refs: list[dict[str, str]] = []
+    for slot in SLOT_NAMES:
+        path = f"{root}/{slot}.json"
+        refs.append({"slot": slot, "path": path, "blob_sha": _git_blob_sha(slot_content[slot])})
+    inbox["record_bank"] = bank
+    inbox["record_slots"] = refs
+    inbox_text = json.dumps(inbox, ensure_ascii=False, indent=2) + "\n"
+
+    remapped_writes: list[dict[str, str]] = []
+    for slot in SLOT_NAMES:
+        remapped_writes.append({"path": f"{root}/{slot}.json", "content": slot_content[slot]})
+    for write in envelope["writes"]:
+        if any(write["path"].startswith(prefix) for prefix in BANK_PATH_PREFIXES):
+            continue
+        if write["path"] == CHAT_INBOX:
+            remapped_writes.append({"path": CHAT_INBOX, "content": inbox_text})
+        else:
+            remapped_writes.append(dict(write))
+
+    out = dict(envelope)
+    out["writes"] = remapped_writes
+    return out, f"bank={bank}; reason={reason}"
 
 
 def apply_envelope(repo_root: Path, envelope: dict[str, Any]) -> list[str]:
