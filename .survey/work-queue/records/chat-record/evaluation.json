@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cxlspeckv-20260911-0430-v10-a1",
-  "job_id": "job-research-b3fb5681cc60fed2",
+  "attempt_id": "attempt-hetroute-20260911-0430-v10-a1",
+  "job_id": "job-research-9c7ee50477f0dd25",
   "data": {
-    "hardware": ["8×NVIDIA A100 80GB GPU、NVLink。", "4×Intel Agilex-7 FPGA、各64GB HBM、CXL 2.0制御器。", "デュアルソケットIntel Sapphire Rapids、計96コア、1TB DDR5。", "GPU-FPGAはPCIe Gen4 x16、FPGAからCXL 2.0 Type-3メモリ拡張器へ接続する構成を論文が記載する。"],
-    "software": ["GPU基準はvLLM。", "CPUオフロード比較はFlexGen、NVMeオフロード比較も含む。", "モデル重みはSmoothQuantによるINT8、活性値FP16設定。", "公開実装FastLM/CXL-SpecKVにはドライバ、C++/Python連携、FPGA RTL、機能試験が含まれる。"],
-    "model": ["LLaMA 2/3 7B〜70B", "Qwen 1.8B〜72B", "Mistral/Mixtral 7B〜47B MoE", "Gemma 2B〜7B", "GPT系1.5B〜13B", "CodeLLaMA/CodeQwen 7B〜34B"],
-    "datasets": ["ShareGPT chatbot", "CNN/DailyMail summarization", "HumanEval code generation", "SQuAD question answering", "WikiText-103 quality evaluation"],
-    "baselines": ["GPU-only vLLM", "FlexGen CPU offload", "NVMe offload", "compression-only", "CXL-NoSpec", "提案方式の圧縮なし・基本構成などのアブレーション"],
-    "correctness": "KV圧縮は近似的であるためWikiText-103のperplexityで品質を測る。投機先読みについては予測命中率、カバレッジ、精度、遠隔アクセス遅延を測るが、予測した将来トークンとまだ未生成の将来KVとの意味対応を検証する専用正当性実験は本文で明示されない。",
+    "hardware": ["地理的に分散した10台の異種エッジサーバ。", "GPU計算能力18〜120 TFLOPS、GPUメモリ12〜48GB、CPUメモリ96〜512GB。", "GPU-CPU転送帯域12〜64GB/s。", "サーバ間利用可能帯域0.8〜10Gbps、伝搬・待ち行列遅延0.3〜22msの通常インターネット相当リンク。"],
+    "software": ["PyTorch実装。", "実行時ルータはサーバごとの回線帯域、GPU待ち行列、専門家位置を観測して判断する。", "公式公開コードは2026-09-11時点で確認できない。"],
+    "model": ["Switch-Base-8E", "Qwen-MoE-A 2.7B", "Mixtral-8x7B"],
+    "datasets": ["WikiText-103", "SQuAD", "GSM8K"],
+    "baselines": ["Prism", "EdgeShard", "MoE-Infinity", "Petals", "提案方式の構成要素を外した比較"],
+    "correctness": "品質は集中配置した完全精度MoEを基準に、WikiText-103のパープレキシティ、SQuADのF1、GSM8Kの正解率で確認する。既定のトークン品質低下予算は2%で、完全精度の同一専門家複製を必ず残す制約により非常時経路の品質増分を0にする。代替専門家と低精度複製は事前測定した損失が残り予算に収まる場合だけ使う。",
     "settings": [
-      {"name": "サービング負荷", "description": "ShareGPTは入力128・出力256トークン級、CNN/DailyMailは入力1024〜2048・出力128〜256、HumanEvalは入力256〜512・出力512〜1024、SQuADは入力64〜128・出力32〜64を用いる。到着は毎秒5〜100要求のPoisson過程として負荷を変える。"},
-      {"name": "CXL-SpecKV階層", "description": "GPUローカルKV領域8〜16GB、GPU先読みバッファ2〜4GB、CXL側64〜256GBを基本とし、4KBページで管理する。既定の投機先読み距離kは4で、直近16トークンを入力する2層LSTMを用いる。"},
-      {"name": "LLaMA2-70B代表設定", "description": "チャットボット負荷でGPU-onlyはバッチ16、CXL-SpecKVはバッチ64など容量拡張を利用した比較を行う。スループット、TTFT、トークン間遅延、CXL/FPGA帯域、消費電力を測る。"},
-      {"name": "品質評価", "description": "LLaMA-70BのWikiText-103で、無圧縮、INT8、INT8+差分、INT8+差分+連長符号のperplexityと圧縮率を比較し、遠隔KV帯域削減が生成品質へ与える影響を分離する。"}
+      {"name": "既定負荷", "description": "利用者は各ホームエッジサーバへ非一様に割り当てられ、要求到着率は既定40要求/秒。負荷感度では10〜80要求/秒へ変え、300ms以下を満たす割合も測る。"},
+      {"name": "ルーティング探索", "description": "Switch-Base-8EとMixtral-8x7Bは上位2専門家を利用し、Qwen-MoE-A 2.7Bは元モデルの疎ルーティング設定を使う。集合候補が64割当以下なら完全列挙し、それ以上では幅8の探索を用いる。"},
+      {"name": "品質・複製予算", "description": "トークン単位の品質低下予算は既定2%。冗長専門家配置のメモリ予算比は既定2.0で、感度試験では1.0〜3.0へ変える。較正用集合で活性頻度、複製選択確率、量子化損失、代替損失を一度測り、モデル本体は固定する。"},
+      {"name": "評価対象", "description": "平均遅延、P99遅延、サーバ間通信量、遠隔実行率、CPUオフロード率、スループット、生成品質を測る。Mixtral-8x7Bを中心に全体比較、集合ルーティング、GPU/CPU常駐、複製予算、構成要素除去、負荷感度を評価し、3モデル横断比較も行う。"}
     ],
-    "methodology": "22種類のモデル構成と複数の実サービス風ワークロードを使い、スループット、初回トークン時間、トークン間遅延の中央値/P95/P99、KV容量、装置費用、品質、消費電力を評価する。各測定は5回実行し95%信頼区間を報告するとする。投機機構はkを1、2、4、8、16へ変え、命中率・精度・スループットをアブレーションする。CXL-NoSpecとの比較で先読み効果、圧縮なし構成との比較でFPGA圧縮効果を分離する。",
-    "scope": "論文は実FPGAを含む物理評価基盤を記載し、公開コードも存在するため単純なシミュレーション研究ではない。一方、CXL Type-3メモリとA100間はFPGAを介する独自構成であり、一般的なGPU直接CXLメモリ構成ではない。また最大性能は容量拡張によってGPU-onlyより大きなバッチを実行できる効果も含む。最も重要な未解決点は、将来トークン予測で将来位置KVを先読みするアルゴリズムの因果的意味が本文だけでは成立条件を説明できていないことである。"
+    "methodology": "実機の異種サーバ条件を用いたトレース駆動評価で、密なデータセンタ相互接続ではなく通常インターネットに近い帯域・遅延幅を与える。比較対象は密モデル分割系のEdgeShardとPetals、専門家オフロードのMoE-Infinity、分散専門家配置のPrism。提案方式では、集合単位選択、GPU/CPU常駐最適化、品質を考慮した精度選択、冗長複製を一つずつ外す構成要素除去試験も実施する。",
+    "scope": "評価は10サーバの異種エッジ試験環境に限定され、超大規模データセンタや数百ノード規模を直接測ったものではない。サーバ能力と回線状態は広く変えているが、専門家活性分布に基づく事前配置は較正時点の統計に依存する。論文自身も将来課題として、時間変動する専門家活性分布への対応と、動的エッジ環境でネットワーク構造を考慮した冗長複製を挙げる。"
   }
 }
