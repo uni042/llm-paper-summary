@@ -1,30 +1,42 @@
 {
   "counts": {
     "discovery": {
-      "completed": 77,
-      "ready": 1
+      "completed": 78
     },
     "audit": {
       "completed": 5
     },
     "research": {
       "completed": 72,
-      "superseded": 37
+      "superseded": 37,
+      "ready": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-f513abae44407875",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-08f93e843487d637",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2606.26607",
+      "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch",
+      "source_url": "https://arxiv.org/abs/2606.26607",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2606.26607-moebius-runtime-parallelism-switch.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-45b69cf81c1e8929",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2607.00466",
+      "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "source_url": "https://arxiv.org/abs/2607.00466",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T22:55:08+00:00"
+  "generated_at": "2026-09-10T22:56:54+00:00"
 }

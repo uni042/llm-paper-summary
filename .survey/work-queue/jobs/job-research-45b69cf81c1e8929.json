@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-45b69cf81c1e8929",
+  "type": "research",
+  "parent_job_id": "job-f513abae44407875",
+  "priority": 89,
+  "canonical_id": "arXiv:2607.00466",
+  "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+  "source_url": "https://arxiv.org/abs/2607.00466",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+  "selection_reason": "P/D分離MoEで負荷だけを見るデコードルーティングを、プリフィル時のエキスパート活性から作る署名とKVブロック連動キャッシュで局所性まで考慮する。最大40GPU・3 MoEモデルで最強負荷分散比較対象より中央値TPOTを5.9〜13.9%削減し、エキスパート配置と要求ルーティングの橋渡しになる。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T22:56:48+00:00",
+  "artifact_transport": "structured_record_v10"
+}
