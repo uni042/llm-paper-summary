@@ -5,19 +5,19 @@
   "attempt_id": "attempt-cxlpnm-20260911-0230-v10-a1",
   "job_id": "job-research-eccffc20cbe9c15a",
   "data": {
-    "hardware": ["基準GPU: NVIDIA A100-80GB、HBM2E 2TB/s。最大8GPU DGX、405B評価は2×GPU node（各8GPU）", "CXL-PNM: 512GB LPDDR5X/台、1.1TB/s/台、CXL 3.0 switch + PCIe 6.0 physical layer想定", "CXL-PNM controller: 32 VPU tiles、ピーク8TFLOPS、2.25MB on-chip buffer、1MB DMA buffer、7nm、1GHz、FP16", "CXL-PNM電力: controller/accelerator約90W、DRAM約40W、platform約150W"],
-    "software": ["NVIDIA FasterTransformerによるGPU LLM推論", "Linux DAX拡張CXL-PNM device driver", "Python runtime libraryによるCXL memory allocation・register制御・instruction orchestration", "ArkVale型のnon-eviction dynamic KV page selectionを基準のKV管理に利用", "7nm合成timing/power modelでparameterizeしたcycle-level simulator"],
+    "hardware": ["比較対象GPUはNVIDIA A100-80GBで、高帯域メモリは2TB/s。最大8基のGPUからなるDGXを用い、405B評価では8基のGPUを1ノードとする2ノード構成を用いる。", "CXL-PNMは1台につき512GBのLPDDR5Xと1.1TB/sのメモリ帯域を持ち、CXL 3.0スイッチとPCIe 6.0相当の接続を想定する。", "CXL-PNM制御部は32個のVPUタイル、ピーク8TFLOPS、2.25MBのオンチップバッファ、1MBのDMAバッファを持ち、7nm、1GHz、FP16として設計する。", "CXL-PNMの想定電力は制御部とアクセラレータが約90W、DRAMが約40Wで、モジュール全体では約150W。"],
+    "software": ["GPU側のLLM推論にはNVIDIA FasterTransformerを用いる。", "CXL-PNM制御にはLinux DAXを拡張した装置ドライバを実装する。", "Python実行時ライブラリがCXLメモリ割り当て、レジスタ制御、命令投入と同期を担当する。", "KV管理の比較基盤にはArkVale型の非削除・動的KVページ選択を用いる。", "PNM性能は7nm合成結果のタイミング・電力モデルで較正したサイクル単位シミュレータで評価する。"],
     "model": ["Llama 3.1-8B", "Llama 3.1-70B", "Llama 3.1-405B"],
-    "datasets": ["InfiniteBench En.Sum long-book summarization"],
-    "baselines": ["GPU-CXL-Mem: A100 GPU + CXL memory expansionでKVを外部保持し必要ページをGPUへrecall", "GPU scaling: A100 GPU台数を増やす従来スケールアウト", "PNM-KV: attention/KV selectionをPNMへ全offload", "PnG-KV: PNM-KV + steady-token GPU hybrid attention"],
-    "correctness": "評価はfull KVを保持するnon-eviction dynamic selectionを共通前提とし、PNM-KVは同じ選択処理とattentionを実行場所だけCXL-PNMへ移す。PnG-KVもGPUとPNMのpartial softmaxを正規化統合するため、steady-token partition自体は追加近似を導入しない。最終品質は基盤となるdynamic Top-K token budgetの選択精度に依存する。",
+    "datasets": ["InfiniteBench En.Sumの長文書要約"],
+    "baselines": ["GPU-CXL-Mem: A100とCXLメモリ拡張を組み合わせ、KVを外部に保持して必要ページをGPUへ呼び戻す方式。", "GPU台数増加: A100を追加する従来のGPUスケールアウト。", "PNM-KV: KV選択と注意計算をPNMへ全面的に移す提案方式。", "PnG-KV: PNM-KVに定常トークンのGPU協調注意を加える提案方式。"],
+    "correctness": "評価では完全KVを外部メモリへ保持する非削除型の動的選択を共通前提とする。PNM-KVは同じ候補選択と注意計算の実行場所をCXL-PNMへ移す。PnG-KVもGPUとPNMで計算した部分ソフトマックスを正規化して統合するため、GPUとPNMへの分割そのものは追加の近似を導入しない。ただし最終的な生成品質は、基盤となる動的な上位Kトークン選択の予算とページ要約による重要度推定精度に依存する。",
     "settings": [
-      {"name": "サーバ内スケーリング", "description": "Llama3.1-8Bを1〜8 A100、128K〜1M context、Llama3.1-70Bを2〜8 A100、128K〜512K contextで評価する。各GPU構成にCXL-PNMを1〜8台程度追加し、GPU-CXL-Mem、PNM-KV、PnG-KVのdecode throughput、energy/token、runtime breakdownを比較する。GPU HBM capacityによりbaselineのbatchが制限される一方、PNM側KV容量追加でbatchを拡大できる条件を測る。"},
-      {"name": "ラック規模評価", "description": "Llama3.1-405B、1M-token contextを2×GPU node（1 node=8×A100-80GB）で動かし、PNM nodeを1〜4台へ増やす。1 PNM nodeは16 CXL-PNM devices。baselineはGPU-CXL-Mem、提案はPNM-KV/PnG-KVで、throughputとenergy/tokenがnear-memory device数に応じてどうscaleするかを確認する。"},
-      {"name": "PnG-KV steady比", "description": "GPUが担当するsteady-token割合はGPU数/(GPU数+PNM数)を経験的初期設定とする。比率を上げるとGPU idleを減らせるが、GPUへrecallするKVが増えすぎるとCXL communicationとmemory capacityの利点を失うため、throughputが悪化する境界を持つ。"},
-      {"name": "コスト評価", "description": "2025年3月CPIに基づく電力単価0.181ドル/kWhを使い、A100を最大約400W、CXL-PNMを約150Wとする。論文表ではdevice当たりoperating costを0.072/0.027ドル毎時、hardware costを0.761/0.266ドル毎時としてtokens-per-dollarを比較する。"}
+      {"name": "サーバ内の拡張評価", "description": "Llama 3.1-8Bは1〜8基のA100と128K〜1Mトークンの文脈、Llama 3.1-70Bは2〜8基のA100と128K〜512Kトークンの文脈で評価する。各GPU構成へCXL-PNMを追加し、GPU-CXL-Mem、PNM-KV、PnG-KVのデコード時スループット、トークン当たりエネルギー、実行時間内訳を比較する。比較対象ではGPU高帯域メモリ容量によってバッチ数が制限される一方、PNM側へKV容量を増設した場合にバッチ数をどこまで拡大できるかも含めて測る。"},
+      {"name": "ラック規模評価", "description": "Llama 3.1-405Bと100万トークン文脈を、8基のA100を1ノードとする2つのGPUノードで動かし、PNMノードを1〜4台へ増やす。1つのPNMノードは16台のCXL-PNMからなる。比較対象のGPU-CXL-Memと提案方式を比較し、処理近傍メモリ装置の追加によってスループットとトークン当たりエネルギーがどう変化するかを調べる。"},
+      {"name": "PnG-KVの定常トークン比率", "description": "GPUが担当する定常トークンの割合は、GPU数をGPU数とPNM数の合計で割った値を経験的な初期設定とする。割合を増やすとGPU遊休時間を減らせる一方、GPUへ呼び戻すKV量とGPUメモリ消費も増える。一定点を超えるとCXL通信増加が利点を上回ってスループットが低下するため、この比率には最適点がある。"},
+      {"name": "費用効率評価", "description": "2025年3月の消費者物価指数に基づく電力単価0.181ドル/kWhを使い、A100を最大約400W、CXL-PNMを約150Wとして運用費を算出する。論文の表では装置1台当たりの運用費をGPU 0.072ドル/時、CXL-PNM 0.027ドル/時、ハードウェア費をそれぞれ0.761ドル/時と0.266ドル/時として、1ドル当たり生成トークン数を比較する。"}
     ],
-    "methodology": "提案CXL-PNMはcustom moduleとしてLPDDR5XとCXL interface、near-memory LLM acceleratorを設計し、Intel第4世代Xeon serverへの統合を想定したsoftware stackを実装する。実験値のうちCXL-PNM性能は7nm ASIC設計のsynthesized timing/power modelで較正したcycle-level simulatorに基づき、GPU側はFasterTransformerを使ったA100構成を基準化する。decode stageを中心に、context増加で生じるrecall、attention、FC、Top-K、hidden-state communicationの内訳を測り、単なるmicrobenchmarkではなくbatch capacity変化を含むend-to-end throughputへ反映する。",
-    "scope": "対象はlong-context decodeで、Llama 3.1の8B/70B/405B、128K〜1M tokensと極端なKV容量制約を重点評価する。CXL-PNM deviceはcustom 7nm ASICのcycle-level modelであり、全構成を量産CXL製品の実測だけで評価したものではない。workloadはInfiniteBench En.Sumが中心で、異なるattention sparsityやinteractive serving arrival、prefix sharing、multi-tenant interferenceは広く評価していない。またCXL 3.0 switch/PCIe 6.0級構成を前提とするため、現在一般的な低世代CXL/PCIe環境へ性能倍率を直接外挿できない。"
+    "methodology": "著者らはLPDDR5X、CXLインターフェース、処理近傍LLMアクセラレータを組み合わせた独自CXL-PNMモジュールを設計し、第4世代Intel Xeonサーバへの統合を想定したソフトウェア一式も実装する。PNM側の性能値は7nm ASICの合成タイミング・電力モデルで較正したサイクル単位シミュレータから得る一方、GPU側はFasterTransformerを用いたA100構成を基準とする。評価はデコード段階を中心に、文脈長増加で生じるKV呼び戻し、注意計算、全結合層、上位K選択、活性値通信の時間内訳を追う。単一カーネルだけの比較ではなく、KV容量を外部へ移すことで可能になるバッチ数拡大も含めてエンドツーエンドのスループットとエネルギーへ反映している。",
+    "scope": "対象は長文脈のデコード処理で、Llama 3.1の8B、70B、405Bと128K〜1Mトークンという極端なKV容量制約を重点的に評価する。CXL-PNM装置は独自7nm ASICのサイクル単位モデルであり、すべての大規模構成を量産CXL製品だけで実測した研究ではない。ワークロードはInfiniteBench En.Sumが中心で、異なる注意の疎性、対話型サービスの到着変動、接頭辞共有、複数利用者の干渉などは広く検証していない。またCXL 3.0スイッチとPCIe 6.0級接続を前提とするため、帯域の低い世代のCXL環境へ報告倍率をそのまま外挿することはできない。"
   }
 }
