@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-30ac53b1fd4b6037",
+  "type": "research",
+  "parent_job_id": "job-fe565c0916692e87",
+  "priority": 91,
+  "canonical_id": "arXiv:2609.00407",
+  "title": "DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference",
+  "source_url": "https://arxiv.org/abs/2609.00407",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2026-2609.00407-dynande-near-data-expert-scheduling.md",
+  "selection_reason": "MoE推論でNPU側メモリと近接データ処理（Near-Data Processing; NDP）側のどちらに各エキスパートを実行・配置するかを、層ごとの動的並行度、データ移動、演算通信重畳、時間的エキスパート再利用まで含む解析モデルで決める研究。既存のNPU-NDP協調方式が固定的な分担を行うのに対し、DynaNDEは層ごとのエキスパート並行性に応じて実行場所を動的に選び、NPUメモリに残るエキスパートの再転送も避ける。著者報告では既存NPU-NDP MoE推論方式に対してプリフィル平均2.6倍、デコード平均2.2倍の高速化を示し、MoEエキスパート配置・退避・処理近傍計算の重点テーマへ直接関係する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T18:40:56+00:00",
+  "artifact_transport": "structured_record_v10"
+}
