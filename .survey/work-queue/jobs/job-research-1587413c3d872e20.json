@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-1587413c3d872e20",
+  "type": "research",
+  "parent_job_id": "job-869d5f95a426be96",
+  "priority": 85,
+  "canonical_id": "arXiv:2609.03236",
+  "title": "Speculative Macro Commit for Faster Tool-Using Agents",
+  "source_url": "https://arxiv.org/abs/2609.03236",
+  "paper_path": null,
+  "selection_reason": "ツール利用エージェントの遅延をモデル推論だけでなく逐次action-observationの壁時計時間として扱い、高速draft modelが隔離環境スナップショット上で複数将来アクションを先行実行し、authoritative actorの次行動と一致した時だけ残りの事前実行結果をまとめてcommitするruntime機構。Qwen3.5-27B INT4＋Qwen3.5-4Bでτ²-Benchは逐次実行比18.59%、AppWorldは44.9%壁時計時間を削減。エージェント実行系の推論高速化として通常のtoken speculative decodingとは異なる。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T08:49:13+00:00",
+  "artifact_transport": "structured_record_v10"
+}

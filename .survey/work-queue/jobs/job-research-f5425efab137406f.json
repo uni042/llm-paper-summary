@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-f5425efab137406f",
+  "type": "research",
+  "parent_job_id": "job-869d5f95a426be96",
+  "priority": 93,
+  "canonical_id": "arXiv:2609.03494",
+  "title": "GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving",
+  "source_url": "https://arxiv.org/abs/2609.03494",
+  "paper_path": null,
+  "selection_reason": "長い推論出力でKVキャッシュ需要が要求間・生成途中で変動するのに、従来圧縮法が要求ごとに固定容量を事前設定する問題を扱う。GrowPageは短期・長期のquery要約からattention working setの拡大を検出し、ページ境界ごとに現容量内で圧縮するか物理ページを追加取得するかを決める。PagedAttentionのページ抽象へ統合してcontinuous batchingとprefix cachingを維持するため、KV evictionの選択問題から容量自体の動的割当へ設計空間を広げる新着システム論文として優先度が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T08:49:13+00:00",
+  "completed_at": "2026-09-10T08:49:14+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2609.03494",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2609.03494"
+  }
+}
