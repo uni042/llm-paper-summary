@@ -1,0 +1,13 @@
+{
+  "job_id": "job-5c82d3911edeae9c",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2604.18788",
+      "title": "Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs",
+      "source_url": "https://arxiv.org/abs/2604.18788",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md",
+      "priority": 84,
+      "reason": "Apple SiliconのNPUで混合専門家モデル（Mixture of Experts; MoE）を実行する際、動的ルーティングと可変形状、小粒度専門家カーネル、CPU/NPU同期が静的グラフ型NPUに合わない問題を扱う。NPUMoEは専門家容量の静的階層化、専門家のまとめ実行、負荷に応じた計算グラフ常駐を組み合わせ、Apple M系実機で遅延1.32〜5.55倍、エネルギー効率1.81〜7.37倍の改善を報告する。既存のEStreamやFreeTokenとは対象ハードウェアとNPU実行制約への対処が異なり、オンデバイスMoE推論の重要な欠落として価値が高い。"
+    }
+  ]
+}
