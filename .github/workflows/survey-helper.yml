@@ -40,13 +40,24 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Snapshot worker state for run ledger
+        run: |
+          python .survey/scripts/record_run_ledger.py snapshot \
+            --repo-root . \
+            --snapshot /tmp/survey-helper-baseline.json
+
+      - name: Reconcile maintenance state from newer durable reports
+        run: python .survey/scripts/reconcile_maintenance_state.py --repo-root .
+
       - name: Validate fallback worker syntax
         run: |
           python -m py_compile \
             .survey/scripts/fallback_transport.py \
             .survey/scripts/dispatch_fallback_inbox.py \
             .survey/scripts/recover_archived_research.py \
-            .survey/scripts/preflight_chat_record.py
+            .survey/scripts/preflight_chat_record.py \
+            .survey/scripts/reconcile_maintenance_state.py \
+            .survey/scripts/record_run_ledger.py
 
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
@@ -200,6 +211,12 @@ jobs:
           python .survey/scripts/dedupe_queue.py --root .survey
           python .survey/scripts/normalize_v10_jobs.py --root .survey
           python .survey/scripts/queue_worker.py --root .survey
+
+      - name: Record meaningful worker changes in run ledger
+        run: |
+          python .survey/scripts/record_run_ledger.py record \
+            --repo-root . \
+            --snapshot /tmp/survey-helper-baseline.json
 
       - name: Restore transient transport files
         run: |
