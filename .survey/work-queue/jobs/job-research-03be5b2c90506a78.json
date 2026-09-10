@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-03be5b2c90506a78",
+  "type": "research",
+  "parent_job_id": "job-a0f9b155ba2cea14",
+  "priority": 82,
+  "canonical_id": "arXiv:2604.02715",
+  "title": "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+  "source_url": "https://arxiv.org/abs/2604.02715",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+  "selection_reason": "専門家重みをGPU常駐資産ではなく一時的にページイン・実行・即時追い出しするexpert paging抽象として扱い、HBMをKV cacheなどthroughput-critical stateへ優先配分するvLLMベースのMoE serving system。memory-intensive regimeでvLLM比最大3.0倍throughputを報告する。expert cache hit率の最適化とは異なり、resident expert自体を縮小してKVとのHBM競合を解く設計で、offloadとKV容量配分の接点として価値が高い。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T17:54:16+00:00",
+  "completed_at": "2026-09-10T17:54:18+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2604.02715",
+  "duplicate_of_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-decoupling-expert-residency.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2604.02715"
+  }
+}

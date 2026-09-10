@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-8bb9e2903488689b",
+  "type": "research",
+  "parent_job_id": "job-a0f9b155ba2cea14",
+  "priority": 86,
+  "canonical_id": "arXiv:2607.24787",
+  "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models",
+  "source_url": "https://arxiv.org/abs/2607.24787",
+  "paper_path": "papers/inference/06-moe-expert-offloading/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching.md",
+  "selection_reason": "オフロードMoEでnative routerの決定を変えず、軽量adapterを次層expertの非同期転送予測だけに使う。予測誤りがモデル出力ではなく転送効率だけに影響する設計で、window-aware schedulerがcache・bandwidth制約内の転送を選ぶ。Qwen3-VL-30B-A3BとDeepSeek-VL2-Tinyを評価し、Snapdragon 8 Eliteでcompute-optimized offloading runtime比最大20%のdecode throughput改善を報告する。ストレージ制約下のexpert先読みとして、正確性をnative routingへ残す点が既存のrouter置換型と異なる。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T17:54:16+00:00",
+  "completed_at": "2026-09-10T17:54:18+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2607.24787",
+  "duplicate_of_path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2607.24787"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:50:39.320032+00:00",
+  "updated_at": "2026-09-10T17:54:19.908134+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,7 +572,7 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:50:39.320032+00:00",
+      "last_recorded_at": "2026-09-10T17:54:19.908134+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -581,9 +581,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 10,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -689,6 +689,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34511028156:1",
+          "recorded_at": "2026-09-10T17:54:19.908134+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34511028156",
+            "run_attempt": "1",
+            "source_sha": "6e921673e36fdaae783d95ce6d8e445a217242cf"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -747,6 +761,14 @@
           "title": "Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-a0f9b155ba2cea14",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -798,6 +820,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-03be5b2c90506a78",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2604.02715",
+          "title": "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving"
+        },
+        {
+          "job_id": "job-research-80640e3855fad375",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15453",
+          "title": "A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference"
+        },
+        {
+          "job_id": "job-research-8bb9e2903488689b",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2607.24787",
+          "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models"
         }
       ],
       "new_paper_ids": [
@@ -809,7 +852,8 @@
         ".survey/work-queue/results/20260911T0232JST-discovery-905c587af00ec25c.json",
         ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json",
         ".survey/work-queue/results/20260911T0240JST-discovery-4e0bc8f9d84a8444.json",
-        ".survey/work-queue/results/20260911T0248JST-discovery-825a3fe8fd3b5c49.json"
+        ".survey/work-queue/results/20260911T0248JST-discovery-825a3fe8fd3b5c49.json",
+        ".survey/work-queue/results/20260911T0254JST-discovery-a0f9b155ba2cea14.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 211,
