@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T20:10:23.595411+00:00",
+  "updated_at": "2026-09-10T20:16:08.040133+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T20:10:23.595411+00:00",
+      "last_recorded_at": "2026-09-10T20:16:08.040133+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1592,11 +1592,11 @@
         "research_completed"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 2,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 10,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1731,6 +1731,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34525323146:1",
+          "recorded_at": "2026-09-10T20:16:08.040133+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34525323146",
+            "run_attempt": "1",
+            "source_sha": "2fb626895b8cbf6760bd75be864ade3e21579b58"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1805,6 +1820,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-187bb403232765d2",
+          "type": "research",
+          "canonical_id": "arXiv:2607.28633",
+          "title": "Topology-Aware Data Movement for Disaggregated GPU Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1870,6 +1893,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.28633",
           "title": "Topology-Aware Data Movement for Disaggregated GPU Inference"
+        },
+        {
+          "job_id": "job-07ca72ad7cc621a3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [

@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.28633",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28633-topology-aware-data-movement.md",
   "selection_reason": "分離型LLM推論で生成済みKVキャッシュをプリフィル側からデコード側へ移す際、全GPU間を一律のRDMAとして扱わず、NVLink、PCIe、InfiniBand、TCP、CXLなど接続階層に応じて転送方式と配置を変える研究。層単位のパイプライン転送、MoEのNVLink領域を意識した配置、CXL 3.0共有退避層を組み合わせ、均一RDMA比3〜18倍の転送遅延削減を解析的に見積もる。完全な異種クラスタ実機評価ではなく、構成要素実装と解析・投影評価が中心である点は制約だが、分離サービングのKV転送を物理トポロジまで含めて扱うため、既存のKV転送・CXL・MoE配置系統を横断する比較候補として価値がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-10T20:10:19+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-10T20:16:02+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
