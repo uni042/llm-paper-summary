@@ -2,26 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-duoserve-20260911-0230-v10-a1",
-  "job_id": "job-research-62623041c7897e15",
+  "attempt_id": "attempt-cxlpnm-20260911-0230-v10-a1",
+  "job_id": "job-research-eccffc20cbe9c15a",
   "data": {
-    "overview": "DuoServe-MoEはA5000/A6000実機と4種のMoEモデルで、オンデマンド取得や層全先読みなどに対して初回トークン時間を1.78〜5.34倍、エンドツーエンド遅延を1.42〜7.55倍改善した。特に高密度なプリフィルでは全エキスパート同時常駐を避けたストリーミングがメモリ圧力を下げ、疎なデコードでは次層予測によりPCIe転送を現在層計算へ重ねる。予測器の完全Top-k一致率は約54〜67%と完全ではないが、少なくとも半数を当てる率は約90〜99%で、ミス時に正しい重みを再取得する回復経路があるため品質を保つ。DuoServe-MoEのピークGPUメモリはODFより少し大きい一方、LFPとMoE-Infinityより小さく、全GPU常駐と比べて大幅に低い。",
+    "overview": "CXL-PNMでattentionとKV選択をnear-memoryへ移すと、長文脈で増大していたKV recallをほぼ消し、GPU HBMをKVから解放してFCのbatchを大幅に拡大できる。サーバ内ではPnG-KVがPNM-KVより平均28.3%高いthroughputを得る一方、GPUとPNMを同時稼働するためenergyは約2.2倍高くなる。それでもGPU-CXL-Mem baseline比では平均2.7倍throughput、4.9倍低energyである。Llama3.1-70Bの2GPU+8PNMでは最大60倍低いenergy/token、rack-scale 405B/1Mではbaseline比2.6倍throughput・11.8倍低energyを報告する。GPU scalingとのcost比較では1GPU+8PNM PnG-KVが8GPU baselineより最大7.3倍高いtokens-per-dollarとなる。",
     "key_results": [
-      {"metric": "初回トークン時間改善", "value": "1.78〜5.34倍", "baseline": "ODFおよびLFP", "condition": "4モデル、SQuAD/Orca-Math、RTX A5000/A6000", "interpretation": "プリフィルで一層全体を同時常駐せず、転送と非MoE・エキスパート計算を二重ストリームで重ねることで、全層先読みの通信・メモリ負担を避ける。Qwen3-30B-A3BではLFPに対して5倍超のTTFT改善を報告する。"},
-      {"metric": "エンドツーエンド遅延改善", "value": "1.42〜7.55倍", "baseline": "ODFおよびLFP", "condition": "4モデル、2データセット、2GPU", "interpretation": "長いデコード区間では、次層エキスパート予測とCPU-GPU先読みがオンデマンド取得のクリティカルパスを短縮する。ODF比の平均改善はOrcaで1.72倍、SQuADで1.67倍。"},
-      {"metric": "予測器の完全Top-k一致率", "value": "54.16〜66.85%", "baseline": "MoE-Infinity 36.13〜44.33%", "condition": "Mixtral-8x7B/8x22B、Qwen3-30B-A3B、DeepSeekMoE-16B、Orca/SQuAD", "interpretation": "すべての実Top-kを一度に当てるのは難しいが、学習型状態表現はトレース照合型MIFより一貫して高い。完全一致しない場合でも正解を再取得するため品質は保持される。"},
-      {"metric": "少なくとも半分のエキスパート一致率", "value": "90.31〜99.1%", "baseline": "MoE-Infinity 76.83〜84.22%", "condition": "同上", "interpretation": "Top-8の大規模エキスパートプールでも多数の正解重みを事前に配置でき、残りだけを補正転送することで通信待ちを部分的に隠せる。"},
-      {"metric": "ピークGPUメモリ", "value": "Mixtral-8x7B 3.91GB、8x22B 8.44GB、Qwen3-30B-A3B 1.54GB、DeepSeekMoE-16B 2.28GB", "baseline": "GPU全常駐25.14/138/30.0/32.8GB、MIF 15.24/OOM/7.67/11.35GB", "condition": "各モデル代表値", "interpretation": "小容量のGPUエキスパート作業キャッシュだけを維持するため、MoE-Infinityの広いキャッシュより大幅に省メモリで、138GBを要するMixtral-8x22Bも48GB以下の単一GPUで扱える。ODFよりは0.28〜0.30GB程度多い。"},
-      {"metric": "予測器実行負担", "value": "約300MB GPUメモリ、約0.6ms遅延", "baseline": "予測器なし", "condition": "実行時、予測ストリームで並行化", "interpretation": "追加ニューラル予測器は無視できるゼロコストではないが、現在層計算と並行化でき、著者の単一GPU設定では総遅延改善を損なわない範囲に収まる。"}
+      {"metric": "PnG-KVの平均server throughput", "value": "GPU-CXL-Mem baseline比2.7倍", "baseline": "CXL memory-expanded A100 GPU system", "condition": "Llama3.1-8B/70B、128K〜1M context、server-level configurations", "interpretation": "near-memory attentionでKV容量制約を外し、拡大したbatchでGPU FC utilizationを上げる効果が中心。PNM-KVにGPU steady-token attentionを加えるとさらに平均28.3% throughputが上がる。"},
+      {"metric": "PnG-KVの平均energy/token", "value": "baseline比4.9倍低い", "baseline": "GPU-CXL-Mem", "condition": "server-level evaluation", "interpretation": "PnG-KVはPNM-KVより約2.2倍energyが高いが、baselineの長いrecall待ちと小batchによるGPU低効率を避けるため、baselineよりは大幅に省energyとなる。"},
+      {"metric": "最大energy改善", "value": "最大60倍低いenergy/token", "baseline": "2GPU baseline", "condition": "Llama3.1-70B、2GPU+8PNM PnG-KV", "interpretation": "batchを1から96へ拡大してGPU FC efficiencyを最大96倍改善し、8 PNMによるattentionがdata movement削減と低電力LPDDR5Xにより約20倍高いefficiencyを得る条件で最大差が生じる。"},
+      {"metric": "rack-scale 405B/1M throughput", "value": "baseline比2.6倍", "baseline": "2 GPU nodes、各8×A100-80GB + CXL memory", "condition": "Llama3.1-405B、1M context、PNM node scale-out", "interpretation": "2 GPU nodesだけではKV capacityでbatchが崩れるが、PNM nodeを追加するとKV capacityとnear-memory bandwidthを同時に増やせるためattentionとFCがほぼ線形に改善する。"},
+      {"metric": "rack-scale 405B/1M energy", "value": "baseline比11.8倍低い", "baseline": "2 GPU nodes baseline", "condition": "Llama3.1-405B、1M context", "interpretation": "PNM clusterが大きくなってnear-memory executionが支配的になっても、A100中心のrecall型構成よりenergy efficiencyが高い。PnG-KVはPNM-KVより初期throughputを約8.5%上げる代わりにenergyを約19.3%増やす。"},
+      {"metric": "total cost efficiency", "value": "1GPU+8PNM PnG-KVが8GPU baseline比最大7.3倍", "baseline": "A100 GPU scaling", "condition": "Llama3.1-8B、128K context、tokens-per-dollar", "interpretation": "GPUだけを増やすとKV capacity/recall bottleneckでthroughputが飽和する一方、PNM追加はcapacityとbandwidthを同時に増やし、device cost・powerも低いためcost scalingが有利になる。"},
+      {"metric": "PNM-KVからPnG-KVへのthroughput増加", "value": "平均28.3%増", "baseline": "PNM-KV", "condition": "server-level configurations", "interpretation": "PNM attention中にidleだったGPUへsteady-token attentionだけを戻すhybrid化が効く。ただし両deviceを同時に動かすためenergy trade-offがある。"}
     ],
     "negative_results": [
-      {"name": "完全Top-k予測は6割前後に留まる", "description": "DuoServe-MoEの完全Top-k一致率は最良でもMixtral-8x7B Orcaの66.85%、Mixtral-8x22B SQuADでは54.16%である。したがって高速化は『ほぼ全層を完全に当てる』ことによるのではなく、一部の重みを早期取得して補正転送量を減らすことと、通信・計算の重畳による。"},
-      {"name": "バッチ拡大で疎性の利得が弱まる", "description": "複数要求をまとめると一層で必要なエキスパート集合の和集合が大きくなり、デコードがプリフィルに近い高密度活性化へ寄る。DuoServe-MoEは評価したバッチ1〜12では最高スループットを維持するが、バッチ増大につれて相対利得は縮小する。"},
-      {"name": "最小メモリ方式ではない", "description": "DuoServe-MoEは先読み用GPUエキスパートキャッシュと予測器を持つため、ピークGPUメモリはODFよりやや高い。例えばQwen3-30B-A3BはODF 1.24GBに対し1.54GB、DeepSeekMoE-16Bは1.98GBに対し2.28GBであり、遅延とメモリの交換条件を取る。"},
-      {"name": "MoE-InfinityはMixtral-8x22B/A5000でOOM", "description": "比較方式MIFはキャッシュ・トレース管理のGPUメモリ負担が大きく、24GB A5000上のMixtral-8x22Bで実行不能だった。その条件では性能倍率の完全な比較がなく、DuoServeの優位には実行可能性の差も含まれる。"},
-      {"name": "前処理には数時間を要する", "description": "学習データ量は2.5%と少ないが、活性化トレース収集に5〜8時間、学習を含む前処理全体で最大9時間を要する。元LLMの微調整より軽いものの、即時導入できる統計不要方式ではない。"}
+      {"name": "PNM数が少ない条件ではbaselineを下回る場合がある", "description": "PNMのLPDDR5X帯域はA100 HBMより低いため、GPUとPNMを同数程度だけ配置した条件では、KV容量増加によるFC batch gainよりattention throughput低下が大きくなり、PNM-KV/PnG-KVがbaselineより遅くなる場合がある。特にLlama3.1-70Bの一部構成で確認され、PNM追加は常に単調な勝ちではない。"},
+      {"name": "PnG-KVは純PNMよりenergyが高い", "description": "GPU idleを利用してthroughputを上げる代わりにGPUとPNMを同時稼働するため、PnG-KVのenergyはPNM-KVよりserver-levelで約2.2倍高くなる。rack-scaleでも初期条件でthroughput約8.5%増に対してenergy約19.3%増となり、throughput最優先とenergy最優先で選択が変わる。"},
+      {"name": "steady-token比を増やしすぎるとrecallが再び支配する", "description": "GPU attentionへ割り当てるsteady KVを増やせば計算資源は使えるが、CXLからGPUへのrecall量とGPU KV capacityも増える。一定点を超えると通信overheadがGPU idle削減を上回りthroughputが低下するため、PnG-KVはGPU/PNM比に応じた小さいsteady subsetを必要とする。"},
+      {"name": "CXL-PNM性能はcycle-level modelを含む", "description": "custom moduleやsoftware stackの設計は具体的だが、報告された大規模構成のthroughput/energyは7nm合成モデルでparameterizeしたcycle-level simulatorを用いる。量産CXL-PNMをラック規模に並べて全結果を実測したわけではなく、absolute倍率は前提hardwareに依存する。"}
     ],
-    "interpretation": "本研究は、MoEオフロードを単に『キャッシュヒット率を上げる』問題としてではなく、プリフィルとデコードの活性化密度の違いに合わせて通信方式そのものを変えるべきだと示す。プリフィルでは予測よりストリーミングとトークン集約が重要で、デコードでは疎性を使った予測先読みが有効である。完全Top-k予測が6割程度でも大きな改善が得られていることから、システム性能は予測精度単独ではなく、部分ヒット時にどれだけ転送を減らせるか、現在層計算へ通信をどれだけ重ねられるか、ミスを安全に回復できるかで決まる。",
-    "quality_impact": "DuoServe-MoEは元LLMのゲートや重みを変更せず、デコード予測が外れたときは実ゲートが選んだ正しいエキスパートをCPUから再取得する。このため方式上のモデル品質は基準と同一である。使用するAWQやFP8量子化による品質はモデル配置条件として存在するが、同一モデル内の方式比較では共通であり、DuoServeの予測そのものによる近似誤差ではない。"
+    "interpretation": "結果が示すのは、長文脈KV問題では『大容量メモリへ置く』だけでは不十分で、KVに対する選択とmemory-bound attentionまで置き場所の近くへ移すことで初めて文脈長依存のrecallを切れるということだ。さらにKVをGPUから外すことでattentionだけでなくFC batch sizeも拡大するため、system-wideな二次効果が大きい。一方、near-memory computeはGPUより低帯域・低computeなので、GPUを完全に捨てるのではなくdense FCはGPU、sparse/streaming attentionはPNMという役割分担が重要となる。PnG-KVはこの分担をさらに動的化し、少数の再利用性の高いKVだけGPUへ置く設計として理解できる。",
+    "quality_impact": "PNM-KVとPnG-KVは基盤のnon-eviction dynamic token selectionが選んだKV集合に対する計算場所を変えるもので、PNM化やGPU-PNM partial attention統合そのものによる追加の近似は導入しない。完全KVを外部に保持するためirreversible eviction方式より情報回復性が高い。ただしattention計算に使うT_Budgetは全KVではなく動的選択されたsubsetであり、end-to-end品質はArkVale型のselection budgetとdigest scoringの精度に依存する点は分けて考える必要がある。"
   }
 }
