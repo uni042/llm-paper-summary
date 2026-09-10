@@ -2,23 +2,87 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-tangram-20260910-0441-v10-a1",
-  "job_id": "job-research-ad144841ea01b7c6",
+  "attempt_id": "attempt-launchbound-20260910-1612-v10",
+  "job_id": "job-research-bb4463d4f717f17c",
   "data": {
-    "overview": "Tangram converts irregular non-uniform KV retention into allocatable memory and balanced GPU work. Static profiles remove reclaim/planning overhead while preserving underlying compression accuracy. The 2.6× headline combines compression capacity gain and Tangram system efficiency; cumulative ablations isolate the latter.",
+    "overview": "三つの検証はいずれも『中間指標の改善をそのまま最終性能へ読み替えられない』ことを示す。融合RMSNormは単体で最大8.98倍高速化するが、OLMoE全体では多くの条件でほぼ等速であり、系列長128・バッチ1ではむしろ0.785倍まで低下する。INT4量子化では専門家選択の変化と品質低下に強い相関が見える一方、FP16重みでINT4経路だけ再生すると品質低下の2.7%しか説明できない。グラフ切断を23回から0回へ減らしたコンパイル設定も、系列長1024・バッチ4でイーガー実行の0.327倍まで遅くなる。共通する原因は、最適化対象の局所指標とエンドツーエンド律速・品質目的が一致していないことである。",
     "key_results": [
-      {"metric": "end-to-end throughput", "value": "up to 2.6×", "baseline": "vLLM Full-KV", "condition": "SCBench with FastKVzip; Short-to-Long contexts", "interpretation": "Compression increases capacity and Tangram converts it into realized serving throughput."},
-      {"metric": "page reclamation overhead", "value": "up to 25% of prefill time eliminated", "baseline": "dynamic allocation/compress-and-reclaim", "condition": "dynamic vs static budget allocation", "interpretation": "Known footprint removes host reclaim path."},
-      {"metric": "additional memory reclaimed", "value": "12–25% of full KV cache", "baseline": "adjacent grouping", "condition": "budget-aware clustering at same H_p", "interpretation": "Similar-budget head grouping reduces slack."},
-      {"metric": "runtime planning overhead avoided", "value": "15–20% of decode step", "baseline": "FlashInfer-style dynamic planning", "condition": "heterogeneous head lengths", "interpretation": "AOT map removes per-layer planning."},
-      {"metric": "static imbalance avoided", "value": "up to 1.7× latency inflation in baseline", "baseline": "FlashDecoding-style static split", "condition": "non-uniform head lengths", "interpretation": "CTA allocation follows calibrated workload."}
+      {
+        "metric": "RMSNorm単体高速化",
+        "value": "最大8.98倍",
+        "baseline": "元のRMSNorm実装",
+        "condition": "Triton融合カーネル、隠れ次元別マイクロベンチマーク",
+        "interpretation": "局所カーネルは大幅に速くできるが、その処理がモデル全体の約7.70%しか占めないため全体利得は小さい。"
+      },
+      {
+        "metric": "融合カーネルのエンドツーエンド速度比",
+        "value": "0.785〜1.027倍",
+        "baseline": "元のOLMoEイーガー実行",
+        "condition": "系列長128/512/1024、バッチ1/4",
+        "interpretation": "単体で数倍高速化してもモデル全体はほぼ変わらず、最小条件では悪化する。約1000回の小さな専門家分配カーネル起動が主要律速である。"
+      },
+      {
+        "metric": "トークン量増加に対する遅延増加",
+        "value": "総トークン32倍に対し遅延1.55倍",
+        "baseline": "小さい系列長・バッチ条件",
+        "condition": "OLMoEの系列長・バッチ拡大実験",
+        "interpretation": "算術演算量より固定的なカーネル起動費が支配的であることを支持する。"
+      },
+      {
+        "metric": "INT4ルーティング変化が説明する品質低下",
+        "value": "2.7%",
+        "baseline": "FP16 NLL 2.276696、完全INT4 NLL 2.363338",
+        "condition": "FP16重みのままINT4で記録した専門家経路を再生するとNLL 2.279028",
+        "interpretation": "完全INT4による品質低下の97.3%は専門家選択変化そのものではなく、主として選択後の重み誤差に由来する。"
+      },
+      {
+        "metric": "INT4専門家選択変化",
+        "value": "Jaccard距離0.1142、選択変化率0.0660、平均約0.53専門家/トークン",
+        "baseline": "FP16ルーティング",
+        "condition": "OLMoE、119,952トークン位置",
+        "interpretation": "ルーティングは確かに変化するが、その規模から品質低下を直接推定することはできない。"
+      },
+      {
+        "metric": "ルーターFP16保護",
+        "value": "Jaccard距離0.1140→0.0910、dNLL +0.0872→+0.0979",
+        "baseline": "NF4量子化",
+        "condition": "ルーターのみFP16へ戻す介入",
+        "interpretation": "基準ルーティングへの一致は約20%改善する一方で言語モデル損失は悪化し、ルーティング忠実度と品質が別目的であることを示す。"
+      },
+      {
+        "metric": "グラフ切断ゼロ時の実行速度",
+        "value": "0.613倍（512×4）、0.327倍（1024×4）",
+        "baseline": "PyTorchイーガー実行",
+        "condition": "動的出力形状捕捉を有効にしグラフ切断23→0",
+        "interpretation": "グラフを完全捕捉しても効率的なコードになるとは限らず、切断数ゼロは性能成功条件ではない。"
+      },
+      {
+        "metric": "初回コンパイル時間",
+        "value": "約37〜40分",
+        "baseline": "イーガー実行は事前コンパイル不要",
+        "condition": "OLMoEの動的MoEグラフ捕捉",
+        "interpretation": "定常速度が遅いことに加え、導入時のコンパイル費も非常に大きい。"
+      }
     ],
     "negative_results": [
-      {"name": "group-size trade-off", "description": "H_p too small raises CPU/page-table cost; H_p too large restores fragmentation. H_p=4–8 is the measured sweet spot."},
-      {"name": "speedup attribution", "description": "2.6× includes the capacity effect of compression and is not Tangram-only speedup."},
-      {"name": "static-profile dependency", "description": "Offline calibration assumes stable retention patterns; arbitrary domain shifts or unseen architectures are not proven."}
+      {
+        "name": "融合カーネルの全体利得消失",
+        "description": "RMSNorm単体5.62〜8.98倍、ルーターsoftmax約2.01倍でも、OLMoE全体は0.785〜1.027倍に留まる。対象処理の時間比が小さく、専門家分配の多数の小カーネル起動が残るため。"
+      },
+      {
+        "name": "ルーティング忠実度の品質代理失敗",
+        "description": "INT4でルーティング変化と品質低下は相関するが、経路再生では変化そのものの因果寄与は2.7%。さらにルーターFP16保護でルーティングをFP16へ近づけてもNLLは悪化した。"
+      },
+      {
+        "name": "グラフ切断ゼロの性能失敗",
+        "description": "動的出力形状を捕捉して23回のグラフ切断を0回にしても、1024×4ではイーガー比0.327倍と約3倍遅く、初回コンパイルも約40分を要した。"
+      },
+      {
+        "name": "タスク精度差の検出力不足",
+        "description": "MMLUとHellaSwagを各500例程度で測った差は標本誤差より小さく、量子化品質の細かな差を結論づけるには不足している。"
+      }
     ],
-    "interpretation": "Most valuable when KV memory limits batch size and a quality-preserving non-uniform compressor creates heterogeneous head lengths. Less useful if KV memory is not limiting or retention profiles vary strongly.",
-    "quality_impact": "Across Ada-SnapKV, Expected Attention and FastKVzip on five models, Tangram closely tracks and sometimes exceeds original dynamic-compression accuracy at ρ=0.7/0.5/0.3; it does not repair the compressor's own quality failures."
+    "interpretation": "三実験をまとめると、MoEでは局所的な『速い』『一致する』『捕捉できる』が最終目的と置換可能ではない。融合カーネルでは未最適化の専門家分配起動回数が律速を保持し、量子化ではルーティング変化と重み誤差が同じ量子化強度から同時に生じるため観測相関が因果寄与を過大評価し、コンパイルではグラフ表現の完全性と生成コード品質が別問題となる。したがって最適化評価では、対象局所指標、残存律速、エンドツーエンド速度、品質を同時に測り、必要なら介入実験で因果関係を確認する必要がある。",
+    "quality_impact": "融合カーネルとコンパイルは同一重みの実装最適化なので原理上は品質を変えないことが期待される。一方、量子化は近似で品質低下を伴う。論文の主要な品質知見は、INT4で観測される専門家経路の変化が品質劣化の主因ではなく、FP16重みを固定した経路再生では全劣化の2.7%しか説明しない点である。"
   }
 }
