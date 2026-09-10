@@ -4,27 +4,27 @@
       "completed": 63
     },
     "audit": {
-      "completed": 4
+      "completed": 4,
+      "ready": 1
     },
     "research": {
-      "completed": 61,
-      "superseded": 30,
-      "ready": 1
+      "completed": 62,
+      "superseded": 30
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-fa65d3c5c4fce1a2",
-      "type": "research",
+      "job_id": "job-audit-983fdb437b0be018",
+      "type": "audit",
       "lane": null,
-      "priority": 87,
+      "priority": 74,
       "canonical_id": "arXiv:2608.13962",
       "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture",
       "source_url": "https://arxiv.org/abs/2608.13962",
       "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing."
     }
   ],
-  "generated_at": "2026-09-10T19:38:41+00:00"
+  "generated_at": "2026-09-10T19:43:09+00:00"
 }
