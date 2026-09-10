@@ -54,22 +54,56 @@ jobs:
       - name: Dispatch one eligible fallback envelope
         run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root . | tee /tmp/fallback-dispatch.json
 
-      - name: Recover one archived completed research artifact when missing
-        run: python .survey/scripts/recover_archived_research.py --repo-root . | tee /tmp/archive-recovery.json
-
-      - name: Reset reusable Chat result when fallback dispatch changed inbox
+      - name: Reconcile reusable Chat result with current inbox
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
 
-          result = json.loads(Path('/tmp/fallback-dispatch.json').read_text(encoding='utf-8'))
-          changed = set(result.get('changed_paths') or [])
-          if '.survey/work-queue/submissions/chat-inbox.json' in changed:
-              Path('.survey/work-queue/results/chat-inbox.json').unlink(missing_ok=True)
-              print('Removed stale reusable Chat result after fallback dispatch.')
+          inbox_path = Path('.survey/work-queue/submissions/chat-inbox.json')
+          result_path = Path('.survey/work-queue/results/chat-inbox.json')
+          if not inbox_path.exists() or not result_path.exists():
+              raise SystemExit(0)
+          try:
+              inbox = json.loads(inbox_path.read_text(encoding='utf-8'))
+              result = json.loads(result_path.read_text(encoding='utf-8'))
+          except Exception:
+              result_path.unlink(missing_ok=True)
+              print('Removed unreadable reusable Chat result.')
+              raise SystemExit(0)
+          if inbox.get('job_id') != result.get('job_id'):
+              result_path.unlink(missing_ok=True)
+              print('Removed stale reusable Chat result whose job_id did not match the current inbox.')
           else:
-              print('Fallback dispatch did not change reusable Chat inbox.')
+              print('Reusable Chat result matches current inbox.')
+          PY
+
+      - name: Prepare current reusable Chat transport when pending
+        run: |
+          if [ -f .survey/work-queue/results/chat-inbox.json ]; then
+            echo 'Current reusable Chat inbox is already settled.'
+          else
+            python .survey/scripts/assemble_research_record_v10.py --repo-root .
+            python .survey/scripts/assemble_chat_chunks.py --repo-root .
+          fi
+
+      - name: Recover one archived completed research artifact when missing
+        run: python .survey/scripts/recover_archived_research.py --repo-root . | tee /tmp/archive-recovery.json
+
+      - name: Prepare archived recovery transport when dispatched
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          result = json.loads(Path('/tmp/archive-recovery.json').read_text(encoding='utf-8'))
+          if result.get('action') != 'replayed_missing_artifact':
+              print('No archived research recovery transport to assemble.')
+              raise SystemExit(0)
+          subprocess.run([sys.executable, '.survey/scripts/assemble_research_record_v10.py', '--repo-root', '.'], check=True)
+          subprocess.run([sys.executable, '.survey/scripts/assemble_chat_chunks.py', '--repo-root', '.'], check=True)
           PY
 
       - name: Process fallback-dispatched framework and LLM update
@@ -96,15 +130,6 @@ jobs:
 
       - name: Apply checkpoint-aware job requests
         run: python .survey/scripts/apply_transport_requests.py --root .survey
-
-      - name: Prepare reusable Chat transport when pending
-        run: |
-          if [ -f .survey/work-queue/results/chat-inbox.json ]; then
-            echo 'Reusable Chat inbox already has a result; skip transport assembly.'
-          else
-            python .survey/scripts/assemble_research_record_v10.py --repo-root .
-            python .survey/scripts/assemble_chat_chunks.py --repo-root .
-          fi
 
       - name: Suppress stale duplicate research jobs
         run: python .survey/scripts/dedupe_queue.py --root .survey
