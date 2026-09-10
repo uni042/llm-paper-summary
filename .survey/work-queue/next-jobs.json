@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 14,
+      "completed": 15,
       "ready": 1
     },
     "audit": {
@@ -9,12 +9,12 @@
     },
     "research": {
       "completed": 20,
-      "superseded": 10
+      "superseded": 11
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-636d789f02394280",
+      "job_id": "job-67ea5e160b0f4647",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -22,9 +22,9 @@
       "title": null,
       "source_url": null,
       "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository or fallback spillover backlog. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates; weak filler is not required.",
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T06:49:06+00:00"
+  "generated_at": "2026-09-10T06:50:28+00:00"
 }
