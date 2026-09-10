@@ -19,11 +19,6 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import assemble_research_record as base  # noqa: E402
-from record_bank_config import BANK_ROOTS  # noqa: E402
-
-# Match the workflow-v10 assembler entrypoint exactly.
-base.BANK_ROOTS.clear()
-base.BANK_ROOTS.update(BANK_ROOTS)
 
 
 def now() -> str:
