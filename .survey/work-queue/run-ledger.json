@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T21:43:00.458146+00:00",
+  "updated_at": "2026-09-10T21:43:58.723787+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2058,7 +2058,7 @@
     {
       "run_key": "2026-09-11T06:30:00+09:00",
       "first_recorded_at": "2026-09-10T21:33:24.225342+00:00",
-      "last_recorded_at": "2026-09-10T21:43:00.458146+00:00",
+      "last_recorded_at": "2026-09-10T21:43:58.723787+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2067,9 +2067,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 9,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -2159,6 +2159,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34533755577:1",
+          "recorded_at": "2026-09-10T21:43:58.723787+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34533755577",
+            "run_attempt": "1",
+            "source_sha": "a2751cb9886e9bb2565b8235447f991af8a745e6"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2196,6 +2210,14 @@
         },
         {
           "job_id": "job-2220260173f7525d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-8412768777dbc61d",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -2245,6 +2267,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-2f3e800f884677dd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.03203",
+          "title": "ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution"
+        },
+        {
+          "job_id": "job-research-8f64e69f8308e6c7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.23592",
+          "title": "KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning"
+        },
+        {
+          "job_id": "job-research-9372a69997e30450",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15157",
+          "title": "PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression"
         }
       ],
       "new_paper_ids": [
@@ -2253,7 +2296,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0638JST-discovery-01c3d3ead58cced3.json",
         ".survey/work-queue/results/20260911T0641JST-discovery-e4fab7ab96322990.json",
-        ".survey/work-queue/results/20260911T0643JST-discovery-2220260173f7525d.json"
+        ".survey/work-queue/results/20260911T0643JST-discovery-2220260173f7525d.json",
+        ".survey/work-queue/results/20260911T0645JST-discovery-8412768777dbc61d.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 230,

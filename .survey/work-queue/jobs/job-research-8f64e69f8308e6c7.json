@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-8f64e69f8308e6c7",
+  "type": "research",
+  "parent_job_id": "job-8412768777dbc61d",
+  "priority": 80,
+  "canonical_id": "arXiv:2602.23592",
+  "title": "KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning",
+  "source_url": "https://arxiv.org/abs/2602.23592",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md",
+  "selection_reason": "エージェント型推論で長期メモリをテキスト再投入する代わりにKVとして保持し、静的・動的メモリの混合粒度構成、多段再計算、層間負荷均衡読み込みを組み合わせる。ALFREDでテキスト型メモリより2.68倍高速、CacheBlendよりTTFTを1.90倍改善しており、エージェント長期文脈のKV再利用に有用である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T21:43:54+00:00",
+  "artifact_transport": "structured_record_v10"
+}
