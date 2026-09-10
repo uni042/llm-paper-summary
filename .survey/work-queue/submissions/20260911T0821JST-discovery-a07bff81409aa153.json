@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a07bff81409aa153",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.18071",
+      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.18071",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-multi-tier-kv-cache.md",
+      "priority": 97,
+      "reason": "GPU・ホストDRAM・SSDを跨いでKV配置、デコード実行パイプライン、階層間データ移動を共同設計し、精度を維持したまま既存方式比最大1.74倍のスループットを報告する。SSDを含む多階層KV管理の重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-reservation-output-uncertainty.md",
+      "priority": 88,
+      "reason": "未知の出力長によるKV過剰予約と不足予約を、GPU並列構成、要求クラス別KV予約、異種サービング群へのルーティング、接頭辞キャッシュと共同最適化する。分布ロバスト最適化で固定分位点方式比最大56%のコスト削減を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07609",
+      "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC",
+      "source_url": "https://arxiv.org/abs/2604.07609",
+      "paper_path": "papers/inference/09-other-inference-systems/2026-2604.07609-blink-cpu-free-gpu-smartnic-serving.md",
+      "priority": 87,
+      "reason": "要求受信をSmartNIC、バッチング・スケジューリング・KV管理を永続GPUカーネルへ移し、ホストCPUを定常推論経路から除去する。P99 TTFT最大8.47倍、TPOT最大3.40倍改善を報告し、GPU中心サービング基盤として重要である。"
+    },
+    {
+      "canonical_id": "arXiv:2606.22327",
+      "title": "Online Scheduling for LLM Inference with KV Cache Constraints",
+      "source_url": "https://arxiv.org/abs/2606.22327",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-online-scheduling-kv-cache-constraints.md",
+      "priority": 78,
+      "reason": "KV容量制約下のオンライン要求スケジューリングについて、半オンライン最適解、確率到着で定数リグレットのオンライン法、敵対到着で定数競争比不可能という理論限界を実機評価へ接続する。既存ヒューリスティックの位置付けを明確にする重要な補完研究である。"
+    }
+  ]
+}
