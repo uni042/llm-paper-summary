@@ -7,4 +7,4 @@
 - 全体構造検査と論文の科学的な内容監査を区別する。
 - 最新結果と未解決の途中記録は保持する。古い終了済み詳細記録だけ夜間に整理する。
 
-[点検手順](../../docs/survey-workflow/nightly.md) ／ [進捗](../STATUS.md)
+[現行運用手順](../../docs/survey-workflow/README.md) ／ [worker router](../../docs/survey-workflow/worker-router.md) ／ [進捗](../STATUS.md)
