@@ -2,34 +2,18 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "attempt_id": "attempt-metakv-20260910-1411-v10-test",
+  "job_id": "job-research-5b8bc3f2f1ab32c5",
   "data": {
-    "problem": "固定top-k MoEではtokenごとの実寄与が違っても同数のexpert slotを実行するため、低寄与expertにもFFN計算とdispatchが発生する。router gateは候補間の相対的割当嗜好であり、expert固有の非線形変換能力や方向特化を直接表さない。既存の動的削減にはrouter再学習、補助module、calibration/sensitivity profiling、batch前提などを要する方式が多い。",
-    "novelty": "ACEは元routerとtop-k候補集合を維持し、Global Spectral Proxy (GSP)とRouter-Conditioned Refinement (RCR)の2つのparameter-only proxyをoffline計算する。runtimeではtokenのrouter gateで両proxyを条件付けし、max融合により両方が低寄与と判断したslotだけをskipする。",
-    "method_overview": "deployment前にGSP/RCR tableを作る。GSPはSwiGLUのgate/up/down投影とRMSNorm scalingを結合したspectral surrogateをlayer内正規化してexpert全体の変換能力を表す。RCRはrouter weightをlayer平均からcenterし、その方向をRMS正規化したprototypeとしてexpertへoffline forwardし、routing-preferred方向の増幅率をtable化する。推論時は元routerのtop-k候補ごとにgate×GSPとgate×RCRを計算して候補集合内で正規化し、そのmaxを最終scoreとする。budgetに対応するthreshold未満だけskipし、top-1 expertは必ず残しminimum-active制約も適用できる。残存expertだけFFNを実行し、gateを再正規化してMoE出力を合成する。",
+    "problem": "長文推論では過去トークンのキー・バリュー（KV）を保持するKVキャッシュが大きくなり、GPUメモリの主要消費源になる。損失あり圧縮には、KV値を低ビット化する量子化、重要度の低いトークンを削除する追い出し、参照対象を絞る疎注意などがあるが、それぞれメモリ、遅延、正答率の交換関係が異なる。MetaKVの測定では、KVQuantはメモリを強く削減できる一方で量子化・逆量子化により遅く、H2Oは高速だが同程度の強いメモリ削減では精度が落ち、RocketKVは一部タスクでは高速でも平均精度が低かった。さらに同じ方式でもプロンプト長やタスクによって実行時間と正答しやすさが変わるため、全リクエストへ単一設定を固定する運用では、ある要求では過剰圧縮、別の要求では制約超過が起きる。",
+    "novelty": "MetaKVは新しいKV圧縮カーネルを提案するのではなく、既存の異質な圧縮方式を候補集合としてまとめ、利用者が指定する最大遅延と最大ピークKVメモリを満たす設定をプロンプト単位で選ぶメタ制御層である。候補ごとの実行をオンラインで試すのではなく、事前プロファイルから学習した軽量な勾配ブースティング決定木（Light Gradient-Boosting Machine; LightGBM）で遅延、メモリ、正答確率を予測する。これにより、実際に10候補を順番に実行するコストを払わず、約11ミリ秒の選択処理で設定を切り替える。",
+    "method_overview": "入力はプロンプト、最大エンドツーエンド遅延 Lmax、最大ピークKVメモリ Mmax である。MetaKVはまず、非圧縮FP16、KVQuant 2/3/4ビット、H2O 20/40/60%、RocketKV 8/16/32倍という10候補について、遅延予測器とメモリ予測器を評価する。予測値が両制約を満たさない候補を予算フィルタで除外する。非圧縮FP16が残れば、情報を捨てず全体平均で最も高精度なので即座に選ぶ。FP16が残らない場合は、各圧縮方式について制約内で最も弱い圧縮、すなわち情報損失を小さくしやすい設定だけを残す。候補が複数なら正答確率予測器が最も正答しやすい候補を選び、Hugging Face Transformersでその設定を実行する。\n\nどの候補も制約を満たせない場合でも処理を止めず、予測遅延/Lmax + 予測メモリ/Mmax という相対違反スコアを計算し、合計超過が最小の設定を選ぶ。したがって「制約を絶対保証する」制御ではなく、既存候補集合の中で制約達成と正答率を最適化する選択器である。候補集合そのものに実現可能な設定がなければ違反は残る。",
     "components": [
-      {
-        "name": "Global Spectral Proxy (GSP)",
-        "description": "SwiGLUの三投影の結合を保つbranch-symmetric spectral surrogateとRMSNorm scalingから、real sampleなしでglobal amplificationを推定しlayer内正規化する。"
-      },
-      {
-        "name": "Router-Conditioned Refinement (RCR)",
-        "description": "centered router weightからexpert固有routing方向を作り、そのprototypeに対するexpert応答増幅をoffline評価してGSPの方向盲性を補う。"
-      },
-      {
-        "name": "Conservative dual-view fusion",
-        "description": "GSP/RCR寄与分布のmaxを使うため、skip setは両低寄与集合のintersectionとなる。片方が重要とみなしたexpertは保持する。"
-      },
-      {
-        "name": "Budget-to-threshold mapping",
-        "description": "estimatorはdata-freeだが、報告された10–60%のbudgetをthresholdへ変換する際はunlabeled full-model passでcandidate scoreを集めquantile mappingする。"
-      },
-      {
-        "name": "Safeguards",
-        "description": "top-1を常時保持し、必要ならminimum-active数を課し、surviving gateを再正規化する。"
-      }
+      {"name": "候補圧縮方式の異質な交換関係を利用する", "description": "KVQuantはKV要素を低ビットで保持し、全トークンを残しながらメモリを削減するが、量子化・逆量子化処理が追加される。H2Oは累積注意重みに基づき低重要度トークンをKVから削除し、計算量とメモリの両方を減らしやすい。RocketKVはプリフィル後のトークン選別と疎注意を組み合わせる。MetaKVはこれらを同一尺度に押し込むのではなく、方式ごとに異なる遅延・メモリ・精度特性を候補として保持する。平均値だけでなくプロンプトごとの予測を使うため、メモリ制約が支配的ならKVQuant、遅延制約が支配的ならH2Oや一部RocketKV、余裕があればFP16へ切り替えられる。"},
+      {"name": "遅延・メモリ予測と予算フィルタ", "description": "事前に各候補を多数のプロンプトで実行し、プロンプト特徴から候補ごとのエンドツーエンド遅延とピークKVメモリをLightGBMで学習する。実行時は全候補について予測だけを行い、LmaxまたはMmaxを超える候補を除く。評価ではメモリ予測は平均絶対百分率誤差7.7%、決定係数0.9981、遅延予測は平均絶対百分率誤差38.19%、決定係数0.9651だった。遅延の絶対誤差は大きめなので境界付近では誤選択が起こり得るが、候補を実測するよりはるかに軽量である。"},
+      {"name": "精度を優先する段階的な最終選択", "description": "予算内にFP16があれば無圧縮を選ぶ。そうでなければ方式ごとに最も弱い圧縮だけを残し、複数候補の正答確率を別のLightGBMで推定して最大候補を選ぶ。正答予測器のAUROCは0.70で完全な分類器ではないが、方式間のタスク依存差を選択へ利用できる。制約を満たせる候補の中で必要以上に強い圧縮を避けるため、単に予測正答率だけを最大化するより選択空間を保守的に絞っている。"},
+      {"name": "実現不可能な制約への違反最小化", "description": "候補集合の全設定が予算を超える場合、遅延とメモリの各上限に対する相対超過を足し合わせ、最小の設定を選ぶ。これは不可能なSLOを達成したことにはしない。実際、測定オラクルでも一部条件では最大35%のプロンプトが違反し、候補集合自体の限界が主因だった。MetaKVの違反率はオラクルより0〜6ポイント高く、予測誤差による追加違反は比較的小さい。"}
     ],
-    "system_design": "token→元router top-k/gate→GSP/RCR table lookupとscalar score→threshold/top-1 safeguard→残存expertだけFFN→gate再正規化→MoE outputの順に処理する。offline tableはcheckpointごとに再利用できるが、所定skip率のthresholdは報告実験ではworkload score分布に対応付けている。"
+    "system_design": "オンライン経路は「プロンプトと制約受付 → 全候補の遅延・メモリ予測 → 予算フィルタ → FP16優先または方式ごとの弱圧縮候補抽出 → 正答確率予測 → 1設定だけ実行」である。重い部分は事前プロファイルと予測器学習へ移し、実行時選択の平均オーバーヘッドは10.96ミリ秒、平均推論遅延の0.34%だった。新しい圧縮方式、モデル、GPUへ移る際は候補プロファイルと予測器学習をやり直す必要がある。"
   }
 }
