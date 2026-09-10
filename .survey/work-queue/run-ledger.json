@@ -1,23 +1,24 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T14:59:16.128030+00:00",
+  "updated_at": "2026-09-10T15:10:32.962043+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
       "first_recorded_at": "2026-09-10T14:33:05.581963+00:00",
-      "last_recorded_at": "2026-09-10T14:59:16.128030+00:00",
+      "last_recorded_at": "2026-09-10T15:10:32.962043+00:00",
       "signals": [
         "discovery_or_queue_expanded",
-        "research_completed"
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 7,
-        "new_papers": 0,
+        "new_jobs": 8,
+        "new_papers": 7,
         "fallback_archived": 0
       },
       "events": [
@@ -105,6 +106,22 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34493858726:1",
+          "recorded_at": "2026-09-10T15:10:32.962043+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34493858726",
+            "run_attempt": "1",
+            "source_sha": "5eeec414adf1d41e7c814740e9d1ba3fc660dc76"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -153,6 +170,14 @@
           "type": "research",
           "canonical_id": "arxiv:2603.27624",
           "title": "Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-35c9432189855703",
+          "type": "research",
+          "canonical_id": "arxiv:2508.06978",
+          "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency",
           "from": "ready",
           "to": "completed"
         }
@@ -206,17 +231,32 @@
           "type": "research",
           "canonical_id": "arxiv:2508.06978",
           "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency"
+        },
+        {
+          "job_id": "job-93a01902fba27898",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2508.06978",
+        "arXiv:2602.03495",
+        "arXiv:2603.27624",
+        "arXiv:2604.07396",
+        "arXiv:2604.26837",
+        "arXiv:2605.27081",
+        "arXiv:2608.21614"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-20260910-2330-moe-storage.json",
         ".survey/work-queue/results/discovery-20260910-2351-streaming-edge.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 203,
-      "paper_active_count_after": 203,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 210,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

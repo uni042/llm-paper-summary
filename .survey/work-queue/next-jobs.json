@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 40
+      "completed": 40,
+      "ready": 1
     },
     "audit": {
       "completed": 3
     },
     "research": {
       "superseded": 24,
-      "completed": 43,
-      "ready": 1
+      "completed": 44
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-35c9432189855703",
-      "type": "research",
-      "lane": null,
-      "priority": 85,
-      "canonical_id": "arxiv:2508.06978",
-      "title": "SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency",
-      "source_url": "https://arxiv.org/abs/2508.06978",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2508.06978-ssd-moe-offloading-energy-efficiency.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-93a01902fba27898",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository or fallback spillover backlog. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates; weak filler is not required.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T14:59:14+00:00"
+  "generated_at": "2026-09-10T15:10:30+00:00"
 }

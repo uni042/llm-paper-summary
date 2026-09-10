@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（17本）
+## 自動生成の論文一覧（18本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -36,5 +36,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 | [SGD-KV: Summarization Guided KV Cache Compression](2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md) | 長文の意味をまとめて扱うのに寄与するattention headを診断taskで特定し、そのheadへKV cache budgetを重点配分するhead-aware圧縮。25%のKV budget（75%削減）でも長文taskの精度低下を抑える。 |
 | [Tangram: Unlocking Non-Uniform KV Cache Compression for Efficient Multi-turn LLM Serving](2026-2606.06302-tangram-non-uniform-kv-cache.md) | 非一様KVキャッシュ圧縮のhead別保持量を少数サンプルで事前較正し、固定予算・head-group単位のragged paging・事前負荷分散へ落とし込むvLLMベースのserving system。動的な非一様圧縮の精度をほぼ保ちながらfragmentation、page reclaim、decode workload imbalanceを解消し、実機で最大2.6倍のthroughputを報告する。 |
 | [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md) | 長文・複数ターンのLLMサービングでは、GPUメモリ不足時にKVキャッシュを追い出して後で再計算する損失なし管理が必要になるが、従来方式は再利用頻度や位置だけを見ており、どのKVブロックを残すとGPU注意計算そのものがどれだけ速くなるかを十分扱っていない。AsymCacheは、非連続に残った複数KV区間を1回のGPU注意カーネルで処理する複数区間注意（Multi-Segment Attention; MSA）、再利用確率と位置依存の再計算遅延を掛け合わせる追い出し器、負荷に応じてプリフィル分割量を変える適応チャンク化を統合する。vLLM上のH20実機評価で、最新比較対象に対し先頭トークン時間を最大1.90〜2.03倍、出力トークン当たり時間を1.62〜1.71倍改善し、出力値は近似せず保持する。 |
+| [Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving](2026-2604.26837-spin-sparse-attention-hierarchical-memory.md) | 動的疎注意は各デコード段で重要な少数KVだけをGPUへ読み込めば長文注意計算を減らせるが、選択粒度が方式ごとに異なり、CPU上の完全KVから細粒度・不連続なデータをPCIeで取り出す費用が利得を打ち消しやすい。SPINは、方式固有のブロックやクラスタを共通の論理パーティションへ写し、物理転送は固定ページへ統一する。さらに要求ごとのGPU KV予算を動的に伸縮し、直近に使ったページをGPU向けバケット化LRUで残し、二階層メタデータで最悪論理空間ではなく実際の物理ワーキングセットに比例させることで、疎注意をGPU・CPU階層メモリ上の実用サービングへ接続する。 |
 | [OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration](2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md) | 長文LLM推論で増大するKVキャッシュをGPUとCPUの間で要求ごとに動的再配置し、転送待ちを計算へ重ねることでトークン遅延SLOとスループットを改善する推論提供システム。 |
 <!-- survey:auto:end -->

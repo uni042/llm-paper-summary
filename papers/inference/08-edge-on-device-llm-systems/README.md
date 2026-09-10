@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（11本）
+## 自動生成の論文一覧（12本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -18,4 +18,5 @@
 | [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md) | スマートフォンで他アプリがRAMを要求したとき、LLMのweightとKV cacheを必要量だけ細かく退避し、KVは圧縮RAMとFlash storageへ分散、weightは後ろのlayerから退避して前のlayerから推論を再開することで、memoryを空けながら復帰時のTime-to-First-Token（最初のtokenが出るまでの時間）を短縮するsystem。 |
 | [Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design](2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md) | 巨大な混合専門家モデル（Mixture-of-エキスパート; MoE）をローカル機で動かす際、従来は量子化やルーティング変更で容量を削るか、専門家計算をCPUへ置くため長い入力処理がCPU演算性能に律速され、デコードもDRAM帯域を十分使い切れない。著者らは重みの正本を大容量CPUメモリに保ちながら、入力処理では必要な重みをGPUへ細粒度に流して計算と転送を重ね、少数GPUでは通信量を減らす専門家並列を用いる。一方デコードではCPU側のFP8行列ベクトル積、NUMAを意識した細粒度並列、CPUのMoE計算とGPUの注意計算を二つの要求間で重ねる。2基のAMD EPYC 9355と1～2枚のRTX 5090を用いた実機で、元のFP8品質を保ったDeepSeek-R1級モデルについて32K入力を30秒以内、単一デコード21.5トークン/秒、二要求合計33.6トークン/秒を示し、ローカルMoEをクラウド級の応答目標へ近づける。 |
 | [Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs](2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md) | Apple Siliconのニューラル処理装置（Neural Processing Unit; NPU）で混合専門家モデル（Mixture of エキスパート; MoE）を動かすと、トークンごとに選ばれる専門家数が変わる動的ルーティングと、多数の小さな専門家計算・CPU同期が、静的な計算グラフを好むNPUの実行方式と衝突する。NPUMoEは、専門家ごとに固定容量を段階化して形状を静的化し、同容量の専門家をまとめて1個の計算グラフとして実行し、利用頻度の高いグループだけをNPUへ常駐させる。Apple M2 Max/M2 Ultra実機で、Phi-3.5-MoE系のプリフィル遅延を比較対象に対して1.32〜5.55倍改善し、エネルギー効率を1.81〜7.37倍高める一方、容量超過トークンの枝刈りにより精度低下は1.1%未満に抑える。 |
+| [SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs](2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md) | エッジNPUではオンチップSRAMが小さく、注意機構の一時活性値まで高密度eDRAMへ置くと、データを保持するための周期リフレッシュがメモリエネルギーを消費する。SHIELDはBF16の1ビット符号と8ビット指数を通常リフレッシュ領域へ固定する一方、誤りに比較的強い7ビット仮数をデータ寿命で分離する。長く残るKV仮数はリフレッシュ周期を1216µsまで緩め、各層内で1.5ms未満しか生存しないQと注意出力の仮数はリフレッシュ自体を止める。故障注入とeDRAMセルモデルを組み合わせ、標準リフレッシュ比で35%のリフレッシュエネルギー削減を報告する。 |
 <!-- survey:auto:end -->

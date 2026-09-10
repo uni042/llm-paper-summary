@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（12本）
+## 自動生成の論文一覧（13本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -21,4 +21,5 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 | [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md) | routerの利用履歴から『似た入力を担当しているexpert』を見つけ、ニューロンの並びを揃えてから代表expertへ統合し、統合後weightをlow-rank成分と構造的に疎な残差へ分解することでMoEのmemory footprintを大幅に減らす。 |
 | [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md) | 固定top-kルーティングで選ばれたexpertのうち実際の寄与が小さいslotをtokenごとに省く、学習不要・checkpoint保持型のMoE推論手法。Global Spectral Proxy (GSP)がSwiGLU expertのgate/up/down投影とRMSNorm scalingから全体的な変換能力を推定し、Router-Conditioned Refinement (RCR)がcentered router weightからrouting-preferred方向を作って方向依存のexpert応答を補正する。実行時はrouter gateと2つのoffline tableを組み合わせ、両方で低寄与と判断されたslotだけをskipしtop-1 expertは必ず残す。 |
 | [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md) | 実行expert数k1とrouter正規化分母のreference set k2を分離し、fine-grained MoEでexpert computeを減らしつつ訓練時のexpert-branch gainを保つ。Qwen3.6-35B-A3Bの8→4 expertでMMLU低下を4.65ptから0.35ptへ縮小する。 |
+| [ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference](2026-2605.27081-remoe-router-finetuning-expert-reuse.md) | 細粒度MoEを端末で動かすと、連続トークンが別々のエキスパートを選ぶたびに小さな高速キャッシュから重みが追い出され、CPU DRAMやNVMe SSDなど低速階層から再読込が必要になる。ReMoEは実行時キャッシュを複雑化する代わりに、既学習モデルのルータだけを追加学習し、直前に選んだエキスパートへ確率を寄せつつ元ルータからの逸脱をKL損失で抑える。DeepSeek-V2-Liteで隣接トークン間のエキスパート重複率を相対26.4%高め、Jetson Orin NXのSSD-backed llama.cppではトークン間遅延を43.6〜49.8%削減した。 |
 <!-- survey:auto:end -->
