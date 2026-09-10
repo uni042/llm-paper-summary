@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dali-20260910-2335-v10-a1",
-  "job_id": "job-research-66083cca6d53c9c6",
+  "attempt_id": "attempt-remoe-20260910-2341-v10-a1",
+  "job_id": "job-research-f0c19ed4ae256352",
   "data": {
-    "hardware": ["AMD EPYC 7532 64コアCPU", "256GB DDR4 DRAM", "NVIDIA RTX 3090 24GB", "PCIe 4.0 x16", "追加評価の1 CPU + 2 GPU構成"],
-    "software": ["KTransformers基盤のDALI実装", "llama.cpp", "MoE-Lightning", "HybriMoE", "CUDAストリームによる計算・転送重畳"],
-    "model": ["DeepSeek-V2-Lite-Chat", "Qwen3-30B-A3B", "Mixtral-8x7B-Instruct"],
-    "datasets": ["C4", "WikiTextの校正用1,000系列"],
-    "baselines": ["llama.cpp", "KTransformers", "MoE-Lightning", "HybriMoE", "全エキスパートをCPUで実行する単純方式", "厳密0-1配置を解くOpt_plan"],
+    "hardware": ["24GB RTX 3090級GPU + PCIe Gen3 x16", "Jetson Orin NX 16GB", "aigo DP35 256GB NVMe SSD + PCIe Gen3 x4", "2基のBI-V150 GPU", "Kunpeng 920 + Ascend 910B3 NPU"],
+    "software": ["vLLM MoE expert offloading", "llama.cpp", "expert-kit", "lm-eval-harness", "トレース駆動エキスパートキャッシュシミュレータ"],
+    "model": ["DeepSeek-V2-Lite 15.7B/2.4B activated", "Qwen1.5-MoE-A2.7B"],
+    "datasets": ["OpenHermes-2.5", "ShareGPT", "GSM8K", "HumanEval", "MMLU", "IFEval"],
+    "baselines": ["事前学習済み元ルータ", "同じ条件で交差エントロピーだけを使うCE-only微調整", "LRU/LFU/FIFO/Beladyキャッシュ置換"],
     "settings": [
-      {"name": "主要実機比較", "description": "AMD EPYC 7532、256GB DDR4、RTX 3090 24GB、PCIe 4.0 x16のローカルPC相当環境でC4を入力し、DeepSeek-V2-Lite-Chat、Qwen3-30B-A3B、Mixtral-8x7B-Instructを評価する。CPUを使う比較方式は16コア・32スレッドへ揃え、DALIとHybriMoEではGPUに保持するエキスパート数を一致させて、メモリ量の差ではなく配置・先読み・キャッシュ方針の差を比較する。"},
-      {"name": "プリフィルとデコード", "description": "通常設定では入力64トークンをプリフィルし、その後64トークンを生成する条件を中心に、処理速度をトークン毎秒で測る。プリフィルは一度に多数トークンが各エキスパートへ流れるため負荷偏りが大きく、デコードは1ステップずつ進むためエキスパート重み転送とキャッシュ局所性の影響が強い。両段階を分けて比較することで、単一の平均値だけでは見えない機構ごとの効果を確認する。"},
-      {"name": "配置アルゴリズムの分解評価", "description": "全エキスパートをCPUで処理する単純方式、HybriMoE型の配置、厳密な0-1最適化、DALIの貪欲配置を比較する。純粋なMoE計算時間だけでなく、配置計画に要するCPU時間まで含めて総合性能を測る。これにより、厳密最適化が実行配置では有利でも、毎層の計画時間が長すぎれば実際の推論では不利になることを切り分ける。"},
-      {"name": "先読みとキャッシュの感度", "description": "次層へ先読みするエキスパート数、キャッシュ観測窓w_size、1回に交換するu_sizeを変え、PCIe転送を隠せる範囲と重み移動費のトレードオフを測る。Mixtralでは先読み1個が最も良く、必要以上に増やすと転送を計算時間内へ隠せず性能が低下する。キャッシュも更新を細かくすると利用率は上がるが、入替え転送が増えるため無制限に短い窓が有利ではない。"},
-      {"name": "長い生成と複数GPU", "description": "生成長128、256、512、1024トークンへ延ばした条件で時間局所性が長時間維持されるかを確認し、さらに1 CPU + 2 GPU構成でも同じ機構が機能するかを測る。単一GPUだけで偶然成立する最適化ではないことを確認する一方、大規模サーバークラスタや高速相互接続までは対象にしていない。"}
+      {"name": "ルータ限定微調整", "description": "主モデルDeepSeek-V2-Liteは総15.7B、1トークンあたり2.4Bを活性化し、26個のMoE層で各64 routed expertと2 shared expertを持ちTop-6を選ぶ。OpenHermes-2.5を100,000件学習、1,000件評価に使い、非ルータ重みを固定したままAdamW、学習率5e-5、BF16、系列長2048、micro-batch 1、勾配累積8で2,000ステップ微調整する。"},
+      {"name": "トレース駆動キャッシュ評価", "description": "ShareGPTから128プロンプトを取り、バッチ1、greedy decoding、最大64生成トークンで各層のTop-K専門家系列を記録する。各要求開始時は空キャッシュへ戻し、容量4、6、8、12などでLRUを中心に、LFU、FIFO、理想的なBelady置換でも固有ヒット率と固有ミス数を集計する。これにより特定ランタイムの実装差を外してルータ系列そのもののI/O圧力を測る。"},
+      {"name": "vLLM GPU-CPUオフロード", "description": "24GB GPUをPCIe Gen3 x16でホストへ接続し、vLLMのMoEエキスパートオフロードを使う。最大同時系列1、専門家キャッシュ6、prefix cachingとchunked prefillを無効化し、並行数1でShareGPT要求を処理する。出力処理速度、先頭トークン時間、トークン間遅延、固有専門家ヒット率を元ルータと比較する。"},
+      {"name": "Jetson SSD-backed評価", "description": "Jetson Orin NX 16GBでllama.cppを使い、モデルをaigo DP35 256GB NVMe SSDへ置いてPCIe Gen3 x4経由で読み込む。-np 1、-n 128、--mmap条件でShareGPT、GSM8K、HumanEvalを実行し、SSDからの専門家ミスが高価な端末条件で先頭トークン時間とトークン間遅延を測る。"},
+      {"name": "モデル・アクセラレータ一般化", "description": "同じハイパーパラメータでQwen1.5-MoE-A2.7Bへ適用し、さらに2基のBI-V150 GPU + expert-kit + NVMe SSD、Kunpeng 920 + Ascend 910B3 NPU + NVMe SSDでも2,000ステップのゲート適応後に実行する。特定のNVIDIA GPUやDeepSeekのゲート構造だけに依存しないかを確認する。"}
     ],
-    "correctness": "DALIは最終的なゲート出力、選択エキスパート、モデル重み、活性値を近似しない。残差補正による次層予測はプリフェッチ先を決めるだけで、実際の次層へ到達した後は元モデルの正式なルーティング結果を使う。そのため予測が外れた場合の影響は余分なPCIe転送や待ち時間であり、モデル出力品質の近似誤差ではない。",
-    "methodology": "論文はまず既存方式をプロファイルし、HybriMoEでPCIe転送が推論時間の60%以上を占める場合や、静的なCPU/GPU分担が入力により不均衡になることを動機として示す。その後、配置器、残差先読み、負荷履歴キャッシュを個別に分解評価し、最後に三機構を統合したエンドツーエンド処理速度を複数モデルで比較する。厳密配置との比較では計画時間を含めるため、理論的に良い割当と実際の低遅延推論を区別している。主要な性能値はシミュレーションではなく実CPU・GPU上の測定である。",
-    "scope": "主対象は、全MoEエキスパート重みをCPU DRAMへ保持できる一方、GPU HBMには一部しか載らないローカルPCである。CPU DRAMよりさらに下のNVMe SSDから重みを直接ストリーミングする経路、複数ノード分散、CXLメモリ、高帯域GPUサーバーは主要評価外である。また負荷予測は事前ウォームアップのハードウェア時間表とWikiText校正残差を利用するため、ハードウェアや入力分布が大きく変化した場合の再校正費用は追加検証が必要である。"
+    "correctness": "ルータを変えるため生成結果の数学的同一性は保証しない。その代わりGSM8K、HumanEval、MMLU、IFEvalと次トークン指標を測定し、Trust-KLを外した場合との比較も行う。MMLUは57.72から57.81、HumanEvalは26.83から29.27へ変化し、GSM8K strictは38.89から38.13へ0.76ポイント低下した。CE-onlyが局所性と能力の両方を悪化させることも確認し、改善を単なる追加学習の効果と区別する。",
+    "methodology": "評価はアクセス系列、キャッシュ挙動、実システム性能、モデル能力の四段階で行う。まずteacher forcingで隣接トークンのTop-K重複とルーティング集中度を測り、次に同じ系列を複数置換方式のキャッシュシミュレータへ流して固有重み読込数を測る。その後vLLMのGPU-CPUオフロードとJetsonのNVMe SSD-backed llama.cppで実際の遅延へ変換されることを確認し、最後に標準ベンチマークとアブレーションで品質維持の原因を検証する。加えて別MoEモデル、GPU、NPUにも広げている。",
+    "scope": "主眼は単一要求・バッチ1のメモリ制約推論である。大規模データセンターの専門家並列では負荷集中が通信・計算不均衡を悪化させる可能性があり、同じ目的関数がそのまま適切とは限らない。JetsonではSSD-backed実測を行う一方、キャッシュ容量ごとの広い比較はトレースシミュレーションである。またゲート微調整に100,000件のデータと2,000ステップを要するため、完全な学習不要方式ではない。"
   }
 }
