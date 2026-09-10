@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-27a27187b737623f",
+  "type": "research",
+  "parent_job_id": "job-548d4a4c70c0be7a",
+  "priority": 80,
+  "canonical_id": "arXiv:2607.10183",
+  "title": "Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices",
+  "source_url": "https://arxiv.org/abs/2607.10183",
+  "paper_path": null,
+  "selection_reason": "民生機器で従来の層単位・専門家単位より細かいテンソル粒度のCPU-GPU配置を行い、静的配置・負荷追従転送・非同期実行を統合する。dense/MoE双方でprefill最大1.94倍、decode最大3.29倍を報告し、ローカルGPUメモリ不足とPCIe帯域利用の研究として未登録。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T07:23:51+00:00",
+  "completed_at": "2026-09-10T07:23:51+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2607.10183",
+  "duplicate_of_path": "papers/inference/08-edge-on-device-llm-systems/2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2607.10183"
+  }
+}
