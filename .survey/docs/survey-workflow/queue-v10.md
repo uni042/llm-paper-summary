@@ -186,5 +186,3 @@ seed保存後はjob実体化を待たず同じrunで候補を精読し、完成r
 - completionはActions result + latest queueで検証する。
 - 同一payloadの重複copyは同じenvelope IDで冪等に収束させる。
 - pending/replay失敗、bank exhaustion、1本処理完了をrun終了理由にしない。
-
-v9のMarkdown chunk経路は復旧互換として残すが、v10通常経路では使わない。
