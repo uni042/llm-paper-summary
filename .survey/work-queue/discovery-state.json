@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-10T13:08:00+00:00",
+  "updated_at": "2026-09-10T13:18:00+00:00",
   "last_run_key": "2026-09-10T21:30:00+09:00",
-  "last_round": "edge-moe-npu-adjacent-1",
+  "last_round": "ssd-hierarchical-kv-2",
   "paper_stock_zero_count": 0,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -23,6 +23,20 @@
       "accepted_canonical_ids": ["arxiv:2604.18788"],
       "duplicate_canonical_ids": ["arxiv:2607.16892"],
       "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
+    },
+    {
+      "run_key": "2026-09-10T21:30:00+09:00",
+      "round": "ssd-hierarchical-kv-2",
+      "axis": "SSD・異種GPU階層KVキャッシュ",
+      "query_summary": "NVMe SSD直接入出力、ページキャッシュ迂回、GPU間NVLink共有を使う最近のKVキャッシュサービング研究を探索し、arXiv IDとrepo検索で先行重複確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": ["arxiv:2605.03375", "arxiv:2604.26557", "arxiv:2606.16135"],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"
     }
   ],
   "axes": {
@@ -35,6 +49,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
+    },
+    "SSD・異種GPU階層KVキャッシュ": {
+      "last_run_key": "2026-09-10T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
