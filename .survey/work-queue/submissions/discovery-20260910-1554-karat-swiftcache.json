@@ -1,0 +1,21 @@
+{
+  "job_id": "job-67ea5e160b0f4647",
+  "candidates": [
+    {
+      "canonical_id": "arxiv:2608.03555",
+      "title": "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2608.03555",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
+      "priority": 91,
+      "reason": "検索型疎注意を使う超長文LLMで、KVキャッシュと索引をGPU外の処理近傍メモリ（Processing-Near-Memory; PNM）へ移し、GPUは重み・MoE計算、PNMはKV参照処理を担当する異種推論システム。実エージェント系トレースでサービス品質目標下の電力当たりスループットをGPU単独比2.09〜6.13倍と報告しており、KVオフロード・階層メモリ・MoE通信を横断するため優先度が高い。"
+    },
+    {
+      "canonical_id": "arxiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 87,
+      "reason": "複数モデル同居環境で、KV需要の少ないモデルの未使用GPUメモリを高需要モデルの接頭辞KVキャッシュへ貸し出し、NVLink経由でモデル間共有するサービング方式。さらに現在層のKVだけをローカルGPUに置くことで長文推論を拡張し、実ワークロードでP99初回トークン時間を最大69%削減、最大文脈長を最大3.98倍へ拡張すると報告している。"
+    }
+  ]
+}
