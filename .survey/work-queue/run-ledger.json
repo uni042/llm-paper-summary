@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T23:13:28.027534+00:00",
+  "updated_at": "2026-09-10T23:15:39.469895+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2351,7 +2351,7 @@
     {
       "run_key": "2026-09-11T07:30:00+09:00",
       "first_recorded_at": "2026-09-10T22:38:45.285188+00:00",
-      "last_recorded_at": "2026-09-10T23:13:28.027534+00:00",
+      "last_recorded_at": "2026-09-10T23:15:39.469895+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -2361,9 +2361,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 1,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 17,
+        "new_jobs": 18,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -2541,6 +2541,20 @@
             "audit_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34541319847:1",
+          "recorded_at": "2026-09-10T23:15:39.469895+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34541319847",
+            "run_attempt": "1",
+            "source_sha": "5097871f4e135cf279912ce7d7aa80767c6d8a65"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -2637,6 +2651,14 @@
           "type": "audit",
           "canonical_id": "arXiv:2607.00466",
           "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-527bd72a0f02b02a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -2760,6 +2782,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-8d98bc0d01484eb6",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -2773,7 +2802,8 @@
         ".survey/work-queue/results/20260911T0748JST-discovery-2b92b80082f335b9.json",
         ".survey/work-queue/results/20260911T0755JST-discovery-9ac4f6172daefb14.json",
         ".survey/work-queue/results/20260911T0759JST-discovery-09bf82dae3c959dd.json",
-        ".survey/work-queue/results/20260911T0802JST-discovery-f513abae44407875.json"
+        ".survey/work-queue/results/20260911T0802JST-discovery-f513abae44407875.json",
+        ".survey/work-queue/results/20260911T0815JST-discovery-527bd72a0f02b02a.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 231,
