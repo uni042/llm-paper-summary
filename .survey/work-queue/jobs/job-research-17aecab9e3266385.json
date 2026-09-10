@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-17aecab9e3266385",
+  "type": "research",
+  "parent_job_id": "job-a07bff81409aa153",
+  "priority": 78,
+  "canonical_id": "arXiv:2606.22327",
+  "title": "Online Scheduling for LLM Inference with KV Cache Constraints",
+  "source_url": "https://arxiv.org/abs/2606.22327",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-online-scheduling-kv-cache-constraints.md",
+  "selection_reason": "KV容量制約下のオンライン要求スケジューリングについて、半オンライン最適解、確率到着で定数リグレットのオンライン法、敵対到着で定数競争比不可能という理論限界を実機評価へ接続する。既存ヒューリスティックの位置付けを明確にする重要な補完研究である。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T23:20:54+00:00",
+  "completed_at": "2026-09-10T23:20:58+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2606.22327",
+  "duplicate_of_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2606.22327"
+  }
+}
