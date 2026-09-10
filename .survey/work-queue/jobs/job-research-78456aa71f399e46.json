@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-78456aa71f399e46",
+  "type": "research",
+  "parent_job_id": "job-6e2765868d7d7849",
+  "priority": 80,
+  "canonical_id": "arXiv:2508.13231",
+  "title": "Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System",
+  "source_url": "https://arxiv.org/abs/2508.13231",
+  "paper_path": null,
+  "selection_reason": "HBMと高速off-package DRAMを併用する異種memory環境で、attention sparsityによりtokenごとのKVアクセス重要度が時間変動する状況を対象に、容量制約下の動的KV配置問題を定式化し集約帯域の理論上限を導く。具体的runtime policyより設計空間と上限分析が中心だが、KV cacheを異種memory間で動的配置する研究の基礎として、offload/階層memory系統の比較に有用。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T08:31:24+00:00",
+  "completed_at": "2026-09-10T08:31:25+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2508.13231",
+  "duplicate_of_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2508.13231"
+  }
+}

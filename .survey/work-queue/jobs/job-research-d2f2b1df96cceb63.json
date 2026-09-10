@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-d2f2b1df96cceb63",
+  "type": "research",
+  "parent_job_id": "job-6e2765868d7d7849",
+  "priority": 83,
+  "canonical_id": "arXiv:2606.24467",
+  "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+  "source_url": "https://arxiv.org/abs/2606.24467",
+  "paper_path": null,
+  "selection_reason": "GQA系LLMで全headのattention scoreを一律利用するKV evictionが意味的に重要なtokenを落とす問題に対し、意味検索headを同定してtoken保持判定に使い、layer別eviction error推定でcache budgetも配分する。LongBench QAでKVの3%のみでもfull-cache性能の97%以上、Needle-in-a-Haystackで0.7% KV storageでも90% accuracyを報告し、長文推論の容量削減と品質維持の設計として価値がある。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-10T08:31:24+00:00",
+  "completed_at": "2026-09-10T08:31:25+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2606.24467",
+  "duplicate_of_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2606.24467"
+  }
+}

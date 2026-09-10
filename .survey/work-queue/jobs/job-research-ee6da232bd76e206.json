@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-ee6da232bd76e206",
+  "type": "research",
+  "parent_job_id": "job-6e2765868d7d7849",
+  "priority": 90,
+  "canonical_id": "arXiv:2606.10493",
+  "title": "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+  "source_url": "https://arxiv.org/abs/2606.10493",
+  "paper_path": null,
+  "selection_reason": "ローカル環境で巨大MoEを容量削減なしに動かしつつクラウド級SLOを満たすことを狙い、stream-loading prefill、複数GPU向け分散SLP、同一ノード内prefill-decode分離、重みzero-copy共有、attention-MoE overlap、AVX-512 FP8 GEMVを統合するCPU-GPU協調推論システム。32K promptを30秒以内、2枚のRTX 5090で45K promptを30秒以内、混合負荷で50% throughput向上、DeepSeek-V3 decode 28 tok/sなどを報告しており、consumer/local MoE servingとして重要。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T08:31:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}
