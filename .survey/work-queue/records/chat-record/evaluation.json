@@ -2,17 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-nvllm-20260911-0130-v10-a3",
-  "job_id": "job-research-0128b9e7e743cda7",
+  "attempt_id": "attempt-vericache-20260911-0230-v10-a1",
+  "job_id": "job-research-3825f981fb90605e",
   "data": {
-    "hardware": ["3D NAND面モデル: 基本構成128GiB、32面、16KiBページバッファ、面読出し約5.12µs", "NAND CMOS側350MHz、外部NPU 500MHz、構成別総演算性能307〜486GOPS", "注意重みとKV用LPDDR5X", "比較用実機はNVIDIA A800 80GB、Intel Xeon Gold 6348、512GiB DRAM、5.2TB NVMe SSD"],
-    "software": ["3D-FPIMを基にしたNAND面モデル", "Ramulator2", "DRAMPower", "サイクル精度C++シミュレータ", "FlexGenによるGPU-SSD比較", "Verilog HDLとSynopsys Design CompilerによるTSMC 28nm合成"],
-    "model": ["OPT 1.3B", "OPT 2.7B", "OPT 6.7B", "OPT 13B", "OPT 30B", "LLaMA系モデル", "LLaMA2-7B"],
-    "baselines": ["GPU-DRAM", "GPU-SSD/FlexGen", "Cambricon-LLM", "AiF", "AiF--"],
-    "methodology": "著者らは3D-FPIMのNAND面モデルを商用3D NANDの技術値に合わせ、ウェハ間接合のロジック面積も既存製品の分解情報を参考に制約する。Q/K/V/O重みとKVを置くLPDDR5XはRamulator2とDRAMPowerで遅延・エネルギーをモデル化し、NANDとDRAM、NPU、スケジューラをサイクル精度C++シミュレータへ統合する。モデルは端末推論を想定してINT8化し、OPT 1.3B〜30BとLLaMA系を評価する。NANDの生読出し誤りについてはランダムなビット反転を注入し、誤り耐性積和演算器が訂正待ちを隠せるかを調べる。比較対象のGPU-SSDはA800 80GBと5.2TB NVMe SSD上のFlexGen、GPU-DRAMは重みが主記憶にある経路を用いる。SSD近傍計算系との比較ではNVLLM-16Cを16クラスタ・64面へ拡張し、Cambricon-LLM、AiF、AiF--と条件を揃える。主要回路はVerilog HDLで記述しTSMC 28nm条件で論理合成する。",
-    "metrics": ["生成速度（トークン/秒）", "推論遅延（秒）", "データ移動エネルギー（J/token）", "面積・電力", "NAND誤り訂正による待ち時間", "内部メモリ帯域"],
-    "workloads": "主なデコード生成速度比較では64トークン文脈を用い、モデルサイズを1.3Bから30Bまで変えて容量超過時の重み移動を比較する。プリフィルとデコードを含む遅延評価では16/16、64/64、256/256、1024/1024トークンなど系列長を増やし、長文化したときの注意・KV側負荷も含める。SSD型近傍計算比較ではLLaMA2-7Bを用い、公開論文に合わせた装置帯域・構成を再現する。",
-    "scope": "NVLLMの主要性能値はサイクル精度シミュレータによるアーキテクチャ評価である。NAND読出し特性と面積制約は既存モデル・商用品データで較正され、DRAMはRamulator2/DRAMPower、ロジックは28nm合成で評価されるが、ウェハ接合した物理NVLLMチップや端末上の実システムは製造・測定されていない。GPU-SSD基準は実機FlexGenを用いる一方、NVLLM側との比較はシミュレーションなので、絶対性能にはモデル化誤差が残る。主要モデルはINT8で、量子化による品質変化をNVLLM機構とは分離して扱う必要がある。",
-    "hardware_overhead": "合成結果では外部NPU相当が約0.46mm²・240.15mW、NAND CMOSロジックが約2.69mm²・895.68mWで、追加したin-Flash推論回路はNAND CMOS総面積の約2.7%に相当する。これにより大規模な演算アレイを追加せず、NAND面並列性とデータ近傍性を利用する設計を狙う。"
+    "hardware": ["Mistral-24B・Qwen-32B: NVIDIA RTX PRO 6000 96GB", "Llama-70B: NVIDIA H100 NVL 94GBを2基、テンソル並列2", "CPU・GPU間: PCIe 5.0 x16、64GB/s", "共有KVストアへの局所経路40GB/s、遠隔経路1.2GB/s"],
+    "software": ["vLLM", "LMCache", "VeriCache約8千行のPython/C++実装"],
+    "model": ["Mistral-24B", "Qwen-32B", "Llama-70B", "ハードウェア感度分析ではQwen-8B・Qwen-14Bも使用"],
+    "datasets": ["LMCache-trace 900標本: 完全KVとの差のKLダイバージェンス", "ComplexFuncBench 150標本: 関数呼び出し引数の完全一致率", "PISanitizer 50標本: プロンプト注入への防御成功率", "LongGenBench 50標本: 指示制約の達成率", "GSM8K-Long 100標本: 連鎖計算問題の完全正解率"],
+    "baselines": ["完全KV推論", "EAGLE3", "SparseSpec", "KVzip", "KIVI", "ExpectedAttention", "SnapKV", "KVQuant", "RotateKV"],
+    "correctness": "貪欲生成では完全KVと同一トークン列を目標とし、品質比較では完全KVからのKLダイバージェンス、関数呼び出し引数の完全一致、プロンプト注入防御成功率、長文制約達成率、計算問題の正解率を測る。圧縮方式単体が自然言語類似度を維持していても機能正確性を失う点を明示的に評価する。",
+    "settings": [
+      {"name": "長文デコード構成", "description": "文脈KVをCPUメモリまたはストレージへ事前計算し、単一の推論インスタンスで圧縮KVをGPUへ常駐させる。主要比較ではKVzipの保持率0.2、候補長25を用い、完全KVをCPU・GPU間で検証時だけ再読込みする。"},
+      {"name": "遠隔プリフィックス再利用構成", "description": "一つの局所GPUインスタンスと四つの遠隔GPUインスタンスが共有KVストアを使う。主要比較ではKIVIの4ビット量子化、候補長40を用い、遠隔側へ圧縮KVを低速経路で送り、局所側が完全KVを高速経路で読み込んで検証する。"},
+      {"name": "圧縮強度掃引", "description": "オフラインのトークン間引きは保持率0.25・0.5・0.75、オンライン間引きはKV予算1024・2048・4096トークン、量子化は8・4・2ビットを変え、品質とスループットの曲線を比較する。"}
+    ],
+    "methodology": "著者らは二つの配備形態を実機で評価する。第一は長文デコードで、圧縮KVをGPU HBMに置いたまま候補生成し、完全KVはCPUメモリまたはストレージから必要時だけ読み戻す。第二は遠隔プリフィックス再利用で、低速経路につながる遠隔GPUが圧縮KVから候補を生成し、高速経路を持つ局所GPUが完全KVで検証する。候補生成器としてKVzipまたはKIVIを固定した主要比較に加え、7種類の圧縮法へ差し替えて一般性を調べる。性能指標はエンドツーエンド要求遅延とトークン毎秒のスループットで、品質は完全KVとの差とタスク固有の機能正確性を測る。さらにGPU HBMのKV予算、HBM帯域と相互接続帯域の比、遠隔GPU数と局所GPU数の比、遠隔KV到着時間を掃引し、どの資源が律速すると利益が変わるかを分離している。",
+    "scope": "主要値は実GPU・実相互接続上のシステム評価であり、単なる解析モデルやシミュレーションではない。ただし評価モデルは24B〜70B級を中心とし、相互接続はPCIe 5.0 x16、局所40GB/s、遠隔1.2GB/sという設定である。完全KVの外部保持容量そのものは無料ではなく、CPUメモリまたはストレージ側に完全KVを追加保持する必要がある。また候補長はワークロードごとに固定され、圧縮方式と文脈が変わった場合の最適値を要求単位で自動追従する評価ではない。したがって報告倍率は、KV容量圧迫が大きく、完全KV再読込みを候補生成と十分重ねられる配備で最も有効と解釈すべきである。"
   }
 }
