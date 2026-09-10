@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3b8e09c2d256c523",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.04476",
+      "title": "Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems",
+      "source_url": "https://arxiv.org/abs/2512.04476",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+      "priority": 87,
+      "reason": "GPU HBMに収まらないMoEで、低頻度エキスパート重みをCXL接続のデータ近傍処理側へ置き、重み転送を活性値転送へ置き換える。プリフィル時の活性統計からデコード時の高頻度エキスパートをGPUへ固定し、残りをCXL-NDPで実行するほか、NDP計算能力に合わせてエキスパートごとの1〜4ビット精度も決める。GPU・外部メモリ間で何を移すべきかという階層配置問題をMoEルーティング文脈と結び付け、最大8.7倍のデコードスループット、平均0.13%精度低下を報告するため、オフロード・CXL・MoE配置系統として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.18529",
+      "title": "HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing",
+      "source_url": "https://arxiv.org/abs/2604.18529",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.18529-hybridgen-cpu-gpu-cxl-attention.md",
+      "priority": 84,
+      "reason": "長文脈KVを単純にCPU/CXLへ退避するだけでなく、CPUとGPUの双方で注意計算を分担する階層メモリ推論方式。注意ロジット並列、フィードバック型負荷調停、意味情報を使うKV配置を組み合わせ、CXL拡張メモリのNUMA費用とCPU/GPU負荷不均衡を同時に扱う。3種GPU基盤・11モデル規模で既存KV管理方式比平均1.41〜3.2倍を報告し、KVオフロードを『転送して戻す』から『データ側でも計算する』へ拡張する強い候補。"
+    },
+    {
+      "canonical_id": "arXiv:2511.00321",
+      "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+      "source_url": "https://arxiv.org/abs/2511.00321",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.00321-cxl-pnm-million-token-kv.md",
+      "priority": 80,
+      "reason": "100万トークン級KVをCXLメモリへ置く際、非常駐KVをGPUへ呼び戻す転送自体を避けるため、トークン選択と一部注意処理をCXL側のメモリ近傍処理器へ移す。GPU-PNM混成実行と安定トークン選択を含み、最大405Bモデル・100万トークン文脈で最大21.9倍スループット、最大60倍のトークン当たりエネルギー低減を報告する。CXL容量拡張と計算移動を一体化した長文脈KV系統として収録価値がある。"
+    }
+  ]
+}
