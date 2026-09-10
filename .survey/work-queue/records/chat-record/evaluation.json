@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-hymcache-20260910-2259-v10-a1",
-  "job_id": "job-research-8d7a64859cb47bc2",
+  "attempt_id": "attempt-spin-20260910-2308-v10-a1",
+  "job_id": "job-research-e6f55224859fd360",
   "data": {
-    "hardware": ["Dell PowerEdge R770サーバー×6", "Intel Xeon 6730×2/ノード", "DDR5 256GB/ノード", "NVIDIA A100 80GB/ノード", "FPGAベースCXL-HM試作機: デバイスDRAM 64GB、1TB Gen5x4 SSD×2", "100Gbpsポート、集約側最大200Gbps"],
-    "software": ["vLLM 0.19.0", "Dynamo 1.1.0", "NIXL", "LMCache", "Mooncake"],
-    "model": ["Llama-3.1-8B", "Qwen2.5-32B"],
-    "datasets": ["Dynamo AIPerfによるMooncake系合成トレース", "LMSYS複数ターン会話データセット"],
-    "baselines": ["毎回再計算", "GPU接頭辞キャッシュ", "各ワーカー64GBローカルDRAMのLMCache", "1TB遠隔DRAMのDistributed Mooncake", "NVMe-oF遠隔SSDのMooncake"],
+    "hardware": ["A100 80GB×4、AMD EPYC 7V12、DRAM 850GB、PCIe Gen4 32GB/s/GPU", "B200 180GB×4、Intel Xeon Platinum 8570、DRAM 1.5TB、PCIe Gen5 64GB/s/GPU"],
+    "software": ["vLLMベースSPIN", "約7千行のC++/CUDA中核", "約3千行のPython統合", "AIPerfオンライン評価"],
+    "model": ["Qwen3-14B", "Qwen3-32B", "Llama-3.1-70B"],
+    "datasets": ["LongBench-v2: 入力32K〜120K、平均55K、出力平均5K", "LongGenBench: 入力16K〜19K、平均18K、出力平均12K"],
+    "baselines": ["vLLM密注意", "CPUへKVを退避するvLLM-Offload", "GPUのみの疎注意LServe", "ShadowKV原実装", "RetroInfer原実装", "SeerAttention-R原実装"],
     "settings": [
-      {"name": "プリフィル・デコード分離構成", "description": "4台をプリフィル、1台をデコード兼制御、1台をストレージとして用いる4P-1D-1S構成。Qwen2.5-32BではKVブロック32MB、Llama-3.1-8Bでは16MB、ブロック長128トークン、KVはFP16/BF16。プリフィル側はNIXL用100GbpsとHyMCache用100Gbpsを分け、集約側は最大200Gbpsを使う。"},
-      {"name": "単一ノード構成", "description": "プリフィルとデコードを同居させ、Llama-3.1-8BとLMSYSから512会話、同時実行数32、最大10ターンで接頭辞再利用を測る。主評価では生成トークン数を1にして、デコード計算ではなく接頭辞の保存・再利用経路を重点的に測定する。"},
-      {"name": "遠隔階層比較", "description": "ローカルLMCacheは4ワーカーそれぞれ64GB DRAM、Distributed Mooncakeは1TBの共有遠隔DRAM、HyMCacheは64GBデバイスDRAMと2TB SSDを組み合わせる。容量、媒体遅延、ネットワーク転送の違いを、先頭トークン時間、エンドツーエンド遅延、遠隔命中率、帯域で比較する。"},
-      {"name": "プリフェッチ評価", "description": "LMSYSの入力2K文字超、512会話、同時実行数64を用い、プリフェッチ有無の単体測定と実ワークロード測定を行う。後半ターンでは外部KV命中率が90%を超える条件で、ネットワーク帯域と実行時間の改善を測る。"}
+      {"name": "オンラインサービング", "description": "要求到着をポアソン過程で生成して到着率を変え、1・2・4 GPUで測定する。原則として1 GPUはQwen3-14B、2 GPUはQwen3-32B、4 GPUはLlama-3.1-70Bを用い、LongBench-v2とLongGenBenchの異なる入出力長比でオンラインスループット、TTFT、TPOT、平均バッチ数を比較する。"},
+      {"name": "3種類の疎注意統合", "description": "ShadowKVは取得予算1.56%、パーティション8トークン、物理ページ8トークン、RetroInferは取得予算1.8%、可変パーティション、ページ8トークン、SeerAttention-Rは固定2Kトークン取得、パーティション・ページ32トークンという原方式の既定条件を使う。"},
+      {"name": "オフライン段階別評価", "description": "Qwen3-14Bを中心に文脈長16K、32K、64K、さらに120K級まで変え、プリフィルとデコードを分離して測定する。オンラインスケジューラを持たない原疎注意実装やLServeとも、この制御条件で直接比較する。"},
+      {"name": "構成要素評価", "description": "GPUキャッシュなし、現在段の必須ページのみ保持、バケット化LRU追加を順に比較するほか、バッファ対必須ページ比と二階層索引のメタデータ量を測り、転送削減とHBM管理費の寄与を分離する。"}
     ],
-    "correctness": "保存済みKV値を近似・圧縮せずそのまま再利用する。遠隔KVが所定時間内に準備できない場合は通常のプリフィル再計算へ戻るため、キャッシュの準備失敗を生成内容の欠落へ変えない。",
-    "methodology": "主評価は実際のCXL-HM試作機とA100サーバー群で行い、接頭辞再利用の容量効果と媒体遅延を分離するため、再計算、GPUキャッシュ、ローカルDRAM、1TB遠隔DRAM、NVMe-oF SSDを比較する。さらにホスト転送バッファ容量、CXL-HMプリフェッチ、単一ノードとプリフィル・デコード分離を個別に変え、どの構成要素が性能差を作るかを確認する。",
-    "scope": "実機システム研究だが、CXL-HMはFPGAベースの試作機であり量産CXLメモリラックではない。多くのサービング評価は生成トークン数1として接頭辞再利用を強く切り出しており、長いデコードを伴う一般チャットや推論時のKV増加まで同じ比率で高速化するとは限らない。"
+    "correctness": "SPINはShadowKV、RetroInfer、SeerAttention-Rそれぞれの重要KV選択規則と既定取得量を保ち、主に実行・保存・転送を共通化する。したがってSPIN固有の比較では、元疎注意方式に対して新たなモデル近似を追加せず同じ選択KVで性能を改善する。",
+    "methodology": "A100とB200、三つのモデル規模、長入力中心と長出力中心の二つの長文ベンチマークを組み合わせ、オンラインとオフラインを分けて評価する。密注意、単純CPU退避、GPU疎注意、各疎注意原実装を比較し、単に疎性による理論計算削減ではなく、要求同時実行数、PCIe取得時間、GPUバッファ命中、メタデータHBM量まで測ってシステム寄与を検証する。",
+    "scope": "単一サーバー内のGPU・CPU DRAM階層を対象とする実機研究で、SSD、CXL、遠隔KVストアは評価対象ではない。B200の低負荷では密注意の高速なHBM・計算能力によりSPINがvLLMを下回る条件もあり、疎注意と階層転送の固定費が常に回収できるわけではない。"
   }
 }
