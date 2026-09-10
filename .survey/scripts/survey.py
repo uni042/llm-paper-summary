@@ -15,8 +15,16 @@ from pathlib import Path
 
 import yaml
 
+# ROOT is the .survey working root in production. Tests may point it at a
+# temporary repository root directly. Keep state beneath ROOT, but resolve
+# repository artifacts (papers/ and top-level READMEs) from repository_root().
 ROOT = Path(__file__).resolve().parents[1]
 STATE = "survey-state/"
+
+
+def repository_root() -> Path:
+    root = ROOT.resolve()
+    return root.parent if root.name == ".survey" else root
 
 
 def read(path, default=None):
@@ -54,11 +62,12 @@ def norm_id(value):
 
 
 def papers():
+    repo = repository_root()
     old = read(STATE + "paper-identity-index.json", {}) or {}
     moved = set(old.get("ignored_moved_stubs", []))
     records = []
-    for p in sorted((ROOT / "papers/inference").glob("*/*.md")):
-        rel = p.relative_to(ROOT).as_posix()
+    for p in sorted((repo / "papers/inference").glob("*/*.md")):
+        rel = p.relative_to(repo).as_posix()
         if p.name == "README.md" or rel.removeprefix("papers/inference/") in moved:
             continue
         meta, _ = front(p)
@@ -110,13 +119,13 @@ def cell(value):
 
 
 def put_text(path, text):
-    p = ROOT / path
+    p = repository_root() / path
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(text, encoding="utf-8")
 
 
 def block(path, text):
-    p = ROOT / path
+    p = repository_root() / path
     content = p.read_text(encoding="utf-8")
     start, end = "<!-- survey:auto:start -->", "<!-- survey:auto:end -->"
     replacement = start + "\n" + text + "\n" + end
@@ -128,6 +137,7 @@ def block(path, text):
 
 
 def render():
+    repo = repository_root()
     records = papers()
     write(STATE + "paper-identity-index.json", identity(records))
     grouped = {}
@@ -142,18 +152,18 @@ def render():
     overview += [f"| [{k}]({k}/README.md) | {len(v)} |" for k, v in sorted(grouped.items())]
     block("papers/inference/README.md", "\n".join(overview))
     for path in ["papers/inference/README.md", "papers/README.md", "README.md"]:
-        p = ROOT / path
+        p = repo / path
         content = p.read_text(encoding="utf-8")
         for lineage, rows in grouped.items():
             content = re.sub(r"(\]\((?:inference/)?" + re.escape(lineage) + r"/\) — )\d+本", lambda m: m[1] + str(len(rows)) + "本", content)
         if path == "papers/inference/README.md":
             content = re.sub(r"収録論文: \*\*\d+本\*\*", f"収録論文: **{len(records)}本**", content)
         elif path == "papers/README.md":
-            training = len(list((ROOT / "papers/training").glob("*/*.md"))) - len(list((ROOT / "papers/training").glob("*/README.md")))
+            training = len(list((repo / "papers/training").glob("*/*.md"))) - len(list((repo / "papers/training").glob("*/README.md")))
             content = re.sub(r"収録論文: \*\*\d+本\*\*", f"収録論文: **{len(records) + training}本**", content)
             content = re.sub(r"## Inference / 推論 — \d+本", f"## Inference / 推論 — {len(records)}本", content)
         else:
-            training = len(list((ROOT / "papers/training").glob("*/*.md"))) - len(list((ROOT / "papers/training").glob("*/README.md")))
+            training = len(list((repo / "papers/training").glob("*/*.md"))) - len(list((repo / "papers/training").glob("*/README.md")))
             content = re.sub(r"(\[Inference / 推論\]\(papers/inference/\) — \*\*)\d+本", lambda m: m[1] + str(len(records)) + "本", content)
             content = re.sub(r"現在の論文収録数: .*", f"現在の論文収録数: **{len(records) + training}本**（推論{len(records)}本 + 学習{training}本）", content)
         p.write_text(content, encoding="utf-8")
