@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-1eeaee8a7ab27e13",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.17613",
+      "title": "VeriCache: Turning Lossy KV Cache into Lossless LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.17613",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+      "priority": 80,
+      "reason": "圧縮KVキャッシュでドラフトし、GPU外に保持した完全KVキャッシュで検証することで、量子化・token droppingなどの損失圧縮を使いながらfull-KVと同一出力を保証する推論フレームワーク。圧縮KVデコードのHBM帯域利用と完全KVのPCIe/ネットワーク転送を重ね、長いdraft horizonでswapコストを償却する。最大4倍のthroughputを報告しており、KV圧縮とoffload/verificationを組み合わせる系統として既存の階層KV研究と異なる比較軸を持つ。"
+    }
+  ]
+}
