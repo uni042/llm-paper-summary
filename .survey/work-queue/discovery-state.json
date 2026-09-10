@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-10T13:18:00+00:00",
-  "last_run_key": "2026-09-10T21:30:00+09:00",
-  "last_round": "ssd-hierarchical-kv-2",
-  "paper_stock_zero_count": 0,
+  "updated_at": "2026-09-10T13:36:00+00:00",
+  "last_run_key": "2026-09-10T22:30:00+09:00",
+  "last_round": "hierarchical-kv-storage-adjacent-1",
+  "paper_stock_zero_count": 1,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
@@ -37,6 +37,20 @@
       "accepted_canonical_ids": ["arxiv:2605.03375", "arxiv:2604.26557", "arxiv:2606.16135"],
       "duplicate_canonical_ids": [],
       "next_axis_hint": "SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"
+    },
+    {
+      "run_key": "2026-09-10T22:30:00+09:00",
+      "round": "hierarchical-kv-storage-adjacent-1",
+      "axis": "階層KV・ストレージ隣接拡張",
+      "query_summary": "SSD-backed KVの既知候補を先に既存job/identityで除外し、SmartSSD、CXLハイブリッドメモリ、NPU内階層メモリ、疎注意とGPU/CPU階層KV、CPU大容量最終キャッシュへ探索軸を拡張した。",
+      "candidate_count": 9,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.4444444444,
+      "accepted_canonical_ids": ["arxiv:2602.18750", "arxiv:2607.18141", "arxiv:2604.07396", "arxiv:2604.26837", "arxiv:2606.25353"],
+      "duplicate_canonical_ids": ["arxiv:2604.26557", "arxiv:2605.03375", "arxiv:2606.16135", "arxiv:2605.18071"],
+      "next_axis_hint": "まずSmartSSD/CXL/疎注意階層KVを精読し、ストック消化後はMoE expert streamingとSSD/NPU協調へ軸を移す"
     }
   ],
   "axes": {
@@ -59,6 +73,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"
+    },
+    "階層KV・ストレージ隣接拡張": {
+      "last_run_key": "2026-09-10T22:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.4444444444,
+      "next_axis_hint": "まずSmartSSD/CXL/疎注意階層KVを精読し、ストック消化後はMoE expert streamingとSSD/NPU協調へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
