@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f6c4789f353a56da",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25699",
+      "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.25699",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md",
+      "priority": 86,
+      "reason": "3D NAND内でFFN重みをDRAMへ移さず直接処理し、注意機構は外部DRAM側で実行するNAND中心の階層型LLM推論アーキテクチャ。OPT/LLaMA最大30BでA800のout-of-core推論比16.7〜37.9倍、SSD風設計比最大4.7倍を報告しており、SSDを単なる低速退避先ではなく計算場所へ変える方向としてリポジトリのSSD活用研究に直接関係する。"
+    }
+  ]
+}
