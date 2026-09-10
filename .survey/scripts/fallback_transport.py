@@ -1,0 +1,257 @@
+#!/usr/bin/env python3
+"""Shared validation and GitHub intake helpers for survey fallback envelopes.
+
+Google Drive and ChatGPT Library use the same immutable envelope format.  Both
+fallbacks recover by placing that envelope into a unique GitHub fallback inbox;
+only the normal survey-helper workflow expands transport writes into reusable
+record banks/inboxes.  This keeps cross-outbox recovery serialized and makes
+duplicate envelope IDs globally idempotent.
+"""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path, PurePosixPath
+from typing import Any
+
+from record_bank_config import BANK_PATH_PREFIXES, SLOT_NAMES
+
+CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
+CHAT_RESULT = ".survey/work-queue/results/chat-inbox.json"
+GENERIC_PREFIXES = (
+    ".survey/work-queue/submissions/",
+    ".survey/work-queue/transport/",
+    ".survey/update-worker/",
+)
+ALLOWED_PREFIXES = BANK_PATH_PREFIXES + GENERIC_PREFIXES
+MAX_ENVELOPE_BYTES = 2 * 1024 * 1024
+MAX_WRITES = 16
+MAX_CONTENT_BYTES = 1024 * 1024
+ENVELOPE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
+TERMINAL_JOB_STATES = {"completed", "rejected", "superseded", "blocked_permanent"}
+
+FALLBACK_INBOX = Path(".survey/work-queue/fallback-inbox")
+FALLBACK_ARCHIVE = Path(".survey/work-queue/fallback-archive")
+FALLBACK_FAILED = Path(".survey/work-queue/fallback-failed")
+
+
+def read_object(path: Path) -> dict[str, Any] | None:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def validate_repo_path(raw: Any) -> str:
+    if not isinstance(raw, str) or not raw:
+        raise ValueError("write.path must be a non-empty string")
+    p = PurePosixPath(raw)
+    if p.is_absolute() or ".." in p.parts or "\\" in raw:
+        raise ValueError(f"unsafe repository path: {raw!r}")
+    normalized = str(p)
+    if not normalized.endswith(".json"):
+        raise ValueError(f"only JSON transport files are allowed: {normalized}")
+    if not any(normalized.startswith(prefix) for prefix in ALLOWED_PREFIXES):
+        raise ValueError(f"path is outside fallback allowlist: {normalized}")
+    for prefix in BANK_PATH_PREFIXES:
+        if normalized.startswith(prefix):
+            if PurePosixPath(normalized).name not in {f"{slot}.json" for slot in SLOT_NAMES}:
+                raise ValueError(f"unexpected record-bank file: {normalized}")
+            break
+    return normalized
+
+
+def validate_envelope(data: Any) -> dict[str, Any]:
+    if not isinstance(data, dict):
+        raise ValueError("envelope root must be an object")
+    if data.get("schema_version") != 1:
+        raise ValueError("schema_version must be 1")
+    envelope_id = data.get("id")
+    if not isinstance(envelope_id, str) or not ENVELOPE_ID_RE.fullmatch(envelope_id):
+        raise ValueError("id must match [A-Za-z0-9][A-Za-z0-9._-]{0,159}")
+    writes = data.get("writes")
+    if not isinstance(writes, list) or not writes:
+        raise ValueError("writes must be a non-empty array")
+    if len(writes) > MAX_WRITES:
+        raise ValueError(f"too many writes; max={MAX_WRITES}")
+
+    normalized_writes: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for item in writes:
+        if not isinstance(item, dict):
+            raise ValueError("each writes item must be an object")
+        path = validate_repo_path(item.get("path"))
+        if path in seen:
+            raise ValueError(f"duplicate write path in one envelope: {path}")
+        seen.add(path)
+        content = item.get("content")
+        if not isinstance(content, str):
+            raise ValueError(f"content for {path} must be a string")
+        if len(content.encode("utf-8")) > MAX_CONTENT_BYTES:
+            raise ValueError(f"content too large for {path}")
+        json.loads(content)
+        normalized_writes.append({"path": path, "content": content})
+
+    out = dict(data)
+    out["id"] = envelope_id
+    out["writes"] = normalized_writes
+    validate_logical_bundle(out)
+    return out
+
+
+def validate_logical_bundle(envelope: dict[str, Any]) -> None:
+    record_paths = [
+        write["path"]
+        for write in envelope["writes"]
+        if any(write["path"].startswith(prefix) for prefix in BANK_PATH_PREFIXES)
+    ]
+    if not record_paths:
+        return
+
+    roots: set[str] = set()
+    names: set[str] = set()
+    for path in record_paths:
+        p = PurePosixPath(path)
+        roots.add(str(p.parent))
+        names.add(p.name)
+    if len(roots) != 1:
+        raise ValueError("one research envelope must use exactly one record bank")
+    expected = {f"{slot}.json" for slot in SLOT_NAMES}
+    if names != expected or len(record_paths) != len(expected):
+        raise ValueError("research envelope must contain all five record slots exactly once")
+    if CHAT_INBOX not in {write["path"] for write in envelope["writes"]}:
+        raise ValueError("research envelope with record slots must also contain chat-inbox.json")
+
+
+def canonical_text(envelope: dict[str, Any]) -> str:
+    return json.dumps(envelope, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
+def parse_envelope(raw: bytes | str) -> tuple[dict[str, Any], str]:
+    if isinstance(raw, bytes):
+        if len(raw) > MAX_ENVELOPE_BYTES:
+            raise ValueError(f"envelope exceeds {MAX_ENVELOPE_BYTES} bytes")
+        text = raw.decode("utf-8")
+    else:
+        text = raw
+        if len(text.encode("utf-8")) > MAX_ENVELOPE_BYTES:
+            raise ValueError(f"envelope exceeds {MAX_ENVELOPE_BYTES} bytes")
+    envelope = validate_envelope(json.loads(text))
+    return envelope, canonical_text(envelope)
+
+
+def envelope_path(base: Path, envelope_id: str) -> Path:
+    if not ENVELOPE_ID_RE.fullmatch(envelope_id):
+        raise ValueError("invalid envelope id")
+    return base / f"{envelope_id}.json"
+
+
+def _canonical_existing(path: Path) -> str | None:
+    try:
+        envelope, text = parse_envelope(path.read_bytes())
+    except Exception:
+        return None
+    return text
+
+
+def intake(repo_root: Path, envelope: dict[str, Any], text: str) -> dict[str, Any]:
+    """Place an envelope in the immutable GitHub fallback inbox idempotently."""
+    repo_root = repo_root.resolve()
+    envelope_id = envelope["id"]
+    inbox = envelope_path(repo_root / FALLBACK_INBOX, envelope_id)
+    archive = envelope_path(repo_root / FALLBACK_ARCHIVE, envelope_id)
+    failed = envelope_path(repo_root / FALLBACK_FAILED, envelope_id)
+
+    for path, state in ((archive, "already_archived"), (inbox, "already_pending")):
+        if not path.exists():
+            continue
+        existing = _canonical_existing(path)
+        if existing == text:
+            return {"status": state, "path": str(path.relative_to(repo_root))}
+        raise ValueError(f"envelope id conflict with {state}: {envelope_id}")
+
+    if failed.exists():
+        raise ValueError(f"envelope id was previously quarantined: {envelope_id}")
+
+    inbox.parent.mkdir(parents=True, exist_ok=True)
+    inbox.write_text(text, encoding="utf-8")
+    return {"status": "created", "path": str(inbox.relative_to(repo_root))}
+
+
+def chat_payload(envelope: dict[str, Any]) -> dict[str, Any] | None:
+    for write in envelope["writes"]:
+        if write["path"] == CHAT_INBOX:
+            try:
+                value = json.loads(write["content"])
+            except json.JSONDecodeError:
+                return None
+            return value if isinstance(value, dict) else None
+    return None
+
+
+def has_record_slots(envelope: dict[str, Any]) -> bool:
+    return any(
+        write["path"].startswith(prefix)
+        for write in envelope["writes"]
+        for prefix in BANK_PATH_PREFIXES
+    )
+
+
+def is_chat_envelope(envelope: dict[str, Any]) -> bool:
+    return bool(has_record_slots(envelope) or any(w["path"] == CHAT_INBOX for w in envelope["writes"]))
+
+
+def chat_transport_settled(repo_root: Path) -> bool:
+    inbox = read_object(repo_root / CHAT_INBOX)
+    if inbox is None:
+        return True
+    job_id = inbox.get("job_id")
+    if not isinstance(job_id, str) or not job_id:
+        return True
+    result = read_object(repo_root / CHAT_RESULT)
+    return bool(result and result.get("job_id") == job_id)
+
+
+def dependency_state(repo_root: Path, envelope: dict[str, Any]) -> tuple[bool, str | None]:
+    if not has_record_slots(envelope):
+        return True, None
+    payload = chat_payload(envelope)
+    if payload is None:
+        return False, "record bundle has no chat-inbox payload"
+    job_id = payload.get("job_id")
+    if not isinstance(job_id, str) or not job_id:
+        return False, "record bundle has no job_id"
+    job_path = repo_root / ".survey" / "work-queue" / "jobs" / f"{job_id}.json"
+    if not job_path.is_file():
+        return False, f"canonical GitHub job not materialized yet: {job_id}"
+    return True, None
+
+
+def terminal_job_id(repo_root: Path, envelope: dict[str, Any]) -> str | None:
+    payload = chat_payload(envelope)
+    if payload is None:
+        return None
+    job_id = payload.get("job_id")
+    if not isinstance(job_id, str) or not job_id:
+        return None
+    job = read_object(repo_root / ".survey" / "work-queue" / "jobs" / f"{job_id}.json")
+    if job and job.get("status") in TERMINAL_JOB_STATES:
+        return job_id
+    return None
+
+
+def apply_envelope(repo_root: Path, envelope: dict[str, Any]) -> list[str]:
+    changed: list[str] = []
+    for write in envelope["writes"]:
+        target = (repo_root / write["path"]).resolve()
+        try:
+            target.relative_to(repo_root.resolve())
+        except ValueError as exc:
+            raise ValueError(f"path escapes repository root: {write['path']}") from exc
+        target.parent.mkdir(parents=True, exist_ok=True)
+        old = target.read_text(encoding="utf-8") if target.exists() else None
+        if old != write["content"]:
+            target.write_text(write["content"], encoding="utf-8")
+            changed.append(write["path"])
+    return changed
