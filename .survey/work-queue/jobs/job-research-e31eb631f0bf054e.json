@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2608.23834",
   "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23834-minima-kv-mixed-format-paged-attention.md",
   "selection_reason": "長文KVを一律に削除せず、最近のページと保護対象ページをFP8、古い非保護ページを3ビット級の詰込み形式に分け、異なる形式のページを直接注意計算へ使う階層KV方式。完全精度の巨大な影KVを別途保持せず、形式別カーネルの部分注意結果を正規化して統合する。96GB RTX PRO 6000単一GPUで実装・評価し、稼働中KVを3.625倍圧縮した直接デコード試験で比較対象の0.9821倍スループット、LongBench v2では16K〜64Kで0.4〜0.8ポイントの差を報告する。圧縮率だけでなく、混在形式のページを直接デコードする実装上の境界と品質損失を定量化しており、KV圧縮・ページ化・階層メモリの接点として価値がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-10T17:39:48+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-10T17:44:57+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

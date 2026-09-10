@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:39:51.543265+00:00",
+  "updated_at": "2026-09-10T17:45:01.175891+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,18 +572,18 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:39:51.543265+00:00",
+      "last_recorded_at": "2026-09-10T17:45:01.175891+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -645,6 +645,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34510081025:1",
+          "recorded_at": "2026-09-10T17:45:01.175891+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34510081025",
+            "run_attempt": "1",
+            "source_sha": "cb9ca038d8fe0e63d9a10e6337ccf4998c182f6f"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -679,6 +694,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-e31eb631f0bf054e",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23834",
+          "title": "Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -709,6 +732,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.23834",
           "title": "Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention"
+        },
+        {
+          "job_id": "job-825a3fe8fd3b5c49",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
