@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-1587413c3d872e20",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/99-other-inference-systems/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.03236.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-175c317515b75ca5",
+  "validation_error": "ValueError: slot metadata requires blob_sha",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T11:38:42+00:00"
 }
