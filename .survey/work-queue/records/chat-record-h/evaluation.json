@@ -1,8 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-orbitflow-library-recovery-20260910-a2","job_id":"job-research-07d36385670389ef","data":{"hardware":["RTX A5000 24GB×1＋ホストメモリ384GB＋PCIe 3.0×16","RTX A6000 48GB×4＋ホストメモリ256GB＋PCIe 4.0×16"],"software":["vLLM v0.6.6を基盤に実装"],"model":["LLaMA3-8B","LLaMA3-70B"],"datasets":["ShareGPT由来の合成要求分布。到着はポアソン過程を基本とし、到着率とバースト性を変更。"],"baselines":["DeepSpeed-Inference","FlexGen","FlexGen+","SLO対応KV退避方式","動的ヒューリスティック"],"methodology":"主評価は実機で、到着率を変えながらTBTとTPOTのSLO達成率、裾の遅延、単位時間の完了要求数、エンドツーエンド遅延、GPUメモリ使用率を測る。8K、32K、128Kの文脈長、バッチサイズ、テンソル並列度、到着のバースト性、スケジューリング方針、各構成要素の除去実験も確認する。","scope":"主結果は単一ノード内のGPU/CPU階層での実機測定であり、長文の実運用トレースそのものではなくShareGPT由来の合成要求分布を使う。複数ノードのパイプライン並列やデータ並列は中心的な評価対象ではないため、異なるPCIe構成や実運用到着分布へ一般化する際は注意が必要。","correctness":"KV内容を削除・量子化・近似せず、置き場所と転送時刻だけを変えるため、モデル出力品質は無損失。"}}

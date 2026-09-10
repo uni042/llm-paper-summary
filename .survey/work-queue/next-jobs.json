@@ -8,24 +8,11 @@
       "completed": 3
     },
     "research": {
-      "ready": 1,
-      "completed": 20,
+      "completed": 21,
       "superseded": 9
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-07d36385670389ef",
-      "type": "research",
-      "lane": null,
-      "priority": 75,
-      "canonical_id": "arXiv:2601.10729",
-      "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-      "source_url": "https://arxiv.org/abs/2601.10729",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-636d789f02394280",
       "type": "discovery",
@@ -39,5 +26,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-10T05:29:43+00:00"
+  "generated_at": "2026-09-10T05:48:04+00:00"
 }

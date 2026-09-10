@@ -1,8 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-orbitflow-library-recovery-20260910-a2","job_id":"job-research-07d36385670389ef","data":{"differences":["全面的なCPU退避やバッチ一律の退避間隔ではなく、要求ごとに異なるGPU常駐量を選ぶ。","開始時の静的配置に固定せず、KV増加、要求の参加・完了、実測性能のずれに応じて再配置する。","KV圧縮や枝刈りではなく、内容を変えないGPU/CPU階層配置と実行時制御を対象とする。"],"limitations":["ShareGPT由来の合成要求分布が中心で、長文の実運用トレースを直接再現した評価ではない。","単一ノードのテンソル並列が中心で、複数ノードのパイプライン並列・データ並列は未評価。","性能予測は層計算時間とPCIe実効帯域の測定精度に依存する。","一時停止・再開は個別要求の完了時間と公平性を悪化させ得る。"],"implementation_status":"公式実装が公開されており、vLLM v0.6.6を基盤としている。","research_positioning":"OrbitFlowはKVキャッシュ圧縮ではなく、GPU VRAMとCPU DRAMを階層メモリとして扱い、要求ごとのKV配置と転送時刻をオンラインで制御する推論提供システムである。既存の静的・一律配置より細かい要求単位の再配置を行い、さらに過負荷時の一時停止まで含めてSLO達成率を制御する。SSDやNVMeを第3階層へ加える場合も、転送遅延と先読み猶予時間を増やした多階層配置へ考え方を拡張できる余地があるが、論文自体の評価対象はGPUとCPUである。","audit_notes":"一次資料の問題設定、設計、実装、評価節と公式実装を確認。主結果は実機測定で、合成要求分布を使う点を明示した。"}}

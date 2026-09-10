@@ -1,8 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
-}
+{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-orbitflow-library-recovery-20260910-a2","job_id":"job-research-07d36385670389ef","data":{"canonical_id":"arXiv:2601.10729","arxiv_id":"2601.10729","title":"OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration","summary":"長文LLM推論で増大するKVキャッシュをGPUとCPUの間で要求ごとに動的再配置し、転送待ちを計算へ重ねることでトークン遅延SLOとスループットを改善する推論提供システム。","source":"https://arxiv.org/abs/2601.10729","sources":["https://arxiv.org/abs/2601.10729","https://doi.org/10.14778/3796195.3796214","https://github.com/omnia-postech/OrbitFlow"],"authors":["Xinyue Ma","Heelim Hong","Taegeon Um","Jongseop Lee","Seoyeong Choy","Woo-Yeon Lee","Myeongjae Jeon"],"publication":"PVLDB 19(5):1046-1059, 2026","implementation":"公式コード公開。vLLM v0.6.6上に実装。","overview":"長文生成ではKVキャッシュが生成トークン数に応じて増え、同時実行中の要求数も変化するため、GPUメモリ需要は実行中に継続して変わる。CPUへKVを退避すれば容量不足は緩和できるが、CPUからGPUへ戻す転送が層計算に隠れなければGPUが待機し、その遅延がバッチ全体へ波及する。OrbitFlowはKV内容を圧縮せず、要求ごとのGPU常駐量とCPU退避間隔を実行時に選び直すことで、この容量と転送待ちの交換関係を制御する。"}}
