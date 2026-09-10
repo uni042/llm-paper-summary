@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4d630057e24cd28e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
+      "priority": 80,
+      "reason": "LLMサービングで出力長が要求到着時には未知なため、KVキャッシュを少なく予約するとプリエンプションと再計算が増え、多く予約するとGPUメモリを浪費する問題を扱う。Wasserstein分布頑健最適化を用いて、GPU並列構成、要求クラス別KV予約量、異種サービング群へのルーティング、共有接頭辞キャッシュをSLO制約下で共同最適化する。BurstGPT、Azure、ShareGPT由来の本番系トレース評価で、固定分位点予約に対して最大56%の費用削減を報告し、分布変化下でもP99遅延・goodput・SLO違反を比較している。KV容量予約と不確実性をサービング層で扱う未収録候補として有用。"
+    }
+  ]
+}
