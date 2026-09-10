@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "source_commit": "post-gc-working-tree",
+  "checked_at": "2026-09-10T09:28:38.265181+00:00",
+  "status": "issues_found",
+  "scope": "repository-wide structural consistency",
+  "inventory_file_count": 681,
+  "checked_file_count": 681,
+  "missing_files": [],
+  "working_changes": [],
+  "checks": [
+    "inventory_coverage",
+    "all_json_yaml",
+    "markdown_file_links",
+    "frozen_training",
+    "state_paths",
+    "all_daily_plans",
+    "current_survey_invariants",
+    "derived_file_regeneration"
+  ],
+  "not_checked": [
+    "External URL reachability",
+    "Fragment anchors",
+    "Scientific validity / full paper audits",
+    "Scheduler startup guarantees",
+    "Runtime execution of arbitrary repository code"
+  ],
+  "external_url_count": 265,
+  "findings": [
+    {
+      "code": "broken_local_link",
+      "path": ".survey/README.md",
+      "detail": ".survey/survey-state/STATUS.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/README.md",
+      "detail": ".survey/docs/survey-workflow/README.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/README.md",
+      "detail": ".survey/survey-state/integrity/README.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/README.md",
+      "detail": ".survey/"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/survey-state/integrity/README.md",
+      "detail": "../../docs/survey-workflow/nightly.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/survey-state/runs/README.md",
+      "detail": "../../docs/survey-workflow/state.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": ".survey/survey-state/runs/README.md",
+      "detail": "../../docs/survey-workflow/nightly.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
+      "detail": "2024-2411.11217-moe-lightning-high-スループット-moe-推論-with-cpu-gpu-i-o-pipelining.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
+      "detail": "2024-2401.14361-moe-infinity-efficient-moe-推論-on-personal-machines-with-疎性-考慮-ex.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
+      "detail": "2023-2312.17238-fast-推論-of-mixture-of-エキスパート-language-models-with-オフロード.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md",
+      "detail": "2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-適応型-エキスパート-selection.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md",
+      "detail": "2025-2509.02753-lexi-層-適応型-active-エキスパート-for-efficient-moe-model-inference.md"
+    },
+    {
+      "code": "broken_local_link",
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md",
+      "detail": "2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-適応型-エキスパート-selection.md"
+    },
+    {
+      "code": "frozen_baseline_missing",
+      "path": "survey-state/frozen-training.json",
+      "detail": "Cannot verify training freeze without a baseline"
+    },
+    {
+      "code": "survey_invariant",
+      "path": "survey-state/",
+      "detail": "Missing canonical_id: papers/inference/01-offload-hierarchical-memory/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md"
+    },
+    {
+      "code": "generation_failed",
+      "path": "scripts/survey.py",
+      "detail": "Missing canonical_id: papers/inference/01-offload-hierarchical-memory/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md"
+    }
+  ]
+}
