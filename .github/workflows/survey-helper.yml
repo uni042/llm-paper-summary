@@ -146,7 +146,7 @@ jobs:
           if [ -f .survey/work-queue/results/chat-inbox.json ]; then
             echo 'Current reusable Chat inbox is settled or isolated; worker continues.'
           else
-            python .survey/scripts/assemble_research_record_v10.py --repo-root .
+            python .survey/scripts/assemble_research_record.py --repo-root .
             python .survey/scripts/assemble_chat_chunks.py --repo-root .
           fi
 
@@ -166,7 +166,7 @@ jobs:
               print('No archived research recovery transport to assemble.')
               raise SystemExit(0)
           try:
-              subprocess.run([sys.executable, '.survey/scripts/assemble_research_record_v10.py', '--repo-root', '.'], check=True)
+              subprocess.run([sys.executable, '.survey/scripts/assemble_research_record.py', '--repo-root', '.'], check=True)
               subprocess.run([sys.executable, '.survey/scripts/assemble_chat_chunks.py', '--repo-root', '.'], check=True)
           except subprocess.CalledProcessError as exc:
               print(f'Archived recovery transport failed validation/assembly (exit={exc.returncode}); isolated to this recovery and continuing worker.')
