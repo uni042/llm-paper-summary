@@ -1,30 +1,30 @@
 {
   "counts": {
     "discovery": {
-      "completed": 64,
-      "ready": 1
+      "completed": 65
     },
     "audit": {
       "completed": 5
     },
     "research": {
       "completed": 62,
-      "superseded": 30
+      "superseded": 30,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-b7c0549b213d456a",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-9c7ee50477f0dd25",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2608.00577",
+      "title": "HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.00577",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-10T19:50:22+00:00"
+  "generated_at": "2026-09-10T20:02:27+00:00"
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-9c7ee50477f0dd25",
+  "type": "research",
+  "parent_job_id": "job-b7c0549b213d456a",
+  "priority": 80,
+  "canonical_id": "arXiv:2608.00577",
+  "title": "HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference",
+  "source_url": "https://arxiv.org/abs/2608.00577",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md",
+  "selection_reason": "分散エッジMoEで、ネットワーク転送、GPU-CPU専門家ロード、GPU計算と待ち行列、量子化品質損失を同一コストモデルに入れ、配置・常駐・精度とオンラインroutingを一体で最適化する。10サーバの異種testbedで平均推論レイテンシを最大59.0%、P99を最大58.0%、サーバ間通信量を最大72.1%削減し、throughputを2.13倍にしたと報告する。単一ノードのexpert offload/cache研究とは異なり、専門家ロード遅延を含む複数ノード協調routingとして位置付けられるため、MoE配置・通信・オフロードの接点を埋める候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-10T20:02:21+00:00",
+  "artifact_transport": "structured_record_v10"
+}
