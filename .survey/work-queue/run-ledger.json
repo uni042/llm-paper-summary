@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T16:44:08.309762+00:00",
+  "updated_at": "2026-09-10T16:44:48.822559+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -358,7 +358,7 @@
     {
       "run_key": "2026-09-11T01:30:00+09:00",
       "first_recorded_at": "2026-09-10T16:29:58.387004+00:00",
-      "last_recorded_at": "2026-09-10T16:44:08.309762+00:00",
+      "last_recorded_at": "2026-09-10T16:44:48.822559+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
@@ -367,9 +367,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 4,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -417,6 +417,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34503947786:1",
+          "recorded_at": "2026-09-10T16:44:48.822559+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34503947786",
+            "run_attempt": "1",
+            "source_sha": "0e9b86d076dd9e4b3e5dbc156bd6a5c9e0b44b69"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -443,6 +457,14 @@
           "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-f6c4789f353a56da",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -466,13 +488,21 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-0128b9e7e743cda7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.25699",
+          "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference"
         }
       ],
       "new_paper_ids": [
         "arXiv:2602.18755"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T0128JST-discovery-7afb8a934b1edaa3.json"
+        ".survey/work-queue/results/20260911T0128JST-discovery-7afb8a934b1edaa3.json",
+        ".survey/work-queue/results/20260911T0145JST-discovery-f6c4789f353a56da.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 210,
