@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T17:47:05.661931+00:00",
+  "updated_at": "2026-09-10T17:50:39.320032+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -572,18 +572,18 @@
     {
       "run_key": "2026-09-11T02:30:00+09:00",
       "first_recorded_at": "2026-09-10T17:31:52.609747+00:00",
-      "last_recorded_at": "2026-09-10T17:47:05.661931+00:00",
+      "last_recorded_at": "2026-09-10T17:50:39.320032+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 7,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -674,6 +674,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34510659344:1",
+          "recorded_at": "2026-09-10T17:50:39.320032+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34510659344",
+            "run_attempt": "1",
+            "source_sha": "05f2446c6804a939786dddc8a59df3b47004fa10"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -724,6 +739,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-c29465e80f450973",
+          "type": "research",
+          "canonical_id": "arXiv:2608.03893",
+          "title": "Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -768,6 +791,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.03893",
           "title": "Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse"
+        },
+        {
+          "job_id": "job-a0f9b155ba2cea14",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
