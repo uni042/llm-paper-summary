@@ -146,7 +146,6 @@ jobs:
             echo 'Current reusable Chat inbox is settled or isolated; worker continues.'
           else
             python .survey/scripts/assemble_research_record.py --repo-root .
-            python .survey/scripts/assemble_chat_chunks.py --repo-root .
           fi
 
       - name: Process fallback-dispatched framework and LLM update
