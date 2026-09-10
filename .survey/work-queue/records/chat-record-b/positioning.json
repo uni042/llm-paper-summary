@@ -2,26 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-ace-20260910-0038-v10-a1",
-  "job_id": "job-research-622ec47c37b83739",
+  "attempt_id": "attempt-metakv-20260910-1411-v10-test",
+  "job_id": "job-research-5b8bc3f2f1ab32c5",
   "data": {
     "differences": [
-      "Score/NAEEなどrouter中心のimportanceに対し、ACEはrouter preferenceとexpert parameter structureを分けて測ってruntime gateで再結合する。",
-      "Top-P/Ada-Kのvariable-cardinality routingと違い、元top-k候補を維持して候補内secondary slotのみskipする。",
-      "AIMER/DiEP等のstatic compressionと違い、expert poolを恒久削除せずtokenごとに実行集合を変える。",
-      "MoDES等に対しGSP/RCR estimator自体はweight/router geometryだけで構築する。ただしbudget threshold mappingはunlabeled workload passを使う。",
-      "SERE/XShareのbatch-level sharing/re-routingと違いtoken-localでbatch compositionに依存しない。"
+      "KVQuant、H2O、RocketKVのような個別圧縮アルゴリズムを置き換えるのではなく、その上位で方式・強度をプロンプト単位に選ぶ。",
+      "固定の圧縮率や単一方式を全要求へ適用する運用に対し、利用者の遅延・メモリ制約とプロンプト特徴を同時に使う。",
+      "オンライン探索で候補を実測せず、事前プロファイル済みLightGBMにより低オーバーヘッドで選択する。"
     ],
     "limitations": [
-      "reported thresholdはworkload-matchedで未知domain transferの保証なし。",
-      "single deterministic seedでconfidence intervalなし。",
-      "RCRはrouter-derived prototypeを1方向しか使わず単独では高skip率で劣化。",
-      "A100 single-GPU latency中心でdistributed all-to-all/load balance未評価。",
-      "arXiv v1本文・pageでACE固有の公式GitHub repositoryを確認できない。",
-      "top-1保持でもlossyでoriginal outputとのexact equivalenceなし。"
+      "評価はLlama 3.1 8B、RTX PRO 6000 Blackwell 96GB、4データセット、3圧縮方式に限定。",
+      "別モデル・別GPUでは遅延・メモリ予測器の再プロファイルと再学習が必要。",
+      "予測値なので厳密な制約保証ではなく、未見プロンプトで違反が起こり得る。",
+      "候補集合に実現可能設定がなければ違反を避けられない。",
+      "TTFT、スループット、費用、エネルギーなどは今回の制約目的に含めていない。"
     ],
-    "implementation_status": "arXiv:2609.05228v1。pseudocodeとthreshold mappingを付録に記載。BF16/Hugging Face/EvalScope 1.4.1で評価しA100 latencyを報告。2026-09-10時点でarXiv本文から公式ACE code linkは確認できない。",
-    "research_positioning": "Adaptive Expert Computation / Compression系。pretrained top-k routerの後段でtoken-adaptiveにexpert実行を間引くinference-time sparsification。weight-only structural proxyへrouter-geometry directional correctionを加える点がrouter-only skippingとstatic pruningの中間に位置する。",
-    "audit_notes": "arXiv v1のIntroduction、Related Work、Method、GSP/RCR、main results、component/fusion ablation、efficiency、Conclusion、Appendix A algorithm/proof、Appendix B threshold mappingを確認。50% headline、10% low-sparsity negative result、RCR単独劣化、single-run/workload-matched thresholdを保持。追加audit必須事項なし。"
+    "implementation_status": "公式コード公開。論文はarXivプレプリント。",
+    "research_positioning": "KVキャッシュ圧縮研究の『どの圧縮手法を設計するか』ではなく、『異質な圧縮手法群をデプロイ時の制約に応じてどう選ぶか』を扱うメタ最適化層。既存の圧縮方式を候補として再利用できるため、新方式が増えるほど候補多様性を活かせる一方、候補ごとの事前プロファイルが必要になる。",
+    "audit_notes": "arXiv本文§1〜§4を確認。主要数値は保持テスト1,232プロンプトでの実測。平均性能表と制約別CSRを区別して記録した。"
   }
 }
