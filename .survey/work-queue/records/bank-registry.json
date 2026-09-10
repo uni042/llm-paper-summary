@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "transport_version": 10,
   "banks": {
     "a": ".survey/work-queue/records/chat-record",
@@ -14,8 +14,9 @@
   "slots": ["metadata", "problem_method", "evaluation", "results", "positioning"],
   "policy": {
     "purpose": "direct GitHub transport staging only",
-    "drive_backlog_occupies_bank": false,
+    "fallback_backlog_occupies_bank": false,
     "reuse_after_durable_outbox_checkpoint": true,
-    "bank_exhaustion_is_not_run_stop_when_drive_writable": true
+    "bank_exhaustion_is_not_run_stop_when_any_fallback_writable": true,
+    "fallbacks": ["google_drive", "chatgpt_library"]
   }
 }
