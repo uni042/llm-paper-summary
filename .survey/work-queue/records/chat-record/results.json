@@ -2,27 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-saem-20260910-2346-v10-a1",
-  "job_id": "job-research-53e88cd1653ca310",
+  "attempt_id": "attempt-expertstreaming-20260910-2355-v10-a1",
+  "job_id": "job-research-11443ee95cff6866",
   "data": {
-    "overview": "SAEMはCoTの推論段階をキャッシュ更新単位にすることで、校正に使ったMATH-500では最強比較対象に対してQwen3で平均1.60倍、ERNIE-4.5で1.47倍のエンドツーエンド高速化を達成する。校正していないAIME 2024でも1.20〜1.21倍、分野まで異なるGPQA-Diamondでも1.14〜1.34倍の優位が残る。低ECR・高並行条件ではトークン単位LRUのキャッシュスラッシングを抑える効果が大きく、Qwen3のバッチ8・ECR 3.125%ではMixtral-Offloading比2.10倍となる。アブレーションではCPU直接実行単独は速くないが、段階キャッシュとトークン再配置に組み込むと非常駐重み転送を避ける重要な補助機構になる。",
+    "overview": "FSE-DPは標準EPおよびmulti-chiplet向けHydraに対して、4種類のMoEと16〜1024 tokens-per-iterationにわたり1.22〜2.00倍の高速化を報告し、オンチップ専門家保持量を最大78.8%削減する。単一MoE層ではマイクロスライスを巡回させることでオンチップ重みバッファを32MB未満、EP/Hydraのおよそ5分の1まで圧縮できる。利得は低トークン数でpaired-loadによるDDR待ち隠蔽が大きく、高トークン数では豊富なD2D帯域を使った分散計算が効く。token bufferingは適度なQoS余裕では重み再利用を改善するが、延期を増やしすぎるとトークン数減少でDDR律速が強まり逆効果になる。",
     "key_results": [
-      {"metric": "MATH-500平均高速化", "value": "Qwen3 1.60倍、ERNIE-4.5 1.47倍", "baseline": "各バッチサイズ・ECRで最も強い既存比較方式", "condition": "MATH-500、校正分布一致、バッチ1〜8・複数ECR", "interpretation": "段階遷移語と初期高頻度専門家の両方を同じデータで校正できるため、推論段階の時間局所性を最も十分に利用できる条件である。"},
-      {"metric": "未校正データでの平均高速化", "value": "AIME 2024でQwen3 1.20倍・ERNIE-4.5 1.21倍、GPQA-Diamondで1.14倍・1.34倍", "baseline": "各条件の最強比較方式", "condition": "MATH-500でのみ校正し、対象データでは再校正しない", "interpretation": "数学問題の変化だけでなく科学多肢選択への分野移動でも優位が残り、段階局所性は一定の一般化性を持つ。ただし一致分布より改善幅は小さく、校正品質の影響も明確である。"},
-      {"metric": "単一バッチでのMixtral-Offloading比較", "value": "1.62倍高速", "baseline": "トークン単位LRUのMixtral-Offloading", "condition": "Qwen3、バッチ1。ECR 50%ではSAEMのキャッシュヒット90.08%対LRU 94.53%", "interpretation": "SAEMはキャッシュヒット率そのものではLRUに負ける条件でも、トークン再配置で小さなカーネルと散在アクセスを減らすため、全体処理速度では勝てる。キャッシュ指標だけでシステム性能を判断できない例である。"},
-      {"metric": "低メモリ・高並行での高速化", "value": "バッチ8・ECR 3.125%でMixtral-Offloading比2.10倍", "baseline": "Mixtral-Offloading", "condition": "Qwen3、MATH-500、バッチ8、ECR 3.125%", "interpretation": "複数系列がトークン単位LRUへ異なる専門家集合を要求すると重複転送が増える。SAEMは段階単位で配置を安定させ、厳しいキャッシュ容量でもスラッシングを抑えるため差が拡大する。"},
-      {"metric": "DAOP・Fiddlerとの平均比較", "value": "DAOP比2.70倍、Fiddler比1.60倍", "baseline": "DAOPおよびFiddler", "condition": "MATH-500の全モデル・全バッチサイズ平均", "interpretation": "系列単位や校正データ全体の静的高頻度専門家ではなく、実行中のCoT段階ごとに活性化パターンを更新する利点が大きい。"},
-      {"metric": "予測オラクルとの差", "value": "バッチ1でオラクルの処理速度改善余地は約1.08〜1.14倍、バッチ8では処理速度効率95%以上", "baseline": "次段階の真の活性化頻度を知る予測オラクル", "condition": "Qwen3、固定系列再生、同一境界・同一ECR", "interpretation": "低ECRではキャッシュヒット精度に改善余地があるが、処理速度差は限定的である。全GPU常駐との差の主因は一段遅れ予測よりもGPUキャッシュ容量そのものと結論づけられる。"},
-      {"metric": "機構別アブレーション", "value": "バッチ1: cache 1.39倍、CPU直接0.79倍、repack 1.46倍、全部1.77倍。バッチ8: 1.23倍、1.00倍、1.07倍、全部1.62倍", "baseline": "ECR 12.5%の最強比較方式", "condition": "Qwen3、MATH-500", "interpretation": "CPU直接実行は単独ではGPUキャッシュが悪いままCPU負荷を増やして遅い。しかし段階配置と再配置を組み合わせると、低頻度専門家のPCIe転送を避ける補完機構として効く。"},
-      {"metric": "完全構成からCPU直接実行を除去", "value": "バッチ1 6.10→3.22 tok/s、バッチ8 13.82→9.00 tok/s", "baseline": "SAEM完全構成", "condition": "Qwen3、ECR 12.5%、非常駐専門家をGPU予約スロットへオンデマンド転送", "interpretation": "CPU直接実行単独の結果が悪くても不要ではなく、適切な段階キャッシュの下では高価なオンデマンドPCIe転送を避けるために重要である。"}
+      {"metric": "既存方式に対する総合高速化", "value": "1.22〜2.00倍", "baseline": "EPおよびHydraを含む最先端比較方式", "condition": "Phi-3.5-MoE、Yuan2.0-M32、DeepSeek-MoE、Qwen3-30B-A3B、WikiText-2/C4、低バッチ設定", "interpretation": "専門家重みを固定chipletへ置く代わりに、D2D上の動的軌跡として流し、DDR・D2D・演算を異なる専門家同士で補完させることで長尾負荷を利用率改善へ変換している。"},
+      {"metric": "オンチップメモリ削減", "value": "最大78.8%削減、代表条件では32MB未満でEP/Hydraのおよそ5分の1", "baseline": "EPおよびHydra", "condition": "単一MoE層の性能を維持するための専門家重みバッファ", "interpretation": "一つの専門家断片をパッケージ内で複製せず、マイクロスライスが必要chipletを巡った直後に解放されるため、通信重畳のための二重保持も大幅に減る。"},
+      {"metric": "専用スケジューラ実装費", "value": "0.43 mm²、サブマイクロ秒スケジューリング遅延", "baseline": "UMC 28nm RTL合成", "condition": "trajectory-aware scheduler", "interpretation": "細粒度データフローの制御を中央ソフトウェアの巨大な状態管理へせず、Expert Information Table、Idle Chiplet Vector、matcherと局所規則に縮約できることを示す。"},
+      {"metric": "設計空間の帯域・容量条件", "value": "利用率60%超には代表探索で各die 48GB/s DDR帯域と16MB以上のオンチップメモリが必要", "baseline": "Qwen3-MoE-A3B/C4のDSE", "condition": "D2D 288GB/s固定、die area上限30mm²、package power 60W未満", "interpretation": "D2Dを増やせばオンチップ容量を無制限に削れるわけではなく、DDRから来た重みを受け止めて通信・演算を重ねる弾力的バッファが一定量必要である。"},
+      {"metric": "小容量をD2Dで補う際の要求", "value": "オンチップ14MBでは最大512GB/s級D2Dが必要になる条件", "baseline": "DSE制約を満たす高利用率領域", "condition": "Qwen3/C4、固定14MB buffer", "interpretation": "SRAM削減を通信帯域だけで代替しようとすると複数UCIeモジュール相当の非常に高いD2Dが必要になり、面積・電力上の成立領域が狭くなる。"},
+      {"metric": "マイクロスライス粒度", "value": "経験的に10分割未満が好ましい", "baseline": "複数分割数の感度分析", "condition": "Phi-3.5とQwen3/C4", "interpretation": "分割を細かくしすぎると制御・ヘッダ費が一断片の演算で隠せず、特に小さいexpertを持つQwen3で悪化する。粗すぎても通信重畳が減るため中間粒度が必要である。"},
+      {"metric": "大規模chiplet arrayでの利用率", "value": "2×2から4×4へ拡張した際、EPより利用率低下が小さくHydraに対しても競争力を維持", "baseline": "EP、Hydra", "condition": "Qwen3/C4、2D mesh上の複数論理ring trajectories", "interpretation": "all-to-allではなくpoint-to-point軌跡を使うため、chiplet数増加時の通信混雑とidle時間の増え方を抑えられる。論文は利用率でスケール傾向を示し、遅延へのhop影響もシミュレータへ含める。"}
     ],
     "negative_results": [
-      {"name": "単一バッチではLRUよりキャッシュヒットが低い場合がある", "description": "Qwen3、ECR 50%ではSAEM 90.08%に対しMixtral-Offloading 94.53%で、細粒度LRUの方が直近集合へ追随できる。それでもトークン再配置など別のボトルネック削減により全体処理速度はSAEMが高い。"},
-      {"name": "CPU直接実行は単独では高速化しない", "description": "Qwen3、ECR 12.5%でCPU直接実行だけを有効にするとバッチ1で最強比較対象の0.79倍、バッチ8で1.00倍に留まる。不適切なGPUキャッシュと組み合わせると多くのトークンが遅いCPU経路へ流れるためである。"},
-      {"name": "明示的な遷移語に依存する", "description": "現在の段階検出は『Alternatively』『Instead』などの言語的手掛かりを主に使う。推論スタイルやタスクによってこれらが現れなければ境界精度が低下し、段階ごとのキャッシュ更新利得も小さくなる。"},
-      {"name": "校正不一致で高速化幅が縮小", "description": "MATH-500では最大の平均利得を得るが、MATH-500だけで校正した状態のAIME 2024やGPQA-Diamondでは1.14〜1.34倍程度へ縮小する。段階局所性は一般化するものの、初期キャッシュと遷移語選別はワークロード依存である。"}
+      {"name": "過剰なtoken bufferingは逆効果", "description": "QoS slacknessを大きくしてcold expertの処理を延期しすぎると、現在iterationで処理するトークン量自体が減り、重み一回読込あたりの計算量が小さくなってDDR律速が強まる。したがって延期余裕が多いほど常に高速になるわけではない。"},
+      {"name": "Rule 5の追加利得は小さい", "description": "DDR controllerが最も空きの多いchipletへマイクロスライスを送るRule 5は理論上バッファ均衡を改善するが、paired-loadとflow fusionがある条件では増分利得が限定的で、実装に複雑なmetadata trackingを要するため主システムでは採用していない。"},
+      {"name": "細粒度化しすぎると制御費が支配", "description": "マイクロスライス数を増やしすぎると各transfer header、dispatch、trajectory制御の固定費が断片の演算時間より大きくなる。小expertのQwen3ほどこの影響が強く、単純に最小粒度まで分割する設計は不適切である。"},
+      {"name": "D2D帯域が不足する一般機器には適用しにくい", "description": "本方式はUCIe級の高速・低遅延D2Dとchipletごとの独立制御を前提とする。単一GPU、PCIe接続の独立GPU、低帯域chipletでは重みを巡回させる通信費を演算で隠せず、論文自身も適用可能platformが限定されると述べる。"}
     ],
-    "interpretation": "SAEMの結果は、エキスパートキャッシュのヒット率最大化だけを目的にしないことが重要である。段階単位へ更新頻度を落とすとバッチ1ではLRUよりヒット率が低いこともあるが、重み転送回数の削減、CPU直接実行による非常駐重み移動回避、トークン再配置によるカーネル効率改善を合わせるとエンドツーエンドでは高速になる。高並行・低ECRではLRUの細粒度移動が重複転送へ変わるため段階単位の安定配置がさらに有利になる。",
-    "quality_impact": "モデルのルーティングや重みを変更せず、同じ専門家計算を異なる場所・順序で実行するシステム最適化なので、意図的な近似による品質低下はない。ただしCPU/GPUの浮動小数点実行順序差による微小な数値差はあり得るため、予測オラクル評価では固定系列再生を使って性能比較の条件を統制している。"
+    "interpretation": "Expert Streamingの核心は、専門家の長尾負荷を消すのではなく、異なるexpertのcompute-to-communication比を混ぜて資源利用を平準化することにある。高帯域D2Dがあるなら重み移動は単なる損失ではなく、オンチップ複製をなくしDDR読込を隠すための媒体になる。ただしD2D、SRAM、DDRの三資源には代替可能範囲があり、どれか一つを極端に削ると成立領域が急に狭くなる。",
+    "quality_impact": "選択expertや数値演算を近似しないためモデル品質は原則不変である。token bufferingも同じ中間状態を後で処理するので品質ではなく要求遅延とthroughputのトレードオフである。"
   }
 }
