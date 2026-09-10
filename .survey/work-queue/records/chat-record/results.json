@@ -2,13 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-asymcache-20260910-1802-v10",
-  "job_id": "job-research-175c317515b75ca5",
+  "attempt_id": "attempt-memspec-20260910-2133-v10-a1",
+  "job_id": "job-research-77ada603ffdfc560",
   "data": {
-    "overview": "AsymCacheは、単純なKV命中率最大化より実際のGPU計算遅延を重視することで、命中率がわずかに低い条件でもTTFTを短縮した。70B長文評価ではvLLM-LRU、Max-score、Pensieve+MSAに対してTTFTを最大1.86倍、1.91倍、1.86倍改善し、TPOTも最大1.62倍、1.63倍、1.71倍改善する。論文結論の全条件集約では最新方式に対しTTFT 1.90〜2.03倍、TPOT 1.62〜1.71倍と報告する。Continuumへの統合では平均ジョブ遅延を最大18.1%、P90を最大16.6%追加削減した。",
-    "key_results": [{"metric":"70B先頭トークン時間","value":"最大1.86倍 / 1.91倍 / 1.86倍改善","baseline":"vLLM-LRU / Max-score / Pensieve+MSA","condition":"Llama 3.1-70B、長文複数セッション","interpretation":"接頭辞命中だけでなく後方ブロックの高い再計算費も評価するため、同じGPU容量をより遅延削減価値の高いKVへ割り当てられる。"},{"metric":"70B出力トークン当たり時間","value":"最大1.62倍 / 1.63倍 / 1.71倍改善","baseline":"vLLM-LRU / Max-score / Pensieve+MSA","condition":"同じ長文サービング評価","interpretation":"非連続KVをMSAで一括処理し、適応チャンク化で長い再計算プリフィルがデコードを塞ぐ時間を抑える。"},{"metric":"混雑時TTFT・TPOT","value":"TTFT最大60%/70%削減、TPOT最大62%/71%削減","baseline":"vLLM-LRU / Pensieve+MSA","condition":"LongBench、70B、QPS 0.04付近","interpretation":"メモリ方針だけでなくプリフィル再計算の分割を負荷に合わせるため、待ち行列が形成される条件で差が大きくなる。"},{"metric":"O(log n)追い出し制御費","value":"約200ms/要求→約2ms/要求","baseline":"O(n)全走査版","condition":"約2.4K要求・約8K KVブロック","interpretation":"全候補走査を避け、CPU管理費をプリフィル時間の約10%から約0.1%へ縮める。"},{"metric":"MSA固定費削減","value":"1K系列で別カーネル方式の固定追加費約4.61msを回避","baseline":"区間別注意カーネル","condition":"非連続接頭辞・末尾注意","interpretation":"短い区間では複数カーネル起動・同期が支配するため、一つの融合カーネルにすることが非連続キャッシュを実用化する。"},{"metric":"Continuum統合","value":"平均ジョブ遅延4.4〜18.1%削減、P90 6.8〜16.6%削減","baseline":"Continuum単独","condition":"BFCLv4 Web Searchエージェント","interpretation":"要求粒度のエージェントスケジューリングとブロック粒度のAsymCacheが異なる階層でKV再利用を改善する。"}],
-    "negative_results": [{"name":"命中率最大化と最小遅延は一致しない","description":"低分散LongBench 70Bでは従来方針が最大約33%のブロック命中率を得る一方、AsymCacheは条件によって命中率がわずかに低くてもTTFTを最大1.36倍改善した。後方ブロックの再計算費が大きいため、命中率だけを性能指標にすると誤った方針を選ぶ。"},{"name":"エージェント単独利得は小さい条件がある","description":"BFCLv4 Web SearchでAsymCacheだけをvLLM-LRUへ加えた場合の平均ジョブ遅延削減は約0.4〜4.2%に留まる条件がある。上位実行系の待ちが支配するとKV管理だけの改善は全体へ薄まる。"},{"name":"多階層KV退避を扱わない","description":"KVはGPU内に残すか追い出して再計算する設計で、CPU DRAM、SSD、遠隔ストレージから読み戻す経路は未実装である。下位階層からの読込費は位置だけでなくサイズや帯域にも依存するため、そのまま同一追い出し式を適用できるとは限らない。"},{"name":"費用モデルは環境依存","description":"再計算遅延モデルは対象GPU・モデルの実測プロファイルで高精度に近似する。異なるGPU世代、注意実装、モデル構造へ移ると位置ごとの限界費用が変わるため、再計測とモデル更新が必要になる。"}],
-    "interpretation": "結果が示す中心点は、KVキャッシュ管理では『何トークン再利用できたか』ではなく『そのKVを残すことで何ミリ秒のGPU処理を避けられたか』を最適化すべきということである。接頭辞は再利用回数が多く、末尾は失った時の再計算費が大きいので、両方を残して中間を落とす選択が有効になる。ただしこの配置を実際に速くするには、非連続KVを一つの注意カーネルで処理するMSAと、追い出し判断自体を対数時間に抑えるデータ構造が必要であり、方針・カーネル・制御費を共同設計したことが速度差へつながっている。",
-    "quality_impact": "近似KV枝刈りや低ビット圧縮とは異なり、必要なKVは再計算して元のモデル状態を復元するため出力品質は維持される。その代わり、容量削減を無料で得るのではなく再計算時間を支払う。AsymCacheはその再計算時間を位置と再利用確率から予測し、最も安い部分へ費用を集中させる方式である。"
+    "overview": "MemSpecの主な利得は、より良いドラフトを選ぶ予測精度そのものより、予測したドラフトを必要になる前に常駐させることで非常駐モデル待ちを減らす点にある。定常生成ではMAB-Asyncより平均40.7%高いスループットを示し、理想的に各時点の最良ドラフトを知るOracle-Dynamicの95〜97%へ到達する。予測だけ導入した構成は静的一般ドラフトより21.6%速いものの、完全MemSpecより30.5%遅く、常駐制御が独立に大きな寄与を持つ。入力処理や初期読み込みを含めてもMAB-Async比24.9%のエンドツーエンド遅延削減が残るため、定常区間だけの見かけ上の高速化ではない。",
+    "key_results": [
+      {"metric": "定常生成スループット", "value": "MAB-Async比 平均+40.7%", "baseline": "MAB-Async", "condition": "LLaMA-2 7B / Qwen2.5 7B、5ワークロード、K=2、N=4、128生成トークン", "interpretation": "オンライン探索で首位モデルを知っても非常駐なら使えないため、先回り常駐により選択品質を実行可能な速度へ変換した効果。"},
+      {"metric": "動的オラクル到達率", "value": "95〜97%", "baseline": "Oracle-Dynamic", "condition": "同一メモリ制約・同一スケジュール間隔", "interpretation": "完全な未来知識がなくても、上位候補の常駐集合を予測するだけで理想動的切替の大半を回収できる。"},
+      {"metric": "静的比較対象からの改善", "value": "平均+58.8%", "baseline": "General-Staticを含む静的方式", "condition": "主要実機評価", "interpretation": "領域ごとの最適ドラフト差と生成途中の段階変化の両方を利用した結果。"},
+      {"metric": "代替ドラフト実行時間", "value": "MAB-Async 49.4% → MemSpec 5.5%未満", "baseline": "MAB-Async", "condition": "モデルファミリー横断の実行時間内訳", "interpretation": "性能差の主因が予測器の計算ではなく、希望ドラフトを実行時点までに用意できるかにあることを示す。"},
+      {"metric": "構成要素比較", "value": "Prediction-OnlyはGeneral-Static比+21.6%、完全MemSpecはPrediction-Only比+30.5%", "baseline": "General-Static / Prediction-Only", "condition": "主要評価", "interpretation": "予測だけでは非常駐待ちが残り、常駐管理との組合せが必要。"},
+      {"metric": "常駐容量感度", "value": "K=2→4でMemSpec 1.47×→1.51×、MAB-Async 1.13×→1.29×", "baseline": "General-Static正規化", "condition": "Jetson AGX Orin", "interpretation": "MemSpecはK=2でも上位候補をほぼ含めるため追加メモリへの依存が小さい。"},
+      {"metric": "エンドツーエンド遅延", "value": "General-Static比-32.3%、MAB-Async比-24.9%", "baseline": "General-Static / MAB-Async", "condition": "プロンプト処理、対象モデルプリフィル、初期ドラフト読み込み、準備を含む", "interpretation": "起動費を含めると相対利得は縮むが、繰り返し切替待ち削減の効果は残る。"}
+    ],
+    "negative_results": [
+      {"name": "短い生成では利得が小さい", "description": "出力が短いほど生成途中のドラフト効率変化を利用する機会と、先読み費を償却する反復数が少ない。感度評価では出力長が長いほどMemSpecの改善幅が大きくなる。"},
+      {"name": "スケジュール間隔の両端で悪化", "description": "N=2では再スケジュールが頻繁でモデル読み込みをデコードへ重ねる時間が不足し、N=16では有利なドラフト切替が遅れる。N=4〜8は比較的平坦だが任意の間隔で同等ではない。"},
+      {"name": "大きい常駐容量では比較差が縮小", "description": "Kを2から4へ増やすとMAB-Asyncも非常駐選択が減り、1.13倍から1.29倍へ改善する一方、MemSpecは1.47倍から1.51倍の小幅改善に留まる。メモリ制約が緩いほど常駐予測の独自利得は相対的に小さくなる。"}
+    ],
+    "interpretation": "Oracle-StaticがGeneral-Staticより平均22.5%速く、Oracle-Dynamicがさらに24.9%改善することから、入力ごとの専門化と生成途中の段階変化の双方に高速化余地がある。ただしMAB-Asyncは希望ドラフトが非常駐の時間が長く、その余地を実速度へ変換できない。MemSpecは上位2再現率95.7%の予測を用い、未来の最適モデルを一点で当てる代わりに『次に必要そうな2個』を常駐させることで、読み込み遅延と予測誤差の双方に余裕を持たせる。したがってメモリが厳しく、ドラフト間の効率差と生成段階変化が大きく、出力が十分長いほど利得が増える。",
+    "quality_impact": "対象モデルによる通常の投機的検証を維持する無損失の高速化である。ドラフト選択や先読みが外れても受理規則は変わらず、悪化するのは生成時間であってモデル出力品質ではない。"
   }
 }
