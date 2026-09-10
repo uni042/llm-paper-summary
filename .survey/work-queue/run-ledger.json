@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T19:49:07.069344+00:00",
+  "updated_at": "2026-09-10T19:50:25.241999+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T19:49:07.069344+00:00",
+      "last_recorded_at": "2026-09-10T19:50:25.241999+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1594,9 +1594,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 2,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1674,6 +1674,20 @@
             "audit_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34522737181:1",
+          "recorded_at": "2026-09-10T19:50:25.241999+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34522737181",
+            "run_attempt": "1",
+            "source_sha": "c35c5fe719fb3d8dc9449c3a89898a2cc8a4eb2c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1716,6 +1730,14 @@
           "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-cee6fbbb4ad4d3b0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1753,6 +1775,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-b7c0549b213d456a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -1765,7 +1794,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0435JST-discovery-0c1f66c072921e49.json",
-        ".survey/work-queue/results/20260911T0437JST-discovery-ccc820e8748a6b32.json"
+        ".survey/work-queue/results/20260911T0437JST-discovery-ccc820e8748a6b32.json",
+        ".survey/work-queue/results/20260911T0451JST-discovery-cee6fbbb4ad4d3b0.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 221,
