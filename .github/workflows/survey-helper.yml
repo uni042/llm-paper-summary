@@ -46,7 +46,8 @@ jobs:
             .survey/scripts/fallback_transport.py \
             .survey/scripts/dispatch_fallback_inbox.py \
             .survey/scripts/recover_archived_research.py \
-            .survey/scripts/import_drive_outbox_v4.py
+            .survey/scripts/import_drive_outbox_v4.py \
+            .survey/scripts/preflight_chat_record.py
 
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
@@ -119,10 +120,21 @@ jobs:
               print('Removed stale reusable Chat result; current inbox still needs processing.')
           PY
 
+      - name: Preflight current reusable Chat transport
+        run: |
+          if [ -f .survey/work-queue/results/chat-inbox.json ]; then
+            echo 'Current reusable Chat inbox is already settled; preflight skipped.'
+          else
+            python .survey/scripts/preflight_chat_record.py \
+              --repo-root . \
+              --report /tmp/chat-preflight.json \
+              --isolate-invalid
+          fi
+
       - name: Prepare current reusable Chat transport when pending
         run: |
           if [ -f .survey/work-queue/results/chat-inbox.json ]; then
-            echo 'Current reusable Chat inbox is already settled.'
+            echo 'Current reusable Chat inbox is settled or isolated; worker continues.'
           else
             python .survey/scripts/assemble_research_record_v10.py --repo-root .
             python .survey/scripts/assemble_chat_chunks.py --repo-root .
@@ -143,8 +155,11 @@ jobs:
           if result.get('action') != 'replayed_missing_artifact':
               print('No archived research recovery transport to assemble.')
               raise SystemExit(0)
-          subprocess.run([sys.executable, '.survey/scripts/assemble_research_record_v10.py', '--repo-root', '.'], check=True)
-          subprocess.run([sys.executable, '.survey/scripts/assemble_chat_chunks.py', '--repo-root', '.'], check=True)
+          try:
+              subprocess.run([sys.executable, '.survey/scripts/assemble_research_record_v10.py', '--repo-root', '.'], check=True)
+              subprocess.run([sys.executable, '.survey/scripts/assemble_chat_chunks.py', '--repo-root', '.'], check=True)
+          except subprocess.CalledProcessError as exc:
+              print(f'Archived recovery transport failed validation/assembly (exit={exc.returncode}); isolated to this recovery and continuing worker.')
           PY
 
       - name: Process fallback-dispatched framework and LLM update
