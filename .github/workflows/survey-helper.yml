@@ -53,6 +53,21 @@ jobs:
       - name: Dispatch one eligible fallback envelope
         run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root . | tee /tmp/fallback-dispatch.json
 
+      - name: Reset reusable Chat result when fallback dispatch changed inbox
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          result = json.loads(Path('/tmp/fallback-dispatch.json').read_text(encoding='utf-8'))
+          changed = set(result.get('changed_paths') or [])
+          if '.survey/work-queue/submissions/chat-inbox.json' in changed:
+              Path('.survey/work-queue/results/chat-inbox.json').unlink(missing_ok=True)
+              print('Removed stale reusable Chat result after fallback dispatch.')
+          else:
+              print('Fallback dispatch did not change reusable Chat inbox.')
+          PY
+
       - name: Process fallback-dispatched framework and LLM update
         run: |
           python - <<'PY'
