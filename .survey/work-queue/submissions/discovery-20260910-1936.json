@@ -1,0 +1,41 @@
+{
+  "job_id": "job-3ee2c1138a4cbd46",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
+      "priority": 92,
+      "reason": "長文LLMサービングでSSD上のKVキャッシュを実用的な下位階層として使うため、CPU中心のI/O経路ではなくGPU主導のオブジェクト管理と入出力発行へ寄せる研究。SSD活用とKV階層化の両方に直接関係し、既存の単純なSSD退避方式との差が明確である。",
+      "evidence": [
+        "GPU中心のオブジェクトストアとGPU側からのio_uring連携を用い、vLLM上でSSD-backed KV cacheの制御・転送経路を再設計する。",
+        "論文はGDS対応SSD-backed LMCacheとの比較で、厳しいサービス品質目標下の先頭トークン時間を最大78.3%短縮し、達成可能な要求率を2倍、費用を27%削減したと報告する。"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2606.06302",
+      "title": "Tangram: Unlocking Non-Uniform KV Cache for Efficient Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.06302",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-unlocking-non-uniform-kv-cache-for-efficient-multi-turn-llm-serving.md",
+      "priority": 89,
+      "reason": "複数ターン会話で全注意ヘッドへ同じKV容量を割り当てる前提を外し、ヘッドごとに必要量が異なる性質をサービング実装へ落とし込む。KV圧縮を単なる精度・容量問題ではなく、ページ管理と負荷分散まで含む実行時システムとして扱う点が強い。",
+      "evidence": [
+        "ヘッド別の決定論的KV予算、ヘッド群単位のページ管理、事前計算した負荷分散を組み合わせ、既存注意カーネルへ非一様KV配置を接続する。",
+        "論文はモデル品質を維持しつつ、複数ターンLLMサービングのスループットを最大2.6倍改善したと報告し、公開実装も提示する。"
+      ]
+    },
+    {
+      "canonical_id": "arXiv:2605.13734",
+      "title": "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.13734",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression-for-communication-efficient-disaggregated-llm-serving.md",
+      "priority": 87,
+      "reason": "プリフィル・デコード分離やKV分離構成ではKV転送量自体が通信ボトルネックになるため、圧縮率を固定せずサービス状態に応じて選ぶ研究。圧縮手法、事前プロファイル、実行時制御を一体化しており、分離サービングとKV圧縮の接点を埋める。",
+      "evidence": [
+        "複数のKV圧縮方式を共通機構へまとめ、ベイズ的な事前プロファイルとオンラインのバンディット制御で、品質制約と通信・計算費を見ながら方式を選択する。",
+        "論文はプリフィル・デコード分離でジョブ完了時間を最大9.13倍、KV分離構成で先頭トークン時間を最大32.8倍改善したと報告する。"
+      ]
+    }
+  ]
+}
