@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-10T19:43:10.037143+00:00",
+  "updated_at": "2026-09-10T19:49:07.069344+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -1584,7 +1584,7 @@
     {
       "run_key": "2026-09-11T04:30:00+09:00",
       "first_recorded_at": "2026-09-10T19:34:07.529403+00:00",
-      "last_recorded_at": "2026-09-10T19:43:10.037143+00:00",
+      "last_recorded_at": "2026-09-10T19:49:07.069344+00:00",
       "signals": [
         "audit_completed",
         "discovery_or_queue_expanded",
@@ -1593,10 +1593,10 @@
       ],
       "counts": {
         "research_completed": 1,
-        "audit_completed": 1,
+        "audit_completed": 2,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -1659,6 +1659,21 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34522615103:1",
+          "recorded_at": "2026-09-10T19:49:07.069344+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34522615103",
+            "run_attempt": "1",
+            "source_sha": "a70e742e8e34128181d95080a6ef12cd73f3abc0"
+          },
+          "signals": [
+            "audit_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -1693,6 +1708,14 @@
           "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-audit-983fdb437b0be018",
+          "type": "audit",
+          "canonical_id": "arXiv:2608.13962",
+          "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -1723,6 +1746,13 @@
           "type": "audit",
           "canonical_id": "arXiv:2608.13962",
           "title": "MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture"
+        },
+        {
+          "job_id": "job-cee6fbbb4ad4d3b0",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
