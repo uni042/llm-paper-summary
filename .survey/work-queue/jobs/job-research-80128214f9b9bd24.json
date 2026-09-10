@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2402.01869",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
   "selection_reason": "外部ツールや人間応答待ちで生成が中断される拡張LLMに対し、休止要求のKVを保持・CPU退避・破棄再計算のどれにするか動的に選び、再開要求の待ちとGPUメモリ浪費を抑える。ICML 2024の実システム研究で、既存推論基盤に対して1.6〜2倍のスループットと毎秒完了要求数約2倍を報告しており、エージェント時代のKV管理・スケジューリングに直結する。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-10T22:41:02+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-10T22:44:50+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
