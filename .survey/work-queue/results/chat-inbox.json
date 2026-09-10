@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-d714615ee2752483",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2512.04476.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-b3fb5681cc60fed2",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-10T19:20:06+00:00"
 }
