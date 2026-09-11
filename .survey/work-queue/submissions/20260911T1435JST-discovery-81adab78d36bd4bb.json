@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-81adab78d36bd4bb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.16473",
+      "title": "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.16473",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
+      "priority": 87,
+      "reason": "LLM演算子ごとにNPU内部のボトルネックとなる構成要素が異なることを利用し、コア内の構成要素を別々の電圧・周波数領域へ分割してサブマイクロ秒単位で制御するeNPUを提案する。コンパイラが命令スケジューリングと構成要素別V/fをSLO制約下で共同探索し、TPUv4相当で面積増加3.45%に対しLLMサービスのエネルギーを25.8〜35.2%削減する。GreenLLM/AFlexよりさらに細かい空間粒度のDVFSとして、省エネルギー制御の発展を比較する価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.04415",
+      "title": "FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location",
+      "source_url": "https://arxiv.org/abs/2606.04415",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md",
+      "priority": 82,
+      "reason": "Ascend NPUをアプリケーションから透過的に仮想化し、モデルやフレームワークを変更せず演算子配送を制御して、負荷に応じてプリフィルとデコードの同居状態を動的に変えるFlexNPUを提案する。384枚のAscend 910C上のDeepSeek-R1で静的P/D分離比5.15%および26.33%のスループット改善、Qwen2.5-7Bでは静的同居と同程度のスループットを維持しながらTTFTを92%以上短縮する。GPU中心の既存分離研究と異なるNPU仮想化・実運用系の重要な補完になる。"
+    },
+    {
+      "canonical_id": "arXiv:2510.05632",
+      "title": "From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs",
+      "source_url": "https://arxiv.org/abs/2510.05632",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+      "priority": 72,
+      "reason": "複数コアNPUで、テンソル並列方式、コア配置、メモリ管理、プリフィル/デコード分離か同居かを一つずつではなく体系的に探索するマルチレベルシミュレーション研究。代表LLMと複数NPU構成で既存設計比1.32〜6.03倍の高速化を報告し、SIMT GPUとは異なる柔軟性制約を持つNPU上でどのサービング戦略が成立するかを整理する。個別方式だけでなくNPUサービングの設計空間を比較する基準論文として有用。"
+    }
+  ]
+}
