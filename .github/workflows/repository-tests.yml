@@ -1,0 +1,54 @@
+name: Repository regression tests
+
+on:
+  push:
+    paths:
+      - '.survey/scripts/**/*.py'
+      - '.survey/tests/**/*.py'
+      - '.survey/scripts/requirements.txt'
+      - '.github/workflows/*.yml'
+  pull_request:
+    paths:
+      - '.survey/scripts/**/*.py'
+      - '.survey/tests/**/*.py'
+      - '.survey/scripts/requirements.txt'
+      - '.github/workflows/*.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Compile survey scripts
+        run: python -m compileall -q .survey/scripts
+
+      - name: Validate workflow YAML
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          for path in sorted(Path('.github/workflows').glob('*.yml')):
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+              print(path)
+          PY
+
+      - name: Run all regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_*.py'
