@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T17:10:03.765346+00:00",
+  "updated_at": "2026-09-11T17:19:26.339269+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6786,19 +6786,19 @@
     {
       "run_key": "2026-09-12T01:30:00+09:00",
       "first_recorded_at": "2026-09-11T16:34:49.056336+00:00",
-      "last_recorded_at": "2026-09-11T17:10:03.765346+00:00",
+      "last_recorded_at": "2026-09-11T17:19:26.339269+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 11,
-        "new_papers": 4,
+        "new_jobs": 12,
+        "new_papers": 5,
         "fallback_archived": 0
       },
       "events": [
@@ -6963,6 +6963,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34626949158:1",
+          "recorded_at": "2026-09-11T17:19:26.339269+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34626949158",
+            "run_attempt": "1",
+            "source_sha": "3cabe1346e668fbbf844395f767576297cdd5681"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7053,6 +7069,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-ea6f0f5305a34c22",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09748",
+          "title": "Epoch: Compiling Diffusion Blocks for Sparse MoE Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -7132,13 +7156,21 @@
           "type": "research",
           "canonical_id": "arXiv:2609.09748",
           "title": "Epoch: Compiling Diffusion Blocks for Sparse MoE Serving"
+        },
+        {
+          "job_id": "job-5c9ef0e67820b9c5",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
         "arXiv:2609.07175",
         "arXiv:2509.24626",
         "arXiv:2507.19823",
-        "arXiv:2407.15309"
+        "arXiv:2407.15309",
+        "arXiv:2609.09748"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
@@ -7151,8 +7183,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 313,
-      "paper_active_count_after": 317,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 318,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

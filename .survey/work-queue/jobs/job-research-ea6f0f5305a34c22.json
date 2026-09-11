@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2609.09748",
   "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md",
   "selection_reason": "拡散言語モデルの反復ごとに同じようなMoEルーティング・expert計算・集合通信を繰り返す非効率を、拡散ブロック全体をコンパイル単位として扱うblock planで削減する。生きている位置と再計算が必要な位置だけを新鮮なexpert計算・expert-parallel dispatchへ流し、8基H100上の7B〜100B拡散MoEで同一配置の最良ベースライン比最大2.7倍、さらに一部ベースラインがメモリ不足になる大きなバッチでも動作する。MoE通信と条件付き計算を拡散生成へ合わせて再設計した新しいサービング研究である。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -17,5 +17,7 @@
   "artifact_transport": "structured_record_v10",
   "repair_required": true,
   "validation_error": "ValueError: Japanese-first prose ratio is too low: 57.3% < 70% (Japanese=5201, Latin=3873)",
-  "last_validation_failed_at": "2026-09-11T17:14:27+00:00"
+  "last_validation_failed_at": "2026-09-11T17:14:27+00:00",
+  "completed_at": "2026-09-11T17:18:47+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
