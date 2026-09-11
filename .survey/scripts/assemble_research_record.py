@@ -25,7 +25,7 @@ from render_paper import render_paper  # noqa: E402
 
 TRANSPORT_VERSION = 10
 MAX_SLOT_BYTES = {
-    "metadata": 8192,
+    "metadata": 16384,
     "problem_method": 16384,
     "evaluation": 12288,
     "results": 12288,
@@ -95,7 +95,8 @@ def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
         "canonical_id", "arxiv_id", "doi", "openreview_id", "source", "sources",
         "code", "paper_path", "attempt_id", "job_id", "published", "title",
         "authors", "publication", "publication_type", "publication_status",
-        "arxiv_categories",
+        "arxiv_categories", "references", "references_checked_at", "references_source",
+        "references_total",
     }
     if key in protected_keys:
         return value
@@ -135,6 +136,39 @@ def ensure_explanatory_summary(record: dict[str, Any]) -> None:
     record["metadata"] = meta
 
 
+def validate_references(meta: dict[str, Any]) -> None:
+    if "references" not in meta:
+        raise ValueError("metadata.references is required; use [] after checking a reference section with no normalized identifiers")
+    references = meta.get("references")
+    if not isinstance(references, list):
+        raise ValueError("metadata.references must be a list")
+    if not nonempty(meta.get("references_checked_at")):
+        raise ValueError("metadata.references_checked_at is required")
+    if not nonempty(meta.get("references_source")):
+        raise ValueError("metadata.references_source is required")
+    total = meta.get("references_total")
+    if not isinstance(total, int) or isinstance(total, bool) or total < 0:
+        raise ValueError("metadata.references_total must be a non-negative integer")
+    if total < len(references):
+        raise ValueError("metadata.references_total cannot be smaller than metadata.references length")
+
+    seen: set[str] = set()
+    for index, item in enumerate(references):
+        if not isinstance(item, dict):
+            raise ValueError(f"metadata.references[{index}] must be an object")
+        identities = [
+            str(item[key]).strip()
+            for key in ("canonical_id", "arxiv_id", "doi", "openreview_id")
+            if item.get(key) not in (None, "")
+        ]
+        if not identities:
+            raise ValueError(f"metadata.references[{index}] requires a normalized identity")
+        dedupe_key = "|".join(sorted(x.lower() for x in identities))
+        if dedupe_key in seen:
+            raise ValueError(f"metadata.references[{index}] duplicates an earlier reference identity")
+        seen.add(dedupe_key)
+
+
 def validate_record(record: dict[str, Any]) -> None:
     meta = record.get("metadata") or {}
     pm = record.get("problem_method") or {}
@@ -169,6 +203,7 @@ def validate_record(record: dict[str, Any]) -> None:
         raise ValueError("metadata.hardware_evaluation is required")
     if not nonempty(meta.get("quality_effect")):
         raise ValueError("metadata.quality_effect is required")
+    validate_references(meta)
 
     for key in ("problem", "novelty", "method_overview", "components", "system_design"):
         if not nonempty(pm.get(key)):
