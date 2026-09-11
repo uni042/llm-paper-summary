@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2602.20732-20260911-1153-v10-a1",
-  "job_id": "job-research-4990aea7d8415733",
+  "attempt_id": "attempt-2605.24022-20260911-1156-v10-a1",
+  "job_id": "job-research-eea0fe24c1ce61ab",
   "data": {
-    "hardware": ["単一ノード4×NVIDIA H20"],
-    "software": ["Python 3.12.3", "PyTorch 2.5.1", "CUDA 12.4", "nanoVLLM", "FlashInfer"],
-    "model": ["Qwen3-8Bをスケーリング例で使用", "LongBenchV2対応の長文LLM構成"],
-    "datasets": ["LongBenchV2", "4K〜32K合成長文負荷", "32K入力+6K出力の長生成負荷"],
-    "baselines": ["FullKV", "H2O", "KeyDiff", "SnapKV", "Quest"],
-    "correctness": "CHESSはKVを完全保持する無損失方式ではなく、Aggressive設定では最終的に約1%のKVだけを注意計算へ使う近似方式である。品質はLongBenchV2の総合・難易度・長さ・領域別スコアでFullKVおよび疎KV方式と比較する。Aggressive設定の総合33.2はFullKV 30.2を上回るが、これは完全文脈との数学的同一性ではなく、不要・妨害文脈を除くことでタスクスコアが改善した結果を含む。",
+    "hardware": ["2×NVIDIA A100-40GB + PCIe Gen3 x16", "2×NVIDIA GeForce RTX 4090-24GB + PCIe Gen3 x16", "A100側HDD 約205 MB/s読み出し・201 MB/s書き込み", "RTX 4090側SSD 約535 MB/s読み出し・445 MB/s書き込み"],
+    "software": ["Ubuntu 22.04.1", "Linux kernel 6.8.0", "PyTorch 2.2.1", "CUDA 12.4"],
+    "model": ["Mistral v0.3-7B", "Llama 3-8B", "Qwen 2.5-32B"],
+    "datasets": ["SAMSum", "MuSiQue", "WikiMQA", "HotpotQA", "Multi-News"],
+    "baselines": ["完全再計算", "全KV再利用", "vLLM Prefix Caching", "CacheBlend", "EPIC", "CacheSlide", "KVLink"],
+    "correctness": "CacheTuneは完全再計算と出力を厳密一致させる方式ではなく、非先頭断片の一部だけを全体文脈上で再計算する近似方式である。主評価では再計算率15%を品質下限として用い、5データセット・3モデル平均で完全再計算時の生成品質を94.8%保持する。評価指標は要約ではROUGE-L、複数段質問応答ではF1を使用し、速度だけでなく品質低下を同時に測る。SSD/HDD評価では再計算率を上げると品質も改善するため、低速媒体に対する入出力削減が品質との単純なトレードオフにならない点も確認している。",
     "settings": [
-      {"name": "Page粒度", "description": "全実験でPageサイズを32トークンに固定し、ChunkとGridはその上の論理階層として構築する。物理KVはPage単位で管理し、階層選択はPage索引として注意カーネルへ渡す。"},
-      {"name": "保持率", "description": "CHESS ConservativeはGrid/Chunk/Page保持率0.9/0.9/0.9、Moderateは0.8/0.7/0.7、Aggressiveは0.5/0.2/0.1。主要な性能評価ではAggressiveを使用する。"},
-      {"name": "不確実性閾値", "description": "LongBenchV2を較正データとして平均エントロピーと分散エントロピーの経験分布を求め、99パーセンタイルを再構成トリガーの閾値に採用する。"},
-      {"name": "性能範囲", "description": "入力文脈4K〜32K、バッチ1〜192でFullKVと各疎KV方式に対するエンドツーエンドスループットを比較する。長生成安定性は32K入力後に6Kトークンを生成して一トークン遅延の推移を見る。"}
+      {"name": "周波数解析", "description": "低周波の切り出し比率αは0.5。著者は0.3〜0.7で上位選択が安定すると確認しており、絶対得点ではなく相対順位を使う。"},
+      {"name": "主再計算率", "description": "GPU/CPUメモリの主評価では品質を優先してr=15%を下限として使用する。Mistralで5〜25%を振り、15%で大部分の品質を回復しつつ4倍超のTTFT高速化を維持することを確認する。"},
+      {"name": "低速媒体較正", "description": "HDD/SSDではSAMSum先頭10件を較正要求として使用。著者は5〜10件で安定した比率が得られるとし、1構成あたり計測と探索に約3〜4分を要する。"},
+      {"name": "比較条件", "description": "CacheBlendは15%再計算、EPICは各断片先頭16トークン再計算、KVLinkは断片ごとに5個のリンクトークンを挿入。CPU媒体比較では各方式を同じ媒体条件へ合わせる。"}
     ],
-    "methodology": "品質評価ではLongBenchV2を用い、FullKV、H2O、KeyDiff、SnapKV、Questと比較する。H2Oは10% heavy+10% local、KeyDiffは8192トークン、SnapKVはrecent 512/total 4096、Questは2048の各最良設定を使う。Quest以外はCHESS評価基盤へ統合し、Questは単一バッチ専用の特殊カーネルのため公式実装で測定する。性能評価ではCHESS Aggressiveを4×H20上で4K〜32K文脈、バッチ1〜192へ拡張し、スループット、TPOT、長生成中の遅延安定性、選択処理の割合を測る。",
-    "scope": "主要評価は単一ノード4×H20で、複数ノード間のKV移動、CPU/SSD階層へのオフロード、ネットワーク競合は扱わない。品質評価はLongBenchV2、性能評価は合成入力が中心であり、実運用の複数利用者トレース上の待ち行列効果は未評価である。Aggressive設定は品質スコアを維持しているが、コード領域ではH2Oが強いなどタスク依存性がある。再構成閾値もLongBenchV2で事前較正しているため、分布が大きく異なる運用では再較正が必要になり得る。"
+    "methodology": "品質とTTFTの主評価では、5種類の長文タスクと3モデルを用い、完全再計算、全KV再利用、先頭一致キャッシュ、既存の非先頭KV再利用方式を比較する。CacheTuneはCPUメモリにKVを退避し、他方式の一部はGPU常駐という有利な条件でも比較される。スループット評価では要求到着率を増やし、遅延が急増する飽和点を比較する。機構別評価では同一15%再計算率で無作為、高周波、低周波選択を比較して選択基準の効果を分離する。さらにGPU、CPUメモリ、SSD、HDDへ保存先を変え、固定15%と媒体適応型の再計算率を比較して、計算・入出力協調の効果を検証する。",
+    "scope": "実機でGPU・CPUメモリ・SSD・HDDを跨ぐ評価を行う点は強いが、A100側のHDDとRTX 4090側のSSDはGPU種類も同時に異なるため、媒体差だけを完全に独立させた比較ではない。主な低速媒体評価はMistralであり、Qwen 2.5-32Bを含む全モデルでSSD/HDDの適応率を検証してはいない。較正は代表要求長に基づく少数サンプルで、実運用中の帯域競合や複数利用者による動的な媒体負荷変化への追従は未評価である。"
   }
 }
