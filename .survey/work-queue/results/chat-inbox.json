@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-2737f1df0cf5be1d",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/07-kv-cache-optimization-compression/2025-2507.19823-hcattention-heterogeneous-attention.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2507.19823.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-51b3f7936c4527fb",
+  "validation_error": "ValueError: problem_method.method_overview must explain the end-to-end mechanism",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T17:02:53+00:00"
 }
