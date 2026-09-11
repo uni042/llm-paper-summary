@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.05708",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
   "selection_reason": "エージェント型LLMの継続的な会話履歴を有界チャンクへ分割し、チャンク間の意味関係を維持するMemAttentionと、同時取得されやすいチャンクを近接配置するハードウェア・ソフトウェア協調配置を組み合わせる。履歴全体の再プリフィルを避けつつ、4ワークロード・3モデル規模で精度最大+10.2ポイント、処理量最大1.21倍、持続可能要求率最大1.88倍を報告する。KVキャッシュそのものとは異なる長期メモリI/O配置系として隣接比較価値がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T03:31:30+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T03:35:59+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

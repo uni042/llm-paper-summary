@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T03:31:40.896363+00:00",
+  "updated_at": "2026-09-11T03:36:08.534689+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,18 +3838,18 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T03:31:40.896363+00:00",
+      "last_recorded_at": "2026-09-11T03:36:08.534689+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 6,
+        "research_completed": 7,
         "audit_completed": 0,
         "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 16,
+        "new_jobs": 17,
         "new_papers": 5,
         "fallback_archived": 0
       },
@@ -4068,6 +4068,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34559040814:1",
+          "recorded_at": "2026-09-11T03:36:08.534689+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34559040814",
+            "run_attempt": "1",
+            "source_sha": "7218ad9c32da003215e4004c4eef42c7a42f502c"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4172,6 +4187,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-a6bfa4373afaf3ea",
+          "type": "research",
+          "canonical_id": "arXiv:2607.05708",
+          "title": "Akashic: A Low-Overhead LLM Inference Service with MemAttention",
           "from": "ready",
           "to": "completed"
         }
@@ -4288,6 +4311,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.05708",
           "title": "Akashic: A Low-Overhead LLM Inference Service with MemAttention"
+        },
+        {
+          "job_id": "job-815a631357ed1267",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
