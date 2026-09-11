@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-12f4462c0de876df",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.03555",
+      "title": "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2608.03555",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.03555-karat-pnm-sparse-attention-serving.md",
+      "priority": 89,
+      "reason": "百万トークン級の検索型疎注意で、GPUからKVキャッシュと検索索引を大容量LPDDR搭載の汎用近傍メモリ処理ノードへ分離し、GPUは投影・MoE、KARAT側はKV参照を伴う処理を担当する異種サービング設計。固定機能PIMではなく変化する疎注意方式を扱える汎用計算と、細粒度マイクロバッチ重畳・文脈長対応再平衡を組み合わせる。3モデルと実エージェントトレースで、サービス品質目標下のTDP当たりスループットをGPU単独比2.09〜6.13倍、学習不要疎注意でも1.36〜3.21倍改善すると報告しており、KVをGPU外メモリ階層へ置いたまま計算する系統として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.06302",
+      "title": "Tangram: Unlocking Non-Uniform KV Cache for Efficient Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.06302",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-nonuniform-kv-serving.md",
+      "priority": 86,
+      "reason": "非一様KV保持率を実サービングへ持ち込む際のメモリ断片化、動的スケジューリング、カーネル利用率低下をシステム側で解く研究。ヘッドごとの決定論的メモリ予算、保持率の近いヘッドをまとめる独立ページ表、事前負荷分散により、圧縮手法の理論上の省メモリを実際のGPU実行効率へ変換する。既存方式比でスループット最大2.6倍を報告し、公式実装も公開されているため、KV圧縮アルゴリズムとページ化サービング基盤の接続点として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2603.06350-moeless-serverless-expert-serving.md",
+      "priority": 82,
+      "reason": "MoEの専門家負荷偏りを、固定GPU内のキャッシュ・再配置だけで処理せず、過負荷になる専門家を事前予測してサーバレス専門家として弾力的に増設・配置するサービング方式。層別の軽量予測器で将来の専門家負荷を推定し、関数局所性とGPU利用率を考慮したスケール・配置を行う。Megatron-LM上の8 GPU実機で、既存方式より推論遅延43%削減、推論コスト84%削減を報告しており、専門家オフロードとは別の『容量不足時に外部実行資源を増やす』設計点としてMoE系統を補完する。"
+    }
+  ]
+}
