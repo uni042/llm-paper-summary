@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T04:34:36.130187+00:00",
+  "updated_at": "2026-09-11T04:46:43.182151+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4464,13 +4464,14 @@
     {
       "run_key": "2026-09-11T13:30:00+09:00",
       "first_recorded_at": "2026-09-11T04:30:37.377286+00:00",
-      "last_recorded_at": "2026-09-11T04:34:36.130187+00:00",
+      "last_recorded_at": "2026-09-11T04:46:43.182151+00:00",
       "signals": [
         "discovery_or_queue_expanded",
-        "paper_materialized"
+        "paper_materialized",
+        "research_completed"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
@@ -4521,6 +4522,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34563449909:1",
+          "recorded_at": "2026-09-11T04:46:43.182151+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34563449909",
+            "run_attempt": "1",
+            "source_sha": "eff516b2f4788af5b3271e8f797c746ed24b52ea"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4545,6 +4560,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-1d48fc43f068d473",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08450",
+          "title": "Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention",
           "from": "ready",
           "to": "completed"
         }
@@ -4599,7 +4622,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 257,
       "paper_active_count_after": 260,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
