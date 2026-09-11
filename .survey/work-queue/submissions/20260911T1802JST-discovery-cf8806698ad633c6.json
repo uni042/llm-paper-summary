@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-cf8806698ad633c6",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.18600",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18600-shuntserve-heterogeneous-spot-gpu-serving.md",
+      "priority": 88,
+      "reason": "異種spot GPU群でLLM servingを行う際、roofline modelに基づく性能推定と動的計画法でnode構成・parallelism・layer配置を共同最適化し、spot interruption時には出力を保つrequest migrationとshared tensor storeによる並行初期化で停止時間を抑える。L4/A10G/L40S混在AWS環境でSOTA比1.35–1.42倍throughput、on-demand比約31%のcost efficiency改善を報告し、異種GPU schedulingと可用性を同時に扱う点が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+      "priority": 86,
+      "reason": "disaggregated LLM servingでKV block retrieval、collective communication、prefill-to-decode転送が共有network上で競合する問題をmulti-stage flowとして扱い、Reverse Multi-Level QueueでLeast-Laxity-Firstを近似するDefer-and-Promote schedulingを提案する。8 server/32 GPU実機と大規模simulationでTTFT SLO達成率を1.2–2.4倍に改善しており、compute schedulerではなくnetwork flow schedulingを主対象とする点が既存serving研究と差別化される。"
+    },
+    {
+      "canonical_id": "arXiv:2607.10183",
+      "title": "Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices",
+      "source_url": "https://arxiv.org/abs/2607.10183",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.10183-atsinfer-tensor-scheduling-cpu-gpu.md",
+      "priority": 84,
+      "reason": "従来のlayer/expert単位offloadより細かいtensor粒度でCPU/GPU間の配置・転送・計算を自動調停するconsumer-device向け推論system。静的tensor配置、load-aware動的transfer、非同期CPU-GPU coordinationを組み合わせ、dense/MoE双方でprefill最大1.94倍、decode最大3.29倍を報告する。局所PCでの階層memory利用という本repoの重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2602.02987",
+      "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+      "source_url": "https://arxiv.org/abs/2602.02987",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md",
+      "priority": 80,
+      "reason": "prefillとdecodeが同一GPU資源を共有する際のstate-dependent contentionとworkload heterogeneityをmany-server queueing networkとして定式化し、fluid approximationとsteady-state LPからgate-and-route policyを導く。many-GPU極限で漸近最適性を示し、latency/fairness SLI制約にも拡張するため、経験則中心のserving scheduler研究を理論面から補完する価値がある。"
+    }
+  ]
+}
