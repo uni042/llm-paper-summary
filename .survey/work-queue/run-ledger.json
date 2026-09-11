@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T01:46:55.705709+00:00",
+  "updated_at": "2026-09-11T01:50:00.442551+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,17 +3310,17 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T01:46:55.705709+00:00",
+      "last_recorded_at": "2026-09-11T01:50:00.442551+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3396,6 +3396,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34552212462:1",
+          "recorded_at": "2026-09-11T01:50:00.442551+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34552212462",
+            "run_attempt": "1",
+            "source_sha": "2272e8f9f2115a20e153218de3734bcbf09cc36b"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3438,6 +3453,14 @@
           "title": "FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-960d3bc442b0fe00",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17880",
+          "title": "Mixture-of-Experts Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3475,6 +3498,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.17880",
           "title": "Mixture-of-Experts Serving"
+        },
+        {
+          "job_id": "job-51de467467408979",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
@@ -3485,7 +3515,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 244,
       "paper_active_count_after": 244,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
