@@ -65,18 +65,18 @@ def norm_id(value):
 
 
 def papers():
-    """Inference and survey papers used by the canonical identity index.
+    """All repository paper families used by the canonical identity index.
 
-    Training remains excluded until its frozen legacy pages have canonical
-    metadata. Survey papers must participate so discovery cannot enqueue an
-    already registered review under a second lineage.
+    Citation matching must cross Inference, Training, and Survey without
+    creating duplicate identities for papers that expose multiple identifiers.
     """
     repo = repository_root()
     old = read(STATE + "paper-identity-index.json", {}) or {}
     moved = set(old.get("ignored_moved_stubs", []))
     records = []
-    paper_paths = list((repo / "papers/inference").glob("*/*.md"))
-    paper_paths += list((repo / "papers/survey").glob("*/*.md"))
+    paper_paths = []
+    for family in PAPER_FAMILIES:
+        paper_paths += list((repo / "papers" / family).glob("*/*.md"))
     for p in sorted(paper_paths):
         rel = p.relative_to(repo).as_posix()
         relative_family_path = rel.split("/", 2)[-1]
@@ -273,26 +273,8 @@ def paper_views():
 
 
 def _citation_counts(records):
-    counts = {r["path"]: 0 for r in records}
-    tokens = {}
-    for r in records:
-        vals = []
-        for kind, value in r["identifiers"]:
-            if kind == "arxiv":
-                vals.append(re.compile(r"(?<![\d.])" + re.escape(value) + r"(?:v\d+)?(?![\d.])", re.I))
-            elif kind == "doi":
-                vals.append(re.compile(re.escape(value), re.I))
-        tokens[r["path"]] = vals
-
-    for source in records:
-        raw = source["file"].read_text(encoding="utf-8")
-        for target in records:
-            if source["path"] == target["path"]:
-                continue
-            if any(pattern.search(raw) for pattern in tokens[target["path"]]):
-                counts[target["path"]] += 1
-    return counts
-
+    from citation_graph import citation_counts_from_view_records
+    return citation_counts_from_view_records(records)
 
 def _month_label(record):
     if record["year"] and record["month"]:

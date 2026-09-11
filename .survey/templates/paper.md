@@ -13,6 +13,10 @@ bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
+references: []
+references_checked_at: YYYY-MM-DD
+references_source: primary-reference-section
+references_total: 0
 title: ""
 summary: ""
 authors: []
@@ -186,6 +190,10 @@ Transformer、混合専門家モデル（Mixture of Experts; MoE）、KVキャ�
 - 重み退避、KVキャッシュ退避、活性値退避、最適化器状態退避
 
 大きな倍率を書くときは、**何と何を比較した倍率か**を同じ段落で明示する。
+
+## 参考文献の構造化
+
+一次論文のreference sectionを本文とは別に確認し、識別できる参考文献をfrontmatterの`references`へ保存する。arXiv IDはversion suffixを除去し、DOIは小文字のbare DOI、OpenReviewはforum IDへ正規化する。同一参考文献が複数識別子を持つ場合は1要素へまとめる。本文中の単なる関連言及は`references`へ入れない。`references_total`は一次論文の参考文献総数、`references_checked_at`は確認日、`references_source`は根拠にした一次資料のreference sectionを示す。識別子を持つ参考文献が0件でも、reference sectionを確認済みなら`references: []`として保存する。
 
 ## 概要
 

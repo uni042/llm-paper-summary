@@ -121,6 +121,8 @@ slot上限、必須field、文章量、日本語優先ルールは `.survey/scri
 
 `primary`と`cross_list`を混ぜない。カテゴリが1件だけなら`cross_list`は空配列とする。Markdown生成時にこれらのメタデータを捨てず、論文frontmatterへ引き継ぐ。
 
+さらに一次論文のreference sectionを確認し、正規化した`references`、`references_checked_at`、`references_source`、`references_total`を`metadata.json`へ保存する。arXivのversion違いは同一IDへ正規化し、DOI / arXiv / OpenReviewの複数IDが同じ参考文献を指す場合は1要素へまとめる。本文中の関連言及はreferenceとして扱わない。reference sectionを確認済みで識別可能なIDが0件の場合も`references: []`を明示する。
+
 5 slotすべて反映後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。inboxの`record_slots`は5件固定で、各slotのpathと実際のGit blob SHAを持つ。
 
 `.survey/scripts/assemble_research_record.py` がrecordを検証し、`.survey/scripts/render_paper.py` がrunner内でMarkdownを生成する。Scheduled Chatは完成Markdownを直接送らない。
