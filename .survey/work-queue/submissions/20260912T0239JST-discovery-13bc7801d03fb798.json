@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-13bc7801d03fb798",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.06557",
+      "title": "Cascade: Exploiting SLO-Aware latency budget for fair and high-goodput LLM inference serving",
+      "source_url": "https://arxiv.org/abs/2608.06557",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget.md",
+      "priority": 87,
+      "reason": "各要求について、サービス品質目標から予測残り処理時間を差し引いた遅延余裕を共通制御量にし、要求順序と階層KVキャッシュの保持・復元・先読み・再計算を同時に決める配信方式。実運用トレースと3モデルで、標準vLLM先着順に対し有効スループットを最大2.4倍、サービス品質目標違反を40%削減と報告しており、スケジューリングとメモリ階層制御を同じ指標で結ぶ点が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.29639",
+      "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+      "source_url": "https://arxiv.org/abs/2605.29639",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm-alibaba-inference-engine.md",
+      "priority": 84,
+      "reason": "Alibabaで1億人超へ展開された産業規模の推論エンジンで、ファイル順I/Oと通信の重畳によるモデル読込み、プリフィル・デコード分離、GPU・ローカルCPU・遠隔CPU・分散ストレージの多階層KVキャッシュ、投機的デコード、KV量子化、マルチモーダル分離を統合する。8B〜235Bを評価し、モデル読込み4.7〜6.3倍高速化、実運用でP95の最初のトークンまでの時間を35〜37%削減しつつキャッシュ再利用を215%改善などを報告する。統合実運用基盤として収録価値が高い。"
+    }
+  ]
+}
