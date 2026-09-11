@@ -6,13 +6,13 @@ on:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
-      - '.github/workflows/repository-tests.yml'
+      - '.github/workflows/*.yml'
   pull_request:
     paths:
       - '.survey/scripts/**/*.py'
       - '.survey/tests/**/*.py'
       - '.survey/scripts/requirements.txt'
-      - '.github/workflows/repository-tests.yml'
+      - '.github/workflows/*.yml'
   workflow_dispatch:
 
 permissions:
@@ -39,6 +39,16 @@ jobs:
 
       - name: Compile survey scripts
         run: python -m compileall -q .survey/scripts
+
+      - name: Validate workflow YAML
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          for path in sorted(Path('.github/workflows').glob('*.yml')):
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+              print(path)
+          PY
 
       - name: Run all regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_*.py'
