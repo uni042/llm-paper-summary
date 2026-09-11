@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T04:32:51.216903+00:00",
+  "updated_at": "2026-09-11T04:34:36.130187+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4464,7 +4464,7 @@
     {
       "run_key": "2026-09-11T13:30:00+09:00",
       "first_recorded_at": "2026-09-11T04:30:37.377286+00:00",
-      "last_recorded_at": "2026-09-11T04:32:51.216903+00:00",
+      "last_recorded_at": "2026-09-11T04:34:36.130187+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "paper_materialized"
@@ -4472,9 +4472,9 @@
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 5,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -4507,6 +4507,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34562696687:1",
+          "recorded_at": "2026-09-11T04:34:36.130187+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34562696687",
+            "run_attempt": "1",
+            "source_sha": "10d8a81867c64e5493e3095e232042a76778c792"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4520,6 +4534,14 @@
         },
         {
           "job_id": "job-add45d98dbbafd02",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d13a93faa1d04cbc",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -4541,6 +4563,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-1d48fc43f068d473",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08450",
+          "title": "Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention"
+        },
+        {
+          "job_id": "job-research-53c253e5bccae726",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09768",
+          "title": "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?"
+        },
+        {
+          "job_id": "job-research-b241bd9114edcf86",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10266",
+          "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints"
         }
       ],
       "new_paper_ids": [
@@ -4550,7 +4593,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1330JST-discovery-9bcb2e884a1e3a83.json",
-        ".survey/work-queue/results/20260911T1332JST-discovery-add45d98dbbafd02.json"
+        ".survey/work-queue/results/20260911T1332JST-discovery-add45d98dbbafd02.json",
+        ".survey/work-queue/results/20260911T1334JST-discovery-d13a93faa1d04cbc.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 257,

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-1d48fc43f068d473",
+  "type": "research",
+  "parent_job_id": "job-d13a93faa1d04cbc",
+  "priority": 88,
+  "canonical_id": "arXiv:2609.08450",
+  "title": "Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention",
+  "source_url": "https://arxiv.org/abs/2609.08450",
+  "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
+  "selection_reason": "長文sparse attentionでTop-K自体がcontext長に比例して重くなる問題を、sample-guided coarse boundaryとcomplete-row certificationを組み合わせたexact selectorで解くGPU operator研究。20構成で外部exact baseline比1.29〜1.75倍、framework traceで1.36倍/1.48倍を報告し、Tencent HPC-Opsとして実装公開済み。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T04:34:28+00:00",
+  "artifact_transport": "structured_record_v10"
+}
