@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T07:00:27.837725+00:00",
+  "updated_at": "2026-09-11T07:06:48.287192+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,14 +5239,14 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T07:00:27.837725+00:00",
+      "last_recorded_at": "2026-09-11T07:06:48.287192+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
@@ -5355,6 +5355,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34572854993:1",
+          "recorded_at": "2026-09-11T07:06:48.287192+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34572854993",
+            "run_attempt": "1",
+            "source_sha": "83bcdb55fe59c317b96a83c66c156960cff59b9c"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5411,6 +5425,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-fed596c4160c0092",
+          "type": "research",
+          "canonical_id": "arXiv:2609.03335",
+          "title": "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs",
           "from": "ready",
           "to": "completed"
         }
@@ -5479,8 +5501,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
-      "paper_active_count_after": 278,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 279,
+      "last_successful_action": "research_completed"
     }
   ]
 }
