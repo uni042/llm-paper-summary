@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.26491",
   "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
   "selection_reason": "モノリシック3次元集積による大容量オンチップメモリがLLM推論のHBM往復と電力をどこまで減らせるかを、モデル・実行系・メモリ技術を横断する検証済みシミュレーション基盤LLMETで評価する。A100相当ではL2を40MBから1GBへ増やすとLlama-3.1-70Bの16Kプリフィルでチップエネルギー44%削減、B200相当8GPUでは最大24%、エッジのデコードでは最大30%を報告する。将来メモリ階層の容量・エネルギー境界を定量化する基盤研究として有用である。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T05:05:59+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T05:14:17+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
