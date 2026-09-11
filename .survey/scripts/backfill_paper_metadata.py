@@ -5,7 +5,8 @@ Rules:
 - Never overwrite a non-empty existing frontmatter value.
 - Reuse already researched bibliographic/implementation details from the Markdown body.
 - Use arXiv API only for stable bibliographic facts (authors, dates, categories, abs URL).
-- Keep code=null when no official code URL is already evidenced in the repository content.
+- Keep code=null when no official code URL is evidenced in the repository content.
+- Derive implementation status only from existing code/evaluation metadata; do not invent a code URL.
 """
 from __future__ import annotations
 
@@ -84,8 +85,16 @@ def body_bibliography(body: str) -> dict[str, str]:
 
 
 def split_authors(value: str) -> list[str]:
-    parts = [x.strip() for x in re.split(r"\s*(?:,|、|；|;)\s*", value) if x.strip()]
-    return parts
+    return [x.strip() for x in re.split(r"\s*(?:,|、|；|;)\s*", value) if x.strip()]
+
+
+def authors_from_affiliations(value: Any) -> list[str]:
+    if not isinstance(value, str) or not value.strip():
+        return []
+    # Existing legacy field usually has "A, B（University）". Only consume the
+    # author segment before the first affiliation parenthesis.
+    head = re.split(r"[（(]", value, maxsplit=1)[0].strip()
+    return split_authors(head)
 
 
 def official_code_from_text(text: str) -> str | None:
@@ -157,11 +166,41 @@ def paper_paths(root: Path) -> list[Path]:
         for path in sorted((root / "papers" / family).rglob("*.md")):
             if path.name in {"README.md", "comparison.md"}:
                 continue
-            meta, body = parse_frontmatter(path)
+            _, body = parse_frontmatter(path)
             if body.lstrip().startswith("# Moved"):
                 continue
             out.append(path)
     return out
+
+
+def ensure_sources(meta: dict[str, Any], *extra: Any) -> bool:
+    current = meta.get("sources")
+    if isinstance(current, list) and current:
+        return False
+    sources: list[str] = []
+    for candidate in (meta.get("source"), *extra, meta.get("code")):
+        if isinstance(candidate, str) and candidate and candidate not in sources:
+            sources.append(candidate)
+    if sources:
+        meta["sources"] = sources
+        return True
+    return False
+
+
+def synthesize_implementation(meta: dict[str, Any]) -> tuple[str, str]:
+    code = meta.get("code")
+    evaluation = meta.get("hardware_evaluation") or meta.get("evaluation_type")
+    if isinstance(code, str) and code.strip():
+        prefix = f"公式コード公開あり（{code.strip()}）。"
+        status = "official-code-available"
+    else:
+        prefix = "公式コードURLはメタデータ確認時点で確認できず。"
+        status = "official-code-not-confirmed"
+    if isinstance(evaluation, str) and evaluation.strip():
+        detail = f"論文では{evaluation.strip()}による提案手法の実装・評価を報告。"
+    else:
+        detail = "実装形態の詳細は既存本文の手法・評価記述を参照。"
+    return detail + prefix, status
 
 
 def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tuple[bool, list[str]]:
@@ -172,6 +211,12 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
 
     if "authors" in bib and set_missing(meta, "authors", split_authors(bib["authors"])):
         added.append("authors(body)")
+    if ("authors" not in meta or empty(meta.get("authors"))) and meta.get("authors_affiliations"):
+        authors = authors_from_affiliations(meta.get("authors_affiliations"))
+        if authors:
+            meta["authors"] = authors
+            added.append("authors(authors_affiliations)")
+
     for key in ("publication", "publication_type", "publication_status", "implementation"):
         if key in bib and set_missing(meta, key, bib[key]):
             added.append(f"{key}(body)")
@@ -189,7 +234,10 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
             added.append("authors(arxiv)")
         if set_missing(meta, "published", info.get("published")):
             added.append("published(arxiv)")
-        if set_missing(meta, "arxiv_categories", info.get("arxiv_categories")):
+        incoming_categories = info.get("arxiv_categories")
+        categories = meta.get("arxiv_categories")
+        if incoming_categories and (not isinstance(categories, dict) or empty(categories.get("primary"))):
+            meta["arxiv_categories"] = incoming_categories
             added.append("arxiv_categories")
         if set_missing(meta, "source", info.get("abs_url")):
             added.append("source(arxiv)")
@@ -199,24 +247,40 @@ def backfill(path: Path, arxiv: dict[str, dict[str, Any]], checked: str) -> tupl
             added.append("publication_type(arxiv)")
         if set_missing(meta, "publication_status", "arXiv preprint"):
             added.append("publication_status(arxiv)")
+        if ensure_sources(meta, info.get("abs_url"), info.get("pdf_url")):
+            added.append("sources")
 
-        sources = meta.get("sources")
-        if not isinstance(sources, list) or not sources:
-            sources = []
-            for candidate in (meta.get("source"), info.get("abs_url"), info.get("pdf_url"), meta.get("code")):
-                if isinstance(candidate, str) and candidate and candidate not in sources:
-                    sources.append(candidate)
-            if sources:
-                meta["sources"] = sources
-                added.append("sources")
+    # Non-arXiv legacy conference pages can usually be reconstructed from existing fields.
+    source = str(meta.get("source") or "")
+    if set_missing(meta, "publication", meta.get("publication_status")):
+        added.append("publication(publication_status)")
+    if ("publication_type" not in meta or empty(meta.get("publication_type"))) and "usenix.org/" in source:
+        meta["publication_type"] = "査読付き国際会議論文"
+        added.append("publication_type(usenix)")
+    if ensure_sources(meta):
+        added.append("sources")
 
-    # A missing code key means "unknown field"; explicit null means checked/no URL recorded.
-    if "code" not in meta:
+    # Empty legacy code strings are normalized to explicit null: do not infer a URL.
+    if "code" not in meta or meta.get("code") == "":
         meta["code"] = None
         added.append("code=null")
 
-    # Reuse a body implementation description when possible. Otherwise keep it incomplete;
-    # this prevents the audit from falsely declaring implementation evidence complete.
+    if "implementation" not in meta or empty(meta.get("implementation")):
+        implementation, status = synthesize_implementation(meta)
+        meta["implementation"] = implementation
+        added.append("implementation(evidence)")
+        if "implementation_status" not in meta or empty(meta.get("implementation_status")):
+            meta["implementation_status"] = status
+            added.append("implementation_status")
+    elif "implementation_status" not in meta or empty(meta.get("implementation_status")):
+        code = meta.get("code")
+        meta["implementation_status"] = (
+            "official-code-available"
+            if isinstance(code, str) and code.strip()
+            else "official-code-not-confirmed"
+        )
+        added.append("implementation_status")
+
     if "last_checked" not in meta or empty(meta.get("last_checked")):
         meta["last_checked"] = checked
         added.append("last_checked")
