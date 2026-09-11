@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:51:28.913831+00:00",
+  "updated_at": "2026-09-11T09:53:59.703941+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,7 +6314,7 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T09:51:28.913831+00:00",
+      "last_recorded_at": "2026-09-11T09:53:59.703941+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -6323,9 +6323,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -6403,6 +6403,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34586486787:1",
+          "recorded_at": "2026-09-11T09:53:59.703941+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34586486787",
+            "run_attempt": "1",
+            "source_sha": "9dfabd93aa726d49e7129aedfebdaca1a27463f9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6445,6 +6459,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-071438061be959b0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6461,6 +6483,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-201fc0a1160abae4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.03770",
+          "title": "E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments"
         }
       ],
       "new_paper_ids": [
@@ -6469,7 +6498,8 @@
         "arXiv:2410.03065"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json"
+        ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
+        ".survey/work-queue/results/20260911T1912JST-discovery-071438061be959b0.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
