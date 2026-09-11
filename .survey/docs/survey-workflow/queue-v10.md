@@ -61,7 +61,7 @@ Notionは使用しない。旧 `/LLM-survey-fallback/` はlegacy移行元であ�
 
 1. `.survey/survey-state/paper-identity-index.json`
 2. `.survey/survey-state/identity-deltas/**/*.json`
-3. `papers/inference/**` frontmatter
+3. `papers/inference/**` と `papers/survey/**` の既収録論文
 4. `.survey/work-queue/jobs/*.json`
 5. ChatGPT Library / GitHub fallback-inbox上のseedとcheckpoint済みjob
 
@@ -186,3 +186,15 @@ seed保存後はjob実体化を待たず同じrunで候補を精読し、完成r
 - completionはActions result + latest queueで検証する。
 - 同一payloadの重複copyは同じenvelope IDで冪等に収束させる。
 - pending/replay失敗、bank exhaustion、1本処理完了をrun終了理由にしない。
+
+## 12. Paper family routing
+
+research開始時点で、論文を **Inference / Training / Survey** のどこへ保存するかを明示的に判定する。`paper_path` はこの判定と一致させる。
+
+- **Survey / サーベイ**: 主目的が複数の既存研究・方式・システムを横断整理し、分類、比較、体系化、研究課題整理を行うsurvey / review / systematic review / tutorial-style overview。新規の中心的システム手法そのものを提案する原著論文は、関連研究節が広くてもSurveyへ入れない。
+- **Inference / 推論**: 新規手法・システム・アルゴリズムの主目的が推論、serving、decoding、KV cache、offload、MoE実行、on-device実行などの推論効率化である原著論文。
+- **Training / 学習**: 学習・fine-tuning・optimizer・activation/parameter/optimizer-state offloadなど学習段階の効率化が主目的。ただし通常サーベイではTraining側の新規追加は凍結方針を優先し、明示的な指示がない限り新規収録しない。
+
+Surveyと判定した論文を `papers/inference/**` へ保存してはならない。保存先は `papers/survey/<survey-lineage>/<filename>.md` とする。適切なsurvey lineageがまだなければ、対象範囲に沿った下位ディレクトリを新設してよい。
+
+判定が曖昧な場合は、タイトルに `survey` や `review` が含まれるかではなく、**論文の主たる貢献が新規システム提案か、既存研究群の体系化か**で決める。原著論文とsurveyを兼ねる場合、主要な評価・新規性が独自手法にあるならInference側を優先する。
