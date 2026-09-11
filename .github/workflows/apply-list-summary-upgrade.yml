@@ -1,0 +1,117 @@
+name: Apply list summary quality upgrade
+
+on:
+  push:
+    branches: [list-summary-quality-20260911]
+    paths:
+      - '.github/workflows/apply-list-summary-upgrade.yml'
+      - '.survey/scripts/list_summary.py'
+      - '.survey/scripts/audit_list_summary_quality.py'
+      - '.survey/tests/test_list_summary_quality.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: list-summary-quality-upgrade
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: list-summary-quality-20260911
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Patch list rendering, audit workflow, and operating guide
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              if new in text:
+                  return
+              if old not in text:
+                  raise SystemExit(f'anchor not found in {path}: {old!r}')
+              p.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          replace_once(
+              '.survey/scripts/survey.py',
+              'import yaml\n',
+              'import yaml\n\nfrom list_summary import compact_list_summary\n',
+          )
+          replace_once(
+              '.survey/scripts/survey.py',
+              '"summary": meta.get("summary") or _legacy_summary(body),',
+              '"summary": compact_list_summary(body, meta.get("summary") or _legacy_summary(body)),',
+          )
+
+          workflow = Path('.github/workflows/paper-quality-audit.yml')
+          text = workflow.read_text(encoding='utf-8')
+          text = text.replace(
+              '      - ".survey/scripts/audit_paper_quality.py"\n      - ".survey/scripts/japanese_style.py"\n      - ".survey/tests/test_audit_paper_quality.py"\n      - "papers/inference/**/*.md"',
+              '      - ".survey/scripts/audit_paper_quality.py"\n      - ".survey/scripts/audit_list_summary_quality.py"\n      - ".survey/scripts/list_summary.py"\n      - ".survey/scripts/japanese_style.py"\n      - ".survey/tests/test_audit_paper_quality.py"\n      - ".survey/tests/test_list_summary_quality.py"\n      - "papers/inference/**/*.md"\n      - "papers/training/**/*.md"\n      - "papers/survey/**/*.md"',
+          )
+          text = text.replace(
+              "run: python -m unittest discover -s .survey/tests -p 'test_audit_paper_quality.py'",
+              "run: python -m unittest discover -s .survey/tests -p 'test_*quality.py'",
+          )
+          marker = '''      - name: Upload audit report\n        uses: actions/upload-artifact@v4\n'''
+          addition = '''      - name: Run paper-list summary audit\n        run: |\n          python .survey/scripts/audit_list_summary_quality.py \\\n            --no-fail-exit \\\n            --markdown-out audit-output/list-summary-quality-audit.md \\\n            --json-out audit-output/list-summary-quality-audit.json\n\n'''
+          if addition not in text:
+              if marker not in text:
+                  raise SystemExit('paper-quality workflow upload anchor not found')
+              text = text.replace(marker, addition + marker, 1)
+          workflow.write_text(text, encoding='utf-8')
+
+          guide = Path('.survey/docs/survey-workflow/README.md')
+          text = guide.read_text(encoding='utf-8')
+          anchor = 'structured recordは最終Markdownへ変換される本文原稿であり、rendererが内容を補う前提で短縮しない。完成扱いの直前にActionsと同じvalidator基準でpreflightする。\n'
+          addition = anchor + '\n論文一覧の「一文要約」は本文とは別の派生表示とし、単体ページの `## 概要`、なければH1直後の概要引用を優先して45〜180文字へ圧縮する。本文と同じ日本語優先規則を適用し、日本語比率70%未満、日本語化できる英語専門語の裸書き、改行・URL・Markdown断片を品質監査で検出する。\n\n既存論文の一覧文を直すだけなら原論文の再精読は不要で、単体ページに既にある概要を縮めて生成する。Inference / Training / Surveyを同じ規則で扱い、Trainingは新規追加停止の方針だけを維持する。\n'
+          if addition not in text:
+              if anchor not in text:
+                  raise SystemExit('workflow guide quality anchor not found')
+              text = text.replace(anchor, addition, 1)
+          guide.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Run strict list-summary audit
+        run: |
+          python .survey/scripts/audit_list_summary_quality.py \
+            --repo-root . \
+            --markdown-out /tmp/list-summary-audit.md \
+            --json-out /tmp/list-summary-audit.json
+
+      - name: Compile and run regression tests
+        run: |
+          python -m compileall -q .survey/scripts
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Rebuild all paper indexes
+        run: python .survey/scripts/survey.py --root .survey build
+
+      - name: Remove one-off workflow and commit upgrade
+        run: |
+          set -euo pipefail
+          rm .github/workflows/apply-list-summary-upgrade.yml
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add -A .survey/scripts/survey.py .survey/docs/survey-workflow/README.md .github/workflows/paper-quality-audit.yml .github/workflows/apply-list-summary-upgrade.yml
+          git add README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
+          find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
+          git commit -m 'feat: enforce compact quality-checked paper list summaries'
+          git push origin HEAD:list-summary-quality-20260911
