@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d13a93faa1d04cbc",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.10266",
+      "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+      "source_url": "https://arxiv.org/abs/2609.10266",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+      "priority": 82,
+      "reason": "exact-prefix以外のKV再利用を、RAGのretrieved chunk・multi-agent report・model checkpoint差分という実運用条件で統一評価するbenchmark。位置補正だけで十分な領域と、部分再符号化や学習が必要な領域をcompute・memory・per-request latency込みで比較し、公開harness/leaderboardも提供するため、KV再利用手法の横断比較基盤として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.09768",
+      "title": "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
+      "source_url": "https://arxiv.org/abs/2609.09768",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+      "priority": 86,
+      "reason": "RAGで事前計算KVを単純連結すると長文品質が落ちる問題に対し、KV連結を前提にしたfine-tuningと一部KVの選択的recomputeを組み合わせる。124k-token入力でfull attention比TTFTを80%削減しつつ、recompute-onlyよりRULERを9.7 point改善しており、KV再利用と再計算の品質・速度トレードオフを直接扱う。"
+    },
+    {
+      "canonical_id": "arXiv:2609.08450",
+      "title": "Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2609.08450",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
+      "priority": 88,
+      "reason": "長文sparse attentionでTop-K自体がcontext長に比例して重くなる問題を、sample-guided coarse boundaryとcomplete-row certificationを組み合わせたexact selectorで解くGPU operator研究。20構成で外部exact baseline比1.29〜1.75倍、framework traceで1.36倍/1.48倍を報告し、Tencent HPC-Opsとして実装公開済み。"
+    }
+  ]
+}
