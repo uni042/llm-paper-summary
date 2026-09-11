@@ -23,11 +23,11 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**260本**（移動案内を除く）。
+推論論文：**267本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 27 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 33 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 13 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |
@@ -41,6 +41,7 @@
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 2 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 18 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 12 |
+| [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 47 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 60 |

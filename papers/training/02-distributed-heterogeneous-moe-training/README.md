@@ -14,17 +14,27 @@ MoEを多数GPUへ分散して学習すると、tokenごとに使うエキスパ
 
 CPUやSSDへモデルを退避することが中心の研究は `01-training-offload-memory-systems/` に分類し、ここでは主にGPU間の配置・複製・通信・並列化を扱う。
 
-## 収録論文
+<!-- survey:auto:start -->
+## 自動生成の論文一覧（5本）
 
-収録論文: 5本。公開日が新しい順。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
+「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-- 2025-08-18 — [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)
-  - expert数とTop-kが大きいMoEで、空のpadding領域を通信せず、同じnode宛ての重複token送信もまとめる。MoE部分だけsequence配置を変え、AMDを含む大規模HPCで通信量と活性値メモリを減らす。
-- 2025-04-28 — [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)
-  - expert重みは人気度に応じてGPU上で動かす一方、巨大な最適化状態（optimizer state）はhost側へ固定する。expertを複製・再配置してもoptimizer stateまで毎回移さずに済む。
-- 2025-04-21 — [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)
-  - attention部分とMoE部分で別々のGPU並列グループを使い、同じGPU集合を処理ごとに異なる論理構成へ組み替える。MoEの全対全通信を高速なnode内接続へ閉じ込めやすくする。
-- 2025-04-04 — [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)
-  - 新しいGPUへattention、旧世代GPUへexpert計算を主に割り当てる。両方を同時進行させ、expert数もGPU性能に応じて非対称に配置して待ち時間を減らす。
-- 2023-04-08 — [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)
-  - routingでtokenが集中したhot expertだけを別GPUへ複製・移動し、元のroutingを変えずに複製間へtokenを分散する。token dropなしで特定GPUへの負荷集中を緩和する。
+### 直近12か月（2025-10〜2026-09）
+
+該当なし。
+
+### 直近12か月より前・リポジトリ内で被引用
+
+該当なし。
+
+### その他
+
+| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
+|---|---|:---:|---:|---|
+| 2025-08 | [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md) | [✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) | 0 | expert数とTop-kが大きい新しいMoEで、空のpadding領域を通信しないtoken配置、node間の重複送信削減、MoE部分専用のsequence分割を組み合わせて大規模HPC学習を効率化する。 |
+| 2025-04 | [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md) | — | 0 | 動的に複製したいexpert重みと、巨大で移動コストの高いoptimizer stateの配置を切り離し、optimizer stateを動かさずにexpert複製数を毎iteration調整するMoE学習システム。 |
+| 2025-04 | [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md) | [✓](https://github.com/NVIDIA/Megatron-LM) | 0 | attention部分とMoE部分で別々のGPU並列化構成を使い、同じGPU群を処理ごとに異なる論理グループとして組み替えることで、不要なノード間通信を減らす大規模MoE学習方式。 |
+| 2025-04 | [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md) | — | 0 | 新しいGPUへattention、旧世代GPUへexpert計算を主に割り当て、処理を重ねながらexpert数を非対称に配置して、異種GPUクラスタの待ち時間を減らすMoE学習方式。 |
+| 2023-04 | [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md) | — | 0 | MoE学習中のルーティング（routing）偏りを監視し、負荷が高いエキスパート（expert）だけを必要数複製・移動して、tokenを捨てずにGPU間の待ち時間を減らすシステム。 |
+<!-- survey:auto:end -->

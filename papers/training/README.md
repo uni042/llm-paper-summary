@@ -16,3 +16,15 @@
   - MoEのエキスパート（expert）をどのGPUへ置くか、人気expertを何個複製するか、tokenをGPU間でどう通信するか、性能の異なるGPUへどう役割分担させるかを調整し、大規模MoE学習の待ち時間を減らす研究を含む。
 - [Pipeline-Parallel / Modular Training Systems](03-pipeline-parallel-modular-training/) — 1本
   - modelを複数stageへ分けた学習で、microbatch scheduleやstage間dependency、activation lifetime、通信、checkpoint / replayを調整し、pipeline bubble・GPU memory・stage間待ち・failure recovery costを減らす研究を含む。
+
+<!-- survey:auto:start -->
+## 自動生成の収録状況
+
+学習論文：**19本**。
+
+| 系統 | 本数 |
+|---|---:|
+| [01-training-offload-memory-systems](01-training-offload-memory-systems/README.md) | 13 |
+| [02-distributed-heterogeneous-moe-training](02-distributed-heterogeneous-moe-training/README.md) | 5 |
+| [03-pipeline-parallel-modular-training](03-pipeline-parallel-modular-training/README.md) | 1 |
+<!-- survey:auto:end -->

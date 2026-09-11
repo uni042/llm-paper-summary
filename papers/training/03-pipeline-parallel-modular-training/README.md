@@ -15,9 +15,23 @@
 
 CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避することが中心なら `01-training-offload-memory-systems/`、MoE expertのGPU配置・複製・all-to-all通信が中心なら `02-distributed-heterogeneous-moe-training/` に分類する。
 
-## 収録論文
+<!-- survey:auto:start -->
+## 自動生成の論文一覧（1本）
 
-収録論文: 1本。公開日が新しい順。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
+「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-- 2026-08-08 — [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md)
-  - 各model chunkにlocal objectiveを持たせてchunk間のbackward dependencyを切り、forward hidden stateをlocal backwardより先に次stageへ渡す。下流backward待ちのactivation保持とcross-stage gradient通信を減らし、stage単位checkpointで局所復旧も可能にする。
+### 直近12か月（2025-10〜2026-09）
+
+| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
+|---|---|:---:|---:|---|
+| 2026-08 | [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md) | [✓](https://anonymous.4open.science/r/unlock_trainer-105B) | 0 | モデルを複数chunkへ分け、各chunkを局所目的関数で独立更新することで、下流chunkの逆伝播待ちと長時間のactivation保持をなくし、pipeline並列学習のbubble・memory・通信待ちを減らすBP-free fine-tuning system。 |
+
+### 直近12か月より前・リポジトリ内で被引用
+
+該当なし。
+
+### その他
+
+該当なし。
+<!-- survey:auto:end -->
