@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T08:35:14.314205+00:00",
+  "updated_at": "2026-09-11T08:41:21.713510+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5843,16 +5843,16 @@
     {
       "run_key": "2026-09-11T17:30:00+09:00",
       "first_recorded_at": "2026-09-11T08:32:59.073522+00:00",
-      "last_recorded_at": "2026-09-11T08:35:14.314205+00:00",
+      "last_recorded_at": "2026-09-11T08:41:21.713510+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -5884,6 +5884,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34580369127:1",
+          "recorded_at": "2026-09-11T08:41:21.713510+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34580369127",
+            "run_attempt": "1",
+            "source_sha": "7a6178c338d2c297d6198e170249d4f7ad31dc00"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5897,6 +5911,14 @@
         },
         {
           "job_id": "job-af83b07786e20df5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-305b63a35c012b0a",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -5918,12 +5940,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-c31836b8567b9a9d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09338",
+          "title": "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1730JST-discovery-83bcad427dc46233.json",
-        ".survey/work-queue/results/20260911T1736JST-discovery-af83b07786e20df5.json"
+        ".survey/work-queue/results/20260911T1736JST-discovery-af83b07786e20df5.json",
+        ".survey/work-queue/results/20260911T1744JST-discovery-305b63a35c012b0a.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 302,
