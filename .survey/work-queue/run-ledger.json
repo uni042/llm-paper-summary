@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T05:38:31.193748+00:00",
+  "updated_at": "2026-09-11T05:42:11.874760+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4871,17 +4871,19 @@
     {
       "run_key": "2026-09-11T14:30:00+09:00",
       "first_recorded_at": "2026-09-11T05:33:15.103860+00:00",
-      "last_recorded_at": "2026-09-11T05:38:31.193748+00:00",
+      "last_recorded_at": "2026-09-11T05:42:11.874760+00:00",
       "signals": [
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "discovery_or_queue_expanded",
+        "job_blocked"
       ],
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
-        "blocked": 0,
-        "new_jobs": 0,
+        "blocked": 1,
+        "new_jobs": 1,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -4914,6 +4916,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34566951274:1",
+          "recorded_at": "2026-09-11T05:42:11.874760+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34566951274",
+            "run_attempt": "1",
+            "source_sha": "c751d666190553e41861c31853ae5e6de79951c1"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "job_blocked"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4932,9 +4949,25 @@
           "title": "FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-69777c51ce28921c",
+          "type": "research",
+          "canonical_id": "arXiv:2510.05632",
+          "title": "From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-1f9b736a87f9638c",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2508.16449",
         "arXiv:2607.16473",
@@ -4948,7 +4981,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 260,
       "paper_active_count_after": 267,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

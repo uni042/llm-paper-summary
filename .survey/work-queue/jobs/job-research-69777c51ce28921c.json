@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2510.05632",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
   "selection_reason": "複数コアNPUで、テンソル並列方式、コア配置、メモリ管理、プリフィル/デコード分離か同居かを一つずつではなく体系的に探索するマルチレベルシミュレーション研究。代表LLMと複数NPU構成で既存設計比1.32〜6.03倍の高速化を報告し、SIMT GPUとは異なる柔軟性制約を持つNPU上でどのサービング戦略が成立するかを整理する。個別方式だけでなくNPUサービングの設計空間を比較する基準論文として有用。",
-  "status": "ready",
+  "status": "blocked",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T05:19:41+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T05:42:00+00:00",
+  "blocker": "Primary-source full text could not be retrieved in this run. The arXiv abstract for 2510.05632 and the official WaferAI-SIM repository were reachable, and secondary full-paper explanations were found, but the paper PDF/HTML itself could not be obtained through the available primary-source retrieval routes. Workflow policy forbids completing the research record from abstract/search/secondary material. Retry when arXiv primary full text is reachable."
 }
