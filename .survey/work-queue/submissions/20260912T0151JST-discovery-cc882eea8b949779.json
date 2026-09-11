@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-cc882eea8b949779",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2507.19823",
+      "title": "HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs",
+      "source_url": "https://arxiv.org/abs/2507.19823",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2507.19823-hcattention-heterogeneous-attention.md",
+      "priority": 80,
+      "reason": "長文推論でキー量子化、値のCPUオフロード、動的KV削除を組み合わせ、GPUとCPUで注意計算を分担する異種注意計算を提案する。LongBenchで全注意相当の精度を維持しつつKVメモリを25%まで縮め、12.5%でも競争力を保ち、A100 80GB 1枚でLlama-3-8Bの400万トークン処理を報告する。圧縮とオフロードを別々に扱わず、GPU/CPU配置と注意計算を共同設計する未収録候補として価値がある。"
+    }
+  ]
+}
