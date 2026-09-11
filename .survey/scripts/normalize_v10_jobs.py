@@ -18,7 +18,9 @@ RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
     "record covering problem, novelty, method, evaluation conditions, key quantitative "
     "results, limitations, implementation status, and relation to existing repository "
-    "lineages. Do not infer missing text from abstracts/search snippets. Follow workflow "
+    "lineages. Preserve publication date/status, implementation and source URLs; for an "
+    "arXiv paper, record its primary and cross-list categories from arXiv. Do not infer "
+    "missing text from abstracts/search snippets. Follow workflow "
     "v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat."
 )
 RESEARCH_COMPLETION = (
@@ -30,7 +32,8 @@ AUDIT_INSTRUCTIONS = (
     "Perform a formal audit using primary sources: identity/bibliography, authors/"
     "affiliations, publication state/final version, code, hardware/model/dataset/"
     "baselines, quantitative results, simulation vs real hardware, classification, "
-    "differences and limitations. Return a complete workflow-v10 five-slot structured "
+    "arXiv primary/cross-list categories, differences and limitations. Return a complete "
+    "workflow-v10 five-slot structured "
     "research record; do not send completed Markdown from Scheduled Chat."
 )
 AUDIT_COMPLETION = (

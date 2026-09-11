@@ -1,24 +1,47 @@
 ---
-canonical_id: "NeurIPS2024:03469b1a66e351b18272be23baf3b809"
-last_audited: "2026-09-10"
+canonical_id: NeurIPS2024:03469b1a66e351b18272be23baf3b809
+arxiv_id: null
+doi: 10.52202/079017-0055
+openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models"
-summary: "各token・各layerで『このlayerを実行するか』を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。"
-authors_affiliations: "一次資料記載の著者ら（NeurIPS 2024）"
-published: "2024-12-15"
-publication_status: "Published"
-lineage: "Conditional Computation"
-topics: ["Dynamic depth","KV cache offload","Quality-cost"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/03469b1a66e351b18272be23baf3b809-Abstract-Conference.html"
-code: "https://github.com/Jyk-122/D-LLM"
-last_checked: "2026-09-02"
+title: 'D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language
+  Models'
+summary: 各token・各layerで『このlayerを実行するか』を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。
+authors_affiliations: 一次資料記載の著者ら（NeurIPS 2024）
+published: '2024-12-15'
+publication_status: Published
+lineage: Conditional Computation
+topics:
+- Dynamic depth
+- KV cache offload
+- Quality-cost
+importance: 高
+hardware_evaluation: 実機
+source: https://proceedings.neurips.cc/paper_files/paper/2024/hash/03469b1a66e351b18272be23baf3b809-Abstract-Conference.html
+code: https://github.com/Jyk-122/D-LLM
+implementation: 公式実装あり（Jyk-122/D-LLM）
+last_checked: '2026-09-11'
+authors:
+- Jiang, Yikun
+- Wang, Huanyu
+- Xie, Lei
+- Zhao, Hanbin
+- Zhang, Chao
+- Qian, Hui
+- Lui, John C.
+publication: Advances in Neural Information Processing Systems
+publication_type: conference paper
+sources:
+- https://proceedings.neurips.cc/paper_files/paper/2024/hash/03469b1a66e351b18272be23baf3b809-Abstract-Conference.html
 ---
 
 # D-LLM: A トークン 適応型 Computing Resource Allocation Strategy for Large Language Models

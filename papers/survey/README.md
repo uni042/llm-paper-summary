@@ -15,9 +15,11 @@ LLMシステム研究を横断的に整理する **survey / review 論文** を�
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-サーベイ論文：**0本**。
+サーベイ論文：**3本**。
 
 | 系統 | 本数 |
 |---|---:|
-| — | 0 |
+| [01-kv-cache-systems](01-kv-cache-systems/README.md) | 1 |
+| [02-diffusion-llm-inference](02-diffusion-llm-inference/README.md) | 1 |
+| [03-inference-engines](03-inference-engines/README.md) | 1 |
 <!-- survey:auto:end -->

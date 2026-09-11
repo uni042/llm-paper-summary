@@ -110,6 +110,17 @@ python .survey/scripts/select_record_bank.py --repo-root .
 
 slot上限、必須field、文章量、日本語優先ルールは `.survey/scripts/assemble_research_record.py` と `.survey/templates/paper.md` を正本とする。
 
+`metadata.json`では一覧・重複排除・監査を再現できるよう、正規識別子、題名、要約、著者、公開日`published`、公開先`publication`、公開種別`publication_type`、公開状態`publication_status`、一次資料`sources`、実装情報`implementation`、公式コード`code`、確認日`last_checked`を必須項目として保存する。公式コードを確認できない場合も`code`自体を省略せず`null`とし、未確認と実装なしを混同しない。arXiv論文は、その版のarXiv表示を正本として、主カテゴリと横断登録カテゴリを次の形で保存する。
+
+```json
+"arxiv_categories": {
+  "primary": "cs.LG",
+  "cross_list": ["cs.AI"]
+}
+```
+
+`primary`と`cross_list`を混ぜない。カテゴリが1件だけなら`cross_list`は空配列とする。Markdown生成時にこれらのメタデータを捨てず、論文frontmatterへ引き継ぐ。
+
 5 slotすべて反映後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。inboxの`record_slots`は5件固定で、各slotのpathと実際のGit blob SHAを持つ。
 
 `.survey/scripts/assemble_research_record.py` がrecordを検証し、`.survey/scripts/render_paper.py` がrunner内でMarkdownを生成する。Scheduled Chatは完成Markdownを直接送らない。

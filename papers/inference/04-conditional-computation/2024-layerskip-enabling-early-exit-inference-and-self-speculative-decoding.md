@@ -1,24 +1,55 @@
 ---
-canonical_id: "ACL:2024.acl-long.681"
-last_audited: "2026-09-10"
+canonical_id: ACL:2024.acl-long.681
+arxiv_id: '2404.16710'
+doi: 10.18653/v1/2024.acl-long.681
+openreview_id: null
+arxiv_categories:
+  primary: cs.CL
+  cross_list:
+  - cs.AI
+  - cs.LG
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding"
-summary: "学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。"
-authors_affiliations: "Meta AIほか（ACL 2024、著者詳細は一次資料参照）"
-published: "2024-08-12"
-publication_status: "Published"
-lineage: "Conditional Computation"
-topics: ["Dynamic depth","Speculative decoding","Quality-cost"]
-importance: "中"
-hardware_evaluation: "実機"
-source: "https://aclanthology.org/2024.acl-long.681/"
-code: "https://github.com/facebookresearch/LayerSkip"
-last_checked: "2026-09-02"
+title: 'LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding'
+summary: 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft
+  modelなしのspeculative decodingを行う。
+authors_affiliations: Meta AIほか（ACL 2024、著者詳細は一次資料参照）
+published: '2024-08-12'
+publication_status: Published
+lineage: Conditional Computation
+topics:
+- Dynamic depth
+- Speculative decoding
+- Quality-cost
+importance: 中
+hardware_evaluation: 実機
+source: https://aclanthology.org/2024.acl-long.681/
+code: https://github.com/facebookresearch/LayerSkip
+implementation: 公式実装・チェックポイントあり（facebookresearch/LayerSkip）
+last_checked: '2026-09-11'
+authors:
+- Mostafa Elhoushi
+- Akshat Shrivastava
+- Diana Liskovich
+- Basil Hosmer
+- Bram Wasti
+- Liangzhen Lai
+- Anas Mahmoud
+- Bilge Acun
+- Saurabh Agarwal
+- Ahmed Roman
+- Ahmed A Aly
+- Beidi Chen
+- Carole-Jean Wu
+publication: arXiv
+publication_type: preprint
+sources:
+- https://aclanthology.org/2024.acl-long.681/
 ---
 
 # 層kip: Enabling Early Exit Inference and Self-Speculative デコード

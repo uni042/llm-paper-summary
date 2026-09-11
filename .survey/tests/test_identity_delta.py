@@ -55,6 +55,24 @@ body
         self.assertIn("arXiv:2607.02043", base["papers"])
         self.assertEqual(self.delta.validate_all(), 0)
 
+    def test_survey_papers_participate_in_identity_snapshot(self):
+        survey_dir = self.survey.ROOT / "papers/survey/reviews"
+        survey_dir.mkdir(parents=True)
+        paper = survey_dir / "2026-2607.08057-kv-cache-survey.md"
+        paper.write_text("""---
+canonical_id: arXiv:2607.08057
+arxiv_id: 2607.08057
+title: KV survey
+summary: test
+source: https://arxiv.org/abs/2607.08057
+last_audited: null
+audit_version: 0
+---
+body
+""")
+        snapshot = self.survey.identity(self.survey.papers())
+        self.assertIn("arXiv:2607.08057", snapshot["papers"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -95,6 +95,7 @@ def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
         "canonical_id", "arxiv_id", "doi", "openreview_id", "source", "sources",
         "code", "paper_path", "attempt_id", "job_id", "published", "title",
         "authors", "publication", "publication_type", "publication_status",
+        "arxiv_categories",
     }
     if key in protected_keys:
         return value
@@ -141,13 +142,29 @@ def validate_record(record: dict[str, Any]) -> None:
     rs = record.get("results") or {}
     pos = record.get("positioning") or {}
 
-    for key in ("canonical_id", "title", "summary", "source", "authors", "publication", "topics", "implementation"):
+    for key in (
+        "canonical_id", "title", "summary", "source", "sources", "authors",
+        "publication", "topics", "implementation", "last_checked",
+    ):
         if not nonempty(meta.get(key)):
             raise ValueError(f"metadata.{key} is required")
+    if "code" not in meta:
+        raise ValueError("metadata.code is required; use null when no official URL was confirmed")
     if prose_chars(meta.get("summary")) < 180:
         raise ValueError("metadata.summary must be explanatory, not a one-line abstract")
     if not nonempty(meta.get("publication_type")):
         raise ValueError("metadata.publication_type is required")
+    if not nonempty(meta.get("published")):
+        raise ValueError("metadata.published is required")
+    if not nonempty(meta.get("publication_status")):
+        raise ValueError("metadata.publication_status is required")
+    if meta.get("arxiv_id"):
+        categories = meta.get("arxiv_categories")
+        if not isinstance(categories, dict) or not nonempty(categories.get("primary")):
+            raise ValueError("metadata.arxiv_categories.primary is required for arXiv papers")
+        cross_list = categories.get("cross_list")
+        if cross_list is not None and not isinstance(cross_list, list):
+            raise ValueError("metadata.arxiv_categories.cross_list must be a list")
     if not nonempty(meta.get("hardware_evaluation")):
         raise ValueError("metadata.hardware_evaluation is required")
     if not nonempty(meta.get("quality_effect")):

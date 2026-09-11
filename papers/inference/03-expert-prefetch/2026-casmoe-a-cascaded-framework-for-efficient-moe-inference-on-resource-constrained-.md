@@ -1,24 +1,48 @@
 ---
-canonical_id: "AAAI:39816"
-last_audited: "2026-09-10"
+canonical_id: AAAI:39816
+arxiv_id: null
+doi: 10.1609/aaai.v40i31.39816
+openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices"
-summary: "過去に似たpromptがあればその時のexpert利用履歴を再利用し、似た履歴がなければ学習済みpredictorで全layerのexpert候補を予測して、CPUからGPUへの先読みを早く始める。"
-authors_affiliations: "Chengcheng Wang, Haowen He, Liang Zhao, Xiaoheng Deng, Lixin Duan, Shaohua Wan／UESTC, Shenyang Aerospace University, Central South University"
-published: "2026-03-14"
-publication_status: "Published"
-lineage: "Expert Prefetch"
-topics: ["CPU offload","Expert cache","Expert prefetch","Edge／on-device"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://ojs.aaai.org/index.php/AAAI/article/view/39816"
-code: ""
-last_checked: "2026-09-03"
+title: 'CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained
+  Devices'
+summary: 過去に似たpromptがあればその時のexpert利用履歴を再利用し、似た履歴がなければ学習済みpredictorで全layerのexpert候補を予測して、CPUからGPUへの先読みを早く始める。
+authors_affiliations: Chengcheng Wang, Haowen He, Liang Zhao, Xiaoheng Deng, Lixin
+  Duan, Shaohua Wan／UESTC, Shenyang Aerospace University, Central South University
+published: '2026-03-14'
+publication_status: Published
+lineage: Expert Prefetch
+topics:
+- CPU offload
+- Expert cache
+- Expert prefetch
+- Edge／on-device
+importance: 高
+hardware_evaluation: 実機
+source: https://ojs.aaai.org/index.php/AAAI/article/view/39816
+code: ''
+implementation: 公式コード公開の記載はAAAI掲載ページで確認できず
+last_checked: '2026-09-11'
+authors:
+- Chengcheng Wang
+- Haowen He
+- Liang Zhao
+- Xiaoheng Deng
+- Lixin Duan
+- Shaohua Wan
+publication: Proceedings of the AAAI Conference on Artificial Intelligence
+publication_type: conference paper
+sources:
+- https://ojs.aaai.org/index.php/AAAI/article/view/39816
 ---
 
 # CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices

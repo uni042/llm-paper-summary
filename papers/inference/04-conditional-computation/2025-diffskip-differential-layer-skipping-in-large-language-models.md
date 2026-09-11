@@ -1,24 +1,42 @@
 ---
-canonical_id: "ACL:2025.findings-acl.377"
-last_audited: "2026-09-10"
+canonical_id: ACL:2025.findings-acl.377
+arxiv_id: null
+doi: 10.18653/v1/2025.findings-acl.377
+openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "DiffSkip: Differential Layer Skipping in Large Language Models"
-summary: "tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。"
-authors_affiliations: "一次資料記載の著者ら（Findings of ACL 2025）"
-published: "2025-07-27"
-publication_status: "Published"
-lineage: "Conditional Computation"
-topics: ["Dynamic depth","Quality-cost","Edge／on-device"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://aclanthology.org/2025.findings-acl.377/"
-code: ""
-last_checked: "2026-09-02"
+title: 'DiffSkip: Differential Layer Skipping in Large Language Models'
+summary: tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。
+authors_affiliations: 一次資料記載の著者ら（Findings of ACL 2025）
+published: '2025-07-27'
+publication_status: Published
+lineage: Conditional Computation
+topics:
+- Dynamic depth
+- Quality-cost
+- Edge／on-device
+importance: 高
+hardware_evaluation: 実機
+source: https://aclanthology.org/2025.findings-acl.377/
+code: ''
+implementation: 公式コード公開の記載はACL Anthology掲載ページで確認できず
+last_checked: '2026-09-11'
+authors:
+- Xuan Luo
+- Weizhi Wang
+- Xifeng Yan
+publication: 'Findings of the Association for Computational Linguistics: ACL 2025'
+publication_type: conference paper
+sources:
+- https://aclanthology.org/2025.findings-acl.377/
 ---
 
 # DiffSkip: Differential 層 Skipping in Large Language Models
