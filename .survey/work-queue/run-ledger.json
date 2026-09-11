@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T17:07:42.484983+00:00",
+  "updated_at": "2026-09-11T17:10:03.765346+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6786,7 +6786,7 @@
     {
       "run_key": "2026-09-12T01:30:00+09:00",
       "first_recorded_at": "2026-09-11T16:34:49.056336+00:00",
-      "last_recorded_at": "2026-09-11T17:07:42.484983+00:00",
+      "last_recorded_at": "2026-09-11T17:10:03.765346+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -6795,9 +6795,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 11,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -6949,6 +6949,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34626076316:1",
+          "recorded_at": "2026-09-11T17:10:03.765346+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34626076316",
+            "run_attempt": "1",
+            "source_sha": "2a88adee47b42c3c06fd5fcc590794b1d3b87d39"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7031,6 +7045,14 @@
           "title": "vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-70aa105074246bd1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -7103,6 +7125,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-ea6f0f5305a34c22",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09748",
+          "title": "Epoch: Compiling Diffusion Blocks for Sparse MoE Serving"
         }
       ],
       "new_paper_ids": [
@@ -7117,12 +7146,13 @@
         ".survey/work-queue/results/20260912T0146JST-discovery-3ac62172fb9e78c3.json",
         ".survey/work-queue/results/20260912T0149JST-discovery-6cc60ed928024068.json",
         ".survey/work-queue/results/20260912T0151JST-discovery-cc882eea8b949779.json",
-        ".survey/work-queue/results/20260912T0156JST-discovery-ffdf36811f2a8f46.json"
+        ".survey/work-queue/results/20260912T0156JST-discovery-ffdf36811f2a8f46.json",
+        ".survey/work-queue/results/20260912T0209JST-discovery-70aa105074246bd1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 313,
       "paper_active_count_after": 317,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
