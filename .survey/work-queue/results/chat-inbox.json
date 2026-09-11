@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-2f0dad2a8facac81",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2410.21465.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-4c378528e45eb85d",
+  "validation_error": "ValueError: metadata.code is required; use null when no official URL was confirmed",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T06:49:17+00:00"
 }
