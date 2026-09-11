@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 240,
+  "active_count": 244,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -444,6 +444,13 @@
       ],
       "source_hash": "9f45309ca3e3fa80e724086e509b7297faae75d8446445317916a75e4a0d1706"
     },
+    "arXiv:2609.08682": {
+      "path": "papers/inference/04-moe-expert-offload-caching/2026-2609.08682-hda-moe-3d-near-memory-scheduling.md",
+      "identifiers": [
+        "arXiv:2609.08682"
+      ],
+      "source_hash": "03b4f02230891e861fdb0e70c2ceb230c3c3336888ce037ef6b24df9d6636a36"
+    },
     "arXiv:2603.27624": {
       "path": "papers/inference/04-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md",
       "identifiers": [
@@ -452,12 +459,27 @@
       ],
       "source_hash": "dec80f43c7edd10b0540ffd13604651f962f8101e39ecd77311677fb7c5233b6"
     },
+    "arXiv:2604.01621": {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2604.01621-dwdp-distributed-weight-data-parallelism.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2604.01621",
+        "arXiv:2604.01621"
+      ],
+      "source_hash": "8aad53f49f51a3b34eb9f97e141cd30aacbf7ee57ea9f310b6e1c368bcb59509"
+    },
     "arXiv:2608.00577": {
       "path": "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md",
       "identifiers": [
         "arXiv:2608.00577"
       ],
       "source_hash": "86bb91e6d43024014702dc57f5b5422f5e6d2399f4f36285ceef4e328cdcc609"
+    },
+    "arXiv:2507.03153": {
+      "path": "papers/inference/05-kv-cache-offloading/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md",
+      "identifiers": [
+        "arXiv:2507.03153"
+      ],
+      "source_hash": "41c6488aed77adada222bef54c331cb68e237844289bdae63cc31dcaeaf30bff"
     },
     "arXiv:2511.00321": {
       "path": "papers/inference/05-kv-cache-offloading/2025-2511.00321-cxl-pnm-kv-cache.md",
@@ -946,6 +968,14 @@
         "arXiv:2609.06551"
       ],
       "source_hash": "6fb17f5c9b49aa71b6d7db505d49e23b2a3862ba9613a84abb1d8031c619bad4"
+    },
+    "arXiv:2609.03079": {
+      "path": "papers/inference/09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
+      "identifiers": [
+        "DOI:10.1145/3795866.3844470",
+        "arXiv:2609.03079"
+      ],
+      "source_hash": "554335cb30213db50b1277e5dabffbd5e369141bb19f8c5e5d538cd9e4161fa1"
     },
     "arXiv:2403.11421": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
@@ -1797,9 +1827,13 @@
     "arXiv:2504.15895": "arXiv:2504.15895",
     "ACL:2025.findings-acl.377": "ACL:2025.findings-acl.377",
     "arXiv:2606.26607": "arXiv:2606.26607",
+    "arXiv:2609.08682": "arXiv:2609.08682",
     "DOI:10.48550/arxiv.2603.27624": "arXiv:2603.27624",
     "arXiv:2603.27624": "arXiv:2603.27624",
+    "DOI:10.48550/arxiv.2604.01621": "arXiv:2604.01621",
+    "arXiv:2604.01621": "arXiv:2604.01621",
     "arXiv:2608.00577": "arXiv:2608.00577",
+    "arXiv:2507.03153": "arXiv:2507.03153",
     "DOI:10.48550/arxiv.2511.00321": "arXiv:2511.00321",
     "arXiv:2511.00321": "arXiv:2511.00321",
     "DOI:10.1145/3831252.3845860": "arXiv:2609.05764",
@@ -1880,6 +1914,8 @@
     "arXiv:2609.01338": "arXiv:2609.01338",
     "arXiv:2609.02514": "arXiv:2609.02514",
     "arXiv:2609.06551": "arXiv:2609.06551",
+    "DOI:10.1145/3795866.3844470": "arXiv:2609.03079",
+    "arXiv:2609.03079": "arXiv:2609.03079",
     "arXiv:2403.11421": "arXiv:2403.11421",
     "arXiv:2407.21255": "arXiv:2407.21255",
     "arXiv:2409.04992": "arXiv:2409.04992",

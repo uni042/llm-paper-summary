@@ -1,10 +1,10 @@
 # 論文カタログ
 
-収録論文: **259本**。
+収録論文: **263本**。
 
 論文は最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。
 
-## Inference / 推論 — 240本
+## Inference / 推論 — 244本
 
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 26本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 13本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
@@ -27,5 +27,5 @@
 → [Training一覧](training/)
 
 <!-- survey:auto:start -->
-推論論文：**240本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
+推論論文：**244本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->
