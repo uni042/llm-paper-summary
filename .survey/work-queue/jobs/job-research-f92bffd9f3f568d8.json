@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-f92bffd9f3f568d8",
+  "type": "research",
+  "parent_job_id": "job-7335d4ff43b2ce6b",
+  "priority": 80,
+  "canonical_id": "arXiv:2607.04206",
+  "title": "Sangam: Efficiently Serving Diffusion LLMs with the AR Stack",
+  "source_url": "https://arxiv.org/abs/2607.04206",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.04206-sangam-diffusion-llm-serving.md",
+  "selection_reason": "拡散言語モデルでは双方向attentionのため通常のexact KV caching・chunked prefillが成立しないが、近似KV cache利用時にはprefill/decodeが繰り返される。この構造へARサービングの知見を移植し、分割不能prefillを赤字token-budgetで繰り延べるamortized stall-free schedulerと、prefill過負荷時だけdecode workerへ溢れさせるhybrid servingを提案する。LLaDA-8B/Dream-7Bで負荷特性に応じcolocated/hybrid間9〜20%の平均遅延差を示し、公式Apache-2.0実装も公開。推論基盤の新しい生成方式対応として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T10:04:42+00:00",
+  "artifact_transport": "structured_record_v10"
+}

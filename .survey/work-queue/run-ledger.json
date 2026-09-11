@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T10:03:30.412093+00:00",
+  "updated_at": "2026-09-11T10:04:59.523133+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,7 +6314,7 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T10:03:30.412093+00:00",
+      "last_recorded_at": "2026-09-11T10:04:59.523133+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -6323,9 +6323,9 @@
       "counts": {
         "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 7,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -6447,6 +6447,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34587387048:1",
+          "recorded_at": "2026-09-11T10:04:59.523133+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34587387048",
+            "run_attempt": "1",
+            "source_sha": "c6528647b8adf2c147972e304896ff79fd04e548"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6513,6 +6527,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-7335d4ff43b2ce6b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6550,6 +6572,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-cad6ce7f6124874f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.01831",
+          "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference"
+        },
+        {
+          "job_id": "job-research-f92bffd9f3f568d8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.04206",
+          "title": "Sangam: Efficiently Serving Diffusion LLMs with the AR Stack"
         }
       ],
       "new_paper_ids": [
@@ -6561,7 +6597,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
         ".survey/work-queue/results/20260911T1912JST-discovery-071438061be959b0.json",
-        ".survey/work-queue/results/20260911T1920JST-discovery-6fc4f4d29330489e.json"
+        ".survey/work-queue/results/20260911T1920JST-discovery-6fc4f4d29330489e.json",
+        ".survey/work-queue/results/20260911T1924JST-discovery-7335d4ff43b2ce6b.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
