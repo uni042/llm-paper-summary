@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 117,
+      "completed": 118,
       "superseded": 43,
       "deferred": 3,
-      "ready": 3,
+      "ready": 2,
       "blocked": 2
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-fd3f47f1ba51eddc",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2508.17219",
-      "title": "TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving",
-      "source_url": "https://arxiv.org/abs/2508.17219",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2508.17219-tokenlake-segment-prefix-cache-pool.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-47789f8888a4ad5e",
       "type": "research",
@@ -52,5 +40,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T09:32:02+00:00"
+  "generated_at": "2026-09-11T09:38:01+00:00"
 }

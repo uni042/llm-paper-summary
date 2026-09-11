@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:32:11.982970+00:00",
+  "updated_at": "2026-09-11T09:38:28.434483+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,17 +6314,18 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T09:32:11.982970+00:00",
+      "last_recorded_at": "2026-09-11T09:38:28.434483+00:00",
       "signals": [
-        "research_completed"
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 0,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -6341,6 +6342,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34585171019:1",
+          "recorded_at": "2026-09-11T09:38:28.434483+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34585171019",
+            "run_attempt": "1",
+            "source_sha": "b6be8e0d3675e4eabcac2d8f3bc4f5cd2273148a"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6351,15 +6367,25 @@
           "title": "ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-fd3f47f1ba51eddc",
+          "type": "research",
+          "canonical_id": "arXiv:2508.17219",
+          "title": "TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2508.17219"
+      ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
-      "paper_active_count_after": 305,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 307,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
