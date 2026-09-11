@@ -1,31 +1,31 @@
 {
   "counts": {
     "discovery": {
-      "completed": 93
+      "completed": 93,
+      "ready": 1
     },
     "audit": {
       "completed": 6
     },
     "research": {
-      "completed": 86,
+      "completed": 87,
       "superseded": 41,
-      "deferred": 1,
-      "ready": 1
+      "deferred": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-d1dc1bd9be58c058",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2602.09725",
-      "title": "Efficient Remote Prefix Fetching with GPU-native Media ASICs",
-      "source_url": "https://arxiv.org/abs/2602.09725",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-540607ac2c56795f",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-11T02:14:52+00:00"
+  "generated_at": "2026-09-11T02:20:21+00:00"
 }
