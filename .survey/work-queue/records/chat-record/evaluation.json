@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2509.24626-20260912-0140-v10-a1",
-  "job_id": "job-research-bdfa442b35d8b3ad",
+  "attempt_id": "attempt-2507.19823-20260912-0152-v10-a1",
+  "job_id": "job-research-2737f1df0cf5be1d",
   "data": {
-    "hardware": "NVIDIA A100 40GB HBM、AMD EPYC 7J13 CPU、256GB DRAMの単一GPU機。GPUとホストはPCIe Gen4で接続され、帯域は32GB/s。",
-    "software": "vLLMを基盤にSparseServeを実装する。比較対象は全KVをHBMに置く通常vLLM、vLLMへ動的疎注意を追加したvLLM-S、さらにKVをDRAMへオフロードしたvLLM-SO。SparseServeは疎注意、KVオフロード、断片化対応転送、作業集合対応バッチ制御、層分割プリフィルを統合する。",
-    "methodology": "LWM-7BとLlama3-8Bを用い、LongBenchの質問応答、文書要約、コード生成の複数データセットを混ぜた要求列を作る。要求到着は複数の到着率を持つポアソン分布で生成する。最大プロンプト長はLWM-7Bで32K、Llama3-8Bで128K。疎注意のKVトークン予算は2048で、付録の精度評価では全注意の99%以上を維持する設定である。vLLM系のチャンク分割プリフィルは2048トークン、SparseServeの層分割プリフィルも反復当たりの処理トークン総量を合わせる。平均初回トークン時間、平均トークン間時間、生成スループット、サービス水準目標下の最大持続要求量、KVブロック読込み量を比較し、さらに三つの主要機構を段階追加する除去評価を行う。",
-    "workloads": ["LongBench質問応答", "LongBench文書要約", "LongBenchコード生成", "LWM-7B", "Llama3-8B"],
-    "workload_details": "質問応答はQasper、NarrativeQA、MultiFieldQA、DuReader、文書要約はGovReport、QMSum、MultiNews、VCSum、コード生成はLCC、RepoBench-Pを含み、異種要求を一つのトレースへ混合する。LWM-7Bは最大1M文脈を持つMHA系、Llama3-8Bは262K文脈を持つGQA系として異なる注意構成を代表する。",
-    "baselines": ["vLLM", "vLLM-S", "vLLM-SO"],
-    "metrics": ["平均初回トークン時間", "平均トークン間時間", "生成トークン毎秒", "サービス水準目標下のgoodput", "KVブロック読込み数", "転送帯域・転送遅延", "LongBench精度"],
-    "scope": "A100 40GBとPCIe Gen4を用いた単一ノード実機評価であり、複数GPUやNVLink、PCIe Gen5/CXL、異なるCPUメモリ帯域での結果は直接測っていない。要求時刻は実運用トレースではなくポアソン生成で、疎注意選択にはArkVale系のブロック選択と2048トークン予算を使うため、別の選択器や局所性が弱いモデルでは作業集合予測と転送量が変わり得る。"
+    "hardware": "Ubuntu 22.04、Intel Xeon 8358P CPU 2基、1TB RAM、NVIDIA A100 80GB GPU 8基のサーバ。400万トークンの最大長実験はLlama-3-8BをA100 80GB 1枚で実行する。",
+    "software": "PyTorch 2.5.1+cu121、HuggingFace Transformers 4.45.2。コードブック生成にはScikit-learnのMiniBatchKMeansを使用し、代表サンプル3件、最大200反復、バッチサイズ10,000でクラスタリングする。1024K窓のプリフィルではFlashAttention2も使用する。",
+    "methodology": "Llama-2-7B-32K-InstructとLlama-3-8B-Instruct-Gradient-1048kをLongBenchおよびNeedle-in-a-Haystackで評価する。比較対象は全注意、H2O、TOVA、DuoAttention、StreamingLLM。GPU KV予算を50%、25%、12.5%へ下げ、HCAttentionでは50%で値退避のみ、25%で値退避+g=64のキー量子化、12.5%でg=32を用いる。注意質量閾値は標準でτ=0.9。KV削除閾値、コードブック中心数、グループ数を変えた除去評価も行い、LongBench平均と各タスク、NIAH深さ・長さ方向の回収率、処理可能最大文脈長を確認する。",
+    "workloads": ["LongBench", "Needle-in-a-Haystack", "Llama-2-7B-32K-Instruct", "Llama-3-8B-Instruct-Gradient-1048k"],
+    "workload_details": "LongBenchでは単一文書QA、複数文書QA、要約、少数例学習、検索、コード補完などを含む。NIAHでは長い文脈の異なる深さへ針文を埋め、情報回収能力を可視化する。付録では異なる針文と、ブロック分割プリフィルを組み合わせた追加評価も提示する。",
+    "baselines": ["Full attention", "H2O", "TOVA", "DuoAttention", "StreamingLLM"],
+    "metrics": ["LongBench平均・各タスク性能", "NIAH回収性能", "GPU KVメモリ予算", "動的選択率", "最大処理可能文脈長"],
+    "scope": "主評価は品質とGPU KV容量削減を中心とし、デコードトークン毎秒、初回トークン時間、PCIe帯域実測、CPU利用率などサービング性能の詳細比較は示されていない。8 GPUサーバを実験基盤としているが最大長の主張は単一A100 80GBであり、多要求同時サービングのスループット評価ではない。量子化コードブックは代表データから事前生成するため、モデル・分布が変わった場合の再調整コストも別途必要になる。"
   }
 }
