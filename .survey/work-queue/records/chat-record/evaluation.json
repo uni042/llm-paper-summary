@@ -2,23 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2602.11521-20260911-1130-v10-a1",
-  "job_id": "job-research-8455bd8ffbc74d54",
+  "attempt_id": "attempt-2604.19769-20260911-1141-v10-a1",
+  "job_id": "job-research-5439ec0e0daf70c9",
   "data": {
-    "hardware": ["8×NVIDIA H100-80GB相当", "HBM3 16GB×40", "DDR4-3200 32GB×40", "SSD 256GB/チャネル×64、4ダイ/チャネル"],
-    "software": ["LLMServingSim拡張", "LLMCompass", "Ramulator 2.0拡張", "OpenSSD拡張", "vLLM-offloading比較系", "Verilog + Synopsys Design Compilerによる回路面積合成"],
-    "model": ["Qwen2.5-32B", "LLaMA3-70B", "OPT-175B"],
-    "datasets": ["ShareGPT", "WildChat", "HumanEval", "Arxiv_sum", "Write_doc"],
-    "baselines": ["vLLM-offloading", "AttAcc!", "L-PIM", "LS-PIM"],
-    "correctness": "全モデルで16ビットの重みとKVを使用し、全方式に同じ8倍KV疎性化アルゴリズムを適用する。論文はこの疎性化による精度低下を全ワークロードで1%未満と報告する。PAMattentionのオンラインソフトマックス分割自体は局所最大値と正規化量を再結合して全体ソフトマックスを復元する設計だが、システム全体は疎性化を含むため完全KVと同一の無損失評価ではない。",
+    "hardware": ["NVIDIA A100", "NVIDIA RTX 3090", "GPU HBM", "ホストDRAM", "PCIe"],
+    "software": ["PyTorch", "CUDA", "NVML"],
+    "model": ["LLaMA-3.1-8B", "LLaMA-3.1-70B", "Qwen2.5系列（最大32B）", "DeepSeek-R1-14B", "Mistral-7B"],
+    "datasets": ["LongBench Qasper", "LongBench MultiNews", "Loong", "RULER", "L-Eval", "GovReport", "RepoBench-P"],
+    "baselines": ["FP16 dense-prefix KV", "KIVI", "KVQuant", "DiffKV", "ShadowKV"],
+    "correctness": "高速階層はFP16を維持し、低速階層だけキー8ビット・値4ビットへ量子化する。さらに低速階層は関連上位ブロックのみ取得するため近似を含む。品質はL-Eval、GovReport、MultiNews、Qasper、RepoBench-P、RULERなどの精度・F1・ROUGE-Lで比較し、FP16との差が小さいことを確認する。たとえば128KのLLaMA-3.1-70BではMultiNews 29.3対FP16 29.5、Qasper 37.8対38.0、RepoBench-P 57.8対58.0、RULER 61.8対62.0である。",
     "settings": [
-      {"name": "異種メモリ構成", "description": "8×H100-80GB、1280GB DDR4、8TB SSD相当を比較基盤とし、HBM3 16GB×40、DDR4 32GB×40、SSDは256GB/チャネル×64をモデル化する。各SSDチャネルは4ダイ、ページ16KB、2400MT/s、読み出し30us。"},
-      {"name": "PIM演算能力", "description": "処理ユニット周波数はHBM 666MHz、DDR 500MHz、SSD 1GHz。ピーク電力制約下のデバイス当たり計算能力をHBM 1.6TFLOPS、DDR 204GFLOPS、SSD 18GFLOPSとしてシミュレーションする。"},
-      {"name": "並列化", "description": "代表評価では4-wayテンソル並列と2-wayパイプライン並列を使用する。スケーラビリティ評価ではGPUとストレージ数を比例拡大し、Write_doc 1024要求で複数のテンソル並列・パイプライン並列構成を比較する。"},
-      {"name": "オンライン処理", "description": "ShareGPT、WildChat、HumanEvalを使用し、サービス品質目標（Service-Level Objective; SLO）を100ms、150ms、200msに設定して、その制約内での最大スループットと対応可能バッチ数を測る。オンライン会話の平均入力/出力長は183/299トークンと報告する。"},
-      {"name": "オフライン長文", "description": "Arxiv_sumとWrite_docを使用し、1500〜8000トークン程度の長文を処理する。LLaMA3-70Bはバッチ256/512/1024、OPT-175Bは16/32/64で最大スループットを比較する。"}
+      {"name": "基本バッチ", "description": "メモリ使用量、遅延、精度の比較は同一文脈長・バッチサイズ8で行う。遅延は十分なウォームアップ後にCUDA eventで測り、p95の一トークン当たり遅延を報告する。"},
+      {"name": "差分量子化", "description": "低速DRAM階層ではキーを8ビット、値を4ビットとする。高速HBM階層はFP16を維持し、古いブロックがHBMから押し出される時点で圧縮する。"},
+      {"name": "ブロック長", "description": "低速階層は128トークンを既定のブロック長とする。アブレーションでは32、64、128、256を比較し、128を遅延・転送量・品質の折衷点とする。"},
+      {"name": "計測", "description": "GPUメモリ量はNVML、ホストからGPUへのKV転送量は推論中のKV取得に起因するホスト読み出しの集計で測る。主要長文評価は16K、32K、64K、128Kを含む。"}
     ],
-    "methodology": "PAMと比較方式を同一シミュレータ上で評価するため、GPU演算をLLMCompass、DRAMタイミングとPIM処理をRamulator 2.0、SSD処理をOpenSSD、GPUと階層PIM間の相互作用・サービングスケジュールをLLMServingSimでモデル化する。vLLM系システムとAttAcc!シミュレータで結果を交差確認したと記載する。オンライン評価はSLO制約下のピークスループット、オフライン評価は固定バッチでの最大スループットを測る。加えて電力モデル、各機構を外すアブレーション、Verilog合成による面積、GPU/ストレージを比例増設したスケーラビリティを評価する。",
-    "scope": "主要性能値は提案PIMハードウェアを実際に製造した実機測定ではなくシミュレーション結果である。処理ユニットと集約ユニットはVerilog合成で面積を見積もるが、実際のHBM-PIM/DDR-PIM/SSD-PIM試作機を用いたエンドツーエンド検証ではない。性能は特定のメモリタイミング、PIM演算能力、電力モデル、8倍KV疎性化を前提とするため、市販GPU+通常SSDへそのまま適用できる結果ではない。また目標負荷比x,yはモデル構造変更時に再プロファイルが必要で、極端に異なる注意疎性やメモリ技術では最適値が変わる可能性がある。"
+    "methodology": "A100およびRTX 3090上のPyTorch/CUDA実装を使い、FP16全保持・KIVI・KVQuant・DiffKV・ShadowKVと比較する。32KのL-Eval、16K GovReport、4K〜128Kのスループット、128KのMultiNews/Qasper/RepoBench-P/RULERを用いて、品質とp95遅延、ホストからGPUへのKV転送量を同時に測定する。さらに64K RULERで高速/低速階層、差分量子化、ストリーミング注意を個別に外すアブレーションを行い、低速階層ブロック長も32/64/128/256で比較する。",
+    "scope": "提案はGPU HBMとホストDRAMの二階層を対象にしており、SSDやCXLメモリを直接評価していない。結果はA100/RTX 3090とPCIeの帯域・実装条件に依存する。また低速階層の関連ブロック選択関数の計算費用や、複数要求が同時にPCIeを競合する大規模サービング条件は本文の主要評価では限定的である。品質保持は対象ベンチマークで示されるが、4ビット値と疎なブロック選択を用いるため完全無損失ではない。"
   }
 }
