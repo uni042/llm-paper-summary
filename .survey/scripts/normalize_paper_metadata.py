@@ -9,7 +9,13 @@ import yaml
 
 
 PAPER_FAMILIES = ("inference", "training", "survey")
-NULLABLE_DEFAULTS = {"code": None}
+NULLABLE_DEFAULTS = {
+    "code": None,
+    # Presence is required structurally, but a missing historical audit must not
+    # be rewritten as if a full scientific audit had actually been performed.
+    "last_audited": None,
+    "audit_version": 0,
+}
 
 
 def normalize_file(path: Path, apply: bool) -> bool:

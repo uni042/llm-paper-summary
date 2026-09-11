@@ -8,11 +8,13 @@ on:
       - '.survey/scripts/citation_graph.py'
       - '.survey/scripts/backfill_citations.py'
       - '.survey/scripts/backfill_citation_pdfs.py'
+      - '.survey/scripts/recover_blocked_citations.py'
       - '.survey/scripts/normalize_paper_metadata.py'
       - '.survey/scripts/render_paper.py'
       - '.survey/scripts/assemble_research_record.py'
       - '.survey/tests/test_citation_graph.py'
       - '.survey/tests/test_pdf_citation_fallback.py'
+      - '.survey/tests/test_recover_blocked_citations.py'
       - '.survey/tests/test_render_paper_metadata.py'
   workflow_dispatch:
 
@@ -72,6 +74,10 @@ jobs:
               text, count = re.subn(pattern, replacement + '\n\ndef _month_label', text, count=1, flags=re.S)
               if count != 1:
                   raise SystemExit('could not replace legacy _citation_counts()')
+          text = text.replace(
+              '「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。',
+              '「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。',
+          )
           survey.write_text(text, encoding='utf-8')
 
           template = Path('.survey/templates/paper.md')
@@ -105,6 +111,7 @@ jobs:
             .survey/scripts/citation_graph.py \
             .survey/scripts/backfill_citations.py \
             .survey/scripts/backfill_citation_pdfs.py \
+            .survey/scripts/recover_blocked_citations.py \
             .survey/scripts/normalize_paper_metadata.py \
             .survey/scripts/render_paper.py \
             .survey/scripts/assemble_research_record.py \
@@ -169,6 +176,13 @@ jobs:
             --delay 0.75 \
             --apply \
             --retry-blocked
+
+      - name: Recover publisher and withdrawn-arXiv citation blockers
+        run: |
+          python .survey/scripts/recover_blocked_citations.py \
+            --root . \
+            --limit 50 \
+            --apply
 
       - name: Rebuild final graph and indexes
         run: |
