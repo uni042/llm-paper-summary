@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2602.11521",
   "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
   "selection_reason": "KV容量と帯域を同時に満たすため、高帯域・小容量層と低速・大容量層の複数PIMメモリを協調させ、KVトークン配置、異種PIM横断の細粒度注意計算、KV移動とオンライン負荷平衡を共同設計する。単一階層PIMや単純なKV退避と異なり、計算そのものをメモリ階層間へ分散するため、CXL/NDP/SSD近傍計算を含む将来の階層KV設計の比較対象として有用。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T02:21:20+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T02:34:30+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
