@@ -15,8 +15,7 @@ quality_effect: null
 evidence_locations: []
 title: 'FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference'
 summary: expert weightを複数の小さな行列単位へ分け、複数の前layerが共通して必要と予測したexpert部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。
-authors_affiliations: Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng,
-  Shibo He／Zhejiang University, Zhejiang University of Technology
+authors_affiliations: Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng, Shibo He／Zhejiang University, Zhejiang University of Technology
 published: '2026-03-14'
 publication_status: Published
 lineage: Expert Prefetch
@@ -28,7 +27,7 @@ topics:
 importance: 高
 hardware_evaluation: 実機
 source: https://ojs.aaai.org/index.php/AAAI/article/view/39106
-code: ''
+code: null
 implementation: 公式コード公開の記載はAAAI掲載ページで確認できず
 last_checked: '2026-09-11'
 authors:
@@ -42,6 +41,7 @@ publication: Proceedings of the AAAI Conference on Artificial Intelligence
 publication_type: conference paper
 sources:
 - https://ojs.aaai.org/index.php/AAAI/article/view/39106
+implementation_status: official-code-not-confirmed
 ---
 
 # FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference

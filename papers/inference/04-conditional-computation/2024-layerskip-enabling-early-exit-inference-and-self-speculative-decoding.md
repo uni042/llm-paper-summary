@@ -16,8 +16,7 @@ hardware_details: null
 quality_effect: null
 evidence_locations: []
 title: 'LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding'
-summary: 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft
-  modelなしのspeculative decodingを行う。
+summary: 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。
 authors_affiliations: Meta AIほか（ACL 2024、著者詳細は一次資料参照）
 published: '2024-08-12'
 publication_status: Published
@@ -50,6 +49,7 @@ publication: arXiv
 publication_type: preprint
 sources:
 - https://aclanthology.org/2024.acl-long.681/
+implementation_status: official-code-available
 ---
 
 # 層kip: Enabling Early Exit Inference and Self-Speculative デコード

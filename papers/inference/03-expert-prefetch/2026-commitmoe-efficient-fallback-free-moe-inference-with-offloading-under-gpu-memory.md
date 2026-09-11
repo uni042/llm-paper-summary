@@ -13,11 +13,9 @@ bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: 'CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU
-  Memory Constraints'
+title: 'CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints'
 summary: 次layerで使うexpertを予測してGPUへ先読みし、予測が外れても正しいexpertを読み直さず、準備済みexpertをそのまま使うことでoffload待ちをなくす近似MoE方式。
-authors_affiliations: Han Li, Jingwei Sun, Junqing Lin, Guangzhong Sun／University
-  of Science and Technology of China
+authors_affiliations: Han Li, Jingwei Sun, Junqing Lin, Guangzhong Sun／University of Science and Technology of China
 published: '2026-03-14'
 publication_status: Published
 lineage: Expert Prefetch
@@ -29,7 +27,7 @@ topics:
 importance: 高
 hardware_evaluation: 実機
 source: https://ojs.aaai.org/index.php/AAAI/article/view/39454
-code: ''
+code: null
 implementation: 公式コード公開の記載はAAAI掲載ページで確認できず
 last_checked: '2026-09-11'
 authors:
@@ -41,6 +39,7 @@ publication: Proceedings of the AAAI Conference on Artificial Intelligence
 publication_type: conference paper
 sources:
 - https://ojs.aaai.org/index.php/AAAI/article/view/39454
+implementation_status: official-code-not-confirmed
 ---
 
 # CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints

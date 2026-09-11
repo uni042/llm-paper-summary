@@ -13,8 +13,7 @@ bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: 'D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language
-  Models'
+title: 'D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models'
 summary: 各token・各layerで『このlayerを実行するか』を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。
 authors_affiliations: 一次資料記載の著者ら（NeurIPS 2024）
 published: '2024-12-15'
@@ -42,6 +41,7 @@ publication: Advances in Neural Information Processing Systems
 publication_type: conference paper
 sources:
 - https://proceedings.neurips.cc/paper_files/paper/2024/hash/03469b1a66e351b18272be23baf3b809-Abstract-Conference.html
+implementation_status: official-code-available
 ---
 
 # D-LLM: A トークン 適応型 Computing Resource Allocation Strategy for Large Language Models

@@ -4,34 +4,46 @@ bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "Orca: A Distributed Serving System for Transformer-Based Generative Models"
-summary: "output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。"
-authors_affiliations: "Gyeong-In Yu, Joo Seong Jeong（Seoul National University）; Geon-Woo Kim（FriendliAI / Seoul National University）; Soojeong Kim（FriendliAI）; Byung-Gon Chun（FriendliAI / Seoul National University）"
-published: "2022-07-11"
-publication_status: "OSDI 2022"
-lineage: "LLM Serving / Scheduling / Disaggregation"
-topics: ["Continuous batching","Selective batching","Distributed inference","Tensor parallelism","Pipeline parallelism"]
-importance: "高"
-hardware_evaluation: "実機"
-canonical_id: "DOI:10.5555/3600237.3600268"
-doi: "10.5555/3600237.3600268"
-last_audited: "2026-09-10"
+title: 'Orca: A Distributed Serving System for Transformer-Based Generative Models'
+summary: output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。
+authors_affiliations: Gyeong-In Yu, Joo Seong Jeong（Seoul National University）; Geon-Woo Kim（FriendliAI / Seoul National University）; Soojeong Kim（FriendliAI）; Byung-Gon Chun（FriendliAI / Seoul National University）
+published: '2022-07-11'
+publication_status: OSDI 2022
+lineage: LLM Serving / Scheduling / Disaggregation
+topics:
+- Continuous batching
+- Selective batching
+- Distributed inference
+- Tensor parallelism
+- Pipeline parallelism
+importance: 高
+hardware_evaluation: 実機
+canonical_id: DOI:10.5555/3600237.3600268
+doi: 10.5555/3600237.3600268
+last_audited: '2026-09-10'
 audit_version: 1
-evaluation_type: "real-hardware"
-implementation_status: "code-unavailable"
-source: "https://www.usenix.org/conference/osdi22/presentation/yu"
-code: ""
-last_checked: "2026-09-08"
+evaluation_type: real-hardware
+implementation_status: code-unavailable
+source: https://www.usenix.org/conference/osdi22/presentation/yu
+code: null
+last_checked: '2026-09-08'
 arxiv_id: null
 openreview_id: null
 arxiv_categories:
-  primary: "cs.DC"
-  cross_list: ["cs.LG"]
-authors: ["Gyeong-In Yu", "Joo Seong Jeong", "Geon-Woo Kim", "Soojeong Kim", "Byung-Gon Chun"]
-publication: "arXiv preprint"
-publication_type: "プレプリント"
-sources: ["https://www.usenix.org/conference/osdi22/presentation/yu"]
-implementation: "公式実装URLは一次資料で確認できず"
+  primary: cs.DC
+  cross_list:
+  - cs.LG
+authors:
+- Gyeong-In Yu
+- Joo Seong Jeong
+- Geon-Woo Kim
+- Soojeong Kim
+- Byung-Gon Chun
+publication: arXiv preprint
+publication_type: プレプリント
+sources:
+- https://www.usenix.org/conference/osdi22/presentation/yu
+implementation: 公式実装URLは一次資料で確認できず
 ---
 
 # Orca: A Distributed Serving System for Transformer-Based Generative Models

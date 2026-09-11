@@ -1,5 +1,5 @@
 ---
-canonical_id: "USENIX:OSDI26:luo"
+canonical_id: USENIX:OSDI26:luo
 arxiv_id: null
 doi: null
 openreview_id: null
@@ -13,19 +13,34 @@ bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs"
-summary: "GH200でCPU DRAM上のKV cacheをGPU HBMへ一度コピーせず、GPUのattention kernelから直接読み、同じCPU側dataを何度も読まないよう計算順序とkernelを作り直すzero-copy KV offload system。"
-authors_affiliations: "Shutian Luo, Haiying Shen（University of Virginia）"
-published: "2026-07-13"
-publication_status: "OSDI 2026"
-lineage: "KV Cache Offload / Recomputation"
-topics: ["KV cache offload","Zero-copy","CPU pinned memory","NVLink-C2C","Kernel-memory co-design","Long-context inference"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://www.usenix.org/conference/osdi26/presentation/luo"
-code: "https://github.com/shutianluo/DirectKV"
-implementation: "公式実装あり（shutianluo/DirectKV）"
-last_checked: "2026-09-06"
+title: 'No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs'
+summary: GH200でCPU DRAM上のKV cacheをGPU HBMへ一度コピーせず、GPUのattention kernelから直接読み、同じCPU側dataを何度も読まないよう計算順序とkernelを作り直すzero-copy KV offload system。
+authors_affiliations: Shutian Luo, Haiying Shen（University of Virginia）
+published: '2026-07-13'
+publication_status: OSDI 2026
+lineage: KV Cache Offload / Recomputation
+topics:
+- KV cache offload
+- Zero-copy
+- CPU pinned memory
+- NVLink-C2C
+- Kernel-memory co-design
+- Long-context inference
+importance: 高
+hardware_evaluation: 実機
+source: https://www.usenix.org/conference/osdi26/presentation/luo
+code: https://github.com/shutianluo/DirectKV
+implementation: 公式実装あり（shutianluo/DirectKV）
+last_checked: '2026-09-06'
+authors:
+- Shutian Luo
+- Haiying Shen
+publication: OSDI 2026
+publication_type: 査読付き国際会議論文
+sources:
+- https://www.usenix.org/conference/osdi26/presentation/luo
+- https://github.com/shutianluo/DirectKV
+implementation_status: official-code-available
 ---
 
 # No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs

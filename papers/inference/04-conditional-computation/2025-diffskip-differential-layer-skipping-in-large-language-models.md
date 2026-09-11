@@ -26,7 +26,7 @@ topics:
 importance: 高
 hardware_evaluation: 実機
 source: https://aclanthology.org/2025.findings-acl.377/
-code: ''
+code: null
 implementation: 公式コード公開の記載はACL Anthology掲載ページで確認できず
 last_checked: '2026-09-11'
 authors:
@@ -37,6 +37,7 @@ publication: 'Findings of the Association for Computational Linguistics: ACL 202
 publication_type: conference paper
 sources:
 - https://aclanthology.org/2025.findings-acl.377/
+implementation_status: official-code-not-confirmed
 ---
 
 # DiffSkip: Differential 層 Skipping in Large Language Models
