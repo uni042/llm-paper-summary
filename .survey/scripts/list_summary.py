@@ -35,7 +35,7 @@ MULTIWORD_TITLECASE_RE = re.compile(
 METHOD_SIGNAL_RE = re.compile(
     r"(?:提案|手法|方式|機構|システム|設計|スケジューラ|アルゴリズム|"
     r"予測して|予測し|配置して|配置し|選択して|選択し|割り当て|切り替え|"
-    r"先読み|オフロード|退避|圧縮|量子化|枝刈り|再計算|分離|統合|調整し|"
+    r"先読み|オフロード|退避|圧縮|量子化|枝刈り|分離|統合|調整し|"
     r"動的に[^。！？]{0,30}(?:変え|変更|決め|選ぶ|配置)|することで|によって[^。！？]{0,40}(?:減ら|抑え|改善))"
 )
 RESULT_SIGNAL_RE = re.compile(
@@ -184,7 +184,7 @@ def _extract_lead_blockquote(body: str) -> str:
 
 
 def extract_summary_source(body: str, fallback_summary: str = "") -> str:
-    """Prefer the worker-authored lead summary; use overview compaction only for legacy pages."""
+    """Return the preferred source; callers may special-case worker-authored lead text."""
     lead = _extract_lead_blockquote(body)
     if lead:
         return lead
@@ -315,7 +315,29 @@ def _semantic_sentence_order(sentences: list[str]) -> list[int]:
     return selected
 
 
-def _compact(
+def _compact_worker_lead(text: str, max_chars: int, explicit_names: tuple[str, ...]) -> str:
+    """Preserve worker wording/order; only normalize terminology and enforce the hard limit."""
+    text = _normalize_terms(_clean_markdown(text), explicit_names)
+    if not text:
+        return ""
+    if len(text) <= max_chars:
+        return text if text[-1] in "。！？…" else text + "。"
+    sentences = [s.strip() for s in SENTENCE_RE.findall(text) if s.strip()] or [text]
+    chosen: list[str] = []
+    for sentence in sentences:
+        if not chosen and len(sentence) > max_chars:
+            return _trim_long_sentence(sentence, max_chars)
+        candidate = "".join(chosen + [sentence])
+        if len(candidate) > max_chars:
+            break
+        chosen.append(sentence)
+    result = "".join(chosen) if chosen else _trim_long_sentence(text, max_chars)
+    if result and result[-1] not in "。！？…":
+        result = result + "。" if len(result) < max_chars else result[:-1].rstrip() + "。"
+    return result
+
+
+def _compact_legacy(
     text: str,
     min_chars: int,
     max_chars: int,
@@ -367,8 +389,17 @@ def compact_list_summary(
     min_chars: int = DEFAULT_MIN_CHARS,
     max_chars: int = DEFAULT_MAX_CHARS,
 ) -> str:
-    source = extract_summary_source(body, fallback_summary)
-    return _compact(source, min_chars, max_chars, tuple(_title_method_names(body)))
+    names = tuple(_title_method_names(body))
+    lead = _extract_lead_blockquote(body)
+    if lead:
+        return _compact_worker_lead(lead, max_chars, names)
+    explicit = _extract_h2(body, "概要")
+    if explicit:
+        return _compact_legacy(explicit, min_chars, max_chars, names)
+    legacy = _extract_h2(body, "一文要約")
+    if legacy:
+        return _compact_legacy(legacy, min_chars, max_chars, names)
+    return _compact_legacy(fallback_summary, min_chars, max_chars, names)
 
 
 def _list_specific_bare_terms(text: str) -> list[str]:
