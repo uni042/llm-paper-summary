@@ -21,9 +21,9 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（50本）
+## 自動生成の論文一覧（51本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 直近12か月（2025-10〜2026-09）
@@ -80,6 +80,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | 2024-07 | [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md) | [✓](https://github.com/aquaml/aqua) | 6 | 同じNVLink / NVSwitch接続内で余っている別GPUのHBMを、KV cacheなどの一時退避先として借り、CPU DRAMへ退避するより高速にrequestを入れ替えて公平なonline servingを行うmemory system。 |
 | 2024-11 | [Pie: Pooling CPU Memory for LLM Inference](2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md) | ✓ | 5 | 一部のKV cacheをCPU DRAMへ置き、使う数layer前にGPUへ戻して転送を現在layerの計算と重ね、GPUを待たせない範囲までoffload量を自動で増やすKV-cache offload system。 |
 | 2025-03 | [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md) | ✓ | 3 | 長いcontextで増え続けるKV cacheの16-bit正本をCPU DRAMへ退避し、GPUには重要KVを探すための1/2-bitコピーと少数の16-bit KVだけを置く。さらに現在tokenと『次tokenの参照先を予測するための投機token』を同時に計算し、次stepで必要になりそうな16-bit KVを1 step早くCPUからGPUへ先読みすることで、VRAM削減とCPU-GPU転送待ちの隠蔽を両立する。 |
+| 2025-09 | [ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching](2025-2509.16857-shadowserve-smartnic-kv-fetching.md) | ✓ | 2 | ShadowServeは、分散接頭辞キャッシュで圧縮KVキャッシュを遠隔保存先から取得するとき、GPU上の復号・逆量子化がLLMのデコード計算と同じ演算資源・メモリ帯域を奪い合う問題を、SmartNICを独立したKVデータ処理階層として使うことで解決する。ホストCPUは取得要求を非同期管理する制御面だけを担当し、ネットワーク取得、Deflate展開、逆量子化、GPUへのP2P DMAというデータ面をNVIDIA BlueField-3へ移す。SmartNIC内では256トークン単位の4段パイプラインと最小コピーの固定バッファを用いて限られたArmコア・メモリを使い切る。L40S、Llama-8B/Mistral-7B、10〜40 Gbps環境の実機評価では、GPUで展開するCacheGen-Asyncに対して負荷時TPOTを最大2.2倍短縮し、20 Gbps以下ではTTFTを最大1.38倍短縮、最大スループットを最大1.35倍向上した。一方30〜40 GbpsではBlueField-3のメモリ系が律速しTTFTが6〜20%悪化する条件もあり、SmartNICを計算階層として使う際の帯域損益分岐も示す。 |
 | 2025-02 | [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md) | [✓](https://github.com/wdlctc/headinfer) | 2 | 従来のlayer単位KV offloadをさらにattention head単位まで細分化し、CPU DRAMに全KV正本を保持しながらGPUには現在計算するhead groupのKVだけを置くlossless long-context inference方式。chunked prefillでactivation peakを抑え、ping-pong bufferで次headのPCIe transferを現在headのattention計算へ重ね、context長に応じてhead group数を変えて容量とkernel/transfer overheadを両立する。 |
 | 2025-07 | [Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System](2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md) | ✓ | 1 | 頻繁に参照されるKVを高速HBM、そうでないKVを大容量DRAMへ置く配置問題をモデル化し、未来のattention参照先を完全に知る理想条件との比較から、実用schedulerにどれだけ改善余地が残るかを測るsimulation研究。 |
 | 2025-06 | [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md) | ✓ | 1 | 一部requestのKV cacheとdecode attentionをCPUへ移しつつ、attention前のlinear計算はCPU/GPU向けrequestを一つのGPU batchでまとめ、CPU結果を必要になる直前まで待たないことでCPU attentionをGPU計算の裏へ隠す方式。 |
