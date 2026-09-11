@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e7e41591dea37887",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv.md",
+      "priority": 78,
+      "reason": "2026-09-07公開の最新2609系。固定のKVキャッシュ圧縮方式を使うのではなく、各プロンプトごとに遅延・ピークメモリ制約と正答確率を予測し、KVQuant/H2O/RocketKV/非圧縮を含む候補構成から実行時に選択する適応型フレームワーク。4データセット・10構成で、遅延とメモリの両制約を満たしつつ正答する割合を静的最良構成より平均約0.07、最大0.135改善しており、既収録の圧縮手法そのものとは異なる『制約に応じた方式選択』を主題とするため収録価値がある。"
+    }
+  ]
+}
