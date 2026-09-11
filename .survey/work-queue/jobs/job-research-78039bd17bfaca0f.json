@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-78039bd17bfaca0f",
+  "type": "research",
+  "parent_job_id": "job-23004462feabf795",
+  "priority": 80,
+  "canonical_id": "arXiv:2607.25498",
+  "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+  "source_url": "https://arxiv.org/abs/2607.25498",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.25498-dops-dynamic-operator-scheduling.md",
+  "selection_reason": "プリフィル・デコード単位の固定分離を越え、段階ごとの有向非巡回グラフを用いて演算単位をNPU/PIMへ動的配置し、同時にメモリ制約下の重みレイアウトを選ぶ。動的配置部はプリフィル・デコード分離比1.20〜2.23倍、重み配置選択がさらに1.28〜1.33倍の幾何平均高速化を報告する。異種計算資源とメモリ配置を共同最適化するサービング研究として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T02:37:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}

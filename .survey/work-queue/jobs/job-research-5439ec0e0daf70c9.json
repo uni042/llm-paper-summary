@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-5439ec0e0daf70c9",
+  "type": "research",
+  "parent_job_id": "job-23004462feabf795",
+  "priority": 87,
+  "canonical_id": "arXiv:2604.19769",
+  "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
+  "source_url": "https://arxiv.org/abs/2604.19769",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
+  "selection_reason": "KVを時間的近接性に応じてHBMとDRAMの異なる容量・精度階層へ分け、低速階層へのアクセスをブロック単位ストリーミング注意で計算と重ねる。古いKVほど低速・低精度階層へ置く設計により128K文脈で階層間転送5.94分の1、最大76%遅延削減、2倍スループットを報告する。KVの寿命・精度・配置を同時に扱うため階層メモリ系統の比較対象になる。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T02:37:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}

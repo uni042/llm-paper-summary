@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:36:12.266192+00:00",
+  "updated_at": "2026-09-11T02:37:15.259104+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,7 +3838,7 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T02:36:12.266192+00:00",
+      "last_recorded_at": "2026-09-11T02:37:15.259104+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3846,9 +3846,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 5,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3881,6 +3881,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34555299391:1",
+          "recorded_at": "2026-09-11T02:37:15.259104+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34555299391",
+            "run_attempt": "1",
+            "source_sha": "9417d29138c15f2d1ed4cbc94abab569502119eb"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3894,6 +3908,14 @@
         },
         {
           "job_id": "job-34d58f798d6809bc",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-23004462feabf795",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -3915,11 +3937,33 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-46ccd443c865ae7d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.31145",
+          "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference"
+        },
+        {
+          "job_id": "job-research-5439ec0e0daf70c9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.19769",
+          "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference"
+        },
+        {
+          "job_id": "job-research-78039bd17bfaca0f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.25498",
+          "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T1136JST-discovery-34d58f798d6809bc.json"
+        ".survey/work-queue/results/20260911T1136JST-discovery-34d58f798d6809bc.json",
+        ".survey/work-queue/results/20260911T1138JST-discovery-23004462feabf795.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 252,

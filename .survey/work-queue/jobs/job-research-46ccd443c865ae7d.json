@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-46ccd443c865ae7d",
+  "type": "research",
+  "parent_job_id": "job-23004462feabf795",
+  "priority": 89,
+  "canonical_id": "arXiv:2606.31145",
+  "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference",
+  "source_url": "https://arxiv.org/abs/2606.31145",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.31145-sekv-resolution-adaptive-kv-cache.md",
+  "selection_reason": "長文KVを意味区間へまとめ、GPUには軽量な要約ベクトル、CPUには低ランクSVD基底を保持し、問い合わせに応じて必要区間だけトークン粒度へ復元する階層メモリ方式。情報を完全削除せず解像度を動的に戻せる点が単純なKV追い出しと異なる。128K文脈で完全KV比GPUメモリ53.3%削減、強い意味圧縮比較方式より平均5.9%品質改善を報告し、CPU階層を再構成可能なKV保管層として使うため関連性が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T02:37:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}

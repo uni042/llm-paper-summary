@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 95,
-      "ready": 1
+      "completed": 96
     },
     "audit": {
       "completed": 6
@@ -10,22 +9,47 @@
     "research": {
       "completed": 88,
       "superseded": 41,
-      "deferred": 1
+      "deferred": 1,
+      "ready": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-23004462feabf795",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-46ccd443c865ae7d",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2606.31145",
+      "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.31145",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.31145-sekv-resolution-adaptive-kv-cache.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-5439ec0e0daf70c9",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2604.19769",
+      "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.19769",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-78039bd17bfaca0f",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2607.25498",
+      "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.25498",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.25498-dops-dynamic-operator-scheduling.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T02:36:07+00:00"
+  "generated_at": "2026-09-11T02:37:15+00:00"
 }
