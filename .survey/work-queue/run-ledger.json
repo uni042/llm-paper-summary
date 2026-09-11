@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T17:38:57.623578+00:00",
+  "updated_at": "2026-09-11T17:40:02.711009+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -7250,7 +7250,7 @@
     {
       "run_key": "2026-09-12T02:30:00+09:00",
       "first_recorded_at": "2026-09-11T17:30:58.335423+00:00",
-      "last_recorded_at": "2026-09-11T17:38:57.623578+00:00",
+      "last_recorded_at": "2026-09-11T17:40:02.711009+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -7259,9 +7259,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -7353,6 +7353,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34628914319:1",
+          "recorded_at": "2026-09-11T17:40:02.711009+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34628914319",
+            "run_attempt": "1",
+            "source_sha": "e038ffcba13ab7382a79eb7fcf1c81b960df3539"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7387,6 +7401,14 @@
           "title": "OpScale: Operator-level Provisioning and Autoscaling for LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-13bc7801d03fb798",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -7417,6 +7439,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-6ef6a0fc3ae5401b",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -7428,12 +7457,13 @@
         ".survey/work-queue/results/20260912T0232JST-discovery-job-59aade11c82016df.json",
         ".survey/work-queue/results/20260912T0233JST-discovery-59aade11c82016df.json",
         ".survey/work-queue/results/20260912T0234JST-discovery-da03c189a4140e9b.json",
-        ".survey/work-queue/results/20260912T0237JST-discovery-da03c189a4140e9b.json"
+        ".survey/work-queue/results/20260912T0237JST-discovery-da03c189a4140e9b.json",
+        ".survey/work-queue/results/20260912T0239JST-discovery-13bc7801d03fb798.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 319,
       "paper_active_count_after": 321,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
