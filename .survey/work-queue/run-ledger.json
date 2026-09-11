@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T03:27:08.650168+00:00",
+  "updated_at": "2026-09-11T03:30:25.790121+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,18 +3838,18 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T03:27:08.650168+00:00",
+      "last_recorded_at": "2026-09-11T03:30:25.790121+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 13,
+        "new_jobs": 14,
         "new_papers": 5,
         "fallback_archived": 0
       },
@@ -4039,6 +4039,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34558672515:1",
+          "recorded_at": "2026-09-11T03:30:25.790121+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34558672515",
+            "run_attempt": "1",
+            "source_sha": "6906e75a8539e023872d7829e55bc2e1117d285d"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4127,6 +4142,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-65147b545b635d0f",
+          "type": "research",
+          "canonical_id": "arXiv:2608.15383",
+          "title": "Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -4222,6 +4245,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15383",
           "title": "Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference"
+        },
+        {
+          "job_id": "job-7b3846a7671b0417",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [

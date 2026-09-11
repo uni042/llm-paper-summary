@@ -1,31 +1,31 @@
 {
   "counts": {
     "discovery": {
-      "completed": 100
+      "completed": 100,
+      "ready": 1
     },
     "audit": {
       "completed": 6
     },
     "research": {
-      "completed": 92,
+      "completed": 93,
       "superseded": 41,
-      "deferred": 3,
-      "ready": 1
+      "deferred": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-65147b545b635d0f",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2608.15383",
-      "title": "Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference",
-      "source_url": "https://arxiv.org/abs/2608.15383",
-      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-7b3846a7671b0417",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-11T03:27:08+00:00"
+  "generated_at": "2026-09-11T03:30:20+00:00"
 }
