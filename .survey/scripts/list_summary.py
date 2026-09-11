@@ -48,9 +48,6 @@ PROBLEM_SIGNAL_RE = re.compile(
     r"(?:問題|課題|ボトルネック|不足|制約|限られ|待ち時間|遅延|帯域|メモリ|転送|競合|再計算|負荷|難しい|高コスト)"
 )
 
-# These replacements are deliberately local to the short paper-list view.
-# Body quality policy remains unchanged; this layer merely turns English-heavy
-# legacy overviews into readable Japanese before they are shortened.
 LIST_TERM_REPLACEMENTS = (
     ("self-speculative decoding", "自己投機的復号"),
     ("speculative decoding", "投機的復号"),
@@ -187,13 +184,13 @@ def _extract_lead_blockquote(body: str) -> str:
 
 
 def extract_summary_source(body: str, fallback_summary: str = "") -> str:
-    """Prefer the paper page overview; metadata is only a final fallback."""
-    explicit = _extract_h2(body, "概要")
-    if explicit:
-        return explicit
+    """Prefer the worker-authored lead summary; use overview compaction only for legacy pages."""
     lead = _extract_lead_blockquote(body)
     if lead:
         return lead
+    explicit = _extract_h2(body, "概要")
+    if explicit:
+        return explicit
     legacy = _extract_h2(body, "一文要約")
     if legacy:
         return legacy
@@ -201,7 +198,6 @@ def extract_summary_source(body: str, fallback_summary: str = "") -> str:
 
 
 def _title_method_names(body: str) -> list[str]:
-    """Return likely named methods from the H1 without protecting full English titles."""
     match = H1_RE.search(body)
     if not match:
         return []
@@ -270,9 +266,6 @@ def _mask_proper_names(text: str) -> str:
 
 
 def _normalize_terms(text: str, explicit_names: tuple[str, ...] = ()) -> str:
-    # Translate longer generic phrases first, then hide names so the shared
-    # body-level replacements cannot turn EVICT into 「追い出し」 or damage
-    # CamelCase names such as LayerSkip.
     text = _replace_list_terms(text)
     text, protected = _protect_proper_names(text, explicit_names)
     for canonical, pattern in TERM_PATTERNS.items():
@@ -300,7 +293,7 @@ def _find_sentence(sentences: list[str], pattern: re.Pattern[str], *, start: int
 
 
 def _semantic_sentence_order(sentences: list[str]) -> list[int]:
-    """Reserve budget for the method, then add problem and result if they fit."""
+    """Legacy fallback: reserve budget for the method, then add problem/result if they fit."""
     method = _find_sentence(sentences, METHOD_SIGNAL_RE)
     if method is None:
         return list(range(len(sentences)))
@@ -348,14 +341,10 @@ def _compact(
         chosen_text = "".join(sentences[i] for i in sorted(chosen_indices))
         has_method = any(METHOD_SIGNAL_RE.search(sentences[i]) for i in chosen_indices)
         if len(chosen_text) >= min_chars and has_method:
-            # If a result sentence was explicitly selected and still fits, keep
-            # scanning until it is included; otherwise method clarity wins.
             result_index = _find_sentence(sentences, RESULT_SIGNAL_RE)
             if result_index is None or result_index in chosen_indices:
                 break
-            with_result = "".join(
-                sentences[i] for i in sorted(set(chosen_indices + [result_index]))
-            )
+            with_result = "".join(sentences[i] for i in sorted(set(chosen_indices + [result_index])))
             if len(with_result) > max_chars:
                 break
 
@@ -423,13 +412,9 @@ def audit_list_summary(
     shared_hits = find_bare_english(audit_text)
     list_hits = _list_specific_bare_terms(audit_text)
     if shared_hits or list_hits:
-        preview_parts = [
-            f"{hit.term}→{hit.preferred} ×{hit.count}" for hit in shared_hits[:8]
-        ]
+        preview_parts = [f"{hit.term}→{hit.preferred} ×{hit.count}" for hit in shared_hits[:8]]
         preview_parts.extend(list_hits[:8 - len(preview_parts)])
-        failures.append(
-            "日本語化できる英語専門語が裸で残っている: " + ", ".join(preview_parts)
-        )
+        failures.append("日本語化できる英語専門語が裸で残っている: " + ", ".join(preview_parts))
 
     status = "FAIL" if failures else ("WARN" if warnings else "PASS")
     return ListSummaryQuality(
