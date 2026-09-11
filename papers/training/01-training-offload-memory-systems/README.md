@@ -33,7 +33,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 1年以上前
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：30  
   学習用のパラメータ・勾配・オプティマイザ状態をGPUだけでなくCPU DRAMとNVMe SSDへ分割配置し、各nodeのSSD読込を並列化しながら必要なstateを先読みしてGPU計算と重ねることで、GPU メモリ総量を超える巨大モデルを学習可能にするシステム。
 
 - **2024-03 · [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)**  
