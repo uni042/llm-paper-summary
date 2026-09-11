@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3ac62172fb9e78c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.27138",
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.27138",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-layer-ahead-cpu-precomputation.md",
+      "priority": 86,
+      "reason": "長文推論のKVキャッシュをCPU DRAMへ退避した際、GPU-CPU転送待ちやCPU注意計算が新たな律速になる問題に対し、GPUとCPUでブロック単位の疎注意を協調実行し、CPU側を1層先行させることで待ちを隠す。既存オフロード方式比2.1倍の高速化を報告し、精度差を2.4%以内に抑える。単純なKV移動ではなく計算とI/Oの時間重畳を層間で設計する点が、階層メモリ系統の重要な未収録候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2502.12574",
+      "title": "HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading",
+      "source_url": "https://arxiv.org/abs/2502.12574",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+      "priority": 79,
+      "reason": "KVキャッシュを層単位ではなく注意ヘッド単位でCPUへ退避し、GPUには一部ヘッドのKVだけを置いて注意出力を順次計算する。Llama-3-8Bの100万トークンでKVのGPU使用量を128GBから1GBへ減らし、24GBのRTX 4090で400万トークン推論を可能にしたと報告する。近似や圧縮を使わず、オフロード粒度そのものを細分化してHBMピークを抑える古めの重要な欠落候補として価値がある。"
+    }
+  ]
+}
