@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:45:05.133908+00:00",
+  "updated_at": "2026-09-11T06:52:21.321526+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,18 +5239,18 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T06:45:05.133908+00:00",
+      "last_recorded_at": "2026-09-11T06:52:21.321526+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 4,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -5312,6 +5312,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34571773950:1",
+          "recorded_at": "2026-09-11T06:52:21.321526+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34571773950",
+            "run_attempt": "1",
+            "source_sha": "e1611495b5ccb89935b2cc821fb18a28ed37b850"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5346,6 +5361,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-4c378528e45eb85d",
+          "type": "research",
+          "canonical_id": "arXiv:2608.08097",
+          "title": "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5369,6 +5392,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.06557",
           "title": "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving"
+        },
+        {
+          "job_id": "job-3732a5ada325b4a2",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -5382,7 +5412,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
-      "paper_active_count_after": 271,
+      "paper_active_count_after": 278,
       "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
