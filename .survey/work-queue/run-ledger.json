@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:12:58.122555+00:00",
+  "updated_at": "2026-09-11T09:13:56.611327+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5843,7 +5843,7 @@
     {
       "run_key": "2026-09-11T17:30:00+09:00",
       "first_recorded_at": "2026-09-11T08:32:59.073522+00:00",
-      "last_recorded_at": "2026-09-11T09:12:58.122555+00:00",
+      "last_recorded_at": "2026-09-11T09:13:56.611327+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
@@ -5851,9 +5851,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 9,
+        "discovery_completed": 10,
         "blocked": 0,
-        "new_jobs": 12,
+        "new_jobs": 13,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -6027,6 +6027,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34583104975:1",
+          "recorded_at": "2026-09-11T09:13:56.611327+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34583104975",
+            "run_attempt": "1",
+            "source_sha": "925009f30b29b11798ccee84e0022935e200a557"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6125,6 +6139,14 @@
           "title": "Towards Distributed Inference of LLMs on a P2P Network",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-ee63b15e506badec",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6211,6 +6233,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-d953c583d54986c3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
@@ -6223,7 +6252,8 @@
         ".survey/work-queue/results/20260911T1756JST-discovery-2985ba59040164a3.json",
         ".survey/work-queue/results/20260911T1802JST-discovery-cf8806698ad633c6.json",
         ".survey/work-queue/results/20260911T1805JST-discovery-c1ec790fefc60212.json",
-        ".survey/work-queue/results/20260911T1808JST-discovery-efe114fe19d772d8.json"
+        ".survey/work-queue/results/20260911T1808JST-discovery-efe114fe19d772d8.json",
+        ".survey/work-queue/results/20260911T1824JST-discovery-ee63b15e506badec.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 302,
