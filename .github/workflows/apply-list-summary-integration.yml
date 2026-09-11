@@ -1,4 +1,4 @@
-name: Apply list summary integration
+name: Finalize compact paper list indexes
 
 on:
   push:
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  integrate:
+  finalize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest main
@@ -32,64 +32,47 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Patch render path and workflow guide
+      - name: Verify compact summaries on current papers
         run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          survey = Path('.survey/scripts/survey.py')
-          text = survey.read_text(encoding='utf-8')
-          import_line = 'from list_summary import compact_list_summary\n'
-          if import_line not in text:
-              anchor = 'import yaml\n'
-              if anchor not in text:
-                  raise SystemExit('survey.py yaml import anchor not found')
-              text = text.replace(anchor, anchor + '\n' + import_line, 1)
-          old = '"summary": meta.get("summary") or _legacy_summary(body),'
-          new = '"summary": compact_list_summary(body, meta.get("summary") or _legacy_summary(body)),'
-          if new not in text:
-              if old not in text:
-                  raise SystemExit('survey.py summary anchor not found')
-              text = text.replace(old, new, 1)
-          survey.write_text(text, encoding='utf-8')
-
-          guide = Path('.survey/docs/survey-workflow/README.md')
-          text = guide.read_text(encoding='utf-8')
-          paragraph = (
-              '論文一覧の「一文要約」は本文とは別の派生表示とし、単体ページの `## 概要`、なければH1直後の概要引用を優先して45〜180文字へ圧縮する。'
-              '本文と同じ日本語優先規則を適用し、日本語比率70%未満、日本語化できる英語専門語の裸書き、改行・URL・Markdown断片を品質監査で検出する。\n\n'
-              '既存論文の一覧文を直すだけなら原論文の再精読は不要で、単体ページに既にある概要を縮めて生成する。'
-              'Inference / Training / Surveyを同じ規則で扱い、Trainingは新規追加停止の方針だけを維持する。\n'
-          )
-          if paragraph not in text:
-              anchor = 'structured recordは最終Markdownへ変換される本文原稿であり、rendererが内容を補う前提で短縮しない。完成扱いの直前にActionsと同じvalidator基準でpreflightする。\n'
-              if anchor not in text:
-                  raise SystemExit('workflow guide quality anchor not found')
-              text = text.replace(anchor, anchor + '\n' + paragraph, 1)
-          guide.write_text(text, encoding='utf-8')
-          PY
-
-      - name: Verify current repository
-        run: |
+          set -euo pipefail
           python -m compileall -q .survey/scripts
           python -m unittest discover -s .survey/tests -p 'test_*.py'
           python .survey/scripts/audit_list_summary_quality.py \
             --repo-root . \
             --markdown-out /tmp/list-summary-quality-audit.md \
             --json-out /tmp/list-summary-quality-audit.json
-          python .survey/scripts/survey.py --root .survey build
+          python - <<'PY'
+          import json
+          from collections import Counter
+          data = json.load(open('/tmp/list-summary-quality-audit.json', encoding='utf-8'))
+          counts = Counter(row['status'] for row in data['results'])
+          print(
+              'list-summary audit: '
+              f"{len(data['results'])} total, "
+              f"PASS={counts['PASS']}, WARN={counts['WARN']}, FAIL={counts['FAIL']}"
+          )
+          PY
 
-      - name: Commit source integration only
+      - name: Rebuild paper indexes
+        run: python .survey/scripts/survey.py --root .survey build
+
+      - name: Commit generated indexes
         run: |
           set -euo pipefail
-          git restore README.md papers || true
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add .survey/scripts/survey.py .survey/docs/survey-workflow/README.md
+          git add README.md \
+            papers/README.md \
+            papers/inference/README.md \
+            papers/training/README.md \
+            papers/survey/README.md \
+            papers/inference/comparison.md
+          find papers/inference papers/training papers/survey \
+            -mindepth 2 -maxdepth 2 -name README.md -print0 | xargs -0 -r git add --
           if git diff --cached --quiet; then
-            echo 'integration already present'
+            echo 'generated paper indexes are already current'
             exit 0
           fi
-          git commit -m 'feat: derive paper list summaries from page overviews'
-          git pull --rebase origin main
+          git commit -m 'docs: refresh compact paper list summaries'
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
