@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-09-11T08:28:24+00:00",
+  "checked_at": "2026-09-11T08:28:55+00:00",
   "summary": {
     "total": 308,
-    "complete": 143,
-    "incomplete": 165
+    "complete": 168,
+    "incomplete": 140
   },
   "families": {
     "inference": {
       "total": 285,
-      "complete": 143
+      "complete": 168
     },
     "training": {
       "total": 19,
@@ -55,131 +55,6 @@
     {
       "path": "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md",
       "canonical_id": "arXiv:2608.00577",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md",
-      "canonical_id": "arXiv:2608.16157",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md",
-      "canonical_id": "arXiv:2609.01338",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md",
-      "canonical_id": "arXiv:2609.02514",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.06551-estream.md",
-      "canonical_id": "arXiv:2609.06551",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
-      "canonical_id": "arXiv:2607.16473",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
-      "canonical_id": "arXiv:2607.26491",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
-      "canonical_id": "arXiv:2609.08450",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
-      "canonical_id": "arXiv:2609.03079",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
-      "canonical_id": "arXiv:2403.11421",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
-      "canonical_id": "arXiv:2407.21255",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
-      "canonical_id": "arXiv:2409.04992",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
-      "canonical_id": "arXiv:2410.21465",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
-      "canonical_id": "arXiv:2411.01142",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md",
-      "canonical_id": "arXiv:2411.09317",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md",
-      "canonical_id": "arXiv:2411.17089",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md",
-      "canonical_id": "arXiv:2501.01792",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
-      "canonical_id": "arXiv:2502.12574",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md",
-      "canonical_id": "arXiv:2503.16163",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
-      "canonical_id": "arXiv:2506.03296",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md",
-      "canonical_id": "arXiv:2508.13231",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
-      "canonical_id": "arXiv:2509.03377",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
-      "canonical_id": "arXiv:2510.09665",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md",
-      "canonical_id": "arXiv:2511.14510",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
-      "canonical_id": "arXiv:2512.11920",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2601.19910-understanding-bottlenecks-kv-offloading.md",
-      "canonical_id": "arXiv:2601.19910",
       "reason": "missing structured reference audit metadata"
     },
     {
