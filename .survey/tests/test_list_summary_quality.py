@@ -1,0 +1,94 @@
+from __future__ import annotations
+
+import importlib.util
+import sys
+import unittest
+from pathlib import Path
+
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+MODULE_PATH = SCRIPTS / "list_summary.py"
+
+
+class ListSummaryTests(unittest.TestCase):
+    def _module(self):
+        self.assertTrue(MODULE_PATH.exists(), "list_summary.py must exist")
+        spec = importlib.util.spec_from_file_location("list_summary", MODULE_PATH)
+        self.assertIsNotNone(spec)
+        self.assertIsNotNone(spec.loader)
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+        return module
+
+    def test_compacts_lead_overview_and_normalizes_japanese_terms(self):
+        mod = self._module()
+        body = """# Example
+
+> 本研究はrequestごとにtoken列を処理する際、cache転送がlatencyのボトルネックになる問題を扱う。複数GPUへcacheをdynamicに配置し、必要なtokenだけをprefetchして転送待ちを減らす。さらに長い説明が続き、一覧には不要な評価条件や補足事項を詳しく説明する。
+
+## 書誌情報
+"""
+        text = mod.compact_list_summary(body, "fallback summary")
+        self.assertGreaterEqual(len(text), 45)
+        self.assertLessEqual(len(text), 180)
+        self.assertNotIn("\n", text)
+        self.assertNotRegex(text, r"\b(?:request|token|cache|latency|dynamic|prefetch)\b")
+        self.assertIn("リクエスト", text)
+        self.assertIn("トークン", text)
+
+    def test_explicit_overview_section_beats_metadata_fallback(self):
+        mod = self._module()
+        body = """# Example
+
+## 概要
+
+本研究はGPUメモリ不足に対し、必要な重みだけを先読みして転送量を減らす方式を提案する。複数の実機条件で待ち時間を減らし、限られたメモリでも処理を継続できるようにする。
+
+## 手法
+本文。
+"""
+        text = mod.compact_list_summary(body, "メタデータ側の古い説明だけを使ってはいけない。")
+        self.assertIn("GPUメモリ不足", text)
+        self.assertNotIn("メタデータ側", text)
+
+    def test_protects_method_names_while_translating_generic_terms(self):
+        mod = self._module()
+        body = """# Example
+
+> EVICTとLayerSkipはdraft modelを使ったspeculative decodingのverification costを減らし、target modelのlatencyを抑える手法である。複数条件で既存方式より待ち時間を短縮する。
+"""
+        text = mod.compact_list_summary(body)
+        self.assertIn("EVICT", text)
+        self.assertIn("LayerSkip", text)
+        self.assertNotIn("層kip", text)
+        self.assertIn("下書きモデル", text)
+        self.assertIn("投機的復号", text)
+        self.assertIn("検証コスト", text)
+        self.assertIn("対象モデル", text)
+        self.assertNotIn("latency", text.lower())
+
+    def test_quality_ignores_proper_names_in_language_ratio(self):
+        mod = self._module()
+        text = "AgentSysBenchはDeepResearch、HuggingGPT、WebAgent、GUIAgent、Claude Codeを含むエージェント処理を比較し、システム性能の差を測るベンチマークである。"
+        result = mod.audit_list_summary(text)
+        self.assertNotEqual(result.status, "FAIL")
+        self.assertFalse(any("日本語比率" in x for x in result.failures))
+
+    def test_quality_rejects_bare_english_term(self):
+        mod = self._module()
+        text = "本研究はrequest処理の待ち時間を減らすため、要求順序を変更してGPU利用率を高める方式を提案し、複数条件で効果を評価する。"
+        result = mod.audit_list_summary(text)
+        self.assertEqual(result.status, "FAIL")
+        self.assertTrue(any("英語専門語" in x for x in result.failures))
+
+    def test_quality_accepts_clean_single_line_summary(self):
+        mod = self._module()
+        text = "本研究は要求処理の待ち時間を減らすため、要求順序とキャッシュ配置を動的に調整し、GPU利用率を高める方式を提案する。"
+        result = mod.audit_list_summary(text)
+        self.assertNotEqual(result.status, "FAIL")
+        self.assertFalse(result.failures)
+
+
+if __name__ == "__main__":
+    unittest.main()
