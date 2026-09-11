@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:18:24.402048+00:00",
+  "updated_at": "2026-09-11T09:32:11.982970+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6310,6 +6310,56 @@
       "paper_active_count_before": 302,
       "paper_active_count_after": 305,
       "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-11T18:30:00+09:00",
+      "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
+      "last_recorded_at": "2026-09-11T09:32:11.982970+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34584657689:1",
+          "recorded_at": "2026-09-11T09:32:11.982970+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34584657689",
+            "run_attempt": "1",
+            "source_sha": "a4798c709dd0c61292a11db815afb7fdcab7475b"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-1e8defc953ea3ff0",
+          "type": "research",
+          "canonical_id": "arXiv:2509.16857",
+          "title": "ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 305,
+      "paper_active_count_after": 305,
+      "last_successful_action": "research_completed"
     }
   ]
 }

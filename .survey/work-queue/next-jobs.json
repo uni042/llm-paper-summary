@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 116,
+      "completed": 117,
       "superseded": 43,
       "deferred": 3,
-      "ready": 4,
+      "ready": 3,
       "blocked": 2
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-1e8defc953ea3ff0",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2509.16857",
-      "title": "ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching",
-      "source_url": "https://arxiv.org/abs/2509.16857",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.16857-shadowserve-smartnic-kv-fetching.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-fd3f47f1ba51eddc",
       "type": "research",
@@ -64,5 +52,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T09:18:24+00:00"
+  "generated_at": "2026-09-11T09:32:02+00:00"
 }
