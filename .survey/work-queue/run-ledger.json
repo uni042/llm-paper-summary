@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:47:35.513591+00:00",
+  "updated_at": "2026-09-11T09:51:28.913831+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,7 +6314,7 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T09:47:35.513591+00:00",
+      "last_recorded_at": "2026-09-11T09:51:28.913831+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -6323,9 +6323,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 2,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -6389,6 +6389,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34586270769:1",
+          "recorded_at": "2026-09-11T09:51:28.913831+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34586270769",
+            "run_attempt": "1",
+            "source_sha": "fbcb344b7c8eeecd3759967b1ca0dc5ee5eccb15"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6423,11 +6437,26 @@
           "title": "Compute Or Load KV Cache? Why Not Both?",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-12f4462c0de876df",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
         {
           "job_id": "job-12f4462c0de876df",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-071438061be959b0",
           "status": "ready",
           "type": "discovery",
           "canonical_id": null,
@@ -6439,11 +6468,13 @@
         "arXiv:2509.26182",
         "arXiv:2410.03065"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
       "paper_active_count_after": 309,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
