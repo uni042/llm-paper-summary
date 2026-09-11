@@ -6,6 +6,7 @@ quality_effect: null
 evidence_locations: []
 title: 'Orca: A Distributed Serving System for Transformer-Based Generative Models'
 summary: output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。
+list_summary: '出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。'
 authors_affiliations: Gyeong-In Yu, Joo Seong Jeong（Seoul National University）; Geon-Woo Kim（FriendliAI / Seoul National University）; Soojeong Kim（FriendliAI）; Byung-Gon Chun（FriendliAI / Seoul National University）
 published: '2022-07-11'
 publication_status: OSDI 2022
@@ -80,7 +81,7 @@ references_total: 67
 
 # Orca: A Distributed Serving System for Transformer-Based Generative Models
 
-> 出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、Attentionだけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
+> 出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 ## 概要
 Orcaが対象にした問題は、自己回帰型の生成モデルが**1回の要求を何度もモデルへ通して1トークンずつ生成する**のに、当時の推論サーバーが要求全体をスケジューリング単位としていたことである。固定バッチでは、短い要求が先に終了しても同じバッチの長い要求を待ち、新しく到着した要求はそのバッチが完全に終わるまで参加できない。
@@ -88,6 +89,8 @@ Orcaが対象にした問題は、自己回帰型の生成モデルが**1回の�
 Orcaはこの単位を要求から**生成反復（iteration）**へ細かくする。スケジューラは「この要求を最後まで実行せよ」ではなく、「この要求集合についてモデルを1回だけ実行せよ」と実行エンジンへ指示する。1反復が返るたびに次のバッチを選び直せるので、完了要求の即時退出と新着要求の途中参加が可能になる。
 
 ただし、この柔軟性を得ると、同じバッチ内に「初回プロンプト処理中の要求」「生成途中の要求」「異なる過去系列長を持つ要求」が混在する。通常の一様なバッチテンソルにはまとめにくいため、Orcaは演算の性質に応じてバッチ化する範囲を変える**選択的バッチ処理（selective batching）**を導入する。この2点が現在の連続バッチ処理（continuous batching）につながる中核である。
+
+評価ではAzure上のA100 40 GBクラスタでGPT-3 175Bを比較し、同程度の遅延条件でFasterTransformer比36.9倍のスループットを報告した。
 
 ## 問題設定
 固定バッチ方式では、たとえばAが10トークン、Bが100トークンを生成する場合、Aが終わってもBの終了までバッチ枠を占有し続ける。要求ごとの生成長は事前には分からないため、長さの近い要求だけを常にまとめることも難しい。バッチを小さくすれば待ち時間は減るが、GPUの行列演算を十分大きくできずスループットが下がる。
