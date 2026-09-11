@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:14:04.255721+00:00",
+  "updated_at": "2026-09-11T06:17:14.717960+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4871,7 +4871,7 @@
     {
       "run_key": "2026-09-11T14:30:00+09:00",
       "first_recorded_at": "2026-09-11T05:33:15.103860+00:00",
-      "last_recorded_at": "2026-09-11T06:14:04.255721+00:00",
+      "last_recorded_at": "2026-09-11T06:17:14.717960+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -4881,9 +4881,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 2,
-        "new_jobs": 7,
+        "new_jobs": 11,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -5017,6 +5017,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34569266066:1",
+          "recorded_at": "2026-09-11T06:17:14.717960+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34569266066",
+            "run_attempt": "1",
+            "source_sha": "0003981aff46e99b504492dba32febfa18f3e5e8"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5091,6 +5105,14 @@
           "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-a923b40a38aac177",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5142,6 +5164,34 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-2f0dad2a8facac81",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2410.21465",
+          "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference"
+        },
+        {
+          "job_id": "job-research-3342e2ae369a80fb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.19586",
+          "title": "TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization"
+        },
+        {
+          "job_id": "job-research-cae6393c1c353130",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.14510",
+          "title": "LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-fd4e958b49e58520",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.11507",
+          "title": "Oneiros: KV Cache Optimization through Parameter Remapping for Multi-tenant LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -5156,7 +5206,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1446JST-discovery-1f9b736a87f9638c.json",
         ".survey/work-queue/results/20260911T1450JST-discovery-dc51ce84c438adb2.json",
-        ".survey/work-queue/results/20260911T1430JST-discovery-b929523ba1be53c2.json"
+        ".survey/work-queue/results/20260911T1430JST-discovery-b929523ba1be53c2.json",
+        ".survey/work-queue/results/20260911T1430JST-discovery-a923b40a38aac177.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 260,
