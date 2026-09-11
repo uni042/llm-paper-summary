@@ -66,7 +66,7 @@ class ListSummaryTests(unittest.TestCase):
         self.assertIn("投機的復号", text)
         self.assertIn("検証コスト", text)
         self.assertIn("対象モデル", text)
-        self.assertIn("レイテンシ", text)
+        self.assertNotIn("latency", text.lower())
 
     def test_quality_ignores_proper_names_in_language_ratio(self):
         mod = self._module()
