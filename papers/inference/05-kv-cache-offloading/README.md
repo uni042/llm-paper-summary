@@ -8,17 +8,17 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2025-10 | [Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits](2025-2511.00321-cxl-pnm-kv-cache.md) | ✓ | 2 | 100万トークン級の長文脈推論では、完全なKVキャッシュをCXL拡張メモリへ退避しても、動的選択されたページをGPUへ呼び戻す通信が文脈長とともに増え、GPU側KV容量がバッチ数を制限する。著者らはCXL Type 3メモリに処理近傍メモリ（Processing-Near-メモリ; PNM）アクセラレータを統合し、ページ要約、重要度推定、Top-K選択。 |
+| 2025-10 | [Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits](2025-2511.00321-cxl-pnm-kv-cache.md) | ✓ | 2 | 100万トークン級の長文脈推論では、完全なKVキャッシュをCXL拡張メモリへ退避しても、動的選択されたページをGPUへ呼び戻す通信が文脈長とともに増え、GPU側KV容量がバッチ数を制限する。 |
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-09 | [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md) | ✓ | 0 | 長文脈LLMのデコードでは、過去トークンのKVキャッシュ全体を各段階で読み出すため、演算量よりメモリ帯域とデータ移動が律速になりやすい。著者らは、KVキャッシュを高密度なオンチップ不揮発メモリ（Non-Volatile メモリ; NVM）へ置く場合。 |
+| 2026-09 | [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md) | ✓ | 0 | 長文脈LLMのデコードでは、過去トークンのKVキャッシュ全体を各段階で読み出すため、演算量よりメモリ帯域とデータ移動が律速になりやすい。 |
 
 ### 1年以上前
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2025-07 | [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md) | ✓ | 2 | 長文LLM推論でKVキャッシュがGPUメモリを超えると、CPUへ退避したKVを注意計算のたびにPCIe経由でGPUへ戻す方式は転送待ちがボトルネックになる。HGCAは最近のKVをGPUに残して密な注意計算を行い、古いKVはCPUメモリ上でヘッド単位に重要項目だけを選んで疎な注意計算を実行する。CPUとGPUの部分結果はlog-sum-exp統合で合成し。 |
+| 2025-07 | [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md) | ✓ | 2 | 長文LLM推論でKVキャッシュがGPUメモリを超えると、CPUへ退避したKVを注意計算のたびにPCIe経由でGPUへ戻す方式は転送待ちがボトルネックになる。 |
 <!-- survey:auto:end -->

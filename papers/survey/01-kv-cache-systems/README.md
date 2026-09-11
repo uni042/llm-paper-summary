@@ -8,7 +8,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-07 | [Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](2026-2607.08057-system-aware-kv-cache-optimization-survey.md) | [✓](https://github.com/jjiantong/Awesome-KV-Cache-Optimization) | 1 | この論文は、生成中の大規模言語モデルを速く安く動かすために、KVキャッシュ（Key-Value キャッシュ）を中心に既存研究を整理した総説である。KVキャッシュは、入力処理（プリフィル）と逐次生成（デコード）の途中で計算した注意機構用のキーと値を保存し、次のトークン生成で過去のトークンを再計算せずに済ませる仕組みである。長い入力、長い出力。 |
+| 2026-07 | [Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](2026-2607.08057-system-aware-kv-cache-optimization-survey.md) | [✓](https://github.com/jjiantong/Awesome-KV-Cache-Optimization) | 1 | この論文は、生成中の大規模言語モデルを速く安く動かすために、KVキャッシュ（Key-Value キャッシュ）を中心に既存研究を整理した総説である。 |
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 

@@ -8,7 +8,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-03 | [KV Cache Optimization Strategies for Scalable and Efficient LLM Inference](2026-2603.20397-kv-cache-optimization-strategies.md) | ✓ | 1 | 本論文は、長文LLM推論でKVキャッシュが文脈長に比例して増え、GPUメモリ容量・メモリ帯域・スループットを同時に制約する一方、既存研究が個別方式ごとに分散して選択基準が分かりにくい問題を整理する体系的レビューである。最近のKVキャッシュ最適化を、キャッシュ追い出し、圧縮・復元、階層メモリ、新しい注意機構、複合方式の5系統に分類し、メモリ削減量、速度。 |
+| 2026-03 | [KV Cache Optimization Strategies for Scalable and Efficient LLM Inference](2026-2603.20397-kv-cache-optimization-strategies.md) | ✓ | 1 | 本論文は、長文LLM推論でKVキャッシュが文脈長に比例して増え、GPUメモリ容量・メモリ帯域・スループットを同時に制約する一方、既存研究が個別方式ごとに分散して選択基準が分かりにくい問題を整理する体系的レビューである。 |
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 

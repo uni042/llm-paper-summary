@@ -21,7 +21,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-09 | [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md) | ✓ | 0 | 専門家混合（Mixture-of-エキスパート; MoE）モデルは、1 トークンを処理するとき全エキスパートを計算するのではなく、ルータが選んだ少数エキスパートだけを実行する。たとえば128 エキスパートのうちTop-8だけを使えば、計算量はかなり疎になる。 |
+| 2026-09 | [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md) | ✓ | 0 | 専門家混合（Mixture-of-エキスパート; MoE）モデルは、1 トークンを処理するとき全エキスパートを計算するのではなく、ルータが選んだ少数エキスパートだけを実行する。 |
 | 2026-08 | [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md) | [✓](https://anonymous.4open.science/r/SPICE) | 0 | 数層先で使う専門家を予測して先読みし、予測外れを「小型近似で済ませるもの」「CPU上で正確に計算するもの」「重みをGPUへ送って正確に計算するもの」に分けることで、MoE オフロードのPCIe待ちを減らす。 |
 | 2026-03 | [FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference](2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md) | ✓ | 0 | FIRM-MoEは、通常のエキスパート オフロードがエキスパート全体を一つの転送単位として扱うため、必要のない重みまでまとめて運びやすい点を問題にする。 |
 | 2026-03 | [CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints](2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md) | ✓ | 0 | CommitMoEは、エキスパート 先読みで大きな待ち時間になるprediction ミス時の追加読み込みそのものを行わない。 |

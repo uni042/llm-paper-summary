@@ -21,7 +21,7 @@ H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 LINK_RE = re.compile(r"!?\[([^\]]*)\]\([^)]+\)")
 URL_RE = re.compile(r"https?://\S+")
 HTML_RE = re.compile(r"<[^>]+>")
-SENTENCE_RE = re.compile(r".+?[。！？](?=\s|$)|.+$", re.S)
+SENTENCE_RE = re.compile(r"[^。！？]+[。！？]?")
 CAMEL_OR_ACRONYM_RE = re.compile(
     r"(?<![A-Za-z0-9])(?:[A-Z][A-Z0-9_-]{1,}|[A-Z][a-z0-9]+(?:[A-Z][A-Za-z0-9]*)+)(?:-[A-Za-z0-9]+)*(?![A-Za-z0-9])"
 )
@@ -272,7 +272,7 @@ def _trim_long_sentence(sentence: str, max_chars: int) -> str:
     candidates = [window.rfind(mark) for mark in ("、", "；", ";", "：", ":")]
     cut = max(candidates)
     if cut >= max(45, max_chars // 2):
-        return window[:cut].rstrip("、；;：: ") + "。"
+        return window[:cut].rstrip("、；;：: ") + "…"
     return sentence[: max_chars - 1].rstrip() + "…"
 
 

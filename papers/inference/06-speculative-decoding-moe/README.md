@@ -16,8 +16,8 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-08 | [MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices](2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md) | ✓ | 0 | メモリ容量が小さいエッジ端末で複数のドラフトモデルを使う適応型投機的デコードでは、精度の高いドラフトを選べても、そのモデルがメモリに常駐していなければNVMe SSDからの読み込み待ちが発生し、受理トークン数の改善が実際の生成速度へ結び付かない。MemSpecは、入力プロンプトと直近の生成トークンから有望なドラフトを予測し。 |
-| 2026-01 | [WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching](2026-2601.11652-wisp-distributed-speculative-serving-edge.md) | ✓ | 0 | エッジ端末が小型ドラフトモデルで候補トークンを生成し、サーバー側の大型モデルがまとめて検証する分散投機的デコードでは、最初に棄却される位置を越えてドラフトを作る計算が無駄になり、さらにキャッシュ状態や新規トークン数が異なる要求を同じGPUバッチへ混ぜると検証時間の長い要求が他の要求まで遅らせる。WISPは。 |
+| 2026-08 | [MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices](2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md) | ✓ | 0 | メモリ容量が小さいエッジ端末で複数のドラフトモデルを使う適応型投機的デコードでは、精度の高いドラフトを選べても、そのモデルがメモリに常駐していなければNVMe SSDからの読み込み待ちが発生し、受理トークン数の改善が実際の生成速度へ結び付かない。 |
+| 2026-01 | [WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching](2026-2601.11652-wisp-distributed-speculative-serving-edge.md) | ✓ | 0 | エッジ端末が小型ドラフトモデルで候補トークンを生成し、サーバー側の大型モデルがまとめて検証する分散投機的デコードでは、最初に棄却される位置を越えてドラフトを作る計算が無駄になり、さらにキャッシュ状態や新規トークン数が異なる要求を同じGPUバッチへ混ぜると検証時間の長い要求が他の要求まで遅らせる。 |
 
 ### 1年以上前
 

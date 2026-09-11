@@ -16,5 +16,5 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2025-05 | [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md) | [✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) | 0 | この総説の出発点は、LLMを使うサービスの計算量が、単発の文章生成だけを想定していた時代より急増したことである。思考連鎖（Chain-of-Thought; CoT）、複雑な推論、エージェントは、一つの依頼に対してモデルを何度も呼び出す。さらに、チャット、要約、コード生成、検索のような要求が同じ計算機へ混在するため、入力をまとめて処理するプリフィルと。 |
+| 2025-05 | [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md) | [✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) | 0 | この総説の出発点は、LLMを使うサービスの計算量が、単発の文章生成だけを想定していた時代より急増したことである。 |
 <!-- survey:auto:end -->

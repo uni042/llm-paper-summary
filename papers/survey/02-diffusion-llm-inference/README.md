@@ -12,7 +12,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-07 | [Accelerating Masked Diffusion Large Language Models: A Survey of Efficient Inference Techniques](2026-2607.12829-accelerating-masked-diffusion-llms-survey.md) | ✓ | 0 | 自己回帰型の大規模言語モデルは、生成するトークンを左から右へ1個ずつ確定する。そのため、生成長に比例する依存したデコードを避けにくく、対話の待ち時間や大量要求の処理量に限界がある。マスク拡散型の言語モデルは、最初に生成範囲をマスクで埋め、モデルが予測した複数位置を一度に確定しながら。 |
+| 2026-07 | [Accelerating Masked Diffusion Large Language Models: A Survey of Efficient Inference Techniques](2026-2607.12829-accelerating-masked-diffusion-llms-survey.md) | ✓ | 0 | 自己回帰型の大規模言語モデルは、生成するトークンを左から右へ1個ずつ確定する。そのため、生成長に比例する依存したデコードを避けにくく、対話の待ち時間や大量要求の処理量に限界がある。 |
 
 ### 1年以上前
 
