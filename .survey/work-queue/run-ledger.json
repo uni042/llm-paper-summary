@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:53:44.446880+00:00",
+  "updated_at": "2026-09-11T07:00:27.837725+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,7 +5239,7 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T06:53:44.446880+00:00",
+      "last_recorded_at": "2026-09-11T07:00:27.837725+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -5248,9 +5248,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 7,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -5341,6 +5341,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34572372305:1",
+          "recorded_at": "2026-09-11T07:00:27.837725+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34572372305",
+            "run_attempt": "1",
+            "source_sha": "00fde8e7af69dce6ee5878cccbd296ad61d37158"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5391,6 +5405,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-9f406f6b27cacd78",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5428,6 +5450,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-38e4d67cef7f55e8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.02230",
+          "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live"
+        },
+        {
+          "job_id": "job-research-fed596c4160c0092",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.03335",
+          "title": "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs"
         }
       ],
       "new_paper_ids": [
@@ -5438,7 +5474,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1543JST-discovery-b7d2560206d7b78d.json",
-        ".survey/work-queue/results/20260911T1555JST-discovery-3732a5ada325b4a2.json"
+        ".survey/work-queue/results/20260911T1555JST-discovery-3732a5ada325b4a2.json",
+        ".survey/work-queue/results/20260911T1559JST-discovery-9f406f6b27cacd78.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
