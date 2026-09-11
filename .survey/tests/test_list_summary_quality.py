@@ -46,6 +46,18 @@ class ListSummaryTests(unittest.TestCase):
         self.assertEqual(text, first)
         self.assertNotIn("次に", text)
 
+    def test_background_only_first_sentence_does_not_hide_method(self):
+        mod = self._module()
+        background = "長いエージェント処理では再利用できるKVキャッシュが増え続け、限られたGPUメモリでは保持対象を適切に選ばないと再計算と待ち時間が増える。"
+        method = "提案手法は各キャッシュの次回利用時刻を予測し、再利用までの時間に応じて保持期限を動的に決めることで、不要な保持と早すぎる追い出しを減らす。"
+        result = "評価では既存方式よりキャッシュ再利用率と処理性能を改善した。"
+        body = f"# Example\n\n## 概要\n\n{background}{method}{result}\n"
+        text = mod.compact_list_summary(body)
+        self.assertLessEqual(len(text), 180)
+        self.assertIn("予測", text)
+        self.assertIn("保持期限", text)
+        self.assertTrue("KVキャッシュ" in text or "キャッシュ" in text)
+
     def test_explicit_overview_section_beats_metadata_fallback(self):
         mod = self._module()
         body = """# Example
