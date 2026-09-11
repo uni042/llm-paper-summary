@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-46cbb110ea4d042f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2604.25080-cacheflow.md",
+      "priority": 92,
+      "reason": "長文脈サービングで外部メモリからKVキャッシュを復元する処理を、再計算か入出力かという一要求単位の二択ではなく、トークン・層・GPUの三次元に分解して並列実行する。バッチ内の複数要求について再計算削減効果が大きい処理へ計算・入出力資源を割り当てるスケジューラを組み合わせ、既存方式に対して先頭トークンまでの時間を10〜62%削減と報告する。CPU/遠隔メモリへのKV退避だけでなく復元過程そのものを並列化する点が既存収録系統と差別化される。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+      "priority": 88,
+      "reason": "プリフィル・デコード分離型サービングではKVブロック取得、集団通信、プリフィルからデコードへの転送が同じネットワーク帯域を奪い合い、段階を無視した通信スケジューリングが先頭トークン遅延のサービス水準目標違反を招く。本研究は要求の残り余裕を正確に知らなくても、遅延余裕が減った通信を段階的に昇格させる逆多段待ち行列で複数段階の通信を統合調整し、32GPU実機と大規模シミュレーションで目標達成率を1.2〜2.4倍に改善する。分離サービングの計算配置ではなくネットワークフロー制御を中心に据える点が有用。"
+    },
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2603.06350-moeless.md",
+      "priority": 86,
+      "reason": "混合専門家モデルで一部専門家だけに要求が偏ると、固定GPU配置では混雑する専門家が待ち時間を支配し、専門家入替えでは転送費用が大きい。MoElessは層ごとの軽量予測器で将来の専門家負荷を推定し、混雑が見込まれる専門家だけをサーバーレスGPU関数として先回り増設・配置する。Megatron-LM上の8GPU試作と実ワークロードで推論遅延43%、費用84%削減を報告しており、専門家キャッシュや静的複製とは異なる弾力的な専門家実体化という軸を追加する。"
+    }
+  ]
+}
