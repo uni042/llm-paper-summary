@@ -25,16 +25,16 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2024-10 | [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md) | ✓ | 3 | 数layer先で使うexpertを予測し、同じexpertを使いそうなtokenをまとめ、GPU cache容量も需要に応じてlayer間で動かすことで、CPUからexpertを読む待ち時間を減らすMoE推論system。 |
-| 2024-02 | [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md) | [✓](https://github.com/ysngki/XMoE) | 2 | router確率を高い順に足し、合計が設定値に達するまでexpertを選ぶことで、routerが確信しているtokenでは少数、判断が分散しているtokenでは多数のexpertを使う。 |
-| 2024-02 | [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md) | [✓](https://github.com/Lucky-Lance/Expert_Sparsity) | 2 | 削除してもlayer出力があまり変わらないexpertをモデルから恒久的に除き、さらにtokenごとにrouter寄与が小さい第2expertを省いて、memoryとFFN計算を減らす学習不要の手法。 |
-| 2025-09 | [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md) | ✓ | 1 | layerごとにTop-kを減らした時の出力変化を事前に測り、影響が小さいlayerではexpert数を減らし、影響が大きいlayerへexpert実行予算を回すことで、固定Top-kより少ない計算で品質維持を狙う。 |
+| 2024-10 | [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md) | ✓ | 2 | 数layer先で使うexpertを予測し、同じexpertを使いそうなtokenをまとめ、GPU cache容量も需要に応じてlayer間で動かすことで、CPUからexpertを読む待ち時間を減らすMoE推論system。 |
+| 2023-10 | [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md) | [✓](https://github.com/UNITES-Lab/MC-SMoE) | 1 | routerの利用履歴から『似た入力を担当しているexpert』を見つけ、ニューロンの並びを揃えてから代表expertへ統合し、統合後weightをlow-rank成分と構造的に疎な残差へ分解することでMoEのmemory footprintを大幅に減らす。 |
 
 ### その他
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
+| 2025-09 | [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md) | ✓ | 0 | layerごとにTop-kを減らした時の出力変化を事前に測り、影響が小さいlayerではexpert数を減らし、影響が大きいlayerへexpert実行予算を回すことで、固定Top-kより少ない計算で品質維持を狙う。 |
 | 2024-10 | [MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts](2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md) | [✓](https://github.com/SkyworkAI/MoE-plus-plus) | 0 | 通常のFFN expertに加えて、何も出力しない・入力をそのまま返す・学習済み定数を返す軽量expertをrouting候補へ入れ、tokenに応じて実際のFFN計算数を減らすMoE。 |
 | 2024-06 | [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md) | ✓ | 0 | 計算を行わないnull expertをrouting候補へ加え、簡単なtokenではnullを多く選ばせることで、実際にFFN計算するexpert数をtokenごとに変えるMoE。 |
-| 2023-10 | [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md) | [✓](https://github.com/UNITES-Lab/MC-SMoE) | 0 | routerの利用履歴から『似た入力を担当しているexpert』を見つけ、ニューロンの並びを揃えてから代表expertへ統合し、統合後weightをlow-rank成分と構造的に疎な残差へ分解することでMoEのmemory footprintを大幅に減らす。 |
+| 2024-02 | [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md) | [✓](https://github.com/ysngki/XMoE) | 0 | router確率を高い順に足し、合計が設定値に達するまでexpertを選ぶことで、routerが確信しているtokenでは少数、判断が分散しているtokenでは多数のexpertを使う。 |
+| 2024-02 | [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md) | [✓](https://github.com/Lucky-Lance/Expert_Sparsity) | 0 | 削除してもlayer出力があまり変わらないexpertをモデルから恒久的に除き、さらにtokenごとにrouter寄与が小さい第2expertを省いて、memoryとFFN計算を減らす学習不要の手法。 |
 <!-- survey:auto:end -->

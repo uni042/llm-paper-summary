@@ -1,0 +1,1446 @@
+{
+  "schema_version": 1,
+  "reference_audit_version": 1,
+  "checked_at": "2026-09-11T08:25:56+00:00",
+  "summary": {
+    "total": 308,
+    "complete": 24,
+    "incomplete": 284
+  },
+  "families": {
+    "inference": {
+      "total": 285,
+      "complete": 24
+    },
+    "training": {
+      "total": 19,
+      "complete": 0
+    },
+    "survey": {
+      "total": 4,
+      "complete": 0
+    }
+  },
+  "incomplete": [
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
+      "canonical_id": "DOI:10.1145/3688351.3689164",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md",
+      "canonical_id": "arXiv:2604.25699",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2604.26074-dak-direct-access-gpu-memory-offloading.md",
+      "canonical_id": "arXiv:2604.26074",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
+      "canonical_id": "arXiv:2605.17889",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.21868-wisp-working-set-moe-serving-low-resource-hardware.md",
+      "canonical_id": "arXiv:2606.21868",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md",
+      "canonical_id": "arXiv:2606.25353",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.12103-kernel-managed-expert-cache-tiering.md",
+      "canonical_id": "arXiv:2608.12103",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.13127-hbf-llm-serving.md",
+      "canonical_id": "arXiv:2608.13127",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md",
+      "canonical_id": "arXiv:2608.14333",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2608.21614-saem-stage-aware-expert-management-cot.md",
+      "canonical_id": "arXiv:2608.21614",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+      "canonical_id": "arXiv:2310.01334",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+      "canonical_id": "arXiv:2402.14800",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+      "canonical_id": "arXiv:2403.18926",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+      "canonical_id": "arXiv:2406.13233",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+      "canonical_id": "arXiv:2410.07348",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+      "canonical_id": "arXiv:2410.17954",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+      "canonical_id": "arXiv:2509.02753",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md",
+      "canonical_id": "arXiv:2511.10054",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md",
+      "canonical_id": "arXiv:2604.08133",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md",
+      "canonical_id": "arXiv:2605.27081",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md",
+      "canonical_id": "arXiv:2606.29982",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.04575-training-free-halving-activated-experts.md",
+      "canonical_id": "arXiv:2609.04575",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.05228-ace.md",
+      "canonical_id": "arXiv:2609.05228",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/02-moe-expert-placement-caching/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md",
+      "canonical_id": "arXiv:2608.15383",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+      "canonical_id": "arXiv:2308.12066",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+      "canonical_id": "arXiv:2310.18859",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md",
+      "canonical_id": "arXiv:2410.22134",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
+      "canonical_id": "arXiv:2501.10375",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
+      "canonical_id": "arXiv:2502.12224",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md",
+      "canonical_id": "arXiv:2509.23638",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
+      "canonical_id": "arXiv:2512.03927",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
+      "canonical_id": "arXiv:2603.19289",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md",
+      "canonical_id": "arXiv:2607.24787",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md",
+      "canonical_id": "arXiv:2608.21240",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+      "canonical_id": "arXiv:2609.04895",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md",
+      "canonical_id": "AAAI:39816",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md",
+      "canonical_id": "AAAI:39454",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md",
+      "canonical_id": "AAAI:39106",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+      "canonical_id": "arXiv:2307.02628",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+      "canonical_id": "arXiv:2407.14057",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+      "canonical_id": "NeurIPS2024:03469b1a66e351b18272be23baf3b809",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "canonical_id": "ACL:2024.acl-long.681",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
+      "canonical_id": "arXiv:2503.08524",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+      "canonical_id": "arXiv:2503.23798",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "canonical_id": "arXiv:2504.15895",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md",
+      "canonical_id": "ACL:2025.findings-acl.377",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-expert-offload-caching/2026-2606.26607-moebius-runtime-parallelism-switch.md",
+      "canonical_id": "arXiv:2606.26607",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-expert-offload-caching/2026-2609.08682-hda-moe-3d-near-memory-scheduling.md",
+      "canonical_id": "arXiv:2609.08682",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2601.03992-edge-gpu-ndp-moe-scheduling.md",
+      "canonical_id": "arXiv:2601.03992",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md",
+      "canonical_id": "arXiv:2603.27624",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+      "canonical_id": "arXiv:2603.28239",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2604.01621-dwdp-distributed-weight-data-parallelism.md",
+      "canonical_id": "arXiv:2604.01621",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
+      "canonical_id": "arXiv:2605.28095",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2606.15177-gimbal-coordinated-moe-serving-scheduling.md",
+      "canonical_id": "arXiv:2606.15177",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2607.17880-mixture-of-experts-serving-online-algorithms.md",
+      "canonical_id": "arXiv:2607.17880",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md",
+      "canonical_id": "arXiv:2608.00577",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md",
+      "canonical_id": "arXiv:2608.14205",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-kv-cache-offloading/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md",
+      "canonical_id": "arXiv:2507.03153",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-kv-cache-offloading/2025-2511.00321-cxl-pnm-kv-cache.md",
+      "canonical_id": "arXiv:2511.00321",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-kv-cache-offloading/2026-2609.05764-interface-aware-kv-quantization-nvm.md",
+      "canonical_id": "arXiv:2609.05764",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+      "canonical_id": "arXiv:2305.09781",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+      "canonical_id": "arXiv:2311.08252",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "canonical_id": "arXiv:2401.10774",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "canonical_id": "arXiv:2401.15077",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "canonical_id": "arXiv:2402.02057",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
+      "canonical_id": "arXiv:2510.10302",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2511.14102-moe-speq-speculative-quantized-decoding-with-proactive-expert-prefetching-and-of.md",
+      "canonical_id": "arXiv:2511.14102",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2602.16052-moe-spec-expert-budgeting-speculative-decoding.md",
+      "canonical_id": "arXiv:2602.16052",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2603.09983-moe-spac-efficient-moe-inference-based-on-speculative-activation-utility-in-hete.md",
+      "canonical_id": "arXiv:2603.09983",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.00342-making-every-verified-token-count-adaptive-verification-for-moe-speculative-deco.md",
+      "canonical_id": "arXiv:2605.00342",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md",
+      "canonical_id": "arXiv:2605.08151",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md",
+      "canonical_id": "arXiv:2605.15051",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md",
+      "canonical_id": "arXiv:2607.12696",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2607.24434-draftexpert-expansion-aware-self-speculative-decoding.md",
+      "canonical_id": "arXiv:2607.24434",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md",
+      "canonical_id": "arXiv:2608.02989",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.00355-glance-vlm-speculative-decoding.md",
+      "canonical_id": "arXiv:2609.00355",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-expert-offloading/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
+      "canonical_id": "arXiv:2509.07379",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+      "canonical_id": "arXiv:2606.15453",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2608.11688-apex-adaptive-expert-prefetching.md",
+      "canonical_id": "arXiv:2608.11688",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md",
+      "canonical_id": "arXiv:2608.13962",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-expert-offloading/2026-2609.00407-dynande-near-data-expert-scheduling.md",
+      "canonical_id": "arXiv:2609.00407",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
+      "canonical_id": "arXiv:2310.02410",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+      "canonical_id": "arXiv:2310.16795",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md",
+      "canonical_id": "arXiv:2406.08155",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md",
+      "canonical_id": "arXiv:2407.14417",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+      "canonical_id": "arXiv:2410.06270",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md",
+      "canonical_id": "arXiv:2503.21135",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+      "canonical_id": "arXiv:2505.03804",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+      "canonical_id": "arXiv:2505.05799",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
+      "canonical_id": "arXiv:2510.10962",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md",
+      "canonical_id": "arXiv:2511.15015",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+      "canonical_id": "ACL:2025.acl-long.633",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md",
+      "canonical_id": "arXiv:2605.23078",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md",
+      "canonical_id": "arXiv:2607.16184",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md",
+      "canonical_id": "arXiv:2601.11652",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/06-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
+      "canonical_id": "arXiv:2608.10362",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+      "canonical_id": "arXiv:2402.05099",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+      "canonical_id": "arXiv:2403.17312",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md",
+      "canonical_id": "arXiv:2501.08192",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md",
+      "canonical_id": "arXiv:2504.06319",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md",
+      "canonical_id": "arXiv:2505.19586",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md",
+      "canonical_id": "arXiv:2601.10729",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md",
+      "canonical_id": "arXiv:2604.26837",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-cache-compression.md",
+      "canonical_id": "arXiv:2605.13734",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md",
+      "canonical_id": "arXiv:2606.02964",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06302-tangram-non-uniform-kv-cache.md",
+      "canonical_id": "arXiv:2606.06302",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md",
+      "canonical_id": "arXiv:2606.24467",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01237-kara-sliding-window-kv-compression.md",
+      "canonical_id": "arXiv:2607.01237",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+      "canonical_id": "arXiv:2609.02029",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-kv-cache-compression.md",
+      "canonical_id": "arXiv:2609.03235",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md",
+      "canonical_id": "arXiv:2609.03430",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03494-growpage-on-demand-kv-budgeting-for-efficient-llm-reasoning-serving.md",
+      "canonical_id": "arXiv:2609.03494",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+      "canonical_id": "arXiv:2609.03515",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression-for-constrained-llm-inference.md",
+      "canonical_id": "arXiv:2609.07966",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.08131-jacap.md",
+      "canonical_id": "arXiv:2609.08131",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+      "canonical_id": "arXiv:2609.09768",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+      "canonical_id": "arXiv:2609.10266",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+      "canonical_id": "arXiv:2308.15030",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+      "canonical_id": "arXiv:2406.06282",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+      "canonical_id": "arXiv:2504.15299",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md",
+      "canonical_id": "arXiv:2510.11331",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md",
+      "canonical_id": "arXiv:2604.07396",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md",
+      "canonical_id": "arXiv:2604.18788",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md",
+      "canonical_id": "arXiv:2606.10493",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2607.09686-mawforge-memory-bounded-expert-materialization.md",
+      "canonical_id": "arXiv:2607.09686",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md",
+      "canonical_id": "arXiv:2607.10183",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md",
+      "canonical_id": "arXiv:2608.16157",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md",
+      "canonical_id": "arXiv:2609.01338",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md",
+      "canonical_id": "arXiv:2609.02514",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.06551-estream.md",
+      "canonical_id": "arXiv:2609.06551",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
+      "canonical_id": "arXiv:2607.16473",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
+      "canonical_id": "arXiv:2607.26491",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
+      "canonical_id": "arXiv:2609.08450",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
+      "canonical_id": "arXiv:2609.03079",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
+      "canonical_id": "arXiv:2403.11421",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
+      "canonical_id": "arXiv:2407.21255",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+      "canonical_id": "arXiv:2409.04992",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+      "canonical_id": "arXiv:2410.21465",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+      "canonical_id": "arXiv:2411.01142",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md",
+      "canonical_id": "arXiv:2411.09317",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md",
+      "canonical_id": "arXiv:2411.17089",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md",
+      "canonical_id": "arXiv:2501.01792",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2502.12574-headinfer-head-wise-kv-offloading.md",
+      "canonical_id": "arXiv:2502.12574",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md",
+      "canonical_id": "arXiv:2503.16163",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md",
+      "canonical_id": "arXiv:2506.03296",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2508.13231-accelerating-llm-inference-via-dynamic-kv-cache-placement-in-heterogeneous-memory-system.md",
+      "canonical_id": "arXiv:2508.13231",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+      "canonical_id": "arXiv:2509.03377",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
+      "canonical_id": "arXiv:2510.09665",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md",
+      "canonical_id": "arXiv:2511.14510",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
+      "canonical_id": "arXiv:2512.11920",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2601.19910-understanding-bottlenecks-kv-offloading.md",
+      "canonical_id": "arXiv:2601.19910",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md",
+      "canonical_id": "arXiv:2601.20309",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.03203-foresightkv-long-term-contribution-eviction.md",
+      "canonical_id": "arXiv:2602.03203",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+      "canonical_id": "arXiv:2602.07721",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
+      "canonical_id": "arXiv:2602.09725",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+      "canonical_id": "arXiv:2602.11521",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md",
+      "canonical_id": "arXiv:2602.18750",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.20732-chess-context-aware-hierarchical-selection.md",
+      "canonical_id": "arXiv:2602.20732",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md",
+      "canonical_id": "arXiv:2602.23592",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
+      "canonical_id": "arXiv:2603.17803",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
+      "canonical_id": "arXiv:2603.27138",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md",
+      "canonical_id": "arXiv:2604.18529",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
+      "canonical_id": "arXiv:2604.19769",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow.md",
+      "canonical_id": "arXiv:2604.25080",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md",
+      "canonical_id": "arXiv:2604.26557",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
+      "canonical_id": "arXiv:2605.03375",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
+      "canonical_id": "arXiv:2605.17613",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
+      "canonical_id": "arXiv:2605.18071",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
+      "canonical_id": "arXiv:2605.24022",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md",
+      "canonical_id": "arXiv:2606.15157",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "canonical_id": "arXiv:2606.16135",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md",
+      "canonical_id": "arXiv:2607.18141",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.26475-dualdecoder-predictive-prefetch.md",
+      "canonical_id": "arXiv:2607.26475",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+      "canonical_id": "arXiv:2607.27187",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
+      "canonical_id": "arXiv:2608.03555",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03893-cross-model-kv-cache-transfer.md",
+      "canonical_id": "arXiv:2608.03893",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+      "canonical_id": "arXiv:2608.08097",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.14624-cachescout.md",
+      "canonical_id": "arXiv:2608.14624",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23658-elastic-kv-cache.md",
+      "canonical_id": "arXiv:2608.23658",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23834-minima-kv-mixed-format-paged-attention.md",
+      "canonical_id": "arXiv:2608.23834",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md",
+      "canonical_id": "arXiv:2609.00891",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md",
+      "canonical_id": "arXiv:2609.04852",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md",
+      "canonical_id": "USENIX:OSDI26:luo",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
+      "canonical_id": "arXiv:2505.02922",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
+      "canonical_id": "DOI:10.5555/3600237.3600268",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+      "canonical_id": "arXiv:2302.11665",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+      "canonical_id": "arXiv:2305.05920",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "canonical_id": "DOI:10.1145/3600006.3613165",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "canonical_id": "arXiv:2311.15566",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "canonical_id": "arXiv:2311.18677",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+      "canonical_id": "arXiv:2312.05516",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "canonical_id": "arXiv:2312.07104",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+      "canonical_id": "arXiv:2401.00588",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+      "canonical_id": "arXiv:2401.08671",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "canonical_id": "arXiv:2401.09670",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+      "canonical_id": "arXiv:2401.14351",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+      "canonical_id": "arXiv:2402.01869",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "canonical_id": "arXiv:2403.02310",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+      "canonical_id": "arXiv:2403.19708",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+      "canonical_id": "arXiv:2404.16283",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+      "canonical_id": "arXiv:2405.19888",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "canonical_id": "arXiv:2406.03243",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+      "canonical_id": "arXiv:2406.17565",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+      "canonical_id": "arXiv:2407.00023",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+      "canonical_id": "arXiv:2407.00047",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+      "canonical_id": "arXiv:2407.00079",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md",
+      "canonical_id": "arXiv:2408.08147",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+      "canonical_id": "arXiv:2408.15792",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.06709-mell-multi-gpu-kv-cache-management.md",
+      "canonical_id": "arXiv:2501.06709",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.08090-chiron-hierarchical-autoscaling.md",
+      "canonical_id": "arXiv:2501.08090",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling-dlpm.md",
+      "canonical_id": "arXiv:2501.14312",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+      "canonical_id": "arXiv:2504.11320",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md",
+      "canonical_id": "arXiv:2507.11507",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
+      "canonical_id": "arXiv:2508.16449",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+      "canonical_id": "arXiv:2510.05632",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+      "canonical_id": "arXiv:2511.02230",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md",
+      "canonical_id": "arXiv:2512.04013",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md",
+      "canonical_id": "arXiv:2510.13668",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md",
+      "canonical_id": "arXiv:2602.02987",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.18755-biscale-phase-aware-placement-dvfs.md",
+      "canonical_id": "arXiv:2602.18755",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21626-multi-layer-scheduling-moe-reasoning.md",
+      "canonical_id": "arXiv:2602.21626",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.06350-moeless-serverless-moe-serving.md",
+      "canonical_id": "arXiv:2603.06350",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
+      "canonical_id": "arXiv:2603.17456",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md",
+      "canonical_id": "arXiv:2604.07609",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02329-taming-request-imbalance-slo-aware-scheduling.md",
+      "canonical_id": "arXiv:2605.02329",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19593-multi-model-offloading-preemption-schedulers.md",
+      "canonical_id": "arXiv:2605.19593",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+      "canonical_id": "arXiv:2605.23389",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md",
+      "canonical_id": "arXiv:2605.29639",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01839-conserve-conversation-level-agentic-serving.md",
+      "canonical_id": "arXiv:2606.01839",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md",
+      "canonical_id": "arXiv:2606.04415",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+      "canonical_id": "arXiv:2606.22327",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.24506-crosspool-cold-moe-serving.md",
+      "canonical_id": "arXiv:2606.24506",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.26666-persistentkv.md",
+      "canonical_id": "arXiv:2606.26666",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+      "canonical_id": "arXiv:2607.00466",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-kairos-load-aware-prefill-deflection.md",
+      "canonical_id": "arXiv:2607.02043",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03948-online-linear-programming-multi-objective-routing.md",
+      "canonical_id": "arXiv:2607.03948",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+      "canonical_id": "arXiv:2607.05708",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
+      "canonical_id": "arXiv:2607.16892",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+      "canonical_id": "arXiv:2607.28150",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28633-topology-aware-data-movement.md",
+      "canonical_id": "arXiv:2607.28633",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md",
+      "canonical_id": "arXiv:2608.01891",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.03741-heteropanacea.md",
+      "canonical_id": "arXiv:2608.03741",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+      "canonical_id": "arXiv:2608.06557",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+      "canonical_id": "arXiv:2608.15127",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md",
+      "canonical_id": "arXiv:2608.15171",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md",
+      "canonical_id": "arXiv:2608.16477",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md",
+      "canonical_id": "arXiv:2609.01068",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md",
+      "canonical_id": "arXiv:2609.03335",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+      "canonical_id": "arXiv:2609.04774",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.05425-cotail.md",
+      "canonical_id": "arXiv:2609.05425",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07536-moe-overlap-resource-manager.md",
+      "canonical_id": "arXiv:2609.07536",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md",
+      "canonical_id": "arXiv:2609.07883",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+      "canonical_id": "arXiv:2502.19811",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2504.06419-spire-throughput-speculative-decoding.md",
+      "canonical_id": "arXiv:2504.06419",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md",
+      "canonical_id": "arXiv:2506.11309",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.15013-radixmlp-intra-batch-deduplication.md",
+      "canonical_id": "arXiv:2601.15013",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md",
+      "canonical_id": "arXiv:2603.17435",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.19893-specsa-sparse-speculative-verification.md",
+      "canonical_id": "arXiv:2605.19893",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md",
+      "canonical_id": "arXiv:2608.26612",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md",
+      "canonical_id": "arXiv:2609.03236",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md",
+      "canonical_id": "arXiv:2609.04010",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md",
+      "canonical_id": "arXiv:2603.20397",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+      "canonical_id": "arXiv:2607.08057",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/survey/02-diffusion-llm-inference/2026-2607.12829-accelerating-masked-diffusion-llms-survey.md",
+      "canonical_id": "arXiv:2607.12829",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+      "canonical_id": "arXiv:2505.01658",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+      "canonical_id": "arXiv:2104.07857",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
+      "canonical_id": "arXiv:2310.09443",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
+      "canonical_id": "arXiv:2403.06664",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
+      "canonical_id": "arXiv:2406.10181",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md",
+      "canonical_id": "arXiv:2408.10013",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
+      "canonical_id": "arXiv:2505.12242",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md",
+      "canonical_id": "arXiv:2505.23254",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+      "canonical_id": "arXiv:2506.06472",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md",
+      "canonical_id": "arXiv:2509.02480",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md",
+      "canonical_id": "arXiv:2511.14124",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md",
+      "canonical_id": "arXiv:2512.17570",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md",
+      "canonical_id": "arXiv:2602.04816",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md",
+      "canonical_id": "arXiv:2604.27085",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
+      "canonical_id": "arXiv:2304.03946",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md",
+      "canonical_id": "arXiv:2504.03871",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md",
+      "canonical_id": "arXiv:2504.14960",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md",
+      "canonical_id": "arXiv:2504.19925",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md",
+      "canonical_id": "arXiv:2508.13337",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
+      "canonical_id": "arXiv:2608.07974",
+      "reason": "missing structured reference audit metadata"
+    }
+  ]
+}
