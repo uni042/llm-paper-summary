@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4b2230b86b73cd99",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.01621",
+      "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
+      "source_url": "https://arxiv.org/abs/2604.01621",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2604.01621-dwdp-distributed-weight-data-parallelism.md",
+      "priority": 82,
+      "reason": "MoE重みをNVL72内のpeer GPUへ分散配置し、必要なexpertだけをオンデマンド取得することで、従来のexpert parallelismに伴う層ごとのcollective同期を避ける推論並列化方式。split-weight管理と非同期remote-weight prefetchを組み合わせ、DeepSeek-R1/TensorRT-LLM上で20〜100 TPS/user帯におけるoutput TPS/GPUを8.8%改善している。expert placement・通信・prefetchを一体で扱うため、既存のCPU/SSD offload系とは異なるNVLinkファブリック上の重み移動設計として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2603.09983",
+      "title": "MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios",
+      "source_url": "https://arxiv.org/abs/2603.09983",
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2026-2603.09983-moe-spac-speculative-activation-utility.md",
+      "priority": 80,
+      "reason": "投機的デコードを単なるtoken生成高速化ではなく、将来のexpert需要を先読みする観測器として利用するMoE推論方式。Speculative Utility Estimatorでexpert需要を追跡し、online integer optimizationによるheterogeneous workload balancingと、prefetch/evictionを共通utilityで扱う非同期実行系を組み合わせる。7ベンチマークでSD系SOTA比TPS 42%向上、標準baseline群に対して平均4.04倍を報告しており、投機的デコードとexpert offload/prefetchの交差領域として既存系統を補完する。"
+    }
+  ]
+}
