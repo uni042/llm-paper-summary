@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（25本）
+## 自動生成の論文一覧（26本）
 
 | 論文 | 一文要約 |
 |---|---|
@@ -32,4 +32,5 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 | [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md) | GPUメモリに全エキスパートを置けないローカルPCで混合専門家モデル（Mixture of エキスパート; MoE）を実行すると、CPUとGPUの固定分担では入力ごとに変動するエキスパート負荷へ追随できず、PCIe転送も待ち時間になりやすい。DALIは各層で現在の負荷を見てCPU/GPU配置を動的に決め、隣接層の残差情報から次層の高負荷エキスパートを先読みし、直近トークンの負荷履歴でGPUキャッシュを入れ替える。RTX 3090とAMD EPYC上の実機評価で、強い比較対象HybriMoEに対してデコード平均1.32倍、プリフィル平均2.00倍の高速化を報告する。 |
 | [Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems](2025-2512.04476-context-aware-moe-cxl-ndp.md) | GPUメモリに収まらない混合専門家モデル（Mixture of エキスパート; MoE）では、外部メモリから巨大なエキスパート重みを毎回GPUへ運ぶとPCIe転送が支配的になる。本研究はCXL接続のデータ近傍処理（Near-Data Processing; NDP）側に低頻度エキスパートを置いてその場で計算し、重み転送を小さな活性値転送へ置き換える。さらに同じ入力系列ではプリフィル時とデコード時のエキスパート利用分布が似るという観測を使い、プリフィル終了時に重要度の高いエキスパートだけをGPU HBMへ一度配置し、残りはNDPに固定する。NDP側では各エキスパートの重要度と事前測定した量子化誤差に応じて1〜4ビットを混在させ、限られたNDP演算能力を補う。Ramulatorで構築したGPU-NDPシミュレーションではMoNDE比でMixtral-8x7Bのエンドツーエンド遅延を3ビット設定で6.6〜8.3倍、デコードスループットを最大8.7倍改善し、Mixtral-8x7Bの平均精度低下はフル精度比0.13ポイントに抑える。 |
 | [SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency](2025-2508.06978-ssd-moe-offloading-energy-efficiency.md) | MoEの専門家重みをSSDへ退避すると容量不足と転送遅延は扱いやすくなる一方、NAND Flashの読み出しエネルギーがHBMやCPU側DRAMより大幅に高い。本論文はデコード時の専門家重みアクセスをHBM、CPUメモリ、SSDで定量比較し、現在のSSDでは1トークン生成当たりの総エネルギーがMixtralで3.8〜12.5倍、DeepSeek-R1で4.7〜9.8倍まで増えることを示す。プリフェッチで転送遅延を隠しても読み出しエネルギー自体は消えず、SSDを有利にするにはFlash読み出しエネルギーをおよそ10分の1まで下げ、低バッチ時のMoE疎性を生かす必要があると分析する。 |
+| [eLLM: Elastic Memory Management Framework for Efficient LLM Serving](2025-2506.15155-ellm-elastic-memory-management.md) | LLMサービングで活性値とKVキャッシュを別々の固定メモリ領域として管理すると、片方が空いていても他方へ融通できずGPUメモリが遊ぶ問題に対し、仮想テンソル抽象で両者を同じ物理プールへ載せ、GPU内で領域を動的に貸し借りし、さらにCPUメモリを弾性的な退避先として使う推論基盤。初回トークン時間と出力トークン間隔のSLO違反を監視してCPUバッファ量を調整し、長文脈時の待ち行列とバッチ容量を両立する。A100実機でvLLM等と比較し、最大2.32倍のデコードスループット、128K入力で3倍のバッチ規模を報告する。 |
 <!-- survey:auto:end -->
