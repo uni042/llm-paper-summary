@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 110,
-      "ready": 1
+      "completed": 111
     },
     "audit": {
       "completed": 6
@@ -10,22 +9,47 @@
     "research": {
       "completed": 100,
       "superseded": 42,
+      "ready": 3,
       "deferred": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-81adab78d36bd4bb",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-05e9c21a8f88e2d2",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2607.16473",
+      "title": "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.16473",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-e1c7f91a13d91f98",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arXiv:2606.04415",
+      "title": "FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location",
+      "source_url": "https://arxiv.org/abs/2606.04415",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-69777c51ce28921c",
+      "type": "research",
+      "lane": null,
+      "priority": 72,
+      "canonical_id": "arXiv:2510.05632",
+      "title": "From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs",
+      "source_url": "https://arxiv.org/abs/2510.05632",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T05:17:42+00:00"
+  "generated_at": "2026-09-11T05:19:51+00:00"
 }

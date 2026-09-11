@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-69777c51ce28921c",
+  "type": "research",
+  "parent_job_id": "job-81adab78d36bd4bb",
+  "priority": 72,
+  "canonical_id": "arXiv:2510.05632",
+  "title": "From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs",
+  "source_url": "https://arxiv.org/abs/2510.05632",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+  "selection_reason": "複数コアNPUで、テンソル並列方式、コア配置、メモリ管理、プリフィル/デコード分離か同居かを一つずつではなく体系的に探索するマルチレベルシミュレーション研究。代表LLMと複数NPU構成で既存設計比1.32〜6.03倍の高速化を報告し、SIMT GPUとは異なる柔軟性制約を持つNPU上でどのサービング戦略が成立するかを整理する。個別方式だけでなくNPUサービングの設計空間を比較する基準論文として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T05:19:41+00:00",
+  "artifact_transport": "structured_record_v10"
+}
