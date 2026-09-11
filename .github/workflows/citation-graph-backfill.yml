@@ -8,11 +8,13 @@ on:
       - '.survey/scripts/citation_graph.py'
       - '.survey/scripts/backfill_citations.py'
       - '.survey/scripts/backfill_citation_pdfs.py'
+      - '.survey/scripts/recover_blocked_citations.py'
       - '.survey/scripts/normalize_paper_metadata.py'
       - '.survey/scripts/render_paper.py'
       - '.survey/scripts/assemble_research_record.py'
       - '.survey/tests/test_citation_graph.py'
       - '.survey/tests/test_pdf_citation_fallback.py'
+      - '.survey/tests/test_recover_blocked_citations.py'
       - '.survey/tests/test_render_paper_metadata.py'
   workflow_dispatch:
 
@@ -105,6 +107,7 @@ jobs:
             .survey/scripts/citation_graph.py \
             .survey/scripts/backfill_citations.py \
             .survey/scripts/backfill_citation_pdfs.py \
+            .survey/scripts/recover_blocked_citations.py \
             .survey/scripts/normalize_paper_metadata.py \
             .survey/scripts/render_paper.py \
             .survey/scripts/assemble_research_record.py \
@@ -169,6 +172,13 @@ jobs:
             --delay 0.75 \
             --apply \
             --retry-blocked
+
+      - name: Recover publisher and withdrawn-arXiv citation blockers
+        run: |
+          python .survey/scripts/recover_blocked_citations.py \
+            --root . \
+            --limit 50 \
+            --apply
 
       - name: Rebuild final graph and indexes
         run: |
