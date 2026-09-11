@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-add94fca07b82c40",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.24506-crosspool-cold-moe-kv-weight-disaggregation.md",
+      "priority": 86,
+      "reason": "多数の低頻度MoEモデルを同時ホストする環境で、静的なFFN重みと需要変動するKVキャッシュを別GPUプールへ分離するサービング方式。共有KVプール、層単位パイプライン、永続カーネルを組み合わせ、低並列・長文要求で生じるメモリ予約の浪費とKV-head制約を同時に扱う。kvcached系の既存multi-LLM servingと比べP99 TBTを最大10.4倍改善すると報告しており、MoE専門家配置とKV容量共有を横断する未収録候補として強い。"
+    }
+  ]
+}
