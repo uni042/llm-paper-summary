@@ -1,16 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-research-2608.14205-20260911-1030-v10-b1","job_id":"job-research-1047bdfeaa42931d","data":{
-    "canonical_id":"arXiv:2608.14205","arxiv_id":"2608.14205","doi":"10.48550/arXiv.2608.14205","title":"FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction",
-    "summary":"混合専門家モデル（Mixture of Experts; MoE）のオンライン負荷分散では、通常は現在層のルータが専門家選択を終えてから専門家交換を決めるため、重み移動が推論クリティカルパスに残る。FreeBalanceは残差接続により隣接層の隠れ表現が近いことを利用し、現在層のルータを前層出力へ先行適用して専門家負荷を予測する。予測は配置計画だけに使い、実際のMoE計算は本来のルーティング結果を使うため出力を変えない。注意計算時間から移動予算を計算し、その時間内に隠せる専門家交換だけを決定論的に選ぶ。8台のNVIDIA A800、Qwen3-30B-A3BとMoonlight-16B-A3B、LongBench等で評価し、最大/平均rank負荷比を最大32.8%下げ、プリフィル遅延を平均13.1%削減し、1層あたり平均5.1専門家分の移動費を隠す。",
-    "source":"https://arxiv.org/abs/2608.14205","sources":["https://arxiv.org/abs/2608.14205","https://www.alphaxiv.org/abs/2608.14205"],
-    "authors":["Pengfei Chen","Yize Wu","Shouxu Kuang","Ke Gao","Ling Li"],"authors_affiliations":"論文書誌に基づく著者情報を確認。所属詳細は本文ミラーでは十分確認できないため未記載。",
-    "publication":"arXiv:2608.14205v1","publication_type":"プレプリント","published":"2026-08-14","publication_status":"2026-08-14にarXivへ投稿されたプレプリント。",
-    "topics":["MoE推論","専門家負荷分散","専門家移動","残差表現予測","通信計算重ね合わせ","専門家並列"],
-    "implementation":"前層隠れ状態を既存ルータへ先行入力する予測器、交換候補を評価する決定論的貪欲プランナ、注意計算時間に基づく移動費モデル、非同期専門家重み転送を統合する。追加学習モデルを必要としない。",
-    "lineage":"MoE専門家配置・オンライン負荷分散・通信計算重ね合わせ","importance":"高",
-    "hardware_evaluation":"8×NVIDIA A800-SXM4、NVLink、専門家並列度8で実機評価。",
-    "hardware_details":"Qwen3-30B-A3B-Instruct-2507は128専門家・top-8・rankあたり16専門家・専門家約9MB、Moonlight-16B-A3B-Instructは64専門家・top-6・rankあたり8専門家・専門家約16.5MB。",
-    "quality_effect":"予測ルーティングは配置計画にしか使わず、実計算は本来の現在層ルータ出力を使うため、論文は損失なしの方式としている。",
-    "storage_targets":["GPU HBM上のMoE専門家重み"],"bottlenecks":["専門家rank間負荷偏り","ルーティング後の専門家移動待ち","オンライン再配置の同期費","動的タスクによる静的配置の陳腐化"],
-    "evidence_locations":["Abstract","Residual Workload Prediction","Budgeted Expert-Swap Planning","Expert Migration and Overlapping Execution","Performance and Results"],"last_checked":"2026-09-11","code":"公開コード未確認"
-  }}
+ "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-research-2607.17880-20260911-1030-v10-b1","job_id":"job-research-960d3bc442b0fe00","data":{
+  "canonical_id":"arXiv:2607.17880","arxiv_id":"2607.17880","doi":"10.48550/arXiv.2607.17880","title":"Mixture-of-Experts Serving",
+  "summary":"混合専門家モデル（Mixture of Experts; MoE）で専門家需要が時間変動する状況を、各専門家へ何台の追加GPUを割り当てるかというオンライン資源配置問題として定式化した理論研究。各専門家には最低1台を置き、余剰k台を動的に配る。各時刻の費用を、最も遅い専門家の負荷÷GPU数で表すサービス遅延と、前時刻からGPU割当を動かしたL1距離で表す再構成費の和とする。分数解に対する正則化付き貪欲法と遅延しきい値丸めを組み合わせ、多項式時間でO(√log k)競合比を与える。さらにオンライン双対問題にΩ(√log k)障壁、静的版に2近似、整数性ギャップ2-1/m、NP困難性、指数時間仮説（ETH）下で完全多項式時間近似方式（FPTAS）が存在しないことを示す。",
+  "source":"https://arxiv.org/abs/2607.17880","sources":["https://arxiv.org/abs/2607.17880","https://www.alphaxiv.org/abs/2607.17880"],"authors":["Zhiyi Huang","Qinpei Lou","Tao Xiao"],"authors_affiliations":"一次書誌および公開全文ミラーで著者を確認。",
+  "publication":"arXiv:2607.17880v1","publication_type":"理論プレプリント","published":"2026-07-20","publication_status":"arXivの計算機科学・データ構造とアルゴリズム分野に投稿された理論研究。",
+  "topics":["MoEサービング","専門家複製","動的GPU割当","オンラインアルゴリズム","競合解析","再構成費","近似アルゴリズム"],
+  "implementation":"実システム実装やGPUベンチマークではなく、動的専門家GPU割当を抽象化した数理モデル、オンラインアルゴリズム、丸め法、複雑性・近似保証を提示する。",
+  "lineage":"MoE専門家配置・動的資源割当の理論基盤","importance":"中〜高","hardware_evaluation":"実機評価なし。理論モデルではm専門家、n GPU、各専門家に必須1台、余剰k=n-m台を仮定する。","hardware_details":"GPU処理能力は同質で、専門家iへ1+x_i台を割り当てたとき処理遅延が需要r_i/(1+x_i)に比例する抽象モデル。",
+  "quality_effect":"モデル計算やルーティングの近似を扱わず、資源配置の費用最適化を定式化する理論研究のため生成品質の評価対象ではない。",
+  "storage_targets":["GPU上の専門家重み複製と割当状態"],"bottlenecks":["専門家人気の時間変動","過負荷専門家による同期遅延","GPU再割当・重みロード・キャッシュ再構成費","整数GPU割当"],
+  "evidence_locations":["Problem formulation","Online Resource Allocation Challenge","Regularized Greedy Fractional Allocation","Lazy Threshold Rounding","Theoretical Results and Guarantees","Static Serving and Complexity Analysis"],"last_checked":"2026-09-11","code":"実装コード対象外"
+ }}
