@@ -47,7 +47,8 @@ jobs:
           python .survey/scripts/survey.py --root .survey build
           python .survey/scripts/refresh_frozen_training.py --repo-root . --source metadata-backfill-2026-09-11
           python -m unittest discover -s .survey/tests -p 'test_*.py'
-          python .survey/scripts/check_repository.py
+          python .survey/scripts/build_repository_inventory.py --root . --output /tmp/repo-inventory.json --source-commit metadata-backfill-working-tree
+          python .survey/scripts/check_repository.py --root . --inventory /tmp/repo-inventory.json --report .survey/reports/consistency-latest.json
 
       - name: Commit and push
         shell: bash
