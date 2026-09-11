@@ -2,12 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2407.15309-20260912-0158-v10-a1",
-  "job_id": "job-research-51b3f7936c4527fb",
+  "attempt_id": "attempt-2609.09748-20260912-0211-v10-a1",
+  "job_id": "job-research-ea6f0f5305a34c22",
   "data": {
-    "limitations": "第一に、性能比較はA100世代とvLLM 0.4.2を中心としており、後年のvLLM、FlashInfer、Hopper以降のGPUでページ対応カーネルが改善された場合の差は未評価である。第二に、GPU仮想メモリ管理APIの粒度・遅延・ドライバ特性へ依存し、CPUによる先行割当を常にGPU計算へ隠せるとは限らない。第三に、仮想アドレス予約やページ管理メタデータのため約4.99%の予約オーバーヘッドが残る。第四に、単一サーバ中心の評価で、複数ノード間KV共有やCPU/SSDなどGPU外の多階層メモリ管理までは対象外である。第五に、論文は平均的なスループットとメモリ柔軟性を示すが、大規模オンライン負荷でのテール遅延やVMM操作競合は詳細に評価していない。",
-    "differences": "vLLMのページ化注意はアプリケーション管理のページ表を専用注意カーネルで解釈し、非連続物理KVを読む。vTensorは非連続性をCUDA VMMの仮想アドレス変換へ移し、計算カーネルには連続テンソルを見せる点が根本的に異なる。並行研究vAttentionもCUDA低水準VMMでKVを動的管理するが、vTensor/FlexInferは接頭辞キャッシュ、CPU並行管理、先行拡張、複数の注意カーネルを含むサービング枠組みとして計算柔軟性を強調する。KV圧縮やCPUオフロードと異なりデータ量自体は減らさず、GPU内の論理配置と物理割当を分離するため品質交換条件がない。",
-    "implementation_status": "CUDA低水準VMM API、CPU側C/C++メモリ管理器、FlexInferスケジューラを実装し、A100 80GB実機でvLLM 0.4.2、FlashAttention 2.5.8、SGLang系カーネルと比較している。論文の実験は実装済みシステムに基づくが、arXivのコード・データ欄および本文から公式公開リポジトリURLは確認できない。",
-    "research_positioning": "本論文はKVキャッシュの『内容を減らす』研究ではなく、GPUメモリ仮想化をLLMサービングへ直接適用するメモリ管理基盤研究である。PagedAttentionがLLM特有のページ構造をカーネルへ持ち込んだのに対し、vTensorはOS的な仮想メモリ抽象化へ戻すことで、メモリ断片化対策と計算最適化を別々に進化させられることを示した。この方向は後続の弾力的メモリ管理や複数モデル同居にもつながる。さらにCPU DRAM、CXL、高帯域フラッシュなどを物理バックエンドへ拡張し、仮想テンソルの一部を異種媒体へ写像する多階層化は自然な発展方向だが、下位媒体の転送遅延を仮想化だけでは隠せないため、プリフェッチや配置制御との統合が必要になる。"
+    "limitations": "第一に、評価は単一nodeの8基H100とLLaDA系3モデルに集中し、multi-node環境でexpert-parallel通信が低帯域networkを跨ぐ場合や、別のblock-diffusion architectureでの効果は未検証である。第二に、軽負荷・小batchではBlock Planの作成、mask更新、compact/scatter処理という固定費があり、online 6〜11 req/sではSGLangのP95 ITLがわずかに良い。第三に、既定高速設定は完全な数値等価ではない。Expert Atlasはcoverage目標に基づいてeligible expert集合を絞り、stable decoded位置は最大M_C-1反復だけ古いrouted-expert出力を使うため、decode marginが小さい入力では出力判断を変える可能性がある。第四に、既定M_C=5が品質plateauにあることは実験で示すが、全入力での意味的同一性を証明するものではない。第五に、diffusion block内のlive setが単調縮小するdecode policyを主対象とし、位置が再Mask化されるような別policyではliveness state machineを変更する必要がある。第六に、公式code repositoryはarXiv本文・関連コード欄から確認できず、独立再現性は公開実装の有無に左右される。",
+    "differences": "一般的なvLLMやSGLangは自己回帰decodeを中心にforward単位でschedule・batch・MoE実行を組み立てるのに対し、Epochは拡散block全体を一段上の再利用単位にする。dInferのcacheは位置単位の再利用を提供するが、Epochはexpert support、token liveness、expert-parallel payloadという三軸を同じBlock Planへ統合し、stable decoded tokenをexpert kernelだけでなくdispatch/combineやLM headからも外す点が異なる。またDejaVuなどのcontextual sparsityやMoE router最適化は主に一forward内の条件付き計算を減らすのに対し、Epochは同じblock位置を何度もrefineする時間方向の冗長性を対象にする。Expert Atlasもroute結果自体をcacheせず、candidate expert supportだけを再利用して現在gate logitを毎反復再計算するため、routing prediction方式とは安全境界が異なる。",
+    "implementation_status": "vLLM風fused-MoE runtime上に実動prototypeを実装済みで、block boundary、routing support、sequence-sharded attention layout、compact MoE dispatch/combine、decoded-output cache merge、live-positionのみのLM headを統合している。CUDA 12.4、PyTorch 2.4、NCCL 2.22、Triton 3.0を用い、8基H100で7B〜100Bの3モデルを評価している。論文はEuroSys 2027のconference headerを持つが、2026-09-12時点でarXiv本文やarXivのCode/Data欄から公式repository URLは確認できないため、実装済みだが公開codeは未確認として扱う。",
+    "research_positioning": "この研究はMoE expert placementや単純なkernel最適化というより、拡散LLM特有の反復構造をサービングruntimeの抽象化へ取り込む研究である。特に『block内で安定する構造だけをcompileし、live decode値は毎回更新する』という二時計モデルは、拡散生成に対するcache・通信・schedulingの設計原則として再利用しやすい。リポジトリ内ではMoE parallelism/communication系統に置くのが自然だが、conditional computationとserving schedulingにも跨る。SSDやCPU offloadへ直接つながる方式ではない一方、fresh token–expert worklistが小さくなることで将来expert weightを階層memoryからprefetchする際の転送対象も絞れる可能性がある。またblock単位でexpert supportが安定するなら、GPU常駐expert、CPU/SSD上のexpert、prefetch scheduleをBlock Planへ同時にcompileする拡張が考えられ、expert offloading系統との接点が大きい。"
   }
 }
