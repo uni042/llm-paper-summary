@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.survey/scripts/survey.py'
+      - '.github/workflows/rebuild-paper-indexes.yml'
   workflow_dispatch:
 
 permissions:
@@ -39,14 +40,34 @@ jobs:
 
       - name: Commit derived paper indexes
         run: |
+          set -euo pipefail
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
-          find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
+
+          stage_indexes() {
+            git restore .survey/survey-state/paper-identity-index.json 2>/dev/null || true
+            git add README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
+            find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
+          }
+
+          stage_indexes
           if git diff --cached --quiet; then
             echo 'No index changes to commit.'
             exit 0
           fi
           git commit -m 'docs: rebuild paper indexes'
-          git pull --rebase origin main
+          if git push origin HEAD:main; then
+            exit 0
+          fi
+
+          echo 'main advanced during rebuild; recomputing once from latest HEAD.'
+          git fetch origin main
+          git reset --hard origin/main
+          python .survey/scripts/survey.py --root .survey build
+          stage_indexes
+          if git diff --cached --quiet; then
+            echo 'Latest main already contains equivalent indexes.'
+            exit 0
+          fi
+          git commit -m 'docs: rebuild paper indexes'
           git push origin HEAD:main
