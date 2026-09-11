@@ -7,9 +7,12 @@ on:
       - '.github/workflows/citation-graph-backfill.yml'
       - '.survey/scripts/citation_graph.py'
       - '.survey/scripts/backfill_citations.py'
+      - '.survey/scripts/backfill_citation_pdfs.py'
+      - '.survey/scripts/normalize_paper_metadata.py'
       - '.survey/scripts/render_paper.py'
       - '.survey/scripts/assemble_research_record.py'
       - '.survey/tests/test_citation_graph.py'
+      - '.survey/tests/test_pdf_citation_fallback.py'
       - '.survey/tests/test_render_paper_metadata.py'
   workflow_dispatch:
 
@@ -101,6 +104,8 @@ jobs:
           python -m py_compile \
             .survey/scripts/citation_graph.py \
             .survey/scripts/backfill_citations.py \
+            .survey/scripts/backfill_citation_pdfs.py \
+            .survey/scripts/normalize_paper_metadata.py \
             .survey/scripts/render_paper.py \
             .survey/scripts/assemble_research_record.py \
             .survey/scripts/survey.py
@@ -156,6 +161,15 @@ jobs:
             fi
           done
 
+      - name: Retry blocked references from primary PDFs
+        run: |
+          python .survey/scripts/backfill_citation_pdfs.py \
+            --root . \
+            --limit 50 \
+            --delay 0.75 \
+            --apply \
+            --retry-blocked
+
       - name: Rebuild final graph and indexes
         run: |
           python .survey/scripts/citation_graph.py \
@@ -163,6 +177,26 @@ jobs:
             --graph-report .survey/reports/citation-graph-latest.json \
             --coverage-report .survey/reports/citation-coverage-latest.json
           python .survey/scripts/survey.py --root .survey build
+
+      - name: Normalize nullable metadata defaults
+        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
+
+      - name: Audit citation coverage
+        id: citations
+        shell: bash
+        run: |
+          set +e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('.survey/reports/citation-coverage-latest.json').read_text())
+          incomplete = int(report['summary']['incomplete'])
+          print(f'citation_incomplete={incomplete}')
+          raise SystemExit(0 if incomplete == 0 else 1)
+          PY
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Audit metadata coverage
         id: metadata
@@ -222,10 +256,11 @@ jobs:
       - name: Fail if final validation found issues
         shell: bash
         run: |
+          citation_rc='${{ steps.citations.outputs.exit_code }}'
           metadata_rc='${{ steps.metadata.outputs.exit_code }}'
           tests_rc='${{ steps.tests.outputs.exit_code }}'
           consistency_rc='${{ steps.consistency.outputs.exit_code }}'
-          if [ "$metadata_rc" != '0' ] || [ "$tests_rc" != '0' ] || [ "$consistency_rc" != '0' ]; then
-            echo "Final validation failed: metadata=$metadata_rc tests=$tests_rc consistency=$consistency_rc"
+          if [ "$citation_rc" != '0' ] || [ "$metadata_rc" != '0' ] || [ "$tests_rc" != '0' ] || [ "$consistency_rc" != '0' ]; then
+            echo "Final validation failed: citations=$citation_rc metadata=$metadata_rc tests=$tests_rc consistency=$consistency_rc"
             exit 1
           fi

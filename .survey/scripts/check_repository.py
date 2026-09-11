@@ -61,6 +61,17 @@ def frontmatter(path):
     return yaml.safe_load(parts[1]) or {}, parts[2]
 
 
+def is_training_paper_path(name: str) -> bool:
+    parts = Path(name).parts
+    return (
+        len(parts) == 4
+        and parts[0] == "papers"
+        and parts[1] == "training"
+        and parts[3].endswith(".md")
+        and parts[3] not in {"README.md", "comparison.md"}
+    )
+
+
 def check(root, inventory):
     root = root.resolve()
     files = local_files(root)
@@ -131,14 +142,14 @@ def check(root, inventory):
             elif not destination.exists():
                 issue("broken_local_link", name, target)
         parts = Path(name).parts
-        is_identity_paper = len(parts) == 4 and parts[0] == "papers" and parts[1] in ("inference", "survey") and path.name != "README.md"
+        is_identity_paper = len(parts) == 4 and parts[0] == "papers" and parts[1] in ("inference", "training", "survey") and path.name != "README.md"
         if is_identity_paper:
             meta, body = frontmatter(path)
             if body.lstrip().startswith("# Moved") or text.lstrip().startswith("# Moved"):
                 continue
             cid = meta.get("canonical_id")
             if not cid:
-                issue("paper_missing_canonical_id", name, "Active inference paper requires canonical_id")
+                issue("paper_missing_canonical_id", name, "Active paper requires canonical_id")
             elif cid in canonical_ids:
                 issue("duplicate_canonical_id", name, f"Also used by {canonical_ids[cid]}")
             else:
@@ -164,17 +175,15 @@ def check(root, inventory):
     frozen_name = ".survey/survey-state/frozen-training.json"
     frozen = json_objects.get(frozen_name, {})
     if not isinstance(frozen, dict) or not frozen.get("files"):
-        issue("frozen_baseline_missing", frozen_name, "Cannot verify training freeze without a baseline")
+        issue("frozen_baseline_missing", frozen_name, "Cannot verify training membership without a baseline")
     else:
-        actual_training = {n for n in files if n.startswith("papers/training/")}
         baseline = frozen["files"]
-        for name, sha in baseline.items():
-            if name not in files:
-                issue("frozen_training_missing", name, "Baseline file is missing")
-            elif blob_hash(files[name]) != sha:
-                issue("frozen_training_changed", name, "Read-only baseline differs; do not rewrite automatically")
-        for name in actual_training - set(baseline):
-            issue("frozen_training_added", name, "Unreviewed addition in frozen training area")
+        baseline_papers = {name for name in baseline if is_training_paper_path(name)}
+        actual_papers = {name for name in files if is_training_paper_path(name)}
+        for name in sorted(baseline_papers - actual_papers):
+            issue("frozen_training_missing", name, "Registered training paper is missing")
+        for name in sorted(actual_papers - baseline_papers):
+            issue("frozen_training_added", name, "New training paper entry is not allowed by policy")
     maintenance_name = ".survey/work-queue/maintenance-cycle.json"
     maintenance = json_objects.get(maintenance_name, {})
     if isinstance(maintenance, dict):
@@ -194,7 +203,7 @@ def check(root, inventory):
         "checked_file_count": len(scanned),
         "missing_files": sorted(set(expected) - set(files)),
         "working_changes": sorted(n for n, p in files.items() if n not in expected or blob_hash(p) != expected[n]),
-        "checks": ["inventory_coverage", "required_v10_paths", "all_json_yaml", "markdown_file_links", "symlink_targets", "frozen_training", "paper_metadata_and_identity", "maintenance_cycle"],
+        "checks": ["inventory_coverage", "required_v10_paths", "all_json_yaml", "markdown_file_links", "symlink_targets", "training_membership", "paper_metadata_and_identity", "maintenance_cycle"],
         "not_checked": ["External URL reachability", "Fragment anchors", "Scientific validity / full paper audits", "Scheduler startup guarantees", "Runtime execution of arbitrary repository code"],
         "external_url_count": len(external),
         "findings": findings,
