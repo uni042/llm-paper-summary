@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-d1dc1bd9be58c058",
+  "type": "research",
+  "parent_job_id": "job-8a72402a8d65d7b0",
+  "priority": 84,
+  "canonical_id": "arXiv:2602.09725",
+  "title": "Efficient Remote Prefix Fetching with GPU-native Media ASICs",
+  "source_url": "https://arxiv.org/abs/2602.09725",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
+  "selection_reason": "遠隔ストレージから接頭辞KVキャッシュを再利用する際のネットワーク帯域不足に対し、GPU内蔵映像コーデックをKV圧縮・復号へ転用するKVFetcherを提案。コーデック向けテンソル配置、転送・復号・復元のパイプライン、資源競合を避けるフェッチ制御を組み合わせ、複数GPU実機で既存方式比最大3.51倍のTTFT短縮を報告する。KV階層の『圧縮して運ぶ』経路とGPU上の専用ASIC活用という隣接設計として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T02:14:43+00:00",
+  "artifact_transport": "structured_record_v10"
+}
