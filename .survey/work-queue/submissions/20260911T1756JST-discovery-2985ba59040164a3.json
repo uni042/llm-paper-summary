@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2985ba59040164a3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.24787",
+      "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models",
+      "source_url": "https://arxiv.org/abs/2607.24787",
+      "paper_path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching.md",
+      "priority": 90,
+      "reason": "メモリ制約下のMoE推論で、既存routerの意味論を変えずに軽量adapterで次層expert候補だけを予測し、転送と実行を非同期化する。予測誤りが出力品質ではなく転送効率にだけ影響する設計が、精度を変えるpre-gating系と明確に異なる。Snapdragon 8 Elite上でcompute最適化済みoffload runtime比最大20%のdecode throughput向上を報告し、storage-constrained MoEでの実運用性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.10493",
+      "title": "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+      "source_url": "https://arxiv.org/abs/2606.10493",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2606.10493-cloud-grade-local-moe-cpu-gpu-hybrid.md",
+      "priority": 88,
+      "reason": "consumer GPUとdual-socket CPUでDeepSeek-V3級MoEを原精度のまま扱うCPU-GPU協調system。stream-loading prefill、prefill/decode分離、zero-copy shared weights、attention-MoE overlap、AVX-512 FP8 GEMVを統合し、2x RTX 5090で長文prefill 1,800 tokens/s、INT4 V3 decode 28 tokens/s、FP8 V3 21.5 tokens/sを報告する。ローカルMoE inferenceのoffload・CPU協調実装として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2511.00321",
+      "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+      "source_url": "https://arxiv.org/abs/2511.00321",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2511.00321-cxl-pnm-million-token-kv-cache.md",
+      "priority": 86,
+      "reason": "1M-token級KV cacheをCXL memoryへ置くだけでなく、token page selection自体をCXL側PNMへ移してGPUへの再搬送を減らす。PNM単独とGPU-PNM協調、steady-token selectionを組み合わせ、405B級までで最大21.9倍throughput、60倍energy/token改善、7.3倍TCO効率を報告する。CXLを単なる容量拡張でなく計算階層として使う点が既存KV offloadと差別化される。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25699",
+      "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.25699",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md",
+      "priority": 84,
+      "reason": "FFN計算を3D NAND内のcompute pipelineへ押し込み、attentionは軽量CMOS logicとDRAMで処理するFlash中心の推論architecture。raw NAND readとECCを計算pathへ統合し、30B級まででA800 out-of-core比16.7–37.9倍、SSD-like design比最大4.7倍を報告する。SSDをI/O階層として使う研究よりさらに踏み込み、NAND内計算まで含むためストレージ活用研究の隣接系統として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2509.03377-cxl-ndp-transparent-near-data-processing.md",
+      "priority": 82,
+      "reason": "CXL.mem interfaceやmodel変更を要求せず、CXL device側でprecision-scalable bit-plane配置、動的量子化、weight/KVの可逆圧縮を行い実効帯域を増やすnear-data processing設計。end-to-end servingでthroughput 43%向上、最大context長87%増加、KV footprint 46.9%削減を報告する。CXL容量拡張の帯域壁をdevice側処理で緩和するため、階層memory研究の比較軸を補完する。"
+    }
+  ]
+}
