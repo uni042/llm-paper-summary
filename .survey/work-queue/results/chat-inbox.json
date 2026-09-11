@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-cad6ce7f6124874f",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2607.01831.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-f92bffd9f3f568d8",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 54.5% < 70% (Japanese=4276, Latin=3565)",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T10:15:27+00:00"
 }
