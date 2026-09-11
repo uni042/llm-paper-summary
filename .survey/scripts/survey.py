@@ -17,6 +17,8 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
+from list_summary import compact_list_summary
+
 # ROOT is the .survey working root in production. Tests may point it at a
 # temporary repository root directly. Keep state beneath ROOT, but resolve
 # repository artifacts (papers/ and top-level READMEs) from repository_root().
@@ -261,7 +263,7 @@ def paper_views():
                 "path": rel,
                 "file": p,
                 "title": meta.get("title") or _legacy_title(body, p),
-                "summary": meta.get("summary") or _legacy_summary(body),
+                "summary": compact_list_summary(body, meta.get("summary") or _legacy_summary(body)),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),

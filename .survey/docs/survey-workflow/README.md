@@ -17,6 +17,10 @@ Google Drive、Notion、旧 `/LLM-survey-fallback/` はこのworkflowの保存�
 
 structured recordは最終Markdownへ変換される本文原稿であり、rendererが内容を補う前提で短縮しない。完成扱いの直前にActionsと同じvalidator基準でpreflightする。
 
+論文一覧の「一文要約」は本文とは別の派生表示とし、単体ページの `## 概要`、なければH1直後の概要引用を優先して45〜180文字へ圧縮する。本文と同じ日本語優先規則を適用し、日本語比率70%未満、日本語化できる英語専門語の裸書き、改行・URL・Markdown断片を品質監査で検出する。
+
+既存論文の一覧文を直すだけなら原論文の再精読は不要で、単体ページに既にある概要を縮めて生成する。Inference / Training / Surveyを同じ規則で扱い、Trainingは新規追加停止の方針だけを維持する。
+
 ## v10 structured transport
 
 research / auditでは完成MarkdownをChatから送らない。固定record bankの5 JSON slotへ構造化recordを書き、Actions側で最終Markdownを生成する。
