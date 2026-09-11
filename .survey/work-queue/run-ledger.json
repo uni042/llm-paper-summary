@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T10:11:48.031133+00:00",
+  "updated_at": "2026-09-11T10:18:39.232351+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,19 +6314,19 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T10:11:48.031133+00:00",
+      "last_recorded_at": "2026-09-11T10:18:39.232351+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 6,
+        "research_completed": 7,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 7,
-        "new_papers": 5,
+        "new_jobs": 8,
+        "new_papers": 6,
         "fallback_archived": 0
       },
       "events": [
@@ -6476,6 +6476,22 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34588504448:1",
+          "recorded_at": "2026-09-11T10:18:39.232351+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34588504448",
+            "run_attempt": "1",
+            "source_sha": "a70b34f7f751aa7b8c36b25620106d6e4b78aa49"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6558,6 +6574,14 @@
           "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-f92bffd9f3f568d8",
+          "type": "research",
+          "canonical_id": "arXiv:2607.04206",
+          "title": "Sangam: Efficiently Serving Diffusion LLMs with the AR Stack",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6609,6 +6633,13 @@
           "type": "research",
           "canonical_id": "arXiv:2607.04206",
           "title": "Sangam: Efficiently Serving Diffusion LLMs with the AR Stack"
+        },
+        {
+          "job_id": "job-f3a30776d31345b4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -6616,7 +6647,8 @@
         "arXiv:2509.26182",
         "arXiv:2410.03065",
         "arXiv:2606.03770",
-        "arXiv:2607.01831"
+        "arXiv:2607.01831",
+        "arXiv:2607.04206"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
@@ -6626,7 +6658,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
-      "paper_active_count_after": 311,
+      "paper_active_count_after": 312,
       "last_successful_action": "paper_materialized"
     }
   ]
