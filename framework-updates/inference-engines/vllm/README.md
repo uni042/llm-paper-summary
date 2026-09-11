@@ -30,6 +30,12 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-12
+
+- **Kimi K3向けFP8 MLA cache挿入をgroup化 — merged 2026-09-11 UTC**: 5 layer分を個別kernelで書き込む経路を1 grouped kernelへ統合。1〜512 tokenの小batchでは概ね **5〜7倍**、2048 tokenでも **4.12倍**のkernel-level speedupを確認し、8192 token以上ではほぼ同等。[PR #55356](https://github.com/vllm-project/vllm/pull/55356)
+
+- **DeepSeek-V4系sparse indexerの不要なTriton再コンパイルを削減 — merged 2026-09-11 UTC**: `NUM_TOKENS`、`NUM_BATCHES`等のruntime shape値を`tl.constexpr`から外し、sequence lengthやbatchごとにcompile cache keyが分裂する問題を解消。特にcold cacheのlocal inferenceでpromptごとに数秒単位のJIT待ちが発生し得る経路を改善。[PR #56153](https://github.com/vllm-project/vllm/pull/56153)
+
 ## 2026-09-11
 
 - **ROCm共有expertの複数stream重ね合わせ範囲を拡大 — merged 2026-09-10 UTC**: Qwen3.5-35B-A3Bのgfx950・TP8/DP1・同時実行64で出力throughput **4,566→5,967 tok/s（+30.7%）**、DeepSeek-V4-Proでは **2,010→2,374 tok/s（+18.1%）**。共有expert計算を別streamへ重ねる条件を拡張し、skinny GEMMの並行実行安全性も修正。[PR #56098](https://github.com/vllm-project/vllm/pull/56098)

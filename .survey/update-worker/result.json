@@ -1,20 +1,22 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20260911-0830",
+  "attempt_id": "update-20260912-0830",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
     "framework-updates/inference-engines/vllm/README.md",
-    "llm-releases/README.md",
-    "llm-releases/deepseek.md"
+    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "llm-releases/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
     "framework-updates/README.md",
     "framework-updates/inference-engines/vllm/README.md",
-    "llm-releases/README.md",
-    "llm-releases/deepseek.md"
+    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "llm-releases/README.md"
   ],
-  "summary": "2026-09-11確認: vLLMのROCm shared-expert multi-stream高速化とMoE CUTLASS workspace大幅削減を追加。新規LLMとしてDeepSeek-V4.1-Flash（552B MoE、8B/16B active、KV cache HBM 1/4・SSD 1/8）を追加。"
+  "summary": "2026-09-12確認: vLLMのKimi K3 FP8 MLA cache grouped kernelとDeepSeek-V4 sparse indexer JIT抑制、SGLangのDeepSeek-V4.1 DSpark verify fusion（+12.15%）、llama.cppのROCm長context Flash Attention改善を追加。9月11日以降の新規汎用LLM正式公開は確認されず。"
 }

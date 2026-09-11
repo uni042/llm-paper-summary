@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-11**
+- フレームワーク差分の最終確認: **2026-09-12**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-11の差分確認では、公式リリースと開発元リポジトリを基準に9月10日以降の主要な性能・メモリ使用量・MoE実行関連変更を再確認した。
+この2つは分けて扱う。2026-09-12の差分確認では、公式リリースと開発元リポジトリを基準に9月11日以降の主要な性能・長文処理・投機的デコード関連変更を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,42 @@
 ---
 
 ## 最新更新
+
+### 2026-09-12
+
+#### vLLM
+
+- **Kimi K3向けFP8 MLA cache挿入を5 layerまとめて1 kernelへ統合 — merged 2026-09-12 JST**
+
+  layerごとに起動していたMLA cache挿入をgrouped kernelへまとめ、小batchでkernel-level **約4〜6倍**、1〜512 tokenでは多くの条件で5〜7倍程度の短縮を確認。launch overheadの比率が高いdecode / small-batch経路を直接削る更新。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/55356
+
+- **DeepSeek-V4系sparse indexerのshapeごとのTriton再コンパイルを抑制 — merged 2026-09-12 JST**
+
+  token数やbatch数など実行時に頻繁に変わる値を`tl.constexpr`から外し、compile cache keyの不要な細分化を解消。新しいpromptやsequence lengthごとにkernelを再JITしやすかった経路を修正し、cold-cache時の数秒規模のTTFT悪化要因を除く。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/56153
+
+#### SGLang
+
+- **DeepSeek-V4.1 DSpark verifyの圧縮・indexer・projectionを融合 — merged 2026-09-11 JST**
+
+  target verify周辺の短いkernel列をfusionし、4×GB300・TP4/EP4・BS1・4096入力/1024出力の測定でstreamed decode throughputが **761.03→853.49 tok/s（+12.15%）**。1 target/draft cycleあたりのkernel数も削減した。
+
+  一次資料: https://github.com/sgl-project/sglang/pull/39068
+
+#### llama.cpp
+
+- **ROCm gfx1201向けFlash Attentionを長contextで再調整 — merged 2026-09-11 JST**
+
+  Qwen3.8 27B / Radeon AI PRO R9700で長context時のFlash Attention kernel選択を調整。150k-token付近の512-token prefillは **164.42→399.01 tok/s（約2.43倍）**、40k-token付近では **426.36→639.46 tok/s（約1.50倍）**。
+
+  一次資料: https://github.com/ggml-org/llama.cpp/pull/28102
+
+#### 新規LLM
+
+- 2026-09-11以降に主要提供元から追加すべき新規の汎用LLM正式公開は確認できず。直近の追加は2026-09-10公開のDeepSeek-V4.1-Flash。
 
 ### 2026-09-11
 
