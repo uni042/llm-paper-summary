@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f3a30776d31345b4",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-transfer.md",
+      "priority": 91,
+      "reason": "プリフィル・デコード分離環境で巨大なKVキャッシュ全量転送が自己運用クラウドの限定帯域を飽和させる問題に対し、重要KVだけをプリフィル時に先行転送し、生成時には遠隔・ローカルKVを並列取得しつつ、残りを投機的に後送する三経路の選択転送を提案する。典型的な全量KV転送に対して第2トークンまでの時間を最大4.3倍短縮し、その後の生成性能と精度を保つと報告する。Lynxの精度bit分割とは異なり、KVエントリ選択そのものをネットワーク転送へ反映するため、分離サービング・KV転送系統の有力候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2604.18788",
+      "title": "Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs",
+      "source_url": "https://arxiv.org/abs/2604.18788",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2604.18788-npumoe-apple-silicon-npu.md",
+      "priority": 84,
+      "reason": "Apple SiliconのNPUでMoE推論を行う際、動的な専門家ルーティング、形状制約、top-kやscatter/gatherなど不規則演算、多数の小カーネル起動がNPUに不向きという問題を、専門家容量の静的階層化、専門家のまとめ実行、負荷対応の計算グラフ常駐で解く。3種類のMoEモデルと長文ワークロードで遅延1.32〜5.55倍、エネルギー効率1.81〜7.37倍、CPU cycle 1.78〜5.54倍の改善を報告し、GPU/CPUだけでなくNPUを専門家実行階層へ加える研究として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.10539",
+      "title": "IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs",
+      "source_url": "https://arxiv.org/abs/2604.10539",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.10539-icecache-semantic-kv-offload.md",
+      "priority": 80,
+      "reason": "長文推論でGPU上に残すKVを単純な位置・注意重みだけで選ぶと意味的に重要なトークンを落とし、長い推論過程で精度が悪化する問題に対し、意味的トークンクラスタリングとPagedAttentionを組み合わせて関連トークンを連続領域へ配置し、階層的かつ動的に更新する構造でCPU-GPU転送を効率化する。LongBenchでは256トークン予算で完全KVの99%精度を維持し、他の退避方式に対して25%のKVトークン予算でも競争力ある遅延・精度を示す。CPU退避とKV選択・メモリ配置の共同設計として補完性がある。"
+    }
+  ]
+}
