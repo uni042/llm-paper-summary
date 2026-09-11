@@ -188,6 +188,38 @@ jobs:
           python .survey/scripts/normalize_v10_jobs.py --root .survey
           python .survey/scripts/queue_worker.py --root .survey
 
+      - name: Refresh citation graph when paper content changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- papers)" ]; then
+            echo 'No paper changes in this worker run; citation refresh skipped.'
+            exit 0
+          fi
+
+          echo 'Paper content changed; refreshing structured references and citation-derived indexes.'
+          python .survey/scripts/backfill_citations.py \
+            --root . \
+            --limit 50 \
+            --delay 0.25 \
+            --apply \
+            --retry-blocked
+          python .survey/scripts/backfill_citation_pdfs.py \
+            --root . \
+            --limit 50 \
+            --delay 0.25 \
+            --apply \
+            --retry-blocked
+          python .survey/scripts/recover_blocked_citations.py \
+            --root . \
+            --limit 50 \
+            --apply
+          python .survey/scripts/citation_graph.py \
+            --root . \
+            --graph-report .survey/reports/citation-graph-latest.json \
+            --coverage-report .survey/reports/citation-coverage-latest.json
+          python .survey/scripts/survey.py --root .survey build
+
       - name: Record meaningful worker changes in run ledger
         run: |
           python .survey/scripts/record_run_ledger.py record \
