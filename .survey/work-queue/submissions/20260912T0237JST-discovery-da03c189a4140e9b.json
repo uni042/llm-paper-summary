@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-da03c189a4140e9b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.26475",
+      "title": "DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch",
+      "source_url": "https://arxiv.org/abs/2607.26475",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.26475-dualdecoder-predictive-kv-prefetch.md",
+      "priority": 92,
+      "reason": "CPUメモリへ大半のKVを退避する疎KV方式では、必要KVを選ぶための補助状態がGPUメモリを圧迫し、高同時実行時の新たなボトルネックになる。DualDecoderは直前の投機トークンから次トークンで重要になるKVを予測し、二重トークン復号、層別転送計画、層単位バッファ管理によりCPUからのKV先読みを計算と重ねる。既存方式よりデコードスループットを最大2.62倍にし、遅延とモデル品質を維持するため、CPU-GPU階層KVと予測先読みの重要候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2608.10362",
+      "title": "MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2608.10362",
+      "paper_path": "papers/inference/09-speculative-decoding/2026-2608.10362-memspec-memory-aware-adaptive-draft-runtime.md",
+      "priority": 82,
+      "reason": "複数のdraftモデルを入力や生成段階に応じて切り替える適応投機復号は、メモリ制約の強いedgeではdraft切替時のモデル読み込みが利益を相殺する。MemSpecはdraftの有効性予測とresident working set管理を分離し、次に使うdraftを先回りして常駐させるメモリ考慮runtimeを導入する。Jetson Orin Nanoでbandit系適応方式より平均40.7%高い定常生成スループットを達成し、edge階層メモリと投機復号の接点として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2506.11309",
+      "title": "SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2506.11309",
+      "paper_path": "papers/inference/09-speculative-decoding/2025-2506.11309-swiftspec-asynchronous-disaggregated-speculative-decoding.md",
+      "priority": 80,
+      "reason": "draft生成とtarget検証を非同期・分離構成に再設計し、各段階を独立に拡張することで小バッチのテンソル並列と投機復号を両立する。並列木生成、木構造対応KV管理、遅延最適化融合カーネルを組み合わせ、5モデル系列・6データセットで既存投機復号方式より平均1.75倍高速化し、8基HopperでLlama3-70Bを348 token/sで処理する。低遅延単一要求向け投機復号システムの重要な欠落候補である。"
+    }
+  ]
+}
