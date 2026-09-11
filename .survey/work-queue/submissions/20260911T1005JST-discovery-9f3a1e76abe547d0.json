@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9f3a1e76abe547d0",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.26074",
+      "title": "DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.26074",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.26074-dak-direct-access-gpu-memory-offloading.md",
+      "priority": 90,
+      "reason": "従来の階層メモリ推論が外部メモリからHBMへ先読みしてから計算するのに対し、Tensor Memory Acceleratorを転用して重みやKVキャッシュを遠隔メモリから共有メモリへ直接取り込み、HBM容量・帯域競合と先読み気泡を避ける。演算ごとの最適オフロード率、輻輳制御、マルチキャストを組み合わせ、NVLink-C2Cで最大3倍、PCIeで最大1.8倍を報告する。SSD/CXLを含む階層をより直接利用する将来設計にも強く関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.28095",
+      "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.28095",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
+      "priority": 84,
+      "reason": "オフライン推論向けに、データ並列の独立性を維持しつつモデル重みを各GPUへ完全複製しない方式。層重みをGPU群の分散プールとして持ち、大バッチ時は遠隔重みをNVLink経由で小型キャッシュへ流すWeight-as-a-Service、小バッチ末尾では活性値を重み所有GPUへ送るCompute-as-a-Serviceを切り替える。H20/H200/B200で利用可能KV容量最大1.8倍、エンドツーエンドスループット最大1.5倍を報告し、DWDPと比較できる重み共有型データ並列の別設計である。"
+    },
+    {
+      "canonical_id": "arXiv:2603.28239",
+      "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+      "source_url": "https://arxiv.org/abs/2603.28239",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+      "priority": 78,
+      "reason": "NVLink Sharp型のスイッチ内集約をさらに進め、スイッチ側からメモリ意味操作を開始できる構成と通信路内8ビット量子化を提案する。複数FPGA試作でAll-Reduceを小メッセージ最大8.7倍、大メッセージ最大3.8倍高速化し、LLaMA-2で先頭トークン時間最大1.74倍、トークン間時間最大1.34倍改善。GPU間通信をホスト・GPU中心ではなくファブリック側へ移す系統として収録価値がある。"
+    }
+  ]
+}
