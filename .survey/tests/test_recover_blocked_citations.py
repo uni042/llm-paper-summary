@@ -20,6 +20,11 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         self.assertIn("AAAI:39454", recovery.PRIMARY_PDF_OVERRIDES)
         self.assertIn("AAAI:39106", recovery.PRIMARY_PDF_OVERRIDES)
 
+    def test_twinpilots_has_author_hosted_primary_pdf_fallback(self) -> None:
+        urls = recovery.primary_pdf_urls("DOI:10.1145/3688351.3689164")
+        self.assertEqual(urls[0], "https://dl.acm.org/doi/pdf/10.1145/3688351.3689164")
+        self.assertIn("https://jiangs.utasites.cloud/pubs/papers/Yu24-TwinPilots.pdf", urls)
+
     def test_bibtex_blocks_keep_complete_entries(self) -> None:
         text = """
 @article{first,
