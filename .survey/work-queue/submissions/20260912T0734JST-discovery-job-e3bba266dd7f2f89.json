@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e3bba266dd7f2f89",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen.md",
+      "priority": 92,
+      "reason": "prefill/decode分離型LLMサービングで、帯域の細いクラウド環境では巨大KVキャッシュの全量転送が律速になる問題に対し、重要KVだけを選択して転送するengineを提案する。profile-based proactive transfer、decode時のparallel on-demand transfer、最終的なspeculative transferの3経路を組み合わせ、完全転送方式よりtime-to-second-tokenを最大4.3倍改善しつつ、その後のdecode性能と精度を維持すると報告している。P/D分離とKV移送の交点で明確なシステム新規性がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.27187-photonic-cxl-memory-appliance.md",
+      "priority": 85,
+      "reason": "長文脈LLM推論のKVキャッシュ容量不足に対し、電気CXL switchではなくphotonic fabricを使った32TB共有メモリ装置を16 host間で構成するハードウェア/システム提案。電気CXL pool比で50%以上のlatency削減、multi-turn workloadでcache eviction cliffを避けTTFTを6.6倍改善するsimulation結果を報告している。SSD/DRAM/CXLを含む階層メモリ研究に対し、CXL pool自体のネットワーク構成を変える点が差別化される。"
+    },
+    {
+      "canonical_id": "arXiv:2608.03036",
+      "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs",
+      "source_url": "https://arxiv.org/abs/2608.03036",
+      "paper_path": "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md",
+      "priority": 76,
+      "reason": "vLLM、SGLang、TensorRT-LLM、LMDeploy、FlashInferの実利用状況とserving手法の採用を大規模open-source repositoryから実証的に整理する研究。個別最適化手法の新規提案ではなく、framework adoption、複数framework併用、model familyやdeployment settingによる違いを体系化しており、収録済みシステム研究を実利用側から俯瞰するsurvey/empirical studyとして補完価値がある。"
+    }
+  ]
+}
