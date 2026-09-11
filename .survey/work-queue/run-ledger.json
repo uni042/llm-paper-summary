@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T22:43:20.951746+00:00",
+  "updated_at": "2026-09-11T22:45:13.954637+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -7768,7 +7768,7 @@
     {
       "run_key": "2026-09-12T07:30:00+09:00",
       "first_recorded_at": "2026-09-11T22:31:50.300157+00:00",
-      "last_recorded_at": "2026-09-11T22:43:20.951746+00:00",
+      "last_recorded_at": "2026-09-11T22:45:13.954637+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -7777,9 +7777,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -7855,6 +7855,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34655297853:1",
+          "recorded_at": "2026-09-11T22:45:13.954637+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34655297853",
+            "run_attempt": "1",
+            "source_sha": "ce91b934db70f7571174737a1d903852273fb0ee"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7897,6 +7911,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-896e21ff5f94cb6c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -7934,6 +7956,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-77e21695be29ff3e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.22932",
+          "title": "AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge"
         }
       ],
       "new_paper_ids": [
@@ -7943,7 +7972,8 @@
         ".survey/work-queue/results/20260912T0730JST-discovery-job-6dc13d71f1f5bd2b.json",
         ".survey/work-queue/results/20260912T0732JST-discovery-job-27185df551e42273.json",
         ".survey/work-queue/results/20260912T0734JST-discovery-job-e3bba266dd7f2f89.json",
-        ".survey/work-queue/results/20260912T0744JST-discovery-job-46cbb110ea4d042f.json"
+        ".survey/work-queue/results/20260912T0744JST-discovery-job-46cbb110ea4d042f.json",
+        ".survey/work-queue/results/20260912T0748JST-discovery-job-896e21ff5f94cb6c.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 321,
