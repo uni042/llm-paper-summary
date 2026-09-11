@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:12:36.601973+00:00",
+  "updated_at": "2026-09-11T02:13:27.571634+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,18 +3310,19 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T02:12:36.601973+00:00",
+      "last_recorded_at": "2026-09-11T02:13:27.571634+00:00",
       "signals": [
         "research_completed",
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "paper_materialized"
       ],
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 12,
-        "new_papers": 0,
+        "new_jobs": 14,
+        "new_papers": 8,
         "fallback_archived": 0
       },
       "events": [
@@ -3497,6 +3498,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34553758066:1",
+          "recorded_at": "2026-09-11T02:13:27.571634+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34553758066",
+            "run_attempt": "1",
+            "source_sha": "250cac91d51c5ac15a258e302c459db5fca2e645"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3595,6 +3611,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-27f2c95070471aa1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3681,21 +3705,45 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-8a72402a8d65d7b0",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-05eb48869fa6e2c2",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2608.12103",
+          "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference"
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2601.03992",
+        "arXiv:2602.21626",
+        "arXiv:2603.28239",
+        "arXiv:2604.26074",
+        "arXiv:2605.28095",
+        "arXiv:2606.15177",
+        "arXiv:2607.17880",
+        "arXiv:2608.14205"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1032JST-discovery-394e9e8c39c0dac6.json",
         ".survey/work-queue/results/20260911T1040JST-discovery-0e78629b096238d9.json",
         ".survey/work-queue/results/20260911T1101JST-discovery-51de467467408979.json",
         ".survey/work-queue/results/20260911T1103JST-discovery-75f1caf8613a10d5.json",
         ".survey/work-queue/results/20260911T1108JST-discovery-cf8b0e58e9d070d5.json",
-        ".survey/work-queue/results/20260911T1113JST-discovery-d7077ea85e263fb4.json"
+        ".survey/work-queue/results/20260911T1113JST-discovery-d7077ea85e263fb4.json",
+        ".survey/work-queue/results/20260911T1115JST-discovery-27f2c95070471aa1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 244,
-      "paper_active_count_after": 244,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 252,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
