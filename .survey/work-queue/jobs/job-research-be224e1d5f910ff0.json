@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2608.13499",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13499-opscale-operator-level-autoscaling.md",
   "selection_reason": "モデル全体ではなく演算子単位を伸縮単位にするLLM配信基盤。演算子別の性能・メモリ・通信特性を計測し、供給量、配置、実行時切替を連携させて短時間の負荷変動へ追従する。最大40基のA100と24基のGB200、実運用トレースで、同じサービス品質目標を満たしつつ最大36.3%少ないGPU、最大28%少ない電力、固定費用では最大44%高いスループットを報告しており、細粒度資源管理の新しい設計点として強い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T17:33:28+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T17:37:58+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
