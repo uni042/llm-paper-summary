@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-09-11T08:29:27+00:00",
+  "checked_at": "2026-09-11T08:29:59+00:00",
   "summary": {
     "total": 308,
-    "complete": 192,
-    "incomplete": 116
+    "complete": 215,
+    "incomplete": 93
   },
   "families": {
     "inference": {
       "total": 285,
-      "complete": 192
+      "complete": 215
     },
     "training": {
       "total": 19,
@@ -63,128 +63,13 @@
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
-      "canonical_id": "arXiv:2608.08097",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.14624-cachescout.md",
-      "canonical_id": "arXiv:2608.14624",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23658-elastic-kv-cache.md",
-      "canonical_id": "arXiv:2608.23658",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23834-minima-kv-mixed-format-paged-attention.md",
-      "canonical_id": "arXiv:2608.23834",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.00891-cachebridge.md",
-      "canonical_id": "arXiv:2609.00891",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md",
-      "canonical_id": "arXiv:2609.04852",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md",
       "canonical_id": "USENIX:OSDI26:luo",
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md",
-      "canonical_id": "arXiv:2505.02922",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
       "canonical_id": "DOI:10.5555/3600237.3600268",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
-      "canonical_id": "arXiv:2302.11665",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
-      "canonical_id": "arXiv:2305.05920",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
-      "canonical_id": "DOI:10.1145/3600006.3613165",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
-      "canonical_id": "arXiv:2311.15566",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
-      "canonical_id": "arXiv:2311.18677",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
-      "canonical_id": "arXiv:2312.05516",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
-      "canonical_id": "arXiv:2312.07104",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
-      "canonical_id": "arXiv:2401.00588",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
-      "canonical_id": "arXiv:2401.08671",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
-      "canonical_id": "arXiv:2401.09670",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
-      "canonical_id": "arXiv:2401.14351",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
-      "canonical_id": "arXiv:2402.01869",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
-      "canonical_id": "arXiv:2403.02310",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
-      "canonical_id": "arXiv:2403.19708",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
-      "canonical_id": "arXiv:2404.16283",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
-      "canonical_id": "arXiv:2405.19888",
       "reason": "missing structured reference audit metadata"
     },
     {
