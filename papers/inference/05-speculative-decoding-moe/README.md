@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（16本）
+## 自動生成の論文一覧（17本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -14,6 +14,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
+| 2026-09 | [Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding](2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md) | [✓](https://github.com/LeanModels/Osprey) | 0 | Ospreyは、投機的デコードのドラフトモデルが特定ターゲットと狭い学習分布へ過度に結び付くことで、分野や言語が変わると受理長が低下する問題を、再利用可能な事前学習済み小型言語モデルの知識で緩和する手法である。Qwen3-4Bなどを数層だけ残して枝刈りし、汎用ウェブ文書で次トークン予測を継続学習した浅い骨格を一度作る。その後、ターゲットごとに語彙を整合し、ゼロ初期化したQKV拡張からターゲット活性値を受け取り、EAGLE-3型の多段蒸留で適応する。同一骨格をQwen3-8B、Llama-3.3-70B-Instruct、MiniMax-M2.5へ転用し、EAGLE-3に対して平均受理長を16.1%、21.2%、22.7%改善し、MiniMax-M2.5ではスループットも17.5%向上した。 |
 | 2026-08 | [Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models](2026-2609.00355-glance-vlm-speculative-decoding.md) | [✓](https://github.com/js-lee-AI/GLANCE。実運用比較はSGLang) | 0 | GLANCEはfrozen VLM targetの融合済みvision-language stateからfuture token blockを1 passでdraftし、wide treeを1 target passで検証するlossless speculative decoder。grounded taskでautoregressive比最大2.93x。free-running textではchain drafterが優位となる境界も示す。 |
 | 2026-08 | [AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding](2026-2608.02989-acceptmoe-commitment-weighted-self-sizing-verifier-expert-sets-for-efficient-moe.md) | ✓ | 0 | draft枝がtargetに受理される見込みとrouter上のexpert寄与を合わせて、verificationで実行するexpert数をlayerごとに減らし、offload時のHost→GPU転送を削る近似手法。 |
 | 2026-07 | [Less Experts, Faster Decoding: Cost-Aware Speculative Decoding for Mixture-of-Experts](2026-2607.12696-less-experts-faster-decoding-cost-aware-speculative-decoding-for-mixture-of-expe.md) | ✓ | 1 | draft nodeごとに受理される見込みと新しく必要になるexpert数を比較し、すでに使う予定のexpertを再利用しやすい枝を優先してMoE検証のHBM readを減らす手法。 |
@@ -30,10 +31,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2024-01 | [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md) | [✓](https://github.com/FasterDecoding/Medusa) | 22 | 別のdraft LLMを常駐させず、target LLMの最後のhidden stateへ複数の軽量decoding headを追加して1〜数token先の候補を同時予測し、候補をsparse token treeへまとめてbackbone自身で一括検証することで、1回の巨大model forwardから複数tokenを確定する。 |
-| 2024-01 | [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md) | [✓](https://github.com/SafeAILab/EAGLE) | 20 | target LLMの上から2番目の層が作る高水準な特徴量を軽量decoderで自己回帰予測し、さらに1 step先へずらした実tokenを条件として与えることでfeature予測の分岐不確実性を解消する。予測featureから元LM headでdraft tokenを作り、target LLMがtree状候補を一括検証するlossless speculative sampling方式。 |
-| 2023-05 | [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md) | [✓](https://github.com/flexflow/FlexFlow) | 16 | 複数の小型draft modelやretrievalが作る候補token列を共通prefixでtreeへまとめ、target LLMにtree全体を1回で並列検証させることで、target modelの巨大weightを読む回数や分散通信回数を減らし、1 verification stepで複数tokenを確定するspeculative inference system。 |
-| 2024-02 | [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](2024-2402.02057-lookahead-decoding.md) | [✓](https://github.com/hao-ai-lab/LookaheadDecoding) | 5 | target LLM自身をJacobi型に複数future positionへ並列適用し、その反復軌跡から将来使えそうなn-gramを大量に収集する。現在prefixに接続できるn-gramだけを同じtarget LLMで並列検証し、複数tokenを一度に確定する。追加draft model・追加training・外部corpusを必要とせず、余っているGPU FLOPsを使って逐次decode step数を減らすexact decoding方式。 |
+| 2024-01 | [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md) | [✓](https://github.com/FasterDecoding/Medusa) | 23 | 別のdraft LLMを常駐させず、target LLMの最後のhidden stateへ複数の軽量decoding headを追加して1〜数token先の候補を同時予測し、候補をsparse token treeへまとめてbackbone自身で一括検証することで、1回の巨大model forwardから複数tokenを確定する。 |
+| 2024-01 | [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md) | [✓](https://github.com/SafeAILab/EAGLE) | 21 | target LLMの上から2番目の層が作る高水準な特徴量を軽量decoderで自己回帰予測し、さらに1 step先へずらした実tokenを条件として与えることでfeature予測の分岐不確実性を解消する。予測featureから元LM headでdraft tokenを作り、target LLMがtree状候補を一括検証するlossless speculative sampling方式。 |
+| 2023-05 | [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md) | [✓](https://github.com/flexflow/FlexFlow) | 17 | 複数の小型draft modelやretrievalが作る候補token列を共通prefixでtreeへまとめ、target LLMにtree全体を1回で並列検証させることで、target modelの巨大weightを読む回数や分散通信回数を減らし、1 verification stepで複数tokenを確定するspeculative inference system。 |
+| 2024-02 | [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](2024-2402.02057-lookahead-decoding.md) | [✓](https://github.com/hao-ai-lab/LookaheadDecoding) | 6 | target LLM自身をJacobi型に複数future positionへ並列適用し、その反復軌跡から将来使えそうなn-gramを大量に収集する。現在prefixに接続できるn-gramだけを同じtarget LLMで並列検証し、複数tokenを一度に確定する。追加draft model・追加training・外部corpusを必要とせず、余っているGPU FLOPsを使って逐次decode step数を減らすexact decoding方式。 |
 | 2023-11 | [REST: Retrieval-Based Speculative Decoding](2023-2311.08252-rest-retrieval-speculative-decoding.md) | [✓](https://github.com/FasterDecoding/REST) | 3 | 小型draft modelを別途学習・実行する代わりに、既存text corpusから現在contextの末尾と一致する過去断片を検索し、その続き候補をTrieへまとめてtarget LLMで一括検証することで、1回のtarget-model passで複数tokenをlosslessに確定する。 |
 
 ### その他
