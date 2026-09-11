@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:20:26.396827+00:00",
+  "updated_at": "2026-09-11T02:21:27.739630+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,7 +3310,7 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T02:20:26.396827+00:00",
+      "last_recorded_at": "2026-09-11T02:21:27.739630+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -3319,9 +3319,9 @@
       "counts": {
         "research_completed": 7,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 16,
+        "new_jobs": 17,
         "new_papers": 8,
         "fallback_archived": 0
       },
@@ -3542,6 +3542,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34554282371:1",
+          "recorded_at": "2026-09-11T02:21:27.739630+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34554282371",
+            "run_attempt": "1",
+            "source_sha": "128d49f28ff965af6eb360dad46cfe54d9eeed53"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3664,6 +3678,14 @@
           "title": "Efficient Remote Prefix Fetching with GPU-native Media ASICs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-540607ac2c56795f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3778,6 +3800,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-8455bd8ffbc74d54",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.11521",
+          "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System"
         }
       ],
       "new_paper_ids": [
@@ -3798,7 +3827,8 @@
         ".survey/work-queue/results/20260911T1108JST-discovery-cf8b0e58e9d070d5.json",
         ".survey/work-queue/results/20260911T1113JST-discovery-d7077ea85e263fb4.json",
         ".survey/work-queue/results/20260911T1115JST-discovery-27f2c95070471aa1.json",
-        ".survey/work-queue/results/20260911T1116JST-discovery-8a72402a8d65d7b0.json"
+        ".survey/work-queue/results/20260911T1116JST-discovery-8a72402a8d65d7b0.json",
+        ".survey/work-queue/results/20260911T1122JST-discovery-540607ac2c56795f.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 244,

@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 93,
-      "ready": 1
+      "completed": 94
     },
     "audit": {
       "completed": 6
@@ -10,22 +9,23 @@
     "research": {
       "completed": 87,
       "superseded": 41,
-      "deferred": 1
+      "deferred": 1,
+      "ready": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-540607ac2c56795f",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-8455bd8ffbc74d54",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2602.11521",
+      "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2602.11521",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T02:20:21+00:00"
+  "generated_at": "2026-09-11T02:21:27+00:00"
 }
