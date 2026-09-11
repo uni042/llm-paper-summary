@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-51b3f7936c4527fb",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/05-kv-cache-memory-management/2024-2407.15309-vtensor-virtual-memory-management.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2407.15309.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-ea6f0f5305a34c22",
+  "validation_error": "ValueError: metadata.references_total must be a non-negative integer",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T17:13:38+00:00"
 }
