@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T05:42:11.874760+00:00",
+  "updated_at": "2026-09-11T05:44:06.093337+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4871,7 +4871,7 @@
     {
       "run_key": "2026-09-11T14:30:00+09:00",
       "first_recorded_at": "2026-09-11T05:33:15.103860+00:00",
-      "last_recorded_at": "2026-09-11T05:42:11.874760+00:00",
+      "last_recorded_at": "2026-09-11T05:44:06.093337+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -4881,9 +4881,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 1,
-        "new_jobs": 1,
+        "new_jobs": 2,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -4931,6 +4931,20 @@
             "discovery_or_queue_expanded",
             "job_blocked"
           ]
+        },
+        {
+          "event_id": "34567082901:1",
+          "recorded_at": "2026-09-11T05:44:06.093337+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34567082901",
+            "run_attempt": "1",
+            "source_sha": "491f889e1ac758927b8ff0a40a5c370748a46357"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4957,11 +4971,26 @@
           "title": "From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs",
           "from": "ready",
           "to": "blocked"
+        },
+        {
+          "job_id": "job-1f9b736a87f9638c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
         {
           "job_id": "job-1f9b736a87f9638c",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-dc51ce84c438adb2",
           "status": "ready",
           "type": "discovery",
           "canonical_id": null,
@@ -4977,11 +5006,13 @@
         "arXiv:2609.09768",
         "arXiv:2609.10266"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T1446JST-discovery-1f9b736a87f9638c.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 260,
       "paper_active_count_after": 267,
-      "last_successful_action": "job_blocked"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
