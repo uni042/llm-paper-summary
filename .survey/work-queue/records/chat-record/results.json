@@ -2,27 +2,27 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2602.11521-20260911-1130-v10-a1",
-  "job_id": "job-research-8455bd8ffbc74d54",
+  "attempt_id": "attempt-2604.19769-20260911-1141-v10-a1",
+  "job_id": "job-research-5439ec0e0daf70c9",
   "data": {
-    "overview": "PAMの利得はKVがHBMに収まらなくなるほど大きくなる。オンラインではvLLM-offloading比でQwen2.5-32B 7.20倍、LLaMA3-70B 6.93倍、OPT-175B 24.53倍の平均スループット改善を報告する。オフライン長文ではLLaMA3-70BのArxiv_sumで39.2倍、Write_docで25.2倍となる。単にSSD-PIMを足すL-PIM/LS-PIMではSSDにKVが集中し、たとえばL-PIMでSSDが65%以上のKVを持つと計算時間の93%以上を消費する。PAMは重要KVを高速階層へ移し、各階層で注意を同時実行するため、この低帯域階層の直列化を避ける。",
+    "overview": "TTKVは文脈が長くなるほど比較方式との差を広げる。128KではLLaMA-3.1-8Bのスループットが65.7 tokens/sで、ShadowKV 34.9、KVQuant 30.8、KIVI 29.4を大きく上回る。LLaMA-3.1-70B、Qwen2.5-32B、DeepSeek-R1-14Bの128K集計ではFP16のホストからGPUへの転送量92GB前後を15.3〜15.8GBへ減らし、平均p95遅延を約76%削減する。品質差は小さく、差分量子化・二階層配置・ストリーミング注意の全てが必要であることをアブレーションでも示す。",
     "key_results": [
-      {"metric": "オンライン平均スループット", "value": "Qwen2.5-32B 7.20倍、LLaMA3-70B 6.93倍、OPT-175B 24.53倍", "baseline": "vLLM-offloading", "condition": "ShareGPT/WildChat/HumanEval、SLO 100/150/200ms、8×H100-80GB相当の異種階層シミュレーション", "interpretation": "モデルが大きくKVがHBMを越えるほど、DDR/SSDからGPUへ戻す比較方式の転送律速が強くなり、PAMの階層内計算と動的配置の価値が増える。"},
-      {"metric": "長文オフライン・LLaMA3-70B", "value": "Arxiv_sum 39.2倍、Write_doc 25.2倍", "baseline": "vLLM-offloading", "condition": "バッチ256/512/1024、1500〜8000トークン級の長文、16ビット重み/KV、8倍KV疎性化", "interpretation": "大バッチと長文でKV容量がHBM/DDRを越え、通常退避方式がSSD帯域に律速される条件で最大の改善が出る。"},
-      {"metric": "長文オフライン・OPT-175B", "value": "Arxiv_sum 33.0倍、Write_doc 8.26倍", "baseline": "vLLM-offloading", "condition": "バッチ16/32/64、異種階層シミュレーション", "interpretation": "175B級ではHBM容量不足が常態化し、KVをその場で処理する利点が大きい。ただしデータセットとバッチ条件により改善幅は大きく変わる。"},
-      {"metric": "LS-PIMに対する注意計算", "value": "小バッチ18.7倍、大バッチ48.56倍", "baseline": "LS-PIM", "condition": "PAMattention・KV mapping・KV schedulingを全て有効", "interpretation": "階層PIMを置くだけではSSD負荷集中を解決できず、計算分割と配置制御を組み合わせる必要がある。大バッチほどKV偏在が強くなり差が拡大する。"},
-      {"metric": "各機構を外した場合", "value": "小バッチでPAMattentionなし比1.93倍、KV mappingなし比2.06倍、KV schedulingなし比2.74倍。大バッチでは2.35倍、4.15倍、4.62倍", "baseline": "各一機構を無効化したPAM変種", "condition": "LS-PIMを1として注意計算性能を比較", "interpretation": "特に大バッチでは配置・スケジューリングの寄与が大きく、文脈局所性を使って低帯域階層の重要KV偏りを補正することが主要因である。"},
-      {"metric": "KV移動量", "value": "全KVの0.7%を調整、SSDからDDRへの転送は各デコード段0.1%未満", "baseline": "動的配置なし", "condition": "オンラインKVスケジューラ実行時", "interpretation": "少量の交換でも重要KV偏りの累積を防げるため、動的配置の利得を階層間大量コピーで相殺しにくい。"},
-      {"metric": "電力削減", "value": "vLLM-offloading比53.1〜92.7%削減", "baseline": "vLLM-offloading", "condition": "LLaMA3-70B/OPT-175B、WildChat/Arxiv_sum、シミュレーション電力モデル", "interpretation": "巨大KVのオフチップ転送を減らし、注意をデータ近傍で処理することでメモリ移動エネルギーを大きく下げる。"},
-      {"metric": "回路面積", "value": "HBM PU/RU 9.25%、DDR PU/RU 5.04%、SSD制御装置PU/RU 7.59%、PAMインターフェース約0.58〜0.75%", "baseline": "各メモリ/制御装置の基準面積", "condition": "VerilogをDRAM互換工程またはTSMC 14nm相当で合成", "interpretation": "性能利得と引き換えに各階層へ専用回路面積を追加する。HBMを旧工程で合成すると約27.7%まで増える感度も示される。"}
+      {"metric": "128Kホスト→GPU転送量", "value": "約5.94分の1", "baseline": "FP16", "condition": "LLaMA-3.1-70B、Qwen2.5-32B、DeepSeek-R1-14Bの128K集計", "interpretation": "FP16で約92GB必要な転送をTTKVでは15.3〜15.8GBへ抑え、差分量子化と疎なブロック取得がPCIe負荷を大幅に減らす。"},
+      {"metric": "128K p95デコード遅延", "value": "平均約76%削減", "baseline": "FP16", "condition": "MultiNews、Qasper、RepoBench-P、RULERを含む128K長文評価", "interpretation": "転送量削減だけでなく、非同期先読みと高速階層計算の重畳により残る通信待ちも隠す。"},
+      {"metric": "128Kスループット", "value": "LLaMA-3.1-8Bで65.7 tokens/s", "baseline": "ShadowKV 34.9、KVQuant 30.8、KIVI 29.4 tokens/s", "condition": "バッチ8、128K文脈", "interpretation": "最良比較方式に対しておおむね約2倍の生成速度を維持し、長文化に伴う帯域劣化を緩和する。"},
+      {"metric": "32K L-Eval LLaMA-3.1-8B", "value": "p95 245ms、転送1.05GB、精度65.0%", "baseline": "FP16: 380ms、3.60GB、65.4%", "condition": "32K、バッチ8", "interpretation": "精度差0.4ポイントに抑えながらp95を約35.5%短縮し、転送量を約3.43分の1へ減らす。"},
+      {"metric": "16K GovReport DeepSeek-R1-14B", "value": "p95 175ms、転送0.85GB、ROUGE-L 50.0", "baseline": "FP16: 285ms、2.40GB、50.2", "condition": "4GB HBM KV予算", "interpretation": "低速階層圧縮とストリーミング取得により、要約品質をほぼ維持しながら転送と遅延を削減する。"},
+      {"metric": "ストリーミング注意の寄与", "value": "p95 1021→590ms、転送47.5→8.1GB", "baseline": "ストリーミング注意なし", "condition": "64K RULERアブレーション、精度51.8%で同等", "interpretation": "通信と計算の重畳、および必要ブロックの選択取得が遅延削減の中心で、単なる量子化だけでは十分でない。"},
+      {"metric": "差分量子化の寄与", "value": "p95 796→590ms、転送13.4→8.0GB", "baseline": "キー/値を一律8ビット", "condition": "64K RULER、精度52.0→51.8%", "interpretation": "値を4ビットへ下げることで品質損失を小さく保ちながら転送量をさらに削減する。"},
+      {"metric": "ブロック長の折衷", "value": "128トークンで590ms、8.1GB、51.8%", "baseline": "32:1796ms/58.8GB/52.0%、64:1150ms/50.6GB/51.9%、256:595ms/3.2GB/48.1%", "condition": "LLaMA-3.1-70B、RULER", "interpretation": "256では転送量がさらに減るが品質低下が大きく、128が遅延と精度の実用的な折衷点になる。"}
     ],
     "negative_results": [
-      {"name": "小さいモデル・短い文脈では利得が縮む", "description": "Qwen2.5-32BやLLaMA3-70Bが100ms SLOのShareGPT条件でKVをHBM内に保てる場合、通常のvLLM-offloadingは低速階層を使わず性能低下を避けられる。この領域ではPAMの階層化利得はOPT-175Bほど大きくない。"},
-      {"name": "単純な階層PIMはSSD律速", "description": "L-PIMでは容量の大きいSSDへKVが集中し、オフライン条件ではSSDが65%以上のKVを保持しながら計算時間の93%以上を消費する例がある。PIMを各層へ追加するだけでは帯域不均衡を解決できない。"},
-      {"name": "スケジューリング無効化で長文性能が悪化", "description": "各段で移動するKVは少量でも、重要KVの配置ずれは複数段で蓄積する。KV schedulingを外すと小バッチで完全PAMに2.74倍、大バッチで4.62倍の差が生じ、静的配置では文脈局所性を持続的に利用できない。"},
-      {"name": "ハードウェア実機では未検証", "description": "提案PIM階層はシミュレーションと回路合成で評価されており、製造済みの三階層PIMシステム上で同じスループットや電力削減が測定されたわけではない。"}
+      {"name": "単一低速階層では品質・遅延とも悪化", "description": "高速階層を外して全KVを低速側へ置くと、64K RULERアブレーションで精度が51.8%から41.5%へ約10ポイント低下し、p95も590msから985msへ悪化する。高速階層に最近のKVを残すことが品質にも効いている。"},
+      {"name": "大きすぎるブロックは品質を落とす", "description": "256トークンブロックでは転送量は3.2GBまで減るが、RULER精度は48.1%となり128トークンの51.8%より明確に低い。転送削減だけを最大化すると関連情報の選択粒度が粗くなる。"},
+      {"name": "FP16完全保持は64K以降で容量不足", "description": "LLaMA-3.1-8Bのスループット表ではFP16方式は64Kと128Kでメモリ不足となり測定不能である。TTKVの主な価値は長文で高速階層だけでは保持できない領域に現れる。"},
+      {"name": "近似を含む", "description": "低速階層の値を4ビット化し、関連上位ブロックのみ取得するため完全KVと厳密同一ではない。対象ベンチマークでは品質差が小さいものの、注意が古い多数ブロックへ広く分散する入力では損失が増える可能性がある。"}
     ],
-    "interpretation": "性能差を決める主因は、KV総量が高速階層の容量を越えるかどうかである。KVがHBM内に収まる条件では比較方式も高速なので差は小さいが、大モデル・大バッチ・長文ではDDRやSSDへの退避が不可避になり、全KVを低帯域階層から読み戻す方式が急激に悪化する。PAMは注意計算そのものをKV所在地へ移し、さらに重要KVだけを高帯域階層へ寄せるため、低速階層に容量を持たせながらアクセス頻度を下げられる。アブレーションでKV mappingとKV schedulingの寄与が大バッチほど増えることは、この帯域不均衡の補正が中心機構であることを支持する。ただし改善値は新規PIM回路を前提とするシミュレーション結果なので、既存サーバへソフトウェアだけを導入した速度向上として解釈してはいけない。",
-    "quality_impact": "PAMattentionの部分集約はオンラインソフトマックスの統計量を用いて全体正規化を再構成するため、階層分割自体が近似削除を目的とするものではない。一方、評価系では全モデル・全方式に8倍のKV疎性化を併用し、論文はその品質損失を1%未満と報告する。したがって報告性能は完全KVの厳密無損失条件ではなく、同一の近似疎性化を比較方式にも適用した条件でのシステム性能である。"
+    "interpretation": "TTKVの改善は、長文推論の律速を『KV総容量』だけでなく『毎トークンで低速階層から何バイト運ぶか』として捉え直した点にある。高速HBMへ最近のKVを残すことで多くの参照をローカル化し、古いKVはキー8ビット・値4ビットへ圧縮して一回の転送量を減らす。さらに関連ブロックだけを選び、その転送と高速階層注意を重ねるため、PCIeの帯域と遅延の両方へ対処する。アブレーションで三要素のどれを外しても悪化することから、単一技法ではなく配置・圧縮・実行スケジュールの協調が主要因と読める。",
+    "quality_impact": "品質はFP16よりわずかに低い例が多いが、128KのLLaMA-3.1-70BではMultiNews 29.3対29.5、Qasper 37.8対38.0、RepoBench-P 57.8対58.0、RULER 61.8対62.0で差は小さい。Qwen2.5-32BやDeepSeek-R1-14Bでも同様にFP16へ近い。一方で256トークンブロックのアブレーションでは精度低下が明確なため、品質保持は階層比率・量子化幅・ブロック粒度の設定に依存する。"
   }
 }
