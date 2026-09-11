@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 149,
-      "ready": 1
+      "completed": 150
     },
     "audit": {
       "completed": 6
@@ -11,22 +10,35 @@
       "completed": 129,
       "superseded": 43,
       "deferred": 3,
+      "ready": 2,
       "blocked": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-5c9ef0e67820b9c5",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-66b62d117037ed1d",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2603.21257",
+      "title": "CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands",
+      "source_url": "https://arxiv.org/abs/2603.21257",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2e8b9d869ab4ec81",
+      "type": "research",
+      "lane": null,
+      "priority": 75,
+      "canonical_id": "arXiv:2605.00616",
+      "title": "LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling",
+      "source_url": "https://arxiv.org/abs/2605.00616",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2605.00616-llm-emu-native-runtime-emulation.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T17:18:56+00:00"
+  "generated_at": "2026-09-11T17:21:04+00:00"
 }
