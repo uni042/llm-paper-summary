@@ -2,7 +2,9 @@
 
 収録論文: **279本**。
 
-論文は最終目的で **Inference（推論）** と **Training（学習）** に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。
+論文は **Inference（推論）**、**Training（学習）**、**Survey（サーベイ／レビュー）** の3系統に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。Survey側は個別の新規手法ではなく、複数研究を横断整理するsurvey / review論文を収録する。
+
+各研究系統ディレクトリのREADMEにある論文一覧は、公開年月ベースの **直近12か月** → **それ以前でリポジトリ内の別論文から引用されている論文** → **その他** の順に、重複なしで自動分類する。一覧には公開年月、明示的な実装有無、リポジトリ内被引用数、一文要約を表示する。
 
 ## Inference / 推論 — 260本
 
@@ -26,6 +28,12 @@
 
 → [Training一覧](training/)
 
+## Survey / サーベイ — 0本
+
+複数研究を横断的に整理するsurvey / review論文を独立して収録する。現時点では既存収録論文から高確度にsurvey / reviewと判定できるものはないため、カテゴリのみ先に作成している。
+
+→ [Survey一覧](survey/)
+
 <!-- survey:auto:start -->
-推論論文：**260本**。 [全一覧](inference/README.md) ／ [研究比較](inference/comparison.md)
+推論：**260本** ／ 学習：**19本** ／ サーベイ：**0本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->
