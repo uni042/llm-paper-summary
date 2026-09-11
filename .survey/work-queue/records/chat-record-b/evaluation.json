@@ -2,21 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-research-2604.26074-20260911-0930-v10-a2",
-  "job_id": "job-research-51969dd5b333edfe",
+  "attempt_id": "attempt-research-2603.28239-20260911-1030-v10-b1",
+  "job_id": "job-research-d1d610f7f4147cc7",
   "data": {
-    "hardware": ["GH200: 96GB HBM3、4.0TB/s、480GBホストメモリ、NVLink-C2C接続。", "RTX 6000 Pro Blackwell: 96GB GDDR7、1.8TB/s、512GBホストメモリ、PCIe Gen5単方向64GB/s。"],
-    "software": ["PyTorchインターフェース、CUDA C++、CUTLASS、CUDA Graph。"],
-    "model": ["OPT-30B", "OPT-6.7B", "Llama-2-7B"],
-    "datasets": ["オフラインのバッチ推論。通常は入力長32、各要求32トークン生成。大KV評価ではバッチ・入力長を増やす。"],
-    "baselines": ["FlexGen", "vLLM-prefetch", "vLLM-uvm"],
-    "correctness": "重みやKVを変更せず格納場所とデータ経路を変えるため、モデル品質を近似する方式ではない。評価は時間/出力トークンと有効帯域を中心とし、品質差ではなく同じ演算結果を前提とする。",
+    "hardware": ["FPGA試作: 4台の端点FPGAと1台のスイッチFPGA、すべてAMD XCVU13P-FLGA2577-2-I。各端点リンクは4本の32 Gbpsレーンで合計128 Gbps双方向、250 MHz動作。", "大規模通信評価: NVIDIA DGX H200と同じ8GPU・4スイッチのトポロジーをBookSim2で再現し、GPU-スイッチ間合計900 GB/s双方向、片道250 nsとして校正。", "計算時間: 実NVIDIA H200上でTensorRT-LLMを用いてLLaMA-2-7B/13B/70BとMixtral-8x7Bをプロファイル。"],
+    "software": ["BookSim2を拡張したサイクル単位ネットワークシミュレータ。", "TensorRT-LLM v1.3.0を用いたH200実機プロファイル。", "SmoothQuantコードベース上の量子化精度評価とLanguage Model Evaluation Harness。"],
+    "model": ["LLaMA-2-7B", "LLaMA-2-13B", "LLaMA-2-70B", "Mistral-7B", "Mixtral-8x7B"],
+    "datasets": ["WikiText-2", "MMLU 5-shot", "HellaSwag", "PIQA", "WinoGrande", "ARC-easy", "ARC-challenge", "BoolQ", "OpenBookQA"],
+    "baselines": ["NVLink SHARP（NVLS）", "リング型All-Reduce", "リング型量子化All-Reduce"],
+    "correctness": "通信量子化なしのSCINは同じAll-Reduce結果を異なる経路で生成する。量子化有りではINT8近似を導入するため完全一致ではなく、WikiText-2のパープレキシティとMMLU・常識推論精度で品質を確認する。主設定はブロックサイズ64のINT8で、LLaMA-2-7BではFP16 5.4721に対し5.4746で差0.0025。",
     "settings": [
-      {"name": "重み主体", "description": "バッチ8で0〜100%のオフロード率を掃引し、OPT-30B/6.7Bを中心に有効帯域とトークン当たり時間を比較する。"},
-      {"name": "KV併用", "description": "バッチ512などでKVキャッシュが大きい条件を作り、線形層と注意機構が異なる律速になる状況で演算別配分を評価する。"},
-      {"name": "容量超過", "description": "OPT-30Bでバッチと入力長を変え、総メモリがGPU容量を超えるために必要となる実際の全体オフロード率で最高性能を比較する。"}
+      {"name": "通信シミュレーション", "description": "8GPU・4スイッチ、各GPUとスイッチ群の合計帯域900 GB/s双方向、片道250 ns。最大ペイロード128B、ヘッダ16B。SCINの端点別波テーブルは96KB、波サイズ4KB。NVLS比較側はポートあたり320KBの集約表と2倍内部スイッチ高速化を与える。"},
+      {"name": "シミュレータ校正", "description": "NVLSは32KB〜1GBのNCCL実機測定と比較し平均誤差5.5%、大メッセージでは2.6%。SCINモデルはFPGA試作結果に対して差1%未満になるよう校正する。"},
+      {"name": "エンドツーエンド推論", "description": "H200実機で入力長1024・出力長1024、バッチ128未満の低同時実行条件をプロファイルし、TPサイズに応じて注意ヘッドとMLP中間次元を分割する。得られたGPU計算時間と通信シミュレーション時間を合成してTTFTとTPOTを推定する。"},
+      {"name": "量子化品質", "description": "対称量子化を使用し、FP16モデルとFP8重み・活性値モデルの双方へネットワーク内INT8 All-Reduceを適用。WikiText-2では系列長2048、TP=8でブロックサイズ32〜512を比較し、主設定を64とする。"}
     ],
-    "methodology": "2種類の相互接続でオフロード率を掃引し、理論上のローカル＋遠隔合算帯域へどこまで近づくかを測る。重み主体、小/大KV、容量超過条件を分け、FlexGen・vLLM先読み・統合仮想メモリと比較する。さらに貪欲配分対一様配分、輻輳制御、TMAマルチキャスト、タイル整列を個別に切り分ける。",
-    "scope": "単一GPUと接続CPUメモリの階層を対象とするオフライン推論評価で、多利用者オンラインサービングの待ち行列や複数GPU間干渉は扱わない。Hopper/BlackwellのTMAを前提とするため古いGPUへは直接適用できない。"
+    "methodology": "小規模ではFPGA試作でプロトコルとISAの実動作、リンク遅延、長大メッセージ効率、資源使用量を直接測定する。大規模ではBookSim2のスイッチモデルへSCINとNVLSのデータ経路を実装し、実NCCLとFPGA測定で校正してからメッセージサイズ別のAll-Reduce遅延・等価帯域を比較する。エンドツーエンド評価では通信と計算が低同時実行TPで重なりにくい前提を使い、H200実機の計算プロファイルとシミュレーション通信時間を加算する。量子化は別途ソフトウェア上で部分活性値を各GPU相当に分け、各部分をINT8へ量子化して集約する経路を模擬し、リング方式との差も確認する。",
+    "scope": "FPGA試作は4端点でGPUそのものではなく端点FPGAとMicroBlazeで動作を模擬する。8GPU性能はハードウェア校正済みとはいえシミュレーションであり、SCIN搭載実NVSwitch相当ASICでの測定ではない。設計対象は主に単一階層の4〜8GPU共有メモリ網で、多段ラック規模ネットワークへの削減木拡張は将来案に留まる。エンドツーエンド結果はH200実測計算時間と通信シミュレーションの合成値である点を、完全実機測定と区別する必要がある。"
   }
 }
