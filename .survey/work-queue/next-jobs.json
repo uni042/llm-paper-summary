@@ -10,23 +10,11 @@
       "completed": 102,
       "superseded": 42,
       "deferred": 3,
-      "blocked": 1,
-      "ready": 2
+      "blocked": 2,
+      "ready": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-8f1c80196652932b",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2606.17787",
-      "title": "LUMEN: Coordinated Failure Recovery for Distributed LLM Serving",
-      "source_url": "https://arxiv.org/abs/2606.17787",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17787-lumen-coordinated-failure-recovery.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-bfbde8d3ef06e3e4",
       "type": "research",
@@ -40,5 +28,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T05:46:33+00:00"
+  "generated_at": "2026-09-11T05:47:37+00:00"
 }

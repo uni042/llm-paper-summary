@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2606.17787",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17787-lumen-coordinated-failure-recovery.md",
   "selection_reason": "分散LLMサービングでGPUワーカー障害時にKVキャッシュと処理能力を同時に失う問題を、障害前のチェックポイント配置、障害時の中断要求再配分、モデル再ロード中の処理能力復旧という三つの判断点を協調させて扱う。既存の固定隣接チェックポイントや単純再実行と異なり、現在のクラスタ負荷を見て回復経路を選ぶため、サービングの耐障害性を独立したスケジューリング問題として扱う強候補。",
-  "status": "ready",
+  "status": "blocked",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T05:46:24+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T05:47:34+00:00",
+  "blocker": "Primary-source full text could not be retrieved in this run. The arXiv abstract was reachable and full secondary explanations were available, but the arXiv PDF/HTML primary paper itself could not be obtained through the available retrieval routes. Workflow policy forbids completing the record from abstract or secondary material. Retry when the primary full text is reachable."
 }

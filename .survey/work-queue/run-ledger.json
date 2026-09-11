@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T05:46:33.304101+00:00",
+  "updated_at": "2026-09-11T05:47:41.152273+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4871,7 +4871,7 @@
     {
       "run_key": "2026-09-11T14:30:00+09:00",
       "first_recorded_at": "2026-09-11T05:33:15.103860+00:00",
-      "last_recorded_at": "2026-09-11T05:46:33.304101+00:00",
+      "last_recorded_at": "2026-09-11T05:47:41.152273+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -4882,7 +4882,7 @@
         "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 2,
-        "blocked": 1,
+        "blocked": 2,
         "new_jobs": 4,
         "new_papers": 7,
         "fallback_archived": 0
@@ -4959,6 +4959,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34567316377:1",
+          "recorded_at": "2026-09-11T05:47:41.152273+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34567316377",
+            "run_attempt": "1",
+            "source_sha": "c3a0da322191b338eebb73443bd4b5092d4670da"
+          },
+          "signals": [
+            "job_blocked"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5001,6 +5015,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-8f1c80196652932b",
+          "type": "research",
+          "canonical_id": "arXiv:2606.17787",
+          "title": "LUMEN: Coordinated Failure Recovery for Distributed LLM Serving",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -5049,7 +5071,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 260,
       "paper_active_count_after": 267,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
