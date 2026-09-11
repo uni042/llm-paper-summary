@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-efe114fe19d772d8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.10726",
+      "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2603.10726",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
+      "priority": 82,
+      "reason": "multi-tenant LLM servingのautomatic prefix cachingでcache hit/miss latencyが他tenantのprompt情報を漏らす問題に対し、共有cacheを全面無効化せず、cross-user reuseを監視して疑わしいprefixだけ選択的に隔離するsystem。全面user isolation型防御比でcache reuseを最大70%高め、inference latencyを30%削減する。性能最適化として普及したprefix cacheを安全に共有するためのsystem設計として既存cache研究にない軸を補う。"
+    },
+    {
+      "canonical_id": "arXiv:2606.17059",
+      "title": "Towards Distributed Inference of LLMs on a P2P Network",
+      "source_url": "https://arxiv.org/abs/2606.17059",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17059-p2p-prefix-cache-aware-routing.md",
+      "priority": 78,
+      "reason": "cluster-wide prefix reuseのためにKV cacheを転送する代わりに、各nodeのradix treeとanti-entropyでpeerのcache状態を弱整合に推定し、最長prefix matchを持つnodeへ分散routingする。metadataが古くてもcache missになるだけでcorrectnessを壊さない設計で、中央schedulerなしのprefix-affinity routingを扱う。高network latencyやhotspotでの限界も評価しており、分散prefix cache管理の新しい比較点になる。"
+    }
+  ]
+}
