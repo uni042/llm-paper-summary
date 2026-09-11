@@ -20,14 +20,35 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 ### 1年以上前
 
-| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
-|---|---|:---:|---:|---|
-| 2024-08 | [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md) | [✓](https://github.com/facebookresearch/LayerSkip) | 7 | 層kipは、同じLLMの浅い層を下書きモデルの代わりに使い、残り層でその下書き トークンを検証する自己投機的 デコードを成立させる学習レシピである。 |
-| 2024-07 | [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md) | ✓ | 4 | LazyLLMは、長文入力のすべてのトークンを全層で処理する代わりに、その時点の生成に重要そうな入力トークンだけを後段へ通す学習不要なトークン 枝刈り手法である。 |
-| 2023-07 | [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md) | ✓ | 4 | Skipデコードは、各生成トークンに常に全Transformer層を使う代わりに、出力が後ろへ進むほど使う層数を減らす方式である。 |
-| 2025-07 | [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md) | ✓ | 0 | DiffSkipは、元LLMのFFNをモデルから削除せずに残し、トークンごとに各FFNを実行するか、小さい代替変換だけで済ませるかをルータで選ぶ動的 skipping手法である。 |
-| 2025-04 | [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md) | [✓](https://github.com/iie-ycx/DEER) | 0 | DEERはTransformer 層をスキップする早期終了ではなく、推論モデルが生成する思考連鎖のトークン列を途中で終わらせる手法である。 |
-| 2025-03 | [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md) | ✓ | 0 | D3は、生成が後ろへ進むほど使うTransformer 層を減らす学習不要な深度減衰手法である。 |
-| 2025-03 | [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md) | [✓](https://github.com/luoxuan-cs/Flexidepth) | 0 | FlexiDepthは、元LLMの重みを固定したまま、トークンごと・層ごとにfull処理か軽いskip経路かを選ぶ追加module型の動的 depth手法である。 |
-| 2024-12 | [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md) | [✓](https://github.com/Jyk-122/D-LLM) | 0 | D-LLMは、各トークン・各層ごとに「この層を実行するかskipするか」を学習する動的 depth方式である。 |
+- **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：7  
+  層kipは、同じLLMの浅い層を下書きモデルの代わりに使い、残り層でその下書き トークンを検証する自己投機的 デコードを成立させる学習レシピである。
+
+- **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LazyLLMは、長文入力のすべてのトークンを全層で処理する代わりに、その時点の生成に重要そうな入力トークンだけを後段へ通す学習不要なトークン 枝刈り手法である。
+
+- **2023-07 · [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  Skipデコードは、各生成トークンに常に全Transformer層を使う代わりに、出力が後ろへ進むほど使う層数を減らす方式である。
+
+- **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DiffSkipは、元LLMのFFNをモデルから削除せずに残し、トークンごとに各FFNを実行するか、小さい代替変換だけで済ませるかをルータで選ぶ動的 skipping手法である。
+
+- **2025-04 · [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md)**  
+  実装：[✓](https://github.com/iie-ycx/DEER) ・ リポジトリ内被引用：0  
+  DEERはTransformer 層をスキップする早期終了ではなく、推論モデルが生成する思考連鎖のトークン列を途中で終わらせる手法である。
+
+- **2025-03 · [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  D3は、生成が後ろへ進むほど使うTransformer 層を減らす学習不要な深度減衰手法である。
+
+- **2025-03 · [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)**  
+  実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：0  
+  FlexiDepthは、元LLMの重みを固定したまま、トークンごと・層ごとにfull処理か軽いskip経路かを選ぶ追加module型の動的 depth手法である。
+
+- **2024-12 · [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md)**  
+  実装：[✓](https://github.com/Jyk-122/D-LLM) ・ リポジトリ内被引用：0  
+  D-LLMは、各トークン・各層ごとに「この層を実行するかskipするか」を学習する動的 depth方式である。
 <!-- survey:auto:end -->

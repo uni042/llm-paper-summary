@@ -6,15 +6,15 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
-| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
-|---|---|:---:|---:|---|
-| 2026-06 | [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md) | ✓ | 1 | MoE推論では低い同時実行数ではテンソル並列が低遅延、高い同時実行数ではエキスパート並列が高スループットになるため、バースト型オンライン要求や強化学習ロールアウトでは一つの実行中に最適構成が入れ替わる。 |
+- **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoE推論では低い同時実行数ではテンソル並列が低遅延、高い同時実行数ではエキスパート並列が高スループットになるため、バースト型オンライン要求や強化学習ロールアウトでは一つの実行中に最適構成が入れ替わる。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
-| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
-|---|---|:---:|---:|---|
-| 2026-09 | [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](2026-2609.08682-hda-moe-3d-near-memory-scheduling.md) | ✓ | 0 | 3次元近傍メモリ処理（3D Near-メモリ Processing; 3D NMP）上の混合専門家モデル（Mixture of エキスパート; MoE）推論で、テンソル並列の重い全リデュース通信と専門家並列の負荷偏りを同時に抑える。 |
+- **2026-09 · [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](2026-2609.08682-hda-moe-3d-near-memory-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  3次元近傍メモリ処理（3D Near-メモリ Processing; 3D NMP）上の混合専門家モデル（Mixture of エキスパート; MoE）推論で、テンソル並列の重い全リデュース通信と専門家並列の負荷偏りを同時に抑える。
 
 ### 1年以上前
 
