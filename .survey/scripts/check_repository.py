@@ -31,6 +31,12 @@ REQUIRED_V10_PATHS = (
     ".survey/update-worker/update-payload.json",
 )
 
+REQUIRED_PAPER_METADATA = (
+    "canonical_id", "title", "summary", "authors", "published", "publication",
+    "publication_type", "publication_status", "source", "sources", "implementation",
+    "code", "last_checked", "last_audited", "audit_version",
+)
+
 
 def raw_path_bytes(path):
     if path.is_symlink():
@@ -125,8 +131,8 @@ def check(root, inventory):
             elif not destination.exists():
                 issue("broken_local_link", name, target)
         parts = Path(name).parts
-        is_inference_paper = len(parts) == 4 and parts[0] == "papers" and parts[1] == "inference" and path.name != "README.md"
-        if is_inference_paper:
+        is_identity_paper = len(parts) == 4 and parts[0] == "papers" and parts[1] in ("inference", "survey") and path.name != "README.md"
+        if is_identity_paper:
             meta, body = frontmatter(path)
             if body.lstrip().startswith("# Moved") or text.lstrip().startswith("# Moved"):
                 continue
@@ -137,9 +143,24 @@ def check(root, inventory):
                 issue("duplicate_canonical_id", name, f"Also used by {canonical_ids[cid]}")
             else:
                 canonical_ids[cid] = name
-            for key in ("title", "summary", "source", "last_audited", "audit_version"):
+            for key in REQUIRED_PAPER_METADATA:
                 if key not in meta:
                     issue("paper_missing_metadata", name, key)
+            authors = meta.get("authors")
+            if "authors" in meta and (not isinstance(authors, list) or not authors):
+                issue("paper_invalid_metadata", name, "authors must be a non-empty list")
+            sources = meta.get("sources")
+            if "sources" in meta and (not isinstance(sources, list) or not sources):
+                issue("paper_invalid_metadata", name, "sources must be a non-empty list")
+            published = meta.get("published")
+            if "published" in meta and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(published)):
+                issue("paper_invalid_metadata", name, "published must use YYYY-MM-DD")
+            if meta.get("arxiv_id"):
+                categories = meta.get("arxiv_categories")
+                if not isinstance(categories, dict) or not categories.get("primary"):
+                    issue("paper_missing_metadata", name, "arxiv_categories.primary")
+                elif not isinstance(categories.get("cross_list", []), list):
+                    issue("paper_invalid_metadata", name, "arxiv_categories.cross_list must be a list")
     frozen_name = ".survey/survey-state/frozen-training.json"
     frozen = json_objects.get(frozen_name, {})
     if not isinstance(frozen, dict) or not frozen.get("files"):

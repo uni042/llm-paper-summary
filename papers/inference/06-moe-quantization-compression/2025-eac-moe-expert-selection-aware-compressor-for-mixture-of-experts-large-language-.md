@@ -1,24 +1,48 @@
 ---
-canonical_id: "ACL:2025.acl-long.633"
-last_audited: "2026-09-10"
+canonical_id: ACL:2025.acl-long.633
+arxiv_id: '2508.01625'
+doi: 10.18653/v1/2025.acl-long.633
+openreview_id: null
+arxiv_categories:
+  primary: cs.LG
+  cross_list:
+  - cs.AI
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models"
-summary: "量子化後も元モデルと近いexpertが選ばれるようrouter上位expertの誤差を重点的に補正し、prefillでほとんど使われないexpertを入力ごとに省く圧縮手法。"
-authors_affiliations: "Yuanteng Chen, Yuantian Shao, Peisong Wang, Jian Cheng／Chinese Academy of Sciences, UCAS, Nanjing University of Science and Technology, AIRIA, [Maicro.ai](http://Maicro.ai)"
-published: "2025-08-03"
-publication_status: "Published"
-lineage: "Quantization × MoE × Offload"
-topics: ["Quantization","Dynamic Top-k","Quality-cost","Edge／on-device"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://aclanthology.org/2025.acl-long.633/"
-code: ""
-last_checked: "2026-09-03"
+title: 'EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language
+  Models'
+summary: 量子化後も元モデルと近いexpertが選ばれるようrouter上位expertの誤差を重点的に補正し、prefillでほとんど使われないexpertを入力ごとに省く圧縮手法。
+authors_affiliations: Yuanteng Chen, Yuantian Shao, Peisong Wang, Jian Cheng／Chinese
+  Academy of Sciences, UCAS, Nanjing University of Science and Technology, AIRIA,
+  [Maicro.ai](http://Maicro.ai)
+published: '2025-08-03'
+publication_status: Published
+lineage: Quantization × MoE × Offload
+topics:
+- Quantization
+- Dynamic Top-k
+- Quality-cost
+- Edge／on-device
+importance: 高
+hardware_evaluation: 実機
+source: https://aclanthology.org/2025.acl-long.633/
+code: null
+implementation: 公式コード公開はarXivおよびACL Anthologyの一次資料で確認できず
+last_checked: '2026-09-11'
+authors:
+- Yuanteng Chen
+- Yuantian Shao
+- Peisong Wang
+- Jian Cheng
+publication: ACL 2025
+publication_type: Conference paper
+sources:
+- https://aclanthology.org/2025.acl-long.633/
 ---
 
 # EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models

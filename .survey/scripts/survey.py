@@ -65,18 +65,22 @@ def norm_id(value):
 
 
 def papers():
-    """Inference papers used by the canonical identity index.
+    """Inference and survey papers used by the canonical identity index.
 
-    Keep this inference-only: training and survey papers do not necessarily
-    carry canonical_id yet, while the v10 identity state requires it.
+    Training remains excluded until its frozen legacy pages have canonical
+    metadata. Survey papers must participate so discovery cannot enqueue an
+    already registered review under a second lineage.
     """
     repo = repository_root()
     old = read(STATE + "paper-identity-index.json", {}) or {}
     moved = set(old.get("ignored_moved_stubs", []))
     records = []
-    for p in sorted((repo / "papers/inference").glob("*/*.md")):
+    paper_paths = list((repo / "papers/inference").glob("*/*.md"))
+    paper_paths += list((repo / "papers/survey").glob("*/*.md"))
+    for p in sorted(paper_paths):
         rel = p.relative_to(repo).as_posix()
-        if p.name == "README.md" or rel.removeprefix("papers/inference/") in moved:
+        relative_family_path = rel.split("/", 2)[-1]
+        if p.name == "README.md" or relative_family_path in moved:
             continue
         meta, _ = front(p)
         cid = meta.get("canonical_id")
@@ -480,7 +484,8 @@ def main():
     args = parser.parse_args()
     global ROOT
     if args.root:
-        ROOT = args.root.resolve()
+        candidate = args.root.resolve()
+        ROOT = candidate / ".survey" if (candidate / ".survey").is_dir() else candidate
     if args.cmd == "build":
         render()
 

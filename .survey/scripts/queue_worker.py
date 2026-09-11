@@ -191,9 +191,9 @@ def existing_candidate_keys():
                     keys.add(str(v).strip().lower())
 
     survey.ROOT = ROOT
-    for rel in survey.papers():
+    for record in survey.papers():
         try:
-            meta, _ = survey.front(ROOT / rel)
+            meta = record["meta"]
         except Exception:
             continue
         for k in ("canonical_id", "arxiv_id", "doi", "openreview_id", "source", "title"):
@@ -232,7 +232,11 @@ def make_research_job(c: dict, parent: str):
 
 
 def make_audit_job(sub: dict, research_job: dict):
-    need = bool(sub.get("audit_required") or sub.get("audit_flags") or sub.get("audit_reason"))
+    nested = sub.get("submission") if isinstance(sub.get("submission"), dict) else {}
+    audit_required = sub.get("audit_required", nested.get("audit_required"))
+    audit_flags = sub.get("audit_flags", nested.get("audit_flags"))
+    audit_reason = sub.get("audit_reason", nested.get("audit_reason"))
+    need = bool(audit_required or audit_flags or audit_reason)
     if not need:
         return False
     key = str(research_job.get("canonical_id") or research_job.get("job_id"))
@@ -245,7 +249,7 @@ def make_audit_job(sub: dict, research_job: dict):
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
         "paper_path": sub.get("paper_path") or research_job.get("paper_path"),
-        "reason": sub.get("audit_reason") or "research result left an explicit verification need",
+        "reason": audit_reason or "research result left an explicit verification need",
         "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quoted quantitative results, simulation vs real hardware, classification, differences and limitations. Update the full Markdown page.",
     })
 

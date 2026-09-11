@@ -22,6 +22,16 @@ implementation_status: "code-unavailable"
 source: "https://www.usenix.org/conference/osdi22/presentation/yu"
 code: ""
 last_checked: "2026-09-08"
+arxiv_id: null
+openreview_id: null
+arxiv_categories:
+  primary: "cs.DC"
+  cross_list: ["cs.LG"]
+authors: ["Gyeong-In Yu", "Joo Seong Jeong", "Geon-Woo Kim", "Soojeong Kim", "Byung-Gon Chun"]
+publication: "arXiv preprint"
+publication_type: "プレプリント"
+sources: ["https://www.usenix.org/conference/osdi22/presentation/yu"]
+implementation: "公式実装URLは一次資料で確認できず"
 ---
 
 # Orca: A Distributed Serving System for Transformer-Based Generative Models

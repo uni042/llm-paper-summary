@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（48本）
+## 自動生成の論文一覧（49本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -87,5 +87,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | 2025-03 | [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md) | — | 0 | 長いcontextで増え続けるKV cacheの16-bit正本をCPU DRAMへ退避し、GPUには重要KVを探すための1/2-bitコピーと少数の16-bit KVだけを置く。さらに現在tokenと『次tokenの参照先を予測するための投機token』を同時に計算し、次stepで必要になりそうな16-bit KVを1 step早くCPUからGPUへ先読みすることで、VRAM削減とCPU-GPU転送待ちの隠蔽を両立する。 |
 | 2025-02 | [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md) | [✓](https://github.com/wdlctc/headinfer) | 0 | 従来のlayer単位KV offloadをさらにattention head単位まで細分化し、CPU DRAMに全KV正本を保持しながらGPUには現在計算するhead groupのKVだけを置くlossless long-context inference方式。chunked prefillでactivation peakを抑え、ping-pong bufferで次headのPCIe transferを現在headのattention計算へ重ね、context長に応じてhead group数を変えて容量とkernel/transfer overheadを両立する。 |
 | 2024-11 | [Pie: Pooling CPU Memory for LLM Inference](2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md) | — | 0 | 一部のKV cacheをCPU DRAMへ置き、使う数layer前にGPUへ戻して転送を現在layerの計算と重ね、GPUを待たせない範囲までoffload量を自動で増やすKV-cache offload system。 |
+| 2024-10 | [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md) | [✓](https://github.com/ByteDance-Seed/ShadowKV) | 0 | ShadowKVは、長文LLMでKVキャッシュをGPUへ全保持するとバッチ数が制限され、CPUへ全退避すると疎なKVを毎トークン取得するPCIe遅延が大きい問題を扱う。回転位置埋め込み適用前のキーが系列ごとに強い低ランク構造を持つことを利用し、キーの低ランク表現・チャンク代表値・少数の外れ値だけGPUへ残し、低ランクでない値キャッシュをCPUへ退避する。デコードでは代表値で重要チャンクを選び、必要なキーをGPU上で再構成しながら対応する値だけCPUから取得する。A100実機で最大6倍大きいバッチを収容し、Llama-3.1-8Bで最大3.04倍の生成スループット向上を、1.56%の疎KV予算で品質を維持しながら達成する。 |
 | 2024-07 | [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md) | [✓](https://github.com/aquaml/aqua) | 0 | 同じNVLink / NVSwitch接続内で余っている別GPUのHBMを、KV cacheなどの一時退避先として借り、CPU DRAMへ退避するより高速にrequestを入れ替えて公平なonline servingを行うmemory system。 |
 <!-- survey:auto:end -->

@@ -1,24 +1,47 @@
 ---
-canonical_id: "AAAI:39106"
-last_audited: "2026-09-10"
+canonical_id: AAAI:39106
+arxiv_id: null
+doi: 10.1609/aaai.v40i24.39106
+openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference"
-summary: "expert weightを複数の小さな行列単位へ分け、複数の前layerが共通して必要と予測したexpert部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。"
-authors_affiliations: "Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng, Shibo He／Zhejiang University, Zhejiang University of Technology"
-published: "2026-03-14"
-publication_status: "Published"
-lineage: "Expert Prefetch"
-topics: ["CPU offload","Expert cache","Expert prefetch","Quality-cost"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://ojs.aaai.org/index.php/AAAI/article/view/39106"
-code: ""
-last_checked: "2026-09-03"
+title: 'FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference'
+summary: expert weightを複数の小さな行列単位へ分け、複数の前layerが共通して必要と予測したexpert部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。
+authors_affiliations: Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng,
+  Shibo He／Zhejiang University, Zhejiang University of Technology
+published: '2026-03-14'
+publication_status: Published
+lineage: Expert Prefetch
+topics:
+- CPU offload
+- Expert cache
+- Expert prefetch
+- Quality-cost
+importance: 高
+hardware_evaluation: 実機
+source: https://ojs.aaai.org/index.php/AAAI/article/view/39106
+code: ''
+implementation: 公式コード公開の記載はAAAI掲載ページで確認できず
+last_checked: '2026-09-11'
+authors:
+- Keyu Chen
+- Qihang Zhou
+- Bin Qian
+- Zhenyu Wen
+- Wenchao Meng
+- Shibo He
+publication: Proceedings of the AAAI Conference on Artificial Intelligence
+publication_type: conference paper
+sources:
+- https://ojs.aaai.org/index.php/AAAI/article/view/39106
 ---
 
 # FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference

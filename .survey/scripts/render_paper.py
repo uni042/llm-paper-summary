@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 
 def q(value: Any) -> str:
     if value is None:
@@ -85,22 +87,35 @@ def render_paper(record: dict[str, Any]) -> str:
     if not title or not canonical_id or not source or not summary:
         raise ValueError("metadata requires title, canonical_id, source, and summary")
 
-    front = ["---", f"canonical_id: {q(canonical_id)}"]
-    for key in ("arxiv_id", "doi", "openreview_id"):
-        if meta.get(key):
-            front.append(f"{key}: {q(meta[key])}")
-    front += [
-        f"title: {q(title)}",
-        f"summary: {q(summary)}",
-        f"source: {q(source)}",
-        f"last_audited: {q(meta.get('last_audited')) if meta.get('last_audited') else 'null'}",
-        f"audit_version: {int(meta.get('audit_version') or 0)}",
-        "---",
-        "",
-        f"# {title}",
-        "",
-        f"> {summary}",
-        "",
+    front_order = (
+        "canonical_id", "arxiv_id", "doi", "openreview_id", "arxiv_categories",
+        "title", "summary", "authors", "authors_affiliations", "published",
+        "publication", "publication_type", "publication_status", "publication_version",
+        "lineage", "topics",
+        "importance", "hardware_evaluation", "hardware_details", "quality_effect",
+        "storage_targets", "bottlenecks", "evidence_locations", "source", "sources",
+        "code", "implementation", "implementation_status", "evaluation_type",
+        "last_checked", "last_audited", "audit_version",
+    )
+    front_meta: dict[str, Any] = {}
+    for key in front_order:
+        if key in meta and meta[key] not in (None, "", []):
+            front_meta[key] = meta[key]
+    front_meta["canonical_id"] = canonical_id
+    front_meta["title"] = title
+    front_meta["summary"] = summary
+    front_meta["source"] = source
+    front_meta.setdefault("last_audited", None)
+    front_meta["audit_version"] = int(meta.get("audit_version") or 0)
+    yaml_text = yaml.safe_dump(
+        front_meta,
+        allow_unicode=True,
+        sort_keys=False,
+        default_flow_style=False,
+        width=1000,
+    ).rstrip()
+    front = [
+        "---", yaml_text, "---", "", f"# {title}", "", f"> {summary}", "",
     ]
 
     bib: list[str] = []

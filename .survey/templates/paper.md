@@ -3,6 +3,9 @@ canonical_id: ""
 arxiv_id: null
 doi: null
 openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
 last_audited: null
 audit_version: 0
 storage_targets: []
@@ -12,15 +15,20 @@ quality_effect: null
 evidence_locations: []
 title: ""
 summary: ""
+authors: []
 authors_affiliations: ""
 published: YYYY-MM-DD
+publication: ""
+publication_type: ""
 publication_status: Preprint
 lineage: ""
 topics: []
 importance: ""
 hardware_evaluation: ""
 source: ""
+sources: []
 code: ""
+implementation: ""
 last_checked: YYYY-MM-DD
 ---
 

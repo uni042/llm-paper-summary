@@ -1,24 +1,46 @@
 ---
-canonical_id: "AAAI:39454"
-last_audited: "2026-09-10"
+canonical_id: AAAI:39454
+arxiv_id: null
+doi: 10.1609/aaai.v40i27.39454
+openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
-title: "CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints"
-summary: "次layerで使うexpertを予測してGPUへ先読みし、予測が外れても正しいexpertを読み直さず、準備済みexpertをそのまま使うことでoffload待ちをなくす近似MoE方式。"
-authors_affiliations: "Han Li, Jingwei Sun, Junqing Lin, Guangzhong Sun／University of Science and Technology of China"
-published: "2026-03-14"
-publication_status: "Published"
-lineage: "Expert Prefetch"
-topics: ["CPU offload","Expert prefetch","Expert substitution","Quality-cost"]
-importance: "高"
-hardware_evaluation: "実機"
-source: "https://ojs.aaai.org/index.php/AAAI/article/view/39454"
-code: ""
-last_checked: "2026-09-03"
+title: 'CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU
+  Memory Constraints'
+summary: 次layerで使うexpertを予測してGPUへ先読みし、予測が外れても正しいexpertを読み直さず、準備済みexpertをそのまま使うことでoffload待ちをなくす近似MoE方式。
+authors_affiliations: Han Li, Jingwei Sun, Junqing Lin, Guangzhong Sun／University
+  of Science and Technology of China
+published: '2026-03-14'
+publication_status: Published
+lineage: Expert Prefetch
+topics:
+- CPU offload
+- Expert prefetch
+- Expert substitution
+- Quality-cost
+importance: 高
+hardware_evaluation: 実機
+source: https://ojs.aaai.org/index.php/AAAI/article/view/39454
+code: ''
+implementation: 公式コード公開の記載はAAAI掲載ページで確認できず
+last_checked: '2026-09-11'
+authors:
+- Han Li
+- Jingwei Sun
+- Junqing Lin
+- Guangzhong Sun
+publication: Proceedings of the AAAI Conference on Artificial Intelligence
+publication_type: conference paper
+sources:
+- https://ojs.aaai.org/index.php/AAAI/article/view/39454
 ---
 
 # CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints

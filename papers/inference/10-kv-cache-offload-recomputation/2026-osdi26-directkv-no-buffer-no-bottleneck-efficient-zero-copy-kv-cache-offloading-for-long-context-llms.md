@@ -1,5 +1,11 @@
 ---
 canonical_id: "USENIX:OSDI26:luo"
+arxiv_id: null
+doi: null
+openreview_id: null
+arxiv_categories:
+  primary: null
+  cross_list: []
 last_audited: null
 audit_version: 0
 storage_targets: []
@@ -18,6 +24,7 @@ importance: "高"
 hardware_evaluation: "実機"
 source: "https://www.usenix.org/conference/osdi26/presentation/luo"
 code: "https://github.com/shutianluo/DirectKV"
+implementation: "公式実装あり（shutianluo/DirectKV）"
 last_checked: "2026-09-06"
 ---
 

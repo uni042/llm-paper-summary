@@ -419,7 +419,9 @@ def markdown_report(results: list[PaperResult], args: argparse.Namespace) -> str
         f"- 構造化手法相当として認識: {len(structured)}件",
         f"- 日本語比率: 不合格 < {args.min_japanese_ratio:.0%}、警告 < {args.warn_japanese_ratio:.0%}",
         "- 英語専門語: 日本語・カタカナに置換可能な語が裸で1件でも残れば不合格",
-        "- 対象判定: papers/inference 配下の Markdown から README、comparison.md、# Moved 移動元を除外",
+        "- 対象判定: "
+        + ("papers/inference と papers/survey" if args.papers_root == "papers/inference" else args.papers_root)
+        + " 配下の Markdown から README、comparison.md、# Moved 移動元を除外",
         "- 手法見出し: 「手法」「手法のあらまし」「提案手法」「手法1: ...」などを同一扱い",
         "- 明示的な手法見出しがない長文要約は、十分な説明量と複数の機構別H2があれば構造化手法相当として扱う",
         "",
@@ -474,7 +476,15 @@ def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
     papers_root = (repo_root / args.papers_root).resolve()
-    files = sorted(path for path in papers_root.rglob("*.md") if is_paper_summary(path))
+    paper_roots = [papers_root]
+    if args.papers_root == "papers/inference":
+        paper_roots.append((repo_root / "papers/survey").resolve())
+    files = sorted({
+        path
+        for root in paper_roots if root.exists()
+        for path in root.rglob("*.md")
+        if is_paper_summary(path)
+    })
     results = [audit_file(path, repo_root, args) for path in files]
     report = markdown_report(results, args)
 
@@ -499,7 +509,7 @@ def main() -> int:
                 "min_japanese_ratio": args.min_japanese_ratio,
                 "warn_japanese_ratio": args.warn_japanese_ratio,
                 "bare_english_terms_allowed": 0,
-                "paper_target_policy": "all Markdown under papers/inference except README, comparison.md and # Moved stubs",
+                "paper_target_policy": "all Markdown under papers/inference and papers/survey except README, comparison.md and # Moved stubs",
                 "method_heading_compatibility": ["手法", "手法の…", "提案手法", "手法N: …"],
                 "structured_method_fallback": {
                     "min_prose_chars": STRUCTURED_METHOD_MIN_PROSE_CHARS,
