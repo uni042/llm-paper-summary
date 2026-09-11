@@ -46,8 +46,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2024-03 | [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md) | ✓ | 6 | attentionで重要な過去tokenだけを参照し、sequenceが伸びるにつれてKVをGPU保持・CPU退避・GPU再計算へ切り替えることで、KV容量とPCIe転送を減らす手法。 |
-| 2024-02 | [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md) | [✓](https://github.com/ScalingIntelligence/hydragen) | 6 | 同じ長いprefixを共有する複数sequenceのqueryをまとめて処理し、共有KVをsequenceごとに何度もHBMから読み直す無駄を減らすexact attention手法。 |
+| 2024-03 | [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md) | ✓ | 7 | attentionで重要な過去tokenだけを参照し、sequenceが伸びるにつれてKVをGPU保持・CPU退避・GPU再計算へ切り替えることで、KV容量とPCIe転送を減らす手法。 |
+| 2024-02 | [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md) | [✓](https://github.com/ScalingIntelligence/hydragen) | 7 | 同じ長いprefixを共有する複数sequenceのqueryをまとめて処理し、共有KVをsequenceごとに何度もHBMから読み直す無駄を減らすexact attention手法。 |
 | 2025-01 | [PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving](2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md) | ✓ | 2 | tensor parallel推論のGPU間集約通信中に、次に使うweightとKV cacheをHBMからL2 cacheへ先読みし、通信待ちとmemory readを同時に進める分散推論手法。 |
 | 2025-04 | [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md) | [✓](https://github.com/alibaba/vllm_xformers_prefetch) | 1 | attentionが現在のKV blockを計算している間に、次に使うKV blockをHBMからGPUのL2 cacheへ先読みし、decode中のHBM待ちを減らすHopper向け最適化。 |
 
