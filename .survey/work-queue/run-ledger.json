@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:08:10.608830+00:00",
+  "updated_at": "2026-09-11T02:11:42.552034+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,17 +3310,17 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T02:08:10.608830+00:00",
+      "last_recorded_at": "2026-09-11T02:11:42.552034+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 11,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3468,6 +3468,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34553647619:1",
+          "recorded_at": "2026-09-11T02:11:42.552034+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34553647619",
+            "run_attempt": "1",
+            "source_sha": "5f7c8234f5979c5000eee57ecbaf6c6963f39541"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3550,6 +3565,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-39572dc4c18c038e",
+          "type": "research",
+          "canonical_id": "arXiv:2601.03992",
+          "title": "A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3622,6 +3645,13 @@
           "type": "research",
           "canonical_id": "arXiv:2601.03992",
           "title": "A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems"
+        },
+        {
+          "job_id": "job-d7077ea85e263fb4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
