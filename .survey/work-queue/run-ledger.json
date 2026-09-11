@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T01:16:39.420887+00:00",
+  "updated_at": "2026-09-11T01:20:18.970375+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,14 +2999,14 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T01:16:39.420887+00:00",
+      "last_recorded_at": "2026-09-11T01:20:18.970375+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
@@ -3143,6 +3143,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34550241340:1",
+          "recorded_at": "2026-09-11T01:20:18.970375+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34550241340",
+            "run_attempt": "1",
+            "source_sha": "e9b321854ce1338311d6676d004be18a63ea1fa6"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3207,6 +3221,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.28095",
           "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-51969dd5b333edfe",
+          "type": "research",
+          "canonical_id": "arXiv:2604.26074",
+          "title": "DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference",
           "from": "ready",
           "to": "completed"
         }
