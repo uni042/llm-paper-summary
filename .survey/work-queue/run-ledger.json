@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T07:39:24.694086+00:00",
+  "updated_at": "2026-09-11T07:40:24.029869+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5597,7 +5597,7 @@
     {
       "run_key": "2026-09-11T16:30:00+09:00",
       "first_recorded_at": "2026-09-11T07:34:14.245263+00:00",
-      "last_recorded_at": "2026-09-11T07:39:24.694086+00:00",
+      "last_recorded_at": "2026-09-11T07:40:24.029869+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -5606,9 +5606,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -5684,6 +5684,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34575449300:1",
+          "recorded_at": "2026-09-11T07:40:24.029869+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34575449300",
+            "run_attempt": "1",
+            "source_sha": "45c6adbc2dd7d42036dde2616e46d19178bd9f8e"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5726,6 +5740,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-9a6f7c6dafd7396c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5763,6 +5785,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-30e28c61082970e0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.08182",
+          "title": "Memory Offloading for Large Language Model Inference with Latency SLO Guarantees"
         }
       ],
       "new_paper_ids": [
@@ -5773,7 +5802,8 @@
         ".survey/work-queue/results/20260911T1636JST-discovery-1cf1bb093db0f2b0.json",
         ".survey/work-queue/results/20260911T1637JST-discovery-add94fca07b82c40.json",
         ".survey/work-queue/results/20260911T1639JST-discovery-3e5c753d0d72de11.json",
-        ".survey/work-queue/results/20260911T1641JST-discovery-06a978d956ba3116.json"
+        ".survey/work-queue/results/20260911T1641JST-discovery-06a978d956ba3116.json",
+        ".survey/work-queue/results/20260911T1643JST-discovery-9a6f7c6dafd7396c.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 280,

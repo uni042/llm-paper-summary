@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-30e28c61082970e0",
+  "type": "research",
+  "parent_job_id": "job-9a6f7c6dafd7396c",
+  "priority": 79,
+  "canonical_id": "arXiv:2502.08182",
+  "title": "Memory Offloading for Large Language Model Inference with Latency SLO Guarantees",
+  "source_url": "https://arxiv.org/abs/2502.08182",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md",
+  "selection_reason": "SuperInferの関連研究から遡ったSLO指向オフロード研究。Select-NはGPUとCPU間のモデル状態オフロードを固定方式にせず、連続してGPUへ保持する層数をoffloading intervalとして定式化し、オフラインのモデル・SLOプロファイルと実行時PCIe帯域観測を組み合わせて反復ごとに調整する。既存のDeepSpeed系のSLO違反とFlexGen系の保守的メモリ利用の間を狙い、SLOを維持しながらホストメモリ利用を増やして最大1.85倍のserving throughputを報告する。SuperInferがPCIe方式の代表的先行研究として直接比較・位置付けしており、階層メモリ系統の重要な未収録候補として精読価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T07:40:12+00:00",
+  "artifact_transport": "structured_record_v10"
+}
