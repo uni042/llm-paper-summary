@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:01:54.166784+00:00",
+  "updated_at": "2026-09-11T02:06:48.985960+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,17 +3310,17 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T02:01:54.166784+00:00",
+      "last_recorded_at": "2026-09-11T02:06:48.985960+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 9,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3439,6 +3439,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34553329538:1",
+          "recorded_at": "2026-09-11T02:06:48.985960+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34553329538",
+            "run_attempt": "1",
+            "source_sha": "020e2f8c93d3f7089efbf80ad044450fc7e55f4a"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3505,6 +3520,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2e2e6a0cd88dd666",
+          "type": "research",
+          "canonical_id": "arXiv:2602.21626",
+          "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3563,6 +3586,13 @@
           "type": "research",
           "canonical_id": "arXiv:2602.21626",
           "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning"
+        },
+        {
+          "job_id": "job-cf8b0e58e9d070d5",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
