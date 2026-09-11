@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-1f9b736a87f9638c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.00407",
+      "title": "DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.00407",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2609.00407-dynande-dynamic-near-data-expert-scheduling.md",
+      "priority": 89,
+      "reason": "NPUと近傍データ処理（Near-Data Processing; NDP）を協調させるMoE推論で、ハードウェア異種性、バッチ内の専門家並行性、時間方向の専門家再利用を同時に扱う動的配置方式。分析性能モデルを用いて層ごとの専門家をNPU/NDPへ割り当て、NPUメモリに残る専門家の重み再転送を省く。論文は既存NPU-NDP MoE方式に対してプリフィル平均2.6倍、デコード平均2.2倍の高速化を報告しており、専門家オフロード／階層実行の新しい強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02029",
+      "title": "HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models",
+      "source_url": "https://arxiv.org/abs/2609.02029",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md",
+      "priority": 72,
+      "reason": "長文脈ハイブリッドモデルで残るグローバル注意層のKVキャッシュを、物理KVヘッドごとに異なる履歴窓へ割り当て、総常駐KV予算を事前に固定する学習不要方式。下位層の実際の配置方針を条件にして上位層を順次較正するSeqCalibにより、層間相互作用を含めた予算配分を行う。KV容量を予測可能にしてサービング時の常駐量を制御する点が既存の一律圧縮と異なるため精読候補。"
+    }
+  ]
+}
