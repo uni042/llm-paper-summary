@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T03:30:25.790121+00:00",
+  "updated_at": "2026-09-11T03:31:40.896363+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,7 +3838,7 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T03:30:25.790121+00:00",
+      "last_recorded_at": "2026-09-11T03:31:40.896363+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -3847,9 +3847,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 14,
+        "new_jobs": 16,
         "new_papers": 5,
         "fallback_archived": 0
       },
@@ -4054,6 +4054,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34558755680:1",
+          "recorded_at": "2026-09-11T03:31:40.896363+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34558755680",
+            "run_attempt": "1",
+            "source_sha": "d9ae81f1e66290c09b7dcc11fdfb54b47feab7e2"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4150,6 +4164,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15383",
           "title": "Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-7b3846a7671b0417",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -4252,6 +4274,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-1f4eef52c26aa81f",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2602.07721",
+          "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs"
+        },
+        {
+          "job_id": "job-research-a6bfa4373afaf3ea",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.05708",
+          "title": "Akashic: A Low-Overhead LLM Inference Service with MemAttention"
         }
       ],
       "new_paper_ids": [
@@ -4267,7 +4303,8 @@
         ".survey/work-queue/results/20260911T1151JST-discovery-04676dbdfb36284d.json",
         ".survey/work-queue/results/20260911T1154JST-discovery-a273f839dfbdd6ee.json",
         ".survey/work-queue/results/20260911T1203JST-discovery-b18cb287a414a209.json",
-        ".survey/work-queue/results/20260911T1227JST-discovery-a3093f5c71fb5c98.json"
+        ".survey/work-queue/results/20260911T1227JST-discovery-a3093f5c71fb5c98.json",
+        ".survey/work-queue/results/20260911T1233JST-discovery-7b3846a7671b0417.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 252,

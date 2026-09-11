@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-1f4eef52c26aa81f",
+  "type": "research",
+  "parent_job_id": "job-7b3846a7671b0417",
+  "priority": 84,
+  "canonical_id": "arXiv:2602.07721",
+  "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+  "source_url": "https://arxiv.org/abs/2602.07721",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-drift-robust-kv-retrieval.md",
+  "selection_reason": "百万トークン級の長文で、GPUネイティブな衝突ベース候補選択と量子化内積再順位付けを組み合わせ、CPUへ退避したKVキャッシュを統合仮想アドレス（Unified Virtual Addressing; UVA）経由で必要部分だけ取得する。全注意がメモリ不足になる領域まで拡張し、百万トークンでMagicPIG比17倍、PQCache比44倍のデコード遅延削減を報告する。階層KV保存だけでなく、巨大なCPU側KVからGPUへ何を読むかという検索・転送統合問題を扱うため有用。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-11T03:31:30+00:00",
+  "completed_at": "2026-09-11T03:31:36+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2602.07721",
+  "duplicate_of_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2602.07721"
+  }
+}
