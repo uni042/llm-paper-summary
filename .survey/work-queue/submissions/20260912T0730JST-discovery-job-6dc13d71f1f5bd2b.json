@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6dc13d71f1f5bd2b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.16135-swiftcache.md",
+      "priority": 91,
+      "reason": "マルチターン対話で蓄積するKVキャッシュをCPU/SSDへ単純退避する代わりに、同一サーバ内の低負荷モデルが持つ未使用GPUメモリを高負荷モデルへ貸し出し、NVLink経由で異種モデル間KVキャッシュ共有を行う推論システム。さらにローカルGPUには現在処理中の層のKVだけを保持して長文脈を支える。実環境評価ではvLLM/SGLangに対しP99 TTFTを最大69%削減し、最大文脈長を最大3.98倍へ拡張しており、GPU/CPU/SSD階層だけでなくGPU間の遊休容量を活用する点が既存オフロード研究と明確に異なる。"
+    },
+    {
+      "canonical_id": "arXiv:2608.16477",
+      "title": "Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN",
+      "source_url": "https://arxiv.org/abs/2608.16477",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas.md",
+      "priority": 84,
+      "reason": "モバイル端末のセル間ハンドオーバー時にLLM推論状態が旧基地局へ取り残される問題に対し、移動予測と実行時テレメトリを用いて移動前からKVキャッシュを先回り移行するフレームワーク。履歴prefixは移動先でprefill再計算し、生成中suffixのKVブロックだけを移動元からストリーム転送することで転送量とサービス中断を重ね合わせる。vLLM試作で事後回復方式に対し平均サービス中断時間を2.28〜89.68倍短縮し、旧基地局からの継続転送より平均ITLを16〜50%削減している。KVキャッシュ移行と分散サービングの境界領域として新規性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2607.16892-robust-kv-cache-management.md",
+      "priority": 80,
+      "reason": "出力長が事前に分からないためKVキャッシュを過少予約するとpreemptionと再計算、過大予約するとGPUメモリ浪費が起きる問題を、GPU並列構成・要求クラス別予約量・異種serving groupへのrouting・prefix cachingまで含む分布ロバスト最適化として扱う。Wasserstein DROとblock coordinate descentで分布ずれにも耐える予約量を決め、BurstGPT/Azure/ShareGPTトレースで固定分位予約より最大56%低コストを報告。KV容量管理を単一ヒューリスティックではなくSLOと不確実性を含む全体最適化へ拡張している点が収録価値を持つ。"
+    }
+  ]
+}
