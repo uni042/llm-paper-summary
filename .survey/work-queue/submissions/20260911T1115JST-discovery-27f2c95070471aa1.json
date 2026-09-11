@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-27f2c95070471aa1",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.12103",
+      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.12103",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.12103-kernel-managed-expert-cache.md",
+      "priority": 95,
+      "reason": "1.45TB級の専門家プールを持つ兆パラメータMoEを対象に、利用者空間で専門家単位の頻度キャッシュを管理する従来設計ではなく、OSのページキャッシュとLRUを専門家階層として使う実測研究。GH200上で128〜896専門家/層の3モデルを再生し、同一メモリ条件では未調整のカーネルLRUが同一分布オラクル頻度表と同程度の需要を処理し、オラクル優位は分布外で消えることを報告する。さらにルータ先読みは同期先読みでは利益がなく、MGLRUとメモリ制限方式が観測I/Oを約2倍誇張しうるという測定上の落とし穴も示す。DRAM/ストレージ階層、MoE expert cache、先読み設計の前提を直接再検討する重要な比較研究。"
+    }
+  ]
+}
