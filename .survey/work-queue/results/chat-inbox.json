@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-8455bd8ffbc74d54",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2602.11521.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-5439ec0e0daf70c9",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T02:43:42+00:00"
 }
