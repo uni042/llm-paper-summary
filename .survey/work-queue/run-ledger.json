@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T07:17:15.192970+00:00",
+  "updated_at": "2026-09-11T07:19:09.161120+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,7 +5239,7 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T07:17:15.192970+00:00",
+      "last_recorded_at": "2026-09-11T07:19:09.161120+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -5248,9 +5248,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 9,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -5384,6 +5384,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34573789992:1",
+          "recorded_at": "2026-09-11T07:19:09.161120+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34573789992",
+            "run_attempt": "1",
+            "source_sha": "70ac39b782d605648ac3fc382748e7982bf8c8cd"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5458,6 +5472,14 @@
           "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-001ad03b4536492d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5516,6 +5538,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-75a3e4e48e35224e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -5527,7 +5556,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1543JST-discovery-b7d2560206d7b78d.json",
         ".survey/work-queue/results/20260911T1555JST-discovery-3732a5ada325b4a2.json",
-        ".survey/work-queue/results/20260911T1559JST-discovery-9f406f6b27cacd78.json"
+        ".survey/work-queue/results/20260911T1559JST-discovery-9f406f6b27cacd78.json",
+        ".survey/work-queue/results/20260911T1619JST-discovery-001ad03b4536492d.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
