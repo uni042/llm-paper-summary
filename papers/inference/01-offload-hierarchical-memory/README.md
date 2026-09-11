@@ -32,13 +32,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
 | 2024-01 | [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md) | [✓](https://github.com/EfficientMoE/MoE-Infinity) | 4 | 同じrequestでは使われるexpertに偏りが続きやすい性質を利用し、過去のrouting履歴から再利用されそうなexpertをGPUへ残して先読みすることで、個人PC上のMoE offload待ちを減らすシステム。 |
-| 2025-06 | [2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md) | — | 1 | 未記録 |
-| 2025-01 | [2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md) | — | 1 | 未記録 |
+| 2025-06 | [Moved](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md) | — | 1 | 未記録 |
+| 2025-01 | [Moved](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md) | — | 1 | 未記録 |
+| 2024-11 | [Moved](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md) | — | 1 | 未記録 |
+| 2024-11 | [Moved](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md) | — | 1 | 未記録 |
 | 2024-11 | [MoE-Lightning: High-Throughput MoE Inference with CPU-GPU-I/O Pipelining](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md) | — | 1 | expert weightとKV cacheをCPU DRAMへ置き、次のweight転送・CPU attention・GPU MoE計算をmicro-batch間で同時進行させて、低VRAM GPUのI/O待ちを減らす推論system。 |
-| 2024-11 | [2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md) | — | 1 | 未記録 |
-| 2024-11 | [2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md) | — | 1 | 未記録 |
-| 2024-09 | [2024-2409.04992-instattention-instinfer-in-storage-attention-offloading](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md) | — | 1 | 未記録 |
-| 2024-03 | [2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md) | — | 1 | 未記録 |
+| 2024-09 | [Moved](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md) | — | 1 | 未記録 |
+| 2024-03 | [Moved](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md) | — | 1 | 未記録 |
 | 2023-12 | [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md) | [✓](https://github.com/dvmazur/mixtral-offloading) | 1 | MoE expertをCPUへ置き、最近使ったexpertをGPUへ残すLRU cacheと、将来使いそうなexpertの投機的先読みを組み合わせて、GPU memory制約下の重み転送待ちを減らす推論手法。 |
 
 ### その他

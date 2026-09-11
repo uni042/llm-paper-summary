@@ -15,7 +15,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
 | 2026-04 | [Efficient Training on Multiple Consumer GPUs with RoundPipe](2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md) | [✓](https://github.com/ITcarrot/RoundPipe) | 0 | 各GPUに特定の層（layer）を固定せず、空いたGPUへ処理段階を順番に割り当て、実測負荷に合わせた不均等分割と転送優先度制御でconsumer GPU学習の待ち時間を減らす。 |
-| 2026-02 | [2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training](2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md) | — | 0 | 未記録 |
+| 2026-02 | [Horizon-LM: A RAM-Centric Architecture for LLM Training](2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md) | [✓](https://github.com/DLYuanGod/Horizon-LM) | 0 | CPU DRAMを単なるGPUメモリ不足時の退避先ではなく**パラメータと最適化状態の正本**として扱い、GPUには計算中の層だけを流し込むことでGPUメモリ使用量をモデル全体の大きさから切り離そうとする方式。ただし論文は性能計算の誤りにより撤回済み。 |
 | 2025-12 | [GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping](2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md) | [✓](https://github.com/npz7yyk/GreedySnake) | 0 | 同じ層（layer）の全マイクロバッチ（microbatch）をまとめて処理して重みのSSD再読込を減らし、最適化器更新（optimizer step）の一部を次の学習反復と重ねることでI/O待ちを減らす方式。 |
 | 2025-11 | [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md) | — | 0 | GPU・CPU DRAM・NVMeを3段のキャッシュとして使い、各テンソル（tensor）が次に必要になる時刻と役割に応じて、どの階層へ残すか・いつ先読みするかを決める学習システム。 |
 
