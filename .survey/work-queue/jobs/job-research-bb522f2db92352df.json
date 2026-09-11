@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-bb522f2db92352df",
+  "type": "research",
+  "parent_job_id": "job-efe114fe19d772d8",
+  "priority": 78,
+  "canonical_id": "arXiv:2606.17059",
+  "title": "Towards Distributed Inference of LLMs on a P2P Network",
+  "source_url": "https://arxiv.org/abs/2606.17059",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17059-p2p-prefix-cache-aware-routing.md",
+  "selection_reason": "cluster-wide prefix reuseのためにKV cacheを転送する代わりに、各nodeのradix treeとanti-entropyでpeerのcache状態を弱整合に推定し、最長prefix matchを持つnodeへ分散routingする。metadataが古くてもcache missになるだけでcorrectnessを壊さない設計で、中央schedulerなしのprefix-affinity routingを扱う。高network latencyやhotspotでの限界も評価しており、分散prefix cache管理の新しい比較点になる。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T09:02:56+00:00",
+  "artifact_transport": "structured_record_v10"
+}

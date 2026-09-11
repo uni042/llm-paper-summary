@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:02:17.720099+00:00",
+  "updated_at": "2026-09-11T09:03:08.910073+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5843,7 +5843,7 @@
     {
       "run_key": "2026-09-11T17:30:00+09:00",
       "first_recorded_at": "2026-09-11T08:32:59.073522+00:00",
-      "last_recorded_at": "2026-09-11T09:02:17.720099+00:00",
+      "last_recorded_at": "2026-09-11T09:03:08.910073+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
@@ -5851,9 +5851,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 11,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -5984,6 +5984,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34582184595:1",
+          "recorded_at": "2026-09-11T09:03:08.910073+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34582184595",
+            "run_attempt": "1",
+            "source_sha": "2fc9dbfd66630bb7163bb0ac2fba37c1aea729c4"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6058,6 +6072,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-efe114fe19d772d8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6123,6 +6145,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-6daf6a1f16a19d5e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.10726",
+          "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems"
+        },
+        {
+          "job_id": "job-research-bb522f2db92352df",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.17059",
+          "title": "Towards Distributed Inference of LLMs on a P2P Network"
         }
       ],
       "new_paper_ids": [],
@@ -6134,7 +6170,8 @@
         ".survey/work-queue/results/20260911T1759JST-discovery-80f8aa6f5bbc165b.json",
         ".survey/work-queue/results/20260911T1756JST-discovery-2985ba59040164a3.json",
         ".survey/work-queue/results/20260911T1802JST-discovery-cf8806698ad633c6.json",
-        ".survey/work-queue/results/20260911T1805JST-discovery-c1ec790fefc60212.json"
+        ".survey/work-queue/results/20260911T1805JST-discovery-c1ec790fefc60212.json",
+        ".survey/work-queue/results/20260911T1808JST-discovery-efe114fe19d772d8.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 302,
