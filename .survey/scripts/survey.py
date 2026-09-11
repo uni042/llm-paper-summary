@@ -193,6 +193,19 @@ def _recent_window(now=None):
     return start, end
 
 
+def _legacy_title(body, path):
+    m = re.search(r"^#\s+(.+?)\s*$", body, re.M)
+    return m.group(1).strip() if m else path.stem
+
+
+def _legacy_summary(body):
+    m = re.search(r"^##\s+一文要約\s*$\n+(.*?)(?=\n##\s|\Z)", body, re.M | re.S)
+    if not m:
+        return ""
+    value = m.group(1).strip()
+    return re.sub(r"\s*\n\s*", " ", value)
+
+
 def _explicit_implementation(meta, body=""):
     for key in ("code", "code_url", "implementation", "implementation_url", "repository", "repo"):
         value = meta.get(key)
@@ -205,7 +218,7 @@ def _explicit_implementation(meta, body=""):
     status = str(meta.get("implementation_status") or "").strip().lower()
     if status and any(token in status for token in ("available", "released", "public", "official-code")):
         return True
-    m = re.search(r"^[-*]\s*\*\*実装\*\*:\s*(.+)$", body, re.M)
+    m = re.search(r"^[-*]\s*\*\*(?:実装|コード)\*\*:\s*(.+)$", body, re.M)
     if m:
         value = m.group(1).strip()
         url = re.search(r"https?://[^\s)>]+", value)
@@ -243,8 +256,8 @@ def paper_views():
                 "lineage": p.parent.name,
                 "path": rel,
                 "file": p,
-                "title": meta.get("title") or p.stem,
-                "summary": meta.get("summary", ""),
+                "title": meta.get("title") or _legacy_title(body, p),
+                "summary": meta.get("summary") or _legacy_summary(body),
                 "year": year,
                 "month": month,
                 "identifiers": _view_identifiers(meta, p),
@@ -365,6 +378,11 @@ def _migrate_legacy_training_list(path):
         path.write_text(stripped.rstrip() + "\n", encoding="utf-8")
 
 
+def _lineage_sort_key(item):
+    name = item[0]
+    return (1 if "other" in name.lower() else 0, name)
+
+
 def _render_family_overview(family, rows):
     grouped = {}
     for r in rows:
@@ -378,9 +396,14 @@ def _render_family_overview(family, rows):
         "| 系統 | 本数 |",
         "|---|---:|",
     ]
-    lines += [f"| [{k}]({k}/README.md) | {len(v)} |" for k, v in sorted(grouped.items())]
+    lines += [f"| [{k}]({k}/README.md) | {len(v)} |" for k, v in sorted(grouped.items(), key=_lineage_sort_key)]
     if not grouped:
         lines.append("| — | 0 |")
+    family_readme = repository_root() / "papers" / family / "README.md"
+    if family_readme.exists():
+        content = family_readme.read_text(encoding="utf-8")
+        content = re.sub(r"収録論文: \*\*\d+本\*\*", f"収録論文: **{len(rows)}本**", content)
+        family_readme.write_text(content, encoding="utf-8")
     block(f"papers/{family}/README.md", "\n".join(lines))
 
 
@@ -417,6 +440,13 @@ def _update_catalog_counts(by_family):
         content = re.sub(r"## Inference / 推論 — \d+本", f"## Inference / 推論 — {counts['inference']}本", content)
         content = re.sub(r"## Training / 学習 — \d+本", f"## Training / 学習 — {counts['training']}本", content)
         content = re.sub(r"## Survey / サーベイ — \d+本", f"## Survey / サーベイ — {counts['survey']}本", content)
+        for family, rows in by_family.items():
+            lineage_counts = {}
+            for row in rows:
+                lineage_counts[row["lineage"]] = lineage_counts.get(row["lineage"], 0) + 1
+            for lineage, count in lineage_counts.items():
+                pattern = r"(\]\(" + re.escape(f"{family}/{lineage}/") + r"\)\s*—\s*)\d+本"
+                content = re.sub(pattern, lambda m, count=count: m.group(1) + str(count) + "本", content)
         p.write_text(content, encoding="utf-8")
         block("papers/README.md", f"推論：**{counts['inference']}本** ／ 学習：**{counts['training']}本** ／ サーベイ：**{counts['survey']}本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)")
     root = repo / "README.md"
