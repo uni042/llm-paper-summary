@@ -32,6 +32,22 @@ MULTIWORD_TITLECASE_RE = re.compile(
     r"(?<![A-Za-z0-9])[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*(?:\s+[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*)+(?![A-Za-z0-9])"
 )
 
+METHOD_SIGNAL_RE = re.compile(
+    r"(?:提案|手法|方式|機構|システム|設計|スケジューラ|アルゴリズム|"
+    r"予測して|予測し|配置して|配置し|選択して|選択し|割り当て|切り替え|"
+    r"先読み|オフロード|退避|圧縮|量子化|枝刈り|再計算|分離|統合|調整し|"
+    r"動的に[^。！？]{0,30}(?:変え|変更|決め|選ぶ|配置)|することで|によって[^。！？]{0,40}(?:減ら|抑え|改善))"
+)
+RESULT_SIGNAL_RE = re.compile(
+    r"(?:評価|実験|測定|比較|解析|分析|検証|ベンチマーク|結果)[^。！？]{0,90}"
+    r"(?:示した|確認した|分かった|達成|短縮|削減|低減|改善|向上|高速化|上回|維持|同等|支配的|逆転)"
+    r"|(?:\d+(?:\.\d+)?\s*(?:%|％|倍|x|×|ms|秒|GB|MB|TB|W|J|トークン/秒|tokens?/s))",
+    re.I,
+)
+PROBLEM_SIGNAL_RE = re.compile(
+    r"(?:問題|課題|ボトルネック|不足|制約|限られ|待ち時間|遅延|帯域|メモリ|転送|競合|再計算|負荷|難しい|高コスト)"
+)
+
 # These replacements are deliberately local to the short paper-list view.
 # Body quality policy remains unchanged; this layer merely turns English-heavy
 # legacy overviews into readable Japanese before they are shortened.
@@ -276,6 +292,32 @@ def _trim_long_sentence(sentence: str, max_chars: int) -> str:
     return sentence[: max_chars - 1].rstrip() + "…"
 
 
+def _find_sentence(sentences: list[str], pattern: re.Pattern[str], *, start: int = 0) -> int | None:
+    for index in range(start, len(sentences)):
+        if pattern.search(sentences[index]):
+            return index
+    return None
+
+
+def _semantic_sentence_order(sentences: list[str]) -> list[int]:
+    """Prefer problem -> method -> result instead of blindly taking the lead."""
+    method = _find_sentence(sentences, METHOD_SIGNAL_RE)
+    if method is None:
+        return list(range(len(sentences)))
+
+    problem: int | None = None
+    for index in range(method + 1):
+        if index != method and PROBLEM_SIGNAL_RE.search(sentences[index]):
+            problem = index
+            break
+
+    result = _find_sentence(sentences, RESULT_SIGNAL_RE, start=method + 1)
+    selected = [index for index in (problem, method, result) if index is not None]
+    selected_set = set(selected)
+    selected.extend(index for index in range(len(sentences)) if index not in selected_set)
+    return selected
+
+
 def _compact(
     text: str,
     min_chars: int,
@@ -286,17 +328,38 @@ def _compact(
     if not text:
         return ""
     sentences = [s.strip() for s in SENTENCE_RE.findall(text) if s.strip()] or [text]
-    chosen: list[str] = []
-    for sentence in sentences:
-        if not chosen and len(sentence) > max_chars:
+    order = _semantic_sentence_order(sentences)
+    chosen_indices: list[int] = []
+
+    for index in order:
+        sentence = sentences[index]
+        if not chosen_indices and len(sentence) > max_chars:
             return _trim_long_sentence(sentence, max_chars)
-        candidate = "".join(chosen + [sentence])
+        candidate_indices = sorted(chosen_indices + [index])
+        candidate = "".join(sentences[i] for i in candidate_indices)
         if len(candidate) > max_chars:
-            break
-        chosen.append(sentence)
-        if len(candidate) >= min_chars:
-            break
-    result = "".join(chosen) if chosen else _trim_long_sentence(text, max_chars)
+            continue
+        chosen_indices.append(index)
+
+        chosen_text = "".join(sentences[i] for i in sorted(chosen_indices))
+        has_method = any(METHOD_SIGNAL_RE.search(sentences[i]) for i in chosen_indices)
+        if len(chosen_text) >= min_chars and has_method:
+            # If a result sentence was explicitly selected and still fits, keep
+            # scanning until it is included; otherwise method clarity wins.
+            result_index = _find_sentence(sentences, RESULT_SIGNAL_RE)
+            if result_index is None or result_index in chosen_indices:
+                break
+            with_result = "".join(
+                sentences[i] for i in sorted(set(chosen_indices + [result_index]))
+            )
+            if len(with_result) > max_chars:
+                break
+
+    if not chosen_indices:
+        result = _trim_long_sentence(text, max_chars)
+    else:
+        result = "".join(sentences[i] for i in sorted(chosen_indices))
+
     if len(result) > max_chars:
         result = _trim_long_sentence(result, max_chars)
     if result and result[-1] not in "。！？…":
