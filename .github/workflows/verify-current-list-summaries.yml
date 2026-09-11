@@ -1,0 +1,61 @@
+name: Verify current paper list summaries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-current-list-summaries.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Verify all current list summaries
+        run: |
+          set -euo pipefail
+          echo "HEAD=$(git rev-parse HEAD)"
+          python -m unittest discover -s .survey/tests -p 'test_*quality.py'
+          python .survey/scripts/audit_list_summary_quality.py \
+            --repo-root . \
+            --markdown-out /tmp/list-summary-quality-audit.md \
+            --json-out /tmp/list-summary-quality-audit.json
+          python - <<'PY'
+          import json
+          from collections import Counter
+          data = json.load(open('/tmp/list-summary-quality-audit.json', encoding='utf-8'))
+          counts = Counter(row['status'] for row in data['results'])
+          families = Counter(row['path'].split('/')[1] for row in data['results'])
+          print(f"TOTAL={len(data['results'])}")
+          print(f"PASS={counts['PASS']} WARN={counts['WARN']} FAIL={counts['FAIL']}")
+          print('FAMILIES=' + ' '.join(f'{k}:{v}' for k, v in sorted(families.items())))
+          for row in data['results']:
+              if row['status'] != 'PASS':
+                  print(f"{row['status']} {row['path']} :: " + '; '.join(row['failures'] + row['warnings']))
+          PY
+
+      - name: Confirm generated indexes are current
+        run: |
+          set -euo pipefail
+          python .survey/scripts/survey.py --root .survey build
+          git diff --exit-code -- README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
+          if find papers/inference papers/training papers/survey -mindepth 2 -maxdepth 2 -name README.md -print -quit | grep -q .; then
+            git diff --exit-code -- $(find papers/inference papers/training papers/survey -mindepth 2 -maxdepth 2 -name README.md -print)
+          fi
