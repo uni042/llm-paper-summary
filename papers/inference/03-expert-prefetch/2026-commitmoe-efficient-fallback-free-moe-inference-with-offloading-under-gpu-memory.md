@@ -76,7 +76,7 @@ CommitMoEは予測エキスパートを単なる候補ではなく実行対象�
 したがって高速化の代償は明確で、**元の エキスパート computationを置換するapproximate inference**である。
 
 
-CommitMoEは予測ミス時も元専門家を追加ロードせず出力重みを再配分する近似方式で、MoE-Infinityを含むオフロード比較比のエンドツーエンド速度を約1.3〜9.4倍にした。
+RTX 4090／RTX 2080 Ti実機でQwen1.5-MoE-Chat、DeepSeek-V2-Lite-Chat、Mixtral-8x7B-InstructをPyTorch＋MoE-Infinity上で評価し、MoE-Infinity等のCPU→GPUオンデマンド・オフロードに対するE2E速度を約1.3〜9.4倍にした。ただしOWAでnative expertを置換する近似で、平均タスクスコアが保たれても出力一致は保証しない。
 
 ## 手法のあらまし
 
