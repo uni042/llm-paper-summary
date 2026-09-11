@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T05:33:15.103860+00:00",
+  "updated_at": "2026-09-11T05:38:31.193748+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4871,13 +4871,13 @@
     {
       "run_key": "2026-09-11T14:30:00+09:00",
       "first_recorded_at": "2026-09-11T05:33:15.103860+00:00",
-      "last_recorded_at": "2026-09-11T05:33:15.103860+00:00",
+      "last_recorded_at": "2026-09-11T05:38:31.193748+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -4900,6 +4900,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34566719930:1",
+          "recorded_at": "2026-09-11T05:38:31.193748+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34566719930",
+            "run_attempt": "1",
+            "source_sha": "3a4c3c1c1e3e3eccadbf5e7dba4366d0306f2158"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4908,6 +4922,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.16473",
           "title": "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-e1c7f91a13d91f98",
+          "type": "research",
+          "canonical_id": "arXiv:2606.04415",
+          "title": "FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location",
           "from": "ready",
           "to": "completed"
         }
@@ -4926,7 +4948,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 260,
       "paper_active_count_after": 267,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
