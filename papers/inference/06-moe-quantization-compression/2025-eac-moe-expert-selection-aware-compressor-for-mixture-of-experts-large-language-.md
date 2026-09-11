@@ -16,6 +16,7 @@ quality_effect: null
 evidence_locations: []
 title: 'EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models'
 summary: 量子化後も元モデルと近いexpertが選ばれるようrouter上位expertの誤差を重点的に補正し、prefillでほとんど使われないexpertを入力ごとに省く圧縮手法。
+list_summary: "EAC-MoEは、量子化でルータが選ぶ専門家がずれる誤差を重点補正し、プリフィルで低頻度専門家を入力単位に枝刈りして、品質と容量を両立する。"
 authors_affiliations: Yuanteng Chen, Yuantian Shao, Peisong Wang, Jian Cheng／Chinese Academy of Sciences, UCAS, Nanjing University of Science and Technology, AIRIA, [Maicro.ai](http://Maicro.ai)
 published: '2025-08-03'
 publication_status: Published
@@ -129,11 +130,13 @@ references_total: 69
 
 # EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models
 
-> 量子化後も元モデルと近いエキスパートが選ばれるようルータ上位エキスパートの誤差を重点的に補正し、プリフィルでほとんど使われないエキスパートを入力ごとに省く圧縮手法。
+> EAC-MoEは、量子化でルータが選ぶ専門家がずれる誤差を重点補正し、プリフィルで低頻度専門家を入力単位に枝刈りして、品質と容量を両立する。
 
 ## 概要
+
 EAC-MoEは、量子化誤差を「エキスパートの出力値が少しずれる」だけでなく、**そのずれによって次のルータが別エキスパートを選んでしまうこと**まで含めて扱う。論文ではこのルーティングのずれを `expert-shift` と呼び、QESCで補正する。さらにプリフィル中のエキスパート利用頻度を見て、ほとんど使われないエキスパートをPESFでpruneする。
 
+RTX 3090のMixtral等の評価では、メモリを4.92倍削減し、エンドツーエンド速度を1.68倍、平均精度低下を1%未満に抑えた。平均2.06ビットではEAC-MoEの精度65.90、MC-MoE62.56で、ルータの専門家ずれを補正した差が現れた。
 ## 手法のあらまし
 
 ### 1. 量子化誤差で次layerのexpert選択まで変わる
