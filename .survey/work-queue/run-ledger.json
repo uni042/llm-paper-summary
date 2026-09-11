@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:34:31.084867+00:00",
+  "updated_at": "2026-09-11T06:38:17.717162+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,13 +5239,13 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T06:34:31.084867+00:00",
+      "last_recorded_at": "2026-09-11T06:38:17.717162+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -5268,6 +5268,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34570756205:1",
+          "recorded_at": "2026-09-11T06:38:17.717162+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34570756205",
+            "run_attempt": "1",
+            "source_sha": "c015eac4be8a6d982b02a5479bbdc91398f38381"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5276,6 +5290,14 @@
           "type": "research",
           "canonical_id": "arXiv:2511.14510",
           "title": "LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-3342e2ae369a80fb",
+          "type": "research",
+          "canonical_id": "arXiv:2505.19586",
+          "title": "TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization",
           "from": "ready",
           "to": "completed"
         }
@@ -5291,7 +5313,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
       "paper_active_count_after": 271,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }

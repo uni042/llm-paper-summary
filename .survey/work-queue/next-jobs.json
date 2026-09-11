@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 106,
+      "completed": 107,
       "superseded": 42,
       "deferred": 3,
-      "ready": 2,
+      "ready": 1,
       "blocked": 2
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-3342e2ae369a80fb",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2505.19586",
-      "title": "TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization",
-      "source_url": "https://arxiv.org/abs/2505.19586",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-2f0dad2a8facac81",
       "type": "research",
@@ -40,5 +28,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T06:34:24+00:00"
+  "generated_at": "2026-09-11T06:38:11+00:00"
 }

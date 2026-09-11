@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2505.19586",
   "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md",
   "selection_reason": "浅い層は注意が広く量子化向き、深い層は少数トークンへ集中して選択的ロード向きという層別特性を利用し、量子化とCPUオフロードを同一モデル内で使い分ける。Llama-3.1-8Bの128K文脈を単一RTX 3090で動作させ、デコード82ms/tokenを報告する。単一の圧縮・オフロード方式ではなく、層特性による方式選択を行う点で差別化できる。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T06:17:03+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T06:38:05+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
