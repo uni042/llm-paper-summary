@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T03:02:25.996129+00:00",
+  "updated_at": "2026-09-11T03:23:45.108645+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,10 +3838,11 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T03:02:25.996129+00:00",
+      "last_recorded_at": "2026-09-11T03:23:45.108645+00:00",
       "signals": [
         "research_completed",
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "paper_materialized"
       ],
       "counts": {
         "research_completed": 4,
@@ -3849,7 +3850,7 @@
         "discovery_completed": 5,
         "blocked": 0,
         "new_jobs": 11,
-        "new_papers": 0,
+        "new_papers": 5,
         "fallback_archived": 0
       },
       "events": [
@@ -3994,6 +3995,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34558249457:1",
+          "recorded_at": "2026-09-11T03:23:45.108645+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34558249457",
+            "run_attempt": "1",
+            "source_sha": "dbdd2ba1e0edc002215c235f99352b8a6176ed0e"
+          },
+          "signals": [
+            "paper_materialized"
           ]
         }
       ],
@@ -4150,7 +4165,13 @@
           "title": "Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption"
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2602.09725",
+        "arXiv:2602.11521",
+        "arXiv:2602.20732",
+        "arXiv:2604.19769",
+        "arXiv:2605.24022"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1136JST-discovery-34d58f798d6809bc.json",
         ".survey/work-queue/results/20260911T1138JST-discovery-23004462feabf795.json",
@@ -4160,8 +4181,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 252,
-      "paper_active_count_after": 252,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 257,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

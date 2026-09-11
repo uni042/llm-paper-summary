@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-eea0fe24c1ce61ab",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2605.24022.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-efb253b8d1a8f8f0",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T03:23:34+00:00"
 }
