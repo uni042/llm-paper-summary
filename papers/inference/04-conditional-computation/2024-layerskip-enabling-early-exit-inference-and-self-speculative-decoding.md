@@ -17,6 +17,7 @@ quality_effect: null
 evidence_locations: []
 title: 'LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding'
 summary: 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。
+list_summary: 'LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。'
 authors_affiliations: Meta AIほか（ACL 2024、著者詳細は一次資料参照）
 published: '2024-08-12'
 publication_status: Published
@@ -88,7 +89,7 @@ references_total: 69
 
 # 層kip: Enabling Early Exit Inference and Self-Speculative デコード
 
-> 学習時に途中層からでもnext-トークン予測できるようmodelを訓練し、推論時は前半層だけで数トークンを仮生成して、残り層でまとめて検証することで、別draft modelなしのspeculative デコードを行う。
+> LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。
 
 ## 概要
 層kipは、同じLLMの浅い層を**draft modelの代わり**に使い、残り層でそのdraft トークンを検証するself-speculative デコードを成立させる学習レシピである。

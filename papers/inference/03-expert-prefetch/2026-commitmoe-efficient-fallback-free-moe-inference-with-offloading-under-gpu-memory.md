@@ -15,6 +15,7 @@ quality_effect: null
 evidence_locations: []
 title: 'CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints'
 summary: 次layerで使うexpertを予測してGPUへ先読みし、予測が外れても正しいexpertを読み直さず、準備済みexpertをそのまま使うことでoffload待ちをなくす近似MoE方式。
+list_summary: 'CommitMoEは次層専門家を先読みして実行対象に確定し、予測が外れても正しい重みを待たず準備済み専門家へ出力重みを再配分し、オフロード待ちをなくす近似方式。'
 authors_affiliations: Han Li, Jingwei Sun, Junqing Lin, Guangzhong Sun／University of Science and Technology of China
 published: '2026-03-14'
 publication_status: Published
@@ -60,7 +61,7 @@ references_total: 1
 
 # CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints
 
-> 次層で使うエキスパートを予測してGPUへ先読みし、予測が外れても正しいエキスパートを読み直さず、準備済みエキスパートをそのまま使うことでオフロード待ちをなくす近似MoE方式。
+> CommitMoEは次層専門家を先読みして実行対象に確定し、予測が外れても正しい重みを待たず準備済み専門家へ出力重みを再配分し、オフロード待ちをなくす近似方式。
 
 ## 概要
 
@@ -73,6 +74,9 @@ CommitMoEは予測エキスパートを単なる候補ではなく実行対象�
 その代わり、元の ルータが本来各エキスパートへ与えた重みを、すでにGPUへ準備できているエキスパートへ振り分け直す。論文ではこれを`Output-Weight Adjustment (OWA)`と呼ぶ。
 
 したがって高速化の代償は明確で、**元の エキスパート computationを置換するapproximate inference**である。
+
+
+CommitMoEは予測ミス時も元専門家を追加ロードせず出力重みを再配分する近似方式で、MoE-Infinityを含むオフロード比較比のエンドツーエンド速度を約1.3〜9.4倍にした。
 
 ## 手法のあらまし
 
