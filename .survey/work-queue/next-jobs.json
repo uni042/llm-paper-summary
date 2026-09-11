@@ -1,31 +1,31 @@
 {
   "counts": {
     "discovery": {
-      "completed": 85
+      "completed": 85,
+      "ready": 1
     },
     "audit": {
       "completed": 6
     },
     "research": {
-      "completed": 80,
+      "completed": 81,
       "superseded": 40,
-      "deferred": 1,
-      "ready": 1
+      "deferred": 1
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-d1d610f7f4147cc7",
-      "type": "research",
-      "lane": null,
-      "priority": 78,
-      "canonical_id": "arXiv:2603.28239",
-      "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
-      "source_url": "https://arxiv.org/abs/2603.28239",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-394e9e8c39c0dac6",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-11T01:20:16+00:00"
+  "generated_at": "2026-09-11T01:31:03+00:00"
 }
