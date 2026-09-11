@@ -14,6 +14,7 @@ hardware_details: null
 quality_effect: null
 evidence_locations: []
 title: 'No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs'
+list_summary: 'DirectKVはCPU DRAM上のKVをGPUカーネルから直接読み、CPUデータを再利用するタイル化と融合カーネルで中継HBMバッファ・往復転送・帯域浪費を減らすゼロコピー方式。'
 summary: GH200でCPU DRAM上のKV cacheをGPU HBMへ一度コピーせず、GPUのattention kernelから直接読み、同じCPU側dataを何度も読まないよう計算順序とkernelを作り直すzero-copy KV offload system。
 authors_affiliations: Shutian Luo, Haiying Shen（University of Virginia）
 published: '2026-07-13'
@@ -82,9 +83,11 @@ references_total: 59
 
 # No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs
 
-> GH200でCPU DRAM上のKVキャッシュをGPU HBMへ一度コピーせず、GPUの注意機構 カーネルから直接読み、同じCPU側データを何度も読まないよう計算順序とカーネルを作り直すゼロコピー KV オフロード システム。
+> DirectKVはCPU DRAM上のKVをGPUカーネルから直接読み、CPUデータを再利用するタイル化と融合カーネルで中継HBMバッファ・往復転送・帯域浪費を減らすゼロコピー方式。
 
 ## 概要
+
+GH200実機でOPT-13B／30B等を評価し、既存オフロード方式比でCPU–GPU転送量を最大50%、GPUメモリを43%削減、エンドツーエンド性能を最大1.2倍改善した。16K文脈ではNEO／Pie比約1.3倍、FlexGen比約1.7倍で、32Kでは比較対象がメモリ不足になる条件でも動作した。
 
 DirectKVは、長文脈でGPU HBMに収まらなくなるKVキャッシュをCPU メモリへ置きながら、**注意機構実行前にKVをGPU バッファへコピーしない**ゼロコピー オフロード システムである。
 
