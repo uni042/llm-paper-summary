@@ -14,7 +14,7 @@
 
 ### 1年以上前
 
-| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
-|---|---|:---:|---:|---|
-| 2025-05 | [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md) | [✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) | 0 | この総説の出発点は、LLMを使うサービスの計算量が、単発の文章生成だけを想定していた時代より急増したことである。 |
+- **2025-05 · [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md)**  
+  実装：[✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) ・ リポジトリ内被引用：0  
+  この総説の出発点は、LLMを使うサービスの計算量が、単発の文章生成だけを想定していた時代より急増したことである。
 <!-- survey:auto:end -->

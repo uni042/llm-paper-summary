@@ -27,9 +27,9 @@ CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避するこ
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
-| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
-|---|---|:---:|---:|---|
-| 2026-08 | [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md) | [✓](https://anonymous.4open.science/r/unlock_trainer-105B) | 0 | モデルを複数chunkへ分け、各chunkを局所目的関数で独立更新することで、下流chunkの逆伝播待ちと長時間の活性値保持をなくし、パイプライン並列学習のbubble・メモリ・通信待ちを減らす逆伝播不要 微調整 システム。 |
+- **2026-08 · [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md)**  
+  実装：[✓](https://anonymous.4open.science/r/unlock_trainer-105B) ・ リポジトリ内被引用：0  
+  モデルを複数chunkへ分け、各chunkを局所目的関数で独立更新することで、下流chunkの逆伝播待ちと長時間の活性値保持をなくし、パイプライン並列学習のbubble・メモリ・通信待ちを減らす逆伝播不要 微調整 システム。
 
 ### 1年以上前
 
