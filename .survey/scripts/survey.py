@@ -316,39 +316,41 @@ def _render_taxonomy_list(rows, citations, base_dir, now=None):
     start, end = _recent_window(now)
     start_num, end_num = _month_number(*start), _month_number(*end)
 
-    recent, cited, other = [], [], []
+    attention, recent, older = [], [], []
     for r in rows:
         is_recent = False
         if r["year"] and r["month"]:
             num = _month_number(r["year"], r["month"])
             is_recent = start_num <= num <= end_num
-        if is_recent:
+        citation_count = citations.get(r["path"], 0)
+        if is_recent and citation_count > 0:
+            attention.append(r)
+        elif is_recent:
             recent.append(r)
-        elif citations.get(r["path"], 0) > 0:
-            cited.append(r)
         else:
-            other.append(r)
+            older.append(r)
 
+    attention.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
     recent.sort(key=_sort_recent, reverse=True)
-    cited.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
-    other.sort(key=_sort_recent, reverse=True)
+    older.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
 
     period = f"{start[0]:04d}-{start[1]:02d}〜{end[0]:04d}-{end[1]:02d}"
     lines = [
         f"## 自動生成の論文一覧（{len(rows)}本）",
         "",
         f"分類は相互排他的。直近12か月は公開年月ベース（現在は **{period}**）。"
+        "直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。"
         "「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。",
         "「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。",
         "",
-        f"### 直近12か月（{period}）",
+        f"### 注目：直近12か月・リポジトリ内で被引用（{period}）",
         "",
     ]
+    lines += _render_table(attention, citations, base_dir)
+    lines += ["", f"### 直近12か月・未被引用（{period}）", ""]
     lines += _render_table(recent, citations, base_dir)
-    lines += ["", "### 直近12か月より前・リポジトリ内で被引用", ""]
-    lines += _render_table(cited, citations, base_dir)
-    lines += ["", "### その他", ""]
-    lines += _render_table(other, citations, base_dir)
+    lines += ["", "### 1年以上前", ""]
+    lines += _render_table(older, citations, base_dir)
     return "\n".join(lines)
 
 
