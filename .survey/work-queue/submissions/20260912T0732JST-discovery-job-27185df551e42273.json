@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-27185df551e42273",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.10183",
+      "title": "Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices",
+      "source_url": "https://arxiv.org/abs/2607.10183",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.10183-atsinfer.md",
+      "priority": 93,
+      "reason": "ATSInferは、CPU/GPU混成のローカルLLM推論で従来の層単位・expert単位オフロードより細かいtensor単位配置を採用し、静的配置と負荷追従の動的転送、非同期CPU-GPU協調を組み合わせる。dense/MoEの両方を対象に、消費者向けPC上でprefill最大1.94倍、decode最大3.29倍のthroughput改善を報告しており、階層メモリ・オフロード系統の既存研究に対して粒度と負荷適応性が明確な差分になる。"
+    },
+    {
+      "canonical_id": "arXiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.08151-spectre.md",
+      "priority": 88,
+      "reason": "マルチモデルクラウドで遊休状態になりやすいtail modelサービスを、人気大型モデルのremote drafterとして再利用するspeculative serving方式。通常推論と並列speculative decodingを負荷に応じて切り替える閾値制御、draft/verify重畳を維持するpriority scheduling、draft側prompt compressionを組み合わせる。SGLang実装でQwen3-235B-A22Bを含む評価を行い、自己回帰decode比最大2.28倍、強いspeculative baseline比でも最大66%相対改善を報告しており、遊休サービス資源の横断再利用というserving視点の新規性が高い。"
+    }
+  ]
+}
