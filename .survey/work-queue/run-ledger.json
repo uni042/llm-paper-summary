@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T10:04:59.523133+00:00",
+  "updated_at": "2026-09-11T10:11:48.031133+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,19 +6314,19 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T10:04:59.523133+00:00",
+      "last_recorded_at": "2026-09-11T10:11:48.031133+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
         "new_jobs": 7,
-        "new_papers": 4,
+        "new_papers": 5,
         "fallback_archived": 0
       },
       "events": [
@@ -6461,6 +6461,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34587931943:1",
+          "recorded_at": "2026-09-11T10:11:48.031133+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34587931943",
+            "run_attempt": "1",
+            "source_sha": "95966120e90ddcb5b68c1bfce546d3f98387f30e"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6535,6 +6550,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-cad6ce7f6124874f",
+          "type": "research",
+          "canonical_id": "arXiv:2607.01831",
+          "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6592,7 +6615,8 @@
         "arXiv:2508.17219",
         "arXiv:2509.26182",
         "arXiv:2410.03065",
-        "arXiv:2606.03770"
+        "arXiv:2606.03770",
+        "arXiv:2607.01831"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
@@ -6602,8 +6626,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
-      "paper_active_count_after": 310,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 311,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

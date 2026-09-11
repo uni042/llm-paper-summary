@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 121,
+      "completed": 122,
       "superseded": 43,
       "deferred": 3,
       "blocked": 2,
-      "ready": 2
+      "ready": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-cad6ce7f6124874f",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2607.01831",
-      "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
-      "source_url": "https://arxiv.org/abs/2607.01831",
-      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-f92bffd9f3f568d8",
       "type": "research",
@@ -40,5 +28,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T10:04:59+00:00"
+  "generated_at": "2026-09-11T10:11:11+00:00"
 }
