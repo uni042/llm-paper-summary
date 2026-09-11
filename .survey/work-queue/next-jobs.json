@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 114,
+      "completed": 115,
       "superseded": 43,
       "deferred": 3,
       "blocked": 2,
-      "ready": 2
+      "ready": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-6daf6a1f16a19d5e",
-      "type": "research",
-      "lane": null,
-      "priority": 82,
-      "canonical_id": "arXiv:2603.10726",
-      "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
-      "source_url": "https://arxiv.org/abs/2603.10726",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-bb522f2db92352df",
       "type": "research",
@@ -40,5 +28,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T09:03:08+00:00"
+  "generated_at": "2026-09-11T09:08:47+00:00"
 }

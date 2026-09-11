@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:03:08.910073+00:00",
+  "updated_at": "2026-09-11T09:08:56.512185+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5843,13 +5843,13 @@
     {
       "run_key": "2026-09-11T17:30:00+09:00",
       "first_recorded_at": "2026-09-11T08:32:59.073522+00:00",
-      "last_recorded_at": "2026-09-11T09:03:08.910073+00:00",
+      "last_recorded_at": "2026-09-11T09:08:56.512185+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 9,
         "blocked": 0,
@@ -5998,6 +5998,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34582680208:1",
+          "recorded_at": "2026-09-11T09:08:56.512185+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34582680208",
+            "run_attempt": "1",
+            "source_sha": "a996abfe8448d7d4e81836be8b9077590edbed4b"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6078,6 +6092,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-6daf6a1f16a19d5e",
+          "type": "research",
+          "canonical_id": "arXiv:2603.10726",
+          "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
           "from": "ready",
           "to": "completed"
         }
@@ -6175,8 +6197,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 302,
-      "paper_active_count_after": 302,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 303,
+      "last_successful_action": "research_completed"
     }
   ]
 }
