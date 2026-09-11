@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（67本）
+## 自動生成の論文一覧（68本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -49,6 +49,7 @@
 | 2026-02 | [Multi-Layer Scheduling for MoE-Based LLM Reasoning](2026-2602.21626-multi-layer-scheduling-moe-reasoning.md) | ✓ | 0 | 混合専門家モデル（Mixture of エキスパート; MoE）の推論サービングでは、要求をどのデータ並列エンジンへ送るか、各エンジン内でどの要求を先に処理するか、各専門家をどのGPUへ置くかが互いに影響する。既存の密モデル向け構成では、この3層を独立に扱うため、KVキャッシュ利用率の偏り、長い入力による先頭要求待ち、特定専門家への負荷集中が同時に起こりうる。Gimbalは、実測KV使用量と処理中トークン量によるエンジン選択、入力長を使う短いジョブ優先と待ち時間救済、専門家の活性頻度と層間依存を使う動的再配置を一つのサービング経路へ統合する。2台のA100 GPUでQwen3-30B-A3Bを評価し、1.4要求/秒ではvLLMに対して先頭トークン時間を平均17.76%、トークン間時間を平均13.34%短縮した。 |
 | 2026-02 | [Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control](2026-2602.02987-prefill-decode-contention-optimal-control.md) | ✓ | 0 | 大規模LLM推論では、入力処理であるプリフィルをGPUへ入れるほど新規要求をデコード段階へ送り込める一方、同じGPU上の逐次生成を遅くするという競合が生じる。本論文は、入力長・出力長が異なる複数の要求クラスを多数GPUで処理する状況を待ち行列網としてモデル化し、流体近似から求めた最適占有率を目標に、プリフィル受入れとデコード配置を制御するゲート・アンド・ルート方式を提案する。A100上のQwen3-8B測定で反復時間モデルを校正し、Azure系トレースの10 GPU再生では代表的なヒューリスティックより収益率を高め、多数GPU極限では理論上の最適値へ漸近することを示す。ただし主要な比較は校正済みイベント駆動シミュレーションであり、本方式を実運用クラスタへ組み込んだ実機エンドツーエンド測定ではない。 |
 | 2026-02 | [DualScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS](2026-2602.18755-biscale-phase-aware-placement-dvfs.md) | ✓ | 0 | プリフィルとデコードを別GPU群へ分離するLLM推論では、両段階の負荷特性が異なるため、単純な自動スケーリングや一律のGPU周波数制御ではサービス品質目標を守りつつ電力を下げにくい。DualScaleは、数分単位では両段階のGPU台数・テンソル並列度・基準周波数・振り分け比率を同時最適化し、反復単位ではプリフィルにモデル予測制御、デコードに余裕時間を使う軽量な周波数選択を適用する。Llama 3.3 70Bを16基のH100で評価し、DistServe比でプリフィル最大39%、デコード最大48%のエネルギー削減を、TTFTとTPOTの目標を維持しながら示した。 |
+| 2025-11 | [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md) | [✓](https://github.com/Hanchenli/vllm-continuum) | 0 | ツール呼出しを何度も挟むLLMエージェントでは、各ターン終了時にKVキャッシュを追い出すと、次ターンでプリフィルやCPUからの再読込みが必要になるだけでなく、GPUメモリを他要求へ渡した後に待ち行列へ戻るため、ターンごとの待ち時間が累積する。Continnumは、ツール種類ごとの実測時間分布、再構築・再読込み費用、待ち行列遅延、残りターンの予測しやすさからKVキャッシュ保持期限を動的に決め、期限内はGPUへ固定し、長いツール呼出しでは自動解放する。さらにプログラム単位の先着順を組み合わせ、多ターン処理の連続性を保つ。SWE-Bench、BFCL、OpenHandsなどで遅延を1.12〜3.66倍改善し、実SWEエージェント環境では最大8.18倍の改善を報告する。 |
 | 2025-10 | [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md) | ✓ | 0 | マルチコアNPUでは、GPU向けに考えたLLMサービング方式をそのまま移すと、コア間通信、コアごとに分かれたSRAM、HBM帯域の不足によって計算資源が遊ぶ。NpuSimは、演算を形状対応の性能モデル、メモリ要求をトランザクション単位、NoCの競合をサイクル精度で再現する多層シミュレータであり、これを使ってテンソル分割、コア配置、SRAM/HBM管理、プリフィル・デコード分離または融合を横断比較する。Qwen3の1.7B〜32Bと30B-A3Bを対象に、分割方式では短い入力でK次元分割がMN分割より最大6.03倍、コア配置ではリングが線形インターリーブより最大1.32倍、サービング設計では入力処理主体なら異種コアのP/D分離、生成主体ならP/D融合が有利になることを示す。 |
 
 ### 直近12か月より前・リポジトリ内で被引用

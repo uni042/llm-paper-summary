@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T07:34:14.245263+00:00",
+  "updated_at": "2026-09-11T07:36:06.541911+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5597,18 +5597,19 @@
     {
       "run_key": "2026-09-11T16:30:00+09:00",
       "first_recorded_at": "2026-09-11T07:34:14.245263+00:00",
-      "last_recorded_at": "2026-09-11T07:34:14.245263+00:00",
+      "last_recorded_at": "2026-09-11T07:36:06.541911+00:00",
       "signals": [
         "research_completed",
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "paper_materialized"
       ],
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
-        "new_papers": 0,
+        "new_jobs": 2,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -5626,6 +5627,21 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34575088597:1",
+          "recorded_at": "2026-09-11T07:36:06.541911+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34575088597",
+            "run_attempt": "1",
+            "source_sha": "fe886cab801ceb153723884b44a4d167b741ab62"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5634,6 +5650,14 @@
           "type": "research",
           "canonical_id": "arXiv:2510.11331",
           "title": "Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-1cf1bb093db0f2b0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -5645,14 +5669,26 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-add94fca07b82c40",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
-      "new_paper_ids": [],
-      "new_discovery_results": [],
+      "new_paper_ids": [
+        "arXiv:2510.11331",
+        "arXiv:2511.02230"
+      ],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T1636JST-discovery-1cf1bb093db0f2b0.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 280,
-      "paper_active_count_after": 280,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 282,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
