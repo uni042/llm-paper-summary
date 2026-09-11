@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-23004462feabf795",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.31145",
+      "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.31145",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.31145-sekv-resolution-adaptive-kv-cache.md",
+      "priority": 89,
+      "reason": "長文KVを意味区間へまとめ、GPUには軽量な要約ベクトル、CPUには低ランクSVD基底を保持し、問い合わせに応じて必要区間だけトークン粒度へ復元する階層メモリ方式。情報を完全削除せず解像度を動的に戻せる点が単純なKV追い出しと異なる。128K文脈で完全KV比GPUメモリ53.3%削減、強い意味圧縮比較方式より平均5.9%品質改善を報告し、CPU階層を再構成可能なKV保管層として使うため関連性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.19769",
+      "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.19769",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
+      "priority": 87,
+      "reason": "KVを時間的近接性に応じてHBMとDRAMの異なる容量・精度階層へ分け、低速階層へのアクセスをブロック単位ストリーミング注意で計算と重ねる。古いKVほど低速・低精度階層へ置く設計により128K文脈で階層間転送5.94分の1、最大76%遅延削減、2倍スループットを報告する。KVの寿命・精度・配置を同時に扱うため階層メモリ系統の比較対象になる。"
+    },
+    {
+      "canonical_id": "arXiv:2607.25498",
+      "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.25498",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.25498-dops-dynamic-operator-scheduling.md",
+      "priority": 80,
+      "reason": "プリフィル・デコード単位の固定分離を越え、段階ごとの有向非巡回グラフを用いて演算単位をNPU/PIMへ動的配置し、同時にメモリ制約下の重みレイアウトを選ぶ。動的配置部はプリフィル・デコード分離比1.20〜2.23倍、重み配置選択がさらに1.28〜1.33倍の幾何平均高速化を報告する。異種計算資源とメモリ配置を共同最適化するサービング研究として有用。"
+    }
+  ]
+}
