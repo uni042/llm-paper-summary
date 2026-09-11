@@ -3,13 +3,16 @@
 
 queue_worker.py intentionally remains v9-compatible. This small compatibility layer
 removes legacy "return Markdown" wording from ready research/audit jobs so Scheduled
-Chat sees one unambiguous artifact contract.
+Chat sees one unambiguous artifact contract. It also snapshots the current paper blob
+for ready audit jobs so later writes retain optimistic-concurrency protection without
+requiring Scheduled Chat to discover the SHA itself.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 RESEARCH_INSTRUCTIONS = (
     "Read the primary source in full. Produce a repository-quality structured research "
@@ -52,6 +55,37 @@ def write_json(path: Path, obj: dict) -> bool:
     return True
 
 
+def git_blob_sha(data: bytes) -> str:
+    header = f"blob {len(data)}\0".encode("utf-8")
+    return hashlib.sha1(header + data).hexdigest()
+
+
+def valid_paper_path(value: object) -> str | None:
+    if not isinstance(value, str) or not value.startswith("papers/"):
+        return None
+    path = PurePosixPath(value)
+    if path.is_absolute() or ".." in path.parts:
+        return None
+    return path.as_posix()
+
+
+def backfill_expected_blob_sha(root: Path, job: dict) -> None:
+    """Pin the paper revision once, when a ready audit first receives no SHA.
+
+    Never refresh an existing expected_blob_sha: preserving the original snapshot is
+    what lets preflight detect that another worker changed the paper meanwhile.
+    """
+    if job.get("type") != "audit" or job.get("expected_blob_sha"):
+        return
+    paper = valid_paper_path(job.get("paper_path"))
+    if paper is None:
+        return
+    target = root.parent / paper
+    if not target.is_file():
+        return
+    job["expected_blob_sha"] = git_blob_sha(target.read_bytes())
+
+
 def normalize(root: Path) -> int:
     changed = 0
     jobs = root / "work-queue" / "jobs"
@@ -66,6 +100,7 @@ def normalize(root: Path) -> int:
         elif kind == "audit":
             job["instructions"] = AUDIT_INSTRUCTIONS
             job["completion"] = AUDIT_COMPLETION
+            backfill_expected_blob_sha(root, job)
         else:
             continue
         job["workflow_version"] = 10
