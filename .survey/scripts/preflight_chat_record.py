@@ -14,7 +14,7 @@ import shutil
 import sys
 import tempfile
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -30,6 +30,58 @@ def read_json(path: Path) -> dict:
     if not isinstance(value, dict):
         raise ValueError(f"{path} must contain a JSON object")
     return value
+
+
+def write_json(path: Path, value: dict) -> None:
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def valid_paper_path(value: object) -> str | None:
+    if not isinstance(value, str) or not value.startswith("papers/"):
+        return None
+    path = PurePosixPath(value)
+    if path.is_absolute() or ".." in path.parts:
+        return None
+    return path.as_posix()
+
+
+def ensure_expected_blob_sha(repo_root: Path, inbox: dict) -> dict:
+    """Inject the job's pinned paper SHA into reusable Chat transport and verify it.
+
+    Audit jobs receive expected_blob_sha when normalized. Scheduled Chat therefore only
+    has to identify the job; preflight copies that immutable snapshot into chat-inbox.
+    If the paper changed after the job was issued, fail before rendering/publishing so a
+    stale audit can be repaired instead of silently overwriting newer work.
+    """
+    paper = valid_paper_path(inbox.get("paper_path"))
+    if paper is None:
+        return inbox
+    target = repo_root / paper
+    if not target.is_file():
+        return inbox
+
+    expected = inbox.get("expected_blob_sha")
+    if not expected:
+        job_id = inbox.get("job_id")
+        if isinstance(job_id, str) and job_id:
+            job_path = repo_root / ".survey/work-queue/jobs" / f"{job_id}.json"
+            if job_path.is_file():
+                job = read_json(job_path)
+                expected = job.get("expected_blob_sha")
+        if not isinstance(expected, str) or not expected:
+            raise ValueError(
+                "expected_blob_sha is missing for an existing paper; "
+                "the ready audit job must be normalized before submission"
+            )
+        inbox["expected_blob_sha"] = expected
+        write_json(repo_root / base.FIXED_INBOX, inbox)
+
+    if not isinstance(expected, str) or not expected:
+        raise ValueError("expected_blob_sha must be a non-empty string")
+    current = base.git_blob_sha(target.read_bytes())
+    if current != expected:
+        raise ValueError(f"paper blob changed before preflight: expected {expected}, current {current}")
+    return inbox
 
 
 def copy_transport(repo_root: Path, temp_root: Path) -> dict:
@@ -99,6 +151,19 @@ def isolate_invalid_job(repo_root: Path, inbox: dict, error: str) -> None:
 
 def preflight(repo_root: Path, isolate: bool) -> dict:
     inbox = read_json(repo_root / base.FIXED_INBOX)
+    try:
+        inbox = ensure_expected_blob_sha(repo_root, inbox)
+    except Exception as exc:
+        error = f"{type(exc).__name__}: {exc}"
+        if isolate:
+            isolate_invalid_job(repo_root, inbox, error)
+        return {
+            "valid": False,
+            "job_id": inbox.get("job_id"),
+            "error": error,
+            "isolated": isolate,
+        }
+
     if inbox.get("record_slots") is None:
         return {"valid": True, "skipped": True, "reason": "no structured record_slots"}
 
