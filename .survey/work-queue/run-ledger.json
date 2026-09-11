@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T16:44:45.128768+00:00",
+  "updated_at": "2026-09-11T16:46:42.383818+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6786,7 +6786,7 @@
     {
       "run_key": "2026-09-12T01:30:00+09:00",
       "first_recorded_at": "2026-09-11T16:34:49.056336+00:00",
-      "last_recorded_at": "2026-09-11T16:44:45.128768+00:00",
+      "last_recorded_at": "2026-09-11T16:46:42.383818+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -6795,9 +6795,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -6861,6 +6861,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34623869249:1",
+          "recorded_at": "2026-09-11T16:46:42.383818+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34623869249",
+            "run_attempt": "1",
+            "source_sha": "b22b3c72fac6d3728d2c8bcd1cb58cb5e22a9d49"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6895,6 +6909,14 @@
           "title": "SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-3ac62172fb9e78c3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6925,6 +6947,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-6cc60ed928024068",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -6933,12 +6962,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
-        ".survey/work-queue/results/20260912T0141JST-discovery-c83cadf5c6444540.json"
+        ".survey/work-queue/results/20260912T0141JST-discovery-c83cadf5c6444540.json",
+        ".survey/work-queue/results/20260912T0146JST-discovery-3ac62172fb9e78c3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 313,
       "paper_active_count_after": 315,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
