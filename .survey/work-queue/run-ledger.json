@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T01:39:24.677215+00:00",
+  "updated_at": "2026-09-11T01:40:34.871596+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,7 +3310,7 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T01:39:24.677215+00:00",
+      "last_recorded_at": "2026-09-11T01:40:34.871596+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3318,9 +3318,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 5,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3368,6 +3368,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34551596207:1",
+          "recorded_at": "2026-09-11T01:40:34.871596+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34551596207",
+            "run_attempt": "1",
+            "source_sha": "de0a9e481bda905396bcb8b31101cd9df97ee0f9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3394,6 +3408,14 @@
           "title": "Coordinated Scheduling for MoE LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-0e78629b096238d9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3417,11 +3439,26 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-1047bdfeaa42931d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.14205",
+          "title": "FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction"
+        },
+        {
+          "job_id": "job-research-960d3bc442b0fe00",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17880",
+          "title": "Mixture-of-Experts Serving"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T1032JST-discovery-394e9e8c39c0dac6.json"
+        ".survey/work-queue/results/20260911T1032JST-discovery-394e9e8c39c0dac6.json",
+        ".survey/work-queue/results/20260911T1040JST-discovery-0e78629b096238d9.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 244,

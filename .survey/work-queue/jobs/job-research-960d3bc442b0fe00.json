@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-960d3bc442b0fe00",
+  "type": "research",
+  "parent_job_id": "job-0e78629b096238d9",
+  "priority": 74,
+  "canonical_id": "arXiv:2607.17880",
+  "title": "Mixture-of-Experts Serving",
+  "source_url": "https://arxiv.org/abs/2607.17880",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.17880-mixture-of-experts-serving-online-algorithms.md",
+  "selection_reason": "専門家人気が時間変動する状況で各専門家へ何GPUを割り当てるかを、サービス遅延と再構成費のオンライン最適化問題として形式化する理論研究。多項式時間O(sqrt(log k))競合オンラインアルゴリズム、対応する下界、オフライン定数近似、NP困難性を与える。実装性能論文ではないが、動的専門家複製・再配置の費用と利得の理論的基準として既存システム群を比較する土台になる。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T01:40:26+00:00",
+  "artifact_transport": "structured_record_v10"
+}

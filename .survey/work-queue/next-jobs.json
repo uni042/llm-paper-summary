@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 86,
-      "ready": 1
+      "completed": 87
     },
     "audit": {
       "completed": 6
@@ -10,22 +9,35 @@
     "research": {
       "completed": 82,
       "superseded": 40,
-      "deferred": 1
+      "deferred": 1,
+      "ready": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-0e78629b096238d9",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-1047bdfeaa42931d",
+      "type": "research",
+      "lane": null,
+      "priority": 91,
+      "canonical_id": "arXiv:2608.14205",
+      "title": "FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction",
+      "source_url": "https://arxiv.org/abs/2608.14205",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-960d3bc442b0fe00",
+      "type": "research",
+      "lane": null,
+      "priority": 74,
+      "canonical_id": "arXiv:2607.17880",
+      "title": "Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2607.17880",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.17880-mixture-of-experts-serving-online-algorithms.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T01:39:20+00:00"
+  "generated_at": "2026-09-11T01:40:34+00:00"
 }
