@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-5cd301a0353d0b12",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.07966-metakv-adaptive-kv-compression.md",
+      "priority": 82,
+      "reason": "KVキャッシュ圧縮方式を固定せず、入力ごとにユーザー指定のレイテンシ予算とピークメモリ予算へ合わせて圧縮構成を選択する適応型推論フレームワーク。既存方式の精度・遅延・メモリ間の異なるトレードオフを実行時制約の下で統合的に扱うため、単一の圧縮アルゴリズムではなくサービング時の資源制約を含む制御系として比較価値が高い。2026-09-07公開の新規2609系で、最新HEADのrepo検索ではarXiv ID未収録を確認した。"
+    }
+  ]
+}
