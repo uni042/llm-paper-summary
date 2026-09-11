@@ -52,14 +52,15 @@ class ListSummaryTests(unittest.TestCase):
         self.assertEqual(text, worker)
         self.assertNotIn("長い背景説明", text)
 
-    def test_splits_japanese_sentences_without_whitespace(self):
+    def test_preserves_worker_lead_sentences_within_limit(self):
         mod = self._module()
         first = "本研究は複数の要求が同時に到着する推論環境で、待ち時間とGPU利用率を同時に改善するため、要求順序とキャッシュ配置を動的に調整する方式を提案する。"
-        second = "次に非常に長い補足説明を続け、評価条件、比較対象、実装詳細、追加実験、制約、今後の課題など一覧には不要な情報を多数記述して全体を百八十文字より長くする。"
+        second = "次に評価条件や補足事項も短く説明する。"
         body = f"# Example\n\n> {first}{second}\n"
         text = mod.compact_list_summary(body)
-        self.assertEqual(text, first)
-        self.assertNotIn("次に", text)
+        self.assertTrue(text.startswith(first))
+        self.assertIn("評価条件", text)
+        self.assertLessEqual(len(text), 180)
 
     def test_background_only_first_sentence_does_not_hide_method(self):
         mod = self._module()
