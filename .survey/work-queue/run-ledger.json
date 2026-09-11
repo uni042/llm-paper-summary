@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T00:09:39.256627+00:00",
+  "updated_at": "2026-09-11T00:37:49.644970+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2995,6 +2995,56 @@
       "paper_active_count_before": 235,
       "paper_active_count_after": 240,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "2026-09-11T09:30:00+09:00",
+      "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
+      "last_recorded_at": "2026-09-11T00:37:49.644970+00:00",
+      "signals": [
+        "research_completed"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34547281529:1",
+          "recorded_at": "2026-09-11T00:37:49.644970+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34547281529",
+            "run_attempt": "1",
+            "source_sha": "09444aebff8a6ea8999b90001bd57d65746fa8b3"
+          },
+          "signals": [
+            "research_completed"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-6fd5366a48843732",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08682",
+          "title": "HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 240,
+      "paper_active_count_after": 240,
+      "last_successful_action": "research_completed"
     }
   ]
 }
