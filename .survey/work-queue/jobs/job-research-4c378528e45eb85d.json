@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-4c378528e45eb85d",
+  "type": "research",
+  "parent_job_id": "job-b7d2560206d7b78d",
+  "priority": 92,
+  "canonical_id": "arXiv:2608.08097",
+  "title": "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching",
+  "source_url": "https://arxiv.org/abs/2608.08097",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+  "selection_reason": "デコード時の完全KVをHBM外へ置き、投機的デコードで得る先読みトークンから次段階で重要になるKVブロックを予測してホストまたは遠隔メモリから事前取得する。vLLM実装で2048トークンのKV予算でも完全注意との差を0.7ポイント以内に保ち、推論ワークロードで1.69倍、マルチGPU長文サービングで最大2.1倍のスループットを報告する。疎注意、階層メモリ、プリフェッチを直接統合しており、既存のKVオフロード研究との差が明確。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T06:44:52+00:00",
+  "artifact_transport": "structured_record_v10"
+}

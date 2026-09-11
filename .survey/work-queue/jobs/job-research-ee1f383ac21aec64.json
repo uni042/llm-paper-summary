@@ -1,0 +1,25 @@
+{
+  "job_id": "job-research-ee1f383ac21aec64",
+  "type": "research",
+  "parent_job_id": "job-b7d2560206d7b78d",
+  "priority": 86,
+  "canonical_id": "arXiv:2608.06557",
+  "title": "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
+  "source_url": "https://arxiv.org/abs/2608.06557",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-latency-budget.md",
+  "selection_reason": "各要求のSLOから残り実行時間を引いた遅延余裕を単一の制御量とし、要求順序だけでなくKVのHBM保持、深い階層からの復元・先読み、再計算まで同時に決める。生産トレースと3種のLLMでvLLMの先着順スケジューラ比最大2.4倍のSLO達成有効スループットと40%のSLO違反削減を報告する。スケジューリングと階層KV管理を同一予算で結ぶ点が既存研究との差。",
+  "status": "superseded",
+  "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
+  "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 9,
+  "created_at": "2026-09-11T06:44:52+00:00",
+  "completed_at": "2026-09-11T06:44:58+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2608.06557",
+  "duplicate_of_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2608.06557"
+  }
+}

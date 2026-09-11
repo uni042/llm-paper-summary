@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:42:05.788341+00:00",
+  "updated_at": "2026-09-11T06:45:05.133908+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,7 +5239,7 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T06:42:05.788341+00:00",
+      "last_recorded_at": "2026-09-11T06:45:05.133908+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -5248,9 +5248,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 3,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -5298,6 +5298,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34571242278:1",
+          "recorded_at": "2026-09-11T06:45:05.133908+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34571242278",
+            "run_attempt": "1",
+            "source_sha": "b9b7f240a7642a4fb8e52c8ae64c952286035b34"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5324,6 +5338,14 @@
           "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-b7d2560206d7b78d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5333,6 +5355,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-4c378528e45eb85d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.08097",
+          "title": "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching"
+        },
+        {
+          "job_id": "job-research-ee1f383ac21aec64",
+          "status": "superseded",
+          "type": "research",
+          "canonical_id": "arXiv:2608.06557",
+          "title": "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving"
         }
       ],
       "new_paper_ids": [
@@ -5341,7 +5377,9 @@
         "arXiv:2605.23389",
         "arXiv:2606.04415"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T1543JST-discovery-b7d2560206d7b78d.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
       "paper_active_count_after": 271,
