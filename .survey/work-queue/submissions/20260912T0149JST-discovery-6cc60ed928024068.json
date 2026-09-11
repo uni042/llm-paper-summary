@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6cc60ed928024068",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling.md",
+      "priority": 81,
+      "reason": "GH200のようにGPUとCPUがNVLink-C2Cで密結合された構成を対象に、KV容量不足時に要求をGPUからCPU側へ順次回転させるサービス水準目標（SLO）対応スケジューラと、双方向転送を重ねるKV移動機構を提案する。PCIe退避では高負荷時に先頭要求が後続を塞ぐ問題に対し、GH200実機で初回トークン時間SLO達成率を最大74.7%改善したと報告する。階層メモリを単なる容量拡張でなく応答性制御に使う未収録候補として価値が高い。"
+    }
+  ]
+}
