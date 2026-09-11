@@ -300,7 +300,7 @@ def _find_sentence(sentences: list[str], pattern: re.Pattern[str], *, start: int
 
 
 def _semantic_sentence_order(sentences: list[str]) -> list[int]:
-    """Prefer problem -> method -> result instead of blindly taking the lead."""
+    """Reserve budget for the method, then add problem and result if they fit."""
     method = _find_sentence(sentences, METHOD_SIGNAL_RE)
     if method is None:
         return list(range(len(sentences)))
@@ -312,7 +312,11 @@ def _semantic_sentence_order(sentences: list[str]) -> list[int]:
             break
 
     result = _find_sentence(sentences, RESULT_SIGNAL_RE, start=method + 1)
-    selected = [index for index in (problem, method, result) if index is not None]
+    selected = [method]
+    if problem is not None:
+        selected.append(problem)
+    if result is not None:
+        selected.append(result)
     selected_set = set(selected)
     selected.extend(index for index in range(len(sentences)) if index not in selected_set)
     return selected
