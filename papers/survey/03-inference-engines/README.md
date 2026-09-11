@@ -16,5 +16,5 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2025-05 | [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md) | [✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) | 0 | 大規模言語モデルの推論エンジンを、対応モデル・ハードウェア、導入容易性、拡張性、遅延重視・スループット重視の最適化という共通軸で比較する総説。オープンソースと商用を含む25基盤を調べ、バッチ処理、並列化、量子化、キャッシュ、注意機構、サンプリング、構造化出力がどのように組み込まれているかを整理し、21基盤の導入検証と13基盤の実機サービング測定から、用途・モデル規模・同時実行数に応じた選択条件と限界を示す。 |
+| 2025-05 | [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md) | [✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) | 0 | この総説の出発点は、LLMを使うサービスの計算量が、単発の文章生成だけを想定していた時代より急増したことである。思考連鎖（Chain-of-Thought; CoT）、複雑な推論、エージェントは、一つの依頼に対してモデルを何度も呼び出す。さらに、チャット、要約、コード生成、検索のような要求が同じ計算機へ混在するため、入力をまとめて処理するプリフィルと。 |
 <!-- survey:auto:end -->

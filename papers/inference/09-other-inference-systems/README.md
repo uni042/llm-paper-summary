@@ -12,7 +12,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-09 | [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md) | ✓ | 0 | 端末上でモデル重みをSSDやフラッシュから必要時に読む疎なLLM推論では、正確な活性予測には直前層の新しい状態が欲しい一方、入出力を計算へ重ねるには早い予測が必要になる。LeanStreamは層内計算を優先度順の小段階へ分け、GPUの部分結果が出るたびに次層の重み読み込み・計算・キャッシュ保持優先度を更新する。CPU・GPU・入出力を細粒度に非同期連携させ、積層学習ハッシュで予測器も軽量化する。Jetson AGX Orin/XavierとOnePlus 13上の3種類の7B級モデルで、従来方式の最高スループットを保ちながらメモリを4.8〜7.5分の1へ削減し、さらに生成スループットを1.6〜2.1倍まで高めたと報告する。 |
+| 2026-09 | [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md) | ✓ | 0 | 端末上でモデル重みをSSDやフラッシュから必要時に読む疎なLLM推論では、正確な活性予測には直前層の新しい状態が欲しい一方、入出力を計算へ重ねるには早い予測が必要になる。LeanStreamは層内計算を優先度順の小段階へ分け。 |
 
 ### 1年以上前
 
