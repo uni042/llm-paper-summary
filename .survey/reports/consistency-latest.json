@@ -1,20 +1,25 @@
 {
-  "schema_version": 2,
-  "source_commit": "e9e5b4ab20a7e6b247892b831c5ad37d6b950f7a",
-  "checked_at": "2026-09-10T09:42:14.904735+00:00",
+  "schema_version": 3,
+  "source_commit": "metadata-backfill-working-tree",
+  "checked_at": "2026-09-11T07:16:26.314516+00:00",
   "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 687,
-  "checked_file_count": 687,
+  "inventory_file_count": 1118,
+  "checked_file_count": 1121,
   "missing_files": [],
-  "working_changes": [],
+  "working_changes": [
+    ".survey/README.md",
+    ".survey/framework-updates",
+    ".survey/llm-releases",
+    ".survey/papers"
+  ],
   "checks": [
     "inventory_coverage",
+    "required_v10_paths",
     "all_json_yaml",
     "markdown_file_links",
     "symlink_targets",
     "frozen_training",
-    "state_paths",
     "paper_metadata_and_identity",
     "maintenance_cycle"
   ],
@@ -25,6 +30,6 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 265,
+  "external_url_count": 324,
   "findings": []
 }

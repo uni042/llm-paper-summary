@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（66本）
+## 自動生成の論文一覧（67本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -14,6 +14,7 @@
 |---|---|:---:|---:|---|
 | 2026-09 | [Topology-Aware Data Movement for Disaggregated GPU Inference](2026-2607.28633-topology-aware-data-movement.md) | ✓ | 0 | プリフィルとデコードを別GPU群へ分離するLLMサービングでは、プリフィルで生成したKVキャッシュをデコード側へ渡す転送が新たなボトルネックになる。TopKVは、GPU間の物理接続を検出し、NVLink、PCIe、RDMA、TCPから転送経路を選び、層ごとのKV転送を計算と重ねる。さらにMoEでは専門家配置とKV位置を同時に考え、GPU HBMに収まらないKVの退避先としてCXL 3.0メモリを組み込む。Llama-3-70Bで1要求1.3GBのKVを想定した解析では、RDMA一律転送に対して転送遅延を3〜18倍削減できると見積もる。ただし現在の実装は実転送を帯域制限付き模擬先で置き換え、層パイプラインとCXLも解析モデル中心であり、数値はエンドツーエンド実機高速化ではない。 |
 | 2026-09 | [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md) | ✓ | 0 | OUTLETSは、speculative decodingのEAGLE-3型draft decoderが未来のtoken trajectoryを追うために作る中間表現を、出力残長の予測にも再利用する。軽量な長さ回帰headを追加し、予測値をdecode workerの負荷分散と最短job優先（SJF）へ渡すことで、別proxy modelを毎回動かさずにhead-of-line blockingとtail latencyを抑える。 |
+| 2026-09 | [Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs](2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md) | ✓ | 0 | 複数のLLMエージェントが依存関係を持って連携する処理では、次のモデル呼び出しが準備できてから配置を決めると、モデル読込み、GPUメモリ確保、異種GPUごとの実行時間差が待ち時間として表面化する。本論文は論理的なエージェント処理グラフとは別に物理実行グラフを構成し、まだ完全には実行可能でない近接後続処理まで見越して、モデル常駐・先読み読込み・解放・GPU配置・実行順を共同で決める。V100とA100を混在させた実機で、ParrotとKairosに比べ集中到着時の全体完了時間を最大36.8%、95パーセンタイルのセッション完了遅延を最大25.9%削減し、モデルが使われず常駐するGPU時間も大幅に減らす。 |
 | 2026-09 | [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md) | ✓ | 0 | 本論文は、LLM推論のプリフィルとデコードでは計算特性と許容遅延が異なるのに、既定GPU電力制御が両段階をほぼ一様に扱い、余分な高周波数動作とエネルギー消費を生む問題を扱う。GreenLLMは、入力長で要求を別キューへ振り分けて長いプロンプトによる先頭待ちを避け、プリフィルでは入力長・周波数・待ち行列負荷からSLO内でエネルギー最小のSM周波数を選ぶ。デコードでは直近のトークン毎秒出力から粗い周波数帯を決め、20msごとのP95トークン間時間を見て15MHz刻みで微調整する二重帰還制御を使う。DGX-A100実機でQwen3-14BとQwen3-30B-MoEをAlibaba/Azure追跡により評価し、スループットを落とさず追加SLO違反を小さく保ちながら既定DVFS比で総エネルギーを最大34%削減する。 |
 | 2026-09 | [Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling](2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md) | ✓ | 0 | 本論文は、LLMサービングのプリフィルとデコードを分けて周波数制御するだけでは、同じ段階の中でも注意機構と全結合ネットワーク（Feed-Forward Network; FFN）の周波数感度が大きく異なるため、不要なGPU電力を使う問題を扱う。AFlexは注意機構とFFNを別GPU群へ分離し、オフライン測定から得た遅延・エネルギー予測器、数分単位の大域的な資源配置、要求ごとの局所的な動的電圧・周波数制御（動的 Voltage and Frequency Scaling; DVFS）を組み合わせる。さらに動的マイクロバッチ深度と適応バッチ化で分離実行の空きを抑え、重み再配置も既存断片を再利用して短縮する。A800実機上のQwen3-32BとMixtral-8x7Bでは、サービス品質目標を守りながら既存分離方式比でトークン当たりエネルギーを最大49%削減する。 |
 | 2026-09 | [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md) | ✓ | 0 | 連続バッチ型LLMサービングでは、長い入力を一括プリフィルすると同じ反復にいるデコード要求の次トークンが遅れ、逆にプリフィルを小さく固定分割すると反復回数とカーネル起動費用が増えて初回応答が遅くなる。SLOWeaveは、各デコード要求の直前トークン完了時刻から次トークン期限を作り、最も早い期限までの残り時間に収まる最大のプリフィル分割長を反復ごとに二分探索する。単調な反復時間予測が正しければ、全デコード期限を守る選択肢の中でその反復のプリフィル進捗を最大化することを証明する。シミュレーションに加えてA100/H100の反復単位GPUランタイムでも測定し、25msの出力1トークン時間目標では混合・長文脈で固定分割より有効スループットを39%・38%改善した。 |

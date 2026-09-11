@@ -457,13 +457,31 @@ def _update_catalog_counts(by_family):
     if root.exists():
         content = root.read_text(encoding="utf-8")
         content = re.sub(r"現在の論文収録数: .*", f"現在の論文収録数: **{total}本**（推論{counts['inference']}本 + 学習{counts['training']}本 + サーベイ{counts['survey']}本）", content)
+        content = re.sub(r"- \[Inference / 推論\]\(papers/inference/\) — \*\*\d+本\*\*", f"- [Inference / 推論](papers/inference/) — **{counts['inference']}本**", content)
+        content = re.sub(r"- \[Training / 学習\]\(papers/training/\) — \*\*\d+本（凍結）\*\*", f"- [Training / 学習](papers/training/) — **{counts['training']}本（凍結）**", content)
+        survey_line = f"  - [Survey / サーベイ](papers/survey/) — **{counts['survey']}本**"
+        if "[Survey / サーベイ](papers/survey/)" not in content:
+            training_line = re.search(r"^  - \[Training / 学習\].*$", content, flags=re.M)
+            if training_line:
+                content = content[:training_line.end()] + "\n" + survey_line + content[training_line.end():]
+        else:
+            content = re.sub(r"^  - \[Survey / サーベイ\]\(papers/survey/\) — \*\*\d+本\*\*$", survey_line, content, flags=re.M)
         root.write_text(content, encoding="utf-8")
+        block("README.md", f"推論：**{counts['inference']}本** ／ 学習：**{counts['training']}本** ／ サーベイ：**{counts['survey']}本**。 [推論一覧](papers/inference/README.md) ／ [学習一覧](papers/training/README.md) ／ [サーベイ一覧](papers/survey/README.md) ／ [研究比較](papers/inference/comparison.md)")
+
+
+def _comparison_link(path):
+    if path.startswith("papers/inference/"):
+        return path.removeprefix("papers/inference/")
+    if path.startswith("papers/"):
+        return "../" + path.removeprefix("papers/")
+    return path
 
 
 def render_comparison(records):
     cols = [("summary", "一文要約"), ("topics", "主題"), ("storage_targets", "保存・転送対象"), ("bottlenecks", "改善対象"), ("hardware_evaluation", "評価方式"), ("hardware_details", "評価機器"), ("quality_effect", "品質への影響"), ("code", "実装"), ("evidence_locations", "主要結果の出典")]
     lines = ["# 推論研究の横断比較", "", "既存の明示属性だけを表示する。未記録は未確認であり、非対応・実装なしを意味しない。本文の数値から自動推測しない。", "", "| 論文 | " + " | ".join(v for _, v in cols) + " |", "|---|" + "---|" * len(cols)]
-    lines += ["| [" + cell(r["title"]) + "](" + r["path"].removeprefix("papers/inference/") + ") | " + " | ".join(cell(r["meta"].get(k)) for k, _ in cols) + " |" for r in records]
+    lines += ["| [" + cell(r["title"]) + "](" + _comparison_link(r["path"]) + ") | " + " | ".join(cell(r["meta"].get(k)) for k, _ in cols) + " |" for r in records]
     put_text("papers/inference/comparison.md", "\n".join(lines) + "\n")
 
 
