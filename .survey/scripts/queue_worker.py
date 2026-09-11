@@ -344,8 +344,8 @@ def apply_artifact(sub: dict, job: dict):
     if not paper or not str(paper).startswith("papers/") or ".." in Path(paper).parts:
         raise ValueError("paper_path must stay under papers/ without parent traversal")
     loaded = submission_content(sub)
-    if not isinstance(loaded, str):
-        raise ValueError("completed artifact requires content or payload_path")
+    if not isinstance(loaded, str) or len(loaded.strip()) < 500:
+        raise ValueError("completed artifact requires complete Markdown content or payload_path")
     content = loaded.rstrip() + "\n"
     target = ROOT.parent / paper
     expected_sha = sub.get("expected_blob_sha")
