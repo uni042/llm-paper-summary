@@ -2,25 +2,27 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2602.03203-20260911-0630-v10-a1",
-  "job_id": "job-research-2f3e800f884677dd",
+  "attempt_id": "attempt-2602.11521-20260911-1130-v10-a1",
+  "job_id": "job-research-8455bd8ffbc74d54",
   "data": {
-    "overview": "ForesightKVは同じKV予算でH2O、SnapKV、R-KVを上回り、半分の容量でも比較方式以上の推論正答率を示す。Qwen3-4B/AIME2024では1K予算で54.5に達し、R-KVの2K予算44.8を上回る。推論効率では単一A800上のQwen3-4B 32K生成で、完全KVは最大同時バッチ11・スループット37.73なのに対し、ForesightKV-1Kは96・369.43で9.79倍となる。報酬設計では全トークン損失や高エントロピー重視より、追い出しで大きく損失が跳ねる低エントロピートークンへ集中する方が高いAIME性能を得る。",
+    "overview": "PAMの利得はKVがHBMに収まらなくなるほど大きくなる。オンラインではvLLM-offloading比でQwen2.5-32B 7.20倍、LLaMA3-70B 6.93倍、OPT-175B 24.53倍の平均スループット改善を報告する。オフライン長文ではLLaMA3-70BのArxiv_sumで39.2倍、Write_docで25.2倍となる。単にSSD-PIMを足すL-PIM/LS-PIMではSSDにKVが集中し、たとえばL-PIMでSSDが65%以上のKVを持つと計算時間の93%以上を消費する。PAMは重要KVを高速階層へ移し、各階層で注意を同時実行するため、この低帯域階層の直列化を避ける。",
     "key_results": [
-      {"metric": "Qwen3-4B AIME2024、1K KV予算", "value": "ForesightKV 54.5、R-KV 2K予算44.8を上回る", "baseline": "R-KVを含むH2O/SnapKV/R-KV", "condition": "AIME2024、temperature 0.6、top-k 20、top-p 0.95、32回独立評価のpass@1平均", "interpretation": "半分のKV容量でも既存追い出し方式より高い数学推論正答率を維持でき、将来寄与を学習する評価器が単純な現在注意より重要KVを残せている。"},
-      {"metric": "32K生成のスループット", "value": "ForesightKV-1K 369.43対FullKV 37.73、9.79倍", "baseline": "FullKV", "condition": "Qwen3-4B、単一A800 GPU、生成長32K", "interpretation": "固定1K KVにより最大同時バッチ数が11から96へ増え、KVメモリ削減と短い注意対象の双方が大規模な実効スループット差につながる。"},
-      {"metric": "Golden Evictionのモデル損失比", "value": "(B,L)=(1024,256)で1.0711、R-KV 1.4101、SnapKV 1.4091、H2O 1.2730", "baseline": "R-KV、SnapKV、H2O", "condition": "Qwen3-4Bの推論データ、元モデル損失比", "interpretation": "未来の各ブロックで最大注意を使うオラクル教師は、現在情報だけの方式より損失増加を大幅に抑え、学習評価器へ蒸留する価値のある教師信号になっている。"},
-      {"metric": "報酬設計のAIME2024性能", "value": "提案MSE報酬54.5、全損失50.6、低エントロピー全体53.5、高エントロピー49.6", "baseline": "異なるGRPO報酬", "condition": "Qwen3-4B、1K KV予算", "interpretation": "平均損失を均一に下げるより、元は高確信なのに追い出しで破壊されたトークンの大損失を重点的に抑える方が最終推論正答率へ効く。"},
-      {"metric": "Qwen3-14Bへの拡張", "value": "2K予算でForesightKV 73.8、教師ありのみ72.9、R-KV 43.6", "baseline": "R-KV", "condition": "Qwen3-14B、AIME2024", "interpretation": "主要4B/7B範囲を超えても将来注意教師の大きな利得とGRPOの追加利得が維持され、仕組みが小型モデル固有ではないことを補強する。"},
-      {"metric": "追い出し評価器の直接オーバーヘッド", "value": "32K生成5813秒中157秒、2.7%", "baseline": "R-KVの追い出し計算約8.1%", "condition": "Qwen3-4B、B=2048、batch size 64", "interpretation": "学習済みMLPを追加しても評価器計算は総時間の小部分で、削減した注意計算とメモリによる利得を打ち消さない。"}
+      {"metric": "オンライン平均スループット", "value": "Qwen2.5-32B 7.20倍、LLaMA3-70B 6.93倍、OPT-175B 24.53倍", "baseline": "vLLM-offloading", "condition": "ShareGPT/WildChat/HumanEval、SLO 100/150/200ms、8×H100-80GB相当の異種階層シミュレーション", "interpretation": "モデルが大きくKVがHBMを越えるほど、DDR/SSDからGPUへ戻す比較方式の転送律速が強くなり、PAMの階層内計算と動的配置の価値が増える。"},
+      {"metric": "長文オフライン・LLaMA3-70B", "value": "Arxiv_sum 39.2倍、Write_doc 25.2倍", "baseline": "vLLM-offloading", "condition": "バッチ256/512/1024、1500〜8000トークン級の長文、16ビット重み/KV、8倍KV疎性化", "interpretation": "大バッチと長文でKV容量がHBM/DDRを越え、通常退避方式がSSD帯域に律速される条件で最大の改善が出る。"},
+      {"metric": "長文オフライン・OPT-175B", "value": "Arxiv_sum 33.0倍、Write_doc 8.26倍", "baseline": "vLLM-offloading", "condition": "バッチ16/32/64、異種階層シミュレーション", "interpretation": "175B級ではHBM容量不足が常態化し、KVをその場で処理する利点が大きい。ただしデータセットとバッチ条件により改善幅は大きく変わる。"},
+      {"metric": "LS-PIMに対する注意計算", "value": "小バッチ18.7倍、大バッチ48.56倍", "baseline": "LS-PIM", "condition": "PAMattention・KV mapping・KV schedulingを全て有効", "interpretation": "階層PIMを置くだけではSSD負荷集中を解決できず、計算分割と配置制御を組み合わせる必要がある。大バッチほどKV偏在が強くなり差が拡大する。"},
+      {"metric": "各機構を外した場合", "value": "小バッチでPAMattentionなし比1.93倍、KV mappingなし比2.06倍、KV schedulingなし比2.74倍。大バッチでは2.35倍、4.15倍、4.62倍", "baseline": "各一機構を無効化したPAM変種", "condition": "LS-PIMを1として注意計算性能を比較", "interpretation": "特に大バッチでは配置・スケジューリングの寄与が大きく、文脈局所性を使って低帯域階層の重要KV偏りを補正することが主要因である。"},
+      {"metric": "KV移動量", "value": "全KVの0.7%を調整、SSDからDDRへの転送は各デコード段0.1%未満", "baseline": "動的配置なし", "condition": "オンラインKVスケジューラ実行時", "interpretation": "少量の交換でも重要KV偏りの累積を防げるため、動的配置の利得を階層間大量コピーで相殺しにくい。"},
+      {"metric": "電力削減", "value": "vLLM-offloading比53.1〜92.7%削減", "baseline": "vLLM-offloading", "condition": "LLaMA3-70B/OPT-175B、WildChat/Arxiv_sum、シミュレーション電力モデル", "interpretation": "巨大KVのオフチップ転送を減らし、注意をデータ近傍で処理することでメモリ移動エネルギーを大きく下げる。"},
+      {"metric": "回路面積", "value": "HBM PU/RU 9.25%、DDR PU/RU 5.04%、SSD制御装置PU/RU 7.59%、PAMインターフェース約0.58〜0.75%", "baseline": "各メモリ/制御装置の基準面積", "condition": "VerilogをDRAM互換工程またはTSMC 14nm相当で合成", "interpretation": "性能利得と引き換えに各階層へ専用回路面積を追加する。HBMを旧工程で合成すると約27.7%まで増える感度も示される。"}
     ],
     "negative_results": [
-      {"name": "教師ありだけでは圧縮後状態の分布ずれが残る", "description": "Golden Evictionは完全KVの未来情報で作るため、実際にKVを捨てた後の隠れ状態変化を教師生成時には経験しない。主実験ではGRPOが追加改善を与え、教師あり蒸留だけが最終解ではない。"},
-      {"name": "高エントロピートークン重視報酬は悪化", "description": "Qwen3-4B 1K予算で高エントロピー損失を報酬にするとAIME24 49.6、AIME25 35.4となり、強化学習なし51.7/40.9より悪い。難しい分岐トークンだけを守る直感は有効でなく、低エントロピーの事実誤りが重要である。"},
-      {"name": "純粋な多項抽選は大幅に不安定", "description": "Key/Value+注意特徴を同じまま、候補制限なしの多項抽選へ変えるとAIME24 16.5、AIME25 13.8まで低下する。探索性だけを増やすと不可逆な重要KV誤削除が頻発する。"},
-      {"name": "訓練費用が必要", "description": "32K向けDeepSeek-R1-Distill-Qwen-7Bで教師あり段階はH800 2基×約8時間、強化学習は8基×約6時間を要する。訓練不要方式に比べてモデル追加・更新時の準備費用が大きい。"}
+      {"name": "小さいモデル・短い文脈では利得が縮む", "description": "Qwen2.5-32BやLLaMA3-70Bが100ms SLOのShareGPT条件でKVをHBM内に保てる場合、通常のvLLM-offloadingは低速階層を使わず性能低下を避けられる。この領域ではPAMの階層化利得はOPT-175Bほど大きくない。"},
+      {"name": "単純な階層PIMはSSD律速", "description": "L-PIMでは容量の大きいSSDへKVが集中し、オフライン条件ではSSDが65%以上のKVを保持しながら計算時間の93%以上を消費する例がある。PIMを各層へ追加するだけでは帯域不均衡を解決できない。"},
+      {"name": "スケジューリング無効化で長文性能が悪化", "description": "各段で移動するKVは少量でも、重要KVの配置ずれは複数段で蓄積する。KV schedulingを外すと小バッチで完全PAMに2.74倍、大バッチで4.62倍の差が生じ、静的配置では文脈局所性を持続的に利用できない。"},
+      {"name": "ハードウェア実機では未検証", "description": "提案PIM階層はシミュレーションと回路合成で評価されており、製造済みの三階層PIMシステム上で同じスループットや電力削減が測定されたわけではない。"}
     ],
-    "interpretation": "ForesightKVの本質は、KV重要度を『これまでどれだけ見られたか』ではなく『今後どこかで必要になるか』として学習可能にしたことにある。オラクルの未来注意から順位を蒸留し、さらに不可逆追い出し後の分布ずれを強化学習で補正する二段構成によって、長い推論で重要度が何度も変わるKVへ対応する。効率面でも固定KV上限は長さ増加に対するメモリ増大を止めるため、長生成ほど完全KVとの差が大きくなる。ただしその利得は事前学習済み評価器に依存し、モデル更新や大きな分布変化に対して再学習が必要になる。",
-    "quality_impact": "完全KVと比べると圧縮は近似であり、4K予算で約99%、2Kで約92%という品質保持率は100%保証ではない。しかし同容量の主要追い出し方式より一貫して高い推論正答率を示し、GPQA、LiveCodeBench、LongBenchにも転移する。特に数値・記号・固有表現など低エントロピーで本来確信度が高いトークンの損失急増を抑えることが、長い推論連鎖の誤差伝播を防ぐ重要な品質機構である。"
+    "interpretation": "性能差を決める主因は、KV総量が高速階層の容量を越えるかどうかである。KVがHBM内に収まる条件では比較方式も高速なので差は小さいが、大モデル・大バッチ・長文ではDDRやSSDへの退避が不可避になり、全KVを低帯域階層から読み戻す方式が急激に悪化する。PAMは注意計算そのものをKV所在地へ移し、さらに重要KVだけを高帯域階層へ寄せるため、低速階層に容量を持たせながらアクセス頻度を下げられる。アブレーションでKV mappingとKV schedulingの寄与が大バッチほど増えることは、この帯域不均衡の補正が中心機構であることを支持する。ただし改善値は新規PIM回路を前提とするシミュレーション結果なので、既存サーバへソフトウェアだけを導入した速度向上として解釈してはいけない。",
+    "quality_impact": "PAMattentionの部分集約はオンラインソフトマックスの統計量を用いて全体正規化を再構成するため、階層分割自体が近似削除を目的とするものではない。一方、評価系では全モデル・全方式に8倍のKV疎性化を併用し、論文はその品質損失を1%未満と報告する。したがって報告性能は完全KVの厳密無損失条件ではなく、同一の近似疎性化を比較方式にも適用した条件でのシステム性能である。"
   }
 }
