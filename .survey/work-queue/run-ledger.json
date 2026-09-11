@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:38:17.717162+00:00",
+  "updated_at": "2026-09-11T06:42:05.788341+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5239,17 +5239,18 @@
     {
       "run_key": "2026-09-11T15:30:00+09:00",
       "first_recorded_at": "2026-09-11T06:34:31.084867+00:00",
-      "last_recorded_at": "2026-09-11T06:38:17.717162+00:00",
+      "last_recorded_at": "2026-09-11T06:42:05.788341+00:00",
       "signals": [
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 1,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -5282,6 +5283,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34571026307:1",
+          "recorded_at": "2026-09-11T06:42:05.788341+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34571026307",
+            "run_attempt": "1",
+            "source_sha": "86b72db2686fc456fe2c15fca733d3d7c6d105f8"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5300,9 +5316,25 @@
           "title": "TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2f0dad2a8facac81",
+          "type": "research",
+          "canonical_id": "arXiv:2410.21465",
+          "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-b7d2560206d7b78d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2507.11507",
         "arXiv:2511.14510",
@@ -5313,7 +5345,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
       "paper_active_count_after": 271,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
