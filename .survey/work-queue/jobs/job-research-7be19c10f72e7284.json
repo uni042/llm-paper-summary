@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2603.20397",
   "paper_path": "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md",
   "selection_reason": "KVキャッシュ最適化を、追い出し、圧縮、階層メモリ、新しい注意機構、組合せ方式の5方向へ体系化し、長文単一要求、高スループットデータセンター、エッジ、複数ターン、精度重視推論など7種類の配置条件へ対応付けるレビュー論文。新設したSurvey系統の最初の高確度候補として、個別方式の位置づけと研究空白を俯瞰する用途がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T06:08:49+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T06:13:52+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

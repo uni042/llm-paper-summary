@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T06:09:00.848852+00:00",
+  "updated_at": "2026-09-11T06:14:04.255721+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -4871,7 +4871,7 @@
     {
       "run_key": "2026-09-11T14:30:00+09:00",
       "first_recorded_at": "2026-09-11T05:33:15.103860+00:00",
-      "last_recorded_at": "2026-09-11T06:09:00.848852+00:00",
+      "last_recorded_at": "2026-09-11T06:14:04.255721+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -4879,11 +4879,11 @@
         "job_blocked"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 2,
-        "new_jobs": 6,
+        "new_jobs": 7,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -5002,6 +5002,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34569045470:1",
+          "recorded_at": "2026-09-11T06:14:04.255721+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34569045470",
+            "run_attempt": "1",
+            "source_sha": "ef16b987dc5d8db2ad9d7e1a1d4a14a6ec3cb5a0"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5068,6 +5083,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-7be19c10f72e7284",
+          "type": "research",
+          "canonical_id": "arXiv:2603.20397",
+          "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5112,6 +5135,13 @@
           "type": "research",
           "canonical_id": "arXiv:2603.20397",
           "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-a923b40a38aac177",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
