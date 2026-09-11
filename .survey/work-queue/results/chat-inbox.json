@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-53c253e5bccae726",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.09768.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-b241bd9114edcf86",
+  "validation_error": "ValueError: problem_method.components[1].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T05:00:44+00:00"
 }
