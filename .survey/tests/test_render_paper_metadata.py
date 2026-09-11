@@ -38,6 +38,16 @@ def complete_record() -> dict:
             "storage_targets": ["モデル重み"],
             "bottlenecks": ["消費電力"],
             "evidence_locations": ["§5"],
+            "references": [
+                {
+                    "canonical_id": "arXiv:2303.06865",
+                    "arxiv_id": "2303.06865",
+                    "doi": "10.48550/arXiv.2303.06865",
+                }
+            ],
+            "references_checked_at": "2026-09-11",
+            "references_source": "primary-reference-section",
+            "references_total": 42,
             "code": "https://example.com/code",
             "last_checked": "2026-09-11",
         },
@@ -63,6 +73,7 @@ def complete_record() -> dict:
             }],
             "negative_results": ["限界"],
             "interpretation": "解釈",
+            "quality_impact": "品質への影響はない。",
         },
         "positioning": {
             "limitations": ["限界"],
@@ -74,7 +85,7 @@ def complete_record() -> dict:
 
 
 class RenderPaperMetadataTest(unittest.TestCase):
-    def test_frontmatter_keeps_index_and_audit_metadata(self) -> None:
+    def test_frontmatter_keeps_index_audit_and_reference_metadata(self) -> None:
         rendered = render_paper(complete_record())
         meta = yaml.safe_load(rendered.split("---", 2)[1])
         self.assertEqual(meta["arxiv_categories"], {"primary": "cs.AR", "cross_list": []})
@@ -82,6 +93,21 @@ class RenderPaperMetadataTest(unittest.TestCase):
         self.assertEqual(meta["publication_status"], "MICRO 2026採択")
         self.assertEqual(meta["code"], "https://example.com/code")
         self.assertEqual(meta["storage_targets"], ["モデル重み"])
+        self.assertEqual(meta["references"][0]["canonical_id"], "arXiv:2303.06865")
+        self.assertEqual(meta["references_checked_at"], "2026-09-11")
+        self.assertEqual(meta["references_total"], 42)
+
+    def test_references_are_required(self) -> None:
+        record = complete_record()
+        del record["metadata"]["references"]
+        with self.assertRaisesRegex(ValueError, "metadata.references"):
+            validate_record(record)
+
+    def test_reference_items_require_a_normalized_identity(self) -> None:
+        record = complete_record()
+        record["metadata"]["references"] = [{"title": "Missing identifiers"}]
+        with self.assertRaisesRegex(ValueError, "normalized identity"):
+            validate_record(record)
 
     def test_arxiv_category_is_required(self) -> None:
         record = complete_record()
