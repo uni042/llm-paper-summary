@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b929523ba1be53c2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-cache-restoration.md",
+      "priority": 86,
+      "reason": "長文・複数ターン・エージェント推論で支配的になり得るKVキャッシュ復元を、再計算かI/Oかの二択ではなく、トークン・層・GPUの3次元並列実行として扱う。バッチ内の計算資源とI/O競合を同時に見て、再計算削減の限界利益が高い操作を優先するスケジューラを提案し、既存方式比でTTFTを10〜62%短縮する。既収録の単純退避・再計算方式と異なり、復元そのものの並列構造を主題にする強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2603.27138",
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.27138",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-layer-ahead-cpu-precomputation.md",
+      "priority": 84,
+      "reason": "KVキャッシュをCPUへ退避した長文推論で、転送待ちかCPU注意計算のどちらかがGPUを止める問題を扱う。GPU/CPU協調のブロック疎注意に加え、CPUが次層の注意計算を1層先行して始める方式と非同期の周期的再取得を組み合わせ、既存オフロード方式比2.1倍高速化、基準精度との差2.4%以内を報告する。CPU協調注意と層先行実行という異なる隠蔽軸を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2603.20397",
+      "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.20397",
+      "paper_path": "papers/survey/01-kv-cache-optimization/2026-2603.20397-kv-cache-optimization-strategies.md",
+      "priority": 72,
+      "reason": "KVキャッシュ最適化を、追い出し、圧縮、階層メモリ、新しい注意機構、組合せ方式の5方向へ体系化し、長文単一要求、高スループットデータセンター、エッジ、複数ターン、精度重視推論など7種類の配置条件へ対応付けるレビュー論文。新設したSurvey系統の最初の高確度候補として、個別方式の位置づけと研究空白を俯瞰する用途がある。"
+    }
+  ]
+}
