@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:13:56.611327+00:00",
+  "updated_at": "2026-09-11T09:18:24.402048+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5843,7 +5843,7 @@
     {
       "run_key": "2026-09-11T17:30:00+09:00",
       "first_recorded_at": "2026-09-11T08:32:59.073522+00:00",
-      "last_recorded_at": "2026-09-11T09:13:56.611327+00:00",
+      "last_recorded_at": "2026-09-11T09:18:24.402048+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
@@ -5851,9 +5851,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 10,
+        "discovery_completed": 11,
         "blocked": 0,
-        "new_jobs": 13,
+        "new_jobs": 17,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -6041,6 +6041,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34583479776:1",
+          "recorded_at": "2026-09-11T09:18:24.402048+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34583479776",
+            "run_attempt": "1",
+            "source_sha": "0758584d29940d692dbca7f2dca82286c55a1212"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6147,6 +6161,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-d953c583d54986c3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6240,6 +6262,34 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-1e8defc953ea3ff0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.16857",
+          "title": "ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching"
+        },
+        {
+          "job_id": "job-research-2f9f8493748da189",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2410.03065",
+          "title": "Compute Or Load KV Cache? Why Not Both?"
+        },
+        {
+          "job_id": "job-research-47789f8888a4ad5e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.26182",
+          "title": "Parallax: Efficient LLM Inference Service over Decentralized Environment"
+        },
+        {
+          "job_id": "job-research-fd3f47f1ba51eddc",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2508.17219",
+          "title": "TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving"
         }
       ],
       "new_paper_ids": [],
@@ -6253,11 +6303,12 @@
         ".survey/work-queue/results/20260911T1802JST-discovery-cf8806698ad633c6.json",
         ".survey/work-queue/results/20260911T1805JST-discovery-c1ec790fefc60212.json",
         ".survey/work-queue/results/20260911T1808JST-discovery-efe114fe19d772d8.json",
-        ".survey/work-queue/results/20260911T1824JST-discovery-ee63b15e506badec.json"
+        ".survey/work-queue/results/20260911T1824JST-discovery-ee63b15e506badec.json",
+        ".survey/work-queue/results/20260911T1828JST-discovery-d953c583d54986c3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 302,
-      "paper_active_count_after": 303,
+      "paper_active_count_after": 305,
       "last_successful_action": "discovery_or_queue_expanded"
     }
   ]

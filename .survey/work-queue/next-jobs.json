@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 135,
-      "ready": 1
+      "completed": 136
     },
     "audit": {
       "completed": 6
@@ -11,22 +10,59 @@
       "completed": 116,
       "superseded": 43,
       "deferred": 3,
+      "ready": 4,
       "blocked": 2
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-d953c583d54986c3",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-1e8defc953ea3ff0",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2509.16857",
+      "title": "ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching",
+      "source_url": "https://arxiv.org/abs/2509.16857",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.16857-shadowserve-smartnic-kv-fetching.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-fd3f47f1ba51eddc",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2508.17219",
+      "title": "TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2508.17219",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2508.17219-tokenlake-segment-prefix-cache-pool.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-47789f8888a4ad5e",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2509.26182",
+      "title": "Parallax: Efficient LLM Inference Service over Decentralized Environment",
+      "source_url": "https://arxiv.org/abs/2509.26182",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.26182-parallax-decentralized-heterogeneous-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2f9f8493748da189",
+      "type": "research",
+      "lane": null,
+      "priority": 83,
+      "canonical_id": "arXiv:2410.03065",
+      "title": "Compute Or Load KV Cache? Why Not Both?",
+      "source_url": "https://arxiv.org/abs/2410.03065",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2410.03065-cake-compute-or-load-kv-cache.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T09:13:51+00:00"
+  "generated_at": "2026-09-11T09:18:24+00:00"
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-47789f8888a4ad5e",
+  "type": "research",
+  "parent_job_id": "job-d953c583d54986c3",
+  "priority": 84,
+  "canonical_id": "arXiv:2509.26182",
+  "title": "Parallax: Efficient LLM Inference Service over Decentralized Environment",
+  "source_url": "https://arxiv.org/abs/2509.26182",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.26182-parallax-decentralized-heterogeneous-serving.md",
+  "selection_reason": "帯域とGPU性能が異なる分散・ボランティアGPU poolで、model layer配置とrequest時pipeline選択を二段階で最適化する。実際の分散node上でopen-source LLMを評価し、単純な分散baselineよりlatencyとthroughputを改善する。P2P prefix routingが同質nodeを仮定していた限界を、異種GPU・動的可用性の側から補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T09:18:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}
