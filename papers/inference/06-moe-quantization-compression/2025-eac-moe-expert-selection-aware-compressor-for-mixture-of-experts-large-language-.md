@@ -41,6 +41,90 @@ publication_type: Conference paper
 sources:
 - https://aclanthology.org/2025.acl-long.633/
 implementation_status: official-code-not-confirmed
+references:
+- canonical_id: arXiv:2404.14219
+  arxiv_id: '2404.14219'
+- canonical_id: DOI:10.18653/v1/n19-1245
+  doi: 10.18653/v1/n19-1245
+- canonical_id: OpenReview:xXTkbTBmqq
+  openreview_id: xXTkbTBmqq
+- canonical_id: OpenReview:rAcgDBdKnP
+  openreview_id: rAcgDBdKnP
+- canonical_id: DOI:10.18653/v1/2022.emnlp-main.804
+  doi: 10.18653/v1/2022.emnlp-main.804
+- canonical_id: OpenReview:vXxardq6db
+  openreview_id: vXxardq6db
+- canonical_id: arXiv:2404.00456
+  arxiv_id: '2404.00456'
+- canonical_id: arXiv:2108.07732
+  arxiv_id: '2108.07732'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2401.06066
+  arxiv_id: '2401.06066'
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: DOI:10.5281/zenodo.12608602
+  doi: 10.5281/zenodo.12608602
+- canonical_id: arXiv:2410.06270
+  arxiv_id: '2410.06270'
+- canonical_id: DOI:10.1162/neco.1991.3.1.79
+  doi: 10.1162/neco.1991.3.1.79
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: DOI:10.1162/neco.1994.6.2.181
+  doi: 10.1162/neco.1994.6.2.181
+- canonical_id: arXiv:2109.10465
+  arxiv_id: '2109.10465'
+- canonical_id: arXiv:2406.08155
+  arxiv_id: '2406.08155'
+- canonical_id: arXiv:2402.18158
+  arxiv_id: '2402.18158'
+- canonical_id: arXiv:2407.00945
+  arxiv_id: '2407.00945'
+- canonical_id: arXiv:2402.14800
+  doi: 10.18653/v1/2024.acl-long.334
+- canonical_id: arXiv:1609.07843
+  arxiv_id: '1609.07843'
+- canonical_id: DOI:10.18653/v1/2020.acl-main.92
+  doi: 10.18653/v1/2020.acl-main.92
+- canonical_id: DOI:10.48550/arxiv.2404.05089
+  doi: 10.48550/arxiv.2404.05089
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.18653/v1/d19-1454
+  doi: 10.18653/v1/d19-1454
+- canonical_id: arXiv:2308.13137
+  arxiv_id: '2308.13137'
+- canonical_id: arXiv:1701.06538
+  arxiv_id: '1701.06538'
+- canonical_id: arXiv:2306.11695
+  arxiv_id: '2306.11695'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2410.12013
+  arxiv_id: '2410.12013'
+- canonical_id: arXiv:2407.10671
+  arxiv_id: '2407.10671'
+- canonical_id: arXiv:2404.02852
+  arxiv_id: '2404.02852'
+- canonical_id: OpenReview:c8McWs4Av0
+  openreview_id: c8McWs4Av0
+- canonical_id: OpenReview:S1lN69AT-
+  openreview_id: S1lN69AT-
+references_checked_at: '2026-09-11'
+references_source: arxiv-html-reference-section
+references_total: 69
 ---
 
 # EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models
