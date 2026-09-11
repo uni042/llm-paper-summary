@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T03:00:22.229321+00:00",
+  "updated_at": "2026-09-11T03:02:25.996129+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,7 +3838,7 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T03:00:22.229321+00:00",
+      "last_recorded_at": "2026-09-11T03:02:25.996129+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3846,9 +3846,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 11,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3981,6 +3981,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34556892957:1",
+          "recorded_at": "2026-09-11T03:02:25.996129+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34556892957",
+            "run_attempt": "1",
+            "source_sha": "1cc2b7f71115555f4ad2e3ebf941e4221cf098e0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -4045,6 +4059,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.24022",
           "title": "Adaptive KV Cache Reuse for Fast Long-Context LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b18cb287a414a209",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -4119,6 +4141,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-efb253b8d1a8f8f0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.19593",
+          "title": "Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption"
         }
       ],
       "new_paper_ids": [],
@@ -4126,7 +4155,8 @@
         ".survey/work-queue/results/20260911T1136JST-discovery-34d58f798d6809bc.json",
         ".survey/work-queue/results/20260911T1138JST-discovery-23004462feabf795.json",
         ".survey/work-queue/results/20260911T1151JST-discovery-04676dbdfb36284d.json",
-        ".survey/work-queue/results/20260911T1154JST-discovery-a273f839dfbdd6ee.json"
+        ".survey/work-queue/results/20260911T1154JST-discovery-a273f839dfbdd6ee.json",
+        ".survey/work-queue/results/20260911T1203JST-discovery-b18cb287a414a209.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 252,
