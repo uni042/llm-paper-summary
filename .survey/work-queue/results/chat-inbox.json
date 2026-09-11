@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-b4db9c06ac78c999",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/04-moe-parallelism-communication/2026-2606.15177-gimbal-coordinated-moe-serving-scheduling.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2606.15177.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-1047bdfeaa42931d",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T01:45:10+00:00"
 }
