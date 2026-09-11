@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T08:49:04.117972+00:00",
+  "updated_at": "2026-09-11T08:50:41.438159+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5843,7 +5843,7 @@
     {
       "run_key": "2026-09-11T17:30:00+09:00",
       "first_recorded_at": "2026-09-11T08:32:59.073522+00:00",
-      "last_recorded_at": "2026-09-11T08:49:04.117972+00:00",
+      "last_recorded_at": "2026-09-11T08:50:41.438159+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed"
@@ -5851,9 +5851,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -5914,6 +5914,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34581142172:1",
+          "recorded_at": "2026-09-11T08:50:41.438159+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34581142172",
+            "run_attempt": "1",
+            "source_sha": "e50582d0e1c4ed79b0b18778cf542412082b9d4c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5948,6 +5962,14 @@
           "title": "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-02d1cb2d50392215",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5978,13 +6000,21 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-80f8aa6f5bbc165b",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1730JST-discovery-83bcad427dc46233.json",
         ".survey/work-queue/results/20260911T1736JST-discovery-af83b07786e20df5.json",
-        ".survey/work-queue/results/20260911T1744JST-discovery-305b63a35c012b0a.json"
+        ".survey/work-queue/results/20260911T1744JST-discovery-305b63a35c012b0a.json",
+        ".survey/work-queue/results/20260911T1755JST-discovery-02d1cb2d50392215.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 302,
