@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-59aade11c82016df",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 97,
+      "reason": "長文脈のKVキャッシュをNVMe SSDへ退避する際、断片化したGPUメモリに起因する大量の小粒度I/OとCPU主導の発行が帯域利用を妨げる問題を、GPU中心のKVオブジェクトストア、GPU io_uring、余裕時間を考慮したI/Oスケジューリングで解く。vLLMへ統合した実機評価でGDS対応SSD版LMCache比の最初のトークン時間を厳しいSLO下で78.3%短縮し、達成可能要求率を2倍、サービング費用を27%削減する。SSD階層を重点テーマとするリポジトリに特に重要な新規候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2601.20309-superinfer-slo-aware-superchip-kv-management.md",
+      "priority": 91,
+      "reason": "NVIDIA GH200のようにGPUとCPUがNVLink-C2Cで密結合されたsuperchipを対象に、KV容量不足時の先頭要求ブロッキングを回避するSLO考慮回転スケジューラRotaSchedと、全二重KV移動を行うDuplexKVを協調設計する。GH200実機で最初のトークンSLO達成率を最大74.7%改善しつつ、出力間遅延とスループットを維持するため、CPU-GPU階層メモリと要求スケジューリングの交差点として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.27138",
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.27138",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2603.27138-scoutattention-layer-ahead-cpu-kv-offloading.md",
+      "priority": 90,
+      "reason": "長文脈デコードでKVをCPU DRAMへ退避すると、GPU-CPU転送またはCPU注意計算のどちらかがGPU待ちを生む問題に対し、CPU側のブロック疎注意と一層先行した注意事前計算を組み合わせる。非同期の定期再呼び出しでCPU負荷を抑え、既存オフロード方式比2.1倍高速化しつつ品質差を2.4%以内に維持する。CPU計算を単なる退避先ではなく先行計算資源として使う点が階層メモリ研究として重要である。"
+    },
+    {
+      "canonical_id": "arXiv:2402.01869",
+      "title": "INFERCEPT: Efficient Intercept Support for Augmented LLM Inference",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-augmented-llm-intercept-serving.md",
+      "priority": 79,
+      "reason": "外部APIやツール呼び出しでLLM生成が一時停止する拡張推論では、停止要求のKVをGPUに保持するとメモリを浪費し、全破棄すると復帰時の再計算が増える。INFERCEPTは反復単位スケジューラ、GPU/CPU swap、要求ごとのGPUメモリ浪費推定を組み合わせ、停止中コンテキストを保持・退避・破棄から動的に選ぶ。エージェント型推論が一般化した現在、KV管理と外部処理待ちを扱う基礎的な重要欠落論文として収録価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2407.00023",
+      "title": "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2407.00023",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-distributed-prompt-scheduling.md",
+      "priority": 78,
+      "reason": "複数GPUへ接頭辞共有のある要求を振り分ける際、単純な負荷分散は接頭辞KVの局所性を失い、局所性優先だけでは特定GPUへ負荷が集中する。Prebleは接頭辞再利用の計算削減量とGPU負荷を同時に考慮して要求を配置し、ツール利用、動画QA、長文QA、プログラミングなど接頭辞共有が強い負荷で平均・末尾遅延を改善する。接頭辞キャッシュ局所性と分散スケジューリングを結ぶ代表的な過去の欠落候補である。"
+    }
+  ]
+}
