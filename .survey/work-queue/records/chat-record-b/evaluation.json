@@ -1,23 +1,16 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-research-2603.28239-20260911-1030-v10-b1",
-  "job_id": "job-research-d1d610f7f4147cc7",
-  "data": {
-    "hardware": ["FPGA試作: 4台の端点FPGAと1台のスイッチFPGA、すべてAMD XCVU13P-FLGA2577-2-I。各端点リンクは4本の32 Gbpsレーンで合計128 Gbps双方向、250 MHz動作。", "大規模通信評価: NVIDIA DGX H200と同じ8GPU・4スイッチのトポロジーをBookSim2で再現し、GPU-スイッチ間合計900 GB/s双方向、片道250 nsとして校正。", "計算時間: 実NVIDIA H200上でTensorRT-LLMを用いてLLaMA-2-7B/13B/70BとMixtral-8x7Bをプロファイル。"],
-    "software": ["BookSim2を拡張したサイクル単位ネットワークシミュレータ。", "TensorRT-LLM v1.3.0を用いたH200実機プロファイル。", "SmoothQuantコードベース上の量子化精度評価とLanguage Model Evaluation Harness。"],
-    "model": ["LLaMA-2-7B", "LLaMA-2-13B", "LLaMA-2-70B", "Mistral-7B", "Mixtral-8x7B"],
-    "datasets": ["WikiText-2", "MMLU 5-shot", "HellaSwag", "PIQA", "WinoGrande", "ARC-easy", "ARC-challenge", "BoolQ", "OpenBookQA"],
-    "baselines": ["NVLink SHARP（NVLS）", "リング型All-Reduce", "リング型量子化All-Reduce"],
-    "correctness": "通信量子化なしのSCINは同じAll-Reduce結果を異なる経路で生成する。量子化有りではINT8近似を導入するため完全一致ではなく、WikiText-2のパープレキシティとMMLU・常識推論精度で品質を確認する。主設定はブロックサイズ64のINT8で、LLaMA-2-7BではFP16 5.4721に対し5.4746で差0.0025。",
-    "settings": [
-      {"name": "通信シミュレーション", "description": "8GPU・4スイッチ、各GPUとスイッチ群の合計帯域900 GB/s双方向、片道250 ns。最大ペイロード128B、ヘッダ16B。SCINの端点別波テーブルは96KB、波サイズ4KB。NVLS比較側はポートあたり320KBの集約表と2倍内部スイッチ高速化を与える。"},
-      {"name": "シミュレータ校正", "description": "NVLSは32KB〜1GBのNCCL実機測定と比較し平均誤差5.5%、大メッセージでは2.6%。SCINモデルはFPGA試作結果に対して差1%未満になるよう校正する。"},
-      {"name": "エンドツーエンド推論", "description": "H200実機で入力長1024・出力長1024、バッチ128未満の低同時実行条件をプロファイルし、TPサイズに応じて注意ヘッドとMLP中間次元を分割する。得られたGPU計算時間と通信シミュレーション時間を合成してTTFTとTPOTを推定する。"},
-      {"name": "量子化品質", "description": "対称量子化を使用し、FP16モデルとFP8重み・活性値モデルの双方へネットワーク内INT8 All-Reduceを適用。WikiText-2では系列長2048、TP=8でブロックサイズ32〜512を比較し、主設定を64とする。"}
+  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-research-2606.15177-20260911-1030-v10-b1","job_id":"job-research-b4db9c06ac78c999","data":{
+    "hardware":["2台の32コアIntel Xeon Platinum 8462Y+ CPU、4台のNVIDIA HGX H100 80GB SXM5 GPU、1TBシステムメモリ。GPU間はNVLink接続。"],
+    "software":["vLLMを基盤に約1.7K行のPython/Triton拡張。","PPLX All-to-All通信バックエンドとEPLB統計経路を利用し、送信元別集計をTritonカーネルへ融合。"],
+    "model":["Qwen3-30B-A3B"],
+    "datasets":["BurstGPT実運用トレースをRandom、Central、Descending、Two-end、Averageの5種類の要求長分布へ整形"],
+    "baselines":["vLLM","MoE-Tuner","Sem-MoE"],
+    "correctness":"要求の割当順序と専門家の配置場所を変更するサービング最適化で、モデルの重みや専門家選択結果そのものを近似しない。したがって品質近似ではなく、同じモデル推論をより均衡に実行する方式として遅延・スループットを評価する。",
+    "settings":[
+      {"name":"並列構成","description":"DP=2、TP=2、EP=4。各DP群では2GPUに注意機構等をテンソル分割し、MoE専門家は4GPU全体へ配置する。要求率はRPS 2、2.5、3、3.5、4を用い、各点は複数の要求長分布と3乱数種で評価する。"},
+      {"name":"DPスケジューラ","description":"KVキャッシュが明確に高圧なら低使用率エンジンを優先し、それ以外では残りプリフィル、待機トークン、直近割当補償、KV圧力、MoE圧力を統合する。スコア差が小さい場合は順番選択へ戻る。ローカルキューの老化しきい値は5秒。"},
+      {"name":"専門家配置","description":"送信元DP×専門家統計と専門家総負荷を再配置窓で収集し、通信費・負荷差・移動安定性を評価するオンラインヒューリスティックを使う。係数α=1.0、β=0.0025、γ=1.0はオフラインMINLP参照へ校正され、80%以上の配置判断一致と通信費0.6%以内を得る。"}
     ],
-    "methodology": "小規模ではFPGA試作でプロトコルとISAの実動作、リンク遅延、長大メッセージ効率、資源使用量を直接測定する。大規模ではBookSim2のスイッチモデルへSCINとNVLSのデータ経路を実装し、実NCCLとFPGA測定で校正してからメッセージサイズ別のAll-Reduce遅延・等価帯域を比較する。エンドツーエンド評価では通信と計算が低同時実行TPで重なりにくい前提を使い、H200実機の計算プロファイルとシミュレーション通信時間を加算する。量子化は別途ソフトウェア上で部分活性値を各GPU相当に分け、各部分をINT8へ量子化して集約する経路を模擬し、リング方式との差も確認する。",
-    "scope": "FPGA試作は4端点でGPUそのものではなく端点FPGAとMicroBlazeで動作を模擬する。8GPU性能はハードウェア校正済みとはいえシミュレーションであり、SCIN搭載実NVSwitch相当ASICでの測定ではない。設計対象は主に単一階層の4〜8GPU共有メモリ網で、多段ラック規模ネットワークへの削減木拡張は将来案に留まる。エンドツーエンド結果はH200実測計算時間と通信シミュレーションの合成値である点を、完全実機測定と区別する必要がある。"
-  }
-}
+    "methodology":"まずvLLMの要求数ベース振り分け、オフライン専門家親和性を使うMoE-Tuner、完全なルーティング知識を使うSem-MoEと比較する。平均エンドツーエンド遅延、TTFT、TPOT、P99 TTFT、要求スループットをRPSと5種類の要求長分布にわたって測る。次にDP側だけ、EP側だけ、両者の独立併用、MoE圧力をDPへ戻す完全協調版を比較して閉ループ効果を分離する。さらにRPS=4の実行時トレースからエンジンごとの実行中要求数、KV使用率、プリフィルスループット差を調べ、どの圧力が改善したかを確認する。送信元別統計収集についても素朴実装、通信経路再利用、Triton融合を比較して計測オーバーヘッドを評価する。",
+    "scope":"単一ノード4×H100、Qwen3-30B-A3B、DP=2/TP=2/EP=4という中規模構成での実機評価である。多ノード・大規模EP、別MoEモデル、プリフィル/デコード分離構成での一般化は直接評価していない。専門家移動の効果はオンライン負荷変動に依存し、頻繁な配置変更は移動費を増やすため安定性項が必要になる。"
+  }}
