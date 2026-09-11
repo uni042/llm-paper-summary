@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-a6bfa4373afaf3ea",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2607.05708.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-1d48fc43f068d473",
+  "validation_error": "ValueError: record slot blob mismatch: .survey/work-queue/records/chat-record/problem_method.json",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T04:40:33+00:00"
 }
