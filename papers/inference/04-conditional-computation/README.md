@@ -21,7 +21,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 1年以上前
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：8  
   学習時に途中層からでもnext-トークン予測できるようモデルを訓練し、推論時は前半層だけで数トークンを仮生成して、残り層でまとめて検証することで、別下書きモデルなしの投機的 デコードを行う。
 
 - **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  

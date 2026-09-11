@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T22:35:15.529056+00:00",
+  "updated_at": "2026-09-11T22:41:43.776781+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -7768,17 +7768,19 @@
     {
       "run_key": "2026-09-12T07:30:00+09:00",
       "first_recorded_at": "2026-09-11T22:31:50.300157+00:00",
-      "last_recorded_at": "2026-09-11T22:35:15.529056+00:00",
+      "last_recorded_at": "2026-09-11T22:41:43.776781+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 3,
-        "new_papers": 0,
+        "new_jobs": 4,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -7823,6 +7825,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34655021202:1",
+          "recorded_at": "2026-09-11T22:41:43.776781+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34655021202",
+            "run_attempt": "1",
+            "source_sha": "87c6229d2c5ab40682df0f11f62731b1c0fc42ef"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7849,6 +7867,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-b2e07ae8b3adf818",
+          "type": "research",
+          "canonical_id": "arXiv:2608.03036",
+          "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -7872,9 +7898,18 @@
           "type": "research",
           "canonical_id": "arXiv:2608.03036",
           "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs"
+        },
+        {
+          "job_id": "job-46cbb110ea4d042f",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2608.03036"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0730JST-discovery-job-6dc13d71f1f5bd2b.json",
         ".survey/work-queue/results/20260912T0732JST-discovery-job-27185df551e42273.json",
@@ -7882,8 +7917,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 321,
-      "paper_active_count_after": 321,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 322,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
