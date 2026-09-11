@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7b3846a7671b0417",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.07721",
+      "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2602.07721",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-drift-robust-kv-retrieval.md",
+      "priority": 84,
+      "reason": "百万トークン級の長文で、GPUネイティブな衝突ベース候補選択と量子化内積再順位付けを組み合わせ、CPUへ退避したKVキャッシュを統合仮想アドレス（Unified Virtual Addressing; UVA）経由で必要部分だけ取得する。全注意がメモリ不足になる領域まで拡張し、百万トークンでMagicPIG比17倍、PQCache比44倍のデコード遅延削減を報告する。階層KV保存だけでなく、巨大なCPU側KVからGPUへ何を読むかという検索・転送統合問題を扱うため有用。"
+    },
+    {
+      "canonical_id": "arXiv:2607.05708",
+      "title": "Akashic: A Low-Overhead LLM Inference Service with MemAttention",
+      "source_url": "https://arxiv.org/abs/2607.05708",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md",
+      "priority": 78,
+      "reason": "エージェント型LLMの継続的な会話履歴を有界チャンクへ分割し、チャンク間の意味関係を維持するMemAttentionと、同時取得されやすいチャンクを近接配置するハードウェア・ソフトウェア協調配置を組み合わせる。履歴全体の再プリフィルを避けつつ、4ワークロード・3モデル規模で精度最大+10.2ポイント、処理量最大1.21倍、持続可能要求率最大1.88倍を報告する。KVキャッシュそのものとは異なる長期メモリI/O配置系として隣接比較価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.17880",
+      "title": "Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2607.17880",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.17880-moe-serving-online-reconfiguration.md",
+      "priority": 74,
+      "reason": "専門家人気が時間変動するMoE配信で、各専門家へ何GPUを割り当てるかと再構成費用を同時に扱う形式的なオンライン問題を定義する。オンラインでO(sqrt(log k))競争比、対応する下界、オフライン定数近似、NP困難性を示す。実装中心ではないが、専門家配置・複製・再配置コストを理論的に整理しており、実測型の専門家キャッシュ研究に対するスケジューラ側の基準として価値がある。"
+    }
+  ]
+}
