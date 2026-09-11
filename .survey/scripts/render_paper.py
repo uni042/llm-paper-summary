@@ -9,6 +9,8 @@ from typing import Any
 
 import yaml
 
+from list_summary import audit_list_summary
+
 
 def q(value: Any) -> str:
     if value is None:
@@ -95,7 +97,7 @@ def representative_result_text(item: Any) -> str:
 
 
 def build_overview(meta: dict[str, Any], pm: dict[str, Any], rs: dict[str, Any]) -> str:
-    """Build an overview that always exposes method intent and a headline result."""
+    """Build an overview that exposes the method and a headline result."""
     parts: list[str] = []
     base = text(meta.get("overview") or meta.get("summary"))
     novelty = text(pm.get("novelty"))
@@ -109,7 +111,7 @@ def build_overview(meta: dict[str, Any], pm: dict[str, Any], rs: dict[str, Any])
         joined = "\n\n".join(parts)
         if value in joined:
             continue
-        if headline and value == headline and text(key_results[0].get("value")) in joined:
+        if headline and value == headline and key_results and text(key_results[0].get("value")) in joined:
             continue
         parts.append(value)
     return "\n\n".join(parts)
@@ -131,12 +133,22 @@ def render_paper(record: dict[str, Any]) -> str:
     canonical_id = text(meta.get("canonical_id"))
     source = text(meta.get("source"))
     summary = text(meta.get("summary"))
+    list_summary = text(meta.get("list_summary"))
     if not title or not canonical_id or not source or not summary:
         raise ValueError("metadata requires title, canonical_id, source, and summary")
+    if not list_summary:
+        raise ValueError(
+            "metadata.list_summary is required: the research worker must write a 45-180 character Japanese one-line explanation that says what the paper actually does; do not derive it mechanically from the overview"
+        )
+    list_quality = audit_list_summary(list_summary)
+    if list_quality.failures:
+        raise ValueError(
+            "metadata.list_summary failed quality checks: " + "; ".join(list_quality.failures)
+        )
 
     front_order = (
         "canonical_id", "arxiv_id", "doi", "openreview_id", "arxiv_categories",
-        "title", "summary", "authors", "authors_affiliations", "published",
+        "title", "summary", "list_summary", "authors", "authors_affiliations", "published",
         "publication", "publication_type", "publication_status", "publication_version",
         "lineage", "topics",
         "importance", "hardware_evaluation", "hardware_details", "quality_effect",
@@ -152,6 +164,7 @@ def render_paper(record: dict[str, Any]) -> str:
     front_meta["canonical_id"] = canonical_id
     front_meta["title"] = title
     front_meta["summary"] = summary
+    front_meta["list_summary"] = list_summary
     front_meta["source"] = source
     if "references" in meta:
         front_meta["references"] = meta["references"]
@@ -165,7 +178,7 @@ def render_paper(record: dict[str, Any]) -> str:
         width=1000,
     ).rstrip()
     front = [
-        "---", yaml_text, "---", "", f"# {title}", "", f"> {summary}", "",
+        "---", yaml_text, "---", "", f"# {title}", "", f"> {list_summary}", "",
     ]
 
     bib: list[str] = []
