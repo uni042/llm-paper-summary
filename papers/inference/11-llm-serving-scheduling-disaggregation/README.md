@@ -183,43 +183,43 @@
 ### 1年以上前
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：192  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：186  
   LLMサービングでは、モデル重みだけでなく各要求が生成中に保持するKVキャッシュが大きなGPUメモリを占める。
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：101  
+  実装：✓ ・ リポジトリ内被引用：97  
   Orcaが対象にした問題は、自己回帰型の生成モデルが1回の要求を何度もモデルへ通して1トークンずつ生成するのに、当時の推論サーバーが要求全体をスケジューリング単位としていたことである。
 
 - **2024-01 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：90  
   DistServeは、プリフィルとデコードを同じGPU上でバッチ処理すると、長いプリフィルがデコードを遅らせる干渉と、性質の違う2処理段階が同じGPU数・モデル分割方法を共有する制約が発生することに着目する。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：89  
   プリフィルは多数トークンをまとめて処理するためGPUの計算性能を使いやすい。一方デコードは1トークンずつ進むためメモリ帯域の影響が大きく、最新GPUの高いFLOPsを使い切れない場合がある。
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：82  
   複雑なLLMアプリケーションでは、1回の生成だけでなく、少数例プロンプト、複数分岐、並列生成、ツール利用、JSON出力などを組み合わせて複数回モデルを呼ぶ。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：74  
   Sarathi-Serveは、連続バッチ処理で新しいプリフィルを優先すると、長いプロンプト処理の間に既存要求のデコードが進まず、次トークンが長く返ってこない問題を扱う。
 
 - **2024-07 · [Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：48  
   Mooncakeは、Kimiの実運用を背景に設計された大規模LLM推論提供基盤である。中心的な発想は、KV キャッシュを「そのリクエストが動いているGPUにだけ属する一時データ」とせず、クラスタ内で保存・検索・移動・再利用できる共有資源として扱うことにある。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：42  
+  実装：✓ ・ リポジトリ内被引用：39  
   複数ターン会話では、次ターンのプロンプトが前ターンまでの履歴をほぼそのまま含むため、状態なし型推論提供は同じ履歴トークンのKVキャッシュを毎回再計算する。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
-  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：30  
   OrcaやvLLMの連続バッチ処理（continuous batching）では、新しい要求を途中からバッチへ入れられる。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
-  実装：[✓](https://github.com/alpa-projects/mms) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/alpa-projects/mms) ・ リポジトリ内被引用：30  
   AlpaServeが扱うのは、1つのモデルを速くする問題ではなく、複数の大規模モデルを同じGPUクラスタで同時に提供するときの配置問題である。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -231,7 +231,7 @@
   同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：17  
   DeepSpeed-FastGenは、連続バッチ処理を使うLLM 提供処理で長いプロンプトのプリフィルが進行中リクエストのデコードを止め、トークン間遅延と末尾 遅延を悪化させる問題を扱う。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
@@ -242,25 +242,25 @@
   実装：✓ ・ リポジトリ内被引用：15  
   通常のLLM APIでは各リクエストを独立に扱うため、複数往復会話でも毎回履歴全体をプロンプトとして送り直す。
 
-- **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
-  実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：14  
-  サーバーレス LLMでは多数のモデルを少数GPUで共有し、要求が来たときだけ必要なモデルをGPUへ読み込む運用が想定される。
-
 - **2023-12 · [Fairness in Serving Large Language Models](2024-2401.00588-fairness-in-serving-large-language-models-vtc.md)**  
   実装：[✓](https://github.com/Ying1123/VTC-artifact) ・ リポジトリ内被引用：14  
   一般的な「1分あたりN要求」のレート制限は、短いチャット1件と長い文書処理1件を同じ1要求として数える。
+
+- **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
+  実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：13  
+  サーバーレス LLMでは多数のモデルを少数GPUで共有し、要求が来たときだけ必要なモデルをGPUへ読み込む運用が想定される。
 
 - **2024-08 · [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   最終的な出力トークン数を正確に当てる代わりに、プロンプトからどのリクエストが他より短く終わりそうかという順位だけを小型モデルで予測し、短そうなリクエストを先に処理して長いリクエストによるキュー待ちを減らすスケジューラ。
 
-- **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
-  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：12  
-  従来のLLM推論提供APIでは各要求が独立したプロンプト -> 出力としてバックエンドへ届く。
-
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  
   実装：[✓](https://github.com/Hsword/SpotServe) ・ リポジトリ内被引用：12  
   クラウドのスポット／プリエンプティブルインスタンス（spot / preemptible instance）は通常インスタンスより安いが、プロバイダー側の都合で途中回収される可能性がある。
+
+- **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
+  実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：11  
+  従来のLLM推論提供APIでは各要求が独立したプロンプト -> 出力としてバックエンドへ届く。
 
 - **2024-02 · [INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference](2024-2402.01869-infercept-intercept-aware-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：11  

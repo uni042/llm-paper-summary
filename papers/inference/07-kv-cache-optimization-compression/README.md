@@ -99,13 +99,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ### 1年以上前
 
-- **2024-03 · [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  KVキャッシュは過去トークンのK/Vを再利用することで、自己回帰デコードで過去系列全体を毎回計算し直す必要をなくす。
-
 - **2024-02 · [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/hydragen) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/ScalingIntelligence/hydragen) ・ リポジトリ内被引用：8  
   少数例 プロンプト、同じシステム プロンプトを使うチャットボット、多数サンプルを生成する自己整合性などでは、バッチ内の複数系列が長い接頭辞を共有する。
+
+- **2024-03 · [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  KVキャッシュは過去トークンのK/Vを再利用することで、自己回帰デコードで過去系列全体を毎回計算し直す必要をなくす。
 
 - **2025-01 · [PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving](2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

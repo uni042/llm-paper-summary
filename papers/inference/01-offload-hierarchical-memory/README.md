@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（34本）
+## 自動生成の論文一覧（28本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -71,7 +71,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 1年以上前
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：102  
   FlexGenが対象にするのは、chatのように1 リクエストの応答をすぐ返す用途ではなく、ベンチマーク、情報抽出、文書処理のような多少待ってもよい代わりに、多数のリクエストをできるだけ安く処理したい生成処理である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
@@ -87,12 +87,8 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Fast Inference of MoE withオフロード（実装名 Mixtral-オフロード）は、Mixtral-8x7Bの巨大なエキスパート重みをCPU DRAMへ置き、必要なエキスパートだけGPUへ移すことで、12〜16 GB級VRAMでもMoEを動かす方式を実装した研究である。
 
 - **2023-12 · [LLM in a Flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
+  実装：✓ ・ リポジトリ内被引用：25  
   LLM in a Flashは、DRAMにモデル全体を保持できない端末で、モデル重みをフラッシュストレージへ置き、各トークンで必要なFFN部分だけをDRAMへ読み込む重みストリーミング方式である。
-
-- **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  HeteGenは、GPU メモリにモデル全体が収まらない状況で、CPUを単なる重み置き場にせず計算資源としても同時利用するLLM inference システムである。
 
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
   実装：[✓](https://github.com/IntelliSys-Lab/FineMoE-EuroSys26) ・ リポジトリ内被引用：13  
@@ -102,8 +98,12 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://openi.pcl.ac.cn/fangzhy/Klotski) ・ リポジトリ内被引用：11  
   Klotskiは、GPU VRAMにエキスパート重みが収まらないMoEで、複数バッチを同時に流してGPU計算時間を長くし、その間にCPU RAM / SSDから次エキスパートを読むことでGPUがI/Oを待つ時間を減らす推論engineである。
 
-- **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
+- **2024-03 · [HeteGen: Efficient Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
+  HeteGenは、GPU メモリにモデル全体が収まらない状況で、CPUを単なる重み置き場にせず計算資源としても同時利用するLLM inference システムである。
+
+- **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
   TwinPilotsは、GPUメモリにLLM全体が収まらない環境で、CPUを単なるパラメータ置き場ではなくGPUと並列に動く計算主体として使う推論システムである。
 
 - **2025-02 · [Memory Offloading for Large Language Model Inference with Latency SLO Guarantees](2025-2502.08182-select-n-slo-aware-memory-offloading.md)**  
@@ -122,31 +122,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/scale-snu/SSD-offloading) ・ リポジトリ内被引用：0  
   MoEの専門家重みをSSDへ退避すると容量不足と転送遅延は扱いやすくなる一方、NAND Flashの読み出しエネルギーがHBMやCPU側DRAMより大幅に高い。
 
-- **2025-06 · [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  一部リクエストのKV キャッシュとデコード 注意機構をCPUへ移し、CPU/GPU向けリクエストをまとめて実行しながらCPU処理をGPU計算へ重ね、メモリ制約下のonline推論スループットを高める方式。
-
-- **2025-01 · [Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with A Single GPU](2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/casys-kaist/Capture) ・ リポジトリ内被引用：0  
-  過去トークンをKVそのものと、K/Vを作る前の中間活性値の2形式で混在保存し、重み転送中に活性値からKVを再生成して転送量と再計算量を釣り合わせる方式。
-
-- **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
-  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：0  
-  一部リクエストのKV キャッシュとデコード 注意機構をCPUへ移し、残りリクエストはGPUで処理しながらCPU/GPUを非対称に重ね、VRAM不足を緩和するonline serving システム。
-
-- **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
-  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：0  
-  CPU上のKV キャッシュを全部GPUへ戻さず、一部は中間活性値からGPUでK/Vを作り直し、残りのKV転送と同時に進めてPCIe待ちを減らす方式。
-
-- **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  KV キャッシュを計算機能付きSSD内へ置き、デコード 注意機構もSSD内部で実行することで、巨大なKVをSSDからGPUへ毎回読み戻す転送を避ける長文脈推論システム。
-
 - **2024-05 · [MoNDE: Mixture-of-Experts Neural Network Inference with Near-Data Processing](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoNDEは、あまり使われないエキスパートの重みをGPUへ運ぶ代わりに、CXLでホスト/GPUへ接続した拡張メモリ デバイス側でエキスパート GEMMそのものを実行する方式である。
-
-- **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  KV キャッシュを読む注意機構計算をCPU側へ分け、GPUにはモデル重みを使う計算を集中させることで、KV転送を避けながらGPUの処理量を高める異種LLM serving システム。
 <!-- survey:auto:end -->

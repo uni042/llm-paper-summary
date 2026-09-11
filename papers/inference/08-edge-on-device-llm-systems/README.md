@@ -58,13 +58,13 @@
 
 ### 1年以上前
 
-- **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：13  
-  PowerInfer-2が解こうとしている問題は単純で、大きなLLMの重みをスマートフォンのDRAMへ全部置くことができないというものです。
-
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   疎なMoEでは各トークンが少数のエキスパートしか使わないが、通常の実装は「どのエキスパートが選ばれても実行できるように」全エキスパート重みをメモリへ保持する。
+
+- **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：12  
+  PowerInfer-2が解こうとしている問題は単純で、大きなLLMの重みをスマートフォンのDRAMへ全部置くことができないというものです。
 
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

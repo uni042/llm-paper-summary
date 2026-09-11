@@ -177,28 +177,28 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 1年以上前
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
-  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：18  
   NEOは、GPU メモリ不足でKV キャッシュを十分に保持できずバッチ 大きさが小さくなる問題に対して、一部リクエストのデコード 注意機構とKV キャッシュだけをローカル CPUへ移すオンライン LLM 推論 システムである。
-
-- **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  FastDecodeは、KV キャッシュをCPU メモリへ退避するだけではPCIe転送がボトルネックになる問題に対し、KV キャッシュだけでなく、それを利用するアテンション計算もCPU側へ移すLLM 推論提供 システムである。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
   実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：17  
   ShadowKVは、長文LLMでKVキャッシュをGPUへ全保持するとバッチ数が制限され、CPUへ全退避すると疎なKVを毎トークン取得するPCIe遅延が大きい問題を扱う。
 
+- **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
+  実装：✓ ・ リポジトリ内被引用：14  
+  FastDecodeは、KV キャッシュをCPU メモリへ退避するだけではPCIe転送がボトルネックになる問題に対し、KV キャッシュだけでなく、それを利用するアテンション計算もCPU側へ移すLLM 推論提供 システムである。
+
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
   実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：10  
   KVPRは、KV キャッシュをCPU DRAMへオフロードしたときにPCIe転送がデコードのボトルネックになる問題に対し、KV キャッシュの一部を転送せずGPUで再計算する研究である。
 
-- **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  InstAttentionは、SSDへKV キャッシュを置く従来オフロードではデコードのたびにKVをSSD→ホスト→GPUへ読み戻すI/Oがボトルネックになる問題を、アテンション計算そのものをストレージ側へ移すことで解消する。
-
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   長文脈のKV キャッシュをCPU メモリ上のベクトル 保存として検索対象にし、注意機構に重要なトークンだけをGPUへ取り出すことで、全KVをGPUへ保持・走査するメモリ容量と帯域を減らしつつ、検索誤差による精度低下を抑えるGPU–CPU協調推論システム。
+
+- **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  InstAttentionは、SSDへKV キャッシュを置く従来オフロードではデコードのたびにKVをSSD→ホスト→GPUへ読み戻すI/Oがボトルネックになる問題を、アテンション計算そのものをストレージ側へ移すことで解消する。
 
 - **2024-11 · [Pie: Pooling CPU Memory for LLM Inference](2024-2411.09317-pie-pooling-cpu-memory-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
