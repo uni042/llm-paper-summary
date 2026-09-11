@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2602.03203-20260911-0630-v10-a1",
-  "job_id": "job-research-2f3e800f884677dd",
+  "attempt_id": "attempt-2602.11521-20260911-1130-v10-a1",
+  "job_id": "job-research-8455bd8ffbc74d54",
   "data": {
-    "hardware": ["Qwen3-4Bの生成効率は単一NVIDIA A800 GPUで測定。", "DeepSeek-R1-Distill-Qwen-7Bの32K向け評価器訓練費用はNVIDIA H800で教師あり約2 GPU×8時間、GRPO約8 GPU×6時間。", "より大規模なQwen3-14B/32Bでは品質・損失比の追加検証を行うが、個別ハードウェア構成は本文表で明示されない。"],
-    "software": ["公開実装: https://github.com/RUCAIBox/ForesightKV", "LLM本体を凍結し、注意グループ/層ごとの2層MLP評価器のみ訓練。", "教師あり順位学習の後にGRPOによる方策微調整を実行。"],
-    "model": ["Qwen3-1.7B", "Qwen3-4B", "DeepSeek-R1-Distill-Qwen-7B", "MiniCPM-4.1-8B（追加検証）", "Qwen3-14B/32B（拡張検証）"],
-    "datasets": ["STILL（訓練用正解長推論軌跡）", "AIME2024", "AIME2025", "GPQA", "LiveCodeBench-V3", "LongBench", "SCP-116K（報酬転移実験）"],
-    "baselines": ["FullKV", "H2O", "SnapKV", "R-KV", "追加比較でG-KV、DuoAttention、RPC"],
-    "correctness": "推論品質はpass@1を各AIMEベンチマーク32回独立評価した平均で比較する。圧縮は不可逆KV追い出しなので完全KVとの一致保証はない。主張は、同容量で既存方式より高い正答率、または半分の容量で同等以上の正答率を保つ経験的結果である。LongBench、GPQA、LiveCodeBench、MiniCPM、Qwen3-14B/32Bでも追加転移を検証する。",
+    "hardware": ["8×NVIDIA H100-80GB相当", "HBM3 16GB×40", "DDR4-3200 32GB×40", "SSD 256GB/チャネル×64、4ダイ/チャネル"],
+    "software": ["LLMServingSim拡張", "LLMCompass", "Ramulator 2.0拡張", "OpenSSD拡張", "vLLM-offloading比較系", "Verilog + Synopsys Design Compilerによる回路面積合成"],
+    "model": ["Qwen2.5-32B", "LLaMA3-70B", "OPT-175B"],
+    "datasets": ["ShareGPT", "WildChat", "HumanEval", "Arxiv_sum", "Write_doc"],
+    "baselines": ["vLLM-offloading", "AttAcc!", "L-PIM", "LS-PIM"],
+    "correctness": "全モデルで16ビットの重みとKVを使用し、全方式に同じ8倍KV疎性化アルゴリズムを適用する。論文はこの疎性化による精度低下を全ワークロードで1%未満と報告する。PAMattentionのオンラインソフトマックス分割自体は局所最大値と正規化量を再結合して全体ソフトマックスを復元する設計だが、システム全体は疎性化を含むため完全KVと同一の無損失評価ではない。",
     "settings": [
-      {"name": "主推論設定", "description": "AIME2024/2025でtemperature=0.6、top-k=20、top-p=0.95。KV予算Bは1024、2048、4096など、追い出し間隔L=256。各ベンチマークを32回独立評価しpass@1平均を用いる。"},
-      {"name": "評価器", "description": "MLP中間幅16。推論時は低重要と予測した512 KVを候補にし、そこから256を多項抽選で追い出す主設定。Key/Value表現と複数の注意履歴特徴を連結する。"},
-      {"name": "教師あり学習", "description": "STILL上で生成した正解かつ4096トークン超の推論軌跡を利用。batch size 8、learning rate 1e-2、cosine scheduler、1000 steps、pairwise margin 0.01、B=1024、L=256。"},
-      {"name": "強化学習", "description": "batch/mini-batch 32、learning rate 3e-4、10 step warmup、200 steps、各試料8追い出し軌跡。12K未満は(B,L)=(1024,256)、長い列は(2048,512)。低エントロピー下位80%、損失差閾値1.5、GRPO clipping epsilon=0.2。"},
-      {"name": "効率測定", "description": "Qwen3-4Bを単一A800で8K/16K/32K生成し、最大同時バッチ数とスループットをFullKVと比較。DeepSeek-R1-Distill-Qwen-7Bではbatch size 8、各サンプル8回のエンドツーエンド所要時間を比較する。"}
+      {"name": "異種メモリ構成", "description": "8×H100-80GB、1280GB DDR4、8TB SSD相当を比較基盤とし、HBM3 16GB×40、DDR4 32GB×40、SSDは256GB/チャネル×64をモデル化する。各SSDチャネルは4ダイ、ページ16KB、2400MT/s、読み出し30us。"},
+      {"name": "PIM演算能力", "description": "処理ユニット周波数はHBM 666MHz、DDR 500MHz、SSD 1GHz。ピーク電力制約下のデバイス当たり計算能力をHBM 1.6TFLOPS、DDR 204GFLOPS、SSD 18GFLOPSとしてシミュレーションする。"},
+      {"name": "並列化", "description": "代表評価では4-wayテンソル並列と2-wayパイプライン並列を使用する。スケーラビリティ評価ではGPUとストレージ数を比例拡大し、Write_doc 1024要求で複数のテンソル並列・パイプライン並列構成を比較する。"},
+      {"name": "オンライン処理", "description": "ShareGPT、WildChat、HumanEvalを使用し、サービス品質目標（Service-Level Objective; SLO）を100ms、150ms、200msに設定して、その制約内での最大スループットと対応可能バッチ数を測る。オンライン会話の平均入力/出力長は183/299トークンと報告する。"},
+      {"name": "オフライン長文", "description": "Arxiv_sumとWrite_docを使用し、1500〜8000トークン程度の長文を処理する。LLaMA3-70Bはバッチ256/512/1024、OPT-175Bは16/32/64で最大スループットを比較する。"}
     ],
-    "methodology": "まず注意パターンと追い出し後損失を分析して、意味依存KVと低エントロピートークンが既存方式の弱点であることを特定する。次に未来注意を使うGolden Evictionの損失比をH2O/SnapKV/R-KVと比較し、教師信号の上限性能を確認する。主実験では3種類の推論モデルをAIME2024/2025へ適用し、1K〜4K KV予算で正答率を比較する。評価器入力、追い出し抽選法、報酬関数、教師ありのみ対GRPO付きの切り分けを行い、GPQA、LiveCodeBench、LongBench、MiniCPM、Qwen3-14B/32Bへ転移を検証する。システム面ではA800上で長生成の同時バッチ上限とスループット、7Bでエンドツーエンド時間、追い出し評価器自体の時間割合を測る。",
-    "scope": "学習型方式のため、モデルごとの評価器訓練費用と正解長推論軌跡が必要であり、訓練不要KV圧縮より導入負担が大きい。主品質評価は数学推論に偏るが科学、コード、LongBenchへの転移は補完されている。A800のスループット試験は単一GPUのQwen3-4Bで、分散サービングや多利用者キュー、KVオフロードとの統合は評価しない。また32Kまでの訓練・評価を中心とし、それより極端に長い生成や学習分布外の意味依存では誤追い出しの危険が残る。"
+    "methodology": "PAMと比較方式を同一シミュレータ上で評価するため、GPU演算をLLMCompass、DRAMタイミングとPIM処理をRamulator 2.0、SSD処理をOpenSSD、GPUと階層PIM間の相互作用・サービングスケジュールをLLMServingSimでモデル化する。vLLM系システムとAttAcc!シミュレータで結果を交差確認したと記載する。オンライン評価はSLO制約下のピークスループット、オフライン評価は固定バッチでの最大スループットを測る。加えて電力モデル、各機構を外すアブレーション、Verilog合成による面積、GPU/ストレージを比例増設したスケーラビリティを評価する。",
+    "scope": "主要性能値は提案PIMハードウェアを実際に製造した実機測定ではなくシミュレーション結果である。処理ユニットと集約ユニットはVerilog合成で面積を見積もるが、実際のHBM-PIM/DDR-PIM/SSD-PIM試作機を用いたエンドツーエンド検証ではない。性能は特定のメモリタイミング、PIM演算能力、電力モデル、8倍KV疎性化を前提とするため、市販GPU+通常SSDへそのまま適用できる結果ではない。また目標負荷比x,yはモデル構造変更時に再プロファイルが必要で、極端に異なる注意疎性やメモリ技術では最適値が変わる可能性がある。"
   }
 }
