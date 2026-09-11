@@ -23,7 +23,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2021-11 | [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md) | [✓](https://github.com/deepspeedai/DeepSpeed) | 8 | 学習用のparameter・gradient・optimizer stateをGPUだけでなくCPU DRAMとNVMe SSDへ分割配置し、各nodeのSSD読込を並列化しながら必要なstateを先読みしてGPU計算と重ねることで、GPU memory総量を超える巨大modelを学習可能にするsystem。 |
+| 2021-11 | [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md) | [✓](https://github.com/deepspeedai/DeepSpeed) | 10 | 学習用のparameter・gradient・optimizer stateをGPUだけでなくCPU DRAMとNVMe SSDへ分割配置し、各nodeのSSD読込を並列化しながら必要なstateを先読みしてGPU計算と重ねることで、GPU memory総量を超える巨大modelを学習可能にするsystem。 |
 | 2024-06 | [Practical Offloading for Fine-Tuning LLM on Commodity GPU via Learned Sparse Projectors](2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md) | [✓](https://github.com/gulang2019/LSP-Offload) | 1 | full-size gradient / optimizer updateをCPUへ送る代わりに、小さい低次元表現へ圧縮して転送し、その圧縮方向を学習中に切り替えることで、PCIe trafficを減らしながらconsumer GPUでLLM fine-tuningする方式。 |
 
 ### その他

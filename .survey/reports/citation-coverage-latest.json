@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-09-11T08:26:25+00:00",
+  "checked_at": "2026-09-11T08:26:53+00:00",
   "summary": {
     "total": 308,
-    "complete": 49,
-    "incomplete": 259
+    "complete": 69,
+    "incomplete": 239
   },
   "families": {
     "inference": {
       "total": 285,
-      "complete": 49
+      "complete": 69
     },
     "training": {
       "total": 19,
@@ -25,51 +25,6 @@
     {
       "path": "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
       "canonical_id": "DOI:10.1145/3688351.3689164",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md",
-      "canonical_id": "arXiv:2410.22134",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
-      "canonical_id": "arXiv:2501.10375",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
-      "canonical_id": "arXiv:2502.12224",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md",
-      "canonical_id": "arXiv:2509.23638",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2025-2512.03927-od-moe-on-demand-expert-loading-for-cacheless-edge-distributed-moe-inference.md",
-      "canonical_id": "arXiv:2512.03927",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2026-2603.19289-speculating-experts-accelerates-inference-for-mixture-of-experts.md",
-      "canonical_id": "arXiv:2603.19289",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md",
-      "canonical_id": "arXiv:2607.24787",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md",
-      "canonical_id": "arXiv:2608.21240",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/03-expert-prefetch/2026-2609.04895-cache-aware-joint-router-adaptation.md",
-      "canonical_id": "arXiv:2609.04895",
       "reason": "missing structured reference audit metadata"
     },
     {
@@ -88,68 +43,13 @@
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
-      "canonical_id": "arXiv:2307.02628",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
-      "canonical_id": "arXiv:2407.14057",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
       "canonical_id": "NeurIPS2024:03469b1a66e351b18272be23baf3b809",
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
-      "canonical_id": "ACL:2024.acl-long.681",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md",
-      "canonical_id": "arXiv:2503.08524",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
-      "canonical_id": "arXiv:2503.23798",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
-      "canonical_id": "arXiv:2504.15895",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md",
       "canonical_id": "ACL:2025.findings-acl.377",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-moe-expert-offload-caching/2026-2606.26607-moebius-runtime-parallelism-switch.md",
-      "canonical_id": "arXiv:2606.26607",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-moe-expert-offload-caching/2026-2609.08682-hda-moe-3d-near-memory-scheduling.md",
-      "canonical_id": "arXiv:2609.08682",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-moe-parallelism-communication/2026-2601.03992-edge-gpu-ndp-moe-scheduling.md",
-      "canonical_id": "arXiv:2601.03992",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md",
-      "canonical_id": "arXiv:2603.27624",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
-      "canonical_id": "arXiv:2603.28239",
       "reason": "missing structured reference audit metadata"
     },
     {

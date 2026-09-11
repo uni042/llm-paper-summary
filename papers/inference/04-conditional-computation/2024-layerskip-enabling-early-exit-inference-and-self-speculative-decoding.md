@@ -50,6 +50,40 @@ publication_type: preprint
 sources:
 - https://aclanthology.org/2024.acl-long.681/
 implementation_status: official-code-available
+references:
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.413
+  doi: 10.18653/v1/2020.emnlp-main.413
+- canonical_id: arXiv:2307.02628
+- canonical_id: OpenReview:SylO2yStDr
+  openreview_id: SylO2yStDr
+- canonical_id: arXiv:2101.00027
+  arxiv_id: '2101.00027'
+- canonical_id: DOI:10.18653/v1/2022.emnlp-main.3
+  doi: 10.18653/v1/2022.emnlp-main.3
+- canonical_id: OpenReview:d7KBjmI3GmQ
+  openreview_id: d7KBjmI3GmQ
+- canonical_id: DOI:10.18653/v1/d17-1082
+  doi: 10.18653/v1/d17-1082
+- canonical_id: arXiv:2404.02258
+  arxiv_id: '2404.02258'
+- canonical_id: arXiv:2310.03003
+  arxiv_id: '2310.03003'
+  doi: 10.48550/arxiv.2310.03003
+- canonical_id: DOI:10.18653/v1/d19-1454
+  doi: 10.18653/v1/d19-1454
+- canonical_id: OpenReview:uLYc4L3C81A
+  openreview_id: uLYc4L3C81A
+- canonical_id: DOI:10.1109/isocc53507.2021.9613933
+  doi: 10.1109/isocc53507.2021.9613933
+- canonical_id: DOI:10.18653/v1/2021.eacl-main.8
+  doi: 10.18653/v1/2021.eacl-main.8
+- canonical_id: DOI:10.18653/v1/p19-1472
+  doi: 10.18653/v1/p19-1472
+- canonical_id: arXiv:2311.15436
+  arxiv_id: '2311.15436'
+references_checked_at: '2026-09-11'
+references_source: arxiv-html-reference-section
+references_total: 69
 ---
 
 # 層kip: Enabling Early Exit Inference and Self-Speculative デコード
