@@ -42,6 +42,22 @@ publication_type: conference paper
 sources:
 - https://ojs.aaai.org/index.php/AAAI/article/view/39816
 implementation_status: official-code-not-confirmed
+references:
+- canonical_id: arXiv:2404.14219
+  arxiv_id: '2404.14219'
+- canonical_id: arXiv:2401.14361
+- canonical_id: arXiv:2308.12066
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2501.10375
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2310.01334
+- canonical_id: arXiv:2402.07033
+- canonical_id: arXiv:2104.07857
+- canonical_id: arXiv:2312.17238
+- canonical_id: arXiv:2410.22134
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices

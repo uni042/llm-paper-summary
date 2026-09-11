@@ -100,8 +100,8 @@
     "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md": {
       "status": "blocked",
       "source_fingerprint": "6905f0708a63e5dea5488e5afd73b12f808b40e15f8aa2494cf4a6a8a6867a25",
-      "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-09-11T09:16:35+00:00"
+      "error": "primary-source recovery failed: https://dl.acm.org/doi/pdf/10.1145/3688351.3689164: HTTPError: HTTP Error 403: Forbidden",
+      "checked_at": "2026-09-11T09:35:22+00:00"
     },
     "papers/inference/01-offload-hierarchical-memory/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md": {
       "status": "complete",
@@ -472,22 +472,31 @@
       "checked_at": "2026-09-11T08:26:36+00:00"
     },
     "papers/inference/03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "0ff2140fc263ba0c7e8060c9831a570ea9e63ae88406252b42b750688103a10b",
-      "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-09-11T09:16:36+00:00"
+      "references_total": 1,
+      "normalized_references": 11,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39816/43777",
+      "checked_at": "2026-09-11T09:35:24+00:00"
     },
     "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "bc6d4fe74408960b12bb8c8b05736a657dd09ff47aa610b45b3e5800ca5deb7f",
-      "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-09-11T09:16:38+00:00"
+      "references_total": 1,
+      "normalized_references": 11,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39454/43415",
+      "checked_at": "2026-09-11T09:35:25+00:00"
     },
     "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "214fd990bb459d409bd2bcfe6a105e9b3c525cefa59bcfe823c7a3f7b4fd1816",
-      "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-09-11T09:16:38+00:00"
+      "references_total": 1,
+      "normalized_references": 6,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/download/39106/43068",
+      "checked_at": "2026-09-11T09:35:27+00:00"
     },
     "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md": {
       "status": "complete",
@@ -2402,10 +2411,13 @@
       "checked_at": "2026-09-11T08:31:35+00:00"
     },
     "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "2f2ecbf23d9082baed214eb6a96ae23c83b33a4b1bf5b065127e4a994a48bf8f",
-      "error": "PDF fallback failed: https://arxiv.org/pdf/2602.04816.pdf: HTTPError: HTTP Error 404: Not Found",
-      "checked_at": "2026-09-11T09:17:11+00:00"
+      "references_total": 198,
+      "normalized_references": 17,
+      "source": "arxiv-source-bibtex",
+      "source_url": "https://export.arxiv.org/e-print/2602.04816v2",
+      "checked_at": "2026-09-11T09:35:30+00:00"
     },
     "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md": {
       "status": "complete",
@@ -2496,5 +2508,5 @@
       "checked_at": "2026-09-11T09:34:36+00:00"
     }
   },
-  "updated_at": "2026-09-11T09:34:55+00:00"
+  "updated_at": "2026-09-11T09:35:32+00:00"
 }

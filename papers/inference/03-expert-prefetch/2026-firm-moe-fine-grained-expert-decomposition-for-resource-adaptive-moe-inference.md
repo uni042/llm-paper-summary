@@ -42,6 +42,17 @@ publication_type: conference paper
 sources:
 - https://ojs.aaai.org/index.php/AAAI/article/view/39106
 implementation_status: official-code-not-confirmed
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2308.12066
+- canonical_id: arXiv:2308.15030
+- canonical_id: arXiv:2402.07033
+- canonical_id: arXiv:2104.07857
+- canonical_id: arXiv:2312.17238
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference

@@ -40,6 +40,22 @@ publication_type: conference paper
 sources:
 - https://ojs.aaai.org/index.php/AAAI/article/view/39454
 implementation_status: official-code-not-confirmed
+references:
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2402.14800
+- canonical_id: arXiv:2401.14361
+- canonical_id: arXiv:2308.12066
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2308.15030
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2407.14417
+- canonical_id: arXiv:2312.17238
+- canonical_id: arXiv:2310.16795
+- canonical_id: arXiv:2410.22134
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under GPU Memory Constraints

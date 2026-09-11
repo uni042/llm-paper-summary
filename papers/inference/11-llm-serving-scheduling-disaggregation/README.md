@@ -58,7 +58,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2023-09 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md) | [✓](https://github.com/vllm-project/vllm) | 183 | KV cacheを固定長blockへ分け、必要になった分だけGPU memoryを割り当てて複数sequence間でも共有し、未使用領域を減らして同時に処理できるrequest数を増やすvLLM serving system。 |
+| 2023-09 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md) | [✓](https://github.com/vllm-project/vllm) | 185 | KV cacheを固定長blockへ分け、必要になった分だけGPU memoryを割り当てて複数sequence間でも共有し、未使用領域を減らして同時に処理できるrequest数を増やすvLLM serving system。 |
 | 2022-07 | [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md) | ✓ | 99 | output tokenを1つ生成するたびにbatchを組み替え、長さや進行位置が異なるrequestを途中からbatchへ出し入れできるようにした分散LLM serving system。 |
 | 2024-01 | [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md) | [✓](https://github.com/LLMServe/DistServe) | 90 | プリフィルとデコードを別GPU群へ分け、それぞれのGPU数・モデル分割方法・配置場所を、最初のトークンまでの時間とその後のトークン間隔の目標に合わせて別々に決めることで、両処理段階の干渉をなくす推論提供システム。 |
 | 2023-11 | [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md) | [✓](https://github.com/Mutinifni/splitwise-sim) | 89 | prefillとdecodeを別machine poolへ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、cluster全体のthroughput・cost・消費電力を改善するserving設計。 |
