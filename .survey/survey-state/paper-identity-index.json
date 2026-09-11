@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 260,
+  "active_count": 267,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -947,6 +947,22 @@
       ],
       "source_hash": "bfa3bb8ec395cba5f86a9442a8b53bf40c895504d1627fed0233875b55574a06"
     },
+    "arXiv:2609.09768": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.09768-kv-concatenation-aware-recompute.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.09768",
+        "arXiv:2609.09768"
+      ],
+      "source_hash": "e3940b9a4039e5172cf7b8689a44d6854f686d0ca43cae0726cc69d588733f2a"
+    },
+    "arXiv:2609.10266": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.10266",
+        "arXiv:2609.10266"
+      ],
+      "source_hash": "44a2c4c23833aee2173274f785287ee449599b8c989bc842a093154d4c322bcb"
+    },
     "arXiv:2308.15030": {
       "path": "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
       "identifiers": [
@@ -1032,6 +1048,30 @@
         "arXiv:2609.06551"
       ],
       "source_hash": "6fb17f5c9b49aa71b6d7db505d49e23b2a3862ba9613a84abb1d8031c619bad4"
+    },
+    "arXiv:2607.16473": {
+      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.16473",
+        "arXiv:2607.16473"
+      ],
+      "source_hash": "d0576bf5a5ce7c01898458c00d1a910a5b0b81fd9a60d0832bdd76274512ddff"
+    },
+    "arXiv:2607.26491": {
+      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.26491",
+        "arXiv:2607.26491"
+      ],
+      "source_hash": "1e476f0e475b64b2261d4fa60995f6292a83a6f8dc95e23555f72e82f6ca97f1"
+    },
+    "arXiv:2609.08450": {
+      "path": "papers/inference/09-attention-kernel-serving-optimization/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2609.08450",
+        "arXiv:2609.08450"
+      ],
+      "source_hash": "19b4bca1a6ff086e1c85268a36665a89976343d650895a2a29c086163154ef5b"
     },
     "arXiv:2609.03079": {
       "path": "papers/inference/09-other-inference-systems/2026-2609.03079-leanstream-speculate-refine-on-device.md",
@@ -1586,6 +1626,14 @@
       ],
       "source_hash": "c57e272610d5af351201400cfd4a83262161e060c9fbfa6d6f7eca40b59f39c3"
     },
+    "arXiv:2508.16449": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2508.16449",
+        "arXiv:2508.16449"
+      ],
+      "source_hash": "a4c0a76bb3945e835510b032ca2c8a32da58295ed8fd0c1fc21a9034137800e5"
+    },
     "arXiv:2512.04013": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md",
       "identifiers": [
@@ -1746,6 +1794,14 @@
         "arXiv:2607.28633"
       ],
       "source_hash": "0fe142e0abb8ff53bcd149b6451a236d9f252dd9e3c17d62191530135f9229b5"
+    },
+    "arXiv:2608.01891": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2608.01891",
+        "arXiv:2608.01891"
+      ],
+      "source_hash": "fd514d6ef20d28cb1a5da5a44cbb469ef862bd48a9a470e6b85a89a24c331b65"
     },
     "arXiv:2608.03741": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.03741-heteropanacea.md",
@@ -2044,6 +2100,10 @@
     "arXiv:2609.03515": "arXiv:2609.03515",
     "arXiv:2609.07966": "arXiv:2609.07966",
     "arXiv:2609.08131": "arXiv:2609.08131",
+    "DOI:10.48550/arxiv.2609.09768": "arXiv:2609.09768",
+    "arXiv:2609.09768": "arXiv:2609.09768",
+    "DOI:10.48550/arxiv.2609.10266": "arXiv:2609.10266",
+    "arXiv:2609.10266": "arXiv:2609.10266",
     "DOI:10.18653/v1/2024.acl-long.363": "arXiv:2308.15030",
     "arXiv:2308.15030": "arXiv:2308.15030",
     "arXiv:2406.06282": "arXiv:2406.06282",
@@ -2058,6 +2118,12 @@
     "arXiv:2609.01338": "arXiv:2609.01338",
     "arXiv:2609.02514": "arXiv:2609.02514",
     "arXiv:2609.06551": "arXiv:2609.06551",
+    "DOI:10.48550/arxiv.2607.16473": "arXiv:2607.16473",
+    "arXiv:2607.16473": "arXiv:2607.16473",
+    "DOI:10.48550/arxiv.2607.26491": "arXiv:2607.26491",
+    "arXiv:2607.26491": "arXiv:2607.26491",
+    "DOI:10.48550/arxiv.2609.08450": "arXiv:2609.08450",
+    "arXiv:2609.08450": "arXiv:2609.08450",
     "DOI:10.1145/3795866.3844470": "arXiv:2609.03079",
     "arXiv:2609.03079": "arXiv:2609.03079",
     "arXiv:2403.11421": "arXiv:2403.11421",
@@ -2155,6 +2221,8 @@
     "arXiv:2501.08090": "arXiv:2501.08090",
     "arXiv:2501.14312": "arXiv:2501.14312",
     "arXiv:2504.11320": "arXiv:2504.11320",
+    "DOI:10.48550/arxiv.2508.16449": "arXiv:2508.16449",
+    "arXiv:2508.16449": "arXiv:2508.16449",
     "arXiv:2512.04013": "arXiv:2512.04013",
     "arXiv:2510.13668": "arXiv:2510.13668",
     "DOI:10.48550/arxiv.2602.02987": "arXiv:2602.02987",
@@ -2184,6 +2252,8 @@
     "arXiv:2607.28150": "arXiv:2607.28150",
     "DOI:10.48550/arxiv.2607.28633": "arXiv:2607.28633",
     "arXiv:2607.28633": "arXiv:2607.28633",
+    "DOI:10.48550/arxiv.2608.01891": "arXiv:2608.01891",
+    "arXiv:2608.01891": "arXiv:2608.01891",
     "arXiv:2608.03741": "arXiv:2608.03741",
     "arXiv:2608.06557": "arXiv:2608.06557",
     "arXiv:2608.15127": "arXiv:2608.15127",

@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **272本**。
+収録論文: **273本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,7 +25,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**272本**。
+推論論文：**273本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -43,7 +43,7 @@
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 2 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 20 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 12 |
-| [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 2 |
+| [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 3 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 47 |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 62 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |

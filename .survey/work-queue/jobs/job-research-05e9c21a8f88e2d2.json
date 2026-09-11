@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.16473",
   "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
   "selection_reason": "LLM演算子ごとにNPU内部のボトルネックとなる構成要素が異なることを利用し、コア内の構成要素を別々の電圧・周波数領域へ分割してサブマイクロ秒単位で制御するeNPUを提案する。コンパイラが命令スケジューリングと構成要素別V/fをSLO制約下で共同探索し、TPUv4相当で面積増加3.45%に対しLLMサービスのエネルギーを25.8〜35.2%削減する。GreenLLM/AFlexよりさらに細かい空間粒度のDVFSとして、省エネルギー制御の発展を比較する価値が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T05:19:41+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T05:32:47+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

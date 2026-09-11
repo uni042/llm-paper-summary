@@ -7,25 +7,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 100,
+      "completed": 101,
       "superseded": 42,
-      "ready": 3,
-      "deferred": 3
+      "deferred": 3,
+      "ready": 2
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-05e9c21a8f88e2d2",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2607.16473",
-      "title": "Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving",
-      "source_url": "https://arxiv.org/abs/2607.16473",
-      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-e1c7f91a13d91f98",
       "type": "research",
@@ -51,5 +39,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T05:19:51+00:00"
+  "generated_at": "2026-09-11T05:33:09+00:00"
 }
