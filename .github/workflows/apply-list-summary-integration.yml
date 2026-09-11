@@ -1,4 +1,4 @@
-name: Finalize compact paper list indexes
+name: Repair compact paper list sentence boundaries
 
 on:
   push:
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  finalize:
+  repair:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest main
@@ -32,7 +32,41 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Verify compact summaries on current papers
+      - name: Confirm new regression test is red before fix
+        run: |
+          set +e
+          python -m unittest discover -s .survey/tests -p 'test_list_summary_quality.py'
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            echo 'Expected the new Japanese sentence-boundary regression test to fail before the fix.'
+            exit 1
+          fi
+          echo 'Red regression test confirmed.'
+
+      - name: Patch Japanese sentence boundary handling
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('.survey/scripts/list_summary.py')
+          text = p.read_text(encoding='utf-8')
+          old = 'SENTENCE_RE = re.compile(r".+?[。！？](?=\\s|$)|.+$", re.S)'
+          new = 'SENTENCE_RE = re.compile(r"[^。！？]+[。！？]?")'
+          if old not in text:
+              if new not in text:
+                  raise SystemExit('sentence regex anchor not found')
+          else:
+              text = text.replace(old, new, 1)
+          old_trim = 'return window[:cut].rstrip("、；;：: ") + "。"'
+          new_trim = 'return window[:cut].rstrip("、；;：: ") + "…"'
+          if old_trim in text:
+              text = text.replace(old_trim, new_trim, 1)
+          elif new_trim not in text:
+              raise SystemExit('long sentence trim anchor not found')
+          p.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify fixed summaries on current papers
         run: |
           set -euo pipefail
           python -m compileall -q .survey/scripts
@@ -56,12 +90,13 @@ jobs:
       - name: Rebuild paper indexes
         run: python .survey/scripts/survey.py --root .survey build
 
-      - name: Commit generated indexes
+      - name: Commit source fix and regenerated indexes
         run: |
           set -euo pipefail
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
-          git add README.md \
+          git add .survey/scripts/list_summary.py \
+            README.md \
             papers/README.md \
             papers/inference/README.md \
             papers/training/README.md \
@@ -69,10 +104,6 @@ jobs:
             papers/inference/comparison.md
           find papers/inference papers/training papers/survey \
             -mindepth 2 -maxdepth 2 -name README.md -print0 | xargs -0 -r git add --
-          if git diff --cached --quiet; then
-            echo 'generated paper indexes are already current'
-            exit 0
-          fi
-          git commit -m 'docs: refresh compact paper list summaries'
+          git commit -m 'fix: preserve Japanese sentence boundaries in paper lists'
           git pull --rebase --autostash origin main
           git push origin HEAD:main
