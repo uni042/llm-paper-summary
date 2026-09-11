@@ -63,7 +63,7 @@ DiffSkipは、元LLMのFFNをmodelから削除せずに残し、**トークン�
 一方、論文の重要な結果は速度面で、**FLOPsを減らしても連続デコードのwall-clockはほぼ速くならない**。ルータとadapterの重み read、トークンごとの分岐、GPU バッチの分割がFFN削減分を相殺するためである。
 
 
-DiffSkipはFFNをトークン単位で置換して計算を削る。4 FFN skipでは平均品質保持率99.0%、8 skipでは91.3%となり、FLOPs削減が連続デコードの実時間高速化にほぼ結びつかないことも確認した。
+8×A6000実機のLlama-3-8B・batch8（出力5 token）で、Vanilla/full-depthとEarlyExit、ShortGPT、LaCo、MindSkipを比較し、MMLU／HellaSwag／WinoGrande／GSM8K／BBH／XSumの平均保持率は4 FFN skipで99.0%、8 skipで91.3%だった。連続decodeのwall-clockはほぼ高速化せず、FLOPs削減と実時間を分けて読む必要がある。
 
 ## 手法
 
