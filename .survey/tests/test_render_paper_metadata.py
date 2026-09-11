@@ -23,6 +23,7 @@ def complete_record() -> dict:
             "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
             "title": "Example",
             "summary": "要約。" * 100,
+            "list_summary": "本研究は実行中の状態を観測して配置を動的に切り替え、限られたGPU資源で待ち時間と無駄な転送を減らす方式を提案する。",
             "source": "https://arxiv.org/abs/2607.16473",
             "sources": ["https://arxiv.org/abs/2607.16473"],
             "authors": ["A. Author"],
@@ -96,6 +97,19 @@ class RenderPaperMetadataTest(unittest.TestCase):
         self.assertEqual(meta["references"][0]["canonical_id"], "arXiv:2303.06865")
         self.assertEqual(meta["references_checked_at"], "2026-09-11")
         self.assertEqual(meta["references_total"], 42)
+        self.assertEqual(meta["list_summary"], complete_record()["metadata"]["list_summary"])
+
+    def test_renderer_uses_worker_list_summary_for_lead_quote(self) -> None:
+        record = complete_record()
+        rendered = render_paper(record)
+        self.assertIn(f"> {record['metadata']['list_summary']}", rendered)
+        self.assertNotIn(f"> {record['metadata']['summary']}", rendered)
+
+    def test_renderer_rejects_missing_list_summary(self) -> None:
+        record = complete_record()
+        del record["metadata"]["list_summary"]
+        with self.assertRaisesRegex(ValueError, "metadata.list_summary is required"):
+            render_paper(record)
 
     def test_renderer_builds_overview_with_method_and_headline_result(self) -> None:
         record = complete_record()
