@@ -91,10 +91,16 @@ jobs:
 
       - name: Run strict list-summary audit
         run: |
+          set +e
           python .survey/scripts/audit_list_summary_quality.py \
             --repo-root . \
             --markdown-out /tmp/list-summary-audit.md \
             --json-out /tmp/list-summary-audit.json
+          status=$?
+          if [ "$status" -ne 0 ]; then
+            cat /tmp/list-summary-audit.md
+            exit "$status"
+          fi
 
       - name: Compile and run regression tests
         run: |
