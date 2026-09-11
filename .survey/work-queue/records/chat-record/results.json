@@ -2,27 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2604.19769-20260911-1141-v10-a1",
-  "job_id": "job-research-5439ec0e0daf70c9",
+  "attempt_id": "attempt-2602.20732-20260911-1153-v10-a1",
+  "job_id": "job-research-4990aea7d8415733",
   "data": {
-    "overview": "TTKVは文脈が長くなるほど比較方式との差を広げる。128KではLLaMA-3.1-8Bのスループットが65.7 tokens/sで、ShadowKV 34.9、KVQuant 30.8、KIVI 29.4を大きく上回る。LLaMA-3.1-70B、Qwen2.5-32B、DeepSeek-R1-14Bの128K集計ではFP16のホストからGPUへの転送量92GB前後を15.3〜15.8GBへ減らし、平均p95遅延を約76%削減する。品質差は小さく、差分量子化・二階層配置・ストリーミング注意の全てが必要であることをアブレーションでも示す。",
+    "overview": "CHESSは極端なKV削減でもLongBenchV2品質を維持し、実行系との粒度整合によって疎性を実時間性能へ変換する。Aggressive設定は約1%のKV予算で総合33.2となりFullKV 30.2を上回る。4×H20の性能評価では4K〜32K、バッチ1〜192で最も高いスループットを示し、32KでFullKV比最大4.56倍。32KではSnapKVよりTPOTが約1.3倍速く、選択処理自体は総遅延の1.49%に留まる。32K入力後6Kトークン生成でも一トークン遅延がほぼ平坦で、KV増加に伴う線形悪化を抑える。",
     "key_results": [
-      {"metric": "128Kホスト→GPU転送量", "value": "約5.94分の1", "baseline": "FP16", "condition": "LLaMA-3.1-70B、Qwen2.5-32B、DeepSeek-R1-14Bの128K集計", "interpretation": "FP16で約92GB必要な転送をTTKVでは15.3〜15.8GBへ抑え、差分量子化と疎なブロック取得がPCIe負荷を大幅に減らす。"},
-      {"metric": "128K p95デコード遅延", "value": "平均約76%削減", "baseline": "FP16", "condition": "MultiNews、Qasper、RepoBench-P、RULERを含む128K長文評価", "interpretation": "転送量削減だけでなく、非同期先読みと高速階層計算の重畳により残る通信待ちも隠す。"},
-      {"metric": "128Kスループット", "value": "LLaMA-3.1-8Bで65.7 tokens/s", "baseline": "ShadowKV 34.9、KVQuant 30.8、KIVI 29.4 tokens/s", "condition": "バッチ8、128K文脈", "interpretation": "最良比較方式に対しておおむね約2倍の生成速度を維持し、長文化に伴う帯域劣化を緩和する。"},
-      {"metric": "32K L-Eval LLaMA-3.1-8B", "value": "p95 245ms、転送1.05GB、精度65.0%", "baseline": "FP16: 380ms、3.60GB、65.4%", "condition": "32K、バッチ8", "interpretation": "精度差0.4ポイントに抑えながらp95を約35.5%短縮し、転送量を約3.43分の1へ減らす。"},
-      {"metric": "16K GovReport DeepSeek-R1-14B", "value": "p95 175ms、転送0.85GB、ROUGE-L 50.0", "baseline": "FP16: 285ms、2.40GB、50.2", "condition": "4GB HBM KV予算", "interpretation": "低速階層圧縮とストリーミング取得により、要約品質をほぼ維持しながら転送と遅延を削減する。"},
-      {"metric": "ストリーミング注意の寄与", "value": "p95 1021→590ms、転送47.5→8.1GB", "baseline": "ストリーミング注意なし", "condition": "64K RULERアブレーション、精度51.8%で同等", "interpretation": "通信と計算の重畳、および必要ブロックの選択取得が遅延削減の中心で、単なる量子化だけでは十分でない。"},
-      {"metric": "差分量子化の寄与", "value": "p95 796→590ms、転送13.4→8.0GB", "baseline": "キー/値を一律8ビット", "condition": "64K RULER、精度52.0→51.8%", "interpretation": "値を4ビットへ下げることで品質損失を小さく保ちながら転送量をさらに削減する。"},
-      {"metric": "ブロック長の折衷", "value": "128トークンで590ms、8.1GB、51.8%", "baseline": "32:1796ms/58.8GB/52.0%、64:1150ms/50.6GB/51.9%、256:595ms/3.2GB/48.1%", "condition": "LLaMA-3.1-70B、RULER", "interpretation": "256では転送量がさらに減るが品質低下が大きく、128が遅延と精度の実用的な折衷点になる。"}
+      {"metric": "LongBenchV2総合品質", "value": "33.2", "baseline": "FullKV 30.2、H2O 34.0、KeyDiff 29.2、SnapKV 30.2、Quest 32.0", "condition": "CHESS Aggressive、KV予算約1%", "interpretation": "完全KVより少ない文脈でも不要情報を除くことで総合スコアを上回り、H2Oの20%予算に近い品質を1%で得る。"},
+      {"metric": "LongBenchV2長文区分", "value": "33.3", "baseline": "FullKV 28.7、H2O 31.5、KeyDiff 32.4、SnapKV 35.2、Quest 31.5", "condition": ">128K分類の品質区分", "interpretation": "極端な長文でも意味的に関連する連続Pageを再構成することでFullKVより高いスコアを維持するが、SnapKVが上回る区分もある。"},
+      {"metric": "最大エンドツーエンドスループット", "value": "FullKV比4.56倍", "baseline": "FullKV", "condition": "32K文脈、バッチを最大192まで変化", "interpretation": "文脈長・バッチが増えるほど差が広がり、Page粒度のゼロコピー選択が大バッチでも疎性の利得を維持する。"},
+      {"metric": "32K TPOT", "value": "FullKV比最大約4.3倍、SnapKV比約1.3倍", "baseline": "FullKV / SnapKV", "condition": "4K〜32Kスケーラビリティ評価", "interpretation": "KV読み出しと注意計算の両方を選択Pageに限定するため、長文化に伴う一トークン時間の増加を強く抑える。"},
+      {"metric": "選択処理オーバーヘッド", "value": "8K 0.72%、16K 0.98%、32K 1.49%", "baseline": "総デコード遅延", "condition": "バッチ1の1ステップ遅延内訳", "interpretation": "階層ベクトルを一つのGEMMへまとめ、選択を必要時だけ実行することで、意味検索自体が新しい支配的ボトルネックにならない。"},
+      {"metric": "長生成時の遅延安定性", "value": "32K入力後6K生成でほぼ平坦", "baseline": "FullKVは線形増加、SnapKV/KeyDiffは不安定化", "condition": "長入力・長出力の連続生成", "interpretation": "利用するKV作業集合を文脈依存で制限するため、生成が進んで物理KV総量が増えても一トークン当たりの計算・読み出し量を抑えられる。"}
     ],
     "negative_results": [
-      {"name": "単一低速階層では品質・遅延とも悪化", "description": "高速階層を外して全KVを低速側へ置くと、64K RULERアブレーションで精度が51.8%から41.5%へ約10ポイント低下し、p95も590msから985msへ悪化する。高速階層に最近のKVを残すことが品質にも効いている。"},
-      {"name": "大きすぎるブロックは品質を落とす", "description": "256トークンブロックでは転送量は3.2GBまで減るが、RULER精度は48.1%となり128トークンの51.8%より明確に低い。転送削減だけを最大化すると関連情報の選択粒度が粗くなる。"},
-      {"name": "FP16完全保持は64K以降で容量不足", "description": "LLaMA-3.1-8Bのスループット表ではFP16方式は64Kと128Kでメモリ不足となり測定不能である。TTKVの主な価値は長文で高速階層だけでは保持できない領域に現れる。"},
-      {"name": "近似を含む", "description": "低速階層の値を4ビット化し、関連上位ブロックのみ取得するため完全KVと厳密同一ではない。対象ベンチマークでは品質差が小さいものの、注意が古い多数ブロックへ広く分散する入力では損失が増える可能性がある。"}
+      {"name": "コード領域ではH2Oが強い", "description": "論文はCode領域では関連文が非連続かつ疎に分布しやすく、累積注意スコアを使うH2Oの方が重要依存関係を拾いやすいと分析する。CHESSが全領域で一律に最良という結果ではない。"},
+      {"name": "Aggressive設定は完全KVと同一ではない", "description": "1%予算で総合品質は上がるが、選択しなかったPageはその段の注意から外れる。改善は無関係な文脈を取り除く効果を含み、厳密な無損失注意の高速化ではない。"},
+      {"name": "Questは同一実装基盤ではない", "description": "Questは単一バッチ向けの特殊カーネルをCHESS基盤へ容易に統合できなかったため公式実装で評価している。したがってシステム比較では実装環境差を考慮する必要がある。"},
+      {"name": "多ノード・外部メモリ階層は未評価", "description": "評価は単一ノード4×H20で完結し、CPUメモリ、CXL、SSD、ネットワークを跨ぐ階層KVのデータ移動は対象外である。"}
     ],
-    "interpretation": "TTKVの改善は、長文推論の律速を『KV総容量』だけでなく『毎トークンで低速階層から何バイト運ぶか』として捉え直した点にある。高速HBMへ最近のKVを残すことで多くの参照をローカル化し、古いKVはキー8ビット・値4ビットへ圧縮して一回の転送量を減らす。さらに関連ブロックだけを選び、その転送と高速階層注意を重ねるため、PCIeの帯域と遅延の両方へ対処する。アブレーションで三要素のどれを外しても悪化することから、単一技法ではなく配置・圧縮・実行スケジュールの協調が主要因と読める。",
-    "quality_impact": "品質はFP16よりわずかに低い例が多いが、128KのLLaMA-3.1-70BではMultiNews 29.3対29.5、Qasper 37.8対38.0、RepoBench-P 57.8対58.0、RULER 61.8対62.0で差は小さい。Qwen2.5-32BやDeepSeek-R1-14Bでも同様にFP16へ近い。一方で256トークンブロックのアブレーションでは精度低下が明確なため、品質保持は階層比率・量子化幅・ブロック粒度の設定に依存する。"
+    "interpretation": "CHESSの主要な成果は、疎な注意アルゴリズムの理論削減率だけでなく、その選択単位をPagedAttentionのPageへ合わせたことである。トークン単位の疎性では物理再配置や不連続アクセスが増え、高性能カーネルを壊す。CHESSはKey意味表現でGridからPageへ段階的に候補を減らし、ページ索引だけを切り替えるので、選択後の注意をFlashInferの通常Page処理へ載せられる。さらに大バッチでも階層得点を一つのGEMMへまとめるため、選択処理が小さな逐次カーネル列にならない。品質面では現在の生成内容へ関連する文脈を選び直し、不確実性上昇時に再構成することで、固定削除より攻撃的な1%予算を許している。",
+    "quality_impact": "LongBenchV2ではAggressive 1%予算でOverall 33.2対FullKV 30.2、Easy 38.0対33.9、Hard 30.2対28.0、Short 40.0対38.3、Medium 27.4対24.2、Long 33.3対28.7と、多くの区分でFullKVを上回る。ただしこれは完全KVの出力を再現するのではなく、タスクに無関係な文脈を除いて評価スコアが改善した結果である。タスク分布が変われば選択誤りが起こり得るため、不確実性駆動の再構成が安全弁になる。"
   }
 }
