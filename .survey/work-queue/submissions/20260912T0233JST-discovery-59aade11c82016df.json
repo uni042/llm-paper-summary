@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-59aade11c82016df",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 92,
+      "reason": "長文脈LLMの接頭辞KVをNVMe SSDへ置く際、GPU上の断片化配置が大量の微小ランダムI/Oを生み、GPU Direct StorageでもI/O発行をCPUが担うためCPUが律速になる問題を扱う。HBMとSSDのデータ経路・I/O制御経路からCPU介入を除くSSD-backed KV cache基盤であり、SSD活用を重点とする本リポジトリで優先度が高い未収録候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-kv-memory-appliance.md",
+      "priority": 86,
+      "reason": "長文脈KVキャッシュを16ホスト・32TBの共有メモリへ拡張するフォトニックCXLメモリアプライアンスを提案し、電気CXLプールに対する遅延半減超と、複数ターン会話での初回トークン時間6.6倍改善を報告する。CXL階層メモリと大規模KV共有の最新ハードウェア／システム境界研究として重要である。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23658-elastic-kv-cache-vmm-reclamation.md",
+      "priority": 84,
+      "reason": "プリフィル用に静的予約されたGPUメモリをデコード中だけKVプールへ貸し出し、次プリフィル直前にCUDA仮想メモリで戻す実動作機構を構築したうえで、分割プリフィルの調整だけで同等以上のKV回収が可能な場合が多いという負の結果まで示す。VMMによる弾力的メモリ管理の実装価値と適用限界を同時に示す最近の重要研究である。"
+    },
+    {
+      "canonical_id": "arXiv:2606.25353",
+      "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
+      "source_url": "https://arxiv.org/abs/2606.25353",
+      "paper_path": "papers/inference/13-cpu-memory-hierarchy/2026-2606.25353-cache-resident-llm-inference.md",
+      "priority": 82,
+      "reason": "GB級最終段キャッシュを持つCPUクラスタで重みをキャッシュ常駐させ、注意とKV管理を別資源領域へ分離してKV容量をパイプライン深度から独立に拡張する。実機Llama構成で出力トークン時間2.04〜11.51倍、検証済み解析モデルで最大13.9倍を報告し、CPU階層メモリをLLM推論へ利用する新しい実行モデルとして価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.03377-cxl-ndp-near-data-processing.md",
+      "priority": 80,
+      "reason": "CXLメモリ容量拡張で帯域が律速になる問題に対し、CXL.memを変えずデバイス側で動的量子化と重み・KVの可逆圧縮を行う近データ処理を提案する。エンドツーエンドでスループット43%向上、最大文脈長87%延長、KV容量46.9%削減を精度低下なしで報告し、CXL階層の帯域対策として明確な未収録価値がある。"
+    }
+  ]
+}
