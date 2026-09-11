@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T10:01:32.450630+00:00",
+  "updated_at": "2026-09-11T10:03:30.412093+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,7 +6314,7 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T10:01:32.450630+00:00",
+      "last_recorded_at": "2026-09-11T10:03:30.412093+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -6323,9 +6323,9 @@
       "counts": {
         "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -6433,6 +6433,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34587266523:1",
+          "recorded_at": "2026-09-11T10:03:30.412093+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34587266523",
+            "run_attempt": "1",
+            "source_sha": "075e72882c833bf72edabcd935f5b6a23ec10b3b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6491,6 +6505,14 @@
           "title": "E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-6fc4f4d29330489e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6521,6 +6543,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-7335d4ff43b2ce6b",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -6531,12 +6560,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
-        ".survey/work-queue/results/20260911T1912JST-discovery-071438061be959b0.json"
+        ".survey/work-queue/results/20260911T1912JST-discovery-071438061be959b0.json",
+        ".survey/work-queue/results/20260911T1920JST-discovery-6fc4f4d29330489e.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
       "paper_active_count_after": 310,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
