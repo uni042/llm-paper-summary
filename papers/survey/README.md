@@ -15,9 +15,9 @@ LLMシステム研究を横断的に整理する **survey / review 論文** を�
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-サーベイ論文：**0本**。
+サーベイ論文：**1本**。
 
 | 系統 | 本数 |
 |---|---:|
-| — | 0 |
+| [01-kv-cache-optimization](01-kv-cache-optimization/README.md) | 1 |
 <!-- survey:auto:end -->

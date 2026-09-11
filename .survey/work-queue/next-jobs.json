@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 105,
+      "completed": 106,
       "superseded": 42,
       "deferred": 3,
-      "ready": 3,
+      "ready": 2,
       "blocked": 2
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-cae6393c1c353130",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2511.14510",
-      "title": "LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference",
-      "source_url": "https://arxiv.org/abs/2511.14510",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-3342e2ae369a80fb",
       "type": "research",
@@ -52,5 +40,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T06:21:45+00:00"
+  "generated_at": "2026-09-11T06:34:24+00:00"
 }

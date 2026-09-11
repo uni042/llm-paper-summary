@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 267,
+  "active_count": 271,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -1173,6 +1173,13 @@
       ],
       "source_hash": "517368e3371af388f6f3555669bfd09368792a7f5e1485f6538171c1adcfa924"
     },
+    "arXiv:2511.14510": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md",
+      "identifiers": [
+        "arXiv:2511.14510"
+      ],
+      "source_hash": "560a6eabe62c5343f4c1483e53dc14c5cff9cc45ba7687373aadb6d558d5378e"
+    },
     "arXiv:2512.11920": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
       "identifiers": [
@@ -1626,6 +1633,14 @@
       ],
       "source_hash": "c57e272610d5af351201400cfd4a83262161e060c9fbfa6d6f7eca40b59f39c3"
     },
+    "arXiv:2507.11507": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md",
+      "identifiers": [
+        "DOI:10.1145/3772052.3772215",
+        "arXiv:2507.11507"
+      ],
+      "source_hash": "7491534f95d03ce5fcbd3af4d08958084c57b444c426bf82e58b0820bc2f937c"
+    },
     "arXiv:2508.16449": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
       "identifiers": [
@@ -1709,6 +1724,14 @@
       ],
       "source_hash": "44b4b7c3dac67dfd9963ee28cff1caeab55d915250feeac0159a68874951ae47"
     },
+    "arXiv:2605.23389": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+      "identifiers": [
+        "DOI:10.1145/3802009",
+        "arXiv:2605.23389"
+      ],
+      "source_hash": "a75fed10ec73c062bf917feff84bd3d3a147fb9c25d85341e7dcee6bc06ee056"
+    },
     "arXiv:2605.29639": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm.md",
       "identifiers": [
@@ -1722,6 +1745,14 @@
         "arXiv:2606.01839"
       ],
       "source_hash": "b080a316ad7afbb99b4c15421d271a819db9dc7c95678d10b54eb20540689b86"
+    },
+    "arXiv:2606.04415": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2606.04415",
+        "arXiv:2606.04415"
+      ],
+      "source_hash": "c31cac84eeb62e4eeafb86017c5e5fccd6b670c6539f6debb25afee968529e62"
     },
     "arXiv:2606.22327": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
@@ -2140,6 +2171,7 @@
     "DOI:10.48550/arxiv.2509.03377": "arXiv:2509.03377",
     "arXiv:2509.03377": "arXiv:2509.03377",
     "arXiv:2510.09665": "arXiv:2510.09665",
+    "arXiv:2511.14510": "arXiv:2511.14510",
     "DOI:10.1145/3748173.3779188": "arXiv:2512.11920",
     "arXiv:2512.11920": "arXiv:2512.11920",
     "arXiv:2601.19910": "arXiv:2601.19910",
@@ -2221,6 +2253,8 @@
     "arXiv:2501.08090": "arXiv:2501.08090",
     "arXiv:2501.14312": "arXiv:2501.14312",
     "arXiv:2504.11320": "arXiv:2504.11320",
+    "DOI:10.1145/3772052.3772215": "arXiv:2507.11507",
+    "arXiv:2507.11507": "arXiv:2507.11507",
     "DOI:10.48550/arxiv.2508.16449": "arXiv:2508.16449",
     "arXiv:2508.16449": "arXiv:2508.16449",
     "arXiv:2512.04013": "arXiv:2512.04013",
@@ -2238,8 +2272,12 @@
     "arXiv:2605.02329": "arXiv:2605.02329",
     "DOI:10.1109/main71116.2026.11622343": "arXiv:2605.19593",
     "arXiv:2605.19593": "arXiv:2605.19593",
+    "DOI:10.1145/3802009": "arXiv:2605.23389",
+    "arXiv:2605.23389": "arXiv:2605.23389",
     "arXiv:2605.29639": "arXiv:2605.29639",
     "arXiv:2606.01839": "arXiv:2606.01839",
+    "DOI:10.48550/arxiv.2606.04415": "arXiv:2606.04415",
+    "arXiv:2606.04415": "arXiv:2606.04415",
     "arXiv:2606.22327": "arXiv:2606.22327",
     "arXiv:2606.24506": "arXiv:2606.24506",
     "arXiv:2606.26666": "arXiv:2606.26666",

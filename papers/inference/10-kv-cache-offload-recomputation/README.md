@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（47本）
+## 自動生成の論文一覧（48本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -63,6 +63,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 | 2026-01 | [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md) | [✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) | 0 | GH200のHBMが混雑したとき、応答開始やtoken間隔の目標に遅れそうなrequestを優先してKV cacheをCPU DRAMとの間で入れ替え、小さいKV blockをまとめて双方向転送することで高速C2C linkを使い切るonline serving system。 |
 | 2025-12 | [Understanding Bottlenecks for Efficiently Serving LLM Inference With KV Offloading](2025-2601.19910-understanding-bottlenecks-kv-offloading.md) | — | 0 | CPUから戻すcached KVの量が、新しく計算するprefill token量に対してどれくらい増えるとPCIe転送の方がGPU計算より遅くなるかを式とH100実測で示し、prefix reuseが多いほどKV offloadが早くI/O律速になることを分析した研究。 |
 | 2025-12 | [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md) | ✓ | 0 | 長文脈LLMのKVキャッシュをGPU HBMだけに保持できない問題に対し、CXL接続メモリへ低温KVを退避し、FPGAで圧縮・展開とDMA制御を行う階層メモリ方式である。論文はさらに小型LSTMで将来トークンを予測し、将来位置のKVをGPU側へ投機的に先読みすると説明する。監査では、会議採録と公開実装の存在は確認できた一方、公開コードのLSTMは学習済み重みを読み込まず簡略計算で動き、DMA先読みも実転送せず要求を待ち行列へ積むだけであることを確認した。また標準的な自己回帰推論では未来位置のKVは未生成であり、予測トークンから既存の未来KVを取得する説明には因果的な不整合が残る。したがってCXL階層化とFPGA圧縮は独立した有用な設計要素として扱えるが、投機的KV先読みの性能寄与は再現可能な実装証拠が不足している。 |
+| 2025-11 | [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md) | [✓](https://anonymous.4open.science/r/LiteCache-888D) | 0 | LiteCacheは、長文LLMでKVキャッシュをCPUへ退避し必要なtop-kだけGPUへ戻す方式が、細粒度キャッシュ管理をCPUで行うためCPU処理・同期・カーネル起動がボトルネックとなり、CUDAグラフも使いにくい問題を扱う。隣接デコード段階の同一注意ヘッドではクエリ方向が似てtop-k KV集合も大きく重なる観測から、前回クエリとのコサイン類似度だけでヘッド単位KVを再利用するQSACを導入する。さらに外れやすいヘッドだけを次層から疎に先読みし、GPU側ポーリングで転送完了を同期して静的なGPU実行列を保つ。H100とA40、Llama3-8BとQwen2.5-14Bで、既存KVオフロード方式比のデコードスループットをH100で67.0〜224.2%、A40で10.7〜60.5%改善し、100万トークン超を扱いながらLongBench/RULER精度をほぼ維持する。 |
 | 2025-10 | [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md) | [✓](https://github.com/LMCache/LMCache) | 0 | vLLM/SGLang内部でrequestごとに閉じていたKV cacheを独立したstorage/communication layerとして外へ取り出し、query間のprefix reuseとprefill-decode間のKV transferを同じ基盤で扱う。小pageを大粒度chunkへ束ねるCUDA data path、layer-wise compute-I/O overlap、zero-copy、標準connectorとcontrol APIでGPU・CPU・disk・networkを跨ぐKV移動を高速化する。 |
 
 ### 直近12か月より前・リポジトリ内で被引用

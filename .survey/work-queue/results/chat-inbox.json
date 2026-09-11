@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
+  "ok": true,
   "job_id": "job-research-cae6393c1c353130",
-  "validation_error": "ValueError: problem_method.components[3].description is too short",
-  "repair_required": true,
-  "isolated_at": "2026-09-11T06:32:36+00:00"
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.14510-litecache-gpu-centric-kv-offloading.md",
+    "identity_delta": "survey-state/identity-deltas/arxiv/2511.14510.json"
+  },
+  "job_status": "completed"
 }
