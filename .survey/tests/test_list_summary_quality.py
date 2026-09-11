@@ -52,6 +52,29 @@ class ListSummaryTests(unittest.TestCase):
         self.assertIn("GPUメモリ不足", text)
         self.assertNotIn("メタデータ側", text)
 
+    def test_protects_method_names_while_translating_generic_terms(self):
+        mod = self._module()
+        body = """# Example
+
+> EVICTとLayerSkipはdraft modelを使ったspeculative decodingのverification costを減らし、target modelのlatencyを抑える手法である。複数条件で既存方式より待ち時間を短縮する。
+"""
+        text = mod.compact_list_summary(body)
+        self.assertIn("EVICT", text)
+        self.assertIn("LayerSkip", text)
+        self.assertNotIn("層kip", text)
+        self.assertIn("下書きモデル", text)
+        self.assertIn("投機的復号", text)
+        self.assertIn("検証コスト", text)
+        self.assertIn("対象モデル", text)
+        self.assertIn("レイテンシ", text)
+
+    def test_quality_ignores_proper_names_in_language_ratio(self):
+        mod = self._module()
+        text = "AgentSysBenchはDeepResearch、HuggingGPT、WebAgent、GUIAgent、Claude Codeを含むエージェント処理を比較し、システム性能の差を測るベンチマークである。"
+        result = mod.audit_list_summary(text)
+        self.assertNotEqual(result.status, "FAIL")
+        self.assertFalse(any("日本語比率" in x for x in result.failures))
+
     def test_quality_rejects_bare_english_term(self):
         mod = self._module()
         text = "本研究はrequest処理の待ち時間を減らすため、要求順序を変更してGPU利用率を高める方式を提案し、複数条件で効果を評価する。"
