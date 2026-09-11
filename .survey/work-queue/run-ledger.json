@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T16:49:59.738732+00:00",
+  "updated_at": "2026-09-11T16:54:48.025836+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6786,19 +6786,19 @@
     {
       "run_key": "2026-09-12T01:30:00+09:00",
       "first_recorded_at": "2026-09-11T16:34:49.056336+00:00",
-      "last_recorded_at": "2026-09-11T16:49:59.738732+00:00",
+      "last_recorded_at": "2026-09-11T16:54:48.025836+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 7,
-        "new_papers": 2,
+        "new_jobs": 8,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -6903,6 +6903,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34624589420:1",
+          "recorded_at": "2026-09-11T16:54:48.025836+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34624589420",
+            "run_attempt": "1",
+            "source_sha": "c19e9b6b4e882f3fe1a45fae89800e6540577756"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6961,6 +6977,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2737f1df0cf5be1d",
+          "type": "research",
+          "canonical_id": "arXiv:2507.19823",
+          "title": "HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -7012,11 +7036,19 @@
           "type": "research",
           "canonical_id": "arXiv:2507.19823",
           "title": "HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs"
+        },
+        {
+          "job_id": "job-ffdf36811f2a8f46",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
         "arXiv:2609.07175",
-        "arXiv:2509.24626"
+        "arXiv:2509.24626",
+        "arXiv:2507.19823"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
@@ -7027,8 +7059,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 313,
-      "paper_active_count_after": 315,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 316,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

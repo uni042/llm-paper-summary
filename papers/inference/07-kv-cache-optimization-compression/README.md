@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（23本）
+## 自動生成の論文一覧（24本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -118,4 +118,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-05 · [TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization](2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md)**  
   実装：[✓](https://github.com/ydyhello/TailorKV) ・ リポジトリ内被引用：1  
   TailorKVは、長文LLMのKVキャッシュを一律に量子化すると重要な外れ値を持つ層で精度が落ち、一律にCPUへオフロードするとPCIe転送が遅すぎる問題を扱う。各層の注意分布から密な情報を広く保持すべき層と、少数の支配的トークンだけで十分な層を事前分類し、前者には1〜2ビット量子化、後者にはCPUオフロードと動的top-k取得を適用する。
+
+- **2025-07 · [HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs](2025-2507.19823-hcattention-heterogeneous-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キー量子化・値のCPU退避・層別の動的KV削除を統合し、GPU側KV容量を25%まで減らして全注意相当のLongBench性能を維持し、12.5%でも1%未満の平均性能低下に抑える異種GPU/CPU注意方式。
 <!-- survey:auto:end -->

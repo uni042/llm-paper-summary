@@ -181,7 +181,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 1年以上前
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
-  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：19  
   一部リクエストだけKV キャッシュとデコード 注意機構をCPUへ移し、残りリクエストはGPUで処理しながら、CPU/GPUが同時に終わるようオフロード量を毎iteration調整してVRAM不足を緩和するオンライン 提供 システム。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -189,7 +189,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   ShadowKVは、長文LLMでKVキャッシュをGPUへ全保持するとバッチ数が制限され、CPUへ全退避すると疎なKVを毎トークン取得するPCIe遅延が大きい問題を扱う。回転位置埋め込み適用前のキーが系列ごとに強い低ランク構造を持つことを利用し、キーの低ランク表現・チャンク代表値・少数の外れ値だけGPUへ残し、低ランクでない値キャッシュをCPUへ退避する。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   KV キャッシュとそれを読むアテンション計算を複数CPU nodeへ置き、GPUにはモデル 重みを使う計算を集中させることで、KV転送を避けながら大バッチでGPU スループットを高める異種 推論提供 システム。
 
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  

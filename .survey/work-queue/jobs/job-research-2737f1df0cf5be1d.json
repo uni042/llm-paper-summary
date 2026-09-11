@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2507.19823",
   "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2507.19823-hcattention-heterogeneous-attention.md",
   "selection_reason": "長文推論でキー量子化、値のCPUオフロード、動的KV削除を組み合わせ、GPUとCPUで注意計算を分担する異種注意計算を提案する。LongBenchで全注意相当の精度を維持しつつKVメモリを25%まで縮め、12.5%でも競争力を保ち、A100 80GB 1枚でLlama-3-8Bの400万トークン処理を報告する。圧縮とオフロードを別々に扱わず、GPU/CPU配置と注意計算を共同設計する未収録候補として価値がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T16:49:30+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T16:53:51+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
