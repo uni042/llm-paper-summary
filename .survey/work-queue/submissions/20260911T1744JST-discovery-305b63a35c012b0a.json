@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-305b63a35c012b0a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.09338",
+      "title": "Osprey: Target-agnostic Pre-training Makes Stronger Drafters in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09338",
+      "paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+      "priority": 95,
+      "reason": "投機的デコードのドラフトモデルが単一ターゲット・狭い学習分布へ過適合して、分布外・多言語ワークロードで受理率が崩れる問題に対し、既存の小型事前学習済み言語モデルを再利用できるターゲット非依存のドラフト事前学習を提案する。深い小型LMを低遅延な浅いバックボーンへ剪定した後に次トークン事前学習で能力を回復し、各ターゲットには語彙整合、ゼロ初期化QKV拡張、ターゲット分布蒸留だけで適応する。単一の事前学習済みバックボーンをQwen3-8B、Llama-3.3-70B-Instruct、MiniMax-M2.5へ転用でき、平均受理長をそれぞれ16.1%、21.2%、22.7%改善し、MiniMax-M2.5では毎秒トークン数を17.5%改善と報告。2026-09-08公開、EMNLP 2026採択、コード公開済みで、最新の投機的デコード研究として収録価値が高い。"
+    }
+  ]
+}
