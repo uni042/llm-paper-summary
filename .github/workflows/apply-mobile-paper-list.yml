@@ -37,22 +37,24 @@ jobs:
           path = Path('.survey/scripts/survey.py')
           text = path.read_text(encoding='utf-8')
           pattern = re.compile(r'def _render_table\(rows, citations, base_dir\):\n.*?\n\ndef _render_taxonomy_list', re.S)
-          replacement = '''def _render_paper_list(rows, citations, base_dir):
-              if not rows:
-                  return ["該当なし。"]
-              lines = []
-              for r in rows:
-                  link = Path(r["path"]).relative_to(base_dir).as_posix()
-                  lines += [
-                      f"- **{_month_label(r)} · [{cell(r['title'])}]({link})**  ",
-                      f"  実装：{_implementation_cell(r['implementation'])} ・ リポジトリ内被引用：{citations.get(r['path'], 0)}  ",
-                      f"  {cell(r['summary'])}",
-                      "",
-                  ]
-              return lines[:-1]
-
-
-def _render_taxonomy_list'''
+          replacement = "\n".join([
+              'def _render_paper_list(rows, citations, base_dir):',
+              '    if not rows:',
+              '        return ["該当なし。"]',
+              '    lines = []',
+              '    for r in rows:',
+              '        link = Path(r["path"]).relative_to(base_dir).as_posix()',
+              '        lines += [',
+              '            f"- **{_month_label(r)} · [{cell(r[\'title\'])}]({link})**  ",',
+              '            f"  実装：{_implementation_cell(r[\'implementation\'])} ・ リポジトリ内被引用：{citations.get(r[\'path\'], 0)}  ",',
+              '            f"  {cell(r[\'summary\'])}",',
+              '            "",',
+              '        ]',
+              '    return lines[:-1]',
+              '',
+              '',
+              'def _render_taxonomy_list',
+          ])
           updated, count = pattern.subn(replacement, text, count=1)
           if count != 1:
               raise SystemExit(f'expected one _render_table block, replaced {count}')
