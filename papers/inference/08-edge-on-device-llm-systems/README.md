@@ -12,7 +12,7 @@
 
 - **2026-08 · [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)**  
   実装：[✓](https://github.com/FlashML-org/FreeToken) ・ リポジトリ内被引用：1  
-  FreeTokenは、ローカルなMoE推論を「GPUに載らない分をCPUへ逃がす」だけでなく、GPU計算、CPU メモリ 帯域、PCIe、エキスパート キャッシュ、KV キャッシュを一つの実行ランタイムで一体的に共同管理するシステムである。
+  個人PCのGPU・CPU・RAM・PCIeをまとめて見て、エキスパート キャッシュ容量、CPU/GPUで処理するエキスパート量、KVとのVRAM配分をハードウェア帯域に合わせて変えるMoE ランタイム。
 
 - **2026-04 · [Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs](2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -26,19 +26,19 @@
 
 - **2026-09 · [EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs](2026-2609.06551-estream.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  EStreamが解こうとしている問題は、「MoEは1トークンごとには少数の専門家しか使わないのに、長い入力をまとめて処理すると結局ほとんどの専門家を使ってしまい、スマートフォンのメモリへ収まらない」という問題である。
+  スマートフォンのNPUでMoEの入力処理を行うとき、全専門家重みをDRAMへ常駐させず、必要な専門家群だけをUFSストレージから固定サイズの作業領域へ順番に読み込み、NPU計算と重み読出しを重ねるシステム。動的に変わる専門家選択を静的グラフ型NPUで扱うため、全専門家で同じ計算グラフを共有し、実行時にはルート情報と重みアドレスだけを差し替える。
 
 - **2026-09 · [AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference](2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  端末側 端末だけで大きなLLMを動かすのはメモリ/計算的に難しい。一方、クラウドだけで推論するとネットワーク 遅延が増える。
+  AceSpecは、端末側-クラウド 投機 デコードで下書きが外れた時に「クラウドの返事を待つ→端末側で最初から下書きし直す→また送る」というWAN 巻き戻しを避けるため、クラウド待ち時間中に端末側側で複数の外れ方を先回り計算してキャッシュしておく。
 
 - **2026-07 · [Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  個人PCでは、量子化してもモデル全体がVRAMへ収まらないことがある。GPU中心のオフロードでは、CPUメモリに置いた重みを必要になるたびPCIe経由でGPUへ送り、計算自体はGPUへ寄せる。
+  ATSInferは、VRAMに収まらないLLMを個人PCで動かすとき、層やエキスパートを丸ごとCPU/GPUへ割り当てるのではなく、重みテンソルごとに「GPUへ置く価値」を実測する。常駐配置と実行時の一時GPU転送を分け、CPU計算、PCIe転送、GPU計算を重ねることで、GPU中心オフロードのPCIe待ちとCPU/GPU混合実行のCPU待ちを同時に減らす。
 
 - **2026-06 · [MawForge: Memory-Bounded Expert Materialization for Local Mixture-of-Experts Inference](2026-2607.09686-mawforge-memory-bounded-expert-materialization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  疎な混合エキスパート（Mixture-of-エキスパート; MoE）モデルは、総パラメータ数が非常に大きくても1 トークンが使うエキスパートは一部だけである。
+  MawForgeは、ローカルMoEを「完全な モデルがRAMへ入るか」で判定するのではなく、共通重みだけを常駐させ、ルーティングされたエキスパートだけディスクから上限付きキャッシュへ実体化（実体化）する方式である。
 
 - **2026-06 · [E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments](2026-2606.03770-e2llm-heterogeneous-edge-fog-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -50,23 +50,23 @@
 
 - **2026-04 · [SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs](2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  エッジNPUではオンチップSRAMが小さく、注意機構の一時活性値まで高密度eDRAMへ置くと、データを保持するための周期リフレッシュがメモリエネルギーを消費する。
+  エッジNPUではオンチップSRAMが小さく、注意機構の一時活性値まで高密度eDRAMへ置くと、データを保持するための周期リフレッシュがメモリエネルギーを消費する。SHIELDはBF16の1ビット符号と8ビット指数を通常リフレッシュ領域へ固定する一方、誤りに比較的強い7ビット仮数をデータ寿命で分離する。
 
 - **2025-10 · [Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding](2025-2510.11331-heterogeneous-edge-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  小規模基地局側に小さなドラフトモデル、計算能力の高いマクロ基地局側に大きな検証モデルを置き、投機的デコーディング（投機的 デコード）で複数トークンをまとめて検証する分散LLM推論方式。
+  小規模基地局側に小さなドラフトモデル、計算能力の高いマクロ基地局側に大きな検証モデルを置き、投機的デコーディング（投機的 デコード）で複数トークンをまとめて検証する分散LLM推論方式。複数要求をバッチ化し、ドラフト生成と検証を2段パイプラインとして重ねる。
 
 ### 1年以上前
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
-  疎なMoEでは各トークンが少数のエキスパートしか使わないが、通常の実装は「どのエキスパートが選ばれても実行できるように」全エキスパート重みをメモリへ保持する。
+  SwapMoEは、全エキスパート（エキスパート）を主メモリへ常駐させる代わりに、各層へ少数の「仮想エキスパート（Virtual エキスパート）」枠だけを用意し、現在の入力で重要な実エキスパートの重みをその枠へ入れ替える。
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
   実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：12  
-  PowerInfer-2が解こうとしている問題は単純で、大きなLLMの重みをスマートフォンのDRAMへ全部置くことができないというものです。
+  使われやすい部分だけをスマホの高速メモリへ置き、CPU・NPU・フラッシュストレージを役割分担させて大規模LLMを動かす推論システム。
 
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  D²MoEは、エキスパートを「使う/使わない」だけでなく、そのエキスパートを何ビットで読み込むかまでトークンごとに選び、SSD/CPU→GPU転送と計算を端末条件に合わせて組み立てるedge向けランタイムである。
+  ネイティブ ルータが選んだエキスパートごとにINT2/3/4のどれで実行するかを追加ルータで決め、端末ごとのSSD読込・GPU計算時間に合わせて重み転送と計算を重ねるedge向け方式。
 <!-- survey:auto:end -->

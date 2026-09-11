@@ -22,33 +22,33 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：7  
-  層kipは、同じLLMの浅い層を下書きモデルの代わりに使い、残り層でその下書き トークンを検証する自己投機的 デコードを成立させる学習レシピである。
+  学習時に途中層からでもnext-トークン予測できるようモデルを訓練し、推論時は前半層だけで数トークンを仮生成して、残り層でまとめて検証することで、別下書きモデルなしの投機的 デコードを行う。
 
 - **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  LazyLLMは、長文入力のすべてのトークンを全層で処理する代わりに、その時点の生成に重要そうな入力トークンだけを後段へ通す学習不要なトークン 枝刈り手法である。
+  長文入力で現在の生成に重要なトークンだけを後続層へ通し、外したトークンもhidden stateを別キャッシュへ保存して後で必要になれば途中層から復帰できるようにすることで、主にプリフィル計算を減らす。
 
 - **2023-07 · [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  Skipデコードは、各生成トークンに常に全Transformer層を使う代わりに、出力が後ろへ進むほど使う層数を減らす方式である。
+  生成が後ろへ進むほど実行するTransformer層数を段階的に減らし、同じ生成位置ではバッチ全体で同じ深度を使うことで、バッチ処理とKVキャッシュを壊さずデコード計算を減らす。
 
 - **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  DiffSkipは、元LLMのFFNをモデルから削除せずに残し、トークンごとに各FFNを実行するか、小さい代替変換だけで済ませるかをルータで選ぶ動的 skipping手法である。
+  トークンごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定層削除より品質を保ちながら計算量を減らす。
 
 - **2025-04 · [Dynamic Early Exit in Reasoning Models](2025-2504.15895-dynamic-early-exit-in-reasoning-models.md)**  
   実装：[✓](https://github.com/iie-ycx/DEER) ・ リポジトリ内被引用：0  
-  DEERはTransformer 層をスキップする早期終了ではなく、推論モデルが生成する思考連鎖のトークン列を途中で終わらせる手法である。
+  推論途中で一度最終回答を試しに生成し、その答えのトークン確率が十分高ければ思考連鎖を終了、低ければ試行回答を捨てて元の地点から推論を続ける追加学習不要の手法。
 
 - **2025-03 · [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  D3は、生成が後ろへ進むほど使うTransformer 層を減らす学習不要な深度減衰手法である。
+  生成後半ほど実行する層数を減らすが、最初と最後の層は常に残し、中間層だけを段階的にskipすることで、KV キャッシュを保ちながらデコード計算を減らす学習不要手法。
 
 - **2025-03 · [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)**  
   実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：0  
-  FlexiDepthは、元LLMの重みを固定したまま、トークンごと・層ごとにfull処理か軽いskip経路かを選ぶ追加module型の動的 depth手法である。
+  トークンごと・層ごとに通常の注意機構+FFNを実行するか小型adapterだけで済ませるかを選び、skipしたトークンのKVは残すことで文脈を保ちながら計算量を減らす。
 
 - **2024-12 · [D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models](2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md)**  
   実装：[✓](https://github.com/Jyk-122/D-LLM) ・ リポジトリ内被引用：0  
-  D-LLMは、各トークン・各層ごとに「この層を実行するかskipするか」を学習する動的 depth方式である。
+  各トークン・各層で「この層を実行するか」を小型moduleが判断し、skipしたトークンのKVも後続注意機構から外すことで、計算量とKV使用量をトークンごとに変える。
 <!-- survey:auto:end -->

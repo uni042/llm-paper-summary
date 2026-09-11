@@ -14,17 +14,17 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-04 · [Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference](2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  Alloc-MoEは、全層・全トークンで使えるエキスパート実行回数の合計を一つのglobal budgetとして扱い、そのbudgetを「どの層へ何個」「その層内のどのトークンへ何個」配るかを二段階で決める。
+  モデル全体で許すエキスパート実行回数を先に決め、その予算を影響の大きい層とルータ判断が曖昧なトークンへ多く配ることで、固定Top-kより少ない計算で品質を保つ。
 
 - **2025-11 · [BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference](2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  BuddyMoEは、CPUへオフロードしたMoEでGPU キャッシュに必要エキスパートがない時、そのエキスパートをPCIe経由で読み込む代わりに、GPUにすでにある機能的に近そうなエキスパートで代用する近似手法である。
+  必要なエキスパートがGPU キャッシュにない時、同じトークンで一緒に選ばれやすい常駐エキスパートを代わりに使い、CPUからエキスパート 重みを読むPCIe待ちを品質と引き換えに減らす。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  実行エキスパート数k1とルータ正規化分母の基準 集合 k2を分離し、細粒度 MoEでエキスパート 計算を減らしつつ訓練時のエキスパート-分岐 利得を保つ。
+  実行エキスパート数k1とルータ正規化分母の基準 集合 k2を分離し、細粒度 MoEでエキスパート 計算を減らしつつ訓練時のエキスパート-分岐 利得を保つ。Qwen3.6-35B-A3Bの8→4 エキスパートでMMLU低下を4.65ptから0.35ptへ縮小する。
 
 - **2026-09 · [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -32,39 +32,39 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 - **2026-06 · [Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference](2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  コスト-Aware エキスパート実行（CAEE）は、元Top-k内のエキスパートをすべて同じ価値として扱わず、ルータ上の寄与と実際のハードウェア費用を同時に見て、一部エキスパートを実行しない近似手法である。
+  ルータ上の寄与が小さい一方で転送・実行に時間がかかり、特に全体処理を遅らせているdevice上のエキスパートを省き、その寄与を実行済みエキスパートへ振り分けてmulti-device MoEを高速化する。
 
 - **2026-05 · [ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference](2026-2605.27081-remoe-router-finetuning-expert-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  細粒度MoEを端末で動かすと、連続トークンが別々のエキスパートを選ぶたびに小さな高速キャッシュから重みが追い出され、CPU DRAMやNVMe SSDなど低速階層から再読込が必要になる。
+  細粒度MoEを端末で動かすと、連続トークンが別々のエキスパートを選ぶたびに小さな高速キャッシュから重みが追い出され、CPU DRAMやNVMe SSDなど低速階層から再読込が必要になる。ReMoEは実行時キャッシュを複雑化する代わりに、既学習モデルのルータだけを追加学習し、直前に選んだエキスパートへ確率を寄せつつ元ルータからの逸脱をKL損失で抑える。
 
 ### 1年以上前
 
 - **2024-02 · [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)**  
   実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：18  
-  この論文はMixtral-8x7Bのエキスパート冗長性を、配備前にエキスパートそのものを削除する処理と、実行時に一部トークンの第2エキスパートだけを省く処理の二段階で削る。
+  削除しても層出力があまり変わらないエキスパートをモデルから恒久的に除き、さらにトークンごとにルータ寄与が小さい第2エキスパートを省いて、メモリとFFN計算を減らす学習不要の手法。
 
 - **2024-10 · [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
-  エキスパートFlowは、CPUへオフロードしたエキスパートを単に先読みするだけでなく、同じエキスパート経路を通りそうなトークンを同じバッチへ集め、GPU上のエキスパート キャッシュ容量も層ごとの将来需要に合わせて動かすシステムである。
+  数層先で使うエキスパートを予測し、同じエキスパートを使いそうなトークンをまとめ、GPU キャッシュ容量も需要に応じて層間で動かすことで、CPUからエキスパートを読む待ち時間を減らすMoE推論システム。
 
 - **2023-10 · [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md)**  
   実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：6  
-  疎活性化Mixture-of-専門家（Sparse Mixture-of-専門家: SMoE）は、1 トークンあたり実際に使う専門家を少数に限定するため、全パラメータ数を増やしてもFLOPsの増加を抑えられる。
+  MC-SMoEは、MoEのルータがすでに持っている『どの専門家がよく使われ、どの専門家が似た入力を受けているか』という情報を、専門家圧縮にも使う研究である。まず似た専門家を代表専門家へ統合し、その後で統合済み重みをさらに低ランク + 疎に圧縮する。
 
 - **2024-02 · [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md)**  
   実装：[✓](https://github.com/ysngki/XMoE) ・ リポジトリ内被引用：3  
-  XMoEは、固定Top-kでは全トークンへ同じエキスパート数を割り当てるため、簡単なトークンにも難しいトークンにも同じ計算量を使うことを問題にする。
+  ルータ確率を高い順に足し、合計が設定値に達するまでエキスパートを選ぶことで、ルータが確信しているトークンでは少数、判断が分散しているトークンでは多数のエキスパートを使う。
 
 - **2025-09 · [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  LExIは、全MoE 層で同じTop-kを使うのではなく、Top-kを下げても出力があまり変わらない層ではKを減らし、変化が大きい層にはKを多く残すdata-freeな推論最適化である。
+  層ごとにTop-kを減らした時の出力変化を事前に測り、影響が小さい層ではエキスパート数を減らし、影響が大きい層へエキスパート実行予算を回すことで、固定Top-kより少ない計算で品質維持を狙う。
 
 - **2024-06 · [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  AdaMoEは固定Top-kを直接可変長ルータへ作り直す代わりに、計算をしないnull エキスパートを通常エキスパートと同じルーティング候補へ混ぜることで、トークンごとの実FFN数を変える。
+  計算を行わないnull エキスパートをルーティング候補へ加え、簡単なトークンではnullを多く選ばせることで、実際にFFN計算するエキスパート数をトークンごとに変えるMoE。
 
 - **2024-10 · [MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts](2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md)**  
   実装：[✓](https://github.com/SkyworkAI/MoE-plus-plus) ・ リポジトリ内被引用：0  
-  MoE++は、通常のFFN エキスパートだけでなく、大きな行列計算をほとんど必要としない3種類のエキスパートをルータ候補へ最初から組み込む異種MoEである。
+  通常のFFN エキスパートに加えて、何も出力しない・入力をそのまま返す・学習済み定数を返す軽量エキスパートをルーティング候補へ入れ、トークンに応じて実際のFFN計算数を減らすMoE。
 <!-- survey:auto:end -->

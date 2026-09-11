@@ -20,11 +20,11 @@
 
 - **2026-08 · [FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction](2026-2608.14205-freebalance-prerouting-online-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture of エキスパート; MoE）のオンライン負荷分散では、通常は現在層のルータが専門家選択を終えてから専門家交換を決めるため、重み移動が推論クリティカルパスに残る。
+  混合専門家モデル（Mixture of エキスパート; MoE）のオンライン負荷分散では、通常は現在層のルータが専門家選択を終えてから専門家交換を決めるため、重み移動が推論クリティカルパスに残る。FreeBalanceは残差接続により隣接層の隠れ表現が近いことを利用し、現在層のルータを前層出力へ先行適用して専門家負荷を予測する。
 
 - **2026-07 · [Mixture-of-Experts Serving](2026-2607.17880-mixture-of-experts-serving-online-algorithms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture of エキスパート; MoE）で専門家需要が時間変動する状況を、各専門家へ何台の追加GPUを割り当てるかというオンライン資源配置問題として定式化した理論研究。
+  混合専門家モデル（Mixture of エキスパート; MoE）で専門家需要が時間変動する状況を、各専門家へ何台の追加GPUを割り当てるかというオンライン資源配置問題として定式化した理論研究。各専門家には最低1台を置き、余剰k台を動的に配る。
 
 - **2026-06 · [Coordinated Scheduling for MoE LLM Serving](2026-2606.15177-gimbal-coordinated-moe-serving-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -32,11 +32,11 @@
 
 - **2026-05 · [SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference](2026-2605.28095-sidp-memory-efficient-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  オフラインLLM推論では大きなバッチを維持するとGPU演算効率が上がるが、通常のデータ並列は各GPUにモデル重みを完全複製するため、KVキャッシュに使えるHBMが減ってバッチを増やせない。
+  オフラインLLM推論では大きなバッチを維持するとGPU演算効率が上がるが、通常のデータ並列は各GPUにモデル重みを完全複製するため、KVキャッシュに使えるHBMが減ってバッチを増やせない。SiDPはフィードフォワードネットワーク重みをデータ並列グループ内で一度だけ保持する分散重みプールへ変え、非所有GPUが必要時に共有する。
 
 - **2026-04 · [DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72](2026-2604.01621-dwdp-distributed-weight-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  大規模な混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで推論すると、従来の専門家並列では各層の全対全通信と同期のため、入力長や専門家選択が偏ったとき速いGPUまで遅いGPUを待つ。
+  大規模な混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで推論すると、従来の専門家並列では各層の全対全通信と同期のため、入力長や専門家選択が偏ったとき速いGPUまで遅いGPUを待つ。DWDPは注意機構の重みを各GPUへ複製し、MoEの専門家重みだけを同一NVLinkドメイン内のGPUへ分散配置する。
 
 - **2026-03 · [Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling](2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

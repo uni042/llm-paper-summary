@@ -12,7 +12,7 @@
 
 - **2026-09 · [Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention](2026-2609.08450-sample-guided-exact-topk-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、長文脈の疎な注意機構で使う正確なTop-K選択が、最終的にはK個しか残さないにもかかわらず、文脈長に比例するスコア行を複数回走査してしまう問題を扱う。
+  本論文は、長文脈の疎な注意機構で使う正確なTop-K選択が、最終的にはK個しか残さないにもかかわらず、文脈長に比例するスコア行を複数回走査してしまう問題を扱う。提案法HPC-Ops Top-Kは、固定間隔で抜き出した現在行の標本から粗い上側境界を予測し、必須の全行走査で候補集合の十分性を証明すると同時に候補形成と先頭桁ヒストグラム構築を融合する。
 
 - **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -14,11 +14,11 @@
 
 - **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  長文脈LLMのデコードでは、過去トークンのKVキャッシュ全体を各段階で読み出すため、演算量よりメモリ帯域とデータ移動が律速になりやすい。
+  長文脈LLMのデコードでは、過去トークンのKVキャッシュ全体を各段階で読み出すため、演算量よりメモリ帯域とデータ移動が律速になりやすい。著者らは、KVキャッシュを高密度なオンチップ不揮発メモリ（Non-Volatile メモリ; NVM）へ置く場合、GPU向け量子化の補助情報や疎な外れ値表現が新たな面積・読み出しエネルギー負担になる点に着目する。
 
 ### 1年以上前
 
 - **2025-07 · [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  長文LLM推論でKVキャッシュがGPUメモリを超えると、CPUへ退避したKVを注意計算のたびにPCIe経由でGPUへ戻す方式は転送待ちがボトルネックになる。
+  長文LLM推論でKVキャッシュがGPUメモリを超えると、CPUへ退避したKVを注意計算のたびにPCIe経由でGPUへ戻す方式は転送待ちがボトルネックになる。HGCAは最近のKVをGPUに残して密な注意計算を行い、古いKVはCPUメモリ上でヘッド単位に重要項目だけを選んで疎な注意計算を実行する。
 <!-- survey:auto:end -->

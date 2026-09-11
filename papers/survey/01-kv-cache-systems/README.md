@@ -8,7 +8,7 @@
 
 - **2026-07 · [Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization](2026-2607.08057-system-aware-kv-cache-optimization-survey.md)**  
   実装：[✓](https://github.com/jjiantong/Awesome-KV-Cache-Optimization) ・ リポジトリ内被引用：1  
-  この論文は、生成中の大規模言語モデルを速く安く動かすために、KVキャッシュ（Key-Value キャッシュ）を中心に既存研究を整理した総説である。
+  大規模言語モデルの推論で膨張するKVキャッシュを、モデル再学習やTransformer構造の変更ではなく、提供時のシステム動作として整理する総説。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 

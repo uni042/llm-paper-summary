@@ -18,19 +18,19 @@
 
 - **2026-09 · [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)**  
   実装：[✓](https://github.com/ifm-ai/uno) ・ リポジトリ内被引用：0  
-  通常の大規模言語モデルは自己回帰（Autoregressive; AR）方式で生成する。1トークン目を出す。
+  Unoは、元の自己回帰モデルを別の拡散モデルへ置き換える研究ではない。元のARモデルが定義する生成分布を残したまま、追加した軽量拡散重みで複数トークンを並列提案し、専用サンプラで正しく補正してデコードを進める。
 
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  ツール利用エージェントでは、モデルが次の操作を決め、外部ツールの結果を待ち、その観測を次の入力へ加える逐次ループが壁時計遅延を支配する。
+  ツール利用エージェントでは、モデルが次の操作を決め、外部ツールの結果を待ち、その観測を次の入力へ加える逐次ループが壁時計遅延を支配する。投機的マクロ確定（投機的 Macro Commit; SMC）は、高速なドラフトモデルが隔離した環境状態で複数操作を先行実行し、過去の成功軌跡から採掘した再現性の高い操作列と照合する。
 
 - **2026-08 · [Launch-Bound and Substitutable: Why Three Inference Optimizations Fail to Pay Off in Mixture-of-Experts Models](2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Mixture-of-エキスパート（MoE）推論で一般的な高速化を局所性能だけで評価すると、実際のエンドツーエンド性能を誤って見積もる問題を実測した研究。
+  Mixture-of-エキスパート（MoE）推論で一般的な高速化を局所性能だけで評価すると、実際のエンドツーエンド性能を誤って見積もる問題を実測した研究。OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3Bを用い、融合カーネル、4/8ビット量子化、PyTorchのグラフコンパイルを分解して検証する。
 
 - **2026-05 · [SpecSA: Bridging Speculative Decoding and Sparse Attention for Efficient LLM Inference](2026-2605.19893-specsa-sparse-speculative-verification.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  長文脈の自己回帰復号（autoregressive デコード）では、1 トークンを生成するたびに過去のKVキャッシュ（KV キャッシュ）を読む必要がある。
+  SpecSAは、投機的復号（投機的復号）と動的疎注意（動的 sparse 注意機構）を「両方ONにする」だけでは得られない再利用を、複数の検証クエリが選ぶKVブロックの重なりから取り出すシステムである。
 
 - **2026-01 · [RadixMLP — Intra-batch Deduplication for Causal Transformers](2026-2601.15013-radixmlp-intra-batch-deduplication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -40,13 +40,13 @@
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：4  
-  Cometは、分散MoEでエキスパート 分配/結合の全対全通信がGEMMを待たせる問題を、通信完了をテンソル全体で待たず、計算に必要な一部分が届いた時点からGEMMを始めることで隠すカーネル/ランタイムである。
+  multi-GPU MoEで、他GPUから必要データが全部届くまで待たず、届いた小さな行列単位からエキスパート GEMMを開始してGPU間通信待ちを計算の裏へ隠すランタイム。
 
 - **2025-06 · [SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding](2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  投機的デコードでは、小さな草稿 モデルが複数の候補トークンを先に生成し、大きな対象 モデルがそれらをまとめて検証する。
+  SwiftSpecは、投機的デコード（投機的復号）の小型下書きモデル（下書きモデル）と大型対象モデル（対象モデル）を同じGPU群で交互に動かすのをやめ、別々のGPU群へ分けて同時実行する。草稿側は次に検証してほしい候補トークンを木として伸ばし続け、対象側は前の候補木を並列検証する。
 
 - **2025-04 · [SPIRe: Boosting LLM Inference Throughput with Speculative Decoding](2025-2504.06419-spire-throughput-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  投機的デコードでは、小さな下書きモデル（下書きモデル）が数トークン先まで候補を生成し、大きな対象モデル（対象モデル）がそれらをまとめて検証する。
+  SPIReは、投機的デコード（投機的復号）を「1リクエストを速くする技術」ではなく、大バッチで1秒あたりに何トークン処理できるかを高める技術として設計し直す。大バッチ・長文脈では草稿モデルの重みよりKVキャッシュの読出しが重くなるため、草稿をただ小さくするのではなく、参照するKV量を一定に抑えながら対象モデルに似た候補を出せる浅い草稿を作る。
 <!-- survey:auto:end -->

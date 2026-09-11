@@ -14,7 +14,7 @@
 
 - **2026-08 · [MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture](2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  注意機構とフィードフォワード網（FFN）を別のハードウェア群へ分離するLLMサービングで、MoE専門家重みをReRAM近傍メモリへ常駐させ、対話型デコードの小さいバッチでも高い重み読出し帯域密度を確保するReXpertを提案する。
+  注意機構とフィードフォワード網（FFN）を別のハードウェア群へ分離するLLMサービングで、MoE専門家重みをReRAM近傍メモリへ常駐させ、対話型デコードの小さいバッチでも高い重み読出し帯域密度を確保するReXpertを提案する。単に重み転送を消すだけでは、専門家ルーティングの偏りで高頻度専門家が律速し、低頻度専門家に割り当てた演算器が遊ぶ。
 
 - **2026-08 · [DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference](2026-2609.00407-dynande-near-data-expert-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -22,7 +22,7 @@
 
 - **2026-08 · [APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference](2026-2608.11688-apex-adaptive-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  エッジ環境の混合専門家モデル（Mixture of エキスパート; MoE）では、大量のエキスパート重みを高速なパッケージ内メモリへ常駐させにくく、低価格な外部メモリから必要な重みを都度転送する待ち時間がデコード性能を制限する。
+  エッジ環境の混合専門家モデル（Mixture of エキスパート; MoE）では、大量のエキスパート重みを高速なパッケージ内メモリへ常駐させにくく、低価格な外部メモリから必要な重みを都度転送する待ち時間がデコード性能を制限する。APEXは各MoE層の注意計算より前に補助ルータを置き、実ルータが後で選ぶエキスパート候補を順位付けして非同期に先読みする。
 
 ### 1年以上前
 
