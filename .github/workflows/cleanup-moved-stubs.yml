@@ -51,7 +51,7 @@ jobs:
           if len(stubs) != 6:
               raise SystemExit(f'expected 6 moved stubs, found {len(stubs)}')
 
-          deleted_names = []
+          deleted_paths = []
           for stub in sorted(stubs):
               text = stub.read_text(encoding='utf-8')
               moved = re.search(r'^#\s+Moved.*?\]\(([^)]+)\)', text, flags=re.I | re.M | re.S)
@@ -64,10 +64,10 @@ jobs:
               if re.search(r'^#\s+Moved(?:\s|$)', target_text, flags=re.I | re.M):
                   raise SystemExit(f'move target is also a stub: {target.relative_to(repo)}')
               print(f'REMOVE {stub.relative_to(repo)} -> {target.relative_to(repo)}')
-              deleted_names.append(stub.name)
+              deleted_paths.append(stub.relative_to(repo).as_posix())
               stub.unlink()
 
-          (repo / '.survey' / 'tmp-deleted-stub-names.txt').write_text('\n'.join(deleted_names) + '\n', encoding='utf-8')
+          (repo / '.survey' / 'tmp-deleted-stub-paths.txt').write_text('\n'.join(deleted_paths) + '\n', encoding='utf-8')
           PY
 
       - name: Rebuild derived indexes and clear obsolete moved-stub state
@@ -82,21 +82,20 @@ jobs:
           data['ignored_moved_stubs'] = []
           p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          deleted = Path('.survey/tmp-deleted-stub-names.txt').read_text(encoding='utf-8').splitlines()
-          generated = [Path('README.md'), Path('papers/README.md'), Path('papers/inference/README.md'), Path('papers/training/README.md'), Path('papers/survey/README.md'), Path('papers/inference/comparison.md')]
-          generated += list(Path('papers').glob('*/*/README.md'))
-          leftovers = []
-          for path in generated:
-              if not path.exists():
-                  continue
-              text = path.read_text(encoding='utf-8', errors='ignore')
-              for name in deleted:
-                  if name in text:
-                      leftovers.append(f'{path}: {name}')
-          if leftovers:
-              raise SystemExit('generated indexes still reference deleted stubs:\n' + '\n'.join(leftovers))
+          deleted = Path('.survey/tmp-deleted-stub-paths.txt').read_text(encoding='utf-8').splitlines()
+          old_readme = Path('papers/inference/01-offload-hierarchical-memory/README.md').read_text(encoding='utf-8')
+          new_readme = Path('papers/inference/10-kv-cache-offload-recomputation/README.md').read_text(encoding='utf-8')
+          errors = []
+          for old_path in deleted:
+              name = Path(old_path).name
+              if name in old_readme:
+                  errors.append(f'old taxonomy still links {name}')
+              if name not in new_readme:
+                  errors.append(f'new taxonomy is missing {name}')
+          if errors:
+              raise SystemExit('moved-stub index verification failed:\n' + '\n'.join(errors))
           PY
-          rm -f .survey/tmp-deleted-stub-names.txt
+          rm -f .survey/tmp-deleted-stub-paths.txt
 
       - name: Verify repository behavior
         run: |
