@@ -93,8 +93,9 @@ def render_paper(record: dict[str, Any]) -> str:
         "publication", "publication_type", "publication_status", "publication_version",
         "lineage", "topics",
         "importance", "hardware_evaluation", "hardware_details", "quality_effect",
-        "storage_targets", "bottlenecks", "evidence_locations", "source", "sources",
-        "code", "implementation", "implementation_status", "evaluation_type",
+        "storage_targets", "bottlenecks", "evidence_locations",
+        "references", "references_checked_at", "references_source", "references_total",
+        "source", "sources", "code", "implementation", "implementation_status", "evaluation_type",
         "last_checked", "last_audited", "audit_version",
     )
     front_meta: dict[str, Any] = {}
@@ -105,6 +106,8 @@ def render_paper(record: dict[str, Any]) -> str:
     front_meta["title"] = title
     front_meta["summary"] = summary
     front_meta["source"] = source
+    if "references" in meta:
+        front_meta["references"] = meta["references"]
     front_meta.setdefault("last_audited", None)
     front_meta["audit_version"] = int(meta.get("audit_version") or 0)
     yaml_text = yaml.safe_dump(
