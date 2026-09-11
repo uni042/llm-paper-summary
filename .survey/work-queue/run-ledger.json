@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:38:28.434483+00:00",
+  "updated_at": "2026-09-11T09:42:09.085308+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,18 +6314,18 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T09:38:28.434483+00:00",
+      "last_recorded_at": "2026-09-11T09:42:09.085308+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -6357,6 +6357,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34585455900:1",
+          "recorded_at": "2026-09-11T09:42:09.085308+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34585455900",
+            "run_attempt": "1",
+            "source_sha": "5f5477a6da4fd0a33204bc853bedded23e4ff578"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6375,16 +6390,25 @@
           "title": "TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-47789f8888a4ad5e",
+          "type": "research",
+          "canonical_id": "arXiv:2509.26182",
+          "title": "Parallax: Efficient LLM Inference Service over Decentralized Environment",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
-        "arXiv:2508.17219"
+        "arXiv:2508.17219",
+        "arXiv:2509.26182"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
-      "paper_active_count_after": 307,
+      "paper_active_count_after": 308,
       "last_successful_action": "paper_materialized"
     }
   ]
