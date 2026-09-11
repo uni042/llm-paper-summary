@@ -1,0 +1,52 @@
+name: Rebuild paper indexes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/scripts/survey.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-helper-main
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Validate and rebuild paper indexes
+        run: |
+          python -m py_compile .survey/scripts/survey.py
+          python .survey/scripts/survey.py --root .survey build
+
+      - name: Commit derived paper indexes
+        run: |
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
+          find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
+          if git diff --cached --quiet; then
+            echo 'No index changes to commit.'
+            exit 0
+          fi
+          git commit -m 'docs: rebuild paper indexes'
+          git pull --rebase origin main
+          git push origin HEAD:main
