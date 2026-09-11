@@ -18,20 +18,20 @@ CPU DRAMやSSD/NVMeへparameter・optimizer state・activationを退避するこ
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（1本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 直近12か月（2025-10〜2026-09）
+### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
+
+該当なし。
+
+### 直近12か月・未被引用（2025-10〜2026-09）
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
 | 2026-08 | [ZeroLock: Concurrent Memory-Efficient LLM Training via Modular Update Decoupling](2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md) | [✓](https://anonymous.4open.science/r/unlock_trainer-105B) | 0 | モデルを複数chunkへ分け、各chunkを局所目的関数で独立更新することで、下流chunkの逆伝播待ちと長時間のactivation保持をなくし、pipeline並列学習のbubble・memory・通信待ちを減らすBP-free fine-tuning system。 |
 
-### 直近12か月より前・リポジトリ内で被引用
-
-該当なし。
-
-### その他
+### 1年以上前
 
 該当なし。
 <!-- survey:auto:end -->

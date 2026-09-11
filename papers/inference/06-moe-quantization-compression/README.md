@@ -7,19 +7,24 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（13本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 直近12か月（2025-10〜2026-09）
+### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2026-07 | [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md) | ✓ | 1 | KV cacheが増えて空きVRAMが減ったとき、品質への影響が小さいexpert weight部分から段階的にbit幅を下げ、余裕が戻れば高精度へ戻すserving方式。 |
-| 2026-05 | [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md) | [✓](https://github.com/jndeng/GEMQ) | 0 | 全layerのexpertを同じmemory budgetの中で比較し、低bit化したとき品質へ効きにくいexpertから強く圧縮したうえで、量子化後のexpert性能に合わせてrouterだけを微調整する手法。 |
 | 2025-11 | [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md) | [✓](https://github.com/kexinchu/DynaQuant) | 2 | 実際のrouting履歴から利用頻度が高いexpertだけを高bitへ切り替え、低頻度expertは低bitのままにして、限られたVRAMを重要expertへ重点配分するruntime方式。 |
+| 2026-07 | [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md) | ✓ | 1 | KV cacheが増えて空きVRAMが減ったとき、品質への影響が小さいexpert weight部分から段階的にbit幅を下げ、余裕が戻れば高精度へ戻すserving方式。 |
+
+### 直近12か月・未被引用（2025-10〜2026-09）
+
+| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
+|---|---|:---:|---:|---|
+| 2026-05 | [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md) | [✓](https://github.com/jndeng/GEMQ) | 0 | 全layerのexpertを同じmemory budgetの中で比較し、低bit化したとき品質へ効きにくいexpertから強く圧縮したうえで、量子化後のexpert性能に合わせてrouterだけを微調整する手法。 |
 | 2025-10 | [MC#: Mixture Compressor for Mixture-of-Experts Large Models](2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md) | [✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) | 0 | expertごとにbit幅を変えて重み容量を減らし、さらにtokenごとに必要なexpert数を学習して、LLM/VLMの保存容量と実行計算量を同時に削る手法。 |
 
-### 直近12か月より前・リポジトリ内で被引用
+### 1年以上前
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
@@ -32,8 +37,4 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 | 2025-05 | [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md) | [✓](https://github.com/chenzx921020/MoEQuant) | 3 | calibration時に低頻度expertへも十分な入力例を与え、routerが強く選ぶtokenほど量子化誤差を重く評価することで、同じ低bitでも品質を保ちやすくする手法。 |
 | 2024-07 | [Mixture of Experts with Mixture of Precisions for Tuning Quality of Service](2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md) | ✓ | 3 | expertの4／16bit精度とCPU／GPU配置をメモリ予算に応じて切り替え、品質・throughput・容量を調整するserving方式。 |
 | 2025-03 | [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation（旧題 MoQa）](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md) | ✓ | 1 | 入力データの傾向が変わったとき、expertごとのbit幅と変化に敏感な一部channelだけを更新し、モデル全体を量子化し直さずに精度を保つMoE量子化方式。 |
-
-### その他
-
-該当なし。
 <!-- survey:auto:end -->

@@ -18,10 +18,18 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（21本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 直近12か月（2025-10〜2026-09）
+### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
+
+| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
+|---|---|:---:|---:|---|
+| 2026-05 | [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md) | ✓ | 1 | 長いreasoning出力で増え続けるKVを、cache長が閾値を超えるたび過去全体へ再圧縮するのではなく、直近に新しく生成されたwindowだけ一度ずつ処理する。window内では双方向attentionから重要tokenを選び、連続する候補tokenを端点として可変長semantic chunkへ拡張する。さらにPagedAttention block単位の周期的compressionへ変換したKvLLMで、batch concurrencyが増えてもcompression triggerが爆発しないようにする。 |
+| 2026-04 | [Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving](2026-2604.26837-spin-sparse-attention-hierarchical-memory.md) | ✓ | 1 | 動的疎注意は各デコード段で重要な少数KVだけをGPUへ読み込めば長文注意計算を減らせるが、選択粒度が方式ごとに異なり、CPU上の完全KVから細粒度・不連続なデータをPCIeで取り出す費用が利得を打ち消しやすい。SPINは、方式固有のブロックやクラスタを共通の論理パーティションへ写し、物理転送は固定ページへ統一する。さらに要求ごとのGPU KV予算を動的に伸縮し、直近に使ったページをGPU向けバケット化LRUで残し、二階層メタデータで最悪論理空間ではなく実際の物理ワーキングセットに比例させることで、疎注意をGPU・CPU階層メモリ上の実用サービングへ接続する。 |
+| 2026-01 | [OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration](2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md) | ✓ | 1 | 長文LLM推論で増大するKVキャッシュをGPUとCPUの間で要求ごとに動的再配置し、転送待ちを計算へ重ねることでトークン遅延SLOとスループットを改善する推論提供システム。 |
+
+### 直近12か月・未被引用（2025-10〜2026-09）
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
@@ -38,11 +46,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 | 2026-06 | [Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving](2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md) | ✓ | 0 | 長文・複数ターンのLLMサービングでは、GPUメモリ不足時にKVキャッシュを追い出して後で再計算する損失なし管理が必要になるが、従来方式は再利用頻度や位置だけを見ており、どのKVブロックを残すとGPU注意計算そのものがどれだけ速くなるかを十分扱っていない。AsymCacheは、非連続に残った複数KV区間を1回のGPU注意カーネルで処理する複数区間注意（Multi-Segment Attention; MSA）、再利用確率と位置依存の再計算遅延を掛け合わせる追い出し器、負荷に応じてプリフィル分割量を変える適応チャンク化を統合する。vLLM上のH20実機評価で、最新比較対象に対し先頭トークン時間を最大1.90〜2.03倍、出力トークン当たり時間を1.62〜1.71倍改善し、出力値は近似せず保持する。 |
 | 2026-06 | [CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference](2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md) | [✓](https://github.com/TUDa-HWAI/CompressKV) | 0 | GQA modelの全attention headを一律に平均してtoken重要度を決めると、局所patternを見るheadが長距離の意味検索signalを薄める。CompressKVはprompt先頭・末尾だけでなく中間の意味的証拠とその周辺を正しく拾えるSemantic Retrieval Headをofflineで特定し、そのheadだけをtoken保持判定へ使う。さらにfull-cache attention outputとの差からlayerごとのeviction sensitivityを測り、同じ総KV budgetを圧縮に弱いlayerへ多く配る。 |
 | 2026-05 | [KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving](2026-2605.13734-kvserve-service-aware-kv-cache-compression.md) | [✓](https://github.com/hpdps-group/KVServe) | 0 | 分離型LLM推論で巨大なKV cacheをnetwork/storage境界越しに運ぶ際、圧縮方式を固定せず、workload・実効帯域・SLO・品質下限に応じて圧縮profileを選択するsystem。圧縮処理自体が通信削減より遅い状況では圧縮しない判断も含め、KV移動のend-to-end latencyを最小化する。 |
-| 2026-05 | [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md) | ✓ | 1 | 長いreasoning出力で増え続けるKVを、cache長が閾値を超えるたび過去全体へ再圧縮するのではなく、直近に新しく生成されたwindowだけ一度ずつ処理する。window内では双方向attentionから重要tokenを選び、連続する候補tokenを端点として可変長semantic chunkへ拡張する。さらにPagedAttention block単位の周期的compressionへ変換したKvLLMで、batch concurrencyが増えてもcompression triggerが爆発しないようにする。 |
-| 2026-04 | [Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving](2026-2604.26837-spin-sparse-attention-hierarchical-memory.md) | ✓ | 1 | 動的疎注意は各デコード段で重要な少数KVだけをGPUへ読み込めば長文注意計算を減らせるが、選択粒度が方式ごとに異なり、CPU上の完全KVから細粒度・不連続なデータをPCIeで取り出す費用が利得を打ち消しやすい。SPINは、方式固有のブロックやクラスタを共通の論理パーティションへ写し、物理転送は固定ページへ統一する。さらに要求ごとのGPU KV予算を動的に伸縮し、直近に使ったページをGPU向けバケット化LRUで残し、二階層メタデータで最悪論理空間ではなく実際の物理ワーキングセットに比例させることで、疎注意をGPU・CPU階層メモリ上の実用サービングへ接続する。 |
-| 2026-01 | [OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration](2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md) | ✓ | 1 | 長文LLM推論で増大するKVキャッシュをGPUとCPUの間で要求ごとに動的再配置し、転送待ちを計算へ重ねることでトークン遅延SLOとスループットを改善する推論提供システム。 |
 
-### 直近12か月より前・リポジトリ内で被引用
+### 1年以上前
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
@@ -51,8 +56,4 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 | 2025-01 | [PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving](2025-2501.08192-preserve-prefetching-model-weights-and-kv-cache-in-distributed-llm-serving.md) | ✓ | 3 | tensor parallel推論のGPU間集約通信中に、次に使うweightとKV cacheをHBMからL2 cacheへ先読みし、通信待ちとmemory readを同時に進める分散推論手法。 |
 | 2025-04 | [Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching](2025-2504.06319-asynchronous-kv-cache-prefetching.md) | [✓](https://github.com/alibaba/vllm_xformers_prefetch) | 2 | attentionが現在のKV blockを計算している間に、次に使うKV blockをHBMからGPUのL2 cacheへ先読みし、decode中のHBM待ちを減らすHopper向け最適化。 |
 | 2025-05 | [TailorKV: A Hybrid Framework for Long-Context Inference via Tailored KV Cache Optimization](2025-2505.19586-tailorkv-layer-tailored-quantization-offloading.md) | [✓](https://github.com/ydyhello/TailorKV) | 1 | TailorKVは、長文LLMのKVキャッシュを一律に量子化すると重要な外れ値を持つ層で精度が落ち、一律にCPUへオフロードするとPCIe転送が遅すぎる問題を扱う。各層の注意分布から密な情報を広く保持すべき層と、少数の支配的トークンだけで十分な層を事前分類し、前者には1〜2ビット量子化、後者にはCPUオフロードと動的top-k取得を適用する。疎な層ではクエリとキーの大振幅チャネルから重要トークンを二段階で絞り、次層用キーを先読みして通信を計算と重ねる。RTX 3090ではLlama-3.1-8Bの128k文脈を単一GPUで動かし、82 ms/トークンのデコードとピークGPUメモリ53.7%削減を達成する。 |
-
-### その他
-
-該当なし。
 <!-- survey:auto:end -->
