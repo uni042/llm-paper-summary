@@ -67,6 +67,20 @@ class SurveyIndexGroupingTest(unittest.TestCase):
         self.assertIn("old-uncited", older)
         self.assertLess(older.index("old-cited"), older.index("old-uncited"))
 
+    def test_paper_entries_use_mobile_friendly_vertical_blocks(self) -> None:
+        row = self._record("mobile-paper", 2026, 9)
+        rendered = _render_taxonomy_list(
+            [row],
+            {row["path"]: 2},
+            Path("papers/inference/example"),
+            now=datetime(2026, 9, 11, tzinfo=ZoneInfo("Asia/Tokyo")),
+        )
+
+        self.assertNotIn("| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |", rendered)
+        self.assertIn("- **2026-09 · [mobile-paper](mobile-paper.md)**", rendered)
+        self.assertIn("実装：— ・ リポジトリ内被引用：2", rendered)
+        self.assertIn("mobile-paper summary", rendered)
+
 
 if __name__ == "__main__":
     unittest.main()

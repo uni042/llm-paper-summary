@@ -298,20 +298,19 @@ def _sort_recent(record):
     return (record["year"] or 0, record["month"] or 0, record["title"].lower())
 
 
-def _render_table(rows, citations, base_dir):
+def _render_paper_list(rows, citations, base_dir):
     if not rows:
         return ["該当なし。"]
-    lines = [
-        "| 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |",
-        "|---|---|:---:|---:|---|",
-    ]
+    lines = []
     for r in rows:
         link = Path(r["path"]).relative_to(base_dir).as_posix()
-        lines.append(
-            f"| {_month_label(r)} | [{cell(r['title'])}]({link}) | "
-            f"{_implementation_cell(r['implementation'])} | {citations.get(r['path'], 0)} | {cell(r['summary'])} |"
-        )
-    return lines
+        lines += [
+            f"- **{_month_label(r)} · [{cell(r['title'])}]({link})**  ",
+            f"  実装：{_implementation_cell(r['implementation'])} ・ リポジトリ内被引用：{citations.get(r['path'], 0)}  ",
+            f"  {cell(r['summary'])}",
+            "",
+        ]
+    return lines[:-1]
 
 
 def _render_taxonomy_list(rows, citations, base_dir, now=None):
@@ -348,11 +347,11 @@ def _render_taxonomy_list(rows, citations, base_dir, now=None):
         f"### 注目：直近12か月・リポジトリ内で被引用（{period}）",
         "",
     ]
-    lines += _render_table(attention, citations, base_dir)
+    lines += _render_paper_list(attention, citations, base_dir)
     lines += ["", f"### 直近12か月・未被引用（{period}）", ""]
-    lines += _render_table(recent, citations, base_dir)
+    lines += _render_paper_list(recent, citations, base_dir)
     lines += ["", "### 1年以上前", ""]
-    lines += _render_table(older, citations, base_dir)
+    lines += _render_paper_list(older, citations, base_dir)
     return "\n".join(lines)
 
 
