@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b3d9f37a3793a771",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.03494",
+      "title": "GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving",
+      "source_url": "https://arxiv.org/abs/2609.03494",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2609.03494-growpage-on-demand-kv-budgeting.md",
+      "priority": 90,
+      "reason": "長い推論出力では要求ごと・生成途中で必要なKV容量が変動するのに、既存圧縮方式は固定予算の中で保持要素だけを入れ替える点を問題化する。GrowPageは短期・長期の注意作業集合を追跡してKV容量自体を実行時資源として増減し、必要なら現在割当内で圧縮、需要拡大時はPagedAttentionの物理ページを追加取得する。連続バッチ処理とprefix cacheを維持したままreasoning workloadの性能・throughputトレードオフを改善するため、動的KVメモリ管理の新しい系統として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-compression.md",
+      "priority": 86,
+      "reason": "KV圧縮方式ごとの精度・遅延・ピークメモリの特性が異なるため、固定方式では入力ごとの制約に適応できない問題を扱う。複数の既存KV圧縮設定について軽量予測器で遅延、メモリ、正答確率を予測し、ユーザ指定の制約を満たす設定をプロンプト単位で選択する。KVQuant、H2O、RocketKV等を横断した動的選択で、正答かつ制約達成する割合を静的設定より平均約0.07、最大0.135改善しており、圧縮方式そのものではなく実行時適応層として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03235",
+      "title": "SGD-KV: Summarization Guided KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2609.03235",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03235-sgd-kv-summarization-guided-compression.md",
+      "priority": 82,
+      "reason": "注意ヘッドの役割が均一ではないのに既存KV圧縮が単純なヒューリスティックで予算配分する問題を扱う。チャンク要約診断タスクから階層情報集約に強いヘッドを識別し、その要約スコア分布に基づいてヘッド別KV予算を割り当てる。Qwen2.5-7B-1MとQwen3-32Bで最大100万トークン文脈を評価し、KVメモリを最大75%削減しながら強い長文脈性能を維持しており、ヘッド機能を利用したKV圧縮として新規性が明確。"
+    }
+  ]
+}
