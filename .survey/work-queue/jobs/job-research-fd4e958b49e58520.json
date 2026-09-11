@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2507.11507",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md",
   "selection_reason": "通常のKVオフロードが動的に更新されるKVをCPUへ往復させるのに対し、実行中に不変なモデルパラメータ側を退避して空いたGPUメモリをKVへ転用する発想。特に複数モデルを同時提供する環境で非活動モデルの重み領域を積極的に回収し、Grace Hopper級の高帯域CPU-GPU接続を使ってパラメータ転送を計算と重ねる。vLLM比で尾部TPOTを44.8〜82.5%、尾部TTFTを20.7〜99.3%短縮し、スループットを6.6〜86.7%向上。公開コードあり。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-11T06:17:03+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-11T06:21:39+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

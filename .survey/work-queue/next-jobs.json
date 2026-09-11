@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 104,
+      "completed": 105,
       "superseded": 42,
       "deferred": 3,
-      "ready": 4,
+      "ready": 3,
       "blocked": 2
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-fd4e958b49e58520",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2507.11507",
-      "title": "Oneiros: KV Cache Optimization through Parameter Remapping for Multi-tenant LLM Serving",
-      "source_url": "https://arxiv.org/abs/2507.11507",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-cae6393c1c353130",
       "type": "research",
@@ -64,5 +52,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T06:17:14+00:00"
+  "generated_at": "2026-09-11T06:21:45+00:00"
 }
