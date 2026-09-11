@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T00:45:35.713209+00:00",
+  "updated_at": "2026-09-11T00:47:36.893581+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,7 +2999,7 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T00:45:35.713209+00:00",
+      "last_recorded_at": "2026-09-11T00:47:36.893581+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3007,9 +3007,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 2,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3042,6 +3042,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34547971145:1",
+          "recorded_at": "2026-09-11T00:47:36.893581+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34547971145",
+            "run_attempt": "1",
+            "source_sha": "14c4ecb87f640f59b38ef974245d81b60ae308ec"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3060,6 +3074,14 @@
           "title": "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-bd3cac529b644852",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3069,10 +3091,19 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-f2b30aec3dedb2dc",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.03153",
+          "title": "HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference"
         }
       ],
       "new_paper_ids": [],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T0948JST-discovery-bd3cac529b644852.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 240,
       "paper_active_count_after": 240,
