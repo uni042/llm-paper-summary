@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T07:21:25.153543+00:00",
+  "updated_at": "2026-09-11T07:34:14.245263+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5591,6 +5591,66 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 267,
+      "paper_active_count_after": 280,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-11T16:30:00+09:00",
+      "first_recorded_at": "2026-09-11T07:34:14.245263+00:00",
+      "last_recorded_at": "2026-09-11T07:34:14.245263+00:00",
+      "signals": [
+        "research_completed",
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34574966229:1",
+          "recorded_at": "2026-09-11T07:34:14.245263+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34574966229",
+            "run_attempt": "1",
+            "source_sha": "f1152525a52f52ade82a26fe6158c7d9818d281b"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-441a7b6565bb5c64",
+          "type": "research",
+          "canonical_id": "arXiv:2510.11331",
+          "title": "Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-1cf1bb093db0f2b0",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 280,
       "paper_active_count_after": 280,
       "last_successful_action": "discovery_or_queue_expanded"
     }
