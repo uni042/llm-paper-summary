@@ -37,14 +37,42 @@ class ListSummaryTests(unittest.TestCase):
         self.assertIn("リクエスト", text)
         self.assertIn("トークン", text)
 
-    def test_splits_japanese_sentences_without_whitespace(self):
+    def test_worker_authored_lead_beats_overview_fallback(self):
+        mod = self._module()
+        worker = "本研究はKVキャッシュの次回利用時刻を予測して保持期限を動的に決め、再計算とGPUメモリ占有を同時に抑える方式を提案する。"
+        body = f"""# Example
+
+> {worker}
+
+## 概要
+
+長い背景説明が続く。ここは単体ページ向けの詳しい概要であり、一覧用の一文を自動生成する材料としては使わない。
+"""
+        text = mod.compact_list_summary(body)
+        self.assertEqual(text, worker)
+        self.assertNotIn("長い背景説明", text)
+
+    def test_preserves_worker_lead_sentences_within_limit(self):
         mod = self._module()
         first = "本研究は複数の要求が同時に到着する推論環境で、待ち時間とGPU利用率を同時に改善するため、要求順序とキャッシュ配置を動的に調整する方式を提案する。"
-        second = "次に非常に長い補足説明を続け、評価条件、比較対象、実装詳細、追加実験、制約、今後の課題など一覧には不要な情報を多数記述して全体を百八十文字より長くする。"
+        second = "次に評価条件や補足事項も短く説明する。"
         body = f"# Example\n\n> {first}{second}\n"
         text = mod.compact_list_summary(body)
-        self.assertEqual(text, first)
-        self.assertNotIn("次に", text)
+        self.assertTrue(text.startswith(first))
+        self.assertIn("評価条件", text)
+        self.assertLessEqual(len(text), 180)
+
+    def test_background_only_first_sentence_does_not_hide_method(self):
+        mod = self._module()
+        background = "長いエージェント処理では再利用できるKVキャッシュが増え続け、限られたGPUメモリでは保持対象を適切に選ばないと再計算と待ち時間が増える。"
+        method = "提案手法は各キャッシュの次回利用時刻を予測し、再利用までの時間に応じて保持期限を動的に決めることで、不要な保持と早すぎる追い出しを減らす。"
+        result = "評価では既存方式よりキャッシュ再利用率と処理性能を改善した。"
+        body = f"# Example\n\n## 概要\n\n{background}{method}{result}\n"
+        text = mod.compact_list_summary(body)
+        self.assertLessEqual(len(text), 180)
+        self.assertIn("予測", text)
+        self.assertIn("保持期限", text)
+        self.assertTrue("KVキャッシュ" in text or "キャッシュ" in text)
 
     def test_explicit_overview_section_beats_metadata_fallback(self):
         mod = self._module()

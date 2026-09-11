@@ -9,6 +9,8 @@ from typing import Any
 
 import yaml
 
+from list_summary import audit_list_summary
+
 
 def q(value: Any) -> str:
     if value is None:
@@ -68,6 +70,53 @@ def render_result(item: dict[str, Any]) -> str:
     return f"- {head}" if head else ""
 
 
+def representative_result_text(item: Any) -> str:
+    """Turn the first key result into a self-contained overview sentence."""
+    if not isinstance(item, dict):
+        return ""
+    metric = text(item.get("metric"))
+    value = text(item.get("value"))
+    baseline = text(item.get("baseline"))
+    condition = text(item.get("condition"))
+    interpretation = text(item.get("interpretation"))
+    if not (metric and value):
+        return ""
+
+    sentence = "代表結果として、"
+    sentence += metric
+    if condition:
+        sentence += f"は{condition}で"
+    else:
+        sentence += "は"
+    if baseline:
+        sentence += f"{baseline}に対して"
+    sentence += value.rstrip("。") + "。"
+    if interpretation:
+        sentence += interpretation.rstrip("。") + "。"
+    return sentence
+
+
+def build_overview(meta: dict[str, Any], pm: dict[str, Any], rs: dict[str, Any]) -> str:
+    """Build an overview that exposes the method and a headline result."""
+    parts: list[str] = []
+    base = text(meta.get("overview") or meta.get("summary"))
+    novelty = text(pm.get("novelty"))
+    key_results = rs.get("key_results") or []
+    headline = representative_result_text(key_results[0]) if key_results else ""
+
+    for value in (base, novelty, headline):
+        value = value.strip()
+        if not value:
+            continue
+        joined = "\n\n".join(parts)
+        if value in joined:
+            continue
+        if headline and value == headline and key_results and text(key_results[0].get("value")) in joined:
+            continue
+        parts.append(value)
+    return "\n\n".join(parts)
+
+
 def section(title: str, body: str) -> str:
     body = body.strip()
     return f"## {title}\n{body}\n\n" if body else ""
@@ -84,12 +133,22 @@ def render_paper(record: dict[str, Any]) -> str:
     canonical_id = text(meta.get("canonical_id"))
     source = text(meta.get("source"))
     summary = text(meta.get("summary"))
+    list_summary = text(meta.get("list_summary"))
     if not title or not canonical_id or not source or not summary:
         raise ValueError("metadata requires title, canonical_id, source, and summary")
+    if not list_summary:
+        raise ValueError(
+            "metadata.list_summary is required: the research worker must write a 45-180 character Japanese one-line explanation that says what the paper actually does; do not derive it mechanically from the overview"
+        )
+    list_quality = audit_list_summary(list_summary)
+    if list_quality.failures:
+        raise ValueError(
+            "metadata.list_summary failed quality checks: " + "; ".join(list_quality.failures)
+        )
 
     front_order = (
         "canonical_id", "arxiv_id", "doi", "openreview_id", "arxiv_categories",
-        "title", "summary", "authors", "authors_affiliations", "published",
+        "title", "summary", "list_summary", "authors", "authors_affiliations", "published",
         "publication", "publication_type", "publication_status", "publication_version",
         "lineage", "topics",
         "importance", "hardware_evaluation", "hardware_details", "quality_effect",
@@ -105,6 +164,7 @@ def render_paper(record: dict[str, Any]) -> str:
     front_meta["canonical_id"] = canonical_id
     front_meta["title"] = title
     front_meta["summary"] = summary
+    front_meta["list_summary"] = list_summary
     front_meta["source"] = source
     if "references" in meta:
         front_meta["references"] = meta["references"]
@@ -118,7 +178,7 @@ def render_paper(record: dict[str, Any]) -> str:
         width=1000,
     ).rstrip()
     front = [
-        "---", yaml_text, "---", "", f"# {title}", "", f"> {summary}", "",
+        "---", yaml_text, "---", "", f"# {title}", "", f"> {list_summary}", "",
     ]
 
     bib: list[str] = []
@@ -143,8 +203,7 @@ def render_paper(record: dict[str, Any]) -> str:
 
     parts = ["\n".join(front)]
     parts.append(section("書誌情報", "\n".join(bib)))
-    if meta.get("overview"):
-        parts.append(section("概要", text(meta["overview"])))
+    parts.append(section("概要", build_overview(meta, pm, rs)))
     if pm.get("problem"):
         parts.append(section("問題設定", text(pm["problem"])))
     if pm.get("novelty"):

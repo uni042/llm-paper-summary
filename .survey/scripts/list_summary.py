@@ -32,9 +32,22 @@ MULTIWORD_TITLECASE_RE = re.compile(
     r"(?<![A-Za-z0-9])[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*(?:\s+[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*)+(?![A-Za-z0-9])"
 )
 
-# These replacements are deliberately local to the short paper-list view.
-# Body quality policy remains unchanged; this layer merely turns English-heavy
-# legacy overviews into readable Japanese before they are shortened.
+METHOD_SIGNAL_RE = re.compile(
+    r"(?:提案|手法|方式|機構|システム|設計|スケジューラ|アルゴリズム|"
+    r"予測して|予測し|配置して|配置し|選択して|選択し|割り当て|切り替え|"
+    r"先読み|オフロード|退避|圧縮|量子化|枝刈り|分離|統合|調整し|"
+    r"動的に[^。！？]{0,30}(?:変え|変更|決め|選ぶ|配置)|することで|によって[^。！？]{0,40}(?:減ら|抑え|改善))"
+)
+RESULT_SIGNAL_RE = re.compile(
+    r"(?:評価|実験|測定|比較|解析|分析|検証|ベンチマーク|結果)[^。！？]{0,90}"
+    r"(?:示した|確認した|分かった|達成|短縮|削減|低減|改善|向上|高速化|上回|維持|同等|支配的|逆転)"
+    r"|(?:\d+(?:\.\d+)?\s*(?:%|％|倍|x|×|ms|秒|GB|MB|TB|W|J|トークン/秒|tokens?/s))",
+    re.I,
+)
+PROBLEM_SIGNAL_RE = re.compile(
+    r"(?:問題|課題|ボトルネック|不足|制約|限られ|待ち時間|遅延|帯域|メモリ|転送|競合|再計算|負荷|難しい|高コスト)"
+)
+
 LIST_TERM_REPLACEMENTS = (
     ("self-speculative decoding", "自己投機的復号"),
     ("speculative decoding", "投機的復号"),
@@ -171,13 +184,13 @@ def _extract_lead_blockquote(body: str) -> str:
 
 
 def extract_summary_source(body: str, fallback_summary: str = "") -> str:
-    """Prefer the paper page overview; metadata is only a final fallback."""
-    explicit = _extract_h2(body, "概要")
-    if explicit:
-        return explicit
+    """Return the preferred source; callers may special-case worker-authored lead text."""
     lead = _extract_lead_blockquote(body)
     if lead:
         return lead
+    explicit = _extract_h2(body, "概要")
+    if explicit:
+        return explicit
     legacy = _extract_h2(body, "一文要約")
     if legacy:
         return legacy
@@ -185,7 +198,6 @@ def extract_summary_source(body: str, fallback_summary: str = "") -> str:
 
 
 def _title_method_names(body: str) -> list[str]:
-    """Return likely named methods from the H1 without protecting full English titles."""
     match = H1_RE.search(body)
     if not match:
         return []
@@ -254,9 +266,6 @@ def _mask_proper_names(text: str) -> str:
 
 
 def _normalize_terms(text: str, explicit_names: tuple[str, ...] = ()) -> str:
-    # Translate longer generic phrases first, then hide names so the shared
-    # body-level replacements cannot turn EVICT into 「追い出し」 or damage
-    # CamelCase names such as LayerSkip.
     text = _replace_list_terms(text)
     text, protected = _protect_proper_names(text, explicit_names)
     for canonical, pattern in TERM_PATTERNS.items():
@@ -276,15 +285,43 @@ def _trim_long_sentence(sentence: str, max_chars: int) -> str:
     return sentence[: max_chars - 1].rstrip() + "…"
 
 
-def _compact(
-    text: str,
-    min_chars: int,
-    max_chars: int,
-    explicit_names: tuple[str, ...] = (),
-) -> str:
+def _find_sentence(sentences: list[str], pattern: re.Pattern[str], *, start: int = 0) -> int | None:
+    for index in range(start, len(sentences)):
+        if pattern.search(sentences[index]):
+            return index
+    return None
+
+
+def _semantic_sentence_order(sentences: list[str]) -> list[int]:
+    """Legacy fallback: reserve budget for the method, then add problem/result if they fit."""
+    method = _find_sentence(sentences, METHOD_SIGNAL_RE)
+    if method is None:
+        return list(range(len(sentences)))
+
+    problem: int | None = None
+    for index in range(method + 1):
+        if index != method and PROBLEM_SIGNAL_RE.search(sentences[index]):
+            problem = index
+            break
+
+    result = _find_sentence(sentences, RESULT_SIGNAL_RE, start=method + 1)
+    selected = [method]
+    if problem is not None:
+        selected.append(problem)
+    if result is not None:
+        selected.append(result)
+    selected_set = set(selected)
+    selected.extend(index for index in range(len(sentences)) if index not in selected_set)
+    return selected
+
+
+def _compact_worker_lead(text: str, max_chars: int, explicit_names: tuple[str, ...]) -> str:
+    """Preserve worker wording/order; only normalize terminology and enforce the hard limit."""
     text = _normalize_terms(_clean_markdown(text), explicit_names)
     if not text:
         return ""
+    if len(text) <= max_chars:
+        return text if text[-1] in "。！？…" else text + "。"
     sentences = [s.strip() for s in SENTENCE_RE.findall(text) if s.strip()] or [text]
     chosen: list[str] = []
     for sentence in sentences:
@@ -294,9 +331,50 @@ def _compact(
         if len(candidate) > max_chars:
             break
         chosen.append(sentence)
-        if len(candidate) >= min_chars:
-            break
     result = "".join(chosen) if chosen else _trim_long_sentence(text, max_chars)
+    if result and result[-1] not in "。！？…":
+        result = result + "。" if len(result) < max_chars else result[:-1].rstrip() + "。"
+    return result
+
+
+def _compact_legacy(
+    text: str,
+    min_chars: int,
+    max_chars: int,
+    explicit_names: tuple[str, ...] = (),
+) -> str:
+    text = _normalize_terms(_clean_markdown(text), explicit_names)
+    if not text:
+        return ""
+    sentences = [s.strip() for s in SENTENCE_RE.findall(text) if s.strip()] or [text]
+    order = _semantic_sentence_order(sentences)
+    chosen_indices: list[int] = []
+
+    for index in order:
+        sentence = sentences[index]
+        if not chosen_indices and len(sentence) > max_chars:
+            return _trim_long_sentence(sentence, max_chars)
+        candidate_indices = sorted(chosen_indices + [index])
+        candidate = "".join(sentences[i] for i in candidate_indices)
+        if len(candidate) > max_chars:
+            continue
+        chosen_indices.append(index)
+
+        chosen_text = "".join(sentences[i] for i in sorted(chosen_indices))
+        has_method = any(METHOD_SIGNAL_RE.search(sentences[i]) for i in chosen_indices)
+        if len(chosen_text) >= min_chars and has_method:
+            result_index = _find_sentence(sentences, RESULT_SIGNAL_RE)
+            if result_index is None or result_index in chosen_indices:
+                break
+            with_result = "".join(sentences[i] for i in sorted(set(chosen_indices + [result_index])))
+            if len(with_result) > max_chars:
+                break
+
+    if not chosen_indices:
+        result = _trim_long_sentence(text, max_chars)
+    else:
+        result = "".join(sentences[i] for i in sorted(chosen_indices))
+
     if len(result) > max_chars:
         result = _trim_long_sentence(result, max_chars)
     if result and result[-1] not in "。！？…":
@@ -311,8 +389,17 @@ def compact_list_summary(
     min_chars: int = DEFAULT_MIN_CHARS,
     max_chars: int = DEFAULT_MAX_CHARS,
 ) -> str:
-    source = extract_summary_source(body, fallback_summary)
-    return _compact(source, min_chars, max_chars, tuple(_title_method_names(body)))
+    names = tuple(_title_method_names(body))
+    lead = _extract_lead_blockquote(body)
+    if lead:
+        return _compact_worker_lead(lead, max_chars, names)
+    explicit = _extract_h2(body, "概要")
+    if explicit:
+        return _compact_legacy(explicit, min_chars, max_chars, names)
+    legacy = _extract_h2(body, "一文要約")
+    if legacy:
+        return _compact_legacy(legacy, min_chars, max_chars, names)
+    return _compact_legacy(fallback_summary, min_chars, max_chars, names)
 
 
 def _list_specific_bare_terms(text: str) -> list[str]:
@@ -356,13 +443,9 @@ def audit_list_summary(
     shared_hits = find_bare_english(audit_text)
     list_hits = _list_specific_bare_terms(audit_text)
     if shared_hits or list_hits:
-        preview_parts = [
-            f"{hit.term}→{hit.preferred} ×{hit.count}" for hit in shared_hits[:8]
-        ]
+        preview_parts = [f"{hit.term}→{hit.preferred} ×{hit.count}" for hit in shared_hits[:8]]
         preview_parts.extend(list_hits[:8 - len(preview_parts)])
-        failures.append(
-            "日本語化できる英語専門語が裸で残っている: " + ", ".join(preview_parts)
-        )
+        failures.append("日本語化できる英語専門語が裸で残っている: " + ", ".join(preview_parts))
 
     status = "FAIL" if failures else ("WARN" if warnings else "PASS")
     return ListSummaryQuality(
