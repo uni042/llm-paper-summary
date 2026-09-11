@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T10:20:09.425760+00:00",
+  "updated_at": "2026-09-11T10:28:12.441489+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,19 +6314,19 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T10:20:09.425760+00:00",
+      "last_recorded_at": "2026-09-11T10:28:12.441489+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 7,
+        "research_completed": 8,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 9,
-        "new_papers": 6,
+        "new_jobs": 10,
+        "new_papers": 7,
         "fallback_archived": 0
       },
       "events": [
@@ -6506,6 +6506,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34589268334:1",
+          "recorded_at": "2026-09-11T10:28:12.441489+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34589268334",
+            "run_attempt": "1",
+            "source_sha": "b25a752351d72a472b5fe027954ab47373a07d5b"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6604,6 +6620,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-1dc0db70c25722b2",
+          "type": "research",
+          "canonical_id": "arXiv:2604.10539",
+          "title": "IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6669,6 +6693,13 @@
           "type": "research",
           "canonical_id": "arXiv:2604.10539",
           "title": "IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs"
+        },
+        {
+          "job_id": "job-cadebf3fc3fe03cd",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -6677,7 +6708,8 @@
         "arXiv:2410.03065",
         "arXiv:2606.03770",
         "arXiv:2607.01831",
-        "arXiv:2607.04206"
+        "arXiv:2607.04206",
+        "arXiv:2604.10539"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
@@ -6688,8 +6720,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
-      "paper_active_count_after": 312,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 313,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

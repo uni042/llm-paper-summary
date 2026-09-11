@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（22本）
+## 自動生成の論文一覧（23本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -27,6 +27,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 |---|---|:---:|---:|---|
 | 2026-05 | [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md) | ✓ | 1 | 推論 モデルは、通常chat モデルより非常に長い出力を生成することがある。数学問題やコード 推論では数千〜数万トークンの思考連鎖（CoT）を出し続けるため、プロンプトが短くてもデコード中にKV キャッシュが大きく成長する。 |
 | 2026-04 | [Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving](2026-2604.26837-spin-sparse-attention-hierarchical-memory.md) | ✓ | 1 | 動的疎注意は各デコード段で重要な少数KVだけをGPUへ読み込めば長文注意計算を減らせるが、選択粒度が方式ごとに異なり、CPU上の完全KVから細粒度・不連続なデータをPCIeで取り出す費用が利得を打ち消しやすい。 |
+| 2026-04 | [IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs](2026-2604.10539-icecache-semantic-kv-offload.md) | [✓](https://github.com/yuzhenmao/IceCache) | 1 | IceCacheは、長文推論でGPUに載り切らないKVキャッシュをCPUへ退避する際、重要トークンだけを戻そうとしても元の時系列順ページ配置では意味的に関連するトークンが多数のページへ散らばり、不要トークンまでPCIe転送してしまう問題を、意味的クラスタリングとページ化注意機構を一体化して解く。 |
 | 2026-01 | [OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration](2026-2601.10729-orbitflow-slo-aware-kv-cache-reconfiguration.md) | ✓ | 1 | 長文生成ではKVキャッシュが生成トークン数に応じて増え、同時実行中の要求数も変化するため、GPUメモリ需要は実行中に継続して変わる。 |
 
 ### 直近12か月・未被引用（2025-10〜2026-09）

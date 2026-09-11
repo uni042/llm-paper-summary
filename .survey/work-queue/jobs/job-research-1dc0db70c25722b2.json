@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2604.10539",
   "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.10539-icecache-semantic-kv-offload.md",
   "selection_reason": "長文推論でGPU上に残すKVを単純な位置・注意重みだけで選ぶと意味的に重要なトークンを落とし、長い推論過程で精度が悪化する問題に対し、意味的トークンクラスタリングとPagedAttentionを組み合わせて関連トークンを連続領域へ配置し、階層的かつ動的に更新する構造でCPU-GPU転送を効率化する。LongBenchでは256トークン予算で完全KVの99%精度を維持し、他の退避方式に対して25%のKVトークン予算でも競争力ある遅延・精度を示す。CPU退避とKV選択・メモリ配置の共同設計として補完性がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -17,5 +17,7 @@
   "artifact_transport": "structured_record_v10",
   "repair_required": true,
   "validation_error": "ValueError: problem_method.method_overview must explain the end-to-end mechanism",
-  "last_validation_failed_at": "2026-09-11T10:24:43+00:00"
+  "last_validation_failed_at": "2026-09-11T10:24:43+00:00",
+  "completed_at": "2026-09-11T10:27:18+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

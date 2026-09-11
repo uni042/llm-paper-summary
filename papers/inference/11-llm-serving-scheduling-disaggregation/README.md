@@ -64,7 +64,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2023-09 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md) | [✓](https://github.com/vllm-project/vllm) | 191 | LLMサービングでは、モデル重みだけでなく各要求が生成中に保持するKVキャッシュが大きなGPUメモリを占める。 |
+| 2023-09 | [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md) | [✓](https://github.com/vllm-project/vllm) | 192 | LLMサービングでは、モデル重みだけでなく各要求が生成中に保持するKVキャッシュが大きなGPUメモリを占める。 |
 | 2022-07 | [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md) | ✓ | 101 | Orcaが対象にした問題は、自己回帰型の生成モデルが1回の要求を何度もモデルへ通して1トークンずつ生成するのに、当時の推論サーバーが要求全体をスケジューリング単位としていたことである。 |
 | 2024-01 | [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md) | [✓](https://github.com/LLMServe/DistServe) | 93 | DistServeは、プリフィルとデコードを同じGPU上でバッチ処理すると、長いプリフィルがデコードを遅らせる干渉と、性質の違う2処理段階が同じGPU数・モデル分割方法を共有する制約が発生することに着目する。 |
 | 2023-11 | [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md) | [✓](https://github.com/Mutinifni/splitwise-sim) | 93 | プリフィルは多数トークンをまとめて処理するためGPUの計算性能を使いやすい。一方デコードは1トークンずつ進むためメモリ帯域の影響が大きく、最新GPUの高いFLOPsを使い切れない場合がある。 |
