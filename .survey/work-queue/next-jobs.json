@@ -1,31 +1,31 @@
 {
   "counts": {
     "discovery": {
-      "completed": 99
+      "completed": 99,
+      "ready": 1
     },
     "audit": {
       "completed": 6
     },
     "research": {
-      "completed": 91,
+      "completed": 92,
       "superseded": 41,
-      "deferred": 3,
-      "ready": 1
+      "deferred": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-efb253b8d1a8f8f0",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2605.19593",
-      "title": "Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption",
-      "source_url": "https://arxiv.org/abs/2605.19593",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19593-multi-model-offloading-preemption-schedulers.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-a3093f5c71fb5c98",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-11T03:02:25+00:00"
+  "generated_at": "2026-09-11T03:25:40+00:00"
 }
