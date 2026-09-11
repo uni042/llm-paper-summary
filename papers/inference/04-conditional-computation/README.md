@@ -18,7 +18,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2024-08 | [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md) | [✓](https://github.com/facebookresearch/LayerSkip) | 4 | 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。 |
+| 2024-08 | [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md) | [✓](https://github.com/facebookresearch/LayerSkip) | 5 | 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。 |
 | 2023-07 | [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md) | ✓ | 3 | 生成が後ろへ進むほど実行するTransformer layer数を段階的に減らし、同じ生成位置ではbatch全体で同じ深度を使うことで、batchingとKV cacheを壊さずdecode計算を減らす。 |
 | 2024-07 | [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md) | ✓ | 1 | 長文入力で現在の生成に重要なtokenだけを後続layerへ通し、外したtokenもhidden stateを別cacheへ保存して後で必要になれば途中layerから復帰できるようにすることで、主にprefill計算を減らす。 |
 

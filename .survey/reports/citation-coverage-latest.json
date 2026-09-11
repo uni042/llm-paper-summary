@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-09-11T08:28:55+00:00",
+  "checked_at": "2026-09-11T08:29:27+00:00",
   "summary": {
     "total": 308,
-    "complete": 168,
-    "incomplete": 140
+    "complete": 192,
+    "incomplete": 116
   },
   "families": {
     "inference": {
       "total": 285,
-      "complete": 168
+      "complete": 192
     },
     "training": {
       "total": 19,
@@ -58,128 +58,8 @@
       "reason": "missing structured reference audit metadata"
     },
     {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md",
-      "canonical_id": "arXiv:2601.20309",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.03203-foresightkv-long-term-contribution-eviction.md",
-      "canonical_id": "arXiv:2602.03203",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md",
-      "canonical_id": "arXiv:2602.07721",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md",
-      "canonical_id": "arXiv:2602.09725",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
-      "canonical_id": "arXiv:2602.11521",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md",
-      "canonical_id": "arXiv:2602.18750",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.20732-chess-context-aware-hierarchical-selection.md",
-      "canonical_id": "arXiv:2602.20732",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md",
-      "canonical_id": "arXiv:2602.23592",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.17803-swarm-co-activation-aware-kvcache-offloading-across-multiple-ssds.md",
-      "canonical_id": "arXiv:2603.17803",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
-      "canonical_id": "arXiv:2603.27138",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md",
-      "canonical_id": "arXiv:2604.18529",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.19769-ttkv-temporal-tiered-kv-cache.md",
-      "canonical_id": "arXiv:2604.19769",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow.md",
-      "canonical_id": "arXiv:2604.25080",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md",
-      "canonical_id": "arXiv:2604.26557",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-making-ssd-backed-kv-cache-practical-for-long-context-llm-serving.md",
-      "canonical_id": "arXiv:2605.03375",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.17613-vericache-lossless-kv-compression.md",
-      "canonical_id": "arXiv:2605.17613",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md",
-      "canonical_id": "arXiv:2605.18071",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md",
-      "canonical_id": "arXiv:2605.24022",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md",
-      "canonical_id": "arXiv:2606.15157",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
-      "canonical_id": "arXiv:2606.16135",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md",
-      "canonical_id": "arXiv:2607.18141",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.26475-dualdecoder-predictive-prefetch.md",
-      "canonical_id": "arXiv:2607.26475",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
       "canonical_id": "arXiv:2607.27187",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md",
-      "canonical_id": "arXiv:2608.03555",
-      "reason": "missing structured reference audit metadata"
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03893-cross-model-kv-cache-transfer.md",
-      "canonical_id": "arXiv:2608.03893",
       "reason": "missing structured reference audit metadata"
     },
     {
