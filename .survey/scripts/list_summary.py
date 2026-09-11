@@ -23,11 +23,13 @@ URL_RE = re.compile(r"https?://\S+")
 HTML_RE = re.compile(r"<[^>]+>")
 SENTENCE_RE = re.compile(r".+?[。！？](?=\s|$)|.+$", re.S)
 CAMEL_OR_ACRONYM_RE = re.compile(
-    r"\b(?:[A-Z][A-Z0-9_-]{1,}|[A-Z][a-z0-9]+(?:[A-Z][A-Za-z0-9]*)+)(?:-[A-Za-z0-9]+)*\b"
+    r"(?<![A-Za-z0-9])(?:[A-Z][A-Z0-9_-]{1,}|[A-Z][a-z0-9]+(?:[A-Z][A-Za-z0-9]*)+)(?:-[A-Za-z0-9]+)*(?![A-Za-z0-9])"
 )
-TITLECASE_RE = re.compile(r"\b[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*\b")
+TITLECASE_RE = re.compile(
+    r"(?<![A-Za-z0-9])[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*(?![A-Za-z0-9])"
+)
 MULTIWORD_TITLECASE_RE = re.compile(
-    r"\b[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*(?:\s+[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*)+\b"
+    r"(?<![A-Za-z0-9])[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*(?:\s+[A-Z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+)*)+(?![A-Za-z0-9])"
 )
 
 # These replacements are deliberately local to the short paper-list view.
