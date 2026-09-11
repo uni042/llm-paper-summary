@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ffdf36811f2a8f46",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2411.01142",
+      "title": "NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference",
+      "source_url": "https://arxiv.org/abs/2411.01142",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-cpu-offloading-online-inference.md",
+      "priority": 83,
+      "reason": "オンラインLLM推論でGPUバッチをKV容量が制限する問題に対し、注意計算とKV状態の一部をCPUへ移し、GPUとCPUを非対称パイプラインで並列利用する。T4ではGPUのみ比最大7.5倍、A10Gでは26%、H100では14%の同一遅延スループット向上を報告し、CPU強化時にはA10Gで79.3%まで伸びる。CPUオフロードを単なるメモリ退避でなく計算資源として使う代表的な未収録研究で、HCAttentionなど後続研究の基礎として重要である。"
+    },
+    {
+      "canonical_id": "arXiv:2403.11421",
+      "title": "FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines",
+      "source_url": "https://arxiv.org/abs/2403.11421",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-heterogeneous-pipelines.md",
+      "priority": 78,
+      "reason": "KVキャッシュを伴うメモリ律速部分とGPU計算向き部分へTransformerを分解し、複数ノードCPUのメモリ容量・帯域・計算を注意処理に使う異種パイプラインを構成する。vLLM比1.88〜5.04倍のスループットを報告しており、単純なGPU-CPU転送を減らすために計算自体をホスト側へ移す設計の初期代表例として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2407.15309",
+      "title": "vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2407.15309",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2024-2407.15309-vtensor-virtual-memory-management.md",
+      "priority": 76,
+      "reason": "GPU仮想メモリ管理を用いてKVテンソルの物理配置と計算カーネルを分離し、ページ方式で残るメモリ操作・断片化・カーネル結合の制約を緩和する。平均1.86倍、マルチターンで最大2.42倍の高速化と、vLLM比でA100メモリ約57GBの解放を報告する。KVキャッシュ管理の基盤抽象化として重要な未収録候補である。"
+    }
+  ]
+}
