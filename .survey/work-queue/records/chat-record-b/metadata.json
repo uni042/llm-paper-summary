@@ -1,13 +1,34 @@
 {
- "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-research-2607.17880-20260911-1030-v10-b1","job_id":"job-research-960d3bc442b0fe00","data":{
-  "canonical_id":"arXiv:2607.17880","arxiv_id":"2607.17880","doi":"10.48550/arXiv.2607.17880","title":"Mixture-of-Experts Serving",
-  "summary":"混合専門家モデル（Mixture of Experts; MoE）で専門家需要が時間変動する状況を、各専門家へ何台の追加GPUを割り当てるかというオンライン資源配置問題として定式化した理論研究。各専門家には最低1台を置き、余剰k台を動的に配る。各時刻の費用を、最も遅い専門家の負荷÷GPU数で表すサービス遅延と、前時刻からGPU割当を動かしたL1距離で表す再構成費の和とする。分数解に対する正則化付き貪欲法と遅延しきい値丸めを組み合わせ、多項式時間でO(√log k)競合比を与える。さらにオンライン双対問題にΩ(√log k)障壁、静的版に2近似、整数性ギャップ2-1/m、NP困難性、指数時間仮説（ETH）下で完全多項式時間近似方式（FPTAS）が存在しないことを示す。",
-  "source":"https://arxiv.org/abs/2607.17880","sources":["https://arxiv.org/abs/2607.17880","https://www.alphaxiv.org/abs/2607.17880"],"authors":["Zhiyi Huang","Qinpei Lou","Tao Xiao"],"authors_affiliations":"一次書誌および公開全文ミラーで著者を確認。",
-  "publication":"arXiv:2607.17880v1","publication_type":"理論プレプリント","published":"2026-07-20","publication_status":"arXivの計算機科学・データ構造とアルゴリズム分野に投稿された理論研究。",
-  "topics":["MoEサービング","専門家複製","動的GPU割当","オンラインアルゴリズム","競合解析","再構成費","近似アルゴリズム"],
-  "implementation":"実システム実装やGPUベンチマークではなく、動的専門家GPU割当を抽象化した数理モデル、オンラインアルゴリズム、丸め法、複雑性・近似保証を提示する。",
-  "lineage":"MoE専門家配置・動的資源割当の理論基盤","importance":"中〜高","hardware_evaluation":"実機評価なし。理論モデルではm専門家、n GPU、各専門家に必須1台、余剰k=n-m台を仮定する。","hardware_details":"GPU処理能力は同質で、専門家iへ1+x_i台を割り当てたとき処理遅延が需要r_i/(1+x_i)に比例する抽象モデル。",
-  "quality_effect":"モデル計算やルーティングの近似を扱わず、資源配置の費用最適化を定式化する理論研究のため生成品質の評価対象ではない。",
-  "storage_targets":["GPU上の専門家重み複製と割当状態"],"bottlenecks":["専門家人気の時間変動","過負荷専門家による同期遅延","GPU再割当・重みロード・キャッシュ再構成費","整数GPU割当"],
-  "evidence_locations":["Problem formulation","Online Resource Allocation Challenge","Regularized Greedy Fractional Allocation","Lazy Threshold Rounding","Theoretical Results and Guarantees","Static Serving and Complexity Analysis"],"last_checked":"2026-09-11","code":"実装コード対象外"
- }}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-2602.21626-20260911-1030-v10-b1",
+  "job_id": "job-research-2e2e6a0cd88dd666",
+  "data": {
+    "canonical_id": "arXiv:2602.21626",
+    "arxiv_id": "2602.21626",
+    "doi": "10.48550/arXiv.2602.21626",
+    "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning",
+    "summary": "混合専門家モデル（Mixture of Experts; MoE）の推論サービングでは、要求をどのデータ並列エンジンへ送るか、各エンジン内でどの要求を先に処理するか、各専門家をどのGPUへ置くかが互いに影響する。既存の密モデル向け構成では、この3層を独立に扱うため、KVキャッシュ利用率の偏り、長い入力による先頭要求待ち、特定専門家への負荷集中が同時に起こりうる。Gimbalは、実測KV使用量と処理中トークン量によるエンジン選択、入力長を使う短いジョブ優先と待ち時間救済、専門家の活性頻度と層間依存を使う動的再配置を一つのサービング経路へ統合する。2台のA100 GPUでQwen3-30B-A3Bを評価し、1.4要求/秒ではvLLMに対して先頭トークン時間を平均17.76%、トークン間時間を平均13.34%短縮した。",
+    "source": "https://arxiv.org/abs/2602.21626",
+    "sources": ["https://arxiv.org/abs/2602.21626", "https://arxiv.org/pdf/2602.21626"],
+    "authors": ["Yifan Sun", "Gholamreza Haffari", "Minxian Xu", "Rajkumar Buyya", "Adel N. Toosi"],
+    "authors_affiliations": "Monash UniversityおよびThe University of Melbourneを中心とする著者による研究。",
+    "publication": "arXiv:2602.21626v2",
+    "publication_type": "プレプリント",
+    "published": "2026-02-25",
+    "publication_status": "arXiv初版は2026-02-25、v2は2026-03-02。確認した一次資料では査読済み会議・雑誌への採録情報は示されていない。",
+    "topics": ["MoEサービング", "多層スケジューリング", "データ並列負荷分散", "短いジョブ優先", "専門家配置", "KVキャッシュ負荷", "専門家並列"],
+    "implementation": "vLLMを拡張して実装し、非同期エンジン指標をZeroMQ経由で集約する負荷分散、入力トークン数に基づく要求スケジューラ、専門家負荷平衡機構を統合している。本文の実装節はvLLM 0.9.1を基盤と記述する一方、比較対象の記述にはvLLM 0.9.2との表記もあり、版番号には一次資料内の不整合がある。公開コードへの明示的なリンクは確認した本文範囲では特定できなかった。",
+    "lineage": "LLMサービングの要求スケジューリング・データ並列負荷分散・MoE専門家配置",
+    "importance": "中〜高",
+    "hardware_evaluation": "実機評価。Intel Xeon Gold 6326を2基、NVIDIA A100 80GBを2基、NVLink、1TB RAMを備えた単一サーバでQwen3-30B-A3Bを実行し、BurstGPT由来と合成入力長分布、ShareGPT由来の会話要求を使って評価する。",
+    "hardware_details": "2×Intel Xeon Gold 6326 2.9GHz、2×NVIDIA A100 80GB（NVLink接続）、1TB RAM。専門家並列を有効化し、pplx-kernelsの全対全通信を利用する。",
+    "quality_effect": "モデル重みやKVキャッシュを近似・削減する方式ではなく、要求順序、エンジン割当、専門家配置を変えるため、生成品質そのものを意図的に近似する方式ではない。ただし論文は主に遅延・スループットを評価しており、同一出力の逐語一致を検証する研究ではない。",
+    "storage_targets": ["GPU HBM上のKVキャッシュ", "GPU間に配置されるMoE専門家重み"],
+    "bottlenecks": ["データ並列エンジン間のKVキャッシュ使用量偏り", "長いプリフィル要求による先頭要求待ち", "一部専門家への活性集中", "専門家間のGPU間通信", "要求特性を無視した静的ラウンドロビン割当"],
+    "evidence_locations": ["§1 Introduction", "§2 Background and Motivation", "§3 System Design", "§4 Implementation", "§5 Evaluation", "§7 Conclusion and Limitations"],
+    "last_checked": "2026-09-11",
+    "code": "not identified in the primary source"
+  }
+}
