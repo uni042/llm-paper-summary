@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-70aa105074246bd1",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.03494",
+      "title": "GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving",
+      "source_url": "https://arxiv.org/abs/2609.03494",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03494-growpage-on-demand-kv-budgeting.md",
+      "priority": 90,
+      "reason": "長出力推論で要求ごと・生成途中で変動するKV容量需要を固定予算として扱わず、注意の短期・長期傾向から必要容量の拡大を判断し、現在割当内でのKV圧縮と追加物理ページ取得を動的に切り替える。PagedAttentionのページ抽象を維持して連続バッチ処理と接頭辞キャッシュを保つため、KV圧縮とサービング側メモリ割当を直接つなぐ新しい設計であり、推論時KV管理系統への価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04774",
+      "title": "Adaptive Context Parallelism for Production LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.04774",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-adaptive-context-parallelism-production-serving.md",
+      "priority": 88,
+      "reason": "Vertumnusは異なるコンテキスト並列度を持つworker間で、待ち時間・接頭辞キャッシュ局所性・GPU時間を合わせた配置費用により要求を振り分け、クラスタ側でも秒単位の分割・統合でworker構成を負荷へ追従させる。64 GPUの公開・本番負荷で高負荷時の平均TTFTを最大28.1%削減し、トークン重み付きSLO達成率を最大13.3ポイント改善しており、長文脈サービングの並列度を要求単位とクラスタ単位の両方で適応させる実運用寄りの研究である。"
+    },
+    {
+      "canonical_id": "arXiv:2609.07883",
+      "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2609.07883",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md",
+      "priority": 86,
+      "reason": "SLOWeaveは固定サイズの分割プリフィルが持つ、デコード遅延保護とプリフィル効率の交換条件を、現在の最短デコード期限までに完了できる最大チャンクをオンライン選択することで解く。25msの出力トークン時間目標で混合要求39%、長文脈38%のgoodput改善、10msではそれぞれ3.3倍・2.4倍を報告し、反復単位サービングでSLOを直接制約にした適応プリフィル制御として有用である。"
+    },
+    {
+      "canonical_id": "arXiv:2609.09748",
+      "title": "Epoch: Compiling Diffusion Blocks for Sparse MoE Serving",
+      "source_url": "https://arxiv.org/abs/2609.09748",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md",
+      "priority": 82,
+      "reason": "拡散言語モデルの反復ごとに同じようなMoEルーティング・expert計算・集合通信を繰り返す非効率を、拡散ブロック全体をコンパイル単位として扱うblock planで削減する。生きている位置と再計算が必要な位置だけを新鮮なexpert計算・expert-parallel dispatchへ流し、8基H100上の7B〜100B拡散MoEで同一配置の最良ベースライン比最大2.7倍、さらに一部ベースラインがメモリ不足になる大きなバッチでも動作する。MoE通信と条件付き計算を拡散生成へ合わせて再設計した新しいサービング研究である。"
+    },
+    {
+      "canonical_id": "arXiv:2609.01068",
+      "title": "OUTLETS: Output-Length Prediction from Speculative Decoding Backbones",
+      "source_url": "https://arxiv.org/abs/2609.01068",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-output-length-prediction-speculative-backbones.md",
+      "priority": 80,
+      "reason": "投機的復号で既に計算しているdraft表現へ軽量回帰headを追加し、別の予測モデルを走らせず出力長を予測してスケジューリングへ利用する。飽和した分離型サービングで短い要求のP99遅延を34.8%削減し、投機的復号の中間表現を資源配分情報へ再利用する点が特徴的である。EMNLP 2026採択済みで、出力長予測と分離型推論スケジューリングの接点として収録価値がある。"
+    }
+  ]
+}
