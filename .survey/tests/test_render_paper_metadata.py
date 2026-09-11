@@ -97,6 +97,23 @@ class RenderPaperMetadataTest(unittest.TestCase):
         self.assertEqual(meta["references_checked_at"], "2026-09-11")
         self.assertEqual(meta["references_total"], 42)
 
+    def test_renderer_builds_overview_with_method_and_headline_result(self) -> None:
+        record = complete_record()
+        record["metadata"]["summary"] = (
+            "GPUメモリが限られる環境では、再利用可能な状態をすべて保持できず、"
+            "再計算と転送待ちが増える。" * 4
+        )
+        record["problem_method"]["novelty"] = (
+            "提案手法は次回利用時刻を予測し、保持期限を動的に決めることで、"
+            "不要な保持と早すぎる追い出しを減らす。" * 3
+        )
+        rendered = render_paper(record)
+        overview = rendered.split("## 概要", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("次回利用時刻を予測", overview)
+        self.assertIn("25%削減", overview)
+        self.assertIn("比較対象", overview)
+        self.assertIn("条件", overview)
+
     def test_references_are_required(self) -> None:
         record = complete_record()
         del record["metadata"]["references"]
