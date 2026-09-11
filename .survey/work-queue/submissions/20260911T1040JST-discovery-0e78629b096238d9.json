@@ -1,0 +1,30 @@
+{
+  "schema_version":1,
+  "job_id":"job-0e78629b096238d9",
+  "candidates":[
+    {
+      "canonical_id":"arXiv:2608.14205",
+      "title":"FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction",
+      "source_url":"https://arxiv.org/abs/2608.14205",
+      "paper_path":"papers/inference/04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md",
+      "priority":91,
+      "reason":"既存のオンライン専門家負荷分散はルータ出力を見てから専門家を移動するため移動が推論クリティカルパスに残る。FreeBalanceは隣接層の残差表現から次層の負荷をルーティング前に予測し、注意計算などと専門家移動を重ねる。最大/平均rank負荷比32.8%削減、プリフィル遅延13.1%削減、層あたり平均5.1専門家分の調整費を隠すと報告し、Gimbalの事後オンライン配置とは異なる先行移動軸を持つ。"
+    },
+    {
+      "canonical_id":"arXiv:2607.00466",
+      "title":"ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "source_url":"https://arxiv.org/abs/2607.00466",
+      "paper_path":"papers/inference/04-moe-parallelism-communication/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+      "priority":88,
+      "reason":"プリフィル/デコード分離MoEで、プリフィル時の専門家活性から生成中の専門家集合を予測する署名を作り、同じ専門家重みを共有しやすい要求を同じデコードworkerへ送る。最大40GPU、3種MoE、2負荷で強い負荷分散基準よりmedian TPOTを5.9〜13.9%削減し、出力は不変。GimbalのDP+EP協調とは異なり、PD分離のdecode routingで専門家重み局所性を直接使う。"
+    },
+    {
+      "canonical_id":"arXiv:2607.17880",
+      "title":"Mixture-of-Experts Serving",
+      "source_url":"https://arxiv.org/abs/2607.17880",
+      "paper_path":"papers/inference/04-moe-parallelism-communication/2026-2607.17880-mixture-of-experts-serving-online-algorithms.md",
+      "priority":74,
+      "reason":"専門家人気が時間変動する状況で各専門家へ何GPUを割り当てるかを、サービス遅延と再構成費のオンライン最適化問題として形式化する理論研究。多項式時間O(sqrt(log k))競合オンラインアルゴリズム、対応する下界、オフライン定数近似、NP困難性を与える。実装性能論文ではないが、動的専門家複製・再配置の費用と利得の理論的基準として既存システム群を比較する土台になる。"
+    }
+  ]
+}
