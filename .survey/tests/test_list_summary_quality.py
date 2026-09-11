@@ -37,6 +37,21 @@ class ListSummaryTests(unittest.TestCase):
         self.assertIn("リクエスト", text)
         self.assertIn("トークン", text)
 
+    def test_worker_authored_lead_beats_overview_fallback(self):
+        mod = self._module()
+        worker = "本研究はKVキャッシュの次回利用時刻を予測して保持期限を動的に決め、再計算とGPUメモリ占有を同時に抑える方式を提案する。"
+        body = f"""# Example
+
+> {worker}
+
+## 概要
+
+長い背景説明が続く。ここは単体ページ向けの詳しい概要であり、一覧用の一文を自動生成する材料としては使わない。
+"""
+        text = mod.compact_list_summary(body)
+        self.assertEqual(text, worker)
+        self.assertNotIn("長い背景説明", text)
+
     def test_splits_japanese_sentences_without_whitespace(self):
         mod = self._module()
         first = "本研究は複数の要求が同時に到着する推論環境で、待ち時間とGPU利用率を同時に改善するため、要求順序とキャッシュ配置を動的に調整する方式を提案する。"
