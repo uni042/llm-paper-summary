@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T07:40:24.029869+00:00",
+  "updated_at": "2026-09-11T07:49:02.937947+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -5597,18 +5597,18 @@
     {
       "run_key": "2026-09-11T16:30:00+09:00",
       "first_recorded_at": "2026-09-11T07:34:14.245263+00:00",
-      "last_recorded_at": "2026-09-11T07:40:24.029869+00:00",
+      "last_recorded_at": "2026-09-11T07:49:02.937947+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 7,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -5698,6 +5698,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34576131207:1",
+          "recorded_at": "2026-09-11T07:49:02.937947+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34576131207",
+            "run_attempt": "1",
+            "source_sha": "22c39c19af89d66a09c30bbe028847d5512726d7"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -5748,6 +5763,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-30e28c61082970e0",
+          "type": "research",
+          "canonical_id": "arXiv:2502.08182",
+          "title": "Memory Offloading for Large Language Model Inference with Latency SLO Guarantees",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -5792,6 +5815,13 @@
           "type": "research",
           "canonical_id": "arXiv:2502.08182",
           "title": "Memory Offloading for Large Language Model Inference with Latency SLO Guarantees"
+        },
+        {
+          "job_id": "job-83bcad427dc46233",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
