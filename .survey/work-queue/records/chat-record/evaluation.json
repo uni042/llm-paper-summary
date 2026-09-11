@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2604.19769-20260911-1141-v10-a1",
-  "job_id": "job-research-5439ec0e0daf70c9",
+  "attempt_id": "attempt-2602.20732-20260911-1153-v10-a1",
+  "job_id": "job-research-4990aea7d8415733",
   "data": {
-    "hardware": ["NVIDIA A100", "NVIDIA RTX 3090", "GPU HBM", "ホストDRAM", "PCIe"],
-    "software": ["PyTorch", "CUDA", "NVML"],
-    "model": ["LLaMA-3.1-8B", "LLaMA-3.1-70B", "Qwen2.5系列（最大32B）", "DeepSeek-R1-14B", "Mistral-7B"],
-    "datasets": ["LongBench Qasper", "LongBench MultiNews", "Loong", "RULER", "L-Eval", "GovReport", "RepoBench-P"],
-    "baselines": ["FP16 dense-prefix KV", "KIVI", "KVQuant", "DiffKV", "ShadowKV"],
-    "correctness": "高速階層はFP16を維持し、低速階層だけキー8ビット・値4ビットへ量子化する。さらに低速階層は関連上位ブロックのみ取得するため近似を含む。品質はL-Eval、GovReport、MultiNews、Qasper、RepoBench-P、RULERなどの精度・F1・ROUGE-Lで比較し、FP16との差が小さいことを確認する。たとえば128KのLLaMA-3.1-70BではMultiNews 29.3対FP16 29.5、Qasper 37.8対38.0、RepoBench-P 57.8対58.0、RULER 61.8対62.0である。",
+    "hardware": ["単一ノード4×NVIDIA H20"],
+    "software": ["Python 3.12.3", "PyTorch 2.5.1", "CUDA 12.4", "nanoVLLM", "FlashInfer"],
+    "model": ["Qwen3-8Bをスケーリング例で使用", "LongBenchV2対応の長文LLM構成"],
+    "datasets": ["LongBenchV2", "4K〜32K合成長文負荷", "32K入力+6K出力の長生成負荷"],
+    "baselines": ["FullKV", "H2O", "KeyDiff", "SnapKV", "Quest"],
+    "correctness": "CHESSはKVを完全保持する無損失方式ではなく、Aggressive設定では最終的に約1%のKVだけを注意計算へ使う近似方式である。品質はLongBenchV2の総合・難易度・長さ・領域別スコアでFullKVおよび疎KV方式と比較する。Aggressive設定の総合33.2はFullKV 30.2を上回るが、これは完全文脈との数学的同一性ではなく、不要・妨害文脈を除くことでタスクスコアが改善した結果を含む。",
     "settings": [
-      {"name": "基本バッチ", "description": "メモリ使用量、遅延、精度の比較は同一文脈長・バッチサイズ8で行う。遅延は十分なウォームアップ後にCUDA eventで測り、p95の一トークン当たり遅延を報告する。"},
-      {"name": "差分量子化", "description": "低速DRAM階層ではキーを8ビット、値を4ビットとする。高速HBM階層はFP16を維持し、古いブロックがHBMから押し出される時点で圧縮する。"},
-      {"name": "ブロック長", "description": "低速階層は128トークンを既定のブロック長とする。アブレーションでは32、64、128、256を比較し、128を遅延・転送量・品質の折衷点とする。"},
-      {"name": "計測", "description": "GPUメモリ量はNVML、ホストからGPUへのKV転送量は推論中のKV取得に起因するホスト読み出しの集計で測る。主要長文評価は16K、32K、64K、128Kを含む。"}
+      {"name": "Page粒度", "description": "全実験でPageサイズを32トークンに固定し、ChunkとGridはその上の論理階層として構築する。物理KVはPage単位で管理し、階層選択はPage索引として注意カーネルへ渡す。"},
+      {"name": "保持率", "description": "CHESS ConservativeはGrid/Chunk/Page保持率0.9/0.9/0.9、Moderateは0.8/0.7/0.7、Aggressiveは0.5/0.2/0.1。主要な性能評価ではAggressiveを使用する。"},
+      {"name": "不確実性閾値", "description": "LongBenchV2を較正データとして平均エントロピーと分散エントロピーの経験分布を求め、99パーセンタイルを再構成トリガーの閾値に採用する。"},
+      {"name": "性能範囲", "description": "入力文脈4K〜32K、バッチ1〜192でFullKVと各疎KV方式に対するエンドツーエンドスループットを比較する。長生成安定性は32K入力後に6Kトークンを生成して一トークン遅延の推移を見る。"}
     ],
-    "methodology": "A100およびRTX 3090上のPyTorch/CUDA実装を使い、FP16全保持・KIVI・KVQuant・DiffKV・ShadowKVと比較する。32KのL-Eval、16K GovReport、4K〜128Kのスループット、128KのMultiNews/Qasper/RepoBench-P/RULERを用いて、品質とp95遅延、ホストからGPUへのKV転送量を同時に測定する。さらに64K RULERで高速/低速階層、差分量子化、ストリーミング注意を個別に外すアブレーションを行い、低速階層ブロック長も32/64/128/256で比較する。",
-    "scope": "提案はGPU HBMとホストDRAMの二階層を対象にしており、SSDやCXLメモリを直接評価していない。結果はA100/RTX 3090とPCIeの帯域・実装条件に依存する。また低速階層の関連ブロック選択関数の計算費用や、複数要求が同時にPCIeを競合する大規模サービング条件は本文の主要評価では限定的である。品質保持は対象ベンチマークで示されるが、4ビット値と疎なブロック選択を用いるため完全無損失ではない。"
+    "methodology": "品質評価ではLongBenchV2を用い、FullKV、H2O、KeyDiff、SnapKV、Questと比較する。H2Oは10% heavy+10% local、KeyDiffは8192トークン、SnapKVはrecent 512/total 4096、Questは2048の各最良設定を使う。Quest以外はCHESS評価基盤へ統合し、Questは単一バッチ専用の特殊カーネルのため公式実装で測定する。性能評価ではCHESS Aggressiveを4×H20上で4K〜32K文脈、バッチ1〜192へ拡張し、スループット、TPOT、長生成中の遅延安定性、選択処理の割合を測る。",
+    "scope": "主要評価は単一ノード4×H20で、複数ノード間のKV移動、CPU/SSD階層へのオフロード、ネットワーク競合は扱わない。品質評価はLongBenchV2、性能評価は合成入力が中心であり、実運用の複数利用者トレース上の待ち行列効果は未評価である。Aggressive設定は品質スコアを維持しているが、コード領域ではH2Oが強いなどタスク依存性がある。再構成閾値もLongBenchV2で事前較正しているため、分布が大きく異なる運用では再較正が必要になり得る。"
   }
 }
