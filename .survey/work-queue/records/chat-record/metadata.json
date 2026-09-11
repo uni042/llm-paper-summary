@@ -16,9 +16,9 @@
     "authors": ["Jianian Zhu", "Hang Wu", "Yinghui Li", "Haojie Wang", "Ruixuan Li", "Jidong Zhai"],
     "authors_affiliations": "Huazhong University of Science and Technology; Xidian University; Qiyuan Lab; Tsinghua University",
     "published": "2026-09-09",
-    "publication": "EuroSys 2027",
-    "publication_type": "Conference",
-    "publication_status": "Accepted",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
     "lineage": "04-moe-parallelism-communication",
     "topics": ["拡散言語モデル", "MoEサービング", "expert並列", "疎通信", "条件付き計算", "出力キャッシュ"],
     "importance": "自己回帰LLM向けの一forward単位の実行モデルをそのまま拡散言語モデルへ適用するのではなく、同じ位置を反復更新する『拡散ブロック』をシステム上の再利用単位として明示した点が重要である。expert候補集合、tokenの生存状態、expert並列通信payloadを同じブロック計画へ統合し、計算削減だけでなく通信量と中間メモリも同時に減らしているため、将来の拡散MoEサービング基盤の比較軸になる。",
@@ -41,9 +41,16 @@
       {"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},
       {"canonical_id":"arXiv:2505.11432","arxiv_id":"2505.11432"},
       {"canonical_id":"arXiv:2501.12162","arxiv_id":"2501.12162"},
-      {"canonical_id":"arXiv:2512.15745","arxiv_id":"2512.15745"}
+      {"canonical_id":"arXiv:2512.15745","arxiv_id":"2512.15745"},
+      {"canonical_id":"arXiv:2107.03374","arxiv_id":"2107.03374"},
+      {"canonical_id":"arXiv:2110.14168","arxiv_id":"2110.14168"},
+      {"canonical_id":"arXiv:2502.09992","arxiv_id":"2502.09992"},
+      {"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053"},
+      {"canonical_id":"arXiv:2302.13971","arxiv_id":"2302.13971"},
+      {"canonical_id":"arXiv:2307.09288","arxiv_id":"2307.09288"}
     ],
     "references_checked_at": "2026-09-12",
-    "references_source": "arxiv-html-reference-section"
+    "references_source": "primary-reference-section",
+    "references_total": 55
   }
 }
