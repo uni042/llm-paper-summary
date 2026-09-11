@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2507.19823-20260912-0152-v10-a1",
-  "job_id": "job-research-2737f1df0cf5be1d",
+  "attempt_id": "attempt-2407.15309-20260912-0158-v10-a1",
+  "job_id": "job-research-51b3f7936c4527fb",
   "data": {
-    "hardware": "Ubuntu 22.04、Intel Xeon 8358P CPU 2基、1TB RAM、NVIDIA A100 80GB GPU 8基のサーバ。400万トークンの最大長実験はLlama-3-8BをA100 80GB 1枚で実行する。",
-    "software": "PyTorch 2.5.1+cu121、HuggingFace Transformers 4.45.2。コードブック生成にはScikit-learnのMiniBatchKMeansを使用し、代表サンプル3件、最大200反復、バッチサイズ10,000でクラスタリングする。1024K窓のプリフィルではFlashAttention2も使用する。",
-    "methodology": "Llama-2-7B-32K-InstructとLlama-3-8B-Instruct-Gradient-1048kをLongBenchおよびNeedle-in-a-Haystackで評価する。比較対象は全注意、H2O、TOVA、DuoAttention、StreamingLLM。GPU KV予算を50%、25%、12.5%へ下げ、HCAttentionでは50%で値退避のみ、25%で値退避+g=64のキー量子化、12.5%でg=32を用いる。注意質量閾値は標準でτ=0.9。KV削除閾値、コードブック中心数、グループ数を変えた除去評価も行い、LongBench平均と各タスク、NIAH深さ・長さ方向の回収率、処理可能最大文脈長を確認する。",
-    "workloads": ["LongBench", "Needle-in-a-Haystack", "Llama-2-7B-32K-Instruct", "Llama-3-8B-Instruct-Gradient-1048k"],
-    "workload_details": "LongBenchでは単一文書QA、複数文書QA、要約、少数例学習、検索、コード補完などを含む。NIAHでは長い文脈の異なる深さへ針文を埋め、情報回収能力を可視化する。付録では異なる針文と、ブロック分割プリフィルを組み合わせた追加評価も提示する。",
-    "baselines": ["Full attention", "H2O", "TOVA", "DuoAttention", "StreamingLLM"],
-    "metrics": ["LongBench平均・各タスク性能", "NIAH回収性能", "GPU KVメモリ予算", "動的選択率", "最大処理可能文脈長"],
-    "scope": "主評価は品質とGPU KV容量削減を中心とし、デコードトークン毎秒、初回トークン時間、PCIe帯域実測、CPU利用率などサービング性能の詳細比較は示されていない。8 GPUサーバを実験基盤としているが最大長の主張は単一A100 80GBであり、多要求同時サービングのスループット評価ではない。量子化コードブックは代表データから事前生成するため、モデル・分布が変わった場合の再調整コストも別途必要になる。"
+    "hardware": "NVIDIA A100 80GB GPU 8基、Intel Xeon Platinum 8369B CPUを備えるサーバ。GPU間はNVLinkで接続する。",
+    "software": "FlexInferをCUDA低水準仮想メモリ管理APIとCPU側C/C++管理器で実装。比較はvLLM 0.4.2、FlashAttention 2.5.8、ページ対応FlashAttention、SGLang由来のTriton接頭辞プリフィルカーネルを使用する。",
+    "methodology": "評価は計算カーネル単体、単一生成、複数ターン会話、接頭辞共有、メモリ利用の五つを含む。モデルはYi-6B-200K、Yi-9B-32K、Yi-34B-32Kで、テンソル並列度はそれぞれ1、2、4。単一生成ではLV-Evalから6K〜8Kトークンの入力と2K〜4Kの出力を作る。複数ターンは各ターン2K入力・2K生成、接頭辞共有は12K共通接頭辞+4K固有入力+10トークン生成。注意カーネルではバッチサイズ、KV長、KVヘッド数、接頭辞比率を変化させ、vLLMページ化注意、ページ対応FlashAttention、通常FlashAttentionと比較する。",
+    "workloads": ["Yi-6B-200K", "Yi-9B-32K", "Yi-34B-32K", "LV-Eval由来単一生成", "SGLang合成複数ターン会話", "接頭辞共有"],
+    "workload_details": "Yi-6BはQヘッド32/KVヘッド4、Yi-9Bも32/4、Yi-34Bは56/8。カーネル既定設定はGQAでQヘッド32、KVヘッド4。単一生成は長い入出力を混在させ、複数ターン会話では共有接頭辞を少なくして再利用管理を評価する。",
+    "baselines": ["vLLM 0.4.2 PagedAttention", "Paged FlashAttention", "native FlashAttention", "SGLang Triton prefix-prefilling"],
+    "metrics": ["エンドツーエンド生成スループット", "注意カーネル遅延", "接頭辞プリフィル性能", "GPUメモリ使用量", "解放可能GPUメモリ"],
+    "scope": "評価はA100世代とYi系列を中心とし、H100/B200など新しいGPUや大規模クラスタ、実サービスの到着分布は直接評価していない。主な比較対象vLLMは0.4.2と当時のページ化注意実装であり、後年のカーネル改善との相対差は変わり得る。VMMのチャンク粒度やドライバ実装が異なる環境でも管理遅延が同程度に隠蔽できるかは追加検証が必要である。"
   }
 }
