@@ -7,6 +7,7 @@ on:
       - '.github/workflows/citation-graph-backfill.yml'
       - '.survey/scripts/citation_graph.py'
       - '.survey/scripts/backfill_citations.py'
+      - '.survey/scripts/normalize_paper_metadata.py'
       - '.survey/scripts/render_paper.py'
       - '.survey/scripts/assemble_research_record.py'
       - '.survey/tests/test_citation_graph.py'
@@ -101,6 +102,7 @@ jobs:
           python -m py_compile \
             .survey/scripts/citation_graph.py \
             .survey/scripts/backfill_citations.py \
+            .survey/scripts/normalize_paper_metadata.py \
             .survey/scripts/render_paper.py \
             .survey/scripts/assemble_research_record.py \
             .survey/scripts/survey.py
@@ -163,6 +165,9 @@ jobs:
             --graph-report .survey/reports/citation-graph-latest.json \
             --coverage-report .survey/reports/citation-coverage-latest.json
           python .survey/scripts/survey.py --root .survey build
+
+      - name: Normalize nullable metadata defaults
+        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
 
       - name: Audit metadata coverage
         id: metadata
