@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:37:15.259104+00:00",
+  "updated_at": "2026-09-11T02:46:00.791438+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,13 +3838,13 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T02:37:15.259104+00:00",
+      "last_recorded_at": "2026-09-11T02:46:00.791438+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
@@ -3895,6 +3895,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34555862947:1",
+          "recorded_at": "2026-09-11T02:46:00.791438+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34555862947",
+            "run_attempt": "1",
+            "source_sha": "e7304ede8413a061727af4c0054cf3231c27571f"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3919,6 +3933,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-5439ec0e0daf70c9",
+          "type": "research",
+          "canonical_id": "arXiv:2604.19769",
+          "title": "TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -3968,7 +3990,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 252,
       "paper_active_count_after": 252,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
