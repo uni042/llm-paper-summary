@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T09:42:09.085308+00:00",
+  "updated_at": "2026-09-11T09:47:35.513591+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6314,18 +6314,19 @@
     {
       "run_key": "2026-09-11T18:30:00+09:00",
       "first_recorded_at": "2026-09-11T09:32:11.982970+00:00",
-      "last_recorded_at": "2026-09-11T09:42:09.085308+00:00",
+      "last_recorded_at": "2026-09-11T09:47:35.513591+00:00",
       "signals": [
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
-        "new_jobs": 0,
-        "new_papers": 2,
+        "new_jobs": 1,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -6372,6 +6373,22 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34585918579:1",
+          "recorded_at": "2026-09-11T09:47:35.513591+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34585918579",
+            "run_attempt": "1",
+            "source_sha": "e1a886e4a9f735c879d81ec3cc9c3e3294973593"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6398,17 +6415,34 @@
           "title": "Parallax: Efficient LLM Inference Service over Decentralized Environment",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-2f9f8493748da189",
+          "type": "research",
+          "canonical_id": "arXiv:2410.03065",
+          "title": "Compute Or Load KV Cache? Why Not Both?",
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-12f4462c0de876df",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2508.17219",
-        "arXiv:2509.26182"
+        "arXiv:2509.26182",
+        "arXiv:2410.03065"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 305,
-      "paper_active_count_after": 308,
+      "paper_active_count_after": 309,
       "last_successful_action": "paper_materialized"
     }
   ]
