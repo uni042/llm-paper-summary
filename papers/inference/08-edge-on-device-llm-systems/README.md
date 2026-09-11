@@ -27,8 +27,8 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2024-08 | [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md) | ✓ | 9 | GPUには少数のexpert用slotだけを置き、RAM上の実expert重みを必要に応じてslotへ入れ替えることで、指定したmemory budget内で既存MoEを動かす近似方式。 |
-| 2024-06 | [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md) | [✓](https://github.com/Tiiny-AI/PowerInfer) | 4 | 使われやすい部分だけをスマホの高速メモリへ置き、CPU・NPU・フラッシュストレージを役割分担させて大規模LLMを動かす推論システム。 |
+| 2024-08 | [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md) | ✓ | 10 | GPUには少数のexpert用slotだけを置き、RAM上の実expert重みを必要に応じてslotへ入れ替えることで、指定したmemory budget内で既存MoEを動かす近似方式。 |
+| 2024-06 | [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md) | [✓](https://github.com/Tiiny-AI/PowerInfer) | 6 | 使われやすい部分だけをスマホの高速メモリへ置き、CPU・NPU・フラッシュストレージを役割分担させて大規模LLMを動かす推論システム。 |
 | 2025-04 | [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md) | ✓ | 1 | native routerが選んだexpertごとにINT2/3/4のどれで実行するかを追加routerで決め、deviceごとのSSD読込・GPU計算時間に合わせてweight転送と計算を重ねるedge向け方式。 |
 
 ### その他
