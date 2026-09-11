@@ -5,7 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
+
+
+def raw_path_bytes(path: Path) -> bytes:
+    if path.is_symlink():
+        return os.readlink(path).encode("utf-8")
+    return path.read_bytes()
 
 
 def blob_sha(data: bytes) -> str:
@@ -21,14 +28,14 @@ def main() -> int:
     root = Path(args.root).resolve()
     files = []
     for path in sorted(root.rglob("*")):
-        if not path.is_file():
+        if not (path.is_symlink() or path.is_file()):
             continue
         rel = path.relative_to(root)
         if ".git" in rel.parts or "__pycache__" in rel.parts or ".venv" in rel.parts:
             continue
         if path.name.endswith((".pyc", ".tmp")):
             continue
-        files.append({"path": rel.as_posix(), "sha": blob_sha(path.read_bytes())})
+        files.append({"path": rel.as_posix(), "sha": blob_sha(raw_path_bytes(path))})
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(
