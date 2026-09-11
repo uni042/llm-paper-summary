@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-51b3f7936c4527fb",
+  "type": "research",
+  "parent_job_id": "job-ffdf36811f2a8f46",
+  "priority": 76,
+  "canonical_id": "arXiv:2407.15309",
+  "title": "vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving",
+  "source_url": "https://arxiv.org/abs/2407.15309",
+  "paper_path": "papers/inference/05-kv-cache-memory-management/2024-2407.15309-vtensor-virtual-memory-management.md",
+  "selection_reason": "GPU仮想メモリ管理を用いてKVテンソルの物理配置と計算カーネルを分離し、ページ方式で残るメモリ操作・断片化・カーネル結合の制約を緩和する。平均1.86倍、マルチターンで最大2.42倍の高速化と、vLLM比でA100メモリ約57GBの解放を報告する。KVキャッシュ管理の基盤抽象化として重要な未収録候補である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T16:56:11+00:00",
+  "artifact_transport": "structured_record_v10"
+}
