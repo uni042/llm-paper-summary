@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2407.15309-20260912-0158-v10-a1",
-  "job_id": "job-research-51b3f7936c4527fb",
+  "attempt_id": "attempt-2609.09748-20260912-0211-v10-a1",
+  "job_id": "job-research-ea6f0f5305a34c22",
   "data": {
-    "hardware": "NVIDIA A100 80GB GPU 8基、Intel Xeon Platinum 8369B CPUを備えるサーバ。GPU間はNVLinkで接続する。",
-    "software": "FlexInferをCUDA低水準仮想メモリ管理APIとCPU側C/C++管理器で実装。比較はvLLM 0.4.2、FlashAttention 2.5.8、ページ対応FlashAttention、SGLang由来のTriton接頭辞プリフィルカーネルを使用する。",
-    "methodology": "評価は計算カーネル単体、単一生成、複数ターン会話、接頭辞共有、メモリ利用の五つを含む。モデルはYi-6B-200K、Yi-9B-32K、Yi-34B-32Kで、テンソル並列度はそれぞれ1、2、4。単一生成ではLV-Evalから6K〜8Kトークンの入力と2K〜4Kの出力を作る。複数ターンは各ターン2K入力・2K生成、接頭辞共有は12K共通接頭辞+4K固有入力+10トークン生成。注意カーネルではバッチサイズ、KV長、KVヘッド数、接頭辞比率を変化させ、vLLMページ化注意、ページ対応FlashAttention、通常FlashAttentionと比較する。",
-    "workloads": ["Yi-6B-200K", "Yi-9B-32K", "Yi-34B-32K", "LV-Eval由来単一生成", "SGLang合成複数ターン会話", "接頭辞共有"],
-    "workload_details": "Yi-6BはQヘッド32/KVヘッド4、Yi-9Bも32/4、Yi-34Bは56/8。カーネル既定設定はGQAでQヘッド32、KVヘッド4。単一生成は長い入出力を混在させ、複数ターン会話では共有接頭辞を少なくして再利用管理を評価する。",
-    "baselines": ["vLLM 0.4.2 PagedAttention", "Paged FlashAttention", "native FlashAttention", "SGLang Triton prefix-prefilling"],
-    "metrics": ["エンドツーエンド生成スループット", "注意カーネル遅延", "接頭辞プリフィル性能", "GPUメモリ使用量", "解放可能GPUメモリ"],
-    "scope": "評価はA100世代とYi系列を中心とし、H100/B200など新しいGPUや大規模クラスタ、実サービスの到着分布は直接評価していない。主な比較対象vLLMは0.4.2と当時のページ化注意実装であり、後年のカーネル改善との相対差は変わり得る。VMMのチャンク粒度やドライバ実装が異なる環境でも管理遅延が同程度に隠蔽できるかは追加検証が必要である。"
+    "hardware": "単一nodeにNVIDIA H100-80GB SXM5 GPU 8基を搭載し、GPU間をNVLink/NVSwitchで接続する。peer bandwidthは900GB/s。CPUはAMD EPYC 9654を2基、host memoryはDDR5 1.5TB。",
+    "software": "CUDA 12.4、PyTorch 2.4、NCCL 2.22、Triton 3.0。EpochはvLLM風のfused-MoE runtimeとexpert parallelismを基盤に実装し、baselineは投稿前時点の各公式releaseを使用する。",
+    "methodology": "3種類のopen-weight block-diffusion MoEを同じ8 GPU配置で比較し、GSM8K、HumanEval、MGSM、MT-Benchをgreedy threshold decodingで実行する。commit thresholdは0.95、各blockは最大64 refinement stepで、全位置がdecodeされた時点でearly exitする。batch size 32、128、256、512でエンドツーエンド時間を測り、online実験ではPoisson到着を6〜26 req/sへ変化させてP95 inter-token latencyを測る。offline計測は20 warmup request後に100 requestを計測し、異なるrandom seedの3独立runの標準偏差をerror barとする。品質評価ではGSM8K、HumanEval、MGSMのaccuracyとMT-Bench scoreを使い、decoded-cache refresh周期も1、2、5、10、20へ変化させて品質とiteration時間の交換条件を調べる。",
+    "workloads": ["LLaDA-MoE 1B active / 7B total", "LLaDA2.0-mini 1.4B active / 16B total", "LLaDA2.0-Flash 6.1B active / 100B total", "GSM8K", "HumanEval", "MGSM", "MT-Bench"],
+    "workload_details": "3モデルはいずれもcontext 4096 token、既定block size 32のblock-diffusion MoEである。全モデルをDP=1、TP=8、EP=8、SP=8として8 GPUに1 replica配置する。TPとEPは同じGPU集合上の整列groupであり、EPはexpert所有・dispatch/combine、TP/SPはdense tensor parallelismとsequence shardを担当する。",
+    "baselines": ["dInfer without cache", "dInfer with per-position cache", "SGLang block-diffusion support", "Epoch full compute", "Epoch without Expert Atlas", "Epoch without Liveness-Shard Parallelism"],
+    "metrics": ["エンドツーエンドrequest execution time", "iteration latency", "forward component latency", "P95 inter-token latency", "relative computation overhead", "relative memory-access overhead", "relative communication overhead", "task accuracy", "MT-Bench score", "OOM可否"],
+    "scope": "評価は単一nodeの8基H100と3種類のLLaDA系block-diffusion MoEへ限定される。multi-node expert parallelism、PCIe主体の低帯域構成、他のdiffusion decode policy、自己回帰MoEには直接一般化を検証していない。batch 32の軽い条件ではblock-plan bookkeepingにより強いcache baselineとの差が小さく、online低負荷6〜11 req/sではSGLangのP95 ITLがわずかに良い。近似設定ではexpert support制限とstable-decoded output cacheの品質影響を実測しているが、全prompt・全modelで意味的同一性を保証するものではない。"
   }
 }
