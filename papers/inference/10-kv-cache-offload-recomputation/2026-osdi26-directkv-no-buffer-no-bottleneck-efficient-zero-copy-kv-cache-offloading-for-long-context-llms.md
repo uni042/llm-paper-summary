@@ -41,6 +41,43 @@ sources:
 - https://www.usenix.org/conference/osdi26/presentation/luo
 - https://github.com/shutianluo/DirectKV
 implementation_status: official-code-available
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: arXiv:2507.03153
+  arxiv_id: '2507.03153'
+- canonical_id: arXiv:2403.11421
+  arxiv_id: '2403.11421'
+- canonical_id: arXiv:2411.01142
+- canonical_id: arXiv:2001.08361
+  arxiv_id: '2001.08361'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2401.02669
+  arxiv_id: '2401.02669'
+- canonical_id: arXiv:1805.02867
+  arxiv_id: '1805.02867'
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2411.09317
+  arxiv_id: '2411.09317'
+- canonical_id: DOI:10.1145/3688351.3689164
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2403.01164
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 59
 ---
 
 # No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs

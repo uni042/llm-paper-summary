@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-11T09:05:41.779074+00:00",
+  "checked_at": "2026-09-11T09:17:32.349949+00:00",
   "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 1187,
-  "checked_file_count": 1187,
+  "inventory_file_count": 1200,
+  "checked_file_count": 1200,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -14,7 +14,7 @@
     "all_json_yaml",
     "markdown_file_links",
     "symlink_targets",
-    "frozen_training",
+    "training_membership",
     "paper_metadata_and_identity",
     "maintenance_cycle"
   ],
@@ -29,113 +29,193 @@
   "findings": [
     {
       "code": "paper_missing_metadata",
-      "path": "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md",
-      "detail": "code"
+      "path": "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+      "detail": "last_audited"
     },
     {
       "code": "paper_missing_metadata",
-      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md",
-      "detail": "code"
-    },
-    {
-      "code": "frozen_training_changed",
       "path": "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "audit_version"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2025-2512.17570-greedysnake-accelerating-ssd-offloaded-llm-training-with-efficient-scheduling-an.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md",
+      "detail": "last_audited"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
-      "path": "papers/training/01-training-offload-memory-systems/README.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "code": "paper_missing_metadata",
+      "path": "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md",
+      "detail": "audit_version"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md",
+      "detail": "audit_version"
+    },
+    {
+      "code": "paper_missing_metadata",
       "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
     },
     {
-      "code": "frozen_training_changed",
-      "path": "papers/training/02-distributed-heterogeneous-moe-training/README.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "code": "paper_missing_metadata",
+      "path": "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md",
+      "detail": "audit_version"
     },
     {
-      "code": "frozen_training_changed",
+      "code": "paper_missing_metadata",
       "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
-      "detail": "Read-only baseline differs; do not rewrite automatically"
+      "detail": "last_audited"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/training/03-pipeline-parallel-modular-training/2026-2608.07974-zerolock-concurrent-memory-efficient-llm-training-via-modular-update-decoupling.md",
+      "detail": "audit_version"
     }
   ]
 }

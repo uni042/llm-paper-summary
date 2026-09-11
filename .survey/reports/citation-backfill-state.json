@@ -100,8 +100,8 @@
     "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md": {
       "status": "blocked",
       "source_fingerprint": "6905f0708a63e5dea5488e5afd73b12f808b40e15f8aa2494cf4a6a8a6867a25",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:25:43+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-09-11T09:16:35+00:00"
     },
     "papers/inference/01-offload-hierarchical-memory/2025-2501.01792-throughput-oriented-llm-inference-via-kv-activation-hybrid-caching-with-a-single-gpu.md": {
       "status": "complete",
@@ -474,20 +474,20 @@
     "papers/inference/03-expert-prefetch/2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md": {
       "status": "blocked",
       "source_fingerprint": "0ff2140fc263ba0c7e8060c9831a570ea9e63ae88406252b42b750688103a10b",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:26:37+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-09-11T09:16:36+00:00"
     },
     "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md": {
       "status": "blocked",
       "source_fingerprint": "bc6d4fe74408960b12bb8c8b05736a657dd09ff47aa610b45b3e5800ca5deb7f",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:26:38+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-09-11T09:16:38+00:00"
     },
     "papers/inference/03-expert-prefetch/2026-firm-moe-fine-grained-expert-decomposition-for-resource-adaptive-moe-inference.md": {
       "status": "blocked",
       "source_fingerprint": "214fd990bb459d409bd2bcfe6a105e9b3c525cefa59bcfe823c7a3f7b4fd1816",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:26:38+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-09-11T09:16:38+00:00"
     },
     "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md": {
       "status": "complete",
@@ -506,10 +506,13 @@
       "checked_at": "2026-09-11T08:26:40+00:00"
     },
     "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "1c625a323c7fba9154f35b6fa0bfac79614371664234a7d4ac007d18783f68d4",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:26:41+00:00"
+      "references_total": 84,
+      "normalized_references": 32,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/03469b1a66e351b18272be23baf3b809-Paper-Conference.pdf",
+      "checked_at": "2026-09-11T09:16:41+00:00"
     },
     "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md": {
       "status": "complete",
@@ -544,10 +547,13 @@
       "checked_at": "2026-09-11T08:26:45+00:00"
     },
     "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "9208ce425d3d7986a9e8286b976a426d751a2253a384db30466621cb34a81f1b",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:26:45+00:00"
+      "references_total": 1,
+      "normalized_references": 1,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://aclanthology.org/2025.findings-acl.377.pdf",
+      "checked_at": "2026-09-11T09:16:45+00:00"
     },
     "papers/inference/04-moe-expert-offload-caching/2026-2606.26607-moebius-runtime-parallelism-switch.md": {
       "status": "complete",
@@ -622,10 +628,13 @@
       "checked_at": "2026-09-11T08:27:00+00:00"
     },
     "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "cd8e25c7d01135f57ceac6164f35b2a0ae1e5b5f4465cfa80a3b1c61a563324c",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-11T08:27:02+00:00"
+      "references_total": 38,
+      "normalized_references": 8,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://arxiv.org/pdf/2608.00577.pdf",
+      "checked_at": "2026-09-11T09:16:50+00:00"
     },
     "papers/inference/04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md": {
       "status": "complete",
@@ -1564,10 +1573,13 @@
       "checked_at": "2026-09-11T08:29:20+00:00"
     },
     "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "7c0978f9464464804d661742b6547cb53927260ebd23bd7d131cf2b6cef9244c",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-11T08:29:22+00:00"
+      "references_total": 47,
+      "normalized_references": 23,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://arxiv.org/pdf/2607.27187.pdf",
+      "checked_at": "2026-09-11T09:16:53+00:00"
     },
     "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md": {
       "status": "complete",
@@ -1634,10 +1646,13 @@
       "checked_at": "2026-09-11T08:29:37+00:00"
     },
     "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "4d3c9a59eae6f2ac9772c5e61a60256b70d1735de2344142f918eb31c5df86f4",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:29:38+00:00"
+      "references_total": 59,
+      "normalized_references": 21,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://www.usenix.org/system/files/osdi26-luo.pdf",
+      "checked_at": "2026-09-11T09:16:57+00:00"
     },
     "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md": {
       "status": "complete",
@@ -1648,10 +1663,13 @@
       "checked_at": "2026-09-11T08:29:39+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "d7cc346bfece125b91ae87c6c39f9e7674a6eaa68b8c1f3a2d3a4d56a93724fa",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-09-11T08:29:40+00:00"
+      "references_total": 67,
+      "normalized_references": 14,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://www.usenix.org/system/files/osdi22-yu.pdf",
+      "checked_at": "2026-09-11T09:16:59+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md": {
       "status": "complete",
@@ -2006,10 +2024,13 @@
       "checked_at": "2026-09-11T08:30:42+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "3909bc63908bd812bfcef1ebf873968a76d2af9a7019780d410a7995878dc4e0",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-11T08:30:44+00:00"
+      "references_total": 24,
+      "normalized_references": 11,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://arxiv.org/pdf/2606.04415.pdf",
+      "checked_at": "2026-09-11T09:17:02+00:00"
     },
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md": {
       "status": "complete",
@@ -2284,10 +2305,13 @@
       "checked_at": "2026-09-11T08:31:25+00:00"
     },
     "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "471bddff675768b6c5f4a3b03d97915d388a3b0a09b7ffa247c5b947891ced25",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: arXiv source archive contained no compiled/reference-section bibitems)",
-      "checked_at": "2026-09-11T08:31:26+00:00"
+      "references_total": 391,
+      "normalized_references": 168,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://arxiv.org/pdf/2505.01658.pdf",
+      "checked_at": "2026-09-11T09:17:10+00:00"
     },
     "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md": {
       "status": "complete",
@@ -2380,8 +2404,8 @@
     "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md": {
       "status": "blocked",
       "source_fingerprint": "2f2ecbf23d9082baed214eb6a96ae23c83b33a4b1bf5b065127e4a994a48bf8f",
-      "error": "ValueError: arXiv HTML failed (HTTPError: HTTP Error 404: Not Found); source fallback failed (ValueError: unable to download arXiv source archive: https://export.arxiv.org/e-print/2602.04816: HTTPError: HTTP Error 404: Not Found | https://arxiv.org/e-print/2602.04816: HTTPError: HTTP Error 404: Not Found)",
-      "checked_at": "2026-09-11T08:31:47+00:00"
+      "error": "PDF fallback failed: https://arxiv.org/pdf/2602.04816.pdf: HTTPError: HTTP Error 404: Not Found",
+      "checked_at": "2026-09-11T09:17:11+00:00"
     },
     "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md": {
       "status": "complete",
@@ -2464,5 +2488,5 @@
       "checked_at": "2026-09-11T09:16:04+00:00"
     }
   },
-  "updated_at": "2026-09-11T09:16:23+00:00"
+  "updated_at": "2026-09-11T09:17:14+00:00"
 }

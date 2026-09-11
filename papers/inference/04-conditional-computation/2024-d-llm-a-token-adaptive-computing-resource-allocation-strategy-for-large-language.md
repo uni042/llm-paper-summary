@@ -42,6 +42,74 @@ publication_type: conference paper
 sources:
 - https://proceedings.neurips.cc/paper_files/paper/2024/hash/03469b1a66e351b18272be23baf3b809-Abstract-Conference.html
 implementation_status: official-code-available
+references:
+- canonical_id: arXiv:2012.13255
+  arxiv_id: '2012.13255'
+- canonical_id: arXiv:2012.15701
+  arxiv_id: '2012.15701'
+- canonical_id: arXiv:1308.3432
+  arxiv_id: '1308.3432'
+- canonical_id: arXiv:2104.08691
+  arxiv_id: '2104.08691'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2405.16587
+  arxiv_id: '2405.16587'
+- canonical_id: arXiv:2402.09398
+  arxiv_id: '2402.09398'
+- canonical_id: arXiv:2403.04643
+  arxiv_id: '2403.04643'
+- canonical_id: arXiv:2212.10650
+  arxiv_id: '2212.10650'
+- canonical_id: arXiv:2403.02181
+  arxiv_id: '2403.02181'
+- canonical_id: arXiv:2304.15010
+  arxiv_id: '2304.15010'
+- canonical_id: arXiv:2002.08307
+  arxiv_id: '2002.08307'
+- canonical_id: arXiv:2104.06599
+  arxiv_id: '2104.06599'
+- canonical_id: arXiv:2110.04366
+  arxiv_id: '2110.04366'
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2402.02834
+  arxiv_id: '2402.02834'
+- canonical_id: arXiv:2203.07259
+  arxiv_id: '2203.07259'
+- canonical_id: arXiv:2109.11295
+  arxiv_id: '2109.11295'
+- canonical_id: arXiv:2210.06726
+  arxiv_id: '2210.06726'
+- canonical_id: arXiv:2101.00190
+  arxiv_id: '2101.00190'
+- canonical_id: arXiv:2402.09353
+  arxiv_id: '2402.09353'
+- canonical_id: arXiv:2110.07602
+  arxiv_id: '2110.07602'
+- canonical_id: arXiv:2402.02750
+  arxiv_id: '2402.02750'
+- canonical_id: arXiv:2403.03853
+  arxiv_id: '2403.03853'
+- canonical_id: arXiv:2404.02258
+  arxiv_id: '2404.02258'
+- canonical_id: arXiv:1908.09355
+  arxiv_id: '1908.09355'
+- canonical_id: arXiv:2009.14167
+  arxiv_id: '2009.14167'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2205.12410
+  arxiv_id: '2205.12410'
+- canonical_id: arXiv:2206.01861
+  arxiv_id: '2206.01861'
+- canonical_id: arXiv:2105.11618
+  arxiv_id: '2105.11618'
+- canonical_id: arXiv:2402.11700
+  arxiv_id: '2402.11700'
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 84
 ---
 
 # D-LLM: A トークン 適応型 Computing Resource Allocation Strategy for Large Language Models

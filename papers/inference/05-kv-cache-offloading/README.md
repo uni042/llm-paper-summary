@@ -15,7 +15,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2025-07 | [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md) | ✓ | 1 | 長文LLM推論でKVキャッシュがGPUメモリを超えると、CPUへ退避したKVを注意計算のたびにPCIe経由でGPUへ戻す方式は転送待ちがボトルネックになる。HGCAは最近のKVをGPUに残して密な注意計算を行い、古いKVはCPUメモリ上でヘッド単位に重要項目だけを選んで疎な注意計算を実行する。CPUとGPUの部分結果はlog-sum-exp統合で合成し、生KV全体ではなく小さな部分出力だけをPCIe転送する。A6000とXeonの実機で、より長い文脈・大きなバッチをGPUメモリ不足なしで処理し、既存のKV退避・疎注意方式より高い拡張性を示す。 |
+| 2025-07 | [HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference](2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md) | ✓ | 2 | 長文LLM推論でKVキャッシュがGPUメモリを超えると、CPUへ退避したKVを注意計算のたびにPCIe経由でGPUへ戻す方式は転送待ちがボトルネックになる。HGCAは最近のKVをGPUに残して密な注意計算を行い、古いKVはCPUメモリ上でヘッド単位に重要項目だけを選んで疎な注意計算を実行する。CPUとGPUの部分結果はlog-sum-exp統合で合成し、生KV全体ではなく小さな部分出力だけをPCIe転送する。A6000とXeonの実機で、より長い文脈・大きなバッチをGPUメモリ不足なしで処理し、既存のKV退避・疎注意方式より高い拡張性を示す。 |
 
 ### その他
 

@@ -44,6 +44,38 @@ publication_type: プレプリント
 sources:
 - https://www.usenix.org/conference/osdi22/presentation/yu
 implementation: 公式実装URLは一次資料で確認できず
+references:
+- canonical_id: arXiv:2001.09977
+  arxiv_id: '2001.09977'
+- canonical_id: arXiv:2112.10684
+  arxiv_id: '2112.10684'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2204.02311
+  arxiv_id: '2204.02311'
+- canonical_id: arXiv:2112.06905
+  arxiv_id: '2112.06905'
+- canonical_id: arXiv:2203.15556
+  arxiv_id: '2203.15556'
+- canonical_id: arXiv:2001.08361
+  arxiv_id: '2001.08361'
+- canonical_id: arXiv:2104.12470
+  arxiv_id: '2104.12470'
+- canonical_id: arXiv:2112.11446
+  arxiv_id: '2112.11446'
+- canonical_id: arXiv:2201.05596
+  arxiv_id: '2201.05596'
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2201.11990
+  arxiv_id: '2201.11990'
+- canonical_id: arXiv:2203.00386
+  arxiv_id: '2203.00386'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 67
 ---
 
 # Orca: A Distributed Serving System for Transformer-Based Generative Models

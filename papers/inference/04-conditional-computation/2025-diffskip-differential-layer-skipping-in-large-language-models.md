@@ -38,6 +38,12 @@ publication_type: conference paper
 sources:
 - https://aclanthology.org/2025.findings-acl.377/
 implementation_status: official-code-not-confirmed
+references:
+- canonical_id: ACL:2024.acl-long.681
+  arxiv_id: '2310.10449'
+references_checked_at: '2026-09-11'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # DiffSkip: Differential 層 Skipping in Large Language Models
