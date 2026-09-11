@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T22:33:26.267737+00:00",
+  "updated_at": "2026-09-11T22:35:15.529056+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -7768,16 +7768,16 @@
     {
       "run_key": "2026-09-12T07:30:00+09:00",
       "first_recorded_at": "2026-09-11T22:31:50.300157+00:00",
-      "last_recorded_at": "2026-09-11T22:33:26.267737+00:00",
+      "last_recorded_at": "2026-09-11T22:35:15.529056+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -7809,6 +7809,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34654596363:1",
+          "recorded_at": "2026-09-11T22:35:15.529056+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34654596363",
+            "run_attempt": "1",
+            "source_sha": "4903ad7bd3c828adade0063a9260f0b08052d9cf"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7822,6 +7836,14 @@
         },
         {
           "job_id": "job-27185df551e42273",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e3bba266dd7f2f89",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -7843,12 +7865,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-b2e07ae8b3adf818",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.03036",
+          "title": "LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0730JST-discovery-job-6dc13d71f1f5bd2b.json",
-        ".survey/work-queue/results/20260912T0732JST-discovery-job-27185df551e42273.json"
+        ".survey/work-queue/results/20260912T0732JST-discovery-job-27185df551e42273.json",
+        ".survey/work-queue/results/20260912T0734JST-discovery-job-e3bba266dd7f2f89.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 321,
