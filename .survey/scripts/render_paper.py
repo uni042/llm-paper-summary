@@ -68,6 +68,53 @@ def render_result(item: dict[str, Any]) -> str:
     return f"- {head}" if head else ""
 
 
+def representative_result_text(item: Any) -> str:
+    """Turn the first key result into a self-contained overview sentence."""
+    if not isinstance(item, dict):
+        return ""
+    metric = text(item.get("metric"))
+    value = text(item.get("value"))
+    baseline = text(item.get("baseline"))
+    condition = text(item.get("condition"))
+    interpretation = text(item.get("interpretation"))
+    if not (metric and value):
+        return ""
+
+    sentence = "代表結果として、"
+    sentence += metric
+    if condition:
+        sentence += f"は{condition}で"
+    else:
+        sentence += "は"
+    if baseline:
+        sentence += f"{baseline}に対して"
+    sentence += value.rstrip("。") + "。"
+    if interpretation:
+        sentence += interpretation.rstrip("。") + "。"
+    return sentence
+
+
+def build_overview(meta: dict[str, Any], pm: dict[str, Any], rs: dict[str, Any]) -> str:
+    """Build an overview that always exposes method intent and a headline result."""
+    parts: list[str] = []
+    base = text(meta.get("overview") or meta.get("summary"))
+    novelty = text(pm.get("novelty"))
+    key_results = rs.get("key_results") or []
+    headline = representative_result_text(key_results[0]) if key_results else ""
+
+    for value in (base, novelty, headline):
+        value = value.strip()
+        if not value:
+            continue
+        joined = "\n\n".join(parts)
+        if value in joined:
+            continue
+        if headline and value == headline and text(key_results[0].get("value")) in joined:
+            continue
+        parts.append(value)
+    return "\n\n".join(parts)
+
+
 def section(title: str, body: str) -> str:
     body = body.strip()
     return f"## {title}\n{body}\n\n" if body else ""
@@ -143,8 +190,7 @@ def render_paper(record: dict[str, Any]) -> str:
 
     parts = ["\n".join(front)]
     parts.append(section("書誌情報", "\n".join(bib)))
-    if meta.get("overview"):
-        parts.append(section("概要", text(meta["overview"])))
+    parts.append(section("概要", build_overview(meta, pm, rs)))
     if pm.get("problem"):
         parts.append(section("問題設定", text(pm["problem"])))
     if pm.get("novelty"):
