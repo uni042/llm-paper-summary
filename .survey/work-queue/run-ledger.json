@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:34:39.474255+00:00",
+  "updated_at": "2026-09-11T02:36:12.266192+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3838,7 +3838,7 @@
     {
       "run_key": "2026-09-11T11:30:00+09:00",
       "first_recorded_at": "2026-09-11T02:34:39.474255+00:00",
-      "last_recorded_at": "2026-09-11T02:34:39.474255+00:00",
+      "last_recorded_at": "2026-09-11T02:36:12.266192+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3846,9 +3846,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 2,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3867,6 +3867,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34555230723:1",
+          "recorded_at": "2026-09-11T02:36:12.266192+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34555230723",
+            "run_attempt": "1",
+            "source_sha": "01b649a719fe12c35df2f89dd549546dab516ca2"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3875,6 +3889,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.11521",
           "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-34d58f798d6809bc",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -3886,10 +3908,19 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-23004462feabf795",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260911T1136JST-discovery-34d58f798d6809bc.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 252,
       "paper_active_count_after": 252,
