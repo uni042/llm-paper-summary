@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b18cb287a414a209",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.19593",
+      "title": "Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption",
+      "source_url": "https://arxiv.org/abs/2605.19593",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19593-multi-model-offloading-preemption-schedulers.md",
+      "priority": 86,
+      "reason": "複数LLMを共有GPU群で切り替えて配信する際のCPU-GPU層オフロードとプリエンプションを、モデル種類・系列長・相互接続帯域を振って実機計測する研究。オフロード率に対するデコード性能低下が線形ではなくモデル依存で、小型モデルほどGPU常駐率低下へ敏感な場合があること、プリエンプションではKVキャッシュ転送よりモデル状態の再ロードが主要コストになり得ることを示す。単一モデル向けの一般則では捉えにくい『モデル固有のオフロード感度』をスケジューラ入力として扱う必要性を整理しており、既存の階層メモリ・オフロード研究を複数モデル運用へ接続する実証的な設計資料として価値が高い。"
+    }
+  ]
+}
