@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-75f1caf8613a10d5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.21626",
+      "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.21626",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21626-multi-layer-scheduling-moe-reasoning.md",
+      "priority": 78,
+      "reason": "MoE推論を要求・エンジン・専門家の3階層で同時に扱うスケジューリング研究。要求層では最短ジョブ優先や優先度エージング、エンジン層では接頭辞負荷・KVキャッシュ利用率・利用者の粘着性を使う負荷分散、専門家層ではホットスポット緩和と層間依存を考慮した配置を扱う。単一のexpert cache/prefetchではなくサービング全体の多階層制御を対象とし、vLLM比較でTTFT最大17.8%、TPOT最大13.3%低減を報告しているため、MoEスケジューリング系の比較対象として有用。"
+    }
+  ]
+}
