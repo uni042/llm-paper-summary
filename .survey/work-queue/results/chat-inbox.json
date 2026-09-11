@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-66b62d117037ed1d",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.21257-calvo-network-aware-kv-loading-serving.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2603.21257.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-2e8b9d869ab4ec81",
+  "validation_error": "ValueError: problem_method.components[2].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T17:28:41+00:00"
 }
