@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 109,
-      "ready": 1
+      "completed": 110
     },
     "audit": {
       "completed": 6
@@ -10,22 +9,47 @@
     "research": {
       "completed": 97,
       "superseded": 42,
-      "deferred": 3
+      "deferred": 3,
+      "ready": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-7024bb6bb516bd83",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-3b2401327aaa2bdc",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2608.01891",
+      "title": "Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling",
+      "source_url": "https://arxiv.org/abs/2608.01891",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-f8061556bf80aa54",
+      "type": "research",
+      "lane": null,
+      "priority": 73,
+      "canonical_id": "arXiv:2607.26491",
+      "title": "LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.26491",
+      "paper_path": "papers/inference/09-attention-kernel-serving-optimization/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-17d6f500f90216a3",
+      "type": "research",
+      "lane": null,
+      "priority": 66,
+      "canonical_id": "arXiv:2508.16449",
+      "title": "GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2508.16449",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T05:04:18+00:00"
+  "generated_at": "2026-09-11T05:06:10+00:00"
 }

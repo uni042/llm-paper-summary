@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-17d6f500f90216a3",
+  "type": "research",
+  "parent_job_id": "job-7024bb6bb516bd83",
+  "priority": 66,
+  "canonical_id": "arXiv:2508.16449",
+  "title": "GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving",
+  "source_url": "https://arxiv.org/abs/2508.16449",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16449-greenllm-slo-aware-dvfs-serving.md",
+  "selection_reason": "プリフィルとデコードで周波数感度が異なることを利用し、入力長別キュー、プリフィルの待ち行列を考慮した周波数選択、デコード中の軽量なフィードバック制御を組み合わせる。Alibaba/Azure追跡再生で既定GPU電力制御比最大34%の総エネルギー削減を、スループット低下なし・追加SLO違反3.5%未満で報告する。AFlexより一段粗い段階粒度の電力制御として比較軸になり、未収録の重要なエネルギー最適化研究である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T05:05:59+00:00",
+  "artifact_transport": "structured_record_v10"
+}

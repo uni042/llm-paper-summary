@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3b2401327aaa2bdc",
+  "type": "research",
+  "parent_job_id": "job-7024bb6bb516bd83",
+  "priority": 86,
+  "canonical_id": "arXiv:2608.01891",
+  "title": "Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling",
+  "source_url": "https://arxiv.org/abs/2608.01891",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md",
+  "selection_reason": "注意機構とFFNでは最適GPU周波数が異なるという観測から、両演算を分離したサービングで資源割当と演算子単位の動的電圧・周波数制御を共同最適化するAFlexを提案する。動的マイクロバッチ深度と適応バッチ化で分離パイプラインの空きを抑え、SGLang上のA800、Qwen3-32B、Mixtral-8x7B、実運用会話・コーディング追跡でSLOを維持しつつトークン当たりエネルギーを最大49%削減する。推論性能だけでなく電力制約を演算粒度で扱う最近のサービング研究として強い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T05:05:59+00:00",
+  "artifact_transport": "structured_record_v10"
+}
