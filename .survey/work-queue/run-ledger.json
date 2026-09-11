@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T16:48:16.700202+00:00",
+  "updated_at": "2026-09-11T16:49:59.738732+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6786,7 +6786,7 @@
     {
       "run_key": "2026-09-12T01:30:00+09:00",
       "first_recorded_at": "2026-09-11T16:34:49.056336+00:00",
-      "last_recorded_at": "2026-09-11T16:48:16.700202+00:00",
+      "last_recorded_at": "2026-09-11T16:49:59.738732+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -6795,9 +6795,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 7,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -6889,6 +6889,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34624178346:1",
+          "recorded_at": "2026-09-11T16:49:59.738732+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34624178346",
+            "run_attempt": "1",
+            "source_sha": "e308c6d1a7fd48f35366c5d5df413ea2136d4097"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -6939,6 +6953,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-cc882eea8b949779",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -6983,6 +7005,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-2737f1df0cf5be1d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.19823",
+          "title": "HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs"
         }
       ],
       "new_paper_ids": [
@@ -6993,7 +7022,8 @@
         ".survey/work-queue/results/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
         ".survey/work-queue/results/20260912T0141JST-discovery-c83cadf5c6444540.json",
         ".survey/work-queue/results/20260912T0146JST-discovery-3ac62172fb9e78c3.json",
-        ".survey/work-queue/results/20260912T0149JST-discovery-6cc60ed928024068.json"
+        ".survey/work-queue/results/20260912T0149JST-discovery-6cc60ed928024068.json",
+        ".survey/work-queue/results/20260912T0151JST-discovery-cc882eea8b949779.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 313,
