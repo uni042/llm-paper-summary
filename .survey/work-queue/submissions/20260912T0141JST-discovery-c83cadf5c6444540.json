@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-c83cadf5c6444540",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.24626",
+      "title": "SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.24626",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
+      "priority": 84,
+      "reason": "動的疎注意では選ばれないKVも将来の選択に備えて保持する必要があり、計算量を減らしてもHBM容量がバッチ並列度を制限する。SparseServeは未選択KVをCPUメモリへ階層化し、断片化を意識したGPU直接読出しとCPU補助書戻し、実時間ワーキングセットに応じたバッチ制御、層分割プリフィルを組み合わせる。長文サービングで平均初回トークン時間を最大9.26倍短縮し、生成スループットを最大3.14倍にすると報告しており、疎注意とKVオフロードを一体設計する重要な既存研究として未収録なら価値が高い。"
+    }
+  ]
+}
