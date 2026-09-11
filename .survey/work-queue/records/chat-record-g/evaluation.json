@@ -2,7 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-2605.00616-20260912-0230-v10-a1",
+  "job_id": "job-research-2e8b9d869ab4ec81",
+  "data": {
+    "hardware": "48 GBのRTX 8000とA40の2種類のGPUで実GPU配信とエミュレーションを比較した。RTX 8000環境はIntel Xeon Gold 5218、62 GiB RAM、PCIe Gen3 x16、Ubuntu 24.04、CUDA driver 590.48で、注意機構バックエンドはFlashInfer。A40環境はAMD EPYC級64C/128T、251 GiB RAM、PCIe Gen4 x16、Ubuntu 24.04コンテナ、CUDA driver 570.86で、FlashAttention 2を用いる。",
+    "software": "vLLM 0.18.1の標準オンライン配信設定を使い、プロファイル取得と評価で同じCLI設定を維持した。評価モデルはQwen3-4B、Qwen3-8B、Qwen3-14B、Llama-3.1-8B。接頭辞キャッシュ、分割入力処理、非同期スケジューリングはvLLM側で選択された標準経路を使う。",
+    "methodology": "公式のvllm bench serveとShareGPTワークロードを使い、各要求率につき2000プロンプトを投入した。原則として毎秒2、4、8、16、32要求のポアソン到着を用い、実GPUとエミュレーションで同じプロンプト、乱数種、要求率を使って比較する。主条件はRTX 8000上のQwen3-8Bで、モデル規模拡大、GPU変更、強いバースト到着、モデル系列変更、モデル規模縮小を1軸ずつ変えた計6条件を評価した。バースト条件ではガンマ分布の到着間隔を用い、形状係数0.25として変動を大きくした。KVキャッシュ容量差が結果へ混入しないよう、計測時のGPUブロック数を記録し、実機側とエミュレーション側の両方へ同じ値を明示指定した。",
+    "metrics": ["最初のトークンまでの時間（TTFT）", "出力1トークン当たり時間（TPOT）", "反復時間（ITL）", "エンドツーエンド遅延", "出力トークンスループット"],
+    "scope": "性能値は単一ノードのオンライン配信で、事前プロファイルと評価ワークロードの形状を一致させた条件に対する実GPU比較である。多GPU・多ノード、プロファイル取得時と大きく異なる要求分布、オフラインLLM()経路、生成品質は検証対象外であり、論文自身も将来課題としている。",
+    "profile_collection": "代表的な主条件のプロファイルは約5.9 MBのJSONで、約27.6万標本、約7300個の総トークン数・同時実行数バケットを含む。軽負荷から飽和域まで要求率を掃引し、高負荷域を密に計測した2回の乱数種付き掃引から収集し、GPU実時間で約3.5〜4.5時間を要した。"
+  }
 }
