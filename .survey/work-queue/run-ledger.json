@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T10:28:12.441489+00:00",
+  "updated_at": "2026-09-11T15:30:47.203125+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6722,6 +6722,66 @@
       "paper_active_count_before": 305,
       "paper_active_count_after": 313,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "2026-09-12T00:30:00+09:00",
+      "first_recorded_at": "2026-09-11T15:30:47.203125+00:00",
+      "last_recorded_at": "2026-09-11T15:30:47.203125+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34616506802:1",
+          "recorded_at": "2026-09-11T15:30:47.203125+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34616506802",
+            "run_attempt": "1",
+            "source_sha": "b284bc80990f4a2b7dbe377ee0dff83c2247e60f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-cadebf3fc3fe03cd",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-research-f740f1bd9a1b2025",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.07175",
+          "title": "Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260912T0030JST-discovery-cadebf3fc3fe03cd.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 313,
+      "paper_active_count_after": 313,
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
