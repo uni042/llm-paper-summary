@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-b2e07ae8b3adf818",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2608.03036.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-77e21695be29ff3e",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T22:48:41+00:00"
 }
