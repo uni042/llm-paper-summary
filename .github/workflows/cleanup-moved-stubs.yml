@@ -1,0 +1,119 @@
+name: Cleanup moved paper stubs
+
+on:
+  push:
+    branches: [mobile-paper-list-layout-20260911]
+    paths:
+      - '.github/workflows/cleanup-moved-stubs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: mobile-paper-list-layout-20260911
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Verify move targets and remove stubs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          repo = Path('.').resolve()
+          stubs = []
+          for family in ('inference', 'training', 'survey'):
+              root = repo / 'papers' / family
+              if not root.exists():
+                  continue
+              for path in root.rglob('*.md'):
+                  if path.name in {'README.md', 'comparison.md'}:
+                      continue
+                  text = path.read_text(encoding='utf-8', errors='ignore')
+                  if re.search(r'^#\s+Moved(?:\s|$)', text, flags=re.I | re.M):
+                      stubs.append(path)
+
+          print(f'MOVED_STUBS={len(stubs)}')
+          if len(stubs) != 6:
+              raise SystemExit(f'expected 6 moved stubs, found {len(stubs)}')
+
+          deleted_names = []
+          for stub in sorted(stubs):
+              text = stub.read_text(encoding='utf-8')
+              moved = re.search(r'^#\s+Moved.*?\]\(([^)]+)\)', text, flags=re.I | re.M | re.S)
+              if not moved:
+                  raise SystemExit(f'cannot find move target in {stub.relative_to(repo)}')
+              target = (stub.parent / moved.group(1)).resolve()
+              if not target.is_relative_to(repo) or not target.exists():
+                  raise SystemExit(f'missing move target for {stub.relative_to(repo)}: {moved.group(1)}')
+              target_text = target.read_text(encoding='utf-8', errors='ignore')
+              if re.search(r'^#\s+Moved(?:\s|$)', target_text, flags=re.I | re.M):
+                  raise SystemExit(f'move target is also a stub: {target.relative_to(repo)}')
+              print(f'REMOVE {stub.relative_to(repo)} -> {target.relative_to(repo)}')
+              deleted_names.append(stub.name)
+              stub.unlink()
+
+          (repo / '.survey' / 'tmp-deleted-stub-names.txt').write_text('\n'.join(deleted_names) + '\n', encoding='utf-8')
+          PY
+
+      - name: Rebuild derived indexes and clear obsolete moved-stub state
+        run: |
+          python .survey/scripts/survey.py --root .survey build
+          python - <<'PY'
+          from pathlib import Path
+          import json
+
+          p = Path('.survey/survey-state/paper-identity-index.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          data['ignored_moved_stubs'] = []
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          deleted = Path('.survey/tmp-deleted-stub-names.txt').read_text(encoding='utf-8').splitlines()
+          generated = [Path('README.md'), Path('papers/README.md'), Path('papers/inference/README.md'), Path('papers/training/README.md'), Path('papers/survey/README.md'), Path('papers/inference/comparison.md')]
+          generated += list(Path('papers').glob('*/*/README.md'))
+          leftovers = []
+          for path in generated:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8', errors='ignore')
+              for name in deleted:
+                  if name in text:
+                      leftovers.append(f'{path}: {name}')
+          if leftovers:
+              raise SystemExit('generated indexes still reference deleted stubs:\n' + '\n'.join(leftovers))
+          PY
+          rm -f .survey/tmp-deleted-stub-names.txt
+
+      - name: Verify repository behavior
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+          python .survey/scripts/audit_list_summary_quality.py --repo-root .
+
+      - name: Commit cleanup and regenerated indexes
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add -A papers .survey/survey-state/paper-identity-index.json
+          git add README.md
+          if git diff --cached --quiet; then
+            echo 'No cleanup changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: remove obsolete moved paper stubs'
+          git push origin HEAD:mobile-paper-list-layout-20260911
