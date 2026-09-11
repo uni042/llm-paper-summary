@@ -54,6 +54,24 @@ PRIMARY_PDF_OVERRIDES = {
     "AAAI:39106": "https://ojs.aaai.org/index.php/AAAI/article/download/39106/43068",
 }
 
+# Author-hosted copies are used only after the official publisher PDF fails.
+# The TwinPilots copy is hosted on co-author Song Jiang's university site and
+# carries the same title, authors and DOI as the ACM version.
+PRIMARY_PDF_FALLBACKS = {
+    "DOI:10.1145/3688351.3689164": [
+        "https://jiangs.utasites.cloud/pubs/papers/Yu24-TwinPilots.pdf",
+    ],
+}
+
+
+def primary_pdf_urls(canonical_id: str) -> list[str]:
+    urls: list[str] = []
+    official = PRIMARY_PDF_OVERRIDES.get(canonical_id)
+    if official:
+        urls.append(official)
+    urls.extend(PRIMARY_PDF_FALLBACKS.get(canonical_id, []))
+    return list(dict.fromkeys(urls))
+
 
 def bibtex_blocks(text: str) -> list[str]:
     """Split a BibTeX database into complete entry-sized text blocks."""
@@ -138,8 +156,8 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
 
         canonical = str(meta.get("canonical_id") or "").strip()
         aid = normalize_arxiv(meta.get("arxiv_id")) or normalize_arxiv(canonical)
-        has_override = canonical in PRIMARY_PDF_OVERRIDES
-        if not has_override and not aid:
+        pdf_urls = primary_pdf_urls(canonical)
+        if not pdf_urls and not aid:
             continue
         if limit > 0 and attempted >= limit:
             break
@@ -153,13 +171,14 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
         source_label = ""
         source_url = ""
 
-        if has_override:
-            source_url = PRIMARY_PDF_OVERRIDES[canonical]
+        for candidate in pdf_urls:
+            source_url = candidate
             try:
                 section = reference_section(pdf_text(source_url))
                 references, total = references_from_section(section, aliases, title_targets)
                 source_label = "primary-pdf-reference-section"
                 success = True
+                break
             except Exception as exc:
                 errors.append(f"{source_url}: {type(exc).__name__}: {exc}")
 
