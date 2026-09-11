@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
+  "ok": true,
   "job_id": "job-research-979fc520a0781bc4",
-  "validation_error": "ValueError: problem_method.components[0].description is too short",
-  "repair_required": true,
-  "isolated_at": "2026-09-11T01:12:39+00:00"
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
+    "identity_delta": "survey-state/identity-deltas/arxiv/2605.28095.json"
+  },
+  "job_status": "completed"
 }

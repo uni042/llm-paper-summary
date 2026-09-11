@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T01:12:48.814874+00:00",
+  "updated_at": "2026-09-11T01:16:39.420887+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,14 +2999,14 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T01:12:48.814874+00:00",
+      "last_recorded_at": "2026-09-11T01:16:39.420887+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
@@ -3129,6 +3129,20 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34550002270:1",
+          "recorded_at": "2026-09-11T01:16:39.420887+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34550002270",
+            "run_attempt": "1",
+            "source_sha": "1e279bc25e4c9ebc513fe174e8b3f8c6082056bb"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3185,6 +3199,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-979fc520a0781bc4",
+          "type": "research",
+          "canonical_id": "arXiv:2605.28095",
+          "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -3261,7 +3283,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 240,
       "paper_active_count_after": 244,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }

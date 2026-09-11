@@ -7,10 +7,10 @@
       "completed": 6
     },
     "research": {
-      "completed": 78,
+      "completed": 79,
       "superseded": 40,
       "deferred": 1,
-      "ready": 3
+      "ready": 2
     }
   },
   "next_jobs": [
@@ -27,18 +27,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-979fc520a0781bc4",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2605.28095",
-      "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
-      "source_url": "https://arxiv.org/abs/2605.28095",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-d1d610f7f4147cc7",
       "type": "research",
       "lane": null,
@@ -51,5 +39,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T01:04:34+00:00"
+  "generated_at": "2026-09-11T01:16:35+00:00"
 }

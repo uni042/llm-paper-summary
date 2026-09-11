@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2605.28095",
   "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
   "selection_reason": "オフライン推論向けに、データ並列の独立性を維持しつつモデル重みを各GPUへ完全複製しない方式。層重みをGPU群の分散プールとして持ち、大バッチ時は遠隔重みをNVLink経由で小型キャッシュへ流すWeight-as-a-Service、小バッチ末尾では活性値を重み所有GPUへ送るCompute-as-a-Serviceを切り替える。H20/H200/B200で利用可能KV容量最大1.8倍、エンドツーエンドスループット最大1.5倍を報告し、DWDPと比較できる重み共有型データ並列の別設計である。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -17,5 +17,7 @@
   "artifact_transport": "structured_record_v10",
   "repair_required": true,
   "validation_error": "ValueError: problem_method.components[0].description is too short",
-  "last_validation_failed_at": "2026-09-11T01:12:39+00:00"
+  "last_validation_failed_at": "2026-09-11T01:12:39+00:00",
+  "completed_at": "2026-09-11T01:16:31+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
