@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T01:33:55.524033+00:00",
+  "updated_at": "2026-09-11T01:39:24.677215+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,17 +3310,17 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T01:33:55.524033+00:00",
+      "last_recorded_at": "2026-09-11T01:39:24.677215+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3353,6 +3353,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34551519293:1",
+          "recorded_at": "2026-09-11T01:39:24.677215+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34551519293",
+            "run_attempt": "1",
+            "source_sha": "27df712412f71b3ed4122776c3a925d6f6d8e71e"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3371,6 +3386,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-b4db9c06ac78c999",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15177",
+          "title": "Coordinated Scheduling for MoE LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3387,6 +3410,13 @@
           "type": "research",
           "canonical_id": "arXiv:2606.15177",
           "title": "Coordinated Scheduling for MoE LLM Serving"
+        },
+        {
+          "job_id": "job-0e78629b096238d9",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
