@@ -1,0 +1,213 @@
+name: Citation graph backfill
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/citation-graph-backfill.yml'
+      - '.survey/scripts/citation_graph.py'
+      - '.survey/scripts/backfill_citations.py'
+      - '.survey/scripts/render_paper.py'
+      - '.survey/scripts/assemble_research_record.py'
+      - '.survey/tests/test_citation_graph.py'
+      - '.survey/tests/test_render_paper_metadata.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Share the normal survey writer lock so citation backfill and survey-helper never
+# write main concurrently.
+concurrency:
+  group: survey-helper-main
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Install citation schema hooks
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          survey = Path('.survey/scripts/survey.py')
+          text = survey.read_text(encoding='utf-8')
+          old_paths = '''    paper_paths = list((repo / "papers/inference").glob("*/*.md"))
+              paper_paths += list((repo / "papers/survey").glob("*/*.md"))'''.replace('              ', '    ')
+          new_paths = '''    paper_paths = []
+              for family in PAPER_FAMILIES:
+                  paper_paths += list((repo / "papers" / family).glob("*/*.md"))'''.replace('              ', '    ')
+          if old_paths in text:
+              text = text.replace(old_paths, new_paths)
+          text = text.replace(
+              '''    """Inference and survey papers used by the canonical identity index.\n\n    Training remains excluded until its frozen legacy pages have canonical\n    metadata. Survey papers must participate so discovery cannot enqueue an\n    already registered review under a second lineage.\n    """''',
+              '''    """All repository paper families used by the canonical identity index.\n\n    Citation matching must cross Inference, Training, and Survey without\n    creating duplicate identities for papers that expose multiple identifiers.\n    """''',
+          )
+          replacement = '''def _citation_counts(records):
+              from citation_graph import citation_counts_from_view_records
+              return citation_counts_from_view_records(records)'''.replace('              ', '    ')
+          pattern = r'def _citation_counts\(records\):\n.*?\n\ndef _month_label'
+          if 'from citation_graph import citation_counts_from_view_records' not in text:
+              text, count = re.subn(pattern, replacement + '\n\ndef _month_label', text, count=1, flags=re.S)
+              if count != 1:
+                  raise SystemExit('could not replace legacy _citation_counts()')
+          survey.write_text(text, encoding='utf-8')
+
+          template = Path('.survey/templates/paper.md')
+          text = template.read_text(encoding='utf-8')
+          if 'references_checked_at:' not in text:
+              text = text.replace(
+                  'evidence_locations: []\n',
+                  'evidence_locations: []\nreferences: []\nreferences_checked_at: YYYY-MM-DD\nreferences_source: primary-reference-section\nreferences_total: 0\n',
+                  1,
+              )
+          marker = '## 概要\n'
+          guidance = '''## 参考文献の構造化\n\n一次論文のreference sectionを本文とは別に確認し、識別できる参考文献をfrontmatterの`references`へ保存する。arXiv IDはversion suffixを除去し、DOIは小文字のbare DOI、OpenReviewはforum IDへ正規化する。同一参考文献が複数識別子を持つ場合は1要素へまとめる。本文中の単なる関連言及は`references`へ入れない。`references_total`は一次論文の参考文献総数、`references_checked_at`は確認日、`references_source`は根拠にした一次資料のreference sectionを示す。識別子を持つ参考文献が0件でも、reference sectionを確認済みなら`references: []`として保存する。\n\n'''
+          if '## 参考文献の構造化' not in text and marker in text:
+              text = text.replace(marker, guidance + marker, 1)
+          template.write_text(text, encoding='utf-8')
+
+          queue = Path('.survey/docs/survey-workflow/queue-v10.md')
+          text = queue.read_text(encoding='utf-8')
+          anchor = 'Markdown生成時にこれらのメタデータを捨てず、論文frontmatterへ引き継ぐ。\n'
+          addition = '''\nさらに一次論文のreference sectionを確認し、正規化した`references`、`references_checked_at`、`references_source`、`references_total`を`metadata.json`へ保存する。arXivのversion違いは同一IDへ正規化し、DOI / arXiv / OpenReviewの複数IDが同じ参考文献を指す場合は1要素へまとめる。本文中の関連言及はreferenceとして扱わない。reference sectionを確認済みで識別可能なIDが0件の場合も`references: []`を明示する。\n'''
+          if 'さらに一次論文のreference sectionを確認し' not in text:
+              if anchor not in text:
+                  raise SystemExit('queue-v10 metadata anchor not found')
+              text = text.replace(anchor, anchor + addition, 1)
+          queue.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Validate citation implementation
+        run: |
+          python -m py_compile \
+            .survey/scripts/citation_graph.py \
+            .survey/scripts/backfill_citations.py \
+            .survey/scripts/render_paper.py \
+            .survey/scripts/assemble_research_record.py \
+            .survey/scripts/survey.py
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Commit schema and graph hooks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'citation-graph[bot]'
+          git config user.email 'citation-graph[bot]@users.noreply.github.com'
+          git add .survey/scripts/survey.py .survey/templates/paper.md .survey/docs/survey-workflow/queue-v10.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat: route indexes through structured citation graph'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Backfill references in durable batches
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .survey/reports
+          for round in $(seq 1 20); do
+            echo "citation backfill batch ${round}"
+            result=$(python .survey/scripts/backfill_citations.py --root . --limit 25 --delay 0.75 --apply)
+            echo "$result"
+            python .survey/scripts/citation_graph.py \
+              --root . \
+              --graph-report .survey/reports/citation-graph-latest.json \
+              --coverage-report .survey/reports/citation-coverage-latest.json
+            python .survey/scripts/survey.py --root .survey build
+
+            git add README.md papers .survey/reports/citation-backfill-state.json \
+              .survey/reports/citation-coverage-latest.json \
+              .survey/reports/citation-graph-latest.json \
+              .survey/survey-state/paper-identity-index.json
+            if ! git diff --cached --quiet; then
+              git commit -m "data: backfill citation references batch ${round}"
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                git reset --hard origin/main
+                echo 'main advanced incompatibly; retrying this batch from latest main'
+                continue
+              fi
+              git push origin HEAD:main
+            fi
+
+            attempted=$(python -c 'import json,sys; print(json.loads(sys.stdin.read())["attempted"])' <<< "$result")
+            if [ "$attempted" = "0" ]; then
+              echo 'No unprocessed citation sources remain.'
+              break
+            fi
+          done
+
+      - name: Rebuild final graph and indexes
+        run: |
+          python .survey/scripts/citation_graph.py \
+            --root . \
+            --graph-report .survey/reports/citation-graph-latest.json \
+            --coverage-report .survey/reports/citation-coverage-latest.json
+          python .survey/scripts/survey.py --root .survey build
+          python .survey/scripts/audit_metadata_coverage.py \
+            --repo-root . \
+            --json-out .survey/reports/metadata-coverage-latest.json \
+            --strict
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Build repository inventory
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('.')
+          files = []
+          for p in sorted(root.rglob('*')):
+              if not p.is_file():
+                  continue
+              rel = p.relative_to(root)
+              if '.git' in rel.parts or '__pycache__' in rel.parts or '.venv' in rel.parts:
+                  continue
+              if p.name.endswith(('.pyc', '.tmp')):
+                  continue
+              data = p.read_bytes()
+              sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+              files.append({'path': rel.as_posix(), 'sha': sha})
+          Path('/tmp/repo-inventory.json').write_text(json.dumps({
+              'source_commit': 'citation-backfill-working-tree',
+              'files': files,
+          }, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+      - name: Repository-wide consistency check
+        run: |
+          python .survey/scripts/check_repository.py \
+            --root . \
+            --inventory /tmp/repo-inventory.json \
+            --report .survey/reports/consistency-latest.json
+
+      - name: Commit final derived reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add README.md papers .survey/reports .survey/survey-state/paper-identity-index.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'docs: finalize citation graph indexes and audits'
+          git pull --rebase origin main
+          git push origin HEAD:main
