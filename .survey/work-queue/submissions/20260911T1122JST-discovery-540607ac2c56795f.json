@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-540607ac2c56795f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.18141",
+      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+      "source_url": "https://arxiv.org/abs/2607.18141",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory.md",
+      "priority": 96,
+      "reason": "CXL機器内の少量DRAMと大容量SSDを一体化したCXLハイブリッドメモリを、複数ターンLLMのTB級KVキャッシュ階層として使う実機研究。要求単位の接頭辞先読みと機会的書き込みバッファリングで、読み出し中心・予測可能・追記型というKVアクセス特性を利用する。同じDRAM予算でローカルLMCache比3.0倍、プリフィル/デコード分離構成で1.45倍、1TB分散DRAM Mooncake比では性能約30%低い代わりにDRAM量を16分の1と報告しており、SSDをCXL背後で直接KV階層へ組み込む重点テーマに直結する。"
+    },
+    {
+      "canonical_id": "arXiv:2602.11521",
+      "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2602.11521",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.11521-pam-processing-across-memory.md",
+      "priority": 86,
+      "reason": "KV容量と帯域を同時に満たすため、高帯域・小容量層と低速・大容量層の複数PIMメモリを協調させ、KVトークン配置、異種PIM横断の細粒度注意計算、KV移動とオンライン負荷平衡を共同設計する。単一階層PIMや単純なKV退避と異なり、計算そのものをメモリ階層間へ分散するため、CXL/NDP/SSD近傍計算を含む将来の階層KV設計の比較対象として有用。"
+    }
+  ]
+}
