@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T17:21:04.710713+00:00",
+  "updated_at": "2026-09-11T17:25:04.669037+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -6786,19 +6786,19 @@
     {
       "run_key": "2026-09-12T01:30:00+09:00",
       "first_recorded_at": "2026-09-11T16:34:49.056336+00:00",
-      "last_recorded_at": "2026-09-11T17:21:04.710713+00:00",
+      "last_recorded_at": "2026-09-11T17:25:04.669037+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 8,
         "blocked": 0,
         "new_jobs": 14,
-        "new_papers": 5,
+        "new_papers": 6,
         "fallback_archived": 0
       },
       "events": [
@@ -6993,6 +6993,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34627449891:1",
+          "recorded_at": "2026-09-11T17:25:04.669037+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34627449891",
+            "run_attempt": "1",
+            "source_sha": "d593c9bc4744c5fb117311618bdfb647a17654f7"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -7097,6 +7112,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-66b62d117037ed1d",
+          "type": "research",
+          "canonical_id": "arXiv:2603.21257",
+          "title": "CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands",
           "from": "ready",
           "to": "completed"
         }
@@ -7206,7 +7229,8 @@
         "arXiv:2509.24626",
         "arXiv:2507.19823",
         "arXiv:2407.15309",
-        "arXiv:2609.09748"
+        "arXiv:2609.09748",
+        "arXiv:2603.21257"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
@@ -7220,8 +7244,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 313,
-      "paper_active_count_after": 318,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 319,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
