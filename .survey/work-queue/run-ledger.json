@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T00:47:36.893581+00:00",
+  "updated_at": "2026-09-11T00:52:44.332222+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,17 +2999,17 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T00:47:36.893581+00:00",
+      "last_recorded_at": "2026-09-11T00:52:44.332222+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3056,6 +3056,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34548323983:1",
+          "recorded_at": "2026-09-11T00:52:44.332222+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34548323983",
+            "run_attempt": "1",
+            "source_sha": "30b76801b59416923461ea72b73581303888eeb7"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3082,6 +3097,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-f2b30aec3dedb2dc",
+          "type": "research",
+          "canonical_id": "arXiv:2507.03153",
+          "title": "HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3098,6 +3121,13 @@
           "type": "research",
           "canonical_id": "arXiv:2507.03153",
           "title": "HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference"
+        },
+        {
+          "job_id": "job-4b2230b86b73cd99",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
