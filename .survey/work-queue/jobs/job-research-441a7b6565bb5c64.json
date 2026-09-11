@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-441a7b6565bb5c64",
+  "type": "research",
+  "parent_job_id": "job-75a3e4e48e35224e",
+  "priority": 78,
+  "canonical_id": "arXiv:2510.11331",
+  "title": "Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding",
+  "source_url": "https://arxiv.org/abs/2510.11331",
+  "paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md",
+  "selection_reason": "小型ドラフトモデルと大型検証モデルを異種エッジノードへ分散配置し、投機的デコードとパイプライン処理を組み合わせたサービング方式。無線通信遅延と推論遅延を同じモデルへ入れ、投機長、タスクバッチ、通信資源配分を共同最適化する。比較方式に対して最大44.9%の遅延削減を報告しており、既存リポジトリのエッジLLM系と投機的デコード系をつなぐ未収録候補。識別子索引では2510.11331を確認できなかった。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T07:21:11+00:00",
+  "artifact_transport": "structured_record_v10"
+}
