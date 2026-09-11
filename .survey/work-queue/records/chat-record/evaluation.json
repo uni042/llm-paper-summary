@@ -1,1 +1,24 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2604.10539-20260911-1923-v10-a1","job_id":"job-research-1dc0db70c25722b2","data":{"hardware":"小〜中規模モデルはNVIDIA A100 40GB PCIe、大規模モデルと超長文評価はNVIDIA H100 80GB PCIeを使用し、CPU側のM-DCI索引には64スレッドを割り当てる。単一GPUでCPUメモリとの階層KV管理を評価する。","software":"CUDA 12.2、PyTorch 2.4.1、HuggingFace Transformers 4.57.1、FlashInferを使用する。公式IceCache実装はHuggingFaceモデルへKV管理を差し込み、CPU側M-DCI索引、GPU/CPUページプール、カスタムCUDAカーネルを備える。","methodology":"Llama-3.1-8B-Instruct、Mistral-7B-Instruct-v0.2、Qwen3-32B、LongChat-7B-v1.5をLongBench、Passkey検索、GSM8K思考連鎖で評価し、超長文RULERではQwen3-4B-Instruct-2507を用いる。比較対象は完全KV、真の上位k注意、SnapKV、StreamingLLM、OmniKV、MagicPig、PQCache、ArkValeなど。Passkeyは1万〜10万語、KV予算64/128/256、各長さ100例で検索位置を系列全体へ分散する。LongBenchでは複数分類・質問応答・要約課題の平均精度を測る。GSM8KではMistral-7BでKV予算を完全KVの10%程度に制限して長い思考連鎖の保持能力を比較する。RULERでは15万、20万、25万トークン、予算256で単一針検索、複数鍵、質問応答を評価し、遅延推移は30万トークン付近まで測る。遅延は第2トークンまでの時間と出力1トークン当たり時間を測り、3.6万トークン条件ではM-DCI探索、GPU計算、CPU-GPU転送などへ分解する。","scope":"主要評価は単一GPUと64 CPUスレッドで、複数GPU・複数要求を同時に扱うサービング基盤のスループットやCPU索引競合は未評価である。CPU-GPU接続はPCIeであり、CXLや統合メモリ環境では転送損益が変わる。M-DCIはCPU並列度への依存が大きく、公式実装も64スレッド以上を推奨する。方式は近似疎注意なので、完全KVと同一計算ではなく課題ごとの品質評価が必要である。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2609.07175-20260912-0130-v10-a1",
+  "job_id": "job-research-f740f1bd9a1b2025",
+  "data": {
+    "hardware": "実機HBFではなく解析モデル上の比較である。HBMのみはHBM4を8基、HBM+CPUはHBM4 8基に2 TBのCPUメモリとPCIe 6.0相当128 GB/sを追加し、HBF構成はHBF 7基とHBM4 1基とする。HBM4は1基36 GB、読書き1.6 TB/s。HBFは1基512 GB、読出し1.6 TB/s、書込み48 GB/s、4 KB読出し遅延1 μs、SLC 100K P/Eサイクルを仮定する。HBF各基には3.13 MBのSRAM段階バッファも仮定し、全構成でピーク計算性能2 PFLOP/sを用いる。",
+    "software": "特定の実装フレームワークや公開コードを用いた実機評価ではなく、論文で定義した屋根線型の解析モデルとキャッシュ確率モデルで要求遅延、QPS、書込み率、寿命を算出する。通常LRUをLRU-1として扱い、LRU-KのKを1〜20まで変化させる。",
+    "methodology": "生成推薦の履歴プリフィルと候補生成を、キャッシュヒット、ミスして完全KVを書き込む場合、ミスして書き込まない場合に分解する。各経路の時間は計算時間、KV読出し時間、KV書込み時間の最大値で近似し、要求分布から得た経路確率で平均要求遅延を算出する。キャッシュヒット率と入場確率はポアソン要求モデルと特性時間近似から導く。平均書込み量と利用可能HBF容量、100K P/E耐久性から推定寿命を求める。",
+    "workloads": [
+      "HSTU 1B",
+      "HSTU 10B",
+      "HSTU 100B MoE",
+      "OpenOneRec 1.7B",
+      "OpenOneRec 8B",
+      "OpenOneRec 100B MoE"
+    ],
+    "workload_details": "利用者の活動度には分布を持たせ、高頻度利用者は100要求/時を超える設定を含む。最大履歴長は8Kで、活動度が高い利用者ほど履歴を長くする。候補数は500。HSTUは候補群を1回のデコードで採点し、OpenOneRecは少数ステップで意味トークンを自己回帰生成するため、後者は各生成ステップでKVアクセスが発生する。",
+    "baselines": ["HBMのみ + LRU-1", "HBM+CPU + LRU-1", "HBF + LRU-1", "HBF + LRU-K"],
+    "metrics": ["要求毎秒（QPS）", "キャッシュヒット率", "完全KV書込み確率", "要求当たり平均書込み量", "推定HBF寿命"],
+    "scope": "評価は解析モデルと合成的な要求到着モデルに基づき、実機HBF、実サービスの完全な要求トレース、フラッシュ制御器の書込み増幅、ガベージコレクション、熱・電力制約、キューイング競合などは直接測定していない。したがって数値はHBFが仮定どおりHBM級読出し帯域と指定書込み帯域を提供し、特性時間近似が利用者局所性を十分表す場合の設計上限・傾向として読む必要がある。"
+  }
+}
