@@ -37,6 +37,15 @@ class ListSummaryTests(unittest.TestCase):
         self.assertIn("リクエスト", text)
         self.assertIn("トークン", text)
 
+    def test_splits_japanese_sentences_without_whitespace(self):
+        mod = self._module()
+        first = "本研究は複数の要求が同時に到着する推論環境で、待ち時間とGPU利用率を同時に改善するため、要求順序とキャッシュ配置を動的に調整する方式を提案する。"
+        second = "次に非常に長い補足説明を続け、評価条件、比較対象、実装詳細、追加実験、制約、今後の課題など一覧には不要な情報を多数記述して全体を百八十文字より長くする。"
+        body = f"# Example\n\n> {first}{second}\n"
+        text = mod.compact_list_summary(body)
+        self.assertEqual(text, first)
+        self.assertNotIn("次に", text)
+
     def test_explicit_overview_section_beats_metadata_fallback(self):
         mod = self._module()
         body = """# Example
