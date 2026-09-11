@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T02:01:12.334200+00:00",
+  "updated_at": "2026-09-11T02:01:54.166784+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -3310,7 +3310,7 @@
     {
       "run_key": "2026-09-11T10:30:00+09:00",
       "first_recorded_at": "2026-09-11T01:31:06.633077+00:00",
-      "last_recorded_at": "2026-09-11T02:01:12.334200+00:00",
+      "last_recorded_at": "2026-09-11T02:01:54.166784+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3318,9 +3318,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 8,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3425,6 +3425,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34552994944:1",
+          "recorded_at": "2026-09-11T02:01:54.166784+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34552994944",
+            "run_attempt": "1",
+            "source_sha": "26769b154c14c18167c679b69ef3ca12f3054f94"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3483,6 +3497,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-75f1caf8613a10d5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3534,13 +3556,21 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-2e2e6a0cd88dd666",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.21626",
+          "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T1032JST-discovery-394e9e8c39c0dac6.json",
         ".survey/work-queue/results/20260911T1040JST-discovery-0e78629b096238d9.json",
-        ".survey/work-queue/results/20260911T1101JST-discovery-51de467467408979.json"
+        ".survey/work-queue/results/20260911T1101JST-discovery-51de467467408979.json",
+        ".survey/work-queue/results/20260911T1103JST-discovery-75f1caf8613a10d5.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 244,
