@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-bfbde8d3ef06e3e4",
+  "type": "research",
+  "parent_job_id": "job-dc51ce84c438adb2",
+  "priority": 78,
+  "canonical_id": "arXiv:2605.23389",
+  "title": "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System",
+  "source_url": "https://arxiv.org/abs/2605.23389",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+  "selection_reason": "デコード反復内で系列ごとのKV長差が処理時間差となり、長い系列が同一バッチ全体を待たせる反復内バブルを対象にする。KV長が近い要求をまとめるprefix-aware batching、CPU大容量メモリで十分な待機要求を保持するバッチ選択、別GPUによるKV先読みを組み合わせ、既存方式比でデコードスループット最大1.98倍、遅延最大7.4倍改善を報告する。バッチ内部の不均衡を明示的に扱うため既存スケジューリング論文と差別化しやすい。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T05:46:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}

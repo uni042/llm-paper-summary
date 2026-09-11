@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-8f1c80196652932b",
+  "type": "research",
+  "parent_job_id": "job-dc51ce84c438adb2",
+  "priority": 87,
+  "canonical_id": "arXiv:2606.17787",
+  "title": "LUMEN: Coordinated Failure Recovery for Distributed LLM Serving",
+  "source_url": "https://arxiv.org/abs/2606.17787",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17787-lumen-coordinated-failure-recovery.md",
+  "selection_reason": "分散LLMサービングでGPUワーカー障害時にKVキャッシュと処理能力を同時に失う問題を、障害前のチェックポイント配置、障害時の中断要求再配分、モデル再ロード中の処理能力復旧という三つの判断点を協調させて扱う。既存の固定隣接チェックポイントや単純再実行と異なり、現在のクラスタ負荷を見て回復経路を選ぶため、サービングの耐障害性を独立したスケジューリング問題として扱う強候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T05:46:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}
