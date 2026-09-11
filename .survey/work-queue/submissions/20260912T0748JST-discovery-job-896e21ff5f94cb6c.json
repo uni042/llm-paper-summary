@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-896e21ff5f94cb6c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.22932",
+      "title": "AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge",
+      "source_url": "https://arxiv.org/abs/2608.22932",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2608.22932-airmoe.md",
+      "priority": 83,
+      "reason": "無線端末へMoEの専門家を分散配置すると、各端末が高次元の専門家出力を個別送信する上り通信が律速になる。AirMoEは無線波形の重ね合わせを使う空中計算で複数専門家出力を同時集約し、層ごとの誤差感度を用いた推論品質指標、瞬時のチャネルに応じた送信電力制御、長い時間尺度での専門家配置を共同最適化する。OLMoE-1B-7B-0924とARC-Easyによる評価で端末異質性が強い条件ほど代表的比較方式より推論精度を改善しており、MoE通信最適化をデータセンター内相互接続ではなく無線物理層まで下げる点が既存収録研究と明確に異なる。"
+    }
+  ]
+}
