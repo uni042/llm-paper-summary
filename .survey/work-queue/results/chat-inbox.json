@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-441a7b6565bb5c64",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/08-edge-on-device-llm-systems/2025-2510.11331-heterogeneous-edge-speculative-decoding.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2510.11331.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-30e28c61082970e0",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-11T07:43:42+00:00"
 }
