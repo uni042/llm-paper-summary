@@ -1,16 +1,48 @@
 ---
-canonical_id: "arXiv:2505.02922"
-arxiv_id: "2505.02922"
-title: "RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference"
-summary: "長contextのKV cacheをCPU memory上の**vector storageとして検索対象にし、attentionに重要なtokenだけをGPUへ取り出す**ことで、全KVをGPUへ保持・走査するmemory容量とbandwidthを減らしつつ、検索誤差による精度低下を抑えるGPU–CPU協調推論system。"
-source: "https://arxiv.org/abs/2505.02922"
-last_audited: "2026-09-10"
+canonical_id: arXiv:2505.02922
+arxiv_id: '2505.02922'
+title: 'RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference'
+summary: 長contextのKV cacheをCPU memory上の**vector storageとして検索対象にし、attentionに重要なtokenだけをGPUへ取り出す**ことで、全KVをGPUへ保持・走査するmemory容量とbandwidthを減らしつつ、検索誤差による精度低下を抑えるGPU–CPU協調推論system。
+source: https://arxiv.org/abs/2505.02922
+last_audited: '2026-09-10'
 audit_version: 1
 storage_targets: []
 bottlenecks: []
 hardware_details: null
 quality_effect: null
 evidence_locations: []
+authors:
+- Yaoqi Chen
+- Jinkai Zhang
+- Baotong Lu
+- Qianxi Zhang
+- Chengruidong Zhang
+- Jing Liu
+- Jingjia Luo
+- Di Liu
+- Huiqiang Jiang
+- Qi Chen
+- Bailu Ding
+- Xiao Yan
+- Jiawei Jiang
+- Chen Chen
+- Mingxing Zhang
+- Cheng Li
+- Yuqing Yang
+- Fan Yang
+- Mao Yang
+published: '2025-05-05'
+arxiv_categories:
+  primary: cs.LG
+  cross_list: []
+publication: arXiv
+publication_type: プレプリント
+publication_status: arXiv preprint
+sources:
+- https://arxiv.org/abs/2505.02922
+- https://arxiv.org/pdf/2505.02922
+code: null
+last_checked: '2026-09-11'
 ---
 
 # RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference
