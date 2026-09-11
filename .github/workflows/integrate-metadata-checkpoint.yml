@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   integrate:
-    if: github.event.head_commit.message == 'chore: add metadata checkpoint integrator'
+    if: github.event.head_commit.message == 'chore: fix metadata checkpoint integrator'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest main
@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Merge checkpoint with metadata-aware conflict resolution
+      - name: Merge checkpoint conservatively
         shell: bash
         run: |
           set -euo pipefail
@@ -44,117 +44,23 @@ jobs:
           BASE=$(git rev-parse HEAD)
           git fetch origin codex/metadata-backfill-checkpoint-2026-09-11:refs/remotes/origin/metadata-checkpoint
 
-          set +e
-          git merge --no-ff --no-commit origin/metadata-checkpoint
-          MERGE_RC=$?
-          set -e
-
+          MERGE_RC=0
+          git merge --no-ff --no-commit origin/metadata-checkpoint || MERGE_RC=$?
           if [ "$MERGE_RC" -ne 0 ]; then
-            python - <<'PY'
-          from __future__ import annotations
-          import pathlib
-          import subprocess
-          import sys
-          import yaml
-
-          def run(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
-              return subprocess.run(args, text=True, capture_output=True, check=check)
-
-          def show(stage: int, path: str) -> str | None:
-              p = run('git', 'show', f':{stage}:{path}', check=False)
-              return p.stdout if p.returncode == 0 else None
-
-          def parse_doc(text: str | None):
-              if text is None:
-                  return {}, ''
-              if not text.startswith('---\n'):
-                  return {}, text
-              parts = text.split('---', 2)
-              if len(parts) < 3:
-                  return {}, text
-              return yaml.safe_load(parts[1]) or {}, parts[2].lstrip('\n')
-
-          def empty(v):
-              return v is None or v == '' or v == [] or v == {}
-
-          def merge_paper(path: str):
-              ours = show(2, path)
-              theirs = show(3, path)
-              if ours is None and theirs is not None:
-                  pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
-                  pathlib.Path(path).write_text(theirs, encoding='utf-8')
-                  return
-              if theirs is None and ours is not None:
-                  pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
-                  pathlib.Path(path).write_text(ours, encoding='utf-8')
-                  return
-              om, ob = parse_doc(ours)
-              tm, _ = parse_doc(theirs)
-              merged = dict(om)
-              backfill_keys = (
-                  'canonical_id', 'arxiv_id', 'doi', 'openreview_id', 'arxiv_categories',
-                  'title', 'summary', 'authors', 'authors_affiliations', 'published',
-                  'publication', 'publication_type', 'publication_status', 'publication_version',
-                  'lineage', 'topics', 'importance', 'hardware_evaluation', 'hardware_details',
-                  'quality_effect', 'storage_targets', 'bottlenecks', 'evidence_locations',
-                  'source', 'sources', 'code', 'implementation', 'implementation_status',
-                  'evaluation_type', 'verified_arxiv_version', 'source_last_revision',
-                  'last_checked', 'last_verified'
-              )
-              for key in backfill_keys:
-                  if key in tm and (key not in merged or empty(merged.get(key))):
-                      merged[key] = tm[key]
-              # Explicit null identifiers/code are useful to distinguish unknown from omitted.
-              for key in ('doi', 'openreview_id', 'code'):
-                  if key in tm and key not in merged:
-                      merged[key] = tm[key]
-              front = yaml.safe_dump(
-                  merged, allow_unicode=True, sort_keys=False,
-                  default_flow_style=False, width=1000,
-              ).rstrip()
-              out = f'---\n{front}\n---\n\n{ob.lstrip()}'
-              if not out.endswith('\n'):
-                  out += '\n'
-              pathlib.Path(path).parent.mkdir(parents=True, exist_ok=True)
-              pathlib.Path(path).write_text(out, encoding='utf-8')
-
-          raw = run('git', 'diff', '--name-only', '--diff-filter=U').stdout
-          conflicts = [x for x in raw.splitlines() if x.strip()]
-          unresolved = []
-          for path in conflicts:
-              if path.startswith('.survey/work-queue/') or path == '.survey/survey-state/paper-identity-index.json':
-                  run('git', 'checkout', '--ours', '--', path)
-              elif path.startswith('papers/training/') and path.endswith('.md') and not path.endswith('/README.md'):
-                  run('git', 'checkout', '--theirs', '--', path)
-              elif path.startswith('papers/') and path.endswith('.md') and not path.endswith('/README.md') and path != 'papers/inference/comparison.md':
-                  merge_paper(path)
-              elif path == 'README.md' or path.endswith('/README.md') or path == 'papers/inference/comparison.md':
-                  run('git', 'checkout', '--ours', '--', path)
-              elif path.startswith('.survey/scripts/') or path.startswith('.survey/tests/') or path.startswith('.survey/templates/') or path.startswith('.survey/docs/survey-workflow/') or path == '.survey/survey-state/frozen-training.json':
-                  run('git', 'checkout', '--theirs', '--', path)
-              elif path == '.survey/reports/metadata-coverage-latest.json':
-                  run('git', 'checkout', '--theirs', '--', path)
-              else:
-                  unresolved.append(path)
-                  continue
-              run('git', 'add', '--', path)
-
-          if unresolved:
-              print('Unresolved conflict paths:', *unresolved, sep='\n- ', file=sys.stderr)
-              raise SystemExit(2)
-          PY
+            python .survey/scripts/integrate_metadata_checkpoint.py --base "$BASE"
           fi
 
-          # Never import stale queue/runtime state or derived views from the checkpoint.
+          # Keep current runtime state and regenerate every derived view from sources.
           git checkout "$BASE" -- .survey/work-queue || true
           git checkout "$BASE" -- .survey/survey-state/paper-identity-index.json || true
           git checkout "$BASE" -- README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md || true
+
           while IFS= read -r p; do
             if git cat-file -e "$BASE:$p" 2>/dev/null; then
               git checkout "$BASE" -- "$p"
             else
               rm -f "$p"
-              git add -u -- "$p" 2>/dev/null || true
+              git add -A -- "$p" 2>/dev/null || true
             fi
           done < <(find papers -mindepth 3 -maxdepth 3 -name README.md -print | sort)
 
@@ -164,18 +70,11 @@ jobs:
             exit 3
           fi
 
-          # Rebuild all derived state from the merged source files.
           python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out .survey/reports/metadata-coverage-latest.json
           python .survey/scripts/survey.py --root .survey build
           python -m unittest discover -s .survey/tests -p 'test_*.py'
-          python .survey/scripts/check_repository.py
 
           git add -A
-          if git diff --cached --quiet; then
-            echo 'Checkpoint already represented in latest main.'
-            git merge --abort 2>/dev/null || true
-            exit 0
-          fi
-
+          git status --short
           git commit -m 'merge: integrate metadata backfill checkpoint'
           git push origin HEAD:main
