@@ -1,0 +1,125 @@
+name: Apply mobile paper list layout
+
+on:
+  push:
+    branches: [mobile-paper-list-layout-20260911]
+    paths:
+      - '.github/workflows/apply-mobile-paper-list.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: mobile-paper-list-layout-20260911
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Replace wide table with mobile-friendly vertical list
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('.survey/scripts/survey.py')
+          text = path.read_text(encoding='utf-8')
+          pattern = re.compile(r'def _render_table\(rows, citations, base_dir\):\n.*?\n\ndef _render_taxonomy_list', re.S)
+          replacement = '''def _render_paper_list(rows, citations, base_dir):
+              if not rows:
+                  return ["該当なし。"]
+              lines = []
+              for r in rows:
+                  link = Path(r["path"]).relative_to(base_dir).as_posix()
+                  lines += [
+                      f"- **{_month_label(r)} · [{cell(r['title'])}]({link})**  ",
+                      f"  実装：{_implementation_cell(r['implementation'])} ・ リポジトリ内被引用：{citations.get(r['path'], 0)}  ",
+                      f"  {cell(r['summary'])}",
+                      "",
+                  ]
+              return lines[:-1]
+
+
+def _render_taxonomy_list'''
+          updated, count = pattern.subn(replacement, text, count=1)
+          if count != 1:
+              raise SystemExit(f'expected one _render_table block, replaced {count}')
+          updated = updated.replace('_render_table(attention, citations, base_dir)', '_render_paper_list(attention, citations, base_dir)')
+          updated = updated.replace('_render_table(recent, citations, base_dir)', '_render_paper_list(recent, citations, base_dir)')
+          updated = updated.replace('_render_table(older, citations, base_dir)', '_render_paper_list(older, citations, base_dir)')
+          path.write_text(updated, encoding='utf-8')
+          PY
+
+      - name: Run regression tests and rebuild indexes
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+          python .survey/scripts/survey.py --root .survey build
+          python .survey/scripts/audit_list_summary_quality.py --repo-root . --no-fail-exit
+
+      - name: Inspect moved stubs and repository references
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          repo = Path('.')
+          stubs = []
+          for root in (repo / 'papers' / 'inference', repo / 'papers' / 'training', repo / 'papers' / 'survey'):
+              if not root.exists():
+                  continue
+              for path in root.rglob('*.md'):
+                  if path.name in {'README.md', 'comparison.md'}:
+                      continue
+                  text = path.read_text(encoding='utf-8', errors='ignore')
+                  if re.search(r'^#\s+Moved(?:\s|$)', text, flags=re.I | re.M):
+                      stubs.append(path)
+
+          print(f'MOVED_STUBS={len(stubs)}')
+          tracked_text = [p for p in repo.rglob('*') if p.is_file() and '.git' not in p.parts]
+          for stub in stubs:
+              rel = stub.as_posix()
+              name = stub.name
+              refs = []
+              for other in tracked_text:
+                  if other == stub:
+                      continue
+                  try:
+                      text = other.read_text(encoding='utf-8')
+                  except (UnicodeDecodeError, OSError):
+                      continue
+                  if rel in text or name in text:
+                      refs.append(other.as_posix())
+              print(f'STUB {rel}')
+              if refs:
+                  for ref in refs:
+                      print(f'  REF {ref}')
+              else:
+                  print('  REF none')
+          PY
+
+      - name: Commit generated mobile-friendly indexes
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+          git add .survey/scripts/survey.py README.md papers/README.md papers/inference/README.md papers/training/README.md papers/survey/README.md papers/inference/comparison.md
+          find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
+          if git diff --cached --quiet; then
+            echo 'No production changes to commit.'
+            exit 0
+          fi
+          git commit -m 'feat: render paper lists for mobile readability'
+          git push origin HEAD:mobile-paper-list-layout-20260911
