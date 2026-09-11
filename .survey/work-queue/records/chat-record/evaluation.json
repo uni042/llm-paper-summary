@@ -2,23 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.07175-20260912-0130-v10-a1",
-  "job_id": "job-research-f740f1bd9a1b2025",
+  "attempt_id": "attempt-2509.24626-20260912-0140-v10-a1",
+  "job_id": "job-research-bdfa442b35d8b3ad",
   "data": {
-    "hardware": "実機HBFではなく解析モデル上の比較である。HBMのみはHBM4を8基、HBM+CPUはHBM4 8基に2 TBのCPUメモリとPCIe 6.0相当128 GB/sを追加し、HBF構成はHBF 7基とHBM4 1基とする。HBM4は1基36 GB、読書き1.6 TB/s。HBFは1基512 GB、読出し1.6 TB/s、書込み48 GB/s、4 KB読出し遅延1 μs、SLC 100K P/Eサイクルを仮定する。HBF各基には3.13 MBのSRAM段階バッファも仮定し、全構成でピーク計算性能2 PFLOP/sを用いる。",
-    "software": "特定の実装フレームワークや公開コードを用いた実機評価ではなく、論文で定義した屋根線型の解析モデルとキャッシュ確率モデルで要求遅延、QPS、書込み率、寿命を算出する。通常LRUをLRU-1として扱い、LRU-KのKを1〜20まで変化させる。",
-    "methodology": "生成推薦の履歴プリフィルと候補生成を、キャッシュヒット、ミスして完全KVを書き込む場合、ミスして書き込まない場合に分解する。各経路の時間は計算時間、KV読出し時間、KV書込み時間の最大値で近似し、要求分布から得た経路確率で平均要求遅延を算出する。キャッシュヒット率と入場確率はポアソン要求モデルと特性時間近似から導く。平均書込み量と利用可能HBF容量、100K P/E耐久性から推定寿命を求める。",
-    "workloads": [
-      "HSTU 1B",
-      "HSTU 10B",
-      "HSTU 100B MoE",
-      "OpenOneRec 1.7B",
-      "OpenOneRec 8B",
-      "OpenOneRec 100B MoE"
-    ],
-    "workload_details": "利用者の活動度には分布を持たせ、高頻度利用者は100要求/時を超える設定を含む。最大履歴長は8Kで、活動度が高い利用者ほど履歴を長くする。候補数は500。HSTUは候補群を1回のデコードで採点し、OpenOneRecは少数ステップで意味トークンを自己回帰生成するため、後者は各生成ステップでKVアクセスが発生する。",
-    "baselines": ["HBMのみ + LRU-1", "HBM+CPU + LRU-1", "HBF + LRU-1", "HBF + LRU-K"],
-    "metrics": ["要求毎秒（QPS）", "キャッシュヒット率", "完全KV書込み確率", "要求当たり平均書込み量", "推定HBF寿命"],
-    "scope": "評価は解析モデルと合成的な要求到着モデルに基づき、実機HBF、実サービスの完全な要求トレース、フラッシュ制御器の書込み増幅、ガベージコレクション、熱・電力制約、キューイング競合などは直接測定していない。したがって数値はHBFが仮定どおりHBM級読出し帯域と指定書込み帯域を提供し、特性時間近似が利用者局所性を十分表す場合の設計上限・傾向として読む必要がある。"
+    "hardware": "NVIDIA A100 40GB HBM、AMD EPYC 7J13 CPU、256GB DRAMの単一GPU機。GPUとホストはPCIe Gen4で接続され、帯域は32GB/s。",
+    "software": "vLLMを基盤にSparseServeを実装する。比較対象は全KVをHBMに置く通常vLLM、vLLMへ動的疎注意を追加したvLLM-S、さらにKVをDRAMへオフロードしたvLLM-SO。SparseServeは疎注意、KVオフロード、断片化対応転送、作業集合対応バッチ制御、層分割プリフィルを統合する。",
+    "methodology": "LWM-7BとLlama3-8Bを用い、LongBenchの質問応答、文書要約、コード生成の複数データセットを混ぜた要求列を作る。要求到着は複数の到着率を持つポアソン分布で生成する。最大プロンプト長はLWM-7Bで32K、Llama3-8Bで128K。疎注意のKVトークン予算は2048で、付録の精度評価では全注意の99%以上を維持する設定である。vLLM系のチャンク分割プリフィルは2048トークン、SparseServeの層分割プリフィルも反復当たりの処理トークン総量を合わせる。平均初回トークン時間、平均トークン間時間、生成スループット、サービス水準目標下の最大持続要求量、KVブロック読込み量を比較し、さらに三つの主要機構を段階追加する除去評価を行う。",
+    "workloads": ["LongBench質問応答", "LongBench文書要約", "LongBenchコード生成", "LWM-7B", "Llama3-8B"],
+    "workload_details": "質問応答はQasper、NarrativeQA、MultiFieldQA、DuReader、文書要約はGovReport、QMSum、MultiNews、VCSum、コード生成はLCC、RepoBench-Pを含み、異種要求を一つのトレースへ混合する。LWM-7Bは最大1M文脈を持つMHA系、Llama3-8Bは262K文脈を持つGQA系として異なる注意構成を代表する。",
+    "baselines": ["vLLM", "vLLM-S", "vLLM-SO"],
+    "metrics": ["平均初回トークン時間", "平均トークン間時間", "生成トークン毎秒", "サービス水準目標下のgoodput", "KVブロック読込み数", "転送帯域・転送遅延", "LongBench精度"],
+    "scope": "A100 40GBとPCIe Gen4を用いた単一ノード実機評価であり、複数GPUやNVLink、PCIe Gen5/CXL、異なるCPUメモリ帯域での結果は直接測っていない。要求時刻は実運用トレースではなくポアソン生成で、疎注意選択にはArkVale系のブロック選択と2048トークン予算を使うため、別の選択器や局所性が弱いモデルでは作業集合予測と転送量が変わり得る。"
   }
 }
