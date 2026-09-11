@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T00:37:49.644970+00:00",
+  "updated_at": "2026-09-11T00:45:35.713209+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,16 +2999,17 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T00:37:49.644970+00:00",
+      "last_recorded_at": "2026-09-11T00:45:35.713209+00:00",
       "signals": [
-        "research_completed"
+        "research_completed",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 1,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3026,6 +3027,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34547833009:1",
+          "recorded_at": "2026-09-11T00:45:35.713209+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34547833009",
+            "run_attempt": "1",
+            "source_sha": "c08b2fc32026c653e73728cd5e55e204a9026082"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3036,15 +3052,31 @@
           "title": "HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-3359a87c6e6d5cd4",
+          "type": "research",
+          "canonical_id": "arXiv:2609.03079",
+          "title": "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-bd3cac529b644852",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 240,
       "paper_active_count_after": 240,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
