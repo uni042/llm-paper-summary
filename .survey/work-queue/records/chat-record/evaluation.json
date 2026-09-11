@@ -5,13 +5,13 @@
   "attempt_id": "attempt-2609.09748-20260912-0211-v10-a1",
   "job_id": "job-research-ea6f0f5305a34c22",
   "data": {
-    "hardware": "単一nodeにNVIDIA H100-80GB SXM5 GPU 8基を搭載し、GPU間をNVLink/NVSwitchで接続する。peer bandwidthは900GB/s。CPUはAMD EPYC 9654を2基、host memoryはDDR5 1.5TB。",
-    "software": "CUDA 12.4、PyTorch 2.4、NCCL 2.22、Triton 3.0。EpochはvLLM風のfused-MoE runtimeとexpert parallelismを基盤に実装し、baselineは投稿前時点の各公式releaseを使用する。",
-    "methodology": "3種類のopen-weight block-diffusion MoEを同じ8 GPU配置で比較し、GSM8K、HumanEval、MGSM、MT-Benchをgreedy threshold decodingで実行する。commit thresholdは0.95、各blockは最大64 refinement stepで、全位置がdecodeされた時点でearly exitする。batch size 32、128、256、512でエンドツーエンド時間を測り、online実験ではPoisson到着を6〜26 req/sへ変化させてP95 inter-token latencyを測る。offline計測は20 warmup request後に100 requestを計測し、異なるrandom seedの3独立runの標準偏差をerror barとする。品質評価ではGSM8K、HumanEval、MGSMのaccuracyとMT-Bench scoreを使い、decoded-cache refresh周期も1、2、5、10、20へ変化させて品質とiteration時間の交換条件を調べる。",
-    "workloads": ["LLaDA-MoE 1B active / 7B total", "LLaDA2.0-mini 1.4B active / 16B total", "LLaDA2.0-Flash 6.1B active / 100B total", "GSM8K", "HumanEval", "MGSM", "MT-Bench"],
-    "workload_details": "3モデルはいずれもcontext 4096 token、既定block size 32のblock-diffusion MoEである。全モデルをDP=1、TP=8、EP=8、SP=8として8 GPUに1 replica配置する。TPとEPは同じGPU集合上の整列groupであり、EPはexpert所有・dispatch/combine、TP/SPはdense tensor parallelismとsequence shardを担当する。",
-    "baselines": ["dInfer without cache", "dInfer with per-position cache", "SGLang block-diffusion support", "Epoch full compute", "Epoch without Expert Atlas", "Epoch without Liveness-Shard Parallelism"],
-    "metrics": ["エンドツーエンドrequest execution time", "iteration latency", "forward component latency", "P95 inter-token latency", "relative computation overhead", "relative memory-access overhead", "relative communication overhead", "task accuracy", "MT-Bench score", "OOM可否"],
-    "scope": "評価は単一nodeの8基H100と3種類のLLaDA系block-diffusion MoEへ限定される。multi-node expert parallelism、PCIe主体の低帯域構成、他のdiffusion decode policy、自己回帰MoEには直接一般化を検証していない。batch 32の軽い条件ではblock-plan bookkeepingにより強いcache baselineとの差が小さく、online低負荷6〜11 req/sではSGLangのP95 ITLがわずかに良い。近似設定ではexpert support制限とstable-decoded output cacheの品質影響を実測しているが、全prompt・全modelで意味的同一性を保証するものではない。"
+    "hardware": "単一ノードにNVIDIA H100-80GB SXM5 GPUを8基搭載し、GPU間をNVLink/NVSwitchで接続する。GPU間の帯域は900GB/s。CPUはAMD EPYC 9654を2基、ホストメモリはDDR5 1.5TBを使用する。",
+    "software": "CUDA 12.4、PyTorch 2.4、NCCL 2.22、Triton 3.0。EpochはvLLM風の融合MoE実行基盤とエキスパート並列を土台に実装し、比較対象は投稿前時点の各公式版を使用する。",
+    "methodology": "3種類の公開重みを持つブロック拡散MoEを同じ8 GPU配置で比較し、GSM8K、HumanEval、MGSM、MT-Benchを貪欲な閾値デコードで実行する。確定閾値は0.95、各生成ブロックは最大64回の精錬反復を行い、全位置が確定した時点で早期終了する。バッチサイズ32、128、256、512でエンドツーエンド時間を測定し、オンライン評価ではポアソン到着を毎秒6〜26件へ変化させて95百分位のトークン間遅延を測る。オフライン計測は20リクエストの暖機後に100リクエストを測定し、異なる乱数種の3回独立実行で標準偏差を求める。品質評価にはGSM8K、HumanEval、MGSMの正解率とMT-Bench得点を用い、確定出力キャッシュの更新周期も1、2、5、10、20へ変化させて品質と反復時間の交換条件を調べる。",
+    "workloads": ["LLaDA-MoE（有効1B／総7B）", "LLaDA2.0-mini（有効1.4B／総16B）", "LLaDA2.0-Flash（有効6.1B／総100B）", "GSM8K", "HumanEval", "MGSM", "MT-Bench"],
+    "workload_details": "3モデルはいずれも文脈長4096トークン、既定生成ブロックサイズ32のブロック拡散MoEである。全モデルをデータ並列度1、テンソル並列度8、エキスパート並列度8、系列分割並列度8として8 GPUに一つの複製を配置する。テンソル並列とエキスパート並列は同じGPU集合上で構成し、エキスパート配送・結合と系列分割を同一ノード内で処理する。",
+    "baselines": ["キャッシュ無効のdInfer", "位置キャッシュ有効のdInfer", "ブロック拡散対応SGLang", "全位置再計算のEpoch", "エキスパート地図を外したEpoch", "生存分割並列を外したEpoch"],
+    "metrics": ["エンドツーエンド要求実行時間", "反復遅延", "順伝播の構成別時間", "95百分位トークン間遅延", "相対計算量", "相対メモリアクセス量", "相対通信量", "課題正解率", "MT-Bench得点", "メモリ不足の有無"],
+    "scope": "評価は単一ノードの8基H100と3種類のLLaDA系ブロック拡散MoEへ限定される。複数ノードのエキスパート並列、PCIe中心の低帯域構成、別の拡散デコード方式、自己回帰MoEには直接一般化を検証していない。バッチ32の軽い条件ではブロック計画管理の固定費により強いキャッシュ比較対象との差が小さく、オンライン低負荷の毎秒6〜11件ではSGLangの95百分位トークン間遅延がわずかに良い。近似設定では候補エキスパート集合制限と安定確定出力キャッシュの品質影響を実測しているが、全入力で意味的同一性を保証するものではない。"
   }
 }
