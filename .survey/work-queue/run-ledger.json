@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T00:52:44.332222+00:00",
+  "updated_at": "2026-09-11T00:57:46.219411+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,7 +2999,7 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T00:52:44.332222+00:00",
+      "last_recorded_at": "2026-09-11T00:57:46.219411+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3007,9 +3007,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 4,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3071,6 +3071,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34548668787:1",
+          "recorded_at": "2026-09-11T00:57:46.219411+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34548668787",
+            "run_attempt": "1",
+            "source_sha": "df992ec4249749fcb389860dc0e5e3eb659ba24d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3105,6 +3119,14 @@
           "title": "HGCA: Hybrid GPU-CPU Attention for Long Context LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-4b2230b86b73cd99",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3128,11 +3150,19 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-4e1acbc5776b5fb3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.01621",
+          "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260911T0948JST-discovery-bd3cac529b644852.json"
+        ".survey/work-queue/results/20260911T0948JST-discovery-bd3cac529b644852.json",
+        ".survey/work-queue/results/20260911T0956JST-discovery-4b2230b86b73cd99.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 240,

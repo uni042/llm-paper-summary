@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-4e1acbc5776b5fb3",
+  "type": "research",
+  "parent_job_id": "job-4b2230b86b73cd99",
+  "priority": 82,
+  "canonical_id": "arXiv:2604.01621",
+  "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
+  "source_url": "https://arxiv.org/abs/2604.01621",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2604.01621-dwdp-distributed-weight-data-parallelism.md",
+  "selection_reason": "MoE重みをNVL72内のpeer GPUへ分散配置し、必要なexpertだけをオンデマンド取得することで、従来のexpert parallelismに伴う層ごとのcollective同期を避ける推論並列化方式。split-weight管理と非同期remote-weight prefetchを組み合わせ、DeepSeek-R1/TensorRT-LLM上で20〜100 TPS/user帯におけるoutput TPS/GPUを8.8%改善している。expert placement・通信・prefetchを一体で扱うため、既存のCPU/SSD offload系とは異なるNVLinkファブリック上の重み移動設計として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T00:57:39+00:00",
+  "artifact_transport": "structured_record_v10"
+}
