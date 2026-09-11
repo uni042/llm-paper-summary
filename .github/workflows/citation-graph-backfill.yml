@@ -163,42 +163,49 @@ jobs:
             --graph-report .survey/reports/citation-graph-latest.json \
             --coverage-report .survey/reports/citation-coverage-latest.json
           python .survey/scripts/survey.py --root .survey build
+
+      - name: Audit metadata coverage
+        id: metadata
+        shell: bash
+        run: |
+          set +e
           python .survey/scripts/audit_metadata_coverage.py \
             --repo-root . \
             --json-out .survey/reports/metadata-coverage-latest.json \
             --strict
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Run regression tests
+        id: tests
+        shell: bash
+        run: |
+          set +e
           python -m unittest discover -s .survey/tests -p 'test_*.py'
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Build repository inventory
         run: |
-          python - <<'PY'
-          import hashlib, json
-          from pathlib import Path
-          root = Path('.')
-          files = []
-          for p in sorted(root.rglob('*')):
-              if not p.is_file():
-                  continue
-              rel = p.relative_to(root)
-              if '.git' in rel.parts or '__pycache__' in rel.parts or '.venv' in rel.parts:
-                  continue
-              if p.name.endswith(('.pyc', '.tmp')):
-                  continue
-              data = p.read_bytes()
-              sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
-              files.append({'path': rel.as_posix(), 'sha': sha})
-          Path('/tmp/repo-inventory.json').write_text(json.dumps({
-              'source_commit': 'citation-backfill-working-tree',
-              'files': files,
-          }, ensure_ascii=False, indent=2) + '\n')
-          PY
+          python .survey/scripts/build_repository_inventory.py \
+            --root . \
+            --output /tmp/repo-inventory.json \
+            --source-commit citation-backfill-working-tree
 
       - name: Repository-wide consistency check
+        id: consistency
+        shell: bash
         run: |
+          set +e
           python .survey/scripts/check_repository.py \
             --root . \
             --inventory /tmp/repo-inventory.json \
             --report .survey/reports/consistency-latest.json
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Commit final derived reports
         shell: bash
@@ -211,3 +218,14 @@ jobs:
           git commit -m 'docs: finalize citation graph indexes and audits'
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Fail if final validation found issues
+        shell: bash
+        run: |
+          metadata_rc='${{ steps.metadata.outputs.exit_code }}'
+          tests_rc='${{ steps.tests.outputs.exit_code }}'
+          consistency_rc='${{ steps.consistency.outputs.exit_code }}'
+          if [ "$metadata_rc" != '0' ] || [ "$tests_rc" != '0' ] || [ "$consistency_rc" != '0' ]; then
+            echo "Final validation failed: metadata=$metadata_rc tests=$tests_rc consistency=$consistency_rc"
+            exit 1
+          fi
