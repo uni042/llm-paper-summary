@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "kind": "github_write_health_probe",
-  "probe_id": "asymcache-conflict-20260910-1804",
-  "attempt_id": "attempt-asymcache-20260910-1802-v10",
+  "probe_id": "survey-helper-push-race-20260911-1829",
+  "attempt_id": "retry-discovery-d953c583d54986c3",
   "target_path": ".survey/work-queue/transport/health-probe.json",
-  "note": "Probe after repeated SHA conflicts while staging AsymCache metadata."
+  "note": "Retry trigger after survey-helper queue commit lost a non-fast-forward race with another main writer. Direct GitHub write is healthy."
 }
