@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-979fc520a0781bc4",
+  "type": "research",
+  "parent_job_id": "job-9f3a1e76abe547d0",
+  "priority": 84,
+  "canonical_id": "arXiv:2605.28095",
+  "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
+  "source_url": "https://arxiv.org/abs/2605.28095",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
+  "selection_reason": "オフライン推論向けに、データ並列の独立性を維持しつつモデル重みを各GPUへ完全複製しない方式。層重みをGPU群の分散プールとして持ち、大バッチ時は遠隔重みをNVLink経由で小型キャッシュへ流すWeight-as-a-Service、小バッチ末尾では活性値を重み所有GPUへ送るCompute-as-a-Serviceを切り替える。H20/H200/B200で利用可能KV容量最大1.8倍、エンドツーエンドスループット最大1.5倍を報告し、DWDPと比較できる重み共有型データ並列の別設計である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T01:04:27+00:00",
+  "artifact_transport": "structured_record_v10"
+}

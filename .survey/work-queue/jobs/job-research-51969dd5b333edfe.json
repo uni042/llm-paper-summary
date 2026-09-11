@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-51969dd5b333edfe",
+  "type": "research",
+  "parent_job_id": "job-9f3a1e76abe547d0",
+  "priority": 90,
+  "canonical_id": "arXiv:2604.26074",
+  "title": "DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference",
+  "source_url": "https://arxiv.org/abs/2604.26074",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.26074-dak-direct-access-gpu-memory-offloading.md",
+  "selection_reason": "従来の階層メモリ推論が外部メモリからHBMへ先読みしてから計算するのに対し、Tensor Memory Acceleratorを転用して重みやKVキャッシュを遠隔メモリから共有メモリへ直接取り込み、HBM容量・帯域競合と先読み気泡を避ける。演算ごとの最適オフロード率、輻輳制御、マルチキャストを組み合わせ、NVLink-C2Cで最大3倍、PCIeで最大1.8倍を報告する。SSD/CXLを含む階層をより直接利用する将来設計にも強く関係する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T01:04:27+00:00",
+  "artifact_transport": "structured_record_v10"
+}

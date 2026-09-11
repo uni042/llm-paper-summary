@@ -1,8 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 84,
-      "ready": 1
+      "completed": 85
     },
     "audit": {
       "completed": 6
@@ -10,22 +9,47 @@
     "research": {
       "completed": 78,
       "superseded": 40,
-      "deferred": 1
+      "deferred": 1,
+      "ready": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-9f3a1e76abe547d0",
-      "type": "discovery",
-      "lane": "discovery",
-      "priority": 50,
-      "canonical_id": null,
-      "title": null,
-      "source_url": null,
-      "paper_path": null,
-      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
-      "completion": "Submit 0-5 strong candidates. Empty is valid."
+      "job_id": "job-research-51969dd5b333edfe",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2604.26074",
+      "title": "DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.26074",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.26074-dak-direct-access-gpu-memory-offloading.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-979fc520a0781bc4",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2605.28095",
+      "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.28095",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-d1d610f7f4147cc7",
+      "type": "research",
+      "lane": null,
+      "priority": 78,
+      "canonical_id": "arXiv:2603.28239",
+      "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+      "source_url": "https://arxiv.org/abs/2603.28239",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-11T01:03:33+00:00"
+  "generated_at": "2026-09-11T01:04:34+00:00"
 }

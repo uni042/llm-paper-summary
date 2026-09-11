@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-d1d610f7f4147cc7",
+  "type": "research",
+  "parent_job_id": "job-9f3a1e76abe547d0",
+  "priority": 78,
+  "canonical_id": "arXiv:2603.28239",
+  "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+  "source_url": "https://arxiv.org/abs/2603.28239",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+  "selection_reason": "NVLink Sharp型のスイッチ内集約をさらに進め、スイッチ側からメモリ意味操作を開始できる構成と通信路内8ビット量子化を提案する。複数FPGA試作でAll-Reduceを小メッセージ最大8.7倍、大メッセージ最大3.8倍高速化し、LLaMA-2で先頭トークン時間最大1.74倍、トークン間時間最大1.34倍改善。GPU間通信をホスト・GPU中心ではなくファブリック側へ移す系統として収録価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-11T01:04:27+00:00",
+  "artifact_transport": "structured_record_v10"
+}

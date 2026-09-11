@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-11T01:03:37.116766+00:00",
+  "updated_at": "2026-09-11T01:04:34.682575+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -2999,7 +2999,7 @@
     {
       "run_key": "2026-09-11T09:30:00+09:00",
       "first_recorded_at": "2026-09-11T00:37:49.644970+00:00",
-      "last_recorded_at": "2026-09-11T01:03:37.116766+00:00",
+      "last_recorded_at": "2026-09-11T01:04:34.682575+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded"
@@ -3007,9 +3007,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 8,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -3100,6 +3100,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34549151223:1",
+          "recorded_at": "2026-09-11T01:04:34.682575+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34549151223",
+            "run_attempt": "1",
+            "source_sha": "c62ab2ff9d3a4d9cff1ef336b425f24727d97cfa"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -3150,6 +3164,14 @@
           "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-9f3a1e76abe547d0",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -3187,12 +3209,34 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-51969dd5b333edfe",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.26074",
+          "title": "DAK: Direct-Access-Enabled GPU Memory Offloading with Optimal Efficiency for LLM Inference"
+        },
+        {
+          "job_id": "job-research-979fc520a0781bc4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.28095",
+          "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference"
+        },
+        {
+          "job_id": "job-research-d1d610f7f4147cc7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.28239",
+          "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260911T0948JST-discovery-bd3cac529b644852.json",
-        ".survey/work-queue/results/20260911T0956JST-discovery-4b2230b86b73cd99.json"
+        ".survey/work-queue/results/20260911T0956JST-discovery-4b2230b86b73cd99.json",
+        ".survey/work-queue/results/20260911T1005JST-discovery-9f3a1e76abe547d0.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 240,
