@@ -23,7 +23,7 @@
 
 | 公開 | 論文 | 実装 | リポジトリ内被引用 | 一文要約 |
 |---|---|:---:|---:|---|
-| 2025-02 | [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md) | [✓](https://github.com/bytedance/flux) | 3 | multi-GPU MoEで、他GPUから必要dataが全部届くまで待たず、届いた小さな行列単位からexpert GEMMを開始してGPU間通信待ちを計算の裏へ隠すruntime。 |
+| 2025-02 | [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md) | [✓](https://github.com/bytedance/flux) | 4 | multi-GPU MoEで、他GPUから必要dataが全部届くまで待たず、届いた小さな行列単位からexpert GEMMを開始してGPU間通信待ちを計算の裏へ隠すruntime。 |
 | 2025-06 | [SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding](2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md) | ✓ | 1 | 通常の投機的decodeではdraft生成→target検証が直列なので、両modelを同じGPU群へ載せるとdraftが終わるまでtarget GPUが待ち、modelごとに最適なtensor parallelismも選べない。SwiftSpecはdraft用GPU群とtarget用GPU群を分離し、draftが次の候補treeを伸ばしている間にtargetが前のtreeを検証する。検証結果に応じてtreeとKV cacheを再rootして有効な枝を再利用し、さらにsmall-batch向け融合kernelで同期・通信overheadを削ることでsingle-request decodeを高速化する。 |
 
 ### その他
