@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 19:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 19:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **13 / 50** |
-| Research ready | **13** |
+| Candidate在庫（Research ready） | **11 / 50** |
+| Research ready | **11** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **156** |
+| Research completed（累計） | **157** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **18 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 13）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -25,11 +25,11 @@ Run: **2026-09-12T19:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **1** |
 | 新規job | **1** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -56,15 +56,15 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 | 重複率 | **37.5%** |
 | Novel候補 | **50** |
 | Research候補採用 | **24** |
-| Research完了 | **32** |
-| Repo収録 | **32** |
+| Research完了 | **33** |
+| Repo収録 | **33** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 80 → 重複除外後 50 → Research候補採用 24 → Research完了 32 → Repo収録 32**
+**探索評価 80 → 重複除外後 50 → Research候補採用 24 → Research完了 33 → Repo収録 33**
 
 ## 探索効率（直近24時間）
 
@@ -96,6 +96,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### Research完了
 
+- `arXiv:2606.30391` — Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs
 - `arXiv:2609.11392` — PATTON: Enabling Commodity PIM for Production LLM Serving
 - `arXiv:2512.18194` — TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale
 - `arXiv:2609.09166` — X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding
@@ -103,15 +104,14 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 - `arXiv:2606.19746` — SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL
 - `arXiv:2608.25523` — TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving
 - `arXiv:2605.20179` — TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload
-- `arXiv:2603.29002` — Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference
 
 ### 次に処理する候補
 
-- P88 `arXiv:2606.30391` — Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs
 - P87 `arXiv:2606.17787` — LUMEN: Coordinated Failure Recovery for Distributed LLM Serving
 - P86 `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
 - P83 `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
+- P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 
 ## 7日比較
 
