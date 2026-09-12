@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.11392",
   "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.11392-patton-commodity-pim-production-llm-serving.md",
   "selection_reason": "汎用品のメモリ内処理（PIM）を実運用LLMサービングへ統合し、論理KVブロックの割当・配置・書込み・コマンド生成まで実行時系として扱う。GPU中心の既存サービング研究と異なるメモリ内処理基盤の軸を補完し、KVキャッシュ管理と階層メモリの双方に直接関係する。一次資料ではvLLM相当のKVキャッシュ運用との統合と実機/シミュレーション評価を報告しており、システム研究として優先度が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T10:12:06+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T10:38:55+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
