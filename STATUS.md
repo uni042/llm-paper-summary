@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 19:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 19:36 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-12T18:30:00+09:00**
+Run: **2026-09-12T19:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
+| Research完了 | **0** |
 | Audit完了 | **0** |
 | Discovery完了 | **1** |
-| 新規job | **6** |
-| Repo収録 | **2** |
+| 新規job | **1** |
+| Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -50,12 +50,12 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **16** |
-| 探索round（stats観測） | **12** |
-| 探索評価候補 | **71** |
-| 重複除外 | **24** |
-| 重複率 | **33.8%** |
-| Novel候補 | **47** |
+| 通常worker run（ledger観測） | **17** |
+| 探索round（stats観測） | **13** |
+| 探索評価候補 | **80** |
+| 重複除外 | **30** |
+| 重複率 | **37.5%** |
+| Novel候補 | **50** |
 | Research候補採用 | **24** |
 | Research完了 | **31** |
 | Repo収録 | **31** |
@@ -65,7 +65,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 24時間ファネル
 
-**探索評価 71 → 重複除外後 47 → Research候補採用 24 → Research完了 31 → Repo収録 31**
+**探索評価 80 → 重複除外後 50 → Research候補採用 24 → Research完了 31 → Repo収録 31**
 
 ## 探索効率（直近24時間）
 
@@ -73,6 +73,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 |---|---:|---:|---:|---:|---:|
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
+| hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
@@ -86,11 +87,11 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 直近5探索round
 
+- **2026-09-12T19:30:00+09:00** — hpc_gpu_collective_serving: 評価 9 / 重複 6 / 採用 0
 - **2026-09-12T19:00+09:00** — adjacent-pim-hbm-gpu-runtime-chiplet: 評価 14 / 重複 9 / 採用 5
 - **2026-09-12T18:00:00+09:00** — production推論エンジン・tail/SLO scheduling・hardware-software co-design: 評価 5 / 重複 0 / 採用 3
 - **2026-09-12T18:00:00+09:00** — CXL共有メモリ・KV階層・near-memory processing: 評価 7 / 重複 2 / 採用 2
 - **2026-09-12T18:00:00+09:00** — GPU runtime・SmartNIC・異種アクセラレータ・階層KV: 評価 5 / 重複 0 / 採用 0
-- **2026-09-12T18:00:00+09:00** — 新着edge/disaggregated serving・通信/電力制御: 評価 6 / 重複 0 / 採用 4
 
 ## 最近処理した論文
 
