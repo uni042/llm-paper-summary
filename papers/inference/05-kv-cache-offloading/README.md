@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（3本）
+## 自動生成の論文一覧（4本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -15,6 +15,10 @@
 - **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は固定Hadamard回転・正規化・4ビット符号帳でKVをオンチップNVM向けに量子化し、補助情報と読み出し再構成を減らして長文脈KVの面積・エネルギーを抑える。
+
+- **2026-09 · [Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving](2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md)**  
+  実装：[✓](https://github.com/Seagate) ・ リポジトリ内被引用：0  
+  共有CXLメモリをKubernetesの動的資源として割り当て、複数ノードから同じKVキャッシュを再利用して長い接頭辞の初動遅延を5.5〜36.6倍短縮する実現可能性研究。
 
 ### 1年以上前
 

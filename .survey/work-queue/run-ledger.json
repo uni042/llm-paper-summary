@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T05:46:18.280001+00:00",
+  "updated_at": "2026-09-12T06:02:18.554329+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8830,19 +8830,19 @@
     {
       "run_key": "2026-09-12T14:30:00+09:00",
       "first_recorded_at": "2026-09-12T05:36:12.861693+00:00",
-      "last_recorded_at": "2026-09-12T05:46:18.280001+00:00",
+      "last_recorded_at": "2026-09-12T06:02:18.554329+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 3,
+        "new_papers": 4,
         "fallback_archived": 0
       },
       "events": [
@@ -8919,6 +8919,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34677038550:1",
+          "recorded_at": "2026-09-12T06:02:18.554329+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34677038550",
+            "run_attempt": "1",
+            "source_sha": "2bf0839caeee70cac6869093b4535207b975c7fb"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8953,6 +8968,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-985814ffefefe223",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10790",
+          "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8981,7 +9004,8 @@
       "new_paper_ids": [
         "arXiv:2609.11582",
         "arXiv:2609.10964",
-        "arXiv:2609.08189"
+        "arXiv:2609.08189",
+        "arXiv:2609.10790"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1422JST-discovery-stats-backfill.json",
@@ -8989,8 +9013,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 329,
-      "paper_active_count_after": 332,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 333,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
