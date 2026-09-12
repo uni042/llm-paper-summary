@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-71a219ce6f705a8b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.12103",
+      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.12103",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.12103-kernel-managed-expert-cache-tiering.md",
+      "priority": 93,
+      "reason": "1.45TB規模の専門家プールを含むMoE推論で、ユーザー空間の専門家キャッシュではなくLinuxページキャッシュに階層管理を任せる設計を実測評価する。カーネルLRUとオラクル頻度表の比較、MGLRU/メモリ圧迫条件、router先読みの効果まで切り分けており、OS階層管理と専門家キャッシュ政策の境界を直接検証する重点テーマ候補。"
+    },
+    {
+      "canonical_id": "arXiv:2607.26475",
+      "title": "DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch",
+      "source_url": "https://arxiv.org/abs/2607.26475",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.26475-dualdecoder-predictive-kv-prefetch.md",
+      "priority": 89,
+      "reason": "ホスト側へ疎KVをオフロードする長文推論で、次トークンに必要なKVを投機トークンから予測し、層単位転送スケジュールで先読みを計算と重ねる。補助状態のGPUメモリ負担も削減しつつ最大2.62倍のdecode throughputを報告しており、階層KV・prefetch・長文推論の重点テーマに強く合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2603.23049",
+      "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
+      "source_url": "https://arxiv.org/abs/2603.23049",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.23049-pcr-prefetch-cache-reuse-rag-serving.md",
+      "priority": 88,
+      "reason": "RAG配信の共有prefix再利用で、scheduler待機列を使うlook-ahead LRU、KVロードとGPU計算の層単位重畳、SSDからDRAMへのqueue-based prefetchを統合する。SSD I/Oを明示的に含むKV再利用系で平均TTFT最大2.47倍改善を報告しており、SSD/NVMe活用の比較対象として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2605.23389",
+      "title": "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2605.23389",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+      "priority": 85,
+      "reason": "KV長の近い要求を同一batchへ揃えてdecode iteration内の待ちを減らし、大容量CPUメモリとGPU-to-GPU KV先読みを組み合わせるprefix-aware batching方式。最大1.98倍のdecode throughput、最大7.4倍のlatency改善を報告し、スケジューリングとKV転送の協調設計として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-os-tiering-kv-prefetch-2",
+    "axis": "OS階層管理・専門家キャッシュ・KV先読み・SSD再利用",
+    "query_summary": "第1round後、OS/ストレージ隣接へ軸を移し、カーネル管理expert tiering、host-memory sparse KV prefetch、SSD-backed RAG KV再利用、prefix-aware GPU prefetchを軽量評価。投入直前に最新HEADとrepo検索でcanonical IDの既存化を再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はforward citationとネットワーク/collective communication・disaggregated servingの交点へ移し、既収録SmartGen/KVServe等を避けて新規候補を探す",
+    "empty_round_reason": null
+  }
+}
