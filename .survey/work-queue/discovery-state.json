@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:22:37+00:00",
-  "last_run_key": "2026-09-13T00:58:47+09:00",
-  "last_round": "specialist-latest-runtime-moe-9",
+  "updated_at": "2026-09-12T16:28:12+00:00",
+  "last_run_key": "2026-09-13T01:26:11+09:00",
+  "last_round": "specialist-september-kv-reuse-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
+  "consecutive_empty_rounds": 4,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -1128,6 +1128,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は新規候補のrelated/forward系と、量子化・kernel/fused executionなどmemory/cache以外の推論runtime軸を確認し、複数軸で追加強候補が無ければ収束判定する",
       "source_submission": "work-queue/submissions/20260913T0121JST-discovery-specialist-latest-runtime-moe-9.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-september-kv-reuse-1",
+      "axis": "2026年9月新着・KV圧縮/eviction/再利用",
+      "query_summary": "2026年9月のLLM推論・KV cache新着を探索し、一次arXivページで軽量評価。canonical arXiv IDと題名を最新repoで再検索し、既存identity/job/fallbackとの一致が見つからない強候補を選別した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はKV圧縮を離れ、MoE expert I/O/offloadと階層メモリ・storage隣接へ移る",
+      "source_submission": "work-queue/submissions/20260913T0128JST-discovery-81ef6cac67a27161.json"
     }
   ],
   "axes": {
@@ -1780,6 +1795,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次は新規候補のrelated/forward系と、量子化・kernel/fused executionなどmemory/cache以外の推論runtime軸を確認し、複数軸で追加強候補が無ければ収束判定する"
+    },
+    "2026年9月新着・KV圧縮/eviction/再利用": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はKV圧縮を離れ、MoE expert I/O/offloadと階層メモリ・storage隣接へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
