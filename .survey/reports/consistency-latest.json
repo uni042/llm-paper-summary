@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-09-12T11:05:49.196032+00:00",
-  "status": "passed",
+  "source_commit": "post-maintenance-working-tree",
+  "checked_at": "2026-09-12T16:30:01.481459+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 1489,
-  "checked_file_count": 1489,
+  "inventory_file_count": 1493,
+  "checked_file_count": 1493,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,6 +25,72 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 341,
-  "findings": []
+  "external_url_count": 346,
+  "findings": [
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.02189-pipemax-offline-llm-inference-commodity-gpu-servers.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/02-hardware-accelerators/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/05-kv-cache-offloading/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.01657-prefixshield-admission-responsibility.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.08309-hetis-heterogeneous-gpu-dynamic-parallelism.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29207-kernelflume-elastic-core-attention-scaling.md",
+      "detail": "code"
+    },
+    {
+      "code": "paper_missing_metadata",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11562-entwine-tiled-computation-fine-grained-gpu-communication.md",
+      "detail": "code"
+    }
+  ]
 }
