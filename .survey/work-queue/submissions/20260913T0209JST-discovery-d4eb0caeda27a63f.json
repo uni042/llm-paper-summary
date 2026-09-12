@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d4eb0caeda27a63f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.28848",
+      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
+      "source_url": "https://arxiv.org/abs/2607.28848",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
+      "priority": 89,
+      "reason": "推論をpeak load向けにprovisionした際の余剰GPU computeをLoRA fine-tuningへ回しつつ、推論SLOを守るco-serving方式。multi-LoRA batchingだけを要求するcompact hookでvLLM/SGLang/S-LoRAへ統合し、production trace上で100% inference SLO complianceを維持しながらfine-tuning throughputをLLMStation比2.9倍と報告する。serving engineを大きく改造せずtrainingを同居させる境界設計として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2511.00101",
+      "title": "Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving",
+      "source_url": "https://arxiv.org/abs/2511.00101",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md",
+      "priority": 87,
+      "reason": "base modelを共有した複数LoRA adapterをvirtualized moduleで隔離し、fine-tuningとinferenceのforward pathを共通kernelへ統合するmulti-LoRA runtime。inference-onlyで既存co-serving system比最大3.0倍throughput、統合fine-tuning/inferenceでPEFT比46.4倍のSLO attainmentを報告し、adapter仮想化とserving runtimeの接続点として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.17910",
+      "title": "Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA",
+      "source_url": "https://arxiv.org/abs/2512.17910",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-alora-cross-model-kv-cache-reuse.md",
+      "priority": 88,
+      "reason": "base modelとLoRA適用model間でprefix KV cacheを再利用できない問題に対し、base-aligned block hashingとactivation-aware maskingをvLLMへ追加し、adapter切替時のKV再計算を回避する。multi-turn/multi-adapter pipelineで最大58倍のE2E latency削減と100倍超のTTFT改善を報告しており、adapter servingとKV reuseを直接結ぶ重要候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-multilora-coserving-6",
+    "axis": "multi-LoRA・推論/微調整co-serving・cross-model KV reuse",
+    "query_summary": "引用系統backfillから離れ、training/serving境界とmulti-adapter runtimeへ探索軸を変更した。fine-tuning主体のみの研究は避け、推論SLO、serving integration、KV reuseに明確なシステム寄与を持つ3件を選別し、最新mainでcanonical ID再検索して未収録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2604.06370"],
+    "next_axis_hint": "次はadapter/co-servingを離れ、agentic・multi-turn長時間requestのstate保存、interruption、fault tolerance、prefix sharing runtimeへ移る",
+    "empty_round_reason": null
+  }
+}
