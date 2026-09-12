@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:10:13+00:00",
+  "updated_at": "2026-09-12T15:11:50+00:00",
   "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-agentic-serving-3",
+  "last_round": "specialist-gpu-runtime-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -895,6 +895,25 @@
       ],
       "next_axis_hint": "Blackwell confidential computing下のhost-device転送律速とGPU runtime境界を確認し、その後新着2609系のMoE/KV/servingを再探索する",
       "source_submission": "work-queue/submissions/20260913T0010JST-discovery-agentic-serving-3.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-gpu-runtime-4",
+      "axis": "GPU runtime境界・host-device転送律速",
+      "query_summary": "Blackwell confidential computing、CUDA host-device transfer、KV restore、異種GPU runtimeを探索し、既収録HeteroServe/SuperInfer/MFS等を除外して未投入の1候補を採用した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2603.12707",
+        "arXiv:2601.20309",
+        "arXiv:2603.17456"
+      ],
+      "next_axis_hint": "直近2609のMoE expert placement/prefetch、KV management、serving schedulingを新着中心に再走査し、その後引用・関連実装経由で漏れを確認する",
+      "source_submission": "work-queue/submissions/20260913T0012JST-discovery-gpu-runtime-4.json"
     }
   ],
   "axes": {
@@ -1407,6 +1426,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "Blackwell confidential computing下のhost-device転送律速とGPU runtime境界を確認し、その後新着2609系のMoE/KV/servingを再探索する"
+    },
+    "GPU runtime境界・host-device転送律速": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "直近2609のMoE expert placement/prefetch、KV management、serving schedulingを新着中心に再走査し、その後引用・関連実装経由で漏れを確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

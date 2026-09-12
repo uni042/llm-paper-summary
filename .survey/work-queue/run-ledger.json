@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T15:11:04.239533+00:00",
+  "updated_at": "2026-09-12T15:12:30.839849+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11336,7 +11336,7 @@
     {
       "run_key": "2026-09-12T23:30:00+09:00",
       "first_recorded_at": "2026-09-12T14:44:28.159530+00:00",
-      "last_recorded_at": "2026-09-12T15:11:04.239533+00:00",
+      "last_recorded_at": "2026-09-12T15:12:30.839849+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -11345,9 +11345,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 10,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -11438,6 +11438,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34701479513:1",
+          "recorded_at": "2026-09-12T15:12:30.839849+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34701479513",
+            "run_attempt": "1",
+            "source_sha": "2918d65dad88b20609089cd643032e91121ad9bc"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11483,6 +11497,14 @@
         },
         {
           "job_id": "job-54739fbff28443b3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-2a72bb4efed9b813",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -11546,6 +11568,20 @@
           "type": "research",
           "canonical_id": "arXiv:2607.03333",
           "title": "SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference"
+        },
+        {
+          "job_id": "job-7f0434f36cf0ace5",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-cccd56289285fe3d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.23969",
+          "title": "The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing"
         }
       ],
       "new_paper_ids": [
@@ -11556,7 +11592,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0005JST-discovery-storage-hierarchy-1.json",
         ".survey/work-queue/results/20260913T0008JST-discovery-serving-scheduling-2.json",
-        ".survey/work-queue/results/20260913T0010JST-discovery-agentic-serving-3.json"
+        ".survey/work-queue/results/20260913T0010JST-discovery-agentic-serving-3.json",
+        ".survey/work-queue/results/20260913T0012JST-discovery-gpu-runtime-4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 357,

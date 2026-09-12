@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-cccd56289285fe3d",
+  "type": "research",
+  "parent_job_id": "job-2a72bb4efed9b813",
+  "priority": 82,
+  "canonical_id": "arXiv:2606.23969",
+  "title": "The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing",
+  "source_url": "https://arxiv.org/abs/2606.23969",
+  "paper_path": null,
+  "selection_reason": "Blackwell GPU confidential computing下でGPU内演算ではなくhost-device bridgeの直列化と高いsetup costがLLM serving性能を落とすことを実測し、vLLM decode・KV restore・model loadへの影響と回復策を分析する。メモリ転送、runtime境界、KV復元の実システム上の律速として既存offload系を補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T15:11:50+00:00",
+  "artifact_transport": "structured_record_v10"
+}
