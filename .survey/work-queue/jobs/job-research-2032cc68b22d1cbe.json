@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-2032cc68b22d1cbe",
+  "type": "research",
+  "parent_job_id": "job-29dd7c44eff93660",
+  "priority": 88,
+  "canonical_id": "arXiv:2606.23521",
+  "title": "Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference",
+  "source_url": "https://arxiv.org/abs/2606.23521",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.23521-concordia-persistent-kernel-checkpointing.md",
+  "selection_reason": "長時間動作するLLM agentのKV cache・scheduler・通信状態などGPU常駐stateを、framework固有のcheckpoint実装ではなくdevice-resident persistent kernelで保護するruntime。PTX/SASS instrumentationとJIT生成delta handlerによりdirty stateをCXL memoryまたはhost DRAMへ記録し、GPU/communicator障害からの復旧をhost CPUのcritical path外で扱う。推論runtime・階層メモリ・耐障害性を接続する未収録システムとして価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:33:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}

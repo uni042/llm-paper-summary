@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:31:01+00:00",
+  "updated_at": "2026-09-12T16:33:06+00:00",
   "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-runtime-certification-scheduling-2",
+  "last_round": "specialist-fault-tolerant-serving-runtime-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1158,6 +1158,23 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はserving schedulingを離れ、GPU runtime・通信・隣接systemsまたはforward/backward citationから未収録候補を探す",
       "source_submission": "work-queue/submissions/20260913T0132JST-discovery-262708a8729e8066.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-fault-tolerant-serving-runtime-3",
+      "axis": "推論runtime・serving耐障害性",
+      "query_summary": "GPU runtime・通信の隣接systemsへ探索軸を移し、長時間agent/servingのstate保護と障害復旧を扱う候補を一次arXiv概要で軽量評価した。Blink等の既収録候補は決定論的job IDで除外し、最新mainにjobが存在しない2件だけを送信する。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.07609"
+      ],
+      "next_axis_hint": "次は耐障害性を離れ、MoE expert co-executionまたは被引用・参考文献経路へ移る",
+      "source_submission": "work-queue/submissions/20260913T0134JST-discovery-29dd7c44eff93660.json"
     }
   ],
   "axes": {
@@ -1830,6 +1847,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はserving schedulingを離れ、GPU runtime・通信・隣接systemsまたはforward/backward citationから未収録候補を探す"
+    },
+    "推論runtime・serving耐障害性": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "次は耐障害性を離れ、MoE expert co-executionまたは被引用・参考文献経路へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
