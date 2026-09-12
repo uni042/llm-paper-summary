@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "discovery",
+  "job_id": "job-4ae9c512db20f673",
+  "source_urls": [
+    "https://arxiv.org/abs/2604.21072",
+    "https://arxiv.org/abs/2604.27396",
+    "https://arxiv.org/abs/2511.06174",
+    "https://arxiv.org/abs/2505.03745",
+    "https://arxiv.org/abs/2502.16473"
+  ],
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.21072",
+      "title": "Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization",
+      "primary_url": "https://arxiv.org/abs/2604.21072",
+      "theme_hint": "BloomBee。低帯域・異種インターネットノード上の分散LLM推論で、層配置、マイクロバッチ、テンソル退避、可逆圧縮、投機デコードを通信量と待ち時間の観点から共同最適化し、既存分散方式より処理量最大1.76倍・平均遅延最大43.2%削減を報告する。",
+      "priority": 8.3
+    },
+    {
+      "canonical_id": "arXiv:2604.27396",
+      "title": "VitaLLM: A Versatile, Ultra-Compact Ternary LLM Accelerator with Dependency-Aware Scheduling",
+      "primary_url": "https://arxiv.org/abs/2604.27396",
+      "theme_hint": "三値LLM向けの異種二系統演算器、KV読出し削減、依存認識スケジューリングを共同設計する小型アクセラレータ。TSMC 16nm実装で70.70 tokens/s、65.97mW、17.4 TOPS/mm²/Wを報告し、prefill/decode両局面の資源利用を評価する。",
+      "priority": 7.9
+    },
+    {
+      "canonical_id": "arXiv:2511.06174",
+      "title": "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+      "primary_url": "https://arxiv.org/abs/2511.06174",
+      "theme_hint": "FPGAのオンチップメモリを算術器ではなくルックアップ計算へ使う1B超LLM推論アクセラレータ。AMD V80実機でQwen3-1.7Bを評価し、MI210比1.66倍低遅延、A100比1.72倍高エネルギー効率を報告する。",
+      "priority": 7.8
+    },
+    {
+      "canonical_id": "arXiv:2505.03745",
+      "title": "AccLLM: Accelerating Long-Context LLM Inference Via Algorithm-Hardware Co-Design",
+      "primary_url": "https://arxiv.org/abs/2505.03745",
+      "theme_hint": "長文脈推論向けにpruning、Λ-shaped attention、W2A8KV4量子化と再構成可能FPGA演算器を共同設計し、Alveo U280実機でFlightLLM比2.98倍処理量・4.07倍エネルギー効率を報告する。",
+      "priority": 7.7
+    },
+    {
+      "canonical_id": "arXiv:2502.16473",
+      "title": "TerEffic: Highly Efficient Ternary LLM Inference on FPGA",
+      "primary_url": "https://arxiv.org/abs/2502.16473",
+      "theme_hint": "三値LLMをFPGAオンチップへ完全収容する構成とHBM支援構成を設計し、370Mで12,700 tokens/s、2.7Bで521 tokens/sを実機評価する。オフチップ帯域を消す／抑えるメモリ階層設計として関連性が高い。",
+      "priority": 7.6
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T19:30:00+09:00",
+    "round": "20260912T2040JST-accelerator-distributed-01",
+    "axis": "distributed_edge_accelerator",
+    "query_summary": "直前のKV/attention軸から切り替え、分散インターネット推論とFPGA/ASIC系ハードウェア協調設計を探索。一次資料の題名・要旨・実機評価条件を軽量確認し、最新identity indexで未収録を確認した。単なる理論提案や実測の弱い候補は除外した。",
+    "candidate_count": 9,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2607.08057",
+      "arXiv:2608.03036",
+      "arXiv:2403.01164",
+      "arXiv:2407.00023"
+    ],
+    "next_axis_hint": "次回はハードウェア軸を反復せず、最近追加されたTENT/NELSSA/LUMEN/Entwineの被引用・参考文献からストレージ、OS、ネットワークの未収録system paperへcitation chasingする。"
+  },
+  "worker_note": "candidate inventoryがcritical水位のため、既存軸から離れた分散・アクセラレータ系を補充した。5件はいずれも未収録を確認し、実機評価または公開実装を伴う研究価値のある候補に限定した。accepted_countはActions側の最終重複排除後に確定する。"
+}
