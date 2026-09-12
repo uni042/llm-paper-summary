@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-6f0990d652c4efef",
+  "type": "research",
+  "parent_job_id": "job-746299a613b638bf",
+  "priority": 79,
+  "canonical_id": "arXiv:2601.12241",
+  "title": "Power Aware Dynamic Reallocation For Inference",
+  "source_url": "https://arxiv.org/abs/2601.12241",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md",
+  "selection_reason": "プリフィル・デコード分離環境で、GPU台数の役割再配置だけでなく電力上限そのものを両段階へ動的に再配分し、クラスタの電力制約下でサービス品質目標の達成率を最大化するRAPIDを提案する。固定割当と同じハードウェア・総電力上限のまま、ピーク負荷時にサービス品質目標達成率を最大2倍へ改善すると報告している。計算資源だけでなく電力をサービング時の第一級資源として扱うため、既存の分離・負荷分散研究を補完する価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T04:34:42+00:00",
+  "artifact_transport": "structured_record_v10"
+}
