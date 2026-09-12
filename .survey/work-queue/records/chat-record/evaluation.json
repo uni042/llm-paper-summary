@@ -2,21 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2512.18194-20260912-1855-v10-a",
-  "job_id": "job-research-ed6df8bb43d5460d",
+  "attempt_id": "attempt-2609.11392-20260912-1930-v10-a",
+  "job_id": "job-research-a3fa4611bb7bffee",
   "data": {
-    "hardware": ["2台のサーバ。各サーバにNVIDIA A6000 48GB GDDR GPUと512GBホストDRAM。", "NIXL/UCX比較では100Gbps Mellanox MT2892 NIC。", "CXL実験ではNiagara 2.0 CXL Type-3メモリ拡張器を使用し、64GBを共有領域へ割り当てる。Intel Memory Latency Checker実測で640ns、10.1GB/s。"],
-    "software": ["NVIDIA Dynamo v0.5.0とvLLM v0.10.1.1。比較対象はDynamo NIXL/UCX、LMCache、TraCT。GPU上の接頭辞キャッシュは全実験で無効化して転送路とホスト/CXLキャッシュの差を分離する。"],
-    "model": ["全評価でDeepSeek-R1-Distill-Llama-8Bを使用する。"],
-    "datasets": ["静的ワークロード: 出力3トークン固定、入力1500/3000/4500/6000トークン。", "Dynamo内蔵生成器による合成ワークロードA/B/C。平均入力4449トークン（標準偏差2424）、平均出力215（263）。平均unique lengthはA=1073（1549）、B=1215（1693）、C=1631（2027）で、後者ほど共有接頭辞が少ない。"],
-    "baselines": ["NIXL: Dynamo標準のNIXL/UCXによるRDMA系KV転送。接頭辞再利用なし。", "LMCache: プリフィルworkerのホストDRAMへ48GB接頭辞キャッシュを置く。キャッシュヒットしてもKVをデコードworkerへ転送する。", "TraCT: 48GB接頭辞キャッシュをCXL共有メモリへ置く。転送のみを比較する実験では接頭辞キャッシュを無効化したTraCT(no cache)も使用。"],
-    "correctness": "比較は同一DeepSeek-R1-Distill-Llama-8Bと同一要求条件を使い、KV計算値は変えない。TraCTとLMCacheは48GBの同容量接頭辞キャッシュを使い、GPU接頭辞キャッシュを無効にして、CXL共有キャッシュとDRAMキャッシュ・RDMA転送の差を測る。",
-    "settings": [
-      {"name":"CXL転送単体評価","description":"接頭辞キャッシュを無効化し、1500〜6000入力トークンの静的要求でTraCT(no cache)とNIXLのTTFT分布を比較する。6000トークンではQPS 0.5/1.0/1.5を掃引し、プリフィルと要求スループットを測る。"},
-      {"name":"接頭辞キャッシュ評価","description":"TraCTとLMCacheの接頭辞キャッシュをどちらも48GBに固定し、合成A/B/CをQPS最大3.0付近まで負荷させる。接頭辞ヒット率、ピークスループット、TTFTの平均・P99を比較する。"},
-      {"name":"時間内訳と資源評価","description":"要求時間をスケジューリング、KV読込、計算、KV書込へ分解し、さらにプリフィル/デコードGPUのSM利用率、PCIe/CXL RX/TX帯域、GPU消費電力を時系列で測る。"}
+    "hardware": [
+      "PIM側は16GiBのAiM構成をRamulator2ベースのシミュレータで評価する。1モジュール、32チャネル、各チャネル16バンク、16,384行/バンク、2KiB行、32Bバースト。",
+      "ランタイムKVキャッシュミスによって追加発生するプリフィル再計算はNVIDIA A100 80GB PCIe GPUで測定する。"
     ],
-    "methodology": "静的長さ制御でKV転送量を直接変える実験と、接頭辞共有度を変えた合成ワークロードを分ける。まずキャッシュなし条件でCXL DMA自体がRDMA/NIXLの代替になるかを確認し、その後同容量キャッシュ条件で共有CXLに置く効果をLMCacheと比較する。この二段構成により『CXL転送経路が速い効果』と『共有キャッシュで再計算・再転送を避ける効果』を分離する。",
-    "scope": "実CXL Type-3機器を使う点は強いが、2サーバ・各1基A6000の制御環境であり、論文自身も本番では役割が同一ノードへ共存する場合があると述べる。Niagara 2.0の640ns/10.1GB/sという特性、100Gbps RDMA比較、単一8Bモデル、48GBキャッシュに依存するため、より大規模なラック、多GPU、より高速NIC/CXL世代、巨大モデルで相対差が変化し得る。"
+    "software": [
+      "PATTONはvLLMへ統合し、vLLMのブロック単位KVキャッシュ管理、接頭辞共有、接頭辞キャッシュを利用する。",
+      "比較対象のNeuPIMs、PIMphony、AttAcc、BlockPIMについて、論文で定義された配置・割当粒度を保ちながらPATTONの共通コマンド生成インターフェース上へ実装する。"
+    ],
+    "model": ["Llama3-8B", "Qwen3-8B", "OPT-6.7B", "Qwen1.5-7B"],
+    "datasets": [
+      "ShareGPTの実会話を多ターン会話としてvLLMへ投入し、各ターンで履歴を累積する。",
+      "OPT-6.7BとQwen1.5-7Bは目標同時実行数8・live request pool 16、Qwen3-8BとLlama3-8Bは32・64。各構成を10,000超のvLLM scheduler stepで実行し平均を取る。"
+    ],
+    "baselines": [
+      "NeuPIMs: request単位でチャネルを割り当てるNPU-PIM方式。ページ型管理は持つが完全なPagedAttention接頭辞再利用を持たない。",
+      "PIMphony: token-centric partitioningとrequest-owned DPA chunkを使う動的PIM方式。",
+      "AttAcc: 固定チャネル分割と最大コンテキスト長に基づく静的KV予約を行う方式。",
+      "BlockPIM: ブロック単位KV割当と接頭辞キャッシュを扱う方式。評価構成ではハードウェア依存の128トークンブロック。"
+    ],
+    "correctness": "各比較方式には文献で明示された割当意味論を保持し、未定義のPagedAttention機能を後付けしない。物理配置が曖昧な方式には、文献の制約と両立する範囲でGEMVに有利なKey/Value配置を与えるため、比較対象へ不利な配置を意図的に課していない。PATTON自体は数値近似を行わない。",
+    "settings": [
+      {"name": "本番型多ターン負荷", "description": "ShareGPT会話を連続する複数ターンとして処理し、要求の到着・完了が継続するlive poolを用いる。これにより接頭辞共有・キャッシュ、動的割当・回収、容量圧迫時の再計算を含む長期挙動を評価する。"},
+      {"name": "共通AiM構成", "description": "すべてのPIMランタイムを同じ16GiB AiM構成とDRAM timingで比較し、命令数とメモリサイクルからPIMエネルギーをモデル化する。ホストxPU構成が方式ごとに異なるため、KV管理とPIMアテンションに無関係なホスト計算は比較から除外する。"},
+      {"name": "容量圧迫評価", "description": "250,000超のlive context tokenを持つ条件を用意し、GPU native cache、PATTON、Order-2-Vを外したPATTONのKVキャッシュヒット率を比較して、GEMV連続性だけを最大化して容量共有を失う場合の再計算増加を測る。"}
+    ],
+    "methodology": "主評価は、PIM上のKey/Value書き込み・QK転置積・SV積の遅延とエネルギーに、ランタイムのKVキャッシュミスが原因で発生したGPU再プリフィルの費用を加える。追加再プリフィル費用は、完全プリフィル負荷と本来必要なプリフィルだけをA100でそれぞれ測り、その差を取って非線形なプリフィル費用を反映する。全モデル平均は幾何平均を使用する。Commit Zoneの効果は最終配置へ直接Valueを書き込むPATTON-wo-CZとのアブレーションで分離し、Order-2-Vの効果は行領域全体を要求へ専有させる構成と比較して、GEMV効率と容量効率の交換条件を検証する。",
+    "scope": "PIM命令とDRAM timingはRamulator2ベースのAiMシミュレーションであり、PIM実チップ上のエンドツーエンド実測ではない。A100実機を使うのはKVミスに伴う追加プリフィルの測定部分である。また方式ごとにホストxPUが異なるため、評価はサービング全体のトークン毎秒ではなく、PIMアテンションとランタイム由来再計算へ範囲を限定している。4つの約7〜8BモデルとShareGPT多ターン負荷を用いる点は動的キャッシュ挙動の比較には有効だが、より巨大なモデルや異なるPIM規格、本物のAiMデバイスで同じ倍率が出るかは未検証である。"
   }
 }
