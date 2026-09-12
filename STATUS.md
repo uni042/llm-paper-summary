@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **69 / 50** |
-| Research ready | **69** |
+| Candidate在庫（Research ready） | **70 / 50** |
+| Research ready | **70** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **18** |
-| 新規job | **46** |
+| Discovery完了 | **19** |
+| 新規job | **48** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **69** |
-| 探索評価候補 | **322** |
+| 探索round（stats観測） | **70** |
+| 探索評価候補 | **327** |
 | 重複除外 | **96** |
-| 重複率 | **29.8%** |
-| Novel候補 | **226** |
-| Research候補採用 | **101** |
+| 重複率 | **29.4%** |
+| Novel候補 | **231** |
+| Research候補採用 | **102** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 322 → 重複除外後 226 → Research候補採用 101 → Research完了 47 → Repo収録 47**
+**探索評価 327 → 重複除外後 231 → Research候補採用 102 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -85,6 +85,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
+| CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime | 5 | 0 | 1 | 0.0% | 20.0% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | CXL共有メモリ・ラック内KV転送・Superchip階層メモリ | 5 | 2 | 0 | 40.0% | 0.0% |
 | Flash・SSD階層メモリと予測先読み | 5 | 3 | 2 | 60.0% | 40.0% |
@@ -143,11 +144,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — SLO budget・KV restoration/reconfiguration・adaptive prefill execution: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — output-length uncertainty・KV reservation・memory-constrained admission/scheduling: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — agentic multi-turn state・interruption・distributed prefix sharing: 評価 6 / 重複 2 / 採用 1
 - **2026-09-13T01:55:54+09:00** — multi-LoRA・推論/微調整co-serving・cross-model KV reuse: 評価 4 / 重複 1 / 採用 2
-- **2026-09-13T01:55:54+09:00** — DistServe周辺のforward citation・backward reference補完: 評価 4 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
@@ -167,8 +168,8 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
+- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P89 `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
-- P89 `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
 
 ## 7日比較
 
