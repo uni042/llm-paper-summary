@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e847b9b136f87890",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 91,
+      "reason": "分離サービング（disaggregated serving）でprefill側が混雑する一方decode側に計算余力が残る非対称性を利用し、decode nodeへprefillをchunk単位で迂回させてKV転送自体を省くスケジューラ。A100 2P2D構成・DeepSeek-V2-Lite・production-style traceでP95 TTFTを最大81%削減し、SLO達成率を最大79%向上。既存の静的prefill/decode分離を負荷に応じて部分的に再結合する設計として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-mfs-multi-stage-flow-scheduling.md",
+      "priority": 90,
+      "reason": "再利用KV取得、collective通信、prefill-to-decode転送が同一ネットワーク上で競合する多段flowを、requestのstageとlaxityを考慮して統合スケジューリングするMFSを提案。vLLMへのpluggable実装と8-server/32-GPU実機評価でTTFT SLO達成率を1.2〜2.4倍に改善しており、分離サービングのnetwork schedulingを直接扱う強いシステム候補。"
+    },
+    {
+      "canonical_id": "arXiv:2607.01617",
+      "title": "3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.01617",
+      "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2607.01617-3dls-disaggregated-serving-interconnect.md",
+      "priority": 82,
+      "reason": "prefill-decode間KV転送とdecode側tensor-parallel collectiveが同じchiplet間fabricを共有する競合を、3D logic stackingで物理的に分離するアーキテクチャ。共有fabricのplanar baseline比で最大1.49倍throughput・60.2%低いE2E latency、優先度制御planar比でも最大1.17倍・31.4%低減を報告する。サービング層だけでなくinterconnect設計まで踏み込む隣接分野候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-disaggregated-network-slo-3",
+    "axis": "分離サービングのnetwork flow・prefill迂回・専用interconnect",
+    "query_summary": "CXL共有メモリroundの後、prefill/decode分離に伴うネットワーク競合と負荷非対称へ軸を変更した。一次arXiv metadata/abstractで軽量評価し、最新mainのqueueとcanonical ID検索で3件とも未収録・未jobであることを投入直前に再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はnetwork/disaggregationを離れ、2026年9月新着のNVMe外部KV cache・PIM runtime・page-aware decode schedulingへ移る",
+    "empty_round_reason": null
+  }
+}
