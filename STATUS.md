@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **94 / 50** |
-| Research ready | **94** |
+| Candidate在庫（Research ready） | **98 / 50** |
+| Research ready | **98** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **184** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **7** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **35** |
+| Discovery完了 | **8** |
+| 新規job | **40** |
 | Repo収録 | **7** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **79** |
-| 探索評価候補 | **373** |
-| 重複除外 | **107** |
-| 重複率 | **28.7%** |
-| Novel候補 | **266** |
-| Research候補採用 | **133** |
+| 探索round（stats観測） | **80** |
+| 探索評価候補 | **380** |
+| 重複除外 | **110** |
+| 重複率 | **28.9%** |
+| Novel候補 | **270** |
+| Research候補採用 | **137** |
 | Research完了 | **52** |
 | Repo収録 | **52** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 373 → 重複除外後 266 → Research候補採用 133 → Research完了 52 → Repo収録 52**
+**探索評価 380 → 重複除外後 270 → Research候補採用 137 → Research完了 52 → Repo収録 52**
 
 ## 探索効率（直近24時間）
 
@@ -81,6 +81,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
+| serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
@@ -153,11 +154,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:02:31+09:00** — serverless production serving・cold start・multi-LoRA elasticity: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T03:02:31+09:00** — agent session KV residency・near-memory scheduling: 評価 5 / 重複 4 / 採用 1
 - **2026-09-13T03:02:31+09:00** — 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving: 評価 10 / 重複 5 / 採用 5
 - **2026-09-13T02:29:24+09:00** — agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory: 評価 7 / 重複 2 / 採用 5
 - **2026-09-13T02:29:24+09:00** — Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity: 評価 5 / 重複 0 / 採用 5
-- **2026-09-13T02:29:24+09:00** — GPU runtime cold-start・MoE network topology・heterogeneous/geo routing: 評価 5 / 重複 0 / 採用 5
 
 ## 最近処理した論文
 
@@ -176,9 +177,9 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 - P96 `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - P94 `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
+- P91 `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
-- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 
 ## 7日比較
 
