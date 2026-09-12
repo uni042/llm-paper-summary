@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 07:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 07:29 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **204** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **5 / 24** |
+| Maintenance counter | **6 / 24** |
 
 ### 注意事項
 
@@ -28,33 +28,33 @@ Run: **2026-09-13T06:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **2** |
+| Discovery完了 | **3** |
+| 新規job | **3** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-adaptive-prefill-scheduling-2**
+Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 適応プリフィル・KV予約・デコード干渉スケジューリング |
-| 評価候補 | **3** |
-| 重複除外 | **2** |
-| Novel候補 | **1** |
+| 探索軸 | 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 |
+| 評価候補 | **10** |
+| 重複除外 | **10** |
+| Novel候補 | **0** |
 | Research候補採用 | **0** |
-| 重複率 | **66.7%** |
+| 重複率 | **100.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **113** |
-| 探索評価候補 | **541** |
-| 重複除外 | **202** |
-| 重複率 | **37.3%** |
+| 探索round（stats観測） | **114** |
+| 探索評価候補 | **551** |
+| 重複除外 | **212** |
+| 重複率 | **38.5%** |
 | Novel候補 | **339** |
 | Research候補採用 | **188** |
 | Research完了 | **72** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-adaptive-prefill-schedu
 
 ### 24時間ファネル
 
-**探索評価 541 → 重複除外後 339 → Research候補採用 188 → Research完了 72 → Repo収録 72**
+**探索評価 551 → 重複除外後 339 → Research候補採用 188 → Research完了 72 → Repo収録 72**
 
 ## 探索効率（直近24時間）
 
@@ -75,6 +75,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-adaptive-prefill-schedu
 | agent workflow/context runtime・branch admission・heterogeneous many-core runtime | 13 | 9 | 4 | 69.2% | 30.8% |
 | 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
+| 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 | 10 | 10 | 0 | 100.0% | 0.0% |
 | 異種/edge serving・hybrid cache schedulingの過去重要欠落 | 10 | 8 | 2 | 80.0% | 20.0% |
 | DBMS由来cache policy・real-time/best-effort混在QoS scheduling | 9 | 7 | 2 | 77.8% | 22.2% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
@@ -187,11 +188,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-adaptive-prefill-schedu
 
 ### 直近5探索round
 
+- **2026-09-13T07:00:13+09:00** — 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査: 評価 10 / 重複 10 / 採用 0
 - **2026-09-13T07:00:13+09:00** — 適応プリフィル・KV予約・デコード干渉スケジューリング: 評価 3 / 重複 2 / 採用 0
 - **2026-09-13T07:00:13+09:00** — KVページ制御・MoEメモリ分離・復元系の再探索: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation: 評価 7 / 重複 7 / 採用 0
 - **2026-09-13T06:02:25+09:00** — agent workflow/context runtime・branch admission・heterogeneous many-core runtime: 評価 13 / 重複 9 / 採用 4
-- **2026-09-13T06:02:25+09:00** — near-storage KV処理・動的layer/KV runtime adaptation: 評価 3 / 重複 1 / 採用 2
 
 ## 最近処理した論文
 
