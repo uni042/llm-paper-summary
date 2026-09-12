@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:13 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **115 / 50** |
-| Research ready | **115** |
+| Candidate在庫（Research ready） | **118 / 50** |
+| Research ready | **118** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **189** |
@@ -28,35 +28,35 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **8** |
-| 新規job | **23** |
+| Discovery完了 | **9** |
+| 新規job | **27** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-kernel-optimization-3**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-agentic-serving-4**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | GPU kernel生成・runtime最適化の隣接系 |
-| 評価候補 | **3** |
-| 重複除外 | **0** |
+| 探索軸 | agentic workload・program/session-aware serving |
+| 評価候補 | **4** |
+| 重複除外 | **1** |
 | Novel候補 | **3** |
 | Research候補採用 | **3** |
-| 重複率 | **0.0%** |
+| 重複率 | **25.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **91** |
-| 探索評価候補 | **438** |
-| 重複除外 | **137** |
-| 重複率 | **31.3%** |
-| Novel候補 | **301** |
-| Research候補採用 | **159** |
+| 探索round（stats観測） | **92** |
+| 探索評価候補 | **442** |
+| 重複除外 | **138** |
+| 重複率 | **31.2%** |
+| Novel候補 | **304** |
+| Research候補採用 | **162** |
 | Research完了 | **57** |
 | Repo収録 | **57** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-kernel-optimization-3**
 
 ### 24時間ファネル
 
-**探索評価 438 → 重複除外後 301 → Research候補採用 159 → Research完了 57 → Repo収録 57**
+**探索評価 442 → 重複除外後 304 → Research候補採用 162 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -124,6 +124,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-kernel-optimization-3**
 | P/D分離・KV転送・shared prefill | 4 | 1 | 2 | 25.0% | 50.0% |
 | SLO-aware scheduling・KV memory hierarchy・動的メモリ回収 | 4 | 0 | 1 | 0.0% | 25.0% |
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
+| agentic workload・program/session-aware serving | 4 | 1 | 3 | 25.0% | 75.0% |
 | attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | fault-tolerant distributed serving・KV recovery・GPU failure | 4 | 4 | 0 | 100.0% | 0.0% |
@@ -165,11 +166,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-kernel-optimization-3**
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — agentic workload・program/session-aware serving: 評価 4 / 重複 1 / 採用 3
 - **2026-09-13T04:00:16+09:00** — GPU kernel生成・runtime最適化の隣接系: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T04:00:16+09:00** — 分離サービングprefill制御・chunked prefill scheduling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T04:00:16+09:00** — 新着・長期推論KV圧縮と削除: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T03:30:44+09:00** — fault-tolerant distributed serving・KV recovery・GPU failure: 評価 4 / 重複 4 / 採用 0
-- **2026-09-13T03:30:44+09:00** — heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels: 評価 5 / 重複 2 / 採用 3
 
 ## 最近処理した論文
 
