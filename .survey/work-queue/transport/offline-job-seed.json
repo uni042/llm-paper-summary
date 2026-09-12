@@ -1,14 +1,52 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "seed-orbitflow-recovery-20260910",
+  "seed_id": "seed-20260912-1830-critical-buffer",
   "candidates": [
     {
-      "canonical_id": "arXiv:2601.10729",
-      "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
-      "source_url": "https://arxiv.org/abs/2601.10729",
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "priority": 92,
+      "reason": "Strong fit for disaggregated serving and KV-transfer bottlenecks; primary source reports selective KV transfer with up to 4.3x lower time-to-second-token versus full transfer."
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
       "priority": 90,
-      "reason": "Library-only recovery E2E for a fully read, checkpointed inference-serving paper."
+      "reason": "Strong fit for hierarchical memory and SLO-aware serving; evaluates tightly coupled CPU-GPU memory on GH200 and reports substantial TTFT SLO-attainment gains."
+    },
+    {
+      "canonical_id": "arXiv:2510.09665",
+      "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.09665",
+      "priority": 90,
+      "reason": "High-value systems paper spanning KV offload, cross-engine cache transfer, CPU/storage/network hierarchy, vLLM/SGLang integration, and an open-source implementation."
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "priority": 86,
+      "reason": "Relevant to KV-memory allocation, routing, prefix caching, SLOs, and uncertain output length; trace-driven evaluation reports up to 56% lower cost than fixed-quantile reservation baselines."
+    },
+    {
+      "canonical_id": "arXiv:2606.24467",
+      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.24467",
+      "priority": 82,
+      "reason": "Strong KV-cache memory-management candidate with public code and explicit long-context memory/quality tradeoff evaluation."
     }
-  ]
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T18:30:00+09:00",
+    "round": "normal-worker-critical-buffer-1",
+    "axis": "kv-cache-disaggregation-memory-management",
+    "query_summary": "Recent and high-value primary-source search covering KV cache transfer, hierarchical memory, SLO-aware serving, uncertain KV reservation, and KV compression.",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Rotate to MoE expert placement/cache/prefetch and SSD/NVMe offload after Actions final dedupe."
+  }
 }
