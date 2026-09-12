@@ -2,14 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.18431-20260912-1840-v10-a",
-  "job_id": "job-research-c5ba85dfa2989728",
+  "attempt_id": "attempt-2609.09166-20260912-1850-v10-a",
+  "job_id": "job-research-a4ae8894c89646f7",
   "data": {
-    "limitations": ["主評価はNVIDIA DGX A100内の局所replica schedulerであり、複数replica・複数モデルをまたぐglobal routing、異種GPU、分離プリフィル・デコードクラスタは直接評価していない。", "scheduler固有効果を分離するためradix cacheとprefix cachingを主評価で無効化している。付録では併用可能性を議論するが、共有接頭辞が多い実運用でcache localityとboost優先度が競合する場合の実測は不足する。", "γ-Adaは最近完了した要求のP95〜P99付近からtail形状を推定するため、急激な分布変化直後や完了サンプルが少ない初期段階では推定が遅れる。EMAと上下限で振動を防ぐ代わりに応答速度との交換条件がある。", "古典Boost理論のtail保証は簡略化された単一サーバ待ち行列を基礎とし、continuous batching、有限GPU KV、chunked prefill、プリエンプト再計算費用をすべて含む厳密保証ではない。実システムではMemGuardなどのヒューリスティックが理論と実装の差を埋める。", "reasoning-heavy mixではP99を大きく改善する一方、平均total latencyが完全予測SRPTより悪化する例がある。したがって平均最小化を最優先するワークロードに無条件で優位ではなく、tail/SLO重視という運用目的が必要である。"],
-    "differences": "LTRやTRAILのような予測型schedulerは出力長または残トークン数を推定してSJF/SRPTを近似し、MLFQ/LASは既得サービス量を階層queueへ離散化する。Sarathiはchunked prefillとdecode-priorityでGPU利用効率を高める。UniBoostは要求長を予測せず、待ち行列理論のγ-Boostから得る連続的なage/service優先度でプリフィルとデコードを統一し、tail latencyを目的にする点が異なる。さらにLLM固有のKV状態費用をMemGuardへ組み込み、優先度変化を幾何学境界に限定してswap回数を対数的に抑える。理論policyとGPUメモリ状態を分離せず、分布適応γとKV-aware preemptionを一つのschedulerへ統合した点が主要差分である。",
-    "implementation_status": "8×A100 DGX上でLlama-3-8B、CodeLlama-34B、QWen-72Bを使う実機サービング評価を行い、paged attention、continuous batching、chunked prefill、KV-aware preemptionと統合している。アルゴリズム擬似コード、MemGuard境界、γ-Ada、starvation解析、感度分析は本文・付録に記載される。2026-09-12時点でarXiv本文・概要ページから著者公式UniBoostコードリポジトリは確認できないため、公開コードは未確認とする。",
-    "research_positioning": "LLMサービング／スケジューリング／分離系統に属し、既存のprediction-based SJF/SRPT研究に対する明確な反証・代替案を提供する。TOPASやAutellixのようなagent workflow-aware schedulerはDAG進捗や接頭辞状態を利用するのに対し、UniBoostは単一要求レベルで最終長が未知でもtail公平性を保つ局所replica schedulerであり、用途は補完的である。分離サービングではglobal routerが要求をreplicaへ配り、各replica内部でUniBoostがtail-aware orderingを行う二階層構成が自然である。またKV offloadやCXL/NVMe階層と組み合わせる場合、MemGuardのswap costへ実際の階層間転送時間を入れることで、優先度とメモリ移動費用を共同制御する拡張が考えられる。",
-    "related_work": ["Sarathi", "LTR", "TRAIL", "MLFQ", "LAS", "DistServe", "Autellix", "Preble", "Andes", "SPLIT", "Splitwise"],
-    "audit_notes": "arXiv:2606.18431v1のHTML全文を序論、出力長変動分析、tail scheduling背景、DistBoost、UniBoost-Base、MemGuard、γ-Ada、主実験、mix workload、アブレーション、SLO評価、結論、全参考文献、付録の擬似コード・starvation保証・感度分析・prefix cache等との相互作用まで確認した。arXivメタデータから2026-06-16公開、主分類cs.LG、副分類cs.DC、ICML 2026掲載情報を確認した。著者公式コードURLは確認できなかった。"
+    "limitations": [
+      "評価は単一A100 40GB上で端末計算時間をTITAN RTX実測速度比から模擬しており、端末とサーバを実無線で接続したエンドツーエンド実験ではない。実5Gのジッタ、再送、帯域共有、無線状態変動を含むと特に短い生成で通信遅延の分布が変わり得る。",
+      "端末SLMはVicuna-68M、サーバLLMはQwen2-7BとLlama-3.1-8Bに限定される。共通語彙率は約14.7〜17.5%であり、さらに語彙重複が小さい、多言語で文字列分割が大きく違う、特殊トークン対応が複雑なtokenizer組合せではドラフト受理率と再トークン化費用を追加検証する必要がある。",
+      "X-CoSDはHRの棄却時に共通語彙全体のLLM確率を送るため、Naiveより小さくても下り帯域への依存が残る。X-CoSD-EもK個の置換候補を全て拒否した場合はHRへ退避するため、SLMとLLM分布のずれが大きいほど退避頻度が増えて通信優位性が縮む。",
+      "共通語彙は一対一直接対応できるトークンだけから構成する。LLM専用トークンを確定した場合は文字列へ復号してSLM側で再トークン化するため、複数トークン化による端末側prefix長増加やtokenizer実装差の費用は、より長文の実運用で追加評価が必要である。",
+      "論文は分布一致を厳密に証明するが、公開された著者公式実装リポジトリは2026-09-12時点で確認できない。したがって第三者が通信プロトコル、乱数同期、tokenizer対応、退避条件まで再現する際の実装負担は残る。"
+    ],
+    "differences": "通常の協調投機的デコードは端末SLMとサーバLLMが同一語彙を持つ前提で候補確率を比較する。異種語彙投機的デコードのTLIは共通語彙へ候補を制限することで厳密性を回復するが、端末・サーバ通信量を主目的にしていない。NaiveなTLI-CoSDは棄却時にLLM全確率分布を下り送信するため、異種語彙には対応できても無線通信が支配的になる。X-CoSDは残差分布の領域構造を使ってLLM専用語彙の再サンプリングをサーバ側へ残し、共通語彙だけ送る点が異なる。X-CoSD-Eはさらに分布そのものを通常送らず、サーバが先に少数置換候補をサンプルして端末が候補ごとに検証する。U-HLMのような不確実候補だけを検証する方式は通信をさらに減らせる場合があるが、サーバLLM分布を厳密に保存しない。X-CoSD系の差分は、異種tokenizer、通信効率、損失なし性の三条件を同時に満たすことにある。",
+    "implementation_status": "論文はHugging Face上のVicuna-68M、Qwen2-7B、Llama-3.1-8BをFP16で用い、A100 40GBとTITAN RTX実測速度比に基づく実験実装を持つ。共通語彙の直接対応構築、HR、SR-DV、全候補棄却時のHR退避、LLM専用トークンの文字列再トークン化まで手順と証明が本文・付録に記載される。2026-09-12時点でarXiv本文・概要ページに著者公式GitHub等のコードURLは確認できないため、公開コードは未確認とする。",
+    "research_positioning": "LLMサービング／スケジューリング／分離系統のうち、端末・エッジサーバ協調推論と投機的デコードの通信最適化に位置づく。一般的な投機的デコード研究は同一機上または同一語彙モデルで検証計算を減らす一方、本研究は無線をまたぐ分散実行でtokenizer不一致と分布通信を中心問題に置く。repo内の分離サービング研究がプリフィル・デコード間のKV移動、CXL/NVMe階層、負荷ルーティングを扱うのに対し、X-CoSDは端末・サーバ間で候補と確率を動かすため対象データが異なるが、『大きな状態全体を送らず、必要な候補だけを送って相手側で検証し、失敗時だけ完全経路へ退避する』という設計原理はKV階層やMoE先読みのフォールバック設計にも接続できる。特に通信量が語彙サイズに比例するNaive経路を候補単位通信へ変えた点は、帯域制約下の異種モデル協調という独立した研究軸として重要である。",
+    "related_work": ["Collaborative Speculative Decoding", "Token-Level Intersection", "U-HLM", "Speculative Decoding", "Heterogeneous-vocabulary speculative decoding"],
+    "audit_notes": "arXiv:2609.09166v1の一次資料HTMLで序論、共通語彙TLIによる素朴拡張、§3.1 Hybrid Resampling、§3.2 Server Resampling with Device Verification、Theorem 1/2、§4実験、Appendix B実装詳細、Appendix C追加評価、証明付録を確認した。arXivメタデータでは主分類cs.CL、横断登録cs.DC・cs.LG、v1提出日は2026-07-15。著者はJaeduk LeeとWan Choi、Seoul National University Department of Electrical and Computer Engineering所属。公式コードURLは確認できなかった。"
   }
 }
