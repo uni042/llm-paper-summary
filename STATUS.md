@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,33 +28,33 @@ Run: **2026-09-13T04:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **0** |
-| 新規job | **0** |
+| Discovery完了 | **1** |
+| 新規job | **1** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
+Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル |
-| 評価候補 | **7** |
-| 重複除外 | **2** |
-| Novel候補 | **5** |
-| Research候補採用 | **4** |
-| 重複率 | **28.6%** |
+| 探索軸 | 2026-09新着・KVキャッシュ圧縮／再利用 |
+| 評価候補 | **3** |
+| 重複除外 | **3** |
+| Novel候補 | **0** |
+| Research候補採用 | **0** |
+| 重複率 | **100.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **96** |
-| 探索評価候補 | **461** |
-| 重複除外 | **151** |
-| 重複率 | **32.8%** |
+| 探索round（stats観測） | **97** |
+| 探索評価候補 | **464** |
+| 重複除外 | **154** |
+| 重複率 | **33.2%** |
 | Novel候補 | **310** |
 | Research候補採用 | **166** |
 | Research完了 | **60** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 
 ### 24時間ファネル
 
-**探索評価 461 → 重複除外後 310 → Research候補採用 166 → Research完了 60 → Repo収録 60**
+**探索評価 464 → 重複除外後 310 → Research候補採用 166 → Research完了 60 → Repo収録 60**
 
 ## 探索効率（直近24時間）
 
@@ -145,6 +145,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 | 異種GPU/PNM・cold MoE pool・edge KV migration | 4 | 0 | 0 | 0.0% | 0.0% |
 | 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
 | 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離 | 4 | 0 | 4 | 0.0% | 100.0% |
+| 2026-09新着・KVキャッシュ圧縮／再利用 | 3 | 3 | 0 | 100.0% | 0.0% |
 | 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | GPU kernel/runtime・推論決定性 | 3 | 0 | 3 | 0.0% | 100.0% |
@@ -170,11 +171,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 
 ### 直近5探索round
 
+- **2026-09-13T05:00:25+09:00** — 2026-09新着・KVキャッシュ圧縮／再利用: 評価 3 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — 投機的デコードのserving・pipeline・メモリ制約・性能モデル: 評価 7 / 重複 2 / 採用 4
 - **2026-09-13T04:00:16+09:00** — chunked prefill・prefix-aware batchingの基礎欠落: 評価 4 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — CXL・SSD・remote KV cache階層メモリ: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — MoE通信・runtime parallelism・online expert placement: 評価 4 / 重複 4 / 採用 0
-- **2026-09-13T04:00:16+09:00** — agentic workload・program/session-aware serving: 評価 4 / 重複 1 / 採用 3
 
 ## 最近処理した論文
 
