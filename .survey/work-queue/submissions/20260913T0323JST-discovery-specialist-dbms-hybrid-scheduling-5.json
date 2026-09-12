@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-52b0a5580681f508",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2504.09590",
+      "title": "Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
+      "source_url": "https://arxiv.org/abs/2504.09590",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md",
+      "priority": 84,
+      "reason": "interactive real-time requestとback-office best-effort requestを別クラスタへ隔離せず同一LLM上へ共置するBROSを提案し、dynamic priority schedulingと双方向KV cache共有を組み合わせる。vLLM/TGI等に対しreal-time latency最大74.2%削減、細粒度SLO達成率最大36.38倍を、best-effort throughputをほぼ維持しながら報告する。異種QoS workloadを同じKV資源で扱うserving schedulerとして未収録価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2411.07447",
+      "title": "Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies",
+      "source_url": "https://arxiv.org/abs/2411.07447",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.07447-dbms-inspired-cache-replacement-llm-inference.md",
+      "priority": 79,
+      "reason": "2026年7月v5へ更新された研究で、LLM inference systemのcache policyを理論上限・simulationで分析し、DBMSのcache replacement原理をpreemptive schedulerへplug-in可能な形で導入する。新規systemを追加するだけでなく、GPU実験時間を減らしながらcache policyを評価・設計する方法論とonline workload向けpolicyを示し、DBMS由来の隣接探索として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:02:31+09:00",
+    "round": "specialist-dbms-hybrid-qos-scheduling-5",
+    "axis": "DBMS由来cache policy・real-time/best-effort混在QoS scheduling",
+    "query_summary": "CUDA compiler/runtime軸から独立して、DBMS/OS由来のcache policyと異種QoS servingを一次arXiv metadata/abstractで探索した。SPECTRE、Tangram、KVServe、ForkKV、SuperInfer、MFS、Mellは最新repoの既存jobで除外。送信直前に最新default branch HEAD、identity index、next queue、決定論的research job path、repository検索、Library pending、GitHub fallback-inboxを再照合し、BROSとDBMS-inspired cache policy論文を未収録と判断した。",
+    "candidate_count": 9,
+    "duplicate_filtered_count": 7,
+    "duplicate_canonical_ids": ["arXiv:2605.08151", "arXiv:2606.06302", "arXiv:2605.13734", "arXiv:2604.06370", "arXiv:2601.20309", "arXiv:2603.17456", "arXiv:2501.06709"],
+    "next_axis_hint": "次はQoS/cache schedulingを離れ、forward/backward citationまたはGPU L2/HBM prefetch・communication overlapの低層runtimeへ移る",
+    "empty_round_reason": null
+  }
+}
