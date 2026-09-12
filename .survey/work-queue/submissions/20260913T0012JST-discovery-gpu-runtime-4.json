@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2a72bb4efed9b813",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.23969",
+      "title": "The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing",
+      "source_url": "https://arxiv.org/abs/2606.23969",
+      "paper_path": null,
+      "priority": 82,
+      "reason": "Blackwell GPU confidential computing下でGPU内演算ではなくhost-device bridgeの直列化と高いsetup costがLLM serving性能を落とすことを実測し、vLLM decode・KV restore・model loadへの影響と回復策を分析する。メモリ転送、runtime境界、KV復元の実システム上の律速として既存offload系を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-gpu-runtime-4",
+    "axis": "GPU runtime境界・host-device転送律速",
+    "query_summary": "Blackwell confidential computing、CUDA host-device transfer、KV restore、異種GPU runtimeを探索し、既収録HeteroServe/SuperInfer/MFS等を除外して未投入の1候補を採用した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2603.12707",
+      "arXiv:2601.20309",
+      "arXiv:2603.17456"
+    ],
+    "next_axis_hint": "直近2609のMoE expert placement/prefetch、KV management、serving schedulingを新着中心に再走査し、その後引用・関連実装経由で漏れを確認する",
+    "empty_round_reason": null
+  }
+}
