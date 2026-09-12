@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T07:08:03.537209+00:00",
+  "updated_at": "2026-09-12T07:34:22.781369+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9030,6 +9030,70 @@
       "paper_active_count_before": 329,
       "paper_active_count_after": 333,
       "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-12T16:30:00+09:00",
+      "first_recorded_at": "2026-09-12T07:34:22.781369+00:00",
+      "last_recorded_at": "2026-09-12T07:34:22.781369+00:00",
+      "signals": [
+        "research_completed",
+        "discovery_or_queue_expanded",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 1,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34681026062:1",
+          "recorded_at": "2026-09-12T07:34:22.781369+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34681026062",
+            "run_attempt": "1",
+            "source_sha": "a2b28afbf91690235c1ebefa20250f4f68b704fa"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-09f84c02bdf7d29d",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10812",
+          "title": "ExaServe: Large-Scale LLM Serving on Exascale HPC Systems",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-d197921c62f4db41",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [
+        "arXiv:2609.10812"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 333,
+      "paper_active_count_after": 334,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
