@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:09:16+00:00",
+  "updated_at": "2026-09-12T20:15:08+00:00",
   "last_run_key": "2026-09-13T05:00:25+09:00",
-  "last_round": "specialist-agent-os-memory-2",
+  "last_round": "specialist-disaggregated-serving-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1956,6 +1956,28 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "GPUランタイム／カーネルコンパイル、またはMoE expert通信・I/Oスケジューリングの未収録候補へ軸を移す",
       "source_submission": "work-queue/submissions/20260913T0508JST-discovery-specialist-agent-os-memory.json"
+    },
+    {
+      "run_key": "2026-09-13T05:00:25+09:00",
+      "round": "specialist-disaggregated-serving-3",
+      "axis": "分離型LLMサービング・KV転送／フェーズ非対称性",
+      "query_summary": "分離サービングのKV転送、共有メモリ、プリフィル負荷偏り、attention実行順を横断して8件を軽量評価した。KVServe、SmartGen、SwiftCache、Elastic KV Cache、Kubernetes-native CXL shared KV、SACは既存jobで収録済みと確認し除外した。Q-FirstとLoad-Aware Prefill Deflectionは最新HEADで決定論的research job IDが未存在、repo識別子検索でも未収録だったため投入した。",
+      "candidate_count": 8,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.13734",
+        "arXiv:2607.28150",
+        "arXiv:2606.16135",
+        "arXiv:2608.23658",
+        "arXiv:2609.10790",
+        "arXiv:2606.19746"
+      ],
+      "next_axis_hint": "MoE expert cache・offload・near-data schedulingを確認し、その後GPU runtime／kernel compilationへ切り替える",
+      "source_submission": "work-queue/submissions/20260913T0513JST-discovery-specialist-disaggregated-serving.json"
     }
   ],
   "axes": {
@@ -3088,6 +3110,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "GPUランタイム／カーネルコンパイル、またはMoE expert通信・I/Oスケジューリングの未収録候補へ軸を移す"
+    },
+    "分離型LLMサービング・KV転送／フェーズ非対称性": {
+      "last_run_key": "2026-09-13T05:00:25+09:00",
+      "rounds": 1,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "MoE expert cache・offload・near-data schedulingを確認し、その後GPU runtime／kernel compilationへ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
