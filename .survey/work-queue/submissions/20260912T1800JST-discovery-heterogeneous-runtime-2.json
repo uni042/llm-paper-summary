@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6eee2d6e98a7acfb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.07609",
+      "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC",
+      "source_url": "https://arxiv.org/abs/2604.07609",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07609-blink-cpu-free-gpu-smartnic-serving.md",
+      "priority": 92,
+      "reason": "LLMサービングの定常クリティカルパスからホストCPUを外し、要求処理をSmartNIC、バッチング・スケジューリング・KVキャッシュ管理をGPU常駐カーネルへ委譲するend-to-end構成。TensorRT-LLM/vLLM/SGLangとの実測でpre-saturation P99 TTFT最大8.47倍、P99 TPOT最大3.40倍改善、decode throughput最大2.1倍、token当たりenergy最大48.6%削減を報告する。GPU runtime・ネットワーク・serving stackの境界を再設計するため重点度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.06557",
+      "title": "Cascade: Exploiting SLO-Aware Latency Budget for Fair and High Goodput LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2608.06557",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-kv-hierarchy.md",
+      "priority": 88,
+      "reason": "要求ごとのSLOまでの余裕をlatency budgetとして連続更新し、その単一budgetで要求順序とKVキャッシュ階層管理を共同制御するサービング方式。非常駐KVを深いtierからrestore/prefetchするかHBM保持か再計算かまで同じbudgetで決める。production tracesと3モデルでdefault vLLM FCFS比goodput最大2.4倍、SLO違反40%削減を報告しており、schedulerと階層KV配置を統合する点が既存系統に有用。"
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2601.20309-superinfer-superchip-rotary-scheduling-memory.md",
+      "priority": 84,
+      "reason": "NVIDIA GH200のGPU-CPU間NVLink-C2Cを前提に、KV容量逼迫時もhead-of-line blockingを抑えるproactive rotary schedulerとfull-duplex KV transfer engineを組み合わせる。GH200上の複数モデル・datasetでTTFT SLO達成率を最大74.7%改善し、TBTとthroughputは同等水準を維持すると報告する。PCIe offloadとは異なる密結合CPU/GPU階層の設計点として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.29002",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.29002",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2603.29002-heterogeneous-memory-processing-pipeline.md",
+      "priority": 82,
+      "reason": "sparse attention、RAG、compressed contextual memoryをPrepare Memory/Compute Relevancy/Retrieval/Applyの4段memory-processing pipelineとして整理し、推論時間の22〜97%を占め得ることをprofileしたうえで、不規則・memory-bound処理をFPGA、compute-intensive処理をGPUへ分離する。AMD MI210+Alveo U55C実測でGPU baseline比1.04〜2.2倍高速、energy 1.11〜4.7倍低減を報告し、分離推論と異種アクセラレータの接点として研究価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17435",
+      "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
+      "source_url": "https://arxiv.org/abs/2603.17435",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2603.17435-zipserv-hardware-aware-lossless-compression.md",
+      "priority": 78,
+      "reason": "可変長entropy codecがGPUのSIMT実行を崩す問題に対し、固定長寄りのTensor-Core-aware encodingとdecompression-GEMM融合カーネルでweightを圧縮状態からregisterへ直接展開するlossless serving方式。model size最大30%削減、cuBLAS比kernel最大2.21倍、vLLM比end-to-end平均1.22倍高速化を報告する。SSD/NVMe直結ではないがmemory-bandwidth制約とGPU runtimeのco-designとして関連性が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T18:00:00+09:00",
+    "round": "specialist-heterogeneous-runtime-2",
+    "axis": "GPU runtime・SmartNIC・異種アクセラレータ・階層KV",
+    "query_summary": "前ラウンドのedge/disaggregated通信・電力制御から軸を変更し、CPU-free serving、SmartNIC/GPU常駐制御、SLO-aware KV hierarchy、GH200密結合CPU/GPU、GPU-FPGA memory processing、hardware-aware lossless compressionを軽量評価した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "SSD/NVMe expert I/O scheduling、storage/DBMS由来のcache/prefetch、HPC大規模推論の通信最適化へ移る",
+    "empty_round_reason": null
+  }
+}
