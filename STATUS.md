@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,34 +28,34 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **15** |
+| Discovery完了 | **6** |
+| 新規job | **16** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturated-8**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-reasoning-kv-compression-1**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 直近新着・vLLM/SGLang周辺実装・関連論文 |
-| 評価候補 | **4** |
-| 重複除外 | **4** |
-| Novel候補 | **0** |
+| 探索軸 | 新着・長期推論KV圧縮と削除 |
+| 評価候補 | **3** |
+| 重複除外 | **0** |
+| Novel候補 | **3** |
 | Research候補採用 | **0** |
-| 重複率 | **100.0%** |
+| 重複率 | **0.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **88** |
-| 探索評価候補 | **425** |
+| 探索round（stats観測） | **89** |
+| 探索評価候補 | **428** |
 | 重複除外 | **133** |
-| 重複率 | **31.3%** |
-| Novel候補 | **292** |
+| 重複率 | **31.1%** |
+| Novel候補 | **295** |
 | Research候補採用 | **154** |
 | Research完了 | **57** |
 | Repo収録 | **57** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 425 → 重複除外後 292 → Research候補採用 154 → Research完了 57 → Repo収録 57**
+**探索評価 428 → 重複除外後 295 → Research候補採用 154 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -153,6 +153,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
 | 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
+| 新着・長期推論KV圧縮と削除 | 3 | 0 | 0 | 0.0% | 0.0% |
 | 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | multi-tenant prefix安全性・multi-agent workflow prefix scheduling | 2 | 0 | 0 | 0.0% | 0.0% |
@@ -162,11 +163,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — 新着・長期推論KV圧縮と削除: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T03:30:44+09:00** — fault-tolerant distributed serving・KV recovery・GPU failure: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T03:30:44+09:00** — heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels: 評価 5 / 重複 2 / 採用 3
 - **2026-09-13T03:30:44+09:00** — heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T03:30:44+09:00** — edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision: 評価 5 / 重複 1 / 採用 3
-- **2026-09-13T03:30:44+09:00** — edge/on-device offload・multitasking memory・cloud KV streaming: 評価 3 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
