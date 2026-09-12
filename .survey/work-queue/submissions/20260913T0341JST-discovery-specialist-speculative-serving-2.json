@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2e81a34f6363831f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.19133",
+      "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.19133",
+      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md",
+      "priority": 88,
+      "reason": "端末側の小型言語モデル（Small Language Model; SLM）とクラウド側の大規模言語モデル（Large Language Model; LLM）が互いを待つ従来の投機的復号を、非同期パイプラインと疎な確率分布転送で重ね合わせる。通信量を抑えながら最大2.9倍の高速化を報告しており、端末・クラウド協調と投機的復号をネットワーク待ちまで含めて扱う実行時システムとして価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.15051",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.15051",
+      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2605.15051-interpretable-latency-model-speculative-serving.md",
+      "priority": 82,
+      "reason": "固定バッチではなく実際の配信負荷で投機的復号の利得がどう崩れるかを、リトルの法則（Little's Law）から実効バッチサイズを推定し、プリフィル・ドラフト・検証の負荷依存コストへ分解する解釈可能な遅延モデルで説明する。vLLM上の広い測定で検証され、ドラフト長・受理率・モデルサイズと負荷の関係を構成選択へ結び付けるため、投機的復号サービングの設計基準として有用である。"
+    },
+    {
+      "canonical_id": "arXiv:2501.13111",
+      "title": "iServe: An Intent-based Serving System for LLMs",
+      "source_url": "https://arxiv.org/abs/2501.13111",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.13111-iserve-intent-based-llm-serving.md",
+      "priority": 85,
+      "reason": "モデルごとに大量の配備構成を総当たりでプロファイルする代わりに、軽量な指紋（fingerprint）で並列化・圧縮構成の遅延とメモリを推定し、利用者の遅延・費用意図とGPU可用性に合わせて構成を動的選択する。遅延77.62%削減、サービス品質目標（Service-Level Objective; SLO）違反7.09倍削減、GPUスループット4.72倍向上を報告しており、異種構成選択を自動化する重要な未収録基礎システム候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2509.06261",
+      "title": "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.06261",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md",
+      "priority": 84,
+      "reason": "量子化モデルと非量子化モデルを同じGPU群で配信する際、異なるKVブロック寸法による断片化と資源利用差を、精度認識KVスラブ（precision-aware KV slab）と大域・局所の二段スケジューラで共同処理する。最先端GPU共有方式に対してSLO達成率最大2.2倍、トークン生成スループット最大1.8倍を報告し、混在精度配信のメモリ管理と配置を結ぶ候補として有用である。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:30:44+09:00",
+    "round": "specialist-speculative-serving-config-2",
+    "axis": "edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision",
+    "query_summary": "edge/on-device memory軸から離れ、分散投機的復号、実負荷下の投機遅延モデル、配備構成自動選択、混在精度配信へ探索軸を変更した。WISPは既存completed jobとして除外し、投入直前に最新main HEAD、next queue、4件の決定論的research job pathを再確認し未収録・job未存在の4件を送信した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2601.11652"],
+    "next_axis_hint": "次は投機的復号と配備構成を離れ、forward/backward citationまたはストレージ・OS由来のstate placementとI/O schedulingを確認する",
+    "empty_round_reason": null
+  }
+}
