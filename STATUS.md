@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -50,7 +50,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
+| 通常worker run（ledger観測） | **20** |
 | 探索round（stats観測） | **102** |
 | 探索評価候補 | **489** |
 | 重複除外 | **169** |
