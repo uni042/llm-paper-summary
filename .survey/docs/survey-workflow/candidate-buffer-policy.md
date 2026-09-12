@@ -28,6 +28,21 @@ Research段階で初めて一次資料全文を取得・精読し、repository-q
 
 この分離により、1回のdiscoveryで1本だけ見つけて即researchする方式に固定せず、先に複数候補を蓄積できるようにする。
 
+## 複数worker協調
+
+candidate供給は2つのScheduled Chat workerが共有する。
+
+1. **通常論文worker（毎時:30）**: research / auditに加えて、従来どおりdiscoveryも行う。
+2. **探索専用worker（毎時:00）**: discovery、軽量候補評価、priority付与、candidate投入だけを行う。
+
+探索専用workerの追加を理由に通常論文workerのdiscoveryを停止・縮小しない。両workerは同じ `candidate_inventory`、identity、queue、discovery stateを共有する。
+
+二重投入を防ぐため、両workerとも探索開始前とcandidate投入直前に最新HEADを再確認し、canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで再重複判定する。片方が探索中にもう片方やActionsが同じ候補を先に登録した場合、後発workerはその候補を送らない。競合が残る場合も正本側のdedupeで1候補へ収束させる。
+
+`discovery-state.json` 等の共有stateを書き換える場合は最新blob SHAを取得し、古いSHAで上書きしない。SHA競合は最新stateを再取得して該当更新だけ再評価する。
+
+探索専用workerの毎時runは通常論文workerの24-run maintenance counterへ加算しない。探索専用workerの詳細契約は `discovery-specialist-worker.md` を正本とする。
+
 ## 探索経路
 
 在庫補充では同じ検索語を反復せず、以下を独立した探索経路として組み合わせる。
@@ -68,6 +83,8 @@ maintenance runと08:30 other-update runを除くpaper workerでは、run開始�
 ## GitHub write不能時
 
 GitHub write不能でもLibrary `/LLM-survey-outbox/pending/` へoffline job seedを耐久保存できるなら、同じ水位方針でcandidateを補充する。candidate seedを保存した後は、必要に応じてpriority上位候補のresearchを同一runで進める。transport envelope、job ID、replayは `fallback-routing.md` と `continuation-policy.json` を正本とする。
+
+探索専用workerはGitHub write不能時でもresearchへ進まず、candidate seedの耐久保存までに留める。
 
 ## 08:30 reporting
 
