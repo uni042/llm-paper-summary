@@ -2,23 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2607.08782-20260913-0358-v10-b",
-  "job_id": "job-research-2ce10fdd8ff6176b",
+  "attempt_id": "attempt-2606.17949-20260913-0430-v10-b",
+  "job_id": "job-research-548b75bbb8077475",
   "data": {
-    "hardware": ["クラスタA: 4ノード×8 NVIDIA RTX 4090、ノード内PCIe 4.0、ノード間InfiniBand。", "クラスタB: 4ノード×8 NVIDIA H200、ノード内NVLink、ノード間InfiniBand。"],
-    "software": ["PyTorch 2.3、CUDA 12.4、NCCL、Colossal-AI。", "SciPy線形計画で配置緩和を解き、AWQ 4ビット量子化を高精度予測器に利用。"],
-    "model": ["Mixtral-8x7B", "DeepSeekMoE-16B", "DeepSeek-V2-Lite", "Qwen3-30B-A3B"],
-    "datasets": ["MATH500", "WikiText-103", "LiveCodeBench"],
-    "baselines": ["通常のDeepSpeed-MoE相当実行", "履歴分布を使うオフライン最適配置", "実ルーティング確定後に再配置するオンライン反応型", "予測なし配置", "焼きなまし配置", "オラクルルーティング予測"],
-    "correctness": "予測器は専門家配置だけを先行決定し、本実行時のルータと専門家計算は元モデルをそのまま使う。予測誤りで生成結果を近似せず、配置外れによる追加通信・移動として性能へ影響する。",
+    "hardware": ["13モデル実体、合計28 GPU。", "Qwen2.5-72B: A100×4を2実体。", "Qwen2.5-14B: V100×4を3実体。", "Qwen2.5-7B: A30×1を5実体。", "Qwen2.5-3B: A30×1を3実体。"],
+    "software": ["vLLM serving-benchmarkとvLLM worker。", "RouteBalance約13,000行のPython。", "all-MiniLM-L6-v2、FAISS KNN、XGBoost遅延ヘッド。", "比較対象はBEST-Route、Avengers-Pro、vLLM Semantic-Router、round-robin、shortest-queue、random。"],
+    "model": ["Qwen2.5-3B", "Qwen2.5-7B", "Qwen2.5-14B", "Qwen2.5-72B", "品質判定器Llama-3.1-8B-Instruct", "第二判定器gemma-3-12B-it"],
+    "datasets": ["7公開データセット由来18,608プロンプト", "学習14,919、テスト3,634、完全被覆のサービング評価3,534", "instruction following、code、safety、multi-turn chat、math、reading comprehension等"],
+    "baselines": ["BEST-Route", "Avengers-Pro", "vLLM Semantic-Router", "passthrough + round-robin", "passthrough + shortest-queue", "passthrough + random", "enhanced concurrent-scoring baseline variants"],
+    "correctness": "ルータの出力品質は、候補モデル群とは別のLlama-3.1-8B-Instructを使うDeepEval G-Evalで評価し、さらにgemma-3-12B-itで全(prompt, model)グリッド14,431組と代表サービング出力を再採点する。RouteBalance > BEST-Routeの順序は両判定器で維持される。",
     "settings": [
-      {"name": "予測精度", "description": "四モデルで単純予測、カスケード予測、4ビット量子化予測を比較し、ルーティング精度、元モデルに対する予測器サイズ、予測計算費を測る。"},
-      {"name": "エンドツーエンド", "description": "MATH500、WikiText-103、LiveCodeBenchを使い、RTX 4090/H200クラスタ上で静的・反応型・Directorを比較する。モデルと入力分布を変え、五回の乱数シード平均で遅延を測る。"},
-      {"name": "GPU拡張性", "description": "H200クラスタでGPU数を4、8、16、32へ増やし、オフライン履歴配置に対するDirectorの遅延改善が通信規模とともにどう変化するか測る。"},
-      {"name": "配置器分解評価", "description": "同じ予測負荷を使い、Directorの線形緩和・丸め配置、焼きなまし、予測なし方式を比較して配置アルゴリズム単体の寄与を測る。"},
-      {"name": "予測器対オラクル", "description": "未来の真のルーティングを知るオラクル配置を上限とし、カスケード予測器と量子化予測器のエンドツーエンド性能差を測る。"}
+      {"name": "異種クラスタ前線", "description": "4モデルサイズ・3 GPU種類・13実体をPoisson到着率6〜30 req/sで駆動し、RouteBalanceの16個の品質・遅延・費用重みと各比較ルータの閾値/混合率を掃引する。品質、完了req/s、平均E2E、実トークン費用を測定する。"},
+      {"name": "公正なルータ比較", "description": "BEST-RouteとAvengers-Proを同じ14,919プロンプトの学習分割・同じDeepEvalラベルで再学習し、さらに両者の採点をRouteBalanceと同じバッチ内並行経路へ移したenhanced版を作り、ルーティング方針と実装上の直列採点ボトルネックを分離する。"},
+      {"name": "四アーム因果分離", "description": "完全目的関数、遅延重みなし+reactive queue、遅延重みなし+predictive latency、完全目的関数+static per-tier latencyの4条件を同一プロンプト・seedで比較し、主要利得がどの機構から出るかを切り分ける。"},
+      {"name": "費用予算", "description": "到着率16 req/sで75/45/30%の要求に費用制約を付け、予測費用による事前候補除外の有無とBEST-Routeを比較する。全方式で実行時max_tokens制限とストリーミング早期停止を共有する。"},
+      {"name": "バッチング除去", "description": "LPT順を外す、適応バッチを外す、固定バッチ1/16/32等へ変えることで、負荷更新と一括KNNの効果を測る。"},
+      {"name": "頑健性", "description": "4 Poisson seed、第二品質判定器、5価格ベクトル、leave-one-dataset-out、72B層全損失、gamma-bursty、square-wave arrival、p95/p99 tailを評価する。"}
     ],
-    "methodology": "予測、配置、ライブ移動の三要素を分離してマイクロ評価した後、四モデルと三データセットを二種GPUクラスタでエンドツーエンド比較する。配置器は実GPUの専門家計算時間とGPU間通信特性をプロファイルして入力とし、予測器は待ち行列要求に対して本実行より先に走らせる。GPU数を最大32まで増やして、専門家数・通信量・トポロジ差が大きい条件ほど先行配置の利得が増えるかを確認する。",
-    "scope": "評価は単一クラスタ内4〜32GPU、四つのMoEモデル、三つの公開データセットが中心で、実運用の長時間到着トレースや複数テナント負荷は含まれない。移動時間隠蔽は計算区間にネットワーク空きがあることへ依存し、量子化予測器は元モデルの約27〜36%の追加容量を使う。"
+    "methodology": "合計442構成、約150万要求を実クラスタで評価する。ルータごとの学習ラベルを揃え、published版と採点経路を並行化したengineering-equalized版を分けて報告するため、方針そのものの優劣と実装アーキテクチャの差を混同しない。さらに四アーム分離で、学習型予測器より『モデル選択時に遅延項を含めること』が主要因であることを検証する。",
+    "scope": "実機評価はQwen2.5 3B/7B/14B/72B一族とCloudLab上のA30/V100/A100構成で、実体集合は実行中固定である。別モデル族・別トポロジ、実運用到着トレース、重みをSLOから自動制御する機構は未評価。品質は主にオフラインG-Evalラベルをルーティング判断の基準にするため、実サービング出力の第二判定は代表点で検証する。"
   }
 }
