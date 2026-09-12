@@ -6,7 +6,7 @@
 
 - 探索専用worker: discovery、軽量重複判定、候補評価、priority付与、candidate投入だけを担当する。
 - 既存の論文worker: 従来どおりresearch / audit / discoveryを行う。探索機能を削除・停止しない。
-- GitHub Actions: queue/state/identityの最終整合、重複抑止、job materializationを担当する。
+- GitHub Actions: queue/state/identityの最終整合、重複抑止、job materialization、および `discovery-state.json` の統計更新を担当する。
 
 探索専用workerはresearch、audit、5-slot structured research record作成、論文Markdown生成を行わない。候補発見後に全文精読へ進まず、candidate poolへ安全に投入して次の探索軸へ進む。
 
@@ -90,13 +90,48 @@ priorityは少なくとも以下を考慮する。
 
 GitHub write可能時は既存workflow v10のdiscovery transportを使い、paper/state/READMEを直接編集しない。
 
-GitHub write不能時は `fallback-routing.md` に従い、ChatGPT Library `/LLM-survey-outbox/pending/` へoffline job seedを完全envelopeとして耐久保存する。完成Markdownやresearch recordを作らない。
+各discovery submissionには、通常の `job_id` と `candidates` に加えて、トップレベルに `discovery_stats` を含める。
+
+```json
+{
+  "discovery_stats": {
+    "run_key": "2026-09-12T15:00:00+09:00",
+    "round": "specialist-new-arrivals-1",
+    "axis": "2609新着・分離サービング",
+    "query_summary": "今回実際に使った探索軸と範囲の短い説明",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arxiv:..."],
+    "next_axis_hint": "次回に優先する異なる探索軸",
+    "empty_round_reason": null
+  }
+}
+```
+
+`candidate_count` は検索結果の生件数ではなく、テーマ適合性等を確認して実質的に候補として評価した件数を数える。`duplicate_filtered_count` はそのうちScheduled Chat側の重複確認で除外した件数とする。`candidates` には重複除外後にActionsへ投入する候補だけを入れる。`empty_round_reason` は有効候補が残らなかった場合だけ具体的に記録すればよい。
+
+Scheduled Chatは `accepted_count` を確定しない。最終投入直前以降にも通常workerやActionsによって同じ候補が既存化し得るため、実際の採用数はActionsが最終dedupe後の `research_jobs_added` から確定する。
+
+GitHub write不能時は `fallback-routing.md` に従い、ChatGPT Library `/LLM-survey-outbox/pending/` へoffline job seedを完全envelopeとして耐久保存する。fallback envelopeにも同じ `discovery_stats` を保持し、replay後にActionsが統計を確定できるようにする。完成Markdownやresearch recordを作らない。
 
 同一payloadの重複保存を避け、復旧時は既存のimmutable intake経路に従う。
 
 ## discovery-state
 
-各runで可能な範囲で探索軸、query概要、取得候補数、重複数、新規候補数、採用数、採用率、次回推奨軸を記録する。複数workerが同じ `discovery-state.json` を更新する場合は、write直前に最新SHAを再取得して競合を避ける。SHA競合時に古いstateで上書きしない。
+`discovery-state.json` は **GitHub Actionsを単一writer** とする。探索専用Scheduled Chatも通常論文Scheduled Chatも、このファイルを直接更新しない。
+
+各workerはdiscovery submissionの `discovery_stats` として、探索軸、query概要、候補数、Scheduled Chat側で除外した重複数、重複ID、次回推奨軸を渡す。Actionsはsubmission処理時に最終dedupe後の実採用数を確定し、以下を `discovery-state.json` へ1回だけ反映する。
+
+- candidate count
+- duplicate filtered count
+- novel candidate count
+- accepted count
+- duplicate ratio
+- exploration axis aggregate
+- last run / last round
+- empty-round streak
+
+submission pathを統計イベントの一意キーとして扱い、同じsubmissionをActionsが再処理しても二重加算しない。Actions workflowの直列化されたqueue処理を共有stateの競合回避点とし、Scheduled Chat側のSHA競合解消でstateを直接上書きしない。
 
 ## 通知
 
