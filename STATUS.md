@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 22:53 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **14 / 50** |
-| Research ready | **14** |
+| Candidate在庫（Research ready） | **13 / 50** |
+| Research ready | **13** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **167** |
+| Research completed（累計） | **168** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **21 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 14）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 13）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -25,11 +25,11 @@ Run: **2026-09-12T22:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
+| Research完了 | **3** |
 | Audit完了 | **0** |
 | Discovery完了 | **1** |
 | 新規job | **3** |
-| Repo収録 | **2** |
+| Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -56,15 +56,15 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 | 重複率 | **35.9%** |
 | Novel候補 | **82** |
 | Research候補採用 | **36** |
-| Research完了 | **43** |
-| Repo収録 | **43** |
+| Research完了 | **44** |
+| Repo収録 | **44** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 128 → 重複除外後 82 → Research候補採用 36 → Research完了 43 → Repo収録 43**
+**探索評価 128 → 重複除外後 82 → Research候補採用 36 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -105,6 +105,7 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 
 ### Research完了
 
+- `arXiv:2602.12151` — OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration
 - `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
 - `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - `arXiv:2602.21548` — DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference
@@ -112,15 +113,14 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 - `arXiv:2604.15039` — Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter
 - `arXiv:2607.26633` — NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement
 - `arXiv:2604.00368` — TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving
-- `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
 
 ### 次に処理する候補
 
-- P82 `arXiv:2602.12151` — OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 - P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
 - P80 `arXiv:2609.10861` — REACH: Controller-Managed Long-Span ECC for HBM AI Inference
+- P80 `arXiv:2608.05303` — EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding
 
 ## 7日比較
 
