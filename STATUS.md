@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 17:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 17:34 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -23,15 +23,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-12T16:30:00+09:00**
+Run: **2026-09-12T17:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **7** |
-| Repo収録 | **3** |
+| Discovery完了 | **0** |
+| 新規job | **1** |
+| Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -51,7 +51,7 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-multiround-heterogene
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **15** |
+| 通常worker run（ledger観測） | **16** |
 | 探索round（stats観測） | **4** |
 | 探索評価候補 | **13** |
 | 重複除外 | **1** |
