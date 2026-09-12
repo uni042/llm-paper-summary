@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:11:58+00:00",
+  "updated_at": "2026-09-12T18:15:00+00:00",
   "last_run_key": "2026-09-13T03:02:31+09:00",
-  "last_round": "specialist-agent-kv-nearmemory-2",
+  "last_round": "specialist-serverless-production-omissions-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1609,6 +1609,25 @@
       ],
       "next_axis_hint": "次はagent/KV階層を離れ、forward/backward citationまたはproduction workflow runtime・GPU/network systemsを探索する",
       "source_submission": "work-queue/submissions/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json"
+    },
+    {
+      "run_key": "2026-09-13T03:02:31+09:00",
+      "round": "specialist-serverless-production-omissions-3",
+      "axis": "serverless production serving・cold start・multi-LoRA elasticity",
+      "query_summary": "直近新着・agent KV軸から離れ、serverless/production servingの過去重要欠落を一次arXiv metadata/abstractで確認した。最新main HEADのidentity index、next queue、決定論的research job path、repository検索を投入直前に再照合し、既収録のHydraServe/INFERCEPT/Preble等を除外した。DeepFlow、ServerlessLoRA、PipeBoost、Predictive-LoRAは未収録・job未存在と判断した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.42857142857142855,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2502.15524",
+        "arXiv:2402.01869",
+        "arXiv:2407.00023"
+      ],
+      "next_axis_hint": "次はserverless/cold-startを離れ、forward citation・network flow scheduling・DBMS/OS由来のstate placementの独立経路を確認する",
+      "source_submission": "work-queue/submissions/20260913T0318JST-discovery-specialist-serverless-omissions-3.json"
     }
   ],
   "axes": {
@@ -2551,6 +2570,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.8,
       "next_axis_hint": "次はagent/KV階層を離れ、forward/backward citationまたはproduction workflow runtime・GPU/network systemsを探索する"
+    },
+    "serverless production serving・cold start・multi-LoRA elasticity": {
+      "last_run_key": "2026-09-13T03:02:31+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.42857142857142855,
+      "next_axis_hint": "次はserverless/cold-startを離れ、forward citation・network flow scheduling・DBMS/OS由来のstate placementの独立経路を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

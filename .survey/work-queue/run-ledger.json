@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:14:41.166833+00:00",
+  "updated_at": "2026-09-12T18:16:12.815505+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T18:14:41.166833+00:00",
+      "last_recorded_at": "2026-09-12T18:16:12.815505+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 7,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 35,
+        "new_jobs": 40,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -13339,6 +13339,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34710577809:1",
+          "recorded_at": "2026-09-12T18:16:12.815505+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34710577809",
+            "run_attempt": "1",
+            "source_sha": "879750e5009e2d61e25f8b25da6965f4fa73dab0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13451,6 +13465,14 @@
           "type": "research",
           "canonical_id": "arXiv:2509.19729",
           "title": "Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-c6d3963bf6f5f699",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -13700,6 +13722,41 @@
           "type": "research",
           "canonical_id": "arXiv:2609.09643",
           "title": "UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents"
+        },
+        {
+          "job_id": "job-f8688529219ccc48",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-5f9a998b042661ba",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2501.14417",
+          "title": "DeepFlow: Serverless Large Language Model Serving at Scale"
+        },
+        {
+          "job_id": "job-research-77f3e91a5c224daf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.20210",
+          "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs"
+        },
+        {
+          "job_id": "job-research-b80b3af4b6abdc94",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2503.17707",
+          "title": "PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling"
+        },
+        {
+          "job_id": "job-research-d09e1c8e52097070",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.14468",
+          "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs"
         }
       ],
       "new_paper_ids": [
@@ -13718,12 +13775,13 @@
         ".survey/work-queue/results/20260913T0245JST-discovery-specialist-foundry-backward.json",
         ".survey/work-queue/results/20260913T0250JST-discovery-specialist-agent-state.json",
         ".survey/work-queue/results/20260913T0310JST-discovery-specialist-recent-systems-1.json",
-        ".survey/work-queue/results/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json"
+        ".survey/work-queue/results/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json",
+        ".survey/work-queue/results/20260913T0318JST-discovery-specialist-serverless-omissions-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
       "paper_active_count_after": 373,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

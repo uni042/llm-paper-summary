@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b80b3af4b6abdc94",
+  "type": "research",
+  "parent_job_id": "job-c6d3963bf6f5f699",
+  "priority": 85,
+  "canonical_id": "arXiv:2503.17707",
+  "title": "PipeBoost: Resilient Pipelined Architecture for Fast Serverless LLM Scaling",
+  "source_url": "https://arxiv.org/abs/2503.17707",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md",
+  "selection_reason": "bursty serverless LLMでmodel loadingとinferenceの両方へfault-tolerant pipeline parallelismを適用し、複数GPUのaggregate PCIe bandwidthと並列計算をcold start短縮へ使う。障害時の継続実行・KV再構築も扱い、既存低遅延serving比でinference latencyを31〜49.8%削減するため、elastic servingとresilienceを同時に補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:15:00+00:00",
+  "artifact_transport": "structured_record_v10"
+}
