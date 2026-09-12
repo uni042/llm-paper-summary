@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "job_id": "job-c7d65b39dd1d586e",
+  "discovery_stats": {
+    "run_key": "2026-09-12T19:00+09:00",
+    "round": "specialist-20260912T1900-01",
+    "axis": "adjacent-pim-hbm-gpu-runtime-chiplet",
+    "query_summary": "候補バッファがcritical水準のため、重複率の高い直近serving/KV/scheduling軸から、PIM上のKVキャッシュ実行時管理、GPU計算通信重畳、GPUカーネル基盤、HBM信頼性、チップレット協調設計へ探索軸を変更。一次資料のtitle/abstract/書誌情報に基づき14候補を実質評価し、正本identity/queueとの照合で9件を除外した。",
+    "candidate_count": 14,
+    "duplicate_filtered_count": 9,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.03741",
+      "arXiv:2609.10266",
+      "arXiv:2609.03430",
+      "arXiv:2609.07883",
+      "arXiv:2609.01338",
+      "arXiv:2609.11133",
+      "arXiv:2609.11744",
+      "arXiv:2609.10790",
+      "arXiv:2609.10812"
+    ],
+    "next_axis_hint": "収録済み重要PIM/HBM/GPU-runtime論文と今回採用候補の被引用・参考文献展開、およびstorage/networking隣接システムへ軸を移す。"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11392",
+      "title": "PATTON: Enabling Commodity PIM for Production LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11392",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.11392-patton-commodity-pim-production-llm-serving.md",
+      "priority": 90,
+      "reason": "汎用品のメモリ内処理（PIM）を実運用LLMサービングへ統合し、論理KVブロックの割当・配置・書込み・コマンド生成まで実行時系として扱う。GPU中心の既存サービング研究と異なるメモリ内処理基盤の軸を補完し、KVキャッシュ管理と階層メモリの双方に直接関係する。一次資料ではvLLM相当のKVキャッシュ運用との統合と実機/シミュレーション評価を報告しており、システム研究として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11562",
+      "title": "Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs",
+      "source_url": "https://arxiv.org/abs/2609.11562",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11562-entwine-tiled-computation-fine-grained-gpu-communication.md",
+      "priority": 86,
+      "reason": "GPU間でタイル計算順序、細粒度通信、SM資源割当を協調させ、計算と通信の重畳を改善する。テンソル並列LLMワークロードを一次資料で評価しており、分散推論の通信オーバーヘッドとGPU実行時スケジューリングを結ぶ研究として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10970",
+      "title": "Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign",
+      "source_url": "https://arxiv.org/abs/2609.10970",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md",
+      "priority": 83,
+      "reason": "チップレット構成と用途特化アクセラレータを共同設計し、メモリ階層、メモリ内処理、テンソル/パイプライン/エキスパート並列まで同時に探索する。データセンタ向けMoEおよびdense LLM servingを評価対象に含み、推論ソフトウェア中心の収録群とは異なるハードウェア協調設計の重要な隣接軸になる。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10861",
+      "title": "REACH: Controller-Managed Long-Span ECC for HBM AI Inference",
+      "source_url": "https://arxiv.org/abs/2609.10861",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10861-reach-controller-managed-hbm-ecc-ai-inference.md",
+      "priority": 80,
+      "reason": "LLMデコードの読み出し偏重特性を利用して、HBM向け長スパン誤り訂正をメモリコントローラ側で効率化する。性能だけでなくHBM帯域・面積・電力・信頼性を同時に扱うため、階層メモリや推論基盤をハードウェア信頼性側から補完する研究価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11356",
+      "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification",
+      "source_url": "https://arxiv.org/abs/2609.11356",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md",
+      "priority": 77,
+      "reason": "Tensor Coreを用いるGPUカーネルのビット単位挙動を復元し、コンパイラ強制と静的検証まで接続する。LLM形状のGEMMを含む一次資料評価があり、推論基盤のカーネル自動調整・再現性・低レベルGPU実行時という隣接領域を補完する。直接のサービング手法ではないため他4件より優先度は下げた。"
+    }
+  ]
+}
