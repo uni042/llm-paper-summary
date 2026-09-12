@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:42 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **51 / 50** |
-| Research ready | **51** |
+| Candidate在庫（Research ready） | **54 / 50** |
+| Research ready | **54** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **15** |
+| Discovery完了 | **6** |
+| 新規job | **19** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **56** |
-| 探索評価候補 | **269** |
+| 探索round（stats観測） | **57** |
+| 探索評価候補 | **272** |
 | 重複除外 | **90** |
-| 重複率 | **33.5%** |
-| Novel候補 | **179** |
-| Research候補採用 | **83** |
+| 重複率 | **33.1%** |
+| Novel候補 | **182** |
+| Research候補採用 | **86** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 269 → 重複除外後 179 → Research候補採用 83 → Research完了 47 → Repo収録 47**
+**探索評価 272 → 重複除外後 182 → Research候補採用 86 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -115,6 +115,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
 | 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
+| GPU kernel/runtime・推論決定性 | 3 | 0 | 3 | 0.0% | 100.0% |
 | KV量子化の実行時保証・同期型serving負荷分散 | 3 | 0 | 3 | 0.0% | 100.0% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -129,11 +130,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — GPU kernel/runtime・推論決定性: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — 異種/edge serving・hybrid cache schedulingの過去重要欠落: 評価 10 / 重複 8 / 採用 2
 - **2026-09-13T01:26:11+09:00** — 耐障害serving・予測型cross-layer scheduling: 評価 7 / 重複 5 / 採用 2
 - **2026-09-13T01:26:11+09:00** — MoE expert配置・CPU-GPU協調実行: 評価 6 / 重複 4 / 採用 1
 - **2026-09-13T01:26:11+09:00** — 推論runtime・serving耐障害性: 評価 3 / 重複 1 / 採用 2
-- **2026-09-13T01:26:11+09:00** — KV量子化の実行時保証・同期型serving負荷分散: 評価 3 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
