@@ -2,29 +2,26 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.29207-20260912-2330-v10-a",
-  "job_id": "job-research-cab6f983bc0c93e3",
+  "attempt_id": "attempt-2602.02204-20260913-0030-v10-a",
+  "job_id": "job-research-61b65de2a7cf7033",
   "data": {
-    "overview": "KernelFlumeは、注意ノードを1基から7基へ増やしたときA6000上のKV容量を47GBから330GBへ増やしながら、1ステップ当たり時間を約72msに維持する。準備済み経路の追加は7.2マイクロ秒、削除は8.3マイクロ秒で、背景準備が間に合わない冷起動でも重みなし注意ノードは412msと、ServerlessLLMの約1.1秒やディスクからの完全インスタンス起動10.8秒より短い。実トレースではp99 TPOTをA6000で約74ms、H100で32〜34msに保ち、全条件でSLOを100%満たしながらServerlessLLM比で100万出力トークン当たり費用を最大32%・61%削減する。70B規模の較正シミュレーションでは56〜66%削減、安価なH20を注意ノードへ使う場合80〜85%削減を投影する。",
+    "overview": "vLLM-Omniは、Qwen2.5-Omniで既定Transformers実装に対して実時間係数を61.4%、ジョブ完了時間を61.6%削減し、Qwen3-Omniではそれぞれ90.7%・91.4%削減した。Qwen3-OmniのThinker/Talkerは毎秒トークン数が12.97倍・7.98倍に増え、BAGELでは1024×1024画像生成のジョブ完了時間をテキスト→画像で23.12秒から9.64秒、画像→画像で41.39秒から11.12秒へ短縮した。MiMo-Audioでは実時間係数を1.39から0.12へ下げて11.58倍高速化し、拡散モデル群ではDiffusers比1.26倍の総合高速化を示す。段階間コネクタの転送時間はQwen2.5-Omniで共有メモリ5.49/0.53ms、Mooncake 8.28/3.34msで、要求全体が数十秒規模であることに比べ小さい。",
     "key_results": [
-      {"metric":"注意ノード増設時のKV容量","value":"47GB→330GB","baseline":"注意ノード1基→7基","condition":"A6000実機","interpretation":"モデル重みを複製せず重みなし注意ノードのHBMをKVへ使うため、注意側の追加台数にほぼ比例してKV容量を増やせる。"},
-      {"metric":"増設中のデコード時間","value":"約72ms/stepでほぼ一定","baseline":"注意ノード1〜7基","condition":"A6000実機のオンライン増設","interpretation":"経路更新と事前準備をデコードの臨界経路から外すことで、容量追加時の大きな停止を避ける。"},
-      {"metric":"準備済み経路の切替費用","value":"追加7.2マイクロ秒、削除8.3マイクロ秒","baseline":"経路変更なし","condition":"通信エンドポイントとGPUバッファを事前準備済み","interpretation":"集合通信器の再構築やCUDA Graph再捕捉ではなくCPU側経路表だけを更新する効果である。"},
-      {"metric":"冷状態の容量追加準備","value":"KernelFlume 412ms、ServerlessLLM約1.1秒、完全ディスク起動10.8秒","baseline":"ServerlessLLMおよび完全インスタンス起動","condition":"予測より急なバーストで背景事前準備が間に合わない場合","interpretation":"注意ノードはモデル重みをロードしないため、最悪時でも完全インスタンスより早く容量を追加できる。"},
-      {"metric":"問い合わせ先行注意後の分離追加費用","value":"グループ問い合わせ注意1.06〜1.08倍、多頭注意0.96〜0.99倍","baseline":"非分離参照","condition":"実機カーネル評価","interpretation":"単純分離の遠隔通信費をQ先行送信で一部隠し、特に注意計算が重い多頭注意では参照と同等か僅かに高速になる。"},
-      {"metric":"問い合わせ先行注意の回収効果","value":"グループ問い合わせ注意で2〜3%、多頭注意で5〜7%、平均約4%改善","baseline":"問い合わせ先行なしの分離構成","condition":"同一実機比較","interpretation":"過去KV保持ノードがK/V射影終了を待たずQだけで注意計算を始められるため、通信と射影が重なる。"},
-      {"metric":"層間カーネルパイプライン高速化","value":"1.87〜1.94倍、平均1.90倍","baseline":"直列カーネル実行","condition":"9ワークロード、バッチ16〜128、系列長2K〜16K、注意ノード1/2/4基","interpretation":"注意ノードの遠隔注意と重みノードの射影・FFNをマイクロバッチ間で重ね、理論上限2倍に近づく。"},
-      {"metric":"パイプライン性能モデル誤差","value":"平均絶対誤差3.1%","baseline":"実測高速化率","condition":"9ワークロード","interpretation":"重み側時間と注意側時間の最大値で周期を近似する簡易モデルが実測をよく説明する。"},
-      {"metric":"A6000低/中/高変動のp99 TPOTとSLO","value":"74ms、全条件100%達成","baseline":"SLO 80ms","condition":"Llama-3.1-8B、バッチ8、各100セッション","interpretation":"KV需要が変動しても注意ノード追加時の遅延スパイクを避けられる。"},
-      {"metric":"A6000費用削減","value":"21% / 29% / 32%","baseline":"ServerlessLLM","condition":"低/中/高変動トレース、100万出力トークン当たり費用","interpretation":"変動が大きいほど完全インスタンスの重み複製と過剰容量を避ける価値が増える。"},
-      {"metric":"H100低/中/高変動のp99 TPOTとSLO","value":"32 / 34 / 34ms、全条件100%達成","baseline":"SLO 50ms","condition":"Llama-3.1-8B、バッチ32、各100セッション","interpretation":"ノード間RoCE・GPUDirect RDMAでも遠隔注意を重ねて厳しいTPOTを維持する。"},
-      {"metric":"H100費用削減","value":"27% / 45% / 61%","baseline":"ServerlessLLM","condition":"低/中/高変動トレース、100万出力トークン当たり費用","interpretation":"高価なH100ではモデル重みを持たない追加容量の費用差がさらに大きい。"},
-      {"metric":"70B規模シミュレーション","value":"56〜66%費用削減、H20注意ノードで80〜85%削減","baseline":"ServerlessLLM","condition":"テンソル並列8、実機較正モデル、同一動的トレース","interpretation":"モデルが大きいほど完全インスタンス側の重み複製費が増え、重みなし容量追加の優位が拡大する投影である。"},
-      {"metric":"シミュレータ較正誤差","value":"平均絶対誤差2.8%、最大7.5%","baseline":"8B H100実機","condition":"実測構成との比較","interpretation":"70B以降の結果は実測ではないが、少なくとも基準実機に対して較正精度を提示している。"},
-      {"metric":"405B級・超長文投影","value":"必要GPU数はServerlessLLMの30〜38%、費用65〜72%削減、H20注意ノードで88〜89%削減","baseline":"完全インスタンス拡縮","condition":"FP8、テンソル並列8、文脈総量100万〜1億トークン","interpretation":"H100 80GBの完全インスタンスでは約50.6GBを重みが占める一方、重みなし注意ノードは約78GBをKVへ使えるためKV密度が約2.65倍になる。"}
+      {"metric":"Qwen2.5-Omni実時間係数","value":"61.4%削減","baseline":"Hugging Face Transformers既定実装","condition":"2基80GBアクセラレータ、音声・画像・動画入力","interpretation":"自己回帰段階をvLLMエンジンへ載せ、段階単位の配置とバッチ処理を使うことで音声生成全体を短縮する。"},
+      {"metric":"Qwen2.5-Omniジョブ完了時間","value":"61.6%削減","baseline":"Hugging Face Transformers既定実装","condition":"同上","interpretation":"段階ごとの効率化が要求全体の完了時間にもほぼ同程度反映される。"},
+      {"metric":"Qwen3-Omni実時間係数","value":"90.7%削減","baseline":"Hugging Face Transformers既定実装","condition":"2基80GBアクセラレータ","interpretation":"30B Thinkerを含む大きいモデルではvLLM側の実行最適化を償却しやすく、相対改善が大きい。"},
+      {"metric":"Qwen3-Omniジョブ完了時間","value":"91.4%削減","baseline":"Hugging Face Transformers既定実装","condition":"2基80GBアクセラレータ","interpretation":"論文全体で最大のエンドツーエンド改善。"},
+      {"metric":"Qwen2.5-Omni Thinker/Talker毎秒トークン数","value":"1.29倍 / 1.97倍","baseline":"Transformers既定実装","condition":"Qwen2.5-Omni","interpretation":"ThinkerよりTalkerの改善が大きく、音声コードを多数生成する後段の高速化が全体遅延へ効く。"},
+      {"metric":"Qwen3-Omni Thinker/Talker毎秒トークン数","value":"12.97倍 / 7.98倍","baseline":"Transformers既定実装","condition":"Qwen3-Omni","interpretation":"実行グラフコンパイルなど現代的サービング最適化を既定実装が十分利用していないことが大差の主因と論文は説明する。"},
+      {"metric":"BAGEL テキスト→画像ジョブ完了時間","value":"23.12秒→9.64秒（2.40倍高速化）","baseline":"BAGEL公式実装","condition":"1024×1024、VBench、1基80GBアクセラレータ","interpretation":"複合画像生成でも段階分離と専用エンジンの利点が出る。"},
+      {"metric":"BAGEL 画像→画像ジョブ完了時間","value":"41.39秒→11.12秒（3.72倍高速化）","baseline":"BAGEL公式実装","condition":"1024×1024、VBench","interpretation":"処理段階が長い画像編集で相対改善がさらに大きい。"},
+      {"metric":"MiMo-Audio実時間係数","value":"1.39→0.60、実行グラフコンパイル込み0.12（最大11.58倍）","baseline":"MiMo-Audio公式実装","condition":"SeedTTS、1基アクセラレータ","interpretation":"共通基盤へ取り込むことで既存サービング最適化を音声モデルにも適用できる。"},
+      {"metric":"拡散モデル総合性能","value":"Diffusers比1.26倍高速化","baseline":"Diffusers","condition":"Qwen-Image/Qwen-Image-Edit/Wan2.2、VBench","interpretation":"専用拡散エンジンがvLLM由来の注意実装や演算最適化を再利用する効果。"},
+      {"metric":"Thinker→Talker転送","value":"共有メモリ5.49ms、Mooncake 8.28ms","baseline":"コネクタ方式間比較","condition":"Qwen2.5-Omni","interpretation":"数十秒規模の要求全体に対して転送費は小さく、段階分離を妨げる主因ではない。"},
+      {"metric":"Talker→Vocoder転送","value":"共有メモリ0.53ms、Mooncake 3.34ms","baseline":"コネクタ方式間比較","condition":"Qwen2.5-Omni","interpretation":"後段へ渡すデータでも複数ノード対応の追加費は数msに留まる。"}
     ],
-    "negative_results": "分離そのものは無料ではなく、問い合わせ先行注意を使う前の単純な遠隔化では非分離参照に対して1.03〜1.11倍の追加時間が生じる。問い合わせ先行注意でもグループ問い合わせ注意では参照より6〜8%程度遅い条件が残る。手法の主な利点はKV需要が大きく動的なデコードで現れ、短文・プリフィル支配の負荷では追加の遠隔注意を正当化しにくい。現在は系列範囲だけでKVを分割し、障害時のKV複製、故障復旧、既存KVの移行による圧縮整理、系列・バッチ・注意ヘッドの混合分割は実装していない。70B・405Bの費用結果は実機測定ではなく、8B実機で較正したシミュレーションまたは投影である。",
-    "interpretation": "結果は、長文デコードの容量問題を『何台の完全モデルを起動するか』ではなく『増え続けるKVをどれだけ重みなし注意ノードへ置くか』として扱うと、容量弾力性の単位を実際の状態増加へ合わせられることを示す。特に変動が大きいほどServerlessLLMとの差が広がることは、重量級インスタンス起動ではピーク追随のため過剰配置か遅延スパイクを受け入れる必要がある一方、KernelFlumeは小さい経路更新で追随できるためである。カーネル単体の分離には数%の費用が残るが、問い合わせ先行注意と層間パイプラインによってそれを隠し、容量拡張の節約効果が上回る。",
-    "quality_impact": "局所注意の部分結果を厳密に統合し、モデル重み・KV値・注意対象を削減しないため、品質劣化を伴う近似ではない。性能上の失敗は、通信量が大きすぎる、注意ノード準備が需要増加へ間に合わない、遠隔注意を十分に計算と重ねられない場合に遅延や費用として現れる。"
+    "negative_results": "Qwen3-Omniの大幅高速化は、基準のTransformers実装が実行グラフコンパイルなどサービング向け最適化を十分利用していないことにも依存するため、成熟した別サービング基盤に対する91.4%削減と解釈してはいけない。評価は主に2基80GBアクセラレータの単一サーバで、段階を多数ノードへ広げた場合のネットワーク競合・制御面スケーラビリティ・障害耐性は測っていない。段階ごとの動的GPU再配分アルゴリズムを本格評価した結果も示されず、資源割当はユーザー設定の影響を受ける。生成品質の包括的な比較より性能を主眼としている。",
+    "interpretation": "結果が示すのは、any-to-any型モデルを一枚岩の実装として扱うと失われる『各段階内部でのバッチ処理と既存ランタイム最適化』を、段階グラフへ分解することで回復できるという点である。特にQwen-OmniではTalkerがテキストより多数の音声コードを生成するため後段が支配的になりやすく、段階ごとに独立して最適化できる価値が大きい。BAGEL、MiMo-Audio、拡散モデルにも改善が広がることから、特定モデルだけの手作業最適化ではなく、異種生成段階を共通基盤へ収める効果が確認できる。一方、比較対象の最適化水準が揃っていないため、最大倍率そのものよりも複数モデル群で一貫して改善していることを重視すべきである。",
+    "quality_impact": "本論文の中心機構は段階分離、実行エンジン選択、バッチ処理、資源配置、通信であり、モデルの意味品質を意図的に削る方式ではない。ただし拡散エンジン内で利用可能なキャッシュ・近似注意など個別最適化の品質影響は、その下位方式の設定に依存する。"
   }
 }
