@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7c31f0a8b6e24d91",
+  "discovery_stats": {
+    "run_key": "2026-09-12T16:00:00+09:00",
+    "round": "specialist-20260912T1600-edge-kv-serving-1",
+    "axis": "新着・KVキャッシュ最適化・エッジ協調推論・servingコスト",
+    "query_summary": "直近の探索履歴で扱われたNVMe外部KV、CXL共有KV、agentic schedulingと重ならないよう、KV圧縮の適応制御、エッジ協調推論、端末配置実測、KV圧縮対テンソル並列のコスト比較へ探索軸を移した。title/abstract/書誌情報と一次資料の存在だけで軽量評価し、投入直前にcanonical IDを再照合した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "収録済み重要論文の被引用・参考文献、およびSSD/NVMe expert I/O schedulingの隣接分野へ切り替える",
+    "empty_round_reason": null
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression-constrained-llm-inference.md",
+      "priority": 88,
+      "reason": "プロンプトごとの遅延・ピークKVメモリ制約に応じてKVQuant、H2O、RocketKVなどの圧縮設定を選ぶ適応フレームワーク。固定設定ではなく入力単位で圧縮方式を選択し、4データセット・10圧縮設定で制約充足かつ正答する割合を平均約0.07、最大0.135改善すると要旨で報告し、コード公開も明記されている。KVキャッシュ最適化の運用制御を直接扱うため優先度を高くした。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11058",
+      "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+      "source_url": "https://arxiv.org/abs/2609.11058",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.11058-emmi-edge-multimodal-intelligence-representation-compression.md",
+      "priority": 84,
+      "reason": "端末側でモダリティ別符号化・融合・学習圧縮を行い、サーバー側MLLMへ固定サイズの潜在表現だけを送るエッジ協調推論。要旨では通信量を32分の1に削減しつつ下流精度を維持し、帯域制約下の推定エンドツーエンド推論遅延を最大3.4倍短縮すると報告する。通信と計算配置をまたぐエッジ推論系として既存の単体端末最適化と差がある。"
+    },
+    {
+      "canonical_id": "arXiv:2609.09166",
+      "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09166",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md",
+      "priority": 82,
+      "reason": "端末側小型言語モデルとサーバー側LLMの語彙が異なる場合にも使える損失なしの協調投機的デコードを扱う。共通語彙領域だけの分布送信や、サーバー側で置換候補と確率だけを送る方式により通信負荷を抑えつつ、サーバーLLMの出力分布を保存すると要旨で説明されている。端末・サーバー協調推論と通信最適化の交点として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23962",
+      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.23962",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2608.23962-more-gpus-or-smaller-cache-tensor-parallelism-versus-kv-compression.md",
+      "priority": 80,
+      "reason": "KVメモリ不足への対処としてGPU追加によるテンソル並列化とKV圧縮を同じコスト正規化軸で比較する研究。A100/A40/H100で較正したシミュレータを用い、要旨では構成範囲内で圧縮が1.20〜2.00倍安価、約36Bパラメータ付近が80GB GPUでの戦略境界になると報告する。容量・遅延・コストの設計判断を横断的に比較するためサービング設計資料として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.08307",
+      "title": "A Measurement Study of LLM Inference Trade-offs Across Edge Continuum Hardware",
+      "source_url": "https://arxiv.org/abs/2609.08307",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.08307-measurement-llm-inference-tradeoffs-edge-continuum-hardware.md",
+      "priority": 76,
+      "reason": "Jetson AGX Orinと近接エッジサーバーのCPU/GPU実行を同一ワークロードで比較し、精度、モデル容量、デコード遅延、プリフィル遅延、実行エネルギーを測る実測研究。要旨ではGPUサーバーが計算側遅延、Jetsonが測定エネルギーで有利で、単純なパラメータ数や重みファイルサイズでは性能を予測できないと報告する。エッジ配置判断の実測ベースラインとして採用価値がある。"
+    }
+  ]
+}
