@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d9a13e7570e7f3a1",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.10726",
+      "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2603.10726",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md",
+      "priority": 89,
+      "reason": "マルチテナントLLM servingのAutomatic Prefix Cachingで、hit/missのlatency差から他利用者のprefixを推測できるside channelに対し、共有reuseを一律無効化せず疑わしいcross-user reuseだけを選択的に隔離する。既存の完全分離型防御よりcache reuseを最大70%高め、inference latencyを30%下げており、prefix cacheの安全性と効率の両立を扱う実装系候補。"
+    },
+    {
+      "canonical_id": "arXiv:2608.25523",
+      "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.25523",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.25523-topas-workflow-aware-prefix-state-scheduling.md",
+      "priority": 88,
+      "reason": "multi-agent workflowでagentごとの長いsystem-prompt KV prefixを保持すると将来のreuseは速くなる一方、batch用GPU memoryを圧迫する問題に対し、workflowの残りcritical pathと近未来のprefix reuseを同時に評価してcache保持とrequest schedulingを共同決定する。SGLang実装でsynthetic workflowのmean/p99 JCTを最大39.8%/49.4%削減しており、agent-aware schedulingとKV cache policyを直接結ぶ候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-multitenant-agent-prefix-7",
+    "axis": "multi-tenant prefix安全性・multi-agent workflow prefix scheduling",
+    "query_summary": "動的parallelism再構成の後、独立軸としてmulti-tenant isolationとmulti-agent prefix-state policyを検索。CacheSolidarityとTOPASを一次資料抄録で軽量評価し、送信直前に最新default branchでcanonical arXiv IDを再検索して既存候補がないことを確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "最後にfault tolerance/request recoveryと最近の関連研究展開を別軸で確認し、強い未収録候補がなければ今回runを収束判定する",
+    "empty_round_reason": null
+  }
+}
