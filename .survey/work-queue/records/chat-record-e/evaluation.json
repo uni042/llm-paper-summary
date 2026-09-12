@@ -2,22 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.10970-20260912-2030-v10-e",
-  "job_id": "job-research-45d257185b0ce70d",
+  "attempt_id": "attempt-2606.12688-20260913-0110-v10-e",
+  "job_id": "job-research-5de21b53eec4b0eb",
   "data": {
-    "hardware": ["候補チップレットは14nm、1GHzを基本とし、行定常・重み定常・出力定常、近傍メモリ演算、MoEスイッチを探索する。", "近傍メモリ演算はCENT仕様の1Y-nm相当で内部16TB/s、外部1TB/s、32チャネルをモデル化する。", "比較GPUはNVIDIA RTX PRO 6000 Blackwell 96GB実機。各演算子を単体計測し、チップレット系の解析結果と同じ演算DAGへ合成する。"],
-    "software": ["Timeloop v0.4とAccelergyで計算チップレットの遅延・エネルギーを推定し、CENTでPIM、CACTIでDRAM、DSENTとORION 2.0で通信をモデル化する。", "PyTorchモデルをEinsum列へ変換し、Fengshuiが融合、メモリ、データフロー、テンソル並列・専門家並列、バッチを探索する。", "GPU実測ではPyTorch cuBLAS/cuDNN、形状別Inductor/Triton自動調整、CUTLASSのうち最速を採用し、CUDA Graphで起動費を除く。"],
-    "model": ["LLaMA 3.1-8B", "LLaMA 3.1-70B", "Qwen3-30B-A3B", "Qwen3-235B-A22B", "MobileNetV3", "RepLKNet-31B"],
-    "datasets": ["LLM基礎評価ではプリフィル入力長1024、デコードKV長1024、バッチ1と8を中心に比較する。", "LLM配信ケーススタディではバッチを最大64まで掃引し、Qwen3-30B-A3BとLLaMA-3.1-8Bを評価する。", "時間変動ケースではAzure LLM推論トレースに基づき、昼100同時要求で70% coding、夜50同時要求で80% conversationとする。"],
-    "baselines": ["実測NVIDIA RTX PRO 6000 Blackwell GPU", "全ネットワークで共通の均一ASIC", "ネットワーク別均一BASIC", "無制限に近い異種チップレット種類を許す参照設計", "DistServe型の均一フェーズ内ハードウェア", "Gemini-style均一チップレット", "SCAR-style異種データフローライブラリ"],
-    "correctness": "すべてのハードウェア方式で同じ前向き演算を実行し、近似計算は導入しない。チップレット解析は独立シミュレータと交差検証し、演算子レベルでTimeloopとScaleSim、フレームワークレベルでGeminiと比較する。GPU比較は各演算子を実機測定し、データがL2へ残らないようバッファリングしてHBM通信を含める。",
-    "settings": [
-      {"name":"チップレットプール探索","description":"プールサイズN=1〜10を成長させ、エネルギー、エネルギー費用積、EDP、EDP費用積の各目的で構成を探索する。代理モデル支援探索は各ラウンド約2,000候補を事前評価し、N=8以降の追加利益が小さいことから8種類を採用する。"},
-      {"name":"LLM配信","description":"チャットボットTTFT/TPOTを2.5秒/0.15秒、要約を15秒/0.15秒の制約とし、Qwen3-30B-A3BとLLaMA-3.1-8Bについてプリフィル・デコードのバッチを最大64まで比較する。DistServe型均一チップレットと、演算子単位異種化を使うFengshuiを比較する。"},
-      {"name":"物理配置と熱","description":"LLaMAプリフィル・デコードの代表段階で熱対通信エネルギーの重みを0.1〜0.9へ掃引し、ピーク温度、配線長、通信エネルギー、臨界ステージ遅延を測る。リンク遅延は上位探索の律速予算を超えてはならない。"},
-      {"name":"シミュレーション忠実度","description":"1,228個の計算律速GEMMでTimeloopとScaleSimを比較し、16個の2チップレットLLM構成でFengshuiとGeminiを比較する。異なる計算器でも傾向と絶対量が整合するかを確認する。"}
-    ],
-    "methodology": "評価は実機GPU計測と複数の検証済みアーキテクチャモデルを組み合わせる。チップレット側は実製造したFengshui ASICの測定ではなく、Timeloop、Accelergy、CENT、CACTI、DSENT、熱・配線モデルを統合した設計空間探索である。GPU基準だけはRTX PRO 6000 Blackwell実機を使用し、演算子ごとの最速実装をCUDA Graphで熱定常まで繰り返し、遅延をCUDA event、消費エネルギーをNVMLで取得する。各方式の費用は同一スループットに揃えるため、律速ステージ時間に比例した必要デバイス数と単価から求める。経済評価ではCATCHを用いてウェハ、歩留まり、パッケージ、接続、NRE、5年間の運用電力まで含める。",
-    "scope": "主な48.5〜97.8%削減値は均一ASICに対する設計モデル上の結果であり、製造済み8チップレットシステムの実測ではない。GPU基準値は実機だが、チップレット側の比較はシミュレーション・解析である。ただしTimeloopは既存シリコンに対する検証歴があり、本論文でもScaleSimとの演算子比較、Geminiとのフレームワーク比較を実施する。LLM配信ケースはSLO制約下の設計比較で、本番サービングスタックの終端間スループット実験ではないため、実配備効果と設計段階の推定値を区別する必要がある。"
+    "hardware": "単一ノードの4×NVIDIA H100 80GBまたは8×NVIDIA H200 141GB。BAGEL T2I/I2Iは3 H100、I2TとV-JEPA 2は1 H100、Qwen3-Omniは2 H200（Thinkerテンソル並列2では3 H200）、Orpheusは1 H200。",
+    "software": "M*公開実装はPython 3.12とPyTorch/CUDAを用い、FlashInferでページ化注意機構、HuggingFace Transformersでトークン化と重み読込み、torchaudio/torchcodecで音声・動画を処理する。比較対象はvLLM-Omni vLLM 0.21.0系、SGLang-Omni、VoxServe 0.1.0、Meta V-JEPA 2ネイティブ実装。",
+    "methodology": "BAGEL-7B-MoTはVBenchとFood101を用い、1024×1024画像、50段階のrectified-flowを実行する。画像生成・編集は3 H100でCFG三分岐を並列化し、画像理解は1 H100で64〜256トークンの固定長出力を生成する。Qwen3-Omni-30B-A3B-InstructはSeed-TTS、最大256トークン、バッチ1/4/8/16/32でThinkerをrank 0、Talker+Code2Wavをrank 1へ分離する。Orpheus-3BはSeed-TTS、バッチ1/2/4/8/16。V-JEPA 2 vitg-ACはDROID先頭50エピソード、256×256の8フレーム、bf16、バッチ1、ロールアウト長4/15/30を使う。各構成は3〜10件程度のウォームアップ後に10〜160件を測り、最大同時数の少なくとも5倍を実行する。比較可能なサブモデルはtemperature=0に固定し、p50/p95、TTFT、処理量、E2E遅延、音声RTFを報告する。",
+    "scope": "複合モデル族を横断する実機評価だが、すべて単一ノードであり、論文が掲げるMooncake経由のノード間TCP/RDMAは評価していない。π0.5はV-JEPA 2と同系統のロボット計画で既存基盤が未対応のためベンチマークから除外する。著者は一部ベースラインで正しさ・性能問題が起きた設定を公平性のため本文結果から除外している。",
+    "workloads": ["BAGELのテキスト→画像、画像→画像、画像→テキスト", "Qwen3-Omniのテキスト→音声", "Orpheus-3Bのテキスト→音声", "V-JEPA 2の行動条件付き世界モデルロールアウト"],
+    "baselines": ["vLLM-Omni", "SGLang-Omni", "VoxServe", "Meta vjepa2 native"],
+    "metrics": ["p50/p95 E2E遅延", "TTFT", "要求または音声処理量", "実時間係数RTF"],
+    "reproducibility": "現行arXiv v2から公式公開コード mstar-project/mstar がリンクされ、Apache-2.0で利用可能。評価構成、モデル重み、比較基盤、データセットの版・ライセンスも付録に記載される。"
   }
 }
