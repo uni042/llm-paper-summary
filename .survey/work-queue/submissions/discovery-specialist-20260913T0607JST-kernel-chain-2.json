@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-8f4979ed83101d83",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15602",
+      "title": "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy",
+      "source_url": "https://arxiv.org/abs/2608.15602",
+      "priority": 84,
+      "reason": "超低ビット量子化と専用CUDAカーネルを共同設計し、実行時逆量子化や浮動小数点演算の残存コストを削減する。最大5.92倍高速化・10.19倍省エネルギー、70B級を単一A100へ収容する評価と公開コードがあり、kernel/runtime系の未収録候補として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.14993",
+      "title": "Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving",
+      "source_url": "https://arxiv.org/abs/2604.14993",
+      "priority": 76,
+      "reason": "pipeline parallelismを含む大容量メモリ型foundation-model servingを、block placementとcache allocationを伴うserver-chain composition問題として定式化し、性能保証付きのスケーラブルな配置手法を提案する。通常のLLM専用schedulerとは異なる基礎システム・最適化系統として補完価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T06:02:25+09:00",
+    "round": "specialist-kernel-chain-serving-2",
+    "axis": "GPU低ビットkernel/runtime・大容量メモリ型chain serving",
+    "query_summary": "05:28のlast strong batch後の独立経路としてGPU kernel/runtimeとserving基礎最適化を探索した。arXiv一次ページで題名・抄録・評価概要を軽量確認し、投入直前に最新main HEAD、決定論的research job ID、repo全体検索、最新queue、Library pendingを再照合した。既存の2607.08786はready jobを確認して除外し、未登録の2件だけを投入した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2607.08786"],
+    "next_axis_hint": "このstrong batchで枯渇判定をリセットし、MoE recent revision、forward/backward citation、storage/networking/GPU runtime、新着差分を独立に再一巡する",
+    "empty_round_reason": null
+  }
+}
