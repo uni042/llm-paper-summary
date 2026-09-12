@@ -1,28 +1,52 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "seed-20260912-2030-axis-rotation-kv-system-survey",
+  "seed_id": "seed-20260912-2130-axis-rotation-moe-runtime-storage",
   "candidates": [
     {
-      "canonical_id": "arXiv:2607.08057",
-      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization",
-      "source_url": "https://arxiv.org/abs/2607.08057",
+      "canonical_id": "arXiv:2606.15453",
+      "title": "A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.15453",
+      "priority": 88,
+      "reason": "Directly targets MoE expert-loading latency with spatio-temporal prediction and hardware-supported prefetching, matching the repository's expert prefetch/offload focus. The primary-source abstract reports strong cross-layer/token predictability and substantial performance/energy gains, making it a high-value candidate for full research."
+    },
+    {
+      "canonical_id": "arXiv:2603.19289",
+      "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2603.19289",
+      "priority": 87,
+      "reason": "Uses internal representations to speculate future MoE experts so CPU-GPU expert transfers overlap with computation, directly relevant to memory-constrained expert offload and prefetch. It differs from ordinary cache-only methods by allowing speculative expert execution to avoid refetching after router resolution."
+    },
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "priority": 84,
+      "reason": "Addresses network contention across reusable KV retrieval, collective communication, and prefill-to-decode transfer in disaggregated serving. Its stage-aware flow scheduler is a strong adjacent networking/scheduling candidate and reports evaluation on an 8-server, 32-GPU testbed plus simulation."
+    },
+    {
+      "canonical_id": "arXiv:2602.12151",
+      "title": "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration",
+      "source_url": "https://arxiv.org/abs/2602.12151",
       "priority": 82,
-      "reason": "System-aware KV infrastructure survey that organizes work by execution/scheduling, placement/migration, and representation/retention. It is not represented by an existing deterministic job or repository code-search hit, and is useful as a survey-layer map across the repository's KV-cache, offload, scheduling, and migration lineages."
+      "reason": "Introduces workload-aware heterogeneous deployment and adaptive deployment switching for spatially and temporally heterogeneous serving traffic. It is relevant to dynamic placement and scheduling, and the primary-source abstract reports up to 2x performance improvement on real-world traces."
+    },
+    {
+      "canonical_id": "arXiv:2604.25699",
+      "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.25699",
+      "priority": 86,
+      "reason": "A storage-centric inference architecture that makes 3D NAND an active part of edge LLM execution, closely aligned with the repository's SSD/NVMe and hierarchical-memory emphasis. It is particularly valuable for comparing conventional SSD offload against compute-near-flash designs."
     }
   ],
   "discovery_stats": {
-    "run_key": "2026-09-12T20:30:00+09:00",
-    "round": "normal-worker-axis-rotation-system-aware-kv",
-    "axis": "os-paging-storage-io-network-kv-system-aware-survey",
-    "query_summary": "After the SSD/KV round collapsed to known papers, rotated toward page-aware scheduling, cache restoration, memory hierarchy, and system-aware KV infrastructure. Four strong primary-source candidates were checked against deterministic queue identities and repository state; three were already represented and one survey candidate remained novel.",
-    "candidate_count": 4,
-    "duplicate_filtered_count": 3,
-    "duplicate_canonical_ids": [
-      "arXiv:2606.18431",
-      "arXiv:2604.25080",
-      "arXiv:2606.25353"
-    ],
-    "next_axis_hint": "Next discovery should rotate away from KV-cache-centric terms toward expert placement/prefetch, GPU runtime and virtual-memory mechanisms, or adjacent DBMS/OS storage scheduling."
+    "run_key": "2026-09-12T21:30:00+09:00",
+    "round": "normal-worker-axis-rotation-moe-runtime-storage",
+    "axis": "moe-expert-prefetch-gpu-network-runtime-storage-architecture",
+    "query_summary": "Candidate inventory was below the critical watermark, so discovery rotated away from the preceding KV-centric axis. Primary-source searches targeted MoE expert prediction/prefetch, GPU/runtime and disaggregated-network scheduling, and storage-centric inference architectures. Seven plausible papers were lightweight-screened; five strong candidates were retained for Actions-side final dedupe and research-job materialization.",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "After Actions-side dedupe, next discovery should favor citation expansion from accepted expert-prefetch papers and adjacent OS/DBMS memory-management or I/O-scheduling work rather than repeat the same generic MoE queries."
   }
 }
