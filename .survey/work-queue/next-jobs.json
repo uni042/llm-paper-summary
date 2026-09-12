@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 160,
+      "completed": 161,
       "superseded": 44,
       "deferred": 3,
-      "ready": 14
+      "ready": 13
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-434c5f74d230609f",
-      "type": "research",
-      "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2604.00368",
-      "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
-      "source_url": "https://arxiv.org/abs/2604.00368",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00368-tent-declarative-slice-spraying-data-movement.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-7e658d2c7f333c12",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-825504607247e69d",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2607.13093",
+      "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.13093",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-4ec414ca721c48b8",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T11:17:53+00:00"
+  "generated_at": "2026-09-12T11:23:10+00:00"
 }

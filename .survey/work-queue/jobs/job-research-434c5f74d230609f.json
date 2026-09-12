@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2604.00368",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00368-tent-declarative-slice-spraying-data-movement.md",
   "selection_reason": "分離型LLMサービングの大容量転送を固定経路へ縛らず、細粒度スライスへ分解して複数RDMA/NVLink系リンクへ瞬時の品質に応じて分散する実運用データ移動基盤。障害時も50ms未満で再経路化し、SGLang HiCacheを用いたLLM推論でMooncake TE比最大1.36倍のスループット、P90 TTFT 26%削減を報告する。大規模運用で得られたネットワーク系統として価値が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T11:17:11+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T11:22:50+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

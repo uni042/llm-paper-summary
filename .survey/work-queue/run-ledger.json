@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T11:19:32.065788+00:00",
+  "updated_at": "2026-09-12T11:24:21.496239+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9913,19 +9913,19 @@
     {
       "run_key": "2026-09-12T19:30:00+09:00",
       "first_recorded_at": "2026-09-12T10:36:23.790325+00:00",
-      "last_recorded_at": "2026-09-12T11:19:32.065788+00:00",
+      "last_recorded_at": "2026-09-12T11:24:21.496239+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 9,
-        "new_papers": 5,
+        "new_papers": 6,
         "fallback_archived": 0
       },
       "events": [
@@ -10087,6 +10087,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34690890870:1",
+          "recorded_at": "2026-09-12T11:24:21.496239+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34690890870",
+            "run_attempt": "1",
+            "source_sha": "fab93847c9bf98103c77864e5d319fe0a11168e2"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10151,6 +10166,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-434c5f74d230609f",
+          "type": "research",
+          "canonical_id": "arXiv:2604.00368",
+          "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
           "from": "ready",
           "to": "completed"
         }
@@ -10225,7 +10248,8 @@
         "arXiv:2606.30391",
         "arXiv:2606.17787",
         "arXiv:2605.02189",
-        "arXiv:2609.11562"
+        "arXiv:2609.11562",
+        "arXiv:2604.00368"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1930JST-discovery-c797669b52ac6c35.json",
@@ -10237,8 +10261,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 344,
-      "paper_active_count_after": 349,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 350,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
