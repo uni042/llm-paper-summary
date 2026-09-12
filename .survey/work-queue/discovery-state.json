@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T21:08:52+00:00",
+  "updated_at": "2026-09-12T21:11:20+00:00",
   "last_run_key": "2026-09-13T06:02:25+09:00",
-  "last_round": "specialist-kernel-chain-serving-2",
+  "last_round": "specialist-moe-prefetch-resweep-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2115,6 +2115,27 @@
       ],
       "next_axis_hint": "このstrong batchで枯渇判定をリセットし、MoE recent revision、forward/backward citation、storage/networking/GPU runtime、新着差分を独立に再一巡する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0607JST-kernel-chain-2.json"
+    },
+    {
+      "run_key": "2026-09-13T06:02:25+09:00",
+      "round": "specialist-moe-prefetch-resweep-3",
+      "axis": "MoE expert prefetch・offload・speculative execution再走査",
+      "query_summary": "直前strong batch後の枯渇判定をリセットしてMoE recent/older-important omissionを再走査した。SPICE、APEX、SpecPrefetch、ST-MoE、SP-MoEは決定論的research job照合で既収録または既存jobと確認し除外。MoE-SpeQのみ最新main HEADでresearch job不存在、repo検索でも識別子・題名未検出、Library pendingも空であることを投入直前に確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8333333333333334,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.21240",
+        "arXiv:2608.11688",
+        "arXiv:2607.24787",
+        "arXiv:2606.15453",
+        "arXiv:2510.10302"
+      ],
+      "next_axis_hint": "このstrong candidateで枯渇判定を再度リセットし、新着差分、forward/backward citation、storage/networking、GPU runtime/kernel、階層メモリを独立に再確認する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0610JST-moe-prefetch-3.json"
     }
   ],
   "axes": {
@@ -3337,6 +3358,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "このstrong batchで枯渇判定をリセットし、MoE recent revision、forward/backward citation、storage/networking/GPU runtime、新着差分を独立に再一巡する"
+    },
+    "MoE expert prefetch・offload・speculative execution再走査": {
+      "last_run_key": "2026-09-13T06:02:25+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8333333333333334,
+      "next_axis_hint": "このstrong candidateで枯渇判定を再度リセットし、新着差分、forward/backward citation、storage/networking、GPU runtime/kernel、階層メモリを独立に再確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

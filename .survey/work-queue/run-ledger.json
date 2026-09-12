@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T21:10:10.000148+00:00",
+  "updated_at": "2026-09-12T21:12:40.073492+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,7 +15070,7 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T21:10:10.000148+00:00",
+      "last_recorded_at": "2026-09-12T21:12:40.073492+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -15079,9 +15079,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 13,
+        "new_jobs": 14,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -15232,6 +15232,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34719211549:1",
+          "recorded_at": "2026-09-12T21:12:40.073492+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34719211549",
+            "run_attempt": "1",
+            "source_sha": "eca2432d04e070c6bb13abc3e5e213a718b5cda0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15317,6 +15331,14 @@
         },
         {
           "job_id": "job-8f4979ed83101d83",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-041eceb16e09fd41",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15415,6 +15437,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15602",
           "title": "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy"
+        },
+        {
+          "job_id": "job-980b3587f3155662",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -15430,7 +15459,8 @@
         ".survey/work-queue/results/discovery-specialist-20260912T2034Z-kv-backref.json",
         ".survey/work-queue/results/discovery-specialist-20260912T2036Z-hash-kv-family.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0602JST-kv-serving-1.json",
-        ".survey/work-queue/results/discovery-specialist-20260913T0607JST-kernel-chain-2.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0607JST-kernel-chain-2.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0610JST-moe-prefetch-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,
