@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-c56a9d57e83a480c",
+  "type": "research",
+  "parent_job_id": "job-2170d2d09da882fb",
+  "priority": 92,
+  "canonical_id": "arXiv:2608.06007",
+  "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
+  "source_url": "https://arxiv.org/abs/2608.06007",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06007-tensorcast-tensor-as-a-service.md",
+  "selection_reason": "モデル重み・KVキャッシュ・チェックポイント等の分散tensor状態管理を実行エンジンから分離し、Tensor-as-a-Serviceとして統一するシステム。vLLMとSGLangへ統合し、重みmaterialization、KV管理、要求routingを同じlifecycle primitiveで扱う。高並行multi-turn agent負荷のprogrammable policyでmedian TTFT最大93.2%改善を報告しており、個別KV/weight管理を横断する基盤抽象として既存系統との差分が大きい。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:36:09+00:00",
+  "artifact_transport": "structured_record_v10"
+}
