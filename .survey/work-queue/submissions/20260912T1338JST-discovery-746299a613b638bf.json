@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-746299a613b638bf",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.25498",
+      "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.25498",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.25498-dops-dynamic-operator-scheduling.md",
+      "priority": 87,
+      "reason": "プリフィル・デコード単位の分離だけでは異種ハードウェア上の実行時競合や重み配置まで扱えない問題に対し、段階認識DAGを使う動的演算子配置と、メモリ制約下でブロック単位の重み配置を選ぶ機構を閉ループで組み合わせる。NPUとPIMを組み合わせた評価で、動的演算子スケジューラがPD比較対象に対して幾何平均1.20〜2.23倍、重み配置最適化がさらに1.28〜1.33倍の高速化を報告しており、分離型サービングの次段階として異種資源配置を扱う明確なシステム研究である。"
+    },
+    {
+      "canonical_id": "arXiv:2601.12241",
+      "title": "Power Aware Dynamic Reallocation For Inference",
+      "source_url": "https://arxiv.org/abs/2601.12241",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.12241-rapid-power-aware-dynamic-reallocation.md",
+      "priority": 79,
+      "reason": "プリフィル・デコード分離環境で、GPU台数の役割再配置だけでなく電力上限そのものを両段階へ動的に再配分し、クラスタの電力制約下でサービス品質目標の達成率を最大化するRAPIDを提案する。固定割当と同じハードウェア・総電力上限のまま、ピーク負荷時にサービス品質目標達成率を最大2倍へ改善すると報告している。計算資源だけでなく電力をサービング時の第一級資源として扱うため、既存の分離・負荷分散研究を補完する価値がある。"
+    }
+  ]
+}
