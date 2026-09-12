@@ -1,37 +1,37 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 16:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 16:34 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **1 / 50** |
-| Research ready | **1** |
+| Candidate在庫（Research ready） | **0 / 50** |
+| Research ready | **0** |
 | Research blocked | **3** |
 | Research deferred | **3** |
-| Research completed（累計） | **144** |
+| Research completed（累計） | **145** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **15 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 1）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 0）。探索を最優先で継続。
 - Research blocked が **3件** 残っています。
 - Research消化が候補補充を上回っています。candidate枯渇に注意。
 
 ## 直近の通常worker
 
-Run: **2026-09-12T14:30:00+09:00**
+Run: **2026-09-12T16:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **4** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **3** |
-| Repo収録 | **4** |
+| Discovery完了 | **0** |
+| 新規job | **1** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -51,22 +51,22 @@ Run: **2026-09-12T14:22:56+09:00** / Round: **specialist-2609-serving-routing-1*
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **15** |
+| 通常worker run（ledger観測） | **16** |
 | 探索round（stats観測） | **1** |
 | 探索評価候補 | **4** |
 | 重複除外 | **1** |
 | 重複率 | **25.0%** |
 | Novel候補 | **3** |
 | Research候補採用 | **3** |
-| Research完了 | **31** |
-| Repo収録 | **27** |
+| Research完了 | **32** |
+| Repo収録 | **28** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 4 → 重複除外後 3 → Research候補採用 3 → Research完了 31 → Repo収録 27**
+**探索評価 4 → 重複除外後 3 → Research候補採用 3 → Research完了 32 → Repo収録 28**
 
 ## 探索効率（直近24時間）
 
@@ -86,6 +86,7 @@ Run: **2026-09-12T14:22:56+09:00** / Round: **specialist-2609-serving-routing-1*
 
 ### Research完了
 
+- `arXiv:2609.10812` — ExaServe: Large-Scale LLM Serving on Exascale HPC Systems
 - `arXiv:2609.10790` — Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving
 - `arXiv:2609.08189` — Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference
 - `arXiv:2609.10964` — Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows
@@ -93,11 +94,10 @@ Run: **2026-09-12T14:22:56+09:00** / Round: **specialist-2609-serving-routing-1*
 - `arXiv:2511.00807` — FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs
 - `arXiv:2601.12241` — Power Aware Dynamic Reallocation For Inference
 - `arXiv:2609.11744` — Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs
-- `arXiv:2609.04971` — BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference
 
 ### 次に処理する候補
 
-- P83 `arXiv:2609.10812` — ExaServe: Large-Scale LLM Serving on Exascale HPC Systems
+- ready候補なし
 
 ## 7日比較
 
