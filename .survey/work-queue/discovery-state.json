@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:32:35+00:00",
+  "updated_at": "2026-09-12T20:34:13+00:00",
   "last_run_key": "2026-09-13T05:28:14+09:00",
-  "last_round": "specialist-recent-kv-1",
+  "last_round": "specialist-kv-backref-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2053,6 +2053,21 @@
       ],
       "next_axis_hint": "MoE expert cache/offloadのrecent revisionと、重要offload論文のforward citationを別軸で確認する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260912T2028Z-recent-kv.json"
+    },
+    {
+      "run_key": "2026-09-13T05:28:14+09:00",
+      "round": "specialist-kv-backref-2",
+      "axis": "KVキャッシュ幾何学指標・backward reference",
+      "query_summary": "ECOKVから幾何学的多様性を用いるKV eviction系統へ遡り、attention非依存のkey-similarity系手法と関連圧縮手法を軽量評価した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "GPU runtime・storage・networkingの隣接分野と推論framework由来の新規system paperを確認する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260912T2034Z-kv-backref.json"
     }
   ],
   "axes": {
@@ -3235,6 +3250,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "MoE expert cache/offloadのrecent revisionと、重要offload論文のforward citationを別軸で確認する"
+    },
+    "KVキャッシュ幾何学指標・backward reference": {
+      "last_run_key": "2026-09-13T05:28:14+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "GPU runtime・storage・networkingの隣接分野と推論framework由来の新規system paperを確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
