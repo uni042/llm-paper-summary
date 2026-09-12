@@ -2,25 +2,77 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2609.10970-20260912-2030-v10-e",
-  "job_id": "job-research-45d257185b0ce70d",
+  "attempt_id": "attempt-2606.12688-20260913-0110-v10-e",
+  "job_id": "job-research-5de21b53eec4b0eb",
   "data": {
-    "overview": "Fengshuiの8種類チップレット群は、均一ASICに対して幾何平均でエネルギー48.5%、エネルギー費用積88.1%、エネルギー遅延積93.0%、エネルギー遅延費用積97.8%を削減し、無制限に近い異種設計との差を4.1%以内に保つ。特にデコードでは近傍メモリ演算が外部DRAM帯域律速を回避し、均一ASICからエネルギー71%、EDP 99%を平均削減する。LLM配信のSLO制約下ではQwen3-30B-A3BとLLaMA-3.1-8Bのプリフィルエネルギーを最大16.8%、エネルギー費用積を最大28.7%削減する。一方、Qwenのデコードは適切な単一チップレットを均一方式でも選べるため、異種化の追加利益は小さい。",
+    "overview": "M*は、単一の最適化方針を全モデルへ押し付けるのではなく、Walk Graphで構成要素の実行形を露出させ、各要素に既存の高速化を再適用することで複数モデル族で改善を得る。BAGELではページ化KVプールとCFG並列、Qwen3-OmniではTalker全体のCUDAグラフ化とTalker/Code2Wav共配置、Orpheusでは高速注意実装と注意計画の事前生成、V-JEPA 2では動的反復内のKV再利用が主因となる。現行v2の要約ではBAGELテキスト→画像の平均p50 E2EをvLLM-Omniより約20%短縮し、Qwen3-Omniは最大2.9倍低いRTF、バッチ16でvLLM-Omni比2.7倍・SGLang-Omni比4.0倍の音声処理量、V-JEPA 2は最大12.5倍高速化と整理されている。",
     "key_results": [
-      {"metric":"均一アクセラレータ比のエネルギー","value":"48.5%削減","baseline":"Homogeneous ASIC","condition":"全評価ワークロード、採用した8チップレットプールの幾何平均","interpretation":"演算子ごとにデータフローとメモリを分けることで、全処理を同じ高性能部品へ置く過剰供給を減らす。"},
-      {"metric":"エネルギー費用積","value":"88.1%削減","baseline":"Homogeneous ASIC","condition":"同一スループット費用を含む全ワークロード幾何平均","interpretation":"小さい専用チップレットを必要個数だけ使い、NREと製造費を共有することでエネルギーだけでなく費用を含む指標でも差が拡大する。"},
-      {"metric":"エネルギー遅延積","value":"93.0%削減","baseline":"Homogeneous ASIC","condition":"全ワークロード幾何平均","interpretation":"近傍メモリ演算、専門家スイッチ、形状別配列の組合せが帯域律速と通信律速を同時に軽減する。"},
-      {"metric":"無制限異種設計との差","value":"4.1%以内","baseline":"チップレット種類をN=10〜13まで増やした探索収束点","condition":"エネルギー、エネルギー費用積、EDP、EDP費用積の4指標","interpretation":"8種類程度でも多様な演算子の主要な律速をほぼ網羅でき、専用部品を無制限に増やす必要がない。"},
-      {"metric":"デコードの均一ASIC比","value":"エネルギー71%、EDP 99%削減","baseline":"Homogeneous ASIC","condition":"評価デコードワークロードの平均","interpretation":"重み読出し律速のデコードを近傍メモリ演算へ置く効果が特に大きい。"},
-      {"metric":"Qwen3-30B-A3Bプリフィルエネルギー","value":"12.5%削減","baseline":"DistServe型の均一チップレット構成","condition":"TTFT/TPOT SLOを満たすエネルギー最小点","interpretation":"FFNの大行列積と注意・射影を異なる配列形状へ割り当てることでフェーズ内の演算子差を利用する。"},
-      {"metric":"LLaMA-3.1-8Bプリフィルエネルギー","value":"16.8%削減","baseline":"DistServe型均一構成","condition":"同一SLO下のエネルギー最小点","interpretation":"密モデルでも演算子形状ごとの配列専用化が均一なフェーズ内GPUより効率的になる。"},
-      {"metric":"LLaMA-3.1-8Bプリフィルのエネルギー費用積","value":"28.7%削減","baseline":"DistServe型均一構成","condition":"同一SLO下でエネルギー費用積を最適化","interpretation":"処理効率だけでなく同一スループットに必要なハードウェア費まで含めると専用化の利益が大きくなる。"},
-      {"metric":"物理配置のピーク温度","value":"最大約4.4K低下","baseline":"配線長だけを最小化する事前配置","condition":"LLaMAプリフィル・デコード代表段階、臨界経路違反なし","interpretation":"非律速ステージの余裕時間を使い、性能を落とさず高発熱チップレットを物理的に離せる。"},
-      {"metric":"時間変動負荷の再マップ","value":"エネルギー15.4%、EDP 16.1%削減","baseline":"昼夜それぞれの専用BASICを重複保有して通電待機する方式","condition":"Azure型の日内変動、共通フリートを繁忙時間に合わせて保持して実行計画を再マップ","interpretation":"チップレット生態系の価値は製造時だけでなく、同じハードウェアを時間帯別ワークロードへ再プログラムできる点にもある。"},
-      {"metric":"設計探索時間","value":"N=1〜10のプール共同設計2.4〜2.5時間、既存プールへの新アプリ最適化0.67秒","baseline":"完全再共同設計","condition":"論文評価環境","interpretation":"高価な生態系探索は一度だけ行い、固定プール上の新規アプリ配置は秒未満で求められるため、再利用型設計として運用可能な探索費に抑える。"}
+      {
+        "metric": "BAGELテキスト→画像のp50 E2E遅延",
+        "value": "単一段階vLLM-Omni比1.25倍高速（現行v2要約では平均約20%低減）",
+        "baseline": "vLLM-Omni single-stage",
+        "condition": "BAGEL-7B、1024×1024、50段階フロー、B=1、3×H100、CFG三分岐並列",
+        "interpretation": "三つのCFG文脈を一つのページ化KVプール上のラベルとして管理し、各層・各反復で密KVを連結する費用を避ける。"
+      },
+      {
+        "metric": "BAGEL画像編集のp50 E2E遅延",
+        "value": "既定vLLM-Omni比最大2.64倍高速",
+        "baseline": "vLLM-Omni default",
+        "condition": "BAGEL-7B、B=1、3×H100 CFG並列",
+        "interpretation": "既定基盤ではThinkerとDiT段階間の高価なKV転送が生じるが、M*は同一グラフ内でキャッシュと配置を統一してこの費用を抑える。"
+      },
+      {
+        "metric": "BAGEL画像理解の処理量",
+        "value": "B=16で32.7%向上",
+        "baseline": "vLLM-Omni default",
+        "condition": "単一H100、出力64〜256トークン、EOSを無視して系列長を一致",
+        "interpretation": "小バッチでは同程度だが、連続バッチ処理とTransformer高速経路を維持したまま複数タスクを一設定で扱えるため、高バッチで差が広がる。"
+      },
+      {
+        "metric": "BAGEL画像理解のTTFT",
+        "value": "p50はB=1で33%低減、B=16で14%低減；B=16 p95は28%低減",
+        "baseline": "vLLM-Omni default",
+        "condition": "単一H100、出力64〜256トークン",
+        "interpretation": "Walk単位の必要構成要素実行と非同期スケジューリングにより先頭応答を短縮し、尾部も抑える。"
+      },
+      {
+        "metric": "Qwen3-Omni音声処理量",
+        "value": "B=16でvLLM-Omni比2.7倍、SGLang-Omni比4.0倍",
+        "baseline": "vLLM-OmniおよびSGLang-Omni",
+        "condition": "Seed-TTS、2×H200、ThinkerとTalker+Code2Wavを分離",
+        "interpretation": "Talkerの複数トークン予測ループを含めて一つのCUDAグラフへ取り込み、TalkerとCode2Wavを同一Workerに置いて段階間プロセス通信を省く効果が大きい。"
+      },
+      {
+        "metric": "Qwen3-Omni音声RTF",
+        "value": "最大2.9倍低いRTF",
+        "baseline": "vLLM-Omni / SGLang-Omni",
+        "condition": "Qwen3-Omni-30B-A3B-Instruct、Seed-TTS、H200構成",
+        "interpretation": "リアルタイム音声で重要な処理時間/音声長を縮め、ストリーミング余裕を増やす。"
+      },
+      {
+        "metric": "Orpheus p50 RTF",
+        "value": "B=16で13.6%低減",
+        "baseline": "VoxServe 0.1.0",
+        "condition": "Orpheus-3B、単一H200、Seed-TTS",
+        "interpretation": "音声専用基盤に対しても、融合投影、CUDAグラフ対応サンプリング、投機的FlashInfer計画を共通実行時から利用して上回る。"
+      },
+      {
+        "metric": "Orpheus音声処理量",
+        "value": "B=1で52%向上、B=8で20%向上、v2要約のB=16では39%向上",
+        "baseline": "VoxServe",
+        "condition": "単一H200、B=1〜16",
+        "interpretation": "小バッチから高バッチまで専用音声サービングに対する改善を維持する。"
+      },
+      {
+        "metric": "V-JEPA 2行動条件付きロールアウトのp50速度向上",
+        "value": "H=4で2.08倍、H=15で3.76倍、H=30で12.5倍",
+        "baseline": "Meta vjepa2 native",
+        "condition": "単一H100、B=1、DROID先頭50エピソード",
+        "interpretation": "ネイティブPythonループが各反復で増大系列を再プリフィルするのに対し、DynamicLoop内でページ化KVを保持するため、ホライズンが長いほど重複計算削減が増える。"
+      }
     ],
-    "negative_results": "異種化は常に利益を出すわけではない。Qwen3-30B-A3Bのデコードでは、バッチ条件に応じて近傍メモリ演算または行列演算チップレット一種類が支配的になり、均一基準側も同じ最適部品を選べるため追加利益が小さい。学習用ワークロードから凍結した8種類プールを未見ワークロードへそのまま移すと、新しい律速が欠けた場合に大きく劣化し、デコードのEDP系では8.1〜15.8倍、MoEのEDP費用積で2.8倍などの差が出る。ただし1種類を追加する接頭辞固定微調整で全未見系列を各自の最適値から14.3%以内へ戻せる。主結果は製造済みチップレット実機ではなく設計モデルなので、実シリコン上のクロック、温度、歩留まり、通信実装の誤差は残る。",
-    "interpretation": "Fengshuiの利益は『異種部品を増やす』こと自体ではなく、演算子ごとの律速に対応する少数の代表部品を選び、その部品を多数のアプリで共有することから生じる。N=2で近傍メモリ演算が入るとメモリ律速デコードが改善し、N=3〜5で専門家スイッチと複数データフローが加わるとMoE通信や形状差を吸収する。N=8を超えると追加利益が2%未満へ縮むため、生態系としてはそこでNREと性能の均衡が生じる。異種メモリを無効化するとEDPが1.7倍、テンソル並列を無効化すると1.4倍、三要素を同時に無効化するとEDPが2.0倍悪化し、単一要素ではなく共同設計が効いている。",
-    "quality_impact": "同一モデル・同一演算グラフを別のハードウェアへ割り当てるため、モデル品質の近似交換はない。時間変動ケースでも論文は各時間帯で同じサービス品質制約を維持したままエネルギーとEDPを比較している。"
+    "negative_results": "すべての設定で既存基盤を同条件比較できたわけではない。BAGELではvLLM-Omniの既定構成が画像生成・理解には適する一方で画像編集の段階間KV転送が重く、単一段階構成は画像生成・編集には良いが画像理解のB=1処理量が既定構成の約半分で、連続バッチ処理やAPIストリーミングにも制約があった。Qwen3-Omniでは著者がvLLM-OmniのThinkerテンソル並列を動作させられず、その条件で直接比較していない。さらにベースライン側で正しさ・性能問題が出た複数設定は公平性のため結果から除外された。",
+    "interpretation": "性能差はWalk Graphという抽象化自体が計算を軽くするというより、モデル構造を実行時から見える形にすることで、不要構成要素の省略、並列分岐、同一Worker共配置、ページ化KV、反復を跨ぐキャッシュ、CUDAグラフ、非同期CPUスケジューリングを適切な粒度で適用できることから生じる。特に固定段階境界が不要なデータ移動を作る場合や、ネイティブループが過去状態を再計算する場合に差が大きい。",
+    "quality_impact": "近似削減やモデル改変ではなく実行方式の変更であり、生成品質を落として速度を得るものではない。ベンチマークでは貪欲復号や出力長の調整で比較可能性を高めている。"
   }
 }
