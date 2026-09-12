@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 21:49 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 21:54 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **11 / 50** |
-| Research ready | **11** |
+| Candidate在庫（Research ready） | **13 / 50** |
+| Research ready | **13** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **165** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 13）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -27,8 +27,8 @@ Run: **2026-09-12T21:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **3** |
+| Discovery完了 | **3** |
+| 新規job | **6** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **19** |
-| 探索round（stats観測） | **18** |
-| 探索評価候補 | **113** |
+| 探索round（stats観測） | **19** |
+| 探索評価候補 | **117** |
 | 重複除外 | **44** |
-| 重複率 | **38.9%** |
-| Novel候補 | **69** |
-| Research候補採用 | **32** |
+| 重複率 | **37.6%** |
+| Novel候補 | **73** |
+| Research候補採用 | **34** |
 | Research完了 | **41** |
 | Repo収録 | **41** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 ### 24時間ファネル
 
-**探索評価 113 → 重複除外後 69 → Research候補採用 32 → Research完了 41 → Repo収録 41**
+**探索評価 117 → 重複除外後 73 → Research候補採用 34 → Research完了 41 → Repo収録 41**
 
 ## 探索効率（直近24時間）
 
@@ -84,6 +84,7 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
+| cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -91,11 +92,11 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 ### 直近5探索round
 
+- **2026-09-12T21:30:00+09:00** — cxl-near-data-kv-page-management-os-demand-paging: 評価 4 / 重複 0 / 採用 2
 - **2026-09-12T21:30:00+09:00** — moe-expert-prefetch-edge-external-memory: 評価 3 / 重複 0 / 採用 1
 - **2026-09-12T21:30:00+09:00** — heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute: 評価 7 / 重複 3 / 採用 0
 - **2026-09-12T20:00:00+09:00** — GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御: 評価 6 / 重複 1 / 採用 1
 - **2026-09-12T19:30:00+09:00** — network-data-movement-pnm-cross-dc-memory-dynamics: 評価 9 / 重複 5 / 採用 4
-- **2026-09-12T19:30:00+09:00** — heterogeneous-gpu-offload-parallelism-spot-serving: 評価 8 / 重複 5 / 採用 2
 
 ## 最近処理した論文
 
