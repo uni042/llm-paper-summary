@@ -2,22 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2509.17863-20260913-0306-v10-b",
-  "job_id": "job-research-0dea3dc5502917bd",
+  "attempt_id": "attempt-2602.22593-20260913-0324-v10-b",
+  "job_id": "job-research-09ae1785cedfe192",
   "data": {
-    "overview": "EaaSの評価で重要なのは、専門家を固定通信群から外しても大規模DeepSeek-R1の端から端までの性能を競合水準に保ちながら、従来構成では実現しにくいGPU単位の伸縮と障害局所化を得た点である。要求量が8192から5120へ低下した例では、SGLang/vLLMの専門家並列が64デコードGPUを維持する必要がある一方、EaaSは40〜48 GPUへ縮小して同等のデコード処理量を保ち、最大37.5%の資源を削減した。64 GPU中の一台を停止させる試験では固定専門家並列が通信群再起動を必要とするのに対し、EaaSは複製専門家へ再送して処理を継続し、処理量低下を2%未満に抑える。IBGDA通信とCUDAグラフ・カーネル縮小・二重バッチ重畳はいずれも性能維持に大きく寄与する。",
+    "overview": "Flying Servingは、高負荷ではDPへ分解してキューを掃き、低負荷・優先要求・長文ではTPへ統合することで、固定構成の両極端を同じGPU群上で使い分ける。バースト時の平均TTFTはDPにほぼ一致し、静的TP比P90 TTFTをLlama-70Bで1.66倍、GPT-OSS-120Bで4.68倍、Nemotron-8Bで4.79倍改善する。低負荷では静的TPに対する管理費を約5〜10%に抑える。ピーク生成処理量はDPの95〜96%を維持しつつ、静的TPより2.03〜2.52倍高い。最大文脈は動的統合で1.9Mトークンへ達し、DP寄り構成比7.2倍、切替は15msで静的再起動146〜292秒より約1万倍短い。",
     "key_results": [
-      {"metric": "負荷低下時のデコードGPU資源", "value": "64 GPUから40 GPUへ縮小可能、最大37.5%削減", "baseline": "SGLang-EP / vLLM-EPは64 GPUを維持", "condition": "要求量8192→5120、DeepSeek-R1デコード", "interpretation": "固定専門家並列群の約数制約を外し、必要処理量に合わせて専門家サービス数を細かく減らせる。"},
-      {"metric": "GPU障害中のデコードスループット", "value": "低下2%未満", "baseline": "SGLang-EP / vLLM-EPは通信群全体を再起動し継続不能", "condition": "64デコードGPU、4096要求、10台を一台ずつランダム停止", "interpretation": "専門家が状態を持たないため複製先へ要求を再送でき、単一サーバ障害をサービス全体から切り離せる。"},
-      {"metric": "弱スケーリング", "value": "32→64 GPUでほぼ比例して処理量増加", "baseline": "SGLang/vLLM専門家並列は40・48・56 GPU等の非標準台数を利用不可", "condition": "DeepSeek-R1、デコード資源を細粒度に増加", "interpretation": "固定通信群の分割条件を外すことで、任意に近いGPU台数を需要へ合わせられる。"},
-      {"metric": "IBGDA通信往復遅延", "value": "バッチ512で49.6%削減（2対2）、34.7%削減（1対3）", "baseline": "StepMesh", "condition": "テンソル形状(batch, 1, 7168)、対称および非対称P2P", "interpretation": "CPUホストキューとCPU発行制御を外し、通信もCUDAグラフへ含めることでサービス分離の通信費を抑える。"},
-      {"metric": "CUDAグラフの要素除去", "value": "無効化で処理量91.9%低下", "baseline": "EaaS完全構成", "condition": "バッチサイズ4096", "interpretation": "細かな計算・通信操作をCPUから逐次起動すると大規模分離実行の処理量を維持できず、CPU不要通信との組合せが重要である。"},
-      {"metric": "専門家群縮小カーネルの要素除去", "value": "無効化で処理量14.9%低下", "baseline": "EaaS完全構成", "condition": "バッチサイズ4096", "interpretation": "非活性専門家群まで走査する費用が細粒度MoEでは無視できず、有効群だけへメタデータを圧縮する効果がある。"},
-      {"metric": "二重バッチ重畳の要素除去", "value": "無効化で処理量25.9%低下", "baseline": "EaaS完全構成", "condition": "バッチサイズ4096", "interpretation": "遠隔専門家計算と通信の待ち時間を次バッチの注意計算で隠すことが、分離構成のGPU空転抑制に必要である。"},
-      {"metric": "既存専門家負荷分散との併用", "value": "2.4%、4.4%、5.1%の性能改善", "baseline": "負荷分散なしのEaaS", "condition": "DeepSeek系専門家負荷分散アルゴリズムとの組合せ", "interpretation": "サービス分離は既存の専門家再配置・冗長化手法と競合せず、追加の負荷均衡余地を持つ。"}
+      {"metric": "高負荷バースト時P90 TTFT", "value": "静的TP比1.66×、4.68×、4.79×改善", "baseline": "Static TP", "condition": "Llama-70B、GPT-OSS-120B、Nemotron-8B、10〜30 req/sバースト", "interpretation": "高負荷時にTP群をDPへ解体して同時実行数を増やし、キュー待ちが支配する領域でDPの容量へ近づく。"},
+      {"metric": "高負荷平均TTFT", "value": "Llama 4.38s vs DP 4.23s、GPT-OSS 2.15s vs DP 2.17s、Nemotron 3.04s vs DP 3.04s", "baseline": "Static DP", "condition": "同バースト負荷", "interpretation": "動的切替の追加費を含めても、高負荷ではほぼDP下限のキュー遅延を維持する。"},
+      {"metric": "低負荷平均TTFT", "value": "Llama 223ms vs TP 212ms、GPT-OSS 74ms vs TP 67ms、Nemotron 74ms vs TP 67ms", "baseline": "Static TP", "condition": "2〜5 req/sの平坦負荷", "interpretation": "低負荷ではTPを維持し、切替・管理による遅延増を5.19〜10.45%に抑える。"},
+      {"metric": "ピーク生成処理量", "value": "DPの約95〜96%を維持、静的TP比2.03×/2.47×/2.52×", "baseline": "Static DP / Static TP", "condition": "3モデル", "interpretation": "一要求遅延をTPへ近づけながら、クラスタ総容量はDPに近い水準を保持する。"},
+      {"metric": "優先要求遅延", "value": "TPOT 24ms、TTFT 74ms。DP比1.33×/2.24×改善", "baseline": "Static DP", "condition": "Llama-70B、3〜5 req/s、優先度混在", "interpretation": "高優先度要求だけをハード中断でTPへ集約し、背景要求のKVを保持したまま低遅延を与える。"},
+      {"metric": "優先度混在時の全要求TTFT", "value": "142ms。Static TP 2130msより15×低い、DP 166msより1.17×良い", "baseline": "Static TP / Static DP", "condition": "同優先度混在負荷", "interpretation": "全要求をTPへ固定せず高優先度だけTP資源を与えることで、キュー崩壊を防ぐ。"},
+      {"metric": "最大文脈長", "value": "1.9Mトークン。4DP×2TPの264K比7.2×、2DP×4TPの959K比2.0×", "baseline": "静的混合DP/TP", "condition": "8×H200、Llama-70B", "interpretation": "必要時に全GPUのKV容量を一要求へ集約でき、普段から8TPへ固定せず長文対応できる。"},
+      {"metric": "並列構成切替遅延", "value": "15ms。静的再起動146.54〜292.38sに対し約10,000×高速", "baseline": "高TP構成へのCold Start", "condition": "8×H200、Llama-70B", "interpretation": "重みコピー、KV移送、NCCL再生成を切替経路から外したため、オンライン要求の時間尺度で再構成できる。"},
+      {"metric": "超長文時の遅延", "value": "TTFTはStatic TP比1.1%未満の差、ILTは5%以内。DP比TTFT 2.78〜3.04×、ILT 1.85〜1.88×改善", "baseline": "Static DP / Static TP", "condition": "Llama 8K、GPT-OSS 128K、Nemotron 1M", "interpretation": "長文でも動的方式の状態管理がTP本来の一要求性能をほぼ損なわない。"}
     ],
-    "negative_results": "EaaSは専門家を遠隔サービス化するため通信往復が増え、CPU不要IBGDA、二重バッチ重畳、CUDAグラフを外すと性能が大きく低下する。特にCUDAグラフ無効化ではバッチ4096で処理量が91.9%低下し、柔軟性だけでは高性能を維持できない。主評価では専門家の動的負荷分散を有効化しておらず、頻出専門家を自動でいつ何個複製するかという専用制御アルゴリズムは今後課題とされる。128 GPU実機で大規模評価する一方、モデルはDeepSeek-R1中心で、異種GPUや他MoE構造への性能一般化は未検証である。",
-    "interpretation": "EaaSの性能は、専門家をサービス化したこと自体より、状態なしという性質を利用して配置・複製・故障迂回の自由度を得つつ、その自由度が増やす通信をGPU主導で隠したことに由来する。固定All-to-Allは高速でも参加者全員を同じ障害・伸縮単位へ束ねる。EaaSは通信を局所P2Pへ変えるため一台単位の構成変更が可能になり、必要な専門家だけ複製できる。一方で小さな遠隔呼出しが増えるため、動的バッチで専門家計算密度を上げ、二重バッチで往復遅延を隠し、CUDAグラフでCPU起動を削る三つの実装最適化が揃って初めて、固定集団通信系に近い端から端までの性能を維持できる。",
-    "quality_impact": "専門家の計算内容やルータ選択を近似しないため、品質を性能と交換する方式ではない。障害時も同じ専門家重みの複製へ再送し、通常どおりルータスコアで専門家出力を合成する。"
+    "negative_results": "低負荷ではShift ParallelismがFlying Servingより最大約4%速い場合があり、動的DP↔TPの管理費は完全には消えない。現在の実装は単一多GPUノードを前提とし、複数ノードをまたぐモデル並列は対象外である。ソフト中断は空きGPUを有効利用できる代わり、DPで先行したTP対象要求のKVを切替時に再計算する。通信群を事前生成するため候補TPトポロジを起動時に限定し、任意GPU組合せをその場で作る設計ではない。Shift ParallelismはGPT-OSS-120Bに非対応のため同モデルでの直接比較が欠ける。",
+    "interpretation": "Flying Servingの主要効果は、DPとTPを別の配備物として持つのではなく、一つの物理状態に対する二つの論理実行ビューへ変えたことから生じる。重みはビュー、KVはブロック意味、通信は事前生成ハンドルを切り替えるだけなので、モード変更費が要求実行時間より十分短くなる。その結果、高負荷ではキュー待ちを減らすDP、低負荷では一要求を高速化するTP、長文ではKV容量を集約するTPという選択を同じエンジン群へ適用できる。静的方式では互いに両立しない処理量・遅延・容量を、時間方向に切り替えて共有する設計である。",
+    "quality_impact": "近似や圧縮による品質交換はない。モデル重み・KV値は同じ物理データを参照し、ハード中断の背景要求もKVを保持して再開する。ソフト中断時の再計算も同じモデル計算を繰り返すだけで生成品質を意図的に変更しない。"
   }
 }
