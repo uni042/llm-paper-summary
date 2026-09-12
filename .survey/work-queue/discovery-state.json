@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:09:06+00:00",
+  "updated_at": "2026-09-12T17:12:22+00:00",
   "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-multilora-coserving-6",
+  "last_round": "specialist-agent-state-interception-7",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1397,6 +1397,24 @@
       ],
       "next_axis_hint": "次はadapter/co-servingを離れ、agentic・multi-turn長時間requestのstate保存、interruption、fault tolerance、prefix sharing runtimeへ移る",
       "source_submission": "work-queue/submissions/20260913T0209JST-discovery-d4eb0caeda27a63f.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-agent-state-interception-7",
+      "axis": "agentic multi-turn state・interruption・distributed prefix sharing",
+      "query_summary": "multi-LoRA/co-servingから離れ、tool callを挟むmulti-turn agentのKV state保持、中断/再開、multi-agent collective sharing、distributed prefix schedulingへ軸を変更した。重要な古い未収録2件と2026年agent serving候補2件を軽量評価し、最新mainでcanonical IDの未収録を再確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.23521",
+        "arXiv:2606.18741"
+      ],
+      "next_axis_hint": "次はagent stateから離れ、output-length uncertaintyを考慮したKV reservation・memory-constrained online scheduling・admission controlへ移る",
+      "source_submission": "work-queue/submissions/20260913T0211JST-discovery-582553a19b973e3b.json"
     }
   ],
   "axes": {
@@ -2209,6 +2227,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.25,
       "next_axis_hint": "次はadapter/co-servingを離れ、agentic・multi-turn長時間requestのstate保存、interruption、fault tolerance、prefix sharing runtimeへ移る"
+    },
+    "agentic multi-turn state・interruption・distributed prefix sharing": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "次はagent stateから離れ、output-length uncertaintyを考慮したKV reservation・memory-constrained online scheduling・admission controlへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
