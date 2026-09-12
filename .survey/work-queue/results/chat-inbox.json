@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-add2dd90d1cb57e3",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.08309-hetis-heterogeneous-gpu-dynamic-parallelism.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2509.08309.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-a190f4e7421fc3f8",
+  "validation_error": "ValueError: problem_method.components[2].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T13:51:03+00:00"
 }
