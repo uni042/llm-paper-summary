@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T02:36:30.797729+00:00",
+  "updated_at": "2026-09-12T02:37:41.559107+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8292,7 +8292,7 @@
     {
       "run_key": "2026-09-12T11:30:00+09:00",
       "first_recorded_at": "2026-09-12T02:30:25.231630+00:00",
-      "last_recorded_at": "2026-09-12T02:36:30.797729+00:00",
+      "last_recorded_at": "2026-09-12T02:37:41.559107+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -8301,9 +8301,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -8337,6 +8337,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34668157627:1",
+          "recorded_at": "2026-09-12T02:37:41.559107+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34668157627",
+            "run_attempt": "1",
+            "source_sha": "860d4151cfe4472db6612e930a6c63e59b750545"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8355,6 +8369,14 @@
           "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-3f9471b1e296ec5a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8371,18 +8393,26 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-c115c71d60df8d04",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11744",
+          "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs"
         }
       ],
       "new_paper_ids": [
         "arXiv:2609.04971"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260912T1130JST-discovery-job-9e21235b2f0e941b.json"
+        ".survey/work-queue/results/20260912T1130JST-discovery-job-9e21235b2f0e941b.json",
+        ".survey/work-queue/results/20260912T1138JST-discovery-job-3f9471b1e296ec5a.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 325,
       "paper_active_count_after": 326,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

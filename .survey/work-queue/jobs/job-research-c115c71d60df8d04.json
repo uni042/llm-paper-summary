@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-c115c71d60df8d04",
+  "type": "research",
+  "parent_job_id": "job-3f9471b1e296ec5a",
+  "priority": 96,
+  "canonical_id": "arXiv:2609.11744",
+  "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+  "source_url": "https://arxiv.org/abs/2609.11744",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.11744-building-py-kvcache-a-performance-characterization-of-external-kv-caching-for-vllm-with-nvme-ssds.md",
+  "selection_reason": "vLLMの外部KVキャッシュをGPU・CPU・NVMeの三階層で実測し、帯域だけでなく転送粒度、中間メモリ、スケジューラ投入時刻が損益分岐を決めると示す。非同期ダイレクトI/O、共有ステージング領域、待機中リクエストの先行読込みを備えるpy-kvcacheを実装し、80KトークンのSSD読込みでLMCacheの2.0倍、GPU/CPU/SSD併用で1.23倍、vLLM標準KV Offloadとの差約4%を報告する。H100では外部読込みより再計算やGPU内保持が有利な場合も示し、SSD階層を常時使うのではなく構成依存の受入判断にすべきという重要な境界条件を持つ。2026-09-10公開で公式実装あり。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T02:37:20+00:00",
+  "artifact_transport": "structured_record_v10"
+}
