@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-76e9912e8914176e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.08151-spectre-parallel-speculative-serving.md",
+      "priority": 90,
+      "reason": "長尾multi-model cloudで遊休tail-model serviceをremote drafterとして再利用し、draft生成とtarget検証をparallel化するSGLang実装のspeculative serving。arXiv抄録ではQwen3-235B-A22Bを含む評価で自己回帰比最大2.28倍、強いspeculative baseline比でも最大66%の追加改善を報告しており、speculative decodingをserving資源配置へ拡張する強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2602.02204",
+      "title": "vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2602.02204",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+      "priority": 89,
+      "reason": "LLM・diffusion等を含むany-to-any multimodal modelをstage graphへ分解し、stageごとのbatching、GPU allocation、connectorで完全分離実行する公開serving system。arXiv抄録ではjob completion time最大91.4%削減と公開実装を明記しており、従来text-only PD分離を複合model pipelineへ広げる重要候補。"
+    },
+    {
+      "canonical_id": "arXiv:2606.12688",
+      "title": "M*: A Modular, Extensible, Serving System for Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2606.12688",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.12688-mstar-modular-composite-model-serving.md",
+      "priority": 88,
+      "reason": "複合multimodal modelをWalk Graphとして抽象化し、component配置とmodel-agnostic runtime最適化を統一する汎用serving system。arXiv抄録ではvLLM-Omniとの直接比較を含み、text-to-image、TTS、robotic planningで実測改善を報告しており、composite-model servingの比較軸として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2503.08461",
+      "title": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework",
+      "source_url": "https://arxiv.org/abs/2503.08461",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2503.08461-fastcache-multimodal-kv-compression-serving.md",
+      "priority": 80,
+      "reason": "multimodal LLM servingでKV圧縮処理そのものがqueueingとGPU利用率を悪化させる点を対象に、prefill・compression・decodeのdynamic batchingとKV memory poolを共同設計するframework。arXiv抄録では高concurrency条件でTTFT/throughput/memoryの改善を報告しており、multimodal KV管理の補完候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-speculative-multimodal-serving-09",
+    "axis": "speculative decoding serving・composite multimodal serving",
+    "query_summary": "SGLang上のremote-drafter speculative serving、any-to-any multimodal stage disaggregation、composite-model dataflow runtime、multimodal KV compression servingをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第8roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "framework/runtime kernel、重要論文のforward/backward citation、またはedge/distributed inferenceへ切り替える",
+    "empty_round_reason": null
+  }
+}
