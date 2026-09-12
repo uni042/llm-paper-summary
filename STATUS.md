@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 00:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 00:13 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **37 / 50** |
-| Research ready | **37** |
+| Candidate在庫（Research ready） | **38 / 50** |
+| Research ready | **38** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **171** |
@@ -27,35 +27,35 @@ Run: **2026-09-12T23:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **8** |
+| Discovery完了 | **4** |
+| 新規job | **10** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-agentic-serving-3**
+Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-gpu-runtime-4**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | エージェント推論・speculative tool execution |
+| 探索軸 | GPU runtime境界・host-device転送律速 |
 | 評価候補 | **4** |
-| 重複除外 | **2** |
-| Novel候補 | **2** |
-| Research候補採用 | **2** |
-| 重複率 | **50.0%** |
+| 重複除外 | **3** |
+| Novel候補 | **1** |
+| Research候補採用 | **1** |
+| 重複率 | **75.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **36** |
-| 探索評価候補 | **187** |
-| 重複除外 | **54** |
-| 重複率 | **28.9%** |
-| Novel候補 | **133** |
-| Research候補採用 | **63** |
+| 探索round（stats観測） | **37** |
+| 探索評価候補 | **191** |
+| 重複除外 | **57** |
+| 重複率 | **29.8%** |
+| Novel候補 | **134** |
+| Research候補採用 | **64** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-agentic-serving-3**
 
 ### 24時間ファネル
 
-**探索評価 187 → 重複除外後 133 → Research候補採用 63 → Research完了 47 → Repo収録 47**
+**探索評価 191 → 重複除外後 134 → Research候補採用 64 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -90,6 +90,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-agentic-serving-3**
 | 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
+| GPU runtime境界・host-device転送律速 | 4 | 3 | 1 | 75.0% | 25.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
@@ -109,11 +110,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-agentic-serving-3**
 
 ### 直近5探索round
 
+- **2026-09-13T00:00:00+09:00** — GPU runtime境界・host-device転送律速: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T00:00:00+09:00** — エージェント推論・speculative tool execution: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T00:00:00+09:00** — 分離サービング負荷転送・異種GPU構成選択: 評価 5 / 重複 3 / 採用 1
 - **2026-09-13T00:00:00+09:00** — Flash・SSD階層メモリと予測先読み: 評価 5 / 重複 3 / 採用 2
 - **2026-09-12T23:00:00+09:00** — MoE expert paging・SSD cache・runtime parallelism・prefetch: 評価 5 / 重複 0 / 採用 0
-- **2026-09-12T23:00:00+09:00** — attention runtime・sparse attention階層memory・elastic decode: 評価 4 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
