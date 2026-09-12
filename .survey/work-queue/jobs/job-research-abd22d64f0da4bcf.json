@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-abd22d64f0da4bcf",
+  "type": "research",
+  "parent_job_id": "job-f529894b26fb9501",
+  "priority": 78,
+  "canonical_id": "arXiv:2604.22906",
+  "title": "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+  "source_url": "https://arxiv.org/abs/2604.22906",
+  "paper_path": null,
+  "selection_reason": "ネットワークエッジでのLLM推論を、システム構成、モデル最適化・配備、資源管理・スケジューリングの観点から整理するサーベイ。端末・エッジのメモリ／計算制約、分割実行、オフロード、動的資源配分を横断するため、ローカル・資源制約推論や階層オフロードの隣接領域を把握する補完的な参照文献として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:18:09+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:17:48.097046+00:00",
+  "updated_at": "2026-09-12T20:19:24.538471+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,7 +14622,7 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T20:17:48.097046+00:00",
+      "last_recorded_at": "2026-09-12T20:19:24.538471+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -14631,9 +14631,9 @@
       "counts": {
         "research_completed": 7,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 11,
         "new_papers": 7,
         "fallback_archived": 0
       },
@@ -14771,6 +14771,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34716673438:1",
+          "recorded_at": "2026-09-12T20:19:24.538471+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34716673438",
+            "run_attempt": "1",
+            "source_sha": "2ea201e9d7bcf78dee81f0f3a1079925db2f1e6f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14853,6 +14867,14 @@
           "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-f529894b26fb9501",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -14911,6 +14933,27 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15473",
           "title": "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding"
+        },
+        {
+          "job_id": "job-777d0b40c119082d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-821890bf5e9d5e8e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.21901",
+          "title": "A Survey of LLM Inference Systems"
+        },
+        {
+          "job_id": "job-research-abd22d64f0da4bcf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.22906",
+          "title": "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities"
         }
       ],
       "new_paper_ids": [
@@ -14925,12 +14968,13 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json",
         ".survey/work-queue/results/20260913T0508JST-discovery-specialist-agent-os-memory.json",
-        ".survey/work-queue/results/20260913T0513JST-discovery-specialist-disaggregated-serving.json"
+        ".survey/work-queue/results/20260913T0513JST-discovery-specialist-disaggregated-serving.json",
+        ".survey/work-queue/results/20260913T0517JST-discovery-specialist-survey-gap.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
       "paper_active_count_after": 385,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

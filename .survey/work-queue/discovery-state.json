@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:15:08+00:00",
+  "updated_at": "2026-09-12T20:18:09+00:00",
   "last_run_key": "2026-09-13T05:00:25+09:00",
-  "last_round": "specialist-disaggregated-serving-3",
+  "last_round": "specialist-survey-gap-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1978,6 +1978,21 @@
       ],
       "next_axis_hint": "MoE expert cache・offload・near-data schedulingを確認し、その後GPU runtime／kernel compilationへ切り替える",
       "source_submission": "work-queue/submissions/20260913T0513JST-discovery-specialist-disaggregated-serving.json"
+    },
+    {
+      "run_key": "2026-09-13T05:00:25+09:00",
+      "round": "specialist-survey-gap-4",
+      "axis": "推論システム横断サーベイ・KV・エッジ実行",
+      "query_summary": "個別手法探索から横断サーベイの収録漏れ確認へ軸を変更した。推論システム全般、system-aware KV cache、network-edge inferenceの3件はいずれも一次資料で対象範囲を確認し、最新HEADの決定論的research job IDとrepo識別子検索で未登録を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "MoE expert cache／offload、GPU runtime／kernel compilation、引用・関連実装の順に重複飽和を確認する",
+      "source_submission": "work-queue/submissions/20260913T0517JST-discovery-specialist-survey-gap.json"
     }
   ],
   "axes": {
@@ -3120,6 +3135,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "MoE expert cache・offload・near-data schedulingを確認し、その後GPU runtime／kernel compilationへ切り替える"
+    },
+    "推論システム横断サーベイ・KV・エッジ実行": {
+      "last_run_key": "2026-09-13T05:00:25+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "MoE expert cache／offload、GPU runtime／kernel compilation、引用・関連実装の順に重複飽和を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
