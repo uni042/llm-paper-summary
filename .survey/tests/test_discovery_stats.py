@@ -40,6 +40,7 @@ class DiscoveryStatsTest(unittest.TestCase):
                         "run_key": "2026-09-12T14:00:00+09:00",
                         "round": "specialist-new-2609-1",
                         "axis": "2609新着・分離サービング・動的ルーティング",
+                        "source_worker": "specialist",
                         "query_summary": "2609新着を複数軸で探索",
                         "candidate_count": 4,
                         "duplicate_filtered_count": 1,
@@ -52,8 +53,10 @@ class DiscoveryStatsTest(unittest.TestCase):
                 state = json.loads(queue_worker.DISCOVERY_STATE.read_text(encoding="utf-8"))
                 self.assertEqual(state["last_run_key"], "2026-09-12T14:00:00+09:00")
                 self.assertEqual(state["last_round"], "specialist-new-2609-1")
+                self.assertGreaterEqual(state["history_limit"], 256)
                 self.assertEqual(len(state["history"]), 1)
                 row = state["history"][0]
+                self.assertEqual(row["source_worker"], "specialist")
                 self.assertEqual(row["candidate_count"], 4)
                 self.assertEqual(row["duplicate_filtered_count"], 1)
                 self.assertEqual(row["novel_candidate_count"], 3)
@@ -104,6 +107,7 @@ class DiscoveryStatsTest(unittest.TestCase):
                         "run_key": "2026-09-12T14:22:56+09:00",
                         "round": "specialist-2609-serving-routing-1",
                         "axis": "2609新着・分離サービング・動的ルーティング",
+                        "source_worker": "specialist",
                         "query_summary": "手動試運転の探索結果を補完",
                         "candidate_count": 4,
                         "duplicate_filtered_count": 1,
@@ -122,6 +126,7 @@ class DiscoveryStatsTest(unittest.TestCase):
                 self.assertEqual(result["operation"], "record_discovery_stats")
                 state = json.loads(queue_worker.DISCOVERY_STATE.read_text(encoding="utf-8"))
                 self.assertEqual(state["history"][-1]["accepted_count"], 3)
+                self.assertEqual(state["history"][-1]["source_worker"], "specialist")
                 self.assertEqual(state["history"][-1]["source_submission"], "work-queue/submissions/manual-stats-repair.json")
         finally:
             for name, value in originals.items():
