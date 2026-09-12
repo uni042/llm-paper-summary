@@ -8,10 +8,10 @@
       "completed": 6
     },
     "research": {
-      "completed": 148,
+      "completed": 149,
       "superseded": 43,
       "deferred": 3,
-      "ready": 2,
+      "ready": 1,
       "blocked": 3
     }
   },
@@ -29,18 +29,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-6c35372d7f423594",
-      "type": "research",
-      "lane": null,
-      "priority": 79,
-      "canonical_id": "arXiv:2603.29002",
-      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
-      "source_url": "https://arxiv.org/abs/2603.29002",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-78cb3cedb3b71cf6",
       "type": "discovery",
       "lane": "discovery",
@@ -53,5 +41,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T08:42:06+00:00"
+  "generated_at": "2026-09-12T08:44:59+00:00"
 }

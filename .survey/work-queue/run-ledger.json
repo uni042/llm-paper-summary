@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T08:42:06.586886+00:00",
+  "updated_at": "2026-09-12T08:45:36.417528+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,19 +9274,19 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T08:42:06.586886+00:00",
+      "last_recorded_at": "2026-09-12T08:45:36.417528+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -9332,6 +9332,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34684048149:1",
+          "recorded_at": "2026-09-12T08:45:36.417528+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34684048149",
+            "run_attempt": "1",
+            "source_sha": "2aa18e5864cbf12a08759bd6e2ad7acede3fc846"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9348,6 +9363,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-6c35372d7f423594",
+          "type": "research",
+          "canonical_id": "arXiv:2603.29002",
+          "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -9376,7 +9399,8 @@
         }
       ],
       "new_paper_ids": [
-        "arXiv:2602.14516"
+        "arXiv:2602.14516",
+        "arXiv:2603.29002"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
@@ -9384,8 +9408,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
-      "paper_active_count_after": 337,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 338,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
