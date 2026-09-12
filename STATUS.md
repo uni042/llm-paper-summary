@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 20:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 20:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **12 / 50** |
-| Research ready | **12** |
+| Candidate在庫（Research ready） | **11 / 50** |
+| Research ready | **11** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **162** |
+| Research completed（累計） | **163** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **19 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 12）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -25,11 +25,11 @@ Run: **2026-09-12T20:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **0** |
 | 新規job | **0** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -56,15 +56,15 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 | 重複率 | **41.2%** |
 | Novel候補 | **57** |
 | Research候補採用 | **30** |
-| Research完了 | **38** |
-| Repo収録 | **38** |
+| Research完了 | **39** |
+| Repo収録 | **39** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 97 → 重複除外後 57 → Research候補採用 30 → Research完了 38 → Repo収録 38**
+**探索評価 97 → 重複除外後 57 → Research候補採用 30 → Research完了 39 → Repo収録 39**
 
 ## 探索効率（直近24時間）
 
@@ -98,6 +98,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### Research完了
 
+- `arXiv:2604.15039` — Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter
 - `arXiv:2607.26633` — NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement
 - `arXiv:2604.00368` — TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving
 - `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
@@ -105,15 +106,14 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 - `arXiv:2606.17787` — LUMEN: Coordinated Failure Recovery for Distributed LLM Serving
 - `arXiv:2606.30391` — Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs
 - `arXiv:2609.11392` — PATTON: Enabling Commodity PIM for Production LLM Serving
-- `arXiv:2512.18194` — TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale
 
 ### 次に処理する候補
 
-- P88 `arXiv:2604.15039` — Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter
 - P83 `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P82 `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
+- P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 
 ## 7日比較
 
