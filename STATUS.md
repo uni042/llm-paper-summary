@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:25 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **168** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
-| Maintenance counter | **21 / 24** |
+| Maintenance counter | **22 / 24** |
 
 ### 注意事項
 
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **11** |
-| 新規job | **35** |
+| Discovery完了 | **12** |
+| 新規job | **36** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-runtime-sparse-attention-10**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-runtime-ssd-11**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | attention runtime・sparse attention階層memory・elastic decode |
-| 評価候補 | **4** |
+| 探索軸 | MoE expert paging・SSD cache・runtime parallelism・prefetch |
+| 評価候補 | **5** |
 | 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **2** |
+| Novel候補 | **5** |
+| Research候補採用 | **0** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,11 +50,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-runtime-sparse-attentio
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **32** |
-| 探索評価候補 | **168** |
+| 探索round（stats観測） | **33** |
+| 探索評価候補 | **173** |
 | 重複除外 | **46** |
-| 重複率 | **27.4%** |
-| Novel候補 | **122** |
+| 重複率 | **26.6%** |
+| Novel候補 | **127** |
 | Research候補採用 | **58** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-runtime-sparse-attentio
 
 ### 24時間ファネル
 
-**探索評価 168 → 重複除外後 122 → Research候補採用 58 → Research完了 44 → Repo収録 44**
+**探索評価 173 → 重複除外後 127 → Research候補採用 58 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -82,6 +82,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-runtime-sparse-attentio
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
+| MoE expert paging・SSD cache・runtime parallelism・prefetch | 5 | 0 | 0 | 0.0% | 0.0% |
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -105,11 +106,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-runtime-sparse-attentio
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — MoE expert paging・SSD cache・runtime parallelism・prefetch: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T23:00:00+09:00** — attention runtime・sparse attention階層memory・elastic decode: 評価 4 / 重複 0 / 採用 2
 - **2026-09-12T23:00:00+09:00** — speculative decoding serving・composite multimodal serving: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — GPU collective通信・in-network acceleration・通信runtime: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — SSD/NVMe・object storage・CXL remote memoryによるKV階層化: 評価 3 / 重複 0 / 採用 1
-- **2026-09-12T23:00:00+09:00** — SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation: 評価 4 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
