@@ -271,6 +271,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   InstAttentionはKVを計算機能付きSSDへ置き、SSD内部でデコード注意を計算して、毎トークンのKV読戻しによるPCIe転送を削減する方式。
 
 - **2024-07 · [Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains](2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md)**  
-  実装：[✓](https://github.com/aquaml/aqua) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/aquaml/aqua) ・ リポジトリ内被引用：7  
   AquaはNVLink/NVSwitch内の空きGPU HBMを別要求のKV退避先として貸し、CPU DRAM・PCIeへの退避より高速に要求を切り替えて待ち時間を抑える方式。
 <!-- survey:auto:end -->

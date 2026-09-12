@@ -8,9 +8,9 @@
       "completed": 6
     },
     "research": {
-      "completed": 194,
+      "completed": 195,
       "superseded": 44,
-      "ready": 121,
+      "ready": 120,
       "deferred": 3
     }
   },
@@ -36,18 +36,6 @@
       "title": "Language Models Can Control Their Own Attention",
       "source_url": "https://arxiv.org/abs/2609.02737",
       "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-b018d3ca3a88c71f",
-      "type": "research",
-      "lane": null,
-      "priority": 89,
-      "canonical_id": "arXiv:2607.28848",
-      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
-      "source_url": "https://arxiv.org/abs/2607.28848",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-43ee292714ed8d8c",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2603.23049",
+      "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
+      "source_url": "https://arxiv.org/abs/2603.23049",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.23049-pcr-prefetch-cache-reuse-rag-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-6d03dc1e94ef67d4",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T20:09:39+00:00"
+  "generated_at": "2026-09-12T20:13:26+00:00"
 }
