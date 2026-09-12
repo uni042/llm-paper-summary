@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -11,13 +11,13 @@
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
-| Maintenance | **pending** |
-| Consistency | **passed** |
+| Maintenance | **issues_found** |
+| Consistency | **issues_found** |
 | Maintenance counter | **0 / 24** |
 
 ### 注意事項
 
-- Maintenance が pending です。
+- Consistency check: **issues_found**
 
 ## 直近の通常worker
 
@@ -27,8 +27,8 @@ Run: **2026-09-13T00:30:00+09:00**
 |---|---:|
 | Research完了 | **6** |
 | Audit完了 | **0** |
-| Discovery完了 | **9** |
-| 新規job | **16** |
+| Discovery完了 | **10** |
+| 新規job | **17** |
 | Repo収録 | **6** |
 | Blocked遷移 | **0** |
 
@@ -49,22 +49,22 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **50** |
-| 探索評価候補 | **237** |
+| 通常worker run（ledger観測） | **20** |
+| 探索round（stats観測） | **51** |
+| 探索評価候補 | **240** |
 | 重複除外 | **72** |
-| 重複率 | **30.4%** |
-| Novel候補 | **165** |
+| 重複率 | **30.0%** |
+| Novel候補 | **168** |
 | Research候補採用 | **73** |
-| Research完了 | **53** |
-| Repo収録 | **53** |
+| Research完了 | **47** |
+| Repo収録 | **47** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 237 → 重複除外後 165 → Research候補採用 73 → Research完了 53 → Repo収録 53**
+**探索評価 240 → 重複除外後 168 → Research候補採用 73 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -110,6 +110,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache | 4 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU/PNM・cold MoE pool・edge KV migration | 4 | 0 | 0 | 0.0% | 0.0% |
 | 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
+| 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -123,11 +124,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — 2026年9月新着・KV圧縮/eviction/再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 長文SLO・SSD-backed KV・異種GPUメモリ共有: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — multi-tenant prefix安全性・multi-agent workflow prefix scheduling: 評価 2 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 動的parallelism再構成・KV state migration: 評価 2 / 重複 0 / 採用 2
-- **2026-09-13T00:58:47+09:00** — 異種GPU/PNM・cold MoE pool・edge KV migration: 評価 4 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
