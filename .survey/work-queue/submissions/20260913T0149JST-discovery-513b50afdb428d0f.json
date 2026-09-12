@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-513b50afdb428d0f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15241",
+      "title": "LOCAL: Enabling Learning On-device Contiguously for Agent LLMs",
+      "source_url": "https://arxiv.org/abs/2608.15241",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+      "priority": 88,
+      "reason": "単一24GB GPU上でforeground agent inferenceを止めずにbackground adapter learningを継続するruntime。学習更新がKVの有効性を変える問題をversion-aware KV cacheで扱い、推論と学習を協調schedulerで共存させる。非preemptive training比でp95 queue waitを3.1倍、TTFT p95を1.55倍改善するなど、推論servingと継続学習の境界を直接扱うsystems contributionが強い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.17910",
+      "title": "Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA",
+      "source_url": "https://arxiv.org/abs/2512.17910",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md",
+      "priority": 85,
+      "reason": "多数LoRA adapterを同時配信するとadapterごとにprefix KVが分断される問題に対し、base-aligned block hashingとactivation-aware maskingでbase/adapter間のcross-model KV reuseを可能にする。vLLMベース評価で標準LoRA servingに対し最大58倍のlatency改善、TTFTで100倍超の改善を報告し、multi-adapter servingとKV共有を結ぶ未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2511.22880",
+      "title": "Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems",
+      "source_url": "https://arxiv.org/abs/2511.22880",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.22880-loraserve-heterogeneous-adapter-serving.md",
+      "priority": 84,
+      "reason": "rankや計算量が異なる多数LoRA adapterをdistributed servingで扱うため、dynamic adapter placement、load-aware routing、GPU Direct RDMAによるremote adapter accessを統合する。最大2倍のthroughput、9倍低いTTFT、同一需要でGPU台数50%削減を報告し、heterogeneous adapterの配置・routing・通信を一体化するserving systemとして価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-adapter-contiguous-learning-10",
+    "axis": "multi-adapter serving・推論/継続学習境界",
+    "query_summary": "agentic serving batchの受理後に枯渇判定をリセットし、adapter/model switchingとtraining-inference境界へ探索を展開した。LOCAL、Activated LoRA cross-model KV reuse、LoRAServeはいずれも一次資料の概要と定量結果を軽量確認し、最新mainの決定論的research jobが存在しないことを送信直前に再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "直近新着・network/storage・citation/related-workを最後に再確認し、追加強候補がなければ複数経路の枯渇として終了する",
+    "empty_round_reason": null
+  }
+}
