@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-2ce10fdd8ff6176b",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2607.08782.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-f0796c3a0863aed5",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T19:35:05+00:00"
 }
