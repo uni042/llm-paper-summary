@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T08:48:40+00:00",
+  "updated_at": "2026-09-12T08:59:34+00:00",
   "last_run_key": "2026-09-12T17:30:00+09:00",
-  "last_round": "paper-worker-moe-io-hierarchy-2",
+  "last_round": "paper-worker-agentic-prefix-workflow-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -388,6 +388,26 @@
       ],
       "next_axis_hint": "採用候補を精読し、次はSSD/NVMe専門家I/Oスケジューリング、専門家圧縮と先読みの協調、CXL/CPU/SSD三階層配置へ展開する",
       "source_submission": "work-queue/submissions/20260912T1750JST-discovery-moe-io-refill.json"
+    },
+    {
+      "run_key": "2026-09-12T17:30:00+09:00",
+      "round": "paper-worker-agentic-prefix-workflow-3",
+      "axis": "マルチエージェント・ワークフロー指向prefix状態スケジューリング",
+      "query_summary": "候補在庫がcritical水位のため、直近のSSD/CXL/KV復元・MoE探索から軸を変更し、agentic serving、prefix-state scheduling、分散prefix cache、prefix-aware batchingを一次資料中心に軽量評価した。Elastic KV Cache、CacheFlow、ShadowServe、AlignedServeは正本identityで既収録と確認し、TOPASのみ未収録かつ強い候補として投入した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.23658",
+        "arXiv:2604.25080",
+        "arXiv:2509.16857",
+        "arXiv:2605.23389"
+      ],
+      "next_axis_hint": "agentic servingのinterception/resume、multi-agent DAG scheduling、tool-call待機中KV管理を中心に、既収録prefix-cache系と重複しないシステム研究へ展開する",
+      "source_submission": "work-queue/submissions/20260912T1758JST-discovery-204a21f0325d1761.json"
     }
   ],
   "axes": {
@@ -600,6 +620,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "採用候補を精読し、次はSSD/NVMe専門家I/Oスケジューリング、専門家圧縮と先読みの協調、CXL/CPU/SSD三階層配置へ展開する"
+    },
+    "マルチエージェント・ワークフロー指向prefix状態スケジューリング": {
+      "last_run_key": "2026-09-12T17:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "next_axis_hint": "agentic servingのinterception/resume、multi-agent DAG scheduling、tool-call待機中KV管理を中心に、既収録prefix-cache系と重複しないシステム研究へ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

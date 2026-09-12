@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T08:49:01.958979+00:00",
+  "updated_at": "2026-09-12T09:00:11.085061+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,7 +9274,7 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T08:49:01.958979+00:00",
+      "last_recorded_at": "2026-09-12T09:00:11.085061+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9283,9 +9283,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 7,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -9361,6 +9361,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34684658456:1",
+          "recorded_at": "2026-09-12T09:00:11.085061+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34684658456",
+            "run_attempt": "1",
+            "source_sha": "b423d5178ae54a26131166bf7f9325c9ab9d348f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9390,6 +9404,14 @@
         },
         {
           "job_id": "job-78cb3cedb3b71cf6",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-204a21f0325d1761",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -9432,6 +9454,20 @@
           "type": "research",
           "canonical_id": "arXiv:2605.20179",
           "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload"
+        },
+        {
+          "job_id": "job-95bcce1436ac0604",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-210693a709bc2b42",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.25523",
+          "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -9441,7 +9477,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
         ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json",
-        ".survey/work-queue/results/20260912T1750JST-discovery-moe-io-refill.json"
+        ".survey/work-queue/results/20260912T1750JST-discovery-moe-io-refill.json",
+        ".survey/work-queue/results/20260912T1758JST-discovery-204a21f0325d1761.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
