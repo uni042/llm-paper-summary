@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:16:57+00:00",
+  "updated_at": "2026-09-12T15:19:00+00:00",
   "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-kv-saturated-7",
+  "last_round": "specialist-fresh-framework-saturated-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "KV cacheの共有・復元・予約・非一様保持で見つかった強候補は、最新のidentityとexisting jobsですべて既存と判定された。",
+  "consecutive_empty_rounds": 3,
+  "last_empty_round_reason": "直近新着と主要serving framework周辺を追加で横断したが、強候補として再浮上したものはすべて既存で、独立した新規候補は確認できなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -973,6 +973,26 @@
       ],
       "next_axis_hint": "直近2609新着とvLLM/SGLang周辺の実装・関連論文経路を横断し、漏れがなければ今回runの探索回路を終了候補とする",
       "source_submission": "work-queue/submissions/20260913T0017JST-discovery-kv-saturated-7.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-fresh-framework-saturated-8",
+      "axis": "直近新着・vLLM/SGLang周辺実装・関連論文",
+      "query_summary": "直近2609系を含むLLM serving/MoE/KV新着と、vLLM/SGLang周辺の関連実装・論文経路を横断した。検索で再浮上した強候補は既収録・既存jobで、新規の強候補は確認できなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2607.16892",
+        "arXiv:2607.28150",
+        "arXiv:2608.16477"
+      ],
+      "next_axis_hint": "今回runではSSD階層、分離サービング、agentic serving、GPU runtime、multi-agent scheduling、MoE、KV、新着/実装経路を一巡したため、次回はその時点の新着と引用関係から再開する",
+      "source_submission": "work-queue/submissions/20260913T0019JST-discovery-fresh-framework-saturated-8.json"
     }
   ],
   "axes": {
@@ -1525,6 +1545,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "直近2609新着とvLLM/SGLang周辺の実装・関連論文経路を横断し、漏れがなければ今回runの探索回路を終了候補とする"
+    },
+    "直近新着・vLLM/SGLang周辺実装・関連論文": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "今回runではSSD階層、分離サービング、agentic serving、GPU runtime、multi-agent scheduling、MoE、KV、新着/実装経路を一巡したため、次回はその時点の新着と引用関係から再開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
