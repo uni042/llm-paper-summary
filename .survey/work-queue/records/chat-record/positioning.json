@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.19746-20260912-1825-v10-a",
-  "job_id": "job-research-32074ec28a42f7d1",
+  "attempt_id": "attempt-2606.18431-20260912-1840-v10-a",
+  "job_id": "job-research-c5ba85dfa2989728",
   "data": {
-    "limitations": ["実機モデルはDeepSeek-V3.2のみで、論文が適用可能と議論するGLM-5.1やDeepSeek-V4は未評価である。top-k疎アクセス構造が似ていてもKV表現、索引器、文脈長、GPUバッファ命中率の違いで性能は変わり得る。", "CXL評価はXConn XC50256スイッチと特定Type-3メモリ構成、8×H20単一サーバを中心とする。ラック規模で多数ホストが共有した場合の公平性、障害、CXLファブリック競合、メタデータ一貫性は主評価の対象外である。", "RDMA比較はConnectX-7 100Gbpsのloopbackであり実ネットワークより有利な保守的基準だが、400Gbps級やGPU Direct RDMAなど別構成との比較は示していない。", "プリフィル後の全KVをCXLへ書く費用は残るため、キャッシュ再利用が少ない単発要求やRound-1主体の負荷ではRDMAとの差が小さい。SACの主な利得はキャッシュヒット後の長文デコードで現れる。", "現状はHBM hot bufferとCXLを中心に使い、ローカルDRAMを含めた三階層への適応配置を十分に最適化していない。論文もHBM・DRAMを含む階層管理を今後の改善点として挙げる。"],
-    "differences": "MooncakeやLMCacheなどRDMA型KVプールは密注意モデルに合わせ、遠隔接頭辞KVを要求前に大きなブロックとしてローカルへ取得する。BelugaはCXLスイッチによる共有メモリでGPUから細粒度・非連続アクセスを可能にするが、主眼は大規模KVブロックの統一共有と容量拡張にある。TraCTはプリフィル・デコード分離でCXL共有メモリをKV転送経路とラック共通接頭辞キャッシュにし、RDMA NIC経由を省くが、密注意の接頭辞KVをブロック単位で発行・取得する。SACは疎注意モデルでは各層がtop-k KVだけを使うことを出発点に、全KVをCXL側へ常駐させたまま注意カーネルが必要エントリのみ直接読む。したがってCXLは高速なバルク転送路ではなく、推論ループ内の疎メモリアクセス先となる点が決定的に異なる。",
-    "implementation_status": "SGLangのHiSparse経路を拡張した実動システムとして8×H20と実CXL Type-3プール上で評価している。DAX mmap、cudaHostRegister、GPU読み書きCUDAカーネル、CXL共有メタデータ、複数デバイスのインターリーブ、Radix Cache統合まで実装内容は具体的に記載される。2026-09-12時点でarXiv本文・概要ページからSAC固有の公開コードリポジトリは確認できないため、実装は論文内実機実装だがコード公開は未確認とする。",
-    "research_positioning": "KVキャッシュオフロード／階層メモリ系統の中でも、疎注意とCXLを直接結び付ける研究である。既存の階層KV研究の多くは『どのKVブロックを高速層へ置くか』『接頭辞をいつ先読みするか』を最適化するが、SACではモデルが各層で選んだ疎なKVインデックスがそのまま遠隔アクセス単位になる。これはアクセス粒度をアーキテクチャ側の疎性に合わせる設計であり、将来SSD/NVMeを含む階層へ展開する場合にも重要な示唆がある。ただしNVMeはCXLよりランダム細粒度遅延が大きいため、top-kを一件ずつ直接読む単純移植は成立しにくく、CXL/DRAMを細粒度層、SSDを大容量ブロック層として先読み・集合化する別設計が必要になる。",
-    "related_work": ["Mooncake", "LMCache", "Beluga", "TraCT", "HiSparse", "DeepSeek Sparse Attention", "KVDirect", "CacheGen", "SnapKV", "H2O", "Quest"],
-    "audit_notes": "arXiv:2606.19746v1のHTML全文について序論、疎注意背景、RDMA/CXL比較、RDMA全量取得の二つの問題、疎KV取得マイクロ測定、SACワークフロー、CXLトポロジー、DAX/GPU読み書き、デバイスインターリーブ、主実験、スケーリング、非分離比較、アブレーション、制約、付録のハードウェア・ソフトウェア条件、Beluga/TraCTとの差分、参考文献まで確認した。公開日は2026-06-18、主分類cs.DC、v1。"
+    "limitations": ["主評価はNVIDIA DGX A100内の局所replica schedulerであり、複数replica・複数モデルをまたぐglobal routing、異種GPU、分離プリフィル・デコードクラスタは直接評価していない。", "scheduler固有効果を分離するためradix cacheとprefix cachingを主評価で無効化している。付録では併用可能性を議論するが、共有接頭辞が多い実運用でcache localityとboost優先度が競合する場合の実測は不足する。", "γ-Adaは最近完了した要求のP95〜P99付近からtail形状を推定するため、急激な分布変化直後や完了サンプルが少ない初期段階では推定が遅れる。EMAと上下限で振動を防ぐ代わりに応答速度との交換条件がある。", "古典Boost理論のtail保証は簡略化された単一サーバ待ち行列を基礎とし、continuous batching、有限GPU KV、chunked prefill、プリエンプト再計算費用をすべて含む厳密保証ではない。実システムではMemGuardなどのヒューリスティックが理論と実装の差を埋める。", "reasoning-heavy mixではP99を大きく改善する一方、平均total latencyが完全予測SRPTより悪化する例がある。したがって平均最小化を最優先するワークロードに無条件で優位ではなく、tail/SLO重視という運用目的が必要である。"],
+    "differences": "LTRやTRAILのような予測型schedulerは出力長または残トークン数を推定してSJF/SRPTを近似し、MLFQ/LASは既得サービス量を階層queueへ離散化する。Sarathiはchunked prefillとdecode-priorityでGPU利用効率を高める。UniBoostは要求長を予測せず、待ち行列理論のγ-Boostから得る連続的なage/service優先度でプリフィルとデコードを統一し、tail latencyを目的にする点が異なる。さらにLLM固有のKV状態費用をMemGuardへ組み込み、優先度変化を幾何学境界に限定してswap回数を対数的に抑える。理論policyとGPUメモリ状態を分離せず、分布適応γとKV-aware preemptionを一つのschedulerへ統合した点が主要差分である。",
+    "implementation_status": "8×A100 DGX上でLlama-3-8B、CodeLlama-34B、QWen-72Bを使う実機サービング評価を行い、paged attention、continuous batching、chunked prefill、KV-aware preemptionと統合している。アルゴリズム擬似コード、MemGuard境界、γ-Ada、starvation解析、感度分析は本文・付録に記載される。2026-09-12時点でarXiv本文・概要ページから著者公式UniBoostコードリポジトリは確認できないため、公開コードは未確認とする。",
+    "research_positioning": "LLMサービング／スケジューリング／分離系統に属し、既存のprediction-based SJF/SRPT研究に対する明確な反証・代替案を提供する。TOPASやAutellixのようなagent workflow-aware schedulerはDAG進捗や接頭辞状態を利用するのに対し、UniBoostは単一要求レベルで最終長が未知でもtail公平性を保つ局所replica schedulerであり、用途は補完的である。分離サービングではglobal routerが要求をreplicaへ配り、各replica内部でUniBoostがtail-aware orderingを行う二階層構成が自然である。またKV offloadやCXL/NVMe階層と組み合わせる場合、MemGuardのswap costへ実際の階層間転送時間を入れることで、優先度とメモリ移動費用を共同制御する拡張が考えられる。",
+    "related_work": ["Sarathi", "LTR", "TRAIL", "MLFQ", "LAS", "DistServe", "Autellix", "Preble", "Andes", "SPLIT", "Splitwise"],
+    "audit_notes": "arXiv:2606.18431v1のHTML全文を序論、出力長変動分析、tail scheduling背景、DistBoost、UniBoost-Base、MemGuard、γ-Ada、主実験、mix workload、アブレーション、SLO評価、結論、全参考文献、付録の擬似コード・starvation保証・感度分析・prefix cache等との相互作用まで確認した。arXivメタデータから2026-06-16公開、主分類cs.LG、副分類cs.DC、ICML 2026掲載情報を確認した。著者公式コードURLは確認できなかった。"
   }
 }
