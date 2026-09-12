@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 18:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 18:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **7 / 50** |
-| Research ready | **7** |
+| Candidate在庫（Research ready） | **6 / 50** |
+| Research ready | **6** |
 | Research blocked | **3** |
 | Research deferred | **3** |
-| Research completed（累計） | **154** |
+| Research completed（累計） | **155** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **17 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 7）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 6）。探索を最優先で継続。
 - Research blocked が **3件** 残っています。
 - Research消化が候補補充を上回っています。candidate枯渇に注意。
 
@@ -27,11 +27,11 @@ Run: **2026-09-12T18:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **0** |
 | 新規job | **0** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -58,15 +58,15 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 | 重複率 | **26.3%** |
 | Novel候補 | **42** |
 | Research候補採用 | **19** |
-| Research完了 | **30** |
-| Repo収録 | **30** |
+| Research完了 | **31** |
+| Repo収録 | **31** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 57 → 重複除外後 42 → Research候補採用 19 → Research完了 30 → Repo収録 30**
+**探索評価 57 → 重複除外後 42 → Research候補採用 19 → Research完了 31 → Repo収録 31**
 
 ## 探索効率（直近24時間）
 
@@ -96,6 +96,7 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 
 ### Research完了
 
+- `arXiv:2512.18194` — TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale
 - `arXiv:2609.09166` — X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding
 - `arXiv:2606.18431` — Beyond Prediction: Tail-Aware Scheduling for LLM Inference
 - `arXiv:2606.19746` — SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL
@@ -103,15 +104,14 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 - `arXiv:2605.20179` — TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload
 - `arXiv:2603.29002` — Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference
 - `arXiv:2602.14516` — Efficient Multi-round LLM Inference over Disaggregated Serving
-- `arXiv:2609.04453` — When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models
 
 ### 次に処理する候補
 
-- P86 `arXiv:2512.18194` — TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 - P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
 - P75 `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression
+- P75 `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees
 
 ## 7日比較
 
