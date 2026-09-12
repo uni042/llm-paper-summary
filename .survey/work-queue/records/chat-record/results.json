@@ -2,26 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2602.02204-20260913-0030-v10-a",
-  "job_id": "job-research-61b65de2a7cf7033",
+  "attempt_id": "attempt-2406.01566-20260913-0231-v10-a",
+  "job_id": "job-research-0af91cb3b8d7065b",
   "data": {
-    "overview": "vLLM-Omniは、Qwen2.5-Omniで既定Transformers実装に対して実時間係数を61.4%、ジョブ完了時間を61.6%削減し、Qwen3-Omniではそれぞれ90.7%・91.4%削減した。Qwen3-OmniのThinker/Talkerは毎秒トークン数が12.97倍・7.98倍に増え、BAGELでは1024×1024画像生成のジョブ完了時間をテキスト→画像で23.12秒から9.64秒、画像→画像で41.39秒から11.12秒へ短縮した。MiMo-Audioでは実時間係数を1.39から0.12へ下げて11.58倍高速化し、拡散モデル群ではDiffusers比1.26倍の総合高速化を示す。段階間コネクタの転送時間はQwen2.5-Omniで共有メモリ5.49/0.53ms、Mooncake 8.28/3.34msで、要求全体が数十秒規模であることに比べ小さい。",
+    "overview": "Helixの主な結果は、異種GPUの計算能力だけでなくネットワーク容量も最大流へ統合し、固定パイプラインでは使い切れない複数経路へ要求を分散すると、特に異質性が高いほどクラスタ全体のスループットが伸びることである。24ノード実機と実機プロファイルに基づくシミュレーションを通じ、Swarmに対しておおむね約2倍前後、高異質42ノードでは固定パイプラインに対してオンラインスループット最大3.29倍を示す。一方で、低速GPUも積極的に利用して総処理量を最大化するため、比較対象が高速GPU中心に要求を流す条件では平均デコード遅延が悪化する場合がある。したがってHelixは常に各要求を最速化する方式ではなく、異種資源全体の容量を使って高い総処理量を得る設計である。",
     "key_results": [
-      {"metric":"Qwen2.5-Omni実時間係数","value":"61.4%削減","baseline":"Hugging Face Transformers既定実装","condition":"2基80GBアクセラレータ、音声・画像・動画入力","interpretation":"自己回帰段階をvLLMエンジンへ載せ、段階単位の配置とバッチ処理を使うことで音声生成全体を短縮する。"},
-      {"metric":"Qwen2.5-Omniジョブ完了時間","value":"61.6%削減","baseline":"Hugging Face Transformers既定実装","condition":"同上","interpretation":"段階ごとの効率化が要求全体の完了時間にもほぼ同程度反映される。"},
-      {"metric":"Qwen3-Omni実時間係数","value":"90.7%削減","baseline":"Hugging Face Transformers既定実装","condition":"2基80GBアクセラレータ","interpretation":"30B Thinkerを含む大きいモデルではvLLM側の実行最適化を償却しやすく、相対改善が大きい。"},
-      {"metric":"Qwen3-Omniジョブ完了時間","value":"91.4%削減","baseline":"Hugging Face Transformers既定実装","condition":"2基80GBアクセラレータ","interpretation":"論文全体で最大のエンドツーエンド改善。"},
-      {"metric":"Qwen2.5-Omni Thinker/Talker毎秒トークン数","value":"1.29倍 / 1.97倍","baseline":"Transformers既定実装","condition":"Qwen2.5-Omni","interpretation":"ThinkerよりTalkerの改善が大きく、音声コードを多数生成する後段の高速化が全体遅延へ効く。"},
-      {"metric":"Qwen3-Omni Thinker/Talker毎秒トークン数","value":"12.97倍 / 7.98倍","baseline":"Transformers既定実装","condition":"Qwen3-Omni","interpretation":"実行グラフコンパイルなど現代的サービング最適化を既定実装が十分利用していないことが大差の主因と論文は説明する。"},
-      {"metric":"BAGEL テキスト→画像ジョブ完了時間","value":"23.12秒→9.64秒（2.40倍高速化）","baseline":"BAGEL公式実装","condition":"1024×1024、VBench、1基80GBアクセラレータ","interpretation":"複合画像生成でも段階分離と専用エンジンの利点が出る。"},
-      {"metric":"BAGEL 画像→画像ジョブ完了時間","value":"41.39秒→11.12秒（3.72倍高速化）","baseline":"BAGEL公式実装","condition":"1024×1024、VBench","interpretation":"処理段階が長い画像編集で相対改善がさらに大きい。"},
-      {"metric":"MiMo-Audio実時間係数","value":"1.39→0.60、実行グラフコンパイル込み0.12（最大11.58倍）","baseline":"MiMo-Audio公式実装","condition":"SeedTTS、1基アクセラレータ","interpretation":"共通基盤へ取り込むことで既存サービング最適化を音声モデルにも適用できる。"},
-      {"metric":"拡散モデル総合性能","value":"Diffusers比1.26倍高速化","baseline":"Diffusers","condition":"Qwen-Image/Qwen-Image-Edit/Wan2.2、VBench","interpretation":"専用拡散エンジンがvLLM由来の注意実装や演算最適化を再利用する効果。"},
-      {"metric":"Thinker→Talker転送","value":"共有メモリ5.49ms、Mooncake 8.28ms","baseline":"コネクタ方式間比較","condition":"Qwen2.5-Omni","interpretation":"数十秒規模の要求全体に対して転送費は小さく、段階分離を妨げる主因ではない。"},
-      {"metric":"Talker→Vocoder転送","value":"共有メモリ0.53ms、Mooncake 3.34ms","baseline":"コネクタ方式間比較","condition":"Qwen2.5-Omni","interpretation":"後段へ渡すデータでも複数ノード対応の追加費は数msに留まる。"}
+      {"metric":"単一クラスタ・LLaMA-30Bオフラインスループット","value":"Swarm比2.14倍、SP比1.04倍","baseline":"Swarm / Separate Pipelines","condition":"24ノード実機、4 A100 + 8 L4 + 12 T4、10Gb/s","interpretation":"SPが比較的良い配置を作れる小さいモデルでも、要求ごとの経路選択で固定経路の偏りを抑えられる。"},
+      {"metric":"単一クラスタ・LLaMA-30Bオンラインスループット","value":"Swarm比2.07倍、SP比1.14倍","baseline":"Swarm / Separate Pipelines","condition":"24ノード実機、到着率はクラスタ最大能力の約75%","interpretation":"Swarmの局所的ルーティングより、最大流に沿う全体経路配分がオンライン負荷でも高い処理量を維持する。"},
+      {"metric":"単一クラスタ・LLaMA-70Bオフラインスループット","value":"Swarm比1.94倍、SP比1.86倍","baseline":"Swarm / Separate Pipelines","condition":"24ノード実機","interpretation":"70Bでは固定パイプラインの分割制約が強くなり、異種GPUを横断する柔軟な配置と経路の効果が大きい。"},
+      {"metric":"単一クラスタ・LLaMA-70Bオンラインスループット","value":"Swarm比2.00倍、SP比1.69倍","baseline":"Swarm / Separate Pipelines","condition":"24ノード実機","interpretation":"高い利用率で低速GPUも使うことで総処理量を増やすが、平均デコード遅延はSwarm比で約16%悪化する条件がある。"},
+      {"metric":"地理分散・LLaMA-30Bオンラインスループット","value":"Swarm比2.33倍、SP比1.10倍","baseline":"Swarm / Separate Pipelines","condition":"3クラスタ、クラスタ間平均100Mb/s・50msのシミュレーション","interpretation":"低速な地域間リンクを最大流の容量として扱うため、通信混雑を避けた配置・経路選択の利点が強く現れる。"},
+      {"metric":"地理分散・LLaMA-30Bプリフィル遅延","value":"Swarm比66%削減、SP比14%削減","baseline":"Swarm / Separate Pipelines","condition":"同地理分散シミュレーション","interpretation":"Swarmで発生する遠隔リンクの待ち行列を避けることで、入力処理開始から最初の出力までの待ちを大幅に減らす。"},
+      {"metric":"地理分散・LLaMA-30Bデコード遅延","value":"Swarm比24%削減、SP比2%悪化","baseline":"Swarm / Separate Pipelines","condition":"同地理分散シミュレーション","interpretation":"Swarmより混雑回避に成功する一方、SPは高速経路へ処理を集中するため平均遅延だけならわずかに有利な場合がある。"},
+      {"metric":"高異質42ノード・LLaMA-70Bオンラインスループット","value":"Swarm比1.48倍、SP比3.29倍、SP+比2.54倍","baseline":"Swarm / SP / SP+","condition":"7種類のノード型を含む42ノードシミュレーション","interpretation":"ノード種類と能力差が大きいほど固定パイプラインでは端数資源が生じやすく、要求ごとの経路構成が余剰GPUを利用できる。"},
+      {"metric":"配置単体の最大流","value":"Petals比1.23倍・Swarm比2.10倍（単一クラスタ）、Petals比1.49倍・Swarm比2.38倍（地理分散）","baseline":"Petals / Swarm placement","condition":"同一スケジューラ条件で配置だけ比較","interpretation":"性能差はランタイムスケジューラだけでなく、計算・ネットワーク共同最適化した層配置そのものからも生じる。"},
+      {"metric":"スケジューラ単体スループット","value":"Swarm型比30%・ランダム比29%（単一クラスタ）、Swarm型比22%・ランダム比15%（地理分散）、最短待ち行列比19%改善","baseline":"各種要求スケジューラ","condition":"Helix配置を固定してスケジューリングのみ比較","interpretation":"最大流比率を実行時へ反映するIWRRが、局所待ち行列だけを見る方式より遠方の通信混雑を予防できる。"},
+      {"metric":"シミュレータ誤差","value":"平均5%未満","baseline":"実機測定","condition":"プロファイルベースのHelixシミュレータ","interpretation":"地理分散・42ノード結果は実機そのものではないが、少なくとも単一クラスタ実測に対して近い性能傾向を再現する。"}
     ],
-    "negative_results": "Qwen3-Omniの大幅高速化は、基準のTransformers実装が実行グラフコンパイルなどサービング向け最適化を十分利用していないことにも依存するため、成熟した別サービング基盤に対する91.4%削減と解釈してはいけない。評価は主に2基80GBアクセラレータの単一サーバで、段階を多数ノードへ広げた場合のネットワーク競合・制御面スケーラビリティ・障害耐性は測っていない。段階ごとの動的GPU再配分アルゴリズムを本格評価した結果も示されず、資源割当はユーザー設定の影響を受ける。生成品質の包括的な比較より性能を主眼としている。",
-    "interpretation": "結果が示すのは、any-to-any型モデルを一枚岩の実装として扱うと失われる『各段階内部でのバッチ処理と既存ランタイム最適化』を、段階グラフへ分解することで回復できるという点である。特にQwen-OmniではTalkerがテキストより多数の音声コードを生成するため後段が支配的になりやすく、段階ごとに独立して最適化できる価値が大きい。BAGEL、MiMo-Audio、拡散モデルにも改善が広がることから、特定モデルだけの手作業最適化ではなく、異種生成段階を共通基盤へ収める効果が確認できる。一方、比較対象の最適化水準が揃っていないため、最大倍率そのものよりも複数モデル群で一貫して改善していることを重視すべきである。",
-    "quality_impact": "本論文の中心機構は段階分離、実行エンジン選択、バッチ処理、資源配置、通信であり、モデルの意味品質を意図的に削る方式ではない。ただし拡散エンジン内で利用可能なキャッシュ・近似注意など個別最適化の品質影響は、その下位方式の設定に依存する。"
+    "negative_results": "Helixは総処理量を最大化するため低速GPUも利用するので、要求を高速GPUへ偏らせるSPやSwarmより平均デコード遅延が悪化する条件がある。単一クラスタLLaMA-70BではSwarm比でデコード遅延が約16%増え、地理分散LLaMA-30BではSP比で約2%悪化する。また、地理分散と42ノード高異質構成は実機ではなくシミュレーションである。MILPの探索時間は規模と異質性に依存し、40ノード超では数時間になり得るため、クラスタ構成が頻繁に変化する環境や数百〜数千ノードへそのまま適用するのは難しい。KVキャッシュ使用量は平均出力長を用いて見積もるため、出力長分布の急変では経路遮蔽が遅れる可能性がある。",
+    "interpretation": "利得が大きくなるのは、GPU能力差とネットワーク能力差の双方が大きく、固定パイプラインだと一部資源が遊休になる条件である。最大流表現では計算ノードと通信リンクが同じ容量制約としてつながるため、強いGPUへ層を多く置くだけで低速リンクを詰まらせる配置を避けられる。さらに要求ごとの経路選択が、同じ層範囲を持つ複数ノードへ負荷を分散し、固定パイプラインで生じる最遅段階の律速を緩和する。一方、最大流はクラスタ全体の処理量を重視するため、低速ノードを使わず個々の要求遅延を優先する比較対象とは目的が完全には一致しない。従って最大倍率だけでなく、スループット増加と平均遅延のトレードオフを併せて読む必要がある。",
+    "quality_impact": "モデル重みや生成計算を近似しないため品質は原理上無損失である。変更されるのはモデル層の物理配置、要求ごとの実行経路、バッチ化とKV容量制御であり、性能上の変化はスループット・通信混雑・待ち時間・GPU利用率に現れる。"
   }
 }
