@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **14 / 50** |
-| Research ready | **14** |
+| Candidate在庫（Research ready） | **17 / 50** |
+| Research ready | **17** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 14）。探索を最優先で継続。
+- **LOW**: candidate在庫が25未満（現在 17）。能動的な補充が必要。
 
 ## 直近の通常worker
 
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **5** |
+| Discovery完了 | **3** |
+| 新規job | **9** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggregation-01**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 分離LLMサービング・ネットワーク競合・prefill再配置 |
+| 探索軸 | MoE expert locality・cache/prefetch・CPU/GPU offload |
 | 評価候補 | **4** |
 | 重複除外 | **0** |
 | Novel候補 | **4** |
-| Research候補採用 | **1** |
+| Research候補採用 | **3** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggr
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **23** |
-| 探索評価候補 | **132** |
+| 探索round（stats観測） | **24** |
+| 探索評価候補 | **136** |
 | 重複除外 | **46** |
-| 重複率 | **34.8%** |
-| Novel候補 | **86** |
-| Research候補採用 | **37** |
+| 重複率 | **33.8%** |
+| Novel候補 | **90** |
+| Research候補採用 | **40** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggr
 
 ### 24時間ファネル
 
-**探索評価 132 → 重複除外後 86 → Research候補採用 37 → Research完了 44 → Repo収録 44**
+**探索評価 136 → 重複除外後 90 → Research候補採用 40 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -85,6 +85,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggr
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
+| MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
@@ -96,11 +97,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggr
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — MoE expert locality・cache/prefetch・CPU/GPU offload: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — 分離LLMサービング・ネットワーク競合・prefill再配置: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T22:30:00+09:00** — 地理分散LLM serving・分散最適化: 評価 4 / 重複 2 / 採用 2
 - **20260912T2200+0900** — critical_buffer_cross_axis_moe_heterogeneous_serving: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T21:30:00+09:00** — composable-cxl-shared-kv-peer-gpu-memory-tier: 評価 2 / 重複 0 / 採用 0
-- **2026-09-12T21:30:00+09:00** — cxl-near-data-kv-page-management-os-demand-paging: 評価 4 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
@@ -117,11 +118,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggr
 
 ### 次に処理する候補
 
+- P89 `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
+- P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
 - P85 `arXiv:2603.13358` — Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving
+- P85 `arXiv:2508.21706` — Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
-- P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
-- P80 `arXiv:2609.10861` — REACH: Controller-Managed Long-Span ECC for HBM AI Inference
 
 ## 7日比較
 
