@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-376c29b504bdcaf6",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2305.05920",
+      "title": "Fast Distributed Inference Serving for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2305.05920",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-preemptive-distributed-inference.md",
+      "priority": 92,
+      "reason": "近年のserving論文から遡った重要な未収録基礎研究。autoregressive inferenceをtoken粒度でpreempt可能にし、skip-join multi-level feedback queueとGPU/host間state offloadでlatencyを抑えるFastServeを提案する。vLLM比で同等の平均/末尾latency制約下のthroughputを最大31.4倍/17.9倍改善と報告しており、現行のSLO-aware scheduling・KV退避研究の系譜上重要。"
+    },
+    {
+      "canonical_id": "arXiv:2602.18755",
+      "title": "BiScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS",
+      "source_url": "https://arxiv.org/abs/2602.18755",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.18755-biscale-phase-aware-placement-dvfs.md",
+      "priority": 87,
+      "reason": "DistServe系統のprefill/decode分離をenergy最適化へ拡張し、coarse-grained placementとfine-grained DVFSをphase別制御する二階層方式。16x H100・Llama 3.3 70B・production-style traceでSLOを維持しつつprefill energy最大39%、decode最大48%削減。性能だけでなく電力を目的関数へ入れた実運用寄りserving設計として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2510.13223",
+      "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
+      "source_url": "https://arxiv.org/abs/2510.13223",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.13223-banaserve-dynamic-module-kv-migration.md",
+      "priority": 85,
+      "reason": "分離サービングのprefill/decode負荷偏りとprefix-aware routing hotspotを、layer weight migration・attention単位KV migration・global KV store sharingで連続的に再平衡する。vLLM比1.2〜3.9倍throughput、DistServe比1.1〜2.8倍throughputと報告し、計算資源とKV stateを同時に移動する点が既存routingのみの方式と異なる。"
+    },
+    {
+      "canonical_id": "arXiv:2507.17120",
+      "title": "BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2507.17120",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md",
+      "priority": 77,
+      "reason": "sequence lengthごとのbucketを動的にsplit/mergeし、batch sizeとpriorityを調整してpadding・OOM・SLO違反を抑えるserving scheduler。UELLM比最大3.58倍throughput、DistServe比で80% SLO attainment時に1.93倍request loadを処理可能と報告。新規性は他3件より限定的だが、動的batching系統の比較対象として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-distserve-citation-backfill-5",
+    "axis": "DistServe周辺のforward citation・backward reference補完",
+    "query_summary": "優先テーマの直接検索から離れ、DistServe/現行serving研究の引用・関連研究から未収録の基礎/派生システムを探索した。FastServeを重要な古い未収録基礎として拾い、energy-aware disaggregation、動的module/KV migration、dynamic batchingの派生3件を選別。最新mainでcanonical ID再検索し既存一致なしを確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は引用系統から離れ、training/serving境界のco-serving・adapter/LoRA multiplexing・agentic long-running state runtimeへ軸を変える",
+    "empty_round_reason": null
+  }
+}
