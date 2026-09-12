@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **18 / 50** |
-| Research ready | **18** |
+| Candidate在庫（Research ready） | **20 / 50** |
+| Research ready | **20** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **LOW**: candidate在庫が25未満（現在 18）。能動的な補充が必要。
+- **LOW**: candidate在庫が25未満（現在 20）。能動的な補充が必要。
 
 ## 直近の通常worker
 
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **11** |
+| Discovery完了 | **5** |
+| 新規job | **14** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | エージェント型サービング・KV再利用・ツール呼び出し待機 |
-| 評価候補 | **4** |
+| 探索軸 | CXL/NVLink-C2C・remote memory・階層KV prefetch |
+| 評価候補 | **5** |
 | 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **1** |
+| Novel候補 | **5** |
+| Research候補採用 | **2** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **25** |
-| 探索評価候補 | **140** |
+| 探索round（stats観測） | **26** |
+| 探索評価候補 | **145** |
 | 重複除外 | **46** |
-| 重複率 | **32.9%** |
-| Novel候補 | **94** |
-| Research候補採用 | **41** |
+| 重複率 | **31.7%** |
+| Novel候補 | **99** |
+| Research候補採用 | **43** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
 
 ### 24時間ファネル
 
-**探索評価 140 → 重複除外後 94 → Research候補採用 41 → Research完了 44 → Repo収録 44**
+**探索評価 145 → 重複除外後 99 → Research候補採用 43 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -80,6 +80,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
+| CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
@@ -98,11 +99,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — CXL/NVLink-C2C・remote memory・階層KV prefetch: 評価 5 / 重複 0 / 採用 2
 - **2026-09-12T23:00:00+09:00** — エージェント型サービング・KV再利用・ツール呼び出し待機: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T23:00:00+09:00** — MoE expert locality・cache/prefetch・CPU/GPU offload: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — 分離LLMサービング・ネットワーク競合・prefill再配置: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T22:30:00+09:00** — 地理分散LLM serving・分散最適化: 評価 4 / 重複 2 / 採用 2
-- **20260912T2200+0900** — critical_buffer_cross_axis_moe_heterogeneous_serving: 評価 5 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
@@ -119,11 +120,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
 
 ### 次に処理する候補
 
+- P90 `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 - P89 `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
 - P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
+- P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
 - P85 `arXiv:2603.13358` — Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving
-- P85 `arXiv:2508.21706` — Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding
-- P84 `arXiv:2510.18586` — Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications
 
 ## 7日比較
 
