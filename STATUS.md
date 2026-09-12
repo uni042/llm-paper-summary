@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **63 / 50** |
-| Research ready | **63** |
+| Candidate在庫（Research ready） | **64 / 50** |
+| Research ready | **64** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **13** |
-| 新規job | **35** |
+| Discovery完了 | **14** |
+| 新規job | **37** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **64** |
-| 探索評価候補 | **298** |
+| 探索round（stats観測） | **65** |
+| 探索評価候補 | **302** |
 | 重複除外 | **93** |
-| 重複率 | **31.2%** |
-| Novel候補 | **205** |
-| Research候補採用 | **95** |
+| 重複率 | **30.8%** |
+| Novel候補 | **209** |
+| Research候補採用 | **96** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 298 → 重複除外後 205 → Research候補採用 95 → Research完了 47 → Repo収録 47**
+**探索評価 302 → 重複除外後 209 → Research候補採用 96 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -95,6 +95,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
+| DistServe周辺のforward citation・backward reference補完 | 4 | 0 | 1 | 0.0% | 25.0% |
 | GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
 | GPU runtime境界・host-device転送律速 | 4 | 3 | 1 | 75.0% | 25.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
@@ -138,11 +139,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — DistServe周辺のforward citation・backward reference補完: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — NVMe外部KV・PIM runtime・page-aware decode scheduling: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — 分離サービングのnetwork flow・prefill迂回・専用interconnect: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — CXL共有メモリ・ラック内KV転送・Superchip階層メモリ: 評価 5 / 重複 2 / 採用 0
 - **2026-09-13T01:55:54+09:00** — MoE動的並列切替・融合通信・serverless専門家配置: 評価 3 / 重複 0 / 採用 1
-- **2026-09-13T01:26:11+09:00** — multi-adapter serving・推論/継続学習境界: 評価 4 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
