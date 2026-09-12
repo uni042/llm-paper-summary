@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.02737-20260913-0530-v10-g",
-  "job_id": "job-research-d92e296c1a145dd5",
+  "attempt_id": "attempt-2410.16179-20260913-0600-v10-g",
+  "job_id": "job-research-eeddee746504f3dd",
   "data": {
-    "hardware": "論文の主評価は注意参照量と回答品質を測るもので、実機のエンドツーエンド遅延値は主結果として示さない。性能分析では単一NVIDIA B200、BF16、計算利用率40%、メモリ帯域利用率70%、帯域8 TB/sを仮定したルーフラインモデルを用い、モデル重み・活性値・KV読出しからデコード時間の理論上限を推定する。",
-    "software": "DAはvLLMへ統合する。Qwen系のグローバル注意ではFlashAttention、Gemma系ではTriton実装のページ化注意を使用し、注意メタデータ生成器がKVブロック表を状態別に書き換える。注意カーネルやスケジューラの改変は不要とされる。比較対象は通常の全注意であるVanillaと、DA用の同じプロンプト・思考手順を使うがKVマスクを適用しないDA-no-maskである。",
-    "methodology": "主要モデルはGemma-4-31BとQwen-3.6-27Bで、規模依存性の確認にGemma-4-12B、Gemma-4-E4B、Qwen-3.5-9B、Qwen-3.5-4Bも用いる。長文脈課題はRULER、LongBench v1/v2、LooGLE、ZeroSCROLLSから計15種類を選び、各情報源につき最大128例を固定乱数で評価する。文脈上限は原則244Kトークンで、Gemma-4-E4Bのみ116Kとする。入力は約2048トークンのマジックチャンクへ分割し、DAには注意状態を宣言するゼロショット指示を与える。回答採点はGemini-3-Flashが生成した課題別ルーブリックと、思考有効のQwen-3.5-4B判定器を使い、Gemini-3.1-Proとの相関がPearson r=0.99であることを確認する。参照トークン数はデコード中に各注意層が実際に参照対象とするトークン数を集計し、追加思考トークンの増加も含めて総量を比較する。",
-    "scope": "長文脈のグローバル注意層におけるデコード時KV読出し削減が対象である。DAはKVを削除・量子化せず、現在の生成区間で読まないブロックをブロック表から外すため、現評価ではGPU容量そのものの削減を実証していない。Gemmaの局所窓注意やQwenのGated Delta Network層はマスク対象外であり、モデル構成によって削減可能部分が異なる。評価は非思考モードを中心とし、思考モードでは制御手順遵守が不安定だったと報告される。遅延改善はルーフライン推定で、実ネットワーク・スケジューラ・プリフィルとの重なりを含む実測サービング性能ではない。",
-    "workloads": ["Gemma-4-31B", "Gemma-4-12B", "Gemma-4-E4B", "Qwen-3.6-27B", "Qwen-3.5-9B", "Qwen-3.5-4B", "RULER", "LongBench v1", "LongBench v2", "LooGLE", "ZeroSCROLLS"],
-    "baselines": ["Vanilla全注意", "DA-no-mask"],
-    "metrics": ["平均回答精度", "デコード中の総参照トークン数", "制御タグ解析成功率", "追加デコードステップ", "ルーフライン推定デコード時間"],
-    "reproducibility": "対象モデル、データセット群、文脈上限、区間サイズ、採点器、比較条件、vLLM統合方式、ルーフライン仮定が論文と付録に記載される。一方、著者公式コード公開は2026-09-13時点で確認できず、実機エンドツーエンド遅延も未報告なので、サービング性能の完全再現には追加実装と測定が必要である。"
+    "hardware": "三つの実機系統を評価する。CodeLlama-34Bは80GB A100、CodeLlama-13Bは48GB L20、Llama-3.1-8BはL20の使用可能メモリを24GBへ制限してRTX 4090相当条件を模擬する。A100環境のCPUはIntel Platinum 8480+、L20環境はIntel 8563Cである。最後の条件はL20の864GB/s帯域がRTX 4090の約1TB/sより低いため、著者は実RTX 4090ではやや高速になると説明する。",
+    "software": "GPU側モデル計算とLSH射影はPyTorch、CPU側疎注意はFBGEMMのBF16を使用する。公式MagicPIG実装が公開されている。比較対象はGPU上の完全注意、24GB条件ではCPU上の完全注意を帯域から推定した基準、精度評価ではQuestや厳密TopKを含む。",
+    "methodology": "品質評価ではGSM8K-CoT、MMLU-Flan-CoT-Fewshot、COQAの中程度文脈課題、LongBenchからQASPER、LCC、RepoBench-P、TriviaQA、PassageRetrieval、TREC、さらにRULERの13種類の合成長文脈課題を使う。RULERでは複数モデル・16Kから256Kまで文脈長を変え、LSHのKビット数とL表数を変えて全注意に対する相対計算率と精度を測る。システム評価では16K文脈の34B/13Bモデルと96K文脈の8Bモデルを使い、単一要求遅延、デコードスループット、バッチ容量を測定する。追加評価では70Bモデル、512K対応モデル、長文脈推論課題、LSH表のメモリ量と追加GPU計算量を調べる。",
+    "scope": "主な対象はデコード段階の長文脈注意であり、論文自身がプリフィル処理を未実装の制約として挙げる。KVとLSH表をCPU DRAMへ置けるサーバを前提とするため、CPUメモリが小さい環境にはそのまま適用できない。24GB GPU条件は実RTX 4090そのものではなくL20のメモリ制限による模擬である。近似注意なので精度はハイパーパラメータと課題特性に依存し、厳密な出力一致は保証しない。",
+    "workloads": ["CodeLlama-34B", "CodeLlama-13B", "Llama-3.1-8B", "Llama-3.1-70B", "MegaBeam-Mistral-7B-512K", "Llama3-8B-Prolong-512K", "RULER", "LongBench", "GSM8K", "MMLU", "COQA"],
+    "baselines": ["GPU完全注意", "CPU完全注意", "Quest", "厳密TopK", "Oracle sampling"],
+    "metrics": ["回答精度", "完全注意に対する計算率", "デコードスループット", "単一要求遅延", "最大バッチ容量", "LSH表メモリ", "追加GPU計算量"],
+    "reproducibility": "公式実装、モデル・ハードウェア、LSH構成、主要データセットと比較対象が公開されている。CPU型番と実装ライブラリも記載される。一方、24GB GPU結果はメモリ制限したL20による模擬で、プリフィルは対象外であるため、完全なエンドツーエンドサービング再現ではその差を明示する必要がある。"
   }
 }
