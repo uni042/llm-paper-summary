@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6cd4b32c905ce5c7",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.14376",
+      "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.14376",
+      "paper_path": null,
+      "priority": 86,
+      "reason": "動的バッチでGPUカーネルの形状・reduction順が変わることによるLLM推論の非決定性を、batch-invariant kernelへの全面置換ではなく、position-invariant性を利用したスケジューリングで解消する。isolated prefillと固定形状decode batch、CUDA Graphを組み合わせ、決定論的推論を維持しながら既存batch-invariant方式比でthroughputを15〜324%改善し、TTFTを51.8%、TPOTを48.6%平均削減する。推論再現性をkernel設計ではなくruntime/scheduling側で扱うため、GPU runtime系統として新規性が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:00:25+09:00",
+    "round": "specialist-gpu-runtime-6",
+    "axis": "GPU runtime・CUDA Graph・persistent kernel・決定論的推論",
+    "query_summary": "JIT/CUDA Graph、persistent GPU scheduler、page-aware decode scheduling、決定論的runtimeを横断した。Hybrid JIT-CUDA Graph、Blink、PersistentKVは最新正本で既収録。CoRunは一次資料を軽量評価し、最新HEADの決定論的research job IDとrepo検索で未登録を確認したため投入した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2604.23467",
+      "arXiv:2604.07609",
+      "arXiv:2606.26666"
+    ],
+    "next_axis_hint": "CoRun採用で枯渇判定をリセットし、新着・引用関係・階層メモリ／ストレージ・networking・query expansionを独立に一巡する",
+    "empty_round_reason": null
+  }
+}
