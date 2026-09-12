@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T10:49:21.144423+00:00",
+  "updated_at": "2026-09-12T11:00:05.808208+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9913,19 +9913,19 @@
     {
       "run_key": "2026-09-12T19:30:00+09:00",
       "first_recorded_at": "2026-09-12T10:36:23.790325+00:00",
-      "last_recorded_at": "2026-09-12T10:49:21.144423+00:00",
+      "last_recorded_at": "2026-09-12T11:00:05.808208+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 1,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -9986,6 +9986,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34689820077:1",
+          "recorded_at": "2026-09-12T11:00:05.808208+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34689820077",
+            "run_attempt": "1",
+            "source_sha": "d702cca86823b81df39e5cc9522ab5071df8eb6f"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10012,6 +10027,14 @@
           "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-8f1c80196652932b",
+          "type": "research",
+          "canonical_id": "arXiv:2606.17787",
+          "title": "LUMEN: Coordinated Failure Recovery for Distributed LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -10025,7 +10048,8 @@
       ],
       "new_paper_ids": [
         "arXiv:2609.11392",
-        "arXiv:2606.30391"
+        "arXiv:2606.30391",
+        "arXiv:2606.17787"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1930JST-discovery-c797669b52ac6c35.json",
@@ -10033,8 +10057,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 344,
-      "paper_active_count_after": 346,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 347,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
