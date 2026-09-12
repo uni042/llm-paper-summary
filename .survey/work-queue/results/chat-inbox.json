@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-e9bc39c05ba15b76",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2504.02263.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-61b65de2a7cf7033",
+  "validation_error": "ValueError: problem_method.system_design is required",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T15:36:50+00:00"
 }
