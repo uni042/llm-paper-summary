@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-09f84c02bdf7d29d",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10812-exaserve-large-scale-llm-serving-exascale-hpc-systems.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.10812.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-2b3d10df7e47e17c",
+  "validation_error": "ValueError: metadata.references_total must be a non-negative integer",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T07:40:51+00:00"
 }
