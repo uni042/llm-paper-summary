@@ -35,9 +35,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
       - name: Dashboard regression tests
-        run: python -m pytest .survey/tests/test_status_dashboard.py .survey/tests/test_dashboard_history.py -q
+        run: python -m unittest .survey/tests/test_status_dashboard.py .survey/tests/test_dashboard_history.py
       - name: Render dashboard in check mode
         run: python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
 
@@ -54,7 +54,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
       - name: Refresh STATUS.md against latest main
         shell: bash
         run: |
