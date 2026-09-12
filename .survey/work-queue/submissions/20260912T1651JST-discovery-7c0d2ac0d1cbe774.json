@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7c0d2ac0d1cbe774",
+  "discovery_stats": {
+    "run_key": "2026-09-12T16:30:00+09:00",
+    "round": "paper-worker-exaserve-derived-storage-control-2",
+    "axis": "ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling",
+    "query_summary": "ExaServeで確認した配備・制御面ボトルネックから探索軸を変え、SSD上のMoE expertキャッシュ、routing依存expert prefetch、CPU-GPU密結合メモリ上のSLO-aware KV schedulingを一次資料で軽量評価した。投入直前にarXiv IDを正本repoで検索し、既収録・既存jobに一致しない3件のみを送る。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次回はdistributed streaming ingress / control-plane sharding / multi-controller LLM servingを優先し、今回のstorage/offload軸を機械的に反復しない",
+    "empty_round_reason": null
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.24787",
+      "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models",
+      "source_url": "https://arxiv.org/abs/2607.24787",
+      "paper_path": "papers/inference/03-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-sparse-moe.md",
+      "priority": 92,
+      "reason": "オフロードMoEではnative routerが次層expertを確定してから転送すると、routing→load→executeが直列化する。SpecPrefetchは実行routingを変更せず、共有軽量adapterで次層expert候補を転送専用に予測し、cache/bandwidth制約を考慮するwindow-aware schedulerで非同期prefetchする。Qwen3-VL-30B-A3BとDeepSeek-VL2-Tinyの9/10設定でexpert recall最良、Snapdragon 8 Eliteでcompute-optimized offloading runtime比最大20% decode throughput改善を報告し、コード・重みも公開されている。SSD/階層メモリとexpert prefetchの重点テーマに直接一致する。"
+    },
+    {
+      "canonical_id": "arXiv:2601.17063",
+      "title": "FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2601.17063",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement-moe-edge.md",
+      "priority": 90,
+      "reason": "RAMに全expertを置けないオンデバイスMoEでinactive expertをSSDへ置き、recencyとfrequencyを軽量MLで適応結合するcache replacementによりSSD I/Oを減らす。ユーザー向けデスクトップ実機でLRU/LFU比cache hit率を最大51%改善し、既存MoE inference system比最大2.6倍高速化を報告する。SSD expert cacheというリポジトリ最重点テーマに直結し、現状repo検索でarXiv ID未収録だったため重要な取りこぼし候補。"
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-superchips.md",
+      "priority": 82,
+      "reason": "高負荷時にKV cache不足でhead-of-line blockingが起きる問題に対し、GH200のNVLink-C2CでGPU-CPU間を高速移動できる特性を使い、SLO-aware rotary schedulerとfull-duplex KV rotation engineを共同設計する。既存PCIe offloadでは応答性を維持できない領域を対象に、TTFT SLO達成率を最大74.7%改善しつつTBTとthroughputを維持したと報告する。SSDではないが階層メモリ・KV offload・scheduler co-designの隣接系統として、SSD案への知識移植価値が高い。"
+    }
+  ]
+}
