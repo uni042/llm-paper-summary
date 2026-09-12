@@ -24,20 +24,22 @@ class SurveyIndexGroupingTest(unittest.TestCase):
             "implementation": None,
         }
 
-    def test_recent_cited_papers_are_featured_and_old_uncited_papers_stay_in_older_table(self) -> None:
+    def test_recent_cited_papers_are_featured_and_older_papers_use_rolling_year_buckets(self) -> None:
         rows = [
             self._record("recent-cited-low", 2026, 8),
             self._record("recent-cited-high", 2026, 7),
             self._record("recent-uncited", 2026, 9),
-            self._record("old-cited", 2025, 8),
-            self._record("old-uncited", 2024, 12),
+            self._record("two-years-cited", 2025, 8),
+            self._record("two-years-boundary", 2024, 10),
+            self._record("three-years-boundary", 2024, 9),
         ]
         citations = {
             "papers/inference/example/recent-cited-low.md": 1,
             "papers/inference/example/recent-cited-high.md": 3,
             "papers/inference/example/recent-uncited.md": 0,
-            "papers/inference/example/old-cited.md": 2,
-            "papers/inference/example/old-uncited.md": 0,
+            "papers/inference/example/two-years-cited.md": 2,
+            "papers/inference/example/two-years-boundary.md": 0,
+            "papers/inference/example/three-years-boundary.md": 1,
         }
 
         rendered = _render_taxonomy_list(
@@ -49,23 +51,31 @@ class SurveyIndexGroupingTest(unittest.TestCase):
 
         attention_heading = "### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）"
         recent_heading = "### 直近12か月・未被引用（2025-10〜2026-09）"
-        older_heading = "### 1年以上前"
+        two_year_heading = "### 2年前（2024-10〜2025-09）"
+        three_year_heading = "### 3年前（2023-10〜2024-09）"
         self.assertLess(rendered.index(attention_heading), rendered.index(recent_heading))
-        self.assertLess(rendered.index(recent_heading), rendered.index(older_heading))
+        self.assertLess(rendered.index(recent_heading), rendered.index(two_year_heading))
+        self.assertLess(rendered.index(two_year_heading), rendered.index(three_year_heading))
+        self.assertNotIn("### 1年以上前", rendered)
         self.assertNotIn("### その他", rendered)
 
         attention = rendered[rendered.index(attention_heading):rendered.index(recent_heading)]
         self.assertLess(attention.index("recent-cited-high"), attention.index("recent-cited-low"))
         self.assertNotIn("recent-uncited", attention)
 
-        recent = rendered[rendered.index(recent_heading):rendered.index(older_heading)]
+        recent = rendered[rendered.index(recent_heading):rendered.index(two_year_heading)]
         self.assertIn("recent-uncited", recent)
         self.assertNotIn("recent-cited-low", recent)
 
-        older = rendered[rendered.index(older_heading):]
-        self.assertIn("old-cited", older)
-        self.assertIn("old-uncited", older)
-        self.assertLess(older.index("old-cited"), older.index("old-uncited"))
+        two_years = rendered[rendered.index(two_year_heading):rendered.index(three_year_heading)]
+        self.assertIn("two-years-cited", two_years)
+        self.assertIn("two-years-boundary", two_years)
+        self.assertNotIn("three-years-boundary", two_years)
+        self.assertLess(two_years.index("two-years-cited"), two_years.index("two-years-boundary"))
+
+        three_years = rendered[rendered.index(three_year_heading):]
+        self.assertIn("three-years-boundary", three_years)
+        self.assertNotIn("two-years-boundary", three_years)
 
     def test_paper_entries_use_mobile_friendly_vertical_blocks(self) -> None:
         row = self._record("mobile-paper", 2026, 9)
