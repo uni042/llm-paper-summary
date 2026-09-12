@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "job_id": "job-03e3bcb4c91dd30f",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:00:25+09:00",
+    "round": "specialist-kv-reuse-eviction-1",
+    "axis": "2026-09新着・KVキャッシュ圧縮／再利用",
+    "query_summary": "9月新着からデコード時KV eviction、長期推論KV圧縮、非prefix KV再利用を軽量評価した。InertiaKV、BeaconKV、KVShareArenaはいずれも一次資料を確認後、決定論的research job IDで既存jobを再照合した結果、すでに正本へ収録済みだったため候補投入から除外した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.03515",
+      "arXiv:2609.04971",
+      "arXiv:2609.10266"
+    ],
+    "next_axis_hint": "エージェントサンドボックス／OSメモリ圧縮など、LLM待ち時間を利用する隣接システム軸へ切り替える",
+    "empty_round_reason": "軽量評価した3候補はwrite直前の正本再重複判定ですべて既収録と確認されたため。"
+  }
+}
