@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2603.03251-20260913-0430-v10-a",
-  "job_id": "job-research-f0796c3a0863aed5",
+  "attempt_id": "attempt-2605.00254-20260913-0430-v10-c",
+  "job_id": "job-research-d335718873eaacf6",
   "data": {
-    "limitations": "SSDは待ち時間を消す代わりに、起こらない検証結果に対するドラフトも先に計算するため、小型モデル側の浮動小数点演算量とメモリ使用量が通常の投機的デコードより増える。主評価ではターゲット4×H100に加えてドラフト専用1×H100を使っており、同一ハードウェア予算での絶対コスト最小化を目的とする方式ではない。キャッシュヒット率が低いモデル・高温度・大バッチでは先行生成の無駄が増えるため、分岐配分・サンプリング・フォールバックを調整する必要がある。大バッチでは一系列のキャッシュミスがバッチ全体を待たせる。論文自身も強化学習ロールアウトやオフライン大量生成のようにスループットが支配的な用途では、投機的デコード一般の追加検証計算が不利になり得るとする。ドラフトGPUを追加して分岐数を増やす拡張も、キャッシュヒット率の飽和により逓減する。",
-    "differences": "通常の投機的デコードは現在ラウンドのドラフト生成と検証を交互に行うため、ラウンド間の直列依存が残る。AMUSDやPEARL系の非同期化は主に『全ドラフトが受理された』特定分岐を先行するのに対し、SSDは受理長と補正トークンからなる複数の検証結果を一般的に予測して次ラウンドを準備する。MedusaやEAGLE-3などの木型投機は複数候補をターゲット側でも同時検証するため検証器計算が増えるが、SSDは追加計算を主に別GPU上の小型ドラフトモデルへ寄せ、ターゲットの検証計算量を増やさない。Saguaroはさらに、受理長分布に合わせた分岐数、残差分布を予測しやすくするサンプリング、バッチ別フォールバックをSSD固有の問題として共同最適化する。",
-    "implementation_status": "公式コード `tanishqkumar/ssd` が公開されている。論文はLlama-3.1-70B/Llama-3.2-1BとQwen3-32B/Qwen3-0.6Bで実装評価し、SGLang 0.5.9、vLLM 0.16.0、通常投機、EAGLE-3との設定掃引比較を行う。検証結果分岐用のカスタム注意マスク、Saguaroのキャッシュ構造・サンプリング・フォールバックを実装している。",
-    "research_positioning": "リポジトリでは投機的デコード系統の重要論文として位置付けるのが適切である。既存研究がドラフト精度、木型候補、検証カーネル、n-gram等のドラフト高速化を主に改善するのに対し、SSDは投機的デコード自体に残るラウンド間同期を独立したボトルネックとして切り出す。特に追加資源をターゲット検証器ではなくドラフト側の将来分岐計算へ割り当てる設計は、低遅延オンライン推論でGPU余力をどう使うかというシステム上の別のスケーリング軸を示す。",
-    "relation_to_existing_repository": "投機的デコード系統のEAGLE系、木型投機、n-gramドラフト、検証高速化研究と比較する際、SSDは『何を予測するか』が一段異なる。次トークン候補ではなく検証結果そのものを予測し、その結果後のドラフトをキャッシュするため、他の高品質ドラフト器や木型方式と競合するだけでなく組み合わせ可能である。論文もEAGLEや木型投機との統合を将来方向として挙げる。",
+    "limitations": "評価はDeepSeek-V3を代表MoEとしてdecode phaseのbatched inferenceへ絞り、prefillや非常に長い単一要求は対象外である。expert routingは十分大きなbatchでload balanceされるregular A2Aを仮定するため、偏ったexpert活性やhotspotが強い実運用の通信挙動は直接再現しない。switchless topologyは配線・故障対応・保守など運用面の複雑性が高いが、この非金銭コストはTCOへ完全に組み込まれていない。CapExは公開retail価格、OpExは主に電力/PUEであり、不動産・facility maintenance等は不足する。『安いclusterを複数増設できる』前提が崩れ、power/spaceが制約ならraw throughput/XPUの高いscale-upが重要になる。Blackwell/Rubin分析はrooflineによる将来予測で実機検証ではなく、Rubin以降もcompute/memoryがlinkより高速に伸びればswitchlessの費用優位は弱まる。",
+    "differences": "既存のcollective研究は通信完了時間を短縮するalgorithmやtraffic engineeringを主に評価し、network topology研究もtraining時のMFUやflow completion timeを中心にする。本論文はMoE serving固有の小batch、expert parallelism、TPOT SLO、KV memory constraint、DBO、speculative decodingを組み込み、通信のうちcomputeから露出する部分だけを端から端までの性能損失として扱う。また、単一clusterのraw performanceではなく、GPUとnetwork設備を含むthroughput per TCOを主な設計基準にする。既存のMoE overlap研究は与えられたnetwork上でcommunicationを隠すが、本研究はそのsoftware optimizationがhardware networkをどこまで安価にできるかへ設計問題を一段上げる。",
+    "implementation_status": "公開された専用コードリポジトリは確認できない。方法論はDGX H100 NCCL benchmark、A100上のcustom ring/recursive-doubling collective、Vidur型single-GPU profile、DeepSeek-V3/SGLang公開traceを組み合わせて検証されている。したがって再現には本文のmodel/TCO parameterと測定環境を再構築する必要がある。",
+    "research_positioning": "リポジトリではMoE並列・通信系統に置くべき重要なcross-layer systems studyである。MoE expert placementやrouting、collective kernelを直接最適化する研究とは異なり、network topologyとbandwidthそのものの設備選択へ踏み込み、ソフトウェア重畳がhardware provisionの最適点を変えることを定量化する。『communication bottleneckが大きいからbandwidthを最大化する』ではなく『ECTが0になるsweet spotまでで止める』という設計原則は、将来のMoE cluster capacity planningで再利用性が高い。",
+    "relation_to_existing_repository": "MoE expert parallelism、all-to-all最適化、communication-compute overlap、serving simulationの論文と補完関係にある。TokenWeave等のoverlap手法や将来のより強いcollectiveがECTを減らせば、本論文の方法論では最適network帯域がさらに低下する可能性がある。一方、expert imbalanceやplacement改善でtraffic量自体を減らす研究は通信モデルのmessage sizeを変える入力として統合できる。SSD/NVMeやKV offload系とは直接のデータ配置対象は異なるが、long contextでKV容量がbatch上限を決めることを通じてnetwork価値が変わるため、memory hierarchy最適化ともcross-layerに連動する。",
     "audit_required": false
   }
 }
