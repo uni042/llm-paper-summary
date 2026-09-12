@@ -1,182 +1,123 @@
 # Chat worker router — workflow v10
 
-このrouterは **既存の通常Scheduled Chat worker（毎時:30系）** の正本とする。通常workerとは別に、毎時`:00` JSTで探索専用Scheduled Chat workerを動かしてよい。探索専用workerの正本は [discovery-specialist-worker.md](discovery-specialist-worker.md) とし、その追加を理由に通常workerのdiscovery機能を削除・停止・縮小しない。通常runは実行時刻で次のどちらか一方を選ぶ。ただし24-run maintenance gateが最優先で、maintenance runでは通常workerを実行しない。
+この文書は **通常Scheduled Chat worker（毎時`:30`）の時刻routing・maintenance routing・正本の優先関係** を定義する。通常論文runの継続・待ち時間削減・可視queueの扱いは [always-on-worker.md](always-on-worker.md)、discoveryの継続・停止は [discovery-continuation-policy.md](discovery-continuation-policy.md) と [discovery-exhaustive-run-policy.md](discovery-exhaustive-run-policy.md)、transportは [queue-v10.md](queue-v10.md) と [fallback-routing.md](fallback-routing.md)、全runのSTOP判定は [continuation-policy.json](continuation-policy.json) を正本とする。
 
-- maintenance gateで24回目 → full GC + repository-wide consistency checkだけを要求して終了
-- 08:30 JST → その他更新worker
-- それ以外の毎時 :30 → 論文worker
-- 別タスクの毎時 :00 → 探索専用worker。通常workerのmaintenance counterには加算しない
+通常workerとは別に毎時`:00` JSTで探索専用Scheduled Chat workerを動かしてよい。探索専用workerの正本は [discovery-specialist-worker.md](discovery-specialist-worker.md)。探索専用workerの追加を理由に通常workerのdiscovery機能を削除・停止・縮小しない。
 
-毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[candidate-buffer-policy.md](candidate-buffer-policy.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、[suggestion-box.md](suggestion-box.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json`、`.survey/work-queue/discovery-state.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
+## 1. 毎runのブートストラップ
 
-一時配送について古い文書と矛盾する場合は **このrouter → candidate-buffer-policy.md → fallback-routing.md → continuation-policy.json → backlog-resilience.md → queue-v10.md** の順で優先する。Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は新規保存先に使わない。Drive実装の保存版は `archive/drive-fallback-before-removal-20260910` ブランチにある。
+毎回default branch最新HEADを取得し、同じHEADから少なくとも次を読む。
 
-## 0. 24-run maintenance gate
+- 本router
+- [always-on-worker.md](always-on-worker.md)
+- [queue-v10.md](queue-v10.md)
+- [candidate-buffer-policy.md](candidate-buffer-policy.md)
+- [discovery-continuation-policy.md](discovery-continuation-policy.md)
+- [discovery-exhaustive-run-policy.md](discovery-exhaustive-run-policy.md)
+- [continuation-policy.json](continuation-policy.json)
+- [fallback-routing.md](fallback-routing.md)
+- [backlog-resilience.md](backlog-resilience.md)
+- [suggestion-box.md](suggestion-box.md)
+- `.survey/work-queue/next-jobs.json`
+- `.survey/work-queue/maintenance-cycle.json`
+- `.survey/work-queue/discovery-state.json`
 
-通常の時刻routingより先に `.survey/work-queue/maintenance-cycle.json` を処理する。このカウント対象は通常Scheduled Chat workerだけで、探索専用workerの毎時`:00` runは加算しない。
+必要に応じて `.survey/work-queue/jobs/`、`.survey/survey-state/paper-identity-index.json`、identity delta、`.survey/work-queue/records/bank-registry.json`、[paper template](../../templates/paper.md) を読む。
 
-1. 現在のScheduled Chat実行枠をJSTで一意な `run_key` として決める。
+### 正本の優先範囲
+
+同じ事項を複数文書へ重複定義しない。矛盾を見つけた場合は、事項ごとに次を優先する。
+
+- **時刻routing / maintenance gate**: 本router
+- **通常論文runの継続、Actions待ち、`next-jobs.json`の可視範囲**: `always-on-worker.md`
+- **candidate水位**: `candidate-buffer-policy.md`
+- **discoveryの継続・探索空間枯渇判定**: `discovery-continuation-policy.md` / `discovery-exhaustive-run-policy.md`
+- **queue / structured transport**: `queue-v10.md`
+- **fallback / replay**: `fallback-routing.md`
+- **run全体のSTOP判定**: `continuation-policy.json`
+- **本文品質**: `.survey/templates/paper.md`
+
+Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は新規保存・replay・backlog判定に使わない。Drive実装の保存版は `archive/drive-fallback-before-removal-20260910` ブランチにのみ残す。
+
+## 2. 24-run maintenance gate
+
+時刻routingより先に `.survey/work-queue/maintenance-cycle.json` を処理する。カウント対象は通常Scheduled Chat workerだけで、探索専用workerの毎時`:00` runは加算しない。
+
+1. 現在のScheduled Chat実行枠をJSTで一意な `run_key` とする。
 2. `last_counted_run_key` が同じなら二重加算しない。
-3. 新しいrunなら `total_runs_counted += 1`、`runs_since_maintenance += 1`、`last_counted_run_key = run_key` としてstateを更新する。
-4. `runs_since_maintenance < cadence_runs`（現在24）なら通常routingへ進む。
-5. `runs_since_maintenance >= cadence_runs` になったrunはmaintenance runとし、同じ更新で `runs_since_maintenance = 0`、`maintenance_sequence += 1`、`maintenance_pending = true`、`last_maintenance_requested_at` を設定する。
-6. maintenance runでは論文worker、その他更新worker、fallback replay、discovery、research、auditを実行しない。`.github/workflows/maintenance.yml` により `.survey/scripts/full_gc.py` → `.survey/scripts/check_repository.py` を実行し、そのrunは終了する。
-7. workflowは結果を `.survey/reports/full-gc-latest.json` と `.survey/reports/consistency-latest.json` に保存し、maintenance stateを更新する。
-8. maintenance失敗・遅延でpendingが残っても、後続run全体は止めず問題として扱う。
+3. 新しいrunなら `total_runs_counted += 1`、`runs_since_maintenance += 1`、`last_counted_run_key = run_key` を保存する。
+4. `runs_since_maintenance < cadence_runs` なら通常routingへ進む。cadence値はstateを正本とする。
+5. `runs_since_maintenance >= cadence_runs` のrunでは、同じ更新で `runs_since_maintenance = 0`、`maintenance_sequence += 1`、`maintenance_pending = true`、`last_maintenance_requested_at` を設定する。
+6. maintenance runは論文worker、その他更新worker、fallback replay、discovery、research、auditを行わない。`.github/workflows/maintenance.yml` にfull GC + repository-wide consistency checkを委ね、そのrunは終了する。
+7. maintenance失敗・遅延でpendingが残っても後続run全体は止めず、問題として扱う。
 
-full GCは論文Markdown、docs、scripts、workflow、`next-jobs.json`、queue state、record banks、fallback inbox/archive、現在参照中jobを削除しない。terminal jobや旧runtime artifactは保持期間を満たしlive参照がない場合だけ削除する。
+maintenanceは論文Markdown、docs、scripts、workflow、現在参照中job、queue/state、record banks、fallback ledgerを無条件削除しない。GC対象と保持期間の詳細はmaintenance実装を正本とする。
 
-## 1. run全体を止める条件
+## 3. 時刻routing
 
-個別jobの失敗、単一payloadの失敗、Library pending増加、GitHub fallback-inbox増加、record bank枯渇はrun停止理由ではない。
+maintenance runでない場合だけ次を適用する。
 
-run終了前に `continuation-policy.json` を評価し、可能なら `.survey/scripts/continuation_gate.py` を使う。
+- **08:30 JST**: その他更新workerだけを実行する。
+- **それ以外の毎時`:30`**: 通常論文workerを実行する。
+- **別タスクの毎時`:00`**: 探索専用worker。通常workerのmaintenance counterへ加算しない。
 
-少なくとも次を確認する。
+同じ`:30`枠で通常論文workerとその他更新workerを両方実行しない。
 
-1. GitHub readは可能か。
-2. 未反映の完成成果をGitHubまたはLibraryへ耐久保存済みか、保存可能か。
-3. GitHub ready、Library fallback spillover、GitHub intakeを含めて独立作業が残るか。
-4. readyが空でもLibraryへoffline job seedを保存して新規discoveryを安全に継続できるか。
-5. プラットフォーム上限に達していないか。
+## 4. 通常論文worker
 
-`CONTINUE` で独立作業がある場合、問題報告だけ出して終了してはならない。
+通常論文runは [always-on-worker.md](always-on-worker.md) のwork-conservingループに従う。固定research件数、固定audit件数、固定discovery round数、固定総candidate数、固定batch数をrun終了条件にしない。
 
-## 2. run開始時の回復とbacklog index
+research / audit / discoveryの完全logical payloadをGitHubへ送信済み、またはChatGPT Libraryへ耐久checkpoint済みなら、Actionsのterminal反映を次の独立作業開始の同期障壁にしない。`next-jobs.json`は優先スナップショットであり全ready一覧ではないため、countsやjob実体にreadyが残る場合は表示枠だけで「仕事なし」と判断しない。
 
-GitHub readが可能なら最新queue/identityに加え、可能な範囲で次を読む。
+research / auditの品質、5-slot structured record、preflight、paper family routingは `queue-v10.md` とpaper templateを正本とする。
 
-- ChatGPT Library: `/LLM-survey-outbox/pending/`
-- GitHub intake: `.survey/work-queue/fallback-inbox/*.json`
-- GitHub archive: `.survey/work-queue/fallback-archive/*.json`
+## 5. discovery共有stateの所有権
 
-一時的に次を作る。
+`.survey/work-queue/discovery-state.json` は **GitHub Actionsを単一writer** とする。通常Scheduled Chat workerも探索専用Scheduled Chat workerもこの共有stateを直接編集しない。
 
-- `checkpointed_job_ids`: 完全research/audit payloadがLibraryまたはGitHub fallback-inboxへ耐久保存済みのjob
-- `spillover_candidates`: offline job seedに含まれ、まだ完成payloadがcheckpointされていない候補
+各discovery submissionは観測値をトップレベル `discovery_stats` として渡し、GitHub Actions側が重複抑止後の採用結果と合わせて共有stateへ反映する。Scheduled Chatは探索開始時とcandidate投入直前に最新HEAD / identity / queue / discovery-stateを再取得する。
 
-GitHub上で`ready`でもcheckpoint済みjobは再精読しない。GitHub statusはActionsが反映するまで未完了のまま維持する。
+1探索軸・1 submissionのcandidate上限5本はtransport batch上限であり、run全体の上限ではない。0件、全重複、5件送信、soft target到達だけを終了理由にしない。詳細はdiscovery各正本に従う。
 
-### replay所有権
+## 6. fallbackとreplay
 
-- Library pending → Scheduled ChatがGitHub write可能なrunで `.survey/work-queue/fallback-inbox/<id>.json` へ送る。固定record bankや`chat-inbox.json`へ直接replayしない。
-- GitHub fallback-inbox → `.survey/scripts/dispatch_fallback_inbox.py` を呼ぶsurvey-helperだけが固定transportへ展開する。
+耐久経路は次の2つだけ。
 
-Library pendingをGitHub intakeへ送る前に同じ`id`のinbox/archiveを確認する。内容一致なら再writeせずLibrary側をprocessedへ移してよい。内容不一致ならID衝突としてfailedへ隔離する。
+1. GitHub direct transport
+2. ChatGPT Library `/LLM-survey-outbox/pending/`
 
-## 3. GitHub write失敗の診断
+Library pendingの回復はScheduled ChatがGitHub immutable intake `.survey/work-queue/fallback-inbox/<id>.json` へ送る。固定record bankや`chat-inbox.json`へ直接replayしない。GitHub fallback-inboxから固定transportへの展開は `.survey/scripts/dispatch_fallback_inbox.py` を呼ぶsurvey-helperだけが行う。
 
-1. 失敗対象の最新blob SHA / repo状態を再取得し、その対象だけ1回再試行する。
-2. まだ失敗する場合、そのrun最初のwrite失敗に限り `.survey/work-queue/transport/health-probe.json` を1回更新する。
-3. probe成功 → `target_or_payload_specific`。影響payloadだけLibraryへcheckpointし、他のGitHub writeを継続する。
-4. probe失敗 → `run_wide_github_write_unavailable`。そのrunでは以後GitHub writeを繰り返さず、完成成果とoffline seedをLibraryへ保存しながら研究を続ける。
+同一envelope ID・同一内容は冪等に受領し、同一ID・異内容は衝突として隔離する。research/audit fallbackのimmutable envelopeが作成時のrecord bankを参照していても、dispatcherはreplay時点で安全なbankへ一時再配置してから固定transportへ展開する。immutable ledger自体は書き換えない。
 
-GitHub direct writeもLibrary保存もできない場合だけ、未checkpoint成果を増やす前にSTOP_RUNする。
-
-## 4. 論文worker
-
-正本: [queue-v10.md](queue-v10.md)、[candidate-buffer-policy.md](candidate-buffer-policy.md)、[paper template](../../templates/paper.md)、`.survey/work-queue/next-jobs.json`。
-
-research / auditに着手する前に `.survey/templates/paper.md` を読む。新しい会話・実行環境ではテンプレートが例示するMoE-Infinityのまとめも確認する。
-
-Chatは探索、一次資料全文取得、全文精読、科学的判断、監査判断、構造化research record作成を担当する。探索専用workerが追加されても通常workerの探索責務は維持する。完成Markdownは作成・送信しない。
-
-実行順:
-
-1. `candidate-buffer-policy.md` に従ってcandidate在庫水位を確認し、必要ならreadyが残っていてもdiscovery補充を行う。
-2. GitHub readyから`checkpointed_job_ids`を除いたactionable readyをpriority順に処理。
-3. actionable readyがなければLibrary seed由来の`spillover_candidates`をpriority順に処理。
-4. それもなければdiscovery。
-5. job完了、blocked化、checkpoint後はqueue/backlogとcandidate在庫を再取得して1へ戻る。
-6. 固定件数・固定バッチ数・「1本終わったら終了」は設けない。
-
-checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` の `ensure_discovery_excluding_checkpointed` を使って新規discovery jobを発行してよい。元job statusは変更しない。
-
-### discoveryの重複回避と再探索
-
-探索開始前に、repo内の既収録論文から可能な範囲で識別集合を作る。最低限、arXiv ID、DOI、正規化タイトルを既収録ID集合として扱う。検索結果は全文取得や詳細評価の前にこの集合で先行フィルタし、既収録候補を除外する。
-
-- 検索ソース側で完全除外できない場合は、まず軽量に広めの候補集合を取得し、ローカル重複除去後の未収録候補だけを詳細評価する。
-- arXiv ID / DOIが一致するものは重複とする。IDがなくてもタイトル正規化で同一と判断できるものは重複扱いにしてよい。
-- 重複判定のためだけに本文精読は行わない。
-- 探索専用workerとの競合を考慮し、candidate投入直前にも最新HEAD / identity / queue / existing jobsを再取得して二度目の重複判定を行う。
-
-1回の探索ラウンドで候補が全て重複または有力な未収録候補が0件だった場合、それ自体をdiscovery終了理由にしない。同一run内で探索軸を変更して再探索する。
-
-推奨ラウンド:
-
-1. 通常の重点テーマ検索。
-2. 検索語・表現を変更した同テーマ再検索。
-3. 引用・被引用、関連実装、隣接技術語を使った展開検索。
-4. 隣接テーマへの拡張検索。
-
-同じ検索戦略・ほぼ同じクエリを反復しない。固定ラウンド数で機械的に埋める必要はないが、少なくとも通常検索が重複だけで終わった場合は1段以上探索軸を変えて再探索する。プラットフォーム上限、保存不能、または有望領域を合理的に使い切った場合のみそのrunのdiscoveryを終了する。
-
-各ラウンド終了時に `.survey/work-queue/discovery-state.json` を更新し、探索軸、検索概要、取得候補数、重複除外数、未収録候補数、採用数、重複率、次回推奨探索軸を記録する。高重複の探索軸は直後のrunで機械的に再使用せず、別軸を優先する。共有stateのwrite前には最新blob SHAを再取得し、探索専用workerの更新を古いstateで上書きしない。
-
-### GitHub write不能中のoffline discovery
-
-GitHub writeがrun-wideで停止していてもLibraryへ保存可能なら探索を止めない。
-
-1. identity、既存GitHub jobs、Library pending、GitHub fallback-inboxと重複確認。
-2. 候補0〜5件を選ぶ。弱い候補で埋めない。
-3. `.survey/work-queue/transport/offline-job-seed.json` を書くenvelopeをLibraryへ保存。
-4. candidateのresearch job IDを決定論的に計算。
-5. seed保存後、GitHub job実体化を待たず全文精読してよい。
-6. 完成research recordを同じjob IDの5-slot + inbox envelopeとしてLibraryへ保存。
-7. 次の候補または次のdiscoveryへ進む。
-
-job ID規則は [fallback-routing.md](fallback-routing.md) を正本とする。
-
-## 5. record bankと品質
-
-利用可能bankは `.survey/work-queue/records/bank-registry.json` を正本とする。GitHubへ直接slotを書き始める前に、可能なら:
-
-```bash
-python .survey/scripts/select_record_bank.py --repo-root .
-```
-
-を使う。
-
-A〜Hすべてがdirty/使用中でも、Libraryへ完全payloadを保存できれば研究を止めない。fallback backlogはbank数を研究容量上限にしない。
-
-structured recordはrendererが後で内容を補う前提で短縮しない。完成扱いにする直前にActions側と同じvalidator基準でpreflightし、5 slotの必須項目・最低説明量・日本語率・用語規則を確認する。基準未達ならそのrunで該当slotを補強する。Actions validation failureは該当jobだけrepair対象とし、独立jobを止めない。
-
-## 6. fallback envelopeと復旧
-
-Libraryは `schema_version: 1` envelopeを使う。research/auditでは1論文につき1 envelopeに5 slot + `chat-inbox.json` を完全に含める。完成Markdownは保存しない。
-
-offline seedも同じenvelopeの`writes`で `.survey/work-queue/transport/offline-job-seed.json` を配送する。
-
-fallback保存成功はGitHub publication成功ではないが、耐久checkpointとして後続研究へ進んでよい。復旧時はLibraryから固定transportへ直接戻さずGitHub immutable intakeを経由する。
+単一write失敗、単一replay失敗、Library pending増加、GitHub fallback-inbox増加、record bank枯渇だけではrun全体を止めない。停止判定は `continuation-policy.json` を正本とする。
 
 ## 7. その他更新worker（08:30専用）
 
-対象は以下だけ。
+対象は次だけ。
 
 1. `framework-updates/**`
 2. `llm-releases/**`
 
-論文queueには触れない。既存の固定 `.survey/update-worker/update-payload.json` と `.survey/update-worker/update-inbox.json` を使う。
+論文queueには触れない。固定 `.survey/update-worker/update-payload.json` と `.survey/update-worker/update-inbox.json` を使う。GitHub write不能でも更新payloadをLibraryへ耐久保存できるならScheduled task自体を停止・無効化・再作成しない。復旧はGitHub immutable intakeを経由する。
 
-GitHub write失敗時は同じhealth probeを使い、更新payloadをLibraryへ耐久保存できればScheduled task自体を停止・無効化・再作成しない。復旧時はGitHub immutable intakeを経由する。
-
-さらに08:30 runでは [suggestion-box.md](suggestion-box.md) に従い、ChatGPT Library `/LLM-survey-suggestion-box/pending/` の未報告提案を確認する。pendingが0件なら目安箱について余分な通知は出さない。pendingがある場合は実質重複をまとめ、重要度の高い順に「観測された問題・提案・期待効果・リスク」をユーザーへ簡潔に報告する。目安箱の提案を08:30 worker自身の判断で自動実装しない。ユーザーへの報告を生成した後に限り、報告済みファイルを `/LLM-survey-suggestion-box/reported/` へ移す。移動失敗時はpendingに残し、未報告のまま失うことを避ける。
+08:30 runでは [suggestion-box.md](suggestion-box.md) に従い、ChatGPT Library `/LLM-survey-suggestion-box/pending/` を確認する。pendingが0件なら目安箱について通知しない。pendingがある場合は実質重複をまとめ、`improvement` と `continuation_obstacle` を区別して重要度順に報告する。ユーザーの明示採用なしに提案を自動実装しない。報告生成後だけ `reported/` へ移し、移動失敗時はpendingに残す。
 
 ## 8. 作業中の改善知見
 
-maintenance runを除く通常workerは、実作業中に具体的な摩擦、失敗、重複作業、無駄、復旧コスト、品質低下リスクを観測し、具体的で実行可能な改善案を得た場合だけ [suggestion-box.md](suggestion-box.md) に従ってLibrary `/LLM-survey-suggestion-box/pending/` へ1提案1ファイルで保存する。提案を作るための追加探索や件数ノルマは設けない。既存pending・最近のreportedと実質重複する案は追加しない。重大障害は目安箱へ送って先送りせず、通常の問題報告・修復経路を使う。
+maintenance runを除くworkerは、実作業中に具体的な摩擦、失敗、重複作業、無駄、復旧コスト、品質低下リスクを観測し、具体的で実行可能な改善案を得た場合だけsuggestion boxへ保存する。提案を作るための追加探索や件数ノルマは設けない。
 
-目安箱への保存はbest-effortの観測処理であり、失敗してもresearch、queue、fallback checkpoint、GitHub publicationを止めない。成果保存を常に目安箱より優先する。目安箱はresearch record、queue、fallback、run ledgerの代替にしない。
+run終了時、実行可能だったはずの独立作業を何かが妨げた場合は `continuation_obstacle` を検討する。ただしsuggestion-box保存はbest-effortであり、research、queue、fallback checkpoint、GitHub publicationを止めない。
 
 ## 9. 通知
 
-予定タスク本文に通知条件が指定されている場合はそちらを優先する。問題報告はrun終了命令ではない。Stop Gateが`CONTINUE`なら、必要な通知を行った後も処理可能な範囲でjobを続ける。
+予定タスク本文に通知条件が指定されている場合は、その通知条件を優先する。問題報告はrun終了命令ではない。STOP判定が`CONTINUE`なら、必要な通知後も処理可能な独立作業を続ける。
 
-08:30 JSTの通知には、その他更新workerの更新結果に加え、直近24時間の論文サーベイ状況として次の3項目を必ず含める。
+08:30 JSTの通知にはその他更新workerの結果に加え、直近24時間について次を含める。
 
-1. 発見した論文数: 直近24時間のdiscoveryで重複除外後に新規候補として発見した論文数。通常workerと探索専用workerの双方を集計対象とし、candidate identityで重複排除する。
-2. 追加した論文数: 直近24時間に正本リポジトリへ新規収録された論文数。
-3. 残っている論文候補数: 通知時点でresearch対象として未処理の候補数。GitHub queueのactionable readyと、Library/GitHub fallback由来の未checkpoint spillover候補を重複排除して数える。
+1. **発見した論文数**: 通常workerと探索専用worker双方のdiscoveryで、重複除外後に新規候補として発見した論文数。
+2. **追加した論文数**: 直近24時間に正本repoへ新規収録された論文数。
+3. **残っている論文候補数**: 通知時点の未処理research候補数。GitHub readyとfallback由来spilloverを重複排除する。
+4. 可能なら **candidate inventory / target inventory(50)**。
 
-可能な限りrun ledger、discovery state、queue、fallback状態などrepoが保持する記録から集計し、推測値を確定値として報告しない。集計不能な項目がある場合は、その項目を「集計不能」と明示する。
+run ledger、discovery-state、queue、fallback状態など耐久記録から集計し、集計不能な値を推測しない。
