@@ -1,0 +1,80 @@
+name: Survey status dashboard
+
+on:
+  pull_request:
+    paths:
+      - '.survey/work-queue/**'
+      - '.survey/scripts/build_status_dashboard.py'
+      - '.survey/scripts/ensure_dashboard_history.py'
+      - '.survey/tests/test_status_dashboard.py'
+      - '.survey/docs/survey-workflow/discovery-continuation-policy.md'
+      - '.github/workflows/status-dashboard.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/**'
+      - '.survey/scripts/build_status_dashboard.py'
+      - '.survey/scripts/ensure_dashboard_history.py'
+      - '.survey/tests/test_status_dashboard.py'
+      - '.github/workflows/status-dashboard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-status-dashboard-main
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Dashboard regression tests
+        run: python -m pytest .survey/tests/test_status_dashboard.py -q
+      - name: Render dashboard in check mode
+        run: python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
+
+  publish:
+    if: >-
+      (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]') ||
+      github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Refresh STATUS.md against latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/ensure_dashboard_history.py --repo-root .
+            python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+            git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
+            if git diff --cached --quiet; then
+              echo 'Dashboard already current.'
+              exit 0
+            fi
+            git commit -m 'chore: refresh survey status dashboard'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push conflict on attempt ${attempt}; regenerating from latest main."
+            sleep $((attempt * 2))
+          done
+          echo 'Failed to publish STATUS.md after retries.' >&2
+          exit 1
