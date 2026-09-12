@@ -2,7 +2,7 @@
 
 この文書は論文survey workerの **candidate供給・discovery水位制御** の正本とする。既存の `queue-v10.md` にある「actionable readyが尽きたらdiscovery」という受動的な記述より、本書の水位制御を優先する。research品質、transport、fallback、maintenance、08:30 routing等は従来の正本に従う。
 
-探索ラウンドの継続・停止判断は `.survey/docs/survey-workflow/discovery-continuation-policy.md` を正本とし、通常論文worker（毎時:30）と探索専用worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、target到達、単一sourceの一時障害だけを理由にdiscoveryを停止せず、同ポリシーに従って探索軸・source・query familyを切り替える。
+探索ラウンドの継続・停止判断は `.survey/docs/survey-workflow/discovery-continuation-policy.md` を正本とし、通常論文worker（毎時:30）と探索専用worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、candidate在庫が多いこと、単一sourceの一時障害だけを理由にdiscoveryを停止せず、同ポリシーに従って探索軸・source・query familyを切り替える。
 
 ## 目的
 
@@ -12,13 +12,12 @@ research workerが候補枯渇で停止しないよう、discoveryをresearch開
 
 重複排除後の未処理research候補を `candidate_inventory` とする。
 
-- `target_inventory = 50`
 - `low_watermark = 25`
 - `critical_watermark = 15`
 
-通常は50本前後の候補在庫を目標にする。25本未満になった時点でdiscovery補充をresearchと並行して加速し、15本未満では候補枯渇防止を優先してdiscovery比重をさらに上げる。0本になるまで待ってから探索を始めてはならない。
+25本以上の候補がある状態は、通常論文workerがresearchへ十分に注力できる在庫水準とみなす。25本未満になった時点でdiscovery補充をresearchと並行して加速し、15本未満では候補枯渇防止を優先してdiscovery比重をさらに上げる。0本になるまで待ってから探索を始めてはならない。
 
-50本はhard capではない。50本を超えた場合も、低コストな新着確認・引用追跡等で高価値候補が見つかるならcandidate poolへ追加してよい。件数維持のために弱い候補を採用しない。
+`candidate_inventory` には上限も目標件数も設けない。50本、100本、それ以上に増えても、それ自体を理由に探索専用workerのdiscoveryを弱めたり止めたりしない。一方、通常論文workerは候補が十分にある間はresearchを主処理とし、探索より全文精読・structured record作成・必要なauditを優先する。件数維持のために弱い候補を採用しない。
 
 `candidate_inventory` はGitHub queueの未処理research候補、Library/GitHub fallback由来の未checkpoint spillover、candidate pool相当の未処理候補をcanonical ID / arXiv ID / DOI / normalized titleで重複排除して数える。blocked/deferredで現在research不能な論文は通常在庫に含めない。
 
@@ -34,10 +33,10 @@ Research段階で初めて一次資料全文を取得・精読し、repository-q
 
 candidate供給は2つのScheduled Chat workerが共有する。
 
-1. **通常論文worker（毎時:30）**: research / auditに加えて、従来どおりdiscoveryも行う。
+1. **通常論文worker（毎時:30）**: research / auditを主担当とし、candidate在庫が不足した場合や低コストで高価値候補を拾える場合はdiscoveryも行う。
 2. **探索専用worker（毎時:00）**: discovery、軽量候補評価、priority付与、candidate投入だけを行う。
 
-探索専用workerの追加を理由に通常論文workerのdiscoveryを停止・縮小しない。両workerは同じ `candidate_inventory`、identity、queue、discovery stateを共有する。
+探索専用workerはcandidate在庫が十分でも探索を継続し、高価値候補を広く供給する。通常論文workerはcandidate在庫が25本以上あり、処理可能なresearch jobが存在する場合、広範なdiscoveryよりresearchを優先する。探索専用workerの存在だけを理由に通常論文workerからdiscovery機能そのものを削除してはならないが、在庫が十分な間は通常論文workerのdiscovery比重を下げてよい。
 
 二重投入を防ぐため、両workerとも探索開始前とcandidate投入直前に最新HEADを再確認し、canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで再重複判定する。片方が探索中にもう片方やActionsが同じ候補を先に登録した場合、後発workerはその候補を送らない。競合が残る場合も正本側のdedupeで1候補へ収束させる。
 
@@ -87,10 +86,9 @@ research workerは原則としてpriorityの高い候補から処理する。can
 
 maintenance runと08:30 other-update runを除くpaper workerでは、run開始時とjob処理後にcandidate_inventoryを再評価する。
 
-- 25以上: priority順researchを主処理としつつ、低コストdiscoveryを許可する。
+- 25以上: priority順researchを主処理とする。処理可能なresearch jobがある限り、広範なdiscoveryより全文精読・structured record作成・必要なauditを優先する。低コストな新着確認や高価値候補の発見は許可する。
 - 15〜24: researchを継続しながらdiscovery補充を積極化する。
 - 0〜14: discovery補充を優先し、複数の探索経路を使って在庫回復を図る。見つかった高priority候補のresearchを同一runで進めてもよい。
-- 50以上: researchを主処理とするが、高価値候補を逃さないため低コスト探索は停止必須としない。
 
 固定件数・固定batch数は設けない。候補が0件の探索ラウンドがあっても別軸へ切り替える。プラットフォーム上限、耐久保存不能、または合理的に有望探索軸を使い切った場合のみそのrunのdiscoveryを終了する。
 
@@ -104,4 +102,4 @@ fallback envelopeにも探索時点の `discovery_stats` を保持し、GitHub�
 
 ## 08:30 reporting
 
-08:30 JSTの報告では従来の「直近24時間の発見数・追加数・残候補数」に加え、可能なら `candidate_inventory / target_inventory` を示す。在庫がlow watermark未満ならその旨を短く示す。集計できない場合は推測値で埋めない。
+08:30 JSTの報告では従来どおり「直近24時間の発見数・追加数・残候補数」を示す。在庫がlow watermark未満ならその旨を短く示す。target inventoryは設けないため、`candidate_inventory / target_inventory` の比率表示は行わない。集計できない場合は推測値で埋めない。
