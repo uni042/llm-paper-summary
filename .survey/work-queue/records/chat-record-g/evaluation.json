@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.29986-20260913-0530-v10-g",
-  "job_id": "job-research-9ec262cfb6759c96",
+  "attempt_id": "attempt-2604.06370-20260913-0530-v10-g",
+  "job_id": "job-research-8d8feec36f937b6f",
   "data": {
-    "hardware": "プリフィルはTenstorrent Blackhole p150bを4基、デコードはNVIDIA A100 80GBを1基使用し、100Gbps RoCE/RDMAで接続する。ホスト側CPUとネットワークを含む実機構成で、同じA100をプリフィルとデコードへ使う同種HBM分離方式と比較する。",
-    "software": "デコード基盤はvLLM 0.19.1を用い、PagedAttentionへBFP8の遅延復元処理を融合する。Tenstorrent側はBFP8/BFP4ネイティブ実行とデバイス主導KV送信を実装する。比較ではDistServe型の同種分離構成と、異種機を同居させるSarathi系の理想化静的分割を用いる。接頭辞キャッシュは無効化してKV再利用の影響を除く。",
-    "methodology": "Qwen3の4B、8B、14B、32Bを使い、ShareGPT、LongBench、arXiv要約系ワークロードでPoisson到着を生成する。各モデルにTTFTとトークン間遅延のサービス品質目標を設定し、両方を満たす要求が90%以上となる最大到着率を有効スループットとして測る。4Bは512入力/512出力、8Bは1024/384、14Bは2048/256、32Bは4096/64トークンを中心に評価する。費用評価ではA100費用を1とし、Blackhole p150を約1/12として構成費と有効スループットの比を比較する。品質はQwen3-8B/32BでMATH500、AIME 2024、AIME 2025を測り、BF16全工程、BFP8全工程、HMA-Serveの段階別精度を比較する。構成要素評価ではBFP8プリフィル性能、層別転送、デバイス主導送信、遅延復元を個別に測る。",
-    "scope": "評価は実際のGDDR系TenstorrentアクセラレータとHBM系NVIDIA GPUを跨ぐ構成で、異ベンダー・異数値形式の実装問題を含む。一方、プリフィル機はBlackhole、デコード機はA100に固定され、他ベンダー組合せの一般化は未実証である。4Bの短いプリフィルではA100の方が速く、異種構成は常に性能優位ではない。100Gbpsネットワークと特定のモデル長を前提とするため、より高速なネットワークや極端な長文では転送・復元の支配率が変わる。",
-    "workloads": ["Qwen3-4B ShareGPT", "Qwen3-8B ShareGPT", "Qwen3-14B LongBench", "Qwen3-32B arXiv要約", "MATH500", "AIME 2024", "AIME 2025"],
-    "baselines": ["DistServe型A100同種分離構成", "Sarathi-Hetero Oracle", "全工程BF16", "全工程BFP8", "素朴な一括KV形式変換"],
-    "metrics": ["90%サービス品質達成時の有効スループット", "費用当たり有効スループット", "先頭トークン遅延", "トークン間遅延", "KV転送帯域", "復元時間", "生成品質正解率"],
-    "reproducibility": "論文は使用アクセラレータ、ネットワーク、vLLM版、モデル、入力・出力長、サービス品質目標、費用正規化、品質ベンチマークを明示する。公式コードは未確認のため、完全再現には論文記載のTenstorrent側実装を再構築する必要がある。"
+    "hardware": "三つのモデルで実機評価する。Llama3-8Bは単一NVIDIA L40と128 vCPU、Qwen2.5-7Bは単一RTX 5000、Qwen2.5-14Bは2基のRTX 5000と48 vCPUを使用する。GPUメモリ容量がマルチLoRAの共有文脈KVと同時デコード数をどう制約するかを測る。",
+    "software": "ForkKVはSGLang v0.5.6を基に約3千行のPythonコードと専用Tritonカーネルで実装する。比較対象はvLLM v0.12.0とSGLang v0.5.6の標準接頭辞キャッシュで、品質比較にはアダプタ一致時のみ再利用する通常接頭辞キャッシュと、アダプタ差を無視して全KVを再利用する方式を使う。",
+    "methodology": "ReAct型逐次ワークフローとMapReduce型並列ワークフローを各8個構成し、各エージェントに異なるrank 16のLoRAを割り当てる。共有静的文脈と個別指示を組み合わせ、LooGLEは共有32742トークン、NarrativeQAは49119、APIGenは64911を中心に使う。要求到着は平均2 req/sの継続負荷で、ツール呼出しは0.1秒待ちと100トークンの模擬応答、生成上限は256トークンとする。ワークフロー数、要求到着率、LoRA rank 8/16/32、生成長を変えてスループットを測る。品質はHotpotQAとAPIGenから各200例を使いF1で測り、三モデルについて通常接頭辞キャッシュ、ForkKV、全面KV再利用を比較する。",
+    "scope": "共有文脈が非常に長く、異なるLoRAエージェントが同じ接頭辞を読むマルチエージェント配信が主対象である。GPUメモリ競合が強い条件ほど利得が大きく、低並列で全KVがメモリへ収まる場合は追加カーネル費用により通常方式より遅くなることがある。bCacheの共有は第2層以降で近似なので、完全無損失KV管理ではない。評価は三つの代表モデルとrank 8〜32を含むが、非常に大きなLoRA rankや共有接頭辞が短い負荷への一般化は限定的である。",
+    "workloads": ["Llama3-8B", "Qwen2.5-7B", "Qwen2.5-14B", "LooGLE", "NarrativeQA", "APIGen", "HotpotQA", "ReAct", "MapReduce"],
+    "baselines": ["vLLM 0.12.0接頭辞キャッシュ", "SGLang 0.5.6 RadixAttention", "アダプタ一致接頭辞キャッシュ", "アダプタ差を無視する全面KV再利用"],
+    "metrics": ["ワークフロースループット", "平均エージェント当たりKVメモリ", "キャッシュヒット率", "平均デコードバッチサイズ", "F1品質", "隠れ状態類似度"],
+    "reproducibility": "モデル、GPU、主要ソフトウェア版、データセット、共有文脈長、要求到着率、LoRA rank、ツール待ち、生成長、品質サンプル数を明示する。公式コード公開は確認できないため、ResidualAttentionとDualRadixTreeの完全再現には論文記載からの実装が必要である。"
   }
 }
