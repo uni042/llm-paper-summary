@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T07:37:28.048351+00:00",
+  "updated_at": "2026-09-12T07:48:22.653178+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9034,19 +9034,19 @@
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "first_recorded_at": "2026-09-12T07:34:22.781369+00:00",
-      "last_recorded_at": "2026-09-12T07:37:28.048351+00:00",
+      "last_recorded_at": "2026-09-12T07:48:22.653178+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -9093,6 +9093,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34681618895:1",
+          "recorded_at": "2026-09-12T07:48:22.653178+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34681618895",
+            "run_attempt": "1",
+            "source_sha": "22cf04df834e3295059db90499685687bc35a89a"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9109,6 +9124,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2b3d10df7e47e17c",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09241",
+          "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
           "from": "ready",
           "to": "completed"
         }
@@ -9137,7 +9160,8 @@
         }
       ],
       "new_paper_ids": [
-        "arXiv:2609.10812"
+        "arXiv:2609.10812",
+        "arXiv:2609.09241"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1630JST-discovery-7c31e8b2a460d1f4.json",
@@ -9145,8 +9169,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 333,
-      "paper_active_count_after": 334,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 335,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

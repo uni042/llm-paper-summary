@@ -7,26 +7,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 145,
+      "completed": 146,
       "superseded": 43,
       "deferred": 3,
-      "ready": 2,
-      "blocked": 3
+      "blocked": 3,
+      "ready": 1
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-2b3d10df7e47e17c",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2609.09241",
-      "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
-      "source_url": "https://arxiv.org/abs/2609.09241",
-      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-d8b01443e423e709",
       "type": "research",
@@ -40,5 +28,5 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     }
   ],
-  "generated_at": "2026-09-12T07:37:27+00:00"
+  "generated_at": "2026-09-12T07:47:33+00:00"
 }

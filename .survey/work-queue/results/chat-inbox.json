@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
+  "ok": true,
   "job_id": "job-research-2b3d10df7e47e17c",
-  "validation_error": "ValueError: problem_method.components[0].description is too short",
-  "repair_required": true,
-  "isolated_at": "2026-09-12T07:45:05+00:00"
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md",
+    "identity_delta": "survey-state/identity-deltas/arxiv/2609.09241.json"
+  },
+  "job_status": "completed"
 }
