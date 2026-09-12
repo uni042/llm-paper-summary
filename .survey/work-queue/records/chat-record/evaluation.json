@@ -2,23 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2501.14417-20260913-0340-v10-a",
-  "job_id": "job-research-5f9a998b042661ba",
+  "attempt_id": "attempt-2603.03251-20260913-0430-v10-a",
+  "job_id": "job-research-f0796c3a0863aed5",
   "data": {
-    "hardware": ["Huawei Ascend 910B: FP16 400 TFLOPS、HBM 64GB。Gen1クラスタは各サーバ8 NPU、サーバ間200Gbps RoCE。", "CloudMatrix384 SuperPod: 48サーバ、384 Ascend 910C。910Cは2ダイ構成で各ダイFP16 400 TFLOPS・HBM 64GB。NPU/CPU間を約200GB/s片方向の高帯域ネットワークと共有アドレス空間で接続。"],
-    "software": ["FlowServeは主にPython、RTCとDistFlowはC++。", "モデル格納はsafetensors。スケールアウト転送はHCCL P2P/RoCE、SuperPodではHCCS/共有メモリコピーを利用。", "モデル生成器はPyTorch動的グラフ系FlowTurboとAscend Transformer Boost静的グラフをサポート。"],
-    "model": ["34B級モデル TP=4（FlowServe/PD評価）", "Llama3-8B TP=1", "CodeLlama-34B TP=4", "Qwen-72B TP=8", "DeepSeek-V3/R1およびPangu-Ultra-MoEはSuperPod設計の対象例"],
-    "datasets": ["34BモデルのオンラインPD評価では約2K入力・200出力の内部トレース。", "分散スケジューラ評価ではコード生成サービスから抽出した内部トレース。", "FlowServeオフライン評価では2K/4Kプリフィル後に256デコードステップ。"],
-    "baselines": ["FlowServe v1/v2/v3", "PD-colocated対PD-disaggregated構成", "Round Robin分散スケジューラ", "モデル読込み: DRAM-miss（SSD）、DRAM-hit、理論PCIe値、NPU-fork over RoCE/HCCS"],
-    "correctness": "生成結果の近似を行わず、配置・非同期化・キャッシュ再利用を変更する。PD-awareの出力長予測は実行先TE種別選択だけに使用し、実際の生成長やトークンは対象モデルが通常どおり決定する。",
+    "hardware": ["ターゲットLlama-3.1-70B-Instructは4×NVIDIA H100 80GBでテンソル並列実行。", "SSDではLlama-3.2-1B-Instructドラフトを別の1×H100へ配置し、ターゲット検証と非同期に実行。", "Qwen3評価ではQwen3-32BターゲットとQwen3-0.6Bドラフトを使用。"],
+    "software": ["論文公式Saguaro/SSD実装。", "比較対象としてSGLang 0.5.9、vLLM 0.16.0を使用。", "通常の投機的デコード、自回帰デコード、対応条件ではEAGLE-3を比較。"],
+    "model": ["Llama-3.1-70B-Instruct + Llama-3.2-1B-Instruct", "Qwen3-32B + Qwen3-0.6B"],
+    "datasets": ["HumanEval", "Alpaca", "GSM8K", "UltraFeedback", "各128プロンプト、合計512プロンプト"],
+    "baselines": ["自回帰デコード", "通常の投機的デコード", "SGLang", "vLLM", "EAGLE-3"],
+    "correctness": "最終トークンはターゲット分布に対する通常の投機的デコードの受理・残差サンプリング規則で確定する。SSDが先に生成する分岐は候補計算に過ぎず、キャッシュミス時もバックアップを生成して同じ検証規則へ戻るため損失なしの生成分布を維持する。",
     "settings": [
-      {"name": "FlowServe世代比較", "description": "34BモデルをTP=4で実行し、入力2K/4K、256デコードステップで平均TPOTと処理量を測定。v1→v2で非同期スケジューリングとIPC最適化、v2→v3でデータ構造・サンプリング等を追加する。"},
-      {"name": "PD分離/同居評価", "description": "34B TP=4、内部トレース約2K入力・200出力、RPS 0.2〜1.2。2P2D、2P1D、4 PD-colocatedの三構成で平均/P90 TTFTとTPOT、プリフィル/デコード処理量を比較する。"},
-      {"name": "PD-aware分散配置", "description": "34B TP=4、4サーバ、2つのPD-colocated TEと1P1DのPD-disaggregated組を用い、5〜20 RPSでジョブ完了時間とTPOTをRound Robinと比較。出力長予測器は128トークン幅区間で84.9%精度。"},
-      {"name": "高速モデル読込み", "description": "Llama3-8B TP1、CodeLlama-34B TP4、Qwen-72B TP8でSSD由来DRAM-miss、事前ロードDRAM-hit、理論PCIe値、RoCE/HCCS NPU-forkを比較する。NPU-forkは別ノード間で測定。"},
-      {"name": "NPU-fork拡張性", "description": "Llama3-8B TP1をHCCS上で一つの稼働TEから最大32 TEへ同時複製し、ソースTEがプリフィル0〜512トークン、またはデコードバッチ0〜256を処理中の競合影響も測る。"}
+      {"name": "主エンドツーエンド評価", "description": "Llama-3.1-70B-Instructを4×H100、Llama-3.2-1B-Instructをドラフトとして用い、バッチ1・貪欲デコード・先読み5トークンでHumanEval、Alpaca、GSM8K、UltraFeedback各128件を評価し、各プロンプト512トークンを生成する。SSDだけドラフトを別1×H100へ置く。"},
+      {"name": "モデル族再現", "description": "Qwen3-32BとQwen3-0.6Bの組でも同じ4データセットを評価し、方式がLlama固有でないことを確認する。"},
+      {"name": "キャッシュ構造評価", "description": "受理長ごとに均等な分岐数を置く方式と、理論から導いた幾何学的分岐数配分を比較し、温度を変えながらキャッシュヒット率と端から端までの生成速度を測る。"},
+      {"name": "サンプリング評価", "description": "上位候補を下方重み付けする係数Cを掃引し、ドラフト受理率と投機キャッシュヒット率のトレードオフ、および最終生成速度への影響を測る。"},
+      {"name": "フォールバック・バッチ評価", "description": "バッチサイズを増やし、高品質だが遅いその場生成と、ランダムトークンを返す極低遅延バックアップを比較する。さらにドラフトGPU数を増やして分岐予算を広げた場合の速度向上を投影する。"},
+      {"name": "推論基盤比較", "description": "SGLang 0.5.9とvLLM 0.16.0で通常投機とEAGLE-3の先読み長・木サイズを掃引し、その中の強い構成を比較対象にする。既知の実装不具合で一部構成は非対応として除外する。"}
     ],
-    "methodology": "単一TEのFlowServeについて非同期化による処理量改善を時間軸で比較し、次に同一資源量でPD分離・同居の性能領域を測定する。その測定結果をヒートマップとして分散スケジューラへ落とし込み、内部コード生成トレースでRound Robinとの差を検証する。高速スケーリングは起動を五段階へ分解した時間内訳と、三モデルの重みロード経路別マイクロベンチ、最大32 TEへの同時NPU-forkで評価する。論文は単一マイクロベンチだけでなく、1年以上の実運用経験を設計根拠としている。",
-    "scope": "Huawei Ascend NPUとHuawei Cloud本番基盤が中心であり、FlowServe全体をNVIDIA GPU上で再現した比較はない。NPU-forkの高性能はHCCS等の高速NPU間リンクに依存する。PD-awareはオフライン測定ヒートマップと出力長予測に依存し、極端な高RPSではPD分離TEが過負荷になりRound Robinより悪化する場合がある。公開論文はモデルサービングに焦点を当て、ファインチューニング/エージェント基盤の詳細評価は省略する。"
+    "methodology": "単にSSDと弱い既定値を比較せず、まず通常投機、SGLang、vLLM、EAGLE-3の設定を掃引して強い比較対象を作る。次にSSD固有の三要素である分岐数配分、キャッシュ認識サンプリング、バッチ依存フォールバックを個別に評価し、最後にLlamaとQwenの二モデル族、四種類のコード・数学・対話データで端から端までのデコード速度と遅延・スループットのパレート前線を比較する。",
+    "scope": "主結果はバッチ1の対話型低遅延設定で、追加の1枚のH100をドラフト専用に使う。高バッチではフォールバックとキャッシュミスの影響を評価するが、論文自身も強いスループット律速の強化学習生成やオフライン大量生成では投機的デコード一般の追加計算が不利になり得るとする。"
   }
 }
