@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T11:47:59.179212+00:00",
+  "updated_at": "2026-09-12T12:02:39.503929+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10267,7 +10267,7 @@
     {
       "run_key": "2026-09-12T20:30:00+09:00",
       "first_recorded_at": "2026-09-12T11:32:49.993845+00:00",
-      "last_recorded_at": "2026-09-12T11:47:59.179212+00:00",
+      "last_recorded_at": "2026-09-12T12:02:39.503929+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -10276,9 +10276,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 2,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10355,6 +10355,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34692539731:1",
+          "recorded_at": "2026-09-12T12:02:39.503929+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34692539731",
+            "run_attempt": "1",
+            "source_sha": "005c99c7f6d8a68fc558b6d5e6e9fa8ce089e302"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10381,9 +10395,32 @@
           "title": "Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-4ec414ca721c48b8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-815a11adca713d7e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-cd343107b8035b92",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.21548",
+          "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference"
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2607.26633",
         "arXiv:2604.15039",
@@ -10391,12 +10428,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2034JST-discovery-3d74b84c91f65e2a.json",
-        ".survey/work-queue/results/20260912T2040JST-discovery-4ae9c512db20f673.json"
+        ".survey/work-queue/results/20260912T2040JST-discovery-4ae9c512db20f673.json",
+        ".survey/work-queue/results/20260912T2058JST-discovery-specialist-1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 350,
       "paper_active_count_after": 353,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

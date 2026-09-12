@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T11:17:11+00:00",
-  "last_run_key": "2026-09-12T19:30:00+09:00",
-  "last_round": "normal-worker-critical-buffer-network-runtime-2",
+  "updated_at": "2026-09-12T12:01:35+00:00",
+  "last_run_key": "2026-09-12T20:00:00+09:00",
+  "last_round": "specialist-critical-buffer-runtime-storage-moe-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -560,6 +560,23 @@
       ],
       "next_axis_hint": "If inventory remains critical after final dedupe, use citation expansion from newly accepted TENT/PipeMax/NELSSA-related work or rotate to GPU runtime and virtual-memory mechanisms; do not repeat heterogeneous-GPU or CXL-only queries immediately.",
       "source_submission": "work-queue/submissions/20260912T2018JST-discovery-job-4649dafe5fe3736a.json"
+    },
+    {
+      "run_key": "2026-09-12T20:00:00+09:00",
+      "round": "specialist-critical-buffer-runtime-storage-moe-1",
+      "axis": "GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御",
+      "query_summary": "candidate在庫がcritical watermark未満のため、直近の高重複CXL候補の単純反復を避け、GPU runtime/networking、agentic KV storage I/O、CXL sparse-attention KV、MoE expert cache/router、prefix-aware servingを横断して一次資料のtitle/abstract/書誌情報を軽量評価した。投入直前に最新mainのqueueとcanonical arXiv IDを再確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.16666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.18141"
+      ],
+      "next_axis_hint": "今回採用したBlink/DualPath/Cache-Aware Routerを起点に、GPU persistent scheduling・SmartNIC/RDMA control plane、storage NIC load balancing、MoE cache-aware routingの被引用/参考文献へ展開し、同じCXL既知候補の反復は避ける",
+      "source_submission": "work-queue/submissions/20260912T2058JST-discovery-specialist-1.json"
     }
   ],
   "axes": {
@@ -862,6 +879,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.5555555555555556,
       "next_axis_hint": "If inventory remains critical after final dedupe, use citation expansion from newly accepted TENT/PipeMax/NELSSA-related work or rotate to GPU runtime and virtual-memory mechanisms; do not repeat heterogeneous-GPU or CXL-only queries immediately."
+    },
+    "GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御": {
+      "last_run_key": "2026-09-12T20:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.16666666666666666,
+      "next_axis_hint": "今回採用したBlink/DualPath/Cache-Aware Routerを起点に、GPU persistent scheduling・SmartNIC/RDMA control plane、storage NIC load balancing、MoE cache-aware routingの被引用/参考文献へ展開し、同じCXL既知候補の反復は避ける"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
