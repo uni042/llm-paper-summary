@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-67895a0dd002f4a3",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.02989",
+      "title": "AcceptMoE: Commitment-Weighted Self-Sizing Verifier Expert Sets for Efficient MoE Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.02989",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2608.02989-acceptmoe-self-sizing-verifier-expert-sets.md",
+      "priority": 87,
+      "reason": "MoEをtargetにしたtree型投機的復号では、受理されない枝まで含むexpert集合が並列検証で広がり、expert-weight転送量がtoken数とは別に膨らむ問題を扱う。target router scoreと受理到達確率からverification blockごとのeligible expert集合を自動調整し、offloading時には自然routingの予測・prefetchではなくcache residencyをexpert選択へ直接組み込む。SGLang上で通常のEAGLE-3比、全expert GPU常駐でも1.29倍、物理expert offloadingでは2.06倍のthroughputを達成し、host-to-device trafficを73.6〜77.1%削減する。投機的復号とexpert offloadingを直接接続する独立性の高い候補。"
+    },
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/06-moe-expert-offloading/2026-2605.17889-cox-moe-coalesced-expert-cpu-gpu-coexecution.md",
+      "priority": 85,
+      "reason": "MoE offloadingでmicro-batch化されたexpert計算が演算密度を落とし、単純CPU offloadではPCIe転送とdecode attention適用範囲が制約になる問題に対し、AMX対応CPUとGPUを共同利用する。expert計算を通常batchへcoalesceする資源配分、attentionの選択的offload、頻出expertをGPUへ固定するexpert-aware stratificationを組み合わせ、FlexGen比最大7.1倍、MoE-Lightning比最大2.4倍のthroughputを報告する。expert weight移動だけでなく計算配置までCPU/GPU間で再設計するシステム候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:58:39+09:00",
+    "round": "specialist-moe-serving-runtime-3",
+    "axis": "MoE speculative decoding・expert offloading・CPU/GPU共同実行",
+    "query_summary": "GPU/runtime・framework implementation・MoE offloadingの独立軸を再走査し、AcceptMoE、CoX-MoE、Tutti、py-kvcache、SpecPrefetchを軽量評価した。Tutti、py-kvcache、SpecPrefetchは最新正本の決定論的research jobで既存を確認し、AcceptMoEとCoX-MoEは投入直前の最新main HEADでjob不存在、repo識別子/題名未検出、Library pendingに同候補なしを確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2605.03375",
+      "arXiv:2609.11744",
+      "arXiv:2607.24787"
+    ],
+    "next_axis_hint": "strong candidate発見により枯渇判定をリセット。backward references、CXL/SSD、KV sparse-attention、network collective、GPU kernel/compiler、framework update由来の論文を再走査する",
+    "empty_round_reason": null
+  }
+}
