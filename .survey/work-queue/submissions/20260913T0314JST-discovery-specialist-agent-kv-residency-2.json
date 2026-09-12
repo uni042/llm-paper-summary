@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ddd0b2f6171f2471",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.09643",
+      "title": "UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.09643",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.09643-unison-agent-session-kv-residency.md",
+      "priority": 94,
+      "reason": "tool待ちを挟むLLM agent loopでは、同一sessionの成長するKV prefixをHBM/下位階層へどう残すかがsession単位の問題になる。UNISONはreturn-gap hazardを使うSPEAR evictionと、idle windowをDMA予算として使うTIDE tieringを同じlive rankingで協調し、1,415 session・33,596 turnのtraceでAMATを22〜51%、長時間traceのTTFTを58〜89%削減する。28nmのnear-memory scheduler coreまで実装評価しており、agentic stateと階層KVをhardware/software co-designで結ぶ強い候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:02:31+09:00",
+    "round": "specialist-agent-kv-nearmemory-2",
+    "axis": "agent session KV residency・near-memory scheduling",
+    "query_summary": "第1roundのHBF/attention新着から独立してagent loopのsession-level KV residencyを探索した。Epoch、X-CoSD、Entwine、REACHは最新mainで既存research jobを確認して除外し、UNISONのみcanonical ID・決定論的job path・repository検索で未収録と再確認して送信した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2609.09748", "arXiv:2609.09166", "arXiv:2609.11562", "arXiv:2609.10861"],
+    "next_axis_hint": "次はagent/KV階層を離れ、forward/backward citationまたはproduction workflow runtime・GPU/network systemsを探索する",
+    "empty_round_reason": null
+  }
+}
