@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 07:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 07:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,34 +28,34 @@ Run: **2026-09-13T06:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **1** |
+| Discovery完了 | **2** |
+| 新規job | **2** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-kv-moe-memory-revalidation-1**
+Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-adaptive-prefill-scheduling-2**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | KVページ制御・MoEメモリ分離・復元系の再探索 |
-| 評価候補 | **5** |
-| 重複除外 | **5** |
-| Novel候補 | **0** |
+| 探索軸 | 適応プリフィル・KV予約・デコード干渉スケジューリング |
+| 評価候補 | **3** |
+| 重複除外 | **2** |
+| Novel候補 | **1** |
 | Research候補採用 | **0** |
-| 重複率 | **100.0%** |
+| 重複率 | **66.7%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **112** |
-| 探索評価候補 | **538** |
-| 重複除外 | **200** |
-| 重複率 | **37.2%** |
-| Novel候補 | **338** |
+| 探索round（stats観測） | **113** |
+| 探索評価候補 | **541** |
+| 重複除外 | **202** |
+| 重複率 | **37.3%** |
+| Novel候補 | **339** |
 | Research候補採用 | **188** |
 | Research完了 | **72** |
 | Repo収録 | **72** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-kv-moe-memory-revalidat
 
 ### 24時間ファネル
 
-**探索評価 538 → 重複除外後 338 → Research候補採用 188 → Research完了 72 → Repo収録 72**
+**探索評価 541 → 重複除外後 339 → Research候補採用 188 → Research完了 72 → Repo収録 72**
 
 ## 探索効率（直近24時間）
 
@@ -176,6 +176,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-kv-moe-memory-revalidat
 | 推論システム横断サーベイ・KV・エッジ実行 | 3 | 0 | 2 | 0.0% | 66.7% |
 | 新着・長期推論KV圧縮と削除 | 3 | 0 | 0 | 0.0% | 0.0% |
 | 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving | 3 | 0 | 0 | 0.0% | 0.0% |
+| 適応プリフィル・KV予約・デコード干渉スケジューリング | 3 | 2 | 0 | 66.7% | 0.0% |
 | 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | multi-tenant prefix安全性・multi-agent workflow prefix scheduling | 2 | 0 | 0 | 0.0% | 0.0% |
@@ -186,11 +187,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-kv-moe-memory-revalidat
 
 ### 直近5探索round
 
+- **2026-09-13T07:00:13+09:00** — 適応プリフィル・KV予約・デコード干渉スケジューリング: 評価 3 / 重複 2 / 採用 0
 - **2026-09-13T07:00:13+09:00** — KVページ制御・MoEメモリ分離・復元系の再探索: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation: 評価 7 / 重複 7 / 採用 0
 - **2026-09-13T06:02:25+09:00** — agent workflow/context runtime・branch admission・heterogeneous many-core runtime: 評価 13 / 重複 9 / 採用 4
 - **2026-09-13T06:02:25+09:00** — near-storage KV処理・動的layer/KV runtime adaptation: 評価 3 / 重複 1 / 採用 2
-- **2026-09-13T06:02:25+09:00** — MoE expert prefetch・offload・speculative execution再走査: 評価 6 / 重複 5 / 採用 0
 
 ## 最近処理した論文
 
