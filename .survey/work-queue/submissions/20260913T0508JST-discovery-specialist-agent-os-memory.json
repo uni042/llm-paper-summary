@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-bd45d56f5e105855",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11294",
+      "title": "Memory Compression for High-Fanout Agent Sandboxes",
+      "source_url": "https://arxiv.org/abs/2609.11294",
+      "paper_path": null,
+      "priority": 86,
+      "reason": "AgentZipは多数のAIエージェント用サンドボックスが共有テンプレートと類似実行軌跡を持つことを利用し、テンプレート相対・サンドボックス間のメモリ冗長性を圧縮するOS系システム。LLM待ち時間へ圧縮処理を重ね、復元時プリフェッチで前景ツール実行への干渉を抑える。LLM学習・推論ワークロードでサンドボックス所有メモリを最大8.7倍削減し、積極圧縮時の遅延を最大3.1倍から1.40倍へ抑えており、エージェント実行基盤のメモリ階層管理として研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.22781",
+      "title": "DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback",
+      "source_url": "https://arxiv.org/abs/2605.22781",
+      "paper_path": null,
+      "priority": 84,
+      "reason": "DeltaBoxは状態を持つAIエージェントの分岐探索で多発するサンドボックスのチェックポイント／ロールバックを、全状態複製ではなく差分状態のOS抽象で処理する。差分ファイルシステムと増分プロセス状態保存を組み合わせ、SWE-bench等でチェックポイント14ms、ロールバック5msを報告する。高ファンアウト・テスト時探索の基盤コストを直接扱うため、エージェント型推論の隣接システム研究として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2602.09345",
+      "title": "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
+      "source_url": "https://arxiv.org/abs/2602.09345",
+      "paper_path": null,
+      "priority": 82,
+      "reason": "サンドボックス化されたAIコーディングエージェント144タスクを計測し、OS実行が端末間遅延の55〜60%を占め、メモリが同時実行数の主要制約で、ツール呼出し由来のピークが平均の最大15.4倍になることを示す。AgentCgroupはツール呼出し境界に沿う階層cgroupとeBPF／sched_extによるカーネル内制御を提案し、エージェントの宣言意図を資源制御へ使う。LLM推論以外の実行基盤ボトルネックを扱う隣接OS研究として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.29069",
+      "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
+      "source_url": "https://arxiv.org/abs/2607.29069",
+      "paper_path": null,
+      "priority": 80,
+      "reason": "Ariesは自律エージェントの反復LLM推論・持続コンテキスト・状態付きツール実行を同時に観測できる実験基盤で、公開エージェント環境と商用運用トレースを用いて、トークン中心指標では非推論ボトルネックを捉えにくいこと、サンドボックスが長い待機と短い資源バーストを繰り返すことを示す。エージェント型サービングの評価軸と資源管理設計を整理する基盤論文として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:00:25+09:00",
+    "round": "specialist-agent-os-memory-2",
+    "axis": "エージェントサンドボックス・OS資源管理・状態管理",
+    "query_summary": "前roundの全重複を受けてKV系から独立したOS／エージェント実行基盤へ切り替えた。高ファンアウトサンドボックスのメモリ圧縮、差分チェックポイント、ツール呼出し単位のOS資源制御、エージェント型クラウド基盤の実測研究を一次資料の題名・抄録・書誌情報で軽量評価し、決定論的research job IDと正本検索で未登録を確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "GPUランタイム／カーネルコンパイル、またはMoE expert通信・I/Oスケジューリングの未収録候補へ軸を移す",
+    "empty_round_reason": null
+  }
+}
