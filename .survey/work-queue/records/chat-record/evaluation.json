@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
-  "job_id": "job-research-985814ffefefe223",
+  "attempt_id": "attempt-2609.10812-20260912-1452-v10-a1",
+  "job_id": "job-research-09f84c02bdf7d29d",
   "data": {
-    "hardware": "2 worker node。各nodeはAMD EPYC 9254 24c/48t、128GB DDR5、NVIDIA L4 24GB。CXL applianceはFPGA-based Seagate prototype、2 host portのCXL 1.1/PCIe Gen5 x16、8×128GiB DDR4で1TiB poolを持ち、512GiB regionを両hostへ割り当てる。node間は100GbE ConnectX-6 Dx RoCEv2直結。",
-    "software": "Kubernetes v1.35.7、vLLM v0.23.0、llm-d、Qwen2.5-7B-Instruct bf16、TP=1。CXL backendはvLLM OffloadingConnectorのC++ engine+Python glue。Kubernetes側はresource.k8s.io/v1のDRA、CDI、Redfish連携を使う。",
-    "methodology": "各sessionでreq1=SHARED+Q1をreplica Aへ送り共有prefixのKVをtierへ保存し、req2=SHARED+Q2を同じAへ送るsame armまたはreplica Bへ送るcross armを比較する。cross armではBが過去にprefixを見ていないため、node-local GPU prefix cacheとCPU DRAM offloadは利用できず、共有CXL tierだけがcross-node hitを生成できる。比較tierはT0=no cache、T1=GPU prefix cache、T2=native CPU DRAM KV offload 32GiB、T4=512GiB shared CXL。2K/8K/16K/32K prefix、same/cross、20 session、3 repetitionを組み合わせて1920 request pairを測定する。PYTHONHASHSEED=0を両replicaに固定し、offload granularityは256 token。主要指標はclient-observed TTFTとexternal prefix cache hit rate。tier順をrepetitionごとに変え、CXL regionを毎回wipeする。false-hit control、req1 hit leakage、fresh-region logを検証する。",
-    "workloads": ["Qwen2.5-7B-Instruct bf16", "2K prefix", "8K prefix", "16K prefix", "32K prefix", "same-replica reuse", "cross-replica reuse"],
-    "workload_details": "nominal 2K/8K/16K/32Kはtokenizer較正後のmedian 2054/8173/16282/32694 token。各cellは20 session×3 repetitionsでn=60。closed-loopで1 sessionずつ実行するため、同時decode trafficやqueueing loadは入らない。",
-    "baselines": ["T0: no cache/full recompute", "T1: GPU VRAM prefix caching", "T2: CPU DRAM native KV offload", "T4: shared CXL region"],
-    "metrics": ["client-observed TTFT", "external KV hit rate", "cross/same sharing gap", "effective KV read throughput", "tier latency/bandwidth", "CRC32 mismatch", "false-hit count"],
-    "scope": "実際の2-node CXL hardware、L4 GPU、vLLM/llm-dを用いる実機評価。ただし著者はv1 feasibility studyと明記しており、P/D disaggregationではなく両replicaがfull engine。single GPU/nodeかつconcurrent loadなしなのでgoodput、queueing下のtail latency、prefill/decode contentionは評価しない。pooled RDMA KV baseline、zero-copy GPU↔CXL DMA、multi-tenant capacity pressureも対象外。"
+    "hardware": "ALCF Auroraの1〜256 nodeを使用。Intel Data Center GPU Max（Ponte Vecchio）で各node 12 XPU tile。baseline Llama-3-8Bは1 tile=1 replicaで最大3072 replica。405B構成はTP=8×PP=2で2 node/replica、最大128 replicaを256 nodeで評価する。",
+    "software": "PBS、MPI、Ray Serve、vLLM、SGLang、HAProxy/Envoy/LiteLLM/Ray Serve proxy、oneAPI/Level Zero、node-local tmpfs、shared Lustre。Aurora用Ray forkとIntel-specific inference path、runtime overlayでhealth timeout/thread limit/network bind等を調整する。",
+    "methodology": "baselineはLlama-3-8B-Instruct、vLLM、TP=1、12 replica/node、ShareGPTから64 content token以上を選び64 tokenへtruncateし、chat template後平均74.7 input token、outputは64 token固定。single-node saturationは118 QPSでlatencyが約109 QPS超から上昇するため、multi-nodeは110 QPS/nodeのfixed-interval offered rateでstressする。scaleは1〜256 node。proxy比較では4-node client fleet、direct dispatchは1 client/node。主要SLOはTTFT≤2秒かつ各requestのP99 TBT≤250ms。比較軸としてGPT-OSS-120B TP=8、Llama-3.1-405B TP=8×PP=2、2K/2K・4K/4KやCode/Chat/Summary workload、Poisson/BurstGPT arrival、SGLang、HAProxy/Envoy/LiteLLM/Ray Serve proxyを一軸ずつ変更する。cluster bring-upはMPI staging、Ray start、serve.run、proxy startを計測し、GCS lookup数とresolution時間までinstrumentする。",
+    "workloads": ["Llama-3-8B-Instruct ShareGPT 64/64", "GPT-OSS-120B", "Llama-3.1-405B", "2K/2K", "4K/4K", "Code", "Chat", "Summary", "fixed interval", "Poisson", "BurstGPT trace"],
+    "workload_details": "baselineはnode当たり110 QPS。SLOはTTFT 2秒、P99 TBT 250ms。SGLangは各engineのsingle-node saturationの90%でweak-scaleし、vLLM 110 req/s/node、SGLang 15 req/s/node相当。405BはPP=2、128 replicaまで評価。",
+    "baselines": ["direct per-node dispatch", "HAProxy", "Envoy", "LiteLLM", "Ray Serve proxy", "vLLM", "SGLang"],
+    "metrics": ["successful QPS", "tokens/s", "weak-scaling efficiency", "request error rate", "TTFT", "P99 TBT", "SLO attainment", "time-to-serve", "serve.run deploy/wait time", "GCS lookup count/resolution latency"],
+    "scope": "実際のAuroraを最大256 nodeまで使用する大規模実機評価で、8Bから405Bまで、vLLM/SGLang、複数proxyを試す。一方、主結果はAurora/PVC固有のsite integrationを含み、NVIDIA/AMD系supercomputerで同じ定数・patchが必要とは限らない。512 nodeではsingle GCSが飽和してdeployment自体が失敗するため、demonstrated ceilingは256 node。productionの常時運用やfault recoveryの長期評価より、batch evaluation-oriented deploymentとscaling characterizationが中心。"
   }
 }
