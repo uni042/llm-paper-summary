@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **27 / 50** |
-| Research ready | **27** |
+| Candidate在庫（Research ready） | **30 / 50** |
+| Research ready | **30** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **8** |
-| 新規job | **24** |
+| Discovery完了 | **9** |
+| 新規job | **28** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-storage-backed-kv-07**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-network-runtime-08**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 |
-| 評価候補 | **3** |
+| 探索軸 | GPU collective通信・in-network acceleration・通信runtime |
+| 評価候補 | **4** |
 | 重複除外 | **0** |
-| Novel候補 | **3** |
-| Research候補採用 | **1** |
+| Novel候補 | **4** |
+| Research候補採用 | **3** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-storage-backed-kv-07**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **29** |
-| 探索評価候補 | **156** |
+| 探索round（stats観測） | **30** |
+| 探索評価候補 | **160** |
 | 重複除外 | **46** |
-| 重複率 | **29.5%** |
-| Novel候補 | **110** |
-| Research候補採用 | **50** |
+| 重複率 | **28.8%** |
+| Novel候補 | **114** |
+| Research候補採用 | **53** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-storage-backed-kv-07**
 
 ### 24時間ファネル
 
-**探索評価 156 → 重複除外後 110 → Research候補採用 50 → Research完了 44 → Repo収録 44**
+**探索評価 160 → 重複除外後 114 → Research候補採用 53 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -86,6 +86,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-storage-backed-kv-07**
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
+| GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
@@ -102,11 +103,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-storage-backed-kv-07**
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — GPU collective通信・in-network acceleration・通信runtime: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — SSD/NVMe・object storage・CXL remote memoryによるKV階層化: 評価 3 / 重複 0 / 採用 1
 - **2026-09-12T23:00:00+09:00** — SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — KV cache admission/replacement・compression/eviction・復元parallelism: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — CXL/NVLink-C2C・remote memory・階層KV prefetch: 評価 5 / 重複 0 / 採用 2
-- **2026-09-12T23:00:00+09:00** — エージェント型サービング・KV再利用・ツール呼び出し待機: 評価 4 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
