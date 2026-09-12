@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T07:35:26.794130+00:00",
+  "updated_at": "2026-09-12T07:37:28.048351+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9034,7 +9034,7 @@
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "first_recorded_at": "2026-09-12T07:34:22.781369+00:00",
-      "last_recorded_at": "2026-09-12T07:35:26.794130+00:00",
+      "last_recorded_at": "2026-09-12T07:37:28.048351+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -9043,9 +9043,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 3,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -9079,6 +9079,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34681193149:1",
+          "recorded_at": "2026-09-12T07:37:28.048351+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34681193149",
+            "run_attempt": "1",
+            "source_sha": "77f85b5ce00472a9742e2c4ce1a89bc7163c6882"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9087,6 +9101,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.10812",
           "title": "ExaServe: Large-Scale LLM Serving on Exascale HPC Systems",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d197921c62f4db41",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -9098,13 +9120,28 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-2b3d10df7e47e17c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09241",
+          "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts"
+        },
+        {
+          "job_id": "job-research-d8b01443e423e709",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04453",
+          "title": "When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models"
         }
       ],
       "new_paper_ids": [
         "arXiv:2609.10812"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260912T1630JST-discovery-7c31e8b2a460d1f4.json"
+        ".survey/work-queue/results/20260912T1630JST-discovery-7c31e8b2a460d1f4.json",
+        ".survey/work-queue/results/20260912T1630JST-discovery-d197921c62f4db41.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 333,

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T05:37:18+00:00",
-  "last_run_key": "2026-09-12T14:22:56+09:00",
-  "last_round": "specialist-2609-serving-routing-1",
+  "updated_at": "2026-09-12T07:37:08+00:00",
+  "last_run_key": "2026-09-12T16:30:00+09:00",
+  "last_round": "paper-worker-new-arrivals-power-moe-kv-1-retry",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -303,6 +303,21 @@
       ],
       "next_axis_hint": "SSD expert I/O scheduling、被引用・参考文献、または新着2609差分へ探索軸を移す",
       "source_submission": "work-queue/submissions/20260912T1422JST-discovery-stats-backfill.json"
+    },
+    {
+      "run_key": "2026-09-12T16:30:00+09:00",
+      "round": "paper-worker-new-arrivals-power-moe-kv-1-retry",
+      "axis": "新着分離サービング電力制御・MoE推論効率・KVメモリ回収",
+      "query_summary": "2026年9月の新着を中心に、分離サービングの電力制御、動的MoE推論、専門家枝刈り、KVキャッシュメモリ回収へ探索軸を広げ、arXiv一次情報を軽量評価した。投入直前にarXiv IDをrepo検索し、既収録・既存jobとの一致がない4候補だけを送る。前回ファイルはjob_id不一致でmaterializeされなかったため、内容を変えずactive discovery jobへ再投入する。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次回はSSD/NVMe expert I/O scheduling、分散ストリーミング入口、Ray/GCS制御面分割などExaServeから派生するシステム軸を優先する",
+      "source_submission": "work-queue/submissions/20260912T1630JST-discovery-d197921c62f4db41.json"
     }
   ],
   "axes": {
@@ -465,6 +480,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.25,
       "next_axis_hint": "SSD expert I/O scheduling、被引用・参考文献、または新着2609差分へ探索軸を移す"
+    },
+    "新着分離サービング電力制御・MoE推論効率・KVメモリ回収": {
+      "last_run_key": "2026-09-12T16:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次回はSSD/NVMe expert I/O scheduling、分散ストリーミング入口、Ray/GCS制御面分割などExaServeから派生するシステム軸を優先する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
