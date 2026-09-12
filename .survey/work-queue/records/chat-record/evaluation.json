@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2608.25523-20260912-1815-v10-a",
-  "job_id": "job-research-210693a709bc2b42",
+  "attempt_id": "attempt-2606.19746-20260912-1825-v10-a",
+  "job_id": "job-research-32074ec28a42f7d1",
   "data": {
-    "hardware": ["単一NVIDIA A100 80GB GPU。モデル重みをロードした後の残りGPUメモリをKVキャッシュへ使用し、ワークロードごとの人工的なKV上限は設けない。"],
-    "software": ["SGLang v0.5.3へTOPASをスケジューリングモジュールとして実装。全比較方式は同じSGLangバックエンドで実行する。"],
-    "model": ["Qwen2.5-32B-Instruct"],
-    "datasets": ["合成ワークフロー: Chain-3、DAG-4、DAG-10-Wide。線形、フォーク・ジョイン、幅広DAGを含む。", "実ワークフロー: MetaGPT SoftwareDevから実プロンプトを抽出したMetaGPT-SOPとMetaGPT-TL。SOPは5役割の静的パイプライン、TLはTeamLeaderと4専門家を交互に使う9段階構成。"],
-    "baselines": ["先着順（First-Come, First-Served; FCFS）", "最長接頭辞一致（Longest Prefix Match; LPM）", "Parrot-FCFS", "Autellixの最小既得サービス量（Least-Attained Service; LAS）", "最短経路優先（Shortest-Path-First; SPF）。Chain-3の等費用条件では最短残処理時間順と等価。"],
-    "correctness": "各動作点でタスク到着はポアソン過程から生成し、同じ到着トレースを全方式で共有する。モデルとバックエンドも共通で、差分はスケジューリング方針である。主指標はタスク単位の平均・p99ジョブ完了時間で、初回タスク完了時間と要求スループットも補助指標とする。",
+    "hardware": ["2×Intel Xeon Platinum 8575C、2TB DDR5-4800システムDRAM、8×NVIDIA H20 96GB、4×PCIe 5.0スイッチ。", "CXLプールはXConn XC50256スイッチとType-3デバイスで構成し、論文評価上のKVバックエンド総容量は2TB。", "RDMA比較は8×ConnectX-7 100Gbps NICをloopback構成で使用し、実際のクロスノードRDMAより有利な理想化比較とする。"],
+    "software": ["Ubuntu 22.04、Kernel 6.2.0-1015。", "SGLang + HiSparse。TP=8、データ並列注意=8、bf16、mem-static-fraction=0.85。", "HiSparse top-k=2048、device_buffer_size=6144を主設定とし、標準HiSparseにないRadix Cache統合を追加実装。"],
+    "model": ["DeepSeek-V3.2、AWQ 4-bit重み。疎注意はDeepSeek Sparse Attentionを使用。"],
+    "datasets": ["ShareGPT形式から512要求を抽出。主実験では文脈長16K〜128K、出力長1K。"],
+    "baselines": ["RDMA分離メモリプール: 接頭辞KV全体をローカルへ取得してからデコード。ConnectX-7 100Gbps loopbackで理想化。", "ローカルホストDRAM: CXL分離による追加遅延の上限比較。", "GPU HBMのみ: 低並行時の高速上限と容量制約を比較。", "疎top-kをRDMAで層ごとに直接読む方式はマイクロ測定で遅延が大き過ぎるため、実用比較から除外。"],
+    "correctness": "SAC、RDMA、DRAMはいずれも同じDeepSeek-V3.2 sparse attentionとtop-k選択を使い、KV保管・取得経路だけを変える。Round-2では全方式で接頭辞KVを事前にバックエンドへ置き、プリフィル計算を除外してデコード側のメモリ経路を比較する。",
     "settings": [
-      {"name":"合成DAG評価","description":"固定長ユーザー問い合わせと固定段階生成長を用い、ユーザー内容のばらつきを抑えてワークフロー形状、接頭辞常駐、動的バッチ容量の相互作用を測る。Chain-3、DAG-4、DAG-10-Wideで異なる到着率を評価する。"},
-      {"name":"MetaGPT-SOP","description":"従来MetaGPTの5役割パイプラインを使う。各タスクは主に一方向に役割を進むため、同じ接頭辞へ繰り返し戻る機会は比較的小さい。"},
-      {"name":"MetaGPT-TL","description":"新しい星型組織を9段階へ展開し、中央のTeamLeaderと4人の専門家を交互に呼ぶ。中央接頭辞へ繰り返し戻るため、接頭辞常駐を明示的に制御する価値が高い。"},
-      {"name":"構成要素除去実験","description":"MetaGPT-TLの0.0175 task/sで、基本遷移効用と共同状態探索だけのTOPAS-base、将来再利用のみ追加、年齢補正のみ追加、完全版を比較する。"},
-      {"name":"スケジューラ費用","description":"MetaGPT-SOPの0.15 task/sで制御計算時間を測り、1判断平均1.9ms、累積スケジューラ時間は実験総時間の0.31%と報告する。"}
+      {"name":"Round-1 Cache Populate","description":"並行数8。GPUでプリフィルして全KVを各メモリバックエンドへ保存する。CXLとRDMAはいずれも計算中はGPUへ全KVを持つため、書き出し側の差を測る。"},
+      {"name":"Round-2 Cache Hit","description":"並行数64。接頭辞KVを事前配置しプリフィルを完全に省略して、デコード時のCXL top-kオンデマンド取得とRDMA全量取得を比較する。"},
+      {"name":"長文スケーリング","description":"32K、64K、128K文脈で並行数を変え、RDMA帯域飽和とSACのスループット伸長を比較する。"},
+      {"name":"CXLデバイスインターリーブ","description":"単一CXLデバイスと二デバイスへの要求単位分散を比較し、物理リンク競合回避の効果を測る。"},
+      {"name":"GPU hot buffer","description":"HiSparse device_buffer_sizeを4Kと6Kで比較し、GPU内ホットKV容量増加がCXL読み込み量とスループットへ与える影響を測る。"}
     ],
-    "methodology": "各ワークロードの複数到着率でタスクを投入し、方式ごとに平均・p99タスク完了時間を計測する。論文の割合改善は、それぞれのワークロード・指標で平均値が最も良い比較方式を基準にするため、すべての数値が同一の一方式に対する比較ではない。合成DAGでは構造だけを明瞭にする固定長要求を使い、MetaGPTでは実プロンプトと可変呼び出し長を使って実用的な多段処理へ展開する。構成要素除去では将来接頭辞再利用価値とタスク年齢補正の寄与を分離する。",
-    "scope": "単一A100 80GB、単一モデルQwen2.5-32B-Instruct、SGLang v0.5.3での評価であり、複数GPU、分離型プリフィル・デコード構成、異種GPU、実運用クラスタは直接評価していない。全タスクが同じ既知DAGとエージェント対応を持つ設定を仮定し、将来のReAct反復、ツール待ち、未展開ツール出力は未知イベントとして扱う。遠い将来の接頭辞需要は予測せず一段先だけを見るため、長距離再利用の最適性は保証しない。"
+    "methodology": "主実験は同一サーバ、同一モデル、同一SGLang/HiSparse設定でメモリバックエンドだけを切り替える。512要求を固定出力長1Kで実行し、出力トークンスループット、最初のトークンまでの時間（TTFT）、トークン間時間（TBT）を測る。Round-1/2を分けることでプリフィル書き出しとキャッシュヒット後デコードを分離する。RDMAはクロスノードではなくloopbackの100Gbps NICを使うため、SACに不利な比較を避けた保守的条件である。",
+    "scope": "モデルはDeepSeek-V3.2のみが実機評価対象で、GLM-5.1やDeepSeek-V4への一般化はアクセスパターン類似性に基づく議論に留まる。CXLハードウェアもXConnスイッチと評価用Type-3構成に限定される。疎注意のtop-kアクセスを前提とするため、密注意モデルでは全KVが必要になりSACの細粒度取得利点は小さくなる。GPU HBM・ローカルDRAM・CXLの三階層を動的に共同管理する高度な階層化は今後の課題である。"
   }
 }
