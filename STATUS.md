@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **12** |
-| 新規job | **34** |
+| Discovery完了 | **13** |
+| 新規job | **35** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,11 +51,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **63** |
-| 探索評価候補 | **294** |
+| 探索round（stats観測） | **64** |
+| 探索評価候補 | **298** |
 | 重複除外 | **93** |
-| 重複率 | **31.6%** |
-| Novel候補 | **201** |
+| 重複率 | **31.2%** |
+| Novel候補 | **205** |
 | Research候補採用 | **95** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 294 → 重複除外後 201 → Research候補採用 95 → Research完了 47 → Repo収録 47**
+**探索評価 298 → 重複除外後 205 → Research候補採用 95 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -100,6 +100,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV multi-turn管理・復元・予約不確実性 | 4 | 4 | 0 | 100.0% | 0.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
+| NVMe外部KV・PIM runtime・page-aware decode scheduling | 4 | 0 | 0 | 0.0% | 0.0% |
 | OS階層管理・専門家キャッシュ・KV先読み・SSD再利用 | 4 | 0 | 1 | 0.0% | 25.0% |
 | P/D分離・KV転送・shared prefill | 4 | 1 | 2 | 25.0% | 50.0% |
 | SLO-aware scheduling・KV memory hierarchy・動的メモリ回収 | 4 | 0 | 1 | 0.0% | 25.0% |
@@ -137,11 +138,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — NVMe外部KV・PIM runtime・page-aware decode scheduling: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — 分離サービングのnetwork flow・prefill迂回・専用interconnect: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — CXL共有メモリ・ラック内KV転送・Superchip階層メモリ: 評価 5 / 重複 2 / 採用 0
 - **2026-09-13T01:55:54+09:00** — MoE動的並列切替・融合通信・serverless専門家配置: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:26:11+09:00** — multi-adapter serving・推論/継続学習境界: 評価 4 / 重複 0 / 採用 3
-- **2026-09-13T01:26:11+09:00** — agentic/multi-agent serving・collective KV sharing: 評価 3 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
