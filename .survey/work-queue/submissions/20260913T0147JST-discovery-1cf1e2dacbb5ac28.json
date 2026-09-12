@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-1cf1e2dacbb5ac28",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.03143",
+      "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2604.03143",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+      "priority": 87,
+      "reason": "同期roundで複数agentの出力をAll-Gatherし、次roundで全agentが同じ共有blockを再利用するmulti-agent workload特有のKV重複を、request単位ではなくround全体のcollective KV reuseとして処理する。差分保存でsibling cacheをmaster copyに対するblock-sparse diffへ変換し11〜17倍圧縮、vLLM prefix caching比で同時agent数最大2.7倍、prefill最大1.9倍高速化を報告する。multi-agent servingに固有のcollective構造を利用する点が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.10342",
+      "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
+      "source_url": "https://arxiv.org/abs/2603.10342",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10342-agentserve-consumer-gpu-agentic-serving.md",
+      "priority": 84,
+      "reason": "agentic workloadをcold prefill、tool結果を追加するresume prefill、latency-criticalなshort decodeへ分解し、単一consumer GPU上でdecodeをprefillから隔離、resume prefillへdynamic budgetを割り当て、CUDA Green Context slotを適応制御する。複数agentが重なる際のhead-of-line blockingを対象に、TTFT最大2.8倍、TPOT最大2.7倍改善を報告する。通常chat servingとは異なるtool-interleaved workloadに対する実装指向候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-agentic-serving-relatedwork-9",
+    "axis": "agentic/multi-agent serving・collective KV sharing",
+    "query_summary": "P/D transfer batch後の枯渇確認として直近新着、network/collective、関連研究経路を回した後、adjacent-topicとしてagentic servingへ展開。AGENTSERVESIMは評価基盤寄りのため見送り、TokenDanceとAgentServeは一次arXiv概要でsystems contributionと定量評価を確認し、最新mainで決定論的research job不在を再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "agentic serving追加後は直近新着、training/inference境界、network/collective、citation expansionを再度独立確認して枯渇判定する",
+    "empty_round_reason": null
+  }
+}
