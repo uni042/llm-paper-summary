@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T19:53:12+00:00",
-  "paper_count": 381,
-  "edge_count": 2299,
+  "generated_at": "2026-09-12T20:08:43+00:00",
+  "paper_count": 382,
+  "edge_count": 2302,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 121,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 27,
@@ -54,7 +54,7 @@
     "papers/inference/02-adaptive-expert-computation-compression/2026-2609.04575-training-free-halving-activated-experts.md": 0,
     "papers/inference/02-adaptive-expert-computation-compression/2026-2609.05228-ace.md": 0,
     "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md": 0,
-    "papers/inference/02-hardware-accelerators/2025-2501.01005-flashinfer-attention-engine-serving.md": 18,
+    "papers/inference/02-hardware-accelerators/2025-2501.01005-flashinfer-attention-engine-serving.md": 19,
     "papers/inference/02-hardware-accelerators/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md": 1,
     "papers/inference/02-hardware-accelerators/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md": 0,
     "papers/inference/02-moe-expert-placement-caching/2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md": 0,
@@ -227,6 +227,7 @@
     "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md": 2,
     "papers/inference/10-kv-cache-offload-recomputation/2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2026-2605.24022-cachetune-adaptive-kv-reuse.md": 0,
+    "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md": 1,
@@ -249,11 +250,11 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md": 122,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md": 40,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md": 38,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 239,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 240,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md": 18,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md": 121,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md": 18,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 111,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 112,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md": 18,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md": 19,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md": 130,
@@ -2052,6 +2053,11 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
+    ],
+    "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md": [
+      "papers/inference/02-hardware-accelerators/2025-2501.01005-flashinfer-attention-engine-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
     ],
     "papers/inference/10-kv-cache-offload-recomputation/2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md": [],
     "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md": [
