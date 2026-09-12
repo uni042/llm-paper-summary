@@ -317,30 +317,38 @@ def _render_taxonomy_list(rows, citations, base_dir, now=None):
     start, end = _recent_window(now)
     start_num, end_num = _month_number(*start), _month_number(*end)
 
-    attention, recent, older = [], [], []
+    attention, recent = [], []
+    older_by_age = {}
+    unclassified = []
     for r in rows:
-        is_recent = False
+        citation_count = citations.get(r["path"], 0)
         if r["year"] and r["month"]:
             num = _month_number(r["year"], r["month"])
-            is_recent = start_num <= num <= end_num
-        citation_count = citations.get(r["path"], 0)
-        if is_recent and citation_count > 0:
-            attention.append(r)
-        elif is_recent:
-            recent.append(r)
+            if start_num <= num <= end_num:
+                if citation_count > 0:
+                    attention.append(r)
+                else:
+                    recent.append(r)
+            elif num < start_num:
+                age = (end_num - num) // 12 + 1
+                older_by_age.setdefault(age, []).append(r)
+            else:
+                unclassified.append(r)
         else:
-            older.append(r)
+            unclassified.append(r)
 
     attention.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
     recent.sort(key=_sort_recent, reverse=True)
-    older.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
+    for bucket in older_by_age.values():
+        bucket.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
+    unclassified.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
 
     period = f"{start[0]:04d}-{start[1]:02d}〜{end[0]:04d}-{end[1]:02d}"
     lines = [
         f"## 自動生成の論文一覧（{len(rows)}本）",
         "",
         f"分類は相互排他的。直近12か月は公開年月ベース（現在は **{period}**）。"
-        "直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。"
+        "直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。"
         "「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。",
         "「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。",
         "",
@@ -350,8 +358,19 @@ def _render_taxonomy_list(rows, citations, base_dir, now=None):
     lines += _render_paper_list(attention, citations, base_dir)
     lines += ["", f"### 直近12か月・未被引用（{period}）", ""]
     lines += _render_paper_list(recent, citations, base_dir)
-    lines += ["", "### 1年以上前", ""]
-    lines += _render_paper_list(older, citations, base_dir)
+
+    for age in sorted(older_by_age):
+        bucket_start_num = end_num - age * 12 + 1
+        bucket_end_num = end_num - (age - 1) * 12
+        bucket_start = (bucket_start_num // 12, bucket_start_num % 12 + 1)
+        bucket_end = (bucket_end_num // 12, bucket_end_num % 12 + 1)
+        bucket_period = f"{bucket_start[0]:04d}-{bucket_start[1]:02d}〜{bucket_end[0]:04d}-{bucket_end[1]:02d}"
+        lines += ["", f"### {age}年前（{bucket_period}）", ""]
+        lines += _render_paper_list(older_by_age[age], citations, base_dir)
+
+    if unclassified:
+        lines += ["", "### 公開時期未分類", ""]
+        lines += _render_paper_list(unclassified, citations, base_dir)
     return "\n".join(lines)
 
 
