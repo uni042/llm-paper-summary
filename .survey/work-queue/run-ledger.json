@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:06:40.284188+00:00",
+  "updated_at": "2026-09-12T23:09:48.114378+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15746,16 +15746,16 @@
     {
       "run_key": "2026-09-13T07:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:06:40.284188+00:00",
-      "last_recorded_at": "2026-09-12T23:06:40.284188+00:00",
+      "last_recorded_at": "2026-09-12T23:09:48.114378+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 4,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -15773,11 +15773,33 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34724609016:1",
+          "recorded_at": "2026-09-12T23:09:48.114378+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34724609016",
+            "run_attempt": "1",
+            "source_sha": "d7cc5968ad3af0e24dd143b4c5f7563fb5690d2b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
         {
           "job_id": "job-c9255e06972e819d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3a2b4785347c6fcd",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15792,11 +15814,33 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-67895a0dd002f4a3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-1725e694fe58fcc2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.10670",
+          "title": "Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference"
+        },
+        {
+          "job_id": "job-research-7c0598aabd36d6bf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.12990",
+          "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/discovery-specialist-20260913T0804JST-new-arrivals-1.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0804JST-new-arrivals-1.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,

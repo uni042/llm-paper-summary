@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 294,
+      "completed": 295,
       "ready": 1
     },
     "audit": {
@@ -9,12 +9,24 @@
     },
     "research": {
       "completed": 204,
-      "ready": 129,
+      "ready": 131,
       "superseded": 44,
       "deferred": 3
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-7c0598aabd36d6bf",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2512.12990",
+      "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2512.12990",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.12990-slicemoe-bit-sliced-expert-caching.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-43ee292714ed8d8c",
       "type": "research",
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-2f20b6ae0c5a7fb6",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2507.10069",
-      "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism",
-      "source_url": "https://arxiv.org/abs/2507.10069",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-3a2b4785347c6fcd",
+      "job_id": "job-67895a0dd002f4a3",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T23:05:47+00:00"
+  "generated_at": "2026-09-12T23:09:22+00:00"
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-7c0598aabd36d6bf",
+  "type": "research",
+  "parent_job_id": "job-3a2b4785347c6fcd",
+  "priority": 90,
+  "canonical_id": "arXiv:2512.12990",
+  "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference",
+  "source_url": "https://arxiv.org/abs/2512.12990",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.12990-slicemoe-bit-sliced-expert-caching.md",
+  "selection_reason": "Flashを下位階層に持つオンデバイスMoEで、専門家キャッシュのmiss率を抑えるために専門家を固定精度の不可分単位として保持する代わりに、ビットスライス単位でキャッシュし必要度に応じて精度を組み立てる。動的ビットスライスキャッシュ、校正不要の非対称Matryoshka量子化、prefill時の予測キャッシュwarmupを組み合わせ、DeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bでdecodeエネルギーを最大2.85倍削減し、latencyを最大1.81倍改善する。expert cache・Flash階層・量子化を一体化した重点テーマ直結の候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:08:28+00:00",
+  "artifact_transport": "structured_record_v10"
+}
