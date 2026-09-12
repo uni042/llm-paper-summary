@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T11:24:21.496239+00:00",
+  "updated_at": "2026-09-12T11:32:49.993845+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10262,6 +10262,60 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 344,
       "paper_active_count_after": 350,
+      "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "2026-09-12T20:30:00+09:00",
+      "first_recorded_at": "2026-09-12T11:32:49.993845+00:00",
+      "last_recorded_at": "2026-09-12T11:32:49.993845+00:00",
+      "signals": [
+        "research_completed",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 1,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34691250391:1",
+          "recorded_at": "2026-09-12T11:32:49.993845+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34691250391",
+            "run_attempt": "1",
+            "source_sha": "dde2cfbe8f330029365f55b0ccba373f6bb4b01f"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-7e658d2c7f333c12",
+          "type": "research",
+          "canonical_id": "arXiv:2607.26633",
+          "title": "NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [
+        "arXiv:2607.26633"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 350,
+      "paper_active_count_after": 351,
       "last_successful_action": "paper_materialized"
     }
   ]

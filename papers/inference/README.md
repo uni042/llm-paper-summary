@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **326本**。
+収録論文: **327本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,11 +25,11 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**326本**。
+推論論文：**327本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 32 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 33 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 14 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 14 |

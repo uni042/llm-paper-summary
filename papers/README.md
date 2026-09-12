@@ -1,14 +1,14 @@
 # 論文カタログ
 
-収録論文: **350本**。
+収録論文: **351本**。
 
 論文は **Inference（推論）**、**Training（学習）**、**Survey（サーベイ／レビュー）** の3系統に分け、その下を研究系統別に整理する。Training側は既存19本を保持したまま更新を凍結している。Survey側は個別の新規手法ではなく、複数研究を横断整理するsurvey / review論文を収録する。
 
 各研究系統ディレクトリのREADMEにある論文一覧は、公開年月ベースの **直近12か月** → **それ以前でリポジトリ内の別論文から引用されている論文** → **その他** の順に、重複なしで自動分類する。一覧には公開年月、明示的な実装有無、リポジトリ内被引用数、一文要約を表示する。
 
-## Inference / 推論 — 326本
+## Inference / 推論 — 327本
 
-- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 32本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
+- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 33本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 14本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
 - [Expert Prefetch](inference/03-expert-prefetch/) — 14本 — 将来使うexpertをrouting確定前に予測し、GPU cacheの保持や先読みを制御してweight転送待ち・転送量を減らす。
 - [Conditional Computation](inference/04-conditional-computation/) — 9本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
@@ -35,5 +35,5 @@
 → [Survey一覧](survey/)
 
 <!-- survey:auto:start -->
-推論：**326本** ／ 学習：**19本** ／ サーベイ：**5本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)
+推論：**327本** ／ 学習：**19本** ／ サーベイ：**5本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->

@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.26633",
   "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
   "selection_reason": "短い文脈はGPU、長い文脈は実機PNMへ配置し、文脈成長に合わせて再計算なしで実行場所を移す異種メモリ・計算サービング。CXL、RPC、RDMAを含むエンドツーエンド実機系で、GPU単独比最大5.5倍のデコードスループットと最大15倍のP99遅延改善を報告する。階層メモリと実行場所選択を結ぶ未収録系統として強い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T11:17:11+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T11:31:18+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
