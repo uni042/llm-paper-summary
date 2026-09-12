@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **76 / 50** |
-| Research ready | **76** |
+| Candidate在庫（Research ready） | **79 / 50** |
+| Research ready | **79** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **178** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **5** |
+| Discovery完了 | **2** |
+| 新規job | **9** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **73** |
-| 探索評価候補 | **338** |
+| 探索round（stats観測） | **74** |
+| 探索評価候補 | **341** |
 | 重複除外 | **96** |
-| 重複率 | **28.4%** |
-| Novel候補 | **242** |
-| Research候補採用 | **109** |
+| 重複率 | **28.2%** |
+| Novel候補 | **245** |
+| Research候補採用 | **112** |
 | Research完了 | **46** |
 | Repo収録 | **46** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 338 → 重複除外後 242 → Research候補採用 109 → Research完了 46 → Repo収録 46**
+**探索評価 341 → 重複除外後 245 → Research候補採用 112 → Research完了 46 → Repo収録 46**
 
 ## 探索効率（直近24時間）
 
@@ -134,6 +134,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | agentic/multi-agent serving・collective KV sharing | 3 | 0 | 2 | 0.0% | 66.7% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
+| multimodal弾力的並列化・EPD分離・modality-aware scheduling | 3 | 0 | 3 | 0.0% | 100.0% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -147,11 +148,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T02:29:24+09:00** — multimodal弾力的並列化・EPD分離・modality-aware scheduling: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T02:29:24+09:00** — 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T02:29:24+09:00** — 新着KV圧縮・時間集約・長推論再参照: 評価 2 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — heterogeneous GPU cluster・multi-agent workflow・routing/placement: 評価 5 / 重複 0 / 採用 3
 - **2026-09-13T01:55:54+09:00** — CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime: 評価 5 / 重複 0 / 採用 1
-- **2026-09-13T01:55:54+09:00** — SLO budget・KV restoration/reconfiguration・adaptive prefill execution: 評価 5 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
