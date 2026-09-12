@@ -1,19 +1,19 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **134 / 50** |
-| Research ready | **134** |
+| Candidate在庫（Research ready） | **136 / 50** |
+| Research ready | **136** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **6 / 24** |
+| Maintenance counter | **7 / 24** |
 
 ### 注意事項
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T07:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **9** |
+| Discovery完了 | **5** |
+| 新規job | **12** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **118** |
-| 探索評価候補 | **577** |
-| 重複除外 | **229** |
-| 重複率 | **39.7%** |
-| Novel候補 | **348** |
-| Research候補採用 | **193** |
+| 探索round（stats観測） | **119** |
+| 探索評価候補 | **589** |
+| 重複除外 | **239** |
+| 重複率 | **40.6%** |
+| Novel候補 | **350** |
+| Research候補採用 | **195** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 577 → 重複除外後 348 → Research候補採用 193 → Research完了 70 → Repo収録 70**
+**探索評価 589 → 重複除外後 350 → Research候補採用 195 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -73,6 +73,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 |---|---:|---:|---:|---:|---:|
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | agent workflow/context runtime・branch admission・heterogeneous many-core runtime | 13 | 9 | 4 | 69.2% | 30.8% |
+| multi-node MoE活性パターン配置・edge expert類似性routing | 12 | 10 | 2 | 83.3% | 16.7% |
 | 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
 | 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 | 10 | 10 | 0 | 100.0% | 0.0% |
@@ -192,11 +193,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T07:58:39+09:00** — multi-node MoE活性パターン配置・edge expert類似性routing: 評価 12 / 重複 10 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 疎注意サービング・GPUメガカーネル・動的コンパイラ: 評価 8 / 重複 5 / 採用 3
 - **2026-09-13T07:58:39+09:00** — MoE speculative decoding・expert offloading・CPU/GPU共同実行: 評価 5 / 重複 3 / 採用 0
 - **2026-09-13T07:58:39+09:00** — MoE expert cache・Flash階層・expert-parallel耐障害性: 評価 7 / 重複 5 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 2609新着・端末メモリ管理・エッジクラウド協調推論: 評価 6 / 重複 4 / 採用 0
-- **2026-09-13T07:00:13+09:00** — 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査: 評価 10 / 重複 10 / 採用 0
 
 ## 最近処理した論文
 
