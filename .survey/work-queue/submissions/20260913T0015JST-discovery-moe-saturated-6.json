@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-8f646a94cf85fd73",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-moe-saturated-6",
+    "axis": "MoE専門家配置・先読み・協調スケジューリング",
+    "query_summary": "MoE expert placement、expert prefetch、dynamic replication、request/expert coordinated schedulingを新着・既存関連候補から再走査した。強候補はすべて最新正本で既収録または既存jobだった。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2607.17880",
+      "arXiv:2603.06350",
+      "arXiv:2603.19289",
+      "arXiv:2606.15177",
+      "arXiv:2602.21626"
+    ],
+    "next_axis_hint": "KV multi-turn管理・復元・不確実性対応を独立軸として再確認する",
+    "empty_round_reason": "MoEの専門家配置・先読み・負荷分散・多階層スケジューリングで見つかった強候補は、最新のidentityとexisting jobsですべて既存と判定された。"
+  }
+}
