@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T15:09:20.795021+00:00",
+  "updated_at": "2026-09-12T15:11:04.239533+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11336,7 +11336,7 @@
     {
       "run_key": "2026-09-12T23:30:00+09:00",
       "first_recorded_at": "2026-09-12T14:44:28.159530+00:00",
-      "last_recorded_at": "2026-09-12T15:09:20.795021+00:00",
+      "last_recorded_at": "2026-09-12T15:11:04.239533+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -11345,9 +11345,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 8,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -11424,6 +11424,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34701399071:1",
+          "recorded_at": "2026-09-12T15:11:04.239533+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34701399071",
+            "run_attempt": "1",
+            "source_sha": "d5441c65b126f5016c314bf9318b58301b0e8a4d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11466,6 +11480,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-54739fbff28443b3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -11503,6 +11525,27 @@
           "type": "research",
           "canonical_id": "arXiv:2607.01579",
           "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters"
+        },
+        {
+          "job_id": "job-2a72bb4efed9b813",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-b045bf747f93dbbe",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.18897",
+          "title": "Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution"
+        },
+        {
+          "job_id": "job-research-e227d58af7e6af7e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.03333",
+          "title": "SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -11512,7 +11555,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0005JST-discovery-storage-hierarchy-1.json",
-        ".survey/work-queue/results/20260913T0008JST-discovery-serving-scheduling-2.json"
+        ".survey/work-queue/results/20260913T0008JST-discovery-serving-scheduling-2.json",
+        ".survey/work-queue/results/20260913T0010JST-discovery-agentic-serving-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 357,

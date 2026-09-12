@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:08:16+00:00",
+  "updated_at": "2026-09-12T15:10:13+00:00",
   "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-serving-scheduling-2",
+  "last_round": "specialist-agentic-serving-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -877,6 +877,24 @@
       ],
       "next_axis_hint": "エージェント推論のtool待ち隠蔽・speculative tool executionへ軸を移し、その後GPU runtime/機密実行の転送律速を確認する",
       "source_submission": "work-queue/submissions/20260913T0008JST-discovery-serving-scheduling-2.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-agentic-serving-3",
+      "axis": "エージェント推論・speculative tool execution",
+      "query_summary": "agentic workloadでLLM decodeとtool実行の直列待ちを隠すsystem-level speculationを探索し、既収録AgentSysBench/CacheScout等を除外して2候補を投入した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.15127",
+        "arXiv:2608.14624"
+      ],
+      "next_axis_hint": "Blackwell confidential computing下のhost-device転送律速とGPU runtime境界を確認し、その後新着2609系のMoE/KV/servingを再探索する",
+      "source_submission": "work-queue/submissions/20260913T0010JST-discovery-agentic-serving-3.json"
     }
   ],
   "axes": {
@@ -1379,6 +1397,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.6,
       "next_axis_hint": "エージェント推論のtool待ち隠蔽・speculative tool executionへ軸を移し、その後GPU runtime/機密実行の転送律速を確認する"
+    },
+    "エージェント推論・speculative tool execution": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "Blackwell confidential computing下のhost-device転送律速とGPU runtime境界を確認し、その後新着2609系のMoE/KV/servingを再探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
