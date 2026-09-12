@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e35987aea0aca20c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.10790",
+      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.10790",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2609.10790-kubernetes-native-composable-cxl-shared-kv.md",
+      "priority": 92,
+      "reason": "Composable CXL memoryをKubernetes Dynamic Resource Allocationでpod間共有できるcluster resourceとして公開し、vLLM/llm-dのcross-node KV-cache tierとして利用する新着研究。512 GiB CXL applianceを用いた2-node実機でexternal hit rate 95.4〜99.5%時にcross-node prefix reuseのTTFTを5.5〜36.6倍短縮し、same-node reuseとの差を1〜4%に抑える。性能評価よりfeasibility studyという位置付けだが、CXLをクラスタ運用層へ統合する点が既存の単体memory tier研究との差分として大きい。"
+    },
+    {
+      "canonical_id": "arXiv:2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
+      "source_url": "https://arxiv.org/abs/2606.19746",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md",
+      "priority": 90,
+      "reason": "dense attention向けRDMA型remote KV poolがprefix全体をfetchする非効率に対し、CXLのcache-line granularity load/storeでsparse attentionが実際に必要とするtop-k KVだけをon-demand取得する分離KVシステム。DeepSeek-V3.2 + SGLang評価でRDMA baseline比throughput 2.1倍、TTFT 9.7倍、TBT 1.8倍改善を報告する。sparse attentionとmemory disaggregationを直接接続する新しい設計点として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.18194",
+      "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://arxiv.org/abs/2512.18194",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md",
+      "priority": 86,
+      "reason": "prefill/decode分離でRDMA経由のKV転送が律速になる問題に対し、rack-scale CXL shared memoryをKV transfer substrate兼prefix-aware cacheとして使い、GPUがCXL load/store/DMAで直接KV blockを読み書きする。Dynamo実装でRDMA/DRAM cache baseline比average TTFT最大9.8倍、P99 latency最大6.2倍、peak throughput最大1.6倍改善を報告する。ネットワーク経由KV転送を共有memory semanticsへ置換する点が重要。"
+    },
+    {
+      "canonical_id": "arXiv:2511.00321",
+      "title": "Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits",
+      "source_url": "https://arxiv.org/abs/2511.00321",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2025-2511.00321-cxl-pnm-million-token-kv-management.md",
+      "priority": 82,
+      "reason": "1M-token級KVをCXL外部memoryへ置くだけでなく、token page selection自体をCXL側PNM acceleratorへoffloadしてGPUへの不要なKV recallを削る。state-of-the-art CXL-PNM system上で405Bまでを評価し、PNM-only/ GPU-PNM hybrid構成でbaseline比throughput最大21.9倍、energy/token最大60倍低減、total cost efficiency最大7.3倍を報告する。階層memoryとnear-memory computeの接点として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.11920",
+      "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.11920",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2025-2512.11920-cxl-speckv-fpga-speculative-kv-cache.md",
+      "priority": 76,
+      "reason": "CXL経由でKV cacheをremote FPGA memoryへoffloadし、speculative KV prefetchとFPGA圧縮/展開を組み合わせるmemory disaggregation方式。abstractではGPU-only baseline比throughput最大3.2倍、memory cost 2.8倍低減、compressionでbandwidth最大4倍削減を報告する。CXL+FPGA+投機的prefetchの組合せは関連性が高いが、他の実機CXL研究より優先度はやや下げる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T18:00:00+09:00",
+    "round": "specialist-cxl-storage-3",
+    "axis": "CXL共有メモリ・KV階層・near-memory processing",
+    "query_summary": "前ラウンドが正本側で全候補非採用だったため別軸へ移り、Kubernetes-native composable CXL、新しいsparse-attention CXL KV、rack-scale CXL共有KV、CXL-PNM、FPGA speculative KVを軽量評価した。既知のHyMCache/Photonic-CXL等は直近discovery-stateに収録済みのため候補から除外した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2607.18141", "arXiv:2607.27187"],
+    "next_axis_hint": "storage/DBMSのcache admission・prefetch・I/O schedulingをLLM expert/KVへ接続する研究、またはHPC大規模推論通信へ移る",
+    "empty_round_reason": null
+  }
+}
