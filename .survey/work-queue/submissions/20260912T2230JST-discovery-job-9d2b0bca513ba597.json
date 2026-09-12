@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9d2b0bca513ba597",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.14116",
+      "title": "FailSafe: High-performance Resilient Serving",
+      "source_url": "https://arxiv.org/abs/2511.14116",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-serving-gpu-failures.md",
+      "priority": 86,
+      "reason": "テンソル並列LLMサービングでGPU故障が発生すると全実行停止・KV再計算・残存GPUの計算/メモリ偏りが起きる問題を扱う。循環KV配置、テンソル/データ並列を組み合わせた注意計算、細粒度負荷ルーティング、事前KVバックアップ、必要時重み復旧を組み合わせ、8基H100と実故障トレースで標準的故障処理より最大2倍のスループット、2桁低い復旧遅延を報告する。信頼性を通常時性能と一体最適化する未収録軸として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.23969",
+      "title": "The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing",
+      "source_url": "https://arxiv.org/abs/2606.23969",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.23969-serialized-bridge-confidential-gpu-serving.md",
+      "priority": 74,
+      "reason": "Blackwell世代GPUの秘匿計算ではGPU内演算自体はほぼ非秘匿時と同速でも、秘匿仮想機械とGPU間の小粒度転送が直列化し、LLMサービング処理量が13〜27%低下する原因を分解する研究。vLLMの小規模転送、KV復元、モデルロードを測定し、スケジューリング変更やワーカースレッド排出で失われた性能差の最大92%を回復する。相互接続・ランタイム境界が新しいボトルネックになる実測分析として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2512.19179",
+      "title": "L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling",
+      "source_url": "https://arxiv.org/abs/2512.19179",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.19179-l4-length-aware-multi-instance-scheduling.md",
+      "priority": 72,
+      "reason": "長文対応モデルでは同一バッチ内の系列長ばらつきが注意カーネル効率を落とす点に着目し、同一モデルの複数インスタンスを長さ帯ごとの群へ分け、要求長の成長に応じて群間を流す。動的計画法による境界選択と分散負荷再平衡で、既存複数インスタンス方式に対しエンドツーエンド遅延最大67%、尾遅延最大69%削減、処理量最大2.89倍を報告する。長さ異質性をGPU間スケジューリングへ明示的に反映する未収録候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T22:30:00+09:00",
+    "round": "normal-critical-reliability-runtime-topology-02",
+    "axis": "GPU故障耐性・秘匿実行境界・長さ異質性スケジューリング",
+    "query_summary": "在庫が再びcritical境界まで低下したため、前回の地理分散軸からGPU故障耐性、秘匿VM-GPU境界、長さ異質性へ変更した。実質評価4件のうちMulti-stage Flow Schedulingは既収録のため除外し、未収録3件を投入した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2603.17456"],
+    "next_axis_hint": "次回は故障耐性軸を機械反復せず、ネットワークトポロジーを跨ぐ多クラスタ配置、CXL/PCIeファブリック、または要求状態移送へ展開する",
+    "empty_round_reason": null
+  }
+}
