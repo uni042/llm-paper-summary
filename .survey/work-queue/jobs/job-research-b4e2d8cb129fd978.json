@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b4e2d8cb129fd978",
+  "type": "research",
+  "parent_job_id": "job-0e120e1d91c12e9d",
+  "priority": 88,
+  "canonical_id": "arXiv:2605.07238",
+  "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows",
+  "source_url": "https://arxiv.org/abs/2605.07238",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.07238-fate-future-state-aware-workflow-scheduling.md",
+  "selection_reason": "workflow DAGの現在queueだけでなく、model residency、parent-output locality、prefix reuse、future device reachabilityなど次stageへ継承される状態をfirst-class objectiveとして扱う。CP-SAT frontier plannerとhorizon-aware scoringで、real-DAG benchmarkのmakespan/P95 latencyを強い非FATE baseline比約8.9%/8.8%削減し、workflow servingのstate-aware schedulingを補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:20:22+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 249,
+      "completed": 250,
       "ready": 1
     },
     "audit": {
@@ -10,11 +10,23 @@
     "research": {
       "completed": 177,
       "superseded": 44,
-      "ready": 70,
+      "ready": 73,
       "deferred": 3
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-0af91cb3b8d7065b",
+      "type": "research",
+      "lane": null,
+      "priority": 93,
+      "canonical_id": "arXiv:2406.01566",
+      "title": "Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2406.01566",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-0aac68b8968fc75e",
       "type": "research",
@@ -64,6 +76,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-548b75bbb8077475",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2606.17949",
+      "title": "RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.17949",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-b018d3ca3a88c71f",
       "type": "research",
       "lane": null,
@@ -88,31 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-8d8feec36f937b6f",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2604.06370",
-      "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
-      "source_url": "https://arxiv.org/abs/2604.06370",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-43ee292714ed8d8c",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2603.23049",
-      "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
-      "source_url": "https://arxiv.org/abs/2603.23049",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.23049-pcr-prefetch-cache-reuse-rag-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-0e120e1d91c12e9d",
+      "job_id": "job-ecca78c9bc852f3a",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T17:19:11+00:00"
+  "generated_at": "2026-09-12T17:20:58+00:00"
 }

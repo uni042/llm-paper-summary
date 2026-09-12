@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:19:28.603383+00:00",
+  "updated_at": "2026-09-12T17:21:14.921660+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T17:19:28.603383+00:00",
+      "last_recorded_at": "2026-09-12T17:21:14.921660+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 19,
+        "discovery_completed": 20,
         "blocked": 0,
-        "new_jobs": 48,
+        "new_jobs": 52,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12516,6 +12516,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34707918466:1",
+          "recorded_at": "2026-09-12T17:21:14.921660+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34707918466",
+            "run_attempt": "1",
+            "source_sha": "303daa7c3d51f8a926122e57603e8992eecabb0a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12665,6 +12679,14 @@
         },
         {
           "job_id": "job-0716b90ddce6dee3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-0e120e1d91c12e9d",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -13008,6 +13030,34 @@
           "type": "research",
           "canonical_id": "arXiv:2605.01708",
           "title": "SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving"
+        },
+        {
+          "job_id": "job-ecca78c9bc852f3a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0af91cb3b8d7065b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2406.01566",
+          "title": "Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs"
+        },
+        {
+          "job_id": "job-research-548b75bbb8077475",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.17949",
+          "title": "RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving"
+        },
+        {
+          "job_id": "job-research-b4e2d8cb129fd978",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.07238",
+          "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows"
         }
       ],
       "new_paper_ids": [],
@@ -13030,7 +13080,8 @@
         ".survey/work-queue/results/20260913T0211JST-discovery-582553a19b973e3b.json",
         ".survey/work-queue/results/20260913T0214JST-discovery-79f44962fd7f926b.json",
         ".survey/work-queue/results/20260913T0216JST-discovery-5d7000d72e974f06.json",
-        ".survey/work-queue/results/20260913T0218JST-discovery-0716b90ddce6dee3.json"
+        ".survey/work-queue/results/20260913T0218JST-discovery-0716b90ddce6dee3.json",
+        ".survey/work-queue/results/20260913T0220JST-discovery-0e120e1d91c12e9d.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
