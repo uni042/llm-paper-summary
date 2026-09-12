@@ -2,24 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.17949-20260913-0430-v10-b",
-  "job_id": "job-research-548b75bbb8077475",
+  "attempt_id": "attempt-2606.01751-20260913-0430-v10-d",
+  "job_id": "job-research-86f5ed2fa8ac71e7",
   "data": {
-    "hardware": ["13モデル実体、合計28 GPU。", "Qwen2.5-72B: A100×4を2実体。", "Qwen2.5-14B: V100×4を3実体。", "Qwen2.5-7B: A30×1を5実体。", "Qwen2.5-3B: A30×1を3実体。"],
-    "software": ["vLLM serving-benchmarkとvLLM worker。", "RouteBalance約13,000行のPython。", "all-MiniLM-L6-v2、FAISS KNN、XGBoost遅延ヘッド。", "比較対象はBEST-Route、Avengers-Pro、vLLM Semantic-Router、round-robin、shortest-queue、random。"],
-    "model": ["Qwen2.5-3B", "Qwen2.5-7B", "Qwen2.5-14B", "Qwen2.5-72B", "品質判定器Llama-3.1-8B-Instruct", "第二判定器gemma-3-12B-it"],
-    "datasets": ["7公開データセット由来18,608プロンプト", "学習14,919、テスト3,634、完全被覆のサービング評価3,534", "instruction following、code、safety、multi-turn chat、math、reading comprehension等"],
-    "baselines": ["BEST-Route", "Avengers-Pro", "vLLM Semantic-Router", "passthrough + round-robin", "passthrough + shortest-queue", "passthrough + random", "enhanced concurrent-scoring baseline variants"],
-    "correctness": "ルータの出力品質は、候補モデル群とは別のLlama-3.1-8B-Instructを使うDeepEval G-Evalで評価し、さらにgemma-3-12B-itで全(prompt, model)グリッド14,431組と代表サービング出力を再採点する。RouteBalance > BEST-Routeの順序は両判定器で維持される。",
+    "hardware": ["8×NVIDIA GeForce RTX 4090 server"],
+    "software": ["vLLM v1 0.11.0", "SparseX-vLLM", "PagedAttention", "FlashAttention", "FlashInfer", "AutoGen", "MAD", "MASLab"],
+    "model": ["Qwen3-8B", "Qwen3-32B", "Qwen3-30B-A3B-Instruct-2507", "Qwen2.5-7B-Instruct", "Qwen2.5-72B-Instruct", "Llama3-8B-Instruct"],
+    "datasets": ["LOCOMO", "LongMemEval", "RULER: MQ-NIAH/VT/CWE/FWE", "GSM-Hard", "MATH", "GPQA", "AQUA-RAT", "MMLU-Pro", "SciBench", "MedQA", "MedMCQA"],
+    "baselines": ["full recompute", "naive reuse", "CacheBlend", "EPIC", "vanilla agent execution"],
+    "correctness": "完全再計算を品質上限として比較し、LOCOMO/LongMemEval等のLLM-as-a-judgeにはGPT-5.1を利用する。SparseXは近似KV再利用なのでbit-exact correctnessではなくtask qualityを測り、hybrid attentionでfull recomputeとの差を小さくする。",
     "settings": [
-      {"name": "異種クラスタ前線", "description": "4モデルサイズ・3 GPU種類・13実体をPoisson到着率6〜30 req/sで駆動し、RouteBalanceの16個の品質・遅延・費用重みと各比較ルータの閾値/混合率を掃引する。品質、完了req/s、平均E2E、実トークン費用を測定する。"},
-      {"name": "公正なルータ比較", "description": "BEST-RouteとAvengers-Proを同じ14,919プロンプトの学習分割・同じDeepEvalラベルで再学習し、さらに両者の採点をRouteBalanceと同じバッチ内並行経路へ移したenhanced版を作り、ルーティング方針と実装上の直列採点ボトルネックを分離する。"},
-      {"name": "四アーム因果分離", "description": "完全目的関数、遅延重みなし+reactive queue、遅延重みなし+predictive latency、完全目的関数+static per-tier latencyの4条件を同一プロンプト・seedで比較し、主要利得がどの機構から出るかを切り分ける。"},
-      {"name": "費用予算", "description": "到着率16 req/sで75/45/30%の要求に費用制約を付け、予測費用による事前候補除外の有無とBEST-Routeを比較する。全方式で実行時max_tokens制限とストリーミング早期停止を共有する。"},
-      {"name": "バッチング除去", "description": "LPT順を外す、適応バッチを外す、固定バッチ1/16/32等へ変えることで、負荷更新と一括KNNの効果を測る。"},
-      {"name": "頑健性", "description": "4 Poisson seed、第二品質判定器、5価格ベクトル、leave-one-dataset-out、72B層全損失、gamma-bursty、square-wave arrival、p95/p99 tailを評価する。"}
+      {"name":"multi-round chat","description":"LOCOMOとLongMemEvalで、先行cache-building requestのhistory segmentを保存後、新しいquery/non-reuse textと再結合したrequestを評価する。full recompute、naive reuse、CacheBlend、EPIC、SparseX sparse-only/hybridのscoreとTTFTを比較する。"},
+      {"name":"RULER long-context","description":"MQ-NIAH、variable tracking、common-word extraction、frequent-word extractionでkey informationがprompt内の任意位置にある条件を作り、Qwen3-8B/30B-A3B/32Bにおける4 task平均accuracyを比較する。"},
+      {"name":"multi-agent workflows","description":"MASLab上でAutoGenとMulti-Agent Debateを使い、Qwen2.5-7B/72B、Llama3-8Bを数学、科学、一般知識、医療taskへ適用し、agent間の共有contextをSparseXで再利用した時のtask scoreをvanilla executionと比較する。"},
+      {"name":"engine integration","description":"cache-building requestでsegment KVをvLLM block poolへ格納し、その後の評価requestでprefix/virtual/frozen blockを同時lookupする実際のonline execution pathを使う。単独kernel microbenchmarkではなくTTFTとdownstream qualityを測る。"}
     ],
-    "methodology": "合計442構成、約150万要求を実クラスタで評価する。ルータごとの学習ラベルを揃え、published版と採点経路を並行化したengineering-equalized版を分けて報告するため、方針そのものの優劣と実装アーキテクチャの差を混同しない。さらに四アーム分離で、学習型予測器より『モデル選択時に遅延項を含めること』が主要因であることを検証する。",
-    "scope": "実機評価はQwen2.5 3B/7B/14B/72B一族とCloudLab上のA30/V100/A100構成で、実体集合は実行中固定である。別モデル族・別トポロジ、実運用到着トレース、重みをSLOから自動制御する機構は未評価。品質は主にオフラインG-Evalラベルをルーティング判断の基準にするため、実サービング出力の第二判定は代表点で検証する。"
+    "methodology": "評価は『最初に再利用可能segmentをvLLM内でprefillしてcacheを作る→別requestで新規textと異なる位置・順序に再結合してhitさせる』二段階で現実的なreuse trafficを模擬する。Prefix Cacheではhitできない構造をfull recompute baselineとして、reuseによるTTFT短縮とcross-context近似による品質差を同時に測る。比較対象はvLLM上で再現可能なopen-source方式に限定する。",
+    "scope": "単一8×RTX4090 server内のGPU-resident cache共有が中心で、CPU/SSD/cross-node transfer latencyは評価しない。top-k比率やhybrid boundaryはmodel/task依存で、万能な固定設定は示さない。multi-agentではtaskごとに品質差の符号が変わるため平均だけでなく個別scoreを見る必要がある。"
   }
 }
