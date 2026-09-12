@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:42 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **105 / 50** |
-| Research ready | **105** |
+| Candidate在庫（Research ready） | **107 / 50** |
+| Research ready | **107** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **186** |
+| Research completed（累計） | **187** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **2 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T03:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **3** |
-| Repo収録 | **1** |
+| Discovery完了 | **2** |
+| 新規job | **7** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -51,21 +51,21 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **84** |
-| 探索評価候補 | **404** |
-| 重複除外 | **122** |
-| 重複率 | **30.2%** |
-| Novel候補 | **282** |
-| Research候補採用 | **146** |
-| Research完了 | **54** |
-| Repo収録 | **54** |
+| 探索round（stats観測） | **85** |
+| 探索評価候補 | **409** |
+| 重複除外 | **123** |
+| 重複率 | **30.1%** |
+| Novel候補 | **286** |
+| Research候補採用 | **149** |
+| Research完了 | **55** |
+| Repo収録 | **55** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 404 → 重複除外後 282 → Research候補採用 146 → Research完了 54 → Repo収録 54**
+**探索評価 409 → 重複除外後 286 → Research候補採用 149 → Research完了 55 → Repo収録 55**
 
 ## 探索効率（直近24時間）
 
@@ -103,6 +103,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | SLO budget・KV restoration/reconfiguration・adaptive prefill execution | 5 | 0 | 1 | 0.0% | 20.0% |
 | agent session KV residency・near-memory scheduling | 5 | 4 | 1 | 80.0% | 20.0% |
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
+| edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision | 5 | 1 | 3 | 20.0% | 60.0% |
 | heterogeneous GPU cluster・multi-agent workflow・routing/placement | 5 | 0 | 3 | 0.0% | 60.0% |
 | output-length uncertainty・KV reservation・memory-constrained admission/scheduling | 5 | 0 | 1 | 0.0% | 20.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
@@ -158,16 +159,17 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:30:44+09:00** — edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision: 評価 5 / 重複 1 / 採用 3
 - **2026-09-13T03:30:44+09:00** — edge/on-device offload・multitasking memory・cloud KV streaming: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T03:02:31+09:00** — GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap: 評価 6 / 重複 1 / 採用 3
 - **2026-09-13T03:02:31+09:00** — DBMS由来cache policy・real-time/best-effort混在QoS scheduling: 評価 9 / 重複 7 / 採用 2
 - **2026-09-13T03:02:31+09:00** — CUDA compiler・JIT/Graph runtime・decode kernel serving: 評価 6 / 重複 4 / 採用 2
-- **2026-09-13T03:02:31+09:00** — serverless production serving・cold start・multi-LoRA elasticity: 評価 7 / 重複 3 / 採用 4
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
@@ -175,15 +177,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
 - `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
-- `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 
 ### 次に処理する候補
 
-- P94 `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - P91 `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
+- P90 `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 
 ## 7日比較
 
