@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T07:48:22.653178+00:00",
+  "updated_at": "2026-09-12T07:50:21.793774+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9034,19 +9034,19 @@
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "first_recorded_at": "2026-09-12T07:34:22.781369+00:00",
-      "last_recorded_at": "2026-09-12T07:48:22.653178+00:00",
+      "last_recorded_at": "2026-09-12T07:50:21.793774+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 3,
-        "new_papers": 2,
+        "new_jobs": 4,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -9108,6 +9108,22 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34681703984:1",
+          "recorded_at": "2026-09-12T07:50:21.793774+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34681703984",
+            "run_attempt": "1",
+            "source_sha": "3aaf0b5b0e97032da07c6aa2e9775ab6b4785db5"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9134,6 +9150,14 @@
           "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-d8b01443e423e709",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04453",
+          "title": "When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -9157,11 +9181,19 @@
           "type": "research",
           "canonical_id": "arXiv:2609.04453",
           "title": "When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models"
+        },
+        {
+          "job_id": "job-7c0d2ac0d1cbe774",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
         "arXiv:2609.10812",
-        "arXiv:2609.09241"
+        "arXiv:2609.09241",
+        "arXiv:2609.04453"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1630JST-discovery-7c31e8b2a460d1f4.json",
@@ -9169,7 +9201,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 333,
-      "paper_active_count_after": 335,
+      "paper_active_count_after": 336,
       "last_successful_action": "paper_materialized"
     }
   ]
