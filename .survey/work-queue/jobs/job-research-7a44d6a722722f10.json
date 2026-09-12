@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-7a44d6a722722f10",
+  "type": "research",
+  "parent_job_id": "job-93c319d7de58b930",
+  "priority": 88,
+  "canonical_id": "arXiv:2502.15524",
+  "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+  "source_url": "https://arxiv.org/abs/2502.15524",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.15524-hydraserve-serverless-cold-start.md",
+  "selection_reason": "Foundryが参照するserverless cold-start基盤。modelを複数serverへ先行配置し、worker内cold-start stageをoverlap、network contention-aware GPU placementとpipeline consolidationを組み合わせる。一次資料ではcold-start latency 1.7〜4.7倍短縮、SLO attainment 1.43〜1.74倍改善を報告し、NSDI'26採択。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:46:34+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:42:52+00:00",
+  "updated_at": "2026-09-12T17:46:34+00:00",
   "last_run_key": "2026-09-13T02:29:24+09:00",
-  "last_round": "specialist-runtime-network-routing-4",
+  "last_round": "specialist-foundry-backward-coldstart-elasticity-5",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1535,6 +1535,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "forward citationとbackward referenceを明示的に回し、その後SSD/NVMe・MoE expert cache/prefetch・framework更新系の未収録を再探索する",
       "source_submission": "work-queue/submissions/20260913T0241JST-discovery-specialist-runtime-network-routing.json"
+    },
+    {
+      "run_key": "2026-09-13T02:29:24+09:00",
+      "round": "specialist-foundry-backward-coldstart-elasticity-5",
+      "axis": "Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity",
+      "query_summary": "直前採用候補Foundryの一次資料にある関連研究・参考文献から、Gyges、Expert-as-a-Service、WarmServe、HydraServe、λScaleを抽出し、各arXiv抄録だけで軽量評価した。投入直前に最新mainのidentity index、next discovery job、決定論的research job pathを照合し5件とも未収録・job未存在を確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はforward citation/query expansionでSparseXなど新しいKV reuse研究を確認し、その後SSD/NVMe・heterogeneous memoryへ移る",
+      "source_submission": "work-queue/submissions/20260913T0245JST-discovery-specialist-foundry-backward.json"
     }
   ],
   "axes": {
@@ -2437,6 +2452,16 @@
       "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "forward citationとbackward referenceを明示的に回し、その後SSD/NVMe・MoE expert cache/prefetch・framework更新系の未収録を再探索する"
+    },
+    "Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity": {
+      "last_run_key": "2026-09-13T02:29:24+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はforward citation/query expansionでSparseXなど新しいKV reuse研究を確認し、その後SSD/NVMe・heterogeneous memoryへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

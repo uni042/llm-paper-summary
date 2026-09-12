@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-0dea3dc5502917bd",
+  "type": "research",
+  "parent_job_id": "job-93c319d7de58b930",
+  "priority": 92,
+  "canonical_id": "arXiv:2509.17863",
+  "title": "Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving",
+  "source_url": "https://arxiv.org/abs/2509.17863",
+  "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2509.17863-expert-as-a-service-moe-serving.md",
+  "selection_reason": "Foundryのbackward referenceから得たMoE serving基盤。MoE moduleを独立したstateless serviceへ分離し、CPU-free peer-to-peer通信でfine-grained scalingとfault isolationを実現する。一次資料ではfailure時のthroughput低下2%未満、traffic適応でcompute resource最大37.5%削減を報告しており、expert placement/cacheとは異なるservice disaggregation軸として価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:46:34+00:00",
+  "artifact_transport": "structured_record_v10"
+}

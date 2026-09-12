@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:46:18.026052+00:00",
+  "updated_at": "2026-09-12T17:47:14.813607+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T17:46:18.026052+00:00",
+      "last_recorded_at": "2026-09-12T17:47:14.813607+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 15,
+        "new_jobs": 21,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -13223,6 +13223,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34709212949:1",
+          "recorded_at": "2026-09-12T17:47:14.813607+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34709212949",
+            "run_attempt": "1",
+            "source_sha": "95826ef694fb43977d104a1642b8205ac53fefc9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13271,6 +13285,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.06007",
           "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-93c319d7de58b930",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -13380,6 +13402,48 @@
           "type": "research",
           "canonical_id": "arXiv:2605.16867",
           "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources"
+        },
+        {
+          "job_id": "job-bddc9082393babd6",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0adc1c376ecfc370",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.19729",
+          "title": "Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-0dea3dc5502917bd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.17863",
+          "title": "Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving"
+        },
+        {
+          "job_id": "job-research-4cfe79f9779265c4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.09922",
+          "title": "λScale: Enabling Fast Scaling for Serverless Large Language Model Inference"
+        },
+        {
+          "job_id": "job-research-7a44d6a722722f10",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.15524",
+          "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds"
+        },
+        {
+          "job_id": "job-research-aa03f7c9ea8916c2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.09472",
+          "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -13390,12 +13454,13 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
         ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json",
-        ".survey/work-queue/results/20260913T0241JST-discovery-specialist-runtime-network-routing.json"
+        ".survey/work-queue/results/20260913T0241JST-discovery-specialist-runtime-network-routing.json",
+        ".survey/work-queue/results/20260913T0245JST-discovery-specialist-foundry-backward.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
       "paper_active_count_after": 369,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
