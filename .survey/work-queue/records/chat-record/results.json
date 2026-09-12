@@ -2,23 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2609.11392-20260912-1930-v10-a",
-  "job_id": "job-research-a3fa4611bb7bffee",
+  "attempt_id": "attempt-2606.30391-20260912-1942-v10-a",
+  "job_id": "job-research-a6fb90f535b639f2",
   "data": {
-    "overview": "PATTONは、PIMでアテンション演算だけを速くする方式に対し、KVブロックの割当・再利用・回収まで含めて物理配置を最適化することで、追加プリフィル再計算とPIM命令オーバーヘッドの双方を減らす。4モデルの幾何平均では、評価した比較対象群に対して統合指標で平均1.95倍の速度向上と4.83倍のエネルギー効率向上を報告する。個別比較ではNeuPIMsに4.27倍、PIMphonyに1.42倍、AttAccに1.52倍、BlockPIMに1.57倍の速度向上となる。Commit Zoneだけでも直接最終Value配置へ書く構成に比べアテンション遅延を13.0%、エネルギーを12.4%削減し、Value書き込みを5倍高速化する。Order-2-Vは生のGEMV効率を最大化する方式より若干計算効率を譲る代わりに、容量圧迫下の接頭辞キャッシュ崩壊を防ぐ。",
+    "overview": "Festinaは、共有GPUで余っているSLO余裕を単に周波数低下へ使うのではなく、周波数相性を考えた要求配置、フェーズごとのSM・周波数共同制御、低負荷時のEWR認識集約へ分配することでエネルギーを削減する。8基H100の評価では、ServerlessLLM、MuxServe、Dilu、Aegaeon、AegVoltanaはいずれも同一負荷でFestinaより多くのエネルギーを使い、比較対象との条件により最大56%の削減を報告する。重負荷でも少なくとも22%の削減を維持する。SLO達成率はAegaeonとの差2%未満、AegVoltanaとの差1%未満で、性能を大幅に犠牲にして得た省エネルギーではない。",
     "key_results": [
-      {"metric": "統合遅延の平均速度向上", "value": "1.95倍", "baseline": "評価対象ベースライン群", "condition": "4モデル、PIMアテンション実行＋ランタイムKVミス由来の追加プリフィル再計算", "interpretation": "単純なPIM MAC高速化ではなく、動的ブロック管理と容量効率によって再計算まで含めたランタイム費用を減らした効果を表す。"},
-      {"metric": "平均エネルギー効率", "value": "4.83倍", "baseline": "評価対象ベースライン群", "condition": "同一AiMシミュレーション構成とA100再プリフィル測定を統合", "interpretation": "PIM I/O、無駄な行活性化、KVミス再計算を同時に抑えるため、遅延以上にエネルギー面の改善が大きい。"},
-      {"metric": "個別速度向上", "value": "NeuPIMs 4.27倍、PIMphony 1.42倍、AttAcc 1.52倍、BlockPIM 1.57倍", "baseline": "各方式", "condition": "Llama3-8B、Qwen3-8B、OPT-6.7B、Qwen1.5-7Bの幾何平均", "interpretation": "粗粒度または静的割当で再プリフィルを起こす方式には大差が付き、同じくブロック管理を持つBlockPIMに対しても書き込み効率・チャネル並列性・SV連続性で優位を得る。"},
-      {"metric": "個別エネルギー効率", "value": "NeuPIMs 7.94倍、PIMphony 6.77倍、AttAcc 6.70倍、BlockPIM 1.51倍", "baseline": "各方式", "condition": "4モデルの幾何平均", "interpretation": "KVミス再計算を多く発生させる方式では特にエネルギー差が大きい。BlockPIMとの差は主にPIM内部の配置・書き込み効率に由来する。"},
-      {"metric": "Commit Zoneによるアテンション遅延削減", "value": "13.0%削減", "baseline": "PATTON-wo-CZ", "condition": "最終Key/Value配置は同じで、Value部分ブロックの一時配置だけを除去したアブレーション", "interpretation": "Valueの生成途中だけ別配置へ置くという設計自体が、全体アテンション遅延へ無視できない効果を持つ。"},
-      {"metric": "Commit ZoneによるValue書き込み高速化", "value": "5倍", "baseline": "PATTON-wo-CZ", "condition": "Qwen1.5-7Bのアブレーション評価", "interpretation": "GEMV向け最終配置へ毎トークン直接書く場合の多数行活性化を避ける効果が直接現れる。"},
-      {"metric": "Commit Zoneの行活性化削減", "value": "12.6倍削減", "baseline": "Order-1-Vへ直接書き込み", "condition": "16ステップごとのcommit overheadを含む", "interpretation": "一時配置から最終配置への定期移動費用を含めても、毎ステップ書き込みを1行中心にまとめる方が有利である。"},
-      {"metric": "容量圧迫下のKVキャッシュヒット率", "value": "PATTON 82.09%、GPU参照 87.86%、PATTON_no_O2V 30.30%", "baseline": "GPU native cacheおよびOrder-2-Vなし構成", "condition": "250,000超のlive context token", "interpretation": "SVの連続還元だけを優先して行領域を要求専有すると、未使用容量が増えて接頭辞キャッシュが崩壊する。Order-2-Vは少しのGEMV断片化と引き換えに実効容量を保つ。"},
-      {"metric": "通常負荷のKVキャッシュヒット率", "value": "全構成91.28%", "baseline": "GPU参照、PATTON、PATTON_no_O2V", "condition": "容量圧迫なし", "interpretation": "Order-2-Vの価値は通常条件より、キャッシュ容量が競合する本番型高負荷条件で顕在化する。"}
+      {"metric": "最大エネルギー削減", "value": "最大56%", "baseline": "既存サーバレスLLMサービング方式", "condition": "8基H100の実運用型負荷。上限条件にはFestina+のアイドルGPU停止またはHBM周波数低下の模擬効果を含む", "interpretation": "要求配置・局所資源制御・負荷集約を協調すると、単独DVFSより大きなクラスタ全体の省エネルギー余地がある。"},
+      {"metric": "標準Festinaに対する比較対象の最大エネルギー比", "value": "ServerlessLLM 1.56倍、MuxServe 1.37倍、Dilu 1.36倍、Aegaeon 1.31倍、AegVoltana 1.30倍", "baseline": "各比較方式", "condition": "RPSとLLM数を変えた同一ワークロード", "interpretation": "周波数制御だけを追加したAegVoltanaよりも省エネルギーで、共有クロックを考慮した配置とSM共同制御の寄与が残る。"},
+      {"metric": "重負荷時エネルギー削減", "value": "少なくとも22%", "baseline": "比較対象群", "condition": "高い要求到着率の重負荷シナリオ", "interpretation": "周波数を下げる余地が縮小する重負荷でも、配置と資源分割の協調による改善が残る。"},
+      {"metric": "SLO達成率", "value": "Aegaeonとの差2%未満、AegVoltanaとの差1%未満", "baseline": "Aegaeon、AegVoltana", "condition": "主評価ワークロード", "interpretation": "省エネルギー化のために大幅なサービス性能低下を受け入れているわけではない。ServerlessLLM、MuxServe、Diluには最大27%、16%、4%高いSLO達成率も示す。"},
+      {"metric": "周波数認識配置の寄与", "value": "約12%の追加エネルギー削減", "baseline": "SLO認識配置のみの第1段階", "condition": "6段階アブレーション", "interpretation": "同じGPUへ置けるかだけでなく、同居テナントの好む周波数を合わせること自体に独立した効果がある。"},
+      {"metric": "細粒度実行時制御の寄与", "value": "第3段階で合計約25%削減", "baseline": "第1段階", "condition": "周波数認識配置にSM・周波数共同再構成を追加", "interpretation": "要求到着時の配置だけではフェーズ変化を追えず、実行中にプリフィル・デコード構成へ追随する必要がある。"},
+      {"metric": "EWR認識集約の寄与", "value": "さらに11%削減", "baseline": "通常のSLO認識集約", "condition": "第4段階から第5段階", "interpretation": "単純にGPU台数を減らすだけでは周波数不一致で省エネルギー効果を損なうため、集約先の周波数相性を考える価値が大きい。"},
+      {"metric": "プリフィル偏重負荷の省エネルギー", "value": "18〜30%", "baseline": "Aegaeon", "condition": "ShareGPT-ix2", "interpretation": "計算律速が強まり高周波数が必要になるほど削減幅は縮むが、SLO同等で改善を維持する。"},
+      {"metric": "デコード偏重負荷の省エネルギー", "value": "28〜35%", "baseline": "Aegaeon", "condition": "ShareGPT-ox2", "interpretation": "メモリ律速のデコードでは周波数を下げやすく、動的SM融通も使えるため省エネルギー余地が大きい。"},
+      {"metric": "プリフィル・デコード分離の追加効果", "value": "エネルギーをさらに7%削減、SLO達成率は約1.5%低下", "baseline": "Festinaのプリフィル・デコード同居構成", "condition": "Aegaeon型のプリフィル・デコード分離をFestinaへ適用", "interpretation": "フェーズを別GPUへ分けると周波数をより正確に合わせられる一方、KV転送オーバーヘッドがSLOへ影響する。"}
     ],
-    "negative_results": "PATTONはすべての指標で無条件に最良ではない。Order-2-Vを外して1要求へValue Row Set全体を割り当てる構成は、生のSV GEMV効率ではPATTONより高い。しかしその配置は未使用列を他要求へ渡せず、容量圧迫時のKVヒット率が30.30%まで低下して追加プリフィルを誘発するため、エンドツーエンドのランタイム費用では不利になる。また主評価はPIMシミュレータであり、ホスト側のモデル全層実行を含む完全なサービングスループット比較ではない。AttAccとNeuPIMsは評価構成上2048トークンの最大コンテキスト制約を持つため、比較条件もその上限へ合わせている。",
-    "interpretation": "PATTONの利得は二つに分かれる。第一に、論理ブロックと物理配置を細粒度で結びつけることで接頭辞キャッシュを保持し、粗粒度・静的配置方式で生じるKVミスとGPU再プリフィルをほぼ除去する。第二に、PIM内部ではKeyとValueを別配置にし、Valueの未完成期間だけCommit Zoneへ逃がすことで、GEMVの連続還元と毎トークン書き込みを両立する。BlockPIMのようにブロックキャッシュを維持できる比較対象との差が1.57倍と小さくなることは、再計算回避が大きな寄与を持つことを示す。一方でBlockPIMに対しても、動的要求下でのチャネル並列性、Value書き込み、連続SV還元の差が残る。",
-    "quality_impact": "モデルの重み、KV値、アテンション数式を近似・量子化・枝刈りせず、配置とランタイム管理だけを変更するため、生成品質は原理上同一である。主な交換条件は、配置メタデータとCommit Zone用の管理複雑性、GEMV連続性と容量共有のバランス、そしてシミュレーションで得たPIM性能が実機でどこまで再現されるかにある。"
+    "negative_results": "Festinaの省エネルギー余地は負荷が高いほど小さくなる。特にプリフィル偏重でGPUがSLO維持のためTDP付近を必要とする場合、周波数低下による利得は縮む。またプリフィル・デコード分離版はエネルギーを追加で7%下げる一方、評価実装のKV転送が十分最適化されておらずSLO達成率が約1.5%低下する。標準FestinaはH100で動的HBM周波数変更や完全なアイドルGPU電源停止を実装しておらず、Festina+の追加16%削減や最大56%という最良値には模擬上限が含まれる。出力長予測を外すとメモリ不足の可能性があるため5%安全余裕と緊急退避処理が必要になる。",
+    "interpretation": "共有GPUでは、各モデルの最適周波数を個別に選べないことが本質的な制約である。Festinaは『要求をどこへ置くか』を周波数制御の前段に含め、似た動作点を望む要求を集めることで共有クロックそのものの衝突を減らす。さらにバッチ内のプリフィル・デコード比率が変化した後は、局所スケジューラがSM量と周波数を同時に変え、配置時の予測が陳腐化する問題を補う。低負荷時にはGPU台数削減による静的電力の利得が大きいが、周波数不一致を作ると動的電力が増えるためEWRが必要になる。この3時間尺度の制御を組み合わせることが、AegVoltanaのような周波数制御単独との差を生む。",
+    "quality_impact": "モデル計算そのものは変えず、要求の配置順序、共有SM量、GPU動作周波数、集約・移行を変更する無損失のシステム最適化である。品質劣化ではなくTTFT/TBT SLO違反率が主なリスクであり、全判断は計測表と安全余裕を使ってSLO制約下で行う。"
   }
 }
