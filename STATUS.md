@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **38 / 50** |
-| Research ready | **38** |
+| Candidate在庫（Research ready） | **39 / 50** |
+| Research ready | **39** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **173** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T00:30:00+09:00**
 |---|---:|
 | Research完了 | **2** |
 | Audit完了 | **0** |
-| Discovery完了 | **0** |
-| 新規job | **0** |
+| Discovery完了 | **1** |
+| 新規job | **2** |
 | Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **41** |
-| 探索評価候補 | **208** |
+| 探索round（stats観測） | **42** |
+| 探索評価候補 | **211** |
 | 重複除外 | **72** |
-| 重複率 | **34.6%** |
-| Novel候補 | **136** |
-| Research候補採用 | **66** |
+| 重複率 | **34.1%** |
+| Novel候補 | **139** |
+| Research候補採用 | **67** |
 | Research完了 | **49** |
 | Repo収録 | **49** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 208 → 重複除外後 136 → Research候補採用 66 → Research完了 49 → Repo収録 49**
+**探索評価 211 → 重複除外後 139 → Research候補採用 67 → Research完了 49 → Repo収録 49**
 
 ## 探索効率（直近24時間）
 
@@ -109,16 +109,17 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
+| エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | 複数ラウンド分離サービング・異種メモリ処理 | 2 | 0 | 2 | 0.0% | 100.0% |
 
 ### 直近5探索round
 
+- **2026-09-13T00:58:47+09:00** — エージェント配信・Multi-LoRA・意味検索型KV管理: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T00:00:00+09:00** — 直近新着・vLLM/SGLang周辺実装・関連論文: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T00:00:00+09:00** — KV multi-turn管理・復元・予約不確実性: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T00:00:00+09:00** — MoE専門家配置・先読み・協調スケジューリング: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T00:00:00+09:00** — multi-agent workflow scheduling・異種LLM配置: 評価 4 / 重複 2 / 採用 2
-- **2026-09-13T00:00:00+09:00** — GPU runtime境界・host-device転送律速: 評価 4 / 重複 3 / 採用 1
 
 ## 最近処理した論文
 
@@ -139,7 +140,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - P88 `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
 - P88 `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - P88 `arXiv:2501.01005` — FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
-- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
+- P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 
 ## 7日比較
 
