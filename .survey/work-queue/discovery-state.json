@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T08:41:28+00:00",
+  "updated_at": "2026-09-12T08:48:40+00:00",
   "last_run_key": "2026-09-12T17:30:00+09:00",
-  "last_round": "paper-worker-memory-serving-refill-1-retry",
+  "last_round": "paper-worker-moe-io-hierarchy-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -367,6 +367,27 @@
       ],
       "next_axis_hint": "今回採用したKV復元・計算効率キャッシュ・動的再均衡を精読後、MoE expert I/O schedulingまたは異種メモリ上の復元スケジューリングへ展開する",
       "source_submission": "work-queue/submissions/20260912T1741JST-discovery-memory-serving-refill-retry.json"
+    },
+    {
+      "run_key": "2026-09-12T17:30:00+09:00",
+      "round": "paper-worker-moe-io-hierarchy-2",
+      "axis": "MoE専門家先読み・I/O階層・エッジ異種実行",
+      "query_summary": "前ラウンドのKV復元・分離サービングから軸を変え、MoE専門家のCPU/ストレージ退避、予測先読み、I/Oと計算の重畳、エッジメモリ制約を一次資料で探索した。過去discovery-stateで既採用のFlashMoE、OD-MoE、Speculating Experts、SSD-backed KV候補は除外し、最新mainの識別子・題名検索でも未収録の候補だけを送る。",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.17063",
+        "arXiv:2512.03927",
+        "arXiv:2603.19289",
+        "arXiv:2605.03375",
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "採用候補を精読し、次はSSD/NVMe専門家I/Oスケジューリング、専門家圧縮と先読みの協調、CXL/CPU/SSD三階層配置へ展開する",
+      "source_submission": "work-queue/submissions/20260912T1750JST-discovery-moe-io-refill.json"
     }
   ],
   "axes": {
@@ -569,6 +590,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "今回採用したKV復元・計算効率キャッシュ・動的再均衡を精読後、MoE expert I/O schedulingまたは異種メモリ上の復元スケジューリングへ展開する"
+    },
+    "MoE専門家先読み・I/O階層・エッジ異種実行": {
+      "last_run_key": "2026-09-12T17:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "採用候補を精読し、次はSSD/NVMe専門家I/Oスケジューリング、専門家圧縮と先読みの協調、CXL/CPU/SSD三階層配置へ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

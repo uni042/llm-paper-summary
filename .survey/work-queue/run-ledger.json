@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T08:45:36.417528+00:00",
+  "updated_at": "2026-09-12T08:49:01.958979+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,7 +9274,7 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T08:45:36.417528+00:00",
+      "last_recorded_at": "2026-09-12T08:49:01.958979+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9283,9 +9283,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 5,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -9347,6 +9347,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34684212956:1",
+          "recorded_at": "2026-09-12T08:49:01.958979+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34684212956",
+            "run_attempt": "1",
+            "source_sha": "b99ec674b0f40fe69a19b359b1c9e09da9ea04dc"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9373,6 +9387,14 @@
           "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-78cb3cedb3b71cf6",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -9396,6 +9418,20 @@
           "type": "research",
           "canonical_id": "arXiv:2510.13223",
           "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure"
+        },
+        {
+          "job_id": "job-204a21f0325d1761",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-18475420c52022ad",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.20179",
+          "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload"
         }
       ],
       "new_paper_ids": [
@@ -9404,12 +9440,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
-        ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json"
+        ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json",
+        ".survey/work-queue/results/20260912T1750JST-discovery-moe-io-refill.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
       "paper_active_count_after": 338,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
