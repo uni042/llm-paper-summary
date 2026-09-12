@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,18 +28,18 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **10** |
-| 新規job | **28** |
+| Discovery完了 | **11** |
+| 新規job | **29** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-moe-communication-saturation-5**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-cxl-ssd-kv-saturation-6**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | MoE通信・runtime parallelism・online expert placement |
+| 探索軸 | CXL・SSD・remote KV cache階層メモリ |
 | 評価候補 | **4** |
 | 重複除外 | **4** |
 | Novel候補 | **0** |
@@ -51,10 +51,10 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-moe-communication-satur
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **93** |
-| 探索評価候補 | **446** |
-| 重複除外 | **142** |
-| 重複率 | **31.8%** |
+| 探索round（stats観測） | **94** |
+| 探索評価候補 | **450** |
+| 重複除外 | **146** |
+| 重複率 | **32.4%** |
 | Novel候補 | **304** |
 | Research候補採用 | **162** |
 | Research完了 | **57** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-moe-communication-satur
 
 ### 24時間ファネル
 
-**探索評価 446 → 重複除外後 304 → Research候補採用 162 → Research完了 57 → Repo収録 57**
+**探索評価 450 → 重複除外後 304 → Research候補採用 162 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -113,6 +113,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-moe-communication-satur
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
+| CXL・SSD・remote KV cache階層メモリ | 4 | 4 | 0 | 100.0% | 0.0% |
 | DistServe周辺のforward citation・backward reference補完 | 4 | 0 | 1 | 0.0% | 25.0% |
 | GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
 | GPU runtime境界・host-device転送律速 | 4 | 3 | 1 | 75.0% | 25.0% |
@@ -167,11 +168,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-moe-communication-satur
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — CXL・SSD・remote KV cache階層メモリ: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — MoE通信・runtime parallelism・online expert placement: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — agentic workload・program/session-aware serving: 評価 4 / 重複 1 / 採用 3
 - **2026-09-13T04:00:16+09:00** — GPU kernel生成・runtime最適化の隣接系: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T04:00:16+09:00** — 分離サービングprefill制御・chunked prefill scheduling: 評価 7 / 重複 4 / 採用 2
-- **2026-09-13T04:00:16+09:00** — 新着・長期推論KV圧縮と削除: 評価 3 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
