@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:14 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **23 / 50** |
-| Research ready | **23** |
+| Candidate在庫（Research ready） | **26 / 50** |
+| Research ready | **26** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **LOW**: candidate在庫が25未満（現在 23）。能動的な補充が必要。
+- 現在、集計stateから重大な警告は検出されていません。
 
 ## 直近の通常worker
 
@@ -27,18 +27,18 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **6** |
-| 新規job | **18** |
+| Discovery完了 | **7** |
+| 新規job | **22** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-cache-admission-restoration-05**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-slo-serving-scheduling-06**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | KV cache admission/replacement・compression/eviction・復元parallelism |
+| 探索軸 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation |
 | 評価候補 | **4** |
 | 重複除外 | **0** |
 | Novel候補 | **4** |
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-cache-admission-restora
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **27** |
-| 探索評価候補 | **149** |
+| 探索round（stats観測） | **28** |
+| 探索評価候補 | **153** |
 | 重複除外 | **46** |
-| 重複率 | **30.9%** |
-| Novel候補 | **103** |
-| Research候補採用 | **46** |
+| 重複率 | **30.1%** |
+| Novel候補 | **107** |
+| Research候補採用 | **49** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-cache-admission-restora
 
 ### 24時間ファネル
 
-**探索評価 149 → 重複除外後 103 → Research候補採用 46 → Research完了 44 → Repo収録 44**
+**探索評価 153 → 重複除外後 107 → Research候補採用 49 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -88,6 +88,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-cache-admission-restora
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
+| SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
@@ -100,11 +101,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-cache-admission-restora
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — KV cache admission/replacement・compression/eviction・復元parallelism: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — CXL/NVLink-C2C・remote memory・階層KV prefetch: 評価 5 / 重複 0 / 採用 2
 - **2026-09-12T23:00:00+09:00** — エージェント型サービング・KV再利用・ツール呼び出し待機: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T23:00:00+09:00** — MoE expert locality・cache/prefetch・CPU/GPU offload: 評価 4 / 重複 0 / 採用 3
-- **2026-09-12T23:00:00+09:00** — 分離LLMサービング・ネットワーク競合・prefill再配置: 評価 4 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
