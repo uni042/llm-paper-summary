@@ -74,6 +74,59 @@ class DiscoveryStatsTest(unittest.TestCase):
             if original_state is not None:
                 queue_worker.DISCOVERY_STATE = original_state
 
+    def test_stats_repair_submission_does_not_require_live_discovery_job(self) -> None:
+        originals = {
+            name: getattr(queue_worker, name)
+            for name in ("ROOT", "QUEUE", "JOBS", "SUBMISSIONS", "RESULTS", "STATE", "ARCHIVE", "DISCOVERY_STATE")
+        }
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                root = Path(td) / ".survey"
+                queue = root / "work-queue"
+                queue_worker.ROOT = root
+                queue_worker.QUEUE = queue
+                queue_worker.JOBS = queue / "jobs"
+                queue_worker.SUBMISSIONS = queue / "submissions"
+                queue_worker.RESULTS = queue / "results"
+                queue_worker.STATE = queue / "state.json"
+                queue_worker.ARCHIVE = queue / "archive"
+                queue_worker.DISCOVERY_STATE = queue / "discovery-state.json"
+                queue_worker.SUBMISSIONS.mkdir(parents=True)
+                queue_worker.DISCOVERY_STATE.write_text(
+                    json.dumps({"schema_version": 2, "history_limit": 24, "history": [], "axes": {}}),
+                    encoding="utf-8",
+                )
+                submission = {
+                    "schema_version": 1,
+                    "operation": "record_discovery_stats",
+                    "accepted_count": 3,
+                    "discovery_stats": {
+                        "run_key": "2026-09-12T14:22:56+09:00",
+                        "round": "specialist-2609-serving-routing-1",
+                        "axis": "2609新着・分離サービング・動的ルーティング",
+                        "query_summary": "手動試運転の探索結果を補完",
+                        "candidate_count": 4,
+                        "duplicate_filtered_count": 1,
+                        "duplicate_canonical_ids": ["arxiv:2609.11133"],
+                        "next_axis_hint": "SSD expert I/O schedulingへ展開",
+                    },
+                }
+                source = queue_worker.SUBMISSIONS / "manual-stats-repair.json"
+                source.write_text(json.dumps(submission, ensure_ascii=False), encoding="utf-8")
+
+                st = {"stats": {"discovered": 0, "selected": 0, "research_completed": 0, "audit_completed": 0, "rejected": 0}}
+                queue_worker.process_submissions(st)
+
+                result = json.loads((queue_worker.RESULTS / source.name).read_text(encoding="utf-8"))
+                self.assertTrue(result["ok"])
+                self.assertEqual(result["operation"], "record_discovery_stats")
+                state = json.loads(queue_worker.DISCOVERY_STATE.read_text(encoding="utf-8"))
+                self.assertEqual(state["history"][-1]["accepted_count"], 3)
+                self.assertEqual(state["history"][-1]["source_submission"], "work-queue/submissions/manual-stats-repair.json")
+        finally:
+            for name, value in originals.items():
+                setattr(queue_worker, name, value)
+
 
 if __name__ == "__main__":
     unittest.main()
