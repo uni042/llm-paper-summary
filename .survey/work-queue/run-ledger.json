@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T13:32:56.105921+00:00",
+  "updated_at": "2026-09-12T13:39:34.093152+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,17 +10688,19 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T13:32:56.105921+00:00",
+      "last_recorded_at": "2026-09-12T13:39:34.093152+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 0,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -10715,6 +10717,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34696959716:1",
+          "recorded_at": "2026-09-12T13:39:34.093152+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34696959716",
+            "run_attempt": "1",
+            "source_sha": "03971d3dc49c7e74ab2ef86dc914f9f155fb9644"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10723,6 +10740,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-920aee559ab02518",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00857",
+          "title": "LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism",
           "from": "ready",
           "to": "completed"
         }
@@ -10750,14 +10775,16 @@
           "title": "Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization"
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2609.00857"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
-      "paper_active_count_after": 354,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 355,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

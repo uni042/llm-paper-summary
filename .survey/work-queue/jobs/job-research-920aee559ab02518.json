@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.00857",
   "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md",
   "selection_reason": "IMC/NMC/NoC内計算を統合したLEAP architectureで、static weights、dynamic data、partial-result reductionを別hardware layerへ割り当て、prefill/decodeごとにPE構成を動的再構成するhardware-software co-design。commercial GPU比throughput 1.52倍以上、energy efficiency 24.91倍と報告する。GPU servingそのものではないがmemory wallと通信律速への異種処理設計として新着価値がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T09:11:11+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T13:38:05+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
