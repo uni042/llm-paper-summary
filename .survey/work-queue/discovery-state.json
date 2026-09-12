@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:22:21+00:00",
+  "updated_at": "2026-09-12T20:24:30+00:00",
   "last_run_key": "2026-09-13T05:00:25+09:00",
-  "last_round": "specialist-moe-expert-cache-5",
+  "last_round": "specialist-gpu-runtime-6",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "この軸で軽量評価した強候補は最新正本ですべて既収録だったため。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2015,6 +2015,25 @@
       ],
       "next_axis_hint": "GPU runtime・kernel compilationへ切り替え、JIT、CUDA Graph、persistent kernel系の未収録候補を確認する",
       "source_submission": "work-queue/submissions/20260913T0521JST-discovery-specialist-moe-expert-cache.json"
+    },
+    {
+      "run_key": "2026-09-13T05:00:25+09:00",
+      "round": "specialist-gpu-runtime-6",
+      "axis": "GPU runtime・CUDA Graph・persistent kernel・決定論的推論",
+      "query_summary": "JIT/CUDA Graph、persistent GPU scheduler、page-aware decode scheduling、決定論的runtimeを横断した。Hybrid JIT-CUDA Graph、Blink、PersistentKVは最新正本で既収録。CoRunは一次資料を軽量評価し、最新HEADの決定論的research job IDとrepo検索で未登録を確認したため投入した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.23467",
+        "arXiv:2604.07609",
+        "arXiv:2606.26666"
+      ],
+      "next_axis_hint": "CoRun採用で枯渇判定をリセットし、新着・引用関係・階層メモリ／ストレージ・networking・query expansionを独立に一巡する",
+      "source_submission": "work-queue/submissions/20260913T0524JST-discovery-specialist-gpu-runtime.json"
     }
   ],
   "axes": {
@@ -3177,6 +3196,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "GPU runtime・kernel compilationへ切り替え、JIT、CUDA Graph、persistent kernel系の未収録候補を確認する"
+    },
+    "GPU runtime・CUDA Graph・persistent kernel・決定論的推論": {
+      "last_run_key": "2026-09-13T05:00:25+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "CoRun採用で枯渇判定をリセットし、新着・引用関係・階層メモリ／ストレージ・networking・query expansionを独立に一巡する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

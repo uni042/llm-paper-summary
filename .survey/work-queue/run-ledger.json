@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:23:21.049395+00:00",
+  "updated_at": "2026-09-12T20:25:26.107919+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,7 +14622,7 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T20:23:21.049395+00:00",
+      "last_recorded_at": "2026-09-12T20:25:26.107919+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -14631,9 +14631,9 @@
       "counts": {
         "research_completed": 8,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 12,
+        "new_jobs": 14,
         "new_papers": 8,
         "fallback_archived": 0
       },
@@ -14814,6 +14814,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34716986991:1",
+          "recorded_at": "2026-09-12T20:25:26.107919+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34716986991",
+            "run_attempt": "1",
+            "source_sha": "ef4e480a3de5caa8670c26116f355341ba1f5ac8"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14920,6 +14934,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-6cd4b32c905ce5c7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -15006,6 +15028,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-e06803031c68104a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-02e232341d4ef088",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.14376",
+          "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -15023,7 +15059,8 @@
         ".survey/work-queue/results/20260913T0508JST-discovery-specialist-agent-os-memory.json",
         ".survey/work-queue/results/20260913T0513JST-discovery-specialist-disaggregated-serving.json",
         ".survey/work-queue/results/20260913T0517JST-discovery-specialist-survey-gap.json",
-        ".survey/work-queue/results/20260913T0521JST-discovery-specialist-moe-expert-cache.json"
+        ".survey/work-queue/results/20260913T0521JST-discovery-specialist-moe-expert-cache.json",
+        ".survey/work-queue/results/20260913T0524JST-discovery-specialist-gpu-runtime.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,

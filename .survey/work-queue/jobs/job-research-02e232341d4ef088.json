@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-02e232341d4ef088",
+  "type": "research",
+  "parent_job_id": "job-6cd4b32c905ce5c7",
+  "priority": 86,
+  "canonical_id": "arXiv:2608.14376",
+  "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
+  "source_url": "https://arxiv.org/abs/2608.14376",
+  "paper_path": null,
+  "selection_reason": "動的バッチでGPUカーネルの形状・reduction順が変わることによるLLM推論の非決定性を、batch-invariant kernelへの全面置換ではなく、position-invariant性を利用したスケジューリングで解消する。isolated prefillと固定形状decode batch、CUDA Graphを組み合わせ、決定論的推論を維持しながら既存batch-invariant方式比でthroughputを15〜324%改善し、TTFTを51.8%、TPOTを48.6%平均削減する。推論再現性をkernel設計ではなくruntime/scheduling側で扱うため、GPU runtime系統として新規性が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:24:30+00:00",
+  "artifact_transport": "structured_record_v10"
+}
