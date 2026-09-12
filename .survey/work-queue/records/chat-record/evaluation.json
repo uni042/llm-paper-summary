@@ -2,35 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.11392-20260912-1930-v10-a",
-  "job_id": "job-research-a3fa4611bb7bffee",
+  "attempt_id": "attempt-2606.30391-20260912-1942-v10-a",
+  "job_id": "job-research-a6fb90f535b639f2",
   "data": {
-    "hardware": [
-      "PIM側は16GiBのAiM構成をRamulator2ベースのシミュレータで評価する。1モジュール、32チャネル、各チャネル16バンク、16,384行/バンク、2KiB行、32Bバースト。",
-      "ランタイムKVキャッシュミスによって追加発生するプリフィル再計算はNVIDIA A100 80GB PCIe GPUで測定する。"
-    ],
-    "software": [
-      "PATTONはvLLMへ統合し、vLLMのブロック単位KVキャッシュ管理、接頭辞共有、接頭辞キャッシュを利用する。",
-      "比較対象のNeuPIMs、PIMphony、AttAcc、BlockPIMについて、論文で定義された配置・割当粒度を保ちながらPATTONの共通コマンド生成インターフェース上へ実装する。"
-    ],
-    "model": ["Llama3-8B", "Qwen3-8B", "OPT-6.7B", "Qwen1.5-7B"],
-    "datasets": [
-      "ShareGPTの実会話を多ターン会話としてvLLMへ投入し、各ターンで履歴を累積する。",
-      "OPT-6.7BとQwen1.5-7Bは目標同時実行数8・live request pool 16、Qwen3-8BとLlama3-8Bは32・64。各構成を10,000超のvLLM scheduler stepで実行し平均を取る。"
-    ],
-    "baselines": [
-      "NeuPIMs: request単位でチャネルを割り当てるNPU-PIM方式。ページ型管理は持つが完全なPagedAttention接頭辞再利用を持たない。",
-      "PIMphony: token-centric partitioningとrequest-owned DPA chunkを使う動的PIM方式。",
-      "AttAcc: 固定チャネル分割と最大コンテキスト長に基づく静的KV予約を行う方式。",
-      "BlockPIM: ブロック単位KV割当と接頭辞キャッシュを扱う方式。評価構成ではハードウェア依存の128トークンブロック。"
-    ],
-    "correctness": "各比較方式には文献で明示された割当意味論を保持し、未定義のPagedAttention機能を後付けしない。物理配置が曖昧な方式には、文献の制約と両立する範囲でGEMVに有利なKey/Value配置を与えるため、比較対象へ不利な配置を意図的に課していない。PATTON自体は数値近似を行わない。",
+    "hardware": ["NVLink接続のNVIDIA H100 GPU 8基。全GPUでMulti-Process Service（MPS）を利用してSMを分割する。", "大規模モデルのSLO余裕確認ではメモリ容量の都合でH100 2基を用い、Llama2-70Bを測定する。"],
+    "software": ["vLLMを推論バックエンドとし、約2,800行のPythonおよびCUDA/C++でFestinaを実装。Python asyncioで高並行オーケストレーション、pyNVMLでGPU周波数を制御する。", "GPUクロック795〜1635MHzを90MHz刻み、SM割当10〜100%を10%刻みでオフライン計測する。入力長256〜8192トークンを対象にTTFT、TBT、平均電力、モデルロード時間を記録する。"],
+    "model": ["Qwen、Llama、Yi、Mistral各系統の3B〜14Bモデルを使用する。", "補助測定ではLlama2-70Bも使用する。"],
+    "datasets": ["ShareGPTから要求を無作為抽出し、到着をスケールしたPoisson過程で生成する。", "プリフィル偏重のShareGPT-ix2では入力長を2倍、デコード偏重のShareGPT-ox2では出力長を2倍にして感度を確認する。"],
+    "baselines": ["ServerlessLLM: 高速チェックポイント読込とライブ移行を持つサーバレス方式。", "MuxServe: オフライン配置とSM分割を使う静的GPU多重化。比較では2モデル超の同居とアイドルモデルのホスト退避を追加。", "Dilu: 需要に応じてSMを動的再分割する方式。", "Aegaeon: プリフィル・デコード分離とMPS共有を使うサーバレス方式。", "AegVoltana: AegaeonへVoltanaLLMのSLO認識型周波数制御を組み込んだDVFS比較対象。"],
+    "correctness": "同じ要求負荷に対し、エネルギーは最初の要求到着から最後の完了まで測定し、SLO達成率も同時に比較する。Festinaは品質近似を用いず、性能差は配置・リソース分割・周波数・集約制御から生じる。AegVoltanaを設けることで『単にDVFSを追加した効果』と共有GPU向け協調制御の効果を分ける。",
     "settings": [
-      {"name": "本番型多ターン負荷", "description": "ShareGPT会話を連続する複数ターンとして処理し、要求の到着・完了が継続するlive poolを用いる。これにより接頭辞共有・キャッシュ、動的割当・回収、容量圧迫時の再計算を含む長期挙動を評価する。"},
-      {"name": "共通AiM構成", "description": "すべてのPIMランタイムを同じ16GiB AiM構成とDRAM timingで比較し、命令数とメモリサイクルからPIMエネルギーをモデル化する。ホストxPU構成が方式ごとに異なるため、KV管理とPIMアテンションに無関係なホスト計算は比較から除外する。"},
-      {"name": "容量圧迫評価", "description": "250,000超のlive context tokenを持つ条件を用意し、GPU native cache、PATTON、Order-2-Vを外したPATTONのKVキャッシュヒット率を比較して、GEMV連続性だけを最大化して容量共有を失う場合の再計算増加を測る。"}
+      {"name": "SLO条件", "description": "DynamoLLMに合わせ、短い要求は入力256未満・出力100未満でTTFT 250ms/TBT 100ms、中程度は入力1024未満・出力350未満でTTFT 400ms/TBT 100ms、長い要求は入力8192以下・出力350以上でTTFT 2000ms/TBT 100msとする。8192トークン超の要求は除外する。"},
+      {"name": "オフライン計測表", "description": "モデル、GPU周波数、SM割当、入力長の組ごとにTTFT、TBT、平均電力を測定する。未計測入力長は回帰で補間し、出力長予測は5%のメモリ安全余裕を加える。GPU・モデルの組合せごとの全計測はH100で40分未満と報告される。"},
+      {"name": "負荷とフェーズ感度", "description": "平均RPSと同時配備LLM数を変えた実運用型負荷に加え、ShareGPT-ix2/ox2でプリフィル偏重・デコード偏重を分離する。さらに同一負荷でプリフィル・デコード同居構成と分離構成を比較し、フェーズ分離が周波数制御へ与える影響を確認する。"}
     ],
-    "methodology": "主評価は、PIM上のKey/Value書き込み・QK転置積・SV積の遅延とエネルギーに、ランタイムのKVキャッシュミスが原因で発生したGPU再プリフィルの費用を加える。追加再プリフィル費用は、完全プリフィル負荷と本来必要なプリフィルだけをA100でそれぞれ測り、その差を取って非線形なプリフィル費用を反映する。全モデル平均は幾何平均を使用する。Commit Zoneの効果は最終配置へ直接Valueを書き込むPATTON-wo-CZとのアブレーションで分離し、Order-2-Vの効果は行領域全体を要求へ専有させる構成と比較して、GEMV効率と容量効率の交換条件を検証する。",
-    "scope": "PIM命令とDRAM timingはRamulator2ベースのAiMシミュレーションであり、PIM実チップ上のエンドツーエンド実測ではない。A100実機を使うのはKVミスに伴う追加プリフィルの測定部分である。また方式ごとにホストxPUが異なるため、評価はサービング全体のトークン毎秒ではなく、PIMアテンションとランタイム由来再計算へ範囲を限定している。4つの約7〜8BモデルとShareGPT多ターン負荷を用いる点は動的キャッシュ挙動の比較には有効だが、より巨大なモデルや異なるPIM規格、本物のAiMデバイスで同じ倍率が出るかは未検証である。"
+    "methodology": "主指標は総エネルギー消費とTTFT/TBT SLO達成率である。エネルギー比較は同一ワークロードで『比較対象の総消費エネルギー / Festinaの総消費エネルギー』を正規化指標として使う。設計要素の寄与は、SLO認識配置、周波数認識配置、細粒度SM・周波数共同制御、通常のSLO認識集約、EWR認識集約、理想的アイドル電力管理を順に追加する6段階アブレーションで測る。標準Festinaは第5段階まで実機実装し、第6段階Festina+だけはH100にない動的HBM周波数制御や完全停止の効果を模擬する。全体スケジューラの計算量・遅延も最大10,000 GPUまで測る。",
+    "scope": "主要なFestina結果は8基H100の実機評価であり、SM分割とGPUコア周波数制御も実機で行う。一方、最大56%という上限値には、Festina+で仮定するアイドルGPU停止またはHBM周波数低下の模擬効果が含まれる条件があるため、標準H100上で常に56%削減できるという意味ではない。主評価モデルは単一H100へ載る3B〜14Bで、70BはSLO余裕の存在確認に限定される。NVLink接続の8GPU試験環境であり、大規模マルチノード網や異種GPUクラスタは直接評価していない。"
   }
 }
