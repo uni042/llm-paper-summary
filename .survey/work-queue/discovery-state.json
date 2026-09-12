@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:36:38+00:00",
+  "updated_at": "2026-09-12T18:41:00+00:00",
   "last_run_key": "2026-09-13T03:30:44+09:00",
-  "last_round": "specialist-edge-ondevice-memory-1",
+  "last_round": "specialist-speculative-serving-config-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1703,6 +1703,23 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はedge/on-deviceを離れ、forward/backward citationで重要serving基礎の未収録、またはremote/speculative distributed servingを確認する",
       "source_submission": "work-queue/submissions/20260913T0336JST-discovery-specialist-edge-memory-1.json"
+    },
+    {
+      "run_key": "2026-09-13T03:30:44+09:00",
+      "round": "specialist-speculative-serving-config-2",
+      "axis": "edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision",
+      "query_summary": "edge/on-device memory軸から離れ、分散投機的復号、実負荷下の投機遅延モデル、配備構成自動選択、混在精度配信へ探索軸を変更した。WISPは既存completed jobとして除外し、投入直前に最新main HEAD、next queue、4件の決定論的research job pathを再確認し未収録・job未存在の4件を送信した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.11652"
+      ],
+      "next_axis_hint": "次は投機的復号と配備構成を離れ、forward/backward citationまたはストレージ・OS由来のstate placementとI/O schedulingを確認する",
+      "source_submission": "work-queue/submissions/20260913T0341JST-discovery-specialist-speculative-serving-2.json"
     }
   ],
   "axes": {
@@ -2695,6 +2712,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はedge/on-deviceを離れ、forward/backward citationで重要serving基礎の未収録、またはremote/speculative distributed servingを確認する"
+    },
+    "edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision": {
+      "last_run_key": "2026-09-13T03:30:44+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.2,
+      "next_axis_hint": "次は投機的復号と配備構成を離れ、forward/backward citationまたはストレージ・OS由来のstate placementとI/O schedulingを確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

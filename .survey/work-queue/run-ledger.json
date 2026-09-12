@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:39:52.074292+00:00",
+  "updated_at": "2026-09-12T18:42:11.093795+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,7 +13949,7 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T18:39:52.074292+00:00",
+      "last_recorded_at": "2026-09-12T18:42:11.093795+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13958,9 +13958,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 7,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -13993,6 +13993,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34711925653:1",
+          "recorded_at": "2026-09-12T18:42:11.093795+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34711925653",
+            "run_attempt": "1",
+            "source_sha": "b11b8f5fac5ada06105166ffc10f3cf437a2ed60"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14009,6 +14023,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.09800",
           "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-2e81a34f6363831f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -14034,18 +14056,47 @@
           "type": "research",
           "canonical_id": "arXiv:2604.21231",
           "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference"
+        },
+        {
+          "job_id": "job-3ee1465fb1dc2abf",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-6be22b91f978c683",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2501.13111",
+          "title": "iServe: An Intent-based Serving System for LLMs"
+        },
+        {
+          "job_id": "job-research-990a57145fc3b85b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.19133",
+          "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference"
+        },
+        {
+          "job_id": "job-research-e3455f9cc66c1448",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.06261",
+          "title": "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving"
         }
       ],
       "new_paper_ids": [
         "arXiv:2609.09800"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json"
+        ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json",
+        ".survey/work-queue/results/20260913T0341JST-discovery-specialist-speculative-serving-2.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,
       "paper_active_count_after": 375,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

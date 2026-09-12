@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-e3455f9cc66c1448",
+  "type": "research",
+  "parent_job_id": "job-2e81a34f6363831f",
+  "priority": 84,
+  "canonical_id": "arXiv:2509.06261",
+  "title": "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving",
+  "source_url": "https://arxiv.org/abs/2509.06261",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md",
+  "selection_reason": "量子化モデルと非量子化モデルを同じGPU群で配信する際、異なるKVブロック寸法による断片化と資源利用差を、精度認識KVスラブ（precision-aware KV slab）と大域・局所の二段スケジューラで共同処理する。最先端GPU共有方式に対してSLO達成率最大2.2倍、トークン生成スループット最大1.8倍を報告し、混在精度配信のメモリ管理と配置を結ぶ候補として有用である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:41:00+00:00",
+  "artifact_transport": "structured_record_v10"
+}
