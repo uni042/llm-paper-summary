@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T13:48:03.588050+00:00",
+  "updated_at": "2026-09-12T13:54:53.705036+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,19 +10688,19 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T13:48:03.588050+00:00",
+      "last_recorded_at": "2026-09-12T13:54:53.705036+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -10761,6 +10761,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34697685936:1",
+          "recorded_at": "2026-09-12T13:54:53.705036+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34697685936",
+            "run_attempt": "1",
+            "source_sha": "bba54f016258e3d5395ae3a1afc09f2a82095441"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10785,6 +10800,14 @@
           "type": "research",
           "canonical_id": "arXiv:2509.08309",
           "title": "Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-a190f4e7421fc3f8",
+          "type": "research",
+          "canonical_id": "arXiv:2602.12151",
+          "title": "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration",
           "from": "ready",
           "to": "completed"
         }
@@ -10814,7 +10837,8 @@
       ],
       "new_paper_ids": [
         "arXiv:2609.00857",
-        "arXiv:2509.08309"
+        "arXiv:2509.08309",
+        "arXiv:2602.12151"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json",
@@ -10822,8 +10846,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
-      "paper_active_count_after": 356,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 357,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
