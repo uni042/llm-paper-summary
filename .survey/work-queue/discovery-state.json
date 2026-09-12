@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T12:54:17+00:00",
-  "last_run_key": "2026-09-12T21:30:00+09:00",
-  "last_round": "normal-worker-critical-inventory-cxl-peer-gpu-final-replenish",
+  "updated_at": "2026-09-12T13:06:19+00:00",
+  "last_run_key": "20260912T2200+0900",
+  "last_round": "specialist-critical-cross-axis-moe-heterogeneous-serving-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -641,6 +641,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "この2件が採用され在庫15以上になればresearch優先へ戻す。重複なら次回はCXL/KVから離れてGPUランタイム・仮想メモリまたはMoE I/Oスケジューリングへ回転する。",
       "source_submission": "work-queue/submissions/20260912T2154JST-discovery-0674ed4e6a95bc3a.json"
+    },
+    {
+      "run_key": "20260912T2200+0900",
+      "round": "specialist-critical-cross-axis-moe-heterogeneous-serving-01",
+      "axis": "critical_buffer_cross_axis_moe_heterogeneous_serving",
+      "query_summary": "候補在庫がcritical水準のため、直近で高重複だったCXL/KV単独軸を避け、2025-2026の一次資料からMoE専門家プリフェッチ・異種GPU階層・多層スケジューリング・prefill/decode制御を横断して軽量評価した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次回は同じMoE/異種GPU軸を機械的に繰り返さず、storage/DBMS/OS由来のメモリ局所性・I/Oスケジューリング・ admission control をLLM推論へ接続する隣接分野軸を優先する。",
+      "source_submission": "work-queue/submissions/20260912T2200JST-discovery-specialist-critical-cross-axis-01.json"
     }
   ],
   "axes": {
@@ -993,6 +1008,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "この2件が採用され在庫15以上になればresearch優先へ戻す。重複なら次回はCXL/KVから離れてGPUランタイム・仮想メモリまたはMoE I/Oスケジューリングへ回転する。"
+    },
+    "critical_buffer_cross_axis_moe_heterogeneous_serving": {
+      "last_run_key": "20260912T2200+0900",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次回は同じMoE/異種GPU軸を機械的に繰り返さず、storage/DBMS/OS由来のメモリ局所性・I/Oスケジューリング・ admission control をLLM推論へ接続する隣接分野軸を優先する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

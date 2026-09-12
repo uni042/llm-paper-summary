@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T13:01:01.827273+00:00",
+  "updated_at": "2026-09-12T13:07:08.891266+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10439,7 +10439,7 @@
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "first_recorded_at": "2026-09-12T12:41:18.309706+00:00",
-      "last_recorded_at": "2026-09-12T13:01:01.827273+00:00",
+      "last_recorded_at": "2026-09-12T13:07:08.891266+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -10448,9 +10448,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 8,
+        "new_jobs": 9,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -10539,6 +10539,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34695481166:1",
+          "recorded_at": "2026-09-12T13:07:08.891266+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34695481166",
+            "run_attempt": "1",
+            "source_sha": "0bab03ecb557c1f6d5aa6536a9c1b39713be65a9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10576,6 +10590,14 @@
         },
         {
           "job_id": "job-0674ed4e6a95bc3a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f283d01497baee27",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -10639,6 +10661,13 @@
           "type": "research",
           "canonical_id": "arXiv:2602.12151",
           "title": "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration"
+        },
+        {
+          "job_id": "job-176b1e153b696e02",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -10648,7 +10677,8 @@
         ".survey/work-queue/results/20260912T2130JST-discovery-815a11adca713d7e.json",
         ".survey/work-queue/results/20260912T2147JST-discovery-ef040c02e2978658.json",
         ".survey/work-queue/results/20260912T2150JST-discovery-080d4b5d49ec5db4.json",
-        ".survey/work-queue/results/20260912T2154JST-discovery-0674ed4e6a95bc3a.json"
+        ".survey/work-queue/results/20260912T2154JST-discovery-0674ed4e6a95bc3a.json",
+        ".survey/work-queue/results/20260912T2200JST-discovery-specialist-critical-cross-axis-01.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 353,
