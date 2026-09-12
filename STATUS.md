@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **136 / 50** |
-| Research ready | **136** |
+| Candidate在庫（Research ready） | **140 / 50** |
+| Research ready | **140** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -22,14 +22,14 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T07:30:00+09:00**
+Run: **2026-09-13T08:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **12** |
+| Discovery完了 | **1** |
+| 新規job | **5** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,13 +50,13 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **119** |
-| 探索評価候補 | **589** |
-| 重複除外 | **239** |
+| 通常worker run（ledger観測） | **22** |
+| 探索round（stats観測） | **120** |
+| 探索評価候補 | **596** |
+| 重複除外 | **242** |
 | 重複率 | **40.6%** |
-| Novel候補 | **350** |
-| Research候補採用 | **195** |
+| Novel候補 | **354** |
+| Research候補採用 | **199** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 589 → 重複除外後 350 → Research候補採用 195 → Research完了 70 → Repo収録 70**
+**探索評価 596 → 重複除外後 354 → Research候補採用 199 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -89,6 +89,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
 | heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
+| hybrid-attention・MLA・位置非依存キャッシュ | 7 | 3 | 4 | 42.9% | 57.1% |
 | serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル | 7 | 2 | 4 | 28.6% | 57.1% |
@@ -193,11 +194,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T08:26:04+09:00** — hybrid-attention・MLA・位置非依存キャッシュ: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T07:58:39+09:00** — multi-node MoE活性パターン配置・edge expert類似性routing: 評価 12 / 重複 10 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 疎注意サービング・GPUメガカーネル・動的コンパイラ: 評価 8 / 重複 5 / 採用 3
 - **2026-09-13T07:58:39+09:00** — MoE speculative decoding・expert offloading・CPU/GPU共同実行: 評価 5 / 重複 3 / 採用 0
 - **2026-09-13T07:58:39+09:00** — MoE expert cache・Flash階層・expert-parallel耐障害性: 評価 7 / 重複 5 / 採用 2
-- **2026-09-13T07:58:39+09:00** — 2609新着・端末メモリ管理・エッジクラウド協調推論: 評価 6 / 重複 4 / 採用 0
 
 ## 最近処理した論文
 
