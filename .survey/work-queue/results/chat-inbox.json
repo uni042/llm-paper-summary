@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-c56a9d57e83a480c",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06007-tensorcast-tensor-as-a-service.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2608.06007.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-8b43b83e9e79a452",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 62.5% < 70% (Japanese=5217, Latin=3126)",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T17:47:34+00:00"
 }
