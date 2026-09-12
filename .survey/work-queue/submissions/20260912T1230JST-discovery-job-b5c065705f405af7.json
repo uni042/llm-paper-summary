@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b5c065705f405af7",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 92,
+      "reason": "長文脈LLMサービングでKVキャッシュをNVMe SSDへ退避する際のCPU起点I/Oをボトルネックとして捉え、GPUネイティブなオブジェクト抽象、GPU io_uring、余裕時間を考慮したI/OスケジューリングによりHBMとSSD間の制御経路からCPU介入を外す。vLLMへ統合し、GDS対応SSD版LMCache比で最初のトークンまでの時間を78.3%削減、達成可能リクエスト率を2倍、提供コストを27%削減すると報告しており、SSD階層メモリという重点テーマに直接該当する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 88,
+      "reason": "複数モデルを同居させるサーバ内で、KVキャッシュ需要の小さいモデルの未使用GPUメモリを高需要モデルへ貸し出し、NVLink越しに接頭辞キャッシュを共有してPCIe経由のCPU/SSD再読込を避ける。さらに現層のKVだけをローカルGPUに保持することで長文脈化する。実環境負荷でP99の最初のトークンまでの時間を最大69%短縮し、最大文脈長を最大3.98倍にすると報告しており、異種メモリ資源を跨ぐKV配置として未収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.13734",
+      "title": "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.13734",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.13734-kvserve-service-aware-kv-compression.md",
+      "priority": 86,
+      "reason": "プリフィル・デコード分離やKV状態分離でネットワークを横断するKVキャッシュを対象に、圧縮方式を固定せず、オフラインのベイズ的探索で候補集合を作り、オンラインでは帯域幅・負荷・品質制約に応じて圧縮プロファイルを切り替える。vLLM統合評価でジョブ完了時間を最大9.13倍高速化し、KV分離環境の最初のトークンまでの時間を最大32.8倍短縮すると報告しており、分離サービングとKV通信圧縮の交点として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2607.16892-robust-kv-cache-output-length-uncertainty.md",
+      "priority": 82,
+      "reason": "出力トークン長が要求到着時には分からないため、KV予約不足によるプリエンプションと過剰予約によるメモリ浪費が生じる問題を、GPU並列構成、要求クラス別KV予約、異種サービング群へのルーティング、接頭辞キャッシュを同時に扱う分布ロバスト最適化として定式化する。BurstGPT・Azure・ShareGPTトレースで固定分位点予約より最大56%低いコストを報告しており、KV容量管理を不確実性込みで扱う系統として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23658-elastic-kv-cache-reclamation.md",
+      "priority": 78,
+      "reason": "プリフィル用に静的確保されるGPUメモリ予約をデコード中だけKV領域へ貸し出し、次のプリフィル前にCUDA仮想メモリ機構で戻す実装を構築したうえで、その利益がチャンク化プリフィルによりほぼ消えるという否定的結果まで検証する。単純に最大バッチトークン数を下げる方が同等遅延で多くKVを確保でき、テンソル並列度が上がるほど回収対象も希薄化すると示すため、不要な複雑化を避ける設計上の反証として価値がある。"
+    }
+  ]
+}
