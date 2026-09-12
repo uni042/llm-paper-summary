@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f8688529219ccc48",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.07665",
+      "title": "AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference",
+      "source_url": "https://arxiv.org/abs/2606.07665",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md",
+      "priority": 90,
+      "reason": "LLMへ自由にCUDAを生成させるのではなく、コンパイラが候補空間・正当性検証・fallbackを管理しつつdecode-critical kernelだけを契約下で生成させる。paged KV cache、continuous batching、preemption、chunked prefill、bucketed CUDA Graph replayを持つserving runtimeまで統合し、6モデル系でPyTorch eager比2.23〜6.98倍、vLLM比1.04〜1.16倍を報告する。compiler/runtimeと推論servingを直接つなぐ実装公開済みの強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2604.23467",
+      "title": "Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2604.23467",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md",
+      "priority": 76,
+      "reason": "短いinteractive推論でkernel launch overheadが支配的になる領域に対し、静的transformer部分をCUDA Graph replay、動的部分をJIT kernelへ分割して非同期capture/reuseするruntimeを提案する。LLaMA-2 7B・single GPU・batch 1の限定条件ながらTensorRT-LLM比TTFT最大66%削減と低いP99を報告しており、persistent/mega-kernelとは異なるhybrid runtime設計として補完的。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:02:31+09:00",
+    "round": "specialist-compiler-runtime-4",
+    "axis": "CUDA compiler・JIT/Graph runtime・decode kernel serving",
+    "query_summary": "serverless production軸からGPU compiler/runtimeへ移動し、一次arXiv metadata/abstractでAgentCompileとHybrid JIT-CUDA Graphを軽量評価した。Mirage Persistent Kernel、Concordia、Foundry、ZipServは最新repoで既存jobを確認済みとして除外。送信直前に最新default branch HEAD、next queue、決定論的research job path、repository検索、Library pending、GitHub fallback-inboxを再確認し、2件を未収録と判断した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2512.22219", "arXiv:2606.23521", "arXiv:2604.06664", "arXiv:2603.17435"],
+    "next_axis_hint": "次はcompiler/runtimeを離れ、forward/backward citation、storage/DBMS由来state placement、remote/speculative distributed servingを独立に確認する",
+    "empty_round_reason": null
+  }
+}
