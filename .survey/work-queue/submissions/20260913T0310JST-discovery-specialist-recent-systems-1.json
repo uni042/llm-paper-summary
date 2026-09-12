@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-afb5dd5149abfe18",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.09800",
+      "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution",
+      "source_url": "https://arxiv.org/abs/2609.09800",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.09800-hbfsim-high-bandwidth-flash-real-gpu-execution.md",
+      "priority": 96,
+      "reason": "高帯域フラッシュ（High-Bandwidth Flash; HBF）をHBM直下の新しい容量階層としてLLM推論へ使う際の設計評価を、実GPU上で実際のvLLM/Qwen3実行を保ったままPTX計装と実測デバイスタイミングで模擬するシステム。容量配置・熱・refreshを含む新しいSSD/Flash階層の研究基盤で、重点テーマの外部メモリ階層に直接関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.01024",
+      "title": "PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition",
+      "source_url": "https://arxiv.org/abs/2609.01024",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.01024-pcomoe-fine-grained-path-composition.md",
+      "priority": 89,
+      "reason": "専門家（expert）を不可分単位として扱う従来MoE推論の境界を細粒度path compositionへ移し、layer-wise pruningと再利用可能なsub-expert構造を実行エンジンで利用する。抄録では最大1.31倍のend-to-end推論高速化を報告しており、expert pruning/実行効率の系統へ新しい最適化粒度を導入する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02737",
+      "title": "Language Models Can Control Their Own Attention",
+      "source_url": "https://arxiv.org/abs/2609.02737",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
+      "priority": 90,
+      "reason": "長文脈で毎decode stepに全KVを走査する代わりに、モデル自身がchain-of-thought中で必要な注意領域を宣言するDeclarative Attentionを導入する。外部proxyによるO(N)選別とは異なり、モデル内在の関連性判断を使ってKVアクセス量を減らす方向で、長文脈attention/KV実行の新しいシステム設計軸になる。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11209",
+      "title": "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
+      "source_url": "https://arxiv.org/abs/2609.11209",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11209-reva-reusable-evidence-view-rag-serving.md",
+      "priority": 78,
+      "reason": "RAGサービングでqueryごとのonline圧縮を繰り返さず、過去のquery-document-model interactionとtarget generatorのattention traceからdocument-keyed reusable evidence viewを構築する。圧縮online overheadを5.3〜15.6倍削減し40ms未満の追加遅延と報告され、context/KVコストをserving側で再利用する実装指向の候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.09787",
+      "title": "Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints",
+      "source_url": "https://arxiv.org/abs/2609.09787",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md",
+      "priority": 80,
+      "reason": "電力制約下の複数データセンター間LLM workload shiftingで、モデルreplicaのload時間を無視した即時routingを避け、model deploymentとcross-site request routingを共同最適化する。prefill/decode latency要求も容量制約へ変換し、電力・配置・servingをcross-layerで扱う隣接systems候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:02:31+09:00",
+    "round": "specialist-recent-flash-attention-adjacent-1",
+    "axis": "2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving",
+    "query_summary": "直前runのagent state/memory軸を反復せず、2026年9月新着からHigh-Bandwidth Flash、細粒度MoE実行、self-directed attention、RAG context serving、power-constrained cross-site servingを一次arXiv metadata/abstractで軽量評価した。投入直前に最新default branch HEAD、queue、決定論的research job ID、fallback台帳、Library pendingを再確認し、既存jobが確認されたpy-kvcache/CXL/既収録MoE・KV候補を除外した。",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2609.11744", "arXiv:2609.10790", "arXiv:2609.05228", "arXiv:2609.07966", "arXiv:2609.04895"],
+    "next_axis_hint": "次はHBF/attentionを離れ、forward/backward citationまたはGPU/network runtime・distributed inferenceの新規2609系へ移る",
+    "empty_round_reason": null
+  }
+}
