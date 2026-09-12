@@ -6,18 +6,18 @@
   "job_id": "job-research-8f1c80196652932b",
   "data": {
     "limitations": [
-      "各requestはKV checkpointを1 copyだけ保持するためcheckpoint holderも同時故障するとfull recomputationへ戻る。64-worker中16 simultaneous failuresのsimulationではinterrupted requestsの23.8%がこのfallbackになる。",
-      "gatewayとcentral controllerが復旧中も生存すると仮定し、両者自身の障害復旧は実装評価の対象外である。",
-      "実機prototypeは4 nodes・8 A800と10Gbps Ethernetまでで、64-worker scalabilityはVidur拡張simulationで評価する。",
-      "障害は原因をworker-level unavailableへ抽象化し、保守的にfull target-model reloadが必要とする。瞬時にGPU contextだけ復旧できる一過性faultなどでは相対効果が異なる可能性がある。",
-      "checkpointingはhost memoryとnetwork bandwidthを常時使用する。prototypeではsteady-state latency overheadを測定できない程度に抑えているが、host memoryが乏しい環境やnetworkが通常trafficで飽和する環境は直接評価していない。",
-      "speculative assistanceはtarget/draft model pairのacceptance rateとdraft footprintに依存する。評価ではK=2〜8で頑健だったが、draft modelが十分小さくない場合やacceptanceが極端に低い場合の利得は小さくなる。",
-      "著者はprototypeとsimulatorをfinal paperでopen-sourceすると記載しており、arXiv v1時点では公開実装URLを提示していない。"
+      "各要求はキー・バリューキャッシュの保存複製を一つだけ保持するため、保存先も同時に故障すると全再計算へ戻る。64処理担当中16処理担当が同時故障するシミュレーションでは、中断要求の23.8%がこの経路へ入る。",
+      "入口処理と中央制御器が復旧中も稼働すると仮定し、両者自身の障害復旧は実装評価の対象外である。",
+      "実機試作は4ノード、8基のA800、10Gbps Ethernetまでであり、64処理担当までの規模拡張はVidur拡張シミュレーションで評価する。",
+      "障害原因を処理担当の利用不能へ抽象化し、保守的に本体モデルの全再読込が必要と仮定する。一過性障害など再読込が不要な場合には相対的な改善幅が変わる可能性がある。",
+      "平常時の保存処理はホストメモリとネットワーク帯域を継続利用する。試作では遅延増加を測定できない程度に抑えているが、ホストメモリが乏しい環境やネットワークが常時飽和する環境は直接評価していない。",
+      "投機補助は本体モデルと下書きモデルの候補受理率、下書きモデルのメモリ量に依存する。評価では投機深度2〜8で頑健だが、候補受理率が極端に低い場合の利得は小さくなる。",
+      "著者は試作とシミュレータを最終版論文で公開予定と記載しており、arXiv v1時点では公開実装URLを提示していない。"
     ],
-    "differences": "DéjàVuはKV cacheを固定ring neighborのCPU memoryへstreamして再計算を避けるが、障害時のrestore先が固定され、load hotspotとmodel reload中のcapacity lossを扱わない。KevlarFlowはGPU-memory KV replicationとpipeline reconfigurationで耐障害性を高めるが、現在loadを使ったrequest-level recovery routingを主眼にしない。FailSafeはtensor-parallel worker内部のirregular GPU availabilityに対しKV placementやload routingを調整するのに対し、LUMENは独立worker群のworker-level failure後にcluster-wideでcheckpoint placement・request redistribution・recovering capacityを協調する。GhostServeはhost memoryのerasure-coded KV protectionを重視する。LUMENの差分は、KV state protectionだけでなくfull-model reload時間をdraft-model speculative assistanceへ転換し、uninterrupted requestsを含むcluster全体のlatency回復を目的にする点である。",
-    "implementation_status": "SGLang v0.5.6へ約13K LoCのPython prototypeを実装済み。controller、ZeroMQ KV streaming、recovery-aware Sarathi-Serve queues、gRPC token synchronization、draft-to-target hot-swap、gateway health/load routingを含む。大規模評価用にVidurへ約5K LoCを追加済み。論文はfinal paperで両実装をopen-source予定とするが、2026-09-12時点のarXiv v1にはrepository URLがない。",
-    "research_positioning": "LLM serving scheduling/disaggregation系統のうちfault toleranceとstate movementを主題にする。KV cacheを単なる高速化cacheではなく、障害後の計算再利用可能stateとして別workerのCPU memoryへ継続保存する点はKV offload研究とも接続する。さらにmodel reloadを単なる停止時間とみなさず、軽量draft modelだけ先にGPUへ戻してfull modelをbackground storage I/Oするprogressive recoveryは、階層storageと計算capacityを協調させる設計である。SSD/NVMe活用の観点では、target weightsのdisk-to-host preload、KV checkpointのhost placement、再計算costを同じrecovery objectiveで扱っており、将来的にはcheckpoint tierをCPUだけでなくNVMeへ拡張する際にrestore bandwidth・queue load・prefix valueを合わせた配置判断が重要になる。",
+    "differences": "DéjàVuはキー・バリューキャッシュを固定した隣接処理担当のCPUメモリへ送って再計算を避けるが、障害時の復元先が固定されるため現在負荷に応じた過負荷回避を行わず、モデル再読込中の処理能力喪失も扱わない。KevlarFlowはGPUメモリへのキャッシュ複製とパイプライン再構成で耐障害性を高めるが、要求単位の現在負荷に基づく復旧配分を中心課題としない。FailSafeはテンソル並列処理担当内部で不規則なGPU利用不能が生じる状況に対してキャッシュ配置と要求配分を調整する。一方LUMENは独立した処理担当群の障害後に、クラスタ全体で保存先決定、要求再配分、復旧中の計算補助を協調する。GhostServeはホストメモリ上の消失訂正符号付きキャッシュ保護を重視する。LUMENは状態保護だけでなく、本体モデル再読込時間を小型下書きモデルの投機補助へ転換し、障害を受けなかった要求も含むクラスタ全体の遅延回復を目的にする点が異なる。",
+    "implementation_status": "SGLang v0.5.6へ約13K行のPython試作を実装済みである。中央制御器、ZeroMQによるキー・バリュー転送、復旧対応Sarathi-Serve待ち行列、gRPCによるトークン同期、下書きモデルから本体モデルへの切替、入口処理の健全性確認と負荷配分を含む。大規模評価用にVidurへ約5K行を追加している。論文は最終版で両実装を公開予定とするが、2026-09-12時点のarXiv v1には公開リポジトリURLがない。",
+    "research_positioning": "大規模言語モデル提供基盤のスケジューリング・分離実行系統のうち、障害耐性と状態移動を主題にする研究である。キー・バリューキャッシュを単なる高速化用キャッシュではなく、障害後に再利用できる計算状態として別処理担当のCPUメモリへ継続保存するため、キャッシュ退避研究とも接続する。さらに本体モデル再読込を単なる停止時間とみなさず、小型下書きモデルだけを先にGPUへ戻し、本体モデルをSSDからホストへ背景読込しながら段階的に処理能力を回復する点は、階層記憶と計算資源を協調させる設計である。SSDやNVMeの活用という観点では、本体重みのストレージからホストへの先行読込、キャッシュ保存先、再計算費用を同じ復旧目的で扱う。将来、保存階層をCPUメモリだけでなくNVMeへ広げる場合にも、復元帯域、現在の待ち行列、保存済み接頭辞の価値を合わせて配置先を選ぶ考え方が利用できる。",
     "related_work": ["DéjàVu", "KevlarFlow", "FailSafe", "GhostServe", "Llumnix", "SGLang", "Sarathi-Serve", "vLLM", "CachedAttention", "Mooncake"],
-    "audit_notes": "arXiv:2606.17787v1のHTML全文を、failure model、4〜64 worker motivation、root-cause breakdown、load-aware checkpoint equationとincremental pipeline、page tags、locality-aware shedding、speculation-assisted four-state recovery、single-pass verification、draft-state alignment、implementation、4/8-worker A800 prototype、10〜64 worker simulation、request-rate/failure-count/scalability/sensitivity experiments、related work、referencesまで確認した。主要数値は本文Table 2/3とExperiments A.1-A.4、B.1-B.7から抽出した。"
+    "audit_notes": "arXiv:2606.17787v1のHTML全文について、障害モデル、4〜64処理担当の動機分析、原因分解、負荷認識保存先の式と増分転送、ページ識別札、局所性認識型の負荷逃がし、四状態の投機補助型復旧、一回検証、下書き状態同期、実装、4・8処理担当のA800実機試作、10〜64処理担当シミュレーション、要求率・故障数・規模拡張・感度分析、関連研究、参考文献まで確認した。主要数値は本文の表2・表3と実験A.1〜A.4、B.1〜B.7から抽出した。"
   }
 }
