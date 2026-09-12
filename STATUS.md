@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 22:00 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 22:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **13 / 50** |
-| Research ready | **13** |
+| Candidate在庫（Research ready） | **14 / 50** |
+| Research ready | **14** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **165** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 13）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 14）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -28,7 +28,7 @@ Run: **2026-09-12T21:30:00+09:00**
 | Research完了 | **1** |
 | Audit完了 | **0** |
 | Discovery完了 | **4** |
-| 新規job | **7** |
+| 新規job | **8** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -116,9 +116,9 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P82 `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
+- P82 `arXiv:2602.12151` — OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
 
 ## 7日比較
 
