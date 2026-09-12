@@ -2,6 +2,8 @@
 
 この文書は論文survey workerの **candidate供給・discovery水位制御** の正本とする。既存の `queue-v10.md` にある「actionable readyが尽きたらdiscovery」という受動的な記述より、本書の水位制御を優先する。research品質、transport、fallback、maintenance、08:30 routing等は従来の正本に従う。
 
+探索ラウンドの継続・停止判断は `.survey/docs/survey-workflow/discovery-continuation-policy.md` を正本とし、通常論文worker（毎時:30）と探索専用worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、target到達、単一sourceの一時障害だけを理由にdiscoveryを停止せず、同ポリシーに従って探索軸・source・query familyを切り替える。
+
 ## 目的
 
 research workerが候補枯渇で停止しないよう、discoveryをresearch開始の前処理ではなく独立した在庫補充工程として扱う。弱い論文で件数を埋めず、有望候補を先に広く集め、researchはその候補群から優先度順に全文精読する。
