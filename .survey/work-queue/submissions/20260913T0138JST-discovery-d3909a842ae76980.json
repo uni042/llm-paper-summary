@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d3909a842ae76980",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.14116",
+      "title": "FailSafe: High-performance Resilient Serving",
+      "source_url": "https://arxiv.org/abs/2511.14116",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
+      "priority": 87,
+      "reason": "テンソル並列推論で1 GPU障害が全実行停止・KV再計算・長期的な計算/メモリ不均衡を引き起こす問題に対し、循環KV配置、TP/DPを混合したattention、細粒度load-aware routing、KVの能動backupとweightのオンデマンド復旧を組み合わせる。8×H100実機とfault traceで最大2倍throughput、復旧遅延を2桁削減し、最大3 GPU障害下でも高利用率を維持すると報告する。障害時のparallelism/KV再配置を直接扱うためConcordia/KevlarFlowと補完的。"
+    },
+    {
+      "canonical_id": "arXiv:2509.23384",
+      "title": "A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.23384",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.23384-synergysched-predictive-two-layer-scheduling.md",
+      "priority": 82,
+      "reason": "クラスタrouterと各inference engineの二層schedulerが別々の遅延情報・heuristicで動く情報断絶を、オンライン性能予測モデルで結ぶcross-layer scheduling。engine側LENSがSLO対応batching、cluster側PRISMが先読みroutingを行い、平均SLO達成率43%改善、長文脈・異種環境で最大3倍throughputを報告し、FlowGPT clusterへのdeploymentも示す。既存の単層request schedulingとは異なる制御面協調が主題。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-resilience-crosslayer-scheduling-5",
+    "axis": "耐障害serving・予測型cross-layer scheduling",
+    "query_summary": "MoE軸の後、CXL/SSD軸、耐障害serving、二層schedulingへ探索を広げた。HyMCache、Photonic-CXL、CXL-PNM、CXL-NDP、prefill-decode最適制御は既存jobとして除外。最新mainで決定論的jobが存在しないFailSafeとSynergySchedを投入した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2607.18141", "arXiv:2607.27187", "arXiv:2511.00321", "arXiv:2509.03377", "arXiv:2602.02987"],
+    "next_axis_hint": "次はstorage-centric KV、multi-agent serving、citation/related-work経路、直近新着を独立に確認する",
+    "empty_round_reason": null
+  }
+}
