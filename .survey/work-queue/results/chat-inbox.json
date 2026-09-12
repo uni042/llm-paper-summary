@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-d335718873eaacf6",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2605.00254.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-86f5ed2fa8ac71e7",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 44.6% < 70% (Japanese=4300, Latin=5347)",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T19:53:58+00:00"
 }
