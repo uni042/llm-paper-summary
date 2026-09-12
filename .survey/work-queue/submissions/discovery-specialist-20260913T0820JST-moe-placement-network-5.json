@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-907ab6ae40f65b54",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.23150",
+      "title": "Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns",
+      "source_url": "https://arxiv.org/abs/2604.23150",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md",
+      "priority": 86,
+      "reason": "multi-node MoEでexpert負荷不均衡とremote expertへのall-to-all通信が支配的になる問題に対し、Llama 4 Maverick、DeepSeek-V3、Qwen3-235B-A22Bから10万件超のexpert活性traceを収集し、domain依存のexpert人気、prefill/decode間の活性相関などの持続的構造を利用する。workload-aware micro-batch groupingとexpert placementでtoken localityを高める設計で、単なる通信kernel最適化ではなく実workloadの活性パターンを配置へ反映する点が既存MixServe等と異なる。"
+    },
+    {
+      "canonical_id": "arXiv:2607.17154",
+      "title": "OrderMoE: An Expert Similarity Driven Distributed Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2607.17154",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.17154-ordermoe-expert-similarity-distributed-edge.md",
+      "priority": 82,
+      "reason": "帯域と計算資源が限られたdistributed edge上のMoEでremote expert呼出しが遅延と通信量を増やす問題に対し、router由来のlogit表現でexpert類似性をモデル化して類似expert群を配置し、実行時に品質・trajectoryを考慮してremote target expertかlocal substitute expertかを選ぶ。実edge testbedで平均・tail latency、cross-server traffic、remote expert invocationを削減しつつ品質低下を制御しており、exact expert placement/cache中心の既存系統にexpert機能類似性という別軸を加える候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:58:39+09:00",
+    "round": "specialist-moe-placement-network-5",
+    "axis": "multi-node MoE活性パターン配置・edge expert類似性routing",
+    "query_summary": "最後のstrong batch後にCXL/SSD、network collective、MoE placement、KV圧縮、GPU runtime、OS/HPCを再走査した。Composable CXL Memory、SAC、DUAL-BLADE、Foundry、KernelFlume、HyMCache、SPIN、KARAT、CompressKV、ScoutAttentionは最新正本の既存jobへ収束。Scaling Multi-Node MoEとOrderMoEは投入直前の最新main HEADで決定論的research job不存在、repo識別子/題名未検出、Library pendingにも同候補なしを確認した。",
+    "candidate_count": 12,
+    "duplicate_filtered_count": 10,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.10790",
+      "arXiv:2606.19746",
+      "arXiv:2604.26557",
+      "arXiv:2604.06664",
+      "arXiv:2606.29207",
+      "arXiv:2607.18141",
+      "arXiv:2604.26837",
+      "arXiv:2608.03555",
+      "arXiv:2606.24467",
+      "arXiv:2603.27138"
+    ],
+    "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。2609最新差分、両方向citation、storage/CXL、KV、network、MoE、GPU compiler、agent/runtimeを最後に再走査する",
+    "empty_round_reason": null
+  }
+}
