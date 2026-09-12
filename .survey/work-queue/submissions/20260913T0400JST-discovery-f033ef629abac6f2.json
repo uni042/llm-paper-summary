@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f033ef629abac6f2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv-beacon-query-kv-compression.md",
+      "priority": 92,
+      "reason": "長い推論連鎖で遠距離の文脈へ再注意するThought Revisiting Tokenを捉えるため、将来の注意を代表するbeacon queryを維持してKV保持を決める訓練不要の圧縮手法。4つの公開LRMで最大5.8倍のKVメモリ削減と4.3倍超のスループット改善を報告し、ICML 2026採択・コード公開済みで、長期推論向けKV圧縮の優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03430",
+      "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.03430",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03430-random-attention-kv-cache-eviction.md",
+      "priority": 89,
+      "reason": "推論中KV削除で複雑な重要度スコアを使わず、プロンプトを保護した上でattention headごとに推論履歴を一様ランダム削除する設計。4モデル・6推論タスクで強い既存evictorと同等の品質を保ちながらvLLM実装で32〜43%高いスループットを報告し、既存のKV選択仮説を実装評価付きで再検討する価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+      "priority": 87,
+      "reason": "KV削除の性能をtoken scorerだけでなく時系列集約と順位保持の観点から分解し、EMA集約のInertiaKVと更新頻度を下げるInertiaKV-Lazyを提案する。後者はfull-refresh版比1.34〜1.46倍のdecode throughputを示し、6つの公開モデルと複数長文脈benchmarkで検証、EMNLP 2026 Main採択済みでKV eviction設計原理として収録価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-reasoning-kv-compression-1",
+    "axis": "新着・長期推論KV圧縮と削除",
+    "query_summary": "直前の耐障害サービング軸が全重複だったため、2026年9月新着から長期推論時のKV圧縮・削除を探索。arXiv一次ページで抄録・公開状態・コード有無を軽量確認し、canonical arXiv IDを最新GitHub正本で再照合した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "新着の分離サービング・prefill/decode資源制御、またはMoE expert placement/cacheの9月新着へ軸を移す",
+    "empty_round_reason": null
+  }
+}
