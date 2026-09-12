@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "kind": "discovery",
+  "job_id": "job-3d74b84c91f65e2a",
+  "source_urls": ["https://arxiv.org/abs/2602.06072","https://arxiv.org/abs/2608.01651"],
+  "candidates": [
+    {"canonical_id":"arXiv:2602.06072","title":"PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference","primary_url":"https://arxiv.org/abs/2602.06072","theme_hint":"長さが大きく異なる要求を同一バッチで処理する際の注意計算・I/O不均衡を対象に、要求を負荷均衡グループへ詰め、共有prefixを近接配置した連続KV領域へ再編成するGPU注意カーネル。FlashAttention比で遅延13.0〜20.1%削減、処理量20%改善を報告する。","priority":8.2},
+    {"canonical_id":"arXiv:2608.01651","title":"Bole: Efficient Tree Speculation for Hybrid-Attention Language Models","primary_url":"https://arxiv.org/abs/2608.01651","theme_hint":"全注意と再帰型線形注意を混在するモデルの木状投機デコードで、線形注意状態を木構造閉形式へ変換し、候補状態をtoken-level factorとして圧縮するGPUカーネル・runtime協調設計。線形注意検証3.4〜7.7倍、投機一時状態82〜99倍削減、SGLang統合でオンラインTTFT/TPOTも改善する。","priority":8.4}
+  ],
+  "discovery_stats": {"run_key":"2026-09-12T19:30:00+09:00","round":"20260912T2034JST-batched-attention-state-01","axis":"batched_attention_state_management","query_summary":"NVMe/非同期I/O軸の新規候補が既収録中心だったため別軸へ切り替え、混在長バッチ注意のI/O配置とhybrid-attentionモデルの投機状態管理を探索。一次資料の題名・要旨・評価概要で候補を軽量評価し、最新paper identity indexでcanonical IDを再確認した。","candidate_count":6,"duplicate_filtered_count":4,"duplicate_canonical_ids":["arXiv:2604.26557","arXiv:2605.03375","arXiv:2605.18071","arXiv:2407.15309"],"next_axis_hint":"次回は今回のattention kernel軸を反復せず、最新採用論文の被引用・参考文献からGPU-direct storage、非同期I/O、page replacement、network/storage co-designの未収録systems論文をcitation chasingする。"},
+  "worker_note":"critical inventory補充のため探索軸を切り替えた。既収録候補を除外し、実装・実測が強く既存収録との差が明確な2件だけを送信した。accepted_countはActions側の最終重複排除後に確定する。"
+}
