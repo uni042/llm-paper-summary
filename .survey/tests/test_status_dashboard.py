@@ -19,7 +19,6 @@ def _write(path: Path, payload):
 
 def test_dashboard_aggregates_24h_and_current_state(tmp_path):
     repo = tmp_path
-    # Copy the implementation under test into a realistic repo layout.
     src = Path(__file__).parents[1] / "scripts" / "build_status_dashboard.py"
     dst = repo / ".survey" / "scripts" / "build_status_dashboard.py"
     dst.parent.mkdir(parents=True, exist_ok=True)
@@ -47,7 +46,7 @@ def test_dashboard_aggregates_24h_and_current_state(tmp_path):
         "history_limit": 48,
         "entries": [
             {
-                "run_key": "2026-09-11T15:30:00+09:00",
+                "run_key": "2026-09-11T14:30:00+09:00",
                 "counts": {"research_completed": 2, "audit_completed": 1, "discovery_completed": 1, "blocked": 0, "new_jobs": 3, "new_papers": 2, "fallback_archived": 0},
                 "terminal_transitions": [
                     {"type": "research", "canonical_id": "arxiv:old", "title": "Old Paper", "to": "completed"}
