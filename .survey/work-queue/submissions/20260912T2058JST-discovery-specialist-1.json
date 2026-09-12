@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "workflow_version": 9,
+  "job_id": "job-4ec414ca721c48b8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/02-moe-expert-placement-caching/2026-2609.04895-cache-aware-joint-router-adaptation.md",
+      "priority": 90,
+      "reason": "2026-09の新着。抄録上、MoEのexpert cacheを単なる実行時置換ではなくrouter適応と共同最適化し、Qwen3/GPT-OSSでexpert転送量とcache hitを評価している。重点テーマのexpert cache・prefetch・placementに直接対応し、既存のランタイム側cache研究との差分を確認する価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2602.21548",
+      "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.21548",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md",
+      "priority": 89,
+      "reason": "エージェント型multi-turn推論で外部KV storage I/Oを主ボトルネックとして扱い、prefill/decode両側のstorage NICを使うdual-path loadingとRDMA転送を提案するsystems論文。SSD/NVMe・KV offload・disaggregated serving・network schedulingの交点で研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.07609",
+      "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC",
+      "source_url": "https://arxiv.org/abs/2604.07609",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07609-blink-cpu-free-smartnic-gpu-serving.md",
+      "priority": 87,
+      "reason": "SmartNICによるrequest handling/RDMAとpersistent GPU kernelによるbatching・scheduling・KV管理でhost CPUをsteady-state critical pathから外す。GPU runtime/networking隣接分野からserving基盤へ直接接続する実測systems研究で、既存vLLM/SGLang系と異なる制御面分離として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
+      "source_url": "https://arxiv.org/abs/2606.19746",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.19746-sac-cxl-sparse-attention-kv-cache.md",
+      "priority": 86,
+      "reason": "sparse attention向けにCXLのcache-line粒度load/storeを使い、必要なtop-k KVだけをdisaggregated memoryから取得する設計。CXL・階層KV・disaggregationの既存系統と近いが、dense-prefix一括取得ではなく疎アクセス自体を前提にする点を比較する価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.23389",
+      "title": "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2605.23389",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.23389-alignedserve-prefix-aware-batching.md",
+      "priority": 82,
+      "reason": "KV長の近いrequestを揃えるprefix-aware batchingでdecode iteration内部のbubbleを抑え、CPU大容量memoryとGPU-Prefetch-For-GPUを組み合わせるserving設計。batch schedulingとKV移送を同時に扱うため、既存scheduler/階層KV研究との位置付け確認に適する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T20:00:00+09:00",
+    "round": "specialist-critical-buffer-runtime-storage-moe-1",
+    "axis": "GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御",
+    "query_summary": "candidate在庫がcritical watermark未満のため、直近の高重複CXL候補の単純反復を避け、GPU runtime/networking、agentic KV storage I/O、CXL sparse-attention KV、MoE expert cache/router、prefix-aware servingを横断して一次資料のtitle/abstract/書誌情報を軽量評価した。投入直前に最新mainのqueueとcanonical arXiv IDを再確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": [
+      "arXiv:2607.18141"
+    ],
+    "next_axis_hint": "今回採用したBlink/DualPath/Cache-Aware Routerを起点に、GPU persistent scheduling・SmartNIC/RDMA control plane、storage NIC load balancing、MoE cache-aware routingの被引用/参考文献へ展開し、同じCXL既知候補の反復は避ける",
+    "empty_round_reason": null
+  }
+}
