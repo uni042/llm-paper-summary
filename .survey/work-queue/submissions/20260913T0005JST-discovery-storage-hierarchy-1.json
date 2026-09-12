@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "job-64a5ee9e98e34139",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.07388",
+      "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.07388",
+      "paper_path": null,
+      "priority": 87,
+      "reason": "GPU・DRAM・SSDの階層を使う外部記憶と予測先読みをLLM推論へ組み込み、GPUメモリ外の大容量記憶を実行時に活用する設計。SSD階層、先読み、推論時メモリ管理という重点テーマに直接重なるため全文精読候補として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.10186",
+      "title": "FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.10186",
+      "paper_path": null,
+      "priority": 89,
+      "reason": "HBM容量制約に対して高帯域Flashを推論データ経路へ組み込むシステム研究。SSD/NVMe・Flash階層をLLM推論でどこまで実用化できるかという本リポジトリの重点テーマに直結し、既存のSSDオフロード系との比較価値も高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-storage-hierarchy-1",
+    "axis": "Flash・SSD階層メモリと予測先読み",
+    "query_summary": "Flash/SSD-backed LLM inference、GPU-DRAM-SSD階層、メモリウォール隣接の新規候補を軽量評価し、最新identity・既存job・fallback台帳で投入直前に重複確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.00857",
+      "arXiv:2606.19746",
+      "arXiv:2604.25699"
+    ],
+    "next_axis_hint": "分離サービングのprefill負荷偏り・動的deflectionと異種GPU配置へ軸を移す",
+    "empty_round_reason": null
+  }
+}
