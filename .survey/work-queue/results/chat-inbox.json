@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-a6fb90f535b639f2",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2606.30391.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-8f1c80196652932b",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 38.4% < 70% (Japanese=3807, Latin=6116)",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T10:52:09+00:00"
 }
