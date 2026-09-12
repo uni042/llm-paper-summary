@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6d03dc1e94ef67d4",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 87,
+      "reason": "プリフィル・デコード分離型サービングで、混雑時のTTFTはプリフィル計算そのものよりキュー待ちとノード間KV転送に支配されることを実測し、デコードノードへ一部プリフィルを負荷依存で逃がす。逃がした要求はデコードと交互に分割プリフィルし、KVを同一ノード内に保持するため転送も消せる。vLLMとDeepSeek-V2-LiteのA100構成でP95 TTFTを最大81%削減し、SLO達成率を最大79%改善しており、分離構成の固定的役割分担を負荷状況に応じて崩す実用的なスケジューリング研究として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.15473",
+      "title": "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2608.15473",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15473-q-first-disaggregated-decoding.md",
+      "priority": 85,
+      "reason": "分離型デコードでアテンション計算をメモリ側へ置く場合、通常のattention-first順序では現在トークンのK/V生成完了を待ってから大きなKV履歴走査を始める依存が残る。Q-Firstはサブレイヤ順序を変更してqueryを先に利用可能にし、履歴KVの走査を計算側の投影・FFNと重ね、現在K/Vは非同期キャッシュ書込みとして扱う。追加のin-flight要求やKV複製に頼らずシーケンス内依存そのものを削るため、分離サービングの通信・メモリ非対称性を利用する新しい設計点として有望。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:00:25+09:00",
+    "round": "specialist-disaggregated-serving-3",
+    "axis": "分離型LLMサービング・KV転送／フェーズ非対称性",
+    "query_summary": "分離サービングのKV転送、共有メモリ、プリフィル負荷偏り、attention実行順を横断して8件を軽量評価した。KVServe、SmartGen、SwiftCache、Elastic KV Cache、Kubernetes-native CXL shared KV、SACは既存jobで収録済みと確認し除外した。Q-FirstとLoad-Aware Prefill Deflectionは最新HEADで決定論的research job IDが未存在、repo識別子検索でも未収録だったため投入した。",
+    "candidate_count": 8,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": [
+      "arXiv:2605.13734",
+      "arXiv:2607.28150",
+      "arXiv:2606.16135",
+      "arXiv:2608.23658",
+      "arXiv:2609.10790",
+      "arXiv:2606.19746"
+    ],
+    "next_axis_hint": "MoE expert cache・offload・near-data schedulingを確認し、その後GPU runtime／kernel compilationへ切り替える",
+    "empty_round_reason": null
+  }
+}
