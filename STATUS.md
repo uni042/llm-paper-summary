@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:42 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **49 / 50** |
-| Research ready | **49** |
+| Candidate在庫（Research ready） | **51 / 50** |
+| Research ready | **51** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **12** |
+| Discovery完了 | **5** |
+| 新規job | **15** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **55** |
-| 探索評価候補 | **259** |
-| 重複除外 | **82** |
-| 重複率 | **31.7%** |
-| Novel候補 | **177** |
-| Research候補採用 | **81** |
+| 探索round（stats観測） | **56** |
+| 探索評価候補 | **269** |
+| 重複除外 | **90** |
+| 重複率 | **33.5%** |
+| Novel候補 | **179** |
+| Research候補採用 | **83** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 259 → 重複除外後 177 → Research候補採用 81 → Research完了 47 → Repo収録 47**
+**探索評価 269 → 重複除外後 179 → Research候補採用 83 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -72,6 +72,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 |---|---:|---:|---:|---:|---:|
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
+| 異種/edge serving・hybrid cache schedulingの過去重要欠落 | 10 | 8 | 2 | 80.0% | 20.0% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
@@ -128,11 +129,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — 異種/edge serving・hybrid cache schedulingの過去重要欠落: 評価 10 / 重複 8 / 採用 2
 - **2026-09-13T01:26:11+09:00** — 耐障害serving・予測型cross-layer scheduling: 評価 7 / 重複 5 / 採用 2
 - **2026-09-13T01:26:11+09:00** — MoE expert配置・CPU-GPU協調実行: 評価 6 / 重複 4 / 採用 1
 - **2026-09-13T01:26:11+09:00** — 推論runtime・serving耐障害性: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T01:26:11+09:00** — KV量子化の実行時保証・同期型serving負荷分散: 評価 3 / 重複 0 / 採用 3
-- **2026-09-13T01:26:11+09:00** — 2026年9月新着・KV圧縮/eviction/再利用: 評価 3 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
