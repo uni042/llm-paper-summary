@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:51 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **111 / 50** |
-| Research ready | **111** |
+| Candidate在庫（Research ready） | **110 / 50** |
+| Research ready | **110** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **188** |
+| Research completed（累計） | **189** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **2 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T03:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **14** |
-| Repo収録 | **3** |
+| Discovery完了 | **5** |
+| 新規job | **15** |
+| Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -51,21 +51,21 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **87** |
-| 探索評価候補 | **421** |
-| 重複除外 | **129** |
-| 重複率 | **30.6%** |
+| 探索round（stats観測） | **88** |
+| 探索評価候補 | **425** |
+| 重複除外 | **133** |
+| 重複率 | **31.3%** |
 | Novel候補 | **292** |
 | Research候補採用 | **154** |
-| Research完了 | **56** |
-| Repo収録 | **56** |
+| Research完了 | **57** |
+| Repo収録 | **57** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 421 → 重複除外後 292 → Research候補採用 154 → Research完了 56 → Repo収録 56**
+**探索評価 425 → 重複除外後 292 → Research候補採用 154 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -125,6 +125,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
+| fault-tolerant distributed serving・KV recovery・GPU failure | 4 | 4 | 0 | 100.0% | 0.0% |
 | multi-LoRA・推論/微調整co-serving・cross-model KV reuse | 4 | 1 | 2 | 25.0% | 50.0% |
 | multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
@@ -161,16 +162,17 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:30:44+09:00** — fault-tolerant distributed serving・KV recovery・GPU failure: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T03:30:44+09:00** — heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels: 評価 5 / 重複 2 / 採用 3
 - **2026-09-13T03:30:44+09:00** — heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T03:30:44+09:00** — edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision: 評価 5 / 重複 1 / 採用 3
 - **2026-09-13T03:30:44+09:00** — edge/on-device offload・multitasking memory・cloud KV streaming: 評価 3 / 重複 0 / 採用 2
-- **2026-09-13T03:02:31+09:00** — GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap: 評価 6 / 重複 1 / 採用 3
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
@@ -178,15 +180,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 - `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
 - `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
-- `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 
 ### 次に処理する候補
 
-- P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - P90 `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - P90 `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
+- P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 
 ## 7日比較
 
