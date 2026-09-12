@@ -6,11 +6,11 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **109 / 50** |
-| Research ready | **109** |
+| Candidate在庫（Research ready） | **108 / 50** |
+| Research ready | **108** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **187** |
+| Research completed（累計） | **188** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **2 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T03:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
+| Research完了 | **3** |
 | Audit完了 | **0** |
 | Discovery完了 | **3** |
 | 新規job | **10** |
-| Repo収録 | **2** |
+| Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 重複率 | **30.5%** |
 | Novel候補 | **289** |
 | Research候補採用 | **151** |
-| Research完了 | **55** |
-| Repo収録 | **55** |
+| Research完了 | **56** |
+| Repo収録 | **56** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 416 → 重複除外後 289 → Research候補採用 151 → Research完了 55 → Repo収録 55**
+**探索評価 416 → 重複除外後 289 → Research候補採用 151 → Research完了 56 → Repo収録 56**
 
 ## 探索効率（直近24時間）
 
@@ -170,6 +170,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### Research完了
 
+- `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
@@ -177,15 +178,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
 - `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
 - `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
-- `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 
 ### 次に処理する候補
 
-- P91 `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - P90 `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
+- P90 `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 
 ## 7日比較
 
