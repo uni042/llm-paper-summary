@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:24:23.055130+00:00",
+  "updated_at": "2026-09-12T23:31:39.543292+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15966,6 +15966,94 @@
         ".survey/work-queue/results/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0820JST-moe-placement-network-5.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 393,
+      "paper_active_count_after": 393,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-13T08:30:00+09:00",
+      "first_recorded_at": "2026-09-12T23:31:39.543292+00:00",
+      "last_recorded_at": "2026-09-12T23:31:39.543292+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 5,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34725569499:1",
+          "recorded_at": "2026-09-12T23:31:39.543292+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34725569499",
+            "run_attempt": "1",
+            "source_sha": "e897e3db91c194a66051d535b72daaac6133e3f5"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-0c31ddf1ad84e2df",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-e62e2bd040e93661",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-234066475107816a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.01299",
+          "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching"
+        },
+        {
+          "job_id": "job-research-651c768da8e5f9fc",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.11231",
+          "title": "LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs"
+        },
+        {
+          "job_id": "job-research-b85568c75bac4939",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.05696",
+          "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving"
+        },
+        {
+          "job_id": "job-research-f0ab820b8a884812",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.16822",
+          "title": "MEPIC: Memory Efficient Position Independent Caching for LLM Serving"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260913T0830JST-discovery-specialist-hybrid-pic.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:23:04+00:00",
-  "last_run_key": "2026-09-13T07:58:39+09:00",
-  "last_round": "specialist-moe-placement-network-5",
+  "updated_at": "2026-09-12T23:30:21+00:00",
+  "last_run_key": "2026-09-13T08:26:04+09:00",
+  "last_round": "specialist-hybrid-attention-pic-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2373,6 +2373,25 @@
       ],
       "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。2609最新差分、両方向citation、storage/CXL、KV、network、MoE、GPU compiler、agent/runtimeを最後に再走査する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0820JST-moe-placement-network-5.json"
+    },
+    {
+      "run_key": "2026-09-13T08:26:04+09:00",
+      "round": "specialist-hybrid-attention-pic-1",
+      "axis": "hybrid-attention・MLA・位置非依存キャッシュ",
+      "query_summary": "直前のMoE expert placement/network軸を反復せず、hybrid-attentionとMLAでのposition-independent cachingへ探索軸を変更した。一次arXivの題名・抄録・評価概要を軽量確認し、GrowPage、Speculative Macro Commit、CacheScoutは既存jobで除外。LinearKV、HYPIC、MEPIC、Irminsulは決定論的research job pathとrepo検索で既存一致がないことを投入直前の最新mainで再確認した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.42857142857142855,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.03494",
+        "arXiv:2609.03236",
+        "arXiv:2608.14624"
+      ],
+      "next_axis_hint": "次はhybrid/PICを離れ、forward/backward citationまたはstorage/OS・network runtimeの未収録候補へ移る",
+      "source_submission": "work-queue/submissions/20260913T0830JST-discovery-specialist-hybrid-pic.json"
     }
   ],
   "axes": {
@@ -3715,6 +3734,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.8333333333333334,
       "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。2609最新差分、両方向citation、storage/CXL、KV、network、MoE、GPU compiler、agent/runtimeを最後に再走査する"
+    },
+    "hybrid-attention・MLA・位置非依存キャッシュ": {
+      "last_run_key": "2026-09-13T08:26:04+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.42857142857142855,
+      "next_axis_hint": "次はhybrid/PICを離れ、forward/backward citationまたはstorage/OS・network runtimeの未収録候補へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-651c768da8e5f9fc",
+  "type": "research",
+  "parent_job_id": "job-0c31ddf1ad84e2df",
+  "priority": 88,
+  "canonical_id": "arXiv:2608.11231",
+  "title": "LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs",
+  "source_url": "https://arxiv.org/abs/2608.11231",
+  "paper_path": null,
+  "selection_reason": "ハイブリッド注意LLMでは線形再帰層にtoken-indexed KVがなく、既存の位置非依存キャッシュをそのまま使えない問題を扱う。LinearKVは線形層ごとに複数の局所キャッシュ状態から単一初期状態を作り、full-attention層では既存PICのKV連結・再計算を再利用する学習不要方式。3種のhybrid modelと3種のPIC selectorで評価し、単一状態初期化が最大92%の品質回復を維持しつつfull prefill比0.46倍のTTFTを報告しており、hybrid LLM servingのキャッシュ設計として重要度が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:30:21+00:00",
+  "artifact_transport": "structured_record_v10"
+}
