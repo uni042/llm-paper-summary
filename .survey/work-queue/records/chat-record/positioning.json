@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2609.08189-20260912-1440-v10-a1",
-  "job_id": "job-research-3b370609d7bf485e",
+  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
+  "job_id": "job-research-985814ffefefe223",
   "data": {
-    "limitations": "論文はパラメータスキップ率を推論計算削減の主要代理指標とし、実測トークン生成速度、端末間レイテンシ、GPU使用率、エネルギー、追加ルータ/メモリのカーネル費用を報告しない。そのため26.87%のパラメータ回避を26.87%の速度向上と読み替えることはできない。スキップ時も軽量アダプタを実行し、全注意層は密なままなので、実際のFLOPs削減はモデル全体パラメータ回避率より小さくなり得る。バックボーンはLlama 3.1-8B、Llama 2-7B/13Bに限られ、より大きなモデル、混合専門家モデル、長文脈、量子化モデルでの挙動は未評価である。HeRo自体を導入するにはTulu-3 SFT全939,344例を使った追加学習が必要で、完全な学習不要手法ではない。",
-    "differences": "ShortGPT、Shortened LLaMA、LaCo、LLM-Pruner、SliceGPTなどの静的剪定は推論前に同じ構造を固定するのに対し、HeRoはトークンごとにFFN/アダプタ分岐を変える。Mixture-of-Depths、SkipGPT、DiffSkip、Router-Tuningなど既存動的方式の多くは現在層の隠れ状態を中心に判断するが、HeRoは過去のゲートスコアと残差遷移を明示的な層間状態として伝える。RMoEも専門家選択に再帰状態を使うが、HeRoは混合専門家のexpert選択ではなく、デコーダ深さ方向のFFN実行/迂回を制御し、線形注意メモリと残差経路特徴を組み合わせる点が異なる。",
-    "implementation_status": "論文ではバックボーン凍結、Tulu-3 SFTによるルータ/アダプタ学習、lm-evaluation-harnessによる評価まで実装している。2026-09-12時点でarXiv一次ページに公式コードリンクはなく、題名と著者によるGitHub検索でも著者公式リポジトリを確認できなかったため、公開実装は未確認とする。",
-    "research_positioning": "条件付き計算・動的深さ系統の推論効率化研究である。重要な概念的貢献は、ルーティングを各層で独立した判定ではなく、前の選択が次の表現を変える経路依存な逐次制御として扱う点にある。この考え方はMoE expert配置・キャッシュでも直前の選択履歴を状態として使う設計と親和性があり、将来は『過去にどのexpertを呼んだか』『どの層をSSD/CPUからロードしたか』を同じ履歴状態へ含め、計算スキップとデータ移動を共同制御する方向へ接続できる。ただし本論文自体はSSD、オフロード、実測サービング速度を扱わない。",
-    "related_work": ["Mixture-of-Depths", "SkipGPT", "Router-Tuning", "DiffSkip", "FFN-SkipLLM", "Dr.LLM", "RMoE", "ShortGPT", "LLM-Pruner", "LayerSkip"],
-    "audit_notes": "arXiv:2609.08189v1の一次HTML全文を確認し、経路依存問題、6次元補助経路特徴、64次元ルータ状態、カーネル化線形注意メモリ、読み取り前・書き込み後更新、FFN/アダプタ分岐、利用率損失、Tulu-3学習条件、三バックボーン比較、25%/40%予算結果、9課題アブレーション、メモリ次元感度、参考文献42件を照合した。参考文献IDは本文に明示されたarXiv/OpenReview識別子だけを構造化した。"
+    "limitations": "著者自身がv1 feasibility studyと位置付けている。両replicaはfull engineでprefill/decode disaggregationではない。2-node、単一NVIDIA L4/node、closed-loop one-session-at-a-timeのためgoodput、queueing下のtail latency、prefill/decode contentionを測れない。pooled RDMA KV baseline、zero-copy GPU↔CXL DMA、multi-tenant scheduling、capacity pressure、reuse ratio sweepも未実施。host-staged data pathは5.8GB/sでCXL fabric 27GB/s級の大半を使えていない。slot evictionがなく、model discriminatorもslot keyに含まれず、copy後のkey再検証もない。CXL coherenceはbehavioral evidenceに依存し、formal verificationではない。",
+    "differences": "LMCacheやMooncake等はDRAM/SSD/RDMA等を使う外部KV cacheを扱うが、本研究は複数hostへ同時にmapされるload/store型CXL memoryをcluster-shared tierにする。TraCTやHyMCache等のCXL KV研究に対しては、共有regionが既に構成済みという前提を外し、Kubernetes DRAでcompose-on-demand、resource claim、lifecycle teardownまで扱う点が主差分である。Pangaea v2はCXL memoryをKubernetesへ持ち込むがper-host用途であり、本方式は同じ物理regionを複数nodeへ一つのCDI identityとして注入する。またKV directoryをshared medium内へ置くため、外部metadata serviceやremote directory RPCを必要としない。",
+    "implementation_status": "Kubernetes DRA driver、cfm-service/fabric manager連携、cxl-host DAX materialization、CDI injection、vLLM OffloadingConnector向けC++/Python shared-memory backendを実装し、Seagate prototype hardwareでend-to-end評価済み。論文はSeagate Open Source GitHub組織を参照するが、本文から特定repository名を一意に確定できないため、公開実装の入口として組織URLのみ記録する。",
+    "research_positioning": "KV cache offloading・階層memory系統とCXL memory disaggregationの交点にある。特にshared KV tierをscheduler-visibleなcluster resourceとして扱うため、単一nodeのmemory階層最適化から、request placementに依存しないcross-node reuseへ設計軸を拡張する。SSD/NVMeは容量・価格で優れる一方load/store共有性を持たず、CXLはより高速だが高価で容量も限定されるため、将来的にはGPU/DRAM/CXL/NVMeを含む多階層KV cacheで、hot shared prefixをCXL、cold容量をNVMeへ置く構成の中間tierとして重要になる。",
+    "related_work": ["LMCache", "Mooncake", "TraCT", "HyMCache", "Pangaea v2", "vLLM OffloadingConnector", "llm-d", "Kubernetes DRA"],
+    "audit_notes": "arXiv:2609.10790v1の一次HTML全文を確認し、DRA resource model、compose-on-demand lifecycle、DAX/CDI materialization、in-region directory、host-staged data path、coherence、2-node testbed、1920 request-pair methodology、TTFT/hit rate/sharing gap、fabric characterization、CRC/false-hit controls、limitations、34件の参考文献を照合した。"
   }
 }
