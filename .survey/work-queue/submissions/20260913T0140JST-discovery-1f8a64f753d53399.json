@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-1f8a64f753d53399",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2505.17052",
+      "title": "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs",
+      "source_url": "https://arxiv.org/abs/2505.17052",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+      "priority": 82,
+      "reason": "利用率の低いconsumer GPUをedge drafterとしてserver側LLM verificationと組み合わせ、tokenだけをnetwork越しに交換するedge-assisted speculative serving。proactive draftingでedge生成をserver verificationに重ね、pipeline-aware schedulingで複数requestをinterleaveする。server-only比でserver throughput 2.22倍、cost efficiency 1.91倍、inter-token latency 11.24%削減を報告し、edge資源とdatacenter servingの協調という未収録軸を補う。"
+    },
+    {
+      "canonical_id": "arXiv:2504.07494",
+      "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2504.07494",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md",
+      "priority": 80,
+      "reason": "KV cacheだけでなく再利用可能なinput hidden stateを省メモリhidden cacheとして併用し、batch compositionをruntimeで適応制御することでTTFT SLOとconcurrencyを共同改善する。13B〜66Bモデル・3 workloadでeffective throughput最大8.8倍を報告し、cache representationとrequest schedulingを一体設計する古めだが重要な未収録候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-older-serving-omissions-6",
+    "axis": "異種/edge serving・hybrid cache schedulingの過去重要欠落",
+    "query_summary": "直近候補投入後にstorage-centric KV、multi-agent/KV reservation、heterogeneous/edge/speculative servingを横断。Tutti、DUAL-BLADE、Tokencake、Robust KV、SPECTRE、Hetis、SwiftSpec、ShuntServeはexisting jobで除外し、最新mainでjob未存在のSpecEdgeとApt-Serveを過去重要欠落として選別した。",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 8,
+    "duplicate_canonical_ids": ["arXiv:2605.03375", "arXiv:2604.26557", "arXiv:2510.18586", "arXiv:2607.16892", "arXiv:2605.08151", "arXiv:2509.08309", "arXiv:2506.11309", "arXiv:2606.18600"],
+    "next_axis_hint": "過去欠落探索を一度離れ、直近新着・citation/related-work・GPU kernel/runtimeの3経路を独立確認する",
+    "empty_round_reason": null
+  }
+}
