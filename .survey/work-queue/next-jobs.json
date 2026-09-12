@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 186,
+      "completed": 187,
       "ready": 1
     },
     "audit": {
@@ -11,11 +11,23 @@
       "completed": 150,
       "superseded": 43,
       "deferred": 3,
-      "ready": 2,
+      "ready": 6,
       "blocked": 3
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-a4ae8894c89646f7",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2609.09166",
+      "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09166",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-210693a709bc2b42",
       "type": "research",
@@ -41,7 +53,43 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-95bcce1436ac0604",
+      "job_id": "job-research-825504607247e69d",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2607.13093",
+      "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.13093",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-ad3541d28015a662",
+      "type": "research",
+      "lane": null,
+      "priority": 75,
+      "canonical_id": "arXiv:2609.11058",
+      "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+      "source_url": "https://arxiv.org/abs/2609.11058",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11058-emmi-edge-multimodal-representation-compression.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-b6c7fea1929c168e",
+      "type": "research",
+      "lane": null,
+      "priority": 72,
+      "canonical_id": "arXiv:2608.23962",
+      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.23962",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-6eee2d6e98a7acfb",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -53,5 +101,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T09:04:37+00:00"
+  "generated_at": "2026-09-12T09:06:02+00:00"
 }

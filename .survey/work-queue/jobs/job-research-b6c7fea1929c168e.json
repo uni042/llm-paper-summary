@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b6c7fea1929c168e",
+  "type": "research",
+  "parent_job_id": "job-95bcce1436ac0604",
+  "priority": 72,
+  "canonical_id": "arXiv:2608.23962",
+  "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+  "source_url": "https://arxiv.org/abs/2608.23962",
+  "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+  "selection_reason": "KVキャッシュ容量不足に対するtensor parallelismとKV圧縮を、従来の別々の指標ではなくcost per million tokens対latencyの同一軸で比較する研究。A100/A40/H100で較正したprofiled simulatorを使い、TP degree 1-8とKV 16/8/4-bit・keep ratio 0.25までを横断する。実機そのものではなく較正シミュレータ中心なので優先度は抑えるが、GPU追加とメモリ圧縮の設計判断を直接比較する点はサービング運用上有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T09:05:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}

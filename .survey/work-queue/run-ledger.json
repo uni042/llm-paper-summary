@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:05:06.309231+00:00",
+  "updated_at": "2026-09-12T09:06:02.422778+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,7 +9274,7 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T09:05:06.309231+00:00",
+      "last_recorded_at": "2026-09-12T09:06:02.422778+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9283,9 +9283,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 12,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -9390,6 +9390,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34684897424:1",
+          "recorded_at": "2026-09-12T09:06:02.422778+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34684897424",
+            "run_attempt": "1",
+            "source_sha": "6a9e9247b4a37fe7dd8ed7260421de56c2b1a57a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9438,6 +9452,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.20179",
           "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-95bcce1436ac0604",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -9491,6 +9513,41 @@
           "type": "research",
           "canonical_id": "arXiv:2608.25523",
           "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving"
+        },
+        {
+          "job_id": "job-6eee2d6e98a7acfb",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-825504607247e69d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.13093",
+          "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models"
+        },
+        {
+          "job_id": "job-research-a4ae8894c89646f7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09166",
+          "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding"
+        },
+        {
+          "job_id": "job-research-ad3541d28015a662",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11058",
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression"
+        },
+        {
+          "job_id": "job-research-b6c7fea1929c168e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23962",
+          "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -9502,12 +9559,13 @@
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
         ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json",
         ".survey/work-queue/results/20260912T1750JST-discovery-moe-io-refill.json",
-        ".survey/work-queue/results/20260912T1758JST-discovery-204a21f0325d1761.json"
+        ".survey/work-queue/results/20260912T1758JST-discovery-204a21f0325d1761.json",
+        ".survey/work-queue/results/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
       "paper_active_count_after": 339,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T08:59:34+00:00",
-  "last_run_key": "2026-09-12T17:30:00+09:00",
-  "last_round": "paper-worker-agentic-prefix-workflow-3",
+  "updated_at": "2026-09-12T09:05:24+00:00",
+  "last_run_key": "2026-09-12T18:00:00+09:00",
+  "last_round": "specialist-edge-disaggregated-power-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -408,6 +408,21 @@
       ],
       "next_axis_hint": "agentic servingのinterception/resume、multi-agent DAG scheduling、tool-call待機中KV管理を中心に、既収録prefix-cache系と重複しないシステム研究へ展開する",
       "source_submission": "work-queue/submissions/20260912T1758JST-discovery-204a21f0325d1761.json"
+    },
+    {
+      "run_key": "2026-09-12T18:00:00+09:00",
+      "round": "specialist-edge-disaggregated-power-1",
+      "axis": "新着edge/disaggregated serving・通信/電力制御",
+      "query_summary": "直前のagentic prefix workflow軸を避け、2026年9月新着を中心に分離サービングの電力制御、edge-cloud協調、協調投機的デコード、通信表現圧縮を探索し、隣接するKV容量対策のコスト比較も軽量評価した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 6,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "GPU runtime/SmartNICによるCPU-free serving、SSD/NVMe expert I/O scheduling、HPC大規模servingへ軸を変更する",
+      "source_submission": "work-queue/submissions/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json"
     }
   ],
   "axes": {
@@ -630,6 +645,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.8,
       "next_axis_hint": "agentic servingのinterception/resume、multi-agent DAG scheduling、tool-call待機中KV管理を中心に、既収録prefix-cache系と重複しないシステム研究へ展開する"
+    },
+    "新着edge/disaggregated serving・通信/電力制御": {
+      "last_run_key": "2026-09-12T18:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 6,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "GPU runtime/SmartNICによるCPU-free serving、SSD/NVMe expert I/O scheduling、HPC大規模servingへ軸を変更する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
