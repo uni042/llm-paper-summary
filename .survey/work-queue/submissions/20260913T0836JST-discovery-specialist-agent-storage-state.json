@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "job_id": "job-192a71b1aa310fb7",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04852",
+      "title": "KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU",
+      "source_url": "https://arxiv.org/abs/2609.04852",
+      "paper_path": null,
+      "priority": 91,
+      "reason": "長時間エージェントの作業履歴がGPU KV容量を超える問題に対し、overflowしたworkspaceをGPU・host memory・NVMeにまたがるpaged KVとして仮想化し、model-nativeなattention-space indexからquery依存の実行viewだけをmaterializeする。LongMemEval/MemoryAgentBench/AgentLongBenchとDeepSWEで評価し、24GB RTX 5090級でも最大100万token級workspaceを扱う構成を示す。SSD/NVMeを長期agent stateの実行時メモリ階層へ直接組み込むため、本リポジトリの重点テーマと強く一致する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.15498",
+      "title": "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2607.15498",
+      "paper_path": null,
+      "priority": 84,
+      "reason": "tokenを捨てるevictionではなく、各tokenへ重要度に応じて可変低rank容量を割り当てるtraining-free KV圧縮。query-agnosticな表現を維持するため複数turn・再利用時にも適用しやすく、同一20% memory budgetでLongBench 16 taskの平均性能を非圧縮から0.8 point以内に維持し、KVzip等より軽いprefill overheadを報告する。長文servingで容量・再利用・圧縮を同時に考える比較対象として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04875",
+      "title": "Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.04875",
+      "paper_path": null,
+      "priority": 81,
+      "reason": "stateful agentで削除要求がpromptだけでなくcompressed memory、pending plan、KV cacheなど実行状態へ波及する問題を扱い、provenance-guided replayにより影響部分だけを再構成する。KVを切り詰めてsanitized stateを再生することでfull restartより最大9倍少ないtoken再計算を狙う。性能最適化単独ではないが、長時間agent servingのstate lifecycle・checkpoint/recoveryと密接なruntime研究として隣接価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T08:26:04+09:00",
+    "round": "specialist-agent-storage-state-3",
+    "axis": "agent workspace仮想化・NVMe階層・長時間runtime state",
+    "query_summary": "PIC/KV reuse系統から離れ、長時間agent workspaceのNVMe階層化、可変容量KV表現、stateful agentの実行状態再構築を独立軸として軽量評価した。Tutti、output-length uncertainty下のRobust KV、Tokencakeは最新mainの既存jobで除外。KVMem、VarRate、Execution-State Unlearningは投入直前に最新HEAD a0160991、queue、決定論的research job pathで未登録を再確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2605.03375",
+      "arXiv:2607.16892",
+      "arXiv:2510.18586"
+    ],
+    "next_axis_hint": "次はstorage/agent stateを離れ、network/collective・GPU runtimeまたはforward/backward citationの独立経路を確認する",
+    "empty_round_reason": null
+  }
+}
