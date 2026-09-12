@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a6656c3eeb0b76a3",
+  "discovery_stats": {
+    "run_key": "2026-09-12T20:00:00+09:00",
+    "round": "specialist-20260912T2000-01",
+    "axis": "networking-runtime-multimodal-agent-cache-adjacent",
+    "query_summary": "直前のHPC/GPU collective serving軸で重複率が高かったため、GPU collective低遅延化、マルチモーダル分離サービング、LLC/キャッシュ制御、堅牢semantic cache、エージェント実行キャッシュへ軸を分散。一次資料のtitle/abstract/書誌情報を軽量評価し、投入直前に最新main、identity、queue、repo検索、Library pendingを再確認した。",
+    "candidate_count": 11,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.14624",
+      "arXiv:2609.10266",
+      "arXiv:2609.08131",
+      "arXiv:2609.04971",
+      "arXiv:2607.02043",
+      "arXiv:2602.02987"
+    ],
+    "next_axis_hint": "今回のGPU collective/MLLM/agent-cache候補の採用結果を確認後、storage/networkingの参考文献・被引用展開、またはSSD/NVMe expert I/O schedulingへ移る"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.16100",
+      "title": "Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives",
+      "source_url": "https://arxiv.org/abs/2607.16100",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16100-near-speed-of-light-gpu-collectives.md",
+      "priority": 92,
+      "reason": "長文・decode-heavy LLM推論を主要動機として、NCCL device-side API、対称メモリ、multicastを使う低遅延collectiveを設計し、実アプリのinter-token latencyとthroughput改善まで評価している。EntwineなどGPU間通信最適化の収録候補と補完関係が強く、分散推論基盤の通信クリティカルパスを直接扱うため高優先度。"
+    },
+    {
+      "canonical_id": "arXiv:2505.12658",
+      "title": "HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2505.12658",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-disaggregated-mllm-serving.md",
+      "priority": 86,
+      "reason": "マルチモーダルLLMをencode/prefill/decodeの3段階へ分離し、異種推論インスタンスへ割り当てるサービングシステム。単一ノード8xH800で実ワークロード評価を行い、vLLM等との比較もある。通常のP/D分離より広いMLLM特有の段階分離を扱う重要な未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2512.00083",
+      "title": "LLaMCAT: Optimizing Large Language Model Inference with Cache Arbitration and Throttling",
+      "source_url": "https://arxiv.org/abs/2512.00083",
+      "paper_path": "papers/inference/02-hardware-accelerators/2025-2512.00083-llamcat-cache-arbitration-throttling.md",
+      "priority": 82,
+      "reason": "LLM decode時の最終レベルキャッシュにおけるMSHR競合と帯域負荷を対象に、キャッシュ仲裁とスレッド抑制を共同最適化する。既収録のGB級LLC常駐推論とは異なり、キャッシュ内部のmiss handling競合を扱うため、メモリ階層研究の差分として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2604.24039",
+      "title": "AgenticCache: Cache-Driven Asynchronous Planning for Embodied AI Agents",
+      "source_url": "https://arxiv.org/abs/2604.24039",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.24039-agenticcache-cache-driven-asynchronous-planning.md",
+      "priority": 79,
+      "reason": "エージェントのplan localityを利用し、実行時キャッシュとバックグラウンドLLM更新を分離してper-step呼出しを削減する。CacheScoutやprefix/KV管理とは異なり、生成結果側のplan transitionを非同期に再利用する実行系で、multi-agent servingの隣接軸として有用。公式コード公開も確認できる。"
+    },
+    {
+      "canonical_id": "arXiv:2608.01718",
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.01718-lacache-robust-semantic-caching.md",
+      "priority": 76,
+      "reason": "LLMサービングのsemantic cacheに対するcache-collision攻撃を対象に、queryだけでなく投機的に生成した先頭tokenも照合する方式で堅牢性を高める。性能最適化だけでなく共有キャッシュの安全性という未収録の観点を補い、実証評価と形式的保証の両方を持つため候補価値がある。"
+    }
+  ]
+}
