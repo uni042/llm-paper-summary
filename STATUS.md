@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 06:13 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 06:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **124 / 50** |
-| Research ready | **124** |
+| Candidate在庫（Research ready） | **126 / 50** |
+| Research ready | **126** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **203** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T05:30:00+09:00**
 |---|---:|
 | Research完了 | **6** |
 | Audit完了 | **0** |
-| Discovery完了 | **6** |
-| 新規job | **14** |
+| Discovery完了 | **7** |
+| 新規job | **17** |
 | Repo収録 | **6** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **108** |
-| 探索評価候補 | **510** |
-| 重複除外 | **178** |
+| 探索round（stats観測） | **109** |
+| 探索評価候補 | **513** |
+| 重複除外 | **179** |
 | 重複率 | **34.9%** |
-| Novel候補 | **332** |
-| Research候補採用 | **182** |
+| Novel候補 | **334** |
+| Research候補採用 | **184** |
 | Research完了 | **71** |
 | Repo収録 | **71** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 24時間ファネル
 
-**探索評価 510 → 重複除外後 332 → Research候補採用 182 → Research完了 71 → Repo収録 71**
+**探索評価 513 → 重複除外後 334 → Research候補採用 184 → Research完了 71 → Repo収録 71**
 
 ## 探索効率（直近24時間）
 
@@ -165,6 +165,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | edge/on-device offload・multitasking memory・cloud KV streaming | 3 | 0 | 2 | 0.0% | 66.7% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | multimodal弾力的並列化・EPD分離・modality-aware scheduling | 3 | 0 | 3 | 0.0% | 100.0% |
+| near-storage KV処理・動的layer/KV runtime adaptation | 3 | 1 | 2 | 33.3% | 66.7% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -182,11 +183,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 直近5探索round
 
+- **2026-09-13T06:02:25+09:00** — near-storage KV処理・動的layer/KV runtime adaptation: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T06:02:25+09:00** — MoE expert prefetch・offload・speculative execution再走査: 評価 6 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — GPU低ビットkernel/runtime・大容量メモリ型chain serving: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T06:02:25+09:00** — 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T05:28:14+09:00** — LSH・hashing系KVアクセス/eviction/sharing・query expansion: 評価 4 / 重複 0 / 採用 4
-- **2026-09-13T05:28:14+09:00** — KVキャッシュ幾何学指標・backward reference: 評価 1 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
