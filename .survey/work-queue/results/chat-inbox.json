@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
-  "job_id": "job-research-3ae94af47a718bbb",
-  "validation_error": "ValueError: problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
-  "repair_required": true,
-  "isolated_at": "2026-09-12T08:52:20+00:00"
+  "ok": true,
+  "job_id": "job-research-18475420c52022ad",
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/01-offload-hierarchical-memory/2026-2605.20179-tide-io-aware-expert-offload.md",
+    "identity_delta": "survey-state/identity-deltas/arxiv/2605.20179.json"
+  },
+  "job_status": "completed"
 }
