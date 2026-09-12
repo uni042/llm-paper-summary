@@ -1,19 +1,19 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:24 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **121 / 50** |
-| Research ready | **121** |
+| Candidate在庫（Research ready） | **122 / 50** |
+| Research ready | **122** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **197** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **3 / 24** |
+| Maintenance counter | **4 / 24** |
 
 ### 注意事項
 
@@ -28,35 +28,35 @@ Run: **2026-09-13T04:30:00+09:00**
 |---|---:|
 | Research完了 | **8** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **12** |
+| Discovery完了 | **6** |
+| 新規job | **14** |
 | Repo収録 | **8** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-moe-expert-cache-5**
+Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | MoE expert cache・offload・OS tiering |
-| 評価候補 | **6** |
-| 重複除外 | **6** |
-| Novel候補 | **0** |
-| Research候補採用 | **0** |
-| 重複率 | **100.0%** |
+| 探索軸 | GPU runtime・CUDA Graph・persistent kernel・決定論的推論 |
+| 評価候補 | **4** |
+| 重複除外 | **3** |
+| Novel候補 | **1** |
+| Research候補採用 | **1** |
+| 重複率 | **75.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **101** |
-| 探索評価候補 | **485** |
-| 重複除外 | **166** |
-| 重複率 | **34.2%** |
-| Novel候補 | **319** |
-| Research候補採用 | **173** |
+| 探索round（stats観測） | **102** |
+| 探索評価候補 | **489** |
+| 重複除外 | **169** |
+| 重複率 | **34.6%** |
+| Novel候補 | **320** |
+| Research候補採用 | **174** |
 | Research完了 | **65** |
 | Repo収録 | **65** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-moe-expert-cache-5**
 
 ### 24時間ファネル
 
-**探索評価 485 → 重複除外後 319 → Research候補採用 173 → Research完了 65 → Repo収録 65**
+**探索評価 489 → 重複除外後 320 → Research候補採用 174 → Research完了 65 → Repo収録 65**
 
 ## 探索効率（直近24時間）
 
@@ -119,6 +119,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-moe-expert-cache-5**
 | CXL・SSD・remote KV cache階層メモリ | 4 | 4 | 0 | 100.0% | 0.0% |
 | DistServe周辺のforward citation・backward reference補完 | 4 | 0 | 1 | 0.0% | 25.0% |
 | GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
+| GPU runtime・CUDA Graph・persistent kernel・決定論的推論 | 4 | 3 | 1 | 75.0% | 25.0% |
 | GPU runtime境界・host-device転送律速 | 4 | 3 | 1 | 75.0% | 25.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV multi-turn管理・復元・予約不確実性 | 4 | 4 | 0 | 100.0% | 0.0% |
@@ -175,11 +176,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-moe-expert-cache-5**
 
 ### 直近5探索round
 
+- **2026-09-13T05:00:25+09:00** — GPU runtime・CUDA Graph・persistent kernel・決定論的推論: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T05:00:25+09:00** — MoE expert cache・offload・OS tiering: 評価 6 / 重複 6 / 採用 0
 - **2026-09-13T05:00:25+09:00** — 推論システム横断サーベイ・KV・エッジ実行: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T05:00:25+09:00** — 分離型LLMサービング・KV転送／フェーズ非対称性: 評価 8 / 重複 6 / 採用 1
 - **2026-09-13T05:00:25+09:00** — エージェントサンドボックス・OS資源管理・状態管理: 評価 4 / 重複 0 / 採用 4
-- **2026-09-13T05:00:25+09:00** — 2026-09新着・KVキャッシュ圧縮／再利用: 評価 3 / 重複 3 / 採用 0
 
 ## 最近処理した論文
 
