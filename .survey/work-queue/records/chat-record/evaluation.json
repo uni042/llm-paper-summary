@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.11744-20260912-1140-v10-a1",
-  "job_id": "job-research-c115c71d60df8d04",
+  "attempt_id": "attempt-2601.12241-20260912-1340-v10-a1",
+  "job_id": "job-research-6f0990d652c4efef",
   "data": {
-    "hardware": "2種類の専有ノードで単一GPU実験を行う。ローカル機はNVIDIA RTX 4000 Ada 20GiB、Intel Xeon Silver 4514Y、256GiB DDR5、Kioxia CM7-R PCIe 5.0 SSD。Snellius機はNVIDIA H100 94GiB、2ソケットAMD EPYC 9334、768GiB DDR5、Samsung PM1743 PCIe 5.0 SSD。両SSDの実測持続読込み帯域は約13.5GB/s。",
-    "software": "Llama 3.2 3B InstructとQwen3-4B-Instruct-2507を用い、vLLM v0.16〜v0.22、LMCache、llm-dのファイルシステムKV経路、vLLM標準KV Offloadと比較する。py-kvcacheの最終評価はvLLM v0.22。ローカルはUbuntu 24.04/CUDA 13.2/PyTorch 2.11、SnelliusはRHEL 9.6/CUDA 12.8/PyTorch 2.11。",
-    "methodology": "合成長文ベンチマークでは文書長、再利用接頭辞割合、並行数、到着率を制御し、ウォームアップでキャッシュを作成してから命中要求を送る。損益分岐測定では外部キャッシュ無効時の冷間先頭トークン時間と、CPUまたはSSD命中時の時間を入力長ごとに測り、未測定点を補間して再計算と読込みが等しくなる境界を求める。実サービス寄り評価としてLongBenchのMulti-Document QAとCode Repository Understanding、SCBench KVワークロード、Alibaba Cloud BailianのCoder・対話A・API Bトレースを再生する。各構成は原則3回平均、KVはFP16、主なキャッシュ測定はデコード影響を分離するため出力1トークン。先読み効果の混合負荷だけは出力128〜1Kも確認する。",
-    "workloads": ["合成長文接頭辞再利用", "ShareGPT", "LongBench Multi-Document QA", "LongBench Code Repository Understanding", "SCBench KV", "Alibaba Cloud Bailian Coder", "Bailian interactive A", "Bailian API-driven B"],
-    "workload_details": "長文ベンチマークは1K〜80K級の入力を用い、SSD単独比較では50並行要求を使用する。先読み混合負荷は80K要求50件、50%が接頭辞再利用、最大並行8。Bailianは実運用由来の要求長と再利用分布を再生し、RTX 4000 AdaとH100で外部KVの有効範囲が変わるかを見る。",
-    "baselines": ["GPU接頭辞キャッシュのみ", "再計算", "LMCache", "llm-dファイルシステムキャッシュ", "vLLM標準KV Offload CPU+filesystem", "py-kvcache先読みなし"],
-    "metrics": ["先頭トークン時間", "キャッシュ命中高速化倍率", "GPU-CPU実効帯域", "SSD読込み帯域", "CPUステージング占有量", "SSD総読込み量", "要求ラウンド実行時間", "損益分岐接頭辞割合"],
-    "scope": "評価はRTX 4000 AdaとH100の2ハードウェア級、主にLlama 3.2 3BとQwen3 4B、単一GPU、FP16 KV、256トークンの固定KVファイルブロックに限定される。ネットワークストレージ、RAID、複数GPU、複数ノード、長時間デコードの持続スループットは未評価。実トレースも再生であり、本番環境の全競合や故障を再現しない。vLLMとLMCacheは更新が速いため、絶対的な製品順位ではなく設計判断の証拠として解釈する必要がある。"
+    "hardware": "AMD Instinct MI300Xを8基搭載した単一ノード。各GPUは最大750Wの総ボード電力を持ち、主評価では総GPU電力を4800Wへ制約する。GPU間はXGMIで接続し、HIP IPCを用いた直接KVキャッシュ転送を実装する。",
+    "software": "vLLM 0.8.4を基盤に中央スケジューラとGPU別プリフィル・デコードワーカーを追加する。電力上限変更はAMD SMIのコマンドライン経由。非分離比較ではvLLMのチャンク化プリフィルを使用する。",
+    "methodology": "Llama-3.1-8Bをテンソル並列1で使用し、LongBenchと合成Sonnet負荷を用いて要求到着率を変える。LongBenchは最大8K入力へ制限し、Sonnetではプリフィル偏重の8K入力・128出力とデコード偏重の約500入力・500出力を各1000要求生成し、ポアソン到着で連結する。評価はTTFTとTPOTそれぞれのサービス品質目標、および両方を満たす要求数である有効スループットを中心に行う。静的評価ではプリフィル/デコードGPU台数と電力を変え、動的評価では固定GPU+動的電力、動的GPU+固定電力、動的GPU+動的電力を比較する。",
+    "workloads": ["LongBench 最大8K入力", "Sonnet合成プリフィル偏重負荷", "Sonnet合成デコード偏重負荷"],
+    "workload_details": "LongBenchではTTFT=1秒、TPOT=40msまたは25msを主な目標とし、要求率を変化させる。Sonnet動的試験では前半1000要求を8K入力・128出力、後半1000要求を約500入力・500出力とし、後半だけTPOT目標を40msから20msへ厳しくして制御が段階変化へ追従できるかを見る。",
+    "baselines": ["非分離vLLM", "4P4D-750W", "4P4D-600W", "5P3D-600W", "固定4P-750W/4D-450W", "動的電力のみ", "動的GPUのみ"],
+    "metrics": ["TTFT", "TPOT", "SLO達成率", "有効スループット", "QPS/GPU", "QPS/W", "待ち行列遅延", "実行時間", "GPU電力"],
+    "scope": "実験はLlama-3.1-8Bが1GPUへ収まる単一ノード構成を中心とし、テンソル並列が必要な大規模モデル、複数ノード、ラック規模の電力制御は未評価である。動的制御は予測ではなく観測反応型であり、負荷変化が制御周期より速い場合や、GPU役割変更の2〜5秒費用が大きい場合の限界が残る。"
   }
 }
