@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.11582",
   "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.11582-omnikvquant-kv-cache-quantization-for-omni-llms.md",
   "selection_reason": "音声・映像・テキストを統合するOmni-LLMでKVキャッシュを2bit化するtraining-free手法。短い時間窓ごとにkey量子化範囲を決め、valueはモダリティ別に回転することで、時間方向のkey分布変化とモダリティごとのvalue幾何の違いへ対処する。Qwen2.5-Omni/Qwen3-Omniの7つの音声・映像ベンチマークで性能を大きく保ったまま2bit KVを実現し、2bitキャッシュを直接展開してattentionへ渡す融合Triton decode kernelも公開している。KVメモリ削減と実装まで揃った新着として優先度が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T05:23:13+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T05:35:17+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
