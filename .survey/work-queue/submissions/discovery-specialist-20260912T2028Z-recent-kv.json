@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-e06803031c68104a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.06663",
+      "title": "ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics",
+      "source_url": "https://arxiv.org/abs/2609.06663",
+      "priority": 72,
+      "reason": "マルチモーダルLLMのKVキャッシュ圧縮で、従来のcosine similarity単独の多様性評価が表現の異方性と大きさ情報の欠落で機能しにくい点を分析し、Euclidean distanceとcosine similarityを組み合わせたgeometry-awareな多様性指標とheadごとの冗長性推定を用いる。複数圧縮率で既存KV evictionへ統合可能な改善を報告しており、KVキャッシュ最適化系統の新しい設計軸として研究価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:28:14+09:00",
+    "round": "specialist-recent-kv-1",
+    "axis": "2609新着・KVキャッシュ最適化/サービング",
+    "query_summary": "2026年9月の新着を中心にKVキャッシュ圧縮・再利用・RAG serving・共有メモリservingを横断して軽量評価し、identity deltaと既存research jobで再重複確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.10266",
+      "arXiv:2609.10790",
+      "arXiv:2609.11209"
+    ],
+    "next_axis_hint": "MoE expert cache/offloadのrecent revisionと、重要offload論文のforward citationを別軸で確認する",
+    "empty_round_reason": null
+  }
+}
