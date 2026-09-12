@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **119 / 50** |
-| Research ready | **119** |
+| Candidate在庫（Research ready） | **118 / 50** |
+| Research ready | **118** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **192** |
+| Research completed（累計） | **193** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **3 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T04:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **4** |
 | Audit完了 | **0** |
 | Discovery完了 | **1** |
 | 新規job | **1** |
-| Repo収録 | **3** |
+| Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 | 重複率 | **33.2%** |
 | Novel候補 | **310** |
 | Research候補採用 | **166** |
-| Research完了 | **60** |
-| Repo収録 | **60** |
+| Research完了 | **61** |
+| Repo収録 | **61** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 464 → 重複除外後 310 → Research候補採用 166 → Research完了 60 → Repo収録 60**
+**探索評価 464 → 重複除外後 310 → Research候補採用 166 → Research完了 61 → Repo収録 61**
 
 ## 探索効率（直近24時間）
 
@@ -181,6 +181,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 
 ### Research完了
 
+- `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 - `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - `arXiv:2603.03251` — Speculative Speculative Decoding
@@ -188,15 +189,14 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 - `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
-- `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 
 ### 次に処理する候補
 
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
-- P90 `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 - P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 - P90 `arXiv:2606.07665` — AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference
 - P89 `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
+- P89 `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
 
 ## 7日比較
 
