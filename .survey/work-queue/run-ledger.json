@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T21:12:40.073492+00:00",
+  "updated_at": "2026-09-12T21:15:35.822014+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,7 +15070,7 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T21:12:40.073492+00:00",
+      "last_recorded_at": "2026-09-12T21:15:35.822014+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -15079,9 +15079,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 14,
+        "new_jobs": 17,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -15246,6 +15246,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34719325898:1",
+          "recorded_at": "2026-09-12T21:15:35.822014+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34719325898",
+            "run_attempt": "1",
+            "source_sha": "71dcba67eeeb3084a7d9d9ae19f4d1c7f543777d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15339,6 +15353,14 @@
         },
         {
           "job_id": "job-041eceb16e09fd41",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-980b3587f3155662",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15444,6 +15466,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-4354f5042e6e20fc",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-66748ca7517e3f9a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.02006",
+          "title": "Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing"
+        },
+        {
+          "job_id": "job-research-6a744249548dd135",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.09921",
+          "title": "INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing"
         }
       ],
       "new_paper_ids": [
@@ -15460,7 +15503,8 @@
         ".survey/work-queue/results/discovery-specialist-20260912T2036Z-hash-kv-family.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0602JST-kv-serving-1.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0607JST-kernel-chain-2.json",
-        ".survey/work-queue/results/discovery-specialist-20260913T0610JST-moe-prefetch-3.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0610JST-moe-prefetch-3.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0613JST-storage-runtime-4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,

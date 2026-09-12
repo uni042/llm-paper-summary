@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T21:11:20+00:00",
+  "updated_at": "2026-09-12T21:14:42+00:00",
   "last_run_key": "2026-09-13T06:02:25+09:00",
-  "last_round": "specialist-moe-prefetch-resweep-3",
+  "last_round": "specialist-storage-runtime-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2136,6 +2136,23 @@
       ],
       "next_axis_hint": "このstrong candidateで枯渇判定を再度リセットし、新着差分、forward/backward citation、storage/networking、GPU runtime/kernel、階層メモリを独立に再確認する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0610JST-moe-prefetch-3.json"
+    },
+    {
+      "run_key": "2026-09-13T06:02:25+09:00",
+      "round": "specialist-storage-runtime-4",
+      "axis": "near-storage KV処理・動的layer/KV runtime adaptation",
+      "query_summary": "MoE-SpeQ後の独立軸としてstorage/NVMe、GPU runtime、動的serving adaptationを再走査した。OServeは決定論的job照合で既収録を確認して除外。INF^2とMorphServeは一次arXiv抄録でシステム貢献・評価を軽量確認し、投入直前の最新main HEADで決定論的research job不存在、repo検索でも識別子・題名未検出、Library pending空を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2602.12151"
+      ],
+      "next_axis_hint": "strong candidate発見により枯渇判定をリセットし、最新差分・networking/collective・forward/backward citation・agent/workflow・GPU kernelを独立に再確認する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0613JST-storage-runtime-4.json"
     }
   ],
   "axes": {
@@ -3368,6 +3385,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.8333333333333334,
       "next_axis_hint": "このstrong candidateで枯渇判定を再度リセットし、新着差分、forward/backward citation、storage/networking、GPU runtime/kernel、階層メモリを独立に再確認する"
+    },
+    "near-storage KV処理・動的layer/KV runtime adaptation": {
+      "last_run_key": "2026-09-13T06:02:25+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "strong candidate発見により枯渇判定をリセットし、最新差分・networking/collective・forward/backward citation・agent/workflow・GPU kernelを独立に再確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
