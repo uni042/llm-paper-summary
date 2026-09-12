@@ -2,22 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.19746-20260912-1825-v10-a",
-  "job_id": "job-research-32074ec28a42f7d1",
+  "attempt_id": "attempt-2606.18431-20260912-1840-v10-a",
+  "job_id": "job-research-c5ba85dfa2989728",
   "data": {
-    "overview": "SACはキャッシュヒット後のデコードでRDMA全量取得方式を大きく上回り、平均2.1倍の出力トークンスループットを達成する。RDMAのTTFTはSACの9.7倍、TBTは1.8倍で、長文・高並行になるほど全量転送とPCIe競合が支配的になる。一方SACはローカルDRAM上限の平均91%のスループットを維持し、32K/64K/128KのスケーリングではRDMA比最大2.0/2.5/3.1倍へ差が拡大する。二つのCXLデバイスへの要求インターリーブで平均9.2%、最大14.2%向上し、GPU内ホットKVバッファを4Kから6Kへ増やすと平均10.4%向上するため、CXL帯域とHBMキャッシュの双方が性能を左右する。",
+    "overview": "UniBoostは平均遅延だけを追う完全情報SRPT系より、末尾のTTFTとtotal latencyを大きく改善する。論文全体ではP99 total latencyを完全な出力長を知るSRPTに対して最大35〜50%、TTFTを34〜47%短縮する。Llama-3-8Bのreasoning-heavy mix-2では、TRAIL+に対し平均total latencyは19.1%悪化する一方、P95/P99 total latencyは1.1%/35.1%改善し、P95/P99 TTFTは97.4%/34.0%改善する。これは平均最適化を一部犠牲にして末尾を安定させる設計目的を明確に示す。構成要素除去ではMemGuardがKV圧迫時のswap stormを抑え、飽和近傍のP90/P99/平均遅延をMLFQ+比最大約10倍改善する。",
     "key_results": [
-      {"metric":"Round-2デコードスループット","value":"平均2.1倍","baseline":"RDMA接頭辞KV全量取得","condition":"DeepSeek-V3.2、ShareGPT 512要求、並行64、文脈16K〜128K、出力1K","interpretation":"疎注意で不要なKVを全量転送せずtop-kだけをCXLから読むことで、遠隔帯域飽和を回避する。"},
-      {"metric":"TTFT","value":"RDMAのTTFTがSACの9.7倍","baseline":"RDMAメモリプール","condition":"Round-2高並行キャッシュヒット","interpretation":"RDMAは要求開始前の接頭辞全量取得がキュー待ちを生むが、SACはデコード中に必要KVだけ読むため開始待ちを大幅に削減する。"},
-      {"metric":"TBT","value":"RDMAのTBTがSACの1.8倍","baseline":"RDMAメモリプール","condition":"Round-2","interpretation":"RDMAの全量入力とHiSparse swap-inが同じPCIe経路を競合する一方、SACは転送量を絞る。"},
-      {"metric":"ローカルDRAM上限に対するスループット","value":"平均91%","baseline":"ローカルホストDRAM","condition":"Round-1/2の主評価","interpretation":"分離CXLメモリを使っても、細粒度アクセス遅延を抑えることでローカルDRAM性能へ近づく。"},
-      {"metric":"長文スケーリング","value":"32K/64K/128Kで最大2.0倍/2.5倍/3.1倍","baseline":"RDMA","condition":"並行数を掃引したデコード","interpretation":"文脈が長くなるほどRDMA全量転送量が増えて早く帯域上限へ達するため、SACの相対利点が拡大する。"},
-      {"metric":"CXLデバイスインターリーブ","value":"平均9.2%、最大14.2%向上","baseline":"単一CXLデバイス配置","condition":"二CXLデバイスへの要求単位分散、最大改善は128K","interpretation":"CXL自体も単一物理リンクがボトルネックになり得るため、複数デバイスの帯域を並列利用する配置が有効である。"},
-      {"metric":"GPU device buffer拡大","value":"平均10.4%向上","baseline":"4K buffer","condition":"6K bufferとの比較","interpretation":"HBMに残すホットKVが増えるとCXLミスと転送量が減り、階層メモリの上位キャッシュ容量も重要になる。"},
-      {"metric":"疎KV取得マイクロ遅延","value":"CXLはDRAMの1.04〜1.64倍、RDMAは4.0〜19.7倍","baseline":"ローカルDRAM","condition":"128K文脈からランダムな疎KV位置を取得","interpretation":"層ごとのリアルタイムtop-k遠隔取得はCXLなら実用域だが、RDMAではms級遅延へ達し不適切である。"}
+      {"metric":"P99 total latency","value":"最大35〜50%短縮","baseline":"完全な出力長を知るSRPT系比較方式","condition":"複数モデル・chat/code/reasoning/混合ワークロード","interpretation":"要求長予測の誤差を排除した理想SRPTよりも末尾が良く、予測精度ではなくpolicy自体のtail最適化が効いている。"},
+      {"metric":"TTFT","value":"34〜47%短縮","baseline":"強い予測・既得サービス量系baseline","condition":"論文全体の複数ワークロード","interpretation":"デコードを優先し続けずプリフィルを同じboost空間へ入れることで、新規要求のhead-of-line blockingを軽減する。"},
+      {"metric":"mix-2 P99 total latency","value":"35.1%改善","baseline":"TRAIL+ with perfect prediction","condition":"Llama-3-8B、reasoning 70% + Azure Function 30%","interpretation":"reasoning-heavyで長短要求が混ざる条件でも、完全予測SRPTの末尾逆転を避ける。"},
+      {"metric":"mix-2平均total latency","value":"19.1%悪化","baseline":"TRAIL+ with perfect prediction","condition":"同上","interpretation":"UniBoostは平均最小化ではなくtailの公平性を優先するため、短要求を極端に優遇するSRPTより平均値は悪化し得る。"},
+      {"metric":"mix-2 P95/P99 TTFT","value":"97.4%／34.0%改善","baseline":"TRAIL+ with perfect prediction","condition":"Llama-3-8B mix-2","interpretation":"統一優先度により長いデコード列が新規プリフィルを締め出す現象を強く抑える。"},
+      {"metric":"mix-2 P99 TBT","value":"33.8%改善","baseline":"TRAIL+ with perfect prediction","condition":"Llama-3-8B mix-2","interpretation":"頻繁なプリエンプトとdecode interleavingをMemGuardで抑え、生成中の末尾token間隔も安定化する。"},
+      {"metric":"throughput","value":"1.01〜1.12倍","baseline":"比較scheduler","condition":"bursty loadを含む複数ワークロード","interpretation":"tail改善のためにGPU利用率を大きく犠牲にせず、KV-aware preemption抑制によってむしろ処理能力を維持・改善する。"},
+      {"metric":"MemGuardアブレーション","value":"tail latencyをさらに1.5〜2倍改善","baseline":"統一boost優先度のみ","condition":"CodeLlama-34B、単一A100、メモリ制約下の負荷掃引","interpretation":"理論優先度だけではKV状態を壊す頻繁なswapが残り、幾何学的な最低実行区間が実システム性能に必須である。"},
+      {"metric":"飽和近傍遅延","value":"P90/P99/平均を最大約10倍改善","baseline":"MLFQ+","condition":"CodeLlama-34B負荷掃引、飽和付近","interpretation":"KV圧迫と優先度反転が連鎖する高負荷領域で、tail-aware boostとMemGuardの組合せが特に効く。"},
+      {"metric":"TTFT SLO容量","value":"2.9〜8.7倍厳しいSLOを満足","baseline":"比較scheduler","condition":"所定SLO達成率での閾値比較","interpretation":"単一のP99値だけでなく、サービス目標達成可能な運用領域を大幅に拡張する。"},
+      {"metric":"total latency SLO容量","value":"1.7〜4.3倍改善","baseline":"比較scheduler","condition":"99% SLO attainment中心","interpretation":"tailを直接扱うことで、平均の小さいschedulerより厳格な完了時間SLOを維持できる。"}
     ],
-    "negative_results": "Round-1のプリフィル・KV書き出しではCXLとRDMAの性能差は小さい。両方式ともプリフィル計算中は全KVをGPUへ保持し、完了後に全KVを遠隔プールへ保存するため、SACの主な利点はキャッシュヒット後デコードに現れる。また低並行時のGPU HBMのみ構成はSACより高いスループットを得られるが、KV容量が小さいため並行数を増やせず早く頭打ちになる。CXLでも単一デバイスリンク競合が起こり、GPU hot bufferが小さいと遠隔読み込み増加で性能が落ちる。GLM-5.1やDeepSeek-V4、異なるCXL装置での実測はなく、疎注意モデル一般への結論は今後の検証を要する。",
-    "interpretation": "RDMA分離KVは遠隔アクセス遅延が高いので『一度全量をローカルへ持ってきて、その後は高速に読む』設計が合理的だった。しかし疎注意は全量の大部分を使わず、計算量低下によって高並行処理が可能になるため、先読み量とローカル容量の浪費がかえって主要ボトルネックになる。SACはCXLの低遅延メモリセマンティクスにより『必要になった瞬間に必要なKVだけ読む』設計へ変え、モデル側の疎アクセスパターンとメモリ基盤を一致させる。結果として高並行・長文ほど利点が増す。一方、CXL帯域は無限ではないので、複数デバイスへの分散とHBMホットバッファでアクセス量・リンク競合を制御する必要がある。",
-    "quality_impact": "SACはDeepSeek Sparse Attentionが選ぶtop-kを変更せず、KVの格納・取得場所だけを変える。評価で使うAWQ 4-bitモデル設定は全バックエンド共通であり、SAC固有の近似による精度劣化は導入しない。"
+    "negative_results": "UniBoostは平均遅延を常に最小化しない。reasoning-heavy mix-2では完全予測TRAIL+より平均total latencyが19.1%悪化し、平均TTFTなど一部指標でもSRPT/SJF系が有利な場合がある。DistBoostだけではプリフィル・デコード間のhead-of-line blockingが残り、統一優先度だけでは高負荷時に頻繁なKVプリエンプトが発生するため、MemGuardが必要になる。prefix/radix cacheを主評価で無効にしているため、共有接頭辞が多い実運用でcache hitと優先度が競合した場合の性能は十分検証されていない。またγ-Adaは観測済み分布へ追従するため、急激な分布変化直後には推定遅れが生じ得る。",
+    "interpretation": "完全予測SRPTは『残り処理時間が短い要求を先に終える』ことで平均を小さくするが、長要求が短要求の連続到着に追い越され、状態を持つLLMではプリエンプトのたびにKV費用も増える。この二重効果が末尾要求を極端に遅くする。UniBoostは未知の最終長を当てる代わりに、既得サービス量へ応じて長要求の優先度を徐々に回復させ、MemGuardで順位変化の物理的実行頻度を抑える。その結果、平均を少し譲ってもP95/P99とSLOを安定化できる。reasoning-heavyやbursty負荷ほど出力長分布とKV圧迫が変動するため、固定予測器より観測末尾分布だけを使うγ-Adaの利点が大きい。",
+    "quality_impact": "モデル出力を変更しないscheduler最適化であり、回答精度や生成品質を下げる近似はない。交換条件はサービス指標間にあり、平均完了時間を一部犠牲にしてP95/P99、TTFT、SLO達成率、プリエンプト安定性を改善する。"
   }
 }
