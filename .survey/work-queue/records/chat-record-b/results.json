@@ -2,20 +2,28 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2510.13223-20260912-1752-v10-b",
-  "job_id": "job-research-3ae94af47a718bbb",
+  "attempt_id": "attempt-2607.10186-20260913-0030-v10-b",
+  "job_id": "job-research-176f6ec6b8273a5c",
   "data": {
-    "overview": "BanaServeは短文・長文、LLaMA-13B・OPT-13BのいずれでもDistServeとvLLMを上回る。全体の要約値ではvLLM比1.2〜3.9倍のスループットと3.9〜78.4%の総処理時間削減、DistServe比1.1〜2.8倍のスループットと1.4〜70.1%の遅延削減を報告する。短文LLaMA-13Bでは両比較対象比1.1〜1.2倍、短文OPT-13BではDistServe比2.8〜3.9倍、vLLM比最大3.9倍となる。長文LLaMA-13BではDistServe比1.3〜1.5倍、vLLM比最大1.5倍で、vLLM比20.6〜65.3%の遅延削減を示す。",
+    "overview": "FlashAccelの直列統合（Cascaded Integration; CSI）は、評価したモデル・文脈長・遅延制約全体で8×H200を上回り、GPU当たりthroughputを平均2.10倍改善する。100msのデコードSLOでは8×CSIが2.49倍、8×CLIが2.00倍となる。完全機構を有効にしたHBFアクセスは同じbatch sizeでHBM-onlyより約4%遅い範囲まで縮まり、先読み、重み配置、KV配置をそれぞれ無効にすると完全FlashAccel比でthroughputが55%、7%、15%低下する。HBFの大容量はmulti-turn KV hit率も改善し、8×CSI/CLIは全sessionのKVを保持して理想hit率に達し、16×H200よりhit率が50%高く、8×H200比で再計算tokenを最大89%削減する。フラッシュread energyはHBMより高いものの、100ms SLOのtokens/Jは8×CSIで平均1.93倍、8×CLIで1.66倍となる。",
     "key_results": [
-      {"metric":"スループット","value":"1.2〜3.9倍","baseline":"vLLM","condition":"LLaMA-13B/OPT-13B、Alpaca/LongBench、1〜20 RPSの総括","interpretation":"共有KVと動的資源再配置により、同居型のプリフィル・デコード干渉と静的資源配分を緩和する。"},
-      {"metric":"スループット","value":"1.1〜2.8倍","baseline":"DistServe","condition":"同上の総括","interpretation":"分離自体は維持しつつ、固定したプリフィル・デコード資源を実行中に再均衡する効果を示す。"},
-      {"metric":"総処理時間/遅延","value":"vLLM比3.9〜78.4%削減、DistServe比1.4〜70.1%削減","baseline":"vLLM / DistServe","condition":"全評価の総括","interpretation":"キャッシュ所在に拘束されない負荷割当と移動制御が待ち行列・キャッシュ競合を抑える。"},
-      {"metric":"短文OPT-13Bスループット","value":"DistServe比2.8〜3.9倍、vLLM比最大3.9倍","baseline":"DistServe / vLLM","condition":"Alpaca、1〜20 RPS","interpretation":"頻繁なコンテキスト切替下で共有キャッシュとバッチ・スケジューリングの差が大きい。"},
-      {"metric":"長文LLaMA-13Bスループット","value":"DistServe比1.3〜1.5倍、vLLM比最大1.5倍","baseline":"DistServe / vLLM","condition":"LongBench","interpretation":"長文ではKV取得とメモリ管理が支配的になるため、共有KVストアと重畳転送の効果が現れる。"},
-      {"metric":"層単位KVパイプライン例","value":"1層計算4.22msに対しKV転送0.082ms","baseline":"非重畳転送","condition":"1000トークン、50%接頭辞命中、200Gbps、32層の例","interpretation":"次層読出しと現在層計算を重ねる余地が十分あり、共有ストアの転送待ちを隠せる条件を示す。"}
+      {"metric":"GPU当たりデコードthroughput","value":"平均2.10倍","baseline":"8×H200","condition":"8×CSI、4モデル、2文脈条件、50/100ms SLO全体","interpretation":"HBFの追加容量で最大batch sizeをHBM容量ではなく遅延予算まで増やせる。"},
+      {"metric":"100ms SLO GPU当たりthroughput","value":"8×CSI 2.49倍、8×CLI 2.00倍","baseline":"8×H200","condition":"100ms decode SLO","interpretation":"遅延予算が十分あるとHBFからより多くの重み/KVを読み、大batchによる演算密度向上を得られる。"},
+      {"metric":"同一batch sizeのlatency差","value":"HBM-only比約4%以内","baseline":"HBM-based GPU","condition":"FlashAccel全最適化有効","interpretation":"SRAM先読みとHBF向け配置により4マイクロ秒級NAND read latencyを大部分隠せる。"},
+      {"metric":"先読みアブレーション","value":"throughput 55%低下","baseline":"完全FlashAccel","condition":"Qwen3-235B、batch 256、100ms SLO","interpretation":"HBFの高access latencyを隠すSRAM prefetchが最も大きな必須要素である。"},
+      {"metric":"重み配置アブレーション","value":"throughput 7%低下","baseline":"完全FlashAccel","condition":"同上","interpretation":"実行順・hyperpage整列がweight access時のplane利用率を改善する。"},
+      {"metric":"KV配置アブレーション","value":"throughput 15%低下","baseline":"完全FlashAccel","condition":"同上","interpretation":"動的active request下ではKVのmegaplane load balanceが重要である。"},
+      {"metric":"最適化なしHBF","value":"throughput 65%低下しHBM-only未満","baseline":"完全FlashAccel","condition":"同上","interpretation":"HBFの大容量・peak bandwidthだけでは性能向上せず、co-designが必要であることを示す。"},
+      {"metric":"LLaMA3.1-405B最大batch例","value":"8×H200は30、8×CSIは理論110","baseline":"8×H200","condition":"15K入力/6K出力、50ms SLO、1要求10GB KV","interpretation":"容量増加が直接batch sizeへ変換される代表例。"},
+      {"metric":"multi-turn KV cache hit率","value":"8×CSI/CLIは理想hit率、16×H200より50%高い","baseline":"16×H200","condition":"multi-turn interaction trace","interpretation":"HBF容量によって完了済みturnのKVを保持し続け、再利用機会を失わない。"},
+      {"metric":"prefill再計算token","value":"最大89%削減","baseline":"8×H200","condition":"multi-turn KV reuse","interpretation":"大容量KV保持はdecode batchだけでなく後続turnのprefill計算削減にも効く。"},
+      {"metric":"KV write overhead","value":"最大988MB/s、約3.9ms、0.4% overhead","baseline":"read/compute時間","condition":"decode 276MB/s + agent input/output比からprefill 712MB/s","interpretation":"readより遅いHBF programでもGQA/MLA下のKV write量なら臨界負荷になりにくいという推定。"},
+      {"metric":"5年間KV write耐久性","value":"148,570TB writesに対しCSI 1,125,000TBW","baseline":"5-year workload estimate","condition":"1152GB HBF、1M P/E cycles仮定","interpretation":"短retentionで耐久性を10倍へ伸ばす仮定下ではKVをFlashへ置ける余裕がある。"},
+      {"metric":"100ms SLO energy efficiency","value":"8×CSI 1.93倍、8×CLI 1.66倍","baseline":"8×H200","condition":"tokens/J","interpretation":"Flash read energyは高いがthroughput向上が消費電力増を上回る。"},
+      {"metric":"HBF storage density","value":"HBM3e比6.50倍","baseline":"標準HBM3e","condition":"保守的な96 wordline層HBFモデル","interpretation":"面積が1.23倍でも容量密度が大きく、容量当たりのシリコン効率が高い。"}
     ],
-    "negative_results": "改善率はモデルと文脈長で大きく異なる。短文LLaMA-13Bでは1.1〜1.2倍程度に留まり、長文OPT-13Bでも1.1〜1.3倍である。層単位移動は重み転送が支配するため頻繁な微調整には重く、注意単位移動との使い分けが必要になる。共有KVストアも200Gbps級の通信と層計算に対して転送が十分短い条件を前提とする。",
-    "interpretation": "BanaServeの性能源は単一の高速カーネルではなく、状態配置を共有化して要求ルーティングから切り離し、その上で計算資源も粗粒度・細粒度に動かせることにある。人気接頭辞が特定GPUへ負荷を集中させる正のフィードバックを断ち、プリフィルの計算余力・デコードのメモリ余力の偏りへ別GPUの資源を使える。高負荷ではバッチ効率と資源競合回避の効果が大きくなる。",
-    "quality_impact": "近似計算やKV削除を行わず、状態と計算場所を変更するだけなので、BanaServe自体による生成品質劣化はない。評価は主にシステム性能で、タスク正答率を改善する手法ではない。"
+    "negative_results": "厳しい50ms SLOではCLIがCSIより16.7%低いHBF帯域しか持たないため、DeepSeek-V3とQwen3-235Bで8×H200を僅かに下回る。4GPUのCSI/CLIはaggregate bandwidthが減り、LLaMA3.1-405BとQwen3-Coder-480Bでは重み読出しだけで50msを超えるためその条件でserveできない。16GPUへ増やすとNVLink領域を越えてRDMAが必要になり、expert parallelのall-to-allが重くなるためGPU当たりthroughputは8GPU HBF構成より低下する。HBFのread energyは8pJ/bitでHBM3eの2.99pJ/bitより2.68倍高く、CSI/CLIのTDPは1.31倍/1.23倍になる。書込み耐久性の成立はSLCと短retentionによる1M P/Eという仮定を含む。最も重要な制約は、これらが実HBF GPUの測定ではなくシミュレーション結果である点である。",
+    "interpretation": "FlashAccelの価値は『フラッシュがHBMより安く大容量』という点だけではなく、ピーク帯域を推論が実際に使えるようストレージ内部並列性とLLMアクセス順を揃えたことである。デコードは重みとKVの双方を毎step読むため、HBFをSSDのようにHBMへstageするだけではHBM容量と転送を再び律速にする。GPUから直接HBFを読み、SRAMだけを遅延隠蔽へ使うことで、大容量がそのままbatch sizeとKV retentionへ変わる。アブレーションでPlain HBFがHBMより遅いことは、このco-designなしにはHBFのスペック値が実効性能にならないことを明確に示している。",
+    "quality_impact": "モデル内容やKV値を近似しないため、FlashAccel固有の品質劣化は想定しない。主要な不確実性は回答品質ではなく、将来HBFハードウェアの実効latency/bandwidth/endurance/energyがモデル通りになるかというシステム性能側にある。"
   }
 }
