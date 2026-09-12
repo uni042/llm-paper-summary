@@ -39,7 +39,9 @@ candidate供給は2つのScheduled Chat workerが共有する。
 
 二重投入を防ぐため、両workerとも探索開始前とcandidate投入直前に最新HEADを再確認し、canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで再重複判定する。片方が探索中にもう片方やActionsが同じ候補を先に登録した場合、後発workerはその候補を送らない。競合が残る場合も正本側のdedupeで1候補へ収束させる。
 
-`discovery-state.json` 等の共有stateを書き換える場合は最新blob SHAを取得し、古いSHAで上書きしない。SHA競合は最新stateを再取得して該当更新だけ再評価する。
+`discovery-state.json` はGitHub Actionsを単一writerとする。Scheduled Chatはこの共有stateを直接更新せず、各discovery submissionへトップレベル `discovery_stats` を添付する。Actionsは直列化されたqueue処理の中で最終dedupe後の実採用数を確定してから、探索軸ごとの統計を1回だけ加算する。同一submission pathは二重計上しない。
+
+`discovery_stats` には少なくとも `run_key`, `round`, `axis`, `query_summary`, `candidate_count`, `duplicate_filtered_count`, `duplicate_canonical_ids`, `next_axis_hint` を含める。`candidate_count` は検索エンジンの生hit数ではなく、テーマ適合性を確認して実質的に評価した候補数とする。`candidates` 本体にはScheduled Chat側の重複除外後にActionsへ渡す候補だけを入れる。実際の `accepted_count` はActions側の最終dedupe結果から算出する。
 
 探索専用workerの毎時runは通常論文workerの24-run maintenance counterへ加算しない。探索専用workerの詳細契約は `discovery-specialist-worker.md` を正本とする。
 
@@ -55,6 +57,16 @@ candidate供給は2つのScheduled Chat workerが共有する。
 6. **既存の重点テーマ探索**: offload / hierarchical memory / MoE / expert placement・cache・prefetch / KV cache / scheduling / disaggregation / inference framework等を継続する。
 
 探索ラウンドごとに、取得候補数、重複除外数、新規候補数、candidate採用数、採用率、探索軸を記録する。高重複・低採用率の軸は直後に繰り返さず、別経路へ切り替える。採用率の高い探索語・探索経路は次回の候補生成へ再利用する。
+
+統計の意味は以下で固定する。
+
+- `candidate_count`: 軽量評価後に実質的な候補として検討した件数。
+- `duplicate_filtered_count`: Scheduled Chat側のidentity/queue再確認で既存と判定し除外した件数。
+- `novel_candidate_count`: `candidate_count - duplicate_filtered_count`。
+- `accepted_count`: Actionsの最終dedupeを通過してresearch job化された件数。
+- `duplicate_ratio`: `duplicate_filtered_count / candidate_count`。candidateが0なら0。
+
+したがって、Scheduled Chat側で新規に見えても投入までの間に他workerが同じ論文を登録した場合、`novel_candidate_count` と `accepted_count` は異なり得る。この差は並行探索時の競合として正常であり、採用数をScheduled Chat側で推測して補正しない。
 
 ## 優先順位
 
@@ -83,6 +95,8 @@ maintenance runと08:30 other-update runを除くpaper workerでは、run開始�
 ## GitHub write不能時
 
 GitHub write不能でもLibrary `/LLM-survey-outbox/pending/` へoffline job seedを耐久保存できるなら、同じ水位方針でcandidateを補充する。candidate seedを保存した後は、必要に応じてpriority上位候補のresearchを同一runで進める。transport envelope、job ID、replayは `fallback-routing.md` と `continuation-policy.json` を正本とする。
+
+fallback envelopeにも探索時点の `discovery_stats` を保持し、GitHub復旧後のreplayでActionsが通常submissionと同じ統計処理を行えるようにする。
 
 探索専用workerはGitHub write不能時でもresearchへ進まず、candidate seedの耐久保存までに留める。
 
