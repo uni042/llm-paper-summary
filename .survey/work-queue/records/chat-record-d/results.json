@@ -2,63 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2605.22850-20260913-0104-v10-d",
-  "job_id": "job-research-2ffc6f1ef8dd7efc",
+  "attempt_id": "attempt-2608.07009-20260913-0248-v10-d",
+  "job_id": "job-research-8b43b83e9e79a452",
   "data": {
-    "overview": "ObjectCacheは、大容量S3互換ストレージを使うための追加遅延を、長文条件ではローカルDRAMに近い水準まで隠せることを示した。100 Gbps環境の64K文脈では、64トークン粒度のサーバ集約＋層順方式が最適なローカル層順DRAMに対して0.1〜5.6%以内に収まり、87.5%命中で約7 GBのKVを取得する場合でも必要な重なり帯域3.1 GB/sは持続集約帯域を下回る。一方4KではGPU計算窓が短く、RDMA接続、最初の層、S3制御といった固定費を隠せず56〜75 ms増える。この境界を利用して小ペイロードはチャンク順、大ペイロードは集約層順へ切り替える設計が必要になる。帯域競合では、要求ごとの有効な重なり領域へ帯域を集中させる補正Stall-optが均等配分の追加TTFTを1.2〜1.8倍削減した。",
+    "overview": "HiSparseの利得は個々のattention stepを高速化することではなく、長文要求一件あたりのdecode HBMをfull contextから固定Bへ縮め、同じGPUへより大きなdecode batchを載せられることから生まれる。DeepSeek-V4-Flashでは2×B200の32K/8K条件でconcurrency 64のgeneration throughputが600から1257 token/sへ2.1倍、decode-onlyでは1511から4308 token/sへ2.9倍になった。Qwen3+Questでは200K inputで111から520 token/sへ4.7倍、GLM-5.1では32Kで624から1919 token/sへ3.1倍となる。LRUはB=2kでmiss率を13.4%に抑え、GLM-5.2のexact layer-wise prefetchはTPOTを13〜15%短縮してhost I/O露出の約半分を隠す。一方、短文・低並行では容量利得がないため追加I/Oは純粋な不利となる。",
     "key_results": [
-      {
-        "metric": "64K文脈での最適ローカルDRAM比TTFT増加",
-        "value": "0.1〜5.6%以内",
-        "baseline": "事前に層順集約した固定CPUメモリ上のopt-local-LW",
-        "condition": "Llama 3.1 8B、A100 80GB、100 Gbps RoCEv2、G=64、接頭辞命中率12.5〜87.5%",
-        "interpretation": "長文では層ごとのGPU計算窓が十分長く、SSD・S3からの後続層転送の大半を計算中に隠せる。"
-      },
-      {
-        "metric": "4K文脈での追加TTFT",
-        "value": "56〜75 ms",
-        "baseline": "opt-local-LW",
-        "condition": "Llama 3.1 8B、G=64、4K文脈、各接頭辞命中率",
-        "interpretation": "短文では計算窓が小さく、RDMAセッション開始、最初の層、制御面の固定費が占める割合が高いため、層順化だけでは遠隔ストレージ費用を隠せない。"
-      },
-      {
-        "metric": "87.5%命中時の64K KV取得量と必要帯域",
-        "value": "約7 GB、予測必要帯域3.1 GB/s",
-        "baseline": "ObjectCacheの持続サーバ集約帯域約5 GB/s",
-        "condition": "Llama 3.1 8B、64K文脈、87.5%接頭辞命中",
-        "interpretation": "取得量自体は大きいが、長い未キャッシュ計算窓があるため、安定集約帯域が重なり条件を満たし転送律速にならない。"
-      },
-      {
-        "metric": "4K・87.5%命中の必要重なり帯域",
-        "value": "7.41 GB/s",
-        "baseline": "ObjectCacheの持続集約帯域約5 GB/sおよび10 Gbps制限",
-        "condition": "4K文脈、87.5%接頭辞命中、KVペイロード448 MB、基準計算時間64 ms",
-        "interpretation": "KV量は64Kより小さくても計算窓が短いため必要帯域が上がり、転送律速になる。長文ほど必ず不利とは限らないことを示す。"
-      },
-      {
-        "metric": "共有帯域下の均等配分に対する追加TTFT削減",
-        "value": "1.2〜1.8倍",
-        "baseline": "Equal帯域配分",
-        "condition": "Workload Aは16K/64K混合で80 Gbps、Bは同じ要求で50 Gbps、Cは16K/32K/64K混合で50 Gbps",
-        "interpretation": "KV量や利用者数だけでなく、各要求が転送を計算へ隠せる帯域境界を使うことで、改善しない領域への過剰配分を減らす。"
-      },
-      {
-        "metric": "Workload Aの補正Stall-opt追加TTFT",
-        "value": "+730.3 ms",
-        "baseline": "Equal +1288.8 ms、KV-prop +1806.3 ms、BW-prop +3146.5 ms、Stall-opt +1516.7 ms",
-        "condition": "16K/64K・50/87.5%命中の4要求、共有上限80 Gbps、無制限基準合計12084.2 ms",
-        "interpretation": "実測曲線の平坦部へ5 Gbps余裕を置く補正が中程度競合では解析境界より良く、均等配分の追加遅延を約1.76倍小さくした。"
-      },
-      {
-        "metric": "粗い保存粒度による再計算費用",
-        "value": "A100・Llama 3.1 8B・64K・87.5%命中でG=512はG=16より103.6 ms長い",
-        "baseline": "16トークン保存粒度",
-        "condition": "同じ意味上の命中境界付近で512トークン粒度は追加496トークンを再計算",
-        "interpretation": "物体を大きくしてS3効率だけを改善すると接頭辞分岐を失い、計算費用が増えるため、保存粒度と転送粒度を分離する根拠になる。"
-      }
+      {"metric":"DeepSeek-V4-Flash generation throughput","value":"600→1257 tokens/s、2.1倍","baseline":"full-KV SGLang","condition":"2×B200、32K input / 8K output、concurrency 64","interpretation":"HBM容量でbaseline batchが頭打ちになる一方、固定GPU cacheによりHiSparseはより多くのdecode requestを同時に収容する。"},
+      {"metric":"DeepSeek-V4-Flash decode-only throughput","value":"1511→4308 tokens/s、2.9倍","baseline":"full-KV SGLang","condition":"同条件、prefill時間を除外","interpretation":"PD-disaggregated decode poolでもcapacity ceilingを上げる効果が中心であることを示すproxy結果。"},
+      {"metric":"高負荷mean TTFT","value":"829秒→171秒","baseline":"full-KV SGLang","condition":"DeepSeek-V4-Flash、concurrency 64","interpretation":"full-KVではdecode KVがHBMを占有してprefill/new requestがqueueするが、HiSparseはHBM headroomを残しqueueingを緩和する。"},
+      {"metric":"Qwen3+Quest peak generation throughput","value":"32Kで511→1824 tokens/s（3.6倍）、200Kで111→520 tokens/s（4.7倍）","baseline":"full-KV SGLang","condition":"GH200、k=2048","interpretation":"contextが長いほどbaselineのadmissible batchが縮むため、固定B residencyの容量倍率が大きくなる。"},
+      {"metric":"GLM-5.1 peak generation throughput","value":"32Kで624→1919 tokens/s（3.1倍）、160Kで232→680 tokens/s（2.9倍）","baseline":"full-KV SGLang","condition":"8×H200、DSA k=2048","interpretation":"学習済みDSAでもindexerを変えず、KV placementだけで長文throughputを拡張できる。"},
+      {"metric":"Matched TPOT","value":"15.9ms vs 16.0ms","baseline":"full-KV SGLang","condition":"DeepSeek-V4-Flash、concurrency 16","interpretation":"overlapping throughput rangeではhost miss resolutionを含めてもper-token latencyがbaselineとほぼ同等。"},
+      {"metric":"HBM KV budget","value":"約240GB→約25GB、128K一要求13.09GB→0.4GB","baseline":"full-KV residency","condition":"GLM-5.1、B=4096","interpretation":"throughputを増やさない運用でも、同batchを少ないHBMで提供できる。"},
+      {"metric":"LRU miss rate","value":"B=k:30%、B=2k:13.4%、B=4k:6.7%","baseline":"top-k-only staging / FIFO 17.2% / random 16.1%","condition":"GLM-5.1 LongBenchV2 trace、k=2048","interpretation":"sparse selectionの時間局所性をhot cacheとして保持することがhost I/Oを現実的な量へ削減する。"},
+      {"metric":"Exact layer-wise prefetch TPOT","value":"13〜15%短縮","baseline":"synchronous resolve","condition":"GLM-5.2、8×H200、shared selections","interpretation":"将来選択が正確に既知なshared layerでは転送を計算と重ね、同期host missの約半分を隠す。"},
+      {"metric":"Exact prefetch end-to-end throughput","value":"618 baseline / 1515 no-prefetch / 1727 tokens/s exact-prefetch、baseline比2.8倍","baseline":"full-KV / HiSparse no-prefetch","condition":"GLM-5.2、32K/8K","interpretation":"capacity gainにI/O overlapを加えることでno-I/O oracle 2034 tokens/sの85%へ到達する。"}
     ],
-    "negative_results": "最も短い4K・高命中条件では層ごとの計算時間が短すぎ、448 MBのKVでも必要帯域が7.41 GB/sへ上がり、固定起動費も支配的になるため、集約層順方式は最適ローカル方式より56〜75 ms遅れる。16トークン粒度は64/256トークンより集約パイプラインの実効帯域を使い切れず、64Kでもオーバーヘッドが増える。帯域配分のWorkload Cでは未補正Stall-optが補正版よりわずかに良く、固定5 Gbps余裕が密な異種要求で一部を過剰配分する境界もある。",
-    "interpretation": "効果を決めるのはKV総バイト数だけでなく、GPUが次層を必要とするまでの計算窓と、ストレージ側が細粒度範囲を一層分へまとめる実効帯域である。長文ではKV量増加より計算窓増加が勝ち、転送を隠しやすい。短文では逆に固定費と先頭層転送が露出する。共有帯域でも、要求ごとの飽和点を超える帯域はTTFTを改善しないため、その帯域を別要求へ回すことが有効になる。",
-    "quality_impact": "KV値やモデル演算を変更しないため生成品質は無損失。粗い保存粒度へ変更する場合のみ再利用可能トークンが減って追加再計算が生じるが、ObjectCache本体は細粒度保存を維持する。"
+    "negative_results": "短文・低concurrencyではfull-KV baselineがHBM capacity wallへ達しないため、HiSparseはthroughputをほぼ増やさずhost I/O overheadだけを加える。同期resolveではmatched low concurrencyで1 tokenあたり約7〜8msのI/Oが露出し、shared-index exact prefetchでも約3ms残る。shared selectionを持たないモデルで前層selectionから次層を推測するspeculative prefetchはhit率をわずかに上げるだけでend-to-end改善が測定できず、余計なhost trafficを発生させた。host DRAM自体も有限で、Grace系のようにhost memoryがaggregate HBMと同程度のplatformではcapacity multiplierが小さい。NVMe/network tierなら容量を増やせるが、より高いlatencyを隠す必要があり本論文では実測していない。",
+    "interpretation": "疎注意は計算需要をkへ縮めても、既存runtimeが『将来選択可能』と『現在HBM resident』を同一視する限りmemory footprintはLctxのままである。HiSparseはselectorが毎層提供する正確なdemand signalをmemory hierarchyのpage fault相当として使うことで、この不整合を解消する。最大4.7倍はkernel単体の高速化ではなく、HBM capacityから解放されたbatch-size効果である点が重要である。またno-I/O oracleがbaseline TPOTと一致するため、管理metadata処理よりhost-device I/Oが今後の主要最適化対象であり、NVLink-C2Cやshared-index model co-designが直接効くことを示す。",
+    "quality_impact": "完全KVをhost tierに保存し、model indexerが選んだ同じKVをattention前にGPUへ復元するため無損失。evictionはGPU cacheからhost-only状態へ移すだけで、論理KVを削除しない。"
   }
 }
