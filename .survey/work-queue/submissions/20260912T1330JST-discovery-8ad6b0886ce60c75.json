@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-8ad6b0886ce60c75",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04971-beaconkv-beacon-query-kv-compression.md",
+      "priority": 91,
+      "reason": "長い推論過程では、直近queryだけでは予測できない遠距離の過去情報への再注目が発生する点を分析し、Thought Revisiting Tokenに対応するquery群の代表をbeacon queryとしてオンライン維持してKV重要度推定に利用する免学習のKV cache圧縮手法。4種の公開LRMと複数の推論ベンチマークで、ほぼ完全KV cache相当の精度を保ちながら最大5.8倍のメモリ削減と4.3倍超のthroughput向上を報告している。長文脈・推論時メモリ制約に対するKV圧縮方針として新規性と実用的な性能改善が明確で、既存のoffload/recomputation・KV compression系統に直接関連する。"
+    }
+  ]
+}
