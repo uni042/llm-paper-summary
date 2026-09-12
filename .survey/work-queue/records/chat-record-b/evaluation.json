@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.01751-20260913-0430-v10-d",
+  "attempt_id": "attempt-2606.01751-20260913-0430-v10-b-repair1",
   "job_id": "job-research-86f5ed2fa8ac71e7",
   "data": {
-    "hardware": ["8×NVIDIA GeForce RTX 4090 server"],
+    "hardware": ["NVIDIA GeForce RTX 4090を8基搭載したサーバ"],
     "software": ["vLLM v1 0.11.0", "SparseX-vLLM", "PagedAttention", "FlashAttention", "FlashInfer", "AutoGen", "MAD", "MASLab"],
     "model": ["Qwen3-8B", "Qwen3-32B", "Qwen3-30B-A3B-Instruct-2507", "Qwen2.5-7B-Instruct", "Qwen2.5-72B-Instruct", "Llama3-8B-Instruct"],
-    "datasets": ["LOCOMO", "LongMemEval", "RULER: MQ-NIAH/VT/CWE/FWE", "GSM-Hard", "MATH", "GPQA", "AQUA-RAT", "MMLU-Pro", "SciBench", "MedQA", "MedMCQA"],
-    "baselines": ["full recompute", "naive reuse", "CacheBlend", "EPIC", "vanilla agent execution"],
-    "correctness": "完全再計算を品質上限として比較し、LOCOMO/LongMemEval等のLLM-as-a-judgeにはGPT-5.1を利用する。SparseXは近似KV再利用なのでbit-exact correctnessではなくtask qualityを測り、hybrid attentionでfull recomputeとの差を小さくする。",
+    "datasets": ["LOCOMO", "LongMemEval", "RULERのMQ-NIAH・変数追跡・共通語抽出・頻出語抽出", "GSM-Hard", "MATH", "GPQA", "AQUA-RAT", "MMLU-Pro", "SciBench", "MedQA", "MedMCQA"],
+    "baselines": ["完全再計算", "単純KV再利用", "CacheBlend", "EPIC", "通常のエージェント実行"],
+    "correctness": "完全再計算を品質上限として比較する。LOCOMOとLongMemEvalなど自由記述を評価する課題ではGPT-5.1を判定器として用いる。SparseXは近似的なKV再利用でありビット単位の完全一致を保証する方式ではないため、最終課題の正答率や評価値を測り、初期層を完全計算する混合方式によって完全再計算との差がどこまで縮まるかを確認する。",
     "settings": [
-      {"name":"multi-round chat","description":"LOCOMOとLongMemEvalで、先行cache-building requestのhistory segmentを保存後、新しいquery/non-reuse textと再結合したrequestを評価する。full recompute、naive reuse、CacheBlend、EPIC、SparseX sparse-only/hybridのscoreとTTFTを比較する。"},
-      {"name":"RULER long-context","description":"MQ-NIAH、variable tracking、common-word extraction、frequent-word extractionでkey informationがprompt内の任意位置にある条件を作り、Qwen3-8B/30B-A3B/32Bにおける4 task平均accuracyを比較する。"},
-      {"name":"multi-agent workflows","description":"MASLab上でAutoGenとMulti-Agent Debateを使い、Qwen2.5-7B/72B、Llama3-8Bを数学、科学、一般知識、医療taskへ適用し、agent間の共有contextをSparseXで再利用した時のtask scoreをvanilla executionと比較する。"},
-      {"name":"engine integration","description":"cache-building requestでsegment KVをvLLM block poolへ格納し、その後の評価requestでprefix/virtual/frozen blockを同時lookupする実際のonline execution pathを使う。単独kernel microbenchmarkではなくTTFTとdownstream qualityを測る。"}
+      {"name":"複数ターン会話","description":"LOCOMOとLongMemEvalで、先行要求から履歴区間のKVを保存した後、新しい質問と再結合した要求を評価する。完全再計算、単純再利用、CacheBlend、EPIC、SparseXの疎方式と混合方式について、品質評価値と先頭トークンまでの遅延を同時に比較する。"},
+      {"name":"長文依存課題","description":"RULERの複数鍵検索、変数追跡、共通語抽出、頻出語抽出を使い、重要情報が入力中の任意位置に置かれる条件でQwen3-8B、Qwen3-30B-A3B、Qwen3-32Bの平均正答率を比較する。単純な文書検索だけでなく、複数区間をまたぐ依存を保持できるかを見る。"},
+      {"name":"複数エージェント処理","description":"MASLab上でAutoGenとMulti-Agent Debateを使い、Qwen2.5-7B、Qwen2.5-72B、Llama3-8Bを数学、科学、一般知識、医療課題へ適用する。エージェント間で共有される過去文脈をSparseXで再利用した場合の課題得点を、通常実行と比較する。"},
+      {"name":"実行基盤への統合評価","description":"最初の要求で再利用区間のKVをvLLM物理ブロックプールへ格納し、後続要求で接頭辞ブロック、仮想区間ブロック、長期保持ブロックを同時に検索する実際のオンライン経路を用いる。単体カーネルだけでなく、先頭トークンまでの遅延と最終品質を測定する。"}
     ],
-    "methodology": "評価は『最初に再利用可能segmentをvLLM内でprefillしてcacheを作る→別requestで新規textと異なる位置・順序に再結合してhitさせる』二段階で現実的なreuse trafficを模擬する。Prefix Cacheではhitできない構造をfull recompute baselineとして、reuseによるTTFT短縮とcross-context近似による品質差を同時に測る。比較対象はvLLM上で再現可能なopen-source方式に限定する。",
-    "scope": "単一8×RTX4090 server内のGPU-resident cache共有が中心で、CPU/SSD/cross-node transfer latencyは評価しない。top-k比率やhybrid boundaryはmodel/task依存で、万能な固定設定は示さない。multi-agentではtaskごとに品質差の符号が変わるため平均だけでなく個別scoreを見る必要がある。"
+    "methodology": "評価では、まず再利用可能な区間をvLLM内で入力処理してKVを作り、次の要求で新規文章と異なる位置・順序に組み直して再利用させる。接頭辞キャッシュだけでは一致しない構造を意図的に作り、完全再計算を品質基準として、再利用による先頭トークン遅延の短縮と文脈近似による品質差を同時に測る。比較対象は同じvLLM基盤上で再現できる公開方式を中心とする。",
+    "scope": "主評価は単一サーバ内の8基のRTX 4090に置かれたGPU常駐KVキャッシュの共有である。CPUやSSD、別ノードへのKV転送遅延は測っていない。重要トークン比率や完全計算から疎計算へ切り替える層はモデルと課題に依存し、万能な固定設定は示されない。複数エージェント評価では課題ごとに品質差の方向が変わるため、平均だけでなく個別の低下例も確認する必要がある。"
   }
 }
