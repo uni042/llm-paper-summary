@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0716b90ddce6dee3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.07609",
+      "title": "Blink: CPU-Free LLM Inference by Delegating Serving Stack to GPU and SmartNIC",
+      "source_url": "https://arxiv.org/abs/2604.07609",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.07609-blink-cpu-free-smartnic-persistent-gpu-serving.md",
+      "priority": 94,
+      "reason": "steady-state serving pathからhost CPUを外し、SmartNICからGPUへ直接RDMAしつつpersistent GPU kernel側でbatching・scheduling・KV管理を担うCPU-free serving設計。CPU interference下でも安定し、P99 TTFT最大8.47倍、P99 TPOT最大3.40倍、decode throughput最大2.1倍改善、energy/token最大48.6%削減を報告しており、runtime/hardware co-designとして非常に強い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.01708",
+      "title": "SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.01708",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md",
+      "priority": 90,
+      "reason": "prefill-decode分離時のKV転送帯域を、GPU上で高速に処理できるlossless compressionで削減する。圧縮613 GB/s・展開2181 GB/sを達成し、KV転送1.32倍、TTFT 1.30倍、throughput 1.23倍の改善を報告。FP8も扱い、近似量子化ではなくlosslessなdata movement最適化として差分が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17435",
+      "title": "ZipServ: Hardware-Aware Lossless Weight Compression for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17435",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2603.17435-zipserv-lossless-weight-compression-zipgemm.md",
+      "priority": 87,
+      "reason": "Tensor Core executionを意識したtriple-bitmap lossless weight formatとdecompress-GEMM融合kernelで、展開したweightをregisterへ直接供給する。model size約30%削減、kernelはcuBLAS比2.21倍、end-to-end serving平均1.22倍高速化を報告し、weight bandwidthとkernel融合を同時に扱うruntime候補。"
+    },
+    {
+      "canonical_id": "arXiv:2506.03296",
+      "title": "APEX: Parallel and Asynchronous CPU-GPU Execution for Memory-Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2506.03296",
+      "paper_path": "papers/inference/05-memory-architecture-near-data/2025-2506.03296-apex-parallel-asynchronous-cpu-gpu-execution.md",
+      "priority": 86,
+      "reason": "GPU memory制約下でCPU側のattention/KV処理とGPU計算を動的に非同期重畳し、offloadを単なる退避ではなく同時実行資源として扱う。T4でthroughput 84〜96%、A10で11〜89%改善を報告し、commodity GPUでのCPU-GPU協調推論として既存offload系統を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2507.03153",
+      "title": "HGCA: Hybrid GPU-CPU Attention for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2507.03153",
+      "paper_path": "papers/inference/05-memory-architecture-near-data/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md",
+      "priority": 84,
+      "reason": "長文attentionでrecent dense tokensをGPU、salient older tokensをCPUで処理し、logsumexpで結果を統合するhybrid attention。head別sparsificationを用い、再学習なしでcommodity GPUの容量制約を緩和する。CPUを単なるKV storageではなくattention computeにも使う点が階層offload研究と異なる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-hardware-runtime-codesign-10",
+    "axis": "CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime",
+    "query_summary": "SLO-aware data movementから離れ、SmartNIC/persistent GPU control、lossless KV/weight compression、CPU-GPU collaborative execution/attentionへ探索軸を変更した。最新main HEADとqueueを再取得し、canonical ID検索で5件とも既存一致がないことを投入直前に再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は単一node runtimeを離れ、heterogeneous cluster・decentralized/global serving・agent workflow routingへ移る",
+    "empty_round_reason": null
+  }
+}
