@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T00:38:20.751904+00:00",
+  "updated_at": "2026-09-12T00:41:52.934006+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8015,15 +8015,16 @@
     {
       "run_key": "2026-09-12T09:30:00+09:00",
       "first_recorded_at": "2026-09-12T00:34:40.121964+00:00",
-      "last_recorded_at": "2026-09-12T00:38:20.751904+00:00",
+      "last_recorded_at": "2026-09-12T00:41:52.934006+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "job_blocked"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
         "discovery_completed": 3,
-        "blocked": 0,
+        "blocked": 1,
         "new_jobs": 4,
         "new_papers": 0,
         "fallback_archived": 0
@@ -8070,6 +8071,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34662451734:1",
+          "recorded_at": "2026-09-12T00:41:52.934006+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34662451734",
+            "run_attempt": "1",
+            "source_sha": "9105d319f6afc534ad2a1751a06f8efb73d0dd45"
+          },
+          "signals": [
+            "job_blocked"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8096,6 +8111,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-a6fb90f535b639f2",
+          "type": "research",
+          "canonical_id": "arXiv:2606.30391",
+          "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -8137,7 +8160,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 323,
       "paper_active_count_after": 323,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "job_blocked"
     }
   ]
 }
