@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.08189-20260912-1440-v10-a1",
-  "job_id": "job-research-3b370609d7bf485e",
+  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
+  "job_id": "job-research-985814ffefefe223",
   "data": {
-    "hardware": "主設定の学習は48GB NVIDIA RTX 4090Dを4基使用し、各学習runは約12時間。評価バックボーンはMeta-Llama-3.1-8B-Instruct、Llama-2-7B、Llama-2-13Bで、推論評価GPUの機種は一次本文では別途明記されていない。",
-    "software": "lm-evaluation-harnessを用いて評価する。バックボーンを凍結し、HeRoのルータ状態符号化器、深さメモリ、履歴・局所ルータヘッド、ボトルネックアダプタだけを学習する。最適化はAdamW、bfloat16混合精度、勾配チェックポイントを用いる。",
-    "methodology": "主設定はLlama 3.1-8Bで、25%目標では各バックボーンの後半MLPをルーティング候補とし、40%目標ではLlama 3.1-8Bの9〜32層へ候補を拡大する。Tulu-3 SFTの939,344例を1エポック、グローバルバッチ128、約7,339更新で学習し、系列長は2048へ切る。学習率1e-4、weight decay 0.01、最初の3%をウォームアップ、実行閾値0.5、履歴温度0.9。主比較は乱数種42/43/44の平均±標準偏差。7課題はOpenBookQA、PIQA、BoolQ、ARC-Easy、ARC-Challenge、WinoGrande、HellaSwagで、密モデルに対する課題スコア比の平均をRetainとして集約する。アブレーションではさらにGSM8KとHumanEvalを加え、経路状態、履歴分岐、メモリ読み取り、メモリ次元の寄与を分離する。",
-    "workloads": ["OpenBookQA", "PIQA", "BoolQ", "ARC-Easy", "ARC-Challenge", "WinoGrande", "HellaSwag", "GSM8K", "HumanEval"],
-    "workload_details": "OpenBookQAとHellaSwagは正規化正解率、残り主要5課題は正解率。GSM8Kは8例の思考連鎖実演と最大1024生成トークンで完全一致、HumanEvalは貪欲生成のpass@1。ARC-Easy/Challengeは25例、HellaSwag/WinoGrandeは5例、OpenBookQA/PIQA/BoolQ/HumanEvalは実演なし。",
-    "baselines": ["Dense", "LoRA dense reference", "ShortGPT", "Shortened-PPL", "Shortened-Taylor", "SliceGPT", "D-LLM", "SkipGPT-Joint", "SkipGPT-RT", "MoD-D", "LLM-Pruner", "LaCo"],
-    "metrics": ["パラメータスキップ率", "密モデル比性能保持率", "各ベンチマーク正解率", "GSM8K完全一致", "HumanEval pass@1"],
-    "scope": "実モデルを学習・評価しており単なる解析ではないが、効率指標は『トークン平均で計算に参加しないモデルパラメータ割合』が中心で、実測のトークン/秒、GPUカーネル時間、端末間レイテンシ、エネルギー消費は報告されない。アダプタ、ルータ、線形注意メモリの実行費用もスキップ率に直接差し引かれていないため、パラメータスキップ率をそのまま壁時計速度向上と解釈してはならない。"
+    "hardware": "2 worker node。各nodeはAMD EPYC 9254 24c/48t、128GB DDR5、NVIDIA L4 24GB。CXL applianceはFPGA-based Seagate prototype、2 host portのCXL 1.1/PCIe Gen5 x16、8×128GiB DDR4で1TiB poolを持ち、512GiB regionを両hostへ割り当てる。node間は100GbE ConnectX-6 Dx RoCEv2直結。",
+    "software": "Kubernetes v1.35.7、vLLM v0.23.0、llm-d、Qwen2.5-7B-Instruct bf16、TP=1。CXL backendはvLLM OffloadingConnectorのC++ engine+Python glue。Kubernetes側はresource.k8s.io/v1のDRA、CDI、Redfish連携を使う。",
+    "methodology": "各sessionでreq1=SHARED+Q1をreplica Aへ送り共有prefixのKVをtierへ保存し、req2=SHARED+Q2を同じAへ送るsame armまたはreplica Bへ送るcross armを比較する。cross armではBが過去にprefixを見ていないため、node-local GPU prefix cacheとCPU DRAM offloadは利用できず、共有CXL tierだけがcross-node hitを生成できる。比較tierはT0=no cache、T1=GPU prefix cache、T2=native CPU DRAM KV offload 32GiB、T4=512GiB shared CXL。2K/8K/16K/32K prefix、same/cross、20 session、3 repetitionを組み合わせて1920 request pairを測定する。PYTHONHASHSEED=0を両replicaに固定し、offload granularityは256 token。主要指標はclient-observed TTFTとexternal prefix cache hit rate。tier順をrepetitionごとに変え、CXL regionを毎回wipeする。false-hit control、req1 hit leakage、fresh-region logを検証する。",
+    "workloads": ["Qwen2.5-7B-Instruct bf16", "2K prefix", "8K prefix", "16K prefix", "32K prefix", "same-replica reuse", "cross-replica reuse"],
+    "workload_details": "nominal 2K/8K/16K/32Kはtokenizer較正後のmedian 2054/8173/16282/32694 token。各cellは20 session×3 repetitionsでn=60。closed-loopで1 sessionずつ実行するため、同時decode trafficやqueueing loadは入らない。",
+    "baselines": ["T0: no cache/full recompute", "T1: GPU VRAM prefix caching", "T2: CPU DRAM native KV offload", "T4: shared CXL region"],
+    "metrics": ["client-observed TTFT", "external KV hit rate", "cross/same sharing gap", "effective KV read throughput", "tier latency/bandwidth", "CRC32 mismatch", "false-hit count"],
+    "scope": "実際の2-node CXL hardware、L4 GPU、vLLM/llm-dを用いる実機評価。ただし著者はv1 feasibility studyと明記しており、P/D disaggregationではなく両replicaがfull engine。single GPU/nodeかつconcurrent loadなしなのでgoodput、queueing下のtail latency、prefill/decode contentionは評価しない。pooled RDMA KV baseline、zero-copy GPU↔CXL DMA、multi-tenant capacity pressureも対象外。"
   }
 }
