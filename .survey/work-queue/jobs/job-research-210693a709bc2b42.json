@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2608.25523",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.25523-topas-workflow-aware-prefix-state-scheduling.md",
   "selection_reason": "マルチエージェントLLMの多段ワークフローで、エージェントごとの長いsystem prompt由来KVを保持すると将来呼出しを高速化できる一方、GPUメモリを占有して同時batchを縮小するトレードオフを、prefix保持とrequest schedulingの共同決定として扱う。SGLang実装で、合成DAGでは最良baseline比の平均/p99 JCTを最大39.8%/49.4%削減し、MetaGPT系実ワークフローでも平均JCTを9.8〜22.0%削減と報告する。単発requestの局所性ではなくworkflowの残存critical pathと将来prefix reuseを同時評価する点が、agentic servingの新しいscheduler系統として収録価値が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T08:59:34+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T09:09:58+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
