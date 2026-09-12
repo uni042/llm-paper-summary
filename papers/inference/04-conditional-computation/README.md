@@ -7,7 +7,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（9本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
@@ -20,19 +20,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：0  
   各層の局所状態だけでなく過去のゲート選択と残差変化を線形注意メモリへ蓄積し、Llama 3.1-8Bで26.87%のパラメータ計算を回避しつつ密モデル比100.24%の性能を保つ動的FFNルーティング。
 
-### 1年以上前
-
-- **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：9  
-  LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。
-
-- **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  LazyLLMは長文入力で重要なトークンだけを後続層へ通し、外したトークンの途中層状態を補助キャッシュに保存して、後で必要になれば再活性化する。
-
-- **2023-07 · [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  Skipデコードは生成位置が後ろへ進むほど実行するTransformer層数を段階的に減らし、同じ位置ではバッチ全体で同じ深度を使って、バッチ処理とKVキャッシュを保ちながら計算を減らす。
+### 2年前（2024-10〜2025-09）
 
 - **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -53,4 +41,20 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2025-03 · [Position-Aware Depth Decay Decoding: Boosting Large Language Model Inference Efficiency](2025-2503.08524-position-aware-depth-decay-decoding-boosting-large-language-model-inference-effi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   D3は生成後半ほど実行する層数を減らし、最初と最後の層を残して中間層だけを段階的にskipする。KVキャッシュを保ちながら、学習なしでデコード計算を減らす。
+
+### 3年前（2023-10〜2024-09）
+
+- **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：9  
+  LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。
+
+- **2024-07 · [LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  LazyLLMは長文入力で重要なトークンだけを後続層へ通し、外したトークンの途中層状態を補助キャッシュに保存して、後で必要になれば再活性化する。
+
+### 4年前（2022-10〜2023-09）
+
+- **2023-07 · [SkipDecode: Autoregressive Skip Decoding with Batching and Caching for Efficient LLM Inference](2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  Skipデコードは生成位置が後ろへ進むほど実行するTransformer層数を段階的に減らし、同じ位置ではバッチ全体で同じ深度を使って、バッチ処理とKVキャッシュを保ちながら計算を減らす。
 <!-- survey:auto:end -->

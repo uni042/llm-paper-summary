@@ -7,7 +7,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（14本）
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-10〜2026-09）
@@ -46,11 +46,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：✓ ・ リポジトリ内被引用：0  
   OD-MoEは常設キャッシュを持たず、軽量化モデルで数層先の専門家を予測して複数GPUへ実行直前に読み込む。予測が外れれば元ルータの専門家を追加ロードする分散エッジ方式である。
 
-### 1年以上前
-
-- **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：39  
-  Pre-gated MoEは次層のルーティング判定を1ブロック前へ移し、必要な専門家重みのCPUからGPUへの転送を現在ブロックの計算と重ねて、オフロード待ちを減らす。
+### 2年前（2024-10〜2025-09）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
   実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：18  
@@ -68,7 +64,15 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：✓ ・ リポジトリ内被引用：6  
   LayerScopeは将来専門家の先読み、CPU直接計算、必要時転送を複数バッチで一体計画し、PCIe帯域を先読みで使い切って緊急転送を遅らせる問題を抑える。
 
+### 3年前（2023-10〜2024-09）
+
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  
   実装：[✓](https://github.com/timlee0212/SiDA-MoE) ・ リポジトリ内被引用：4  
   SiDA-MoEは小型LSTMで各トークンの専門家を先に予測し、予測した重みだけをCPUからGPUへ読む。予測結果をルーティングにも使うため、外れれば品質が変わる近似方式である。
+
+### 4年前（2022-10〜2023-09）
+
+- **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
+  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：39  
+  Pre-gated MoEは次層のルーティング判定を1ブロック前へ移し、必要な専門家重みのCPUからGPUへの転送を現在ブロックの計算と重ねて、オフロード待ちを減らす。
 <!-- survey:auto:end -->
