@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-f283d01497baee27",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.07379",
+      "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance",
+      "source_url": "https://arxiv.org/abs/2509.07379",
+      "paper_path": null,
+      "priority": 90,
+      "reason": "MoE推論のプリフィルとデコードで専門家活性化密度が異なる点を利用し、プリフィルではCUDA二重ストリームによる専門家プリフェッチ、デコードでは活性化履歴からの軽量予測プリフェッチを使い分けるサービングシステム。代表的MoEでTTFT最大5.34倍、E2E遅延最大7.55倍の改善を報告しており、専門家オフロード・キャッシュ・プリフェッチの重点テーマに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.24787",
+      "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models",
+      "source_url": "https://arxiv.org/abs/2607.24787",
+      "paper_path": null,
+      "priority": 88,
+      "reason": "オフロードされたMoEのルーティング依存転送を隠すため、実行ルータを変更せず次層専門家候補だけを軽量アダプタで予測し、キャッシュ容量と帯域制約を考慮した窓型スケジューラで非同期転送する。Snapdragon 8 Elite上でストレージ制約付きMoEデコードを最大20%高速化し、コードと重みも公開されているため、SSD/NVMeを含む階層メモリ・専門家プリフェッチ研究への接続価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.12707",
+      "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2603.12707",
+      "paper_path": null,
+      "priority": 86,
+      "reason": "マルチモーダルLLMの視覚エンコーダと言語モデル境界で分割すると転送量をGB級KVからMB級埋め込みへ下げられる点を利用し、PCIe越しの異種GPU階層サービングを構築する。HeteroServe実装で同一4xA100上のスループット最大54%向上、固定予算ではTokens/$を37%向上と報告し、異種GPU・分離型サービングの新しい切り口を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2602.21626",
+      "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.21626",
+      "paper_path": null,
+      "priority": 82,
+      "reason": "MoEサービングを要求・エンジン・専門家の三層で同時にスケジューリングし、要求長、KVキャッシュ利用率、ユーザ粘着性、専門家ホットスポットを跨いで負荷を整合させる。100超の実験でvLLM比TTFT最大17.8%、TPOT最大13.3%削減を報告しており、専門家配置とLLMサービングスケジューリングの橋渡しとして価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2602.02987",
+      "title": "Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control",
+      "source_url": "https://arxiv.org/abs/2602.02987",
+      "paper_path": null,
+      "priority": 74,
+      "reason": "プリフィルとデコードがGPUを共有したときの状態依存干渉を、多クラス多数サーバ待ち行列としてモデル化し、プリフィル受入とデコード経路選択を連動させる制御則を導く。実測反復時間で校正した数値評価を持ち、実装システム中心の既存収録とは異なる大規模サービング制御の理論的基盤として隣接価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "20260912T2200+0900",
+    "round": "specialist-critical-cross-axis-moe-heterogeneous-serving-01",
+    "axis": "critical_buffer_cross_axis_moe_heterogeneous_serving",
+    "query_summary": "候補在庫がcritical水準のため、直近で高重複だったCXL/KV単独軸を避け、2025-2026の一次資料からMoE専門家プリフェッチ・異種GPU階層・多層スケジューリング・prefill/decode制御を横断して軽量評価した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次回は同じMoE/異種GPU軸を機械的に繰り返さず、storage/DBMS/OS由来のメモリ局所性・I/Oスケジューリング・ admission control をLLM推論へ接続する隣接分野軸を優先する。"
+  }
+}
