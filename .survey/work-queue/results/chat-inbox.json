@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-aa03f7c9ea8916c2",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2512.09472.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-2466f653227bab25",
+  "validation_error": "ValueError: problem_method.components[2].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T20:35:34+00:00"
 }
