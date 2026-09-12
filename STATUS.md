@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **131 / 50** |
-| Research ready | **131** |
+| Candidate在庫（Research ready） | **134 / 50** |
+| Research ready | **134** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T07:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **5** |
+| Discovery完了 | **4** |
+| 新規job | **9** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **117** |
-| 探索評価候補 | **569** |
-| 重複除外 | **224** |
-| 重複率 | **39.4%** |
-| Novel候補 | **345** |
-| Research候補採用 | **190** |
+| 探索round（stats観測） | **118** |
+| 探索評価候補 | **577** |
+| 重複除外 | **229** |
+| 重複率 | **39.7%** |
+| Novel候補 | **348** |
+| Research候補採用 | **193** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 569 → 重複除外後 345 → Research候補採用 190 → Research完了 70 → Repo収録 70**
+**探索評価 577 → 重複除外後 348 → Research候補採用 193 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -82,6 +82,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
 | 分離型LLMサービング・KV転送／フェーズ非対称性 | 8 | 6 | 1 | 75.0% | 12.5% |
+| 疎注意サービング・GPUメガカーネル・動的コンパイラ | 8 | 5 | 3 | 62.5% | 37.5% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | MoE expert cache・Flash階層・expert-parallel耐障害性 | 7 | 5 | 2 | 71.4% | 28.6% |
 | agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
@@ -191,11 +192,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T07:58:39+09:00** — 疎注意サービング・GPUメガカーネル・動的コンパイラ: 評価 8 / 重複 5 / 採用 3
 - **2026-09-13T07:58:39+09:00** — MoE speculative decoding・expert offloading・CPU/GPU共同実行: 評価 5 / 重複 3 / 採用 0
 - **2026-09-13T07:58:39+09:00** — MoE expert cache・Flash階層・expert-parallel耐障害性: 評価 7 / 重複 5 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 2609新着・端末メモリ管理・エッジクラウド協調推論: 評価 6 / 重複 4 / 採用 0
 - **2026-09-13T07:00:13+09:00** — 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査: 評価 10 / 重複 10 / 採用 0
-- **2026-09-13T07:00:13+09:00** — 適応プリフィル・KV予約・デコード干渉スケジューリング: 評価 3 / 重複 2 / 採用 0
 
 ## 最近処理した論文
 
@@ -213,10 +214,10 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 ### 次に処理する候補
 
 - P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
+- P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 - P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 - P88 `arXiv:2606.23521` — Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference
-- P88 `arXiv:2512.22219` — Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs
 
 ## 7日比較
 
