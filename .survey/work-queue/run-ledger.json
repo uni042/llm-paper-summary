@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T21:15:35.822014+00:00",
+  "updated_at": "2026-09-12T21:17:42.434492+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,7 +15070,7 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T21:15:35.822014+00:00",
+      "last_recorded_at": "2026-09-12T21:17:42.434492+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -15079,9 +15079,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 17,
+        "new_jobs": 22,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -15260,6 +15260,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34719490527:1",
+          "recorded_at": "2026-09-12T21:17:42.434492+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34719490527",
+            "run_attempt": "1",
+            "source_sha": "ee5704c77d22d959ee9cdd34da9538c942c5dc6c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15361,6 +15375,14 @@
         },
         {
           "job_id": "job-980b3587f3155662",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-4354f5042e6e20fc",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15487,6 +15509,41 @@
           "type": "research",
           "canonical_id": "arXiv:2502.09921",
           "title": "INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing"
+        },
+        {
+          "job_id": "job-28ae279835be9325",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-5ae336587be983aa",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.16637",
+          "title": "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling"
+        },
+        {
+          "job_id": "job-research-d9bb056b1c54e053",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.06914",
+          "title": "Regulating Branch Parallelism in LLM Serving"
+        },
+        {
+          "job_id": "job-research-f3407b821f3f7dcf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.00151",
+          "title": "SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering"
+        },
+        {
+          "job_id": "job-research-f9d44874a1b28506",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.25655",
+          "title": "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers"
         }
       ],
       "new_paper_ids": [
@@ -15504,7 +15561,8 @@
         ".survey/work-queue/results/discovery-specialist-20260913T0602JST-kv-serving-1.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0607JST-kernel-chain-2.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0610JST-moe-prefetch-3.json",
-        ".survey/work-queue/results/discovery-specialist-20260913T0613JST-storage-runtime-4.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0613JST-storage-runtime-4.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0616JST-agent-runtime-5.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,

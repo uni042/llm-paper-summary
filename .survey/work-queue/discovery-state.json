@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T21:14:42+00:00",
+  "updated_at": "2026-09-12T21:16:53+00:00",
   "last_run_key": "2026-09-13T06:02:25+09:00",
-  "last_round": "specialist-storage-runtime-4",
+  "last_round": "specialist-agent-runtime-5",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2153,6 +2153,31 @@
       ],
       "next_axis_hint": "strong candidate発見により枯渇判定をリセットし、最新差分・networking/collective・forward/backward citation・agent/workflow・GPU kernelを独立に再確認する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0613JST-storage-runtime-4.json"
+    },
+    {
+      "run_key": "2026-09-13T06:02:25+09:00",
+      "round": "specialist-agent-runtime-5",
+      "axis": "agent workflow/context runtime・branch admission・heterogeneous many-core runtime",
+      "query_summary": "storage/runtime strong batch後にagent/workflow、network flow、fault recovery、kernel/runtime、heterogeneous hardwareを独立走査した。Helium、MFS、KevlarFlow、LUMEN、Hybrid JIT-CUDA Graph、NELSSA、SMetric、fairness-aware chunked-prefill、geometry-aware schedulingは決定論的job照合で既存と確認。未登録4件のみを投入直前の最新main HEADでjob不存在、repo検索で識別子/題名未検出、Library pendingに同候補なしと確認した。",
+      "candidate_count": 13,
+      "duplicate_filtered_count": 9,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.6923076923076923,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2603.16104",
+        "arXiv:2603.17456",
+        "arXiv:2601.22438",
+        "arXiv:2606.17787",
+        "arXiv:2604.23467",
+        "arXiv:2607.26633",
+        "arXiv:2607.08565",
+        "arXiv:2606.09061",
+        "arXiv:2606.22327"
+      ],
+      "next_axis_hint": "strong batchで枯渇判定をリセットし、最新差分、forward/backward citation、MoE、storage/networking、KV/sparse-attention、framework implementationをもう一巡して枯渇判定する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0616JST-agent-runtime-5.json"
     }
   ],
   "axes": {
@@ -3395,6 +3420,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "strong candidate発見により枯渇判定をリセットし、最新差分・networking/collective・forward/backward citation・agent/workflow・GPU kernelを独立に再確認する"
+    },
+    "agent workflow/context runtime・branch admission・heterogeneous many-core runtime": {
+      "last_run_key": "2026-09-13T06:02:25+09:00",
+      "rounds": 1,
+      "candidate_count": 13,
+      "duplicate_filtered_count": 9,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.6923076923076923,
+      "next_axis_hint": "strong batchで枯渇判定をリセットし、最新差分、forward/backward citation、MoE、storage/networking、KV/sparse-attention、framework implementationをもう一巡して枯渇判定する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-d9bb056b1c54e053",
+  "type": "research",
+  "parent_job_id": "job-4354f5042e6e20fc",
+  "priority": 84,
+  "canonical_id": "arXiv:2605.06914",
+  "title": "Regulating Branch Parallelism in LLM Serving",
+  "source_url": "https://arxiv.org/abs/2605.06914",
+  "paper_path": null,
+  "selection_reason": "intra-request branch parallelismを固定幅やeager admissionで実行すると共存requestのdecode stepを悪化させる問題に対し、各stepのslack budgetに収まる枝だけを許可するTAPER admission controllerを提案する。Qwen3-32Bでgoodputを最大1.77倍改善し95%以上のSLO達成を維持し、branch-level schedulingという独立軸を補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T21:16:53+00:00",
+  "artifact_transport": "structured_record_v10"
+}
