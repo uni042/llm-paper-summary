@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 00:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 00:17 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -27,33 +27,33 @@ Run: **2026-09-12T23:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **13** |
+| Discovery完了 | **6** |
+| 新規job | **14** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-multi-agent-scheduling-5**
+Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-moe-saturated-6**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | multi-agent workflow scheduling・異種LLM配置 |
-| 評価候補 | **4** |
-| 重複除外 | **2** |
-| Novel候補 | **2** |
-| Research候補採用 | **2** |
-| 重複率 | **50.0%** |
+| 探索軸 | MoE専門家配置・先読み・協調スケジューリング |
+| 評価候補 | **5** |
+| 重複除外 | **5** |
+| Novel候補 | **0** |
+| Research候補採用 | **0** |
+| 重複率 | **100.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **38** |
-| 探索評価候補 | **195** |
-| 重複除外 | **59** |
-| 重複率 | **30.3%** |
+| 探索round（stats観測） | **39** |
+| 探索評価候補 | **200** |
+| 重複除外 | **64** |
+| 重複率 | **32.0%** |
 | Novel候補 | **136** |
 | Research候補採用 | **66** |
 | Research完了 | **47** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-multi-agent-scheduling-
 
 ### 24時間ファネル
 
-**探索評価 195 → 重複除外後 136 → Research候補採用 66 → Research完了 47 → Repo収録 47**
+**探索評価 200 → 重複除外後 136 → Research候補採用 66 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -84,6 +84,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-multi-agent-scheduling-
 | Flash・SSD階層メモリと予測先読み | 5 | 3 | 2 | 60.0% | 40.0% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
 | MoE expert paging・SSD cache・runtime parallelism・prefetch | 5 | 0 | 0 | 0.0% | 0.0% |
+| MoE専門家配置・先読み・協調スケジューリング | 5 | 5 | 0 | 100.0% | 0.0% |
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -111,11 +112,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-multi-agent-scheduling-
 
 ### 直近5探索round
 
+- **2026-09-13T00:00:00+09:00** — MoE専門家配置・先読み・協調スケジューリング: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T00:00:00+09:00** — multi-agent workflow scheduling・異種LLM配置: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T00:00:00+09:00** — GPU runtime境界・host-device転送律速: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T00:00:00+09:00** — エージェント推論・speculative tool execution: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T00:00:00+09:00** — 分離サービング負荷転送・異種GPU構成選択: 評価 5 / 重複 3 / 採用 1
-- **2026-09-13T00:00:00+09:00** — Flash・SSD階層メモリと予測先読み: 評価 5 / 重複 3 / 採用 2
 
 ## 最近処理した論文
 
