@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e62e2bd040e93661",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2410.15332",
+      "title": "EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.15332",
+      "paper_path": null,
+      "priority": 89,
+      "reason": "prefix一致に依存する従来context cacheを一般化し、chunkの位置に依存しないKV再利用をLLM servingへ導入した基礎的システム。AttnLinkで静的attention sparsityを用いて精度回復に必要な再計算を絞り、KVSplitで意味的一貫性を保つchunkingを行う。TTFT最大8倍、throughput最大7倍を報告しており、近年のHYPIC/LinearKV/MEPIC等が直接発展させるposition-independent caching系統の重要な欠落として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2405.16444",
+      "title": "CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion",
+      "source_url": "https://arxiv.org/abs/2405.16444",
+      "paper_path": null,
+      "priority": 88,
+      "reason": "RAGで再利用文書がprefix以外の位置へ現れると事前計算KVが新しい先行文脈を反映しない問題に対し、重要tokenだけを選択的に再計算して複数chunkのcached KVを融合する。再計算と低速ストレージからのKV取得をpipeline化でき、3モデル・4 benchmarkでfull recompute比TTFT 2.2〜3.3倍、throughput 2.8〜5倍を報告する。EPICや後続PIC研究の主要baselineであり、非prefix KV再利用系統の基礎論文として収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.06256",
+      "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
+      "source_url": "https://arxiv.org/abs/2606.06256",
+      "paper_path": null,
+      "priority": 86,
+      "reason": "KV cacheをtoken列の均質なmemory objectとして扱う従来抽象を崩し、KV headごとの機能・attention距離・runtime重要度を利用するhead-aware管理へ再構成する。head単位の分解によりposition-independent reuse、prefix compression、hot/cold分離、distributed placementを同じ抽象で扱うことを狙い、再学習なしで長文servingのmemory/reuse/placementを統合するため、KV管理基盤の新しい設計点として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2607.17715",
+      "title": "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.17715",
+      "paper_path": null,
+      "priority": 85,
+      "reason": "non-prefix KV reuseがprefill計算を減らしても、大量KVの保存・転送コストが残り、単純な圧縮併用では品質が崩れる問題を扱う。軽量sidecar Extractorとcompression tokenでposition-agnosticかつ圧縮・合成可能なKV表現を学習し、compression-concatenation co-trainingで再利用時の挙動まで整合させる。複数モデル・長文benchmarkで最大17倍のinference speedupを報告し、KV reuseとstorage/transfer削減を同時最適化する点が特徴。"
+    },
+    {
+      "canonical_id": "arXiv:2604.13226",
+      "title": "KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs",
+      "source_url": "https://arxiv.org/abs/2604.13226",
+      "paper_path": null,
+      "priority": 83,
+      "reason": "CacheBlendやEPICのようなselective recomputation型context-independent KV reuseでも残るFLOPsとTTFTをなくすため、各document cacheを軽量な学習可能soft-token adapterで包むimmutable packetとして事前構成する。base modelを固定したself-supervised distillationで境界不連続を吸収し、serving時はRoPE shiftとcache連結だけで再計算を避ける。Llama-3.1/Qwen2.5でfull recomputationに近いF1を保ちながら低TTFTを狙うため、再計算型PICとは異なる設計枝として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T08:26:04+09:00",
+    "round": "specialist-pic-relatedwork-2",
+    "axis": "position-independent KV再利用のforward/backward related-work補完",
+    "query_summary": "第1roundのhybrid-attention PIC候補から関連研究・基礎系統へ展開し、EPIC、CacheBlend、RedKnot、C²KV、KV Packetを一次arXiv情報で軽量評価した。SparseXは最新mainでcompleted jobを確認して除外。送信直前に最新HEAD 336341e2、next queue、決定論的research job pathを再確認し、5候補はいずれもjob未存在だった。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.01751"
+    ],
+    "next_axis_hint": "次はKV/PIC系を離れ、storage/OSまたはnetwork/GPU runtimeの隣接システム軸を独立に探索する",
+    "empty_round_reason": null
+  }
+}
