@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-cc8a88103bff770a",
+  "type": "research",
+  "parent_job_id": "job-8f4979ed83101d83",
+  "priority": 84,
+  "canonical_id": "arXiv:2608.15602",
+  "title": "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy",
+  "source_url": "https://arxiv.org/abs/2608.15602",
+  "paper_path": null,
+  "selection_reason": "超低ビット量子化と専用CUDAカーネルを共同設計し、実行時逆量子化や浮動小数点演算の残存コストを削減する。最大5.92倍高速化・10.19倍省エネルギー、70B級を単一A100へ収容する評価と公開コードがあり、kernel/runtime系の未収録候補として強い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T21:08:52+00:00",
+  "artifact_transport": "structured_record_v10"
+}
