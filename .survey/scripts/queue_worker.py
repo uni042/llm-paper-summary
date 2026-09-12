@@ -76,7 +76,7 @@ def load_state():
         "policy": {
             "fixed_daily_quota": False,
             "quality_over_quantity": True,
-            "decision_rule": "process_ready_else_discover",
+            "decision_rule": "maintain_discovery_lane_process_ready_by_priority",
             "max_discovery_candidates": MAX_DISCOVERY_CANDIDATES,
             "worker_poll_minutes": 10,
         },
@@ -138,8 +138,8 @@ def active_jobs(job_type=None, lane=None):
 
 
 def ensure_discovery_job():
-    """Keep exactly one simple discovery job only when no ready work exists."""
-    if any(j.get("status") == "ready" for j in iter_jobs()):
+    """Keep exactly one active discovery job independently of other ready work."""
+    if active_jobs(job_type="discovery"):
         return False
     issued = now()
     jid = stable_id("job", "discovery", issued)
@@ -609,11 +609,16 @@ def queue_snapshot():
         counts[j["type"]][s] = counts[j["type"]].get(s, 0) + 1
     ready = [j for j in jobs if j.get("status") == "ready"]
     ready.sort(key=lambda j: (-int(j.get("priority") or 0), j.get("created_at", "")))
+    visible_ready = ready[:8]
+    if not any(j.get("type") == "discovery" for j in visible_ready):
+        discovery = next((j for j in ready if j.get("type") == "discovery"), None)
+        if discovery is not None:
+            visible_ready.append(discovery)
     return {
         "counts": counts,
         "next_jobs": [{
             k: j.get(k) for k in ("job_id", "type", "lane", "priority", "canonical_id", "title", "source_url", "paper_path", "instructions", "completion")
-        } for j in ready[:8]],
+        } for j in visible_ready],
     }
 
 
@@ -631,13 +636,13 @@ def main():
     st.setdefault("policy", {}).update({
         "fixed_daily_quota": False,
         "quality_over_quantity": True,
-        "decision_rule": "process_ready_else_discover",
+        "decision_rule": "maintain_discovery_lane_process_ready_by_priority",
         "max_discovery_candidates": MAX_DISCOVERY_CANDIDATES,
         "worker_poll_minutes": 10,
     })
     process_submissions(st)
-    # Important: replenish in the same worker run that consumed the last ready job.
-    # This removes the normal need for a separate request_jobs round-trip.
+    # Keep a discovery lane available even while research/audit work is ready so the
+    # specialist worker can replenish the shared candidate buffer independently.
     ensure_discovery_job()
     reconcile_v9_identity_deltas()
     normalize_ready_jobs()
