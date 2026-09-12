@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T02:37:41.559107+00:00",
+  "updated_at": "2026-09-12T02:41:54.606407+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8292,19 +8292,19 @@
     {
       "run_key": "2026-09-12T11:30:00+09:00",
       "first_recorded_at": "2026-09-12T02:30:25.231630+00:00",
-      "last_recorded_at": "2026-09-12T02:37:41.559107+00:00",
+      "last_recorded_at": "2026-09-12T02:41:54.606407+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
-        "new_papers": 1,
+        "new_jobs": 4,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -8351,6 +8351,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34668325355:1",
+          "recorded_at": "2026-09-12T02:41:54.606407+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34668325355",
+            "run_attempt": "1",
+            "source_sha": "0c2df2291f7a4ca0ad76b45cb86f95d71ee4280a"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8377,6 +8393,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-c115c71d60df8d04",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11744",
+          "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8400,10 +8424,18 @@
           "type": "research",
           "canonical_id": "arXiv:2609.11744",
           "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs"
+        },
+        {
+          "job_id": "job-5e072a3b3ed253fb",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
-        "arXiv:2609.04971"
+        "arXiv:2609.04971",
+        "arXiv:2609.11744"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1130JST-discovery-job-9e21235b2f0e941b.json",
@@ -8411,8 +8443,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 325,
-      "paper_active_count_after": 326,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 327,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
