@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T12:50:06+00:00",
+  "updated_at": "2026-09-12T12:54:17+00:00",
   "last_run_key": "2026-09-12T21:30:00+09:00",
-  "last_round": "normal-worker-critical-inventory-os-cxl-paging-rotation",
+  "last_round": "normal-worker-critical-inventory-cxl-peer-gpu-final-replenish",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -626,6 +626,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "採用後も在庫15未満ならCXL/NVMeのI/OスケジューリングとGPUメモリ回収へ継続し、15以上ならresearch優先へ戻す。",
       "source_submission": "work-queue/submissions/20260912T2150JST-discovery-080d4b5d49ec5db4.json"
+    },
+    {
+      "run_key": "2026-09-12T21:30:00+09:00",
+      "round": "normal-worker-critical-inventory-cxl-peer-gpu-final-replenish",
+      "axis": "composable-cxl-shared-kv-peer-gpu-memory-tier",
+      "query_summary": "在庫13件でcritical水位が続いたため、直前のCXLページ管理から、クラスタ共有CXL KV階層とP2P GPU余剰メモリ階層へ探索を狭めた。一次資料で定量結果を確認し、最新正本のコード検索では識別子・題名とも未検出だった2件を提出した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "この2件が採用され在庫15以上になればresearch優先へ戻す。重複なら次回はCXL/KVから離れてGPUランタイム・仮想メモリまたはMoE I/Oスケジューリングへ回転する。",
+      "source_submission": "work-queue/submissions/20260912T2154JST-discovery-0674ed4e6a95bc3a.json"
     }
   ],
   "axes": {
@@ -968,6 +983,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "採用後も在庫15未満ならCXL/NVMeのI/OスケジューリングとGPUメモリ回収へ継続し、15以上ならresearch優先へ戻す。"
+    },
+    "composable-cxl-shared-kv-peer-gpu-memory-tier": {
+      "last_run_key": "2026-09-12T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "この2件が採用され在庫15以上になればresearch優先へ戻す。重複なら次回はCXL/KVから離れてGPUランタイム・仮想メモリまたはMoE I/Oスケジューリングへ回転する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
