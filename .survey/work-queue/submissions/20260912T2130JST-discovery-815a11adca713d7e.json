@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "job_id": "job-815a11adca713d7e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "priority": 86,
+      "reason": "マルチターン会話で増え続けるKVキャッシュをCPU/SSDへ戻す代わりに、同一サーバ内でKV需要の低い別モデルの空きGPUメモリを借り、NVLink経由で異種モデル間の接頭辞キャッシュを共有する。さらにローカルGPUには現在処理中の層のKVだけを保持して長文容量を拡張する。実ワークロードでvLLM/SGLang比P99初回トークン時間を最大69%削減し、最大文脈長を最大3.98倍へ拡張しており、階層メモリと複数モデル配置を接続する価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization",
+      "source_url": "https://arxiv.org/abs/2607.08057",
+      "paper_path": "papers/survey/kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md",
+      "priority": 82,
+      "reason": "KVキャッシュ最適化を実行・スケジューリング、配置・移行、表現・保持といったシステム観点から横断整理するサーベイ。リポジトリのKVキャッシュ、オフロード、スケジューリング、移行系統をつなぐ地図として有用で、直前の探索でも未登録候補として残っていた。"
+    },
+    {
+      "canonical_id": "arXiv:2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.24506-crosspool-cold-moe-kv-weight-disaggregation.md",
+      "priority": 82,
+      "reason": "低頻度で呼ばれる多数のMoEモデルを同居させる際、静的な重みと動的KVキャッシュを同一GPUメモリで競合させず、重みプールとKVプールへ分離する。KV仮想化、層単位パイプライン、永続カーネルを組み合わせ、最先端のKVキャッシュ型複数LLM提供方式に対してP99の1トークン当たり時間を最大10.4倍削減すると報告する。MoE重み配置とKV容量共有を同時に扱うため重点テーマへの関連が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25699",
+      "title": "NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.25699",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md",
+      "priority": 78,
+      "reason": "3D NANDを単なる重み保存媒体ではなくFFN計算実行場所として用い、ページ単位の生NAND読出し、ECC、演算パイプラインを一体化してDRAM経由の重み移動を避ける。OPT/LLaMA最大30BでA800のアウトオブコア推論比16.7〜37.9倍、SSD類似設計比最大4.7倍を報告する。SSD/NAND活用をI/O最適化から計算ストレージ協調設計へ広げる隣接系統として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T21:30:00+09:00",
+    "round": "normal-worker-critical-inventory-axis-rotation",
+    "axis": "heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute",
+    "query_summary": "候補在庫がcritical水位だったため、直前のKV中心探索から、異種モデル間KV共有、cold MoEの重み/KV分離、NAND中心計算アーキテクチャへ探索軸を回転した。前回未実体化のシステム指向KVサーベイも最新正本で再確認した。実質7候補を照合し、既知3件を除外、未登録4件を提出した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": ["arXiv:2606.18431", "arXiv:2604.25080", "arXiv:2606.25353"],
+    "next_axis_hint": "次回はKV中心語をいったん弱め、MoE expert placement/prefetch、GPU仮想メモリ、OS/DBMSの階層ストレージスケジューリング、CXL/NVMe協調へ回転する。"
+  }
+}
