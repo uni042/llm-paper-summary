@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-382442b3f5faa67f",
+  "type": "research",
+  "parent_job_id": "job-bddc9082393babd6",
+  "priority": 80,
+  "canonical_id": "arXiv:2602.21477",
+  "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving",
+  "source_url": "https://arxiv.org/abs/2602.21477",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md",
+  "selection_reason": "multi-agentの外部agentic memoryで、large-scale storage・頻繁なupdate・複数agent共存に伴うANN searchを対象に、single-agent multi-level index cache、cross-agent coordinated index management、GPU-CPU collaborative accelerationを統合する。realistic agent workloadでend-to-end throughput 4.29倍超を報告し、KV cache外のagent memory hierarchyという隣接systems軸を補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:51:14+00:00",
+  "artifact_transport": "structured_record_v10"
+}

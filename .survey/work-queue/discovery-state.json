@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:46:34+00:00",
+  "updated_at": "2026-09-12T17:51:14+00:00",
   "last_run_key": "2026-09-13T02:29:24+09:00",
-  "last_round": "specialist-foundry-backward-coldstart-elasticity-5",
+  "last_round": "specialist-agent-state-memory-6",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1550,6 +1550,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はforward citation/query expansionでSparseXなど新しいKV reuse研究を確認し、その後SSD/NVMe・heterogeneous memoryへ移る",
       "source_submission": "work-queue/submissions/20260913T0245JST-discovery-specialist-foundry-backward.json"
+    },
+    {
+      "run_key": "2026-09-13T02:29:24+09:00",
+      "round": "specialist-agent-state-memory-6",
+      "axis": "agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory",
+      "query_summary": "forward/query expansionからagentic servingのstate reuseへ軸を移した。SparseX、SAECache、TokTier、persistent Q4 agent KV、Pancakeを一次arXiv抄録で軽量評価し、投入直前に最新main identityと決定論的job pathを再照合した。TokencakeとTokenDanceは既存ready jobを発見したため除外し、未収録・job未存在の5件だけを送信した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.2857142857142857,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2510.18586",
+        "arXiv:2604.03143"
+      ],
+      "next_axis_hint": "次はSSD/NVMe・CXL・MoE expert cache/prefetchを重点検索し、identityに既収録のTutti/SwiftCache等を除外しながら未収録を探す",
+      "source_submission": "work-queue/submissions/20260913T0250JST-discovery-specialist-agent-state.json"
     }
   ],
   "axes": {
@@ -2462,6 +2480,16 @@
       "accepted_count": 5,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はforward citation/query expansionでSparseXなど新しいKV reuse研究を確認し、その後SSD/NVMe・heterogeneous memoryへ移る"
+    },
+    "agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory": {
+      "last_run_key": "2026-09-13T02:29:24+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.2857142857142857,
+      "next_axis_hint": "次はSSD/NVMe・CXL・MoE expert cache/prefetchを重点検索し、identityに既収録のTutti/SwiftCache等を除外しながら未収録を探す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

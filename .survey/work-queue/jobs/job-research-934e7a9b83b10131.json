@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-934e7a9b83b10131",
+  "type": "research",
+  "parent_job_id": "job-bddc9082393babd6",
+  "priority": 88,
+  "canonical_id": "arXiv:2605.18825",
+  "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches",
+  "source_url": "https://arxiv.org/abs/2605.18825",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18825-saecache-semantic-aware-prefix-eviction.md",
+  "selection_reason": "system prompt・user query・tool output・model response・CoTでreuse rateが最大756倍異なる観測を利用し、task-specific multi-queueとsemantic token weighting、online feedback学習でprefix-cache evictionを適応させるSAECache。異質workloadでproduction-style baseline比TTFT 1.4〜2.7倍改善を報告し、agentic prompt構造をcache価値へ直接反映する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:51:14+00:00",
+  "artifact_transport": "structured_record_v10"
+}

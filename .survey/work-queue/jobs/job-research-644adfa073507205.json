@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-644adfa073507205",
+  "type": "research",
+  "parent_job_id": "job-bddc9082393babd6",
+  "priority": 87,
+  "canonical_id": "arXiv:2607.29678",
+  "title": "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving",
+  "source_url": "https://arxiv.org/abs/2607.29678",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md",
+  "selection_reason": "高いprompt-cache hitでもfront-endが毎回全文tokenizeするagent workloadの新しいボトルネックを扱う。append周辺だけをstable-boundary検証付きで再tokenizeし、reuse不能時はGPUでexact pre-tokenization/BPEを実行する。vLLM統合でmedian TTFT 16〜34%、P99 23%削減、50ms P99目標で1,821 req/sを報告し、tokenization層を明示的なserving componentとして最適化する点が新しい。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:51:14+00:00",
+  "artifact_transport": "structured_record_v10"
+}

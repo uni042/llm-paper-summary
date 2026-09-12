@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:47:14.813607+00:00",
+  "updated_at": "2026-09-12T17:52:21.566455+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T17:47:14.813607+00:00",
+      "last_recorded_at": "2026-09-12T17:52:21.566455+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 21,
+        "new_jobs": 27,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -13237,6 +13237,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34709447670:1",
+          "recorded_at": "2026-09-12T17:52:21.566455+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34709447670",
+            "run_attempt": "1",
+            "source_sha": "e8d4e4774ad27e5abca68da4ac4da3e049b9f914"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13290,6 +13304,14 @@
         },
         {
           "job_id": "job-93c319d7de58b930",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bddc9082393babd6",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -13444,6 +13466,48 @@
           "type": "research",
           "canonical_id": "arXiv:2512.09472",
           "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
+        },
+        {
+          "job_id": "job-afb5dd5149abfe18",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-382442b3f5faa67f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.21477",
+          "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving"
+        },
+        {
+          "job_id": "job-research-60c04e3a8b0d8caf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.04428",
+          "title": "Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices"
+        },
+        {
+          "job_id": "job-research-644adfa073507205",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.29678",
+          "title": "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving"
+        },
+        {
+          "job_id": "job-research-86f5ed2fa8ac71e7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.01751",
+          "title": "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving"
+        },
+        {
+          "job_id": "job-research-934e7a9b83b10131",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.18825",
+          "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches"
         }
       ],
       "new_paper_ids": [
@@ -13455,7 +13519,8 @@
         ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
         ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json",
         ".survey/work-queue/results/20260913T0241JST-discovery-specialist-runtime-network-routing.json",
-        ".survey/work-queue/results/20260913T0245JST-discovery-specialist-foundry-backward.json"
+        ".survey/work-queue/results/20260913T0245JST-discovery-specialist-foundry-backward.json",
+        ".survey/work-queue/results/20260913T0250JST-discovery-specialist-agent-state.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
