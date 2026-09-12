@@ -1,18 +1,19 @@
 # Chat worker router — workflow v10
 
-予定されたScheduled Chat workerは1つだけ。通常runは実行時刻で次のどちらか一方を選ぶ。ただし24-run maintenance gateが最優先で、maintenance runでは通常workerを実行しない。
+このrouterは **既存の通常Scheduled Chat worker（毎時:30系）** の正本とする。通常workerとは別に、毎時`:00` JSTで探索専用Scheduled Chat workerを動かしてよい。探索専用workerの正本は [discovery-specialist-worker.md](discovery-specialist-worker.md) とし、その追加を理由に通常workerのdiscovery機能を削除・停止・縮小しない。通常runは実行時刻で次のどちらか一方を選ぶ。ただし24-run maintenance gateが最優先で、maintenance runでは通常workerを実行しない。
 
 - maintenance gateで24回目 → full GC + repository-wide consistency checkだけを要求して終了
 - 08:30 JST → その他更新worker
 - それ以外の毎時 :30 → 論文worker
+- 別タスクの毎時 :00 → 探索専用worker。通常workerのmaintenance counterには加算しない
 
-毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、[suggestion-box.md](suggestion-box.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json`、`.survey/work-queue/discovery-state.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
+毎回default branch最新HEADを取得し、このrouter、[README.md](README.md)、[queue-v10.md](queue-v10.md)、[candidate-buffer-policy.md](candidate-buffer-policy.md)、[continuation-policy.json](continuation-policy.json)、[fallback-routing.md](fallback-routing.md)、[backlog-resilience.md](backlog-resilience.md)、[suggestion-box.md](suggestion-box.md)、`.survey/work-queue/next-jobs.json`、`.survey/work-queue/maintenance-cycle.json`、`.survey/work-queue/discovery-state.json` を同じHEADから読む。必要に応じて `.survey/work-queue/records/bank-registry.json` を読む。
 
-一時配送について古い文書と矛盾する場合は **このrouter → fallback-routing.md → continuation-policy.json → backlog-resilience.md → queue-v10.md** の順で優先する。Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は新規保存先に使わない。Drive実装の保存版は `archive/drive-fallback-before-removal-20260910` ブランチにある。
+一時配送について古い文書と矛盾する場合は **このrouter → candidate-buffer-policy.md → fallback-routing.md → continuation-policy.json → backlog-resilience.md → queue-v10.md** の順で優先する。Google Drive fallback、Notion、旧 `/LLM-survey-fallback/` は新規保存先に使わない。Drive実装の保存版は `archive/drive-fallback-before-removal-20260910` ブランチにある。
 
 ## 0. 24-run maintenance gate
 
-通常の時刻routingより先に `.survey/work-queue/maintenance-cycle.json` を処理する。
+通常の時刻routingより先に `.survey/work-queue/maintenance-cycle.json` を処理する。このカウント対象は通常Scheduled Chat workerだけで、探索専用workerの毎時`:00` runは加算しない。
 
 1. 現在のScheduled Chat実行枠をJSTで一意な `run_key` として決める。
 2. `last_counted_run_key` が同じなら二重加算しない。
@@ -74,19 +75,20 @@ GitHub direct writeもLibrary保存もできない場合だけ、未checkpoint�
 
 ## 4. 論文worker
 
-正本: [queue-v10.md](queue-v10.md)、[paper template](../../templates/paper.md)、`.survey/work-queue/next-jobs.json`。
+正本: [queue-v10.md](queue-v10.md)、[candidate-buffer-policy.md](candidate-buffer-policy.md)、[paper template](../../templates/paper.md)、`.survey/work-queue/next-jobs.json`。
 
 research / auditに着手する前に `.survey/templates/paper.md` を読む。新しい会話・実行環境ではテンプレートが例示するMoE-Infinityのまとめも確認する。
 
-Chatは探索、一次資料全文取得、全文精読、科学的判断、監査判断、構造化research record作成を担当する。完成Markdownは作成・送信しない。
+Chatは探索、一次資料全文取得、全文精読、科学的判断、監査判断、構造化research record作成を担当する。探索専用workerが追加されても通常workerの探索責務は維持する。完成Markdownは作成・送信しない。
 
 実行順:
 
-1. GitHub readyから`checkpointed_job_ids`を除いたactionable readyをpriority順に処理。
-2. actionable readyがなければLibrary seed由来の`spillover_candidates`をpriority順に処理。
-3. それもなければdiscovery。
-4. job完了、blocked化、checkpoint後はqueue/backlogを再取得して1へ戻る。
-5. 固定件数・固定バッチ数・「1本終わったら終了」は設けない。
+1. `candidate-buffer-policy.md` に従ってcandidate在庫水位を確認し、必要ならreadyが残っていてもdiscovery補充を行う。
+2. GitHub readyから`checkpointed_job_ids`を除いたactionable readyをpriority順に処理。
+3. actionable readyがなければLibrary seed由来の`spillover_candidates`をpriority順に処理。
+4. それもなければdiscovery。
+5. job完了、blocked化、checkpoint後はqueue/backlogとcandidate在庫を再取得して1へ戻る。
+6. 固定件数・固定バッチ数・「1本終わったら終了」は設けない。
 
 checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` の `ensure_discovery_excluding_checkpointed` を使って新規discovery jobを発行してよい。元job statusは変更しない。
 
@@ -97,6 +99,7 @@ checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transp
 - 検索ソース側で完全除外できない場合は、まず軽量に広めの候補集合を取得し、ローカル重複除去後の未収録候補だけを詳細評価する。
 - arXiv ID / DOIが一致するものは重複とする。IDがなくてもタイトル正規化で同一と判断できるものは重複扱いにしてよい。
 - 重複判定のためだけに本文精読は行わない。
+- 探索専用workerとの競合を考慮し、candidate投入直前にも最新HEAD / identity / queue / existing jobsを再取得して二度目の重複判定を行う。
 
 1回の探索ラウンドで候補が全て重複または有力な未収録候補が0件だった場合、それ自体をdiscovery終了理由にしない。同一run内で探索軸を変更して再探索する。
 
@@ -109,7 +112,7 @@ checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transp
 
 同じ検索戦略・ほぼ同じクエリを反復しない。固定ラウンド数で機械的に埋める必要はないが、少なくとも通常検索が重複だけで終わった場合は1段以上探索軸を変えて再探索する。プラットフォーム上限、保存不能、または有望領域を合理的に使い切った場合のみそのrunのdiscoveryを終了する。
 
-各ラウンド終了時に `.survey/work-queue/discovery-state.json` を更新し、探索軸、検索概要、取得候補数、重複除外数、未収録候補数、採用数、重複率、次回推奨探索軸を記録する。高重複の探索軸は直後のrunで機械的に再使用せず、別軸を優先する。
+各ラウンド終了時に `.survey/work-queue/discovery-state.json` を更新し、探索軸、検索概要、取得候補数、重複除外数、未収録候補数、採用数、重複率、次回推奨探索軸を記録する。高重複の探索軸は直後のrunで機械的に再使用せず、別軸を優先する。共有stateのwrite前には最新blob SHAを再取得し、探索専用workerの更新を古いstateで上書きしない。
 
 ### GitHub write不能中のoffline discovery
 
@@ -172,7 +175,7 @@ maintenance runを除く通常workerは、実作業中に具体的な摩擦、�
 
 08:30 JSTの通知には、その他更新workerの更新結果に加え、直近24時間の論文サーベイ状況として次の3項目を必ず含める。
 
-1. 発見した論文数: 直近24時間のdiscoveryで重複除外後に新規候補として発見した論文数。
+1. 発見した論文数: 直近24時間のdiscoveryで重複除外後に新規候補として発見した論文数。通常workerと探索専用workerの双方を集計対象とし、candidate identityで重複排除する。
 2. 追加した論文数: 直近24時間に正本リポジトリへ新規収録された論文数。
 3. 残っている論文候補数: 通知時点でresearch対象として未処理の候補数。GitHub queueのactionable readyと、Library/GitHub fallback由来の未checkpoint spillover候補を重複排除して数える。
 
