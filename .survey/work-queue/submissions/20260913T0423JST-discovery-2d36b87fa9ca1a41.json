@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2d36b87fa9ca1a41",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.03251",
+      "title": "Speculative Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2603.03251",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-2603.03251-speculative-speculative-decoding.md",
+      "priority": 91,
+      "reason": "従来の投機的デコードでdraftとverificationが直列依存する残存ボトルネックを、verification中に複数の予想結果へ次のspeculationを先行生成することで重ね合わせる。最適化実装Saguaroはverification結果が予測集合に入ればdraft待ちを消せ、最適化済み投機的デコード比最大約2倍、自回帰デコード比最大約5倍を報告する。投機的デコードの実行パイプラインそのものを変えるため優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2602.06932",
+      "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
+      "source_url": "https://arxiv.org/abs/2602.06932",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+      "priority": 88,
+      "reason": "固定speculatorの配備遅延とtraffic driftに対し、SGLang推論serverと非同期training serverを接続し、実trafficのaccept/reject信号からspeculatorをオンライン更新するAuroraを提案する。新規frontier modelでday-0から約1.5倍、分布変化下で静的speculator比さらに約1.25倍のspeedupを報告し、training-serving閉ループを投機的デコードへ持ち込むsystems研究として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2506.01986",
+      "title": "SpecMemo: Speculative Decoding is in Your Pocket",
+      "source_url": "https://arxiv.org/abs/2506.01986",
+      "paper_path": "papers/inference/05-speculative-decoding/2025-2506.01986-specmemo-memory-aware-speculative-decoding.md",
+      "priority": 85,
+      "reason": "投機的デコードの候補木・attention mask・KV確保によるメモリ増大を、device-awareな細粒度割当とtree pruningで抑える。Titan RTXで生成時メモリを65%削減しながら通常の投機的デコードthroughputの96%を維持し、8×AMD MI250上の分散Llama-2-70Bではvanilla decode比2倍、batch 10でthroughput最大8倍を報告する。メモリ制約環境の投機実行系として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2503.15921",
+      "title": "SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models",
+      "source_url": "https://arxiv.org/abs/2503.15921",
+      "paper_path": "papers/inference/05-speculative-decoding/2025-2503.15921-spin-heterogeneous-speculative-model-serving.md",
+      "priority": 84,
+      "reason": "request難度に応じて複数の異種small speculative modelを学習ベースで選択し、verification時のbatch overheadをrequest decompositionで抑え、speculationとverificationをGPU間pipeline化するserving system。INFOCOM 2025採択で、既存方式に対して約2.28倍の性能改善を報告し、multi-model speculative servingの比較点として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2605.15051",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.15051",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-2605.15051-speculative-decoding-serving-latency-model.md",
+      "priority": 79,
+      "reason": "固定batchのmicrobenchmarkでは見えないproduction serving下の投機的デコード性能を、Littleの法則から推定したeffective batch sizeとprefill・draft・verificationの負荷依存/非依存コストへ分解するモデルで説明する。vLLMの広範な実測で、負荷上昇時に投機speedupが減る条件やdraft長・acceptance率の影響を再現し、MoEへも拡張する。運用時の投機設定選択に直結する性能モデルとして収録価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-speculative-serving-8",
+    "axis": "投機的デコードのserving・pipeline・メモリ制約・性能モデル",
+    "query_summary": "Sarathi-Serve送信後のActions待ち中に投機的デコードsystemsを独立探索。SPECTREとSwiftSpecは既存jobを確認して除外し、SSD、Aurora、SpecMemo、SPIN、serving latency modelの5件は最新mainで決定論的research job IDが存在しないことを再確認した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arxiv:2605.08151",
+      "arxiv:2506.11309"
+    ],
+    "next_axis_hint": "2026年9月新着のserving systemsを再走査し、その後forward citation・関連実装から未収録候補を確認する",
+    "empty_round_reason": null
+  }
+}
