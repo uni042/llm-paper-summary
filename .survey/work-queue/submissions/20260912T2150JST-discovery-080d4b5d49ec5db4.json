@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "job_id": "job-080d4b5d49ec5db4",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.03377",
+      "title": "Amplifying Effective CXL Memory Bandwidth for LLM Inference via Transparent Near-Data Processing",
+      "source_url": "https://arxiv.org/abs/2509.03377",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2509.03377-cxl-ndp-near-data-processing-llm-inference.md",
+      "priority": 84,
+      "reason": "CXL拡張メモリの帯域不足を、CXL.memやモデルを変更せずデバイス側の近傍データ処理で緩和する。重みとKVキャッシュに対する動的量子化・無損失圧縮をCXL機器内で実行し、終端間処理量43%向上、最大文脈長87%拡大、KV容量46.9%削減を精度劣化なしで報告する。CXL階層メモリを単なる容量拡張ではなく帯域増幅機構として扱う点がリポジトリの重点テーマに強く関連する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.02964",
+      "title": "Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2606.02964",
+      "paper_path": "papers/inference/09-kv-cache-virtualization/2026-2606.02964-asymcache-multi-segment-attention.md",
+      "priority": 83,
+      "reason": "損失のないKV追い出し・再計算で、単なる命中率ではなくGPU注意カーネルの実行効率を考慮するAsymCacheを提案する。非連続KV文脈を効率処理するMulti-Segment Attention、位置依存の再計算費用を含む追い出し、適応的分割スケジューラを統合し、最新比較対象よりTTFTを1.90〜2.03倍、TPOTを1.62〜1.71倍改善する。KV管理と低水準GPU実行効率を直接接続するため研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.09023",
+      "title": "The Missing Memory Hierarchy: Demand Paging for LLM Context Windows",
+      "source_url": "https://arxiv.org/abs/2603.09023",
+      "paper_path": "papers/inference/12-agent-memory-runtime/2026-2603.09023-pichay-demand-paging-context-windows.md",
+      "priority": 67,
+      "reason": "モデル内部KVではなくエージェント実行時の会話文脈を仮想メモリとして扱う隣接システム研究。透明プロキシで古い内容を追い出し、再参照をページフォルトとして検出し、フォルト履歴で作業集合を固定する。857本番セッションの分析とライブ運用を含み、最大93%の文脈消費削減、オフライン140万追い出しで0.0254%のフォルト率を報告する。OSページング原理をLLM実行系へ移植する参考として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2509.12211",
+      "title": "TinyServe: Query-Aware Cache Selection for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.12211",
+      "paper_path": "papers/inference/09-kv-cache-virtualization/2025-2509.12211-tinyserve-query-aware-cache-selection.md",
+      "priority": 62,
+      "reason": "クエリとKVブロックの関連度を軽量メタデータで推定し、必要ページだけを読み込む選択的KV方式を、ページ評価・疎メモリアクセス・マスク注意を融合したCUDAカーネルとして実装する。主対象は小型LLMだが、実時間デコードで最大3.4倍高速化、2倍超のメモリ削減を報告し、KVページングとGPUカーネル融合の具体例として隣接価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T21:30:00+09:00",
+    "round": "normal-worker-critical-inventory-os-cxl-paging-rotation",
+    "axis": "cxl-near-data-kv-page-management-os-demand-paging",
+    "query_summary": "専門家先読みラウンドの採用が1件に留まり在庫がcritical水位のままだったため、CXL近傍データ処理、GPU注意効率を考慮したKVページ管理、OS需要ページングの隣接応用へ探索軸を変更した。一次資料の定量結果を軽量評価し、最新正本で識別子を再照合した4件を提出した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "採用後も在庫15未満ならCXL/NVMeのI/OスケジューリングとGPUメモリ回収へ継続し、15以上ならresearch優先へ戻す。"
+  }
+}
