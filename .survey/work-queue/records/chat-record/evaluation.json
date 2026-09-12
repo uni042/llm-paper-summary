@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.10812-20260912-1452-v10-a1",
-  "job_id": "job-research-09f84c02bdf7d29d",
+  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
+  "job_id": "job-research-985814ffefefe223",
   "data": {
-    "hardware": "ALCF Auroraの1〜256 nodeを使用。Intel Data Center GPU Max（Ponte Vecchio）で各node 12 XPU tile。baseline Llama-3-8Bは1 tile=1 replicaで最大3072 replica。405B構成はTP=8×PP=2で2 node/replica、最大128 replicaを256 nodeで評価する。",
-    "software": "PBS、MPI、Ray Serve、vLLM、SGLang、HAProxy/Envoy/LiteLLM/Ray Serve proxy、oneAPI/Level Zero、node-local tmpfs、shared Lustre。Aurora用Ray forkとIntel-specific inference path、runtime overlayでhealth timeout/thread limit/network bind等を調整する。",
-    "methodology": "baselineはLlama-3-8B-Instruct、vLLM、TP=1、12 replica/node、ShareGPTから64 content token以上を選び64 tokenへtruncateし、chat template後平均74.7 input token、outputは64 token固定。single-node saturationは118 QPSでlatencyが約109 QPS超から上昇するため、multi-nodeは110 QPS/nodeのfixed-interval offered rateでstressする。scaleは1〜256 node。proxy比較では4-node client fleet、direct dispatchは1 client/node。主要SLOはTTFT≤2秒かつ各requestのP99 TBT≤250ms。比較軸としてGPT-OSS-120B TP=8、Llama-3.1-405B TP=8×PP=2、2K/2K・4K/4KやCode/Chat/Summary workload、Poisson/BurstGPT arrival、SGLang、HAProxy/Envoy/LiteLLM/Ray Serve proxyを一軸ずつ変更する。cluster bring-upはMPI staging、Ray start、serve.run、proxy startを計測し、GCS lookup数とresolution時間までinstrumentする。",
-    "workloads": ["Llama-3-8B-Instruct ShareGPT 64/64", "GPT-OSS-120B", "Llama-3.1-405B", "2K/2K", "4K/4K", "Code", "Chat", "Summary", "fixed interval", "Poisson", "BurstGPT trace"],
-    "workload_details": "baselineはnode当たり110 QPS。SLOはTTFT 2秒、P99 TBT 250ms。SGLangは各engineのsingle-node saturationの90%でweak-scaleし、vLLM 110 req/s/node、SGLang 15 req/s/node相当。405BはPP=2、128 replicaまで評価。",
-    "baselines": ["direct per-node dispatch", "HAProxy", "Envoy", "LiteLLM", "Ray Serve proxy", "vLLM", "SGLang"],
-    "metrics": ["successful QPS", "tokens/s", "weak-scaling efficiency", "request error rate", "TTFT", "P99 TBT", "SLO attainment", "time-to-serve", "serve.run deploy/wait time", "GCS lookup count/resolution latency"],
-    "scope": "実際のAuroraを最大256 nodeまで使用する大規模実機評価で、8Bから405Bまで、vLLM/SGLang、複数proxyを試す。一方、主結果はAurora/PVC固有のsite integrationを含み、NVIDIA/AMD系supercomputerで同じ定数・patchが必要とは限らない。512 nodeではsingle GCSが飽和してdeployment自体が失敗するため、demonstrated ceilingは256 node。productionの常時運用やfault recoveryの長期評価より、batch evaluation-oriented deploymentとscaling characterizationが中心。"
+    "hardware": "2台の計算ノードを用いる。各ノードはAMD EPYC 9254 24コア、128GB DDR5、NVIDIA L4 24GBを1基搭載する。CXL装置はSeagateのFPGA試作メモリ装置で、CXL 1.1をPCIe Gen5 x16上で2ポート提供し、合計1TiBのDDR4資源のうち512GiBを両ホストへ同時割当する。比較用の通信経路として100GbE ConnectX-6 DxによるRoCEv2直結も備える。",
+    "software": "Kubernetes v1.35.7、推論基盤（vLLM）v0.23.0、分散推論基盤（llm-d）、Qwen2.5-7B-Instruct bf16を使う。テンソル並列は1。共有CXL格納部は推論基盤のKV退避接続部へ組み込み、Kubernetes側では動的資源割当（DRA）、コンテナ機器インターフェース（CDI）、Redfish経由の装置管理を組み合わせる。",
+    "methodology": "各試行では同じ長い接頭辞を持つ二つの要求を作る。最初の要求を処理Aへ送り、生成したKVを対象階層へ保存する。二つ目の要求は同じAへ送る同一ノード条件と、別ノードの処理Bへ送る別ノード条件に分ける。別ノード条件ではBがその接頭辞を一度も処理していないため、GPU内接頭辞キャッシュとCPU主記憶への退避は命中できず、共有CXLだけが別ノードから再利用できる。比較方式は再計算のみ、GPU内接頭辞キャッシュ、32GiBのCPU主記憶KV退避、512GiB共有CXLの4種類。接頭辞長は約2千、8千、1.6万、3.2万トークンで、同一ノード・別ノード、20セッション、3反復を組み合わせ、合計1920組の要求を測る。乱数的なハッシュ差を避けるため両処理のPYTHONHASHSEEDを0へ固定し、退避単位は256トークンとする。主指標は利用者から見た最初のトークンまでの時間と外部KV命中率である。方式順序は反復ごとに変更し、共有領域も毎回初期化する。さらに未保存キーの誤命中、最初の要求への命中漏れ、領域初期化の記録を検査する。",
+    "workloads": ["Qwen2.5-7B-Instruct bf16", "約2千トークン接頭辞", "約8千トークン接頭辞", "約1.6万トークン接頭辞", "約3.2万トークン接頭辞", "同一ノード再利用", "別ノード再利用"],
+    "workload_details": "名目上の2K、8K、16K、32K条件は、実際の分割後中央値で2054、8173、16282、32694トークンとなる。各条件は20セッションを3回繰り返して60測定。1セッションずつ順番に実行するため、同時デコード負荷や待ち行列混雑は意図的に含めない。",
+    "baselines": ["再計算のみ", "GPU内接頭辞キャッシュ", "CPU主記憶へのKV退避", "共有CXLメモリ"],
+    "metrics": ["最初のトークンまでの時間", "外部KV命中率", "別ノードと同一ノードの差", "実効KV読出し帯域", "記憶階層の遅延と帯域", "CRC32不一致数", "誤命中数"],
+    "scope": "実際の2ノードCXL装置、L4 GPU、推論基盤を用いる実機評価であり、シミュレーションではない。ただし著者は第1版の実現可能性調査と明記している。プリフィルとデコードを分離した構成ではなく、両処理が完全な推論エンジンを持つ。単一GPU/ノードかつ同時負荷なしなので、有効スループット、混雑時の尾部遅延、プリフィルとデコードの競合は測っていない。RDMAを使う共有KV方式、GPUからCXLへの直接DMA、複数利用者での容量競合も比較対象外である。"
   }
 }
