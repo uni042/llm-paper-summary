@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:18:09+00:00",
+  "updated_at": "2026-09-12T19:20:58+00:00",
   "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-cxl-ssd-kv-saturation-6",
+  "last_round": "specialist-prefix-chunked-prefill-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "強いCXL・SSD・remote KV候補4件はすべて既存research jobまたは収録済みだった。",
+  "consecutive_empty_rounds": 3,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1885,6 +1885,25 @@
       ],
       "next_axis_hint": "chunked prefill・prefix-aware batchingの基礎欠落を再確認する",
       "source_submission": "work-queue/submissions/20260913T0418JST-discovery-05a9d866af44dccd.json"
+    },
+    {
+      "run_key": "2026-09-13T04:00:16+09:00",
+      "round": "specialist-prefix-chunked-prefill-7",
+      "axis": "chunked prefill・prefix-aware batchingの基礎欠落",
+      "query_summary": "chunked prefillとprefix-aware batchingの基礎・近接研究を再確認。AlignedServe、BucketServe、Prebleは既存research jobを確認して除外し、Sarathi-Serveは最新mainで決定論的research job IDが存在しないことを再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2605.23389",
+        "arxiv:2507.17120",
+        "arxiv:2407.00023"
+      ],
+      "next_axis_hint": "speculative decoding serving・通信圧縮・メモリ制約実行へ移る",
+      "source_submission": "work-queue/submissions/20260913T0420JST-discovery-a86e6cabe6f79c37.json"
     }
   ],
   "axes": {
@@ -2977,6 +2996,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "chunked prefill・prefix-aware batchingの基礎欠落を再確認する"
+    },
+    "chunked prefill・prefix-aware batchingの基礎欠落": {
+      "last_run_key": "2026-09-13T04:00:16+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "speculative decoding serving・通信圧縮・メモリ制約実行へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
