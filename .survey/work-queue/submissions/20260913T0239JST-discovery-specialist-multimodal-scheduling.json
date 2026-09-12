@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b1661ff4851a4aad",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2507.10069",
+      "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism",
+      "source_url": "https://arxiv.org/abs/2507.10069",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+      "priority": 88,
+      "reason": "マルチモーダル推論で要求種別と推論段階ごとの資源特性が異なる問題に対し、modality groupへの分離、動的資源配分、段階分離と並列度調整・弾力的スケーリング、統一prefix cacheとnon-blocking encodeを組み合わせる。一次資料の抄録ではTTFT最大4.2倍改善、throughput 3.2〜4.5倍を報告しており、単純なencode/prefill/decode分離より広い弾力的並列化を扱うため価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.11590",
+      "title": "EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend",
+      "source_url": "https://arxiv.org/abs/2601.11590",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md",
+      "priority": 86,
+      "reason": "Encode・Prefill・Decodeを独立段階へ分離し、Ascendの相互接続構造を使った非同期feature prefetch、階層grouped KV transfer、multi-route scheduling、instance load balancing、段階co-locationを組み合わせる。一次資料の抄録ではPD分離比でend-to-end throughputを57.37〜69.48%改善し、TTFT<2000ms・TPOT<50msのSLOを維持しており、非NVIDIA系アクセラレータ上のmultimodal分離サービングとして差分がある。"
+    },
+    {
+      "canonical_id": "arXiv:2603.26498",
+      "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2603.26498",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+      "priority": 85,
+      "reason": "video・image・textで桁違いとなる資源需要を明示的に分類し、大きなmultimodal要求によるhead-of-line blockingを動的priorityとagingで抑えるRPS-Serveを提案する。一次資料の抄録では平均TTFTを全体で54%、latency-critical要求で78.5%削減しており、stage disaggregationとは異なる要求modality由来のスケジューリング問題を直接扱うため補完性が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T02:29:24+09:00",
+    "round": "specialist-multimodal-serving-scheduling-3",
+    "axis": "multimodal弾力的並列化・EPD分離・modality-aware scheduling",
+    "query_summary": "前ラウンドのシステム候補からmultimodal servingへ展開し、ElasticMM、EPD-Serve、RPS-ServeをarXiv一次メタデータと抄録で軽量評価した。投入直前に最新mainのidentity index、next-jobs、決定論的research job pathを再確認し、3件とも未収録・job未存在を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はmultimodal系を離れ、OS/storage/networking由来のKV・tensor state placement、またはforward citation経路を探索する",
+    "empty_round_reason": null
+  }
+}
