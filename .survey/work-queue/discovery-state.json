@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T22:09:13+00:00",
-  "last_run_key": "2026-09-13T07:00:13+09:00",
-  "last_round": "specialist-exhaustion-final-3",
+  "updated_at": "2026-09-12T23:05:22+00:00",
+  "last_run_key": "2026-09-13T07:58:39+09:00",
+  "last_round": "specialist-new-arrivals-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "前回runの枯渇判定後に追加の独立探索軸を再走査し、今回見つかった強候補もすべて正本上の既存論文・既存research jobへ収束した。新着、引用追跡、後方系統、隣接OS/GPU runtime、MoE、CXL/SSD、ネットワーク分離まで試し、未試行の有望なnext-axis hintが残っていないため今回runのexhaustion条件を満たした。",
+  "consecutive_empty_rounds": 5,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2266,6 +2266,26 @@
       ],
       "next_axis_hint": "次回は新着時刻以降のarXiv追加・改訂を起点にし、今回飽和した候補集合を機械的に反復しない",
       "source_submission": "work-queue/submissions/20260913T0709JST-discovery-3120d962d29ad791.json"
+    },
+    {
+      "run_key": "2026-09-13T07:58:39+09:00",
+      "round": "specialist-new-arrivals-1",
+      "axis": "2609新着・端末メモリ管理・エッジクラウド協調推論",
+      "query_summary": "直前runの枯渇判定後の新着差分を再走査し、HBFSim、MetaKV、mzCache、AceSpec、InertiaKV、分離サービング電力制御を軽量評価した。投入直前に最新main HEAD、決定論的research job、repo identity/title検索、GitHub fallback inbox、Library pendingを再確認し、HBFSim・MetaKV・InertiaKV・分離サービング電力制御は既存、mzCacheとAceSpecのみ未登録と判定した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.09800",
+        "arXiv:2609.07966",
+        "arXiv:2609.03515",
+        "arXiv:2609.11133"
+      ],
+      "next_axis_hint": "strong candidate発見により枯渇判定をリセット。forward citation、backward reference、MoE expert I/O、CXL/SSD、GPU runtime/networkingを独立に再走査する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0804JST-new-arrivals-1.json"
     }
   ],
   "axes": {
@@ -3558,6 +3578,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "次回は新着時刻以降のarXiv追加・改訂を起点にし、今回飽和した候補集合を機械的に反復しない"
+    },
+    "2609新着・端末メモリ管理・エッジクラウド協調推論": {
+      "last_run_key": "2026-09-13T07:58:39+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "strong candidate発見により枯渇判定をリセット。forward citation、backward reference、MoE expert I/O、CXL/SSD、GPU runtime/networkingを独立に再走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

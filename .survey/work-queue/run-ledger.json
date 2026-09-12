@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T22:10:33.566549+00:00",
+  "updated_at": "2026-09-12T23:06:40.284188+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15737,6 +15737,66 @@
         ".survey/work-queue/results/20260913T0704JST-discovery-02deb7897ac2d559.json",
         ".survey/work-queue/results/20260913T0707JST-discovery-909ac1eecafe8335.json",
         ".survey/work-queue/results/20260913T0709JST-discovery-3120d962d29ad791.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 393,
+      "paper_active_count_after": 393,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-13T07:30:00+09:00",
+      "first_recorded_at": "2026-09-12T23:06:40.284188+00:00",
+      "last_recorded_at": "2026-09-12T23:06:40.284188+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34724440307:1",
+          "recorded_at": "2026-09-12T23:06:40.284188+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34724440307",
+            "run_attempt": "1",
+            "source_sha": "8f9b72dbb82975c05d8ca2daddfbbfb600038a2a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-c9255e06972e819d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-3a2b4785347c6fcd",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/discovery-specialist-20260913T0804JST-new-arrivals-1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
