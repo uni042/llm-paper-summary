@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:38:08+00:00",
+  "updated_at": "2026-09-12T23:40:28+00:00",
   "last_run_key": "2026-09-13T08:26:04+09:00",
-  "last_round": "specialist-runtime-reliability-cpu-4",
+  "last_round": "specialist-network-collective-saturation-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "network/collective/distributed-inference軸で真剣に評価した強候補がすべて既収録または既存jobと重複したため、新規candidateを投入しなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2450,6 +2450,29 @@
       ],
       "next_axis_hint": "最後にnetwork/collective・distributed inferenceと直近新着を独立に再確認し、追加の強候補がなければ今回runの収束判定を行う",
       "source_submission": "work-queue/submissions/20260913T0839JST-discovery-specialist-runtime-reliability-cpu.json"
+    },
+    {
+      "run_key": "2026-09-13T08:26:04+09:00",
+      "round": "specialist-network-collective-saturation-5",
+      "axis": "network・collective通信・distributed inference",
+      "query_summary": "直前のruntime/reliability/CPU軸からnetwork・collective・distributed inferenceへ切り替え、WISP、BloomBee、WWW.Serve、MoE network topology、Multi-stage Flow Scheduling、SCIN、P/D-Serveを軽量評価した。いずれも最新正本系列の既存job/収録済みpaperで一致し、新規の強候補は残らなかった。直近新着検索でもPATTON、TokenStack、NELSSAなどは既収録であり、弱い候補を埋め合わせとして投入しなかった。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2601.11652",
+        "arXiv:2604.21072",
+        "arXiv:2603.20661",
+        "arXiv:2605.00254",
+        "arXiv:2603.17456",
+        "arXiv:2603.28239",
+        "arXiv:2408.08147"
+      ],
+      "next_axis_hint": "直近新着・関連研究・storage/OS・runtime・networkの主要独立経路を今回runで横断済み。追加の強候補がなければexhaustive policyの収束判定へ進む",
+      "source_submission": "work-queue/submissions/20260913T0841JST-discovery-specialist-network-saturation.json"
     }
   ],
   "axes": {
@@ -3832,6 +3855,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "最後にnetwork/collective・distributed inferenceと直近新着を独立に再確認し、追加の強候補がなければ今回runの収束判定を行う"
+    },
+    "network・collective通信・distributed inference": {
+      "last_run_key": "2026-09-13T08:26:04+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "直近新着・関連研究・storage/OS・runtime・networkの主要独立経路を今回runで横断済み。追加の強候補がなければexhaustive policyの収束判定へ進む"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
