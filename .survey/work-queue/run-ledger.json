@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:15:17.083247+00:00",
+  "updated_at": "2026-09-12T14:17:21.633485+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T14:15:17.083247+00:00",
+      "last_recorded_at": "2026-09-12T14:17:21.633485+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 22,
+        "new_jobs": 24,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10860,6 +10860,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34698785736:1",
+          "recorded_at": "2026-09-12T14:17:21.633485+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34698785736",
+            "run_attempt": "1",
+            "source_sha": "e58c9f86d088f6c5cd38e9c34fd4ee6cf95e5afe"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10937,6 +10951,14 @@
         },
         {
           "job_id": "job-7d5f203e09ec3bc4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-59418511ae4bc344",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -11098,6 +11120,20 @@
           "type": "research",
           "canonical_id": "arXiv:2505.23022",
           "title": "SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference"
+        },
+        {
+          "job_id": "job-4a6531f34c980060",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2ffc6f1ef8dd7efc",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.22850",
+          "title": "ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse"
         }
       ],
       "new_paper_ids": [
@@ -11113,7 +11149,8 @@
         ".survey/work-queue/results/20260912T2308JST-discovery-specialist-03.json",
         ".survey/work-queue/results/20260912T2310JST-discovery-specialist-04.json",
         ".survey/work-queue/results/20260912T2312JST-discovery-specialist-05.json",
-        ".survey/work-queue/results/20260912T2314JST-discovery-specialist-06.json"
+        ".survey/work-queue/results/20260912T2314JST-discovery-specialist-06.json",
+        ".survey/work-queue/results/20260912T2316JST-discovery-specialist-07.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
