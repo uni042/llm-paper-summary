@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-bddc9082393babd6",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.01751",
+      "title": "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.01751",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.01751-sparsex-segment-level-kv-sharing.md",
+      "priority": 90,
+      "reason": "prefix一致に限定される従来cacheでは拾えないnon-prefix・cross-request・cross-turn・cross-agentの反復segmentを再利用する。Sparse-Qから補正対象tokenを選び、single forward pass内Sparse-KV recomputationとfull+sparse hybrid attentionで文脈相互作用を復元する。vLLMへ統合されたtraining-free方式で、RAG・multi-turn・agent workloadを横断するsegment-level reuseとして差分が大きい。"
+    },
+    {
+      "canonical_id": "arXiv:2605.18825",
+      "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches",
+      "source_url": "https://arxiv.org/abs/2605.18825",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18825-saecache-semantic-aware-prefix-eviction.md",
+      "priority": 88,
+      "reason": "system prompt・user query・tool output・model response・CoTでreuse rateが最大756倍異なる観測を利用し、task-specific multi-queueとsemantic token weighting、online feedback学習でprefix-cache evictionを適応させるSAECache。異質workloadでproduction-style baseline比TTFT 1.4〜2.7倍改善を報告し、agentic prompt構造をcache価値へ直接反映する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.29678",
+      "title": "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.29678",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md",
+      "priority": 87,
+      "reason": "高いprompt-cache hitでもfront-endが毎回全文tokenizeするagent workloadの新しいボトルネックを扱う。append周辺だけをstable-boundary検証付きで再tokenizeし、reuse不能時はGPUでexact pre-tokenization/BPEを実行する。vLLM統合でmedian TTFT 16〜34%、P99 23%削減、50ms P99目標で1,821 req/sを報告し、tokenization層を明示的なserving componentとして最適化する点が新しい。"
+    },
+    {
+      "canonical_id": "arXiv:2603.04428",
+      "title": "Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2603.04428",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.04428-persistent-q4-agent-kv-cache.md",
+      "priority": 81,
+      "reason": "edge上で複数agentのKV cacheをdiskへQ4永続化し、再prefillせずattention layerへ直接restoreする。per-agent block pool、concurrent quantized cache、cross-phase context injectionを組み合わせ、3 architectureでTTFT restore最大136倍、固定memoryでagent context 4倍を報告する。単一著者preprintだがpersistent storageをagent KVへ適用する具体的systems datapointとして有用。"
+    },
+    {
+      "canonical_id": "arXiv:2602.21477",
+      "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving",
+      "source_url": "https://arxiv.org/abs/2602.21477",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md",
+      "priority": 80,
+      "reason": "multi-agentの外部agentic memoryで、large-scale storage・頻繁なupdate・複数agent共存に伴うANN searchを対象に、single-agent multi-level index cache、cross-agent coordinated index management、GPU-CPU collaborative accelerationを統合する。realistic agent workloadでend-to-end throughput 4.29倍超を報告し、KV cache外のagent memory hierarchyという隣接systems軸を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T02:29:24+09:00",
+    "round": "specialist-agent-state-memory-6",
+    "axis": "agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory",
+    "query_summary": "forward/query expansionからagentic servingのstate reuseへ軸を移した。SparseX、SAECache、TokTier、persistent Q4 agent KV、Pancakeを一次arXiv抄録で軽量評価し、投入直前に最新main identityと決定論的job pathを再照合した。TokencakeとTokenDanceは既存ready jobを発見したため除外し、未収録・job未存在の5件だけを送信した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2510.18586", "arXiv:2604.03143"],
+    "next_axis_hint": "次はSSD/NVMe・CXL・MoE expert cache/prefetchを重点検索し、identityに既収録のTutti/SwiftCache等を除外しながら未収録を探す",
+    "empty_round_reason": null
+  }
+}
