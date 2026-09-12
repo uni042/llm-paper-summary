@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e15f3a03ac140338",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.06664",
+      "title": "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
+      "source_url": "https://arxiv.org/abs/2604.06664",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06664-foundry-cuda-graph-context-materialization.md",
+      "priority": 94,
+      "reason": "LLMサービングのcold startで重み読込より長くなり得るCUDA Graph captureを対象に、graph topologyと実行contextをofflineで保存し、決定論的memory layout・kernel binary復元・topology templateでonline materializationする。分散時はsingle-GPU captureからrank依存通信状態だけをpatchしてmulti-GPU templateを生成する。一次資料ではQwen3-235B-A22Bの初期化を10分から3.9秒へ短縮し、最大99%のcold-start削減を報告しており、autoscalingとparallelism再構成の実用上重要な抜けを埋める。"
+    },
+    {
+      "canonical_id": "arXiv:2605.00254",
+      "title": "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.00254",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
+      "priority": 90,
+      "reason": "MoE推論の通信を前提にscale-up、scale-out、3D torus、3D full-meshのXPU network topologyをcross-layerで比較し、高価なscale-up fabricが必須かを検証する。一次資料ではswitchless topologyが全評価シナリオで20.6〜56.2%高いcost-effectivenessを示し、link bandwidth削減でもthroughput-per-costが最大27%改善する。expert parallel通信とhardware topologyの共同設計として重点テーマに直接関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.16867",
+      "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+      "source_url": "https://arxiv.org/abs/2605.16867",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+      "priority": 88,
+      "reason": "agentic inferenceのend-to-end SLOを異種GPU pool上で満たすため、出力長とGPU状態を予測してjust-enough instanceへrouteし、実行中のSLO違反riskを監視してruntime request migrationで補正するpredict-and-rectify型サービング。一次資料では既存routing比でgoodput最大27.4%改善を報告しており、異種資源とagent workflowを結ぶrouting研究として既存一般request schedulingを補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.15050",
+      "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.15050",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15050-solyx-hardware-telemetry-geo-routing.md",
+      "priority": 84,
+      "reason": "地理分散GPU cluster間のrequest placementでDCGM hardware telemetry、vLLM metrics、WAN RTT/jitterを統合した10-signal pressure scorerを用いるcontrol plane。一次資料では3データセンタのH100/H200およびRTX PRO 6000 Blackwell環境でround-robin比1.56〜1.75倍のthroughput、capability mismatch 0.43%、障害迂回p99 1247msを報告し、hardware signalがSLO breachを平均11.2秒先行することも示す。cluster内routingとは異なるgeo-distributed運用面の価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.06188",
+      "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+      "source_url": "https://arxiv.org/abs/2608.06188",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md",
+      "priority": 80,
+      "reason": "地理分散LLM inference routingへ電力網の限界排出原単位をproduction pressure routerのoverlayとして導入し、GPU telemetry由来のrequest energyと実績MOERでsettlementする。一次資料はlive multi-region GPU testbedでdispatch failureなしを確認し、年間replayではround-robin比50.9%のmodeled operational emissions削減を報告する。モデル変更なしのplacement policyとして分散サービングの運用評価に独立の観点を加える。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T02:29:24+09:00",
+    "round": "specialist-runtime-network-routing-4",
+    "axis": "GPU runtime cold-start・MoE network topology・heterogeneous/geo routing",
+    "query_summary": "GPU runtime、networking、地理分散routingの隣接systemsへ探索軸を移し、CUDA Graph context materialization、MoE network topology、agentic heterogeneous routing、hardware-telemetry geo routing、carbon-aware placementを一次arXiv抄録で軽量評価した。投入直前に最新HEADのidentity index、next discovery job、各決定論的research job pathを照合し5件とも未収録・job未存在を確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "forward citationとbackward referenceを明示的に回し、その後SSD/NVMe・MoE expert cache/prefetch・framework更新系の未収録を再探索する",
+    "empty_round_reason": null
+  }
+}
