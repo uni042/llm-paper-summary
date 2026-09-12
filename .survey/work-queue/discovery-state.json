@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:02:59+00:00",
+  "updated_at": "2026-09-12T19:07:31+00:00",
   "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-reasoning-kv-compression-1",
+  "last_round": "specialist-prefill-scheduling-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1793,6 +1793,26 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "新着の分離サービング・prefill/decode資源制御、またはMoE expert placement/cacheの9月新着へ軸を移す",
       "source_submission": "work-queue/submissions/20260913T0400JST-discovery-f033ef629abac6f2.json"
+    },
+    {
+      "run_key": "2026-09-13T04:00:16+09:00",
+      "round": "specialist-prefill-scheduling-2",
+      "axis": "分離サービングprefill制御・chunked prefill scheduling",
+      "query_summary": "Actions待ち中に分離型prefill/decode資源制御とchunked-prefill schedulingを探索。7件を軽量評価し、決定論的research job IDを最新mainで直接照合してFlowPrefill、Elastic KV Cache、P2P prefix routing、DOPSの4件を既存として除外した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5714285714285714,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2602.16603",
+        "arxiv:2608.23658",
+        "arxiv:2606.17059",
+        "arxiv:2607.25498"
+      ],
+      "next_axis_hint": "MoE expert placement/cache/prefetchの新着、またはGPU runtime・diffusion serving実行系へ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T0406JST-discovery-f4b6607a934a6b11.json"
     }
   ],
   "axes": {
@@ -2835,6 +2855,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "新着の分離サービング・prefill/decode資源制御、またはMoE expert placement/cacheの9月新着へ軸を移す"
+    },
+    "分離サービングprefill制御・chunked prefill scheduling": {
+      "last_run_key": "2026-09-13T04:00:16+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5714285714285714,
+      "next_axis_hint": "MoE expert placement/cache/prefetchの新着、またはGPU runtime・diffusion serving実行系へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-5b0daef0009e72b2",
+  "type": "research",
+  "parent_job_id": "job-f4b6607a934a6b11",
+  "priority": 82,
+  "canonical_id": "arXiv:2607.08930",
+  "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
+  "source_url": "https://arxiv.org/abs/2607.08930",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08930-blockserve-diffusion-llm-continuous-batching.md",
+  "selection_reason": "拡散型言語モデルの反復生成で要求完了時刻が揃わない問題に対し、block境界で完了requestを即時evictし、異なる拡散状態をgather/scatterで同一batchに混在させ、token budgetで新規requestを補充するblock-grained continuous batchingを提案する。Dream/LLaDA系でFast-dLLM比1.9〜10.6倍のthroughputを報告し、自己回帰以外のLLM serving schedulerとして新しい比較軸になる。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T19:07:31+00:00",
+  "artifact_transport": "structured_record_v10"
+}

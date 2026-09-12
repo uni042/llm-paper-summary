@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-fd5c72ea06dbb8a6",
+  "type": "research",
+  "parent_job_id": "job-f4b6607a934a6b11",
+  "priority": 83,
+  "canonical_id": "arXiv:2606.09061",
+  "title": "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
+  "source_url": "https://arxiv.org/abs/2606.09061",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md",
+  "selection_reason": "chunked prefillで固定FCFSと静的token budgetが生むhead-of-line blocking・starvationに対し、待ち時間と残prefill量を使うaging priority、latency予測に基づくrequest scheduling、active prefill controlを組み合わせる。NVIDIA GPUとAscend acceleratorの実測で平均E2E latencyを10%以上削減しP99 tailも改善、コード公開済みで、異種acceleratorを含むprefill制御の比較対象として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T19:07:31+00:00",
+  "artifact_transport": "structured_record_v10"
+}
