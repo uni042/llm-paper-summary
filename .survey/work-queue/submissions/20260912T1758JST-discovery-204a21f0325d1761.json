@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-204a21f0325d1761",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.25523",
+      "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.25523",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.25523-topas-workflow-aware-prefix-state-scheduling.md",
+      "priority": 84,
+      "reason": "マルチエージェントLLMの多段ワークフローで、エージェントごとの長いsystem prompt由来KVを保持すると将来呼出しを高速化できる一方、GPUメモリを占有して同時batchを縮小するトレードオフを、prefix保持とrequest schedulingの共同決定として扱う。SGLang実装で、合成DAGでは最良baseline比の平均/p99 JCTを最大39.8%/49.4%削減し、MetaGPT系実ワークフローでも平均JCTを9.8〜22.0%削減と報告する。単発requestの局所性ではなくworkflowの残存critical pathと将来prefix reuseを同時評価する点が、agentic servingの新しいscheduler系統として収録価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T17:30:00+09:00",
+    "round": "paper-worker-agentic-prefix-workflow-3",
+    "axis": "マルチエージェント・ワークフロー指向prefix状態スケジューリング",
+    "query_summary": "候補在庫がcritical水位のため、直近のSSD/CXL/KV復元・MoE探索から軸を変更し、agentic serving、prefix-state scheduling、分散prefix cache、prefix-aware batchingを一次資料中心に軽量評価した。Elastic KV Cache、CacheFlow、ShadowServe、AlignedServeは正本identityで既収録と確認し、TOPASのみ未収録かつ強い候補として投入した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.23658",
+      "arXiv:2604.25080",
+      "arXiv:2509.16857",
+      "arXiv:2605.23389"
+    ],
+    "next_axis_hint": "agentic servingのinterception/resume、multi-agent DAG scheduling、tool-call待機中KV管理を中心に、既収録prefix-cache系と重複しないシステム研究へ展開する"
+  }
+}
