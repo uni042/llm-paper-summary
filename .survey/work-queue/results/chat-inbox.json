@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-c115c71d60df8d04",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/01-offload-hierarchical-memory/2026-2609.11744-building-py-kvcache-a-performance-characterization-of-external-kv-caching-for-vllm-with-nvme-ssds.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.11744.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-6f0990d652c4efef",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T04:38:19+00:00"
 }
