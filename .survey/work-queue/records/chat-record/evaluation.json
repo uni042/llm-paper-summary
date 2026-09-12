@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.19746-20260912-1825-v10-a",
-  "job_id": "job-research-32074ec28a42f7d1",
+  "attempt_id": "attempt-2606.18431-20260912-1840-v10-a",
+  "job_id": "job-research-c5ba85dfa2989728",
   "data": {
-    "hardware": ["2×Intel Xeon Platinum 8575C、2TB DDR5-4800システムDRAM、8×NVIDIA H20 96GB、4×PCIe 5.0スイッチ。", "CXLプールはXConn XC50256スイッチとType-3デバイスで構成し、論文評価上のKVバックエンド総容量は2TB。", "RDMA比較は8×ConnectX-7 100Gbps NICをloopback構成で使用し、実際のクロスノードRDMAより有利な理想化比較とする。"],
-    "software": ["Ubuntu 22.04、Kernel 6.2.0-1015。", "SGLang + HiSparse。TP=8、データ並列注意=8、bf16、mem-static-fraction=0.85。", "HiSparse top-k=2048、device_buffer_size=6144を主設定とし、標準HiSparseにないRadix Cache統合を追加実装。"],
-    "model": ["DeepSeek-V3.2、AWQ 4-bit重み。疎注意はDeepSeek Sparse Attentionを使用。"],
-    "datasets": ["ShareGPT形式から512要求を抽出。主実験では文脈長16K〜128K、出力長1K。"],
-    "baselines": ["RDMA分離メモリプール: 接頭辞KV全体をローカルへ取得してからデコード。ConnectX-7 100Gbps loopbackで理想化。", "ローカルホストDRAM: CXL分離による追加遅延の上限比較。", "GPU HBMのみ: 低並行時の高速上限と容量制約を比較。", "疎top-kをRDMAで層ごとに直接読む方式はマイクロ測定で遅延が大き過ぎるため、実用比較から除外。"],
-    "correctness": "SAC、RDMA、DRAMはいずれも同じDeepSeek-V3.2 sparse attentionとtop-k選択を使い、KV保管・取得経路だけを変える。Round-2では全方式で接頭辞KVを事前にバックエンドへ置き、プリフィル計算を除外してデコード側のメモリ経路を比較する。",
+    "hardware": ["NVIDIA DGX A100上の8×A100 80GB、96 vCPU、248GBホストメモリ。"],
+    "software": ["paged attention、continuous batching、chunked prefillを備えたLLMサービング実装。主評価ではscheduler差を分離するためradix cacheとprefix cachingを無効化する。"],
+    "model": ["Llama-3-8B", "CodeLlama-34B", "QWen-72B。QWen-72Bはtensor parallel=4、context parallel=4。CodeLlama-34Bは単一A100上のメモリ制約条件でも評価。"],
+    "datasets": ["Azure Conversation trace", "ShareGPT", "s1k reasoning", "Azure Functions trace。", "混合負荷mix-1: reasoning 20% + Azure Function 80%。mix-2: reasoning 70% + Azure Function 30%。"],
+    "baselines": ["Sarathi: chunked prefillとdecode-priority continuous batching。", "LTR+: 完全な出力長を与えたSJF系比較方式。飢餓防止quantumを追加。", "MLFQ+/LAS: 既得サービス量に基づく予測不要方式。", "TRAIL+: 完全な残出力長を与えたSRPT系比較方式。decode進行0.6以後のswap抑制閾値を持つ。"],
+    "correctness": "各方式は同じモデル・要求トレース・GPU構成を使い、違いはスケジューリング方針である。LTR+/TRAIL+には現実には得られない完全な出力長を与え、予測不要UniBoostに対して強い上限比較とする。主指標はend-to-end latency、time to first token、time between tokensの平均・P95・P99とthroughput。",
     "settings": [
-      {"name":"Round-1 Cache Populate","description":"並行数8。GPUでプリフィルして全KVを各メモリバックエンドへ保存する。CXLとRDMAはいずれも計算中はGPUへ全KVを持つため、書き出し側の差を測る。"},
-      {"name":"Round-2 Cache Hit","description":"並行数64。接頭辞KVを事前配置しプリフィルを完全に省略して、デコード時のCXL top-kオンデマンド取得とRDMA全量取得を比較する。"},
-      {"name":"長文スケーリング","description":"32K、64K、128K文脈で並行数を変え、RDMA帯域飽和とSACのスループット伸長を比較する。"},
-      {"name":"CXLデバイスインターリーブ","description":"単一CXLデバイスと二デバイスへの要求単位分散を比較し、物理リンク競合回避の効果を測る。"},
-      {"name":"GPU hot buffer","description":"HiSparse device_buffer_sizeを4Kと6Kで比較し、GPU内ホットKV容量増加がCXL読み込み量とスループットへ与える影響を測る。"}
+      {"name":"固定・混合負荷比較","description":"各モデルとAzure/ShareGPT/s1kおよびmix-1/mix-2で10,000要求を処理する。Azure timestamp traceはburst性を保持したまま時間尺度を調整し、その他はPoisson到着を使用する。"},
+      {"name":"動的負荷","description":"Llama-3-8BでAzure coding traceに基づきQPSを時間変化させ、負荷変化時にγ-Adaが追随できるかと末尾遅延を測る。"},
+      {"name":"構成要素除去","description":"CodeLlama-34Bを単一A100で動かし、DistBoost、UniBoost-Base、MemGuard追加、γ-Adaを含む完全版を負荷掃引して比較する。メモリ制約を強くしてプリエンプト費用を顕在化する。"},
+      {"name":"SLO評価","description":"TTFTとtotal latencyについてSLO閾値を変え、99%など指定達成率を満たせる最小閾値を各方式で比較する。"},
+      {"name":"予測頑健性","description":"完全予測SJF/SRPTを含む比較に加え、出力長分布が会話・コード・推論でどれだけ変動するかをQwen-2-7BとDeepSeek-R1-Distillで測り、予測依存設計の前提を検証する。"}
     ],
-    "methodology": "主実験は同一サーバ、同一モデル、同一SGLang/HiSparse設定でメモリバックエンドだけを切り替える。512要求を固定出力長1Kで実行し、出力トークンスループット、最初のトークンまでの時間（TTFT）、トークン間時間（TBT）を測る。Round-1/2を分けることでプリフィル書き出しとキャッシュヒット後デコードを分離する。RDMAはクロスノードではなくloopbackの100Gbps NICを使うため、SACに不利な比較を避けた保守的条件である。",
-    "scope": "モデルはDeepSeek-V3.2のみが実機評価対象で、GLM-5.1やDeepSeek-V4への一般化はアクセスパターン類似性に基づく議論に留まる。CXLハードウェアもXConnスイッチと評価用Type-3構成に限定される。疎注意のtop-kアクセスを前提とするため、密注意モデルでは全KVが必要になりSACの細粒度取得利点は小さくなる。GPU HBM・ローカルDRAM・CXLの三階層を動的に共同管理する高度な階層化は今後の課題である。"
+    "methodology": "平均だけでなくP95/P99を第一級指標として比較し、完全な出力長を知る予測方式を強いbaselineに置く。reasoning-heavyとchat/function-heavyの混合比、bursty trace、モデル規模、GPUメモリ余裕を変える。アブレーションでは各設計段階が飢餓、フェーズ間head-of-line blocking、KV-aware preemption、分布変化へどう寄与するかを分離する。",
+    "scope": "主評価はA100世代の単一DGX内で、radix/prefix cacheを無効にした局所replica schedulerである。複数replica・複数model間のglobal routing、prefix cacheとの実運用相互作用、異種GPUは主評価外。理論的なtail保証は古典待ち行列モデルから導くが、実システムのcontinuous batching、有限KV、プリエンプト費用を完全には含まないため、MemGuard等の工学的補正が必要になる。"
   }
 }
