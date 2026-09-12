@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:19:00+00:00",
-  "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-fresh-framework-saturated-8",
+  "updated_at": "2026-09-12T16:00:36+00:00",
+  "last_run_key": "2026-09-13T00:58:47+09:00",
+  "last_round": "specialist-agent-kv-semantics-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "直近新着と主要serving framework周辺を追加で横断したが、強候補として再浮上したものはすべて既存で、独立した新規候補は確認できなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -993,6 +993,21 @@
       ],
       "next_axis_hint": "今回runではSSD階層、分離サービング、agentic serving、GPU runtime、multi-agent scheduling、MoE、KV、新着/実装経路を一巡したため、次回はその時点の新着と引用関係から再開する",
       "source_submission": "work-queue/submissions/20260913T0019JST-discovery-fresh-framework-saturated-8.json"
+    },
+    {
+      "run_key": "2026-09-13T00:58:47+09:00",
+      "round": "specialist-agent-kv-semantics-1",
+      "axis": "エージェント配信・Multi-LoRA・意味検索型KV管理",
+      "query_summary": "直前の新着・主要framework飽和軸を避け、エージェント実行意味論、Multi-LoRAのKV分岐、意味検索型KV圧縮へ軸を変更。一次資料の題名・抄録・実装公開情報を軽量確認し、canonical arXiv IDとrepo検索で既存候補を再確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はforward citationまたはOS/DBMS隣接のキャッシュ置換・階層メモリ政策からLLM servingへ接続する候補を探索する",
+      "source_submission": "work-queue/submissions/20260913T0059JST-discovery-specialist-agent-kv-1.json"
     }
   ],
   "axes": {
@@ -1555,6 +1570,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "今回runではSSD階層、分離サービング、agentic serving、GPU runtime、multi-agent scheduling、MoE、KV、新着/実装経路を一巡したため、次回はその時点の新着と引用関係から再開する"
+    },
+    "エージェント配信・Multi-LoRA・意味検索型KV管理": {
+      "last_run_key": "2026-09-13T00:58:47+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はforward citationまたはOS/DBMS隣接のキャッシュ置換・階層メモリ政策からLLM servingへ接続する候補を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
