@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:48:19.927698+00:00",
+  "updated_at": "2026-09-12T16:50:52.979474+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T16:48:19.927698+00:00",
+      "last_recorded_at": "2026-09-12T16:50:52.979474+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 25,
+        "new_jobs": 29,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12362,6 +12362,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34706420211:1",
+          "recorded_at": "2026-09-12T16:50:52.979474+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34706420211",
+            "run_attempt": "1",
+            "source_sha": "339f8b0b2f1fd5ffeecca136507f125e805e2192"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12423,6 +12437,14 @@
         },
         {
           "job_id": "job-1cf1e2dacbb5ac28",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-513b50afdb428d0f",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12605,6 +12627,34 @@
           "type": "research",
           "canonical_id": "arXiv:2604.03143",
           "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing"
+        },
+        {
+          "job_id": "job-fef140cd0cd0ddc9",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0d6791ec792101b0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.22880",
+          "title": "Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems"
+        },
+        {
+          "job_id": "job-research-4639566133723dd3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.15241",
+          "title": "LOCAL: Enabling Learning On-device Contiguously for Agent LLMs"
+        },
+        {
+          "job_id": "job-research-68c639f67ef98aac",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.17910",
+          "title": "Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA"
         }
       ],
       "new_paper_ids": [],
@@ -12616,7 +12666,8 @@
         ".survey/work-queue/results/20260913T0140JST-discovery-1f8a64f753d53399.json",
         ".survey/work-queue/results/20260913T0142JST-discovery-53325eb4d61afb8e.json",
         ".survey/work-queue/results/20260913T0144JST-discovery-5945231575e3ff8c.json",
-        ".survey/work-queue/results/20260913T0147JST-discovery-1cf1e2dacbb5ac28.json"
+        ".survey/work-queue/results/20260913T0147JST-discovery-1cf1e2dacbb5ac28.json",
+        ".survey/work-queue/results/20260913T0149JST-discovery-513b50afdb428d0f.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

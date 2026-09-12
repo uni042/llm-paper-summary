@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-68c639f67ef98aac",
+  "type": "research",
+  "parent_job_id": "job-513b50afdb428d0f",
+  "priority": 85,
+  "canonical_id": "arXiv:2512.17910",
+  "title": "Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA",
+  "source_url": "https://arxiv.org/abs/2512.17910",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md",
+  "selection_reason": "多数LoRA adapterを同時配信するとadapterごとにprefix KVが分断される問題に対し、base-aligned block hashingとactivation-aware maskingでbase/adapter間のcross-model KV reuseを可能にする。vLLMベース評価で標準LoRA servingに対し最大58倍のlatency改善、TTFTで100倍超の改善を報告し、multi-adapter servingとKV共有を結ぶ未収録候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:50:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}
