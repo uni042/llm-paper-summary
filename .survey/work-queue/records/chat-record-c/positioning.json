@@ -2,21 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2608.06007-20260913-0242-v10-c",
-  "job_id": "job-research-c56a9d57e83a480c",
+  "attempt_id": "attempt-2609.09643-20260913-0350-v10-c",
+  "job_id": "job-research-de70e163192311dd",
   "data": {
-    "limitations": [
-      "TensorCastは計算エンジンから状態管理方針を分離するが、エンジン内部の重みやKVを出し入れするInstance AdaptorはvLLM/SGLang等の実装ごとに必要であり、統合コストが完全に消えるわけではない。",
-      "一般抽象がすべての専用方式より常に高速であるとは主張していない。Qwen3-14Bの重み同期ではTP数増加に伴うテンソル切片化費が支配し、加速率が低下する。",
-      "学習チェックポイント、勾配、最適化器状態などへの適用はプログラムモデル上説明されるが、Megatron-LMやDeepSpeedへ統合した大規模学習評価は将来課題である。",
-      "Global Storeはデータ面に入らないものの、Artifact索引、リース、ワーカー状態の制御面を担う。極端なクラスタ規模でのメタデータ量、リース再調停、障害嵐に対する拡張性は主要評価ではない。",
-      "要求再均衡の大幅TTFT改善はOpenHands/SWE-Gym由来の多ターンエージェント負荷で得たもので、単発チャットや低並行環境では状態移送の費用に対して利得が小さい可能性がある。",
-      "TensorCastはCPU/GPU/ローカルストレージを扱うが、論文の主要性能比較でSSDをKVの主階層として長時間運用した耐久性・書込み増幅・ランダムI/Oを評価したわけではない。"
-    ],
-    "differences": "Mooncake、LMCache、HiCacheなどはKVキャッシュの保存・共有・転送に特化し、InstantTensorやBlitzScale等は重みロード・起動に特化する。TensorCastはそれぞれの専用方針を置き換える単一アルゴリズムではなく、重みとKVを同じArtifact/Operation/Planで扱える共通状態管理層を置く。RayやSparkのような分散計算基盤が『どの計算タスクをどこで実行するか』を中心にするのに対し、TensorCastは『どの論理テンソルをどこに置き、どう変換・実体化するか』を第一級にする。ByteCheckpointのようなチェックポイント再分割システムともライフサイクル操作は共通するが、TensorCastは推論エンジンとのInstance Adaptorと要求ルータから使うSignalを含め、状態管理方針を複数コンポーネントへまたがって合成できる点を狙う。",
-    "implementation_status": "公式実装は `tensorcast-ai/tensorcast` として公開されている。論文記載では分散ランタイム約160K行のC++、SDK約95K行のPythonで、gRPC、DuckDB、CUDA IPC、RDMA、mTCP系転送を用いる。vLLMの重み実体化とSGLangの重み同期・HiCache・要求ルータへ実際に統合して評価している。",
-    "research_positioning": "LLMサービング・分散状態管理の系統に属し、個別最適化アルゴリズムより一段下の基盤抽象を提案するシステム研究である。リポジトリ内ではKVキャッシュ階層、モデル重み配布、分離サービング、弾力的インスタンス管理を横断する位置にあり、今後の研究を比較する際は『専用方式より何倍速いか』だけでなく、同じ状態プリミティブを別用途へ再利用できる範囲、エンジン統合面の狭さ、データ面が中央制御を迂回できるか、複数状態を一つの方針へ合成できるかを見る必要がある。SSD/NVMe研究との関係では、ローカルストレージをテンソルプールの一階層として含めるため、重みやKVのCPU/SSD配置方針を上位Planから変更できる可能性があるが、SSD固有I/O最適化そのものは本論文の中心貢献ではない。",
-    "related_work": ["Mooncake", "LMCache", "SGLang HiCache", "ByteCheckpoint", "InstantTensor", "BlitzScale", "vLLM", "SGLang", "Ray", "Vineyard"],
-    "audit_notes": "arXiv:2608.06007v1のHTML全文を確認し、TaaS要件、Artifact/Operation/Plan/Signal、Caller-Workerモデル、分散テンソルプール、シャードホームとリース、直接データ転送、C++/Python実装、vLLM/SGLang統合、重み実体化・同期・KV管理・要求ルータの全評価を確認した。主カテゴリはcs.DC、横断登録なし。公式コード `https://github.com/tensorcast-ai/tensorcast` も確認した。参考文献節は88件で、明示的なarXiv識別子の一部をmetadataへ正規化した。"
+    "limitations": "公開のセッション注釈付き多エージェント実運用トレースが存在しないため、主評価はSWE-benchとGAIAの単一エージェント再生から構成される。ターン別ハザードは実行中に学習できるが、少数セッションでは表が不安定になり、GAIA/Gemma4で利得が目立たない。vLLM実測はSPEARだけを接頭辞キャッシュへ入れたもので、TIDEのSRAM/HBM移動は実装APIがないため実測されない。ソフトウェア版は短いツール待ちでアイドル開始時刻を誤認して逆効果になる。28nm面積・電力は制御IPだけで、KV配列、HBM PHY、接頭辞ディレクトリ、複数インスタンスルータを含まない。TIDEの帯域予算は論理トークンDMAモデルであり、実システムの競合・アドレス配置へ接続する際には追加検証が必要である。",
+    "differences": "既存のPagedAttentionやSGLangはブロック単位の格納・再利用を管理するが、ツール待ち中のセッションがいつ戻るかを順位付けしない。InferCeptやContinuumは一要求の停止状態を保持・交換するが、共有ライブ集合全体の相対順位を作らない。CacheScout、KVFlow、PBKV等は役割やワークフロー構造を使うため、同種セッションが増えると差が薄れる。UNISONはセッション自身の待ち間隔とターン進捗だけから全ライブ集合を順位付けし、その同じ順位で追い出しと高速層配置を同時に制御する。またIntentKV等のトークン削減方式と違い、KV内容を近似せずセッション単位で完全KVの場所を決める。ハードウェア面では注意データパスを高速化するのではなく、メモリ階層の横でイベントを観測する小型制御面に特化する。",
+    "implementation_status": "浮動小数点ソフトウェア方策、トレース評価、vLLM v1へのSPEAR統合、固定小数点RTL、商用28nm合成、Xilinx Zynq-7020実証まで論文内で確認されている。64セッション回路は0.169mm²、13.6mW、150MHz。FPGAでは43,415 LUT、20,938フリップフロップ、20 DSP48E1を使用し、ブロックRAMは使わない。2026-09-13時点でarXiv本文・関連ページから公式コード公開先は確認できないためcodeはnullとする。",
+    "research_positioning": "リポジトリではKVキャッシュのオフロード・再計算系統に置くのが適切で、特にエージェント長期セッションの階層配置研究として価値が高い。従来のSSD/CPU/HBM階層研究がブロック局所性や静的配置、要求単位の交換費用を中心に扱うのに対し、UNISONはツール待ちというエージェント固有イベントを利用して『どのセッションが次に戻るか』を近似する。将来SSDやCXLを含む三階層以上へ拡張する場合も、媒体選択とは独立したセッション順位信号として応用可能性がある。一方、現論文が実測した専用回路はSRAM/HBM二階層であり、SSD/NVMe遅延へ直接適用した性能値ではない。",
+    "relation_to_existing_repository": "CacheScout（arXiv:2608.14624）などのエージェントKV管理と直接比較され、同じ構造情報依存を避ける別方向の信号設計を示す。MooncakeやCachedAttentionのような階層KV基盤へは、既存の格納・転送機構を置き換えるのではなく、セッション順位と移動予算を与える上位制御として接続できる可能性がある。",
+    "audit_required": false
   }
 }
