@@ -9,8 +9,11 @@ on:
 permissions:
   contents: write
 
+# Maintenance mutates the same queue/index state as survey-helper and citation
+# backfill.  Serialize those writers so health reconciliation observes a stable
+# repository state.
 concurrency:
-  group: survey-maintenance
+  group: survey-helper-main
   cancel-in-progress: false
 
 jobs:
@@ -38,9 +41,9 @@ jobs:
               f.write(f'pending={str(pending).lower()}\n')
           PY
 
-      - name: Install consistency-check dependency
+      - name: Install survey dependencies
         if: steps.pending.outputs.pending == 'true'
-        run: python -m pip install --disable-pip-version-check pyyaml
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
       - name: Run full GC
         if: steps.pending.outputs.pending == 'true'
@@ -50,13 +53,62 @@ jobs:
             --apply \
             --report .survey/reports/full-gc-latest.json
 
-      - name: Build post-GC inventory
+      - name: Rebuild derived paper indexes
+        if: steps.pending.outputs.pending == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only | sort -u > /tmp/pre-index-diff.txt
+          python .survey/scripts/survey.py --root .survey build
+          # paper-identity-index is durable queue state, not a disposable derived
+          # view.  Do not rewrite it as a side effect of index regeneration.
+          git restore .survey/survey-state/paper-identity-index.json 2>/dev/null || true
+          git diff --name-only | sort -u > /tmp/post-index-diff.txt
+          comm -13 /tmp/pre-index-diff.txt /tmp/post-index-diff.txt > /tmp/derived-index-drift.txt || true
+          echo 'Derived index files repaired:'
+          cat /tmp/derived-index-drift.txt || true
+
+      - name: Run quality regression audits
+        if: steps.pending.outputs.pending == 'true'
+        run: |
+          python .survey/scripts/audit_paper_quality.py \
+            --no-fail-exit \
+            --markdown-out /tmp/paper-quality-audit.md \
+            --json-out /tmp/paper-quality-audit.json
+          python .survey/scripts/audit_list_summary_quality.py \
+            --no-fail-exit \
+            --markdown-out /tmp/list-summary-quality-audit.md \
+            --json-out /tmp/list-summary-quality-audit.json
+          python .survey/scripts/audit_overview_results.py \
+            --no-fail-exit \
+            --markdown-out /tmp/overview-result-quality-audit.md \
+            --json-out /tmp/overview-result-quality-audit.json
+
+      - name: Audit queue, state, quality regressions, and report freshness
+        if: steps.pending.outputs.pending == 'true'
+        id: health
+        shell: bash
+        run: |
+          set +e
+          python .survey/scripts/maintenance_health.py \
+            --root . \
+            --paper-quality /tmp/paper-quality-audit.json \
+            --list-quality /tmp/list-summary-quality-audit.json \
+            --overview-quality /tmp/overview-result-quality-audit.json \
+            --index-drift-file /tmp/derived-index-drift.txt \
+            --repair-snapshot \
+            --report .survey/reports/maintenance-health-latest.json
+          rc=$?
+          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Build post-maintenance inventory
         if: steps.pending.outputs.pending == 'true'
         run: |
           python .survey/scripts/build_repository_inventory.py \
             --root . \
             --output /tmp/repo-inventory.json \
-            --source-commit post-gc-working-tree
+            --source-commit post-maintenance-working-tree
 
       - name: Run repository-wide consistency check
         if: steps.pending.outputs.pending == 'true'
@@ -81,14 +133,29 @@ jobs:
           state_path = Path('.survey/work-queue/maintenance-cycle.json')
           state = json.loads(state_path.read_text())
           gc = json.loads(Path('.survey/reports/full-gc-latest.json').read_text())
+          health = json.loads(Path('.survey/reports/maintenance-health-latest.json').read_text())
           consistency = json.loads(Path('.survey/reports/consistency-latest.json').read_text())
           state['maintenance_pending'] = False
           state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
           state['last_gc_deleted'] = gc.get('deleted_count', 0)
           state['last_gc_checked_at'] = gc.get('checked_at')
+          state['last_health_status'] = health.get('status')
+          state['last_health_checked_at'] = health.get('checked_at')
+          state['last_health_errors'] = health.get('error_count', 0)
+          state['last_health_warnings'] = health.get('warning_count', 0)
+          state['last_queue_snapshot_repaired'] = bool(health.get('queue', {}).get('snapshot_repaired'))
+          state['last_index_repairs'] = health.get('derived_indexes', {}).get('repair_count', 0)
+          state['last_quality_regressions'] = sum(
+              len(v) for v in health.get('quality', {}).get('new_failures', {}).values()
+              if isinstance(v, list)
+          )
           state['last_consistency_status'] = consistency.get('status')
           state['last_consistency_checked_at'] = consistency.get('checked_at')
-          state['last_maintenance_status'] = 'passed' if consistency.get('status') == 'passed' else 'issues_found'
+          state['last_maintenance_status'] = (
+              'passed'
+              if consistency.get('status') == 'passed' and health.get('status') == 'passed'
+              else 'issues_found'
+          )
           state['last_maintenance_status_source'] = 'maintenance_workflow'
           state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
           PY
@@ -97,11 +164,13 @@ jobs:
         if: steps.pending.outputs.pending == 'true'
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'survey-maintenance[bot]'
           git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
           git add -A
           if git diff --cached --quiet; then
             exit 0
           fi
-          git commit -m 'survey-maintenance: full GC and consistency check'
-          git push
+          git commit -m 'survey-maintenance: GC, reconcile, and health audit'
+          git pull --rebase origin main
+          git push origin HEAD:main
