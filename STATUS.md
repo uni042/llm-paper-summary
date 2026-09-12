@@ -6,11 +6,11 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **127 / 50** |
-| Research ready | **127** |
+| Candidate在庫（Research ready） | **126 / 50** |
+| Research ready | **126** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **198** |
+| Research completed（累計） | **199** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **4 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T05:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **3** |
 | 新規job | **9** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 重複率 | **34.5%** |
 | Novel候補 | **326** |
 | Research候補採用 | **180** |
-| Research完了 | **66** |
-| Repo収録 | **66** |
+| Research完了 | **67** |
+| Repo収録 | **67** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 498 → 重複除外後 326 → Research候補採用 180 → Research完了 66 → Repo収録 66**
+**探索評価 498 → 重複除外後 326 → Research候補採用 180 → Research完了 67 → Repo収録 67**
 
 ## 探索効率（直近24時間）
 
@@ -189,6 +189,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### Research完了
 
+- `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
 - `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - `arXiv:2512.09472` — WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving
 - `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
@@ -196,15 +197,14 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 - `arXiv:2606.07665` — AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference
 - `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 - `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
-- `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 
 ### 次に処理する候補
 
 - P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 - P90 `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
-- P89 `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
 - P89 `arXiv:2606.29986` — HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators
 - P89 `arXiv:2506.21901` — A Survey of LLM Inference Systems
+- P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 
 ## 7日比較
 
