@@ -6,18 +6,18 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **12 / 50** |
-| Research ready | **12** |
+| Candidate在庫（Research ready） | **11 / 50** |
+| Research ready | **11** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **158** |
+| Research completed（累計） | **159** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **18 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 12）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -25,11 +25,11 @@ Run: **2026-09-12T19:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **4** |
 | Audit完了 | **0** |
 | Discovery完了 | **2** |
 | 新規job | **4** |
-| Repo収録 | **3** |
+| Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -56,15 +56,15 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 | 重複率 | **39.8%** |
 | Novel候補 | **53** |
 | Research候補採用 | **26** |
-| Research完了 | **34** |
-| Repo収録 | **34** |
+| Research完了 | **35** |
+| Repo収録 | **35** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 88 → 重複除外後 53 → Research候補採用 26 → Research完了 34 → Repo収録 34**
+**探索評価 88 → 重複除外後 53 → Research候補採用 26 → Research完了 35 → Repo収録 35**
 
 ## 探索効率（直近24時間）
 
@@ -97,6 +97,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### Research完了
 
+- `arXiv:2605.02189` — PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers
 - `arXiv:2606.17787` — LUMEN: Coordinated Failure Recovery for Distributed LLM Serving
 - `arXiv:2606.30391` — Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs
 - `arXiv:2609.11392` — PATTON: Enabling Commodity PIM for Production LLM Serving
@@ -104,15 +105,14 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 - `arXiv:2609.09166` — X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding
 - `arXiv:2606.18431` — Beyond Prediction: Tail-Aware Scheduling for LLM Inference
 - `arXiv:2606.19746` — SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL
-- `arXiv:2608.25523` — TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving
 
 ### 次に処理する候補
 
-- P90 `arXiv:2605.02189` — PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers
 - P86 `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
 - P83 `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P82 `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
+- P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 
 ## 7日比較
 
