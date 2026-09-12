@@ -2,16 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.12688-20260913-0110-v10-e",
-  "job_id": "job-research-5de21b53eec4b0eb",
+  "attempt_id": "attempt-2604.06664-20260913-0254-v10-e",
+  "job_id": "job-research-b7ad70251596454b",
   "data": {
-    "hardware": "単一ノードの4×NVIDIA H100 80GBまたは8×NVIDIA H200 141GB。BAGEL T2I/I2Iは3 H100、I2TとV-JEPA 2は1 H100、Qwen3-Omniは2 H200（Thinkerテンソル並列2では3 H200）、Orpheusは1 H200。",
-    "software": "M*公開実装はPython 3.12とPyTorch/CUDAを用い、FlashInferでページ化注意機構、HuggingFace Transformersでトークン化と重み読込み、torchaudio/torchcodecで音声・動画を処理する。比較対象はvLLM-Omni vLLM 0.21.0系、SGLang-Omni、VoxServe 0.1.0、Meta V-JEPA 2ネイティブ実装。",
-    "methodology": "BAGEL-7B-MoTはVBenchとFood101を用い、1024×1024画像、50段階のrectified-flowを実行する。画像生成・編集は3 H100でCFG三分岐を並列化し、画像理解は1 H100で64〜256トークンの固定長出力を生成する。Qwen3-Omni-30B-A3B-InstructはSeed-TTS、最大256トークン、バッチ1/4/8/16/32でThinkerをrank 0、Talker+Code2Wavをrank 1へ分離する。Orpheus-3BはSeed-TTS、バッチ1/2/4/8/16。V-JEPA 2 vitg-ACはDROID先頭50エピソード、256×256の8フレーム、bf16、バッチ1、ロールアウト長4/15/30を使う。各構成は3〜10件程度のウォームアップ後に10〜160件を測り、最大同時数の少なくとも5倍を実行する。比較可能なサブモデルはtemperature=0に固定し、p50/p95、TTFT、処理量、E2E遅延、音声RTFを報告する。",
-    "scope": "複合モデル族を横断する実機評価だが、すべて単一ノードであり、論文が掲げるMooncake経由のノード間TCP/RDMAは評価していない。π0.5はV-JEPA 2と同系統のロボット計画で既存基盤が未対応のためベンチマークから除外する。著者は一部ベースラインで正しさ・性能問題が起きた設定を公平性のため本文結果から除外している。",
-    "workloads": ["BAGELのテキスト→画像、画像→画像、画像→テキスト", "Qwen3-Omniのテキスト→音声", "Orpheus-3Bのテキスト→音声", "V-JEPA 2の行動条件付き世界モデルロールアウト"],
-    "baselines": ["vLLM-Omni", "SGLang-Omni", "VoxServe", "Meta vjepa2 native"],
-    "metrics": ["p50/p95 E2E遅延", "TTFT", "要求または音声処理量", "実時間係数RTF"],
-    "reproducibility": "現行arXiv v2から公式公開コード mstar-project/mstar がリンクされ、Apache-2.0で利用可能。評価構成、モデル重み、比較基盤、データセットの版・ライセンスも付録に記載される。"
+    "hardware": ["主環境: NVIDIA DGX、8×H200、Intel Xeon Platinum 8480C、2TB host memory、GPU間NVLink。", "追加環境: 8×B200、Intel Xeon Platinum 8570、GPU間NVLink。"],
+    "software": ["NVIDIA driver 590.48、CUDA 13.1。", "vLLM 0.11.2、PyTorch 2.9、NVSHMEM 3.3.24。", "warmed torch.compile cacheおよびFoundry archiveはlocal NVMeから読み込む。"],
+    "model": ["Qwen3-14B", "Qwen3-32B", "Llama3-8B", "Gemma3-12B", "Qwen3-30B-A3B", "Qwen3-235B-A22B"],
+    "datasets": ["cold-start microbenchmark", "vLLM serving benchmark: batch 16〜512、各prompt 128 output tokensを10回"],
+    "baselines": ["vLLM native CUDA graph warmup + stream capture", "vLLM eager mode without CUDA graph", "NVIDIA CUDA-checkpoint + CRIU（single-GPUのみ）"],
+    "correctness": "Foundryが復元したgraphとnative vLLM graphのTPOT曲線は重なり、生成tokenも同一であることを確認する。execution contextとkernel binaryを同じ状態へmaterializeするため、性能高速化のために演算内容を変更しない。",
+    "settings": [
+      {"name":"cold-start latency","description":"warm execution environmentを前提にenvironment initializationを除外し、近年の高速weight transferで1〜2秒へ短縮可能なweight loadingも比較から除外する。512 batch-size CUDA graphを持つworker initializationでgraph関連起動費を測る。"},
+      {"name":"dense DP","description":"Qwen3-14B/Qwen3-32B/Llama3-8B/Gemma3-12BをDP1〜DP8で評価し、parallelism degree増加時にもsingle-GPU SAVE archiveを再利用できるかを見る。"},
+      {"name":"MoE EP","description":"Qwen3-30B-A3BとQwen3-235B-A22BをEP2〜EP8、BF16およびFP8で評価し、DeepEP/NVSHMEMやDeepGEMMを含むcustom communication/compute kernelへ一般化するかを見る。"},
+      {"name":"CUDA-checkpoint比較","description":"IPC communication非対応のためsingle-GPUのみ。model weightsとKV cacheをcheckpoint前にreleaseしてcheckpoint imageからデータ量を除き、CUDA execution state復元だけでもFoundryより重いか比較する。"},
+      {"name":"throughput preservation","description":"H200/B200でbatch 16〜512のmean TPOTをnative CUDA graph vLLMと比較し、template updateやrestored binaryがreplay性能を劣化させないことを確認する。"},
+      {"name":"templating ablation","description":"stream capture、CUDA driver graph construction、cuGraphExecUpdateによるon-demand specializationのper-graph cost、unique topology数、archive sizeを比較する。"}
+    ],
+    "methodology": "Foundryが狙うgraph captureだけを切り出すため、process prewarmと高速weight loadingが利用できる現代的なelastic servingを想定してworker initializationを比較する。cold-start短縮だけではeager modeで容易に数字を下げられるため、同時にnative graphと同一TPOT・token correctnessを検証する。またHopperとBlackwell、denseとMoE、DPとEP、BF16とFP8を跨いで、memory layout/binary restorationが特定kernel実装に固定されていないことを確認する。",
+    "scope": "評価は主にNVIDIA CUDAとvLLM decoderであり、AMD HIP graphへの直接実装評価はない。inter-rank sharingは同じexecution topologyを持つSPMD型DP/TP/EPが前提で、Pipeline Parallelismの異なるstage topologyは共有対象外。archiveとtorch.compile cacheはlocal NVMeに既に存在する前提で、archive生成・配布の遠隔storage/network時間はonline cold-start比較へ含めない。"
   }
 }
