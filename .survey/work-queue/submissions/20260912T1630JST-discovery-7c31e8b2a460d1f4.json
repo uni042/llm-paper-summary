@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7c31e8b2a460d1f4",
+  "discovery_stats": {
+    "run_key": "2026-09-12T16:30:00+09:00",
+    "round": "paper-worker-new-arrivals-power-moe-kv-1",
+    "axis": "新着分離サービング電力制御・MoE推論効率・KVメモリ回収",
+    "query_summary": "2026年9月の新着を中心に、分離サービングの電力制御、動的MoE推論、専門家枝刈り、KVキャッシュメモリ回収へ探索軸を広げ、arXiv一次情報を軽量評価した。投入直前にarXiv IDをrepo検索し、既収録・既存jobとの一致がない4候補だけを送る。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次回はSSD/NVMe expert I/O scheduling、分散ストリーミング入口、Ray/GCS制御面分割などExaServeから派生するシステム軸を優先する",
+    "empty_round_reason": null
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11133",
+      "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11133",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-model-calibrated-power-control-disaggregated-llm-serving.md",
+      "priority": 91,
+      "reason": "プリフィルとデコードを別GPU群へ分離するLLMサービングで、両段階に同じ省電力設定を使う問題を扱う。B200上のMoEモデルでプリフィルはSMクロック窓、デコードは実測した性能崖の直上へ電力上限を自動較正し、実行時SLOガードを組み合わせる。Qwen3-Coder-480BではMax-Qの+8.6% tokens/J・平均遅延+5.2%に対し、+20.4% tokens/J・+3.5%遅延を報告し、3日運転でレーン対の電力を32.3%削減する。分離サービングの資源制御として新着かつ実測価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.09241",
+      "title": "Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2609.09241",
+      "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md",
+      "priority": 83,
+      "reason": "MoE推論時に各トークンの活性専門家数を動的に減らすと計算量は下がるが、学習時top-kから外れることで専門家出力のRMS尺度と分散がずれ、容量損失とは別の精度低下が生じることを分析する。層別較正統計で表現分布を補正するLDAを追加し、再学習なし・小さな追加費用で動的top-kの性能を回復する。EMNLP 2026 Findings採録で、適応計算とMoE実行効率の系統に直接関連する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04453",
+      "title": "When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2609.04453",
+      "paper_path": "papers/inference/06-moe-quantization-compression/2026-2609.04453-expert-pruning-over-dispersed-moe.md",
+      "priority": 78,
+      "reason": "MoEの専門家枝刈りで通常使うルータ確率が、強い負荷分散学習で専門家利用が均一化したモデルでは重要度信号にならないことを示す。gpt-oss-20Bではパープレキシティ最良の枝刈りが数学推論を最悪化する逆転を観測し、複数領域の最悪劣化を反復的に補正するMESAを提案する。25%専門家削減で11ベンチマーク中7つで活性値基準より優れ、gpt-oss-120BやGemma-4-26B-A4Bにも一般化するため、MoEメモリ削減の実用上の境界条件として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23658-elastic-kv-cache-reclamation.md",
+      "priority": 75,
+      "reason": "プリフィル用に起動時固定予約されるGPUメモリを、デコード主体の間だけKVキャッシュへ貸し出し、次のプリフィル前にCUDA仮想メモリで返却する実働機構を実装する。一方で実験するとチャンク化プリフィルの小さいチャンクでもTTFT差は約1%で、単純にmax_num_batched_tokensを下げる方が同等遅延で多くのKV容量を回収できるという否定的結果を示す。機構だけでなく『どの最適化は実際には不要か』を定量化するため、KVメモリ管理系の比較基準として有用である。"
+    }
+  ]
+}
