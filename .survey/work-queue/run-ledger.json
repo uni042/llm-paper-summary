@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:50:18.529097+00:00",
+  "updated_at": "2026-09-12T18:52:36.079689+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,19 +13949,19 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T18:50:18.529097+00:00",
+      "last_recorded_at": "2026-09-12T18:52:36.079689+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
         "new_jobs": 14,
-        "new_papers": 3,
+        "new_papers": 4,
         "fallback_archived": 0
       },
       "events": [
@@ -14065,6 +14065,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34712418882:1",
+          "recorded_at": "2026-09-12T18:52:36.079689+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34712418882",
+            "run_attempt": "1",
+            "source_sha": "9d56a1b33e71416dad44681b9be74f9a357b6809"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14121,6 +14136,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2ce10fdd8ff6176b",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08782",
+          "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -14228,7 +14251,8 @@
       "new_paper_ids": [
         "arXiv:2609.09800",
         "arXiv:2609.09643",
-        "arXiv:2501.14417"
+        "arXiv:2501.14417",
+        "arXiv:2607.08782"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json",
@@ -14238,8 +14262,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,
-      "paper_active_count_after": 377,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 378,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

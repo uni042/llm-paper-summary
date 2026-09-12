@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 188,
+      "completed": 189,
       "superseded": 44,
-      "ready": 111,
+      "ready": 110,
       "deferred": 3
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-2ce10fdd8ff6176b",
-      "type": "research",
-      "lane": null,
-      "priority": 90,
-      "canonical_id": "arXiv:2607.08782",
-      "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference",
-      "source_url": "https://arxiv.org/abs/2607.08782",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-2466f653227bab25",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-e290cd912706acf4",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2601.22705",
+      "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control",
+      "source_url": "https://arxiv.org/abs/2601.22705",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-29ae0219b7b0fec5",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T18:49:29+00:00"
+  "generated_at": "2026-09-12T18:51:25+00:00"
 }

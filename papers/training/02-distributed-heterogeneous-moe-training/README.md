@@ -49,6 +49,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 4年前（2022-10〜2023-09）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   MoEのルーティング偏りを監視し、負荷の高いエキスパートだけを必要なGPUへ複製・移動して、トークンを捨てずにGPU間の待ち時間を減らす学習システム。
 <!-- survey:auto:end -->
