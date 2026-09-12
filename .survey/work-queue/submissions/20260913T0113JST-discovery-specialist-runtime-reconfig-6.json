@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ea350feba032ecab",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.18741",
+      "title": "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.18741",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18741-remp-runtime-model-parallelism-reconfiguration.md",
+      "priority": 91,
+      "reason": "負荷変動中のLLM servingでtensor parallelismとpipeline parallelism構成を再起動なしに切り替えるruntime再構成を扱い、runtime状態を分離したうえでKV stateを2次元に移送する。構成切替を1〜7秒程度に抑え、再起動方式より大幅に短い停止時間でTTFT/TPOT/throughputを改善するため、弾力的servingとKV migrationの交点として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2602.22593",
+      "title": "Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2602.22593",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.22593-flying-serving-online-dp-tp-switching.md",
+      "priority": 90,
+      "reason": "vLLM上でdata parallelismとtensor parallelismをオンライン切替し、zero-copy weight view、KV Cache Adaptor、communicator pool、deadlockを避けるschedulerで状態移行を支える。負荷に応じたparallelism切替で高負荷時最大4.79倍、低負荷時最大3.47倍の改善を報告しており、動的構成変更を実装レベルで扱う有力候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-runtime-reconfig-6",
+    "axis": "動的parallelism再構成・KV state migration",
+    "query_summary": "異種配置・edge KV migration軸から、稼働中のmodel-parallelism切替とrequest/KV state移送へ展開。ReMPとFlying Servingを一次資料抄録で軽量評価し、送信直前に最新HEAD・queue更新後のdefault branchでcanonical arXiv IDを再検索して既存化していないことを確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はfault tolerance・request migration・elastic recoveryとmulti-tenant isolationの独立軸を確認し、強い未収録候補が枯れた場合に収束判定する",
+    "empty_round_reason": null
+  }
+}
