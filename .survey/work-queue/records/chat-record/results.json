@@ -2,21 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2603.03251-20260913-0430-v10-a",
-  "job_id": "job-research-f0796c3a0863aed5",
+  "attempt_id": "attempt-2605.00254-20260913-0430-v10-c",
+  "job_id": "job-research-d335718873eaacf6",
   "data": {
-    "overview": "Saguaro/SSDは主評価のLlama-3.1-70B/1Bで四データセット平均255.8 token/sを達成し、通常の投機的デコード161.8 token/sに対して1.58倍、自回帰生成54.7 token/sに対して4.68倍となった。個別ではGSM8Kで自回帰比5.50倍、HumanEvalで5.17倍である。Qwen3-32B/0.6Bでも平均203.8 token/sで通常投機136.8 token/sに対して1.49倍、自回帰88.8 token/sに対して2.29倍となり、モデル族を跨いで改善する。本文の強いオープンソース比較を含む集計では最強の投機的デコード比較対象より平均30%高速で、遅延とスループットのパレート前線を前進させる。利得はドラフト遅延を検証の裏へ隠せる低バッチで特に大きい。",
+    "overview": "現行H100世代のMoE decodeでは、低価格なswitchless topologyがraw通信性能で劣ってもthroughput per costでは一貫してscale-upを上回る。3D torus/full-meshは評価した全serving scenarioでscale-upより20.6〜56.2%高い費用効率となり、full-meshが性能・費用のPareto frontierを形成する。scale-up内部でも現行450 GB/sは多くの条件でsweet spotを超え、150〜300 GB/sへ落とすことで6〜27% throughput/costが改善する。理由はDBOと投機的デコードでcommunicationをcomputeの裏へ隠せると、一定帯域以上の追加network性能がend-to-end throughputへ寄与しないためである。ただし短context・非常に厳しいTPOTではscale-upのraw bandwidth優位が残り、cluster増設がpower/spaceでできない場合はthroughput/XPUを優先する判断になる。",
     "key_results": [
-      {"metric": "Llama-3.1-70B/1B平均デコード速度", "value": "255.8 token/s、通常投機比1.58×、自回帰比4.68×", "baseline": "通常の投機的デコード161.8 token/s、自回帰54.7 token/s", "condition": "4×H100ターゲット + 1×H100ドラフト、バッチ1、貪欲、4データセット平均", "interpretation": "検証中に次ドラフトを先行生成することで、通常投機で残るドラフト待ちを大部分クリティカルパスから外せる。"},
-      {"metric": "Llama HumanEval", "value": "283 token/s、通常投機比1.60×、自回帰比5.17×", "baseline": "SD 176 token/s、AR 54.7 token/s", "condition": "Llama-3.1-70B/1B", "interpretation": "コード生成でも高い受理率と検証結果予測が両立し、大きな低遅延利得が得られる。"},
-      {"metric": "Llama GSM8K", "value": "301 token/s、通常投機比1.60×、自回帰比5.50×", "baseline": "SD 188 token/s、AR 54.7 token/s", "condition": "Llama-3.1-70B/1B", "interpretation": "四データセット中最大の自回帰比高速化を示す。"},
-      {"metric": "Qwen3-32B/0.6B平均デコード速度", "value": "203.8 token/s、通常投機比1.49×、自回帰比2.29×", "baseline": "SD 136.8 token/s、AR 88.8 token/s", "condition": "Qwen3モデル族、4データセット平均", "interpretation": "SSDの効果が特定のLlamaドラフト組み合わせだけに依存しない。"},
-      {"metric": "強い投機的デコード比較に対する平均改善", "value": "約30%高速", "baseline": "設定掃引した通常投機、SGLang/vLLM、対応条件のEAGLE-3", "condition": "端から端までの評価", "interpretation": "単なる弱い既定値比較ではなく、強い既存投機構成に対しても新しい状態を達成する。"},
-      {"metric": "キャッシュ分岐形状", "value": "全温度で通常投機を上回り、高温度ほど幾何学的配分の優位が拡大", "baseline": "均等な分岐数配分", "condition": "分岐予算を固定し温度を掃引", "interpretation": "受理長の発生確率に合わせて分岐予算を寄せることが、結果空間が広がる条件ほど重要になる。"},
-      {"metric": "遅延・スループット", "value": "パレート前線を改善、最大利得は低バッチ", "baseline": "通常投機および標準推論基盤", "condition": "バッチサイズ・提供負荷を変化", "interpretation": "追加ドラフトGPUを含めても、対話型の低バッチ領域では待ち時間隠蔽が追加計算費を上回る。"}
+      {"metric":"switchlessのthroughput/cost改善","value":"scale-up比20.6〜56.2%高い","baseline":"scale-up topology","condition":"評価したTPOT/context/software optimization scenario全体","interpretation":"高価なnon-blocking scale-upのraw性能差よりswitch/link費用差が大きく、通信を十分隠せる領域では低価格topologyを増設する方がiso-throughput費用を下げる。"},
+      {"metric":"最良topology","value":"3D full-meshが全serving scenarioでperformance-cost Pareto frontier","baseline":"scale-up、scale-out、3D torus","condition":"topology、bandwidth、cluster size、parallelismを共同掃引","interpretation":"torusより高い直接接続性でA2A性能を保ちながら、fat-tree switch費用を避けるため最良tradeoffになる。"},
+      {"metric":"scale-up帯域sweet spot","value":"現行450 GB/sより低い150または300 GB/sが多くの条件で最適、throughput/cost +6〜27%","baseline":"450 GB/s 1× provisioning","condition":"64-XPU H100、context/SLOとDBO+SDを変化","interpretation":"DBO後のECTが0になれば、それ以上bandwidthを増やしてもthroughput ceilingは動かずnetwork costだけ増える。"},
+      {"metric":"DBOによる帯域差の隠蔽","value":"context512でTPOT>60msでは150 GB/sと450 GB/sのthroughputがほぼ一致","baseline":"450 GB/s scale-up","condition":"dual-batch overlap適用","interpretation":"150 GB/sでもcommunication timeがcompute以下になり、露出通信時間がほぼ消える。"},
+      {"metric":"通信モデル精度","value":"H100 intra/inter-node平均相対誤差10.82%/7.97%、custom ARはA100で4.79%/3.32%","baseline":"NCCL/custom kernel実測","condition":"128B〜16GiB、4〜32 GPU等","interpretation":"仮想topology探索に使うalpha-beta拡張が現行hardwareのcollective挙動を実用精度で再現する。"},
+      {"metric":"end-to-endモデル精度","value":"8×H100実測で誤差<9.6%、96×H100公開traceで<7.5%","baseline":"real/public DeepSeek-V3 decode runtime","condition":"Clos-based deployment","interpretation":"通信だけでなくcompute/parallelismを統合したTPOT推定も一桁%台に収まる。"},
+      {"metric":"将来Blackwell","value":"900 GB/s provisionでswitchless優位が概ね維持","baseline":"scale-up","condition":"256-XPU、10/40ms、将来kernel scaling projection","interpretation":"compute/memoryとnetworkの伸びが現行程度なら、必要saturation bandwidthは次世代provision内に留まる。"},
+      {"metric":"将来Rubinの限界","value":"short-context/tight-SLOではfull-mesh/torusがscale-upへ追いつくのに最大3600 GB/s必要","baseline":"Rubin 1800 GB/s provision","condition":"TPOT 10ms、短context等","interpretation":"memory bandwidthの6.57×成長がlinkの4×を上回るとcompute時間が縮み、communicationを隠す余地が減るためswitchless優位は永続保証されない。"}
     ],
-    "negative_results": "SSDは追加のドラフト計算と専用GPUを消費する。先行した検証結果が外れると、その分岐生成は無駄になり、キャッシュミス時にはバックアップ生成費も発生する。バッチが大きいほど少なくとも一系列がミスする確率が上がるため、遅いバックアップを使うとバッチ全体が停止する。論文はこのため大バッチで極低遅延バックアップへ切り替える。さらに、強化学習向けロールアウトやオフライン大量生成のようなスループット律速用途では、投機的デコード一般が検証計算と追加ドラフト計算を増やすため不利になり得る。追加ドラフトGPU数を増やす利得もキャッシュヒット率の飽和によって逓減する。",
-    "interpretation": "速度向上の本質は、ドラフトモデルを単に速くすることではなく、次ラウンドを開始するために必要な検証結果を確率的な分岐へ変換し、その不確実性を並列計算で先払いすることにある。キャッシュヒットしたラウンドではドラフト時間が検証時間に完全に重なる。Saguaroの三つの最適化は、ヒット率を上げる、補正トークンを予測しやすくする、ミス時の停止を短くするという別々の失敗要因をそれぞれ抑える。",
-    "quality_impact": "生成品質を近似しない損失なし方式である。先行計算されたドラフトは最終出力を直接確定せず、ターゲットモデルによる通常の投機的デコード検証を必ず通る。したがって主なトレードオフは品質ではなく、追加GPU、ドラフト側計算量、投機キャッシュ、ミス時の無駄計算である。"
+    "negative_results": "50 GB/sは安価でも多くのscenarioでcommunicationを十分隠せずsweet spotにならない。TPOT=15msのshort-contextでは小batchのためDBOが効かずscale-upのraw throughput優位が残る。256 XPU化は40〜100ms領域ではall-to-all domain拡大で全topologyのthroughput/costを下げ、特にscale-upは二段fat-tree化で費用悪化が大きい。long-context small-batchではDBO自体が無効でもbandwidth差が小さいためswitchlessの費用優位は残る。Rubin世代の一部条件ではswitchlessが現行provision内でscale-up性能へ届かない。",
+    "interpretation": "『通信時間を最小にするnetwork』と『MoE servingの費用を最小にするnetwork』は一致しない。設計上必要なのはcollectiveを最速にすることではなく、SLO下の最適batch/parallelismでcommunicationがcomputeの裏へ十分隠れる帯域まで投資することである。ソフトウェア重畳が強くなるほどnetworkの過剰provisionは価値を失い、hardware/network/softwareを別々に最適化する設計は設備費を浪費しやすい。",
+    "quality_impact": "同一モデルのdecode実行基盤を比較するため生成品質低下はない。TPOT SLOとthroughput/costのtradeoffを扱い、投機的デコードのpass rateは性能モデルの入力値として固定する。結果の主なtradeoffは品質ではなく、絶対throughput/XPU、network設備費、cluster増設可能性、運用複雑性である。"
   }
 }
