@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-53325eb4d61afb8e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.22219",
+      "title": "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+      "source_url": "https://arxiv.org/abs/2512.22219",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
+      "priority": 88,
+      "reason": "multi-GPUモデル推論の多数kernel launchを、SM粒度の依存グラフとin-kernel分散schedulerにより単一persistent mega-kernelへ変換するcompiler/runtime。operator境界を越えたsoftware pipelineとkernel overlapを自動化し、既存kernel-per-operator serving比でend-to-end latency最大1.7倍改善と報告する。通信・演算・launch overheadをruntime/compiler層でまとめて最適化するため、推論基盤系統の重要な欠落候補。"
+    },
+    {
+      "canonical_id": "arXiv:2602.11808",
+      "title": "Deep Kernel Fusion for Transformers",
+      "source_url": "https://arxiv.org/abs/2602.11808",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2602.11808-deep-kernel-fusion-transformers.md",
+      "priority": 81,
+      "reason": "長文脈agentic推論でHBM帯域律速になるSwiGLU MLPに対し、weight traffic削減とcache reuseを狙うdeeply fused kernelとkernel schedulerを提案し、SGLangへ統合する。H100で最大13.2%、A100で9.7%の速度向上を報告しており、serving-level改良ではなく生成全体へ効くkernel/runtime共同設計として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2601.17768",
+      "title": "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+      "source_url": "https://arxiv.org/abs/2601.17768",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+      "priority": 80,
+      "reason": "dynamic batchingとGPU reduction順序に起因する推論非決定性を、batch-invariant kernel全面書換えではなくfast path生成＋固定形状replayのverify/rollbackで解消するscheduler型手法。既存kernelをほぼ変更せず、決定性が必要なtrafficに比例してoverheadを払う設計で、再現可能推論とthroughputの新しいsystems trade-offを扱う。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-kernel-runtime-determinism-7",
+    "axis": "GPU kernel/runtime・推論決定性",
+    "query_summary": "過去serving欠落の投入後、GPU kernel fusion、persistent runtime、dynamic batching由来の非決定性へ探索軸を移した。最新mainで3件の決定論的research jobが存在しないことを送信直前に再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はkernel最適化を離れ、直近新着、citation/related-work、通信collective/PD transferを独立に探索する",
+    "empty_round_reason": null
+  }
+}
