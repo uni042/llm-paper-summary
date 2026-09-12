@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:45 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:46 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **107 / 50** |
-| Research ready | **107** |
+| Candidate在庫（Research ready） | **109 / 50** |
+| Research ready | **109** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **187** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **2** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **7** |
+| Discovery完了 | **3** |
+| 新規job | **10** |
 | Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **85** |
-| 探索評価候補 | **409** |
-| 重複除外 | **123** |
-| 重複率 | **30.1%** |
-| Novel候補 | **286** |
-| Research候補採用 | **149** |
+| 探索round（stats観測） | **86** |
+| 探索評価候補 | **416** |
+| 重複除外 | **127** |
+| 重複率 | **30.5%** |
+| Novel候補 | **289** |
+| Research候補採用 | **151** |
 | Research完了 | **55** |
 | Repo収録 | **55** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 409 → 重複除外後 286 → Research候補採用 149 → Research完了 55 → Repo収録 55**
+**探索評価 416 → 重複除外後 289 → Research候補採用 151 → Research完了 55 → Repo収録 55**
 
 ## 探索効率（直近24時間）
 
@@ -81,6 +81,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
+| heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
 | serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
@@ -159,11 +160,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:30:44+09:00** — heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T03:30:44+09:00** — edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision: 評価 5 / 重複 1 / 採用 3
 - **2026-09-13T03:30:44+09:00** — edge/on-device offload・multitasking memory・cloud KV streaming: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T03:02:31+09:00** — GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap: 評価 6 / 重複 1 / 採用 3
 - **2026-09-13T03:02:31+09:00** — DBMS由来cache policy・real-time/best-effort混在QoS scheduling: 評価 9 / 重複 7 / 採用 2
-- **2026-09-13T03:02:31+09:00** — CUDA compiler・JIT/Graph runtime・decode kernel serving: 評価 6 / 重複 4 / 採用 2
 
 ## 最近処理した論文
 
