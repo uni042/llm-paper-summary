@@ -1,19 +1,19 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **118 / 50** |
-| Research ready | **118** |
+| Candidate在庫（Research ready） | **122 / 50** |
+| Research ready | **122** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **189** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **2 / 24** |
+| Maintenance counter | **3 / 24** |
 
 ### 注意事項
 
@@ -28,35 +28,35 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **12** |
-| 新規job | **30** |
+| Discovery完了 | **13** |
+| 新規job | **35** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefix-chunked-prefill-7**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | chunked prefill・prefix-aware batchingの基礎欠落 |
-| 評価候補 | **4** |
-| 重複除外 | **3** |
-| Novel候補 | **1** |
-| Research候補採用 | **0** |
-| 重複率 | **75.0%** |
+| 探索軸 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル |
+| 評価候補 | **7** |
+| 重複除外 | **2** |
+| Novel候補 | **5** |
+| Research候補採用 | **4** |
+| 重複率 | **28.6%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **95** |
-| 探索評価候補 | **454** |
-| 重複除外 | **149** |
+| 通常worker run（ledger観測） | **20** |
+| 探索round（stats観測） | **96** |
+| 探索評価候補 | **461** |
+| 重複除外 | **151** |
 | 重複率 | **32.8%** |
-| Novel候補 | **305** |
-| Research候補採用 | **162** |
+| Novel候補 | **310** |
+| Research候補採用 | **166** |
 | Research完了 | **57** |
 | Repo収録 | **57** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefix-chunked-prefill-
 
 ### 24時間ファネル
 
-**探索評価 454 → 重複除外後 305 → Research候補採用 162 → Research完了 57 → Repo収録 57**
+**探索評価 461 → 重複除外後 310 → Research候補採用 166 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -85,6 +85,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefix-chunked-prefill-
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
 | serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
+| 投機的デコードのserving・pipeline・メモリ制約・性能モデル | 7 | 2 | 4 | 28.6% | 57.1% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
@@ -169,11 +170,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefix-chunked-prefill-
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — 投機的デコードのserving・pipeline・メモリ制約・性能モデル: 評価 7 / 重複 2 / 採用 4
 - **2026-09-13T04:00:16+09:00** — chunked prefill・prefix-aware batchingの基礎欠落: 評価 4 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — CXL・SSD・remote KV cache階層メモリ: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — MoE通信・runtime parallelism・online expert placement: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — agentic workload・program/session-aware serving: 評価 4 / 重複 1 / 採用 3
-- **2026-09-13T04:00:16+09:00** — GPU kernel生成・runtime最適化の隣接系: 評価 3 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
@@ -190,11 +191,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefix-chunked-prefill-
 
 ### 次に処理する候補
 
+- P91 `arXiv:2603.03251` — Speculative Speculative Decoding
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - P90 `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - P90 `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
-- P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 
 ## 7日比較
 
