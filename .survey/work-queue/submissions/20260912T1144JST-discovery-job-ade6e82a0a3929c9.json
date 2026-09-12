@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ade6e82a0a3929c9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.00407",
+      "title": "DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.00407",
+      "paper_path": "papers/inference/05-moe-expert-placement-caching/2026-2609.00407-dynande-dynamic-near-data-expert-scheduling-for-batched-moe-inference.md",
+      "priority": 92,
+      "reason": "NPUと近データ処理装置の協調MoE推論で、専門家単位の並行度、装置異種性、転送と計算の重畳、NPU上に残った専門家の時間的再利用を同時にモデル化して層ごとの専門家実行先を動的決定する。既存NPU-NDP MoEサービングに対して平均2.6倍のプリフィル、2.2倍のデコード高速化を報告し、専門家オフロードを固定配置や単純帯域比較ではなくバッチ内並行性と再利用状態を含むオンラインスケジューリング問題として扱う点が強い。"
+    }
+  ]
+}
