@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "job_id": "job-78cb3cedb3b71cf6",
+  "discovery_stats": {
+    "run_key": "2026-09-12T17:30:00+09:00",
+    "round": "paper-worker-moe-io-hierarchy-2",
+    "axis": "MoE専門家先読み・I/O階層・エッジ異種実行",
+    "query_summary": "前ラウンドのKV復元・分離サービングから軸を変え、MoE専門家のCPU/ストレージ退避、予測先読み、I/Oと計算の重畳、エッジメモリ制約を一次資料で探索した。過去discovery-stateで既採用のFlashMoE、OD-MoE、Speculating Experts、SSD-backed KV候補は除外し、最新mainの識別子・題名検索でも未収録の候補だけを送る。",
+    "candidate_count": 10,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2601.17063",
+      "arXiv:2512.03927",
+      "arXiv:2603.19289",
+      "arXiv:2605.03375",
+      "arXiv:2607.16892"
+    ],
+    "next_axis_hint": "採用候補を精読し、次はSSD/NVMe専門家I/Oスケジューリング、専門家圧縮と先読みの協調、CXL/CPU/SSD三階層配置へ展開する"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.24787",
+      "title": "SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models",
+      "source_url": "https://arxiv.org/abs/2607.24787",
+      "paper_path": "papers/inference/03-moe-expert-prefetch/2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching.md",
+      "priority": 91,
+      "reason": "次層の専門家候補を共有軽量アダプタで予測するが、予測結果は非同期転送だけに使い、実際に実行する専門家は元のルータが決める。したがって予測ミスがモデル出力を変えず、転送待ちだけに影響する。キャッシュ容量と帯域を考える窓型スケジューラも備え、Qwen3-VL-30B-A3BとDeepSeek-VL2-Tinyで少ない学習パラメータのまま高い専門家再現率を示し、Snapdragon 8 Eliteで計算最適化済み退避ランタイム比最大20%のデコードスループット向上を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.20179",
+      "title": "TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload",
+      "source_url": "https://arxiv.org/abs/2605.20179",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.20179-tide-io-aware-expert-offload.md",
+      "priority": 88,
+      "reason": "拡散型LLMの同一ブロック内では専門家活性が時間方向に安定することを利用し、毎反復すべての専門家配置を更新せず、I/O量とCPU計算を考慮して最適な更新間隔を数理最適化で選ぶ。学習不要かつ損失なしの専門家退避で、単一GPU-CPU環境のLLaDA2.0-miniとflashに対して従来法比最大1.4倍・1.5倍のスループット向上を報告する。自己回帰MoEとは異なる時間局所性をI/O制御へ使う点が新しい。"
+    },
+    {
+      "canonical_id": "arXiv:2606.15453",
+      "title": "A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.15453",
+      "paper_path": "papers/inference/03-moe-expert-prefetch/2026-2606.15453-spatio-temporal-expert-prefetching.md",
+      "priority": 85,
+      "reason": "隣接MoE層と連続デコードトークンの両方に専門家選択の相関があることを利用し、空間・時間の二方向から将来専門家を予測してロードを計算と重ねる。元のルーティング動作を保つ軽量予測と再構成可能ハードウェアを組み合わせ、専門家ロード遅延とエネルギーを同時に抑える。専門家先読みの予測信号を層方向だけでなくトークン方向へ拡張する系統として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.11688",
+      "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.11688",
+      "paper_path": "papers/inference/03-moe-expert-prefetch/2026-2608.11688-apex-adaptive-expert-prefetching.md",
+      "priority": 84,
+      "reason": "注意機構の前段で候補専門家を予測し、信頼度に応じて追加の先読み量を動的に変える。元ルータの正確な意味を保持するモードと、利用可能な専門家だけで残余待ちをなくすモードを分け、正確性保持モードでも1トークン遅延を最大26%、エネルギー遅延積を最大41%改善する。固定top-k先読みよりメモリ・帯域状況へ適応する制御として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2602.21626",
+      "title": "Multi-Layer Scheduling for MoE-Based LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.21626",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21626-multi-layer-scheduling-moe-reasoning.md",
+      "priority": 76,
+      "reason": "要求、推論エンジン、専門家の三層を別々に最適化するスケジューリング枠組み。要求層では短い仕事優先と経年優先度、エンジン層では接頭辞負荷・KV容量・利用者粘着性を考えた割当、専門家層ではホットスポットと層間依存を扱う。100件超の実験でvLLM比TTFT最大17.8%、TPOT最大13.3%削減を報告し、MoEの専門家配置と上位サービングスケジューラを接続する隣接研究として価値がある。"
+    }
+  ]
+}
