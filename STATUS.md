@@ -1,25 +1,24 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 19:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 19:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **6 / 50** |
-| Research ready | **6** |
+| Candidate在庫（Research ready） | **11 / 50** |
+| Research ready | **11** |
 | Research blocked | **3** |
 | Research deferred | **3** |
 | Research completed（累計） | **155** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
-| Maintenance counter | **17 / 24** |
+| Maintenance counter | **18 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 6）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
 - Research blocked が **3件** 残っています。
-- Research消化が候補補充を上回っています。candidate枯渇に注意。
 
 ## 直近の通常worker
 
@@ -29,35 +28,35 @@ Run: **2026-09-12T18:30:00+09:00**
 |---|---:|
 | Research完了 | **2** |
 | Audit完了 | **0** |
-| Discovery完了 | **0** |
-| 新規job | **0** |
+| Discovery完了 | **1** |
+| 新規job | **6** |
 | Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
+Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | production推論エンジン・tail/SLO scheduling・hardware-software co-design |
-| 評価候補 | **5** |
-| 重複除外 | **0** |
+| 探索軸 | adjacent-pim-hbm-gpu-runtime-chiplet |
+| 評価候補 | **14** |
+| 重複除外 | **9** |
 | Novel候補 | **5** |
-| Research候補採用 | **3** |
-| 重複率 | **0.0%** |
+| Research候補採用 | **5** |
+| 重複率 | **64.3%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **16** |
-| 探索round（stats観測） | **11** |
-| 探索評価候補 | **57** |
-| 重複除外 | **15** |
-| 重複率 | **26.3%** |
-| Novel候補 | **42** |
-| Research候補採用 | **19** |
+| 探索round（stats観測） | **12** |
+| 探索評価候補 | **71** |
+| 重複除外 | **24** |
+| 重複率 | **33.8%** |
+| Novel候補 | **47** |
+| Research候補採用 | **24** |
 | Research完了 | **31** |
 | Repo収録 | **31** |
 | Audit完了 | **0** |
@@ -66,12 +65,13 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 
 ### 24時間ファネル
 
-**探索評価 57 → 重複除外後 42 → Research候補採用 19 → Research完了 31 → Repo収録 31**
+**探索評価 71 → 重複除外後 47 → Research候補採用 24 → Research完了 31 → Repo収録 31**
 
 ## 探索効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
+| adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
@@ -86,11 +86,11 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 
 ### 直近5探索round
 
+- **2026-09-12T19:00+09:00** — adjacent-pim-hbm-gpu-runtime-chiplet: 評価 14 / 重複 9 / 採用 5
 - **2026-09-12T18:00:00+09:00** — production推論エンジン・tail/SLO scheduling・hardware-software co-design: 評価 5 / 重複 0 / 採用 3
 - **2026-09-12T18:00:00+09:00** — CXL共有メモリ・KV階層・near-memory processing: 評価 7 / 重複 2 / 採用 2
 - **2026-09-12T18:00:00+09:00** — GPU runtime・SmartNIC・異種アクセラレータ・階層KV: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T18:00:00+09:00** — 新着edge/disaggregated serving・通信/電力制御: 評価 6 / 重複 0 / 採用 4
-- **2026-09-12T17:30:00+09:00** — マルチエージェント・ワークフロー指向prefix状態スケジューリング: 評価 5 / 重複 4 / 採用 1
 
 ## 最近処理した論文
 
@@ -107,11 +107,11 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 
 ### 次に処理する候補
 
+- P90 `arXiv:2609.11392` — PATTON: Enabling Commodity PIM for Production LLM Serving
+- P86 `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
+- P83 `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
-- P75 `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression
-- P75 `arXiv:2604.11001` — Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees
 
 ## 7日比較
 
