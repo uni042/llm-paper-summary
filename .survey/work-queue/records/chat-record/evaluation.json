@@ -2,24 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2603.03251-20260913-0430-v10-a",
-  "job_id": "job-research-f0796c3a0863aed5",
+  "attempt_id": "attempt-2605.00254-20260913-0430-v10-c",
+  "job_id": "job-research-d335718873eaacf6",
   "data": {
-    "hardware": ["ターゲットLlama-3.1-70B-Instructは4×NVIDIA H100 80GBでテンソル並列実行。", "SSDではLlama-3.2-1B-Instructドラフトを別の1×H100へ配置し、ターゲット検証と非同期に実行。", "Qwen3評価ではQwen3-32BターゲットとQwen3-0.6Bドラフトを使用。"],
-    "software": ["論文公式Saguaro/SSD実装。", "比較対象としてSGLang 0.5.9、vLLM 0.16.0を使用。", "通常の投機的デコード、自回帰デコード、対応条件ではEAGLE-3を比較。"],
-    "model": ["Llama-3.1-70B-Instruct + Llama-3.2-1B-Instruct", "Qwen3-32B + Qwen3-0.6B"],
-    "datasets": ["HumanEval", "Alpaca", "GSM8K", "UltraFeedback", "各128プロンプト、合計512プロンプト"],
-    "baselines": ["自回帰デコード", "通常の投機的デコード", "SGLang", "vLLM", "EAGLE-3"],
-    "correctness": "最終トークンはターゲット分布に対する通常の投機的デコードの受理・残差サンプリング規則で確定する。SSDが先に生成する分岐は候補計算に過ぎず、キャッシュミス時もバックアップを生成して同じ検証規則へ戻るため損失なしの生成分布を維持する。",
+    "hardware": ["現行世代の基準XPUはNVIDIA H100。", "NCCL通信モデル校正はDGX H100で4〜32 GPU、128B〜16GiB。", "custom ring/recursive-doubling検証はAWS p4.24xlargeの8×A100。", "設計探索は主に64 XPU（4×4×4）および256 XPU（8×8×4）クラスタ。", "将来世代はBlackwell/Rubinの公開スケーリング値を投影。"],
+    "software": ["NCCL all-reduce/all-to-all benchmark", "MoE対応へ拡張したVidur型profile-based compute model", "dual-batch overlap schedule model", "multi-head speculative decoding model", "custom ring/recursive-doubling NCCL kernels for validation"],
+    "model": ["DeepSeek-V3 671B、256 experts、top-8 routing"],
+    "datasets": ["特定の言語データセットで生成品質を測る研究ではなく、公開serving workloadに代表的な平均context length 512/4096とTPOT SLO 15/40/100msを合成してcapacity planningを評価。"],
+    "baselines": ["scale-up fat-tree", "scale-out fat-tree", "3D torus", "3D full-mesh", "450 GB/s現行scale-up帯域", "DBOなし/あり", "投機的デコードなし/あり"],
+    "correctness": "通信モデルはH100 NCCL実測に対してintra/inter-node平均相対誤差10.82%/7.97%、custom collectiveのA100実測に4.79%/3.32%。end-to-end decode推定は8×H100実測と96×H100公開SGLang traceに対して9.6%未満/7.5%未満の相対誤差で検証する。",
     "settings": [
-      {"name": "主エンドツーエンド評価", "description": "Llama-3.1-70B-Instructを4×H100、Llama-3.2-1B-Instructをドラフトとして用い、バッチ1・貪欲デコード・先読み5トークンでHumanEval、Alpaca、GSM8K、UltraFeedback各128件を評価し、各プロンプト512トークンを生成する。SSDだけドラフトを別1×H100へ置く。"},
-      {"name": "モデル族再現", "description": "Qwen3-32BとQwen3-0.6Bの組でも同じ4データセットを評価し、方式がLlama固有でないことを確認する。"},
-      {"name": "キャッシュ構造評価", "description": "受理長ごとに均等な分岐数を置く方式と、理論から導いた幾何学的分岐数配分を比較し、温度を変えながらキャッシュヒット率と端から端までの生成速度を測る。"},
-      {"name": "サンプリング評価", "description": "上位候補を下方重み付けする係数Cを掃引し、ドラフト受理率と投機キャッシュヒット率のトレードオフ、および最終生成速度への影響を測る。"},
-      {"name": "フォールバック・バッチ評価", "description": "バッチサイズを増やし、高品質だが遅いその場生成と、ランダムトークンを返す極低遅延バックアップを比較する。さらにドラフトGPU数を増やして分岐予算を広げた場合の速度向上を投影する。"},
-      {"name": "推論基盤比較", "description": "SGLang 0.5.9とvLLM 0.16.0で通常投機とEAGLE-3の先読み長・木サイズを掃引し、その中の強い構成を比較対象にする。既知の実装不具合で一部構成は非対応として除外する。"}
+      {"name":"現行64-XPU topology比較","description":"H100相当、DeepSeek-V3、context 512/4096、TPOT 15/40/100msでscale-up、scale-out、3D torus、3D full-meshを比較する。XPU当たり総network bandwidthを揃え、各topologyで最適なcollective、parallelism、batchを選ぶ。no optimizationとDBO+speculative decodingを評価する。"},
+      {"name":"link bandwidth sweet spot","description":"scale-upのper-XPU bandwidthを現行450 GB/sから50/150/300/450 GB/s等へ変え、最大throughputとnetwork costの両方からthroughput/costを計算する。network cost adjustment factorも掃引して価格モデル感度を確認する。"},
+      {"name":"cluster size比較","description":"64 XPU/EP64と256 XPU/EP256を比較する。256ではfat-treeが一段から二段へ増えるswitch/link費用と、all-to-all domain拡大の通信増加、expert/GPU数低下による小batch計算効率改善を同時に反映する。"},
+      {"name":"性能・費用Pareto探索","description":"topology、bandwidth、XPU count、parallelism、batchをすべて掃引し、各serving scenarioで(cluster cost/XPU, throughput/XPU)平面のPareto frontierを求める。傾きがthroughput/costを表す。"},
+      {"name":"将来世代投影","description":"BlackwellはH100比FP8 2.56×、memory capacity 2.33×、memory bandwidth 2.39×、link 2×。Rubinは4.49×/3.60×/6.57×/4×を仮定し、rooflineでH100 profileを短縮して10/40ms TPOTで必要帯域を推定する。"}
     ],
-    "methodology": "単にSSDと弱い既定値を比較せず、まず通常投機、SGLang、vLLM、EAGLE-3の設定を掃引して強い比較対象を作る。次にSSD固有の三要素である分岐数配分、キャッシュ認識サンプリング、バッチ依存フォールバックを個別に評価し、最後にLlamaとQwenの二モデル族、四種類のコード・数学・対話データで端から端までのデコード速度と遅延・スループットのパレート前線を比較する。",
-    "scope": "主結果はバッチ1の対話型低遅延設定で、追加の1枚のH100をドラフト専用に使う。高バッチではフォールバックとキャッシュミスの影響を評価するが、論文自身も強いスループット律速の強化学習生成やオフライン大量生成では投機的デコード一般の追加計算が不利になり得るとする。"
+    "methodology": "直接実機が存在しないtorus/full-meshや仮想bandwidthまで含むため、通信・計算を実測で校正したモデルへ落とし込み、各topologyを同一のMoE workload/SLO/TCO条件で比較する。重要なのはcollective completion timeではなくDBO後の露出通信時間と最大SLO準拠capacityを使い、network設備費を含む単位費用当たり性能を最適化対象にする点である。",
+    "scope": "decode-onlyのbatched servingが主対象。prefill、極端に長い単一要求、動的expert imbalance、ネットワーク故障・運用性、施設不動産等の完全OpExは対象外。将来世代は性能スケーリング予測であり実機測定ではない。"
   }
 }
