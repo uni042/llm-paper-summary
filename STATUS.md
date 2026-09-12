@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:22 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **100 / 50** |
-| Research ready | **100** |
+| Candidate在庫（Research ready） | **99 / 50** |
+| Research ready | **99** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **184** |
+| Research completed（累計） | **185** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **1 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T02:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **7** |
+| Research完了 | **8** |
 | Audit完了 | **0** |
 | Discovery完了 | **9** |
 | 新規job | **43** |
-| Repo収録 | **7** |
+| Repo収録 | **8** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 重複率 | **29.5%** |
 | Novel候補 | **272** |
 | Research候補採用 | **139** |
-| Research完了 | **52** |
-| Repo収録 | **52** |
+| Research完了 | **53** |
+| Repo収録 | **53** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 386 → 重複除外後 272 → Research候補採用 139 → Research完了 52 → Repo収録 52**
+**探索評価 386 → 重複除外後 272 → Research候補採用 139 → Research完了 53 → Repo収録 53**
 
 ## 探索効率（直近24時間）
 
@@ -165,6 +165,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### Research完了
 
+- `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 - `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
 - `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
@@ -172,15 +173,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 - `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
-- `arXiv:2501.01005` — FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
 
 ### 次に処理する候補
 
 - P96 `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - P94 `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - P91 `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
-- P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
+- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 
 ## 7日比較
 
