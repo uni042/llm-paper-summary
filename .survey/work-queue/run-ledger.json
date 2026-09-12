@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:11:40.415040+00:00",
+  "updated_at": "2026-09-12T09:15:01.447586+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,19 +9274,19 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T09:11:40.415040+00:00",
+      "last_recorded_at": "2026-09-12T09:15:01.447586+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 7,
         "blocked": 0,
         "new_jobs": 20,
-        "new_papers": 4,
+        "new_papers": 5,
         "fallback_archived": 0
       },
       "events": [
@@ -9461,6 +9461,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34685299738:1",
+          "recorded_at": "2026-09-12T09:15:01.447586+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34685299738",
+            "run_attempt": "1",
+            "source_sha": "2a15570261238779f17e8698cdf2f482c72a5f01"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9549,6 +9564,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-32074ec28a42f7d1",
+          "type": "research",
+          "canonical_id": "arXiv:2606.19746",
+          "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
           "from": "ready",
           "to": "completed"
         }
@@ -9699,7 +9722,8 @@
         "arXiv:2602.14516",
         "arXiv:2603.29002",
         "arXiv:2605.20179",
-        "arXiv:2608.25523"
+        "arXiv:2608.25523",
+        "arXiv:2606.19746"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
@@ -9713,8 +9737,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
-      "paper_active_count_after": 340,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 341,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
