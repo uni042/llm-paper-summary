@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-fef140cd0cd0ddc9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.26607",
+      "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch",
+      "source_url": "https://arxiv.org/abs/2606.26607",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2606.26607-moebius-runtime-parallelism-switch.md",
+      "priority": 92,
+      "reason": "MoEサービングで負荷に応じてテンソル並列（tensor parallelism）と専門家並列（expert parallelism）を実行中リクエストを落とさず切り替えるシステム。8x H200上のQwen3-235B-A22Bで切替を215〜434 ms、追加メモリ2.4%に抑え、強化学習ロールアウトでは静的方式比1.16〜1.25倍を報告している。動的並列度切替は既存の静的配置・単純再構成と差分が明確で、MoE配置/サービング系統で優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.08800",
+      "title": "MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm",
+      "source_url": "https://arxiv.org/abs/2601.08800",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md",
+      "priority": 88,
+      "reason": "ネットワーク/ハードウェア構成とモデル特性からテンソル並列・専門家並列の通信コストを評価し、融合AR-A2A通信によるTP-EPハイブリッド並列を自動選択する分散MoEサービング。DeepSeek-R1/Qwen3でTTFT 1.08〜3.80倍、ITL 1.03〜1.66倍、throughput 5.2〜50.3%改善を報告し、通信ボトルネックを直接扱うため重点テーマとの関連が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2603.06350-moeless-serverless-expert-scaling-placement.md",
+      "priority": 86,
+      "reason": "専門家負荷偏りをレイヤ単位予測し、serverless expertのスケーリング/配置でstragglerを緩和するMoEサービング方式。Megatron-LM上の8 GPU実装で既存方式比43%の推論遅延削減と84%の推論コスト削減を報告する。専門家の動的配置・負荷分散をserverless資源へ拡張する点で、既存のexpert cache/offload系統と異なる研究価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-moe-runtime-placement-1",
+    "axis": "MoE動的並列切替・融合通信・serverless専門家配置",
+    "query_summary": "直近のKV cache軸から切り替え、MoE servingの実行時並列切替、TP/EP通信最適化、動的expert placementを一次arXivメタデータとabstractで軽量評価した。投入直前に最新main HEAD、identity、queue、既存job、fallback ledger、Library pendingを再確認し、canonical arXiv IDと題名で既存一致がない候補を選別した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はMoEを離れ、CXL共有メモリ/ラック内KV転送またはストレージ階層・GPU主導I/Oの隣接軸へ移る",
+    "empty_round_reason": null
+  }
+}
