@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.17949-20260913-0430-v10-b",
-  "job_id": "job-research-548b75bbb8077475",
+  "attempt_id": "attempt-2606.01751-20260913-0430-v10-d",
+  "job_id": "job-research-86f5ed2fa8ac71e7",
   "data": {
-    "limitations": "主評価はQwen2.5 3B/7B/14B/72Bという一つのモデル族と、A30/V100/A100で構成した固定13実体クラスタに限られる。論文もLlama/Gemmaなど第二モデル族・別トポロジ、実運用到着トレース、SLOから重みを自動制御する機構を今後の課題とする。品質推定のKNNは学習分布から外れると弱く、GSM8Kを除外した評価ではモデル選択精度がランダム水準以下まで低下する。品質優先重みは大モデル集中を許すため、高負荷時のp99遅延が非常に大きくなり得る。実体配置そのものは固定で、何台の各モデルを配備するかは別の計画器へ委ねる。品質評価の全セルは主に事前計算したG-Eval lookupを用い、実際に生成された本文の第二判定器再評価は代表点へ限定される。",
-    "differences": "RouteLLM、BEST-Route、Avengers-Proなどのモデルルータはプロンプトからモデルを選んだ後、そのモデルの実体内で別の負荷分散を行うため、モデル層を跨いだ混雑回避ができない。Llumnix、Block、DistServe等のサービングスケジューラは負荷やSLOを扱うが、通常は同一モデルまたは既定配備内で品質を選択変数にしない。HexGen/Helix/ThunderServe等の異種GPU研究は一つのモデルを異種GPUへどう配置・並列化するかを中心とする。RouteBalanceは異なるモデルサイズと異なるGPU実体を一つの候補集合にして、要求ごとの品質・費用・動的遅延を同時に比較する点が異なる。",
-    "implementation_status": "公式GitHub `AKafakA/route-balance` で実装・スクリプト・データセットを公開。約13,000行のPythonで、独立CPUスケジューラ、vLLM workerテレメトリ、MiniLM埋め込み、FAISS KNN、XGBoost層別遅延予測、LPT貪欲割当、比較ルータ用pipeline modeを含む。論文評価はCloudLab上の13実体・28GPU実機で行われる。",
-    "research_positioning": "リポジトリではLLMサービング・スケジューリング・分離系統に置くべきで、特に複数モデルを同一サービスとして提供する異種モデルルーティング研究の重要例である。システム上の新規性は複雑な予測アルゴリズムより、モデル品質ルータと実体負荷分散器の間に存在した境界を消し、動的な提供遅延をモデル選択へ直接戻すことにある。分離実験で『学習型予測は必須ではない』ことまで示すため、将来の簡素な統合ルータ設計にも示唆がある。",
-    "relation_to_existing_repository": "Blockのような予測型負荷分散や、DistServe/Mooncake等の実体内部・単一モデル側サービング最適化とは補完関係にある。RouteBalanceが上位層で(model, GPU)実体を選び、各実体内で既存の連続バッチ、KV管理、プリフィル・デコード分離を使える。異種GPU配置研究とも、配備時に実体集合を決める計画器と実行時に要求を割り当てるRouteBalanceという上下関係で組み合わせられる。",
+    "limitations": "SparseXは近似KV再利用であり、full recomputeと同一出力を保証しない。重要token比率、overflow、full-to-sparse切替layerはmodelとtaskに依存し、論文もQwen3-8Bでは15〜20%、大型/MoEでは10〜15%程度を目安としており固定万能値ではない。reuse率が低いとSparse-Q数が増えselection costがfull attentionへ近づき、利得が縮小する。hitしたsegmentはposition-aligned physical blockへcopyするため完全zero-copyではなく、GPU bandwidthを消費する。frozen knowledge cacheは同一GPU block poolを使うため、ordinary requestとの容量競合時にはevictionが必要である。評価は8×RTX4090の単一server内で、CPU/SSD/cross-node KV階層や分散cache schedulingとの相互作用は未評価。multi-agentでは一部taskで数pointの品質低下が残る。",
+    "differences": "Prefix Cache/RadixAttentionは完全一致prefixをlosslessに再利用するが任意位置segmentを扱えない。EPICはposition-independent chunk reuse、KVCOMMはagent間context補正、CacheBlendはRAG chunkのselective recomputeを扱うが、比較的規則的なprompt構造や特定scenarioを前提とする。CacheClipは小型modelでtoken importanceを推定するため追加model schedulingが必要。SparseXはnew textのQueryが必然的に存在するSparse-Q構造をそのままselectorとして使い、arbitrary interleavingを一つのloopで扱う。さらにvLLMのvirtual/frozen/Prefix blockを同じphysical poolとscheduler metadataへ統合し、FlashAttention/FlashInfer backendから外れない点がsystem上の差である。",
+    "implementation_status": "公式コード `MemTensor/SparseX` が公開され、vLLM v1 0.11.0ベースのSparseX-vLLMとしてentrypoint、KV Cache Cache Manager、Scheduler、Worker、GPU Model Runner、attention metadataまで統合されている。PagedAttention、native Prefix Cache、FlashAttention、FlashInferと互換で、knowledge frozen-block API、virtual block lookup、Delta-RoPE fused copy、Sparse-Q mask生成を含む。",
+    "research_positioning": "リポジトリではKVキャッシュ再利用・再計算系統の重要なオンラインserving研究として位置付ける。SSD/CPUへのKV offloadのように保存階層を広げる研究ではなく、GPU内に既に存在する『同じtextだが異なるcontextで作られたKV』をどこまで再利用できるかを最適化する。特にmulti-turn/RAG/agentを別々の特殊systemではなくsegment-level cacheという共通抽象で扱うため、agentic servingで共有contextが増えるほど重要性が高い。",
+    "relation_to_existing_repository": "Prefix caching、PagedAttention、FlashInfer、long-context sparse attention、KV offloadと補完関係にある。SparseXはGPU resident segment reuse layerなので、CPU/SSD/cross-node KV cache systemがsegmentをGPUへ供給した後のcontext correctionとして利用できる。MInference型sparse attentionのpattern estimationをreuse workload固有のSparse-Qへ転用しており、attention sparsity研究からcache reuseへのcross-lineage transferの例でもある。FlashInfer等のbackendがより効率的なblock-sparse attention/recomputeを提供すればSparseXのselected-token補正費用をさらに下げられる。",
     "audit_required": false
   }
 }
