@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-91c5a3b7cb2ac1b7",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.01338",
+      "title": "mzCache: On-Device LLM Memory Management under Multitasking",
+      "source_url": "https://arxiv.org/abs/2609.01338",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.01338-mzcache-on-device-multitasking-memory-management.md",
+      "priority": 91,
+      "reason": "モバイルの実際のマルチタスク環境でOSによるLLM重み・KVの退避が発生する問題に対し、細粒度共有バッファ、部分退避・部分復元、統合メモリ上のGPU実行とCPU側復元の並行化を組み合わせる。llama.cppベースのAndroid実装でstorage-backed partial offload比TTFTを2.1〜5.5倍短縮しており、オンデバイス階層メモリとOSメモリ圧力を直接扱う実装研究として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2503.03777",
+      "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2503.03777",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
+      "priority": 84,
+      "reason": "端末側LLM推論で、非同期先読み、balanced memory locking、tensor preservationを組み合わせ、ユーザー指定のメモリ制約下でCPU/GPU/ストレージ間のオフロードを柔軟化する。既存方式比で最大12.5倍の性能改善を報告しており、FlexGen系のクラウド/単一GPU階層からモバイル端末へ設計原理を移す比較対象として有用である。"
+    },
+    {
+      "canonical_id": "arXiv:2604.21231",
+      "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.21231",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.21231-sparkv-overhead-aware-on-device-kv-loading.md",
+      "priority": 87,
+      "reason": "prefillで必要なKVを端末で再計算するかクラウドからstreamするかをchunk単位のコストで選び、通信と計算を重ねつつ無線・端末資源変動に応じてscheduleをruntime補正する。TTFTを1.3〜5.1倍短縮し、要求当たりエネルギーを1.5〜3.3倍改善しており、KV階層管理をedge/cloud協調まで拡張する研究として有用である。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:30:44+09:00",
+    "round": "specialist-edge-ondevice-memory-1",
+    "axis": "edge/on-device offload・multitasking memory・cloud KV streaming",
+    "query_summary": "直前のGPU memory/communication overlap軸を反復せず、オンデバイスLLMのOSメモリ圧力、storage-backed model/KV restoration、edge-cloud KV streamingを一次arXiv metadata/abstractで軽量評価した。投入直前に最新default branch HEAD、next queue、決定論的research job path、repository検索、Library pendingを再確認し、3件とも未収録・job未存在と判断した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はedge/on-deviceを離れ、forward/backward citationで重要serving基礎の未収録、またはremote/speculative distributed servingを確認する",
+    "empty_round_reason": null
+  }
+}
