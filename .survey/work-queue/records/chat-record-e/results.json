@@ -2,77 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.12688-20260913-0110-v10-e",
-  "job_id": "job-research-5de21b53eec4b0eb",
+  "attempt_id": "attempt-2604.06664-20260913-0254-v10-e",
+  "job_id": "job-research-b7ad70251596454b",
   "data": {
-    "overview": "M*は、単一の最適化方針を全モデルへ押し付けるのではなく、Walk Graphで構成要素の実行形を露出させ、各要素に既存の高速化を再適用することで複数モデル族で改善を得る。BAGELではページ化KVプールとCFG並列、Qwen3-OmniではTalker全体のCUDAグラフ化とTalker/Code2Wav共配置、Orpheusでは高速注意実装と注意計画の事前生成、V-JEPA 2では動的反復内のKV再利用が主因となる。現行v2の要約ではBAGELテキスト→画像の平均p50 E2EをvLLM-Omniより約20%短縮し、Qwen3-Omniは最大2.9倍低いRTF、バッチ16でvLLM-Omni比2.7倍・SGLang-Omni比4.0倍の音声処理量、V-JEPA 2は最大12.5倍高速化と整理されている。",
+    "overview": "FoundryはCUDA graph warmup/captureをonline起動経路からほぼ除去し、denseモデルでは従来28〜48秒級の初期化を1.3〜2.0秒、MoEでは112〜650秒級を2.7〜3.9秒へ短縮した。最大例のQwen3-235B-A22B EP8 BF16は650秒から3.9秒で99%削減する。CUDA-checkpointと比べてもsingle-GPU設定で2.6〜4.4倍高速で、archiveも概ね4〜5倍小さい。512 graphは12〜25個のunique topologyへ圧縮され、templateのin-place updateは新規graph constructionより24〜32倍速い。重要なのはcold startを下げるためeager modeへ落としたのではなく、native captureと同じCUDA graphを復元し、H200/B200でTPOT低下が観測されず生成tokenも一致したことである。",
     "key_results": [
-      {
-        "metric": "BAGELテキスト→画像のp50 E2E遅延",
-        "value": "単一段階vLLM-Omni比1.25倍高速（現行v2要約では平均約20%低減）",
-        "baseline": "vLLM-Omni single-stage",
-        "condition": "BAGEL-7B、1024×1024、50段階フロー、B=1、3×H100、CFG三分岐並列",
-        "interpretation": "三つのCFG文脈を一つのページ化KVプール上のラベルとして管理し、各層・各反復で密KVを連結する費用を避ける。"
-      },
-      {
-        "metric": "BAGEL画像編集のp50 E2E遅延",
-        "value": "既定vLLM-Omni比最大2.64倍高速",
-        "baseline": "vLLM-Omni default",
-        "condition": "BAGEL-7B、B=1、3×H100 CFG並列",
-        "interpretation": "既定基盤ではThinkerとDiT段階間の高価なKV転送が生じるが、M*は同一グラフ内でキャッシュと配置を統一してこの費用を抑える。"
-      },
-      {
-        "metric": "BAGEL画像理解の処理量",
-        "value": "B=16で32.7%向上",
-        "baseline": "vLLM-Omni default",
-        "condition": "単一H100、出力64〜256トークン、EOSを無視して系列長を一致",
-        "interpretation": "小バッチでは同程度だが、連続バッチ処理とTransformer高速経路を維持したまま複数タスクを一設定で扱えるため、高バッチで差が広がる。"
-      },
-      {
-        "metric": "BAGEL画像理解のTTFT",
-        "value": "p50はB=1で33%低減、B=16で14%低減；B=16 p95は28%低減",
-        "baseline": "vLLM-Omni default",
-        "condition": "単一H100、出力64〜256トークン",
-        "interpretation": "Walk単位の必要構成要素実行と非同期スケジューリングにより先頭応答を短縮し、尾部も抑える。"
-      },
-      {
-        "metric": "Qwen3-Omni音声処理量",
-        "value": "B=16でvLLM-Omni比2.7倍、SGLang-Omni比4.0倍",
-        "baseline": "vLLM-OmniおよびSGLang-Omni",
-        "condition": "Seed-TTS、2×H200、ThinkerとTalker+Code2Wavを分離",
-        "interpretation": "Talkerの複数トークン予測ループを含めて一つのCUDAグラフへ取り込み、TalkerとCode2Wavを同一Workerに置いて段階間プロセス通信を省く効果が大きい。"
-      },
-      {
-        "metric": "Qwen3-Omni音声RTF",
-        "value": "最大2.9倍低いRTF",
-        "baseline": "vLLM-Omni / SGLang-Omni",
-        "condition": "Qwen3-Omni-30B-A3B-Instruct、Seed-TTS、H200構成",
-        "interpretation": "リアルタイム音声で重要な処理時間/音声長を縮め、ストリーミング余裕を増やす。"
-      },
-      {
-        "metric": "Orpheus p50 RTF",
-        "value": "B=16で13.6%低減",
-        "baseline": "VoxServe 0.1.0",
-        "condition": "Orpheus-3B、単一H200、Seed-TTS",
-        "interpretation": "音声専用基盤に対しても、融合投影、CUDAグラフ対応サンプリング、投機的FlashInfer計画を共通実行時から利用して上回る。"
-      },
-      {
-        "metric": "Orpheus音声処理量",
-        "value": "B=1で52%向上、B=8で20%向上、v2要約のB=16では39%向上",
-        "baseline": "VoxServe",
-        "condition": "単一H200、B=1〜16",
-        "interpretation": "小バッチから高バッチまで専用音声サービングに対する改善を維持する。"
-      },
-      {
-        "metric": "V-JEPA 2行動条件付きロールアウトのp50速度向上",
-        "value": "H=4で2.08倍、H=15で3.76倍、H=30で12.5倍",
-        "baseline": "Meta vjepa2 native",
-        "condition": "単一H100、B=1、DROID先頭50エピソード",
-        "interpretation": "ネイティブPythonループが各反復で増大系列を再プリフィルするのに対し、DynamicLoop内でページ化KVを保持するため、ホライズンが長いほど重複計算削減が増える。"
-      }
+      {"metric":"Qwen3-14B initialization","value":"36〜48秒→1.7〜1.8秒、約95%削減","baseline":"vLLM native CUDA graph capture","condition":"H200、DP1〜DP8、512 graphs","interpretation":"rank数を1から8へ増やしてもFoundry LOADはほぼ一定で、single-rank archive共有と非計算型graph reconstructionがscaleする。"},
+      {"metric":"Llama3-8B / Gemma3-12B initialization","value":"28秒→1.3秒、45秒→2.0秒、各約95%削減","baseline":"vLLM native CUDA graph capture","condition":"H200 dense models","interpretation":"Qwen固有kernelだけでなく異なるdense architectureでもexecution-context materializationが機能する。"},
+      {"metric":"Qwen3-30B-A3B BF16 initialization","value":"112〜154秒→2.7〜2.8秒、97〜98%削減","baseline":"vLLM native capture","condition":"H200、EP2〜EP8","interpretation":"DeepEP/NVSHMEMを含むmulti-GPU MoE communication graphでもsingle-GPU SAVEからrank-specific restoreできる。"},
+      {"metric":"Qwen3-235B-A22B EP8 BF16 initialization","value":"650秒→3.9秒、99%削減","baseline":"vLLM native capture","condition":"8×H200、EP8","interpretation":"大規模MoEほどbatch-sizeごとのforward captureが高価なため、template restorationの絶対効果が最大になる。"},
+      {"metric":"FP8 MoE initialization","value":"Qwen3-30B-A3B 72〜83秒→2.8〜2.9秒、Qwen3-235B-A22B 136〜146秒→3.5秒、96〜97%削減","baseline":"vLLM native capture","condition":"DeepGEMM FP8、EP2〜EP8/EP4〜EP8","interpretation":"計算kernelがBF16 TritonからFP8 DeepGEMMへ変わってもLOAD timeはほぼ変わらず、kernel-agnostic restorationを支持する。"},
+      {"metric":"eager mode comparison","value":"Qwen3-14B DP8 5.0秒 eager vs 1.7秒 Foundry、Qwen3-235B EP8 62秒 eager vs 3.9秒 Foundry","baseline":"vLLM without CUDA graphs","condition":"H200","interpretation":"CUDA graphを諦めて起動を速めるよりFoundryの方が速い例があり、後続decode性能も保持する。"},
+      {"metric":"CUDA-checkpoint restore","value":"5.7〜6.1秒 vs Foundry 1.3〜2.3秒、Foundryが2.6〜4.4倍高速","baseline":"NVIDIA CUDA-checkpoint + CRIU","condition":"single-GPU configurations","interpretation":"process全CUDA stateを戻すより、graph replayに必要なmemory/binary/contextだけ保存する方が軽い。"},
+      {"metric":"serving TPOT","value":"native vLLM CUDA graphと観測可能な低下なし","baseline":"native captured graphs","condition":"H200/B200、batch16〜512、dense/MoE/custom kernels","interpretation":"restoreされたgraphはcold-start短縮のためperformanceを犠牲にしていない。生成tokenも一致。"},
+      {"metric":"template compression","value":"512 graph中unique topologyは12〜25、95〜98%をon-demand updateで処理","baseline":"全512 graphを個別build","condition":"Qwen3/Llama3/Gemma3各モデル","interpretation":"batch sizeが変わってもgraph topologyは少数パターンに収束し、template共有が広いarchitectureで成立する。"},
+      {"metric":"per-graph reconstruction","value":"driver construction 31.1〜69.5ms、stream capture 59.7〜198.6ms、in-place update 0.98〜2.89ms","baseline":"stream capture / full driver construction","condition":"Qwen3-14B DP4、Qwen3-30B-A3B EP4","interpretation":"updateはconstructionより24〜32倍速く、template以外をonline on-demand specializationできる。"},
+      {"metric":"archive size","value":"Qwen3-14B 1.1GB vs CUDA-checkpoint 3.7GB、Qwen3-235B EP8 2.2GB","baseline":"CUDA-checkpoint image","condition":"weights/KV excluded from checkpoint","interpretation":"graph metadataと必要kernel binaryだけを保存しrank間共有するため、process checkpointより小さい。"}
     ],
-    "negative_results": "すべての設定で既存基盤を同条件比較できたわけではない。BAGELではvLLM-Omniの既定構成が画像生成・理解には適する一方で画像編集の段階間KV転送が重く、単一段階構成は画像生成・編集には良いが画像理解のB=1処理量が既定構成の約半分で、連続バッチ処理やAPIストリーミングにも制約があった。Qwen3-Omniでは著者がvLLM-OmniのThinkerテンソル並列を動作させられず、その条件で直接比較していない。さらにベースライン側で正しさ・性能問題が出た複数設定は公平性のため結果から除外された。",
-    "interpretation": "性能差はWalk Graphという抽象化自体が計算を軽くするというより、モデル構造を実行時から見える形にすることで、不要構成要素の省略、並列分岐、同一Worker共配置、ページ化KV、反復を跨ぐキャッシュ、CUDAグラフ、非同期CPUスケジューリングを適切な粒度で適用できることから生じる。特に固定段階境界が不要なデータ移動を作る場合や、ネイティブループが過去状態を再計算する場合に差が大きい。",
-    "quality_impact": "近似削減やモデル改変ではなく実行方式の変更であり、生成品質を落として速度を得るものではない。ベンチマークでは貪欲復号や出力長の調整で比較可能性を高めている。"
+    "negative_results": "Foundryのinter-rank sharingはrankごとに同一execution flowを持つSPMD構成が前提で、Pipeline Parallelismのようにstageごとに異なるgraph topologyでは単一templateを全rank共有できない。deterministic address layoutは同じallocation sequenceと固定KV cache sizeを必要とし、vLLMではSAVE/LOAD前にKV cache sizeを明示的に固定する。archiveは最大モデルで2.2GBあり、kernel binariesだけで1.4GBを占めるため完全に無視できるstorageではない。LOADで新しいkernel/versionへ自動適応するわけではなく、engine/kernel更新後は対応archiveの再SAVEが必要である。またCUDA-checkpoint比較はそのIPC limitationのためsingle-GPUのみで、Medusaは現行CUDA/Hopperへ移植困難として直接比較していない。",
+    "interpretation": "重み転送の高速化によってcold startの主律速がCUDA graph captureへ移った環境では、Foundryはwarmup executionを『毎起動時の計算』から『offline archive生成時の一回だけの計算』へ移す。鍵はgraph topologyだけを保存するのではなく、pointerが期待するvirtual addressとkernel functionの由来binaryまで復元するため、opaque kernel argumentを理解しなくてよい点である。template化は復元可能性だけでなく、数百graphをdriver APIで再instantiateすると数十秒かかる二次律速も除去する。したがってautoscalingだけでなく、Gyges/EaaS/Flying Serving等のparallelism hot switchingでgraph recaptureが残る場合の補完層として価値が高い。",
+    "quality_impact": "復元したCUDA graphは同じkernel binaryとparameterを使い、論文はnative vLLMと生成tokenが同一であることを確認する。品質近似はなく、性能面でもTPOT曲線はほぼ完全に一致する。"
   }
 }
