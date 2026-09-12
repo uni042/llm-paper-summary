@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-8f8cd2df2a210c58",
+  "type": "research",
+  "parent_job_id": "job-4a6531f34c980060",
+  "priority": 79,
+  "canonical_id": "arXiv:2507.21276",
+  "title": "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems",
+  "source_url": "https://arxiv.org/abs/2507.21276",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md",
+  "selection_reason": "継続学習と推論servingを同一multi-GPU基盤で共存させ、offline profiling、実行予測、runtime schedulingでidle resourceを利用するsystem。arXiv抄録ではthroughput最大3.53倍、応答時間SLO達成率最大2.12倍を報告しており、training/inference資源共有という隣接軸として候補価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T14:18:49+00:00",
+  "artifact_transport": "structured_record_v10"
+}

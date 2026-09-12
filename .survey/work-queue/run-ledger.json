@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:17:21.633485+00:00",
+  "updated_at": "2026-09-12T14:19:39.156294+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T14:17:21.633485+00:00",
+      "last_recorded_at": "2026-09-12T14:19:39.156294+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 24,
+        "new_jobs": 28,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10874,6 +10874,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34698901900:1",
+          "recorded_at": "2026-09-12T14:19:39.156294+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34698901900",
+            "run_attempt": "1",
+            "source_sha": "1e4ec96dc95c1ca7dd7a6deee2c7cdc109a025c2"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10959,6 +10973,14 @@
         },
         {
           "job_id": "job-59418511ae4bc344",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-4a6531f34c980060",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -11134,6 +11156,34 @@
           "type": "research",
           "canonical_id": "arXiv:2605.22850",
           "title": "ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse"
+        },
+        {
+          "job_id": "job-76e9912e8914176e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2fabaceee2c88fd9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.25059",
+          "title": "Reliable and Resilient Collective Communication Library for LLM Training and Serving"
+        },
+        {
+          "job_id": "job-research-8f8cd2df2a210c58",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.21276",
+          "title": "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems"
+        },
+        {
+          "job_id": "job-research-cca875ddc6629317",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.17615",
+          "title": "EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration"
         }
       ],
       "new_paper_ids": [
@@ -11150,7 +11200,8 @@
         ".survey/work-queue/results/20260912T2310JST-discovery-specialist-04.json",
         ".survey/work-queue/results/20260912T2312JST-discovery-specialist-05.json",
         ".survey/work-queue/results/20260912T2314JST-discovery-specialist-06.json",
-        ".survey/work-queue/results/20260912T2316JST-discovery-specialist-07.json"
+        ".survey/work-queue/results/20260912T2316JST-discovery-specialist-07.json",
+        ".survey/work-queue/results/20260912T2318JST-discovery-specialist-08.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
