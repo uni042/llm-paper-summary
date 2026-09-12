@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.11133",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-model-calibrated-power-control-for-disaggregated-llm-serving.md",
   "selection_reason": "分離型LLMサービングでプリフィルとデコードを同じ電力制御へ押し込むと、演算律速と帯域律速という逆の特性を同一設定で扱うことになり、エネルギー効率と遅延目標の両立が難しい問題を扱う。B200実機でNVIDIA Max-Qはトークン当たりエネルギーを改善する一方、平均エンドツーエンド遅延も増やすことを確認し、提案方式はプリフィル側をSMクロック窓、デコード側を実測した性能崖の直上に置く電力上限として別々に校正する。8×B200・Qwen3-Coder-480B FP8のエージェント負荷では、バランス設定でトークン/Jを20.4%改善しながら平均遅延増加を3.5%に抑え、Max-Qの8.6%改善・5.2%遅延増加を上回る。Qwen3-235B-A22B NVFP4でも提案設定は全反復でITL-p99 SLOを満たし、3日間の持続試験ではレーン対の電力費を32.3%削減と報告する。最新のB200実運用寄り評価を伴う、省電力と分離サービングを直接接続した強い候補。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T00:48:42+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T00:51:52+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

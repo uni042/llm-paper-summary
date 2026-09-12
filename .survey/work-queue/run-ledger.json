@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T00:49:14.670723+00:00",
+  "updated_at": "2026-09-12T00:52:39.696018+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8015,7 +8015,7 @@
     {
       "run_key": "2026-09-12T09:30:00+09:00",
       "first_recorded_at": "2026-09-12T00:34:40.121964+00:00",
-      "last_recorded_at": "2026-09-12T00:49:14.670723+00:00",
+      "last_recorded_at": "2026-09-12T00:52:39.696018+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "job_blocked",
@@ -8023,12 +8023,12 @@
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 1,
-        "new_jobs": 6,
-        "new_papers": 1,
+        "new_jobs": 7,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -8117,6 +8117,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34663010520:1",
+          "recorded_at": "2026-09-12T00:52:39.696018+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34663010520",
+            "run_attempt": "1",
+            "source_sha": "9286293a40ebdaa36b25490f6aa9830529a08ec7"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8167,6 +8183,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-544244796b6effba",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11133",
+          "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8211,10 +8235,18 @@
           "type": "research",
           "canonical_id": "arXiv:2609.11133",
           "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving"
+        },
+        {
+          "job_id": "job-277958357510167b",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
-        "arXiv:2603.12707"
+        "arXiv:2603.12707",
+        "arXiv:2609.11133"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0938JST-discovery-job-05056a15d6adfe06.json",
@@ -8224,8 +8256,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 323,
-      "paper_active_count_after": 324,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 325,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

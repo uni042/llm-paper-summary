@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（75本）
+## 自動生成の論文一覧（76本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -15,12 +15,16 @@
   ツール呼出しを何度も挟むLLMエージェントでは、各ターン終了時にKVキャッシュを追い出すと、次ターンでプリフィルやCPUからの再読込みが必要になるだけでなく、GPUメモリを他要求へ渡した後に待ち行列へ戻るため、ターンごとの待ち時間が累積する。
 
 - **2026-09 · [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   本論文は、LLM推論のプリフィルとデコードでは計算特性と許容遅延が異なるのに、既定GPU電力制御が両段階をほぼ一様に扱い、余分な高周波数動作とエネルギー消費を生む問題を扱う。GreenLLMは、入力長で要求を別キューへ振り分けて長いプロンプトによる先頭待ちを避け、プリフィルでは入力長・周波数・待ち行列負荷からSLO内でエネルギー最小のSM周波数を選ぶ。
 
 - **2026-05 · [AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System](2026-2605.23389-alignedserve-prefix-aware-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   AlignedServeは、LLMデコードでは同じバッチ内でも系列ごとにKVキャッシュ長が異なり、注意計算時間の長い少数要求が各反復の完了を支配してGPUに反復内の待ちを生む問題を扱う。プリフィル後の要求とKVキャッシュをCPU大容量メモリへいったん蓄え、接頭辞長が近い要求を動的な四分木から密度優先で選んでバッチ化することで、同一反復内の計算量を揃える。
+
+- **2026-02 · [DualScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS](2026-2602.18755-biscale-phase-aware-placement-dvfs.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  プリフィルとデコードを別GPU群へ分離するLLM推論では、両段階の負荷特性が異なるため、単純な自動スケーリングや一律のGPU周波数制御ではサービス品質目標を守りつつ電力を下げにくい。
 
 - **2026-07 · [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -46,15 +50,15 @@
   実装：✓ ・ リポジトリ内被引用：1  
   分散MoE推論で一部のエキスパート（エキスパート）へトークンが集中すると、そのエキスパートを担当するGPUだけが遅れて全体の同期待ちを引き起こす。MoElessは、次の層で生じるエキスパート負荷を事前予測し、混雑するエキスパートだけを一時的に複製して複数GPUへ分散することで、この待ち時間を減らすシステムである。
 
-- **2026-02 · [DualScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS](2026-2602.18755-biscale-phase-aware-placement-dvfs.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  プリフィルとデコードを別GPU群へ分離するLLM推論では、両段階の負荷特性が異なるため、単純な自動スケーリングや一律のGPU周波数制御ではサービス品質目標を守りつつ電力を下げにくい。
-
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-09 · [Topology-Aware Data Movement for Disaggregated GPU Inference](2026-2607.28633-topology-aware-data-movement.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルとデコードを別GPU群へ分離するLLMサービングでは、プリフィルで生成したKVキャッシュをデコード側へ渡す転送が新たなボトルネックになる。TopKVは、GPU間の物理接続を検出し、NVLink、PCIe、RDMA、TCPから転送経路を選び、層ごとのKV転送を計算と重ねる。
+
+- **2026-09 · [Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving](2026-2609.11133-phase-decoupled-model-calibrated-power-control-for-disaggregated-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分離サービングのプリフィルには校正済みSMクロック窓、デコードには性能崖直上の電力上限を使い分け、B200実機でMax-Qより高いエネルギー効率と良好な遅延を両立する。
 
 - **2026-09 · [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -207,7 +211,7 @@
   プリフィルとデコードを別GPU群へ分け、それぞれのGPU数・モデル分割方法・配置場所を、最初のトークンまでの時間とその後のトークン間隔の目標に合わせて別々に決めることで、両処理段階の干渉をなくす推論提供システム。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：93  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：94  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
