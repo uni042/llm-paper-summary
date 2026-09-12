@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:33:56.492400+00:00",
+  "updated_at": "2026-09-12T23:37:01.626933+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15975,16 +15975,16 @@
     {
       "run_key": "2026-09-13T08:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:31:39.543292+00:00",
-      "last_recorded_at": "2026-09-12T23:33:56.492400+00:00",
+      "last_recorded_at": "2026-09-12T23:37:01.626933+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 11,
+        "new_jobs": 14,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16016,6 +16016,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34725813204:1",
+          "recorded_at": "2026-09-12T23:37:01.626933+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34725813204",
+            "run_attempt": "1",
+            "source_sha": "0baafeb6114c19ac0740ae01f52ed722579e8605"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16029,6 +16043,14 @@
         },
         {
           "job_id": "job-e62e2bd040e93661",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-192a71b1aa310fb7",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16113,12 +16135,34 @@
           "type": "research",
           "canonical_id": "arXiv:2405.16444",
           "title": "CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion"
+        },
+        {
+          "job_id": "job-55b996109ff044ec",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0d369694f13e4541",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04875",
+          "title": "Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents"
+        },
+        {
+          "job_id": "job-research-1b8b272a10ca2e7f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.15498",
+          "title": "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0830JST-discovery-specialist-hybrid-pic.json",
-        ".survey/work-queue/results/20260913T0833JST-discovery-specialist-pic-relatedwork.json"
+        ".survey/work-queue/results/20260913T0833JST-discovery-specialist-pic-relatedwork.json",
+        ".survey/work-queue/results/20260913T0836JST-discovery-specialist-agent-storage-state.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,

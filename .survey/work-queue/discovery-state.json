@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:32:38+00:00",
+  "updated_at": "2026-09-12T23:35:42+00:00",
   "last_run_key": "2026-09-13T08:26:04+09:00",
-  "last_round": "specialist-pic-relatedwork-2",
+  "last_round": "specialist-agent-storage-state-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2409,6 +2409,25 @@
       ],
       "next_axis_hint": "次はKV/PIC系を離れ、storage/OSまたはnetwork/GPU runtimeの隣接システム軸を独立に探索する",
       "source_submission": "work-queue/submissions/20260913T0833JST-discovery-specialist-pic-relatedwork.json"
+    },
+    {
+      "run_key": "2026-09-13T08:26:04+09:00",
+      "round": "specialist-agent-storage-state-3",
+      "axis": "agent workspace仮想化・NVMe階層・長時間runtime state",
+      "query_summary": "PIC/KV reuse系統から離れ、長時間agent workspaceのNVMe階層化、可変容量KV表現、stateful agentの実行状態再構築を独立軸として軽量評価した。Tutti、output-length uncertainty下のRobust KV、Tokencakeは最新mainの既存jobで除外。KVMem、VarRate、Execution-State Unlearningは投入直前に最新HEAD a0160991、queue、決定論的research job pathで未登録を再確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2607.16892",
+        "arXiv:2510.18586"
+      ],
+      "next_axis_hint": "次はstorage/agent stateを離れ、network/collective・GPU runtimeまたはforward/backward citationの独立経路を確認する",
+      "source_submission": "work-queue/submissions/20260913T0836JST-discovery-specialist-agent-storage-state.json"
     }
   ],
   "axes": {
@@ -3771,6 +3790,16 @@
       "accepted_count": 5,
       "duplicate_ratio": 0.16666666666666666,
       "next_axis_hint": "次はKV/PIC系を離れ、storage/OSまたはnetwork/GPU runtimeの隣接システム軸を独立に探索する"
+    },
+    "agent workspace仮想化・NVMe階層・長時間runtime state": {
+      "last_run_key": "2026-09-13T08:26:04+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "次はstorage/agent stateを離れ、network/collective・GPU runtimeまたはforward/backward citationの独立経路を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

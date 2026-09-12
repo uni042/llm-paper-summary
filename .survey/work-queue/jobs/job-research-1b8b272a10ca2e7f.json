@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-1b8b272a10ca2e7f",
+  "type": "research",
+  "parent_job_id": "job-192a71b1aa310fb7",
+  "priority": 84,
+  "canonical_id": "arXiv:2607.15498",
+  "title": "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs",
+  "source_url": "https://arxiv.org/abs/2607.15498",
+  "paper_path": null,
+  "selection_reason": "tokenを捨てるevictionではなく、各tokenへ重要度に応じて可変低rank容量を割り当てるtraining-free KV圧縮。query-agnosticな表現を維持するため複数turn・再利用時にも適用しやすく、同一20% memory budgetでLongBench 16 taskの平均性能を非圧縮から0.8 point以内に維持し、KVzip等より軽いprefill overheadを報告する。長文servingで容量・再利用・圧縮を同時に考える比較対象として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:35:42+00:00",
+  "artifact_transport": "structured_record_v10"
+}
