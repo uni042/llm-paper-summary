@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:15:01.447586+00:00",
+  "updated_at": "2026-09-12T09:20:40.167618+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,19 +9274,19 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T09:15:01.447586+00:00",
+      "last_recorded_at": "2026-09-12T09:20:40.167618+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 7,
         "blocked": 0,
         "new_jobs": 20,
-        "new_papers": 5,
+        "new_papers": 6,
         "fallback_archived": 0
       },
       "events": [
@@ -9476,6 +9476,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34685550270:1",
+          "recorded_at": "2026-09-12T09:20:40.167618+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34685550270",
+            "run_attempt": "1",
+            "source_sha": "6930082a50b5bc9b2aff13e7f1a4af3343832b12"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9572,6 +9587,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.19746",
           "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c5ba85dfa2989728",
+          "type": "research",
+          "canonical_id": "arXiv:2606.18431",
+          "title": "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -9723,7 +9746,8 @@
         "arXiv:2603.29002",
         "arXiv:2605.20179",
         "arXiv:2608.25523",
-        "arXiv:2606.19746"
+        "arXiv:2606.19746",
+        "arXiv:2606.18431"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
@@ -9737,7 +9761,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
-      "paper_active_count_after": 341,
+      "paper_active_count_after": 342,
       "last_successful_action": "paper_materialized"
     }
   ]

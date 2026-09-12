@@ -8,26 +8,14 @@
       "completed": 6
     },
     "research": {
-      "completed": 152,
+      "completed": 153,
       "superseded": 43,
       "deferred": 3,
-      "ready": 9,
+      "ready": 8,
       "blocked": 3
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-c5ba85dfa2989728",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2606.18431",
-      "title": "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
-      "source_url": "https://arxiv.org/abs/2606.18431",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18431-tail-aware-prediction-free-scheduling.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-a4ae8894c89646f7",
       "type": "research",
@@ -113,6 +101,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-b6c7fea1929c168e",
+      "type": "research",
+      "lane": null,
+      "priority": 72,
+      "canonical_id": "arXiv:2608.23962",
+      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.23962",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-c7d65b39dd1d586e",
       "type": "discovery",
       "lane": "discovery",
@@ -125,5 +125,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T09:14:24+00:00"
+  "generated_at": "2026-09-12T09:20:04+00:00"
 }
