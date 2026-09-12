@@ -16,5 +16,16 @@
   "created_at": "2026-09-12T00:37:45+00:00",
   "artifact_transport": "structured_record_v10",
   "completed_at": "2026-09-12T00:41:20+00:00",
-  "blocker": "一次資料全文をこのScheduled Chat実行環境から取得できないためblocked。arXiv:2606.30391のabsメタデータ・抄録は検索経由で確認できたが、arXivのabs/pdf直接取得はいずれもDisabledErrorとなり、コンテナからのHTTPS取得もDNS解決不能だった。alphaXiv等の二次要約には全文由来の情報があるが、queue-v10の『一次資料本文を最後まで読む。抄録・検索断片から欠落情報を推測しない』要件を満たさないため、二次資料だけでcompletedにはしない。再試行時はarXiv PDF/HTMLまたは著者提供の一次全文を取得してから研究を再開する。"
+  "blocker": "一次資料全文をこのScheduled Chat実行環境から取得できないためblocked。arXiv:2606.30391のabsメタデータ・抄録は検索経由で確認できたが、arXivのabs/pdf直接取得はいずれもDisabledErrorとなり、コンテナからのHTTPS取得もDNS解決不能だった。alphaXiv等の二次要約には全文由来の情報があるが、queue-v10の『一次資料本文を最後まで読む。抄録・検索断片から欠落情報を推測しない』要件を満たさないため、二次資料だけでcompletedにはしない。再試行時はarXiv PDF/HTMLまたは著者提供の一次全文を取得してから研究を再開する。",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-12T00:41:20+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-12T00:41:20+00:00",
+      "reason": "一次資料全文をこのScheduled Chat実行環境から取得できないためblocked。arXiv:2606.30391のabsメタデータ・抄録は検索経由で確認できたが、arXivのabs/pdf直接取得はいずれもDisabledErrorとなり、コンテナからのHTTPS取得もDNS解決不能だった。alphaXiv等の二次要約には全文由来の情報があるが、queue-v10の『一次資料本文を最後まで読む。抄録・検索断片から欠落情報を推測しない』要件を満たさないため、二次資料だけでcompletedにはしない。再試行時はarXiv PDF/HTMLまたは著者提供の一次全文を取得してから研究を再開する。"
+    }
+  ],
+  "last_blocked_at": "2026-09-12T00:41:20+00:00",
+  "retry_not_before": "2026-09-12T10:39:23+00:00"
 }

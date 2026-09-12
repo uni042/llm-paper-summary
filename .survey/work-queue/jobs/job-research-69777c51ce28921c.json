@@ -16,5 +16,16 @@
   "created_at": "2026-09-11T05:19:41+00:00",
   "artifact_transport": "structured_record_v10",
   "completed_at": "2026-09-11T05:42:00+00:00",
-  "blocker": "Primary-source full text could not be retrieved in this run. The arXiv abstract for 2510.05632 and the official WaferAI-SIM repository were reachable, and secondary full-paper explanations were found, but the paper PDF/HTML itself could not be obtained through the available primary-source retrieval routes. Workflow policy forbids completing the research record from abstract/search/secondary material. Retry when arXiv primary full text is reachable."
+  "blocker": "Primary-source full text could not be retrieved in this run. The arXiv abstract for 2510.05632 and the official WaferAI-SIM repository were reachable, and secondary full-paper explanations were found, but the paper PDF/HTML itself could not be obtained through the available primary-source retrieval routes. Workflow policy forbids completing the research record from abstract/search/secondary material. Retry when arXiv primary full text is reachable.",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-11T05:42:00+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-11T05:42:00+00:00",
+      "reason": "Primary-source full text could not be retrieved in this run. The arXiv abstract for 2510.05632 and the official WaferAI-SIM repository were reachable, and secondary full-paper explanations were found, but the paper PDF/HTML itself could not be obtained through the available primary-source retrieval routes. Workflow policy forbids completing the research record from abstract/search/secondary material. Retry when arXiv primary full text is reachable."
+    }
+  ],
+  "last_blocked_at": "2026-09-11T05:42:00+00:00",
+  "retry_not_before": "2026-09-12T10:39:23+00:00"
 }
