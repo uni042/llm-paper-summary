@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-f9d3c5ad391e4acc",
+  "type": "research",
+  "parent_job_id": "job-d4eb0caeda27a63f",
+  "priority": 87,
+  "canonical_id": "arXiv:2511.00101",
+  "title": "Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving",
+  "source_url": "https://arxiv.org/abs/2511.00101",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md",
+  "selection_reason": "base modelを共有した複数LoRA adapterをvirtualized moduleで隔離し、fine-tuningとinferenceのforward pathを共通kernelへ統合するmulti-LoRA runtime。inference-onlyで既存co-serving system比最大3.0倍throughput、統合fine-tuning/inferenceでPEFT比46.4倍のSLO attainmentを報告し、adapter仮想化とserving runtimeの接続点として強い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:09:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}

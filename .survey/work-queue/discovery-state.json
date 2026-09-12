@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:07:20+00:00",
+  "updated_at": "2026-09-12T17:09:06+00:00",
   "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-distserve-citation-backfill-5",
+  "last_round": "specialist-multilora-coserving-6",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1380,6 +1380,23 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は引用系統から離れ、training/serving境界のco-serving・adapter/LoRA multiplexing・agentic long-running state runtimeへ軸を変える",
       "source_submission": "work-queue/submissions/20260913T0207JST-discovery-376c29b504bdcaf6.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-multilora-coserving-6",
+      "axis": "multi-LoRA・推論/微調整co-serving・cross-model KV reuse",
+      "query_summary": "引用系統backfillから離れ、training/serving境界とmulti-adapter runtimeへ探索軸を変更した。fine-tuning主体のみの研究は避け、推論SLO、serving integration、KV reuseに明確なシステム寄与を持つ3件を選別し、最新mainでcanonical ID再検索して未収録を確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.06370"
+      ],
+      "next_axis_hint": "次はadapter/co-servingを離れ、agentic・multi-turn長時間requestのstate保存、interruption、fault tolerance、prefix sharing runtimeへ移る",
+      "source_submission": "work-queue/submissions/20260913T0209JST-discovery-d4eb0caeda27a63f.json"
     }
   ],
   "axes": {
@@ -2182,6 +2199,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次は引用系統から離れ、training/serving境界のco-serving・adapter/LoRA multiplexing・agentic long-running state runtimeへ軸を変える"
+    },
+    "multi-LoRA・推論/微調整co-serving・cross-model KV reuse": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "next_axis_hint": "次はadapter/co-servingを離れ、agentic・multi-turn長時間requestのstate保存、interruption、fault tolerance、prefix sharing runtimeへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
