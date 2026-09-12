@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T11:00:05.808208+00:00",
+  "updated_at": "2026-09-12T11:03:19.047777+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9913,7 +9913,7 @@
     {
       "run_key": "2026-09-12T19:30:00+09:00",
       "first_recorded_at": "2026-09-12T10:36:23.790325+00:00",
-      "last_recorded_at": "2026-09-12T11:00:05.808208+00:00",
+      "last_recorded_at": "2026-09-12T11:03:19.047777+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9922,9 +9922,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 4,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10001,6 +10001,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34689981794:1",
+          "recorded_at": "2026-09-12T11:03:19.047777+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34689981794",
+            "run_attempt": "1",
+            "source_sha": "2a0e85c64b9d37b53926894441ab3dff13e6ec95"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10035,6 +10049,14 @@
           "title": "LUMEN: Coordinated Failure Recovery for Distributed LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-a6656c3eeb0b76a3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -10044,6 +10066,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-4649dafe5fe3736a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-add2dd90d1cb57e3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.08309",
+          "title": "Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism"
+        },
+        {
+          "job_id": "job-research-fa681e706d820dae",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.02189",
+          "title": "PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers"
         }
       ],
       "new_paper_ids": [
@@ -10053,12 +10096,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1930JST-discovery-c797669b52ac6c35.json",
-        ".survey/work-queue/results/20260912T1946JST-discovery-9fd635bf1f1ee4f2.json"
+        ".survey/work-queue/results/20260912T1946JST-discovery-9fd635bf1f1ee4f2.json",
+        ".survey/work-queue/results/20260912T1957JST-discovery-job-a6656c3eeb0b76a3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 344,
       "paper_active_count_after": 347,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

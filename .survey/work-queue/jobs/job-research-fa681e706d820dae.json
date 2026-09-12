@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-fa681e706d820dae",
+  "type": "research",
+  "parent_job_id": "job-a6656c3eeb0b76a3",
+  "priority": 90,
+  "canonical_id": "arXiv:2605.02189",
+  "title": "PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers",
+  "source_url": "https://arxiv.org/abs/2605.02189",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.02189-pipemax-offline-llm-inference-commodity-gpu-servers.md",
+  "selection_reason": "オフロードとパイプライン並列を別々に最適化する従来方式に対し、各GPUで非アクティブなバッチのKVキャッシュを退避しつつ計算とデータ移動を協調させる。8 GPUの一般的なGPUサーバでvLLM比最大2.51倍、既存高スループット方式比でも最大1.42倍・1.38倍のスループット改善を報告しており、オフロード系統と並列実行系統の接点として価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T11:02:18+00:00",
+  "artifact_transport": "structured_record_v10"
+}

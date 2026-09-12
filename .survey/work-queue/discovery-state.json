@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T10:35:39+00:00",
+  "updated_at": "2026-09-12T11:02:18+00:00",
   "last_run_key": "2026-09-12T19:30:00+09:00",
-  "last_round": "20260912T1930JST-hpc-gpu-serving-01",
+  "last_round": "normal-worker-critical-buffer-heterogeneous-gpu-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -518,6 +518,27 @@
       ],
       "next_axis_hint": "今回と異なる軸として、直近採用済みsystems論文の被引用・参考文献からOS/storage/networking実装へcitation chasingし、SSD/NVMe・hierarchical memory・serving runtimeの未収録研究を優先する。",
       "source_submission": "work-queue/submissions/20260912T1930JST-discovery-c797669b52ac6c35.json"
+    },
+    {
+      "run_key": "2026-09-12T19:30:00+09:00",
+      "round": "normal-worker-critical-buffer-heterogeneous-gpu-1",
+      "axis": "heterogeneous-gpu-offload-parallelism-spot-serving",
+      "query_summary": "Candidate inventory was below the critical watermark. Rotated away from the immediately preceding CXL/hybrid-memory axis and evaluated offload-plus-pipeline-parallelism, heterogeneous spot-GPU serving, and fine-grained heterogeneous-GPU parallelism. Identity-index checks removed already-covered KV-cache and disaggregated-serving results; three unrepresented primary-source candidates remained.",
+      "candidate_count": 8,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.625,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2606.24506",
+        "arXiv:2601.10729",
+        "arXiv:2607.16892",
+        "arXiv:2606.16135"
+      ],
+      "next_axis_hint": "Next discovery should avoid immediately repeating heterogeneous GPU scheduling; rotate to GPU runtime/virtual-memory mechanisms, network/RDMA transport, or citation expansion from recent accepted serving papers.",
+      "source_submission": "work-queue/submissions/20260912T1957JST-discovery-job-a6656c3eeb0b76a3.json"
     }
   ],
   "axes": {
@@ -800,6 +821,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "今回と異なる軸として、直近採用済みsystems論文の被引用・参考文献からOS/storage/networking実装へcitation chasingし、SSD/NVMe・hierarchical memory・serving runtimeの未収録研究を優先する。"
+    },
+    "heterogeneous-gpu-offload-parallelism-spot-serving": {
+      "last_run_key": "2026-09-12T19:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.625,
+      "next_axis_hint": "Next discovery should avoid immediately repeating heterogeneous GPU scheduling; rotate to GPU runtime/virtual-memory mechanisms, network/RDMA transport, or citation expansion from recent accepted serving papers."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
