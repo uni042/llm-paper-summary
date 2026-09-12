@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T15:07:31.642713+00:00",
+  "updated_at": "2026-09-12T15:09:20.795021+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11336,7 +11336,7 @@
     {
       "run_key": "2026-09-12T23:30:00+09:00",
       "first_recorded_at": "2026-09-12T14:44:28.159530+00:00",
-      "last_recorded_at": "2026-09-12T15:07:31.642713+00:00",
+      "last_recorded_at": "2026-09-12T15:09:20.795021+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -11345,9 +11345,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 5,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -11410,6 +11410,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34701301546:1",
+          "recorded_at": "2026-09-12T15:09:20.795021+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34701301546",
+            "run_attempt": "1",
+            "source_sha": "93c5d96b2e5580afffcdc1c91c3dc1306defbdec"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11444,6 +11458,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-6b7cc6cf1ea9bd66",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -11467,6 +11489,20 @@
           "type": "research",
           "canonical_id": "arXiv:2607.07388",
           "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models"
+        },
+        {
+          "job_id": "job-54739fbff28443b3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-5f4ffec07da19fbd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.01579",
+          "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters"
         }
       ],
       "new_paper_ids": [
@@ -11475,7 +11511,8 @@
         "arXiv:2504.02263"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0005JST-discovery-storage-hierarchy-1.json"
+        ".survey/work-queue/results/20260913T0005JST-discovery-storage-hierarchy-1.json",
+        ".survey/work-queue/results/20260913T0008JST-discovery-serving-scheduling-2.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 357,

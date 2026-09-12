@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:06:24+00:00",
+  "updated_at": "2026-09-12T15:08:16+00:00",
   "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-storage-hierarchy-1",
+  "last_round": "specialist-serving-scheduling-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -858,6 +858,25 @@
       ],
       "next_axis_hint": "分離サービングのprefill負荷偏り・動的deflectionと異種GPU配置へ軸を移す",
       "source_submission": "work-queue/submissions/20260913T0005JST-discovery-storage-hierarchy-1.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-serving-scheduling-2",
+      "axis": "分離サービング負荷転送・異種GPU構成選択",
+      "query_summary": "prefill/decode分離時の負荷非対称と異種GPUクラスタの構成選択を探索し、最新HEAD・queue・既存jobで再重複判定して2候補を送信した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2602.12151",
+        "arXiv:2605.23389",
+        "arXiv:2606.18600"
+      ],
+      "next_axis_hint": "エージェント推論のtool待ち隠蔽・speculative tool executionへ軸を移し、その後GPU runtime/機密実行の転送律速を確認する",
+      "source_submission": "work-queue/submissions/20260913T0008JST-discovery-serving-scheduling-2.json"
     }
   ],
   "axes": {
@@ -1350,6 +1369,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.6,
       "next_axis_hint": "分離サービングのprefill負荷偏り・動的deflectionと異種GPU配置へ軸を移す"
+    },
+    "分離サービング負荷転送・異種GPU構成選択": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6,
+      "next_axis_hint": "エージェント推論のtool待ち隠蔽・speculative tool executionへ軸を移し、その後GPU runtime/機密実行の転送律速を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
