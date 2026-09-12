@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **13 / 50** |
-| Research ready | **13** |
+| Candidate在庫（Research ready） | **14 / 50** |
+| Research ready | **14** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 13）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 14）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **3** |
+| Discovery完了 | **2** |
+| 新規job | **5** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-heterogeneous-serving-01**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-serving-network-disaggregation-01**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | critical_buffer_cross_axis_moe_heterogeneous_serving |
-| 評価候補 | **5** |
+| 探索軸 | 分離LLMサービング・ネットワーク競合・prefill再配置 |
+| 評価候補 | **4** |
 | 重複除外 | **0** |
-| Novel候補 | **5** |
-| Research候補採用 | **0** |
+| Novel候補 | **4** |
+| Research候補採用 | **1** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **22** |
-| 探索評価候補 | **128** |
+| 探索round（stats観測） | **23** |
+| 探索評価候補 | **132** |
 | 重複除外 | **46** |
-| 重複率 | **35.9%** |
-| Novel候補 | **82** |
-| Research候補採用 | **36** |
+| 重複率 | **34.8%** |
+| Novel候補 | **86** |
+| Research候補採用 | **37** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 
 ### 24時間ファネル
 
-**探索評価 128 → 重複除外後 82 → Research候補採用 36 → Research完了 44 → Repo収録 44**
+**探索評価 132 → 重複除外後 86 → Research候補採用 37 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -86,6 +86,7 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
+| 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
@@ -95,11 +96,11 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — 分離LLMサービング・ネットワーク競合・prefill再配置: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T22:30:00+09:00** — 地理分散LLM serving・分散最適化: 評価 4 / 重複 2 / 採用 2
 - **20260912T2200+0900** — critical_buffer_cross_axis_moe_heterogeneous_serving: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T21:30:00+09:00** — composable-cxl-shared-kv-peer-gpu-memory-tier: 評価 2 / 重複 0 / 採用 0
 - **2026-09-12T21:30:00+09:00** — cxl-near-data-kv-page-management-os-demand-paging: 評価 4 / 重複 0 / 採用 2
-- **2026-09-12T21:30:00+09:00** — moe-expert-prefetch-edge-external-memory: 評価 3 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
@@ -116,11 +117,11 @@ Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-hetero
 
 ### 次に処理する候補
 
+- P85 `arXiv:2603.13358` — Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 - P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
 - P80 `arXiv:2609.10861` — REACH: Controller-Managed Long-Span ECC for HBM AI Inference
-- P80 `arXiv:2608.05303` — EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding
 
 ## 7日比較
 
