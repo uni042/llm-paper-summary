@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2603.03251",
   "paper_path": "papers/inference/05-speculative-decoding/2026-2603.03251-speculative-speculative-decoding.md",
   "selection_reason": "従来の投機的デコードでdraftとverificationが直列依存する残存ボトルネックを、verification中に複数の予想結果へ次のspeculationを先行生成することで重ね合わせる。最適化実装Saguaroはverification結果が予測集合に入ればdraft待ちを消せ、最適化済み投機的デコード比最大約2倍、自回帰デコード比最大約5倍を報告する。投機的デコードの実行パイプラインそのものを変えるため優先度が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -17,5 +17,7 @@
   "artifact_transport": "structured_record_v10",
   "repair_required": true,
   "validation_error": "ValueError: problem_method.components[0].description is too short",
-  "last_validation_failed_at": "2026-09-12T19:35:05+00:00"
+  "last_validation_failed_at": "2026-09-12T19:35:05+00:00",
+  "completed_at": "2026-09-12T19:38:54+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
