@@ -49,7 +49,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 1年以上前
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/ranggihwang/Pregated_MoE) ・ リポジトリ内被引用：39  
   Pre-gated MoEは次層のルーティング判定を1ブロック前へ移し、必要な専門家重みのCPUからGPUへの転送を現在ブロックの計算と重ねて、オフロード待ちを減らす。
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  

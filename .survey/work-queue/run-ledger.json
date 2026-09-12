@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T11:43:32.346954+00:00",
+  "updated_at": "2026-09-12T11:47:59.179212+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10267,19 +10267,19 @@
     {
       "run_key": "2026-09-12T20:30:00+09:00",
       "first_recorded_at": "2026-09-12T11:32:49.993845+00:00",
-      "last_recorded_at": "2026-09-12T11:43:32.346954+00:00",
+      "last_recorded_at": "2026-09-12T11:47:59.179212+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -10340,6 +10340,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34691920510:1",
+          "recorded_at": "2026-09-12T11:47:59.179212+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34691920510",
+            "run_attempt": "1",
+            "source_sha": "fba910b7a3dd3f05d57538eae68ab3aa9a8e2c70"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10358,12 +10373,21 @@
           "title": "Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-45d257185b0ce70d",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10970",
+          "title": "Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
         "arXiv:2607.26633",
-        "arXiv:2604.15039"
+        "arXiv:2604.15039",
+        "arXiv:2609.10970"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2034JST-discovery-3d74b84c91f65e2a.json",
@@ -10371,8 +10395,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 350,
-      "paper_active_count_after": 352,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 353,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
