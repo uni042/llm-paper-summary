@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:40:01.381749+00:00",
+  "updated_at": "2026-09-12T20:42:43.081740+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,19 +15070,19 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T20:40:01.381749+00:00",
+      "last_recorded_at": "2026-09-12T20:42:43.081740+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 9,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -15129,6 +15129,21 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34717782627:1",
+          "recorded_at": "2026-09-12T20:42:43.081740+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "34717782627",
+            "run_attempt": "1",
+            "source_sha": "4afabc827cb753fbe8f99e58092640759fb110eb"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15161,6 +15176,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.01708",
           "title": "SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-0662097f667318ec",
+          "type": "research",
+          "canonical_id": "arXiv:2609.01024",
+          "title": "PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition",
           "from": "ready",
           "to": "completed"
         }
@@ -15231,7 +15254,8 @@
         }
       ],
       "new_paper_ids": [
-        "arXiv:2605.01708"
+        "arXiv:2605.01708",
+        "arXiv:2609.01024"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json",
@@ -15240,7 +15264,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,
-      "paper_active_count_after": 387,
+      "paper_active_count_after": 388,
       "last_successful_action": "paper_materialized"
     }
   ]

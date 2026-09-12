@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.01024",
   "paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.01024-pcomoe-fine-grained-path-composition.md",
   "selection_reason": "専門家（expert）を不可分単位として扱う従来MoE推論の境界を細粒度path compositionへ移し、layer-wise pruningと再利用可能なsub-expert構造を実行エンジンで利用する。抄録では最大1.31倍のend-to-end推論高速化を報告しており、expert pruning/実行効率の系統へ新しい最適化粒度を導入する。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T18:08:31+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T20:40:52+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
