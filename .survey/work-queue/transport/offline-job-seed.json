@@ -1,45 +1,45 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "seed-20260912-1830-critical-buffer-round2",
+  "seed_id": "seed-20260912-1830-critical-buffer-round3",
   "candidates": [
     {
-      "canonical_id": "arXiv:2608.11688",
-      "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
-      "source_url": "https://arxiv.org/abs/2608.11688",
-      "priority": 94,
-      "reason": "Direct match to expert prefetch and memory-constrained MoE inference; reports up to 26% lower per-token latency and 41% better energy-delay product."
+      "canonical_id": "arXiv:2609.10790",
+      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.10790",
+      "priority": 92,
+      "reason": "Recent systems work that makes composable CXL memory a Kubernetes-schedulable shared KV-cache tier and reports 5.5x-36.6x TTFT reduction from cross-node prefix reuse."
     },
     {
-      "canonical_id": "arXiv:2608.12103",
-      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
-      "source_url": "https://arxiv.org/abs/2608.12103",
-      "priority": 93,
-      "reason": "High-value expert-cache and hierarchical-memory study at trillion-parameter scale; compares kernel page-cache behavior with application-managed policies on GH200."
+      "canonical_id": "arXiv:2607.18141",
+      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+      "source_url": "https://arxiv.org/abs/2607.18141",
+      "priority": 96,
+      "reason": "Directly relevant CXL-plus-SSD hybrid-memory KV caching; uses request-level prefetch and write buffering on a real prototype and compares against LMCache and Mooncake."
     },
     {
-      "canonical_id": "arXiv:2604.26557",
-      "title": "DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference",
-      "source_url": "https://arxiv.org/abs/2604.26557",
-      "priority": 95,
-      "reason": "Direct SSD/NVMe offload relevance with an NVMe-direct path, adaptive pipelining, and measured latency/SSD-utilization improvements."
+      "canonical_id": "arXiv:2602.11521",
+      "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2602.11521",
+      "priority": 88,
+      "reason": "Adjacent hierarchical-memory/PIM serving design that jointly places KV tokens and attention computation across heterogeneous memory tiers, useful for cross-lineage memory scheduling ideas."
     },
     {
-      "canonical_id": "arXiv:2509.07379",
-      "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Cache Scheduling for Efficient MoE LLM Inference",
-      "source_url": "https://arxiv.org/abs/2509.07379",
-      "priority": 91,
-      "reason": "Strong MoE serving candidate separating prefill/decode expert scheduling; reports substantial latency gains under constrained GPU memory."
+      "canonical_id": "arXiv:2608.03555",
+      "title": "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2608.03555",
+      "priority": 90,
+      "reason": "Strong adjacent PNM/GPU co-serving paper for million-token sparse attention; moves KV/index operations to general-purpose near-memory nodes and reports 2.09-6.13x throughput-per-TDP under SLO."
     }
   ],
   "discovery_stats": {
     "run_key": "2026-09-12T18:30:00+09:00",
-    "round": "normal-worker-critical-buffer-2",
-    "axis": "moe-expert-prefetch-cache-nvme-offload",
-    "query_summary": "Rotated from KV/disaggregation into MoE expert prefetch/cache tiering and direct NVMe KV-cache offload.",
+    "round": "normal-worker-critical-buffer-3",
+    "axis": "adjacent-cxl-hybrid-memory-pim-pnm",
+    "query_summary": "Rotated after an all-known MoE/NVMe round into adjacent CXL shared memory, SSD-backed hybrid KV tiers, hierarchical PIM, and PNM sparse-attention serving. Evaluated four strong primary-source candidates.",
     "candidate_count": 4,
     "duplicate_filtered_count": 0,
     "duplicate_canonical_ids": [],
-    "next_axis_hint": "After final dedupe, prioritize research on SSD/NVMe and expert-cache candidates, then explore adjacent OS/storage mechanisms."
+    "next_axis_hint": "If final repository dedupe removes most candidates, rotate next to OS paging, GPU virtual-memory/runtime, storage scheduling, and networking mechanisms rather than repeating CXL."
   }
 }
