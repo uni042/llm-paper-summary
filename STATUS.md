@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 22:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 22:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **165** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
-| Maintenance counter | **20 / 24** |
+| Maintenance counter | **21 / 24** |
 
 ### 注意事項
 
@@ -27,34 +27,34 @@ Run: **2026-09-12T21:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **8** |
+| Discovery完了 | **5** |
+| 新規job | **9** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime-storage-moe-1**
+Run: **20260912T2200+0900** / Round: **specialist-critical-cross-axis-moe-heterogeneous-serving-01**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 |
-| 評価候補 | **6** |
-| 重複除外 | **1** |
+| 探索軸 | critical_buffer_cross_axis_moe_heterogeneous_serving |
+| 評価候補 | **5** |
+| 重複除外 | **0** |
 | Novel候補 | **5** |
-| Research候補採用 | **1** |
-| 重複率 | **16.7%** |
+| Research候補採用 | **0** |
+| 重複率 | **0.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **19** |
-| 探索round（stats観測） | **20** |
-| 探索評価候補 | **119** |
+| 探索round（stats観測） | **21** |
+| 探索評価候補 | **124** |
 | 重複除外 | **44** |
-| 重複率 | **37.0%** |
-| Novel候補 | **75** |
+| 重複率 | **35.5%** |
+| Novel候補 | **80** |
 | Research候補採用 | **34** |
 | Research完了 | **41** |
 | Repo収録 | **41** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 ### 24時間ファネル
 
-**探索評価 119 → 重複除外後 75 → Research候補採用 34 → Research完了 41 → Repo収録 41**
+**探索評価 124 → 重複除外後 80 → Research候補採用 34 → Research完了 41 → Repo収録 41**
 
 ## 探索効率（直近24時間）
 
@@ -81,6 +81,7 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
+| critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
@@ -93,11 +94,11 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 ### 直近5探索round
 
+- **20260912T2200+0900** — critical_buffer_cross_axis_moe_heterogeneous_serving: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T21:30:00+09:00** — composable-cxl-shared-kv-peer-gpu-memory-tier: 評価 2 / 重複 0 / 採用 0
 - **2026-09-12T21:30:00+09:00** — cxl-near-data-kv-page-management-os-demand-paging: 評価 4 / 重複 0 / 採用 2
 - **2026-09-12T21:30:00+09:00** — moe-expert-prefetch-edge-external-memory: 評価 3 / 重複 0 / 採用 1
 - **2026-09-12T21:30:00+09:00** — heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute: 評価 7 / 重複 3 / 採用 0
-- **2026-09-12T20:00:00+09:00** — GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御: 評価 6 / 重複 1 / 採用 1
 
 ## 最近処理した論文
 
