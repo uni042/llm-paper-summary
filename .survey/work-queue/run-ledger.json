@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:11:23.264048+00:00",
+  "updated_at": "2026-09-12T16:13:30.726218+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11737,7 +11737,7 @@
     {
       "run_key": "2026-09-13T00:30:00+09:00",
       "first_recorded_at": "2026-09-12T15:47:23.423873+00:00",
-      "last_recorded_at": "2026-09-12T16:11:23.264048+00:00",
+      "last_recorded_at": "2026-09-12T16:13:30.726218+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -11746,9 +11746,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 13,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -11867,6 +11867,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34704503300:1",
+          "recorded_at": "2026-09-12T16:13:30.726218+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34704503300",
+            "run_attempt": "1",
+            "source_sha": "6650c52087665a1ee99c376018e9db8ebdbb2f1c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11928,6 +11942,14 @@
         },
         {
           "job_id": "job-6f57aae0aa101950",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ea350feba032ecab",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12005,6 +12027,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-d9a13e7570e7f3a1",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-09ae1785cedfe192",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.22593",
+          "title": "Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving"
+        },
+        {
+          "job_id": "job-research-0aac68b8968fc75e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.18741",
+          "title": "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -12017,7 +12060,8 @@
         ".survey/work-queue/results/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json",
         ".survey/work-queue/results/20260913T0105JST-discovery-specialist-network-runtime-3.json",
         ".survey/work-queue/results/20260913T0108JST-discovery-specialist-slo-memory-4.json",
-        ".survey/work-queue/results/20260913T0110JST-discovery-specialist-heterogeneous-edge-5.json"
+        ".survey/work-queue/results/20260913T0110JST-discovery-specialist-heterogeneous-edge-5.json",
+        ".survey/work-queue/results/20260913T0113JST-discovery-specialist-runtime-reconfig-6.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 360,
