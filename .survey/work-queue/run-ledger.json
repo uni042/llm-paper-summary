@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T02:30:25.231630+00:00",
+  "updated_at": "2026-09-12T02:36:30.797729+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8292,17 +8292,19 @@
     {
       "run_key": "2026-09-12T11:30:00+09:00",
       "first_recorded_at": "2026-09-12T02:30:25.231630+00:00",
-      "last_recorded_at": "2026-09-12T02:30:25.231630+00:00",
+      "last_recorded_at": "2026-09-12T02:36:30.797729+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
-        "new_papers": 0,
+        "new_jobs": 2,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -8319,6 +8321,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34668085772:1",
+          "recorded_at": "2026-09-12T02:36:30.797729+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34668085772",
+            "run_attempt": "1",
+            "source_sha": "7ef0f1c0d4ff8dacec050cd0d207d41b985f6e23"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8327,6 +8345,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-a582b973ede7b005",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04971",
+          "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -8338,16 +8364,25 @@
           "type": "research",
           "canonical_id": "arXiv:2609.04971",
           "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference"
+        },
+        {
+          "job_id": "job-3f9471b1e296ec5a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2609.04971"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1130JST-discovery-job-9e21235b2f0e941b.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 325,
-      "paper_active_count_after": 325,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 326,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
