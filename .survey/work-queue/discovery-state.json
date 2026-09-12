@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:19:19+00:00",
+  "updated_at": "2026-09-12T18:22:29+00:00",
   "last_run_key": "2026-09-13T03:02:31+09:00",
-  "last_round": "specialist-compiler-runtime-4",
+  "last_round": "specialist-dbms-hybrid-qos-scheduling-5",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1648,6 +1648,29 @@
       ],
       "next_axis_hint": "次はcompiler/runtimeを離れ、forward/backward citation、storage/DBMS由来state placement、remote/speculative distributed servingを独立に確認する",
       "source_submission": "work-queue/submissions/20260913T0320JST-discovery-specialist-compiler-runtime-4.json"
+    },
+    {
+      "run_key": "2026-09-13T03:02:31+09:00",
+      "round": "specialist-dbms-hybrid-qos-scheduling-5",
+      "axis": "DBMS由来cache policy・real-time/best-effort混在QoS scheduling",
+      "query_summary": "CUDA compiler/runtime軸から独立して、DBMS/OS由来のcache policyと異種QoS servingを一次arXiv metadata/abstractで探索した。SPECTRE、Tangram、KVServe、ForkKV、SuperInfer、MFS、Mellは最新repoの既存jobで除外。送信直前に最新default branch HEAD、identity index、next queue、決定論的research job path、repository検索、Library pending、GitHub fallback-inboxを再照合し、BROSとDBMS-inspired cache policy論文を未収録と判断した。",
+      "candidate_count": 9,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.7777777777777778,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.08151",
+        "arXiv:2606.06302",
+        "arXiv:2605.13734",
+        "arXiv:2604.06370",
+        "arXiv:2601.20309",
+        "arXiv:2603.17456",
+        "arXiv:2501.06709"
+      ],
+      "next_axis_hint": "次はQoS/cache schedulingを離れ、forward/backward citationまたはGPU L2/HBM prefetch・communication overlapの低層runtimeへ移る",
+      "source_submission": "work-queue/submissions/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json"
     }
   ],
   "axes": {
@@ -2610,6 +2633,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "次はcompiler/runtimeを離れ、forward/backward citation、storage/DBMS由来state placement、remote/speculative distributed servingを独立に確認する"
+    },
+    "DBMS由来cache policy・real-time/best-effort混在QoS scheduling": {
+      "last_run_key": "2026-09-13T03:02:31+09:00",
+      "rounds": 1,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.7777777777777778,
+      "next_axis_hint": "次はQoS/cache schedulingを離れ、forward/backward citationまたはGPU L2/HBM prefetch・communication overlapの低層runtimeへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

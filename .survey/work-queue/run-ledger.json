@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:22:10.132150+00:00",
+  "updated_at": "2026-09-12T18:23:30.563701+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T18:22:10.132150+00:00",
+      "last_recorded_at": "2026-09-12T18:23:30.563701+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 8,
         "audit_completed": 0,
-        "discovery_completed": 9,
+        "discovery_completed": 10,
         "blocked": 0,
-        "new_jobs": 43,
+        "new_jobs": 46,
         "new_papers": 8,
         "fallback_archived": 0
       },
@@ -13382,6 +13382,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34710943663:1",
+          "recorded_at": "2026-09-12T18:23:30.563701+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34710943663",
+            "run_attempt": "1",
+            "source_sha": "cb0c0cd5a3618ce038a80037fdb8104479d73ab1"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13518,6 +13532,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.22593",
           "title": "Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-52b0a5580681f508",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -13823,6 +13845,27 @@
           "type": "research",
           "canonical_id": "arXiv:2604.23467",
           "title": "Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference"
+        },
+        {
+          "job_id": "job-bd760a2eca08ef00",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-28c86979d5f2a372",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2411.07447",
+          "title": "Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies"
+        },
+        {
+          "job_id": "job-research-7505ea2231cb7ff0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2504.09590",
+          "title": "Efficient LLM Serving on Hybrid Real-time and Best-effort Requests"
         }
       ],
       "new_paper_ids": [
@@ -13844,12 +13887,13 @@
         ".survey/work-queue/results/20260913T0310JST-discovery-specialist-recent-systems-1.json",
         ".survey/work-queue/results/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json",
         ".survey/work-queue/results/20260913T0318JST-discovery-specialist-serverless-omissions-3.json",
-        ".survey/work-queue/results/20260913T0320JST-discovery-specialist-compiler-runtime-4.json"
+        ".survey/work-queue/results/20260913T0320JST-discovery-specialist-compiler-runtime-4.json",
+        ".survey/work-queue/results/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
       "paper_active_count_after": 374,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

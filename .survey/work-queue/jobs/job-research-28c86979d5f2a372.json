@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-28c86979d5f2a372",
+  "type": "research",
+  "parent_job_id": "job-52b0a5580681f508",
+  "priority": 79,
+  "canonical_id": "arXiv:2411.07447",
+  "title": "Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies",
+  "source_url": "https://arxiv.org/abs/2411.07447",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.07447-dbms-inspired-cache-replacement-llm-inference.md",
+  "selection_reason": "2026年7月v5へ更新された研究で、LLM inference systemのcache policyを理論上限・simulationで分析し、DBMSのcache replacement原理をpreemptive schedulerへplug-in可能な形で導入する。新規systemを追加するだけでなく、GPU実験時間を減らしながらcache policyを評価・設計する方法論とonline workload向けpolicyを示し、DBMS由来の隣接探索として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:22:29+00:00",
+  "artifact_transport": "structured_record_v10"
+}
