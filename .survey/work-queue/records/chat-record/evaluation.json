@@ -2,21 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2605.20179-20260912-1805-v10-a",
-  "job_id": "job-research-18475420c52022ad",
+  "attempt_id": "attempt-2608.25523-20260912-1815-v10-a",
+  "job_id": "job-research-210693a709bc2b42",
   "data": {
-    "hardware": ["LLaDA2.0-miniはNVIDIA A100 40GBを1基、LLaDA2.0-flashはNVIDIA H100 80GBを1基使用。", "ホストは48コアIntel CPUと1024GB DDR4メモリ。GPUとCPUを組み合わせた単一ノード実機評価。"],
-    "software": ["PyTorch 2.9、CUDA 12.8、Hugging Face Transformers、dInferを使用。著者公式実装をGitHubで公開。"],
-    "model": ["LLaDA2.0-mini 16B-A1B。FFN専門家は256、各トークンでtop-k=8。", "LLaDA2.0-flash 100B-A6B。FFN専門家は256、各トークンでtop-k=8。"],
-    "datasets": ["lm-evaluation-harnessのsanitized MBPPを主ベンチマークとして使用。"],
-    "baselines": ["Fiddler: GPU配置を固定し、GPU外専門家の計算をCPUへ送るCPU・GPU協調方式。", "Mixtral-Offload: 各デノイズ段階で必要専門家をGPU・CPU間で入れ替える専門家オフロード方式。", "更新間隔アブレーションではτ=1、ランダムτ、解析モデルで選ぶ最適τを比較。"],
-    "correctness": "全方式で同じLLaDA2.0モデルとデコード設定を使う。TIDEはルータが選ぶ専門家、重み、デノイズ方式を変えないため、性能改善をモデル品質の近似と引き換えにしていない。主指標はデコード済みトークン数/秒であり、GPUのみ実行との品質差を作る変換は導入しない。",
+    "hardware": ["単一NVIDIA A100 80GB GPU。モデル重みをロードした後の残りGPUメモリをKVキャッシュへ使用し、ワークロードごとの人工的なKV上限は設けない。"],
+    "software": ["SGLang v0.5.3へTOPASをスケジューリングモジュールとして実装。全比較方式は同じSGLangバックエンドで実行する。"],
+    "model": ["Qwen2.5-32B-Instruct"],
+    "datasets": ["合成ワークフロー: Chain-3、DAG-4、DAG-10-Wide。線形、フォーク・ジョイン、幅広DAGを含む。", "実ワークフロー: MetaGPT SoftwareDevから実プロンプトを抽出したMetaGPT-SOPとMetaGPT-TL。SOPは5役割の静的パイプライン、TLはTeamLeaderと4専門家を交互に使う9段階構成。"],
+    "baselines": ["先着順（First-Come, First-Served; FCFS）", "最長接頭辞一致（Longest Prefix Match; LPM）", "Parrot-FCFS", "Autellixの最小既得サービス量（Least-Attained Service; LAS）", "最短経路優先（Shortest-Path-First; SPF）。Chain-3の等費用条件では最短残処理時間順と等価。"],
+    "correctness": "各動作点でタスク到着はポアソン過程から生成し、同じ到着トレースを全方式で共有する。モデルとバックエンドも共通で、差分はスケジューリング方針である。主指標はタスク単位の平均・p99ジョブ完了時間で、初回タスク完了時間と要求スループットも補助指標とする。",
     "settings": [
-      {"name":"主比較","description":"ブロック長32、信頼度閾値0.95。生成長256と1024を評価する。miniはGPU専門家予算64または128で、表ではGPUメモリ制約10GB/18GB。flashは予算32または64で30GB/55GBとして比較する。"},
-      {"name":"更新間隔分析","description":"生成長1024で、ブロック長32/64と複数のGPU専門家予算を組み合わせ、毎段階更新τ=1、ランダムに選ぶτ、TIDEの事前最適化τを比較する。"},
-      {"name":"感度分析","description":"A100上のLLaDA2.0-miniでブロック長32〜128、GPU専門家予算32〜128、信頼度閾値0.7〜0.95を変え、更新周期方式の優位性が特定設定だけに依存しないか調べる。"}
+      {"name":"合成DAG評価","description":"固定長ユーザー問い合わせと固定段階生成長を用い、ユーザー内容のばらつきを抑えてワークフロー形状、接頭辞常駐、動的バッチ容量の相互作用を測る。Chain-3、DAG-4、DAG-10-Wideで異なる到着率を評価する。"},
+      {"name":"MetaGPT-SOP","description":"従来MetaGPTの5役割パイプラインを使う。各タスクは主に一方向に役割を進むため、同じ接頭辞へ繰り返し戻る機会は比較的小さい。"},
+      {"name":"MetaGPT-TL","description":"新しい星型組織を9段階へ展開し、中央のTeamLeaderと4人の専門家を交互に呼ぶ。中央接頭辞へ繰り返し戻るため、接頭辞常駐を明示的に制御する価値が高い。"},
+      {"name":"構成要素除去実験","description":"MetaGPT-TLの0.0175 task/sで、基本遷移効用と共同状態探索だけのTOPAS-base、将来再利用のみ追加、年齢補正のみ追加、完全版を比較する。"},
+      {"name":"スケジューラ費用","description":"MetaGPT-SOPの0.15 task/sで制御計算時間を測り、1判断平均1.9ms、累積スケジューラ時間は実験総時間の0.31%と報告する。"}
     ],
-    "methodology": "まず同一GPU・CPU環境でCPU専門家計算とPCIe転送の特性を事前計測し、更新間隔最適化に利用する。その後、Fiddler、毎段階専門家を移すMixtral-Offload、TIDEをsanitized MBPPで実機比較し、平均デコードスループットを測る。2種類のモデル規模、生成長、GPU専門家予算を変える。追加実験ではτ選択そのものを切り離して比較し、さらにブロック長・メモリ予算・信頼度閾値を掃引することで、性能向上が単一の設定調整だけによるものかを検証する。",
-    "scope": "実機評価だが、対象はNVIDIA A100/H100とIntel CPUによる単一GPU・CPUノードに限られる。データセットはsanitized MBPP中心で、モデルもLLaDA2.0-mini/flashの2種類である。付録ではAMD GPU、ARM CPU、複数GPU、複数ノードを未評価と明記する。専門家活性の解析も主に同一デノイズブロック内を対象とし、ブロック間の長期類似性は今後の課題である。"
+    "methodology": "各ワークロードの複数到着率でタスクを投入し、方式ごとに平均・p99タスク完了時間を計測する。論文の割合改善は、それぞれのワークロード・指標で平均値が最も良い比較方式を基準にするため、すべての数値が同一の一方式に対する比較ではない。合成DAGでは構造だけを明瞭にする固定長要求を使い、MetaGPTでは実プロンプトと可変呼び出し長を使って実用的な多段処理へ展開する。構成要素除去では将来接頭辞再利用価値とタスク年齢補正の寄与を分離する。",
+    "scope": "単一A100 80GB、単一モデルQwen2.5-32B-Instruct、SGLang v0.5.3での評価であり、複数GPU、分離型プリフィル・デコード構成、異種GPU、実運用クラスタは直接評価していない。全タスクが同じ既知DAGとエージェント対応を持つ設定を仮定し、将来のReAct反復、ツール待ち、未展開ツール出力は未知イベントとして扱う。遠い将来の接頭辞需要は予測せず一段先だけを見るため、長距離再利用の最適性は保証しない。"
   }
 }
