@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2609.10812-20260912-1452-v10-a1",
-  "job_id": "job-research-09f84c02bdf7d29d",
+  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
+  "job_id": "job-research-985814ffefefe223",
   "data": {
-    "limitations": "主要評価はAurora/Ponte VecchioとPBS/Rayの組合せで、NVIDIA・AMD系HPCやSlurm/Flux環境ではsite compatibility layerの内容と性能定数が異なる。256 nodeは最大成功scaleで、512 nodeはsingle GCS saturationにより起動失敗する。streamingの中央endpointもhead nodeのCPU/network/ephemeral-port資源へ集中し、distributed dispatchで回避できても『単一公開endpoint』要件をそのまま満たさない。Ray ServeのO(N^2) replica re-resolutionはclient-side patchでは根治できずupstream changeが必要。fault toleranceはMPI hot pathよりRayに利点があるが、長期production endpointでの継続障害回復を主評価していない。",
-    "differences": "vLLMやSGLangはsingle/multi-node inference engine、Ray ServeやDynamo/SkyServeはcloud-style orchestrationを提供するが、ExaServeはbatch-scheduled leadership HPC内でscheduler submission、MPI launch、high-speed network bind、accelerator selection、weight staging、site patch、proxyまでを一つのdeployment specから実行するintegration layerである。DistServe/Splitwise等がprefill/decodeやrequest schedulingを最適化するのに対し、本研究はHPC施設全体へ数千replicaを展開するcontrol/deployment planeとfront-end deliveryのscale limitを対象とする。さらに405B pipeline-parallel modelのshard-aware stagingやIntel XPU対応を含み、cloud datacenter前提のserving研究と適用環境が異なる。",
-    "implementation_status": "pip-installable Python frameworkとして実装し、Aurora上で最大256 node・3072 vLLM replica、SGLang、405B pipeline-parallel modelまでend-to-endに動作確認している。batch script renderer、MPI-based staging/launch、replica planner、proxy backend、site-specific two-tier patch system、instrumentationを含む。2026-09-12時点で論文一次ページとGitHub検索から著者公式repository URLを確認できず、公開code URLは未確認。",
-    "research_positioning": "LLM serving基盤・大規模deployment系統に属し、HPCをtraining専用資源ではなく大規模inference fleetとして使う際のsystem bottleneckを整理する研究である。特に3072 replicaでのRay control-plane quadratic behaviorと中央streaming proxyの飽和は、GPU演算性能を増やしてもcontrol/data planeが先に頭打ちになることを示す。将来の階層memory・SSD活用との接点として、MPIによるnode-local weight stagingはshared filesystem I/O集中を避ける実例であり、model/KVをNVMeへstageする際も『全node同時readを避け、broadcastやshard-aware placementと組み合わせる』設計根拠になる。",
-    "related_work": ["vLLM", "SGLang", "Ray Serve", "NVIDIA Dynamo", "SkyServe", "DistServe", "Splitwise", "Sarathi-Serve", "Llumnix", "FlexGen"],
-    "audit_notes": "arXiv:2609.10812v1の一次HTML全文を確認し、HPC operational gap、6-component ExaServe design、MPI tmpfs staging、replica planner、405B shard-aware pipeline mode、proxy architecture、Aurora patch layer、1〜256 node methodology、interactive SLO、27.1k QPS non-streaming、streaming proxy collapse、GCS O(N^2)解析、512-node failure、SGLang/405B generality、limitations、51件の参考文献を照合した。"
+    "limitations": "著者自身が第1版の実現可能性調査と位置付けている。プリフィルとデコードを分離した構成ではなく、両処理が完全な推論エンジンを持つ。2ノード、単一NVIDIA L4/ノード、逐次実行という条件なので、有効スループット、待ち行列混雑時の尾部遅延、プリフィルとデコードの競合は評価していない。RDMAを用いる共有KV方式、GPUからCXLへの直接DMA、複数利用者での資源競合、容量圧迫時の追い出しも未評価である。現実装はホスト主記憶経由で約5.8GB/sしか出ず、CXL装置の約27GB/sを十分使えていない。スロットの再利用管理も簡素で、長時間運用に必要な期限切れや回収機構が残る。",
+    "differences": "既存の外部KVキャッシュはDRAM、SSD、RDMA等を組み合わせて大容量化するが、本研究は複数ホストへ同時写像されるCXLメモリを共有階層にする。既存のCXL向けKV研究に対しては、共有領域があらかじめ存在するという前提を外し、Kubernetesの動的資源割当で要求時の領域作成、複数ノードへの接続、Podへの公開、削除時の回収まで扱う点が主な差である。またKV索引を共有メモリ内部へ置くため、外部の索引サービスや遠隔検索要求を使わず、別ノードの推論処理が同じ領域を直接調べられる。",
+    "implementation_status": "Kubernetesの動的資源割当ドライバ、CXL装置管理部、ホスト側DAX実体化、コンテナ機器注入、推論基盤向け共有KV格納部を実装し、Seagate試作CXL装置でエンドツーエンド評価している。論文はSeagate公式GitHub組織を公開先として示すが、本文から特定の単一リポジトリ名を一意に確定できないため、公開実装の入口として組織URLのみ記録する。",
+    "research_positioning": "KVキャッシュ退避・階層メモリとCXLメモリ分離の交点に位置する。単一ノードの容量拡張だけでなく、要求の配置先が変わっても接頭辞KVを再利用できる共有クラスタ階層を実証した点が重要である。SSDやNVMeは容量単価で有利だが通常は同じ物理領域を複数ホストから通常のメモリ読出しとして扱えない。CXLはより高速で共有性を持つ一方、容量と費用に制約がある。将来のGPU、DRAM、CXL、NVMeを組み合わせた多階層KV管理では、複数ノードで頻繁に再利用する高温度の接頭辞をCXLへ、低頻度で大容量なデータをNVMeへ置く中間階層として接続しやすい。",
+    "related_work": ["外部KVキャッシュ", "共有CXL KV階層", "Kubernetes動的資源割当", "推論基盤のKV退避接続部", "分散推論基盤"],
+    "audit_notes": "arXiv:2609.10790v1の一次HTML全文を確認し、動的資源割当の資源モデル、要求時のCXL領域構成、DAXと機器注入、共有領域内索引、ホスト主記憶経由の転送、整合性確認、2ノード試験機、1920組の要求による評価、最初のトークンまでの時間、命中率、同一ノードとの差、装置帯域、検査値と誤命中の対照試験、制約、参考文献34件を照合した。"
   }
 }
