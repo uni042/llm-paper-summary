@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9e21235b2f0e941b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv.md",
+      "priority": 88,
+      "reason": "長い推論過程で将来再参照されるKVを、直近queryだけではなく履歴queryのクラスタ代表であるビーコンqueryから予測する訓練不要のKVキャッシュ圧縮手法。長期推論で遠い過去の計画へ再注意するThought Revisiting Tokenを観測し、そのqueryが少数クラスタへ集約する性質を利用する。4種類の公開Large Reasoning Modelで最大5.8倍のメモリ削減と4.3倍超のthroughput改善を報告しており、既存の最近傍・局所query依存型KV削減とは異なる長距離再訪予測を導入する点が強い。ICML 2026採択で公式コードもarXivから確認できる。"
+    }
+  ]
+}
