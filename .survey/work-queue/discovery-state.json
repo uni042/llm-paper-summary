@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:40:12+00:00",
+  "updated_at": "2026-09-12T16:42:02+00:00",
   "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-older-serving-omissions-6",
+  "last_round": "specialist-kernel-runtime-determinism-7",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1240,6 +1240,21 @@
       ],
       "next_axis_hint": "過去欠落探索を一度離れ、直近新着・citation/related-work・GPU kernel/runtimeの3経路を独立確認する",
       "source_submission": "work-queue/submissions/20260913T0140JST-discovery-1f8a64f753d53399.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-kernel-runtime-determinism-7",
+      "axis": "GPU kernel/runtime・推論決定性",
+      "query_summary": "過去serving欠落の投入後、GPU kernel fusion、persistent runtime、dynamic batching由来の非決定性へ探索軸を移した。最新mainで3件の決定論的research jobが存在しないことを送信直前に再確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はkernel最適化を離れ、直近新着、citation/related-work、通信collective/PD transferを独立に探索する",
+      "source_submission": "work-queue/submissions/20260913T0142JST-discovery-53325eb4d61afb8e.json"
     }
   ],
   "axes": {
@@ -1952,6 +1967,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.8,
       "next_axis_hint": "過去欠落探索を一度離れ、直近新着・citation/related-work・GPU kernel/runtimeの3経路を独立確認する"
+    },
+    "GPU kernel/runtime・推論決定性": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はkernel最適化を離れ、直近新着、citation/related-work、通信collective/PD transferを独立に探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

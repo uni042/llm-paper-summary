@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 235,
+      "completed": 236,
       "ready": 1
     },
     "audit": {
@@ -10,7 +10,7 @@
     "research": {
       "completed": 177,
       "superseded": 44,
-      "ready": 51,
+      "ready": 54,
       "deferred": 3
     }
   },
@@ -100,19 +100,19 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-cd30ed212ad4a8ba",
+      "job_id": "job-research-dfc514a18ebaac1e",
       "type": "research",
       "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2512.14946",
-      "title": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
-      "source_url": "https://arxiv.org/abs/2512.14946",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+      "priority": 88,
+      "canonical_id": "arXiv:2512.22219",
+      "title": "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+      "source_url": "https://arxiv.org/abs/2512.22219",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-53325eb4d61afb8e",
+      "job_id": "job-5945231575e3ff8c",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T16:40:28+00:00"
+  "generated_at": "2026-09-12T16:42:36+00:00"
 }
