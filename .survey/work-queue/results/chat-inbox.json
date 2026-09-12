@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-d92e296c1a145dd5",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02737-declarative-attention-self-directed-kv-access.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.02737.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-eeddee746504f3dd",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T21:12:55+00:00"
 }
