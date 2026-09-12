@@ -2,22 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2512.18194-20260912-1855-v10-a",
-  "job_id": "job-research-ed6df8bb43d5460d",
+  "attempt_id": "attempt-2609.11392-20260912-1930-v10-a",
+  "job_id": "job-research-a3fa4611bb7bffee",
   "data": {
-    "overview": "TraCTはCXLを単なるKV保存場所ではなく、ネットワークを迂回する共有転送路として使うことで、キャッシュを無効化しても長い入力でNIXLより短く安定したTTFTを示し、6000トークン条件では高負荷まで要求スループットを概ね維持する。48GB接頭辞キャッシュを有効にすると、DRAMキャッシュのLMCacheと同程度または低いヒット率でも、ヒットKVをデコードworkerへ再送する必要がないためピーク要求スループットを最大1.6倍改善する。合成負荷では平均TTFT最大9.83倍、P99 TTFT最大6.2倍の短縮を報告し、時間内訳では負荷増加時もCXL→GPUのKV読込時間がほぼ一定である。GPU受信帯域と実行時間の改善によりSM利用・電力も低下する。",
+    "overview": "PATTONは、PIMでアテンション演算だけを速くする方式に対し、KVブロックの割当・再利用・回収まで含めて物理配置を最適化することで、追加プリフィル再計算とPIM命令オーバーヘッドの双方を減らす。4モデルの幾何平均では、評価した比較対象群に対して統合指標で平均1.95倍の速度向上と4.83倍のエネルギー効率向上を報告する。個別比較ではNeuPIMsに4.27倍、PIMphonyに1.42倍、AttAccに1.52倍、BlockPIMに1.57倍の速度向上となる。Commit Zoneだけでも直接最終Value配置へ書く構成に比べアテンション遅延を13.0%、エネルギーを12.4%削減し、Value書き込みを5倍高速化する。Order-2-Vは生のGEMV効率を最大化する方式より若干計算効率を譲る代わりに、容量圧迫下の接頭辞キャッシュ崩壊を防ぐ。",
     "key_results": [
-      {"metric":"ピーク要求スループット","value":"最大1.6倍","baseline":"LMCache","condition":"合成ワークロード、QPS=3.0付近、48GB接頭辞キャッシュ","interpretation":"TraCTはキャッシュヒットKVをネットワーク再転送せず、デコードGPUが共有CXLから直接取得するため、同程度のヒット率でもシステム容量が高い。"},
-      {"metric":"平均TTFT","value":"最大9.83倍短縮","baseline":"LMCacheおよびNIXL","condition":"合成ワークロードA/B/C、負荷掃引","interpretation":"GPU–CXL直接DMAと接頭辞再利用による再計算・再転送回避が重なり、プリフィル待ちとKV移動時間を大幅に削減する。"},
-      {"metric":"P99 TTFT","value":"最大6.2倍短縮","baseline":"LMCacheおよびNIXL","condition":"合成ワークロードA/B/C、負荷掃引","interpretation":"NICキューやRDMA混雑の変動を除き、共有メモリ経路へ置き換えることで平均だけでなく末尾遅延も安定する。"},
-      {"metric":"キャッシュなしTTFT","value":"1500〜6000入力トークンの全条件でTraCTの分布がNIXLより左へ移動","baseline":"NIXL/UCX","condition":"接頭辞キャッシュ無効、出力3トークン固定","interpretation":"キャッシュ効果を除いてもGPU–CXL DMA転送路そのものがRDMA経路より低く安定したプリフィル遅延を持つ。"},
-      {"metric":"キャッシュなし要求スループット","value":"NIXLと同等水準を維持","baseline":"NIXL/UCX","condition":"6000入力トークン、QPS 0.5〜1.5","interpretation":"CXLの10.1GB/s実測帯域でも、高並行度のバルクKV転送路として100Gbps RDMAに匹敵する処理能力を維持できる。"},
-      {"metric":"KV読込時間の負荷安定性","value":"負荷上昇時もほぼ一定","baseline":"LMCacheとNIXLでは負荷とともに増加","condition":"QPS 1.0〜3.0の時間内訳","interpretation":"CXL共有領域からGPUへ直接読込むため、ホスト間コピーとNIC競合が増える比較方式より負荷感度が小さい。"},
-      {"metric":"接頭辞ヒット率","value":"workload B/CではLMCache以下でも高スループット","baseline":"LMCache","condition":"合成ワークロードA/B/C","interpretation":"性能差は単に高いヒット率を得たからではなく、ヒット後のKV転送を共有CXLで省けるデータ経路に由来する。"},
-      {"metric":"GPU資源・電力","value":"SM利用率と消費電力を低減し、デコード側GPU RX帯域を安定して高く維持","baseline":"LMCacheおよびNIXL","condition":"QPS=3.0の資源時系列評価","interpretation":"再計算・ネットワーク転送を減らし、より短い実行時間と高い実効PCIe/CXL帯域を得ることでエネルギー消費も下がる。"}
+      {"metric": "統合遅延の平均速度向上", "value": "1.95倍", "baseline": "評価対象ベースライン群", "condition": "4モデル、PIMアテンション実行＋ランタイムKVミス由来の追加プリフィル再計算", "interpretation": "単純なPIM MAC高速化ではなく、動的ブロック管理と容量効率によって再計算まで含めたランタイム費用を減らした効果を表す。"},
+      {"metric": "平均エネルギー効率", "value": "4.83倍", "baseline": "評価対象ベースライン群", "condition": "同一AiMシミュレーション構成とA100再プリフィル測定を統合", "interpretation": "PIM I/O、無駄な行活性化、KVミス再計算を同時に抑えるため、遅延以上にエネルギー面の改善が大きい。"},
+      {"metric": "個別速度向上", "value": "NeuPIMs 4.27倍、PIMphony 1.42倍、AttAcc 1.52倍、BlockPIM 1.57倍", "baseline": "各方式", "condition": "Llama3-8B、Qwen3-8B、OPT-6.7B、Qwen1.5-7Bの幾何平均", "interpretation": "粗粒度または静的割当で再プリフィルを起こす方式には大差が付き、同じくブロック管理を持つBlockPIMに対しても書き込み効率・チャネル並列性・SV連続性で優位を得る。"},
+      {"metric": "個別エネルギー効率", "value": "NeuPIMs 7.94倍、PIMphony 6.77倍、AttAcc 6.70倍、BlockPIM 1.51倍", "baseline": "各方式", "condition": "4モデルの幾何平均", "interpretation": "KVミス再計算を多く発生させる方式では特にエネルギー差が大きい。BlockPIMとの差は主にPIM内部の配置・書き込み効率に由来する。"},
+      {"metric": "Commit Zoneによるアテンション遅延削減", "value": "13.0%削減", "baseline": "PATTON-wo-CZ", "condition": "最終Key/Value配置は同じで、Value部分ブロックの一時配置だけを除去したアブレーション", "interpretation": "Valueの生成途中だけ別配置へ置くという設計自体が、全体アテンション遅延へ無視できない効果を持つ。"},
+      {"metric": "Commit ZoneによるValue書き込み高速化", "value": "5倍", "baseline": "PATTON-wo-CZ", "condition": "Qwen1.5-7Bのアブレーション評価", "interpretation": "GEMV向け最終配置へ毎トークン直接書く場合の多数行活性化を避ける効果が直接現れる。"},
+      {"metric": "Commit Zoneの行活性化削減", "value": "12.6倍削減", "baseline": "Order-1-Vへ直接書き込み", "condition": "16ステップごとのcommit overheadを含む", "interpretation": "一時配置から最終配置への定期移動費用を含めても、毎ステップ書き込みを1行中心にまとめる方が有利である。"},
+      {"metric": "容量圧迫下のKVキャッシュヒット率", "value": "PATTON 82.09%、GPU参照 87.86%、PATTON_no_O2V 30.30%", "baseline": "GPU native cacheおよびOrder-2-Vなし構成", "condition": "250,000超のlive context token", "interpretation": "SVの連続還元だけを優先して行領域を要求専有すると、未使用容量が増えて接頭辞キャッシュが崩壊する。Order-2-Vは少しのGEMV断片化と引き換えに実効容量を保つ。"},
+      {"metric": "通常負荷のKVキャッシュヒット率", "value": "全構成91.28%", "baseline": "GPU参照、PATTON、PATTON_no_O2V", "condition": "容量圧迫なし", "interpretation": "Order-2-Vの価値は通常条件より、キャッシュ容量が競合する本番型高負荷条件で顕在化する。"}
     ],
-    "negative_results": "TraCTの接頭辞キャッシュは単純LRUであり、workload B/CではLMCacheよりヒット率が低い。論文自身もより高度な置換方針はメタデータ更新量を増やし、非コヒーレントCXL上でロック・フラッシュ負担が大きくなるため将来課題としている。キャッシュなしの6000トークン条件では要求スループットはNIXLを大きく上回るというより概ね同等で、CXL転送路単独の主利点はTTFTの低下と安定化である。また`clflush`は`clflushopt`より高遅延だが、現行非コヒーレント機器で可視性を保証するために選ばれている。評価規模は2ノードであり、ロック管理スレッドや固定長グローバルロックのラック規模拡張性は数十ノード級の実機では未検証である。",
-    "interpretation": "分離サービングで接頭辞キャッシュがヒットしても、キャッシュがプリフィルworkerのDRAMにある限り、そのKVをデコードworkerへRDMAで送る必要がある。したがって計算削減と通信削減が一致しない。TraCTは両workerから直接見えるCXLメモリへKVを置くことで『計算済み状態の所在』と『転送先』を同じ場所へ統合し、ヒット時は再計算もホスト間転送も消す。さらにミス時もGPU→CXL→GPUだけで済む。このためヒット率がLMCacheより高くなくてもスループットとTTFTが改善する。非コヒーレント性へのソフトウェア対策は追加CPUコストを持つが、大きなKV本体をCPUコヒーレンス対象にせず小さいメタデータだけへ限定することで利得を維持している。",
-    "quality_impact": "モデル、KV値、注意計算を変更しない無損失のシステム最適化であり、回答品質への近似劣化はない。交換条件は性能と共有メモリ管理コスト、CXL機器コスト、単純LRUによるヒット率、同期オーバーヘッドの間にある。"
+    "negative_results": "PATTONはすべての指標で無条件に最良ではない。Order-2-Vを外して1要求へValue Row Set全体を割り当てる構成は、生のSV GEMV効率ではPATTONより高い。しかしその配置は未使用列を他要求へ渡せず、容量圧迫時のKVヒット率が30.30%まで低下して追加プリフィルを誘発するため、エンドツーエンドのランタイム費用では不利になる。また主評価はPIMシミュレータであり、ホスト側のモデル全層実行を含む完全なサービングスループット比較ではない。AttAccとNeuPIMsは評価構成上2048トークンの最大コンテキスト制約を持つため、比較条件もその上限へ合わせている。",
+    "interpretation": "PATTONの利得は二つに分かれる。第一に、論理ブロックと物理配置を細粒度で結びつけることで接頭辞キャッシュを保持し、粗粒度・静的配置方式で生じるKVミスとGPU再プリフィルをほぼ除去する。第二に、PIM内部ではKeyとValueを別配置にし、Valueの未完成期間だけCommit Zoneへ逃がすことで、GEMVの連続還元と毎トークン書き込みを両立する。BlockPIMのようにブロックキャッシュを維持できる比較対象との差が1.57倍と小さくなることは、再計算回避が大きな寄与を持つことを示す。一方でBlockPIMに対しても、動的要求下でのチャネル並列性、Value書き込み、連続SV還元の差が残る。",
+    "quality_impact": "モデルの重み、KV値、アテンション数式を近似・量子化・枝刈りせず、配置とランタイム管理だけを変更するため、生成品質は原理上同一である。主な交換条件は、配置メタデータとCommit Zone用の管理複雑性、GEMV連続性と容量共有のバランス、そしてシミュレーションで得たPIM性能が実機でどこまで再現されるかにある。"
   }
 }
