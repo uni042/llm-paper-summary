@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **120 / 50** |
-| Research ready | **120** |
+| Candidate在庫（Research ready） | **122 / 50** |
+| Research ready | **122** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **196** |
@@ -28,35 +28,35 @@ Run: **2026-09-13T04:30:00+09:00**
 |---|---:|
 | Research完了 | **7** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **8** |
+| Discovery完了 | **4** |
+| 新規job | **11** |
 | Repo収録 | **7** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3**
+Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-survey-gap-4**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 分離型LLMサービング・KV転送／フェーズ非対称性 |
-| 評価候補 | **8** |
-| 重複除外 | **6** |
-| Novel候補 | **2** |
-| Research候補採用 | **1** |
-| 重複率 | **75.0%** |
+| 探索軸 | 推論システム横断サーベイ・KV・エッジ実行 |
+| 評価候補 | **3** |
+| 重複除外 | **0** |
+| Novel候補 | **3** |
+| Research候補採用 | **2** |
+| 重複率 | **0.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **99** |
-| 探索評価候補 | **476** |
+| 探索round（stats観測） | **100** |
+| 探索評価候補 | **479** |
 | 重複除外 | **160** |
-| 重複率 | **33.6%** |
-| Novel候補 | **316** |
-| Research候補採用 | **171** |
+| 重複率 | **33.4%** |
+| Novel候補 | **319** |
+| Research候補採用 | **173** |
 | Research完了 | **64** |
 | Repo収録 | **64** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3
 
 ### 24時間ファネル
 
-**探索評価 476 → 重複除外後 316 → Research候補採用 171 → Research完了 64 → Repo収録 64**
+**探索評価 479 → 重複除外後 319 → Research候補採用 173 → Research完了 64 → Repo収録 64**
 
 ## 探索効率（直近24時間）
 
@@ -163,6 +163,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
 | 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
+| 推論システム横断サーベイ・KV・エッジ実行 | 3 | 0 | 2 | 0.0% | 66.7% |
 | 新着・長期推論KV圧縮と削除 | 3 | 0 | 0 | 0.0% | 0.0% |
 | 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
@@ -173,11 +174,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3
 
 ### 直近5探索round
 
+- **2026-09-13T05:00:25+09:00** — 推論システム横断サーベイ・KV・エッジ実行: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T05:00:25+09:00** — 分離型LLMサービング・KV転送／フェーズ非対称性: 評価 8 / 重複 6 / 採用 1
 - **2026-09-13T05:00:25+09:00** — エージェントサンドボックス・OS資源管理・状態管理: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T05:00:25+09:00** — 2026-09新着・KVキャッシュ圧縮／再利用: 評価 3 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — 投機的デコードのserving・pipeline・メモリ制約・性能モデル: 評価 7 / 重複 2 / 採用 4
-- **2026-09-13T04:00:16+09:00** — chunked prefill・prefix-aware batchingの基礎欠落: 評価 4 / 重複 3 / 採用 0
 
 ## 最近処理した論文
 
