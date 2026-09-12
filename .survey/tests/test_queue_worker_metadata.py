@@ -66,5 +66,45 @@ class AuditMetadataRoutingTest(unittest.TestCase):
             queue_worker.ROOT = original_root
 
 
+class DiscoveryReplenishmentTest(unittest.TestCase):
+    def test_ready_research_does_not_block_discovery_replenishment(self) -> None:
+        jobs = [
+            {
+                "job_id": "job-research-existing",
+                "type": "research",
+                "lane": "research",
+                "status": "ready",
+                "priority": 90,
+            }
+        ]
+        with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+            with patch.object(queue_worker, "add_job", return_value=True) as add_job:
+                self.assertTrue(queue_worker.ensure_discovery_job())
+
+        created = add_job.call_args.args[0]
+        self.assertEqual(created["type"], "discovery")
+        self.assertEqual(created["lane"], "discovery")
+
+    def test_existing_active_discovery_prevents_duplicate_replenishment(self) -> None:
+        jobs = [
+            {
+                "job_id": "job-research-existing",
+                "type": "research",
+                "status": "ready",
+            },
+            {
+                "job_id": "job-discovery-existing",
+                "type": "discovery",
+                "lane": "discovery",
+                "status": "ready",
+            },
+        ]
+        with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+            with patch.object(queue_worker, "add_job", return_value=True) as add_job:
+                self.assertFalse(queue_worker.ensure_discovery_job())
+
+        add_job.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()
