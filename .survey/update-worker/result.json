@@ -1,22 +1,6 @@
 {
   "schema_version": 1,
-  "ok": true,
+  "ok": false,
   "attempt_id": "update-20260912-0830",
-  "kind": "framework_llm_update",
-  "updated_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm/README.md",
-    "framework-updates/inference-engines/sglang/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md",
-    "llm-releases/README.md"
-  ],
-  "created_paths": [],
-  "updated_existing_paths": [
-    "framework-updates/README.md",
-    "framework-updates/inference-engines/vllm/README.md",
-    "framework-updates/inference-engines/sglang/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md",
-    "llm-releases/README.md"
-  ],
-  "summary": "2026-09-12確認: vLLMのKimi K3 FP8 MLA cache grouped kernelとDeepSeek-V4 sparse indexer JIT抑制、SGLangのDeepSeek-V4.1 DSpark verify fusion（+12.15%）、llama.cppのROCm長context Flash Attention改善を追加。9月11日以降の新規汎用LLM正式公開は確認されず。"
+  "error": "ValueError: blob SHA mismatch for framework-updates/README.md: expected ee7c0758553311abd43a673dd25aafb8994239fa, current e0a39fc8bc51d70c4371f2d84615b3f39ed7fce1"
 }
