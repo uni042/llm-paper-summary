@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-176f6ec6b8273a5c",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/02-hardware-accelerators/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2607.10186.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-2c474caec39ae70d",
+  "validation_error": "ValueError: problem_method.components[1].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T16:04:05+00:00"
 }
