@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-95bcce1436ac0604",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11133",
+      "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11133",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-model-calibrated-power-control.md",
+      "priority": 90,
+      "reason": "プリフィル/デコード分離サービングで両レーンに同一の電力設定を適用せず、モデル・量子化・推論エンジン・ハードウェアの組合せごとに自動較正する電力制御。B200上のMoE実測で、プリフィルはSMクロック窓、デコードはスループット/遅延崖の直上に置く電力上限制御を使い、Qwen3-Coder-480Bで平均E2E遅延+3.5%に抑えつつtokens/Jを20.4%改善、3日継続試験でレーン対の電力量32.3%削減を報告している。分離サービングの資源制御を電力・SLOまで広げる新着システムとして優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.09166",
+      "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.09166",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md",
+      "priority": 86,
+      "reason": "端末側SLMがdraftしサーバーLLMが検証する協調投機的デコードで、語彙が一致しない端末/サーバーモデルを扱いながら通信量を削減する。共通語彙部分だけ分布送信するhybrid resamplingと、サーバーから置換候補と確率だけ返して端末検証する強化版を提案し、サーバーLLM分布を保つ損失なし方式としている。エッジ分散推論・通信最適化・投機的デコードを横断するため研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.13093",
+      "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.13093",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md",
+      "priority": 80,
+      "reason": "端末側に入力前処理、埋め込み、KVキャッシュ認可、投機的デコード、低次元LM-head計算を残し、クラウド側に重いdecoder推論とKV管理・検証を置くedge-cloud協調推論。CPU/GPU/組込み端末向け実行経路を持ち、送信テンソルとlogitsを量子化・暗号化する。baseline split inference比でper-token latency最大46.1%削減、downlink payload最大67.4%削減を報告しており、端末/クラウド分割とKV制御の隣接系統として有望。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11058",
+      "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+      "source_url": "https://arxiv.org/abs/2609.11058",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11058-emmi-edge-multimodal-representation-compression.md",
+      "priority": 75,
+      "reason": "エッジ側で各モダリティを符号化・融合・学習圧縮し、raw sensorや中間層全体ではなく固定長のcompact latent representationだけをサーバーへ送るMLLM協調推論。代表的multimodal benchmarkで通信payloadを32分の1にしつつ同等精度を維持し、帯域制約下の推定E2E推論遅延を最大3.4倍削減すると報告する。LLM単独より隣接寄りだが、通信ボトルネックを表現圧縮で解く新着として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23962",
+      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.23962",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
+      "priority": 72,
+      "reason": "KVキャッシュ容量不足に対するtensor parallelismとKV圧縮を、従来の別々の指標ではなくcost per million tokens対latencyの同一軸で比較する研究。A100/A40/H100で較正したprofiled simulatorを使い、TP degree 1-8とKV 16/8/4-bit・keep ratio 0.25までを横断する。実機そのものではなく較正シミュレータ中心なので優先度は抑えるが、GPU追加とメモリ圧縮の設計判断を直接比較する点はサービング運用上有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T18:00:00+09:00",
+    "round": "specialist-edge-disaggregated-power-1",
+    "axis": "新着edge/disaggregated serving・通信/電力制御",
+    "query_summary": "直前のagentic prefix workflow軸を避け、2026年9月新着を中心に分離サービングの電力制御、edge-cloud協調、協調投機的デコード、通信表現圧縮を探索し、隣接するKV容量対策のコスト比較も軽量評価した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "GPU runtime/SmartNICによるCPU-free serving、SSD/NVMe expert I/O scheduling、HPC大規模servingへ軸を変更する",
+    "empty_round_reason": null
+  }
+}
