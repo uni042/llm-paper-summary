@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 21:54 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 22:00 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -27,8 +27,8 @@ Run: **2026-09-12T21:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **6** |
+| Discovery完了 | **4** |
+| 新規job | **7** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -50,11 +50,11 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **19** |
-| 探索round（stats観測） | **19** |
-| 探索評価候補 | **117** |
+| 探索round（stats観測） | **20** |
+| 探索評価候補 | **119** |
 | 重複除外 | **44** |
-| 重複率 | **37.6%** |
-| Novel候補 | **73** |
+| 重複率 | **37.0%** |
+| Novel候補 | **75** |
 | Research候補採用 | **34** |
 | Research完了 | **41** |
 | Repo収録 | **41** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 ### 24時間ファネル
 
-**探索評価 117 → 重複除外後 73 → Research候補採用 34 → Research完了 41 → Repo収録 41**
+**探索評価 119 → 重複除外後 75 → Research候補採用 34 → Research完了 41 → Repo収録 41**
 
 ## 探索効率（直近24時間）
 
@@ -88,15 +88,16 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
+| composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | 複数ラウンド分離サービング・異種メモリ処理 | 2 | 0 | 2 | 0.0% | 100.0% |
 
 ### 直近5探索round
 
+- **2026-09-12T21:30:00+09:00** — composable-cxl-shared-kv-peer-gpu-memory-tier: 評価 2 / 重複 0 / 採用 0
 - **2026-09-12T21:30:00+09:00** — cxl-near-data-kv-page-management-os-demand-paging: 評価 4 / 重複 0 / 採用 2
 - **2026-09-12T21:30:00+09:00** — moe-expert-prefetch-edge-external-memory: 評価 3 / 重複 0 / 採用 1
 - **2026-09-12T21:30:00+09:00** — heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute: 評価 7 / 重複 3 / 採用 0
 - **2026-09-12T20:00:00+09:00** — GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御: 評価 6 / 重複 1 / 採用 1
-- **2026-09-12T19:30:00+09:00** — network-data-movement-pnm-cross-dc-memory-dynamics: 評価 9 / 重複 5 / 採用 4
 
 ## 最近処理した論文
 
