@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 158,
+      "completed": 159,
       "superseded": 44,
       "deferred": 3,
-      "ready": 12
+      "ready": 11
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-fa681e706d820dae",
-      "type": "research",
-      "lane": null,
-      "priority": 90,
-      "canonical_id": "arXiv:2605.02189",
-      "title": "PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers",
-      "source_url": "https://arxiv.org/abs/2605.02189",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.02189-pipemax-offline-llm-inference-commodity-gpu-servers.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-825a721630605382",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-23c1aef2e7b819be",
+      "type": "research",
+      "lane": null,
+      "priority": 77,
+      "canonical_id": "arXiv:2609.11356",
+      "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification",
+      "source_url": "https://arxiv.org/abs/2609.11356",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-4649dafe5fe3736a",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T11:02:59+00:00"
+  "generated_at": "2026-09-12T11:13:03+00:00"
 }

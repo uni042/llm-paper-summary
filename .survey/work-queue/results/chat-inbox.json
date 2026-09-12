@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
+  "ok": true,
   "job_id": "job-research-fa681e706d820dae",
-  "validation_error": "ValueError: metadata.list_summary is required: the research worker must write a 45-180 character Japanese one-line explanation that says what the paper actually does; do not derive it mechanically from the overview",
-  "repair_required": true,
-  "isolated_at": "2026-09-12T11:10:04+00:00"
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/01-offload-hierarchical-memory/2026-2605.02189-pipemax-offline-llm-inference-commodity-gpu-servers.md",
+    "identity_delta": "survey-state/identity-deltas/arxiv/2605.02189.json"
+  },
+  "job_status": "completed"
 }
