@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T14:22:57+00:00",
+  "updated_at": "2026-09-12T14:25:54+00:00",
   "last_run_key": "2026-09-12T23:00:00+09:00",
-  "last_round": "specialist-runtime-sparse-attention-10",
+  "last_round": "specialist-moe-runtime-ssd-11",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -824,6 +824,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "重要論文の被引用・参考文献追跡、MoE通信runtime、またはGPU memory allocator/kernel fusionへ切り替える",
       "source_submission": "work-queue/submissions/20260912T2322JST-discovery-specialist-10.json"
+    },
+    {
+      "run_key": "2026-09-12T23:00:00+09:00",
+      "round": "specialist-moe-runtime-ssd-11",
+      "axis": "MoE expert paging・SSD cache・runtime parallelism・prefetch",
+      "query_summary": "SSD-backed expert cache、EP/TP runtime switch、expert paging、representation-based expert prefetch、AMX CPU-GPU co-executionをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第10roundのActions完了後に最新HEADと次discovery jobを取得し、5件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "CXL/CPU-GPU hybrid attention、computational storage、または重要offload論文の引用追跡へ切り替える",
+      "source_submission": "work-queue/submissions/20260912T2324JST-discovery-specialist-11.json"
     }
   ],
   "axes": {
@@ -1296,6 +1311,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "重要論文の被引用・参考文献追跡、MoE通信runtime、またはGPU memory allocator/kernel fusionへ切り替える"
+    },
+    "MoE expert paging・SSD cache・runtime parallelism・prefetch": {
+      "last_run_key": "2026-09-12T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "CXL/CPU-GPU hybrid attention、computational storage、または重要offload論文の引用追跡へ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
