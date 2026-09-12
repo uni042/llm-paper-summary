@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-81ef6cac67a27161",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04971-beaconkv-beacon-query-kv-compression.md",
+      "priority": 91,
+      "reason": "長いChain-of-Thoughtで遠方文脈へ再注目するThought Revisiting Tokenに着目し、将来の再参照を予測するbeacon queryを維持する訓練不要KV圧縮。4つの公開LRMで最大5.8倍のKVメモリ削減と4.3倍超のスループット向上を報告し、ICML 2026採択・公式コードあり。長期推論におけるKV保持方針として既存の局所的attention-score型圧縮との差が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.03515-inertiakv-temporal-aggregation-eviction.md",
+      "priority": 86,
+      "reason": "KV evictionのtoken scorerだけでなくdecode step間の時間集約則を主要設計変数として分析し、EMA型InertiaKVと更新頻度を落とすInertiaKV-Lazyを提案。Lazy版はfull-refresh InertiaKV比でdecode throughputを1.34〜1.46倍にし、6種類の公開backboneとLongBench/LongBench-v2/RULERで検証。EMNLP 2026 Main採択で、KV eviction実装の見落とされがちな時間方向設計を扱う。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10266",
+      "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+      "source_url": "https://arxiv.org/abs/2609.10266",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+      "priority": 74,
+      "reason": "prefix完全一致に限定されてきたKV再利用評価を、RAGのretrieved chunk・multi-agent report・モデルcheckpoint跨ぎまで拡張するbenchmark/harness。位置補正、部分再エンコード、学習型修復などを同一のgap-recoveryとコスト会計で比較し、複数sourceでは未修復cacheがno-cacheより悪化し得ることを示す。システム手法そのものより評価基盤寄りだが、KV再利用・共有系統の今後の比較基準として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-september-kv-reuse-1",
+    "axis": "2026年9月新着・KV圧縮/eviction/再利用",
+    "query_summary": "2026年9月のLLM推論・KV cache新着を探索し、一次arXivページで軽量評価。canonical arXiv IDと題名を最新repoで再検索し、既存identity/job/fallbackとの一致が見つからない強候補を選別した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はKV圧縮を離れ、MoE expert I/O/offloadと階層メモリ・storage隣接へ移る",
+    "empty_round_reason": null
+  }
+}
