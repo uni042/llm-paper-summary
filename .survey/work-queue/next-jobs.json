@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 189,
+      "completed": 190,
       "ready": 1
     },
     "audit": {
@@ -11,7 +11,7 @@
       "completed": 151,
       "superseded": 43,
       "deferred": 3,
-      "ready": 7,
+      "ready": 10,
       "blocked": 3
     }
   },
@@ -25,6 +25,18 @@
       "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
       "source_url": "https://arxiv.org/abs/2606.19746",
       "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-c5ba85dfa2989728",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2606.18431",
+      "title": "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.18431",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18431-tail-aware-prediction-free-scheduling.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -49,6 +61,18 @@
       "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
       "source_url": "https://arxiv.org/abs/2512.18194",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-920aee559ab02518",
+      "type": "research",
+      "lane": null,
+      "priority": 82,
+      "canonical_id": "arXiv:2609.00857",
+      "title": "LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism",
+      "source_url": "https://arxiv.org/abs/2609.00857",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -89,19 +113,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b6c7fea1929c168e",
-      "type": "research",
-      "lane": null,
-      "priority": 72,
-      "canonical_id": "arXiv:2608.23962",
-      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
-      "source_url": "https://arxiv.org/abs/2608.23962",
-      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2608.23962-tensor-parallelism-versus-kv-compression.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-082ddf69424c0d77",
+      "job_id": "job-c7d65b39dd1d586e",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -113,5 +125,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T09:10:14+00:00"
+  "generated_at": "2026-09-12T09:11:40+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:10:53.434982+00:00",
+  "updated_at": "2026-09-12T09:11:40.415040+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,7 +9274,7 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T09:10:53.434982+00:00",
+      "last_recorded_at": "2026-09-12T09:11:40.415040+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9283,9 +9283,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 16,
+        "new_jobs": 20,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -9447,6 +9447,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34685139974:1",
+          "recorded_at": "2026-09-12T09:11:40.415040+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34685139974",
+            "run_attempt": "1",
+            "source_sha": "5d59ef79878efa8e35047031d9bc2c1f0dcd14bd"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9527,6 +9541,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.25523",
           "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-082ddf69424c0d77",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -9643,6 +9665,34 @@
           "type": "research",
           "canonical_id": "arXiv:2512.18194",
           "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale"
+        },
+        {
+          "job_id": "job-c7d65b39dd1d586e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-920aee559ab02518",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00857",
+          "title": "LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism"
+        },
+        {
+          "job_id": "job-research-c5ba85dfa2989728",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.18431",
+          "title": "Beyond Prediction: Tail-Aware Scheduling for LLM Inference"
+        },
+        {
+          "job_id": "job-research-df04bb2baebfa878",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.11001",
+          "title": "Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees"
         }
       ],
       "new_paper_ids": [
@@ -9658,12 +9708,13 @@
         ".survey/work-queue/results/20260912T1758JST-discovery-204a21f0325d1761.json",
         ".survey/work-queue/results/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json",
         ".survey/work-queue/results/20260912T1800JST-discovery-heterogeneous-runtime-2.json",
-        ".survey/work-queue/results/20260912T1800JST-discovery-cxl-storage-3.json"
+        ".survey/work-queue/results/20260912T1800JST-discovery-cxl-storage-3.json",
+        ".survey/work-queue/results/20260912T1800JST-discovery-scheduling-engine-4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
       "paper_active_count_after": 340,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
