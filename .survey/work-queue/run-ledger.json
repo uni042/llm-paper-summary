@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T07:58:52.515469+00:00",
+  "updated_at": "2026-09-12T08:32:34.256442+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9268,6 +9268,57 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 333,
+      "paper_active_count_after": 336,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-12T17:30:00+09:00",
+      "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
+      "last_recorded_at": "2026-09-12T08:32:34.256442+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34683506296:1",
+          "recorded_at": "2026-09-12T08:32:34.256442+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34683506296",
+            "run_attempt": "1",
+            "source_sha": "176645c5ec6724ee328dbea55637b9a00db8ecac"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [],
+      "new_jobs": [
+        {
+          "job_id": "job-3e83c3cb3a02a998",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 336,
       "paper_active_count_after": 336,
       "last_successful_action": "discovery_or_queue_expanded"
     }
