@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T15:47:23.423873+00:00",
+  "updated_at": "2026-09-12T15:50:36.242033+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11737,18 +11737,18 @@
     {
       "run_key": "2026-09-13T00:30:00+09:00",
       "first_recorded_at": "2026-09-12T15:47:23.423873+00:00",
-      "last_recorded_at": "2026-09-12T15:47:23.423873+00:00",
+      "last_recorded_at": "2026-09-12T15:50:36.242033+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -11766,6 +11766,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34703394954:1",
+          "recorded_at": "2026-09-12T15:50:36.242033+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34703394954",
+            "run_attempt": "1",
+            "source_sha": "6e48a27905ffcdfe3cf176187ed1d21022e7440a"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11776,16 +11791,25 @@
           "title": "vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-176f6ec6b8273a5c",
+          "type": "research",
+          "canonical_id": "arXiv:2607.10186",
+          "title": "FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
-        "arXiv:2602.02204"
+        "arXiv:2602.02204",
+        "arXiv:2607.10186"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 360,
-      "paper_active_count_after": 361,
+      "paper_active_count_after": 362,
       "last_successful_action": "paper_materialized"
     }
   ]
