@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2510.05632",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
   "selection_reason": "複数コアNPUで、テンソル並列方式、コア配置、メモリ管理、プリフィル/デコード分離か同居かを一つずつではなく体系的に探索するマルチレベルシミュレーション研究。代表LLMと複数NPU構成で既存設計比1.32〜6.03倍の高速化を報告し、SIMT GPUとは異なる柔軟性制約を持つNPU上でどのサービング戦略が成立するかを整理する。個別方式だけでなくNPUサービングの設計空間を比較する基準論文として有用。",
-  "status": "ready",
+  "status": "superseded",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -26,5 +26,13 @@
     }
   ],
   "last_blocked_at": "2026-09-11T05:42:00+00:00",
-  "retry_queued_at": "2026-09-12T10:39:39+00:00"
+  "retry_queued_at": "2026-09-12T10:39:39+00:00",
+  "completed_at": "2026-09-12T10:44:35+00:00",
+  "superseded_reason": "duplicate already represented in repository",
+  "duplicate_of_canonical_id": "arXiv:2510.05632",
+  "duplicate_of_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md",
+  "duplicate_match": {
+    "by": "identifier",
+    "value": "arXiv:2510.05632"
+  }
 }
