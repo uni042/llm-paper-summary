@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:36:09+00:00",
+  "updated_at": "2026-09-12T17:39:34+00:00",
   "last_run_key": "2026-09-13T02:29:24+09:00",
-  "last_round": "specialist-important-systems-omissions-2",
+  "last_round": "specialist-multimodal-serving-scheduling-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1505,6 +1505,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はforward citationまたはDBMS/OS/storage由来のLLM state placement・memory hierarchyへ移し、今回のtensor lifecycle/KV hierarchyから関連語を展開する",
       "source_submission": "work-queue/submissions/20260913T0236JST-discovery-specialist-systems-omissions.json"
+    },
+    {
+      "run_key": "2026-09-13T02:29:24+09:00",
+      "round": "specialist-multimodal-serving-scheduling-3",
+      "axis": "multimodal弾力的並列化・EPD分離・modality-aware scheduling",
+      "query_summary": "前ラウンドのシステム候補からmultimodal servingへ展開し、ElasticMM、EPD-Serve、RPS-ServeをarXiv一次メタデータと抄録で軽量評価した。投入直前に最新mainのidentity index、next-jobs、決定論的research job pathを再確認し、3件とも未収録・job未存在を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はmultimodal系を離れ、OS/storage/networking由来のKV・tensor state placement、またはforward citation経路を探索する",
+      "source_submission": "work-queue/submissions/20260913T0239JST-discovery-specialist-multimodal-scheduling.json"
     }
   ],
   "axes": {
@@ -2387,6 +2402,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はforward citationまたはDBMS/OS/storage由来のLLM state placement・memory hierarchyへ移し、今回のtensor lifecycle/KV hierarchyから関連語を展開する"
+    },
+    "multimodal弾力的並列化・EPD分離・modality-aware scheduling": {
+      "last_run_key": "2026-09-13T02:29:24+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はmultimodal系を離れ、OS/storage/networking由来のKV・tensor state placement、またはforward citation経路を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

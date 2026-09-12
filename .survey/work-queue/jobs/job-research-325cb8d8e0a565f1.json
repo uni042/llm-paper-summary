@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-325cb8d8e0a565f1",
+  "type": "research",
+  "parent_job_id": "job-b1661ff4851a4aad",
+  "priority": 86,
+  "canonical_id": "arXiv:2601.11590",
+  "title": "EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend",
+  "source_url": "https://arxiv.org/abs/2601.11590",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md",
+  "selection_reason": "Encode・Prefill・Decodeを独立段階へ分離し、Ascendの相互接続構造を使った非同期feature prefetch、階層grouped KV transfer、multi-route scheduling、instance load balancing、段階co-locationを組み合わせる。一次資料の抄録ではPD分離比でend-to-end throughputを57.37〜69.48%改善し、TTFT<2000ms・TPOT<50msのSLOを維持しており、非NVIDIA系アクセラレータ上のmultimodal分離サービングとして差分がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:39:34+00:00",
+  "artifact_transport": "structured_record_v10"
+}

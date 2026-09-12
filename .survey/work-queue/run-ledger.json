@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:38:47.861955+00:00",
+  "updated_at": "2026-09-12T17:40:33.299629+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T17:38:47.861955+00:00",
+      "last_recorded_at": "2026-09-12T17:40:33.299629+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 9,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -13165,6 +13165,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34708874941:1",
+          "recorded_at": "2026-09-12T17:40:33.299629+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34708874941",
+            "run_attempt": "1",
+            "source_sha": "00705d03207afdd02ec391974a90e293e39b992a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13181,6 +13195,14 @@
           "type": "research",
           "canonical_id": "arXiv:2406.01566",
           "title": "Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b1661ff4851a4aad",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -13220,18 +13242,47 @@
           "type": "research",
           "canonical_id": "arXiv:2608.06007",
           "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure"
+        },
+        {
+          "job_id": "job-e15f3a03ac140338",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2f20b6ae0c5a7fb6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.10069",
+          "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism"
+        },
+        {
+          "job_id": "job-research-325cb8d8e0a565f1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.11590",
+          "title": "EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend"
+        },
+        {
+          "job_id": "job-research-f804d02bd63705d7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.26498",
+          "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference"
         }
       ],
       "new_paper_ids": [
         "arXiv:2406.01566"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json"
+        ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
+        ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
       "paper_active_count_after": 367,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
