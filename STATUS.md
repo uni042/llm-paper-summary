@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **46 / 50** |
-| Research ready | **46** |
+| Candidate在庫（Research ready） | **47 / 50** |
+| Research ready | **47** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **7** |
+| Discovery完了 | **3** |
+| 新規job | **9** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **53** |
-| 探索評価候補 | **246** |
-| 重複除外 | **73** |
-| 重複率 | **29.7%** |
-| Novel候補 | **173** |
-| Research候補採用 | **78** |
+| 探索round（stats観測） | **54** |
+| 探索評価候補 | **252** |
+| 重複除外 | **77** |
+| 重複率 | **30.6%** |
+| Novel候補 | **175** |
+| Research候補採用 | **79** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 246 → 重複除外後 173 → Research候補採用 78 → Research完了 47 → Repo収録 47**
+**探索評価 252 → 重複除外後 175 → Research候補採用 79 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -79,6 +79,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
+| MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | Flash・SSD階層メモリと予測先読み | 5 | 3 | 2 | 60.0% | 40.0% |
@@ -126,11 +127,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — MoE expert配置・CPU-GPU協調実行: 評価 6 / 重複 4 / 採用 1
 - **2026-09-13T01:26:11+09:00** — 推論runtime・serving耐障害性: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T01:26:11+09:00** — KV量子化の実行時保証・同期型serving負荷分散: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — 2026年9月新着・KV圧縮/eviction/再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache: 評価 4 / 重複 0 / 採用 0
-- **2026-09-13T00:58:47+09:00** — 長文SLO・SSD-backed KV・異種GPUメモリ共有: 評価 3 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
@@ -149,9 +150,9 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
+- P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
-- P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 
 ## 7日比較
 
