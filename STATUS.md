@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 17:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 17:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **2 / 50** |
-| Research ready | **2** |
+| Candidate在庫（Research ready） | **1 / 50** |
+| Research ready | **1** |
 | Research blocked | **3** |
 | Research deferred | **3** |
-| Research completed（累計） | **147** |
+| Research completed（累計） | **148** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **16 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 2）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 1）。探索を最優先で継続。
 - Research blocked が **3件** 残っています。
 - Research消化が候補補充を上回っています。candidate枯渇に注意。
 
@@ -27,11 +27,11 @@ Run: **2026-09-12T17:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
 | Discovery完了 | **0** |
 | 新規job | **1** |
-| Repo収録 | **0** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -58,15 +58,15 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-multiround-heterogene
 | 重複率 | **7.7%** |
 | Novel候補 | **12** |
 | Research候補採用 | **7** |
-| Research完了 | **31** |
-| Repo収録 | **30** |
+| Research完了 | **32** |
+| Repo収録 | **31** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 13 → 重複除外後 12 → Research候補採用 7 → Research完了 31 → Repo収録 30**
+**探索評価 13 → 重複除外後 12 → Research候補採用 7 → Research完了 32 → Repo収録 31**
 
 ## 探索効率（直近24時間）
 
@@ -89,6 +89,7 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-multiround-heterogene
 
 ### Research完了
 
+- `arXiv:2602.14516` — Efficient Multi-round LLM Inference over Disaggregated Serving
 - `arXiv:2609.04453` — When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models
 - `arXiv:2609.09241` — Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts
 - `arXiv:2609.10812` — ExaServe: Large-Scale LLM Serving on Exascale HPC Systems
@@ -96,11 +97,9 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-multiround-heterogene
 - `arXiv:2609.08189` — Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference
 - `arXiv:2609.10964` — Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows
 - `arXiv:2609.11582` — OmniKVQuant: KV Cache Quantization for Omni-LLMs
-- `arXiv:2511.00807` — FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs
 
 ### 次に処理する候補
 
-- P86 `arXiv:2602.14516` — Efficient Multi-round LLM Inference over Disaggregated Serving
 - P79 `arXiv:2603.29002` — Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference
 
 ## 7日比較
