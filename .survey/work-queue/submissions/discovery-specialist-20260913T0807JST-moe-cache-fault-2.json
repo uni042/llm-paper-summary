@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-3a2b4785347c6fcd",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.12990",
+      "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2512.12990",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.12990-slicemoe-bit-sliced-expert-caching.md",
+      "priority": 90,
+      "reason": "Flashを下位階層に持つオンデバイスMoEで、専門家キャッシュのmiss率を抑えるために専門家を固定精度の不可分単位として保持する代わりに、ビットスライス単位でキャッシュし必要度に応じて精度を組み立てる。動的ビットスライスキャッシュ、校正不要の非対称Matryoshka量子化、prefill時の予測キャッシュwarmupを組み合わせ、DeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bでdecodeエネルギーを最大2.85倍削減し、latencyを最大1.81倍改善する。expert cache・Flash階層・量子化を一体化した重点テーマ直結の候補。"
+    },
+    {
+      "canonical_id": "arXiv:2605.10670",
+      "title": "Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference",
+      "source_url": "https://arxiv.org/abs/2605.10670",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md",
+      "priority": 88,
+      "reason": "wide expert parallelismで単一rank障害が通信・expert配置・CUDA graphを同時に無効化して全instance再起動を招く問題に対し、membershipを変更可能なruntime stateとして扱うEEPを提案する。peer到達性、失われたexpert coverage、routing metadataを個別修復し、SGLang統合で静的DeepEP比steady-state性能差を4.4%以内に抑えながら、単一rank障害の全再起動348秒に対し11秒の復旧停止と8秒の再統合停止へ短縮し52秒以内に元throughputの95%まで回復する。MoE通信基盤の耐障害性という既存系統の重要な欠落候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:58:39+09:00",
+    "round": "specialist-moe-cache-fault-2",
+    "axis": "MoE expert cache・Flash階層・expert-parallel耐障害性",
+    "query_summary": "新着batch後にMoE expert I/O/cache、forward-citation、fault tolerance、CXL/KV隣接を独立走査した。SliceMoEとEEPを強候補として軽量評価し、AgentZip、Elastic KV Cache、PATTON、SwiftCache、SmartGenは最新正本の決定論的jobまたは既収録履歴へ収束した。投入直前の最新main HEADでSliceMoE/EEPの決定論的research job不存在、repo識別子/題名未検出、Library pendingに同候補なしを再確認した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.11294",
+      "arXiv:2608.23658",
+      "arXiv:2609.11392",
+      "arXiv:2606.16135",
+      "arXiv:2607.28150"
+    ],
+    "next_axis_hint": "strong candidate発見により再び枯渇判定をリセット。GPU kernel/runtime、network collective、backward references、KV sparse-attention、framework implementation差分を再走査する",
+    "empty_round_reason": null
+  }
+}
