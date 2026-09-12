@@ -1,16 +1,16 @@
 {
   "counts": {
     "discovery": {
-      "completed": 226,
+      "completed": 227,
       "ready": 1
     },
     "audit": {
       "completed": 6
     },
     "research": {
-      "completed": 174,
+      "completed": 175,
       "superseded": 44,
-      "ready": 44,
+      "ready": 43,
       "deferred": 3
     }
   },
@@ -36,18 +36,6 @@
       "title": "Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving",
       "source_url": "https://arxiv.org/abs/2602.22593",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.22593-flying-serving-online-dp-tp-switching.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-2ffc6f1ef8dd7efc",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2605.22850",
-      "title": "ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse",
-      "source_url": "https://arxiv.org/abs/2605.22850",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -112,7 +100,19 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-d9a13e7570e7f3a1",
+      "job_id": "job-research-2fabaceee2c88fd9",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2512.25059",
+      "title": "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
+      "source_url": "https://arxiv.org/abs/2512.25059",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-143ae536cc495a5e",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T16:13:08+00:00"
+  "generated_at": "2026-09-12T16:15:16+00:00"
 }
