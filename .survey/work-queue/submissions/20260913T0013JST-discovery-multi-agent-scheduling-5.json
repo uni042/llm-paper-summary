@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7f0434f36cf0ace5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2508.06948",
+      "title": "Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud",
+      "source_url": "https://arxiv.org/abs/2508.06948",
+      "paper_path": null,
+      "priority": 82,
+      "reason": "複数agentが共有LLMへ集中するworkflowで、agent間依存と要求ごとのlatency特性を使うpriority schedulingとmemory-aware dispatchを組み合わせる。単一requestではなくmulti-agent workflowのend-to-end latencyを最適化するserving systemとしてagentic serving系統を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2603.22206",
+      "title": "Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs",
+      "source_url": "https://arxiv.org/abs/2603.22206",
+      "paper_path": null,
+      "priority": 85,
+      "reason": "multi-agent workflowを異なるサイズ・能力のLLMから成る異種clusterへ配置し、semantic routing、残り出力長予測、in-flight token量による混雑推定を共同利用するpredictive scheduling system。latencyとtask performanceのfrontierを同時に扱う点で通常の同種replica schedulingと異なる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-multi-agent-scheduling-5",
+    "axis": "multi-agent workflow scheduling・異種LLM配置",
+    "query_summary": "agentic servingをtool speculationだけでなくworkflow-level schedulingとheterogeneous model routingの軸から再探索し、最新HEADで未投入を確認した2候補を採用した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.15127",
+      "arXiv:2502.13965"
+    ],
+    "next_axis_hint": "新着・関連実装経由でMoE coordinated schedulingとKV multi-turn管理を再走査し、重複優勢なら空roundを記録して別軸へ移る",
+    "empty_round_reason": null
+  }
+}
