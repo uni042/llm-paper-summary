@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b98e4e299d06a6a5",
+  "type": "research",
+  "parent_job_id": "job-bdc255f2a2a7cd47",
+  "priority": 76,
+  "canonical_id": "arXiv:2509.24832",
+  "title": "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching",
+  "source_url": "https://arxiv.org/abs/2509.24832",
+  "paper_path": null,
+  "selection_reason": "完全一致prefixに限定せず、token embeddingのLSH fuzzy matchingとRoPE補正で意味的に近い別prompt間からKVを選択再利用する。5K-token入力で最大6.25倍の高速化とGPUメモリ42%削減を報告しており、prefix cachingからsemantic cache sharingへ設計空間を広げる実装指向の候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:38:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}

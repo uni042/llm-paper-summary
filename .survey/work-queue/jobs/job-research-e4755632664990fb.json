@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-e4755632664990fb",
+  "type": "research",
+  "parent_job_id": "job-bdc255f2a2a7cd47",
+  "priority": 84,
+  "canonical_id": "arXiv:2604.19351",
+  "title": "DASH-KV: Accelerating Long-Context LLM Inference via Asymmetric KV Cache Hashing",
+  "source_url": "https://arxiv.org/abs/2604.19351",
+  "paper_path": null,
+  "selection_reason": "queryとkeyを非対称なdeep hashingでHamming空間へ写し、attentionを近似最近傍探索として線形化する長文脈推論手法。重要tokenだけを動的に高精度計算へ戻すmixed-precision機構を備え、LongBenchでfull attention相当の品質を保ちながら計算量をO(N^2)からO(N)へ削減すると報告する。公式コードも公開されており、ハッシュ型KVアクセスの新しい実装軸。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:38:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}

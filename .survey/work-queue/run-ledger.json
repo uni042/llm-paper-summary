@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:35:20.232341+00:00",
+  "updated_at": "2026-09-12T20:40:01.381749+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,17 +15070,19 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T20:35:20.232341+00:00",
+      "last_recorded_at": "2026-09-12T20:40:01.381749+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
-        "new_papers": 0,
+        "new_jobs": 9,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -15111,6 +15113,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34717657762:1",
+          "recorded_at": "2026-09-12T20:40:01.381749+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34717657762",
+            "run_attempt": "1",
+            "source_sha": "00defc66d7d02b5dca0542e303773eed8e3caa5b"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15127,6 +15145,22 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bdc255f2a2a7cd47",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2466f653227bab25",
+          "type": "research",
+          "canonical_id": "arXiv:2605.01708",
+          "title": "SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving",
           "from": "ready",
           "to": "completed"
         }
@@ -15159,17 +15193,55 @@
           "type": "research",
           "canonical_id": "arXiv:2504.15364",
           "title": "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments"
+        },
+        {
+          "job_id": "job-244f923379fb2dfa",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-795118fce8eb1845",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2412.16187",
+          "title": "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing"
+        },
+        {
+          "job_id": "job-research-b98e4e299d06a6a5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.24832",
+          "title": "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching"
+        },
+        {
+          "job_id": "job-research-e4755632664990fb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.19351",
+          "title": "DASH-KV: Accelerating Long-Context LLM Inference via Asymmetric KV Cache Hashing"
+        },
+        {
+          "job_id": "job-research-eeddee746504f3dd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2410.16179",
+          "title": "MagicPIG: LSH Sampling for Efficient LLM Generation"
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2605.01708"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json",
-        ".survey/work-queue/results/discovery-specialist-20260912T2034Z-kv-backref.json"
+        ".survey/work-queue/results/discovery-specialist-20260912T2034Z-kv-backref.json",
+        ".survey/work-queue/results/discovery-specialist-20260912T2036Z-hash-kv-family.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,
-      "paper_active_count_after": 386,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 387,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

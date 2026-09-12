@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:34:13+00:00",
+  "updated_at": "2026-09-12T20:38:24+00:00",
   "last_run_key": "2026-09-13T05:28:14+09:00",
-  "last_round": "specialist-kv-backref-2",
+  "last_round": "specialist-hash-kv-family-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2068,6 +2068,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "GPU runtime・storage・networkingの隣接分野と推論framework由来の新規system paperを確認する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260912T2034Z-kv-backref.json"
+    },
+    {
+      "run_key": "2026-09-13T05:28:14+09:00",
+      "round": "specialist-hash-kv-family-3",
+      "axis": "LSH・hashing系KVアクセス/eviction/sharing・query expansion",
+      "query_summary": "ECOKV/KeyDiffからハッシュ・近似探索・attention非依存KV管理へ検索語を展開し、LSH eviction、CPU-GPU協調attention sampling、deep hashing、semantic KV sharingを軽量評価。最新HEADのidentity delta、既存research job、コード検索で再重複確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "last strong batch後に新着/revision、MoE expert cache/offload、framework、forward citation、storage/networking/GPU runtimeを一巡して未収録強候補が残るか確認する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260912T2036Z-hash-kv-family.json"
     }
   ],
   "axes": {
@@ -3260,6 +3275,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "GPU runtime・storage・networkingの隣接分野と推論framework由来の新規system paperを確認する"
+    },
+    "LSH・hashing系KVアクセス/eviction/sharing・query expansion": {
+      "last_run_key": "2026-09-13T05:28:14+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "last strong batch後に新着/revision、MoE expert cache/offload、framework、forward citation、storage/networking/GPU runtimeを一巡して未収録強候補が残るか確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
