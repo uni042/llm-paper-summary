@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-f379557cdc6a8294",
+  "type": "research",
+  "parent_job_id": "job-af96ba3d9c2ab6d4",
+  "priority": 88,
+  "canonical_id": "arXiv:2601.13684",
+  "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
+  "source_url": "https://arxiv.org/abs/2601.13684",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+  "selection_reason": "長文脈推論で注意重要度が時間とともに変わる現象を考慮し、ヘッドごとの時間的安定性と層内冗長性に応じてKV予算を細粒度配分する。代表ヘッドで注意変化を監視し、必要な文脈だけをCPUから非同期オンデマンド取得する階層記憶機構により入出力（I/O）待ちを隠蔽する。224K文脈で元モデル比最大3倍のデコード高速化を報告しており、KV圧縮と階層メモリを直接結ぶ候補として価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:49:00+00:00",
+  "artifact_transport": "structured_record_v10"
+}

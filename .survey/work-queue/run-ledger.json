@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:48:37.522510+00:00",
+  "updated_at": "2026-09-12T18:50:18.529097+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,7 +13949,7 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T18:48:37.522510+00:00",
+      "last_recorded_at": "2026-09-12T18:50:18.529097+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13958,9 +13958,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 14,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -14051,6 +14051,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34712229206:1",
+          "recorded_at": "2026-09-12T18:50:18.529097+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34712229206",
+            "run_attempt": "1",
+            "source_sha": "1efb86919bb28411dd6a5bd0dd691c1c67f6010a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14099,6 +14113,14 @@
           "type": "research",
           "canonical_id": "arXiv:2501.14417",
           "title": "DeepFlow: Serverless Large Language Model Serving at Scale",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-af96ba3d9c2ab6d4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -14173,6 +14195,34 @@
           "type": "research",
           "canonical_id": "arXiv:2502.14617",
           "title": "Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale"
+        },
+        {
+          "job_id": "job-29ae0219b7b0fec5",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-57f4550e61af7e09",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15789",
+          "title": "Approaching Shannon Bound with Lossless LLM Weight Compression"
+        },
+        {
+          "job_id": "job-research-cff945d042003c88",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08786",
+          "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices"
+        },
+        {
+          "job_id": "job-research-f379557cdc6a8294",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.13684",
+          "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -14183,12 +14233,13 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json",
         ".survey/work-queue/results/20260913T0341JST-discovery-specialist-speculative-serving-2.json",
-        ".survey/work-queue/results/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json"
+        ".survey/work-queue/results/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json",
+        ".survey/work-queue/results/20260913T0347JST-discovery-specialist-kv-compression-kernel-4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,
       "paper_active_count_after": 377,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

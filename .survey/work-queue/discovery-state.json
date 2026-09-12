@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:44:53+00:00",
+  "updated_at": "2026-09-12T18:49:00+00:00",
   "last_run_key": "2026-09-13T03:30:44+09:00",
-  "last_round": "specialist-cloud-autoscaling-multimodel-3",
+  "last_round": "specialist-kv-compression-kernel-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1740,6 +1740,24 @@
       ],
       "next_axis_hint": "次はcloud autoscalingを離れ、forward/backward citation、推論カーネル・圧縮、またはネットワーク/ストレージ低層I/Oの独立経路を確認する",
       "source_submission": "work-queue/submissions/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json"
+    },
+    {
+      "run_key": "2026-09-13T03:30:44+09:00",
+      "round": "specialist-kv-compression-kernel-4",
+      "axis": "heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels",
+      "query_summary": "cloud autoscalingから低層メモリ/カーネルへ探索軸を変更した。HybridGenとHGCAは既存収録・jobを確認して除外し、一次arXiv metadata/abstractでHeteroCache、lossless weight compression、moderate sparse kernelを軽量評価した。投入直前に最新main、repository検索、決定論的research job pathを照合し3件を未収録と判断した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.4,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.18529",
+        "arXiv:2507.03153"
+      ],
+      "next_axis_hint": "次はKV/weight/kernelを離れ、forward/backward citation、ネットワーク輸送、またはagent/workflow fault toleranceの独立経路へ移る",
+      "source_submission": "work-queue/submissions/20260913T0347JST-discovery-specialist-kv-compression-kernel-4.json"
     }
   ],
   "axes": {
@@ -2752,6 +2770,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.5714285714285714,
       "next_axis_hint": "次はcloud autoscalingを離れ、forward/backward citation、推論カーネル・圧縮、またはネットワーク/ストレージ低層I/Oの独立経路を確認する"
+    },
+    "heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels": {
+      "last_run_key": "2026-09-13T03:30:44+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.4,
+      "next_axis_hint": "次はKV/weight/kernelを離れ、forward/backward citation、ネットワーク輸送、またはagent/workflow fault toleranceの独立経路へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

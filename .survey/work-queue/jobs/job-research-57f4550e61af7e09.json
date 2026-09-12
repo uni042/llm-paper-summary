@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-57f4550e61af7e09",
+  "type": "research",
+  "parent_job_id": "job-af96ba3d9c2ab6d4",
+  "priority": 87,
+  "canonical_id": "arXiv:2606.15789",
+  "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
+  "source_url": "https://arxiv.org/abs/2606.15789",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md",
+  "selection_reason": "大規模言語モデル（Large Language Model; LLM）の重みが保存ビット幅より低い実効エントロピーを持つことを測定し、非対称数値表現（Asymmetric Numeral Systems; ANS）をGEMMタイル単位のオンザフライ展開へ組み込む。SGLangへ統合した多GPU実装でMixtral-176Bの実行可能バッチを20から95へ拡大し、スループット最大1.6倍を報告しており、損失なし圧縮を配信時メモリ容量と実行カーネルへ接続する研究として有用である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:49:00+00:00",
+  "artifact_transport": "structured_record_v10"
+}
