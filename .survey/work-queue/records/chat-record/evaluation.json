@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2609.10964-20260912-1438-v10-a1",
-  "job_id": "job-research-6a9d4d0d506d101b",
+  "attempt_id": "attempt-2609.08189-20260912-1440-v10-a1",
+  "job_id": "job-research-3b370609d7bf485e",
   "data": {
-    "hardware": "Qwen3-8BはNVIDIA A100 80GB 1基、Qwen3-32BはA100 2基、Llama-3.3-70BはA100 4基で動作させる。共有推論エンジンとしてvLLM 0.20.2を用いる。",
-    "software": "vLLM 0.20.2上へエージェントターンを投入する外部スケジューラを置き、SWE-benchおよびSWE-Gymから取得したmini-swe-agent実行トレースを閉ループ再生する。比較時はワークフロー内容、到着時刻、各ターンの推論仕事、ツール待ち時間を一致させ、投入判断だけを変更する。",
-    "methodology": "SWE-benchとSWE-Gymからそれぞれ100ワークフローを用いる。SWE-benchは合計1,597ターン、平均15.97ターン/ワークフローで、平均プロンプト7,160トークン、平均完了97トークン、ツール段階平均1.327秒。SWE-Gymは1,624ターン、平均16.24ターン/ワークフロー、平均プロンプト8,244トークン、平均完了93トークン、ツール段階平均1.855秒である。ワークフロー到着はPoisson過程とし、乱数種1で5段階の到着率を評価する。一次指標はワークフロー開始から終了までのP95フロー時間。平均-CVaRはα=0.95、平均項とCVaR項の重みをともに1、仕事量推定の出力トークン重みγ=4とする。投入予算は120,000から開始し30,000〜300,000の範囲で適応し、混雑目標は平均キュー待ち1秒、P95待ち5秒、待機要求2件である。",
-    "workloads": ["SWE-bench mini-swe-agent traces", "SWE-Gym mini-swe-agent traces", "5段階のPoisson到着率", "Qwen3-8B", "Qwen3-32B", "Llama-3.3-70B"],
-    "workload_details": "ソフトウェア工学エージェントの実行トレースを使い、LLMターンとツール段階の連鎖を保ったまま再生する。各モデル・トレース組合せで軽負荷から強い競合まで到着率を変えるため、同じ到着率でもモデル処理能力に応じて正規化負荷は異なる。",
-    "baselines": ["準備完了即時投入", "FIFO順序+適応投入予算", "尾部認識順序+固定投入予算", "尾部認識順序+適応投入予算"],
-    "metrics": ["P95ワークフローフロー時間", "平均ワークフローフロー時間", "速度向上倍率", "投入済み仕事量", "キュー待ち時間", "待機要求数"],
-    "scope": "実GPU・実LLM・実エージェントトレースを使う評価であり、推論時間だけの解析モデルではない。一方、ワークフローは保存済みトレースの閉ループ再生で、ツール外部環境やエージェント意思決定そのものをリアルタイムに再実行する本番オンライン実験ではない。100ワークフローずつ、三つのモデル構成、二つのソフトウェア工学データ源に限定され、他のエージェント用途や異なる推論エンジンへの一般化は追加検証が必要である。"
+    "hardware": "主設定の学習は48GB NVIDIA RTX 4090Dを4基使用し、各学習runは約12時間。評価バックボーンはMeta-Llama-3.1-8B-Instruct、Llama-2-7B、Llama-2-13Bで、推論評価GPUの機種は一次本文では別途明記されていない。",
+    "software": "lm-evaluation-harnessを用いて評価する。バックボーンを凍結し、HeRoのルータ状態符号化器、深さメモリ、履歴・局所ルータヘッド、ボトルネックアダプタだけを学習する。最適化はAdamW、bfloat16混合精度、勾配チェックポイントを用いる。",
+    "methodology": "主設定はLlama 3.1-8Bで、25%目標では各バックボーンの後半MLPをルーティング候補とし、40%目標ではLlama 3.1-8Bの9〜32層へ候補を拡大する。Tulu-3 SFTの939,344例を1エポック、グローバルバッチ128、約7,339更新で学習し、系列長は2048へ切る。学習率1e-4、weight decay 0.01、最初の3%をウォームアップ、実行閾値0.5、履歴温度0.9。主比較は乱数種42/43/44の平均±標準偏差。7課題はOpenBookQA、PIQA、BoolQ、ARC-Easy、ARC-Challenge、WinoGrande、HellaSwagで、密モデルに対する課題スコア比の平均をRetainとして集約する。アブレーションではさらにGSM8KとHumanEvalを加え、経路状態、履歴分岐、メモリ読み取り、メモリ次元の寄与を分離する。",
+    "workloads": ["OpenBookQA", "PIQA", "BoolQ", "ARC-Easy", "ARC-Challenge", "WinoGrande", "HellaSwag", "GSM8K", "HumanEval"],
+    "workload_details": "OpenBookQAとHellaSwagは正規化正解率、残り主要5課題は正解率。GSM8Kは8例の思考連鎖実演と最大1024生成トークンで完全一致、HumanEvalは貪欲生成のpass@1。ARC-Easy/Challengeは25例、HellaSwag/WinoGrandeは5例、OpenBookQA/PIQA/BoolQ/HumanEvalは実演なし。",
+    "baselines": ["Dense", "LoRA dense reference", "ShortGPT", "Shortened-PPL", "Shortened-Taylor", "SliceGPT", "D-LLM", "SkipGPT-Joint", "SkipGPT-RT", "MoD-D", "LLM-Pruner", "LaCo"],
+    "metrics": ["パラメータスキップ率", "密モデル比性能保持率", "各ベンチマーク正解率", "GSM8K完全一致", "HumanEval pass@1"],
+    "scope": "実モデルを学習・評価しており単なる解析ではないが、効率指標は『トークン平均で計算に参加しないモデルパラメータ割合』が中心で、実測のトークン/秒、GPUカーネル時間、端末間レイテンシ、エネルギー消費は報告されない。アダプタ、ルータ、線形注意メモリの実行費用もスキップ率に直接差し引かれていないため、パラメータスキップ率をそのまま壁時計速度向上と解釈してはならない。"
   }
 }
