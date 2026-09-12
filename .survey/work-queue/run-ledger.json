@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T00:36:56.916156+00:00",
+  "updated_at": "2026-09-12T00:38:20.751904+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8015,16 +8015,16 @@
     {
       "run_key": "2026-09-12T09:30:00+09:00",
       "first_recorded_at": "2026-09-12T00:34:40.121964+00:00",
-      "last_recorded_at": "2026-09-12T00:36:56.916156+00:00",
+      "last_recorded_at": "2026-09-12T00:38:20.751904+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 4,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -8056,6 +8056,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34662253609:1",
+          "recorded_at": "2026-09-12T00:38:20.751904+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34662253609",
+            "run_attempt": "1",
+            "source_sha": "9930da60938f2de554a4fd26dc9babb50e75e6db"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8069,6 +8083,14 @@
         },
         {
           "job_id": "job-5cd36eaf5a789dc2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-56a6b0dba9fd04b0",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -8090,12 +8112,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-a6fb90f535b639f2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.30391",
+          "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs"
+        },
+        {
+          "job_id": "job-research-d225b2a7b60f8266",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.12707",
+          "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0938JST-discovery-job-05056a15d6adfe06.json",
-        ".survey/work-queue/results/20260912T0942JST-discovery-job-5cd36eaf5a789dc2.json"
+        ".survey/work-queue/results/20260912T0942JST-discovery-job-5cd36eaf5a789dc2.json",
+        ".survey/work-queue/results/20260912T0947JST-discovery-job-56a6b0dba9fd04b0.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 323,
