@@ -2,15 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2605.22850-20260913-0104-v10-d",
-  "job_id": "job-research-2ffc6f1ef8dd7efc",
+  "attempt_id": "attempt-2608.07009-20260913-0248-v10-d",
+  "job_id": "job-research-8b43b83e9e79a452",
   "data": {
-    "hardware": "100 Gbps RoCEv2の3ノード実機。GPUサービングノードはNVIDIA A100 80GB。ストレージノードはKIOXIA企業向けNVMe SSD 4台をDAOSでストライプし、S3ゲートウェイを別ノードに置く。付録ではH100 80GBでも計算窓を測る。",
-    "software": "CUDA 12.8、PyTorch 2.10.0、vLLM 0.19.0、改変LMCache 0.4.2、改変NIXL 1.0.0、改変Ceph RGW 18.2.7、DAOS 2.7.102、UCX。推論モデルは主にLlama 3.1 8Bで、転送必要帯域の分析にはGranite 3.3 8BとDeepSeek-R1-Distill-Qwen-7Bも使う。",
-    "methodology": "評価は、DAOS単体の冷読出し帯域、TCP/RDMAを使うS3経路、サーバ側集約、層順転送とGPU計算の重なり、エンドツーエンドTTFT、10 Gbps帯域制限感度、複数要求の帯域配分の順に分解する。エンドツーエンドでは文脈4Kと64K、接頭辞命中率12.5%、50%、87.5%、チャンク粒度16・64・256トークンを組み合わせる。最適比較対象は、KVをあらかじめ層順に集約して固定CPUメモリへ置き、実行時集約や遠隔ストレージ費用を持たないローカルDRAM層順方式である。複数利用者評価では16K・32K・64K、50%・87.5%命中の要求を組み合わせ、50または80 Gbpsの共有上限を設定する。",
-    "scope": "実機のクリティカルデータ経路と帯域配分を検証するが、小規模3ノード試作であり、本番規模の多数同時クライアント、長時間の接頭辞入替、障害時挙動、バッチ処理・チャンク化プリフィル・ルーティング・追い出し制御との統合は未評価。層範囲を計算できる規則的KV配置を前提とし、圧縮・可変配置は追加メタデータが必要である。",
-    "baselines": ["Local-DRAM-CW", "Local-DRAM-LW", "opt-local-LW", "S3TCP", "S3RDMA Buffer", "S3RDMA Direct", "S3Batch-CW", "Equal", "KV-prop", "BW-prop", "Stall-opt"],
-    "workloads": ["4K/64K文脈のLlama 3.1 8B接頭辞再利用", "12.5/50/87.5%接頭辞命中率", "16/64/256トークンの保存チャンク粒度", "10 Gbps制限感度", "16K/32K/64K混合要求の50/80 Gbps共有帯域競合"],
-    "measurement_notes": "DAOS生読出しはキャッシュを洗い出して冷読出しを測り、S3経路では制御面、ストレージ、RDMA転送をトレースで分離する。層順方式については各モデルの実測層計算時間から転送を完全に隠す必要帯域も算出する。"
+    "hardware": ["DeepSeek-V4-Flash: 2×NVIDIA B200。", "GLM-5.1-FP8 / GLM-5.2-FP8: 8×NVIDIA H200、2TB host DRAM。", "Qwen3-30B-A3B-Thinking-2507 + Quest: NVIDIA GH200。"],
+    "software": ["SGLang v0.5.11 full-KV baselineを同一モデル・並列度・精度・scheduler設定で比較。", "HiSparseはupstream SGLangへmerge済み。", "CUDA graph内のfused resolve kernel、GPU-assisted host I/O、LRU metadata、optional exact layer-wise prefetchを実装。"],
+    "model": ["DeepSeek-V4-Flash (NSA-style compressed sparse attention)", "GLM-5.1-FP8 (DSA)", "GLM-5.2-FP8 (DSA + IndexShare)", "Qwen3-30B-A3B-Thinking-2507 + Quest"],
+    "datasets": ["SGLang bench_servingの32K input / 8K output closed-loop workload", "最大200K inputのlong-context peak-throughput sweep", "LongBenchV2 sparse-selection traceによるcache-policy replay"],
+    "baselines": ["Unmodified SGLang v0.5.11 full-HBM KV", "Swap-vanilla top-k-only staging", "FIFO/random replacement", "offline Bélády optimum", "no-IO oracle"],
+    "correctness": "全KV正本をhostへ残し、indexerのselected logical positionsを一切変更せず、attention前に必要な同一KV recordをGPUへmaterializeする。したがってselected positions、attention scores、outputsはbaselineと同一。",
+    "settings": [
+      {"name":"End-to-end concurrency sweep","description":"32K入力・8K出力、k=2048を基本にclosed-loop concurrencyを増やし、generation throughput、mean TTFT、mean TPOTをfull-HBM baselineと比較する。DeepSeek-V4-Flashは2×B200、GLM-5.1は8×H200。"},
+      {"name":"Long-context peak-throughput","description":"Qwen3+QuestをGH200で最大200K input、GLM-5.1+DSAを8×H200で最大160K inputまで伸ばし、各長さのpeak generation throughputを比較する。"},
+      {"name":"Cache locality replay","description":"GLM-5.1の100,384-token LongBenchV2 promptと1,799 decode stepsのselection traceを固定し、B=k、2k、4kとLRU/FIFO/random/Béládyのmiss率を比較する。"},
+      {"name":"Exact prefetch","description":"GLM-5.2-FP8、8×H200、32K入力・8K出力、k=2048、B=4096でshared index selectionを利用したexact prefetch、synchronous resolve、no-IO oracleを比較する。"},
+      {"name":"Bandwidth sensitivity","description":"PCIe Gen5のH200とNVLink-C2CのGH200を用い、同程度のcache ratioでresolve内のmetadata処理とhost-memory IOを分解し、host-device linkが残余overheadをどの程度支配するかを見る。"}
+    ],
+    "methodology": "end-to-end評価で容量拡大がbatch/throughput/queueingへ与える効果を測り、selection trace replayでreplacement policyの寄与、kernel breakdownで管理処理とI/Oの寄与、no-I/O oracleで管理機構の理論的overhead、shared-index prefetchでI/O overlap可能性を個別に切り分ける。PD-disaggregated環境そのものはtestbed容量のため物理構成せず、prefill時間を除いたdecode-only曲線をdecode poolのproxyとして示す。",
+    "scope": "主要second tierはhost DRAMで、NVMe/network-attached tierは容量拡張候補として議論するが性能実証はない。短文・低concurrencyではcapacity wallがなくhost I/O費だけが増えるため無効化可能な機能として位置付ける。"
   }
 }
