@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-c6f5e54385e09f57",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.08097",
+      "title": "OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching",
+      "source_url": "https://arxiv.org/abs/2608.08097",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+      "priority": 91,
+      "reason": "デコード中のKV全量をHBMへ保持せず、投機的デコードのlookahead tokenから次stepで重要になるKV blockを予測し、host/remote memoryから先読みするメモリ中心のserving研究。arXiv抄録ではvLLM実装、長文・reasoning workload、精度とのtrade-offを含む実測評価を明記し、階層KV・prefetch・remote memoryの重点テーマに直結する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.12556",
+      "title": "ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories",
+      "source_url": "https://arxiv.org/abs/2606.12556",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md",
+      "priority": 90,
+      "reason": "CXL-hybrid memoryを用いてTB級のbyte-addressable remote memoryをLLM推論へ提供し、KV cacheやmodel weightの決定的access patternを利用してmemory-storage階層のdata movementを先回り管理する研究。arXiv抄録ではproduction-grade CMMとPCIe Gen5 NVMe、FPGA prototypeでの検証を明記しており、CXL/SSD階層研究として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20309-superinfer-slo-aware-superchip-scheduling.md",
+      "priority": 88,
+      "reason": "GH200等のGPU-CPU密結合Superchipで、SLOを守りながらrequestを回転させるschedulerとNVLink-C2C上のfull-duplex KV転送を共同設計するservingシステム。arXiv抄録では実機GH200評価とTTFT SLO達成率改善を報告しており、PCIe offloadとは異なる高速階層memory運用として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.19481",
+      "title": "C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG",
+      "source_url": "https://arxiv.org/abs/2605.19481",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md",
+      "priority": 86,
+      "reason": "MIG sliceのHBM不足をNVLink-C2C接続のhost memoryで補い、request単位でmodelを切り替えるserverless LLM serving研究。arXiv抄録ではheterogeneous-memory-aware GEMMとC2C contention対応schedulerをGH200で評価し、dense/MoE双方のcold-start短縮を報告している。異種memory runtimeとserving schedulingの交差候補。"
+    },
+    {
+      "canonical_id": "arXiv:2402.01869",
+      "title": "INFERCEPT: Efficient Intercept Support for Augmented LLM Inference",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2402.01869-infercept-augmented-llm-intercept-serving.md",
+      "priority": 80,
+      "reason": "API/tool呼び出し等で一時停止するLLM requestのKVを、保持・CPU swap・破棄/再計算から状況に応じて選ぶvLLMベースのservingシステム。新着ではないが、現在のagentic servingで再浮上しているtool-call待機中KV管理の基礎系統として、最近のContinuum/Tokencakeとの引用・比較関係を確認する価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-tiered-remote-memory-04",
+    "axis": "CXL/NVLink-C2C・remote memory・階層KV prefetch",
+    "query_summary": "CXL-hybrid remote memory、NVLink-C2C Superchip、MIG serverless serving、lookahead sparse KV prefetch、およびtool-call中KV退避の基礎系統をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第3roundのActions完了後に最新HEADと次discovery jobを取得し、全5件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "収録済み重要論文のforward/backward citation、DBMS/OSのcache admission/replacement、またはnetwork fabricのKV転送制御へ切り替える",
+    "empty_round_reason": null
+  }
+}
