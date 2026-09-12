@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:00:36+00:00",
+  "updated_at": "2026-09-12T16:02:49+00:00",
   "last_run_key": "2026-09-13T00:58:47+09:00",
-  "last_round": "specialist-agent-kv-semantics-1",
+  "last_round": "specialist-os-tiering-kv-prefetch-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1008,6 +1008,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はforward citationまたはOS/DBMS隣接のキャッシュ置換・階層メモリ政策からLLM servingへ接続する候補を探索する",
       "source_submission": "work-queue/submissions/20260913T0059JST-discovery-specialist-agent-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-13T00:58:47+09:00",
+      "round": "specialist-os-tiering-kv-prefetch-2",
+      "axis": "OS階層管理・専門家キャッシュ・KV先読み・SSD再利用",
+      "query_summary": "第1round後、OS/ストレージ隣接へ軸を移し、カーネル管理expert tiering、host-memory sparse KV prefetch、SSD-backed RAG KV再利用、prefix-aware GPU prefetchを軽量評価。投入直前に最新HEADとrepo検索でcanonical IDの既存化を再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はforward citationとネットワーク/collective communication・disaggregated servingの交点へ移し、既収録SmartGen/KVServe等を避けて新規候補を探す",
+      "source_submission": "work-queue/submissions/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json"
     }
   ],
   "axes": {
@@ -1580,6 +1595,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はforward citationまたはOS/DBMS隣接のキャッシュ置換・階層メモリ政策からLLM servingへ接続する候補を探索する"
+    },
+    "OS階層管理・専門家キャッシュ・KV先読み・SSD再利用": {
+      "last_run_key": "2026-09-13T00:58:47+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はforward citationとネットワーク/collective communication・disaggregated servingの交点へ移し、既収録SmartGen/KVServe等を避けて新規候補を探す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

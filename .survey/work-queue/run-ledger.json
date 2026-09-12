@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:01:41.304914+00:00",
+  "updated_at": "2026-09-12T16:03:54.128831+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11737,7 +11737,7 @@
     {
       "run_key": "2026-09-13T00:30:00+09:00",
       "first_recorded_at": "2026-09-12T15:47:23.423873+00:00",
-      "last_recorded_at": "2026-09-12T16:01:41.304914+00:00",
+      "last_recorded_at": "2026-09-12T16:03:54.128831+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -11746,9 +11746,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 4,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -11796,6 +11796,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34704027267:1",
+          "recorded_at": "2026-09-12T16:03:54.128831+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34704027267",
+            "run_attempt": "1",
+            "source_sha": "e0d0908a391a46d8fab4f2d162bfd40de2124784"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11822,6 +11836,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-71a219ce6f705a8b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -11838,6 +11860,20 @@
           "type": "research",
           "canonical_id": "arXiv:2604.06370",
           "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache"
+        },
+        {
+          "job_id": "job-9fe79e3f7fd93386",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-43ee292714ed8d8c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.23049",
+          "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving"
         }
       ],
       "new_paper_ids": [
@@ -11845,7 +11881,8 @@
         "arXiv:2607.10186"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0059JST-discovery-specialist-agent-kv-1.json"
+        ".survey/work-queue/results/20260913T0059JST-discovery-specialist-agent-kv-1.json",
+        ".survey/work-queue/results/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 360,
