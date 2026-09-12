@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-d53ec8171f729e9e",
+  "type": "research",
+  "parent_job_id": "job-e15f3a03ac140338",
+  "priority": 88,
+  "canonical_id": "arXiv:2605.16867",
+  "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+  "source_url": "https://arxiv.org/abs/2605.16867",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+  "selection_reason": "agentic inferenceのend-to-end SLOを異種GPU pool上で満たすため、出力長とGPU状態を予測してjust-enough instanceへrouteし、実行中のSLO違反riskを監視してruntime request migrationで補正するpredict-and-rectify型サービング。一次資料では既存routing比でgoodput最大27.4%改善を報告しており、異種資源とagent workflowを結ぶrouting研究として既存一般request schedulingを補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:42:52+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:42:31.853869+00:00",
+  "updated_at": "2026-09-12T17:44:00.163062+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T17:42:31.853869+00:00",
+      "last_recorded_at": "2026-09-12T17:44:00.163062+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 15,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -13194,6 +13194,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34709026431:1",
+          "recorded_at": "2026-09-12T17:44:00.163062+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34709026431",
+            "run_attempt": "1",
+            "source_sha": "49c299067c0dff4e7c899c293e02a76ec8aee285"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13226,6 +13240,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.18741",
           "title": "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e15f3a03ac140338",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -13293,6 +13315,48 @@
           "type": "research",
           "canonical_id": "arXiv:2603.26498",
           "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference"
+        },
+        {
+          "job_id": "job-93c319d7de58b930",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-59a8ee8393fd93ee",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15050",
+          "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters"
+        },
+        {
+          "job_id": "job-research-705b1ab26eb807b1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.06188",
+          "title": "Routing LLM Inference to the Cleanest Grid in Real Time"
+        },
+        {
+          "job_id": "job-research-b7ad70251596454b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.06664",
+          "title": "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start"
+        },
+        {
+          "job_id": "job-research-d335718873eaacf6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.00254",
+          "title": "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving"
+        },
+        {
+          "job_id": "job-research-d53ec8171f729e9e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.16867",
+          "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources"
         }
       ],
       "new_paper_ids": [
@@ -13301,12 +13365,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
-        ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json"
+        ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json",
+        ".survey/work-queue/results/20260913T0241JST-discovery-specialist-runtime-network-routing.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
       "paper_active_count_after": 368,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b7ad70251596454b",
+  "type": "research",
+  "parent_job_id": "job-e15f3a03ac140338",
+  "priority": 94,
+  "canonical_id": "arXiv:2604.06664",
+  "title": "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
+  "source_url": "https://arxiv.org/abs/2604.06664",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06664-foundry-cuda-graph-context-materialization.md",
+  "selection_reason": "LLMサービングのcold startで重み読込より長くなり得るCUDA Graph captureを対象に、graph topologyと実行contextをofflineで保存し、決定論的memory layout・kernel binary復元・topology templateでonline materializationする。分散時はsingle-GPU captureからrank依存通信状態だけをpatchしてmulti-GPU templateを生成する。一次資料ではQwen3-235B-A22Bの初期化を10分から3.9秒へ短縮し、最大99%のcold-start削減を報告しており、autoscalingとparallelism再構成の実用上重要な抜けを埋める。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:42:52+00:00",
+  "artifact_transport": "structured_record_v10"
+}

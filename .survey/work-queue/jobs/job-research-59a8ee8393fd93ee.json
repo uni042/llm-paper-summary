@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-59a8ee8393fd93ee",
+  "type": "research",
+  "parent_job_id": "job-e15f3a03ac140338",
+  "priority": 84,
+  "canonical_id": "arXiv:2606.15050",
+  "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters",
+  "source_url": "https://arxiv.org/abs/2606.15050",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15050-solyx-hardware-telemetry-geo-routing.md",
+  "selection_reason": "地理分散GPU cluster間のrequest placementでDCGM hardware telemetry、vLLM metrics、WAN RTT/jitterを統合した10-signal pressure scorerを用いるcontrol plane。一次資料では3データセンタのH100/H200およびRTX PRO 6000 Blackwell環境でround-robin比1.56〜1.75倍のthroughput、capability mismatch 0.43%、障害迂回p99 1247msを報告し、hardware signalがSLO breachを平均11.2秒先行することも示す。cluster内routingとは異なるgeo-distributed運用面の価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:42:52+00:00",
+  "artifact_transport": "structured_record_v10"
+}

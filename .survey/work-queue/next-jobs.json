@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 253,
+      "completed": 254,
       "ready": 1
     },
     "audit": {
@@ -10,11 +10,23 @@
     "research": {
       "completed": 179,
       "superseded": 44,
-      "ready": 78,
+      "ready": 83,
       "deferred": 3
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-b7ad70251596454b",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2604.06664",
+      "title": "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
+      "source_url": "https://arxiv.org/abs/2604.06664",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06664-foundry-cuda-graph-context-materialization.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-c56a9d57e83a480c",
       "type": "research",
@@ -88,31 +100,19 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b018d3ca3a88c71f",
+      "job_id": "job-research-d335718873eaacf6",
       "type": "research",
       "lane": null,
-      "priority": 89,
-      "canonical_id": "arXiv:2607.28848",
-      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
-      "source_url": "https://arxiv.org/abs/2607.28848",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
+      "priority": 90,
+      "canonical_id": "arXiv:2605.00254",
+      "title": "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.00254",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-e290cd912706acf4",
-      "type": "research",
-      "lane": null,
-      "priority": 89,
-      "canonical_id": "arXiv:2601.22705",
-      "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control",
-      "source_url": "https://arxiv.org/abs/2601.22705",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-e15f3a03ac140338",
+      "job_id": "job-93c319d7de58b930",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T17:41:14+00:00"
+  "generated_at": "2026-09-12T17:43:38+00:00"
 }

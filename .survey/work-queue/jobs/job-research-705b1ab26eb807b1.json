@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-705b1ab26eb807b1",
+  "type": "research",
+  "parent_job_id": "job-e15f3a03ac140338",
+  "priority": 80,
+  "canonical_id": "arXiv:2608.06188",
+  "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+  "source_url": "https://arxiv.org/abs/2608.06188",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md",
+  "selection_reason": "地理分散LLM inference routingへ電力網の限界排出原単位をproduction pressure routerのoverlayとして導入し、GPU telemetry由来のrequest energyと実績MOERでsettlementする。一次資料はlive multi-region GPU testbedでdispatch failureなしを確認し、年間replayではround-robin比50.9%のmodeled operational emissions削減を報告する。モデル変更なしのplacement policyとして分散サービングの運用評価に独立の観点を加える。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:42:52+00:00",
+  "artifact_transport": "structured_record_v10"
+}
