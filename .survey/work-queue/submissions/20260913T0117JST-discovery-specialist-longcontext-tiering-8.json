@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-143ae536cc495a5e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.10729",
+      "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+      "source_url": "https://arxiv.org/abs/2601.10729",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.10729-orbitflow-slo-aware-kv-reconfiguration.md",
+      "priority": 93,
+      "reason": "長文LLM servingでrequestごとのKV cacheをlayer単位でGPU/hostへ動的配置し、軽量ILPとruntime feedbackでSLOに応じて配置を再構成する。重負荷時には大きなin-flight requestを一時保留するfallbackも備え、TPOT/TBTのSLO達成率を最大66%/48%改善、P95 latencyを38%削減、throughputを最大3.3倍にしており、細粒度階層メモリ管理の有力候補。"
+    },
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.03375-tutti-gpu-centric-ssd-kv-cache.md",
+      "priority": 94,
+      "reason": "NVMe SSD上のKV cache復元で大量の小粒度I/OとCPU介入がボトルネックになる問題に対し、GPU-native object abstraction、GPU io_uring、slack-aware I/O schedulingでHBM-SSD間のdata/control pathをGPU中心に再設計する。vLLM統合でGDS対応LMCache比TTFTを78.3%削減しrequest rateを2倍、costを27%削減しており、SSD活用の重点テーマに直接該当する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-sharing.md",
+      "priority": 87,
+      "reason": "同一server上の複数model間で、KV需要の低いmodelの未使用HBMを高需要modelのprefix cacheへ貸し、NVLink経由のcross-model KV sharingでPCIe/CPU/SSD reloadを回避する。active layerのKVだけをlocal HBMへ置くことで長文対応も拡張し、P99 TTFTを最大69%削減、最大context lengthを3.98倍へ伸ばしており、異種KV階層共有として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-longcontext-tiering-8",
+    "axis": "長文SLO・SSD-backed KV・異種GPUメモリ共有",
+    "query_summary": "multi-tenant/agent prefix軸の後、fault tolerance・recovery検索から長文KV階層管理へ展開。ORBITFLOW、Tutti、SwiftCacheを一次資料抄録で軽量評価し、送信直前に最新default branchでcanonical arXiv IDを再検索して既存化していないことを確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "最後にKV以外の推論runtime最適化とforward/related検索を独立に確認し、強い未収録候補が続かなければ今回runを収束判定する",
+    "empty_round_reason": null
+  }
+}
