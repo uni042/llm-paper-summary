@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **122 / 50** |
-| Research ready | **122** |
+| Candidate在庫（Research ready） | **121 / 50** |
+| Research ready | **121** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **189** |
+| Research completed（累計） | **190** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **3 / 24** |
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T03:30:00+09:00**
+Run: **2026-09-13T04:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **4** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **13** |
-| 新規job | **35** |
-| Repo収録 | **4** |
+| Discovery完了 | **0** |
+| 新規job | **0** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -50,22 +50,22 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **20** |
+| 通常worker run（ledger観測） | **21** |
 | 探索round（stats観測） | **96** |
 | 探索評価候補 | **461** |
 | 重複除外 | **151** |
 | 重複率 | **32.8%** |
 | Novel候補 | **310** |
 | Research候補採用 | **166** |
-| Research完了 | **57** |
-| Repo収録 | **57** |
+| Research完了 | **58** |
+| Repo収録 | **58** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 461 → 重複除外後 310 → Research候補採用 166 → Research完了 57 → Repo収録 57**
+**探索評価 461 → 重複除外後 310 → Research候補採用 166 → Research完了 58 → Repo収録 58**
 
 ## 探索効率（直近24時間）
 
@@ -180,6 +180,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 
 ### Research完了
 
+- `arXiv:2603.03251` — Speculative Speculative Decoding
 - `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
@@ -187,15 +188,14 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 - `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 - `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
-- `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
 
 ### 次に処理する候補
 
-- P91 `arXiv:2603.03251` — Speculative Speculative Decoding
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - P90 `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - P90 `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
+- P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 
 ## 7日比較
 
