@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-6ec0e9028edbe67e",
+  "type": "research",
+  "parent_job_id": "job-7d5f203e09ec3bc4",
+  "priority": 82,
+  "canonical_id": "arXiv:2503.13737",
+  "title": "AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications",
+  "source_url": "https://arxiv.org/abs/2503.13737",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.13737-accelgen-heterogeneous-slo-serving.md",
+  "selection_reason": "短・長promptが混在しSLOも異なるworkload向けに、SLO保証付きdynamic chunking、iteration-level priority、GPU computeとKV memoryを同時に見るbatchingを組み合わせる。arXiv抄録ではtrace-driven real experimentsでthroughput/goodput/SLO attainmentを幅広く評価しており、mixed workload schedulerとして候補価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T14:14:39+00:00",
+  "artifact_transport": "structured_record_v10"
+}

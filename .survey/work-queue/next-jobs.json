@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 206,
+      "completed": 207,
       "ready": 1
     },
     "audit": {
@@ -11,7 +11,7 @@
       "completed": 168,
       "superseded": 44,
       "deferred": 3,
-      "ready": 23
+      "ready": 26
     }
   },
   "next_jobs": [
@@ -88,6 +88,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-f3999676507a9c53",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2505.23022",
+      "title": "SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2505.23022",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-5c8a51a10227b970",
       "type": "research",
       "lane": null,
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-bbe263213664b792",
-      "type": "research",
-      "lane": null,
-      "priority": 85,
-      "canonical_id": "arXiv:2508.21706",
-      "title": "Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2508.21706",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2508.21706-specmoeoff-speculative-decoding-offload.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-7d5f203e09ec3bc4",
+      "job_id": "job-59418511ae4bc344",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T14:13:07+00:00"
+  "generated_at": "2026-09-12T14:15:04+00:00"
 }

@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-f3999676507a9c53",
+  "type": "research",
+  "parent_job_id": "job-7d5f203e09ec3bc4",
+  "priority": 86,
+  "canonical_id": "arXiv:2505.23022",
+  "title": "SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
+  "source_url": "https://arxiv.org/abs/2505.23022",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+  "selection_reason": "TTFT/TPOTの異なるSLOを一律throughput最大化で扱わず、admission control・queue reorder・batch selectionをSLO指向で共同制御するservingシステム。arXiv抄録ではgoodput最大14.4倍、SLO adherence最大46.5%改善を報告しており、SLO-aware scheduler系統の重要候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T14:14:39+00:00",
+  "artifact_transport": "structured_record_v10"
+}

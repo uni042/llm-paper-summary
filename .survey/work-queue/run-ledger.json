@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:13:27.531527+00:00",
+  "updated_at": "2026-09-12T14:15:17.083247+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T14:13:27.531527+00:00",
+      "last_recorded_at": "2026-09-12T14:15:17.083247+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 18,
+        "new_jobs": 22,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10846,6 +10846,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34698701734:1",
+          "recorded_at": "2026-09-12T14:15:17.083247+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34698701734",
+            "run_attempt": "1",
+            "source_sha": "67701af5040de2658fa9630398db07440fbf378e"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10915,6 +10929,14 @@
         },
         {
           "job_id": "job-0153f88c40851ebb",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-7d5f203e09ec3bc4",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -11048,6 +11070,34 @@
           "type": "research",
           "canonical_id": "arXiv:2512.14946",
           "title": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving"
+        },
+        {
+          "job_id": "job-59418511ae4bc344",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-6ec0e9028edbe67e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2503.13737",
+          "title": "AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications"
+        },
+        {
+          "job_id": "job-research-c5a47af1c9e3acf3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.07472",
+          "title": "Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference"
+        },
+        {
+          "job_id": "job-research-f3999676507a9c53",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.23022",
+          "title": "SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -11062,7 +11112,8 @@
         ".survey/work-queue/results/20260912T2304JST-discovery-specialist-02.json",
         ".survey/work-queue/results/20260912T2308JST-discovery-specialist-03.json",
         ".survey/work-queue/results/20260912T2310JST-discovery-specialist-04.json",
-        ".survey/work-queue/results/20260912T2312JST-discovery-specialist-05.json"
+        ".survey/work-queue/results/20260912T2312JST-discovery-specialist-05.json",
+        ".survey/work-queue/results/20260912T2314JST-discovery-specialist-06.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,

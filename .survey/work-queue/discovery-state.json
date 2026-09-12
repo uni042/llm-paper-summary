@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T14:12:24+00:00",
+  "updated_at": "2026-09-12T14:14:39+00:00",
   "last_run_key": "2026-09-12T23:00:00+09:00",
-  "last_round": "specialist-cache-admission-restoration-05",
+  "last_round": "specialist-slo-serving-scheduling-06",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -749,6 +749,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "SLO-aware serving scheduling、heterogeneous GPU allocation、または重要論文の引用追跡へ移る",
       "source_submission": "work-queue/submissions/20260912T2312JST-discovery-specialist-05.json"
+    },
+    {
+      "run_key": "2026-09-12T23:00:00+09:00",
+      "round": "specialist-slo-serving-scheduling-06",
+      "axis": "SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation",
+      "query_summary": "heterogeneous TTFT/TPOT SLO、長文KV動的再配置、dynamic chunking、異種GPU/model allocationをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第5roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "SSD/NVMe multi-tier KV、photonic/CXL remote memory、または重要論文の引用追跡へ切り替える",
+      "source_submission": "work-queue/submissions/20260912T2314JST-discovery-specialist-06.json"
     }
   ],
   "axes": {
@@ -1171,6 +1186,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "SLO-aware serving scheduling、heterogeneous GPU allocation、または重要論文の引用追跡へ移る"
+    },
+    "SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation": {
+      "last_run_key": "2026-09-12T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "SSD/NVMe multi-tier KV、photonic/CXL remote memory、または重要論文の引用追跡へ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
