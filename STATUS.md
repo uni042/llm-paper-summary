@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **17 / 50** |
-| Research ready | **17** |
+| Candidate在庫（Research ready） | **18 / 50** |
+| Research ready | **18** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **LOW**: candidate在庫が25未満（現在 17）。能動的な補充が必要。
+- **LOW**: candidate在庫が25未満（現在 18）。能動的な補充が必要。
 
 ## 直近の通常worker
 
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **9** |
+| Discovery完了 | **4** |
+| 新規job | **11** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-agentic-kv-cache-03**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | MoE expert locality・cache/prefetch・CPU/GPU offload |
+| 探索軸 | エージェント型サービング・KV再利用・ツール呼び出し待機 |
 | 評価候補 | **4** |
 | 重複除外 | **0** |
 | Novel候補 | **4** |
-| Research候補採用 | **3** |
+| Research候補採用 | **1** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **24** |
-| 探索評価候補 | **136** |
+| 探索round（stats観測） | **25** |
+| 探索評価候補 | **140** |
 | 重複除外 | **46** |
-| 重複率 | **33.8%** |
-| Novel候補 | **90** |
-| Research候補採用 | **40** |
+| 重複率 | **32.9%** |
+| Novel候補 | **94** |
+| Research候補採用 | **41** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02
 
 ### 24時間ファネル
 
-**探索評価 136 → 重複除外後 90 → Research候補採用 40 → Research完了 44 → Repo収録 44**
+**探索評価 140 → 重複除外後 94 → Research候補採用 41 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -87,6 +87,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
+| エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
@@ -97,11 +98,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — エージェント型サービング・KV再利用・ツール呼び出し待機: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T23:00:00+09:00** — MoE expert locality・cache/prefetch・CPU/GPU offload: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — 分離LLMサービング・ネットワーク競合・prefill再配置: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T22:30:00+09:00** — 地理分散LLM serving・分散最適化: 評価 4 / 重複 2 / 採用 2
 - **20260912T2200+0900** — critical_buffer_cross_axis_moe_heterogeneous_serving: 評価 5 / 重複 0 / 採用 0
-- **2026-09-12T21:30:00+09:00** — composable-cxl-shared-kv-peer-gpu-memory-tier: 評価 2 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
@@ -122,7 +123,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-locality-offload-02
 - P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
 - P85 `arXiv:2603.13358` — Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving
 - P85 `arXiv:2508.21706` — Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding
-- P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
+- P84 `arXiv:2510.18586` — Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications
 
 ## 7日比較
 
