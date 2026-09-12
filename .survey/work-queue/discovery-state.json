@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T21:18:33+00:00",
-  "last_run_key": "2026-09-13T06:02:25+09:00",
-  "last_round": "specialist-exhaustion-final-6",
+  "updated_at": "2026-09-12T22:04:15+00:00",
+  "last_run_key": "2026-09-13T07:00:13+09:00",
+  "last_round": "specialist-kv-moe-memory-revalidation-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "直前strong batch後に複数の実質的に異なる探索軸を再走査したが、強い候補はすべて正本上の既存論文または既存research jobと一致した。隣接するvision/survey/限定的hardware研究は品質・直接関連性の閾値を超えず、追加すべき強候補が残っていないため今回runのexhaustion条件を満たした。",
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "この軸で強い候補として評価した5本はすべて既収録または既存research jobと一致した。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2201,6 +2201,27 @@
       ],
       "next_axis_hint": "次回はこのrun後に公開・改訂された新着差分を優先し、今回飽和した軸を機械的に反復しない。新規差分が薄い場合は新しいforward citationまたは実装公開から探索軸を更新する。",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0618JST-exhaustion-final-6.json"
+    },
+    {
+      "run_key": "2026-09-13T07:00:13+09:00",
+      "round": "specialist-kv-moe-memory-revalidation-1",
+      "axis": "KVページ制御・MoEメモリ分離・復元系の再探索",
+      "query_summary": "KVページ制御、冷間MoEの重み/KV分離、KV復元、非一様KV、MoE専門家先読みを軽量評価し、決定論的research job IDと既存正本を照合した。PersistentKV、CrossPool、CacheFlow、Tangram、SPICEはいずれも既収録または既存jobであることを確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2606.26666",
+        "arxiv:2606.24506",
+        "arxiv:2604.25080",
+        "arxiv:2606.06302",
+        "arxiv:2608.21240"
+      ],
+      "next_axis_hint": "2609新着・recent revisionを再確認し、その後forward citationと隣接OS/GPU runtime軸へ移る",
+      "source_submission": "work-queue/submissions/20260913T0704JST-discovery-02deb7897ac2d559.json"
     }
   ],
   "axes": {
@@ -3463,6 +3484,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "次回はこのrun後に公開・改訂された新着差分を優先し、今回飽和した軸を機械的に反復しない。新規差分が薄い場合は新しいforward citationまたは実装公開から探索軸を更新する。"
+    },
+    "KVページ制御・MoEメモリ分離・復元系の再探索": {
+      "last_run_key": "2026-09-13T07:00:13+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "2609新着・recent revisionを再確認し、その後forward citationと隣接OS/GPU runtime軸へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
