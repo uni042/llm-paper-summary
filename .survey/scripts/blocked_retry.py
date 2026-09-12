@@ -54,6 +54,9 @@ def blocked_event_id(job: dict) -> str:
     blocked_at = job.get("blocked_at")
     if isinstance(blocked_at, str) and blocked_at.strip():
         return blocked_at.strip()
+    recorded = job.get("last_recorded_blocked_event")
+    if isinstance(recorded, str) and recorded.strip():
+        return recorded.strip()
     return "legacy:" + str(job.get("blocker") or job.get("job_id") or "unknown")
 
 
