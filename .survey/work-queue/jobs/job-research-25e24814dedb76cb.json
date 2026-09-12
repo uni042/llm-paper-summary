@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-25e24814dedb76cb",
+  "type": "research",
+  "parent_job_id": "job-262708a8729e8066",
+  "priority": 78,
+  "canonical_id": "arXiv:2601.17855",
+  "title": "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+  "source_url": "https://arxiv.org/abs/2601.17855",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md",
+  "selection_reason": "状態を自由移送できず同期障壁で最遅workerに律速されるdata-parallel decodeを対象に、有限区間の整数最適化として一般化した負荷分散原理を提案する。production traceではdecode stepごとのbarrier idleが40%超になり得る問題を扱い、理論的worst-case保証と実験の両方でthroughput/latency/energy改善を示す。個別heuristicではなく同期型LLM servingの負荷不均衡を理論化する比較対象として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:31:01+00:00",
+  "artifact_transport": "structured_record_v10"
+}

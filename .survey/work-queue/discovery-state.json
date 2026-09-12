@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:28:12+00:00",
+  "updated_at": "2026-09-12T16:31:01+00:00",
   "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-september-kv-reuse-1",
+  "last_round": "specialist-runtime-certification-scheduling-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1143,6 +1143,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はKV圧縮を離れ、MoE expert I/O/offloadと階層メモリ・storage隣接へ移る",
       "source_submission": "work-queue/submissions/20260913T0128JST-discovery-81ef6cac67a27161.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-runtime-certification-scheduling-2",
+      "axis": "KV量子化の実行時保証・同期型serving負荷分散",
+      "query_summary": "前ラウンドのKV圧縮そのものから、圧縮品質を実行時に証明・回復する系統と、data-parallel decodeの同期障壁を扱う負荷分散へ探索軸をずらした。一次arXiv概要を軽量確認し、決定論的job IDを最新mainのexisting jobsへ直接照合して未登録候補だけを残した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はserving schedulingを離れ、GPU runtime・通信・隣接systemsまたはforward/backward citationから未収録候補を探す",
+      "source_submission": "work-queue/submissions/20260913T0132JST-discovery-262708a8729e8066.json"
     }
   ],
   "axes": {
@@ -1805,6 +1820,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はKV圧縮を離れ、MoE expert I/O/offloadと階層メモリ・storage隣接へ移る"
+    },
+    "KV量子化の実行時保証・同期型serving負荷分散": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はserving schedulingを離れ、GPU runtime・通信・隣接systemsまたはforward/backward citationから未収録候補を探す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

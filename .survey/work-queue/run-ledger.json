@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:29:20.444389+00:00",
+  "updated_at": "2026-09-12T16:32:07.706104+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12231,6 +12231,87 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 360,
+      "paper_active_count_after": 366,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-13T01:30:00+09:00",
+      "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
+      "last_recorded_at": "2026-09-12T16:32:07.706104+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 4,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34705456596:1",
+          "recorded_at": "2026-09-12T16:32:07.706104+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34705456596",
+            "run_attempt": "1",
+            "source_sha": "0d643d3946305a2185721c244d0e290af648321b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-262708a8729e8066",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-29dd7c44eff93660",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0a982340eead3672",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.20868",
+          "title": "Runtime-Certified Bounded-Error Quantized Attention"
+        },
+        {
+          "job_id": "job-research-25e24814dedb76cb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.17855",
+          "title": "A Universal Load Balancing Principle and Its Application to Large Language Model Serving"
+        },
+        {
+          "job_id": "job-research-b1be9294a63ee868",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.28699",
+          "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260913T0132JST-discovery-262708a8729e8066.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 366,
       "paper_active_count_after": 366,
       "last_successful_action": "discovery_or_queue_expanded"
     }

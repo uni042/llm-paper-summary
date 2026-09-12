@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b1be9294a63ee868",
+  "type": "research",
+  "parent_job_id": "job-262708a8729e8066",
+  "priority": 88,
+  "canonical_id": "arXiv:2607.28699",
+  "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization",
+  "source_url": "https://arxiv.org/abs/2607.28699",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
+  "selection_reason": "KVキャッシュ量子化をオフライン平均評価だけでなく、層・ヘッド・ステップ単位の実行時リスク計で監視する。任意のcache-preserving quantizerに適用できる決定論的上界と、制御付きINT8量子化向けの確率的証明を持ち、SGLangへ組み込んだ評価では危険な圧縮をgatingして品質を回復しつつ同一メモリで1.88倍のKV tokenを保持すると報告する。KV圧縮の安全性とserving実装を接続する点が強い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:31:01+00:00",
+  "artifact_transport": "structured_record_v10"
+}
