@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2170d2d09da882fb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.06007",
+      "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
+      "source_url": "https://arxiv.org/abs/2608.06007",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06007-tensorcast-tensor-as-a-service.md",
+      "priority": 92,
+      "reason": "モデル重み・KVキャッシュ・チェックポイント等の分散tensor状態管理を実行エンジンから分離し、Tensor-as-a-Serviceとして統一するシステム。vLLMとSGLangへ統合し、重みmaterialization、KV管理、要求routingを同じlifecycle primitiveで扱う。高並行multi-turn agent負荷のprogrammable policyでmedian TTFT最大93.2%改善を報告しており、個別KV/weight管理を横断する基盤抽象として既存系統との差分が大きい。"
+    },
+    {
+      "canonical_id": "arXiv:2608.07009",
+      "title": "HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management",
+      "source_url": "https://arxiv.org/abs/2608.07009",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md",
+      "priority": 91,
+      "reason": "疎注意でも全KVをHBM常駐させる既存サービングの容量壁に対し、完全KV履歴をhost memoryへ置き、固定サイズGPU cache、CUDA graph内のfused miss resolution、layer-wise prefetchで正確なtop-k選択を維持する階層KVシステム。SGLang upstreamへ統合され、H200/B200/GH200と複数疎注意方式でlong-context生成throughput最大4.7倍を報告しており、階層メモリ・KV offloadの重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2512.19179",
+      "title": "L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling",
+      "source_url": "https://arxiv.org/abs/2512.19179",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.19179-l4-length-aware-scheduling.md",
+      "priority": 87,
+      "reason": "attention backendがbatch内のrequest長ばらつきに敏感な点をサービングスケジューラへ組み込み、同一モデルの複数instanceを長さ別groupへ動的分割し、runtime range refinementと分散load rebalanceでrequest長の異質性を抑える。end-to-end latency最大67%、tail latency最大69%削減、throughput最大2.89倍を報告しており、長文脈時代のmulti-instance schedulingとして収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2505.12658",
+      "title": "HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2505.12658",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md",
+      "priority": 83,
+      "reason": "multimodal LLMのencode・prefill・decodeを単一単位として扱う資源不整合を避けるため、3段階を異種instanceへ分離するHybrid EPD disaggregationとstage-level batchingを提案する。単一8xH800 nodeの実負荷で90th-percentile SLOを満たしつつvLLM比最大4倍throughputを報告しており、通常のP/D分離をmultimodal encodeまで拡張する隣接サービング研究として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T02:29:24+09:00",
+    "round": "specialist-important-systems-omissions-2",
+    "axis": "重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離",
+    "query_summary": "新着軸が既収録中心だったため、隣接systemsと過去1年の重要omissionへ切り替えた。arXiv一次メタデータとabstractで軽量評価し、最新paper identity index、決定論的research job ID、repository検索、Library pendingを投入直前に再確認した。未収録かつjob未存在の4件のみ送信した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はforward citationまたはDBMS/OS/storage由来のLLM state placement・memory hierarchyへ移し、今回のtensor lifecycle/KV hierarchyから関連語を展開する",
+    "empty_round_reason": null
+  }
+}
