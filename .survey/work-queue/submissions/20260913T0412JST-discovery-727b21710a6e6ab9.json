@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "job_id": "job-727b21710a6e6ab9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.08565",
+      "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.08565",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+      "priority": 88,
+      "reason": "agentic workloadではsession内KV再利用が非常に高く、既存cache-affinity routingが一部instanceを過負荷にする問題を、sessionの最初だけ純粋なload balance、以降をcache-aware routingとするsession-centric schedulingで解く。BAILIANのproduction traceを含む評価でcluster TPSを10〜16%、分離prefill TPSを2〜34%改善し、agent servingでcache localityと負荷分散を両立する実運用型system研究として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.16104",
+      "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective",
+      "source_url": "https://arxiv.org/abs/2603.16104",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.16104-helium-workflow-aware-agent-serving.md",
+      "priority": 84,
+      "reason": "agent workflowをquery plan、LLM invocationをoperatorとして扱い、prompt・KV・workflowをまたぐproactive cachingとcache-aware schedulingを統合するHeliumを提案する。個別request最適化では失われるcross-call依存と重複をdata-system視点で扱い、既存agent serving system比最大1.56倍のspeedupを報告しており、program-aware servingの系統補完として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2502.13965",
+      "title": "Autellix: An Efficient Serving Engine for LLM Agents as General Programs",
+      "source_url": "https://arxiv.org/abs/2502.13965",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+      "priority": 82,
+      "reason": "agent programをfirst-class scheduling unitとして扱い、単一・分散programの完了済みcall量を使って後続LLM callをpreempt・prioritizeする。program-level head-of-line blockingを直接対象にし、vLLM等に対して同一latencyでprogram throughputを4〜15倍改善と報告する。比較的新しくはないがagentic servingの基礎的systemとして未収録なら重要な欠落候補である。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-agentic-serving-4",
+    "axis": "agentic workload・program/session-aware serving",
+    "query_summary": "agentic servingへ探索軸を変更し、session-centric scheduling、workflow-aware caching/scheduling、program-level scheduling、agent workload characterizationを比較した。AgentSysBenchは既存completed jobを直接確認して除外し、残る3件は決定論的research job IDに実体がないことを最新mainで再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": [
+      "arxiv:2608.15127"
+    ],
+    "next_axis_hint": "MoE communication・runtime parallelismは既収録照合を優先し、その後prefix-aware batchingや古い重要欠落へ展開する",
+    "empty_round_reason": null
+  }
+}
