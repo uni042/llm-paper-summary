@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:06:02.422778+00:00",
+  "updated_at": "2026-09-12T09:07:50.104991+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,7 +9274,7 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T09:06:02.422778+00:00",
+      "last_recorded_at": "2026-09-12T09:07:50.104991+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9283,9 +9283,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 12,
+        "new_jobs": 13,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -9404,6 +9404,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34685002434:1",
+          "recorded_at": "2026-09-12T09:07:50.104991+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34685002434",
+            "run_attempt": "1",
+            "source_sha": "da637ca45948a304f99f07bfa59614c80b54efa6"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9457,6 +9471,14 @@
         },
         {
           "job_id": "job-95bcce1436ac0604",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6eee2d6e98a7acfb",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -9548,6 +9570,13 @@
           "type": "research",
           "canonical_id": "arXiv:2608.23962",
           "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving"
+        },
+        {
+          "job_id": "job-e35987aea0aca20c",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -9560,7 +9589,8 @@
         ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json",
         ".survey/work-queue/results/20260912T1750JST-discovery-moe-io-refill.json",
         ".survey/work-queue/results/20260912T1758JST-discovery-204a21f0325d1761.json",
-        ".survey/work-queue/results/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json"
+        ".survey/work-queue/results/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json",
+        ".survey/work-queue/results/20260912T1800JST-discovery-heterogeneous-runtime-2.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,

@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T09:05:24+00:00",
+  "updated_at": "2026-09-12T09:07:19+00:00",
   "last_run_key": "2026-09-12T18:00:00+09:00",
-  "last_round": "specialist-edge-disaggregated-power-1",
+  "last_round": "specialist-heterogeneous-runtime-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -423,6 +423,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "GPU runtime/SmartNICによるCPU-free serving、SSD/NVMe expert I/O scheduling、HPC大規模servingへ軸を変更する",
       "source_submission": "work-queue/submissions/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json"
+    },
+    {
+      "run_key": "2026-09-12T18:00:00+09:00",
+      "round": "specialist-heterogeneous-runtime-2",
+      "axis": "GPU runtime・SmartNIC・異種アクセラレータ・階層KV",
+      "query_summary": "前ラウンドのedge/disaggregated通信・電力制御から軸を変更し、CPU-free serving、SmartNIC/GPU常駐制御、SLO-aware KV hierarchy、GH200密結合CPU/GPU、GPU-FPGA memory processing、hardware-aware lossless compressionを軽量評価した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "SSD/NVMe expert I/O scheduling、storage/DBMS由来のcache/prefetch、HPC大規模推論の通信最適化へ移る",
+      "source_submission": "work-queue/submissions/20260912T1800JST-discovery-heterogeneous-runtime-2.json"
     }
   ],
   "axes": {
@@ -655,6 +670,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "GPU runtime/SmartNICによるCPU-free serving、SSD/NVMe expert I/O scheduling、HPC大規模servingへ軸を変更する"
+    },
+    "GPU runtime・SmartNIC・異種アクセラレータ・階層KV": {
+      "last_run_key": "2026-09-12T18:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "SSD/NVMe expert I/O scheduling、storage/DBMS由来のcache/prefetch、HPC大規模推論の通信最適化へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
