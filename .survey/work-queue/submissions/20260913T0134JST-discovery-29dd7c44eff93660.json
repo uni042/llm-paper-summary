@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-29dd7c44eff93660",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.23521",
+      "title": "Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.23521",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.23521-concordia-persistent-kernel-checkpointing.md",
+      "priority": 88,
+      "reason": "長時間動作するLLM agentのKV cache・scheduler・通信状態などGPU常駐stateを、framework固有のcheckpoint実装ではなくdevice-resident persistent kernelで保護するruntime。PTX/SASS instrumentationとJIT生成delta handlerによりdirty stateをCXL memoryまたはhost DRAMへ記録し、GPU/communicator障害からの復旧をhost CPUのcritical path外で扱う。推論runtime・階層メモリ・耐障害性を接続する未収録システムとして価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.22438",
+      "title": "Towards Resiliency in Large Language Model Serving with KevlarFlow",
+      "source_url": "https://arxiv.org/abs/2601.22438",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22438-kevlarflow-resilient-llm-serving.md",
+      "priority": 84,
+      "reason": "大規模servingでGPU障害時にmodel reloadとruntime再初期化が数分級になる問題に対し、model-parallel初期化の分離、dynamic traffic rerouting、background KV replicationを組み合わせる耐障害serving architecture。抄録ではmean-time-to-recoveryを20倍短縮し、障害時TTFTを大幅改善しつつ平常時overheadを小さく抑えると報告する。既収録の通常scheduling/通信最適化とは異なるavailability軸を補う。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-fault-tolerant-serving-runtime-3",
+    "axis": "推論runtime・serving耐障害性",
+    "query_summary": "GPU runtime・通信の隣接systemsへ探索軸を移し、長時間agent/servingのstate保護と障害復旧を扱う候補を一次arXiv概要で軽量評価した。Blink等の既収録候補は決定論的job IDで除外し、最新mainにjobが存在しない2件だけを送信する。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2604.07609"],
+    "next_axis_hint": "次は耐障害性を離れ、MoE expert co-executionまたは被引用・参考文献経路へ移る",
+    "empty_round_reason": null
+  }
+}
