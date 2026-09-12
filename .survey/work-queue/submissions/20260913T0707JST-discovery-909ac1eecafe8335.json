@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "job-909ac1eecafe8335",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15171",
+      "title": "P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.15171",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15171-ppas-prefill-pressure-adaptive-scheduling.md",
+      "priority": 84,
+      "reason": "長文脈サービングでvLLMの最大バッチトークン数を固定すると、低負荷では大きなプリフィル分割の実行効率を活かせる一方、高負荷ではデコードとの干渉が増える問題に対し、同時プリフィル・デコード状態からスケジューリング圧力を推定してトークン予算を動的に変える軽量方策を提案する。複数モデル・GPU・負荷で固定設定の弱点を回避し、再現用コードも公開されており、既収録の期限認識型SLOWeaveとは異なる負荷圧力ベースの適応制御として比較価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:00:13+09:00",
+    "round": "specialist-adaptive-prefill-scheduling-2",
+    "axis": "適応プリフィル・KV予約・デコード干渉スケジューリング",
+    "query_summary": "長文脈サービングのプリフィル分割・KV予約・デコード干渉を軽量評価し、P-PAS、SLOWeave、Robust KV Cache Managementを比較した。SLOWeaveとRobust KVは既収録で、P-PASは最新HEADのjob/identity delta/repo検索およびLibrary pendingで未登録を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arxiv:2609.07883",
+      "arxiv:2607.16892"
+    ],
+    "next_axis_hint": "新規候補が得られたため枯渇判定をリセットし、2609新着、forward citation、OS/GPU runtime、MoE expert I/O、CXL/SSDの独立軸を再走査する",
+    "empty_round_reason": null
+  }
+}
