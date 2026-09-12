@@ -1,52 +1,45 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "seed-20260912-1830-critical-buffer",
+  "seed_id": "seed-20260912-1830-critical-buffer-round2",
   "candidates": [
     {
-      "canonical_id": "arXiv:2607.28150",
-      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
-      "source_url": "https://arxiv.org/abs/2607.28150",
-      "priority": 92,
-      "reason": "Strong fit for disaggregated serving and KV-transfer bottlenecks; primary source reports selective KV transfer with up to 4.3x lower time-to-second-token versus full transfer."
+      "canonical_id": "arXiv:2608.11688",
+      "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.11688",
+      "priority": 94,
+      "reason": "Direct match to expert prefetch and memory-constrained MoE inference; reports up to 26% lower per-token latency and 41% better energy-delay product."
     },
     {
-      "canonical_id": "arXiv:2601.20309",
-      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
-      "source_url": "https://arxiv.org/abs/2601.20309",
-      "priority": 90,
-      "reason": "Strong fit for hierarchical memory and SLO-aware serving; evaluates tightly coupled CPU-GPU memory on GH200 and reports substantial TTFT SLO-attainment gains."
+      "canonical_id": "arXiv:2608.12103",
+      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.12103",
+      "priority": 93,
+      "reason": "High-value expert-cache and hierarchical-memory study at trillion-parameter scale; compares kernel page-cache behavior with application-managed policies on GH200."
     },
     {
-      "canonical_id": "arXiv:2510.09665",
-      "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
-      "source_url": "https://arxiv.org/abs/2510.09665",
-      "priority": 90,
-      "reason": "High-value systems paper spanning KV offload, cross-engine cache transfer, CPU/storage/network hierarchy, vLLM/SGLang integration, and an open-source implementation."
+      "canonical_id": "arXiv:2604.26557",
+      "title": "DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.26557",
+      "priority": 95,
+      "reason": "Direct SSD/NVMe offload relevance with an NVMe-direct path, adaptive pipelining, and measured latency/SSD-utilization improvements."
     },
     {
-      "canonical_id": "arXiv:2607.16892",
-      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
-      "source_url": "https://arxiv.org/abs/2607.16892",
-      "priority": 86,
-      "reason": "Relevant to KV-memory allocation, routing, prefix caching, SLOs, and uncertain output length; trace-driven evaluation reports up to 56% lower cost than fixed-quantile reservation baselines."
-    },
-    {
-      "canonical_id": "arXiv:2606.24467",
-      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
-      "source_url": "https://arxiv.org/abs/2606.24467",
-      "priority": 82,
-      "reason": "Strong KV-cache memory-management candidate with public code and explicit long-context memory/quality tradeoff evaluation."
+      "canonical_id": "arXiv:2509.07379",
+      "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Cache Scheduling for Efficient MoE LLM Inference",
+      "source_url": "https://arxiv.org/abs/2509.07379",
+      "priority": 91,
+      "reason": "Strong MoE serving candidate separating prefill/decode expert scheduling; reports substantial latency gains under constrained GPU memory."
     }
   ],
   "discovery_stats": {
     "run_key": "2026-09-12T18:30:00+09:00",
-    "round": "normal-worker-critical-buffer-1",
-    "axis": "kv-cache-disaggregation-memory-management",
-    "query_summary": "Recent and high-value primary-source search covering KV cache transfer, hierarchical memory, SLO-aware serving, uncertain KV reservation, and KV compression.",
-    "candidate_count": 5,
+    "round": "normal-worker-critical-buffer-2",
+    "axis": "moe-expert-prefetch-cache-nvme-offload",
+    "query_summary": "Rotated from KV/disaggregation into MoE expert prefetch/cache tiering and direct NVMe KV-cache offload.",
+    "candidate_count": 4,
     "duplicate_filtered_count": 0,
     "duplicate_canonical_ids": [],
-    "next_axis_hint": "Rotate to MoE expert placement/cache/prefetch and SSD/NVMe offload after Actions final dedupe."
+    "next_axis_hint": "After final dedupe, prioritize research on SSD/NVMe and expert-cache candidates, then explore adjacent OS/storage mechanisms."
   }
 }
