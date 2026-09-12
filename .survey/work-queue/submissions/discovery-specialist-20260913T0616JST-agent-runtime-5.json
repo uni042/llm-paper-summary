@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-4354f5042e6e20fc",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.00151",
+      "title": "SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering",
+      "source_url": "https://arxiv.org/abs/2607.00151",
+      "priority": 87,
+      "reason": "長時間agent workflowでcontext offload/reduction/isolationがKVを無効化してre-prefillを生む問題に対し、segment-decomposableなcontext変換を先回り実行し変換済みKVを用意するlookahead runtimeとschedulerを提案する。既存agent framework/serving systemへ統合しTTFT最大11.9倍改善を報告しており、agent-aware KV/runtime系統の強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2605.16637",
+      "title": "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling",
+      "source_url": "https://arxiv.org/abs/2605.16637",
+      "priority": 85,
+      "reason": "オンラインで段階的に明らかになるagent workflow DAGを、異種A100/H100/H200のprefill/decode分離cluster上でworkflow-level SLOを満たすよう共同配置・優先制御する。KV容量とcross-stage transferも含め、異種性とworkflow進行を統合して扱うためFATE/TOPASと比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.06914",
+      "title": "Regulating Branch Parallelism in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.06914",
+      "priority": 84,
+      "reason": "intra-request branch parallelismを固定幅やeager admissionで実行すると共存requestのdecode stepを悪化させる問題に対し、各stepのslack budgetに収まる枝だけを許可するTAPER admission controllerを提案する。Qwen3-32Bでgoodputを最大1.77倍改善し95%以上のSLO達成を維持し、branch-level schedulingという独立軸を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.25655",
+      "title": "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers",
+      "source_url": "https://arxiv.org/abs/2605.25655",
+      "priority": 78,
+      "reason": "分散メモリ階層と帯域制約の強いmany-core accelerator向けに、SIMD operator、graph fusion/kernel scheduling、Prefill-Buffer-Decode pipelineと二段通信を共同設計するTHInferを提案する。主流GPU外のhardware-aware inference runtimeとして、階層メモリ・bandwidth-aware設計の比較対象に有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T06:02:25+09:00",
+    "round": "specialist-agent-runtime-5",
+    "axis": "agent workflow/context runtime・branch admission・heterogeneous many-core runtime",
+    "query_summary": "storage/runtime strong batch後にagent/workflow、network flow、fault recovery、kernel/runtime、heterogeneous hardwareを独立走査した。Helium、MFS、KevlarFlow、LUMEN、Hybrid JIT-CUDA Graph、NELSSA、SMetric、fairness-aware chunked-prefill、geometry-aware schedulingは決定論的job照合で既存と確認。未登録4件のみを投入直前の最新main HEADでjob不存在、repo検索で識別子/題名未検出、Library pendingに同候補なしと確認した。",
+    "candidate_count": 13,
+    "duplicate_filtered_count": 9,
+    "duplicate_canonical_ids": ["arXiv:2603.16104", "arXiv:2603.17456", "arXiv:2601.22438", "arXiv:2606.17787", "arXiv:2604.23467", "arXiv:2607.26633", "arXiv:2607.08565", "arXiv:2606.09061", "arXiv:2606.22327"],
+    "next_axis_hint": "strong batchで枯渇判定をリセットし、最新差分、forward/backward citation、MoE、storage/networking、KV/sparse-attention、framework implementationをもう一巡して枯渇判定する",
+    "empty_round_reason": null
+  }
+}
