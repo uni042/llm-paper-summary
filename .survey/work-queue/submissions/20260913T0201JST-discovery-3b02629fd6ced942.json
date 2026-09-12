@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3b02629fd6ced942",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2512.18194",
+      "title": "TraCT: A CXL-Based Shared KV Cache for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.18194",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.18194-tract-cxl-shared-kv-cache.md",
+      "priority": 91,
+      "reason": "分離サービング（disaggregated serving）のprefill/decode間KV転送と複数ノード間再利用を、ラック規模のCXL共有メモリ上に集約するシステム。Dynamoベース評価でRDMA/DRAM系ベースラインに対し平均TTFT最大9.8倍、P99 TTFT最大6.2倍、ピークスループット最大1.6倍を報告しており、CXLをKVの共有階層として使う点で既存のGPU/CPU/SSD階層とは差分が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10790",
+      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.10790",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.10790-cxl-kubernetes-shared-kv-tier.md",
+      "priority": 87,
+      "reason": "Kubernetesの動的資源割当（Dynamic Resource Allocation）とCXL共有DAXメモリを組み合わせ、vLLM/llm-dの外部KV階層として複数ノード間prefix cacheを共有する実装研究。2ノード・512GiB CXL構成でQwen2.5-7Bを用い、95.4〜99.5%の外部cache hit時にcross-node prefix reuseのTTFTを5.5〜36.6倍改善したと報告する。運用基盤とCXL共有KVを直接接続する点で新規性がある。"
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware LLM Inference on NVIDIA Grace Hopper Superchip",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20309-superinfer-grace-hopper-slo-memory-management.md",
+      "priority": 84,
+      "reason": "Grace Hopper SuperchipのNVLink-C2Cで接続されたCPU/GPU統合メモリ階層を活用し、SLOを考慮したrotary schedulingとメモリ管理でLLM servingを最適化する。TTFT SLO達成率を最大74.7%改善すると報告しており、PCIe前提の従来offloadとは異なるCPU-GPU結合メモリ上のスケジューリング設計として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-cxl-shared-memory-2",
+    "axis": "CXL共有メモリ・ラック内KV転送・Superchip階層メモリ",
+    "query_summary": "MoE roundの後、CXL共有KV、Kubernetes統合CXL階層、Grace Hopper統合メモリへ探索軸を変更した。関連候補5件を軽量評価し、最新mainのidentity/queue/jobsとfallback ledger、Library pendingを再確認した結果、既収録のHyMCacheとITMEを除外し3候補を投入した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2607.18141", "arXiv:2606.12556"],
+    "next_axis_hint": "次はCXL/階層メモリを離れ、分離サービングのネットワークflow scheduling・prefill deflection・専用interconnectへ移る",
+    "empty_round_reason": null
+  }
+}
