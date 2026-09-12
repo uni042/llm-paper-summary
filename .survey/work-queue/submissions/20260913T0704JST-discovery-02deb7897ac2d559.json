@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-02deb7897ac2d559",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:00:13+09:00",
+    "round": "specialist-kv-moe-memory-revalidation-1",
+    "axis": "KVページ制御・MoEメモリ分離・復元系の再探索",
+    "query_summary": "KVページ制御、冷間MoEの重み/KV分離、KV復元、非一様KV、MoE専門家先読みを軽量評価し、決定論的research job IDと既存正本を照合した。PersistentKV、CrossPool、CacheFlow、Tangram、SPICEはいずれも既収録または既存jobであることを確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arxiv:2606.26666",
+      "arxiv:2606.24506",
+      "arxiv:2604.25080",
+      "arxiv:2606.06302",
+      "arxiv:2608.21240"
+    ],
+    "next_axis_hint": "2609新着・recent revisionを再確認し、その後forward citationと隣接OS/GPU runtime軸へ移る",
+    "empty_round_reason": "この軸で強い候補として評価した5本はすべて既収録または既存research jobと一致した。"
+  }
+}
