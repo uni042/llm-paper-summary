@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:00:49+00:00",
+  "updated_at": "2026-09-12T17:02:47+00:00",
   "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-cxl-shared-memory-2",
+  "last_round": "specialist-disaggregated-network-slo-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1335,6 +1335,21 @@
       ],
       "next_axis_hint": "次はCXL/階層メモリを離れ、分離サービングのネットワークflow scheduling・prefill deflection・専用interconnectへ移る",
       "source_submission": "work-queue/submissions/20260913T0201JST-discovery-3b02629fd6ced942.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-disaggregated-network-slo-3",
+      "axis": "分離サービングのnetwork flow・prefill迂回・専用interconnect",
+      "query_summary": "CXL共有メモリroundの後、prefill/decode分離に伴うネットワーク競合と負荷非対称へ軸を変更した。一次arXiv metadata/abstractで軽量評価し、最新mainのqueueとcanonical ID検索で3件とも未収録・未jobであることを投入直前に再確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はnetwork/disaggregationを離れ、2026年9月新着のNVMe外部KV cache・PIM runtime・page-aware decode schedulingへ移る",
+      "source_submission": "work-queue/submissions/20260913T0203JST-discovery-e847b9b136f87890.json"
     }
   ],
   "axes": {
@@ -2107,6 +2122,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.4,
       "next_axis_hint": "次はCXL/階層メモリを離れ、分離サービングのネットワークflow scheduling・prefill deflection・専用interconnectへ移る"
+    },
+    "分離サービングのnetwork flow・prefill迂回・専用interconnect": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はnetwork/disaggregationを離れ、2026年9月新着のNVMe外部KV cache・PIM runtime・page-aware decode schedulingへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:01:55.565600+00:00",
+  "updated_at": "2026-09-12T17:03:55.399961+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T17:01:55.565600+00:00",
+      "last_recorded_at": "2026-09-12T17:03:55.399961+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 11,
+        "discovery_completed": 12,
         "blocked": 0,
-        "new_jobs": 32,
+        "new_jobs": 34,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12404,6 +12404,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34707030205:1",
+          "recorded_at": "2026-09-12T17:03:55.399961+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34707030205",
+            "run_attempt": "1",
+            "source_sha": "37acbfffb17abeb5386bc0756c6b4c48a525f785"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12489,6 +12503,14 @@
         },
         {
           "job_id": "job-3b02629fd6ced942",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e847b9b136f87890",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12720,6 +12742,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-2ffa05ee82127e80",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-283313401d33cc78",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.01617",
+          "title": "3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving"
         }
       ],
       "new_paper_ids": [],
@@ -12734,7 +12770,8 @@
         ".survey/work-queue/results/20260913T0147JST-discovery-1cf1e2dacbb5ac28.json",
         ".survey/work-queue/results/20260913T0149JST-discovery-513b50afdb428d0f.json",
         ".survey/work-queue/results/20260913T0159JST-discovery-fef140cd0cd0ddc9.json",
-        ".survey/work-queue/results/20260913T0201JST-discovery-3b02629fd6ced942.json"
+        ".survey/work-queue/results/20260913T0201JST-discovery-3b02629fd6ced942.json",
+        ".survey/work-queue/results/20260913T0203JST-discovery-e847b9b136f87890.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
