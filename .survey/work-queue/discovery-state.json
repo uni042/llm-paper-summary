@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:20:22+00:00",
-  "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-heterogeneous-workflow-cluster-11",
+  "updated_at": "2026-09-12T17:31:27+00:00",
+  "last_run_key": "2026-09-13T02:29:24+09:00",
+  "last_round": "specialist-kv-compression-temporal-revisit-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1475,6 +1475,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はheterogeneous workflowを離れ、speculative decoding servingのmulti-tenant remote drafter・async disaggregation・edge-cloud verificationへ移る",
       "source_submission": "work-queue/submissions/20260913T0220JST-discovery-0e120e1d91c12e9d.json"
+    },
+    {
+      "run_key": "2026-09-13T02:29:24+09:00",
+      "round": "specialist-kv-compression-temporal-revisit-1",
+      "axis": "新着KV圧縮・時間集約・長推論再参照",
+      "query_summary": "2026年9月新着を中心にKV cache compression、decode-time eviction、long-reasoning revisit patternを検索し、abstract・書誌情報・一次資料リンクを軽量評価した。最新mainのidentity/queueとrepository code searchでcanonical IDとタイトルを再確認し、未収録と判断した2件だけを送信した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次は9月新着のMoE expert placement/cache/prefetchまたは異種GPU・CXL/NVMe階層メモリへ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T0230JST-discovery-specialist-kv-compression.json"
     }
   ],
   "axes": {
@@ -2337,6 +2352,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はheterogeneous workflowを離れ、speculative decoding servingのmulti-tenant remote drafter・async disaggregation・edge-cloud verificationへ移る"
+    },
+    "新着KV圧縮・時間集約・長推論再参照": {
+      "last_run_key": "2026-09-13T02:29:24+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次は9月新着のMoE expert placement/cache/prefetchまたは異種GPU・CXL/NVMe階層メモリへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
