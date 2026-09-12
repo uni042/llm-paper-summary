@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-5cd36eaf5a789dc2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2605.08151-spectre-hybrid-ordinary-parallel-speculative-serving.md",
+      "priority": 93,
+      "reason": "マルチモデル型クラウドで利用率の低い小型モデル群を、混雑した大型モデルの遠隔ドラフト生成器として再利用する投機的生成サービング方式。ドラフト生成と大型モデル側検証を並列化し、スループット解析から通常型と並列型を切り替える閾値、投機要求を優先するスケジューリング、ドラフト側プロンプト圧縮を組み合わせる。SGLang実装でQwen3-235B-A22Bを含む構成において自己回帰生成比最大2.28倍、強い投機的生成比較対象比で最大66%の追加改善を報告しており、投機的生成を単一モデル内の最適化ではなく複数サービス間の余剰計算資源再利用として扱う点が強い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17435",
+      "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
+      "source_url": "https://arxiv.org/abs/2603.17435",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2603.17435-zipserv-hardware-aware-lossless-compression.md",
+      "priority": 89,
+      "reason": "量子化のように精度を変えず、重みをビット完全に復元できる損失なし圧縮でGPUメモリ容量と帯域を同時に節約するサービング方式。可変長符号がGPUのSIMT並列性を壊す問題を避ける固定長の三重ビットマップ符号化と、圧縮重みをレジスタへ直接展開しながら行列積を行う融合カーネルを設計する。モデル容量を最大30%削減し、カーネル単体でcuBLAS比最大2.21倍、vLLM比のエンドツーエンド推論で平均1.22倍の高速化を報告しており、ストレージ・メモリ帯域とGPUカーネルを横断した明確なシステム貢献がある。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2604.25080-cacheflow-3d-parallel-kv-cache-restoration.md",
+      "priority": 88,
+      "reason": "長文脈サービングで退避済みKVを戻す際、単純な再計算か入出力の二択にせず、トークン・層・GPUの3方向へ再計算と転送を分割して重ねるKV復元システム。複数要求が同時に資源を奪い合う状況を含め、追加計算を最も多く減らせる処理を優先するバッチ対応二ポインタスケジューラで計算資源と入出力資源を共同配分する。多様なモデル・負荷・ハードウェアで既存方式比TTFTを10〜62%短縮と報告しており、SSD/CPU退避と再計算を統一的に扱う既存系統との比較価値が高い。"
+    }
+  ]
+}
