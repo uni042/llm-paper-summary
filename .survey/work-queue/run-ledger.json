@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T08:39:37.871506+00:00",
+  "updated_at": "2026-09-12T08:42:06.586886+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,7 +9274,7 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T08:39:37.871506+00:00",
+      "last_recorded_at": "2026-09-12T08:42:06.586886+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9283,9 +9283,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 3,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -9318,6 +9318,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34683904173:1",
+          "recorded_at": "2026-09-12T08:42:06.586886+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34683904173",
+            "run_attempt": "1",
+            "source_sha": "c6b0fc24373cf00e24dae74c44f0bfea194d45de"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9326,6 +9340,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.14516",
           "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3e83c3cb3a02a998",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -9337,18 +9359,33 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-78cb3cedb3b71cf6",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-3ae94af47a718bbb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.13223",
+          "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure"
         }
       ],
       "new_paper_ids": [
         "arXiv:2602.14516"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json"
+        ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
+        ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
       "paper_active_count_after": 337,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

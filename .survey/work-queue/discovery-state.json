@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T07:58:16+00:00",
-  "last_run_key": "2026-09-12T16:30:00+09:00",
-  "last_round": "paper-worker-multiround-heterogeneous-memory-1",
+  "updated_at": "2026-09-12T08:41:28+00:00",
+  "last_run_key": "2026-09-12T17:30:00+09:00",
+  "last_round": "paper-worker-memory-serving-refill-1-retry",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -348,6 +348,25 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "今回候補の採用結果を確認後、multi-round/agentic servingの引用・被引用、またはGPU以外のメモリ処理アクセラレータへ展開する",
       "source_submission": "work-queue/submissions/20260912T1658JST-discovery-job-d5dc1f38c992d14e.json"
+    },
+    {
+      "run_key": "2026-09-12T17:30:00+09:00",
+      "round": "paper-worker-memory-serving-refill-1-retry",
+      "axis": "KV復元・計算効率指向キャッシュ・分離サービング再均衡",
+      "query_summary": "候補在庫がcritical水位のため、直近の高重複CXL/既収録SSD候補を避け、KV復元の並列化、GPUカーネル実行時間を考慮した損失なしKV管理、分離サービングの動的再均衡へ探索軸を変更した。arXiv IDと題名で最新mainを投入直前に再確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2606.16135",
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "今回採用したKV復元・計算効率キャッシュ・動的再均衡を精読後、MoE expert I/O schedulingまたは異種メモリ上の復元スケジューリングへ展開する",
+      "source_submission": "work-queue/submissions/20260912T1741JST-discovery-memory-serving-refill-retry.json"
     }
   ],
   "axes": {
@@ -540,6 +559,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "今回候補の採用結果を確認後、multi-round/agentic servingの引用・被引用、またはGPU以外のメモリ処理アクセラレータへ展開する"
+    },
+    "KV復元・計算効率指向キャッシュ・分離サービング再均衡": {
+      "last_run_key": "2026-09-12T17:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "今回採用したKV復元・計算効率キャッシュ・動的再均衡を精読後、MoE expert I/O schedulingまたは異種メモリ上の復元スケジューリングへ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
