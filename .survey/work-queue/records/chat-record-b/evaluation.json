@@ -2,38 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2607.10186-20260913-0030-v10-b",
-  "job_id": "job-research-176f6ec6b8273a5c",
+  "attempt_id": "attempt-2608.01657-20260913-0057-v10-b",
+  "job_id": "job-research-2c474caec39ae70d",
   "data": {
-    "hardware": [
-      "基準はDGX-H200相当の8基H200。各GPUは141GB HBM3e、4.8TB/sメモリ帯域、同一NVLink領域内で900GB/s接続。",
-      "HBFは実機ではなくモデル化。1スタックは8フラッシュダイ+1ベースダイ、各ダイ96プレーン、SLC、192GB容量、768GB/s読出し帯域、32MB総SRAM、tR=4マイクロ秒、tProg=75マイクロ秒。",
-      "CSIは各GPUの6 HBM3eスタックを維持し6 HBFスタックを追加。CLIは5 HBMスタックを5 HBFへ置換し1 HBM+5 HBFとする。4GPU、8GPU、16GPU規模も比較する。"
+    "hardware": "既定環境はNVIDIA L4、可搬性確認はNVIDIA A100。モデルはQwen2.5-1.5B-Instructを中心に、A100ではQwen2.5-7B-Instructも使う。",
+    "software": "vLLM 0.10.2のV1接頭辞キャッシュへPrefixShieldを組み込み、自動接頭辞キャッシュを有効化する。比較対象はvLLMのLRU、再利用価値に基づくS3-FIFO、利用者ごとの固定分割であるStaticQuota。",
+    "methodology": "既定では設定512 KVブロック中511ブロックが利用可能で、1ブロック16トークン、共有接頭辞1536トークン、名目負荷60%とする。攻撃系は一度だけ使う新規接頭辞の連続投入、低速回転投入、二回再実行する投入の三種類。良性系はShareGPTとバースト化ShareGPT、共有性確認では一方の利用者を休止させる。比較は同一要求列を与える10組の対応実験で行い、要求ごとのキャッシュヒット率と先頭トークンまでの遅延95パーセンタイルを測る。差分には必要に応じて95%ブートストラップ信頼区間を示す。",
+    "scope": "実機上のvLLM試作評価であり、シミュレーションのみではない。ただし主評価は制御された有限トレースと人工的に上限を設けたKVブロック数で行う。複数利用者間の内容共有は無効化し、各会計グループは別名前空間を使いながら同じ物理ブロック領域を競合する。したがって、内容重複を跨いだ複数主体所有権は評価範囲外である。",
+    "workloads": [
+      "一度だけ使う新規接頭辞を連続投入する汚染",
+      "新規接頭辞を時間的に分散させる低速回転",
+      "投入済み接頭辞を再実行して再利用価値を装う二回再実行",
+      "ShareGPT会話トレース",
+      "短時間へ到着を集中させたShareGPT",
+      "一方が休止したときの空き容量借用"
     ],
-    "software": [
-      "LLMCompass上にイベント駆動NANDシミュレータを追加し、メガプレーン単位のアクセスとFlash/SRAMメモリ遅延をモデル化する。",
-      "LLMCompassの行列演算tile探索とScaleSimによる計算遅延推定を利用する。",
-      "FlashAccel側のシステム設計としてNandMmap、GroupMmap/GroupWrite、SramPrefetch/SramRelease、FTLレスオブジェクト管理を評価モデルへ組み込む。"
-    ],
-    "model": ["Qwen3-235B", "Qwen3-Coder-480B", "LLaMA3.1-405B", "DeepSeek-V3-671B"],
-    "datasets": [
-      "LongProc由来の長文条件: 平均入力8.11K、出力2.53Kトークン。",
-      "AgentTaxo由来のエージェント条件: 平均入力15K、出力6Kトークン。",
-      "複数ターンKV再利用評価ではpi-mono由来のinteraction traceを利用。"
-    ],
-    "baselines": ["8×H200 HBM-only DGX-H200", "16×H200", "最適化なしPlain HBF", "prefetch無効FlashAccel", "weight-layout無効FlashAccel", "KV-layout無効FlashAccel"],
-    "correctness": "同一のモデル重みとKVキャッシュをHBM/HBF/SRAM間で移して読み出すアーキテクチャ評価であり、量子化・KV削減等の近似をFlashAccel固有には導入しない。DeepSeek-V3の重みだけは元モデル条件に合わせFP8、その他はFP16。したがって性能差は容量、帯域、配置、先読み、並列度の差として評価する。",
-    "settings": [
-      {"name":"モデルと並列方式","description":"Qwen3-235BとQwen3-Coder-480BはGQA+データ並列とMoE expert並列、LLaMA3.1-405BはGQA+テンソル並列のdense FFN、DeepSeek-V3-671BはMLA+データ並列とMoE expert並列を使う。"},
-      {"name":"デコードSLO","description":"50ms（約20 tokens/s/user）と100ms（約10 tokens/s/user）の2条件。各構成でメモリ容量とSLOの両方を満たす最大バッチを選び、GPU当たりthroughputを比較する。"},
-      {"name":"HBF構成","description":"CSIは6 HBFスタック追加でHBF読出し帯域約4.6TB/s、CLIは5 HBF+1 HBMでCSIよりHBF帯域が16.7%低い。各HBFスタックはHBM3e級768GB/s、192GB容量を想定する。"},
-      {"name":"シミュレーション","description":"LLMCompass+ScaleSimを基盤にGPU演算とメモリアクセスを推定し、XL-Flash由来の4マイクロ秒read/75マイクロ秒programをNANDモデルへ入れる。実HBFシリコンでの実測ではない。"},
-      {"name":"アブレーション","description":"Qwen3-235B、batch 256で、完全FlashAccel、Plain HBF、prefetch/weight-layout/KV-layoutを各1つ無効化した構成の遅延と100ms SLO throughputを比較する。"},
-      {"name":"書込み・耐久性","description":"SLC 100K P/Eを基準に短いretentionで10倍の1M P/Eへ伸ばせる保守的仮定を置き、decode+prefillでGPU当たり最大988MB/sのKV書込みと5年間TBWを評価する。"},
-      {"name":"KV再利用","description":"複数ターントレースでHBM/HBF構成のKV hit rateと再計算token数を比較し、大容量化によるprefill側の効果も確認する。"},
-      {"name":"エネルギー・面積","description":"Hybrid-bonding Flashの8pJ/bitとHBM3eの2.99pJ/bitを使用し、TDP、tokens/J、HBF die areaと密度を推定する。"}
-    ],
-    "methodology": "実機H200の公表仕様と既存Flash prototypeのtiming/energy/area値を入力にしたアーキテクチャ・システムシミュレーションである。モデルごとの演算形状、注意方式、FFN方式、並列方式、KV bytes/tokenを入れ、各デコードSLO下で許容される最大バッチを求めてGPU当たりthroughputを比較する。さらに機構別アブレーション、KV書込み耐久性、multi-turn KV reuse、エネルギーと面積を別々に分析し、HBF容量だけでなくアクセス効率と運用可能性まで検証する。",
-    "scope": "主要結果はシミュレーションであり、HBFを搭載した実GPU prototype上の測定ではない。対象はHBM容量が大規模重み・長文KVで律速となるデータセンタ級推論で、低遅延50ms SLOではHBF帯域不足やGPU台数削減が不利になる条件も含む。"
+    "baselines": ["LRU", "S3-FIFO", "StaticQuota"],
+    "policy_configuration": "契約別補充率は重要64、標準40、ベストエフォート16ブロック毎秒、バースト容量はそれぞれ256、192、128ブロック。主実験ではワークロードごとに再調整しない。"
   }
 }
