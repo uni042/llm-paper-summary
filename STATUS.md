@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,34 +28,34 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **11** |
-| 新規job | **29** |
+| Discovery完了 | **12** |
+| 新規job | **30** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-cxl-ssd-kv-saturation-6**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefix-chunked-prefill-7**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | CXL・SSD・remote KV cache階層メモリ |
+| 探索軸 | chunked prefill・prefix-aware batchingの基礎欠落 |
 | 評価候補 | **4** |
-| 重複除外 | **4** |
-| Novel候補 | **0** |
+| 重複除外 | **3** |
+| Novel候補 | **1** |
 | Research候補採用 | **0** |
-| 重複率 | **100.0%** |
+| 重複率 | **75.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **94** |
-| 探索評価候補 | **450** |
-| 重複除外 | **146** |
-| 重複率 | **32.4%** |
-| Novel候補 | **304** |
+| 探索round（stats観測） | **95** |
+| 探索評価候補 | **454** |
+| 重複除外 | **149** |
+| 重複率 | **32.8%** |
+| Novel候補 | **305** |
 | Research候補採用 | **162** |
 | Research完了 | **57** |
 | Repo収録 | **57** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-cxl-ssd-kv-saturation-6
 
 ### 24時間ファネル
 
-**探索評価 450 → 重複除外後 304 → Research候補採用 162 → Research完了 57 → Repo収録 57**
+**探索評価 454 → 重複除外後 305 → Research候補採用 162 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -128,6 +128,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-cxl-ssd-kv-saturation-6
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | agentic workload・program/session-aware serving | 4 | 1 | 3 | 25.0% | 75.0% |
 | attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
+| chunked prefill・prefix-aware batchingの基礎欠落 | 4 | 3 | 0 | 75.0% | 0.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | fault-tolerant distributed serving・KV recovery・GPU failure | 4 | 4 | 0 | 100.0% | 0.0% |
 | multi-LoRA・推論/微調整co-serving・cross-model KV reuse | 4 | 1 | 2 | 25.0% | 50.0% |
@@ -168,11 +169,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-cxl-ssd-kv-saturation-6
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — chunked prefill・prefix-aware batchingの基礎欠落: 評価 4 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — CXL・SSD・remote KV cache階層メモリ: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — MoE通信・runtime parallelism・online expert placement: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — agentic workload・program/session-aware serving: 評価 4 / 重複 1 / 採用 3
 - **2026-09-13T04:00:16+09:00** — GPU kernel生成・runtime最適化の隣接系: 評価 3 / 重複 0 / 採用 3
-- **2026-09-13T04:00:16+09:00** — 分離サービングprefill制御・chunked prefill scheduling: 評価 7 / 重複 4 / 採用 2
 
 ## 最近処理した論文
 
