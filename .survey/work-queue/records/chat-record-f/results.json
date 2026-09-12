@@ -2,77 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2501.01005-20260913-0118-v10-f",
-  "job_id": "job-research-3cc1bbfc1c0813e6",
+  "attempt_id": "attempt-2606.07665-20260913-0430-v10-f",
+  "job_id": "job-research-2e6a6ec3181fc516",
   "data": {
-    "overview": "FlashInferの改善幅は、注意計算そのものが支配的で、かつ系列長・KV配置の不均一性が従来カーネルを遊ばせる条件で大きい。SGLangのサービング評価ではコンパイラ生成バックエンドに対してトークン間遅延を29〜69%短縮し、StreamingLLMではRoPEなどを融合した派生注意により28〜30%短縮した。並列生成では共有接頭辞を物理移動せず合成可能な形式で再利用し、n=4で8Bのトークン間遅延を13.73%、70Bを17.42%短縮する。負荷均衡の切り分けでは、とくに4K〜16Kの長短混在系列でスケジューラを外すとITLが8.63 msから13.89 msへ悪化し、単なる高速カーネルだけでなく実行時割当が重要であることを示す。一方、vLLMの通常BF16ではPythonホスト費用が残り、既定実装と同程度か小幅悪化する条件もある。",
+    "overview": "AgentCompileは、復号経路のフレームワーク呼出し、動的KV管理、小カーネル起動を削減し、さらに契約付きで生成した融合カーネルを実測採用することで、単一要求ではPyTorch逐次実行を平均2.23〜6.98倍、vLLMを平均1.07〜1.16倍上回る。Qwen3-4Bの切り分けでは、専用線形層・行列ベクトル積・静的KVだけで1.58倍、KV高速経路・融合QKV・CUDAグラフ追加でさらに2.32倍、大規模言語モデル支援層でさらに1.34倍となり、全体では4.95倍になる。複数要求でもvLLMに対して全実行可能条件で高速で、長い生成やKV容量圧力が高い条件ほど差が広がる。一方、生成カーネル自体が既存専門実装を必ず超えるわけではなく、ページ化復号注意はFlashAttentionの0.955〜0.975倍程度で、性能検査により既存経路へ戻される場合がある。",
     "key_results": [
-      {
-        "metric": "LLMサービングのトークン間遅延削減",
-        "value": "29〜69%削減",
-        "baseline": "コンパイラ生成注意バックエンド",
-        "condition": "SGLang 0.3.4、Llama 3.1 8B/70B、ShareGPTおよび合成要求、H100",
-        "interpretation": "系列長に応じたタイル選択とCTA負荷均衡を組み合わせることで、一般コンパイラ経路より注意処理の待ちを短縮する。"
-      },
-      {
-        "metric": "StreamingLLM長文推論のトークン間遅延",
-        "value": "28〜30%削減、実効帯域利用率1.6〜3.7倍",
-        "baseline": "既存StreamingLLM注意実装",
-        "condition": "Vicuna-13B、MT-Bench、RoPE等を注意カーネルへ融合",
-        "interpretation": "モデル固有変換を別GPUカーネルとして往復せず、実行時コンパイルで注意内部へ融合する効果を示す。"
-      },
-      {
-        "metric": "並列生成n=4のトークン間遅延",
-        "value": "8Bで13.73%削減、70Bで17.42%削減",
-        "baseline": "MLC-Engine既存注意",
-        "condition": "Llama 3.1 8B/70B、ShareGPT、要求率16、各プロンプトから4系列生成",
-        "interpretation": "共有接頭辞を大きなブロックとして複数系列間で読み回し、固有接尾辞と注意状態を合成することでKV帯域を節約する。"
-      },
-      {
-        "metric": "並列生成n=4のTTFT",
-        "value": "8Bで16.41%削減、70Bで22.86%削減",
-        "baseline": "MLC-Engine既存注意",
-        "condition": "Llama 3.1 8B/70B、ShareGPT、n=4",
-        "interpretation": "共有接頭辞を複数出力で再利用し、同じKV読出しを減らすことで生成開始も速くする。"
-      },
-      {
-        "metric": "長短混在4K〜16K条件の負荷均衡切り分けITL",
-        "value": "FlashInfer 8.63 ms、負荷均衡なし13.89 ms、Triton 11.08 ms",
-        "baseline": "負荷均衡なしFlashInferおよびTriton",
-        "condition": "Llama 3.1 8B、H100、SGLang、KV長一様4096〜16384、要求率1",
-        "interpretation": "系列長のばらつきが大きいと最長要求がCTAを占有するため、実行時計画による作業分割と均等化の寄与が非常に大きい。"
-      },
-      {
-        "metric": "長短混在4K〜16K条件のTTFT",
-        "value": "FlashInfer 411.02 ms、負荷均衡なし421.60 ms、Triton 566.30 ms",
-        "baseline": "負荷均衡なしFlashInferおよびTriton",
-        "condition": "Llama 3.1 8B、H100、SGLang、KV長一様4096〜16384",
-        "interpretation": "TTFTでもカーネル効率と動的計画の組合せが一般バックエンドより有利である。"
-      },
-      {
-        "metric": "vLLM FP8 KV統合のITL",
-        "value": "10.92 ms vs既定12.56 ms、約13%低減",
-        "baseline": "vLLM default e4m3 KV attention",
-        "condition": "Llama 3.1 8B相当、vLLM統合評価",
-        "interpretation": "低精度KVを高性能テンプレートへ載せる条件ではエンドツーエンドでも明確な改善が出る。"
-      },
-      {
-        "metric": "vLLM BF16統合のITL",
-        "value": "FlashInfer 10.63 ms、既定10.42 ms",
-        "baseline": "vLLM default BF16 attention",
-        "condition": "vLLM統合評価",
-        "interpretation": "注意カーネルが十分速い通常BF16条件ではPythonホスト側の追加費用が残り、単純置換だけでは小幅に悪化する境界を示す。"
-      },
-      {
-        "metric": "Quest型16トークン細粒度疎注意",
-        "value": "長系列でPyTorch SDPA/FlexAttention比最大20倍",
-        "baseline": "PyTorch SDPAおよびFlexAttention",
-        "condition": "Query-aware sparse KV、細粒度16トークンブロック、長文条件",
-        "interpretation": "不連続なKV収集とTensor Core向け密タイル計算を分離したブロック疎テンプレートが細粒度疎性で有効になる。"
-      }
+      {"metric":"単一要求のPyTorch逐次実行比","value":"平均2.23〜6.98倍高速化","baseline":"PyTorch逐次実行","condition":"六モデル系統、BF16、A800、複数の入力・出力長","interpretation":"Python呼出し、動的キャッシュ、小カーネル起動をまとめて削減する効果が大きく、とくにQwen3-VL-2Bの文章側では平均6.98倍となる。"},
+      {"metric":"単一要求のvLLM比","value":"平均1.07〜1.16倍高速化","baseline":"vLLM","condition":"Qwen3-4B、Llama-3.2-3B、Falcon3-7B、Mistral-7B、Qwen3-VL-2B","interpretation":"既に実用的なKV管理とスケジューリングを持つvLLMに対しても、カーネル融合と全ステップCUDAグラフの追加利得が残る。"},
+      {"metric":"複数要求の一様条件","value":"平均1.04〜1.12倍、個別条件で最大1.34倍","baseline":"vLLM","condition":"同一長の要求群を継続バッチ処理","interpretation":"長い出力では全ステップCUDAグラフを何度も再利用できるため、ホスト側の一段ごとの処理費用をより多く償却できる。"},
+      {"metric":"長短混在・KV圧力条件","value":"平均1.04〜1.08倍、個別条件で最大1.18倍","baseline":"vLLM","condition":"要求長を混在させ、KVプールを約3倍超過させる条件を含む","interpretation":"積極的な要求受入れとKV退避を組み合わせ、極端な長文でもGPUを遊ばせにくくする。"},
+      {"metric":"Qwen3-4Bの段階的切り分け","value":"1.58倍 → 追加2.32倍 → 追加1.34倍、最終4.95倍","baseline":"PyTorch逐次実行 + FlashAttention","condition":"単一要求、複数の入力・出力長","interpretation":"最大の一段はKV高速経路・融合QKV・CUDAグラフで、大規模言語モデル生成だけが全高速化を説明するわけではない。生成支援層もその上へ有意な追加利得を積む。"},
+      {"metric":"生成MLP融合カーネル","value":"最大1.12倍","baseline":"cuBLAS等の既存経路","condition":"Qwen3-4Bのゲート・上向き投影とSiLU、単一トークン復号","interpretation":"既存ライブラリが強い行列計算でも、周辺活性化まで融合すると小さいが実測可能な利得が出る。"},
+      {"metric":"生成ページ化復号注意","value":"FlashAttentionの0.955〜0.975倍程度、一部構成では0.45倍","baseline":"FlashAttention","condition":"複数モデルのページ化KV復号注意","interpretation":"大規模言語モデルが生成したカーネルが常に専門実装を超えるわけではないことを示す。性能ゲートがあるため、負ける候補は本番経路へ採用されない。"},
+      {"metric":"単体RoPE融合カーネル","value":"最大4.27倍","baseline":"複数フレームワーク演算からなる既存経路","condition":"Qwen3-4B","interpretation":"比較対象が高性能単一カーネルではなく複数演算の連鎖である場合、融合による中間書込みと起動削減が大きく効く。"}
     ],
-    "negative_results": "vLLMの通常BF16統合では処理量6065.41対既定6062.89でほぼ同等だが、ITLは10.63対10.42 ms、TTFTは36.60対35.85 msと小幅悪化し、Pythonホスト側の計画・呼出し費用が残る。並列生成では共有系列数が小さいと共通接頭辞を大きなブロックとして扱う利得が小さく、逆に系列数が非常に多いと注意以外の処理が律速して全体改善率が飽和する。HopperのTMAは疎インデックスによる非アフィン読出しへ直接使えないため、細粒度疎注意ではAmpere型非同期コピーに依存する。",
-    "interpretation": "FlashInferは一つの固定カーネルのピーク性能より、配置・注意派生形・系列長分布が変わるサービング環境で高い実効利用率を維持することに価値がある。共有接頭辞ではKV再利用、長短混在では負荷均衡、独自注意では融合という異なる機構が支配的になるため、改善幅もワークロードごとに変わる。エンドツーエンドで注意が非支配的になる条件ではカーネル高速化の上限も小さくなる。",
-    "quality_impact": "基本のFlashInfer注意は厳密な注意状態合成を使い、生成品質を近似しない。FP8 KVやQuestなどを統合する場合の品質変化は、その低精度・疎化手法の設定に由来する。"
+    "negative_results": "生成カーネルはすべてが採用されるわけではない。ページ化復号注意は多くのモデルでFlashAttentionより数%遅く、GLM-4の特定のグループ化クエリ構成では0.45倍まで落ちるため既存実装へ戻される。非常に長い出力ではKVキャッシュ読み出しが支配的になり、フレームワーク呼出しや融合を減らす相対効果が小さくなる。論文の『遅くならない』性質も形式証明ではなく、測定雑音を許す1.04倍以内の経験的な採用規則とフォールバックによる。",
+    "interpretation": "性能向上は大規模言語モデル生成だけの効果ではない。まずコンパイラと実行基盤が動的なPython処理、KV更新、起動回数を減らし、その上でモデル固有の復号融合を生成AIが追加する。生成物を無条件に使わず既存実装と競争させるため、生成AIが得意な探索範囲だけを利用できる。vLLMとの差がPyTorch逐次実行との差より小さいのは、vLLMが既にサービング管理を強く最適化しており、AgentCompileの追加価値が主としてカーネル側に残るためである。",
+    "quality_impact": "モデル重みやKVを量子化・枝刈りする近似方式ではない。候補は基準実装との数値比較を通過し、未対応または不合格なら元の実装へ戻る。ただし数値検証は有限の入力と許容差に基づく経験的検査で、形式的な意味同値証明ではない。"
   }
 }
