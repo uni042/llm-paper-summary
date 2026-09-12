@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f88892c48010420d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11133",
+      "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11133",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-model-calibrated-power-control-for-disaggregated-llm-serving.md",
+      "priority": 95,
+      "reason": "分離型LLMサービングでプリフィルとデコードを同じ電力制御へ押し込むと、演算律速と帯域律速という逆の特性を同一設定で扱うことになり、エネルギー効率と遅延目標の両立が難しい問題を扱う。B200実機でNVIDIA Max-Qはトークン当たりエネルギーを改善する一方、平均エンドツーエンド遅延も増やすことを確認し、提案方式はプリフィル側をSMクロック窓、デコード側を実測した性能崖の直上に置く電力上限として別々に校正する。8×B200・Qwen3-Coder-480B FP8のエージェント負荷では、バランス設定でトークン/Jを20.4%改善しながら平均遅延増加を3.5%に抑え、Max-Qの8.6%改善・5.2%遅延増加を上回る。Qwen3-235B-A22B NVFP4でも提案設定は全反復でITL-p99 SLOを満たし、3日間の持続試験ではレーン対の電力費を32.3%削減と報告する。最新のB200実運用寄り評価を伴う、省電力と分離サービングを直接接続した強い候補。"
+    }
+  ]
+}
