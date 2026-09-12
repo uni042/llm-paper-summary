@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f529894b26fb9501",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2506.21901",
+      "title": "A Survey of LLM Inference Systems",
+      "source_url": "https://arxiv.org/abs/2506.21901",
+      "paper_path": null,
+      "priority": 89,
+      "reason": "LLM推論システムを演算子・カーネル、バッチ処理・スケジューリング、ページ化メモリ・退避・量子化・永続キャッシュから、単一／複数レプリカ、分離推論、サーバレス構成まで一つのシステム枠組みで整理する包括的サーベイ。個別最適化の列挙ではなく、負荷予測・適応機構・コスト削減という共通設計原理で結び直しており、本リポジトリの多数の推論系統を横断参照する基準文献として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization",
+      "source_url": "https://arxiv.org/abs/2607.08057",
+      "paper_path": null,
+      "priority": 88,
+      "reason": "KVキャッシュ最適化をシステム挙動の観点から、実行・スケジューリング（時間軸）、配置・移動（空間軸）、表現・保持（構造軸）の3次元へ整理する2026年のサーベイ。圧縮、退避、階層配置、再利用、分離サービングを個別技法ではなく相互設計の関係として扱うため、KV・階層メモリ系統を横断する索引として直接有用。"
+    },
+    {
+      "canonical_id": "arXiv:2604.22906",
+      "title": "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+      "source_url": "https://arxiv.org/abs/2604.22906",
+      "paper_path": null,
+      "priority": 78,
+      "reason": "ネットワークエッジでのLLM推論を、システム構成、モデル最適化・配備、資源管理・スケジューリングの観点から整理するサーベイ。端末・エッジのメモリ／計算制約、分割実行、オフロード、動的資源配分を横断するため、ローカル・資源制約推論や階層オフロードの隣接領域を把握する補完的な参照文献として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:00:25+09:00",
+    "round": "specialist-survey-gap-4",
+    "axis": "推論システム横断サーベイ・KV・エッジ実行",
+    "query_summary": "個別手法探索から横断サーベイの収録漏れ確認へ軸を変更した。推論システム全般、system-aware KV cache、network-edge inferenceの3件はいずれも一次資料で対象範囲を確認し、最新HEADの決定論的research job IDとrepo識別子検索で未登録を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "MoE expert cache／offload、GPU runtime／kernel compilation、引用・関連実装の順に重複飽和を確認する",
+    "empty_round_reason": null
+  }
+}
