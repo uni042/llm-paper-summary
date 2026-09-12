@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-ad7e8d527bf159c7",
+  "type": "research",
+  "parent_job_id": "job-ef040c02e2978658",
+  "priority": 80,
+  "canonical_id": "arXiv:2608.05303",
+  "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+  "source_url": "https://arxiv.org/abs/2608.05303",
+  "paper_path": "papers/inference/02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md",
+  "selection_reason": "MoEと投機的デコードをエッジ機器で組み合わせたときに専門家外部メモリアクセスが増える問題を、プリフィル時のプロンプト単位専門家再利用とデコード時の深さ認識専門家統合で抑えるソフトウェア・ハードウェア協調方式。Samsung 28nm合成評価で先行方式比最大56.3%遅延削減、44.1%エネルギー削減を報告し、専門家選択と外部メモリ階層の接点として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T12:45:57+00:00",
+  "artifact_transport": "structured_record_v10"
+}

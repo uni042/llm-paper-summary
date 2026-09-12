@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 196,
+      "completed": 197,
       "ready": 1
     },
     "audit": {
@@ -11,7 +11,7 @@
       "completed": 165,
       "superseded": 44,
       "deferred": 3,
-      "ready": 10
+      "ready": 11
     }
   },
   "next_jobs": [
@@ -88,6 +88,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-ad7e8d527bf159c7",
+      "type": "research",
+      "lane": null,
+      "priority": 80,
+      "canonical_id": "arXiv:2608.05303",
+      "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.05303",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-23c1aef2e7b819be",
       "type": "research",
       "lane": null,
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-ad3541d28015a662",
-      "type": "research",
-      "lane": null,
-      "priority": 75,
-      "canonical_id": "arXiv:2609.11058",
-      "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
-      "source_url": "https://arxiv.org/abs/2609.11058",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11058-emmi-edge-multimodal-representation-compression.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-ef040c02e2978658",
+      "job_id": "job-080d4b5d49ec5db4",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T12:43:42+00:00"
+  "generated_at": "2026-09-12T12:46:23+00:00"
 }

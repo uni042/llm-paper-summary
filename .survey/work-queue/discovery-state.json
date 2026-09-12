@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T12:43:27+00:00",
+  "updated_at": "2026-09-12T12:45:57+00:00",
   "last_run_key": "2026-09-12T21:30:00+09:00",
-  "last_round": "normal-worker-critical-inventory-axis-rotation",
+  "last_round": "normal-worker-critical-inventory-expert-prefetch-rotation",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -596,6 +596,21 @@
       ],
       "next_axis_hint": "次回はKV中心語をいったん弱め、MoE expert placement/prefetch、GPU仮想メモリ、OS/DBMSの階層ストレージスケジューリング、CXL/NVMe協調へ回転する。",
       "source_submission": "work-queue/submissions/20260912T2130JST-discovery-815a11adca713d7e.json"
+    },
+    {
+      "run_key": "2026-09-12T21:30:00+09:00",
+      "round": "normal-worker-critical-inventory-expert-prefetch-rotation",
+      "axis": "moe-expert-prefetch-edge-external-memory",
+      "query_summary": "直前ラウンドが正本側で全重複になったため、KV中心探索を停止し、MoE専門家先読み、予測ミス回復、エッジ外部メモリアクセスへ軸を変更した。一次資料の題名・抄録・定量結果を軽量評価し、最新正本と探索履歴で識別子を再確認して3件を提出した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "採用率が高ければ専門家I/OスケジューリングとSSD/NVMe階層へ展開し、低ければGPU仮想メモリやOSページング系へ切り替える。",
+      "source_submission": "work-queue/submissions/20260912T2147JST-discovery-ef040c02e2978658.json"
     }
   ],
   "axes": {
@@ -918,6 +933,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.42857142857142855,
       "next_axis_hint": "次回はKV中心語をいったん弱め、MoE expert placement/prefetch、GPU仮想メモリ、OS/DBMSの階層ストレージスケジューリング、CXL/NVMe協調へ回転する。"
+    },
+    "moe-expert-prefetch-edge-external-memory": {
+      "last_run_key": "2026-09-12T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "採用率が高ければ専門家I/OスケジューリングとSSD/NVMe階層へ展開し、低ければGPU仮想メモリやOSページング系へ切り替える。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
