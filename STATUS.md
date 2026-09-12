@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **6 / 50** |
-| Research ready | **6** |
+| Candidate在庫（Research ready） | **8 / 50** |
+| Research ready | **8** |
 | Research blocked | **3** |
 | Research deferred | **3** |
 | Research completed（累計） | **150** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 6）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 8）。探索を最優先で継続。
 - Research blocked が **3件** 残っています。
 - Research消化が候補補充を上回っています。candidate枯渇に注意。
 
@@ -29,35 +29,35 @@ Run: **2026-09-12T17:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **13** |
+| Discovery完了 | **6** |
+| 新規job | **16** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-heterogeneous-runtime-2**
+Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-cxl-storage-3**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV |
-| 評価候補 | **5** |
-| 重複除外 | **0** |
+| 探索軸 | CXL共有メモリ・KV階層・near-memory processing |
+| 評価候補 | **7** |
+| 重複除外 | **2** |
 | Novel候補 | **5** |
-| Research候補採用 | **0** |
-| 重複率 | **0.0%** |
+| Research候補採用 | **2** |
+| 重複率 | **28.6%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **16** |
-| 探索round（stats観測） | **9** |
-| 探索評価候補 | **45** |
-| 重複除外 | **13** |
-| 重複率 | **28.9%** |
-| Novel候補 | **32** |
-| Research候補採用 | **14** |
+| 探索round（stats観測） | **10** |
+| 探索評価候補 | **52** |
+| 重複除外 | **15** |
+| 重複率 | **28.8%** |
+| Novel候補 | **37** |
+| Research候補採用 | **16** |
 | Research完了 | **34** |
 | Repo収録 | **33** |
 | Audit完了 | **0** |
@@ -66,13 +66,14 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-heterogeneous-runtime-2
 
 ### 24時間ファネル
 
-**探索評価 45 → 重複除外後 32 → Research候補採用 14 → Research完了 34 → Repo収録 33**
+**探索評価 52 → 重複除外後 37 → Research候補採用 16 → Research完了 34 → Repo収録 33**
 
 ## 探索効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
+| CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
@@ -84,11 +85,11 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-heterogeneous-runtime-2
 
 ### 直近5探索round
 
+- **2026-09-12T18:00:00+09:00** — CXL共有メモリ・KV階層・near-memory processing: 評価 7 / 重複 2 / 採用 2
 - **2026-09-12T18:00:00+09:00** — GPU runtime・SmartNIC・異種アクセラレータ・階層KV: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T18:00:00+09:00** — 新着edge/disaggregated serving・通信/電力制御: 評価 6 / 重複 0 / 採用 4
 - **2026-09-12T17:30:00+09:00** — マルチエージェント・ワークフロー指向prefix状態スケジューリング: 評価 5 / 重複 4 / 採用 1
 - **2026-09-12T17:30:00+09:00** — MoE専門家先読み・I/O階層・エッジ異種実行: 評価 10 / 重複 5 / 採用 1
-- **2026-09-12T17:30:00+09:00** — KV復元・計算効率指向キャッシュ・分離サービング再均衡: 評価 6 / 重複 3 / 採用 1
 
 ## 最近処理した論文
 
@@ -105,11 +106,11 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-heterogeneous-runtime-2
 
 ### 次に処理する候補
 
+- P90 `arXiv:2606.19746` — SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL
 - P86 `arXiv:2609.09166` — X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding
+- P86 `arXiv:2512.18194` — TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale
 - P84 `arXiv:2608.25523` — TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
-- P75 `arXiv:2609.11058` — EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression
 
 ## 7日比較
 
