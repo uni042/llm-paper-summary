@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-082ddf69424c0d77",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.29639",
+      "title": "RTP-LLM: High-Performance Alibaba LLM Inference Engine",
+      "source_url": "https://arxiv.org/abs/2605.29639",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.29639-rtp-llm-alibaba-inference-engine.md",
+      "priority": 91,
+      "reason": "Alibabaで1億超ユーザー向けに運用されたproduction inference engineで、file-order-driven model I/O、parallel I/O-communication overlap、prefill/decode分離、multi-tier KV cache、speculative decoding、adaptive KV quantizationを統合する。8B〜235Bのcontrolled/production評価でmodel loading 4.7〜6.3倍、production TTFT P95 35〜37%削減、cache reuse 215%改善などを報告し、推論基盤の総合的な実装資料として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.18431",
+      "title": "Beyond Prediction: Tail-Aware Scheduling for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.18431",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18431-tail-aware-prediction-free-scheduling.md",
+      "priority": 87,
+      "reason": "decode length予測に依存するSJF/SRPT系schedulerがdistribution shift・burst・GPU memory pressureでtail latencyを悪化させる問題を扱い、明示的長さ予測なしのsoft priority boostingとcache-aware preemptionを共同最適化する。production/open-source tracesでperfect-length SRPT比P99 TTLTを35〜50%削減、TTFTを34〜47%削減すると報告し、tail/SLO重視のscheduler設計として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2609.00857",
+      "title": "LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism",
+      "source_url": "https://arxiv.org/abs/2609.00857",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md",
+      "priority": 82,
+      "reason": "IMC/NMC/NoC内計算を統合したLEAP architectureで、static weights、dynamic data、partial-result reductionを別hardware layerへ割り当て、prefill/decodeごとにPE構成を動的再構成するhardware-software co-design。commercial GPU比throughput 1.52倍以上、energy efficiency 24.91倍と報告する。GPU servingそのものではないがmemory wallと通信律速への異種処理設計として新着価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2606.22327",
+      "title": "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+      "source_url": "https://arxiv.org/abs/2606.22327",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+      "priority": 79,
+      "reason": "KV cacheの時間変化する2次元memory footprintをvolumeとして扱うSmallest Volume Firstと1-bit variantを提案し、理論boundに加えてvLLMへplug-in実装してLlama-3.1で平均・tail latencyとthroughputを評価する。memory-constrained schedulingをtime-centric heuristicからspatio-temporal geometryへ拡張し、理論と実装を接続する点が有用。"
+    },
+    {
+      "canonical_id": "arXiv:2604.11001",
+      "title": "Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees",
+      "source_url": "https://arxiv.org/abs/2604.11001",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.11001-flow-controlled-scheduling-stability.md",
+      "priority": 75,
+      "reason": "prompt activation rateをflow controlし、FIFO admissionとLIFO evictionを組み合わせてKV memory overflow下の安定性を理論保証するscheduler。overflow probabilityがmemory slackに対して指数的に減衰する解析と、synthetic/real workloadでのthroughput・tail latency評価を持つ。実装中心の論文より優先度は低いが、serving queueのstability保証という差別化点がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T18:00:00+09:00",
+    "round": "specialist-scheduling-engine-4",
+    "axis": "production推論エンジン・tail/SLO scheduling・hardware-software co-design",
+    "query_summary": "CXL/storage軸から切り替え、production inference engine、予測不要tail-aware scheduler、memory-constrained online scheduling、flow-control stability、新着IMC-NoC hardware-software co-designを軽量評価した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "HPC/collective通信・MoE all-to-all・GPU間通信とservingの接点、または最新framework更新から研究論文へ逆引きする",
+    "empty_round_reason": null
+  }
+}
