@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-95ad016f315feba5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.06557",
+      "title": "Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving",
+      "source_url": "https://arxiv.org/abs/2608.06557",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-latency-budget-scheduling.md",
+      "priority": 92,
+      "reason": "要求ごとのSLOから予測残処理時間を引いたlatency budgetを共通信号として、request schedulingとKV memory hierarchy管理を共同制御する。非resident KVのrestore/prefetch、HBM保持、再計算を同じ予算で判断し、production traceでgoodput最大2.4倍・SLO violation 40%削減を報告しており、schedulerと階層メモリの統合設計として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20309-superinfer-slo-rotary-scheduling-duplexkv.md",
+      "priority": 88,
+      "reason": "GH200のNVLink-C2Cを前提に、KVメモリ逼迫時のhead-of-line blockingへproactive rotary schedulingとfull-duplex KV転送を組み合わせる。TTFT SLO達成率を最大74.7%改善しつつTBTとthroughputを維持しており、CPU-GPU密結合メモリとSLO-aware schedulingの協調設計として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2601.22996",
+      "title": "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.22996",
+      "paper_path": null,
+      "priority": 82,
+      "reason": "未知の生成長によりKV使用量が伸びる状況を、事前のjob size予測なしで扱うnon-clairvoyant KV schedulerを定式化し、定数competitive ratioを与えるGeometric Slicing Algorithmを提案する。実request traceでも評価しており、予測依存schedulerに対する理論的基準とmemory-aware scheduling設計の参照として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23658-elastic-kv-cache-vmm-reclamation.md",
+      "priority": 80,
+      "reason": "prefill用reserve memoryをdecode中だけKV poolへ貸し出し、CUDA Virtual Memory Managementで安全に回収するuserspace機構を実装した上で、chunked prefillが多くの場合ほぼ同じ余裕を得るという負の結果まで定量化する。再利用可能なVMM allocatorと、動的メモリ回収が効く条件・効かない条件の境界を示すため比較価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-slo-memory-4",
+    "axis": "SLO-aware scheduling・KV memory hierarchy・動的メモリ回収",
+    "query_summary": "通信/runtime軸の後、SLOとmemory pressureの協調制御へ移動。latency-budget型KV階層管理、GH200 rotary scheduling、未知生成長のnon-clairvoyant scheduling、CUDA VMMによるprefill reserve回収を一次資料抄録で軽量評価し、投入直前に最新HEADとcanonical IDで再dedupeした。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は今回までの強候補の関連・引用系と、mobile/edge・AI-RANなど異種配置でのKV移送を確認し、既存候補との重複が多ければ探索を収束判定する",
+    "empty_round_reason": null
+  }
+}
