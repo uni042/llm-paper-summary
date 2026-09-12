@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **64 / 50** |
-| Research ready | **64** |
+| Candidate在庫（Research ready） | **66 / 50** |
+| Research ready | **66** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **14** |
-| 新規job | **37** |
+| Discovery完了 | **15** |
+| 新規job | **40** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **65** |
-| 探索評価候補 | **302** |
-| 重複除外 | **93** |
-| 重複率 | **30.8%** |
-| Novel候補 | **209** |
-| Research候補採用 | **96** |
+| 探索round（stats観測） | **66** |
+| 探索評価候補 | **306** |
+| 重複除外 | **94** |
+| 重複率 | **30.7%** |
+| Novel候補 | **212** |
+| Research候補採用 | **98** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 302 → 重複除外後 209 → Research候補採用 96 → Research完了 47 → Repo収録 47**
+**探索評価 306 → 重複除外後 212 → Research候補採用 98 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -108,6 +108,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
+| multi-LoRA・推論/微調整co-serving・cross-model KV reuse | 4 | 1 | 2 | 25.0% | 50.0% |
 | multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
 | speculative decoding serving・composite multimodal serving | 4 | 0 | 3 | 0.0% | 75.0% |
@@ -139,11 +140,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — multi-LoRA・推論/微調整co-serving・cross-model KV reuse: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T01:55:54+09:00** — DistServe周辺のforward citation・backward reference補完: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — NVMe外部KV・PIM runtime・page-aware decode scheduling: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — 分離サービングのnetwork flow・prefill迂回・専用interconnect: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — CXL共有メモリ・ラック内KV転送・Superchip階層メモリ: 評価 5 / 重複 2 / 採用 0
-- **2026-09-13T01:55:54+09:00** — MoE動的並列切替・融合通信・serverless専門家配置: 評価 3 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
@@ -163,8 +164,8 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
+- P89 `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
 - P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
-- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 
 ## 7日比較
 
