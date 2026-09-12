@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:20:58+00:00",
+  "updated_at": "2026-09-12T19:23:38+00:00",
   "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-prefix-chunked-prefill-7",
+  "last_round": "specialist-speculative-serving-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1904,6 +1904,24 @@
       ],
       "next_axis_hint": "speculative decoding serving・通信圧縮・メモリ制約実行へ移る",
       "source_submission": "work-queue/submissions/20260913T0420JST-discovery-a86e6cabe6f79c37.json"
+    },
+    {
+      "run_key": "2026-09-13T04:00:16+09:00",
+      "round": "specialist-speculative-serving-8",
+      "axis": "投機的デコードのserving・pipeline・メモリ制約・性能モデル",
+      "query_summary": "Sarathi-Serve送信後のActions待ち中に投機的デコードsystemsを独立探索。SPECTREとSwiftSpecは既存jobを確認して除外し、SSD、Aurora、SpecMemo、SPIN、serving latency modelの5件は最新mainで決定論的research job IDが存在しないことを再確認した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.2857142857142857,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2605.08151",
+        "arxiv:2506.11309"
+      ],
+      "next_axis_hint": "2026年9月新着のserving systemsを再走査し、その後forward citation・関連実装から未収録候補を確認する",
+      "source_submission": "work-queue/submissions/20260913T0423JST-discovery-2d36b87fa9ca1a41.json"
     }
   ],
   "axes": {
@@ -3006,6 +3024,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "speculative decoding serving・通信圧縮・メモリ制約実行へ移る"
+    },
+    "投機的デコードのserving・pipeline・メモリ制約・性能モデル": {
+      "last_run_key": "2026-09-13T04:00:16+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.2857142857142857,
+      "next_axis_hint": "2026年9月新着のserving systemsを再走査し、その後forward citation・関連実装から未収録候補を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

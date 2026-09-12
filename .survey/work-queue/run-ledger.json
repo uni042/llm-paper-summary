@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T19:22:10.763596+00:00",
+  "updated_at": "2026-09-12T19:24:50.387943+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,7 +13949,7 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T19:22:10.763596+00:00",
+      "last_recorded_at": "2026-09-12T19:24:50.387943+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13958,9 +13958,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 12,
+        "discovery_completed": 13,
         "blocked": 0,
-        "new_jobs": 30,
+        "new_jobs": 35,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -14192,6 +14192,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34714016008:1",
+          "recorded_at": "2026-09-12T19:24:50.387943+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34714016008",
+            "run_attempt": "1",
+            "source_sha": "9c45b890742cb62b7b07ab009924ba5a9c87d054"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14317,6 +14331,14 @@
         },
         {
           "job_id": "job-a86e6cabe6f79c37",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-2d36b87fa9ca1a41",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -14534,6 +14556,41 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-03e3bcb4c91dd30f",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-8409b6752444b980",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.06932",
+          "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System"
+        },
+        {
+          "job_id": "job-research-c2ae91e7ef53c740",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2503.15921",
+          "title": "SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models"
+        },
+        {
+          "job_id": "job-research-d0c3e0e607ad747e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2506.01986",
+          "title": "SpecMemo: Speculative Decoding is in Your Pocket"
+        },
+        {
+          "job_id": "job-research-f0796c3a0863aed5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.03251",
+          "title": "Speculative Speculative Decoding"
         }
       ],
       "new_paper_ids": [
@@ -14554,7 +14611,8 @@
         ".survey/work-queue/results/20260913T0412JST-discovery-727b21710a6e6ab9.json",
         ".survey/work-queue/results/20260913T0415JST-discovery-74c76d42ca141850.json",
         ".survey/work-queue/results/20260913T0418JST-discovery-05a9d866af44dccd.json",
-        ".survey/work-queue/results/20260913T0420JST-discovery-a86e6cabe6f79c37.json"
+        ".survey/work-queue/results/20260913T0420JST-discovery-a86e6cabe6f79c37.json",
+        ".survey/work-queue/results/20260913T0423JST-discovery-2d36b87fa9ca1a41.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,
