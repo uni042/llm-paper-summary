@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:34 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **123 / 50** |
-| Research ready | **123** |
+| Candidate在庫（Research ready） | **124 / 50** |
+| Research ready | **124** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **197** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T05:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **2** |
+| Discovery完了 | **2** |
+| 新規job | **4** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **103** |
-| 探索評価候補 | **493** |
+| 探索round（stats観測） | **104** |
+| 探索評価候補 | **494** |
 | 重複除外 | **172** |
-| 重複率 | **34.9%** |
-| Novel候補 | **321** |
-| Research候補採用 | **175** |
+| 重複率 | **34.8%** |
+| Novel候補 | **322** |
+| Research候補採用 | **176** |
 | Research完了 | **65** |
 | Repo収録 | **65** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 24時間ファネル
 
-**探索評価 493 → 重複除外後 321 → Research候補採用 175 → Research完了 65 → Repo収録 65**
+**探索評価 494 → 重複除外後 322 → Research候補採用 176 → Research完了 65 → Repo収録 65**
 
 ## 探索効率（直近24時間）
 
@@ -174,14 +174,15 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 動的parallelism再構成・KV state migration | 2 | 0 | 2 | 0.0% | 100.0% |
 | 新着KV圧縮・時間集約・長推論再参照 | 2 | 0 | 0 | 0.0% | 0.0% |
 | 複数ラウンド分離サービング・異種メモリ処理 | 2 | 0 | 2 | 0.0% | 100.0% |
+| KVキャッシュ幾何学指標・backward reference | 1 | 0 | 1 | 0.0% | 100.0% |
 
 ### 直近5探索round
 
+- **2026-09-13T05:28:14+09:00** — KVキャッシュ幾何学指標・backward reference: 評価 1 / 重複 0 / 採用 1
 - **2026-09-13T05:28:14+09:00** — 2609新着・KVキャッシュ最適化/サービング: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T05:00:25+09:00** — GPU runtime・CUDA Graph・persistent kernel・決定論的推論: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T05:00:25+09:00** — MoE expert cache・offload・OS tiering: 評価 6 / 重複 6 / 採用 0
 - **2026-09-13T05:00:25+09:00** — 推論システム横断サーベイ・KV・エッジ実行: 評価 3 / 重複 0 / 採用 2
-- **2026-09-13T05:00:25+09:00** — 分離型LLMサービング・KV転送／フェーズ非対称性: 評価 8 / 重複 6 / 採用 1
 
 ## 最近処理した論文
 
