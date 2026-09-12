@@ -278,6 +278,7 @@ def _citation_counts(records):
     from citation_graph import citation_counts_from_view_records
     return citation_counts_from_view_records(records)
 
+
 def _month_label(record):
     if record["year"] and record["month"]:
         return f"{record['year']:04d}-{record['month']:02d}"
@@ -471,11 +472,12 @@ def render_comparison(records):
 
 
 def render():
-    inference_records = papers()
-    write(STATE + "paper-identity-index.json", identity(inference_records))
+    all_records = papers()
+    write(STATE + "paper-identity-index.json", identity(all_records))
     view_records = paper_views()
     by_family = render_indexes(view_records)
     _update_catalog_counts(by_family)
+    inference_records = [record for record in all_records if record["path"].startswith("papers/inference/")]
     render_comparison(inference_records)
 
 
