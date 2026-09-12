@@ -11,7 +11,8 @@ class DiscoverySpecialistPolicyTest(unittest.TestCase):
     def test_specialist_policy_requires_continuation_until_hard_stop(self) -> None:
         specialist = (ROOT / ".survey/docs/survey-workflow/discovery-specialist-worker.md").read_text(encoding="utf-8")
         buffer_policy = (ROOT / ".survey/docs/survey-workflow/candidate-buffer-policy.md").read_text(encoding="utf-8")
-        combined = specialist + "\n" + buffer_policy
+        continuous = (ROOT / ".survey/docs/survey-workflow/continuous-discovery-policy.md").read_text(encoding="utf-8")
+        combined = specialist + "\n" + buffer_policy + "\n" + continuous
 
         for phrase in (
             "在庫水位は停止条件ではない",
