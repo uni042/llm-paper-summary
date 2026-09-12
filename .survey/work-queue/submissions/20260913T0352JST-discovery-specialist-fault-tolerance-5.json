@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "job-29ae0219b7b0fec5",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T03:30:44+09:00",
+    "round": "specialist-fault-tolerance-saturation-5",
+    "axis": "fault-tolerant distributed serving・KV recovery・GPU failure",
+    "query_summary": "直前のKV/weight/kernel軸から耐障害サービングへ移動し、GPU障害時のKV保持、分散回復、永続カーネルcheckpointを一次arXiv metadata/abstractで軽量評価した。FailSafe、LUMEN、KevlarFlow、Concordiaはいずれも最新mainの既存research jobまたは既収録系統であることを投入直前に再確認したため、新規候補は送信しない。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2511.14116",
+      "arXiv:2606.17787",
+      "arXiv:2601.22438",
+      "arXiv:2606.23521"
+    ],
+    "next_axis_hint": "次は耐障害性を離れ、network flow/KV transportまたはforward/backward citationの独立経路を確認する",
+    "empty_round_reason": "強い耐障害サービング候補4件はすべて既収録または既存research jobで重複した。"
+  }
+}
