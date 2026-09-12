@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T08:32:34.256442+00:00",
+  "updated_at": "2026-09-12T08:39:37.871506+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9274,17 +9274,19 @@
     {
       "run_key": "2026-09-12T17:30:00+09:00",
       "first_recorded_at": "2026-09-12T08:32:34.256442+00:00",
-      "last_recorded_at": "2026-09-12T08:32:34.256442+00:00",
+      "last_recorded_at": "2026-09-12T08:39:37.871506+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 1,
-        "new_papers": 0,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -9301,9 +9303,33 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34683778468:1",
+          "recorded_at": "2026-09-12T08:39:37.871506+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34683778468",
+            "run_attempt": "1",
+            "source_sha": "7fee2f8ee2be21bef19d2c8367230f3a66c70c7b"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
-      "terminal_transitions": [],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-cbbe1a6b0e839860",
+          "type": "research",
+          "canonical_id": "arXiv:2602.14516",
+          "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
       "new_jobs": [
         {
           "job_id": "job-3e83c3cb3a02a998",
@@ -9313,14 +9339,16 @@
           "title": null
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2602.14516"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 336,
-      "paper_active_count_after": 336,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 337,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
