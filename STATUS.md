@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **70 / 50** |
-| Research ready | **70** |
+| Candidate在庫（Research ready） | **73 / 50** |
+| Research ready | **73** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **19** |
-| 新規job | **48** |
+| Discovery完了 | **20** |
+| 新規job | **52** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,22 +50,22 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **70** |
-| 探索評価候補 | **327** |
+| 通常worker run（ledger観測） | **20** |
+| 探索round（stats観測） | **71** |
+| 探索評価候補 | **332** |
 | 重複除外 | **96** |
-| 重複率 | **29.4%** |
-| Novel候補 | **231** |
-| Research候補採用 | **102** |
-| Research完了 | **47** |
-| Repo収録 | **47** |
+| 重複率 | **28.9%** |
+| Novel候補 | **236** |
+| Research候補採用 | **105** |
+| Research完了 | **45** |
+| Repo収録 | **45** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 327 → 重複除外後 231 → Research候補採用 102 → Research完了 47 → Repo収録 47**
+**探索評価 332 → 重複除外後 236 → Research候補採用 105 → Research完了 45 → Repo収録 45**
 
 ## 探索効率（直近24時間）
 
@@ -94,6 +94,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | MoE専門家配置・先読み・協調スケジューリング | 5 | 5 | 0 | 100.0% | 0.0% |
 | SLO budget・KV restoration/reconfiguration・adaptive prefill execution | 5 | 0 | 1 | 0.0% | 20.0% |
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
+| heterogeneous GPU cluster・multi-agent workflow・routing/placement | 5 | 0 | 3 | 0.0% | 60.0% |
 | output-length uncertainty・KV reservation・memory-constrained admission/scheduling | 5 | 0 | 1 | 0.0% | 20.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -144,11 +145,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — heterogeneous GPU cluster・multi-agent workflow・routing/placement: 評価 5 / 重複 0 / 採用 3
 - **2026-09-13T01:55:54+09:00** — CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — SLO budget・KV restoration/reconfiguration・adaptive prefill execution: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — output-length uncertainty・KV reservation・memory-constrained admission/scheduling: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — agentic multi-turn state・interruption・distributed prefix sharing: 評価 6 / 重複 2 / 採用 1
-- **2026-09-13T01:55:54+09:00** — multi-LoRA・推論/微調整co-serving・cross-model KV reuse: 評価 4 / 重複 1 / 採用 2
 
 ## 最近処理した論文
 
@@ -165,11 +166,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 次に処理する候補
 
+- P93 `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
-- P89 `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
 
 ## 7日比較
 
