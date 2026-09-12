@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-12**
+- フレームワーク差分の最終確認: **2026-09-13**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-12の差分確認では、公式リリースと開発元リポジトリを基準に9月11日以降の主要な性能・長文処理・投機的デコード関連変更を再確認した。
+この2つは分けて扱う。2026-09-13の差分確認では、公式リリースと開発元リポジトリを基準に9月12日以降の主要な分散長文処理・MoE routing・metadata fusion関連変更を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,34 @@
 ---
 
 ## 最新更新
+
+### 2026-09-13
+
+#### vLLM
+
+- **Sparse MLAでPCPとDCPの併用を追加 — merged 2026-09-13 JST**
+
+  長文prefillのquery処理を分割するPCPと、decode側でKV cacheを分割するDCPをsparse MLAモデルで同時利用できる経路を追加。4×GB200・GLM-5.3 NVFP4の32K-token prefillではTP4のTTFT **5512.1 ms**に対してPCP4+DCP4は **3326.8 ms（約1.66倍高速）**。一方、現時点のpiecewise graph decodeはTP4 **3412.7 tok/s**に対して **735.9 tok/s**と大幅に遅く、decode側は明確なtrade-offが残る。長文prefillの分散構成自由度を広げる更新として記録する。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/56157
+
+#### SGLang
+
+- **GLM-5.3 Flash向けKPool metadata fusionを復旧し対応構成で既定有効化 — merged 2026-09-13 JST**
+
+  decode / target verify / draft extendのKPool metadata生成をfused pathへ戻し、互換なMTP draft backend間で派生metadataを再利用する経路も復旧した。4×B200で精度検証は実施されているが、このPRにはfusion無効時との対応した性能比較はないため、速度向上量は断定せず実行経路の統合・既定有効化として扱う。
+
+  一次資料: https://github.com/sgl-project/sglang/pull/38845
+
+- **統一Triton MoE routerをROCmとsingle-group routingへ拡張 — merged 2026-09-13 JST**
+
+  これまでCUDAかつ複数expert groupに限定していたopt-inの統一routing kernelをROCmとsingle-group構成でも利用可能にした。MI355X / ROCm 7.2で10ケースを検証。既定ではopt-inのままで、end-to-end性能値は提示されていないため、MoE実行backendの適用範囲拡大として記録する。
+
+  一次資料: https://github.com/sgl-project/sglang/pull/38328
+
+#### 新規LLM
+
+- 2026-09-12以降に現在追跡している主要model familyで追加すべき新規の汎用LLM正式公開は確認できず。直近の収録は2026-09-10公開のDeepSeek-V4.1-Flash。
 
 ### 2026-09-12
 

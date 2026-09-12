@@ -30,6 +30,10 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-13
+
+- **Sparse MLAでPCP+DCP併用を追加 — merged 2026-09-12 UTC**: prefill queryを分割するPCPとdecode KVを分割するDCPを同じsparse-MLA deploymentで併用可能にした。4×GB200・GLM-5.3 NVFP4、32768 input / 1 outputの測定ではTP4のTTFT **5512.1 ms**に対しPCP4+DCP4は **3326.8 ms（約1.66倍高速）**。ただし1 input / 1024 outputでは現行PCP4+DCP4 piecewise pathが **735.9 tok/s**で、TP4 **3412.7 tok/s**やDCP4 **2236.8 tok/s**より遅い。長文prefillの構成自由度は増す一方、decode pathには最適化余地が残る。[PR #56157](https://github.com/vllm-project/vllm/pull/56157)
+
 ## 2026-09-12
 
 - **Kimi K3向けFP8 MLA cache挿入をgroup化 — merged 2026-09-11 UTC**: 5 layer分を個別kernelで書き込む経路を1 grouped kernelへ統合。1〜512 tokenの小batchでは概ね **5〜7倍**、2048 tokenでも **4.12倍**のkernel-level speedupを確認し、8192 token以上ではほぼ同等。[PR #55356](https://github.com/vllm-project/vllm/pull/55356)

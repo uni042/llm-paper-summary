@@ -29,6 +29,12 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-09-13
+
+- **GLM-5.3 Flash向けKPool metadata fusionを復旧・既定有効化 — merged 2026-09-12 UTC**: decode / target verify / draft extendのKPool-aware metadata constructionをfused pathへ戻し、互換なMTP draft backend間で派生metadataを再利用する。4×B200でEAGLE / DFLASHの精度検証は行われているがfusion-offとの対応した速度比較はないため、性能向上率は未確定。[PR #38845](https://github.com/sgl-project/sglang/pull/38845)
+
+- **統一Triton MoE routerをROCmとsingle-groupへ拡張 — merged 2026-09-12 UTC**: opt-inの統一grouped top-k routing kernelをROCmでも使えるようにし、single expert groupも許可。shared expertのslot処理とscalingも整合させ、MI355X / ROCm 7.2で10ケースを検証した。既定flagはoffのままで、end-to-end速度比較は提示されていない。[PR #38328](https://github.com/sgl-project/sglang/pull/38328)
+
 ## 2026-09-11
 
 - **DeepSeek-V4.1 DSpark verifyの圧縮・indexer・projectionを融合 — merged**: target verify周辺の短いkernelをまとめ、4×GB300、TP4/EP4、BS1、4096入力/1024出力、simulated acceptance 5.5の条件でstreamed decode throughputを **761.03→853.49 tok/s（+12.15%）**へ改善。GPU traceではtarget/draft cycleあたりのkernel数も削減した。[PR #39068](https://github.com/sgl-project/sglang/pull/39068)

@@ -1,6 +1,20 @@
 {
   "schema_version": 1,
-  "ok": false,
-  "attempt_id": "update-20260912-0830",
-  "error": "ValueError: blob SHA mismatch for framework-updates/README.md: expected ee7c0758553311abd43a673dd25aafb8994239fa, current e0a39fc8bc51d70c4371f2d84615b3f39ed7fce1"
+  "ok": true,
+  "attempt_id": "update-20260913-0830",
+  "kind": "framework_llm_update",
+  "updated_paths": [
+    "framework-updates/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/sglang/README.md",
+    "llm-releases/README.md"
+  ],
+  "created_paths": [],
+  "updated_existing_paths": [
+    "framework-updates/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/sglang/README.md",
+    "llm-releases/README.md"
+  ],
+  "summary": "2026-09-13確認: vLLMのsparse MLA向けPCP+DCP併用、SGLangのGLM-5.3 Flash KPool metadata fusion復旧・既定有効化とROCm向け統一Triton MoE router拡張を追加。9月12日以降、現在追跡する主要model familyで新規の汎用LLM正式公開は確認されず。"
 }
