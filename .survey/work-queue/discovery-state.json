@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:50:07+00:00",
-  "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-adapter-contiguous-learning-10",
+  "updated_at": "2026-09-12T16:58:10+00:00",
+  "last_run_key": "2026-09-13T01:55:54+09:00",
+  "last_round": "specialist-moe-runtime-placement-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1302,6 +1302,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "直近新着・network/storage・citation/related-workを最後に再確認し、追加強候補がなければ複数経路の枯渇として終了する",
       "source_submission": "work-queue/submissions/20260913T0149JST-discovery-513b50afdb428d0f.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-moe-runtime-placement-1",
+      "axis": "MoE動的並列切替・融合通信・serverless専門家配置",
+      "query_summary": "直近のKV cache軸から切り替え、MoE servingの実行時並列切替、TP/EP通信最適化、動的expert placementを一次arXivメタデータとabstractで軽量評価した。投入直前に最新main HEAD、identity、queue、既存job、fallback ledger、Library pendingを再確認し、canonical arXiv IDと題名で既存一致がない候補を選別した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はMoEを離れ、CXL共有メモリ/ラック内KV転送またはストレージ階層・GPU主導I/Oの隣接軸へ移る",
+      "source_submission": "work-queue/submissions/20260913T0159JST-discovery-fef140cd0cd0ddc9.json"
     }
   ],
   "axes": {
@@ -2054,6 +2069,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "直近新着・network/storage・citation/related-workを最後に再確認し、追加強候補がなければ複数経路の枯渇として終了する"
+    },
+    "MoE動的並列切替・融合通信・serverless専門家配置": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はMoEを離れ、CXL共有メモリ/ラック内KV転送またはストレージ階層・GPU主導I/Oの隣接軸へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
