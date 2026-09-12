@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "job_id": "job-discovery-20260912T1732JST-memory-serving-refill",
+  "job_id": "job-3e83c3cb3a02a998",
   "discovery_stats": {
     "run_key": "2026-09-12T17:30:00+09:00",
     "round": "paper-worker-memory-serving-refill-1",
@@ -22,7 +22,7 @@
       "source_url": "https://arxiv.org/abs/2606.02964",
       "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.02964-asymcache-multi-segment-attention.md",
       "priority": 87,
-      "reason": "損失なしKV管理で単なるhit率ではなくGPU attention kernelの実行効率をキャッシュ配置判断へ組み込むAsymCacheを提案する。非連続KVを効率処理するMulti-Segment Attention、位置依存の再計算コストを考慮した退避、適応chunk schedulingを統合し、最新baseline比でTTFTを最大約2.03倍、TPOTを最大約1.71倍改善し、agent serving統合時も平均job latencyを最大18.1%削減と報告する。KV階層管理とカーネル効率を直接接続する点が既存の容量・頻度中心方針と異なる。"
+      "reason": "損失なしKV管理で単なるヒット率ではなくGPU注意カーネルの実行効率をキャッシュ配置判断へ組み込むAsymCacheを提案する。非連続KVを効率処理するMulti-Segment Attention、位置依存の再計算コストを考慮した退避、適応チャンクスケジューリングを統合し、最新比較対象比でTTFTを最大約2.03倍、TPOTを最大約1.71倍改善し、エージェントサービング統合時も平均ジョブ遅延を最大18.1%削減と報告する。KV階層管理とカーネル効率を直接接続する点が既存の容量・頻度中心方針と異なる。"
     },
     {
       "canonical_id": "arXiv:2604.25080",
@@ -30,7 +30,7 @@
       "source_url": "https://arxiv.org/abs/2604.25080",
       "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
       "priority": 84,
-      "reason": "長文・マルチターン・RAGで支配的になるKV復元を、再計算対I/Oという単一要求単位の二択ではなく、token・layer・GPUの3次元並列実行として扱う。batch競合を考慮するtwo-pointer schedulerで計算資源とI/O資源を共同配分し、既存方式比でTTFTを10〜62%削減と報告する。SSD/CPU/remote tierからのKV復元を計算と重ねる研究軸に直接関係する。"
+      "reason": "長文・マルチターン・RAGで支配的になるKV復元を、再計算対I/Oという単一要求単位の二択ではなく、トークン・層・GPUの3次元並列実行として扱う。バッチ競合を考慮するtwo-pointer schedulerで計算資源とI/O資源を共同配分し、既存方式比でTTFTを10〜62%削減と報告する。SSD/CPU/遠隔階層からのKV復元を計算と重ねる研究軸に直接関係する。"
     },
     {
       "canonical_id": "arXiv:2510.13223",
@@ -38,7 +38,7 @@
       "source_url": "https://arxiv.org/abs/2510.13223",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.13223-banaserve-dynamic-module-migration.md",
       "priority": 80,
-      "reason": "分離サービングでprefill/decode資源を固定せず、layer-level weight migration、attention-level KV migration、共有Global KV Storeを組み合わせて実行中に再均衡する。prefix-aware routingによる局所的な偏りもcache placementからrouterを解放して抑える設計で、vLLM比1.2〜3.9倍、DistServe比1.1〜2.8倍のthroughput向上を報告する。重み移動とKV移動を粒度別に統合するため、分離サービングと階層メモリの交点として価値が高い。"
+      "reason": "分離サービングでプリフィル・デコード資源を固定せず、層単位の重み移動、注意機構単位のKV移動、共有Global KV Storeを組み合わせて実行中に再均衡する。接頭辞を考慮するルーティングによる局所的な偏りもキャッシュ配置からルータを解放して抑える設計で、vLLM比1.2〜3.9倍、DistServe比1.1〜2.8倍のスループット向上を報告する。重み移動とKV移動を粒度別に統合するため、分離サービングと階層メモリの交点として価値が高い。"
     }
   ]
 }
