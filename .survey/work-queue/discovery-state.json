@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T14:10:11+00:00",
+  "updated_at": "2026-09-12T14:12:24+00:00",
   "last_run_key": "2026-09-12T23:00:00+09:00",
-  "last_round": "specialist-tiered-remote-memory-04",
+  "last_round": "specialist-cache-admission-restoration-05",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -734,6 +734,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "収録済み重要論文のforward/backward citation、DBMS/OSのcache admission/replacement、またはnetwork fabricのKV転送制御へ切り替える",
       "source_submission": "work-queue/submissions/20260912T2310JST-discovery-specialist-04.json"
+    },
+    {
+      "run_key": "2026-09-12T23:00:00+09:00",
+      "round": "specialist-cache-admission-restoration-05",
+      "axis": "KV cache admission/replacement・compression/eviction・復元parallelism",
+      "query_summary": "DBMS/OS隣接のcache admission/replacement、multi-tier compression+eviction、recompute/I/O復元schedule、分離servingのKV転送をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第4roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "SLO-aware serving scheduling、heterogeneous GPU allocation、または重要論文の引用追跡へ移る",
+      "source_submission": "work-queue/submissions/20260912T2312JST-discovery-specialist-05.json"
     }
   ],
   "axes": {
@@ -1146,6 +1161,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "収録済み重要論文のforward/backward citation、DBMS/OSのcache admission/replacement、またはnetwork fabricのKV転送制御へ切り替える"
+    },
+    "KV cache admission/replacement・compression/eviction・復元parallelism": {
+      "last_run_key": "2026-09-12T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "SLO-aware serving scheduling、heterogeneous GPU allocation、または重要論文の引用追跡へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
