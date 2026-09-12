@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4649dafe5fe3736a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.00368",
+      "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.00368",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00368-tent-declarative-slice-spraying-data-movement.md",
+      "priority": 94,
+      "reason": "分離型LLMサービングの大容量転送を固定経路へ縛らず、細粒度スライスへ分解して複数RDMA/NVLink系リンクへ瞬時の品質に応じて分散する実運用データ移動基盤。障害時も50ms未満で再経路化し、SGLang HiCacheを用いたLLM推論でMooncake TE比最大1.36倍のスループット、P90 TTFT 26%削減を報告する。大規模運用で得られたネットワーク系統として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.26633",
+      "title": "NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement",
+      "source_url": "https://arxiv.org/abs/2607.26633",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md",
+      "priority": 91,
+      "reason": "短い文脈はGPU、長い文脈は実機PNMへ配置し、文脈成長に合わせて再計算なしで実行場所を移す異種メモリ・計算サービング。CXL、RPC、RDMAを含むエンドツーエンド実機系で、GPU単独比最大5.5倍のデコードスループットと最大15倍のP99遅延改善を報告する。階層メモリと実行場所選択を結ぶ未収録系統として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.15039",
+      "title": "Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter",
+      "source_url": "https://arxiv.org/abs/2604.15039",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md",
+      "priority": 88,
+      "reason": "KV量が小さいハイブリッド注意モデルを前提に、長文脈プリフィルだけを別データセンターの計算密度が高いクラスタへ選択的に送り、商品級Ethernet越しにKVを戻す。帯域・キャッシュを考慮した配置を組み合わせ、内部1Tモデルの事例で同種PD構成比54%、単純な異種構成比32%のスループット向上を報告する。分離型サービングの距離制約を拡張する研究として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2606.15555",
+      "title": "Service-Induced Congestion in Memory-Constrained LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.15555",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15555-service-induced-congestion-memory-constrained-serving.md",
+      "priority": 81,
+      "reason": "連続バッチ処理では生成が進むほどKVキャッシュが増え、サービス自身が将来のメモリ圧迫を作る点を離散時間力学系として解析する。均一ワークロードでは追い出しなし平衡が不安定化し、最大50%のスループット損失を伴う極限周期へ収束し得ることを示す。実装手法ではないが、メモリ制約下スケジューリングの失敗条件を理論化する比較基盤として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T19:30:00+09:00",
+    "round": "normal-worker-critical-buffer-network-runtime-2",
+    "axis": "network-data-movement-pnm-cross-dc-memory-dynamics",
+    "query_summary": "Candidate inventory remained below the critical watermark after the heterogeneous-GPU round. Rotated to disaggregated data movement, GPU-PNM mixed-length placement, cross-datacenter prefill/KV transport, and memory-congestion dynamics. Exact arXiv-ID and repository-title searches found no existing entries for the four selected candidates.",
+    "candidate_count": 9,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.16135",
+      "arXiv:2605.03375",
+      "arXiv:2607.16892",
+      "arXiv:2607.26475",
+      "arXiv:2607.26491"
+    ],
+    "next_axis_hint": "If inventory remains critical after final dedupe, use citation expansion from newly accepted TENT/PipeMax/NELSSA-related work or rotate to GPU runtime and virtual-memory mechanisms; do not repeat heterogeneous-GPU or CXL-only queries immediately."
+  }
+}
