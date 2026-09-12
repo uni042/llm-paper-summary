@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:13:35+00:00",
+  "updated_at": "2026-09-12T15:15:12+00:00",
   "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-multi-agent-scheduling-5",
+  "last_round": "specialist-moe-saturated-6",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "MoEの専門家配置・先読み・負荷分散・多階層スケジューリングで見つかった強候補は、最新のidentityとexisting jobsですべて既存と判定された。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -932,6 +932,27 @@
       ],
       "next_axis_hint": "新着・関連実装経由でMoE coordinated schedulingとKV multi-turn管理を再走査し、重複優勢なら空roundを記録して別軸へ移る",
       "source_submission": "work-queue/submissions/20260913T0013JST-discovery-multi-agent-scheduling-5.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-moe-saturated-6",
+      "axis": "MoE専門家配置・先読み・協調スケジューリング",
+      "query_summary": "MoE expert placement、expert prefetch、dynamic replication、request/expert coordinated schedulingを新着・既存関連候補から再走査した。強候補はすべて最新正本で既収録または既存jobだった。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.17880",
+        "arXiv:2603.06350",
+        "arXiv:2603.19289",
+        "arXiv:2606.15177",
+        "arXiv:2602.21626"
+      ],
+      "next_axis_hint": "KV multi-turn管理・復元・不確実性対応を独立軸として再確認する",
+      "source_submission": "work-queue/submissions/20260913T0015JST-discovery-moe-saturated-6.json"
     }
   ],
   "axes": {
@@ -1464,6 +1485,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "新着・関連実装経由でMoE coordinated schedulingとKV multi-turn管理を再走査し、重複優勢なら空roundを記録して別軸へ移る"
+    },
+    "MoE専門家配置・先読み・協調スケジューリング": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "KV multi-turn管理・復元・不確実性対応を独立軸として再確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
