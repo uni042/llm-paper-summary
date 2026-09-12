@@ -2,22 +2,43 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2603.29002-20260912-1743-v10-c",
-  "job_id": "job-research-6c35372d7f423594",
+  "attempt_id": "attempt-2606.12556-20260912-2330-v10-c",
+  "job_id": "job-research-665126267e3c34b7",
   "data": {
-    "hardware": ["異種構成はAMD Instinct MI210 GPU、AMD Alveo U55C FPGA、AMD EPYC 7v13ホストCPUを同一ノードで接続して実測する。比較対象は同じMI210 GPUを用いる。", "U55Cは16nm、MI210は6nm世代で、FPGAの方が古い製造世代かつ価格も低い条件で比較する。NVIDIA A100については同一ノード実機がないため付録で実測プロファイルに基づく推定を示す。"],
-    "software": ["GPUはROCm 6.3、FPGAはXilinx Vitis HLS 2024.2とVivado 2024.2を使用。P2P DMAを有効化する。", "DeepSeek AttentionはvLLMを改変し、SeerAttention-RはTileLang最適化カーネル、LServeは公式実装をHIPへ移植する。RAG、HMT/Titans再現、MemAgent、LaCTも各既存実装を基礎にする。"],
-    "model": ["DeepSeek V3.2 Expの第一層を使うDeepSeek Attention", "Qwen3-8B + SeerAttention-R", "Llama3.1-8B + LServe", "Llama2-7Bを用いる単段RAG", "Llama3.1-8Bを用いる二段RAG", "Qwen2.5-7B + MemAgent", "HMT/Titans相当のMemory as Context", "LaCTによるテスト時学習"],
-    "datasets": ["各方式の原論文と同じデータセット・設定を可能な限り再現する。", "疎注意は過去トークン長を変えて1トークン当たり遅延を測る。RAG、MemAgent、Memory as Contextは入力長を変え、プリフィルとデコードを含む要求全体の遅延を測る。"],
-    "baselines": ["同一AMD MI210上のGPU単独実装", "BM25Sを含むGPU側RAG実装", "各元論文の最適化済みGPUカーネル"],
-    "correctness": "異種構成は基礎アルゴリズムの検索規則や注意対象を変えず、同じ演算を別デバイスへ配置する。したがって比較では品質を再最適化せず、同一方式・同一設定で遅延とエネルギーだけを変える。",
-    "settings": [
-      {"name": "疎注意", "description": "DeepSeek Attention、SeerAttention-R、LServeについて過去文脈長を増やし、関連度計算・検索のカーネル時間とエンドツーエンド時間を測る。1Mトークンを超えてFPGA HBM参照が増える条件では性能低下も確認する。"},
-      {"name": "検索拡張生成", "description": "DRAGIN、FLARE、固定文単位RAG、二段RAGを評価する。単段RAGではBM25型検索、二段RAGではGPU上の再順位付け器を残し、FPGAへ移せる部分とGPUに残る部分を分ける。"},
-      {"name": "圧縮メモリ", "description": "MemAgentではメモリ生成のデコードをFPGA、メモリを消費するプリフィルをGPUへ分離する。Memory as ContextではメモリをFPGAへ保持し、関連度計算・選択をFPGA、密な処理をGPUへ割り当てる。"},
-      {"name": "バッチ感度", "description": "バッチサイズ1、2、4、8、32で幾何平均高速化率を比較し、GPUの密演算がバッチで効率化する場合にFPGAオフロードの相対利益がどう変わるかを測る。"}
+    "hardware": [
+      "GPUホストと遠隔メモリサーバはいずれもDell PowerEdge R770。GPUホストはIntel Xeon 6730×2、DDR5 256GB、NVIDIA A100 80GB。両サーバをMellanox ConnectX-6 100Gbps NIC×2で接続する。",
+      "性能潜在力評価はSK hynix CMMとKIOXIA PCIe Gen5 NVMe SSD×2を使い、CMMの32GBをDRAMキャッシュとして使用する。SPDKとPCIe 8レーンでピーク読出し約22GB/s。",
+      "機能試作はIntel Agilex 7 I-Series FPGA、DDR4 32GB、SK hynix Platinum P51 PCIe Gen5 NVMe SSD×2を統合し、ハードウェアキャッシュ制御とソフトウェア先読み器を検証する。"
     ],
-    "methodology": "まずGPU単独実装を用いてメモリ処理パイプラインの時間割合を測り、Python計時で要求全体、PyTorch Profilerで段階別時間を取得する。その後、FPGAへ移したカーネルを同じ入力条件で実行し、カーネル単体の高速化とエンドツーエンドの高速化を分けて報告する。エネルギーは要求またはトークン当たりジュールで比較し、バッチサイズとメモリ長を変えた感度評価も行う。",
-    "scope": "主結果はMI210+U55Cの実機測定であり、シミュレーション中心ではない。ただしNVIDIA A100結果は推定であり、GPUとFPGAが同一ノードに接続された実機測定ではない。評価対象はメモリ処理割合が高い長文方式が中心で、テスト時学習のように密な前向き・後ろ向き計算が支配する方式は異種化の対象外と判断している。"
+    "software": [
+      "vLLM 0.17.0を拡張し、CPUオフロード、NVMe-oF、重み先読み、ITME階層KV管理を同じ基盤で比較する。",
+      "遠隔CXLハイブリッドメモリの性能潜在力評価ではSPDK、ホスト側マルチスレッド、ユーザー空間ポーリングを用いて高並行非同期I/Oを実装する。",
+      "ITMEは固定メモリの書込み/読出しバッファ、512MB級チャンク、読出し優先I/O、装置内先読みAPI、RDMA、層単位CPU→GPU DMAを組み合わせる。"
+    ],
+    "model": ["Llama-3.1 8B", "Llama-3.1 70B"],
+    "datasets": [
+      "ShareGPTを使い、多様な系列長を持つマルチターン会話を構成する。",
+      "GPU容量比較では128並行会話、最大5ターン、会話あたり最低2000トークン、後半で合計KV約40GB。",
+      "CPU容量ストレスでは256並行会話・35ターンを用い、128GB CPU KVキャッシュとITMEを比較する。",
+      "重み先読み単独評価ではMooncake workload、バッチ16、入力4Kを用いる。"
+    ],
+    "baselines": [
+      "GPU再計算基準。KVを保持できない部分を再計算するvLLM構成。",
+      "理想GPU全キャッシュ。80GB HBM内に全KVを保持する性能上限。",
+      "CPUオフロード。最大128GBのホストDRAMへKVを保持し、容量内ではITMEと同等の低遅延経路を使う。",
+      "理想化したローカルNVMe-oF。ネットワーク費を除去した同一チャンク管理のストレージ基準で、ITMEに対し有利な上限比較。",
+      "ホストDRAM上に全重みを置く重み先読み基準。ITMEの遠隔重みストリーミングがどこまで追随できるかを見る。"
+    ],
+    "correctness": "データ階層と復元方法だけを変更し、モデル演算やKV内容を近似しない。先読みできなかったKVブロックは遠隔の細粒度読出しを待たずGPUで再計算するため、出力品質を変えずに追加計算へ退避する。背景KV書込みを競合時に落とした場合も、後続ターンで再計算して状態を復元できる。",
+    "settings": [
+      {"name":"GPU HBM対ITME","description":"128並行ShareGPT会話を最大5ターン実行し、後半のKV約40GBで再計算vLLM、全KVを80GB HBMに保持する理想構成、ITMEを比較する。8B/70Bとも重みオフロードと先読みを有効にする。"},
+      {"name":"CPU DRAM容量超過","description":"256並行会話・35ターンでKVを累積させ、128GB CPUキャッシュと30GB級ステージング+遠隔ITMEを比較する。CPU容量内の初期、I/O競合が増える中盤、CPU容量を完全に超える後半を分けて観測する。"},
+      {"name":"理想ローカルNVMe-oF比較","description":"ネットワーク費を排除したNVMe-oFを有利な上限基準とし、同じCPUステージング、同じチャンク単位、同じ再計算方針でITMEと比較して、先読みと読出し優先制御の効果を見る。"},
+      {"name":"重み先読み単独","description":"Mooncake workload、バッチ16、入力4Kで、ホストDRAMに重みがある上限基準と、CXLハイブリッドメモリから8B 10.5GB・70B 105GB重みを層ごとに先読みするITMEを比較する。"},
+      {"name":"DRAM先読み容量感度","description":"70B重みストリーミングで装置内DRAM容量を縮小し、4GB・3段パイプラインでもホストメモリ基準との差を測る。"},
+      {"name":"FPGA機能試作","description":"CMM評価系とは別にAgilex 7 FPGA+32GB DDR4+Gen5 SSD×2で実装し、キャッシュ命中時の読書き帯域、ミス時帯域、読出し優先制御を測る。"}
+    ],
+    "methodology": "論文は『製品級CMM+Gen5 SSDで実現可能な性能潜在力』と『FPGAで実装した制御回路の機能実証』を分けて評価する。CMM系では自由度の高いソフトウェア実装で提案データパスの上限を測り、FPGA系では実際のハードウェアキャッシュ・先読み制御が成立するかを確認する。LLM評価は8B/70B、GPU/CPU/ストレージ容量の異なる圧力点を作り、再計算・CPU保持・ローカルNVMe・遠隔ITMEの境界を段階的に比較する。",
+    "scope": "ITMEは予測しやすいモデル重みと長文接頭辞KVを遠隔階層へ置く設計で、現在デコード中に頻繁に更新される作業KVや活性値はGPU/CPUへ残す。CXLハイブリッドメモリはまだ一般的な商用量産サーバ部品ではなく、性能潜在力はCMM代替プラットフォーム、機能実証はFPGAで評価しているため、完全な最終製品実機評価とは区別が必要である。"
   }
 }
