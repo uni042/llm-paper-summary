@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 171,
+      "completed": 172,
       "superseded": 44,
       "deferred": 3,
-      "ready": 40
+      "ready": 39
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-61b65de2a7cf7033",
-      "type": "research",
-      "lane": null,
-      "priority": 89,
-      "canonical_id": "arXiv:2602.02204",
-      "title": "vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models",
-      "source_url": "https://arxiv.org/abs/2602.02204",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-176f6ec6b8273a5c",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-67fd071bb1792a36",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2607.07388",
+      "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.07388",
+      "paper_path": null,
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-4e19fffd136a38ad",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T15:19:15+00:00"
+  "generated_at": "2026-09-12T15:46:08+00:00"
 }
