@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-105b69444b4fa0ad",
+  "type": "research",
+  "parent_job_id": "job-080d4b5d49ec5db4",
+  "priority": 67,
+  "canonical_id": "arXiv:2603.09023",
+  "title": "The Missing Memory Hierarchy: Demand Paging for LLM Context Windows",
+  "source_url": "https://arxiv.org/abs/2603.09023",
+  "paper_path": "papers/inference/12-agent-memory-runtime/2026-2603.09023-pichay-demand-paging-context-windows.md",
+  "selection_reason": "モデル内部KVではなくエージェント実行時の会話文脈を仮想メモリとして扱う隣接システム研究。透明プロキシで古い内容を追い出し、再参照をページフォルトとして検出し、フォルト履歴で作業集合を固定する。857本番セッションの分析とライブ運用を含み、最大93%の文脈消費削減、オフライン140万追い出しで0.0254%のフォルト率を報告する。OSページング原理をLLM実行系へ移植する参考として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T12:50:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T12:45:57+00:00",
+  "updated_at": "2026-09-12T12:50:06+00:00",
   "last_run_key": "2026-09-12T21:30:00+09:00",
-  "last_round": "normal-worker-critical-inventory-expert-prefetch-rotation",
+  "last_round": "normal-worker-critical-inventory-os-cxl-paging-rotation",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -611,6 +611,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "採用率が高ければ専門家I/OスケジューリングとSSD/NVMe階層へ展開し、低ければGPU仮想メモリやOSページング系へ切り替える。",
       "source_submission": "work-queue/submissions/20260912T2147JST-discovery-ef040c02e2978658.json"
+    },
+    {
+      "run_key": "2026-09-12T21:30:00+09:00",
+      "round": "normal-worker-critical-inventory-os-cxl-paging-rotation",
+      "axis": "cxl-near-data-kv-page-management-os-demand-paging",
+      "query_summary": "専門家先読みラウンドの採用が1件に留まり在庫がcritical水位のままだったため、CXL近傍データ処理、GPU注意効率を考慮したKVページ管理、OS需要ページングの隣接応用へ探索軸を変更した。一次資料の定量結果を軽量評価し、最新正本で識別子を再照合した4件を提出した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "採用後も在庫15未満ならCXL/NVMeのI/OスケジューリングとGPUメモリ回収へ継続し、15以上ならresearch優先へ戻す。",
+      "source_submission": "work-queue/submissions/20260912T2150JST-discovery-080d4b5d49ec5db4.json"
     }
   ],
   "axes": {
@@ -943,6 +958,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "採用率が高ければ専門家I/OスケジューリングとSSD/NVMe階層へ展開し、低ければGPU仮想メモリやOSページング系へ切り替える。"
+    },
+    "cxl-near-data-kv-page-management-os-demand-paging": {
+      "last_run_key": "2026-09-12T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "採用後も在庫15未満ならCXL/NVMeのI/OスケジューリングとGPUメモリ回収へ継続し、15以上ならresearch優先へ戻す。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

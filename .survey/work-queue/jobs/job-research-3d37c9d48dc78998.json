@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3d37c9d48dc78998",
+  "type": "research",
+  "parent_job_id": "job-080d4b5d49ec5db4",
+  "priority": 62,
+  "canonical_id": "arXiv:2509.12211",
+  "title": "TinyServe: Query-Aware Cache Selection for Efficient LLM Serving",
+  "source_url": "https://arxiv.org/abs/2509.12211",
+  "paper_path": "papers/inference/09-kv-cache-virtualization/2025-2509.12211-tinyserve-query-aware-cache-selection.md",
+  "selection_reason": "クエリとKVブロックの関連度を軽量メタデータで推定し、必要ページだけを読み込む選択的KV方式を、ページ評価・疎メモリアクセス・マスク注意を融合したCUDAカーネルとして実装する。主対象は小型LLMだが、実時間デコードで最大3.4倍高速化、2倍超のメモリ削減を報告し、KVページングとGPUカーネル融合の具体例として隣接価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T12:50:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}

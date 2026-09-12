@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T12:46:35.702998+00:00",
+  "updated_at": "2026-09-12T12:51:09.460340+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10439,7 +10439,7 @@
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "first_recorded_at": "2026-09-12T12:41:18.309706+00:00",
-      "last_recorded_at": "2026-09-12T12:46:35.702998+00:00",
+      "last_recorded_at": "2026-09-12T12:51:09.460340+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -10448,9 +10448,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 6,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -10497,6 +10497,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34694700285:1",
+          "recorded_at": "2026-09-12T12:51:09.460340+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34694700285",
+            "run_attempt": "1",
+            "source_sha": "324ed90c7ee08d5f352df4b1d412352a1e040ee7"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10518,6 +10532,14 @@
         },
         {
           "job_id": "job-ef040c02e2978658",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-080d4b5d49ec5db4",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -10546,6 +10568,27 @@
           "type": "research",
           "canonical_id": "arXiv:2608.05303",
           "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding"
+        },
+        {
+          "job_id": "job-0674ed4e6a95bc3a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-105b69444b4fa0ad",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.09023",
+          "title": "The Missing Memory Hierarchy: Demand Paging for LLM Context Windows"
+        },
+        {
+          "job_id": "job-research-3d37c9d48dc78998",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.12211",
+          "title": "TinyServe: Query-Aware Cache Selection for Efficient LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -10553,7 +10596,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2130JST-discovery-815a11adca713d7e.json",
-        ".survey/work-queue/results/20260912T2147JST-discovery-ef040c02e2978658.json"
+        ".survey/work-queue/results/20260912T2147JST-discovery-ef040c02e2978658.json",
+        ".survey/work-queue/results/20260912T2150JST-discovery-080d4b5d49ec5db4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 353,
