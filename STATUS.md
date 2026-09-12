@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **104 / 50** |
-| Research ready | **104** |
+| Candidate在庫（Research ready） | **105 / 50** |
+| Research ready | **105** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **185** |
+| Research completed（累計） | **186** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **2 / 24** |
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T02:30:00+09:00**
+Run: **2026-09-13T03:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **8** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **11** |
-| 新規job | **50** |
-| Repo収録 | **8** |
+| Discovery完了 | **1** |
+| 新規job | **3** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -50,22 +50,22 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **83** |
-| 探索評価候補 | **401** |
+| 通常worker run（ledger観測） | **21** |
+| 探索round（stats観測） | **84** |
+| 探索評価候補 | **404** |
 | 重複除外 | **122** |
-| 重複率 | **30.4%** |
-| Novel候補 | **279** |
-| Research候補採用 | **144** |
-| Research完了 | **53** |
-| Repo収録 | **53** |
+| 重複率 | **30.2%** |
+| Novel候補 | **282** |
+| Research候補採用 | **146** |
+| Research完了 | **54** |
+| Repo収録 | **54** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 401 → 重複除外後 279 → Research候補採用 144 → Research完了 53 → Repo収録 53**
+**探索評価 404 → 重複除外後 282 → Research候補採用 146 → Research完了 54 → Repo収録 54**
 
 ## 探索効率（直近24時間）
 
@@ -142,6 +142,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | MoE動的並列切替・融合通信・serverless専門家配置 | 3 | 0 | 1 | 0.0% | 33.3% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | agentic/multi-agent serving・collective KV sharing | 3 | 0 | 2 | 0.0% | 66.7% |
+| edge/on-device offload・multitasking memory・cloud KV streaming | 3 | 0 | 2 | 0.0% | 66.7% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | multimodal弾力的並列化・EPD分離・modality-aware scheduling | 3 | 0 | 3 | 0.0% | 100.0% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -157,16 +158,17 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:30:44+09:00** — edge/on-device offload・multitasking memory・cloud KV streaming: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T03:02:31+09:00** — GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap: 評価 6 / 重複 1 / 採用 3
 - **2026-09-13T03:02:31+09:00** — DBMS由来cache policy・real-time/best-effort混在QoS scheduling: 評価 9 / 重複 7 / 採用 2
 - **2026-09-13T03:02:31+09:00** — CUDA compiler・JIT/Graph runtime・decode kernel serving: 評価 6 / 重複 4 / 採用 2
 - **2026-09-13T03:02:31+09:00** — serverless production serving・cold start・multi-LoRA elasticity: 評価 7 / 重複 3 / 採用 4
-- **2026-09-13T03:02:31+09:00** — agent session KV residency・near-memory scheduling: 評価 5 / 重複 4 / 採用 1
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 - `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
@@ -174,15 +176,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 - `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
-- `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
 
 ### 次に処理する候補
 
-- P96 `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - P94 `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - P91 `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
+- P90 `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 
 ## 7日比較
 
