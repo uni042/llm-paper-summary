@@ -2,28 +2,63 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2607.10186-20260913-0030-v10-b",
-  "job_id": "job-research-176f6ec6b8273a5c",
+  "attempt_id": "attempt-2608.01657-20260913-0057-v10-b",
+  "job_id": "job-research-2c474caec39ae70d",
   "data": {
-    "overview": "FlashAccelの直列統合（Cascaded Integration; CSI）は、評価したモデル・文脈長・遅延制約全体で8×H200を上回り、GPU当たりthroughputを平均2.10倍改善する。100msのデコードSLOでは8×CSIが2.49倍、8×CLIが2.00倍となる。完全機構を有効にしたHBFアクセスは同じbatch sizeでHBM-onlyより約4%遅い範囲まで縮まり、先読み、重み配置、KV配置をそれぞれ無効にすると完全FlashAccel比でthroughputが55%、7%、15%低下する。HBFの大容量はmulti-turn KV hit率も改善し、8×CSI/CLIは全sessionのKVを保持して理想hit率に達し、16×H200よりhit率が50%高く、8×H200比で再計算tokenを最大89%削減する。フラッシュread energyはHBMより高いものの、100ms SLOのtokens/Jは8×CSIで平均1.93倍、8×CLIで1.66倍となる。",
+    "overview": "直接的な一度きり接頭辞汚染では、PrefixShieldは新規状態生成者へ回収責任を残すことで、LRUや再利用価値だけを見るS3-FIFOより被害側のKV状態を多く保持した。低速回転ではS3-FIFOも十分強く差は小さいが、再実行で価値を装う条件では負債中の昇格抑制が追加の保護を与える。良性ShareGPTではS3-FIFOと同程度のヒット率を維持し、一方の利用者が休止する条件では固定分割と違ってほぼ全共有領域を借用できる。つまり改善の主因はキャッシュ物体の価値推定を置き換えることではなく、容量競合時に『誰のブロック群から回収するか』へ状態生成責任を追加した点にある。",
     "key_results": [
-      {"metric":"GPU当たりデコードthroughput","value":"平均2.10倍","baseline":"8×H200","condition":"8×CSI、4モデル、2文脈条件、50/100ms SLO全体","interpretation":"HBFの追加容量で最大batch sizeをHBM容量ではなく遅延予算まで増やせる。"},
-      {"metric":"100ms SLO GPU当たりthroughput","value":"8×CSI 2.49倍、8×CLI 2.00倍","baseline":"8×H200","condition":"100ms decode SLO","interpretation":"遅延予算が十分あるとHBFからより多くの重み/KVを読み、大batchによる演算密度向上を得られる。"},
-      {"metric":"同一batch sizeのlatency差","value":"HBM-only比約4%以内","baseline":"HBM-based GPU","condition":"FlashAccel全最適化有効","interpretation":"SRAM先読みとHBF向け配置により4マイクロ秒級NAND read latencyを大部分隠せる。"},
-      {"metric":"先読みアブレーション","value":"throughput 55%低下","baseline":"完全FlashAccel","condition":"Qwen3-235B、batch 256、100ms SLO","interpretation":"HBFの高access latencyを隠すSRAM prefetchが最も大きな必須要素である。"},
-      {"metric":"重み配置アブレーション","value":"throughput 7%低下","baseline":"完全FlashAccel","condition":"同上","interpretation":"実行順・hyperpage整列がweight access時のplane利用率を改善する。"},
-      {"metric":"KV配置アブレーション","value":"throughput 15%低下","baseline":"完全FlashAccel","condition":"同上","interpretation":"動的active request下ではKVのmegaplane load balanceが重要である。"},
-      {"metric":"最適化なしHBF","value":"throughput 65%低下しHBM-only未満","baseline":"完全FlashAccel","condition":"同上","interpretation":"HBFの大容量・peak bandwidthだけでは性能向上せず、co-designが必要であることを示す。"},
-      {"metric":"LLaMA3.1-405B最大batch例","value":"8×H200は30、8×CSIは理論110","baseline":"8×H200","condition":"15K入力/6K出力、50ms SLO、1要求10GB KV","interpretation":"容量増加が直接batch sizeへ変換される代表例。"},
-      {"metric":"multi-turn KV cache hit率","value":"8×CSI/CLIは理想hit率、16×H200より50%高い","baseline":"16×H200","condition":"multi-turn interaction trace","interpretation":"HBF容量によって完了済みturnのKVを保持し続け、再利用機会を失わない。"},
-      {"metric":"prefill再計算token","value":"最大89%削減","baseline":"8×H200","condition":"multi-turn KV reuse","interpretation":"大容量KV保持はdecode batchだけでなく後続turnのprefill計算削減にも効く。"},
-      {"metric":"KV write overhead","value":"最大988MB/s、約3.9ms、0.4% overhead","baseline":"read/compute時間","condition":"decode 276MB/s + agent input/output比からprefill 712MB/s","interpretation":"readより遅いHBF programでもGQA/MLA下のKV write量なら臨界負荷になりにくいという推定。"},
-      {"metric":"5年間KV write耐久性","value":"148,570TB writesに対しCSI 1,125,000TBW","baseline":"5-year workload estimate","condition":"1152GB HBF、1M P/E cycles仮定","interpretation":"短retentionで耐久性を10倍へ伸ばす仮定下ではKVをFlashへ置ける余裕がある。"},
-      {"metric":"100ms SLO energy efficiency","value":"8×CSI 1.93倍、8×CLI 1.66倍","baseline":"8×H200","condition":"tokens/J","interpretation":"Flash read energyは高いがthroughput向上が消費電力増を上回る。"},
-      {"metric":"HBF storage density","value":"HBM3e比6.50倍","baseline":"標準HBM3e","condition":"保守的な96 wordline層HBFモデル","interpretation":"面積が1.23倍でも容量密度が大きく、容量当たりのシリコン効率が高い。"}
+      {
+        "metric": "一度きり汚染時の被害側キャッシュヒット率",
+        "value": "14.93%（LRU 5.54%より+9.39ポイント、S3-FIFO 6.29%より+8.64ポイント）",
+        "baseline": "LRUおよびS3-FIFO",
+        "condition": "NVIDIA L4、Qwen2.5-1.5B-Instruct、511利用可能KVブロック、被害側ホット集合384ブロック、10組の対応実験",
+        "interpretation": "再利用履歴だけでは新規状態生成者を特定できない激しい一度きり投入で、利用者単位の持続責任が大きく効く。"
+      },
+      {
+        "metric": "4096ブロック規模の一度きり汚染時ヒット率",
+        "value": "PrefixShield 84.87%、LRU 4.92%",
+        "baseline": "LRU",
+        "condition": "置換領域を512から4096ブロックまで8倍に拡大し、被害側作業集合も容量に合わせて拡大",
+        "interpretation": "相対的な汚染強度が下がる大容量条件でも責任追跡が維持され、差は79.95ポイントまで拡大した。"
+      },
+      {
+        "metric": "二回再実行汚染時の被害側キャッシュヒット率",
+        "value": "PrefixShield 95.97%、S3-FIFO 93.96%、LRU 92.87%",
+        "baseline": "S3-FIFOおよびLRU",
+        "condition": "投入済み接頭辞を再実行して再利用証拠を作る条件",
+        "interpretation": "単純な再利用価値方式では攻撃側の再実行も価値として扱われるが、負債中の昇格抑制により2.00ポイントの追加保護を得た。"
+      },
+      {
+        "metric": "良性ShareGPTのキャッシュヒット率",
+        "value": "PrefixShield 38.92%、S3-FIFO 38.85%",
+        "baseline": "S3-FIFO",
+        "condition": "通常のShareGPT会話トレース",
+        "interpretation": "責任会計を追加しても良性再利用を広く犠牲にせず、再利用価値方式と統計的に区別できない水準を維持した。"
+      },
+      {
+        "metric": "空き容量の借用",
+        "value": "PrefixShield 509–510 / 511ブロック、StaticQuota 254–255ブロック",
+        "baseline": "StaticQuota",
+        "condition": "一方の会計グループを休止させ、もう一方を活動させる制御トレース",
+        "interpretation": "固定上限を設けないため、責任制御を導入しても休止利用者の空き容量をほぼ全て利用できる。"
+      },
+      {
+        "metric": "負債昇格抑制の切り分け効果",
+        "value": "被害側ヒット率差+35.16ポイント",
+        "baseline": "負債昇格抑制を外した変種",
+        "condition": "負債解消前の再実行後に中立的な圧力を加える切り分け実験",
+        "interpretation": "負債中は193個の再利用対象を全て昇格させず、攻撃側74ブロックを回収して被害側回収を0に抑えた。負債解消時点では両方式が同じく193個を昇格し、差も収束する。"
+      },
+      {
+        "metric": "回収候補選択のCPU遅延",
+        "value": "512ブロック/8グループで平均0.483 ms・P95 0.511 ms、4096ブロック/32グループで平均3.080 ms・P95 3.149 ms",
+        "baseline": "PrefixShield試作実装内の規模比較",
+        "condition": "ソフトウェアで回収候補を走査する試作選択器",
+        "interpretation": "小規模では1 ms未満だが、大規模では走査費用が明確になり、グループ別・区分別索引への置換が必要になる。"
+      }
     ],
-    "negative_results": "厳しい50ms SLOではCLIがCSIより16.7%低いHBF帯域しか持たないため、DeepSeek-V3とQwen3-235Bで8×H200を僅かに下回る。4GPUのCSI/CLIはaggregate bandwidthが減り、LLaMA3.1-405BとQwen3-Coder-480Bでは重み読出しだけで50msを超えるためその条件でserveできない。16GPUへ増やすとNVLink領域を越えてRDMAが必要になり、expert parallelのall-to-allが重くなるためGPU当たりthroughputは8GPU HBF構成より低下する。HBFのread energyは8pJ/bitでHBM3eの2.99pJ/bitより2.68倍高く、CSI/CLIのTDPは1.31倍/1.23倍になる。書込み耐久性の成立はSLCと短retentionによる1M P/Eという仮定を含む。最も重要な制約は、これらが実HBF GPUの測定ではなくシミュレーション結果である点である。",
-    "interpretation": "FlashAccelの価値は『フラッシュがHBMより安く大容量』という点だけではなく、ピーク帯域を推論が実際に使えるようストレージ内部並列性とLLMアクセス順を揃えたことである。デコードは重みとKVの双方を毎step読むため、HBFをSSDのようにHBMへstageするだけではHBM容量と転送を再び律速にする。GPUから直接HBFを読み、SRAMだけを遅延隠蔽へ使うことで、大容量がそのままbatch sizeとKV retentionへ変わる。アブレーションでPlain HBFがHBMより遅いことは、このco-designなしにはHBFのスペック値が実効性能にならないことを明確に示している。",
-    "quality_impact": "モデル内容やKV値を近似しないため、FlashAccel固有の品質劣化は想定しない。主要な不確実性は回答品質ではなく、将来HBFハードウェアの実効latency/bandwidth/endurance/energyがモデル通りになるかというシステム性能側にある。"
+    "negative_results": "低速回転汚染ではS3-FIFOが98.64%、PrefixShieldが98.90%で差は0.25ポイントと小さく、素早い低価値追い出しだけで十分な条件では責任情報の上積みは限定的である。新規ブロック生成量が補充率の0.54倍に留まる条件では平均負債もLRUとの差も0となり、設定された持続生成許容量の範囲では意図的に追加保護を発動しない。固定割当は被害側作業集合が割当量より大きい条件でヒット率が極端に低下した。",
+    "interpretation": "負債は新規状態生成量が契約上の補充速度を超えたときだけ成長するため、圧力が弱い条件では通常の再利用区分が中心となり、圧力が強いほど利用者単位の責任選択が支配的になる。再実行攻撃では物体単位の再利用履歴だけだと攻撃側も保護されるため、負債昇格抑制の差が現れる。容量が空いている条件では責任選択そのものを使わないため、共有性は失われない。",
+    "quality_impact": "生成品質を近似する圧縮・枝刈り方式ではなく、KVブロックの保持順と所有者責任だけを変更する。モデル出力計算やKV内容を変えないため、品質劣化はない。"
   }
 }
