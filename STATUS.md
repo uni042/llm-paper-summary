@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **140 / 50** |
-| Research ready | **140** |
+| Candidate在庫（Research ready） | **145 / 50** |
+| Research ready | **145** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **5** |
+| Discovery完了 | **2** |
+| 新規job | **11** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **120** |
-| 探索評価候補 | **596** |
-| 重複除外 | **242** |
-| 重複率 | **40.6%** |
-| Novel候補 | **354** |
-| Research候補採用 | **199** |
+| 探索round（stats観測） | **121** |
+| 探索評価候補 | **602** |
+| 重複除外 | **243** |
+| 重複率 | **40.4%** |
+| Novel候補 | **359** |
+| Research候補採用 | **204** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 596 → 重複除外後 354 → Research候補採用 199 → Research完了 70 → Repo収録 70**
+**探索評価 602 → 重複除外後 359 → Research候補採用 204 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -104,6 +104,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | MoE expert prefetch・offload・speculative execution再走査 | 6 | 5 | 0 | 83.3% | 0.0% |
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
+| position-independent KV再利用のforward/backward related-work補完 | 6 | 1 | 5 | 16.7% | 83.3% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime | 5 | 0 | 1 | 0.0% | 20.0% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
@@ -194,11 +195,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T08:26:04+09:00** — position-independent KV再利用のforward/backward related-work補完: 評価 6 / 重複 1 / 採用 5
 - **2026-09-13T08:26:04+09:00** — hybrid-attention・MLA・位置非依存キャッシュ: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T07:58:39+09:00** — multi-node MoE活性パターン配置・edge expert類似性routing: 評価 12 / 重複 10 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 疎注意サービング・GPUメガカーネル・動的コンパイラ: 評価 8 / 重複 5 / 採用 3
 - **2026-09-13T07:58:39+09:00** — MoE speculative decoding・expert offloading・CPU/GPU共同実行: 評価 5 / 重複 3 / 採用 0
-- **2026-09-13T07:58:39+09:00** — MoE expert cache・Flash階層・expert-parallel耐障害性: 評価 7 / 重複 5 / 採用 2
 
 ## 最近処理した論文
 
@@ -217,9 +218,9 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 - P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
+- P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 - P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
-- P88 `arXiv:2606.23521` — Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference
 
 ## 7日比較
 
