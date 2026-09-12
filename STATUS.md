@@ -1,35 +1,35 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 21:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 21:43 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **11 / 50** |
-| Research ready | **11** |
+| Candidate在庫（Research ready） | **10 / 50** |
+| Research ready | **10** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **164** |
+| Research completed（累計） | **165** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **20 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 10）。探索を最優先で継続。
 
 ## 直近の通常worker
 
-Run: **2026-09-12T20:30:00+09:00**
+Run: **2026-09-12T21:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **2** |
-| Repo収録 | **3** |
+| Discovery完了 | **0** |
+| 新規job | **0** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -49,22 +49,22 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **18** |
+| 通常worker run（ledger観測） | **19** |
 | 探索round（stats観測） | **16** |
 | 探索評価候補 | **103** |
 | 重複除外 | **41** |
 | 重複率 | **39.8%** |
 | Novel候補 | **62** |
 | Research候補採用 | **31** |
-| Research完了 | **40** |
-| Repo収録 | **40** |
+| Research完了 | **41** |
+| Repo収録 | **41** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 103 → 重複除外後 62 → Research候補採用 31 → Research完了 40 → Repo収録 40**
+**探索評価 103 → 重複除外後 62 → Research候補採用 31 → Research完了 41 → Repo収録 41**
 
 ## 探索効率（直近24時間）
 
@@ -99,6 +99,7 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 
 ### Research完了
 
+- `arXiv:2602.21548` — DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference
 - `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - `arXiv:2604.15039` — Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter
 - `arXiv:2607.26633` — NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement
@@ -106,15 +107,14 @@ Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime
 - `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
 - `arXiv:2605.02189` — PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers
 - `arXiv:2606.17787` — LUMEN: Coordinated Failure Recovery for Distributed LLM Serving
-- `arXiv:2606.30391` — Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs
 
 ### 次に処理する候補
 
-- P89 `arXiv:2602.21548` — DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P82 `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
+- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
 
 ## 7日比較
 
