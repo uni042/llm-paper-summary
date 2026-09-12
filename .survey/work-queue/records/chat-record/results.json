@@ -2,21 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2609.08189-20260912-1440-v10-a1",
-  "job_id": "job-research-3b370609d7bf485e",
+  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
+  "job_id": "job-research-985814ffefefe223",
   "data": {
-    "overview": "HeRoは25%前後の計算回避目標で三つのLlama系バックボーンすべてにおいて比較した静的剪定・動的ルーティング方式中で最高の集約性能保持率を示す。Llama 3.1-8Bでは実現パラメータスキップ率26.87%で密モデル比100.24%となり、40%級の厳しい条件でも38.82%を回避しつつ97.01%を保持する。履歴分岐やメモリ読み取りを除くアブレーションでは品質が低下し、特にGSM8KとHumanEvalのような多段推論・コード生成で差が大きい。メモリ次元32〜256では結果差が小さく、効果が単なる大容量状態に依存しないことも示される。",
+    "overview": "共有CXL tierだけがcross-nodeでprefix KVをhitさせ、node-local GPU/CPU cacheは別nodeへ移るとfull recomputeへ戻る。2Kから32Kへprefixが伸びるにつれてCXL loadはほぼdata movementで増える一方、recompute TTFTはより急に増えるため、cross-node median TTFT改善は5.5倍から36.6倍へ拡大する。external hit rateは256-token block alignmentで決まる理論上限にほぼ一致し、cross/same差は1〜4%に留まる。一方、CXL fabric自体は27GB/s超を測るのにhost-staged KV pathは5.8GB/sしか出ず、data path最適化余地が大きい。",
     "key_results": [
-      {"metric": "Llama 3.1-8B・25%目標の性能保持", "value": "26.87±0.80%のパラメータを回避し、密モデル比100.24±0.59%", "baseline": "Denseおよび10種類の剪定/ルーティング基準", "condition": "7ベンチマーク、α=1e-3、3乱数種", "interpretation": "約4分の1のモデルパラメータ計算をトークン平均で迂回しながら、密モデルの集約タスク性能を実験誤差内で維持する。"},
-      {"metric": "Llama 3.1-8B・40%目標の性能保持", "value": "38.82±0.84%回避、密モデル比97.01±0.70%", "baseline": "SkipGPT-RTは40.20%回避で81.15%保持", "condition": "対象層を9〜32層へ拡大した厳しい計算予算", "interpretation": "スキップが多く経路差が蓄積する条件ほど、過去の選択を明示的に記憶する利点が大きくなる。"},
-      {"metric": "Llama 2-7B・25%級", "value": "27.87±0.82%回避、94.38±0.54%保持", "baseline": "同予算の比較方式中で最高Retain", "condition": "7ベンチマーク", "interpretation": "Llama 3.1だけでなく旧世代7Bでも最高の集約保持率を示すが、密モデル比では明確な品質低下が残る。"},
-      {"metric": "Llama 2-13B・25%級", "value": "28.38±0.76%回避、94.49±0.59%保持", "baseline": "同予算の比較方式中で最高Retain", "condition": "7ベンチマーク", "interpretation": "モデル規模を13Bへ上げても局所ルータより履歴認識方式が優位だが、100%品質保持ではない。"},
-      {"metric": "履歴除去アブレーション", "value": "9課題平均Retain 97.35%（HeRo=100%基準）", "baseline": "完全版HeRo", "condition": "Llama 3.1-8B、パラメータ回避26.41%対26.87%", "interpretation": "ほぼ同程度の計算回避で履歴分岐だけを除くと性能が落ちるため、完全版の利得は単にFFNを多く実行する保守性では説明できない。"},
-      {"metric": "メモリ読み取り除去", "value": "9課題平均Retain 98.02%", "baseline": "完全版HeRo=100%", "condition": "パラメータ回避26.28%", "interpretation": "補助経路特徴だけでは不十分で、過去状態を線形注意メモリから取得する操作が追加情報を与える。"},
-      {"metric": "メモリ次元感度", "value": "32〜256次元でRetain 100.00〜100.12%、平均正解率73.61〜73.66", "baseline": "64次元主設定", "condition": "Llama 3.1-8B", "interpretation": "試した範囲ではメモリ容量にほぼ敏感でなく、巨大な履歴表現を持たなくても効果が得られる。"}
+      {"metric": "cross-node median TTFT", "value": "2K: 101.6ms、8K: 175.0ms、16K: 224.6ms、32K: 322.6ms", "baseline": "no-cache recomputeは560.7/2223.6/4895.0/11816.9ms", "condition": "T4 shared CXL、replica Bからreuse、n=60/cell", "interpretation": "prefix長が長いほどrecompute回避の価値が増え、改善倍率は5.5/12.7/21.8/36.6倍へ伸びる。"},
+      {"metric": "cross-node external hit rate", "value": "95.4% / 98.0% / 99.0% / 99.5%", "baseline": "256-token block alignment上限", "condition": "2K/8K/16K/32K prefix", "interpretation": "完全に整列したblockは全てhitし、missの大半は末尾のpartial blockで説明できる。"},
+      {"metric": "sharing gap", "value": "cross/same TTFT比1.01〜1.04倍（主要長）", "baseline": "同じCXL tier内のsame-replica reuse", "condition": "cross-nodeとsame-nodeのCXL reuse比較", "interpretation": "このtestbedでは別nodeから読むこと自体の追加latencyは小さく、node境界を越えても共有物理memoryとして機能する。"},
+      {"metric": "memory tier characterization", "value": "CXL 461〜507ns・27.1〜28.5GB/s", "baseline": "local DRAM 111ns・134GB/s、100GbE RoCEv2 1.13μs・12.25GB/s", "condition": "Intel MLCによるtestbed測定", "interpretation": "CXLはlocal DRAMより遅いが、比較したRDMA fabricより低latencyかつ高bandwidthの共有tierになる。"},
+      {"metric": "実効KV data path", "value": "5.8GB/s", "baseline": "CXL fabric約27GB/s", "condition": "host-staged GPU↔host↔CXL path", "interpretation": "fabric能力の多くを使えておらず、zero-copy/P2P DMAで3〜5倍級のheadroomが残る。"},
+      {"metric": "data integrity", "value": "約1.2TB writeでCRC32 mismatch 0、never-stored key 12,298 queryでfalse hit 0", "baseline": "共有directory correctness control", "condition": "cross-replica benchmark/control", "interpretation": "prototypeの実験範囲では物理破損とdirectory false-positiveは観測されない。"}
     ],
-    "negative_results": "HeRoは全バックボーンで密モデル性能を完全に維持するわけではない。Llama 2-7Bと13Bの25%級では保持率が約94.4%に低下し、Llama 3.1-8Bの40%級でも97.01%である。また効率評価はパラメータスキップ率を中心としており、ルータ、アダプタ、64×64深さメモリの追加演算を含む実測速度向上率は示されない。αを1e-4から1e-3へ強めるとスキップ率は13.19%から26.87%へ単調増加する一方、同一スイープ内の性能保持は約1.73ポイント変動し、計算削減を強めれば無損失ではない。メモリ次元を256へ増やしても64次元に対する改善はごく小さく、容量を増やすだけでは大きな追加利得はない。",
-    "interpretation": "履歴認識の価値は、前の層を飛ばした結果として後続表現が通常経路からずれるほど大きくなる。40%級の厳しい条件でSkipGPT-RTとの差が大きくなることはこの説明と整合する。さらに履歴分岐・メモリ読み取り・経路特徴のどれを除いても性能が落ちるため、単一特徴ではなく『現在の状態』『直近の残差変化』『蓄積履歴』を組み合わせることがルーティング判断の安定化に効いている。",
-    "quality_impact": "条件付き計算による近似なので、品質と計算量の交換条件がある。Llama 3.1-8Bの25%級では集約値が密モデルをわずかに上回るが、これは個別課題の変動と追加学習を含む評価であり、無条件に品質向上と解釈すべきではない。より厳しいスキップや別バックボーンでは明確な低下が残る。"
+    "negative_results": "方式はまだperformance-completeなproduction systemではない。GPU↔CXLはhost stagingを介し、27GB/s級fabricに対して実効5.8GB/sしか使わない。evictionはなくslotは実質write-onceで、TTL/LRU/background reclaimもない。2-node、単一L4/node、1 model、100% prefix reuseを意図したclosed-loop条件に限られ、concurrent traffic、capacity pressure、multi-tenant scheduling、pooled RDMA KV baselineを評価していない。DRAではcapacityが30秒publish cycleまでscheduler側へ反映されず、近接claimのovercommitでcompose時失敗が起こり得る。blade power-cycle後のregion stateも自動再発見しない。",
+    "interpretation": "主要な成果はCXLの生帯域が速いことだけではなく、同じmemory regionをKubernetesで複数serving replicaへ配り、その領域内directoryまで含めてcross-node KV reuseを成立させた点にある。node-local cacheではplacement変更時にhitを失うのに対し、shared CXLはcross/same差1〜4%でreuseを維持する。ただし現在のTTFT改善は背景負荷のないlong-prefix再利用で測った上限寄りの結果で、実運用goodputや競合時tail latencyへそのまま外挿できない。",
+    "quality_impact": "圧縮や近似計算ではないので主目的は品質維持である。10同一promptのうち6件はbyte-identical、4件は別GPU間bf16 roundingで最大1 ULP差が発生した。CRC32 mismatchは0であり、著者はこの差をcorruptionではなく浮動小数点再現性の問題と位置付ける。"
   }
 }
