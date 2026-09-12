@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "job_id": "job-777d0b40c119082d",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:00:25+09:00",
+    "round": "specialist-moe-expert-cache-5",
+    "axis": "MoE expert cache・offload・OS tiering",
+    "query_summary": "MoEのexpert cache、offload、prefetch、near-data実行、OSページキャッシュ管理を横断して強い既知候補を再点検した。Cache-Aware Joint Router Adaptation、DynaNDE、Expert Pruning in Over-Dispersed MoE、Kernel-Managed Expert Cache、SPICE、MoElessはいずれも最新正本の既存jobまたは重複記録で収録済みと確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.04895",
+      "arXiv:2609.00407",
+      "arXiv:2609.04453",
+      "arXiv:2608.12103",
+      "arXiv:2608.21240",
+      "arXiv:2603.06350"
+    ],
+    "next_axis_hint": "GPU runtime・kernel compilationへ切り替え、JIT、CUDA Graph、persistent kernel系の未収録候補を確認する",
+    "empty_round_reason": "この軸で軽量評価した強候補は最新正本ですべて既収録だったため。"
+  }
+}
