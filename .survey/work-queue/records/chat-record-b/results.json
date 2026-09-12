@@ -2,20 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.01751-20260913-0430-v10-d",
+  "attempt_id": "attempt-2606.01751-20260913-0430-v10-b-repair1",
   "job_id": "job-research-86f5ed2fa8ac71e7",
   "data": {
-    "overview": "SparseXは、Prefix Cacheではhitしない複雑なsegment再利用でもfull recomputeに近い品質を維持しながらTTFTを大幅に短縮する。Qwen3-32BのLOCOMOではfull recomputeがscore 0.68/TTFT 9.23sなのに対し、SparseX hybridは0.67/0.87sで約10.6倍短い。Qwen3-30B-A3BのLongMemEvalではfull 0.56/15.58sに対しSparseX hybrid 0.60/2.13sで品質を維持・改善しつつ約7.3倍短縮する。RULER 4 task平均ではQwen3-8Bで0.94対full0.96、30B-A3Bで0.94対0.94、32Bでは0.98対0.97となり、naive reuseやCacheBlend/EPICよりvariable tracking等の複雑依存を保つ。multi-agentでもtaskごとの上下はあるが、多くのmodel/taskでvanillaに近いscoreを維持する。",
+    "overview": "SparseXは、接頭辞キャッシュでは一致しない複雑な区間再利用でも、完全再計算に近い品質を保ちながら先頭トークンまでの遅延を大幅に短縮する。Qwen3-32BのLOCOMOでは完全再計算が評価値0.68・9.23秒なのに対し、初期層を完全計算する混合方式は0.67・0.87秒で、品質差を0.01に抑えながら約10.6倍短い。Qwen3-30B-A3BのLongMemEvalでは完全再計算の0.56・15.58秒に対し0.60・2.13秒となり、評価値を維持しつつ約7.3倍短縮する。RULERの4課題平均でもQwen3-30B-A3Bでは完全再計算と同じ0.94、Qwen3-32Bでは完全再計算0.97に対して0.98となる。一方、単純再利用や初期層を完全計算しない方式では変数追跡など複雑な依存で精度が落ちる。",
     "key_results": [
-      {"metric":"Qwen3-32B LOCOMO","value":"score 0.67、TTFT 0.87s","baseline":"full recompute 0.68/9.23s、CacheBlend 0.60/1.32s、EPIC 0.55/0.59s","condition":"SparseX full+sparse hybrid","interpretation":"full品質をほぼ維持しつつTTFTを約10.6×短縮し、単純reuseより大きな品質回復を得る。"},
-      {"metric":"Qwen3-30B-A3B LongMemEval","value":"score 0.60、TTFT 2.13s","baseline":"full recompute 0.56/15.58s、naive 0.51/1.01s、CacheBlend 0.50/2.48s、EPIC 0.53/1.09s","condition":"SparseX hybrid","interpretation":"full recompute以上のjudge scoreを得ながらTTFTを約7.3×短縮し、hybrid補正が長期会話memory retrievalで有効。"},
-      {"metric":"Qwen3-8B RULER平均","value":"0.94","baseline":"full 0.96、naive0.69、CacheBlend0.81、EPIC0.77、SparseX non-hybrid0.88","condition":"MQ-NIAH/VT/CWE/FWE平均","interpretation":"任意位置keyとcross-segment依存が強いbenchmarkでfullに近づき、特にVTは0.94対full1.00。"},
-      {"metric":"Qwen3-30B-A3B RULER平均","value":"0.94","baseline":"full0.94、naive0.70、CacheBlend0.79、EPIC0.76、non-hybrid0.86","condition":"hybrid attention","interpretation":"full recomputeと同じ平均精度でsegment reuseを成立させる。"},
-      {"metric":"Qwen3-32B RULER平均","value":"0.98","baseline":"full0.97、naive0.79、CacheBlend0.86、EPIC0.82、non-hybrid0.91","condition":"hybrid attention","interpretation":"近似reuseでも評価ばらつき範囲でfullを上回り、VT/CWE等で重要token補正が効く。"},
-      {"metric":"multi-agent品質","value":"多数taskでvanilla近傍、一部では改善・一部では数point低下","baseline":"AutoGen/MAD vanilla","condition":"Qwen2.5-7B/72B、Llama3-8B、8 downstream tasks","interpretation":"特定RAG layoutだけでなくagent間context共有へ同じsegment abstractionを適用できるが、losslessではなくtask依存差が残る。"}
+      {"metric":"Qwen3-32BのLOCOMO","value":"評価値0.67、先頭トークン遅延0.87秒","baseline":"完全再計算0.68・9.23秒、CacheBlend 0.60・1.32秒、EPIC 0.55・0.59秒","condition":"初期層を完全計算する混合方式","interpretation":"完全再計算との差を0.01に抑えながら、先頭トークンまでを約10.6倍短縮する。単純再利用より文脈依存を大きく回復している。"},
+      {"metric":"Qwen3-30B-A3BのLongMemEval","value":"評価値0.60、先頭トークン遅延2.13秒","baseline":"完全再計算0.56・15.58秒、単純再利用0.51・1.01秒、CacheBlend 0.50・2.48秒、EPIC 0.53・1.09秒","condition":"混合方式","interpretation":"完全再計算以上の判定得点を得ながら先頭トークンまでを約7.3倍短縮し、長期会話の記憶検索でも選択的補正が有効である。"},
+      {"metric":"Qwen3-8BのRULER平均","value":"0.94","baseline":"完全再計算0.96、単純再利用0.69、CacheBlend 0.81、EPIC 0.77、初期層を完全計算しないSparseX 0.88","condition":"4種類の長文依存課題の平均","interpretation":"任意位置の鍵と区間横断依存が強い条件で完全再計算へ近づく。特に変数追跡で初期層の完全計算が重要になる。"},
+      {"metric":"Qwen3-30B-A3BのRULER平均","value":"0.94","baseline":"完全再計算0.94、単純再利用0.70、CacheBlend 0.79、EPIC 0.76、初期層を完全計算しないSparseX 0.86","condition":"混合方式","interpretation":"完全再計算と同じ平均精度を保ちながら任意位置区間のKV再利用を成立させる。"},
+      {"metric":"Qwen3-32BのRULER平均","value":"0.98","baseline":"完全再計算0.97、単純再利用0.79、CacheBlend 0.86、EPIC 0.82、初期層を完全計算しないSparseX 0.91","condition":"混合方式","interpretation":"評価ばらつきの範囲では完全再計算と同等以上で、重要トークンだけを再計算する補正が変数追跡や語抽出で機能している。"},
+      {"metric":"複数エージェント課題の品質","value":"多くの課題で通常実行に近いが、一部で数ポイント低下","baseline":"AutoGenまたはMulti-Agent Debateの通常実行","condition":"Qwen2.5-7B・72B、Llama3-8Bによる8種類の下流課題","interpretation":"特定の検索拡張生成だけでなくエージェント間文脈共有にも同じ区間抽象を適用できるが、近似方式なので課題依存の品質差は残る。"}
     ],
-    "negative_results": "naive reuseは非常に速いがLOCOMO等で品質が大きく落ちる。SparseX non-hybridもhybridより速い一方、Qwen3-8B RULER平均0.88対hybrid0.94のように難taskで差が出る。hybridはearly layersのfull computeを戻すため、Qwen3-32B LOCOMOで0.66sから0.87sへTTFTが増えるなど速度を少し失う。multi-agentではQwen2.5-72B MedMCQA/MADがvanilla66.4に対しhybrid64.2、Qwen2.5-7B MATH/AutoGenが75.6対73.0など低下例もあり、近似reuseが常に品質中立とはいえない。",
-    "interpretation": "SparseXの利得は、reuse可能segmentを全再計算するか全信頼するかの二択を避ける点にある。現在request固有のnon-reuse queryが既に計算される事実をimportance probeとして再利用し、context依存が強い少数tokenだけ補正するため、追加modelの固定費なくarbitrary interleavingを扱える。hybrid modeは品質が必要なtaskだけ初期layerの正確計算を増やせるため、一つのsystemで速度・品質を段階調整できる。",
-    "quality_impact": "近似方式なので品質保証はfull recomputeと同一ではないが、Sparse-Qとhybrid attentionで多くの長文taskではfullに近いか同等となる。品質差はmodel/taskごとに残るため、deploymentではtop-k、overflow、hybrid boundaryをquality SLOに合わせて校正する必要がある。"
+    "negative_results": "単純再利用は高速だがLOCOMOなどで品質が大きく落ちる。初期層を完全計算しないSparseXも混合方式より速い一方、Qwen3-8BのRULER平均では0.88に対して混合方式0.94となり、難しい依存関係で差が出る。混合方式は初期層の完全計算を戻すため、Qwen3-32BのLOCOMOでは先頭トークンまでが0.66秒から0.87秒へ増える。複数エージェント評価にも通常実行より数ポイント低い例があり、近似再利用が常に品質中立とはいえない。",
+    "interpretation": "利得の本質は、再利用可能区間を全て再計算するか、過去KVを全て無条件に信頼するかという二択を避ける点にある。現在要求で必ず計算される新規クエリを重要度測定に再利用し、文脈依存が強い少数トークンだけを補正するため、追加モデルなしで任意の交互配置を扱える。初期層を完全計算する割合を変えることで、同じ仕組みの中で速度と品質を段階的に交換できる。",
+    "quality_impact": "完全再計算と同一出力を保証する無損失方式ではないが、新規クエリによる重要度選択と初期層の完全計算によって、多くの長文課題では完全再計算に近い品質となる。モデルや課題ごとの差は残るため、実運用では重要トークン比率、境界補正範囲、疎計算へ切り替える層を品質目標に合わせて調整する必要がある。"
   }
 }
