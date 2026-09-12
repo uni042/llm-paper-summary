@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0674ed4e6a95bc3a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.10790",
+      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.10790",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.10790-composable-cxl-kubernetes-shared-memory-llm-serving.md",
+      "priority": 90,
+      "reason": "2026-09-09公開の新着。Composable CXLメモリをKubernetesのDynamic Resource Allocationで共有クラスタ資源として構成し、vLLM/llm-dからノード横断KVキャッシュ階層として利用する。512GiB CXL機器を用いた2ノード実機で、外部KV命中率95.4〜99.5%時にTTFTを5.5〜36.6倍短縮し、同一ノード再利用に対するノード横断の追加遅延差を1〜4%に抑える。CXLを単一ノードの容量拡張ではなく、スケジューラ管理可能な共有KV階層へ昇格させる点が重要。"
+    },
+    {
+      "canonical_id": "arXiv:2602.00328",
+      "title": "Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.00328",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2602.00328-harvest-peer-gpu-caching-llm-inference.md",
+      "priority": 84,
+      "reason": "CPUメモリへのオフロードがPCIe帯域で遅くなる問題に対し、同一サーバ内の未使用GPUメモリを高帯域P2P接続越しの一時キャッシュ階層として動的に利用し、MoE専門家重みとKVキャッシュの双方を格納する。動的な空き容量変化でも正確性を維持しつつ、両種類の取得で2倍超の処理能力向上を示すため、異種GPUメモリ階層と専門家/KV共用キャッシュを接続する研究として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T21:30:00+09:00",
+    "round": "normal-worker-critical-inventory-cxl-peer-gpu-final-replenish",
+    "axis": "composable-cxl-shared-kv-peer-gpu-memory-tier",
+    "query_summary": "在庫13件でcritical水位が続いたため、直前のCXLページ管理から、クラスタ共有CXL KV階層とP2P GPU余剰メモリ階層へ探索を狭めた。一次資料で定量結果を確認し、最新正本のコード検索では識別子・題名とも未検出だった2件を提出した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "この2件が採用され在庫15以上になればresearch優先へ戻す。重複なら次回はCXL/KVから離れてGPUランタイム・仮想メモリまたはMoE I/Oスケジューリングへ回転する。"
+  }
+}
