@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:05:33+00:00",
+  "updated_at": "2026-09-12T16:07:40+00:00",
   "last_run_key": "2026-09-13T00:58:47+09:00",
-  "last_round": "specialist-network-runtime-3",
+  "last_round": "specialist-slo-memory-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1038,6 +1038,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は動的メモリ回収・admission control・SLO-aware scheduler、または今回候補のforward/backward citationへ軸を移す",
       "source_submission": "work-queue/submissions/20260913T0105JST-discovery-specialist-network-runtime-3.json"
+    },
+    {
+      "run_key": "2026-09-13T00:58:47+09:00",
+      "round": "specialist-slo-memory-4",
+      "axis": "SLO-aware scheduling・KV memory hierarchy・動的メモリ回収",
+      "query_summary": "通信/runtime軸の後、SLOとmemory pressureの協調制御へ移動。latency-budget型KV階層管理、GH200 rotary scheduling、未知生成長のnon-clairvoyant scheduling、CUDA VMMによるprefill reserve回収を一次資料抄録で軽量評価し、投入直前に最新HEADとcanonical IDで再dedupeした。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次は今回までの強候補の関連・引用系と、mobile/edge・AI-RANなど異種配置でのKV移送を確認し、既存候補との重複が多ければ探索を収束判定する",
+      "source_submission": "work-queue/submissions/20260913T0108JST-discovery-specialist-slo-memory-4.json"
     }
   ],
   "axes": {
@@ -1630,6 +1645,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次は動的メモリ回収・admission control・SLO-aware scheduler、または今回候補のforward/backward citationへ軸を移す"
+    },
+    "SLO-aware scheduling・KV memory hierarchy・動的メモリ回収": {
+      "last_run_key": "2026-09-13T00:58:47+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次は今回までの強候補の関連・引用系と、mobile/edge・AI-RANなど異種配置でのKV移送を確認し、既存候補との重複が多ければ探索を収束判定する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
