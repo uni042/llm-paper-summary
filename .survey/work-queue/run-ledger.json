@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:17:15.482348+00:00",
+  "updated_at": "2026-09-12T23:24:23.055130+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15746,16 +15746,16 @@
     {
       "run_key": "2026-09-13T07:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:06:40.284188+00:00",
-      "last_recorded_at": "2026-09-12T23:17:15.482348+00:00",
+      "last_recorded_at": "2026-09-12T23:24:23.055130+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 12,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -15815,6 +15815,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34725259864:1",
+          "recorded_at": "2026-09-12T23:24:23.055130+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34725259864",
+            "run_attempt": "1",
+            "source_sha": "aeb8a9388893a3e26bb2bc2460ec061909106afb"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15844,6 +15858,14 @@
         },
         {
           "job_id": "job-71aa62ea72552734",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-907ab6ae40f65b54",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15914,6 +15936,27 @@
           "type": "research",
           "canonical_id": "arXiv:2604.13327",
           "title": "Event Tensor: A Compiler Abstraction for Dynamic Megakernel Generation"
+        },
+        {
+          "job_id": "job-0c31ddf1ad84e2df",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-a60dcea57ad2475d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.23150",
+          "title": "Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns"
+        },
+        {
+          "job_id": "job-research-f1288f57de066f0f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17154",
+          "title": "OrderMoE: An Expert Similarity Driven Distributed Edge MoE Inference"
         }
       ],
       "new_paper_ids": [],
@@ -15921,7 +15964,8 @@
         ".survey/work-queue/results/discovery-specialist-20260913T0804JST-new-arrivals-1.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json",
-        ".survey/work-queue/results/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0820JST-moe-placement-network-5.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
