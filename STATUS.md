@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -22,14 +22,14 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T06:30:00+09:00**
+Run: **2026-09-13T07:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **3** |
+| Discovery完了 | **1** |
+| 新規job | **1** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **114** |
-| 探索評価候補 | **551** |
-| 重複除外 | **212** |
-| 重複率 | **38.5%** |
-| Novel候補 | **339** |
+| 通常worker run（ledger観測） | **21** |
+| 探索round（stats観測） | **115** |
+| 探索評価候補 | **557** |
+| 重複除外 | **216** |
+| 重複率 | **38.8%** |
+| Novel候補 | **341** |
 | Research候補採用 | **188** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 551 → 重複除外後 339 → Research候補採用 188 → Research完了 70 → Repo収録 70**
+**探索評価 557 → 重複除外後 341 → Research候補採用 188 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -91,6 +91,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル | 7 | 2 | 4 | 28.6% | 57.1% |
 | 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation | 7 | 7 | 0 | 100.0% | 0.0% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
+| 2609新着・端末メモリ管理・エッジクラウド協調推論 | 6 | 4 | 0 | 66.7% | 0.0% |
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
@@ -188,11 +189,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T07:58:39+09:00** — 2609新着・端末メモリ管理・エッジクラウド協調推論: 評価 6 / 重複 4 / 採用 0
 - **2026-09-13T07:00:13+09:00** — 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査: 評価 10 / 重複 10 / 採用 0
 - **2026-09-13T07:00:13+09:00** — 適応プリフィル・KV予約・デコード干渉スケジューリング: 評価 3 / 重複 2 / 採用 0
 - **2026-09-13T07:00:13+09:00** — KVページ制御・MoEメモリ分離・復元系の再探索: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation: 評価 7 / 重複 7 / 採用 0
-- **2026-09-13T06:02:25+09:00** — agent workflow/context runtime・branch admission・heterogeneous many-core runtime: 評価 13 / 重複 9 / 採用 4
 
 ## 最近処理した論文
 
