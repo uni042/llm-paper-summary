@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:43 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **78 / 50** |
-| Research ready | **78** |
+| Candidate在庫（Research ready） | **83 / 50** |
+| Research ready | **83** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **179** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **2** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **9** |
+| Discovery完了 | **3** |
+| 新規job | **15** |
 | Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **74** |
-| 探索評価候補 | **341** |
+| 探索round（stats観測） | **75** |
+| 探索評価候補 | **346** |
 | 重複除外 | **96** |
-| 重複率 | **28.2%** |
-| Novel候補 | **245** |
-| Research候補採用 | **112** |
+| 重複率 | **27.7%** |
+| Novel候補 | **250** |
+| Research候補採用 | **117** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 341 → 重複除外後 245 → Research候補採用 112 → Research完了 47 → Repo収録 47**
+**探索評価 346 → 重複除外後 250 → Research候補採用 117 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -89,6 +89,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | CXL共有メモリ・ラック内KV転送・Superchip階層メモリ | 5 | 2 | 0 | 40.0% | 0.0% |
 | Flash・SSD階層メモリと予測先読み | 5 | 3 | 2 | 60.0% | 40.0% |
+| GPU runtime cold-start・MoE network topology・heterogeneous/geo routing | 5 | 0 | 5 | 0.0% | 100.0% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
 | MoE expert paging・SSD cache・runtime parallelism・prefetch | 5 | 0 | 0 | 0.0% | 0.0% |
 | MoE専門家配置・先読み・協調スケジューリング | 5 | 5 | 0 | 100.0% | 0.0% |
@@ -148,11 +149,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T02:29:24+09:00** — GPU runtime cold-start・MoE network topology・heterogeneous/geo routing: 評価 5 / 重複 0 / 採用 5
 - **2026-09-13T02:29:24+09:00** — multimodal弾力的並列化・EPD分離・modality-aware scheduling: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T02:29:24+09:00** — 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T02:29:24+09:00** — 新着KV圧縮・時間集約・長推論再参照: 評価 2 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — heterogeneous GPU cluster・multi-agent workflow・routing/placement: 評価 5 / 重複 0 / 採用 3
-- **2026-09-13T01:55:54+09:00** — CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime: 評価 5 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
@@ -169,11 +170,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 次に処理する候補
 
+- P94 `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
 - P92 `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 - P91 `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
-- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 
 ## 7日比較
 
