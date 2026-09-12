@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T12:41:18.309706+00:00",
+  "updated_at": "2026-09-12T12:44:11.939457+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10439,17 +10439,18 @@
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "first_recorded_at": "2026-09-12T12:41:18.309706+00:00",
-      "last_recorded_at": "2026-09-12T12:41:18.309706+00:00",
+      "last_recorded_at": "2026-09-12T12:44:11.939457+00:00",
       "signals": [
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 1,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -10468,6 +10469,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34694441923:1",
+          "recorded_at": "2026-09-12T12:44:11.939457+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34694441923",
+            "run_attempt": "1",
+            "source_sha": "a7f6e8eadd5c0b06d513973cf6f07ff1b1a15527"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10478,17 +10493,35 @@
           "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-815a11adca713d7e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-ef040c02e2978658",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2602.21548"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260912T2130JST-discovery-815a11adca713d7e.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 353,
       "paper_active_count_after": 354,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
