@@ -15,6 +15,7 @@ quality_effect: null
 evidence_locations: []
 title: 'FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference'
 summary: expert weightを複数の小さな行列単位へ分け、複数の前layerが共通して必要と予測したexpert部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。
+list_summary: 'FIRM-MoEは専門家FFNを射影行列単位へ分解し、複数前層の予測が一致した部分を優先して先読みする。VRAM容量とPCIe帯域に合わせて先読み距離・量を調整する。'
 authors_affiliations: Keyu Chen, Qihang Zhou, Bin Qian, Zhenyu Wen, Wenchao Meng, Shibo He／Zhejiang University, Zhejiang University of Technology
 published: '2026-03-14'
 publication_status: Published
@@ -57,7 +58,7 @@ references_total: 1
 
 # FIRM-MoE: Fine-Grained Expert Decomposition for Resource-Adaptive MoE Inference
 
-> エキスパート 重みを複数の小さな行列単位へ分け、複数の前層が共通して必要と予測したエキスパート部分を優先して先読みし、VRAMとPCIe帯域に合わせて先読み量を変えるMoE推論方式。
+> FIRM-MoEは専門家FFNを射影行列単位へ分解し、複数前層の予測が一致した部分を優先して先読みする。VRAM容量とPCIe帯域に合わせて先読み距離・量を調整する。
 
 ## 概要
 
@@ -72,6 +73,9 @@ MoE エキスパート FFNはgate / up / down projectionなど複数重み matri
 最後に、層ごとのルーティング特性とhardware 資源を見て、何層前から予測するか・何エキスパート分を先読みするかを自動調整する。
 
 元の ルータ / Top-k / エキスパート計算は維持するため、エキスパート substitution型ではなく無損失寄りのsystem optimizationである。
+
+
+FIRM-MoEは射影単位の分割と複数前層の合意で無駄転送を抑える。実機ではFiddlerやllama.cpp比で平均約1.31倍、最大約1.5倍、厳しいキャッシュ条件では最大約1.8倍高速化した。
 
 ## 手法
 

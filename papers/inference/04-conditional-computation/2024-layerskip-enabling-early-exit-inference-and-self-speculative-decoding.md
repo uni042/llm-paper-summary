@@ -17,6 +17,7 @@ quality_effect: null
 evidence_locations: []
 title: 'LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding'
 summary: 学習時に途中layerからでもnext-token予測できるようmodelを訓練し、推論時は前半layerだけで数tokenを仮生成して、残りlayerでまとめて検証することで、別draft modelなしのspeculative decodingを行う。
+list_summary: 'LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。'
 authors_affiliations: Meta AIほか（ACL 2024、著者詳細は一次資料参照）
 published: '2024-08-12'
 publication_status: Published
@@ -88,20 +89,20 @@ references_total: 69
 
 # 層kip: Enabling Early Exit Inference and Self-Speculative デコード
 
-> 学習時に途中層からでもnext-トークン予測できるようmodelを訓練し、推論時は前半層だけで数トークンを仮生成して、残り層でまとめて検証することで、別draft modelなしのspeculative デコードを行う。
+> LayerSkipは同じLLMの前半層を下書き器、後半層を検証器に分け、追加モデルなしで自己投機的デコードを行う。学習で中間層の予測力を高め、検証済み結果だけを採用する。
 
 ## 概要
-層kipは、同じLLMの浅い層を**draft modelの代わり**に使い、残り層でそのdraft トークンを検証するself-speculative デコードを成立させる学習レシピである。
+LayerSkipは、同じLLMの浅い層を**draft modelの代わり**に使い、残り層でそのdraft トークンを検証するself-speculative デコードを成立させる学習レシピである。
 
 前半層を安価な下書き器、後半層を検証器として役割分担させるため、別モデルを用意せずに候補生成と正確な確認を一つのモデル内で行える。
 
-通常のspeculative デコードでは別の小型draft modelを常駐させるため、重み・KV・メモリが追加で必要になる。層kipは同一modelの前半層をdraft、後半層をverifierとして使うので、別modelを持たなくてよい。
+通常のspeculative デコードでは別の小型draft modelを常駐させるため、重み・KV・メモリが追加で必要になる。LayerSkipは同一modelの前半層をdraft、後半層をverifierとして使うので、別modelを持たなくてよい。
 
 ただし既存チェックポイントの中間層は、そのままでは次トークン予測精度が低い。そこで学習時に、**一部層をランダムに飛ばす訓練**と、**途中層からも正解トークンを予測させる損失**を加え、中間層からでも言語モデル出力ヘッドで予測しやすい表現を作る。
 
-H100実機でトークン/sまで測定しており、課題により約1.3〜2.16倍の高速化倍率を示す。単純な層スキップではなく、**浅い予測を後段で検証して誤りを修正するため品質を守りやすい**のが特徴である。
+H100実機のLlama 2 7B/13B（CNN/DailyMail、XSUM、HumanEval、TOPv2）でVanilla/full-depth baselineと比較し、CNN/DM 1.86倍（62.7→127.9 tok/s）、XSUM 1.54倍、HumanEval 1.83倍の高速化を得た。単純な層スキップではなく、**浅い予測を後段で検証して誤りを修正するため品質を守りやすい**のが特徴である。
 
-この検証は最終モデルの出力分布に従って下書きトークンを受理するため、単純な早期終了のように浅い層の誤りをそのまま確定させない。下書きが外れた位置では後段層の結果へ戻り、それ以降を改めて生成する。そのため速度は受理率に依存するが、受理されたトークンについては完全モデルで検証済みの経路を使える。層kipの品質保持は『浅い層が常に正しい』ことではなく、『浅い層を安い候補生成器として使い、間違いを後段で検出する』構造から生じる。
+この検証は最終モデルの出力分布に従って下書きトークンを受理するため、単純な早期終了のように浅い層の誤りをそのまま確定させない。下書きが外れた位置では後段層の結果へ戻り、それ以降を改めて生成する。そのため速度は受理率に依存するが、受理されたトークンについては完全モデルで検証済みの経路を使える。LayerSkipの品質保持は『浅い層が常に正しい』ことではなく、『浅い層を安い候補生成器として使い、間違いを後段で検出する』構造から生じる。
 
 ## 手法
 
