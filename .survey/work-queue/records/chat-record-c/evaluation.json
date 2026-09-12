@@ -1,1 +1,23 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-karat-20260910-1558-v10","job_id":"job-research-1849c8e13a444e6b","data":{"hardware":["H200 GPU実機プロファイル","KARAT想定デバイス: 18 GPNM cores, LPDDR5X 512GB/1.2TB/s, 175W","64 H200 GPU相当の8ノード系"],"software":["自作イベント駆動LLMサービングシミュレータ","ASTRA-sim","既存AttAcc/Duplex/SPNM/STARCの公開シミュレータ"],"model":["GLM-5.2","MiniMax-M3","DeepSeek-V3.2","LLaMA3-70B"],"datasets":["SWE-Bench-Pro agent trace","SWE-chat","KV-cache-tester"],"baselines":["GPU-only H200","HiSparse","Duplex","AttAcc","SPNM","training-free: Quest/STARC/MagicPIG"],"settings":[{"name":"サービス品質","description":"固定同時実行数の閉ループ負荷で、ウォームアップ後にP99 time-between-tokens 100msを満たす最高デコード処理量を探索し、システム電力が異なるためTDPで正規化。"},{"name":"規模","description":"8ノード。GPU-onlyは64 H200。比較方式は総TDPが基準へ最も近い有効ノード構成を選択。ノード間帯域は400GB/s。"},{"name":"シミュレーション","description":"H200操作遅延は実機測定。KARATはH200 MIG 1g.35gbの帯域特性からSM数を換算。通信はASTRA-simでCXLスイッチ接続、600ns往復を仮定。各runは250K生成tokenまたは300秒、最初の20%を除外。"}],"correctness":"KARATはモデル固有または学習不要の疎注意アルゴリズムを変更せず、その計算配置を変える。品質指標ではなく同一注意方式下のシステム性能を比較する設計。","methodology":"三つのモデル固有検索型疎注意モデルとLLaMA3-70B上の三種の学習不要疎注意を、実エージェントトレースで比較。GPU/KARAT比とEP/TPをワークロードごとに探索し、100ms P99 TBT制約下のtokens/s/Wを主指標とする。さらにOFMS/CMR、expert skew、リンク帯域・遅延、コア数、電力一定の構成空間をアブレーションする。","scope":"主結果は専用KARAT実チップ上の実測ではなく、実機プロファイルを入力とするシミュレーション。対象はprefill/decode分離後のdecode pool、長文・検索型疎注意・主にMoEモデルであり、短文や完全実機クラスタで同倍率が得られる保証はない。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2603.29002-20260912-1743-v10-c",
+  "job_id": "job-research-6c35372d7f423594",
+  "data": {
+    "hardware": ["異種構成はAMD Instinct MI210 GPU、AMD Alveo U55C FPGA、AMD EPYC 7v13ホストCPUを同一ノードで接続して実測する。比較対象は同じMI210 GPUを用いる。", "U55Cは16nm、MI210は6nm世代で、FPGAの方が古い製造世代かつ価格も低い条件で比較する。NVIDIA A100については同一ノード実機がないため付録で実測プロファイルに基づく推定を示す。"],
+    "software": ["GPUはROCm 6.3、FPGAはXilinx Vitis HLS 2024.2とVivado 2024.2を使用。P2P DMAを有効化する。", "DeepSeek AttentionはvLLMを改変し、SeerAttention-RはTileLang最適化カーネル、LServeは公式実装をHIPへ移植する。RAG、HMT/Titans再現、MemAgent、LaCTも各既存実装を基礎にする。"],
+    "model": ["DeepSeek V3.2 Expの第一層を使うDeepSeek Attention", "Qwen3-8B + SeerAttention-R", "Llama3.1-8B + LServe", "Llama2-7Bを用いる単段RAG", "Llama3.1-8Bを用いる二段RAG", "Qwen2.5-7B + MemAgent", "HMT/Titans相当のMemory as Context", "LaCTによるテスト時学習"],
+    "datasets": ["各方式の原論文と同じデータセット・設定を可能な限り再現する。", "疎注意は過去トークン長を変えて1トークン当たり遅延を測る。RAG、MemAgent、Memory as Contextは入力長を変え、プリフィルとデコードを含む要求全体の遅延を測る。"],
+    "baselines": ["同一AMD MI210上のGPU単独実装", "BM25Sを含むGPU側RAG実装", "各元論文の最適化済みGPUカーネル"],
+    "correctness": "異種構成は基礎アルゴリズムの検索規則や注意対象を変えず、同じ演算を別デバイスへ配置する。したがって比較では品質を再最適化せず、同一方式・同一設定で遅延とエネルギーだけを変える。",
+    "settings": [
+      {"name": "疎注意", "description": "DeepSeek Attention、SeerAttention-R、LServeについて過去文脈長を増やし、関連度計算・検索のカーネル時間とエンドツーエンド時間を測る。1Mトークンを超えてFPGA HBM参照が増える条件では性能低下も確認する。"},
+      {"name": "検索拡張生成", "description": "DRAGIN、FLARE、固定文単位RAG、二段RAGを評価する。単段RAGではBM25型検索、二段RAGではGPU上の再順位付け器を残し、FPGAへ移せる部分とGPUに残る部分を分ける。"},
+      {"name": "圧縮メモリ", "description": "MemAgentではメモリ生成のデコードをFPGA、メモリを消費するプリフィルをGPUへ分離する。Memory as ContextではメモリをFPGAへ保持し、関連度計算・選択をFPGA、密な処理をGPUへ割り当てる。"},
+      {"name": "バッチ感度", "description": "バッチサイズ1、2、4、8、32で幾何平均高速化率を比較し、GPUの密演算がバッチで効率化する場合にFPGAオフロードの相対利益がどう変わるかを測る。"}
+    ],
+    "methodology": "まずGPU単独実装を用いてメモリ処理パイプラインの時間割合を測り、Python計時で要求全体、PyTorch Profilerで段階別時間を取得する。その後、FPGAへ移したカーネルを同じ入力条件で実行し、カーネル単体の高速化とエンドツーエンドの高速化を分けて報告する。エネルギーは要求またはトークン当たりジュールで比較し、バッチサイズとメモリ長を変えた感度評価も行う。",
+    "scope": "主結果はMI210+U55Cの実機測定であり、シミュレーション中心ではない。ただしNVIDIA A100結果は推定であり、GPUとFPGAが同一ノードに接続された実機測定ではない。評価対象はメモリ処理割合が高い長文方式が中心で、テスト時学習のように密な前向き・後ろ向き計算が支配する方式は異種化の対象外と判断している。"
+  }
+}
