@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T04:47:04.281439+00:00",
+  "updated_at": "2026-09-12T05:23:47.871547+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8599,7 +8599,7 @@
     {
       "run_key": "2026-09-12T13:30:00+09:00",
       "first_recorded_at": "2026-09-12T04:32:36.034668+00:00",
-      "last_recorded_at": "2026-09-12T04:47:04.281439+00:00",
+      "last_recorded_at": "2026-09-12T05:23:47.871547+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -8608,9 +8608,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 8,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -8688,6 +8688,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34675440163:1",
+          "recorded_at": "2026-09-12T05:23:47.871547+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34675440163",
+            "run_attempt": "1",
+            "source_sha": "c8ec6280c83a7a784da4100566c4c25662434513"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8730,6 +8744,14 @@
           "title": "FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-62f183afd4a5d83a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8767,6 +8789,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-3b370609d7bf485e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.08189",
+          "title": "Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-6a9d4d0d506d101b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10964",
+          "title": "Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows"
+        },
+        {
+          "job_id": "job-research-b214cc03fc90af94",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11582",
+          "title": "OmniKVQuant: KV Cache Quantization for Omni-LLMs"
         }
       ],
       "new_paper_ids": [
@@ -8776,12 +8819,13 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1330JST-discovery-8ad6b0886ce60c75.json",
         ".survey/work-queue/results/20260912T1338JST-discovery-746299a613b638bf.json",
-        ".survey/work-queue/results/20260912T1343JST-discovery-a944bb9472d5d7c8.json"
+        ".survey/work-queue/results/20260912T1343JST-discovery-a944bb9472d5d7c8.json",
+        ".survey/work-queue/results/20260912T1422JST-discovery-specialist-62f183afd4a5d83a.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 327,
       "paper_active_count_after": 329,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
