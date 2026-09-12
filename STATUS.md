@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:14 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **66 / 50** |
-| Research ready | **66** |
+| Candidate在庫（Research ready） | **67 / 50** |
+| Research ready | **67** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **15** |
-| 新規job | **40** |
+| Discovery完了 | **16** |
+| 新規job | **42** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **66** |
-| 探索評価候補 | **306** |
-| 重複除外 | **94** |
-| 重複率 | **30.7%** |
-| Novel候補 | **212** |
-| Research候補採用 | **98** |
+| 探索round（stats観測） | **67** |
+| 探索評価候補 | **312** |
+| 重複除外 | **96** |
+| 重複率 | **30.8%** |
+| Novel候補 | **216** |
+| Research候補採用 | **99** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 306 → 重複除外後 212 → Research候補採用 98 → Research完了 47 → Repo収録 47**
+**探索評価 312 → 重複除外後 216 → Research候補採用 99 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -83,6 +83,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
+| agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | CXL共有メモリ・ラック内KV転送・Superchip階層メモリ | 5 | 2 | 0 | 40.0% | 0.0% |
@@ -140,11 +141,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — agentic multi-turn state・interruption・distributed prefix sharing: 評価 6 / 重複 2 / 採用 1
 - **2026-09-13T01:55:54+09:00** — multi-LoRA・推論/微調整co-serving・cross-model KV reuse: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T01:55:54+09:00** — DistServe周辺のforward citation・backward reference補完: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — NVMe外部KV・PIM runtime・page-aware decode scheduling: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — 分離サービングのnetwork flow・prefill迂回・専用interconnect: 評価 3 / 重複 0 / 採用 1
-- **2026-09-13T01:55:54+09:00** — CXL共有メモリ・ラック内KV転送・Superchip階層メモリ: 評価 5 / 重複 2 / 採用 0
 
 ## 最近処理した論文
 
