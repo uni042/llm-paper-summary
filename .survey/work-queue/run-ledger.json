@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:44:59.278920+00:00",
+  "updated_at": "2026-09-12T16:48:19.927698+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T16:44:59.278920+00:00",
+      "last_recorded_at": "2026-09-12T16:48:19.927698+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 22,
+        "new_jobs": 25,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12348,6 +12348,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34706265794:1",
+          "recorded_at": "2026-09-12T16:48:19.927698+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34706265794",
+            "run_attempt": "1",
+            "source_sha": "528c5ae6bca375511fae8d50e594538997ac3401"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12401,6 +12415,14 @@
         },
         {
           "job_id": "job-5945231575e3ff8c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-1cf1e2dacbb5ac28",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12562,6 +12584,27 @@
           "type": "research",
           "canonical_id": "arXiv:2606.08635",
           "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving"
+        },
+        {
+          "job_id": "job-513b50afdb428d0f",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2dbab0db43ceff0b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.10342",
+          "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU"
+        },
+        {
+          "job_id": "job-research-3a13b608454c59c4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.03143",
+          "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing"
         }
       ],
       "new_paper_ids": [],
@@ -12572,7 +12615,8 @@
         ".survey/work-queue/results/20260913T0138JST-discovery-d3909a842ae76980.json",
         ".survey/work-queue/results/20260913T0140JST-discovery-1f8a64f753d53399.json",
         ".survey/work-queue/results/20260913T0142JST-discovery-53325eb4d61afb8e.json",
-        ".survey/work-queue/results/20260913T0144JST-discovery-5945231575e3ff8c.json"
+        ".survey/work-queue/results/20260913T0144JST-discovery-5945231575e3ff8c.json",
+        ".survey/work-queue/results/20260913T0147JST-discovery-1cf1e2dacbb5ac28.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

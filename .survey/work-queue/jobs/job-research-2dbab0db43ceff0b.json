@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-2dbab0db43ceff0b",
+  "type": "research",
+  "parent_job_id": "job-1cf1e2dacbb5ac28",
+  "priority": 84,
+  "canonical_id": "arXiv:2603.10342",
+  "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
+  "source_url": "https://arxiv.org/abs/2603.10342",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10342-agentserve-consumer-gpu-agentic-serving.md",
+  "selection_reason": "agentic workloadをcold prefill、tool結果を追加するresume prefill、latency-criticalなshort decodeへ分解し、単一consumer GPU上でdecodeをprefillから隔離、resume prefillへdynamic budgetを割り当て、CUDA Green Context slotを適応制御する。複数agentが重なる際のhead-of-line blockingを対象に、TTFT最大2.8倍、TPOT最大2.7倍改善を報告する。通常chat servingとは異なるtool-interleaved workloadに対する実装指向候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:47:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}

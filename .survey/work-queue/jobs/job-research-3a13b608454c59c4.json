@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3a13b608454c59c4",
+  "type": "research",
+  "parent_job_id": "job-1cf1e2dacbb5ac28",
+  "priority": 87,
+  "canonical_id": "arXiv:2604.03143",
+  "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing",
+  "source_url": "https://arxiv.org/abs/2604.03143",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md",
+  "selection_reason": "同期roundで複数agentの出力をAll-Gatherし、次roundで全agentが同じ共有blockを再利用するmulti-agent workload特有のKV重複を、request単位ではなくround全体のcollective KV reuseとして処理する。差分保存でsibling cacheをmaster copyに対するblock-sparse diffへ変換し11〜17倍圧縮、vLLM prefix caching比で同時agent数最大2.7倍、prefill最大1.9倍高速化を報告する。multi-agent servingに固有のcollective構造を利用する点が強い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:47:07+00:00",
+  "artifact_transport": "structured_record_v10"
+}
