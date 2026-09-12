@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "audit_paper_quality.py"
+WORKFLOW = Path(__file__).resolve().parents[2] / ".github" / "workflows" / "paper-quality-audit.yml"
 SPEC = importlib.util.spec_from_file_location("audit_paper_quality", SCRIPT)
 assert SPEC and SPEC.loader
 AUDIT = importlib.util.module_from_spec(SPEC)
@@ -64,23 +65,13 @@ class PaperTargetDetectionTests(unittest.TestCase):
             self.assertTrue(AUDIT.is_paper_summary(path))
 
 
-class PaperRootSelectionTests(unittest.TestCase):
-    def test_default_audit_includes_inference_training_and_survey(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            repo_root = Path(tmp)
-            roots = AUDIT.paper_roots(repo_root, "papers/inference")
-            relative = {path.relative_to(repo_root).as_posix() for path in roots}
-            self.assertEqual(
-                relative,
-                {"papers/inference", "papers/training", "papers/survey"},
-            )
-
-    def test_explicit_nondefault_root_is_not_expanded(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            repo_root = Path(tmp)
-            roots = AUDIT.paper_roots(repo_root, "papers/custom")
-            relative = {path.relative_to(repo_root).as_posix() for path in roots}
-            self.assertEqual(relative, {"papers/custom"})
+class RepositoryAuditScopeTests(unittest.TestCase):
+    def test_workflow_explicitly_scans_all_paper_families(self) -> None:
+        workflow = WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("--papers-root papers", workflow)
+        self.assertIn('"papers/inference/**/*.md"', workflow)
+        self.assertIn('"papers/training/**/*.md"', workflow)
+        self.assertIn('"papers/survey/**/*.md"', workflow)
 
 
 class MethodHeadingCompatibilityTests(unittest.TestCase):
