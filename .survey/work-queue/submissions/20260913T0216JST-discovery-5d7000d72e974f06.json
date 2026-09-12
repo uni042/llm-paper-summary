@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-5d7000d72e974f06",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.06557",
+      "title": "Cascade: Exploiting SLO-Aware Latency Budget for Fair and High Goodput LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2608.06557",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-latency-budget-kv-management.md",
+      "priority": 93,
+      "reason": "各requestのSLOから予測残実行時間を引いたlatency budgetを共通signalとして、request schedulingとmulti-tier KV管理を共同制御する。non-resident KVのrestore/prefetch、HBM保持、recomputeまでbudgetで選択し、production traceでvLLM FCFS比goodput最大2.4倍、SLO違反40%削減を報告。階層メモリとschedulerをSLOで統合する強い候補。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
+      "priority": 92,
+      "reason": "KV restorationをrequestごとのrecompute-vs-I/O二択ではなく、token・layer・GPUの3次元parallelismとして扱い、batch-aware schedulerがcompute/I/O資源を共同配分する。多様なmodel/workload/hardwareでTTFTを既存方式比10〜62%削減と報告し、階層I/Oと再計算overlapの設計空間を広げる。"
+    },
+    {
+      "canonical_id": "arXiv:2609.07883",
+      "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2609.07883",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-sloweave-deadline-aware-prefill-chunking.md",
+      "priority": 91,
+      "reason": "SLOWeaveはactive decodeの最短deadline前に終えられる最大prefill chunkをonlineに選び、固定chunkのthroughput-vs-inter-token latency tradeoffを解く。iteration-level GPU runtimeで25ms TPOT時goodputを混合/長文workloadで38〜39%改善し、10msでは2.4〜3.3倍。2026年9月新着で実装可能性も高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.10729",
+      "title": "OrbitFlow: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+      "source_url": "https://arxiv.org/abs/2601.10729",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2601.10729-orbitflow-fine-grained-kv-reconfiguration.md",
+      "priority": 89,
+      "reason": "長文servingでrequest/layer単位のKV配置を軽量ILPとruntime feedbackで継続再構成し、静的CPU offloadの過剰transferを抑える。重負荷時は大memory requestを一時deferして全体SLOを守り、TPOT/TBT SLO達成率を最大66%/48%、throughput最大3.3倍改善。fine-grained offload policyとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2602.16603",
+      "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2602.16603",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+      "priority": 87,
+      "reason": "chunk sizeを小さくすることでしか得られなかったprefill interruptibilityをoperator-level preemptionで実現し、event-driven schedulingで制御overheadを抑える。production traceでheterogeneous SLOを満たしながら最大goodputを最大5.6倍改善と報告し、prefill HoL blockingへの異なる実行粒度設計を示す。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-slo-data-movement-9",
+    "axis": "SLO budget・KV restoration/reconfiguration・adaptive prefill execution",
+    "query_summary": "KV reservation/admission軸から、SLO-aware data movementとprefill execution controlへ移動した。schedulerとmulti-tier KV、recompute/I-O overlap、adaptive chunking、fine-grained offload/preemptionを対象に一次arXiv情報で軽量評価し、最新mainで5件のcanonical IDが未収録であることを再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はSLO schedulerを離れ、CPU-free SmartNIC/persistent GPU control、hybrid CPU-GPU attention、lossless weight/KV compressionなどruntime/hardware co-designへ移る",
+    "empty_round_reason": null
+  }
+}
