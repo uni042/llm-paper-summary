@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0153f88c40851ebb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.01657",
+      "title": "Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches",
+      "source_url": "https://arxiv.org/abs/2608.01657",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.01657-prefixshield-admission-responsibility.md",
+      "priority": 88,
+      "reason": "multi-tenant prefix cacheで、あるtenantが新規KV blockを作ることで別tenantの再利用状態を追い出すadmission責任の不整合を扱うPrefixShield。arXiv抄録ではvLLM実装、LRU/S3-FIFO比較、cache hit改善を報告しており、DBMS/OSのadmission・replacement思想をLLM prefix cacheへ持ち込む隣接系統として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.14946",
+      "title": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.14946",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+      "priority": 87,
+      "reason": "KV圧縮と低位storageへのevictionを別々に扱わず、品質低下とdelayを統一utilityで評価してmulti-tier配置を共同最適化するシステム。arXiv抄録では12 dataset・5 modelで最大2.19倍のTTFT改善を同等品質条件で報告しており、階層KV管理の政策設計として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
+      "priority": 86,
+      "reason": "長文・multi-turn・agentic workloadでのKV復元を、token・layer・GPUの3次元parallelismとして再構成し、recomputeとI/Oをbatched serving下で共同scheduleする研究。arXiv抄録では複数model/workload/hardwareでTTFTを10〜62%削減と報告し、再計算対transferの二者択一を超えるrestore schedulingとして有望。"
+    },
+    {
+      "canonical_id": "arXiv:2504.03775",
+      "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+      "source_url": "https://arxiv.org/abs/2504.03775",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
+      "priority": 82,
+      "reason": "prefill/decode分離でblock単位KV転送呼び出しと不連続memory layoutが生むtransfer overheadを削減し、P/D node役割も負荷に応じて変えるserving framework。arXiv抄録ではKV transfer latency 96%削減とLongBenchで15.2〜48.9%の推論高速化を報告しており、ネットワーク転送最適化の既存系統補完候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-cache-admission-restoration-05",
+    "axis": "KV cache admission/replacement・compression/eviction・復元parallelism",
+    "query_summary": "DBMS/OS隣接のcache admission/replacement、multi-tier compression+eviction、recompute/I/O復元schedule、分離servingのKV転送をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第4roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "SLO-aware serving scheduling、heterogeneous GPU allocation、または重要論文の引用追跡へ移る",
+    "empty_round_reason": null
+  }
+}
