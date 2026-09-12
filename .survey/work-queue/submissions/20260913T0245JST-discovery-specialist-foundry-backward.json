@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-93c319d7de58b930",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.19729",
+      "title": "Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2509.19729",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.19729-gyges-cross-instance-parallelism-transformation.md",
+      "priority": 91,
+      "reason": "Foundryの関連研究から辿った並列化動的再構成系。実行中instanceの並列方式をincoming requestのcontext長変動へ合わせて変更し、page-friendly KV layout、weight padding、transformation-aware schedulerで変換コストを抑える。一次資料では実traceでstate-of-the-art比1.75〜6.57倍throughputを報告しており、静的parallelism前提を崩す重要なサービング研究。"
+    },
+    {
+      "canonical_id": "arXiv:2509.17863",
+      "title": "Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving",
+      "source_url": "https://arxiv.org/abs/2509.17863",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2025-2509.17863-expert-as-a-service-moe-serving.md",
+      "priority": 92,
+      "reason": "Foundryのbackward referenceから得たMoE serving基盤。MoE moduleを独立したstateless serviceへ分離し、CPU-free peer-to-peer通信でfine-grained scalingとfault isolationを実現する。一次資料ではfailure時のthroughput低下2%未満、traffic適応でcompute resource最大37.5%削減を報告しており、expert placement/cacheとは異なるservice disaggregation軸として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.09472",
+      "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.09472",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md",
+      "priority": 89,
+      "reason": "Foundryのcold-start関連backward reference。将来workloadの周期性を使うuniversal GPU worker、evict-aware placement、proactive prewarming、zero-overhead memory switchingでmulti-LLM cold startを抑える。一次資料ではautoscaling系比TTFT最大50.8倍改善、GPU sharing系比最大2.5倍多くrequest処理を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2502.15524",
+      "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+      "source_url": "https://arxiv.org/abs/2502.15524",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.15524-hydraserve-serverless-cold-start.md",
+      "priority": 88,
+      "reason": "Foundryが参照するserverless cold-start基盤。modelを複数serverへ先行配置し、worker内cold-start stageをoverlap、network contention-aware GPU placementとpipeline consolidationを組み合わせる。一次資料ではcold-start latency 1.7〜4.7倍短縮、SLO attainment 1.43〜1.74倍改善を報告し、NSDI'26採択。"
+    },
+    {
+      "canonical_id": "arXiv:2502.09922",
+      "title": "λScale: Enabling Fast Scaling for Serverless Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2502.09922",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.09922-lambdascale-serverless-fast-scaling.md",
+      "priority": 87,
+      "reason": "Foundryのbackward reference。RDMA model multicastとload中にもdistributed inferenceを進めるexecute-while-loadを組み合わせ、λPipeがadaptive multicastと受信node間pipelineを動的構築する。GPU/host memoryの複数storage tierも扱い、一次資料ではtail latency最大5倍改善、cost 31.3%削減を報告する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T02:29:24+09:00",
+    "round": "specialist-foundry-backward-coldstart-elasticity-5",
+    "axis": "Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity",
+    "query_summary": "直前採用候補Foundryの一次資料にある関連研究・参考文献から、Gyges、Expert-as-a-Service、WarmServe、HydraServe、λScaleを抽出し、各arXiv抄録だけで軽量評価した。投入直前に最新mainのidentity index、next discovery job、決定論的research job pathを照合し5件とも未収録・job未存在を確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はforward citation/query expansionでSparseXなど新しいKV reuse研究を確認し、その後SSD/NVMe・heterogeneous memoryへ移る",
+    "empty_round_reason": null
+  }
+}
