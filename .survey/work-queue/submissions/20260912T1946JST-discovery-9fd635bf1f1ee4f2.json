@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "kind": "discovery",
+  "job_id": "job-9fd635bf1f1ee4f2",
+  "source_urls": [
+    "https://arxiv.org/abs/2511.09557",
+    "https://arxiv.org/abs/2606.16352",
+    "https://arxiv.org/abs/2605.05628",
+    "https://arxiv.org/abs/2607.16100"
+  ],
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.09557",
+      "title": "LLM Inference Beyond a Single Node: From Bottlenecks to Mitigations with Fast All-Reduce Communication",
+      "primary_url": "https://arxiv.org/abs/2511.09557",
+      "theme_hint": "大規模LLMのマルチノード推論を実測分析し、NVSHMEMと再帰的倍増を使う階層All-Reduce NVRARでNCCLより低遅延化する通信最適化。Llama 3.1 405Bのデコード偏重テンソル並列でエンドツーエンド改善を評価する。",
+      "priority": 8.8
+    },
+    {
+      "canonical_id": "arXiv:2605.05628",
+      "title": "Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems",
+      "primary_url": "https://arxiv.org/abs/2605.05628",
+      "theme_hint": "CAIS。テンソル並列の集団通信を計算側のメモリ意味論に合わせる計算認識型インスイッチ処理で、通信とGPUカーネルの重畳を改善するハードウェア・ソフトウェア協調設計。",
+      "priority": 8.6
+    },
+    {
+      "canonical_id": "arXiv:2607.16100",
+      "title": "Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives",
+      "primary_url": "https://arxiv.org/abs/2607.16100",
+      "theme_hint": "長文・デコード偏重LLM推論で支配的になる小メッセージGPU集団通信を対象に、対称メモリ・マルチキャスト・バリア削減でハードウェア理論下限近傍まで遅延を削減し、トークン間遅延とスループットへの効果を評価する。",
+      "priority": 8.5
+    },
+    {
+      "canonical_id": "arXiv:2606.16352",
+      "title": "Communication-Efficient Verifiable Attention for LLM Inference",
+      "primary_url": "https://arxiv.org/abs/2606.16352",
+      "theme_hint": "VeriAttn。TEE-GPU間の検証付きLLM推論で、アテンション計算のGPUオフロード、プリフィルの二段パイプライン、GPUメモリ超過時のTEE/GPU分割により通信量とKV再転送を減らすシステム研究。",
+      "priority": 7.7
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T19:30:00+09:00",
+    "round": "20260912T1946JST-network-collective-01",
+    "axis": "networking_collective_communication",
+    "query_summary": "前ラウンドのGPU serving軸から切り替え、マルチノード推論、All-Reduce、NVSHMEM、NVLink/共有メモリ、KV転送、インスイッチ処理を探索。一次資料の題名・要旨・書誌情報で12候補を実質評価し、最新paper identity indexで投入直前に再度重複確認した。",
+    "candidate_count": 12,
+    "duplicate_filtered_count": 8,
+    "duplicate_canonical_ids": [
+      "arXiv:2603.28239",
+      "arXiv:2607.28150",
+      "arXiv:2605.03375",
+      "arXiv:2604.26557",
+      "arXiv:2606.16135",
+      "arXiv:2602.02987",
+      "arXiv:2603.17435",
+      "arXiv:2509.26182"
+    ],
+    "next_axis_hint": "次回は今回のネットワーク軸を反復せず、直近採用論文の参考文献・被引用からOS/DBMS/ストレージのキャッシュ置換・非同期I/O・プリフェッチ原理をLLM階層メモリへ移植できる候補を探索する。"
+  },
+  "worker_note": "candidate inventoryがcriticalのため追加探索を実施。既収録8件を除外し、最新identity indexに存在しない4件だけを送信した。accepted_countはActions側最終重複排除後に確定する。"
+}
