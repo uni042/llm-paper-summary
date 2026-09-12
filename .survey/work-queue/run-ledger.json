@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T21:17:42.434492+00:00",
+  "updated_at": "2026-09-12T21:19:51.762612+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,7 +15070,7 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T21:17:42.434492+00:00",
+      "last_recorded_at": "2026-09-12T21:19:51.762612+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -15079,9 +15079,9 @@
       "counts": {
         "research_completed": 6,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 22,
+        "new_jobs": 23,
         "new_papers": 6,
         "fallback_archived": 0
       },
@@ -15274,6 +15274,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34719564443:1",
+          "recorded_at": "2026-09-12T21:19:51.762612+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34719564443",
+            "run_attempt": "1",
+            "source_sha": "206864fc42af66d1310bbe034486a1706c15e91c"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15383,6 +15397,14 @@
         },
         {
           "job_id": "job-4354f5042e6e20fc",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-28ae279835be9325",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15544,6 +15566,13 @@
           "type": "research",
           "canonical_id": "arXiv:2605.25655",
           "title": "Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers"
+        },
+        {
+          "job_id": "job-02deb7897ac2d559",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -15562,7 +15591,8 @@
         ".survey/work-queue/results/discovery-specialist-20260913T0607JST-kernel-chain-2.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0610JST-moe-prefetch-3.json",
         ".survey/work-queue/results/discovery-specialist-20260913T0613JST-storage-runtime-4.json",
-        ".survey/work-queue/results/discovery-specialist-20260913T0616JST-agent-runtime-5.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0616JST-agent-runtime-5.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0618JST-exhaustion-final-6.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,

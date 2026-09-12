@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T21:16:53+00:00",
+  "updated_at": "2026-09-12T21:18:33+00:00",
   "last_run_key": "2026-09-13T06:02:25+09:00",
-  "last_round": "specialist-agent-runtime-5",
+  "last_round": "specialist-exhaustion-final-6",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "直前strong batch後に複数の実質的に異なる探索軸を再走査したが、強い候補はすべて正本上の既存論文または既存research jobと一致した。隣接するvision/survey/限定的hardware研究は品質・直接関連性の閾値を超えず、追加すべき強候補が残っていないため今回runのexhaustion条件を満たした。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2178,6 +2178,29 @@
       ],
       "next_axis_hint": "strong batchで枯渇判定をリセットし、最新差分、forward/backward citation、MoE、storage/networking、KV/sparse-attention、framework implementationをもう一巡して枯渇判定する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0616JST-agent-runtime-5.json"
+    },
+    {
+      "run_key": "2026-09-13T06:02:25+09:00",
+      "round": "specialist-exhaustion-final-6",
+      "axis": "最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation",
+      "query_summary": "直前のstrong batch後に枯渇判定をリセットし、最新差分、MoE expert cache/offload、KV sparse attention/階層メモリ、storage/networking、GPU runtime/kernel、agent/workflow scheduling、fault recovery、forward/backward citation相当の関連系統を独立に再走査した。OasisKV、kernel-managed expert cache、ScoutAttention、OD-MoE、Pallas、AugServe、SMetricは決定論的research jobで既存確認。SmartGen、SPIN、OServe、HiSparse等も既存。投入直前の最新main HEAD、queue、existing jobs、Library pendingを再確認し、新たに品質閾値を超える未登録候補は残らなかった。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.08097",
+        "arXiv:2608.12103",
+        "arXiv:2603.27138",
+        "arXiv:2512.03927",
+        "arXiv:2608.16477",
+        "arXiv:2512.04013",
+        "arXiv:2607.08565"
+      ],
+      "next_axis_hint": "次回はこのrun後に公開・改訂された新着差分を優先し、今回飽和した軸を機械的に反復しない。新規差分が薄い場合は新しいforward citationまたは実装公開から探索軸を更新する。",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0618JST-exhaustion-final-6.json"
     }
   ],
   "axes": {
@@ -3430,6 +3453,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.6923076923076923,
       "next_axis_hint": "strong batchで枯渇判定をリセットし、最新差分、forward/backward citation、MoE、storage/networking、KV/sparse-attention、framework implementationをもう一巡して枯渇判定する"
+    },
+    "最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation": {
+      "last_run_key": "2026-09-13T06:02:25+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 7,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "次回はこのrun後に公開・改訂された新着差分を優先し、今回飽和した軸を機械的に反復しない。新規差分が薄い場合は新しいforward citationまたは実装公開から探索軸を更新する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
