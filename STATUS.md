@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **177** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **0 / 24** |
+| Maintenance counter | **1 / 24** |
 
 ### 注意事項
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **20** |
-| 新規job | **52** |
+| Discovery完了 | **21** |
+| 新規job | **53** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,11 +51,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **71** |
-| 探索評価候補 | **332** |
+| 探索round（stats観測） | **72** |
+| 探索評価候補 | **334** |
 | 重複除外 | **96** |
-| 重複率 | **28.9%** |
-| Novel候補 | **236** |
+| 重複率 | **28.7%** |
+| Novel候補 | **238** |
 | Research候補採用 | **105** |
 | Research完了 | **45** |
 | Repo収録 | **45** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 332 → 重複除外後 236 → Research候補採用 105 → Research完了 45 → Repo収録 45**
+**探索評価 334 → 重複除外後 238 → Research候補採用 105 → Research完了 45 → Repo収録 45**
 
 ## 探索効率（直近24時間）
 
@@ -141,15 +141,16 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | multi-tenant prefix安全性・multi-agent workflow prefix scheduling | 2 | 0 | 0 | 0.0% | 0.0% |
 | 動的parallelism再構成・KV state migration | 2 | 0 | 2 | 0.0% | 100.0% |
+| 新着KV圧縮・時間集約・長推論再参照 | 2 | 0 | 0 | 0.0% | 0.0% |
 | 複数ラウンド分離サービング・異種メモリ処理 | 2 | 0 | 2 | 0.0% | 100.0% |
 
 ### 直近5探索round
 
+- **2026-09-13T02:29:24+09:00** — 新着KV圧縮・時間集約・長推論再参照: 評価 2 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — heterogeneous GPU cluster・multi-agent workflow・routing/placement: 評価 5 / 重複 0 / 採用 3
 - **2026-09-13T01:55:54+09:00** — CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — SLO budget・KV restoration/reconfiguration・adaptive prefill execution: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — output-length uncertainty・KV reservation・memory-constrained admission/scheduling: 評価 5 / 重複 0 / 採用 1
-- **2026-09-13T01:55:54+09:00** — agentic multi-turn state・interruption・distributed prefix sharing: 評価 6 / 重複 2 / 採用 1
 
 ## 最近処理した論文
 
