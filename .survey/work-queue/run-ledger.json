@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:25:51.038359+00:00",
+  "updated_at": "2026-09-12T18:37:50.389629+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13943,6 +13943,80 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
+      "paper_active_count_after": 374,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-13T03:30:00+09:00",
+      "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
+      "last_recorded_at": "2026-09-12T18:37:50.389629+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 3,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34711706400:1",
+          "recorded_at": "2026-09-12T18:37:50.389629+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34711706400",
+            "run_attempt": "1",
+            "source_sha": "9db8f46f5c16ec2837e8275fe3303ef1575da29b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-91c5a3b7cb2ac1b7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-2e81a34f6363831f",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-87da19d91d5900c3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2503.03777",
+          "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference"
+        },
+        {
+          "job_id": "job-research-a80e9a452b825fdf",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.21231",
+          "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 374,
       "paper_active_count_after": 374,
       "last_successful_action": "discovery_or_queue_expanded"
     }

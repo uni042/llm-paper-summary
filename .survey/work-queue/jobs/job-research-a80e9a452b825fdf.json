@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-a80e9a452b825fdf",
+  "type": "research",
+  "parent_job_id": "job-91c5a3b7cb2ac1b7",
+  "priority": 87,
+  "canonical_id": "arXiv:2604.21231",
+  "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference",
+  "source_url": "https://arxiv.org/abs/2604.21231",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.21231-sparkv-overhead-aware-on-device-kv-loading.md",
+  "selection_reason": "prefillで必要なKVを端末で再計算するかクラウドからstreamするかをchunk単位のコストで選び、通信と計算を重ねつつ無線・端末資源変動に応じてscheduleをruntime補正する。TTFTを1.3〜5.1倍短縮し、要求当たりエネルギーを1.5〜3.3倍改善しており、KV階層管理をedge/cloud協調まで拡張する研究として有用である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:36:38+00:00",
+  "artifact_transport": "structured_record_v10"
+}
