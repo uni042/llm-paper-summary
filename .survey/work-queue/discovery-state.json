@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T15:15:12+00:00",
+  "updated_at": "2026-09-12T15:16:57+00:00",
   "last_run_key": "2026-09-13T00:00:00+09:00",
-  "last_round": "specialist-moe-saturated-6",
+  "last_round": "specialist-kv-saturated-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "MoEの専門家配置・先読み・負荷分散・多階層スケジューリングで見つかった強候補は、最新のidentityとexisting jobsですべて既存と判定された。",
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "KV cacheの共有・復元・予約・非一様保持で見つかった強候補は、最新のidentityとexisting jobsですべて既存と判定された。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -953,6 +953,26 @@
       ],
       "next_axis_hint": "KV multi-turn管理・復元・不確実性対応を独立軸として再確認する",
       "source_submission": "work-queue/submissions/20260913T0015JST-discovery-moe-saturated-6.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-kv-saturated-7",
+      "axis": "KV multi-turn管理・復元・予約不確実性",
+      "query_summary": "multi-turn KV sharing、KV restoration、output-length uncertainty、non-uniform KV retentionを独立軸で再走査した。強候補は最新正本で既収録または既存jobだった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2607.16892",
+        "arXiv:2606.06302",
+        "arXiv:2604.25080"
+      ],
+      "next_axis_hint": "直近2609新着とvLLM/SGLang周辺の実装・関連論文経路を横断し、漏れがなければ今回runの探索回路を終了候補とする",
+      "source_submission": "work-queue/submissions/20260913T0017JST-discovery-kv-saturated-7.json"
     }
   ],
   "axes": {
@@ -1495,6 +1515,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "KV multi-turn管理・復元・不確実性対応を独立軸として再確認する"
+    },
+    "KV multi-turn管理・復元・予約不確実性": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "直近2609新着とvLLM/SGLang周辺の実装・関連論文経路を横断し、漏れがなければ今回runの探索回路を終了候補とする"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
