@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-244f923379fb2dfa",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "priority": 82,
+      "reason": "Promptごとの遅延・ピークメモリ制約に応じてKV圧縮構成を動的選択する新しいシステム軸。複数既存圧縮法を統合し、制約付き成功率で静的構成を上回り、コード公開もある。"
+    },
+    {
+      "canonical_id": "arXiv:2608.25523",
+      "title": "TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.25523",
+      "priority": 85,
+      "reason": "マルチエージェントのDAG進行度とprefix KV保持を共同最適化するSGLang実装のスケジューラ。prefix locality単独最適化との差分が明確で、JCT改善を実測している。"
+    },
+    {
+      "canonical_id": "arXiv:2608.01891",
+      "title": "Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling",
+      "source_url": "https://arxiv.org/abs/2608.01891",
+      "priority": 83,
+      "reason": "AttentionとFFNを分離し演算子単位DVFS・資源割当・動的マイクロバッチを共同最適化するSGLang実装。A800上の実測でSLO維持下のenergy/token削減を示す。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T06:02:25+09:00",
+    "round": "specialist-adaptive-kv-agent-energy-1",
+    "axis": "適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving",
+    "query_summary": "直前のhash/KV系探索をそのまま反復せず、2026年8-9月のKV適応制御、multi-agent prefix状態スケジューリング、Attention/FFN分離サービングへ軸を分散して一次arXivページを軽量評価した。投入直前に最新main HEADとrepo全体の識別子検索、Library pendingを再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はGPU runtime/kernel scheduling、forward citation、またはSSD/NVMe expert I/Oの独立軸を優先する",
+    "empty_round_reason": null
+  }
+}
