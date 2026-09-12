@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2605.01708-20260913-0530-v10-g",
-  "job_id": "job-research-2466f653227bab25",
+  "attempt_id": "attempt-2606.29986-20260913-0530-v10-g",
+  "job_id": "job-research-9ec262cfb6759c96",
   "data": {
-    "hardware": "主な圧縮器の評価はNVIDIA H200 GPUで行う。追加の世代比較としてA100、H100、B200を測定し、圧縮帯域はそれぞれ352.5、579.8、637.9 GB/s、復元帯域は842.6、1486.3、2607.4 GB/sを報告する。分離配信評価環境はデュアルIntel Xeon Platinum 8468とMellanox ConnectX-7を含み、RoCE 4×200Gbps相当の高速経路に加えて低速NIC構成でも測る。",
-    "software": "SplitZipのCUDA実装をMooncakeのKV転送経路とSGLangへ統合する。比較対象にはnvCOMP Bitcomp、ZipServ系GPU圧縮器、複数の指数符号化変種を含める。公式コードはIntelligent-Microsystems-Lab/SplitZipで公開されている。",
-    "methodology": "圧縮器単体ではQwen3-32Bから取得した256M個のBF16 KV値を主に使い、圧縮率、例外率、圧縮・復元帯域を測る。符号表設計では上位8指数と上位16指数、動的頻度計算と事前較正、番兵例外方式と明示的位置方式を切り分けて比較する。データセット間の一般化はWikiText-2、HumanEval、GSM8K、MMLU、Penn Treebank等で被覆率を確認する。Mooncake評価ではLlama-3-8BとQwen3-30B-A3Bで系列長とバッチを変え、未圧縮転送との速度比を測る。SGLang評価ではQwen3-32Bを使い、バッチ1では系列長512〜128K、バッチ16では各要求の系列長を128〜64Kへ変えて、先頭トークン遅延と要求スループットを測る。さらにFP8 E5M2/E4M3への適用、複数GPU世代、ビット完全一致も検証する。",
-    "scope": "主眼はプリフィル・デコード分離で通信がボトルネックになる環境の無損失KV転送削減である。モデル品質改善やKV容量そのものの長期保存は対象外で、受信後には元のKV全体を復元する。利得は通信帯域、KVサイズ、例外率、カーネル起動費用に依存し、短い系列やNVLink級の非常に高速な転送では圧縮処理が相対的に重くなり得る。FP8でも指数形式によっては有効だが、E4M3では圧縮後サイズが増える。",
-    "workloads": ["Qwen3-32Bの256M BF16 KV値", "Llama-3-8BのMooncake分離転送", "Qwen3-30B-A3BのMooncake分離転送", "Qwen3-32BのSGLang分離配信", "WikiText-2・HumanEval・GSM8K・MMLU・Penn Treebank", "FP8 E5M2/E4M3"],
-    "baselines": ["未圧縮KV転送", "nvCOMP Bitcomp", "ZipServ GPU圧縮", "上位8指数方式", "動的符号表方式", "上位15指数＋番兵方式"],
-    "metrics": ["圧縮率", "例外率", "圧縮帯域", "復元帯域", "KV転送時間", "先頭トークン遅延", "要求スループット", "生成一致と最大ロジット差"],
-    "reproducibility": "論文は圧縮形式、サイズ式、例外表現、GPUカーネル設計、主要ハードウェア、モデル、系列長・バッチ範囲を示し、公式CUDA実装と統合コードを公開している。"
+    "hardware": "プリフィルはTenstorrent Blackhole p150bを4基、デコードはNVIDIA A100 80GBを1基使用し、100Gbps RoCE/RDMAで接続する。ホスト側CPUとネットワークを含む実機構成で、同じA100をプリフィルとデコードへ使う同種HBM分離方式と比較する。",
+    "software": "デコード基盤はvLLM 0.19.1を用い、PagedAttentionへBFP8の遅延復元処理を融合する。Tenstorrent側はBFP8/BFP4ネイティブ実行とデバイス主導KV送信を実装する。比較ではDistServe型の同種分離構成と、異種機を同居させるSarathi系の理想化静的分割を用いる。接頭辞キャッシュは無効化してKV再利用の影響を除く。",
+    "methodology": "Qwen3の4B、8B、14B、32Bを使い、ShareGPT、LongBench、arXiv要約系ワークロードでPoisson到着を生成する。各モデルにTTFTとトークン間遅延のサービス品質目標を設定し、両方を満たす要求が90%以上となる最大到着率を有効スループットとして測る。4Bは512入力/512出力、8Bは1024/384、14Bは2048/256、32Bは4096/64トークンを中心に評価する。費用評価ではA100費用を1とし、Blackhole p150を約1/12として構成費と有効スループットの比を比較する。品質はQwen3-8B/32BでMATH500、AIME 2024、AIME 2025を測り、BF16全工程、BFP8全工程、HMA-Serveの段階別精度を比較する。構成要素評価ではBFP8プリフィル性能、層別転送、デバイス主導送信、遅延復元を個別に測る。",
+    "scope": "評価は実際のGDDR系TenstorrentアクセラレータとHBM系NVIDIA GPUを跨ぐ構成で、異ベンダー・異数値形式の実装問題を含む。一方、プリフィル機はBlackhole、デコード機はA100に固定され、他ベンダー組合せの一般化は未実証である。4Bの短いプリフィルではA100の方が速く、異種構成は常に性能優位ではない。100Gbpsネットワークと特定のモデル長を前提とするため、より高速なネットワークや極端な長文では転送・復元の支配率が変わる。",
+    "workloads": ["Qwen3-4B ShareGPT", "Qwen3-8B ShareGPT", "Qwen3-14B LongBench", "Qwen3-32B arXiv要約", "MATH500", "AIME 2024", "AIME 2025"],
+    "baselines": ["DistServe型A100同種分離構成", "Sarathi-Hetero Oracle", "全工程BF16", "全工程BFP8", "素朴な一括KV形式変換"],
+    "metrics": ["90%サービス品質達成時の有効スループット", "費用当たり有効スループット", "先頭トークン遅延", "トークン間遅延", "KV転送帯域", "復元時間", "生成品質正解率"],
+    "reproducibility": "論文は使用アクセラレータ、ネットワーク、vLLM版、モデル、入力・出力長、サービス品質目標、費用正規化、品質ベンチマークを明示する。公式コードは未確認のため、完全再現には論文記載のTenstorrent側実装を再構築する必要がある。"
   }
 }
