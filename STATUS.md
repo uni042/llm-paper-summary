@@ -1,19 +1,19 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 06:19 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 06:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **130 / 50** |
-| Research ready | **130** |
+| Candidate在庫（Research ready） | **129 / 50** |
+| Research ready | **129** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **203** |
+| Research completed（累計） | **204** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **4 / 24** |
+| Maintenance counter | **5 / 24** |
 
 ### 注意事項
 
@@ -26,11 +26,11 @@ Run: **2026-09-13T05:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **6** |
+| Research完了 | **7** |
 | Audit完了 | **0** |
-| Discovery完了 | **8** |
-| 新規job | **22** |
-| Repo収録 | **6** |
+| Discovery完了 | **9** |
+| 新規job | **23** |
+| Repo収録 | **7** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -50,22 +50,22 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **110** |
-| 探索評価候補 | **526** |
-| 重複除外 | **188** |
-| 重複率 | **35.7%** |
+| 通常worker run（ledger観測） | **20** |
+| 探索round（stats観測） | **111** |
+| 探索評価候補 | **533** |
+| 重複除外 | **195** |
+| 重複率 | **36.6%** |
 | Novel候補 | **338** |
 | Research候補採用 | **188** |
-| Research完了 | **71** |
-| Repo収録 | **71** |
+| Research完了 | **72** |
+| Repo収録 | **72** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 526 → 重複除外後 338 → Research候補採用 188 → Research完了 71 → Repo収録 71**
+**探索評価 533 → 重複除外後 338 → Research候補採用 188 → Research完了 72 → Repo収録 72**
 
 ## 探索効率（直近24時間）
 
@@ -88,6 +88,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル | 7 | 2 | 4 | 28.6% | 57.1% |
+| 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation | 7 | 7 | 0 | 100.0% | 0.0% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
@@ -184,16 +185,17 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 直近5探索round
 
+- **2026-09-13T06:02:25+09:00** — 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation: 評価 7 / 重複 7 / 採用 0
 - **2026-09-13T06:02:25+09:00** — agent workflow/context runtime・branch admission・heterogeneous many-core runtime: 評価 13 / 重複 9 / 採用 4
 - **2026-09-13T06:02:25+09:00** — near-storage KV処理・動的layer/KV runtime adaptation: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T06:02:25+09:00** — MoE expert prefetch・offload・speculative execution再走査: 評価 6 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — GPU低ビットkernel/runtime・大容量メモリ型chain serving: 評価 3 / 重複 1 / 採用 2
-- **2026-09-13T06:02:25+09:00** — 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving: 評価 3 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 - `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 - `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 - `arXiv:2506.21901` — A Survey of LLM Inference Systems
@@ -201,15 +203,14 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 - `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
 - `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - `arXiv:2512.09472` — WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving
-- `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
 
 ### 次に処理する候補
 
-- P90 `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 - P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 - P88 `arXiv:2606.23521` — Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference
 - P88 `arXiv:2512.22219` — Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs
+- P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
 
 ## 7日比較
 
