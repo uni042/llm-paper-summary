@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 18:29 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 18:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -51,22 +51,22 @@ Run: **2026-09-12T18:00:00+09:00** / Round: **specialist-scheduling-engine-4**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **16** |
+| 通常worker run（ledger観測） | **15** |
 | 探索round（stats観測） | **11** |
 | 探索評価候補 | **57** |
 | 重複除外 | **15** |
 | 重複率 | **26.3%** |
 | Novel候補 | **42** |
 | Research候補採用 | **19** |
-| Research完了 | **37** |
-| Repo収録 | **36** |
+| Research完了 | **29** |
+| Repo収録 | **29** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 57 → 重複除外後 42 → Research候補採用 19 → Research完了 37 → Repo収録 36**
+**探索評価 57 → 重複除外後 42 → Research候補採用 19 → Research完了 29 → Repo収録 29**
 
 ## 探索効率（直近24時間）
 
