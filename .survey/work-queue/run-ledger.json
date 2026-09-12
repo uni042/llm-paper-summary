@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T10:13:03.453346+00:00",
+  "updated_at": "2026-09-12T10:36:23.790325+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9907,6 +9907,66 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 342,
+      "paper_active_count_after": 344,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-12T19:30:00+09:00",
+      "first_recorded_at": "2026-09-12T10:36:23.790325+00:00",
+      "last_recorded_at": "2026-09-12T10:36:23.790325+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34688850258:1",
+          "recorded_at": "2026-09-12T10:36:23.790325+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34688850258",
+            "run_attempt": "1",
+            "source_sha": "19842a0831dd5a5db0110454d68c79fc76b71821"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-c797669b52ac6c35",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-a6656c3eeb0b76a3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260912T1930JST-discovery-c797669b52ac6c35.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 344,
       "paper_active_count_after": 344,
       "last_successful_action": "discovery_or_queue_expanded"
     }

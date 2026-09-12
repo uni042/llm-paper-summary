@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T10:12:06+00:00",
-  "last_run_key": "2026-09-12T19:00+09:00",
-  "last_round": "specialist-20260912T1900-01",
+  "updated_at": "2026-09-12T10:35:39+00:00",
+  "last_run_key": "2026-09-12T19:30:00+09:00",
+  "last_round": "20260912T1930JST-hpc-gpu-serving-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -496,6 +496,28 @@
       ],
       "next_axis_hint": "収録済み重要PIM/HBM/GPU-runtime論文と今回採用候補の被引用・参考文献展開、およびstorage/networking隣接システムへ軸を移す。",
       "source_submission": "work-queue/submissions/20260912T1902JST-discovery-specialist-01.json"
+    },
+    {
+      "run_key": "2026-09-12T19:30:00+09:00",
+      "round": "20260912T1930JST-hpc-gpu-serving-01",
+      "axis": "hpc_gpu_collective_serving",
+      "query_summary": "直近のLLM serving、GPU memory/PIM、serverless scheduling、MoE expert placementと、隣接するGPU/HPC communication系を横断。一次資料または書誌情報で9候補を実質評価し、最新identity indexとrepo検索で重複を再確認した。",
+      "candidate_count": 9,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.16892",
+        "arXiv:2606.24506",
+        "arXiv:2604.25080",
+        "arXiv:2608.03036",
+        "arXiv:2602.11521",
+        "arXiv:2601.20309"
+      ],
+      "next_axis_hint": "今回と異なる軸として、直近採用済みsystems論文の被引用・参考文献からOS/storage/networking実装へcitation chasingし、SSD/NVMe・hierarchical memory・serving runtimeの未収録研究を優先する。",
+      "source_submission": "work-queue/submissions/20260912T1930JST-discovery-c797669b52ac6c35.json"
     }
   ],
   "axes": {
@@ -768,6 +790,16 @@
       "accepted_count": 5,
       "duplicate_ratio": 0.6428571428571429,
       "next_axis_hint": "収録済み重要PIM/HBM/GPU-runtime論文と今回採用候補の被引用・参考文献展開、およびstorage/networking隣接システムへ軸を移す。"
+    },
+    "hpc_gpu_collective_serving": {
+      "last_run_key": "2026-09-12T19:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "今回と異なる軸として、直近採用済みsystems論文の被引用・参考文献からOS/storage/networking実装へcitation chasingし、SSD/NVMe・hierarchical memory・serving runtimeの未収録研究を優先する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
