@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **42 / 50** |
-| Research ready | **42** |
+| Candidate在庫（Research ready） | **44 / 50** |
+| Research ready | **44** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **174** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T00:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **10** |
+| Discovery完了 | **6** |
+| 新規job | **13** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **46** |
-| 探索評価候補 | **226** |
+| 探索round（stats観測） | **47** |
+| 探索評価候補 | **228** |
 | 重複除外 | **72** |
-| 重複率 | **31.9%** |
-| Novel候補 | **154** |
-| Research候補採用 | **71** |
+| 重複率 | **31.6%** |
+| Novel候補 | **156** |
+| Research候補採用 | **73** |
 | Research完了 | **50** |
 | Repo収録 | **50** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 226 → 重複除外後 154 → Research候補採用 71 → Research完了 50 → Repo収録 50**
+**探索評価 228 → 重複除外後 156 → Research候補採用 73 → Research完了 50 → Repo収録 50**
 
 ## 探索効率（直近24時間）
 
@@ -115,15 +115,16 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
+| 動的parallelism再構成・KV state migration | 2 | 0 | 2 | 0.0% | 100.0% |
 | 複数ラウンド分離サービング・異種メモリ処理 | 2 | 0 | 2 | 0.0% | 100.0% |
 
 ### 直近5探索round
 
+- **2026-09-13T00:58:47+09:00** — 動的parallelism再構成・KV state migration: 評価 2 / 重複 0 / 採用 2
 - **2026-09-13T00:58:47+09:00** — 異種GPU/PNM・cold MoE pool・edge KV migration: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — SLO-aware scheduling・KV memory hierarchy・動的メモリ回収: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T00:58:47+09:00** — 分散推論・collective通信・disaggregated電力/runtime: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T00:58:47+09:00** — OS階層管理・専門家キャッシュ・KV先読み・SSD再利用: 評価 4 / 重複 0 / 採用 1
-- **2026-09-13T00:58:47+09:00** — エージェント配信・Multi-LoRA・意味検索型KV管理: 評価 3 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
@@ -140,11 +141,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 次に処理する候補
 
+- P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
+- P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P88 `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
 - P88 `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - P88 `arXiv:2501.01005` — FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
-- P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
-- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 
 ## 7日比較
 
