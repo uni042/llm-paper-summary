@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ad1c8e84bbe900ae",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.29207",
+      "title": "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding",
+      "source_url": "https://arxiv.org/abs/2606.29207",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29207-kernelflume-elastic-core-attention-scaling.md",
+      "priority": 91,
+      "reason": "projection/FFNをweight node、KVを持つcore-attentionをweightless attention nodeへ分離し、長文agentic decodeの状態量に応じてattention側だけをelasticにscaleするserving architecture。arXiv抄録ではA6000/H100実機、UCX/CUDA Graph連携、p99 TPOT維持とcost削減を報告しており、instance単位scale-outを超える新しい分離軸として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2509.24626",
+      "title": "SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.24626",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-hierarchical-sparse-attention-serving.md",
+      "priority": 89,
+      "reason": "dynamic sparse attentionで未選択KVをHBMへ残す容量問題に対し、HBM-DRAM階層化、fragmentation-aware transfer、working-set-aware batch control、layer-segmented prefillを共同設計するserving system。arXiv抄録ではmean TTFT最大9.26倍改善、token throughput最大3.14倍を報告しており、階層KVとsparse attentionの接続候補として高価値。"
+    },
+    {
+      "canonical_id": "arXiv:2501.01005",
+      "title": "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2501.01005",
+      "paper_path": "papers/inference/02-hardware-accelerators/2025-2501.01005-flashinfer-attention-engine-serving.md",
+      "priority": 88,
+      "reason": "block-sparse KV形式、JIT customizable attention template、CUDAGraph互換のload-balanced schedulingを統合し、vLLM/SGLang等へ広く組み込まれたattention engine。新着ではないが、arXiv抄録でkernel-level/end-to-endの大幅なlatency改善と実運用framework統合を示すため、推論runtime系統の重要な未収録候補として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2510.11331",
+      "title": "Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2510.11331",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11331-edge-speculative-decoding-serving.md",
+      "priority": 76,
+      "reason": "異種edge nodeへdraft/target modelを分散し、speculative decodingとpipeline parallelism、wireless resource allocationを共同最適化するserving framework。arXiv抄録では実験でbenchmark比最大44.9%のlatency削減を報告しており、datacenter外のdistributed inferenceという隣接探索軸として候補価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-runtime-sparse-attention-10",
+    "axis": "attention runtime・sparse attention階層memory・elastic decode",
+    "query_summary": "agentic long-context向けattention分離scale、dynamic sparse attentionのHBM-DRAM階層化、汎用attention engine、異種edge speculative servingをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第9roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "重要論文の被引用・参考文献追跡、MoE通信runtime、またはGPU memory allocator/kernel fusionへ切り替える",
+    "empty_round_reason": null
+  }
+}
