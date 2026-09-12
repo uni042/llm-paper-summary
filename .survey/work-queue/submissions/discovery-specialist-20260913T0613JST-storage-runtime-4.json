@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-980b3587f3155662",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2502.09921",
+      "title": "INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing",
+      "source_url": "https://arxiv.org/abs/2502.09921",
+      "priority": 88,
+      "reason": "GPU・ホストメモリ・ディスクを使うオフロード推論でKV入出力が律速になる問題に対し、計算ストレージ装置上でself-attentionを処理するattention-near-storage、遅延KV writeback、cooperative X-cacheを組み合わせる。実機評価で既存方式比最大3.46倍のthroughput改善を報告し、SSD/NVMe活用と階層メモリの重点テーマに直接合致する重要な過去欠落候補。"
+    },
+    {
+      "canonical_id": "arXiv:2506.02006",
+      "title": "Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing",
+      "source_url": "https://arxiv.org/abs/2506.02006",
+      "priority": 82,
+      "reason": "動的・バースト型負荷に対し、量子化layer swappingとmemory-pressure-aware KV cache resizingをtoken単位で非同期適用するMorphServeを提案する。実ワークロード評価でSLO違反を92.45%削減しP95 TTFTを2.2〜3.9倍改善すると報告し、model precisionとKV容量を実行時に連動させるserving runtime候補として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T06:02:25+09:00",
+    "round": "specialist-storage-runtime-4",
+    "axis": "near-storage KV処理・動的layer/KV runtime adaptation",
+    "query_summary": "MoE-SpeQ後の独立軸としてstorage/NVMe、GPU runtime、動的serving adaptationを再走査した。OServeは決定論的job照合で既収録を確認して除外。INF^2とMorphServeは一次arXiv抄録でシステム貢献・評価を軽量確認し、投入直前の最新main HEADで決定論的research job不存在、repo検索でも識別子・題名未検出、Library pending空を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2602.12151"],
+    "next_axis_hint": "strong candidate発見により枯渇判定をリセットし、最新差分・networking/collective・forward/backward citation・agent/workflow・GPU kernelを独立に再確認する",
+    "empty_round_reason": null
+  }
+}
