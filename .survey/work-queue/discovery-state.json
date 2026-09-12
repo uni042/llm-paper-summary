@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:08:28+00:00",
+  "updated_at": "2026-09-12T23:11:09+00:00",
   "last_run_key": "2026-09-13T07:58:39+09:00",
-  "last_round": "specialist-moe-cache-fault-2",
+  "last_round": "specialist-moe-serving-runtime-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2307,6 +2307,25 @@
       ],
       "next_axis_hint": "strong candidate発見により再び枯渇判定をリセット。GPU kernel/runtime、network collective、backward references、KV sparse-attention、framework implementation差分を再走査する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json"
+    },
+    {
+      "run_key": "2026-09-13T07:58:39+09:00",
+      "round": "specialist-moe-serving-runtime-3",
+      "axis": "MoE speculative decoding・expert offloading・CPU/GPU共同実行",
+      "query_summary": "GPU/runtime・framework implementation・MoE offloadingの独立軸を再走査し、AcceptMoE、CoX-MoE、Tutti、py-kvcache、SpecPrefetchを軽量評価した。Tutti、py-kvcache、SpecPrefetchは最新正本の決定論的research jobで既存を確認し、AcceptMoEとCoX-MoEは投入直前の最新main HEADでjob不存在、repo識別子/題名未検出、Library pendingに同候補なしを確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2609.11744",
+        "arXiv:2607.24787"
+      ],
+      "next_axis_hint": "strong candidate発見により枯渇判定をリセット。backward references、CXL/SSD、KV sparse-attention、network collective、GPU kernel/compiler、framework update由来の論文を再走査する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json"
     }
   ],
   "axes": {
@@ -3619,6 +3638,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.7142857142857143,
       "next_axis_hint": "strong candidate発見により再び枯渇判定をリセット。GPU kernel/runtime、network collective、backward references、KV sparse-attention、framework implementation差分を再走査する"
+    },
+    "MoE speculative decoding・expert offloading・CPU/GPU共同実行": {
+      "last_run_key": "2026-09-13T07:58:39+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.6,
+      "next_axis_hint": "strong candidate発見により枯渇判定をリセット。backward references、CXL/SSD、KV sparse-attention、network collective、GPU kernel/compiler、framework update由来の論文を再走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

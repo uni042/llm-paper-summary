@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:09:48.114378+00:00",
+  "updated_at": "2026-09-12T23:12:28.088491+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15746,16 +15746,16 @@
     {
       "run_key": "2026-09-13T07:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:06:40.284188+00:00",
-      "last_recorded_at": "2026-09-12T23:09:48.114378+00:00",
+      "last_recorded_at": "2026-09-12T23:12:28.088491+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 5,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -15787,6 +15787,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34724730151:1",
+          "recorded_at": "2026-09-12T23:12:28.088491+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34724730151",
+            "run_attempt": "1",
+            "source_sha": "9d57e9d5fa85adeec2bd854a7d15f800c02fd17f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15800,6 +15814,14 @@
         },
         {
           "job_id": "job-3a2b4785347c6fcd",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-67895a0dd002f4a3",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -15835,12 +15857,20 @@
           "type": "research",
           "canonical_id": "arXiv:2512.12990",
           "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference"
+        },
+        {
+          "job_id": "job-71aa62ea72552734",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-specialist-20260913T0804JST-new-arrivals-1.json",
-        ".survey/work-queue/results/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json"
+        ".survey/work-queue/results/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
