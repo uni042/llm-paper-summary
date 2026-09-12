@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 00:49 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 00:53 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **39 / 50** |
-| Research ready | **39** |
+| Candidate在庫（Research ready） | **38 / 50** |
+| Research ready | **38** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **172** |
+| Research completed（累計） | **173** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **23 / 24** |
@@ -25,11 +25,11 @@ Run: **2026-09-13T00:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **0** |
 | 新規job | **0** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -56,15 +56,15 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 重複率 | **34.6%** |
 | Novel候補 | **136** |
 | Research候補採用 | **66** |
-| Research完了 | **48** |
-| Repo収録 | **48** |
+| Research完了 | **49** |
+| Repo収録 | **49** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 208 → 重複除外後 136 → Research候補採用 66 → Research完了 48 → Repo収録 48**
+**探索評価 208 → 重複除外後 136 → Research候補採用 66 → Research完了 49 → Repo収録 49**
 
 ## 探索効率（直近24時間）
 
@@ -124,6 +124,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### Research完了
 
+- `arXiv:2607.10186` — FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference
 - `arXiv:2602.02204` — vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models
 - `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
 - `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
@@ -131,15 +132,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2602.12151` — OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration
 - `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
 - `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
-- `arXiv:2602.21548` — DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference
 
 ### 次に処理する候補
 
-- P89 `arXiv:2607.10186` — FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference
 - P88 `arXiv:2608.01657` — Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches
 - P88 `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
 - P88 `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - P88 `arXiv:2501.01005` — FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
+- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 
 ## 7日比較
 
