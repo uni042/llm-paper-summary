@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-23c1aef2e7b819be",
+  "type": "research",
+  "parent_job_id": "job-c7d65b39dd1d586e",
+  "priority": 77,
+  "canonical_id": "arXiv:2609.11356",
+  "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification",
+  "source_url": "https://arxiv.org/abs/2609.11356",
+  "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md",
+  "selection_reason": "Tensor Coreを用いるGPUカーネルのビット単位挙動を復元し、コンパイラ強制と静的検証まで接続する。LLM形状のGEMMを含む一次資料評価があり、推論基盤のカーネル自動調整・再現性・低レベルGPU実行時という隣接領域を補完する。直接のサービング手法ではないため他4件より優先度は下げた。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T10:12:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}

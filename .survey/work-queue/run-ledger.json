@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:45:07.208275+00:00",
+  "updated_at": "2026-09-12T10:13:03.453346+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9767,17 +9767,18 @@
     {
       "run_key": "2026-09-12T18:30:00+09:00",
       "first_recorded_at": "2026-09-12T09:39:58.885113+00:00",
-      "last_recorded_at": "2026-09-12T09:45:07.208275+00:00",
+      "last_recorded_at": "2026-09-12T10:13:03.453346+00:00",
       "signals": [
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 6,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -9811,6 +9812,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34687797362:1",
+          "recorded_at": "2026-09-12T10:13:03.453346+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34687797362",
+            "run_attempt": "1",
+            "source_sha": "4ebec0d600b775534774d8a612f8b030142b8e11"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9829,18 +9844,71 @@
           "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-c7d65b39dd1d586e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-c797669b52ac6c35",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-23c1aef2e7b819be",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11356",
+          "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification"
+        },
+        {
+          "job_id": "job-research-45d257185b0ce70d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10970",
+          "title": "Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign"
+        },
+        {
+          "job_id": "job-research-825a721630605382",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11562",
+          "title": "Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs"
+        },
+        {
+          "job_id": "job-research-8d796418f10a7d6b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10861",
+          "title": "REACH: Controller-Managed Long-Span ECC for HBM AI Inference"
+        },
+        {
+          "job_id": "job-research-a3fa4611bb7bffee",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11392",
+          "title": "PATTON: Enabling Commodity PIM for Production LLM Serving"
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2609.09166",
         "arXiv:2512.18194"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260912T1902JST-discovery-specialist-01.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 342,
       "paper_active_count_after": 344,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

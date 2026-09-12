@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T09:11:11+00:00",
-  "last_run_key": "2026-09-12T18:00:00+09:00",
-  "last_round": "specialist-scheduling-engine-4",
+  "updated_at": "2026-09-12T10:12:06+00:00",
+  "last_run_key": "2026-09-12T19:00+09:00",
+  "last_round": "specialist-20260912T1900-01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -471,6 +471,31 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "HPC/collective通信・MoE all-to-all・GPU間通信とservingの接点、または最新framework更新から研究論文へ逆引きする",
       "source_submission": "work-queue/submissions/20260912T1800JST-discovery-scheduling-engine-4.json"
+    },
+    {
+      "run_key": "2026-09-12T19:00+09:00",
+      "round": "specialist-20260912T1900-01",
+      "axis": "adjacent-pim-hbm-gpu-runtime-chiplet",
+      "query_summary": "候補バッファがcritical水準のため、重複率の高い直近serving/KV/scheduling軸から、PIM上のKVキャッシュ実行時管理、GPU計算通信重畳、GPUカーネル基盤、HBM信頼性、チップレット協調設計へ探索軸を変更。一次資料のtitle/abstract/書誌情報に基づき14候補を実質評価し、正本identity/queueとの照合で9件を除外した。",
+      "candidate_count": 14,
+      "duplicate_filtered_count": 9,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.6428571428571429,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.03741",
+        "arXiv:2609.10266",
+        "arXiv:2609.03430",
+        "arXiv:2609.07883",
+        "arXiv:2609.01338",
+        "arXiv:2609.11133",
+        "arXiv:2609.11744",
+        "arXiv:2609.10790",
+        "arXiv:2609.10812"
+      ],
+      "next_axis_hint": "収録済み重要PIM/HBM/GPU-runtime論文と今回採用候補の被引用・参考文献展開、およびstorage/networking隣接システムへ軸を移す。",
+      "source_submission": "work-queue/submissions/20260912T1902JST-discovery-specialist-01.json"
     }
   ],
   "axes": {
@@ -733,6 +758,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "HPC/collective通信・MoE all-to-all・GPU間通信とservingの接点、または最新framework更新から研究論文へ逆引きする"
+    },
+    "adjacent-pim-hbm-gpu-runtime-chiplet": {
+      "last_run_key": "2026-09-12T19:00+09:00",
+      "rounds": 1,
+      "candidate_count": 14,
+      "duplicate_filtered_count": 9,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.6428571428571429,
+      "next_axis_hint": "収録済み重要PIM/HBM/GPU-runtime論文と今回採用候補の被引用・参考文献展開、およびstorage/networking隣接システムへ軸を移す。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
