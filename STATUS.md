@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:22 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:24 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,33 +28,33 @@ Run: **2026-09-13T04:30:00+09:00**
 |---|---:|
 | Research完了 | **8** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **11** |
+| Discovery完了 | **5** |
+| 新規job | **12** |
 | Repo収録 | **8** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-survey-gap-4**
+Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-moe-expert-cache-5**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 推論システム横断サーベイ・KV・エッジ実行 |
-| 評価候補 | **3** |
-| 重複除外 | **0** |
-| Novel候補 | **3** |
-| Research候補採用 | **2** |
-| 重複率 | **0.0%** |
+| 探索軸 | MoE expert cache・offload・OS tiering |
+| 評価候補 | **6** |
+| 重複除外 | **6** |
+| Novel候補 | **0** |
+| Research候補採用 | **0** |
+| 重複率 | **100.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **100** |
-| 探索評価候補 | **479** |
-| 重複除外 | **160** |
-| 重複率 | **33.4%** |
+| 探索round（stats観測） | **101** |
+| 探索評価候補 | **485** |
+| 重複除外 | **166** |
+| 重複率 | **34.2%** |
 | Novel候補 | **319** |
 | Research候補採用 | **173** |
 | Research完了 | **65** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-survey-gap-4**
 
 ### 24時間ファネル
 
-**探索評価 479 → 重複除外後 319 → Research候補採用 173 → Research完了 65 → Repo収録 65**
+**探索評価 485 → 重複除外後 319 → Research候補採用 173 → Research完了 65 → Repo収録 65**
 
 ## 探索効率（直近24時間）
 
@@ -92,6 +92,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-survey-gap-4**
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
+| MoE expert cache・offload・OS tiering | 6 | 6 | 0 | 100.0% | 0.0% |
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
@@ -174,11 +175,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-survey-gap-4**
 
 ### 直近5探索round
 
+- **2026-09-13T05:00:25+09:00** — MoE expert cache・offload・OS tiering: 評価 6 / 重複 6 / 採用 0
 - **2026-09-13T05:00:25+09:00** — 推論システム横断サーベイ・KV・エッジ実行: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T05:00:25+09:00** — 分離型LLMサービング・KV転送／フェーズ非対称性: 評価 8 / 重複 6 / 採用 1
 - **2026-09-13T05:00:25+09:00** — エージェントサンドボックス・OS資源管理・状態管理: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T05:00:25+09:00** — 2026-09新着・KVキャッシュ圧縮／再利用: 評価 3 / 重複 3 / 採用 0
-- **2026-09-13T04:00:16+09:00** — 投機的デコードのserving・pipeline・メモリ制約・性能モデル: 評価 7 / 重複 2 / 採用 4
 
 ## 最近処理した論文
 
