@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:58 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:00 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **61 / 50** |
-| Research ready | **61** |
+| Candidate在庫（Research ready） | **62 / 50** |
+| Research ready | **62** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **9** |
-| 新規job | **29** |
+| Discovery完了 | **10** |
+| 新規job | **31** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **60** |
-| 探索評価候補 | **283** |
+| 探索round（stats観測） | **61** |
+| 探索評価候補 | **286** |
 | 重複除外 | **91** |
-| 重複率 | **32.2%** |
-| Novel候補 | **192** |
-| Research候補採用 | **93** |
+| 重複率 | **31.8%** |
+| Novel候補 | **195** |
+| Research候補採用 | **94** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 283 → 重複除外後 192 → Research候補採用 93 → Research完了 47 → Repo収録 47**
+**探索評価 286 → 重複除外後 195 → Research候補採用 94 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -119,6 +119,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | GPU kernel/runtime・推論決定性 | 3 | 0 | 3 | 0.0% | 100.0% |
 | KV量子化の実行時保証・同期型serving負荷分散 | 3 | 0 | 3 | 0.0% | 100.0% |
+| MoE動的並列切替・融合通信・serverless専門家配置 | 3 | 0 | 1 | 0.0% | 33.3% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | agentic/multi-agent serving・collective KV sharing | 3 | 0 | 2 | 0.0% | 66.7% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -133,11 +134,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — MoE動的並列切替・融合通信・serverless専門家配置: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:26:11+09:00** — multi-adapter serving・推論/継続学習境界: 評価 4 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — agentic/multi-agent serving・collective KV sharing: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T01:26:11+09:00** — P/D分離・KV転送・shared prefill: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T01:26:11+09:00** — GPU kernel/runtime・推論決定性: 評価 3 / 重複 0 / 採用 3
-- **2026-09-13T01:26:11+09:00** — 異種/edge serving・hybrid cache schedulingの過去重要欠落: 評価 10 / 重複 8 / 採用 2
 
 ## 最近処理した論文
 
