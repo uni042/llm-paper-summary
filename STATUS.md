@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:50 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:58 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **58 / 50** |
-| Research ready | **58** |
+| Candidate在庫（Research ready） | **61 / 50** |
+| Research ready | **61** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **8** |
-| 新規job | **25** |
+| Discovery完了 | **9** |
+| 新規job | **29** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **59** |
-| 探索評価候補 | **279** |
+| 探索round（stats観測） | **60** |
+| 探索評価候補 | **283** |
 | 重複除外 | **91** |
-| 重複率 | **32.6%** |
-| Novel候補 | **188** |
-| Research候補採用 | **90** |
+| 重複率 | **32.2%** |
+| Novel候補 | **192** |
+| Research候補採用 | **93** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 279 → 重複除外後 188 → Research候補採用 90 → Research完了 47 → Repo収録 47**
+**探索評価 283 → 重複除外後 192 → Research候補採用 93 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -104,6 +104,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
+| multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
 | speculative decoding serving・composite multimodal serving | 4 | 0 | 3 | 0.0% | 75.0% |
 | エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
@@ -132,11 +133,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — multi-adapter serving・推論/継続学習境界: 評価 4 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — agentic/multi-agent serving・collective KV sharing: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T01:26:11+09:00** — P/D分離・KV転送・shared prefill: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T01:26:11+09:00** — GPU kernel/runtime・推論決定性: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — 異種/edge serving・hybrid cache schedulingの過去重要欠落: 評価 10 / 重複 8 / 採用 2
-- **2026-09-13T01:26:11+09:00** — 耐障害serving・予測型cross-layer scheduling: 評価 7 / 重複 5 / 採用 2
 
 ## 最近処理した論文
 
