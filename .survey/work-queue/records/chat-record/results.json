@@ -2,25 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.18431-20260912-1840-v10-a",
-  "job_id": "job-research-c5ba85dfa2989728",
+  "attempt_id": "attempt-2609.09166-20260912-1850-v10-a",
+  "job_id": "job-research-a4ae8894c89646f7",
   "data": {
-    "overview": "UniBoostは平均遅延だけを追う完全情報SRPT系より、末尾のTTFTとtotal latencyを大きく改善する。論文全体ではP99 total latencyを完全な出力長を知るSRPTに対して最大35〜50%、TTFTを34〜47%短縮する。Llama-3-8Bのreasoning-heavy mix-2では、TRAIL+に対し平均total latencyは19.1%悪化する一方、P95/P99 total latencyは1.1%/35.1%改善し、P95/P99 TTFTは97.4%/34.0%改善する。これは平均最適化を一部犠牲にして末尾を安定させる設計目的を明確に示す。構成要素除去ではMemGuardがKV圧迫時のswap stormを抑え、飽和近傍のP90/P99/平均遅延をMLFQ+比最大約10倍改善する。",
+    "overview": "主な効果は、異種語彙を扱うために必要だった棄却時の巨大な確率分布通信を、損失なし性を維持したまま小さくする点にある。候補長N=2では、Qwen2-7BのWMT-DeEnでNaiveが下り約1.2 Mbit/生成トークンを必要とするのに対し、X-CoSDは約0.2 Mbit、X-CoSD-Eは384.2 bitまで削減する。Llama-3.1-8BでもNaiveの約1.1 Mbitに対しX-CoSD-Eは378.7 bitである。上り30 Mbps・下り100〜300 MbpsではX-CoSDとX-CoSD-EはいずれもNaiveとサーバLLM単独より高いトークンスループットを示し、X-CoSD-Eは下り帯域変化への感度が小さい。品質値は両提案法ともサーバLLMを1.0とした正規化値のほぼ近傍に留まり、理論証明どおり近似化による品質犠牲を必要としない。",
     "key_results": [
-      {"metric":"P99 total latency","value":"最大35〜50%短縮","baseline":"完全な出力長を知るSRPT系比較方式","condition":"複数モデル・chat/code/reasoning/混合ワークロード","interpretation":"要求長予測の誤差を排除した理想SRPTよりも末尾が良く、予測精度ではなくpolicy自体のtail最適化が効いている。"},
-      {"metric":"TTFT","value":"34〜47%短縮","baseline":"強い予測・既得サービス量系baseline","condition":"論文全体の複数ワークロード","interpretation":"デコードを優先し続けずプリフィルを同じboost空間へ入れることで、新規要求のhead-of-line blockingを軽減する。"},
-      {"metric":"mix-2 P99 total latency","value":"35.1%改善","baseline":"TRAIL+ with perfect prediction","condition":"Llama-3-8B、reasoning 70% + Azure Function 30%","interpretation":"reasoning-heavyで長短要求が混ざる条件でも、完全予測SRPTの末尾逆転を避ける。"},
-      {"metric":"mix-2平均total latency","value":"19.1%悪化","baseline":"TRAIL+ with perfect prediction","condition":"同上","interpretation":"UniBoostは平均最小化ではなくtailの公平性を優先するため、短要求を極端に優遇するSRPTより平均値は悪化し得る。"},
-      {"metric":"mix-2 P95/P99 TTFT","value":"97.4%／34.0%改善","baseline":"TRAIL+ with perfect prediction","condition":"Llama-3-8B mix-2","interpretation":"統一優先度により長いデコード列が新規プリフィルを締め出す現象を強く抑える。"},
-      {"metric":"mix-2 P99 TBT","value":"33.8%改善","baseline":"TRAIL+ with perfect prediction","condition":"Llama-3-8B mix-2","interpretation":"頻繁なプリエンプトとdecode interleavingをMemGuardで抑え、生成中の末尾token間隔も安定化する。"},
-      {"metric":"throughput","value":"1.01〜1.12倍","baseline":"比較scheduler","condition":"bursty loadを含む複数ワークロード","interpretation":"tail改善のためにGPU利用率を大きく犠牲にせず、KV-aware preemption抑制によってむしろ処理能力を維持・改善する。"},
-      {"metric":"MemGuardアブレーション","value":"tail latencyをさらに1.5〜2倍改善","baseline":"統一boost優先度のみ","condition":"CodeLlama-34B、単一A100、メモリ制約下の負荷掃引","interpretation":"理論優先度だけではKV状態を壊す頻繁なswapが残り、幾何学的な最低実行区間が実システム性能に必須である。"},
-      {"metric":"飽和近傍遅延","value":"P90/P99/平均を最大約10倍改善","baseline":"MLFQ+","condition":"CodeLlama-34B負荷掃引、飽和付近","interpretation":"KV圧迫と優先度反転が連鎖する高負荷領域で、tail-aware boostとMemGuardの組合せが特に効く。"},
-      {"metric":"TTFT SLO容量","value":"2.9〜8.7倍厳しいSLOを満足","baseline":"比較scheduler","condition":"所定SLO達成率での閾値比較","interpretation":"単一のP99値だけでなく、サービス目標達成可能な運用領域を大幅に拡張する。"},
-      {"metric":"total latency SLO容量","value":"1.7〜4.3倍改善","baseline":"比較scheduler","condition":"99% SLO attainment中心","interpretation":"tailを直接扱うことで、平均の小さいschedulerより厳格な完了時間SLOを維持できる。"}
+      {"metric":"下り通信量","value":"384.2 bit/生成トークン","baseline":"Naiveの約1.2 Mbit/生成トークン","condition":"Qwen2-7B、WMT-DeEn、候補長N=2","interpretation":"X-CoSD-EはサーバLLM全分布ではなく少数の置換候補と確率だけを通常送信するため、棄却時通信を3桁ビット級まで落とす。"},
+      {"metric":"下り通信量","value":"369.4 bit/生成トークン","baseline":"Naiveの約1.2 Mbit/生成トークン","condition":"Qwen2-7B、XSum、候補長N=2","interpretation":"要約タスクでもSR-DVの通信削減が維持され、データセット固有の受理率だけに依存した効果ではない。"},
+      {"metric":"下り通信量","value":"378.7 bit/生成トークン","baseline":"Naiveの約1.1 Mbit/生成トークン","condition":"Llama-3.1-8B、WMT-DeEn、候補長N=2","interpretation":"サーバLLMをQwen系からLlama系へ変えても、少数候補交換へ置き換える効果が同様に現れる。"},
+      {"metric":"下り通信量","value":"265.8 bit/生成トークン","baseline":"Naiveの約0.7 Mbit/生成トークン","condition":"Llama-3.1-8B、XSum、候補長N=2","interpretation":"語彙サイズと共通率が異なるLlama条件でもX-CoSD-Eは数百ビット級の下り通信を維持する。"},
+      {"metric":"追加データセット下り通信量","value":"251.9〜383.0 bit/生成トークン","baseline":"Naiveの約0.6〜1.2 Mbit/生成トークン","condition":"CNN/DailyMail、GSM8K、MMLU、Qwen2-7BまたはLlama-3.1-8B、候補長N=2","interpretation":"要約・数学推論・質問応答でも数百ビット級のSR-DV通信が再現し、主実験以外へ傾向が広がる。"},
+      {"metric":"共通語彙率","value":"14.68%","baseline":"Vicuna-68M語彙32,000とQwen2-7B語彙151,646","condition":"一対一直接対応トークンのみを共通語彙へ採用、共通数22,269","interpretation":"両tokenizerの大半が一致しない厳しい異種語彙条件でも損失なし投機的デコードを成立させている。"},
+      {"metric":"共通語彙率","value":"17.48%","baseline":"Vicuna-68M語彙32,000とLlama-3.1-8B語彙128,256","condition":"一対一直接対応トークンのみを共通語彙へ採用、共通数22,413","interpretation":"共有語彙前提の従来CoSDが直接使えない条件を明示的に評価している。"},
+      {"metric":"正規化品質","value":"Qwen2-7Bで0.9832〜1.0248、Llama-3.1-8Bで0.9794〜1.0240","baseline":"サーバLLM単独=1.0","condition":"X-CoSD-E、WMT-DeEn/XSum/CNN-DailyMail/GSM8K/MMLU","interpretation":"有限サンプルの評価値は1.0周辺で揺れるが、方式自体は最終分布qを厳密に保存するため通信削減を品質近似で購入していない。"},
+      {"metric":"無線帯域感度","value":"下り100〜300 Mbpsの全掃引範囲でNaiveとサーバLLM単独を上回る","baseline":"NaiveおよびServer LLM","condition":"上り30 Mbps、WMT-DeEn/XSum、候補長N=1〜8から各方式最良値","interpretation":"X-CoSD-Eは確率分布送信を通常経路から外すため、下り帯域が低い領域でもスループットを保ちやすい。"}
     ],
-    "negative_results": "UniBoostは平均遅延を常に最小化しない。reasoning-heavy mix-2では完全予測TRAIL+より平均total latencyが19.1%悪化し、平均TTFTなど一部指標でもSRPT/SJF系が有利な場合がある。DistBoostだけではプリフィル・デコード間のhead-of-line blockingが残り、統一優先度だけでは高負荷時に頻繁なKVプリエンプトが発生するため、MemGuardが必要になる。prefix/radix cacheを主評価で無効にしているため、共有接頭辞が多い実運用でcache hitと優先度が競合した場合の性能は十分検証されていない。またγ-Adaは観測済み分布へ追従するため、急激な分布変化直後には推定遅れが生じ得る。",
-    "interpretation": "完全予測SRPTは『残り処理時間が短い要求を先に終える』ことで平均を小さくするが、長要求が短要求の連続到着に追い越され、状態を持つLLMではプリエンプトのたびにKV費用も増える。この二重効果が末尾要求を極端に遅くする。UniBoostは未知の最終長を当てる代わりに、既得サービス量へ応じて長要求の優先度を徐々に回復させ、MemGuardで順位変化の物理的実行頻度を抑える。その結果、平均を少し譲ってもP95/P99とSLOを安定化できる。reasoning-heavyやbursty負荷ほど出力長分布とKV圧迫が変動するため、固定予測器より観測末尾分布だけを使うγ-Adaの利点が大きい。",
-    "quality_impact": "モデル出力を変更しないscheduler最適化であり、回答精度や生成品質を下げる近似はない。交換条件はサービス指標間にあり、平均完了時間を一部犠牲にしてP95/P99、TTFT、SLO達成率、プリエンプト安定性を改善する。"
+    "negative_results": "X-CoSDはNaiveより通信を減らすが、棄却時には共通語彙全体のLLM確率を依然送るため、下り帯域が100 Mbpsから300 Mbpsへ変わるとトークンスループットも強く変化する。X-CoSD-Eはこの依存を大幅に弱めるものの、K個の置換候補が全て棄却されるとHRへ退避するため、SLMとLLMの分布差が大きくSR-DV受理率が低い条件では分布送信が再発する。さらにU-HLMは一部条件でX-CoSD-Eより高スループット・低遅延を示すが、これは検証を省く損失あり方式であり同じ厳密性条件ではない。共通語彙へのドラフト制約そのものはSLMの候補効率を下げ得るため、語彙重複がさらに小さいモデル組合せでの速度は未検証である。",
+    "interpretation": "NaiveのボトルネックはLLM計算ではなく、候補棄却のたびに13万〜15万要素規模の確率分布を無線で運ぶことにある。HRは残差分布のうちSLMが確率0になるLLM専用領域をサーバ側へ残すことで送る分布を共通語彙だけへ縮める。SR-DVはさらに『分布を送って端末が1回サンプルする』処理を『サーバが先に少数候補をサンプルし、端末が必要な候補確率だけ検証する』処理へ変え、通常経路の通信量を語彙数にほぼ比例しない形へする。このためX-CoSD-Eは下り速度が低いほど相対優位が大きく、端末側のSLM分布を丸ごと上り送信するULのように上り30 Mbps制約へボトルネックを移すこともない。",
+    "quality_impact": "X-CoSDのTheorem 1とX-CoSD-EのTheorem 2は、受理されたドラフトと棄却後の再サンプリングを合わせた最終トークン分布がサーバLLM分布q(x)に等しいことを示す。したがって提案法は分布近似・量子化・検証省略による損失あり高速化ではない。実験の品質指標がサーバLLMの1.0から多少上下するのは有限サンプル評価の変動であり、設計上の品質劣化ではない。"
   }
 }
