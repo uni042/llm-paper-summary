@@ -2,21 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.30391-20260912-1942-v10-a",
-  "job_id": "job-research-a6fb90f535b639f2",
+  "attempt_id": "attempt-2606.17787-20260912-1950-v10-a",
+  "job_id": "job-research-8f1c80196652932b",
   "data": {
-    "hardware": ["NVLink接続のNVIDIA H100 GPU 8基。全GPUでMulti-Process Service（MPS）を利用してSMを分割する。", "大規模モデルのSLO余裕確認ではメモリ容量の都合でH100 2基を用い、Llama2-70Bを測定する。"],
-    "software": ["vLLMを推論バックエンドとし、約2,800行のPythonおよびCUDA/C++でFestinaを実装。Python asyncioで高並行オーケストレーション、pyNVMLでGPU周波数を制御する。", "GPUクロック795〜1635MHzを90MHz刻み、SM割当10〜100%を10%刻みでオフライン計測する。入力長256〜8192トークンを対象にTTFT、TBT、平均電力、モデルロード時間を記録する。"],
-    "model": ["Qwen、Llama、Yi、Mistral各系統の3B〜14Bモデルを使用する。", "補助測定ではLlama2-70Bも使用する。"],
-    "datasets": ["ShareGPTから要求を無作為抽出し、到着をスケールしたPoisson過程で生成する。", "プリフィル偏重のShareGPT-ix2では入力長を2倍、デコード偏重のShareGPT-ox2では出力長を2倍にして感度を確認する。"],
-    "baselines": ["ServerlessLLM: 高速チェックポイント読込とライブ移行を持つサーバレス方式。", "MuxServe: オフライン配置とSM分割を使う静的GPU多重化。比較では2モデル超の同居とアイドルモデルのホスト退避を追加。", "Dilu: 需要に応じてSMを動的再分割する方式。", "Aegaeon: プリフィル・デコード分離とMPS共有を使うサーバレス方式。", "AegVoltana: AegaeonへVoltanaLLMのSLO認識型周波数制御を組み込んだDVFS比較対象。"],
-    "correctness": "同じ要求負荷に対し、エネルギーは最初の要求到着から最後の完了まで測定し、SLO達成率も同時に比較する。Festinaは品質近似を用いず、性能差は配置・リソース分割・周波数・集約制御から生じる。AegVoltanaを設けることで『単にDVFSを追加した効果』と共有GPU向け協調制御の効果を分ける。",
+    "hardware": ["実機prototypeは4 nodes・計8 NVIDIA A800-SXM4-80GB。各nodeはXeon Platinum 8358P x2、200GB DRAM、Samsung PM893 SATA SSD 894GB x2、A800 x2をNVLink接続、node間10Gbps Ethernet。", "simulation hostはXeon Gold 6330 x2、503GB DRAM。既定simulationは4 A100-80GB級GPU/workerの10 workers。"],
+    "software": ["SGLang v0.5.6上に約13K LoCのPython prototype。PyTorch 2.9、FlashInfer 0.5、ZeroMQ、gRPCを利用。", "Vidurへ約5K LoCを追加し、worker recovery state machine、global recovery scheduler、KV restore model、load-aware checkpoint distributionを実装。"],
+    "model": ["4-worker prototype: Qwen3-32B target + Qwen3-4B draft、各worker 2 A800 tensor parallelism。", "8-worker prototype: Qwen3-14B target + Qwen3-1.7B draft、1 GPU/worker。", "simulation: Llama-3-70B target + Llama-3-8B draft、acceptance rate 0.60。"],
+    "datasets": ["prototypeはShareGPT trace。", "simulationはSplitwise-Conv trace。", "各設定15,000 requests、scale experimentsの一部は40,000 requests、Poisson arrivals。"],
+    "baselines": ["No-Failure: 障害注入なし。", "Stop-and-Restart: 中断要求をsurvivorへredirectし、lost KVをfull prefillで再構築。", "Fixed-Checkpointing: 各requestのKVを固定neighborのCPU memoryへstreamし、障害後はそのholderから復元。"],
+    "correctness": "投機的デコードはtarget modelによる標準verificationを行い、draft tokenを無条件採用しない。checkpoint pageは完全受信後だけvisibleにし、token history由来tagで最長連続prefixを照合する。各実験を5回実行し、95% confidence intervalをStudent's t-distributionで報告する。",
     "settings": [
-      {"name": "SLO条件", "description": "DynamoLLMに合わせ、短い要求は入力256未満・出力100未満でTTFT 250ms/TBT 100ms、中程度は入力1024未満・出力350未満でTTFT 400ms/TBT 100ms、長い要求は入力8192以下・出力350以上でTTFT 2000ms/TBT 100msとする。8192トークン超の要求は除外する。"},
-      {"name": "オフライン計測表", "description": "モデル、GPU周波数、SM割当、入力長の組ごとにTTFT、TBT、平均電力を測定する。未計測入力長は回帰で補間し、出力長予測は5%のメモリ安全余裕を加える。GPU・モデルの組合せごとの全計測はH100で40分未満と報告される。"},
-      {"name": "負荷とフェーズ感度", "description": "平均RPSと同時配備LLM数を変えた実運用型負荷に加え、ShareGPT-ix2/ox2でプリフィル偏重・デコード偏重を分離する。さらに同一負荷でプリフィル・デコード同居構成と分離構成を比較し、フェーズ分離が周波数制御へ与える影響を確認する。"}
+      {"name":"既定serving設定","description":"speculative depth K=4、Sarathi-Serve scheduler、continuous batching、prefill chunk 1,024 tokens、batch cap 512。prototype request rateは4-worker 12 QPS、8-worker 10 QPS、simulation 14 QPS。single-worker failureを既定とする。"},
+      {"name":"checkpoint memory budget","description":"各requestは1 checkpointだけを保持し、active workerとは別workerのhost memoryへ置く。prototypeのper-worker checkpoint limitはQwen3-14Bで80GB、Qwen3-32Bで160GB。最大context lengthに基づくfootprintを予約する。"},
+      {"name":"復旧時間定義","description":"request IDを200件ずつbucket化し、mean TTFTが対応するNo-Failure bucketより5%超悪化した時点から、3 consecutive bucketsが5%以内へ戻るまでをfailure-impact windowとし、その時間をrecovery timeと定義する。"}
     ],
-    "methodology": "主指標は総エネルギー消費とTTFT/TBT SLO達成率である。エネルギー比較は同一ワークロードで『比較対象の総消費エネルギー / Festinaの総消費エネルギー』を正規化指標として使う。設計要素の寄与は、SLO認識配置、周波数認識配置、細粒度SM・周波数共同制御、通常のSLO認識集約、EWR認識集約、理想的アイドル電力管理を順に追加する6段階アブレーションで測る。標準Festinaは第5段階まで実機実装し、第6段階Festina+だけはH100にない動的HBM周波数制御や完全停止の効果を模擬する。全体スケジューラの計算量・遅延も最大10,000 GPUまで測る。",
-    "scope": "主要なFestina結果は8基H100の実機評価であり、SM分割とGPUコア周波数制御も実機で行う。一方、最大56%という上限値には、Festina+で仮定するアイドルGPU停止またはHBM周波数低下の模擬効果が含まれる条件があるため、標準H100上で常に56%削減できるという意味ではない。主評価モデルは単一H100へ載る3B〜14Bで、70BはSLO余裕の存在確認に限定される。NVLink接続の8GPU試験環境であり、大規模マルチノード網や異種GPUクラスタは直接評価していない。"
+    "methodology": "実機prototypeでdisk I/O、10GbE network transfer、GPU memory management、target reload、draft assistanceを含む実際の障害復旧を測り、simulationで4〜64 workers、複数同時failure、load変化を拡張評価する。TTFTとTPOTはmean/P99を測定し、failure-impact window内の値でschemeを比較する。+Schedulingはload-aware checkpointingとlocality-aware recoveryのみ、+Progressiveはspeculative progressive recoveryのみを有効にするablationで、KV state preservationとtemporary capacity restorationの寄与を分離する。",
+    "scope": "worker-level failureを対象とし、GPU/node/network障害の原因を問わずworker unavailableとして扱う。保守的にfull target-model reloadが必要と仮定する。gateway/controllerの同時failureは対象外で高可用化可能と仮定する。各requestはcheckpoint 1 copyのみなのでholderも同時に落ちるとfull recomputationへfallbackする。実機は最大8 A800、64-worker評価はsimulationである。"
   }
 }
