@@ -8,9 +8,9 @@
       "completed": 6
     },
     "research": {
-      "completed": 178,
+      "completed": 179,
       "superseded": 44,
-      "ready": 79,
+      "ready": 78,
       "deferred": 3
     }
   },
@@ -24,18 +24,6 @@
       "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
       "source_url": "https://arxiv.org/abs/2608.06007",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06007-tensorcast-tensor-as-a-service.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-0aac68b8968fc75e",
-      "type": "research",
-      "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:2606.18741",
-      "title": "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving",
-      "source_url": "https://arxiv.org/abs/2606.18741",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18741-remp-runtime-model-parallelism-reconfiguration.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-e290cd912706acf4",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2601.22705",
+      "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control",
+      "source_url": "https://arxiv.org/abs/2601.22705",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e15f3a03ac140338",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T17:39:53+00:00"
+  "generated_at": "2026-09-12T17:41:14+00:00"
 }
