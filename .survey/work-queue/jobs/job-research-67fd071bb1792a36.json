@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-67fd071bb1792a36",
+  "type": "research",
+  "parent_job_id": "job-64a5ee9e98e34139",
+  "priority": 87,
+  "canonical_id": "arXiv:2607.07388",
+  "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models",
+  "source_url": "https://arxiv.org/abs/2607.07388",
+  "paper_path": null,
+  "selection_reason": "GPU・DRAM・SSDの階層を使う外部記憶と予測先読みをLLM推論へ組み込み、GPUメモリ外の大容量記憶を実行時に活用する設計。SSD階層、先読み、推論時メモリ管理という重点テーマに直接重なるため全文精読候補として価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T15:06:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}

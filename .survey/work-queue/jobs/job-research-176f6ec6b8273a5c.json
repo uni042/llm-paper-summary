@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-176f6ec6b8273a5c",
+  "type": "research",
+  "parent_job_id": "job-64a5ee9e98e34139",
+  "priority": 89,
+  "canonical_id": "arXiv:2607.10186",
+  "title": "FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference",
+  "source_url": "https://arxiv.org/abs/2607.10186",
+  "paper_path": null,
+  "selection_reason": "HBM容量制約に対して高帯域Flashを推論データ経路へ組み込むシステム研究。SSD/NVMe・Flash階層をLLM推論でどこまで実用化できるかという本リポジトリの重点テーマに直結し、既存のSSDオフロード系との比較価値も高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T15:06:24+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T14:25:54+00:00",
-  "last_run_key": "2026-09-12T23:00:00+09:00",
-  "last_round": "specialist-moe-runtime-ssd-11",
+  "updated_at": "2026-09-12T15:06:24+00:00",
+  "last_run_key": "2026-09-13T00:00:00+09:00",
+  "last_round": "specialist-storage-hierarchy-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -839,6 +839,25 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "CXL/CPU-GPU hybrid attention、computational storage、または重要offload論文の引用追跡へ切り替える",
       "source_submission": "work-queue/submissions/20260912T2324JST-discovery-specialist-11.json"
+    },
+    {
+      "run_key": "2026-09-13T00:00:00+09:00",
+      "round": "specialist-storage-hierarchy-1",
+      "axis": "Flash・SSD階層メモリと予測先読み",
+      "query_summary": "Flash/SSD-backed LLM inference、GPU-DRAM-SSD階層、メモリウォール隣接の新規候補を軽量評価し、最新identity・既存job・fallback台帳で投入直前に重複確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.6,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.00857",
+        "arXiv:2606.19746",
+        "arXiv:2604.25699"
+      ],
+      "next_axis_hint": "分離サービングのprefill負荷偏り・動的deflectionと異種GPU配置へ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T0005JST-discovery-storage-hierarchy-1.json"
     }
   ],
   "axes": {
@@ -1321,6 +1340,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "CXL/CPU-GPU hybrid attention、computational storage、または重要offload論文の引用追跡へ切り替える"
+    },
+    "Flash・SSD階層メモリと予測先読み": {
+      "last_run_key": "2026-09-13T00:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.6,
+      "next_axis_hint": "分離サービングのprefill負荷偏り・動的deflectionと異種GPU配置へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
