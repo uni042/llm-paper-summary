@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T13:54:53.705036+00:00",
+  "updated_at": "2026-09-12T14:03:36.472048+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T13:54:53.705036+00:00",
+      "last_recorded_at": "2026-09-12T14:03:36.472048+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 5,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10776,6 +10776,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34698111868:1",
+          "recorded_at": "2026-09-12T14:03:36.472048+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34698111868",
+            "run_attempt": "1",
+            "source_sha": "5e085e29da318b1d0b0bfbb2db6ecbd37f955e78"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10810,6 +10824,14 @@
           "title": "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-7051830ca03a837c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -10833,6 +10855,20 @@
           "type": "research",
           "canonical_id": "arXiv:2603.07810",
           "title": "Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization"
+        },
+        {
+          "job_id": "job-bb0ed15a04a1b6a4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-5c8a51a10227b970",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.13358",
+          "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -10842,12 +10878,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json",
-        ".survey/work-queue/results/20260912T2230JST-discovery-job-9d2b0bca513ba597.json"
+        ".survey/work-queue/results/20260912T2230JST-discovery-job-9d2b0bca513ba597.json",
+        ".survey/work-queue/results/20260912T2300JST-discovery-specialist-01.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
       "paper_active_count_after": 357,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

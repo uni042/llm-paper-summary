@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 201,
+      "completed": 202,
       "ready": 1
     },
     "audit": {
@@ -11,10 +11,22 @@
       "completed": 168,
       "superseded": 44,
       "deferred": 3,
-      "ready": 13
+      "ready": 14
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-5c8a51a10227b970",
+      "type": "research",
+      "lane": null,
+      "priority": 85,
+      "canonical_id": "arXiv:2603.13358",
+      "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.13358",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-95786e300fa60d16",
       "type": "research",
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-ad3541d28015a662",
-      "type": "research",
-      "lane": null,
-      "priority": 75,
-      "canonical_id": "arXiv:2609.11058",
-      "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
-      "source_url": "https://arxiv.org/abs/2609.11058",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11058-emmi-edge-multimodal-representation-compression.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-7051830ca03a837c",
+      "job_id": "job-bb0ed15a04a1b6a4",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T13:53:59+00:00"
+  "generated_at": "2026-09-12T14:03:20+00:00"
 }

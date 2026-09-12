@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-5c8a51a10227b970",
+  "type": "research",
+  "parent_job_id": "job-7051830ca03a837c",
+  "priority": 85,
+  "canonical_id": "arXiv:2603.13358",
+  "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
+  "source_url": "https://arxiv.org/abs/2603.13358",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md",
+  "selection_reason": "multi-turn workloadでappend-prefillと通常prefillの性質差を利用し、decode側で局所prefillを処理する動的routingを扱う。arXiv抄録ではKV転送混雑とTTFTを主対象にした広範評価を示しており、multi-turn・KV再利用・PD分離の交差領域として研究価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T14:02:46+00:00",
+  "artifact_transport": "structured_record_v10"
+}
