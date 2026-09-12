@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **145 / 50** |
-| Research ready | **145** |
+| Candidate在庫（Research ready） | **147 / 50** |
+| Research ready | **147** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **11** |
+| Discovery完了 | **3** |
+| 新規job | **14** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **121** |
-| 探索評価候補 | **602** |
-| 重複除外 | **243** |
-| 重複率 | **40.4%** |
-| Novel候補 | **359** |
-| Research候補採用 | **204** |
+| 探索round（stats観測） | **122** |
+| 探索評価候補 | **608** |
+| 重複除外 | **246** |
+| 重複率 | **40.5%** |
+| Novel候補 | **362** |
+| Research候補採用 | **206** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 602 → 重複除外後 359 → Research候補採用 204 → Research完了 70 → Repo収録 70**
+**探索評価 608 → 重複除外後 362 → Research候補採用 206 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -103,6 +103,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | MoE expert cache・offload・OS tiering | 6 | 6 | 0 | 100.0% | 0.0% |
 | MoE expert prefetch・offload・speculative execution再走査 | 6 | 5 | 0 | 83.3% | 0.0% |
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
+| agent workspace仮想化・NVMe階層・長時間runtime state | 6 | 3 | 2 | 50.0% | 33.3% |
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | position-independent KV再利用のforward/backward related-work補完 | 6 | 1 | 5 | 16.7% | 83.3% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
@@ -195,11 +196,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T08:26:04+09:00** — agent workspace仮想化・NVMe階層・長時間runtime state: 評価 6 / 重複 3 / 採用 2
 - **2026-09-13T08:26:04+09:00** — position-independent KV再利用のforward/backward related-work補完: 評価 6 / 重複 1 / 採用 5
 - **2026-09-13T08:26:04+09:00** — hybrid-attention・MLA・位置非依存キャッシュ: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T07:58:39+09:00** — multi-node MoE活性パターン配置・edge expert類似性routing: 評価 12 / 重複 10 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 疎注意サービング・GPUメガカーネル・動的コンパイラ: 評価 8 / 重複 5 / 採用 3
-- **2026-09-13T07:58:39+09:00** — MoE speculative decoding・expert offloading・CPU/GPU共同実行: 評価 5 / 重複 3 / 採用 0
 
 ## 最近処理した論文
 
