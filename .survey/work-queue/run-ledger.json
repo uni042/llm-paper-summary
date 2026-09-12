@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:03:36.472048+00:00",
+  "updated_at": "2026-09-12T14:06:43.736739+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T14:03:36.472048+00:00",
+      "last_recorded_at": "2026-09-12T14:06:43.736739+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 9,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10790,6 +10790,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34698257158:1",
+          "recorded_at": "2026-09-12T14:06:43.736739+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34698257158",
+            "run_attempt": "1",
+            "source_sha": "54150961a498b6c7cd752b72425f0077211df1d8"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10832,6 +10846,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-bb0ed15a04a1b6a4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -10869,6 +10891,34 @@
           "type": "research",
           "canonical_id": "arXiv:2603.13358",
           "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving"
+        },
+        {
+          "job_id": "job-f780bad6bf6e1746",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2909bb8eecc75840",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.08342",
+          "title": "Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism"
+        },
+        {
+          "job_id": "job-research-bbe263213664b792",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2508.21706",
+          "title": "Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding"
+        },
+        {
+          "job_id": "job-research-e9bc39c05ba15b76",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2504.02263",
+          "title": "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
         }
       ],
       "new_paper_ids": [
@@ -10879,7 +10929,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json",
         ".survey/work-queue/results/20260912T2230JST-discovery-job-9d2b0bca513ba597.json",
-        ".survey/work-queue/results/20260912T2300JST-discovery-specialist-01.json"
+        ".survey/work-queue/results/20260912T2300JST-discovery-specialist-01.json",
+        ".survey/work-queue/results/20260912T2304JST-discovery-specialist-02.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,

@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 202,
+      "completed": 203,
       "ready": 1
     },
     "audit": {
@@ -11,10 +11,34 @@
       "completed": 168,
       "superseded": 44,
       "deferred": 3,
-      "ready": 14
+      "ready": 17
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-e9bc39c05ba15b76",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2504.02263",
+      "title": "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+      "source_url": "https://arxiv.org/abs/2504.02263",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2909bb8eecc75840",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2509.08342",
+      "title": "Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism",
+      "source_url": "https://arxiv.org/abs/2509.08342",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2509.08342-moepic-adaptive-expert-split.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-5c8a51a10227b970",
       "type": "research",
@@ -24,6 +48,18 @@
       "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
       "source_url": "https://arxiv.org/abs/2603.13358",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-bbe263213664b792",
+      "type": "research",
+      "lane": null,
+      "priority": 85,
+      "canonical_id": "arXiv:2508.21706",
+      "title": "Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2508.21706",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2508.21706-specmoeoff-speculative-decoding-offload.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -76,43 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-ad7e8d527bf159c7",
-      "type": "research",
-      "lane": null,
-      "priority": 80,
-      "canonical_id": "arXiv:2608.05303",
-      "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2608.05303",
-      "paper_path": "papers/inference/02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-22ee1955e766f2b1",
-      "type": "research",
-      "lane": null,
-      "priority": 80,
-      "canonical_id": "arXiv:2603.20661",
-      "title": "WWW.Serve: Interconnecting Global LLM Services through Decentralization",
-      "source_url": "https://arxiv.org/abs/2603.20661",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-23c1aef2e7b819be",
-      "type": "research",
-      "lane": null,
-      "priority": 77,
-      "canonical_id": "arXiv:2609.11356",
-      "title": "Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification",
-      "source_url": "https://arxiv.org/abs/2609.11356",
-      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-bb0ed15a04a1b6a4",
+      "job_id": "job-f780bad6bf6e1746",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T14:03:20+00:00"
+  "generated_at": "2026-09-12T14:06:23+00:00"
 }
