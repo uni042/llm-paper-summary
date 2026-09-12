@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:38:24+00:00",
-  "last_run_key": "2026-09-13T05:28:14+09:00",
-  "last_round": "specialist-hash-kv-family-3",
+  "updated_at": "2026-09-12T21:04:20+00:00",
+  "last_run_key": "2026-09-13T06:02:25+09:00",
+  "last_round": "specialist-adaptive-kv-agent-energy-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2083,6 +2083,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "last strong batch後に新着/revision、MoE expert cache/offload、framework、forward citation、storage/networking/GPU runtimeを一巡して未収録強候補が残るか確認する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260912T2036Z-hash-kv-family.json"
+    },
+    {
+      "run_key": "2026-09-13T06:02:25+09:00",
+      "round": "specialist-adaptive-kv-agent-energy-1",
+      "axis": "適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving",
+      "query_summary": "直前のhash/KV系探索をそのまま反復せず、2026年8-9月のKV適応制御、multi-agent prefix状態スケジューリング、Attention/FFN分離サービングへ軸を分散して一次arXivページを軽量評価した。投入直前に最新main HEADとrepo全体の識別子検索、Library pendingを再確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はGPU runtime/kernel scheduling、forward citation、またはSSD/NVMe expert I/Oの独立軸を優先する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0602JST-kv-serving-1.json"
     }
   ],
   "axes": {
@@ -3285,6 +3300,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "last strong batch後に新着/revision、MoE expert cache/offload、framework、forward citation、storage/networking/GPU runtimeを一巡して未収録強候補が残るか確認する"
+    },
+    "適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving": {
+      "last_run_key": "2026-09-13T06:02:25+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はGPU runtime/kernel scheduling、forward citation、またはSSD/NVMe expert I/Oの独立軸を優先する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:53:26.517083+00:00",
+  "updated_at": "2026-09-12T21:05:29.082544+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,7 +15070,7 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T20:53:26.517083+00:00",
+      "last_recorded_at": "2026-09-12T21:05:29.082544+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -15079,9 +15079,9 @@
       "counts": {
         "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 10,
         "new_papers": 5,
         "fallback_archived": 0
       },
@@ -15189,6 +15189,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34718883948:1",
+          "recorded_at": "2026-09-12T21:05:29.082544+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34718883948",
+            "run_attempt": "1",
+            "source_sha": "8da537b1302836a904ecf57a4a70126c7c71bdfb"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15253,6 +15267,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.06370",
           "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-244f923379fb2dfa",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -15320,6 +15342,13 @@
           "type": "research",
           "canonical_id": "arXiv:2410.16179",
           "title": "MagicPIG: LSH Sampling for Efficient LLM Generation"
+        },
+        {
+          "job_id": "job-8f4979ed83101d83",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -15332,12 +15361,13 @@
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json",
         ".survey/work-queue/results/discovery-specialist-20260912T2034Z-kv-backref.json",
-        ".survey/work-queue/results/discovery-specialist-20260912T2036Z-hash-kv-family.json"
+        ".survey/work-queue/results/discovery-specialist-20260912T2036Z-hash-kv-family.json",
+        ".survey/work-queue/results/discovery-specialist-20260913T0602JST-kv-serving-1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,
       "paper_active_count_after": 391,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
