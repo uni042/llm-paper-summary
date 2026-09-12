@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:42:43.081740+00:00",
+  "updated_at": "2026-09-12T20:46:20.457759+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,19 +15070,19 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T20:42:43.081740+00:00",
+      "last_recorded_at": "2026-09-12T20:46:20.457759+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 9,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -15144,6 +15144,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34717925533:1",
+          "recorded_at": "2026-09-12T20:46:20.457759+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34717925533",
+            "run_attempt": "1",
+            "source_sha": "4ea72da9a1d3c8cc1ae50843b60b8710bc68ae45"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15184,6 +15199,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.01024",
           "title": "PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-9ec262cfb6759c96",
+          "type": "research",
+          "canonical_id": "arXiv:2606.29986",
+          "title": "HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators",
           "from": "ready",
           "to": "completed"
         }
@@ -15255,7 +15278,8 @@
       ],
       "new_paper_ids": [
         "arXiv:2605.01708",
-        "arXiv:2609.01024"
+        "arXiv:2609.01024",
+        "arXiv:2606.29986"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json",
@@ -15264,7 +15288,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,
-      "paper_active_count_after": 388,
+      "paper_active_count_after": 389,
       "last_successful_action": "paper_materialized"
     }
   ]
