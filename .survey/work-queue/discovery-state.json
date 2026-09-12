@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:15:59+00:00",
+  "updated_at": "2026-09-12T17:18:37+00:00",
   "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-slo-data-movement-9",
+  "last_round": "specialist-hardware-runtime-codesign-10",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1445,6 +1445,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はSLO schedulerを離れ、CPU-free SmartNIC/persistent GPU control、hybrid CPU-GPU attention、lossless weight/KV compressionなどruntime/hardware co-designへ移る",
       "source_submission": "work-queue/submissions/20260913T0216JST-discovery-5d7000d72e974f06.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-hardware-runtime-codesign-10",
+      "axis": "CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime",
+      "query_summary": "SLO-aware data movementから離れ、SmartNIC/persistent GPU control、lossless KV/weight compression、CPU-GPU collaborative execution/attentionへ探索軸を変更した。最新main HEADとqueueを再取得し、canonical ID検索で5件とも既存一致がないことを投入直前に再確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次は単一node runtimeを離れ、heterogeneous cluster・decentralized/global serving・agent workflow routingへ移る",
+      "source_submission": "work-queue/submissions/20260913T0218JST-discovery-0716b90ddce6dee3.json"
     }
   ],
   "axes": {
@@ -2287,6 +2302,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はSLO schedulerを離れ、CPU-free SmartNIC/persistent GPU control、hybrid CPU-GPU attention、lossless weight/KV compressionなどruntime/hardware co-designへ移る"
+    },
+    "CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次は単一node runtimeを離れ、heterogeneous cluster・decentralized/global serving・agent workflow routingへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

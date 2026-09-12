@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:17:06.252205+00:00",
+  "updated_at": "2026-09-12T17:19:28.603383+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T17:17:06.252205+00:00",
+      "last_recorded_at": "2026-09-12T17:19:28.603383+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 18,
+        "discovery_completed": 19,
         "blocked": 0,
-        "new_jobs": 46,
+        "new_jobs": 48,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12502,6 +12502,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34707827626:1",
+          "recorded_at": "2026-09-12T17:19:28.603383+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34707827626",
+            "run_attempt": "1",
+            "source_sha": "edc3b446eb26b555057e34f41709c8c36864ac8f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12643,6 +12657,14 @@
         },
         {
           "job_id": "job-5d7000d72e974f06",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-0716b90ddce6dee3",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12972,6 +12994,20 @@
           "type": "research",
           "canonical_id": "arXiv:2602.16603",
           "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving"
+        },
+        {
+          "job_id": "job-0e120e1d91c12e9d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2466f653227bab25",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.01708",
+          "title": "SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving"
         }
       ],
       "new_paper_ids": [],
@@ -12993,7 +13029,8 @@
         ".survey/work-queue/results/20260913T0209JST-discovery-d4eb0caeda27a63f.json",
         ".survey/work-queue/results/20260913T0211JST-discovery-582553a19b973e3b.json",
         ".survey/work-queue/results/20260913T0214JST-discovery-79f44962fd7f926b.json",
-        ".survey/work-queue/results/20260913T0216JST-discovery-5d7000d72e974f06.json"
+        ".survey/work-queue/results/20260913T0216JST-discovery-5d7000d72e974f06.json",
+        ".survey/work-queue/results/20260913T0218JST-discovery-0716b90ddce6dee3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

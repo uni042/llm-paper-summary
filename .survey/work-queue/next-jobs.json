@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 248,
+      "completed": 249,
       "ready": 1
     },
     "audit": {
@@ -10,7 +10,7 @@
     "research": {
       "completed": 177,
       "superseded": 44,
-      "ready": 69,
+      "ready": 70,
       "deferred": 3
     }
   },
@@ -48,6 +48,18 @@
       "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference",
       "source_url": "https://arxiv.org/abs/2607.08782",
       "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2466f653227bab25",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2605.01708",
+      "title": "SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.01708",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.01708-splitzip-lossless-kv-compression.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-b1be9294a63ee868",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2607.28699",
-      "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization",
-      "source_url": "https://arxiv.org/abs/2607.28699",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-0716b90ddce6dee3",
+      "job_id": "job-0e120e1d91c12e9d",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T17:16:20+00:00"
+  "generated_at": "2026-09-12T17:19:11+00:00"
 }
