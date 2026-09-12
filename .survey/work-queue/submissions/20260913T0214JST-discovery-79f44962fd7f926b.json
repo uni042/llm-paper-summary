@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-79f44962fd7f926b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-reservation-output-length-uncertainty.md",
+      "priority": 92,
+      "reason": "未知のoutput lengthに対するKV予約で、過少予約によるpreemption/recomputationと過剰予約による容量浪費を同時に扱う。GPU parallelism、class別KV reservation、heterogeneous group routing、prefix cachingをWasserstein分布ロバスト最適化で共同決定し、production traceで固定quantile予約比最大56%のcost削減を報告。KV容量管理とSLOを直接結ぶため優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.22327",
+      "title": "Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice",
+      "source_url": "https://arxiv.org/abs/2606.22327",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.22327-geometry-aware-online-scheduling.md",
+      "priority": 89,
+      "reason": "LLM requestのKV footprint成長を時間だけでなく2次元の時空間volumeとして捉え、Smallest Volume Firstと1-bit SVFを提案。理論保証に加えてvLLMへplug-in実装し、平均/末尾latencyとthroughputを改善する。メモリ制約schedulerに理論と実装を同時に与えるため系譜上重要。"
+    },
+    {
+      "canonical_id": "arXiv:2601.22705",
+      "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control",
+      "source_url": "https://arxiv.org/abs/2601.22705",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md",
+      "priority": 89,
+      "reason": "長時間agent workloadでKVが蓄積し、容量枯渇前にcache効率が崩れるmiddle-phase thrashingを定義し、runtime cache signalに基づくagent-level admission controlを導入。Qwen3-32Bで最大4.09倍、DeepSeek-V3で1.9倍のbatch inference throughput改善を報告し、agent state管理とcongestion controlを接続する明確なシステム候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.01068",
+      "title": "OUTLETS: Output-Length Prediction from Speculative Decoding Backbones",
+      "source_url": "https://arxiv.org/abs/2609.01068",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-speculative-backbone-length-prediction.md",
+      "priority": 86,
+      "reason": "投機的復号（speculative decoding）のdraft representationをoutput-length predictorへ再利用し、追加proxy modelなしでresource provisioning/scheduling用の長さ推定を得る。saturated disaggregated servingで短requestのP99 latencyを34.8%削減と報告しており、既存decode機構をscheduler signalへ転用する新しい接続点がある。"
+    },
+    {
+      "canonical_id": "arXiv:2504.11320",
+      "title": "Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints",
+      "source_url": "https://arxiv.org/abs/2504.11320",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.11320-fluid-guided-online-scheduling.md",
+      "priority": 83,
+      "reason": "token生成に伴うKV cacheの内生的成長をmulti-stage online schedulingとして定式化し、fluid approximationを用いるWAIT/Nested-WAIT schedulerを設計する理論寄りシステム研究。未知output lengthまで扱い、memory overflowによるin-progress request eviction/recomputationを目的関数へ入れるため、近年のrobust reservation/geometry-aware schedulingの基礎比較として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-kv-admission-uncertainty-8",
+    "axis": "output-length uncertainty・KV reservation・memory-constrained admission/scheduling",
+    "query_summary": "agent state軸から離れ、未知output length下のKV予約、memory-constrained online scheduling、agent-level admission control、length prediction signalへ探索軸を変更した。理論のみで終わる候補よりserving実装またはtrace-driven system評価がある研究を優先し、最新mainで5件のcanonical ID未収録を再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はreservation/schedulingを離れ、SLO budgetとmulti-tier KV restoration、prefill chunk controllerなどSLO-aware data movementへ移る",
+    "empty_round_reason": null
+  }
+}
