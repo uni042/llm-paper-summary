@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-81e46dd484abb553",
+  "type": "research",
+  "parent_job_id": "job-c6f5e54385e09f57",
+  "priority": 86,
+  "canonical_id": "arXiv:2605.19481",
+  "title": "C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG",
+  "source_url": "https://arxiv.org/abs/2605.19481",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md",
+  "selection_reason": "MIG sliceのHBM不足をNVLink-C2C接続のhost memoryで補い、request単位でmodelを切り替えるserverless LLM serving研究。arXiv抄録ではheterogeneous-memory-aware GEMMとC2C contention対応schedulerをGH200で評価し、dense/MoE双方のcold-start短縮を報告している。異種memory runtimeとserving schedulingの交差候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T14:10:11+00:00",
+  "artifact_transport": "structured_record_v10"
+}
