@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T22:06:33+00:00",
+  "updated_at": "2026-09-12T22:09:13+00:00",
   "last_run_key": "2026-09-13T07:00:13+09:00",
-  "last_round": "specialist-adaptive-prefill-scheduling-2",
+  "last_round": "specialist-exhaustion-final-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 4,
+  "last_empty_round_reason": "前回runの枯渇判定後に追加の独立探索軸を再走査し、今回見つかった強候補もすべて正本上の既存論文・既存research jobへ収束した。新着、引用追跡、後方系統、隣接OS/GPU runtime、MoE、CXL/SSD、ネットワーク分離まで試し、未試行の有望なnext-axis hintが残っていないため今回runのexhaustion条件を満たした。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2240,6 +2240,32 @@
       ],
       "next_axis_hint": "新規候補が得られたため枯渇判定をリセットし、2609新着、forward citation、OS/GPU runtime、MoE expert I/O、CXL/SSDの独立軸を再走査する",
       "source_submission": "work-queue/submissions/20260913T0707JST-discovery-909ac1eecafe8335.json"
+    },
+    {
+      "run_key": "2026-09-13T07:00:13+09:00",
+      "round": "specialist-exhaustion-final-3",
+      "axis": "新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査",
+      "query_summary": "直前roundの候補が正本側で新規research化されなかった後、2609新着、Mooncake/FlexGen系のforward-citation検索、chunked-prefillの系統展開、MoE expert prefetch/offload、CXL/SSD階層、GPU runtime/kernel、RDMA/KV transferの独立軸を再走査した。強候補として残ったComposable CXL Memory、SAC、APEX、SpecMoEOff、ZipServ、FlowPrefill、Fairness-Aware Chunked-Prefill Scheduling、SuperInfer、TraCT、CXL-NDPは最新正本の既存jobまたは既収録論文と一致し、新たに投入すべき強候補は残らなかった。",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 10,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2609.10790",
+        "arxiv:2606.19746",
+        "arxiv:2608.11688",
+        "arxiv:2508.21706",
+        "arxiv:2603.17435",
+        "arxiv:2602.16603",
+        "arxiv:2606.09061",
+        "arxiv:2601.20309",
+        "arxiv:2512.18194",
+        "arxiv:2509.03377"
+      ],
+      "next_axis_hint": "次回は新着時刻以降のarXiv追加・改訂を起点にし、今回飽和した候補集合を機械的に反復しない",
+      "source_submission": "work-queue/submissions/20260913T0709JST-discovery-3120d962d29ad791.json"
     }
   ],
   "axes": {
@@ -3522,6 +3548,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "新規候補が得られたため枯渇判定をリセットし、2609新着、forward citation、OS/GPU runtime、MoE expert I/O、CXL/SSDの独立軸を再走査する"
+    },
+    "新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査": {
+      "last_run_key": "2026-09-13T07:00:13+09:00",
+      "rounds": 1,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 10,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "次回は新着時刻以降のarXiv追加・改訂を起点にし、今回飽和した候補集合を機械的に反復しない"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
