@@ -64,6 +64,25 @@ class PaperTargetDetectionTests(unittest.TestCase):
             self.assertTrue(AUDIT.is_paper_summary(path))
 
 
+class PaperRootSelectionTests(unittest.TestCase):
+    def test_default_audit_includes_inference_training_and_survey(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            roots = AUDIT.paper_roots(repo_root, "papers/inference")
+            relative = {path.relative_to(repo_root).as_posix() for path in roots}
+            self.assertEqual(
+                relative,
+                {"papers/inference", "papers/training", "papers/survey"},
+            )
+
+    def test_explicit_nondefault_root_is_not_expanded(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            roots = AUDIT.paper_roots(repo_root, "papers/custom")
+            relative = {path.relative_to(repo_root).as_posix() for path in roots}
+            self.assertEqual(relative, {"papers/custom"})
+
+
 class MethodHeadingCompatibilityTests(unittest.TestCase):
     def test_legacy_method_overview_heading_counts_as_method(self) -> None:
         lines = """# Example
