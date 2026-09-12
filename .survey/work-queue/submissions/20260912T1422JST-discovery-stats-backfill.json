@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "operation": "record_discovery_stats",
+  "accepted_count": 3,
+  "discovery_stats": {
+    "run_key": "2026-09-12T14:22:56+09:00",
+    "round": "specialist-2609-serving-routing-1",
+    "axis": "2609新着・分離サービング・動的ルーティング",
+    "query_summary": "探索専用workerの手動試運転として2609系新着を中心にKV量子化、agentic serving scheduling、動的routingを探索し、投入直前にidentity deltaまで再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "accepted_canonical_ids": [
+      "arxiv:2609.11582",
+      "arxiv:2609.10964",
+      "arxiv:2609.08189"
+    ],
+    "duplicate_canonical_ids": [
+      "arxiv:2609.11133"
+    ],
+    "next_axis_hint": "SSD expert I/O scheduling、被引用・参考文献、または新着2609差分へ探索軸を移す",
+    "empty_round_reason": null
+  }
+}
