@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 17:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 17:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **2 / 50** |
-| Research ready | **2** |
+| Candidate在庫（Research ready） | **1 / 50** |
+| Research ready | **1** |
 | Research blocked | **3** |
 | Research deferred | **3** |
-| Research completed（累計） | **148** |
+| Research completed（累計） | **149** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **16 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 2）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 1）。探索を最優先で継続。
 - Research blocked が **3件** 残っています。
 - Research消化が候補補充を上回っています。candidate枯渇に注意。
 
@@ -27,11 +27,11 @@ Run: **2026-09-12T17:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **1** |
 | 新規job | **3** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -58,15 +58,15 @@ Run: **2026-09-12T17:30:00+09:00** / Round: **paper-worker-memory-serving-refill
 | 重複率 | **21.1%** |
 | Novel候補 | **15** |
 | Research候補採用 | **8** |
-| Research完了 | **32** |
-| Repo収録 | **31** |
+| Research完了 | **33** |
+| Repo収録 | **32** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 19 → 重複除外後 15 → Research候補採用 8 → Research完了 32 → Repo収録 31**
+**探索評価 19 → 重複除外後 15 → Research候補採用 8 → Research完了 33 → Repo収録 32**
 
 ## 探索効率（直近24時間）
 
@@ -90,6 +90,7 @@ Run: **2026-09-12T17:30:00+09:00** / Round: **paper-worker-memory-serving-refill
 
 ### Research完了
 
+- `arXiv:2603.29002` — Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference
 - `arXiv:2602.14516` — Efficient Multi-round LLM Inference over Disaggregated Serving
 - `arXiv:2609.04453` — When Load-Balancing Goes Too Far: Expert Pruning in Over-Dispersed Mixture-of-Experts Models
 - `arXiv:2609.09241` — Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts
@@ -97,12 +98,10 @@ Run: **2026-09-12T17:30:00+09:00** / Round: **paper-worker-memory-serving-refill
 - `arXiv:2609.10790` — Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving
 - `arXiv:2609.08189` — Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference
 - `arXiv:2609.10964` — Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows
-- `arXiv:2609.11582` — OmniKVQuant: KV Cache Quantization for Omni-LLMs
 
 ### 次に処理する候補
 
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P79 `arXiv:2603.29002` — Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference
 
 ## 7日比較
 
