@@ -53,6 +53,7 @@ jobs:
         run: |
           mkdir -p audit-output
           python .survey/scripts/audit_paper_quality.py \
+            --papers-root papers \
             --no-fail-exit \
             --markdown-out audit-output/paper-quality-audit.md \
             --json-out audit-output/paper-quality-audit.json
