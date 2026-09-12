@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:13:10.347062+00:00",
+  "updated_at": "2026-09-12T18:14:41.166833+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,19 +13121,19 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T18:13:10.347062+00:00",
+      "last_recorded_at": "2026-09-12T18:14:41.166833+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 6,
+        "research_completed": 7,
         "audit_completed": 0,
         "discovery_completed": 7,
         "blocked": 0,
         "new_jobs": 35,
-        "new_papers": 6,
+        "new_papers": 7,
         "fallback_archived": 0
       },
       "events": [
@@ -13324,6 +13324,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34710540442:1",
+          "recorded_at": "2026-09-12T18:14:41.166833+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34710540442",
+            "run_attempt": "1",
+            "source_sha": "737678a116e04294b53bdedf606c93328e159f4f"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13428,6 +13443,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-0adc1c376ecfc370",
+          "type": "research",
+          "canonical_id": "arXiv:2509.19729",
+          "title": "Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -13685,7 +13708,8 @@
         "arXiv:2608.06007",
         "arXiv:2608.07009",
         "arXiv:2604.06664",
-        "arXiv:2509.17863"
+        "arXiv:2509.17863",
+        "arXiv:2509.19729"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
@@ -13698,8 +13722,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
-      "paper_active_count_after": 372,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 373,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
