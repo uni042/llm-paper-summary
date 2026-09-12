@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-9ec262cfb6759c96",
+  "type": "research",
+  "parent_job_id": "job-bd760a2eca08ef00",
+  "priority": 89,
+  "canonical_id": "arXiv:2606.29986",
+  "title": "HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators",
+  "source_url": "https://arxiv.org/abs/2606.29986",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29986-hma-serve-memory-heterogeneous-accelerators.md",
+  "selection_reason": "prefillのHBM帯域が遊ぶ点に着目し、GDDR系acceleratorをprefill、HBM GPUをdecodeへ割り当てるcross-vendor memory-heterogeneous disaggregationを扱う。phase-wise quantization、layer-wise KV transfer overlap、deferred dequantizationで4 Qwen3モデルとproduction traceにおいてgoodput最大3.2倍、goodput-per-dollar最大4.8倍を報告する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:25:01+00:00",
+  "artifact_transport": "structured_record_v10"
+}

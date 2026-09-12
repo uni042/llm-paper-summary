@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:23:30.563701+00:00",
+  "updated_at": "2026-09-12T18:25:51.038359+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T18:23:30.563701+00:00",
+      "last_recorded_at": "2026-09-12T18:25:51.038359+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 8,
         "audit_completed": 0,
-        "discovery_completed": 10,
+        "discovery_completed": 11,
         "blocked": 0,
-        "new_jobs": 46,
+        "new_jobs": 50,
         "new_papers": 8,
         "fallback_archived": 0
       },
@@ -13396,6 +13396,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34711106109:1",
+          "recorded_at": "2026-09-12T18:25:51.038359+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34711106109",
+            "run_attempt": "1",
+            "source_sha": "e36eb0b10cec1142e12a271e9f1804c3b81d96a9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13537,6 +13551,14 @@
         },
         {
           "job_id": "job-52b0a5580681f508",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bd760a2eca08ef00",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -13866,6 +13888,34 @@
           "type": "research",
           "canonical_id": "arXiv:2504.09590",
           "title": "Efficient LLM Serving on Hybrid Real-time and Best-effort Requests"
+        },
+        {
+          "job_id": "job-91c5a3b7cb2ac1b7",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-39ac27aff531cdb5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.19539",
+          "title": "Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts"
+        },
+        {
+          "job_id": "job-research-9ec262cfb6759c96",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.29986",
+          "title": "HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators"
+        },
+        {
+          "job_id": "job-research-b1cd2f28e2d09a3e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.05639",
+          "title": "TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference"
         }
       ],
       "new_paper_ids": [
@@ -13888,7 +13938,8 @@
         ".survey/work-queue/results/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json",
         ".survey/work-queue/results/20260913T0318JST-discovery-specialist-serverless-omissions-3.json",
         ".survey/work-queue/results/20260913T0320JST-discovery-specialist-compiler-runtime-4.json",
-        ".survey/work-queue/results/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json"
+        ".survey/work-queue/results/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json",
+        ".survey/work-queue/results/20260913T0326JST-discovery-specialist-memory-overlap-6.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

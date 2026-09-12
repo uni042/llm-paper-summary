@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:22:29+00:00",
+  "updated_at": "2026-09-12T18:25:01+00:00",
   "last_run_key": "2026-09-13T03:02:31+09:00",
-  "last_round": "specialist-dbms-hybrid-qos-scheduling-5",
+  "last_round": "specialist-memory-communication-overlap-6",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1671,6 +1671,23 @@
       ],
       "next_axis_hint": "次はQoS/cache schedulingを離れ、forward/backward citationまたはGPU L2/HBM prefetch・communication overlapの低層runtimeへ移る",
       "source_submission": "work-queue/submissions/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json"
+    },
+    {
+      "run_key": "2026-09-13T03:02:31+09:00",
+      "round": "specialist-memory-communication-overlap-6",
+      "axis": "GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap",
+      "query_summary": "DBMS/QoS schedulingから低層memory/communication overlapへ軸を変更し、GPU L2 prefetch、HBM-PIM、cross-vendor memory-heterogeneous P/D、MoE tile signaling、distributed prefetchを一次arXiv metadata/abstractで軽量評価した。DAKは最新repoで既存completed jobを確認して除外。送信直前に最新default branch HEAD、identity index、next queue、5件の決定論的research job path、Library pending、GitHub fallback-inboxを再照合し、5件を未収録と判断した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 5,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.16666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.26074"
+      ],
+      "next_axis_hint": "次はmemory/communication overlapを離れ、MoE expert placement/prefetchの未収録、forward/backward citation、またはedge/on-device offloadを独立に確認する",
+      "source_submission": "work-queue/submissions/20260913T0326JST-discovery-specialist-memory-overlap-6.json"
     }
   ],
   "axes": {
@@ -2643,6 +2660,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.7777777777777778,
       "next_axis_hint": "次はQoS/cache schedulingを離れ、forward/backward citationまたはGPU L2/HBM prefetch・communication overlapの低層runtimeへ移る"
+    },
+    "GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap": {
+      "last_run_key": "2026-09-13T03:02:31+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 5,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.16666666666666666,
+      "next_axis_hint": "次はmemory/communication overlapを離れ、MoE expert placement/prefetchの未収録、forward/backward citation、またはedge/on-device offloadを独立に確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
