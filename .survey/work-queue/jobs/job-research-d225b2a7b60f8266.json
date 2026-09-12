@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2603.12707",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
   "selection_reason": "マルチモーダルLLMでは画像符号化が計算律速、言語生成がメモリ帯域律速になる性質を利用し、画像エンコーダとLLMの境界で処理を分離して異なる価格帯のGPUへ配置するHeteroServe。層単位の分離より転送量をKVキャッシュ規模から画像埋め込み規模へ減らせるため、NVLinkではなくPCIe級接続でも異種GPUを組み合わせられる。Qwen2.5-VL等で固定予算下のトークン当たり費用効率を同種GPU構成より37%改善し、遅延を悪化させないと報告しており、マルチモーダル特有の段階分離という新しいサービング軸として価値がある。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T00:37:45+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T00:45:38+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

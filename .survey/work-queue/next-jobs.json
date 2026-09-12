@@ -1,32 +1,32 @@
 {
   "counts": {
     "discovery": {
-      "completed": 167
+      "completed": 167,
+      "ready": 1
     },
     "audit": {
       "completed": 6
     },
     "research": {
-      "completed": 134,
+      "completed": 135,
       "superseded": 43,
       "deferred": 3,
-      "blocked": 3,
-      "ready": 1
+      "blocked": 3
     }
   },
   "next_jobs": [
     {
-      "job_id": "job-research-d225b2a7b60f8266",
-      "type": "research",
-      "lane": null,
-      "priority": 84,
-      "canonical_id": "arXiv:2603.12707",
-      "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity",
-      "source_url": "https://arxiv.org/abs/2603.12707",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+      "job_id": "job-f88892c48010420d",
+      "type": "discovery",
+      "lane": "discovery",
+      "priority": 50,
+      "canonical_id": null,
+      "title": null,
+      "source_url": null,
+      "paper_path": null,
+      "instructions": "Search primary sources for strong LLM inference-system papers not already represented in the repository. Prefer recent work, but include an older important omission when clearly worthwhile. Return at most 5 candidates. Do not fill the list with weak papers.",
+      "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T00:41:35+00:00"
+  "generated_at": "2026-09-12T00:45:53+00:00"
 }
