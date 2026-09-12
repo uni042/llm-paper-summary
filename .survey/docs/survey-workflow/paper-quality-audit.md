@@ -1,6 +1,6 @@
 # Paper mechanical quality audit
 
-`.survey/scripts/audit_paper_quality.py` は `papers/inference/**/*.md` を全件走査し、`.survey/templates/paper.md` のうち機械判定できる品質条件を一覧化する。
+`.survey/scripts/audit_paper_quality.py` は指定したpaper root配下のMarkdownを機械監査する。**repository-wide監査では `--papers-root papers` を明示し、Inference / Training / Surveyの3系統すべてを対象にする。** Trainingの新規追加停止方針は、既存Trainingページを品質監査から除外する理由にはしない。
 
 監査対象の判定はfrontmatterや`canonical_id`の正常性に依存させない。カテゴリ索引の`README.md`、横断比較表`comparison.md`、正規の移動先だけを示す`# Moved`ファイルだけを除外する。
 
@@ -11,6 +11,7 @@
 ```bash
 mkdir -p audit-output
 python .survey/scripts/audit_paper_quality.py \
+  --papers-root papers \
   --markdown-out audit-output/paper-quality-audit.md \
   --json-out audit-output/paper-quality-audit.json \
   --no-fail-exit
@@ -26,7 +27,7 @@ python .survey/scripts/audit_overview_results.py \
   --no-fail-exit
 ```
 
-GitHub Actionsの `.github/workflows/paper-quality-audit.yml` も同じ監査を行い、結果はrepositoryへ固定保存せず7日間のworkflow artifactとして保持する。
+GitHub Actionsの `.github/workflows/paper-quality-audit.yml` も同じrepository-wide監査を行い、結果はrepositoryへ固定保存せず7日間のworkflow artifactとして保持する。workflowは`papers/inference/**`、`papers/training/**`、`papers/survey/**`の変更で起動し、本文機械監査・一覧短文監査・概要代表結果監査の3つとも3系統を対象にする。
 
 ## 既定の機械判定
 
