@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-79f62fbfcb1294fd",
+  "type": "research",
+  "parent_job_id": "job-5945231575e3ff8c",
+  "priority": 84,
+  "canonical_id": "arXiv:2602.12029",
+  "title": "PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving",
+  "source_url": "https://arxiv.org/abs/2602.12029",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md",
+  "selection_reason": "multi-agentや複数LLMからなるworkloadで各modelが同一長文脈を別々にprefillする重複を、共有・固定化したprefill moduleとKV再利用により除く。異なるdownstream model間でcontext処理を共有する点が通常prefix cacheと異なり、p95 latency最大4.5倍改善、throughput最大3.9倍向上を報告する。multi-LLM servingの計算共有として未収録軸。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:44:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}

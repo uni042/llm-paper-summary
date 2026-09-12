@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:42:52.560152+00:00",
+  "updated_at": "2026-09-12T16:44:59.278920+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T16:42:52.560152+00:00",
+      "last_recorded_at": "2026-09-12T16:44:59.278920+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 19,
+        "new_jobs": 22,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12334,6 +12334,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34706120384:1",
+          "recorded_at": "2026-09-12T16:44:59.278920+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34706120384",
+            "run_attempt": "1",
+            "source_sha": "ab4f588cca77709cfa6f2ff626a866b5bb263fb7"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12379,6 +12393,14 @@
         },
         {
           "job_id": "job-53325eb4d61afb8e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-5945231575e3ff8c",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12519,6 +12541,27 @@
           "type": "research",
           "canonical_id": "arXiv:2512.22219",
           "title": "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs"
+        },
+        {
+          "job_id": "job-1cf1e2dacbb5ac28",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-79f62fbfcb1294fd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.12029",
+          "title": "PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving"
+        },
+        {
+          "job_id": "job-research-ec01b6de422e6692",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.08635",
+          "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving"
         }
       ],
       "new_paper_ids": [],
@@ -12528,7 +12571,8 @@
         ".survey/work-queue/results/20260913T0136JST-discovery-a510d87d9cbc3222.json",
         ".survey/work-queue/results/20260913T0138JST-discovery-d3909a842ae76980.json",
         ".survey/work-queue/results/20260913T0140JST-discovery-1f8a64f753d53399.json",
-        ".survey/work-queue/results/20260913T0142JST-discovery-53325eb4d61afb8e.json"
+        ".survey/work-queue/results/20260913T0142JST-discovery-53325eb4d61afb8e.json",
+        ".survey/work-queue/results/20260913T0144JST-discovery-5945231575e3ff8c.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

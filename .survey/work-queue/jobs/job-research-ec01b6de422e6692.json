@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-ec01b6de422e6692",
+  "type": "research",
+  "parent_job_id": "job-5945231575e3ff8c",
+  "priority": 86,
+  "canonical_id": "arXiv:2606.08635",
+  "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving",
+  "source_url": "https://arxiv.org/abs/2606.08635",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.08635-spectrumkv-mixed-precision-pd-kv-transfer.md",
+  "selection_reason": "プリフィル/デコード分離（prefill-decode disaggregation）でKV転送が初回トークン時間（TTFT）の律速になる問題に対し、tokenごとにFP16/INT8/INT4を選ぶ混合精度転送を行う。INT4安全性を配備時にprobeして圧縮強度を制御し、一定品質を保ちながら転送量を削減する設計で、報告値では設定b=0.5でTTFTを50〜62%削減する。token pruningより情報を捨てずに帯域を減らすP/D transfer系の有力候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:44:06+00:00",
+  "artifact_transport": "structured_record_v10"
+}
