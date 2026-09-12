@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ef040c02e2978658",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.21240",
+      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.21240",
+      "paper_path": "papers/inference/04-expert-prefetch/2026-2608.21240-spice-speculative-expert-prefetch.md",
+      "priority": 88,
+      "reason": "MoEオフロードでPCIe上の専門家重み転送が支配的になる問題に対し、軽量ドラフトモデルによる確信度付き先読みとCPU/GPU協調を統合する。予測ミス時には低ランク専門家代理による近似とCPU上の厳密残差計算を使い分け、DeepSeek-V2-LiteとQwen2-57B-A14Bで1トークン当たり時間を最大3.12倍高速化すると報告する。専門家先読みだけでなく、外れ時の回復先まで資源コストに応じて選ぶ点が重点テーマに直結する。"
+    },
+    {
+      "canonical_id": "arXiv:2608.05303",
+      "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.05303",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2608.05303-edgexpert-moe-speculative-decoding.md",
+      "priority": 80,
+      "reason": "MoEと投機的デコードをエッジ機器で組み合わせたときに専門家外部メモリアクセスが増える問題を、プリフィル時のプロンプト単位専門家再利用とデコード時の深さ認識専門家統合で抑えるソフトウェア・ハードウェア協調方式。Samsung 28nm合成評価で先行方式比最大56.3%遅延削減、44.1%エネルギー削減を報告し、専門家選択と外部メモリ階層の接点として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2509.07379",
+      "title": "DuoServe-MoE: Dual-Phase Expert Prefetch and Cache Scheduling for Efficient MoE LLM Inference",
+      "source_url": "https://arxiv.org/abs/2509.07379",
+      "paper_path": "papers/inference/04-expert-prefetch/2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md",
+      "priority": 76,
+      "reason": "プリフィルでは専門家が密に活性化しデコードでは疎に活性化するという段階差を明示的に利用し、プリフィルでは二CUDAストリームで重み先読みと非MoE計算を重ね、デコードでは活性トレース由来の軽量予測器で必要専門家だけを先読みする。Mixtral-8x7B/8x22Bの4bitモデルで終端間遅延を1.42〜7.54倍改善し、ピークGPUメモリを完全モデルの15%に抑える。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T21:30:00+09:00",
+    "round": "normal-worker-critical-inventory-expert-prefetch-rotation",
+    "axis": "moe-expert-prefetch-edge-external-memory",
+    "query_summary": "直前ラウンドが正本側で全重複になったため、KV中心探索を停止し、MoE専門家先読み、予測ミス回復、エッジ外部メモリアクセスへ軸を変更した。一次資料の題名・抄録・定量結果を軽量評価し、最新正本と探索履歴で識別子を再確認して3件を提出した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "採用率が高ければ専門家I/OスケジューリングとSSD/NVMe階層へ展開し、低ければGPU仮想メモリやOSページング系へ切り替える。"
+  }
+}
