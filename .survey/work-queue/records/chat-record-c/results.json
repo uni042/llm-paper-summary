@@ -2,21 +2,25 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2603.29002-20260912-1743-v10-c",
-  "job_id": "job-research-6c35372d7f423594",
+  "attempt_id": "attempt-2606.12556-20260912-2330-v10-c",
+  "job_id": "job-research-665126267e3c34b7",
   "data": {
-    "overview": "GPU単独で測ると、長文推論に付随するメモリ処理は全遅延の22〜97%を占め、方式によって支配段階も大きく異なる。GPU-FPGA異種構成は、このうち不規則・メモリ律速な段階だけをFPGAへ移すことで、疎注意ではエンドツーエンド最大1.49倍、RAGでは最大2.2倍、Memory as Contextでは1.3〜1.6倍、MemAgentでは1.8倍の高速化を得る。全体として1.04〜2.2倍の高速化と1.11〜4.7倍のエネルギー削減を報告する。ただしバッチが大きくGPUの密演算効率が上がる方式ではFPGA優位が縮み、MemAgentはバッチ4以上で異種構成が遅くなるためGPU単独へ切り替える必要がある。",
+    "overview": "ITMEは、KVがGPUに収まらない条件で再計算より速く遠隔CXLハイブリッドメモリから復元し、ShareGPTの5ターン評価では第5ターンの初回トークン時間を再計算基準比1.81倍高速化する。35ターン・256並行会話では、128GB CPUキャッシュが第21ターン以降に枯渇して命中率0%へ落ちる一方、ITMEは遠隔容量を使い続け、後半でCPUオフロード比最大35.7%のスループット改善を示す。70Bの105GB重みは32GB装置内DRAMを超えるが、多段先読みでホストDRAM基準との差を1〜5%に抑える。FPGA試作はキャッシュ命中時に平均読出し18GB/s、書込み12GB/sを達成する一方、キャッシュミス時は1GB/s未満まで落ちる条件があり、製品級CMM系との20〜25%差と未成熟なミス処理が残る。",
     "key_results": [
-      {"metric":"メモリ処理時間割合","value":"22〜97%","baseline":"GPU単独推論の総遅延","condition":"疎注意、RAG、圧縮文脈メモリなど複数方式のプロファイル","interpretation":"長文最適化そのものが新しい処理を追加するため、モデル本体以外のメモリ処理が主要ボトルネックになり得る。"},
-      {"metric":"疎注意エンドツーエンド高速化","value":"最大1.49倍","baseline":"AMD MI210 GPU単独","condition":"DeepSeek Attention、SeerAttention-R、LServeの長文条件","interpretation":"関連度計算と検索をストリーミングFPGAへ移すと、低演算密度・不規則処理でGPUが使い切れない資源を補える。"},
-      {"metric":"RAGエンドツーエンド高速化","value":"最大2.2倍","baseline":"GPU単独RAG","condition":"単段および二段RAG","interpretation":"BM25や上位候補検索の入力依存処理はバッチ化してもGPUで共有しにくく、FPGAの専用データ経路が効く。"},
-      {"metric":"Memory as Context高速化","value":"1.3〜1.6倍","baseline":"GPU単独","condition":"HMT/Titans相当構成","interpretation":"関連度計算と検索をFPGAへ寄せつつ、密な線形射影はGPUへ残す分割が有効。"},
-      {"metric":"MemAgent高速化","value":"1.8倍","baseline":"GPU単独","condition":"小バッチのプリフィル・デコード分離","interpretation":"メモリ生成がデコード中心で帯域律速なため、FPGAの制御可能なHBMアクセスが有利になる。"},
-      {"metric":"エネルギー削減","value":"1.11〜4.7倍","baseline":"GPU単独","condition":"全評価方式","interpretation":"高速化だけでなくFPGAカーネルの低動作電力も要求・トークン当たりエネルギーを下げる。"},
-      {"metric":"RAGメモリ処理高速化","value":"単段5.1〜6.6倍、二段1.1〜2.1倍","baseline":"GPU側検索処理","condition":"単段RAGと再順位付け器を持つ二段RAG","interpretation":"二段RAGではGPUに残る再順位付け器が支配的になり、FPGAで高速化できる割合が小さくなる。"}
+      {"metric":"GPU再計算比TTFT","value":"第5ターンで最大1.81倍高速","baseline":"KV再計算vLLM","condition":"ShareGPT、128並行、最大5ターン、合計KV約40GB","interpretation":"遠隔KVを事前復元できれば、失ったKVを再計算するより短時間で次ターンを開始できる。"},
+      {"metric":"理想GPU全キャッシュ上限","value":"最大3.02倍高速","baseline":"KV再計算vLLM","condition":"80GB HBMへ全KVを保持","interpretation":"ITMEは遠隔階層なのでHBM全保持には届かないが、容量費用を抑えつつ再計算との中間以上の性能を狙う。"},
+      {"metric":"CPUオフロード比長期スループット","value":"最大35.7%改善","baseline":"128GB CPU KVキャッシュ","condition":"ShareGPT、256並行、35ターン、後半でCPU容量超過","interpretation":"CPU容量が尽きると基準は命中率0%で再計算へ崩れるが、ITMEはTB級遠隔容量から復元を続けられる。"},
+      {"metric":"CPU容量内の初期性能","value":"第1〜9ターンはCPUオフロードとほぼ同等","baseline":"CPUオフロード","condition":"作業集合がCPUステージング内に収まる期間","interpretation":"遠隔階層を使う必要がない間はCPUバッファ命中で処理し、余分な遠隔アクセスを課さない。"},
+      {"metric":"中盤のI/O競合","value":"第10〜20ターンでITMEの接頭辞命中率が低下","baseline":"CPUオフロードは約90%命中を維持","condition":"KV量増加に伴い遠隔読書きが競合","interpretation":"遠隔容量には利点がある一方、読書き競合で先読みが間に合わず再計算へ落ちる現実的な弱点を示す。"},
+      {"metric":"70B重み先読み","value":"ホストDRAM基準との差1〜5%","baseline":"全重みをホストDRAMに保持","condition":"105GB重み、装置内DRAM 32GB、Mooncake負荷、バッチ16、入力4K","interpretation":"重みが装置内DRAMを大きく超えても層順アクセスを利用したSSD→DRAM→GPU先読みで大部分の遅延を隠せる。"},
+      {"metric":"4GB装置内DRAMの70B重み先読み","value":"ホストDRAM基準比8%低下","baseline":"ホストDRAM","condition":"4GB先読みバッファ、3段パイプライン","interpretation":"大きなDRAMキャッシュを持たなくても予測的ストリーミングで性能を保てるが、KV同時読出しとの帯域競合は別途制御が必要。"},
+      {"metric":"装置内部帯域","value":"4ch DRAM+2ch SSDでホスト↔DRAM 18GB/s、SSD↔DRAM 18GB/s","baseline":"2ch/1chまたは4ch/1ch構成","condition":"提案CXLハイブリッドメモリ内部","interpretation":"前段と後段の帯域を揃えることでSSD補充がDRAM読出しへ追いつき、先読みキャッシュを枯らしにくくする。"},
+      {"metric":"ユーザー先読み指示費用","value":"通常約3マイクロ秒、mmap重みで約1マイクロ秒","baseline":"先読み指示なし","condition":"1命令で1MB級を移動","interpretation":"将来アクセスをフレームワークから装置へ通知する制御費は転送時間の0.1%未満である。"},
+      {"metric":"FPGAキャッシュ命中帯域","value":"読出し平均18GB/s、書込み12GB/s","baseline":"CMM性能潜在力評価","condition":"Agilex 7試作、DRAMキャッシュ命中","interpretation":"提案制御を実ハードウェアで実装して高い命中時帯域を確認するが、CMM系より20〜25%低い。"},
+      {"metric":"FPGAキャッシュミス時帯域","value":"1GB/s未満まで低下","baseline":"CMM系は極端な競合でも4〜5GB/s","condition":"現在のFPGA試作でキャッシュミス","interpretation":"装置内ミス処理は未最適化で、製品実装には改善余地が大きい。"}
     ],
-    "negative_results": "異種構成は常に速いわけではない。MemAgentはバッチサイズ1で1.85倍だが、4で0.93倍、8で0.49倍、32で0.13倍となり、GPUの密デコードがバッチで重み再利用を得るほどFPGA側の計算性能不足が表面化する。このため論文はバッチ2を超える条件でGPU中心構成へ切り替える。Memory as Contextもバッチ増加で1.48倍から1.15倍へ利益が縮む。LServeやDeepSeek Attentionは文脈が1Mトークンを超えるとFPGA HBMアクセスが増えて高速化が頭打ちになり、GPU単独へのフォールバックが必要になる。テスト時学習は前向き・後ろ向きの密計算が支配するため、そもそも異種構成へ載せていない。",
-    "interpretation": "利益の大小は『処理がFPGA向きか』だけではなく、GPU側に残る処理割合、バッチによる重み再利用、PCIe転送量、FPGA内の高速メモリへ対象データが収まるかで決まる。疎注意とRAGの関連度計算・検索は入力ごとに異なるためバッチでも共有しにくく、密演算だけがGPUで速くなるほどメモリ処理の相対割合が増え、異種化の利益が大きくなる。逆にMemAgentのメモリ生成は通常のLLMデコードなので、大バッチではGPUが有利になる。したがって本論文の設計原則は固定的なFPGAオフロードではなく、段階ごとの演算特性と通信を測って配置を選ぶことである。",
-    "quality_impact": "処理順序と配置を変えるだけで、疎注意の選択規則、RAGの検索結果、メモリ表現の意味を近似していないため、異種実行による追加の品質劣化はない。品質は各元アルゴリズムに依存し、本論文は同じアルゴリズム条件でシステム性能を比較する。"
+    "negative_results": "ITMEは常にCPUオフロードより速いわけではない。作業集合が128GB CPUメモリ内に収まる初期ターンではCPUオフロードとほぼ同じであり、遠隔容量の価値はまだ現れない。さらに第10〜20ターンでは遠隔CXLハイブリッドメモリの読書き競合により一部チャンクの先読みが間に合わず、接頭辞命中率が低下して再計算が増える。FPGA試作はキャッシュ命中時こそ18GB/s級だが、ミス時は1GB/s未満まで低下し、CMM性能潜在力評価との20〜25%差も残る。論文自身が現在のFPGA回路を理論最大23.3GB/sへ近づける最適化を継続中としている。",
+    "interpretation": "ITMEの主要価値はCPU DRAMを置き換えて常に低遅延化することではなく、CPU容量の壁を越えた後にも過去KVを捨てず、再計算より速い共有遠隔階層として残せることにある。SSDを直接読むだけでは書込み競合と細粒度転送で遅いが、巨大な予測可能データを連続チャンク化し、装置内DRAMへ先読みし、GPU計算とDMAを重ね、読出しを最優先にすることでストレージを能動的メモリ階層へ変えている。70B重みが32GBキャッシュを超えてもホストDRAM比1〜5%差に収まる結果は、容量そのものよりアクセス予測と帯域整合が重要であることを示す。",
+    "quality_impact": "重み・KVの数値を変更せず配置と復元経路だけを変えるため品質劣化はない。先読み失敗時は該当KVを再計算し、背景書込みが競合で落ちた場合も後続ターンで再構築する。したがって不十分なI/O性能は遅延・スループット低下として現れる。"
   }
 }
