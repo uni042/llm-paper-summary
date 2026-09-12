@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-5945231575e3ff8c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.08635",
+      "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.08635",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.08635-spectrumkv-mixed-precision-pd-kv-transfer.md",
+      "priority": 86,
+      "reason": "プリフィル/デコード分離（prefill-decode disaggregation）でKV転送が初回トークン時間（TTFT）の律速になる問題に対し、tokenごとにFP16/INT8/INT4を選ぶ混合精度転送を行う。INT4安全性を配備時にprobeして圧縮強度を制御し、一定品質を保ちながら転送量を削減する設計で、報告値では設定b=0.5でTTFTを50〜62%削減する。token pruningより情報を捨てずに帯域を減らすP/D transfer系の有力候補。"
+    },
+    {
+      "canonical_id": "arXiv:2602.12029",
+      "title": "PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving",
+      "source_url": "https://arxiv.org/abs/2602.12029",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md",
+      "priority": 84,
+      "reason": "multi-agentや複数LLMからなるworkloadで各modelが同一長文脈を別々にprefillする重複を、共有・固定化したprefill moduleとKV再利用により除く。異なるdownstream model間でcontext処理を共有する点が通常prefix cacheと異なり、p95 latency最大4.5倍改善、throughput最大3.9倍向上を報告する。multi-LLM servingの計算共有として未収録軸。"
+    },
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 83,
+      "reason": "P/D分離でprefill側が混雑したとき、decode nodeの余剰computeへprefill chunkをdeflectし、token間時間（TBT）SLOを守りながらKVのnetwork transfer自体を避けるload-aware scheduling。vLLM上の実装でp95 TTFT最大81%削減、SLO attainment最大79%向上を報告し、固定P/D役割ではなくruntime負荷に応じてprefill計算を移す実装指向研究として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-pd-transfer-reuse-8",
+    "axis": "P/D分離・KV転送・shared prefill",
+    "query_summary": "kernel/runtime batch後に独立したP/D transfer・shared prefill経路を探索した。Prefill-as-a-Service (arXiv:2604.15039) は既収録として除外し、SpectrumKV、PrefillShare、load-aware prefill deflectionは最新mainで決定論的research job不在を送信直前に再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2604.15039"],
+    "next_axis_hint": "直近新着・通信/collective・citation/related-workを独立に確認し、最後に複数経路の枯渇判定を行う",
+    "empty_round_reason": null
+  }
+}
