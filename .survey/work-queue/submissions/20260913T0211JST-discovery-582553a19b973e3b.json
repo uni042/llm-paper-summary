@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-582553a19b973e3b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2402.01869",
+      "title": "InferCept: Efficient Intercept Support for Augmented LLM Inference",
+      "source_url": "https://arxiv.org/abs/2402.01869",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-augmented-llm-interception.md",
+      "priority": 92,
+      "reason": "外部toolやhuman interactionでLLM generationが中断されるaugmented inferenceを対象に、KV stateをpreserve/swap/discardから適応選択して再開時の再計算を抑える重要な未収録基礎研究。通常方式ではforwarding/recomputationが37〜40%を占める状況を示し、InferCeptはthroughputを1.6〜2倍に改善。現在のagentic multi-turn serving研究の先行系統として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.03143",
+      "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2604.03143",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.03143-tokendance-collective-multiagent-kv-sharing.md",
+      "priority": 90,
+      "reason": "同期roundで各agentへ同じ集約文脈を再配布するmulti-agent workloadのAll-Gather構造を利用し、round全体でcollective KV reuseを行うserving system。Diff-Aware Storageで代表workloadのKVを11〜17倍圧縮し、最大2.7倍多いagentを同時収容、prefillを最大1.9倍高速化する。単純prefix reuseでは拾えないmulti-agent共有構造を利用する点が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2407.00023",
+      "title": "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2407.00023",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2024-2407.00023-preble-distributed-prompt-sharing.md",
+      "priority": 89,
+      "reason": "共有prefixを持つrequestを分散GPUへ配置する際、prompt sharingによる計算削減とload imbalanceを同時に考えるcache-aware distributed scheduler。実験で既存方式比の平均latencyを1.5〜14.5倍、P99を2〜10倍改善と報告しており、現在のprefix-aware routing/KV affinity研究の重要な基礎として収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.09613",
+      "title": "AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving",
+      "source_url": "https://arxiv.org/abs/2606.09613",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09613-agentservesim-multiturn-agent-serving-simulator.md",
+      "priority": 82,
+      "reason": "multi-turn agent servingをstateless requestではなくprogram単位で再現し、tool gap、session affinity、HBM/host DRAM/CXL間のKV residencyをモデル化するhardware-aware simulator。実deploymentの主要指標を6%以内の誤差で再現すると報告しており、agent-aware scheduling/KV policyを安価に比較する評価基盤として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-agent-state-interception-7",
+    "axis": "agentic multi-turn state・interruption・distributed prefix sharing",
+    "query_summary": "multi-LoRA/co-servingから離れ、tool callを挟むmulti-turn agentのKV state保持、中断/再開、multi-agent collective sharing、distributed prefix schedulingへ軸を変更した。重要な古い未収録2件と2026年agent serving候補2件を軽量評価し、最新mainでcanonical IDの未収録を再確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": ["arXiv:2606.23521", "arXiv:2606.18741"],
+    "next_axis_hint": "次はagent stateから離れ、output-length uncertaintyを考慮したKV reservation・memory-constrained online scheduling・admission controlへ移る",
+    "empty_round_reason": null
+  }
+}
