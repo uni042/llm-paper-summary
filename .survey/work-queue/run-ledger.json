@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:06:43.736739+00:00",
+  "updated_at": "2026-09-12T14:08:50.659824+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T14:06:43.736739+00:00",
+      "last_recorded_at": "2026-09-12T14:08:50.659824+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 11,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10804,6 +10804,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34698361006:1",
+          "recorded_at": "2026-09-12T14:08:50.659824+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34698361006",
+            "run_attempt": "1",
+            "source_sha": "36c220d0c961e29a2425f24cb857cb9464463c1b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10849,6 +10863,14 @@
         },
         {
           "job_id": "job-bb0ed15a04a1b6a4",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f780bad6bf6e1746",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -10919,6 +10941,20 @@
           "type": "research",
           "canonical_id": "arXiv:2504.02263",
           "title": "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
+        },
+        {
+          "job_id": "job-c6f5e54385e09f57",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-16aaac9973021cd8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2510.18586",
+          "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications"
         }
       ],
       "new_paper_ids": [
@@ -10930,7 +10966,8 @@
         ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json",
         ".survey/work-queue/results/20260912T2230JST-discovery-job-9d2b0bca513ba597.json",
         ".survey/work-queue/results/20260912T2300JST-discovery-specialist-01.json",
-        ".survey/work-queue/results/20260912T2304JST-discovery-specialist-02.json"
+        ".survey/work-queue/results/20260912T2304JST-discovery-specialist-02.json",
+        ".survey/work-queue/results/20260912T2308JST-discovery-specialist-03.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,

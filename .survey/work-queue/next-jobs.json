@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 203,
+      "completed": 204,
       "ready": 1
     },
     "audit": {
@@ -11,7 +11,7 @@
       "completed": 168,
       "superseded": 44,
       "deferred": 3,
-      "ready": 17
+      "ready": 18
     }
   },
   "next_jobs": [
@@ -64,6 +64,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-16aaac9973021cd8",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2510.18586",
+      "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+      "source_url": "https://arxiv.org/abs/2510.18586",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-95786e300fa60d16",
       "type": "research",
       "lane": null,
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-8d796418f10a7d6b",
-      "type": "research",
-      "lane": null,
-      "priority": 80,
-      "canonical_id": "arXiv:2609.10861",
-      "title": "REACH: Controller-Managed Long-Span ECC for HBM AI Inference",
-      "source_url": "https://arxiv.org/abs/2609.10861",
-      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10861-reach-controller-managed-hbm-ecc-ai-inference.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-f780bad6bf6e1746",
+      "job_id": "job-c6f5e54385e09f57",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T14:06:23+00:00"
+  "generated_at": "2026-09-12T14:08:29+00:00"
 }

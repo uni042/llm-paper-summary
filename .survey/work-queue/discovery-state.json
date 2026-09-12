@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T14:05:39+00:00",
+  "updated_at": "2026-09-12T14:07:46+00:00",
   "last_run_key": "2026-09-12T23:00:00+09:00",
-  "last_round": "specialist-moe-locality-offload-02",
+  "last_round": "specialist-agentic-kv-cache-03",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -704,6 +704,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "GPU runtime/networkingのKV転送・remote memory、または収録済み重要論文のforward/backward citationへ切り替える",
       "source_submission": "work-queue/submissions/20260912T2304JST-discovery-specialist-02.json"
+    },
+    {
+      "run_key": "2026-09-12T23:00:00+09:00",
+      "round": "specialist-agentic-kv-cache-03",
+      "axis": "エージェント型サービング・KV再利用・ツール呼び出し待機",
+      "query_summary": "multi-agent/agentic servingでの固定context再利用、ツール呼び出し待機中のKV保持・退避、enterprise-scale KV共有層をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第2roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "既収録重要論文のforward/backward citation、またはDBMS/OS/storage隣接のcache replacement・remote memory schedulingへ移る",
+      "source_submission": "work-queue/submissions/20260912T2308JST-discovery-specialist-03.json"
     }
   ],
   "axes": {
@@ -1096,6 +1111,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "GPU runtime/networkingのKV転送・remote memory、または収録済み重要論文のforward/backward citationへ切り替える"
+    },
+    "エージェント型サービング・KV再利用・ツール呼び出し待機": {
+      "last_run_key": "2026-09-12T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "既収録重要論文のforward/backward citation、またはDBMS/OS/storage隣接のcache replacement・remote memory schedulingへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

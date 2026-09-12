@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-16aaac9973021cd8",
+  "type": "research",
+  "parent_job_id": "job-f780bad6bf6e1746",
+  "priority": 84,
+  "canonical_id": "arXiv:2510.18586",
+  "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+  "source_url": "https://arxiv.org/abs/2510.18586",
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+  "selection_reason": "外部関数呼び出しを含むmulti-agent workloadで、重要エージェント向け動的メモリ分割とツール待機中のKV proactive offload/predictive uploadを共同設計するKV中心serving基盤。arXiv抄録ではvLLM比でend-to-end latencyとGPU memory utilizationの改善を報告しており、agent-aware scheduling/cache系統の比較候補として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T14:07:46+00:00",
+  "artifact_transport": "structured_record_v10"
+}
