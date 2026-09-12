@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:44:28.159530+00:00",
+  "updated_at": "2026-09-12T14:50:08.744941+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11336,18 +11336,18 @@
     {
       "run_key": "2026-09-12T23:30:00+09:00",
       "first_recorded_at": "2026-09-12T14:44:28.159530+00:00",
-      "last_recorded_at": "2026-09-12T14:44:28.159530+00:00",
+      "last_recorded_at": "2026-09-12T14:50:08.744941+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -11365,6 +11365,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34700374928:1",
+          "recorded_at": "2026-09-12T14:50:08.744941+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34700374928",
+            "run_attempt": "1",
+            "source_sha": "a3ffe1dbb3209fba987501e1ec9a014ec9497f68"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11375,16 +11390,25 @@
           "title": "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-665126267e3c34b7",
+          "type": "research",
+          "canonical_id": "arXiv:2606.12556",
+          "title": "ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
-        "arXiv:2606.29207"
+        "arXiv:2606.29207",
+        "arXiv:2606.12556"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 357,
-      "paper_active_count_after": 358,
+      "paper_active_count_after": 359,
       "last_successful_action": "paper_materialized"
     }
   ]
