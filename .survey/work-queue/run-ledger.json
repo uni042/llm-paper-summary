@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:36:53.811861+00:00",
+  "updated_at": "2026-09-12T16:39:01.621063+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T16:36:53.811861+00:00",
+      "last_recorded_at": "2026-09-12T16:39:01.621063+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 9,
+        "new_jobs": 12,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12292,6 +12292,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34705812927:1",
+          "recorded_at": "2026-09-12T16:39:01.621063+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34705812927",
+            "run_attempt": "1",
+            "source_sha": "b166d05cff3c79f3140a450c60ae8cf74de391ae"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12313,6 +12327,14 @@
         },
         {
           "job_id": "job-a510d87d9cbc3222",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d3909a842ae76980",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12383,13 +12405,35 @@
           "type": "research",
           "canonical_id": "arXiv:2607.08782",
           "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference"
+        },
+        {
+          "job_id": "job-1f8a64f753d53399",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-301f737893441797",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2509.23384",
+          "title": "A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving"
+        },
+        {
+          "job_id": "job-research-e355b9d9df6bf3d0",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2511.14116",
+          "title": "FailSafe: High-performance Resilient Serving"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0132JST-discovery-262708a8729e8066.json",
         ".survey/work-queue/results/20260913T0134JST-discovery-29dd7c44eff93660.json",
-        ".survey/work-queue/results/20260913T0136JST-discovery-a510d87d9cbc3222.json"
+        ".survey/work-queue/results/20260913T0136JST-discovery-a510d87d9cbc3222.json",
+        ".survey/work-queue/results/20260913T0138JST-discovery-d3909a842ae76980.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

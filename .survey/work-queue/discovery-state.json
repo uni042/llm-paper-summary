@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:35:47+00:00",
+  "updated_at": "2026-09-12T16:37:52+00:00",
   "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-moe-placement-coexecution-4",
+  "last_round": "specialist-resilience-crosslayer-scheduling-5",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1195,6 +1195,27 @@
       ],
       "next_axis_hint": "MoEを離れ、CXL/SSD/SmartNICなどmemory・network隣接systemsと被引用・参考文献経路へ移る",
       "source_submission": "work-queue/submissions/20260913T0136JST-discovery-a510d87d9cbc3222.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-resilience-crosslayer-scheduling-5",
+      "axis": "耐障害serving・予測型cross-layer scheduling",
+      "query_summary": "MoE軸の後、CXL/SSD軸、耐障害serving、二層schedulingへ探索を広げた。HyMCache、Photonic-CXL、CXL-PNM、CXL-NDP、prefill-decode最適制御は既存jobとして除外。最新mainで決定論的jobが存在しないFailSafeとSynergySchedを投入した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.7142857142857143,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.18141",
+        "arXiv:2607.27187",
+        "arXiv:2511.00321",
+        "arXiv:2509.03377",
+        "arXiv:2602.02987"
+      ],
+      "next_axis_hint": "次はstorage-centric KV、multi-agent serving、citation/related-work経路、直近新着を独立に確認する",
+      "source_submission": "work-queue/submissions/20260913T0138JST-discovery-d3909a842ae76980.json"
     }
   ],
   "axes": {
@@ -1887,6 +1908,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "MoEを離れ、CXL/SSD/SmartNICなどmemory・network隣接systemsと被引用・参考文献経路へ移る"
+    },
+    "耐障害serving・予測型cross-layer scheduling": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.7142857142857143,
+      "next_axis_hint": "次はstorage-centric KV、multi-agent serving、citation/related-work経路、直近新着を独立に確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
