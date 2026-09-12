@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **87 / 50** |
-| Research ready | **87** |
+| Candidate在庫（Research ready） | **92 / 50** |
+| Research ready | **92** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **180** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **21** |
+| Discovery完了 | **5** |
+| 新規job | **27** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **76** |
-| 探索評価候補 | **351** |
-| 重複除外 | **96** |
+| 探索round（stats観測） | **77** |
+| 探索評価候補 | **358** |
+| 重複除外 | **98** |
 | 重複率 | **27.4%** |
-| Novel候補 | **255** |
-| Research候補採用 | **122** |
+| Novel候補 | **260** |
+| Research候補採用 | **127** |
 | Research完了 | **48** |
 | Repo収録 | **48** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 351 → 重複除外後 255 → Research候補採用 122 → Research完了 48 → Repo収録 48**
+**探索評価 358 → 重複除外後 260 → Research候補採用 127 → Research完了 48 → Repo収録 48**
 
 ## 探索効率（直近24時間）
 
@@ -78,6 +78,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
+| agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
@@ -150,11 +151,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T02:29:24+09:00** — agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory: 評価 7 / 重複 2 / 採用 5
 - **2026-09-13T02:29:24+09:00** — Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity: 評価 5 / 重複 0 / 採用 5
 - **2026-09-13T02:29:24+09:00** — GPU runtime cold-start・MoE network topology・heterogeneous/geo routing: 評価 5 / 重複 0 / 採用 5
 - **2026-09-13T02:29:24+09:00** — multimodal弾力的並列化・EPD分離・modality-aware scheduling: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T02:29:24+09:00** — 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離: 評価 4 / 重複 0 / 採用 4
-- **2026-09-13T02:29:24+09:00** — 新着KV圧縮・時間集約・長推論再参照: 評価 2 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
