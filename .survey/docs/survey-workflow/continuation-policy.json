@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "name": "scheduled-chat-continuation-gate",
   "principle": "A normal paper-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
   "always_on_policy": {
@@ -40,6 +40,14 @@
     "library_pending_backlog_growing",
     "github_fallback_intake_backlog_growing"
   ],
+  "research_blocked_retry_policy": {
+    "implementation": ".survey/scripts/blocked_retry.py",
+    "retryable_status": "blocked",
+    "terminal_status": "blocked_permanent",
+    "retry_delay_seconds": 3600,
+    "max_blocked_attempts": 3,
+    "rule": "Each distinct research blocked event is counted once by GitHub Actions. Attempts 1 and 2 remain blocked for a one-hour cooldown and are then returned to ready without losing block history. The third blocked event is promoted to blocked_permanent and is not automatically retried. Repeated survey-helper runs must not double-count the same blocked event."
+  },
   "fallback_policy": {
     "canonical_doc": ".survey/docs/survey-workflow/fallback-routing.md",
     "backlog_doc": ".survey/docs/survey-workflow/backlog-resilience.md",
