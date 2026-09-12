@@ -25,6 +25,7 @@ SUBMISSIONS = QUEUE / "submissions"
 RESULTS = QUEUE / "results"
 STATE = QUEUE / "state.json"
 ARCHIVE = QUEUE / "archive"
+DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
@@ -254,6 +255,101 @@ def make_audit_job(sub: dict, research_job: dict):
     })
 
 
+def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
+    """Persist per-axis discovery yield once for a processed submission.
+
+    The immutable submission carries what the Chat worker observed before transport;
+    Actions supplies the authoritative accepted_count after the final duplicate gate.
+    Survey-helper runs are serialized by workflow concurrency, so this single writer
+    prevents normal and specialist workers from racing on discovery-state.json.
+    """
+    meta = sub.get("discovery_stats")
+    if not isinstance(meta, dict):
+        return False
+    axis = str(meta.get("axis") or "").strip()
+    if not axis:
+        return False
+
+    state = read_json(DISCOVERY_STATE, {}) or {}
+    history = state.get("history") if isinstance(state.get("history"), list) else []
+    source_submission = str(sub.get("_file") or meta.get("source_submission") or "").strip()
+    if source_submission and any(
+        isinstance(row, dict) and row.get("source_submission") == source_submission
+        for row in history
+    ):
+        return False
+
+    submitted = sub.get("candidates") if isinstance(sub.get("candidates"), list) else []
+    candidate_count = int(meta.get("candidate_count", len(submitted)) or 0)
+    candidate_count = max(candidate_count, len(submitted), 0)
+    duplicate_count = int(meta.get("duplicate_filtered_count", max(candidate_count - len(submitted), 0)) or 0)
+    duplicate_count = min(max(duplicate_count, 0), candidate_count)
+    novel_count = max(candidate_count - duplicate_count, 0)
+    accepted_count = min(max(int(accepted_count or 0), 0), novel_count)
+    duplicate_ratio = (duplicate_count / candidate_count) if candidate_count else 0.0
+
+    row = {
+        "run_key": meta.get("run_key"),
+        "round": meta.get("round"),
+        "axis": axis,
+        "query_summary": meta.get("query_summary"),
+        "candidate_count": candidate_count,
+        "duplicate_filtered_count": duplicate_count,
+        "novel_candidate_count": novel_count,
+        "accepted_count": accepted_count,
+        "duplicate_ratio": duplicate_ratio,
+        "accepted_canonical_ids": list(meta.get("accepted_canonical_ids") or []),
+        "duplicate_canonical_ids": list(meta.get("duplicate_canonical_ids") or []),
+        "next_axis_hint": meta.get("next_axis_hint"),
+        "source_submission": source_submission or None,
+    }
+    history.append(row)
+    limit = state.get("history_limit", 24)
+    if not isinstance(limit, int) or limit < 1:
+        limit = 24
+    state["history_limit"] = limit
+    state["history"] = history[-limit:]
+
+    axes = state.get("axes") if isinstance(state.get("axes"), dict) else {}
+    summary = axes.get(axis) if isinstance(axes.get(axis), dict) else {}
+    summary["last_run_key"] = meta.get("run_key")
+    summary["rounds"] = int(summary.get("rounds", 0) or 0) + 1
+    for field, value in (
+        ("candidate_count", candidate_count),
+        ("duplicate_filtered_count", duplicate_count),
+        ("novel_candidate_count", novel_count),
+        ("accepted_count", accepted_count),
+    ):
+        summary[field] = int(summary.get(field, 0) or 0) + value
+    total_candidates = int(summary.get("candidate_count", 0) or 0)
+    total_duplicates = int(summary.get("duplicate_filtered_count", 0) or 0)
+    summary["duplicate_ratio"] = (total_duplicates / total_candidates) if total_candidates else 0.0
+    summary["next_axis_hint"] = meta.get("next_axis_hint")
+    axes[axis] = summary
+    state["axes"] = axes
+
+    state["schema_version"] = max(int(state.get("schema_version", 2) or 2), 2)
+    state["updated_at"] = now()
+    state["last_run_key"] = meta.get("run_key")
+    state["last_round"] = meta.get("round")
+    if accepted_count == 0:
+        state["consecutive_empty_rounds"] = int(state.get("consecutive_empty_rounds", 0) or 0) + 1
+        state["last_empty_round_reason"] = meta.get("empty_round_reason") or (
+            "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。"
+        )
+    else:
+        state["consecutive_empty_rounds"] = 0
+        state["last_empty_round_reason"] = None
+    state.setdefault("next_action_when_stock_zero", "discover_now")
+    state.setdefault("next_action_when_round_empty", "change_axis_and_discover_again")
+    state.setdefault(
+        "notes",
+        "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run.",
+    )
+    write_json(DISCOVERY_STATE, state)
+    return True
+
+
 def process_discovery(sub: dict, job: dict, st: dict):
     candidates = sub.get("candidates") or []
     if not isinstance(candidates, list):
@@ -276,6 +372,7 @@ def process_discovery(sub: dict, job: dict, st: dict):
     job["result_summary"] = {"submitted_candidates": len(candidates), "research_jobs_added": added}
     st["stats"]["discovered"] += len(candidates)
     st["stats"]["selected"] += added
+    record_discovery_stats(sub, accepted_count=added)
 
 
 def submission_content(sub: dict) -> str | None:
@@ -401,6 +498,18 @@ def process_submissions(st: dict):
                 })
                 write_json(rp, result)
                 continue
+            if sub.get("operation") == "record_discovery_stats":
+                accepted_count = sub.get("accepted_count")
+                if isinstance(accepted_count, bool) or not isinstance(accepted_count, int) or accepted_count < 0:
+                    raise ValueError("record_discovery_stats requires non-negative integer accepted_count")
+                changed = record_discovery_stats(sub, accepted_count=accepted_count)
+                result.update({
+                    "ok": True,
+                    "operation": "record_discovery_stats",
+                    "stats_recorded": changed,
+                })
+                write_json(rp, result)
+                continue
             jid = sub.get("job_id")
             if not jid:
                 raise ValueError("job_id required")
@@ -509,7 +618,7 @@ def queue_snapshot():
 
 
 def main():
-    global ROOT, QUEUE, JOBS, SUBMISSIONS, RESULTS, STATE, ARCHIVE
+    global ROOT, QUEUE, JOBS, SUBMISSIONS, RESULTS, STATE, ARCHIVE, DISCOVERY_STATE
     p = argparse.ArgumentParser()
     p.add_argument("--root", type=Path, default=ROOT)
     args = p.parse_args()
@@ -517,6 +626,7 @@ def main():
     QUEUE = ROOT / "work-queue"
     JOBS, SUBMISSIONS, RESULTS = QUEUE / "jobs", QUEUE / "submissions", QUEUE / "results"
     STATE, ARCHIVE = QUEUE / "state.json", QUEUE / "archive"
+    DISCOVERY_STATE = QUEUE / "discovery-state.json"
     st = load_state()
     st.setdefault("policy", {}).update({
         "fixed_daily_quota": False,
