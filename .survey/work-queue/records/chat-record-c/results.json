@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2608.06007-20260913-0242-v10-c",
-  "job_id": "job-research-c56a9d57e83a480c",
+  "attempt_id": "attempt-2609.09643-20260913-0350-v10-c",
+  "job_id": "job-research-de70e163192311dd",
   "data": {
-    "overview": "TensorCastは、汎用的なテンソルライフサイクル層を追加しても、重みロード・重み同期・KV再利用という個別用途で専用実装に近いか上回る性能を維持した。JuiceFSからQwen3-30B-A3Bを読む条件ではcold重みロードをvLLM既定比60.7倍、InstantTensor比10.2倍高速化し、Qwen3-235B-A22Bを事前実体化するwarm構成では準備完了時間が既定比228.6倍、InstantTensor比40.7倍となった。重み同期では1.14〜2.63倍、KV再利用ではRDMAありでTTFTを60〜87.5%削減しMooncakeと同程度、RDMAなしではTensorCastが優位だった。さらに状態移送と要求ルーティングを合成した方針は、高並行の多ターンエージェント負荷でMooncake付き負荷分散ルータ比の中央値TTFTを最大93.2%削減した。",
+    "overview": "UNISONは六つのエージェントトレースすべてで、未来参照を使わない方式の中ではヒット率と平均メモリアクセス時間が最良となった。LRU等に対するヒット率改善は0.3〜23.1ポイント、平均メモリアクセス時間削減は22〜51%で、長期トレースでは再プリフィルが重要経路になるためTTFTも58〜89%短縮する。64セッション制御器は28nmで0.169mm²、13.6mW、150MHz、平均判断2.00マイクロ秒で、最小ツール待ち1msより十分短い。vLLM実測ではキャッシュ競合が強い条件で平均TTFT35%、P99エンドツーエンド72%を削減した一方、短い待ちをソフトウェア時刻で捉えられない条件ではヒット率が6.6ポイント悪化し、専用イベント観測の必要性も示した。",
     "key_results": [
-      {"metric":"Qwen3-30B-A3BのJuiceFS cold重みロード","value":"vLLM既定比60.7倍、InstantTensor比10.2倍高速化","baseline":"vLLM Default / InstantTensor","condition":"8×H800、TP=8、JuiceFS","interpretation":"ランク別切片を並列読込し、H2D転送をパイプライン化することで共有ファイルシステム読込の直列性を減らす。"},
-      {"metric":"Qwen3-30B-A3Bの準備完了時間","value":"vLLM既定比28.5倍、InstantTensor比5.4倍高速化","baseline":"vLLM Default / InstantTensor","condition":"TensorCast cold、JuiceFS","interpretation":"重みロードだけでなくインスタンス起動全体でも高速化が残り、TaaS層の利用が起動オーバーヘッドへ埋もれない。"},
-      {"metric":"Qwen3-235B-A22B warm準備完了時間","value":"vLLM既定比228.6倍、InstantTensor比40.7倍高速化","baseline":"vLLM Default / InstantTensor","condition":"事前prefetch済み重み、CUDA IPCゼロコピー","interpretation":"重みを計算インスタンス起動前に実体化できる分離設計により、起動時の重みI/Oをほぼ消し、主にランタイム初期化だけを残す。"},
-      {"metric":"分散モデル重み同期","value":"既定SGLang更新器比1.14〜2.63倍高速化","baseline":"SGLang default updater","condition":"2ノード×4 H800、RDMA無効、Qwen3-14B/32B、複数TPサイズ","interpretation":"各TPランクが必要なviewだけを並行取得でき、大型モデルでは複数切片転送が帯域を有効利用する。小型モデルでは切片化費が支配し利得が小さくなる。"},
-      {"metric":"KV再利用によるTTFT削減","value":"60〜87.5%削減（2.5〜8倍相当）","baseline":"最初のインスタンスでKV再計算 / Mooncake比較","condition":"Qwen3-32B TP=2、16k/35k LongBench、RDMA有効","interpretation":"一般Artifact層でも高カーディナリティKVを分散シャードホームから並行取得でき、専用Mooncakeと同程度の再利用効果を保つ。"},
-      {"metric":"RDMAなしKV管理","value":"Mooncakeより高いTTFT削減を維持","baseline":"Mooncake","condition":"Qwen3-32BおよびQwen3-235B-A22B、RDMA無効","interpretation":"複数接続ユーザー空間TCPでカーネルコピー費を抑え帯域を束ねるため、非RDMA環境で専用比較対象より有利になる。"},
-      {"metric":"エージェントfast負荷の中央値TTFT","value":"71.4%削減","baseline":"Mooncake付きload-aware router","condition":"128並行セッション、4ノード×2 H20、Qwen3-32B TP=2","interpretation":"過負荷ノードからKV付きセッションを移し、キャッシュ局所性と負荷分散を同時に維持する。"},
-      {"metric":"エージェントmedium負荷の中央値TTFT","value":"93.2%削減","baseline":"Mooncake付きload-aware router","condition":"256並行セッション","interpretation":"高並行で単純負荷分散とKV局所性が強く衝突する条件ほど、状態移送を含む横断方針の効果が大きい。"},
-      {"metric":"エージェントslow負荷の中央値TTFT","value":"70.4%削減","baseline":"Mooncake付きload-aware router","condition":"256並行セッション","interpretation":"ターン間隔が長い場合でも、再利用可能KVを保持しながら混雑を再均衡することで待ち時間を減らす。"}
+      {"metric": "六トレースのヒット率改善", "value": "+0.3〜+23.1ポイント", "baseline": "LRU等の非オラクル方式", "condition": "1,415セッション、33,596ターン、六容量設定", "interpretation": "ツール待ちとターン進捗を使うセッション順位が、最終アクセス時刻や固定タイムアウトより次参照の近さを捉える。"},
+      {"metric": "平均メモリアクセス時間削減", "value": "22〜51%", "baseline": "各比較方式", "condition": "六エージェントトレース", "interpretation": "残すセッションだけでなく、TIDEが戻りの近いセッションをSRAMへ移すため階層ヒットの費用も下がる。"},
+      {"metric": "長期トレースTTFT", "value": "58〜89%低減", "baseline": "LRU系比較", "condition": "再プリフィルが重要経路になる長期エージェント系列", "interpretation": "生きたセッションの長い接頭辞を誤追い出ししないことで、復帰時の再プリフィルを避ける効果が直接TTFTへ現れる。"},
+      {"metric": "vLLMキャッシュ競合条件", "value": "ヒット率+3.4ポイント、平均TTFT-35%、P99エンドツーエンド-72%", "baseline": "vLLM LRU", "condition": "Qwen2.5-1.5B、60Kトークン、緊密なツール待ち、32並行", "interpretation": "SPEARの順位だけでもキャッシュ競合が強く再プリフィル支配の条件では実サーバ遅延を大きく削減できる。"},
+      {"metric": "vLLMネイティブ30B条件", "value": "ヒット率+1.6ポイント、平均TTFT-1%、P99エンドツーエンド-3%", "baseline": "vLLM LRU", "condition": "Qwen3-Coder-30B-AWQ、60Kトークン、緊密待ち", "interpretation": "大モデルでもヒット率は改善するが、GPU計算やキューが支配するとキャッシュ改善が遅延へ変換される幅は小さい。"},
+      {"metric": "短待ちソフトウェア破綻", "value": "ヒット率-6.6ポイント", "baseline": "vLLM LRU", "condition": "GAIA/Devstral、半分のプール、緊密な待ち", "interpretation": "ツール待ちがデコード窓より短いとソフトウェアのアイドル時刻が信号を逆転させ、専用イベント観測が必要になる。"},
+      {"metric": "28nm制御器", "value": "0.169mm²、13.6mW、150MHz、推定最大153.4MHz", "baseline": "専用制御器なし", "condition": "64セッション、HBM PHY/KV配列除外", "interpretation": "数百MB級KV階層に対する順位制御は小面積・低電力で実装できる。"},
+      {"metric": "判断遅延", "value": "平均2.00μs、最悪3.14μs", "baseline": "最小ツール待ち1ms", "condition": "64セッション・150MHz", "interpretation": "最悪判断でも観測された最小待ちの0.31%で、待ち窓内DMA計画に十分な時間余裕がある。"},
+      {"metric": "固定小数点順位忠実度", "value": "上位被害者一致0.9945、Kendall τ>0.998、平均ヒット率ずれ0.019ポイント", "baseline": "浮動小数点方策", "condition": "7,265追い出しスナップショット・18セル", "interpretation": "専用回路への量子化が方策順位を実質的に維持する。"}
     ],
-    "negative_results": "TensorCastは共通抽象を置くだけで全専用システムより自動的に高速になるわけではない。重み同期ではQwen3-14BでTP数を増やすとワーカー側のテンソル切片化費が支配し、加速率が下がる。KV管理ではTP=8がTP=2より4倍多い並行ページ取得を発生させ、TensorCastとMooncakeの双方でTTFT改善が小さくなる。一般層でもvLLM/SGLang内部状態のexport/importにはエンジン固有Instance Adaptorが必要で、統合コードが完全に不要になるわけではない。要求ルータの93.2%改善は特定の高並行多ターン負荷と比較方針に対する結果であり、単発要求や低負荷で同じ倍率を期待するものではない。",
-    "interpretation": "重要なのは個別の最大倍率より、『同じテンソル管理層が異なる状態種類と用途で専用方式に近い性能を出し、その上で用途をまたぐ方針を普通のプログラムとして作れる』点である。重みロードの大幅改善はライフサイクルをインスタンス起動から分離し、事前実体化を可能にした効果が大きい。KV評価では中央Global Storeをデータ経路から外し、シャードホームへ分散したことで高カーディナリティ状態を拡張できる。ルータ評価では、キャッシュ局所性だけ・負荷だけを最適化する既存方針に対し、PlanによるKV移送をルーティング判断へ組み込めるプログラム可能性が直接性能へつながった。",
-    "quality_impact": "重み、KVキャッシュとも同じ論理テンソルを移送・切片化・再実体化するため、中心機構は無損失である。性能改善のためにモデル精度やKV内容を近似していない。"
+    "negative_results": "vLLM実装ではTIDEを評価しておらず、実サーバでのSRAM/HBM階層移動利得はトレースモデルに依存する。GAIA/Devstralの短いツール待ちではソフトウェアのアイドル時刻が不正確になり、SPEARがLRUより6.6ポイント悪化した。GAIA/Gemma4は128セッションしかなくハザード表の標本雑音が利得を隠す。SWE/Qwen3のGPU飽和条件ではヒット率を上げてもキュー待ちが支配して遅延改善へつながらない。二重IP方式も同期頻度が下がると状態ずれで最大5.4ポイントのヒット率低下が生じる。",
+    "interpretation": "改善の本質は、ツール待ちを『アクセスがないから冷たい』と読むのではなく『再訪までの残り時間を観測できる窓』として使うことにある。SPEARで共有プール全体の次参照距離を近似し、同じ順位をTIDEが階層配置に使うため、保持と置き場所の判断が一致する。専用回路の利点は計算量そのものより、待ち開始・終了をサイクル粒度で観測し、二つの判断を同じ最新状態から出せる点にある。",
+    "quality_impact": "KV内容を枝刈り・圧縮・近似しない無損失の配置制御である。ミスしたセッションは接頭辞を再プリフィルするため計算・遅延は増えるが、モデルの意味品質を意図的に変えない。"
   }
 }
