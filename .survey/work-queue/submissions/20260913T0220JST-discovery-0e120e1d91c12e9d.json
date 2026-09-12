@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0e120e1d91c12e9d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2406.01566",
+      "title": "Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2406.01566",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+      "priority": 93,
+      "reason": "異種GPUとnetwork linkを容量付き有向graphとして表し、model placementとrequest schedulingをmax-flow/MILPで共同最適化する重要な未収録基礎研究。24〜42 GPU nodeの異種clusterでthroughput最大2.7倍、prompting latency最大2.8倍、decode latency最大1.3倍改善を報告しており、近年のheterogeneous serving研究の比較軸として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.22206",
+      "title": "Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs",
+      "source_url": "https://arxiv.org/abs/2603.22206",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-heterogeneous-multiagent-serving.md",
+      "priority": 91,
+      "reason": "heterogeneous model cluster上のmulti-agent workflowを対象に、semantic routing、残りoutput length予測、in-flight token volumeによるcongestion推定を統合する。code/math agent workflowで競合方式比E2E latencyを1.2〜2.4倍削減し、task performanceを平均8.0〜9.5 percentage points改善しており、単一request routingからworkflow-aware schedulingへの拡張として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.17949",
+      "title": "RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.17949",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md",
+      "priority": 90,
+      "reason": "model routerとinstance load balancerを分離せず、具体的なmodel instanceへのonline assignmentとしてquality・latency・costを共同最適化する。13 instance/28 GPUのheterogeneous clusterでbalanced設定がhigh load時にenhanced BEST-Routeを2.6〜4.1倍上回り、model選択段階でqueue latencyを価格付けする点が実運用上重要。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03335",
+      "title": "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2609.03335",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-multiagent-orchestration.md",
+      "priority": 90,
+      "reason": "2026年9月新着。multi-agent workflowの将来依存とmodel lifecycleを物理execution graphへ落とし、device別activation latency・peak memory・model load costを予測してfusion/placement/orderを共同最適化する。burst arrivalでmakespan最大36.8%、P95 completion latency最大25.9%削減し、session当たり最大24.63 GPU-s節約を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2605.07238",
+      "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows",
+      "source_url": "https://arxiv.org/abs/2605.07238",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.07238-fate-future-state-aware-workflow-scheduling.md",
+      "priority": 88,
+      "reason": "workflow DAGの現在queueだけでなく、model residency、parent-output locality、prefix reuse、future device reachabilityなど次stageへ継承される状態をfirst-class objectiveとして扱う。CP-SAT frontier plannerとhorizon-aware scoringで、real-DAG benchmarkのmakespan/P95 latencyを強い非FATE baseline比約8.9%/8.8%削減し、workflow servingのstate-aware schedulingを補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-heterogeneous-workflow-cluster-11",
+    "axis": "heterogeneous GPU cluster・multi-agent workflow・routing/placement",
+    "query_summary": "単一node hardware/runtimeから異種GPU clusterへ軸を変更し、古い基礎のHelix、model routing/load balancing、multi-agent workflowの予測型/将来状態型orchestrationを一次arXiv情報で軽量評価した。最新main HEAD/queueを再取得し、投入直前のcanonical ID検索で5件とも既存一致なしを確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はheterogeneous workflowを離れ、speculative decoding servingのmulti-tenant remote drafter・async disaggregation・edge-cloud verificationへ移る",
+    "empty_round_reason": null
+  }
+}
