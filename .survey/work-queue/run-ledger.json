@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T05:44:04.340765+00:00",
+  "updated_at": "2026-09-12T05:46:18.280001+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8830,7 +8830,7 @@
     {
       "run_key": "2026-09-12T14:30:00+09:00",
       "first_recorded_at": "2026-09-12T05:36:12.861693+00:00",
-      "last_recorded_at": "2026-09-12T05:44:04.340765+00:00",
+      "last_recorded_at": "2026-09-12T05:46:18.280001+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -8839,9 +8839,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 1,
+        "new_jobs": 3,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -8905,6 +8905,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34676399390:1",
+          "recorded_at": "2026-09-12T05:46:18.280001+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34676399390",
+            "run_attempt": "1",
+            "source_sha": "d4634d85afe000482b509d8d8294c652c371b81b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8931,6 +8945,14 @@
           "title": "Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-9085c528d4fdb21e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8940,6 +8962,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-09f84c02bdf7d29d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10812",
+          "title": "ExaServe: Large-Scale LLM Serving on Exascale HPC Systems"
+        },
+        {
+          "job_id": "job-research-985814ffefefe223",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10790",
+          "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -8948,12 +8984,13 @@
         "arXiv:2609.08189"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260912T1422JST-discovery-stats-backfill.json"
+        ".survey/work-queue/results/20260912T1422JST-discovery-stats-backfill.json",
+        ".survey/work-queue/results/20260912T1445JST-discovery-9085c528d4fdb21e.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 329,
       "paper_active_count_after": 332,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
