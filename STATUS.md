@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T07:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **4** |
+| Discovery完了 | **3** |
+| 新規job | **5** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,11 +51,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **116** |
-| 探索評価候補 | **564** |
-| 重複除外 | **221** |
-| 重複率 | **39.2%** |
-| Novel候補 | **343** |
+| 探索round（stats観測） | **117** |
+| 探索評価候補 | **569** |
+| 重複除外 | **224** |
+| 重複率 | **39.4%** |
+| Novel候補 | **345** |
 | Research候補採用 | **190** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 564 → 重複除外後 343 → Research候補採用 190 → Research完了 70 → Repo収録 70**
+**探索評価 569 → 重複除外後 345 → Research候補採用 190 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -111,6 +111,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
 | KVページ制御・MoEメモリ分離・復元系の再探索 | 5 | 5 | 0 | 100.0% | 0.0% |
 | MoE expert paging・SSD cache・runtime parallelism・prefetch | 5 | 0 | 0 | 0.0% | 0.0% |
+| MoE speculative decoding・expert offloading・CPU/GPU共同実行 | 5 | 3 | 0 | 60.0% | 0.0% |
 | MoE専門家配置・先読み・協調スケジューリング | 5 | 5 | 0 | 100.0% | 0.0% |
 | SLO budget・KV restoration/reconfiguration・adaptive prefill execution | 5 | 0 | 1 | 0.0% | 20.0% |
 | agent session KV residency・near-memory scheduling | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -190,11 +191,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T07:58:39+09:00** — MoE speculative decoding・expert offloading・CPU/GPU共同実行: 評価 5 / 重複 3 / 採用 0
 - **2026-09-13T07:58:39+09:00** — MoE expert cache・Flash階層・expert-parallel耐障害性: 評価 7 / 重複 5 / 採用 2
 - **2026-09-13T07:58:39+09:00** — 2609新着・端末メモリ管理・エッジクラウド協調推論: 評価 6 / 重複 4 / 採用 0
 - **2026-09-13T07:00:13+09:00** — 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査: 評価 10 / 重複 10 / 採用 0
 - **2026-09-13T07:00:13+09:00** — 適応プリフィル・KV予約・デコード干渉スケジューリング: 評価 3 / 重複 2 / 採用 0
-- **2026-09-13T07:00:13+09:00** — KVページ制御・MoEメモリ分離・復元系の再探索: 評価 5 / 重複 5 / 採用 0
 
 ## 最近処理した論文
 
