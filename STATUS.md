@@ -28,8 +28,8 @@ Run: **2026-09-13T05:30:00+09:00**
 |---|---:|
 | Research完了 | **6** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **13** |
+| Discovery完了 | **6** |
+| 新規job | **14** |
 | Repo収録 | **6** |
 | Blocked遷移 | **0** |
 
@@ -51,11 +51,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **107** |
-| 探索評価候補 | **504** |
-| 重複除外 | **173** |
-| 重複率 | **34.3%** |
-| Novel候補 | **331** |
+| 探索round（stats観測） | **108** |
+| 探索評価候補 | **510** |
+| 重複除外 | **178** |
+| 重複率 | **34.9%** |
+| Novel候補 | **332** |
 | Research候補採用 | **182** |
 | Research完了 | **71** |
 | Repo収録 | **71** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 24時間ファネル
 
-**探索評価 504 → 重複除外後 331 → Research候補採用 182 → Research完了 71 → Repo収録 71**
+**探索評価 510 → 重複除外後 332 → Research候補採用 182 → Research完了 71 → Repo収録 71**
 
 ## 探索効率（直近24時間）
 
@@ -93,6 +93,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | MoE expert cache・offload・OS tiering | 6 | 6 | 0 | 100.0% | 0.0% |
+| MoE expert prefetch・offload・speculative execution再走査 | 6 | 5 | 0 | 83.3% | 0.0% |
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
@@ -181,11 +182,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 直近5探索round
 
+- **2026-09-13T06:02:25+09:00** — MoE expert prefetch・offload・speculative execution再走査: 評価 6 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — GPU低ビットkernel/runtime・大容量メモリ型chain serving: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T06:02:25+09:00** — 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T05:28:14+09:00** — LSH・hashing系KVアクセス/eviction/sharing・query expansion: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T05:28:14+09:00** — KVキャッシュ幾何学指標・backward reference: 評価 1 / 重複 0 / 採用 1
-- **2026-09-13T05:28:14+09:00** — 2609新着・KVキャッシュ最適化/サービング: 評価 4 / 重複 3 / 採用 1
 
 ## 最近処理した論文
 
