@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 00:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 00:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **34 / 50** |
-| Research ready | **34** |
+| Candidate在庫（Research ready） | **35 / 50** |
+| Research ready | **35** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **171** |
@@ -27,22 +27,22 @@ Run: **2026-09-12T23:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **3** |
+| Discovery完了 | **2** |
+| 新規job | **5** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-storage-hierarchy-1**
+Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-serving-scheduling-2**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | Flash・SSD階層メモリと予測先読み |
+| 探索軸 | 分離サービング負荷転送・異種GPU構成選択 |
 | 評価候補 | **5** |
 | 重複除外 | **3** |
 | Novel候補 | **2** |
-| Research候補採用 | **2** |
+| Research候補採用 | **1** |
 | 重複率 | **60.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-storage-hierarchy-1**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **34** |
-| 探索評価候補 | **178** |
-| 重複除外 | **49** |
-| 重複率 | **27.5%** |
-| Novel候補 | **129** |
-| Research候補採用 | **60** |
+| 探索round（stats観測） | **35** |
+| 探索評価候補 | **183** |
+| 重複除外 | **52** |
+| 重複率 | **28.4%** |
+| Novel候補 | **131** |
+| Research候補採用 | **61** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-storage-hierarchy-1**
 
 ### 24時間ファネル
 
-**探索評価 178 → 重複除外後 129 → Research候補採用 60 → Research完了 47 → Repo収録 47**
+**探索評価 183 → 重複除外後 131 → Research候補採用 61 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -87,6 +87,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-storage-hierarchy-1**
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
+| 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
@@ -107,11 +108,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-storage-hierarchy-1**
 
 ### 直近5探索round
 
+- **2026-09-13T00:00:00+09:00** — 分離サービング負荷転送・異種GPU構成選択: 評価 5 / 重複 3 / 採用 1
 - **2026-09-13T00:00:00+09:00** — Flash・SSD階層メモリと予測先読み: 評価 5 / 重複 3 / 採用 2
 - **2026-09-12T23:00:00+09:00** — MoE expert paging・SSD cache・runtime parallelism・prefetch: 評価 5 / 重複 0 / 採用 0
 - **2026-09-12T23:00:00+09:00** — attention runtime・sparse attention階層memory・elastic decode: 評価 4 / 重複 0 / 採用 2
 - **2026-09-12T23:00:00+09:00** — speculative decoding serving・composite multimodal serving: 評価 4 / 重複 0 / 採用 3
-- **2026-09-12T23:00:00+09:00** — GPU collective通信・in-network acceleration・通信runtime: 評価 4 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
