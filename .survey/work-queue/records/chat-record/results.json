@@ -2,56 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2609.11744-20260912-1140-v10-a1",
-  "job_id": "job-research-c115c71d60df8d04",
+  "attempt_id": "attempt-2601.12241-20260912-1340-v10-a1",
+  "job_id": "job-research-6f0990d652c4efef",
   "data": {
-    "overview": "評価は、外部KVキャッシュの価値がSSD帯域だけでなく、転送をクリティカルパスからどれだけ外せるかと、中間メモリを投機仕事が占有しないかで決まることを示す。SSD単独の長文評価ではpy-kvcacheの非同期転送だけでLMCacheより約1.5倍、先読みを加えると2.0〜2.5倍高速になる。CPU DRAMとSSDを併用する実運用寄り構成では80KでLMCacheより1.23倍高速で、vLLM標準KV Offloadとの差は約4%に収まる。LongBenchとSCBenchではさらに大きな改善を示すが、H100でBailian実トレースを再生すると平均要求がSSD損益分岐未満になり、GPU接頭辞キャッシュだけと同等になる。",
+    "overview": "RAPIDの結果は、同じ総電力でもプリフィルとデコードへ均等配分するより、負荷と電力感度に合わせて非均等に配る方がSLO達成率を高められることを示す。LongBenchでは4800Wの総GPU電力下で4台のプリフィルGPUを750W、4台のデコードGPUを450Wにすると、6000Wの高電力分離構成に近い性能を維持しつつ1200Wを削減した。動的Sonnet負荷では、電力移動だけではデコード偏重区間に十分追従できず、GPU役割変更だけよりも、電力とGPUの両方を段階的に動かす構成が最良だった。",
     "key_results": [
-      {
-        "metric": "SSD単独のキャッシュ命中先頭トークン時間",
-        "value": "80KでLMCache比2.0倍高速、全長域で先読み込み2.0〜2.5倍",
-        "baseline": "LMCacheディスクバックエンド",
-        "condition": "Snellius H100、Llama 3.2 3B、50並行要求、GPU接頭辞キャッシュ無効",
-        "interpretation": "大粒度非同期転送と実行前先読みを組み合わせると、SSD帯域自体を変えずに読込み待ちをクリティカルパスから外せる。"
-      },
-      {
-        "metric": "先読み単独の効果",
-        "value": "40Kで1.66倍、80Kで1.34倍の先頭トークン時間改善",
-        "baseline": "同一py-kvcacheで先読み無効",
-        "condition": "SSD単独構成、同じ転送エンジン",
-        "interpretation": "データ量やI/O機構が同じでも、待機列にいる間にSSD読込みを開始するだけで見える遅延が減る。80Kでは後段CPU→GPU転送が大きくなり利得の一部を隠す。"
-      },
-      {
-        "metric": "CPU+SSD多階層の80K性能",
-        "value": "LMCache比1.23倍高速、vLLM標準KV Offloadより約4%遅い",
-        "baseline": "LMCacheおよびvLLM標準CPU+filesystem Offload",
-        "condition": "Llama 3.2 3B、Snelliusノード、GPU・CPU・SSD階層",
-        "interpretation": "Python実装でも大粒度I/Oと共有ステージングを使えば統合vLLM実装へ近い性能を維持しつつ、LMCacheより短いTTFTを得る。"
-      },
-      {
-        "metric": "LongBenchとSCBench",
-        "value": "LongBenchで再計算比6.02〜7.43倍、LMCache比2.77〜3.64倍、vLLM標準Offload比1.22〜1.79倍。SCBenchでGPU接頭辞比3.11倍、標準Offload比2.48倍、LMCache比1.26倍",
-        "baseline": "再計算、GPU接頭辞、LMCache、vLLM標準Offload",
-        "condition": "Qwen3 4B、Snellius H100、複雑な接頭辞鎖・複数ターン",
-        "interpretation": "均一な合成接頭辞だけでなく、待機列が生じる不規則な長文負荷では実行前先読みが有効で、特に中間メモリの投機占有を抑える効果が現れる。"
-      },
-      {
-        "metric": "SCBenchのストレージ浪費",
-        "value": "vLLM標準Offloadは3.4TB読込み・1200秒超、py-kvcacheは85GB読込み・約480秒完了",
-        "baseline": "vLLM標準filesystem Offload",
-        "condition": "総キャッシュ465GB、Qwen3 4B、Snellius",
-        "interpretation": "無制限の投機昇格がCPUプールを埋め、すぐ追い出したデータを再読込みする病理を、I/O深度で制限した576MBのステージングと需要優先で防いだ。"
-      },
-      {
-        "metric": "Bailian実トレースの損益分岐",
-        "value": "RTX 4000 AdaではGPU接頭辞比1.12〜1.79倍、LMCache比1.10〜1.25倍。一方H100ではGPU接頭辞のみと同等",
-        "baseline": "GPU接頭辞キャッシュおよびLMCache",
-        "condition": "Qwen3 4B、Bailian Coder/interactive/APIトレース",
-        "interpretation": "H100では平均要求長が測定したSSD損益分岐6203トークン未満でVRAMも大きいため、外部キャッシュ命中があっても転送する価値がなくなる。"
-      }
+      {"metric":"80% SLO達成時の持続要求率","value":"6000Wの4P4D分離は非分離6000W比1.5倍、4800W均等4P4Dは1.2倍","baseline":"非分離vLLM 6000W","condition":"LongBench、TTFT=1秒、TPOT=40ms","interpretation":"分離だけでも干渉削減により要求率を増やせるが、総電力を1200W削ると均等配分ではプリフィル待ちが増え、利得が縮む。"},
+      {"metric":"非均等電力配分の電力効率","value":"4P-750W/4D-450Wは4P4D-750W比1.1倍、非分離6000W比1.7倍のQPS/W","baseline":"均等高電力分離および非分離高電力","condition":"総GPU電力4800W、80% SLO達成点","interpretation":"デコードの電力を削ってプリフィルへ寄せると、総電力を増やさず待ち行列の主因を抑えられる。"},
+      {"metric":"同一総電力での構成比較","value":"4P-750W/4D-450Wが5P3D-600Wより高性能","baseline":"5プリフィルGPU・3デコードGPUを各600W","condition":"LongBench、総4800W","interpretation":"単純にプリフィルGPU台数を増やすより、プリフィルGPUへ電力を集中した方が有効な条件があり、GPU台数と電力を別々の資源として扱う必要がある。"},
+      {"metric":"プリフィル実行時間差","value":"4P4D-600Wのプリフィル実行時間は750Wプリフィルより平均15%遅い","baseline":"4P-750W/4D-450W","condition":"LongBench 1.5 QPS/GPU","interpretation":"15%程度の実行時間差でも均等600W側では待ち行列が累積し、エンドツーエンドのSLO差が大きくなる。"},
+      {"metric":"動的混合負荷のSLO達成率","value":"動的GPU+動的電力が全比較構成中で最良、論文要約では静的割当比ピーク負荷で最大2倍","baseline":"静的GPU・静的電力割当","condition":"Sonnet、プリフィル偏重1000要求→デコード偏重1000要求","interpretation":"小さな不足は電力移動、大きな負荷構成変化はGPU役割変更で処理する二段階制御が、片方だけを動かす方式より広い変動へ追従する。"},
+      {"metric":"動的GPU割当の適応範囲","value":"前半はプリフィル最大6GPU、後半はデコード最大7GPUまで移動","baseline":"固定4P4D","condition":"Sonnet動的試験","interpretation":"負荷の主成分が反転する大きな変化では、400〜750W範囲の電力調整だけよりGPU台数の移動が大きな計算能力を移せる。"}
     ],
-    "negative_results": "外部KVキャッシュは常に高速化しない。SnelliusのLlama 3.2 3Bでは8K入力で77.8%の接頭辞再利用が必要で、短い接頭辞をSSDから読むと再計算より遅い。BailianトレースをH100で再生するとGPU接頭辞キャッシュだけとpy-kvcacheの先頭トークン時間は同等で、標準vLLM Offloadは約0.2秒悪化した。xNVMe/SPDKは小I/Oマイクロベンチマークを改善してもvLLMの先頭トークン時間を改善せず、試作したGPUダイレクトストレージも評価構成では他経路より遅かった。また1Kトークン級では多階層構成4種の差が0.12秒以内で順位も逆転する。",
-    "interpretation": "プリフィル再計算量は入力長に対して速く増える一方、KV転送量は概ね線形なので、長い再利用接頭辞ほど外部キャッシュが有利になる。ただし実際の遅延は生帯域だけではなく、転送粒度、フォワード計算との重なり、要求が待機している時間、CPU中間メモリの競合で決まる。したがってSSDを高速化するだけより、読込みを実行前へ移し、投機仕事へ資源上限を置き、不利な命中を再計算へ戻す方がエンドツーエンド性能に効く場合がある。",
-    "quality_impact": "完全なKVブロックを保存・復元する方式で、量子化や枝刈りを行わないためモデル品質の近似誤差は導入しない。損益分岐ゲートが読込みを拒否した場合も通常プリフィルで同じKVを再計算するだけである。評価は主に先頭トークン時間を対象とし、長時間デコードの持続性能や尾部遅延への影響は今後の評価課題である。"
+    "negative_results": "非均等電力の最適値は固定ではない。TPOT目標を40msから25msへ厳しくすると、プリフィル750W・デコード450Wではデコード電力が不足し、675W/525Wの配分がより良くなる。動的電力だけの構成も、デコード偏重区間では電力を増やしてもデコード性能の伸びが600W付近から鈍るため十分な改善を得られない。GPU役割変更は2〜5秒の排出・切替費用があり、電力変更も新上限へ収束するまで数百ミリ秒必要である。",
+    "interpretation": "電力制約下のLLMサービングでは、GPU台数を同じままでも『どの段階へ何Wを割り当てるか』が待ち行列形成を通じて性能を大きく変える。特にプリフィルは電力感度が高いため、デコードの余剰電力を移すことが有効だが、デコード側のSLOが厳しくなると最適点は移る。そのため静的な最適配分より、SLO違反と待ち行列を観測して電力とGPU役割を異なる時間尺度で動かす設計が重要になる。",
+    "quality_impact": "資源配分と実行場所だけを変えるため、推論の数値精度や生成品質を意図的に近似しない。評価対象は品質スコアではなくSLO達成率と電力効率であり、資源不足時の影響は回答品質低下ではなくTTFT/TPOT超過として現れる。"
   }
 }
