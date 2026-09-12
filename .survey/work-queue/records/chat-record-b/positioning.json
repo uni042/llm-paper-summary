@@ -2,14 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2510.13223-20260912-1752-v10-b",
-  "job_id": "job-research-3ae94af47a718bbb",
+  "attempt_id": "attempt-2607.10186-20260913-0030-v10-b",
+  "job_id": "job-research-176f6ec6b8273a5c",
   "data": {
-    "limitations": ["層単位移動はモデル重みの転送量が大きく、NVLinkやInfiniBandのような高帯域接続を前提とする。頻繁な小さな負荷変動では移動費が利得を上回り得る。", "Global KV Cache StoreはCPU/SSD-backedで、評価例では層計算に対してKV転送が十分短い200Gbps級環境を想定する。より低速なホスト・ストレージ経路では重畳しきれない可能性がある。", "移動・スケジューリングは現在の利用率へ反応する方式で、将来負荷を予測しない。急なバーストや短周期変動では反応が遅れる可能性があり、論文も予測型オーケストレーションを今後の課題とする。", "異種GPU、混合精度アクセラレータ、特殊な通信ファブリックへの最適化は十分でない。", "評価は単一リージョンで、WAN越しのKV共有や地理分散サービングは未対応。"],
-    "differences": "DistServeなど既存のプリフィル・デコード分離は役割を固定し、KV状態の所在も要求配置を制約する。vLLM/SGLang系の接頭辞キャッシュは再計算を減らす一方、命中率の高いGPUへ要求を集中させやすい。BanaServeは共有CPU/SSD-backed KV Storeによって接頭辞状態をGPUローカル配置から切り離し、ルータを純粋な負荷指標へ戻す。その上で、重い再配分は層と重みを移し、軽い調整は注意ヘッドのKVだけを移す二段階制御を持つ。MooncakeやMemServeのような共有KV階層と近い問題意識を持つが、共有キャッシュだけでなくプリフィル・デコード計算資源そのものの実行中再編まで統合する点が差分である。",
-    "implementation_status": "vLLMおよびDistServe系スタック上に実装した実験システムとして評価され、Alibaba Group AIOS Teamの大規模基盤で検証されている。Global KV Cache StoreはCPU/SSD-backedとして設計され、層単位転送パイプラインでGPU計算と読み書きを重ねる。arXivページには著者公式コードへの明示リンクがなく、公開実装の入手性は未確認。",
-    "research_positioning": "LLMサービング・スケジューリング・分離実行系統に属し、同時にKVキャッシュ階層研究との接点が大きい。特にSSDを単なる退避容量として使うだけでなく、共有KVストアにすることで要求ルーティングの制約を除去し、上位の資源スケジューリング自由度を増やすという設計は、階層メモリの価値を『容量増加』から『状態配置と計算配置の分離』へ広げる。今後SSD/NVMeのI/Oスケジューリングや遠隔KVキャッシュ研究と組み合わせる余地がある。",
-    "related_work": ["vLLM", "SGLang", "DistServe", "Splitwise", "Mooncake", "MemServe", "Llumnix", "SpotServe", "UELLM", "NVIDIA Dynamo"],
-    "audit_notes": "arXiv:2510.13223v1のPDF全23ページを確認し、問題設定、層単位移動、注意ヘッド単位KV移動、Global KV Cache Store、層単位転送重畳、負荷指向ルーティング、Alpaca/LongBench評価、1〜20 RPS負荷試験、限界と今後の課題を照合した。PDF図6ではhost-to-device読出し、GPU層計算、device-to-host書き戻しの三段重畳を目視確認した。"
+    "limitations": [
+      "主要性能結果はLLMCompassを拡張したイベント駆動シミュレーションであり、6スタックHBFを実装したGPUシリコンの実測ではない。HBFの実効帯域、熱、電力、制御競合、製造ばらつき、故障率がモデル通りになるかは未検証である。",
+      "HBF 1スタック768GB/s、192GB、SLC、tR=4マイクロ秒、tProg=75マイクロ秒という設計は既存Flash prototypeと将来統合技術から構成した想定であり、市販アクセラレータとして直ちに利用できる構成ではない。",
+      "50msの厳しいデコードSLOでは帯域が足りない構成が存在する。CLIはDeepSeek-V3やQwen3-235Bで8×H200を僅かに下回り、4GPU構成ではLLaMA3.1-405B/Qwen3-Coder-480Bの重み読出しだけでSLOを超える。",
+      "16GPUへ規模を増やすと高容量の利得よりRDMA通信、特にMoE expert parallelのall-to-allが律速し、8GPU HBF構成よりGPU当たりthroughputが下がる。HBFはネットワーク瓶頸を解消しない。",
+      "フラッシュ書込み帯域は読出しより大幅に低く耐久性も有限である。KV保存可能性の分析はSLCと、retentionを短くして100Kから1M P/Eへ伸ばせるという保守的ながら将来技術を含む仮定に依存する。",
+      "選択的KV複製はHBMを使用するため、負荷不均衡が極端な場合やHBM余力が小さい場合には複製量が増え、HBFの容量利点を一部相殺する可能性がある。",
+      "公式公開実装は2026-09-13時点でarXivページとGitHub検索から確認できず、シミュレータやruntimeを第三者がそのまま再現できる状態かは不明である。"
+    ],
+    "differences": "FlexGenやLLM in a Flashなど通常SSD/フラッシュへのオフロードはPCIeやストレージ帯域を前提にHBM/DRAMへデータを移して使うため、容量は増えるがデコード帯域が律速しやすい。FlashAccelはHBFをGPUへHBM級の広帯域インターフェースで直結し、GPUから直接読み出すため、Flashを『退避ストレージ』ではなく『大容量主メモリ』に近い役割へ変える。AiF、Lincoln、Cambricon-LLMのようなin-flash processingはFlash内部に演算器を置いてedge推論を成立させるが、Flash内の限られた演算面積がthroughputを制限し、主にmodel weightsを対象としてKV cacheを扱いにくい。FlashAccelは演算をGPUへ残し、Flash側は大並列容量・帯域に集中するためGQA/MLAを含む高演算量attentionにも対応し、KV cacheもHBFへ保存する。H3のようなHBM+HBFハイブリッド設計と問題設定は近いが、FlashAccelはweight execution-order layout、動的KV selective replication、block-isolated writeback、FTLレスobject management、SRAM prefetch APIまでをLLM access patternに合わせて一体設計し、有効帯域をピーク帯域へ近づける点が中心差分である。",
+    "implementation_status": "ハードウェア提案+システムシミュレーション。HBF die/stackの物理パラメータはXL-Flash等の実測・公開値を基礎にし、LLMCompass/ScaleSimへNAND simulatorとFlash/SRAM memory modelを追加して評価する。NandMmap、GroupMmap、GroupWrite、SramPrefetch等のruntime/APIは設計・シミュレーション上で扱われるが、論文はHBF搭載GPU prototypeのfabricationや公開software artifactを報告していない。",
+    "research_positioning": "オフロード／階層メモリとハードウェアアクセラレータの境界に位置する研究で、特にSSD/NVMe活用系統に対して『通常NVMeをどう効率よく読むか』ではなく『FlashそのものをHBM級bandwidthでGPU packageへ組み込み、LLM向けに内部layoutと管理を変える』という将来ハードウェア方向を示す。SSD活用手法を考える際にも、FlashAccelの重要な知見は、帯域の絶対値だけでなくplane-level load balance、read granularity、append-only property、retention/endurance、data lifetimeを推論runtimeへ露出すると大幅に効率を上げられることである。既存NVMe SSDへそのまま適用はできないが、ZNS、GPU-direct storage、複数NVMe striping、read-only/append-only FTL簡素化などへの知識移植余地が大きい。",
+    "related_work": ["FlexGen", "LLM in a Flash", "TightLLM", "AiF", "Lincoln", "Cambricon-LLM", "H3", "HAVEN", "PagedAttention/vLLM", "FlashAttention", "DFTL", "F2FS", "AttAcc", "LLMCompass"],
+    "audit_notes": "arXiv:2607.10186の最新v2（2026-08-22）HTML全文をIntroductionからReferencesまで確認した。v1からv2で題名にHBF表記が追加され、著者Xinjiang Zhangが追加され、abstractの主要throughput値は2.54倍から2.49倍へ更新されているため、最新v2を正本とした。HBF architecture、megaplane/hyperpage、weight execution-order layout、KV selective replication、block-isolated writeback、FTL removal、persistent metadata log、NandMmap/GroupMmap/GroupWrite/SramPrefetch、LLMCompass simulation、4モデル評価、50/100ms SLO、ablation、write/endurance、multi-turn reuse、energy/area分析を照合した。参考文献は50件。公式code repositoryは確認できなかった。"
   }
 }
