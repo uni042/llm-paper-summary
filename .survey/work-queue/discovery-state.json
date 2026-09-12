@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:30:21+00:00",
+  "updated_at": "2026-09-12T23:32:38+00:00",
   "last_run_key": "2026-09-13T08:26:04+09:00",
-  "last_round": "specialist-hybrid-attention-pic-1",
+  "last_round": "specialist-pic-relatedwork-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2392,6 +2392,23 @@
       ],
       "next_axis_hint": "次はhybrid/PICを離れ、forward/backward citationまたはstorage/OS・network runtimeの未収録候補へ移る",
       "source_submission": "work-queue/submissions/20260913T0830JST-discovery-specialist-hybrid-pic.json"
+    },
+    {
+      "run_key": "2026-09-13T08:26:04+09:00",
+      "round": "specialist-pic-relatedwork-2",
+      "axis": "position-independent KV再利用のforward/backward related-work補完",
+      "query_summary": "第1roundのhybrid-attention PIC候補から関連研究・基礎系統へ展開し、EPIC、CacheBlend、RedKnot、C²KV、KV Packetを一次arXiv情報で軽量評価した。SparseXは最新mainでcompleted jobを確認して除外。送信直前に最新HEAD 336341e2、next queue、決定論的research job pathを再確認し、5候補はいずれもjob未存在だった。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.16666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.01751"
+      ],
+      "next_axis_hint": "次はKV/PIC系を離れ、storage/OSまたはnetwork/GPU runtimeの隣接システム軸を独立に探索する",
+      "source_submission": "work-queue/submissions/20260913T0833JST-discovery-specialist-pic-relatedwork.json"
     }
   ],
   "axes": {
@@ -3744,6 +3761,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.42857142857142855,
       "next_axis_hint": "次はhybrid/PICを離れ、forward/backward citationまたはstorage/OS・network runtimeの未収録候補へ移る"
+    },
+    "position-independent KV再利用のforward/backward related-work補完": {
+      "last_run_key": "2026-09-13T08:26:04+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.16666666666666666,
+      "next_axis_hint": "次はKV/PIC系を離れ、storage/OSまたはnetwork/GPU runtimeの隣接システム軸を独立に探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

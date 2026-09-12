@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 299,
+      "completed": 300,
       "ready": 1
     },
     "audit": {
@@ -9,7 +9,7 @@
     },
     "research": {
       "completed": 204,
-      "ready": 140,
+      "ready": 145,
       "superseded": 44,
       "deferred": 3
     }
@@ -36,6 +36,18 @@
       "title": "Vortex: A Programmable System for Efficient Sparse Attention Serving",
       "source_url": "https://arxiv.org/abs/2606.06453",
       "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-a46283c0339631e6",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2410.15332",
+      "title": "EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.15332",
+      "paper_path": null,
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-ff9dfc8e1a733b56",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2601.08800",
-      "title": "MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm",
-      "source_url": "https://arxiv.org/abs/2601.08800",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-e62e2bd040e93661",
+      "job_id": "job-192a71b1aa310fb7",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T23:30:46+00:00"
+  "generated_at": "2026-09-12T23:33:30+00:00"
 }

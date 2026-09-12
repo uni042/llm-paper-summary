@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-a46283c0339631e6",
+  "type": "research",
+  "parent_job_id": "job-e62e2bd040e93661",
+  "priority": 89,
+  "canonical_id": "arXiv:2410.15332",
+  "title": "EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models",
+  "source_url": "https://arxiv.org/abs/2410.15332",
+  "paper_path": null,
+  "selection_reason": "prefix一致に依存する従来context cacheを一般化し、chunkの位置に依存しないKV再利用をLLM servingへ導入した基礎的システム。AttnLinkで静的attention sparsityを用いて精度回復に必要な再計算を絞り、KVSplitで意味的一貫性を保つchunkingを行う。TTFT最大8倍、throughput最大7倍を報告しており、近年のHYPIC/LinearKV/MEPIC等が直接発展させるposition-independent caching系統の重要な欠落として優先度が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:32:38+00:00",
+  "artifact_transport": "structured_record_v10"
+}

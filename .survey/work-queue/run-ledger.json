@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:31:39.543292+00:00",
+  "updated_at": "2026-09-12T23:33:56.492400+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15975,16 +15975,16 @@
     {
       "run_key": "2026-09-13T08:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:31:39.543292+00:00",
-      "last_recorded_at": "2026-09-12T23:31:39.543292+00:00",
+      "last_recorded_at": "2026-09-12T23:33:56.492400+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 11,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16002,11 +16002,33 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34725675148:1",
+          "recorded_at": "2026-09-12T23:33:56.492400+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34725675148",
+            "run_attempt": "1",
+            "source_sha": "ef351c1411fac4e55e3f503b4577be280dfd0047"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
         {
           "job_id": "job-0c31ddf1ad84e2df",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e62e2bd040e93661",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16049,11 +16071,54 @@
           "type": "research",
           "canonical_id": "arXiv:2512.16822",
           "title": "MEPIC: Memory Efficient Position Independent Caching for LLM Serving"
+        },
+        {
+          "job_id": "job-192a71b1aa310fb7",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0e6e5ba9063713ac",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.13226",
+          "title": "KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs"
+        },
+        {
+          "job_id": "job-research-2b6e9eed52cd4c32",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.06256",
+          "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention"
+        },
+        {
+          "job_id": "job-research-9094fc0c86937469",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17715",
+          "title": "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference"
+        },
+        {
+          "job_id": "job-research-a46283c0339631e6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2410.15332",
+          "title": "EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models"
+        },
+        {
+          "job_id": "job-research-cf1831adcf0d875d",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.16444",
+          "title": "CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0830JST-discovery-specialist-hybrid-pic.json"
+        ".survey/work-queue/results/20260913T0830JST-discovery-specialist-hybrid-pic.json",
+        ".survey/work-queue/results/20260913T0833JST-discovery-specialist-pic-relatedwork.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
