@@ -1,0 +1,55 @@
+name: Repair corrupted lineages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/scripts/repair_corrupted_lineages.py'
+      - '.survey/tests/test_repair_corrupted_lineages.py'
+      - '.github/workflows/repair-corrupted-lineages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-corrupted-lineages-main
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify repair regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_repair_corrupted_lineages.py'
+      - name: Repair exact historical normalization signatures
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/repair_corrupted_lineages.py --repo-root . --write
+            if git diff --quiet -- papers/inference papers/training papers/survey; then
+              echo 'No corrupted lineage signatures remain.'
+              exit 0
+            fi
+            git add papers/inference papers/training papers/survey
+            git commit -m 'fix: repair corrupted paper lineage metadata'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push conflict on attempt ${attempt}; rescanning latest main."
+            sleep $((attempt * 2))
+          done
+          echo 'Failed to publish lineage repairs after retries.' >&2
+          exit 1
