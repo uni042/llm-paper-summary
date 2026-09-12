@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "job_id": "job-55b996109ff044ec",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.24595",
+      "title": "Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels",
+      "source_url": "https://arxiv.org/abs/2603.24595",
+      "paper_path": null,
+      "priority": 83,
+      "reason": "LLM推論で使われるCUDAカーネルのmodel依存tensor layout、可変長入力、thread-level indexingに起因するmemory-safety bugを、model-aware dynamic analysisとCUDA向けsymbolic executionで検出するシステム。vLLM、Hugging Face、研究実装のカーネルを対象に353件の未知bugを発見しfalse positiveは9件と報告する。性能最適化だけでなくproduction inference runtimeの安全性・検証可能性を扱う未収録系統として価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2606.11916",
+      "title": "Characterizing Software Aging in GPU-Based LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2606.11916",
+      "paper_path": null,
+      "priority": 80,
+      "reason": "GPU LLM servingを長時間運転した際のmemory leakやsoftware agingをhost・device・clientの同時計測で定量化する実証研究。6 deploymentを216時間同条件で稼働し、全構成で統計的に有意なmemory agingを観測し、leak rateがserving runtimeと構成に強く依存することを示す。長時間稼働・rejuvenation・障害予防というproduction runtimeの盲点を補う基盤資料として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2603.07770",
+      "title": "ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs",
+      "source_url": "https://arxiv.org/abs/2603.07770",
+      "paper_path": null,
+      "priority": 79,
+      "reason": "多数core CPUのNUMA構造を前提に、cross-NUMA memory accessを避けるmemory management、thread scheduling、細粒度tensor parallelismを一体化した軽量LLM inference runtime。既存CPU inference frameworkがNUMA localityを十分利用しない問題を直接扱い、mainstream framework比で最大46%高いthroughputを報告し、実装も公開する。GPU中心の収録を補完するheterogeneous/CPU offload比較対象として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T08:26:04+09:00",
+    "round": "specialist-runtime-reliability-cpu-4",
+    "axis": "GPU runtime安全性・software aging・many-core CPU inference",
+    "query_summary": "agent storage/state軸から離れ、GPU kernelの安全性検証、長時間servingのsoftware aging、many-core CPU/NUMA inference runtimeへ探索軸を変更した。CoRun、FluxBin、OpScale、PATTON、TokenStack、NELSSAは最新mainで既存jobを確認して除外。Model2Kernel、Software Aging、ArcLightは投入直前にHEAD ac6112bcと決定論的research job pathで未登録を再確認した。",
+    "candidate_count": 9,
+    "duplicate_filtered_count": 6,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.14376",
+      "arXiv:2608.15602",
+      "arXiv:2608.13499",
+      "arXiv:2609.11392",
+      "arXiv:2605.05639",
+      "arXiv:2607.26633"
+    ],
+    "next_axis_hint": "最後にnetwork/collective・distributed inferenceと直近新着を独立に再確認し、追加の強候補がなければ今回runの収束判定を行う",
+    "empty_round_reason": null
+  }
+}
