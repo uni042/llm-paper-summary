@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a2c422640f93c24c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11392",
+      "title": "PATTON: Enabling Commodity PIM for Production LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11392",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.11392-patton-commodity-pim-production-serving.md",
+      "priority": 95,
+      "reason": "production servingの動的なKV block割当・共有・回収をcommodity PIMへ落とし込むため、hierarchical granule allocationとValue書込み用Commit Zoneを導入し、vLLMのKV lifecycleとPIM command generationを結ぶ。attention実行とruntime由来prefill recomputationで平均1.95倍高速化、4.83倍のenergy efficiencyを報告し、PIM処理器改造なしでnative GPU相当のKV hit rateを維持する最新の強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "paper_path": "papers/inference/03-moe-expert-offloading/2026-2609.04895-cache-aware-router-adaptation-moe.md",
+      "priority": 94,
+      "reason": "MoE expert cacheをruntime側だけで管理せず、Top-K expert選択を維持したままpost-trainingでbackboneと軽量cache routerを共同適応し、時間方向reuseと前層hidden stateを使うspatio-temporal predictionでexpert trafficを削減する。Qwen3では強いprefetch baseline比でload-adjusted hit rateを1.15〜18.03ポイント改善、trafficを4.6〜53.3%削減しており、expert cacheとrouter学習を接続する新しい設計点。"
+    },
+    {
+      "canonical_id": "arXiv:2605.08151",
+      "title": "SPECTRE: Hybrid Ordinary-Parallel Speculative Serving for Resource-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.08151",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.08151-spectre-remote-drafter-speculative-serving.md",
+      "priority": 88,
+      "reason": "multi-model cloudで遊休するtail model serviceを人気大型modelのremote drafterとして再利用し、draft生成とtarget検証を並列化する。throughput解析に基づくhybrid mode、speculative priority scheduling、prompt compressionをSGLangへ実装し、Qwen3-235B-A22Bを含む評価でautoregressive比最大2.28倍、強いspeculative baselineからさらに最大66%改善しており、資源共有型speculative servingとして有力。"
+    },
+    {
+      "canonical_id": "arXiv:2601.17063",
+      "title": "FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2601.17063",
+      "paper_path": "papers/inference/03-moe-expert-offloading/2026-2601.17063-flashmoe-ssd-ml-cache-replacement.md",
+      "priority": 87,
+      "reason": "RAM制約のedge deviceでinactive expertをSSDへoffloadし、recencyとfrequencyを適応的に組み合わせる軽量ML cache replacementでexpert storage I/Oを削減する。consumer-grade desktop実機でLRU/LFU比cache hit rateを最大51%改善し、既存MoE inference system比最大2.6倍高速化しており、SSD-backed expert offloadingの実装比較として重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-latest-runtime-moe-9",
+    "axis": "最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache",
+    "query_summary": "長文KV階層管理の後、KV以外を含む最新推論runtime・MoE expert cache・speculative servingへ軸を変更。2026年9月新着を含む一次資料抄録を軽量評価し、送信直前に最新default branchで4件のcanonical arXiv IDを再検索して既存化していないことを確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は新規候補のrelated/forward系と、量子化・kernel/fused executionなどmemory/cache以外の推論runtime軸を確認し、複数軸で追加強候補が無ければ収束判定する",
+    "empty_round_reason": null
+  }
+}
