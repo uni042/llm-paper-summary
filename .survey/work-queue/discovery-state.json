@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:12:29+00:00",
+  "updated_at": "2026-09-12T19:15:02+00:00",
   "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-agentic-serving-4",
+  "last_round": "specialist-moe-communication-saturation-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "強いMoE communication/runtime候補4件はすべて既存research jobまたは収録済みだった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1845,6 +1845,26 @@
       ],
       "next_axis_hint": "MoE communication・runtime parallelismは既収録照合を優先し、その後prefix-aware batchingや古い重要欠落へ展開する",
       "source_submission": "work-queue/submissions/20260913T0412JST-discovery-727b21710a6e6ab9.json"
+    },
+    {
+      "run_key": "2026-09-13T04:00:16+09:00",
+      "round": "specialist-moe-communication-saturation-5",
+      "axis": "MoE通信・runtime parallelism・online expert placement",
+      "query_summary": "MoE servingのruntime parallelism切替、online proactive expert placement、TP-EP fused communication、動的expert割当理論を独立軸として確認。Moebius、Director、MixServe、Mixture-of-Experts Servingはいずれも決定論的research job IDの実体を最新正本系統で確認し既存として除外した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2606.26607",
+        "arxiv:2607.08782",
+        "arxiv:2601.08800",
+        "arxiv:2607.17880"
+      ],
+      "next_axis_hint": "CXL/SSD/remote KV cacheとprefix-cache階層メモリへ移る",
+      "source_submission": "work-queue/submissions/20260913T0415JST-discovery-74c76d42ca141850.json"
     }
   ],
   "axes": {
@@ -2917,6 +2937,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.25,
       "next_axis_hint": "MoE communication・runtime parallelismは既収録照合を優先し、その後prefix-aware batchingや古い重要欠落へ展開する"
+    },
+    "MoE通信・runtime parallelism・online expert placement": {
+      "last_run_key": "2026-09-13T04:00:16+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "CXL/SSD/remote KV cacheとprefix-cache階層メモリへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
