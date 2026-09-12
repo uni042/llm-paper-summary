@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（88本）
+## 自動生成の論文一覧（89本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、1年以上前の論文は被引用0件も含めて引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -83,6 +83,10 @@
 - **2026-09 · [ExaServe: Large-Scale LLM Serving on Exascale HPC Systems](2026-2609.10812-exaserve-large-scale-llm-serving-exascale-hpc-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エクサスケールHPC向けLLM推論展開を設定ファイルから自動化し、Aurora 256ノード・3072レプリカまで拡張して、中央ストリーミング配信とRay制御面が先に限界へ達することを実測した。
+
+- **2026-09 · [Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs](2026-2609.11562-entwine-tiled-computation-fine-grained-gpu-communication.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  出力タイルの生成順序・タイル単位通信・共有SM上の通信並列度を協調し、テンソル並列GEMMとReduceScatterの通信尾を抑える計算通信重畳方式。
 
 - **2026-09 · [Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling](2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
