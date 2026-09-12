@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d5dc1f38c992d14e",
+  "discovery_stats": {
+    "run_key": "2026-09-12T16:30:00+09:00",
+    "round": "paper-worker-multiround-heterogeneous-memory-1",
+    "axis": "複数ラウンド分離サービング・異種メモリ処理",
+    "query_summary": "直近の高重複だったKV/SSD軸を避け、エージェント型・複数ラウンドのprefill-decode分離サービングと、疎注意/RAG/圧縮メモリ処理をGPU-FPGAへ分担する異種実行系を一次資料で軽量評価した。投入直前に最新identity indexとnext-jobsを再確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "今回候補の採用結果を確認後、multi-round/agentic servingの引用・被引用、またはGPU以外のメモリ処理アクセラレータへ展開する"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.14516",
+      "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+      "source_url": "https://arxiv.org/abs/2602.14516",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.14516-ampd-multi-round-disaggregated-serving.md",
+      "priority": 86,
+      "reason": "AMPDは、エージェントや反復RAGで生じるincremental prefillとdecodeの交互実行を、従来の単発要求向けprefill-decode分離とは別問題として扱う。リアルタイム負荷に応じてincremental prefillをdecode側でローカル実行するかprefill側へ送るかを選び、prefill待ち行列もSLO余裕に基づいて並べ替える。さらに資源配分と並列戦略を整数線形計画で事前設計し、共置・分離の比較方式に対し平均67.29〜339.74%のSLO達成率改善を報告している。複数ラウンド推論と分離サービングを直接接続する点が既収録の一般的PD分離系との差分として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.29002",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.29002",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md",
+      "priority": 79,
+      "reason": "長文推論で用いる疎注意、RAG、圧縮コンテキストをPrepare Memory・Compute Relevancy・Retrieval・Apply to Inferenceの4段メモリ処理パイプラインとして統一し、推論時間の22〜97%を占め得る処理をGPUとFPGAへ異種分担する。疎で不規則・メモリ律速な処理をFPGA、計算集約部分をGPUへ置き、MI210+U55CでGPU単独比1.04〜2.2倍高速・1.11〜4.7倍低エネルギーを報告する。KVキャッシュ単体ではなく複数の長文メモリ機構を共通パイプラインとして扱うため、異種メモリ処理・分離推論の隣接系統として研究価値が高い。"
+    }
+  ]
+}
