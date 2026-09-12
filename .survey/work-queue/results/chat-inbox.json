@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-a190f4e7421fc3f8",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2602.12151.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-cab6f983bc0c93e3",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T14:36:28+00:00"
 }
