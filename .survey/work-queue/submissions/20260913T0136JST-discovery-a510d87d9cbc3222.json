@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a510d87d9cbc3222",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.08782",
+      "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2607.08782",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
+      "priority": 90,
+      "reason": "MoE推論の専門家配置を、観測後の受動的migrationではなく将来のexpert activation予測に基づくオンライン先行配置として扱う。軽量predictorまたは低bit replicaで活性を先読みし、計算律速区間にmigrationを重ねることで通信待ちを隠す設計。Mistral/DeepSeek/Qwen系でend-to-end latencyを11〜55%削減すると報告し、expert placement・prefetch・online reconfigurationを直接つなぐ候補として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-amx-cpu-gpu-coexecution.md",
+      "priority": 86,
+      "reason": "CPU-GPU協調MoE推論で小粒なexpert実行をそのままCPUへ逃がすのではなく、通常batchの複数expert処理を集約してAMX効率を高め、hot expertはGPUへ階層配置し、attentionも選択的にCPUへ移して資源競合を抑える。FlexGen比最大7.1倍、MoE-Lightning比最大2.4倍のthroughputを報告し、expert offloadとCPU行列演算器の共同設計として既存系統との差が明確。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:26:11+09:00",
+    "round": "specialist-moe-placement-coexecution-4",
+    "axis": "MoE expert配置・CPU-GPU協調実行",
+    "query_summary": "MoE expert placement、prefetch、CPU-GPU co-executionを探索。既収録のMoEless、Speculating Experts、Mixture-of-Experts Serving、ELDRを決定論的job IDで除外し、最新mainでjob未存在を再確認したDirectorとCoX-MoEだけを投入した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arXiv:2603.06350", "arXiv:2603.19289", "arXiv:2607.17880", "arXiv:2607.00466"],
+    "next_axis_hint": "MoEを離れ、CXL/SSD/SmartNICなどmemory・network隣接systemsと被引用・参考文献経路へ移る",
+    "empty_round_reason": null
+  }
+}
