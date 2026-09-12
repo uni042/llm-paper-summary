@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-59418511ae4bc344",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.18071",
+      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.18071",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18071-kvdrive-multi-tier-kv-cache.md",
+      "priority": 90,
+      "reason": "GPU・host DRAM・SSDをまたぐKV配置、pipeline scheduling、tier間data movementを一体で制御する長文LLM向けmulti-tier KV管理。arXiv抄録ではfunctional prototypeと長文benchmarkで最大1.74倍のthroughput改善を報告しており、SSD/NVMe階層memory活用の重点系統として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.22850",
+      "title": "ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2605.22850",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md",
+      "priority": 88,
+      "reason": "KV prefixをremote DRAMではなくS3互換object storageへ置き、GPUがlayerごとに消費する順序へstorage protocolとtransfer scheduleを合わせてcomputeと通信をoverlapする研究。arXiv抄録では100Gbps RoCE、NIXL、Ceph RGW、DAOSを用いたprototype実測があり、storage/distributed systems隣接として研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.27187-photonic-cxl-kv-memory-appliance.md",
+      "priority": 82,
+      "reason": "electrical CXL poolのlatency・reach・power課題をphotonic fabricで回避し、16 host間32TB shared memoryをKV cacheへ提供するhardware/system proposal。arXiv抄録ではemulationとsimulationに基づきelectrical CXL比のlatency低減とmulti-turn TTFT改善を示しており、CXL remote memoryの将来構成として候補価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-storage-backed-kv-07",
+    "axis": "SSD/NVMe・object storage・CXL remote memoryによるKV階層化",
+    "query_summary": "GPU/DRAM/SSD multi-tier KV、layerwise object-storage retrieval、photonic-CXL shared memoryをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第6roundのActions完了後に最新HEADと次discovery jobを取得し、3件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "network fabric・collective communication・GPU runtime、または重要論文の引用追跡へ移る",
+    "empty_round_reason": null
+  }
+}
