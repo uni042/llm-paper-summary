@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6b7cc6cf1ea9bd66",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": null,
+      "priority": 89,
+      "reason": "分離型サービングでprefill側の混雑とdecode側の未使用計算資源が同時に発生する非対称性を対象に、要求ごとにprefillをdecodeノードへdeflectするスケジューラを提案する。vLLM実装とproduction-style trace評価があり、分離サービング・KV転送・SLO-aware schedulingの重点系統に直接接続する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.01579",
+      "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2607.01579",
+      "paper_path": null,
+      "priority": 84,
+      "reason": "異種GPUクラスタでGPU種類、tensor parallel度、精度を選ぶlaunch advisorで、性能予測だけでなく不確実性校正と未対応領域のabstentionを組み込む。A100/H100/H200を含む実測に基づき、異種GPU配置・serving構成選択の系統を補完する候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-serving-scheduling-2",
+    "axis": "分離サービング負荷転送・異種GPU構成選択",
+    "query_summary": "prefill/decode分離時の負荷非対称と異種GPUクラスタの構成選択を探索し、最新HEAD・queue・既存jobで再重複判定して2候補を送信した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2602.12151",
+      "arXiv:2605.23389",
+      "arXiv:2606.18600"
+    ],
+    "next_axis_hint": "エージェント推論のtool待ち隠蔽・speculative tool executionへ軸を移し、その後GPU runtime/機密実行の転送律速を確認する",
+    "empty_round_reason": null
+  }
+}
