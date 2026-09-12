@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T19:43:40.902638+00:00",
+  "updated_at": "2026-09-12T19:53:19.431693+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,18 +14622,18 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T19:43:40.902638+00:00",
+      "last_recorded_at": "2026-09-12T19:53:19.431693+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -14666,6 +14666,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34715383868:1",
+          "recorded_at": "2026-09-12T19:53:19.431693+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34715383868",
+            "run_attempt": "1",
+            "source_sha": "3700c0532fe1c60fb6f608b11e3b46e40b2fe22e"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14684,17 +14699,26 @@
           "title": "RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-d335718873eaacf6",
+          "type": "research",
+          "canonical_id": "arXiv:2605.00254",
+          "title": "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
         "arXiv:2603.03251",
-        "arXiv:2606.17949"
+        "arXiv:2606.17949",
+        "arXiv:2605.00254"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
-      "paper_active_count_after": 380,
+      "paper_active_count_after": 381,
       "last_successful_action": "paper_materialized"
     }
   ]
