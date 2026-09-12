@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（55本）
+## 自動生成の論文一覧（56本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -105,6 +105,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CacheBridgeは出典モデルのKVを受信モデルのヘッド局所表現へ線形変換し、注意感度で係数を学習・GPU融合して、モデル切替時の再プリフィル計算と変換器容量を減らす方式。
+
+- **2026-08 · [Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches](2026-2608.01657-prefixshield-admission-responsibility.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  共有KVキャッシュで新規ブロックを作った利用者に持続的な回収責任を持たせ、負債中の再利用昇格を抑えつつ、その利用者の低価値ブロックから追い出すことで、固定分割なしに他利用者の接頭辞再利用を守る方式。
 
 - **2026-08 · [OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching](2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
