@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:15:00.023400+00:00",
+  "updated_at": "2026-09-12T17:17:06.252205+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T17:15:00.023400+00:00",
+      "last_recorded_at": "2026-09-12T17:17:06.252205+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 17,
+        "discovery_completed": 18,
         "blocked": 0,
-        "new_jobs": 44,
+        "new_jobs": 46,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12488,6 +12488,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34707695515:1",
+          "recorded_at": "2026-09-12T17:17:06.252205+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34707695515",
+            "run_attempt": "1",
+            "source_sha": "9f3a504a6d3c04dfdab93f7abed7621ffcc17d4d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12621,6 +12635,14 @@
         },
         {
           "job_id": "job-79f44962fd7f926b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-5d7000d72e974f06",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12936,6 +12958,20 @@
           "type": "research",
           "canonical_id": "arXiv:2601.22705",
           "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control"
+        },
+        {
+          "job_id": "job-0716b90ddce6dee3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-d01c0f0ba3d381e1",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.16603",
+          "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving"
         }
       ],
       "new_paper_ids": [],
@@ -12956,7 +12992,8 @@
         ".survey/work-queue/results/20260913T0207JST-discovery-376c29b504bdcaf6.json",
         ".survey/work-queue/results/20260913T0209JST-discovery-d4eb0caeda27a63f.json",
         ".survey/work-queue/results/20260913T0211JST-discovery-582553a19b973e3b.json",
-        ".survey/work-queue/results/20260913T0214JST-discovery-79f44962fd7f926b.json"
+        ".survey/work-queue/results/20260913T0214JST-discovery-79f44962fd7f926b.json",
+        ".survey/work-queue/results/20260913T0216JST-discovery-5d7000d72e974f06.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

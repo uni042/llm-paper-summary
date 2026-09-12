@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:14:11+00:00",
+  "updated_at": "2026-09-12T17:15:59+00:00",
   "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-kv-admission-uncertainty-8",
+  "last_round": "specialist-slo-data-movement-9",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1430,6 +1430,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はreservation/schedulingを離れ、SLO budgetとmulti-tier KV restoration、prefill chunk controllerなどSLO-aware data movementへ移る",
       "source_submission": "work-queue/submissions/20260913T0214JST-discovery-79f44962fd7f926b.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-slo-data-movement-9",
+      "axis": "SLO budget・KV restoration/reconfiguration・adaptive prefill execution",
+      "query_summary": "KV reservation/admission軸から、SLO-aware data movementとprefill execution controlへ移動した。schedulerとmulti-tier KV、recompute/I-O overlap、adaptive chunking、fine-grained offload/preemptionを対象に一次arXiv情報で軽量評価し、最新mainで5件のcanonical IDが未収録であることを再確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はSLO schedulerを離れ、CPU-free SmartNIC/persistent GPU control、hybrid CPU-GPU attention、lossless weight/KV compressionなどruntime/hardware co-designへ移る",
+      "source_submission": "work-queue/submissions/20260913T0216JST-discovery-5d7000d72e974f06.json"
     }
   ],
   "axes": {
@@ -2262,6 +2277,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はreservation/schedulingを離れ、SLO budgetとmulti-tier KV restoration、prefill chunk controllerなどSLO-aware data movementへ移る"
+    },
+    "SLO budget・KV restoration/reconfiguration・adaptive prefill execution": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 5,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はSLO schedulerを離れ、CPU-free SmartNIC/persistent GPU control、hybrid CPU-GPU attention、lossless weight/KV compressionなどruntime/hardware co-designへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
