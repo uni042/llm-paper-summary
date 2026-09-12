@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T00:46:38.455635+00:00",
+  "updated_at": "2026-09-12T00:49:14.670723+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8015,7 +8015,7 @@
     {
       "run_key": "2026-09-12T09:30:00+09:00",
       "first_recorded_at": "2026-09-12T00:34:40.121964+00:00",
-      "last_recorded_at": "2026-09-12T00:46:38.455635+00:00",
+      "last_recorded_at": "2026-09-12T00:49:14.670723+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "job_blocked",
@@ -8025,9 +8025,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 1,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -8103,6 +8103,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34662842760:1",
+          "recorded_at": "2026-09-12T00:49:14.670723+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34662842760",
+            "run_attempt": "1",
+            "source_sha": "27cd4ddb080b24c8f44ba2e054717790cfa28f36"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8145,6 +8159,14 @@
           "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-f88892c48010420d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8182,6 +8204,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-544244796b6effba",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11133",
+          "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -8190,12 +8219,13 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T0938JST-discovery-job-05056a15d6adfe06.json",
         ".survey/work-queue/results/20260912T0942JST-discovery-job-5cd36eaf5a789dc2.json",
-        ".survey/work-queue/results/20260912T0947JST-discovery-job-56a6b0dba9fd04b0.json"
+        ".survey/work-queue/results/20260912T0947JST-discovery-job-56a6b0dba9fd04b0.json",
+        ".survey/work-queue/results/20260912T1002JST-discovery-job-f88892c48010420d.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 323,
       "paper_active_count_after": 324,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
