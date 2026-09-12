@@ -22,6 +22,7 @@ PLACEHOLDER_ATTEMPT = "unused-bank-placeholder"
 INBOX = Path(".survey/work-queue/submissions/chat-inbox.json")
 RESULT = Path(".survey/work-queue/results/chat-inbox.json")
 NEXT_JOBS = Path(".survey/work-queue/next-jobs.json")
+JOBS = Path(".survey/work-queue/jobs")
 
 
 def read_object(path: Path) -> dict[str, Any] | None:
@@ -33,6 +34,20 @@ def read_object(path: Path) -> dict[str, Any] | None:
 
 
 def ready_job_ids(repo_root: Path) -> set[str]:
+    """Return every canonical ready job, not only the next-jobs priority window."""
+    jobs_dir = repo_root / JOBS
+    if jobs_dir.is_dir():
+        ready: set[str] = set()
+        for path in sorted(jobs_dir.glob("*.json")):
+            job = read_object(path)
+            if not job or job.get("status") != "ready" or not job.get("job_id"):
+                continue
+            ready.add(str(job["job_id"]))
+        return ready
+
+    # Compatibility fallback for isolated fixtures or legacy snapshots that do not
+    # include the canonical job directory. next-jobs is only a priority window and
+    # must never be preferred when the full job directory is available.
     value = read_object(repo_root / NEXT_JOBS)
     if not value:
         return set()
@@ -42,7 +57,7 @@ def ready_job_ids(repo_root: Path) -> set[str]:
     return {
         str(job.get("job_id"))
         for job in jobs
-        if isinstance(job, dict) and job.get("job_id")
+        if isinstance(job, dict) and job.get("job_id") and job.get("status", "ready") == "ready"
     }
 
 
@@ -100,7 +115,7 @@ def inspect_bank(repo_root: Path, bank: str, ready_ids: set[str], inbox: dict[st
             reason = "current reusable inbox still references this attempt without a matching result"
         elif job_id in ready_ids:
             state = "occupied"
-            reason = "bank belongs to a job that is still ready/incomplete in next-jobs"
+            reason = "bank belongs to a job that is still ready/incomplete in the canonical job queue"
         else:
             state = "reusable"
             reason = "coherent old attempt is not an active/ready job"
