@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:55 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **92 / 50** |
-| Research ready | **92** |
+| Candidate在庫（Research ready） | **91 / 50** |
+| Research ready | **91** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **180** |
+| Research completed（累計） | **181** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **1 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T02:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **4** |
 | Audit完了 | **0** |
 | Discovery完了 | **5** |
 | 新規job | **27** |
-| Repo収録 | **3** |
+| Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 重複率 | **27.4%** |
 | Novel候補 | **260** |
 | Research候補採用 | **127** |
-| Research完了 | **48** |
-| Repo収録 | **48** |
+| Research完了 | **49** |
+| Repo収録 | **49** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 358 → 重複除外後 260 → Research候補採用 127 → Research完了 48 → Repo収録 48**
+**探索評価 358 → 重複除外後 260 → Research候補採用 127 → Research完了 49 → Repo収録 49**
 
 ## 探索効率（直近24時間）
 
@@ -161,6 +161,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### Research完了
 
+- `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 - `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
@@ -168,15 +169,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
 - `arXiv:2608.01657` — Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches
-- `arXiv:2607.10186` — FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference
 
 ### 次に処理する候補
 
 - P94 `arXiv:2604.06664` — Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start
 - P92 `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
-- P91 `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - P91 `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
+- P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 
 ## 7日比較
 
