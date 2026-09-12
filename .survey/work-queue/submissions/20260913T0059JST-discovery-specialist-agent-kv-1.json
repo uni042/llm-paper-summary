@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4e19fffd136a38ad",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.14624",
+      "title": "Learning Agent Execution for KV-Cache Management in Agentic Serving",
+      "source_url": "https://arxiv.org/abs/2608.14624",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.14624-cachescout-agent-aware-kv-cache-management.md",
+      "priority": 90,
+      "reason": "マルチエージェント配信で将来のエージェント実行遷移をオンライン学習し、KVキャッシュの置換と先読みをエージェント意味論に基づいて制御するCacheScoutを提案する。vLLM上の実装でKVヒット率、初回トークン時間、ターン遅延、ピークスループットの改善を報告しており、エージェント配信とKVキャッシュ政策を直接結ぶ実装指向の候補として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.06370",
+      "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+      "source_url": "https://arxiv.org/abs/2604.06370",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md",
+      "priority": 88,
+      "reason": "Multi-LoRAエージェント配信でLoRA差分により共有文脈のKVが分岐する問題に対し、OSのfork/コピーオンライトに着想を得た共有KVとエージェント固有KVの分離、DualRadixTree、ResidualAttentionを組み合わせる。最大3.0倍のスループットを報告しており、エージェント配信・LoRA・KV共有の交点として研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.24467",
+      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.24467",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.24467-compresskv-semantic-retrieval-guided-kv-compression.md",
+      "priority": 82,
+      "reason": "GQAの注意ヘッドを一律に扱わず、意味検索に強いヘッドを同定して保持トークンを選び、層ごとの誤差推定でKV予算を配分する圧縮方式。長文推論で極小KV予算でも高い性能維持を報告し、コードも公開されているため、KV保持・圧縮系の比較対象として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:58:47+09:00",
+    "round": "specialist-agent-kv-semantics-1",
+    "axis": "エージェント配信・Multi-LoRA・意味検索型KV管理",
+    "query_summary": "直前の新着・主要framework飽和軸を避け、エージェント実行意味論、Multi-LoRAのKV分岐、意味検索型KV圧縮へ軸を変更。一次資料の題名・抄録・実装公開情報を軽量確認し、canonical arXiv IDとrepo検索で既存候補を再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はforward citationまたはOS/DBMS隣接のキャッシュ置換・階層メモリ政策からLLM servingへ接続する候補を探索する",
+    "empty_round_reason": null
+  }
+}
