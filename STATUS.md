@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:24 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **99 / 50** |
-| Research ready | **99** |
+| Candidate在庫（Research ready） | **101 / 50** |
+| Research ready | **101** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **185** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **8** |
 | Audit完了 | **0** |
-| Discovery完了 | **9** |
-| 新規job | **43** |
+| Discovery完了 | **10** |
+| 新規job | **46** |
 | Repo収録 | **8** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **81** |
-| 探索評価候補 | **386** |
-| 重複除外 | **114** |
-| 重複率 | **29.5%** |
-| Novel候補 | **272** |
-| Research候補採用 | **139** |
+| 探索round（stats観測） | **82** |
+| 探索評価候補 | **395** |
+| 重複除外 | **121** |
+| 重複率 | **30.6%** |
+| Novel候補 | **274** |
+| Research候補採用 | **141** |
 | Research完了 | **53** |
 | Repo収録 | **53** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 386 → 重複除外後 272 → Research候補採用 139 → Research完了 53 → Repo収録 53**
+**探索評価 395 → 重複除外後 274 → Research候補採用 141 → Research完了 53 → Repo収録 53**
 
 ## 探索効率（直近24時間）
 
@@ -75,6 +75,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
 | 異種/edge serving・hybrid cache schedulingの過去重要欠落 | 10 | 8 | 2 | 80.0% | 20.0% |
+| DBMS由来cache policy・real-time/best-effort混在QoS scheduling | 9 | 7 | 2 | 77.8% | 22.2% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
@@ -155,11 +156,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:02:31+09:00** — DBMS由来cache policy・real-time/best-effort混在QoS scheduling: 評価 9 / 重複 7 / 採用 2
 - **2026-09-13T03:02:31+09:00** — CUDA compiler・JIT/Graph runtime・decode kernel serving: 評価 6 / 重複 4 / 採用 2
 - **2026-09-13T03:02:31+09:00** — serverless production serving・cold start・multi-LoRA elasticity: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T03:02:31+09:00** — agent session KV residency・near-memory scheduling: 評価 5 / 重複 4 / 採用 1
 - **2026-09-13T03:02:31+09:00** — 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving: 評価 10 / 重複 5 / 採用 5
-- **2026-09-13T02:29:24+09:00** — agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory: 評価 7 / 重複 2 / 採用 5
 
 ## 最近処理した論文
 
