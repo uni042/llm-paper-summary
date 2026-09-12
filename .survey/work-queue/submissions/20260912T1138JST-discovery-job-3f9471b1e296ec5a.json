@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3f9471b1e296ec5a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11744",
+      "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+      "source_url": "https://arxiv.org/abs/2609.11744",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.11744-building-py-kvcache-a-performance-characterization-of-external-kv-caching-for-vllm-with-nvme-ssds.md",
+      "priority": 96,
+      "reason": "vLLMの外部KVキャッシュをGPU・CPU・NVMeの三階層で実測し、帯域だけでなく転送粒度、中間メモリ、スケジューラ投入時刻が損益分岐を決めると示す。非同期ダイレクトI/O、共有ステージング領域、待機中リクエストの先行読込みを備えるpy-kvcacheを実装し、80KトークンのSSD読込みでLMCacheの2.0倍、GPU/CPU/SSD併用で1.23倍、vLLM標準KV Offloadとの差約4%を報告する。H100では外部読込みより再計算やGPU内保持が有利な場合も示し、SSD階層を常時使うのではなく構成依存の受入判断にすべきという重要な境界条件を持つ。2026-09-10公開で公式実装あり。"
+    }
+  ]
+}
