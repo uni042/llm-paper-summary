@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **90 / 50** |
-| Research ready | **90** |
+| Candidate在庫（Research ready） | **95 / 50** |
+| Research ready | **95** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **182** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **5** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **27** |
+| Discovery完了 | **6** |
+| 新規job | **33** |
 | Repo収録 | **5** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **77** |
-| 探索評価候補 | **358** |
-| 重複除外 | **98** |
-| 重複率 | **27.4%** |
-| Novel候補 | **260** |
-| Research候補採用 | **127** |
+| 探索round（stats観測） | **78** |
+| 探索評価候補 | **368** |
+| 重複除外 | **103** |
+| 重複率 | **28.0%** |
+| Novel候補 | **265** |
+| Research候補採用 | **132** |
 | Research完了 | **50** |
 | Repo収録 | **50** |
 | Audit完了 | **0** |
@@ -65,13 +65,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 358 → 重複除外後 260 → Research候補採用 127 → Research完了 50 → Repo収録 50**
+**探索評価 368 → 重複除外後 265 → Research候補採用 132 → Research完了 50 → Repo収録 50**
 
 ## 探索効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
+| 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
 | 異種/edge serving・hybrid cache schedulingの過去重要欠落 | 10 | 8 | 2 | 80.0% | 20.0% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
@@ -151,11 +152,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:02:31+09:00** — 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving: 評価 10 / 重複 5 / 採用 5
 - **2026-09-13T02:29:24+09:00** — agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory: 評価 7 / 重複 2 / 採用 5
 - **2026-09-13T02:29:24+09:00** — Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity: 評価 5 / 重複 0 / 採用 5
 - **2026-09-13T02:29:24+09:00** — GPU runtime cold-start・MoE network topology・heterogeneous/geo routing: 評価 5 / 重複 0 / 採用 5
 - **2026-09-13T02:29:24+09:00** — multimodal弾力的並列化・EPD分離・modality-aware scheduling: 評価 3 / 重複 0 / 採用 3
-- **2026-09-13T02:29:24+09:00** — 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離: 評価 4 / 重複 0 / 採用 4
 
 ## 最近処理した論文
 
@@ -172,11 +173,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 次に処理する候補
 
+- P96 `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - P92 `arXiv:2509.17863` — Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving
 - P91 `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
-- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 
 ## 7日比較
 
