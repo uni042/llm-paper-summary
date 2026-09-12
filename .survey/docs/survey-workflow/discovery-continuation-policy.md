@@ -13,7 +13,7 @@ None of the following, by itself, ends discovery for the run:
 - one search axis returns zero useful candidates;
 - one axis returns only duplicates;
 - one axis has low acceptance rate or high duplicate rate;
-- `candidate_inventory` reaches or exceeds the soft target of 50;
+- `candidate_inventory` is already large;
 - one search source/API/query fails;
 - one candidate has inaccessible full text or insufficient evidence;
 - one candidate is rejected as weak or out of scope;
@@ -21,7 +21,7 @@ None of the following, by itself, ends discovery for the run:
 - one fallback replay/save operation fails while another durable route remains available;
 - one discovery submission reaches its per-submission candidate limit.
 
-When any of these happens, preserve useful state and continue by changing axis, query, source, citation direction, or adjacent field. There is no fixed number of discovery rounds or total candidates per Scheduled Chat run.
+When any of these happens, preserve useful state and continue by changing axis, query, source, citation direction, or adjacent field. There is no fixed number of discovery rounds, total candidates, or candidate-inventory target per Scheduled Chat run.
 
 ## Search-space rotation
 
@@ -38,7 +38,7 @@ Read `discovery-state.json` before choosing axes. Prefer axes with useful histor
 
 ## Candidate quality
 
-The soft inventory target is 50, not a quota or cap. Do not lower the quality bar to fill inventory. Candidate selection may consider relevance, novelty, difference from collected work, real measured evaluation, implementation availability, citation value, and usefulness to the project’s priority themes.
+There is no inventory target, quota, or cap. Do not lower the quality bar to fill inventory. Candidate selection may consider relevance, novelty, difference from collected work, real measured evaluation, implementation availability, citation value, and usefulness to the project’s priority themes.
 
 Discovery remains a lightweight stage: inspect title, abstract, bibliographic metadata, primary-source availability, duplicate status, and likely relevance. Full primary-source reading belongs to research. Do not infer research claims from snippets alone.
 
@@ -59,10 +59,10 @@ Discovery may stop only when one of these is true:
 3. the execution environment reaches a hard platform/runtime/tool limit that prevents further useful work;
 4. the worker has reasonably exhausted the currently promising search space **after trying varied independent axes/sources**, and records what was attempted and why further rounds are unlikely to add value in this run.
 
-A single empty round, all-duplicate round, target-inventory achievement, or transient source failure never satisfies condition 4.
+A single empty round, all-duplicate round, large candidate inventory, or transient source failure never satisfies condition 4.
 
 ## Worker roles
 
-- The discovery-specialist worker performs discovery only and does **not** increment the normal 24-run maintenance counter.
-- The normal paper worker retains its own discovery capability and follows this same continuation policy during its discovery phase.
+- The discovery-specialist worker performs discovery only and does **not** increment the normal 24-run maintenance counter. Candidate inventory size does not throttle this worker.
+- The normal paper worker retains its own discovery capability and follows this same continuation policy during any discovery phase, but `candidate-buffer-policy.md` controls when research should take priority over discovery.
 - The specialist supplements the normal worker; it never assumes exclusive ownership of discovery.
