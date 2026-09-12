@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 20:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 20:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **10 / 50** |
-| Research ready | **10** |
+| Candidate在庫（Research ready） | **12 / 50** |
+| Research ready | **12** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **158** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 10）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 12）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -27,8 +27,8 @@ Run: **2026-09-12T19:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **1** |
+| Discovery完了 | **2** |
+| 新規job | **4** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **17** |
-| 探索round（stats観測） | **13** |
-| 探索評価候補 | **80** |
-| 重複除外 | **30** |
-| 重複率 | **37.5%** |
-| Novel候補 | **50** |
-| Research候補採用 | **24** |
+| 探索round（stats観測） | **14** |
+| 探索評価候補 | **88** |
+| 重複除外 | **35** |
+| 重複率 | **39.8%** |
+| Novel候補 | **53** |
+| Research候補採用 | **26** |
 | Research完了 | **34** |
 | Repo収録 | **34** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 24時間ファネル
 
-**探索評価 80 → 重複除外後 50 → Research候補採用 24 → Research完了 34 → Repo収録 34**
+**探索評価 88 → 重複除外後 53 → Research候補採用 26 → Research完了 34 → Repo収録 34**
 
 ## 探索効率（直近24時間）
 
@@ -73,6 +73,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
+| heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
@@ -86,11 +87,11 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 直近5探索round
 
+- **2026-09-12T19:30:00+09:00** — heterogeneous-gpu-offload-parallelism-spot-serving: 評価 8 / 重複 5 / 採用 2
 - **2026-09-12T19:30:00+09:00** — hpc_gpu_collective_serving: 評価 9 / 重複 6 / 採用 0
 - **2026-09-12T19:00+09:00** — adjacent-pim-hbm-gpu-runtime-chiplet: 評価 14 / 重複 9 / 採用 5
 - **2026-09-12T18:00:00+09:00** — production推論エンジン・tail/SLO scheduling・hardware-software co-design: 評価 5 / 重複 0 / 採用 3
 - **2026-09-12T18:00:00+09:00** — CXL共有メモリ・KV階層・near-memory processing: 評価 7 / 重複 2 / 採用 2
-- **2026-09-12T18:00:00+09:00** — GPU runtime・SmartNIC・異種アクセラレータ・階層KV: 評価 5 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
@@ -107,11 +108,11 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 次に処理する候補
 
+- P90 `arXiv:2605.02189` — PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers
 - P86 `arXiv:2609.11562` — Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs
 - P83 `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
-- P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
+- P82 `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
 
 ## 7日比較
 
