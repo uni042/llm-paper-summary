@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **62 / 50** |
-| Research ready | **62** |
+| Candidate在庫（Research ready） | **63 / 50** |
+| Research ready | **63** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -18,6 +18,7 @@
 ### 注意事項
 
 - Consistency check: **issues_found**
+- 候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。
 
 ## 直近の通常worker
 
@@ -27,8 +28,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **11** |
-| 新規job | **32** |
+| Discovery完了 | **12** |
+| 新規job | **34** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **62** |
-| 探索評価候補 | **291** |
+| 探索round（stats観測） | **63** |
+| 探索評価候補 | **294** |
 | 重複除外 | **93** |
-| 重複率 | **32.0%** |
-| Novel候補 | **198** |
-| Research候補採用 | **94** |
+| 重複率 | **31.6%** |
+| Novel候補 | **201** |
+| Research候補採用 | **95** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 291 → 重複除外後 198 → Research候補採用 94 → Research完了 47 → Repo収録 47**
+**探索評価 294 → 重複除外後 201 → Research候補採用 95 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -126,6 +127,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
+| 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
 | 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
@@ -135,11 +137,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:55:54+09:00** — 分離サービングのnetwork flow・prefill迂回・専用interconnect: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — CXL共有メモリ・ラック内KV転送・Superchip階層メモリ: 評価 5 / 重複 2 / 採用 0
 - **2026-09-13T01:55:54+09:00** — MoE動的並列切替・融合通信・serverless専門家配置: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T01:26:11+09:00** — multi-adapter serving・推論/継続学習境界: 評価 4 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — agentic/multi-agent serving・collective KV sharing: 評価 3 / 重複 0 / 採用 2
-- **2026-09-13T01:26:11+09:00** — P/D分離・KV転送・shared prefill: 評価 4 / 重複 1 / 採用 2
 
 ## 最近処理した論文
 
