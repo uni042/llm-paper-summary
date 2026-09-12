@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:13 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **112 / 50** |
-| Research ready | **112** |
+| Candidate在庫（Research ready） | **115 / 50** |
+| Research ready | **115** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **189** |
@@ -28,35 +28,35 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **19** |
+| Discovery完了 | **8** |
+| 新規job | **23** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefill-scheduling-2**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-kernel-optimization-3**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 分離サービングprefill制御・chunked prefill scheduling |
-| 評価候補 | **7** |
-| 重複除外 | **4** |
+| 探索軸 | GPU kernel生成・runtime最適化の隣接系 |
+| 評価候補 | **3** |
+| 重複除外 | **0** |
 | Novel候補 | **3** |
-| Research候補採用 | **2** |
-| 重複率 | **57.1%** |
+| Research候補採用 | **3** |
+| 重複率 | **0.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **90** |
-| 探索評価候補 | **435** |
+| 探索round（stats観測） | **91** |
+| 探索評価候補 | **438** |
 | 重複除外 | **137** |
-| 重複率 | **31.5%** |
-| Novel候補 | **298** |
-| Research候補採用 | **156** |
+| 重複率 | **31.3%** |
+| Novel候補 | **301** |
+| Research候補採用 | **159** |
 | Research完了 | **57** |
 | Repo収録 | **57** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefill-scheduling-2**
 
 ### 24時間ファネル
 
-**探索評価 435 → 重複除外後 298 → Research候補採用 156 → Research完了 57 → Repo収録 57**
+**探索評価 438 → 重複除外後 301 → Research候補採用 159 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -143,6 +143,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefill-scheduling-2**
 | 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | GPU kernel/runtime・推論決定性 | 3 | 0 | 3 | 0.0% | 100.0% |
+| GPU kernel生成・runtime最適化の隣接系 | 3 | 0 | 3 | 0.0% | 100.0% |
 | KV量子化の実行時保証・同期型serving負荷分散 | 3 | 0 | 3 | 0.0% | 100.0% |
 | MoE動的並列切替・融合通信・serverless専門家配置 | 3 | 0 | 1 | 0.0% | 33.3% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -164,11 +165,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefill-scheduling-2**
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — GPU kernel生成・runtime最適化の隣接系: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T04:00:16+09:00** — 分離サービングprefill制御・chunked prefill scheduling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T04:00:16+09:00** — 新着・長期推論KV圧縮と削除: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T03:30:44+09:00** — fault-tolerant distributed serving・KV recovery・GPU failure: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T03:30:44+09:00** — heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels: 評価 5 / 重複 2 / 採用 3
-- **2026-09-13T03:30:44+09:00** — heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling: 評価 7 / 重複 4 / 採用 2
 
 ## 最近処理した論文
 
