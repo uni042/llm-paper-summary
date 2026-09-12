@@ -105,6 +105,36 @@ class DiscoveryReplenishmentTest(unittest.TestCase):
 
         add_job.assert_not_called()
 
+    def test_snapshot_keeps_discovery_visible_when_research_fills_priority_window(self) -> None:
+        jobs = [
+            {
+                "job_id": f"job-research-{index}",
+                "type": "research",
+                "lane": "research",
+                "status": "ready",
+                "priority": 90 - index,
+                "created_at": f"2026-09-12T00:00:{index:02d}+00:00",
+            }
+            for index in range(9)
+        ]
+        jobs.append(
+            {
+                "job_id": "job-discovery-existing",
+                "type": "discovery",
+                "lane": "discovery",
+                "status": "ready",
+                "priority": 50,
+                "created_at": "2026-09-12T00:01:00+00:00",
+            }
+        )
+
+        with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+            snapshot = queue_worker.queue_snapshot()
+
+        visible_ids = {job["job_id"] for job in snapshot["next_jobs"]}
+        self.assertIn("job-discovery-existing", visible_ids)
+        self.assertTrue({f"job-research-{index}" for index in range(8)}.issubset(visible_ids))
+
 
 if __name__ == "__main__":
     unittest.main()
