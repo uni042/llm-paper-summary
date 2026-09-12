@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b55a5f6b28feb0e9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.17979",
+      "title": "Harness Engineering for LLM-Driven GPU Kernel Generation",
+      "source_url": "https://arxiv.org/abs/2607.17979",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md",
+      "priority": 83,
+      "reason": "FlashInfer AI Kernel Generation ContestのBlackwell B200実機を対象に、生成コードを評価するharnessとprofile-backed optimization controllerを分離し、コンパイル・正当性・公式準拠計測・artifact保存を一貫させる。5 operatorでFlashInfer baseline比1.12〜29.68倍のmean-latency speedupを報告し、LLM生成kernelを推論runtimeへ安全に昇格させる実務的system設計としてkernel/runtime系統に価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2603.07169",
+      "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
+      "source_url": "https://arxiv.org/abs/2603.07169",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md",
+      "priority": 80,
+      "reason": "共通LLM kernelを含む複数領域・FP32/BF16のMSKernelBenchと、profile情報を使ってcompile/execute toolchainまで自動構築するhardware-aware multi-agent optimizer CUDAMasterを提案する。Astra比約35%向上し一部でcuBLAS級に達すると報告しており、推論kernel自動最適化の一般化可能性を評価する比較対象として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2605.31464",
+      "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
+      "source_url": "https://arxiv.org/abs/2605.31464",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md",
+      "priority": 78,
+      "reason": "kernel探索の各候補を実GPUで毎回計測するコストを減らすため、言語モデルを相対性能予測の選択的surrogateとして使い、不確実な候補だけGPUへ委ねる。校正と強化学習による予測改善を含み、同じGPU計測budgetでより多くの候補を探索して高速kernelを発見できると示すため、自動kernel最適化の測定ボトルネックを扱う隣接system研究として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-kernel-optimization-3",
+    "axis": "GPU kernel生成・runtime最適化の隣接系",
+    "query_summary": "MoE新着探索が既収録中心だったためGPU kernel/runtimeへ軸を変更し、FlashInfer contest、multi-scenario CUDA optimization、GPU測定surrogateを軽量評価した。canonical IDから決定論的research job IDを算出し最新mainでjob実体がないことを確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "forward citation・参考文献由来の未収録systems基礎研究、またはagentic servingのprogram-level schedulingへ切り替える",
+    "empty_round_reason": null
+  }
+}
