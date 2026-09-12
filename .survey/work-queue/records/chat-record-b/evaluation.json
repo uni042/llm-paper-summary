@@ -2,24 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2509.17863-20260913-0306-v10-b",
-  "job_id": "job-research-0dea3dc5502917bd",
+  "attempt_id": "attempt-2602.22593-20260913-0324-v10-b",
+  "job_id": "job-research-09ae1785cedfe192",
   "data": {
-    "hardware": ["16計算ノード、各ノードNVIDIA Hopper GPU 80GB×8、合計128 GPU。", "ノード内はNVLink、ノード間は各ノード8×400Gbps RoCE。", "障害耐性試験は64デコードGPUから10台を一台ずつ無効化して測定。"],
-    "software": ["PyTorch 2.7.1、Python 3.12、CUDA 12.6。", "注意クライアントはSGLangを基盤とし、プリフィル・デコード分離にはMooncakeを利用。", "比較対象はSGLang commit 51cdd81f、vLLM commit 9b01870、SGLang/vLLM + DeepEP。", "通信はIBGDAを用いた独自CPU不要P2P層。"],
-    "model": ["DeepSeek-R1 671B"],
-    "datasets": ["ShareGPT。長い外れ値の影響を抑えるため最大応答長を768トークンへ制限。"],
-    "baselines": ["SGLang + DeepEPによる専門家並列", "SGLangテンソル並列", "vLLM + DeepEP", "StepMeshの非対称通信ライブラリ（通信マイクロベンチ）"],
-    "correctness": "EaaSは専門家計算やルータ選択を近似せず、同じ専門家の複製を障害迂回先として用いる。主評価は性能・資源・可用性で、意味品質を低下させる近似は導入していない。",
+    "hardware": ["Oak Ridge National Laboratory Defiant clusterのHPE Cray XD670 GPUノード。各ノードNVIDIA H200 141GB×8。", "各H200はHBM3e 141GB、ピーク帯域4.8TB/s、FP8密演算1,979 TFLOPS。8GPUはNVLinkで接続し双方向900GB/s。"],
+    "software": ["vLLM v1を基盤に重みビュー、KVキャッシュ管理、通信群プール、スケジューラをパッチ実装。", "GPU集団通信はNCCL、CPU制御面はGloo。", "公開実装はPicomp-lab/Flying-Servingで、vLLMフォークとしてApache-2.0公開。"],
+    "model": ["Llama-3-70B", "GPT-OSS-120B MoE", "Nemotron-8B ultra-long-context"],
+    "datasets": ["ShareGPT", "CodeActInstruct", "HumanEval", "合成バースト負荷: 入力128〜4000、出力64〜512、低負荷2〜5 req/s、高負荷10〜30 req/s、各反復4000要求"],
+    "baselines": ["Static DP", "Static TP", "Shift Parallelism"],
+    "correctness": "DP/TP切替は同一常駐重みへのビュー切替と同一KV物理プールの論理解釈変更で行う。ハード中断した背景要求はKVを保持して再開する。ソフト中断ではTP対象要求をDPで先行した分のみ切替時に再計算する。",
     "settings": [
-      {"name": "128 GPU端から端までの評価", "description": "16ノードを用い、64 GPUをプリフィル、64 GPUをデコードへ割当てる。デコード側でEaaSは32注意クライアント・32専門家サーバ、SGLang+DeepEPは専門家並列64、SGLangテンソル並列は16 GPU単位を4複製する。"},
-      {"name": "48 GPU端から端までの評価", "description": "6ノードを用い、16 GPUをプリフィル、32 GPUをデコードへ割当てる。EaaSは16注意クライアント・16専門家サーバ、SGLang+DeepEPは専門家並列32、SGLangテンソル並列は16 GPU単位を2複製する。"},
-      {"name": "弱スケーリング", "description": "デコード資源を32〜64 GPUへ変え、EaaSが40・48・56 GPUのような非標準台数でも動作できるかと、要求量に対して処理量がほぼ比例して伸びるかを確認する。"},
-      {"name": "障害耐性", "description": "64デコードGPU、4096要求の条件でGPUを一台ずつ計10回無効化し、復旧中の平均デコードスループットを測る。専門家複製を事前配置し、障害サーバの要求を代替サーバへ再送する。"},
-      {"name": "通信マイクロベンチ", "description": "DeepSeek-R1デコードと同じ形状（batch, 1, 7168）のPyTorchテンソルを往復し、2クライアント対2サーバの対称構成と1対3の非対称構成でStepMeshと比較する。"},
-      {"name": "要素除去評価", "description": "CUDAグラフ、専門家群メタデータの縮小、二重バッチ重畳を一つずつ無効化し、バッチサイズ4096を含む条件でデコード処理量への寄与を測る。"}
+      {"name": "バースト負荷", "description": "各モデルで入力128〜4000、出力64〜512トークンを用い、到着率を低負荷2〜5 req/sと高負荷10〜30 req/sで交互に変化させる。TTFT、TPOT、キュー時間、ピーク生成処理量を比較する。"},
+      {"name": "優先度混在", "description": "Llama-70Bで高優先度要求と通常要求を混在させ、3〜5 req/sで持続的なキュー圧力を作る。優先要求と全要求の平均TPOT/TTFT、ピーク処理量を測る。"},
+      {"name": "最大文脈と切替遅延", "description": "8×H200上のLlama-70Bで4DP×2TP、2DP×4TP、1DP×8TPの静的構成と動的方式を比較し、最大文脈長と構成変更時間を測る。"},
+      {"name": "超長文ストレス", "description": "Llama-70B 8K、GPT-OSS-120B 128K、Nemotron-8B 1Mの各最大評価文脈でプロンプト処理量、TTFT、出力トークン間遅延（Inter-Token Latency; ILT）を比較する。"}
     ],
-    "methodology": "端から端までの比較ではDeepSeek-R1とShareGPTを使い、デコードの処理量とトークン間遅延（Inter-Token Latency; ITL）をSGLang・vLLM系と比較する。プリフィル側には十分な資源を割当て、EaaSが対象とするデコードが主要律速になるようにする。続いてGPU台数を細かく変える弱スケーリングで伸縮性、ランダムなGPU停止で可用性、通信往復でIBGDA層、要素除去でCUDAグラフ・カーネル縮小・二重バッチ重畳の寄与を個別評価する。",
-    "scope": "大規模な実機評価である一方、モデルはDeepSeek-R1 671B、ネットワークはHopper + RoCE/IBGDA中心であり、PCIeのみの小規模環境や異種GPU混在は評価していない。主比較から専門家負荷分散を外しているため、動的な頻出専門家複製を含む完全な自動制御器の効果は要素評価に限られる。またvLLMのプリフィル・デコード分離は当時実験的として、vLLM比較ではプリフィル費用を除外している。"
+    "methodology": "同一8×H200ノードで静的DP、静的TP、対応モデルではShift Parallelismと比較し、要求到着率を時間変化させて高負荷ではDP型のキュー排出、低負荷ではTP型の単要求遅延を同時に得られるか測る。さらに優先度要求をハード中断で即時TPへ回す実験、最大KV容量を集約する長文実験、切替自体の遅延測定を行い、状態仮想化が性能・優先度・容量の三目的へ共通利用できることを検証する。",
+    "scope": "現在の実装は主に単一8GPUノード内の動的並列化を対象とし、複数ノードにまたがるモデル並列は範囲外。Shift ParallelismはGPT-OSS-120Bの新しいMoEカーネルに非対応のため同モデルでは比較値がない。合成負荷は再現性を優先しており、実サービスの全到着分布をそのまま再現するものではない。"
   }
 }
