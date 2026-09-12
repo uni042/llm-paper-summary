@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **118 / 50** |
-| Research ready | **118** |
+| Candidate在庫（Research ready） | **121 / 50** |
+| Research ready | **121** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **193** |
+| Research completed（累計） | **194** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **3 / 24** |
@@ -26,46 +26,46 @@ Run: **2026-09-13T04:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **4** |
+| Research完了 | **5** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **1** |
-| Repo収録 | **4** |
+| Discovery完了 | **2** |
+| 新規job | **6** |
+| Repo収録 | **5** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
+Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-agent-os-memory-2**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 2026-09新着・KVキャッシュ圧縮／再利用 |
-| 評価候補 | **3** |
-| 重複除外 | **3** |
-| Novel候補 | **0** |
-| Research候補採用 | **0** |
-| 重複率 | **100.0%** |
+| 探索軸 | エージェントサンドボックス・OS資源管理・状態管理 |
+| 評価候補 | **4** |
+| 重複除外 | **0** |
+| Novel候補 | **4** |
+| Research候補採用 | **4** |
+| 重複率 | **0.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **97** |
-| 探索評価候補 | **464** |
+| 探索round（stats観測） | **98** |
+| 探索評価候補 | **468** |
 | 重複除外 | **154** |
-| 重複率 | **33.2%** |
-| Novel候補 | **310** |
-| Research候補採用 | **166** |
-| Research完了 | **61** |
-| Repo収録 | **61** |
+| 重複率 | **32.9%** |
+| Novel候補 | **314** |
+| Research候補採用 | **170** |
+| Research完了 | **62** |
+| Repo収録 | **62** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 464 → 重複除外後 310 → Research候補採用 166 → Research完了 61 → Repo収録 61**
+**探索評価 468 → 重複除外後 314 → Research候補採用 170 → Research完了 62 → Repo収録 62**
 
 ## 探索効率（直近24時間）
 
@@ -136,6 +136,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 | multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
 | speculative decoding serving・composite multimodal serving | 4 | 0 | 3 | 0.0% | 75.0% |
+| エージェントサンドボックス・OS資源管理・状態管理 | 4 | 0 | 4 | 0.0% | 100.0% |
 | エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
 | エージェント推論・speculative tool execution | 4 | 2 | 2 | 50.0% | 50.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
@@ -171,16 +172,17 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 
 ### 直近5探索round
 
+- **2026-09-13T05:00:25+09:00** — エージェントサンドボックス・OS資源管理・状態管理: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T05:00:25+09:00** — 2026-09新着・KVキャッシュ圧縮／再利用: 評価 3 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — 投機的デコードのserving・pipeline・メモリ制約・性能モデル: 評価 7 / 重複 2 / 採用 4
 - **2026-09-13T04:00:16+09:00** — chunked prefill・prefix-aware batchingの基礎欠落: 評価 4 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — CXL・SSD・remote KV cache階層メモリ: 評価 4 / 重複 4 / 採用 0
-- **2026-09-13T04:00:16+09:00** — MoE通信・runtime parallelism・online expert placement: 評価 4 / 重複 4 / 採用 0
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2606.07665` — AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference
 - `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 - `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
@@ -188,15 +190,14 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-kv-reuse-eviction-1**
 - `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 - `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 - `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
-- `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 
 ### 次に処理する候補
 
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
-- P90 `arXiv:2606.07665` — AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference
 - P89 `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
 - P89 `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
+- P89 `arXiv:2512.09472` — WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving
 
 ## 7日比較
 
