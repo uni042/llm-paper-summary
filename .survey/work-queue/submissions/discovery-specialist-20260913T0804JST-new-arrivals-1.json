@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-c9255e06972e819d",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.01338",
+      "title": "mzCache: On-Device LLM Memory Management under Multitasking",
+      "source_url": "https://arxiv.org/abs/2609.01338",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.01338-mzcache-on-device-multitasking-memory-management.md",
+      "priority": 89,
+      "reason": "モバイル端末のマルチタスクによるメモリ圧迫でモデル重みとKVキャッシュがOSから退避され、次要求時のストレージ復元やKV再計算がTTFTを悪化させる問題を扱う。細粒度共有バッファ、部分退避・復元、GPU推論とCPU側復元の並行化、hybrid swap/backward-out evictionを組み合わせ、llama.cpp上のAndroid実装でstorage-backed partial offload比TTFTを2.1〜5.5倍短縮する。オンデバイス推論と階層メモリ・ストレージ復元を直接接続する実装系候補として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02514",
+      "title": "AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.02514",
+      "paper_path": "papers/inference/09-other-inference-systems/2026-2609.02514-acespec-edge-cloud-collaborative-inference.md",
+      "priority": 84,
+      "reason": "変動する狭帯域WAN上のエッジ・クラウド投機的復号で、draft棄却によるパイプライン停止とネットワーク全体のrollbackが性能を失わせる問題に対し、エッジ側余剰計算で確率的状態キャッシュを先行構築し、失敗をローカル参照へ変換する。非対称通信とnetwork-aware資源配分を組み合わせ、最大3.52倍のthroughput向上と50 Kbps WANでもピーク近傍性能を報告する。ネットワーク制約下の分散推論・投機的復号を結ぶ独立したシステム候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:58:39+09:00",
+    "round": "specialist-new-arrivals-1",
+    "axis": "2609新着・端末メモリ管理・エッジクラウド協調推論",
+    "query_summary": "直前runの枯渇判定後の新着差分を再走査し、HBFSim、MetaKV、mzCache、AceSpec、InertiaKV、分離サービング電力制御を軽量評価した。投入直前に最新main HEAD、決定論的research job、repo identity/title検索、GitHub fallback inbox、Library pendingを再確認し、HBFSim・MetaKV・InertiaKV・分離サービング電力制御は既存、mzCacheとAceSpecのみ未登録と判定した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.09800",
+      "arXiv:2609.07966",
+      "arXiv:2609.03515",
+      "arXiv:2609.11133"
+    ],
+    "next_axis_hint": "strong candidate発見により枯渇判定をリセット。forward citation、backward reference、MoE expert I/O、CXL/SSD、GPU runtime/networkingを独立に再走査する",
+    "empty_round_reason": null
+  }
+}
