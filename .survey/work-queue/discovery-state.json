@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:24:30+00:00",
-  "last_run_key": "2026-09-13T05:00:25+09:00",
-  "last_round": "specialist-gpu-runtime-6",
+  "updated_at": "2026-09-12T20:32:35+00:00",
+  "last_run_key": "2026-09-13T05:28:14+09:00",
+  "last_round": "specialist-recent-kv-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2034,6 +2034,25 @@
       ],
       "next_axis_hint": "CoRun採用で枯渇判定をリセットし、新着・引用関係・階層メモリ／ストレージ・networking・query expansionを独立に一巡する",
       "source_submission": "work-queue/submissions/20260913T0524JST-discovery-specialist-gpu-runtime.json"
+    },
+    {
+      "run_key": "2026-09-13T05:28:14+09:00",
+      "round": "specialist-recent-kv-1",
+      "axis": "2609新着・KVキャッシュ最適化/サービング",
+      "query_summary": "2026年9月の新着を中心にKVキャッシュ圧縮・再利用・RAG serving・共有メモリservingを横断して軽量評価し、identity deltaと既存research jobで再重複確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.10266",
+        "arXiv:2609.10790",
+        "arXiv:2609.11209"
+      ],
+      "next_axis_hint": "MoE expert cache/offloadのrecent revisionと、重要offload論文のforward citationを別軸で確認する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260912T2028Z-recent-kv.json"
     }
   ],
   "axes": {
@@ -3206,6 +3225,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "CoRun採用で枯渇判定をリセットし、新着・引用関係・階層メモリ／ストレージ・networking・query expansionを独立に一巡する"
+    },
+    "2609新着・KVキャッシュ最適化/サービング": {
+      "last_run_key": "2026-09-13T05:28:14+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "MoE expert cache/offloadのrecent revisionと、重要offload論文のforward citationを別軸で確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

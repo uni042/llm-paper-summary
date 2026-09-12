@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:25:26.107919+00:00",
+  "updated_at": "2026-09-12T20:33:22.411159+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15064,6 +15064,73 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
+      "paper_active_count_after": 386,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-13T05:30:00+09:00",
+      "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
+      "last_recorded_at": "2026-09-12T20:33:22.411159+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 2,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34717390815:1",
+          "recorded_at": "2026-09-12T20:33:22.411159+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34717390815",
+            "run_attempt": "1",
+            "source_sha": "0ad5ff0c919e5fea67ad5f37c641c31861681783"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-e06803031c68104a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-e21ac181313d262b",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-648fe1e5b80283fd",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.06663",
+          "title": "ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 386,
       "paper_active_count_after": 386,
       "last_successful_action": "discovery_or_queue_expanded"
     }
