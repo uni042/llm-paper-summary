@@ -2,22 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2609.10812-20260912-1452-v10-a1",
-  "job_id": "job-research-09f84c02bdf7d29d",
+  "attempt_id": "attempt-2609.10790-20260912-1448-v10-a1",
+  "job_id": "job-research-985814ffefefe223",
   "data": {
-    "overview": "ExaServeのbaseline non-streaming pathはAurora 256 node・3072 vLLM replicaまでほぼ線形にscaleし、27.1k QPS・3.8M token/s、error 0%を達成する。一方、token streamingはmodel server側がSLOを満たしていてもhead-nodeの中央proxyが約4.7k QPSで飽和し、256 nodeではSLO attainmentがほぼ0になる。per-node endpointへdistributed dispatchすると18.1k QPS・2.5M token/s・100% successまで回復する。起動面ではRay Serveが各proxyから全replica handleを再解決するO(N^2) patternにより、256 nodeで1.38M GCS lookup、serve.run 1767秒となり、512 nodeではsingle GCS飽和で起動不能になる。",
+    "overview": "共有CXL階層だけが別ノードで長い接頭辞のKVを命中させ、GPU内またはCPU主記憶のノード局所キャッシュは処理先が変わると再計算へ戻る。接頭辞が約2千から3.2万トークンへ長くなるにつれ、共有CXLからの読出し時間より再計算時間の増加が大きくなるため、別ノードでの最初のトークンまでの時間は5.5倍から36.6倍まで改善する。外部命中率は256トークン単位の境界から決まる理論上限にほぼ一致し、別ノードと同一ノードの差は1〜4%に収まる。一方、CXL装置自体は27GB/sを超える帯域を示すのに、ホスト主記憶を経由するKV読出し経路は約5.8GB/sであり、転送経路には大きな最適化余地が残る。",
     "key_results": [
-      {"metric": "non-streaming aggregate throughput", "value": "27.1k QPS、3.8M token/s、0.0% error", "baseline": "ideal-linear/direct dispatch", "condition": "Llama-3-8B、vLLM、256 Aurora node、3072 replica", "interpretation": "HAProxyを含む単一head-node endpointでもnon-streaming completionは256 nodeまでmodel server scalingをほぼ阻害しない。"},
-      {"metric": "streaming centralized proxy ceiling", "value": "約4.7k QPSでplateau", "baseline": "distributed per-node dispatchは18.1k QPS・2.5M token/s・100% success", "condition": "256 node interactive streaming", "interpretation": "bottleneckはmodel serverではなくhead nodeのtoken-stream network/CPU pathで、streamingを一つのendpointへ集中させる設計がscaleを止める。"},
-      {"metric": "server-side streaming latency at 256 nodes", "value": "TTFT 66ms、P99 TBT 28ms", "baseline": "client-side SLOはTTFT≤2s、P99 TBT≤250ms", "condition": "中央proxy経由でend-to-end SLOが崩れる状態", "interpretation": "backend model serverには十分な余裕があるのにfront-end deliveryだけが破綻していることを示す。"},
-      {"metric": "Ray Serve control-plane bring-up", "value": "64 node 154s、128 node 456s、256 node 1767s", "baseline": "node数4倍でwait phase 38s→1612s（42倍）", "condition": "Llama-3-8B、12 replica/node", "interpretation": "replica creationよりproxy-side handle re-resolutionが支配的で、RN^2のGCS lookup patternがtime-to-serveを悪化させる。"},
-      {"metric": "GCS resolution load", "value": "256 nodeで1.38M lookup、max resolution 1587s、single-call p99 546ms", "baseline": "64 nodeで166k lookup、101s、245ms", "condition": "serve.run instrumentation", "interpretation": "control-plane metadata serviceへの集中が大量replica deploymentの主要scale限界になる。"},
-      {"metric": "512-node deployment", "value": "6144 replicaでdeployment failure", "baseline": "256 nodeがsingle-head Ray clusterの実証上限", "condition": "aggregate worker-to-GCS RPC saturation", "interpretation": "configuration tuningだけでは越えられず、GCS shardingか複数Ray clusterが必要。"},
-      {"metric": "Llama-3.1-405B direct weak scaling", "value": "2 replica 0.7 QPS→128 replica 31.0 QPS、67% efficiency", "baseline": "HAProxy health-check修整後は128 replica 22.9 QPS、0.3% error、50% efficiency", "condition": "TP=8×PP=2、4〜256 node", "interpretation": "multi-node modelにもdeployment pathは拡張できるが、長いdrainとfront-end routingが見かけのefficiencyへ影響する。"},
-      {"metric": "MPI weight staging", "value": "Llama-3-8B・256 nodeでshared filesystem parallel readの600秒超overheadを回避", "baseline": "各nodeがLustreから独立read", "condition": "head nodeからnode-local tmpfsへMPI broadcast", "interpretation": "serving開始前のweight distributionも大規模HPCでは主要なsystem bottleneckである。"}
+      {"metric": "別ノードでの最初のトークンまでの時間", "value": "約2K: 101.6ms、8K: 175.0ms、16K: 224.6ms、32K: 322.6ms", "baseline": "再計算のみでは560.7、2223.6、4895.0、11816.9ms", "condition": "共有CXLから別ノードの処理Bが接頭辞KVを再利用、各条件60測定", "interpretation": "接頭辞が長いほど再計算回避の効果が増え、改善倍率は5.5、12.7、21.8、36.6倍へ拡大する。"},
+      {"metric": "別ノード外部KV命中率", "value": "95.4%、98.0%、99.0%、99.5%", "baseline": "256トークン単位の境界から決まる命中上限", "condition": "約2K、8K、16K、32K接頭辞", "interpretation": "完全な256トークンブロックはほぼすべて再利用され、残る不命中の大半は末尾の部分ブロックで説明できる。"},
+      {"metric": "共有による追加遅延", "value": "別ノード/同一ノードの時間比はおおむね1.01〜1.04", "baseline": "同じ共有CXL階層を同一ノードから再利用", "condition": "同じ接頭辞長で比較", "interpretation": "この試験機では、同じ物理CXL領域を別ノードから読むこと自体の追加費用は小さい。"},
+      {"metric": "記憶階層の実測特性", "value": "CXLは461〜507ns、27.1〜28.5GB/s", "baseline": "ローカルDRAMは111ns、134GB/s、100GbE RoCEv2は1.13μs、12.25GB/s", "condition": "試験機上のメモリ測定", "interpretation": "CXLはローカル主記憶より遅い一方、この構成のRDMA経路より低遅延かつ高帯域の共有階層になる。"},
+      {"metric": "KV読出し経路の実効帯域", "value": "約5.8GB/s", "baseline": "CXL装置の実測帯域は約27GB/s", "condition": "CXL→ホスト一時領域→GPUの二段階転送", "interpretation": "装置帯域の約5分の1しか使えておらず、GPU直接転送などによる数倍規模の改善余地が残る。"},
+      {"metric": "共有データの整合性", "value": "約1.2TBの書込みでCRC32不一致0件、未保存キー12,298件で誤命中0件", "baseline": "共有索引とデータ整合性の検査", "condition": "別ノード再利用試験と専用検査", "interpretation": "試作環境の測定範囲では、物理データ破損と索引の誤陽性は観測されなかった。"}
     ],
-    "negative_results": "ExaServeはscaleさせるだけで全経路を解決するわけではない。streamingは中央proxyを使うと128 node超で急速にSLOを失い、256 nodeでは約4.7k QPSで頭打ちになる。Ray ServeのO(N^2) handle re-resolutionはsite patchでは除去できず、256 nodeのserve.runは約29.5分、512 nodeはGCS飽和で起動失敗する。405Bではpipeline stageを各nodeへLustreから読む時間が1300〜1600秒かかり、time-to-serveは2〜128 replicaで31〜38分。SGLangはAurora PVC上でtuned kernelを使えず、single-node rateがvLLM 97.8 QPSに対して13.3 QPSに留まる。",
-    "interpretation": "大規模LLM servingではengine throughputだけを最適化しても不十分で、model distribution、control plane、proxy/data deliveryが別々のscale ceilingを持つ。non-streamingが256 nodeまで線形なのにstreamingだけ崩れる結果はfront-end集中を、replica作成時間がほぼ線形なのにwaitが42倍化する結果はcontrol-plane再解決を、それぞれengine性能から切り離して示す。ExaServeの価値はこれらを同じdeclarative deployment上で再現・計測できることにある。",
-    "quality_impact": "生成品質を近似する方式ではないため、品質劣化は直接の評価対象ではない。service-level objectiveとしてTTFTとP99 TBTを評価し、同じmodelを提供するためのdelivery性能と成功率を扱う。"
+    "negative_results": "現方式は完成した本番向け実装ではない。GPUとCXLの間でホスト主記憶を経由するため、約27GB/sの装置帯域に対して実効読出しは約5.8GB/sに留まる。スロットの追い出し、期限切れ、LRU、背景回収がなく、容量が埋まった後の長時間運用を扱わない。評価は2ノード、単一L4/ノード、一つのモデル、長い接頭辞を意図的に100%再利用する逐次条件に限られ、同時要求、容量圧迫、複数利用者、共有RDMA方式との比較はない。Kubernetes側の空き容量通知にも遅れがあり、近接した複数要求が同じ空き容量を見て構成時に失敗する可能性がある。",
+    "interpretation": "重要な点はCXLの生の帯域値だけではなく、同じ物理メモリ領域をクラスタ管理下で複数の推論処理へ渡し、別ノードから実際にKVを再利用できたことである。ノード局所キャッシュは配置変更時に命中を失うのに対し、共有CXLでは同一ノードとの差を数%に抑えて再利用を維持した。ただし最初のトークンまでの大幅改善は、背景負荷がなく長い接頭辞が必ず再利用される条件で測った上限寄りの値であり、本番の有効スループットや混雑時尾部遅延へ直接外挿してはいけない。",
+    "quality_impact": "近似量子化やKV削除を行わずbf16のKVを保存するため、品質を意図的に落とす方式ではない。同一入力10件の比較では6件がバイト単位で一致し、4件は別GPU間のbf16丸め差により最大1 ULPだけ異なった。CRC32不一致はなく、著者はこの差を共有メモリ破損ではなく浮動小数点演算の再現性差として扱う。"
   }
 }
