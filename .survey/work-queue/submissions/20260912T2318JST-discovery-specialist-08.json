@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4a6531f34c980060",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.28239",
+      "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+      "source_url": "https://arxiv.org/abs/2603.28239",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md",
+      "priority": 90,
+      "reason": "テンソル並列推論のAll-Reduceをswitch側から起動するin-network architectureとin-network quantizationを組み合わせるSCIN。arXiv抄録ではmulti-FPGA prototypeを示し、All-Reduce最大8.7倍、LLaMA-2のTTFT最大1.74倍・TPOT最大1.34倍を報告しており、GPU networking/collective runtimeの重点隣接候補。"
+    },
+    {
+      "canonical_id": "arXiv:2512.25059",
+      "title": "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
+      "source_url": "https://arxiv.org/abs/2512.25059",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
+      "priority": 87,
+      "reason": "multi-NIC環境でconnection migration、bandwidth-aware再配分、障害耐性collectiveを提供し、推論中のNIC障害でもrequest再処理を避ける通信library。arXiv抄録ではH100 InfiniBand実機と大規模simulationを併用し、推論overhead 3%未満と既存耐障害方式に対する大幅改善を報告している。"
+    },
+    {
+      "canonical_id": "arXiv:2506.17615",
+      "title": "EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration",
+      "source_url": "https://arxiv.org/abs/2506.17615",
+      "paper_path": "papers/inference/02-hardware-accelerators/2025-2506.17615-equarx-quantized-allreduce-xla.md",
+      "priority": 84,
+      "reason": "TPU/XLAでblock-wise INT8量子化をcollective通信そのものへ統合し、通信と計算を深くpipeline化する実装研究。arXiv抄録ではAllReduce最大1.8倍、Gemma 3 27Bのprefill 1.25倍を報告しており、SCINとは異なるcompiler/runtime側のcollective圧縮として比較価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2507.21276",
+      "title": "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems",
+      "source_url": "https://arxiv.org/abs/2507.21276",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.21276-lemix-unified-training-inference-scheduling.md",
+      "priority": 79,
+      "reason": "継続学習と推論servingを同一multi-GPU基盤で共存させ、offline profiling、実行予測、runtime schedulingでidle resourceを利用するsystem。arXiv抄録ではthroughput最大3.53倍、応答時間SLO達成率最大2.12倍を報告しており、training/inference資源共有という隣接軸として候補価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-network-runtime-08",
+    "axis": "GPU collective通信・in-network acceleration・通信runtime",
+    "query_summary": "LLM推論のAll-Reduceを対象に、switch-centric in-network処理、耐障害collective library、XLA量子化AllReduce、およびtraining/inference混載runtimeをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第7roundのActions完了後に最新HEADと次discovery jobを取得し、全候補IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "重要論文のforward/backward citation、speculative decoding runtime、またはmultimodal servingへ切り替える",
+    "empty_round_reason": null
+  }
+}
