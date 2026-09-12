@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T09:07:19+00:00",
+  "updated_at": "2026-09-12T09:08:59+00:00",
   "last_run_key": "2026-09-12T18:00:00+09:00",
-  "last_round": "specialist-heterogeneous-runtime-2",
+  "last_round": "specialist-cxl-storage-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -438,6 +438,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "SSD/NVMe expert I/O scheduling、storage/DBMS由来のcache/prefetch、HPC大規模推論の通信最適化へ移る",
       "source_submission": "work-queue/submissions/20260912T1800JST-discovery-heterogeneous-runtime-2.json"
+    },
+    {
+      "run_key": "2026-09-12T18:00:00+09:00",
+      "round": "specialist-cxl-storage-3",
+      "axis": "CXL共有メモリ・KV階層・near-memory processing",
+      "query_summary": "前ラウンドが正本側で全候補非採用だったため別軸へ移り、Kubernetes-native composable CXL、新しいsparse-attention CXL KV、rack-scale CXL共有KV、CXL-PNM、FPGA speculative KVを軽量評価した。既知のHyMCache/Photonic-CXL等は直近discovery-stateに収録済みのため候補から除外した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.2857142857142857,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.18141",
+        "arXiv:2607.27187"
+      ],
+      "next_axis_hint": "storage/DBMSのcache admission・prefetch・I/O schedulingをLLM expert/KVへ接続する研究、またはHPC大規模推論通信へ移る",
+      "source_submission": "work-queue/submissions/20260912T1800JST-discovery-cxl-storage-3.json"
     }
   ],
   "axes": {
@@ -680,6 +698,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "SSD/NVMe expert I/O scheduling、storage/DBMS由来のcache/prefetch、HPC大規模推論の通信最適化へ移る"
+    },
+    "CXL共有メモリ・KV階層・near-memory processing": {
+      "last_run_key": "2026-09-12T18:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 5,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.2857142857142857,
+      "next_axis_hint": "storage/DBMSのcache admission・prefetch・I/O schedulingをLLM expert/KVへ接続する研究、またはHPC大規模推論通信へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

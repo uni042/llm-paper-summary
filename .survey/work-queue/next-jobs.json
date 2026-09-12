@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 188,
+      "completed": 189,
       "ready": 1
     },
     "audit": {
@@ -11,11 +11,23 @@
       "completed": 150,
       "superseded": 43,
       "deferred": 3,
-      "ready": 6,
+      "ready": 8,
       "blocked": 3
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-32074ec28a42f7d1",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL",
+      "source_url": "https://arxiv.org/abs/2606.19746",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2606.19746-sac-sparse-attention-cxl-disaggregated-kv.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-a4ae8894c89646f7",
       "type": "research",
@@ -25,6 +37,18 @@
       "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
       "source_url": "https://arxiv.org/abs/2609.09166",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-ed6df8bb43d5460d",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2512.18194",
+      "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://arxiv.org/abs/2512.18194",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -89,7 +113,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-e35987aea0aca20c",
+      "job_id": "job-082ddf69424c0d77",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -101,5 +125,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T09:07:33+00:00"
+  "generated_at": "2026-09-12T09:09:21+00:00"
 }
