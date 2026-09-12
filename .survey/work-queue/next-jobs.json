@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 186,
+      "completed": 187,
       "superseded": 44,
-      "ready": 108,
+      "ready": 107,
       "deferred": 3
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-de70e163192311dd",
-      "type": "research",
-      "lane": null,
-      "priority": 94,
-      "canonical_id": "arXiv:2609.09643",
-      "title": "UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents",
-      "source_url": "https://arxiv.org/abs/2609.09643",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.09643-unison-agent-session-kv-residency.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-5f9a998b042661ba",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-2e6a6ec3181fc516",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2606.07665",
+      "title": "AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference",
+      "source_url": "https://arxiv.org/abs/2606.07665",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-3ee1465fb1dc2abf",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T18:41:22+00:00"
+  "generated_at": "2026-09-12T18:42:46+00:00"
 }

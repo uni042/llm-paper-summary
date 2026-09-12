@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:42:11.093795+00:00",
+  "updated_at": "2026-09-12T18:43:33.542400+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,19 +13949,19 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T18:42:11.093795+00:00",
+      "last_recorded_at": "2026-09-12T18:43:33.542400+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 0,
         "new_jobs": 7,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -14007,6 +14007,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34711973147:1",
+          "recorded_at": "2026-09-12T18:43:33.542400+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34711973147",
+            "run_attempt": "1",
+            "source_sha": "711459ec86e4c8ba7f81050b1e95f5c163def429"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14031,6 +14046,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-de70e163192311dd",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09643",
+          "title": "UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents",
           "from": "ready",
           "to": "completed"
         }
@@ -14087,7 +14110,8 @@
         }
       ],
       "new_paper_ids": [
-        "arXiv:2609.09800"
+        "arXiv:2609.09800",
+        "arXiv:2609.09643"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json",
@@ -14095,8 +14119,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,
-      "paper_active_count_after": 375,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 376,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
