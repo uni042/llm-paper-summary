@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-548b75bbb8077475",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2606.17949.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-d335718873eaacf6",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 56.8% < 70% (Japanese=5714, Latin=4350)",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T19:45:06+00:00"
 }
