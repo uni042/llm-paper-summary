@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **44 / 50** |
-| Research ready | **44** |
+| Candidate在庫（Research ready） | **46 / 50** |
+| Research ready | **46** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T01:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **4** |
+| Discovery完了 | **2** |
+| 新規job | **7** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **52** |
-| 探索評価候補 | **243** |
-| 重複除外 | **72** |
-| 重複率 | **29.6%** |
-| Novel候補 | **171** |
-| Research候補採用 | **76** |
+| 探索round（stats観測） | **53** |
+| 探索評価候補 | **246** |
+| 重複除外 | **73** |
+| 重複率 | **29.7%** |
+| Novel候補 | **173** |
+| Research候補採用 | **78** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 243 → 重複除外後 171 → Research候補採用 76 → Research完了 47 → Repo収録 47**
+**探索評価 246 → 重複除外後 173 → Research候補採用 78 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -117,6 +117,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
+| 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | multi-tenant prefix安全性・multi-agent workflow prefix scheduling | 2 | 0 | 0 | 0.0% | 0.0% |
@@ -125,11 +126,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — 推論runtime・serving耐障害性: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T01:26:11+09:00** — KV量子化の実行時保証・同期型serving負荷分散: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — 2026年9月新着・KV圧縮/eviction/再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 長文SLO・SSD-backed KV・異種GPUメモリ共有: 評価 3 / 重複 0 / 採用 0
-- **2026-09-13T00:58:47+09:00** — multi-tenant prefix安全性・multi-agent workflow prefix scheduling: 評価 2 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
