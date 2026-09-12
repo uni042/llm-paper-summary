@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "job-05a9d866af44dccd",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-cxl-ssd-kv-saturation-6",
+    "axis": "CXL・SSD・remote KV cache階層メモリ",
+    "query_summary": "CXL hybrid memory、photonic CXL appliance、異種GPU間KV共有、GPU主導SSD KV I/Oを独立軸として確認。HyMCache、Photonic-CXL Memory Appliance、SwiftCache、Tuttiはいずれも決定論的research job IDの実体を最新正本系統で確認し既存として除外した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2607.18141",
+      "arxiv:2607.27187",
+      "arxiv:2606.16135",
+      "arxiv:2605.03375"
+    ],
+    "next_axis_hint": "chunked prefill・prefix-aware batchingの基礎欠落を再確認する",
+    "empty_round_reason": "強いCXL・SSD・remote KV候補4件はすべて既存research jobまたは収録済みだった。"
+  }
+}
