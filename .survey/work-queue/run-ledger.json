@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T19:10:57.272832+00:00",
+  "updated_at": "2026-09-12T19:13:43.243235+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,7 +13949,7 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T19:10:57.272832+00:00",
+      "last_recorded_at": "2026-09-12T19:13:43.243235+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13958,9 +13958,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 23,
+        "new_jobs": 27,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -14136,6 +14136,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34713470590:1",
+          "recorded_at": "2026-09-12T19:13:43.243235+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34713470590",
+            "run_attempt": "1",
+            "source_sha": "5740d094957445986635c4cffacdfe86909a972f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14229,6 +14243,14 @@
         },
         {
           "job_id": "job-b55a5f6b28feb0e9",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-727b21710a6e6ab9",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -14397,6 +14419,34 @@
           "type": "research",
           "canonical_id": "arXiv:2603.07169",
           "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts"
+        },
+        {
+          "job_id": "job-74c76d42ca141850",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-04150be55266345e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.16104",
+          "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective"
+        },
+        {
+          "job_id": "job-research-44ece09f5c0f4e7c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08565",
+          "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling"
+        },
+        {
+          "job_id": "job-research-9ac9e9ad81401213",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.13965",
+          "title": "Autellix: An Efficient Serving Engine for LLM Agents as General Programs"
         }
       ],
       "new_paper_ids": [
@@ -14413,7 +14463,8 @@
         ".survey/work-queue/results/20260913T0352JST-discovery-specialist-fault-tolerance-5.json",
         ".survey/work-queue/results/20260913T0400JST-discovery-f033ef629abac6f2.json",
         ".survey/work-queue/results/20260913T0406JST-discovery-f4b6607a934a6b11.json",
-        ".survey/work-queue/results/20260913T0410JST-discovery-b55a5f6b28feb0e9.json"
+        ".survey/work-queue/results/20260913T0410JST-discovery-b55a5f6b28feb0e9.json",
+        ".survey/work-queue/results/20260913T0412JST-discovery-727b21710a6e6ab9.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,

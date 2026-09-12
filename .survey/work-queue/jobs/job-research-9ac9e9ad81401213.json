@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-9ac9e9ad81401213",
+  "type": "research",
+  "parent_job_id": "job-727b21710a6e6ab9",
+  "priority": 82,
+  "canonical_id": "arXiv:2502.13965",
+  "title": "Autellix: An Efficient Serving Engine for LLM Agents as General Programs",
+  "source_url": "https://arxiv.org/abs/2502.13965",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+  "selection_reason": "agent programをfirst-class scheduling unitとして扱い、単一・分散programの完了済みcall量を使って後続LLM callをpreempt・prioritizeする。program-level head-of-line blockingを直接対象にし、vLLM等に対して同一latencyでprogram throughputを4〜15倍改善と報告する。比較的新しくはないがagentic servingの基礎的systemとして未収録なら重要な欠落候補である。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T19:12:29+00:00",
+  "artifact_transport": "structured_record_v10"
+}

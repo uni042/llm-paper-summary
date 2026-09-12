@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:09:45+00:00",
+  "updated_at": "2026-09-12T19:12:29+00:00",
   "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-kernel-optimization-3",
+  "last_round": "specialist-agentic-serving-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1828,6 +1828,23 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "forward citation・参考文献由来の未収録systems基礎研究、またはagentic servingのprogram-level schedulingへ切り替える",
       "source_submission": "work-queue/submissions/20260913T0410JST-discovery-b55a5f6b28feb0e9.json"
+    },
+    {
+      "run_key": "2026-09-13T04:00:16+09:00",
+      "round": "specialist-agentic-serving-4",
+      "axis": "agentic workload・program/session-aware serving",
+      "query_summary": "agentic servingへ探索軸を変更し、session-centric scheduling、workflow-aware caching/scheduling、program-level scheduling、agent workload characterizationを比較した。AgentSysBenchは既存completed jobを直接確認して除外し、残る3件は決定論的research job IDに実体がないことを最新mainで再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.25,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2608.15127"
+      ],
+      "next_axis_hint": "MoE communication・runtime parallelismは既収録照合を優先し、その後prefix-aware batchingや古い重要欠落へ展開する",
+      "source_submission": "work-queue/submissions/20260913T0412JST-discovery-727b21710a6e6ab9.json"
     }
   ],
   "axes": {
@@ -2890,6 +2907,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "forward citation・参考文献由来の未収録systems基礎研究、またはagentic servingのprogram-level schedulingへ切り替える"
+    },
+    "agentic workload・program/session-aware serving": {
+      "last_run_key": "2026-09-13T04:00:16+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.25,
+      "next_axis_hint": "MoE communication・runtime parallelismは既収録照合を優先し、その後prefix-aware batchingや古い重要欠落へ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
