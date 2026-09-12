@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "job-176b1e153b696e02",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.20661",
+      "title": "WWW.Serve: Interconnecting Global LLM Services through Decentralization",
+      "source_url": "https://arxiv.org/abs/2603.20661",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.20661-www-serve-decentralized-global-llm-serving.md",
+      "priority": 80,
+      "reason": "中央集権型クラスタではなく、独立したGPUサービス提供者が参加方針と資源投入量を個別に決める環境で、中央調停なしの自己組織的request dispatchを扱うLLM serving研究。グローバルSLO達成率を最大1.5倍、遅延を27.6%削減すると報告しており、既存の単一クラスタ内schedulerとは異なる分散資源割当・競争的参加者という設計点を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2603.07810",
+      "title": "Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization",
+      "source_url": "https://arxiv.org/abs/2603.07810",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07810-temperature-aware-geo-distributed-llm-scheduling.md",
+      "priority": 69,
+      "reason": "地理分散edge data centerで、LLM推論のTTFTだけでなく外気温に依存する冷却電力、炭素排出、水消費を同時に扱い、ADMMによる分散最適化で配置・routingを決める研究。通常のGPU負荷均衡やKV locality中心のschedulerと異なり、場所ごとの冷却効率を資源制約として明示するため、geo-distributed servingの隣接系統として研究価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T22:30:00+09:00",
+    "round": "normal-critical-geo-distributed-serving-01",
+    "axis": "地理分散LLM serving・分散最適化",
+    "query_summary": "candidate在庫14件のcritical水位を受け、直前のMoE/異種GPU軸を反復せず、分散・地理分散LLM serving、SLO、冷却/エネルギー制約を含むschedulerへ探索軸を変更した。実質評価4件のうち既収録2件をidentity indexで除外し、未収録2件を投入した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.03036",
+      "arXiv:2606.18431"
+    ],
+    "next_axis_hint": "次回は同じgeo-distributed軸を機械反復せず、GPU障害・reliability-aware serving、またはinterconnect/topology-aware multi-cluster routingへ展開する",
+    "empty_round_reason": null
+  }
+}
