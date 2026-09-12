@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **41 / 50** |
-| Research ready | **41** |
+| Candidate在庫（Research ready） | **44 / 50** |
+| Research ready | **44** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -21,15 +21,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T00:30:00+09:00**
+Run: **2026-09-13T01:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **6** |
+| Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **10** |
-| 新規job | **17** |
-| Repo収録 | **6** |
+| Discovery完了 | **1** |
+| 新規job | **4** |
+| Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -49,13 +49,13 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **51** |
-| 探索評価候補 | **240** |
+| 通常worker run（ledger観測） | **21** |
+| 探索round（stats観測） | **52** |
+| 探索評価候補 | **243** |
 | 重複除外 | **72** |
-| 重複率 | **30.0%** |
-| Novel候補 | **168** |
-| Research候補採用 | **73** |
+| 重複率 | **29.6%** |
+| Novel候補 | **171** |
+| Research候補採用 | **76** |
 | Research完了 | **47** |
 | Repo収録 | **47** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 240 → 重複除外後 168 → Research候補採用 73 → Research完了 47 → Repo収録 47**
+**探索評価 243 → 重複除外後 171 → Research候補採用 76 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -112,6 +112,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
 | 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
+| KV量子化の実行時保証・同期型serving負荷分散 | 3 | 0 | 3 | 0.0% | 100.0% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -124,11 +125,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T01:26:11+09:00** — KV量子化の実行時保証・同期型serving負荷分散: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T01:26:11+09:00** — 2026年9月新着・KV圧縮/eviction/再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 長文SLO・SSD-backed KV・異種GPUメモリ共有: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — multi-tenant prefix安全性・multi-agent workflow prefix scheduling: 評価 2 / 重複 0 / 採用 0
-- **2026-09-13T00:58:47+09:00** — 動的parallelism再構成・KV state migration: 評価 2 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
@@ -149,7 +150,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
 - P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
-- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
+- P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 
 ## 7日比較
 
