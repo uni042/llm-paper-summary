@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-df0f9fdedbcbe3ac",
+  "type": "research",
+  "parent_job_id": "job-71aa62ea72552734",
+  "priority": 86,
+  "canonical_id": "arXiv:2604.13327",
+  "title": "Event Tensor: A Compiler Abstraction for Dynamic Megakernel Generation",
+  "source_url": "https://arxiv.org/abs/2604.13327",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md",
+  "selection_reason": "LLMサービングの動的形状・分岐・非同期イベントを巨大カーネルへ融合する際、静的テンソルIRだけでは実行時イベント依存を十分に表現できない問題に対し、イベントをテンソルと同等のコンパイラ抽象として扱い動的メガカーネル生成へつなぐ。サービング遅延で最先端水準を達成しつつウォームアップ負担も削減すると報告しており、Mirage persistent kernelとは異なる動的実行意味論側からのコンパイラ候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:16:12+00:00",
+  "artifact_transport": "structured_record_v10"
+}

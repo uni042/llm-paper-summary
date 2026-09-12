@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-8df4b126a68a6be4",
+  "type": "research",
+  "parent_job_id": "job-71aa62ea72552734",
+  "priority": 89,
+  "canonical_id": "arXiv:2606.06453",
+  "title": "Vortex: A Programmable System for Efficient Sparse Attention Serving",
+  "source_url": "https://arxiv.org/abs/2606.06453",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+  "selection_reason": "疎注意方式ごとに異なる索引・選択・注意計算を個別実装するとサービング基盤への統合が難しく、動的要求下でGPU利用率も落ちる問題に対し、複数の疎注意パターンを統一的に表現・実行するプログラマブルなサービング基盤を提案する。Blackwell B200を含む実機評価で完全注意比最大3.46倍、GLM-4.7-Flashでは最大4.7倍の高速化を報告しており、個別のKV削減手法ではなく疎注意をサービング機構として汎用化する点が既存SPIN/KARATと異なる強候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:16:12+00:00",
+  "artifact_transport": "structured_record_v10"
+}

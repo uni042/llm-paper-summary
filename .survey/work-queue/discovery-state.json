@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:11:09+00:00",
+  "updated_at": "2026-09-12T23:16:12+00:00",
   "last_run_key": "2026-09-13T07:58:39+09:00",
-  "last_round": "specialist-moe-serving-runtime-3",
+  "last_round": "specialist-sparse-kernel-compiler-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2326,6 +2326,27 @@
       ],
       "next_axis_hint": "strong candidate発見により枯渇判定をリセット。backward references、CXL/SSD、KV sparse-attention、network collective、GPU kernel/compiler、framework update由来の論文を再走査する",
       "source_submission": "work-queue/submissions/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json"
+    },
+    {
+      "run_key": "2026-09-13T07:58:39+09:00",
+      "round": "specialist-sparse-kernel-compiler-4",
+      "axis": "疎注意サービング・GPUメガカーネル・動的コンパイラ",
+      "query_summary": "直前のMoE軸後にKV sparse-attention、GPU kernel/compiler、framework integrationを独立走査した。SPIN、KARAT、HyMCache、Mirage Persistent Kernel、Harness Engineeringは最新正本の既存jobへ収束。Vortex、Event Tensor、Ada-MKは投入直前の最新main HEADで決定論的research job不存在、repo識別子/題名未検出、Library pendingにも同候補なしを確認した。",
+      "candidate_count": 8,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.625,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.26837",
+        "arXiv:2608.03555",
+        "arXiv:2607.18141",
+        "arXiv:2512.22219",
+        "arXiv:2607.17979"
+      ],
+      "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。新着差分、forward/backward citation、CXL/SSD、network collective/disaggregation、MoE placement/cache、KV compression、隣接OS/HPCを一巡して最終枯渇判定する",
+      "source_submission": "work-queue/submissions/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json"
     }
   ],
   "axes": {
@@ -3648,6 +3669,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.6,
       "next_axis_hint": "strong candidate発見により枯渇判定をリセット。backward references、CXL/SSD、KV sparse-attention、network collective、GPU kernel/compiler、framework update由来の論文を再走査する"
+    },
+    "疎注意サービング・GPUメガカーネル・動的コンパイラ": {
+      "last_run_key": "2026-09-13T07:58:39+09:00",
+      "rounds": 1,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.625,
+      "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。新着差分、forward/backward citation、CXL/SSD、network collective/disaggregation、MoE placement/cache、KV compression、隣接OS/HPCを一巡して最終枯渇判定する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

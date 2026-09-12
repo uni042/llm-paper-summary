@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-85e6a3219bd95117",
+  "type": "research",
+  "parent_job_id": "job-71aa62ea72552734",
+  "priority": 85,
+  "canonical_id": "arXiv:2605.11581",
+  "title": "Ada-MK: Adaptive Megakernel Compilation for Efficient LLM Inference",
+  "source_url": "https://arxiv.org/abs/2605.11581",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md",
+  "selection_reason": "LLM推論の形状・バッチ状態に応じて最適な融合粒度が変わるため固定メガカーネルでは利用率を安定して高められない問題に対し、実行条件へ適応してカーネル構成を選ぶコンパイラ・実行系を提案する。TensorRT-LLMプラグインとしてL20で評価し、単一バッチではTensorRT-LLM比最大23.6%、vLLM比最大50.2%の高速化を報告し、実サービス展開も示す。GPUカーネル生成を実際のサービングへ接続する実運用寄り候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T23:16:12+00:00",
+  "artifact_transport": "structured_record_v10"
+}
