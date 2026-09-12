@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2509.19729-20260913-0315-v10-a",
-  "job_id": "job-research-0adc1c376ecfc370",
+  "attempt_id": "attempt-2501.14417-20260913-0340-v10-a",
+  "job_id": "job-research-5f9a998b042661ba",
   "data": {
-    "overview": "Amoebaは、KVと重みをコピーしてからデフラグする素朴なTP変換を、ページ境界を意識したデータ配置と計算重畳へ置き換え、変換そのものを通常の推論ステップへ埋め込める程度まで軽量化した。KV変換では追加メモリを91.6%減らし、重畳まで含めると変換時間を最大86%削減する。重み変換もパディングと重畳で最大85%短縮し、全層変換の追加費用はSeesaw比97.2%低下する。この低い変換費を前提に要求長に応じてTPを動かすと、実運用トレースでKunServe・LoongServe等より処理量が1.75〜6.57倍となり、TTFTは最大53%、TPOTは最大74%短縮する。",
+    "overview": "DeepServeは単一の端から端まで倍率より、サービングエンジン、配置、スケールの各段階を実測して改善幅を示す。FlowServeは非同期スケジューリングとIPC最適化で50ms TPOT制約下の処理量を2倍超へ伸ばし、その後のデータ構造・サンプリング最適化でさらに約20%改善する。PD分離は要求形状によって同居より大きく有利になる領域があり、入力長と予測出力長で両者を選ぶ方針を導く。高速増設ではSSDからのローカル読込みが3.3〜24秒かかる三モデルに対し、HCCS NPU-forkは0.15〜0.19秒で重みを複製する。単一稼働TEから32 TEへの同時拡張も約0.6秒級で、ソースTEのプリフィル/デコードと重なっても影響は小さい。",
     "key_results": [
-      {"metric": "TP構成による長文容量と総処理量の交換条件", "value": "TP1: 最大3.75K・総1792 token/s、TP2: 41.25K・1340 token/s、TP4: 120.5K・767 token/s", "baseline": "同一Qwen2.5-32Bの静的TP構成", "condition": "H20×4、短文1Kトークン", "interpretation": "高TPはKV容量を増やす一方、通信とGPU束縛により短文のクラスタ総処理量を大きく下げるため、要求長でTPを変える余地が大きい。"},
-      {"metric": "KVキャッシュ変換時間", "value": "素朴方式3.15〜4ms、インプレース配置で最大61%削減、重畳込みで最大86%削減", "baseline": "移行+デフラグによる素朴Amoeba", "condition": "4×TP1→TP4、KV使用率90%、5モデル", "interpretation": "ヘッド単位を連続ページへ置くことでデフラグを避け、通信を計算へ重ねると高負荷でも変換を短時間に収められる。"},
-      {"metric": "KV変換追加メモリ", "value": "91.6%削減、追加使用量70MB未満", "baseline": "素朴Amoeba", "condition": "同KV変換マイクロベンチ", "interpretation": "一時コピーと断片化を抑えるため、KVが90%埋まった状態でも並列度変更に必要な空きメモリを確保しやすい。"},
-      {"metric": "FFN重み一層の変換時間", "value": "素朴方式620〜770ms、パディングで18.9〜42.2%削減、重畳込みで最大85%削減", "baseline": "部分コピーによる素朴Amoeba", "condition": "Llama/Qwen各モデル", "interpretation": "分割境界を事前に2MBページへ合わせることで大きな重みコピーを外し、残る通信を通常計算へ隠せる。"},
-      {"metric": "重みパディングの容量・計算費", "value": "重み容量0〜14%増、FFN計算時間増加0.1%未満", "baseline": "パディングなし重み", "condition": "各評価モデル", "interpretation": "実行時コピーを避ける代わりに静的メモリを最大14%多く使うが、ゼロパディングなので通常推論の計算費はほぼ変わらない。"},
-      {"metric": "全層TP変換の追加費用", "value": "Seesaw比97.2%削減、Amoeba-i1は実行ステップ追加費1%未満を維持", "baseline": "Seesawおよび変換なし実行", "condition": "一ステップ中の変換層数を全層まで増加", "interpretation": "変換を独立した秒級停止ではなく層ごとに進めるため、稼働中要求を再計算せずオンライン構成変更へ使える。"},
-      {"metric": "変換対応スケジューラの平均処理量", "value": "RR/LLF比26.1〜39.2%改善", "baseline": "ラウンドロビン / 最小負荷優先", "condition": "TP1×8、短文1Kを60要求/分、長文50Kを1要求/分", "interpretation": "高TPインスタンスの再利用と段階的変換により、長文到着ごとに不要な多数インスタンスを変換する回数を減らす。"},
-      {"metric": "実トレース端から端までの処理量", "value": "1.75〜6.57倍", "baseline": "KunServe / LoongServe", "condition": "Qwen2.5-32B、実運用トレース、0.1〜0.6 QPS", "interpretation": "多数派の短文時は低TPの同時実行性を維持し、長文が来た時だけTPを拡大するため、静的またはPP/SP動的方式より資源効率が高い。"},
-      {"metric": "端から端までの遅延", "value": "TTFT最大53%削減、TPOT最大74%削減、パイプライン重畳だけでTTFTをさらに26.7%削減", "baseline": "KunServe / LoongServe / Amoeba-i1", "condition": "同実トレース、最大0.6 QPS", "interpretation": "TP変換自体の停止を計算へ隠すことで、0.6 QPSでもTTFTを10秒SLO内へ保てる。"}
+      {"metric": "FlowServeデコード処理量", "value": "v1→v2で50ms TPOT SLO下の処理量が2倍超、v2→v3でさらに約20%改善", "baseline": "FlowServe v1 / v2", "condition": "34Bモデル、TP=4、入力2K/4K、256デコードステップ", "interpretation": "非同期スケジューリング・IPC最適化がCPU待ちを隠し、その後のデータ構造/サンプリング改善も追加効果を持つ。"},
+      {"metric": "パイプライン並列でのTTFT", "value": "チャンクを連続マイクロバッチへ分散することで少なくとも20%削減", "baseline": "チャンクを単一マイクロバッチへ固定する方式", "condition": "中央スケジューラを持つPP + chunked prefill", "interpretation": "マイクロバッチ全体を一箇所で管理することでプリフィル塊の偏りを抑える。"},
+      {"metric": "PD-aware出力長予測", "value": "84.9%分類精度", "baseline": "正解出力長区間", "condition": "128トークン幅の区間、軽量予測モデル", "interpretation": "厳密長ではなくPD分離/同居の配置判断に必要な粗い長さだけを低コストで推定する。"},
+      {"metric": "Llama3-8B TP1モデル読込み", "value": "SSD 3.3s、DRAM 1.1s、NPU-fork RoCE 0.71s、NPU-fork HCCS 0.15s", "baseline": "DRAM-miss（SSD）/DRAM-hit", "condition": "別ノード間、Ascend環境", "interpretation": "高速NPU間リンクを利用するとPCIeとローカルファイル経路を避け、重み複製をサブ秒化できる。"},
+      {"metric": "CodeLlama-34B TP4モデル読込み", "value": "SSD 11s、DRAM 2.1s、NPU-fork RoCE 0.76s、NPU-fork HCCS 0.16s", "baseline": "DRAM-miss / DRAM-hit", "condition": "別ノード間", "interpretation": "TP度が増えるとローカルPCIe共有による競合が強くなる一方、NPU-forkは別物理リンクを使うため影響が小さい。"},
+      {"metric": "Qwen-72B TP8モデル読込み", "value": "SSD 24s、DRAM 3.2s、NPU-fork RoCE 0.91s、NPU-fork HCCS 0.19s", "baseline": "DRAM-miss / DRAM-hit", "condition": "別ノード間", "interpretation": "大型・高TPでもHCCS経由の転送時間が約0.2秒に留まり、需要急増時のモデルロード律速を大幅に縮める。"},
+      {"metric": "NPU-forkの同時拡張", "value": "1 TEから32 TEへ約0.6秒級", "baseline": "単一TEへの複製", "condition": "Llama3-8B TP1、HCCS broadcast、最大32 TE", "interpretation": "一対一コピーを直列化せずHCCL broadcastを使うため、拡張数に対する増加が緩やかである。"},
+      {"metric": "TE事前初期化の短縮", "value": "late importと並列初期化で多くのモデルで約35%短縮", "baseline": "最適化前TE-Pre-Load", "condition": "Python/NPU/HCCL初期化", "interpretation": "さらにモデル非依存の事前起動TEとしてクリティカルパス外へ移す設計の基礎になる。"},
+      {"metric": "本番スケール規模", "value": "最大64インスタンスを秒単位で並列スケール可能", "baseline": "通常コールドスタート", "condition": "事前起動Pod/TE、DRAM先読み、NPU-fork、オフラインプロファイルを統合", "interpretation": "一段階のロード高速化だけでなく、オートスケール経路全体を分解して前倒しすることでバースト対応時間を短縮する。"}
     ],
-    "negative_results": "Amoebaは変換を無コストにはできず、重みをページ境界へ合わせるためモデルによって0〜14%の静的メモリ増加が必要になる。素朴なKV移行や重み部分コピーだけでは変換費が大きく、ページ親和配置と重畳を外すとオンライン利用は難しい。高TPは依然として通常推論時の通信負荷を増やすため、長文がない時にTPを下げるスケジューラ判断が重要である。端から端までの主比較は単一ノードH20上のQwen2.5-32Bと再現版KunServeを含むため、全モデル・複数ノードへ同倍率が一般化するとは限らない。",
-    "interpretation": "Amoebaの効果は『高TPを速くする』のではなく、必要な時だけ高TPを使えるほど変換費を下げることから生じる。静的TPでは長文容量の保険として常に高TPを置くと短文の総処理量を捨てる。KVとFFNの物理配置を将来の分割へ合わせておけば、並列構成変更時にデータを大規模コピーする必要がなく、残った通信も通常計算へ隠せる。その結果、スケジューラが要求長に応じてTPを資源として動的に貸し借りできる。高負荷で長文が連続するほど変換回数を抑える制御が重要になり、単純RR/LLFとの差が生じる。",
-    "quality_impact": "KV値、モデル重み、ルータや生成アルゴリズムを近似しない無損失のシステム最適化である。パディングはゼロ領域を計算上打ち消す形で挿入し、進行要求のKVも移動して保持するため、再プリフィルや品質低下を性能利得に利用しない。"
+    "negative_results": "PD分離が常に優れるわけではない。低RPSではPD同居のプリフィル/デコード干渉が小さく、PD-awareはRound Robinと同程度になる。非常に高いRPSでは同じ資源量のPD分離TEが過負荷になりやすく、PD-awareがRound Robinより悪化する場合がある。またNPU-forkは既に同じモデルを持つ稼働TEを必要とするためゼロ台からのコードスタートには使えず、その場合はDRAM/SSD経路が必要である。HCCSの利得は高帯域スケールアップ網に依存し、通常RoCEでは転送時間が長くなる。RTC状態はソフト状態として複雑な強整合を持たず、TE/JE障害復旧は再起動と再計算を許容して5分以内を目標とする。",
+    "interpretation": "DeepServeの結果は、モデル重み・KV・要求という異なる大容量状態を『必要になる前に適切な階層・実行器へ置く』ことで待ち時間を消す設計が一貫している。FlowServeでは次バッチ準備とKV populateをNPU計算へ重ね、分散配置ではキャッシュ所在を要求配置へ反映し、オートスケールではモデルをDRAMまたは稼働NPUへ先に置く。特にNPU-forkは、NPU間高帯域網を推論時のcollectiveだけでなくインスタンス生成にも再利用することで、PCIe/SSD中心のコールドスタート経路を迂回する。CloudMatrix384ではこの思想を共有アドレス空間と多DPグループへ拡張し、単一中央実行器の限界を避けている。",
+    "quality_impact": "モデルの生成品質を性能改善に交換しない。出力長予測は実行先選択の補助で、誤予測しても生成モデルの計算内容は変化しない。KV再利用も保存済み同一コンテキストを再利用する状態管理であり、近似KVや精度低下を導入しない。"
   }
 }
