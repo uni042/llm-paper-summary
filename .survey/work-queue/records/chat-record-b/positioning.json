@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2607.10186-20260913-0030-v10-b",
-  "job_id": "job-research-176f6ec6b8273a5c",
+  "attempt_id": "attempt-2608.01657-20260913-0057-v10-b",
+  "job_id": "job-research-2c474caec39ae70d",
   "data": {
-    "limitations": [
-      "主要性能結果はLLMCompassを拡張したイベント駆動シミュレーションであり、6スタックHBFを実装したGPUシリコンの実測ではない。HBFの実効帯域、熱、電力、制御競合、製造ばらつき、故障率がモデル通りになるかは未検証である。",
-      "HBF 1スタック768GB/s、192GB、SLC、tR=4マイクロ秒、tProg=75マイクロ秒という設計は既存Flash prototypeと将来統合技術から構成した想定であり、市販アクセラレータとして直ちに利用できる構成ではない。",
-      "50msの厳しいデコードSLOでは帯域が足りない構成が存在する。CLIはDeepSeek-V3やQwen3-235Bで8×H200を僅かに下回り、4GPU構成ではLLaMA3.1-405B/Qwen3-Coder-480Bの重み読出しだけでSLOを超える。",
-      "16GPUへ規模を増やすと高容量の利得よりRDMA通信、特にMoE expert parallelのall-to-allが律速し、8GPU HBF構成よりGPU当たりthroughputが下がる。HBFはネットワーク瓶頸を解消しない。",
-      "フラッシュ書込み帯域は読出しより大幅に低く耐久性も有限である。KV保存可能性の分析はSLCと、retentionを短くして100Kから1M P/Eへ伸ばせるという保守的ながら将来技術を含む仮定に依存する。",
-      "選択的KV複製はHBMを使用するため、負荷不均衡が極端な場合やHBM余力が小さい場合には複製量が増え、HBFの容量利点を一部相殺する可能性がある。",
-      "公式公開実装は2026-09-13時点でarXivページとGitHub検索から確認できず、シミュレータやruntimeを第三者がそのまま再現できる状態かは不明である。"
-    ],
-    "differences": "FlexGenやLLM in a Flashなど通常SSD/フラッシュへのオフロードはPCIeやストレージ帯域を前提にHBM/DRAMへデータを移して使うため、容量は増えるがデコード帯域が律速しやすい。FlashAccelはHBFをGPUへHBM級の広帯域インターフェースで直結し、GPUから直接読み出すため、Flashを『退避ストレージ』ではなく『大容量主メモリ』に近い役割へ変える。AiF、Lincoln、Cambricon-LLMのようなin-flash processingはFlash内部に演算器を置いてedge推論を成立させるが、Flash内の限られた演算面積がthroughputを制限し、主にmodel weightsを対象としてKV cacheを扱いにくい。FlashAccelは演算をGPUへ残し、Flash側は大並列容量・帯域に集中するためGQA/MLAを含む高演算量attentionにも対応し、KV cacheもHBFへ保存する。H3のようなHBM+HBFハイブリッド設計と問題設定は近いが、FlashAccelはweight execution-order layout、動的KV selective replication、block-isolated writeback、FTLレスobject management、SRAM prefetch APIまでをLLM access patternに合わせて一体設計し、有効帯域をピーク帯域へ近づける点が中心差分である。",
-    "implementation_status": "ハードウェア提案+システムシミュレーション。HBF die/stackの物理パラメータはXL-Flash等の実測・公開値を基礎にし、LLMCompass/ScaleSimへNAND simulatorとFlash/SRAM memory modelを追加して評価する。NandMmap、GroupMmap、GroupWrite、SramPrefetch等のruntime/APIは設計・シミュレーション上で扱われるが、論文はHBF搭載GPU prototypeのfabricationや公開software artifactを報告していない。",
-    "research_positioning": "オフロード／階層メモリとハードウェアアクセラレータの境界に位置する研究で、特にSSD/NVMe活用系統に対して『通常NVMeをどう効率よく読むか』ではなく『FlashそのものをHBM級bandwidthでGPU packageへ組み込み、LLM向けに内部layoutと管理を変える』という将来ハードウェア方向を示す。SSD活用手法を考える際にも、FlashAccelの重要な知見は、帯域の絶対値だけでなくplane-level load balance、read granularity、append-only property、retention/endurance、data lifetimeを推論runtimeへ露出すると大幅に効率を上げられることである。既存NVMe SSDへそのまま適用はできないが、ZNS、GPU-direct storage、複数NVMe striping、read-only/append-only FTL簡素化などへの知識移植余地が大きい。",
-    "related_work": ["FlexGen", "LLM in a Flash", "TightLLM", "AiF", "Lincoln", "Cambricon-LLM", "H3", "HAVEN", "PagedAttention/vLLM", "FlashAttention", "DFTL", "F2FS", "AttAcc", "LLMCompass"],
-    "audit_notes": "arXiv:2607.10186の最新v2（2026-08-22）HTML全文をIntroductionからReferencesまで確認した。v1からv2で題名にHBF表記が追加され、著者Xinjiang Zhangが追加され、abstractの主要throughput値は2.54倍から2.49倍へ更新されているため、最新v2を正本とした。HBF architecture、megaplane/hyperpage、weight execution-order layout、KV selective replication、block-isolated writeback、FTL removal、persistent metadata log、NandMmap/GroupMmap/GroupWrite/SramPrefetch、LLMCompass simulation、4モデル評価、50/100ms SLO、ablation、write/endurance、multi-turn reuse、energy/area分析を照合した。参考文献は50件。公式code repositoryは確認できなかった。"
+    "limitations": "論文は会計グループをまたぐ内容共有を無効化しており、同一KV内容を複数主体が共有する場合の所有責任は扱わない。利用者またはテナントを安定した会計グループへ結び付けられる運用を前提とし、複数契約を使った責任回避にはグループ内負債の合算で対処するが、識別そのものの不正取得は別問題である。主評価は制御された要求列と人工的に制限したKVブロック容量で行われ、実運用の長期的な利用者入替、モデル混在、分散GPU間のキャッシュ共有までは検証していない。試作版の回収候補選択はソフトウェア走査のため、4096ブロック・32グループでは平均3.080 msまで増加し、さらに大規模な環境では索引付きデータ構造が必要になる。補充率とバースト容量は運用者がサービス契約に合わせて設定する必要があり、不適切な設定では正当な長時間バーストを負債として扱う可能性がある。",
+    "differences": "LRUやS3-FIFOは主として各KVブロックの直近性や再利用価値を見て『何を残すか』を決めるが、PrefixShieldはそれに先立って『誰が新規状態を作って共有容量へ圧力を生んだか』を要求をまたいで追跡する。固定分割のStaticQuotaは利用者間干渉を抑える代わりに休止利用者の空き容量を貸せないのに対し、PrefixShieldは空きがある間は共有領域を自由に使わせ、容量競合時だけ責任情報を回収順へ反映する。また、要求実行中のGPU時間やトークン処理量を公平化する方式とは異なり、要求終了後も残るKV状態の生成責任を対象にする。既存のKVオフロード、圧縮、階層配置方式とは競合せず、どの階層に置かれたKVを誰の責任で回収するかという直交した制御として組み合わせられる。",
+    "implementation_status": "vLLM 0.10.2のV1接頭辞キャッシュ経路へ研究用試作を実装し、NVIDIA L4およびA100上で実機評価している。論文は必要な会計状態、ブロックメタデータ、回収手順を具体的に示す。一方、確認時点のarXivページと本文には公式コード公開先が示されておらず、公開実装の再現性は未確認である。試作版は回収対象を走査して選ぶため、著者自身も本番実装では会計グループ別・保護区分別の索引付きキューへ置き換える方向を示している。",
+    "research_positioning": "推論サービングのKVキャッシュ管理、とくに複数利用者の接頭辞キャッシュ隔離と置換責任を扱う研究として位置づけられる。重要な点はキャッシュ物体の人気度推定を高度化したことではなく、データベースや共有キャッシュで見られる投入制御の発想をLLMの永続KV状態へ持ち込み、新規状態生成者と後続の回収責任を結び付けたことである。リポジトリ内ではKVキャッシュのオフロード・再計算・圧縮・置換系統を補完し、将来的にはSSDやCPUへ階層化したKVキャッシュでも、階層間の移動判断とは別にテナント責任を回収対象選択へ使う研究方向につながる。"
   }
 }
