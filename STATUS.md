@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:49 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:51 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **34 / 50** |
-| Research ready | **34** |
+| Candidate在庫（Research ready） | **33 / 50** |
+| Research ready | **33** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **169** |
+| Research completed（累計） | **170** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **22 / 24** |
@@ -25,11 +25,11 @@ Run: **2026-09-12T23:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **0** |
 | 新規job | **0** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -56,15 +56,15 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-runtime-ssd-11**
 | 重複率 | **26.6%** |
 | Novel候補 | **127** |
 | Research候補採用 | **58** |
-| Research完了 | **45** |
-| Repo収録 | **45** |
+| Research完了 | **46** |
+| Repo収録 | **46** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 173 → 重複除外後 127 → Research候補採用 58 → Research完了 45 → Repo収録 45**
+**探索評価 173 → 重複除外後 127 → Research候補採用 58 → Research完了 46 → Repo収録 46**
 
 ## 探索効率（直近24時間）
 
@@ -116,6 +116,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-runtime-ssd-11**
 
 ### Research完了
 
+- `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 - `arXiv:2606.29207` — KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding
 - `arXiv:2602.12151` — OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration
 - `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
@@ -123,15 +124,14 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-moe-runtime-ssd-11**
 - `arXiv:2602.21548` — DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference
 - `arXiv:2609.10970` — Fengshui: Demystifying Chiplet Ecosystem and Bespoke Neural Network Accelerator Codesign
 - `arXiv:2604.15039` — Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter
-- `arXiv:2607.26633` — NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement
 
 ### 次に処理する候補
 
-- P90 `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 - P89 `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
 - P89 `arXiv:2602.02204` — vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models
 - P88 `arXiv:2608.01657` — Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches
 - P88 `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
+- P88 `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 
 ## 7日比較
 
