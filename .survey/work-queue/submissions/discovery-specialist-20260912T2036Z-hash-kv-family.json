@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-bdc255f2a2a7cd47",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2410.16179",
+      "title": "MagicPIG: LSH Sampling for Efficient LLM Generation",
+      "source_url": "https://arxiv.org/abs/2410.16179",
+      "priority": 90,
+      "reason": "Top-K近似の代わりに局所性鋭敏型ハッシュ（LSH）でattention分布をサンプリングし、KVとハッシュ表をCPU側へ置くCPU-GPU協調の長文脈推論システム。最大5倍のdecode throughput改善と、RTX 4090で96K文脈の実測を報告しており、KV/attention計算のCPUオフロードとハッシュ型アクセスを結ぶ重要な未収録系統。"
+    },
+    {
+      "canonical_id": "arXiv:2604.19351",
+      "title": "DASH-KV: Accelerating Long-Context LLM Inference via Asymmetric KV Cache Hashing",
+      "source_url": "https://arxiv.org/abs/2604.19351",
+      "priority": 84,
+      "reason": "queryとkeyを非対称なdeep hashingでHamming空間へ写し、attentionを近似最近傍探索として線形化する長文脈推論手法。重要tokenだけを動的に高精度計算へ戻すmixed-precision機構を備え、LongBenchでfull attention相当の品質を保ちながら計算量をO(N^2)からO(N)へ削減すると報告する。公式コードも公開されており、ハッシュ型KVアクセスの新しい実装軸。"
+    },
+    {
+      "canonical_id": "arXiv:2412.16187",
+      "title": "HashEvict: A Pre-Attention KV Cache Eviction Strategy using Locality-Sensitive Hashing",
+      "source_url": "https://arxiv.org/abs/2412.16187",
+      "priority": 78,
+      "reason": "attention計算前にLSHでqueryとcache keyの類似度を近似し、低attentionが予測されるKVを動的に置換する。軽量binary structureでpre-attention evictionを可能にし、30〜70%のKV圧縮を品質を維持しつつ報告する。KeyDiff/ECOKVにつながるattention非依存・幾何/ハッシュ系KV管理の重要な未収録系統。"
+    },
+    {
+      "canonical_id": "arXiv:2509.24832",
+      "title": "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching",
+      "source_url": "https://arxiv.org/abs/2509.24832",
+      "priority": 76,
+      "reason": "完全一致prefixに限定せず、token embeddingのLSH fuzzy matchingとRoPE補正で意味的に近い別prompt間からKVを選択再利用する。5K-token入力で最大6.25倍の高速化とGPUメモリ42%削減を報告しており、prefix cachingからsemantic cache sharingへ設計空間を広げる実装指向の候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:28:14+09:00",
+    "round": "specialist-hash-kv-family-3",
+    "axis": "LSH・hashing系KVアクセス/eviction/sharing・query expansion",
+    "query_summary": "ECOKV/KeyDiffからハッシュ・近似探索・attention非依存KV管理へ検索語を展開し、LSH eviction、CPU-GPU協調attention sampling、deep hashing、semantic KV sharingを軽量評価。最新HEADのidentity delta、既存research job、コード検索で再重複確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "last strong batch後に新着/revision、MoE expert cache/offload、framework、forward citation、storage/networking/GPU runtimeを一巡して未収録強候補が残るか確認する",
+    "empty_round_reason": null
+  }
+}
