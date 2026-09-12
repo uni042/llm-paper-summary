@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-6c35372d7f423594",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2603.29002.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-3ae94af47a718bbb",
+  "validation_error": "ValueError: problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T08:52:20+00:00"
 }
