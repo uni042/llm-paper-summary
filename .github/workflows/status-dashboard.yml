@@ -7,6 +7,7 @@ on:
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/ensure_dashboard_history.py'
       - '.survey/tests/test_status_dashboard.py'
+      - '.survey/tests/test_dashboard_history.py'
       - '.survey/docs/survey-workflow/discovery-continuation-policy.md'
       - '.github/workflows/status-dashboard.yml'
   push:
@@ -16,6 +17,7 @@ on:
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/ensure_dashboard_history.py'
       - '.survey/tests/test_status_dashboard.py'
+      - '.survey/tests/test_dashboard_history.py'
       - '.github/workflows/status-dashboard.yml'
   workflow_dispatch:
 
@@ -35,7 +37,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Dashboard regression tests
-        run: python -m pytest .survey/tests/test_status_dashboard.py -q
+        run: python -m pytest .survey/tests/test_status_dashboard.py .survey/tests/test_dashboard_history.py -q
       - name: Render dashboard in check mode
         run: python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
 
