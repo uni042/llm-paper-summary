@@ -1,23 +1,23 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 21:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 21:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **10 / 50** |
-| Research ready | **10** |
+| Candidate在庫（Research ready） | **11 / 50** |
+| Research ready | **11** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **164** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
-| Maintenance counter | **19 / 24** |
+| Maintenance counter | **20 / 24** |
 
 ### 注意事項
 
-- **CRITICAL**: candidate在庫が15未満（現在 10）。探索を最優先で継続。
+- **CRITICAL**: candidate在庫が15未満（現在 11）。探索を最優先で継続。
 
 ## 直近の通常worker
 
@@ -27,35 +27,35 @@ Run: **2026-09-12T20:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **0** |
-| 新規job | **0** |
+| Discovery完了 | **1** |
+| 新規job | **2** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
+Run: **2026-09-12T20:00:00+09:00** / Round: **specialist-critical-buffer-runtime-storage-moe-1**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | adjacent-pim-hbm-gpu-runtime-chiplet |
-| 評価候補 | **14** |
-| 重複除外 | **9** |
+| 探索軸 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 |
+| 評価候補 | **6** |
+| 重複除外 | **1** |
 | Novel候補 | **5** |
-| Research候補採用 | **5** |
-| 重複率 | **64.3%** |
+| Research候補採用 | **1** |
+| 重複率 | **16.7%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **18** |
-| 探索round（stats観測） | **15** |
-| 探索評価候補 | **97** |
-| 重複除外 | **40** |
-| 重複率 | **41.2%** |
-| Novel候補 | **57** |
-| Research候補採用 | **30** |
+| 探索round（stats観測） | **16** |
+| 探索評価候補 | **103** |
+| 重複除外 | **41** |
+| 重複率 | **39.8%** |
+| Novel候補 | **62** |
+| Research候補採用 | **31** |
 | Research完了 | **40** |
 | Repo収録 | **40** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 24時間ファネル
 
-**探索評価 97 → 重複除外後 57 → Research候補採用 30 → Research完了 40 → Repo収録 40**
+**探索評価 103 → 重複除外後 62 → Research候補採用 31 → Research完了 40 → Repo収録 40**
 
 ## 探索効率（直近24時間）
 
@@ -76,6 +76,7 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
+| GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
@@ -88,11 +89,11 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 直近5探索round
 
+- **2026-09-12T20:00:00+09:00** — GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御: 評価 6 / 重複 1 / 採用 1
 - **2026-09-12T19:30:00+09:00** — network-data-movement-pnm-cross-dc-memory-dynamics: 評価 9 / 重複 5 / 採用 4
 - **2026-09-12T19:30:00+09:00** — heterogeneous-gpu-offload-parallelism-spot-serving: 評価 8 / 重複 5 / 採用 2
 - **2026-09-12T19:30:00+09:00** — hpc_gpu_collective_serving: 評価 9 / 重複 6 / 採用 0
 - **2026-09-12T19:00+09:00** — adjacent-pim-hbm-gpu-runtime-chiplet: 評価 14 / 重複 9 / 採用 5
-- **2026-09-12T18:00:00+09:00** — production推論エンジン・tail/SLO scheduling・hardware-software co-design: 評価 5 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
@@ -109,11 +110,11 @@ Run: **2026-09-12T19:00+09:00** / Round: **specialist-20260912T1900-01**
 
 ### 次に処理する候補
 
+- P89 `arXiv:2602.21548` — DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference
 - P82 `arXiv:2609.00857` — LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism
 - P82 `arXiv:2509.08309` — Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism
 - P81 `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
 - P80 `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
-- P80 `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
 
 ## 7日比較
 
