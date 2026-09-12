@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **120 / 50** |
-| Research ready | **120** |
+| Candidate在庫（Research ready） | **121 / 50** |
+| Research ready | **121** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **195** |
@@ -28,35 +28,35 @@ Run: **2026-09-13T04:30:00+09:00**
 |---|---:|
 | Research完了 | **6** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **6** |
+| Discovery完了 | **3** |
+| 新規job | **8** |
 | Repo収録 | **6** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-agent-os-memory-2**
+Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | エージェントサンドボックス・OS資源管理・状態管理 |
-| 評価候補 | **4** |
-| 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **4** |
-| 重複率 | **0.0%** |
+| 探索軸 | 分離型LLMサービング・KV転送／フェーズ非対称性 |
+| 評価候補 | **8** |
+| 重複除外 | **6** |
+| Novel候補 | **2** |
+| Research候補採用 | **1** |
+| 重複率 | **75.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **98** |
-| 探索評価候補 | **468** |
-| 重複除外 | **154** |
-| 重複率 | **32.9%** |
-| Novel候補 | **314** |
-| Research候補採用 | **170** |
+| 探索round（stats観測） | **99** |
+| 探索評価候補 | **476** |
+| 重複除外 | **160** |
+| 重複率 | **33.6%** |
+| Novel候補 | **316** |
+| Research候補採用 | **171** |
 | Research完了 | **63** |
 | Repo収録 | **63** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-agent-os-memory-2**
 
 ### 24時間ファネル
 
-**探索評価 468 → 重複除外後 314 → Research候補採用 170 → Research完了 63 → Repo収録 63**
+**探索評価 476 → 重複除外後 316 → Research候補採用 171 → Research完了 63 → Repo収録 63**
 
 ## 探索効率（直近24時間）
 
@@ -79,6 +79,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-agent-os-memory-2**
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
+| 分離型LLMサービング・KV転送／フェーズ非対称性 | 8 | 6 | 1 | 75.0% | 12.5% |
 | CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
 | heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
@@ -172,11 +173,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-agent-os-memory-2**
 
 ### 直近5探索round
 
+- **2026-09-13T05:00:25+09:00** — 分離型LLMサービング・KV転送／フェーズ非対称性: 評価 8 / 重複 6 / 採用 1
 - **2026-09-13T05:00:25+09:00** — エージェントサンドボックス・OS資源管理・状態管理: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T05:00:25+09:00** — 2026-09新着・KVキャッシュ圧縮／再利用: 評価 3 / 重複 3 / 採用 0
 - **2026-09-13T04:00:16+09:00** — 投機的デコードのserving・pipeline・メモリ制約・性能モデル: 評価 7 / 重複 2 / 採用 4
 - **2026-09-13T04:00:16+09:00** — chunked prefill・prefix-aware batchingの基礎欠落: 評価 4 / 重複 3 / 採用 0
-- **2026-09-13T04:00:16+09:00** — CXL・SSD・remote KV cache階層メモリ: 評価 4 / 重複 4 / 採用 0
 
 ## 最近処理した論文
 
