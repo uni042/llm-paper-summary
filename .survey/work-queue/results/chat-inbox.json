@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-8f1c80196652932b",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17787-lumen-coordinated-failure-recovery.md"
-  },
-  "job_status": "completed",
-  "reconciled": true
+  "ok": false,
+  "job_id": "job-research-fa681e706d820dae",
+  "validation_error": "ValueError: metadata.list_summary is required: the research worker must write a 45-180 character Japanese one-line explanation that says what the paper actually does; do not derive it mechanically from the overview",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T11:10:04+00:00"
 }
