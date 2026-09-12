@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:02:49+00:00",
+  "updated_at": "2026-09-12T16:05:33+00:00",
   "last_run_key": "2026-09-13T00:58:47+09:00",
-  "last_round": "specialist-os-tiering-kv-prefetch-2",
+  "last_round": "specialist-network-runtime-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1023,6 +1023,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はforward citationとネットワーク/collective communication・disaggregated servingの交点へ移し、既収録SmartGen/KVServe等を避けて新規候補を探す",
       "source_submission": "work-queue/submissions/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json"
+    },
+    {
+      "run_key": "2026-09-13T00:58:47+09:00",
+      "round": "specialist-network-runtime-3",
+      "axis": "分散推論・collective通信・disaggregated電力/runtime",
+      "query_summary": "前roundのSSD/KV先読み軸から通信・runtimeへ移り、Attention/FFN分離とDVFS、インターネット規模分散推論、collective communication体系化を軽量評価。一次資料の抄録を確認し、投入直前に最新HEADとcanonical arXiv IDでrepo再検索した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次は動的メモリ回収・admission control・SLO-aware scheduler、または今回候補のforward/backward citationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T0105JST-discovery-specialist-network-runtime-3.json"
     }
   ],
   "axes": {
@@ -1605,6 +1620,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はforward citationとネットワーク/collective communication・disaggregated servingの交点へ移し、既収録SmartGen/KVServe等を避けて新規候補を探す"
+    },
+    "分散推論・collective通信・disaggregated電力/runtime": {
+      "last_run_key": "2026-09-13T00:58:47+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次は動的メモリ回収・admission control・SLO-aware scheduler、または今回候補のforward/backward citationへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

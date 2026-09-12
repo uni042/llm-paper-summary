@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:03:54.128831+00:00",
+  "updated_at": "2026-09-12T16:06:39.368578+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11737,7 +11737,7 @@
     {
       "run_key": "2026-09-13T00:30:00+09:00",
       "first_recorded_at": "2026-09-12T15:47:23.423873+00:00",
-      "last_recorded_at": "2026-09-12T16:03:54.128831+00:00",
+      "last_recorded_at": "2026-09-12T16:06:39.368578+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -11746,9 +11746,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 7,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -11810,6 +11810,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34704131103:1",
+          "recorded_at": "2026-09-12T16:06:39.368578+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34704131103",
+            "run_attempt": "1",
+            "source_sha": "5b998c16b899a0a0962a6294be48ac3c3be872b2"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11839,6 +11853,14 @@
         },
         {
           "job_id": "job-71a219ce6f705a8b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-9fe79e3f7fd93386",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -11874,6 +11896,27 @@
           "type": "research",
           "canonical_id": "arXiv:2603.23049",
           "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving"
+        },
+        {
+          "job_id": "job-95ad016f315feba5",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-89a31b528bef1df7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.21072",
+          "title": "Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization"
+        },
+        {
+          "job_id": "job-research-fbca0f6d99c20b64",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.15118",
+          "title": "Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination"
         }
       ],
       "new_paper_ids": [
@@ -11882,7 +11925,8 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0059JST-discovery-specialist-agent-kv-1.json",
-        ".survey/work-queue/results/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json"
+        ".survey/work-queue/results/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json",
+        ".survey/work-queue/results/20260913T0105JST-discovery-specialist-network-runtime-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 360,
