@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 232,
+      "completed": 233,
       "ready": 1
     },
     "audit": {
@@ -10,7 +10,7 @@
     "research": {
       "completed": 177,
       "superseded": 44,
-      "ready": 46,
+      "ready": 47,
       "deferred": 3
     }
   },
@@ -36,6 +36,18 @@
       "title": "Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving",
       "source_url": "https://arxiv.org/abs/2602.22593",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.22593-flying-serving-online-dp-tp-switching.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2ce10fdd8ff6176b",
+      "type": "research",
+      "lane": null,
+      "priority": 90,
+      "canonical_id": "arXiv:2607.08782",
+      "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2607.08782",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.08782-director-online-proactive-expert-placement.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-2fabaceee2c88fd9",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2512.25059",
-      "title": "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
-      "source_url": "https://arxiv.org/abs/2512.25059",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-a510d87d9cbc3222",
+      "job_id": "job-d3909a842ae76980",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T16:33:51+00:00"
+  "generated_at": "2026-09-12T16:36:32+00:00"
 }

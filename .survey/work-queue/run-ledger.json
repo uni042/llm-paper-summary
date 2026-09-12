@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:34:12.733128+00:00",
+  "updated_at": "2026-09-12T16:36:53.811861+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T16:34:12.733128+00:00",
+      "last_recorded_at": "2026-09-12T16:36:53.811861+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 9,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12278,6 +12278,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34705708542:1",
+          "recorded_at": "2026-09-12T16:36:53.811861+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34705708542",
+            "run_attempt": "1",
+            "source_sha": "222663f20d86e477b7b645c007beae9e2509b2aa"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12291,6 +12305,14 @@
         },
         {
           "job_id": "job-29dd7c44eff93660",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-a510d87d9cbc3222",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12347,12 +12369,27 @@
           "type": "research",
           "canonical_id": "arXiv:2601.22438",
           "title": "Towards Resiliency in Large Language Model Serving with KevlarFlow"
+        },
+        {
+          "job_id": "job-d3909a842ae76980",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2ce10fdd8ff6176b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08782",
+          "title": "Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0132JST-discovery-262708a8729e8066.json",
-        ".survey/work-queue/results/20260913T0134JST-discovery-29dd7c44eff93660.json"
+        ".survey/work-queue/results/20260913T0134JST-discovery-29dd7c44eff93660.json",
+        ".survey/work-queue/results/20260913T0136JST-discovery-a510d87d9cbc3222.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,

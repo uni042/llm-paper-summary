@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:33:06+00:00",
+  "updated_at": "2026-09-12T16:35:47+00:00",
   "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-fault-tolerant-serving-runtime-3",
+  "last_round": "specialist-moe-placement-coexecution-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1175,6 +1175,26 @@
       ],
       "next_axis_hint": "次は耐障害性を離れ、MoE expert co-executionまたは被引用・参考文献経路へ移る",
       "source_submission": "work-queue/submissions/20260913T0134JST-discovery-29dd7c44eff93660.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-moe-placement-coexecution-4",
+      "axis": "MoE expert配置・CPU-GPU協調実行",
+      "query_summary": "MoE expert placement、prefetch、CPU-GPU co-executionを探索。既収録のMoEless、Speculating Experts、Mixture-of-Experts Serving、ELDRを決定論的job IDで除外し、最新mainでjob未存在を再確認したDirectorとCoX-MoEだけを投入した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2603.06350",
+        "arXiv:2603.19289",
+        "arXiv:2607.17880",
+        "arXiv:2607.00466"
+      ],
+      "next_axis_hint": "MoEを離れ、CXL/SSD/SmartNICなどmemory・network隣接systemsと被引用・参考文献経路へ移る",
+      "source_submission": "work-queue/submissions/20260913T0136JST-discovery-a510d87d9cbc3222.json"
     }
   ],
   "axes": {
@@ -1857,6 +1877,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "次は耐障害性を離れ、MoE expert co-executionまたは被引用・参考文献経路へ移る"
+    },
+    "MoE expert配置・CPU-GPU協調実行": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "MoEを離れ、CXL/SSD/SmartNICなどmemory・network隣接systemsと被引用・参考文献経路へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
