@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T07:52:15.750555+00:00",
+  "updated_at": "2026-09-12T07:58:52.515469+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9034,7 +9034,7 @@
     {
       "run_key": "2026-09-12T16:30:00+09:00",
       "first_recorded_at": "2026-09-12T07:34:22.781369+00:00",
-      "last_recorded_at": "2026-09-12T07:52:15.750555+00:00",
+      "last_recorded_at": "2026-09-12T07:58:52.515469+00:00",
       "signals": [
         "research_completed",
         "discovery_or_queue_expanded",
@@ -9043,9 +9043,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 7,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -9138,6 +9138,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34682059942:1",
+          "recorded_at": "2026-09-12T07:58:52.515469+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34682059942",
+            "run_attempt": "1",
+            "source_sha": "844dd5170d649c8491dc0f39ef3e3c7023b8e060"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9180,6 +9194,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-d5dc1f38c992d14e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -9217,6 +9239,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-6c35372d7f423594",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.29002",
+          "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference"
+        },
+        {
+          "job_id": "job-research-cbbe1a6b0e839860",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.14516",
+          "title": "Efficient Multi-round LLM Inference over Disaggregated Serving"
         }
       ],
       "new_paper_ids": [
@@ -9227,7 +9263,8 @@
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1630JST-discovery-7c31e8b2a460d1f4.json",
         ".survey/work-queue/results/20260912T1630JST-discovery-d197921c62f4db41.json",
-        ".survey/work-queue/results/20260912T1651JST-discovery-7c0d2ac0d1cbe774.json"
+        ".survey/work-queue/results/20260912T1651JST-discovery-7c0d2ac0d1cbe774.json",
+        ".survey/work-queue/results/20260912T1658JST-discovery-job-d5dc1f38c992d14e.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 333,

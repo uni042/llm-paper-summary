@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-6c35372d7f423594",
+  "type": "research",
+  "parent_job_id": "job-d5dc1f38c992d14e",
+  "priority": 79,
+  "canonical_id": "arXiv:2603.29002",
+  "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+  "source_url": "https://arxiv.org/abs/2603.29002",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md",
+  "selection_reason": "長文推論で用いる疎注意、RAG、圧縮コンテキストをPrepare Memory・Compute Relevancy・Retrieval・Apply to Inferenceの4段メモリ処理パイプラインとして統一し、推論時間の22〜97%を占め得る処理をGPUとFPGAへ異種分担する。疎で不規則・メモリ律速な処理をFPGA、計算集約部分をGPUへ置き、MI210+U55CでGPU単独比1.04〜2.2倍高速・1.11〜4.7倍低エネルギーを報告する。KVキャッシュ単体ではなく複数の長文メモリ機構を共通パイプラインとして扱うため、異種メモリ処理・分離推論の隣接系統として研究価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T07:58:16+00:00",
+  "artifact_transport": "structured_record_v10"
+}

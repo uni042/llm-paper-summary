@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-cbbe1a6b0e839860",
+  "type": "research",
+  "parent_job_id": "job-d5dc1f38c992d14e",
+  "priority": 86,
+  "canonical_id": "arXiv:2602.14516",
+  "title": "Efficient Multi-round LLM Inference over Disaggregated Serving",
+  "source_url": "https://arxiv.org/abs/2602.14516",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.14516-ampd-multi-round-disaggregated-serving.md",
+  "selection_reason": "AMPDは、エージェントや反復RAGで生じるincremental prefillとdecodeの交互実行を、従来の単発要求向けprefill-decode分離とは別問題として扱う。リアルタイム負荷に応じてincremental prefillをdecode側でローカル実行するかprefill側へ送るかを選び、prefill待ち行列もSLO余裕に基づいて並べ替える。さらに資源配分と並列戦略を整数線形計画で事前設計し、共置・分離の比較方式に対し平均67.29〜339.74%のSLO達成率改善を報告している。複数ラウンド推論と分離サービングを直接接続する点が既収録の一般的PD分離系との差分として強い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T07:58:16+00:00",
+  "artifact_transport": "structured_record_v10"
+}

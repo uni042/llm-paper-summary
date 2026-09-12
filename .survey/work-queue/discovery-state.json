@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T07:51:39+00:00",
+  "updated_at": "2026-09-12T07:58:16+00:00",
   "last_run_key": "2026-09-12T16:30:00+09:00",
-  "last_round": "paper-worker-exaserve-derived-storage-control-2",
+  "last_round": "paper-worker-multiround-heterogeneous-memory-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -333,6 +333,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次回はdistributed streaming ingress / control-plane sharding / multi-controller LLM servingを優先し、今回のstorage/offload軸を機械的に反復しない",
       "source_submission": "work-queue/submissions/20260912T1651JST-discovery-7c0d2ac0d1cbe774.json"
+    },
+    {
+      "run_key": "2026-09-12T16:30:00+09:00",
+      "round": "paper-worker-multiround-heterogeneous-memory-1",
+      "axis": "複数ラウンド分離サービング・異種メモリ処理",
+      "query_summary": "直近の高重複だったKV/SSD軸を避け、エージェント型・複数ラウンドのprefill-decode分離サービングと、疎注意/RAG/圧縮メモリ処理をGPU-FPGAへ分担する異種実行系を一次資料で軽量評価した。投入直前に最新identity indexとnext-jobsを再確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "今回候補の採用結果を確認後、multi-round/agentic servingの引用・被引用、またはGPU以外のメモリ処理アクセラレータへ展開する",
+      "source_submission": "work-queue/submissions/20260912T1658JST-discovery-job-d5dc1f38c992d14e.json"
     }
   ],
   "axes": {
@@ -515,6 +530,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次回はdistributed streaming ingress / control-plane sharding / multi-controller LLM servingを優先し、今回のstorage/offload軸を機械的に反復しない"
+    },
+    "複数ラウンド分離サービング・異種メモリ処理": {
+      "last_run_key": "2026-09-12T16:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "今回候補の採用結果を確認後、multi-round/agentic servingの引用・被引用、またはGPU以外のメモリ処理アクセラレータへ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
