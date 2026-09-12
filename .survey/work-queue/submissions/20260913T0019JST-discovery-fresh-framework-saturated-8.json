@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ebef4cdcadffb7dd",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-fresh-framework-saturated-8",
+    "axis": "直近新着・vLLM/SGLang周辺実装・関連論文",
+    "query_summary": "直近2609系を含むLLM serving/MoE/KV新着と、vLLM/SGLang周辺の関連実装・論文経路を横断した。検索で再浮上した強候補は既収録・既存jobで、新規の強候補は確認できなかった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.16135",
+      "arXiv:2607.16892",
+      "arXiv:2607.28150",
+      "arXiv:2608.16477"
+    ],
+    "next_axis_hint": "今回runではSSD階層、分離サービング、agentic serving、GPU runtime、multi-agent scheduling、MoE、KV、新着/実装経路を一巡したため、次回はその時点の新着と引用関係から再開する",
+    "empty_round_reason": "直近新着と主要serving framework周辺を追加で横断したが、強候補として再浮上したものはすべて既存で、独立した新規候補は確認できなかった。"
+  }
+}
