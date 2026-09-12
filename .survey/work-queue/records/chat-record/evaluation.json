@@ -5,18 +5,18 @@
   "attempt_id": "attempt-2606.17787-20260912-1950-v10-a",
   "job_id": "job-research-8f1c80196652932b",
   "data": {
-    "hardware": ["実機prototypeは4 nodes・計8 NVIDIA A800-SXM4-80GB。各nodeはXeon Platinum 8358P x2、200GB DRAM、Samsung PM893 SATA SSD 894GB x2、A800 x2をNVLink接続、node間10Gbps Ethernet。", "simulation hostはXeon Gold 6330 x2、503GB DRAM。既定simulationは4 A100-80GB級GPU/workerの10 workers。"],
-    "software": ["SGLang v0.5.6上に約13K LoCのPython prototype。PyTorch 2.9、FlashInfer 0.5、ZeroMQ、gRPCを利用。", "Vidurへ約5K LoCを追加し、worker recovery state machine、global recovery scheduler、KV restore model、load-aware checkpoint distributionを実装。"],
-    "model": ["4-worker prototype: Qwen3-32B target + Qwen3-4B draft、各worker 2 A800 tensor parallelism。", "8-worker prototype: Qwen3-14B target + Qwen3-1.7B draft、1 GPU/worker。", "simulation: Llama-3-70B target + Llama-3-8B draft、acceptance rate 0.60。"],
-    "datasets": ["prototypeはShareGPT trace。", "simulationはSplitwise-Conv trace。", "各設定15,000 requests、scale experimentsの一部は40,000 requests、Poisson arrivals。"],
-    "baselines": ["No-Failure: 障害注入なし。", "Stop-and-Restart: 中断要求をsurvivorへredirectし、lost KVをfull prefillで再構築。", "Fixed-Checkpointing: 各requestのKVを固定neighborのCPU memoryへstreamし、障害後はそのholderから復元。"],
-    "correctness": "投機的デコードはtarget modelによる標準verificationを行い、draft tokenを無条件採用しない。checkpoint pageは完全受信後だけvisibleにし、token history由来tagで最長連続prefixを照合する。各実験を5回実行し、95% confidence intervalをStudent's t-distributionで報告する。",
+    "hardware": ["実機試作は4ノード、合計8基のNVIDIA A800-SXM4-80GB。各ノードはXeon Platinum 8358Pを2基、200GB DRAM、Samsung PM893 SATA SSDを2基、A800を2基備える。GPU間はNVLink、ノード間は10Gbps Ethernet。", "シミュレーション実行機はXeon Gold 6330を2基と503GB DRAM。既定の模擬クラスタは4基のA100-80GB級GPUを一つの処理担当として10組用いる。"],
+    "software": ["SGLang v0.5.6上に約13K行のPython試作を実装し、PyTorch 2.9、FlashInfer 0.5、ZeroMQ、gRPCを利用する。", "Vidurへ約5K行を追加し、復旧状態機械、全体復旧配分器、キャッシュ復元時間モデル、負荷認識保存配分を実装する。"],
+    "model": ["4処理担当試作はQwen3-32B本体とQwen3-4B下書きモデルで、各処理担当は2基のA800をテンソル並列で使用。", "8処理担当試作はQwen3-14B本体とQwen3-1.7B下書きモデルで1 GPUを一つの処理担当として使用。", "シミュレーションはLlama-3-70B本体とLlama-3-8B下書きモデルを使用し、実測受理率0.60を設定。"],
+    "datasets": ["実機試作はShareGPT会話トレースを使用。", "シミュレーションはSplitwise-Convトレースを使用。", "通常設定は15,000要求、長時間規模実験の一部は40,000要求をポアソン到着で投入。"],
+    "baselines": ["障害なし: 同じ負荷を故障注入なしで実行。", "停止・再起動: 中断要求を生存処理担当へ転送し、失われたキャッシュを全プリフィルで再構築。", "固定保存: 各要求のキャッシュを固定隣接処理担当のCPUメモリへ継続保存し、障害後はその保存先から復元。"],
+    "correctness": "投機的デコードは対象モデルによる標準検証を行い、下書き候補を無条件に採用しない。保存ページは完全受信後だけ有効化し、トークン履歴由来の識別札で最長連続接頭辞を照合する。各実験を5回行い、95%信頼区間をスチューデントのt分布で算出する。",
     "settings": [
-      {"name":"既定serving設定","description":"speculative depth K=4、Sarathi-Serve scheduler、continuous batching、prefill chunk 1,024 tokens、batch cap 512。prototype request rateは4-worker 12 QPS、8-worker 10 QPS、simulation 14 QPS。single-worker failureを既定とする。"},
-      {"name":"checkpoint memory budget","description":"各requestは1 checkpointだけを保持し、active workerとは別workerのhost memoryへ置く。prototypeのper-worker checkpoint limitはQwen3-14Bで80GB、Qwen3-32Bで160GB。最大context lengthに基づくfootprintを予約する。"},
-      {"name":"復旧時間定義","description":"request IDを200件ずつbucket化し、mean TTFTが対応するNo-Failure bucketより5%超悪化した時点から、3 consecutive bucketsが5%以内へ戻るまでをfailure-impact windowとし、その時間をrecovery timeと定義する。"}
+      {"name":"既定提供設定","description":"投機深度K=4、Sarathi-Serveスケジューラ、連続バッチ処理、プリフィル分割長1,024トークン、バッチ上限512。要求率は4処理担当で12 QPS、8処理担当で10 QPS、シミュレーションで14 QPS。既定では一つの処理担当を故障させる。"},
+      {"name":"保存メモリ予算","description":"各要求は一つだけキャッシュ複製を持ち、実行中処理担当とは別の処理担当のホストメモリへ保存する。各処理担当の保存上限はQwen3-14Bで80GB、Qwen3-32Bで160GB。最大文脈長に基づく容量を予約する。"},
+      {"name":"復旧時間の定義","description":"要求番号を200件ずつまとめ、平均初回トークン時間が対応する障害なし区間より5%超悪化した時点から、3区間連続で5%以内へ戻るまでを障害影響期間とし、その長さを復旧時間とする。"}
     ],
-    "methodology": "実機prototypeでdisk I/O、10GbE network transfer、GPU memory management、target reload、draft assistanceを含む実際の障害復旧を測り、simulationで4〜64 workers、複数同時failure、load変化を拡張評価する。TTFTとTPOTはmean/P99を測定し、failure-impact window内の値でschemeを比較する。+Schedulingはload-aware checkpointingとlocality-aware recoveryのみ、+Progressiveはspeculative progressive recoveryのみを有効にするablationで、KV state preservationとtemporary capacity restorationの寄与を分離する。",
-    "scope": "worker-level failureを対象とし、GPU/node/network障害の原因を問わずworker unavailableとして扱う。保守的にfull target-model reloadが必要と仮定する。gateway/controllerの同時failureは対象外で高可用化可能と仮定する。各requestはcheckpoint 1 copyのみなのでholderも同時に落ちるとfull recomputationへfallbackする。実機は最大8 A800、64-worker評価はsimulationである。"
+    "methodology": "実機試作ではSSD読込、10Gbpsネットワーク転送、GPUメモリ管理、本体モデル再読込、下書き補助を含む実際の障害復旧を測る。シミュレーションでは4〜64処理担当、複数同時故障、負荷変化へ拡張する。初回トークン時間とトークン間時間について平均値と99パーセンタイル値を測り、障害影響期間内の値で比較する。保存配分と局所性認識復旧だけを有効にした構成と、投機型段階復旧だけを有効にした構成を別々に評価し、状態保存と一時的処理能力回復の寄与を切り分ける。",
+    "scope": "GPU、ノード、ネットワークの原因を問わず処理担当が利用不能になる故障を対象とし、保守的に本体モデルの全再読込が必要と仮定する。入口処理と中央制御器は復旧中も稼働すると仮定する。各要求の保存複製は一つだけなので保存先も同時故障すると全再計算へ戻る。実機は最大8基のA800で、64処理担当評価はシミュレーションである。"
   }
 }
