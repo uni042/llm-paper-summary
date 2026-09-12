@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9085c528d4fdb21e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11744",
+      "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+      "source_url": "https://arxiv.org/abs/2609.11744",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2609.11744-building-py-kvcache-external-kv-caching-vllm-nvme-ssds.md",
+      "priority": 92,
+      "reason": "vLLMの外部KVキャッシュをGPU・CPU・NVMe SSDで実測し、単純な帯域幅だけでなく転送粒度、中間メモリ、要求スケジュールへ入る時点が性能を支配すると整理した上で、非同期direct I/O、上限付き共有staging、scheduler-aware preloadingを持つpy-kvcacheを実装する新着。80k tokenではdisk loadがLMCache比2.0倍、preloading単体で1.34倍、GPU+CPU+disk全体でもLMCache比1.23倍で、native vLLM KV Offloadの約4%以内。H100では平均要求がbreak-even未満になり外部cacheが不利になる負の結果も示し、SSD活用・KV階層・admission判断を直接扱うため最優先。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10790",
+      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.10790",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md",
+      "priority": 86,
+      "reason": "Kubernetes Dynamic Resource Allocationでcomposable CXL memoryをクラスタ資源化し、複数nodeから同じ物理領域へアクセスするvLLM/llm-d向け共有KV cache tierを構築する。Qwen2.5-7B-Instructと512GiB CXL applianceの2-node評価で、95.4〜99.5% external hit時のcross-node prefix reuseによりTTFTを5.5〜36.6倍短縮し、same-node reuseとのsharing gapは1〜4%。過去のCXL探索は重複率が高かったが、この論文は2026-09-09公開の新規Kubernetes-native実装で、階層KV・共有メモリ系統の実装上の新規性が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10812",
+      "title": "ExaServe: Large-Scale LLM Serving on Exascale HPC Systems",
+      "source_url": "https://arxiv.org/abs/2609.10812",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10812-exaserve-large-scale-llm-serving-exascale-hpc-systems.md",
+      "priority": 83,
+      "reason": "クラウド向けserving stackをそのまま使いにくいexascale HPCで、scheduler/MPI/accelerator選択/node-local weight stagingをYAMLから再現可能にするpip-installable framework。Auroraで1〜256 node、3072 vLLM replicaまで展開し、non-streamingは27.1k req/s・3.8M token/sまでほぼ線形にscaleする一方、streamingでは中央proxyが約4.7k req/sで飽和し、Ray Serve control planeがO(N^2)で256 nodeのbring-upを約30分まで悪化させる。大規模servingの新しい実測ボトルネックを示すため候補価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11133",
+      "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11133",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-model-calibrated-power-control-disaggregated-llm-serving.md",
+      "priority": 82,
+      "reason": "prefill/decode分離環境で同じpower設定を両laneへ適用する問題を扱い、prefillはSM-clock window、decodeは実測throughput/latency cliff直上の自動較正power capを使うphase-decoupled controller。8x B200・Qwen3-Coder-480B FP8のagentic loadでbalanced modeがMax-Qの+8.6% tokens/J・+5.2%平均E2Eに対し+20.4% tokens/J・+3.5%平均E2Eを達成し、3日継続運転でlane pairの電力を32.3%削減。MoEではdense modelより約5倍効果が大きいという適用境界もあり、serving資源制御として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.08450",
+      "title": "Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2609.08450",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.08450-sample-guided-exact-top-k-selection-long-context-sparse-attention.md",
+      "priority": 78,
+      "reason": "long-context sparse attentionで残るexact Top-K選択を、固定stride samplingで粗い境界を提案し、完全row passで正しさを証明してからFP32 exact refinementするGPU selectorへ置き換える。samplingは共通経路の仕事量だけを減らし出力のexactnessは維持する。Hy4-Preview由来scoreで外部exact baseline比1.29〜1.75倍、20構成の幾何平均1.55倍、framework traceでも1.36倍/1.48倍。Tencent HPC-Opsで実装公開され、長文脈推論のoperator bottleneckを直接扱うため採用。"
+    }
+  ]
+}
