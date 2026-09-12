@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T04:43:05.076675+00:00",
+  "updated_at": "2026-09-12T04:47:04.281439+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8599,19 +8599,19 @@
     {
       "run_key": "2026-09-12T13:30:00+09:00",
       "first_recorded_at": "2026-09-12T04:32:36.034668+00:00",
-      "last_recorded_at": "2026-09-12T04:43:05.076675+00:00",
+      "last_recorded_at": "2026-09-12T04:47:04.281439+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
-        "new_papers": 1,
+        "new_jobs": 5,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -8672,6 +8672,22 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34673853810:1",
+          "recorded_at": "2026-09-12T04:47:04.281439+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34673853810",
+            "run_attempt": "1",
+            "source_sha": "2352ec40f05bd5f381644b8979e9341befd70b29"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8706,6 +8722,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-1f5816e46bbb4a8f",
+          "type": "research",
+          "canonical_id": "arXiv:2511.00807",
+          "title": "FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -8736,10 +8760,18 @@
           "type": "research",
           "canonical_id": "arXiv:2511.00807",
           "title": "FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs"
+        },
+        {
+          "job_id": "job-62f183afd4a5d83a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
-        "arXiv:2601.12241"
+        "arXiv:2601.12241",
+        "arXiv:2511.00807"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1330JST-discovery-8ad6b0886ce60c75.json",
@@ -8748,8 +8780,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 327,
-      "paper_active_count_after": 328,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 329,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
