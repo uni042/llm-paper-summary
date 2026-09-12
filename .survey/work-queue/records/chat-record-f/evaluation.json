@@ -2,23 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-audit-rexpert-20260911-0430-v10-a1",
-  "job_id": "job-audit-983fdb437b0be018",
+  "attempt_id": "attempt-2501.01005-20260913-0118-v10-f",
+  "job_id": "job-research-3cc1bbfc1c0813e6",
   "data": {
-    "hardware": ["ReXpertは完成ReRAMシリコンの実機評価ではなく12nm想定の設計モデル。Unitは4MiB ReRAM、51.2GB/s読出し、400GFLOPS FP8、20 Core/Dieで1.25GiB・16.4TB/s・128TFLOPS。", "比較対象はNVIDIA H20とH100/H800の公開帯域・FP8性能を使い、FFNプールを同一ピーク演算量へ正規化する。全体分離構成では注意機構側にH20を置く。", "面積・電力はRTL合成PE、DSENT通信網、ReRAM読出しエネルギー、UCIe較正値を組み合わせる。side-4 Core meshは約35.6mm²・19W、20×20mm想定Die全体は約47Wとモデル化される。"],
-    "software": ["Qwen3.5-35B-A3B、Qwen3.5-397B-A17B、GLM-5.2の実デコードから得た専門家ルーティングトレースを用いる。", "実効MFUを理想MFU×占有率へ分解し、イベント駆動的に専門家仕事、Core共有、通信需要、実行ラウンドを評価する。", "2026年9月11日時点で著者公式の再現コード、RTL、トレース処理一式の公開先は確認できない。"],
-    "model": ["Qwen3.5-35B-A3B: 256専門家、top-8、40 MoE層", "Qwen3.5-397B-A17B: 512専門家、top-10、60 MoE層", "GLM-5.2: 256専門家、top-8"],
-    "datasets": ["Alpaca系プロンプトを含む実ルーティングトレース", "コード系ワークロードを含む複数の実ルーティング条件"],
-    "baselines": ["同一ピークFP8演算量のNVIDIA H20 FFNプール", "同一ピークFP8演算量のNVIDIA H100/H800 FFNプール", "Core共有なしReXpert", "異なるCore共有範囲", "負荷だけを使うLPT専門家配置", "均一H20で注意機構とFFNを直列実行する構成"],
-    "settings": [
-      {"name": "ルーティング偏り測定", "description": "Qwen3.5-35B-A3Bと397B-A17Bの実デコードトレースから専門家負荷、Gini係数、高頻度専門家/平均負荷比、共起、時間的持続性を測る。35Bの既定Alpaca条件では平均Gini 0.491、高頻度専門家/平均6.77倍、全体最大9.83倍、高頻度専門家の持続性40.1%を報告する。"},
-      {"name": "FFN同一ピーク演算量比較", "description": "ReXpertとH20/H100-H800の合計FP8ピーク演算量をそろえ、バッチ8〜64で重み読出し律速の1トークンFFN遅延を比較する。Qwen3.5-35BではReXpert 25 Dieで30.1GiBのFFN重みを常駐させる。"},
-      {"name": "共有範囲・配置アブレーション", "description": "Coreの一辺を変えて共有範囲を拡大し、理想MFU、占有率、実行ラウンド、mesh面積・電力の交換関係を測る。side-4、すなわち16 Unit共有で占有率0.328→0.519となり、共起考慮配置で0.532へ上がる。"},
-      {"name": "分離サービング評価", "description": "注意機構をH20、FFNをReXpertとし、文脈長4K/32K、バッチ8/64などでTPOTを比較する。分離構成はmax(注意機構, FFN)、均一H20は注意機構＋FFNとしてモデル化し、長文脈で注意機構が律速へ移る効果を含める。"},
-      {"name": "面積・電力・通信余裕", "description": "12nm想定DieについてReRAM、PE、Core mesh、Die-NoC、制御部を積み上げ、実トレースのp99マルチキャスト需要と最繁忙リンクを満たすか検証する。完成シリコンの電力測定ではなく構成要素モデルの積算である。"}
-    ],
-    "correctness": "ReXpertは専門家ルータの選択やモデル重みを変更せず、確定した専門家仕事の実行場所と順序を変える。Core内マルチキャストでは同一重みを複数PEへ配り、負荷対応取得もルーティング済み待ち行列から選ぶため、数学的には元のMoE FFNと同じ演算を行う。監査ではこの意味論に矛盾は見つからなかった。ただしFP8演算とモデル化通信を前提とするため、完成装置での数値誤差、実通信競合、制御オーバーヘッドは未実証である。",
-    "methodology": "正式監査ではarXiv v1全文の問題分析、構成、通信、評価、制約を照合し、著者欄でHKUSTとAlibaba Cloud Computingの所属も確認した。評価は論文自身が『measured + modeled』と位置付ける。専門家ルーティング偏りは実モデル実行から測り、ReXpertの遅延・帯域・面積・電力はRTL合成、DSENT、ReRAM読出し特性、UCIe較正値を統合して推定する。GPU比較は台数ではなく同一ピーク演算量へ正規化し、小バッチMoEが重み読出し律速になる機械バランスを比較する。したがって主要倍率は実ReRAMチップ対GPUの直接ベンチマークではなく、実負荷を使ったアーキテクチャ性能予測である。",
-    "scope": "対象はデコード時のMoE FFNプールで、注意機構、プリフィル、学習、ルータ品質改善は直接の設計対象外。全体TPOTではH20注意機構とReXpert FFNを組み合わせる。ReRAM製造成熟度、実装ばらつき・耐久性、完成システムでの競合対応通信スケジューリングは未解決であり、公式再現実装も未確認である。"
+    "hardware": "NVIDIA A100 40GB SXMおよびNVIDIA H100 80GB SXMの実機。CUDA 12.4、PyTorch 2.4、FlashInfer v0.2を使用する。",
+    "software": "エンドツーエンドではSGLang 0.3.4、Triton 3.0、MLC-Engine、vLLMを統合先または比較対象として使う。カーネル比較にはFlashAttention-2/3、PyTorch SDPA、FlexAttention等を含む。",
+    "methodology": "SGLang評価はShareGPTと512〜2048トークン一様分布の合成要求を使い、P99 TTFTが200 ms未満となる到着率でLlama 3.1 8Bを1 H100、70Bを4 H100で測る。カーネル評価はバッチ16、KV長1024固定、一様512〜1024、平均1024のZipf分布を使い、入力不均一性の影響を測る。StreamingLLM評価はVicuna-13BとMT-Benchを使い、RoPEと注意を融合した派生カーネルを実装する。並列生成はMLC-EngineでLlama 3.1 8B/70B、ShareGPT、要求率16、各プロンプトから1〜64本の出力を生成する。付録では負荷均衡スケジューラの切り分け、vLLM統合、Quest型細粒度ブロック疎注意を測る。",
+    "scope": "実機のカーネル単体と複数サービング基盤のエンドツーエンドを含む。ただし論文の対象は注意前向き計算で、学習用逆伝播カーネルやサービング全体の通信・モデル並列・スケジューラを置き換えるものではない。統合効果はホスト側オーバーヘッドや基盤固有実装に依存し、vLLMのBF16既定条件では小幅な性能悪化も観測される。",
+    "workloads": ["ShareGPTサービング", "512〜2048トークン一様分布", "長短混在Zipf系列", "StreamingLLM長文推論", "1〜64本の並列生成", "Quest細粒度疎注意"],
+    "baselines": ["Triton attention backend", "FlashAttention-2", "FlashAttention-3", "PyTorch SDPA", "FlexAttention", "vLLM default attention"],
+    "metrics": ["トークン間遅延", "先頭トークンまでの遅延", "要求処理量", "カーネル遅延", "実効メモリ帯域利用率"],
+    "reproducibility": "MLSys 2025論文に加えて公式FlashInfer GitHubが公開され、主要サービング基盤への統合経路も公開されている。"
   }
 }
