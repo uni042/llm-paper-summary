@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-041eceb16e09fd41",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.14102",
+      "title": "MoE-SpeQ: Speculative Quantized Decoding with Proactive Expert Prefetching and Offloading for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2511.14102",
+      "priority": 82,
+      "reason": "メモリ制約下のMoE推論で、小型オンデバイスdraft modelによる将来expert予測を使いCPU側からのexpert先読みを計算と重ね、hardware特性に応じてspeculationを調整する。Phi-MoEで既存offloading framework比最大2.34倍を報告し、expert offload・prefetch・speculative executionを結ぶ未収録候補として比較価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T06:02:25+09:00",
+    "round": "specialist-moe-prefetch-resweep-3",
+    "axis": "MoE expert prefetch・offload・speculative execution再走査",
+    "query_summary": "直前strong batch後の枯渇判定をリセットしてMoE recent/older-important omissionを再走査した。SPICE、APEX、SpecPrefetch、ST-MoE、SP-MoEは決定論的research job照合で既収録または既存jobと確認し除外。MoE-SpeQのみ最新main HEADでresearch job不存在、repo検索でも識別子・題名未検出、Library pendingも空であることを投入直前に確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": ["arXiv:2608.21240", "arXiv:2608.11688", "arXiv:2607.24787", "arXiv:2606.15453", "arXiv:2510.10302"],
+    "next_axis_hint": "このstrong candidateで枯渇判定を再度リセットし、新着差分、forward/backward citation、storage/networking、GPU runtime/kernel、階層メモリを独立に再確認する",
+    "empty_round_reason": null
+  }
+}
