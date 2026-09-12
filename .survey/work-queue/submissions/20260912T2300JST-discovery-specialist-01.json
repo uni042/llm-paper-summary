@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7051830ca03a837c",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling-llm-serving.md",
+      "priority": 88,
+      "reason": "分離型LLMサービングでKV-block取得、集団通信、prefill-to-decode転送が共有ネットワーク上で競合する問題を対象にするシステム研究。arXiv抄録ではvLLMへ組み込んだ実装と8サーバ・32 GPU実機評価を明記しており、ネットワークスケジューリングとSLO達成率の観点で既存serving系統との差分確認価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 87,
+      "reason": "prefill/decode分離でprefill側が飽和する一方decode側計算資源が遊休する非対称性を対象とし、decode GPUへprefillを動的に逃がすスケジューリングを提案する。arXiv抄録ではvLLM実装、A100クラスタ、実運用型traceでの評価が明記され、分離servingの負荷平準化研究として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.13358",
+      "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.13358",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md",
+      "priority": 85,
+      "reason": "multi-turn workloadでappend-prefillと通常prefillの性質差を利用し、decode側で局所prefillを処理する動的routingを扱う。arXiv抄録ではKV転送混雑とTTFTを主対象にした広範評価を示しており、multi-turn・KV再利用・PD分離の交差領域として研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.25498",
+      "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.25498",
+      "paper_path": "papers/inference/02-hardware-accelerators/2026-2607.25498-dops-heterogeneous-operator-scheduling.md",
+      "priority": 82,
+      "reason": "prefill/decode単位ではなく演算子単位で異種デバイス配置と重みlayoutを共同最適化する方向。arXiv抄録ではNPU/PIM異種環境での実測・コード公開を明記しており、serving分離を超える異種実行runtimeの隣接研究として候補価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-serving-network-disaggregation-01",
+    "axis": "分離LLMサービング・ネットワーク競合・prefill再配置",
+    "query_summary": "分離型LLM servingにおけるネットワークflow scheduling、prefill負荷偏り、multi-turn append-prefill、異種デバイスoperator schedulingをarXiv一次資料のtitle/abstract/書誌情報で軽量評価し、投入前に最新mainのidentity/queueおよび各arXiv IDのrepo検索で再重複確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "MoE expert placement/cache/prefetchとSSD/NVMe expert I/O scheduling、またはGPU runtimeのKV移送・networking隣接軸へ切り替える",
+    "empty_round_reason": null
+  }
+}
