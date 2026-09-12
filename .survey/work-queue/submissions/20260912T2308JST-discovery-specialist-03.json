@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f780bad6bf6e1746",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.14624",
+      "title": "Learning Agent Execution for KV-Cache Management in Agentic Serving",
+      "source_url": "https://arxiv.org/abs/2608.14624",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.14624-cachescout-agent-execution-kv-management.md",
+      "priority": 90,
+      "reason": "マルチエージェント型LLMサービングで、単純なLRUではなくエージェント実行遷移をオンライン学習し、将来の固定コンテキスト再利用を見越してKVキャッシュの退避と先読みを制御するCacheScout。arXiv抄録ではvLLM実装、実ワークロード評価、KVヒット率・TTFT・throughput改善を明記しており、エージェント型推論のキャッシュ管理として研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2510.09665",
+      "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.09665",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache-enterprise-kv-cache-layer.md",
+      "priority": 89,
+      "reason": "vLLM/SGLangからKVキャッシュを独立した保存・通信層として切り出し、GPU・CPU・ストレージ・ネットワーク間のoffloadとprefill-decode分離転送を統一するオープンソース基盤。arXiv抄録ではbatched data movement、compute/I/O pipeline、connector APIと最大15倍のthroughput改善を報告しており、現行KV serving基盤の重要な未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2511.02230",
+      "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+      "source_url": "https://arxiv.org/abs/2511.02230",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+      "priority": 86,
+      "reason": "ツール呼び出しを挟むmulti-turnエージェント実行で、待機時間予測に基づくKV cache TTLとprogram-level schedulingを組み合わせるserving研究。arXiv抄録ではSWE-Bench/BFCL、Llama 8B/70B、複数hardware/DRAM offload条件で評価し、preview codeも公開しており、エージェント型サービングの時間局所性制御として有望。"
+    },
+    {
+      "canonical_id": "arXiv:2510.18586",
+      "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+      "source_url": "https://arxiv.org/abs/2510.18586",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+      "priority": 84,
+      "reason": "外部関数呼び出しを含むmulti-agent workloadで、重要エージェント向け動的メモリ分割とツール待機中のKV proactive offload/predictive uploadを共同設計するKV中心serving基盤。arXiv抄録ではvLLM比でend-to-end latencyとGPU memory utilizationの改善を報告しており、agent-aware scheduling/cache系統の比較候補として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-agentic-kv-cache-03",
+    "axis": "エージェント型サービング・KV再利用・ツール呼び出し待機",
+    "query_summary": "multi-agent/agentic servingでの固定context再利用、ツール呼び出し待機中のKV保持・退避、enterprise-scale KV共有層をarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第2roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "既収録重要論文のforward/backward citation、またはDBMS/OS/storage隣接のcache replacement・remote memory schedulingへ移る",
+    "empty_round_reason": null
+  }
+}
