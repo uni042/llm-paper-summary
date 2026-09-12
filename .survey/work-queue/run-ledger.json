@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T09:39:58.885113+00:00",
+  "updated_at": "2026-09-12T09:45:07.208275+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9767,18 +9767,18 @@
     {
       "run_key": "2026-09-12T18:30:00+09:00",
       "first_recorded_at": "2026-09-12T09:39:58.885113+00:00",
-      "last_recorded_at": "2026-09-12T09:39:58.885113+00:00",
+      "last_recorded_at": "2026-09-12T09:45:07.208275+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -9796,6 +9796,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34686602675:1",
+          "recorded_at": "2026-09-12T09:45:07.208275+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34686602675",
+            "run_attempt": "1",
+            "source_sha": "8361a3dd8f2d17e9e87314f28137d004d46b42a9"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -9806,16 +9821,25 @@
           "title": "X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-ed6df8bb43d5460d",
+          "type": "research",
+          "canonical_id": "arXiv:2512.18194",
+          "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
-        "arXiv:2609.09166"
+        "arXiv:2609.09166",
+        "arXiv:2512.18194"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 342,
-      "paper_active_count_after": 343,
+      "paper_active_count_after": 344,
       "last_successful_action": "paper_materialized"
     }
   ]
