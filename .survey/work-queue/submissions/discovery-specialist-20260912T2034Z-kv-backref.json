@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-e21ac181313d262b",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2504.15364",
+      "title": "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments",
+      "source_url": "https://arxiv.org/abs/2504.15364",
+      "priority": 79,
+      "reason": "KVキャッシュ内のkey多様性を重要度の代理に使い、attention scoreを参照せず類似度だけで追い出し対象を決める学習不要手法。FlashAttention等の最適化済みattentionと両立し、LongBenchでは8K cache budgetで約23%のKV削減時にfull-cacheとの差を0.04%未満に抑え、他のtoken eviction法に対してend-to-end推論遅延を最大30%削減したと報告する。NeurIPS 2025採択で、今回のECOKV探索から遡った重要な幾何学ベースKV evictionの未収録候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T05:28:14+09:00",
+    "round": "specialist-kv-backref-2",
+    "axis": "KVキャッシュ幾何学指標・backward reference",
+    "query_summary": "ECOKVから幾何学的多様性を用いるKV eviction系統へ遡り、attention非依存のkey-similarity系手法と関連圧縮手法を軽量評価した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "GPU runtime・storage・networkingの隣接分野と推論framework由来の新規system paperを確認する",
+    "empty_round_reason": null
+  }
+}
