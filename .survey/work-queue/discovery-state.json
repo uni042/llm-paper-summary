@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:07:31+00:00",
+  "updated_at": "2026-09-12T19:09:45+00:00",
   "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-prefill-scheduling-2",
+  "last_round": "specialist-kernel-optimization-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1813,6 +1813,21 @@
       ],
       "next_axis_hint": "MoE expert placement/cache/prefetchの新着、またはGPU runtime・diffusion serving実行系へ軸を移す",
       "source_submission": "work-queue/submissions/20260913T0406JST-discovery-f4b6607a934a6b11.json"
+    },
+    {
+      "run_key": "2026-09-13T04:00:16+09:00",
+      "round": "specialist-kernel-optimization-3",
+      "axis": "GPU kernel生成・runtime最適化の隣接系",
+      "query_summary": "MoE新着探索が既収録中心だったためGPU kernel/runtimeへ軸を変更し、FlashInfer contest、multi-scenario CUDA optimization、GPU測定surrogateを軽量評価した。canonical IDから決定論的research job IDを算出し最新mainでjob実体がないことを確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "forward citation・参考文献由来の未収録systems基礎研究、またはagentic servingのprogram-level schedulingへ切り替える",
+      "source_submission": "work-queue/submissions/20260913T0410JST-discovery-b55a5f6b28feb0e9.json"
     }
   ],
   "axes": {
@@ -2865,6 +2880,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.5714285714285714,
       "next_axis_hint": "MoE expert placement/cache/prefetchの新着、またはGPU runtime・diffusion serving実行系へ軸を移す"
+    },
+    "GPU kernel生成・runtime最適化の隣接系": {
+      "last_run_key": "2026-09-13T04:00:16+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "forward citation・参考文献由来の未収録systems基礎研究、またはagentic servingのprogram-level schedulingへ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

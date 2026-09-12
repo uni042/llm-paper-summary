@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T19:08:24.386992+00:00",
+  "updated_at": "2026-09-12T19:10:57.272832+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,7 +13949,7 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T19:08:24.386992+00:00",
+      "last_recorded_at": "2026-09-12T19:10:57.272832+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13958,9 +13958,9 @@
       "counts": {
         "research_completed": 4,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 19,
+        "new_jobs": 23,
         "new_papers": 4,
         "fallback_archived": 0
       },
@@ -14122,6 +14122,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34713329931:1",
+          "recorded_at": "2026-09-12T19:10:57.272832+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34713329931",
+            "run_attempt": "1",
+            "source_sha": "40850b6751c658e5fb61e173cc090c7a91ab8aeb"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14207,6 +14221,14 @@
         },
         {
           "job_id": "job-f4b6607a934a6b11",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b55a5f6b28feb0e9",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -14347,6 +14369,34 @@
           "type": "research",
           "canonical_id": "arXiv:2606.09061",
           "title": "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving"
+        },
+        {
+          "job_id": "job-727b21710a6e6ab9",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-075303825b007242",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.31464",
+          "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization"
+        },
+        {
+          "job_id": "job-research-63f40e784a6127a2",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.17979",
+          "title": "Harness Engineering for LLM-Driven GPU Kernel Generation"
+        },
+        {
+          "job_id": "job-research-d66acc5736f090e9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.07169",
+          "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts"
         }
       ],
       "new_paper_ids": [
@@ -14362,7 +14412,8 @@
         ".survey/work-queue/results/20260913T0347JST-discovery-specialist-kv-compression-kernel-4.json",
         ".survey/work-queue/results/20260913T0352JST-discovery-specialist-fault-tolerance-5.json",
         ".survey/work-queue/results/20260913T0400JST-discovery-f033ef629abac6f2.json",
-        ".survey/work-queue/results/20260913T0406JST-discovery-f4b6607a934a6b11.json"
+        ".survey/work-queue/results/20260913T0406JST-discovery-f4b6607a934a6b11.json",
+        ".survey/work-queue/results/20260913T0410JST-discovery-b55a5f6b28feb0e9.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,

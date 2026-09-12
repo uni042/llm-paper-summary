@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-075303825b007242",
+  "type": "research",
+  "parent_job_id": "job-b55a5f6b28feb0e9",
+  "priority": 78,
+  "canonical_id": "arXiv:2605.31464",
+  "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
+  "source_url": "https://arxiv.org/abs/2605.31464",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md",
+  "selection_reason": "kernel探索の各候補を実GPUで毎回計測するコストを減らすため、言語モデルを相対性能予測の選択的surrogateとして使い、不確実な候補だけGPUへ委ねる。校正と強化学習による予測改善を含み、同じGPU計測budgetでより多くの候補を探索して高速kernelを発見できると示すため、自動kernel最適化の測定ボトルネックを扱う隣接system研究として価値がある。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T19:09:45+00:00",
+  "artifact_transport": "structured_record_v10"
+}
