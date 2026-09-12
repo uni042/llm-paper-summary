@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2609.10964",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10964-decoupling-readiness-from-release-tail-aware-agentic-llm-scheduling.md",
   "selection_reason": "エージェント型LLMワークフローで、turnがreadyになった瞬間に推論系へ投入する従来方式をやめ、ready状態とreleaseを分離してtail latencyを制御するスケジューリング研究。mean-CVaRで未完了workflowのtail riskを評価し、turn work量のオンライン推定とqueue圧力に応じてrelease済み未完了仕事量のbudgetを調整する。実際のソフトウェア工学agent traceを用いた評価で、軽負荷時はeager releaseと同等、競合時のworkflow P95 flow timeを最大3.50倍改善すると報告しており、agentic servingの上位スケジューリングとして既存serving系統を補完する。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T05:23:13+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T05:38:45+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

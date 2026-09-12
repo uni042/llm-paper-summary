@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T05:37:52.694888+00:00",
+  "updated_at": "2026-09-12T05:39:48.123311+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8830,19 +8830,19 @@
     {
       "run_key": "2026-09-12T14:30:00+09:00",
       "first_recorded_at": "2026-09-12T05:36:12.861693+00:00",
-      "last_recorded_at": "2026-09-12T05:37:52.694888+00:00",
+      "last_recorded_at": "2026-09-12T05:39:48.123311+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -8874,6 +8874,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34676102224:1",
+          "recorded_at": "2026-09-12T05:39:48.123311+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34676102224",
+            "run_attempt": "1",
+            "source_sha": "96fe9915c3bc57fe868e3ece503285a68e0aa933"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -8884,19 +8899,28 @@
           "title": "OmniKVQuant: KV Cache Quantization for Omni-LLMs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-6a9d4d0d506d101b",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10964",
+          "title": "Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
-        "arXiv:2609.11582"
+        "arXiv:2609.11582",
+        "arXiv:2609.10964"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T1422JST-discovery-stats-backfill.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 329,
-      "paper_active_count_after": 330,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 331,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
