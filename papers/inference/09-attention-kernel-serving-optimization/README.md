@@ -12,15 +12,15 @@
 
 - **2026-09 · [Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention](2026-2609.08450-sample-guided-exact-topk-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、長文脈の疎な注意機構で使う正確なTop-K選択が、最終的にはK個しか残さないにもかかわらず、文脈長に比例するスコア行を複数回走査してしまう問題を扱う。提案法HPC-Ops Top-Kは、固定間隔で抜き出した現在行の標本から粗い上側境界を予測し、必須の全行走査で候補集合の十分性を証明すると同時に候補形成と先頭桁ヒストグラム構築を融合する。
+  HPC-Ops Top-Kは、標本で上位候補境界を予測し、全行の一回走査で十分性を証明、足りない時だけ回復して正確なK個を選び、長文疎注意の再走査を減らす。
 
 - **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、LLM推論で重みやKVキャッシュを小容量のオンチップキャッシュとHBMの間で繰り返し移動するエネルギーを、モノリシック3次元集積（Monolithic 3D; M3D）による数百MB〜GB級のオンチップメモリでどこまで減らせるかを評価する。
+  LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。
 
 - **2026-07 · [Enabling Spatially Fine-Grained DVFS in Neural Processing Units for Energy-Efficient LLM Serving](2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md)**  
   実装：[✓](https://github.com/google-coral/coralnpu（ベースコア）。eNPUの改変実装・シミュレータの公開URLは一次資料に記載なし。) ・ リポジトリ内被引用：0  
-  eNPUは、LLMを処理するニューラル処理装置（Neural Processing Unit; NPU）で、チップ全体を同じ電圧・周波数にする従来の動的電圧・周波数制御（動的 Voltage and Frequency Scaling; DVFS）では、行列演算器、ベクトル演算器、SRAM、HBM、チップ間接続の利用率差を活かせない問題を扱う。
+  eNPUは、演算器・SRAM・HBM・接続を別電圧周波数領域に分け、非同期転送と演算子別計画をSLO余裕で切替えて、NPUサービングの非ボトルネック電力を落とす。
 
 ### 1年以上前
 

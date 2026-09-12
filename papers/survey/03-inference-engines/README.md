@@ -16,5 +16,5 @@
 
 - **2025-05 · [A Survey on Inference Engines for Large Language Models: Perspectives on Optimization and Efficiency](2025-2505.01658-survey-inference-engines-large-language-models.md)**  
   実装：[✓](https://github.com/sihyeong/Awesome-LLM-Inference-Engine) ・ リポジトリ内被引用：0  
-  大規模言語モデルの推論エンジンを、対応モデル・ハードウェア、導入容易性、拡張性、遅延重視・スループット重視の最適化という共通軸で比較する総説。
+  LLM推論エンジン25基盤を機能・対応モデル・ハードウェア・導入性・遅延・処理量で比較し、21基盤の導入検証と13基盤の実機測定から用途別の選択条件と失敗限界を示す総説。
 <!-- survey:auto:end -->

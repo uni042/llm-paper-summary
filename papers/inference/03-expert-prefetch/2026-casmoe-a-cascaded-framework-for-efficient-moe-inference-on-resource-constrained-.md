@@ -15,6 +15,7 @@ quality_effect: null
 evidence_locations: []
 title: 'CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices'
 summary: 過去に似たpromptがあればその時のexpert利用履歴を再利用し、似た履歴がなければ学習済みpredictorで全layerのexpert候補を予測して、CPUからGPUへの先読みを早く始める。
+list_summary: 'CasMoEは類似入力の過去ルーティング履歴を検索し、見つからない場合だけ学習予測器で全層の専門家を予測して、CPUからGPUへの先読みを早く始める。'
 authors_affiliations: Chengcheng Wang, Haowen He, Liang Zhao, Xiaoheng Deng, Lixin Duan, Shaohua Wan／UESTC, Shenyang Aerospace University, Central South University
 published: '2026-03-14'
 publication_status: Published
@@ -62,7 +63,7 @@ references_total: 1
 
 # CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices
 
-> 過去に似た入力文があればその時のエキスパート利用履歴を再利用し、似た履歴がなければ学習済み予測器で全層のエキスパート候補を予測して、CPUからGPUへの先読みを早く始める。
+> CasMoEは類似入力の過去ルーティング履歴を検索し、見つからない場合だけ学習予測器で全層の専門家を予測して、CPUからGPUへの先読みを早く始める。
 
 ## 概要
 
@@ -77,6 +78,9 @@ CasMoEは、エキスパート 先読みの予測方法を1つに固定せず、
 元の ルータ / Top-kは変更せず、予測はキャッシュ warming専用なので無損失型である。
 
 二段構成の意味は、検索と学習予測を精度競争させるのではなくコストの違うfallbackとして使うことにある。既知ワークロードでは履歴検索だけで全層候補を得られるため追加モデル実行を避けられ、未知入力文だけ高コストなEAPへ送る。データベース 被覆が高まるほどonline 予測器利用率を下げられる一方、ワークロード shiftが大きい環境では検索hitを過信すると誤先読みが増える。
+
+
+CasMoEは履歴検索と学習予測器を入力の既知性で切り替える。オンデマンド方式比でスループット約65.13%改善し、元モデルの平均タスク性能を96.6%以上保持した。
 
 ## 手法のあらまし
 

@@ -2,6 +2,7 @@
 canonical_id: arXiv:2505.02922
 arxiv_id: '2505.02922'
 title: 'RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference'
+list_summary: 'RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。'
 summary: 長contextのKV cacheをCPU memory上の**vector storageとして検索対象にし、attentionに重要なtokenだけをGPUへ取り出す**ことで、全KVをGPUへ保持・走査するmemory容量とbandwidthを減らしつつ、検索誤差による精度低下を抑えるGPU–CPU協調推論system。
 source: https://arxiv.org/abs/2505.02922
 last_audited: '2026-09-10'
@@ -208,6 +209,12 @@ references_total: 126
 ---
 
 # RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference
+
+> RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
+
+## 概要
+
+CPU DRAM上のKVをwaveベクトル索引で検索し、重要トークンだけをGPUへ取得する実装を長文脈ワークロードで評価した。120K文脈では完全注意比最大4.4倍、100万トークンでは疎注意比較対象比最大12.2倍のデコードスループットを報告し、検索量を抑えながら完全注意水準の精度を維持した。
 
 ## 書誌情報
 

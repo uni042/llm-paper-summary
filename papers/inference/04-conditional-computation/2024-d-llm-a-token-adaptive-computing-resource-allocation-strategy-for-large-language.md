@@ -15,6 +15,7 @@ quality_effect: null
 evidence_locations: []
 title: 'D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models'
 summary: 各token・各layerで『このlayerを実行するか』を小型moduleが判断し、skipしたtokenのKVも後続attentionから外すことで、計算量とKV使用量をtokenごとに変える。
+list_summary: 'D-LLMは各トークン・各層に小型判断器を置き、実行かskipかを学習する。skipしたトークンのKVも後続注意から外し、計算量とKV使用量を同時に減らす。'
 authors_affiliations: 一次資料記載の著者ら（NeurIPS 2024）
 published: '2024-12-15'
 publication_status: Published
@@ -114,7 +115,7 @@ references_total: 84
 
 # D-LLM: A トークン 適応型 Computing Resource Allocation Strategy for Large Language Models
 
-> 各トークン・各層で「この層を実行するか」を小型moduleが判断し、skipしたトークンのKVも後続attentionから外すことで、計算量とKV使用量をトークンごとに変える。
+> D-LLMは各トークン・各層に小型判断器を置き、実行かskipかを学習する。skipしたトークンのKVも後続注意から外し、計算量とKV使用量を同時に減らす。
 
 ## 概要
 D-LLMは、**各トークン・各層ごとに「この層を実行するかskipするか」を学習する**動的 depth方式である。

@@ -8,25 +8,25 @@
 
 - **2026-06 · [A Spatio-Temporal Expert Prefetching Framework for Efficient MoE-based LLM Inference](2026-2606.15453-spatio-temporal-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  混合専門家モデル（Mixture of エキスパート; MoE）のデコードでは、各トークンのゲート結果が出るまで必要なエキスパートが確定せず、巨大なエキスパート重みをオフチップDRAMから都度読み込む待ち時間が性能を制限する。
+  ST-MoEは、隣接層と直前トークンのゲート相関から次層専門家を予測してオフチップDRAMから先読みし、誤り時は正しい重みを追加取得してデコードの転送待ちを減らす。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-08 · [MoE Expert Execution in Disaggregated LLM Serving with a High-Bandwidth ReRAM Near-Memory Architecture](2026-2608.13962-reram-near-memory-disaggregated-moe-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  注意機構とフィードフォワード網（FFN）を別のハードウェア群へ分離するLLMサービングで、MoE専門家重みをReRAM近傍メモリへ常駐させ、対話型デコードの小さいバッチでも高い重み読出し帯域密度を確保するReXpertを提案する。単に重み転送を消すだけでは、専門家ルーティングの偏りで高頻度専門家が律速し、低頻度専門家に割り当てた演算器が遊ぶ。
+  ReXpertは、MoE専門家重みを容量比例帯域のReRAMへ常駐させ、共起する専門家を局所共有して、GPUのHBM重み読出しと小バッチFFNの供給律速を減らす。
 
 - **2026-08 · [DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference](2026-2609.00407-dynande-near-data-expert-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  MoE型LLMでは、巨大なエキスパート重みをNPUメモリへすべて保持できないため、選択されたエキスパートを外部メモリから転送する処理が大きな待ち時間を生む。
+  DynaNDEは、専門家ごとのトークン数・演算性能・重み転送・キャッシュ再利用を遅延モデルで比較し、各層をNPU実行とNDP実行へ動的分割して転送待ちを減らす。
 
 - **2026-08 · [APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference](2026-2608.11688-apex-adaptive-expert-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  エッジ環境の混合専門家モデル（Mixture of エキスパート; MoE）では、大量のエキスパート重みを高速なパッケージ内メモリへ常駐させにくく、低価格な外部メモリから必要な重みを都度転送する待ち時間がデコード性能を制限する。APEXは各MoE層の注意計算より前に補助ルータを置き、実ルータが後で選ぶエキスパート候補を順位付けして非同期に先読みする。
+  APEXは、補助ルータの不確実性から各トークンの最小先読み候補数を決め、正確な実ルータで不足専門家を補完して、エッジMoEの外部メモリ転送待ちを削減する。
 
 ### 1年以上前
 
 - **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  DuoServe-MoEは、混合専門家モデル（Mixture of エキスパート; MoE）のプリフィルとデコードでエキスパート活性化密度が異なる点を利用し、単一GPU・CPUオフロード環境でフェーズ別に転送方式を切り替える推論サービングシステムである。
+  DuoServe-MoEは、密なプリフィルでは二重ストリーム転送、疎なデコードでは次層専門家をMLP予測して先読みするようフェーズ別に切替え、CPU→GPU転送待ちを隠す。
 <!-- survey:auto:end -->

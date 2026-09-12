@@ -12,7 +12,7 @@
 
 - **2026-05 · [LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling](2026-2605.00616-llm-emu-native-runtime-emulation.md)**  
   実装：[✓](https://github.com/AKafakA/llm-emu) ・ リポジトリ内被引用：0  
-  vLLMの本番HTTP・スケジューラ・KV管理をそのまま動かし、GPU順伝播だけを二次元遅延プロファイルの標本化へ置換することで、主要な定常サービング指標を実GPU比おおむね5%以内で再現する実時間エミュレータ。
+  vLLMの本番HTTP・スケジューラ・KV管理を実コードのまま動かし、GPU順伝播だけを二次元遅延プロファイルからの標本化へ置換して、実GPU比の出力トークン当たり時間・反復時間を4.8%、エンドツーエンド遅延を5.3%、出力スループットを1.9%以内で再現する（初回トークン時間は最大10.41%ずれる）実時間エミュレータ。
 
 ### 1年以上前
 

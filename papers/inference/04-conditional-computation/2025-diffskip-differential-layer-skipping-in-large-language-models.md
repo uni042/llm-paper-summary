@@ -15,6 +15,7 @@ quality_effect: null
 evidence_locations: []
 title: 'DiffSkip: Differential Layer Skipping in Large Language Models'
 summary: tokenごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定layer削除より品質を保ちながら計算量を減らす。
+list_summary: 'DiffSkipはFFN前後の状態差が小さいトークン・層だけを小型adapterへ置換し、元FFNを残したまま固定層削除より品質を保って計算量を減らす。'
 authors_affiliations: 一次資料記載の著者ら（Findings of ACL 2025）
 published: '2025-07-27'
 publication_status: Published
@@ -48,7 +49,7 @@ references_total: 1
 
 # DiffSkip: Differential 層 Skipping in Large Language Models
 
-> トークンごとにFFN前後のhidden state差を見て、表現をほとんど変えないFFNを小さなadapterへ置き換え、固定層削除より品質を保ちながら計算量を減らす。
+> DiffSkipはFFN前後の状態差が小さいトークン・層だけを小型adapterへ置換し、元FFNを残したまま固定層削除より品質を保って計算量を減らす。
 
 ## 概要
 DiffSkipは、元LLMのFFNをmodelから削除せずに残し、**トークンごとに各FFNを実行するか、小さい代替変換だけで済ませるか**をルータで選ぶ動的 skipping手法である。
@@ -60,6 +61,9 @@ DiffSkipは、元LLMのFFNをmodelから削除せずに残し、**トークン�
 元LLMの重みは固定し、後半層へルータと小型adapterだけを追加学習する。4 FFN skip程度なら固定層削除よりかなり品質を守れる。
 
 一方、論文の重要な結果は速度面で、**FLOPsを減らしても連続デコードのwall-clockはほぼ速くならない**。ルータとadapterの重み read、トークンごとの分岐、GPU バッチの分割がFFN削減分を相殺するためである。
+
+
+8×A6000実機のLlama-3-8B・batch8（出力5 token）で、Vanilla/full-depthとEarlyExit、ShortGPT、LaCo、MindSkipを比較し、MMLU／HellaSwag／WinoGrande／GSM8K／BBH／XSumの平均保持率は4 FFN skipで99.0%、8 skipで91.3%だった。連続decodeのwall-clockはほぼ高速化せず、FLOPs削減と実時間を分けて読む必要がある。
 
 ## 手法
 

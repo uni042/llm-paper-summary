@@ -12,7 +12,7 @@
 
 - **2026-08 · [Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference](2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  ExactMoEは、混合専門家モデル（Mixture of エキスパート; MoE）のルータや専門家集合を削らず、ルータが選んだ全専門家をGPUで実行しながらGPUメモリ使用量を下げる推論方式である。
+  ExactMoEは全専門家とルータ選択を維持したまま、専門家の射影をW4A16量子化してGPUスロットへ必要分だけ転送し、VRAM容量と量子化復号の負担を抑える。
 
 ### 1年以上前
 

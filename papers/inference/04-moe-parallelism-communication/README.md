@@ -20,11 +20,11 @@
 
 - **2026-08 · [HetRoute: Heterogeneous and Cost-aware Collaborative Routing Framework for Distributed Edge MoE Inference](2026-2608.00577-hetroute-collaborative-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  地理的に分散した異種エッジサーバで混合専門家モデル（Mixture of エキスパート; MoE）を動かすと、各トークンが選んだ複数の専門家をどのサーバへ送るかで、ネットワーク転送、GPUとCPU間の専門家読み込み、GPU計算待ち、量子化による品質損失が同時に絡む。
+  HetRouteは異種エッジ群で専門家配置・GPU常駐・複製精度を費用モデルで決め、Top-k専門家を集合としてサーバへ割り当てて、ネットワーク転送・計算待ち・量子化品質損失を抑える。
 
 - **2026-08 · [FreeBalance: Pre-Routing Online Moe Load Balancing via Residual Workload Prediction](2026-2608.14205-freebalance-prerouting-online-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture of エキスパート; MoE）のオンライン負荷分散では、通常は現在層のルータが専門家選択を終えてから専門家交換を決めるため、重み移動が推論クリティカルパスに残る。FreeBalanceは残差接続により隣接層の隠れ表現が近いことを利用し、現在層のルータを前層出力へ先行適用して専門家負荷を予測する。
+  FreeBalanceは前層出力を現層ルータへ先行入力して専門家負荷を予測し、注意計算中に予算内で専門家を交換する。正式ルーティングを維持し、負荷偏りと移動待ちを減らす。
 
 - **2026-08 · [AirMoE: Realizing Over-the-Air Distributed Mixture-of-Experts Inference at the Wireless Edge](2026-2608.22932-airmoe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -32,31 +32,31 @@
 
 - **2026-07 · [Mixture-of-Experts Serving](2026-2607.17880-mixture-of-experts-serving-online-algorithms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture of エキスパート; MoE）で専門家需要が時間変動する状況を、各専門家へ何台の追加GPUを割り当てるかというオンライン資源配置問題として定式化した理論研究。各専門家には最低1台を置き、余剰k台を動的に配る。
+  本研究は時間変動する専門家需要へのGPU割当をサービス遅延と再構成費のオンライン最適化として定式化し、分数解の丸め・貪欲更新で再配置コストを抑える理論保証を示す。
 
 - **2026-06 · [Coordinated Scheduling for MoE LLM Serving](2026-2606.15177-gimbal-coordinated-moe-serving-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture of エキスパート; MoE）のサービングでは、フロントエンドのデータ並列エンジンへの要求振り分けと、バックエンドの専門家配置を別々に最適化すると、入力長やKVキャッシュ使用量の偏りと専門家ホットスポットが互いに増幅される。
+  Gimbalは要求の残りプリフィル量・待機量・KV使用量と専門家負荷を同時に見て要求振り分けと専門家配置を協調し、MoEサービングのキュー偏りとホットスポットを減らす。
 
 - **2026-05 · [SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference](2026-2605.28095-sidp-memory-efficient-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  オフラインLLM推論では大きなバッチを維持するとGPU演算効率が上がるが、通常のデータ並列は各GPUにモデル重みを完全複製するため、KVキャッシュに使えるHBMが減ってバッチを増やせない。SiDPはフィードフォワードネットワーク重みをデータ並列グループ内で一度だけ保持する分散重みプールへ変え、非所有GPUが必要時に共有する。
+  SiDPはデータ並列GPU間でFFN重みを一度だけ保持する共有プールを作り、バッチ規模に応じて重み先読み型と活性値集約型を切り替え、KV容量不足と重複重みを減らす。
 
 - **2026-04 · [DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72](2026-2604.01621-dwdp-distributed-weight-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  大規模な混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで推論すると、従来の専門家並列では各層の全対全通信と同期のため、入力長や専門家選択が偏ったとき速いGPUまで遅いGPUを待つ。DWDPは注意機構の重みを各GPUへ複製し、MoEの専門家重みだけを同一NVLinkドメイン内のGPUへ分散配置する。
+  DWDPは注意重みを各GPUへ複製し、MoE専門家重みだけをNVLinkドメイン内で分散する。必要重みを非同期先読みして全対全通信とGPU間同期を減らす。
 
 - **2026-03 · [Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling](2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  低バッチのオンデバイスMoEでは、専門家ごとの活性化トークン数が長い裾を持ち、オンチップ容量不足からDDRへ重みを逃がすため、重み読込・チップレット間負荷不均衡・重複保持が同時にボトルネックになる。
+  エキスパートストリーミングは専門家重みをチップレット間の細粒度マイクロスライスへ分け、高負荷・低負荷専門家を組み合わせてDDR読込、チップレット転送、計算を重ね、オンチップ容量不足を緩和する。
 
 - **2026-03 · [A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network](2026-2603.28239-scin-switch-centric-in-network-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  テンソル並列推論では各層の注意機構と全結合ネットワーク後に全GPUの部分結果を集約するAll-Reduceが入り、低遅延・低同時実行数では計算で通信を隠しにくい。
+  SCINはスイッチ内アクセラレータがGPUメモリを直接読みAll-Reduceを集約・書戻しし、GPU往復を減らす。INT8値と尺度も対応付け、テンソル並列の通信同期を短縮する。
 
 - **2026-01 · [A Scheduling Framework for Efficient MoE Inference on Edge GPU-NDP Systems](2026-2601.03992-edge-gpu-ndp-moe-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  エッジ端末で混合専門家モデル（Mixture of エキスパート; MoE）を動かすと、全専門家の重みが民生GPUのメモリへ収まらず、外部メモリからの転送が推論を支配しやすい。
+  本研究は専門家行列を複数NDPへ分割し、GPU/NDP実行時間を釣り合わせる動的割当と頻出専門家先読みを組み合わせ、エッジMoEの外部転送と装置間負荷偏りを減らす。
 
 ### 1年以上前
 
