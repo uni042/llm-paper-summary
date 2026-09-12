@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **110 / 50** |
-| Research ready | **110** |
+| Candidate在庫（Research ready） | **112 / 50** |
+| Research ready | **112** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **189** |
@@ -28,35 +28,35 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **6** |
-| 新規job | **16** |
+| Discovery完了 | **7** |
+| 新規job | **19** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-reasoning-kv-compression-1**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-prefill-scheduling-2**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 新着・長期推論KV圧縮と削除 |
-| 評価候補 | **3** |
-| 重複除外 | **0** |
+| 探索軸 | 分離サービングprefill制御・chunked prefill scheduling |
+| 評価候補 | **7** |
+| 重複除外 | **4** |
 | Novel候補 | **3** |
-| Research候補採用 | **0** |
-| 重複率 | **0.0%** |
+| Research候補採用 | **2** |
+| 重複率 | **57.1%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **89** |
-| 探索評価候補 | **428** |
-| 重複除外 | **133** |
-| 重複率 | **31.1%** |
-| Novel候補 | **295** |
-| Research候補採用 | **154** |
+| 探索round（stats観測） | **90** |
+| 探索評価候補 | **435** |
+| 重複除外 | **137** |
+| 重複率 | **31.5%** |
+| Novel候補 | **298** |
+| Research候補採用 | **156** |
 | Research完了 | **57** |
 | Repo収録 | **57** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-reasoning-kv-compressio
 
 ### 24時間ファネル
 
-**探索評価 428 → 重複除外後 295 → Research候補採用 154 → Research完了 57 → Repo収録 57**
+**探索評価 435 → 重複除外後 298 → Research候補採用 156 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -84,6 +84,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-reasoning-kv-compressio
 | heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
 | heterogeneous-kv-sharing-cold-moe-memory-pooling-nand-compute | 7 | 3 | 0 | 42.9% | 0.0% |
 | serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
+| 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
@@ -163,11 +164,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-reasoning-kv-compressio
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — 分離サービングprefill制御・chunked prefill scheduling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T04:00:16+09:00** — 新着・長期推論KV圧縮と削除: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T03:30:44+09:00** — fault-tolerant distributed serving・KV recovery・GPU failure: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T03:30:44+09:00** — heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels: 評価 5 / 重複 2 / 採用 3
 - **2026-09-13T03:30:44+09:00** — heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling: 評価 7 / 重複 4 / 採用 2
-- **2026-09-13T03:30:44+09:00** — edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision: 評価 5 / 重複 1 / 採用 3
 
 ## 最近処理した論文
 
