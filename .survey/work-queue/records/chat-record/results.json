@@ -2,24 +2,24 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.30391-20260912-1942-v10-a",
-  "job_id": "job-research-a6fb90f535b639f2",
+  "attempt_id": "attempt-2606.17787-20260912-1950-v10-a",
+  "job_id": "job-research-8f1c80196652932b",
   "data": {
-    "overview": "Festinaは、共有GPUで余っているSLO余裕を単に周波数低下へ使うのではなく、周波数相性を考えた要求配置、フェーズごとのSM・周波数共同制御、低負荷時のEWR認識集約へ分配することでエネルギーを削減する。8基H100の評価では、ServerlessLLM、MuxServe、Dilu、Aegaeon、AegVoltanaはいずれも同一負荷でFestinaより多くのエネルギーを使い、比較対象との条件により最大56%の削減を報告する。重負荷でも少なくとも22%の削減を維持する。SLO達成率はAegaeonとの差2%未満、AegVoltanaとの差1%未満で、性能を大幅に犠牲にして得た省エネルギーではない。",
+    "overview": "LUMENはKV checkpoint再利用だけでなく、model reload中の失われたdecode capacityをdraft modelで一時回復するため、TTFT・TPOT・recovery timeの異なる原因を同時に改善する。4-worker Qwen3-32B prototypeではStop-and-Restartに対しmean TTFTを44.4%、mean TPOTを15.9%、recovery timeを50.0%削減し、固定checkpoint方式に対してもrecovery timeを34.9%削減する。8-worker Qwen3-14BではStop-and-Restart比でmean TTFT 29.6%、mean TPOT 7.1%、recovery time 64.1%を削減する。64-workerまでのsimulationでもfailure fractionを一定にすると改善率を維持する。",
     "key_results": [
-      {"metric": "最大エネルギー削減", "value": "最大56%", "baseline": "既存サーバレスLLMサービング方式", "condition": "8基H100の実運用型負荷。上限条件にはFestina+のアイドルGPU停止またはHBM周波数低下の模擬効果を含む", "interpretation": "要求配置・局所資源制御・負荷集約を協調すると、単独DVFSより大きなクラスタ全体の省エネルギー余地がある。"},
-      {"metric": "標準Festinaに対する比較対象の最大エネルギー比", "value": "ServerlessLLM 1.56倍、MuxServe 1.37倍、Dilu 1.36倍、Aegaeon 1.31倍、AegVoltana 1.30倍", "baseline": "各比較方式", "condition": "RPSとLLM数を変えた同一ワークロード", "interpretation": "周波数制御だけを追加したAegVoltanaよりも省エネルギーで、共有クロックを考慮した配置とSM共同制御の寄与が残る。"},
-      {"metric": "重負荷時エネルギー削減", "value": "少なくとも22%", "baseline": "比較対象群", "condition": "高い要求到着率の重負荷シナリオ", "interpretation": "周波数を下げる余地が縮小する重負荷でも、配置と資源分割の協調による改善が残る。"},
-      {"metric": "SLO達成率", "value": "Aegaeonとの差2%未満、AegVoltanaとの差1%未満", "baseline": "Aegaeon、AegVoltana", "condition": "主評価ワークロード", "interpretation": "省エネルギー化のために大幅なサービス性能低下を受け入れているわけではない。ServerlessLLM、MuxServe、Diluには最大27%、16%、4%高いSLO達成率も示す。"},
-      {"metric": "周波数認識配置の寄与", "value": "約12%の追加エネルギー削減", "baseline": "SLO認識配置のみの第1段階", "condition": "6段階アブレーション", "interpretation": "同じGPUへ置けるかだけでなく、同居テナントの好む周波数を合わせること自体に独立した効果がある。"},
-      {"metric": "細粒度実行時制御の寄与", "value": "第3段階で合計約25%削減", "baseline": "第1段階", "condition": "周波数認識配置にSM・周波数共同再構成を追加", "interpretation": "要求到着時の配置だけではフェーズ変化を追えず、実行中にプリフィル・デコード構成へ追随する必要がある。"},
-      {"metric": "EWR認識集約の寄与", "value": "さらに11%削減", "baseline": "通常のSLO認識集約", "condition": "第4段階から第5段階", "interpretation": "単純にGPU台数を減らすだけでは周波数不一致で省エネルギー効果を損なうため、集約先の周波数相性を考える価値が大きい。"},
-      {"metric": "プリフィル偏重負荷の省エネルギー", "value": "18〜30%", "baseline": "Aegaeon", "condition": "ShareGPT-ix2", "interpretation": "計算律速が強まり高周波数が必要になるほど削減幅は縮むが、SLO同等で改善を維持する。"},
-      {"metric": "デコード偏重負荷の省エネルギー", "value": "28〜35%", "baseline": "Aegaeon", "condition": "ShareGPT-ox2", "interpretation": "メモリ律速のデコードでは周波数を下げやすく、動的SM融通も使えるため省エネルギー余地が大きい。"},
-      {"metric": "プリフィル・デコード分離の追加効果", "value": "エネルギーをさらに7%削減、SLO達成率は約1.5%低下", "baseline": "Festinaのプリフィル・デコード同居構成", "condition": "Aegaeon型のプリフィル・デコード分離をFestinaへ適用", "interpretation": "フェーズを別GPUへ分けると周波数をより正確に合わせられる一方、KV転送オーバーヘッドがSLOへ影響する。"}
+      {"metric":"4-worker prototype mean TTFT","value":"44.4%削減","baseline":"Stop-and-Restart","condition":"Qwen3-32B、4 workers、single-worker failure、ShareGPT","interpretation":"KV replay回避とreload-window capacity回復の両方がfailure-impact windowのqueueingを縮める。"},
+      {"metric":"4-worker prototype recovery time","value":"50.0%削減 / Fixed-Checkpointing比34.9%削減","baseline":"Stop-and-Restart / Fixed-Checkpointing","condition":"Qwen3-32B single-worker failure","interpretation":"checkpointがあるだけでは固定holderがhotspotになり、load-aware distributionとdraft assistanceが追加で効く。"},
+      {"metric":"8-worker prototype mean TTFT","value":"29.6%削減 / Fixed-Checkpointing比15.9%削減","baseline":"Stop-and-Restart / Fixed-Checkpointing","condition":"Qwen3-14B、8 workers、single-worker failure、10 QPS","interpretation":"failureがcluster capacityの12.5%でも改善を維持する。"},
+      {"metric":"8-worker prototype recovery time","value":"64.1%削減 / Fixed-Checkpointing比63.9%削減","baseline":"Stop-and-Restart / Fixed-Checkpointing","condition":"Qwen3-14B single-worker failure","interpretation":"固定checkpoint方式はrestore集中でStop-and-Restartとほぼ同じ復旧時間になり、LUMENのload distribution差が大きい。"},
+      {"metric":"8-worker interrupted request TPOT","value":"58.0ms、Stop-and-Restart比50.2%削減","baseline":"Stop-and-Restart 116.5ms","condition":"failure-impact window","interpretation":"KV restoreで59.7msまで下がり、speculative assistanceでさらに58.0msへ改善する。"},
+      {"metric":"steady-state overhead","value":"測定可能な増加なし","baseline":"No-Failure","condition":"failure前prototype。mean TTFT 4-worker 0.76s、8-worker 0.79sで一致、TPOT差0.1ms以内","interpretation":"checkpoint pipelineとcontroller metadata処理をGPU critical path外へ置けている。"},
+      {"metric":"recovery-path ablation mean TTFT","value":"+Scheduling 19.1%削減、+Progressive 18.5%削減、full LUMEN 1.0sで最小","baseline":"Stop-and-Restart","condition":"8-worker prototype","interpretation":"KV state preservationとtemporary capacity restorationは独立に効き、full systemで補完的に作用する。"},
+      {"metric":"multiple failures prototype mean TTFT","value":"1/2/4 failuresで29.6% / 50.8% / 82.7%削減","baseline":"Stop-and-Restart","condition":"8 workers","interpretation":"失われるcapacityとstateが増えるほどcoordinationの価値が大きくなる。"},
+      {"metric":"10-worker simulator","value":"mean TTFT 12.2%、TPOT 22.6%、recovery time 18.7%削減","baseline":"Stop-and-Restart","condition":"Llama-3-70B、single failure、14 QPS","interpretation":"実機より大きなmodel/worker構成でも同じ傾向を再現する。"},
+      {"metric":"64-worker scalability at 25% failure rate","value":"TTFT 46.8–51.2%、TPOT 30.7–43.8%、recovery time 43.6–61.0%削減","baseline":"Stop-and-Restart","condition":"4〜64 workers、1.4 QPS/worker、25% simultaneous failures","interpretation":"cluster sizeではなくfailure fractionとloadが主に効果量を決める。"}
     ],
-    "negative_results": "Festinaの省エネルギー余地は負荷が高いほど小さくなる。特にプリフィル偏重でGPUがSLO維持のためTDP付近を必要とする場合、周波数低下による利得は縮む。またプリフィル・デコード分離版はエネルギーを追加で7%下げる一方、評価実装のKV転送が十分最適化されておらずSLO達成率が約1.5%低下する。標準FestinaはH100で動的HBM周波数変更や完全なアイドルGPU電源停止を実装しておらず、Festina+の追加16%削減や最大56%という最良値には模擬上限が含まれる。出力長予測を外すとメモリ不足の可能性があるため5%安全余裕と緊急退避処理が必要になる。",
-    "interpretation": "共有GPUでは、各モデルの最適周波数を個別に選べないことが本質的な制約である。Festinaは『要求をどこへ置くか』を周波数制御の前段に含め、似た動作点を望む要求を集めることで共有クロックそのものの衝突を減らす。さらにバッチ内のプリフィル・デコード比率が変化した後は、局所スケジューラがSM量と周波数を同時に変え、配置時の予測が陳腐化する問題を補う。低負荷時にはGPU台数削減による静的電力の利得が大きいが、周波数不一致を作ると動的電力が増えるためEWRが必要になる。この3時間尺度の制御を組み合わせることが、AegVoltanaのような周波数制御単独との差を生む。",
-    "quality_impact": "モデル計算そのものは変えず、要求の配置順序、共有SM量、GPU動作周波数、集約・移行を変更する無損失のシステム最適化である。品質劣化ではなくTTFT/TBT SLO違反率が主なリスクであり、全判断は計測表と安全余裕を使ってSLO制約下で行う。"
+    "negative_results": "single failureが大規模clusterのごく小さい割合しか占めない条件では改善余地が小さい。simulationで4 workersから64 workersへsingle failureのままscaleすると、Stop-and-Restart比TTFT削減は50.6%から1.3%、TPOT削減は37.2%から3.7%へ縮む。またcheckpointはrequestあたり1 copyだけなので、64 workers中16 failuresの条件ではcheckpoint holder co-failureによりinterrupted requestsの23.8%がfull recomputationへfallbackする。Fixed-Checkpointingとのload-aware placement差もqueueが短い低負荷では小さい。",
+    "interpretation": "LUMENの評価は『lost KV state』と『lost serving capacity』が別のlatency成分を作ることを明確に示す。checkpointing中心の+Schedulingは主にre-prefillとTTFTを減らし、draft assistance中心の+Progressiveはreload中のdecode capacityを補ってTPOTとcluster-wide recoveryを減らす。障害要求自体は全体の数%しかなくても、redirect trafficがsurvivorのqueueとdecode contentionを増やすため、recovering workerを早期にcompute contributorへ戻す効果はuninterrupted requestsにも波及する。",
+    "quality_impact": "target model verificationを伴う投機的デコードと正確なKV prefix復元を用いるため、モデル品質を下げる近似は導入しない。主な交換条件はhost-memory checkpoint容量、steady-state network bandwidth、draft model一時footprint、checkpoint co-failure時の再計算である。"
   }
 }
