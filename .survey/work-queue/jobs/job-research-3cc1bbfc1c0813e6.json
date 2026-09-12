@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2501.01005",
   "paper_path": "papers/inference/02-hardware-accelerators/2025-2501.01005-flashinfer-attention-engine-serving.md",
   "selection_reason": "block-sparse KV形式、JIT customizable attention template、CUDAGraph互換のload-balanced schedulingを統合し、vLLM/SGLang等へ広く組み込まれたattention engine。新着ではないが、arXiv抄録でkernel-level/end-to-endの大幅なlatency改善と実運用framework統合を示すため、推論runtime系統の重要な未収録候補として優先度が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T14:22:57+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T16:20:40+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }

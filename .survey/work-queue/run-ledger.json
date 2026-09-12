@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:19:53.960119+00:00",
+  "updated_at": "2026-09-12T16:22:21.653280+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11737,19 +11737,19 @@
     {
       "run_key": "2026-09-13T00:30:00+09:00",
       "first_recorded_at": "2026-09-12T15:47:23.423873+00:00",
-      "last_recorded_at": "2026-09-12T16:19:53.960119+00:00",
+      "last_recorded_at": "2026-09-12T16:22:21.653280+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 5,
+        "research_completed": 6,
         "audit_completed": 0,
         "discovery_completed": 8,
         "blocked": 0,
         "new_jobs": 15,
-        "new_papers": 5,
+        "new_papers": 6,
         "fallback_archived": 0
       },
       "events": [
@@ -11913,6 +11913,21 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34704924740:1",
+          "recorded_at": "2026-09-12T16:22:21.653280+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34704924740",
+            "run_attempt": "1",
+            "source_sha": "72f327b6535fdb9b54e1ea2a6212d082254beb4c"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12017,6 +12032,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.12688",
           "title": "M*: A Modular, Extensible, Serving System for Multimodal Models",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-3cc1bbfc1c0813e6",
+          "type": "research",
+          "canonical_id": "arXiv:2501.01005",
+          "title": "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
           "from": "ready",
           "to": "completed"
         }
@@ -12133,7 +12156,8 @@
         "arXiv:2607.10186",
         "arXiv:2608.01657",
         "arXiv:2605.22850",
-        "arXiv:2606.12688"
+        "arXiv:2606.12688",
+        "arXiv:2501.01005"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0059JST-discovery-specialist-agent-kv-1.json",
@@ -12147,7 +12171,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 360,
-      "paper_active_count_after": 365,
+      "paper_active_count_after": 366,
       "last_successful_action": "paper_materialized"
     }
   ]
