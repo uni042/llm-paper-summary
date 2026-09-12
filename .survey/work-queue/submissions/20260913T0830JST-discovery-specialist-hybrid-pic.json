@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0c31ddf1ad84e2df",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.11231",
+      "title": "LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2608.11231",
+      "paper_path": null,
+      "priority": 88,
+      "reason": "ハイブリッド注意LLMでは線形再帰層にtoken-indexed KVがなく、既存の位置非依存キャッシュをそのまま使えない問題を扱う。LinearKVは線形層ごとに複数の局所キャッシュ状態から単一初期状態を作り、full-attention層では既存PICのKV連結・再計算を再利用する学習不要方式。3種のhybrid modelと3種のPIC selectorで評価し、単一状態初期化が最大92%の品質回復を維持しつつfull prefill比0.46倍のTTFTを報告しており、hybrid LLM servingのキャッシュ設計として重要度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.01299",
+      "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
+      "source_url": "https://arxiv.org/abs/2607.01299",
+      "paper_path": null,
+      "priority": 87,
+      "reason": "hybrid-attention LLMへ位置非依存キャッシュを導入する際、線形attention層の再帰状態とfull-attention層の部分再計算が既存PICの前提を壊す問題を解く。segment cumulative transition operatorとzero-start end-stateをキャッシュし、境界の小窓だけを再計算し、cache-miss prefillもsegment単位で並列化する。4モデル・5 workloadで平均TTFT 2.45倍改善、peak throughput最大2倍を報告しており、LinearKVと対照的なhybrid PIC設計として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2512.16822",
+      "title": "MEPIC: Memory Efficient Position Independent Caching for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.16822",
+      "paper_path": null,
+      "priority": 84,
+      "reason": "位置非依存キャッシュでは要求ごとの再計算と位置補正により同一chunkのKVが分岐し、ページ共有できずHBM削減が限定的になる問題を扱う。MEPICはchunk KVをpaged storageへ整列し、再計算をblock単位へ移し、RoPEをattention kernelへ融合して大部分のblockを要求間共有可能にする。既存PIC比で同等精度・遅延を保ちながらHBM使用量を最大2倍、長文promptでは最大5倍削減すると報告しており、PagedAttention系の実装・メモリ階層研究として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2605.05696",
+      "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.05696",
+      "paper_path": null,
+      "priority": 83,
+      "reason": "エージェント型promptでは同一内容がturnごとに位置を変えて現れprefix cacheが無効化される一方、MLAは位置非依存latent KVと小さいRoPE成分へ分解できる点を利用する。IrminsulはSGLang radix cacheをcontent-hash keyingへ拡張し、chunk境界と位置差に応じてRoPE成分だけを補正するMLA-native PICを提案する。3種のMLA-MoE deploymentで最大約83%のprompt tokenをexact-prefix以上に再利用し、cache hit当たりprefill energyを63%削減しており、MLAとagentic servingのキャッシュ設計として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T08:26:04+09:00",
+    "round": "specialist-hybrid-attention-pic-1",
+    "axis": "hybrid-attention・MLA・位置非依存キャッシュ",
+    "query_summary": "直前のMoE expert placement/network軸を反復せず、hybrid-attentionとMLAでのposition-independent cachingへ探索軸を変更した。一次arXivの題名・抄録・評価概要を軽量確認し、GrowPage、Speculative Macro Commit、CacheScoutは既存jobで除外。LinearKV、HYPIC、MEPIC、Irminsulは決定論的research job pathとrepo検索で既存一致がないことを投入直前の最新mainで再確認した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.03494",
+      "arXiv:2609.03236",
+      "arXiv:2608.14624"
+    ],
+    "next_axis_hint": "次はhybrid/PICを離れ、forward/backward citationまたはstorage/OS・network runtimeの未収録候補へ移る",
+    "empty_round_reason": null
+  }
+}
