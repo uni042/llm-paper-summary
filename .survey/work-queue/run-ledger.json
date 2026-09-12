@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 48,
-  "updated_at": "2026-09-12T00:53:58.904175+00:00",
+  "updated_at": "2026-09-12T02:30:25.231630+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -8286,6 +8286,66 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 323,
+      "paper_active_count_after": 325,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-12T11:30:00+09:00",
+      "first_recorded_at": "2026-09-12T02:30:25.231630+00:00",
+      "last_recorded_at": "2026-09-12T02:30:25.231630+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 1,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34667819002:1",
+          "recorded_at": "2026-09-12T02:30:25.231630+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34667819002",
+            "run_attempt": "1",
+            "source_sha": "2102f67513363c6e3dab9ea1d0ee5d7a142e4cc0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-9e21235b2f0e941b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-research-a582b973ede7b005",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04971",
+          "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260912T1130JST-discovery-job-9e21235b2f0e941b.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 325,
       "paper_active_count_after": 325,
       "last_successful_action": "discovery_or_queue_expanded"
     }
