@@ -2,7 +2,7 @@
 
 このrouterは **既存の通常Scheduled Chat worker（毎時:30系）** の正本とする。通常workerとは別に、毎時`:00` JSTで探索専用Scheduled Chat workerを動かしてよい。探索専用workerの正本は [discovery-specialist-worker.md](discovery-specialist-worker.md) とし、その追加を理由に通常workerのdiscovery機能を削除・停止・縮小しない。通常runは実行時刻で次のどちらか一方を選ぶ。ただし24-run maintenance gateが最優先で、maintenance runでは通常workerを実行しない。
 
-- maintenance gateで24回目 → full GC + repository-wide consistency checkだけを要求して終了
+- maintenance gateで24回目 → full GC + queue/state health reconciliation + derived index rebuild + quality/freshness audit + repository-wide consistency checkだけを要求して終了
 - 08:30 JST → その他更新worker
 - それ以外の毎時 :30 → 論文worker
 - 別タスクの毎時 :00 → 探索専用worker。通常workerのmaintenance counterには加算しない
@@ -20,11 +20,20 @@
 3. 新しいrunなら `total_runs_counted += 1`、`runs_since_maintenance += 1`、`last_counted_run_key = run_key` としてstateを更新する。
 4. `runs_since_maintenance < cadence_runs`（現在24）なら通常routingへ進む。
 5. `runs_since_maintenance >= cadence_runs` になったrunはmaintenance runとし、同じ更新で `runs_since_maintenance = 0`、`maintenance_sequence += 1`、`maintenance_pending = true`、`last_maintenance_requested_at` を設定する。
-6. maintenance runでは論文worker、その他更新worker、fallback replay、discovery、research、auditを実行しない。`.github/workflows/maintenance.yml` により `.survey/scripts/full_gc.py` → `.survey/scripts/check_repository.py` を実行し、そのrunは終了する。
-7. workflowは結果を `.survey/reports/full-gc-latest.json` と `.survey/reports/consistency-latest.json` に保存し、maintenance stateを更新する。
-8. maintenance失敗・遅延でpendingが残っても、後続run全体は止めず問題として扱う。
+6. maintenance runでは論文worker、その他更新worker、fallback replay、discovery、research、auditを実行しない。`.github/workflows/maintenance.yml` により次を順に行う。
+   - `.survey/scripts/full_gc.py` で保持期限を過ぎたterminal jobとsettled transport artifactをGCする。
+   - `.survey/scripts/survey.py --root .survey build` でREADME・comparison等の派生indexを再生成する。ただしdurable stateである `paper-identity-index.json` はこの副作用では更新しない。
+   - 論文本文・一覧一文解説・overview代表結果の機械的品質監査を実行し、前回maintenance時点から新たにFAILへ悪化した対象だけをquality regressionとして扱う。
+   - `.survey/scripts/maintenance_health.py` でjob実体と `next-jobs.json` の整合、同一canonical IDの重複active job、fallback inbox/archive/failedのID重複、record bankのslot混在、citation/metadata coverage reportの完全性と鮮度を点検する。
+   - GCでjob集合が変わった等の理由で `next-jobs.json` がjob実体とずれている場合は、job実体から再構成できるsnapshotだけを安全に自動修復する。派生indexのdriftも再生成で修復する。
+   - `.survey/scripts/check_repository.py` でrepository-wide structural consistency checkを行う。
+7. 曖昧なqueue矛盾、複数job/attemptが混在したrecord bank、fallback ID衝突、品質回帰などはmaintenanceが推測で自動修復しない。`.survey/reports/maintenance-health-latest.json` へ記録し、`last_maintenance_status` を `issues_found` にする。科学的内容の正しさを全論文再精読する処理はmaintenanceに含めず、通常audit workerの責務とする。
+8. workflowは結果を `.survey/reports/full-gc-latest.json`、`.survey/reports/maintenance-health-latest.json`、`.survey/reports/consistency-latest.json` に保存し、maintenance stateへGC件数、health error/warning件数、snapshot修復有無、派生index修復数、quality regression件数、最終statusを記録する。
+9. maintenance失敗・遅延でpendingが残っても、後続run全体は止めず問題として扱う。
 
 full GCは論文Markdown、docs、scripts、workflow、`next-jobs.json`、queue state、record banks、fallback inbox/archive、現在参照中jobを削除しない。terminal jobや旧runtime artifactは保持期間を満たしlive参照がない場合だけ削除する。
+
+maintenanceの自動修復対象は、正本から決定論的に再生成できる `next-jobs.json` と派生README/comparison等に限定する。job status、candidate採否、record bankの所有権、fallback envelopeの競合内容など意味判断を伴う状態は自動で書き換えない。
 
 ## 1. run全体を止める条件
 
