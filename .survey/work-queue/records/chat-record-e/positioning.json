@@ -2,12 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.12688-20260913-0110-v10-e",
-  "job_id": "job-research-5de21b53eec4b0eb",
+  "attempt_id": "attempt-2604.06664-20260913-0254-v10-e",
+  "job_id": "job-research-b7ad70251596454b",
   "data": {
-    "limitations": "評価対象はBAGEL、Qwen3-Omni、Orpheus、V-JEPA 2に限られ、複合モデル全体を網羅していない。実験は単一ノードH100/H200環境で、公開実装が備えるMooncake経由のノード間TCP/RDMAや大規模クラスタ配置の性能は論文では検証していない。著者はベースライン側に正しさまたは性能問題が出た設定を複数除外しており、未掲載条件では相対性能が異なる可能性がある。現在の実行エンジン種類とストリーミング方針は限定的で、系列並列、文脈並列、パイプライン並列、さらに高度な非同期Workerスケジューリングや疎注意などは将来課題である。DynamicLoopの投機停止判定は最大一反復の無駄計算を許すため、その余分計算を許容できないノードでは無効化が必要になる。柔軟性が高い一方、モデル作者は正しいグラフ、Walk、状態機械、構成要素境界を明示する必要があり、任意Pythonコードから自動で依存関係を復元する方式ではない。",
-    "differences": "vLLMやSGLangの中心抽象は自己回帰Transformer要求で、マルチモーダル拡張でも非テキスト符号器をプリフィル前段として扱うことが多い。vLLM-OmniとSGLang-Omniはモデルを固定段階DAGへ広げるが、段階をまたぐ循環や段階内部の並列分岐、要求別に異なる実行経路を一級の構造として扱いにくい。M*は構成要素単位のグラフと複数Walkを事前宣言し、反復・並列・ストリーミングを実行時から見えるようにする。CornserveはPythonタスクを実行時に記録・再生して依存グラフを復元するのに対し、M*はモデル作者がグラフを事前に明示する代わりに、単一DiT反復のようなより細かい粒度まで把握して配置やコンパイルを行える。ModServeやEPDServeが主に前処理・符号器の分離を対象にするのに対し、M*の配置は任意構成要素・任意Walkへ適用できる。",
-    "implementation_status": "公開実装あり。arXiv現行v2のコメント欄から `mstar-project/mstar` が公式コードとしてリンクされ、2026-09-13確認時点で公開GitHubリポジトリが存在する。Apache License 2.0で、BAGEL、Qwen3-Omni、Orpheus、V-JEPA 2、π0.5等のモデル設定、Python SDK、OpenAI互換API、ベンチマーク、ドキュメントを含む。論文v1付録ではcamera-ready時の公開予定と記載されていたが、その後v2と現行リポジトリでは公開済みである。",
-    "research_positioning": "LLMサービング・スケジューリング・分離実行の系統を、テキスト自己回帰モデルから複合マルチモーダルモデルへ拡張する基盤研究である。重要なのは個別の画像生成や音声最適化ではなく、モデル構造を『構成要素グラフ＋要求別Walk』へ統一することで、従来LLMサービングで成熟したKVキャッシュ、連続バッチ処理、CUDAグラフ、プリフィル/デコード分離、テンソル転送を別モダリティの反復・並列・ストリーミングへ持ち込める点にある。リポジトリ内ではvLLM/SGLang系の推論基盤、分離サービング、KVキャッシュ研究との橋渡しとなり、将来的な異種GPU配置や複数モデル・エージェントグラフの研究基盤にもつながる。"
+    "limitations": [
+      "inter-rank graph sharingはDP/TP/EP等、各rankが同一execution topologyを持つSPMD型parallelismを前提とする。Pipeline Parallelismのようにstageごとに異なる処理を実行する構成はrank共通templateの対象外で、stage別captureが必要になる。",
+      "deterministic memory layoutを成立させるにはSAVEとLOADでallocation sequenceとサイズが整合する必要がある。vLLMのKV cache容量はfree memory依存で変動するため、Foundry統合ではSAVE/LOAD前にKV cache sizeを固定する。",
+      "engine、CUDA library、custom kernel、driverとの対応関係をarchiveに保存するため、software/kernel versionが変わった場合は古いarchiveをそのまま永続利用するのではなく、新環境で再SAVEする運用が必要になる。",
+      "archiveはprocess checkpointより小さいものの最大評価モデルで2.2GB、うちkernel binariesが1.4GBを占める。多数model/version/parallelism構成を保存する場合はarchive lifecycleと配布costが別途必要になる。",
+      "主評価はNVIDIA CUDA 13.1とvLLM decoderであり、AMD HIP graphへの同等実装、異なるinference engine、hundreds-GPU実クラスタでのarchive rolloutは直接評価していない。",
+      "Medusaは現行CUDA/Hopper kernelへport困難として直接性能比較せず、CUDA-checkpointもIPC memory非対応のためsingle-GPUだけで比較する。従ってmulti-GPUにおける既存materialization方式との同条件直接比較は限定的である。"
+    ],
+    "differences": "ServerlessLLM、BlitzScale、Tensor R-Fork等は主にモデル重みをstorage/peerから高速ロードするため、重み転送後に残るCUDA graph captureは別問題である。MedusaはCUDA graph topologyをoffline保存するが、fresh processのpointer/kernel contextはkernel固有patchと部分warmupで補う。Foundryはvirtual address layoutとused kernel binaryをまとめてmaterializeするためopaque argument内部を解析しない。CUDA-checkpoint/CRIUはworker process全体のGPU/CPU stateをsnapshotする一方、Foundryはgraph replayに必要な状態だけを保存する。Gyges、Flying Serving、Expert-as-a-Service等はparallelism configuration自体を動的変更するが、新構成でgraph recaptureが必要ならFoundryはそれを数秒のLOADへ置き換える補完関係にある。",
+    "implementation_status": "公式コード `foundry-org/foundry` が公開済み。約10K行C++と2K行Pythonで、CUDA driver hook、VMM allocator、module binary extraction、PyTorch graph extension、vLLM integrationを提供する。論文はH200/B200、vLLM 0.11.2、CUDA 13.1で実機評価している。",
+    "research_positioning": "LLMサービングのelasticity/cold-start系統に属し、モデルweight loadingを高速化する研究の後段に残るGPU execution context構築を対象とする。特に、parallelism reconfiguration研究が『重み/KVを移せる』ようになってもCUDA graph recaptureが数分残れば頻繁な切替は実用化できないため、その欠落部分を埋める基盤として重要である。SSD/NVMeとの直接的関係ではFoundry archiveとcompile cacheをlocal NVMeから読むが、性能ボトルネックはarchive I/Oよりgraph captureでありSSD最適化自体が主貢献ではない。一方、重みをNVMe/RDMAから数秒で供給できる環境ほどFoundryの相対的重要性が上がる。",
+    "related_work": ["Medusa", "ServerlessLLM", "BlitzScale", "Tensor R-Fork", "HydraServe", "WarmServe", "Gyges", "Flying Serving", "Expert-as-a-Service", "CUDA-checkpoint", "GCR", "PhoenixOS"],
+    "audit_notes": "arXiv:2604.06664v1のHTML全文を確認し、deterministic VMM allocation、capture-window memory replay、kernel binary extraction/reload、topology grouping、cuGraphExecUpdate、single-GPU distributed capture stub、vLLM integration、H200/B200評価、cold-start/TPOT/storage結果、limitationsを確認した。主カテゴリcs.DC、cross-list cs.LG。公式コード `https://github.com/foundry-org/foundry` も確認した。参考文献節は56件で、明示arXiv IDの一部をmetadataへ正規化した。"
   }
 }
