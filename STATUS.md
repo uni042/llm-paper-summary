@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **121 / 50** |
-| Research ready | **121** |
+| Candidate在庫（Research ready） | **120 / 50** |
+| Research ready | **120** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **195** |
+| Research completed（累計） | **196** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **3 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T04:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **6** |
+| Research完了 | **7** |
 | Audit完了 | **0** |
 | Discovery完了 | **3** |
 | 新規job | **8** |
-| Repo収録 | **6** |
+| Repo収録 | **7** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3
 | 重複率 | **33.6%** |
 | Novel候補 | **316** |
 | Research候補採用 | **171** |
-| Research完了 | **63** |
-| Repo収録 | **63** |
+| Research完了 | **64** |
+| Repo収録 | **64** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 476 → 重複除外後 316 → Research候補採用 171 → Research完了 63 → Repo収録 63**
+**探索評価 476 → 重複除外後 316 → Research候補採用 171 → Research完了 64 → Repo収録 64**
 
 ## 探索効率（直近24時間）
 
@@ -183,6 +183,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3
 
 ### Research完了
 
+- `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
 - `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
 - `arXiv:2606.07665` — AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference
 - `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
@@ -190,15 +191,14 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-disaggregated-serving-3
 - `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - `arXiv:2603.03251` — Speculative Speculative Decoding
 - `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
-- `arXiv:2501.14417` — DeepFlow: Serverless Large Language Model Serving at Scale
 
 ### 次に処理する候補
 
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
-- P89 `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
 - P89 `arXiv:2512.09472` — WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving
 - P89 `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
+- P89 `arXiv:2606.29986` — HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators
 
 ## 7日比較
 
