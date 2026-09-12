@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **77 / 50** |
-| Research ready | **77** |
+| Candidate在庫（Research ready） | **76 / 50** |
+| Research ready | **76** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **177** |
+| Research completed（累計） | **178** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **1 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T02:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
 | Discovery完了 | **1** |
 | 新規job | **5** |
-| Repo収録 | **0** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 重複率 | **28.4%** |
 | Novel候補 | **242** |
 | Research候補採用 | **109** |
-| Research完了 | **45** |
-| Repo収録 | **45** |
+| Research完了 | **46** |
+| Repo収録 | **46** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 338 → 重複除外後 242 → Research候補採用 109 → Research完了 45 → Repo収録 45**
+**探索評価 338 → 重複除外後 242 → Research候補採用 109 → Research完了 46 → Repo収録 46**
 
 ## 探索効率（直近24時間）
 
@@ -157,6 +157,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### Research完了
 
+- `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
 - `arXiv:2501.01005` — FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
 - `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
@@ -164,15 +165,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2607.10186` — FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference
 - `arXiv:2602.02204` — vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models
 - `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
-- `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 
 ### 次に処理する候補
 
-- P93 `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
 - P92 `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - P91 `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
+- P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
 
 ## 7日比較
 
