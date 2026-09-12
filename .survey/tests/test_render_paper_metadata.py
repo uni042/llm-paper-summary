@@ -10,7 +10,7 @@ import yaml
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from assemble_research_record import validate_record  # noqa: E402
+from assemble_research_record import normalize_preferred_terms, validate_record  # noqa: E402
 from render_paper import render_paper  # noqa: E402
 
 
@@ -31,6 +31,7 @@ def complete_record() -> dict:
             "publication_type": "プレプリント",
             "published": "2026-07-17",
             "publication_status": "MICRO 2026採択",
+            "lineage": "offload-hierarchical-memory",
             "topics": ["NPU"],
             "implementation": "公開実装あり。",
             "hardware_evaluation": "シミュレーション。",
@@ -127,6 +128,11 @@ class RenderPaperMetadataTest(unittest.TestCase):
         self.assertIn("25%削減", overview)
         self.assertIn("比較対象", overview)
         self.assertIn("条件", overview)
+
+    def test_machine_readable_lineage_is_not_localized(self) -> None:
+        record = complete_record()
+        normalized = normalize_preferred_terms(record)
+        self.assertEqual(normalized["metadata"]["lineage"], "offload-hierarchical-memory")
 
     def test_references_are_required(self) -> None:
         record = complete_record()
