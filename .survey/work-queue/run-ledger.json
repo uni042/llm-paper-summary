@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:44:00.163062+00:00",
+  "updated_at": "2026-09-12T17:46:18.026052+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,19 +13121,19 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T17:44:00.163062+00:00",
+      "last_recorded_at": "2026-09-12T17:46:18.026052+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 15,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -13208,6 +13208,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34709121679:1",
+          "recorded_at": "2026-09-12T17:46:18.026052+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34709121679",
+            "run_attempt": "1",
+            "source_sha": "4dfb61af11ae942e6878830c7c053ce7062d393b"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13248,6 +13263,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c56a9d57e83a480c",
+          "type": "research",
+          "canonical_id": "arXiv:2608.06007",
+          "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
           "from": "ready",
           "to": "completed"
         }
@@ -13361,7 +13384,8 @@
       ],
       "new_paper_ids": [
         "arXiv:2406.01566",
-        "arXiv:2606.18741"
+        "arXiv:2606.18741",
+        "arXiv:2608.06007"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
@@ -13370,8 +13394,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
-      "paper_active_count_after": 368,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 369,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

@@ -8,9 +8,9 @@
       "completed": 6
     },
     "research": {
-      "completed": 179,
+      "completed": 180,
       "superseded": 44,
-      "ready": 83,
+      "ready": 82,
       "deferred": 3
     }
   },
@@ -24,18 +24,6 @@
       "title": "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
       "source_url": "https://arxiv.org/abs/2604.06664",
       "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06664-foundry-cuda-graph-context-materialization.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-c56a9d57e83a480c",
-      "type": "research",
-      "lane": null,
-      "priority": 92,
-      "canonical_id": "arXiv:2608.06007",
-      "title": "TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure",
-      "source_url": "https://arxiv.org/abs/2608.06007",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06007-tensorcast-tensor-as-a-service.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-b018d3ca3a88c71f",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2607.28848",
+      "title": "DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs",
+      "source_url": "https://arxiv.org/abs/2607.28848",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28848-deltaserve-inference-finetuning-coserving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-93c319d7de58b930",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T17:43:38+00:00"
+  "generated_at": "2026-09-12T17:45:03+00:00"
 }
