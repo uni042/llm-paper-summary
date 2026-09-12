@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T17:13:10.109078+00:00",
+  "updated_at": "2026-09-12T17:15:00.023400+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T17:13:10.109078+00:00",
+      "last_recorded_at": "2026-09-12T17:15:00.023400+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 16,
+        "discovery_completed": 17,
         "blocked": 0,
-        "new_jobs": 42,
+        "new_jobs": 44,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12474,6 +12474,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34707604064:1",
+          "recorded_at": "2026-09-12T17:15:00.023400+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34707604064",
+            "run_attempt": "1",
+            "source_sha": "121d17cda3d4824ac2c366666199a2cc4037a29d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12599,6 +12613,14 @@
         },
         {
           "job_id": "job-582553a19b973e3b",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-79f44962fd7f926b",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12900,6 +12922,20 @@
           "type": "research",
           "canonical_id": "arXiv:2606.09613",
           "title": "AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving"
+        },
+        {
+          "job_id": "job-5d7000d72e974f06",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-e290cd912706acf4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.22705",
+          "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control"
         }
       ],
       "new_paper_ids": [],
@@ -12919,7 +12955,8 @@
         ".survey/work-queue/results/20260913T0205JST-discovery-2ffa05ee82127e80.json",
         ".survey/work-queue/results/20260913T0207JST-discovery-376c29b504bdcaf6.json",
         ".survey/work-queue/results/20260913T0209JST-discovery-d4eb0caeda27a63f.json",
-        ".survey/work-queue/results/20260913T0211JST-discovery-582553a19b973e3b.json"
+        ".survey/work-queue/results/20260913T0211JST-discovery-582553a19b973e3b.json",
+        ".survey/work-queue/results/20260913T0214JST-discovery-79f44962fd7f926b.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
