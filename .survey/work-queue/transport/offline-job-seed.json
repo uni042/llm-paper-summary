@@ -1,31 +1,28 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "seed-20260912-2030-critical-buffer-ssd-kv",
+  "seed_id": "seed-20260912-2030-axis-rotation-kv-system-survey",
   "candidates": [
     {
-      "canonical_id": "arXiv:2605.03375",
-      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
-      "source_url": "https://arxiv.org/abs/2605.03375",
-      "priority": 98,
-      "reason": "Directly matches the repository's highest-priority SSD/NVMe offload theme. Tutti replaces CPU-centric SSD KV-cache I/O with a GPU-centric object/I/O path, integrates with vLLM, and reports 78.3% TTFT reduction, 2x achievable request rate, and 27% serving-cost reduction versus GDS-enabled SSD-backed LMCache."
-    },
-    {
-      "canonical_id": "arXiv:2606.16135",
-      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
-      "source_url": "https://arxiv.org/abs/2606.16135",
-      "priority": 91,
-      "reason": "Strong heterogeneous-memory KV-cache systems work. It borrows otherwise-idle HBM from co-located models over NVLink and keeps only the active layer's KV locally, reporting up to 69% lower P99 TTFT and 3.98x longer supported context."
+      "canonical_id": "arXiv:2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization",
+      "source_url": "https://arxiv.org/abs/2607.08057",
+      "priority": 82,
+      "reason": "System-aware KV infrastructure survey that organizes work by execution/scheduling, placement/migration, and representation/retention. It is not represented by an existing deterministic job or repository code-search hit, and is useful as a survey-layer map across the repository's KV-cache, offload, scheduling, and migration lineages."
     }
   ],
   "discovery_stats": {
     "run_key": "2026-09-12T20:30:00+09:00",
-    "round": "normal-worker-critical-buffer-ssd-kv",
-    "axis": "ssd-backed-kv-and-heterogeneous-kv-sharing",
-    "query_summary": "Candidate inventory was below the critical watermark, so discovery was prioritized. Searched recent primary-source LLM serving work around SSD-backed KV cache, heterogeneous KV placement, offload, and long-context serving. Two strong candidates survived repository code-search pre-dedupe.",
-    "candidate_count": 2,
-    "duplicate_filtered_count": 0,
-    "duplicate_canonical_ids": [],
-    "next_axis_hint": "Rotate next toward OS paging/GPU virtual memory, storage I/O scheduling, or network-aware KV transport instead of repeating SSD-KV queries if these are accepted."
+    "round": "normal-worker-axis-rotation-system-aware-kv",
+    "axis": "os-paging-storage-io-network-kv-system-aware-survey",
+    "query_summary": "After the SSD/KV round collapsed to known papers, rotated toward page-aware scheduling, cache restoration, memory hierarchy, and system-aware KV infrastructure. Four strong primary-source candidates were checked against deterministic queue identities and repository state; three were already represented and one survey candidate remained novel.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.18431",
+      "arXiv:2604.25080",
+      "arXiv:2606.25353"
+    ],
+    "next_axis_hint": "Next discovery should rotate away from KV-cache-centric terms toward expert placement/prefetch, GPU runtime and virtual-memory mechanisms, or adjacent DBMS/OS storage scheduling."
   }
 }
