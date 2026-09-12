@@ -8,7 +8,7 @@
 
 1つの探索軸で最大5本の強い候補を送信したら、その時点でScheduled Chat runを終了せず、別の探索軸へ移って次のroundを続ける。候補が5本未満でも、その軸で追加の強候補が見込めないなら無理に埋めず、次の軸へ移る。
 
-探索専用workerには固定のround数、固定の総candidate数、固定のsubmission数を設けない。プラットフォーム上限等のrun-level stop条件に達するまで、強い候補を探せる限り探索を続ける。
+探索専用workerには固定のround数、固定の総candidate数、固定のsubmission数、candidate inventoryの目標件数や上限を設けない。プラットフォーム上限等のrun-level stop条件に達するまで、強い候補を探せる限り探索を続ける。
 
 ## Mandatory run loop
 
@@ -20,7 +20,7 @@
 4. canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで重複除外する。
 5. その軸から強いcandidateを **最大5本** だけ1 submissionとして送る。弱い候補で5本を埋めない。
 6. `discovery_stats` にrun_key、round、axis、query summary、candidate数、重複数、next-axis hintを残す。
-7. submissionが5本に達したこと、candidateを1本以上送れたこと、candidate inventoryが50以上になったことをrun終了理由にしない。
+7. submissionが5本に達したこと、candidateを1本以上送れたこと、candidate inventoryが多いことをrun終了理由にしない。
 8. 次の探索軸へ直ちに移り、2へ戻る。
 
 ## GitHub Actions待ちのパイプライン
@@ -69,7 +69,7 @@ queueは重複競合を抑えるためactive discovery jobを原則1件に直列
 - 全候補が重複
 - 低採用率
 - 1 source/APIの失敗
-- candidate inventoryが50以上
+- candidate inventoryが多い
 - 1 submissionで5本送信した
 - 1 discovery jobをcompletedにした
 - Actionsの次job materialization待ち
