@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:14 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **20 / 50** |
-| Research ready | **20** |
+| Candidate在庫（Research ready） | **23 / 50** |
+| Research ready | **23** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -17,7 +17,7 @@
 
 ### 注意事項
 
-- **LOW**: candidate在庫が25未満（現在 20）。能動的な補充が必要。
+- **LOW**: candidate在庫が25未満（現在 23）。能動的な補充が必要。
 
 ## 直近の通常worker
 
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **14** |
+| Discovery完了 | **6** |
+| 新規job | **18** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-cache-admission-restoration-05**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | CXL/NVLink-C2C・remote memory・階層KV prefetch |
-| 評価候補 | **5** |
+| 探索軸 | KV cache admission/replacement・compression/eviction・復元parallelism |
+| 評価候補 | **4** |
 | 重複除外 | **0** |
-| Novel候補 | **5** |
-| Research候補採用 | **2** |
+| Novel候補 | **4** |
+| Research候補採用 | **3** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **26** |
-| 探索評価候補 | **145** |
+| 探索round（stats観測） | **27** |
+| 探索評価候補 | **149** |
 | 重複除外 | **46** |
-| 重複率 | **31.7%** |
-| Novel候補 | **99** |
-| Research候補採用 | **43** |
+| 重複率 | **30.9%** |
+| Novel候補 | **103** |
+| Research候補採用 | **46** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04
 
 ### 24時間ファネル
 
-**探索評価 145 → 重複除外後 99 → Research候補採用 43 → Research完了 44 → Repo収録 44**
+**探索評価 149 → 重複除外後 103 → Research候補採用 46 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -86,6 +86,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
+| KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
@@ -99,11 +100,11 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — KV cache admission/replacement・compression/eviction・復元parallelism: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — CXL/NVLink-C2C・remote memory・階層KV prefetch: 評価 5 / 重複 0 / 採用 2
 - **2026-09-12T23:00:00+09:00** — エージェント型サービング・KV再利用・ツール呼び出し待機: 評価 4 / 重複 0 / 採用 1
 - **2026-09-12T23:00:00+09:00** — MoE expert locality・cache/prefetch・CPU/GPU offload: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — 分離LLMサービング・ネットワーク競合・prefill再配置: 評価 4 / 重複 0 / 採用 1
-- **2026-09-12T22:30:00+09:00** — 地理分散LLM serving・分散最適化: 評価 4 / 重複 2 / 採用 2
 
 ## 最近処理した論文
 
@@ -122,9 +123,9 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-tiered-remote-memory-04
 
 - P90 `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 - P89 `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
+- P88 `arXiv:2608.01657` — Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches
+- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 - P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
-- P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
-- P85 `arXiv:2603.13358` — Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving
 
 ## 7日比較
 
