@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b0ca87eca87a5574",
+  "type": "research",
+  "parent_job_id": "job-7f0434f36cf0ace5",
+  "priority": 82,
+  "canonical_id": "arXiv:2508.06948",
+  "title": "Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud",
+  "source_url": "https://arxiv.org/abs/2508.06948",
+  "paper_path": null,
+  "selection_reason": "複数agentが共有LLMへ集中するworkflowで、agent間依存と要求ごとのlatency特性を使うpriority schedulingとmemory-aware dispatchを組み合わせる。単一requestではなくmulti-agent workflowのend-to-end latencyを最適化するserving systemとしてagentic serving系統を補完する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T15:13:35+00:00",
+  "artifact_transport": "structured_record_v10"
+}
