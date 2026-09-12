@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:19 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **43 / 50** |
-| Research ready | **43** |
+| Candidate在庫（Research ready） | **42 / 50** |
+| Research ready | **42** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **175** |
+| Research completed（累計） | **176** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
 | Maintenance counter | **23 / 24** |
@@ -25,11 +25,11 @@ Run: **2026-09-13T00:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **4** |
+| Research完了 | **5** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **14** |
-| Repo収録 | **4** |
+| Discovery完了 | **8** |
+| 新規job | **15** |
+| Repo収録 | **5** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -50,21 +50,21 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **48** |
-| 探索評価候補 | **230** |
+| 探索round（stats観測） | **49** |
+| 探索評価候補 | **233** |
 | 重複除外 | **72** |
-| 重複率 | **31.3%** |
-| Novel候補 | **158** |
+| 重複率 | **30.9%** |
+| Novel候補 | **161** |
 | Research候補採用 | **73** |
-| Research完了 | **51** |
-| Repo収録 | **51** |
+| Research完了 | **52** |
+| Repo収録 | **52** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 230 → 重複除外後 158 → Research候補採用 73 → Research完了 51 → Repo収録 51**
+**探索評価 233 → 重複除外後 161 → Research候補採用 73 → Research完了 52 → Repo収録 52**
 
 ## 探索効率（直近24時間）
 
@@ -114,6 +114,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
+| 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | multi-tenant prefix安全性・multi-agent workflow prefix scheduling | 2 | 0 | 0 | 0.0% | 0.0% |
 | 動的parallelism再構成・KV state migration | 2 | 0 | 2 | 0.0% | 100.0% |
@@ -121,16 +122,17 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T00:58:47+09:00** — 長文SLO・SSD-backed KV・異種GPUメモリ共有: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — multi-tenant prefix安全性・multi-agent workflow prefix scheduling: 評価 2 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — 動的parallelism再構成・KV state migration: 評価 2 / 重複 0 / 採用 2
 - **2026-09-13T00:58:47+09:00** — 異種GPU/PNM・cold MoE pool・edge KV migration: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T00:58:47+09:00** — SLO-aware scheduling・KV memory hierarchy・動的メモリ回収: 評価 4 / 重複 0 / 採用 1
-- **2026-09-13T00:58:47+09:00** — 分散推論・collective通信・disaggregated電力/runtime: 評価 3 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
 - `arXiv:2608.01657` — Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches
 - `arXiv:2607.10186` — FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference
@@ -138,15 +140,14 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 - `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
 - `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 - `arXiv:2606.29207` — KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding
-- `arXiv:2602.12151` — OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration
 
 ### 次に処理する候補
 
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
-- P88 `arXiv:2606.12688` — M*: A Modular, Extensible, Serving System for Multimodal Models
 - P88 `arXiv:2501.01005` — FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
 - P88 `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
+- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 
 ## 7日比較
 
