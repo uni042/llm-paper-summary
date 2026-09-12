@@ -8,11 +8,13 @@
   "source_url": "https://arxiv.org/abs/2504.02263",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
   "selection_reason": "注意演算とFFN専門家を分離し、それぞれを独立に拡張する大規模MoE serving基盤。arXiv抄録では異種配置、ping-pong型パイプライン、専用多対多通信ライブラリを組み合わせ、GPU当たりスループット最大1.90倍を報告している。新着ではないが、分離型expert parallelismの重要な未収録候補として価値が高い。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T14:05:39+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "completed_at": "2026-09-12T14:54:00+00:00",
+  "artifact_submission": "work-queue/submissions/chat-inbox.json"
 }
