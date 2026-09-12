@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-aa572f94a8ecf5b7",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T08:26:04+09:00",
+    "round": "specialist-recent-system-crosscheck-6",
+    "axis": "直近新着・hierarchical memory・serving runtime横断再確認",
+    "query_summary": "network飽和後に独立した直近新着/階層メモリ/serving runtime横断検索を実施した。Cache-Resident LLM Inference、Apt-Serve、PATTON、Multi-stage Flow Scheduling、CoRunを一次arXiv情報で軽量再評価し、送信直前の最新main系列でいずれも既存jobまたは収録済みpaperと一致した。survey論文や評価中心で本タスクの候補基準を満たさない結果は投入せず、弱い候補で件数を埋めなかった。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.25353",
+      "arXiv:2504.07494",
+      "arXiv:2609.11392",
+      "arXiv:2603.17456",
+      "arXiv:2608.14376"
+    ],
+    "next_axis_hint": "今回runではPIC関連、agent/NVMe state、runtime/reliability/CPU、network/collective、直近新着横断まで実施し、最後の2軸は新規強候補ゼロ。次回scheduled runでは新着差分と新しい引用関係から再開する",
+    "empty_round_reason": "直近新着・階層メモリ・serving runtimeを横断して評価した強候補がすべて既収録または既存jobと重複し、追加の未収録強候補が残らなかった。"
+  }
+}
