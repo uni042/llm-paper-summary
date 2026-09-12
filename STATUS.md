@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:52 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:53 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **120 / 50** |
-| Research ready | **120** |
+| Candidate在庫（Research ready） | **119 / 50** |
+| Research ready | **119** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **191** |
+| Research completed（累計） | **192** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **3 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T04:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
+| Research完了 | **3** |
 | Audit完了 | **0** |
 | Discovery完了 | **0** |
 | 新規job | **0** |
-| Repo収録 | **2** |
+| Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 | 重複率 | **32.8%** |
 | Novel候補 | **310** |
 | Research候補採用 | **166** |
-| Research完了 | **59** |
-| Repo収録 | **59** |
+| Research完了 | **60** |
+| Repo収録 | **60** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 461 → 重複除外後 310 → Research候補採用 166 → Research完了 59 → Repo収録 59**
+**探索評価 461 → 重複除外後 310 → Research候補採用 166 → Research完了 60 → Repo収録 60**
 
 ## 探索効率（直近24時間）
 
@@ -180,6 +180,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 
 ### Research完了
 
+- `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
 - `arXiv:2603.03251` — Speculative Speculative Decoding
 - `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
@@ -187,15 +188,14 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-speculative-serving-8**
 - `arXiv:2609.09643` — UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents
 - `arXiv:2609.09800` — HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution
 - `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
-- `arXiv:2509.19729` — Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
 
 ### 次に処理する候補
 
 - P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
-- P90 `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - P90 `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 - P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 - P90 `arXiv:2606.07665` — AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference
+- P89 `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
 
 ## 7日比較
 
