@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:07:32.213314+00:00",
+  "updated_at": "2026-09-12T18:09:41.127610+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13121,7 +13121,7 @@
     {
       "run_key": "2026-09-13T02:30:00+09:00",
       "first_recorded_at": "2026-09-12T17:37:17.723943+00:00",
-      "last_recorded_at": "2026-09-12T18:07:32.213314+00:00",
+      "last_recorded_at": "2026-09-12T18:09:41.127610+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13130,9 +13130,9 @@
       "counts": {
         "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 0,
-        "new_jobs": 27,
+        "new_jobs": 33,
         "new_papers": 5,
         "fallback_archived": 0
       },
@@ -13281,6 +13281,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34710279748:1",
+          "recorded_at": "2026-09-12T18:09:41.127610+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34710279748",
+            "run_attempt": "1",
+            "source_sha": "7cf7cf3830d053e4fce38fe41e5991f02b02f73f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -13361,6 +13375,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.06664",
           "title": "Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-afb5dd5149abfe18",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -13554,6 +13576,48 @@
           "type": "research",
           "canonical_id": "arXiv:2605.18825",
           "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches"
+        },
+        {
+          "job_id": "job-ddd0b2f6171f2471",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-0662097f667318ec",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.01024",
+          "title": "PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition"
+        },
+        {
+          "job_id": "job-research-4588133b1e6a7663",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11209",
+          "title": "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving"
+        },
+        {
+          "job_id": "job-research-48b35c0e8ad9a890",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09800",
+          "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution"
+        },
+        {
+          "job_id": "job-research-d92e296c1a145dd5",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.02737",
+          "title": "Language Models Can Control Their Own Attention"
+        },
+        {
+          "job_id": "job-research-ea263cc3cccbe57a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.09787",
+          "title": "Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints"
         }
       ],
       "new_paper_ids": [
@@ -13568,12 +13632,13 @@
         ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json",
         ".survey/work-queue/results/20260913T0241JST-discovery-specialist-runtime-network-routing.json",
         ".survey/work-queue/results/20260913T0245JST-discovery-specialist-foundry-backward.json",
-        ".survey/work-queue/results/20260913T0250JST-discovery-specialist-agent-state.json"
+        ".survey/work-queue/results/20260913T0250JST-discovery-specialist-agent-state.json",
+        ".survey/work-queue/results/20260913T0310JST-discovery-specialist-recent-systems-1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
       "paper_active_count_after": 371,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

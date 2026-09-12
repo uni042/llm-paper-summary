@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-48b35c0e8ad9a890",
+  "type": "research",
+  "parent_job_id": "job-afb5dd5149abfe18",
+  "priority": 96,
+  "canonical_id": "arXiv:2609.09800",
+  "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution",
+  "source_url": "https://arxiv.org/abs/2609.09800",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.09800-hbfsim-high-bandwidth-flash-real-gpu-execution.md",
+  "selection_reason": "高帯域フラッシュ（High-Bandwidth Flash; HBF）をHBM直下の新しい容量階層としてLLM推論へ使う際の設計評価を、実GPU上で実際のvLLM/Qwen3実行を保ったままPTX計装と実測デバイスタイミングで模擬するシステム。容量配置・熱・refreshを含む新しいSSD/Flash階層の研究基盤で、重点テーマの外部メモリ階層に直接関係する。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:08:31+00:00",
+  "artifact_transport": "structured_record_v10"
+}

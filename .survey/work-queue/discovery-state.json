@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T17:51:14+00:00",
-  "last_run_key": "2026-09-13T02:29:24+09:00",
-  "last_round": "specialist-agent-state-memory-6",
+  "updated_at": "2026-09-12T18:08:31+00:00",
+  "last_run_key": "2026-09-13T03:02:31+09:00",
+  "last_round": "specialist-recent-flash-attention-adjacent-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1568,6 +1568,27 @@
       ],
       "next_axis_hint": "次はSSD/NVMe・CXL・MoE expert cache/prefetchを重点検索し、identityに既収録のTutti/SwiftCache等を除外しながら未収録を探す",
       "source_submission": "work-queue/submissions/20260913T0250JST-discovery-specialist-agent-state.json"
+    },
+    {
+      "run_key": "2026-09-13T03:02:31+09:00",
+      "round": "specialist-recent-flash-attention-adjacent-1",
+      "axis": "2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving",
+      "query_summary": "直前runのagent state/memory軸を反復せず、2026年9月新着からHigh-Bandwidth Flash、細粒度MoE実行、self-directed attention、RAG context serving、power-constrained cross-site servingを一次arXiv metadata/abstractで軽量評価した。投入直前に最新default branch HEAD、queue、決定論的research job ID、fallback台帳、Library pendingを再確認し、既存jobが確認されたpy-kvcache/CXL/既収録MoE・KV候補を除外した。",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.11744",
+        "arXiv:2609.10790",
+        "arXiv:2609.05228",
+        "arXiv:2609.07966",
+        "arXiv:2609.04895"
+      ],
+      "next_axis_hint": "次はHBF/attentionを離れ、forward/backward citationまたはGPU/network runtime・distributed inferenceの新規2609系へ移る",
+      "source_submission": "work-queue/submissions/20260913T0310JST-discovery-specialist-recent-systems-1.json"
     }
   ],
   "axes": {
@@ -2490,6 +2511,16 @@
       "accepted_count": 5,
       "duplicate_ratio": 0.2857142857142857,
       "next_axis_hint": "次はSSD/NVMe・CXL・MoE expert cache/prefetchを重点検索し、identityに既収録のTutti/SwiftCache等を除外しながら未収録を探す"
+    },
+    "2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving": {
+      "last_run_key": "2026-09-13T03:02:31+09:00",
+      "rounds": 1,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "次はHBF/attentionを離れ、forward/backward citationまたはGPU/network runtime・distributed inferenceの新規2609系へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

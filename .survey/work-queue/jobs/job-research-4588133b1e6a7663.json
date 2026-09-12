@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-4588133b1e6a7663",
+  "type": "research",
+  "parent_job_id": "job-afb5dd5149abfe18",
+  "priority": 78,
+  "canonical_id": "arXiv:2609.11209",
+  "title": "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
+  "source_url": "https://arxiv.org/abs/2609.11209",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11209-reva-reusable-evidence-view-rag-serving.md",
+  "selection_reason": "RAGサービングでqueryごとのonline圧縮を繰り返さず、過去のquery-document-model interactionとtarget generatorのattention traceからdocument-keyed reusable evidence viewを構築する。圧縮online overheadを5.3〜15.6倍削減し40ms未満の追加遅延と報告され、context/KVコストをserving側で再利用する実装指向の候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:08:31+00:00",
+  "artifact_transport": "structured_record_v10"
+}

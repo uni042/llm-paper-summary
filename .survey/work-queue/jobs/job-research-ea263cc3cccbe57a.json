@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-ea263cc3cccbe57a",
+  "type": "research",
+  "parent_job_id": "job-afb5dd5149abfe18",
+  "priority": 80,
+  "canonical_id": "arXiv:2609.09787",
+  "title": "Spatial LLM Workload Shifting Needs Foresight: Model Commitment for AI Data Center Operation under Power Grid Constraints",
+  "source_url": "https://arxiv.org/abs/2609.09787",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.09787-model-commitment-spatial-llm-workload-shifting.md",
+  "selection_reason": "電力制約下の複数データセンター間LLM workload shiftingで、モデルreplicaのload時間を無視した即時routingを避け、model deploymentとcross-site request routingを共同最適化する。prefill/decode latency要求も容量制約へ変換し、電力・配置・servingをcross-layerで扱う隣接systems候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:08:31+00:00",
+  "artifact_transport": "structured_record_v10"
+}
