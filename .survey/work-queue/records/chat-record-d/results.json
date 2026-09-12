@@ -2,24 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2608.07009-20260913-0248-v10-d",
-  "job_id": "job-research-8b43b83e9e79a452",
+  "attempt_id": "attempt-2605.01708-20260913-0405-v10-d",
+  "job_id": "job-research-2466f653227bab25",
   "data": {
-    "overview": "HiSparseの利得は個々のattention stepを高速化することではなく、長文要求一件あたりのdecode HBMをfull contextから固定Bへ縮め、同じGPUへより大きなdecode batchを載せられることから生まれる。DeepSeek-V4-Flashでは2×B200の32K/8K条件でconcurrency 64のgeneration throughputが600から1257 token/sへ2.1倍、decode-onlyでは1511から4308 token/sへ2.9倍になった。Qwen3+Questでは200K inputで111から520 token/sへ4.7倍、GLM-5.1では32Kで624から1919 token/sへ3.1倍となる。LRUはB=2kでmiss率を13.4%に抑え、GLM-5.2のexact layer-wise prefetchはTPOTを13〜15%短縮してhost I/O露出の約半分を隠す。一方、短文・低並行では容量利得がないため追加I/Oは純粋な不利となる。",
+    "overview": "SplitZipはQwen3-32Bの実BF16 KVで1.324倍の完全無損失圧縮を行いながら、圧縮613.3GB/s、展開2181.8GB/sを達成する。圧縮率だけならDFloat11等が高い場合があるが、オンラインKV経路で重要な圧縮側の処理量が桁違いに高い。Mooncake実転送では大きなKVでLlama-3-8Bが最大1.27〜1.32倍、Qwen3-30B-A3Bが1.22〜1.32倍高速化し、SGLangではTTFT最大1.303倍、要求処理量最大1.233倍となる。短い系列では固定費で利得が小さいか軽微な悪化もあり、長文・低速ネットワークほど効果が大きい。",
     "key_results": [
-      {"metric":"DeepSeek-V4-Flash generation throughput","value":"600→1257 tokens/s、2.1倍","baseline":"full-KV SGLang","condition":"2×B200、32K input / 8K output、concurrency 64","interpretation":"HBM容量でbaseline batchが頭打ちになる一方、固定GPU cacheによりHiSparseはより多くのdecode requestを同時に収容する。"},
-      {"metric":"DeepSeek-V4-Flash decode-only throughput","value":"1511→4308 tokens/s、2.9倍","baseline":"full-KV SGLang","condition":"同条件、prefill時間を除外","interpretation":"PD-disaggregated decode poolでもcapacity ceilingを上げる効果が中心であることを示すproxy結果。"},
-      {"metric":"高負荷mean TTFT","value":"829秒→171秒","baseline":"full-KV SGLang","condition":"DeepSeek-V4-Flash、concurrency 64","interpretation":"full-KVではdecode KVがHBMを占有してprefill/new requestがqueueするが、HiSparseはHBM headroomを残しqueueingを緩和する。"},
-      {"metric":"Qwen3+Quest peak generation throughput","value":"32Kで511→1824 tokens/s（3.6倍）、200Kで111→520 tokens/s（4.7倍）","baseline":"full-KV SGLang","condition":"GH200、k=2048","interpretation":"contextが長いほどbaselineのadmissible batchが縮むため、固定B residencyの容量倍率が大きくなる。"},
-      {"metric":"GLM-5.1 peak generation throughput","value":"32Kで624→1919 tokens/s（3.1倍）、160Kで232→680 tokens/s（2.9倍）","baseline":"full-KV SGLang","condition":"8×H200、DSA k=2048","interpretation":"学習済みDSAでもindexerを変えず、KV placementだけで長文throughputを拡張できる。"},
-      {"metric":"Matched TPOT","value":"15.9ms vs 16.0ms","baseline":"full-KV SGLang","condition":"DeepSeek-V4-Flash、concurrency 16","interpretation":"overlapping throughput rangeではhost miss resolutionを含めてもper-token latencyがbaselineとほぼ同等。"},
-      {"metric":"HBM KV budget","value":"約240GB→約25GB、128K一要求13.09GB→0.4GB","baseline":"full-KV residency","condition":"GLM-5.1、B=4096","interpretation":"throughputを増やさない運用でも、同batchを少ないHBMで提供できる。"},
-      {"metric":"LRU miss rate","value":"B=k:30%、B=2k:13.4%、B=4k:6.7%","baseline":"top-k-only staging / FIFO 17.2% / random 16.1%","condition":"GLM-5.1 LongBenchV2 trace、k=2048","interpretation":"sparse selectionの時間局所性をhot cacheとして保持することがhost I/Oを現実的な量へ削減する。"},
-      {"metric":"Exact layer-wise prefetch TPOT","value":"13〜15%短縮","baseline":"synchronous resolve","condition":"GLM-5.2、8×H200、shared selections","interpretation":"将来選択が正確に既知なshared layerでは転送を計算と重ね、同期host missの約半分を隠す。"},
-      {"metric":"Exact prefetch end-to-end throughput","value":"618 baseline / 1515 no-prefetch / 1727 tokens/s exact-prefetch、baseline比2.8倍","baseline":"full-KV / HiSparse no-prefetch","condition":"GLM-5.2、32K/8K","interpretation":"capacity gainにI/O overlapを加えることでno-I/O oracle 2034 tokens/sの85%へ到達する。"}
+      {"metric": "BF16圧縮処理量", "value": "613.3±2.6 GB/s", "baseline": "nvCOMP Bitcomp 341.5±7.1 GB/s", "condition": "H200、Qwen3-32B実KV、256M BF16要素", "interpretation": "最強の比較エンコーダより約1.8倍速く、オンラインプリフィル経路へ圧縮を置きやすい。"},
+      {"metric": "BF16展開処理量", "value": "2181.8±38.5 GB/s", "baseline": "ZipServ GPU kernel 1260.9 GB/s", "condition": "同コーデック評価", "interpretation": "固定長密経路と疎補正により、デコード側で圧縮が新しい支配的ボトルネックになりにくい。"},
+      {"metric": "BF16圧縮率", "value": "1.324×", "baseline": "生BF16", "condition": "Qwen3-32B実KV", "interpretation": "約24%の転送バイト削減を完全無損失で得る。最大圧縮率より処理量を優先した設計である。"},
+      {"metric": "Mooncake KV転送高速化", "value": "Llama-3-8B最大1.27〜1.32×、Qwen3-30B-A3B最大1.22〜1.32×", "baseline": "生BF16転送", "condition": "系列長・batchの八掃引", "interpretation": "ペイロードが大きく帯域支配になるほど、圧縮量がほぼそのまま転送時間短縮へ変わる。"},
+      {"metric": "SGLang TTFT", "value": "batch1で最大1.303×、batch16で最大1.274×高速化", "baseline": "生KV転送", "condition": "Qwen3-32B、長文系列", "interpretation": "コーデック単体だけでなく、実サービングの最初のトークンまでの時間を短縮する。"},
+      {"metric": "SGLang要求処理量", "value": "batch1で最大1.233×、batch16で最大1.206×", "baseline": "生KV転送", "condition": "Qwen3-32B", "interpretation": "転送待ち短縮が次要求の処理余力へ変換される。"},
+      {"metric": "64K転送時間", "value": "1749.3ms→1397.0ms", "baseline": "生BF16 KV", "condition": "Qwen3-32B、batch16、RoCE 4×200G、実効700Gb/s", "interpretation": "長文では総時間の92.9%が圧縮済み転送で、圧縮5.7%、展開1.4%に留まる。"},
+      {"metric": "事前校正の効果", "value": "圧縮613.3 GB/s対動的校正80.7 GB/s、7.6×高速", "baseline": "入力ごとに上位16を再計算", "condition": "同じ圧縮率1.324×、エスケープ0.16%", "interpretation": "オンラインのヒストグラム・上位k探索を外すことが圧縮速度に決定的で、固定表でもデータ集合をまたいで99%以上を覆う。"},
+      {"metric": "FP8 E5M2追加圧縮", "value": "1.14×、圧縮249.7 GB/s、展開564.9 GB/s", "baseline": "生E5M2 KV", "condition": "Qwen3-32B", "interpretation": "既に半サイズのFP8にも、品質交換なしで追加帯域削減を重ねられる。"}
     ],
-    "negative_results": "短文・低concurrencyではfull-KV baselineがHBM capacity wallへ達しないため、HiSparseはthroughputをほぼ増やさずhost I/O overheadだけを加える。同期resolveではmatched low concurrencyで1 tokenあたり約7〜8msのI/Oが露出し、shared-index exact prefetchでも約3ms残る。shared selectionを持たないモデルで前層selectionから次層を推測するspeculative prefetchはhit率をわずかに上げるだけでend-to-end改善が測定できず、余計なhost trafficを発生させた。host DRAM自体も有限で、Grace系のようにhost memoryがaggregate HBMと同程度のplatformではcapacity multiplierが小さい。NVMe/network tierなら容量を増やせるが、より高いlatencyを隠す必要があり本論文では実測していない。",
-    "interpretation": "疎注意は計算需要をkへ縮めても、既存runtimeが『将来選択可能』と『現在HBM resident』を同一視する限りmemory footprintはLctxのままである。HiSparseはselectorが毎層提供する正確なdemand signalをmemory hierarchyのpage fault相当として使うことで、この不整合を解消する。最大4.7倍はkernel単体の高速化ではなく、HBM capacityから解放されたbatch-size効果である点が重要である。またno-I/O oracleがbaseline TPOTと一致するため、管理metadata処理よりhost-device I/Oが今後の主要最適化対象であり、NVLink-C2Cやshared-index model co-designが直接効くことを示す。",
-    "quality_impact": "完全KVをhost tierに保存し、model indexerが選んだ同じKVをattention前にGPUへ復元するため無損失。evictionはGPU cacheからhost-only状態へ移すだけで、論理KVを削除しない。"
+    "negative_results": "小さいKVや短い系列では圧縮・展開カーネルの固定費が相対的に大きく、SGLangでわずかな遅延悪化が生じる場合がある。BF16の圧縮率は指数冗長性だけを利用するため約1.32倍に留まり、可変長・損失圧縮の高い削減率には届かない。上位8の3ビット化は理論上コード幅を減らすが、エスケープ率が0.16%から7.89%へ約50倍増えて圧縮率・展開速度とも悪化する。トークン別・チャネル別の細粒度校正は被覆率を99.90%へわずかに上げる一方、圧縮・展開がサブGB/sへ落ちて実用的でない。固定コード表ではQwen3-32B Vキャッシュの一部初期層で被覆率が98.77%まで下がる。",
+    "interpretation": "SplitZipの設計判断は『圧縮率を最大化する』のではなく、『ネットワーク転送を減らした分よりコーデック費が十分小さい』領域を作ることにある。GPUでは4ビット固定長コードがバイト詰込みと規則的なルックアップに適し、99%以上を密経路へ載せることで例外処理をほぼ消せる。長文ではネットワークが支配するため約1.32倍の圧縮率でも実転送とTTFTへ大きく反映される。一方、短文・高速リンクでは圧縮自体を省く判断が合理的であり、常に有効な万能圧縮ではない。",
+    "quality_impact": "ビット完全一致の無損失方式であり、モデル出力品質の交換はない。BF16では全符号・仮数と全指数を復元し、FP8拡張でも同様に生値を再構成する。"
   }
 }
