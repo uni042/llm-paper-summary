@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **108 / 50** |
-| Research ready | **108** |
+| Candidate在庫（Research ready） | **111 / 50** |
+| Research ready | **111** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **188** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **10** |
+| Discovery完了 | **4** |
+| 新規job | **14** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **86** |
-| 探索評価候補 | **416** |
-| 重複除外 | **127** |
-| 重複率 | **30.5%** |
-| Novel候補 | **289** |
-| Research候補採用 | **151** |
+| 探索round（stats観測） | **87** |
+| 探索評価候補 | **421** |
+| 重複除外 | **129** |
+| 重複率 | **30.6%** |
+| Novel候補 | **292** |
+| Research候補採用 | **154** |
 | Research完了 | **56** |
 | Repo収録 | **56** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 416 → 重複除外後 289 → Research候補採用 151 → Research完了 56 → Repo収録 56**
+**探索評価 421 → 重複除外後 292 → Research候補採用 154 → Research完了 56 → Repo収録 56**
 
 ## 探索効率（直近24時間）
 
@@ -106,6 +106,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision | 5 | 1 | 3 | 20.0% | 60.0% |
 | heterogeneous GPU cluster・multi-agent workflow・routing/placement | 5 | 0 | 3 | 0.0% | 60.0% |
+| heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels | 5 | 2 | 3 | 40.0% | 60.0% |
 | output-length uncertainty・KV reservation・memory-constrained admission/scheduling | 5 | 0 | 1 | 0.0% | 20.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -160,11 +161,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:30:44+09:00** — heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels: 評価 5 / 重複 2 / 採用 3
 - **2026-09-13T03:30:44+09:00** — heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T03:30:44+09:00** — edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision: 評価 5 / 重複 1 / 採用 3
 - **2026-09-13T03:30:44+09:00** — edge/on-device offload・multitasking memory・cloud KV streaming: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T03:02:31+09:00** — GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap: 評価 6 / 重複 1 / 採用 3
-- **2026-09-13T03:02:31+09:00** — DBMS由来cache policy・real-time/best-effort混在QoS scheduling: 評価 9 / 重複 7 / 採用 2
 
 ## 最近処理した論文
 
