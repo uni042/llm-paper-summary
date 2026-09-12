@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 06:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 06:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **126 / 50** |
-| Research ready | **126** |
+| Candidate在庫（Research ready） | **130 / 50** |
+| Research ready | **130** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **203** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T05:30:00+09:00**
 |---|---:|
 | Research完了 | **6** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **17** |
+| Discovery完了 | **8** |
+| 新規job | **22** |
 | Repo収録 | **6** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **109** |
-| 探索評価候補 | **513** |
-| 重複除外 | **179** |
-| 重複率 | **34.9%** |
-| Novel候補 | **334** |
-| Research候補採用 | **184** |
+| 探索round（stats観測） | **110** |
+| 探索評価候補 | **526** |
+| 重複除外 | **188** |
+| 重複率 | **35.7%** |
+| Novel候補 | **338** |
+| Research候補採用 | **188** |
 | Research完了 | **71** |
 | Repo収録 | **71** |
 | Audit完了 | **0** |
@@ -65,13 +65,14 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 24時間ファネル
 
-**探索評価 513 → 重複除外後 334 → Research候補採用 184 → Research完了 71 → Repo収録 71**
+**探索評価 526 → 重複除外後 338 → Research候補採用 188 → Research完了 71 → Repo収録 71**
 
 ## 探索効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
+| agent workflow/context runtime・branch admission・heterogeneous many-core runtime | 13 | 9 | 4 | 69.2% | 30.8% |
 | 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
 | 異種/edge serving・hybrid cache schedulingの過去重要欠落 | 10 | 8 | 2 | 80.0% | 20.0% |
@@ -183,11 +184,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 直近5探索round
 
+- **2026-09-13T06:02:25+09:00** — agent workflow/context runtime・branch admission・heterogeneous many-core runtime: 評価 13 / 重複 9 / 採用 4
 - **2026-09-13T06:02:25+09:00** — near-storage KV処理・動的layer/KV runtime adaptation: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T06:02:25+09:00** — MoE expert prefetch・offload・speculative execution再走査: 評価 6 / 重複 5 / 採用 0
 - **2026-09-13T06:02:25+09:00** — GPU低ビットkernel/runtime・大容量メモリ型chain serving: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T06:02:25+09:00** — 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving: 評価 3 / 重複 0 / 採用 0
-- **2026-09-13T05:28:14+09:00** — LSH・hashing系KVアクセス/eviction/sharing・query expansion: 評価 4 / 重複 0 / 採用 4
 
 ## 最近処理した論文
 
