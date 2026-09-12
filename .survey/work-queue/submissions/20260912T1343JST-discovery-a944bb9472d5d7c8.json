@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a944bb9472d5d7c8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2511.00807",
+      "title": "FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2511.00807",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md",
+      "priority": 78,
+      "reason": "地理的に分散した異種GPUクラスタで、GPU種別ごとの電力・スループット特性、要求長、時刻・地点ごとの炭素強度をまとめて扱い、並列化構成、要求ルーティング、動的GPU周波数制御、最小余裕時間優先スケジューリングを共同最適化する。一次資料は実運用負荷の1時間サービングでエネルギー28.6%削減、炭素排出45.45%削減を報告しつつ、サービス品質目標達成率と公平性も改善している。RAPIDが単一ノード内のプリフィル・デコード間電力再配分を扱うのに対し、本研究は異種・地理分散GPU間の電力効率と公平性を含むルーティング問題を扱うため、既存収録と補完関係が明確である。"
+    }
+  ]
+}
