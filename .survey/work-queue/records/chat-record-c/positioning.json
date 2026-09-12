@@ -2,22 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.12556-20260912-2330-v10-c",
-  "job_id": "job-research-665126267e3c34b7",
+  "attempt_id": "attempt-2608.06007-20260913-0242-v10-c",
+  "job_id": "job-research-c56a9d57e83a480c",
   "data": {
     "limitations": [
-      "性能潜在力の主評価はSK hynix CMMとGen5 SSDを組み合わせた代表プラットフォームであり、提案する最終CXLハイブリッドメモリASICそのものの量産製品評価ではない。ハードウェア制御の実現可能性は別のFPGA試作で示しているため、両結果を一つの完成製品実測と解釈してはいけない。",
-      "現在のFPGA試作はキャッシュミス時帯域が1GB/s未満まで落ち、CMM系が強い競合下でも4〜5GB/sを保つのに対して大きな差がある。著者も回路最適化を継続課題としている。",
-      "遠隔階層の利得はモデル重みや長文接頭辞KVのアクセス順が予測できることに依存する。低予測性で即時アクセスが必要な作業KVと活性値はGPU/CPUへ残すため、すべての推論状態をSSD-backed階層へ移せるわけではない。",
-      "KV量が増える中盤では遠隔装置の読書き競合により先読みが間に合わず、接頭辞命中率がCPUオフロードより低下する区間がある。読出し優先制御でもI/O競合を完全には消せない。",
-      "大粒度512MB級チャンクは帯域効率を高める一方、必要なKVが小さく散在する場合には過剰転送や再計算との選択が生じる。論文は孤立したKVミスをGPU再計算する方針を採る。",
-      "CXLハイブリッドメモリ内部のDRAM容量を増やすとオンチップSRAMメタデータが急増する。32GB→64GBで1TB SSD時のメタデータが15MB→28MBになるため、単純なDRAM拡大にはハードウェア費用がある。",
-      "遠隔経路は200Gbps級のネットワークとRDMAを前提とする。より低速なネットワークやPCIe世代では多段先読みがGPU需要へ追いつかず、同じ性能関係を維持できない可能性がある。"
+      "TensorCastは計算エンジンから状態管理方針を分離するが、エンジン内部の重みやKVを出し入れするInstance AdaptorはvLLM/SGLang等の実装ごとに必要であり、統合コストが完全に消えるわけではない。",
+      "一般抽象がすべての専用方式より常に高速であるとは主張していない。Qwen3-14Bの重み同期ではTP数増加に伴うテンソル切片化費が支配し、加速率が低下する。",
+      "学習チェックポイント、勾配、最適化器状態などへの適用はプログラムモデル上説明されるが、Megatron-LMやDeepSpeedへ統合した大規模学習評価は将来課題である。",
+      "Global Storeはデータ面に入らないものの、Artifact索引、リース、ワーカー状態の制御面を担う。極端なクラスタ規模でのメタデータ量、リース再調停、障害嵐に対する拡張性は主要評価ではない。",
+      "要求再均衡の大幅TTFT改善はOpenHands/SWE-Gym由来の多ターンエージェント負荷で得たもので、単発チャットや低並行環境では状態移送の費用に対して利得が小さい可能性がある。",
+      "TensorCastはCPU/GPU/ローカルストレージを扱うが、論文の主要性能比較でSSDをKVの主階層として長時間運用した耐久性・書込み増幅・ランダムI/Oを評価したわけではない。"
     ],
-    "differences": "従来のCPUオフロードはGPUから溢れたKVをバイトアドレス可能なDRAMへ置けるが、CPUソケット・メモリチャネルの容量上限を越えられない。ローカルNVMeやNVMe-oFは容量を増やせる一方、ブロックストレージとしてのI/O経路、DPU/JBOF管理、読書き競合、細粒度アクセス遅延を抱える。ITMEはNAND-backed CXL装置を遠隔メモリとして公開し、装置内DRAMをハードウェア管理キャッシュとして使うため、上位ソフトウェアからはストレージよりメモリに近い抽象を提供する。FlexGenやLLM in a Flashなどの単一ホスト階層化と比べても、共有遠隔T3.5を複数GPUサーバから利用する点が異なる。MooncakeやLMCacheのような共有KV層とは目的が近いが、ITMEは共有状態層のバックエンドをDPU中心のストレージサービスではなくCXLハイブリッドメモリとしてハードウェア化し、アプリケーション指示先読みでNAND遅延を隠す。",
-    "implementation_status": "vLLM 0.17.0へITMEのKV管理・I/O制御・先読みを統合したソフトウェア実装と、Agilex 7 FPGA上のCXLハイブリッドメモリ機能試作を持つ。さらにSK hynix CMMとGen5 NVMeを使った性能潜在力評価系を構築している。したがってシミュレーションのみではなく実機検証を含むが、最終提案ハードウェアの製品ASIC完成版ではない。公式コード公開URLは一次資料から確認できない。",
-    "research_positioning": "オフロード／階層メモリ系統の中でもSSD/NVMeを主対象とするハードウェア・ソフトウェア協調研究である。重要な点は『SSDへ何を置くか』だけでなく、GPU計算から見た将来アクセス順を装置へ通知し、NAND→DRAM→RDMA→CPU→GPUの各段階を先回りさせることにある。既存のSSDオフロード研究へは、装置内部DRAMキャッシュの明示制御、読出し優先I/O、順次追記による書込み増幅抑制、遠隔共有容量という設計軸を追加する。SSDをさらに活用する研究案では、ITMEのように『再計算可能な書込みは遅らせ、不可避な読出しを守る』優先度設計や、推論スケジューラが将来層・次ターンを装置へ通知する協調方式が有力な比較対象になる。",
-    "related_work": ["FlexGen", "LLM in a Flash", "PowerInfer", "vLLM", "InfiniGen", "LMCache", "Mooncake", "Pensieve", "DistServe", "CXL-ANNS", "TPP", "DirectCXL", "Gimbal", "LEED", "Scalio"],
-    "audit_notes": "arXiv:2606.12556v2の全文を確認し、推論メモリ階層、CXLハイブリッドメモリ内部構成、4KB/16-way DRAMキャッシュ、SRAMメタデータ容量、4ch DRAM+2ch SSD帯域、書込み耐久性、ユーザー先読みAPI、CPU二重ステージング、512MB級KVチャンク、読出し優先I/O、多段DMA、遠隔管理器、ShareGPT/Mooncake評価、A100+CMM系、Agilex 7 FPGA試作、CPU容量超過時35.7%改善、70B重み1〜5%差、FPGAミス時の弱点まで確認した。参考文献は46件で、明示arXiv識別子を正規化した。"
+    "differences": "Mooncake、LMCache、HiCacheなどはKVキャッシュの保存・共有・転送に特化し、InstantTensorやBlitzScale等は重みロード・起動に特化する。TensorCastはそれぞれの専用方針を置き換える単一アルゴリズムではなく、重みとKVを同じArtifact/Operation/Planで扱える共通状態管理層を置く。RayやSparkのような分散計算基盤が『どの計算タスクをどこで実行するか』を中心にするのに対し、TensorCastは『どの論理テンソルをどこに置き、どう変換・実体化するか』を第一級にする。ByteCheckpointのようなチェックポイント再分割システムともライフサイクル操作は共通するが、TensorCastは推論エンジンとのInstance Adaptorと要求ルータから使うSignalを含め、状態管理方針を複数コンポーネントへまたがって合成できる点を狙う。",
+    "implementation_status": "公式実装は `tensorcast-ai/tensorcast` として公開されている。論文記載では分散ランタイム約160K行のC++、SDK約95K行のPythonで、gRPC、DuckDB、CUDA IPC、RDMA、mTCP系転送を用いる。vLLMの重み実体化とSGLangの重み同期・HiCache・要求ルータへ実際に統合して評価している。",
+    "research_positioning": "LLMサービング・分散状態管理の系統に属し、個別最適化アルゴリズムより一段下の基盤抽象を提案するシステム研究である。リポジトリ内ではKVキャッシュ階層、モデル重み配布、分離サービング、弾力的インスタンス管理を横断する位置にあり、今後の研究を比較する際は『専用方式より何倍速いか』だけでなく、同じ状態プリミティブを別用途へ再利用できる範囲、エンジン統合面の狭さ、データ面が中央制御を迂回できるか、複数状態を一つの方針へ合成できるかを見る必要がある。SSD/NVMe研究との関係では、ローカルストレージをテンソルプールの一階層として含めるため、重みやKVのCPU/SSD配置方針を上位Planから変更できる可能性があるが、SSD固有I/O最適化そのものは本論文の中心貢献ではない。",
+    "related_work": ["Mooncake", "LMCache", "SGLang HiCache", "ByteCheckpoint", "InstantTensor", "BlitzScale", "vLLM", "SGLang", "Ray", "Vineyard"],
+    "audit_notes": "arXiv:2608.06007v1のHTML全文を確認し、TaaS要件、Artifact/Operation/Plan/Signal、Caller-Workerモデル、分散テンソルプール、シャードホームとリース、直接データ転送、C++/Python実装、vLLM/SGLang統合、重み実体化・同期・KV管理・要求ルータの全評価を確認した。主カテゴリはcs.DC、横断登録なし。公式コード `https://github.com/tensorcast-ai/tensorcast` も確認した。参考文献節は88件で、明示的なarXiv識別子の一部をmetadataへ正規化した。"
   }
 }
