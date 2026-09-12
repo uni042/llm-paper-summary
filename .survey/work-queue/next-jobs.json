@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 168,
+      "completed": 169,
       "superseded": 44,
       "deferred": 3,
-      "ready": 35
+      "ready": 34
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-cab6f983bc0c93e3",
-      "type": "research",
-      "lane": null,
-      "priority": 91,
-      "canonical_id": "arXiv:2606.29207",
-      "title": "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding",
-      "source_url": "https://arxiv.org/abs/2606.29207",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29207-kernelflume-elastic-core-attention-scaling.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-665126267e3c34b7",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-cd30ed212ad4a8ba",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2512.14946",
+      "title": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.14946",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-64a5ee9e98e34139",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T14:26:14+00:00"
+  "generated_at": "2026-09-12T14:43:15+00:00"
 }

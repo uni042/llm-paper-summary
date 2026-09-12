@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:26:57.280999+00:00",
+  "updated_at": "2026-09-12T14:44:28.159530+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -11332,6 +11332,60 @@
       "paper_active_count_before": 354,
       "paper_active_count_after": 357,
       "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-12T23:30:00+09:00",
+      "first_recorded_at": "2026-09-12T14:44:28.159530+00:00",
+      "last_recorded_at": "2026-09-12T14:44:28.159530+00:00",
+      "signals": [
+        "research_completed",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 1,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34700080105:1",
+          "recorded_at": "2026-09-12T14:44:28.159530+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34700080105",
+            "run_attempt": "1",
+            "source_sha": "c03499e5a6701d03ed51a5a554a13b7f77acffb3"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-cab6f983bc0c93e3",
+          "type": "research",
+          "canonical_id": "arXiv:2606.29207",
+          "title": "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [
+        "arXiv:2606.29207"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 357,
+      "paper_active_count_after": 358,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
