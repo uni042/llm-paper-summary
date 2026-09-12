@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:58:10+00:00",
+  "updated_at": "2026-09-12T17:00:49+00:00",
   "last_run_key": "2026-09-13T01:55:54+09:00",
-  "last_round": "specialist-moe-runtime-placement-1",
+  "last_round": "specialist-cxl-shared-memory-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1317,6 +1317,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はMoEを離れ、CXL共有メモリ/ラック内KV転送またはストレージ階層・GPU主導I/Oの隣接軸へ移る",
       "source_submission": "work-queue/submissions/20260913T0159JST-discovery-fef140cd0cd0ddc9.json"
+    },
+    {
+      "run_key": "2026-09-13T01:55:54+09:00",
+      "round": "specialist-cxl-shared-memory-2",
+      "axis": "CXL共有メモリ・ラック内KV転送・Superchip階層メモリ",
+      "query_summary": "MoE roundの後、CXL共有KV、Kubernetes統合CXL階層、Grace Hopper統合メモリへ探索軸を変更した。関連候補5件を軽量評価し、最新mainのidentity/queue/jobsとfallback ledger、Library pendingを再確認した結果、既収録のHyMCacheとITMEを除外し3候補を投入した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.4,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.18141",
+        "arXiv:2606.12556"
+      ],
+      "next_axis_hint": "次はCXL/階層メモリを離れ、分離サービングのネットワークflow scheduling・prefill deflection・専用interconnectへ移る",
+      "source_submission": "work-queue/submissions/20260913T0201JST-discovery-3b02629fd6ced942.json"
     }
   ],
   "axes": {
@@ -2079,6 +2097,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はMoEを離れ、CXL共有メモリ/ラック内KV転送またはストレージ階層・GPU主導I/Oの隣接軸へ移る"
+    },
+    "CXL共有メモリ・ラック内KV転送・Superchip階層メモリ": {
+      "last_run_key": "2026-09-13T01:55:54+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.4,
+      "next_axis_hint": "次はCXL/階層メモリを離れ、分離サービングのネットワークflow scheduling・prefill deflection・専用interconnectへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
