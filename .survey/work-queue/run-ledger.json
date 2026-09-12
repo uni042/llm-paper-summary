@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T19:53:19.431693+00:00",
+  "updated_at": "2026-09-12T20:06:43.407872+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,17 +14622,18 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T19:53:19.431693+00:00",
+      "last_recorded_at": "2026-09-12T20:06:43.407872+00:00",
       "signals": [
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 1,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -14681,6 +14682,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34716069843:1",
+          "recorded_at": "2026-09-12T20:06:43.407872+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34716069843",
+            "run_attempt": "1",
+            "source_sha": "a015f7feca46f4a8af908f87d9d1753884f6a722"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14707,19 +14722,37 @@
           "title": "Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-03e3bcb4c91dd30f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
-      "new_jobs": [],
+      "new_jobs": [
+        {
+          "job_id": "job-bd45d56f5e105855",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [
         "arXiv:2603.03251",
         "arXiv:2606.17949",
         "arXiv:2605.00254"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json"
+      ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
       "paper_active_count_after": 381,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

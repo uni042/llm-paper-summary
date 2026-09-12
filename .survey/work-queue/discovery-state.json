@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T19:23:38+00:00",
-  "last_run_key": "2026-09-13T04:00:16+09:00",
-  "last_round": "specialist-speculative-serving-8",
+  "updated_at": "2026-09-12T20:05:53+00:00",
+  "last_run_key": "2026-09-13T05:00:25+09:00",
+  "last_round": "specialist-kv-reuse-eviction-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "軽量評価した3候補はwrite直前の正本再重複判定ですべて既収録と確認されたため。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1922,6 +1922,25 @@
       ],
       "next_axis_hint": "2026年9月新着のserving systemsを再走査し、その後forward citation・関連実装から未収録候補を確認する",
       "source_submission": "work-queue/submissions/20260913T0423JST-discovery-2d36b87fa9ca1a41.json"
+    },
+    {
+      "run_key": "2026-09-13T05:00:25+09:00",
+      "round": "specialist-kv-reuse-eviction-1",
+      "axis": "2026-09新着・KVキャッシュ圧縮／再利用",
+      "query_summary": "9月新着からデコード時KV eviction、長期推論KV圧縮、非prefix KV再利用を軽量評価した。InertiaKV、BeaconKV、KVShareArenaはいずれも一次資料を確認後、決定論的research job IDで既存jobを再照合した結果、すでに正本へ収録済みだったため候補投入から除外した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.03515",
+        "arXiv:2609.04971",
+        "arXiv:2609.10266"
+      ],
+      "next_axis_hint": "エージェントサンドボックス／OSメモリ圧縮など、LLM待ち時間を利用する隣接システム軸へ切り替える",
+      "source_submission": "work-queue/submissions/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json"
     }
   ],
   "axes": {
@@ -3034,6 +3053,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.2857142857142857,
       "next_axis_hint": "2026年9月新着のserving systemsを再走査し、その後forward citation・関連実装から未収録候補を確認する"
+    },
+    "2026-09新着・KVキャッシュ圧縮／再利用": {
+      "last_run_key": "2026-09-13T05:00:25+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "エージェントサンドボックス／OSメモリ圧縮など、LLM待ち時間を利用する隣接システム軸へ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
