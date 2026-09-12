@@ -37,7 +37,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Dashboard regression tests
-        run: python -m unittest .survey/tests/test_status_dashboard.py .survey/tests/test_dashboard_history.py
+        run: python -m unittest discover -s .survey/tests -p 'test_*dashboard*.py'
       - name: Render dashboard in check mode
         run: python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
 
