@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2ffa05ee82127e80",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11744",
+      "title": "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
+      "source_url": "https://arxiv.org/abs/2609.11744",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.11744-py-kvcache-nvme-vllm-external-cache.md",
+      "priority": 94,
+      "reason": "GPU/CPU/NVMeの外部KV cacheで再計算と読出しのbreak-evenを実測し、vLLM KV Offload connectorとして非同期direct I/O、bounded staging、scheduler-aware preloadingを実装。80k tokenではdisk loadがLMCache比2.0倍、preloading単独で1.34倍、GPU/CPU/disk併用でもLMCache比1.23倍と報告する。SSD/NVMe活用を実システムのadmission判断まで含めて扱うため重点テーマとの適合度が非常に高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.11392",
+      "title": "PATTON: Enabling Commodity PIM for Production LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11392",
+      "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2609.11392-patton-commodity-pim-kv-runtime.md",
+      "priority": 90,
+      "reason": "production serving engineの動的KV block lifecycleをcommodity PIMへ接続するruntime。Key/Valueの階層granule allocationとValue書込み用Commit ZoneでGEMV効率・single-token write・容量利用の衝突を解き、attention実行とruntime起因prefill再計算で平均1.95倍高速化・4.83倍energy efficiencyを報告。PIM計算器自体を改造せずvLLM相当のKV hit率を維持する点が実装上重要。"
+    },
+    {
+      "canonical_id": "arXiv:2606.26666",
+      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2606.26666",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.26666-persistentkv-page-aware-decode-scheduling.md",
+      "priority": 84,
+      "reason": "paged attentionで単一kernel最適化だけでなくpage-aware work assignmentとdecode schedulingを共同設計する。FlashInferとPersistentKVのsequence splitting/workqueueを稼働条件で切り替える校正済みadaptive policyにより、RTX 3060のheld-out traceでB8長文 workloadを1.063〜1.265倍、B1を1.399倍高速化。commodity GPU上の長文decode runtime設計として収録価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2602.11521",
+      "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
+      "source_url": "https://arxiv.org/abs/2602.11521",
+      "paper_path": "papers/inference/05-memory-architecture-near-data/2026-2602.11521-pam-processing-across-memory-hierarchy.md",
+      "priority": 83,
+      "reason": "帯域と容量を同時に満たせない単一PIM階層を避け、異種PIM memory device間でKV tokenを局所性に応じて配置し、fine-grained parallel attentionとonline migration/schedulingを行うKV-centric serving system。SSD/CXL/GPU階層とは異なる『階層全体で計算する』設計点で、近傍計算と階層メモリの橋渡しとなる基礎候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T01:55:54+09:00",
+    "round": "specialist-nvme-pim-page-runtime-4",
+    "axis": "NVMe外部KV・PIM runtime・page-aware decode scheduling",
+    "query_summary": "network/disaggregation roundから離れ、2026年9月新着のNVMe外部KV cacheとcommodity PIM runtime、およびpage-aware decode runtime、異種PIM階層へ軸を変更した。一次arXiv abstract/metadataで軽量評価し、最新mainで4件のcanonical IDがidentity/job/submissionに存在しないことを再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はKV/メモリ階層を離れ、forward citationまたは既存重要serving論文のbackward referenceから未収録基礎システムを探す",
+    "empty_round_reason": null
+  }
+}
