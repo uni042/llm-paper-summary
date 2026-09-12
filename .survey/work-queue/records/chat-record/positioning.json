@@ -2,21 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2509.19729-20260913-0315-v10-a",
-  "job_id": "job-research-0adc1c376ecfc370",
+  "attempt_id": "attempt-2501.14417-20260913-0340-v10-a",
+  "job_id": "job-research-5f9a998b042661ba",
   "data": {
     "limitations": [
-      "重みパディングは将来取り得るTP分割境界を事前に知ることを前提とし、モデルによって0〜14%の追加重みメモリを消費する。GPUメモリが極端に逼迫する構成では、この静的余白が利用可能KV容量を減らす。",
-      "主評価は8 GPUの単一H20/A100ノードであり、ノード間ネットワークを跨ぐTP変換、異種GPU混在、低速相互接続でのAll-to-All重畳は評価していない。",
-      "端から端までの主結果はQwen2.5-32Bと実運用トレースに基づく。Llama/Qwen他モデルでは変換マイクロベンチを広く示すが、全モデルで1.75〜6.57倍の処理量改善を保証する評価ではない。",
-      "KunServeは公式実装が未公開のため論文記述に基づく再現実装との比較であり、元実装との差が比較結果へ影響する可能性がある。",
-      "将来の長文到着を予測せず現在負荷だけでTPを上げ下げする。急な長文バーストでは変換が追いつくまで待ちが発生し、長文がすぐ途切れる場合は不要な変換を行う可能性がある。",
-      "TP変換の中心設計はKVヘッド分割とFFN重み分割を前提とする。ランクごとに異なる層を持つパイプライン並列や、より複雑な複合並列の状態変換へそのまま一般化できるわけではない。"
+      "実装・評価はHuawei Ascend NPUとHuawei Cloud内部基盤に強く依存し、FlowServe全体の公開コードやNVIDIA GPU上の同一実装比較はない。高水準設計は移植可能でもHCCS/HCCL/共有アドレス空間など低水準機構はそのまま移植できない。",
+      "NPU-forkは同じモデルを既に保持する稼働TEが必要で、ゼロから最初の一台を起動するコードスタートには利用できない。予測ミスでDRAM先読みも外れた場合はSSD読込みへ戻る。",
+      "PD-awareスケジューラはオフラインで作る性能ヒートマップと出力長予測モデルに依存する。モデル、ハードウェア、要求分布が変われば再プロファイルが必要で、極端な高RPSではPD分離側過負荷によりRound Robinより悪化し得る。",
+      "RTCはKVを再計算可能なソフト状態として扱い、強い分散整合性プロトコルを持たない。TE/JE障害時は冗長系へ迂回しつつ失われたキャッシュを再計算し、論文の復旧目標は5分以内である。",
+      "論文はファインチューニング・エージェント・マルチモーダルも共通基盤に載るとするが、詳細な性能評価はモデルサービング中心である。共通抽象が異種ワークロード間の干渉をどこまで抑えるかは十分定量化されていない。",
+      "SuperPodの共有アドレス空間と約200GB/s片方向網は通常のスケールアウトGPUクラスタより強い前提で、数百NPU MoE向け設計の利得を一般的なEthernet/RoCEクラスタへそのまま外挿できない。"
     ],
-    "differences": "KunServeは主にパイプライン並列をオンデマンドで拡大し、LoongServeはシーケンス並列を伸縮させる。Amoebaは運用上最も一般的とするテンソル並列そのものを実行中に変更し、KVヘッドとFFN重みの物理所有を変換する。Seesawもモデル再シャーディングを扱うが、CPU共有メモリや重い状態移動を伴う変換費が大きく、AmoebaはGPU仮想メモリとページ境界を利用してコピーをほぼ外す。ReMPは後続研究としてTPとPP構成をより一般的に切り替え、CPU共有重み、通信群スナップショット、二次元KV移送を組み合わせる一方、AmoebaはTP固有のKVヘッド・FFNページ配置へ深く最適化する。Flying Servingはデータ並列とTPをオンラインで切り替えるため、変換対象と状態移動の境界が異なる。",
-    "implementation_status": "CUDA仮想メモリ管理、KVストライド変更、重みパディング、All-to-All重畳、変換対応スケジューラを統合した研究プロトタイプでH20/A100実機評価を行う。論文はDAC 2026採録版として公開されているが、2026-09-13時点で公式コード公開URLは確認できない。",
-    "research_positioning": "LLMサービングの動的並列化・再構成系統に属する。特に『文脈長が長い時だけ多GPUのメモリが必要だが、普段から高TPへ固定すると総処理量を失う』という実運用上の交換条件を、並列度そのものをオンラインで変えることで解く。新規性はスケジューリングだけでなく、TP変換を実用化するためKVとFFN重みの物理レイアウトを将来の再分割へ合わせる点にある。SSD/NVMeは直接使わないが、GPU仮想メモリページを所有単位として状態を移動・解放する設計は、階層メモリ上で重みやKVを再配置する研究とも接点がある。",
-    "related_work": ["KunServe", "LoongServe", "Seesaw", "ReMP", "Flying Serving", "vLLM", "PagedAttention"],
-    "audit_notes": "arXiv:2509.19729v2とDAC 2026本文を確認した。ジョブ生成時点の旧題は `Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference` だったが、v2では `Amoeba: Runtime Tensor Parallel Transformation for LLM Inference Services` へ改題されているため、canonical IDを維持したまま最新題名・DAC DOI 10.1145/3770743.3803989を採用した。v1は2025-09-24、v2は2026-04-22。主カテゴリcs.DC、横断登録なし。PDF参考文献24件を確認し、識別可能なarXiv ID・DOIをmetadataへ正規化した。公式コードURLは確認できない。"
+    "differences": "ServerlessLLMやBlitzScaleは主にモデルロード・オートスケール遅延を中心に最適化するのに対し、DeepServeはクラウド抽象、ローカル推論エンジン、KV状態、PD配置、増設経路を一つの本番システムとして統合する。vLLM/SGLangは単一または分散サービングエンジンの局所機構を提供するが、DeepServeのJE/TE層は学習後処理まで含むサーバーレス資源管理を担う。MemServeやMooncakeはKV中心の分散メモリ・転送を強く扱い、DeepServeのRTC/DistFlowは同種の機能をAscend NPUとSuperPod共有メモリへ統合する。DistServe/Splitwise等はPD分離を基本構成とするが、DeepServeは要求形状と負荷に応じてPD分離と同居を共存させる点が異なる。最終USENIX版はarXiv初版DeepFlowからDeepServeへ改題され、SuperPod規模のMoE適応を含む。",
+    "implementation_status": "Huawei Cloud内部の本番システムとして1年以上運用され、FlowServeは主にPython、RTC/DistFlowはC++で実装される。Ascend 910B/910CとCloudMatrix384へ対応する。USENIX ATC 2025論文・arXiv・著者情報を確認したが、2026-09-13時点でDeepServe/FlowServe全体を再現可能な公式オープンソースリポジトリは確認できない。関連要素としてAIBrix、KServe、Dynamo等の外部基盤を比較対象に挙げるがDeepServe実装そのものではない。",
+    "research_positioning": "LLMサービングのスケジューリング・分離・サーバーレス実行系統に属する。研究価値は、単一最適化の最高倍率より、モデル重みとKVキャッシュという二種類の大容量状態をサービングエンジン・クラスタ制御の両層で一貫して扱い、実運用規模で高速増設と状態付き分散配置を結び付けた点にある。特にSSD→DRAM→NPUというローカルロードと、稼働NPU→新NPUというNPU-forkを選択できるため、階層メモリ・外部ストレージ研究から見ても、どの階層に状態を事前配置すべきかという実践的な比較基盤になる。SuperPod版ではグローバル共有アドレス空間を利用するため、将来のCXLや分離メモリ型サービングとの接点も大きい。",
+    "related_work": ["ServerlessLLM", "BlitzScale", "vLLM", "SGLang", "MemServe", "Mooncake", "DistServe", "Splitwise", "Llumnix", "NanoFlow"],
+    "audit_notes": "arXiv:2501.14417初版は `DeepFlow: Serverless Large Language Model Serving at Scale` として2025-01-24公開。最終査読版は `DeepServe: Serverless Large Language Model Serving at Scale` と改題され、2025 USENIX Annual Technical Conferenceに掲載された。USENIX最終論文17ページを導入・設計・評価・議論・参考文献まで確認し、FlowServe、RTC、DistFlow、PD-aware scheduling、pre-warm、DRAM preload、NPU-fork、CloudMatrix384適応を反映した。参考文献は52件。主カテゴリcs.DC、横断登録なし。"
   }
 }
