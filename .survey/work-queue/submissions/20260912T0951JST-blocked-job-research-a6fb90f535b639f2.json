@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "job_id": "job-research-a6fb90f535b639f2",
+  "status": "blocked",
+  "reason": "一次資料全文をこのScheduled Chat実行環境から取得できないためblocked。arXiv:2606.30391のabsメタデータ・抄録は検索経由で確認できたが、arXivのabs/pdf直接取得はいずれもDisabledErrorとなり、コンテナからのHTTPS取得もDNS解決不能だった。alphaXiv等の二次要約には全文由来の情報があるが、queue-v10の『一次資料本文を最後まで読む。抄録・検索断片から欠落情報を推測しない』要件を満たさないため、二次資料だけでcompletedにはしない。再試行時はarXiv PDF/HTMLまたは著者提供の一次全文を取得してから研究を再開する。"
+}
