@@ -13,11 +13,13 @@
 - discoveryで新規候補が得られたら、可能なら同じrun内でresearchまで進む。
 - researchまたはcheckpoint後に再びストック0になったら、再度discoveryへ戻る。
 
-## 2. discovery新規0・5件到達は停止条件ではない
+## 2. discovery新規0・5件到達・在庫増加は停止条件ではない
 
 1探索ラウンドで候補が全重複、弱候補のみ、または新規0件でも通常runを終了しない。`discovery-state.json`を参照し、直前と異なる探索軸・検索語・引用関係・関連実装・隣接テーマへ切り替えて次の探索ラウンドを行う。
 
-1 discovery submissionのcandidate上限5本は **transport上の1バッチ上限** であり、通常run全体のdiscovery上限ではない。5本送ったこと、1 discovery jobがcompletedになったこと、candidate inventoryがsoft target 50へ到達したことだけを理由に探索を終了しない。探索専用workerと同様、利用可能な実行時間の中で有望な独立探索軸が残る限り別roundへ進む。
+1 discovery submissionのcandidate上限5本は **transport上の1バッチ上限** であり、通常run全体のdiscovery上限ではない。5本送ったこと、1 discovery jobがcompletedになったこと、candidate inventoryが多いことだけを理由に探索を終了しない。探索を行うフェーズでは、利用可能な実行時間の中で有望な独立探索軸が残る限り別roundへ進む。
+
+ただし通常論文workerは探索専用workerと役割が異なる。`candidate-buffer-policy.md` の low watermark 以上、すなわちcandidate在庫が25本以上あり、処理可能なresearch jobが存在する場合は、広範なdiscoveryよりpriority順の全文精読、5-slot structured record作成、必要なauditを優先する。低コストな新着確認や明らかに高価値な候補の追加は許可するが、十分なresearch backlogがある状態で通常workerが探索へ時間を使い過ぎてはならない。
 
 既収録論文はarXiv ID、DOI、OpenReview ID、正規化タイトル等で詳細評価前に先行除外する。検索側で除外できない場合は広めに候補を取得して軽量重複除去し、未収録候補だけを詳細評価する。
 
@@ -47,11 +49,11 @@ research / audit / discoveryの完全なlogical payloadをGitHubへ送信済み�
 
 通常論文workerは原則として次を繰り返す。
 
-1. candidate在庫水位と最新queue/backlogを確認する。
+1. candidate在庫水位と最新queue/backlogを確認する。candidate在庫が25本以上でactionable researchがある場合はresearchを先に選ぶ。
 2. actionable readyをpriority順に処理する。表示上位がcheckpoint済みなら表示外readyも確認する。
 3. 完全payloadを送信またはcheckpointしたら、Actions terminal待ちをせず次の独立jobへ進む。
 4. actionable readyがなければspillover candidateを処理する。
-5. 論文ストックが0、またはcandidate補充が必要ならdiscoveryする。
+5. 論文ストックが0、またはcandidate在庫がlow watermark未満で補充が必要ならdiscoveryする。25本以上でresearch backlogがある場合、広範なdiscoveryは原則として探索専用workerへ任せる。
 6. discoveryで候補を得たらresearchし、必要ならauditする。1 submission 5件はbatch上限として扱い、必要なら別探索軸で続ける。
 7. job完了、blocked化、checkpoint、discovery各ラウンド後にqueue/backlog/discovery stateを再取得する。
 8. 次の独立作業があれば1へ戻る。
@@ -68,7 +70,7 @@ research / audit / discoveryの完全なlogical payloadをGitHubへ送信済み�
 - GitHub direct writeとChatGPT Libraryの両方で、必要な成果またはoffline seedを耐久保存できない。
 - `discovery-exhaustive-run-policy.md` に従って materially distinct な探索軸・source・citation方向・隣接テーマを十分に回しても、利用可能な探索手段・一次資料アクセスの範囲で独立作業を合理的に生成できない。
 
-最後の条件は単一ラウンドの新規0件、全重複、低採用率、5件送信、soft target到達では満たさない。探索軸変更・引用展開・隣接テーマ展開を試した後にのみ検討する。
+最後の条件は単一ラウンドの新規0件、全重複、低採用率、5件送信、candidate在庫が多いことでは満たさない。探索軸変更・引用展開・隣接テーマ展開を試した後にのみ検討する。
 
 終了直前には `continuation-policy.json` を評価し、可能なら `.survey/scripts/continuation_gate.py` を使う。`CONTINUE` なら最終応答だけを出して終了せず、同じrunで次の独立作業へ進む。
 
