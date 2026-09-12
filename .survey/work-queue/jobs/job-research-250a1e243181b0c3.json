@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-250a1e243181b0c3",
+  "type": "research",
+  "parent_job_id": "job-376c29b504bdcaf6",
+  "priority": 77,
+  "canonical_id": "arXiv:2507.17120",
+  "title": "BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving",
+  "source_url": "https://arxiv.org/abs/2507.17120",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md",
+  "selection_reason": "sequence lengthごとのbucketを動的にsplit/mergeし、batch sizeとpriorityを調整してpadding・OOM・SLO違反を抑えるserving scheduler。UELLM比最大3.58倍throughput、DistServe比で80% SLO attainment時に1.93倍request loadを処理可能と報告。新規性は他3件より限定的だが、動的batching系統の比較対象として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T17:07:20+00:00",
+  "artifact_transport": "structured_record_v10"
+}
