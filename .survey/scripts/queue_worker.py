@@ -498,6 +498,18 @@ def process_submissions(st: dict):
                 })
                 write_json(rp, result)
                 continue
+            if sub.get("operation") == "record_discovery_stats":
+                accepted_count = sub.get("accepted_count")
+                if isinstance(accepted_count, bool) or not isinstance(accepted_count, int) or accepted_count < 0:
+                    raise ValueError("record_discovery_stats requires non-negative integer accepted_count")
+                changed = record_discovery_stats(sub, accepted_count=accepted_count)
+                result.update({
+                    "ok": True,
+                    "operation": "record_discovery_stats",
+                    "stats_recorded": changed,
+                })
+                write_json(rp, result)
+                continue
             jid = sub.get("job_id")
             if not jid:
                 raise ValueError("job_id required")
