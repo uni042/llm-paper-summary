@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:41:00+00:00",
+  "updated_at": "2026-09-12T18:44:53+00:00",
   "last_run_key": "2026-09-13T03:30:44+09:00",
-  "last_round": "specialist-speculative-serving-config-2",
+  "last_round": "specialist-cloud-autoscaling-multimodel-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1720,6 +1720,26 @@
       ],
       "next_axis_hint": "次は投機的復号と配備構成を離れ、forward/backward citationまたはストレージ・OS由来のstate placementとI/O schedulingを確認する",
       "source_submission": "work-queue/submissions/20260913T0341JST-discovery-specialist-speculative-serving-2.json"
+    },
+    {
+      "run_key": "2026-09-13T03:30:44+09:00",
+      "round": "specialist-cloud-autoscaling-multimodel-3",
+      "axis": "heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling",
+      "query_summary": "投機的復号・混在精度軸から離れ、異種クラウドGPUのmulti-LLM配置と大規模オートスケーリングへ移動した。ShuntServe、Hetis、CrossPool、E2LLMは既存jobを確認して除外し、投入直前の最新mainでCoral、SageServe、Chironの決定論的research jobが存在しないことを確認して3件を送信した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5714285714285714,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.18600",
+        "arXiv:2509.08309",
+        "arXiv:2606.24506",
+        "arXiv:2606.03770"
+      ],
+      "next_axis_hint": "次はcloud autoscalingを離れ、forward/backward citation、推論カーネル・圧縮、またはネットワーク/ストレージ低層I/Oの独立経路を確認する",
+      "source_submission": "work-queue/submissions/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json"
     }
   ],
   "axes": {
@@ -2722,6 +2742,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.2,
       "next_axis_hint": "次は投機的復号と配備構成を離れ、forward/backward citationまたはストレージ・OS由来のstate placementとI/O schedulingを確認する"
+    },
+    "heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling": {
+      "last_run_key": "2026-09-13T03:30:44+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5714285714285714,
+      "next_axis_hint": "次はcloud autoscalingを離れ、forward/backward citation、推論カーネル・圧縮、またはネットワーク/ストレージ低層I/Oの独立経路を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

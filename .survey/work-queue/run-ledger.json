@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T18:43:33.542400+00:00",
+  "updated_at": "2026-09-12T18:45:52.878049+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -13949,7 +13949,7 @@
     {
       "run_key": "2026-09-13T03:30:00+09:00",
       "first_recorded_at": "2026-09-12T18:37:50.389629+00:00",
-      "last_recorded_at": "2026-09-12T18:43:33.542400+00:00",
+      "last_recorded_at": "2026-09-12T18:45:52.878049+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -13958,9 +13958,9 @@
       "counts": {
         "research_completed": 2,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 10,
         "new_papers": 2,
         "fallback_archived": 0
       },
@@ -14022,6 +14022,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34712116455:1",
+          "recorded_at": "2026-09-12T18:45:52.878049+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34712116455",
+            "run_attempt": "1",
+            "source_sha": "a42965d5ff4c89e29a43d979a75f62c31f708b5f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14054,6 +14068,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.09643",
           "title": "UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3ee1465fb1dc2abf",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -14107,6 +14129,27 @@
           "type": "research",
           "canonical_id": "arXiv:2509.06261",
           "title": "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving"
+        },
+        {
+          "job_id": "job-af96ba3d9c2ab6d4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-b76cb796c54f83bb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.04357",
+          "title": "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs"
+        },
+        {
+          "job_id": "job-research-fad36d968e8bea93",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2502.14617",
+          "title": "Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale"
         }
       ],
       "new_paper_ids": [
@@ -14115,12 +14158,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json",
-        ".survey/work-queue/results/20260913T0341JST-discovery-specialist-speculative-serving-2.json"
+        ".survey/work-queue/results/20260913T0341JST-discovery-specialist-speculative-serving-2.json",
+        ".survey/work-queue/results/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 374,
       "paper_active_count_after": 376,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
