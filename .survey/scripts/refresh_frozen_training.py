@@ -1,11 +1,22 @@
 #!/usr/bin/env python3
-"""Refresh the intentional frozen-training blob baseline after authorized metadata edits."""
+"""Refresh the frozen-training membership baseline after authorized edits.
+
+The Training family is frozen against adding/removing paper entries during normal
+survey operation. Existing paper bodies and README/index files remain editable;
+stored blob SHAs are historical references rather than content locks.
+"""
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
 from pathlib import Path
+
+
+POLICY = (
+    "No new training paper entries. Existing training papers and README/index files may be edited; "
+    "stored blob SHAs are historical baseline references only."
+)
 
 
 def blob_sha(data: bytes) -> str:
@@ -24,12 +35,13 @@ def main() -> int:
         rel = path.relative_to(root).as_posix()
         files[rel] = blob_sha(path.read_bytes())
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source_commit": args.source,
-        "policy": "Read-only baseline; change only with explicit user authorization.",
+        "policy": POLICY,
         "files": files,
     }
     target = root / ".survey/survey-state/frozen-training.json"
+    target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"frozen_training_files={len(files)}")
     return 0
