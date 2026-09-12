@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f4b6607a934a6b11",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 88,
+      "reason": "分離サービングでprefill側が混雑しdecode側に余力が残る非対称を利用し、待ち要求のprefillをdecode nodeへchunked prefillとして退避する。decode側でそのままKVを生成するためノード間KV転送も不要になり、vLLM・DeepSeek-V2-Lite・本番型traceでP95 TTFT最大81%削減、SLO達成率最大79%向上を報告する。負荷追従型のP/D資源共有として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.09061",
+      "title": "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.09061",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md",
+      "priority": 83,
+      "reason": "chunked prefillで固定FCFSと静的token budgetが生むhead-of-line blocking・starvationに対し、待ち時間と残prefill量を使うaging priority、latency予測に基づくrequest scheduling、active prefill controlを組み合わせる。NVIDIA GPUとAscend acceleratorの実測で平均E2E latencyを10%以上削減しP99 tailも改善、コード公開済みで、異種acceleratorを含むprefill制御の比較対象として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2607.08930",
+      "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.08930",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08930-blockserve-diffusion-llm-continuous-batching.md",
+      "priority": 82,
+      "reason": "拡散型言語モデルの反復生成で要求完了時刻が揃わない問題に対し、block境界で完了requestを即時evictし、異なる拡散状態をgather/scatterで同一batchに混在させ、token budgetで新規requestを補充するblock-grained continuous batchingを提案する。Dream/LLaDA系でFast-dLLM比1.9〜10.6倍のthroughputを報告し、自己回帰以外のLLM serving schedulerとして新しい比較軸になる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-prefill-scheduling-2",
+    "axis": "分離サービングprefill制御・chunked prefill scheduling",
+    "query_summary": "Actions待ち中に分離型prefill/decode資源制御とchunked-prefill schedulingを探索。7件を軽量評価し、決定論的research job IDを最新mainで直接照合してFlowPrefill、Elastic KV Cache、P2P prefix routing、DOPSの4件を既存として除外した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2602.16603",
+      "arxiv:2608.23658",
+      "arxiv:2606.17059",
+      "arxiv:2607.25498"
+    ],
+    "next_axis_hint": "MoE expert placement/cache/prefetchの新着、またはGPU runtime・diffusion serving実行系へ軸を移す",
+    "empty_round_reason": null
+  }
+}
