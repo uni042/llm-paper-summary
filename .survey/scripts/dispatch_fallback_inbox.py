@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Dispatch one eligible immutable fallback envelope through the normal transport.
 
-All external fallback outboxes first converge on `.survey/work-queue/fallback-inbox/`.
+All external fallback envelopes first converge on `.survey/work-queue/fallback-inbox/`.
 This dispatcher is the only component that expands an ingested envelope into the
-reusable record bank, Chat inbox, offline seed, or update-worker files.  It runs
+reusable record bank, Chat inbox, offline seed, or update-worker files. It runs
 inside the same GitHub Actions concurrency group as the survey/update workers,
-so Drive and Library recovery cannot race each other on fixed transport files.
+so Library recovery cannot race another fixed-transport write.
 """
 from __future__ import annotations
 
@@ -67,7 +67,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
             envelope, canonical = ft.parse_envelope(source.read_bytes())
             if canonical != source.read_text(encoding="utf-8"):
                 # Keep the immutable GitHub ledger canonical so duplicate checks
-                # across Drive/Library do not depend on whitespace/key ordering.
+                # do not depend on whitespace/key ordering.
                 source.write_text(canonical, encoding="utf-8")
 
             terminal = ft.terminal_job_id(repo_root, envelope)
@@ -91,8 +91,16 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                 deferred.append({"id": envelope["id"], "reason": "chat transport still processing"})
                 continue
 
-            changed = ft.apply_envelope(repo_root, envelope)
-            if any(write["path"] == ft.CHAT_INBOX for write in envelope["writes"]):
+            dispatch_envelope, remap_reason = ft.remap_research_bank(repo_root, envelope)
+            if dispatch_envelope is None:
+                deferred.append({
+                    "id": envelope["id"],
+                    "reason": remap_reason or "no safe record bank available yet",
+                })
+                continue
+
+            changed = ft.apply_envelope(repo_root, dispatch_envelope)
+            if any(write["path"] == ft.CHAT_INBOX for write in dispatch_envelope["writes"]):
                 # The previous reusable result belongs to the previous inbox.
                 # Removing it here lets the current workflow assemble/process the
                 # newly dispatched Chat transport in the same Actions run.
@@ -103,6 +111,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                 "action": "dispatched",
                 "envelope_id": envelope["id"],
                 "changed_paths": changed,
+                "record_bank_mapping": remap_reason,
                 "archived": str(archived.relative_to(repo_root)),
                 "deferred": deferred,
                 "invalid": invalid,
