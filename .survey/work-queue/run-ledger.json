@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T23:37:01.626933+00:00",
+  "updated_at": "2026-09-12T23:39:09.801883+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15975,16 +15975,16 @@
     {
       "run_key": "2026-09-13T08:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:31:39.543292+00:00",
-      "last_recorded_at": "2026-09-12T23:37:01.626933+00:00",
+      "last_recorded_at": "2026-09-12T23:39:09.801883+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 14,
+        "new_jobs": 18,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16030,6 +16030,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34725921892:1",
+          "recorded_at": "2026-09-12T23:39:09.801883+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34725921892",
+            "run_attempt": "1",
+            "source_sha": "a35fed797d268fe327b475917f186f230b93a434"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16051,6 +16065,14 @@
         },
         {
           "job_id": "job-192a71b1aa310fb7",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-55b996109ff044ec",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16156,13 +16178,42 @@
           "type": "research",
           "canonical_id": "arXiv:2607.15498",
           "title": "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs"
+        },
+        {
+          "job_id": "job-7813e4117353f471",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2070373a31124502",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.11916",
+          "title": "Characterizing Software Aging in GPU-Based LLM Serving Systems"
+        },
+        {
+          "job_id": "job-research-f023091bfca94e41",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.24595",
+          "title": "Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels"
+        },
+        {
+          "job_id": "job-research-f3ec00db7d9723b7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.07770",
+          "title": "ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0830JST-discovery-specialist-hybrid-pic.json",
         ".survey/work-queue/results/20260913T0833JST-discovery-specialist-pic-relatedwork.json",
-        ".survey/work-queue/results/20260913T0836JST-discovery-specialist-agent-storage-state.json"
+        ".survey/work-queue/results/20260913T0836JST-discovery-specialist-agent-storage-state.json",
+        ".survey/work-queue/results/20260913T0839JST-discovery-specialist-runtime-reliability-cpu.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
