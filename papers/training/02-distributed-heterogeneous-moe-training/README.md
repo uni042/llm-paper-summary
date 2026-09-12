@@ -32,21 +32,21 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  MoE学習中のルーティング（ルーティング）偏りを監視し、負荷が高いエキスパート（専門家）だけを必要数複製・移動して、トークンを捨てずにGPU間の待ち時間を減らすシステム。
+  MoEのルーティング偏りを監視し、負荷の高いエキスパートだけを必要なGPUへ複製・移動して、トークンを捨てずにGPU間の待ち時間を減らす学習システム。
 
 - **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
   実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：1  
-  注意機構部分とMoE部分で別々のGPU並列化構成を使い、同じGPU群を処理ごとに異なる論理グループとして組み替えることで、不要なノード間通信を減らす大規模MoE学習方式。
+  注意機構とMoEで異なるGPU並列化グループを組み、同じGPU集合を処理ごとに組み替えて、エキスパートの不要なノード間通信を減らす大規模学習方式。
 
 - **2025-08 · [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) ・ リポジトリ内被引用：0  
-  専門家数とTop-kが大きい新しいMoEで、空のpadding領域を通信しないトークン配置、node間の重複送信削減、MoE部分専用のsequence分割を組み合わせて大規模HPC学習を効率化する。
+  大規模MoEで実トークンだけを詰めて通信し、同一ノード宛ての重複送信をまとめ、MoE部分の系列分割も変えて、paddingとノード間通信を減らすHPC学習システム。
 
 - **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  動的に複製したい専門家重みと、巨大で移動コストの高いオプティマイザ状態の配置を切り離し、オプティマイザ状態を動かさずに専門家複製数を毎iteration調整するMoE学習システム。
+  動的に複製するエキスパート重みと、移動させない巨大な最適化状態を分離配置し、ルーティング負荷に応じて重みの複製数だけを毎反復調整するMoE学習システム。
 
 - **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  新しいGPUへ注意機構、旧世代GPUへ専門家計算を主に割り当て、処理を重ねながら専門家数を非対称に配置して、異種GPUクラスタの待ち時間を減らすMoE学習方式。
+  新旧GPUの性能差に合わせて注意機構を新GPU、エキスパート計算を旧GPUへ主に割り当て、処理を重ねて異種GPUクラスタの待ち時間を減らすMoE学習方式。
 <!-- survey:auto:end -->

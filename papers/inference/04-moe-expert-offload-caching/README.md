@@ -8,13 +8,13 @@
 
 - **2026-06 · [Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch](2026-2606.26607-moebius-runtime-parallelism-switch.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  MoE推論では低い同時実行数ではテンソル並列が低遅延、高い同時実行数ではエキスパート並列が高スループットになるため、バースト型オンライン要求や強化学習ロールアウトでは一つの実行中に最適構成が入れ替わる。Moebiusはモデルを再起動せず、実行中要求を落とさずに両構成を切り替える。
+  Moebiusは低同時実行時のテンソル並列と高同時実行時の専門家並列を実行中に切り替え、再起動せず各要求を継続して、負荷変動で固定方式が不利になる問題を減らす。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-09 · [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](2026-2609.08682-hda-moe-3d-near-memory-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  3次元近傍メモリ処理（3D Near-メモリ Processing; 3D NMP）上の混合専門家モデル（Mixture of エキスパート; MoE）推論で、テンソル並列の重い全リデュース通信と専門家並列の負荷偏りを同時に抑える。長期活性統計から専門家ごとの分割・局所配置を線形計画で決め、物理ネットワーク対応をベイズ最適化する。
+  HDA-MoEは3D近傍メモリ上でテンソル並列と専門家並列を混合し、活性統計に基づく専門家分割・局所配置と先読み・混雑対応スケジューリングで通信と負荷偏りを減らす。
 
 ### 1年以上前
 

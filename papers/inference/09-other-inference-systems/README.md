@@ -12,7 +12,7 @@
 
 - **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  端末上でモデル重みをSSDやフラッシュから必要時に読む疎なLLM推論では、正確な活性予測には直前層の新しい状態が欲しい一方、入出力を計算へ重ねるには早い予測が必要になる。LeanStreamは層内計算を優先度順の小段階へ分け、GPUの部分結果が出るたびに次層の重み読み込み・計算・キャッシュ保持優先度を更新する。
+  LeanStreamは、層内の部分残差から次層の重み優先度を更新し、重み読出し・GPU計算・キャッシュを非同期に重ねて、端末LLMのSSD待ちと予測ミスを減らす。
 
 ### 1年以上前
 

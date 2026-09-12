@@ -12,49 +12,49 @@
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
   実装：[✓](https://github.com/Hanchenli/vllm-continuum) ・ リポジトリ内被引用：4  
-  ツール呼出しを何度も挟むLLMエージェントでは、各ターン終了時にKVキャッシュを追い出すと、次ターンでプリフィルやCPUからの再読込みが必要になるだけでなく、GPUメモリを他要求へ渡した後に待ち行列へ戻るため、ターンごとの待ち時間が累積する。
+  ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2026-09 · [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  本論文は、LLM推論のプリフィルとデコードでは計算特性と許容遅延が異なるのに、既定GPU電力制御が両段階をほぼ一様に扱い、余分な高周波数動作とエネルギー消費を生む問題を扱う。GreenLLMは、入力長で要求を別キューへ振り分けて長いプロンプトによる先頭待ちを避け、プリフィルでは入力長・周波数・待ち行列負荷からSLO内でエネルギー最小のSM周波数を選ぶ。
+  GreenLLMは、プリフィルとデコードの負荷を入力長・出力TPS・P95トークン間時間から観測し、各段階のSLO内でGPU周波数を別々に選ぶ二重帰還制御により、過剰な高周波数動作とエネルギーを減らす。
 
 - **2026-05 · [AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System](2026-2605.23389-alignedserve-prefix-aware-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  AlignedServeは、LLMデコードでは同じバッチ内でも系列ごとにKVキャッシュ長が異なり、注意計算時間の長い少数要求が各反復の完了を支配してGPUに反復内の待ちを生む問題を扱う。プリフィル後の要求とKVキャッシュをCPU大容量メモリへいったん蓄え、接頭辞長が近い要求を動的な四分木から密度優先で選んでバッチ化することで、同一反復内の計算量を揃える。
+  AlignedServeは、長いKV系列を分離するため要求をCPU KVプールへ置き、接頭辞長が近い要求を四分木から密度優先で集め、次バッチのKVをGPU間へ先読みして反復内の待ちと転送待ちを減らす。
 
 - **2026-02 · [DualScale: Energy-Efficient Disaggregated LLM Serving via Phase-Aware Placement and DVFS](2026-2602.18755-biscale-phase-aware-placement-dvfs.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  プリフィルとデコードを別GPU群へ分離するLLM推論では、両段階の負荷特性が異なるため、単純な自動スケーリングや一律のGPU周波数制御ではサービス品質目標を守りつつ電力を下げにくい。
+  DualScaleは、プリフィル・デコード分離のGPU台数・並列度・周波数・振り分け比率を数分単位で配置し、プリフィルの将来待ち行列とデコードのTPOT余裕を反復ごとに制御してSLO内の電力を減らす二段階方式。
 
 - **2026-07 · [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  SmartGenの狙いは、事前充填（プリフィル）と復号（デコード）を別ノードへ分離したときに生じる「最初のトークンは出たのに、KVキャッシュ（KV キャッシュ）の転送が終わらず2 トークン目が長く出てこない」停止時間を消すことである。通常は事前充填ノードが作ったKVを全量復号ノードへ転送するが、SmartGenはそれを3段階へ分ける。
+  プリフィル中に重要KVだけを先送りし、デコード時は不足分をローカル読出しと並列取得、残りを背景転送へ回して、全量転送の待ちと部分転送の後続停止を減らす。
 
 - **2026-07 · [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  外部APIや検索、外部モデルを呼び出す拡張LLMでは、生成が途中で停止して外部応答を待ち、その後に同じ要求が再開する。このため通常の到着順スケジューリングでは、長い要求や停止中要求が後続の短い要求を塞ぎ、GPU上に残す・CPUへ退避する・破棄して再計算するというKVキャッシュ処理によって実行時メモリも大きく変動する。
+  外部APIや検索を待つ拡張LLMで、停止・再開状態、出力長・外部呼出し時間、KV保持・退避・再計算費用を観測して要求順位と反復トークン予算を変え、先頭待ちとGPUメモリ圧迫を減らすスケジューラ。
 
 - **2026-06 · [Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice](2026-2606.22327-geometry-aware-online-scheduling.md)**  
   実装：[✓](https://github.com/Aurora-Kl/Geometry-Aware-Online-Scheduling) ・ リポジトリ内被引用：1  
-  SVFはリクエストを「何トークン残っているか」だけでなく、「その間にどれだけKV メモリを占有し続けるか」まで面積として数え、小さいメモリ-時間 体積から実行することで、メモリ-境界なLLM サービングのヘッド-of-line ブロッキングを減らす。
+  出力長とプロンプト長からKVメモリ占有の時間積分を見積もり、小さいメモリ時間体積の要求を先に実行するSVFを比較して、SJFが無視するKV容量起因の先頭待ちを減らす。
 
 - **2026-06 · [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  CrossPoolは、複数の低頻度MoEモデルで「常に大きいFFN 重み」と「時々だけ大きくなるKV キャッシュ」を同じHBMへ押し込むのをやめ、重み用GPUとKV用GPUへ分けることで、モデルごとの余ったKV容量を1つの共有プールとして使えるようにする。
+  低頻度MoEモデルの大きなFFN重みを重みGPUへ、変動するKVキャッシュを共有KV GPUへ分離し、モデル間で余剰HBMを融通して長文脈の容量不足とKV競合を減らす。
 
 - **2026-05 · [RTP-LLM: High-Performance Alibaba LLM Inference Engine](2026-2605.29639-rtp-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  Alibabaで実運用されているLLM推論基盤。単一の高速化手法ではなく、入力処理と逐次生成の分離、GPUから分散ストレージまでのKVキャッシュ階層、キャッシュを再利用しやすい要求振り分け、大規模モデルの高速読込、投機的復号、量子化、MoE・画像入力対応を一つの提供基盤へ統合し、実トラフィックを使って各機構の効果を評価する。
+  実運用LLM基盤で、要求をKV位置とGPU負荷に応じて振り分け、プリフィル/デコードを分離し、GPU〜分散ストレージのKV階層・高速読込・投機的復号を統合して待ち時間と容量負荷を減らす。
 
 - **2026-03 · [MoEless: Efficient MoE LLM Serving via Serverless Computing](2026-2603.06350-moeless-serverless-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  分散MoE推論で一部のエキスパート（エキスパート）へトークンが集中すると、そのエキスパートを担当するGPUだけが遅れて全体の同期待ちを引き起こす。MoElessは、次の層で生じるエキスパート負荷を事前予測し、混雑するエキスパートだけを一時的に複製して複数GPUへ分散することで、この待ち時間を減らすシステムである。
+  分散MoE推論で次の層のエキスパート負荷を予測し、混雑するエキスパートだけを一時複製して複数GPUへ配置し、ルータを変えずに同期点での最遅GPU待ちを減らすサーバーレス提供システム。
 
 ### 直近12か月・未被引用（2025-10〜2026-09）
 
 - **2026-09 · [Topology-Aware Data Movement for Disaggregated GPU Inference](2026-2607.28633-topology-aware-data-movement.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  プリフィルとデコードを別GPU群へ分離するLLMサービングでは、プリフィルで生成したKVキャッシュをデコード側へ渡す転送が新たなボトルネックになる。TopKVは、GPU間の物理接続を検出し、NVLink、PCIe、RDMA、TCPから転送経路を選び、層ごとのKV転送を計算と重ねる。
+  GPU間のNVLink・PCIe・RDMA・TCP接続を調べてKV転送経路を選び、層計算へ重ねる方式とCXL容量階層を解析し、分離推論の転送待ちとHBM容量制約を減らす。
 
 - **2026-09 · [Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving](2026-2609.11133-phase-decoupled-model-calibrated-power-control-for-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -62,39 +62,39 @@
 
 - **2026-09 · [OUTLETS: Output-Length Prediction from Speculative Decoding Backbones](2026-2609.01068-outlets-output-length-prediction-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  OUTLETSは、投機的 デコード用のドラフト モデルを「先のトークンを当てる装置」だけでなく「この生成があと何トークン続きそうかを読む装置」としても使い、予測した残長でデコードのキュー順序とワーカー割当を改善する。
+  投機的デコードのドラフト表現から残り出力長を予測し、短く終わる要求をキュー順序とワーカー割当で先に進めて、長い要求による先頭待ちとP99遅延を減らす。
 
 - **2026-09 · [Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs](2026-2609.03335-latency-aware-multi-agent-orchestration-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  複数のLLMエージェントが依存関係を持って連携する処理では、次のモデル呼び出しが準備できてから配置を決めると、モデル読込み、GPUメモリ確保、異種GPUごとの実行時間差が待ち時間として表面化する。
+  依存するエージェント処理グラフから近接後続を先読みし、モデルの常駐・読込・解放と異種GPU配置・実行順を共同で決めて、モデル待ちと不要なGPU占有を減らす。
 
 - **2026-09 · [Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling](2026-2608.01891-aflex-attention-ffn-disaggregation-frequency-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、LLMサービングのプリフィルとデコードを分けて周波数制御するだけでは、同じ段階の中でも注意機構と全結合ネットワーク（Feed-順伝播 Network; FFN）の周波数感度が大きく異なるため、不要なGPU電力を使う問題を扱う。
+  注意機構とFFNを別GPU群へ分け、遅延・エネルギー予測から数分単位の配置と要求ごとの周波数を選び、適応バッチ化と増分再配置でSLO内の電力と分離空きを減らす。
 
 - **2026-09 · [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  連続バッチ型LLMサービングでは、長い入力を一括プリフィルすると同じ反復にいるデコード要求の次トークンが遅れ、逆にプリフィルを小さく固定分割すると反復回数とカーネル起動費用が増えて初回応答が遅くなる。
+  デコード要求の次トークン期限から残り時間を求め、期限内に入る最大プリフィル塊を反復ごとに二分探索して、固定分割の起動費と一括処理のデコード停止を減らす。
 
 - **2026-09 · [Analytical Resource Management for Fine-grained MoE Computation-Communication Overlap](2026-2609.07536-moe-overlap-resource-manager.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  分散MoEでは、専門家の計算が終わった部分からGPU間通信を始めれば待ち時間を隠せるが、計算担当と通信担当は同じGPUの実行資源を取り合う。本研究は、入力長や専門家へのトークン偏りに応じて「通信へGPU資源をどれだけ予約するか」を起動直前に解析式で決め、固定配分のCOMETよりモデル全体のプリフィルを平均1.185倍高速化する。
+  入力長とMoE専門家へのトークン偏りから通信タイルへ予約するGPU資源を解析的に選び、計算と通信の重なりを調整して固定配分よりプリフィル待ちを減らす。
 
 - **2026-09 · [Adaptive Context Parallelism for Production LLM Serving](2026-2609.04774-vertumnus-adaptive-context-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Vertumnusは「長いリクエストには多くのGPU」という単純な閾値ルールではなく、プレフィックス キャッシュで実際に残った計算量、ワーカーの混雑、追加GPU時間をリクエストごとに比較しつつ、クラスタ全体のCP ワーカー構成そのものも数秒単位でsplit / 統合する。
+  接頭辞キャッシュ後の残計算量とワーカー混雑を測り、要求ごとの文脈並列度とクラスタのCP分割・統合を数秒単位で変えて、短文の通信費と長文の計算待ちを減らす。
 
 - **2026-08 · [When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference](2026-2608.03741-heteropanacea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  LLM推論を一台・一種類のGPUでまとめて処理する代わりに、入力処理と逐次生成、さらに注意機構とFFNを最大4種類の計算機群へ分けたとき、通信コストを払ってでも速くなる条件をシミュレーションで調べた研究。各段に計算重視・メモリ帯域重視の異なるハードウェアを割り当てられる場合ほど4段分離が効き、同じGPUしか選べない環境では細かく分ける意味が小さくなる。
+  プリフィル/デコードと注意/FFNを最大4段へ分離するシミュレータで、計算性能・メモリ帯域・通信費の異なる装置配置を比較し、分離が有利な資源条件を測定する研究。
 
 - **2026-08 · [Pallas: A Proactive KV Cache Migration Framework for LLM Inference in AI-RAN](2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Pallasは、ハンドオーバー後にKV キャッシュを救出するのではなく、ハンドオーバー前の予測時間を使って「古い大部分は対象で再計算、これから増える部分だけ送信元からストリーム」し、切替時点にほぼ最新の推論状態を揃える。
+  ハンドオーバー時刻を予測し、古いKVは移動先で再計算しつつ新しく増えるKVだけを送信元からストリームして、切替時の全量転送待ちと遠回り生成を減らす。
 
 - **2026-08 · [P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving](2026-2608.15171-p-pas-prefill-pressure-adaptive-scheduling.md)**  
   実装：[✓](https://github.com/TimoSaemann/ppas-vllm) ・ リポジトリ内被引用：0  
-  P-PASは、chunked プリフィルのchunkを常に小さくも大きくもせず、「今デコードと競合しているか」に応じて1 iterationのトークン budgetを切り替える軽量なvLLM スケジューラ拡張である。
+  プリフィルとデコードの同時圧力を観測し、vLLMの1反復トークン予算を低圧力では大きく高圧力では小さく切り替えて、固定分割の競合待ちと過剰な起動費を減らす。
 
 - **2026-08 · [OpScale: Operator-level Provisioning and Autoscaling for LLM Serving](2026-2608.13499-opscale-operator-level-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -102,79 +102,79 @@
 
 - **2026-08 · [From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems](2026-2608.15127-agentsysbench.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  AgentSysBenchは、エージェント型 アプリケーションをLLM 呼び出しだけでなく、ツール、サンドボックス、検索取得、永続 状態、通信を含む長時間実行として計測し、従来のLLM サービングの前提がどこで崩れるかを明らかにする。主眼は推論カーネル単体ではなく、エージェント 実行全体を対象にしたサービング designである。
+  エージェントのLLM呼出しだけでなくツール・検索・サンドボックス・状態・通信を含む実行を測定し、トークン速度だけでは捉えられない待ち時間と資源競合がどこで生じるかを明らかにしたベンチマーク。
 
 - **2026-08 · [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  リクエストごとに「SLOまであと何秒の遅延を許容できるか」を残り遅延 budgetとして継続推定し、その同じbudgetでリクエストの実行順とHBM / CPU DRAM / NVMe間のKV キャッシュ復元・先読み・保持・再計算をまとめて決めることで、SLOを満たす処理量と長文脈 リクエストへの公平性を両立するサービング システム。
+  要求の残りSLO遅延を実行順とKVのHBM・CPU DRAM・NVMe配置へ共通予算として配り、復元・先読み・保持・再計算を切り替えて、処理量と長文脈要求の公平性を両立するサービング。
 
 - **2026-07 · [Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving](2026-2607.02043-kairos-load-aware-prefill-deflection.md)**  
   実装：[✓](https://github.com/sudokara/Kairos) ・ リポジトリ内被引用：0  
-  Kairosは、プリフィル専用GPUが混んでいるときにリクエストをそこで待たせるのではなく、デコード GPUに残っている計算余力を借りてプリフィルまで実行する。
+  プリフィルGPUの混雑時にデコードGPUの余力へプリフィルを小分けで差し込み、トークン間時間のSLOを超えない範囲で要求を移して、プリフィル待ちとKV転送を減らす。
 
 - **2026-07 · [Sangam: Efficiently Serving Diffusion LLMs with the AR Stack](2026-2607.04206-sangam-diffusion-llm-serving.md)**  
   実装：[✓](https://github.com/UT-InfraAI/sangam) ・ リポジトリ内被引用：0  
-  Sangamは、双方向注意を使う拡散言語モデルでは通常の自己回帰LLMのようにKVキャッシュを固定できず、近似キャッシュを用いても重い再プリフィルとデコードが周期的に繰り返され、しかも再プリフィルをchunk化できないというサービング問題を扱う。
+  拡散LLMの不可分な再プリフィルをデコードの残りトークン予算と繰越不足額で受け入れ、プリフィル混雑時だけデコードGPUへ溢れさせて、待ち時間と資源偏りを抑える。
 
 - **2026-07 · [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  「何トークン生成されるか分からないリクエストへ、最初にKV キャッシュを何トークン分確保するか」を固定P90/P95の経験則ではなく、プリエンプションの損失と未使用HBMの損失から決め、その予約量をGPU構成・ルーティング・プレフィックス キャッシュと一緒に再最適化する制御-プレーン手法。
+  出力長分布のずれを考慮し、プリエンプション損失と未使用HBM損失からKV予約量を求め、GPU構成・要求振り分け・接頭辞キャッシュを再最適化して容量浪費と追い出しを減らす。
 
 - **2026-07 · [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  「一番空いているワーカーへ送る」の代わりに、各ワーカーの将来のバッチ枠とKV キャッシュへ影価格（影 価格）を付け、リクエストを今入れる価値がその資源 コストを上回るかでルーティングする。目的関数の重みを変えるだけで、平均遅延・TTFT・末尾・スループットの優先順位を同じルーター内で切り替えられる。
+  各デコードワーカーの将来バッチ枠とKV容量へ影価格を付け、SLO報酬が資源費を上回る要求だけをルーティングして、平均・末尾遅延とスループットの優先順位を切り替える。
 
 - **2026-07 · [ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving](2026-2607.00466-eldr-expert-locality-decode-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  プリフィル・デコード分離（プリフィル-デコード disaggregation; PD分離）でMoEを提供すると、同じ要求数を持つデコードGPUでも、一つのバッチが呼び出す異なるエキスパート数によって重み読み込み量が変わり、遅延が揃わない。
+  プリフィル時のMoEエキスパート活性化から署名を作り、似た署名の要求を同じデコードGPUへ集めて一括読込する専門家重みの種類を減らし、TPOTのばらつきを抑える。
 
 - **2026-07 · [Akashic: A Low-Overhead LLM Inference Service with MemAttention](2026-2607.05708-akashic-memattention-memory-service.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Akashicは、長時間動作するLLMエージェントの履歴を毎回すべて再入力する代わりに、履歴を有界なメモリチャンクへ逐次圧縮し、意味的に関連する過去チャンクを必要時だけ再利用する推論サービスである。
+  長期エージェント履歴を1024トークン級チャンクへ共同圧縮し、関連チャンクだけを検索・再統合してNVMe上でも近接配置することで、再入力量とメモリI/Oを減らす。
 
 - **2026-06 · [PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs](2026-2606.26666-persistentkv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  長い文脈の逐次生成では1回に1トークンしか計算しないため、少数要求だとGPUへ十分な仕事を出せない。PersistentKVは既存のページ化KVキャッシュを作り直さず、長い系列を複数区間へ分けて同時処理し、長さの違う要求が混ざる場合は実際に必要な区間だけを小さな作業キューへ詰める。
+  ページ化KV表を作り直さず長い系列を区間へ分割し、必要な区間だけ作業キューへ詰めてGPUを埋め、長文デコードの遊休と不要なカーネル起動を減らす。
 
 - **2026-06 · [Observation, Not Prediction: Conversation-Level Disaggregated Scheduling for Agentic Serving](2026-2606.01839-conserve-conversation-level-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  ConServeは、エージェント（エージェント）の各ターンを別々に配置判断するのではなく、会話（会話）全体を1つの配置単位として扱う。最初の重いプロンプト処理だけを専用プリフィル（プリフィル）GPUで実行し、生成したKVキャッシュをデコード（デコード）GPUへ1回だけ移す。
+  エージェント会話をターン単位で再配置せず、初回プリフィルのKVを一度だけデコードGPUへ移して後続ターンを同じGPUに固定し、再移送と将来長予測の誤差を減らす。
 
 - **2026-06 · [FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location](2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  FlexNPUは、NPUをアプリケーションへ物理デバイスのまま見せる従来方式では、プリフィルとデコードの負荷変化に応じて実行順や資源配分を後から調整できない問題を扱う。AscendCL APIをユーザー空間で透過的に捕捉し、仮想ハンドルへ置き換えて各物理NPUのデーモンへ転送することで、モデル、AIフレームワーク、NPUドライバを変更せず実行制御点を作る。
+  AscendCL操作を仮想ハンドル経由で物理NPUへ転送し、プリフィルとデコードの待機・実行時間・帯域圧力を測って実行比率を動的に変え、静的PD配置の資源偏りとTTFT待ちを減らす。
 
 - **2026-05 · [Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption](2026-2605.19593-multi-model-offloading-preemption-schedulers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  複数の大規模言語モデルを限られたGPUで切り替えて提供する際、各モデルをどれだけCPUへオフロードすべきか、実行中の要求を中断して別モデルへ切り替えるべきかを判断するための実測研究である。3種類の量子化モデルについてGPU配置層の割合を連続的に振り、別の3モデルについてプリエンプション時のKVキャッシュ退避、モデル解放、モデル再読込、KV復元を分解測定した。
+  限られたGPUで複数モデルを切り替える推論について、GPUに置く層の割合を連続掃引し、KV退避・モデル解放・重み再読込・KV復元の費用を分解して、オフロード感度と切替ボトルネックを測定した研究。
 
 - **2026-05 · [Towards Distributed Inference of LLMs on a P2P Network](2026-2606.17059-p2p-prefix-cache-aware-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  この論文は、分散LLMサービングで接頭辞KVキャッシュが各ノードへ分散し、要求がキャッシュを持たないノードへ到着すると同じプリフィル計算を繰り返す問題に対し、中央ルータやKVテンソル転送を使わず要求側を移動させる分散ルーティングを提案する。各ノードは自分の接頭辞を正確な基数木で管理し、他ノードの基数木は定期的な全体スナップショット交換で近似的に保持する。
+  分散LLMサービングで各ノードの接頭辞KV基数木を交換し、キャッシュを持つノードへ要求を移すP2Pルーティングでプリフィル再計算を減らすが、転送遅延と負荷集中も測定する。
 
 - **2026-05 · [Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference](2026-2605.02329-taming-request-imbalance-slo-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  この論文の狙いは、長いリクエストを単純に後回しにすることではない。各リクエストがサービス水準目標（サービス レベル 目的: SLO）を破るまでにどれだけ時間の余裕を持っているかをスケジューラが使い、余裕のないリクエストを先に進めつつ、余裕のあるリクエストは短時間だけ待たせる。これによりプリフィル側の先頭待ちとデコード側の長文リクエストによる同期待ちを減らす。
+  プリフィル・デコード分離で、各要求のTTFT/TPOT目標までの余裕を測り、余裕のない要求を先にプリフィルし、余裕内だけ短いデコード要求を選んで長い要求の先頭待ちと同期遅延を減らすSLOスケジューラ。
 
 - **2026-05 · [STAR: Decode-Phase Rescheduling for LLM Inference](2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  プリフィル・デコード分離サービングでは、プリフィル終了時に要求をデコードGPUへ一度割り当てても、その後の生成長が大きく異なるため時間経過とともにデコード負荷が崩れる。STARは対象LLM最終層の最後のトークンの隠れ状態を4層MLPへ入力し、残り生成長を低追加費で継続予測する。
+  プリフィル・デコード分離後も変動する生成長を最終層の隠れ状態から軽量MLPで継続予測し、KV移送費を回収できる要求を過負荷GPUから低負荷GPUへ移して、長出力の負荷偏りと尾部遅延を減らす再配置機構。
 
 - **2026-05 · [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](2026-2609.05425-cotail.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  LLM本体はGPUで計算していても、要求の受付・バッチ作成・GPUへの仕事投入はCPUが担当するため、同じサーバの空きCPUで別処理を動かすとLLMが大きく遅くなることがある。
+  CPU制御段階のP95/P99遅延からスケジューラ競合とNUMA・キャッシュ競合を診断し、リアルタイム優先度またはCPU配置分離を選んで同居ワークロードによるLLM遅延を減らす。
 
 - **2026-04 · [Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC](2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Blinkは、定常状態のLLM推論でCPUが毎トークン行っていたバッチ更新・スケジューリング・KVキャッシュ管理・GPU起動をGPU常駐制御へ移し、ネットワーク要求処理をSmartNICへ移す。SmartNICとGPUはGPUメモリ上の共有リングバッファを介して直接通信し、ホストCPUを推論のクリティカルパスから外す。
+  定常状態のLLM推論でCPUが行うバッチ更新・KV管理・GPU起動をGPU常駐制御へ移し、要求受付とトークン送受信をSmartNICへ分離して、CPU干渉によるGPU待ちとコピー待ちを減らす実機システム。
 
 - **2026-03 · [PrefixWall: Mitigating Prefix Caching Side Channels in Shared LLM Systems](2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  PrefixWallは、複数利用者が同じLLM推論基盤を共有するとき、自動接頭辞キャッシュ（Automatic Prefix キャッシュ; APC）のヒット有無による初回トークン遅延の差から他人の入力を推測できる問題に対し、利用者全体を分離するのではなく、異なる利用者から再利用された接頭辞だけを危険境界として記録し…
+  PrefixWallは、共有自動接頭辞キャッシュのヒット・ミス遅延から他利用者の入力を推測される副チャネルを検出し、異なる利用者間で再利用された接頭辞の先だけを再計算へ切り替えることで、完全分離よりキャッシュ再利用を残す防御。
 
 - **2026-03 · [Multi-stage Flow Scheduling for LLM Serving](2026-2603.17456-multi-stage-flow-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  分離型LLMサービングでは、初回トークンを返すまでに、再利用KVキャッシュの遠隔取得、テンソル・エキスパート・系列並列などの集団通信、プリフィルからデコードへのKV転送という複数段階の通信が発生する。
+  MFSは、遠隔KV取得・集団通信・プリフィルからデコードへの転送を依存付きの段階として追跡し、余裕のある通信を遅らせ、締切が近いフローを逆多段キューで昇格してTTFTのSLO違反を減らすネットワークスケジューラ。
 
 - **2026-03 · [Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity](2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -186,15 +186,15 @@
 
 - **2026-02 · [Multi-Layer Scheduling for MoE-Based LLM Reasoning](2026-2602.21626-multi-layer-scheduling-moe-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  混合専門家モデル（Mixture of エキスパート; MoE）の推論サービングでは、要求をどのデータ並列エンジンへ送るか、各エンジン内でどの要求を先に処理するか、各専門家をどのGPUへ置くかが互いに影響する。
+  Gimbalは、MoEサービングで実測KV使用量から要求の送り先、入力長からエンジン内の実行順、専門家の活性頻度と層間依存からGPU配置を決め、容量偏り・先頭待ち・専門家集中をまとめて減らす三層スケジューラ。
 
 - **2026-02 · [Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control](2026-2602.02987-prefill-decode-contention-optimal-control.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  大規模LLM推論では、入力処理であるプリフィルをGPUへ入れるほど新規要求をデコード段階へ送り込める一方、同じGPU上の逐次生成を遅くするという競合が生じる。
+  大規模LLM推論で異なる入力・出力長の要求を混在処理する際、実測反復時間からプリフィル混在/デコード単独のサービス率を求め、流体最適化の占有率に追従してプリフィル受入れとデコード配置をゲート・ルート制御する研究。
 
 - **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  マルチコアNPUでは、GPU向けに考えたLLMサービング方式をそのまま移すと、コア間通信、コアごとに分かれたSRAM、HBM帯域の不足によって計算資源が遊ぶ。
+  マルチコアNPU向け多層シミュレータで、テンソル分割・コア配置・SRAM/HBM管理・プリフィルとデコードの分離/融合をQwen3各サイズで比較し、入力長・通信競合・負荷構成ごとに有利な設計を明らかにする研究。
 
 ### 1年以上前
 
@@ -248,7 +248,7 @@
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：17  
-  長いプロンプトを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
+  長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
@@ -292,29 +292,29 @@
 
 - **2025-07 · [Oneiros: KV Cache Optimization through Parameter Remapping for Multi-tenant LLM Serving](2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md)**  
   実装：[✓](https://github.com/UT-SysML/Oneiros/) ・ リポジトリ内被引用：3  
-  Oneirosは、複数LLMを同じGPUで提供する環境でKVキャッシュ不足が起きたとき、頻繁に更新されるKVをCPUへ退避すると双方向転送と同期がデコードを止める問題を扱う。そこで実行中に不変なモデルパラメータの一部をCPUへ移し、空いたGPU物理ページをKVキャッシュへ転用するパラメータ再配置を導入する。
+  複数LLMを同じGPUで提供すると、KVキャッシュ不足をCPU退避で解決する方法は毎トークンの転送と同期でデコードを止める。Oneirosは不変なモデルパラメータをCPUへ移し、空いたGPUページをKVキャッシュへ転用し、重み読込みをGPU計算に重ねて停滞を抑える。
 
 - **2025-04 · [Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints](2025-2504.11320-fluid-guided-online-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  この論文の中心は「GPU メモリが足りなくなってからリクエストを追い出す」のではなく、数十〜数百トークン先までデコードするとKV キャッシュがどのように増えるかを見越して、GPU内に残すリクエストの構成そのものを調整することである。
+  流体平衡からデコード進捗区間ごとのGPU常駐構成を見積もり、WAIT/Nested WAITで制御する。未知の出力長は予測せず、生成を継続する残存要求を段階分類してKV追い出し連鎖を抑えるスケジューラ。
 
 - **2025-01 · [Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management](2025-2501.06709-mell-multi-gpu-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  複数GPUでLLMを提供すると、要求ごとの出力長が予測しにくくKVキャッシュが時間とともに成長するため、あるGPUだけが満杯になり別GPUには空きが残る。Mellは実行中要求をGPU間で移し、通信余力があるときはKV本体を転送し、演算余力があるときはトークンだけを転送して移行先で再プリフィルする適応型移行を行う。
+  複数GPUでLLMを提供すると、要求ごとの出力長の違いでKVキャッシュが一方のGPUだけに膨らみ、空きGPUを使えない。Mellは実行中要求をGPU間で移し、通信余力があればKV本体を転送し、演算余力があればトークンだけを送り移行先で再プリフィルして偏りを抑える。
 
 - **2025-01 · [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  クライアントごとのGPU利用量を公平に保ちつつ、公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じプレフィックスを持つリクエストを続けて処理しKV再利用を増やすスケジューラ。
+  クライアントごとのサービス量を公平に保ちつつ、公平性が大きく崩れない範囲だけ実行順を入れ替えて、同じ接頭辞を持つリクエストを続けて処理しKV再利用を増やすスケジューラ。複数GPUでは負荷分散も同時に調整する。
 
 - **2025-01 · [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  対話型 リクエストの遅延目標を守りながら余ったGPU 容量をバッチ リクエストへ使うため、各GPUで同時処理するリクエスト数を素早く増減する制御と、クラスタ全体のGPU インスタンス数を遅い周期で増減する制御を分けたLLM 自動スケーラ。
+  対話型リクエストの遅延目標を守りながら余ったGPU容量をバッチリクエストへ使うため、各GPUで同時処理するリクエスト数を素早く増減する制御と、クラスタ全体のGPUインスタンス数を遅い周期で増減する制御を分けたLLM自動スケーラ。
 
 - **2024-08 · [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  P/D-Serveは、事前充填（プリフィル）と復号（デコード）を別インスタンスに分ける設計を、数万NPUの商用クラスタで運用したときに生じる制御面・ネットワーク面の問題まで含めて解くシステムである。中心は3点ある。
+  P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
 
 - **2025-09 · [Parallax: Efficient LLM Inference Service over Decentralized Environment](2025-2509.26182-parallax-decentralized-heterogeneous-serving.md)**  
   実装：[✓](https://github.com/GradientHQ/parallax) ・ リポジトリ内被引用：0  
-  Parallaxは、地理的に離れた異種GPUを公衆ネットワーク越しに束ねる分散LLMサービングで、計算性能・VRAM容量・通信帯域の差が大きいため均等なモデル分割では最遅GPUや低速回線が全体を律速する問題を、二段階スケジューリングで解く。
+  地理的に離れた異種GPUでモデル層を地域・VRAM・計算性能に合わせて配置し、GPUごとの処理時間と通信遅延から要求ごとの層経路を選ぶことで、遅いGPU・低速回線によるパイプライン待ちを減らす分散LLMサービング。
 <!-- survey:auto:end -->
