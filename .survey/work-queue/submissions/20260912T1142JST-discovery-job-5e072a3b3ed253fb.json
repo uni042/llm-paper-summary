@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "job_id": "job-5e072a3b3ed253fb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.01068",
+      "title": "OUTLETS: Output-Length Prediction from Speculative Decoding Backbones",
+      "source_url": "https://arxiv.org/abs/2609.01068",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.01068-outlets-output-length-prediction-from-speculative-decoding-backbones.md",
+      "priority": 90,
+      "reason": "投機的デコードのドラフトデコーダが既に生成する将来軌跡表現を出力長予測へ再利用し、別の予測モデルを追加せず軽量回帰ヘッドだけで静的・動的な残り生成長を推定する。Llama-3.2-1B、Llama-3.1-8B、Qwen3-30B-A3BとShareGPT/Alpaca/LMSYSで既存MLP・BERT・OPT等より低いMAEを示し、分離型サービングで予測値を既存の短ジョブ優先と負荷分散へ使うと、飽和時の短要求P99遅延を34.8%削減する。新規スケジューラそのものではなく、既存の投機的デコード計算をサービング判断へ再利用する点が既存系統と差別化される。"
+    }
+  ]
+}
