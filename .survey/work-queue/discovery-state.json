@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T16:37:52+00:00",
+  "updated_at": "2026-09-12T16:40:12+00:00",
   "last_run_key": "2026-09-13T01:26:11+09:00",
-  "last_round": "specialist-resilience-crosslayer-scheduling-5",
+  "last_round": "specialist-older-serving-omissions-6",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1216,6 +1216,30 @@
       ],
       "next_axis_hint": "次はstorage-centric KV、multi-agent serving、citation/related-work経路、直近新着を独立に確認する",
       "source_submission": "work-queue/submissions/20260913T0138JST-discovery-d3909a842ae76980.json"
+    },
+    {
+      "run_key": "2026-09-13T01:26:11+09:00",
+      "round": "specialist-older-serving-omissions-6",
+      "axis": "異種/edge serving・hybrid cache schedulingの過去重要欠落",
+      "query_summary": "直近候補投入後にstorage-centric KV、multi-agent/KV reservation、heterogeneous/edge/speculative servingを横断。Tutti、DUAL-BLADE、Tokencake、Robust KV、SPECTRE、Hetis、SwiftSpec、ShuntServeはexisting jobで除外し、最新mainでjob未存在のSpecEdgeとApt-Serveを過去重要欠落として選別した。",
+      "candidate_count": 10,
+      "duplicate_filtered_count": 8,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2604.26557",
+        "arXiv:2510.18586",
+        "arXiv:2607.16892",
+        "arXiv:2605.08151",
+        "arXiv:2509.08309",
+        "arXiv:2506.11309",
+        "arXiv:2606.18600"
+      ],
+      "next_axis_hint": "過去欠落探索を一度離れ、直近新着・citation/related-work・GPU kernel/runtimeの3経路を独立確認する",
+      "source_submission": "work-queue/submissions/20260913T0140JST-discovery-1f8a64f753d53399.json"
     }
   ],
   "axes": {
@@ -1918,6 +1942,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.7142857142857143,
       "next_axis_hint": "次はstorage-centric KV、multi-agent serving、citation/related-work経路、直近新着を独立に確認する"
+    },
+    "異種/edge serving・hybrid cache schedulingの過去重要欠落": {
+      "last_run_key": "2026-09-13T01:26:11+09:00",
+      "rounds": 1,
+      "candidate_count": 10,
+      "duplicate_filtered_count": 8,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.8,
+      "next_axis_hint": "過去欠落探索を一度離れ、直近新着・citation/related-work・GPU kernel/runtimeの3経路を独立確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

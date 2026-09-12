@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b22f71500ae1903a",
+  "type": "research",
+  "parent_job_id": "job-1f8a64f753d53399",
+  "priority": 80,
+  "canonical_id": "arXiv:2504.07494",
+  "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving",
+  "source_url": "https://arxiv.org/abs/2504.07494",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md",
+  "selection_reason": "KV cacheだけでなく再利用可能なinput hidden stateを省メモリhidden cacheとして併用し、batch compositionをruntimeで適応制御することでTTFT SLOとconcurrencyを共同改善する。13B〜66Bモデル・3 workloadでeffective throughput最大8.8倍を報告し、cache representationとrequest schedulingを一体設計する古めだが重要な未収録候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T16:40:12+00:00",
+  "artifact_transport": "structured_record_v10"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T16:39:01.621063+00:00",
+  "updated_at": "2026-09-12T16:41:02.063349+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -12237,16 +12237,16 @@
     {
       "run_key": "2026-09-13T01:30:00+09:00",
       "first_recorded_at": "2026-09-12T16:32:07.706104+00:00",
-      "last_recorded_at": "2026-09-12T16:39:01.621063+00:00",
+      "last_recorded_at": "2026-09-12T16:41:02.063349+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 12,
+        "new_jobs": 15,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -12306,6 +12306,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34705928451:1",
+          "recorded_at": "2026-09-12T16:41:02.063349+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34705928451",
+            "run_attempt": "1",
+            "source_sha": "b313f5abb82251890f557b0c762b317102b64433"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -12335,6 +12349,14 @@
         },
         {
           "job_id": "job-d3909a842ae76980",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-1f8a64f753d53399",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -12426,6 +12448,27 @@
           "type": "research",
           "canonical_id": "arXiv:2511.14116",
           "title": "FailSafe: High-performance Resilient Serving"
+        },
+        {
+          "job_id": "job-53325eb4d61afb8e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-b16bdf4c09cb7905",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2505.17052",
+          "title": "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs"
+        },
+        {
+          "job_id": "job-research-b22f71500ae1903a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2504.07494",
+          "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving"
         }
       ],
       "new_paper_ids": [],
@@ -12433,7 +12476,8 @@
         ".survey/work-queue/results/20260913T0132JST-discovery-262708a8729e8066.json",
         ".survey/work-queue/results/20260913T0134JST-discovery-29dd7c44eff93660.json",
         ".survey/work-queue/results/20260913T0136JST-discovery-a510d87d9cbc3222.json",
-        ".survey/work-queue/results/20260913T0138JST-discovery-d3909a842ae76980.json"
+        ".survey/work-queue/results/20260913T0138JST-discovery-d3909a842ae76980.json",
+        ".survey/work-queue/results/20260913T0140JST-discovery-1f8a64f753d53399.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 366,
