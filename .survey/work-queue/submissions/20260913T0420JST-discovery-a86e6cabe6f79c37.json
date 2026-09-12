@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a86e6cabe6f79c37",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2403.02310",
+      "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+      "source_url": "https://arxiv.org/abs/2403.02310",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefill.md",
+      "priority": 89,
+      "reason": "長いprefillがdecode反復を止める問題に対し、prefillを均等なchunkへ分割して進行中decodeと組み合わせるstall-free schedulingを導入する基礎的serving system。Mistral-7B単一A100でvLLM比2.6倍、Yi-34Bの2×A100で最大3.7倍、Falcon-180Bのpipeline parallel構成で最大5.6倍のserving capacityを報告し、chunked prefill研究の基礎比較点として重要。Microsoftから実装も公開されており、近年のadaptive prefill系統を理解する上で未収録なら優先度が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-prefix-chunked-prefill-7",
+    "axis": "chunked prefill・prefix-aware batchingの基礎欠落",
+    "query_summary": "chunked prefillとprefix-aware batchingの基礎・近接研究を再確認。AlignedServe、BucketServe、Prebleは既存research jobを確認して除外し、Sarathi-Serveは最新mainで決定論的research job IDが存在しないことを再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arxiv:2605.23389",
+      "arxiv:2507.17120",
+      "arxiv:2407.00023"
+    ],
+    "next_axis_hint": "speculative decoding serving・通信圧縮・メモリ制約実行へ移る",
+    "empty_round_reason": null
+  }
+}
