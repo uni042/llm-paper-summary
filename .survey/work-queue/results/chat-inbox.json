@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-3b370609d7bf485e",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/04-conditional-computation/2026-2609.08189-hero-history-aware-routing-efficient-llm-inference.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2609.08189.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-985814ffefefe223",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 41.4% < 70% (Japanese=3267, Latin=4631)",
+  "repair_required": true,
+  "isolated_at": "2026-09-12T05:49:02+00:00"
 }
