@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T14:20:42+00:00",
+  "updated_at": "2026-09-12T14:22:57+00:00",
   "last_run_key": "2026-09-12T23:00:00+09:00",
-  "last_round": "specialist-speculative-multimodal-serving-09",
+  "last_round": "specialist-runtime-sparse-attention-10",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -809,6 +809,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "framework/runtime kernel、重要論文のforward/backward citation、またはedge/distributed inferenceへ切り替える",
       "source_submission": "work-queue/submissions/20260912T2320JST-discovery-specialist-09.json"
+    },
+    {
+      "run_key": "2026-09-12T23:00:00+09:00",
+      "round": "specialist-runtime-sparse-attention-10",
+      "axis": "attention runtime・sparse attention階層memory・elastic decode",
+      "query_summary": "agentic long-context向けattention分離scale、dynamic sparse attentionのHBM-DRAM階層化、汎用attention engine、異種edge speculative servingをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第9roundのActions完了後に最新HEADと次discovery jobを取得し、4件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "重要論文の被引用・参考文献追跡、MoE通信runtime、またはGPU memory allocator/kernel fusionへ切り替える",
+      "source_submission": "work-queue/submissions/20260912T2322JST-discovery-specialist-10.json"
     }
   ],
   "axes": {
@@ -1271,6 +1286,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "framework/runtime kernel、重要論文のforward/backward citation、またはedge/distributed inferenceへ切り替える"
+    },
+    "attention runtime・sparse attention階層memory・elastic decode": {
+      "last_run_key": "2026-09-12T23:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "重要論文の被引用・参考文献追跡、MoE通信runtime、またはGPU memory allocator/kernel fusionへ切り替える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

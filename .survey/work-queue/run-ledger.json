@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T14:21:45.181475+00:00",
+  "updated_at": "2026-09-12T14:23:59.811605+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,7 +10688,7 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T14:21:45.181475+00:00",
+      "last_recorded_at": "2026-09-12T14:23:59.811605+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -10697,9 +10697,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 10,
+        "discovery_completed": 11,
         "blocked": 0,
-        "new_jobs": 32,
+        "new_jobs": 35,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -10902,6 +10902,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34699114102:1",
+          "recorded_at": "2026-09-12T14:23:59.811605+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34699114102",
+            "run_attempt": "1",
+            "source_sha": "7b23a3976e17a22b2ace813771d6508c6248769e"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -11003,6 +11017,14 @@
         },
         {
           "job_id": "job-76e9912e8914176e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-ad1c8e84bbe900ae",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -11234,6 +11256,27 @@
           "type": "research",
           "canonical_id": "arXiv:2503.08461",
           "title": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework"
+        },
+        {
+          "job_id": "job-45dc1a19eb092331",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-3cc1bbfc1c0813e6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2501.01005",
+          "title": "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving"
+        },
+        {
+          "job_id": "job-research-cab6f983bc0c93e3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.29207",
+          "title": "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding"
         }
       ],
       "new_paper_ids": [
@@ -11252,7 +11295,8 @@
         ".survey/work-queue/results/20260912T2314JST-discovery-specialist-06.json",
         ".survey/work-queue/results/20260912T2316JST-discovery-specialist-07.json",
         ".survey/work-queue/results/20260912T2318JST-discovery-specialist-08.json",
-        ".survey/work-queue/results/20260912T2320JST-discovery-specialist-09.json"
+        ".survey/work-queue/results/20260912T2320JST-discovery-specialist-09.json",
+        ".survey/work-queue/results/20260912T2322JST-discovery-specialist-10.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
