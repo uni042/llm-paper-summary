@@ -1,19 +1,19 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 03:25 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 03:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **101 / 50** |
-| Research ready | **101** |
+| Candidate在庫（Research ready） | **104 / 50** |
+| Research ready | **104** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **185** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **1 / 24** |
+| Maintenance counter | **2 / 24** |
 
 ### 注意事項
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T02:30:00+09:00**
 |---|---:|
 | Research完了 | **8** |
 | Audit完了 | **0** |
-| Discovery完了 | **10** |
-| 新規job | **46** |
+| Discovery完了 | **11** |
+| 新規job | **50** |
 | Repo収録 | **8** |
 | Blocked遷移 | **0** |
 
@@ -50,13 +50,13 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **82** |
-| 探索評価候補 | **395** |
-| 重複除外 | **121** |
-| 重複率 | **30.6%** |
-| Novel候補 | **274** |
-| Research候補採用 | **141** |
+| 通常worker run（ledger観測） | **20** |
+| 探索round（stats観測） | **83** |
+| 探索評価候補 | **401** |
+| 重複除外 | **122** |
+| 重複率 | **30.4%** |
+| Novel候補 | **279** |
+| Research候補採用 | **144** |
 | Research完了 | **53** |
 | Repo収録 | **53** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 395 → 重複除外後 274 → Research候補採用 141 → Research完了 53 → Repo収録 53**
+**探索評価 401 → 重複除外後 279 → Research候補採用 144 → Research完了 53 → Repo収録 53**
 
 ## 探索効率（直近24時間）
 
@@ -85,6 +85,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
+| GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | MoE expert配置・CPU-GPU協調実行 | 6 | 4 | 1 | 66.7% | 16.7% |
@@ -156,11 +157,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T03:02:31+09:00** — GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap: 評価 6 / 重複 1 / 採用 3
 - **2026-09-13T03:02:31+09:00** — DBMS由来cache policy・real-time/best-effort混在QoS scheduling: 評価 9 / 重複 7 / 採用 2
 - **2026-09-13T03:02:31+09:00** — CUDA compiler・JIT/Graph runtime・decode kernel serving: 評価 6 / 重複 4 / 採用 2
 - **2026-09-13T03:02:31+09:00** — serverless production serving・cold start・multi-LoRA elasticity: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T03:02:31+09:00** — agent session KV residency・near-memory scheduling: 評価 5 / 重複 4 / 採用 1
-- **2026-09-13T03:02:31+09:00** — 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving: 評価 10 / 重複 5 / 採用 5
 
 ## 最近処理した論文
 
