@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3cac7a708e3b1baf",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T00:00:00+09:00",
+    "round": "specialist-kv-saturated-7",
+    "axis": "KV multi-turn管理・復元・予約不確実性",
+    "query_summary": "multi-turn KV sharing、KV restoration、output-length uncertainty、non-uniform KV retentionを独立軸で再走査した。強候補は最新正本で既収録または既存jobだった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.16135",
+      "arXiv:2607.16892",
+      "arXiv:2606.06302",
+      "arXiv:2604.25080"
+    ],
+    "next_axis_hint": "直近2609新着とvLLM/SGLang周辺の実装・関連論文経路を横断し、漏れがなければ今回runの探索回路を終了候補とする",
+    "empty_round_reason": "KV cacheの共有・復元・予約・非一様保持で見つかった強候補は、最新のidentityとexisting jobsですべて既存と判定された。"
+  }
+}
