@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T13:06:19+00:00",
-  "last_run_key": "20260912T2200+0900",
-  "last_round": "specialist-critical-cross-axis-moe-heterogeneous-serving-01",
+  "updated_at": "2026-09-12T13:32:17+00:00",
+  "last_run_key": "2026-09-12T22:30:00+09:00",
+  "last_round": "normal-critical-geo-distributed-serving-01",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -656,6 +656,24 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次回は同じMoE/異種GPU軸を機械的に繰り返さず、storage/DBMS/OS由来のメモリ局所性・I/Oスケジューリング・ admission control をLLM推論へ接続する隣接分野軸を優先する。",
       "source_submission": "work-queue/submissions/20260912T2200JST-discovery-specialist-critical-cross-axis-01.json"
+    },
+    {
+      "run_key": "2026-09-12T22:30:00+09:00",
+      "round": "normal-critical-geo-distributed-serving-01",
+      "axis": "地理分散LLM serving・分散最適化",
+      "query_summary": "candidate在庫14件のcritical水位を受け、直前のMoE/異種GPU軸を反復せず、分散・地理分散LLM serving、SLO、冷却/エネルギー制約を含むschedulerへ探索軸を変更した。実質評価4件のうち既収録2件をidentity indexで除外し、未収録2件を投入した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2608.03036",
+        "arXiv:2606.18431"
+      ],
+      "next_axis_hint": "次回は同じgeo-distributed軸を機械反復せず、GPU障害・reliability-aware serving、またはinterconnect/topology-aware multi-cluster routingへ展開する",
+      "source_submission": "work-queue/submissions/20260912T2230JST-discovery-job-176b1e153b696e02.json"
     }
   ],
   "axes": {
@@ -1018,6 +1036,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次回は同じMoE/異種GPU軸を機械的に繰り返さず、storage/DBMS/OS由来のメモリ局所性・I/Oスケジューリング・ admission control をLLM推論へ接続する隣接分野軸を優先する。"
+    },
+    "地理分散LLM serving・分散最適化": {
+      "last_run_key": "2026-09-12T22:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "次回は同じgeo-distributed軸を機械反復せず、GPU障害・reliability-aware serving、またはinterconnect/topology-aware multi-cluster routingへ展開する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
