@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 23:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 23:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **26 / 50** |
-| Research ready | **26** |
+| Candidate在庫（Research ready） | **27 / 50** |
+| Research ready | **27** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **168** |
@@ -27,22 +27,22 @@ Run: **2026-09-12T22:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **22** |
+| Discovery完了 | **8** |
+| 新規job | **24** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-slo-serving-scheduling-06**
+Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-storage-backed-kv-07**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation |
-| 評価候補 | **4** |
+| 探索軸 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 |
+| 評価候補 | **3** |
 | 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **3** |
+| Novel候補 | **3** |
+| Research候補採用 | **1** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -50,12 +50,12 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-slo-serving-scheduling-
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **28** |
-| 探索評価候補 | **153** |
+| 探索round（stats観測） | **29** |
+| 探索評価候補 | **156** |
 | 重複除外 | **46** |
-| 重複率 | **30.1%** |
-| Novel候補 | **107** |
-| Research候補採用 | **49** |
+| 重複率 | **29.5%** |
+| Novel候補 | **110** |
+| Research候補採用 | **50** |
 | Research完了 | **44** |
 | Repo収録 | **44** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-slo-serving-scheduling-
 
 ### 24時間ファネル
 
-**探索評価 153 → 重複除外後 107 → Research候補採用 49 → Research完了 44 → Repo収録 44**
+**探索評価 156 → 重複除外後 110 → Research候補採用 50 → Research完了 44 → Repo収録 44**
 
 ## 探索効率（直近24時間）
 
@@ -95,17 +95,18 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-slo-serving-scheduling-
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
+| SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
 | composable-cxl-shared-kv-peer-gpu-memory-tier | 2 | 0 | 0 | 0.0% | 0.0% |
 | 複数ラウンド分離サービング・異種メモリ処理 | 2 | 0 | 2 | 0.0% | 100.0% |
 
 ### 直近5探索round
 
+- **2026-09-12T23:00:00+09:00** — SSD/NVMe・object storage・CXL remote memoryによるKV階層化: 評価 3 / 重複 0 / 採用 1
 - **2026-09-12T23:00:00+09:00** — SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — KV cache admission/replacement・compression/eviction・復元parallelism: 評価 4 / 重複 0 / 採用 3
 - **2026-09-12T23:00:00+09:00** — CXL/NVLink-C2C・remote memory・階層KV prefetch: 評価 5 / 重複 0 / 採用 2
 - **2026-09-12T23:00:00+09:00** — エージェント型サービング・KV再利用・ツール呼び出し待機: 評価 4 / 重複 0 / 採用 1
-- **2026-09-12T23:00:00+09:00** — MoE expert locality・cache/prefetch・CPU/GPU offload: 評価 4 / 重複 0 / 採用 3
 
 ## 最近処理した論文
 
@@ -125,8 +126,8 @@ Run: **2026-09-12T23:00:00+09:00** / Round: **specialist-slo-serving-scheduling-
 - P90 `arXiv:2606.12556` — ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories
 - P89 `arXiv:2504.02263` — MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
 - P88 `arXiv:2608.01657` — Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches
+- P88 `arXiv:2605.22850` — ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
-- P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
 
 ## 7日比較
 
