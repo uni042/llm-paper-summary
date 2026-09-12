@@ -2,22 +2,22 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.30391-20260912-1942-v10-a",
-  "job_id": "job-research-a6fb90f535b639f2",
+  "attempt_id": "attempt-2606.17787-20260912-1950-v10-a",
+  "job_id": "job-research-8f1c80196652932b",
   "data": {
     "limitations": [
-      "主評価はNVLink接続H100 8基の単一試験環境で、異種GPU、Ethernet/InfiniBandをまたぐ大規模マルチノードクラスタ、地理分散環境は直接評価していない。",
-      "共有GPU評価は1GPUへ載る3B〜14Bモデルが中心である。Llama2-70BでもSLO余裕が残ることは補助実験で示すが、大規模モデルを複数GPUで共有しながらFestina全機構を評価したわけではない。",
-      "オフライン計測表はGPU種類とモデルごとに作る必要があり、1組あたり40分未満でも、モデル数・GPU SKU数が大幅に増える環境では計測と更新コストが増える。未計測入力長は回帰、出力長は予測器に依存する。",
-      "Energy Waste RatioはGPU動的電力が周波数の三乗に概ね比例する近似と、直近5分の平均負荷を使う。急激な負荷変化や異なる電力特性のGPUでは最適な集約判断が変わり得る。",
-      "標準H100ではアイドル時のHBM周波数変更や完全な電源停止を直接実装していないため、Festina+の追加省エネルギーと最大56%の最良条件の一部は模擬上限である。",
-      "プリフィル・デコード分離版ではKVキャッシュ転送の低水準最適化が不足し、同居構成よりSLO達成率が約1.5%低下する。分離構成の利得は通信実装品質に依存する。",
-      "約2,800行の実装を論文評価で使用しているが、2026-09-12時点でarXivページから著者公式コード公開URLは確認できない。"
+      "各requestはKV checkpointを1 copyだけ保持するためcheckpoint holderも同時故障するとfull recomputationへ戻る。64-worker中16 simultaneous failuresのsimulationではinterrupted requestsの23.8%がこのfallbackになる。",
+      "gatewayとcentral controllerが復旧中も生存すると仮定し、両者自身の障害復旧は実装評価の対象外である。",
+      "実機prototypeは4 nodes・8 A800と10Gbps Ethernetまでで、64-worker scalabilityはVidur拡張simulationで評価する。",
+      "障害は原因をworker-level unavailableへ抽象化し、保守的にfull target-model reloadが必要とする。瞬時にGPU contextだけ復旧できる一過性faultなどでは相対効果が異なる可能性がある。",
+      "checkpointingはhost memoryとnetwork bandwidthを常時使用する。prototypeではsteady-state latency overheadを測定できない程度に抑えているが、host memoryが乏しい環境やnetworkが通常trafficで飽和する環境は直接評価していない。",
+      "speculative assistanceはtarget/draft model pairのacceptance rateとdraft footprintに依存する。評価ではK=2〜8で頑健だったが、draft modelが十分小さくない場合やacceptanceが極端に低い場合の利得は小さくなる。",
+      "著者はprototypeとsimulatorをfinal paperでopen-sourceすると記載しており、arXiv v1時点では公開実装URLを提示していない。"
     ],
-    "differences": "ServerlessLLMはスケールアウトやモデルロードを高速化するがGPUを空間共有せず、電力最適化を主目的にしない。MuxServeやDilu、Aegaeonは複数LLMのGPU共有やSM再分割を扱うが、共有クロック下のエネルギー最適点を要求配置・集約へ組み込まない。DynamoLLM、GreenLLM、VoltanaLLMはSLO認識型の周波数制御を行うが、基本的に1モデルまたは固定されたプリフィル・デコード構成を前提とし、複数テナントが同じGPU周波数を共有する競合を解かない。Festinaは周波数認識配置、実行中のSM・周波数共同再構成、EWR認識集約を同じ制御面へ統合し、空間共有そのものを省エネルギー判断の対象にする点が差分である。",
-    "implementation_status": "vLLM上に約2,800行のPythonおよびCUDA/C++で実装し、NVIDIA H100 8基の実機で評価している。Python asyncioを全体制御、MPSをSM分割、pyNVMLをGPUコア周波数制御に使用する。全体配置、局所バッチング、SM・周波数共同制御、EWR認識モデル集約と移行を実装済み。Festina+の動的HBM周波数制御・完全アイドル停止のみはH100で利用できないため模擬評価。公式公開リポジトリは2026-09-12時点で未確認。",
-    "research_positioning": "LLMサービング／スケジューリング系統のうち、性能・GPU利用率ではなくクラスタ電力を目的関数へ加えた研究に位置する。重要なのはDVFS単体ではなく、共有GPUでは配置と周波数が結合するため『どの要求を同居させるか』を電力制御の一部として扱った点である。プリフィル・デコード分離研究とも接続し、フェーズを分離すれば周波数適合性は高まるがKV転送費が増えるという別の交換条件を示す。階層メモリやSSD/NVMe活用研究への示唆として、低負荷時のモデル・KV移行では単純に容量を詰めるだけでなく、移行後のGPU動作点や静的電力まで含めた総エネルギーで配置先を決める必要がある。将来SSDへモデルやKVを退避してGPU停止を深くする場合、EWRと移行費用を合わせる考え方はそのまま拡張できる。",
-    "related_work": ["ServerlessLLM", "MuxServe", "Dilu", "Aegaeon", "DynamoLLM", "GreenLLM", "VoltanaLLM", "Prism", "vLLM", "Llumnix"],
-    "audit_notes": "arXiv:2606.30391v1のHTML全文を、問題設定、SLO余裕と周波数測定、共有GPUの空間・時間・クラスタ結合、オフライン計測表、出力長予測、全体配置、局所緊急度とSM・周波数共同制御、Energy Waste Ratio、負荷集約・移行、8基H100評価、比較対象、エネルギー/SLO結果、6段階アブレーション、プリフィル/デコード偏重負荷、プリフィル・デコード分離、関連研究、付録の大規模モデル・移行設計まで確認した。参考文献は60件を確認した。"
+    "differences": "DéjàVuはKV cacheを固定ring neighborのCPU memoryへstreamして再計算を避けるが、障害時のrestore先が固定され、load hotspotとmodel reload中のcapacity lossを扱わない。KevlarFlowはGPU-memory KV replicationとpipeline reconfigurationで耐障害性を高めるが、現在loadを使ったrequest-level recovery routingを主眼にしない。FailSafeはtensor-parallel worker内部のirregular GPU availabilityに対しKV placementやload routingを調整するのに対し、LUMENは独立worker群のworker-level failure後にcluster-wideでcheckpoint placement・request redistribution・recovering capacityを協調する。GhostServeはhost memoryのerasure-coded KV protectionを重視する。LUMENの差分は、KV state protectionだけでなくfull-model reload時間をdraft-model speculative assistanceへ転換し、uninterrupted requestsを含むcluster全体のlatency回復を目的にする点である。",
+    "implementation_status": "SGLang v0.5.6へ約13K LoCのPython prototypeを実装済み。controller、ZeroMQ KV streaming、recovery-aware Sarathi-Serve queues、gRPC token synchronization、draft-to-target hot-swap、gateway health/load routingを含む。大規模評価用にVidurへ約5K LoCを追加済み。論文はfinal paperで両実装をopen-source予定とするが、2026-09-12時点のarXiv v1にはrepository URLがない。",
+    "research_positioning": "LLM serving scheduling/disaggregation系統のうちfault toleranceとstate movementを主題にする。KV cacheを単なる高速化cacheではなく、障害後の計算再利用可能stateとして別workerのCPU memoryへ継続保存する点はKV offload研究とも接続する。さらにmodel reloadを単なる停止時間とみなさず、軽量draft modelだけ先にGPUへ戻してfull modelをbackground storage I/Oするprogressive recoveryは、階層storageと計算capacityを協調させる設計である。SSD/NVMe活用の観点では、target weightsのdisk-to-host preload、KV checkpointのhost placement、再計算costを同じrecovery objectiveで扱っており、将来的にはcheckpoint tierをCPUだけでなくNVMeへ拡張する際にrestore bandwidth・queue load・prefix valueを合わせた配置判断が重要になる。",
+    "related_work": ["DéjàVu", "KevlarFlow", "FailSafe", "GhostServe", "Llumnix", "SGLang", "Sarathi-Serve", "vLLM", "CachedAttention", "Mooncake"],
+    "audit_notes": "arXiv:2606.17787v1のHTML全文を、failure model、4〜64 worker motivation、root-cause breakdown、load-aware checkpoint equationとincremental pipeline、page tags、locality-aware shedding、speculation-assisted four-state recovery、single-pass verification、draft-state alignment、implementation、4/8-worker A800 prototype、10〜64 worker simulation、request-rate/failure-count/scalability/sensitivity experiments、related work、referencesまで確認した。主要数値は本文Table 2/3とExperiments A.1-A.4、B.1-B.7から抽出した。"
   }
 }
