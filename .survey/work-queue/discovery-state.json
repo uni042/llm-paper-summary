@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:18:09+00:00",
+  "updated_at": "2026-09-12T20:22:21+00:00",
   "last_run_key": "2026-09-13T05:00:25+09:00",
-  "last_round": "specialist-survey-gap-4",
+  "last_round": "specialist-moe-expert-cache-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "この軸で軽量評価した強候補は最新正本ですべて既収録だったため。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1993,6 +1993,28 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "MoE expert cache／offload、GPU runtime／kernel compilation、引用・関連実装の順に重複飽和を確認する",
       "source_submission": "work-queue/submissions/20260913T0517JST-discovery-specialist-survey-gap.json"
+    },
+    {
+      "run_key": "2026-09-13T05:00:25+09:00",
+      "round": "specialist-moe-expert-cache-5",
+      "axis": "MoE expert cache・offload・OS tiering",
+      "query_summary": "MoEのexpert cache、offload、prefetch、near-data実行、OSページキャッシュ管理を横断して強い既知候補を再点検した。Cache-Aware Joint Router Adaptation、DynaNDE、Expert Pruning in Over-Dispersed MoE、Kernel-Managed Expert Cache、SPICE、MoElessはいずれも最新正本の既存jobまたは重複記録で収録済みと確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.04895",
+        "arXiv:2609.00407",
+        "arXiv:2609.04453",
+        "arXiv:2608.12103",
+        "arXiv:2608.21240",
+        "arXiv:2603.06350"
+      ],
+      "next_axis_hint": "GPU runtime・kernel compilationへ切り替え、JIT、CUDA Graph、persistent kernel系の未収録候補を確認する",
+      "source_submission": "work-queue/submissions/20260913T0521JST-discovery-specialist-moe-expert-cache.json"
     }
   ],
   "axes": {
@@ -3145,6 +3167,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "MoE expert cache／offload、GPU runtime／kernel compilation、引用・関連実装の順に重複飽和を確認する"
+    },
+    "MoE expert cache・offload・OS tiering": {
+      "last_run_key": "2026-09-13T05:00:25+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 6,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "GPU runtime・kernel compilationへ切り替え、JIT、CUDA Graph、persistent kernel系の未収録候補を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:22:04.590556+00:00",
+  "updated_at": "2026-09-12T20:23:21.049395+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,7 +14622,7 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T20:22:04.590556+00:00",
+      "last_recorded_at": "2026-09-12T20:23:21.049395+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -14631,9 +14631,9 @@
       "counts": {
         "research_completed": 8,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 11,
+        "new_jobs": 12,
         "new_papers": 8,
         "fallback_archived": 0
       },
@@ -14800,6 +14800,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34716857813:1",
+          "recorded_at": "2026-09-12T20:23:21.049395+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34716857813",
+            "run_attempt": "1",
+            "source_sha": "6622f6dda7393b07d7ab643798759801cfd574d7"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14898,6 +14912,14 @@
           "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-777d0b40c119082d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -14977,6 +14999,13 @@
           "type": "research",
           "canonical_id": "arXiv:2604.22906",
           "title": "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities"
+        },
+        {
+          "job_id": "job-6cd4b32c905ce5c7",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -14993,12 +15022,13 @@
         ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json",
         ".survey/work-queue/results/20260913T0508JST-discovery-specialist-agent-os-memory.json",
         ".survey/work-queue/results/20260913T0513JST-discovery-specialist-disaggregated-serving.json",
-        ".survey/work-queue/results/20260913T0517JST-discovery-specialist-survey-gap.json"
+        ".survey/work-queue/results/20260913T0517JST-discovery-specialist-survey-gap.json",
+        ".survey/work-queue/results/20260913T0521JST-discovery-specialist-moe-expert-cache.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
       "paper_active_count_after": 386,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
