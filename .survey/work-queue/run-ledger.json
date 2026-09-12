@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T13:39:34.093152+00:00",
+  "updated_at": "2026-09-12T13:45:49.945984+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10688,19 +10688,19 @@
     {
       "run_key": "2026-09-12T22:30:00+09:00",
       "first_recorded_at": "2026-09-12T13:32:56.105921+00:00",
-      "last_recorded_at": "2026-09-12T13:39:34.093152+00:00",
+      "last_recorded_at": "2026-09-12T13:45:49.945984+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 1,
         "blocked": 0,
         "new_jobs": 3,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -10732,6 +10732,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34697258233:1",
+          "recorded_at": "2026-09-12T13:45:49.945984+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34697258233",
+            "run_attempt": "1",
+            "source_sha": "7d6a28558e4308089fd4e3f217481b16989b4fd5"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10748,6 +10763,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.00857",
           "title": "LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-add2dd90d1cb57e3",
+          "type": "research",
+          "canonical_id": "arXiv:2509.08309",
+          "title": "Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism",
           "from": "ready",
           "to": "completed"
         }
@@ -10776,14 +10799,15 @@
         }
       ],
       "new_paper_ids": [
-        "arXiv:2609.00857"
+        "arXiv:2609.00857",
+        "arXiv:2509.08309"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 354,
-      "paper_active_count_after": 355,
+      "paper_active_count_after": 356,
       "last_successful_action": "paper_materialized"
     }
   ]
