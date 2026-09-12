@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 01:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 01:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **42 / 50** |
-| Research ready | **42** |
+| Candidate在庫（Research ready） | **43 / 50** |
+| Research ready | **43** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **173** |
@@ -27,8 +27,8 @@ Run: **2026-09-13T00:30:00+09:00**
 |---|---:|
 | Research完了 | **2** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **7** |
+| Discovery完了 | **4** |
+| 新規job | **9** |
 | Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
@@ -50,12 +50,12 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **44** |
-| 探索評価候補 | **218** |
+| 探索round（stats観測） | **45** |
+| 探索評価候補 | **222** |
 | 重複除外 | **72** |
-| 重複率 | **33.0%** |
-| Novel候補 | **146** |
-| Research候補採用 | **70** |
+| 重複率 | **32.4%** |
+| Novel候補 | **150** |
+| Research候補採用 | **71** |
 | Research完了 | **49** |
 | Repo収録 | **49** |
 | Audit完了 | **0** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 218 → 重複除外後 146 → Research候補採用 70 → Research完了 49 → Repo収録 49**
+**探索評価 222 → 重複除外後 150 → Research候補採用 71 → Research完了 49 → Repo収録 49**
 
 ## 探索効率（直近24時間）
 
@@ -96,6 +96,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | KV multi-turn管理・復元・予約不確実性 | 4 | 4 | 0 | 100.0% | 0.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | OS階層管理・専門家キャッシュ・KV先読み・SSD再利用 | 4 | 0 | 1 | 0.0% | 25.0% |
+| SLO-aware scheduling・KV memory hierarchy・動的メモリ回収 | 4 | 0 | 1 | 0.0% | 25.0% |
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
@@ -117,11 +118,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T00:58:47+09:00** — SLO-aware scheduling・KV memory hierarchy・動的メモリ回収: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T00:58:47+09:00** — 分散推論・collective通信・disaggregated電力/runtime: 評価 3 / 重複 0 / 採用 2
 - **2026-09-13T00:58:47+09:00** — OS階層管理・専門家キャッシュ・KV先読み・SSD再利用: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T00:58:47+09:00** — エージェント配信・Multi-LoRA・意味検索型KV管理: 評価 3 / 重複 0 / 採用 1
 - **2026-09-13T00:00:00+09:00** — 直近新着・vLLM/SGLang周辺実装・関連論文: 評価 4 / 重複 4 / 採用 0
-- **2026-09-13T00:00:00+09:00** — KV multi-turn管理・復元・予約不確実性: 評価 4 / 重複 4 / 採用 0
 
 ## 最近処理した論文
 
