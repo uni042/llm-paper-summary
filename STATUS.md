@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 00:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 00:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **171** |
 | Maintenance | **passed** |
 | Consistency | **passed** |
-| Maintenance counter | **22 / 24** |
+| Maintenance counter | **23 / 24** |
 
 ### 注意事項
 
@@ -27,18 +27,18 @@ Run: **2026-09-12T23:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **15** |
+| Discovery完了 | **8** |
+| 新規job | **16** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-kv-saturated-7**
+Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturated-8**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | KV multi-turn管理・復元・予約不確実性 |
+| 探索軸 | 直近新着・vLLM/SGLang周辺実装・関連論文 |
 | 評価候補 | **4** |
 | 重複除外 | **4** |
 | Novel候補 | **0** |
@@ -49,11 +49,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-kv-saturated-7**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **40** |
-| 探索評価候補 | **204** |
-| 重複除外 | **68** |
-| 重複率 | **33.3%** |
+| 通常worker run（ledger観測） | **20** |
+| 探索round（stats観測） | **41** |
+| 探索評価候補 | **208** |
+| 重複除外 | **72** |
+| 重複率 | **34.6%** |
 | Novel候補 | **136** |
 | Research候補採用 | **66** |
 | Research完了 | **47** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-kv-saturated-7**
 
 ### 24時間ファネル
 
-**探索評価 204 → 重複除外後 136 → Research候補採用 66 → Research完了 47 → Repo収録 47**
+**探索評価 208 → 重複除外後 136 → Research候補採用 66 → Research完了 47 → Repo収録 47**
 
 ## 探索効率（直近24時間）
 
@@ -105,6 +105,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-kv-saturated-7**
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
+| 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | moe-expert-prefetch-edge-external-memory | 3 | 0 | 1 | 0.0% | 33.3% |
@@ -113,11 +114,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-kv-saturated-7**
 
 ### 直近5探索round
 
+- **2026-09-13T00:00:00+09:00** — 直近新着・vLLM/SGLang周辺実装・関連論文: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T00:00:00+09:00** — KV multi-turn管理・復元・予約不確実性: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T00:00:00+09:00** — MoE専門家配置・先読み・協調スケジューリング: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T00:00:00+09:00** — multi-agent workflow scheduling・異種LLM配置: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T00:00:00+09:00** — GPU runtime境界・host-device転送律速: 評価 4 / 重複 3 / 採用 1
-- **2026-09-13T00:00:00+09:00** — エージェント推論・speculative tool execution: 評価 4 / 重複 2 / 採用 2
 
 ## 最近処理した論文
 
