@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T11:16:51.691322+00:00",
+  "updated_at": "2026-09-12T11:18:12.268610+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -9913,7 +9913,7 @@
     {
       "run_key": "2026-09-12T19:30:00+09:00",
       "first_recorded_at": "2026-09-12T10:36:23.790325+00:00",
-      "last_recorded_at": "2026-09-12T11:16:51.691322+00:00",
+      "last_recorded_at": "2026-09-12T11:18:12.268610+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -9922,9 +9922,9 @@
       "counts": {
         "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 9,
         "new_papers": 5,
         "fallback_archived": 0
       },
@@ -10059,6 +10059,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34690589004:1",
+          "recorded_at": "2026-09-12T11:18:12.268610+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34690589004",
+            "run_attempt": "1",
+            "source_sha": "85ee357dd0f441be3b6d722c43751a4afb9447e9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -10117,6 +10131,14 @@
           "title": "Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-4649dafe5fe3736a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -10147,6 +10169,41 @@
           "type": "research",
           "canonical_id": "arXiv:2605.02189",
           "title": "PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers"
+        },
+        {
+          "job_id": "job-4ec414ca721c48b8",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-388fa94d36dfd583",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.15039",
+          "title": "Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter"
+        },
+        {
+          "job_id": "job-research-434c5f74d230609f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.00368",
+          "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving"
+        },
+        {
+          "job_id": "job-research-7e658d2c7f333c12",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.26633",
+          "title": "NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement"
+        },
+        {
+          "job_id": "job-research-95786e300fa60d16",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15555",
+          "title": "Service-Induced Congestion in Memory-Constrained LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -10160,12 +10217,13 @@
         ".survey/work-queue/results/20260912T1930JST-discovery-c797669b52ac6c35.json",
         ".survey/work-queue/results/20260912T1946JST-discovery-9fd635bf1f1ee4f2.json",
         ".survey/work-queue/results/20260912T1957JST-discovery-job-a6656c3eeb0b76a3.json",
-        ".survey/work-queue/results/20260912T2000JST-discovery-specialist-01.json"
+        ".survey/work-queue/results/20260912T2000JST-discovery-specialist-01.json",
+        ".survey/work-queue/results/20260912T2018JST-discovery-job-4649dafe5fe3736a.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 344,
       "paper_active_count_after": 349,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

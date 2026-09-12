@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T11:02:18+00:00",
+  "updated_at": "2026-09-12T11:17:11+00:00",
   "last_run_key": "2026-09-12T19:30:00+09:00",
-  "last_round": "normal-worker-critical-buffer-heterogeneous-gpu-1",
+  "last_round": "normal-worker-critical-buffer-network-runtime-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -539,6 +539,27 @@
       ],
       "next_axis_hint": "Next discovery should avoid immediately repeating heterogeneous GPU scheduling; rotate to GPU runtime/virtual-memory mechanisms, network/RDMA transport, or citation expansion from recent accepted serving papers.",
       "source_submission": "work-queue/submissions/20260912T1957JST-discovery-job-a6656c3eeb0b76a3.json"
+    },
+    {
+      "run_key": "2026-09-12T19:30:00+09:00",
+      "round": "normal-worker-critical-buffer-network-runtime-2",
+      "axis": "network-data-movement-pnm-cross-dc-memory-dynamics",
+      "query_summary": "Candidate inventory remained below the critical watermark after the heterogeneous-GPU round. Rotated to disaggregated data movement, GPU-PNM mixed-length placement, cross-datacenter prefill/KV transport, and memory-congestion dynamics. Exact arXiv-ID and repository-title searches found no existing entries for the four selected candidates.",
+      "candidate_count": 9,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.5555555555555556,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2606.16135",
+        "arXiv:2605.03375",
+        "arXiv:2607.16892",
+        "arXiv:2607.26475",
+        "arXiv:2607.26491"
+      ],
+      "next_axis_hint": "If inventory remains critical after final dedupe, use citation expansion from newly accepted TENT/PipeMax/NELSSA-related work or rotate to GPU runtime and virtual-memory mechanisms; do not repeat heterogeneous-GPU or CXL-only queries immediately.",
+      "source_submission": "work-queue/submissions/20260912T2018JST-discovery-job-4649dafe5fe3736a.json"
     }
   ],
   "axes": {
@@ -831,6 +852,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.625,
       "next_axis_hint": "Next discovery should avoid immediately repeating heterogeneous GPU scheduling; rotate to GPU runtime/virtual-memory mechanisms, network/RDMA transport, or citation expansion from recent accepted serving papers."
+    },
+    "network-data-movement-pnm-cross-dc-memory-dynamics": {
+      "last_run_key": "2026-09-12T19:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.5555555555555556,
+      "next_axis_hint": "If inventory remains critical after final dedupe, use citation expansion from newly accepted TENT/PipeMax/NELSSA-related work or rotate to GPU runtime and virtual-memory mechanisms; do not repeat heterogeneous-GPU or CXL-only queries immediately."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
