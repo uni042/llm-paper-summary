@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 04:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 04:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,33 +28,33 @@ Run: **2026-09-13T03:30:00+09:00**
 |---|---:|
 | Research完了 | **4** |
 | Audit完了 | **0** |
-| Discovery完了 | **9** |
-| 新規job | **27** |
+| Discovery完了 | **10** |
+| 新規job | **28** |
 | Repo収録 | **4** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-agentic-serving-4**
+Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-moe-communication-saturation-5**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | agentic workload・program/session-aware serving |
+| 探索軸 | MoE通信・runtime parallelism・online expert placement |
 | 評価候補 | **4** |
-| 重複除外 | **1** |
-| Novel候補 | **3** |
-| Research候補採用 | **3** |
-| 重複率 | **25.0%** |
+| 重複除外 | **4** |
+| Novel候補 | **0** |
+| Research候補採用 | **0** |
+| 重複率 | **100.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **92** |
-| 探索評価候補 | **442** |
-| 重複除外 | **138** |
-| 重複率 | **31.2%** |
+| 探索round（stats観測） | **93** |
+| 探索評価候補 | **446** |
+| 重複除外 | **142** |
+| 重複率 | **31.8%** |
 | Novel候補 | **304** |
 | Research候補採用 | **162** |
 | Research完了 | **57** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-agentic-serving-4**
 
 ### 24時間ファネル
 
-**探索評価 442 → 重複除外後 304 → Research候補採用 162 → Research完了 57 → Repo収録 57**
+**探索評価 446 → 重複除外後 304 → Research候補採用 162 → Research完了 57 → Repo収録 57**
 
 ## 探索効率（直近24時間）
 
@@ -119,6 +119,7 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-agentic-serving-4**
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV multi-turn管理・復元・予約不確実性 | 4 | 4 | 0 | 100.0% | 0.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
+| MoE通信・runtime parallelism・online expert placement | 4 | 4 | 0 | 100.0% | 0.0% |
 | NVMe外部KV・PIM runtime・page-aware decode scheduling | 4 | 0 | 0 | 0.0% | 0.0% |
 | OS階層管理・専門家キャッシュ・KV先読み・SSD再利用 | 4 | 0 | 1 | 0.0% | 25.0% |
 | P/D分離・KV転送・shared prefill | 4 | 1 | 2 | 25.0% | 50.0% |
@@ -166,11 +167,11 @@ Run: **2026-09-13T04:00:16+09:00** / Round: **specialist-agentic-serving-4**
 
 ### 直近5探索round
 
+- **2026-09-13T04:00:16+09:00** — MoE通信・runtime parallelism・online expert placement: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T04:00:16+09:00** — agentic workload・program/session-aware serving: 評価 4 / 重複 1 / 採用 3
 - **2026-09-13T04:00:16+09:00** — GPU kernel生成・runtime最適化の隣接系: 評価 3 / 重複 0 / 採用 3
 - **2026-09-13T04:00:16+09:00** — 分離サービングprefill制御・chunked prefill scheduling: 評価 7 / 重複 4 / 採用 2
 - **2026-09-13T04:00:16+09:00** — 新着・長期推論KV圧縮と削除: 評価 3 / 重複 0 / 採用 0
-- **2026-09-13T03:30:44+09:00** — fault-tolerant distributed serving・KV recovery・GPU failure: 評価 4 / 重複 4 / 採用 0
 
 ## 最近処理した論文
 
