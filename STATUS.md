@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-12 16:51 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-12 16:58 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -29,22 +29,22 @@ Run: **2026-09-12T16:30:00+09:00**
 |---|---:|
 | Research完了 | **3** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **4** |
+| Discovery完了 | **2** |
+| 新規job | **5** |
 | Repo収録 | **3** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-new-arrivals-power-moe-kv-1-retry**
+Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-exaserve-derived-storage-control-2**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 |
-| 評価候補 | **4** |
+| 探索軸 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling |
+| 評価候補 | **3** |
 | 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **2** |
+| Novel候補 | **3** |
+| Research候補採用 | **0** |
 | 重複率 | **0.0%** |
 
 ## 直近24時間
@@ -52,11 +52,11 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-new-arrivals-power-mo
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **16** |
-| 探索round（stats観測） | **2** |
-| 探索評価候補 | **8** |
+| 探索round（stats観測） | **3** |
+| 探索評価候補 | **11** |
 | 重複除外 | **1** |
-| 重複率 | **12.5%** |
-| Novel候補 | **7** |
+| 重複率 | **9.1%** |
+| Novel候補 | **10** |
 | Research候補採用 | **5** |
 | Research完了 | **34** |
 | Repo収録 | **30** |
@@ -66,7 +66,7 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-new-arrivals-power-mo
 
 ### 24時間ファネル
 
-**探索評価 8 → 重複除外後 7 → Research候補採用 5 → Research完了 34 → Repo収録 30**
+**探索評価 11 → 重複除外後 10 → Research候補採用 5 → Research完了 34 → Repo収録 30**
 
 ## 探索効率（直近24時間）
 
@@ -74,14 +74,15 @@ Run: **2026-09-12T16:30:00+09:00** / Round: **paper-worker-new-arrivals-power-mo
 |---|---:|---:|---:|---:|---:|
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
+| ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 
 ### 直近5探索round
 
+- **2026-09-12T16:30:00+09:00** — ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling: 評価 3 / 重複 0 / 採用 0
 - **2026-09-12T16:30:00+09:00** — 新着分離サービング電力制御・MoE推論効率・KVメモリ回収: 評価 4 / 重複 0 / 採用 2
 - **2026-09-12T14:22:56+09:00** — 2609新着・分離サービング・動的ルーティング: 評価 4 / 重複 1 / 採用 3
 - **2026-09-11T11:30:00+09:00** — 最新2609・隣接ストレージ・スケジューリング再確認: 評価 0 / 重複 0 / 採用 0
 - **2026-09-11T11:30:00+09:00** — 異種GPUモデル間KV共有・NVLink階層: 評価 1 / 重複 1 / 採用 0
-- **2026-09-11T11:30:00+09:00** — CUDA仮想メモリによるKV予約領域回収: 評価 1 / 重複 1 / 採用 0
 
 ## 最近処理した論文
 
