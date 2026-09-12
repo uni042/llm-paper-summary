@@ -94,7 +94,7 @@ def normalize_preferred_terms(value: Any, key: str | None = None) -> Any:
     protected_keys = {
         "canonical_id", "arxiv_id", "doi", "openreview_id", "source", "sources",
         "code", "paper_path", "attempt_id", "job_id", "published", "title",
-        "authors", "publication", "publication_type", "publication_status",
+        "authors", "publication", "publication_type", "publication_status", "lineage",
         "arxiv_categories", "references", "references_checked_at", "references_source",
         "references_total",
     }
