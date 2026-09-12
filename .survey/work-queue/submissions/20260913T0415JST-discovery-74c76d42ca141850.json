@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "job-74c76d42ca141850",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T04:00:16+09:00",
+    "round": "specialist-moe-communication-saturation-5",
+    "axis": "MoE通信・runtime parallelism・online expert placement",
+    "query_summary": "MoE servingのruntime parallelism切替、online proactive expert placement、TP-EP fused communication、動的expert割当理論を独立軸として確認。Moebius、Director、MixServe、Mixture-of-Experts Servingはいずれも決定論的research job IDの実体を最新正本系統で確認し既存として除外した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2606.26607",
+      "arxiv:2607.08782",
+      "arxiv:2601.08800",
+      "arxiv:2607.17880"
+    ],
+    "next_axis_hint": "CXL/SSD/remote KV cacheとprefix-cache階層メモリへ移る",
+    "empty_round_reason": "強いMoE communication/runtime候補4件はすべて既存research jobまたは収録済みだった。"
+  }
+}
