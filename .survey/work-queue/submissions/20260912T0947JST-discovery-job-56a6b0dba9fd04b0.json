@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-56a6b0dba9fd04b0",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.30391",
+      "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2606.30391",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md",
+      "priority": 88,
+      "reason": "共有GPU上のサーバーレスLLMサービングで、要求配置、GPU計算資源分割、動作点、負荷集約を遅延SLOの範囲内で共同制御し、性能ではなくクラスタ全体の電力を第一目的に最適化するFestinaを提案する。オフライン計測表とGPU状態要約による軽量な全体配置、フェーズごとの局所バッチ・資源調整、SLOを守る移行を組み合わせ、複数の既存サービング方式に対してSLO達成率をほぼ維持しつつ消費エネルギーを最大56%削減と報告する。性能・容量中心の既存収録軸とは異なる資源制御の強い隣接候補。"
+    },
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/04-moe-expert-offload-caching/2026-2603.06350-moeless-efficient-moe-llm-serving-via-serverless-computing.md",
+      "priority": 87,
+      "reason": "MoEの専門家負荷偏りを、固定GPU内の配置変更や重み入替えだけでなく、混雑専門家をサーバーレスGPU関数として弾力的に複製・配置して吸収する方式。層ごとの軽量予測器で近未来の専門家負荷を推定して遅延要因を先に特定し、関数局所性を考慮したスケール数と配置を決める。Megatron-LM上の8GPU試験で既存方式比の推論遅延43%削減、コスト84%削減を報告しており、専門家オフロード・キャッシュとは異なる弾力的資源供給の設計点を持つ。"
+    },
+    {
+      "canonical_id": "arXiv:2603.12707",
+      "title": "Cost-Efficient Multimodal LLM Inference via Cross-Tier GPU Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2603.12707",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.12707-cost-efficient-multimodal-llm-inference-via-cross-tier-gpu-heterogeneity.md",
+      "priority": 84,
+      "reason": "マルチモーダルLLMでは画像符号化が計算律速、言語生成がメモリ帯域律速になる性質を利用し、画像エンコーダとLLMの境界で処理を分離して異なる価格帯のGPUへ配置するHeteroServe。層単位の分離より転送量をKVキャッシュ規模から画像埋め込み規模へ減らせるため、NVLinkではなくPCIe級接続でも異種GPUを組み合わせられる。Qwen2.5-VL等で固定予算下のトークン当たり費用効率を同種GPU構成より37%改善し、遅延を悪化させないと報告しており、マルチモーダル特有の段階分離という新しいサービング軸として価値がある。"
+    }
+  ]
+}
