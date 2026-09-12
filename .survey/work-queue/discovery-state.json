@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T18:15:00+00:00",
+  "updated_at": "2026-09-12T18:19:19+00:00",
   "last_run_key": "2026-09-13T03:02:31+09:00",
-  "last_round": "specialist-serverless-production-omissions-3",
+  "last_round": "specialist-compiler-runtime-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -1628,6 +1628,26 @@
       ],
       "next_axis_hint": "次はserverless/cold-startを離れ、forward citation・network flow scheduling・DBMS/OS由来のstate placementの独立経路を確認する",
       "source_submission": "work-queue/submissions/20260913T0318JST-discovery-specialist-serverless-omissions-3.json"
+    },
+    {
+      "run_key": "2026-09-13T03:02:31+09:00",
+      "round": "specialist-compiler-runtime-4",
+      "axis": "CUDA compiler・JIT/Graph runtime・decode kernel serving",
+      "query_summary": "serverless production軸からGPU compiler/runtimeへ移動し、一次arXiv metadata/abstractでAgentCompileとHybrid JIT-CUDA Graphを軽量評価した。Mirage Persistent Kernel、Concordia、Foundry、ZipServは最新repoで既存jobを確認済みとして除外。送信直前に最新default branch HEAD、next queue、決定論的research job path、repository検索、Library pending、GitHub fallback-inboxを再確認し、2件を未収録と判断した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2512.22219",
+        "arXiv:2606.23521",
+        "arXiv:2604.06664",
+        "arXiv:2603.17435"
+      ],
+      "next_axis_hint": "次はcompiler/runtimeを離れ、forward/backward citation、storage/DBMS由来state placement、remote/speculative distributed servingを独立に確認する",
+      "source_submission": "work-queue/submissions/20260913T0320JST-discovery-specialist-compiler-runtime-4.json"
     }
   ],
   "axes": {
@@ -2580,6 +2600,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.42857142857142855,
       "next_axis_hint": "次はserverless/cold-startを離れ、forward citation・network flow scheduling・DBMS/OS由来のstate placementの独立経路を確認する"
+    },
+    "CUDA compiler・JIT/Graph runtime・decode kernel serving": {
+      "last_run_key": "2026-09-13T03:02:31+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "次はcompiler/runtimeを離れ、forward/backward citation、storage/DBMS由来state placement、remote/speculative distributed servingを独立に確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

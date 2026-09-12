@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3ad6262bd04cfbe6",
+  "type": "research",
+  "parent_job_id": "job-f8688529219ccc48",
+  "priority": 76,
+  "canonical_id": "arXiv:2604.23467",
+  "title": "Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference",
+  "source_url": "https://arxiv.org/abs/2604.23467",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md",
+  "selection_reason": "短いinteractive推論でkernel launch overheadが支配的になる領域に対し、静的transformer部分をCUDA Graph replay、動的部分をJIT kernelへ分割して非同期capture/reuseするruntimeを提案する。LLaMA-2 7B・single GPU・batch 1の限定条件ながらTensorRT-LLM比TTFT最大66%削減と低いP99を報告しており、persistent/mega-kernelとは異なるhybrid runtime設計として補完的。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T18:19:19+00:00",
+  "artifact_transport": "structured_record_v10"
+}
