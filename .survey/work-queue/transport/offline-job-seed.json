@@ -1,45 +1,31 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "seed_id": "seed-20260912-1830-critical-buffer-round3",
+  "seed_id": "seed-20260912-2030-critical-buffer-ssd-kv",
   "candidates": [
     {
-      "canonical_id": "arXiv:2609.10790",
-      "title": "Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving",
-      "source_url": "https://arxiv.org/abs/2609.10790",
-      "priority": 92,
-      "reason": "Recent systems work that makes composable CXL memory a Kubernetes-schedulable shared KV-cache tier and reports 5.5x-36.6x TTFT reduction from cross-node prefix reuse."
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "priority": 98,
+      "reason": "Directly matches the repository's highest-priority SSD/NVMe offload theme. Tutti replaces CPU-centric SSD KV-cache I/O with a GPU-centric object/I/O path, integrates with vLLM, and reports 78.3% TTFT reduction, 2x achievable request rate, and 27% serving-cost reduction versus GDS-enabled SSD-backed LMCache."
     },
     {
-      "canonical_id": "arXiv:2607.18141",
-      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
-      "source_url": "https://arxiv.org/abs/2607.18141",
-      "priority": 96,
-      "reason": "Directly relevant CXL-plus-SSD hybrid-memory KV caching; uses request-level prefetch and write buffering on a real prototype and compares against LMCache and Mooncake."
-    },
-    {
-      "canonical_id": "arXiv:2602.11521",
-      "title": "PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System",
-      "source_url": "https://arxiv.org/abs/2602.11521",
-      "priority": 88,
-      "reason": "Adjacent hierarchical-memory/PIM serving design that jointly places KV tokens and attention computation across heterogeneous memory tiers, useful for cross-lineage memory scheduling ideas."
-    },
-    {
-      "canonical_id": "arXiv:2608.03555",
-      "title": "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
-      "source_url": "https://arxiv.org/abs/2608.03555",
-      "priority": 90,
-      "reason": "Strong adjacent PNM/GPU co-serving paper for million-token sparse attention; moves KV/index operations to general-purpose near-memory nodes and reports 2.09-6.13x throughput-per-TDP under SLO."
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "priority": 91,
+      "reason": "Strong heterogeneous-memory KV-cache systems work. It borrows otherwise-idle HBM from co-located models over NVLink and keeps only the active layer's KV locally, reporting up to 69% lower P99 TTFT and 3.98x longer supported context."
     }
   ],
   "discovery_stats": {
-    "run_key": "2026-09-12T18:30:00+09:00",
-    "round": "normal-worker-critical-buffer-3",
-    "axis": "adjacent-cxl-hybrid-memory-pim-pnm",
-    "query_summary": "Rotated after an all-known MoE/NVMe round into adjacent CXL shared memory, SSD-backed hybrid KV tiers, hierarchical PIM, and PNM sparse-attention serving. Evaluated four strong primary-source candidates.",
-    "candidate_count": 4,
+    "run_key": "2026-09-12T20:30:00+09:00",
+    "round": "normal-worker-critical-buffer-ssd-kv",
+    "axis": "ssd-backed-kv-and-heterogeneous-kv-sharing",
+    "query_summary": "Candidate inventory was below the critical watermark, so discovery was prioritized. Searched recent primary-source LLM serving work around SSD-backed KV cache, heterogeneous KV placement, offload, and long-context serving. Two strong candidates survived repository code-search pre-dedupe.",
+    "candidate_count": 2,
     "duplicate_filtered_count": 0,
     "duplicate_canonical_ids": [],
-    "next_axis_hint": "If final repository dedupe removes most candidates, rotate next to OS paging, GPU virtual-memory/runtime, storage scheduling, and networking mechanisms rather than repeating CXL."
+    "next_axis_hint": "Rotate next toward OS paging/GPU virtual memory, storage I/O scheduling, or network-aware KV transport instead of repeating SSD-KV queries if these are accepted."
   }
 }
