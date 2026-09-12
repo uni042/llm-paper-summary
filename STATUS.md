@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 05:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 05:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **124 / 50** |
-| Research ready | **124** |
+| Candidate在庫（Research ready） | **127 / 50** |
+| Research ready | **127** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **197** |
+| Research completed（累計） | **198** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **4 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T05:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **4** |
-| Repo収録 | **0** |
+| Discovery完了 | **3** |
+| 新規job | **9** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -51,21 +51,21 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **104** |
-| 探索評価候補 | **494** |
+| 探索round（stats観測） | **105** |
+| 探索評価候補 | **498** |
 | 重複除外 | **172** |
-| 重複率 | **34.8%** |
-| Novel候補 | **322** |
-| Research候補採用 | **176** |
-| Research完了 | **65** |
-| Repo収録 | **65** |
+| 重複率 | **34.5%** |
+| Novel候補 | **326** |
+| Research候補採用 | **180** |
+| Research完了 | **66** |
+| Repo収録 | **66** |
 | Audit完了 | **0** |
 | Blocked遷移 | **1** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 494 → 重複除外後 322 → Research候補採用 176 → Research完了 65 → Repo収録 65**
+**探索評価 498 → 重複除外後 326 → Research候補採用 180 → Research完了 66 → Repo収録 66**
 
 ## 探索効率（直近24時間）
 
@@ -124,6 +124,7 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 | GPU runtime境界・host-device転送律速 | 4 | 3 | 1 | 75.0% | 25.0% |
 | KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV multi-turn管理・復元・予約不確実性 | 4 | 4 | 0 | 100.0% | 0.0% |
+| LSH・hashing系KVアクセス/eviction/sharing・query expansion | 4 | 0 | 4 | 0.0% | 100.0% |
 | MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | MoE通信・runtime parallelism・online expert placement | 4 | 4 | 0 | 100.0% | 0.0% |
 | NVMe外部KV・PIM runtime・page-aware decode scheduling | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -178,16 +179,17 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 
 ### 直近5探索round
 
+- **2026-09-13T05:28:14+09:00** — LSH・hashing系KVアクセス/eviction/sharing・query expansion: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T05:28:14+09:00** — KVキャッシュ幾何学指標・backward reference: 評価 1 / 重複 0 / 採用 1
 - **2026-09-13T05:28:14+09:00** — 2609新着・KVキャッシュ最適化/サービング: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T05:00:25+09:00** — GPU runtime・CUDA Graph・persistent kernel・決定論的推論: 評価 4 / 重複 3 / 採用 1
 - **2026-09-13T05:00:25+09:00** — MoE expert cache・offload・OS tiering: 評価 6 / 重複 6 / 採用 0
-- **2026-09-13T05:00:25+09:00** — 推論システム横断サーベイ・KV・エッジ実行: 評価 3 / 重複 0 / 採用 2
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - `arXiv:2512.09472` — WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving
 - `arXiv:2601.22705` — CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control
 - `arXiv:2607.28848` — DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs
@@ -195,12 +197,11 @@ Run: **2026-09-13T05:00:25+09:00** / Round: **specialist-gpu-runtime-6**
 - `arXiv:2606.01751` — SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving
 - `arXiv:2605.00254` — Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving
 - `arXiv:2606.17949` — RouteBalance: Fused Model Routing and Load Balancing for Heterogeneous LLM Serving
-- `arXiv:2603.03251` — Speculative Speculative Decoding
 
 ### 次に処理する候補
 
-- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 - P90 `arXiv:2609.02737` — Language Models Can Control Their Own Attention
+- P90 `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 - P89 `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
 - P89 `arXiv:2606.29986` — HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators
 - P89 `arXiv:2506.21901` — A Survey of LLM Inference Systems
