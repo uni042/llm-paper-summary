@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 02:36 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 02:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **73 / 50** |
-| Research ready | **73** |
+| Candidate在庫（Research ready） | **77 / 50** |
+| Research ready | **77** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **177** |
@@ -22,14 +22,14 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T01:30:00+09:00**
+Run: **2026-09-13T02:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **21** |
-| 新規job | **53** |
+| Discovery完了 | **1** |
+| 新規job | **5** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -50,13 +50,13 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **20** |
-| 探索round（stats観測） | **72** |
-| 探索評価候補 | **334** |
+| 通常worker run（ledger観測） | **21** |
+| 探索round（stats観測） | **73** |
+| 探索評価候補 | **338** |
 | 重複除外 | **96** |
-| 重複率 | **28.7%** |
-| Novel候補 | **238** |
-| Research候補採用 | **105** |
+| 重複率 | **28.4%** |
+| Novel候補 | **242** |
+| Research候補採用 | **109** |
 | Research完了 | **45** |
 | Repo収録 | **45** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 24時間ファネル
 
-**探索評価 334 → 重複除外後 238 → Research候補採用 105 → Research完了 45 → Repo収録 45**
+**探索評価 338 → 重複除外後 242 → Research候補採用 109 → Research完了 45 → Repo収録 45**
 
 ## 探索効率（直近24時間）
 
@@ -125,6 +125,7 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 | 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache | 4 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU/PNM・cold MoE pool・edge KV migration | 4 | 0 | 0 | 0.0% | 0.0% |
 | 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
+| 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離 | 4 | 0 | 4 | 0.0% | 100.0% |
 | 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | GPU kernel/runtime・推論決定性 | 3 | 0 | 3 | 0.0% | 100.0% |
@@ -146,11 +147,11 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 
 ### 直近5探索round
 
+- **2026-09-13T02:29:24+09:00** — 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離: 評価 4 / 重複 0 / 採用 4
 - **2026-09-13T02:29:24+09:00** — 新着KV圧縮・時間集約・長推論再参照: 評価 2 / 重複 0 / 採用 0
 - **2026-09-13T01:55:54+09:00** — heterogeneous GPU cluster・multi-agent workflow・routing/placement: 評価 5 / 重複 0 / 採用 3
 - **2026-09-13T01:55:54+09:00** — CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime: 評価 5 / 重複 0 / 採用 1
 - **2026-09-13T01:55:54+09:00** — SLO budget・KV restoration/reconfiguration・adaptive prefill execution: 評価 5 / 重複 0 / 採用 1
-- **2026-09-13T01:55:54+09:00** — output-length uncertainty・KV reservation・memory-constrained admission/scheduling: 評価 5 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
@@ -168,10 +169,10 @@ Run: **2026-09-13T00:00:00+09:00** / Round: **specialist-fresh-framework-saturat
 ### 次に処理する候補
 
 - P93 `arXiv:2406.01566` — Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs
+- P92 `arXiv:2608.06007` — TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure
 - P91 `arXiv:2606.18741` — ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving
+- P91 `arXiv:2608.07009` — HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management
 - P90 `arXiv:2602.22593` — Flying Serving: On-the-Fly Parallelism Switching for Large Language Model Serving
-- P90 `arXiv:2607.08782` — Director: Prediction-Driven Online Proactive Expert Placement for Mixture-of-Experts Inference
-- P90 `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
 
 ## 7日比較
 
