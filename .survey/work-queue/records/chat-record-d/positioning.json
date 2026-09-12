@@ -2,12 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2605.22850-20260913-0104-v10-d",
-  "job_id": "job-research-2ffc6f1ef8dd7efc",
+  "attempt_id": "attempt-2608.07009-20260913-0248-v10-d",
+  "job_id": "job-research-8b43b83e9e79a452",
   "data": {
-    "limitations": "評価は3ノードの小規模試作であり、多数の同時クライアント、長時間の接頭辞入替、障害、再接続、実運用の追い出しやルーティングとの干渉までは測っていない。層範囲を算術的に求められる規則的なKV配置を前提とし、可変長・圧縮・詰め込み配置ではストレージ側へ追加の範囲変換メタデータが必要になる。大規模運用ではRDMA接続管理、利用者ごとの投入制御、RDMA資格情報の隔離も必要である。配送モードを切り替える閾値ΘはSSDキュー深度、ネットワーク帯域、モデル、計算窓に依存するが、論文では完全な感度分析を行っていない。短文や高命中で計算窓が小さい場合は転送を隠せず、DRAM階層や再計算を選ぶ方がよい条件が残る。",
-    "differences": "MooncakeやMemServeなどの遠隔KV方式は主にDRAMや専用メモリ階層からKVブロックを運ぶのに対し、ObjectCacheはS3互換名前空間とNVMe SSDを大容量の永続階層として推論経路へ入れる。単なるS3-over-RDMAは一物体または一範囲の転送を高速化するだけだが、ObjectCacheは接頭辞照合で得た複数ハッシュ物体を一要求で指定し、ストレージ側が同じ層の範囲をまとめて層順へ変換する。CacheFlowのようなKV復元方式が再計算とI/Oを推論側で共同スケジュールするのに対し、本方式はオブジェクトストレージの読出し意味論と転送順序そのものを対象にする。KV圧縮方式とは競合せず、圧縮でバイト数を減らせる一方、物体が小さくなるほど固定S3費用が目立つため集約の価値が高まる可能性がある。",
-    "implementation_status": "NIXL、LMCache、vLLM、Ceph RGW、DAOSを改変した実機試作を構築し、100 Gbps RoCEv2環境でエンドツーエンド測定している。S3制御はCeph RGWに残し、DAOS側拡張が多物体の範囲読出し、層順集約、RDMA送信を担当する。一次資料には既存構成要素の公開リポジトリ参照はあるが、ObjectCache固有変更をまとめた著者公式コード公開先は確認できないため、実装済み・公開コード未確認と扱う。",
-    "research_positioning": "KVキャッシュの階層化とSSD/NVMeオフロードの中でも、容量階層をS3互換オブジェクトストレージまで下げた場合のI/O意味論を扱う研究である。SSDを単にDRAM代替の低速層として見るのではなく、ハッシュ付き不変KV物体の永続共有、サーバ側並列範囲読出し、層順ストリーミング、要求間帯域配分を一体化している点が重要である。GPU・DRAMを高温階層、ObjectCacheを大容量階層として併用する構成が自然であり、既存のKV配置・追い出し・圧縮・分離プリフィル/デコード研究へストレージ側配送機構を追加する位置づけとなる。特にSSD活用研究では、保存単位を細粒度のまま維持しつつ転送時だけ大きく集約するという『意味上の粒度とI/O粒度の分離』が他の重み・専門家・KVオフロードにも転用可能な設計原理である。"
+    "limitations": [
+      "host DRAMを大容量second tierとして前提とする。H200のようなTB級host memoryでは有効だが、Grace系でhost memory容量がaggregate HBMと近い構成ではcapacity倍率が縮む。",
+      "host-to-device miss I/Oは消えず、同期resolveでは低concurrencyでも1 output tokenあたり約7〜8ms露出する。shared-index prefetchでもanchor layer等の構造的同期missが残る。",
+      "短いcontextや低concurrencyではbaselineがHBM capacity-boundでないため、追加host I/Oを相殺するthroughput利得がなく、HiSparseを使う意味が小さい。",
+      "shared selectionがないモデル向けのspeculative cross-layer prefetchは有意なend-to-end改善を示さなかった。LRUでhitしない新規top-k位置ほど前層から予測しにくい。",
+      "物理的なPD-disaggregated deploymentはtestbed容量の都合で実施せず、decode-only曲線をproxyとしている。",
+      "NVMeやnetwork-attached storageへsecond tierを広げれば容量は増えるが、DRAMより大きいlatency・bandwidth制約が生じる。本論文はその構成を実測していない。"
+    ],
+    "differences": "H2O、StreamingLLM、SnapKV等は不要と判断したKVを捨て、KV量と引き換えに出力忠実度へ影響し得る。HiSparseはKVを削除せずhostへ退避し、model本来のtop-k selectionを満たすためexactである。InfiniGen、ShadowKV、MagicPIG、PQCache等はdense modelへ独自selector/近似retrievalを追加するのに対し、HiSparseはDSA/NSA/Questがすでに出すlogical positionsを共通interfaceとして利用する。FlexGen、HiCache、Mooncake等の階層/分散KV管理に近いが、HiSparseはsparse attentionのper-layer exact demandを利用してdecode critical path上のhot setだけをresidentにする点が異なる。StrataのGPU-assisted I/Oをhost fetchに採用しつつ、sparse-selection locality、LRU、fused Resolve、shared-index exact prefetchを組み合わせる。ESSとECHOは同時期研究で、前者はsimulation中心、後者はNSA特化と論文は位置付ける。",
+    "implementation_status": "HiSparseは研究用branchだけでなくupstream SGLangへmerge済みで、`--enable-hisparse` と設定JSONを使う公式deployment guideがある。SGLang mainにはHiSparse coordinatorとJIT CUDA kernelが存在する。現在の公式ガイドでは主にPD-disaggregation decode側で利用し、対応sparse architecture/backendに制約がある。",
+    "research_positioning": "KV cache offload / hierarchical memory系統の中でも、疎注意モデル固有の正確な需要信号を利用して『全履歴の可用性』と『HBM residency』を切り離す重要な研究である。SSD活用という観点では、現行評価のsecond tierはhost DRAMだが、論文自身がNVMe/network tierを次の容量階層として挙げている。SSDへ拡張する際はmiss latencyが大幅に増えるため、Bの拡大、selection共有、先読み距離、GPU-assisted storage I/O等を共同設計しなければならない。したがって本論文はSSD-KV階層化の直接完成形ではないが、『疎アクセスならHBM resident setを固定し全履歴を下位tierへ置ける』という強い根拠を与える。",
+    "related_work": ["SGLang", "Strata", "ECHO", "ESS", "InfiniGen", "ShadowKV", "MagicPIG", "ArkVale", "PQCache", "Mooncake", "HiCache", "FlexGen"],
+    "audit_notes": "arXiv:2608.07009v1のHTML全文を確認し、capacity wall、host-authoritative KV、固定B GPU cache、LRU、fused Resolve CUDA kernel、GPU-assisted I/O、shared-index exact prefetch、DSA/NSA/Quest評価、H200/B200/GH200結果、no-I/O oracle、limitationsを確認した。主カテゴリcs.DC、横断登録なし。SGLang upstreamの公式HiSparse guideと実装存在も確認した。参考文献46件から明示的arXiv IDの一部をmetadataへ正規化した。"
   }
 }
