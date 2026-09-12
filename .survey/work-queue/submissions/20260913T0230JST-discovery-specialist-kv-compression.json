@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ecca78c9bc852f3a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+      "priority": 87,
+      "reason": "長文脈推論のKV削除で、重要度スコア関数だけでなく時間方向の集約規則そのものが保持集合を大きく左右する点を切り出し、指数移動平均に基づくInertiaKVと更新頻度を下げるInertiaKV-Lazyを提案する。抄録では6種類の公開モデルとLongBench/LongBench-v2/RULERで評価し、Lazy版がfull-refresh InertiaKV比1.34〜1.46倍のdecode throughputを報告している。KV圧縮の設計軸をスコアリングから時間集約へ広げるため、既存KV最適化系統との差分が明確で研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv-beacon-query-guided-kv-compression.md",
+      "priority": 89,
+      "reason": "長い推論過程で遠い過去へ再注意するThought Revisiting Tokenに着目し、そのqueryが少数クラスタへ集まる性質を使って代表queryをbeaconとして保持するtraining-free KV圧縮法。抄録では4つの公開Large Reasoning Modelで最大5.8倍のメモリ削減と4.3倍超のthroughput改善を報告しており、長CoT特有の再参照パターンを直接利用する点で一般的なrecency/attention-score型KV圧縮と差別化される。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T02:29:24+09:00",
+    "round": "specialist-kv-compression-temporal-revisit-1",
+    "axis": "新着KV圧縮・時間集約・長推論再参照",
+    "query_summary": "2026年9月新着を中心にKV cache compression、decode-time eviction、long-reasoning revisit patternを検索し、abstract・書誌情報・一次資料リンクを軽量評価した。最新mainのidentity/queueとrepository code searchでcanonical IDとタイトルを再確認し、未収録と判断した2件だけを送信した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は9月新着のMoE expert placement/cache/prefetchまたは異種GPU・CXL/NVMe階層メモリへ軸を移す",
+    "empty_round_reason": null
+  }
+}
