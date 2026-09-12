@@ -6,7 +6,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 
 > このリポジトリの内容作成・要約・継続更新には、リポジトリ所有者の依頼に基づいてOpenAIのChatGPTを使用しています。生成AIによる整理を含むため、論文の数値・model仕様・release状態など重要な判断では、各ページに記載した一次資料も確認してください。
 
-[進捗](.survey/reports/metadata-coverage-latest.json) ／ [研究の横断比較](papers/inference/comparison.md) ／ [運用手順](.survey/docs/survey-workflow/README.md) ／ [全体点検](.survey/reports/consistency-latest.json)
+[運用ダッシュボード](STATUS.md) ／ [進捗](.survey/reports/metadata-coverage-latest.json) ／ [研究の横断比較](papers/inference/comparison.md) ／ [運用手順](.survey/docs/survey-workflow/README.md) ／ [全体点検](.survey/reports/consistency-latest.json)
 
 ## リポジトリ構成
 

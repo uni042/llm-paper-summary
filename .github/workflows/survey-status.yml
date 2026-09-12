@@ -1,0 +1,91 @@
+name: Survey status dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/run-ledger.json'
+      - '.survey/work-queue/discovery-state.json'
+      - '.survey/work-queue/next-jobs.json'
+      - '.survey/work-queue/jobs/**'
+      - '.survey/work-queue/maintenance-cycle.json'
+      - '.survey/work-queue/fallback-inbox/**'
+      - '.survey/reports/consistency-latest.json'
+      - '.survey/scripts/build_status_dashboard.py'
+      - '.survey/scripts/ensure_status_history.py'
+      - '.github/workflows/survey-status.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '8 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-status-main
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate dashboard scripts
+        run: python -m py_compile .survey/scripts/build_status_dashboard.py .survey/scripts/ensure_status_history.py
+
+      - name: Raise dashboard history retention
+        run: python .survey/scripts/ensure_status_history.py --repo-root .
+
+      - name: Build dashboard
+        run: python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+
+      - name: Commit dashboard state
+        shell: bash
+        run: |
+          set -euo pipefail
+          commit_changes() {
+            git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
+            if git diff --cached --quiet; then
+              return 1
+            fi
+            git commit -m 'survey-status: refresh dashboard'
+          }
+
+          git config user.name 'survey-status[bot]'
+          git config user.email 'survey-status[bot]@users.noreply.github.com'
+
+          if ! commit_changes; then
+            echo 'Dashboard already current.'
+            exit 0
+          fi
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Dashboard push race on attempt ${attempt}; rebuilding from latest main."
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            python .survey/scripts/ensure_status_history.py --repo-root .
+            python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+            if ! commit_changes; then
+              echo 'Latest main already contains equivalent dashboard state.'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo 'Failed to push dashboard after 5 recovery attempts.' >&2
+          exit 1
