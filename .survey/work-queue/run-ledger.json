@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:16:23.563484+00:00",
+  "updated_at": "2026-09-12T20:17:48.097046+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,19 +14622,19 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T20:16:23.563484+00:00",
+      "last_recorded_at": "2026-09-12T20:17:48.097046+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 6,
+        "research_completed": 7,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 8,
-        "new_papers": 6,
+        "new_papers": 7,
         "fallback_archived": 0
       },
       "events": [
@@ -14756,6 +14756,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34716552079:1",
+          "recorded_at": "2026-09-12T20:17:48.097046+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34716552079",
+            "run_attempt": "1",
+            "source_sha": "f666658f5a433f88c2b303ecd93220fb045a6e5b"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14830,6 +14845,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-e290cd912706acf4",
+          "type": "research",
+          "canonical_id": "arXiv:2601.22705",
+          "title": "CONCUR: High-Throughput Agentic Batch Inference of LLM via Congestion-Based Concurrency Control",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -14896,7 +14919,8 @@
         "arXiv:2605.00254",
         "arXiv:2606.01751",
         "arXiv:2606.07665",
-        "arXiv:2607.28848"
+        "arXiv:2607.28848",
+        "arXiv:2601.22705"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json",
@@ -14905,8 +14929,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
-      "paper_active_count_after": 384,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 385,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
