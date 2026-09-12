@@ -1,47 +1,471 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-11T03:40:30+00:00",
-  "last_run_key": "2026-09-11T11:30:00+09:00",
-  "last_round": "multi-axis-exhaustion-6",
+  "updated_at": "2026-09-12T05:37:18+00:00",
+  "last_run_key": "2026-09-12T14:22:56+09:00",
+  "last_round": "specialist-2609-serving-routing-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "複数の異なる探索軸へ展開した後も、直近4ラウンドは正本側で既収録重複として抑止されるか新規強候補が0件だった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 24,
   "history": [
-    {"run_key":"2026-09-10T21:30:00+09:00","round":"edge-moe-npu-adjacent-1","axis":"オンデバイスMoE・NPU実行系","query_summary":"最近のMoE推論、エッジNPU、KV管理の隣接軸を広めに探索し、既収録識別子と既存jobを詳細評価前に確認した。","candidate_count":2,"duplicate_filtered_count":1,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.5,"accepted_canonical_ids":["arxiv:2604.18788"],"duplicate_canonical_ids":["arxiv:2607.16892"],"next_axis_hint":"専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"},
-    {"run_key":"2026-09-10T21:30:00+09:00","round":"ssd-hierarchical-kv-2","axis":"SSD・異種GPU階層KVキャッシュ","query_summary":"NVMe SSD直接入出力、ページキャッシュ迂回、GPU間NVLink共有を使う最近のKVキャッシュサービング研究を探索し、arXiv IDとrepo検索で先行重複確認した。","candidate_count":3,"duplicate_filtered_count":0,"novel_candidate_count":3,"accepted_count":3,"duplicate_ratio":0.0,"accepted_canonical_ids":["arxiv:2605.03375","arxiv:2604.26557","arxiv:2606.16135"],"duplicate_canonical_ids":[],"next_axis_hint":"SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"},
-    {"run_key":"2026-09-10T22:30:00+09:00","round":"hierarchical-kv-storage-adjacent-1","axis":"階層KV・ストレージ隣接拡張","query_summary":"SSD-backed KVの既知候補を先に既存job/identityで除外し、SmartSSD、CXLハイブリッドメモリ、NPU内階層メモリ、疎注意とGPU/CPU階層KV、CPU大容量最終キャッシュへ探索軸を拡張した。","candidate_count":9,"duplicate_filtered_count":4,"novel_candidate_count":5,"accepted_count":5,"duplicate_ratio":0.4444444444,"accepted_canonical_ids":["arxiv:2602.18750","arxiv:2607.18141","arxiv:2604.07396","arxiv:2604.26837","arxiv:2606.25353"],"duplicate_canonical_ids":["arxiv:2604.26557","arxiv:2605.03375","arxiv:2606.16135","arxiv:2605.18071"],"next_axis_hint":"まずSmartSSD/CXL/疎注意階層KVを精読し、ストック消化後はMoE expert streamingとSSD/NPU協調へ軸を移す"},
-    {"run_key":"2026-09-10T23:30:00+09:00","round":"moe-storage-router-speculative-1","axis":"MoE expert offload・routing locality・Flash/NPU協調","query_summary":"前回のnext-axis hintに従い、CPU/GPU expert offload、外部ストレージ向けrouting locality、Flash-NPU offload下の投機的デコード、CoT段階局所性を探索した。arXiv IDとrepo検索で既収録を先行除外した。","candidate_count":6,"duplicate_filtered_count":2,"novel_candidate_count":4,"accepted_count":4,"duplicate_ratio":0.3333333333,"accepted_canonical_ids":["arxiv:2602.03495","arxiv:2605.27081","arxiv:2607.24434","arxiv:2608.21614"],"duplicate_canonical_ids":["arxiv:2601.17063","arxiv:2604.18788"],"next_axis_hint":"新規4本を優先度順に精読後、expert streamingのI/O schedulingとmobile/edge storage hierarchyへさらに展開する"},
-    {"run_key":"2026-09-10T23:30:00+09:00","round":"expert-streaming-edge-storage-2","axis":"expert streaming・分散edge・SSDエネルギー境界","query_summary":"前ラウンドの研究完了後、専門家ストリーミング、CPUオフロード予測先読み、キャッシュレスedge分散、SSD重み読出しのエネルギー限界へ探索を拡張し、repo検索で識別子・タイトルの既収録有無を先行確認した。","candidate_count":5,"duplicate_filtered_count":1,"novel_candidate_count":4,"accepted_count":4,"duplicate_ratio":0.2,"accepted_canonical_ids":["arxiv:2603.27624","arxiv:2603.19289","arxiv:2512.03927","arxiv:2508.06978"],"duplicate_canonical_ids":["arxiv:2601.17063"],"next_axis_hint":"Expert StreamingとSpeculating Expertsを優先精読し、その後OD-MoEとSSDエネルギー境界を確認する。ストック消化後はSSD expert I/O schedulingとCXL/Flash階層へ展開する"},
-    {"run_key":"2026-09-11T02:30:00+09:00","round":"photonic-cxl-kv-1","axis":"Photonic-CXL・大容量共有KVメモリ","query_summary":"CXL/共有KVメモリへ軸を変更したが、2607.27187は探索中に並行Actions側で既収録化されたため、最新HEAD再確認時点では3候補すべて重複として扱った。","candidate_count":3,"duplicate_filtered_count":3,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"accepted_canonical_ids":[],"duplicate_canonical_ids":["arxiv:2607.18141","arxiv:2605.03375","arxiv:2607.27187"],"next_axis_hint":"重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"},
-    {"run_key":"2026-09-11T02:30:00+09:00","round":"vericache-validation-kv-2","axis":"損失KV検証・正確性保証","query_summary":"圧縮KVを最終近似ではなく候補生成へ使い、完全KVを下位階層から検証用に戻す研究を探索し、未収録のVeriCacheを採用した。","candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"accepted_canonical_ids":["arxiv:2605.17613"],"duplicate_canonical_ids":[],"next_axis_hint":"保持型混在精度KVとPagedAttention実装へ軸をずらす"},
-    {"run_key":"2026-09-11T02:30:00+09:00","round":"mixed-format-retention-kv-3","axis":"保持型混在精度KV・PagedAttention","query_summary":"ライブKVページを削除せず精度階層だけを変え、混在形式を直接注意計算へ使う研究を探索し、未収録のMinima-KVを採用した。","candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"accepted_canonical_ids":["arxiv:2608.23834"],"duplicate_canonical_ids":[],"next_axis_hint":"次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"},
-    {"run_key":"2026-09-11T02:30:00+09:00","round":"model-transfer-kv-4","axis":"分離サービングKV転送・モデル間KV再利用","query_summary":"サービス状態に応じたKV圧縮、選択的KV転送、モデル間KV写像、移動環境でのKV移行を探索して4候補を送信した。queue正規化後は2608.03893のみ新規researchとして残り、他3候補は正本側で重複抑止された。","candidate_count":4,"duplicate_filtered_count":3,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.75,"accepted_canonical_ids":["arxiv:2608.03893"],"duplicate_canonical_ids":["arxiv:2605.13734","arxiv:2607.28150","arxiv:2608.16477"],"next_axis_hint":"モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"},
-    {"run_key":"2026-09-11T11:30:00+09:00","round":"expert-w4-hybrid-memory-1","axis":"専門家W4階層実行・CPU/GPUハイブリッドKV","query_summary":"専門家量子化オフロードとCPU/GPU協調KV処理へ軸を変更し、ExactMoEとHybridGenを送信した。正本側の重複抑止後、ExactMoEのみ新規researchとして残った。","candidate_count":2,"duplicate_filtered_count":1,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.5,"accepted_canonical_ids":["arxiv:2608.15383"],"duplicate_canonical_ids":["arxiv:2604.18529"],"next_axis_hint":"専門家キャッシュ政策そのものをOS階層管理と比較する研究、または長期エージェントメモリのSSD物理配置へ展開する"},
-    {"run_key":"2026-09-11T11:30:00+09:00","round":"agent-memory-adjacent-2","axis":"エージェント長期メモリ・KV隣接・MoEオンライン配置","query_summary":"長期メモリのNVMe物理配置、CPU側KV検索、MoEオンライン再配置の隣接3候補を探索した。正本側の重複抑止後、Akashicのみ新規researchとして残った。","candidate_count":3,"duplicate_filtered_count":2,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.6666666667,"accepted_canonical_ids":["arxiv:2607.05708"],"duplicate_canonical_ids":["arxiv:2602.07721","arxiv:2607.17880"],"next_axis_hint":"専用キャッシュとOSページキャッシュの比較、動的KVメモリ回収、異種GPU間KV共有へ順に展開する"},
-    {"run_key":"2026-09-11T11:30:00+09:00","round":"kernel-managed-expert-cache-3","axis":"OSページキャッシュによるMoE専門家階層管理","query_summary":"専用ユーザ空間専門家キャッシュの代わりにLinuxページキャッシュを利用する研究を探索したが、正本側で既収録重複として抑止された。","candidate_count":1,"duplicate_filtered_count":1,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"accepted_canonical_ids":[],"duplicate_canonical_ids":["arxiv:2608.12103"],"next_axis_hint":"GPU内の動的KV領域回収へ軸を変更する"},
-    {"run_key":"2026-09-11T11:30:00+09:00","round":"elastic-kv-vmm-4","axis":"CUDA仮想メモリによるKV予約領域回収","query_summary":"プリフィル活性用予約GPUメモリをデコード中だけKVへ貸し出す研究を探索したが、正本側で既収録重複として抑止された。","candidate_count":1,"duplicate_filtered_count":1,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"accepted_canonical_ids":[],"duplicate_canonical_ids":["arxiv:2608.23658"],"next_axis_hint":"異種モデル間の余剰HBM・NVLink共有へ軸を変更する"},
-    {"run_key":"2026-09-11T11:30:00+09:00","round":"heterogeneous-kv-sharing-5","axis":"異種GPUモデル間KV共有・NVLink階層","query_summary":"低KV需要モデルの余剰HBMを高需要モデルへ貸し出すSwiftCacheを探索したが、過去の探索で既に収録対象となっており正本側で重複抑止された。","candidate_count":1,"duplicate_filtered_count":1,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"accepted_canonical_ids":[],"duplicate_canonical_ids":["arxiv:2606.16135"],"next_axis_hint":"最新2609系と隣接ストレージ/スケジューリングまで確認し、強候補がなければ多軸枯渇として終了判定する"},
-    {"run_key":"2026-09-11T11:30:00+09:00","round":"multi-axis-exhaustion-6","axis":"最新2609・隣接ストレージ・スケジューリング再確認","query_summary":"専門家キャッシュ、KV回収、GPU間共有、エージェント長期メモリまで複数軸を変更した後、2609新着と隣接領域を再確認した。強い未収録候補を追加で確定できなかったため空ラウンドとして記録した。","candidate_count":0,"duplicate_filtered_count":0,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":0.0,"accepted_canonical_ids":[],"duplicate_canonical_ids":[],"next_axis_hint":"次runは新着差分を優先し、今回飽和した専門家キャッシュ/KV共有候補を機械的に反復しない"}
+    {
+      "run_key": "2026-09-10T21:30:00+09:00",
+      "round": "edge-moe-npu-adjacent-1",
+      "axis": "オンデバイスMoE・NPU実行系",
+      "query_summary": "最近のMoE推論、エッジNPU、KV管理の隣接軸を広めに探索し、既収録識別子と既存jobを詳細評価前に確認した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [
+        "arxiv:2604.18788"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.16892"
+      ],
+      "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
+    },
+    {
+      "run_key": "2026-09-10T21:30:00+09:00",
+      "round": "ssd-hierarchical-kv-2",
+      "axis": "SSD・異種GPU階層KVキャッシュ",
+      "query_summary": "NVMe SSD直接入出力、ページキャッシュ迂回、GPU間NVLink共有を使う最近のKVキャッシュサービング研究を探索し、arXiv IDとrepo検索で先行重複確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arxiv:2605.03375",
+        "arxiv:2604.26557",
+        "arxiv:2606.16135"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"
+    },
+    {
+      "run_key": "2026-09-10T22:30:00+09:00",
+      "round": "hierarchical-kv-storage-adjacent-1",
+      "axis": "階層KV・ストレージ隣接拡張",
+      "query_summary": "SSD-backed KVの既知候補を先に既存job/identityで除外し、SmartSSD、CXLハイブリッドメモリ、NPU内階層メモリ、疎注意とGPU/CPU階層KV、CPU大容量最終キャッシュへ探索軸を拡張した。",
+      "candidate_count": 9,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.4444444444,
+      "accepted_canonical_ids": [
+        "arxiv:2602.18750",
+        "arxiv:2607.18141",
+        "arxiv:2604.07396",
+        "arxiv:2604.26837",
+        "arxiv:2606.25353"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2604.26557",
+        "arxiv:2605.03375",
+        "arxiv:2606.16135",
+        "arxiv:2605.18071"
+      ],
+      "next_axis_hint": "まずSmartSSD/CXL/疎注意階層KVを精読し、ストック消化後はMoE expert streamingとSSD/NPU協調へ軸を移す"
+    },
+    {
+      "run_key": "2026-09-10T23:30:00+09:00",
+      "round": "moe-storage-router-speculative-1",
+      "axis": "MoE expert offload・routing locality・Flash/NPU協調",
+      "query_summary": "前回のnext-axis hintに従い、CPU/GPU expert offload、外部ストレージ向けrouting locality、Flash-NPU offload下の投機的デコード、CoT段階局所性を探索した。arXiv IDとrepo検索で既収録を先行除外した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.3333333333,
+      "accepted_canonical_ids": [
+        "arxiv:2602.03495",
+        "arxiv:2605.27081",
+        "arxiv:2607.24434",
+        "arxiv:2608.21614"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2601.17063",
+        "arxiv:2604.18788"
+      ],
+      "next_axis_hint": "新規4本を優先度順に精読後、expert streamingのI/O schedulingとmobile/edge storage hierarchyへさらに展開する"
+    },
+    {
+      "run_key": "2026-09-10T23:30:00+09:00",
+      "round": "expert-streaming-edge-storage-2",
+      "axis": "expert streaming・分散edge・SSDエネルギー境界",
+      "query_summary": "前ラウンドの研究完了後、専門家ストリーミング、CPUオフロード予測先読み、キャッシュレスedge分散、SSD重み読出しのエネルギー限界へ探索を拡張し、repo検索で識別子・タイトルの既収録有無を先行確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.2,
+      "accepted_canonical_ids": [
+        "arxiv:2603.27624",
+        "arxiv:2603.19289",
+        "arxiv:2512.03927",
+        "arxiv:2508.06978"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2601.17063"
+      ],
+      "next_axis_hint": "Expert StreamingとSpeculating Expertsを優先精読し、その後OD-MoEとSSDエネルギー境界を確認する。ストック消化後はSSD expert I/O schedulingとCXL/Flash階層へ展開する"
+    },
+    {
+      "run_key": "2026-09-11T02:30:00+09:00",
+      "round": "photonic-cxl-kv-1",
+      "axis": "Photonic-CXL・大容量共有KVメモリ",
+      "query_summary": "CXL/共有KVメモリへ軸を変更したが、2607.27187は探索中に並行Actions側で既収録化されたため、最新HEAD再確認時点では3候補すべて重複として扱った。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.18141",
+        "arxiv:2605.03375",
+        "arxiv:2607.27187"
+      ],
+      "next_axis_hint": "重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"
+    },
+    {
+      "run_key": "2026-09-11T02:30:00+09:00",
+      "round": "vericache-validation-kv-2",
+      "axis": "損失KV検証・正確性保証",
+      "query_summary": "圧縮KVを最終近似ではなく候補生成へ使い、完全KVを下位階層から検証用に戻す研究を探索し、未収録のVeriCacheを採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arxiv:2605.17613"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "保持型混在精度KVとPagedAttention実装へ軸をずらす"
+    },
+    {
+      "run_key": "2026-09-11T02:30:00+09:00",
+      "round": "mixed-format-retention-kv-3",
+      "axis": "保持型混在精度KV・PagedAttention",
+      "query_summary": "ライブKVページを削除せず精度階層だけを変え、混在形式を直接注意計算へ使う研究を探索し、未収録のMinima-KVを採用した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [
+        "arxiv:2608.23834"
+      ],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"
+    },
+    {
+      "run_key": "2026-09-11T02:30:00+09:00",
+      "round": "model-transfer-kv-4",
+      "axis": "分離サービングKV転送・モデル間KV再利用",
+      "query_summary": "サービス状態に応じたKV圧縮、選択的KV転送、モデル間KV写像、移動環境でのKV移行を探索して4候補を送信した。queue正規化後は2608.03893のみ新規researchとして残り、他3候補は正本側で重複抑止された。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [
+        "arxiv:2608.03893"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2605.13734",
+        "arxiv:2607.28150",
+        "arxiv:2608.16477"
+      ],
+      "next_axis_hint": "モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"
+    },
+    {
+      "run_key": "2026-09-11T11:30:00+09:00",
+      "round": "expert-w4-hybrid-memory-1",
+      "axis": "専門家W4階層実行・CPU/GPUハイブリッドKV",
+      "query_summary": "専門家量子化オフロードとCPU/GPU協調KV処理へ軸を変更し、ExactMoEとHybridGenを送信した。正本側の重複抑止後、ExactMoEのみ新規researchとして残った。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [
+        "arxiv:2608.15383"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2604.18529"
+      ],
+      "next_axis_hint": "専門家キャッシュ政策そのものをOS階層管理と比較する研究、または長期エージェントメモリのSSD物理配置へ展開する"
+    },
+    {
+      "run_key": "2026-09-11T11:30:00+09:00",
+      "round": "agent-memory-adjacent-2",
+      "axis": "エージェント長期メモリ・KV隣接・MoEオンライン配置",
+      "query_summary": "長期メモリのNVMe物理配置、CPU側KV検索、MoEオンライン再配置の隣接3候補を探索した。正本側の重複抑止後、Akashicのみ新規researchとして残った。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666667,
+      "accepted_canonical_ids": [
+        "arxiv:2607.05708"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2602.07721",
+        "arxiv:2607.17880"
+      ],
+      "next_axis_hint": "専用キャッシュとOSページキャッシュの比較、動的KVメモリ回収、異種GPU間KV共有へ順に展開する"
+    },
+    {
+      "run_key": "2026-09-11T11:30:00+09:00",
+      "round": "kernel-managed-expert-cache-3",
+      "axis": "OSページキャッシュによるMoE専門家階層管理",
+      "query_summary": "専用ユーザ空間専門家キャッシュの代わりにLinuxページキャッシュを利用する研究を探索したが、正本側で既収録重複として抑止された。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2608.12103"
+      ],
+      "next_axis_hint": "GPU内の動的KV領域回収へ軸を変更する"
+    },
+    {
+      "run_key": "2026-09-11T11:30:00+09:00",
+      "round": "elastic-kv-vmm-4",
+      "axis": "CUDA仮想メモリによるKV予約領域回収",
+      "query_summary": "プリフィル活性用予約GPUメモリをデコード中だけKVへ貸し出す研究を探索したが、正本側で既収録重複として抑止された。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2608.23658"
+      ],
+      "next_axis_hint": "異種モデル間の余剰HBM・NVLink共有へ軸を変更する"
+    },
+    {
+      "run_key": "2026-09-11T11:30:00+09:00",
+      "round": "heterogeneous-kv-sharing-5",
+      "axis": "異種GPUモデル間KV共有・NVLink階層",
+      "query_summary": "低KV需要モデルの余剰HBMを高需要モデルへ貸し出すSwiftCacheを探索したが、過去の探索で既に収録対象となっており正本側で重複抑止された。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2606.16135"
+      ],
+      "next_axis_hint": "最新2609系と隣接ストレージ/スケジューリングまで確認し、強候補がなければ多軸枯渇として終了判定する"
+    },
+    {
+      "run_key": "2026-09-11T11:30:00+09:00",
+      "round": "multi-axis-exhaustion-6",
+      "axis": "最新2609・隣接ストレージ・スケジューリング再確認",
+      "query_summary": "専門家キャッシュ、KV回収、GPU間共有、エージェント長期メモリまで複数軸を変更した後、2609新着と隣接領域を再確認した。強い未収録候補を追加で確定できなかったため空ラウンドとして記録した。",
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次runは新着差分を優先し、今回飽和した専門家キャッシュ/KV共有候補を機械的に反復しない"
+    },
+    {
+      "run_key": "2026-09-12T14:22:56+09:00",
+      "round": "specialist-2609-serving-routing-1",
+      "axis": "2609新着・分離サービング・動的ルーティング",
+      "query_summary": "探索専用workerの手動試運転として2609系新着を中心にKV量子化、agentic serving scheduling、動的routingを探索し、投入直前にidentity deltaまで再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.25,
+      "accepted_canonical_ids": [
+        "arxiv:2609.11582",
+        "arxiv:2609.10964",
+        "arxiv:2609.08189"
+      ],
+      "duplicate_canonical_ids": [
+        "arxiv:2609.11133"
+      ],
+      "next_axis_hint": "SSD expert I/O scheduling、被引用・参考文献、または新着2609差分へ探索軸を移す",
+      "source_submission": "work-queue/submissions/20260912T1422JST-discovery-stats-backfill.json"
+    }
   ],
   "axes": {
-    "オンデバイスMoE・NPU実行系":{"last_run_key":"2026-09-10T21:30:00+09:00","rounds":1,"candidate_count":2,"duplicate_filtered_count":1,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.5,"next_axis_hint":"専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"},
-    "SSD・異種GPU階層KVキャッシュ":{"last_run_key":"2026-09-10T21:30:00+09:00","rounds":1,"candidate_count":3,"duplicate_filtered_count":0,"novel_candidate_count":3,"accepted_count":3,"duplicate_ratio":0.0,"next_axis_hint":"SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"},
-    "階層KV・ストレージ隣接拡張":{"last_run_key":"2026-09-10T22:30:00+09:00","rounds":1,"candidate_count":9,"duplicate_filtered_count":4,"novel_candidate_count":5,"accepted_count":5,"duplicate_ratio":0.4444444444,"next_axis_hint":"まずSmartSSD/CXL/疎注意階層KVを精読し、ストック消化後はMoE expert streamingとSSD/NPU協調へ軸を移す"},
-    "MoE expert offload・routing locality・Flash/NPU協調":{"last_run_key":"2026-09-10T23:30:00+09:00","rounds":1,"candidate_count":6,"duplicate_filtered_count":2,"novel_candidate_count":4,"accepted_count":4,"duplicate_ratio":0.3333333333,"next_axis_hint":"新規4本を優先度順に精読後、expert streamingのI/O schedulingとmobile/edge storage hierarchyへさらに展開する"},
-    "expert streaming・分散edge・SSDエネルギー境界":{"last_run_key":"2026-09-10T23:30:00+09:00","rounds":1,"candidate_count":5,"duplicate_filtered_count":1,"novel_candidate_count":4,"accepted_count":4,"duplicate_ratio":0.2,"next_axis_hint":"Expert StreamingとSpeculating Expertsを優先精読し、その後OD-MoEとSSDエネルギー境界を確認する。ストック消化後はSSD expert I/O schedulingとCXL/Flash階層へ展開する"},
-    "Photonic-CXL・大容量共有KVメモリ":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":3,"duplicate_filtered_count":3,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"next_axis_hint":"重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"},
-    "損失KV検証・正確性保証":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"next_axis_hint":"保持型混在精度KVとPagedAttention実装へ軸をずらす"},
-    "保持型混在精度KV・PagedAttention":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":0,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.0,"next_axis_hint":"次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"},
-    "分離サービングKV転送・モデル間KV再利用":{"last_run_key":"2026-09-11T02:30:00+09:00","rounds":1,"candidate_count":4,"duplicate_filtered_count":3,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.75,"next_axis_hint":"モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"},
-    "専門家W4階層実行・CPU/GPUハイブリッドKV":{"last_run_key":"2026-09-11T11:30:00+09:00","rounds":1,"candidate_count":2,"duplicate_filtered_count":1,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.5,"next_axis_hint":"専門家キャッシュ政策そのものをOS階層管理と比較する研究、または長期エージェントメモリのSSD物理配置へ展開する"},
-    "エージェント長期メモリ・KV隣接・MoEオンライン配置":{"last_run_key":"2026-09-11T11:30:00+09:00","rounds":1,"candidate_count":3,"duplicate_filtered_count":2,"novel_candidate_count":1,"accepted_count":1,"duplicate_ratio":0.6666666667,"next_axis_hint":"専用キャッシュとOSページキャッシュの比較、動的KVメモリ回収、異種GPU間KV共有へ順に展開する"},
-    "OSページキャッシュによるMoE専門家階層管理":{"last_run_key":"2026-09-11T11:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":1,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"next_axis_hint":"GPU内の動的KV領域回収へ軸を変更する"},
-    "CUDA仮想メモリによるKV予約領域回収":{"last_run_key":"2026-09-11T11:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":1,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"next_axis_hint":"異種モデル間の余剰HBM・NVLink共有へ軸を変更する"},
-    "異種GPUモデル間KV共有・NVLink階層":{"last_run_key":"2026-09-11T11:30:00+09:00","rounds":1,"candidate_count":1,"duplicate_filtered_count":1,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":1.0,"next_axis_hint":"最新2609系と隣接ストレージ/スケジューリングまで確認する"},
-    "最新2609・隣接ストレージ・スケジューリング再確認":{"last_run_key":"2026-09-11T11:30:00+09:00","rounds":1,"candidate_count":0,"duplicate_filtered_count":0,"novel_candidate_count":0,"accepted_count":0,"duplicate_ratio":0.0,"next_axis_hint":"次runは新着差分を優先し、今回飽和した専門家キャッシュ/KV共有候補を機械的に反復しない"}
+    "オンデバイスMoE・NPU実行系": {
+      "last_run_key": "2026-09-10T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "専門家先読み・NPU静的グラフ制約、またはストレージ階層を使うMoE推論へ軸をずらす"
+    },
+    "SSD・異種GPU階層KVキャッシュ": {
+      "last_run_key": "2026-09-10T21:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "SSD-backed KVのGPU主導I/O、OSページキャッシュ迂回、GPU間余剰HBM共有を順に精読する"
+    },
+    "階層KV・ストレージ隣接拡張": {
+      "last_run_key": "2026-09-10T22:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 9,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 5,
+      "accepted_count": 5,
+      "duplicate_ratio": 0.4444444444,
+      "next_axis_hint": "まずSmartSSD/CXL/疎注意階層KVを精読し、ストック消化後はMoE expert streamingとSSD/NPU協調へ軸を移す"
+    },
+    "MoE expert offload・routing locality・Flash/NPU協調": {
+      "last_run_key": "2026-09-10T23:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.3333333333,
+      "next_axis_hint": "新規4本を優先度順に精読後、expert streamingのI/O schedulingとmobile/edge storage hierarchyへさらに展開する"
+    },
+    "expert streaming・分散edge・SSDエネルギー境界": {
+      "last_run_key": "2026-09-10T23:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.2,
+      "next_axis_hint": "Expert StreamingとSpeculating Expertsを優先精読し、その後OD-MoEとSSDエネルギー境界を確認する。ストック消化後はSSD expert I/O schedulingとCXL/Flash階層へ展開する"
+    },
+    "Photonic-CXL・大容量共有KVメモリ": {
+      "last_run_key": "2026-09-11T02:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "重複率が高いため同じCXL候補を反復せず、損失KVの検証・正確性保証へ軸を変更する"
+    },
+    "損失KV検証・正確性保証": {
+      "last_run_key": "2026-09-11T02:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "保持型混在精度KVとPagedAttention実装へ軸をずらす"
+    },
+    "保持型混在精度KV・PagedAttention": {
+      "last_run_key": "2026-09-11T02:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次回はCXL/PCIeファブリック上のKV配置・転送スケジューリング、またはSSD expert I/O schedulingへ軸を移す"
+    },
+    "分離サービングKV転送・モデル間KV再利用": {
+      "last_run_key": "2026-09-11T02:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "モデル間KV写像を収録済み。次回は既収録候補を避け、SSD expert I/O schedulingまたは新しいCXL/PCIe KV配置へ探索軸を移す"
+    },
+    "専門家W4階層実行・CPU/GPUハイブリッドKV": {
+      "last_run_key": "2026-09-11T11:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "専門家キャッシュ政策そのものをOS階層管理と比較する研究、または長期エージェントメモリのSSD物理配置へ展開する"
+    },
+    "エージェント長期メモリ・KV隣接・MoEオンライン配置": {
+      "last_run_key": "2026-09-11T11:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6666666667,
+      "next_axis_hint": "専用キャッシュとOSページキャッシュの比較、動的KVメモリ回収、異種GPU間KV共有へ順に展開する"
+    },
+    "OSページキャッシュによるMoE専門家階層管理": {
+      "last_run_key": "2026-09-11T11:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "GPU内の動的KV領域回収へ軸を変更する"
+    },
+    "CUDA仮想メモリによるKV予約領域回収": {
+      "last_run_key": "2026-09-11T11:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "異種モデル間の余剰HBM・NVLink共有へ軸を変更する"
+    },
+    "異種GPUモデル間KV共有・NVLink階層": {
+      "last_run_key": "2026-09-11T11:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "最新2609系と隣接ストレージ/スケジューリングまで確認する"
+    },
+    "最新2609・隣接ストレージ・スケジューリング再確認": {
+      "last_run_key": "2026-09-11T11:30:00+09:00",
+      "rounds": 1,
+      "candidate_count": 0,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次runは新着差分を優先し、今回飽和した専門家キャッシュ/KV共有候補を機械的に反復しない"
+    },
+    "2609新着・分離サービング・動的ルーティング": {
+      "last_run_key": "2026-09-12T14:22:56+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.25,
+      "next_axis_hint": "SSD expert I/O scheduling、被引用・参考文献、または新着2609差分へ探索軸を移す"
+    }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
 }
