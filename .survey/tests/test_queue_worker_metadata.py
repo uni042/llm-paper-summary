@@ -66,5 +66,75 @@ class AuditMetadataRoutingTest(unittest.TestCase):
             queue_worker.ROOT = original_root
 
 
+class DiscoveryReplenishmentTest(unittest.TestCase):
+    def test_ready_research_does_not_block_discovery_replenishment(self) -> None:
+        jobs = [
+            {
+                "job_id": "job-research-existing",
+                "type": "research",
+                "lane": "research",
+                "status": "ready",
+                "priority": 90,
+            }
+        ]
+        with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+            with patch.object(queue_worker, "add_job", return_value=True) as add_job:
+                self.assertTrue(queue_worker.ensure_discovery_job())
+
+        created = add_job.call_args.args[0]
+        self.assertEqual(created["type"], "discovery")
+        self.assertEqual(created["lane"], "discovery")
+
+    def test_existing_active_discovery_prevents_duplicate_replenishment(self) -> None:
+        jobs = [
+            {
+                "job_id": "job-research-existing",
+                "type": "research",
+                "status": "ready",
+            },
+            {
+                "job_id": "job-discovery-existing",
+                "type": "discovery",
+                "lane": "discovery",
+                "status": "ready",
+            },
+        ]
+        with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+            with patch.object(queue_worker, "add_job", return_value=True) as add_job:
+                self.assertFalse(queue_worker.ensure_discovery_job())
+
+        add_job.assert_not_called()
+
+    def test_snapshot_keeps_discovery_visible_when_research_fills_priority_window(self) -> None:
+        jobs = [
+            {
+                "job_id": f"job-research-{index}",
+                "type": "research",
+                "lane": "research",
+                "status": "ready",
+                "priority": 90 - index,
+                "created_at": f"2026-09-12T00:00:{index:02d}+00:00",
+            }
+            for index in range(9)
+        ]
+        jobs.append(
+            {
+                "job_id": "job-discovery-existing",
+                "type": "discovery",
+                "lane": "discovery",
+                "status": "ready",
+                "priority": 50,
+                "created_at": "2026-09-12T00:01:00+00:00",
+            }
+        )
+
+        with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+            snapshot = queue_worker.queue_snapshot()
+
+        visible_ids = {job["job_id"] for job in snapshot["next_jobs"]}
+        self.assertIn("job-discovery-existing", visible_ids)
+        self.assertTrue({f"job-research-{index}" for index in range(8)}.issubset(visible_ids))
+
+
 if __name__ == "__main__":
     unittest.main()
