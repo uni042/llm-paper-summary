@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-62f183afd4a5d83a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11582",
+      "title": "OmniKVQuant: KV Cache Quantization for Omni-LLMs",
+      "source_url": "https://arxiv.org/abs/2609.11582",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.11582-omnikvquant-kv-cache-quantization-for-omni-llms.md",
+      "priority": 86,
+      "reason": "音声・映像・テキストを統合するOmni-LLMでKVキャッシュを2bit化するtraining-free手法。短い時間窓ごとにkey量子化範囲を決め、valueはモダリティ別に回転することで、時間方向のkey分布変化とモダリティごとのvalue幾何の違いへ対処する。Qwen2.5-Omni/Qwen3-Omniの7つの音声・映像ベンチマークで性能を大きく保ったまま2bit KVを実現し、2bitキャッシュを直接展開してattentionへ渡す融合Triton decode kernelも公開している。KVメモリ削減と実装まで揃った新着として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10964",
+      "title": "Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows",
+      "source_url": "https://arxiv.org/abs/2609.10964",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10964-decoupling-readiness-from-release-tail-aware-agentic-llm-scheduling.md",
+      "priority": 82,
+      "reason": "エージェント型LLMワークフローで、turnがreadyになった瞬間に推論系へ投入する従来方式をやめ、ready状態とreleaseを分離してtail latencyを制御するスケジューリング研究。mean-CVaRで未完了workflowのtail riskを評価し、turn work量のオンライン推定とqueue圧力に応じてrelease済み未完了仕事量のbudgetを調整する。実際のソフトウェア工学agent traceを用いた評価で、軽負荷時はeager releaseと同等、競合時のworkflow P95 flow timeを最大3.50倍改善すると報告しており、agentic servingの上位スケジューリングとして既存serving系統を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.08189",
+      "title": "Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.08189",
+      "paper_path": "papers/inference/04-conditional-computation/2026-2609.08189-hero-history-aware-routing-efficient-llm-inference.md",
+      "priority": 76,
+      "reason": "tokenごとのlayer skippingを各層の局所判断だけで決めず、過去のrouting scoreとresidual updateをlinear attentionで累積したrouting memoryを次の判断へ渡す動的計算手法。Llama 3.1-8Bではモデルparameterの26.87%をbypassしつつ7 benchmark平均でdense model比100.24%、より厳しいbudgetでも38.82%をbypassして97.01%を保持すると報告する。システム実装よりconditional computation寄りだが、推論時の計算量削減を直接扱い、既存の局所routerとの差が明確なので候補価値がある。"
+    }
+  ]
+}
