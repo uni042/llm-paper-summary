@@ -2,24 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2609.09241-20260912-1638-v10-a2",
-  "job_id": "job-research-2b3d10df7e47e17c",
+  "attempt_id": "attempt-2605.20179-20260912-1805-v10-a",
+  "job_id": "job-research-18475420c52022ad",
   "data": {
-    "overview": "LDAは、同じ専門家数を使った削減ルーティングに対し、表現分布を既定ルーティングへ近づけるだけで大幅な品質回復を示す。Qwen3-30B-A3Bの一般知識8タスク平均ではk=4が66.49%から72.17%、k=2が41.98%から65.22%へ上がる。数学ではk=4の平均が56.08%から76.05%、極端なk=2でも0.50%から55.57%へ回復する。コードでもk=4は50.63%から70.28%へ改善する。動的top-pでもp=0.2の一般知識平均は58.92%から70.04%へ上がり、タスク別に適切なpを選ぶ設定では平均活性専門家数を8未満へ減らしながら既定性能を上回る例がある。追加の要素演算は実測スループットをほぼ変えず、性能・効率曲線を上方へ移す。",
+    "overview": "TIDEは評価した全主要設定でFiddlerと毎段階オフロード方式を上回り、とくにGPUへ置ける専門家数が限られる場合に効果が大きい。LLaDA2.0-miniでは生成長256・専門家予算128で2.36 token/sを達成し、Fiddler 1.74、Mixtral-Offload 1.76を上回る。flashでは生成長256・予算64で1.73 token/sとなり、1.14/1.35を上回る。更新間隔をランダムに選ぶ場合との比較でも、解析モデルで選ぶ間隔が最大約1.4倍高速であり、単に『更新を減らす』だけでなくCPU計算と転送の釣り合いを取ることが重要である。ブロック長、GPU専門家予算、信頼度閾値を変えた感度分析でも一貫した改善が報告される。",
     "key_results": [
-      {"metric": "Qwen3一般知識平均、k=4", "value": "66.49% → 72.17%", "baseline": "同じk=4のLDAなし", "condition": "Qwen3-30B-A3B、既定k=8、8一般知識/常識タスク", "interpretation": "専門家計算量を増やさず5.68ポイント回復し、既定74.44%との差の大部分を埋める。"},
-      {"metric": "Qwen3一般知識平均、k=2", "value": "41.98% → 65.22%", "baseline": "同じk=2のLDAなし", "condition": "活性専門家数を既定8から2へ75%削減", "interpretation": "極端な削減では容量損失が残るが、23.24ポイントの回復から、未補正時の崩壊の大きな部分が分布ずれに起因することが分かる。"},
-      {"metric": "Qwen3数学平均、k=4", "value": "56.08% → 76.05%", "baseline": "既定k=8は78.11%", "condition": "GSM8KとMATH", "interpretation": "専門家数を半減しても既定性能との差を約2.1ポイントまで縮める。"},
-      {"metric": "Qwen3 MATH、k=4の有意差", "value": "35.72±1.61% → 61.24±1.65%、p=8.4e-05", "baseline": "5 seedのLDAなし", "condition": "対応ありt検定", "interpretation": "生成評価のばらつきを考慮しても改善は統計的に有意。"},
-      {"metric": "Qwen3 MBPP、k=4の有意差", "value": "43.56±3.81% → 68.00±0.38%、p=3.7e-04", "baseline": "5 seedのLDAなし", "condition": "対応ありt検定", "interpretation": "コード生成でも同じ分布補正が大きく効く。"},
-      {"metric": "動的top-p、p=0.2一般知識平均", "value": "58.92% → 70.04%", "baseline": "同じpのLDAなし", "condition": "Qwen3、平均kは3.64→3.38", "interpretation": "LDAは固定top-k専用ではなく、トークンごとに専門家数が変わる動的ルータでも品質を改善し、平均専門家数を増やしていない。"},
-      {"metric": "ShareGPTスループット、k=4", "value": "1156.26 → 1153.90 tok/s", "baseline": "LDAなし", "condition": "Qwen3-30B-A3B、vLLM", "interpretation": "差は約0.2%で、LDAの要素ごと補正は専門家削減による推論速度向上をほぼ維持する。"},
-      {"metric": "NuminaMathスループット、k=4", "value": "1368.72 → 1402.42 tok/s", "baseline": "LDAなし", "condition": "Qwen3-30B-A3B、vLLM", "interpretation": "測定ばらつきの範囲でむしろ高く、追加補正の実用上の計算費用が小さいことを支持する。"},
-      {"metric": "kanana一般知識、routed experts 6→2", "value": "63.13% → 70.58%", "baseline": "LDAなし", "condition": "2 shared + 2 routed experts", "interpretation": "共有専門家とsigmoid gatingを持つ別構造でも効果が再現する。"},
-      {"metric": "GLM一般知識、routed experts 4→1", "value": "47.06% → 62.45%", "baseline": "LDAなし", "condition": "1 shared + 1 routed expert", "interpretation": "専門家構成とgatingが異なるモデルでも極端な削減時の崩壊を緩和する。"}
+      {"metric":"LLaDA2.0-miniデコードスループット","value":"2.36 token/s","baseline":"Fiddler 1.74、Mixtral-Offload 1.76 token/s","condition":"生成長256、GPU専門家予算128、GPUメモリ制約18GB、ブロック長32、信頼度閾値0.95、A100 40GB","interpretation":"CPU固定配置より約1.36倍、毎段階オフロードより約1.34倍高く、十分なGPU専門家枠があっても毎段階の重み移動を省く効果が残る。"},
+      {"metric":"LLaDA2.0-mini長生成スループット","value":"2.44 token/s","baseline":"Fiddler 1.80、Mixtral-Offload 1.91 token/s","condition":"生成長1024、GPU専門家予算128、18GB制約","interpretation":"生成が長くなっても更新間隔による転送削減が維持され、毎段階オフロード比で約1.28倍となる。"},
+      {"metric":"LLaDA2.0-flashデコードスループット","value":"1.73 token/s","baseline":"Fiddler 1.14、Mixtral-Offload 1.35 token/s","condition":"生成長256、GPU専門家予算64、55GB制約、H100 80GB","interpretation":"100B級モデルではCPU実行の負担が重くなるため、GPUヒット率を高める配置更新がFiddlerに対して約1.52倍となる。"},
+      {"metric":"LLaDA2.0-flash長生成スループット","value":"1.45 token/s","baseline":"Fiddler 1.05、Mixtral-Offload 1.16 token/s","condition":"生成長1024、GPU専門家予算64、55GB制約","interpretation":"大規模モデルの長い生成でも毎段階オフロード比約1.25倍で、重みI/O削減とCPU計算抑制を両立する。"},
+      {"metric":"更新間隔最適化の効果","value":"ランダムτ比で最大約1.4倍","baseline":"ランダムに選択した更新間隔","condition":"mini/flash、ブロック長32/64、複数GPU専門家予算、生成長1024","interpretation":"更新回数を減らすだけではCPUミスが増え得るため、ハードウェア計測に基づき転送費用とCPU費用の合計を最小化する必要があることを示す。"},
+      {"metric":"miniのτ比較例","value":"2.44 token/s","baseline":"τ=1は1.91、ランダムτは2.14 token/s","condition":"LLaDA2.0-mini、ブロック長32、GPU専門家予算128","interpretation":"毎段階配置更新より約1.28倍高く、ランダムな間隔より約1.14倍高い。"},
+      {"metric":"flashのτ比較例","value":"1.49 token/s","baseline":"τ=1は1.27、ランダムτは1.32 token/s","condition":"LLaDA2.0-flash、ブロック長64、GPU専門家予算64","interpretation":"大規模モデルでも最適間隔が毎段階更新と任意固定間隔の双方を上回る。"}
     ],
-    "negative_results": "LDAは専門家容量そのものを復元しないため、極端な削減では既定性能へ完全には戻らない。Qwen3のk=2では一般知識平均65.22%に回復しても既定74.44%を下回り、IFEvalも17.74%に留まる。GLM-4.7-Flashではrouted expertを1個まで減らすと、数学MATHはLDAありでも0%の設定があり、タスクによって容量不足が支配的になる。また専門家数比だけでSMoE出力全体を掛ける単純補正は性能を悪化させ、RMSだけの全体スケーリングは有効だが次元別LDAより劣る。したがって『尺度を直せば専門家を任意に減らせる』わけではない。",
-    "interpretation": "動的MoE推論の性能低下を、計算量削減に伴う不可避な容量損失と、学習時ルーティングから外れることで起きる補正可能な分布ずれに分けるのが重要な結果である。LDAは後者をほぼ無料で除くため、同じ活性専門家数における品質を上げる。特に数学・コードで未補正削減が壊滅する設定から大きく回復することは、後段ルータへ伝播する表現経路のずれが無視できないことを示す。一方、削減し過ぎれば容量損失が残るため、実運用ではLDAと自動専門家数制御を組み合わせ、タスクやトークンごとに品質制約内で最少の専門家数を選ぶ方向が自然である。",
-    "quality_impact": "LDAは品質を犠牲にして速度を得る手法ではなく、既存の専門家削減が生む品質損失のうち分布ずれ成分を回収する。専門家削減自体はTFLOPsとTPOTを下げスループットを上げ、LDA追加後も効率指標はほぼ同じである。ただし極端な削減では専門家容量不足を補えず、既定モデル品質には届かない。"
+    "negative_results": "専門家配置を長く固定し過ぎると需要とのずれが増え、GPU専門家ミスとCPU計算時間が増えるため、τを大きくすれば単調に速くなるわけではない。逆にτ=1では毎段階の専門家重み転送が多く、Mixtral-Offload相当の入出力ボトルネックへ戻る。Fiddlerは一部のmini設定では比較的近い性能だが、100B級flashではCPU専門家計算が重く差が広がる。研究範囲も単一GPU・CPUノードと限られたNVIDIA/Intel構成に限定され、分散専門家並列や別ベンダー上で同じ最適間隔モデルが成立するかは未評価である。",
+    "interpretation": "性能差は、拡散MoEでは一つの段階で多数トークンが同時に専門家を要求するため、自己回帰MoE向けの二極的な方式が不利になることから生じる。毎段階オフロードは現在需要に配置を合わせる代わりに重み転送を払い、固定配置は転送を避ける代わりにCPU計算を払う。TIDEは専門家需要が数段階は安定する時間領域を利用し、その中間点をハードウェアごとに選ぶ。GPU専門家予算が増えると高需要専門家をより多く保持でき、固定期間中のミスが減るためTIDEの利点を活かしやすい。一方、局所性が崩れるワークロードやCPUが極端に遅い環境では短い更新間隔が必要になる。",
+    "quality_impact": "無損失方式。ルータの専門家選択、モデル重み、デノイズ規則を変更せず、同じ専門家計算をGPUかCPUのどちらで行うかだけを変えるため、著者はモデル出力・精度を保持するとしている。報告された高速化は量子化、専門家枝刈り、近似ルーティングとの交換条件ではない。"
   }
 }
