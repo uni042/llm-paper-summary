@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "job_id": "job-7813e4117353f471",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T08:26:04+09:00",
+    "round": "specialist-network-collective-saturation-5",
+    "axis": "network・collective通信・distributed inference",
+    "query_summary": "直前のruntime/reliability/CPU軸からnetwork・collective・distributed inferenceへ切り替え、WISP、BloomBee、WWW.Serve、MoE network topology、Multi-stage Flow Scheduling、SCIN、P/D-Serveを軽量評価した。いずれも最新正本系列の既存job/収録済みpaperで一致し、新規の強候補は残らなかった。直近新着検索でもPATTON、TokenStack、NELSSAなどは既収録であり、弱い候補を埋め合わせとして投入しなかった。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 7,
+    "duplicate_canonical_ids": [
+      "arXiv:2601.11652",
+      "arXiv:2604.21072",
+      "arXiv:2603.20661",
+      "arXiv:2605.00254",
+      "arXiv:2603.17456",
+      "arXiv:2603.28239",
+      "arXiv:2408.08147"
+    ],
+    "next_axis_hint": "直近新着・関連研究・storage/OS・runtime・networkの主要独立経路を今回runで横断済み。追加の強候補がなければexhaustive policyの収束判定へ進む",
+    "empty_round_reason": "network/collective/distributed-inference軸で真剣に評価した強候補がすべて既収録または既存jobと重複したため、新規candidateを投入しなかった。"
+  }
+}
