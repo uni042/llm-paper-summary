@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 209,
+      "completed": 210,
       "ready": 1
     },
     "audit": {
@@ -11,7 +11,7 @@
       "completed": 168,
       "superseded": 44,
       "deferred": 3,
-      "ready": 30
+      "ready": 33
     }
   },
   "next_jobs": [
@@ -40,6 +40,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-61b65de2a7cf7033",
+      "type": "research",
+      "lane": null,
+      "priority": 89,
+      "canonical_id": "arXiv:2602.02204",
+      "title": "vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2602.02204",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-2c474caec39ae70d",
       "type": "research",
       "lane": null,
@@ -60,6 +72,18 @@
       "title": "ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse",
       "source_url": "https://arxiv.org/abs/2605.22850",
       "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-5de21b53eec4b0eb",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2606.12688",
+      "title": "M*: A Modular, Extensible, Serving System for Multimodal Models",
+      "source_url": "https://arxiv.org/abs/2606.12688",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.12688-mstar-modular-composite-model-serving.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -88,31 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-2909bb8eecc75840",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2509.08342",
-      "title": "Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism",
-      "source_url": "https://arxiv.org/abs/2509.08342",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2509.08342-moepic-adaptive-expert-split.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-81e46dd484abb553",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2605.19481",
-      "title": "C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG",
-      "source_url": "https://arxiv.org/abs/2605.19481",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-76e9912e8914176e",
+      "job_id": "job-ad1c8e84bbe900ae",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-12T14:19:23+00:00"
+  "generated_at": "2026-09-12T14:21:24+00:00"
 }
