@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "job_id": "job-71aa62ea72552734",
+  "status": "completed",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.06453",
+      "title": "Vortex: A Programmable System for Efficient Sparse Attention Serving",
+      "source_url": "https://arxiv.org/abs/2606.06453",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+      "priority": 89,
+      "reason": "疎注意方式ごとに異なる索引・選択・注意計算を個別実装するとサービング基盤への統合が難しく、動的要求下でGPU利用率も落ちる問題に対し、複数の疎注意パターンを統一的に表現・実行するプログラマブルなサービング基盤を提案する。Blackwell B200を含む実機評価で完全注意比最大3.46倍、GLM-4.7-Flashでは最大4.7倍の高速化を報告しており、個別のKV削減手法ではなく疎注意をサービング機構として汎用化する点が既存SPIN/KARATと異なる強候補。"
+    },
+    {
+      "canonical_id": "arXiv:2604.13327",
+      "title": "Event Tensor: A Compiler Abstraction for Dynamic Megakernel Generation",
+      "source_url": "https://arxiv.org/abs/2604.13327",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md",
+      "priority": 86,
+      "reason": "LLMサービングの動的形状・分岐・非同期イベントを巨大カーネルへ融合する際、静的テンソルIRだけでは実行時イベント依存を十分に表現できない問題に対し、イベントをテンソルと同等のコンパイラ抽象として扱い動的メガカーネル生成へつなぐ。サービング遅延で最先端水準を達成しつつウォームアップ負担も削減すると報告しており、Mirage persistent kernelとは異なる動的実行意味論側からのコンパイラ候補。"
+    },
+    {
+      "canonical_id": "arXiv:2605.11581",
+      "title": "Ada-MK: Adaptive Megakernel Compilation for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.11581",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md",
+      "priority": 85,
+      "reason": "LLM推論の形状・バッチ状態に応じて最適な融合粒度が変わるため固定メガカーネルでは利用率を安定して高められない問題に対し、実行条件へ適応してカーネル構成を選ぶコンパイラ・実行系を提案する。TensorRT-LLMプラグインとしてL20で評価し、単一バッチではTensorRT-LLM比最大23.6%、vLLM比最大50.2%の高速化を報告し、実サービス展開も示す。GPUカーネル生成を実際のサービングへ接続する実運用寄り候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T07:58:39+09:00",
+    "round": "specialist-sparse-kernel-compiler-4",
+    "axis": "疎注意サービング・GPUメガカーネル・動的コンパイラ",
+    "query_summary": "直前のMoE軸後にKV sparse-attention、GPU kernel/compiler、framework integrationを独立走査した。SPIN、KARAT、HyMCache、Mirage Persistent Kernel、Harness Engineeringは最新正本の既存jobへ収束。Vortex、Event Tensor、Ada-MKは投入直前の最新main HEADで決定論的research job不存在、repo識別子/題名未検出、Library pendingにも同候補なしを確認した。",
+    "candidate_count": 8,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2604.26837",
+      "arXiv:2608.03555",
+      "arXiv:2607.18141",
+      "arXiv:2512.22219",
+      "arXiv:2607.17979"
+    ],
+    "next_axis_hint": "strong candidate発見により枯渇判定を再度リセット。新着差分、forward/backward citation、CXL/SSD、network collective/disaggregation、MoE placement/cache、KV compression、隣接OS/HPCを一巡して最終枯渇判定する",
+    "empty_round_reason": null
+  }
+}
