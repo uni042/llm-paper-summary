@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:49:28.059081+00:00",
+  "updated_at": "2026-09-12T20:53:26.517083+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15070,19 +15070,19 @@
     {
       "run_key": "2026-09-13T05:30:00+09:00",
       "first_recorded_at": "2026-09-12T20:33:22.411159+00:00",
-      "last_recorded_at": "2026-09-12T20:49:28.059081+00:00",
+      "last_recorded_at": "2026-09-12T20:53:26.517083+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 9,
-        "new_papers": 4,
+        "new_papers": 5,
         "fallback_archived": 0
       },
       "events": [
@@ -15174,6 +15174,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34718308862:1",
+          "recorded_at": "2026-09-12T20:53:26.517083+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34718308862",
+            "run_attempt": "1",
+            "source_sha": "2650f1a5586c32bed11ab21fb1e05c4380e20684"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -15230,6 +15245,14 @@
           "type": "research",
           "canonical_id": "arXiv:2506.21901",
           "title": "A Survey of LLM Inference Systems",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-8d8feec36f937b6f",
+          "type": "research",
+          "canonical_id": "arXiv:2604.06370",
+          "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
           "from": "ready",
           "to": "completed"
         }
@@ -15303,7 +15326,8 @@
         "arXiv:2605.01708",
         "arXiv:2609.01024",
         "arXiv:2606.29986",
-        "arXiv:2506.21901"
+        "arXiv:2506.21901",
+        "arXiv:2604.06370"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json",
@@ -15312,7 +15336,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 386,
-      "paper_active_count_after": 390,
+      "paper_active_count_after": 391,
       "last_successful_action": "paper_materialized"
     }
   ]
