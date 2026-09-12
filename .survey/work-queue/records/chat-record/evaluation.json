@@ -2,23 +2,21 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2606.18431-20260912-1840-v10-a",
-  "job_id": "job-research-c5ba85dfa2989728",
+  "attempt_id": "attempt-2609.09166-20260912-1850-v10-a",
+  "job_id": "job-research-a4ae8894c89646f7",
   "data": {
-    "hardware": ["NVIDIA DGX A100上の8×A100 80GB、96 vCPU、248GBホストメモリ。"],
-    "software": ["paged attention、continuous batching、chunked prefillを備えたLLMサービング実装。主評価ではscheduler差を分離するためradix cacheとprefix cachingを無効化する。"],
-    "model": ["Llama-3-8B", "CodeLlama-34B", "QWen-72B。QWen-72Bはtensor parallel=4、context parallel=4。CodeLlama-34Bは単一A100上のメモリ制約条件でも評価。"],
-    "datasets": ["Azure Conversation trace", "ShareGPT", "s1k reasoning", "Azure Functions trace。", "混合負荷mix-1: reasoning 20% + Azure Function 80%。mix-2: reasoning 70% + Azure Function 30%。"],
-    "baselines": ["Sarathi: chunked prefillとdecode-priority continuous batching。", "LTR+: 完全な出力長を与えたSJF系比較方式。飢餓防止quantumを追加。", "MLFQ+/LAS: 既得サービス量に基づく予測不要方式。", "TRAIL+: 完全な残出力長を与えたSRPT系比較方式。decode進行0.6以後のswap抑制閾値を持つ。"],
-    "correctness": "各方式は同じモデル・要求トレース・GPU構成を使い、違いはスケジューリング方針である。LTR+/TRAIL+には現実には得られない完全な出力長を与え、予測不要UniBoostに対して強い上限比較とする。主指標はend-to-end latency、time to first token、time between tokensの平均・P95・P99とthroughput。",
+    "hardware": ["実験は単一NVIDIA A100 40GB上で実行する。端末側Vicuna-68Mの計算時間はNVIDIA TITAN RTX上で実測した生成速度とA100上の速度比を使ってスケールし、端末・サーバ分散実行を模擬する。"],
+    "software": ["Hugging Faceのdouble7/vicuna-68m、Qwen/Qwen2-7B、meta-llama/Llama-3.1-8BをFP16で変更せず使用する。両tokenizer間で一対一に直接対応できるトークンだけから共通語彙を構成する。"],
+    "model": ["端末SLM: Vicuna-68M、語彙数32,000。", "サーバLLM: Qwen2-7B、語彙数151,646、共通語彙22,269で14.68%。", "サーバLLM: Llama-3.1-8B、語彙数128,256、共通語彙22,413で17.48%。"],
+    "datasets": ["WMT-DeEn: 機械翻訳。", "XSumとCNN/DailyMail: 要約。", "GSM8K: 数学推論。", "MMLU: 質問応答。"],
+    "baselines": ["Server LLM: サーバLLM単独生成。", "Naive: TLIで異種語彙へ拡張するが、棄却時にLLM全語彙分布を下り送信する損失なし方式。", "UL: 端末からSLM分布を上り送信してサーバ側で再サンプリングする方式。", "GR / TR: 異種語彙の変換・再トークン化を使う比較方式。", "U-HLM: 不確実な候補だけ検証して通信を減らすが、サーバLLM分布を厳密には保存しない損失あり方式。"],
     "settings": [
-      {"name":"固定・混合負荷比較","description":"各モデルとAzure/ShareGPT/s1kおよびmix-1/mix-2で10,000要求を処理する。Azure timestamp traceはburst性を保持したまま時間尺度を調整し、その他はPoisson到着を使用する。"},
-      {"name":"動的負荷","description":"Llama-3-8BでAzure coding traceに基づきQPSを時間変化させ、負荷変化時にγ-Adaが追随できるかと末尾遅延を測る。"},
-      {"name":"構成要素除去","description":"CodeLlama-34Bを単一A100で動かし、DistBoost、UniBoost-Base、MemGuard追加、γ-Adaを含む完全版を負荷掃引して比較する。メモリ制約を強くしてプリエンプト費用を顕在化する。"},
-      {"name":"SLO評価","description":"TTFTとtotal latencyについてSLO閾値を変え、99%など指定達成率を満たせる最小閾値を各方式で比較する。"},
-      {"name":"予測頑健性","description":"完全予測SJF/SRPTを含む比較に加え、出力長分布が会話・コード・推論でどれだけ変動するかをQwen-2-7BとDeepSeek-R1-Distillで測り、予測依存設計の前提を検証する。"}
+      {"name":"生成設定","description":"全モデルのsoftmax温度を0.3、最大生成長を128トークンに固定する。通信量表では候補列長N=2を使用し、スループット評価ではN=1〜8の各方式で最良値を採用する。"},
+      {"name":"無線帯域設定","description":"実測mid-band 5Gを参考に上りを30 Mbpsへ固定し、下りを100〜300 Mbpsで掃引する。トークン当たり遅延の累積分布では上り30 Mbps、下り100 Mbpsを用いる。"},
+      {"name":"通信量評価","description":"生成1トークン当たりの上り・下りビット数をWMT-DeEn、XSum、CNN/DailyMail、GSM8K、MMLUで測る。全候補受理時はbonus tokenだけを返すため、方式差が大きい棄却時通信を中心に分析する。"},
+      {"name":"品質評価","description":"各データセットでサーバLLM単独の品質指標を1.0へ正規化し、提案方式と比較方式の生成品質を比較する。X-CoSD/X-CoSD-Eは理論上サーバ分布と一致するため、有限サンプルの揺らぎがあっても近似デコードではない。"}
     ],
-    "methodology": "平均だけでなくP95/P99を第一級指標として比較し、完全な出力長を知る予測方式を強いbaselineに置く。reasoning-heavyとchat/function-heavyの混合比、bursty trace、モデル規模、GPUメモリ余裕を変える。アブレーションでは各設計段階が飢餓、フェーズ間head-of-line blocking、KV-aware preemption、分布変化へどう寄与するかを分離する。",
-    "scope": "主評価はA100世代の単一DGX内で、radix/prefix cacheを無効にした局所replica schedulerである。複数replica・複数model間のglobal routing、prefix cacheとの実運用相互作用、異種GPUは主評価外。理論的なtail保証は古典待ち行列モデルから導くが、実システムのcontinuous batching、有限KV、プリエンプト費用を完全には含まないため、MemGuard等の工学的補正が必要になる。"
+    "methodology": "通信削減が計算増加や品質劣化で相殺されないかを見るため、通信量、無線帯域を含むトークンスループット、サンプルごとのトークン当たり遅延、生成品質を組み合わせて評価する。特にNaiveは同じTLIと損失なし条件を満たしながら全LLM分布を送るため、HR/SR-DVそのものの通信効果を分離できる。ULは下りを小さくできる代わりに上りへ大きな分布を送るので、上り30 Mbpsの非対称無線条件で実用性を比較できる。U-HLMはさらに小さい通信量を得るが損失ありであり、損失なし性との交換条件を明示する。",
+    "scope": "端末・サーバを物理的に別ノードへ配置した実ネットワーク実験ではなく、単一A100上の実モデル計算時間とTITAN RTX実測速度比、指定無線帯域から分散実行時間を模擬する評価である。端末SLMはVicuna-68M、サーバLLMは2種類に限られ、共通語彙は一対一直接対応トークンだけで構成する。したがってより大きな端末モデル、異なる言語のtokenizer、実際の無線揺らぎ・再送・ジッタ、複数利用者競合では受理率と通信優位性が変わる可能性がある。"
   }
 }
