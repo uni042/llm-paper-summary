@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-c6ac42b8bcec8aab",
+  "type": "research",
+  "parent_job_id": "job-bd45d56f5e105855",
+  "priority": 80,
+  "canonical_id": "arXiv:2607.29069",
+  "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
+  "source_url": "https://arxiv.org/abs/2607.29069",
+  "paper_path": null,
+  "selection_reason": "Ariesは自律エージェントの反復LLM推論・持続コンテキスト・状態付きツール実行を同時に観測できる実験基盤で、公開エージェント環境と商用運用トレースを用いて、トークン中心指標では非推論ボトルネックを捉えにくいこと、サンドボックスが長い待機と短い資源バーストを繰り返すことを示す。エージェント型サービングの評価軸と資源管理設計を整理する基盤論文として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:09:16+00:00",
+  "artifact_transport": "structured_record_v10"
+}

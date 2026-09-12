@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T20:08:51.742950+00:00",
+  "updated_at": "2026-09-12T20:11:03.034694+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -14622,19 +14622,19 @@
     {
       "run_key": "2026-09-13T04:30:00+09:00",
       "first_recorded_at": "2026-09-12T19:40:38.677351+00:00",
-      "last_recorded_at": "2026-09-12T20:08:51.742950+00:00",
+      "last_recorded_at": "2026-09-12T20:11:03.034694+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 1,
-        "new_papers": 4,
+        "new_jobs": 6,
+        "new_papers": 5,
         "fallback_archived": 0
       },
       "events": [
@@ -14711,6 +14711,22 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34716192039:1",
+          "recorded_at": "2026-09-12T20:11:03.034694+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34716192039",
+            "run_attempt": "1",
+            "source_sha": "df67248f625dc24bd7138f2b80f353a42a0b7595"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -14753,6 +14769,22 @@
           "title": "SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-bd45d56f5e105855",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2e6a6ec3181fc516",
+          "type": "research",
+          "canonical_id": "arXiv:2606.07665",
+          "title": "AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -14762,20 +14794,57 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-6d03dc1e94ef67d4",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-78cb8002e7b50e8e",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.11294",
+          "title": "Memory Compression for High-Fanout Agent Sandboxes"
+        },
+        {
+          "job_id": "job-research-7e6e9c9b89ab9c18",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.09345",
+          "title": "AgentCgroup: Understanding and Controlling OS Resources of AI Agents"
+        },
+        {
+          "job_id": "job-research-8837d2430022aa08",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.22781",
+          "title": "DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback"
+        },
+        {
+          "job_id": "job-research-c6ac42b8bcec8aab",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.29069",
+          "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework"
         }
       ],
       "new_paper_ids": [
         "arXiv:2603.03251",
         "arXiv:2606.17949",
         "arXiv:2605.00254",
-        "arXiv:2606.01751"
+        "arXiv:2606.01751",
+        "arXiv:2606.07665"
       ],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json"
+        ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json",
+        ".survey/work-queue/results/20260913T0508JST-discovery-specialist-agent-os-memory.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 378,
-      "paper_active_count_after": 382,
+      "paper_active_count_after": 383,
       "last_successful_action": "paper_materialized"
     }
   ]

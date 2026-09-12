@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-78cb8002e7b50e8e",
+  "type": "research",
+  "parent_job_id": "job-bd45d56f5e105855",
+  "priority": 86,
+  "canonical_id": "arXiv:2609.11294",
+  "title": "Memory Compression for High-Fanout Agent Sandboxes",
+  "source_url": "https://arxiv.org/abs/2609.11294",
+  "paper_path": null,
+  "selection_reason": "AgentZipは多数のAIエージェント用サンドボックスが共有テンプレートと類似実行軌跡を持つことを利用し、テンプレート相対・サンドボックス間のメモリ冗長性を圧縮するOS系システム。LLM待ち時間へ圧縮処理を重ね、復元時プリフェッチで前景ツール実行への干渉を抑える。LLM学習・推論ワークロードでサンドボックス所有メモリを最大8.7倍削減し、積極圧縮時の遅延を最大3.1倍から1.40倍へ抑えており、エージェント実行基盤のメモリ階層管理として研究価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:09:16+00:00",
+  "artifact_transport": "structured_record_v10"
+}

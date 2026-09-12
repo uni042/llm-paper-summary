@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-8837d2430022aa08",
+  "type": "research",
+  "parent_job_id": "job-bd45d56f5e105855",
+  "priority": 84,
+  "canonical_id": "arXiv:2605.22781",
+  "title": "DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback",
+  "source_url": "https://arxiv.org/abs/2605.22781",
+  "paper_path": null,
+  "selection_reason": "DeltaBoxは状態を持つAIエージェントの分岐探索で多発するサンドボックスのチェックポイント／ロールバックを、全状態複製ではなく差分状態のOS抽象で処理する。差分ファイルシステムと増分プロセス状態保存を組み合わせ、SWE-bench等でチェックポイント14ms、ロールバック5msを報告する。高ファンアウト・テスト時探索の基盤コストを直接扱うため、エージェント型推論の隣接システム研究として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-12T20:09:16+00:00",
+  "artifact_transport": "structured_record_v10"
+}

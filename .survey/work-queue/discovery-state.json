@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T20:05:53+00:00",
+  "updated_at": "2026-09-12T20:09:16+00:00",
   "last_run_key": "2026-09-13T05:00:25+09:00",
-  "last_round": "specialist-kv-reuse-eviction-1",
+  "last_round": "specialist-agent-os-memory-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "軽量評価した3候補はwrite直前の正本再重複判定ですべて既収録と確認されたため。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -1941,6 +1941,21 @@
       ],
       "next_axis_hint": "エージェントサンドボックス／OSメモリ圧縮など、LLM待ち時間を利用する隣接システム軸へ切り替える",
       "source_submission": "work-queue/submissions/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json"
+    },
+    {
+      "run_key": "2026-09-13T05:00:25+09:00",
+      "round": "specialist-agent-os-memory-2",
+      "axis": "エージェントサンドボックス・OS資源管理・状態管理",
+      "query_summary": "前roundの全重複を受けてKV系から独立したOS／エージェント実行基盤へ切り替えた。高ファンアウトサンドボックスのメモリ圧縮、差分チェックポイント、ツール呼出し単位のOS資源制御、エージェント型クラウド基盤の実測研究を一次資料の題名・抄録・書誌情報で軽量評価し、決定論的research job IDと正本検索で未登録を確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "GPUランタイム／カーネルコンパイル、またはMoE expert通信・I/Oスケジューリングの未収録候補へ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T0508JST-discovery-specialist-agent-os-memory.json"
     }
   ],
   "axes": {
@@ -3063,6 +3078,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "エージェントサンドボックス／OSメモリ圧縮など、LLM待ち時間を利用する隣接システム軸へ切り替える"
+    },
+    "エージェントサンドボックス・OS資源管理・状態管理": {
+      "last_run_key": "2026-09-13T05:00:25+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "GPUランタイム／カーネルコンパイル、またはMoE expert通信・I/Oスケジューリングの未収録候補へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
