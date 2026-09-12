@@ -2,22 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2510.13223-20260912-1752-v10-b",
-  "job_id": "job-research-3ae94af47a718bbb",
+  "attempt_id": "attempt-2607.10186-20260913-0030-v10-b",
+  "job_id": "job-research-176f6ec6b8273a5c",
   "data": {
-    "hardware": ["実機データセンタ環境で評価し、Alibaba Group AIOS Teamの大規模基盤を使用する。", "Global KV Cache Storeの転送分析では200Gbpsの有効帯域を用い、NVLinkやInfiniBandのような高帯域接続を前提とする。"],
-    "software": ["vLLMおよびDistServeを比較対象とし、BanaServeは既存LLMサービングスタック上に共有KVストア、動的移動、負荷指向スケジューリングを統合する。"],
-    "model": ["LLaMA-13B", "OPT-13B"],
-    "datasets": ["Alpaca: 短文の指示追従ワークロード。実験入力は主に5〜40トークン。", "LongBench: 約2,000から85,000超トークンの長文を含む21タスク・6カテゴリ。"],
-    "baselines": ["vLLM", "DistServe"],
-    "correctness": "層移動では同じ重みとKVを別GPUへ移し、注意単位移動では分割した注意ヘッドの部分結果を正規化して再結合するため、推論意味を変えない。",
-    "settings": [
-      {"name":"負荷範囲","description":"1〜20 requests/sを段階的に変え、Poisson到着で低負荷から飽和付近まで測る。"},
-      {"name":"統計","description":"各条件で60秒のウォームアップ後、異なる乱数種で5回測定し、平均と95%信頼区間を報告する。"},
-      {"name":"出力長","description":"比較可能性のため最大出力長を512トークンに固定する。"},
-      {"name":"指標","description":"スループット、総処理時間、平均要求遅延、TTFT、トークン間遅延を評価する。"}
+    "hardware": [
+      "基準はDGX-H200相当の8基H200。各GPUは141GB HBM3e、4.8TB/sメモリ帯域、同一NVLink領域内で900GB/s接続。",
+      "HBFは実機ではなくモデル化。1スタックは8フラッシュダイ+1ベースダイ、各ダイ96プレーン、SLC、192GB容量、768GB/s読出し帯域、32MB総SRAM、tR=4マイクロ秒、tProg=75マイクロ秒。",
+      "CSIは各GPUの6 HBM3eスタックを維持し6 HBFスタックを追加。CLIは5 HBMスタックを5 HBFへ置換し1 HBM+5 HBFとする。4GPU、8GPU、16GPU規模も比較する。"
     ],
-    "methodology": "短文Alpacaと長文LongBenchをLLaMA-13BおよびOPT-13Bへ与え、同一の要求率範囲でBanaServe、DistServe、vLLMを比較する。短文ではスケジューリングとコンテキスト切替、長文ではKVキャッシュ容量・転送・メモリ管理の影響が強く出るため、両条件を分けて測る。",
-    "scope": "評価は単一リージョンのデータセンタクラスタを対象とし、異種アクセラレータやWAN越し共有KVは未評価。負荷制御も履歴予測ではなく現在の利用率へ反応する方式である。"
+    "software": [
+      "LLMCompass上にイベント駆動NANDシミュレータを追加し、メガプレーン単位のアクセスとFlash/SRAMメモリ遅延をモデル化する。",
+      "LLMCompassの行列演算tile探索とScaleSimによる計算遅延推定を利用する。",
+      "FlashAccel側のシステム設計としてNandMmap、GroupMmap/GroupWrite、SramPrefetch/SramRelease、FTLレスオブジェクト管理を評価モデルへ組み込む。"
+    ],
+    "model": ["Qwen3-235B", "Qwen3-Coder-480B", "LLaMA3.1-405B", "DeepSeek-V3-671B"],
+    "datasets": [
+      "LongProc由来の長文条件: 平均入力8.11K、出力2.53Kトークン。",
+      "AgentTaxo由来のエージェント条件: 平均入力15K、出力6Kトークン。",
+      "複数ターンKV再利用評価ではpi-mono由来のinteraction traceを利用。"
+    ],
+    "baselines": ["8×H200 HBM-only DGX-H200", "16×H200", "最適化なしPlain HBF", "prefetch無効FlashAccel", "weight-layout無効FlashAccel", "KV-layout無効FlashAccel"],
+    "correctness": "同一のモデル重みとKVキャッシュをHBM/HBF/SRAM間で移して読み出すアーキテクチャ評価であり、量子化・KV削減等の近似をFlashAccel固有には導入しない。DeepSeek-V3の重みだけは元モデル条件に合わせFP8、その他はFP16。したがって性能差は容量、帯域、配置、先読み、並列度の差として評価する。",
+    "settings": [
+      {"name":"モデルと並列方式","description":"Qwen3-235BとQwen3-Coder-480BはGQA+データ並列とMoE expert並列、LLaMA3.1-405BはGQA+テンソル並列のdense FFN、DeepSeek-V3-671BはMLA+データ並列とMoE expert並列を使う。"},
+      {"name":"デコードSLO","description":"50ms（約20 tokens/s/user）と100ms（約10 tokens/s/user）の2条件。各構成でメモリ容量とSLOの両方を満たす最大バッチを選び、GPU当たりthroughputを比較する。"},
+      {"name":"HBF構成","description":"CSIは6 HBFスタック追加でHBF読出し帯域約4.6TB/s、CLIは5 HBF+1 HBMでCSIよりHBF帯域が16.7%低い。各HBFスタックはHBM3e級768GB/s、192GB容量を想定する。"},
+      {"name":"シミュレーション","description":"LLMCompass+ScaleSimを基盤にGPU演算とメモリアクセスを推定し、XL-Flash由来の4マイクロ秒read/75マイクロ秒programをNANDモデルへ入れる。実HBFシリコンでの実測ではない。"},
+      {"name":"アブレーション","description":"Qwen3-235B、batch 256で、完全FlashAccel、Plain HBF、prefetch/weight-layout/KV-layoutを各1つ無効化した構成の遅延と100ms SLO throughputを比較する。"},
+      {"name":"書込み・耐久性","description":"SLC 100K P/Eを基準に短いretentionで10倍の1M P/Eへ伸ばせる保守的仮定を置き、decode+prefillでGPU当たり最大988MB/sのKV書込みと5年間TBWを評価する。"},
+      {"name":"KV再利用","description":"複数ターントレースでHBM/HBF構成のKV hit rateと再計算token数を比較し、大容量化によるprefill側の効果も確認する。"},
+      {"name":"エネルギー・面積","description":"Hybrid-bonding Flashの8pJ/bitとHBM3eの2.99pJ/bitを使用し、TDP、tokens/J、HBF die areaと密度を推定する。"}
+    ],
+    "methodology": "実機H200の公表仕様と既存Flash prototypeのtiming/energy/area値を入力にしたアーキテクチャ・システムシミュレーションである。モデルごとの演算形状、注意方式、FFN方式、並列方式、KV bytes/tokenを入れ、各デコードSLO下で許容される最大バッチを求めてGPU当たりthroughputを比較する。さらに機構別アブレーション、KV書込み耐久性、multi-turn KV reuse、エネルギーと面積を別々に分析し、HBF容量だけでなくアクセス効率と運用可能性まで検証する。",
+    "scope": "主要結果はシミュレーションであり、HBFを搭載した実GPU prototype上の測定ではない。対象はHBM容量が大規模重み・長文KVで律速となるデータセンタ級推論で、低遅延50ms SLOではHBF帯域不足やGPU台数削減が不利になる条件も含む。"
   }
 }
