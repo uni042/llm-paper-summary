@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-45dc1a19eb092331",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.17063",
+      "title": "FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2601.17063",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-expert-cache-replacement.md",
+      "priority": 92,
+      "reason": "RAMにも収まらないMoE expertをSSDへ置き、recency/frequencyを組み合わせる軽量ML cache replacementでstorage I/Oを削減する実機system。arXiv抄録ではuser-grade desktop実装、LRU/LFU比cache hit最大51%改善、既存MoE inference system比最大2.6倍を報告しており、SSD/NVMe expert offloadの重点テーマに直接合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2606.26607",
+      "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch",
+      "source_url": "https://arxiv.org/abs/2606.26607",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.26607-moebius-runtime-parallelism-switch.md",
+      "priority": 90,
+      "reason": "同一MoE modelで低concurrency時のtensor parallelismと高concurrency時のexpert parallelismを、engine restartやrequest drainなしにdecode途中で切り替えるserving system。arXiv抄録では8xH200/Qwen3-235B-A22B実機、switch 215〜434ms、memory overhead 2.4%を報告し、bursty serving/RL rollout双方で価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.02715",
+      "title": "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+      "source_url": "https://arxiv.org/abs/2604.02715",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2604.02715-fluxmoe-expert-paging.md",
+      "priority": 89,
+      "reason": "expert weightを永続GPU resident stateとせず、必要時だけmaterializeして即evictするexpert paging abstractionによりHBMをKV cacheへ優先配分するvLLMベースsystem。arXiv抄録ではmemory-intensive条件でvLLM比最大3倍throughputを報告しており、expert residencyとKV容量の競合を明示的に扱う候補。"
+    },
+    {
+      "canonical_id": "arXiv:2603.19289",
+      "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2603.19289",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2603.19289-speculating-experts-prefetch.md",
+      "priority": 88,
+      "reason": "内部representationから将来expertを予測しCPU→GPU転送を計算とoverlapし、場合によっては予測expertをそのまま実行して再fetchを避けるexpert prefetch手法。arXiv抄録ではoptimized inference engine統合、複数MoEで最大14% TPOT削減、公開codeを明記しており、expert prefetch系統の比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-cpu-gpu-coexecution.md",
+      "priority": 86,
+      "reason": "micro-batchingでexpert演算が細粒度化する問題に対し、expert計算をcoalesceし、AMX CPUとGPUへattention/expert workloadを戦略的に配分する協調実行system。arXiv抄録ではFlexGen比最大7.1倍、MoE-Lightning比最大2.4倍throughputを報告しており、CPU-GPU co-execution系統として有望。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-12T23:00:00+09:00",
+    "round": "specialist-moe-runtime-ssd-11",
+    "axis": "MoE expert paging・SSD cache・runtime parallelism・prefetch",
+    "query_summary": "SSD-backed expert cache、EP/TP runtime switch、expert paging、representation-based expert prefetch、AMX CPU-GPU co-executionをarXiv一次資料のtitle/abstract/書誌情報で軽量評価した。第10roundのActions完了後に最新HEADと次discovery jobを取得し、5件のarXiv IDをrepoで再検索して投入直前重複確認を行った。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/CPU-GPU hybrid attention、computational storage、または重要offload論文の引用追跡へ切り替える",
+    "empty_round_reason": null
+  }
+}
