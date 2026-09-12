@@ -2,23 +2,23 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2509.19729-20260913-0315-v10-a",
-  "job_id": "job-research-0adc1c376ecfc370",
+  "attempt_id": "attempt-2501.14417-20260913-0340-v10-a",
+  "job_id": "job-research-5f9a998b042661ba",
   "data": {
-    "hardware": ["H20環境: NVIDIA H20 96GB×8、NVLink、DDR5 2TB、Intel Xeon Platinum 8469C 128CPU。", "A100環境: NVIDIA A100 40GB×8、NVLink、DDR5 2TB、Intel Xeon Platinum 8369B 128CPU。"],
-    "software": ["CUDA仮想メモリ管理を用いて2MBページ単位で重み・KV領域をマップ/アンマップする。", "独立CUDA通信ストリームでAll-to-Allを通常計算へ重ねる。", "比較対象KunServeは未公開のため論文記述に基づきオンラインパラメータ削除とネットワークKV交換を再現する。"],
-    "model": ["Llama2-7B BF16", "Llama3-8B BF16", "Qwen2.5-32B BF16", "Qwen3-32B BF16", "Qwen3-30B-A3B FP16 (TP+EP)"],
-    "datasets": ["実運用から取得した要求トレースを端から端までの評価へ使用。", "スケジューラ要素評価では短文1Kトークンを60要求/分、長文50Kトークンを1要求/分で混在させる。"],
-    "baselines": ["KunServe", "LoongServe", "Seesaw（変換マイクロベンチ）", "ラウンドロビン（RR）", "最小負荷優先（LLF）", "素朴なAmoeba実装"],
-    "correctness": "KVキャッシュとモデル重みを別GPU所有へ無損失で再配置し、既存要求を再計算しない。FFNパディングはゼロ領域を行列境界へ追加するため計算結果を変えず、論文は追加GEMM計算時間を0.1%未満と報告する。",
+    "hardware": ["Huawei Ascend 910B: FP16 400 TFLOPS、HBM 64GB。Gen1クラスタは各サーバ8 NPU、サーバ間200Gbps RoCE。", "CloudMatrix384 SuperPod: 48サーバ、384 Ascend 910C。910Cは2ダイ構成で各ダイFP16 400 TFLOPS・HBM 64GB。NPU/CPU間を約200GB/s片方向の高帯域ネットワークと共有アドレス空間で接続。"],
+    "software": ["FlowServeは主にPython、RTCとDistFlowはC++。", "モデル格納はsafetensors。スケールアウト転送はHCCL P2P/RoCE、SuperPodではHCCS/共有メモリコピーを利用。", "モデル生成器はPyTorch動的グラフ系FlowTurboとAscend Transformer Boost静的グラフをサポート。"],
+    "model": ["34B級モデル TP=4（FlowServe/PD評価）", "Llama3-8B TP=1", "CodeLlama-34B TP=4", "Qwen-72B TP=8", "DeepSeek-V3/R1およびPangu-Ultra-MoEはSuperPod設計の対象例"],
+    "datasets": ["34BモデルのオンラインPD評価では約2K入力・200出力の内部トレース。", "分散スケジューラ評価ではコード生成サービスから抽出した内部トレース。", "FlowServeオフライン評価では2K/4Kプリフィル後に256デコードステップ。"],
+    "baselines": ["FlowServe v1/v2/v3", "PD-colocated対PD-disaggregated構成", "Round Robin分散スケジューラ", "モデル読込み: DRAM-miss（SSD）、DRAM-hit、理論PCIe値、NPU-fork over RoCE/HCCS"],
+    "correctness": "生成結果の近似を行わず、配置・非同期化・キャッシュ再利用を変更する。PD-awareの出力長予測は実行先TE種別選択だけに使用し、実際の生成長やトークンは対象モデルが通常どおり決定する。",
     "settings": [
-      {"name": "KV変換マイクロベンチ", "description": "4×TP1からTP4への拡大を代表例とし、Qwen3-30B-A3Bでは4×TP1EP1からTP4EP4へ変換する。変換前KV使用率を90%に設定し、高負荷時の一時メモリと停止時間を測る。"},
-      {"name": "重み変換マイクロベンチ", "description": "各モデルのFFN一層について、素朴な部分コピー、ページ境界パディング、通信・ドライバ操作の重畳を比較し、変換時間、追加重みメモリ、GEMM時間への影響を測る。"},
-      {"name": "全体変換費", "description": "一ステップで変換する層数を1層、5層、半数、全層へ増やし、Seesaw、素朴Amoeba、インプレース版、重畳版を比較する。変換なしの通常ステップ時間も基準として測る。"},
-      {"name": "変換対応スケジューラ", "description": "初期状態をTP1インスタンス8個とし、1K短文60要求/分と50K長文1要求/分を混在させ、RR・LLF・Amoebaの時間変動する処理量分布を比較する。"},
-      {"name": "端から端までの実トレース", "description": "Qwen2.5-32Bへ実運用トレースを投入し、0.1〜0.6 QPSでKunServe・LoongServe・Amoeba-i1/i2の処理量、最初のトークンまでの時間（Time To First Token; TTFT）、出力トークン間時間（Time Per Output Token; TPOT）を比較する。SLOは図中でTTFT 10秒等を用いる。"}
+      {"name": "FlowServe世代比較", "description": "34BモデルをTP=4で実行し、入力2K/4K、256デコードステップで平均TPOTと処理量を測定。v1→v2で非同期スケジューリングとIPC最適化、v2→v3でデータ構造・サンプリング等を追加する。"},
+      {"name": "PD分離/同居評価", "description": "34B TP=4、内部トレース約2K入力・200出力、RPS 0.2〜1.2。2P2D、2P1D、4 PD-colocatedの三構成で平均/P90 TTFTとTPOT、プリフィル/デコード処理量を比較する。"},
+      {"name": "PD-aware分散配置", "description": "34B TP=4、4サーバ、2つのPD-colocated TEと1P1DのPD-disaggregated組を用い、5〜20 RPSでジョブ完了時間とTPOTをRound Robinと比較。出力長予測器は128トークン幅区間で84.9%精度。"},
+      {"name": "高速モデル読込み", "description": "Llama3-8B TP1、CodeLlama-34B TP4、Qwen-72B TP8でSSD由来DRAM-miss、事前ロードDRAM-hit、理論PCIe値、RoCE/HCCS NPU-forkを比較する。NPU-forkは別ノード間で測定。"},
+      {"name": "NPU-fork拡張性", "description": "Llama3-8B TP1をHCCS上で一つの稼働TEから最大32 TEへ同時複製し、ソースTEがプリフィル0〜512トークン、またはデコードバッチ0〜256を処理中の競合影響も測る。"}
     ],
-    "methodology": "まずKVとFFN重みの単発変換を分解して測り、ページ親和配置、パディング、パイプライン重畳がそれぞれ時間と追加メモリをどれだけ減らすか確認する。次に変換層数を増やした実行ステップでサービス停止費を測り、さらに短文・長文混合負荷でスケジューラの変換回数抑制効果を比較する。最後に実運用トレースをQwen2.5-32Bへ入力し、動的TP変換を用いないKunServe・LoongServeと端から端までの処理量と遅延を比較する。",
-    "scope": "評価対象は7B〜32B級のLlama/QwenとH20/A100の単一8GPUノードで、複数ノード間TPや不均一ネットワークは扱わない。KunServeは公式実装が未公開のため再現実装との比較である。主な端から端までの数値はQwen2.5-32Bの実トレースに基づき、他モデルでは主に変換・スケジューラ要素を評価する。"
+    "methodology": "単一TEのFlowServeについて非同期化による処理量改善を時間軸で比較し、次に同一資源量でPD分離・同居の性能領域を測定する。その測定結果をヒートマップとして分散スケジューラへ落とし込み、内部コード生成トレースでRound Robinとの差を検証する。高速スケーリングは起動を五段階へ分解した時間内訳と、三モデルの重みロード経路別マイクロベンチ、最大32 TEへの同時NPU-forkで評価する。論文は単一マイクロベンチだけでなく、1年以上の実運用経験を設計根拠としている。",
+    "scope": "Huawei Ascend NPUとHuawei Cloud本番基盤が中心であり、FlowServe全体をNVIDIA GPU上で再現した比較はない。NPU-forkの高性能はHCCS等の高速NPU間リンクに依存する。PD-awareはオフライン測定ヒートマップと出力長予測に依存し、極端な高RPSではPD分離TEが過負荷になりRound Robinより悪化する場合がある。公開論文はモデルサービングに焦点を当て、ファインチューニング/エージェント基盤の詳細評価は省略する。"
   }
 }
