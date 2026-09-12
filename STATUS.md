@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 08:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **147 / 50** |
-| Research ready | **147** |
+| Candidate在庫（Research ready） | **150 / 50** |
+| Research ready | **150** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **14** |
+| Discovery完了 | **4** |
+| 新規job | **18** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **122** |
-| 探索評価候補 | **608** |
-| 重複除外 | **246** |
-| 重複率 | **40.5%** |
-| Novel候補 | **362** |
-| Research候補採用 | **206** |
+| 探索round（stats観測） | **123** |
+| 探索評価候補 | **617** |
+| 重複除外 | **252** |
+| 重複率 | **40.8%** |
+| Novel候補 | **365** |
+| Research候補採用 | **209** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 608 → 重複除外後 362 → Research候補採用 206 → Research完了 70 → Repo収録 70**
+**探索評価 617 → 重複除外後 365 → Research候補採用 209 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -79,6 +79,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 | 10 | 10 | 0 | 100.0% | 0.0% |
 | 異種/edge serving・hybrid cache schedulingの過去重要欠落 | 10 | 8 | 2 | 80.0% | 20.0% |
 | DBMS由来cache policy・real-time/best-effort混在QoS scheduling | 9 | 7 | 2 | 77.8% | 22.2% |
+| GPU runtime安全性・software aging・many-core CPU inference | 9 | 6 | 3 | 66.7% | 33.3% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
@@ -196,11 +197,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T08:26:04+09:00** — GPU runtime安全性・software aging・many-core CPU inference: 評価 9 / 重複 6 / 採用 3
 - **2026-09-13T08:26:04+09:00** — agent workspace仮想化・NVMe階層・長時間runtime state: 評価 6 / 重複 3 / 採用 2
 - **2026-09-13T08:26:04+09:00** — position-independent KV再利用のforward/backward related-work補完: 評価 6 / 重複 1 / 採用 5
 - **2026-09-13T08:26:04+09:00** — hybrid-attention・MLA・位置非依存キャッシュ: 評価 7 / 重複 3 / 採用 4
 - **2026-09-13T07:58:39+09:00** — multi-node MoE活性パターン配置・edge expert類似性routing: 評価 12 / 重複 10 / 採用 2
-- **2026-09-13T07:58:39+09:00** — 疎注意サービング・GPUメガカーネル・動的コンパイラ: 評価 8 / 重複 5 / 採用 3
 
 ## 最近処理した論文
 
