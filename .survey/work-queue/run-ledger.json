@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-12T12:55:20.689871+00:00",
+  "updated_at": "2026-09-12T13:01:01.827273+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -10439,7 +10439,7 @@
     {
       "run_key": "2026-09-12T21:30:00+09:00",
       "first_recorded_at": "2026-09-12T12:41:18.309706+00:00",
-      "last_recorded_at": "2026-09-12T12:55:20.689871+00:00",
+      "last_recorded_at": "2026-09-12T13:01:01.827273+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
@@ -10450,7 +10450,7 @@
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 8,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -10521,6 +10521,20 @@
             "run_id": "34694934541",
             "run_attempt": "1",
             "source_sha": "fc7b4d812b65dd2cb93eed502b154b60f869574e"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34695183133:1",
+          "recorded_at": "2026-09-12T13:01:01.827273+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34695183133",
+            "run_attempt": "1",
+            "source_sha": "635fb7169ed9593221d4e24f66cbf3c36354ec87"
           },
           "signals": [
             "discovery_or_queue_expanded"
@@ -10618,6 +10632,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-research-a190f4e7421fc3f8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2602.12151",
+          "title": "OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration"
         }
       ],
       "new_paper_ids": [
