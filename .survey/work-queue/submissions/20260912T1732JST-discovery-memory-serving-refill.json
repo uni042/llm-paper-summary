@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "job_id": "job-discovery-20260912T1732JST-memory-serving-refill",
+  "discovery_stats": {
+    "run_key": "2026-09-12T17:30:00+09:00",
+    "round": "paper-worker-memory-serving-refill-1",
+    "axis": "KV復元・計算効率指向キャッシュ・分離サービング再均衡",
+    "query_summary": "候補在庫がcritical水位のため、直近の高重複CXL/既収録SSD候補を避け、KV復元の並列化、GPUカーネル実行時間を考慮した損失なしKV管理、分離サービングの動的再均衡へ探索軸を変更した。arXiv IDと題名で最新mainを投入直前に再確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2607.28150",
+      "arXiv:2606.16135",
+      "arXiv:2607.16892"
+    ],
+    "next_axis_hint": "今回採用したKV復元・計算効率キャッシュ・動的再均衡を精読後、MoE expert I/O schedulingまたは異種メモリ上の復元スケジューリングへ展開する"
+  },
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.02964",
+      "title": "Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2606.02964",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.02964-asymcache-multi-segment-attention.md",
+      "priority": 87,
+      "reason": "損失なしKV管理で単なるhit率ではなくGPU attention kernelの実行効率をキャッシュ配置判断へ組み込むAsymCacheを提案する。非連続KVを効率処理するMulti-Segment Attention、位置依存の再計算コストを考慮した退避、適応chunk schedulingを統合し、最新baseline比でTTFTを最大約2.03倍、TPOTを最大約1.71倍改善し、agent serving統合時も平均job latencyを最大18.1%削減と報告する。KV階層管理とカーネル効率を直接接続する点が既存の容量・頻度中心方針と異なる。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
+      "priority": 84,
+      "reason": "長文・マルチターン・RAGで支配的になるKV復元を、再計算対I/Oという単一要求単位の二択ではなく、token・layer・GPUの3次元並列実行として扱う。batch競合を考慮するtwo-pointer schedulerで計算資源とI/O資源を共同配分し、既存方式比でTTFTを10〜62%削減と報告する。SSD/CPU/remote tierからのKV復元を計算と重ねる研究軸に直接関係する。"
+    },
+    {
+      "canonical_id": "arXiv:2510.13223",
+      "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
+      "source_url": "https://arxiv.org/abs/2510.13223",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.13223-banaserve-dynamic-module-migration.md",
+      "priority": 80,
+      "reason": "分離サービングでprefill/decode資源を固定せず、layer-level weight migration、attention-level KV migration、共有Global KV Storeを組み合わせて実行中に再均衡する。prefix-aware routingによる局所的な偏りもcache placementからrouterを解放して抑える設計で、vLLM比1.2〜3.9倍、DistServe比1.1〜2.8倍のthroughput向上を報告する。重み移動とKV移動を粒度別に統合するため、分離サービングと階層メモリの交点として価値が高い。"
+    }
+  ]
+}
