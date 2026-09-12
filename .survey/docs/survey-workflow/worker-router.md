@@ -169,3 +169,11 @@ maintenance runを除く通常workerは、実作業中に具体的な摩擦、�
 ## 9. 通知
 
 予定タスク本文に通知条件が指定されている場合はそちらを優先する。問題報告はrun終了命令ではない。Stop Gateが`CONTINUE`なら、必要な通知を行った後も処理可能な範囲でjobを続ける。
+
+08:30 JSTの通知には、その他更新workerの更新結果に加え、直近24時間の論文サーベイ状況として次の3項目を必ず含める。
+
+1. 発見した論文数: 直近24時間のdiscoveryで重複除外後に新規候補として発見した論文数。
+2. 追加した論文数: 直近24時間に正本リポジトリへ新規収録された論文数。
+3. 残っている論文候補数: 通知時点でresearch対象として未処理の候補数。GitHub queueのactionable readyと、Library/GitHub fallback由来の未checkpoint spillover候補を重複排除して数える。
+
+可能な限りrun ledger、discovery state、queue、fallback状態などrepoが保持する記録から集計し、推測値を確定値として報告しない。集計不能な項目がある場合は、その項目を「集計不能」と明示する。
