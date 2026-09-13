@@ -2,24 +2,15 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2604.06664-20260913-0254-v10-e",
-  "job_id": "job-research-b7ad70251596454b",
+  "attempt_id": "attempt-dd8752d0e6ecdac0e4a1c0da",
+  "job_id": "job-research-f3407b821f3f7dcf",
   "data": {
-    "hardware": ["主環境: NVIDIA DGX、8×H200、Intel Xeon Platinum 8480C、2TB host memory、GPU間NVLink。", "追加環境: 8×B200、Intel Xeon Platinum 8570、GPU間NVLink。"],
-    "software": ["NVIDIA driver 590.48、CUDA 13.1。", "vLLM 0.11.2、PyTorch 2.9、NVSHMEM 3.3.24。", "warmed torch.compile cacheおよびFoundry archiveはlocal NVMeから読み込む。"],
-    "model": ["Qwen3-14B", "Qwen3-32B", "Llama3-8B", "Gemma3-12B", "Qwen3-30B-A3B", "Qwen3-235B-A22B"],
-    "datasets": ["cold-start microbenchmark", "vLLM serving benchmark: batch 16〜512、各prompt 128 output tokensを10回"],
-    "baselines": ["vLLM native CUDA graph warmup + stream capture", "vLLM eager mode without CUDA graph", "NVIDIA CUDA-checkpoint + CRIU（single-GPUのみ）"],
-    "correctness": "Foundryが復元したgraphとnative vLLM graphのTPOT曲線は重なり、生成tokenも同一であることを確認する。execution contextとkernel binaryを同じ状態へmaterializeするため、性能高速化のために演算内容を変更しない。",
-    "settings": [
-      {"name":"cold-start latency","description":"warm execution environmentを前提にenvironment initializationを除外し、近年の高速weight transferで1〜2秒へ短縮可能なweight loadingも比較から除外する。512 batch-size CUDA graphを持つworker initializationでgraph関連起動費を測る。"},
-      {"name":"dense DP","description":"Qwen3-14B/Qwen3-32B/Llama3-8B/Gemma3-12BをDP1〜DP8で評価し、parallelism degree増加時にもsingle-GPU SAVE archiveを再利用できるかを見る。"},
-      {"name":"MoE EP","description":"Qwen3-30B-A3BとQwen3-235B-A22BをEP2〜EP8、BF16およびFP8で評価し、DeepEP/NVSHMEMやDeepGEMMを含むcustom communication/compute kernelへ一般化するかを見る。"},
-      {"name":"CUDA-checkpoint比較","description":"IPC communication非対応のためsingle-GPUのみ。model weightsとKV cacheをcheckpoint前にreleaseしてcheckpoint imageからデータ量を除き、CUDA execution state復元だけでもFoundryより重いか比較する。"},
-      {"name":"throughput preservation","description":"H200/B200でbatch 16〜512のmean TPOTをnative CUDA graph vLLMと比較し、template updateやrestored binaryがreplay性能を劣化させないことを確認する。"},
-      {"name":"templating ablation","description":"stream capture、CUDA driver graph construction、cuGraphExecUpdateによるon-demand specializationのper-graph cost、unique topology数、archive sizeを比較する。"}
-    ],
-    "methodology": "Foundryが狙うgraph captureだけを切り出すため、process prewarmと高速weight loadingが利用できる現代的なelastic servingを想定してworker initializationを比較する。cold-start短縮だけではeager modeで容易に数字を下げられるため、同時にnative graphと同一TPOT・token correctnessを検証する。またHopperとBlackwell、denseとMoE、DPとEP、BF16とFP8を跨いで、memory layout/binary restorationが特定kernel実装に固定されていないことを確認する。",
-    "scope": "評価は主にNVIDIA CUDAとvLLM decoderであり、AMD HIP graphへの直接実装評価はない。inter-rank sharingは同じexecution topologyを持つSPMD型DP/TP/EPが前提で、Pipeline Parallelismの異なるstage topologyは共有対象外。archiveとtorch.compile cacheはlocal NVMeに既に存在する前提で、archive生成・配布の遠隔storage/network時間はonline cold-start比較へ含めない。"
+    "hardware": "NVIDIA H100 80GB、NVLink、AMD EPYC。Qwen3-8Bは1 H100、Qwen3-32Bは4 H100 TP=4。分離構成は4 prefill H100 + 4 decode H100。",
+    "software": "SGLang v0.5.9、NIXL、MiniAgent、LangChain、LlamaIndex、AutoGen、OpenClaw。",
+    "methodology": "各agentがMiniAgentコードベースを28 step解析しstepごと600〜650 token増えるsessionを固定並行度で実行。offloading、keep-recent-K、summarization、sub-agent isolationの同期実行を同じstrategy内容のbaselineとして比較。変換点TTFT、foreground TTFT/TBT、scheduler予測誤差を測る。",
+    "scope": "実GPU評価だが主workloadはコード解析1種類で固定concurrency。到着率を持つ大規模multi-tenant production traceではない。32K context、dense Qwen3中心。",
+    "workloads": ["28-step code analysis agent", "offloading", "keep-recent-K", "summarization", "sub-agent isolation"],
+    "baselines": ["同期context engineering + SGLang", "vanilla SGLang scheduler"],
+    "metrics": ["transform-point TTFT", "tail TTFT", "TBT", "scheduler prediction error"]
   }
 }
