@@ -6,9 +6,10 @@ from pathlib import Path
 
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
+REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(SCRIPTS))
 
-from repair_corrupted_lineages import expected_lineage_repair, repair_text  # noqa: E402
+from repair_corrupted_lineages import expected_lineage_repair, repair_repository, repair_text  # noqa: E402
 
 
 class RepairCorruptedLineagesTest(unittest.TestCase):
@@ -39,6 +40,9 @@ class RepairCorruptedLineagesTest(unittest.TestCase):
         self.assertTrue(changed)
         self.assertIn("lineage: offload-hierarchical-memory", repaired)
         self.assertIn("# Example", repaired)
+
+    def test_repository_has_no_remaining_historical_corruption_signature(self) -> None:
+        self.assertEqual(repair_repository(REPO_ROOT, write=False), [])
 
 
 if __name__ == "__main__":
