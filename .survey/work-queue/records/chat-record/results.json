@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-84d67d75abd88f7fe7ebc805",
   "job_id": "job-research-81e46dd484abb553",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84d67d75abd88f7fe7ebc805",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "C2CServeはGH200上で、モデル重みをCPUメモリへ置いたまま直接計算することでコールドスタートとMIGのHBM容量制約を大きく削減する。密モデルではAegaeonに対しコールドスタートを最大7.1倍、ServerlessLLMに対し共通モデルで1.15〜1.37倍短縮し、両比較系がHBM不足になるLlama-70Bも実行できる。MoEではMoE-Infinity/FineMoEより4.6〜5.0倍、Qwen3-30B-A3BではServerlessLLMより1.95倍短い。温存ランタイムのモデル切替は、密モデルでServerlessLLM 1.7秒・Aegaeon 119msから50msへ、MoEで12〜128秒から318msへ短縮する。生産トレース再生では1秒TTFT目標を95%で満たし、構成要素試験では帯域認識配置がp99 TTFTを1.24秒から0.64秒、チャンク制御が1.81秒から0.64秒、HybridGEMM調整が0.95秒から0.64秒へ改善する。",
+    "key_results": [
+      {"metric":"密モデルのコールドスタート","value":"Aegaeon比最大7.1倍短縮","baseline":"Aegaeon / ServerlessLLM","condition":"GH200 MIG、Llama-3B/8B/70B","interpretation":"CPU常駐重みをHBMへ再ロードしないため、MIGごとのHBM容量とモデル切替ロードをコールドスタート経路から外す。"},
+      {"metric":"MoEのコールドスタート","value":"MoE-Infinity/FineMoE比4.6〜5.0倍短縮、Qwen3-30B-A3BでServerlessLLM比1.95倍","baseline":"ServerlessLLM、MoE-Infinity、FineMoE","condition":"Mixtral-8x7B、Qwen3-30B-A3B、BF16","interpretation":"専門家単位のキャッシュ/オフロードより、モデル重み全体をC2Cから直接消費することで初期重量ロードを避ける。"},
+      {"metric":"温存ランタイムのモデル切替","value":"密モデル50ms、MoE 318ms","baseline":"密: ServerlessLLM 1.7s/Aegaeon 119ms、MoE: ServerlessLLM 12s/MoE-Infinity 105s/FineMoE 128s","condition":"重みは事前に固定CPUメモリへロード済み","interpretation":"モデル切替をHBMへの大容量転送ではなく、CPU常駐重みへの参照切替へ変換する。"},
+      {"metric":"動的負荷でのSLO達成率","value":"1秒TTFT目標を95%の要求で達成","baseline":"ServerlessLLM/Aegaeon/MoE-Infinity/FineMoE","condition":"GenTD26由来のバースト負荷再生","interpretation":"C2C競合を配置・チャンク・カーネルで制御することで、長尾モデル切替が続く負荷でも尾部遅延を安定させる。"},
+      {"metric":"構成要素のp99 TTFT改善","value":"配置1.24→0.64s、チャンク1.81→0.64s、HybridGEMM 0.95→0.64s","baseline":"各制御を既定/静的にした構成","condition":"MIG多テナント競合","interpretation":"CPU重み直接参照だけでは不十分で、共有C2C帯域を意識した三段階制御が尾部遅延に大きく寄与する。"}
+    ],
+    "negative_results": "フルGPU上の通常配信速度では常に全比較系を上回るわけではない。Mixtral-8x7BのTTFTはServerlessLLMが最良で、TPOTでもServerlessLLMは両MoEモデルでC2CServeより低い。C2CServeの主な利得はモデル常駐容量、コールドスタート、切替弾力性であり、CPU重みを毎層読むため定常トークン処理には追加C2C負荷が残る。MIGインスタンス数が増えるとHBM帯域が分割され、重み再利用を優先する非対称GEMMが逆に遅くなる条件もある。さらに共有C2CはMIGのハードウェア隔離対象外で、二モデルの総重量が5GBから44GBへ増える測定では共同実行の干渉差が28%から42%へ拡大する。大チャンクも単体効率は上げるが、同時実行時のC2C干渉を最大42%まで増やす。",
+    "interpretation": "C2CServeが示す重要点は、C2Cを『高速なオフロード転送路』ではなく『GPUカーネルが直接重みを読む第二のメモリ帯域』として設計することである。この見方ではCPU→HBMコピーを最小化するだけでなく、GEMM自身がHBMとC2Cの二帯域へ負荷を分散する必要がある。MIGは計算とHBMを隔離する一方C2Cは共有なので、カーネル局所最適と多テナント全体最適も一致しない。配置、チャンク長、αを階層的に調整した結果、長尾サーバレス負荷でモデル密度と応答性を両立している。",
+    "quality_impact": "全モデルをBF16の同一重みで実行し、HybridGEMMは同じ行列積を異なるデータ流へ分割するだけである。CPU常駐、MIG配置、チャンク化、α調整はいずれも生成分布やモデル精度を近似しないため、報告される利得は品質低下との交換ではない。"
+  },
+  "reservation": {"claim_id":"claim-84d67d75abd88f7fe7ebc805","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
