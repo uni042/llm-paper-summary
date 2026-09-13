@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 11:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 11:46 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -240,11 +240,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
-- P88 `arXiv:2601.08800` — MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm
-- P88 `arXiv:2605.07238` — FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows
-- P88 `arXiv:2507.10069` — ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism
 - P88 `arXiv:2605.16867` — GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources
+- P88 `arXiv:2502.15524` — HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds
+- P88 `arXiv:2605.18825` — Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches
+- P88 `arXiv:2605.05639` — TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference
+- P88 `arXiv:2603.19133` — A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference
 
 ## 7日比較
 
