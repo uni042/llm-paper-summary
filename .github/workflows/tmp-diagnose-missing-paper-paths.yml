@@ -1,0 +1,123 @@
+name: Temporary diagnose completed jobs missing paper paths
+
+on:
+  push:
+    branches: [cleanup/backfill-completed-job-paper-paths-20260913]
+    paths:
+      - '.github/workflows/tmp-diagnose-missing-paper-paths.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cleanup/backfill-completed-job-paper-paths-20260913
+
+      - name: Scan completed jobs with missing paper_path
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          repo = Path('.')
+          jobs_root = repo / '.survey/work-queue/jobs'
+
+          def load(path):
+              try:
+                  return json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  return None
+
+          def submission_path(raw):
+              if not isinstance(raw, str) or not raw.strip():
+                  return None
+              raw = raw.strip().replace('\\', '/')
+              if raw.startswith('.survey/'):
+                  return repo / raw
+              if raw.startswith('work-queue/'):
+                  return repo / '.survey' / raw
+              return None
+
+          def result_path(sub_path):
+              if sub_path is None:
+                  return None
+              rel = sub_path.as_posix()
+              marker = '.survey/work-queue/submissions/'
+              if marker not in rel:
+                  return None
+              return Path(rel.replace(marker, '.survey/work-queue/results/', 1))
+
+          missing = []
+          candidates = []
+          unresolved = []
+          for path in sorted(jobs_root.glob('*.json')):
+              job = load(path)
+              if not isinstance(job, dict):
+                  continue
+              if job.get('status') != 'completed' or job.get('type') not in {'research', 'audit'}:
+                  continue
+              if job.get('paper_path'):
+                  continue
+              jid = job.get('job_id')
+              row = {
+                  'job_id': jid,
+                  'type': job.get('type'),
+                  'artifact_submission': job.get('artifact_submission'),
+              }
+              missing.append(row)
+              sp = submission_path(job.get('artifact_submission'))
+              if sp is None or not sp.is_file():
+                  row['reason'] = 'submission_missing_or_unsupported'
+                  unresolved.append(row)
+                  continue
+              desc = load(sp)
+              rp = result_path(sp)
+              result = load(rp) if rp and rp.is_file() else None
+              if not isinstance(desc, dict) or desc.get('job_id') != jid:
+                  row['reason'] = 'submission_job_mismatch'
+                  unresolved.append(row)
+                  continue
+              if desc.get('status', 'completed') != 'completed':
+                  row['reason'] = 'submission_not_completed'
+                  unresolved.append(row)
+                  continue
+              paper = desc.get('paper_path')
+              if not isinstance(paper, str) or not paper.startswith('papers/') or '..' in Path(paper).parts:
+                  row['reason'] = 'invalid_submission_paper_path'
+                  unresolved.append(row)
+                  continue
+              if not (repo / paper).is_file():
+                  row['reason'] = 'paper_file_missing'
+                  row['paper_path'] = paper
+                  unresolved.append(row)
+                  continue
+              if not isinstance(result, dict) or result.get('ok') is not True or result.get('job_id') != jid:
+                  row['reason'] = 'matching_success_result_missing'
+                  row['paper_path'] = paper
+                  unresolved.append(row)
+                  continue
+              artifact = result.get('artifact')
+              result_paper = artifact.get('paper') if isinstance(artifact, dict) else artifact
+              if result_paper != paper:
+                  row['reason'] = 'result_paper_mismatch'
+                  row['paper_path'] = paper
+                  row['result_paper'] = result_paper
+                  unresolved.append(row)
+                  continue
+              row['paper_path'] = paper
+              row['submission'] = sp.as_posix()
+              row['result'] = rp.as_posix()
+              candidates.append(row)
+
+          print(json.dumps({
+              'missing_count': len(missing),
+              'candidate_count': len(candidates),
+              'unresolved_count': len(unresolved),
+              'candidates': candidates,
+              'unresolved': unresolved,
+          }, ensure_ascii=False, indent=2))
+          PY
