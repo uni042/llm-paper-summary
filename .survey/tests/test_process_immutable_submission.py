@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -159,6 +160,30 @@ class ProcessImmutableSubmissionTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "paper blob changed"):
                     module.process(repo, path)
             self.assertEqual(paper.read_text(encoding="utf-8"), "old paper\n")
+
+    def test_main_persists_failure_result_before_returning_nonzero(self):
+        self.assertTrue((SCRIPTS / "process_immutable_submission.py").exists(), "processor must exist")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _install_scripts(repo)
+            module = _load(repo / ".survey/scripts/process_immutable_submission.py", "processor_failure")
+            path = _make_descriptor(repo, module, attempt="attempt-fail", job="job-a")
+            argv = [
+                "process_immutable_submission.py",
+                "--repo-root", str(repo),
+                "--submission", str(path.relative_to(repo)),
+            ]
+            with mock.patch.object(module, "process", side_effect=ValueError("synthetic validation failure")), \
+                 mock.patch.object(sys, "argv", argv):
+                rc = module.main()
+            self.assertNotEqual(rc, 0)
+            result_path = repo / ".survey/work-queue/results/research/attempt-fail.json"
+            self.assertTrue(result_path.exists())
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            self.assertFalse(result["ok"])
+            self.assertEqual(result["attempt_id"], "attempt-fail")
+            self.assertEqual(result["job_id"], "job-a")
+            self.assertIn("synthetic validation failure", result["error"])
 
 
 if __name__ == "__main__":
