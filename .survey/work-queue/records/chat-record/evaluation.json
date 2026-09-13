@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-12b96d8a83087a895d8a74df",
   "job_id": "job-research-6a744249548dd135",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-12b96d8a83087a895d8a74df",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主実機はNVIDIA A100 40GBまたはH100 80GBを1基、Intel Xeon Gold 6342 24C/48T、512GB DDR4-3200を搭載するサーバ。Samsung SmartSSD 3.84TBを最大16台使用し、各deviceにKintex UltraScale+ KU15P FPGAと4GB DDR4-2400を内蔵する。SmartSSD群はH3 Falcon 4109 PCIe expansionへ接続。baseline SSDはSamsung PM9A3 3.84TBを4台使用する。",
+    "software": "Ubuntu 20.04 LTS、Python 3.12.4、PyTorch 2.4.1、DeepSpeed 1.15.1、CUDA 12.1.105、Vitis 2023.1、XRT 2.12.427、OpenCL 2.2。HILOSはPyTorchベースのオフロード推論へFPGA attention kernelとhost middlewareを統合する。",
+    "methodology": "FlexGen系のSSD/DRAMオフロードとDeepSpeed ZeRO-Inference+UVMを比較対象とし、storage帯域条件を揃えるためbaselineは4台PCIe 4.0 SSD、さらにSmartSSD 16台のFPGAを無効化した構成も評価する。HILOSは既定8 SmartSSD、解析式から選ぶX-cache比率、spill interval 16で実行し、4/8/16 device scalingも測る。prefillは全方式FlashAttentionを使用する。モデルはOPT-30B/66B/175B、Qwen2.5-32B、Mixtral-8x7B、GLaM-143B、FP16、既定batch 16、output 64 tokens、contextを最大128Kまで掃引する。weightは100B以下では可能な範囲でCPU memory、100B超はstorageへoffloadする。throughputだけでなくbatch、device数、model architecture、context/output長、X-cache比、spill intervalを感度分析し、ablation、energy、cost efficiency、SSD enduranceも評価する。",
+    "scope": "低遅延online servingではなく、長文脈・大batchを許容するoffline generative inferenceが対象。1 GPUでmodel weightsとKVが収まらずCPU/SSDへoffloadする構成を想定し、decodeのKV trafficをnear-storageへ移す。実機はPCIe接続SmartSSDとFPGAで、将来ISPやCXLへの適用は分析・議論に留まる。",
+    "workloads": ["OPT-30B/66B/175B MHA", "Qwen2.5-32B GQA", "Mixtral-8x7B MoE/GQA", "GLaM-143B MoE/MHA", "context length最大128K", "batch既定16", "output length既定64"],
+    "baselines": ["FlexGen KV offload to host DRAM", "FlexGen KV offload to 4×PCIe 4.0 SSD", "FlexGen on 16 SmartSSD NVMe with FPGA disabled", "DeepSpeed ZeRO-Inference + UVM DRAM"],
+    "metrics": ["decode throughput", "per-layer latency breakdown", "maximum feasible batch/context", "FPGA resource utilization", "FPGA throughput/power", "energy consumption", "tokens/s/$", "SSD endurance", "accuracy against FlashAttention"],
+    "reproducibility": "ASPLOS artifact appendix付き。ソースはGitHubとZenodoで公開され、FPGA HLS検証、bitstream synthesis、HILOS/ANS/X-cache benchmarkの実行手順が示される。再現にはIntel CPU、GDS対応NVIDIA GPU、Samsung SmartSSD、Vivado/Vitis 2023.1/XRTが必要で、一般的なNVMe SSDだけではnear-storage kernelを再現できない。"
+  },
+  "reservation": {"claim_id": "claim-12b96d8a83087a895d8a74df", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
