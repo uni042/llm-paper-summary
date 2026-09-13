@@ -1,13 +1,18 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "evaluation",
   "attempt_id": "attempt-d880cf5cfb9f526f90eb762f",
   "job_id": "job-research-e2c6f510b1f31074",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d880cf5cfb9f526f90eb762f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "slot": "evaluation",
+  "data": {
+    "hardware": "NVIDIA RTX A6000 49GB GPU実機。",
+    "software": "vLLMを推論バックエンドに使用し、Chimeraをその上位ミドルウェアとして実装。意味ルータはModernBERT-large、総出力長予測はQuantile Random Forest。",
+    "methodology": "APPSコード生成とMATH数学推論について、ReActを基に1〜4段階の複数エージェントワークフローを構成する。候補モデルはQwen2.5-1.5B/3B/7B/14B-Instruct、Llama3.2-3B-Instruct、Ministral3-8B-Instructで、2〜3種類の異種モデル組合せを評価する。要求率を変えながら、vLLM、vLLM+MLFQ、出力長順位予測を用いるLTR、真のワークフロー総出力長を使うvLLM(STJF)オラクルと比較する。タスク性能はAPPSの平均テスト通過率とMATHの完全一致率、遅延はワークフローのエンドツーエンド1トークン当たり遅延で測る。",
+    "scope": "単一クラスタ上の異種LLMモデルルーティングと、1〜4段階の複数エージェント型ワークフローのオンライン待ち行列制御。",
+    "workloads": ["APPS", "MATH", "ReAct型1〜4段階ワークフロー", "RPS 8/12/16を含む複数到着率"],
+    "baselines": ["vLLM", "vLLM + MLFQ", "LTR", "vLLM(STJF, oracle total output length)"],
+    "metrics": ["ワークフローE2E遅延/出力トークン", "APPS平均テスト通過率", "MATH完全一致率", "スケジューラ費用", "ルータ費用", "長さ予測費用"],
+    "reproducibility": "モデル名、GPU、データセット、ワークフロー構造、主要基準方式、ルーティング・長さ予測アルゴリズムは本文に記載される。著者公式コードURLは一次資料から確認できず、意味ルータ学習データ作成や一部ハイパーパラメータを含む完全再現には追加実装が必要。"
+  },
+  "reservation": {"claim_id":"claim-d880cf5cfb9f526f90eb762f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
