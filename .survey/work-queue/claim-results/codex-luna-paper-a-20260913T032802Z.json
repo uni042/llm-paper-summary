@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "codex-luna-paper-a-20260913T032802Z",
+  "worker_id": "codex-luna-paper-a",
+  "worker_kind": "work",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-8409b6752444b980",
+      "claim_id": "claim-c04441cc6c35920f70348872",
+      "worker_id": "codex-luna-paper-a",
+      "worker_kind": "work",
+      "attempt_id": "attempt-c04441cc6c35920f70348872",
+      "claimed_at": "2026-09-13T03:28:52+00:00",
+      "expires_at": "2026-09-13T15:28:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-8409b6752444b980"
+      ],
+      "job": {
+        "job_id": "job-research-8409b6752444b980",
+        "type": "research",
+        "parent_job_id": "job-2d36b87fa9ca1a41",
+        "priority": 88,
+        "canonical_id": "arXiv:2602.06932",
+        "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
+        "source_url": "https://arxiv.org/abs/2602.06932",
+        "paper_path": "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+        "selection_reason": "固定speculatorの配備遅延とtraffic driftに対し、SGLang推論serverと非同期training serverを接続し、実trafficのaccept/reject信号からspeculatorをオンライン更新するAuroraを提案する。新規frontier modelでday-0から約1.5倍、分布変化下で静的speculator比さらに約1.25倍のspeedupを報告し、training-serving閉ループを投機的デコードへ持ち込むsystems研究として重要。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T19:23:38+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T03:28:52+00:00"
+}
