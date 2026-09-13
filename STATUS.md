@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 14:00 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 14:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,11 +37,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **178** |
-| 処理中（Active claims） | **36** |
-| 今すぐ着手可能（Claimable） | **142** |
+| 処理中（Active claims） | **39** |
+| 今すぐ着手可能（Claimable） | **139** |
 | 最新通常run | **2026-09-13T13:30:00+09:00** |
 | 最新通常runのResearch完了 | **2** |
-| 最古claimの経過時間 | **111 min** |
+| 最古claimの経過時間 | **120 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -86,11 +86,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
-- P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
-- P87 `arXiv:2607.00151` — SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering
 - P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
 - P87 `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
+- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
+- P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
+- P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
 
 ## 参考情報
 
