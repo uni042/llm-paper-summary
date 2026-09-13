@@ -5,100 +5,24 @@
   "attempt_id": "attempt-e9e76d3d04a6e4369258f711",
   "job_id": "job-research-234066475107816a",
   "data": {
-    "overview": "4モデル・4公開データセットのpre-warmed評価では、HYPICはFull Recompute比でp50 TTFTをRing-mini 2.94倍、Ring-flash 2.97倍、Qwen3.5-35B 3.79倍、Qwen3.5-122B 4.67倍短縮し、Prefix Cache比でも2.77〜4.05倍短縮する。16条件平均の品質差はFull Recomputeから1.71ポイントに留まる一方、遷移演算子を保存せず終端状態だけ足すNaive AdditionはFull Recomputeのscoreを66.9%失う。Prod-RAG traceの1秒TTFT SLOではPrefix Cache比の持続可能QPSがモデル別1.49〜1.85倍、peak per-GPU throughputが1.30〜1.50倍となる。再利用時の線形state compositionはsegment長にほぼ依存せず、16k tokenでFull Recompute比4.91倍、segment数16で4.80倍。完全coldの32k promptは8 worker segment parallelismで2.83秒から0.49秒へ短縮し5.7倍高速化する。",
+    "overview": "事前保存済み区間を使う4モデル×4公開データセットでは、HYPICは完全再計算に対して中央値の初トークン待ち時間を2.94〜4.67倍短縮し、通常の接頭辞キャッシュに対しても2.77〜4.05倍短縮する。16条件での品質差は完全再計算から平均1.71ポイントに留まる。一方、累積遷移演算子を使わず終端状態だけを足す方式は完全再計算の得点の66.9%を失い、線形注意状態を単純加算できないことを示す。実運用検索拡張生成トレースでは、1秒の初トークン待ち時間制約下で持続可能な毎秒要求数が接頭辞キャッシュ比1.49〜1.85倍となる。完全コールドの32kトークン入力は8ワーカの区間並列処理で2.83秒から0.49秒へ短縮され、最大5.7倍高速化する。",
     "key_results": [
-      {
-        "metric": "平均TTFT短縮",
-        "value": "Prefix Cache比で平均3.25×",
-        "baseline": "Prefix Cache",
-        "condition": "4 hybrid-attention models、5 workloads全体",
-        "interpretation": "strict-prefixだけでなく任意segment reuseをhybrid stackへ広げることでprefillの大部分を再利用する。"
-      },
-      {
-        "metric": "1秒TTFT SLOでの平均QPS",
-        "value": "Prefix Cache比1.66×",
-        "baseline": "Prefix Cache",
-        "condition": "serving load evaluation",
-        "interpretation": "低TTFTだけでなく同じ応答時間制約で受け入れ可能なrequest rateを増やす。"
-      },
-      {
-        "metric": "公開datasetでのp50 TTFT",
-        "value": "Full Recompute比2.94× / 2.97× / 3.79× / 4.67×、Prefix Cache比2.77× / 2.85× / 3.32× / 4.05×",
-        "baseline": "Full Recompute / Prefix Cache",
-        "condition": "Ring-mini / Ring-flash / Qwen3.5-35B / Qwen3.5-122B、segment pre-warmed",
-        "interpretation": "dense transitionを持つQwen3.5でも再利用時state compositionがsegment full prefillより十分小さい。"
-      },
-      {
-        "metric": "task quality差",
-        "value": "Full Recomputeから16条件平均1.71 points低下",
-        "baseline": "Full Recompute",
-        "condition": "4 models × 4 public datasets",
-        "interpretation": "PIC由来の独立segment hidden-state差は残るが、seam windowで品質低下を小さく抑える。"
-      },
-      {
-        "metric": "Naive Addition品質",
-        "value": "Full Recompute scoreの66.9%を喪失",
-        "baseline": "Full Recompute",
-        "condition": "同一公開dataset評価",
-        "interpretation": "advanced linear attentionではT_Cを無視した終端state加算が構造的に破綻することを示す。"
-      },
-      {
-        "metric": "Prod-RAG sustainable QPS",
-        "value": "Prefix Cache比1.85× / 1.49× / 1.58× / 1.71×",
-        "baseline": "Prefix Cache",
-        "condition": "Ring-mini / Ring-flash / Qwen3.5-35B / Qwen3.5-122B、TTFT SLO 1s",
-        "interpretation": "steady-state cache hitと継続的cold missが混在するproduction traceでも容量を引き上げる。"
-      },
-      {
-        "metric": "peak per-GPU throughput",
-        "value": "Prefix Cache比1.50× / 1.46× / 1.32× / 1.30×",
-        "baseline": "Prefix Cache",
-        "condition": "同一Prod-RAG trace",
-        "interpretation": "prefill再計算削減がGPU当たりtoken処理量にも反映される。"
-      },
-      {
-        "metric": "state composition scaling",
-        "value": "4 segments・total 16k tokensで4.91×、1k-token segmentsを16個で4.80×",
-        "baseline": "Full Recompute",
-        "condition": "reuse path",
-        "interpretation": "composition costはsegment長ではなく主にsegment数へ依存し、長いreuse segmentほど優位が広がる。"
-      },
-      {
-        "metric": "transition/state初回構築費",
-        "value": "main forward比+5.2〜6.7%",
-        "baseline": "通常segment forward",
-        "condition": "Qwen3.5-35B dense transition、segment 256〜4k tokens",
-        "interpretation": "最も重いdense familyでも一度だけ支払うcache生成費は比較的小さい。"
-      },
-      {
-        "metric": "deep-layer state drift",
-        "value": "Qwen3.5-35B: relative L2 8.92%, 5.11°; Ring-flash: 8.69%, 4.98°",
-        "baseline": "Full Recompute",
-        "condition": "512-token two-chunk、full-attention層無効化",
-        "interpretation": "composition式自体は正確だが、独立prefillによるhidden-state入力差が深層で蓄積する。"
-      },
-      {
-        "metric": "cold-prefill segment parallelism",
-        "value": "2.83s → 1.34s / 0.82s / 0.49s at 2 / 4 / 8 workers、最大5.7×",
-        "baseline": "single TP-1 Full Recompute",
-        "condition": "32k tokens、8 equal segments、all cold",
-        "interpretation": "segment self-containmentをinstance間並列へ変換し、長いcold requestのtail latencyを大幅に削る。"
-      },
-      {
-        "metric": "LPT負荷分散",
-        "value": "4 workersでround-robin 1.26sに対しLPT 0.84s",
-        "baseline": "round-robin",
-        "condition": "32k tokens、8 uneven segments",
-        "interpretation": "segment長の偏りを考慮しないと最遅workerがcritical pathを支配する。"
-      }
+      {"metric": "平均初トークン待ち時間", "value": "接頭辞キャッシュ比で平均3.25倍短縮", "baseline": "接頭辞キャッシュ", "condition": "4種類のハイブリッド注意モデルと5ワークロード", "interpretation": "厳密な接頭辞一致だけでなく、異なる位置へ現れる区間も再利用できるため、長い入力処理の大部分を省ける。"},
+      {"metric": "1秒制約下の平均処理容量", "value": "接頭辞キャッシュ比1.66倍", "baseline": "接頭辞キャッシュ", "condition": "配信負荷評価", "interpretation": "待ち時間の短縮だけでなく、同じ応答時間制約で受け入れられる要求到着率も増える。"},
+      {"metric": "公開データセットでの中央値初トークン待ち時間", "value": "完全再計算比2.94倍、2.97倍、3.79倍、4.67倍短縮。接頭辞キャッシュ比2.77倍、2.85倍、3.32倍、4.05倍短縮", "baseline": "完全再計算および接頭辞キャッシュ", "condition": "Ring-mini、Ring-flash、Qwen3.5-35B、Qwen3.5-122B。全区間を事前保存", "interpretation": "密行列型の遷移演算子を持つQwen3.5でも、再利用時の状態合成は区間全体を再計算するより十分に小さい。"},
+      {"metric": "タスク品質差", "value": "完全再計算から16条件平均1.71ポイント低下", "baseline": "完全再計算", "condition": "4モデル×4公開データセット", "interpretation": "独立区間の隠れ表現差は残るが、境界窓の再計算で品質低下を小さく抑える。"},
+      {"metric": "終端状態の単純加算による品質", "value": "完全再計算の得点の66.9%を喪失", "baseline": "完全再計算", "condition": "同じ公開データ評価", "interpretation": "高度な線形注意では区間遷移の作用を無視した単純加算が構造的に破綻する。"},
+      {"metric": "実運用トレースの持続可能な毎秒要求数", "value": "接頭辞キャッシュ比1.85倍、1.49倍、1.58倍、1.71倍", "baseline": "接頭辞キャッシュ", "condition": "4モデル、初トークン待ち時間1秒制約", "interpretation": "保存済み区間と継続的な未保存区間が混在する実運用相当条件でも処理容量を高める。"},
+      {"metric": "GPU当たり最大トークン処理量", "value": "接頭辞キャッシュ比1.50倍、1.46倍、1.32倍、1.30倍", "baseline": "接頭辞キャッシュ", "condition": "同じ実運用検索拡張生成トレース", "interpretation": "不要な入力再計算の削減がGPU当たりの処理量にも反映される。"},
+      {"metric": "状態合成の伸び方", "value": "4区間・合計16kトークンで4.91倍、1kトークン区間を16個で4.80倍高速", "baseline": "完全再計算", "condition": "再利用経路", "interpretation": "合成費用は主に区間数へ依存し、区間のトークン長にはほぼ依存しないため、長い再利用区間ほど有利になる。"},
+      {"metric": "遷移演算子と状態の初回構築費", "value": "通常の区間順伝播に対して5.2〜6.7%増", "baseline": "通常の区間順伝播", "condition": "Qwen3.5-35B、区間256〜4kトークン", "interpretation": "最も重い密行列型でも、共有キャッシュを初回生成するときだけ支払う追加費用は比較的小さい。"},
+      {"metric": "深層状態のずれ", "value": "Qwen3.5-35Bで相対L2 8.92%、角度5.11度。Ring-flashで8.69%、4.98度", "baseline": "完全再計算", "condition": "512トークンを2区間、完全注意層の補正なし", "interpretation": "状態合成式自体は正確でも、独立事前計算による隠れ表現入力の差が深層で蓄積する。"},
+      {"metric": "完全コールド入力の区間並列処理", "value": "2.83秒から、2ワーカ1.34秒、4ワーカ0.82秒、8ワーカ0.49秒へ短縮。最大5.7倍", "baseline": "単一実体での完全再計算", "condition": "32kトークン、8等長区間、全区間未保存", "interpretation": "区間の自己完結性を複数推論実体の並列計算へ変換し、長いコールド要求の裾遅延を大幅に削る。"},
+      {"metric": "不均一区間の負荷分散", "value": "4ワーカで単純巡回1.26秒に対し最長処理時間優先0.84秒", "baseline": "単純巡回割当", "condition": "32kトークン、8不均一区間", "interpretation": "区間長の偏りを無視すると最も遅いワーカが全体時間を支配するため、長さを考慮した割当が有効である。"}
     ],
-    "negative_results": "HYPICは完全再計算と数値的に同一ではない。累積遷移式は同じhidden-state入力ならlayer-exactだが、各segmentを独立prefillすると本来のprefixがhidden stateへ与える影響を失うため、深層で約9%のstate driftが残る。Ring系ではFull Recomputeから3点強の品質差があり、windowを大きくしても単純に改善せずw=8より大きい16/32ではTTFTが増える一方で有意な品質向上がない。dense transition familyはsegmentごとに32KB/head/layer級T_Cを保存し、初回構築にO(|C|d_k²)を要する。segment parallelismは複数idle inference instancesとRDMA転送を前提とし、短いsegmentではdispatch粒度が小さ過ぎてkernel効率や転送固定費が相対的に重くなるため、論文は1024 token以上を十分大きい条件としている。",
-    "interpretation": "HYPICの中心は、線形注意の固定長stateを単なるcache結果ではなく『任意prefix stateを変換する関数』とそのzero-start出力の組として保存する発想にある。これでtoken-axis KV spliceがなくてもsegment reuseが可能になる。ただし深層hidden stateまで完全には復元できないため、残るfull-attentionのboundary deviationをseam windowで局所補正する。さらに同じsegment独立性をcache hit時の再利用だけでなくcache miss時のinstance間並列へ使うことで、PICが従来放置していたcold-request tailも短縮する。",
-    "quality_impact": "品質は近似的に維持される。Full Recomputeとの差は4モデル×4公開dataset平均1.71 points。Qwen3.5-35Bでは平均でFull Recomputeを0.47 points上回り、Qwen3.5-122Bは0.56 points低い一方、Ring-mini/Ring-flashは3.44/3.29 points低い。seam width=8が評価したw=0/4/8/16/32の中で品質とTTFTの最良バランスだった。"
+    "negative_results": "HYPICは完全再計算と数値的に同一ではない。累積遷移式は同じ隠れ表現を入力する限り正確だが、各区間を独立に事前計算すると本来の前置文脈が隠れ表現へ与える影響を失うため、深層で約9%の状態差が残る。Ring系では完全再計算から約3.3〜3.4ポイントの品質差が残る。境界窓を16や32トークンへ拡大しても幅8より明確な品質改善はなく、初トークン待ち時間だけが増える。密行列型遷移では区間ごとに行列保存と初回構築が必要で、未保存区間の並列化には複数の空き推論実体と高速転送が必要である。短い区間では計算粒度が小さく、転送固定費やカーネル効率の影響が相対的に大きい。",
+    "interpretation": "中心的な考え方は、線形注意の固定長状態を単なる計算後の値として保存するのではなく、任意の前置状態をこの区間通過後の状態へ写す作用と、その区間自身がゼロ状態から生む成分の組として保存することにある。これによりトークン軸の鍵値連結がなくても位置非依存の区間再利用が可能になる。ただし独立事前計算で深層の隠れ表現まで完全に復元できるわけではないため、少数の完全注意層に現れる区間境界の差を短い境界窓で補正する。さらに同じ区間独立性を未保存時の複数実体並列にも使い、従来の位置非依存キャッシュが残していた長いコールド要求の問題も縮小する。",
+    "quality_impact": "品質は近似的に維持される。完全再計算との差は4モデル×4公開データセット平均1.71ポイントである。Qwen3.5-35Bは平均で完全再計算を0.47ポイント上回り、Qwen3.5-122Bは0.56ポイント低い。一方でRing-miniとRing-flashは3.44ポイント、3.29ポイント低い。境界窓幅8が評価した0、4、8、16、32の中で品質と初トークン待ち時間の最良の均衡だった。"
   },
-  "reservation": {
-    "claim_id": "claim-e9e76d3d04a6e4369258f711",
-    "worker_id": "scheduled-chat-llm-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-e9e76d3d04a6e4369258f711", "worker_id": "scheduled-chat-llm-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
