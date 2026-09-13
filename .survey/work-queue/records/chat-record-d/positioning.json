@@ -1,15 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-2310.18547-20260913-0930-v10-punica",
-  "job_id": "job-research-054d8fd9fb06ca0f",
-  "data": {
-    "limitations": "A100とLlama-2を中心とする評価で、LoRA rank 16が既定、現代のH100/B200やFP8、分離プリフィル/デコード、複数ノードでのLoRA大規模キャッシュは未評価である。アダプタ全体をホストからGPUへ約2msで移せることを前提にし、アダプタ数が非常に多い場合のホストDRAM・ストレージ階層管理は扱わない。KV移動を再計算で処理するため、長大文脈では移動コストが増え得る。性能評価のLoRAはランダム重みであり、実際のモデル品質やアダプタ間の精度差は対象外である。",
-    "differences": "vLLMやOrcaは同一モデル要求の連続バッチを効率化するが、PunicaはLoRA差分が異なる要求を同じ基盤モデルバッチへ入れる専用演算を加える。PetSは複数アダプタを共有GPUで扱う先行研究だが、Punicaは異なるLoRAを同一デコードバッチへ同時実行するSGMVを中心に据える。後続のS-LoRA等が多数アダプタのメモリ階層やページングを発展させるのに対し、Punicaは異種LoRAバッチ処理とクラスタ集約の基礎を与えた。",
-    "implementation_status": "公式Punicaリポジトリが公開され、CUDA SGMV、PyTorch拡張、Llama実装、scheduler/frontend/runnerを含む。論文中でも公開URLを明記する。",
-    "research_positioning": "LLMサービング・スケジューリング系統のうち多テナント適応モデル配備に位置する。モデル全体を複数保持せず、共有基盤と小さな差分を演算時に合成することで、モデル多様性とGPUバッチ効率を両立する代表的初期システムである。",
-    "relation_to_existing_repository": "LOCALのような継続LoRA更新基盤や、ElasticMM等の異種要求スケジューリングと接続する。ストレージ観点ではPunicaはLoRAをホストDRAMからGPUへオンデマンド転送するが、SSD/NVMeを直接使わない。多数アダプタをSSDまで階層化する場合、Punicaの集約スケジューラへアダプタ人気度・再利用距離・ロード費を加える方向が自然である。",
-    "audit_required": false
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-48a3f2240adb4fc920450197","job_id":"job-research-26a415f1493129b4","data":{"limitations":"64KB〜256KBの細粒度物理ページを使う最も断片化の少ない構成は、公開NVIDIA統合メモリドライバへの著者拡張を必要とし、標準CUDA APIだけでは2MB粒度に制約される。物理メモリ不足時は上位サービング機構へ失敗を返して要求をプリエンプトするだけで、CPUやSSDへKVを退避する高度な階層メモリ管理は将来課題である。主評価はA100世代3モデルが中心で、H100評価はFlashAttention-3の移植性を示す範囲に限られる。仮想アドレスを大量予約する設計は64ビットGPU環境を前提とし、連続バッチの穴処理には注意カーネル側が要求索引の対応付けを扱えることが望ましい。","differences":"vLLMのPagedAttentionはKVキャッシュを利用者空間の固定ブロック列として管理し、各注意カーネルがブロック表から非連続KVを復元して読む。vAttentionは同じ需要時物理確保をOS/GPUの仮想メモリ写像へ移し、カーネルからブロック表を消す点が本質的に異なる。GMLakeもCUDA仮想メモリで物理ページを仮想的に連結するが、対象はDNN学習時の一般メモリ断片化であり、vAttentionはKVの反復成長予測、背景割当、完了要求の再利用、連続バッチ索引などLLMサービング固有の処理を組み合わせる。KV圧縮・枝刈り系とは異なり、保持量や精度を削減しない。","implementation_status":"ASPLOS 2025の査読済み論文として刊行され、Microsoftの公式GitHub `microsoft/vattention` がMITライセンスで公開されている。論文成果物はZenodo DOI 10.5281/zenodo.14048692にも保存され、CUDA 12.1、PyTorch 2.3.0、A100向け再現スクリプトを提供する。リポジトリは2026-08-24にも更新履歴があり、研究成果物は現在も取得可能である。","research_positioning":"KVキャッシュ最適化系統の中でも、保持データ量を減らすのではなく、動的物理メモリ管理の責務をサービング実装からGPU仮想メモリ層へ戻す研究である。PagedAttentionが事実上の標準になった後に、その利用者空間ページングが注意カーネル革新を縛るという保守・性能コストを定量化し、仮想連続性を維持する別設計を提示した点が重要である。今後の高速注意カーネルをメモリ管理機構の改修なしに取り込むための基盤的選択肢として位置付けられる。"}}

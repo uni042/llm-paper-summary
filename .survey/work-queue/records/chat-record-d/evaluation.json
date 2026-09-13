@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2310.18547-20260913-0930-v10-punica",
-  "job_id": "job-research-054d8fd9fb06ca0f",
-  "data": {
-    "hardware": "Testbed #1: NVIDIA A100 80GB×1。Testbed #2: NVIDIA HGX A100 40GB×8を2サーバ、計16 GPU、NVSwitch。",
-    "software": "PunicaのPyTorch/CUDA拡張、FlashInfer、Rust scheduler/frontend/runner。比較はHuggingFace Transformers+PEFT、DeepSpeed+PEFT、FasterTransformer、vLLM backbone-onlyなど。",
-    "methodology": "Llama-2 7B/13B/70B、LoRA rank 16を全dense projectionへ適用。ShareGPT由来のprompt/response長分布を使い、Distinct、Uniform、Zipf-1.5 Skewed、Identicalの4種のLoRA人気分布を評価する。単一GPUでは1000要求・約101k生成トークン、最大バッチ32。70Bは8 GPUテンソル並列。クラスタ実験は16 GPU、1時間、Poisson到着で負荷を増減する。LoRA重み値は遅延へ影響しないためランダム値を用いる。",
-    "scope": "A100世代とLlama-2中心の2023年評価で、現代のFlashAttention系・新GPU・より大きなLoRA rank・多数アダプタのキャッシュ階層は未評価。品質比較ではなく性能評価が中心で、LoRA重みはランダム。基準のvLLM/FasterTransformerはLoRA非対応のためbackbone-onlyであり、比較条件はPunicaに不利ではないが現代の専用LoRA基盤との直接比較ではない。",
-    "workloads": ["Llama-2 7B","Llama-2 13B","Llama-2 70B","ShareGPT長分布","Distinct/Uniform/Skewed/Identical LoRA popularity"],
-    "baselines": ["HuggingFace Transformers+PEFT","DeepSpeed+PEFT","FasterTransformer backbone-only","vLLM backbone-only"],
-    "metrics": ["tokens/s","1 token latency","SGMV kernel latency","GPU batch size","active GPU utilization"],
-    "reproducibility": "公式コード公開。ハードウェア、モデル、LoRA rank、要求分布、バッチ上限、比較系を記載しており、主要設計の再現性は高い。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-48a3f2240adb4fc920450197","job_id":"job-research-26a415f1493129b4","data":{"hardware":"Yi-6Bは80GB NVIDIA A100 1基、Llama-3-8BとYi-34BはNVLink接続A100 2基を主評価に使用する。後二者はテンソル並列度2。FlashAttention-3の移植性評価ではH100を1〜2基用いる。成果物の再現環境はCUDA 12.1、PyTorch 2.3.0である。","software":"共通サービング基盤はvLLM 0.2.7。注意バックエンドにFlashAttention-2 2.5.9とFlashInfer 0.4.0を統合し、vAttentionでは各ライブラリの非ページ化カーネル、比較側ではページ対応カーネルを用いる。公式実装とASPLOS 2025成果物が公開されている。","models":["Yi-6B","Llama-3-8B","Yi-34B","追加確認としてLlama-3-70B、GPT-3-175B"],"datasets":["arXiv-Summarization","OpenChat由来動的トレース"],"baselines":["vLLM PagedAttentionデコードカーネル","FlashAttention-2ページ対応カーネル","FlashInferページ対応カーネル"],"methodology":"事前充填は入力トークン/秒、デコードは生成トークン/秒で測る。事前充填では文脈長を長くしてページ対応と非ページ対応の差を比較し、デコードでは16K初期文脈、最大32程度のバッチで400反復の平均を用いる。オフラインではarXiv要約系長文ワークロード、オンラインでは512要求をポアソン到着で投入して処理容量付近の要求遅延分布を比較する。さらにページサイズ、同期割当対背景割当、遅延回収、物理割当帯域を除去実験で確認する。","scope":"性能値は実機GPU測定でありシミュレーションではない。主評価はA100世代と3モデルに集中し、H100ではFlashAttention-3移植性を追加確認する。64KBページの利用には著者のNVIDIAドライバ拡張が必要だが、2MB標準ページやテンソル分割という代替構成も議論される。"}}
