@@ -4,7 +4,24 @@
   "slot": "results",
   "attempt_id": "attempt-cf763136f707815625b2cf96",
   "job_id": "job-research-39ac27aff531cdb5",
-  "data": {},
+  "data": {
+    "overview": "4基A100の評価では、M-GPTとM-BERTでFasterMoE比のエンドツーエンド高速化が1.57倍と1.66倍、MoE層高速化が2.65倍と1.78倍だった。M-Trans-xlではFasterMoE比でエンドツーエンド2.64倍、MoE層2.74倍だが、隠れ幅512と通信量が小さいためTutel、Megatron-CUTLASS、Megatron-TEにはわずかに及ばない。単一MoE層で専門家数を4〜64へ増やすと全範囲で4比較方式を上回り、第2通信の71.9〜99.9%を専門家計算中へ隠した。逐次PyTorch基準との形状掃引では演算子部分最大3.01倍、MoE層最大1.78倍、スループット最大1.78倍。通信側SMを2基に絞ると全形状で悪化し、強偏り条件では基準の1.91倍の遅延となるため、細粒度重畳だけでなく資源配分が性能を決める。",
+    "key_results": [
+      {"metric": "M-GPTエンドツーエンド高速化", "value": "FasterMoE比1.57×、Tutel比1.35×、Megatron-CUTLASS比1.15×、Megatron-TE比1.25×", "baseline": "4種類のMoE比較方式", "condition": "MoE層1個、隠れ幅768", "interpretation": "MoE層が一部だけでも第2通信の短縮が全体遅延へ反映されるが、非MoE層が残るため層単体ほど高速化しない。"},
+      {"metric": "M-BERTエンドツーエンド高速化", "value": "FasterMoE比1.66×、Tutel比1.15×、Megatron-CUTLASS比1.04×、Megatron-TE比1.09×", "baseline": "4種類のMoE比較方式", "condition": "MoE層4個、隠れ幅1024", "interpretation": "通信量とタイル計算量が十分あり、細粒度重畳の固定費を償却できる。"},
+      {"metric": "M-Trans-xl高速化", "value": "FasterMoE比でエンドツーエンド2.64×、MoE層2.74×", "baseline": "FasterMoE", "condition": "全12層MoE、隠れ幅512", "interpretation": "FasterMoEには大きく勝つ一方、隠れ幅が小さく隠せる通信が少ないためTutelとMegatron系にはわずかに劣る。"},
+      {"metric": "専門家数掃引のMoE層高速化", "value": "FasterMoE比1.30〜5.33×、Tutel比1.77〜2.16×、Megatron-CUTLASS比1.23〜1.45×、Megatron-TE比1.35〜1.76×", "baseline": "4種類のMoE比較方式", "condition": "専門家数4〜64、単一MoE層、隠れ幅1024", "interpretation": "専門家並列度が増すほど戻り通信と専門家計算が重くなり、重畳で吸収できる通信末尾が増える。"},
+      {"metric": "第2通信の重畳率", "value": "71.9〜99.9%", "baseline": "重畳しない場合", "condition": "専門家数4〜64の単一MoE層", "interpretation": "タイル完成を早期通知することで、多くの条件で第2通信のほぼ全体をGEMM中へ移せる。"},
+      {"metric": "演算子部分高速化", "value": "均等2.97×、中程度偏り2.94×、強偏り3.01×が最大", "baseline": "cuBLAS+NCCL逐次実装", "condition": "出力隠れ幅8192を中心とした形状掃引", "interpretation": "専門家GEMMと第2通信だけを見ると通信重畳の直接効果が最も大きく現れる。"},
+      {"metric": "MoE層高速化", "value": "均等1.78×、中程度偏り1.73×、強偏り1.77×が最大", "baseline": "cuBLAS+NCCL逐次実装", "condition": "同一形状掃引", "interpretation": "ルーティングや第1通信など変更しない段階が残るため、層全体の利得は演算子部分より小さい。"},
+      {"metric": "スループット改善", "value": "均等1.78×、中程度偏り1.73×、強偏り1.77×が最大", "baseline": "cuBLAS+NCCL逐次実装", "condition": "同一形状掃引", "interpretation": "層遅延短縮が高スループット型MoE推論へほぼ直接反映される。"},
+      {"metric": "通信SM不足時の悪化", "value": "通信側2 SMでは全条件で基準より遅く、強偏り・M=32768・E=4で基準遅延の1.91×", "baseline": "cuBLAS+NCCL逐次実装", "condition": "通信側CTA=2", "interpretation": "通信消費側が完成タイルを処理しきれず、計算後に長い通信末尾が残る。多くの条件では10〜20 SM程度が良好だった。"},
+      {"metric": "正確性", "value": "1440/1440確認で許容範囲内、最大相対距離1.913×10^-3", "baseline": "逐次FP16実装", "condition": "3ルーティング分布、12 SM配分、2転送粒度、同一重み・入力", "interpretation": "報告された差は異なるFP16 GEMM実装の丸め誤差範囲で、近似による品質交換ではない。"}
+    ],
+    "negative_results": "M-Trans-xlでは隠れ幅512のため1トークン当たり通信量とタイル計算量が小さく、細粒度通知と常駐カーネルの固定費が相対的に大きくなり、Tutel、Megatron-CUTLASS、Megatron-TEを上回れなかった。通信側を2 SMに絞ると全形状で基準より遅く、4 SMでも重い条件では悪化する。送信先境界をタイルへ揃えるゼロ埋めは追加GEMMを発生させ、4ランク・タイル高さ256なら最大765行/ランクとなる。評価は4 GPU単一ノードの前向き処理だけで、逆伝播、複数ノード、より大規模な実運用環境は未検証である。",
+    "interpretation": "利得の核心は通信を単に速くすることではなく、戻りデータが生成される順序を通信可能な順序へ変え、生成直後から送ることで第2通信をGEMMの時間軸へ埋め込む点にある。送信先をタイル単位で一意にする配置が安全な早期転送を可能にし、行帯へまとめることで細粒度通知と高帯域転送を両立する。ただし計算用SMと通信用SMは同じGPU資源を取り合うため、重畳可能性だけでは不十分で、通信側が計算の生成速度へ追随できる資源配分が必要である。",
+    "quality_impact": "近似計算、枝刈り、量子化によるモデル品質低下は導入しない。基準と本方式でルーティングと入力を揃え、最終トークン出力を比較した。1440件すべてが相対距離8×10^-3以内で、最大値1.913×10^-3だったため、高速化はFP16丸め範囲を超える品質劣化との交換ではない。"
+  },
   "reservation": {
     "claim_id": "claim-cf763136f707815625b2cf96",
     "worker_id": "scheduled-chat-llm-survey",
