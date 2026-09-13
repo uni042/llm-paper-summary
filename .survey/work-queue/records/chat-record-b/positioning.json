@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-716670c2b523b653002fe62a",
   "job_id": "job-research-ff9dfc8e1a733b56",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-716670c2b523b653002fe62a",
-    "worker_id": "scheduled-chat-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はH20 16 GPUとAscend 910B 32 NPUの2環境、DeepSeek-R1とQwen3-235B-A22Bの2モデルに限られる。待ち時間推定にM/M/1を用いるため、バースト到着や重い裾を持つサービス時間での選択精度は未検証である。融合Reduce-Scatter／Combineは通信を重ねる代わりに追加一時バッファを必要とする。専門家負荷そのものを予測・移動する仕組みではないため、極端なルーティング偏りには別の負荷分散が必要になる。著者公式コード公開先も一次資料から確認できず、再現性は実装記述に依存する。",
+    "differences": "DeepSpeed-MoEやTutelなどがEP通信カーネルや分散MoE実装を最適化するのに対し、MixServeはAttentionとMoEを含む並列構成全体をハードウェア帯域から自動選択し、その構成専用にARとA2Aを融合する。SmartMoEは訓練時の動的並列選択を扱うが、MixServeはオンライン推論のTTFT・ITL・待ち時間とKVメモリ制約を目的へ組み込む。MegaScale-Inferのような分離配信とも排他的ではなく、論文自身も要求スケジューリングやprefill/decode分離と併用可能と位置付ける。",
+    "implementation_status": "Ascend 910BではvLLM、NVIDIA H20ではTutelを基盤に実機実装しており、重み分割、混合通信群、融合RS-Combine／AG-Dispatchを評価している。一次資料にはアルゴリズム疑似コードと理論式があるが、2026-09-14時点で著者公式コードURLは確認できない。arXivコメントはICDCS 2026へ投稿済みとするが、採択済みとは確認できない。",
+    "research_positioning": "MoE推論の通信最適化系統で、専門家キャッシュやオフロードよりも上位の分散配置・集合通信層を扱う。重要なのはノード内とノード間を同一帯域として扱わず、ノード内TPでhidden stateを細分化してからノード間EPへ流すことである。CPU/SSD専門家オフロードを組み合わせる場合も、GPU/NPU間通信だけでなくストレージ入出力帯域を費用モデルへ追加する発展が考えられる。",
+    "relation_to_existing_repository": "既存のMoE専門家配置、通信重畳、分散配信研究と直接比較できる。特にexpert offloading系が『どの専門家をGPUへ置くか』を決めるのに対し、MixServeは『配置済み専門家へトークンとhidden stateをどう分散送信するか』を最適化するため直交的である。階層メモリ研究へ接続する場合、専門家ロード時間やPCIe/NVMe帯域を自動分析器へ追加し、通信と重み搬送の共同最適化へ拡張できる。",
+    "audit_required": true,
+    "audit_reason": "公式コード未確認である一方、2種類の大規模クラスタで最大3.80倍TTFT・50.3%スループット改善という大きな主張を含むため、図10〜12の生値、並列構成、比較公平性を追加監査する価値が高い。"
+  },
+  "reservation": {"claim_id": "claim-716670c2b523b653002fe62a", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
 }
