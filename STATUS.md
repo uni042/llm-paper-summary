@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 16:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 16:26 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,19 +37,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **174** |
-| 処理中（Active claims） | **38** |
-| 今すぐ着手可能（Claimable） | **136** |
-| :30 通常worker Active claims | **28** |
+| 処理中（Active claims） | **39** |
+| 今すぐ着手可能（Claimable） | **135** |
+| :30 通常worker Active claims | **29** |
 | :00 補助worker Active claims | **7** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 16:13 JST** |
+| :30 通常worker 直近claim | **09-13 16:21 JST** |
 | :00 補助worker 直近claim | **09-13 15:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **2** |
 | 直近24h Research完了（帰属不明） | **66** |
 | 最新通常run | **2026-09-13T13:30:00+09:00** |
 | 最新通常runのResearch完了 | **6** |
-| 最古claimの経過時間 | **251 min** |
+| 最古claimの経過時間 | **258 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -72,7 +72,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 探索専用worker run（毎時枠） | **17** |
 | 探索専用worker round（stats観測） | **146** |
 | 通常worker run（ledger観測） | **22** |
-| Fallback archive（全helper） | **15** |
+| Fallback archive（全helper） | **16** |
 
 ### 24時間の流れ
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
 - P87 `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
 - P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
+- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 
 ## 参考情報
 
