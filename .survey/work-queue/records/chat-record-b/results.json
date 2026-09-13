@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-52289f335a036782c4d9be15",
+  "attempt_id": "attempt-0ae9669ad4a5358eaae14387",
   "job_id": "job-research-234066475107816a",
   "data": {
     "overview": "4モデル・4公開データセットのpre-warmed評価では、HYPICはFull Recompute比でp50 TTFTをRing-mini 2.94倍、Ring-flash 2.97倍、Qwen3.5-35B 3.79倍、Qwen3.5-122B 4.67倍短縮し、Prefix Cache比でも2.77〜4.05倍短縮する。16条件平均の品質差はFull Recomputeから1.71ポイントに留まる一方、遷移演算子を保存せず終端状態だけ足すNaive AdditionはFull Recomputeのscoreを66.9%失う。Prod-RAG traceの1秒TTFT SLOではPrefix Cache比の持続可能QPSがモデル別1.49〜1.85倍、peak per-GPU throughputが1.30〜1.50倍となる。再利用時の線形state compositionはsegment長にほぼ依存せず、16k tokenでFull Recompute比4.91倍、segment数16で4.80倍。完全coldの32k promptは8 worker segment parallelismで2.83秒から0.49秒へ短縮し5.7倍高速化する。",
@@ -97,8 +97,8 @@
     "quality_impact": "品質は近似的に維持される。Full Recomputeとの差は4モデル×4公開dataset平均1.71 points。Qwen3.5-35Bでは平均でFull Recomputeを0.47 points上回り、Qwen3.5-122Bは0.56 points低い一方、Ring-mini/Ring-flashは3.44/3.29 points低い。seam width=8が評価したw=0/4/8/16/32の中で品質とTTFTの最良バランスだった。"
   },
   "reservation": {
-    "claim_id": "claim-52289f335a036782c4d9be15",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-0ae9669ad4a5358eaae14387",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }

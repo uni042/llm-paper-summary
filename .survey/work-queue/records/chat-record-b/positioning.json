@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-52289f335a036782c4d9be15",
+  "attempt_id": "attempt-0ae9669ad4a5358eaae14387",
   "job_id": "job-research-234066475107816a",
   "data": {
     "limitations": "独立segment prefillで得たhidden stateは本来のcross-segment contextを見ていないため、累積遷移演算子によるstate compositionが同一入力に対して正確でも、深層ではFull Recomputeとの差が蓄積する。品質差は平均1.71 pointsで、Ring系では約3.3〜3.4 points残る。dense transition modelではT_Cがhead/layerごとにdense matrixとなり、scalar familyよりcache容量と初回構築計算が大きい。segment parallelismは複数idle instance、RDMA転送、十分長いsegmentを必要とし、常に使えるとは限らない。評価は8基H20-3eの単一node構成が中心で、より大規模なmulti-node運用や異種GPUでは未検証。HYPIC本体の公開コードURLも確認できない。",
@@ -13,8 +13,8 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-52289f335a036782c4d9be15",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-0ae9669ad4a5358eaae14387",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }
