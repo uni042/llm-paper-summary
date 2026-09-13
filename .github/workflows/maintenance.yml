@@ -9,11 +9,10 @@ on:
 permissions:
   contents: write
 
-# Maintenance mutates the same queue/index state as survey-helper and citation
-# backfill.  Serialize those writers so health reconciliation observes a stable
-# repository state.
+# Maintenance mutates broad queue/index state. Serialize it with other heavyweight
+# background writers without blocking claim or immutable-submission fast lanes.
 concurrency:
-  group: survey-helper-main
+  group: survey-background-main
   cancel-in-progress: false
 
 jobs:
@@ -60,8 +59,6 @@ jobs:
           set -euo pipefail
           git diff --name-only | sort -u > /tmp/pre-index-diff.txt
           python .survey/scripts/survey.py --root .survey build
-          # paper-identity-index is durable queue state, not a disposable derived
-          # view.  Do not rewrite it as a side effect of index regeneration.
           git restore .survey/survey-state/paper-identity-index.json 2>/dev/null || true
           git diff --name-only | sort -u > /tmp/post-index-diff.txt
           comm -13 /tmp/pre-index-diff.txt /tmp/post-index-diff.txt > /tmp/derived-index-drift.txt || true

@@ -1,0 +1,78 @@
+name: Survey claim fast lane
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/claim-requests/*.json'
+      - '.github/workflows/survey-claim-fast.yml'
+      - '.survey/scripts/claim_worker.py'
+      - '.survey/scripts/claim_state.py'
+      - '.survey/scripts/refresh_queue_snapshot.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-claim-main
+  cancel-in-progress: false
+
+jobs:
+  claim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate claim fast-path syntax
+        run: |
+          python -m py_compile \
+            .survey/scripts/claim_state.py \
+            .survey/scripts/claim_worker.py \
+            .survey/scripts/refresh_queue_snapshot.py
+
+      - name: Allocate claims and publish lightweight snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-claim[bot]'
+          git config user.email 'survey-claim[bot]@users.noreply.github.com'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            python .survey/scripts/claim_worker.py --repo-root .
+            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
+
+            git add \
+              .survey/work-queue/claims \
+              .survey/work-queue/claim-results \
+              .survey/work-queue/next-jobs.json
+
+            if git diff --cached --quiet; then
+              echo 'Claim state already settled.'
+              exit 0
+            fi
+
+            git commit -m 'survey-claim: allocate one-job claims'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Claim push race on attempt ${attempt}; recomputing from latest main."
+            sleep $((attempt * 2))
+          done
+
+          echo 'Failed to publish claim results after 5 retries.' >&2
+          exit 1

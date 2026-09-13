@@ -96,14 +96,7 @@ def _completion_attribution(
     claims: dict[str, dict[str, Any]],
     now: datetime,
 ) -> Counter[str]:
-    """Attribute recent research completions using the durable final claim per job.
-
-    Use the same run-key-based 24-hour window as build_status_dashboard.py so the
-    worker-lane subtotal reconciles with the dashboard's aggregate Research total.
-    Terminal jobs are not claimable again, so the retained claim file is the worker
-    that owned the job when it reached a terminal state. Older completions without
-    a retained claim remain explicitly unattributed rather than guessed.
-    """
+    """Attribute recent research completions using the durable final claim per job."""
     cutoff = now - timedelta(hours=24)
     counts: Counter[str] = Counter()
     seen: set[str] = set()
@@ -159,8 +152,11 @@ def _latest_claim_time(
 
 def _oldest_active_claim_age(repo_root: Path, now: datetime) -> int | None:
     claims = _load_claims(repo_root)
+    ready_ids = _ready_claimable_job_ids(repo_root)
     ages: list[int] = []
-    for claim in claims.values():
+    for job_id, claim in claims.items():
+        if job_id not in ready_ids:
+            continue
         expires = _dt(claim.get("expires_at"))
         if expires is None or expires <= now:
             continue
@@ -245,7 +241,7 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| 直近24h Research完了（帰属不明） | **{unknown_completed}** |\n"
         f"| 最新通常run | **{run_key}** |\n"
         f"| 最新通常runのResearch完了 | **{latest_completed}** |\n"
-        f"| 最古claimの経過時間 | **{age_text}** |\n\n"
+        f"| 最古の有効claimの経過時間 | **{age_text}** |\n\n"
         f"Research readyが **{SPECIALIST_RESEARCH_SWITCH}本を超える間は`:00` workerも論文精読側** に回り、"
         f"**{SPECIALIST_RESEARCH_SWITCH}本以下になると探索専用へ戻ります**。`:30`通常workerは、"
         f"readyが **{HIGH_BACKLOG}本以上** で処理可能なResearchがある間はResearch/Auditを優先します。\n\n"

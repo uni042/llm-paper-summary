@@ -41,6 +41,11 @@ class ResearchThroughputStatusTests(unittest.TestCase):
                 {"run_key": "2026-09-13T11:30:00+09:00", "counts": {"research_completed": 0}},
                 {"run_key": "2026-09-13T12:30:00+09:00", "counts": {"research_completed": 1}},
             ]})
+            _write(repo / ".survey/work-queue/jobs/job-r1.json", {
+                "job_id": "job-r1",
+                "type": "research",
+                "status": "ready",
+            })
             _write(repo / ".survey/work-queue/claims/job-r1.json", {
                 "job_id": "job-r1",
                 "claimed_at": "2026-09-13T03:00:00+00:00",
@@ -55,9 +60,43 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             self.assertIn(":00 補助worker | **通常worker補助（Research/Audit）**", text)
             self.assertIn("50本を超える間は`:00` workerも論文精読側", text)
             self.assertIn("最新通常runのResearch完了 | **1**", text)
-            self.assertIn("最古claimの経過時間 | **60 min**", text)
+            self.assertIn("最古の有効claimの経過時間 | **60 min**", text)
             self.assertIn("処理速度 | **LOW**", text)
             self.assertIn("最低3件", text)
+
+    def test_oldest_active_claim_age_ignores_unexpired_claim_for_terminal_job(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _install_script(repo)
+            _write(repo / ".survey/work-queue/next-jobs.json", {
+                "counts": {"research": {"ready": 1}},
+                "claiming": {"ready_research_audit": 1, "actively_claimed": 1, "claimable": 0},
+            })
+            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": []})
+            _write(repo / ".survey/work-queue/jobs/job-old.json", {
+                "job_id": "job-old",
+                "type": "research",
+                "status": "completed",
+            })
+            _write(repo / ".survey/work-queue/jobs/job-live.json", {
+                "job_id": "job-live",
+                "type": "research",
+                "status": "ready",
+            })
+            _write(repo / ".survey/work-queue/claims/job-old.json", {
+                "job_id": "job-old",
+                "claimed_at": "2026-09-13T02:00:00+00:00",
+                "expires_at": "2026-09-13T05:20:00+00:00",
+            })
+            _write(repo / ".survey/work-queue/claims/job-live.json", {
+                "job_id": "job-live",
+                "claimed_at": "2026-09-13T03:30:00+00:00",
+                "expires_at": "2026-09-13T05:00:00+00:00",
+            })
+            module = _load_module(repo)
+            text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
+            self.assertIn("最古の有効claimの経過時間 | **30 min**", text)
+            self.assertNotIn("120 min", text)
 
     def test_auxiliary_worker_returns_to_discovery_at_50_or_below(self):
         with tempfile.TemporaryDirectory() as td:

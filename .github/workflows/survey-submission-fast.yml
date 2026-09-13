@@ -1,0 +1,132 @@
+name: Survey submission fast lane
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/submissions/research/*.json'
+      - '.survey/work-queue/submissions/audit/*.json'
+      - '.github/workflows/survey-submission-fast.yml'
+      - '.survey/scripts/process_immutable_submission.py'
+      - '.survey/scripts/immutable_submission.py'
+  workflow_dispatch:
+    inputs:
+      submission:
+        description: 'Repository-relative immutable research/audit descriptor path'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-submission-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install survey dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Resolve immutable descriptors from triggering event
+        id: descriptors
+        shell: bash
+        env:
+          MANUAL_SUBMISSION: ${{ inputs.submission }}
+        run: |
+          set -euo pipefail
+          : > /tmp/immutable-submissions.txt
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            printf '%s\n' "$MANUAL_SUBMISSION" >> /tmp/immutable-submissions.txt
+          else
+            git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" \
+              | grep -E '^\.survey/work-queue/submissions/(research|audit)/[^/]+\.json$' \
+              | sort -u >> /tmp/immutable-submissions.txt || true
+          fi
+          if [ ! -s /tmp/immutable-submissions.txt ]; then
+            echo 'No immutable research/audit descriptor was changed.'
+            echo 'count=0' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          while IFS= read -r path; do
+            case "$path" in
+              .survey/work-queue/submissions/research/*.json|.survey/work-queue/submissions/audit/*.json) ;;
+              *) echo "Unsupported submission path: $path" >&2; exit 1 ;;
+            esac
+          done < /tmp/immutable-submissions.txt
+          echo "count=$(wc -l < /tmp/immutable-submissions.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat /tmp/immutable-submissions.txt
+
+      - name: Process only triggering immutable descriptors
+        if: steps.descriptors.outputs.count != '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'survey-submission[bot]'
+          git config user.email 'survey-submission[bot]@users.noreply.github.com'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            processing_failed=0
+
+            while IFS= read -r descriptor; do
+              if [ ! -f "$descriptor" ]; then
+                echo "Descriptor no longer exists on main: $descriptor" >&2
+                processing_failed=1
+                continue
+              fi
+              if ! python .survey/scripts/process_immutable_submission.py \
+                --repo-root . \
+                --submission "$descriptor"; then
+                processing_failed=1
+              fi
+            done < /tmp/immutable-submissions.txt
+
+            git add \
+              papers \
+              .survey/work-queue/jobs \
+              .survey/work-queue/results/research \
+              .survey/work-queue/results/audit \
+              .survey/work-queue/state.json \
+              .survey/work-queue/next-jobs.json \
+              .survey/survey-state/identity-deltas
+
+            if git diff --cached --quiet; then
+              if [ "$processing_failed" -ne 0 ]; then
+                echo 'Immutable submission failed without new durable state.' >&2
+                exit 1
+              fi
+              echo 'Immutable submissions already settled.'
+              exit 0
+            fi
+
+            git commit -m 'survey-submission: publish immutable research results'
+            if git push origin HEAD:main; then
+              if [ "$processing_failed" -ne 0 ]; then
+                echo 'Immutable submission failure result was persisted to main.' >&2
+                exit 1
+              fi
+              exit 0
+            fi
+
+            echo "Submission push race on attempt ${attempt}; recomputing from latest main."
+            sleep $((attempt * 2))
+          done
+
+          echo 'Failed to publish immutable submission results after 5 retries.' >&2
+          exit 1

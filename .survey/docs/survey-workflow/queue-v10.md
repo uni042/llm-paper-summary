@@ -2,33 +2,34 @@
 
 workflow v10は、GitHubを唯一の正本としてqueue/state/identityをGitHub Actions側で管理し、Scheduled Chatは探索、一次資料全文取得、科学的判断、監査判断、構造化research record作成を担当する。
 
-この文書はqueueとtransportの契約だけを定義する。実行順・停止判定・fallback選択は重複定義せず、次を正本とする。
+この文書はqueueとtransportの契約を定義する。実行順・停止判定・fallback選択は重複定義せず、次を正本とする。
 
 1. `worker-router.md`
-2. `fallback-routing.md`
-3. `continuation-policy.json`
-4. `backlog-resilience.md`
-5. `.survey/templates/paper.md`
-6. `.survey/work-queue/records/bank-registry.json`
+2. `always-on-worker.md`
+3. `claim-serial-policy.md`
+4. `fallback-routing.md`
+5. `continuation-policy.json`
+6. `backlog-resilience.md`
+7. `.survey/templates/paper.md`
+8. `.survey/work-queue/records/bank-registry.json`
 
 ## 1. Queue policy
 
 - ready jobはpriority順に処理する。
 - job処理、blocked化、checkpoint後は最新queueを再取得する。
 - actionable readyが尽きたらdiscoveryを行う。
-- discovery候補は0〜5件。5件はノルマではない。
+- discovery候補0〜5件は1 submissionのtransport上限であり、run全体の上限ではない。
 - research後、追加の一次資料確認が明確に必要な場合だけauditを生成する。
 - 固定の日次件数、固定batch数、固定research/audit比率は設けない。
-- 同一runでは実行環境が許す限り `discovery → research → 必要ならaudit → queue再取得` を継続する。
-- fallback backlog、record bank exhaustion、単一job失敗はrun終了理由にしない。
+- fallback backlog、record bank exhaustion、単一job失敗、Actions terminal待ちはrun終了理由にしない。
 
-GitHub上でreadyでも、完全payloadがChatGPT LibraryまたはGitHub fallback-inboxへcheckpoint済みなら、そのjobは再精読しない。checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` を使ってstatusを変更せずdiscovery補充を要求する。
+GitHub上でreadyでも、完全payloadがGitHubのimmutable submissionとして耐久保存済み、またはChatGPT Libraryへcheckpoint済みなら、そのjobは同じrunで再精読しない。
 
-Google Drive fallbackは廃止済みで、新規保存・replay・backlog判定には使わない。削除前実装は `archive/drive-fallback-before-removal-20260910` ブランチに保存している。
+Google Drive fallbackは廃止済み。新規fallbackはChatGPT Libraryのみを使う。
 
-## 2. Ownership
+## 2. Ownership and lanes
 
-### Scheduled Chat
+### Scheduled Chat / Work
 
 - literature discovery
 - primary-source retrieval
@@ -37,9 +38,8 @@ Google Drive fallbackは廃止済みで、新規保存・replay・backlog判定�
 - formal audit judgment
 - duplicate pre-check
 - structured research record authoring
-- normal GitHub transport
+- record slot / immutable descriptor transport
 - GitHub write不能時のChatGPT Library checkpoint
-- Library pendingのGitHub immutable intakeへの回収
 
 ### GitHub Actions
 
@@ -50,10 +50,15 @@ Google Drive fallbackは廃止済みで、新規保存・replay・backlog判定�
 - identity delta maintenance
 - duplicate suppression
 - derived-view rebuild
-- offline job seed materialization
-- GitHub fallback-inboxの直列dispatch
+- fallback replay
 
-Notionは使用しない。旧 `/LLM-survey-fallback/` はlegacy移行元であり、新規保存には使わない。
+GitHub Actionsは次の3レーンに分離する。
+
+- `survey-claim-main`: claim割当と軽量`next-jobs.json`更新だけを行う高速レーン。
+- `survey-submission-main`: 明示的に送られたimmutable research/audit descriptorだけを処理する高速レーン。
+- `survey-background-main`: fallback、dedupe、blocked retry、maintenance、citation、index等の重い処理を行うbackgroundレーン。
+
+claimとimmutable submissionはbackgroundの完了を待たない。
 
 ## 3. Duplicate prevention
 
@@ -65,21 +70,19 @@ Notionは使用しない。旧 `/LLM-survey-fallback/` はlegacy移行元であ�
 4. `.survey/work-queue/jobs/*.json`
 5. ChatGPT Library / GitHub fallback-inbox上のseedとcheckpoint済みjob
 
-canonical ID / arXiv ID / DOI / OpenReview IDを優先する。GitHub code searchだけで未登録判定をしない。Actions側の `.survey/scripts/dedupe_queue.py` も再確認する。
+canonical ID / arXiv ID / DOI / OpenReview IDを優先する。GitHub code searchだけで未登録判定をしない。
 
 ## 4. Research quality
 
-一次資料本文を最後まで読む。全文取得不能ならcompletedにせずblocked/deferredとする。抄録・検索断片から欠落情報を推測しない。
+一次資料本文を最後まで読む。全文取得不能ならcompletedとして送らず、blocked/deferredとして扱う。抄録・検索断片から欠落情報を推測しない。
 
-本文品質は `.survey/templates/paper.md` を唯一の正本とする。新しい会話・実行環境では、同テンプレートが例示するMoE-Infinityの既存まとめも確認する。
-
-構造化recordは内部メモではなく、人間向けMarkdownへ変換する原稿である。特に`problem_method`は、入力、観測状態、処理、出力、前後接続、なぜ効くか、追加コスト、失敗条件が追える量を書く。
+本文品質は `.survey/templates/paper.md` を正本とする。構造化recordは内部メモではなく、人間向けMarkdownへ変換する原稿である。特に`problem_method`は、入力、観測状態、処理、出力、前後接続、なぜ効くか、追加コスト、失敗条件が追える量を書く。
 
 GitHubへ送る前、またはLibraryへcheckpointする前にActions側と同じvalidator基準でpreflightする。基準未達recordは完成扱いにしない。
 
-## 5. Structured record transport
+## 5. Structured record banks
 
-利用可能なrecord bankは `.survey/work-queue/records/bank-registry.json` を正本とする。現在の通常構成はA〜Hで、各bankに次の5 slotを持つ。
+利用可能なrecord bankは `.survey/work-queue/records/bank-registry.json` を正本とする。通常構成はA〜Hで、各bankに次の5 slotを持つ。
 
 - `metadata.json`
 - `problem_method.json`
@@ -87,13 +90,11 @@ GitHubへ送る前、またはLibraryへcheckpointする前にActions側と同�
 - `results.json`
 - `positioning.json`
 
-GitHubへ直接slotを書き始める前に、可能なら:
+GitHubへslotを書き始める前に可能なら次を使う。
 
 ```bash
 python .survey/scripts/select_record_bank.py --repo-root .
 ```
-
-を使って`selected_bank`を取得する。見た目だけでbankを選ばない。
 
 各slot envelope:
 
@@ -110,7 +111,9 @@ python .survey/scripts/select_record_bank.py --repo-root .
 
 slot上限、必須field、文章量、日本語優先ルールは `.survey/scripts/assemble_research_record.py` と `.survey/templates/paper.md` を正本とする。
 
-`metadata.json`では一覧・重複排除・監査を再現できるよう、正規識別子、題名、要約、著者、公開日`published`、公開先`publication`、公開種別`publication_type`、公開状態`publication_status`、一次資料`sources`、実装情報`implementation`、公式コード`code`、確認日`last_checked`を必須項目として保存する。公式コードを確認できない場合も`code`自体を省略せず`null`とし、未確認と実装なしを混同しない。arXiv論文は、その版のarXiv表示を正本として、主カテゴリと横断登録カテゴリを次の形で保存する。
+`metadata.json`では少なくとも正規識別子、題名、要約、著者、`published`、`publication`、`publication_type`、`publication_status`、`sources`、`implementation`、`code`、`last_checked`を保存する。公式コードが確認できない場合も`code: null`を明示する。
+
+arXiv論文は主カテゴリと横断登録カテゴリを分離する。
 
 ```json
 "arxiv_categories": {
@@ -119,70 +122,91 @@ slot上限、必須field、文章量、日本語優先ルールは `.survey/scri
 }
 ```
 
-`primary`と`cross_list`を混ぜない。カテゴリが1件だけなら`cross_list`は空配列とする。Markdown生成時にこれらのメタデータを捨てず、論文frontmatterへ引き継ぐ。
+一次論文のreference sectionも確認し、正規化した`references`、`references_checked_at`、`references_source`、`references_total`を保存する。
 
-さらに一次論文のreference sectionを確認し、正規化した`references`、`references_checked_at`、`references_source`、`references_total`を`metadata.json`へ保存する。arXivのversion違いは同一IDへ正規化し、DOI / arXiv / OpenReviewの複数IDが同じ参考文献を指す場合は1要素へまとめる。本文中の関連言及はreferenceとして扱わない。reference sectionを確認済みで識別可能なIDが0件の場合も`references: []`を明示する。
+## 6. Immutable research/audit submission
 
-5 slotすべて反映後だけ `.survey/work-queue/submissions/chat-inbox.json` を更新する。inboxの`record_slots`は5件固定で、各slotのpathと実際のGit blob SHAを持つ。
+新規の通常Research/Audit完了payloadでは、固定 `.survey/work-queue/submissions/chat-inbox.json` を更新しない。
 
-`.survey/scripts/assemble_research_record.py` がrecordを検証し、`.survey/scripts/render_paper.py` がrunner内でMarkdownを生成する。Scheduled Chatは完成Markdownを直接送らない。
+5 slotをすべてGitHubへ書き、その実際のGit blob SHAを取得した後、attempt固有のimmutable descriptorを1個だけ作る。
 
-## 6. Normal save protocol
+- Research: `.survey/work-queue/submissions/research/<attempt-id>.json`
+- Audit: `.survey/work-queue/submissions/audit/<attempt-id>.json`
 
-1. job用の一意な`attempt_id`を決める。
-2. bank selectorで使用bankを決める。
-3. `metadata → problem_method → evaluation → results → positioning`の順で、各ファイルを最新blob SHA付きでupdateする。
-4. 途中write失敗時は`continuation-policy.json`のretry/health-probe規則に従う。
-5. 5 slot成功後だけ固定`chat-inbox.json`をupdateする。
-6. Actions resultと最新queueでterminalを確認する。
-7. 完全payloadをLibraryへ耐久保存済みなら、そのbankは未送信論文の保存キューとして保持し続けない。
+例:
 
-## 7. Discovery / blocked / deferred / rejected
+```json
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-...",
+  "job_id": "job-research-...",
+  "claim_id": "claim-...",
+  "worker_id": "scheduled-chat-...",
+  "record_bank": "a",
+  "paper_path": "papers/inference/.../paper.md",
+  "record_slots": [
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "..."},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "..."},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "..."},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "..."},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "..."}
+  ]
+}
+```
 
-長いartifactは不要。GitHub write可能なら既存の固定transportだけを使い、queue/state/paper/READMEをScheduled Chatから直接編集しない。
+既存paperを更新する場合は`expected_blob_sha`も入れる。
+
+`survey-submission-fast`はtriggerになったdescriptorだけを処理する。過去のsubmission全件を走査して処理してはならない。同じdescriptorの再実行はimmutable resultへ冪等に収束する。
+
+resultは次に保存される。
+
+- `.survey/work-queue/results/research/<attempt-id>.json`
+- `.survey/work-queue/results/audit/<attempt-id>.json`
+
+未解決descriptorが現在のattemptを参照しているbankはoccupiedであり、別workerが上書きしてはならない。matching resultが作成されるとそのbankは再利用可能になる。
+
+## 7. Normal save protocol
+
+1. claimから得た`attempt_id`を使う。
+2. bank selectorで空きbankを1つ選ぶ。
+3. `metadata → problem_method → evaluation → results → positioning`の順でslotを書く。
+4. 各slotの最新Git blob SHAを取得する。
+5. 5 slot成功後だけ、attempt固有immutable descriptorを新規作成する。
+6. descriptorがGitHubへ耐久保存できた時点で、そのjobはworker内では送信済みとみなす。
+7. **submission-fastのterminal反映を待たず**、最新queue/claim stateを再取得して次の1件をclaimする。
+8. matching resultは後で確認する。失敗してもdescriptorとslotは残るため再処理できる。
+
+1 workerが同時に保持する未完了claimは1件だけ。次jobの先取りclaimは禁止するが、前jobのimmutable descriptorを耐久保存した後はActions terminal待ちをしない。
+
+## 8. Discovery / blocked / deferred / rejected
+
+Discoveryや軽量なblocked/deferred transportは従来のroot-level submission経路を利用できる。immutable descriptor fast laneは、主に5-slotを伴うResearch/Auditの完全payload用である。
 
 個別論文の全文取得不能や依存不足は対象jobだけblocked/deferredとし、次の独立作業へ進む。
 
-## 8. Library fallback
+Scheduled Chatからpaper/state/README/identity/queueを直接編集しない。
 
-GitHub writeを完了できない場合の正本は `fallback-routing.md`。
+## 9. Library fallback and legacy compatibility
 
-保存先はChatGPT Libraryのみ:
+GitHub direct writeを完了できない場合の正本は `fallback-routing.md`。保存先はChatGPT Libraryのみ:
 
 `/LLM-survey-outbox/pending/<id>.json`
 
 Libraryへ完全payloadまたはoffline job seedを耐久保存できれば研究を続ける。
 
-共通envelope:
+移行期間中、既存のLibrary / GitHub fallback envelopeは固定`chat-inbox.json`を含むlegacy replay形式のまま処理してよい。background helperが互換経路を担当する。**新しい通常GitHub Research/Audit送信ではlegacy `chat-inbox.json`を使わない。**
 
-```json
-{
-  "schema_version": 1,
-  "id": "unique-safe-id",
-  "kind": "research",
-  "job_id": "job-research-...",
-  "attempt_id": "attempt-...",
-  "depends_on_job_ids": ["job-research-..."],
-  "writes": [
-    {"path": ".survey/work-queue/records/chat-record/metadata.json", "content": "{...}\n"},
-    {"path": ".survey/work-queue/submissions/chat-inbox.json", "content": "{...}\n"}
-  ]
-}
-```
+research/audit fallbackは1論文につき1 envelopeに必要な5 slotとsubmission情報をまとめ、1論文を複数fragmentへ分割しない。完成Markdownはfallbackへ保存しない。
 
-research/auditでは1論文につき1 envelopeに5 slot + `chat-inbox.json`をまとめる。1論文を複数fragmentへ分割しない。完成Markdownはfallbackへ保存しない。
-
-## 9. Recovery path
-
-Libraryから固定record bankへ直接replayしない。Scheduled Chatは復旧したLibrary sourceをまず:
+Libraryから復旧したenvelopeはまず:
 
 `.survey/work-queue/fallback-inbox/<envelope-id>.json`
 
-へ不変envelopeとして送る。
+へ不変envelopeとして送る。同じ`id`がarchive等にあり内容も同一なら再writeしない。内容不一致は衝突として隔離する。
 
-同じ`id`がGitHub fallback-inbox/archiveにあり内容も同一なら再writeせずLibrary側をprocessedにできる。内容不一致なら衝突としてfailedへ隔離する。
-
-`.survey/scripts/dispatch_fallback_inbox.py` がsurvey-helperの共通concurrency group内で1 run最大1件を固定transportへ展開する。job未実体化やchat transport busyはdependency待ちとしてinboxに残し、failedにしない。
+background helperのfallback replay失敗・待機はclaim-fastやsubmission-fastをブロックしない。
 
 ## 10. Offline discovery
 
@@ -196,26 +220,32 @@ seed保存後はjob実体化を待たず同じrunで候補を精読し、完成r
 
 - Scheduled Chatからpaper/state/README/identity/queueを直接updateしない。
 - fallback envelopeから`papers/**`やworkflow/scriptを直接書かない。
-- completionはActions result + latest queueで検証する。
-- 同一payloadの重複copyは同じenvelope IDで冪等に収束させる。
-- pending/replay失敗、bank exhaustion、1本処理完了をrun終了理由にしない。
+- immutable descriptorは作成後に内容を書き換えない。修正が必要なら新attemptを使う。
+- completionはimmutable result + latest queueで検証する。
+- 同一payloadの再処理は同じattempt/resultへ冪等に収束させる。
+- pending/replay失敗、bank exhaustion、1本処理完了、Actions待ちはrun終了理由にしない。
 
 ## 12. Paper family routing
 
 research開始時点で、論文を **Inference / Training / Survey** のどこへ保存するかを明示的に判定する。`paper_path` はこの判定と一致させる。
 
-- **Survey / サーベイ**: 主目的が複数の既存研究・方式・システムを横断整理し、分類、比較、体系化、研究課題整理を行うsurvey / review / systematic review / tutorial-style overview。新規の中心的システム手法そのものを提案する原著論文は、関連研究節が広くてもSurveyへ入れない。
+- **Survey / サーベイ**: 主目的が複数の既存研究・方式・システムを横断整理し、分類、比較、体系化、研究課題整理を行うsurvey / review / systematic review / tutorial-style overview。
 - **Inference / 推論**: 新規手法・システム・アルゴリズムの主目的が推論、serving、decoding、KV cache、offload、MoE実行、on-device実行などの推論効率化である原著論文。
-- **Training / 学習**: 学習・fine-tuning・optimizer・activation/parameter/optimizer-state offloadなど学習段階の効率化が主目的。ただし通常サーベイではTraining側の新規追加は凍結方針を優先し、明示的な指示がない限り新規収録しない。
+- **Training / 学習**: 学習・fine-tuning・optimizer・activation/parameter/optimizer-state offloadなど学習段階の効率化が主目的。ただし通常サーベイではTraining側の新規追加凍結方針を優先する。
 
-Surveyと判定した論文を `papers/inference/**` へ保存してはならない。保存先は `papers/survey/<survey-lineage>/<filename>.md` とする。適切なsurvey lineageがまだなければ、対象範囲に沿った下位ディレクトリを新設してよい。
+Surveyと判定した論文を `papers/inference/**` へ保存してはならない。保存先は `papers/survey/<survey-lineage>/<filename>.md` とする。
 
-判定が曖昧な場合は、タイトルに `survey` や `review` が含まれるかではなく、**論文の主たる貢献が新規システム提案か、既存研究群の体系化か**で決める。原著論文とsurveyを兼ねる場合、主要な評価・新規性が独自手法にあるならInference側を優先する。
+判定が曖昧な場合は、タイトルの`survey` / `review`ではなく、主たる貢献が新規システム提案か既存研究群の体系化かで決める。
 
-### Claim transport
+## 13. Claim transport
 
-Claim requests are immutable JSON files in `claim-requests/`; Actions writes one
-result and one current claim per assigned job. Requests default to one job and an
-8-hour lease, and only ready research/audit jobs are eligible. An expired current
-claim remains valid for its worker until a newer assignment replaces the current
-claim file. Results are authoritative on rerun, so a request is never expanded.
+Claim requests are immutable JSON files in `.survey/work-queue/claim-requests/`; `survey-claim-fast` writes one result and one current claim per assigned job.
+
+- default `max_jobs` = 1
+- default lease = **90 minutes (5400 seconds)**
+- eligible = ready research/audit jobs only
+- expired claim files remain on disk as durable history, but are no longer active and do not block a new assignment
+- leaseを延長する場合は同じrequest/workerを新しいUTC `requested_at`でheartbeat更新する
+- 期限切れ後にworkerがまだ成果をGitHub/Libraryへ耐久保存していない場合は旧claimで新規送信せず、fresh claimを取得し直す
+
+claim result待ち中に別requestを重ねず、完全payloadの耐久保存後は新しいrequest IDで次jobを1件だけ取得する。

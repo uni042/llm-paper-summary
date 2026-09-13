@@ -80,6 +80,8 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     max_jobs = raw.get("max_jobs", DEFAULT_MAX_JOBS)
     if isinstance(max_jobs, bool) or not isinstance(max_jobs, int) or not 1 <= max_jobs <= 4:
         raise ValueError("max_jobs must be between 1 and 4")
+    if worker_kind == "scheduled_chat" and max_jobs != 1:
+        raise ValueError("scheduled_chat requests must use max_jobs=1")
     lease_seconds = raw.get("lease_seconds", DEFAULT_LEASE_SECONDS)
     if isinstance(lease_seconds, bool) or not isinstance(lease_seconds, int) or not MIN_LEASE_SECONDS <= lease_seconds <= MAX_LEASE_SECONDS:
         raise ValueError("lease_seconds must be between 300 and 43200")
@@ -116,6 +118,76 @@ def _job_files(root: Path) -> list[dict[str, Any]]:
             row.pop("_path", None)
             out.append(row)
     return out
+
+
+def _immutable_descriptors(root: Path) -> list[dict[str, Any]]:
+    """Return only durable immutable descriptors that are still pending processing."""
+    out: list[dict[str, Any]] = []
+    submissions = root / ".survey/work-queue/submissions"
+    results = root / ".survey/work-queue/results"
+    for kind in sorted(JOB_TYPES):
+        folder = submissions / kind
+        for path in sorted(folder.glob("*.json")) if folder.is_dir() else []:
+            value = _read(path)
+            if not isinstance(value, dict):
+                continue
+            job_id = value.get("job_id")
+            attempt_id = value.get("attempt_id")
+            if not isinstance(job_id, str) or not SAFE_ID_RE.fullmatch(job_id):
+                continue
+            if not isinstance(attempt_id, str) or not SAFE_ID_RE.fullmatch(attempt_id):
+                continue
+            result = _read(results / kind / path.name)
+            if (
+                isinstance(result, dict)
+                and result.get("job_id") == job_id
+                and result.get("attempt_id") == attempt_id
+            ):
+                continue
+            row = dict(value)
+            row["kind"] = value.get("kind") or kind
+            out.append(row)
+    return out
+
+
+def _release_durable_claims(
+    root: Path,
+    claims: dict[str, dict[str, Any]],
+    descriptors: list[dict[str, Any]],
+    now: dt.datetime,
+) -> set[str]:
+    """Release current claims whose exact attempt has a durable immutable descriptor."""
+    durable_attempts = {
+        (str(item.get("job_id")), str(item.get("attempt_id")))
+        for item in descriptors
+    }
+    submitted_jobs = {str(item.get("job_id")) for item in descriptors}
+    for job_id, current in list(claims.items()):
+        attempt_id = current.get("attempt_id")
+        if (job_id, str(attempt_id)) not in durable_attempts:
+            continue
+        if current.get("released_at"):
+            continue
+        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+        claim["released_at"] = _iso(now)
+        claim["expires_at"] = _iso(now)
+        _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
+        claims[job_id] = dict(claim, active=False, expired=True)
+    return submitted_jobs
+
+
+def _worker_has_active_claim(
+    claims: dict[str, dict[str, Any]],
+    *,
+    worker_id: str,
+    worker_kind: str,
+) -> bool:
+    return any(
+        current.get("active")
+        and current.get("worker_id") == worker_id
+        and current.get("worker_kind") == worker_kind
+        for current in claims.values()
+    )
 
 
 def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
@@ -215,6 +287,8 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     result_root.mkdir(parents=True, exist_ok=True)
     claims_root.mkdir(parents=True, exist_ok=True)
     claims = claim_state.current_claims(root, now)
+    descriptors = _immutable_descriptors(root)
+    submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
     processed = reused = errors = assigned = renewed = 0
     for path in sorted(request_root.glob("*.json")):
         result_path = _result_path(root, path.stem)
@@ -261,10 +335,26 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             processed += 1
             continue
 
+        if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
+            claims,
+            worker_id=request["worker_id"],
+            worker_kind=request["worker_kind"],
+        ):
+            _write(result_path, {
+                "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
+                "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+                "ok": True, "assignments": [], "processed_at": _iso(now),
+                "reason": "worker already has an active unsubmitted claim",
+            })
+            processed += 1
+            continue
+
         available = []
         for item in jobs:
             job_id = str(item.get("job_id") or "")
             if item.get("status") != "ready" or item.get("type") not in request["job_types"]:
+                continue
+            if job_id in submitted_jobs:
                 continue
             dependencies = _dependencies(job_id, item)
             if dependencies is None:

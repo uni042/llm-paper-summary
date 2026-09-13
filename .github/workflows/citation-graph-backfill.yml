@@ -22,10 +22,10 @@ on:
 permissions:
   contents: write
 
-# Share the normal survey writer lock so citation backfill and survey-helper never
-# write main concurrently.
+# Citation backfill is heavyweight background state. Serialize it with the
+# background helper/maintenance lane without blocking claim/submission fast lanes.
 concurrency:
-  group: survey-helper-main
+  group: survey-background-main
   cancel-in-progress: false
 
 jobs:
