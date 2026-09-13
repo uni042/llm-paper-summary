@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 00:57 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 01:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **33** |
 | 最新通常run | **2026-09-13T19:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **0 min** |
+| 最古の有効claimの経過時間 | **3 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **43** |
 | Repo収録 | **45** |
 | Audit完了 | **0** |
-| 探索評価候補 | **592** |
-| Research候補採用 | **179** |
+| 探索評価候補 | **563** |
+| Research候補採用 | **172** |
 | 重複除外 | **278** |
-| 重複率 | **47.0%** |
-| 探索専用worker run（毎時枠） | **12** |
-| 探索専用worker round（stats観測） | **120** |
+| 重複率 | **49.4%** |
+| 探索専用worker run（毎時枠） | **11** |
+| 探索専用worker round（stats観測） | **111** |
 | 通常worker run（ledger観測） | **17** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 592 → 重複除外後 314 → Research候補採用 179 → Research完了 43 → Repo収録 45**
+**探索評価 563 → 重複除外後 285 → Research候補採用 172 → Research完了 43 → Repo収録 45**
 
 ## 直近の通常worker
 
@@ -191,10 +191,8 @@ Run: **2026-09-13T11:00:00+09:00**
 | LSH・hashing系KVアクセス/eviction/sharing・query expansion | 4 | 0 | 4 | 0.0% | 100.0% |
 | MoE通信・runtime parallelism・online expert placement | 4 | 4 | 0 | 100.0% | 0.0% |
 | NVMe外部KV・PIM runtime・page-aware decode scheduling | 4 | 0 | 0 | 0.0% | 0.0% |
-| OS階層管理・専門家キャッシュ・KV先読み・SSD再利用 | 4 | 0 | 1 | 0.0% | 25.0% |
 | P/D分離・KV転送・shared prefill | 4 | 1 | 2 | 25.0% | 50.0% |
 | RDMA・分離サービング・KV転送 | 4 | 4 | 0 | 100.0% | 0.0% |
-| SLO-aware scheduling・KV memory hierarchy・動的メモリ回収 | 4 | 0 | 1 | 0.0% | 25.0% |
 | agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
 | agentic workload・program/session-aware serving | 4 | 1 | 3 | 25.0% | 75.0% |
 | chunked prefill・prefix-aware batchingの基礎欠落 | 4 | 3 | 0 | 75.0% | 0.0% |
@@ -209,8 +207,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA | 4 | 0 | 1 | 0.0% | 25.0% |
 | 投機的復号runtime・draft resource・CPU制約 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 投機的復号・高並列サービング・production評価 | 4 | 1 | 2 | 25.0% | 50.0% |
-| 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache | 4 | 0 | 0 | 0.0% | 0.0% |
-| 異種GPU/PNM・cold MoE pool・edge KV migration | 4 | 0 | 0 | 0.0% | 0.0% |
 | 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離 | 4 | 0 | 4 | 0.0% | 100.0% |
 | 重要系譜の前方・後方引用追跡 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 2026-09新着・KVキャッシュ圧縮／再利用 | 3 | 3 | 0 | 100.0% | 0.0% |
@@ -227,9 +223,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | multimodal弾力的並列化・EPD分離・modality-aware scheduling | 3 | 0 | 3 | 0.0% | 100.0% |
 | near-storage KV処理・動的layer/KV runtime adaptation | 3 | 1 | 2 | 33.3% | 66.7% |
 | エージェント型LLM・サービングruntime・生成時特化 | 3 | 1 | 2 | 33.3% | 66.7% |
-| エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
 | 出力長不確実性・tail-aware scheduling隣接 | 3 | 1 | 2 | 33.3% | 66.7% |
-| 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
 | 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse | 3 | 0 | 0 | 0.0% | 0.0% |
 | 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
@@ -237,9 +231,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 新着・長期推論KV圧縮と削除 | 3 | 0 | 0 | 0.0% | 0.0% |
 | 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving | 3 | 0 | 0 | 0.0% | 0.0% |
 | 適応プリフィル・KV予約・デコード干渉スケジューリング | 3 | 2 | 0 | 66.7% | 0.0% |
-| 長文SLO・SSD-backed KV・異種GPUメモリ共有 | 3 | 0 | 0 | 0.0% | 0.0% |
-| multi-tenant prefix安全性・multi-agent workflow prefix scheduling | 2 | 0 | 0 | 0.0% | 0.0% |
-| 動的parallelism再構成・KV state migration | 2 | 0 | 2 | 0.0% | 100.0% |
 | 新着KV圧縮・時間集約・長推論再参照 | 2 | 0 | 0 | 0.0% | 0.0% |
 | KVキャッシュ幾何学指標・backward reference | 1 | 0 | 1 | 0.0% | 100.0% |
 | 収録済み重要論文のforward citation・Llumnix系譜 | 1 | 0 | 0 | 0.0% | 0.0% |
