@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:46 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -64,7 +64,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
-| Fallback archive（全helper） | **5** |
+| Fallback archive（全helper） | **6** |
 
 ### 24時間ファネル
 
@@ -274,7 +274,7 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **LOW**
 | Latest normal run | **2026-09-13T13:30:00+09:00** |
 | Latest research completed | **0** |
 | Research completed (24h) | **70** |
-| Oldest active claim age | **98 min** |
+| Oldest active claim age | **99 min** |
 
 ### Worker routing snapshot
 
