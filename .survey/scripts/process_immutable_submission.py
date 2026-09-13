@@ -136,11 +136,8 @@ def _refresh_snapshot(repo_root: Path) -> None:
 def _matching_result(result_path: Path, descriptor: dict[str, Any]) -> dict[str, Any] | None:
     """Reuse only successful matching results; matching failures remain retryable."""
     result = _read(result_path, {}) or {}
-    if (
-        result.get("attempt_id") == descriptor.get("attempt_id")
-        and result.get("job_id") == descriptor.get("job_id")
-    ):
-        return result if result.get("ok") is True else None
+    if immutable_submission.result_matches_identity(result, descriptor):
+        return result if immutable_submission.result_is_success_for(result, descriptor) else None
     if result_path.exists() and result:
         raise ValueError("immutable result path already contains a conflicting attempt/job")
     return None
@@ -179,7 +176,7 @@ def _success_result(
 
 
 def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> dict[str, Any] | None:
-    """Persist a terminal attempt result so invalid descriptors do not occupy a bank forever."""
+    """Persist retryable processor failure history for this exact immutable attempt."""
     repo_root = Path(repo_root).resolve()
     try:
         submission_path = _descriptor_path(repo_root, submission_path)
