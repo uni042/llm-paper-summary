@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8c805808c02a755f3cb9a74d",
-  "job_id": "job-research-2fabaceee2c88fd9",
-  "data": {
-    "hardware": "実機: 2サーバ、各8×NVIDIA H100 80GB SXM5、8×ConnectX-7 400Gbps InfiniBand NIC、NVLink 4.0 900GB/s。シミュレーション: SimAIで32〜1024 GPU、各サーバ8×A100と8×200Gbps NIC、Spectrum-X RoCE-v2 rail topology。",
-    "software": "NCCL 2.23.4、PyTorch 2.10.0、Megatron-LM、vLLM v1、NCCL-tests 2.17.1、SimAI。比較はvanilla NCCL、AdapCC、DéjàVu、server restart、request rerouting。",
-    "methodology": "実機で単一・複数NIC故障を注入し、学習はGPT-3 2.7BのDP=16と13BのTP=8/PP=2を評価する。推論はLlama-3.1 70B/405BをTP=8/PP=2またはプリフィル・デコード分離で動かし、2000-token prompt、最大256生成、100秒試験の50秒時点でNIC故障を注入する。DéjàVu比較ではOPT-66B/BLOOM-176B、500-token prompt、1500-token generation、decode step 800で故障する。SimAIでは7B〜175Bと32〜1024 GPUを使い、最大10 concurrent failuresをMonte Carlo 50 patternで評価する。",
-    "scope": "主対象はノード/プロセスが生存し、少なくとも1本の代替inter-node NIC/railが残る障害である。NVLink/NVSwitch故障、switch-wide outage、GPU/OS/process crash、完全ネットワークpartitionは対象外。実機は2ノードH100で、大規模結果はシミュレーションを含む。",
-    "workloads": ["GPT-3 2.7B/13B training", "7B/175B simulated training", "Llama-3.1 70B/405B vLLM serving", "OPT-66B/BLOOM-176B DéjàVu comparison"],
-    "baselines": ["vanilla NCCL", "AdapCC", "DéjàVu", "server restart", "request rerouting"],
-    "metrics": ["training tokens/s and overhead", "TTFT p50/p95/p99", "TPOT p50/p95", "SLO throughput", "collective bus bandwidth", "recovery overhead"],
-    "reproducibility": "公式GitHubでR²CCL実装を公開し、NCCL 2.23.4への約3K行の変更、実機構成、故障注入条件、モデル・並列構成、シミュレーション規模を論文に記載している。"
-  },
-  "reservation": {"claim_id": "claim-8c805808c02a755f3cb9a74d", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5205040dc3d58f265e4349ca",
+  "job_id": "job-research-e355b9d9df6bf3d0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5205040dc3d58f265e4349ca",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8c805808c02a755f3cb9a74d",
-  "job_id": "job-research-2fabaceee2c88fd9",
-  "data": {
-    "overview": "単一NIC故障でサーバ帯域が12.5%減る条件でも、R²CCLは学習追加時間を1%前後、推論の定常遅延を3%以内に抑える。GPT-3 2.7B DP=16ではR²CCL-AllReduceが314,618 tok/sの正常系に対し312,394 tok/sで0.71%低下、13B TP=8/PP=2ではBalanceが0.38%低下に留まる。vLLMではTTFT SLO 5秒の容量を正常系の約99〜100%維持し、DéjàVu比較では障害復旧オーバーヘッドを0.71〜1.58%に抑えた。512 GPUで10同時障害でも平均iteration overheadは4.3%、collective microbenchmarkでは大メッセージAllReduceで正常系の約93%帯域を維持する。",
-    "key_results": [
-      {"metric": "GPT-3 2.7B training overhead", "value": "0.71%（312,394 vs 314,618 tokens/s）", "baseline": "no-failure NCCL", "condition": "2 nodes, DP=16, single NIC failure", "interpretation": "障害ノードの通信量を減らすR²CCL-AllReduceにより12.5%のNIC帯域損失をほぼ隠蔽する。"},
-      {"metric": "GPT-3 13B training overhead", "value": "0.38%（8,309 vs 8,340 tokens/s）", "baseline": "no-failure NCCL", "condition": "TP=8, PP=2, single NIC failure", "interpretation": "point-to-pointを含む構成ではchannel再配分のBalanceが有効で、rank除外ができない並列構成でも継続する。"},
-      {"metric": "vLLM TTFT capacity under failure", "value": "no-failure容量の約99〜100%、restart比1.2〜8.7倍・reroute比1.6〜1.9倍のSLO throughput", "baseline": "restart / request rerouting", "condition": "Llama-3.1 70B/405B, TTFT SLO 5s", "interpretation": "要求再処理を避けtransport層だけで回復するため、障害後もサービス容量をほぼ維持する。"},
-      {"metric": "DéjàVu recovery overhead", "value": "0.71〜1.58%、DéjàVuより8.6倍/47倍低い", "baseline": "DéjàVu", "condition": "OPT-66B / BLOOM-176B, failure at decode step 800", "interpretation": "KV複製・再構築ではなく既存通信を移行するため、アプリケーション状態の復旧費を抑える。"},
-      {"metric": "512-GPU multi-failure overhead", "value": "10同時障害で4.3%", "baseline": "no-failure simulation", "condition": "64 servers / 512 GPUs, Monte Carlo 50 patterns", "interpretation": "論理再順位付けと再帰的collective分解で複数障害による帯域非対称の影響を抑える。"},
-      {"metric": "large-message AllReduce bandwidth", "value": "正常系の約93%", "baseline": "vanilla NCCL no-failure", "condition": "≥512MB, one NIC failure", "interpretation": "大メッセージでは低帯域ノードが扱うデータ量を減らす方式が単純Balanceより有利になる。"}
-    ],
-    "negative_results": "耐障害は代替経路が残ることを前提とし、NVLink/NVSwitch故障、switch-wide outage、GPU/OS/process crash、完全partitionでは継続できない。小メッセージではR²CCL-AllReduceの依存調整費が大きく正常系の66%まで帯域が落ち、Balanceの92%より不利である。単純HotRepairは故障NICのtrafficを一つの代替経路へ寄せるため、大メッセージで約46〜50%のthroughput lossを生じる。",
-    "interpretation": "主な利得は、障害をアプリケーション再起動へ昇格させずtransport層で局所処理することと、障害後に残ったネットワークを静的ringのまま使わずcollective計画まで再最適化することの組合せから生じる。予備NICへの切替だけでは帯域偏りが残るため、障害規模・message size・rail overlapに応じて通信量そのものを再配分することが重要である。",
-    "quality_impact": "通信データの意味を近似せず、確認済みチャンク境界までrollbackして未完了データを再送する無損失復旧である。学習ではrankを除外しないためgradient lossを導入せず、推論でも要求の再生成や近似KV復元を行わない。"
-  },
-  "reservation": {"claim_id": "claim-8c805808c02a755f3cb9a74d", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5205040dc3d58f265e4349ca",
+  "job_id": "job-research-e355b9d9df6bf3d0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5205040dc3d58f265e4349ca",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8c805808c02a755f3cb9a74d",
-  "job_id": "job-research-2fabaceee2c88fd9",
-  "data": {
-    "limitations": "複数NICを備え、障害後も少なくとも一つの健全なinter-node経路が残る構成を前提とする。NVLink/NVSwitchやGPU、OS、process自体の故障、switch-wide outage、完全partitionは対象外である。実機評価は2ノードH100に限られ、数百〜1024 GPUの結果はSimAIシミュレーションである。複数NICへの事前登録や予備QPにホスト側資源を要し、PXNを選ぶ場合は数十MB程度の中継GPUバッファと追加NVLink hopが発生する。",
-    "differences": "チェックポイント方式は障害後にジョブ状態を復旧し、DéjàVuは推論KVを隣接workerへ複製してアプリケーション状態を守る。AdapCCはcollective開始前に参加rankを調整するが、進行中のNIC障害は処理できずrank除外で計算能力も失う。R²CCLはNCCL transport内部で進行中通信を別NICへ移し、全rankを維持したまま残存帯域へcollective scheduleを再配置する点が異なる。",
-    "implementation_status": "公式 `r2cc-project/R-2CCL` リポジトリが公開されている。論文実装はNCCL 2.23.4に約3K行のC++拡張を加え、ncclNet plugin、proxy progress loop、collective planner、専用CUDA broadcast kernelを変更する。",
-    "research_positioning": "LLMサービング・分散実行系統の通信耐障害ランタイムに位置する。推論サーバのスケジューリングやKV管理を直接変更せず、下位のcollective層を耐障害化することで、テンソル並列、パイプライン並列、プリフィル・デコード分離のような複数ノード推論を通信故障から保護する。",
-    "relation_to_existing_repository": "推論の分離配置・tensor parallel通信・compute/communication overlap研究に対する基盤層の補完である。特にprefill/decode分離ではKV転送前後のcollectiveやノード間通信が障害点になり得るため、R²CCLの接続移行を下位層へ組み込める。一方、SSD/NVMe offloadやKV cache容量削減とは直接関係せず、ストレージ障害やGPUメモリ不足を解決する手法ではない。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-8c805808c02a755f3cb9a74d", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-5205040dc3d58f265e4349ca",
+  "job_id": "job-research-e355b9d9df6bf3d0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5205040dc3d58f265e4349ca",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
