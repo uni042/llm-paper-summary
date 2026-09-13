@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（66本）
+## 自動生成の論文一覧（67本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -75,6 +75,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   VeriCacheは圧縮KVで候補を生成し、完全KVをCPU／共有ストアから読み込んで最初の不一致を検証・訂正し、品質を保ったまま復元帯域とGPU計算を要求間で重ねる方式。
+
+- **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
+  実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：1  
+  BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
 
 - **2026-04 · [HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing](2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -158,6 +162,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：0  
   SwiftCacheはKV需要の小さいモデルの空きHBMを借り、主モデルの接頭辞KVをNVLinkで共有し、層単位でストリーム転送してCPU／SSD退避のTTFTを減らす方式。
 
+- **2026-06 · [SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving](2026-2606.08635-spectrumkv-mixed-precision-pd-kv-transfer.md)**  
+  実装：[✓](https://github.com/YangSteve1223/kvcache-lab) ・ リポジトリ内被引用：0  
+  KV転送をトークンの残す/捨てる二値選択ではなくFP16/INT8/INT4の精度配分として扱い、モデル別INT4耐性probeで安全性を切替え、同一転送量でPPL・検索精度を保ちながら転送経路TTFTを50〜62%削減する。
+
 - **2026-06 · [SparseX: Efficient Segment-Level KV Cache Sharing for Interleaved LLM Serving](2026-2606.01751-sparsex-segment-level-kv-sharing.md)**  
   実装：[✓](https://github.com/MemTensor/SparseX) ・ リポジトリ内被引用：0  
   任意位置の再利用区間をRoPEで位置整合し、新しく追加された質問側の注意から重要トークンだけを選んでKVを再計算することで、会話・検索拡張生成・複数エージェントの文脈共有を高速化するvLLM統合方式。
@@ -165,10 +173,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-06 · [PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression](2026-2606.15157-polykv-heterogeneous-kv-retention-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PolyKVは層・プリフィル／デコード段階ごとに追い出し方式と容量を校正評価で選び、感度の高い層へKV予算を再配分して固定規則の品質低下を減らす方式。
-
-- **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
-  実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：0  
-  BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
 
 - **2026-05 · [ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse](2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -287,7 +291,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   FastDecodeはKVと注意計算を複数CPUノードへ置き、GPUは重み計算を大バッチで進め、巨大KVのGPU転送とHBM容量制約を減らす異種パイプライン。
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：15  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-09 · [InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference（preprint: InstInfer）](2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md)**  
