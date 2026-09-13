@@ -2,23 +2,20 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2605.01708-20260913-0405-v10-d",
-  "job_id": "job-research-2466f653227bab25",
+  "attempt_id": "attempt-2608.22643-20260913-0930-v10-d",
+  "job_id": "job-research-dddd01489d1d0d88",
   "data": {
-    "overview": "SplitZipはQwen3-32Bの実BF16 KVで1.324倍の完全無損失圧縮を行いながら、圧縮613.3GB/s、展開2181.8GB/sを達成する。圧縮率だけならDFloat11等が高い場合があるが、オンラインKV経路で重要な圧縮側の処理量が桁違いに高い。Mooncake実転送では大きなKVでLlama-3-8Bが最大1.27〜1.32倍、Qwen3-30B-A3Bが1.22〜1.32倍高速化し、SGLangではTTFT最大1.303倍、要求処理量最大1.233倍となる。短い系列では固定費で利得が小さいか軽微な悪化もあり、長文・低速ネットワークほど効果が大きい。",
+    "overview": "モデルが常駐メモリを超える9.0〜13.2GiB CUDA利用可能量では、NeuroPrefetcherはMistral-7B FP16を1.7〜3.7 tok/sで動かし、llama.cppの0.2〜0.3 tok/sに対して7.9〜12.0倍高速化する。14GiB制限・11.9GiB CUDA利用可能時は3.22 tok/sで、llama.cpp 0.34、FlexGen all-disk 0.25、Ollama 0.07を上回る。差分再利用で82〜85%の活性行を前トークンから残し、NVMe読出しは新規15〜18%に限定される。ただし最適化後も1トークン遅延の80〜87%はNVMe I/Oであり、ストレージが依然として支配的である。",
     "key_results": [
-      {"metric": "BF16圧縮処理量", "value": "613.3±2.6 GB/s", "baseline": "nvCOMP Bitcomp 341.5±7.1 GB/s", "condition": "H200、Qwen3-32B実KV、256M BF16要素", "interpretation": "最強の比較エンコーダより約1.8倍速く、オンラインプリフィル経路へ圧縮を置きやすい。"},
-      {"metric": "BF16展開処理量", "value": "2181.8±38.5 GB/s", "baseline": "ZipServ GPU kernel 1260.9 GB/s", "condition": "同コーデック評価", "interpretation": "固定長密経路と疎補正により、デコード側で圧縮が新しい支配的ボトルネックになりにくい。"},
-      {"metric": "BF16圧縮率", "value": "1.324×", "baseline": "生BF16", "condition": "Qwen3-32B実KV", "interpretation": "約24%の転送バイト削減を完全無損失で得る。最大圧縮率より処理量を優先した設計である。"},
-      {"metric": "Mooncake KV転送高速化", "value": "Llama-3-8B最大1.27〜1.32×、Qwen3-30B-A3B最大1.22〜1.32×", "baseline": "生BF16転送", "condition": "系列長・batchの八掃引", "interpretation": "ペイロードが大きく帯域支配になるほど、圧縮量がほぼそのまま転送時間短縮へ変わる。"},
-      {"metric": "SGLang TTFT", "value": "batch1で最大1.303×、batch16で最大1.274×高速化", "baseline": "生KV転送", "condition": "Qwen3-32B、長文系列", "interpretation": "コーデック単体だけでなく、実サービングの最初のトークンまでの時間を短縮する。"},
-      {"metric": "SGLang要求処理量", "value": "batch1で最大1.233×、batch16で最大1.206×", "baseline": "生KV転送", "condition": "Qwen3-32B", "interpretation": "転送待ち短縮が次要求の処理余力へ変換される。"},
-      {"metric": "64K転送時間", "value": "1749.3ms→1397.0ms", "baseline": "生BF16 KV", "condition": "Qwen3-32B、batch16、RoCE 4×200G、実効700Gb/s", "interpretation": "長文では総時間の92.9%が圧縮済み転送で、圧縮5.7%、展開1.4%に留まる。"},
-      {"metric": "事前校正の効果", "value": "圧縮613.3 GB/s対動的校正80.7 GB/s、7.6×高速", "baseline": "入力ごとに上位16を再計算", "condition": "同じ圧縮率1.324×、エスケープ0.16%", "interpretation": "オンラインのヒストグラム・上位k探索を外すことが圧縮速度に決定的で、固定表でもデータ集合をまたいで99%以上を覆う。"},
-      {"metric": "FP8 E5M2追加圧縮", "value": "1.14×、圧縮249.7 GB/s、展開564.9 GB/s", "baseline": "生E5M2 KV", "condition": "Qwen3-32B", "interpretation": "既に半サイズのFP8にも、品質交換なしで追加帯域削減を重ねられる。"}
+      {"metric":"モデル超過メモリ領域のデコード速度","value":"llama.cpp比7.9〜12.0倍","baseline":"llama.cpp FP16 mmap demand paging","condition":"Mistral-7B FP16、Jetson AGX Orin、CUDA利用可能9.0〜13.2GiB","interpretation":"必要重みをOSページフォールトで層単位に後追いせず、予測した新規活性行だけを先に読むことでストレージ移動量とGPU待ちを大幅に削減する。"},
+      {"metric":"14GiBメモリ制限時スループット","value":"3.22 tok/s","baseline":"llama.cpp 0.34、FlexGen all-disk 0.25、Ollama 0.07 tok/s","condition":"11.9GiB CUDA利用可能、Mistral-7B FP16","interpretation":"既存20システムのうち多くが割当失敗または統合メモリ前提不一致で生成へ到達せず、明示的ストレージ実行がこの環境で必要になる。"},
+      {"metric":"活性行差分再利用率","value":"82〜85%再利用、15〜18%のみ新規読出し","baseline":"毎トークン全活性行を再読出し","condition":"62%疎、メモリ制約全域","interpretation":"トークン間のMLP活性局所性をキャッシュヒットとして扱うことで、疎性を計算削減だけでなくNVMe交通削減へ変換する。"},
+      {"metric":"NVMe読出し量","value":"14.8GiB利用時103MiB/token、9.0GiB利用時1GiB未満/token","baseline":"13.49GiBモデル全体または層全体の反復読出し","condition":"62%疎、密/疎境界をメモリごとに校正","interpretation":"利用可能メモリが約6GiB減ってもI/Oを段階的に増やし、全層ページングへ急激に退行しない。"},
+      {"metric":"品質保持","value":"Mistral約95〜96%、Llama-3約92〜93%のHellaSwag密モデル精度保持","baseline":"各モデルの密実行","condition":"d=20、複数疎度","interpretation":"中心予測は約99%正しいため、主な品質損失は予測ミスより活性閾値化・クラスタ中心近似から生じる。密層数dを増やすと品質を回復できる。"},
+      {"metric":"残存遅延ボトルネック","value":"NVMe I/Oが1トークン遅延の80〜87%","baseline":"総per-token latency","condition":"62%疎、全メモリ水準","interpretation":"差分先読み後もストレージが律速で、次の改善余地は深い先読み、read併合、行量子化、GPUとの重畳にある。"}
     ],
-    "negative_results": "小さいKVや短い系列では圧縮・展開カーネルの固定費が相対的に大きく、SGLangでわずかな遅延悪化が生じる場合がある。BF16の圧縮率は指数冗長性だけを利用するため約1.32倍に留まり、可変長・損失圧縮の高い削減率には届かない。上位8の3ビット化は理論上コード幅を減らすが、エスケープ率が0.16%から7.89%へ約50倍増えて圧縮率・展開速度とも悪化する。トークン別・チャネル別の細粒度校正は被覆率を99.90%へわずかに上げる一方、圧縮・展開がサブGB/sへ落ちて実用的でない。固定コード表ではQwen3-32B Vキャッシュの一部初期層で被覆率が98.77%まで下がる。",
-    "interpretation": "SplitZipの設計判断は『圧縮率を最大化する』のではなく、『ネットワーク転送を減らした分よりコーデック費が十分小さい』領域を作ることにある。GPUでは4ビット固定長コードがバイト詰込みと規則的なルックアップに適し、99%以上を密経路へ載せることで例外処理をほぼ消せる。長文ではネットワークが支配するため約1.32倍の圧縮率でも実転送とTTFTへ大きく反映される。一方、短文・高速リンクでは圧縮自体を省く判断が合理的であり、常に有効な万能圧縮ではない。",
-    "quality_impact": "ビット完全一致の無損失方式であり、モデル出力品質の交換はない。BF16では全符号・仮数と全指数を復元し、FP8拡張でも同様に生値を再構成する。"
+    "negative_results": "モデルが完全に常駐できる13.9〜14.8GiBではllama.cppが5.9〜7.7 tok/sへ急改善し、NeuroPrefetcherの相対優位は1.2〜1.1倍へ縮む。密前半を増やしすぎると疎後半の行バッファが足りず、62%疎でd=14の1.60 tok/sからd=16では0.98 tok/sへ落ち、d=32では0.19 tok/sまで低下する。低い疎度では行バッファが大きく、9.0GiB条件で一部層が全層NVMe読出しへ退行する。Llama-3-8BはMistralより疎化に敏感である。",
+    "interpretation": "本手法の核心は『SSDから何を読むか』をモデル実行の結果として後追いするのでなく、第0層で全後続層の需要を一括予測し、GPU計算前にI/Oを開始する点にある。さらに予測活性集合そのものを毎回読むのでなく、前トークンとの集合差だけを転送するため、時間局所性がそのままSSD帯域削減になる。メモリが増えるとストレージ対象層が減り、モデルが完全常駐するとこの利点の対象自体が消えるため、速度倍率が縮むのは設計どおりである。",
+    "quality_impact": "活性閾値化・中心クラスタリング・中心ID予測を使うため近似推論であり完全無損失ではない。予測器自体の分類正解率は約99%で、品質損失は主に疎化の強さと疎実行する層数に依存する。密前半を増やすと品質は密実行へ近づくが、メモリとI/O性能の余裕は減るため、品質・容量・速度の三者交換になる。"
   }
 }
