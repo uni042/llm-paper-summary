@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **129** |
+| 未処理の論文候補（Research ready） | **128** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **260** |
+| 全文精読完了（累計） | **261** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **20 / 24** |
@@ -35,13 +35,13 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **129** |
+| 未処理候補（Research ready） | **128** |
 | 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **127** |
+| 今すぐ着手可能（Claimable） | **126** |
 | :30 通常worker Active claims | **2** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 04:18 JST** |
+| :30 通常worker 直近claim | **09-14 04:21 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
@@ -54,7 +54,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=129 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=128 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **22件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
