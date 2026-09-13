@@ -1,21 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-a2d551c7395a301682c453de",
-  "job_id": "job-research-58b5be68410fbaab",
   "slot": "positioning",
-  "data": {
-    "limitations": "LCM大ページは理論上ページサイズの組合せによって非常に大きくなる可能性がある。論文ではvLLM v0.6.4対応モデル中最大のJambaでも小ページの84倍で性能低下を観測しないが、将来さらに異質な状態サイズが混在するモデルでは再検討が必要である。複数モデルを同一エンジンで完全に共有する機能は将来課題として残る。評価はNVIDIA H100/L4とvLLM中心で、AMD等の別実装は未検証。大バッチ化を優先すると個々のTPOTが増えることがある。",
-    "differences": "PagedAttentionは固定ページと全プレフィックス依存を前提とするのに対し、Jengaは大きさの異なる状態をLCM大ページ上の種別別小ページへ分離し、依存関係も層別APIで表現する。MAXページ方式より断片化を抑え、GCD方式のような多数の専用GPUカーネルを要求しない。SGLang/TGIの既存ページ管理に対しても、異種層間の容量交換と整列した追い出しを新たに提供する。",
-    "implementation_status": "vLLM上約4000行Pythonで実装し、既存PagedAttention CUDAカーネル変更なし。vLLM v0.6.4の90モデルと互換と報告。一次資料から独立公開コードURLは確認できない。",
-    "research_positioning": "PagedAttentionを出発点とするKVキャッシュ仮想化の次段階として、モデル内部の異種注意・状態空間・マルチモーダル・複数モデルを同じメモリ管理抽象化で扱う研究。",
-    "relation_to_existing_repository": "KVキャッシュ圧縮やオフロードでは容量を減らすのに対し、Jengaは正確な状態を保持したまま不要部分と断片化を除去する。vLLM/SGLang等のサービング基盤、スライディング窓、Mamba、VLM、投機的復号に横断的に効くため、メモリ管理系統の基準点として重要。",
-    "audit_required": true,
-    "audit_reason": "一次資料に独立した公式コード公開先が見当たらないため実装公開状況と、その後の正式採録状態を監査する。"
-  },
+  "attempt_id": "attempt-b2ef1c299149ede85d4c9920",
+  "job_id": "job-research-6be22b91f978c683",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a2d551c7395a301682c453de",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-b2ef1c299149ede85d4c9920",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -1,55 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-a2d551c7395a301682c453de",
-  "job_id": "job-research-58b5be68410fbaab",
   "slot": "results",
-  "data": {
-    "overview": "H100ではvLLM比でスループット最大4.92倍、平均1.80倍、L4では最大3.29倍、平均1.69倍。低負荷ではE2E遅延差は平均2.6%に留まり、高負荷ではE2E遅延を最大2.24倍、TTFTを最大29.43倍短縮する。Ministralの代表トレースではvLLMがKVメモリの38.2%を浪費するのに対しJengaは0.04%まで削減し、平均デコードバッチは2.5〜2.74程度から5.39へ1.95倍増加する。プレフィックスキャッシュはヒット率最大1.60倍、スループット最大1.77倍。",
-    "key_results": [
-      {
-        "metric": "H100 serving throughput",
-        "value": "最大4.92倍、平均1.80倍",
-        "baseline": "vLLM",
-        "condition": "異種モデル群・各対応データセット",
-        "interpretation": "断片化削減と層別プレフィックス再利用でより大きいバッチを実行できる。"
-      },
-      {
-        "metric": "L4 serving throughput",
-        "value": "最大3.29倍、平均1.69倍",
-        "baseline": "vLLM",
-        "condition": "24GB L4で動作可能なモデル群",
-        "interpretation": "小容量GPUでも異種状態の無駄削減が直接バッチ容量へ変換される。"
-      },
-      {
-        "metric": "KVメモリ浪費",
-        "value": "38.2%→0.04%",
-        "baseline": "vLLM",
-        "condition": "Ministral、静的/動的トレース",
-        "interpretation": "窓外KV解放と二段階配置で断片化をほぼ除去する。"
-      },
-      {
-        "metric": "平均デコードバッチ",
-        "value": "5.39（他エンジン平均2.50-2.74、約1.95倍）",
-        "baseline": "vLLM/SGLang/TGI",
-        "condition": "Ministral、20同時要求、入力55k-110k",
-        "interpretation": "同一GPU容量でより多くの要求を同時デコードできる。"
-      },
-      {
-        "metric": "高負荷TTFT",
-        "value": "最大29.43倍短縮",
-        "baseline": "vLLM",
-        "condition": "Llama Vision、要求率増加時",
-        "interpretation": "メモリ不足による待ちと小バッチ化を抑える効果が高負荷で顕在化する。"
-      }
-    ],
-    "negative_results": "低要求率ではvLLMとのE2E遅延差は平均2.6%程度で大きな利得はない。より多くの要求を同時実行するためJengaのTPOTはvLLMより大きくなる場合があるが、同じ同時要求数に揃えれば同等TPOTになる。プレフィックス記事数が少なく全てキャッシュできる条件では二段階割当の追加処理によりわずかなオーバーヘッドがある。",
-    "interpretation": "Jengaの利得はカーネル高速化ではなく、異種状態に合わせて不要メモリを解放し、容量を要求間・層種別間で再配分してバッチと再利用率を増やすことから生じる。",
-    "quality_impact": "モデル演算・重み・注意結果を近似せず、必要状態だけを正確に保持するため生成品質への変更はない。"
-  },
+  "attempt_id": "attempt-b2ef1c299149ede85d4c9920",
+  "job_id": "job-research-6be22b91f978c683",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a2d551c7395a301682c453de",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-b2ef1c299149ede85d4c9920",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }

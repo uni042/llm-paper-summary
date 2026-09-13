@@ -1,41 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-a2d551c7395a301682c453de",
-  "job_id": "job-research-58b5be68410fbaab",
   "slot": "evaluation",
-  "data": {
-    "hardware": "NVIDIA H100 80GB + 2×Intel Xeon Platinum 8480C (CUDA 12.5)、NVIDIA L4 24GB + 2×AMD EPYC 7F52 16-Core (CUDA 12.4)。",
-    "software": "vLLM v0.6.3をエンドツーエンド比較に使用。JengaはvLLM上約4000行Python。分解比較はvLLM、SGLang、TGI。",
-    "methodology": "Llama 3.2 Vision、Gemma-2、Ministral、Jamba-1.5、character.ai模擬モデル、PyramidKV、Llama 3.1などを、MMMU-pro、MMLU-pro、長文arXiv-QAで評価。標準vLLMからメモリ管理だけをJengaへ置換してスループット、E2E遅延、TTFT、TPOT、バッチサイズ、断片化、プレフィックスヒット率を測る。VLM視覚キャッシュと投機的復号もケーススタディ評価する。",
-    "scope": "異種KV/状態を持つLLM servingのGPUメモリ管理。均質なLlamaではオーバーヘッドがほぼないことも確認。",
-    "workloads": [
-      "MMMU-pro",
-      "MMLU-pro",
-      "arXiv-QA",
-      "55k-110k入力の長文合成負荷",
-      "VLM chunked prefill",
-      "speculative decoding"
-    ],
-    "baselines": [
-      "vLLM",
-      "SGLang",
-      "TGI"
-    ],
-    "metrics": [
-      "throughput",
-      "E2E latency",
-      "TTFT",
-      "TPOT",
-      "decode batch size",
-      "KV memory waste",
-      "prefix cache hit rate"
-    ],
-    "reproducibility": "モデル・GPU・CUDA・vLLM版・データセットと主要アルゴリズムは詳述される。独立コード公開URLは一次資料では確認できないため完全再現には実装作業が必要。"
-  },
+  "attempt_id": "attempt-b2ef1c299149ede85d4c9920",
+  "job_id": "job-research-6be22b91f978c683",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a2d551c7395a301682c453de",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-b2ef1c299149ede85d4c9920",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }

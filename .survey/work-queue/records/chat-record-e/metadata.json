@@ -1,95 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-a2d551c7395a301682c453de",
-  "job_id": "job-research-58b5be68410fbaab",
   "slot": "metadata",
-  "data": {
-    "canonical_id": "arXiv:2503.18292",
-    "arxiv_id": "2503.18292",
-    "doi": "10.48550/arXiv.2503.18292",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
-    "summary": "PagedAttentionは各層のKVキャッシュが同じ大きさで、各トークンが全プレフィックスへ依存するという均質Transformerの前提を置く。しかしVLMの視覚埋め込み、スライディング窓、Mamba状態、投機的復号の複数モデルでは、記憶要素の大きさと必要なプレフィックス集合が層ごとに異なる。Jengaは全種類の小ページサイズの最小公倍数を大ページとして共有する二段階アロケータと、層ごとにキャッシュヒット・最終アクセス・追い出し優先度を定義できるプレフィックス部分集合APIを導入する。リクエスト単位で小ページを同じ大ページへ寄せ、解放時に大ページを戻しやすくする。vLLM上約4000行のPythonで実装しCUDAカーネル変更なしで90モデルに対応し、H100でスループット最大4.92倍・平均1.80倍、L4で最大3.29倍・平均1.69倍、KVメモリ浪費を代表条件で38.2%から0.04%へ削減する。",
-    "list_summary": "異なる大きさ・依存関係のKV/視覚/Mamba状態を、LCM大ページと層別キャッシュAPIで統合管理し、vLLM比でスループット最大4.92倍、GPUメモリ利用を最大79.6%改善する。",
-    "authors": [
-      "Chen Zhang",
-      "Kuntai Du",
-      "Shu Liu",
-      "Woosuk Kwon",
-      "Xiangxi Mo",
-      "Yufeng Wang",
-      "Xiaoxuan Liu",
-      "Kaichao You",
-      "Zhuohan Li",
-      "Mingsheng Long",
-      "Jidong Zhai",
-      "Joseph Gonzalez",
-      "Ion Stoica"
-    ],
-    "authors_affiliations": "Tsinghua University、University of Chicago、UC Berkeley、Independent Researcher。",
-    "published": "2025-03-24",
-    "publication": "arXiv:2503.18292v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1",
-    "lineage": "kv-cache-optimization-compression",
-    "topics": [
-      "KVキャッシュ",
-      "異種メモリ割当",
-      "PagedAttention",
-      "プレフィックスキャッシュ",
-      "VLM",
-      "Mamba"
-    ],
-    "importance": "高。PagedAttentionの均一ページ前提を異種LLMへ拡張し、メモリ割当と層別キャッシュ規則を一つの抽象化へ統合する。",
-    "hardware_evaluation": "NVIDIA H100 80GBとNVIDIA L4 24GB実機。",
-    "hardware_details": "H100: 2×Intel Xeon Platinum 8480C、CUDA 12.5。L4: 2×AMD EPYC 7F52 16-Core、CUDA 12.4。",
-    "quality_effect": "モデル計算そのものは変更せず、必要KV/状態の保持と再利用を管理するため生成品質への変更はない。",
-    "storage_targets": [
-      "自己注意KVキャッシュ",
-      "スライディング窓KVキャッシュ",
-      "Mamba状態",
-      "視覚埋め込みキャッシュ",
-      "クロス注意KVキャッシュ"
-    ],
-    "bottlenecks": [
-      "異なる埋め込みサイズによる内部・外部断片化",
-      "層ごとに異なるトークン依存関係",
-      "一律LRUによる低いプレフィックスヒット率",
-      "小ページ解放後に大ページを返せない断片化"
-    ],
-    "evidence_locations": [
-      "§3",
-      "§4",
-      "§5",
-      "§6",
-      "§7.1-7.4"
-    ],
-    "source": "https://arxiv.org/abs/2503.18292",
-    "sources": [
-      "https://arxiv.org/abs/2503.18292",
-      "https://arxiv.org/html/2503.18292v1"
-    ],
-    "code": null,
-    "implementation": "vLLM v0.6.x上に約4000行のPythonで実装し、既存PagedAttention CUDAカーネルは変更しない。一次資料に独立した公式コードURLは記載されていない。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {
-        "canonical_id": "arXiv:2309.06180",
-        "arxiv_id": "2309.06180"
-      }
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": 1
-  },
+  "attempt_id": "attempt-b2ef1c299149ede85d4c9920",
+  "job_id": "job-research-6be22b91f978c683",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a2d551c7395a301682c453de",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-b2ef1c299149ede85d4c9920",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }
