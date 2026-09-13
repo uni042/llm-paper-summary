@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T063121Z-run1530",
+  "worker_id": "scheduled-chat-20260913-1530",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-d01c0f0ba3d381e1",
+      "claim_id": "claim-760f360b45cf33a15f0670ca",
+      "worker_id": "scheduled-chat-20260913-1530",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-760f360b45cf33a15f0670ca",
+      "claimed_at": "2026-09-13T06:32:52+00:00",
+      "expires_at": "2026-09-13T08:02:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-d01c0f0ba3d381e1"
+      ],
+      "job": {
+        "job_id": "job-research-d01c0f0ba3d381e1",
+        "type": "research",
+        "parent_job_id": "job-5d7000d72e974f06",
+        "priority": 87,
+        "canonical_id": "arXiv:2602.16603",
+        "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2602.16603",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+        "selection_reason": "chunk sizeを小さくすることでしか得られなかったprefill interruptibilityをoperator-level preemptionで実現し、event-driven schedulingで制御overheadを抑える。production traceでheterogeneous SLOを満たしながら最大goodputを最大5.6倍改善と報告し、prefill HoL blockingへの異なる実行粒度設計を示す。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:15:59+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "ValueError: results.overview must explain the main result and its practical meaning",
+        "last_validation_failed_at": "2026-09-13T04:44:58+00:00"
+      }
+    },
+    {
+      "job_id": "job-research-39ac27aff531cdb5",
+      "claim_id": "claim-6e56671cc072018185fe2492",
+      "worker_id": "scheduled-chat-20260913-1530",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-6e56671cc072018185fe2492",
+      "claimed_at": "2026-09-13T06:32:52+00:00",
+      "expires_at": "2026-09-13T08:02:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-39ac27aff531cdb5"
+      ],
+      "job": {
+        "job_id": "job-research-39ac27aff531cdb5",
+        "type": "research",
+        "parent_job_id": "job-bd760a2eca08ef00",
+        "priority": 87,
+        "canonical_id": "arXiv:2607.19539",
+        "title": "Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts",
+        "source_url": "https://arxiv.org/abs/2607.19539",
+        "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md",
+        "selection_reason": "MoE expert計算完了後にreturn all-to-allを開始する粗粒度同期を除き、persistent compute kernelがtile完成をsignalし、専用SM上のpersistent communication kernelがsegment単位転送を直ちに開始するproducer-consumer co-design。expert parallel通信をtile粒度で計算と重ねるため、MoE通信最適化の独立した低層runtime候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:25:01+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "ValueError: metadata.list_summary failed quality checks: 日本語化できる英語専門語が裸で残っている: all-to-all",
+        "last_validation_failed_at": "2026-09-13T05:15:08+00:00"
+      }
+    },
+    {
+      "job_id": "job-research-a80e9a452b825fdf",
+      "claim_id": "claim-177e0ec9f463e463252f8155",
+      "worker_id": "scheduled-chat-20260913-1530",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-177e0ec9f463e463252f8155",
+      "claimed_at": "2026-09-13T06:32:52+00:00",
+      "expires_at": "2026-09-13T08:02:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a80e9a452b825fdf"
+      ],
+      "job": {
+        "job_id": "job-research-a80e9a452b825fdf",
+        "type": "research",
+        "parent_job_id": "job-91c5a3b7cb2ac1b7",
+        "priority": 87,
+        "canonical_id": "arXiv:2604.21231",
+        "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference",
+        "source_url": "https://arxiv.org/abs/2604.21231",
+        "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.21231-sparkv-overhead-aware-on-device-kv-loading.md",
+        "selection_reason": "prefillで必要なKVを端末で再計算するかクラウドからstreamするかをchunk単位のコストで選び、通信と計算を重ねつつ無線・端末資源変動に応じてscheduleをruntime補正する。TTFTを1.3〜5.1倍短縮し、要求当たりエネルギーを1.5〜3.3倍改善しており、KV階層管理をedge/cloud協調まで拡張する研究として有用である。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:36:38+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T06:32:52+00:00"
+}
