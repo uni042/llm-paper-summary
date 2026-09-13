@@ -2,46 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e6f9fac0ed89c24240db7c8a",
-  "job_id": "job-research-bbe263213664b792",
-  "data": {
-    "overview": "SpecMoEOffは、専門家重みを一度GPUへ読み込んだ後に投機候補をまとめて検証することで転送1回あたりの有効仕事量を増やし、MoE-Lightningより総スループットを1.6〜2.9倍、平均2.1倍へ高めた。投機的デコード自体の寄与は同じ実装から投機機能を外した比較でAPPS 1.53倍、CNN/DailyMail 1.45倍であり、受理しやすいコード生成ほど効果が大きい。CPUメモリ増加は同時要求数を増やして性能へ強く効く一方、GPUメモリだけ増やした場合の効果は限定的だった。",
-    "key_results": [
-      {
-        "metric": "総スループット",
-        "value": "MoE-Lightning比1.6〜2.9倍、平均2.1倍",
-        "baseline": "MoE-Lightning",
-        "condition": "A30/4090D、APPS/CNN-DailyMail、複数出力長",
-        "interpretation": "専門家転送とCPU注意の待ちを投機的デコードとCPU/GPU重畳で隠し、同じ重み転送で処理するトークンを増やした効果を示す。"
-      },
-      {
-        "metric": "総スループット",
-        "value": "DeepSpeed-ZeRO-Inference比11.3〜27.5倍、平均17.7倍",
-        "baseline": "DeepSpeed-ZeRO-Inference 0.17.4",
-        "condition": "同じ2実機と2データセット",
-        "interpretation": "KVキャッシュをGPUへ保持して小バッチになる比較対象に対し、CPUメモリを使う大バッチ設計が大きな差を生むため、投機機能だけの差ではない。"
-      },
-      {
-        "metric": "投機的デコードの増分",
-        "value": "APPS 1.53倍、CNN/DailyMail 1.45倍",
-        "baseline": "SpecMoEOffの投機的デコード無効版",
-        "condition": "同一メモリ管理・設定最適化の内部比較",
-        "interpretation": "コード生成の方がドラフト候補を受理しやすく、1回の対象モデル検証で前進するトークン数が増えるため効果が大きい。"
-      },
-      {
-        "metric": "設定推定器の反復時間誤差",
-        "value": "反復全体9.7%",
-        "baseline": "実測5.05秒に対して推定4.56秒",
-        "condition": "入力512、出力128、候補トークン数5",
-        "interpretation": "個別ドラフト実行では誤差26.8%と大きいが、全体時間は約10%以内で、候補数選択に使う性能順位付けには一定の実用性がある。"
-      }
-    ],
-    "negative_results": "候補トークン数を1から10へ増やすとデコードスループットは単調増加せず、途中から低下する。候補数が多いほど対象モデルのCPU注意計算とドラフト生成時間が増え、CPU注意が新たな律速になるためである。入力512・出力128の例では動的候補長による改善は2%に留まる。またGPUメモリ増量だけでは、CPUメモリに比べて同時要求数を大きく増やせず、性能改善が小さい。",
-    "interpretation": "性能改善の本質は投機的デコードで計算量を増やすこと自体ではなく、専門家重み転送という固定費を複数候補で償却し、CPU注意・GPU MoE・重み転送を同時進行させる点にある。系列長が伸びるとKVキャッシュが増えてバッチを縮小せざるを得ず、CPU注意も重くなるため、最適候補数は短くなる。逆に要求が終了してメモリが空けば候補数を増やせる。したがって固定候補長ではなく、受理率と資源状態を含む動的選択が必要になる。",
-    "quality_impact": "候補トークンは軽量ドラフトモデルが提案するが、対象Mixtralモデルがまとめて検証し、受理された部分だけを確定する。したがってモデル重みを近似圧縮して品質を犠牲にする方式ではなく、投機的デコードの正しい受理手順を前提に対象モデルと同じ生成分布を維持する。"
-  },
+  "attempt_id": "attempt-2f80cee47a027e34060ff493",
+  "job_id": "job-research-e227d58af7e6af7e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e6f9fac0ed89c24240db7c8a",
+    "claim_id": "claim-2f80cee47a027e34060ff493",
     "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
     "worker_kind": "scheduled_chat"
   }
