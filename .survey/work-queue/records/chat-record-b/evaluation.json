@@ -2,39 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-9df7bd2cc9990f1f8cfa5e79",
-  "job_id": "job-research-44ece09f5c0f4e7c",
-  "data": {
-    "hardware": "4台のサーバーに各NVIDIA H20 GPU 8基を搭載し、合計32 GPUを使用する。各GPUは96GB HBM3、各サーバーは160 CPUコアと1280GB DRAMを持ち、サーバー間は200 Gbps RDMAで接続する。ルータは別の64コアCPU・256GB DRAMサーバーで動かす。",
-    "software": "vLLM v0.12.0を基盤にし、グローバルKV層としてLMCacheとMooncakeを利用する。グローバル層は200 Gbps RDMAで接続されたCPUメモリを用いる。プリフィル・デコード同居構成と分離構成の両方を評価し、分離構成ではプリフィル側の負荷を未処理トークン量で測る。",
-    "methodology": "Alibaba BAILIANの商用コーディングエージェントから、2026年5月29日10:00〜12:00のピーク時間帯に取得した2種類の本番トレースを分析する。Trace1はTB級で人気のモデル、Trace2は約280Bモデルのクラスタから得られ、いずれも少なくとも数千アクセラレータ規模で運用される。性能評価ではTrace1を対象負荷へ標本化して再生し、記録された生成長に合わせて応答を生成した後、後続要求中の応答部分を書き換えて元トレースのKV再利用形態を維持する。モデルはQwen3-Coder-30B-A3Bを単一GPU×32インスタンス、Qwen3-235B-A22B-FP8を4GPU×8インスタンスで評価する。比較方式は純粋負荷分散、LMetric、BAILIAN本番スケジューラ。グローバルKV容量をローカルKV容量の0、0.4、0.8、1.6、3.2倍に変え、到着負荷も掃引する。",
-    "scope": "実機32 H20 GPUでの評価で、商用本番トレースを利用する点は強いが、性能再生は主にTrace1で行い、モデルもQwen3系MoEの2種類に限られる。両トレースは同じ商用コーディングエージェント製品に由来し、検索・ブラウザ操作・音声など他のエージェント負荷への一般化は未検証。クラスタ間の広域スケジューリングは対象外である。",
-    "workloads": [
-      "BAILIAN coding-agent Trace1",
-      "BAILIAN coding-agent Trace2の特性分析",
-      "Qwen3-Coder-30B-A3B",
-      "Qwen3-235B-A22B-FP8",
-      "プリフィル・デコード同居",
-      "プリフィル・デコード分離"
-    ],
-    "baselines": [
-      "Load Balance",
-      "LMetric",
-      "BAILIAN production scheduler"
-    ],
-    "metrics": [
-      "SLO内クラスタTPS",
-      "SLO内プリフィルTPS",
-      "TTFT",
-      "TPOT",
-      "ローカルKV命中率",
-      "全体KV再利用率",
-      "最大負荷/平均負荷比"
-    ],
-    "reproducibility": "GPU・CPU・ネットワーク構成、vLLM版、グローバルKV基盤、モデル、比較方式、トレース採取時刻、負荷再生方法、容量掃引、主要閾値感度が記載される。論文はSMetricとトレースを公開予定としているが、v1時点では公式コードURLがなく、元の商用トレースを第三者が直ちに取得できないため現時点の完全再現性には制約がある。"
-  },
+  "attempt_id": "attempt-f28659e9140a8f6e64753d6f",
+  "job_id": "job-research-6a744249548dd135",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-9df7bd2cc9990f1f8cfa5e79",
+    "claim_id": "claim-f28659e9140a8f6e64753d6f",
     "worker_id": "scheduled-chat-paper-20260914T0130JST",
     "worker_kind": "scheduled_chat"
   }

@@ -1,20 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-702d09480328654c85eec279",
+  "claim_id": "claim-f28659e9140a8f6e64753d6f",
   "job_id": "job-research-6a744249548dd135",
-  "worker_id": "codex-luna-paper-b",
-  "worker_kind": "work",
-  "attempt_id": "attempt-702d09480328654c85eec279",
-  "request_id": "codex-luna-paper-b-20260913T032802Z",
-  "claimed_at": "2026-09-13T03:28:52+00:00",
-  "expires_at": "2026-09-13T13:24:00+00:00",
+  "worker_id": "scheduled-chat-paper-20260914T0130JST",
+  "worker_kind": "scheduled_chat",
+  "attempt_id": "attempt-f28659e9140a8f6e64753d6f",
+  "request_id": "scheduled-chat-paper-20260914T0130JST-7",
+  "claimed_at": "2026-09-13T16:58:18+00:00",
+  "expires_at": "2026-09-13T18:28:18+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-6a744249548dd135"
   ],
-  "record_bank": null,
-  "record_bank_fallback": "library",
-  "record_bank_migration": "legacy-unbanked-to-library",
-  "released_at": "2026-09-13T13:24:00+00:00"
+  "previous_claim_id": "claim-702d09480328654c85eec279",
+  "record_bank": "b"
 }
