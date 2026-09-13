@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:42 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T12:30:00+09:00**
+Run: **2026-09-13T13:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
+| Research完了 | **0** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
-| Repo収録 | **2** |
+| Repo収録 | **0** |
 | Research/Audit blocked遷移 | **0** |
 
 > Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。
@@ -53,7 +53,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **22** |
+| 通常worker run（ledger観測） | **23** |
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **147** |
 | 探索評価候補 | **724** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
-| Fallback archive（全helper） | **4** |
+| Fallback archive（全helper） | **5** |
 
 ### 24時間ファネル
 
@@ -262,7 +262,7 @@ Run: **2026-09-13T11:00:00+09:00**
 <!-- research-throughput-status:start -->
 ## Research throughput health
 
-Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
+Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **LOW**
 
 | 指標 | 値 |
 |---|---:|
@@ -271,8 +271,8 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | Claimable | **145** |
 | :00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)** |
 | :00切替閾値 | **ready > 50 → 通常worker補助 / ready ≤ 50 → 探索専用** |
-| Latest normal run | **2026-09-13T12:30:00+09:00** |
-| Latest research completed | **2** |
+| Latest normal run | **2026-09-13T13:30:00+09:00** |
+| Latest research completed | **0** |
 | Research completed (24h) | **70** |
 | Oldest active claim age | **93 min** |
 
@@ -288,4 +288,5 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
+- **Research throughput LOW**: ready=180 の高在庫状態で、最新runのresearch完了は 0 件です。探索へ逃げずresearchを継続してください。
 <!-- research-throughput-status:end -->
