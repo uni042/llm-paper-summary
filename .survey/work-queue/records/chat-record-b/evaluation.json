@@ -5,13 +5,13 @@
   "attempt_id": "attempt-b0828ffdc0038e6e8c458dc9",
   "job_id": "job-research-67fd071bb1792a36",
   "data": {
-    "hardware": "単一ノード実機。Intel Core i9-14900K、24 cores/32 threads、最大6.0GHz、NVIDIA GeForce RTX 5090 32GB、host DRAM 64GB、NVMe SSD 516GB、NUMA node 1。",
-    "software": "Qwen3-0.6Bをbackboneとして使用。phrase memoryはFineWeb-Edu、Wikipedia、C4 English、arXiv、PubMedの混合コーパスから構築し、凍結semantic encoderとしてQwen3-Embeddingを使用する。",
-    "methodology": "品質評価ではQwen3-0.6B、parameter-matched LoRA、TF-EngramをMMLU、ARC-Challenge、HellaSwag、PIQA、WinoGrande、BoolQ、OpenBookQA、SciQ、TruthfulQA-MC2、LAMBADAの10ベンチマークで比較する。system評価ではmemory tableを1M〜100M entryへ変え、offline construction時間、storage footprint、GPU memory、throughput、per-token latencyを測る。100M entryでは1024次元FP16 vectorを用いる。prefetch budgetはTop-Kを変え、SSD先読みなし、final-head-guided、early-exit-guided等を比較する。early-exit layer位置も変えてaccuracyとlatency hidingの交換関係を評価する。",
-    "scope": "評価backboneはQwen3-0.6Bのみで、単一RTX 5090ワークステーションに限定される。100M-entry表まで実測するが、数十億entry、複数SSD、multi-GPU servingは未評価。外部memory corpusは主に英語中心で、domain freshnessや更新運用も主評価外。",
-    "workloads": ["MMLU", "ARC-Challenge", "HellaSwag", "PIQA", "WinoGrande", "BoolQ", "OpenBookQA", "SciQ", "TruthfulQA-MC2", "LAMBADA", "1M〜100M phrase memory scale"],
-    "baselines": ["Qwen3-0.6B frozen backbone", "Parameter-matched LoRA", "GPU-resident phrase memory", "SSD-backed without prefetch", "Final-head-guided prefetch"],
-    "metrics": ["平均benchmark score", "GPU memory usage", "offline construction time", "storage footprint", "tokens/s", "ms/token", "prefetch sensitivity"],
-    "reproducibility": "ハードウェア構成、backbone、コーパス群、benchmark、memory size、主要prefetch parameterを論文で記載する。ただし著者公式コードは一次資料から確認できず、phrase mining/filteringやcache policyの実装細部には選択余地があるため完全再現性は限定的。"
+    "hardware": "単一ノードの実機で評価する。CPUはIntel Core i9-14900Kで24コア32スレッド、最大6.0GHz、GPUはNVIDIA GeForce RTX 5090 32GB、ホスト側主記憶は64GB、NVMe SSDは516GBで、単一NUMAノード構成である。このためGPU、CPU主記憶、SSDの三階層を一台のワークステーション内で明確に分けて測定できる。",
+    "software": "基盤モデルにはQwen3-0.6Bを用いる。外部フレーズ記憶はFineWeb-Edu、Wikipedia、C4英語版、arXiv、PubMedを混ぜたコーパスから構築し、意味ベクトル生成には凍結したQwen3-Embeddingを使う。モデル本体を再学習しない条件と、同程度の追加パラメータを持つLoRAを比較対象に含める。",
+    "methodology": "品質評価ではQwen3-0.6B、同程度の追加パラメータを持つLoRA、TF-Engramを、MMLU、ARC-Challenge、HellaSwag、PIQA、WinoGrande、BoolQ、OpenBookQA、SciQ、TruthfulQA-MC2、LAMBADAの10課題で比較し、単一課題だけでなく平均値も報告する。システム評価では外部記憶表を100万件から1億件まで段階的に増やし、オフライン構築時間、保存容量、GPUメモリ使用量、生成スループット、1トークン当たり遅延を測る。1億件の条件では1024次元のFP16ベクトルを使い、表全体がGPUへ収まらない状態を意図的に作る。先読み評価では、SSDから必要項目を利用時に読むだけの構成、最終層の予測結果を使う構成、中間層の早期予測を使う構成を比較し、先読み候補数を変えて帯域消費と命中率の交換関係を調べる。さらに早期予測を置くTransformer層の位置も移動し、早すぎる予測による精度不足と、遅すぎる予測による読み出し隠蔽時間不足の両方を評価する。",
+    "scope": "評価する基盤モデルはQwen3-0.6Bのみであり、より大きなモデルや複数GPUによる分散推論は未評価である。外部記憶は最大1億件、約216GBまで実測するが、数十億件級の表、複数SSDを束ねる構成、複数要求が同時にSSDへアクセスするサービング環境は扱わない。また、外部記憶の元コーパスは英語中心で、知識更新の頻度、古い項目の削除、複数分野の競合、長期運用時のキャッシュ変動は主要評価外である。したがって本結果は『単一利用者に近い一台構成で、大容量の静的意味記憶をSSDへ置けるか』を示す基礎評価として解釈する必要がある。",
+    "workloads": ["MMLU", "ARC-Challenge", "HellaSwag", "PIQA", "WinoGrande", "BoolQ", "OpenBookQA", "SciQ", "TruthfulQA-MC2", "LAMBADA", "100万〜1億件のフレーズ記憶規模比較"],
+    "baselines": ["Qwen3-0.6Bそのもの", "追加パラメータ量を合わせたLoRA", "GPU常駐フレーズ記憶", "先読みを行わないSSD配置", "最終層予測による先読み"],
+    "metrics": ["10課題平均得点", "GPUメモリ使用量", "オフライン構築時間", "保存容量", "生成トークン毎秒", "1トークン当たり遅延", "先読み候補数に対する性能変化"],
+    "reproducibility": "CPU、GPU、主記憶、SSDの構成、基盤モデル、使用コーパス、評価課題、外部記憶件数、主要な先読み設定は論文に記載されている。一方で著者公式コードは一次資料から確認できず、フレーズ抽出時の細かな閾値、索引配置、SSD読み出しのまとめ方、階層キャッシュの置換規則には実装者が判断すべき余地が残る。そのため主要傾向は追試可能でも、報告値を完全に再現するには不足情報がある。"
   }
 }
