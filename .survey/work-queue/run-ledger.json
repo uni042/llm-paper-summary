@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:37:00.059486+00:00",
+  "updated_at": "2026-09-13T00:40:03.594608+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,16 +16414,16 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:37:00.059486+00:00",
+      "last_recorded_at": "2026-09-13T00:40:03.594608+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 6,
+        "new_jobs": 9,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16455,6 +16455,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34728479645:1",
+          "recorded_at": "2026-09-13T00:40:03.594608+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728479645",
+            "run_attempt": "1",
+            "source_sha": "04dba3c0d7122b7a4f7d6e6a876d4fedcc232129"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16468,6 +16482,14 @@
         },
         {
           "job_id": "job-fd3fcf48ef13a75d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3e23e5daa0a22bf8",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16517,12 +16539,34 @@
           "type": "research",
           "canonical_id": "arXiv:2604.00499",
           "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions"
+        },
+        {
+          "job_id": "job-f17d3d9e58cabe5c",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-337f218e5e352539",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.09557",
+          "title": "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding"
+        },
+        {
+          "job_id": "job-research-ee741ee249b93f89",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.05147",
+          "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json",
-        ".survey/work-queue/results/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json"
+        ".survey/work-queue/results/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json",
+        ".survey/work-queue/results/20260913T0938JST-discovery-specialist-speculative-serving-4.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,

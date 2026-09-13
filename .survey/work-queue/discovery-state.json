@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:35:41+00:00",
+  "updated_at": "2026-09-13T00:38:44+00:00",
   "last_run_key": "2026-09-13T09:28:10+09:00",
-  "last_round": "specialist-uncertainty-scheduling-3",
+  "last_round": "specialist-speculative-serving-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2593,6 +2593,23 @@
       ],
       "next_axis_hint": "同じscheduling軸を反復せず、GPU kernel/runtime、network/RDMA disaggregation、またはspeculative decoding systemへ移る",
       "source_submission": "work-queue/submissions/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json"
+    },
+    {
+      "run_key": "2026-09-13T09:28:10+09:00",
+      "round": "specialist-speculative-serving-4",
+      "axis": "投機的復号・高並列サービング・production評価",
+      "query_summary": "直前のscheduling軸から切り替え、投機的復号のload-aware verification、production benchmark、serving latency modelを探索した。SPECTREは決定論的research jobで既収録completedと確認し、DSpark・SPEED-Bench・latency modelは最新HEADで対応job不在を直接確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2605.08151"
+      ],
+      "next_axis_hint": "speculative decodingを直後に反復せず、RDMA/network disaggregationまたは収録済み重要論文からのforward citationへ移る",
+      "source_submission": "work-queue/submissions/20260913T0938JST-discovery-specialist-speculative-serving-4.json"
     }
   ],
   "axes": {
@@ -4055,6 +4072,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "同じscheduling軸を反復せず、GPU kernel/runtime、network/RDMA disaggregation、またはspeculative decoding systemへ移る"
+    },
+    "投機的復号・高並列サービング・production評価": {
+      "last_run_key": "2026-09-13T09:28:10+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "next_axis_hint": "speculative decodingを直後に反復せず、RDMA/network disaggregationまたは収録済み重要論文からのforward citationへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
