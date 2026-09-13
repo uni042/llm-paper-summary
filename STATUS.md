@@ -41,14 +41,14 @@
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 06:41 JST** |
+| :30 通常worker 直近claim | **09-14 06:42 JST** |
 | :00 補助worker 直近claim | **09-14 06:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **7** |
 | 最新通常run | **2026-09-14T05:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **62 min** |
+| 最古の有効claimの経過時間 | **63 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -97,9 +97,9 @@ Run: **2026-09-14T05:30:00+09:00**
 
 - P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
 - P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
+- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
-- P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 
 ## 参考情報
 
