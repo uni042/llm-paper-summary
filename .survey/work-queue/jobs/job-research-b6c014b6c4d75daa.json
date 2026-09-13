@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b6c014b6c4d75daa",
+  "type": "research",
+  "parent_job_id": "job-505b2997047a5030",
+  "priority": 84,
+  "canonical_id": "arXiv:2608.01536",
+  "title": "Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference",
+  "source_url": "https://arxiv.org/abs/2608.01536",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.01536-celty-dual-sparse-gpu-kernel.md",
+  "selection_reason": "重み疎性と実行時活性疎性を同時に利用する単一ユーザーデコードを、既存GPUが苦手とする疎行列×疎ベクトル計算として捉え、圧縮形式・GPUカーネル・SIMTマイクロアーキテクチャを共同設計する。RLC-CSC形式と共有メモリ集約で不要メモリアクセスを削減し、GPUカーネルだけでcuBLAS比最大2.8倍、Flash-LLM比2.4倍、専用Sparse SIMT CoreではcuBLAS比最大5.3倍を報告する。低バッチ推論のカーネル/ランタイム系統を補完する候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:05:48+00:00",
+  "artifact_transport": "structured_record_v10"
+}

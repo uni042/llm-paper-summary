@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:03:15+00:00",
+  "updated_at": "2026-09-13T01:05:48+00:00",
   "last_run_key": "2026-09-13T09:57:59+09:00",
-  "last_round": "specialist-disagg-slo-1",
+  "last_round": "specialist-storage-kernel-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2699,6 +2699,25 @@
       ],
       "next_axis_hint": "次は新着GPU kernel/量子化実行系と、MoE expert配置・I/O schedulingのforward/backward citationへ軸を移す",
       "source_submission": "work-queue/submissions/20260913T1004JST-discovery-specialist-disagg-slo-1.json"
+    },
+    {
+      "run_key": "2026-09-13T09:57:59+09:00",
+      "round": "specialist-storage-kernel-2",
+      "axis": "NVMe重み先読み・疎推論GPUカーネル・fleet資源配置",
+      "query_summary": "前roundの分離型サービングから独立して、NVMeを能動的な重み供給層にする疎推論、低ビット疎GPU kernel、MoE expert cache/prefetch、vLLM fleet配置を探索。Cache-Aware Router、APEX、SPECTREは既存jobで除外し、未収録の実装・評価が強い4件を送信した。",
+      "candidate_count": 8,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 5,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.375,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2609.04895",
+        "arxiv:2608.11688",
+        "arxiv:2605.08151"
+      ],
+      "next_axis_hint": "次は最近の量子化実行系と、重要なMoE/KV論文からのforward citation・backward referenceを横断する",
+      "source_submission": "work-queue/submissions/20260913T1007JST-discovery-specialist-storage-kernel-2.json"
     }
   ],
   "axes": {
@@ -4221,6 +4240,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.5714285714285714,
       "next_axis_hint": "次は新着GPU kernel/量子化実行系と、MoE expert配置・I/O schedulingのforward/backward citationへ軸を移す"
+    },
+    "NVMe重み先読み・疎推論GPUカーネル・fleet資源配置": {
+      "last_run_key": "2026-09-13T09:57:59+09:00",
+      "rounds": 1,
+      "candidate_count": 8,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 5,
+      "accepted_count": 4,
+      "duplicate_ratio": 0.375,
+      "next_axis_hint": "次は最近の量子化実行系と、重要なMoE/KV論文からのforward citation・backward referenceを横断する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

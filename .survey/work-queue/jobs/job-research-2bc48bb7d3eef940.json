@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-2bc48bb7d3eef940",
+  "type": "research",
+  "parent_job_id": "job-505b2997047a5030",
+  "priority": 84,
+  "canonical_id": "arXiv:2604.08075",
+  "title": "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+  "source_url": "https://arxiv.org/abs/2604.08075",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.08075-dual-pool-token-budget-routing.md",
+  "selection_reason": "最大コンテキスト長向けに一律設定されたvLLM fleetでは短い要求が多数でもKVメモリが過剰予約される問題に対し、同一GPU fleetを短文高throughput poolと長文大容量poolへ分け、オンライン学習したbytes-to-token比で総token budgetを推定してO(1)で振り分ける。Azure/LMSYS実トレースとLlama-3-70B/A100評価でGPU-hoursを31〜42%削減、preemptionを5.4倍低減し、既存PagedAttention・continuous batching・PD分離とも併用可能な運用レベルの資源配置研究。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:05:48+00:00",
+  "artifact_transport": "structured_record_v10"
+}

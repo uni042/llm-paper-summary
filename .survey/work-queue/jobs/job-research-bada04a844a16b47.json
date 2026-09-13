@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-bada04a844a16b47",
+  "type": "research",
+  "parent_job_id": "job-505b2997047a5030",
+  "priority": 82,
+  "canonical_id": "arXiv:2608.09291",
+  "title": "UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge",
+  "source_url": "https://arxiv.org/abs/2608.09291",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md",
+  "selection_reason": "低ビット量子化で重みpayloadが縮むほど疎行列のindex metadataが相対的なボトルネックになる点をPMR指標で明示し、bitmap encodingと低ビット共有メモリ並列decodeを組み合わせるSpMM実装を提案する。W4A4・30〜70%疎性でFlashLLM比2.30倍、SpInfer比1.43倍、CUTLASS比1.56倍を報告し、コードも公開されているため、エッジ推論で量子化と疎性のメタデータ/I/Oコストを扱う実装研究として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:05:48+00:00",
+  "artifact_transport": "structured_record_v10"
+}

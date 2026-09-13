@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:04:35.118636+00:00",
+  "updated_at": "2026-09-13T01:06:57.385992+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T01:04:35.118636+00:00",
+      "last_recorded_at": "2026-09-13T01:06:57.385992+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 18,
+        "new_jobs": 23,
         "new_papers": 1,
         "fallback_archived": 3
       },
@@ -16599,6 +16599,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34729649292:1",
+          "recorded_at": "2026-09-13T01:06:57.385992+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34729649292",
+            "run_attempt": "1",
+            "source_sha": "6c4c1e30b20e53c9ebc1e8ea4a852f54c967e9a9"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16668,6 +16682,14 @@
         },
         {
           "job_id": "job-395a42f77fdb747e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-505b2997047a5030",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16801,6 +16823,41 @@
           "type": "research",
           "canonical_id": "arXiv:2508.01989",
           "title": "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving"
+        },
+        {
+          "job_id": "job-067d00d93576a085",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2bc48bb7d3eef940",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.08075",
+          "title": "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving"
+        },
+        {
+          "job_id": "job-research-b6c014b6c4d75daa",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01536",
+          "title": "Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference"
+        },
+        {
+          "job_id": "job-research-bada04a844a16b47",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.09291",
+          "title": "UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge"
+        },
+        {
+          "job_id": "job-research-dddd01489d1d0d88",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.22643",
+          "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching"
         }
       ],
       "new_paper_ids": [
@@ -16814,7 +16871,8 @@
         ".survey/work-queue/results/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json",
         ".survey/work-queue/results/20260913T0947JST-discovery-specialist-foundational-omissions-7.json",
         ".survey/work-queue/results/20260913T0950JST-discovery-specialist-foundational-runtime-8.json",
-        ".survey/work-queue/results/20260913T1004JST-discovery-specialist-disagg-slo-1.json"
+        ".survey/work-queue/results/20260913T1004JST-discovery-specialist-disagg-slo-1.json",
+        ".survey/work-queue/results/20260913T1007JST-discovery-specialist-storage-kernel-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",
