@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "job-20f6236718384c35",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-agentic-serving-6",
+    "axis": "agentic serving・workflow-aware KV管理",
+    "query_summary": "agentic workloadのworkflow-aware serving、KV eviction/prefetch、状態オフロード、tool-result再利用を広く確認した。CacheScout 2608.14624とAgentSysBench 2608.15127はidentity delta、Helium 2603.16104は既存research job、SwiftCache 2606.16135は既存discovery履歴で既収録を確認したため新規強候補は残らなかった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2608.14624",
+      "arxiv:2608.15127",
+      "arxiv:2603.16104",
+      "arxiv:2606.16135"
+    ],
+    "next_axis_hint": "GPU runtime/kernelとframework実装由来の新着を再確認し、その後ネットワーク・移動体KV migrationの隣接軸で枯渇確認する",
+    "empty_round_reason": "agentic servingの強候補はすべて正本で既収録または既存job化されていた。"
+  }
+}
