@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3d2f4129c613aa101dc89f4e",
+  "attempt_id": "attempt-0542099738790547453ebb4b",
   "job_id": "job-research-8409b6752444b980",
   "data": {
     "overview": "Auroraは未学習ドラフトを初日から配備しても、実配信を模した要求列から採用長と要求単位スループットを継続的に改善する。Qwen3-8Bの混合トラフィックでは平均採用長が3.08まで上がり、静的な事前学習済みドラフト2.63と事前学習後の継続微調整2.99を上回り、要求単位スループットは302.3 tokens/sへ到達する。領域を順番に切り替える分布変化では未学習ドラフトが約1万要求で採用長2.46へ回復し、静的ドラフト2.57に接近する。大規模モデルではMiniMax M2.1で最大約1.58倍、Qwen3-Coder-Nextで最大1.51倍の速度向上を得る。",
@@ -69,7 +69,7 @@
     "quality_impact": "最終出力は固定ターゲットモデルが検証したトークンに従うため、ドラフトをオンライン学習してもターゲット品質を近似的に置き換えない。ドラフトの誤提案は棄却され、性能上の損失として現れる。"
   },
   "reservation": {
-    "claim_id": "claim-3d2f4129c613aa101dc89f4e",
+    "claim_id": "claim-0542099738790547453ebb4b",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }

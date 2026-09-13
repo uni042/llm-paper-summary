@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3d2f4129c613aa101dc89f4e",
+  "attempt_id": "attempt-0542099738790547453ebb4b",
   "job_id": "job-research-8409b6752444b980",
   "data": {
     "hardware": "Qwen3-8BとLlama-3.1-8Bの実験はNVIDIA H100で行う。大規模モデル評価ではMiniMax M2.1 229BをH200 4枚・テンソル並列度4・FP8、Qwen3-Coder-Next 80BをH200 4枚・テンソル並列度4・専門家並列度4・FP8で配信し、Auroraのオンラインドラフト学習用に追加GPU一枚を使う。",
@@ -38,7 +38,7 @@
     "scope": "実験は投機的復号に適した特定のドラフト構造とSGLang配信基盤を中心にし、オンライン学習用に推論GPUとは別のGPUを必要とする。初日学習のトラフィックは実利用者ログではなく複数公開データセットを逐次要求として再生したもので、長期本番運用での安全性・忘却・学習データ管理は主評価外である。大バッチではターゲット側の効率が上がり、投機検証費用が相対的に増えるため速度利得が縮小し、Qwen3-Coder-Nextではバッチ32で投機がわずかに遅くなる。"
   },
   "reservation": {
-    "claim_id": "claim-3d2f4129c613aa101dc89f4e",
+    "claim_id": "claim-0542099738790547453ebb4b",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }
