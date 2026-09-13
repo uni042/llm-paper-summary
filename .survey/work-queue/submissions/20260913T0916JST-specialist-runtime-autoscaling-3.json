@@ -1,0 +1,30 @@
+{
+  "job_id": "job-40b815170765e1a7",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2508.19559",
+      "title": "Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.19559",
+      "reason": "Production-scale coordinated autoscaling for heterogeneous prefill/decode-disaggregated LLM serving. The primary-source abstract reports deployment on tens of thousands of GPUs, topology-aware scheduling, joint prefill/decode scaling, a 26.6 percentage-point utilization gain, and large GPU-hour savings while preserving SLOs. This is strong systems evidence and a meaningful omission if not already represented.",
+      "priority": 93
+    },
+    {
+      "canonical_id": "arXiv:2604.09562",
+      "title": "StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.09562",
+      "reason": "Combines disaggregated prefill/decode serving with adaptive speculative execution and metric-aware routing. The primary-source abstract reports evaluation on four A800 GPUs and large latency reductions versus tensor-parallel vLLM, making it a relevant candidate for the scheduling/disaggregation lineage despite the relatively small evaluation setup.",
+      "priority": 82
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:00:00+09:00",
+    "round": "specialist-runtime-autoscaling-3",
+    "axis": "production-autoscaling-disaggregated-serving-runtime",
+    "query_summary": "Rotated from heterogeneous placement and SSD storage into production autoscaling and disaggregated runtime behavior. Several apparent candidates were rejected because the current identity index or existing research jobs already contained them; two strong unrepresented candidates remained after direct identity/job/fallback-ledger checks.",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": ["arxiv:2607.07388", "arxiv:2605.04357", "arxiv:2604.23467", "arxiv:2606.17949"],
+    "next_axis_hint": "Use forward-citation and backward-reference expansion around heterogeneous serving and SSD-backed inference, then inspect networking/collective scheduling and OS/storage mechanisms for unrepresented candidates.",
+    "empty_round_reason": null
+  }
+}
