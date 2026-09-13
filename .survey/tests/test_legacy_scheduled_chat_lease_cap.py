@@ -102,7 +102,7 @@ class LegacyScheduledChatLeaseCapTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_free_banks(root)
-            seed_job(root, "job-old", 110)
+            seed_job(root, "job-old", 10)
             seed_job(root, "job-new", 100)
             seed_legacy_claim(root)
             seed_request(root)
@@ -123,7 +123,7 @@ class LegacyScheduledChatLeaseCapTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_free_banks(root)
-            seed_job(root, "job-old", 110)
+            seed_job(root, "job-old", 10)
             seed_job(root, "job-new", 100)
             seed_legacy_claim(root, heartbeat_at="2026-09-13T02:30:00+00:00")
             seed_request(root)
