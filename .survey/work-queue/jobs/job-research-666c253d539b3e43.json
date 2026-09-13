@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-666c253d539b3e43",
+  "type": "research",
+  "parent_job_id": "job-fd3fcf48ef13a75d",
+  "priority": 86,
+  "canonical_id": "arXiv:2603.07917",
+  "title": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+  "source_url": "https://arxiv.org/abs/2603.07917",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+  "selection_reason": "出力長が事前不明で、要求が計算量とメモリ量の両方に制約されるというLLM推論固有の不確実性・ハイブリッド資源需要を同時に扱う。prompt内容と過去実績から出力長分布を予測し、計算・メモリを含む実サービス費用へ変換したうえで不確実性を考慮したスケジューリングを行い、多様な実機条件で28.7%以上の効率改善を報告する。単一出力長予測や計算量だけに依存するschedulerとの差分が明確。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T00:35:41+00:00",
+  "artifact_transport": "structured_record_v10"
+}

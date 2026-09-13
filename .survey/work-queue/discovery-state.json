@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:33:41+00:00",
+  "updated_at": "2026-09-13T00:35:41+00:00",
   "last_run_key": "2026-09-13T09:28:10+09:00",
-  "last_round": "specialist-agentic-serving-2",
+  "last_round": "specialist-uncertainty-scheduling-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2576,6 +2576,23 @@
       ],
       "next_axis_hint": "agentic軸の直後反復を避け、network/RDMA型分離サービング、GPU runtime/kernel compilation、または隣接OS/storageの推論向け資源管理へ移る",
       "source_submission": "work-queue/submissions/20260913T0933JST-discovery-specialist-agentic-serving-2.json"
+    },
+    {
+      "run_key": "2026-09-13T09:28:10+09:00",
+      "round": "specialist-uncertainty-scheduling-3",
+      "axis": "出力長不確実性・tail-aware scheduling隣接",
+      "query_summary": "agentic servingから軸を変え、出力長予測・需要不確実性・tail latencyを扱うLLM scheduling研究を探索した。Beyond Predictionは決定論的research jobで既収録completedと判定し、SageSchedとTIEは最新HEADで対応job不在を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2606.18431"
+      ],
+      "next_axis_hint": "同じscheduling軸を反復せず、GPU kernel/runtime、network/RDMA disaggregation、またはspeculative decoding systemへ移る",
+      "source_submission": "work-queue/submissions/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json"
     }
   ],
   "axes": {
@@ -4028,6 +4045,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "agentic軸の直後反復を避け、network/RDMA型分離サービング、GPU runtime/kernel compilation、または隣接OS/storageの推論向け資源管理へ移る"
+    },
+    "出力長不確実性・tail-aware scheduling隣接": {
+      "last_run_key": "2026-09-13T09:28:10+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "同じscheduling軸を反復せず、GPU kernel/runtime、network/RDMA disaggregation、またはspeculative decoding systemへ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

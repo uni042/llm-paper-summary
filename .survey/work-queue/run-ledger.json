@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:34:45.874652+00:00",
+  "updated_at": "2026-09-13T00:37:00.059486+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,16 +16414,16 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:34:45.874652+00:00",
+      "last_recorded_at": "2026-09-13T00:37:00.059486+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 3,
+        "new_jobs": 6,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16441,11 +16441,33 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34728356322:1",
+          "recorded_at": "2026-09-13T00:37:00.059486+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728356322",
+            "run_attempt": "1",
+            "source_sha": "dd9f8c5a9a861a405181552a2c64c8494e839bcb"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
         {
           "job_id": "job-0eff3bf13eae4ddf",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-fd3fcf48ef13a75d",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16474,11 +16496,33 @@
           "type": "research",
           "canonical_id": "arXiv:2605.27744",
           "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving"
+        },
+        {
+          "job_id": "job-3e23e5daa0a22bf8",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-666c253d539b3e43",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.07917",
+          "title": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity"
+        },
+        {
+          "job_id": "job-research-7c979683209fb954",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.00499",
+          "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json"
+        ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json",
+        ".survey/work-queue/results/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
