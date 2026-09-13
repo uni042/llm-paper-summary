@@ -14,5 +14,11 @@
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T21:14:42+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 60.3% < 70% (Japanese=4562, Latin=3003)",
+  "validation_errors": [
+    "Japanese-first prose ratio is too low: 60.3% < 70% (Japanese=4562, Latin=3003)"
+  ],
+  "last_validation_failed_at": "2026-09-13T18:54:48+00:00"
 }
