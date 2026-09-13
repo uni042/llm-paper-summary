@@ -1,0 +1,52 @@
+name: Normalize nullable paper metadata
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalize-nullable-paper-metadata.yml'
+      - '.survey/scripts/normalize_nullable_paper_metadata.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survey-background-main
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Normalize missing nullable metadata
+        run: python .survey/scripts/normalize_nullable_paper_metadata.py --repo-root .
+      - name: Commit normalized papers
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- papers; then
+            echo 'No paper metadata changes needed.'
+            exit 0
+          fi
+          git config user.name 'survey-metadata[bot]'
+          git config user.email 'survey-metadata[bot]@users.noreply.github.com'
+          git add papers
+          git commit -m 'chore: normalize nullable paper metadata'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 2))
+          done
+          echo 'Failed to publish normalized metadata after retries.' >&2
+          exit 1
