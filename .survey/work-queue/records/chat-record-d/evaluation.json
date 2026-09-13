@@ -1,1 +1,17 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2410.15332-20260913-0930-v10-epic","job_id":"job-research-a46283c0339631e6","data":{"hardware":"A100-80GB 1基、Intel Xeon Platinum 8358P 128-core@2.60GHz、DRAM 1TB。","software":"vLLM 0.4.1、Python約2K行、Ubuntu 20.04、Linux 5.16.7、CUDA 12.6。","methodology":"LongBenchの2WikiMQA、MuSiQue、SAMSum、MultiNews、HotpotQA、Needle-in-a-Haystackを各200例で評価。モデルはMistral 7B Instruct、Llama 3.1 8B Instruct、Yi Coder 9B Chat。同期評価ではFR、Naive、CacheBlend-r、LegoLink-kの精度–TTFTを比較。非同期評価では2WikiMQAからd userを構成し、各userが40秒一定率で同一文書集合へ要求を送り、到着はPoisson、Context Cache Ratioを変える。長文評価はchunk 512でcontext lengthを伸ばす。","scope":"PICは比較的新しく実トレースがないため非同期workloadは人工的であり、著者も実世界への倍率外挿に注意を促す。単一A100評価で複数GPU・ネットワークKVStoreは主評価しない。","workloads":["2WikiMQA","MuSiQue","SAMSum","MultiNews","HotpotQA","Needle-in-a-Haystack"],"baselines":["Fully Recompute","Naive PIC","CacheBlend-r"],"metrics":["TTFT","throughput","F1","ROUGE-L","OOM context length","Context Cache Ratio"],"reproducibility":"公開コード、モデル、dataset、vLLM/CUDA/OS、CPU/GPU/DRAM条件、chunk sizeと非同期生成方法が示され再現性は比較的高い。非同期負荷だけは人工生成である。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2608.11231-20260913-1230-v10-linearkv",
+  "job_id": "job-research-651c768da8e5f9fc",
+  "data": {
+    "hardware": "NVIDIA H800 80GB GPU。各モデルは1 GPUに収まり、データセット単位にGPUへ分散して評価する。先頭トークン到達時間は排他的な単一GPUで測定する。",
+    "software": "HuggingFace Transformers、flash-linear-attentionのTriton系カーネル、bfloat16。比較する位置非依存キャッシュ選択器はCacheBlend、EPIC、ProphetKV。",
+    "methodology": "Granite-4.0-H-Tiny 7B（40層中Mamba-2が36層）、OLMo-Hybrid-7B-Instruct（32層中Gated DeltaNetが24層）、Qwen3.6-27B（64層中Gated DeltaNetが48層）を評価する。LongBenchのQA 5データセットは各200例、要約3データセットとRULER 8K/32Kは各100例。文脈を512トークンの固定チャンクへ分割して独立キャッシュし、主表では約20%を再計算する。完全プリフィル、再計算なしの素朴再利用、厳密合成、単一状態初期化を同じ選択位置で比較する。再計算率は3%、5%、10%、20%、30%、40%も掃引する。先頭トークン到達時間は4文書×3反復の中央値で、90パーセンタイルは中央値から2%以内。",
+    "scope": "LongBench QA・要約とRULER 8K〜32Kを使う検索拡張生成型の長文再利用条件が中心である。3モデルのうちMamba-2はGranite 1系統、Gated DeltaNetは2系統で、著者自身も再帰方式一般の法則ではなく評価モデル上の経験的境界としている。効率測定はアイドルGPU上の単一要求の先頭トークン到達時間であり、バッチサービング、同時要求、ホストからGPUへのキャッシュ転送を含むエンドツーエンドの実運用スループットは未評価。",
+    "workloads": ["LongBench QA", "LongBench summarization", "RULER 8K", "RULER 32K", "512トークン固定チャンクの再利用文脈"],
+    "baselines": ["完全プリフィル", "再計算なしの素朴再利用", "厳密状態合成", "HYPIC風境界選択器との同条件比較"],
+    "metrics": ["QAトークンF1", "ROUGE-L", "RULER文字列一致再現率", "完全プリフィル比品質", "先頭トークン到達時間", "再帰状態の相対誤差"],
+    "reproducibility": "モデル、層構成、データ件数、チャンク長、再計算率、GPU、精度形式、主要カーネル、反復方法は本文に記載される。著者公式コードは確認できないため、公開実装をそのまま再実行できる研究より再現性は低い。Mamba-2系カーネルには小さな非決定性があり、著者はGated DeltaNetの差が平均F1 0.013以内で符号も変わる場合を同等と解釈している。"
+  }
+}
