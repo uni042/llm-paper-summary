@@ -8,31 +8,19 @@
       "completed": 6
     },
     "research": {
-      "completed": 239,
-      "ready": 150,
+      "completed": 240,
+      "ready": 149,
       "superseded": 44,
       "deferred": 3,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 150,
+    "ready_research_audit": 149,
     "actively_claimed": 1,
-    "claimable": 149
+    "claimable": 148
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-990a57145fc3b85b",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2603.19133",
-      "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
-      "source_url": "https://arxiv.org/abs/2603.19133",
-      "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-f379557cdc6a8294",
       "type": "research",
@@ -118,6 +106,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-2fabaceee2c88fd9",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2512.25059",
+      "title": "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
+      "source_url": "https://arxiv.org/abs/2512.25059",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -130,5 +130,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T16:46:45+00:00"
+  "generated_at": "2026-09-13T16:46:56+00:00"
 }
