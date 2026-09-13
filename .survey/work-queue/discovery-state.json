@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-12T23:43:14+00:00",
-  "last_run_key": "2026-09-13T08:26:04+09:00",
-  "last_round": "specialist-recent-system-crosscheck-6",
+  "updated_at": "2026-09-13T00:08:05+00:00",
+  "last_run_key": "2026-09-13T09:00:00+09:00",
+  "last_round": "specialist-moe-inference-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "直近新着・階層メモリ・serving runtimeを横断して評価した強候補がすべて既収録または既存jobと重複し、追加の未収録強候補が残らなかった。",
+  "consecutive_empty_rounds": 3,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2494,6 +2494,21 @@
       ],
       "next_axis_hint": "今回runではPIC関連、agent/NVMe state、runtime/reliability/CPU、network/collective、直近新着横断まで実施し、最後の2軸は新規強候補ゼロ。次回scheduled runでは新着差分と新しい引用関係から再開する",
       "source_submission": "work-queue/submissions/20260913T0843JST-discovery-specialist-recent-crosscheck.json"
+    },
+    {
+      "run_key": "2026-09-13T09:00:00+09:00",
+      "round": "specialist-moe-inference-1",
+      "axis": "moe-cache-aware-routing-expert-skipping-fine-grained-execution",
+      "query_summary": "Rotated away from the two recent high-duplicate broad system-search rounds and screened September 2026 primary-source MoE inference papers. Four strong candidates spanning cache-aware routing, path-compositional execution, adaptive expert skipping, and inference-time expert-count reduction passed lightweight relevance and repository dedupe checks.",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Switch to a materially distinct systems axis: GPU kernel/runtime compilation, heterogeneous resource orchestration, networking/collectives, and storage or I/O scheduling; also consider citation expansion from newly accepted high-value MoE candidates.",
+      "source_submission": "work-queue/submissions/20260913T0900JST-specialist-moe-inference-1.json"
     }
   ],
   "axes": {
@@ -3896,6 +3911,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "今回runではPIC関連、agent/NVMe state、runtime/reliability/CPU、network/collective、直近新着横断まで実施し、最後の2軸は新規強候補ゼロ。次回scheduled runでは新着差分と新しい引用関係から再開する"
+    },
+    "moe-cache-aware-routing-expert-skipping-fine-grained-execution": {
+      "last_run_key": "2026-09-13T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "Switch to a materially distinct systems axis: GPU kernel/runtime compilation, heterogeneous resource orchestration, networking/collectives, and storage or I/O scheduling; also consider citation expansion from newly accepted high-value MoE candidates."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
