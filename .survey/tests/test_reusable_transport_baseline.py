@@ -80,6 +80,26 @@ class ReusableTransportBaselineTests(unittest.TestCase):
 
             self.assertFalse((root / RESULT).exists())
 
+    def test_mismatched_baseline_result_is_treated_as_absent(self):
+        with tempfile.TemporaryDirectory() as td, tempfile.TemporaryDirectory() as sd:
+            root = Path(td)
+            snapshot = Path(sd)
+            write(root / INBOX, '{"job_id":"job-evicpress"}\n')
+            write(root / RESULT, '{"job_id":"job-other","ok":false}\n')
+            write(root / PAYLOAD, "original payload\n")
+
+            baseline.snapshot(root, snapshot)
+
+            write(root / INBOX, '{"job_id":"job-fallback"}\n')
+            write(root / RESULT, '{"job_id":"job-fallback","ok":true}\n')
+            report = root / "fallback-report.json"
+            write(report, json.dumps({"action": "dispatched"}) + "\n")
+
+            baseline.restore(root, snapshot, report)
+
+            self.assertEqual((root / INBOX).read_text(), '{"job_id":"job-evicpress"}\n')
+            self.assertFalse((root / RESULT).exists())
+
 
 if __name__ == "__main__":
     unittest.main()
