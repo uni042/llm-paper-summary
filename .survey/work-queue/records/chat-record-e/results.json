@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-71eeb07c7f418a95df699ae8",
-  "job_id": "job-research-f9d3c5ad391e4acc",
-  "data": {
-    "overview": "Loquetierは推論専用試験で到着率が高いほどFlexLLMとの差を広げ、論文総括ではSLO達成率がPEFT比20.8倍、FlexLLM比最大3.0倍になる。統一微調整・推論では推論専用時に近いSLOを維持しつつ、微調整側も平均で単独微調整時のおよそ40%の効率を確保し、PEFT比46.4倍のSLO達成率を報告する。モデル読み込みは合計5.336秒、追加ストレージ0Bで、FlexLLMの38.857秒、15.00GBを大きく下回る。BurstGPTを用いた120分の実負荷模擬では全体SLO達成率92.37%で、失敗はハードウェア容量を超える高負荷の瞬間、特にRPSが5を超える区間へ集中した。",
-    "key_results": [
-      {
-        "metric": "推論専用SLO達成率",
-        "value": "PEFT比20.8倍、FlexLLM比最大3.0倍",
-        "baseline": "PEFT / FlexLLM",
-        "condition": "Llama-3 8B、A6000、到着率を増加",
-        "interpretation": "層単位SMLMと推論用FlashInfer経路により、多数LoRAを同時処理しても高いデコードスループットを維持する。"
-      },
-      {
-        "metric": "統一微調整・推論のSLO達成率",
-        "value": "PEFT比46.4倍",
-        "baseline": "HuggingFace PEFT",
-        "condition": "H800、単一・複数LoRA微調整と単一・複数LoRA推論の組合せ",
-        "interpretation": "PEFTでは推論要求の90%以上が開始前に時間切れとなる条件がある一方、Loquetierは推論SLOを優先しながら微調整も継続する。"
-      },
-      {
-        "metric": "統一負荷下の微調整効率",
-        "value": "単独微調整時の平均約40%",
-        "baseline": "Loquetier微調整専用実行",
-        "condition": "3種類の推論到着率を併走",
-        "interpretation": "推論へ資源を譲りつつ、別ランタイムを停止するのではなく、同じ前向き計算の残余容量を微調整へ割り当てる。"
-      },
-      {
-        "metric": "モデル読み込み合計時間と追加ストレージ",
-        "value": "5.336 s / 0 B",
-        "baseline": "PEFT 4.791 s / 0 B、S-LoRA 33.985 s / 0 B、FlexLLM 38.857 s / 15.00 GB",
-        "condition": "Table 2の読み込み単体試験",
-        "interpretation": "仮想化モジュール生成のためPEFTより少し遅いが、FlexLLMの重み変換と保存に伴う大きな時間・ストレージ増加を避ける。"
-      },
-      {
-        "metric": "実負荷模擬でのSLO達成率",
-        "value": "92.37%",
-        "baseline": "Loquetier動的統一負荷",
-        "condition": "BurstGPT 120分複合負荷",
-        "interpretation": "失敗リクエストはRPSが5を超える一時的なハードウェア容量超過へ集中し、それ以外の区間ではSLOを満たす。"
-      }
-    ],
-    "negative_results": "微調整専用ではLoquetierはPEFTよりわずかに遅く、論文はLoRA線形層の逆伝播が独立呼出しになることを主因と説明する。SMLMと協調する専用逆伝播カーネルは未実装で、付録Aでも今後の改善点とされる。FlexLLMは全7個のLoRA構成要素を扱えず、複数LoRA推論で10分以上の読み込み反復へ入る条件があり、比較条件は完全には対称でない。S-LoRAにもLlama-3 GQA対応の回避策とカーネルのNaN/Inf不安定性がある。さらに推論到着率が約3 RPSを超えるとA6000のメモリアクセスがボトルネックになり、Loquetier自身もSLO失敗が増える。",
-    "interpretation": "主要な利得は、多数LoRAカーネルを単純に高速化したことだけではなく、基盤モデル、アダプタ状態、リクエスト種類の境界を分離し直したことにある。基盤重みを共有したまま仮想モデルごとの更新対象を隔離し、前向き計算の共有可能部分だけを統合するため、学習と推論をサービス単位で交互停止する必要がない。一方、逆伝播はまだPyTorch Autograd経路なので、統一処理時の学習効率には明確な改善余地が残る。",
-    "quality_impact": "SMLMや仮想化モジュールは同じLoRA演算を別のバッチ構造とカーネル構成で実行するシステム最適化で、モデル品質を近似して速度を得る方式ではない。論文の主評価はSLOとスループットであり、精度改善を主張していない。微調整の更新対象マスクにより各学習器が対応アダプタだけを更新し、共有基盤重みを誤って更新しない設計になっている。"
-  },
+  "attempt_id": "attempt-e6f9fac0ed89c24240db7c8a",
+  "job_id": "job-research-bbe263213664b792",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-71eeb07c7f418a95df699ae8",
-    "worker_id": "scheduled-chat-discovery-router",
+    "claim_id": "claim-e6f9fac0ed89c24240db7c8a",
+    "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
     "worker_kind": "scheduled_chat"
   }
 }

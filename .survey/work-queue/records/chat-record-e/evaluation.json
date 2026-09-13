@@ -2,38 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-71eeb07c7f418a95df699ae8",
-  "job_id": "job-research-f9d3c5ad391e4acc",
-  "data": {
-    "hardware": "推論専用は4基のNVIDIA A6000 48GB GPUを備えるサーバ、微調整専用と統一微調整・推論は4基のNVIDIA H800 80GB GPUを備えるサーバを使用する。各試験プロセスには少なくとも128GBのホストメモリを確保する。",
-    "software": "Loquetier公式実装、PyTorch、Transformers、PEFT、FlashInferを使用する。比較対象はFlexLLM、S-LoRAとPEFTの組合せ、HuggingFace TransformersとPEFTの組合せである。FlexLLMは公開Docker手順に従い、論文付録Bで不足していた逆伝播演算を実装して評価可能な状態へ補正する。",
-    "methodology": "基盤モデルはLlama-3 8Bである。推論用アダプタはAlpacaで学習したLoRAを使用し、推論入力はShareGPTを使う。微調整では同じLoRA設定を用い、重みをガウス分布で初期化し、AlpacaとGSM8Kを入力にする。推論専用試験ではリクエスト到着率を変え、SLO達成率、デコードのスループット、リクエストのスループットを測る。微調整専用試験では指定エポックを終えるまでの時間、学習と評価のスループットを測る。統一試験では単一または複数LoRAの微調整と、単一または複数LoRAの推論を組み合わせ、微調整効率と推論SLOを同時評価する。さらにBurstGPTから低負荷・中負荷・高負荷の6区間を抽出した動的試験と、120分の実負荷模擬を行う。",
-    "scope": "評価対象はLlama-3 8BとLoRAが中心で、単一ノード4 GPU環境に限られる。クラスタ間分散、70B以上の基盤モデル、複数ノードでのアダプタ移動、他のPEFT方式の性能は評価していない。S-LoRAはLlama-3のGQA形状にそのまま対応しないためK/V重み複製の回避策を用いており、カーネル不安定性も観測された。このため比較結果は実装条件の非対称性を含む。",
-    "workloads": [
-      "単一・複数LoRA推論",
-      "単一・複数LoRA微調整",
-      "微調整と推論の統一実行",
-      "BurstGPT動的負荷"
-    ],
-    "baselines": [
-      "FlexLLM",
-      "S-LoRA + PEFT",
-      "HuggingFace Transformers + PEFT"
-    ],
-    "metrics": [
-      "SLO達成率",
-      "リクエストスループット（RPS）",
-      "デコードスループット（tokens/s）",
-      "微調整スループット（tokens/s）",
-      "評価スループット",
-      "モデル読み込み時間",
-      "追加ストレージ使用量"
-    ],
-    "reproducibility": "NeurIPS再現性チェックリストで計算資源を明示し、公式GitHubに実行基盤、カーネル、実行例、試験コードを公開する。論文はモデル、データセット、負荷区分、比較対象の制約、BurstGPTの利用区間と最大RPSを付録まで記載している。"
-  },
+  "attempt_id": "attempt-e6f9fac0ed89c24240db7c8a",
+  "job_id": "job-research-bbe263213664b792",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-71eeb07c7f418a95df699ae8",
-    "worker_id": "scheduled-chat-discovery-router",
+    "claim_id": "claim-e6f9fac0ed89c24240db7c8a",
+    "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
     "worker_kind": "scheduled_chat"
   }
 }
