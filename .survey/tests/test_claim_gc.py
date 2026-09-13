@@ -78,6 +78,51 @@ class ClaimGcTests(unittest.TestCase):
             candidates, _ = full_gc.collect_claim_artifacts(root, 7, datetime.now(timezone.utc))
             self.assertNotIn(".survey/work-queue/claim-results/orphan.json", {item["path"].relative_to(root).as_posix() for item in candidates})
 
+    def test_old_settled_immutable_pair_for_terminal_job_is_collectable(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            now = datetime.now(timezone.utc)
+            old = (now - timedelta(days=30)).isoformat()
+            write(root / ".survey/work-queue/jobs/job-r3.json", {
+                "job_id": "job-r3", "type": "research", "status": "completed", "completed_at": old,
+            })
+            write(root / ".survey/work-queue/submissions/research/attempt-r3.json", {
+                "job_id": "job-r3", "attempt_id": "attempt-r3", "kind": "research", "submitted_at": old,
+            })
+            write(root / ".survey/work-queue/results/research/attempt-r3.json", {
+                "job_id": "job-r3", "attempt_id": "attempt-r3", "job_type": "research",
+                "ok": True, "processed_at": old,
+            })
+
+            candidates, _ = full_gc.collect_settled_transport(root, 1, now)
+            paths = {item["path"].relative_to(root).as_posix() for item in candidates}
+
+            self.assertIn(".survey/work-queue/submissions/research/attempt-r3.json", paths)
+            self.assertIn(".survey/work-queue/results/research/attempt-r3.json", paths)
+
+    def test_failed_immutable_pair_for_ready_repair_job_is_protected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            now = datetime.now(timezone.utc)
+            old = (now - timedelta(days=30)).isoformat()
+            write(root / ".survey/work-queue/jobs/job-r4.json", {
+                "job_id": "job-r4", "type": "research", "status": "ready", "repair_required": True,
+                "created_at": old,
+            })
+            write(root / ".survey/work-queue/submissions/research/attempt-r4.json", {
+                "job_id": "job-r4", "attempt_id": "attempt-r4", "kind": "research", "submitted_at": old,
+            })
+            write(root / ".survey/work-queue/results/research/attempt-r4.json", {
+                "job_id": "job-r4", "attempt_id": "attempt-r4", "job_type": "research",
+                "ok": False, "processed_at": old, "error": "validation failed",
+            })
+
+            candidates, _ = full_gc.collect_settled_transport(root, 1, now)
+            paths = {item["path"].relative_to(root).as_posix() for item in candidates}
+
+            self.assertNotIn(".survey/work-queue/submissions/research/attempt-r4.json", paths)
+            self.assertNotIn(".survey/work-queue/results/research/attempt-r4.json", paths)
+
 
 if __name__ == "__main__":
     unittest.main()
