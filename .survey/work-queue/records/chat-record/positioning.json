@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-89c6e48a71f394424970c34a",
   "job_id": "job-research-43ee292714ed8d8c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89c6e48a71f394424970c34a",
-    "worker_id": "scheduled-chat-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価は単一サーバー内のA6000/RTX 4090と4TB NVMe SSDに限られ、ネットワーク越しのKVストア、複数ノード、複数SSD、障害復旧は扱わない。平均入力約6.8k・出力16トークンというプリフィル支配型RAGを対象とし、長いデコードや共有接頭辞が乏しい負荷での利得は不明である。待機列プリフェッチは高負荷ほど有利だが、低負荷では先読み時間が短い。先読み窓もLlama2-7Bでは6が最良だっただけでモデルごとの調整が必要。一次資料に公式コード公開先がなく、本文の尾部遅延数値には条件の読み分けが難しい箇所がある。",
+    "differences": "RAGCacheなどが接頭辞KVの保存・追い出しを主に最適化するのに対し、PCRはCPU–GPU転送とSSD読出しを明示的なスケジューリング対象へ加える。LMCacheもGPU・CPU・SSD階層を扱うが、PCRはvLLM待機列を将来需要の確定手掛かりとしてLRU保護とSSD→DRAM先読みの両方へ使い、さらに層単位の双方向KV転送をGPU計算と重ねる。CacheBlendや位置非依存チャンク再利用のように再計算を省くための近似を使わず、正確な接頭辞一致に限定して品質を維持する。",
+    "implementation_status": "vLLM上に実装し、256トークンKVチャンク、接頭辞木、待機列連携、CUDA 12.8のcudaMemcpyBatchAsync、3ストリーム転送重畳、SSDプリフェッチ専用スレッドを用いた実機評価を報告する。2026-09-14時点でarXiv一次資料から著者公式コード公開URLは確認できない。",
+    "research_positioning": "KVキャッシュのオフロード・再計算回避とRAG配信最適化の交点に位置する。特にNVMe SSDを容量拡張に使うだけでは同期I/Oが再計算利得を消すため、CPU DRAMを中間キャッシュとして使い、要求待機列からSSD I/Oを先行発行する設計を示す。SSD/NVMeをLLM推論へ活用する研究では、データ配置だけでなく「実行前にどれだけ確実な未来需要が見えるか」をI/Oスケジューリングへ結び付ける比較軸を提供する。",
+    "relation_to_existing_repository": "階層KVキャッシュ、KVオフロード、再計算回避の系統へ直接接続する。既存のKV圧縮研究が転送量そのものを減らすのに対し、PCRは転送内容を変えず時間的に隠すため直交的であり、圧縮KVをPCRの層単位転送・待機列プリフェッチへ載せる組合せも考えられる。SSD活用の観点では、スケジューラが持つ将来要求情報をストレージプリフェッチへ渡す設計が重要な比較対象となる。",
+    "audit_required": true,
+    "audit_reason": "本文の尾部遅延数値に条件差の説明が不明瞭な箇所があり、また著者公式コード公開有無を追加確認する価値がある。"
+  },
+  "reservation": {"claim_id": "claim-89c6e48a71f394424970c34a", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
 }
