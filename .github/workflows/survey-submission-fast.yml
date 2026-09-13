@@ -24,6 +24,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      SUBMISSION_PARALLELISM: '4'
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -74,24 +76,16 @@ jobs:
             done < /tmp/immutable-submissions.txt
 
             cat /tmp/immutable-submissions.txt
+            rm -rf /tmp/submission-effects
+            mkdir -p /tmp/submission-effects
 
-            while IFS= read -r descriptor; do
-              if [ ! -f "$descriptor" ]; then
-                echo "Descriptor no longer exists on main: $descriptor" >&2
-                processing_failed=1
-                continue
-              fi
-              if ! python .survey/scripts/process_immutable_submission.py \
-                --repo-root . \
-                --submission "$descriptor"; then
-                processing_failed=1
-                if ! python .survey/scripts/isolate_failed_immutable_submission.py \
-                  --repo-root . \
-                  --submission "$descriptor"; then
-                  echo "Could not isolate failed immutable descriptor: $descriptor" >&2
-                fi
-              fi
-            done < /tmp/immutable-submissions.txt
+            if ! python .survey/scripts/process_immutable_submission_batch.py \
+              --repo-root . \
+              --descriptors-file /tmp/immutable-submissions.txt \
+              --effects-dir /tmp/submission-effects \
+              --parallelism "$SUBMISSION_PARALLELISM"; then
+              processing_failed=1
+            fi
 
             mkdir -p \
               .survey/work-queue/results/research \
