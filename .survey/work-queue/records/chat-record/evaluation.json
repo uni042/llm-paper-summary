@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-95a8618581d24029b1e45af8",
   "job_id": "job-research-2f20b6ae0c5a7fb6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-95a8618581d24029b1e45af8",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "8枚のNVIDIA A800 80GB、2基の64-core Intel Xeon 8358P CPU、2 TB DDR4を搭載した高性能ワークステーション。任意のGPU間NVLink帯域は400 GB/s。論文は多ノード評価を将来課題としており、主結果は単一ノード8 GPUで測定する。",
+    "software": "ElasticMMはvLLMを基盤に構築する。比較対象はvLLM v0.6.6の密結合マルチモーダル配信と、符号化＋事前充填を同居させ復号を分離するようマルチモーダル対応へ拡張したDistServe。公式GitHub実装も公開されている。",
+    "methodology": "エンコーダ・デコーダ型のLLaMA3.2-Vision-11Bとデコーダ専用型のQwen2.5-VL-7Bを、VisualWebInstructとShareGPT-4oの二実データセットで評価する。Poisson分布で可変要求率を生成し、実サービス由来の負荷トレースも組み込む。各要求率で入力トークン当たり事前充填時間と出力トークン当たり復号時間を測る。スループット比較では軽負荷遅延の10倍を基準SLOとし、1〜5倍へスケールした条件でSLOを満たす最大処理量を測る。アブレーションでは固定のテキスト偏重・均等・マルチモーダル偏重配分とEMPを比較し、さらに統合キャッシュと非阻塞符号化を段階的に有効化する。",
+    "datasets": ["VisualWebInstruct", "ShareGPT-4o"],
+    "models": ["Qwen2.5-VL-7B", "LLaMA3.2-Vision-11B"],
+    "baselines": ["vLLM v0.6.6", "multimodal-extended DistServe", "static text-dominant allocation", "static equal allocation", "static multimodal-dominant allocation"],
+    "metrics": ["TTFT/input token latency", "output token latency", "maximum throughput meeting SLO", "P90 effective throughput"],
+    "scope": "二つのオープンなマルチモーダルデータセットと7B/11B級の二モデル、単一8-GPU A800ノードに限定される。多ノード通信、より巨大な90B/72B級モデル、音声モダリティ、実運用での長期間の資源再配分安定性は主評価に含まれない。DistServe比較は論文側でマルチモーダル対応へ拡張した実装であり、元システムそのままではない。"
+  },
+  "reservation": {"claim_id": "claim-95a8618581d24029b1e45af8", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
