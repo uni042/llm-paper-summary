@@ -5,11 +5,11 @@
   "attempt_id": "attempt-71eeb07c7f418a95df699ae8",
   "job_id": "job-research-f9d3c5ad391e4acc",
   "data": {
-    "limitations": "評価はLlama-3 8Bと単一ノード4 GPU環境に限られ、70B級以上の基盤モデル、複数ノード、adapter migrationの実ネットワーク費用、数千adapter規模のmemory hierarchyは未評価である。Virtualized Moduleは基盤moduleのweight/configurationを破壊的に変更しないPEFT方式を前提とし、基盤を直接上書きする手法はforward設計を正規化する必要がある。runtime生成classは通常のfork/spawn/deep-copyと相性が悪く、独自serialization/void機構を要する。fine-tuning backwardはSMLM化されておらず、PyTorch Autogradによる独立LoRA linear callが残るため学習側はPEFTよりわずかに遅い。論文自身もSMLMと協調するbackward kernel、cluster managerとの統合、LoRA以外のPEFT支援を将来課題に挙げる。",
-    "differences": "Punicaは異なるLoRAを同一推論batchへまとめるSGMVを導入したが、層横断の静的weight concatenationが動的な学習・層別構成を制約する。S-LoRAはhost-device pagingとheterogeneous batchingで大量adapter推論を拡張するがfine-tuningを同一runtimeで扱わない。FlexLLMは推論とPEFT fine-tuningのco-servingを行うが、Loquetierの評価では複数LoRAや一部backward/module構成に制約がある。LoquetierはVirtualized Moduleでadapter状態を基盤から分離し、層単位SMLMと用途別attention backendを組み合わせて、複数LoRAの微調整・評価・prefill・decodeを一つのforward計画へ統合する点が異なる。",
-    "implementation_status": "NeurIPS 2025採択・公開済み。公式 `NJUDeepEngine/Loquetier` リポジトリにSMLM関連kernel、Virtualized Module/Loquetier runtime、Llamaの単一・mixed実行example、testを公開している。",
-    "research_positioning": "LLMサービング・Multi-LoRA・学習/配信統合系統に位置する。推論専用adapter servingの効率化を、adapter更新が継続する環境へ拡張し、巨大な基盤モデルを共有資産、LoRAを移動可能な仮想instanceとして扱うことでtraining-serving boundaryを薄くする研究である。オンライン適応や継続personalizationを同じGPU poolで実行するためのruntime基盤として位置付けられる。",
-    "relation_to_existing_repository": "PunicaのSGMV思想を学習可能な層単位SMLMへ発展させる直接的後続であり、S-LoRAの多数adapter memory management、FlexLLMのco-servingと比較される。Auroraのように配信トラフィックからadapter/speculatorを継続更新する系とも補完的で、Loquetier側は共有base上のadapter training/inference coexistenceを提供できる。一方SSD/NVMe offloadは直接扱わず、adapter数がGPU/host memoryを超える場合の階層配置は将来の接続点になる。",
+    "limitations": "評価はLlama-3 8Bと単一ノード4 GPU環境に限られ、70B級以上の基盤モデル、複数ノード、アダプタ移動時の実ネットワーク費用、数千アダプタ規模のメモリ階層は未評価である。仮想化モジュールは、基盤構成要素の重みや設定を破壊的に変更しないPEFT方式を前提とし、基盤を直接上書きする手法では前向き計算設計を正規化する必要がある。実行時生成クラスは通常のプロセス複製や深い複製と相性が悪く、独自の直列化と基盤参照の着脱機構を要する。微調整の逆伝播はSMLM化されておらず、PyTorch Autogradによる独立LoRA線形層呼出しが残るため、学習側はPEFTよりわずかに遅い。論文自身もSMLMと協調する逆伝播カーネル、クラスタ管理器との統合、LoRA以外のPEFT支援を将来課題に挙げる。",
+    "differences": "Punicaは異なるLoRAを同一推論バッチへまとめるSGMVを導入したが、層横断の静的な重み連結が動的な学習や層別構成を制約する。S-LoRAはホストとGPU間のページングおよび異種バッチ処理で大量アダプタ推論を拡張するが、微調整を同一ランタイムで扱わない。FlexLLMは推論とPEFT微調整の共同実行を行うが、Loquetierの評価では複数LoRAや一部の逆伝播・構成要素に制約がある。Loquetierは仮想化モジュールでアダプタ状態を基盤から分離し、層単位SMLMと用途別の注意機構実装を組み合わせて、複数LoRAの微調整・評価・プリフィル・デコードを一つの前向き計算計画へ統合する点が異なる。",
+    "implementation_status": "NeurIPS 2025採択・公開済み。公式 `NJUDeepEngine/Loquetier` リポジトリにSMLM関連カーネル、仮想化モジュールとLoquetierランタイム、Llamaの単一・混在実行例、試験コードを公開している。",
+    "research_positioning": "LLMサービング、多数LoRA、学習と配信の統合系統に位置する。推論専用アダプタ配信の効率化を、アダプタ更新が継続する環境へ拡張し、巨大な基盤モデルを共有資産、LoRAを移動可能な仮想個体として扱うことで、学習と配信の境界を薄くする研究である。オンライン適応や継続的な個人化を同じGPU群で実行するためのランタイム基盤として位置付けられる。",
+    "relation_to_existing_repository": "PunicaのSGMV思想を学習可能な層単位SMLMへ発展させる直接的後続であり、S-LoRAの多数アダプタのメモリ管理、FlexLLMの共同実行と比較される。Auroraのように配信トラフィックからアダプタや投機器を継続更新する系とも補完的で、Loquetier側は共有基盤上でアダプタ学習と推論を共存させる実行系を提供できる。一方でSSD/NVMeへのオフロードは直接扱わず、アダプタ数がGPUやホストメモリを超える場合の階層配置は将来の接続点になる。",
     "audit_required": false
   },
   "reservation": {
