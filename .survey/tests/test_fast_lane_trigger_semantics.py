@@ -67,6 +67,10 @@ class FastLaneTriggerSemanticsTests(unittest.TestCase):
         self.assertNotIn(".survey/scripts/", trigger)
         self.assertNotIn(".github/workflows/survey-submission-fast.yml", trigger)
 
+    def test_survey_helper_only_treats_ok_true_reusable_result_as_settled(self):
+        text = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
+        self.assertIn("result.get('ok') is True", text)
+
 
 if __name__ == "__main__":
     unittest.main()
