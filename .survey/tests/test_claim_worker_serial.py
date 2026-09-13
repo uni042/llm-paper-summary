@@ -113,6 +113,39 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             result = json.loads((root / ".survey/work-queue/claim-results/req-other.json").read_text())
             self.assertEqual(result["assignments"], [])
 
+    def test_settled_failed_descriptor_job_can_be_reclaimed(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            add_job(root, "job-a", 90)
+            write_json(root / ".survey/work-queue/submissions/research/attempt-a.json", {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": "research",
+                "attempt_id": "attempt-a",
+                "job_id": "job-a",
+                "record_bank": "a",
+            })
+            write_json(root / ".survey/work-queue/results/research/attempt-a.json", {
+                "schema_version": 1,
+                "workflow_version": 10,
+                "ok": False,
+                "attempt_id": "attempt-a",
+                "job_id": "job-a",
+                "error": "validation failed",
+            })
+            write_json(root / ".survey/work-queue/claim-requests/req-other.json", {
+                "schema_version": 1,
+                "request_id": "req-other",
+                "worker_id": "scheduled-chat-other",
+                "worker_kind": "scheduled_chat",
+                "requested_at": "2026-09-13T00:00:00+00:00",
+                "max_jobs": 1,
+                "job_types": ["research"],
+            })
+            claim_worker.process_requests(root, at=AT)
+            result = json.loads((root / ".survey/work-queue/claim-results/req-other.json").read_text())
+            self.assertEqual([row["job_id"] for row in result["assignments"]], ["job-a"])
+
     def test_scheduled_chat_cannot_request_multiple_jobs_in_one_request(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
