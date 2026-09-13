@@ -70,6 +70,24 @@ rollout-eraのglobal legacy-unbanked fenceは廃止済みである。未ルー�
 - Libraryへ完全checkpoint済みのjobが原因でactive claimが残っている場合は、次requestの`checkpointed_jobs`へそのjobと実在する`checkpoint_ref`を含めてclaimを解放する。lease expiry待ちをrun停止理由にしない。
 - 未解決immutable descriptorが参照しているrecord bankは上書きしない。別bankが空いていなければLibrary checkpointへ切り替え、bank枯渇をrun停止理由にしない。
 
+### 4.1 Claim resultの診断ルール
+
+claimの不具合判定では、**履歴上の古い失敗resultを現在状態として扱わない**。`.survey/work-queue/claim-results/` は履歴を保持するため、修正前に生成された `assignments: []` や `reason: "worker already has an active unsubmitted claim"` が後から残っていても、それだけでは現行経路の障害を意味しない。
+
+診断は必ず次の順で行う。
+
+1. default branchの最新HEADを取得する。
+2. 対象workerが最後に発行した **最新のrequest_id** を特定する。
+3. そのrequest_idと同名のclaim resultだけを一次判定対象にする。
+4. Library checkpoint後の次claimでは、request側に対象jobの `checkpointed_jobs` と実在する `checkpoint_ref` が含まれていることを確認する。
+5. result側で `checkpoint_released` と `assignments` を確認する。
+
+Library checkpoint bypassの正常系は、原則として `checkpoint_released >= 1` かつ新しいjobが `assignments` に入る状態である。`checkpoint_released: 0` かつ旧claim由来のactive-claim reasonが出た場合は、まず **そのrequestが修正後プロトコルで発行された最新requestか**、`checkpointed_jobs` が正しく付与されているかを確認する。
+
+`assignments: []` 単独はhard failureではない。対象requestの時点でeligible jobがなかった、別workerのclaimと競合した、queue更新中だった、または旧resultを見ている可能性があるため、最新queue / claim state / request/result対応を突き合わせてから判断する。
+
+コミット名やrequest作成コミットだけを見て成功・失敗を推定しない。**最終的なclaim成否は対応するresult JSONの内容を正本とする。**
+
 ## 5. Lease
 
 lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
@@ -97,5 +115,6 @@ lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 - claim resultで予約されたbankとは別のbankへ書く。
 - `record_bank_fallback: "library"` を無視して独自にbankを確保する。
 - 新規通常Research/Auditで固定`chat-inbox.json`を上書きする。
+- 古いclaim resultやコミット名だけを根拠に、現行claim経路が壊れていると断定する。
 
 狙いは **claimの抱え込み・Library checkpointによる直列停止・record bankの並列競合を防ぎつつ、1件終わるたびに次jobへ即時移行してworkerを遊ばせないこと** である。
