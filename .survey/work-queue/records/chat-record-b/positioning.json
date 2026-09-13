@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-efc8e9feaf53ec425a01e723",
   "job_id": "job-research-b1cd2f28e2d09a3e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-efc8e9feaf53ec425a01e723",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はサイクル精度シミュレーションであり、HBM4論理ベースダイとPIM計算層を統合した実チップ上の熱、配線、製造制約、メモリ制御器のRTL実装は検証していない。K8V4による低頻度KV圧縮は損失を伴うが、生成品質やタスク精度の変化を測る評価はない。最適な容量層と計算層の比率はモデルと負荷に依存し、容量層を増やしすぎるとPIM並列度が低下する。小型モデルや要求間KV再利用が乏しい長文推論では改善がほぼ消える。TokenStack固有コードの公式公開先も確認できず、完全再現性には限界がある。",
+    "differences": "AttAccはPIM専用HBMと通常HBMをスタック単位で分離するため、PIM容量とGPU可視帯域の交換条件が粗い。全層PIM構成はGPU帯域を保てるが、重み・活性・低頻度KVまでPIM回路の面積費用を負担する。TokenStackは同一HBM4スタック内を高密度容量層とPIM計算層へ垂直分割し、論理ベースダイで両者を接続するため、容量と近傍演算をより細粒度に配分できる。さらに静的な異種化だけでなく、要求種別別再利用予測と限定複製で高頻度KV集合を実行時に維持する。",
+    "implementation_status": "AttAccの公開前段シミュレータとRamulator2を拡張したサイクル精度シミュレータで、異種HBM層、PIM演算、UCIe接続、TSV DMA、階層アドレス変換、K8V4変換、KV配置・退避・複製をモデル化する。論文はベースダイ各ブロックの面積と帯域要件を見積もるが、実HBM4試作チップやRTLは示さない。2026-09-14時点でTokenStack固有の公式コード公開先は確認できない。",
+    "research_positioning": "GPU・CPU・SSD間のオフロードよりさらに下位の、HBMスタック内部を階層化する推論アーキテクチャ研究である。アテンションのKV再利用特性を物理層配置へ結び付け、容量密度と近傍演算能力をデータ温度に応じて使い分ける。将来のHBM4論理ベースダイ、CXLやSSDを含む多階層KV配置を考える際、どの階層に演算を持たせ、どのデータだけを昇格させるかという比較軸を提供する。",
+    "relation_to_existing_repository": "AttAccなどPIM型アテンション、KV圧縮・退避、異種メモリ階層の系統と直接関係する。CPUやSSDへ低頻度KVを落とす方式より移動距離が短く、約1〜2マイクロ秒級の昇格を前提に積極的な階層化ができる一方、容量増加は同一HBMスタック内に限られる。SSD/NVMe階層とは競合ではなく、TokenStackの容量層をさらに下位のCPU/SSD層へ接続する多段階設計へ拡張可能である。",
+    "audit_required": true
+  },
+  "reservation": {"claim_id": "claim-efc8e9feaf53ec425a01e723", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
