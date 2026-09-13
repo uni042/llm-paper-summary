@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:24:30.647302+00:00",
+  "updated_at": "2026-09-13T01:27:09.671371+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T01:24:30.647302+00:00",
+      "last_recorded_at": "2026-09-13T01:27:09.671371+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 11,
+        "discovery_completed": 12,
         "blocked": 0,
-        "new_jobs": 29,
+        "new_jobs": 33,
         "new_papers": 1,
         "fallback_archived": 3
       },
@@ -16641,6 +16641,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34730499345:1",
+          "recorded_at": "2026-09-13T01:27:09.671371+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34730499345",
+            "run_attempt": "1",
+            "source_sha": "8156eccd8e91e42502796e9011f206b538f30566"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16734,6 +16748,14 @@
         },
         {
           "job_id": "job-2e0049dc1ae25b0e",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-9b5752caaf5ee298",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16944,6 +16966,34 @@
           "type": "research",
           "canonical_id": "arXiv:2609.00993",
           "title": "AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts"
+        },
+        {
+          "job_id": "job-d5c1389026b2527d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-23e9c491b745b825",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.09083",
+          "title": "EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices"
+        },
+        {
+          "job_id": "job-research-3d2c01823fde74e9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.13740",
+          "title": "Efficient On-Device Diffusion LLM Inference with Mobile NPU"
+        },
+        {
+          "job_id": "job-research-706a6d2571f24fb8",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.09046",
+          "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation"
         }
       ],
       "new_paper_ids": [
@@ -16960,7 +17010,8 @@
         ".survey/work-queue/results/20260913T1004JST-discovery-specialist-disagg-slo-1.json",
         ".survey/work-queue/results/20260913T1007JST-discovery-specialist-storage-kernel-2.json",
         ".survey/work-queue/results/20260913T1019JST-discovery-specialist-new-systems-1.json",
-        ".survey/work-queue/results/20260913T1023JST-discovery-specialist-runtime-2.json"
+        ".survey/work-queue/results/20260913T1023JST-discovery-specialist-runtime-2.json",
+        ".survey/work-queue/results/20260913T1026JST-discovery-specialist-edge-memory-3.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",

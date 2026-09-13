@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:23:20+00:00",
+  "updated_at": "2026-09-13T01:25:56+00:00",
   "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-runtime-communication-2",
+  "last_round": "specialist-edge-memory-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2759,6 +2759,24 @@
       ],
       "next_axis_hint": "forward citation・backward reference、またはOS/DBMS由来のメモリ管理・スケジューリング機構をLLM servingへ接続する隣接軸へ移る",
       "source_submission": "work-queue/submissions/20260913T1023JST-discovery-specialist-runtime-2.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-edge-memory-3",
+      "axis": "端末内LLM・OSメモリ圧力・Flash/NPU実行",
+      "query_summary": "モバイル端末のOSメモリ圧力、Flashコールドスタート、NPU実行、CPU-GPU/NPU協調を探索した。HybridGenとATSInferは既存job/収録済みとして除外し、4候補は最新HEAD上で決定論的job IDが未実体化であることを再確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.18529",
+        "arXiv:2607.10183"
+      ],
+      "next_axis_hint": "新規端末内候補からstorage/runtime用語を拡張しつつ、別経路として重要論文のforward citationまたはDBMS/OSのcache・prefetch・NUMA研究へ移る",
+      "source_submission": "work-queue/submissions/20260913T1026JST-discovery-specialist-edge-memory-3.json"
     }
   ],
   "axes": {
@@ -4311,6 +4329,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.8333333333333334,
       "next_axis_hint": "forward citation・backward reference、またはOS/DBMS由来のメモリ管理・スケジューリング機構をLLM servingへ接続する隣接軸へ移る"
+    },
+    "端末内LLM・OSメモリ圧力・Flash/NPU実行": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 4,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "新規端末内候補からstorage/runtime用語を拡張しつつ、別経路として重要論文のforward citationまたはDBMS/OSのcache・prefetch・NUMA研究へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
