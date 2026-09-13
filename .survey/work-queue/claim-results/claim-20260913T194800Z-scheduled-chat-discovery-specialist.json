@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260913T194800Z-scheduled-chat-discovery-specialist",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-234066475107816a",
+      "claim_id": "claim-1266e57534d088b4a61e4bdd",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-1266e57534d088b4a61e4bdd",
+      "claimed_at": "2026-09-13T19:49:14+00:00",
+      "expires_at": "2026-09-13T21:19:14+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-234066475107816a"
+      ],
+      "job": {
+        "job_id": "job-research-234066475107816a",
+        "type": "research",
+        "parent_job_id": "job-0c31ddf1ad84e2df",
+        "priority": 87,
+        "canonical_id": "arXiv:2607.01299",
+        "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
+        "source_url": "https://arxiv.org/abs/2607.01299",
+        "paper_path": null,
+        "selection_reason": "hybrid-attention LLMへ位置非依存キャッシュを導入する際、線形attention層の再帰状態とfull-attention層の部分再計算が既存PICの前提を壊す問題を解く。segment cumulative transition operatorとzero-start end-stateをキャッシュし、境界の小窓だけを再計算し、cache-miss prefillもsegment単位で並列化する。4モデル・5 workloadで平均TTFT 2.45倍改善、peak throughput最大2倍を報告しており、LinearKVと対照的なhybrid PIC設計として比較価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T23:30:21+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 55.4% < 70% (Japanese=5031, Latin=4050)",
+        "validation_errors": [
+          "Japanese-first prose ratio is too low: 55.4% < 70% (Japanese=5031, Latin=4050)"
+        ],
+        "last_validation_failed_at": "2026-09-13T18:51:36+00:00"
+      },
+      "record_bank_fallback": "library"
+    }
+  ],
+  "processed_at": "2026-09-13T19:49:14+00:00",
+  "checkpoint_released": 0
+}
