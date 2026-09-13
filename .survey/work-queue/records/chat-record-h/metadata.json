@@ -4,10 +4,46 @@
   "slot": "metadata",
   "attempt_id": "attempt-1a2f27db29cc21845919957d",
   "job_id": "job-research-2b6e9eed52cd4c32",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a2f27db29cc21845919957d",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2606.06256",
+    "arxiv_id": "2606.06256",
+    "doi": "10.48550/arXiv.2606.06256",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.AI","cross_list":[]},
+    "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
+    "summary": "RedKnotは、長文LLMサービングのKVキャッシュを全ヘッド・全トークンで均質な一枚のテンソルとして扱う従来設計を、層・KVヘッド・区間ごとの再利用可能状態へ分解する。オフライン計測で長距離依存を必要とする大域ヘッドと局所窓だけで足りる局所ヘッドを分類し、再利用時はRoPE位置を補正した上で大域ヘッドだけを再計算し、局所ヘッドはsinkと直近窓を再利用する。さらに深層では重要トークンだけFFNを実行し、SegPagedAttentionがヘッドごとに異なる生存KVページを物理的に保持してmaskなしの可変長FlashAttentionへ渡す。8×H800で8K〜128Kを評価し、密再計算比でTTFTを最大約5.2倍高速化、KV容量制約下の同時セッションを4.7〜7.8倍へ増やし、前処理FLOPsを67〜79.5%削減しつつ、F1は通常密実行の95%以上を維持する。",
+    "list_summary": "KVをヘッド別の再利用可能状態へ分解し、大域ヘッドだけ再計算、局所ヘッドは窓付き再利用し、SegPagedAttentionで疎なKVを物理配置まで反映して長文TTFTと同時実行数を改善する。",
+    "authors": ["Yang Liu","Zhaokai Luo","Huayi Jin","Ruozhou He","Chenchen Hong","Zhiyong Wang","Boyu Wang","Guanjie Chen","Tao Xie","Junhao Hu"],
+    "authors_affiliations": "Xiaohongshu Inc.、Peking University、Huawei Cloud、Beijing Tongming Lake Information Technology Application Innovation Center。",
+    "published": "2026-06-04",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint; arXiv v3 2026-07-29",
+    "lineage": "head-aware KV cache reuse, sparse attention, and long-context serving",
+    "topics": ["KVキャッシュ再利用","位置非依存KVキャッシュ","ヘッド別疎化","SegPagedAttention","長文LLMサービング","プリフィル高速化"],
+    "importance": "再利用判定、物理KV格納、注意カーネル、FFN疎化を同じヘッド別状態抽象へそろえ、アルゴリズム上のKV削減を実際のHBM容量と帯域削減へ変換する点が重要。",
+    "hardware_evaluation": "単一サーバの8×NVIDIA H800 80GB。CPUは2×Intel Xeon Platinum 8468V、DDR 2TB、NVMe RAID-0 14TB、PD分離評価は約200GbpsのRoCE v2を使用。",
+    "source": "https://arxiv.org/abs/2606.06256",
+    "sources": ["https://arxiv.org/abs/2606.06256","https://arxiv.org/html/2606.06256","https://github.com/rednote-machine-learning/RedKnot"],
+    "code": "https://github.com/rednote-machine-learning/RedKnot",
+    "implementation": "SGLang上へRedKnotを実装し、PD分離評価ではvLLM 0.13.0も利用する。ヘッド別状態を扱うSegPagedAttentionは各ヘッドの仮想ページ列を可変長メタデータへ変換し、単一の融合可変長注意カーネルで処理する。著者はRedKnotをオープンソースで継続保守すると明記している。",
+    "last_checked": "2026-09-14",
+    "storage_targets": ["GPU HBM KV cache","per-head paged KV segments","prefill-decode transferred KV states","reusable offline chunk states"],
+    "bottlenecks": ["長文プリフィルTTFT","KVキャッシュ容量","token単位再計算が生むhead間union","dense+maskによるFlashAttention経路喪失","短中長文で残るFFN計算","PD間KV転送量"],
+    "hardware_details": "8×NVIDIA H800 80GB、約3.3TB/s HBM、PCIe Gen5 x16。2×Xeon Platinum 8468V、96 cores/192 threads、2TB DDR、14TB NVMe RAID-0。Ubuntu 24.04、CUDA 12.9、PyTorch 2.9.1、Triton 3.5.1、Transformers 4.57.1、Transformer Engine 2.10.0。",
+    "quality_effect": "疎化を含むため完全な数値等価を常に主張する方式ではないが、QAのF1/EMとlogit一致率で品質を測り、通常は密再計算F1の95%以上を維持する。長文では不要情報を抑えることで密実行より精度が上がる条件も報告する。",
+    "evidence_locations": ["arXiv v3 §3 Motivation and Opportunity","§4 RedKnot Design","§5 Evaluation","§5.5 KV Cache Lifecycle Management","§5.6 Other System-Level Benefits","References"],
+    "references": [
+      {"canonical_id":"arXiv:2405.16444","arxiv_id":"2405.16444"},
+      {"canonical_id":"arXiv:2407.08608","arxiv_id":"2407.08608"},
+      {"canonical_id":"arXiv:2602.02579","arxiv_id":"2602.02579"},
+      {"canonical_id":"arXiv:2505.09388","arxiv_id":"2505.09388"},
+      {"canonical_id":"arXiv:2307.09288","arxiv_id":"2307.09288"},
+      {"canonical_id":"arXiv:1911.02150","arxiv_id":"1911.02150"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v3 HTML版参考文献節",
+    "references_total": 73
+  },
+  "reservation": {"claim_id":"claim-1a2f27db29cc21845919957d","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
