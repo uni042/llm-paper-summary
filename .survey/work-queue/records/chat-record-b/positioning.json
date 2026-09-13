@@ -5,16 +5,12 @@
   "attempt_id": "attempt-e9e76d3d04a6e4369258f711",
   "job_id": "job-research-234066475107816a",
   "data": {
-    "limitations": "独立segment prefillで得たhidden stateは本来のcross-segment contextを見ていないため、累積遷移演算子によるstate compositionが同一入力に対して正確でも、深層ではFull Recomputeとの差が蓄積する。品質差は平均1.71 pointsで、Ring系では約3.3〜3.4 points残る。dense transition modelではT_Cがhead/layerごとにdense matrixとなり、scalar familyよりcache容量と初回構築計算が大きい。segment parallelismは複数idle instance、RDMA転送、十分長いsegmentを必要とし、常に使えるとは限らない。評価は8基H20-3eの単一node構成が中心で、より大規模なmulti-node運用や異種GPUでは未検証。HYPIC本体の公開コードURLも確認できない。",
-    "differences": "CacheBlend、CacheSlide、EPIC、ProphetKVなど従来PICはfull-attentionのper-token KVをsegment間でspliceし、選んだtokenを再計算して補正する。HYPICはhybrid stackの多数を占めるlinear-attention layerにはtoken KVが存在しないため、state recurrenceのsegment-cumulative transition T_Cとzero-start end-state S_C|0を新しいcache primitiveとする。残るfull-attention layerも任意token選択ではなく、segment先頭の固定小windowをhybrid stack全体へforwardして補正する。またprior PICがcache missを単一instanceで処理するのに対し、segment self-containmentを利用したinter-instance cold-prefill parallelismまで含む。",
-    "implementation_status": "SGLang上へ14k行のPython/Tritonで実装され、sglang_router、FLA kernel、NIXL/GPUDirect RDMAを統合して8×H20-3e実機で評価されている。PIC_SEPARATORによるapplication-level segment境界を要求し、public/private cache pool、LPT scheduler、scatter/combine workerを備える。論文は2026-07-01初稿、2026-07-12 v2のarXiv preprintで、2026-09-14時点にHYPIC本体の公式code repositoryは論文から確認できない。",
-    "research_positioning": "長文脈LLM配信の文脈cache再利用系統に属し、特に位置非依存cacheをhybrid-attention modelへ拡張するsystem研究である。linear attention/SSM系の固定長recurrent state、full-attention KV、distributed serving schedulerという異なる層を一つのreuse pathへ接続する。単なるKV容量削減やattention kernel高速化ではなく、同じsemantic segmentが異なるprefix/positionで繰り返されるRAG・agent workloadのprefill計算を省くことが中心である。",
-    "relation_to_existing_repository": "既存のPIC/CacheBlend/EPIC系と直接比較できるほか、LinearKVなどlinear-attention state cache研究とは、prefix依存状態をどう再利用可能なsegment表現へ変換するかという観点で比較価値が高い。prefill-decode分離、NIXL/RDMA cache transfer、multi-instance scheduling系統とも接続し、cold miss segmentをscatterする発想はKV cache transfer研究の新しい利用形態になる。SSD/NVMe offloadとは直接関係しないが、public segment cacheがGPU容量を超える場合に階層cacheへ拡張する際、T_C/S_C|0とfull-attention KVでサイズ・再利用価値が異なるため、異種cache object別の配置政策を考える材料になる。",
+    "limitations": "独立区間の事前計算で得た隠れ表現は本来の区間間文脈を見ていないため、累積遷移演算子による状態合成が同一入力に対して正確でも、深層では完全再計算との差が蓄積する。公開データでの品質差は平均1.71ポイントで、Ring系では約3.3〜3.4ポイント残る。密行列型遷移を持つモデルでは区間ごとに保存する演算子が大きくなり、初回構築計算もスカラー型より重い。未保存区間の並列処理には複数の空き推論実体、高速なGPU間転送、十分に長い区間が必要であり、常に利用できるとは限らない。評価は8基H20-3eの単一ノードが中心で、より大規模な複数ノード環境や異種GPUでは未検証である。HYPIC本体の公式公開コードURLも確認できない。",
+    "differences": "CacheBlend、CacheSlide、EPIC、ProphetKVなど従来の位置非依存キャッシュは、完全注意層のトークン別鍵値表現を区間間で連結し、選んだトークンを再計算して補正する。HYPICはハイブリッド構成の多数を占める線形注意層にトークン別鍵値列がないため、区間累積遷移演算子とゼロ始動終端状態を新しい共有単位とする。残る完全注意層も任意トークン選択ではなく、区間先頭の固定小窓をハイブリッド構成全体へ通して補正する。さらに従来方式が未保存区間を単一実体で処理するのに対し、区間の自己完結性を利用して複数推論実体へ分散する点も異なる。",
+    "implementation_status": "SGLang上へ約14,000行のPython/Tritonコードを追加し、ルータ、FLAカーネル、NIXLによるGPU間転送を統合して8基のH20-3e実機で評価している。アプリケーション側が区間境界を指定し、共有・非共有の二層キャッシュ、最長処理時間優先の割当、散布・組立ワーカを備える。論文は2026-07-01初稿、2026-07-12改訂のarXivプレプリントで、2026-09-14時点にHYPIC本体の公式コード保管場所は論文から確認できない。",
+    "research_positioning": "長文脈言語モデル配信における文脈キャッシュ再利用の系統に属し、とくに位置非依存キャッシュをハイブリッド注意モデルへ拡張するシステム研究である。線形注意や状態空間系の固定長再帰状態、完全注意の鍵値キャッシュ、分散配信スケジューラという異なる層を一つの再利用経路へ接続する。単なる鍵値容量削減や注意カーネル高速化ではなく、同じ意味的区間が異なる前置文脈や位置で繰り返される検索拡張生成・エージェント型ワークロードの入力処理を省くことが中心である。",
+    "relation_to_existing_repository": "既存のCacheBlend、EPICなど位置非依存キャッシュ系と直接比較できる。LinearKVなど線形注意状態のキャッシュ研究とは、前置文脈に依存する状態を再利用可能な区間表現へどう変換するかという観点で比較価値が高い。入力処理・デコード分離、NIXLを使うキャッシュ転送、複数推論実体のスケジューリング系統とも接続する。SSDやNVMeへの退避とは直接の主題ではないが、共有区間キャッシュがGPU容量を超えた場合、累積遷移演算子・ゼロ始動状態・完全注意鍵値で大きさと再利用価値が異なるため、異種キャッシュ物体を階層配置する研究の材料になる。",
     "audit_required": false
   },
-  "reservation": {
-    "claim_id": "claim-e9e76d3d04a6e4369258f711",
-    "worker_id": "scheduled-chat-llm-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-e9e76d3d04a6e4369258f711", "worker_id": "scheduled-chat-llm-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
