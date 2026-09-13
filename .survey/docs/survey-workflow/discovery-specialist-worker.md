@@ -35,11 +35,11 @@
 
 `candidate-buffer-policy.md` の水位を共有する。
 
-- target: 50
 - low watermark: 25
 - critical watermark: 15
+- target / upper cap: なし
 
-探索専用workerは在庫が50以上でも停止必須ではない。低コスト探索で高価値候補が見つかる場合は追加してよい。ただし在庫数を満たすために弱い候補を採用しない。
+探索専用workerはcandidate在庫が50本、100本、それ以上でも、在庫数だけを理由に探索を弱めたり停止したりしない。低コスト探索で高価値候補が見つかる場合は追加する。ただし在庫数を満たすために弱い候補を採用しない。通常論文workerはcandidate在庫が25本以上でactionable researchがある場合、広範なdiscoveryよりresearchを優先する。
 
 ## 探索経路
 
@@ -91,6 +91,10 @@ priorityは少なくとも以下を考慮する。
 GitHub write可能時は既存workflow v10のdiscovery transportを使い、paper/state/READMEを直接編集しない。
 
 各discovery submissionには、通常の `job_id` と `candidates` に加えて、トップレベルに `discovery_stats` を含める。
+
+1回の探索専用Scheduled Chat実行では、開始時に **1つだけ** `run_key` を確定し、そのrun内の全探索round・全submissionで同じ値を使う。原則として今回の予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` 形式で表す。round開始時刻、submission時刻、Actions待ち後の再開時刻を新しい `run_key` にしてはならない。予定実行枠を直接取得できない実行環境では、そのScheduled Chat実行の開始時刻をJSTで時単位に切り捨てた値を使い、その後はrun終了まで固定する。
+
+これにより `STATUS.md` は複数の探索roundを「毎時の探索専用worker 1回がどれだけ探索したか」という単位で集計できる。旧データで同一時間帯に複数 `run_key` が残っている場合、dashboard側はJSTの毎時枠へbest-effortで集約する。
 
 ```json
 {
