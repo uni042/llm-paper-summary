@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:47 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **157 / 50** |
-| Research ready | **157** |
+| Candidate在庫（Research ready） | **159 / 50** |
+| Research ready | **159** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **4** |
-| 新規job | **10** |
+| Discovery完了 | **5** |
+| 新規job | **13** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **133** |
-| 探索評価候補 | **660** |
-| 重複除外 | **275** |
-| 重複率 | **41.7%** |
-| Novel候補 | **385** |
-| Research候補採用 | **217** |
+| 探索round（stats観測） | **134** |
+| 探索評価候補 | **665** |
+| 重複除外 | **278** |
+| 重複率 | **41.8%** |
+| Novel候補 | **387** |
+| Research候補採用 | **219** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 660 → 重複除外後 385 → Research候補採用 217 → Research完了 69 → Repo収録 69**
+**探索評価 665 → 重複除外後 387 → Research候補採用 219 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -127,6 +127,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision | 5 | 1 | 3 | 20.0% | 60.0% |
 | heterogeneous GPU cluster・multi-agent workflow・routing/placement | 5 | 0 | 3 | 0.0% | 60.0% |
 | heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels | 5 | 2 | 3 | 40.0% | 60.0% |
+| multi-tenant runtime制御・適応parallelism・latency attribution | 5 | 3 | 2 | 60.0% | 40.0% |
 | output-length uncertainty・KV reservation・memory-constrained admission/scheduling | 5 | 0 | 1 | 0.0% | 20.0% |
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -207,11 +208,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — multi-tenant runtime制御・適応parallelism・latency attribution: 評価 5 / 重複 3 / 採用 2
 - **2026-09-13T09:28:10+09:00** — RDMA・分離サービング・KV転送: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 投機的復号・高並列サービング・production評価: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 出力長不確実性・tail-aware scheduling隣接: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — エージェント型LLM・サービングruntime・生成時特化: 評価 3 / 重複 1 / 採用 2
-- **2026-09-13T09:28:10+09:00** — 2026-09新着・KV圧縮・跨文脈再利用: 評価 3 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
