@@ -7,7 +7,6 @@ on:
       - '.survey/work-queue/transport/offline-job-seed.json'
       - '.survey/work-queue/transport/request-jobs.json'
       - '.survey/work-queue/fallback-inbox/*.json'
-      - '.survey/work-queue/claim-requests/*.json'
   workflow_dispatch:
   schedule:
     - cron: '3/10 * * * *'
@@ -16,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: survey-helper-main
+  group: survey-background-main
   cancel-in-progress: false
 
 jobs:
@@ -50,7 +49,7 @@ jobs:
       - name: Reconcile maintenance state from newer durable reports
         run: python .survey/scripts/reconcile_maintenance_state.py --repo-root .
 
-      - name: Validate fallback worker syntax
+      - name: Validate background helper syntax
         run: |
           python -m py_compile \
             .survey/scripts/fallback_transport.py \
@@ -58,15 +57,10 @@ jobs:
             .survey/scripts/preflight_chat_record.py \
             .survey/scripts/reconcile_maintenance_state.py \
             .survey/scripts/record_run_ledger.py \
-            .survey/scripts/blocked_retry.py \
-            .survey/scripts/claim_state.py \
-            .survey/scripts/claim_worker.py
+            .survey/scripts/blocked_retry.py
 
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
-
-      - name: Allocate repository-backed worker claims
-        run: python .survey/scripts/claim_worker.py --repo-root .
 
       - name: Dispatch one eligible fallback envelope
         run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root . | tee /tmp/fallback-dispatch.json
@@ -186,7 +180,7 @@ jobs:
       - name: Normalize ready jobs to v10 contract
         run: python .survey/scripts/normalize_v10_jobs.py --root .survey
 
-      - name: Process queue
+      - name: Process legacy queue and direct submissions
         run: python .survey/scripts/queue_worker.py --root .survey
 
       - name: Suppress duplicates created by discovery and refresh queue
@@ -238,12 +232,12 @@ jobs:
             --repo-root . \
             --snapshot /tmp/survey-helper-baseline.json
 
-      - name: Restore transient transport files
+      - name: Restore transient legacy transport files
         run: |
           git checkout -- .survey/work-queue/payloads/chat-payload.md
           git checkout -- .survey/work-queue/submissions/chat-inbox.json
 
-      - name: Commit queue results
+      - name: Commit background queue results
         run: |
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
             echo 'No queue changes to commit.'
@@ -252,7 +246,7 @@ jobs:
           git config user.name 'survey-helper[bot]'
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
           git add -A
-          git commit -m 'survey-helper: process queue'
+          git commit -m 'survey-helper: process background queue'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git rebase origin/main
@@ -262,5 +256,5 @@ jobs:
             echo "Push race on attempt ${attempt}; retrying after refetch."
             sleep $((attempt * 2))
           done
-          echo 'Failed to push queue results after 5 non-fast-forward recovery attempts.' >&2
+          echo 'Failed to push background queue results after 5 non-fast-forward recovery attempts.' >&2
           exit 1
