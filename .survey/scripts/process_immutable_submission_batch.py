@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Process immutable submissions concurrently across independent jobs."""
+"""Process immutable submissions concurrently across independent mutation targets."""
 from __future__ import annotations
 
 import argparse
@@ -36,14 +36,19 @@ def _read_object(path: Path) -> dict[str, Any] | None:
 
 
 def descriptor_group_key(repo_root: Path, descriptor_path: Path) -> str:
+    """Group by paper first, then job, so shared mutation targets never overlap."""
     repo_root = Path(repo_root).resolve()
     descriptor_path = Path(descriptor_path)
     if not descriptor_path.is_absolute():
         descriptor_path = repo_root / descriptor_path
     value = _read_object(descriptor_path)
-    job_id = value.get("job_id") if isinstance(value, dict) else None
-    if isinstance(job_id, str) and job_id:
-        return f"job:{job_id}"
+    if isinstance(value, dict):
+        paper_path = value.get("paper_path")
+        if isinstance(paper_path, str) and paper_path.startswith("papers/") and ".." not in Path(paper_path).parts:
+            return f"paper:{Path(paper_path).as_posix()}"
+        job_id = value.get("job_id")
+        if isinstance(job_id, str) and job_id:
+            return f"job:{job_id}"
     try:
         relative = descriptor_path.resolve().relative_to(repo_root).as_posix()
     except ValueError:
@@ -58,7 +63,7 @@ def run_parallel_grouped(
     worker: Callable[[Path], Any],
     parallelism: int = DEFAULT_PARALLELISM,
 ) -> list[Any]:
-    """Run one job-group sequentially while independent job-groups overlap."""
+    """Run one mutation-target group sequentially while independent groups overlap."""
     repo_root = Path(repo_root).resolve()
     paths = [Path(path) for path in descriptor_paths]
     groups: OrderedDict[str, list[tuple[int, Path]]] = OrderedDict()
@@ -146,6 +151,30 @@ def process_one(repo_root: Path, descriptor_path: Path, effects_dir: Path) -> di
     }
 
 
+def _validate_unique_inputs(repo_root: Path, paths: list[Path]) -> None:
+    seen_paths: set[str] = set()
+    seen_identity: set[tuple[str, str]] = set()
+    for path in paths:
+        absolute = path if path.is_absolute() else repo_root / path
+        try:
+            relative = absolute.resolve().relative_to(repo_root).as_posix()
+        except ValueError as exc:
+            raise ValueError("descriptor path must stay within repository") from exc
+        if relative in seen_paths:
+            raise ValueError(f"duplicate immutable descriptor path: {relative}")
+        seen_paths.add(relative)
+        value = _read_object(absolute)
+        if not isinstance(value, dict):
+            continue
+        job_id = value.get("job_id")
+        attempt_id = value.get("attempt_id")
+        if isinstance(job_id, str) and job_id and isinstance(attempt_id, str) and attempt_id:
+            identity = (job_id, attempt_id)
+            if identity in seen_identity:
+                raise ValueError(f"duplicate immutable job/attempt in batch: {job_id} / {attempt_id}")
+            seen_identity.add(identity)
+
+
 def process_batch(
     repo_root: Path,
     descriptor_paths: Iterable[Path],
@@ -162,6 +191,7 @@ def process_batch(
         stale.unlink()
 
     paths = [Path(path) for path in descriptor_paths]
+    _validate_unique_inputs(repo_root, paths)
     rows = run_parallel_grouped(
         repo_root,
         paths,
