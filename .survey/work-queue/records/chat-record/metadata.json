@@ -4,10 +4,40 @@
   "slot": "metadata",
   "attempt_id": "attempt-d76929b8794d7558d0c2ab77",
   "job_id": "job-research-b4e2d8cb129fd978",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d76929b8794d7558d0c2ab77",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.07238",
+    "arxiv_id": "2605.07238",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows",
+    "summary": "複数モデル・検索・ツール利用・検証を有向非巡回グラフ（DAG）として実行するLLMワークフローでは、現在の段階をどのGPUへ置くかが、その段階の待ち時間だけでなく、下流段階が受け継ぐモデル常駐、親出力の局所性、共有接頭辞、将来利用可能なGPUの状態を変える。FATEは、現在実行可能な段階だけをCP-SATで割り当てつつ、限られた先読み範囲でその割当が下流状態へ与える影響を得点化する。毎回全DAGを一括最適化せず、現在のフロンティアを計画して一部を確定し、実行結果で状態を更新して再計画する。WfCommons由来のLLM段階DAGではRoundRobin比でメイクスパンを32.5%、P95遅延を32.3%削減し、最良の非FATE比較対象に対しても約9%改善する。",
+    "list_summary": "現在のGPU負荷だけでなく、配置後に残るモデル常駐・親出力局所性・接頭辞再利用を有限先読みで評価し、ワークフローDAGの次段階に有利な状態を残すスケジューラ。",
+    "authors": ["Zirui Huang", "Yi-Xiang Hu", "Feng Wu", "Xiang-Yang Li"],
+    "authors_affiliations": "School of Computer Science and Technology, University of Science and Technology of China, Hefei, China",
+    "published": "2026-05-08",
+    "publication": "arXiv preprint v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["LLMワークフロー", "DAGスケジューリング", "GPU配置", "モデル常駐", "接頭辞再利用", "CP-SAT"],
+    "importance": "単一要求の即時コストではなく、現在の配置が将来の実行状態へ残す効果を一級の最適化対象にする。異種LLMワークフローのスケジューリング系統を、負荷・局所性・キャッシュ再利用の個別最適化から多段階状態保存へ拡張する。",
+    "hardware_evaluation": "再現性付録では8枚のNVIDIA RTX 4090、AMD EPYC 7763 64-Core Processor、503 GBシステムメモリの単一サーバを使用する。ただし主DAGベンチマークはWfCommons/WfInstancesからLLM段階へ持ち上げたワークフローに、実行時間、モデル切替、転送、接頭辞再利用の代理コストを与えた評価であり、全指標が実GPUハードウェアカウンタの直接測定ではない。",
+    "quality_effect": "モデル重みや生成計算を近似しないスケジューラであり、モデル品質への直接的な近似劣化はない。主な効果はワークフロー完了時間、P95遅延、配置局所性である。",
+    "source": "https://arxiv.org/abs/2605.07238",
+    "sources": ["https://arxiv.org/abs/2605.07238", "https://arxiv.org/pdf/2605.07238"],
+    "code": null,
+    "implementation": "CP-SATフロンティア計画器、状態条件付きコスト推定、ベンチマーク生成器、固定manifest、CSV exporterを含む評価アーティファクトを論文が記述する。付録は公開アーティファクトREADMEによる再現手順に言及するが、arXiv本文から著者公式GitHub URLは確認できなかった。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 15,
+    "references": [
+      {"canonical_id": "arXiv:2502.13965", "arxiv_id": "2502.13965"},
+      {"canonical_id": "arXiv:2508.18298", "arxiv_id": "2508.18298"},
+      {"canonical_id": "arXiv:2601.05109", "arxiv_id": "2601.05109"},
+      {"canonical_id": "arXiv:2509.02121", "arxiv_id": "2509.02121"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-d76929b8794d7558d0c2ab77", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
