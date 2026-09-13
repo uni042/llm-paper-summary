@@ -175,6 +175,36 @@ class NonArtifactImmutableStatusTests(unittest.TestCase):
             self.assertEqual(job["blocker"], "source was withdrawn")
             self.assertEqual(job.get("status_submission"), ".survey/work-queue/submissions/research/attempt-a.json")
 
+    def test_invalidated_legacy_claim_rejects_late_submission(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _install_scripts(repo)
+            module = _load(repo / ".survey/scripts/process_immutable_submission.py", "processor_invalidated_claim")
+
+            descriptor = _status_descriptor()
+            submission = repo / ".survey/work-queue/submissions/research/attempt-a.json"
+            _write(submission, descriptor)
+            _write(repo / ".survey/work-queue/jobs/job-a.json", {
+                "job_id": "job-a", "type": "research", "status": "ready", "priority": 80,
+            })
+            _write(repo / ".survey/work-queue/claims/job-a.json", {
+                "job_id": "job-a",
+                "attempt_id": "attempt-a",
+                "claim_id": "claim-a",
+                "worker_id": "worker-a",
+                "worker_kind": "scheduled_chat",
+                "claimed_at": "2026-09-13T00:00:00+00:00",
+                "expires_at": "2026-09-13T01:30:00+00:00",
+                "lease_invalidated_at": "2026-09-13T03:00:00+00:00",
+                "lease_invalidation_reason": "legacy scheduled_chat lease exceeded 5400-second cap",
+            })
+
+            with self.assertRaisesRegex(ValueError, "invalidated"):
+                module.process(repo, submission)
+
+            job = json.loads((repo / ".survey/work-queue/jobs/job-a.json").read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "ready")
+
 
 if __name__ == "__main__":
     unittest.main()
