@@ -2,40 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-efc8e9feaf53ec425a01e723",
-  "job_id": "job-research-b1cd2f28e2d09a3e",
-  "data": {
-    "canonical_id": "arXiv:2605.05639",
-    "arxiv_id": "2605.05639",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
-    "title": "TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference",
-    "summary": "LLMの復号では、新しいトークンを出すたびに過去のKVキャッシュを読み直すため、モデルが大きく同時要求が増えるほど容量と帯域の両方が律速になる。従来のHBM内演算（Processing-in-Memory; PIM）はアテンションをメモリ近傍へ移せるが、全層をPIM化すると演算を使わない重み・活性・低頻度KVまでPIM回路の面積費用を払い、PIM専用スタックを分離すると今度はGPUから見えるHBM帯域が減る。TokenStackはHBM4の論理ベースダイを利用し、同一HBMスタック内を高密度な容量層とPIM対応の計算層へ垂直分割する。高頻度KVだけを計算層へ置き、低頻度KV・重み・活性は容量層へ置く。ベースダイが層間DMA、アドレス変換、アテンション協調、KV移動時のK8V4量子化を処理し、実行時には要求配置、再利用予測に基づく退避、限定複製で高頻度集合を更新する。生産環境由来の4トレースと4モデルを使うサイクル精度シミュレーションで、AttAcc比のトークン処理量を幾何平均1.62倍、SLO内で処理できる到着率を1.70倍にし、トークン当たりエネルギーを30〜47%削減する。",
-    "list_summary": "HBM4の同一スタック内を高密度容量層とPIM計算層へ分け、高頻度KVだけを演算近傍へ動的配置することで、AttAcc比で処理量1.62倍・SLO処理容量1.70倍を達成する。",
-    "authors": ["Zhuoran Li", "Zhuohang Bian", "Zihao Huang", "Yibo Zhao", "Xueqi Li", "Guangyu Sun", "Youwei Zhuo"],
-    "authors_affiliations": "Zhuoran Li、Zhuohang Bian、Yibo Zhao、Guangyu Sun、Youwei ZhuoはPeking University、Zihao HuangはUniversity of Electronic Science and Technology of China、Xueqi LiはInstitute of Computing Technology, Chinese Academy of Sciences。",
-    "published": "2026-05-07",
-    "publication": "arXiv preprint v2",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "offload-hierarchical-memory",
-    "topics": ["HBM-PIM", "KVキャッシュ", "HBM4", "階層メモリ", "近傍演算", "KV配置", "量子化", "LLM推論"],
-    "importance": "メモリ階層をGPU・CPU・SSDのようなデバイス間だけでなく、同一HBMスタック内部の物理層まで細分化し、容量密度が必要なデータと近傍演算が必要なデータを別の層へ割り当てる。HBM4の能動的な論理ベースダイを制御点にするため、将来の階層メモリ型LLM推論とPIMを接続する設計例として重要である。",
-    "hardware_evaluation": "実チップではなくサイクル精度シミュレーション。DGX-A100相当の8 GPU、各GPU 312 TF/s、UCIe-A 512 GB/s/stack×5、スタック内TSV DMA 896 GB/s、NVLink3 600 GB/s、ホストDDR5 512 GBをモデル化する。TokenStackは計算領域20GB＋容量領域40GBとして評価する。",
-    "quality_effect": "容量層へ退避するKVをKey 8bit・Value 4bitのK8V4へ量子化し、昇格時にFP16へ戻すため厳密には損失のない方式ではない。論文は性能・エネルギー評価を中心とし、生成精度やタスク品質の劣化を独立に測る評価は示していないため、量子化による品質影響は未確定の制約として扱う必要がある。",
-    "source": "https://arxiv.org/abs/2605.05639",
-    "sources": ["https://arxiv.org/abs/2605.05639", "https://arxiv.org/pdf/2605.05639"],
-    "code": null,
-    "implementation": "AttAccの公開シミュレータ前段とRamulator2を拡張したサイクル精度シミュレータで評価。異種HBM層、層間DMA、階層アドレス変換、KV配置、限定複製、K8V4転送をモデル化する。2026-09-14時点で一次資料およびarXivからTokenStack固有の公式コード公開先は確認できない。",
-    "last_checked": "2026-09-14",
-    "references_checked_at": "2026-09-14",
-    "references_source": "primary-reference-section",
-    "references_total": 126,
-    "references": [
-      {"canonical_id": "arXiv:2511.06838", "arxiv_id": "2511.06838"},
-      {"canonical_id": "arXiv:2510.06513", "arxiv_id": "2510.06513"}
-    ]
-  },
-  "reservation": {"claim_id": "claim-efc8e9feaf53ec425a01e723", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-286ac5a93883c97edb55aa16",
+  "job_id": "job-research-f379557cdc6a8294",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-286ac5a93883c97edb55aa16",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

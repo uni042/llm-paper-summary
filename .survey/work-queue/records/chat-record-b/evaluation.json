@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-efc8e9feaf53ec425a01e723",
-  "job_id": "job-research-b1cd2f28e2d09a3e",
-  "data": {
-    "hardware": "サイクル精度シミュレーション上のDGX-A100相当8 GPU。GPU演算性能312 TF/s、UCIe-A 512 GB/s/stack×5、スタック内TSV DMA 896 GB/s/stack、NVLink3 600 GB/s、ホストDDR5 512 GB。TokenStackは計算層20GB＋容量層40GB、AttAccはPIM計算32GB＋通常HBM16GB、全PIM構成は40GB、GPUのみは80GBをモデル化する。",
-    "software": "AttAccの公開シミュレータ前段とRamulator2を拡張。Ramulator2でバンク単位PIMのサイクル時間を計算し、Python側でテンソル並列GPU実行、異種アテンションオフロード、連続バッチング、KV配置、DMA、NVLink/PCIe経路を再現する。元のAttAcc結果を3%以内で再現して基盤を検証する。",
-    "methodology": "比較対象はGPUのみ、AttAcc、全層PIM、Duplex、TokenStack。全方式に同じ到着順受付・分割プリフィル・即時復号空き補充の連続バッチングを使い、メモリ構成とKV管理だけを変える。Aliyun Qwen-Bailian由来の2時間本番トレース4種類をそのまま再生し、到着時刻を伸縮して毎秒要求数を軽負荷から飽和まで走査する。traceBはAPI/テキスト172,800要求・平均生成91トークン、traceAは混合43,058要求・430トークン、coderは27,572要求・802トークン、thinkingは10,812要求・3,644トークン。Qwen3-4B、Qwen3-32B、Mistral-Devstral2-123B、GPT-175Bの4モデルと組み合わせて16条件を評価する。",
-    "scope": "評価は実HBM4/PIMチップではなく、既存の検証済みPIMシミュレータを拡張したモデルである。ベースダイ制御器はRTL実装ではなく、帯域・遅延・移動エネルギーのシステム効果としてモデル化する。実負荷由来トレースを使う一方、GPU・PIM・UCIe・HBM4の統合実機でのタイミング、熱、製造ばらつき、制御器実装の詳細は直接検証していない。",
-    "workloads": ["Aliyun Qwen-Bailian traceB（API/テキスト）", "traceA（混合）", "coder（コード）", "thinking（長文推論）", "Qwen3-4B/32B", "Mistral-Devstral2-123B", "GPT-175B"],
-    "baselines": ["Full-GPU", "AttAcc", "Uniform HBM-PIM", "Duplex", "TokenStack component ablations"],
-    "metrics": ["トークン処理量", "要求処理量", "p50/p95 TTFT", "p50/p95 TBT", "p50/p95 end-to-end latency", "SLO内最大QPS", "トークン当たりエネルギー", "KVヒット率", "キュー遅延"],
-    "reproducibility": "基盤となるAttAcc simulatorとRamulator2は公開され、主要帯域・容量・モデル・トレース統計・比較構成・スケジューラ条件が明示されている。一方、TokenStack固有の拡張コード公開先は一次資料で確認できず、HBM4論理ベースダイの詳細RTLもないため、完全な再現には論文記載からの実装が必要になる。"
-  },
-  "reservation": {"claim_id": "claim-efc8e9feaf53ec425a01e723", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-286ac5a93883c97edb55aa16",
+  "job_id": "job-research-f379557cdc6a8294",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-286ac5a93883c97edb55aa16",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
