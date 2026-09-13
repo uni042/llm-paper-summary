@@ -1,3 +1,4 @@
+import hashlib
 import json
 import subprocess
 import sys
@@ -7,6 +8,7 @@ from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 LISTER = SCRIPTS / "list_unsettled_immutable_submissions.py"
+PROCESSOR = SCRIPTS / "process_immutable_submission.py"
 WORKFLOW = Path(__file__).resolve().parents[2] / ".github/workflows/survey-submission-fast.yml"
 
 
@@ -80,6 +82,43 @@ class SubmissionBacklogDrainTests(unittest.TestCase):
             path = root / ".survey/work-queue/submissions/audit/bad.json"
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("{broken\n", encoding="utf-8")
+            self.assertEqual(
+                self.run_lister(root),
+                [".survey/work-queue/submissions/audit/bad.json"],
+            )
+
+    def test_malformed_descriptor_failure_tombstone_settles_exact_bytes(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            path = root / ".survey/work-queue/submissions/audit/bad.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("{broken\n", encoding="utf-8")
+
+            proc = subprocess.run(
+                [
+                    sys.executable,
+                    str(PROCESSOR),
+                    "--repo-root",
+                    str(root),
+                    "--submission",
+                    str(path),
+                ],
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+            self.assertEqual(proc.returncode, 1)
+
+            result_path = root / ".survey/work-queue/results/audit/bad.json"
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            self.assertFalse(result["ok"])
+            self.assertEqual(
+                result["descriptor_sha256"],
+                hashlib.sha256(path.read_bytes()).hexdigest(),
+            )
+            self.assertEqual(self.run_lister(root), [])
+
+            path.write_text("{different-broken\n", encoding="utf-8")
             self.assertEqual(
                 self.run_lister(root),
                 [".survey/work-queue/submissions/audit/bad.json"],
