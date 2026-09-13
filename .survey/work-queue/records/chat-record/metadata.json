@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-00ad49beaa5eceaa4b67bfa2",
   "job_id": "job-research-666c253d539b3e43",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-00ad49beaa5eceaa4b67bfa2",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2603.07917",
+    "arxiv_id": "2603.07917",
+    "doi": "10.48550/arXiv.2603.07917",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
+    "title": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+    "summary": "SageSchedは、LLM要求の出力長が事前に分からず、しかも推論が計算量とKVキャッシュ容量の両方に制約されるため、出力長の単一点予測だけで順序を決める既存スケジューラが非効率になる問題を扱う。最近の実行履歴から意味的に似たプロンプトを検索し、その実測出力長を分布として使う学習不要の予測器、入力長Iと出力長Oから計算・メモリの両方で同じ順序を表現するC=O^2/2+IOの費用モデル、費用分布からGittins指数を計算して不確実性を保ったまま優先順位を決めるスケジューラを組み合わせる。vLLM上に実装し、A40上のLlama-3.1-8BとH800上のQwen3-32B、3種類の実データセットで評価した結果、8 RPSのQwen3-32Bでは次点のTRAILより平均TTLTを28.7%改善する。",
+    "list_summary": "類似プロンプトの履歴から出力長分布を学習なしで推定し、入力長と出力長から計算・KVキャッシュ費用を統合、Gittins指数で不確実性込みの優先順位を決めるLLMスケジューラ。平均TTLTを最大28.7%以上改善する。",
+    "authors": ["Zhenghao Gan","Yichen Bao","Yifei Liu","Chen Chen","Quan Chen","Minyi Guo"],
+    "authors_affiliations": "全著者がShanghai Jiao Tong Universityに所属する。",
+    "published": "2026-03-09",
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["LLM要求スケジューリング","出力長分布予測","KVキャッシュ費用","Gittins指数","要求プリエンプション","vLLM"],
+    "importance": "高。点推定した出力長だけでSJF/SRPTを近似する既存方式に対して、分布予測、計算・メモリ混合費用、分布最適スケジューリングを一貫して接続する。特にKVキャッシュ成長を費用式へ明示的に入れるため、長入力やメモリ律速条件をスケジューリング順位へ反映できる。",
+    "hardware_evaluation": "Llama-3.1-8BをNVIDIA A40 PCIe 48GB、Qwen3-32BをNVIDIA H800 PCIe 96GBで評価し、最大64 GPUノードのシミュレータでも拡張性を確認する。",
+    "hardware_details": "実機はA40 PCIe 48GBとH800 PCIe 96GB。要求到着はPoisson分布で変化させる。大規模シミュレーションでは各ノード平均8 RPS、最大1000要求の待ち行列を想定する。",
+    "quality_effect": "モデル重みや生成アルゴリズムを変更せず要求順序だけを変えるため、生成品質を近似して速度を得る方式ではない。温度0.6で出力長の確率性を観測し、その分布をスケジューリングへ利用する。",
+    "storage_targets": ["KVキャッシュ","直近10000要求の履歴","プロンプト埋め込み索引"],
+    "bottlenecks": ["出力長の事前不確実性","計算量とKVキャッシュ容量の混合制約","先頭の長要求による待ち行列閉塞","プリエンプション時の再優先順位付け"],
+    "evidence_locations": ["§1","§2.2","§3.1–3.3","§4.1–4.4"],
+    "source": "https://arxiv.org/abs/2603.07917",
+    "sources": ["https://arxiv.org/abs/2603.07917","https://arxiv.org/html/2603.07917v1","https://arxiv.org/pdf/2603.07917"],
+    "code": null,
+    "implementation": "vLLM v0.8.2を基盤にSageSchedを実装する。予測にはプロンプト埋め込みとFAISS IndexFlatを使い、履歴窓は10000件。一次資料にはSageSched固有の公式コード公開URLは記載されていない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2305.05920","arxiv_id":"2305.05920"},
+      {"canonical_id":"arXiv:2401.11181","arxiv_id":"2401.11181"},
+      {"canonical_id":"arXiv:2406.17565","arxiv_id":"2406.17565"},
+      {"canonical_id":"arXiv:2309.17453","arxiv_id":"2309.17453"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML references section",
+    "references_total": 49
+  },
+  "reservation": {"claim_id":"claim-00ad49beaa5eceaa4b67bfa2","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
