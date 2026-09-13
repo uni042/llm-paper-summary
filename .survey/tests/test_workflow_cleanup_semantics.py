@@ -39,6 +39,29 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
         self.assertIn('result["attempt_id"] = attempt_id', worker)
 
+    def test_maintenance_refreshes_metadata_coverage_before_health(self):
+        workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
+        metadata_command = (
+            "python .survey/scripts/audit_metadata_coverage.py --repo-root . "
+            "--json-out .survey/reports/metadata-coverage-latest.json --strict"
+        )
+        self.assertIn(metadata_command, workflow)
+        self.assertLess(workflow.index(metadata_command), workflow.index("python .survey/scripts/maintenance_health.py"))
+
+    def test_repository_regression_runs_live_structural_checks(self):
+        workflow = (ROOT / ".github/workflows/repository-tests.yml").read_text(encoding="utf-8")
+        metadata_command = (
+            "python .survey/scripts/audit_metadata_coverage.py --repo-root . "
+            "--json-out /tmp/metadata-coverage.json --strict"
+        )
+        inventory_command = "python .survey/scripts/build_repository_inventory.py"
+        consistency_command = "python .survey/scripts/check_repository.py"
+        self.assertIn(metadata_command, workflow)
+        self.assertIn(inventory_command, workflow)
+        self.assertIn(consistency_command, workflow)
+        self.assertLess(workflow.index(metadata_command), workflow.index(consistency_command))
+        self.assertLess(workflow.index(inventory_command), workflow.index(consistency_command))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,1 +1,8 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-058720f42caad1129d81058b","job_id":"job-research-d09e1c8e52097070","data":{"hardware":"単一ノードはAWS EC2 g6e.48xlarge（384 CPUコア、1536GB RAM、NVIDIA L40S×8）。複数ノードはAWS g6e.24xlarge×4で、合計768 CPUコア、3072GB RAM、NVIDIA L40S×16。","software":"PyTorchとTransformersを基盤に、約5.5K行のPythonと600行のCUDAで完全なserverless prototypeを実装。基盤共有はCUDA IPC、事前読込みにはCUDA Streamsと非同期メモリ転送を用いる。","methodology":"Azure Functionsの14日間production traceを要求間隔の変動係数（CoV）でPredictable（≤1）、Normal（1<CoV≤4）、Bursty（>4）へ分類し、各型から8本の4時間traceを無作為選択して個別関数へ割り当てる。Llama2-7B/13B各4 LoRA関数、GSM8K promptを用い、InstaInfer、ServerlessLLM、dLoRA、vLLMと比較する。TTFT/TPOT、cold-start、E2E latency、monetary cost、1/(E2E latency×cost)のcost-effectiveness、token/request throughput、scalability、SLO violation、overheadを測る。SLOはParaServeに合わせて未加速warm-start TTFTの5倍で、7B 2500ms、13B 4000ms。","scope":"主評価はAWS L40SでLlama2-7B/13Bと8 LoRA関数。Azure traceはfunction invocation patternを借用したもので、実際の生成内容はGSM8K。より大規模な基盤モデル、異種GPU、multi-region、実クラウドprovider上の課金挙動やセキュリティ攻撃耐性は評価しない。","workloads":["Azure Functions由来Predictable/Normal/Bursty 4時間trace","Llama2-7B系列4関数","Llama2-13B系列4関数","GSM8K prompt","強/弱scaling workload"],"baselines":["InstaInfer","ServerlessLLM","dLoRA","vLLM","ServerlessLoRA component ablations"],"metrics":["cold-start latency","TTFT","TPOT","E2E latency","monetary cost","cost-effectiveness","token/s","request/s","peak batch size","SLO violation","scheduler/resource overhead"],"reproducibility":"実装規模、主要共有機構、AWS instance構成、モデル、adapter数、trace分類、dataset、baselines、SLO定義、ablation条件は記載されている。一方でServerlessLoRA固有の公式公開コードは確認できず、論文記載だけからの完全再現性には限界がある。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "unused-bank-placeholder",
+  "job_id": "unused-bank-placeholder",
+  "data": {}
+}
