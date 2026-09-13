@@ -2,6 +2,7 @@ name: Framework and LLM update worker
 
 on:
   push:
+    branches: [main]
     paths:
       - '.survey/update-worker/update-inbox.json'
   workflow_dispatch:
