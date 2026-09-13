@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 17:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,19 +37,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **172** |
-| 処理中（Active claims） | **38** |
-| 今すぐ着手可能（Claimable） | **134** |
-| :30 通常worker Active claims | **31** |
+| 処理中（Active claims） | **39** |
+| 今すぐ着手可能（Claimable） | **133** |
+| :30 通常worker Active claims | **32** |
 | :00 補助worker Active claims | **4** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 17:05 JST** |
+| :30 通常worker 直近claim | **09-13 17:07 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **4** |
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
 | 最新通常runのResearch完了 | **2** |
-| 最古claimの経過時間 | **299 min** |
+| 最古claimの経過時間 | **301 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T16:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
 - P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
 - P87 `arXiv:2607.19539` — Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts
 - P87 `arXiv:2604.21231` — SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference
 - P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
+- P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 
 ## 参考情報
 
