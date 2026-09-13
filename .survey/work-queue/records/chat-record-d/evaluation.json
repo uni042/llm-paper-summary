@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2405.16444-20260913-1230-v10-cacheblend",
-  "job_id": "job-research-cf1831adcf0d875d",
-  "data": {
-    "hardware": "Runpod環境で128GBホストRAM、NVIDIA A40 GPU×2、1TB NVMe SSDを使用。SSD実測帯域は4.8GB/s。Mistral-7BとYi-34Bは1 GPU、Llama-70Bは2 GPUで実行する。",
-    "software": "vLLMを約3,000行のPythonコードで拡張し、PyTorch 2.0を使用。Yi-34BとLlama-70Bは8ビット量子化。CPU RAMまたはNVMe SSDをKV保存先として評価する。",
-    "methodology": "Mistral-7B、Yi-34B、Llama-70Bを用い、2WikiMQA 200例、Musique 150例、SAMSum 200例、MultiNews 60例を評価する。基本の文脈はLangChainで512トークンに分割し、SAMSumは元の200〜400トークンチャンクを使う。RAG負荷評価ではMusiqueと2WikiMQAから各1,500問い合わせを選び、GPT-4で各3件の類似問い合わせを生成して計6,000件とし、L2距離で上位6チャンクをランダム順に連結する。初期1,000件はキャッシュが空なのでスループット比較から除外する。品質はQAでF1、要約でROUGE-Lを使う。再計算率、チャンク数、チャンク長、バッチサイズ、保存媒体を変える感度分析も行う。",
-    "scope": "Transformer型モデルの複数文書RAG・要約を中心とする。MambaやGriffinなど再帰型構造は対象外で、量子化設定もYi-34B/Llama-70Bの8ビット以外を広く検証していない。KV保存はCPU RAMまたは単一SSD階層で、多段階層や複数計算ノード間の共有は未評価。DistServeなど分離サービング基盤との統合も未評価である。接頭辞キャッシュ比較ではRAM/SSDからGPUへの読出し遅延をゼロとする有利な仮定を置いている。",
-    "workloads": ["2WikiMQA", "Musique", "SAMSum", "MultiNews", "Musique extended", "2WikiMQA extended", "6チャンクRAG入力"],
-    "baselines": ["完全KV再計算", "接頭辞キャッシュ", "PromptCache型完全KV再利用", "MapReduce型RAG", "MapRerank型RAG"],
-    "metrics": ["先頭トークン到達時間", "F1", "ROUGE-L", "スループット", "要求遅延", "再計算率", "層単位KV読出し時間"],
-    "reproducibility": "モデル、GPU、RAM、SSD容量と実測帯域、主要データセット件数、チャンク長、比較方式、品質指標、実装インターフェースを本文に記載し、公式LMCacheコードも公開されている。クラウドGPU環境やモデル量子化の詳細版数には再現上の差が残り得るが、主要機構の再現性は高い。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-143f9809ea015ded9d8641e3","job_id":"job-research-bd2308b6daadbf9c","data":{"hardware":"H20 141GB NVLink構成とL40 48GB PCIe構成を別々の2ノード・16 GPU環境で評価。各ノード2TBメモリ、Xeon 8468、400Gbps ConnectX-7。","software":"CascadeInferはvLLM 0.9.1を基盤とする。比較対象はvLLM 0.9.1、SGLang 0.4.9、Llumnix。Llama 3.1 70Bではテンソル並列2/4も評価。","methodology":"8種類のFP16大規模言語モデルとLlama 3.1 70Bを用い、ShareGPTから要求を作りPoisson到着で負荷を変える。平均遅延、末尾遅延、最大処理率、SLO達成率を測り、連鎖配置、適応境界、負荷再均衡を個別に外すアブレーションも行う。","scope":"すべて実GPU測定である。主評価は単一モデルの同一構成インスタンス群に集中し、モデルがGPUメモリの大半を占める場合や要求長が均質な場合の利点は小さい。異種エンジン構成を同時最適化する高次元探索は将来課題である。"}}
