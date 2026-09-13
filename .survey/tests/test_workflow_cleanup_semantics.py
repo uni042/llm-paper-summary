@@ -43,6 +43,20 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("workflow v10", worker)
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
 
+    def test_discovery_docs_preserve_overflow_reader_mode(self):
+        for rel in (
+            ".survey/docs/survey-workflow/README.md",
+            ".survey/docs/survey-workflow/worker-router.md",
+            ".survey/docs/survey-workflow/candidate-buffer-policy.md",
+            ".survey/docs/survey-workflow/discovery-continuation-policy.md",
+            ".survey/docs/survey-workflow/discovery-exhaustive-run-policy.md",
+            ".survey/docs/survey-workflow/discovery-specialist-worker.md",
+        ):
+            with self.subTest(path=rel):
+                text = (ROOT / rel).read_text(encoding="utf-8")
+                self.assertIn("candidate_inventory > 50", text)
+                self.assertIn("overflow research mode", text)
+
     def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
         retired = [
             ".survey/scripts/normalize_v10_jobs.py",
@@ -54,6 +68,7 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             ".survey/tests/test_repair_corrupted_lineages.py",
             ".survey/work-queue/submissions/chat-inbox.json",
             ".survey/work-queue/results/chat-inbox.json",
+            ".survey/docs/survey-workflow/handoff-2026-09-11-metadata-backfill.md",
         ]
         for rel in retired:
             with self.subTest(path=rel):
