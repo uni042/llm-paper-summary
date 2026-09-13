@@ -245,11 +245,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
-- P87 `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
-- P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
 - P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
 - P87 `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
+- P87 `arXiv:2502.09922` — λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
+- P87 `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
+- P87 `arXiv:2607.19539` — Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts
 
 ## 7日比較
 
@@ -267,8 +267,8 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | 指標 | 値 |
 |---|---:|
 | Research ready | **180** |
-| Active claims | **29** |
-| Claimable | **151** |
+| Active claims | **32** |
+| Claimable | **148** |
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
 | Research completed (24h) | **72** |
