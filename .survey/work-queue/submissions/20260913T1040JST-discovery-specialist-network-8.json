@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "job_id": "job-224a19df35fa6760",
+  "candidates": [],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-network-8",
+    "axis": "分離サービング通信・KV転送・network flow scheduling",
+    "query_summary": "prefill/decode分離時のKV転送、RDMA/通信圧縮、multi-stage flow schedulingを探索した。SmartGen、KVServe、CacheFlow、MFS、collective communication surveyはいずれも既存jobまたは収録済みで、新規の強候補は残らなかった。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2607.28150",
+      "arXiv:2605.13734",
+      "arXiv:2604.25080",
+      "arXiv:2603.17456",
+      "arXiv:2608.15118"
+    ],
+    "next_axis_hint": "今回追加したFlashMoE/Harvest/MicroSpec等のbackward reference・forward citation経路と、OS/DBMS/HPC由来のcache/prefetch技術へ探索を移す",
+    "empty_round_reason": "networking・disaggregated-serving軸の強い候補は現正本で既に代表例が収録またはjob化されていた。"
+  }
+}
