@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "job_id": "job-505b2997047a5030",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.22643",
+      "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
+      "source_url": "https://arxiv.org/abs/2608.22643",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.22643-neuroprefetcher-storage-aware-delta-prefetching.md",
+      "priority": 92,
+      "reason": "モデル全体が常時メモリに収まらずNVMeから重みを供給する厳しい推論条件で、自己回帰デコード中のMLP活性ニューロンが隣接トークン間で約82〜85%再利用される局所性を利用する。GPU常駐の単一予測器で下流層の疎活性を予測し、既に常駐する行との差分だけをアプリケーション制御でNVMeから先読みすることで、OSの需要ページングをモデル認識型の明示I/Oへ置き換える。実機の統合メモリエッジ環境でllama.cpp比7.9〜12.0倍を報告し、SSD/NVMe活用という重点テーマへ直接つながる。"
+    },
+    {
+      "canonical_id": "arXiv:2608.01536",
+      "title": "Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.01536",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.01536-celty-dual-sparse-gpu-kernel.md",
+      "priority": 84,
+      "reason": "重み疎性と実行時活性疎性を同時に利用する単一ユーザーデコードを、既存GPUが苦手とする疎行列×疎ベクトル計算として捉え、圧縮形式・GPUカーネル・SIMTマイクロアーキテクチャを共同設計する。RLC-CSC形式と共有メモリ集約で不要メモリアクセスを削減し、GPUカーネルだけでcuBLAS比最大2.8倍、Flash-LLM比2.4倍、専用Sparse SIMT CoreではcuBLAS比最大5.3倍を報告する。低バッチ推論のカーネル/ランタイム系統を補完する候補。"
+    },
+    {
+      "canonical_id": "arXiv:2608.09291",
+      "title": "UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge",
+      "source_url": "https://arxiv.org/abs/2608.09291",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md",
+      "priority": 82,
+      "reason": "低ビット量子化で重みpayloadが縮むほど疎行列のindex metadataが相対的なボトルネックになる点をPMR指標で明示し、bitmap encodingと低ビット共有メモリ並列decodeを組み合わせるSpMM実装を提案する。W4A4・30〜70%疎性でFlashLLM比2.30倍、SpInfer比1.43倍、CUTLASS比1.56倍を報告し、コードも公開されているため、エッジ推論で量子化と疎性のメタデータ/I/Oコストを扱う実装研究として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2604.08075",
+      "title": "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.08075",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.08075-dual-pool-token-budget-routing.md",
+      "priority": 84,
+      "reason": "最大コンテキスト長向けに一律設定されたvLLM fleetでは短い要求が多数でもKVメモリが過剰予約される問題に対し、同一GPU fleetを短文高throughput poolと長文大容量poolへ分け、オンライン学習したbytes-to-token比で総token budgetを推定してO(1)で振り分ける。Azure/LMSYS実トレースとLlama-3-70B/A100評価でGPU-hoursを31〜42%削減、preemptionを5.4倍低減し、既存PagedAttention・continuous batching・PD分離とも併用可能な運用レベルの資源配置研究。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:57:59+09:00",
+    "round": "specialist-storage-kernel-2",
+    "axis": "NVMe重み先読み・疎推論GPUカーネル・fleet資源配置",
+    "query_summary": "前roundの分離型サービングから独立して、NVMeを能動的な重み供給層にする疎推論、低ビット疎GPU kernel、MoE expert cache/prefetch、vLLM fleet配置を探索。Cache-Aware Router、APEX、SPECTREは既存jobで除外し、未収録の実装・評価が強い4件を送信した。",
+    "candidate_count": 8,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arxiv:2609.04895",
+      "arxiv:2608.11688",
+      "arxiv:2605.08151"
+    ],
+    "next_axis_hint": "次は最近の量子化実行系と、重要なMoE/KV論文からのforward citation・backward referenceを横断する",
+    "empty_round_reason": null
+  }
+}
