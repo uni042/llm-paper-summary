@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Append research-throughput and claim-health metrics to STATUS.md."""
+"""Append research-throughput, worker-routing, and claim-health metrics to STATUS.md."""
 from __future__ import annotations
 
 import argparse
@@ -11,6 +11,8 @@ from typing import Any
 START = "<!-- research-throughput-status:start -->"
 END = "<!-- research-throughput-status:end -->"
 HIGH_BACKLOG = 25
+CRITICAL_WATERMARK = 15
+SPECIALIST_RESEARCH_SWITCH = 50
 LOW_COMPLETIONS = 2
 TARGET_COMPLETIONS = 3
 
@@ -96,6 +98,11 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     high_backlog = ready >= HIGH_BACKLOG and (active + claimable) > 0
 
     mode = "HIGH-BACKLOG RESEARCH-ONLY" if high_backlog else "NORMAL"
+    auxiliary_mode = (
+        "NORMAL-WORKER ASSIST (RESEARCH/AUDIT)"
+        if ready > SPECIALIST_RESEARCH_SWITCH
+        else "DISCOVERY SPECIALIST"
+    )
     health = "OK"
     warning = ""
     if high_backlog and latest and latest_completed < LOW_COMPLETIONS:
@@ -116,10 +123,20 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| Research ready | **{ready}** |\n"
         f"| Active claims | **{active}** |\n"
         f"| Claimable | **{claimable}** |\n"
+        f"| :00補助worker mode | **{auxiliary_mode}** |\n"
+        f"| :00切替閾値 | **ready > {SPECIALIST_RESEARCH_SWITCH} → 通常worker補助 / ready ≤ {SPECIALIST_RESEARCH_SWITCH} → 探索専用** |\n"
         f"| Latest normal run | **{run_key}** |\n"
         f"| Latest research completed | **{latest_completed}** |\n"
         f"| Research completed (24h) | **{completed_24h}** |\n"
         f"| Oldest active claim age | **{age_text}** |\n\n"
+        "### Worker routing snapshot\n\n"
+        f"- 毎時`:30`の通常論文workerは、readyが **{HIGH_BACKLOG}本以上** かつactionable researchがある間はresearch / auditを優先し、通常worker側の広範なdiscoveryを止めます。\n"
+        f"- readyが **{CRITICAL_WATERMARK}〜{HIGH_BACKLOG - 1}本** ではresearchを継続しつつdiscovery補充を積極化し、**0〜{CRITICAL_WATERMARK - 1}本** では候補枯渇防止のためdiscovery比重を上げます。\n"
+        f"- 毎時`:00`の補助workerはreadyが **{SPECIALIST_RESEARCH_SWITCH}本を超える** と通常workerと同じresearch / audit優先動作へ切り替わり、**{SPECIALIST_RESEARCH_SWITCH}本以下** で探索専用へ戻ります。\n"
+        "- `.survey/work-queue/next-jobs.json` は優先スナップショットであり、表示件数を処理量上限として扱いません。表示外readyもpriority順に処理対象です。\n"
+        "- discoveryのcandidate最大5本は **1探索軸・1 submissionのtransport batch上限** であり、1run全体の候補数・round数・batch数の上限ではありません。\n"
+        "- `:00`補助worker由来の実行は、research補助モード時も通常workerの24-run maintenance counterへ加算しません。\n"
+        "- 上段の「探索専用worker」統計は実際にdiscoveryを行った履歴だけを集計します。`:00`補助workerがresearch補助モードの回は、探索roundとしては増えません。\n\n"
         f"高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低{TARGET_COMPLETIONS}件**。"
         "3件は上限・終了条件ではありません。\n\n"
         f"{warning}"
