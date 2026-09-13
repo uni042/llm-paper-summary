@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-12b96d8a83087a895d8a74df",
   "job_id": "job-research-6a744249548dd135",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-12b96d8a83087a895d8a74df",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "対象はthroughput重視のoffline batched inferenceで、TTFTやTPOT制約が厳しいonline servingを直接最適化するものではない。近ストレージattentionは市販SmartSSDのFPGA能力と内部PCIe 3.0帯域を前提にしており、PCIe 5.0級の将来SSDでは現accelerator throughputが不足する。16 device構成は追加PCIe switchとSmartSSDの設備費・消費電力を伴い、小modelや短contextでDRAMにKVが収まる場合は単純DRAM offloadの費用対効果が高いことがある。weight transferは依然host/storage階層に残り、KV比率が低いMoE/GQAではspeedupが縮む。",
+    "differences": "FlexGenやDeepSpeed-InferenceはGPU容量をDRAM/SSDへ拡張するが、KVをhostへ戻してCPU/GPUでattentionするためsystem PCIe trafficが文脈長に比例する。InstAttentionもstorage側attentionを扱うが、KVを疎に選ぶ近似によってstorage-side計算量を減らすのに対し、HILOSは全KVを保持・処理して精度を落とさない。またHILOSはattention offloadだけで終わらず、GPU余剰計算を使うX-cacheとhost DRAMを使うdelayed writebackでstorage内部read/writeまで共同最適化する。Smart-Infinity等のnear-storage研究がtrainingやweight/optimizer trafficを主対象とするのに対し、本研究はdecode KV trafficへ焦点を当てる。",
+    "implementation_status": "ASPLOS 2026採録・公開済み。Samsung SmartSSD 16台を使う実機prototypeをPyTorch/FlexGen型runtimeへ統合し、HLS source、host software、benchmark suiteをGitHubで公開、artifact snapshotをZenodoへ保存している。FPGAはVitis 2023.1で合成し296.05MHzで動作、GDSとXRTを利用する。",
+    "research_positioning": "GPU/CPU/SSD階層メモリとnear-data processingの交差領域に位置する。特にLLM推論のSSD活用を『低速大容量memory tier』から『KVを保持しattentionも担当するactive tier』へ拡張した点が重要である。SSD台数で容量とaggregate internal bandwidthを増やしつつ、共有PCIeを避ける設計は、NVMe offloadでI/Oが支配的になる研究群へのhardware-software co-design型の解答である。",
+    "relation_to_existing_repository": "FlexGen、DeepSpeed-Inference、ZeRO-Infinity、InfiniGen、BaM/GMT系GPU-storage access、InstAttention、Smart-Infinityなどのoffload・hierarchical memory・near-storage系統と直接関係する。SSDをより活躍させる新手法を考える際には、(1) 大tensorをstorageからGPUへ運ばずstorage側で縮約する、(2) storage offloadで空いたGPU computeを再計算へ回してSSD readを削る、(3) small writeをhost側で集約してpage granularityへ合わせる、という3原則が再利用可能である。将来のexpert offloadingでは、expert weightそのものの近ストレージ演算や、KV attentionとexpert I/Oを同時に処理するCSD schedulerへ発展させる比較基準になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-12b96d8a83087a895d8a74df", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
