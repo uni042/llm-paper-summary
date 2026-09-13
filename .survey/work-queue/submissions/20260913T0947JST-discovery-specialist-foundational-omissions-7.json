@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "job_id": "job-ea7276e02d5dedfc",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2401.09670",
+      "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2401.09670",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-prefill-decode-disaggregation.md",
+      "priority": 94,
+      "reason": "prefillとdecodeの資源特性・SLOが異なることを踏まえ、両フェーズを別GPUへ分離して相互干渉を除去し、フェーズ別の並列度と配置を最適化する基礎的な分離サービング研究。一次資料では同一GPU型の既存サービングに対して最大7.4倍の要求を処理、または同一要求率で最大12.6倍厳しいSLOを満たすと報告する。現在の分離サービング系統を理解する上で重要な未収録候補。"
+    },
+    {
+      "canonical_id": "arXiv:2403.02310",
+      "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+      "source_url": "https://arxiv.org/abs/2403.02310",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefill-stall-free-scheduling.md",
+      "priority": 92,
+      "reason": "長いprefillがdecodeを止めるstallと、pipeline parallelism時のbubbleをchunked-prefillとstall-free schedulingで抑える基礎的サービング研究。一次資料ではMistral-7Bで2.6倍、Yi-34Bで最大3.7倍のserving capacity改善、Falcon-180Bのpipeline構成で最大5.6倍のthroughput改善を報告する。近年のchunked prefill実装の系譜上、未収録なら優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2311.18677",
+      "title": "Splitwise: Efficient Generative LLM Inference Using Phase Splitting",
+      "source_url": "https://arxiv.org/abs/2311.18677",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-phase-splitting.md",
+      "priority": 90,
+      "reason": "prompt処理とtoken生成を異なる機械群へ分離し、それぞれのフェーズへ適したハードウェアを割り当てるphase splittingを体系化した重要な先行研究。一次資料では同一コストで最大2.35倍のthroughput、または1.4倍のthroughputを20%低いコストで達成すると報告する。DistServe以前の分離設計・コスト電力最適化の系譜を補う。"
+    },
+    {
+      "canonical_id": "arXiv:2310.18547",
+      "title": "Punica: Multi-Tenant LoRA Serving",
+      "source_url": "https://arxiv.org/abs/2310.18547",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+      "priority": 88,
+      "reason": "多数のLoRA adapterを個別GPUへ固定せず、異なるadapterの要求を同一batchで処理する専用CUDA kernelとadapter-aware schedulingで統合するmulti-tenant servingの基礎研究。一次資料では従来方式比で最大12倍のthroughputを約2ms/tokenの追加遅延で実現し、実装も公開する。adapter serving系統の基礎として未収録なら価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-foundational-omissions-7",
+    "axis": "基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA",
+    "query_summary": "新着・multi-tenant軸で新規候補を得た後、古い重要論文の収録漏れ探索へ切り替えた。DistServe、Sarathi-Serve、Splitwise、Punicaを一次arXiv抄録で軽量評価し、送信直前の最新HEADで各canonical_idの決定論的research jobが不存在、repo内title/arXiv ID検索も不一致であることを確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "基礎サービング軸を継続し、PagedAttention/vLLM、SGLang/RadixAttention、DeepSpeed-FastGenなどの既収録確認後、未収録がなければkernel/runtimeまたはedge系の古い重要論文へ軸を変える",
+    "empty_round_reason": null
+  }
+}
