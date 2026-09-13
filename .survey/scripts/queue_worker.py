@@ -412,6 +412,8 @@ def process_research(sub: dict, job: dict, st: dict):
         job["status"] = "completed"
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
+        if sub.get("paper_path"):
+            job["paper_path"] = sub["paper_path"]
         clear_repair_state(job)
         st["stats"]["research_completed"] += 1
         st.setdefault("maintenance", {})["views_dirty"] = True
@@ -435,6 +437,8 @@ def process_audit(sub: dict, job: dict, st: dict):
         job["status"] = "completed"
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
+        if sub.get("paper_path"):
+            job["paper_path"] = sub["paper_path"]
         clear_repair_state(job)
         st["stats"]["audit_completed"] += 1
         st.setdefault("maintenance", {})["views_dirty"] = True
