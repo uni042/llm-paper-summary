@@ -101,10 +101,14 @@ jobs:
               fi
             done < /tmp/immutable-submissions.txt
 
+            mkdir -p \
+              .survey/work-queue/results/research \
+              .survey/work-queue/results/audit
             git add \
               papers \
               .survey/work-queue/jobs \
-              .survey/work-queue/results \
+              .survey/work-queue/results/research \
+              .survey/work-queue/results/audit \
               .survey/work-queue/state.json \
               .survey/work-queue/next-jobs.json \
               .survey/survey-state/identity-deltas
