@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2607.05147-20260913-0930-v10-h",
-  "job_id": "job-research-ee741ee249b93f89",
+  "attempt_id": "attempt-2606.06453-20260913-0930-v10-vortex",
+  "job_id": "job-research-8df4b126a68a6be4",
   "data": {
-    "hardware": "オフラインではQwen3-4B/8B/14BとGemma4-12Bをターゲットにし、同一DeepSpec学習基盤でドラフタを比較する。本番ではDeepSeek-V4-Flash（preview）とDeepSeek-V4-Pro（preview）の実サービングエンジンへDSpark-5を展開し、実ユーザートラフィックのテレメトリを測る。GPU型自体の詳細値より、エンジン固有のSPS(B)実測曲線をスケジューラ入力とする。",
-    "software": "公開DeepSpecはMITライセンスでDSpark、DFlash、Eagle3の学習・評価を統一実装する。オフラインはDeepSpecで全比較ドラフタを同じデータ・特徴層設定から再学習する。本番はDeepSeek内部HAI-LLM学習基盤、Zero-Overhead Scheduling、連続CUDA graph、疎注意marker tensorを利用する。",
-    "methodology": "学習データはOpen-PerfectBlend 130万promptで、chat 17.6%、math 39.4%、code 38.9%、instruction 4.1%。各ターゲットモデルで応答を再生成し、非思考モード、10 epochで全ドラフタを学習する。Eagle3は1層・TTT horizon 7、DFlash/DSparkは5層・block 7を基本にし、同じターゲット特徴層を使う。オフライン評価はGSM8K/MATH500/AIME25、MBPP/HumanEval/LiveCodeBench、MT-Bench/Alpaca/Arena-Hardを温度1.0の標準投機デコーディングで測り、confidence schedulerを無効化して純粋な平均受理長を比較する。本番はMTP-1を旧生産基準とし、V4-Flashの80/120 tok/s/user、V4-Proの35/50 tok/s/userのSLA点、同等総スループット点、同時要求数別の動的検証長を比較する。",
-    "scope": "オフラインの受理長改善と本番のスケジューラ改善を分けて評価している。Qwen/Gemmaの表1はconfidence schedulerなしなので半自己回帰ドラフタ品質を測り、DeepSeek-V4の実トラフィック評価はドラフタと負荷認識スケジューラを含む統合効果を測る。厳格SLA点の661%/406%はMTP-1がほぼ容量崖に落ちた比率なので、著者自身が代表的な倍率ではなく新しい実行可能領域の証拠として解釈する。",
-    "workloads": ["GSM8K","MATH500","AIME25","MBPP","HumanEval","Live-CodeBench","MT-Bench","Alpaca","Arena-Hard","DeepSeek-V4 live user traffic"],
-    "baselines": ["Eagle3","DFlash","MTP-1 production baseline","fixed-length verification","static confidence threshold"],
-    "metrics": ["平均受理長","位置別条件付き受理率","ECE","ROC-AUC","全ラウンド遅延","aggregate output throughput","tok/s/user","verification budget"],
-    "reproducibility": "DeepSpecとQwen3/Gemma4用Eagle3/DFlash/DSparkチェックポイントが公開され、オフライン表1の再現性は高い。本番DeepSeek-V4のエンジン、実ユーザートラフィック、SPS曲線は内部環境であり完全再現はできないが、実装上の非同期化・可変長kernel統合方法を論文が説明する。"
+    "hardware": "主要効率評価はNVIDIA H200 SXM 141GBでQwen3 0.6B〜8B。MLA検証は単一NVIDIA B200のGLM-4.7-Flash。最大規模は4×NVIDIA B200、TP=4のMiniMax-M2.7 229B。",
+    "software": "SGLang v0.5.9へ統合。Attention backendはFlashInfer、TensorRT-LLM MHA/MLA、独自cuda_mla。公開vortex_torchとdocsあり。",
+    "methodology": "Qwen3ではAMC23/AIME24、入力最大4K・生成最大16Kでblock top-kとQuestのattended blocks 32〜256を掃引し、server throughputとaccuracy Paretoを測る。user latencyは16K prompt、512 token生成、1〜8 req/s、P1D1 disaggregated条件でP95 TPOTを測る。GLM-4.7-FlashはAIME26、32K生成、B200 1基でrope-aware sparse MLAを全注意・Questと比較。MiniMax-M2.7はAIME26、32K生成、4×B200 TP=4、block size 16/32/64を掃引する。AI-agent研究ではQwen3-1.7B/H200、RULER 4K→AMC23→AIME24の段階評価と18時間の反復最適化を行う。",
+    "scope": "現版はdecodeだけを対象としprefill sparse attentionは未対応。training/backwardも未対応。精度と速度のParetoで評価する近似方式で、疎度を強めた場合のaccuracy低下を許容budgetで管理する。GLM dense baselineはvendor MLA geometry未対応によりTriton fallbackとなるため、4.7倍の最大倍率にはbackend差も含まれる。",
+    "workloads": ["Qwen3-0.6B/1.7B/4B/8B","GLM-4.7-Flash","MiniMax-M2.7 229B","AMC23","AIME24","AIME26","RULER"],
+    "baselines": ["SGLang full attention","Quest","block top-k","dense MLA Triton fallback"],
+    "metrics": ["end-to-end tokens/s","P95 TPOT","mean@16","pass@4","pass@8","accuracy budget","Top-k recall","kernel latency"],
+    "reproducibility": "コード、Webサイト、docsが公開され、Qwen/疎注意programの再現性は高い。AI-agent生成algorithmsも論文appendixに記述される。一方、GPU依存kernel性能と特定SGLang/TensorRT backend versionに結果が依存する。"
   }
 }

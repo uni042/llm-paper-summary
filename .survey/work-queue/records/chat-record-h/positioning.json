@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2607.05147-20260913-0930-v10-h",
-  "job_id": "job-research-ee741ee249b93f89",
+  "attempt_id": "attempt-2606.06453-20260913-0930-v10-vortex",
+  "job_id": "job-research-8df4b126a68a6be4",
   "data": {
-    "limitations": "低受理率の難しい要求でも並列バックボーンは最大γ候補分の固定ドラフト計算を行うため、スケジューラが検証を短縮してもこの費用は戻らない。著者は難易度認識の早期終了を将来課題に挙げる。本番評価はDeepSeek-V4 previewの内部エンジンと実トラフィックに依存し、SPS曲線や全ハードウェア構成は公開されない。2ステップ遅延の容量予測は急激な負荷変化で最新状態からずれる可能性がある。公開DeepSpecはオフライン学習・評価を再現できるが、本番ZOS/CUDA graph統合すべてをそのまま公開するものではない。",
-    "differences": "Eagle3など自己回帰ドラフタは位置依存を正確に持つ代わりにドラフト遅延が候補長へ比例し、DFlashなど並列ドラフタは1回の順伝播で長ブロックを出せる代わりに後半で独立予測の衝突が起きる。DSparkは重い部分だけ並列、依存表現だけ軽量逐次にする中間設計である。MedusaやMTPの固定複数head方式に対し、検証側でも要求ごとのprefix生存確率を使う。TETRISや他のシステム認識投機方式が負荷に応じた予算選択を扱うのに対し、DSparkは校正済みprefix確率、実機SPS曲線、並列ドラフタの長い候補、分布保存の因果制約を一つの生産系へ統合する。",
-    "implementation_status": "DeepSeek-AIがDeepSpecをMITライセンスで公開し、DSpark/DFlash/Eagle3の学習・評価コード、Qwen3-4B/8B/14BおよびGemma4-12B用チェックポイントを提供する。DeepSeek-V4-Pro/Flash用DSparkチェックポイントもHugging Faceで公開されている。本番DeepSeek-V4ではMTP-1をDSparkへ置き換えたと論文が報告する。",
-    "research_positioning": "投機的デコーディング系統の中で、アルゴリズム側のドラフタ構造とシステム側の高並行バッチ資源管理を同時に設計した研究である。特に受理率を高めるほど常に良いのではなく、追加検証tokenの期待受理価値とbatch容量の機会費用を実機プロファイルで比較する点が重要で、単一要求の速度最適化から生産goodput最適化への橋渡しになる。",
-    "relation_to_existing_repository": "既存のEAGLE系、並列ドラフタ、投機長動的制御を、サービング負荷と物理batch容量へ接続する位置にある。KV容量で同時要求数が制約される本番条件では、SSD/CPUへのKVオフロードで同時要求数が増えるとSPS(B)曲線と最適検証長も変わるため、階層メモリ研究と投機予算制御は独立ではない。将来はKV階層の帯域・待ち時間をSPS曲線へ含め、ストレージ状態に応じて検証prefixを短縮する方向が考えられる。",
+    "limitations": "decodeのみでprefill sparse attentionは未対応。training/backwardも対象外であり、vTensorはgradient layoutを扱わない。RNN/Mambaのような固定状態モデルはKV page抽象の外にある。AI-agentとの統合はprogram生成・評価環境を提供する段階で、仮説生成からkernel実装・検証まで完全自律する研究システムではない。性能はSGLang、FlashInfer、TensorRT-LLM、GPU世代とkernel supportに依存し、GLMの最大速度倍率にはdense backend不利が含まれる。",
+    "differences": "FlashInfer/FlexAttentionは主に疎indexが既に与えられた後のattention kernelを抽象化するのに対し、Vortexはquery依存index constructionと補助cacheまでprogramming modelへ含める。LServe/SparseServeは特定の疎注意方式やdeploymentをend-to-end最適化するが、Vortexは複数algorithmを同じoperator群から構成することを優先する。SGLang/vLLMはserving runtimeそのもので、新しい疎注意研究のDSLではない。SparseTIR等のcompiler abstractionをpaged KV servingへ特化して持ち込んだ位置づけである。",
+    "implementation_status": "公式GitHub Infini-AI-Lab/vortex_torch、Webサイト、docsが公開される。SGLang v0.5.9統合とH200/B200評価まで実装済み。",
+    "research_positioning": "KVキャッシュ最適化・圧縮系統のうち、どのKV blockを読むかというalgorithm設計と、その動的選択を実サービング上で高速に実装するsystems research。新しいsparse attention研究の実験サイクル自体を短縮する研究基盤として価値が高い。",
+    "relation_to_existing_repository": "MagicPig、Quest、H2O、NSA、SparseServe等の個別疎注意方式を同じ本番runtimeで比較・組合せる上位基盤に相当する。SSD/CPU KV offloadと組み合わせる場合、vTensorのpage metadataに階層locationを加え、indexerがGPU resident blockと下位階層blockの読出し費用を区別すれば、疎選択とprefetch/offloadを一つのprogramへ統合する拡張が考えられる。",
     "audit_required": false
   }
 }

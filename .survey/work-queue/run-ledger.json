@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:52:26.025549+00:00",
+  "updated_at": "2026-09-13T00:54:05.714409+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:52:26.025549+00:00",
+      "last_recorded_at": "2026-09-13T00:54:05.714409+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16428,7 +16428,7 @@
         "blocked": 0,
         "new_jobs": 16,
         "new_papers": 1,
-        "fallback_archived": 2
+        "fallback_archived": 3
       },
       "events": [
         {
@@ -16570,6 +16570,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34729087027:1",
+          "recorded_at": "2026-09-13T00:54:05.714409+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34729087027",
+            "run_attempt": "1",
+            "source_sha": "d3238c06320f7644db0f737908437b4f2087c130"
+          },
+          "signals": [
+            "fallback_archived"
           ]
         }
       ],
@@ -16767,11 +16781,12 @@
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",
-        ".survey/work-queue/fallback-archive/20260913T093000JST-research-2607.05147-dspark.json"
+        ".survey/work-queue/fallback-archive/20260913T093000JST-research-2607.05147-dspark.json",
+        ".survey/work-queue/fallback-archive/20260913T093000JST-research-2606.06453-vortex.json"
       ],
       "paper_active_count_before": 393,
       "paper_active_count_after": 394,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
