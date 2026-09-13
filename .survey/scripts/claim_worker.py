@@ -121,13 +121,10 @@ def _job_files(root: Path) -> list[dict[str, Any]]:
 
 
 def _immutable_descriptors(root: Path) -> list[dict[str, Any]]:
-    """Return durable research/audit descriptors relevant to claim ownership.
-
-    Full descriptor validation belongs to the submission processor. Claim allocation only
-    needs stable job/attempt identity so an already-saved payload is never reclaimed.
-    """
+    """Return only durable immutable descriptors that are still pending processing."""
     out: list[dict[str, Any]] = []
     submissions = root / ".survey/work-queue/submissions"
+    results = root / ".survey/work-queue/results"
     for kind in sorted(JOB_TYPES):
         folder = submissions / kind
         for path in sorted(folder.glob("*.json")) if folder.is_dir() else []:
@@ -139,6 +136,13 @@ def _immutable_descriptors(root: Path) -> list[dict[str, Any]]:
             if not isinstance(job_id, str) or not SAFE_ID_RE.fullmatch(job_id):
                 continue
             if not isinstance(attempt_id, str) or not SAFE_ID_RE.fullmatch(attempt_id):
+                continue
+            result = _read(results / kind / path.name)
+            if (
+                isinstance(result, dict)
+                and result.get("job_id") == job_id
+                and result.get("attempt_id") == attempt_id
+            ):
                 continue
             row = dict(value)
             row["kind"] = value.get("kind") or kind
