@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 12:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 12:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **182** |
-| Research ready | **182** |
+| Candidate在庫（Research ready） | **181** |
+| Research ready | **181** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **208** |
+| Research completed（累計） | **209** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **11 / 24** |
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T11:30:00+09:00**
+Run: **2026-09-13T12:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
-| Repo収録 | **0** |
+| Repo収録 | **1** |
 | Research/Audit blocked遷移 | **0** |
 
 > Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。
@@ -53,7 +53,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **22** |
+| 通常worker run（ledger観測） | **23** |
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **147** |
 | 探索評価候補 | **724** |
@@ -61,14 +61,14 @@ Run: **2026-09-13T11:00:00+09:00**
 | 重複率 | **43.8%** |
 | Novel候補 | **407** |
 | Research候補採用 | **227** |
-| Research完了 | **70** |
-| Repo収録 | **70** |
+| Research完了 | **71** |
+| Repo収録 | **71** |
 | Audit完了 | **0** |
 | Fallback archive（全helper） | **4** |
 
 ### 24時間ファネル
 
-**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 70 → Repo収録 70**
+**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 71 → Repo収録 71**
 
 ## 探索専用workerの探索効率（直近24時間）
 
@@ -234,6 +234,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### Research完了
 
+- `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
 - `arXiv:2608.22643` — NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching
 - `arXiv:2609.00097` — Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding
 - `arXiv:2609.01821` — Scaling Inference Prefill with High-Radix Photonic Interconnects
@@ -241,15 +242,14 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 - `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 - `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
-- `arXiv:2506.21901` — A Survey of LLM Inference Systems
 
 ### 次に処理する候補
 
-- P88 `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
 - P88 `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 - P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
 - P88 `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
 - P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
+- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 
 ## 7日比較
 
