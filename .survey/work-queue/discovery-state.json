@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:20:24+00:00",
+  "updated_at": "2026-09-13T02:22:53+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-important-serving-omission-8",
+  "last_round": "specialist-forward-citation-9",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "forward citationで新規論文は見つかったが、追加的なシステム機構が弱くシミュレータ評価中心のため強候補としては採用しなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3028,6 +3028,21 @@
       ],
       "next_axis_hint": "Llumnix採用で枯渇判定をリセットし、forward citation、backward reference、network/CXL/SSD、query expansion、重点テーマを独立に一巡する",
       "source_submission": "work-queue/submissions/20260913T1119JST-discovery-specialist-important-omission-8.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-forward-citation-9",
+      "axis": "収録済み重要論文のforward citation・Llumnix系譜",
+      "query_summary": "Llumnixのforward citationとlive-migration/SLA scheduling派生を確認した。Beyond Binary Priorities 2608.16336はLlumnixの二値priorityを多段SLAへ拡張するが、評価がVidurシミュレータ中心で新しいserving substrate・migration機構を追加しないため、このリポジトリの強候補基準では採用を見送った。Pallas 2608.16477や既存SLO/KV migration系は正本で既収録。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はFlashInfer-Bench/Llumnixのbackward referenceから基礎runtime・memory管理の未収録を確認する",
+      "source_submission": "work-queue/submissions/20260913T1122JST-discovery-specialist-forward-citation-9.json"
     }
   ],
   "axes": {
@@ -4720,6 +4735,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.75,
       "next_axis_hint": "Llumnix採用で枯渇判定をリセットし、forward citation、backward reference、network/CXL/SSD、query expansion、重点テーマを独立に一巡する"
+    },
+    "収録済み重要論文のforward citation・Llumnix系譜": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はFlashInfer-Bench/Llumnixのbackward referenceから基礎runtime・memory管理の未収録を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
