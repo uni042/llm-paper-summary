@@ -29,7 +29,20 @@ research / audit workerは、**未完了のassigned jobを同時に1件だけ保
 
 1件完了したこと自体はrun終了理由ではない。`always-on-worker.md` と `continuation-policy.json` がCONTINUEを示す限り、この直列ループを繰り返す。
 
-## 3. Actions待ちとclaim待ち
+## 3. Claim resultのrecord bank割当
+
+Research / Auditのclaim resultに `record_bank` が入っている場合、その値を **そのattemptの予約済みbankとして正本扱いする**。
+
+- `record_bank: "a"` など非null値が返ったら、そのbankだけへ5 slotを書く。別bankを`select_record_bank.py`で選び直してはならない。
+- claim高速経路はclaim割当と同じ直列化区間でbankを予約し、claim/resultの両方に同じ`record_bank`を保存する。並列workerが同じbankを独立選択する旧方式は使わない。
+- `record_bank: null` かつ `record_bank_fallback: "library"` の場合は、GitHub上の別bankを独自に探さず、完全logical payloadをChatGPT Libraryへcheckpointする。
+- 移行前のactive claimなど、claim resultにbank情報が無い場合だけlegacy互換として`select_record_bank.py`を利用できる。その場合もoccupied/dirty bankは使わない。
+- claimに記録されたbankとimmutable descriptorの`record_bank`は一致させる。
+- attemptが未解決の間、その予約bankは他workerが再利用してはならない。
+
+移行期間中にbank未記録の旧active claimが残っている場合、新規claimは安全のためLibrary fallbackへ回ることがある。これは旧workerが既にbankを選択済みである可能性との競合を避けるためであり、run停止理由ではない。
+
+## 4. Actions待ちとclaim待ち
 
 - immutable descriptor送信またはLibrary checkpoint後は、前jobのActions terminal反映を同期障壁にしない。
 - 次job用claim requestは前jobの耐久保存直後に発行する。
@@ -38,7 +51,7 @@ research / audit workerは、**未完了のassigned jobを同時に1件だけ保
 - ただし未完了assigned jobを残したまま再試行して別jobを積み増してはならない。
 - 未解決immutable descriptorが参照しているrecord bankは上書きしない。別bankが空いていなければLibrary checkpointへ切り替え、bank枯渇をrun停止理由にしない。
 
-## 4. Lease
+## 5. Lease
 
 lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 
@@ -48,7 +61,7 @@ lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 - expired claimファイルは履歴として残るがactiveではなく、他workerの新規claimを阻害しない。
 - lease期限切れ時点でまだ完全payloadを耐久保存していないworkerは、旧claimで新規送信せずfresh claimを取得し直す。
 
-## 5. 禁止例
+## 6. 禁止例
 
 以下は行わない。
 
@@ -57,6 +70,8 @@ lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 - claim result待ち中に別requestを何本も作る。
 - 「後で読むため」にpriority上位jobをまとめて確保する。
 - 前jobの完全payloadが未保存なのに次jobへ移る。
+- claim resultで予約されたbankとは別のbankへ書く。
+- `record_bank_fallback: "library"` を無視して独自にbankを確保する。
 - 新規通常Research/Auditで固定`chat-inbox.json`を上書きする。
 
-狙いは **claimの抱え込みを防ぎつつ、1件終わるたびに次jobへ即時移行してworkerを遊ばせないこと** である。
+狙いは **claimの抱え込みとrecord bankの並列競合を防ぎつつ、1件終わるたびに次jobへ即時移行してworkerを遊ばせないこと** である。
