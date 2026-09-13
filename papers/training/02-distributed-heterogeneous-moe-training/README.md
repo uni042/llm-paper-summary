@@ -31,7 +31,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 2年前（2024-10〜2025-09）
 
 - **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：2  
   注意機構とMoEで異なるGPU並列化グループを組み、同じGPU集合を処理ごとに組み替えて、エキスパートの不要なノード間通信を減らす大規模学習方式。
 
 - **2025-08 · [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)**  

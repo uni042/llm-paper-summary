@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 413,
+  "active_count": 440,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -111,6 +111,13 @@
       ],
       "source_hash": "02188208cb06a7ef8f95ceb65d76be8866ee321ae2c9bf7f2057710b5b99cde2"
     },
+    "arXiv:2512.12990": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2025-2512.12990-slicemoe-bit-sliced-expert-caching.md",
+      "identifiers": [
+        "arXiv:2512.12990"
+      ],
+      "source_hash": "9ee4665e8babb2ad2d276bf652c378ca51c77ff2430f1dd21b75b6796b93c70a"
+    },
     "arXiv:2601.17063": {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md",
       "identifiers": [
@@ -163,6 +170,13 @@
         "arXiv:2605.02189"
       ],
       "source_hash": "f2abedeb71136fe722487290f802373314b8e817f354d4e4cc8de044875f4258"
+    },
+    "arXiv:2605.05639": {
+      "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+      "identifiers": [
+        "arXiv:2605.05639"
+      ],
+      "source_hash": "12153879e54b08d88024dd9c75c451b8675b1afa3f064132fc453c432bf4bf5d"
     },
     "arXiv:2605.17889": {
       "path": "papers/inference/01-offload-hierarchical-memory/2026-2605.17889-cox-moe-coalesced-expert-execution-for-high-throughput-moe-inference-with-amx-en.md",
@@ -627,6 +641,14 @@
       ],
       "source_hash": "496a952a8b5ab1410dcdbbbed9d71b87ab92ee60ab81f0f0390a8b6aef9d5f71"
     },
+    "arXiv:2601.08800": {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2601.08800",
+        "arXiv:2601.08800"
+      ],
+      "source_hash": "376ed28b223fd22a59ccc20d0cdb9f0a174defeb99badc2b85b6ba0f601eba13"
+    },
     "arXiv:2603.27624": {
       "path": "papers/inference/04-moe-parallelism-communication/2026-2603.27624-expert-streaming-multichiplet-dynamic-trajectories.md",
       "identifiers": [
@@ -658,6 +680,13 @@
         "arXiv:2605.00254"
       ],
       "source_hash": "095129a4da2994dc13a8487b258972a004b842d0d56101bcba5790f68c8fdb1d"
+    },
+    "arXiv:2605.10670": {
+      "path": "papers/inference/04-moe-parallelism-communication/2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md",
+      "identifiers": [
+        "arXiv:2605.10670"
+      ],
+      "source_hash": "1b255424aa860441fbb7a46e68df9ff77941670e6ec430d56f58d70752284548"
     },
     "arXiv:2605.28095": {
       "path": "papers/inference/04-moe-parallelism-communication/2026-2605.28095-sidp-memory-efficient-data-parallelism.md",
@@ -782,6 +811,14 @@
         "arXiv:2609.10790"
       ],
       "source_hash": "5df14c054dcc15d8bc30d3d2da681eccb5466d1d7d7ae712f84fc16a9c126aa2"
+    },
+    "arXiv:2602.06932": {
+      "path": "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2602.06932",
+        "arXiv:2602.06932"
+      ],
+      "source_hash": "f63c26ab4e42c484a1d0423563b10bacc18328d03b7ac9fdf14aad3b2b714cd7"
     },
     "arXiv:2603.03251": {
       "path": "papers/inference/05-speculative-decoding/2026-2603.03251-speculative-speculative-decoding.md",
@@ -1053,12 +1090,35 @@
       ],
       "source_hash": "87ab7daf2de1bd417e68875c3e88948e01a2f2a0eaa7174cf8273524b830427d"
     },
+    "arXiv:2607.05147": {
+      "path": "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.05147",
+        "arXiv:2607.05147"
+      ],
+      "source_hash": "7b0bd07aa6c494d732094cd30ac2e2a37c1f8555f1ff2802cb3e898271c835a2"
+    },
+    "arXiv:2608.15018": {
+      "path": "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+      "identifiers": [
+        "arXiv:2608.15018"
+      ],
+      "source_hash": "e48e01e3f575e390c77b049c123767866e0a35f9a2d8361c47119f5df8891a41"
+    },
     "arXiv:2601.11652": {
       "path": "papers/inference/06-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md",
       "identifiers": [
         "arXiv:2601.11652"
       ],
       "source_hash": "3f62f4da235eb7c6ce8172cfae5db7433bf0718febf25cc8ab062fb3656acb17"
+    },
+    "arXiv:2603.19133": {
+      "path": "papers/inference/06-speculative-decoding-moe/2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2603.19133",
+        "arXiv:2603.19133"
+      ],
+      "source_hash": "266035bb508e2f3c05a63b72f7f16726ad36c826c93288a7bda4de7a0551a858"
     },
     "arXiv:2608.10362": {
       "path": "papers/inference/06-speculative-decoding-moe/2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md",
@@ -1134,6 +1194,14 @@
         "arXiv:2601.10729"
       ],
       "source_hash": "0b35e6b70213b7c9e90f5ee87ed51ab991bd6dc1524625cb095ce6f9af850d84"
+    },
+    "arXiv:2601.13684": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2601.13684",
+        "arXiv:2601.13684"
+      ],
+      "source_hash": "64c388d65b2578d4e7e0bdf1fbafcd587de5fbbd1c2332c5820b7be9175cf8a5"
     },
     "arXiv:2604.10539": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.10539-icecache-semantic-kv-offload.md",
@@ -1427,6 +1495,14 @@
       ],
       "source_hash": "e5495c85957bb9e18f102ccf56cac35c0a7d8200fbfddfe1a70361ef17a1247a"
     },
+    "arXiv:2512.22219": {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2512.22219",
+        "arXiv:2512.22219"
+      ],
+      "source_hash": "e5b1c4c2e842e0de515715da9daea17acb90ef5bc50f3e307012dbcd3a50b2b2"
+    },
     "arXiv:2606.07665": {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md",
       "identifiers": [
@@ -1479,6 +1555,14 @@
         "arXiv:2410.03065"
       ],
       "source_hash": "b0c78d4ea2af58a02d08f57b9bd1325e1cbf475865ae23481b229c59ac3d9dea"
+    },
+    "arXiv:2410.15332": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2410.15332-epic-position-independent-caching.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2410.15332",
+        "arXiv:2410.15332"
+      ],
+      "source_hash": "6452336b0b5a150ae5b0d00ef44c80803748dd5ea3b5cb2ec0fd7810efd9a0b5"
     },
     "arXiv:2410.21465": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
@@ -1679,6 +1763,14 @@
       ],
       "source_hash": "da5387d6ebc2331df6473b6af62ba71918cb80435a54e5c524a08021e5d92731"
     },
+    "arXiv:2603.23049": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.23049-pcr-prefetch-cache-reuse-rag-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2603.23049",
+        "arXiv:2603.23049"
+      ],
+      "source_hash": "69d4170faad3029202496d8f79f63d7caa86113006e11121bdb0339edda5304b"
+    },
     "arXiv:2603.27138": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.27138-scoutattention-efficient-kv-cache-offloading-layer-ahead-cpu-precomputation.md",
       "identifiers": [
@@ -1761,6 +1853,13 @@
       ],
       "source_hash": "f5e0ffbf7beed8ebd9001c4558fa9f2539dacef13f09d7f008fed40b60529134"
     },
+    "arXiv:2605.18825": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18825-saecache-semantic-aware-prefix-eviction.md",
+      "identifiers": [
+        "arXiv:2605.18825"
+      ],
+      "source_hash": "173e9f3da196582914830c2f40ef88812b6e923130b90887c8ca2d7f5af74683"
+    },
     "arXiv:2605.22850": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md",
       "identifiers": [
@@ -1830,6 +1929,14 @@
         "arXiv:2607.27187"
       ],
       "source_hash": "92f3b4ce17dff9c4e400af9c048e78ca45c943287584c1cd22fd28ed171b6de1"
+    },
+    "arXiv:2607.28699": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.28699",
+        "arXiv:2607.28699"
+      ],
+      "source_hash": "3fe5b2338cf0b4c678ceaf13025398863cf8c20868c036b0c19fe254db706449"
     },
     "arXiv:2608.01657": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2608.01657-prefixshield-admission-responsibility.md",
@@ -1970,6 +2077,14 @@
         "arXiv:2309.06180"
       ],
       "source_hash": "cd665124891cfbdb096e947cb1ed6d8383834be82fc0b614304db7d2ae3c1968"
+    },
+    "arXiv:2310.18547": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2310.18547",
+        "arXiv:2310.18547"
+      ],
+      "source_hash": "b7761cf8db1dd9d2cdd5e3bcfa3539384ecf1804f37692454e690f4b19e1e8fc"
     },
     "arXiv:2311.15566": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
@@ -2167,6 +2282,13 @@
       ],
       "source_hash": "2af37c63c86d3f10522c786840ae402c53375e95f523fd8ebf831e90bafdf118"
     },
+    "arXiv:2502.15524": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.15524-hydraserve-serverless-cold-start.md",
+      "identifiers": [
+        "arXiv:2502.15524"
+      ],
+      "source_hash": "6d7ed8a2470188770a248dfe73a954e1855fe7b72fc719efebf4260f2cb40c21"
+    },
     "arXiv:2504.02263": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
       "identifiers": [
@@ -2181,6 +2303,22 @@
         "arXiv:2504.11320"
       ],
       "source_hash": "0d404736ced03b1a35f6983649636a8bad0fa60c65201b3b8c0bfc65ffa297cf"
+    },
+    "arXiv:2505.23022": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2505.23022",
+        "arXiv:2505.23022"
+      ],
+      "source_hash": "ac0685e2379891aaf39d47382fe23a7c5c87bfe7746ca907628a89547c1a7eb3"
+    },
+    "arXiv:2507.10069": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+      "identifiers": [
+        "OpenReview:Zd6VyjmN1S",
+        "arXiv:2507.10069"
+      ],
+      "source_hash": "5a5ac5486d06ae1e7f3c46741c13734a10fdf8a8e6140f2d55a4990ee817aaf9"
     },
     "arXiv:2507.11507": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.11507-oneiros-parameter-remapping-multitenant-serving.md",
@@ -2253,6 +2391,13 @@
       ],
       "source_hash": "676dc9387e98bb90121472f330392a15f008e2f33679f5d81fb2d20623d2fbff"
     },
+    "arXiv:2511.14116": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md",
+      "identifiers": [
+        "arXiv:2511.14116"
+      ],
+      "source_hash": "4cbb4c0d2de3b652a260d8c1eefd95cdeee33b74f627a5de4f6673a470f0e4a1"
+    },
     "arXiv:2512.04013": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md",
       "identifiers": [
@@ -2283,6 +2428,14 @@
         "arXiv:2512.19179"
       ],
       "source_hash": "888a979e3df4ad0ae88e4735c1c4bbeed5735fe23973d70b363059b3880abed0"
+    },
+    "arXiv:2512.25059": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2512.25059",
+        "arXiv:2512.25059"
+      ],
+      "source_hash": "0f599b488251449d1165bb20a5267d92545fa3ccb0fd79003b72d97fd22cac87"
     },
     "arXiv:2510.13668": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md",
@@ -2346,6 +2499,13 @@
         "arXiv:2602.14516"
       ],
       "source_hash": "9d1b1a4ab0bff3b007e6b4eaaf77e647c2432f855779eba833bb604441c4d981"
+    },
+    "arXiv:2602.16603": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+      "identifiers": [
+        "arXiv:2602.16603"
+      ],
+      "source_hash": "3834ab515c5eeddd212c0b90ffe4411761c3a8323822d4a5bbddb45f1acb7550"
     },
     "arXiv:2602.18755": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.18755-biscale-phase-aware-placement-dvfs.md",
@@ -2454,6 +2614,13 @@
       ],
       "source_hash": "fb80e5ec421b5592d3c488e71d541cf38fdbd198b52230b76730308076c31428"
     },
+    "arXiv:2605.04357": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md",
+      "identifiers": [
+        "arXiv:2605.04357"
+      ],
+      "source_hash": "40def49101d1beea96d75a1fe8a9cdf7683a2b55eb0af0e57324fcb63fe9e075"
+    },
     "arXiv:2605.05467": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
       "identifiers": [
@@ -2461,6 +2628,20 @@
         "arXiv:2605.05467"
       ],
       "source_hash": "9e411cc76cec4b14e385d3f2d0be525fc0b013c44ed5781b0e2b4cc0b49dc6b0"
+    },
+    "arXiv:2605.07238": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.07238-fate-future-state-aware-workflow-scheduling.md",
+      "identifiers": [
+        "arXiv:2605.07238"
+      ],
+      "source_hash": "b60ae705fb2a91d3025af1b041d71d0479a3572827c5272af049abb9ccaab1a3"
+    },
+    "arXiv:2605.16867": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+      "identifiers": [
+        "arXiv:2605.16867"
+      ],
+      "source_hash": "045f20f494e481f785b032a558e115a4c4646773831c573b700d31d7c49f22e9"
     },
     "arXiv:2605.19593": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.19593-multi-model-offloading-preemption-schedulers.md",
@@ -2555,6 +2736,13 @@
       ],
       "source_hash": "ce2a002a6d8b001291d4c9072bd4a28d5aae80f15a86a39b79f6310cfad23aa5"
     },
+    "arXiv:2606.23521": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.23521-concordia-persistent-kernel-checkpointing.md",
+      "identifiers": [
+        "arXiv:2606.23521"
+      ],
+      "source_hash": "c85260762e438ca81dd3a53d5f4dc5daca48c5b048f8680fafe0f749c41aaddd"
+    },
     "arXiv:2606.24506": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.24506-crosspool-cold-moe-serving.md",
       "identifiers": [
@@ -2637,6 +2825,13 @@
         "arXiv:2607.05708"
       ],
       "source_hash": "4d8986337786e8a8c77a0f33c0985d865005f4f320834357427473ffcd7666a1"
+    },
+    "arXiv:2607.08565": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+      "identifiers": [
+        "arXiv:2607.08565"
+      ],
+      "source_hash": "46c41893ec249c0a5ef899b425ed32c5eac734f97eddaf3a991e69a82c01cdce"
     },
     "arXiv:2607.16892": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
@@ -2727,6 +2922,13 @@
         "arXiv:2608.15171"
       ],
       "source_hash": "56113aab2adfb73485e28d3a319f0be7f55a409f3e8cca2aab1ccbd6453a491b"
+    },
+    "arXiv:2608.15241": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+      "identifiers": [
+        "arXiv:2608.15241"
+      ],
+      "source_hash": "f4b54fcc5688acf5e646c19699aeee9b1ef02ef60e7f4b03d417c83f497942af"
     },
     "arXiv:2608.16477": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.16477-pallas-proactive-kv-cache-migration-ai-ran.md",
@@ -3110,6 +3312,7 @@
     "arXiv:2508.06978": "arXiv:2508.06978",
     "DOI:10.48550/arxiv.2512.04476": "arXiv:2512.04476",
     "arXiv:2512.04476": "arXiv:2512.04476",
+    "arXiv:2512.12990": "arXiv:2512.12990",
     "arXiv:2601.17063": "arXiv:2601.17063",
     "arXiv:2602.00328": "arXiv:2602.00328",
     "DOI:10.48550/arxiv.2602.03495": "arXiv:2602.03495",
@@ -3121,6 +3324,7 @@
     "arXiv:2604.26074": "arXiv:2604.26074",
     "DOI:10.48550/arxiv.2605.02189": "arXiv:2605.02189",
     "arXiv:2605.02189": "arXiv:2605.02189",
+    "arXiv:2605.05639": "arXiv:2605.05639",
     "DOI:10.1145/3770743.3804296": "arXiv:2605.17889",
     "arXiv:2605.17889": "arXiv:2605.17889",
     "DOI:10.48550/arxiv.2605.20179": "arXiv:2605.20179",
@@ -3212,6 +3416,8 @@
     "arXiv:2509.17863": "arXiv:2509.17863",
     "DOI:10.48550/arxiv.2601.03992": "arXiv:2601.03992",
     "arXiv:2601.03992": "arXiv:2601.03992",
+    "DOI:10.48550/arxiv.2601.08800": "arXiv:2601.08800",
+    "arXiv:2601.08800": "arXiv:2601.08800",
     "DOI:10.48550/arxiv.2603.27624": "arXiv:2603.27624",
     "arXiv:2603.27624": "arXiv:2603.27624",
     "DOI:10.48550/arxiv.2603.28239": "arXiv:2603.28239",
@@ -3220,6 +3426,7 @@
     "arXiv:2604.01621": "arXiv:2604.01621",
     "DOI:10.48550/arxiv.2605.00254": "arXiv:2605.00254",
     "arXiv:2605.00254": "arXiv:2605.00254",
+    "arXiv:2605.10670": "arXiv:2605.10670",
     "DOI:10.48550/arxiv.2605.28095": "arXiv:2605.28095",
     "arXiv:2605.28095": "arXiv:2605.28095",
     "DOI:10.48550/arxiv.2606.15177": "arXiv:2606.15177",
@@ -3248,6 +3455,8 @@
     "arXiv:2609.05764": "arXiv:2609.05764",
     "DOI:10.48550/arxiv.2609.10790": "arXiv:2609.10790",
     "arXiv:2609.10790": "arXiv:2609.10790",
+    "DOI:10.48550/arxiv.2602.06932": "arXiv:2602.06932",
+    "arXiv:2602.06932": "arXiv:2602.06932",
     "DOI:10.48550/arxiv.2603.03251": "arXiv:2603.03251",
     "arXiv:2603.03251": "arXiv:2603.03251",
     "DOI:10.1145/3620666.3651335": "arXiv:2305.09781",
@@ -3296,7 +3505,12 @@
     "arXiv:2607.16184": "arXiv:2607.16184",
     "DOI:10.48550/arxiv.2609.04453": "arXiv:2609.04453",
     "arXiv:2609.04453": "arXiv:2609.04453",
+    "DOI:10.48550/arxiv.2607.05147": "arXiv:2607.05147",
+    "arXiv:2607.05147": "arXiv:2607.05147",
+    "arXiv:2608.15018": "arXiv:2608.15018",
     "arXiv:2601.11652": "arXiv:2601.11652",
+    "DOI:10.48550/arxiv.2603.19133": "arXiv:2603.19133",
+    "arXiv:2603.19133": "arXiv:2603.19133",
     "DOI:10.1145/3814943.3816174": "arXiv:2608.10362",
     "arXiv:2608.10362": "arXiv:2608.10362",
     "arXiv:2402.05099": "arXiv:2402.05099",
@@ -3312,6 +3526,8 @@
     "arXiv:2505.19586": "arXiv:2505.19586",
     "arXiv:2507.19823": "arXiv:2507.19823",
     "arXiv:2601.10729": "arXiv:2601.10729",
+    "DOI:10.48550/arxiv.2601.13684": "arXiv:2601.13684",
+    "arXiv:2601.13684": "arXiv:2601.13684",
     "DOI:10.48550/arxiv.2604.10539": "arXiv:2604.10539",
     "OpenReview:yHxSKM9kdr": "arXiv:2604.10539",
     "arXiv:2604.10539": "arXiv:2604.10539",
@@ -3370,6 +3586,8 @@
     "arXiv:2607.26491": "arXiv:2607.26491",
     "DOI:10.48550/arxiv.2609.08450": "arXiv:2609.08450",
     "arXiv:2609.08450": "arXiv:2609.08450",
+    "DOI:10.48550/arxiv.2512.22219": "arXiv:2512.22219",
+    "arXiv:2512.22219": "arXiv:2512.22219",
     "DOI:10.48550/arxiv.2606.07665": "arXiv:2606.07665",
     "arXiv:2606.07665": "arXiv:2606.07665",
     "DOI:10.1145/3795866.3844470": "arXiv:2609.03079",
@@ -3381,6 +3599,8 @@
     "arXiv:2409.04992": "arXiv:2409.04992",
     "DOI:10.48550/arxiv.2410.03065": "arXiv:2410.03065",
     "arXiv:2410.03065": "arXiv:2410.03065",
+    "DOI:10.48550/arxiv.2410.15332": "arXiv:2410.15332",
+    "arXiv:2410.15332": "arXiv:2410.15332",
     "arXiv:2410.21465": "arXiv:2410.21465",
     "arXiv:2411.01142": "arXiv:2411.01142",
     "arXiv:2411.09317": "arXiv:2411.09317",
@@ -3418,6 +3638,8 @@
     "DOI:10.48550/arxiv.2602.23592": "arXiv:2602.23592",
     "arXiv:2602.23592": "arXiv:2602.23592",
     "arXiv:2603.17803": "arXiv:2603.17803",
+    "DOI:10.48550/arxiv.2603.23049": "arXiv:2603.23049",
+    "arXiv:2603.23049": "arXiv:2603.23049",
     "arXiv:2603.27138": "arXiv:2603.27138",
     "DOI:10.48550/arxiv.2604.03143": "arXiv:2604.03143",
     "arXiv:2604.03143": "arXiv:2604.03143",
@@ -3434,6 +3656,7 @@
     "DOI:10.48550/arxiv.2605.17613": "arXiv:2605.17613",
     "arXiv:2605.17613": "arXiv:2605.17613",
     "arXiv:2605.18071": "arXiv:2605.18071",
+    "arXiv:2605.18825": "arXiv:2605.18825",
     "DOI:10.48550/arxiv.2605.22850": "arXiv:2605.22850",
     "arXiv:2605.22850": "arXiv:2605.22850",
     "DOI:10.48550/arxiv.2605.24022": "arXiv:2605.24022",
@@ -3450,6 +3673,8 @@
     "arXiv:2607.26475": "arXiv:2607.26475",
     "DOI:10.48550/arxiv.2607.27187": "arXiv:2607.27187",
     "arXiv:2607.27187": "arXiv:2607.27187",
+    "DOI:10.48550/arxiv.2607.28699": "arXiv:2607.28699",
+    "arXiv:2607.28699": "arXiv:2607.28699",
     "DOI:10.48550/arxiv.2608.01657": "arXiv:2608.01657",
     "arXiv:2608.01657": "arXiv:2608.01657",
     "arXiv:2608.03555": "arXiv:2608.03555",
@@ -3476,6 +3701,8 @@
     "arXiv:2305.05920": "arXiv:2305.05920",
     "DOI:10.1145/3600006.3613165": "DOI:10.1145/3600006.3613165",
     "arXiv:2309.06180": "DOI:10.1145/3600006.3613165",
+    "DOI:10.48550/arxiv.2310.18547": "arXiv:2310.18547",
+    "arXiv:2310.18547": "arXiv:2310.18547",
     "arXiv:2311.15566": "arXiv:2311.15566",
     "DOI:10.1109/isca59077.2024.00019": "arXiv:2311.18677",
     "arXiv:2311.18677": "arXiv:2311.18677",
@@ -3510,9 +3737,14 @@
     "arXiv:2502.09922": "arXiv:2502.09922",
     "DOI:10.1145/3771576": "arXiv:2502.14617",
     "arXiv:2502.14617": "arXiv:2502.14617",
+    "arXiv:2502.15524": "arXiv:2502.15524",
     "DOI:10.1145/3718958.3750506": "arXiv:2504.02263",
     "arXiv:2504.02263": "arXiv:2504.02263",
     "arXiv:2504.11320": "arXiv:2504.11320",
+    "DOI:10.48550/arxiv.2505.23022": "arXiv:2505.23022",
+    "arXiv:2505.23022": "arXiv:2505.23022",
+    "OpenReview:Zd6VyjmN1S": "arXiv:2507.10069",
+    "arXiv:2507.10069": "arXiv:2507.10069",
     "DOI:10.1145/3772052.3772215": "arXiv:2507.11507",
     "arXiv:2507.11507": "arXiv:2507.11507",
     "DOI:10.48550/arxiv.2508.16449": "arXiv:2508.16449",
@@ -3530,6 +3762,7 @@
     "DOI:10.48550/arxiv.2511.00807": "arXiv:2511.00807",
     "arXiv:2511.00807": "arXiv:2511.00807",
     "arXiv:2511.02230": "arXiv:2511.02230",
+    "arXiv:2511.14116": "arXiv:2511.14116",
     "arXiv:2512.04013": "arXiv:2512.04013",
     "DOI:10.48550/arxiv.2512.09472": "arXiv:2512.09472",
     "arXiv:2512.09472": "arXiv:2512.09472",
@@ -3537,6 +3770,8 @@
     "arXiv:2512.18194": "arXiv:2512.18194",
     "DOI:10.48550/arxiv.2512.19179": "arXiv:2512.19179",
     "arXiv:2512.19179": "arXiv:2512.19179",
+    "DOI:10.48550/arxiv.2512.25059": "arXiv:2512.25059",
+    "arXiv:2512.25059": "arXiv:2512.25059",
     "arXiv:2510.13668": "arXiv:2510.13668",
     "DOI:10.48550/arxiv.2601.11590": "arXiv:2601.11590",
     "arXiv:2601.11590": "arXiv:2601.11590",
@@ -3552,6 +3787,7 @@
     "arXiv:2602.12151": "arXiv:2602.12151",
     "DOI:10.48550/arxiv.2602.14516": "arXiv:2602.14516",
     "arXiv:2602.14516": "arXiv:2602.14516",
+    "arXiv:2602.16603": "arXiv:2602.16603",
     "DOI:10.48550/arxiv.2602.18755": "arXiv:2602.18755",
     "arXiv:2602.18755": "arXiv:2602.18755",
     "DOI:10.48550/arxiv.2602.21626": "arXiv:2602.21626",
@@ -3575,8 +3811,11 @@
     "arXiv:2604.07609": "arXiv:2604.07609",
     "arXiv:2604.15039": "arXiv:2604.15039",
     "arXiv:2605.02329": "arXiv:2605.02329",
+    "arXiv:2605.04357": "arXiv:2605.04357",
     "DOI:10.48550/arxiv.2605.05467": "arXiv:2605.05467",
     "arXiv:2605.05467": "arXiv:2605.05467",
+    "arXiv:2605.07238": "arXiv:2605.07238",
+    "arXiv:2605.16867": "arXiv:2605.16867",
     "DOI:10.1109/main71116.2026.11622343": "arXiv:2605.19593",
     "arXiv:2605.19593": "arXiv:2605.19593",
     "DOI:10.1145/3802009": "arXiv:2605.23389",
@@ -3598,6 +3837,7 @@
     "DOI:10.48550/arxiv.2606.18741": "arXiv:2606.18741",
     "arXiv:2606.18741": "arXiv:2606.18741",
     "arXiv:2606.22327": "arXiv:2606.22327",
+    "arXiv:2606.23521": "arXiv:2606.23521",
     "arXiv:2606.24506": "arXiv:2606.24506",
     "arXiv:2606.26666": "arXiv:2606.26666",
     "DOI:10.48550/arxiv.2606.29207": "arXiv:2606.29207",
@@ -3615,6 +3855,7 @@
     "arXiv:2607.04206": "arXiv:2607.04206",
     "DOI:10.48550/arxiv.2607.05708": "arXiv:2607.05708",
     "arXiv:2607.05708": "arXiv:2607.05708",
+    "arXiv:2607.08565": "arXiv:2607.08565",
     "arXiv:2607.16892": "arXiv:2607.16892",
     "arXiv:2607.28150": "arXiv:2607.28150",
     "DOI:10.48550/arxiv.2607.28633": "arXiv:2607.28633",
@@ -3633,6 +3874,7 @@
     "arXiv:2608.13499": "arXiv:2608.13499",
     "arXiv:2608.15127": "arXiv:2608.15127",
     "arXiv:2608.15171": "arXiv:2608.15171",
+    "arXiv:2608.15241": "arXiv:2608.15241",
     "arXiv:2608.16477": "arXiv:2608.16477",
     "DOI:10.48550/arxiv.2608.25523": "arXiv:2608.25523",
     "arXiv:2608.25523": "arXiv:2608.25523",
