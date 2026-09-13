@@ -5,7 +5,7 @@
   "attempt_id": "attempt-dd8752d0e6ecdac0e4a1c0da",
   "job_id": "job-research-f3407b821f3f7dcf",
   "data": {
-    "overview": "co-located構成ではQwen3-8Bで平均62.0%、Qwen3-32Bで61.5%の変換点TTFT削減。要約は要約生成とfull re-prefillを前倒しでき最大11.9倍改善した。prefill/decode分離でも最大64並行agentで平均64.5%削減し、agent framework別でも26.8〜80.5%改善した。",
+    "overview": "co-located構成ではQwen3-8Bで平均62.0%、Qwen3-32Bで61.5%の変換点TTFTを削減する。要約では補助生成と完全な再prefillを前倒しでき、同期方式に対して変換点TTFTを最大11.9倍改善した。prefill/decode分離でも最大64並行agentで平均64.5%削減し、agent framework別でも26.8〜80.5%改善する。実務上は、文脈変換そのものを減らさずに重い変換とKV再生成を通常ターンの裏へ移せるため、長時間エージェントで周期的に発生する応答停止を平滑化できる。",
     "key_results": [
       {"metric": "変換点TTFT", "value": "最大11.9倍改善", "baseline": "同期summarization", "condition": "Qwen3、summarization", "interpretation": "要約生成と再prefillを事前に背景実行してcritical pathから外す。"},
       {"metric": "平均TTFT削減", "value": "Qwen3-8B 62.0%、Qwen3-32B 61.5%", "baseline": "同期context engineering", "condition": "PD co-located、4戦略", "interpretation": "モデル規模が変わっても変換spikeを安定して隠す。"},
