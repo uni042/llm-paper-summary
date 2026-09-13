@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-0c9caae092f9a4537458d713",
   "job_id": "job-research-5c8a51a10227b970",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0c9caae092f9a4537458d713",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2603.13358",
+    "arxiv_id": "2603.13358",
+    "doi": "10.48550/arXiv.2603.13358",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.NI","cross_list":[]},
+    "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
+    "summary": "PPDは、プリフィル・デコード分離型LLM配信で複数ターン会話を扱うと、2ターン目以降も履歴をプリフィル側へ送り直してKVキャッシュを再計算・再転送するため、TTFTとネットワーク帯域が悪化する問題を扱う。著者らは、キャッシュ済み履歴へ新規トークンだけを追加する追加プリフィル（append-prefill）は、完全プリフィルよりデコード干渉が一桁小さいことをH100実測で示す。この性質を利用し、2ターン目以降をデコードGPU上の既存KVキャッシュへ直接追加する割合xを0〜1で制御する。固定xではTTFT・TPOT・スループットの全指標を同時最適化できないため、オフラインでワークロード区分ごとにx=0/1の利得表を作り、運用者のTTFT/TPOT重みに応じて要求ごとに経路を選ぶPPDを提案する。ShareGPT/WildChatの実負荷では平均要求遅延を15〜25%減らし、KV転送量を約75%削減し、固定PDが不安定になる高負荷でも全評価点で100%成功率を維持する。",
+    "list_summary": "複数ターン会話の2ターン目以降を、既存KVキャッシュを持つデコードGPUで追加プリフィルするか従来どおりプリフィルGPUへ送るかをSLO別に動的選択するPD拡張。Turn 2+ TTFTを48〜73%削減し、KV転送混雑も緩和する。",
+    "authors": ["Zongze Li","Jingyu Liu","Zach Xu","Yineng Zhang","Tahseen Rabbani","Ce Zhang"],
+    "authors_affiliations": "Zongze Li、Jingyu Liu、Zach Xu、Tahseen Rabbani、Ce ZhangはUniversity of Chicago、Yineng ZhangはIndependent Researcher。",
+    "published": "2026-03-09",
+    "publication": "arXiv preprint",
+    "publication_type": "preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["マルチターンLLM配信","プリフィル・デコード分離","KVキャッシュ再利用","追加プリフィル","動的要求ルーティング","KV転送混雑"],
+    "importance": "高。分離配信で『すべてのプリフィルはデコードと強く干渉する』という前提を崩し、履歴KVを再利用する追加プリフィルを別クラスとして扱う。分散KVキャッシュを増設せず、要求をKV所在地へ寄せるだけで再計算・転送を削減するため、マルチターン・エージェント負荷で重要なルーティング設計である。",
+    "hardware_evaluation": "主要構成探索はNVLink接続のNVIDIA H100 80GB×4でLlama-3.1-8Bを使用し、Qwen2.5-14BとQwen3-30B-A3Bでも拡張検証する。",
+    "hardware_details": "4×H100 80GB HBM3、NVLink。17構成×18合成負荷×10 QPS=3060点を測定し、ShareGPT/WildChatの実データでも1〜20 QPSを評価する。",
+    "quality_effect": "KVキャッシュの再利用場所と要求経路だけを変え、同一モデルの完全なプリフィル/デコード計算を行うため、モデル品質を近似して速度を得る方式ではない。",
+    "storage_targets": ["デコードGPU上のセッションKVキャッシュ","プリフィル・デコード間のKV転送","セッション・要求ルーティング状態"],
+    "bottlenecks": ["複数ターンでの履歴KV再計算","毎ターンのP→D KV転送","KV転送帯域飽和","追加プリフィルとデコードの干渉"],
+    "evidence_locations": ["§1–3","§4.1–4.4","§5","§6.1–6.3","Appendix B–C"],
+    "source": "https://arxiv.org/abs/2603.13358",
+    "sources": ["https://arxiv.org/abs/2603.13358","https://arxiv.org/html/2603.13358v1","https://arxiv.org/pdf/2603.13358"],
+    "code": null,
+    "implementation": "vLLMのdisaggregated serving、KV transfer、prefix cacheを再利用する試作系。セッションIDとKV所在地を追跡し、要求プロキシがターン番号・ワークロード区分・SLO重みからP経路/D-local経路を選ぶ。一次資料に公式コード公開URLはない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2401.11181","arxiv_id":"2401.11181"},
+      {"canonical_id":"arXiv:2406.17565","arxiv_id":"2406.17565"},
+      {"canonical_id":"arXiv:2403.19708","arxiv_id":"2403.19708"},
+      {"canonical_id":"arXiv:2508.01989","arxiv_id":"2508.01989"},
+      {"canonical_id":"arXiv:2602.14516","arxiv_id":"2602.14516"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML references section",
+    "references_total": 45
+  },
+  "reservation": {"claim_id":"claim-0c9caae092f9a4537458d713","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
