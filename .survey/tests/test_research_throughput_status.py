@@ -29,7 +29,7 @@ def _install_script(repo: Path):
 
 
 class ResearchThroughputStatusTests(unittest.TestCase):
-    def test_high_backlog_section_reports_claiming_and_low_throughput(self):
+    def test_high_backlog_section_reports_claiming_low_throughput_and_research_assist(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
             _install_script(repo)
@@ -52,11 +52,33 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             self.assertIn("Research ready | **180**", text)
             self.assertIn("Active claims | **23**", text)
             self.assertIn("Claimable | **157**", text)
+            self.assertIn(":00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)**", text)
+            self.assertIn("ready > 50 → 通常worker補助", text)
+            self.assertIn("Worker routing snapshot", text)
+            self.assertIn("next-jobs.json", text)
+            self.assertIn("transport batch上限", text)
+            self.assertIn("24-run maintenance counter", text)
             self.assertIn("Latest research completed | **1**", text)
             self.assertIn("Oldest active claim age | **60 min**", text)
             self.assertIn("HIGH-BACKLOG RESEARCH-ONLY", text)
             self.assertIn("LOW", text)
             self.assertIn("最低3件", text)
+
+    def test_auxiliary_worker_returns_to_discovery_at_50_or_below(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _install_script(repo)
+            _write(repo / ".survey/work-queue/next-jobs.json", {
+                "counts": {"research": {"ready": 50}},
+                "claiming": {"ready_research_audit": 50, "actively_claimed": 3, "claimable": 47},
+            })
+            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
+                {"run_key": "2026-09-13T12:30:00+09:00", "counts": {"research_completed": 3}},
+            ]})
+            module = _load_module(repo)
+            text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
+            self.assertIn(":00補助worker mode | **DISCOVERY SPECIALIST**", text)
+            self.assertIn("ready ≤ 50 → 探索専用", text)
 
     def test_three_completed_is_not_flagged_low(self):
         with tempfile.TemporaryDirectory() as td:
@@ -72,6 +94,7 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             module = _load_module(repo)
             text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
             self.assertIn("Latest research completed | **3**", text)
+            self.assertIn(":00補助worker mode | **DISCOVERY SPECIALIST**", text)
             self.assertNotIn("throughput LOW", text)
 
     def test_append_replaces_previous_section_instead_of_duplicating(self):
@@ -91,6 +114,7 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             module.append_section(repo, status, now=now)
             text = status.read_text(encoding="utf-8")
             self.assertEqual(text.count("## Research throughput health"), 1)
+            self.assertEqual(text.count("### Worker routing snapshot"), 1)
 
 
 if __name__ == "__main__":
