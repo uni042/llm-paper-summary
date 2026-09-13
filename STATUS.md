@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **204** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **7 / 24** |
+| Maintenance counter | **8 / 24** |
 
 ### 注意事項
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **9** |
-| 新規job | **25** |
+| Discovery完了 | **10** |
+| 新規job | **26** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,11 +51,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **21** |
-| 探索round（stats観測） | **128** |
-| 探索評価候補 | **643** |
+| 探索round（stats観測） | **129** |
+| 探索評価候補 | **646** |
 | 重複除外 | **268** |
-| 重複率 | **41.7%** |
-| Novel候補 | **375** |
+| 重複率 | **41.5%** |
+| Novel候補 | **378** |
 | Research候補採用 | **211** |
 | Research完了 | **68** |
 | Repo収録 | **68** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 643 → 重複除外後 375 → Research候補採用 211 → Research完了 68 → Repo収録 68**
+**探索評価 646 → 重複除外後 378 → Research候補採用 211 → Research完了 68 → Repo収録 68**
 
 ## 探索効率（直近24時間）
 
@@ -171,6 +171,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 直近新着・vLLM/SGLang周辺実装・関連論文 | 4 | 4 | 0 | 100.0% | 0.0% |
 | 重要未収録・分散tensor管理・階層KV・長さaware scheduling・multimodal分離 | 4 | 0 | 4 | 0.0% | 100.0% |
 | 2026-09新着・KVキャッシュ圧縮／再利用 | 3 | 3 | 0 | 100.0% | 0.0% |
+| 2026-09新着・KV圧縮・跨文脈再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | 2026年9月新着・KV圧縮/eviction/再利用 | 3 | 0 | 0 | 0.0% | 0.0% |
 | ExaServe派生のSSD/NVMe expert I/O・expert prefetch・SLO-aware memory scheduling | 3 | 0 | 0 | 0.0% | 0.0% |
 | GPU kernel/runtime・推論決定性 | 3 | 0 | 3 | 0.0% | 100.0% |
@@ -202,11 +203,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — 2026-09新着・KV圧縮・跨文脈再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T09:00:00+09:00** — production-autoscaling-disaggregated-serving-runtime: 評価 6 / 重複 4 / 採用 2
 - **2026-09-13T09:00:00+09:00** — ssd-kv-cache-heterogeneous-gpu-serving-orchestration: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T09:00:00+09:00** — moe-cache-aware-routing-expert-skipping-fine-grained-execution: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T08:26:04+09:00** — 直近新着・hierarchical memory・serving runtime横断再確認: 評価 5 / 重複 5 / 採用 0
-- **2026-09-13T08:26:04+09:00** — network・collective通信・distributed inference: 評価 7 / 重複 7 / 採用 0
 
 ## 最近処理した論文
 
