@@ -4,10 +4,47 @@
   "slot": "metadata",
   "attempt_id": "attempt-12b96d8a83087a895d8a74df",
   "job_id": "job-research-6a744249548dd135",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-12b96d8a83087a895d8a74df",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2502.09921",
+    "arxiv_id": "2502.09921",
+    "doi": "10.1145/3779212.3790119",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "title": "A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs",
+    "summary": "長文脈LLMの大バッチ・オフライン推論では、GPUメモリをCPU DRAMやSSDまで拡張すると重みは再利用できる一方、バッチ数と文脈長に比例して巨大化するKVキャッシュの往復が律速になり、OPT-175Bの測定ではKV転送が実行時間の60%以上を占める。HILOSはSamsung SmartSSD内のFPGAへデコード時の自己注意計算を移し、巨大なKVをホストPCIeへ戻さずSSD内部経路で読み、ホストとの通信をQKV入力と最終注意出力へ縮小する。さらにGPUが空くことを利用して一部の履歴をK/Vではなく投影前活性Xとして保存し、GPU側でK/Vを再生成するcooperative X-cache、256-byte級の新KVを即時SSD書込みせずホストバッファに16回分ためて4KiB単位で吐き出すdelayed KV writeback、長い系列を小ブロックで処理する省資源FPGA attention acceleratorを組み合わせる。16 SmartSSDの実機ではOPT-30B〜175B、Qwen2.5-32B、Mixtral-8x7B、GLaM-143Bを最大128K文脈で評価し、既存SSDオフロード方式比最大7.86倍のスループット、最大85%のエネルギー削減を報告する。175B・128K文脈を単一A100で処理でき、近ストレージ処理が単なる容量拡張ではなくKVデータ移動そのものを局所化する手段になることを示す。",
+    "list_summary": "SmartSSD内FPGAでKVキャッシュを読みながら注意計算まで行い、X-cacheと遅延KV書戻しでSSD内外のI/Oも削ることで、単一A100の長文脈オフロード推論をSSD基準比最大7.86倍高速化する。",
+    "authors": ["Hongsun Jang", "Jaeyong Song", "Changmin Shin", "Si Ung Noh", "Jaewon Jung", "Jisung Park", "Jinho Lee"],
+    "authors_affiliations": "Hongsun Jang、Jaeyong Song、Changmin Shin、Si Ung Noh、Jaewon Jung、Jinho LeeはSeoul National University、Jisung ParkはPOSTECH。",
+    "published": "2025-02-14",
+    "publication": "ASPLOS 2026, Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2, Pittsburgh, PA, USA, March 22–26, 2026",
+    "publication_type": "Conference",
+    "publication_status": "Published",
+    "lineage": "offload-hierarchical-memory",
+    "topics": ["近ストレージ処理", "計算ストレージ", "KVキャッシュオフロード", "長文脈推論", "SmartSSD", "FPGA", "X-cache", "遅延書戻し", "階層メモリ"],
+    "importance": "SSD/NVMeをGPUメモリの受動的な退避先として使うだけでなく、KVを置いた場所で注意計算まで実行し、ホスト側GPUとの協調で内部I/Oも削る実機システムである。16台の市販SmartSSDを使ったend-to-end評価、FPGA資源・電力・SSD耐久性・コストまで含むため、SSD活用型LLM推論の設計空間を考える上で直接的な基準点になる。",
+    "hardware_evaluation": "実機。NVIDIA A100 40GBまたはH100 80GB、Intel Xeon Gold 6342、512GB DDR4-3200、最大16台のSamsung SmartSSD 3.84TBを使用。各SmartSSDはKintex UltraScale+ KU15P FPGAと4GB DDR4-2400を内蔵する。比較用にSamsung PM9A3 3.84TB PCIe 4.0 SSDを4台使用。",
+    "quality_effect": "提案FPGAはKVを削減・近似せず、FP16で保存し中間accumulationと指数計算をFP32で行う損失なしattentionを実装する。論文はLongBenchでInstAttentionの1/8 sparse KVが3.52〜5.73ポイント低下する一方、HILOSはFlashAttentionと同等精度を維持すると報告する。",
+    "source": "https://arxiv.org/abs/2502.09921",
+    "sources": ["https://arxiv.org/abs/2502.09921", "https://arxiv.org/html/2502.09921v2", "https://doi.org/10.1145/3779212.3790119", "https://github.com/hongsunjang/HILOS/tree/asplos26", "https://doi.org/10.5281/zenodo.18162119"],
+    "code": "https://github.com/hongsunjang/HILOS/tree/asplos26",
+    "implementation": "FlexGen系PyTorchオフロード推論へ統合したホストソフトウェアと、Vitis HLS 2023.1で合成するSmartSSD FPGA attention acceleratorを公開。NVIDIA GPUDirect StorageでX-cacheをGPUへ直接読み込み、SmartSSD内部PCIe経路でKVをNAND/DRAMからFPGAへ供給する。ArtifactはZenodoへ恒久保存されている。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 167,
+    "references": [
+      {"canonical_id": "arXiv:2303.08774", "arxiv_id": "2303.08774"},
+      {"canonical_id": "arXiv:2302.13971", "arxiv_id": "2302.13971"},
+      {"canonical_id": "arXiv:2205.01068", "arxiv_id": "2205.01068"},
+      {"canonical_id": "arXiv:2209.01188", "arxiv_id": "2209.01188"},
+      {"canonical_id": "arXiv:2401.09670", "arxiv_id": "2401.09670"},
+      {"canonical_id": "arXiv:2401.18079", "arxiv_id": "2401.18079"},
+      {"canonical_id": "arXiv:2310.19102", "arxiv_id": "2310.19102"},
+      {"canonical_id": "arXiv:2305.17888", "arxiv_id": "2305.17888"},
+      {"canonical_id": "arXiv:2312.11514", "arxiv_id": "2312.11514"},
+      {"canonical_id": "arXiv:2312.12456", "arxiv_id": "2312.12456"},
+      {"canonical_id": "arXiv:2403.01164", "arxiv_id": "2403.01164"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-12b96d8a83087a895d8a74df", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
