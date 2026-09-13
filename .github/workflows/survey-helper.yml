@@ -15,8 +15,8 @@ on:
 permissions:
   contents: write
 
-# Maintenance mutates broad queue/index state. Serialize it with other heavyweight
-# background writers without blocking claim or immutable-submission fast lanes.
+# Background queue/index work is serialized without blocking claim or immutable
+# submission fast lanes.
 concurrency:
   group: survey-background-main
   cancel-in-progress: false
@@ -31,23 +31,10 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Reset reusable Chat inbox result when inbox changed
-        if: github.event_name == 'push'
-        run: |
-          if git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -Fxq '.survey/work-queue/submissions/chat-inbox.json'; then
-            rm -f .survey/work-queue/results/chat-inbox.json
-          fi
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Snapshot reusable Chat transport baseline
-        run: |
-          python .survey/scripts/reusable_transport_baseline.py snapshot \
-            --repo-root . \
-            --snapshot-dir /tmp/reusable-chat-baseline
 
       - name: Snapshot worker state for run ledger
         run: |
@@ -62,12 +49,12 @@ jobs:
         run: |
           python -m py_compile \
             .survey/scripts/fallback_transport.py \
+            .survey/scripts/replay_record_fallback.py \
             .survey/scripts/dispatch_fallback_inbox.py \
-            .survey/scripts/preflight_chat_record.py \
-            .survey/scripts/reusable_transport_baseline.py \
             .survey/scripts/reconcile_maintenance_state.py \
             .survey/scripts/record_run_ledger.py \
             .survey/scripts/refresh_queue_snapshot.py \
+            .survey/scripts/queue_worker.py \
             .survey/scripts/blocked_retry.py
 
       - name: Install dependencies
@@ -75,97 +62,6 @@ jobs:
 
       - name: Dispatch one eligible fallback envelope
         run: python .survey/scripts/dispatch_fallback_inbox.py --repo-root . | tee /tmp/fallback-dispatch.json
-
-      - name: Reconcile reusable Chat result with current inbox
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          inbox_path = Path('.survey/work-queue/submissions/chat-inbox.json')
-          result_path = Path('.survey/work-queue/results/chat-inbox.json')
-          if not inbox_path.exists():
-              result_path.unlink(missing_ok=True)
-              raise SystemExit(0)
-          try:
-              inbox = json.loads(inbox_path.read_text(encoding='utf-8'))
-          except Exception:
-              result_path.unlink(missing_ok=True)
-              raise SystemExit(0)
-
-          result = None
-          if result_path.exists():
-              try:
-                  result = json.loads(result_path.read_text(encoding='utf-8'))
-              except Exception:
-                  result_path.unlink(missing_ok=True)
-
-          job_id = inbox.get('job_id')
-          attempt_id = inbox.get('attempt_id')
-          if (
-              result
-              and result.get('job_id') == job_id
-              and result.get('attempt_id') == attempt_id
-              and result.get('ok') is True
-          ):
-              print('Reusable Chat result matches current inbox job/attempt.')
-              raise SystemExit(0)
-
-          paper = inbox.get('paper_path')
-          job_path = Path('.survey/work-queue/jobs') / f'{job_id}.json' if job_id else None
-          job = None
-          if job_path and job_path.exists():
-              try:
-                  job = json.loads(job_path.read_text(encoding='utf-8'))
-              except Exception:
-                  job = None
-          if (
-              isinstance(paper, str)
-              and paper.startswith('papers/')
-              and Path(paper).is_file()
-              and job
-              and job.get('status') == 'completed'
-          ):
-              result_path.parent.mkdir(parents=True, exist_ok=True)
-              result_path.write_text(
-                  json.dumps({
-                      'schema_version': 1,
-                      'workflow_version': 9,
-                      'submission': 'work-queue/submissions/chat-inbox.json',
-                      'ok': True,
-                      'job_id': job_id,
-                      'attempt_id': attempt_id,
-                      'job_type': job.get('type'),
-                      'artifact': {'paper': paper},
-                      'job_status': 'completed',
-                      'reconciled': True,
-                  }, ensure_ascii=False, indent=2) + '\n',
-                  encoding='utf-8',
-              )
-              print('Reconciled terminal reusable Chat inbox from its existing canonical paper.')
-          else:
-              result_path.unlink(missing_ok=True)
-              print('Removed stale reusable Chat result; current inbox still needs processing.')
-          PY
-
-      - name: Preflight current reusable Chat transport
-        run: |
-          if [ -f .survey/work-queue/results/chat-inbox.json ]; then
-            echo 'Current reusable Chat inbox is already settled; preflight skipped.'
-          else
-            python .survey/scripts/preflight_chat_record.py \
-              --repo-root . \
-              --report /tmp/chat-preflight.json \
-              --isolate-invalid
-          fi
-
-      - name: Prepare current reusable Chat transport when pending
-        run: |
-          if [ -f .survey/work-queue/results/chat-inbox.json ]; then
-            echo 'Current reusable Chat inbox is settled or isolated; worker continues.'
-          else
-            python .survey/scripts/assemble_research_record.py --repo-root .
-          fi
 
       - name: Process fallback-dispatched framework and LLM update
         run: |
@@ -195,16 +91,12 @@ jobs:
       - name: Suppress stale duplicate research jobs
         run: python .survey/scripts/dedupe_queue.py --root .survey
 
-      - name: Normalize ready jobs to v10 contract
-        run: python .survey/scripts/normalize_v10_jobs.py --root .survey
-
-      - name: Process legacy queue and direct submissions
+      - name: Process queue and compatibility submissions
         run: python .survey/scripts/queue_worker.py --root .survey
 
       - name: Suppress duplicates created by discovery and refresh queue
         run: |
           python .survey/scripts/dedupe_queue.py --root .survey
-          python .survey/scripts/normalize_v10_jobs.py --root .survey
           python .survey/scripts/queue_worker.py --root .survey
 
       - name: Apply blocked research retry policy and refresh queue
@@ -249,13 +141,6 @@ jobs:
           python .survey/scripts/record_run_ledger.py record \
             --repo-root . \
             --snapshot /tmp/survey-helper-baseline.json
-
-      - name: Restore reusable Chat transport after fallback replay
-        run: |
-          python .survey/scripts/reusable_transport_baseline.py restore \
-            --repo-root . \
-            --snapshot-dir /tmp/reusable-chat-baseline \
-            --fallback-report /tmp/fallback-dispatch.json
 
       - name: Commit background queue results
         shell: bash
