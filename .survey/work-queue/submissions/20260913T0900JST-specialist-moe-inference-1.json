@@ -1,0 +1,44 @@
+{
+  "job_id": "job-c848ae402fdf4008",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04895",
+      "title": "Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference",
+      "source_url": "https://arxiv.org/abs/2609.04895",
+      "reason": "Directly targets memory-constrained MoE inference by adapting routing to expert-cache state. The primary-source abstract reports higher expert-cache hit rate and substantially lower expert-weight traffic on Qwen3 and GPT-OSS, making it highly relevant to expert caching, prefetching, and CPU/GPU offload research.",
+      "priority": 95
+    },
+    {
+      "canonical_id": "arXiv:2609.01024",
+      "title": "PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition",
+      "source_url": "https://arxiv.org/abs/2609.01024",
+      "reason": "Reframes MoE execution below the whole-expert abstraction using fine-grained path composition, compatibility-aware pruning, and a hardware-friendly execution engine. The primary-source abstract reports up to 1.31x end-to-end inference speedup and released code, making it a strong systems candidate distinct from ordinary expert placement or cache management.",
+      "priority": 92
+    },
+    {
+      "canonical_id": "arXiv:2609.05228",
+      "title": "ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs",
+      "source_url": "https://arxiv.org/abs/2609.05228",
+      "reason": "Provides training-free, calibration-free token-adaptive expert skipping with offline expert statistics and lightweight runtime decisions. It directly reduces routed-expert computation and is useful for comparing compute-side MoE reduction against memory/offload-oriented approaches already emphasized by the repository.",
+      "priority": 89
+    },
+    {
+      "canonical_id": "arXiv:2609.04575",
+      "title": "Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2609.04575",
+      "reason": "Shows a parameter-free inference-time method for halving activated experts while preserving a reference router-probability mass. The primary-source abstract reports only small accuracy loss on Qwen3.6-35B-A3B and Qwen3.5-397B-A17B while halving routed-expert compute, providing a simple but potentially important MoE inference baseline.",
+      "priority": 86
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:00:00+09:00",
+    "round": "specialist-moe-inference-1",
+    "axis": "moe-cache-aware-routing-expert-skipping-fine-grained-execution",
+    "query_summary": "Rotated away from the two recent high-duplicate broad system-search rounds and screened September 2026 primary-source MoE inference papers. Four strong candidates spanning cache-aware routing, path-compositional execution, adaptive expert skipping, and inference-time expert-count reduction passed lightweight relevance and repository dedupe checks.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Switch to a materially distinct systems axis: GPU kernel/runtime compilation, heterogeneous resource orchestration, networking/collectives, and storage or I/O scheduling; also consider citation expansion from newly accepted high-value MoE candidates.",
+    "empty_round_reason": null
+  }
+}
