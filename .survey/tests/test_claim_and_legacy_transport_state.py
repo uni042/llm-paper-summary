@@ -62,6 +62,9 @@ class ClaimAndLegacyTransportStateTests(unittest.TestCase):
             _, settled = select_record_bank.current_transport(root)
             self.assertFalse(settled)
 
+    def test_duplicate_claim_lease_policy_module_is_removed(self):
+        self.assertFalse((SCRIPTS / "claim_lease_policy.py").exists())
+
 
 if __name__ == "__main__":
     unittest.main()
