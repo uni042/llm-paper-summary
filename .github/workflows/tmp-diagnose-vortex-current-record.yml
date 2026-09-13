@@ -5,6 +5,7 @@ on:
     branches: [fix/validation-preflight-and-claim-telemetry-20260913]
     paths:
       - '.github/workflows/tmp-diagnose-vortex-current-record.yml'
+      - '.survey/scripts/tmp_repair_vortex.py'
 
 permissions:
   contents: write
