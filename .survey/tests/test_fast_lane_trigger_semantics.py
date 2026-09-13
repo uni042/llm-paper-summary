@@ -67,9 +67,13 @@ class FastLaneTriggerSemanticsTests(unittest.TestCase):
         self.assertNotIn(".survey/scripts/", trigger)
         self.assertNotIn(".github/workflows/survey-submission-fast.yml", trigger)
 
-    def test_survey_helper_only_treats_ok_true_reusable_result_as_settled(self):
+    def test_survey_helper_routes_record_fallback_to_immutable_replay(self):
         text = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
-        self.assertIn("result.get('ok') is True", text)
+        self.assertIn("replay_record_fallback.py", text)
+        self.assertIn("dispatch_fallback_inbox.py", text)
+        self.assertNotIn("chat-inbox.json", text)
+        self.assertNotIn("preflight_chat_record.py", text)
+        self.assertNotIn("reusable_transport_baseline.py", text)
 
 
 if __name__ == "__main__":
