@@ -41,20 +41,20 @@
 | :30 通常worker Active claims | **3** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 02:36 JST** |
+| :30 通常worker 直近claim | **09-14 02:38 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **25** |
-| 最新通常run | **2026-09-13T19:30:00+09:00** |
-| 最新通常runのResearch完了 | **1** |
+| 最新通常run | **2026-09-14T02:30:00+09:00** |
+| 最新通常runのResearch完了 | **0** |
 | 最古の有効claimの経過時間 | **17 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=138 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=138 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **25件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -63,7 +63,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 指標 | 件数 / 率 |
 |---|---:|
 | Research完了 | **35** |
-| Repo収録 | **37** |
+| Repo収録 | **64** |
 | Audit完了 | **0** |
 | 探索評価候補 | **442** |
 | Research候補採用 | **118** |
@@ -71,21 +71,21 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **57.0%** |
 | 探索専用worker run（毎時枠） | **9** |
 | 探索専用worker round（stats観測） | **84** |
-| 通常worker run（ledger観測） | **15** |
+| 通常worker run（ledger観測） | **16** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 442 → 重複除外後 190 → Research候補採用 118 → Research完了 35 → Repo収録 37**
+**探索評価 442 → 重複除外後 190 → Research候補採用 118 → Research完了 35 → Repo収録 64**
 
 ## 直近の通常worker
 
-Run: **2026-09-13T19:30:00+09:00**
+Run: **2026-09-14T02:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
-| Repo収録 | **1** |
+| Research完了 | **0** |
+| Repo収録 | **27** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
