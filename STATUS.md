@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 05:27 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 05:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -42,13 +42,13 @@
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 04:53 JST** |
-| :00 補助worker 直近claim | **09-14 05:27 JST** |
+| :00 補助worker 直近claim | **09-14 05:28 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **14** |
 | 最新通常run | **2026-09-14T03:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **38 min** |
+| 最古の有効claimの経過時間 | **39 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **24** |
 | Repo収録 | **58** |
 | Audit完了 | **0** |
-| 探索評価候補 | **311** |
-| Research候補採用 | **71** |
-| 重複除外 | **181** |
-| 重複率 | **58.2%** |
-| 探索専用worker run（毎時枠） | **7** |
-| 探索専用worker round（stats観測） | **59** |
+| 探索評価候補 | **302** |
+| Research候補採用 | **65** |
+| 重複除外 | **178** |
+| 重複率 | **58.9%** |
+| 探索専用worker run（毎時枠） | **6** |
+| 探索専用worker round（stats観測） | **56** |
 | 通常worker run（ledger観測） | **15** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 311 → 重複除外後 130 → Research候補採用 71 → Research完了 24 → Repo収録 58**
+**探索評価 302 → 重複除外後 124 → Research候補採用 65 → Research完了 24 → Repo収録 58**
 
 ## 直近の通常worker
 
@@ -156,11 +156,9 @@ Run: **2026-09-13T11:00:00+09:00**
 | 分離サービング通信・KV転送・network flow scheduling | 5 | 5 | 0 | 100.0% | 0.0% |
 | 動的投機的復号serving・agent隣接 | 5 | 3 | 1 | 60.0% | 20.0% |
 | 直近新着・hierarchical memory・serving runtime横断再確認 | 5 | 5 | 0 | 100.0% | 0.0% |
-| 2609新着・KVキャッシュ最適化/サービング | 4 | 3 | 1 | 75.0% | 25.0% |
 | CPU/GPU・NPU/PIM異種実行と階層オフロード | 4 | 4 | 0 | 100.0% | 0.0% |
 | FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management | 4 | 1 | 1 | 25.0% | 25.0% |
 | KVページ圧縮・低ランク表現・GPUカーネル | 4 | 1 | 2 | 25.0% | 50.0% |
-| LSH・hashing系KVアクセス/eviction/sharing・query expansion | 4 | 0 | 4 | 0.0% | 100.0% |
 | RDMA・分離サービング・KV転送 | 4 | 4 | 0 | 100.0% | 0.0% |
 | agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
 | moe-cache-aware-routing-expert-skipping-fine-grained-execution | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -180,7 +178,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse | 3 | 0 | 0 | 0.0% | 0.0% |
 | 適応KV圧縮・エージェントprefix scheduling・演算子分離省電力serving | 3 | 0 | 0 | 0.0% | 0.0% |
 | 適応プリフィル・KV予約・デコード干渉スケジューリング | 3 | 2 | 0 | 66.7% | 0.0% |
-| KVキャッシュ幾何学指標・backward reference | 1 | 0 | 1 | 0.0% | 100.0% |
 | 収録済み重要論文のforward citation・Llumnix系譜 | 1 | 0 | 0 | 0.0% | 0.0% |
 
 ### 直近5探索専用worker run
