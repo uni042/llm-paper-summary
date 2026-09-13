@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **158 / 50** |
-| Research ready | **158** |
+| Candidate在庫（Research ready） | **157 / 50** |
+| Research ready | **157** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **204** |
+| Research completed（累計） | **205** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **8 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T09:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **9** |
-| Repo収録 | **0** |
+| Discovery完了 | **4** |
+| 新規job | **10** |
+| Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -51,21 +51,21 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **132** |
-| 探索評価候補 | **656** |
-| 重複除外 | **271** |
-| 重複率 | **41.3%** |
+| 探索round（stats観測） | **133** |
+| 探索評価候補 | **660** |
+| 重複除外 | **275** |
+| 重複率 | **41.7%** |
 | Novel候補 | **385** |
 | Research候補採用 | **217** |
-| Research完了 | **68** |
-| Repo収録 | **68** |
+| Research完了 | **69** |
+| Repo収録 | **69** |
 | Audit完了 | **0** |
 | Blocked遷移 | **0** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 656 → 重複除外後 385 → Research候補採用 217 → Research完了 68 → Repo収録 68**
+**探索評価 660 → 重複除外後 385 → Research候補採用 217 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -147,6 +147,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | NVMe外部KV・PIM runtime・page-aware decode scheduling | 4 | 0 | 0 | 0.0% | 0.0% |
 | OS階層管理・専門家キャッシュ・KV先読み・SSD再利用 | 4 | 0 | 1 | 0.0% | 25.0% |
 | P/D分離・KV転送・shared prefill | 4 | 1 | 2 | 25.0% | 50.0% |
+| RDMA・分離サービング・KV転送 | 4 | 4 | 0 | 100.0% | 0.0% |
 | SLO-aware scheduling・KV memory hierarchy・動的メモリ回収 | 4 | 0 | 1 | 0.0% | 25.0% |
 | SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | agentic workload・program/session-aware serving | 4 | 1 | 3 | 25.0% | 75.0% |
@@ -206,16 +207,17 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — RDMA・分離サービング・KV転送: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 投機的復号・高並列サービング・production評価: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 出力長不確実性・tail-aware scheduling隣接: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — エージェント型LLM・サービングruntime・生成時特化: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 2026-09新着・KV圧縮・跨文脈再利用: 評価 3 / 重複 0 / 採用 0
-- **2026-09-13T09:00:00+09:00** — production-autoscaling-disaggregated-serving-runtime: 評価 6 / 重複 4 / 採用 2
 
 ## 最近処理した論文
 
 ### Research完了
 
+- `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 - `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 - `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
@@ -223,15 +225,14 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 - `arXiv:2606.29986` — HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators
 - `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
 - `arXiv:2605.01708` — SplitZip: Lossless KV Cache Compression for Disaggregated LLM Serving
-- `arXiv:2512.09472` — WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving
 
 ### 次に処理する候補
 
-- P93 `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
 - P90 `arXiv:2607.05147` — DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
+- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 
 ## 7日比較
 
