@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
   "job_id": "job-research-b1be9294a63ee868",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bb9c6b2c2debb9e325fcf74b",
-    "worker_id": "scheduled-chat-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "Tier Aは再構成可能なper-token keyを持つcache-preserving方式に限られ、eviction、token pooling/merging、latent cache、recurrent state compressionには直接適用できない。2〜4bitでは決定論witnessが過度に緩く、selective certified gateは主に8bit級に限定される。Tier Bはcontrolled subtractive ditherと非適応queryを仮定する。prefill-heavyやtrainingは対象外で、FlashInfer backend、cross-rank certificate aggregation、CUDA-graph-safe telemetryも未完成。72Bでcoverageが25.5〜29.8%へ低下し、特定7B構成では長文脈TPOTが9倍になる未解明性能問題がある。",
+    "differences": "KIVI/KVQuantなどはbit幅・scale・outlier処理を設計して平均品質と容量を改善するが、WitCertの中心は量子化器そのものではなく実行時のrisk certificateとrepair controlである。Runtime-Certified bounded-error attentionも保証付き配信を扱うが、WitCertは確率Tierによりpage-in rateをQwen2.5-1.5B条件で44.4%から22.0%へ下げ、圧縮を3.43 bits/dim深く許可したと報告する。一方、token eviction系は残差が存在しないため現行証明の適用範囲外であり、WitCertはあらゆるKV圧縮を一つの保証で包む方式ではない。",
+    "implementation_status": "公開repository witcert-kv-certificatesにApache-2.0のコード・artifact・SGLang 0.5.9 patch・Lean 4証明がある。Triton研究kernelとproduction decode integrationを実装済みで、RULER/LongBench、RTX4090、8×H200まで評価している。production-grade warp specialization/asynchronous prefetch、FlashInfer対応、cross-rank gate、CUDA graph互換telemetryは未完了。",
+    "research_positioning": "KVキャッシュ量子化とLLM serving observabilityの間に位置し、圧縮方式を『固定して信頼する』運用から『圧縮しながら要求ごとにriskを観測し必要箇所だけ戻す』運用へ変える。階層メモリ研究との接点では、正確KVのbacking storeをCPU/SSDなど低位層へ置き、certificateがpage-in trafficの優先度を決める構成へ発展できる。低位ストレージを使う場合、単なるcache hit予測ではなく品質riskをI/O schedulingへ渡せる点が特徴になる。",
+    "relation_to_existing_repository": "既存のKV quantization/eviction/offload系統に対して横断的な安全制御層として位置付けられる。特にKV圧縮でDRAM/SSD転送量を削減する方式と組み合わせ、WitCertのrisk scoreで正確KVの復元・page-inを必要なhead/blockだけへ限定すれば、容量とI/Oを品質riskに応じて配分できる。ただし現行Tier Aはevictionへ適用不能なので、repository内のtoken eviction系にはそのまま重ねられない。",
+    "audit_required": true,
+    "audit_reason": "公式コード、Lean 4形式証明、SGLang patch、複数GPUの大規模定量結果を伴うため、artifact再現性・claim guard・published numbersの対応を追加監査する価値が高い。"
+  },
+  "reservation": {"claim_id": "claim-bb9c6b2c2debb9e325fcf74b", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
 }
