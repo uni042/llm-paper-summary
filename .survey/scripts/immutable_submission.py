@@ -108,12 +108,13 @@ def _git_blob_bytes(repo_root: Path, blob_sha: str) -> bytes | None:
     return result.stdout if result.returncode == 0 else None
 
 
-def read_record_slot(repo_root: Path, ref: dict[str, Any]) -> dict[str, Any]:
-    """Load the immutable slot payload named by a descriptor's blob SHA.
+def read_record_slot_bytes(repo_root: Path, ref: dict[str, Any]) -> bytes:
+    """Load the exact immutable slot bytes referenced by a descriptor.
 
-    Production workflows use a full Git checkout, so a committed slot survives later
-    reuse or overwrite of the fixed bank path. The worktree fallback exists only for
-    isolated/pre-commit callers where the exact file still matches the declared SHA.
+    In production the submission workflow uses a full Git checkout, so old blobs stay
+    readable even after the reusable bank path has been overwritten. The worktree
+    fallback is intentionally strict and is only for isolated/pre-commit callers where
+    the current file still has the declared blob SHA.
     """
     repo_root = Path(repo_root).resolve()
     path_text = _safe_rel(ref.get("path"), "record slot path")
@@ -122,14 +123,22 @@ def read_record_slot(repo_root: Path, ref: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("record slot requires a 40-character lowercase blob_sha")
 
     raw = _git_blob_bytes(repo_root, blob_sha)
-    if raw is None:
-        target = repo_root / path_text
-        if not target.is_file():
-            raise ValueError(f"record slot blob is unavailable: {path_text} ({blob_sha})")
-        raw = target.read_bytes()
-        if git_blob_sha(raw) != blob_sha:
-            raise ValueError(f"record slot blob is unavailable or mismatched: {path_text}")
+    if raw is not None:
+        return raw
 
+    target = repo_root / path_text
+    if not target.is_file():
+        raise ValueError(f"record slot blob is unavailable: {path_text} ({blob_sha})")
+    raw = target.read_bytes()
+    if git_blob_sha(raw) != blob_sha:
+        raise ValueError(f"record slot blob is unavailable or mismatched: {path_text}")
+    return raw
+
+
+def read_record_slot(repo_root: Path, ref: dict[str, Any]) -> dict[str, Any]:
+    """Decode one immutable record slot as a JSON object."""
+    path_text = _safe_rel(ref.get("path"), "record slot path")
+    raw = read_record_slot_bytes(repo_root, ref)
     try:
         payload = json.loads(raw.decode("utf-8"))
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
