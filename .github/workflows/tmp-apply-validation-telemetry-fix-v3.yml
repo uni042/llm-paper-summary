@@ -1,0 +1,380 @@
+name: Temporary apply validation and telemetry fix v3
+
+on:
+  push:
+    branches: [fix/validation-preflight-and-claim-telemetry-20260913]
+    paths:
+      - '.github/workflows/tmp-apply-validation-telemetry-fix-v3.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-test-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/validation-preflight-and-claim-telemetry-20260913
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+      - name: Apply implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              if text.count(old) != 1:
+                  raise SystemExit(f'{path}: expected one occurrence, got {text.count(old)}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          assemble = Path('.survey/scripts/assemble_research_record.py')
+          text = assemble.read_text(encoding='utf-8')
+          pattern = re.compile(r'def validate_record\(record: dict\[str, Any\]\) -> None:\n.*?(?=\n\ndef assemble\()', re.S)
+          replacement = '''class RecordValidationError(ValueError):
+              """Structured-record validation failure carrying all current issues."""
+
+              def __init__(self, issues: list[str], *, aggregate: bool = False):
+                  self.issues = list(issues)
+                  message = self.issues[0]
+                  if aggregate and len(self.issues) > 1:
+                      message = "structured record validation failed: " + " | ".join(self.issues)
+                  super().__init__(message)
+
+
+          def collect_validation_issues(record: dict[str, Any]) -> list[str]:
+              """Return every independently checkable current record-validation issue."""
+              issues: list[str] = []
+              meta = record.get("metadata") or {}
+              pm = record.get("problem_method") or {}
+              ev = record.get("evaluation") or {}
+              rs = record.get("results") or {}
+              pos = record.get("positioning") or {}
+
+              for key in (
+                  "canonical_id", "title", "summary", "source", "sources", "authors",
+                  "publication", "topics", "implementation", "last_checked",
+              ):
+                  if not nonempty(meta.get(key)):
+                      issues.append(f"metadata.{key} is required")
+              if "code" not in meta:
+                  issues.append("metadata.code is required; use null when no official URL was confirmed")
+              if prose_chars(meta.get("summary")) < 180:
+                  issues.append("metadata.summary must be explanatory, not a one-line abstract")
+              if not nonempty(meta.get("publication_type")):
+                  issues.append("metadata.publication_type is required")
+              if not nonempty(meta.get("published")):
+                  issues.append("metadata.published is required")
+              if not nonempty(meta.get("publication_status")):
+                  issues.append("metadata.publication_status is required")
+              if meta.get("arxiv_id"):
+                  categories = meta.get("arxiv_categories")
+                  if not isinstance(categories, dict) or not nonempty(categories.get("primary")):
+                      issues.append("metadata.arxiv_categories.primary is required for arXiv papers")
+                  elif categories.get("cross_list") is not None and not isinstance(categories.get("cross_list"), list):
+                      issues.append("metadata.arxiv_categories.cross_list must be a list")
+              if not nonempty(meta.get("hardware_evaluation")):
+                  issues.append("metadata.hardware_evaluation is required")
+              if not nonempty(meta.get("quality_effect")):
+                  issues.append("metadata.quality_effect is required")
+              try:
+                  validate_references(meta)
+              except ValueError as exc:
+                  issues.append(str(exc))
+
+              for key in ("problem", "novelty", "method_overview", "components", "system_design"):
+                  if not nonempty(pm.get(key)):
+                      issues.append(f"problem_method.{key} is required")
+              if prose_chars(pm.get("problem")) < 250:
+                  issues.append("problem_method.problem must explain the bottleneck and why prior approaches are insufficient")
+              if prose_chars(pm.get("novelty")) < 180:
+                  issues.append("problem_method.novelty must explain the paper-specific idea")
+              if prose_chars(pm.get("method_overview")) < 500:
+                  issues.append("problem_method.method_overview must explain the end-to-end mechanism")
+              components = pm.get("components")
+              if not isinstance(components, list) or len(components) < 2:
+                  issues.append("problem_method.components requires at least two major mechanisms")
+              if isinstance(components, list):
+                  for index, item in enumerate(components):
+                      if not isinstance(item, dict) or not nonempty(item.get("name")) or not nonempty(item.get("description")):
+                          issues.append(f"problem_method.components[{index}] requires name and description")
+                          continue
+                      if prose_chars(item.get("description")) < 240:
+                          issues.append(f"problem_method.components[{index}].description is too short")
+
+              if not (nonempty(ev.get("hardware")) or nonempty(ev.get("software")) or nonempty(ev.get("methodology"))):
+                  issues.append("evaluation requires hardware/software/methodology evidence")
+              if not nonempty(ev.get("scope")):
+                  issues.append("evaluation.scope is required to distinguish real-hardware/simulation and generalization limits")
+
+              key_results = rs.get("key_results")
+              if not isinstance(key_results, list) or not key_results:
+                  issues.append("results.key_results requires at least one quantitative result")
+              if not nonempty(rs.get("overview")) or prose_chars(rs.get("overview")) < 180:
+                  issues.append("results.overview must explain the main result and its practical meaning")
+              if isinstance(key_results, list):
+                  for index, item in enumerate(key_results):
+                      if not isinstance(item, dict):
+                          issues.append(f"results.key_results[{index}] must be an object")
+                          continue
+                      missing = [k for k in ("metric", "value", "baseline", "condition", "interpretation") if not nonempty(item.get(k))]
+                      if missing:
+                          issues.append(f"results.key_results[{index}] missing: " + ", ".join(missing))
+              if not nonempty(rs.get("negative_results")):
+                  issues.append("results.negative_results is required; record degradation and boundary conditions")
+              if not nonempty(rs.get("interpretation")):
+                  issues.append("results.interpretation is required; explain why gains change across conditions")
+              if not nonempty(rs.get("quality_impact")):
+                  issues.append("results.quality_impact is required; distinguish lossless from approximate methods")
+
+              for key in ("limitations", "differences", "implementation_status", "research_positioning"):
+                  if not nonempty(pos.get(key)):
+                      issues.append(f"positioning.{key} is required")
+
+              prose = record_prose_text(record)
+              ratio, jp_chars, latin_chars = japanese_ratio(prose)
+              if ratio < DEFAULT_MIN_JAPANESE_RATIO:
+                  issues.append(
+                      f"Japanese-first prose ratio is too low: {ratio:.1%} "
+                      f"< {DEFAULT_MIN_JAPANESE_RATIO:.0%} (Japanese={jp_chars}, Latin={latin_chars})"
+                  )
+              bare = find_bare_english(prose)
+              if bare:
+                  preview = ", ".join(f"{hit.term}->{hit.preferred} x{hit.count}" for hit in bare[:12])
+                  issues.append(
+                      "Japanese-first terminology violation; replace ordinary English prose "
+                      f"with Japanese/katakana or put the formal English name only in the first parentheses: {preview}"
+                  )
+              return issues
+
+
+          def validate_record(record: dict[str, Any], *, collect_all: bool = False) -> None:
+              issues = collect_validation_issues(record)
+              if issues:
+                  raise RecordValidationError(issues, aggregate=collect_all)
+          '''
+          text, count = pattern.subn(lambda _m: replacement, text)
+          if count != 1:
+              raise SystemExit(f'assemble validation block replacements={count}')
+          old_sig = 'def assemble(repo_root: Path) -> bool:'
+          new_sig = 'def assemble(repo_root: Path, *, collect_all_validation_issues: bool = False) -> bool:'
+          if text.count(old_sig) != 1:
+              raise SystemExit('assemble signature mismatch')
+          text = text.replace(old_sig, new_sig, 1)
+          marker = '    validate_record(record)\n    markdown = render_paper(record)'
+          if text.count(marker) != 1:
+              raise SystemExit('assemble validate marker mismatch')
+          text = text.replace(marker, '    validate_record(record, collect_all=collect_all_validation_issues)\n    markdown = render_paper(record)', 1)
+          assemble.write_text(text, encoding='utf-8')
+
+          p = Path('.survey/scripts/preflight_chat_record.py')
+          t = p.read_text(encoding='utf-8')
+          pattern = re.compile(r'def isolate_invalid_job\(.*?(?=\n\ndef preflight\()', re.S)
+          iso = '''def isolate_invalid_job(repo_root: Path, inbox: dict, error: str, validation_errors: list[str] | None = None) -> None:
+              result_path = repo_root / ".survey/work-queue/results/chat-inbox.json"
+              result_path.parent.mkdir(parents=True, exist_ok=True)
+              result = {
+                  "schema_version": 1,
+                  "workflow_version": 10,
+                  "submission": "work-queue/submissions/chat-inbox.json",
+                  "ok": False,
+                  "job_id": inbox.get("job_id"),
+                  "validation_error": error,
+                  "repair_required": True,
+                  "isolated_at": now(),
+              }
+              if validation_errors:
+                  result["validation_errors"] = list(validation_errors)
+              write_json(result_path, result)
+
+              job_id = inbox.get("job_id")
+              if not isinstance(job_id, str) or not job_id:
+                  return
+              job_path = repo_root / ".survey/work-queue/jobs" / f"{job_id}.json"
+              if not job_path.is_file():
+                  return
+              try:
+                  job = read_json(job_path)
+              except Exception:
+                  return
+              job["status"] = "ready"
+              job.pop("completed_at", None)
+              job.pop("artifact_submission", None)
+              job["repair_required"] = True
+              job["validation_error"] = error
+              if validation_errors:
+                  job["validation_errors"] = list(validation_errors)
+              else:
+                  job.pop("validation_errors", None)
+              job["last_validation_failed_at"] = now()
+              write_json(job_path, job)
+          '''
+          t, count = pattern.subn(lambda _m: iso, t)
+          if count != 1:
+              raise SystemExit(f'preflight isolate replacements={count}')
+          pattern = re.compile(r'def preflight\(repo_root: Path, isolate: bool\) -> dict:\n.*?(?=\n\ndef main\()', re.S)
+          preflight = '''def preflight(repo_root: Path, isolate: bool) -> dict:
+              inbox = read_json(repo_root / base.FIXED_INBOX)
+              try:
+                  inbox = ensure_expected_blob_sha(repo_root, inbox)
+              except Exception as exc:
+                  error = f"{type(exc).__name__}: {exc}"
+                  if isolate:
+                      isolate_invalid_job(repo_root, inbox, error)
+                  return {
+                      "valid": False,
+                      "job_id": inbox.get("job_id"),
+                      "error": error,
+                      "isolated": isolate,
+                  }
+
+              if inbox.get("record_slots") is None:
+                  return {"valid": True, "skipped": True, "reason": "no structured record_slots"}
+
+              try:
+                  with tempfile.TemporaryDirectory(prefix="survey-preflight-") as td:
+                      temp_root = Path(td)
+                      copy_transport(repo_root, temp_root)
+                      base.assemble(temp_root, collect_all_validation_issues=True)
+              except Exception as exc:
+                  error = f"{type(exc).__name__}: {exc}"
+                  validation_errors = list(getattr(exc, "issues", []) or [])
+                  if isolate:
+                      isolate_invalid_job(repo_root, inbox, error, validation_errors)
+                  result = {
+                      "valid": False,
+                      "job_id": inbox.get("job_id"),
+                      "error": error,
+                      "isolated": isolate,
+                  }
+                  if validation_errors:
+                      result["validation_errors"] = validation_errors
+                  return result
+
+              return {"valid": True, "job_id": inbox.get("job_id"), "isolated": False}
+          '''
+          t, count = pattern.subn(lambda _m: preflight, t)
+          if count != 1:
+              raise SystemExit(f'preflight function replacements={count}')
+          p.write_text(t, encoding='utf-8')
+
+          p = Path('.survey/scripts/process_immutable_submission.py')
+          t = p.read_text(encoding='utf-8')
+          if t.count('    assemble.validate_record(record)') != 1:
+              raise SystemExit('processor validate marker mismatch')
+          t = t.replace('    assemble.validate_record(record)', '    assemble.validate_record(record, collect_all=True)', 1)
+          marker = '    queue_worker.write_json(result_path, result)\n    return result\n\n\ndef process('
+          insert = '''    validation_errors = list(getattr(exc, "issues", []) or [])
+              if validation_errors:
+                  result["validation_errors"] = validation_errors
+              queue_worker.write_json(result_path, result)
+              return result
+
+
+          def process('''
+          if t.count(marker) != 1:
+              raise SystemExit('processor failure result marker mismatch')
+          t = t.replace(marker, insert, 1)
+          replace = '    job.pop("validation_error", None)\n    job.pop("last_validation_failed_at", None)'
+          with_errors = '    job.pop("validation_error", None)\n    job.pop("validation_errors", None)\n    job.pop("last_validation_failed_at", None)'
+          if t.count(replace) != 1:
+              raise SystemExit('processor repair clear marker mismatch')
+          p.write_text(t.replace(replace, with_errors, 1), encoding='utf-8')
+
+          p = Path('.survey/scripts/isolate_failed_immutable_submission.py')
+          t = p.read_text(encoding='utf-8')
+          old = '        error = f"{type(exc).__name__}: {exc}"\n        job_path = repo_root / ".survey/work-queue/jobs" / f"{descriptor[\'job_id\']}.json"'
+          new = '        error = f"{type(exc).__name__}: {exc}"\n        validation_errors = list(getattr(exc, "issues", []) or [])\n        job_path = repo_root / ".survey/work-queue/jobs" / f"{descriptor[\'job_id\']}.json"'
+          if t.count(old) != 1:
+              raise SystemExit('isolate error marker mismatch')
+          t = t.replace(old, new, 1)
+          old = '        job["validation_error"] = error\n        job["last_validation_failed_at"] = _now()'
+          new = '        job["validation_error"] = error\n        if validation_errors:\n            job["validation_errors"] = validation_errors\n        else:\n            job.pop("validation_errors", None)\n        job["last_validation_failed_at"] = _now()'
+          if t.count(old) != 1:
+              raise SystemExit('isolate job marker mismatch')
+          t = t.replace(old, new, 1)
+          old = '            "validation_error": error,\n        }\n\n    return {'
+          new = '            "validation_error": error,\n            **({"validation_errors": validation_errors} if validation_errors else {}),\n        }\n\n    return {'
+          if t.count(old) != 1:
+              raise SystemExit('isolate return marker mismatch')
+          p.write_text(t.replace(old, new, 1), encoding='utf-8')
+
+          replace_once(
+              '.survey/scripts/queue_worker.py',
+              '    job.pop("validation_error", None)\n    job.pop("last_validation_failed_at", None)',
+              '    job.pop("validation_error", None)\n    job.pop("validation_errors", None)\n    job.pop("last_validation_failed_at", None)',
+          )
+
+          p = Path('.survey/scripts/claim_worker.py')
+          t = p.read_text(encoding='utf-8')
+          old = '    processed = reused = errors = assigned = renewed = checkpoint_released = 0'
+          new = '    processed = reused = errors = assigned_new = assigned_recovered = assigned_reused = renewed = checkpoint_released = 0'
+          if t.count(old) != 1:
+              raise SystemExit('claim counters marker mismatch')
+          t = t.replace(old, new, 1)
+          old = '''        if result_path.exists():
+              reused += 1
+              existing = _read(result_path, {})
+              for item in existing.get("assignments", []) if isinstance(existing, dict) else []:
+                  if isinstance(item, dict):
+                      assigned += 1
+              renewed += _renew_existing_result('''
+          new = '''        if result_path.exists():
+              reused += 1
+              existing = _read(result_path, {})
+              if isinstance(existing, dict) and isinstance(existing.get("assignments"), list):
+                  assigned_reused += sum(1 for item in existing["assignments"] if isinstance(item, dict))
+              renewed += _renew_existing_result('''
+          if t.count(old) != 1:
+              raise SystemExit('claim reused telemetry block mismatch')
+          t = t.replace(old, new, 1)
+          if t.count('            assigned += len(recovered)') != 1:
+              raise SystemExit('claim recovered counter mismatch')
+          t = t.replace('            assigned += len(recovered)', '            assigned_recovered += len(recovered)', 1)
+          if t.count('        assigned += len(assignments)') != 1:
+              raise SystemExit('claim new counter mismatch')
+          t = t.replace('        assigned += len(assignments)', '        assigned_new += len(assignments)', 1)
+          old = '        "assigned": assigned,\n        "renewed": renewed,'
+          new = '        "assigned": assigned_new,\n        "assigned_new": assigned_new,\n        "assigned_recovered": assigned_recovered,\n        "assigned_reused": assigned_reused,\n        "assigned_total_observed": assigned_new + assigned_recovered + assigned_reused,\n        "renewed": renewed,'
+          if t.count(old) != 1:
+              raise SystemExit('claim return telemetry block mismatch')
+          p.write_text(t.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Focused tests
+        run: |
+          python -m compileall -q .survey/scripts
+          python -m unittest discover -s .survey/tests -p 'test_validation_issue_collection.py'
+          python -m unittest discover -s .survey/tests -p 'test_claim_telemetry.py'
+      - name: Full verification
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          for path in sorted(Path('.github/workflows').glob('*.yml')):
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+          PY
+          python -m unittest discover -s .survey/tests -p 'test_*.py'
+      - name: Commit implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .survey/scripts/assemble_research_record.py \
+                  .survey/scripts/preflight_chat_record.py \
+                  .survey/scripts/process_immutable_submission.py \
+                  .survey/scripts/isolate_failed_immutable_submission.py \
+                  .survey/scripts/queue_worker.py \
+                  .survey/scripts/claim_worker.py
+          git diff --cached --check
+          git commit -m 'fix: aggregate record validation and clarify claim telemetry'
+          git push origin HEAD:fix/validation-preflight-and-claim-telemetry-20260913
