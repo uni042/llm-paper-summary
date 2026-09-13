@@ -61,6 +61,19 @@ def _load_claims(repo_root: Path) -> dict[str, dict[str, Any]]:
     return out
 
 
+def _ready_claimable_job_ids(repo_root: Path) -> set[str]:
+    jobs_dir = repo_root / ".survey/work-queue/jobs"
+    out: set[str] = set()
+    for path in sorted(jobs_dir.glob("*.json")) if jobs_dir.is_dir() else []:
+        job = _load(path)
+        if job.get("status") != "ready" or job.get("type") not in {"research", "audit"}:
+            continue
+        job_id = str(job.get("job_id") or path.stem)
+        if job_id:
+            out.add(job_id)
+    return out
+
+
 def _worker_lane(worker_id: Any) -> str:
     """Classify research claim ownership into the :30 or :00 Scheduled Chat lane."""
     value = str(worker_id or "").lower()
@@ -113,11 +126,16 @@ def _completion_attribution(
 
 
 def _active_claim_counts(
+    repo_root: Path,
     claims: dict[str, dict[str, Any]],
     now: datetime,
 ) -> Counter[str]:
+    """Count active leases only for jobs still ready and claimable."""
+    ready_ids = _ready_claimable_job_ids(repo_root)
     counts: Counter[str] = Counter()
-    for claim in claims.values():
+    for job_id, claim in claims.items():
+        if job_id not in ready_ids:
+            continue
         expires = _dt(claim.get("expires_at"))
         if expires is None or expires <= now:
             continue
@@ -141,8 +159,11 @@ def _latest_claim_time(
 
 def _oldest_active_claim_age(repo_root: Path, now: datetime) -> int | None:
     claims = _load_claims(repo_root)
+    ready_ids = _ready_claimable_job_ids(repo_root)
     ages: list[int] = []
-    for claim in claims.values():
+    for job_id, claim in claims.items():
+        if job_id not in ready_ids:
+            continue
         expires = _dt(claim.get("expires_at"))
         if expires is None or expires <= now:
             continue
@@ -181,7 +202,7 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     high_backlog = ready >= HIGH_BACKLOG and (active + claimable) > 0
 
     attributed = _completion_attribution(entries, claims, now)
-    active_by_lane = _active_claim_counts(claims, now)
+    active_by_lane = _active_claim_counts(repo_root, claims, now)
     latest_aux_claim = _latest_claim_time(claims, "aux")
     latest_normal_claim = _latest_claim_time(claims, "normal")
 
