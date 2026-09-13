@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:50:46.590987+00:00",
+  "updated_at": "2026-09-13T00:52:26.025549+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:50:46.590987+00:00",
+      "last_recorded_at": "2026-09-13T00:52:26.025549+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 15,
+        "new_jobs": 16,
         "new_papers": 1,
         "fallback_archived": 2
       },
@@ -16557,6 +16557,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34728999754:1",
+          "recorded_at": "2026-09-13T00:52:26.025549+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728999754",
+            "run_attempt": "1",
+            "source_sha": "640f8cca1a95c798f81c67ae959422b436be9123"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16610,6 +16624,14 @@
         },
         {
           "job_id": "job-ea7276e02d5dedfc",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-e9cf4499f0d72a37",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16722,6 +16744,13 @@
           "type": "research",
           "canonical_id": "arXiv:2310.18547",
           "title": "Punica: Multi-Tenant LoRA Serving"
+        },
+        {
+          "job_id": "job-395a42f77fdb747e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -16733,7 +16762,8 @@
         ".survey/work-queue/results/20260913T0938JST-discovery-specialist-speculative-serving-4.json",
         ".survey/work-queue/results/20260913T0941JST-discovery-specialist-network-saturation-5.json",
         ".survey/work-queue/results/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json",
-        ".survey/work-queue/results/20260913T0947JST-discovery-specialist-foundational-omissions-7.json"
+        ".survey/work-queue/results/20260913T0947JST-discovery-specialist-foundational-omissions-7.json",
+        ".survey/work-queue/results/20260913T0950JST-discovery-specialist-foundational-runtime-8.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",
@@ -16741,7 +16771,7 @@
       ],
       "paper_active_count_before": 393,
       "paper_active_count_after": 394,
-      "last_successful_action": "fallback_archived"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
