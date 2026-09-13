@@ -1,0 +1,63 @@
+name: Temporary claim state fix and reference audit
+
+on:
+  push:
+    branches:
+      - cleanup/state-semantics-and-fast-triggers
+    paths:
+      - '.github/workflows/tmp-claim-state-fix-and-ref-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: cleanup/state-semantics-and-fast-triggers
+          fetch-depth: 0
+
+      - name: Apply canonical claim state fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('.survey/scripts/claim_state.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''        expires = parse_time(row.get("expires_at"))\n        row["active"] = bool(expires and current < expires)\n        row["expired"] = bool(expires and current >= expires)\n        row["expires_at_dt"] = expires\n'''
+          new = '''        expires = parse_time(row.get("expires_at"))\n        released = bool(row.get("released_at"))\n        invalidated = bool(row.get("lease_invalidated_at"))\n        row["released"] = released\n        row["invalidated"] = invalidated\n        row["active"] = bool(expires and current < expires and not released and not invalidated)\n        row["expired"] = bool(expires and current >= expires)\n        row["expires_at_dt"] = expires\n'''
+          if text.count(old) != 1:
+              raise SystemExit('claim_state target did not match exactly once')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+
+          path = Path('.survey/scripts/select_record_bank.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''    settled = bool(result and result.get("job_id") == inbox.get("job_id"))\n'''
+          new = '''    settled = bool(\n        result\n        and result.get("job_id") == inbox.get("job_id")\n        and result.get("ok") is True\n    )\n'''
+          if text.count(old) != 1:
+              raise SystemExit('legacy transport settled target did not match exactly once')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+
+      - name: Capture exact claim-lease-policy references
+        run: |
+          {
+            echo '# claim_lease_policy references';
+            git grep -n -E 'claim_lease_policy|normalize_claim_payload|verify_descriptor_claim|SCHEDULED_CHAT_MAX_LEASE_SECONDS|invalidated_at|invalidation_reason' -- . ':!/.survey/tmp-claim-lease-policy-refs.txt' || true;
+          } > .survey/tmp-claim-lease-policy-refs.txt
+
+      - name: Verify diff
+        run: |
+          git diff --check
+          git diff -- .survey/scripts/claim_state.py .survey/scripts/select_record_bank.py .survey/tmp-claim-lease-policy-refs.txt
+
+      - name: Commit patch and audit
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add .survey/scripts/claim_state.py .survey/scripts/select_record_bank.py .survey/tmp-claim-lease-policy-refs.txt
+          git commit -m 'fix: make claim markers authoritative for active state'
+          git push origin HEAD:cleanup/state-semantics-and-fast-triggers
