@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:44:57+00:00",
+  "updated_at": "2026-09-13T00:48:34+00:00",
   "last_run_key": "2026-09-13T09:28:10+09:00",
-  "last_round": "specialist-multitenant-runtime-6",
+  "last_round": "specialist-foundational-omissions-7",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2649,6 +2649,21 @@
       ],
       "next_axis_hint": "multi-tenant servingの直後反復を避け、古い重要未収録の探索または新着kernel/runtime・edge系のforward/adjacent expansionへ移る",
       "source_submission": "work-queue/submissions/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json"
+    },
+    {
+      "run_key": "2026-09-13T09:28:10+09:00",
+      "round": "specialist-foundational-omissions-7",
+      "axis": "基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA",
+      "query_summary": "新着・multi-tenant軸で新規候補を得た後、古い重要論文の収録漏れ探索へ切り替えた。DistServe、Sarathi-Serve、Splitwise、Punicaを一次arXiv抄録で軽量評価し、送信直前の最新HEADで各canonical_idの決定論的research jobが不存在、repo内title/arXiv ID検索も不一致であることを確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "基礎サービング軸を継続し、PagedAttention/vLLM、SGLang/RadixAttention、DeepSpeed-FastGenなどの既収録確認後、未収録がなければkernel/runtimeまたはedge系の古い重要論文へ軸を変える",
+      "source_submission": "work-queue/submissions/20260913T0947JST-discovery-specialist-foundational-omissions-7.json"
     }
   ],
   "axes": {
@@ -4141,6 +4156,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.6,
       "next_axis_hint": "multi-tenant servingの直後反復を避け、古い重要未収録の探索または新着kernel/runtime・edge系のforward/adjacent expansionへ移る"
+    },
+    "基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA": {
+      "last_run_key": "2026-09-13T09:28:10+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 4,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "基礎サービング軸を継続し、PagedAttention/vLLM、SGLang/RadixAttention、DeepSpeed-FastGenなどの既収録確認後、未収録がなければkernel/runtimeまたはedge系の古い重要論文へ軸を変える"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

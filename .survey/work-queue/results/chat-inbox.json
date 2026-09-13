@@ -1,10 +1,13 @@
 {
   "schema_version": 1,
-  "workflow_version": 10,
+  "workflow_version": 9,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": false,
-  "job_id": "job-research-7c0598aabd36d6bf",
-  "validation_error": "ValueError: slot metadata requires blob_sha",
-  "repair_required": true,
-  "isolated_at": "2026-09-13T00:47:06+00:00"
+  "ok": true,
+  "job_id": "job-research-569c68f713c406a9",
+  "job_type": "research",
+  "artifact": {
+    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md"
+  },
+  "job_status": "completed",
+  "reconciled": true
 }
