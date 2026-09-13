@@ -203,18 +203,8 @@ def _effect_payload(descriptor: dict[str, Any], state: dict[str, Any]) -> dict[s
 
 
 def _reconciled_effect_state(descriptor: dict[str, Any]) -> dict[str, Any]:
-    """Reconstruct effects when a prior local mutation reached terminal state before result write."""
-    state = _empty_effect_state()
-    status = descriptor.get("status", "completed")
-    if status == "completed":
-        if descriptor["kind"] == "research":
-            state["stats"]["research_completed"] = 1
-        else:
-            state["stats"]["audit_completed"] = 1
-        state["maintenance"]["views_dirty"] = True
-    elif status == "rejected" and descriptor["kind"] == "research":
-        state["stats"]["rejected"] = 1
-    return state
+    """Do not recount shared state for a terminal job already durable on main."""
+    return _empty_effect_state()
 
 
 def _write_effect(path: Path | None, descriptor: dict[str, Any], state: dict[str, Any]) -> None:
