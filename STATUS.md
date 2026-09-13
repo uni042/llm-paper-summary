@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 18:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 18:36 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,12 +36,12 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **169** |
-| 処理中（Active claims） | **32** |
-| 今すぐ着手可能（Claimable） | **137** |
-| :30 通常worker Active claims | **27** |
+| 処理中（Active claims） | **31** |
+| 今すぐ着手可能（Claimable） | **138** |
+| :30 通常worker Active claims | **26** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 18:34 JST** |
+| :30 通常worker 直近claim | **09-13 18:35 JST** |
 | :00 補助worker 直近claim | **09-13 17:35 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
@@ -98,8 +98,8 @@ Run: **2026-09-13T17:30:00+09:00**
 - P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 - P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
+- P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
 - P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
-- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 
 ## 参考情報
 
