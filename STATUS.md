@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 12:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 12:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **208** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **10 / 24** |
+| Maintenance counter | **11 / 24** |
 
 ### 注意事項
 
@@ -53,7 +53,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **23** |
+| 通常worker run（ledger観測） | **22** |
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **147** |
 | 探索評価候補 | **724** |
@@ -245,11 +245,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P88 `arXiv:2602.06932` — When RL Meets Adaptive Speculative Training: A Unified Training-Serving System
-- P88 `arXiv:2502.09921` — INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing
-- P88 `arXiv:2605.10670` — Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference
 - P88 `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
 - P88 `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
+- P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
+- P88 `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
+- P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 
 ## 7日比較
 
