@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-439eb29ba8901a4bd7b7941a",
   "job_id": "job-research-d01c0f0ba3d381e1",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-439eb29ba8901a4bd7b7941a",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主評価サーバーはNVIDIA A800-SXM4-80GBを8基搭載し、GPU間は200 GB/s NVLinkで接続する。CPUは52コアIntel Xeon Platinum 8470を2基、ホストメモリは1 TB。動機付けの一部ではA100-SXM4-40GBも使用する。",
+    "software": "vLLM 0.11.2を基盤にFlowPrefillを実装する。事前充填・復号分離構成で、事前充填側に演算子境界割込み、イベント駆動スケジューラ、SLO余裕優先制御、SLOを考慮したバッチ形成を追加する。",
+    "methodology": "密モデルはLlama3-8Bをテンソル並列1、Qwen2.5-14Bをテンソル並列2、Llama3-70Bをテンソル並列4で評価し、互換性評価ではQwen3-30B-A3Bをテンソル並列2で用いる。実運用由来QwenTraceの要求到着時刻と入力長を使い、プロンプト本文がないため同じ長さの乱数トークン列を生成する。用途別TTFT SLOを設定し、90%以上の要求がSLOを満たす最大持続要求率をgoodputとして測る。比較対象はDistServe、チャンク2048とEDFを組み合わせるDistServe-CP2K、チャンク8192のDistServe-CP8K、1事前充填・1復号構成など。単一SLOの切り分けではShareGPTから500要求を取り、2K未満の入力をポアソン到着で投入する。",
+    "scope": "実機単一サーバー上のエンドツーエンド推論評価で、主に事前充填とTTFTを対象とする。復号側のスケジューリング自体は最適化対象外である。QwenTraceは要求長と時刻のみを提供するため、実際の内容依存のルーティングやキャッシュ挙動は再現していない。密モデル3種類に加えてMoE互換性をQwen3-30B-A3Bで確認するが、複数ノードや異なるGPU世代での評価はない。",
+    "workloads": ["QwenTraceのChatbot Text・Image Understanding・Web Search・Summarization File", "ShareGPT由来500要求の単一SLO切り分け", "事前充填・復号同居構成のTBT評価"],
+    "baselines": ["DistServe", "DistServe-CP2K + EDF", "DistServe-CP8K + EDF", "1P1D", "vLLM 0.11.2 chunked prefill"]
+  },
+  "reservation": {"claim_id":"claim-439eb29ba8901a4bd7b7941a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
