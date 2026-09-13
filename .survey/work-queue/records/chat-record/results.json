@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-95a8618581d24029b1e45af8",
+  "attempt_id": "attempt-8d2d5424b4871b5ee4ef6cc8",
   "job_id": "job-research-2f20b6ae0c5a7fb6",
   "data": {
     "overview": "ElasticMMは二つのモデルと二つの実データセットで、密結合vLLMおよび静的分離DistServeより低い入力・出力遅延を示す。ShareGPT-4oではQwen2.5-VL-7BのTTFTを最大4.2倍、LLaMA3.2-Vision-11Bを最大3.5倍短縮し、VisualWebInstructでも最大3.7倍と2.9倍短縮する。SLOを満たす最大スループットはShareGPT-4oでvLLM比4.5倍と3.2倍、DistServe比最大2.3倍となる。EMP単独のアブレーションでも静的資源配分に対して有効スループットをQwen2.5-VLで1.8倍、LLaMA3.2-Visionで2.3倍へ高め、統合キャッシュと非阻塞符号化は入力遅延をさらに削減する。",
     "key_results": [
-      {"metric": "ShareGPT-4o TTFT短縮", "value": "Qwen2.5-VLで最大4.2x、LLaMA3.2-Visionで最大3.5x", "baseline": "vLLM", "condition": "ShareGPT-4o、可変要求率", "interpretation": "画像符号化を言語推論から分離し、画像負荷が高いデータセットで事前充填との干渉を減らす効果が大きい。"},
-      {"metric": "VisualWebInstruct TTFT短縮", "value": "Qwen2.5-VLで最大3.7x、LLaMA3.2-Visionで最大2.9x", "baseline": "vLLM", "condition": "VisualWebInstruct、可変要求率", "interpretation": "テキスト入力が長い別ワークロードでも、段階分離と弾力的配分の効果が維持される。"},
-      {"metric": "SLO内最大スループット", "value": "vLLM比4.5xと3.2x、DistServe比最大2.3x", "baseline": "vLLM / multimodal DistServe", "condition": "ShareGPT-4o、Qwen2.5-VL / LLaMA3.2-Vision、scaled SLO 1〜5x", "interpretation": "単純なP/D静的分離より、モダリティ群と推論段階の二階層で資源を再配分する方が負荷変動へ追従できる。"},
-      {"metric": "EMPアブレーション有効スループット", "value": "Qwen2.5-VL 1.8x、LLaMA3.2-Vision 2.3x", "baseline": "static modality allocations", "condition": "ShareGPT-4o、P90 effective throughput", "interpretation": "テキスト偏重・均等・マルチモーダル偏重のいずれの固定配分も変動負荷へ適応できず、動的群間配分と段階並列度調整が必要である。"},
-      {"metric": "マルチモーダル推論最適化", "value": "統合接頭辞キャッシュと非阻塞符号化を追加するほど入力遅延が低下", "baseline": "EMP-only / cache-only variants", "condition": "混合データセット、EMP有効", "interpretation": "EMPだけではTTFT改善が限定的で、視覚計算の再利用と画像符号化の非同期化が補完的に効く。"}
+      {
+        "metric": "ShareGPT-4o TTFT短縮",
+        "value": "Qwen2.5-VLで最大4.2x、LLaMA3.2-Visionで最大3.5x",
+        "baseline": "vLLM",
+        "condition": "ShareGPT-4o、可変要求率",
+        "interpretation": "画像符号化を言語推論から分離し、画像負荷が高いデータセットで事前充填との干渉を減らす効果が大きい。"
+      },
+      {
+        "metric": "VisualWebInstruct TTFT短縮",
+        "value": "Qwen2.5-VLで最大3.7x、LLaMA3.2-Visionで最大2.9x",
+        "baseline": "vLLM",
+        "condition": "VisualWebInstruct、可変要求率",
+        "interpretation": "テキスト入力が長い別ワークロードでも、段階分離と弾力的配分の効果が維持される。"
+      },
+      {
+        "metric": "SLO内最大スループット",
+        "value": "vLLM比4.5xと3.2x、DistServe比最大2.3x",
+        "baseline": "vLLM / multimodal DistServe",
+        "condition": "ShareGPT-4o、Qwen2.5-VL / LLaMA3.2-Vision、scaled SLO 1〜5x",
+        "interpretation": "単純なP/D静的分離より、モダリティ群と推論段階の二階層で資源を再配分する方が負荷変動へ追従できる。"
+      },
+      {
+        "metric": "EMPアブレーション有効スループット",
+        "value": "Qwen2.5-VL 1.8x、LLaMA3.2-Vision 2.3x",
+        "baseline": "static modality allocations",
+        "condition": "ShareGPT-4o、P90 effective throughput",
+        "interpretation": "テキスト偏重・均等・マルチモーダル偏重のいずれの固定配分も変動負荷へ適応できず、動的群間配分と段階並列度調整が必要である。"
+      },
+      {
+        "metric": "マルチモーダル推論最適化",
+        "value": "統合接頭辞キャッシュと非阻塞符号化を追加するほど入力遅延が低下",
+        "baseline": "EMP-only / cache-only variants",
+        "condition": "混合データセット、EMP有効",
+        "interpretation": "EMPだけではTTFT改善が限定的で、視覚計算の再利用と画像符号化の非同期化が補完的に効く。"
+      }
     ],
     "negative_results": "EMPだけを有効にしても入力トークン遅延の改善は限定的であり、TTFT削減には統合キャッシュと非阻塞符号化が必要になる。静的分離DistServeは低負荷では密結合より改善する場合があるが、高負荷時は固定資源配分が原因で復号側のメモリ競合と遊休資源が同時に発生し、遅延が急増する。論文の主評価は単一8-GPUノードに限られ、多ノード化では段階移動・KV移行のネットワーク費用と探索空間が増えるため、同じ改善率が維持されるかは未検証である。",
     "interpretation": "ElasticMMの利得は一つの最適化からではなく、異なる時間尺度の弾力性を重ねた結果である。モダリティ層はテキストと画像要求の長期・短期負荷偏りを吸収し、段階層は計算律速の事前充填へGPUを寄せつつメモリ律速の復号を必要最小限へ縮める。さらにキャッシュと非同期画像符号化がマルチモーダル固有の直列待ちを削る。画像負荷の重いShareGPT-4oで改善が大きいことは、画像符号化と長い視覚トークンが既存密結合方式の主要干渉源であることと整合する。",
     "quality_impact": "トークン削減、KV剪定、画像品質近似を用いず、同一モデル計算の実行配置と再利用を変えるため、意図的な精度低下は導入しない。統合キャッシュも同一画像・同一接頭辞の既計算結果を再利用する方式である。"
   },
-  "reservation": {"claim_id": "claim-95a8618581d24029b1e45af8", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-8d2d5424b4871b5ee4ef6cc8",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

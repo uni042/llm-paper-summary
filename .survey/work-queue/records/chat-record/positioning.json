@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-95a8618581d24029b1e45af8",
+  "attempt_id": "attempt-8d2d5424b4871b5ee4ef6cc8",
   "job_id": "job-research-2f20b6ae0c5a7fb6",
   "data": {
     "limitations": "主評価は単一ワークステーションの8枚A800 GPU、Qwen2.5-VL-7BとLLaMA3.2-Vision-11B、画像中心の二データセットに限定される。論文自身が多ノード評価を将来課題とし、ノード間通信遅延や並列探索空間の拡大を未解決としている。動的再配分ではKV移行費用を利得・費用モデルへ入れるが、実サービスで極端な短周期振動や誤った長期負荷予測が続く場合の安定性は十分検証されていない。音声など画像以外のモダリティ、70B級以上のモデル、GPU間帯域が低い環境への一般化も追加評価が必要である。",
@@ -10,5 +10,9 @@
     "implementation_status": "NeurIPS 2025 Oralとして公開され、公式リポジトリ https://github.com/hpdps-group/ElasticMM がApache-2.0で利用可能。公式READMEでは2025年10月にvLLM V0 backendをオープンソース化し、2025年11月にvLLM V1 backendのベータ対応を追加したとしている。論文の評価実装もvLLMを基盤とし、マルチモーダル対応DistServeを比較用に構築する。",
     "research_positioning": "LLMサービングの分離型アーキテクチャをマルチモーダルへ拡張する系統に位置する。一般的なP/D分離が言語モデル内部の二段階を扱うのに対し、ElasticMMは画像符号化を含む前段と要求種別まで資源分離の対象へ広げる。GPUを固定パーティションせず、モダリティ間・推論段階間でKV移行を伴って再配置するため、動的サービング、KV管理、異種ワークロード隔離の交点にある。今後、多ノード環境ではKV移行とネットワーク帯域を含む階層資源最適化へ接続できる。"
   },
-  "reservation": {"claim_id": "claim-95a8618581d24029b1e45af8", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-8d2d5424b4871b5ee4ef6cc8",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
