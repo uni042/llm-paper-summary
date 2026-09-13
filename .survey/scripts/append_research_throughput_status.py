@@ -17,6 +17,16 @@ SPECIALIST_RESEARCH_SWITCH = 50
 LOW_COMPLETIONS = 2
 TARGET_COMPLETIONS = 3
 WORKER_SLOT_RE = re.compile(r"(?P<hour>\d{2})(?P<minute>00|30)(?:\D|$)")
+DASHBOARD_LABEL_REPLACEMENTS = (
+    ("次回保守までの通常run", "保守カウンタ（通常run）"),
+    ("探索専用worker run（毎時枠）", ":00 補助worker Discovery run（毎時枠）"),
+    ("探索専用worker round（stats観測）", ":00 補助worker Discovery round（stats観測）"),
+    ("### 直近の探索専用worker", "### 直近の:00 補助worker Discovery"),
+    ("### 探索専用workerの探索効率（直近24時間）", "### :00 補助workerのDiscovery効率（直近24時間）"),
+    ("### 直近5探索専用worker run", "### 直近5件の:00 補助worker Discovery run"),
+    ("直近24hの探索専用worker重複率", "直近24hの:00 補助worker Discovery重複率"),
+    ("Research消化が探索専用workerの候補補充", "Research消化が:00 補助workerのDiscovery候補補充"),
+)
 
 
 def _load(path: Path) -> dict[str, Any]:
@@ -25,6 +35,13 @@ def _load(path: Path) -> dict[str, Any]:
     except (OSError, ValueError, UnicodeError):
         return {}
     return value if isinstance(value, dict) else {}
+
+
+def _modernize_dashboard_labels(text: str) -> str:
+    """Normalize generated STATUS labels to the current dual-mode :00 worker model."""
+    for old, new in DASHBOARD_LABEL_REPLACEMENTS:
+        text = text.replace(old, new)
+    return text
 
 
 def _dt(value: Any) -> datetime | None:
@@ -200,14 +217,14 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     latest_normal_claim = _latest_claim_time(claims, "normal")
 
     normal_mode = "Research/Audit優先（高在庫）" if high_backlog else "通常"
-    auxiliary_mode = "通常worker補助（Research/Audit）" if ready > SPECIALIST_RESEARCH_SWITCH else "探索専用"
+    auxiliary_mode = "通常worker補助（Research/Audit）" if ready > SPECIALIST_RESEARCH_SWITCH else "Discovery優先"
     health = "OK"
     warning = ""
     if high_backlog and latest and latest_completed < LOW_COMPLETIONS:
         health = "LOW"
         warning = (
             f"- **処理速度 LOW**: ready={ready} の高在庫状態で、最新通常runのResearch完了は "
-            f"{latest_completed} 件です。探索よりResearch消化を優先します。\n"
+            f"{latest_completed} 件です。DiscoveryよりResearch消化を優先します。\n"
         )
 
     unknown_completed = attributed["unknown"]
@@ -243,10 +260,13 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| 最新通常runのResearch完了 | **{latest_completed}** |\n"
         f"| 最古の有効claimの経過時間 | **{age_text}** |\n\n"
         f"Research readyが **{SPECIALIST_RESEARCH_SWITCH}本を超える間は`:00` workerも論文精読側** に回り、"
-        f"**{SPECIALIST_RESEARCH_SWITCH}本以下になると探索専用へ戻ります**。`:30`通常workerは、"
+        f"**{SPECIALIST_RESEARCH_SWITCH}本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、"
         f"readyが **{HIGH_BACKLOG}本以上** で処理可能なResearchがある間はResearch/Auditを優先します。\n\n"
         f"高在庫時の通常runは、hard stopに達しない限り **最低{TARGET_COMPLETIONS}件** のResearch完了を下限目標にします。"
         "3件は上限・終了条件ではありません。\n\n"
+        "Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。"
+        "Actionsは **claim-fast / submission-fast / background** の3レーンです。"
+        "旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。\n\n"
         f"{warning}"
         f"{attribution_note}"
         f"{END}\n"
@@ -259,6 +279,7 @@ def append_section(repo_root: Path, status_path: Path, now: datetime | None = No
         text = status_path.read_text(encoding="utf-8")
     except OSError:
         text = ""
+    text = _modernize_dashboard_labels(text)
 
     if START in text and END in text:
         prefix, rest = text.split(START, 1)
