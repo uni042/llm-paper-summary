@@ -203,6 +203,33 @@ def _run_command(command: list[str], *, cwd: Path) -> subprocess.CompletedProces
     return result
 
 
+def _durable_failure_result_exists(repo_root: Path, descriptor_path: Path, relative: str) -> bool:
+    """Require an exact durable failure result before classifying a child failure as ordinary."""
+    try:
+        result_path = immutable_submission.result_path_for(repo_root, descriptor_path)
+    except Exception:
+        return False
+    result = _read_object(result_path)
+    if not isinstance(result, dict) or result.get("ok") is not False:
+        return False
+
+    descriptor = _read_object(descriptor_path)
+    if isinstance(descriptor, dict):
+        job_id = descriptor.get("job_id")
+        attempt_id = descriptor.get("attempt_id")
+        if isinstance(job_id, str) and job_id and isinstance(attempt_id, str) and attempt_id:
+            return immutable_submission.result_matches_identity(result, descriptor)
+
+    try:
+        digest = hashlib.sha256(descriptor_path.read_bytes()).hexdigest()
+    except OSError:
+        return False
+    return (
+        result.get("submission") == relative
+        and result.get("descriptor_sha256") == digest
+    )
+
+
 def process_one(repo_root: Path, descriptor_path: Path, effects_dir: Path) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     descriptor_path = _absolute_descriptor(repo_root, descriptor_path)
@@ -228,6 +255,10 @@ def process_one(repo_root: Path, descriptor_path: Path, effects_dir: Path) -> di
     result = _run_command(command, cwd=repo_root)
     if result.returncode == 0:
         return {"descriptor": relative, "ok": True, "returncode": 0}
+    if not _durable_failure_result_exists(repo_root, descriptor_path, relative):
+        raise RuntimeError(
+            f"immutable processor exited {result.returncode} without durable failure result: {relative}"
+        )
 
     isolated = _run_command(
         [
