@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 01:46 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 01:47 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,12 +36,12 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **149** |
-| 処理中（Active claims） | **1** |
-| 今すぐ着手可能（Claimable） | **148** |
-| :30 通常worker Active claims | **1** |
+| 処理中（Active claims） | **2** |
+| 今すぐ着手可能（Claimable） | **147** |
+| :30 通常worker Active claims | **2** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 01:46 JST** |
+| :30 通常worker 直近claim | **09-14 01:47 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P88 `arXiv:2601.13684` — HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference
 - P88 `arXiv:2607.08565` — SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling
 - P88 `arXiv:2602.06932` — When RL Meets Adaptive Speculative Training: A Unified Training-Serving System
 - P88 `arXiv:2502.09921` — INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing
 - P88 `arXiv:2605.10670` — Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference
+- P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
 
 ## 参考情報
 
