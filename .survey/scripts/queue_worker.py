@@ -125,6 +125,13 @@ def update_job(job: dict):
     write_json(Path(p), job)
 
 
+def clear_repair_state(job: dict):
+    """Clear stale validation-isolation metadata after successful completion."""
+    job.pop("repair_required", None)
+    job.pop("validation_error", None)
+    job.pop("last_validation_failed_at", None)
+
+
 def active_jobs(job_type=None, lane=None):
     out = []
     for j in iter_jobs():
@@ -405,6 +412,7 @@ def process_research(sub: dict, job: dict, st: dict):
         job["status"] = "completed"
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
+        clear_repair_state(job)
         st["stats"]["research_completed"] += 1
         st.setdefault("maintenance", {})["views_dirty"] = True
         make_audit_job(sub, job)
@@ -427,6 +435,7 @@ def process_audit(sub: dict, job: dict, st: dict):
         job["status"] = "completed"
         job["completed_at"] = now()
         job["artifact_submission"] = sub.get("_file")
+        clear_repair_state(job)
         st["stats"]["audit_completed"] += 1
         st.setdefault("maintenance", {})["views_dirty"] = True
     elif status in {"blocked", "deferred", "rejected"}:
