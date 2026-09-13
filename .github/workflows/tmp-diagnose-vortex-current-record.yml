@@ -1,0 +1,83 @@
+name: Temporary diagnose Vortex current record
+
+on:
+  push:
+    branches: [fix/validation-preflight-and-claim-telemetry-20260913]
+    paths:
+      - '.github/workflows/tmp-diagnose-vortex-current-record.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/validation-preflight-and-claim-telemetry-20260913
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconstruct and validate Vortex without writes
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          sys.path.insert(0, str(root / '.survey/scripts'))
+          import assemble_research_record as assemble
+          import claim_worker_with_banks as banks
+          from japanese_style import japanese_ratio, record_prose_text, find_bare_english
+
+          job_id = 'job-research-8df4b126a68a6be4'
+          claim = {'job_id': job_id, 'kind': 'research'}
+          source = None
+          payloads = None
+          attempts = set()
+
+          bank_candidate = banks._repair_bank_candidate(root, claim, set())
+          if bank_candidate is not None:
+              bank, payloads, attempts = bank_candidate
+              source = {'kind': 'retained_bank', 'bank': bank, 'attempts': sorted(attempts)}
+          else:
+              descriptor_candidate = banks._repair_descriptor_candidate(root, claim)
+              if descriptor_candidate is not None:
+                  submission, descriptor, payloads, attempts = descriptor_candidate
+                  source = {
+                      'kind': 'immutable_descriptor',
+                      'submission': submission,
+                      'attempt': descriptor.get('attempt_id'),
+                      'attempts': sorted(attempts),
+                  }
+
+          if payloads is None:
+              raise SystemExit('no unique recoverable Vortex record found')
+
+          record = {slot: payloads[slot]['data'] for slot in assemble.SLOT_NAMES}
+          record = assemble.normalize_preferred_terms(record)
+          assemble.ensure_explanatory_summary(record)
+          issues = assemble.collect_validation_issues(record)
+          prose = record_prose_text(record)
+          ratio, jp_chars, latin_chars = japanese_ratio(prose)
+          components = (record.get('problem_method') or {}).get('components') or []
+          result = {
+              'source': source,
+              'issues': issues,
+              'issue_count': len(issues),
+              'japanese_ratio': ratio,
+              'japanese_chars': jp_chars,
+              'latin_chars': latin_chars,
+              'method_overview_chars': len(str((record.get('problem_method') or {}).get('method_overview') or '').strip()),
+              'component_description_chars': [len(str(item.get('description') or '').strip()) for item in components if isinstance(item, dict)],
+              'bare_english': [
+                  {'term': hit.term, 'preferred': hit.preferred, 'count': hit.count}
+                  for hit in find_bare_english(prose)[:20]
+              ],
+          }
+          print('VORTEX_DIAG=' + json.dumps(result, ensure_ascii=False))
+          PY
