@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **156 / 50** |
-| Research ready | **156** |
+| Candidate在庫（Research ready） | **158 / 50** |
+| Research ready | **158** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **6** |
+| Discovery完了 | **3** |
+| 新規job | **9** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **131** |
-| 探索評価候補 | **652** |
-| 重複除外 | **270** |
-| 重複率 | **41.4%** |
-| Novel候補 | **382** |
-| Research候補採用 | **215** |
+| 探索round（stats観測） | **132** |
+| 探索評価候補 | **656** |
+| 重複除外 | **271** |
+| 重複率 | **41.3%** |
+| Novel候補 | **385** |
+| Research候補採用 | **217** |
 | Research完了 | **68** |
 | Repo収録 | **68** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 652 → 重複除外後 382 → Research候補採用 215 → Research完了 68 → Repo収録 68**
+**探索評価 656 → 重複除外後 385 → Research候補採用 217 → Research完了 68 → Repo収録 68**
 
 ## 探索効率（直近24時間）
 
@@ -165,6 +165,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | エージェント推論・speculative tool execution | 4 | 2 | 2 | 50.0% | 50.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
+| 投機的復号・高並列サービング・production評価 | 4 | 1 | 2 | 25.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache | 4 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU/PNM・cold MoE pool・edge KV migration | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -205,11 +206,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — 投機的復号・高並列サービング・production評価: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 出力長不確実性・tail-aware scheduling隣接: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — エージェント型LLM・サービングruntime・生成時特化: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 2026-09新着・KV圧縮・跨文脈再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T09:00:00+09:00** — production-autoscaling-disaggregated-serving-runtime: 評価 6 / 重複 4 / 採用 2
-- **2026-09-13T09:00:00+09:00** — ssd-kv-cache-heterogeneous-gpu-serving-orchestration: 評価 4 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
@@ -228,9 +229,9 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 - P93 `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
+- P90 `arXiv:2607.05147` — DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
-- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 
 ## 7日比較
 
