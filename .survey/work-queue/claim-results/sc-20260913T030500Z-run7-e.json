@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T030500Z-run7-e",
+  "worker_id": "scheduled-chat-20260913-1130-run7-e",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-990a57145fc3b85b",
+      "claim_id": "claim-5f26b42e4bec90c5f505ad01",
+      "worker_id": "scheduled-chat-20260913-1130-run7-e",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5f26b42e4bec90c5f505ad01",
+      "claimed_at": "2026-09-13T03:08:17+00:00",
+      "expires_at": "2026-09-13T11:08:17+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-990a57145fc3b85b"
+      ],
+      "job": {
+        "job_id": "job-research-990a57145fc3b85b",
+        "type": "research",
+        "parent_job_id": "job-2e81a34f6363831f",
+        "priority": 88,
+        "canonical_id": "arXiv:2603.19133",
+        "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
+        "source_url": "https://arxiv.org/abs/2603.19133",
+        "paper_path": "papers/inference/06-speculative-decoding-moe/2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md",
+        "selection_reason": "端末側の小型言語モデル（Small Language Model; SLM）とクラウド側の大規模言語モデル（Large Language Model; LLM）が互いを待つ従来の投機的復号を、非同期パイプラインと疎な確率分布転送で重ね合わせる。通信量を抑えながら最大2.9倍の高速化を報告しており、端末・クラウド協調と投機的復号をネットワーク待ちまで含めて扱う実行時システムとして価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:41:00+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-b76cb796c54f83bb",
+      "claim_id": "claim-f3c35b29e742f81b67fc03f9",
+      "worker_id": "scheduled-chat-20260913-1130-run7-e",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-f3c35b29e742f81b67fc03f9",
+      "claimed_at": "2026-09-13T03:08:17+00:00",
+      "expires_at": "2026-09-13T11:08:17+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b76cb796c54f83bb"
+      ],
+      "job": {
+        "job_id": "job-research-b76cb796c54f83bb",
+        "type": "research",
+        "parent_job_id": "job-3ee1465fb1dc2abf",
+        "priority": 88,
+        "canonical_id": "arXiv:2605.04357",
+        "title": "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
+        "source_url": "https://arxiv.org/abs/2605.04357",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.04357-coral-multi-llm-heterogeneous-cloud-gpus.md",
+        "selection_reason": "複数の大規模言語モデル（Large Language Model; LLM）を異種クラウドGPU上で同時配信する際、モデルごとの資源割当と各複製の配信戦略を共同最適化する。需要とGPU可用性の変動へ追従しつつ、二段分解で共同最適性を保ったままオンライン解時間を数時間から数十秒へ短縮する。6モデル・20 GPU構成で費用最大2.79倍削減、資源逼迫時の有効スループット（goodput）最大2.39倍向上を報告しており、異種GPU・multi-model配置系統の強い候補である。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:44:53+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-f379557cdc6a8294",
+      "claim_id": "claim-bca015dc35a7cd9f3a04165c",
+      "worker_id": "scheduled-chat-20260913-1130-run7-e",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-bca015dc35a7cd9f3a04165c",
+      "claimed_at": "2026-09-13T03:08:17+00:00",
+      "expires_at": "2026-09-13T11:08:17+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f379557cdc6a8294"
+      ],
+      "job": {
+        "job_id": "job-research-f379557cdc6a8294",
+        "type": "research",
+        "parent_job_id": "job-af96ba3d9c2ab6d4",
+        "priority": 88,
+        "canonical_id": "arXiv:2601.13684",
+        "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2601.13684",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.13684-heterocache-dynamic-heterogeneous-kv-retrieval.md",
+        "selection_reason": "長文脈推論で注意重要度が時間とともに変わる現象を考慮し、ヘッドごとの時間的安定性と層内冗長性に応じてKV予算を細粒度配分する。代表ヘッドで注意変化を監視し、必要な文脈だけをCPUから非同期オンデマンド取得する階層記憶機構により入出力（I/O）待ちを隠蔽する。224K文脈で元モデル比最大3倍のデコード高速化を報告しており、KV圧縮と階層メモリを直接結ぶ候補として価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:49:00+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-44ece09f5c0f4e7c",
+      "claim_id": "claim-a8ada341a3d5f5d9057fc5bb",
+      "worker_id": "scheduled-chat-20260913-1130-run7-e",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a8ada341a3d5f5d9057fc5bb",
+      "claimed_at": "2026-09-13T03:08:17+00:00",
+      "expires_at": "2026-09-13T11:08:17+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-44ece09f5c0f4e7c"
+      ],
+      "job": {
+        "job_id": "job-research-44ece09f5c0f4e7c",
+        "type": "research",
+        "parent_job_id": "job-727b21710a6e6ab9",
+        "priority": 88,
+        "canonical_id": "arXiv:2607.08565",
+        "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+        "source_url": "https://arxiv.org/abs/2607.08565",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+        "selection_reason": "agentic workloadではsession内KV再利用が非常に高く、既存cache-affinity routingが一部instanceを過負荷にする問題を、sessionの最初だけ純粋なload balance、以降をcache-aware routingとするsession-centric schedulingで解く。BAILIANのproduction traceを含む評価でcluster TPSを10〜16%、分離prefill TPSを2〜34%改善し、agent servingでcache localityと負荷分散を両立する実運用型system研究として優先度が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T19:12:29+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T03:08:17+00:00"
+}
