@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:38:25+00:00",
+  "updated_at": "2026-09-13T01:41:50+00:00",
   "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-hierarchical-memory-7",
+  "last_round": "specialist-network-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 2,
+  "last_empty_round_reason": "networking・disaggregated-serving軸の強い候補は現正本で既に代表例が収録またはjob化されていた。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2856,6 +2856,27 @@
       ],
       "next_axis_hint": "新規候補の引用・関連研究経路を辿るか、GPU runtime/networking・distributed servingの新着へ軸を移す",
       "source_submission": "work-queue/submissions/20260913T1037JST-discovery-specialist-hierarchical-memory-7.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-network-8",
+      "axis": "分離サービング通信・KV転送・network flow scheduling",
+      "query_summary": "prefill/decode分離時のKV転送、RDMA/通信圧縮、multi-stage flow schedulingを探索した。SmartGen、KVServe、CacheFlow、MFS、collective communication surveyはいずれも既存jobまたは収録済みで、新規の強候補は残らなかった。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.28150",
+        "arXiv:2605.13734",
+        "arXiv:2604.25080",
+        "arXiv:2603.17456",
+        "arXiv:2608.15118"
+      ],
+      "next_axis_hint": "今回追加したFlashMoE/Harvest/MicroSpec等のbackward reference・forward citation経路と、OS/DBMS/HPC由来のcache/prefetch技術へ探索を移す",
+      "source_submission": "work-queue/submissions/20260913T1040JST-discovery-specialist-network-8.json"
     }
   ],
   "axes": {
@@ -4458,6 +4479,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.8333333333333334,
       "next_axis_hint": "新規候補の引用・関連研究経路を辿るか、GPU runtime/networking・distributed servingの新着へ軸を移す"
+    },
+    "分離サービング通信・KV転送・network flow scheduling": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "今回追加したFlashMoE/Harvest/MicroSpec等のbackward reference・forward citation経路と、OS/DBMS/HPC由来のcache/prefetch技術へ探索を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
