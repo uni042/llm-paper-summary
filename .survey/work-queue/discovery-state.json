@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:41:50+00:00",
-  "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-network-8",
+  "updated_at": "2026-09-13T02:02:47+00:00",
+  "last_run_key": "2026-09-13T11:00:43+09:00",
+  "last_round": "specialist-recent-kv-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "networking・disaggregated-serving軸の強い候補は現正本で既に代表例が収録またはjob化されていた。",
+  "consecutive_empty_rounds": 3,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2877,6 +2877,21 @@
       ],
       "next_axis_hint": "今回追加したFlashMoE/Harvest/MicroSpec等のbackward reference・forward citation経路と、OS/DBMS/HPC由来のcache/prefetch技術へ探索を移す",
       "source_submission": "work-queue/submissions/20260913T1040JST-discovery-specialist-network-8.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-recent-kv-1",
+      "axis": "2026年9月新着・KV圧縮と動的管理",
+      "query_summary": "直前のnetworking/disaggregated-serving高重複軸を避け、2026年9月のKV cache圧縮・eviction・長時間推論向け動的管理を一次資料arXiv中心に軽量評価した。投入直前に最新mainと既存repo検索でarXiv ID重複を再確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はMoE expert placement/cache/prefetchかGPU runtime/kernelの2026年9月新着へ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T1100JST-discovery-specialist-kv-1.json"
     }
   ],
   "axes": {
@@ -4489,6 +4504,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "今回追加したFlashMoE/Harvest/MicroSpec等のbackward reference・forward citation経路と、OS/DBMS/HPC由来のcache/prefetch技術へ探索を移す"
+    },
+    "2026年9月新着・KV圧縮と動的管理": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はMoE expert placement/cache/prefetchかGPU runtime/kernelの2026年9月新着へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:55:10.169414+00:00",
+  "updated_at": "2026-09-13T02:04:08.760379+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,7 +17069,7 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T01:55:10.169414+00:00",
+      "last_recorded_at": "2026-09-13T02:04:08.760379+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -17078,9 +17078,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 7,
+        "new_jobs": 8,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -17185,6 +17185,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34732034625:1",
+          "recorded_at": "2026-09-13T02:04:08.760379+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34732034625",
+            "run_attempt": "1",
+            "source_sha": "0b3ba232db81fee9e5d836d8b3dbbbcc6eb270c0"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17243,6 +17257,14 @@
           "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-a09df27010ed5f56",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -17294,6 +17316,13 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-86454d0b5bf5f7d1",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -17305,12 +17334,13 @@
         ".survey/work-queue/results/20260913T1031JST-discovery-specialist-scheduling-5.json",
         ".survey/work-queue/results/20260913T1034JST-discovery-specialist-specdecode-6.json",
         ".survey/work-queue/results/20260913T1037JST-discovery-specialist-hierarchical-memory-7.json",
-        ".survey/work-queue/results/20260913T1040JST-discovery-specialist-network-8.json"
+        ".survey/work-queue/results/20260913T1040JST-discovery-specialist-network-8.json",
+        ".survey/work-queue/results/20260913T1100JST-discovery-specialist-kv-1.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,
       "paper_active_count_after": 397,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
