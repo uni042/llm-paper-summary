@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-e6f9fac0ed89c24240db7c8a",
   "job_id": "job-research-bbe263213664b792",
-  "data": {},
+  "data": {
+    "limitations": "評価対象はMixtral-8x7Bと対応EAGLE、APPSとCNN/DailyMail、単一GPU＋大容量CPUメモリの2構成に限られる。ドラフト候補の受理率が低いタスクでは投機的デコードの利得が小さく、候補を増やすとCPU注意計算が逆に律速になる。CPUメモリ容量が同時要求数を強く制約するため、メモリが小さい端末やCPU帯域が低い環境では倍率が変わる。SSD/NVMeから専門家を直接読む経路や分散複数GPU、異なるMoEモデル、公開コードを用いた再現性は評価されていない。",
+    "differences": "FlexGen系はテンソル配置と転送順序、疎な専門家キャッシュ系は必要な専門家だけの読込み、MoE-Lightningは大バッチとCPU注意計算で転送費を償却する。SpecMoEOffはこれらに対し、投機的デコードで1回の対象モデル前向き計算へ複数候補を束ね、専門家重み転送1回あたりの計算量そのものを増やす。さらに対象モデルだけでなくドラフトモデルのKVキャッシュ配置もCPU/GPUへ分割し、候補数を性能推定器で自動選択する点が異なる。",
+    "implementation_status": "SGLangを基盤に20,000行超のPython/C++/CUDAを追加した研究試作。別CUDAストリーム、CUDAイベント、固定ページメモリ、動的割当を使う実機実装で評価されている。一方、arXiv本文とarXivの関連コード欄から著者公式の公開リポジトリURLは確認できないため、再現可能な公開実装の有無は未確認として扱う。",
+    "research_positioning": "階層メモリ型MoE推論では、従来は『どの専門家を先読み・キャッシュするか』『どの階層へ置くか』が中心だった。SpecMoEOffは転送量を減らす代わりに、転送後の専門家を複数候補トークンで再利用して固定転送費を償却するため、計算側の並列性をメモリ階層最適化へ接続する系統に位置づく。SSDを直接活用する手法ではないが、将来SSD→CPU→GPUの専門家階層でも、遅い下位階層から読んだ重みの再利用量を増やす補完機構として組み合わせる価値がある。"
+  },
   "reservation": {
     "claim_id": "claim-e6f9fac0ed89c24240db7c8a",
     "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
