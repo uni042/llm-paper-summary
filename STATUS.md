@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **150 / 50** |
-| Research ready | **150** |
+| Candidate在庫（Research ready） | **152 / 50** |
+| Research ready | **152** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,44 +28,44 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **8** |
-| 新規job | **22** |
+| Discovery完了 | **9** |
+| 新規job | **25** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-heterogeneous-storage-2**
+Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | ssd-kv-cache-heterogeneous-gpu-serving-orchestration |
-| 評価候補 | **4** |
-| 重複除外 | **0** |
-| Novel候補 | **4** |
-| Research候補採用 | **0** |
-| 重複率 | **0.0%** |
+| 探索軸 | production-autoscaling-disaggregated-serving-runtime |
+| 評価候補 | **6** |
+| 重複除外 | **4** |
+| Novel候補 | **2** |
+| Research候補採用 | **2** |
+| 重複率 | **66.7%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **127** |
-| 探索評価候補 | **637** |
-| 重複除外 | **264** |
-| 重複率 | **41.4%** |
-| Novel候補 | **373** |
-| Research候補採用 | **209** |
-| Research完了 | **70** |
-| Repo収録 | **70** |
+| 通常worker run（ledger観測） | **21** |
+| 探索round（stats観測） | **128** |
+| 探索評価候補 | **643** |
+| 重複除外 | **268** |
+| 重複率 | **41.7%** |
+| Novel候補 | **375** |
+| Research候補採用 | **211** |
+| Research完了 | **68** |
+| Repo収録 | **68** |
 | Audit完了 | **0** |
-| Blocked遷移 | **1** |
+| Blocked遷移 | **0** |
 | Fallback archive | **0** |
 
 ### 24時間ファネル
 
-**探索評価 637 → 重複除外後 373 → Research候補採用 209 → Research完了 70 → Repo収録 70**
+**探索評価 643 → 重複除外後 375 → Research候補採用 211 → Research完了 68 → Repo収録 68**
 
 ## 探索効率（直近24時間）
 
@@ -108,6 +108,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-heterogeneous-storage-2
 | agent workspace仮想化・NVMe階層・長時間runtime state | 6 | 3 | 2 | 50.0% | 33.3% |
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | position-independent KV再利用のforward/backward related-work補完 | 6 | 1 | 5 | 16.7% | 83.3% |
+| production-autoscaling-disaggregated-serving-runtime | 6 | 4 | 2 | 66.7% | 33.3% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime | 5 | 0 | 1 | 0.0% | 20.0% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
@@ -201,11 +202,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-heterogeneous-storage-2
 
 ### 直近5探索round
 
+- **2026-09-13T09:00:00+09:00** — production-autoscaling-disaggregated-serving-runtime: 評価 6 / 重複 4 / 採用 2
 - **2026-09-13T09:00:00+09:00** — ssd-kv-cache-heterogeneous-gpu-serving-orchestration: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T09:00:00+09:00** — moe-cache-aware-routing-expert-skipping-fine-grained-execution: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T08:26:04+09:00** — 直近新着・hierarchical memory・serving runtime横断再確認: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T08:26:04+09:00** — network・collective通信・distributed inference: 評価 7 / 重複 7 / 採用 0
-- **2026-09-13T08:26:04+09:00** — GPU runtime安全性・software aging・many-core CPU inference: 評価 9 / 重複 6 / 採用 3
 
 ## 最近処理した論文
 
@@ -222,11 +223,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-heterogeneous-storage-2
 
 ### 次に処理する候補
 
+- P93 `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
-- P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 
 ## 7日比較
 
