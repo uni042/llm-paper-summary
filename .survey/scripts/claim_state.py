@@ -3,11 +3,13 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import re
 from pathlib import Path
 from typing import Any, Iterable
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent", "failed", "cancelled"}
 CLAIMABLE_TYPES = {"research", "audit"}
+SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 
 
 def parse_time(value: Any) -> dt.datetime | None:
@@ -20,6 +22,25 @@ def parse_time(value: Any) -> dt.datetime | None:
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=dt.timezone.utc)
     return parsed.astimezone(dt.timezone.utc)
+
+
+def normalize_dependencies(job_id: str, values: Any) -> list[str] | None:
+    """Return one canonical, safe, ordered dependency list for a claimed job."""
+    if not SAFE_ID_RE.fullmatch(job_id):
+        return None
+    if values is None:
+        values = []
+    if not isinstance(values, list):
+        return None
+    normalized: list[str] = []
+    for value in values:
+        if not isinstance(value, str) or not SAFE_ID_RE.fullmatch(value):
+            return None
+        if value not in normalized:
+            normalized.append(value)
+    if job_id not in normalized:
+        normalized.append(job_id)
+    return normalized
 
 
 def _read(path: Path) -> dict[str, Any] | None:

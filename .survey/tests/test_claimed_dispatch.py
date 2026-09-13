@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPTS))
 import dispatch_fallback_inbox  # noqa: E402
 import fallback_transport as ft  # noqa: E402
 import select_record_bank  # noqa: E402
+import claim_worker  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 
@@ -87,11 +88,14 @@ class ClaimedDispatchTests(unittest.TestCase):
     def test_slot_internal_identity_mismatch_is_quarantined_without_bank_or_chat_change(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); seed_job(root); claim(root); self.seed_free_banks(root); value = envelope()
+            before = {path.relative_to(root).as_posix(): path.read_bytes() for path in (root / ".survey/work-queue/records").rglob("*.json")}
             payload = json.loads(value["writes"][0]["content"]); payload["job_id"] = "job-other"; value["writes"][0]["content"] = json.dumps(payload); self.put(root, value)
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "idle")
             self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
             self.assertFalse((root / ft.CHAT_INBOX).exists())
+            after = {path.relative_to(root).as_posix(): path.read_bytes() for path in (root / ".survey/work-queue/records").rglob("*.json")}
+            self.assertEqual(after, before)
 
     def test_slot_name_or_transport_version_mismatch_is_quarantined(self):
         for field, value in (("slot", "results"), ("transport_version", 9)):
@@ -101,6 +105,15 @@ class ClaimedDispatchTests(unittest.TestCase):
                 result = dispatch_fallback_inbox.dispatch(root)
                 self.assertEqual(result["action"], "idle")
                 self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+
+    def test_dependency_order_extra_or_duplicate_mismatch_is_quarantined(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); claim(root); self.seed_free_banks(root); value = envelope()
+            value["depends_on_job_ids"] = ["job-r1", "job-extra", "job-r1"]
+            chat = json.loads(value["writes"][-1]["content"]); chat["depends_on_job_ids"] = list(value["depends_on_job_ids"]); value["writes"][-1]["content"] = json.dumps(chat); self.put(root, value)
+            result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(result["action"], "idle")
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
 
     def test_two_claimed_envelopes_do_not_overwrite_unsettled_bank_or_chat(self):
         with tempfile.TemporaryDirectory() as td:
@@ -123,6 +136,25 @@ class ClaimedDispatchTests(unittest.TestCase):
                 write_json(jobs / f"job-r{index}.json", {"job_id": f"job-r{index}", "type": "research", "status": "ready"})
             write_json(root / ".survey/work-queue/next-jobs.json", {"next_jobs": [{"job_id": "job-r0"}]})
             self.assertEqual(len(select_record_bank.ready_job_ids(root)), 10)
+
+    def test_allocator_expiry_reassignment_fences_old_envelope_and_dispatches_current(self):
+        from datetime import datetime, timedelta, timezone
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); self.seed_free_banks(root)
+            request_root = root / ".survey/work-queue/claim-requests"
+            write_json(request_root / "req-a.json", {"schema_version": 1, "request_id": "req-a", "worker_id": "worker-a", "worker_kind": "work", "requested_at": "2026-09-13T00:00:00+00:00", "max_jobs": 1, "lease_seconds": 300, "job_types": ["research"]})
+            claim_worker.process_requests(root, at=datetime(2026, 9, 13, tzinfo=timezone.utc))
+            first = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())["assignments"][0]
+            old = envelope(claim_id=first["claim_id"], worker_id=first["worker_id"], attempt_id=first["attempt_id"])
+            (root / ".survey/work-queue/claim-requests/req-b.json").write_text(json.dumps({"schema_version": 1, "request_id": "req-b", "worker_id": "worker-b", "worker_kind": "work", "requested_at": "2026-09-13T00:00:00+00:00", "max_jobs": 1, "lease_seconds": 300, "job_types": ["research"]}), encoding="utf-8")
+            claim_worker.process_requests(root, at=datetime(2026, 9, 13, tzinfo=timezone.utc) + timedelta(seconds=301))
+            second = json.loads((root / ".survey/work-queue/claim-results/req-b.json").read_text())["assignments"][0]
+            current = envelope(claim_id=second["claim_id"], worker_id=second["worker_id"], attempt_id=second["attempt_id"], envelope_id="env-b")
+            self.put(root, old); self.put(root, current)
+            first_result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(first_result["action"], "dispatched")
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+            self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-b.json").exists())
 
     def test_failed_and_cancelled_claimed_jobs_are_archived_without_apply(self):
         for status in ("failed", "cancelled"):

@@ -170,10 +170,9 @@ def claimed_envelope_state(repo_root: Path, envelope: dict[str, Any]) -> tuple[b
         return False, "canonical job identity is missing or unsafe"
     if job.get("type") != envelope.get("kind"):
         return False, "claimed envelope kind differs from canonical job type"
-    canonical_dependencies = job.get("depends_on_job_ids") or job.get("dependencies")
-    if isinstance(canonical_dependencies, list) and any(
-        dependency not in envelope["depends_on_job_ids"] for dependency in canonical_dependencies
-    ):
+    raw_dependencies = job["depends_on_job_ids"] if "depends_on_job_ids" in job else job.get("dependencies")
+    canonical_dependencies = claim_state.normalize_dependencies(job_id, raw_dependencies)
+    if canonical_dependencies is None or canonical_dependencies != envelope["depends_on_job_ids"]:
         return False, "claimed envelope dependencies differ from canonical job"
     current = claim_state.current_claims(repo_root).get(job_id)
     if current is None:

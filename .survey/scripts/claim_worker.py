@@ -123,16 +123,15 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "job_id": claim["job_id"], "claim_id": claim["claim_id"],
         "worker_id": claim["worker_id"], "worker_kind": claim["worker_kind"],
         "attempt_id": claim["attempt_id"], "claimed_at": claim.get("claimed_at"),
-        "expires_at": claim["expires_at"], "job": dict(job),
+        "expires_at": claim["expires_at"], "kind": claim.get("kind", job.get("type")),
+        "depends_on_job_ids": list(claim.get("depends_on_job_ids") or [claim["job_id"]]),
+        "job": dict(job),
     }
 
 
-def _dependencies(job_id: str, job: dict[str, Any]) -> list[str]:
-    values = job.get("depends_on_job_ids") or job.get("dependencies") or []
-    values = [str(value) for value in values if isinstance(value, str)]
-    if job_id not in values:
-        values.append(job_id)
-    return values
+def _dependencies(job_id: str, job: dict[str, Any]) -> list[str] | None:
+    values = job["depends_on_job_ids"] if "depends_on_job_ids" in job else job.get("dependencies")
+    return claim_state.normalize_dependencies(job_id, values)
 
 
 def _result_path(root: Path, request_id: str) -> Path:
@@ -192,6 +191,9 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             job_id = str(item.get("job_id") or "")
             if item.get("status") != "ready" or item.get("type") not in request["job_types"]:
                 continue
+            dependencies = _dependencies(job_id, item)
+            if dependencies is None:
+                continue
             current = claims.get(job_id)
             if current and current.get("active"):
                 continue
@@ -200,6 +202,9 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         assignments = []
         for item in available[:request["max_jobs"]]:
             job_id = str(item["job_id"])
+            dependencies = _dependencies(job_id, item)
+            if dependencies is None:
+                continue
             claim_id = _claim_id(request["request_id"], job_id)
             attempt_id = _attempt_id(claim_id)
             previous = claims.get(job_id)
@@ -211,7 +216,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "attempt_id": attempt_id, "request_id": request["request_id"],
                 "claimed_at": _iso(now), "expires_at": _iso(expires),
                 "kind": item.get("type"),
-                "depends_on_job_ids": _dependencies(job_id, item),
+                "depends_on_job_ids": dependencies,
             }
             if previous and previous.get("claim_id") != claim_id:
                 claim["previous_claim_id"] = previous.get("claim_id")
@@ -220,7 +225,8 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             assignments.append({
                 "job_id": job_id, "claim_id": claim_id, "worker_id": request["worker_id"],
                 "worker_kind": request["worker_kind"], "attempt_id": attempt_id,
-                "claimed_at": _iso(now), "expires_at": _iso(expires), "job": dict(item),
+                "claimed_at": _iso(now), "expires_at": _iso(expires), "kind": item.get("type"),
+                "depends_on_job_ids": dependencies, "job": dict(item),
             })
         _write(result_path, {
             "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],

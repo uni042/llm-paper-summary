@@ -66,6 +66,8 @@ class ClaimWorkerTests(unittest.TestCase):
             self.assertEqual(result["assignments"][0]["job"]["paper_path"], "papers/job-low.md")
             self.assertEqual(result["assignments"][0]["job"]["depends_on_job_ids"], ["job-low"])
             self.assertNotIn("_path", result["assignments"][0]["job"])
+            self.assertEqual(result["assignments"][0]["kind"], "research")
+            self.assertEqual(result["assignments"][0]["depends_on_job_ids"], ["job-low"])
 
     def test_repeated_request_reuses_authoritative_result_and_claim(self):
         with tempfile.TemporaryDirectory() as td:
@@ -133,6 +135,35 @@ class ClaimWorkerTests(unittest.TestCase):
             result = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
             self.assertEqual([x["job_id"] for x in result["assignments"]], ["job-r1"])
             self.assertEqual(claim_path.read_text(), claim_before)
+            self.assertEqual(result["assignments"][0]["kind"], "research")
+            self.assertEqual(result["assignments"][0]["depends_on_job_ids"], ["job-r1"])
+
+    def test_invalid_canonical_dependency_skips_only_that_job(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            job(root, "job-bad")
+            write_json(root / ".survey/work-queue/jobs/job-bad.json", {
+                "job_id": "job-bad", "type": "research", "status": "ready",
+                "priority": 90, "depends_on_job_ids": ["unsafe/dependency"],
+            })
+            job(root, "job-good", priority=80)
+            request(root, "req-a", max_jobs=2)
+            claim_worker.process_requests(root, at=AT)
+            result = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
+            self.assertEqual([item["job_id"] for item in result["assignments"]], ["job-good"])
+
+    def test_dependency_normalization_is_deterministic_and_adds_job_id(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            job(root, "job-r1")
+            write_json(root / ".survey/work-queue/jobs/job-r1.json", {
+                "job_id": "job-r1", "type": "research", "status": "ready",
+                "priority": 50, "depends_on_job_ids": ["job-parent", "job-parent", "job-r1"],
+            })
+            request(root, "req-a")
+            claim_worker.process_requests(root, at=AT)
+            result = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
+            self.assertEqual(result["assignments"][0]["depends_on_job_ids"], ["job-parent", "job-r1"])
 
     def test_invalid_canonical_job_id_or_filename_is_not_claimed(self):
         with tempfile.TemporaryDirectory() as td:
