@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:52 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **180** |
-| Research ready | **180** |
+| Candidate在庫（Research ready） | **179** |
+| Research ready | **179** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **210** |
+| Research completed（累計） | **211** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **12 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
+| Research完了 | **1** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
-| Repo収録 | **0** |
+| Repo収録 | **1** |
 | Research/Audit blocked遷移 | **0** |
 
 > Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。
@@ -61,14 +61,14 @@ Run: **2026-09-13T11:00:00+09:00**
 | 重複率 | **43.8%** |
 | Novel候補 | **407** |
 | Research候補採用 | **227** |
-| Research完了 | **70** |
-| Repo収録 | **70** |
+| Research完了 | **71** |
+| Repo収録 | **71** |
 | Audit完了 | **0** |
-| Fallback archive（全helper） | **6** |
+| Fallback archive（全helper） | **7** |
 
 ### 24時間ファネル
 
-**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 70 → Repo収録 70**
+**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 71 → Repo収録 71**
 
 ## 探索専用workerの探索効率（直近24時間）
 
@@ -234,6 +234,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### Research完了
 
+- `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
 - `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 - `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
 - `arXiv:2608.22643` — NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching
@@ -241,7 +242,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2609.01821` — Scaling Inference Prefill with High-Radix Photonic Interconnects
 - `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
-- `arXiv:2609.02737` — Language Models Can Control Their Own Attention
 
 ### 次に処理する候補
 
@@ -266,15 +266,15 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **LOW**
 
 | 指標 | 値 |
 |---|---:|
-| Research ready | **180** |
-| Active claims | **38** |
+| Research ready | **179** |
+| Active claims | **37** |
 | Claimable | **142** |
 | :00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)** |
 | :00切替閾値 | **ready > 50 → 通常worker補助 / ready ≤ 50 → 探索専用** |
 | Latest normal run | **2026-09-13T13:30:00+09:00** |
-| Latest research completed | **0** |
-| Research completed (24h) | **70** |
-| Oldest active claim age | **99 min** |
+| Latest research completed | **1** |
+| Research completed (24h) | **71** |
+| Oldest active claim age | **104 min** |
 
 ### Worker routing snapshot
 
@@ -288,5 +288,5 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **LOW**
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
-- **Research throughput LOW**: ready=180 の高在庫状態で、最新runのresearch完了は 0 件です。探索へ逃げずresearchを継続してください。
+- **Research throughput LOW**: ready=179 の高在庫状態で、最新runのresearch完了は 1 件です。探索へ逃げずresearchを継続してください。
 <!-- research-throughput-status:end -->
