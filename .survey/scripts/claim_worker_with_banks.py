@@ -7,10 +7,9 @@ reservation only to claims allocated by the current invocation. A reservation is
 encoded as five coherent empty slot envelopes, so existing bank inspection/fallback
 code sees the bank as occupied before a worker starts writing research content.
 
-During rollout, any active pre-reservation claim without a persisted bank fences new
-direct-bank allocation. New claims then use the durable Library fallback until the
-legacy claim completes/expires, avoiding collisions with a worker that may already
-have selected a bank under the old advisory protocol.
+Pre-reservation active claims that still lack persisted bank routing are migrated to
+the durable Library fallback. This retires the rollout-era global fence: one legacy
+claim no longer disables direct-bank allocation for every unrelated new claim.
 """
 from __future__ import annotations
 
@@ -176,6 +175,38 @@ def _persist_library_fallback(root: Path, claim: dict[str, Any]) -> None:
     _persist_assignment_bank(root, claim, None)
 
 
+def _migrate_active_unbanked_claims(
+    root: Path,
+    claims: dict[str, dict[str, Any]],
+    new_claim_ids: set[str],
+) -> int:
+    """Route surviving pre-reservation claims to Library without fencing other jobs."""
+    migrated = 0
+    for job_id in sorted(claims):
+        current = claims[job_id]
+        if not current.get("active") or current.get("claim_id") in new_claim_ids:
+            continue
+        if str(current.get("record_bank") or "").lower() in BANK_ROOTS:
+            continue
+        if current.get("record_bank_fallback") == "library":
+            continue
+
+        claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
+        claim = _read(claim_path)
+        if not isinstance(claim, dict) or claim.get("claim_id") != current.get("claim_id"):
+            continue
+        claim["record_bank"] = None
+        claim["record_bank_fallback"] = "library"
+        claim["record_bank_migration"] = "legacy-unbanked-to-library"
+        _write(claim_path, claim)
+        _persist_assignment_bank(root, claim, None)
+        current["record_bank"] = None
+        current["record_bank_fallback"] = "library"
+        current["record_bank_migration"] = "legacy-unbanked-to-library"
+        migrated += 1
+    return migrated
+
+
 def reserve_new_claim_banks(
     repo_root: Path,
     *,
@@ -191,6 +222,7 @@ def reserve_new_claim_banks(
         if claim.get("active") and claim.get("claim_id")
     }
     reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
+    migrated_unbanked = _migrate_active_unbanked_claims(root, claims, new_claim_ids)
     reserved = reused = fallback = 0
 
     used = {
@@ -198,13 +230,6 @@ def reserve_new_claim_banks(
         for claim in claims.values()
         if claim.get("active") and str(claim.get("record_bank") or "").lower() in BANK_ROOTS
     }
-    legacy_unbanked_active = any(
-        claim.get("active")
-        and claim.get("claim_id") not in new_claim_ids
-        and str(claim.get("record_bank") or "").lower() not in BANK_ROOTS
-        and claim.get("record_bank_fallback") != "library"
-        for claim in claims.values()
-    )
 
     for job_id in sorted(claims):
         current = claims[job_id]
@@ -223,11 +248,6 @@ def reserve_new_claim_banks(
             _persist_assignment_bank(root, claim, existing)
             continue
 
-        if legacy_unbanked_active:
-            _persist_library_fallback(root, claim)
-            fallback += 1
-            continue
-
         bank = _available_bank(root, used)
         if bank is None:
             _persist_library_fallback(root, claim)
@@ -242,7 +262,13 @@ def reserve_new_claim_banks(
         used.add(bank)
         reserved += 1
 
-    return {"reserved": reserved, "reused": reused, "fallback": fallback, "reclaimed": reclaimed}
+    return {
+        "reserved": reserved,
+        "reused": reused,
+        "fallback": fallback,
+        "reclaimed": reclaimed,
+        "migrated_unbanked": migrated_unbanked,
+    }
 
 
 def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:

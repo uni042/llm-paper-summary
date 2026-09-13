@@ -54,11 +54,11 @@ Research / Auditのclaim resultに `record_bank` が入っている場合、そ�
 - `record_bank: "a"` など非null値が返ったら、そのbankだけへ5 slotを書く。別bankを`select_record_bank.py`で選び直してはならない。
 - claim高速経路はclaim割当と同じ直列化区間でbankを予約し、claim/resultの両方に同じ`record_bank`を保存する。並列workerが同じbankを独立選択する旧方式は使わない。
 - `record_bank: null` かつ `record_bank_fallback: "library"` の場合は、GitHub上の別bankを独自に探さず、完全logical payloadをChatGPT Libraryへcheckpointする。
-- 移行前のactive claimなど、claim resultにbank情報が無い場合だけlegacy互換として`select_record_bank.py`を利用できる。その場合もoccupied/dirty bankは使わない。
+- 移行前のactive claimなど、bank routingが未記録の旧claimをclaim-fastが検出した場合、そのclaim自体へ`record_bank: null` / `record_bank_fallback: "library"`を永続化する。旧claim一件を理由に無関係な新規claimのdirect-bank割当を全体停止しない。
 - claimに記録されたbankとimmutable descriptorの`record_bank`は一致させる。
-- attemptが未解決の間、その予約bankは他workerが再利用してはならない。
+- attemptが未解決の間、その予約bankは他workerが再利用してはならない。ただしimmutable descriptorが現在slotの正確なblobを耐久捕捉済みなら、そのslot内容自体は再利用可能である。
 
-移行期間中にbank未記録の旧active claimが残っている場合、新規claimは安全のためLibrary fallbackへ回ることがある。これは旧workerが既にbankを選択済みである可能性との競合を避けるためであり、run停止理由ではない。
+rollout-eraのglobal legacy-unbanked fenceは廃止済みである。未ルーティングの旧claimは個別にLibraryへ移行し、他の新規claimは空き/reusable bankを通常どおり予約する。
 
 ## 4. Actions待ちとclaim待ち
 

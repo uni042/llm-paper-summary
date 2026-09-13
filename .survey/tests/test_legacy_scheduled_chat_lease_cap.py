@@ -119,7 +119,7 @@ class LegacyScheduledChatLeaseCapTests(unittest.TestCase):
             self.assertIsInstance(new_claim.get("record_bank"), str)
             self.assertNotIn("record_bank_fallback", new_claim)
 
-    def test_recent_legacy_claim_is_shortened_but_still_fences_until_90_minutes(self):
+    def test_recent_legacy_claim_is_shortened_and_migrated_without_global_fence(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_free_banks(root)
@@ -134,10 +134,13 @@ class LegacyScheduledChatLeaseCapTests(unittest.TestCase):
 
             self.assertEqual(old_claim["expires_at"], "2026-09-13T04:00:00+00:00")
             self.assertNotIn("lease_invalidated_at", old_claim)
-            self.assertEqual(result["banks_reserved"], 0)
-            self.assertEqual(result["banks_fallback"], 1)
-            self.assertIsNone(new_claim.get("record_bank"))
-            self.assertEqual(new_claim.get("record_bank_fallback"), "library")
+            self.assertEqual(old_claim.get("record_bank_fallback"), "library")
+            self.assertEqual(old_claim.get("record_bank_migration"), "legacy-unbanked-to-library")
+            self.assertEqual(result["banks_migrated_unbanked"], 1)
+            self.assertEqual(result["banks_reserved"], 1)
+            self.assertEqual(result["banks_fallback"], 0)
+            self.assertIsInstance(new_claim.get("record_bank"), str)
+            self.assertNotIn("record_bank_fallback", new_claim)
 
 
 if __name__ == "__main__":
