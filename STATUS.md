@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **133** |
+| 未処理の論文候補（Research ready） | **132** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **256** |
+| 全文精読完了（累計） | **257** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **20 / 24** |
@@ -35,35 +35,35 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **133** |
-| 処理中（Active claims） | **3** |
+| 未処理候補（Research ready） | **132** |
+| 処理中（Active claims） | **2** |
 | 今すぐ着手可能（Claimable） | **130** |
 | :30 通常worker Active claims | **2** |
 | :00 補助worker Active claims | **0** |
-| その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 04:07 JST** |
+| その他/帰属不明 Active claims | **0** |
+| :30 通常worker 直近claim | **09-14 04:09 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **21** |
-| 最新通常run | **2026-09-14T02:30:00+09:00** |
-| 最新通常runのResearch完了 | **0** |
+| 直近24h Research完了（帰属不明） | **22** |
+| 最新通常run | **2026-09-14T03:30:00+09:00** |
+| 最新通常runのResearch完了 | **1** |
 | 最古の有効claimの経過時間 | **59 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=133 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
-- 直近24hのResearch完了のうち **21件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- **処理速度 LOW**: ready=132 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- 直近24hのResearch完了のうち **22件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **31** |
-| Repo収録 | **60** |
+| Research完了 | **32** |
+| Repo収録 | **66** |
 | Audit完了 | **0** |
 | 探索評価候補 | **339** |
 | Research候補採用 | **79** |
@@ -71,21 +71,21 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **58.7%** |
 | 探索専用worker run（毎時枠） | **7** |
 | 探索専用worker round（stats観測） | **65** |
-| 通常worker run（ledger観測） | **15** |
+| 通常worker run（ledger観測） | **16** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 339 → 重複除外後 140 → Research候補採用 79 → Research完了 31 → Repo収録 60**
+**探索評価 339 → 重複除外後 140 → Research候補採用 79 → Research完了 32 → Repo収録 66**
 
 ## 直近の通常worker
 
-Run: **2026-09-14T02:30:00+09:00**
+Run: **2026-09-14T03:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **0** |
-| Repo収録 | **27** |
+| Research完了 | **1** |
+| Repo収録 | **6** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
@@ -199,6 +199,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2502.09921` — INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing
 - `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 - `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
 - `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
@@ -206,7 +207,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
 - `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
 - `arXiv:2607.07388` — TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models
-- `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
 
 ### 7日比較
 
