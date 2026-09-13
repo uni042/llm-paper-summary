@@ -2,15 +2,29 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5205040dc3d58f265e4349ca",
+  "attempt_id": "attempt-22b875ab063d2b92e4796b28",
   "job_id": "job-research-e355b9d9df6bf3d0",
   "data": {
     "hardware": "NVIDIA H100 80GBを8基搭載したサーバー。GPU間は第4世代NVLink、各GPUとCPU間はPCIe 5.0 x16。故障追跡のオフライン評価では1台の8GPU機を8つの独立8GPUノードとして時間多重し、64GPU相当の可用性追跡へ対応させる。",
     "software": "約7000行の軽量カスタムLLMサービングエンジンへ実装し、通常時性能はvLLMやSGLangに近いと著者が報告する。任意台数の非均一テンソル並列、循環配置、混合注意、負荷考慮スケジューリング、KVキャッシュのホストバックアップ、必要部分のみの重み復旧を統合する。",
     "methodology": "密モデルLLaMA-3.1-70B-InstructとMoEモデルMixtral-8x22B-Instruct-v0.1を評価する。オフライン評価ではGCPクラウド可用性データ由来の実障害追跡を64GPU規模に合わせ、障害・復旧イベントごとにGPUをランダムに無効化・復帰させる。OpenThoughts-114kから長い推論負荷を使用し、標準TP構成、故障なし上限、可用GPU数に比例させた理想化性能と比較する。オンライン評価ではMooncake会話追跡から3000要求を抽出し、入力レートを変えて事前充填の最初のトークンまでの時間とデコードのトークン間時間を測る。復旧遅延評価はLLaMA-3.1-70B、500要求、250件目直後に1GPU障害を注入し、再計算、ホストKV復旧、完全なオンデマンド復旧、理想下限を比較する。",
     "scope": "主な実機評価は単一8GPUノード上で行い、故障追跡の64GPU相当結果は同一ノードを複数ノードとしてエミュレートした集約値である。単一ノード内のNVLinkとPCIeを前提にした設計であり、複数NUMAノードやノード間ネットワークをまたぐ復旧は直接評価していない。密モデルとMoEモデルの双方を含むが、対象GPUはH100に限定される。",
-    "workloads": ["OpenThoughts-114k由来の長出力オフライン負荷", "Mooncake実会話追跡3000要求のオンライン負荷", "Mooncake連続500要求での単一GPU障害復旧"],
-    "baselines": ["標準TP4/TP8", "非均一TP7", "故障なし性能上限", "可用GPU数比例の理想化Fault-scaled", "KV再計算による復旧"]
+    "workloads": [
+      "OpenThoughts-114k由来の長出力オフライン負荷",
+      "Mooncake実会話追跡3000要求のオンライン負荷",
+      "Mooncake連続500要求での単一GPU障害復旧"
+    ],
+    "baselines": [
+      "標準TP4/TP8",
+      "非均一TP7",
+      "故障なし性能上限",
+      "可用GPU数比例の理想化Fault-scaled",
+      "KV再計算による復旧"
+    ]
   },
-  "reservation": {"claim_id":"claim-5205040dc3d58f265e4349ca","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-22b875ab063d2b92e4796b28",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
