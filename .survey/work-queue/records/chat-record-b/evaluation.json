@@ -5,44 +5,14 @@
   "attempt_id": "attempt-6d0ef40dd55512cf031d8671",
   "job_id": "job-research-b1be9294a63ee868",
   "data": {
-    "hardware": "単一NVIDIA RTX 4090（Ada）から8×NVIDIA H200 143GB（Hopper）まで実機評価する。scale ladderでは7B/14B/32B、7B tensor parallel 2/4、70B tensor parallel 4を含み、Llama-3.1-8Bではnative 128k文脈を測る。",
-    "software": "SGLang 0.5.9のTriton decode attentionへ約500行のenv-guarded patchを適用し、独自Triton研究kernel、PyTorch参照、50桁mpmath仕様、定理だけから書いた独立実装で数値を相互検査する。形式証明はLean 4/Mathlib。公開artifactはApache-2.0。",
-    "methodology": "評価は複数層で構成される。理論soundnessは500,000 adversarial trials、長文脈でのzero-violation試験、adaptive free-running decoding 50 prompts×20 dither seedsなどで確認する。量子化品質はQwen2.5-7Bの実activation、RULER-4k 1300 samples、LongBench-E、hard RULER 6 tasks×25 samplesで測る。SGLang servingはRTX 4090上で1.5B/7B、batch 16×64 tokens、page_size=16をmedian-of-3で測り、capacity・throughput・request-level delta coverageを比較する。H200では同じpatch/protocolを7B〜70Bへ拡張する。",
-    "scope": "主対象はdecode-bound long-context、memory-traffic limitedな配信で、S>=8kかつquery数が小さい領域。prefill-heavy workloadとtrainingは対象外。Tier Aはper-token再構成が存在するcache-preserving schemeだけを対象にし、eviction、token merge、latent/recurrent cacheには適用できない。Tier Bはcontrolled dithered INT8かつ非適応queryの理論条件を持つ。FlashInfer backendは未実装で、tensor parallelのcross-rank certificate aggregationは未検証。",
-    "workloads": [
-      "Qwen2.5-7B RULER-4k 1300 samples",
-      "LongBench-E 5 tasks×3 length buckets",
-      "hard RULER 6 tasks×25 samples×3 disjoint slices",
-      "1.5B/7B SGLang short-request serving",
-      "Llama-3.1-8B native 8k/32k/128k",
-      "7B〜70B H200 scale ladder"
-    ],
-    "baselines": [
-      "FP16 KV",
-      "RTN-INT8",
-      "RTN-INT4",
-      "KIVI-2bit",
-      "SnapKV",
-      "KnormPress",
-      "Expected Attention",
-      "Runtime-Certified bounded-error quantized attention"
-    ],
-    "metrics": [
-      "certificate coverage",
-      "soundness violation count",
-      "fallback/page-in rate",
-      "relative attention output error",
-      "RULER/LongBench score",
-      "KV capacity",
-      "tokens/s",
-      "certificate overhead",
-      "bytes per token per head"
-    ],
-    "reproducibility": "公開repositoryに凍結JSON artifact、claim guard、certificate regression、SGLang patch、Triton/PyTorch/mpmath/独立実装、Lean 4形式証明を含む。論文中の数値はartifactから再生成でき、formal/check_all.shで全証明とaxiom auditを再実行できる。Appendix Bには開発中に撤回・訂正した主張と再現手順も明記される。"
+    "hardware": "単一NVIDIA RTX 4090（Ada）から8×NVIDIA H200 143GB（Hopper）まで実機評価する。規模拡張では7B・14B・32B、7Bのテンソル並列2・4、70Bのテンソル並列4を含み、Llama-3.1-8Bでは本来対応する128k文脈を測る。",
+    "software": "SGLang 0.5.9のTritonデコード注意カーネルへ約500行の変更を適用し、独自Triton研究カーネル、PyTorch参照、50桁精度仕様、定理だけから書いた独立実装で数値を相互検査する。形式証明はLean 4とMathlibを使い、公開資料はApache-2.0で配布する。",
+    "methodology": "評価は複数層で構成される。理論上の健全性は50万回の敵対的試行、長文脈での上界違反ゼロ試験、適応的な自由生成50プロンプト×20ディザ種などで確認する。量子化品質はQwen2.5-7Bの実活性値、RULER-4kの1300標本、LongBench-E、難しいRULER 6課題×25標本で測る。SGLang配信はRTX 4090上で1.5Bと7B、16要求×64トークン、ページサイズ16を3回の中央値で測り、容量・スループット・要求単位失敗確率配分での保証成立率を比較する。H200では同じ実装と手順を7B〜70Bへ拡張する。",
+    "scope": "主対象はデコード支配の長文脈かつメモリ転送支配の配信で、文脈長8k以上・問い合わせ数が小さい領域である。プリフィル支配のワークロードと学習は対象外。第1段階は各トークンの再構成が存在する方式だけを対象にし、トークン追い出し、トークン統合、潜在表現キャッシュ、再帰状態圧縮には適用できない。第2段階は制御された減算ディザINT8と非適応問い合わせという理論条件を持つ。FlashInfer側のカーネルは未実装で、テンソル並列時のランク間ゲート集約も未検証である。",
+    "workloads": ["Qwen2.5-7BのRULER-4k 1300標本", "LongBench-Eの5課題×3長さ区分", "難しいRULER 6課題×25標本×3独立区分", "1.5B/7BのSGLang短要求配信", "Llama-3.1-8Bの8k・32k・128k文脈", "7B〜70BのH200規模拡張"],
+    "baselines": ["FP16 KV", "RTN-INT8", "RTN-INT4", "KIVI-2bit", "SnapKV", "KnormPress", "Expected Attention", "Runtime-Certified方式"],
+    "metrics": ["保証成立率", "上界違反数", "正確値復元率", "注意出力の相対誤差", "RULER/LongBench点数", "KV容量", "毎秒トークン数", "証明計算追加費用", "トークン・ヘッド当たりバイト数"],
+    "reproducibility": "公開リポジトリに凍結JSON実験資料、論文主張の整合検査、証明回帰試験、SGLang変更、Triton・PyTorch・高精度参照・独立実装、Lean 4形式証明を含む。論文中の数値は同梱資料から再生成でき、形式検証用スクリプトで全証明と公理監査を再実行できる。付録Bには開発中に撤回・訂正した主張と再現手順も明記される。"
   },
-  "reservation": {
-    "claim_id": "claim-6d0ef40dd55512cf031d8671",
-    "worker_id": "scheduled-chat-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-6d0ef40dd55512cf031d8671", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
 }
