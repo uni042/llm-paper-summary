@@ -105,7 +105,7 @@ class ClaimBankReservationTests(unittest.TestCase):
             self.assertEqual(claim_a["record_bank"], bank_a)
             self.assertEqual(claim_b["record_bank"], bank_b)
 
-    def test_existing_unrelated_active_claim_is_not_reassigned_and_fences_new_bank_use(self):
+    def test_existing_unbanked_active_claim_is_migrated_to_library_without_global_fence(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_free_banks(root)
@@ -114,18 +114,22 @@ class ClaimBankReservationTests(unittest.TestCase):
             seed_job(root, "job-new", 90)
             seed_request(root, "req-new", "worker-new")
 
-            claim_worker_with_banks.process_requests(root, at=AT)
+            result = claim_worker_with_banks.process_requests(root, at=AT)
 
             old_claim = json.loads((root / ".survey/work-queue/claims/job-old.json").read_text())
             new_claim = json.loads((root / ".survey/work-queue/claims/job-new.json").read_text())
             new_result = json.loads((root / ".survey/work-queue/claim-results/req-new.json").read_text())
             assignment = new_result["assignments"][0]
 
-            self.assertNotIn("record_bank", old_claim)
-            self.assertIsNone(new_claim.get("record_bank"))
-            self.assertEqual(new_claim.get("record_bank_fallback"), "library")
-            self.assertIsNone(assignment.get("record_bank"))
-            self.assertEqual(assignment.get("record_bank_fallback"), "library")
+            self.assertIsNone(old_claim.get("record_bank"))
+            self.assertEqual(old_claim.get("record_bank_fallback"), "library")
+            self.assertEqual(old_claim.get("record_bank_migration"), "legacy-unbanked-to-library")
+            self.assertEqual(result["banks_migrated_unbanked"], 1)
+            self.assertEqual(result["banks_reserved"], 1)
+            self.assertEqual(result["banks_fallback"], 0)
+            self.assertIsInstance(new_claim.get("record_bank"), str)
+            self.assertNotIn("record_bank_fallback", new_claim)
+            self.assertEqual(assignment.get("record_bank"), new_claim["record_bank"])
 
     def test_explicit_library_fallback_does_not_fence_new_bank_use(self):
         with tempfile.TemporaryDirectory() as td:
