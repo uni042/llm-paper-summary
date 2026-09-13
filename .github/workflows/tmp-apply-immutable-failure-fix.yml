@@ -1,0 +1,65 @@
+name: Temporary immutable failure semantics patch
+
+on:
+  push:
+    branches:
+      - fix/immutable-failure-pending-semantics
+    paths:
+      - '.github/workflows/tmp-apply-immutable-failure-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/immutable-failure-pending-semantics
+
+      - name: Apply exact semantic fix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          claim_path = Path('.survey/scripts/claim_worker.py')
+          text = claim_path.read_text(encoding='utf-8')
+          old = '''            if (\n                isinstance(result, dict)\n                and result.get("job_id") == job_id\n                and result.get("attempt_id") == attempt_id\n            ):\n                continue\n'''
+          new = '''            if (\n                isinstance(result, dict)\n                and result.get("job_id") == job_id\n                and result.get("attempt_id") == attempt_id\n                and result.get("ok") is True\n            ):\n                continue\n'''
+          if text.count(old) != 1:
+              raise SystemExit('claim_worker target did not match exactly once')
+          claim_path.write_text(text.replace(old, new), encoding='utf-8')
+
+          test_path = Path('.survey/tests/test_claim_worker_serial.py')
+          text = test_path.read_text(encoding='utf-8')
+          text = text.replace(
+              '    def test_settled_failed_descriptor_job_can_be_reclaimed(self):\n',
+              '    def test_failed_descriptor_stays_pending_and_job_is_not_reclaimed(self):\n',
+              1,
+          )
+          old_assert = '            self.assertEqual([row["job_id"] for row in result["assignments"]], ["job-a"])\n'
+          marker = '            write_json(root / ".survey/work-queue/results/research/attempt-a.json", {'
+          start = text.find(marker)
+          if start < 0:
+              raise SystemExit('failed-result test marker not found')
+          pos = text.find(old_assert, start)
+          if pos < 0:
+              raise SystemExit('failed-result assertion not found')
+          text = text[:pos] + '            self.assertEqual(result["assignments"], [])\n' + text[pos + len(old_assert):]
+          test_path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify patch diff
+        run: |
+          git diff --check
+          git diff -- .survey/scripts/claim_worker.py .survey/tests/test_claim_worker_serial.py
+
+      - name: Commit patch
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add .survey/scripts/claim_worker.py .survey/tests/test_claim_worker_serial.py
+          git commit -m 'fix: keep failed immutable submissions retryable'
+          git push origin HEAD:fix/immutable-failure-pending-semantics
