@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-6c933c22e82d66d9899c79f4",
-  "job_id": "job-research-054d8fd9fb06ca0f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c933c22e82d66d9899c79f4",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-6c933c22e82d66d9899c79f4","job_id":"job-research-054d8fd9fb06ca0f",
+  "data":{
+    "overview":"Punicaは異なるLoRAが混在してもバッチを32近くまで維持でき、単一A100で7Bは1044 tok/s、13Bは693 tok/sを達成した。70Bを8 GPUでテンソル並列した場合もLoRA人気分布にかかわらず441〜446 tok/sを維持し、異種LoRAでバッチ1近くへ落ちるvLLMの21〜25 tok/sを大幅に上回る。一方、全要求が同一LoRAならbackbone-only vLLMが7B/13Bで1140/789 tok/sと僅かに高く、Punicaの強みは異種アダプタを統合する場合に現れる。論文全体では固定GPU資源で最大12倍のスループット向上、追加遅延は約2ms/tokenと報告する。",
+    "key_results":[
+      {"metric":"多LoRAサービング最大スループット","value":"最大12倍","baseline":"当時のLLM serving baselines","condition":"固定GPUクラスタ、複数LoRAモデル","interpretation":"異種LoRAでも単一大バッチへ統合できることが支配的な利得源。"},
+      {"metric":"単一A100 7B/13B throughput","value":"1044 / 693 tok/s","baseline":"LoRA混在時のHF/DeepSpeed/vLLM等","condition":"1000 requests、max batch 32","interpretation":"LoRA人気分布にほぼ依存せず高いバッチ効率を維持する。"},
+      {"metric":"70B 8-GPU throughput","value":"441〜446 tok/s","baseline":"vLLM 21〜25 tok/s（複数LoRA）","condition":"A100 40GB×8 tensor parallel","interpretation":"テンソル並列でもSGMVを組み込み、異種アダプタによるバッチ分断を避ける。"},
+      {"metric":"SGMV latency","value":"Distinct batch1→64で37→116µs、Uniform/Skewedでは37→46µs程度","baseline":"Loop / Gather-BMM","condition":"A100、LoRA operator microbenchmark","interpretation":"重み共有があると算術強度が上がり、バッチ拡大の追加費用が小さい。"},
+      {"metric":"LoRAロード時間","value":"全モデル約2ms、1 layer約50µs","baseline":"事前常駐","condition":"PCIe Gen4 x16想定","interpretation":"基盤モデルを常駐させればLoRAは小さく、オンデマンド配置を可能にする。"}
+    ],
+    "negative_results":"全要求が同じLoRAならvLLM backbone-onlyがPunicaよりわずかに高スループットで、7B/13Bは1140/789 tok/s対Punica1044/693 tok/sである。SGMVも全要求が異なるDistinct条件では重み再利用がなく、batch 64で116µsまで増える。KV不足による要求移動は再プリフィルを伴うため、非常に長い文脈では移動費用が増える。LoRA rankを8から64へ上げるとDistinct batch64のSGMV遅延は72→118µsへ増加する。",
+    "interpretation":"Punicaの本質はLoRAのサイズ削減そのものではなく、アダプタ識別子が異なるため従来失われていたGPUバッチ並列性を復元することにある。基盤重みの計算は完全共有し、差分だけをSGMVで分岐させるため、アダプタ数の増加をモデル数の増加として扱わずに済む。これによりスケジューラはモデル配置よりもバッチ充填率を優先できる。",
+    "quality_impact":"演算順序・バッチ方法を変えるシステム最適化であり、モデル近似や量子化を導入しないため品質低下を目的上伴わない。ただし性能評価用LoRA重みはランダムで、実タスク精度を測った研究ではない。"
+  },
+  "reservation":{"claim_id":"claim-6c933c22e82d66d9899c79f4","worker_id":"scheduled-chat-discovery-run7-normal-20260913T1601Z","worker_kind":"scheduled_chat"}
 }
