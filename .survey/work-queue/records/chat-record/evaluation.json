@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-89c6e48a71f394424970c34a",
-  "job_id": "job-research-43ee292714ed8d8c",
-  "data": {
-    "hardware": "実機2系統。2×NVIDIA A6000 48GB、ホストメモリ256GB、CPU 96コア、4TB NVMe SSDと、2×NVIDIA RTX 4090 24GB、ホストメモリ128GB、CPU 128コア、4TB NVMe SSDを用いる。PCIe 4.0はGPU当たり理論32GB/s・実測約24GB/s、SSD逐次読出しは約3GB/s。",
-    "software": "vLLMを共通基盤とし、PCRをそのスケジューラ・ワーカー・KVブロック管理へ統合する。CUDA 12.8以降のcudaMemcpyBatchAsyncを使用し、CPU→GPU、GPU計算、GPU→CPUに3本のCUDAストリームを割り当てる。比較対象はvLLM、LMCache、CPU階層のみのCCache、CPU+SSDのSCCache。",
-    "methodology": "Llama3.1-8B、Llama3.2-3B、Qwen2.5-8B、Qwen2.5-14B、Llama2-7B、Llama2-13Bを評価する。Wikipediaを検索文書集合、SQuADを質問集合とし、MiniLMで埋込みを作って上位2文書を各質問へ連結する。1000入力と2000入力の2ワークロードを作り、平均入力長は約6.8kトークン、KV再利用の反復率はそれぞれ40%と35%。各データ集合で2000サンプリングを行い、出力は16トークンへ固定し、到着はポアソン過程で0.5〜1.0要求/秒を掃引する。性能分解では層単位重畳とSSDプリフェッチを順に追加し、先読み窓の大きさも変える。",
-    "scope": "実機の単一サーバー内でGPU・DRAM・NVMe SSDを跨ぐRAG配信評価であり、分散KVストアやネットワーク越しのSSD、複数ノード障害、長いデコードを対象にしない。入力は平均約6.8kトークン、出力16トークンなのでプリフィル支配型。共有可能性はWikipedia/SQuADから作った35〜40%反復の負荷に依存する。正確な接頭辞一致のみを再利用するため品質比較は近似方式との同条件評価ではなく、主に遅延・再利用効率を測る。",
-    "workloads": ["Wikipedia文書集合＋SQuAD質問", "1000入力・反復率40%", "2000入力・反復率35%", "平均入力約6.8kトークン", "出力16トークン", "0.5〜1.0要求/秒"],
-    "baselines": ["vLLM", "LMCache", "CCache（CPU階層）", "SCCache（CPU+SSD階層）"],
-    "metrics": ["平均TTFT", "TTFT P95/P99", "エンドツーエンド遅延", "SSD由来KV再利用率", "層単位転送時間", "先読み窓別TTFT"],
-    "reproducibility": "モデル、ハードウェア、到着過程、文書・質問データ、チャンク256トークン、vLLMブロック16トークン、CUDA API、ストリーム構成、先読み窓の設定は記載される。一方、一次資料から著者公式コード公開先は確認できず、再現には論文記載のvLLM改造を実装する必要がある。"
-  },
-  "reservation": {"claim_id": "claim-89c6e48a71f394424970c34a", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-cab55fc578d5235c33c2f147",
+  "job_id": "job-research-7c0598aabd36d6bf",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-cab55fc578d5235c33c2f147",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

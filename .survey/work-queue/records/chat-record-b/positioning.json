@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d4f0137cfb44a9bbad1328a0","job_id":"job-research-a46283c0339631e6","data":{"limitations":"評価は単一A100サーバーが中心で、複数GPU・複数ノード・ネットワーク共有キャッシュでの帯域競合は未検証である。KV格納層はHBM、DRAM、ローカルファイルを扱うが、NVMeや分散オブジェクトストレージ専用の入出力スケジューリングは主題ではない。モデルは7〜9B級中心で、70B級やMoE、非常に長い百万トークン級文脈への一般化も未確認である。LegoLinkの先頭kトークンという静的規則は簡潔だが、注意構造が大きく異なるアーキテクチャでは最適kが変わる可能性がある。","differences":"通常の接頭辞キャッシュは同一位置・同一先行文脈が必要なのに対し、EPICは明示的な文書チャンクIDでどの位置からでも再利用する。CacheBlendも複数KVチャンクを混合するが、要求ごとに重要トークンを動的選択して広い注意再計算を行う。EPICは誤差がチャンク先頭へ集中する構造を利用して静的に少数位置だけを再計算するため、入力長に対する再計算量をほぼ線形へ抑える。LegoLink-0はさらに注意シンクをコンパイル時ダミーへ移し、リンク時再計算をゼロにする。","implementation_status":"vLLM 0.4.1を基盤にした公式実装がGitHubで公開され、明示キャッシュAPI、KVCompile/KVLink、LegoLinkと評価コードを含む。単なる概念実証ではなく実GPU上で初回トークン時間と非同期負荷を測定しているが、最新vLLMや大規模分散サービングへの統合状況は論文の評価範囲外である。","research_positioning":"KVキャッシュ再利用・プリフィル削減系統のうち、接頭辞一致制約を外す位置非依存キャッシュの基礎システムに位置する。再利用対象の識別、格納、リンク、精度修復までを一つのサービングAPIとして定義し、後続研究がより細粒度な再計算や線形注意近似を導入するための基準点になっている。","relation_to_existing_repository":"CacheBlendは既に収録されており、EPICはその動的再計算費をチャンク先頭の静的修復へ置き換える直接的な比較対象となる。CAKEの計算か読み込みかという判断、LMCache系の多階層KV格納、Mooncake系の分離サービングとも補完関係にあり、位置非依存再利用をCPU・SSD階層へ拡張する際の上位機構として利用できる。","audit_required":false},"reservation":{"claim_id":"claim-d4f0137cfb44a9bbad1328a0","worker_id":"parallel-e2e-worker-b-20260913","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
+  "job_id": "job-research-b1be9294a63ee868",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bb9c6b2c2debb9e325fcf74b",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
+}

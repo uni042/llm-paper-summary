@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d4f0137cfb44a9bbad1328a0","job_id":"job-research-a46283c0339631e6","data":{"hardware":"単一NVIDIA A100-80GB GPU、128コアIntel Xeon Platinum 8358P 2.60GHz、1TB DRAMのサーバーを使用する。長文でGPUメモリへ収まらないKVはCPU DRAMまたはローカルファイルからロードする構成を含む。","software":"Ubuntu 20.04、Linux 5.16.7、CUDA 12.6、vLLM 0.4.1。EPICは約2000行のPythonコードで実装され、LegoLink、CacheBlend、CacheBlend-5、完全再計算などを同じ基盤で比較する。","methodology":"品質はLongBenchから抽出したMultiFieldQA-en、HotpotQA、2WikiMultiHopQA、MultiNews、TREC、TriviaQAと、別のコード・会話系タスクで完全再計算を基準に比較する。Mistral 7B Instruct、Llama 3.1 8B Instruct、Yi Coder 9B Chatを用い、複数チャンクを独立キャッシュして連結する。性能は単一要求の初回トークン時間内訳と、Poisson到着を使う非同期負荷で評価し、初回トークン時間、スループット、GPU利用率を測る。CacheBlendの再計算比率1%と5%、LegoLinkの先頭再計算数0/1/2などを比較し、文脈長と文書数を変えてスケーリングも測る。","scope":"単一A100サーバーでの評価であり、複数GPU・複数ノード、ネットワーク越しの共有キャッシュ、NVMe専用最適化、最新vLLMでの統合は評価していない。品質評価では一部データセットで基礎モデル自体の絶対精度が低く、キャッシュ方式間の相対差とモデル能力を区別する必要がある。","workloads":["MultiFieldQA-en","HotpotQA","2WikiMultiHopQA","MultiNews","TREC","TriviaQA","コード生成","非同期Poisson到着負荷"],"baselines":["完全プリフィル再計算","CacheBlend-1","CacheBlend-5","単純位置非依存連結","LegoLink-0","LegoLink-1","LegoLink-2"],"metrics":["タスク精度","初回トークン時間","初回トークン時間内訳","スループット","GPU利用率","再計算トークン比率"],"reproducibility":"論文から公式実装リポジトリが公開され、vLLM版、API、評価スクリプトが確認できる。ハードウェア、OS、CUDA、主要モデルと主要負荷生成法は明記されるため、単一ノード評価は比較的再現しやすい。"},"reservation":{"claim_id":"claim-d4f0137cfb44a9bbad1328a0","worker_id":"parallel-e2e-worker-b-20260913","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
+  "job_id": "job-research-b1be9294a63ee868",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-bb9c6b2c2debb9e325fcf74b",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
+}
