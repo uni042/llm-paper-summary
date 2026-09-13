@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-86454d0b5bf5f7d1",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.15018",
+      "title": "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2608.15018",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+      "priority": 88,
+      "reason": "エッジ環境のMoEで投機的復号を単純に組み合わせると検証計算と専門家再ロードが増える問題に対し、ルーティングを考慮した適応的な投機展開、再利用を考慮した専門家ゲーティング、draft/target間の共有contextを組み合わせる。llama.cpp実装で複数MoEモデル・データセットに対し通常の自己回帰復号比最大5.3倍、平均約2.0倍の高速化を報告し、コードも公開されている。MoE expert I/Oと投機的復号をエッジ実行で統合する点が既存系統との差分として強い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-moe-edge-2",
+    "axis": "MoE専門家先読み・エッジ投機実行",
+    "query_summary": "前roundのKV軸から独立して、MoE expert prefetch、edge speculative decoding、無線分散expert、活性expert削減を軽量評価した。APEX 2608.11688、EdgeXpert 2608.05303、AirMoE 2608.22932、2609.04575はidentity deltaまたは既存jobで重複確認し、S2-MoE 2608.15018だけを最新HEADで再dedupe後に投入した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2608.11688",
+      "arxiv:2608.05303",
+      "arxiv:2608.22932",
+      "arxiv:2609.04575"
+    ],
+    "next_axis_hint": "GPU runtime/kernel・圧縮重み融合カーネル、または重要既収録論文のforward citationへ軸を移す",
+    "empty_round_reason": null
+  }
+}
