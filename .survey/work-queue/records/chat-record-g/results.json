@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-c66591cb8cc3d72be4a20c91",
   "job_id": "job-research-02e232341d4ef088",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c66591cb8cc3d72be4a20c91",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "CoRunは3モデル×32プロンプトの再現性試験で、バッチ1とバッチ32の生成トークン列およびサンプル済みトークンのlogprobを全件一致させた。その上で、全面的なバッチ不変カーネル方式に対しスループットを15〜324%改善し、複数ワークロード・モデルの集計では2倍超の処理量を得る。平均TTFTは51.8%、TPOTは48.6%短縮する。利得は同時実行数が増えるほど大きく、固定形状パディングの無駄を多数の実要求で埋められるためである。一方、単一要求へ大きな固定バッチを適用するとパディング計算が支配し、最大形状が64を超える条件ではバッチ不変方式より遅くなる。",
+    "key_results": [
+      {"metric":"決定論的一致率","value":"32/32 promptsで全3モデル一致","baseline":"batch size 1 vs 32","condition":"温度0.6、seed 42、最大8生成トークン","interpretation":"同居要求とバッチ位置が変わっても、生成列と選択トークンのlogprobを同一に保てる。"},
+      {"metric":"スループット","value":"バッチ不変方式比+15〜324%、集計で2倍超","baseline":"batch-invariant deterministic vLLM","condition":"Qwen3-235B-A22B、DeepSeek-V3、Hy3と3種ワークロード","interpretation":"全面的な低速カーネル置換を避け、固定形状で通常の最適化済みカーネルを再利用する効果。"},
+      {"metric":"平均TTFT","value":"51.8%削減","baseline":"batch-invariant deterministic vLLM","condition":"全モデル・主要ワークロード平均","interpretation":"プリフィルを単独化しても、バッチ不変カーネル自体の大きな遅延を避ける利得が上回る。"},
+      {"metric":"平均TPOT","value":"48.6%削減","baseline":"batch-invariant deterministic vLLM","condition":"全モデル・主要ワークロード平均","interpretation":"固定形状デコードでCUDA Graphと通常カーネルを継続利用し、決定性を保ちながら逐次生成を高速化する。"},
+      {"metric":"Split-KV無効化の費用","value":"可変長入力で15〜41%、類似長入力で1〜9%低下","baseline":"Split-KV enabled","condition":"デコード側で固定縮約構造を維持","interpretation":"位置不変性を壊す最適化を外す費用は入力長のばらつきが大きいほど増える。"}
+    ],
+    "negative_results": "固定形状デコードは低同時実行で非効率で、単一要求では最大同時数を大きくするほど有効スループットが概ね逆比例して低下する。固定形状が64を超える一部条件ではバッチ不変方式より遅くなる。プリフィル隔離は標準vLLMとの差を最も大きく残す要因であり、プリフィル・デコードを混載できない。オンライン負荷で同時数が大きく変動すると、固定最大値を小さくすれば待ち行列、大きくすればパディングが増える。",
+    "interpretation": "CoRunの速度優位は、決定性のために演算器を遅い専用実装へ置き換えるのではなく、スケジューラが高速カーネルに毎回同じ形状を見せることで生じる。実要求が多いほどパディングスロットの割合が下がり、高価な固定形状の計算を有効仕事で埋められる。逆に疎な対話負荷ではこの前提が崩れ、検証付き投機実行のように決定論的要求だけへ追加費用を払う方式が有利になり得る。",
+    "quality_impact": "近似や量子化による品質変更はなく、同一実行環境内で再現性を高める方式である。決定性のために要求待ちやダミー計算が増える可能性はあるが、モデル出力分布そのものを変更する設計ではない。"
+  },
+  "reservation": {"claim_id":"claim-c66591cb8cc3d72be4a20c91","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
