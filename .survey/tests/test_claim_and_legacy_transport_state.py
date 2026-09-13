@@ -45,7 +45,10 @@ class ClaimAndLegacyTransportStateTests(unittest.TestCase):
     def test_bank_selector_has_no_fixed_chat_transport_state(self):
         self.assertFalse(hasattr(select_record_bank, "INBOX"))
         self.assertFalse(hasattr(select_record_bank, "RESULT"))
-        self.assertFalse(hasattr(select_record_bank, "current_transport"))
+        with tempfile.TemporaryDirectory() as td:
+            inbox, settled = select_record_bank.current_transport(Path(td))
+        self.assertIsNone(inbox)
+        self.assertTrue(settled)
 
     def test_duplicate_claim_lease_policy_module_is_removed(self):
         self.assertFalse((SCRIPTS / "claim_lease_policy.py").exists())
