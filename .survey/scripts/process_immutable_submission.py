@@ -142,6 +142,49 @@ def _matching_result(result_path: Path, descriptor: dict[str, Any]) -> dict[str,
     return None
 
 
+def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> dict[str, Any] | None:
+    """Persist a terminal attempt result so invalid descriptors do not occupy a bank forever."""
+    repo_root = Path(repo_root).resolve()
+    try:
+        submission_path = _descriptor_path(repo_root, submission_path)
+        raw = immutable_submission.load_descriptor(submission_path)
+    except Exception:
+        return None
+
+    attempt_id = raw.get("attempt_id")
+    job_id = raw.get("job_id")
+    kind = raw.get("kind") or submission_path.parent.name
+    if not isinstance(attempt_id, str) or not attempt_id:
+        return None
+    if not isinstance(job_id, str) or not job_id:
+        return None
+    if kind not in {"research", "audit"}:
+        kind = submission_path.parent.name
+
+    result_path = immutable_submission.result_path_for(repo_root, submission_path)
+    existing = _read(result_path, {}) or {}
+    if existing:
+        if existing.get("attempt_id") == attempt_id and existing.get("job_id") == job_id:
+            return existing
+        raise ValueError("immutable result path already contains a conflicting attempt/job")
+
+    result = {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "ok": False,
+        "attempt_id": attempt_id,
+        "job_id": job_id,
+        "job_type": kind,
+        "job_status": None,
+        "artifact": None,
+        "submission": submission_path.relative_to(repo_root).as_posix(),
+        "error": f"{type(exc).__name__}: {exc}",
+        "processed_at": _now(),
+    }
+    queue_worker.write_json(result_path, result)
+    return result
+
+
 def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     submission_path = _descriptor_path(repo_root, submission_path)
@@ -232,7 +275,16 @@ def main() -> int:
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--submission", type=Path, required=True)
     args = parser.parse_args()
-    result = process(args.repo_root, args.submission)
+    repo_root = args.repo_root.resolve()
+    try:
+        result = process(repo_root, args.submission)
+    except Exception as exc:
+        result = record_failure(repo_root, args.submission, exc)
+        if result is not None:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            print(f"{type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 
