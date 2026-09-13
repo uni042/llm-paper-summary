@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 22:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 23:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **52** |
 | Repo収録 | **54** |
 | Audit完了 | **0** |
-| 探索評価候補 | **672** |
-| Research候補採用 | **209** |
+| 探索評価候補 | **627** |
+| Research候補採用 | **187** |
 | 重複除外 | **304** |
-| 重複率 | **45.2%** |
-| 探索専用worker run（毎時枠） | **13** |
-| 探索専用worker round（stats観測） | **139** |
+| 重複率 | **48.5%** |
+| 探索専用worker run（毎時枠） | **12** |
+| 探索専用worker round（stats観測） | **128** |
 | 通常worker run（ledger観測） | **19** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 672 → 重複除外後 368 → Research候補採用 209 → Research完了 52 → Repo収録 54**
+**探索評価 627 → 重複除外後 323 → Research候補採用 187 → Research完了 52 → Repo収録 54**
 
 ## 直近の通常worker
 
@@ -161,7 +161,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 端末内LLM・OSメモリ圧力・Flash/NPU実行 | 6 | 2 | 3 | 33.3% | 50.0% |
 | 2609新着・KVキャッシュ・階層メモリ・ストレージ | 5 | 0 | 0 | 0.0% | 0.0% |
 | CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime | 5 | 0 | 1 | 0.0% | 20.0% |
-| CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | CXL共有メモリ・ラック内KV転送・Superchip階層メモリ | 5 | 2 | 0 | 40.0% | 0.0% |
 | Flash・SSD階層メモリと予測先読み | 5 | 3 | 2 | 60.0% | 40.0% |
 | Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity | 5 | 0 | 5 | 0.0% | 100.0% |
@@ -169,7 +168,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
 | KVページ制御・MoEメモリ分離・復元系の再探索 | 5 | 5 | 0 | 100.0% | 0.0% |
 | MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
-| MoE expert paging・SSD cache・runtime parallelism・prefetch | 5 | 0 | 0 | 0.0% | 0.0% |
 | MoE speculative decoding・expert offloading・CPU/GPU共同実行 | 5 | 3 | 0 | 60.0% | 0.0% |
 | MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
 | MoE専門家配置・先読み・協調スケジューリング | 5 | 5 | 0 | 100.0% | 0.0% |
@@ -191,24 +189,19 @@ Run: **2026-09-13T11:00:00+09:00**
 | CXL・SSD・remote KV cache階層メモリ | 4 | 4 | 0 | 100.0% | 0.0% |
 | DistServe周辺のforward citation・backward reference補完 | 4 | 0 | 1 | 0.0% | 25.0% |
 | FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management | 4 | 1 | 1 | 25.0% | 25.0% |
-| GPU collective通信・in-network acceleration・通信runtime | 4 | 0 | 3 | 0.0% | 75.0% |
 | GPU runtime・CUDA Graph・persistent kernel・決定論的推論 | 4 | 3 | 1 | 75.0% | 25.0% |
 | GPU runtime境界・host-device転送律速 | 4 | 3 | 1 | 75.0% | 25.0% |
-| KV cache admission/replacement・compression/eviction・復元parallelism | 4 | 0 | 3 | 0.0% | 75.0% |
 | KV multi-turn管理・復元・予約不確実性 | 4 | 4 | 0 | 100.0% | 0.0% |
 | KVページ圧縮・低ランク表現・GPUカーネル | 4 | 1 | 2 | 25.0% | 50.0% |
 | LSH・hashing系KVアクセス/eviction/sharing・query expansion | 4 | 0 | 4 | 0.0% | 100.0% |
-| MoE expert locality・cache/prefetch・CPU/GPU offload | 4 | 0 | 3 | 0.0% | 75.0% |
 | MoE通信・runtime parallelism・online expert placement | 4 | 4 | 0 | 100.0% | 0.0% |
 | NVMe外部KV・PIM runtime・page-aware decode scheduling | 4 | 0 | 0 | 0.0% | 0.0% |
 | OS階層管理・専門家キャッシュ・KV先読み・SSD再利用 | 4 | 0 | 1 | 0.0% | 25.0% |
 | P/D分離・KV転送・shared prefill | 4 | 1 | 2 | 25.0% | 50.0% |
 | RDMA・分離サービング・KV転送 | 4 | 4 | 0 | 100.0% | 0.0% |
 | SLO-aware scheduling・KV memory hierarchy・動的メモリ回収 | 4 | 0 | 1 | 0.0% | 25.0% |
-| SLO-aware scheduling・dynamic KV placement・heterogeneous serving allocation | 4 | 0 | 3 | 0.0% | 75.0% |
 | agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
 | agentic workload・program/session-aware serving | 4 | 1 | 3 | 25.0% | 75.0% |
-| attention runtime・sparse attention階層memory・elastic decode | 4 | 0 | 2 | 0.0% | 50.0% |
 | chunked prefill・prefix-aware batchingの基礎欠落 | 4 | 3 | 0 | 75.0% | 0.0% |
 | fault-tolerant distributed serving・KV recovery・GPU failure | 4 | 4 | 0 | 100.0% | 0.0% |
 | moe-cache-aware-routing-expert-skipping-fine-grained-execution | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -216,12 +209,9 @@ Run: **2026-09-13T11:00:00+09:00**
 | multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
 | recent検索から重要基礎系譜への欠落確認 | 4 | 3 | 0 | 75.0% | 0.0% |
-| speculative decoding serving・composite multimodal serving | 4 | 0 | 3 | 0.0% | 75.0% |
 | ssd-kv-cache-heterogeneous-gpu-serving-orchestration | 4 | 0 | 0 | 0.0% | 0.0% |
 | エージェントサンドボックス・OS資源管理・状態管理 | 4 | 0 | 4 | 0.0% | 100.0% |
-| エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
 | エージェント推論・speculative tool execution | 4 | 2 | 2 | 50.0% | 50.0% |
-| 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 分離サービングSLO・batch fairness・resource allocation | 4 | 2 | 1 | 50.0% | 25.0% |
 | 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA | 4 | 0 | 1 | 0.0% | 25.0% |
 | 投機的復号runtime・draft resource・CPU制約 | 4 | 2 | 2 | 50.0% | 50.0% |
@@ -240,7 +230,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | GPU低ビットkernel/runtime・大容量メモリ型chain serving | 3 | 1 | 2 | 33.3% | 66.7% |
 | KV量子化の実行時保証・同期型serving負荷分散 | 3 | 0 | 3 | 0.0% | 100.0% |
 | MoE動的並列切替・融合通信・serverless専門家配置 | 3 | 0 | 1 | 0.0% | 33.3% |
-| SSD/NVMe・object storage・CXL remote memoryによるKV階層化 | 3 | 0 | 1 | 0.0% | 33.3% |
 | agentic/multi-agent serving・collective KV sharing | 3 | 0 | 2 | 0.0% | 66.7% |
 | edge/on-device offload・multitasking memory・cloud KV streaming | 3 | 0 | 2 | 0.0% | 66.7% |
 | multimodal弾力的並列化・EPD分離・modality-aware scheduling | 3 | 0 | 3 | 0.0% | 100.0% |
