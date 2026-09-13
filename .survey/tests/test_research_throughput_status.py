@@ -48,20 +48,15 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             })
             module = _load_module(repo)
             text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
-            self.assertIn("## Research throughput health", text)
-            self.assertIn("Research ready | **180**", text)
-            self.assertIn("Active claims | **23**", text)
-            self.assertIn("Claimable | **157**", text)
-            self.assertIn(":00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)**", text)
-            self.assertIn("ready > 50 → 通常worker補助", text)
-            self.assertIn("Worker routing snapshot", text)
-            self.assertIn("next-jobs.json", text)
-            self.assertIn("transport batch上限", text)
-            self.assertIn("24-run maintenance counter", text)
-            self.assertIn("Latest research completed | **1**", text)
-            self.assertIn("Oldest active claim age | **60 min**", text)
-            self.assertIn("HIGH-BACKLOG RESEARCH-ONLY", text)
-            self.assertIn("LOW", text)
+            self.assertIn("## ワーカー稼働状況", text)
+            self.assertIn("未処理候補（Research ready） | **180**", text)
+            self.assertIn("処理中（Active claims） | **23**", text)
+            self.assertIn("今すぐ着手可能（Claimable） | **157**", text)
+            self.assertIn(":00 補助worker | **通常worker補助（Research/Audit）**", text)
+            self.assertIn("50本を超える間は`:00` workerも論文精読側", text)
+            self.assertIn("最新通常runのResearch完了 | **1**", text)
+            self.assertIn("最古claimの経過時間 | **60 min**", text)
+            self.assertIn("処理速度 | **LOW**", text)
             self.assertIn("最低3件", text)
 
     def test_auxiliary_worker_returns_to_discovery_at_50_or_below(self):
@@ -77,8 +72,8 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             ]})
             module = _load_module(repo)
             text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
-            self.assertIn(":00補助worker mode | **DISCOVERY SPECIALIST**", text)
-            self.assertIn("ready ≤ 50 → 探索専用", text)
+            self.assertIn(":00 補助worker | **探索専用**", text)
+            self.assertIn("50本以下になると探索専用へ戻ります", text)
 
     def test_three_completed_is_not_flagged_low(self):
         with tempfile.TemporaryDirectory() as td:
@@ -93,11 +88,12 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             ]})
             module = _load_module(repo)
             text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
-            self.assertIn("Latest research completed | **3**", text)
-            self.assertIn(":00補助worker mode | **DISCOVERY SPECIALIST**", text)
+            self.assertIn("最新通常runのResearch完了 | **3**", text)
+            self.assertIn(":00 補助worker | **探索専用**", text)
+            self.assertIn("処理速度 | **OK**", text)
             self.assertNotIn("throughput LOW", text)
 
-    def test_append_replaces_previous_section_instead_of_duplicating(self):
+    def test_append_places_worker_status_before_24h_summary_and_replaces_previous_section(self):
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
             _install_script(repo)
@@ -108,13 +104,17 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             _write(repo / ".survey/work-queue/run-ledger.json", {"entries": []})
             module = _load_module(repo)
             status = repo / "STATUS.md"
-            status.write_text("# Status\n\n", encoding="utf-8")
+            status.write_text(
+                "# 運用ダッシュボード\n\n## 現在の状態\n\nstate\n\n## 直近24時間の処理量\n\nmetrics\n\n## 参考情報\n",
+                encoding="utf-8",
+            )
             now = datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc)
             module.append_section(repo, status, now=now)
             module.append_section(repo, status, now=now)
             text = status.read_text(encoding="utf-8")
-            self.assertEqual(text.count("## Research throughput health"), 1)
-            self.assertEqual(text.count("### Worker routing snapshot"), 1)
+            self.assertEqual(text.count("## ワーカー稼働状況"), 1)
+            self.assertLess(text.index("## ワーカー稼働状況"), text.index("## 直近24時間の処理量"))
+            self.assertLess(text.index("## 現在の状態"), text.index("## ワーカー稼働状況"))
 
 
 if __name__ == "__main__":
