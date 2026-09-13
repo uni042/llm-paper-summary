@@ -30,14 +30,18 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("group: survey-background-main", workflow)
         self.assertNotIn("group: survey-helper-main", workflow)
 
-    def test_reusable_chat_success_is_bound_to_exact_attempt(self):
+    def test_survey_helper_has_no_reusable_chat_or_v10_normalizer_path(self):
         workflow = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
-        self.assertIn("attempt_id = inbox.get('attempt_id')", workflow)
-        self.assertIn("result.get('attempt_id') == attempt_id", workflow)
-        self.assertIn("'attempt_id': attempt_id", workflow)
+        self.assertNotIn("chat-inbox.json", workflow)
+        self.assertNotIn("reusable_transport_baseline.py", workflow)
+        self.assertNotIn("preflight_chat_record.py", workflow)
+        self.assertNotIn("assemble_research_record.py --repo-root", workflow)
+        self.assertNotIn("normalize_v10_jobs.py", workflow)
+        self.assertNotIn("workflow_version': 9", workflow)
 
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
-        self.assertIn('result["attempt_id"] = attempt_id', worker)
+        self.assertIn("workflow v10", worker)
+        self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
 
     def test_maintenance_refreshes_metadata_coverage_before_health(self):
         workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
