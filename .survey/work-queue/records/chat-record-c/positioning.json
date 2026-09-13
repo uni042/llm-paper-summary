@@ -1,1 +1,8 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-058720f42caad1129d81058b","job_id":"job-research-d09e1c8e52097070","data":{"limitations":"評価はLlama2-7B/13B、L40S、4ノード16GPUまでで、70B級以上、異種GPU、multi-region、実際のprovider autoscalerとの統合は未検証。Azure Functions traceは到着パターン用途で、生成workload自体はGSM8Kである。CUDA IPCによるread-only backbone sharingはプロセス隔離を維持する設計だが、悪意あるtenantやCUDA IPC capabilityのsecurity modelを攻撃実験で検証してはいない。TPOTはbaselineより約12%高い。公式コード公開も確認できない。","differences":"Punica、S-LoRA、dLoRAはmulti-LoRAを効率化するがbackboneとadapterを単一process/CUDA contextで管理するserverful設計で、serverless function isolationと相性が悪い。ServerlessLLM、ParaServe、λScale、MedusaはLLM cold-startを速めるが基本的にfunctionごとに完全backboneを持つ。ServerlessLoRAは静的backbone tensorだけをprocess境界越しに共有し、library/kernel/adapter preloadとbatch/offloadまで一体制御する。","implementation_status":"約5.5K行Python＋600行CUDAの完全prototypeを論文で実装。CUDA IPC handleを取得するCUDA plugin、PyTorch parameter loaderのzero-copy mapping、Transformers上のunmerged LoRA、controller/worker schedulerを含む。2026-09-13時点で公式公開repositoryは確認できない。","research_positioning":"LLMサービングのスケジューリング・分離実行系統の中で、serverless cold-startとmulti-LoRA multiplexingの交点に位置する。推論kernelそのものより、function isolationを保ったmemory sharing、artifact placement、batch scheduling、elastic memory reclamationを扱うsystem研究である。","relation_to_existing_repository":"S-LoRA/Punica/dLoRAなどadapter serving、ServerlessLLM/ParaServeなどserverless startup、vLLMのKV memory managementと補完・比較関係にある。SSD/NVMeを直接使わないが、preloaded artifactをcontainer memory/GPU間で動的移動するため、将来NVMeまで拡張する階層artifact cacheやbackbone/adapter/KVを統合したtieringの比較軸になる。","audit_required":false}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "unused-bank-placeholder",
+  "job_id": "unused-bank-placeholder",
+  "data": {}
+}
