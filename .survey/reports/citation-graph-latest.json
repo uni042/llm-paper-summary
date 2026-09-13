@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-13T00:42:20+00:00",
-  "paper_count": 394,
-  "edge_count": 2395,
+  "generated_at": "2026-09-13T01:37:59+00:00",
+  "paper_count": 395,
+  "edge_count": 2398,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 125,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 27,
@@ -97,6 +97,7 @@
     "papers/inference/04-moe-parallelism-communication/2026-2608.00577-hetroute-collaborative-routing.md": 0,
     "papers/inference/04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md": 0,
     "papers/inference/04-moe-parallelism-communication/2026-2608.22932-airmoe.md": 0,
+    "papers/inference/04-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md": 0,
     "papers/inference/04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md": 0,
     "papers/inference/05-kv-cache-memory-management/2024-2407.15309-vtensor-virtual-memory-management.md": 4,
     "papers/inference/05-kv-cache-offloading/2025-2507.03153-hgca-hybrid-gpu-cpu-attention.md": 2,
@@ -263,10 +264,10 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md": 117,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md": 18,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md": 19,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md": 136,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md": 137,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md": 22,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md": 14,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md": 106,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md": 107,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md": 53,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md": 6,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md": 17,
@@ -292,7 +293,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.26182-parallax-decentralized-heterogeneous-serving.md": 1,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md": 1,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md": 8,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md": 9,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md": 3,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md": 1,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md": 8,
@@ -1072,6 +1073,11 @@
     ],
     "papers/inference/04-moe-parallelism-communication/2026-2608.14205-freebalance-prerouting-online-load-balancing.md": [],
     "papers/inference/04-moe-parallelism-communication/2026-2608.22932-airmoe.md": [],
+    "papers/inference/04-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md"
+    ],
     "papers/inference/04-moe-parallelism-communication/2026-2609.09748-epoch-diffusion-blocks-sparse-moe-serving.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",

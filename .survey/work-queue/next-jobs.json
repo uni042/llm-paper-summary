@@ -8,8 +8,8 @@
       "completed": 6
     },
     "research": {
-      "completed": 205,
-      "ready": 177,
+      "completed": 206,
+      "ready": 176,
       "superseded": 44,
       "deferred": 3
     }
@@ -76,18 +76,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-7299898f9408f63a",
-      "type": "research",
-      "lane": null,
-      "priority": 89,
-      "canonical_id": "arXiv:2609.01821",
-      "title": "Scaling Inference Prefill with High-Radix Photonic Interconnects",
-      "source_url": "https://arxiv.org/abs/2609.01821",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-e0d8fce39a1b2522",
       "type": "research",
       "lane": null,
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-b1be9294a63ee868",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2607.28699",
+      "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2607.28699",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-3223d356f498e7ef",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T01:34:33+00:00"
+  "generated_at": "2026-09-13T01:36:41+00:00"
 }
