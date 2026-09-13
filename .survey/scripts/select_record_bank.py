@@ -36,6 +36,17 @@ def read_object(path: Path) -> dict[str, Any] | None:
     return value if isinstance(value, dict) else None
 
 
+def current_transport(_repo_root: Path) -> tuple[None, bool]:
+    """Compatibility shim for claim-bank cleanup after fixed Chat transport retirement.
+
+    The reusable ``chat-inbox.json`` transport no longer exists in workflow v10, so
+    there is never a fixed transport bank to protect. Older claim-bank code can call
+    this while migration cleanup proceeds without reviving any file-backed legacy
+    state.
+    """
+    return None, True
+
+
 def ready_job_ids(repo_root: Path) -> set[str]:
     jobs_root = repo_root / ".survey/work-queue/jobs"
     ids: set[str] = set()
@@ -197,8 +208,6 @@ def inspect_bank(
         state = "dirty"
         reason = "one or more slot files are missing/invalid"
     elif attempts == {PLACEHOLDER_ATTEMPT}:
-        # Older pre-created banks intentionally omitted job_id. Keep that placeholder
-        # format free rather than treating the missing job identity as dirt.
         state = "free"
         reason = "unused pre-created bank"
     elif scan["incomplete_identity"]:
