@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 11:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 11:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T10:30:00+09:00**
+Run: **2026-09-13T11:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
+| Research完了 | **0** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
-| Repo収録 | **3** |
+| Repo収録 | **0** |
 | Research/Audit blocked遷移 | **0** |
 
 > Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。
@@ -53,7 +53,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **22** |
+| 通常worker run（ledger観測） | **23** |
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **142** |
 | 探索評価候補 | **698** |
@@ -64,7 +64,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
-| Fallback archive（全helper） | **3** |
+| Fallback archive（全helper） | **4** |
 
 ### 24時間ファネル
 
@@ -240,11 +240,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
-- P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
-- P88 `arXiv:2606.23521` — Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference
-- P88 `arXiv:2512.22219` — Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs
 - P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
+- P88 `arXiv:2601.08800` — MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm
+- P88 `arXiv:2605.07238` — FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows
+- P88 `arXiv:2507.10069` — ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism
+- P88 `arXiv:2605.16867` — GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources
 
 ## 7日比較
 
