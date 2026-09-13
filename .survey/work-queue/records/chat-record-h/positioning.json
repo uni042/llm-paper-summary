@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-1a2f27db29cc21845919957d",
   "job_id": "job-research-2b6e9eed52cd4c32",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a2f27db29cc21845919957d",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主要評価は8×H800単一ノードで、複数ノードへKV状態を分散配置したときのネットワーク・一貫性・負荷均衡は十分検証されていない。大域/局所head分類、window、sparse-FFN閾値はモデルとtask分布に依存し、異なるdomainでは再profilingが必要になる。近似的なhead再利用とtoken選択を含むため完全なbit同一性は保証せず、retrieval-heavy taskではanswer-bearing tokenが圧縮対象になる危険がある。現行の一部end-to-end経路はSegPagedAttentionではなくdense+maskを使うため、論文が示すkernel単体利得がそのままservice throughputへ現れていない。複雑なhybrid/MLA/linear-attention architectureではhead単位KVをそのまま適用できず、model-specific adapterと追加signalが必要になる。",
+    "differences": "CacheBlend、EPIC、ProphetKVなどの位置非依存再利用は主にtoken単位で再計算集合を選ぶため、異なるheadの重要token集合を和集合にするとrecompute量が膨らむ。DuoAttentionやRazorAttentionなどのhead-aware KV圧縮はhead heterogeneityを使うが、任意位置のchunk再利用、FFN回復、物理paged storage、cache lifecycleまで一つのruntime抽象へ統合しない。PagedAttention/SGLang HiCacheはpage管理や階層cacheを提供するが、基本的には各KV headを同じtoken rangeとして扱う。RedKnotはhead-level recovery decisionをhead-level physical pagesとfused varlen kernelへ直結し、位置非依存reuseとcapacity expansionを同じ表現で実現する。",
+    "implementation_status": "SGLang上の研究・engineering implementationを実装し、著者は `rednote-machine-learning/RedKnot` を公式open-source projectとして継続保守すると明記している。PD分離経路はcustomized vLLM 0.13.0も用いる。arXiv v3は2026年7月29日版。",
+    "research_positioning": "長文LLM servingのKV cache management、position-independent reuse、sparse attention、runtime kernel designの交点に位置する。単なるcache eviction policyではなく、KVをhead-aware structured memory objectへ再定義し、その抽象をcompute sparsity・storage layout・data movementへ伝播させるsystem designである。",
+    "relation_to_existing_repository": "リポジトリ内のKV offload・hierarchical cache系がGPU/CPU/SSD間で『どこへKVを置くか』を最適化するのに対し、RedKnotはその前に『各headがどのtoken範囲のKVを本当に持つ必要があるか』を削減する。HiCache、LMCache、Mooncake系の多階層配置と組み合わせれば、head別に縮小したhot/cold stateを階層化できる。CacheBlend/EPIC/ProphetKV系とはposition-independent reuseを共有するが、token-level recoveryからhead-level recoveryへ粒度を変える点が差別化になる。SSD活用という観点でも、head/segment metadataに基づきglobal long-range stateとlocal short-window stateを分離できるため、低頻度global segmentだけを下位階層へ配置する設計へ接続しやすい。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-1a2f27db29cc21845919957d","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
