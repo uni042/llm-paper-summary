@@ -10,9 +10,12 @@ sys.path.insert(0, str(SCRIPTS))
 
 import dispatch_fallback_inbox  # noqa: E402
 import fallback_transport as ft  # noqa: E402
+import replay_record_fallback as record_replay  # noqa: E402
 import select_record_bank  # noqa: E402
 import claim_worker  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
+
+LEGACY_CHAT_INBOX = record_replay.CHAT_INBOX
 
 
 def write_json(path: Path, obj):
@@ -32,7 +35,7 @@ def envelope(job_id="job-r1", claim_id="claim-a", worker_id="worker-a", attempt_
     writes = []
     for slot in SLOT_NAMES:
         writes.append({"path": f".survey/work-queue/records/chat-record/{slot}.json", "content": json.dumps({"schema_version": 1, "transport_version": 10, "slot": slot, "job_id": job_id, "attempt_id": attempt_id, "data": {"slot": slot}})})
-    writes.append({"path": ft.CHAT_INBOX, "content": json.dumps({"schema_version": 1, "transport_version": 10, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "kind": "research", "depends_on_job_ids": [job_id], "paper_path": "papers/test.md", "record_bank": "a"})})
+    writes.append({"path": LEGACY_CHAT_INBOX, "content": json.dumps({"schema_version": 1, "transport_version": 10, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "kind": "research", "depends_on_job_ids": [job_id], "paper_path": "papers/test.md", "record_bank": "a"})})
     return {"schema_version": 1, "id": envelope_id, "origin": origin, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "kind": "research", "depends_on_job_ids": [job_id], "writes": writes}
 
 
@@ -54,11 +57,11 @@ class ClaimedDispatchTests(unittest.TestCase):
                     "slot": slot, "attempt_id": "unused-bank-placeholder", "data": {},
                 })
 
-    def test_expired_but_current_claim_is_accepted(self):
+    def test_expired_but_current_claim_is_accepted_by_record_replay(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td); seed_job(root); claim(root, expires="2026-09-12T23:00:00+00:00")
-            self.put(root, envelope())
-            self.assertEqual(ft.claimed_envelope_state(root, envelope()), (True, None))
+            root = Path(td); seed_job(root); claim(root, expires="2026-09-12T23:00:00+00:00"); self.seed_free_banks(root)
+            result = record_replay.materialize(root, envelope())
+            self.assertEqual(result["action"], "materialized")
 
     def test_current_claim_is_remapped_to_a_safe_bank_before_apply(self):
         with tempfile.TemporaryDirectory() as td:
@@ -70,7 +73,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             descriptor = json.loads(descriptor_path.read_text(encoding="utf-8"))
             self.assertEqual(descriptor["record_bank"], "a")
             self.assertEqual(len(descriptor["record_slots"]), len(SLOT_NAMES))
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").exists())
 
     def test_claimed_envelope_without_all_five_slots_is_quarantined_before_apply(self):
@@ -79,7 +82,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "idle")
             self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
 
     def test_claimed_envelope_with_one_missing_slot_is_quarantined(self):
         with tempfile.TemporaryDirectory() as td:
@@ -96,7 +99,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "idle")
             self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             after = {path.relative_to(root).as_posix(): path.read_bytes() for path in (root / ".survey/work-queue/records").rglob("*.json")}
             self.assertEqual(after, before)
 
@@ -126,7 +129,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "idle")
             self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             self.assertFalse((root / "papers/other.md").exists())
             self.assertEqual({path.relative_to(root).as_posix(): path.read_bytes() for path in (root / ".survey/work-queue/records").rglob("*.json")}, before)
 
@@ -145,7 +148,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             self.assertEqual(dispatch_fallback_inbox.dispatch(root)["action"], "dispatched")
             second_result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(second_result["action"], "dispatched")
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").exists())
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-b.json").exists())
             self.assertTrue((root / ".survey/work-queue/submissions/research/attempt-a.json").exists())
@@ -162,7 +165,6 @@ class ClaimedDispatchTests(unittest.TestCase):
             self.assertEqual(len(select_record_bank.ready_job_ids(root)), 10)
 
     def test_allocator_expiry_reassignment_fences_old_envelope_and_dispatches_current(self):
-        from datetime import datetime, timedelta, timezone
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); seed_job(root); self.seed_free_banks(root)
             request_root = root / ".survey/work-queue/claim-requests"
@@ -186,7 +188,7 @@ class ClaimedDispatchTests(unittest.TestCase):
                 root = Path(td); seed_job(root, status=status); claim(root); value = envelope(); self.put(root, value)
                 result = dispatch_fallback_inbox.dispatch(root)
                 self.assertEqual(result["action"], "ack_terminal")
-                self.assertFalse((root / ft.CHAT_INBOX).exists())
+                self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
 
     def test_superseded_claim_is_quarantined_without_transport_write(self):
         with tempfile.TemporaryDirectory() as td:
@@ -196,7 +198,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "idle")
             self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
 
     def test_missing_claim_is_quarantined(self):
         with tempfile.TemporaryDirectory() as td:
@@ -211,7 +213,7 @@ class ClaimedDispatchTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "ack_terminal")
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").exists())
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
 
     def test_legacy_envelope_keeps_dispatch_behavior(self):
         with tempfile.TemporaryDirectory() as td:
