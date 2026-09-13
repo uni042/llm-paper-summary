@@ -177,6 +177,52 @@ def _success_result(
     return result
 
 
+def _empty_effect_state() -> dict[str, Any]:
+    return {
+        "stats": {
+            "research_completed": 0,
+            "audit_completed": 0,
+            "rejected": 0,
+        },
+        "maintenance": {"views_dirty": False},
+    }
+
+
+def _effect_payload(descriptor: dict[str, Any], state: dict[str, Any]) -> dict[str, Any]:
+    stats = state.get("stats") if isinstance(state.get("stats"), dict) else {}
+    maintenance = state.get("maintenance") if isinstance(state.get("maintenance"), dict) else {}
+    return {
+        "schema_version": 1,
+        "job_id": descriptor["job_id"],
+        "attempt_id": descriptor["attempt_id"],
+        "research_completed": int(stats.get("research_completed", 0) or 0),
+        "audit_completed": int(stats.get("audit_completed", 0) or 0),
+        "rejected": int(stats.get("rejected", 0) or 0),
+        "views_dirty": bool(maintenance.get("views_dirty", False)),
+    }
+
+
+def _reconciled_effect_state(descriptor: dict[str, Any]) -> dict[str, Any]:
+    """Reconstruct effects when a prior local mutation reached terminal state before result write."""
+    state = _empty_effect_state()
+    status = descriptor.get("status", "completed")
+    if status == "completed":
+        if descriptor["kind"] == "research":
+            state["stats"]["research_completed"] = 1
+        else:
+            state["stats"]["audit_completed"] = 1
+        state["maintenance"]["views_dirty"] = True
+    elif status == "rejected" and descriptor["kind"] == "research":
+        state["stats"]["rejected"] = 1
+    return state
+
+
+def _write_effect(path: Path | None, descriptor: dict[str, Any], state: dict[str, Any]) -> None:
+    if path is None:
+        return
+    queue_worker.write_json(Path(path), _effect_payload(descriptor, state))
+
+
 def _record_unidentified_failure(
     repo_root: Path,
     submission_path: Path,
@@ -268,8 +314,17 @@ def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> di
     return result
 
 
-def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
+def process(
+    repo_root: Path,
+    submission_path: Path,
+    *,
+    defer_shared_state: bool = False,
+    effect_path: Path | None = None,
+) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
+    if defer_shared_state and effect_path is None:
+        raise ValueError("effect_path is required when defer_shared_state is enabled")
+
     submission_path = _descriptor_path(repo_root, submission_path)
     raw = immutable_submission.load_descriptor(submission_path)
     descriptor = immutable_submission.validate_descriptor(repo_root, raw)
@@ -278,6 +333,8 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
 
     existing = _matching_result(result_path, descriptor)
     if existing is not None:
+        if defer_shared_state:
+            _write_effect(effect_path, descriptor, _empty_effect_state())
         reused = dict(existing)
         reused["reused"] = True
         return reused
@@ -303,6 +360,8 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
                 reconciled=True,
             )
             queue_worker.write_json(result_path, result)
+            if defer_shared_state:
+                _write_effect(effect_path, descriptor, _reconciled_effect_state(descriptor))
             return result
         if (
             status == "rejected"
@@ -320,6 +379,8 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
                 reconciled=True,
             )
             queue_worker.write_json(result_path, result)
+            if defer_shared_state:
+                _write_effect(effect_path, descriptor, _reconciled_effect_state(descriptor))
             return result
         raise ValueError(f"job already terminal under a different attempt: {job.get('status')}")
 
@@ -330,7 +391,7 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
         _precheck_paper(repo_root, descriptor)
         sub["content"] = render_descriptor(repo_root, descriptor)
 
-    st = queue_worker.load_state()
+    st = _empty_effect_state() if defer_shared_state else queue_worker.load_state()
     mutable_job = dict(job)
     mutable_job["_path"] = job_path
     artifact = None
@@ -349,8 +410,11 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
         mutable_job["status_submission"] = relative_submission
 
     queue_worker.update_job(mutable_job)
-    queue_worker.save_state(st)
-    _refresh_snapshot(repo_root)
+    if defer_shared_state:
+        _write_effect(effect_path, descriptor, st)
+    else:
+        queue_worker.save_state(st)
+        _refresh_snapshot(repo_root)
 
     final_job = _read(job_path, {}) or {}
     result = _success_result(
@@ -367,11 +431,20 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--submission", type=Path, required=True)
+    parser.add_argument("--defer-shared-state", action="store_true")
+    parser.add_argument("--effect-file", type=Path)
     args = parser.parse_args()
     repo_root = args.repo_root.resolve()
     try:
-        result = process(repo_root, args.submission)
+        result = process(
+            repo_root,
+            args.submission,
+            defer_shared_state=args.defer_shared_state,
+            effect_path=args.effect_file,
+        )
     except Exception as exc:
+        if args.defer_shared_state and args.effect_file is not None:
+            args.effect_file.unlink(missing_ok=True)
         result = record_failure(repo_root, args.submission, exc)
         if result is not None:
             print(json.dumps(result, ensure_ascii=False, indent=2))
