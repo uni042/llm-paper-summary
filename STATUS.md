@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 06:25 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 06:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,19 +36,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **125** |
-| 処理中（Active claims） | **4** |
-| 今すぐ着手可能（Claimable） | **121** |
-| :30 通常worker Active claims | **0** |
+| 処理中（Active claims） | **5** |
+| 今すぐ着手可能（Claimable） | **120** |
+| :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 04:21 JST** |
-| :00 補助worker 直近claim | **09-14 06:24 JST** |
+| :30 通常worker 直近claim | **09-14 06:32 JST** |
+| :00 補助worker 直近claim | **09-14 06:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **7** |
 | 最新通常run | **2026-09-14T05:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **54 min** |
+| 最古の有効claimの経過時間 | **61 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -71,8 +71,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **58.1%** |
 | 探索専用worker run（毎時枠） | **5** |
 | 探索専用worker round（stats観測） | **50** |
-| 通常worker run（ledger観測） | **15** |
-| Fallback archive（全helper） | **19** |
+| 通常worker run（ledger観測） | **14** |
+| Fallback archive（全helper） | **20** |
 
 ### 24時間の流れ
 
@@ -95,11 +95,11 @@ Run: **2026-09-14T05:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
 - P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
+- P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 
 ## 参考情報
 
