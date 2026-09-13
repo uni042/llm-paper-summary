@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:25 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **169 / 50** |
-| Research ready | **169** |
+| Candidate在庫（Research ready） | **172 / 50** |
+| Research ready | **172** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **11** |
-| 新規job | **29** |
+| Discovery完了 | **12** |
+| 新規job | **33** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **140** |
-| 探索評価候補 | **700** |
-| 重複除外 | **294** |
-| 重複率 | **42.0%** |
-| Novel候補 | **406** |
-| Research候補採用 | **229** |
+| 探索round（stats観測） | **141** |
+| 探索評価候補 | **706** |
+| 重複除外 | **296** |
+| 重複率 | **41.9%** |
+| Novel候補 | **410** |
+| Research候補採用 | **232** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 700 → 重複除外後 406 → Research候補採用 229 → Research完了 69 → Repo収録 69**
+**探索評価 706 → 重複除外後 410 → Research候補採用 232 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -114,6 +114,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | position-independent KV再利用のforward/backward related-work補完 | 6 | 1 | 5 | 16.7% | 83.3% |
 | production-autoscaling-disaggregated-serving-runtime | 6 | 4 | 2 | 66.7% | 33.3% |
 | 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
+| 端末内LLM・OSメモリ圧力・Flash/NPU実行 | 6 | 2 | 3 | 33.3% | 50.0% |
 | CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime | 5 | 0 | 1 | 0.0% | 20.0% |
 | CXL/NVLink-C2C・remote memory・階層KV prefetch | 5 | 0 | 2 | 0.0% | 40.0% |
 | CXL共有メモリ・ラック内KV転送・Superchip階層メモリ | 5 | 2 | 0 | 40.0% | 0.0% |
@@ -214,11 +215,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — 端末内LLM・OSメモリ圧力・Flash/NPU実行: 評価 6 / 重複 2 / 採用 3
 - **2026-09-13T10:16:01+09:00** — GPU実行環境・collective通信・prefill/decode共存: 評価 6 / 重複 5 / 採用 1
 - **2026-09-13T10:16:01+09:00** — 新着LLM推論システム・通信／疎注意／多ターンKV: 評価 7 / 重複 4 / 採用 3
 - **2026-09-13T09:57:59+09:00** — NVMe重み先読み・疎推論GPUカーネル・fleet資源配置: 評価 8 / 重複 3 / 採用 4
 - **2026-09-13T09:57:59+09:00** — 分離型サービングの負荷偏り・SLO適応: 評価 7 / 重複 4 / 採用 1
-- **2026-09-13T09:28:10+09:00** — 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse: 評価 3 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
