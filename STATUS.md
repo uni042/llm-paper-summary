@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:25 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **168 / 50** |
-| Research ready | **168** |
+| Candidate在庫（Research ready） | **169 / 50** |
+| Research ready | **169** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **10** |
-| 新規job | **27** |
+| Discovery完了 | **11** |
+| 新規job | **29** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **139** |
-| 探索評価候補 | **694** |
-| 重複除外 | **289** |
-| 重複率 | **41.6%** |
-| Novel候補 | **405** |
-| Research候補採用 | **228** |
+| 探索round（stats観測） | **140** |
+| 探索評価候補 | **700** |
+| 重複除外 | **294** |
+| 重複率 | **42.0%** |
+| Novel候補 | **406** |
+| Research候補採用 | **229** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 694 → 重複除外後 405 → Research候補採用 228 → Research完了 69 → Repo収録 69**
+**探索評価 700 → 重複除外後 406 → Research候補採用 229 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -104,6 +104,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
 | GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
+| GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
 | KV復元・計算効率指向キャッシュ・分離サービング再均衡 | 6 | 3 | 1 | 50.0% | 16.7% |
 | MoE expert cache・offload・OS tiering | 6 | 6 | 0 | 100.0% | 0.0% |
 | MoE expert prefetch・offload・speculative execution再走査 | 6 | 5 | 0 | 83.3% | 0.0% |
@@ -213,11 +214,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — GPU実行環境・collective通信・prefill/decode共存: 評価 6 / 重複 5 / 採用 1
 - **2026-09-13T10:16:01+09:00** — 新着LLM推論システム・通信／疎注意／多ターンKV: 評価 7 / 重複 4 / 採用 3
 - **2026-09-13T09:57:59+09:00** — NVMe重み先読み・疎推論GPUカーネル・fleet資源配置: 評価 8 / 重複 3 / 採用 4
 - **2026-09-13T09:57:59+09:00** — 分離型サービングの負荷偏り・SLO適応: 評価 7 / 重複 4 / 採用 1
 - **2026-09-13T09:28:10+09:00** — 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse: 評価 3 / 重複 0 / 採用 0
-- **2026-09-13T09:28:10+09:00** — 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA: 評価 4 / 重複 0 / 採用 1
 
 ## 最近処理した論文
 
