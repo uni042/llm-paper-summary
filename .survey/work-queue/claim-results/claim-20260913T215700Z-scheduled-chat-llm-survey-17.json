@@ -1,45 +1,44 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "claim-20260913T215500Z-scheduled-chat-llm-survey-16",
+  "request_id": "claim-20260913T215700Z-scheduled-chat-llm-survey-17",
   "worker_id": "scheduled-chat-llm-survey",
   "worker_kind": "scheduled_chat",
   "ok": true,
   "assignments": [
     {
-      "job_id": "job-research-79f62fbfcb1294fd",
-      "claim_id": "claim-e4ce61ca60a983d424972ff3",
+      "job_id": "job-research-2dbab0db43ceff0b",
+      "claim_id": "claim-ae15cc30a245f55146fc8620",
       "worker_id": "scheduled-chat-llm-survey",
       "worker_kind": "scheduled_chat",
-      "attempt_id": "attempt-e4ce61ca60a983d424972ff3",
-      "claimed_at": "2026-09-13T21:53:23+00:00",
+      "attempt_id": "attempt-ae15cc30a245f55146fc8620",
+      "claimed_at": "2026-09-13T21:56:50+00:00",
       "expires_at": "2026-09-13T23:26:50+00:00",
       "kind": "research",
       "depends_on_job_ids": [
-        "job-research-79f62fbfcb1294fd"
+        "job-research-2dbab0db43ceff0b"
       ],
       "job": {
-        "job_id": "job-research-79f62fbfcb1294fd",
+        "job_id": "job-research-2dbab0db43ceff0b",
         "type": "research",
-        "parent_job_id": "job-5945231575e3ff8c",
+        "parent_job_id": "job-1cf1e2dacbb5ac28",
         "priority": 84,
-        "canonical_id": "arXiv:2602.12029",
-        "title": "PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving",
-        "source_url": "https://arxiv.org/abs/2602.12029",
-        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-shared-prefill-multi-llm.md",
-        "selection_reason": "multi-agentや複数LLMからなるworkloadで各modelが同一長文脈を別々にprefillする重複を、共有・固定化したprefill moduleとKV再利用により除く。異なるdownstream model間でcontext処理を共有する点が通常prefix cacheと異なり、p95 latency最大4.5倍改善、throughput最大3.9倍向上を報告する。multi-LLM servingの計算共有として未収録軸。",
+        "canonical_id": "arXiv:2603.10342",
+        "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
+        "source_url": "https://arxiv.org/abs/2603.10342",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10342-agentserve-consumer-gpu-agentic-serving.md",
+        "selection_reason": "agentic workloadをcold prefill、tool結果を追加するresume prefill、latency-criticalなshort decodeへ分解し、単一consumer GPU上でdecodeをprefillから隔離、resume prefillへdynamic budgetを割り当て、CUDA Green Context slotを適応制御する。複数agentが重なる際のhead-of-line blockingを対象に、TTFT最大2.8倍、TPOT最大2.7倍改善を報告する。通常chat servingとは異なるtool-interleaved workloadに対する実装指向候補。",
         "status": "ready",
         "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
         "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
         "schema_version": 1,
         "workflow_version": 10,
-        "created_at": "2026-09-12T16:44:06+00:00",
+        "created_at": "2026-09-12T16:47:07+00:00",
         "artifact_transport": "structured_record_v10"
       },
       "record_bank_fallback": "library"
     }
   ],
-  "processed_at": "2026-09-13T21:53:23+00:00",
-  "checkpoint_released": 1,
-  "heartbeat_at": "2026-09-13T21:56:50+00:00"
+  "processed_at": "2026-09-13T21:56:50+00:00",
+  "checkpoint_released": 1
 }
