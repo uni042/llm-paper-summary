@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -53,7 +53,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **23** |
+| 通常worker run（ledger観測） | **22** |
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **147** |
 | 探索評価候補 | **724** |
@@ -61,14 +61,14 @@ Run: **2026-09-13T11:00:00+09:00**
 | 重複率 | **43.8%** |
 | Novel候補 | **407** |
 | Research候補採用 | **227** |
-| Research完了 | **72** |
-| Repo収録 | **72** |
+| Research完了 | **70** |
+| Repo収録 | **70** |
 | Audit完了 | **0** |
 | Fallback archive（全helper） | **4** |
 
 ### 24時間ファネル
 
-**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 72 → Repo収録 72**
+**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 70 → Repo収録 70**
 
 ## 探索専用workerの探索効率（直近24時間）
 
@@ -245,11 +245,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
-- P87 `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
-- P87 `arXiv:2502.09922` — λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
 - P87 `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
 - P87 `arXiv:2607.19539` — Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts
+- P87 `arXiv:2604.21231` — SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference
+- P87 `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
+- P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
 
 ## 7日比較
 
@@ -267,12 +267,24 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | 指標 | 値 |
 |---|---:|
 | Research ready | **180** |
-| Active claims | **32** |
-| Claimable | **148** |
+| Active claims | **35** |
+| Claimable | **145** |
+| :00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)** |
+| :00切替閾値 | **ready > 50 → 通常worker補助 / ready ≤ 50 → 探索専用** |
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
-| Research completed (24h) | **72** |
-| Oldest active claim age | **80 min** |
+| Research completed (24h) | **70** |
+| Oldest active claim age | **84 min** |
+
+### Worker routing snapshot
+
+- 毎時`:30`の通常論文workerは、readyが **25本以上** かつactionable researchがある間はresearch / auditを優先し、通常worker側の広範なdiscoveryを止めます。
+- readyが **15〜24本** ではresearchを継続しつつdiscovery補充を積極化し、**0〜14本** では候補枯渇防止のためdiscovery比重を上げます。
+- 毎時`:00`の補助workerはreadyが **50本を超える** と通常workerと同じresearch / audit優先動作へ切り替わり、**50本以下** で探索専用へ戻ります。
+- `.survey/work-queue/next-jobs.json` は優先スナップショットであり、表示件数を処理量上限として扱いません。表示外readyもpriority順に処理対象です。
+- discoveryのcandidate最大5本は **1探索軸・1 submissionのtransport batch上限** であり、1run全体の候補数・round数・batch数の上限ではありません。
+- `:00`補助worker由来の実行は、research補助モード時も通常workerの24-run maintenance counterへ加算しません。
+- 上段の「探索専用worker」統計は実際にdiscoveryを行った履歴だけを集計します。`:00`補助workerがresearch補助モードの回は、探索roundとしては増えません。
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
