@@ -4,10 +4,25 @@
   "slot": "results",
   "attempt_id": "attempt-42f1304a542fa612136cc65f",
   "job_id": "job-research-234066475107816a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-42f1304a542fa612136cc65f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "4モデル・4公開データセットのpre-warmed評価では、HYPICはFull Recompute比でp50 TTFTをRing-mini 2.94倍、Ring-flash 2.97倍、Qwen3.5-35B 3.79倍、Qwen3.5-122B 4.67倍短縮し、Prefix Cache比でも2.77〜4.05倍短縮する。16条件平均の品質差はFull Recomputeから1.71ポイントに留まる一方、遷移演算子を保存せず終端状態だけ足すNaive AdditionはFull Recomputeのscoreを66.9%失う。Prod-RAG traceの1秒TTFT SLOではPrefix Cache比の持続可能QPSがモデル別1.49〜1.85倍、peak per-GPU throughputが1.30〜1.50倍となる。再利用時の線形state compositionはsegment長にほぼ依存せず、16k tokenでFull Recompute比4.91倍、segment数16で4.80倍。完全coldの32k promptは8 worker segment parallelismで2.83秒から0.49秒へ短縮し5.7倍高速化する。",
+    "key_results": [
+      {"metric": "平均TTFT短縮", "value": "Prefix Cache比で平均3.25×", "baseline": "Prefix Cache", "condition": "4 hybrid-attention models、5 workloads全体", "interpretation": "strict-prefixだけでなく任意segment reuseをhybrid stackへ広げることでprefillの大部分を再利用する。"},
+      {"metric": "1秒TTFT SLOでの平均QPS", "value": "Prefix Cache比1.66×", "baseline": "Prefix Cache", "condition": "serving load evaluation", "interpretation": "低TTFTだけでなく同じ応答時間制約で受け入れ可能なrequest rateを増やす。"},
+      {"metric": "公開datasetでのp50 TTFT", "value": "Full Recompute比2.94× / 2.97× / 3.79× / 4.67×、Prefix Cache比2.77× / 2.85× / 3.32× / 4.05×", "baseline": "Full Recompute / Prefix Cache", "condition": "Ring-mini / Ring-flash / Qwen3.5-35B / Qwen3.5-122B、segment pre-warmed", "interpretation": "dense transitionを持つQwen3.5でも再利用時state compositionがsegment full prefillより十分小さい。"},
+      {"metric": "task quality差", "value": "Full Recomputeから16条件平均1.71 points低下", "baseline": "Full Recompute", "condition": "4 models × 4 public datasets", "interpretation": "PIC由来の独立segment hidden-state差は残るが、seam windowで品質低下を小さく抑える。"},
+      {"metric": "Naive Addition品質", "value": "Full Recompute scoreの66.9%を喪失", "baseline": "Full Recompute", "condition": "同一公開dataset評価", "interpretation": "advanced linear attentionではT_Cを無視した終端state加算が構造的に破綻することを示す。"},
+      {"metric": "Prod-RAG sustainable QPS", "value": "Prefix Cache比1.85× / 1.49× / 1.58× / 1.71×", "baseline": "Prefix Cache", "condition": "Ring-mini / Ring-flash / Qwen3.5-35B / Qwen3.5-122B、TTFT SLO 1s", "interpretation": "steady-state cache hitと継続的cold missが混在するproduction traceでも容量を引き上げる。"},
+      {"metric": "peak per-GPU throughput", "value": "Prefix Cache比1.50× / 1.46× / 1.32× / 1.30×", "baseline": "Prefix Cache", "condition": "同一Prod-RAG trace", "interpretation": "prefill再計算削減がGPU当たりtoken処理量にも反映される。"},
+      {"metric": "state composition scaling", "value": "4 segments・total 16k tokensで4.91×、1k-token segmentsを16個で4.80×", "baseline": "Full Recompute", "condition": "reuse path", "interpretation": "composition costはsegment長ではなく主にsegment数へ依存し、長いreuse segmentほど優位が広がる。"},
+      {"metric": "transition/state初回構築費", "value": "main forward比+5.2〜6.7%", "baseline": "通常segment forward", "condition": "Qwen3.5-35B dense transition、segment 256〜4k tokens", "interpretation": "最も重いdense familyでも一度だけ支払うcache生成費は比較的小さい。"},
+      {"metric": "deep-layer state drift", "value": "Qwen3.5-35B: relative L2 8.92%, 5.11°; Ring-flash: 8.69%, 4.98°", "baseline": "Full Recompute", "condition": "512-token two-chunk、full-attention層無効化", "interpretation": "composition式自体は正確だが、独立prefillによるhidden-state入力差が深層で蓄積する。"},
+      {"metric": "cold-prefill segment parallelism", "value": "2.83s → 1.34s / 0.82s / 0.49s at 2 / 4 / 8 workers、最大5.7×", "baseline": "single TP-1 Full Recompute", "condition": "32k tokens、8 equal segments、all cold", "interpretation": "segment self-containmentをinstance間並列へ変換し、長いcold requestのtail latencyを大幅に削る。"},
+      {"metric": "LPT負荷分散", "value": "4 workersでround-robin 1.26sに対しLPT 0.84s", "baseline": "round-robin", "condition": "32k tokens、8 uneven segments", "interpretation": "segment長の偏りを考慮しないと最遅workerがcritical pathを支配する。"}
+    ],
+    "negative_results": "HYPICは完全再計算と数値的に同一ではない。累積遷移式は同じhidden-state入力ならlayer-exactだが、各segmentを独立prefillすると本来のprefixがhidden stateへ与える影響を失うため、深層で約9%のstate driftが残る。Ring系ではFull Recomputeから3点強の品質差があり、windowを大きくしても単純に改善せずw=8より大きい16/32ではTTFTが増える一方で有意な品質向上がない。dense transition familyはsegmentごとに32KB/head/layer級T_Cを保存し、初回構築にO(|C|d_k²)を要する。segment parallelismは複数idle inference instancesとRDMA転送を前提とし、短いsegmentではdispatch粒度が小さ過ぎてkernel効率や転送固定費が相対的に重くなるため、論文は1024 token以上を十分大きい条件としている。",
+    "interpretation": "HYPICの中心は、線形注意の固定長stateを単なるcache結果ではなく『任意prefix stateを変換する関数』とそのzero-start出力の組として保存する発想にある。これでtoken-axis KV spliceがなくてもsegment reuseが可能になる。ただし深層hidden stateまで完全には復元できないため、残るfull-attentionのboundary deviationをseam windowで局所補正する。さらに同じsegment独立性をcache hit時の再利用だけでなくcache miss時のinstance間並列へ使うことで、PICが従来放置していたcold-request tailも短縮する。",
+    "quality_impact": "品質は近似的に維持される。Full Recomputeとの差は4モデル×4公開dataset平均1.71 points。Qwen3.5-35Bでは平均でFull Recomputeを0.47 points上回り、Qwen3.5-122Bは0.56 points低い一方、Ring-mini/Ring-flashは3.44/3.29 points低い。seam width=8が評価したw=0/4/8/16/32の中で品質とTTFTの最良バランスだった。"
+  },
+  "reservation": {"claim_id": "claim-42f1304a542fa612136cc65f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
