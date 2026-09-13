@@ -19,6 +19,8 @@ DEFAULT_MAX_JOBS = 1
 DEFAULT_LEASE_SECONDS = 5400
 MIN_LEASE_SECONDS = 300
 MAX_LEASE_SECONDS = 43200
+MAX_CHECKPOINTED_JOBS = 128
+LIBRARY_CHECKPOINT_PREFIX = "/LLM-survey-outbox/pending/"
 
 
 def _read(path: Path, default: Any = None) -> Any:
@@ -55,6 +57,35 @@ def _safe(value: Any, label: str) -> str:
     return value
 
 
+def _normalize_checkpointed_jobs(raw: Any) -> list[dict[str, str]]:
+    if raw is None:
+        return []
+    if not isinstance(raw, list) or len(raw) > MAX_CHECKPOINTED_JOBS:
+        raise ValueError(f"checkpointed_jobs must be a list with at most {MAX_CHECKPOINTED_JOBS} items")
+    normalized: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for index, item in enumerate(raw):
+        if not isinstance(item, dict):
+            raise ValueError(f"checkpointed_jobs[{index}] must be an object")
+        job_id = _safe(item.get("job_id"), f"checkpointed_jobs[{index}].job_id")
+        checkpoint_ref = item.get("checkpoint_ref")
+        if (
+            not isinstance(checkpoint_ref, str)
+            or len(checkpoint_ref) > 512
+            or not checkpoint_ref.startswith(LIBRARY_CHECKPOINT_PREFIX)
+            or not checkpoint_ref.endswith(".json")
+            or ".." in Path(checkpoint_ref).parts
+        ):
+            raise ValueError(
+                f"checkpointed_jobs[{index}].checkpoint_ref must be a JSON path under {LIBRARY_CHECKPOINT_PREFIX}"
+            )
+        if job_id in seen:
+            raise ValueError("checkpointed_jobs must not repeat job_id")
+        seen.add(job_id)
+        normalized.append({"job_id": job_id, "checkpoint_ref": checkpoint_ref})
+    return normalized
+
+
 def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     if not isinstance(raw, dict):
         raise ValueError("request must be an object")
@@ -88,11 +119,13 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     job_types = raw.get("job_types", ["research", "audit"])
     if not isinstance(job_types, list) or not job_types or any(kind not in JOB_TYPES for kind in job_types):
         raise ValueError("job_types must contain only research or audit")
+    checkpointed_jobs = _normalize_checkpointed_jobs(raw.get("checkpointed_jobs"))
     return {
         "schema_version": 1, "request_id": request_id, "worker_id": worker_id,
         "worker_kind": worker_kind, "requested_at": _iso(requested_at),
         "max_jobs": max_jobs, "lease_seconds": lease_seconds,
         "job_types": sorted(set(job_types)),
+        "checkpointed_jobs": checkpointed_jobs,
     }
 
 
@@ -174,6 +207,47 @@ def _release_durable_claims(
         _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
         claims[job_id] = dict(claim, active=False, expired=True)
     return submitted_jobs
+
+
+def _checkpoint_map(request: dict[str, Any]) -> dict[str, str]:
+    return {
+        str(item["job_id"]): str(item["checkpoint_ref"])
+        for item in request.get("checkpointed_jobs", [])
+        if isinstance(item, dict) and item.get("job_id") and item.get("checkpoint_ref")
+    }
+
+
+def _release_worker_checkpointed_claims(
+    root: Path,
+    claims: dict[str, dict[str, Any]],
+    request: dict[str, Any],
+    now: dt.datetime,
+) -> int:
+    """Release only this worker's active claims backed by its durable Library refs.
+
+    This is deliberately worker-local: the queue job remains ready and no global
+    completion state is inferred from an unverified Library reference.
+    """
+    checkpoints = _checkpoint_map(request)
+    released = 0
+    for job_id, checkpoint_ref in checkpoints.items():
+        current = claims.get(job_id)
+        if not current or not current.get("active"):
+            continue
+        if (
+            current.get("worker_id") != request["worker_id"]
+            or current.get("worker_kind") != request["worker_kind"]
+        ):
+            continue
+        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+        claim["released_at"] = _iso(now)
+        claim["expires_at"] = _iso(now)
+        claim["checkpoint_ref"] = checkpoint_ref
+        claim["checkpoint_release_request_id"] = request["request_id"]
+        _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
+        claims[job_id] = dict(claim, active=False, expired=True)
+        released += 1
+    return released
 
 
 def _worker_has_active_claim(
@@ -289,7 +363,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     claims = claim_state.current_claims(root, now)
     descriptors = _immutable_descriptors(root)
     submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
-    processed = reused = errors = assigned = renewed = 0
+    processed = reused = errors = assigned = renewed = checkpoint_released = 0
     for path in sorted(request_root.glob("*.json")):
         result_path = _result_path(root, path.stem)
         if result_path.exists():
@@ -335,6 +409,9 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             processed += 1
             continue
 
+        released_now = _release_worker_checkpointed_claims(root, claims, request, now)
+        checkpoint_released += released_now
+
         if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
             claims,
             worker_id=request["worker_id"],
@@ -345,16 +422,18 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
                 "ok": True, "assignments": [], "processed_at": _iso(now),
                 "reason": "worker already has an active unsubmitted claim",
+                "checkpoint_released": released_now,
             })
             processed += 1
             continue
 
+        checkpointed_ids = set(_checkpoint_map(request))
         available = []
         for item in jobs:
             job_id = str(item.get("job_id") or "")
             if item.get("status") != "ready" or item.get("type") not in request["job_types"]:
                 continue
-            if job_id in submitted_jobs:
+            if job_id in submitted_jobs or job_id in checkpointed_ids:
                 continue
             dependencies = _dependencies(job_id, item)
             if dependencies is None:
@@ -397,6 +476,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
             "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
             "ok": True, "assignments": assignments, "processed_at": _iso(now),
+            "checkpoint_released": released_now,
         })
         assigned += len(assignments)
         processed += 1
@@ -406,6 +486,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         "errors": errors,
         "assigned": assigned,
         "renewed": renewed,
+        "checkpoint_released": checkpoint_released,
     }
 
 
