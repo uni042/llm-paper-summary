@@ -215,26 +215,34 @@ def _repair_jobs_with_only_durable_failures(
     return repairable
 
 
-def _successful_immutable_attempts(root: Path) -> set[tuple[str, str]]:
-    """Return exact job/attempt pairs whose immutable processor result is successful."""
+def _successful_immutable_attempts(
+    root: Path,
+    claims: dict[str, dict[str, Any]],
+) -> set[tuple[str, str]]:
+    """Return successful immutable attempts only for current claim identities."""
     successful: set[tuple[str, str]] = set()
     submissions = root / ".survey/work-queue/submissions"
     results = root / ".survey/work-queue/results"
-    for kind in sorted(JOB_TYPES):
+    for job_id, claim in claims.items():
+        attempt_id = claim.get("attempt_id")
+        kind = claim.get("kind")
+        if kind not in JOB_TYPES:
+            continue
+        if not isinstance(job_id, str) or not SAFE_ID_RE.fullmatch(job_id):
+            continue
+        if not isinstance(attempt_id, str) or not SAFE_ID_RE.fullmatch(attempt_id):
+            continue
         folder = submissions / kind
-        for path in sorted(folder.glob("*.json")) if folder.is_dir() else []:
+        for path in sorted(folder.glob(f"{attempt_id}*.json")) if folder.is_dir() else []:
             descriptor = _read(path)
             if not isinstance(descriptor, dict):
                 continue
-            job_id = descriptor.get("job_id")
-            attempt_id = descriptor.get("attempt_id")
-            if not isinstance(job_id, str) or not SAFE_ID_RE.fullmatch(job_id):
-                continue
-            if not isinstance(attempt_id, str) or not SAFE_ID_RE.fullmatch(attempt_id):
+            if descriptor.get("job_id") != job_id or descriptor.get("attempt_id") != attempt_id:
                 continue
             result = _read(results / kind / path.name)
             if immutable_submission.result_is_success_for(result, descriptor):
                 successful.add((job_id, attempt_id))
+                break
     return successful
 
 
@@ -249,7 +257,7 @@ def _release_durable_claims(
         (str(item.get("job_id")), str(item.get("attempt_id")))
         for item in descriptors
     }
-    durable_attempts |= _successful_immutable_attempts(root)
+    durable_attempts |= _successful_immutable_attempts(root, claims)
     submitted_jobs = {str(item.get("job_id")) for item in descriptors}
     submitted_jobs -= _repair_jobs_with_only_durable_failures(root, descriptors)
     for job_id, current in list(claims.items()):
