@@ -2,47 +2,76 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-73a0e418c00f418830f8a47e",
-  "job_id": "job-research-f379557cdc6a8294",
+  "attempt_id": "attempt-9df7bd2cc9990f1f8cfa5e79",
+  "job_id": "job-research-44ece09f5c0f4e7c",
   "data": {
-    "canonical_id": "arXiv:2601.13684",
-    "arxiv_id": "2601.13684",
-    "doi": "10.48550/arXiv.2601.13684",
+    "canonical_id": "arXiv:2607.08565",
+    "arxiv_id": "2607.08565",
+    "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": ["cs.AI"]},
-    "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
-    "summary": "HeteroCacheは、長文脈推論の鍵・値キャッシュ（KVキャッシュ）を静的に削除する方式では、復号中に注意先が変わる注意ドリフトによって後から重要になる情報を失い、中央処理装置（CPU）へ退避して動的取得する既存方式では粗い単位の取得が入出力を増やす問題を扱う。校正時に各注意ヘッドの時間的安定性と同一層内の類似性を測り、固有かつ安定なアンカーヘッド、固有かつ変動の大きい変動ヘッド、冗長クラスタを代表するピボットヘッド、圧縮可能なサテライトヘッドへ分類する。変動しやすい圧縮ヘッドほど大きなGPU上のKV予算を与え、変動ヘッドとピボットは完全なKVをGPUに保持する。サテライトの完全KVはCPUメモリへ置き、ピボットが注意ドリフトを検知した場合だけ必要なトークンを非同期取得してGPU側のサテライトを更新する。A100 PCIe 80GB実機でLlama-3.1-8B、Qwen2.5-14B、DeepSeek-R1-Distill-Llama-8Bを評価し、224K文脈で完全注意計算（FullAttention）比約3倍、OmniKV比40倍超の復号高速化を報告する。",
-    "list_summary": "注意ヘッドの安定性と層内冗長性に応じてKV予算を細粒度配分し、代表ヘッドの注意ドリフト検知時だけCPUから非同期取得することで、224K文脈の復号を完全注意計算比約3倍高速化する。",
-    "authors": ["Zhiyuan Shi", "Qibo Qiu", "Feng Xue", "Zhonglin Jiang", "Li Yu", "Jian Jiang", "Xiaofei He", "Wenxiao Wang"],
-    "authors_affiliations": "著者所属は浙江大学、China Mobile (Zhejiang) Research & Innovation Institute、Geely Automobile Research Institute (Ningbo) Co., Ltd.、FABU Inc.。Wenxiao Wangが責任著者。",
-    "published": "2026-01-20",
-    "publication": "arXiv:2601.13684 v2、2026-04-18改訂。ACL 2026 Main Conference採択。",
-    "publication_type": "国際会議論文 / arXivプレプリント",
-    "publication_status": "ACL 2026 Main Conference採択済み。arXiv v2が最新確認版。",
-    "lineage": "kv-cache-optimization-compression",
-    "topics": ["KVキャッシュ圧縮", "長文脈推論", "階層記憶", "CPUオフロード", "非同期取得", "注意ドリフト", "注意ヘッド異質性"],
-    "importance": "高。KV圧縮による品質低下とCPUオフロードによる入出力待ちを別々に扱わず、注意ヘッド単位の動的価値推定、GPU・CPU階層配置、非同期オンデマンド取得を一つの推論実行時機構へ統合する。CPUやSSDを含む階層記憶や先読み研究へ直接接続できる。",
-    "hardware_evaluation": "主評価機はIntel Xeon Gold 6338 2.00GHz、256 GiB DDR4、NVIDIA A100 PCIe 80GB、PCIe第4世代x16。補足としてIntel Xeon Gold 5218R、GeForce RTX 4090、PCIe第3世代x16でも帯域制約下の評価を行う。",
-    "quality_effect": "圧縮によってGPU常駐KVを削減するため完全保持と比べれば近似的な情報選択を行うが、CPU側にはサテライトヘッドの完全KVを残し、注意ドリフト時に必要情報を再取得して不可逆な情報消失を緩和する。LongBench、LongBench v2、InfiniteBench、NIAH、U-NIAHで完全注意計算に近い品質を維持する。",
-    "source": "https://arxiv.org/abs/2601.13684",
-    "sources": ["https://arxiv.org/abs/2601.13684", "https://arxiv.org/html/2601.13684", "https://arxiv.org/pdf/2601.13684"],
-    "code": "https://github.com/ponytaill/HeteroCache",
-    "implementation": "高水準のPyTorchを中心にした試作で、GPU・CPU階層KV、ピボット監視型の非同期取得、注意ヘッド単位の予算配分を実装する。著者は専用CUDAカーネルをまだ実装していないと明記する。公式コードは https://github.com/ponytaill/HeteroCache で公開されている。",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+    "summary": "エージェント型LLMでは、一つの利用者セッションが何度も追加入力を送り、以前の会話履歴を再利用するため、KVキャッシュの局所性が通常チャットより非常に高い。BAILIANの本番トレースでは入力トークンの約81〜82%が再利用可能で、その約3分の2が同一セッション内の後続要求に由来する。一方、既存のキャッシュ優先ルーティングは最初に選んだGPUへ後続要求をほぼ固定し、長く重いセッションが一部インスタンスを過負荷にする。SMetricはセッションの最初の要求だけを純粋な負荷分散で配置し、後続要求は原則としてKV命中が最大のインスタンスへ戻す。これにより最初の一回でセッションを均等にばらまき、その後は高い局所再利用を維持する。さらに対象インスタンスが平均負荷を大きく超える場合や、セッションKVが実質的に追い出された場合は負荷分散へ戻して長大セッションを移行する。H20×32 GPUと本番由来トレースで、プリフィル・デコード同居構成のクラスタTPSを最良比較方式より10〜16%、分離構成のプリフィルTPSを2〜34%改善する。",
+    "list_summary": "セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。",
+    "authors": [
+      "Jiahao Wang",
+      "Kaizhan Lin",
+      "Kaixi Zhang",
+      "Jinbo Han",
+      "Xingda Wei",
+      "Sijie Shen",
+      "Chenguang Fang",
+      "Wenyuan Yu",
+      "Rong Chen",
+      "Haibo Chen"
+    ],
+    "authors_affiliations": "主な所属はShanghai Jiao Tong University Institute of Parallel and Distributed SystemsとAlibaba Group。Kaizhan LinはShanghaiTech University所属で、本研究はIPADS, Shanghai Jiao Tong Universityでのインターン中に実施したと記載されている。",
+    "published": "2026-07-09",
+    "publication": "arXiv preprint v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "エージェント型LLM配信",
+      "セッション指向スケジューリング",
+      "KVキャッシュ再利用",
+      "負荷分散",
+      "プリフィル・デコード分離",
+      "グローバルKVストア"
+    ],
+    "importance": "エージェント負荷では要求単位のキャッシュ命中率最大化がクラスタ全体の処理量最大化と一致しないことを本番トレースで示し、セッション開始時の配置を負荷分散の制御点として使う。既存APIの会話履歴からターン番号を推定でき、ルータ側にセッション状態を持たないため実運用へ導入しやすい。",
+    "hardware_evaluation": "実機。4サーバー×各NVIDIA H20 GPU 8基、合計32 GPU。各GPUは96GB HBM3。サーバー当たり160 CPUコア、1280GB DRAM、サーバー間は200 Gbps RDMA。ルータは別CPUサーバー64コア・256GB DRAM。",
+    "quality_effect": "モデル重みやKV内容を近似せず、要求をどのインスタンスへ送るかだけを変えるため生成品質を直接変更しない。KVがない場所へ移した場合は必要な接頭辞をグローバルKV層から取得するか再計算する。",
+    "source": "https://arxiv.org/abs/2607.08565",
+    "sources": [
+      "https://arxiv.org/abs/2607.08565",
+      "https://arxiv.org/pdf/2607.08565"
+    ],
+    "code": null,
+    "implementation": "vLLM v0.12.0を基盤に、LMCacheとMooncakeを用いるグローバルKV層を組み合わせて実装。論文はSMetricと本番トレースを正式公開時にオープンソース化すると述べるが、2026-09-14時点のv1一次資料では恒久的な公式コードURLは確認できない。",
     "last_checked": "2026-09-14",
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v2の一次資料にある参考文献節",
-    "references_total": 28,
+    "references_source": "primary-reference-section",
+    "references_total": 59,
     "references": [
-      {"canonical_id": "arXiv:2406.02069", "arxiv_id": "2406.02069"},
-      {"canonical_id": "arXiv:2412.19437", "arxiv_id": "2412.19437"},
-      {"canonical_id": "arXiv:2402.02750", "arxiv_id": "2402.02750"},
-      {"canonical_id": "arXiv:2503.12491", "arxiv_id": "2503.12491"},
-      {"canonical_id": "arXiv:2601.03267", "arxiv_id": "2601.03267"},
-      {"canonical_id": "arXiv:2410.21465", "arxiv_id": "2410.21465"},
-      {"canonical_id": "arXiv:2406.10774", "arxiv_id": "2406.10774"},
-      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388"},
-      {"canonical_id": "arXiv:2501.01005", "arxiv_id": "2501.01005"}
+      {
+        "canonical_id": "arXiv:2602.00328",
+        "arxiv_id": "2602.00328"
+      },
+      {
+        "canonical_id": "arXiv:2507.17769",
+        "arxiv_id": "2507.17769"
+      }
     ]
   },
-  "reservation": {"claim_id": "claim-73a0e418c00f418830f8a47e", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9df7bd2cc9990f1f8cfa5e79",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

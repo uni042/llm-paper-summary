@@ -2,25 +2,89 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-73a0e418c00f418830f8a47e",
-  "job_id": "job-research-f379557cdc6a8294",
+  "attempt_id": "attempt-9df7bd2cc9990f1f8cfa5e79",
+  "job_id": "job-research-44ece09f5c0f4e7c",
   "data": {
-    "overview": "HeteroCacheは少ないGPU上のKV予算でも完全注意計算に近い長文脈精度を保つ。Qwen2.5-14BではKV容量30%でLongBench平均49.97に対して完全注意計算50.55、LongBench v2平均33.6に対して完全注意計算33.2を得る。Llama-3.1-8BではKV容量50%でLongBench 49.42に対して完全注意計算49.77、InfiniteBench 47.34に対して47.56を維持する。システム面では文脈長が伸びても復号遅延の増加を抑え、224K文脈で完全注意計算比約3倍、頻繁なCPU取得を行うOmniKV比40倍超の高速化を報告する。128K文脈ではCPUメモリ最大17.95 GB、PCIe帯域最大21.07 GB/sで、PCIe第4世代x16の理論帯域31.5 GB/s以内に収まる。",
+    "overview": "プリフィル・デコード同居構成では、グローバルKV層を利用できる条件でSMetricは最良比較方式よりSLO内クラスタTPSを10〜16%改善する。グローバルKV層がない場合はBAILIANとの差が1%以内まで縮み、初回負荷分散と共有接頭辞のグローバル再利用が組み合わさることが主な利得源だと分かる。Qwen3-235Bではピーク有効TPS 516 tok/sでBAILIANより8%高い。プリフィル・デコード分離構成では、グローバルKV容量全域で最強比較方式よりプリフィルTPSを2〜34%改善する。局所KV命中率をBAILIANとほぼ同等に保ちながら負荷偏りを減らし、TTFTとTPOTの尾部も改善する。",
     "key_results": [
-      {"metric": "LongBench平均", "value": "KV容量30%で49.97", "baseline": "Qwen2.5-14Bの完全注意計算50.55", "condition": "Qwen2.5-14B-Instruct", "interpretation": "GPU常駐KVを70%削減しても完全注意計算との差を0.58点に抑え、ShadowKV 46.93、OmniKV 46.48、CAKE 46.92を上回る。"},
-      {"metric": "LongBench v2平均", "value": "KV容量30%で33.6", "baseline": "Qwen2.5-14Bの完全注意計算33.2", "condition": "Qwen2.5-14B-Instruct", "interpretation": "圧縮条件でも完全注意計算と同等以上の平均値を示し、動的取得が長文脈推論での情報損失を抑える。"},
-      {"metric": "LongBench v2推論モデル平均", "value": "KV容量50%で28.9", "baseline": "DeepSeek-R1-Distill-Llama-8Bの完全注意計算29.2", "condition": "DeepSeek-R1-Distill-Llama-8B", "interpretation": "長い思考過程でも0.3点差に収まり、後から重要になった中間文脈を動的に呼び戻す効果を示す。"},
-      {"metric": "InfiniteBench平均", "value": "KV容量50%で47.34", "baseline": "Llama-3.1-8Bの完全注意計算47.56", "condition": "Llama-3.1-8B-Instruct", "interpretation": "100K超を含む超長文脈でも完全注意計算との差を小さく保つ。"},
-      {"metric": "復号高速化", "value": "約3倍", "baseline": "完全注意計算", "condition": "Llama-3.1-8B、224K文脈", "interpretation": "長文脈ほどGPU上で計算するKV量の削減が効き、事前充填の最初のトークン時間をほぼ増やさず復号を高速化する。"},
-      {"metric": "復号高速化", "value": "40倍超", "baseline": "OmniKV", "condition": "超長文脈の遅延評価", "interpretation": "ほぼ毎段階に近い粗粒度CPU取得を避け、代表ヘッドの注意ドリフト時だけ取得することで入出力律速を大きく削減する。"},
-      {"metric": "CPUメモリとPCIe帯域", "value": "最大17.95 GB / 21.07 GB/s", "baseline": "PCIe第4世代x16の理論31.5 GB/s", "condition": "128K文脈、A100 PCIe 80GB", "interpretation": "CPU側の完全KV保管領域は容量を消費するが、主要評価機では転送帯域が接続上限以内に収まる。"},
-      {"metric": "動的取得発火率", "value": "0.823%", "baseline": "連続取得", "condition": "1,000トークン連続生成", "interpretation": "代表ピボットによる注意ドリフト監視でCPU取得を稀な事象に限定し、通常の復号段階で入出力を避ける。"},
-      {"metric": "U-NIAH ROUGE-1", "value": "128Kで2.195", "baseline": "完全注意計算2.195", "condition": "Llama-3.1-8B-Instruct", "interpretation": "複数の探索対象を含む条件でも128Kでは完全注意計算と同値で、動的取得が複雑な依存関係を保持できる。"},
-      {"metric": "Qasperのアブレーション得点", "value": "完全構成46.00 / 予算配分なし44.97 / 動的取得なし45.32", "baseline": "完全なHeteroCache", "condition": "Llama-3.1-8B、KV容量50%", "interpretation": "注意ヘッドの安定性に基づく予算配分と、ピボット監視型の動的取得の双方が品質維持へ寄与する。"}
+      {
+        "metric": "同居構成のSLO内クラスタTPS",
+        "value": "最良比較方式比+10〜16%",
+        "baseline": "BAILIAN / LMetric / Load Balance",
+        "condition": "Qwen3-Coder-30B-A3B、グローバルKV容量を掃引",
+        "interpretation": "初回要求を均等配置し、後続だけをKV局所性へ戻すことでキャッシュ命中と負荷均衡を両立する。"
+      },
+      {
+        "metric": "グローバルKVなしのTPS",
+        "value": "BAILIANとの差1%以内",
+        "baseline": "BAILIAN",
+        "condition": "global tier=0",
+        "interpretation": "初回負荷分散では共有システム接頭辞のローカル命中を失うため、グローバルKV層が主要改善を引き出す。"
+      },
+      {
+        "metric": "Qwen3-235Bピーク有効TPS",
+        "value": "516 tok/s、BAILIAN比+8%、同一運転点のLMetric比+20%",
+        "baseline": "BAILIAN / LMetric",
+        "condition": "4GPU×8インスタンス",
+        "interpretation": "より大きいモデルでもセッション単位の初回均衡が有効で、重いセッションの固定偏りを抑える。"
+      },
+      {
+        "metric": "分離構成のプリフィルTPS",
+        "value": "最強比較方式比+2〜34%",
+        "baseline": "BAILIAN / LMetric / Load Balance",
+        "condition": "Qwen3-Coder-30B-A3B、32 prefill instances",
+        "interpretation": "未プリフィルトークン量を負荷指標に切り替えても同じセッション中心方針が機能する。"
+      },
+      {
+        "metric": "同居構成のローカルKV命中率",
+        "value": "SMetric約64%、BAILIAN約65%、全体再利用約76%",
+        "baseline": "BAILIAN",
+        "condition": "グローバルKV十分",
+        "interpretation": "負荷分散を導入しても後続セッションを固定するため局所再利用をほぼ失わない。"
+      },
+      {
+        "metric": "負荷偏り",
+        "value": "最大/平均負荷比2.6×、BAILIAN 3.0×、LMetric 3.2×、負荷分散2.0×",
+        "baseline": "BAILIAN / LMetric / Load Balance",
+        "condition": "Qwen3-Coder-30B-A3B",
+        "interpretation": "純粋負荷分散ほど均一ではないが、キャッシュ優先方式の偏りを明確に緩和する。"
+      },
+      {
+        "metric": "同居構成TTFT",
+        "value": "中央値1.1s、BAILIAN比17%低下",
+        "baseline": "BAILIAN",
+        "condition": "Qwen3-Coder-30B-A3B",
+        "interpretation": "キュー偏りを減らすことでキャッシュ局所性を維持しながら最初のトークン待ちを短縮する。"
+      },
+      {
+        "metric": "同居構成TPOT",
+        "value": "P50/P90が各最良比較方式より10%/20%低い",
+        "baseline": "各percentileの最良比較方式",
+        "condition": "Qwen3-Coder-30B-A3B",
+        "interpretation": "過負荷インスタンスへのセッション集中を抑える効果が継続生成にも現れる。"
+      },
+      {
+        "metric": "分離構成TTFT",
+        "value": "中央値1.1s vs BAILIAN 1.8sで37%低下、P90 18%低下、P99 7%低下",
+        "baseline": "BAILIAN / Load Balance / LMetric",
+        "condition": "Qwen3-Coder-30B-A3B",
+        "interpretation": "プリフィル負荷の均衡が尾部待ち時間を抑える。"
+      },
+      {
+        "metric": "事前フィルタの効果",
+        "value": "P90/P99 TTFT 16.1/51.2s→12.1/45.3s、P95 TPOT 89.2→82.5ms",
+        "baseline": "SMetric basic without overload/eviction guards",
+        "condition": "guard ablation",
+        "interpretation": "通常時TPSへの影響は小さいが、極端な長セッションやKV消失時の尾部遅延を安全弁が抑える。"
+      }
     ],
-    "negative_results": "CPU側にはサテライトヘッドの完全KVを保持するため、ホストメモリ使用量は文脈長にほぼ比例して増え、128K文脈で17.95 GBに達する。非同期取得を計算の背後へ隠せるかどうかはCPUとGPUの接続帯域に依存し、著者も極端に低帯域な環境では入出力待ちを完全に隠せないと明記する。試作は高水準PyTorchで専用CUDAカーネルを持たないため、報告性能は低水準最適化後の上限ではない。圧縮に使う注意ヘッド分類は事前校正で決めるため、未知分野で注意構造が大きく変わる場合の頑健性には追加検証が必要である。",
-    "interpretation": "性能向上は単純なトークン削除ではなく、『常にGPUへ完全保持するヘッド』『CPUへ完全コピーを残して必要時だけ戻すヘッド』『静的圧縮で十分なヘッド』を分けることから生じる。注意ヘッド間の冗長性を使って代表ピボットだけを監視すれば、すべての圧縮ヘッドを復号のたびに検索する必要がなく、注意ドリフトを検知した時だけ入出力を発生させられる。このため品質回復のための動的取得と転送削減を両立し、長文脈ほど完全注意計算との速度差が広がる。",
-    "quality_impact": "不可逆な削除より品質保持を重視し、サテライトの完全KVをCPUへ残して注意ドリフト時に再取得する。GPU上のKV容量を30〜50%へ削減してもLongBench、LongBench v2、InfiniteBenchで完全注意計算に近い結果を示す。ただし完全同一出力を保証する無損失方式ではなく、注意上位トークンの選択に基づく近似圧縮である。"
+    "negative_results": "グローバルKV層がない条件ではBAILIANに対するTPS改善が1%以内で、SMetric単独の優位性は小さい。低負荷の1.0倍付近でも方式間差は1%未満で、スケジューリングが効くのは主に資源競合が生じる領域である。負荷を2倍まで上げると全方式が深刻な過負荷となってTPSが低下する。Qwen3-Coder-30B-A3BのTPOT P99ではBAILIANよりやや悪い条件もあり、全ての尾部指標で常に優位ではない。また評価対象はコーディングエージェントとQwen3系に偏る。",
+    "interpretation": "エージェント型負荷では、後続ターンを毎回再配置する必要はなく、将来多数の後続要求を生むセッションの最初の一回を均等に撒くことが負荷均衡に大きく効く。初回後は強いセッション内局所性を利用して同じGPUへ戻せるため、純粋負荷分散のようにKV再利用を犠牲にしない。グローバルKV層は初回配置で失う共有接頭辞を補い、局所性と均衡の交換条件をさらに緩める。",
+    "quality_impact": "要求ルーティングだけを変更しモデル演算やKV値を近似しないため、生成品質の交換条件はない。評価で用いる有効TPSは本番TTFT/TPOT SLOを両方満たした要求だけを数えるため、単に遅い要求を増やして処理量を見かけ上高くする方式でもない。"
   },
-  "reservation": {"claim_id": "claim-73a0e418c00f418830f8a47e", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9df7bd2cc9990f1f8cfa5e79",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

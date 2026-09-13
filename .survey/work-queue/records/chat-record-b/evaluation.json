@@ -2,17 +2,40 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-73a0e418c00f418830f8a47e",
-  "job_id": "job-research-f379557cdc6a8294",
+  "attempt_id": "attempt-9df7bd2cc9990f1f8cfa5e79",
+  "job_id": "job-research-44ece09f5c0f4e7c",
   "data": {
-    "hardware": "主評価環境はIntel Xeon Gold 6338（2.00GHz）、256GiBのDDR4メモリ、NVIDIA A100 PCIe 80GB、80GBのHBM2eで構成される。CPUとGPUの接続はPCIe第4世代x16で、理論上の片方向帯域は約31.5GB/sである。補足の低帯域接続試験ではIntel Xeon Gold 5218RとNVIDIA GeForce RTX 4090をPCIe第3世代x16で接続し、理論帯域約15.75GB/sの条件でも評価する。",
-    "software": "評価実装は高水準のPyTorch処理を中心としたHeteroCache試作系である。DeepSeek-R1-Distill-Llama-8Bではbitsandbytesを用いた4ビット重み量子化を併用し、KVキャッシュ選択と重み量子化が直交的に組み合わせられることも確認する。疎な注意計算と動的取得に特化した独自CUDAカーネルは現版では実装されていない。",
-    "methodology": "通常型モデルとしてLlama-3.1-8B-InstructとQwen2.5-14B-Instruct、推論特化モデルとしてDeepSeek-R1-Distill-Llama-8Bを用いる。長文理解はLongBench、LongBench v2、InfiniteBench、単一・複数needle検索はNIAHとU-NIAHで測定する。比較対象は完全注意、Quest、ShadowKV、OmniKV、CAKEで、圧縮方式は固定トークン数ではなく同じKVメモリ予算比率を持つよう揃える。主な予算比率は30%または50%である。Llama系では安定性と類似性のしきい値を0.5、Qwen系では安定性しきい値を0.4とし、注意ドリフトのしきい値は安定性しきい値と合わせる。遅延評価はLlama-3.1-8B-Instructを用い、プリフィルでは最初のトークンまでの時間、復号では50トークン生成時の一トークン当たり平均遅延を測る。文脈長は最大224Kまで伸ばす。補足では128K文脈におけるCPUメモリとPCIe帯域、1,000トークン連続生成における取得発火率と末尾遅延、RTX 4090とPCIe第3世代による低帯域接続条件、128KのLongBench Proを用いた校正結果の転用可能性を評価する。",
-    "datasets": ["LongBench長文理解", "LongBench v2長文推論", "InfiniteBench超長文脈", "NIAH単一needle検索", "U-NIAH複数needle検索", "LongBench Pro長文校正", "Wikipedia校正データ"],
-    "models": ["Llama-3.1-8B-Instruct", "Qwen2.5-14B-Instruct", "DeepSeek-R1-Distill-Llama-8B"],
-    "baselines": ["完全注意方式FullAttention", "Quest", "ShadowKV", "OmniKV", "CAKE"],
-    "metrics": ["長文ベンチマーク得点", "KVメモリ予算比率", "最初のトークンまでの時間TTFT", "一トークン当たり復号遅延", "CPUメモリ使用量", "PCIe帯域使用量", "動的取得の発火率", "95・99パーセンタイル復号遅延"],
-    "scope": "品質面では複数モデルと複数の長文脈課題を使うため、単一課題だけに依存しない。一方、主要なシステム遅延は単一A100 PCIe 80GBで測られており、多GPU配信や多数要求の同時処理は直接評価しない。CPU・GPU階層記憶には十分なホストメモリが必要で、128K文脈ではCPU側の最大使用量が17.95GBとなる。同条件でPCIe帯域の最大使用量は21.07GB/sで、第4世代x16の理論上限約31.5GB/s以内に収まる。低帯域の第3世代接続でも32Kまで追加試験しているが、著者は極端に狭い接続では非同期取得を計算の背後へ完全に隠せない可能性を明記している。"
+    "hardware": "4台のサーバーに各NVIDIA H20 GPU 8基を搭載し、合計32 GPUを使用する。各GPUは96GB HBM3、各サーバーは160 CPUコアと1280GB DRAMを持ち、サーバー間は200 Gbps RDMAで接続する。ルータは別の64コアCPU・256GB DRAMサーバーで動かす。",
+    "software": "vLLM v0.12.0を基盤にし、グローバルKV層としてLMCacheとMooncakeを利用する。グローバル層は200 Gbps RDMAで接続されたCPUメモリを用いる。プリフィル・デコード同居構成と分離構成の両方を評価し、分離構成ではプリフィル側の負荷を未処理トークン量で測る。",
+    "methodology": "Alibaba BAILIANの商用コーディングエージェントから、2026年5月29日10:00〜12:00のピーク時間帯に取得した2種類の本番トレースを分析する。Trace1はTB級で人気のモデル、Trace2は約280Bモデルのクラスタから得られ、いずれも少なくとも数千アクセラレータ規模で運用される。性能評価ではTrace1を対象負荷へ標本化して再生し、記録された生成長に合わせて応答を生成した後、後続要求中の応答部分を書き換えて元トレースのKV再利用形態を維持する。モデルはQwen3-Coder-30B-A3Bを単一GPU×32インスタンス、Qwen3-235B-A22B-FP8を4GPU×8インスタンスで評価する。比較方式は純粋負荷分散、LMetric、BAILIAN本番スケジューラ。グローバルKV容量をローカルKV容量の0、0.4、0.8、1.6、3.2倍に変え、到着負荷も掃引する。",
+    "scope": "実機32 H20 GPUでの評価で、商用本番トレースを利用する点は強いが、性能再生は主にTrace1で行い、モデルもQwen3系MoEの2種類に限られる。両トレースは同じ商用コーディングエージェント製品に由来し、検索・ブラウザ操作・音声など他のエージェント負荷への一般化は未検証。クラスタ間の広域スケジューリングは対象外である。",
+    "workloads": [
+      "BAILIAN coding-agent Trace1",
+      "BAILIAN coding-agent Trace2の特性分析",
+      "Qwen3-Coder-30B-A3B",
+      "Qwen3-235B-A22B-FP8",
+      "プリフィル・デコード同居",
+      "プリフィル・デコード分離"
+    ],
+    "baselines": [
+      "Load Balance",
+      "LMetric",
+      "BAILIAN production scheduler"
+    ],
+    "metrics": [
+      "SLO内クラスタTPS",
+      "SLO内プリフィルTPS",
+      "TTFT",
+      "TPOT",
+      "ローカルKV命中率",
+      "全体KV再利用率",
+      "最大負荷/平均負荷比"
+    ],
+    "reproducibility": "GPU・CPU・ネットワーク構成、vLLM版、グローバルKV基盤、モデル、比較方式、トレース採取時刻、負荷再生方法、容量掃引、主要閾値感度が記載される。論文はSMetricとトレースを公開予定としているが、v1時点では公式コードURLがなく、元の商用トレースを第三者が直ちに取得できないため現時点の完全再現性には制約がある。"
   },
-  "reservation": {"claim_id": "claim-73a0e418c00f418830f8a47e", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9df7bd2cc9990f1f8cfa5e79",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
