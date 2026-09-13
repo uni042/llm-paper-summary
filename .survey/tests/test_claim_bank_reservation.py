@@ -105,7 +105,7 @@ class ClaimBankReservationTests(unittest.TestCase):
             self.assertEqual(claim_a["record_bank"], bank_a)
             self.assertEqual(claim_b["record_bank"], bank_b)
 
-    def test_existing_unrelated_active_claim_is_not_reassigned_during_new_request(self):
+    def test_existing_unrelated_active_claim_is_not_reassigned_and_fences_new_bank_use(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             seed_free_banks(root)
@@ -119,10 +119,13 @@ class ClaimBankReservationTests(unittest.TestCase):
             old_claim = json.loads((root / ".survey/work-queue/claims/job-old.json").read_text())
             new_claim = json.loads((root / ".survey/work-queue/claims/job-new.json").read_text())
             new_result = json.loads((root / ".survey/work-queue/claim-results/req-new.json").read_text())
+            assignment = new_result["assignments"][0]
 
             self.assertNotIn("record_bank", old_claim)
-            self.assertIsInstance(new_claim.get("record_bank"), str)
-            self.assertEqual(new_result["assignments"][0]["record_bank"], new_claim["record_bank"])
+            self.assertIsNone(new_claim.get("record_bank"))
+            self.assertEqual(new_claim.get("record_bank_fallback"), "library")
+            self.assertIsNone(assignment.get("record_bank"))
+            self.assertEqual(assignment.get("record_bank_fallback"), "library")
 
 
 if __name__ == "__main__":
