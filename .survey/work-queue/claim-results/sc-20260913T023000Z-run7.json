@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T023000Z-run7",
+  "worker_id": "scheduled-chat-20260913-1130-run7",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-7c0598aabd36d6bf",
+      "claim_id": "claim-3d8b5f3aa76451b4a7e15a79",
+      "worker_id": "scheduled-chat-20260913-1130-run7",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-3d8b5f3aa76451b4a7e15a79",
+      "claimed_at": "2026-09-13T02:29:57+00:00",
+      "expires_at": "2026-09-13T10:29:57+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7c0598aabd36d6bf"
+      ],
+      "job": {
+        "job_id": "job-research-7c0598aabd36d6bf",
+        "type": "research",
+        "parent_job_id": "job-3a2b4785347c6fcd",
+        "priority": 90,
+        "canonical_id": "arXiv:2512.12990",
+        "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference",
+        "source_url": "https://arxiv.org/abs/2512.12990",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.12990-slicemoe-bit-sliced-expert-caching.md",
+        "selection_reason": "Flashを下位階層に持つオンデバイスMoEで、専門家キャッシュのmiss率を抑えるために専門家を固定精度の不可分単位として保持する代わりに、ビットスライス単位でキャッシュし必要度に応じて精度を組み立てる。動的ビットスライスキャッシュ、校正不要の非対称Matryoshka量子化、prefill時の予測キャッシュwarmupを組み合わせ、DeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bでdecodeエネルギーを最大2.85倍削減し、latencyを最大1.81倍改善する。expert cache・Flash階層・量子化を一体化した重点テーマ直結の候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T23:08:28+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "ValueError: slot metadata requires blob_sha",
+        "last_validation_failed_at": "2026-09-13T00:47:06+00:00"
+      }
+    },
+    {
+      "job_id": "job-research-ee741ee249b93f89",
+      "claim_id": "claim-d6eb262d52fb0abc95279126",
+      "worker_id": "scheduled-chat-20260913-1130-run7",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-d6eb262d52fb0abc95279126",
+      "claimed_at": "2026-09-13T02:29:57+00:00",
+      "expires_at": "2026-09-13T10:29:57+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-ee741ee249b93f89"
+      ],
+      "job": {
+        "job_id": "job-research-ee741ee249b93f89",
+        "type": "research",
+        "parent_job_id": "job-3e23e5daa0a22bf8",
+        "priority": 90,
+        "canonical_id": "arXiv:2607.05147",
+        "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+        "source_url": "https://arxiv.org/abs/2607.05147",
+        "paper_path": "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+        "selection_reason": "並列draftの長い候補列でacceptanceが急減し、高並列servingでは拒否されるtokenのverificationがbatch容量を浪費する問題に対し、semi-autoregressive draftでblock内依存を補い、prefix survival probabilityとengine throughput profileからrequestごとのverification長を動的制御する。DeepSeek-V4のlive trafficでMTP-1比、同等throughput時のper-user generation speedを60〜85%改善し、実運用のPareto frontierを押し広げたと報告しており、投機的復号をserving負荷へ直接適応させる強い新着候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T00:38:44+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "ValueError: slot metadata requires blob_sha",
+        "last_validation_failed_at": "2026-09-13T00:49:51+00:00"
+      }
+    },
+    {
+      "job_id": "job-research-8df4b126a68a6be4",
+      "claim_id": "claim-e03478b99d84a6e4a643dc35",
+      "worker_id": "scheduled-chat-20260913-1130-run7",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-e03478b99d84a6e4a643dc35",
+      "claimed_at": "2026-09-13T02:29:57+00:00",
+      "expires_at": "2026-09-13T10:29:57+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-8df4b126a68a6be4"
+      ],
+      "job": {
+        "job_id": "job-research-8df4b126a68a6be4",
+        "type": "research",
+        "parent_job_id": "job-71aa62ea72552734",
+        "priority": 89,
+        "canonical_id": "arXiv:2606.06453",
+        "title": "Vortex: A Programmable System for Efficient Sparse Attention Serving",
+        "source_url": "https://arxiv.org/abs/2606.06453",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md",
+        "selection_reason": "疎注意方式ごとに異なる索引・選択・注意計算を個別実装するとサービング基盤への統合が難しく、動的要求下でGPU利用率も落ちる問題に対し、複数の疎注意パターンを統一的に表現・実行するプログラマブルなサービング基盤を提案する。Blackwell B200を含む実機評価で完全注意比最大3.46倍、GLM-4.7-Flashでは最大4.7倍の高速化を報告しており、個別のKV削減手法ではなく疎注意をサービング機構として汎用化する点が既存SPIN/KARATと異なる強候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T23:16:12+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "ValueError: slot metadata requires blob_sha",
+        "last_validation_failed_at": "2026-09-13T00:52:39+00:00"
+      }
+    },
+    {
+      "job_id": "job-research-a46283c0339631e6",
+      "claim_id": "claim-5c194984996665fa7c8f8769",
+      "worker_id": "scheduled-chat-20260913-1130-run7",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-5c194984996665fa7c8f8769",
+      "claimed_at": "2026-09-13T02:29:57+00:00",
+      "expires_at": "2026-09-13T10:29:57+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-a46283c0339631e6"
+      ],
+      "job": {
+        "job_id": "job-research-a46283c0339631e6",
+        "type": "research",
+        "parent_job_id": "job-e62e2bd040e93661",
+        "priority": 89,
+        "canonical_id": "arXiv:2410.15332",
+        "title": "EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models",
+        "source_url": "https://arxiv.org/abs/2410.15332",
+        "paper_path": null,
+        "selection_reason": "prefix一致に依存する従来context cacheを一般化し、chunkの位置に依存しないKV再利用をLLM servingへ導入した基礎的システム。AttnLinkで静的attention sparsityを用いて精度回復に必要な再計算を絞り、KVSplitで意味的一貫性を保つchunkingを行う。TTFT最大8倍、throughput最大7倍を報告しており、近年のHYPIC/LinearKV/MEPIC等が直接発展させるposition-independent caching系統の重要な欠落として優先度が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T23:32:38+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T02:29:57+00:00"
+}
