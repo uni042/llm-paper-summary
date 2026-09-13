@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-6ff7fcf9a77bead8e21921d8",
-  "job_id": "job-research-de92658797430cf6",
-  "data": {
-    "overview": "TaiChiはShareGPTとArXiv要約、Qwen2.5-14B/32B、2種類の均衡SLOで、90%以上の要求がTTFT/TPOTを同時に満たす最大要求率を一貫して引き上げる。集約型に対して9〜47%、分離型に対して29〜77%のgoodput向上を示す。要約SLO1では14B/32Bで集約型より27%/35%、分離型より77%/74%高い。最大対応負荷で比較すると、分離型に対するp90 TTFTを2.42〜13.20倍、集約型に対するp90 TPOTを1.11〜1.69倍短縮する。構成要素を段階導入した14B要約試験ではSLO達成率が66.6%から91.2%へ上がり、流動デコードで12.9ポイント、長さ認識プリフィルでさらに11.7ポイント改善する。KV転送、プリフィル判断、デコード判断の費用は総要求時間の0.20%、0.01%、0.89%に留まる。",
-    "key_results": [
-      {"metric":"全評価でのgoodput改善","value":"PD aggregation比9〜47%、PD disaggregation比29〜77%","baseline":"vLLM上の集約型・分離型","condition":"ShareGPT/ArXiv要約、Qwen2.5-14B/32B、90% SLO達成","interpretation":"TTFTだけ/TPOTだけに強い二方式の間で、P-heavy/D-heavy構成と要求単位の遅延移譲が均衡SLOの未利用余裕を再配分する。"},
-      {"metric":"要約SLO1のgoodput","value":"14Bで集約型比+27%、分離型比+77%；32Bで+35%、+74%","baseline":"PD aggregation / PD disaggregation","condition":"ArXiv Summarization、SLO1","interpretation":"長いプリフィルでは全インスタンスがプリフィルへ参加する利点と、D-heavyの低干渉デコードを同時に利用できる効果が大きい。"},
-      {"metric":"ボトルネック尾部遅延","value":"TTFT 2.42〜13.20倍短縮、TPOT 1.11〜1.69倍短縮","baseline":"TTFTは分離型、TPOTは集約型","condition":"TaiChiの最大goodput負荷","interpretation":"分離型のプリフィル能力不足と集約型のデコード干渉をそれぞれ別のインスタンス特性で解消する。"},
-      {"metric":"SLO達成率の構成要素改善","value":"66.6% → 91.2%","baseline":"4インスタンスCP256集約型","condition":"Qwen2.5-14B、要約SLO1","interpretation":"混合アーキテクチャを土台に、流動デコードが+12.9ポイント、長さ認識プリフィルがさらに+11.7ポイント寄与する。"},
-      {"metric":"制御・転送費用","value":"KV転送0.20%、prefill scheduling 0.01%、decode scheduling 0.89%","baseline":"総要求時間に対する割合","condition":"14B要約SLO1","interpretation":"高帯域NVLink/NCCLと軽量な要求選択により、要求間移動を増やしても制御費用は小さい。"}
-    ],
-    "negative_results": "TaiChiは全SLOで固定構成が最良ではなく、インスタンス比と二つのチャンクサイズを負荷/SLOに合わせて探索する必要がある。頻繁なデコードのD-heavyへの戻しが発生する場合はP-heavyチャンクが大き過ぎる、またはD-heavy数が不足している兆候であり、流動制御だけでは不適切なアーキテクチャ構成を救えない。プリフィル側で全インスタンスの予測TTFTがSLOを超える場合、論文評価では公平性のためランダム割当を行うためSLO違反が残る。低帯域ネットワークではKV移送が無視できず、集約型との差が縮む可能性がある。",
-    "interpretation": "TaiChiの利得は、すべての要求を速くするのではなく、すでにSLO余裕を持つ要求を意図的に少し遅くし、そのGPU時間・HBMを違反しそうな要求へ渡す点にある。混合モードはバッチ単位では集約型の利用率を維持しつつ、要求単位では分離型の移動自由度を持つ。デコードでは現時点の長出力要求をTPOT余裕の大きい代理指標として使い、プリフィルでは要求長とキュー時間からTTFT余裕を明示推定するため、出力長を事前に知らなくても要求単位の遅延移譲が可能になる。",
-    "quality_impact": "モデル重み・精度・生成手順を変更せず、要求の実行位置、チャンクサイズ、フェーズ移送だけを変えるため、モデル品質を犠牲にする高速化ではない。"
-  },
-  "reservation": {"claim_id":"claim-6ff7fcf9a77bead8e21921d8","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-0c9caae092f9a4537458d713",
+  "job_id": "job-research-5c8a51a10227b970",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0c9caae092f9a4537458d713",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
