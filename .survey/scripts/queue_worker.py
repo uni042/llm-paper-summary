@@ -17,6 +17,7 @@ from typing import Any
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import survey  # noqa: E402
+import claim_state  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "work-queue"
@@ -273,6 +274,8 @@ def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
     state = read_json(DISCOVERY_STATE, {}) or {}
     history = state.get("history") if isinstance(state.get("history"), list) else []
     source_submission = str(sub.get("_file") or meta.get("source_submission") or "").strip()
+    if source_submission:
+        source_submission = Path(source_submission).as_posix()
     if source_submission and any(
         isinstance(row, dict) and row.get("source_submission") == source_submission
         for row in history
@@ -607,8 +610,14 @@ def queue_snapshot():
         counts.setdefault(j.get("type", "unknown"), {})
         s = j.get("status", "unknown")
         counts[j["type"]][s] = counts[j["type"]].get(s, 0) + 1
-    ready = [j for j in jobs if j.get("status") == "ready"]
-    ready.sort(key=lambda j: (-int(j.get("priority") or 0), j.get("created_at", "")))
+    claiming = claim_state.snapshot_claiming(jobs, ROOT.parent)
+    claims = claim_state.current_claims(ROOT.parent)
+    ready = [
+        j for j in jobs
+        if j.get("status") == "ready"
+        and not (j.get("type") in claim_state.CLAIMABLE_TYPES and claims.get(str(j.get("job_id")), {}).get("active"))
+    ]
+    ready.sort(key=lambda j: (-int(j.get("priority") or 0), j.get("created_at", ""), str(j.get("job_id") or "")))
     visible_ready = ready[:8]
     if not any(j.get("type") == "discovery" for j in visible_ready):
         discovery = next((j for j in ready if j.get("type") == "discovery"), None)
@@ -616,6 +625,7 @@ def queue_snapshot():
             visible_ready.append(discovery)
     return {
         "counts": counts,
+        "claiming": claiming,
         "next_jobs": [{
             k: j.get(k) for k in ("job_id", "type", "lane", "priority", "canonical_id", "title", "source_url", "paper_path", "instructions", "completion")
         } for j in visible_ready],

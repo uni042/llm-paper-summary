@@ -72,7 +72,7 @@ def object_time(obj):
         return None
     for key in (
         "completed_at", "superseded_at", "rejected_at", "failed_at",
-        "processed_at", "submitted_at", "updated_at", "created_at",
+        "processed_at", "submitted_at", "assigned_at", "expires_at", "updated_at", "created_at",
     ):
         value = parse_time(obj.get(key))
         if value:
@@ -192,6 +192,57 @@ def collect_terminal_jobs(root, retention_days, now):
     return candidates, skipped
 
 
+def collect_claim_artifacts(root, retention_days, now):
+    """Collect only settled claim history; ready-job claims and pending IO live."""
+    base = root / ".survey/work-queue"
+    claims_root = base / "claims"
+    jobs_root = base / "jobs"
+    candidates = []
+    skipped = []
+    if claims_root.is_dir():
+        for path in sorted(claims_root.glob("*.json")):
+            claim = read_json(path)
+            job_id = str((claim or {}).get("job_id") or path.stem)
+            job = read_json(jobs_root / f"{job_id}.json")
+            if not isinstance(job, dict) or job.get("status") not in TERMINAL:
+                skipped.append({"path": path.relative_to(root).as_posix(), "reason": "current_ready_or_unknown_job"})
+                continue
+            ts = object_time(claim) or git_last_change(root, path)
+            if older_than(ts, retention_days, now):
+                candidates.append({"path": path, "kind": "terminal_claim", "timestamp": ts.isoformat() if ts else None})
+
+    requests = base / "claim-requests"
+    results = base / "claim-results"
+    if requests.is_dir():
+        for request in sorted(requests.glob("*.json")):
+            result = results / request.name
+            request_obj = read_json(request)
+            result_obj = read_json(result) if result.is_file() else None
+            # A result without an explicit processed_at is still in-flight from
+            # GC's perspective; allocator output may be rewritten by a rerun.
+            processed = parse_time((result_obj or {}).get("processed_at"))
+            if not result.is_file() or processed is None:
+                skipped.append({"path": request.relative_to(root).as_posix(), "reason": "claim_request_not_settled"})
+                continue
+            times = [ts for ts in (object_time(request_obj), processed) if ts]
+            newest = max(times) if times else None
+            if not older_than(newest, retention_days, now):
+                continue
+            candidates.extend([
+                {"path": request, "kind": "settled_claim_request", "timestamp": newest.isoformat() if newest else None},
+                {"path": result, "kind": "settled_claim_result", "timestamp": newest.isoformat() if newest else None},
+            ])
+    if results.is_dir():
+        for result in sorted(results.glob("*.json")):
+            if (requests / result.name).exists():
+                continue
+            result_obj = read_json(result)
+            processed = parse_time((result_obj or {}).get("processed_at"))
+            if processed and older_than(processed, retention_days, now):
+                candidates.append({"path": result, "kind": "orphan_claim_result", "timestamp": processed.isoformat()})
+    return candidates, skipped
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
@@ -205,7 +256,8 @@ def main():
 
     transport, transport_skipped = collect_settled_transport(root, args.transport_retention_days, now)
     jobs, job_skipped = collect_terminal_jobs(root, args.job_retention_days, now)
-    candidates = transport + jobs
+    claim_artifacts, claim_skipped = collect_claim_artifacts(root, args.job_retention_days, now)
+    candidates = transport + jobs + claim_artifacts
     deleted = []
     counts = {}
     for item in candidates:
@@ -224,7 +276,7 @@ def main():
         "candidate_counts_by_kind": counts,
         "deleted_count": len(deleted),
         "deleted": deleted,
-        "skipped": transport_skipped + job_skipped,
+        "skipped": transport_skipped + job_skipped + claim_skipped,
         "live_reference_paths": LIVE_REFERENCE_PATHS,
         "protected": [
             "papers/**", ".survey/docs/**", ".survey/scripts/**", ".github/workflows/**",
@@ -232,6 +284,7 @@ def main():
             ".survey/survey-state/frozen-training.json", ".survey/work-queue/next-jobs.json",
             ".survey/work-queue/state.json", ".survey/work-queue/maintenance-cycle.json",
             ".survey/work-queue/discovery-state.json", ".survey/work-queue/run-ledger.json",
+            ".survey/work-queue/claim-requests/**", ".survey/work-queue/claim-results/**", ".survey/work-queue/claims/**",
             ".survey/work-queue/records/**", ".survey/work-queue/transport/**",
             ".survey/work-queue/fallback-inbox/**", ".survey/work-queue/fallback-archive/**",
             ".survey/work-queue/fallback-failed/**", ".survey/work-queue/submissions/chat-inbox.json",

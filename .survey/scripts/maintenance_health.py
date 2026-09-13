@@ -16,6 +16,10 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import claim_state  # noqa: E402
+
 TERMINAL = {"completed", "superseded", "rejected", "failed", "cancelled", "blocked_permanent"}
 ACTIVE_DUPLICATE_STATUSES = {"ready", "processing", "in_progress"}
 VISIBLE_JOB_FIELDS = (
@@ -93,7 +97,7 @@ def _load_jobs(root: Path) -> tuple[dict[str, dict[str, Any]], list[dict[str, An
     return jobs, findings, safe_to_repair
 
 
-def build_queue_snapshot(jobs: dict[str, dict[str, Any]]) -> dict[str, Any]:
+def build_queue_snapshot(jobs: dict[str, dict[str, Any]], root: Path | None = None) -> dict[str, Any]:
     counts: dict[str, dict[str, int]] = {}
     for job in jobs.values():
         job_type = str(job.get("type") or "unknown")
@@ -101,8 +105,15 @@ def build_queue_snapshot(jobs: dict[str, dict[str, Any]]) -> dict[str, Any]:
         counts.setdefault(job_type, {})
         counts[job_type][status] = counts[job_type].get(status, 0) + 1
 
-    ready = [job for job in jobs.values() if job.get("status") == "ready"]
-    ready.sort(key=lambda job: (-int(job.get("priority") or 0), str(job.get("created_at") or "")))
+    claim_root = root if root is not None else Path(__file__).resolve().parents[2]
+    claiming = claim_state.snapshot_claiming(jobs, claim_root)
+    claims = claim_state.current_claims(claim_root)
+    ready = [
+        job for job in jobs.values()
+        if job.get("status") == "ready"
+        and not (job.get("type") in claim_state.CLAIMABLE_TYPES and claims.get(str(job.get("job_id")), {}).get("active"))
+    ]
+    ready.sort(key=lambda job: (-int(job.get("priority") or 0), str(job.get("created_at") or ""), str(job.get("job_id") or "")))
     visible = ready[:8]
     if not any(job.get("type") == "discovery" for job in visible):
         discovery = next((job for job in ready if job.get("type") == "discovery"), None)
@@ -110,6 +121,7 @@ def build_queue_snapshot(jobs: dict[str, dict[str, Any]]) -> dict[str, Any]:
             visible.append(discovery)
     return {
         "counts": counts,
+        "claiming": claiming,
         "next_jobs": [{key: job.get(key) for key in VISIBLE_JOB_FIELDS} for job in visible],
     }
 
@@ -214,7 +226,7 @@ def audit_queue(root: Path, repair_snapshot: bool = False) -> dict[str, Any]:
     findings.extend(_audit_fallback_overlap(root))
     findings.extend(_audit_record_banks(root))
 
-    expected = build_queue_snapshot(jobs)
+    expected = build_queue_snapshot(jobs, root=root)
     snapshot_path = root / ".survey/work-queue/next-jobs.json"
     current = read_json(snapshot_path, {}) or {}
     drift = _snapshot_without_time(current) != expected

@@ -33,17 +33,18 @@ def read_object(path: Path) -> dict[str, Any] | None:
 
 
 def ready_job_ids(repo_root: Path) -> set[str]:
+    jobs_root = repo_root / ".survey/work-queue/jobs"
+    ids: set[str] = set()
+    if jobs_root.is_dir():
+        for path in jobs_root.glob("*.json"):
+            job = read_object(path)
+            if isinstance(job, dict) and job.get("status") == "ready" and job.get("job_id"):
+                ids.add(str(job["job_id"]))
+        return ids
+    # Keep compatibility for isolated callers that only provide the old snapshot.
     value = read_object(repo_root / NEXT_JOBS)
-    if not value:
-        return set()
-    jobs = value.get("next_jobs")
-    if not isinstance(jobs, list):
-        return set()
-    return {
-        str(job.get("job_id"))
-        for job in jobs
-        if isinstance(job, dict) and job.get("job_id")
-    }
+    jobs = value.get("next_jobs") if value else None
+    return {str(job.get("job_id")) for job in jobs or [] if isinstance(job, dict) and job.get("job_id")}
 
 
 def current_transport(repo_root: Path) -> tuple[dict[str, Any] | None, bool]:

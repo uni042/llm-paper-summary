@@ -67,6 +67,37 @@ class AuditMetadataRoutingTest(unittest.TestCase):
 
 
 class DiscoveryReplenishmentTest(unittest.TestCase):
+    def test_active_claim_hides_ready_job_and_reports_claiming_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            survey_root = root / ".survey"
+            (survey_root / "work-queue/claims").mkdir(parents=True)
+            (survey_root / "work-queue/claims/job-research-0.json").write_text(
+                '{"job_id":"job-research-0","claim_id":"claim-a","expires_at":"2999-01-01T00:00:00+00:00"}',
+                encoding="utf-8",
+            )
+            jobs = [{
+                "job_id": "job-research-0", "type": "research", "lane": "research",
+                "status": "ready", "priority": 90, "created_at": "2026-09-12T00:00:00+00:00",
+            }, {
+                "job_id": "job-research-1", "type": "research", "lane": "research",
+                "status": "ready", "priority": 80, "created_at": "2026-09-12T00:00:01+00:00",
+            }, {
+                "job_id": "job-discovery", "type": "discovery", "lane": "discovery",
+                "status": "ready", "priority": 50, "created_at": "2026-09-12T00:00:02+00:00",
+            }]
+            original_root = queue_worker.ROOT
+            try:
+                queue_worker.ROOT = survey_root
+                with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+                    snapshot = queue_worker.queue_snapshot()
+            finally:
+                queue_worker.ROOT = original_root
+            visible = {row["job_id"] for row in snapshot["next_jobs"]}
+            self.assertNotIn("job-research-0", visible)
+            self.assertIn("job-research-1", visible)
+            self.assertIn("job-discovery", visible)
+            self.assertEqual(snapshot["claiming"], {"ready_research_audit": 2, "actively_claimed": 1, "claimable": 1})
     def test_ready_research_does_not_block_discovery_replenishment(self) -> None:
         jobs = [
             {
