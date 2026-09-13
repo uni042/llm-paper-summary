@@ -11,6 +11,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 PROCESSOR = SCRIPTS / "process_immutable_submission.py"
 BATCH = SCRIPTS / "process_immutable_submission_batch.py"
 REDUCER = SCRIPTS / "reduce_submission_effects.py"
+IDENTITY_DELTA = SCRIPTS / "identity_delta.py"
 
 
 def _load(path: Path, name: str):
@@ -201,6 +202,24 @@ class ParallelSubmissionBatchTests(unittest.TestCase):
             self.assertGreaterEqual(max_total, 2)
             self.assertEqual(max_by_job["job-a"], 1)
             self.assertEqual(max_by_job["job-b"], 1)
+
+    def test_same_paper_is_one_group_even_when_job_ids_differ(self):
+        batch = _load(BATCH, "batch_same_paper_test")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            research = repo / "research.json"
+            audit = repo / "audit.json"
+            _write(research, {"job_id": "job-research", "paper_path": "papers/inference/x.md"})
+            _write(audit, {"job_id": "job-audit", "paper_path": "papers/inference/x.md"})
+            self.assertEqual(
+                batch.descriptor_group_key(repo, research),
+                batch.descriptor_group_key(repo, audit),
+            )
+
+    def test_identity_delta_writes_are_atomic_for_parallel_readers(self):
+        text = IDENTITY_DELTA.read_text(encoding="utf-8")
+        self.assertIn("NamedTemporaryFile", text)
+        self.assertIn("os.replace", text)
 
     def test_parallelism_is_bounded_to_record_bank_capacity(self):
         self.assertTrue(BATCH.is_file(), "process_immutable_submission_batch.py must exist")
