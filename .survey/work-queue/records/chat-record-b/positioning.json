@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-4ab4826dacf02fe8f8c6442d",
   "job_id": "job-research-68c639f67ef98aac",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4ab4826dacf02fe8f8c6442d",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はH100上のGranite 8B、Llama 70B、Mistral 123Bと合成パイプラインに限定され、実際のエージェントベンチマーク、実サービス到着トレース、アダプタ人気の偏り、複数ノード通信、異種GPUは未評価である。アダプタと入力をランダム生成するため、実タスクでaLoRAが標準LoRAとどの程度品質を維持するかは本論文だけでは判断できない。KV再利用はキャッシュがGPUへ残っていることに依存し、高負荷・長文脈で容量を超えるとブロック追い出しにより利得が落ちる。デコード時間最大21倍の改善要因について、著者はブロック割当減少やメモリ連続性改善を推測するが、個別要因の厳密な切り分けは示さない。aLoRAは標準LoRAより高いランクを必要とする場合があり、学習側の追加費用も本評価の中心外である。",
+    "differences": "Punica、S-LoRAなど従来の多LoRAサービングは、多数のアダプタを同じ基盤重みへ効率よく適用する演算・バッチ処理を主眼とするが、標準LoRA間のKVは注意投影が異なるため共有できない。CaraServeはLoRA読込みとプリフィルをCPU/GPUで重ねて切替コストを隠すが、長い文脈そのものの再計算は残る。本方式はモデル側で起動前計算を基盤と同一に保つaLoRAを前提に、vLLMのキャッシュ識別規則を緩めてモデル横断KV共有そのものを可能にする。通常のvLLM自動プレフィックスキャッシュが同一モデル・同一アダプタ内の共通接頭辞を狙うのに対し、基盤と複数aLoRAの境界を跨ぐ点が差分である。",
+    "implementation_status": "著者はvLLM改変を https://github.com/tdoublep/vllm/tree/alora で公開している。論文では起動前ハッシュ規則、マスク準備、前向き実行統合の擬似コードまで示し、自動プレフィックスキャッシュ、チャンク化プリフィル、torch.compile、標準LoRAとの互換性を確認する。",
+    "research_positioning": "KVキャッシュ再利用と多アダプタLLMサービングの交点にある実行時システム研究。KVを圧縮・退避するのではなく、どのモデル間なら同じKVを正しく同一物として扱えるかというキャッシュ同一性の範囲を、モデル設計とサービング実装の共同設計で広げる。",
+    "relation_to_existing_repository": "リポジトリのプレフィックスキャッシュ、KVオフロード、LoRAサービング、エージェントサービング系統と直接関係する。HiCacheや階層KV研究が同じKVをどこに保持するかを最適化するのに対し、本方式は基盤と適応モデルのどこまでを同じKVとして共有可能かを広げるため補完的である。ServerlessLoRAの基盤重み共有が巨大なパラメータの重複を削るのに対し、Activated LoRAは長い履歴のKV重複・再計算を削る。両者を組み合わせれば、多数アダプタを跨ぐ重みと文脈の二重共有が可能になる。一方、KV容量超過で利得が失われる結果は、キャッシュ配置・要求ルーティング・SSD/CPU階層化とaLoRAを共同最適化する研究余地を示す。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-4ab4826dacf02fe8f8c6442d", "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST", "worker_kind": "scheduled_chat"}
 }
