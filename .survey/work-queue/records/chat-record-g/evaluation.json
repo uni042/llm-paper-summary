@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d0e5054b6a381715aab8671d","job_id":"job-research-ec01b6de422e6692","data":{"hardware":"クラウド上のNVIDIA RTX 4080 SUPER 32GBとRTX 4090 48GBでGPU検証する。主要モデルはQwen2.5-7B-Instruct、Mistral-7B-Instruct-v0.3、Gemma-2-9B-itで、Qwen2.5-14Bは注意局所性の比較に用いる。","software":"PyTorch 2.11.0+cu130、Transformers 5.9.0、Python 3.12。公開kvcache-labのスクリプトとraw JSONから表・図を再生成可能とする。","methodology":"WikiText-2でFP16基準に対するPPL変化を測り、正規化転送予算b=0.3/0.5/0.7を比較する。検索保持は4096トークンのNIAHを19挿入位置で測る。転送経路の性能はKV量子化・転送相当・復号を含むTTFTとデコード速度で測り、2K/4K/8K文脈を走査する。比較はPDTrim、Semantic Working Set、UniformINT8、RandomTier、およびGreedy/SinkProtect/Balanced/Adaptive。論文は最終データ生成前に注意計測、削除mask、NIAH質問欠落、Adaptive分岐、Gemma chat templateの不具合を修正し、旧ログを最終結果へ使わないと明記する。","scope":"完全な本番PDサービング基盤のエンドツーエンド評価ではない。ネットワーク混雑、複数要求の連続バッチ、prefix共有、ノード配置、コールド層取得を含まず、主要フル評価も7〜9B級3モデルに限定される。","workloads":["WikiText-2 PPL","4096トークンNIAH","コード文書","科学文書","2K/4K/8K文脈転送経路timing"],"baselines":["FP16 full KV","PDTrim","Semantic Working Set (SWS)","UniformINT8","RandomTier","SpectrumKV Greedy","SpectrumKV SinkProtect","SpectrumKV Balanced"],"metrics":["PPL相対変化","NIAH正解率","TTFT","デコードtokens/s","INT4キー/値コサイン類似度","注意局所性Gini係数"],"reproducibility":"公開artifactに全実験スクリプト、raw JSON、表・図再生成コード、モデル設定、ハイパーパラメータを含む。論文は実験途中で修正した不具合と、どのログを破棄したかもAppendix Bで明示する。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c66591cb8cc3d72be4a20c91",
+  "job_id": "job-research-02e232341d4ef088",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c66591cb8cc3d72be4a20c91",
+    "worker_id": "scheduled-chat-paper-20260914T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
