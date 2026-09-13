@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T08:07:30.573308+00:00",
+  "updated_at": "2026-09-13T08:11:59.883461+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18237,20 +18237,20 @@
     {
       "run_key": "2026-09-13T16:30:00+09:00",
       "first_recorded_at": "2026-09-13T07:35:55.175790+00:00",
-      "last_recorded_at": "2026-09-13T08:07:30.573308+00:00",
+      "last_recorded_at": "2026-09-13T08:11:59.883461+00:00",
       "signals": [
         "research_completed",
         "paper_materialized",
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 2,
-        "fallback_archived": 1
+        "new_papers": 3,
+        "fallback_archived": 2
       },
       "events": [
         {
@@ -18283,6 +18283,22 @@
             "fallback_archived",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34746996000:1",
+          "recorded_at": "2026-09-13T08:11:59.883461+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34746996000",
+            "run_attempt": "1",
+            "source_sha": "eb94f653d6b91ac40ace4df1a2fd70dd62179754"
+          },
+          "signals": [
+            "research_completed",
+            "fallback_archived",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18301,19 +18317,29 @@
           "title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-3a13b608454c59c4",
+          "type": "research",
+          "canonical_id": "arXiv:2604.03143",
+          "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
         "arXiv:2605.05467",
-        "arXiv:2405.04437"
+        "arXiv:2405.04437",
+        "arXiv:2604.03143"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [
-        ".survey/work-queue/fallback-archive/20260913T160000JST-research-2405.04437-vattention-turn5.json"
+        ".survey/work-queue/fallback-archive/20260913T160000JST-research-2405.04437-vattention-turn5.json",
+        ".survey/work-queue/fallback-archive/20260913T160000JST-research-2604.03143-tokendance-turn5.json"
       ],
       "paper_active_count_before": 405,
-      "paper_active_count_after": 407,
+      "paper_active_count_after": 408,
       "last_successful_action": "paper_materialized"
     }
   ]
