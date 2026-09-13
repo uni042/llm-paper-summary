@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:22 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 17:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -21,7 +21,7 @@
 | 全文精読完了（累計） | **219** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **issues_found** |
-| 次回保守までの通常run | **13 / 24** |
+| 次回保守までの通常run | **14 / 24** |
 
 ### 要注意
 
@@ -37,33 +37,33 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **171** |
-| 処理中（Active claims） | **41** |
-| 今すぐ着手可能（Claimable） | **130** |
+| 処理中（Active claims） | **42** |
+| 今すぐ着手可能（Claimable） | **129** |
 | :30 通常worker Active claims | **34** |
-| :00 補助worker Active claims | **4** |
+| :00 補助worker Active claims | **5** |
 | その他/帰属不明 Active claims | **3** |
 | :30 通常worker 直近claim | **09-13 17:22 JST** |
-| :00 補助worker 直近claim | **09-13 17:18 JST** |
+| :00 補助worker 直近claim | **09-13 17:30 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **63** |
+| 直近24h Research完了（帰属不明） | **57** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
 | 最新通常runのResearch完了 | **3** |
-| 最古の有効claimの経過時間 | **314 min** |
+| 最古の有効claimの経過時間 | **322 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- 直近24hのResearch完了のうち **63件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **57件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **72** |
-| Repo収録 | **72** |
+| Research完了 | **66** |
+| Repo収録 | **66** |
 | Audit完了 | **0** |
 | 探索評価候補 | **720** |
 | Research候補採用 | **224** |
@@ -71,12 +71,12 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **43.9%** |
 | 探索専用worker run（毎時枠） | **17** |
 | 探索専用worker round（stats観測） | **146** |
-| 通常worker run（ledger観測） | **22** |
+| 通常worker run（ledger観測） | **21** |
 | Fallback archive（全helper） | **18** |
 
 ### 24時間の流れ
 
-**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 72 → Repo収録 72**
+**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 66 → Repo収録 66**
 
 ## 直近の通常worker
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T16:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
 - P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 - P86 `arXiv:2601.11590` — EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
+- P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 
 ## 参考情報
 
