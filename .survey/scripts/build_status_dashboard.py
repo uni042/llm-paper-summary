@@ -42,9 +42,16 @@ def _in_window(item: dict[str, Any], cutoff: datetime, now: datetime) -> bool:
     return cutoff <= dt.astimezone(timezone.utc) <= now.astimezone(timezone.utc)
 
 
-def _run_minute(item: dict[str, Any]) -> int | None:
-    dt = _parse_dt(item.get("run_key"))
-    return None if dt is None else dt.astimezone(JST).minute
+def _is_specialist(row: dict[str, Any]) -> bool:
+    """Return whether a discovery row came from the discovery-only worker.
+
+    Scheduled Chat can start late, so specialist run_key values are not
+    guaranteed to land exactly on :00. The durable discovery row itself carries
+    the stable attribution markers instead.
+    """
+    round_name = str(row.get("round") or "").lower()
+    source_submission = str(row.get("source_submission") or "").lower()
+    return round_name.startswith("specialist-") or "specialist" in source_submission
 
 
 def _fmt_pct(num: int, den: int) -> str:
@@ -99,22 +106,10 @@ def _axis_rows(history: list[dict[str, Any]]) -> list[tuple[str, int, int, int]]
     )
 
 
-def _group_discovery_runs(
-    history: list[dict[str, Any]],
-    *,
-    minute: int | None = None,
-) -> list[dict[str, Any]]:
-    """Aggregate discovery rounds by Scheduled Chat run_key.
-
-    The specialist Scheduled Chat runs at :00 JST and the normal worker at :30
-    JST. discovery-state.json carries the original Scheduled Chat run_key, so it
-    is the authoritative source for worker attribution. The run ledger is not:
-    helper events can be merged into the latest normal-worker maintenance bucket.
-    """
+def _group_discovery_runs(history: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Aggregate discovery rounds by one Scheduled Chat execution run_key."""
     grouped: dict[str, dict[str, Any]] = {}
     for row in history:
-        if minute is not None and _run_minute(row) != minute:
-            continue
         run_key = str(row.get("run_key") or "")
         if not run_key:
             continue
@@ -178,16 +173,17 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     ledger_24 = [e for e in ledger_entries if _in_window(e, cutoff_24h, now_utc)]
     counts_24 = _sum_counts(ledger_24)
 
-    # Attribution is based on the run_key stored in discovery-state, not on the
-    # run-ledger bucket. The ledger intentionally merges helper events under the
-    # latest maintenance-cycle run key and therefore can mix specialist events
-    # into a :30 normal-worker bucket.
-    specialist_history = [row for row in discovery_history if _run_minute(row) == 0]
-    normal_discovery_history = [row for row in discovery_history if _run_minute(row) == 30]
+    # The run ledger can merge helper events into the latest normal-worker
+    # maintenance bucket, so discovery worker attribution must come from the
+    # discovery rows themselves. A Scheduled Chat execution can start several
+    # minutes after its nominal hour; exact run_key groups its rounds into one
+    # task execution while round/source_submission identify the specialist.
+    specialist_history = [row for row in discovery_history if _is_specialist(row)]
+    normal_discovery_history = [row for row in discovery_history if not _is_specialist(row)]
     specialist_24 = [row for row in specialist_history if _in_window(row, cutoff_24h, now_utc)]
-    specialist_runs = _group_discovery_runs(specialist_history, minute=0)
-    specialist_runs_24 = _group_discovery_runs(specialist_24, minute=0)
-    normal_discovery_runs = _group_discovery_runs(normal_discovery_history, minute=30)
+    specialist_runs = _group_discovery_runs(specialist_history)
+    specialist_runs_24 = _group_discovery_runs(specialist_24)
+    normal_discovery_runs = _group_discovery_runs(normal_discovery_history)
     normal_discovery_by_key = {row["run_key"]: row for row in normal_discovery_runs}
 
     evaluated_24 = sum(int(e.get("candidate_count") or 0) for e in specialist_24)
@@ -270,7 +266,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         f"| Repo収録 | **{int(latest_run_counts.get('new_papers') or 0)}** |",
         f"| Research/Audit blocked遷移 | **{_normal_blocked(latest_run)}** |",
         "",
-        "> Discoveryは `discovery-state.json` のrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。",
+        "> Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。",
         "",
         "## 直近の探索専用worker",
         "",
