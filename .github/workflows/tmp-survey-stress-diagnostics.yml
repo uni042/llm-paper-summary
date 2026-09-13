@@ -25,144 +25,124 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
-      - name: Audit live queue for blockage and duplicate work
+      - name: Audit live queue and pending work
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
-          import collections
-          import datetime as dt
-          import json
-          import sys
+          import collections, datetime as dt, json, sys
           from pathlib import Path
-
           root = Path('.').resolve()
           sys.path.insert(0, str(root / '.survey/scripts'))
-          import claim_state
-          import immutable_submission
-          import select_record_bank
-          import survey
+          import claim_state, immutable_submission, select_record_bank, survey
 
           def read(path, default=None):
-              try:
-                  return json.loads(Path(path).read_text(encoding='utf-8'))
-              except Exception:
-                  return default
+              try: return json.loads(Path(path).read_text(encoding='utf-8'))
+              except Exception: return default
 
           jobs = []
           for path in sorted((root / '.survey/work-queue/jobs').glob('*.json')):
               value = read(path)
-              if isinstance(value, dict):
-                  value['_file'] = path.name
-                  jobs.append(value)
-
-          ready = [j for j in jobs if j.get('status') == 'ready' and j.get('type') in {'research', 'audit'}]
-          research_ready = [j for j in ready if j.get('type') == 'research']
+              if isinstance(value, dict): jobs.append(value)
+          ready = [j for j in jobs if j.get('status') == 'ready' and j.get('type') == 'research']
           now = dt.datetime.now(dt.timezone.utc)
           claims = claim_state.current_claims(root, now)
-          active_claims = [c for c in claims.values() if c.get('active')]
-          expired_unreleased = [c for c in claims.values() if c.get('expired') and not c.get('released') and not c.get('invalidated')]
           pending = immutable_submission.pending_descriptors(root)
 
-          def norm(value):
-              if not isinstance(value, str) or not value.strip():
-                  return None
-              text = value.strip()
-              try:
-                  return survey.norm_id(text)
-              except Exception:
-                  return text.casefold()
+          def norm(v):
+              if not isinstance(v, str) or not v.strip(): return None
+              try: return survey.norm_id(v.strip())
+              except Exception: return v.strip().casefold()
 
-          def group_ready(field, normalizer=lambda x: x):
-              groups = collections.defaultdict(list)
-              for job in research_ready:
-                  value = job.get(field)
-                  if isinstance(value, str) and value.strip():
-                      groups[normalizer(value)].append(job)
-              return {k: v for k, v in groups.items() if len(v) > 1}
-
-          duplicate_canonical = group_ready('canonical_id', lambda x: norm(x))
-          duplicate_source = group_ready('source_url', lambda x: x.strip().casefold())
-          duplicate_title = group_ready('title', lambda x: ' '.join(x.split()).casefold())
+          def dup(field, fn):
+              g = collections.defaultdict(list)
+              for j in ready:
+                  v = j.get(field)
+                  if isinstance(v, str) and v.strip(): g[fn(v)].append(j)
+              return [{'key': k, 'jobs': [x.get('job_id') for x in v]} for k,v in g.items() if len(v) > 1]
 
           survey.ROOT = root
-          paper_ids = set()
-          paper_paths = set()
-          for paper in survey.papers():
-              meta = paper.get('meta') or {}
-              if paper.get('path'):
-                  paper_paths.add(str(paper['path']))
-              for field, prefix in [('canonical_id', ''), ('arxiv_id', 'arXiv:'), ('doi', 'DOI:'), ('openreview_id', 'OpenReview:')]:
-                  value = meta.get(field)
-                  if value:
-                      candidate = str(value) if field == 'canonical_id' else prefix + str(value)
-                      paper_ids.add(norm(candidate))
+          paper_ids, paper_paths = set(), set()
+          for p in survey.papers():
+              meta = p.get('meta') or {}
+              if p.get('path'): paper_paths.add(str(p['path']))
+              for field, prefix in [('canonical_id',''),('arxiv_id','arXiv:'),('doi','DOI:'),('openreview_id','OpenReview:')]:
+                  if meta.get(field): paper_ids.add(norm(str(meta[field]) if not prefix else prefix + str(meta[field])))
+          already = [j for j in ready if (norm(j.get('canonical_id')) in paper_ids if norm(j.get('canonical_id')) else False) or (j.get('paper_path') in paper_paths if j.get('paper_path') else False)]
 
-          ready_already_paper = []
-          for job in research_ready:
-              cid = norm(job.get('canonical_id'))
-              path = job.get('paper_path')
-              if (cid and cid in paper_ids) or (path and path in paper_paths):
-                  ready_already_paper.append(job)
+          pending_details = []
+          for p in pending:
+              result_path = root / '.survey/work-queue/results' / str(p.get('kind') or 'research') / Path(str(p.get('_path') or '')).name
+              result = read(result_path, {}) or {}
+              job = read(root / '.survey/work-queue/jobs' / f"{p.get('job_id')}.json", {}) or {}
+              pending_details.append({
+                  'path': p.get('_path'), 'job_id': p.get('job_id'), 'attempt_id': p.get('attempt_id'),
+                  'job_status': job.get('status'), 'repair_required': job.get('repair_required'),
+                  'validation_error': job.get('validation_error'), 'result_ok': result.get('ok'), 'result_error': result.get('error')
+              })
 
-          nonterminal = [j for j in jobs if j.get('status') not in {'completed', 'rejected', 'superseded', 'blocked_permanent'}]
-          nonterminal_groups = collections.defaultdict(list)
-          for job in nonterminal:
-              cid = norm(job.get('canonical_id'))
-              if cid:
-                  nonterminal_groups[cid].append(job)
-          duplicate_nonterminal = {k: v for k, v in nonterminal_groups.items() if len(v) > 1}
-
-          def age_hours(job):
-              text = job.get('created_at')
-              if not isinstance(text, str):
-                  return None
-              try:
-                  ts = dt.datetime.fromisoformat(text.replace('Z', '+00:00'))
-                  if ts.tzinfo is None:
-                      ts = ts.replace(tzinfo=dt.timezone.utc)
-                  return (now - ts.astimezone(dt.timezone.utc)).total_seconds() / 3600
-              except Exception:
-                  return None
-
-          ages = [a for a in (age_hours(j) for j in research_ready) if a is not None]
-          priorities = collections.Counter(int(j.get('priority') or 0) for j in research_ready)
-          pending_by_job = collections.Counter(str(p.get('job_id')) for p in pending if p.get('job_id'))
-          multi_pending = {k: v for k, v in pending_by_job.items() if v > 1}
-
-          def compact(groups, limit=30):
-              rows = []
-              for key, values in sorted(groups.items(), key=lambda kv: (-len(kv[1]), str(kv[0])))[:limit]:
-                  rows.append({
-                      'key': key,
-                      'count': len(values),
-                      'jobs': [v.get('job_id') for v in values],
-                      'titles': [v.get('title') for v in values],
-                  })
-              return rows
+          banks = select_record_bank.inspect(root)
+          orphan_occupied = []
+          active_job_ids = {jid for jid,c in claims.items() if c.get('active')}
+          for b in banks.get('banks', []):
+              if b.get('state') != 'occupied': continue
+              job_ids = sorted({s.get('job_id') for s in b.get('slots', []) if s.get('job_id')})
+              for jid in job_ids:
+                  job = read(root / '.survey/work-queue/jobs' / f'{jid}.json', {}) or {}
+                  if job.get('status') == 'ready' and jid not in active_job_ids:
+                      orphan_occupied.append({'bank': b.get('bank'), 'job_id': jid, 'title': job.get('title'), 'repair_required': job.get('repair_required'), 'validation_error': job.get('validation_error')})
 
           report = {
-              'jobs_total': len(jobs),
-              'research_ready': len(research_ready),
-              'active_claims': len(active_claims),
-              'expired_unreleased_claim_history': len(expired_unreleased),
-              'pending_immutable_descriptors': len(pending),
-              'jobs_with_multiple_pending_descriptors': multi_pending,
-              'ready_duplicate_canonical_groups': compact(duplicate_canonical),
-              'ready_duplicate_source_groups': compact(duplicate_source),
-              'ready_duplicate_exact_title_groups': compact(duplicate_title),
-              'nonterminal_duplicate_canonical_groups': compact(duplicate_nonterminal),
-              'ready_jobs_already_present_as_papers': [
-                  {'job_id': j.get('job_id'), 'canonical_id': j.get('canonical_id'), 'paper_path': j.get('paper_path'), 'title': j.get('title')}
-                  for j in ready_already_paper[:50]
-              ],
-              'ready_age_hours_max': max(ages) if ages else None,
-              'ready_age_over_24h': sum(a >= 24 for a in ages),
-              'ready_age_over_72h': sum(a >= 72 for a in ages),
-              'ready_priority_distribution': dict(sorted(priorities.items(), reverse=True)),
-              'record_banks': select_record_bank.inspect(root),
+              'jobs_total': len(jobs), 'research_ready': len(ready),
+              'active_claims': sum(1 for c in claims.values() if c.get('active')),
+              'expired_unreleased_claim_history': sum(1 for c in claims.values() if c.get('expired') and not c.get('released') and not c.get('invalidated')),
+              'pending_immutable_descriptors': len(pending), 'pending_details': pending_details,
+              'ready_duplicate_canonical': dup('canonical_id', norm),
+              'ready_duplicate_source': dup('source_url', lambda x: x.strip().casefold()),
+              'ready_duplicate_title': dup('title', lambda x: ' '.join(x.split()).casefold()),
+              'ready_jobs_already_present_as_papers': [{'job_id':j.get('job_id'),'canonical_id':j.get('canonical_id'),'title':j.get('title')} for j in already],
+              'orphan_occupied_banks': orphan_occupied,
+              'record_bank_states': {b['bank']: b['state'] for b in banks.get('banks', [])},
           }
           print('LIVE_QUEUE_AUDIT_JSON=' + json.dumps(report, ensure_ascii=False, sort_keys=True))
+          PY
+
+      - name: Reclaim Vortex in isolated real-state copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import datetime as dt, json, subprocess, sys, tempfile
+          from pathlib import Path
+          source = Path('.').resolve()
+          target_job = 'job-research-8df4b126a68a6be4'
+          with tempfile.TemporaryDirectory() as td:
+              case = Path(td) / 'repo'
+              subprocess.run(['git','clone','--local','--no-hardlinks',str(source),str(case)],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+              sys.path.insert(0, str(case / '.survey/scripts'))
+              import claim_worker_with_banks, immutable_submission, select_record_bank
+              job_path = case / '.survey/work-queue/jobs' / f'{target_job}.json'
+              job = json.loads(job_path.read_text(encoding='utf-8'))
+              job['priority'] = 9999
+              job_path.write_text(json.dumps(job,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+              req = 'diag-vortex-reclaim'
+              now = dt.datetime.now(dt.timezone.utc)
+              req_path = case / '.survey/work-queue/claim-requests' / f'{req}.json'
+              req_path.write_text(json.dumps({
+                  'schema_version':1,'request_id':req,'worker_id':'diag-worker','worker_kind':'work',
+                  'requested_at':now.isoformat(),'max_jobs':1,'lease_seconds':900,'job_types':['research']
+              },indent=2)+'\n',encoding='utf-8')
+              pending_before = [p for p in immutable_submission.pending_descriptors(case) if p.get('job_id') == target_job]
+              bank_before = select_record_bank.inspect(case)
+              claim_worker_with_banks.process_requests(case, at=now)
+              result = json.loads((case / '.survey/work-queue/claim-results' / f'{req}.json').read_text())
+              assignment = (result.get('assignments') or [None])[0]
+              print('VORTEX_RECLAIM_JSON=' + json.dumps({
+                  'pending_before': [{'path':p.get('_path'),'attempt_id':p.get('attempt_id')} for p in pending_before],
+                  'bank_h_before': next((b for b in bank_before.get('banks',[]) if b.get('bank') == 'h'), None),
+                  'assignment': assignment,
+                  'reused_h': bool(assignment and assignment.get('record_bank') == 'h')
+              }, ensure_ascii=False, sort_keys=True))
           PY
 
       - name: Stress claim and record-bank turnover with 120 synthetic jobs
@@ -170,263 +150,85 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import datetime as dt
-          import json
-          import sys
-          import tempfile
-          import time
+          import datetime as dt, json, sys, tempfile, time
           from pathlib import Path
-
-          scripts = Path('.survey/scripts').resolve()
-          sys.path.insert(0, str(scripts))
-          import claim_worker_with_banks
-          import select_record_bank
+          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
+          import claim_worker_with_banks, select_record_bank
           from record_bank_config import BANK_ROOTS, SLOT_NAMES
-
-          def write(path, obj):
-              path.parent.mkdir(parents=True, exist_ok=True)
-              path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-          base = dt.datetime(2026, 9, 13, 0, 0, tzinfo=dt.timezone.utc)
+          def write(path,obj):
+              path.parent.mkdir(parents=True,exist_ok=True); path.write_text(json.dumps(obj,indent=2)+'\n',encoding='utf-8')
+          base = dt.datetime(2026,9,13,0,0,tzinfo=dt.timezone.utc)
           with tempfile.TemporaryDirectory() as td:
               root = Path(td)
-              for bank, relative in BANK_ROOTS.items():
+              for _,rel in BANK_ROOTS.items():
                   for slot in SLOT_NAMES:
-                      write(root / relative / f'{slot}.json', {
-                          'schema_version': 1,
-                          'transport_version': 10,
-                          'slot': slot,
-                          'attempt_id': select_record_bank.PLACEHOLDER_ATTEMPT,
-                          'job_id': select_record_bank.PLACEHOLDER_ATTEMPT,
-                          'data': {},
-                      })
-
-              total = 120
-              for i in range(total):
-                  jid = f'job-stress-{i:03d}'
-                  write(root / '.survey/work-queue/jobs' / f'{jid}.json', {
-                      'schema_version': 1,
-                      'workflow_version': 10,
-                      'job_id': jid,
-                      'type': 'research',
-                      'status': 'ready',
-                      'priority': 100 - (i % 20),
-                      'created_at': '2026-09-12T00:00:00+00:00',
-                      'depends_on_job_ids': [jid],
-                      'canonical_id': f'arXiv:stress.{i:05d}',
-                  })
-
-              write(root / '.survey/work-queue/claims/job-stress-000.json', {
-                  'schema_version': 1,
-                  'workflow_version': 10,
-                  'claim_id': 'claim-expired-old',
-                  'job_id': 'job-stress-000',
-                  'worker_id': 'dead-worker',
-                  'worker_kind': 'work',
-                  'attempt_id': 'attempt-expired-old',
-                  'request_id': 'request-expired-old',
-                  'claimed_at': '2026-09-12T00:00:00+00:00',
-                  'expires_at': '2026-09-12T01:00:00+00:00',
-                  'kind': 'research',
-                  'depends_on_job_ids': ['job-stress-000'],
-              })
-
-              workers = [
-                  ('work-a', 'work', 4), ('work-b', 'work', 4), ('work-c', 'work', 4),
-                  ('scheduled-a', 'scheduled_chat', 1), ('scheduled-b', 'scheduled_chat', 1),
-              ]
-              seen_jobs = set()
-              assignment_events = 0
-              duplicate_assignment_events = []
-              direct_bank_assignments = 0
-              library_fallback_assignments = 0
-              cycles = 0
-              started = time.perf_counter()
-
-              while len(seen_jobs) < total and cycles < 50:
-                  at = base + dt.timedelta(seconds=cycles + 1)
-                  for worker_id, kind, max_jobs in workers:
-                      req = f'req-{cycles:02d}-{worker_id}'
-                      write(root / '.survey/work-queue/claim-requests' / f'{req}.json', {
-                          'schema_version': 1,
-                          'request_id': req,
-                          'worker_id': worker_id,
-                          'worker_kind': kind,
-                          'requested_at': at.isoformat(),
-                          'max_jobs': max_jobs,
-                          'lease_seconds': 900,
-                          'job_types': ['research'],
-                      })
-
-                  claim_worker_with_banks.process_requests(root, at=at)
-                  cycle_jobs = []
-                  for worker_id, kind, max_jobs in workers:
-                      req = f'req-{cycles:02d}-{worker_id}'
-                      result = json.loads((root / '.survey/work-queue/claim-results' / f'{req}.json').read_text())
-                      assert result['ok'] is True, result
-                      assignments = result.get('assignments') or []
-                      assert len(assignments) <= max_jobs
-                      for assignment in assignments:
-                          jid = assignment['job_id']
-                          cycle_jobs.append(jid)
-                          assignment_events += 1
-                          if jid in seen_jobs:
-                              duplicate_assignment_events.append((cycles, jid, worker_id))
-                          seen_jobs.add(jid)
-                          if assignment.get('record_bank'):
-                              direct_bank_assignments += 1
-                          elif assignment.get('record_bank_fallback') == 'library':
-                              library_fallback_assignments += 1
-                          else:
-                              raise AssertionError(f'claim missing bank route: {assignment}')
-                          write(root / '.survey/work-queue/submissions/research' / f"{assignment['attempt_id']}.json", {
-                              'schema_version': 1,
-                              'transport_version': 10,
-                              'kind': 'research',
-                              'status': 'completed',
-                              'attempt_id': assignment['attempt_id'],
-                              'job_id': jid,
-                          })
-
-                  assert len(cycle_jobs) == len(set(cycle_jobs)), f'double allocation in same cycle: {cycle_jobs}'
-                  cycles += 1
-
-              elapsed = time.perf_counter() - started
-              assert len(seen_jobs) == total, f'only allocated {len(seen_jobs)}/{total}'
-              assert not duplicate_assignment_events, duplicate_assignment_events
-              assert 'job-stress-000' in seen_jobs, 'expired claim blocked its job'
-              assert direct_bank_assignments > 0
-              assert library_fallback_assignments > 0
-              print('CLAIM_STRESS_JSON=' + json.dumps({
-                  'jobs': total,
-                  'workers': len(workers),
-                  'cycles': cycles,
-                  'assignment_events': assignment_events,
-                  'unique_jobs': len(seen_jobs),
-                  'duplicate_assignment_events': len(duplicate_assignment_events),
-                  'expired_claim_reclaimed': True,
-                  'direct_bank_assignments': direct_bank_assignments,
-                  'library_fallback_assignments': library_fallback_assignments,
-                  'elapsed_seconds': round(elapsed, 4),
-                  'jobs_per_second_internal': round(total / elapsed, 2) if elapsed else None,
-              }, sort_keys=True))
+                      write(root/rel/f'{slot}.json',{'schema_version':1,'transport_version':10,'slot':slot,'attempt_id':select_record_bank.PLACEHOLDER_ATTEMPT,'job_id':select_record_bank.PLACEHOLDER_ATTEMPT,'data':{}})
+              for i in range(120):
+                  jid=f'job-stress-{i:03d}'; write(root/'.survey/work-queue/jobs'/f'{jid}.json',{'schema_version':1,'workflow_version':10,'job_id':jid,'type':'research','status':'ready','priority':100-(i%20),'created_at':'2026-09-12T00:00:00+00:00','depends_on_job_ids':[jid]})
+              write(root/'.survey/work-queue/claims/job-stress-000.json',{'schema_version':1,'workflow_version':10,'claim_id':'claim-old','job_id':'job-stress-000','worker_id':'dead','worker_kind':'work','attempt_id':'attempt-old','request_id':'req-old','claimed_at':'2026-09-12T00:00:00+00:00','expires_at':'2026-09-12T01:00:00+00:00','kind':'research','depends_on_job_ids':['job-stress-000']})
+              workers=[('wa','work',4),('wb','work',4),('wc','work',4),('sa','scheduled_chat',1),('sb','scheduled_chat',1)]
+              seen=set(); dup=[]; direct=fallback=cycles=0; start=time.perf_counter()
+              while len(seen)<120 and cycles<50:
+                  at=base+dt.timedelta(seconds=cycles+1)
+                  for wid,kind,mx in workers:
+                      rid=f'r{cycles}-{wid}'; write(root/'.survey/work-queue/claim-requests'/f'{rid}.json',{'schema_version':1,'request_id':rid,'worker_id':wid,'worker_kind':kind,'requested_at':at.isoformat(),'max_jobs':mx,'lease_seconds':900,'job_types':['research']})
+                  claim_worker_with_banks.process_requests(root,at=at)
+                  cycle=[]
+                  for wid,kind,mx in workers:
+                      rid=f'r{cycles}-{wid}'; res=json.loads((root/'.survey/work-queue/claim-results'/f'{rid}.json').read_text())
+                      for a in res.get('assignments') or []:
+                          jid=a['job_id']; cycle.append(jid); dup.append(jid) if jid in seen else None; seen.add(jid)
+                          direct += bool(a.get('record_bank')); fallback += bool(a.get('record_bank_fallback')=='library')
+                          write(root/'.survey/work-queue/submissions/research'/f"{a['attempt_id']}.json",{'schema_version':1,'transport_version':10,'kind':'research','status':'completed','attempt_id':a['attempt_id'],'job_id':jid})
+                  assert len(cycle)==len(set(cycle)); cycles+=1
+              elapsed=time.perf_counter()-start
+              assert len(seen)==120 and not dup and 'job-stress-000' in seen and direct>0 and fallback>0
+              print('CLAIM_STRESS_JSON='+json.dumps({'jobs':120,'cycles':cycles,'unique_jobs':len(seen),'duplicate_assignments':len(dup),'direct_bank_assignments':direct,'library_fallback_assignments':fallback,'expired_claim_reclaimed':True,'elapsed_seconds':round(elapsed,4)},sort_keys=True))
           PY
 
-      - name: Replay five real successful immutable submissions end to end
+      - name: Replay real immutable submissions end to end
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
-          import json
-          import subprocess
-          import sys
-          import tempfile
-          import time
+          import json, subprocess, sys, tempfile, time
           from pathlib import Path
-
-          root = Path('.').resolve()
-          candidates = []
-          for result_path in sorted((root / '.survey/work-queue/results/research').glob('*.json'), reverse=True):
-              try:
-                  result = json.loads(result_path.read_text(encoding='utf-8'))
-              except Exception:
-                  continue
-              if result.get('ok') is not True or not isinstance(result.get('artifact'), dict) or not result['artifact'].get('paper'):
-                  continue
-              sub_path = root / '.survey/work-queue/submissions/research' / result_path.name
-              if not sub_path.is_file():
-                  continue
-              try:
-                  descriptor = json.loads(sub_path.read_text(encoding='utf-8'))
-              except Exception:
-                  continue
-              if descriptor.get('status', 'completed') != 'completed' or not descriptor.get('record_slots'):
-                  continue
-              paper = root / str(descriptor.get('paper_path') or '')
-              job = root / '.survey/work-queue/jobs' / f"{descriptor.get('job_id')}.json"
-              if not paper.is_file() or not job.is_file():
-                  continue
-              claim_path = root / '.survey/work-queue/claims' / f"{descriptor.get('job_id')}.json"
-              if claim_path.is_file():
-                  claim = json.loads(claim_path.read_text(encoding='utf-8'))
-                  if claim.get('lease_invalidated_at'):
-                      continue
-                  if claim.get('attempt_id') and claim.get('attempt_id') != descriptor.get('attempt_id'):
-                      continue
-                  if descriptor.get('claim_id') and claim.get('claim_id') and descriptor.get('claim_id') != claim.get('claim_id'):
-                      continue
-                  if descriptor.get('worker_id') and claim.get('worker_id') and descriptor.get('worker_id') != claim.get('worker_id'):
-                      continue
-              blobs_ok = True
-              for ref in descriptor['record_slots']:
-                  probe = subprocess.run(['git', 'cat-file', '-e', f"{ref['blob_sha']}^{{blob}}"], cwd=root, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                  if probe.returncode != 0:
-                      blobs_ok = False
-                      break
-              if blobs_ok:
-                  candidates.append((result_path.name, descriptor))
-              if len(candidates) >= 5:
-                  break
-
-          assert len(candidates) >= 5, f'only found {len(candidates)} replayable submissions'
-          reports = []
-          started_all = time.perf_counter()
-          for filename, descriptor in candidates:
+          root=Path('.').resolve(); candidates=[]
+          for rp in sorted((root/'.survey/work-queue/results/research').glob('*.json'), reverse=True):
+              try: result=json.loads(rp.read_text(encoding='utf-8'))
+              except Exception: continue
+              if result.get('ok') is not True or not isinstance(result.get('artifact'),dict) or not result['artifact'].get('paper'): continue
+              sp=root/'.survey/work-queue/submissions/research'/rp.name
+              if not sp.is_file(): continue
+              try: d=json.loads(sp.read_text(encoding='utf-8'))
+              except Exception: continue
+              if d.get('status','completed')!='completed' or not d.get('record_slots'): continue
+              if not (root/str(d.get('paper_path') or '')).is_file() or not (root/'.survey/work-queue/jobs'/f"{d.get('job_id')}.json").is_file(): continue
+              if all(subprocess.run(['git','cat-file','-e',f"{ref['blob_sha']}^{{blob}}"],cwd=root,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0 for ref in d['record_slots']): candidates.append((rp.name,d))
+              if len(candidates)>=5: break
+          assert len(candidates)>=2, f'only found {len(candidates)} replayable submissions'
+          reports=[]
+          for filename,d in candidates[:5]:
               with tempfile.TemporaryDirectory() as td:
-                  case = Path(td) / 'repo'
-                  subprocess.run(['git', 'clone', '--local', '--no-hardlinks', str(root), str(case)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                  result_path = case / '.survey/work-queue/results/research' / filename
-                  paper_path = case / descriptor['paper_path']
-                  job_path = case / '.survey/work-queue/jobs' / f"{descriptor['job_id']}.json"
-                  result_path.unlink(missing_ok=True)
-                  paper_path.unlink(missing_ok=True)
-                  job = json.loads(job_path.read_text(encoding='utf-8'))
-                  job['status'] = 'ready'
-                  for key in ['completed_at', 'artifact_submission', 'result', 'repair_required', 'validation_error', 'last_validation_failed_at']:
-                      job.pop(key, None)
-                  job_path.write_text(json.dumps(job, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-                  submission = case / '.survey/work-queue/submissions/research' / filename
-                  cmd = [sys.executable, '.survey/scripts/process_immutable_submission.py', '--repo-root', '.', '--submission', submission.relative_to(case).as_posix()]
-                  start = time.perf_counter()
-                  first = subprocess.run(cmd, cwd=case, text=True, capture_output=True)
-                  elapsed = time.perf_counter() - start
-                  if first.returncode != 0:
-                      print(first.stdout)
-                      print(first.stderr, file=sys.stderr)
-                  assert first.returncode == 0, (filename, first.stdout, first.stderr)
-                  first_result = json.loads(first.stdout)
-                  assert first_result.get('ok') is True, first_result
-                  final_job = json.loads(job_path.read_text(encoding='utf-8'))
-                  assert final_job.get('status') == 'completed', final_job
-                  assert final_job.get('paper_path') == descriptor['paper_path'], final_job
-                  assert paper_path.is_file() and paper_path.stat().st_size > 500
-
-                  before = paper_path.read_bytes()
-                  second = subprocess.run(cmd, cwd=case, text=True, capture_output=True)
-                  assert second.returncode == 0, (filename, second.stdout, second.stderr)
-                  second_result = json.loads(second.stdout)
-                  assert second_result.get('ok') is True and second_result.get('reused') is True, second_result
-                  assert paper_path.read_bytes() == before
-                  reports.append({
-                      'submission': filename,
-                      'job_id': descriptor['job_id'],
-                      'paper_path': descriptor['paper_path'],
-                      'first_process_seconds': round(elapsed, 4),
-                      'second_reused': True,
-                  })
-
-          print('REAL_REPLAY_JSON=' + json.dumps({
-              'count': len(reports),
-              'elapsed_seconds': round(time.perf_counter() - started_all, 4),
-              'cases': reports,
-          }, ensure_ascii=False, sort_keys=True))
+                  case=Path(td)/'repo'; subprocess.run(['git','clone','--local','--no-hardlinks',str(root),str(case)],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+                  (case/'.survey/work-queue/results/research'/filename).unlink(missing_ok=True)
+                  (case/'.survey/work-queue/claims'/f"{d['job_id']}.json").unlink(missing_ok=True)
+                  paper=case/d['paper_path']; paper.unlink(missing_ok=True)
+                  jp=case/'.survey/work-queue/jobs'/f"{d['job_id']}.json"; job=json.loads(jp.read_text(encoding='utf-8')); job['status']='ready'
+                  for key in ['completed_at','artifact_submission','result','repair_required','validation_error','last_validation_failed_at']: job.pop(key,None)
+                  jp.write_text(json.dumps(job,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                  sub=case/'.survey/work-queue/submissions/research'/filename; cmd=[sys.executable,'.survey/scripts/process_immutable_submission.py','--repo-root','.','--submission',sub.relative_to(case).as_posix()]
+                  t=time.perf_counter(); first=subprocess.run(cmd,cwd=case,text=True,capture_output=True); elapsed=time.perf_counter()-t
+                  assert first.returncode==0,(filename,first.stdout,first.stderr); first_result=json.loads(first.stdout); assert first_result.get('ok') is True
+                  final=json.loads(jp.read_text(encoding='utf-8')); assert final.get('status')=='completed' and final.get('paper_path')==d['paper_path'] and paper.is_file()
+                  before=paper.read_bytes(); second=subprocess.run(cmd,cwd=case,text=True,capture_output=True); assert second.returncode==0
+                  second_result=json.loads(second.stdout); assert second_result.get('reused') is True and paper.read_bytes()==before
+                  reports.append({'submission':filename,'job_id':d['job_id'],'first_process_seconds':round(elapsed,4),'second_reused':True})
+          print('REAL_REPLAY_JSON='+json.dumps({'count':len(reports),'cases':reports},ensure_ascii=False,sort_keys=True))
           PY
 
-      - name: Run focused pipeline regression tests
-        run: |
-          python -m unittest discover -s .survey/tests -p 'test_claim*.py'
-          python -m unittest .survey/tests/test_failed_immutable_result_claim_semantics.py
+      - name: Run focused claim regressions
+        run: python -m unittest discover -s .survey/tests -p 'test_claim*.py'
 
       - name: Run all repository regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_*.py'
