@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-00ad49beaa5eceaa4b67bfa2",
   "job_id": "job-research-666c253d539b3e43",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-00ad49beaa5eceaa4b67bfa2",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "SageSchedの主評価は単一GPU上での要求順序最適化であり、プリフィル・デコード分離、複数レプリカ間のルーティング、異種GPUクラスタへの配置は対象外である。64ノードの拡張性評価はシミュレーションで、実クラスタのネットワークや分散KVキャッシュ移動費用は含まない。意味履歴予測は最近の要求分布が将来にもある程度継続することを前提とし、急激な話題・利用者分布の変化では類似履歴が不足または陳腐化し得る。費用式はデコードの系列長依存部分を中心に近似し、FFNなど系列長と独立な定数的計算を省略するため、短い生成や異なるモデル構造では真の費用順序とずれる可能性がある。Gittins方策はプリエンプション可能性を利用するため、KVキャッシュ退避・復帰が高価な環境では切替費用を別途考慮する必要がある。",
+    "differences": "vLLM/SGLangのFCFSは要求需要を予測しない。FastServeは固定サービス量で多段フィードバックキューを下げ、未知処理時間へ対応する。SSJFはBERT系で出力長を単一点予測しSJFへ近づけ、LTRは出力長順位、TRAILは実行途中の特徴から残余長を推定する。これらに対しSageSchedは、専用予測モデルを学習せず類似プロンプト履歴から出力長の確率分布を得る点、出力長だけでなく入力長を含むKVキャッシュ・注意計算費用C=O^2/2+IOへ変換する点、平均値ではなく分布全体のGittins指数で優先順位を決める点が異なる。",
+    "implementation_status": "vLLM v0.8.2を基盤に実装し、FAISSを履歴検索へ利用する。論文は実機と最大64 GPUノードのシミュレータで評価しているが、arXiv v1本文にはSageSched固有の公式GitHub公開URLは記載されていない。",
+    "research_positioning": "LLM要求スケジューリングのうち、未知出力長を考慮するSJF/SRPT近似系を、確率分布とGPUメモリ需要まで含む費用ベース方策へ発展させる研究である。KVキャッシュ管理そのものを高速化するPagedAttention、圧縮、分離配信などとは直交し、それらが変化させるメモリ容量・競合条件を要求費用へ反映する上位スケジューラとして組み合わせられる。",
+    "relation_to_existing_repository": "リポジトリ内のLLMサービング・スケジューリング系ではFastServe、vLLM、TRAIL、Llumnix、Sarathi-Serve、DistServe/Mooncake系と関連する。SageSchedは実行エンジンやKVキャッシュ配置より要求優先順位の決定に焦点を置くため、プリフィル・デコード分離や階層メモリを導入した基盤でも、各要求の期待資源占有時間を費用分布として与え直せば補完的に利用できる。SSD/NVMeオフロード環境ではKVキャッシュやモデル状態の退避・復帰I/Oを費用式へ追加することが自然な拡張点になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-00ad49beaa5eceaa4b67bfa2","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
