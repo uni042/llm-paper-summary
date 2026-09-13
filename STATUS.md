@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 11:22 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 11:24 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -41,13 +41,13 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **8** |
-| 探索軸 | 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 |
-| 評価候補 | **34** |
+| 探索round | **9** |
+| 探索軸 | 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 |
+| 評価候補 | **35** |
 | 重複除外 | **24** |
-| Novel候補 | **10** |
+| Novel候補 | **11** |
 | Research候補採用 | **5** |
-| 重複率 | **70.6%** |
+| 重複率 | **68.6%** |
 
 ## 直近24時間
 
@@ -55,11 +55,11 @@ Run: **2026-09-13T11:00:00+09:00**
 |---|---:|
 | 通常worker run（ledger観測） | **23** |
 | 探索専用worker run（毎時枠） | **18** |
-| 探索専用worker round（stats観測） | **140** |
-| 探索評価候補 | **693** |
+| 探索専用worker round（stats観測） | **141** |
+| 探索評価候補 | **694** |
 | 重複除外 | **307** |
-| 重複率 | **44.3%** |
-| Novel候補 | **386** |
+| 重複率 | **44.2%** |
+| Novel候補 | **387** |
 | Research候補採用 | **224** |
 | Research完了 | **72** |
 | Repo収録 | **72** |
@@ -68,7 +68,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 24時間ファネル
 
-**探索専用worker評価 693 → 重複除外後 386 → Research候補採用 224 → Research完了 72 → Repo収録 72**
+**探索専用worker評価 694 → 重複除外後 387 → Research候補採用 224 → Research完了 72 → Repo収録 72**
 
 ## 探索専用workerの探索効率（直近24時間）
 
@@ -214,10 +214,11 @@ Run: **2026-09-13T11:00:00+09:00**
 | 動的parallelism再構成・KV state migration | 2 | 0 | 2 | 0.0% | 100.0% |
 | 新着KV圧縮・時間集約・長推論再参照 | 2 | 0 | 0 | 0.0% | 0.0% |
 | KVキャッシュ幾何学指標・backward reference | 1 | 0 | 1 | 0.0% | 100.0% |
+| 収録済み重要論文のforward citation・Llumnix系譜 | 1 | 0 | 0 | 0.0% | 0.0% |
 
 ### 直近5探索専用worker run
 
-- 2026-09-13T11:00:00+09:00 — 8 round: 評価 34 / 重複 24 / 採用 5 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認
+- 2026-09-13T11:00:00+09:00 — 9 round: 評価 35 / 重複 24 / 採用 5 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜
 - 2026-09-13T10:00:00+09:00 — 8 round: 評価 48 / 重複 31 / 採用 12 / 軸 新着LLM推論システム・通信／疎注意／多ターンKV / GPU実行環境・collective通信・prefill/decode共存 / 端末内LLM・OSメモリ圧力・Flash/NPU実行 / KVページ圧縮・低ランク表現・GPUカーネル / 分離サービングSLO・batch fairness・resource allocation / 投機的復号runtime・draft resource・CPU制約 / SSD expert offload・peer GPU cache tier・階層メモリ / 分離サービング通信・KV転送・network flow scheduling
 - 2026-09-13T09:00:00+09:00 — 13 round: 評価 58 / 重複 21 / 採用 16 / 軸 moe-cache-aware-routing-expert-skipping-fine-grained-execution / ssd-kv-cache-heterogeneous-gpu-serving-orchestration / production-autoscaling-disaggregated-serving-runtime / 2026-09新着・KV圧縮・跨文脈再利用 / エージェント型LLM・サービングruntime・生成時特化 / 出力長不確実性・tail-aware scheduling隣接 / 投機的復号・高並列サービング・production評価 / RDMA・分離サービング・KV転送 / multi-tenant runtime制御・適応parallelism・latency attribution / 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA / 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse / 分離型サービングの負荷偏り・SLO適応 / NVMe重み先読み・疎推論GPUカーネル・fleet資源配置
 - 2026-09-13T08:00:00+09:00 — 6 round: 評価 40 / 重複 25 / 採用 14 / 軸 hybrid-attention・MLA・位置非依存キャッシュ / position-independent KV再利用のforward/backward related-work補完 / agent workspace仮想化・NVMe階層・長時間runtime state / GPU runtime安全性・software aging・many-core CPU inference / network・collective通信・distributed inference / 直近新着・hierarchical memory・serving runtime横断再確認
