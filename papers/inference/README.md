@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **421本**。
+収録論文: **428本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -25,11 +25,11 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**421本**。
+推論論文：**428本**。
 
 | 系統 | 本数 |
 |---|---:|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 41 |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 43 |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 15 |
 | [02-hardware-accelerators](02-hardware-accelerators/README.md) | 3 |
 | [02-moe-expert-placement-caching](02-moe-expert-placement-caching/README.md) | 1 |
@@ -43,14 +43,14 @@
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 17 |
 | [06-moe-expert-offloading](06-moe-expert-offloading/README.md) | 5 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 14 |
-| [06-speculative-decoding](06-speculative-decoding/README.md) | 2 |
+| [06-speculative-decoding](06-speculative-decoding/README.md) | 3 |
 | [06-speculative-decoding-moe](06-speculative-decoding-moe/README.md) | 3 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 32 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 14 |
 | [09-attention-kernel-serving-optimization](09-attention-kernel-serving-optimization/README.md) | 3 |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 4 |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 71 |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 132 |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 136 |
 | [12-benchmarking-modeling-emulation](12-benchmarking-modeling-emulation/README.md) | 1 |
 | [09-other-inference-systems](09-other-inference-systems/README.md) | 1 |
 | [99-other-inference-systems](99-other-inference-systems/README.md) | 9 |
