@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-e9e76d3d04a6e4369258f711",
-  "job_id": "job-research-234066475107816a",
-  "data": {
-    "hardware": "単一ノードにNVIDIA H20-3e 141GBを8基搭載し、18本のNVLinkで全結合する。CPUはIntel Xeon 6759P-Cを2ソケット、計120物理コア、DDR5主記憶2TBを搭載する。Mellanox ConnectX系ネットワークインターフェースを6基備え、200Gbpsまたは400Gbpsの遠隔直接メモリアクセス通信を使う。",
-    "software": "SGLangを基盤に約14,000行のPython/Tritonコードを追加する。線形注意状態の構築にはFLAカーネル、ワーカ間のキャッシュ転送にはNVIDIA NIXLと片方向GPU間転送を用いる。",
-    "methodology": "4種類の実運用向けハイブリッド注意モデルを、4公開データセットと1種類の実運用検索拡張生成トレースで評価する。公開データでは全区間を事前に保存し、完全再計算、接頭辞キャッシュ、終端状態の単純加算、HYPICを比較して品質と中央値の初トークン待ち時間を測る。実運用トレースでは10分のキャッシュ予熱後も文書更新や追い出しによる未保存区間を残し、到着率を変えながら1秒の初トークン待ち時間制約で持続可能な毎秒要求数とGPU当たり処理量を測る。さらに区間長1k〜4k、区間数4〜16を変えて状態合成の伸び方と初回構築費を測り、境界窓幅0、4、8、16、32を比較する。完全コールドの32k入力では2、4、8ワーカを使った区間並列化と負荷分散方式を評価する。",
-    "scope": "検索拡張生成、複数文書、エージェント型入力のように独立区間を組み合わせるハイブリッド注意言語モデル配信が対象である。Ring-mini-linear-2.0、Ring-flash-linear-2.0、Qwen3.5-35B-A3B、Qwen3.5-122B-A10Bを含む。純粋な完全注意モデルや学習は主対象ではなく、評価の中心は8GPU単一ノードと高速なGPU間・遠隔直接メモリアクセス通信であるため、大規模な複数ノードや異種GPUへの一般化は未確認である。",
-    "workloads": ["HotpotQA", "TriviaQA", "MultiNews", "GovReport", "実運用検索拡張生成トレース：平均入力約12kトークン、システム指示約2kトークン", "完全コールド32kトークン入力を8区間へ分割"],
-    "baselines": ["完全再計算", "接頭辞キャッシュ", "終端状態の単純加算"],
-    "metrics": ["中央値の初トークン待ち時間", "1秒制約下の持続可能な毎秒要求数", "GPU当たりトークン処理量", "F1", "ROUGE-L", "遷移演算子と状態の初回構築費", "状態の相対L2差", "角度誤差", "完全コールド入力の初トークン待ち時間", "通信時間と組立時間"],
-    "reproducibility": "ハードウェア構成、4モデル、5ワークロード、比較方式、境界窓幅8、完全コールド入力で使うワーカ数、SGLang・NIXL・FLAを含む実装方式が本文に記載される。一方、HYPIC本体の公式公開コードURLは2026-09-14時点で本文から確認できず、約14,000行の変更を完全再現するには独自実装が必要である。"
-  },
-  "reservation": {"claim_id": "claim-e9e76d3d04a6e4369258f711", "worker_id": "scheduled-chat-llm-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-2cd7b2bbb6d197af61a4436a",
+  "job_id": "job-research-23e9c491b745b825",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-2cd7b2bbb6d197af61a4436a",
+    "worker_id": "scheduled-chat-llm-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
