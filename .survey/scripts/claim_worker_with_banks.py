@@ -137,6 +137,83 @@ def _available_bank(root: Path, excluded: set[str]) -> str | None:
     return None
 
 
+def _repair_bank_candidate(
+    root: Path,
+    claim: dict[str, Any],
+    excluded: set[str],
+) -> tuple[str, dict[str, dict[str, Any]], set[str]] | None:
+    """Find one coherent retained bank for this repair job, or decline recovery.
+
+    Repair recovery is intentionally conservative: the job must explicitly be in
+    ``repair_required`` state, every fixed slot must still belong to that job, and
+    exactly one occupied bank may match. Ambiguous or dirty ownership falls back to
+    normal allocation rather than guessing which research record is authoritative.
+    """
+    job_id = str(claim.get("job_id") or "")
+    job = _read(root / ".survey/work-queue/jobs" / f"{job_id}.json", {})
+    if not isinstance(job, dict) or job.get("repair_required") is not True:
+        return None
+
+    matches: list[tuple[str, dict[str, dict[str, Any]], set[str]]] = []
+    state = select_record_bank.inspect(root)
+    for item in state.get("banks", []):
+        if not isinstance(item, dict) or item.get("state") != "occupied":
+            continue
+        bank = str(item.get("bank") or "").lower()
+        if bank not in BANK_ROOTS or bank in excluded:
+            continue
+
+        payloads: dict[str, dict[str, Any]] = {}
+        attempts: set[str] = set()
+        valid = True
+        for slot in SLOT_NAMES:
+            payload = _read(root / BANK_ROOTS[bank] / f"{slot}.json")
+            if (
+                not isinstance(payload, dict)
+                or payload.get("slot") != slot
+                or payload.get("job_id") != job_id
+                or "data" not in payload
+            ):
+                valid = False
+                break
+            payloads[slot] = payload
+            if payload.get("attempt_id"):
+                attempts.add(str(payload["attempt_id"]))
+        if valid and len(payloads) == len(SLOT_NAMES):
+            matches.append((bank, payloads, attempts))
+
+    return matches[0] if len(matches) == 1 else None
+
+
+def _recover_repair_bank(
+    root: Path,
+    bank: str,
+    claim: dict[str, Any],
+    payloads: dict[str, dict[str, Any]],
+    previous_attempts: set[str],
+) -> None:
+    """Retag one retained repair record to the new claim without clearing its data."""
+    reservation = {
+        "claim_id": claim["claim_id"],
+        "worker_id": claim.get("worker_id"),
+        "worker_kind": claim.get("worker_kind"),
+    }
+    for slot in SLOT_NAMES:
+        payload = dict(payloads[slot])
+        payload["schema_version"] = 1
+        payload["transport_version"] = 10
+        payload["slot"] = slot
+        payload["attempt_id"] = claim["attempt_id"]
+        payload["job_id"] = claim["job_id"]
+        payload["reservation"] = reservation
+        _write(root / BANK_ROOTS[bank] / f"{slot}.json", payload)
+
+    claim["record_bank"] = bank
+    claim.pop("record_bank_fallback", None)
+    claim["record_bank_recovery"] = "repair-required-same-job"
+    claim["record_bank_recovery_attempt_ids"] = sorted(previous_attempts)
+
+
 def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None) -> None:
     request_id = claim.get("request_id")
     if not isinstance(request_id, str) or not request_id:
@@ -163,6 +240,10 @@ def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None
         elif bank is not None and "record_bank_fallback" in item:
             item.pop("record_bank_fallback", None)
             changed = True
+        for key in ("record_bank_recovery", "record_bank_recovery_attempt_ids"):
+            if key in claim and item.get(key) != claim[key]:
+                item[key] = claim[key]
+                changed = True
     if changed:
         _write(result_path, result)
 
@@ -223,7 +304,7 @@ def reserve_new_claim_banks(
     }
     reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
     migrated_unbanked = _migrate_active_unbanked_claims(root, claims, new_claim_ids)
-    reserved = reused = fallback = 0
+    reserved = reused = recovered = fallback = 0
 
     used = {
         str(claim.get("record_bank")).lower()
@@ -248,6 +329,16 @@ def reserve_new_claim_banks(
             _persist_assignment_bank(root, claim, existing)
             continue
 
+        repair = _repair_bank_candidate(root, claim, used)
+        if repair is not None:
+            bank, payloads, previous_attempts = repair
+            _recover_repair_bank(root, bank, claim, payloads, previous_attempts)
+            _write(claim_path, claim)
+            _persist_assignment_bank(root, claim, bank)
+            used.add(bank)
+            recovered += 1
+            continue
+
         bank = _available_bank(root, used)
         if bank is None:
             _persist_library_fallback(root, claim)
@@ -265,6 +356,7 @@ def reserve_new_claim_banks(
     return {
         "reserved": reserved,
         "reused": reused,
+        "recovered": recovered,
         "fallback": fallback,
         "reclaimed": reclaimed,
         "migrated_unbanked": migrated_unbanked,
