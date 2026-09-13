@@ -11,7 +11,10 @@ sys.path.insert(0, str(SCRIPTS))
 
 import dispatch_fallback_inbox  # noqa: E402
 import fallback_transport as ft  # noqa: E402
+import replay_record_fallback as record_replay  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
+
+LEGACY_CHAT_INBOX = record_replay.CHAT_INBOX
 
 
 def write_json(path: Path, obj: dict) -> None:
@@ -124,7 +127,7 @@ class FallbackImmutableReplayTests(unittest.TestCase):
             envelope = root_fields()
             envelope["writes"] = slot_writes() + [
                 {
-                    "path": ft.CHAT_INBOX,
+                    "path": LEGACY_CHAT_INBOX,
                     "content": json.dumps(
                         {
                             "schema_version": 1,
@@ -147,7 +150,7 @@ class FallbackImmutableReplayTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
 
             self.assertEqual(result["action"], "dispatched")
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             self.assert_descriptor(root)
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").is_file())
 
@@ -162,9 +165,27 @@ class FallbackImmutableReplayTests(unittest.TestCase):
             result = dispatch_fallback_inbox.dispatch(root)
 
             self.assertEqual(result["action"], "dispatched")
-            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / LEGACY_CHAT_INBOX).exists())
             self.assert_descriptor(root)
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").is_file())
+
+    def test_offline_record_waits_for_canonical_job_instead_of_quarantine(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            envelope = root_fields()
+            envelope["origin"] = "offline_worker"
+            envelope.pop("claim_id")
+            envelope.pop("worker_id")
+            envelope["writes"] = slot_writes()
+            put(root, envelope)
+
+            result = dispatch_fallback_inbox.dispatch(root)
+
+            self.assertEqual(result["action"], "idle")
+            self.assertTrue((root / ft.FALLBACK_INBOX / "env-a.json").is_file())
+            self.assertFalse((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+            self.assertTrue(result["deferred"])
+            self.assertIn("canonical", result["deferred"][0]["reason"])
 
 
 if __name__ == "__main__":
