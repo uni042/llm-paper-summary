@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2e0049dc1ae25b0e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.00993",
+      "title": "AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts",
+      "source_url": "https://arxiv.org/abs/2609.00993",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.00993-ainfer-pd-communication-safe-prefill-decode-multiplexing.md",
+      "priority": 88,
+      "reason": "エージェント型強化学習の分散MoE rolloutで、同一GPU群上のprefillとdecodeを並行実行するとcollective順序とDeepEP通信状態が衝突する問題を扱う。AInfer-PDはrank間のcollective発行順を協調し、prefill/decodeのDeepEP状態を分離してKVと重みを共有したまま安全なin-place multiplexingを実現し、単一・複数ノード双方でrollout完了時間を短縮している。MoE通信実行環境とprefill/decode共存の新しい接点として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-runtime-communication-2",
+    "axis": "GPU実行環境・collective通信・prefill/decode共存",
+    "query_summary": "GPU runtime、collective communication、MoE rollout、長期運用の隣接軸を探索し、KVShareArena、HeadWiseKV、collective survey、SuperInfer、software agingは既存job/収録済みとして除外した。投入直前に最新mainとjob/コード検索でAInfer-PDの未登録を再確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.10266",
+      "arXiv:2609.02029",
+      "arXiv:2608.15118",
+      "arXiv:2601.20309",
+      "arXiv:2606.11916"
+    ],
+    "next_axis_hint": "forward citation・backward reference、またはOS/DBMS由来のメモリ管理・スケジューリング機構をLLM servingへ接続する隣接軸へ移る",
+    "empty_round_reason": null
+  }
+}
