@@ -157,7 +157,7 @@ def _validate_job_and_claim(repo_root: Path, envelope: dict[str, Any], meta: dic
     job_path = repo_root / ".survey/work-queue/jobs" / f"{job_id}.json"
     job = read_object(job_path)
     if job is None or job.get("job_id") != job_id:
-        raise ValueError(f"canonical job is missing: {job_id}")
+        raise ValueError(f"canonical job is missing or invalid: {job_id}")
     if job.get("status") in TERMINAL:
         return job, str(job.get("status"))
     if job.get("type") != kind:
@@ -219,9 +219,33 @@ def materialize(repo_root: Path, envelope: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("fallback is not a research/audit record bundle")
 
     meta = _metadata(envelope)
-    job, terminal_status = _validate_job_and_claim(repo_root, envelope, meta)
-    job_id = str(meta["job_id"])
-    attempt_id = str(meta["attempt_id"])
+    kind = meta.get("kind")
+    if kind not in {"research", "audit"}:
+        raise ValueError("record fallback kind must be research or audit")
+    job_id_value = _safe_id(meta.get("job_id"), "job_id")
+    attempt_id_value = _safe_id(meta.get("attempt_id"), "attempt_id")
+    assert job_id_value is not None and attempt_id_value is not None
+    job_id = job_id_value
+    attempt_id = attempt_id_value
+
+    # Validate the complete durable payload before deciding that a missing canonical
+    # job is merely a dependency wait. This prevents malformed fallback from living
+    # forever in the pending inbox while still allowing offline-seed research to wait
+    # safely for its deterministic job to materialize.
+    slots = _slot_payloads(envelope, job_id, attempt_id)
+    job_path = repo_root / ".survey/work-queue/jobs" / f"{job_id}.json"
+    job_probe = read_object(job_path)
+    if job_probe is None:
+        return {
+            "action": "deferred",
+            "job_id": job_id,
+            "reason": f"canonical GitHub job not materialized yet: {job_id}",
+            "changed_paths": [],
+        }
+    if job_probe.get("job_id") != job_id:
+        raise ValueError(f"canonical job identity is invalid: {job_id}")
+
+    _job, terminal_status = _validate_job_and_claim(repo_root, envelope, meta)
     if terminal_status is not None:
         return {
             "action": "ack_terminal",
@@ -230,7 +254,6 @@ def materialize(repo_root: Path, envelope: dict[str, Any]) -> dict[str, Any]:
             "changed_paths": [],
         }
 
-    slots = _slot_payloads(envelope, job_id, attempt_id)
     bank = _choose_bank(repo_root, job_id, attempt_id)
     if bank is None:
         return {
