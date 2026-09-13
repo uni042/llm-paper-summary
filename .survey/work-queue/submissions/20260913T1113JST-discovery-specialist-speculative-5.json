@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "job-b4a7aa0b3a46fbdf",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.20503",
+      "title": "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.20503",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
+      "priority": 87,
+      "reason": "動的なオンライン負荷で従来の投機的復号がbatch単位の固定投機長とdraft/verification直列化に縛られる問題に対し、request単位の適応的投機長、verification中の早期枝刈り、verification frontier分割とdraftとの空間多重化を行う。vLLM試作で最先端方式比throughput最大53%向上、latency最大1.92倍改善を報告し、投機的復号をserving scheduler/runtime側から細粒度制御する点で収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.15051",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.15051",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.15051-interpretable-latency-model-speculative-serving.md",
+      "priority": 78,
+      "reason": "固定batch実験だけでは本番servingで投機的復号の利得が消える条件を説明できない問題に対し、Littleの法則から実効batch sizeを推定し、prefill・draft・verificationの負荷依存/非依存コストへ分解する解釈可能な遅延モデルを構築する。vLLMでdrafter/verifierサイズ、要求率、長さ、acceptance率を広く測定し、MoEへも拡張する。新しい実行機構ではないが、投機的servingの設定・容量計画を支えるシステム性能モデルとして既存実装研究を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-speculative-serving-5",
+    "axis": "動的投機的復号serving・agent隣接",
+    "query_summary": "最新/隣接の投機的復号servingとagent KV管理を確認した。SPECTRE 2605.08151、PicoSpec 2603.19133、CacheScout 2608.14624はidentity deltaまたは既存jobで重複。FASER 2604.20503と投機的復号遅延モデル2605.15051は最新HEADでidentity delta・stable jobとも未存在を確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arxiv:2605.08151",
+      "arxiv:2603.19133",
+      "arxiv:2608.14624"
+    ],
+    "next_axis_hint": "最後に新着agentic serving、framework/runtime更新由来の論文、2026年9月の関連実装公開を広く確認する",
+    "empty_round_reason": null
+  }
+}
