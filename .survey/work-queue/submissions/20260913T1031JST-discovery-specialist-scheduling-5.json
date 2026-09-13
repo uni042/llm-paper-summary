@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6ffea3ac8e0b44f6",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.02329",
+      "title": "Taming Request Imbalance: SLO-Aware Scheduling for Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.02329",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.02329-kairos-slo-aware-disaggregated-scheduling.md",
+      "priority": 87,
+      "reason": "分離型LLMサービングで長さ分布の偏りがprefill側のhead-of-line blockingとdecode側のstraggler由来低利用率を生む問題を、TTFT期限に基づくprefill優先度制御とTPOT slackを使ったdecode適応batchingで同時に扱う。オンラインserving datasetを用いた実装評価でTTFT SLO達成率最大23.9%、TPOT最大27.1%、end-to-end最大33.8%、decode throughput最大19.3%改善を報告しており、SLOと分離サービングのscheduler設計として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.02244",
+      "title": "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+      "source_url": "https://arxiv.org/abs/2608.02244",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md",
+      "priority": 80,
+      "reason": "decode batchの1 step費用が最大KV footprintの要求に引きずられ、短い要求が長い要求と同居すると自身のtoken量に不釣り合いなGPU資源を負担するbatching externalityを定式化する。要求間decode進捗差を制限するresource-fair schedulingとISJLを提案し3/4のcompetitive ratioを証明する。実システム実装より理論寄りだが、KV footprint・batch構成・token課金を同一モデルで扱うscheduler設計資料として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-scheduling-5",
+    "axis": "分離サービングSLO・batch fairness・resource allocation",
+    "query_summary": "prefill/decode分離、batching、SLO、GPU resource allocationへ軸を変更した。AFlexとBiScaleは既収録済みとして除外し、Kairosとresource-fair batchingは最新HEADのexisting jobsで未登録を再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.01891",
+      "arXiv:2602.18755"
+    ],
+    "next_axis_hint": "投機的復号のruntime/resource sharing、特にremote drafter・draft vocabulary・edge memory-aware schedulingへ移る",
+    "empty_round_reason": null
+  }
+}
