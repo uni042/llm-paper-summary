@@ -2,25 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8f7a99a959a36e3609539695",
-  "job_id": "job-research-44ece09f5c0f4e7c",
-  "data": {
-    "overview": "プリフィル・デコード同居構成では、グローバルKV層を利用できる条件でSMetricは最良比較方式よりSLO内クラスタTPSを10〜16%改善する。グローバルKV層がない場合はBAILIANとの差が1%以内まで縮み、初回負荷分散と共有接頭辞のグローバル再利用が組み合わさることが主な利得源だと分かる。Qwen3-235Bではピーク有効TPS 516 tok/sでBAILIANより8%高い。プリフィル・デコード分離構成では、グローバルKV容量全域で最強比較方式よりプリフィルTPSを2〜34%改善する。局所KV命中率をBAILIANとほぼ同等に保ちながら負荷偏りを減らし、TTFTとTPOTの尾部も改善する。",
-    "key_results": [
-      {"metric": "同居構成のSLO内クラスタTPS", "value": "最良比較方式比+10〜16%", "baseline": "BAILIAN / LMetric / Load Balance", "condition": "Qwen3-Coder-30B-A3B、グローバルKV容量を掃引", "interpretation": "初回要求を均等配置し、後続だけをKV局所性へ戻すことでキャッシュ命中と負荷均衡を両立する。"},
-      {"metric": "グローバルKVなしのTPS", "value": "BAILIANとの差1%以内", "baseline": "BAILIAN", "condition": "global tier=0", "interpretation": "初回負荷分散では共有システム接頭辞のローカル命中を失うため、グローバルKV層が主要改善を引き出す。"},
-      {"metric": "Qwen3-235Bピーク有効TPS", "value": "516 tok/s、BAILIAN比+8%、同一運転点のLMetric比+20%", "baseline": "BAILIAN / LMetric", "condition": "4GPU×8インスタンス", "interpretation": "より大きいモデルでもセッション単位の初回均衡が有効で、重いセッションの固定偏りを抑える。"},
-      {"metric": "分離構成のプリフィルTPS", "value": "最強比較方式比+2〜34%", "baseline": "BAILIAN / LMetric / Load Balance", "condition": "Qwen3-Coder-30B-A3B、32 prefill instances", "interpretation": "未プリフィルトークン量を負荷指標に切り替えても同じセッション中心方針が機能する。"},
-      {"metric": "同居構成のローカルKV命中率", "value": "SMetric約64%、BAILIAN約65%、全体再利用約76%", "baseline": "BAILIAN", "condition": "グローバルKV十分", "interpretation": "負荷分散を導入しても後続セッションを固定するため局所再利用をほぼ失わない。"},
-      {"metric": "負荷偏り", "value": "最大/平均負荷比2.6×、BAILIAN 3.0×、LMetric 3.2×、負荷分散2.0×", "baseline": "BAILIAN / LMetric / Load Balance", "condition": "Qwen3-Coder-30B-A3B", "interpretation": "純粋負荷分散ほど均一ではないが、キャッシュ優先方式の偏りを明確に緩和する。"},
-      {"metric": "同居構成TTFT", "value": "中央値1.1s、BAILIAN比17%低下", "baseline": "BAILIAN", "condition": "Qwen3-Coder-30B-A3B", "interpretation": "キュー偏りを減らすことでキャッシュ局所性を維持しながら最初のトークン待ちを短縮する。"},
-      {"metric": "同居構成TPOT", "value": "P50/P90が各最良比較方式より10%/20%低い", "baseline": "各percentileの最良比較方式", "condition": "Qwen3-Coder-30B-A3B", "interpretation": "過負荷インスタンスへのセッション集中を抑える効果が継続生成にも現れる。"},
-      {"metric": "分離構成TTFT", "value": "中央値1.1s vs BAILIAN 1.8sで37%低下、P90 18%低下、P99 7%低下", "baseline": "BAILIAN / Load Balance / LMetric", "condition": "Qwen3-Coder-30B-A3B", "interpretation": "プリフィル負荷の均衡が尾部待ち時間を抑える。"},
-      {"metric": "事前フィルタの効果", "value": "P90/P99 TTFT 16.1/51.2s→12.1/45.3s、P95 TPOT 89.2→82.5ms", "baseline": "SMetric basic without overload/eviction guards", "condition": "guard ablation", "interpretation": "通常時TPSへの影響は小さいが、極端な長セッションやKV消失時の尾部遅延を安全弁が抑える。"}
-    ],
-    "negative_results": "グローバルKV層がない条件ではBAILIANに対するTPS改善が1%以内で、SMetric単独の優位性は小さい。低負荷の1.0倍付近でも方式間差は1%未満で、スケジューリングが効くのは主に資源競合が生じる領域である。負荷を2倍まで上げると全方式が深刻な過負荷となってTPSが低下する。Qwen3-Coder-30B-A3BのTPOT P99ではBAILIANよりやや悪い条件もあり、全ての尾部指標で常に優位ではない。また評価対象はコーディングエージェントとQwen3系に偏る。",
-    "interpretation": "エージェント型負荷では、後続ターンを毎回再配置する必要はなく、将来多数の後続要求を生むセッションの最初の一回を均等に撒くことが負荷均衡に大きく効く。初回後は強いセッション内局所性を利用して同じGPUへ戻せるため、純粋負荷分散のようにKV再利用を犠牲にしない。グローバルKV層は初回配置で失う共有接頭辞を補い、局所性と均衡の交換条件をさらに緩める。",
-    "quality_impact": "要求ルーティングだけを変更しモデル演算やKV値を近似しないため、生成品質の交換条件はない。評価で用いる有効TPSは本番TTFT/TPOT SLOを両方満たした要求だけを数えるため、単に遅い要求を増やして処理量を見かけ上高くする方式でもない。"
-  },
-  "reservation": {"claim_id": "claim-8f7a99a959a36e3609539695", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a9879118b7ee6131d2a6caf4",
+  "job_id": "job-research-8409b6752444b980",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a9879118b7ee6131d2a6caf4",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

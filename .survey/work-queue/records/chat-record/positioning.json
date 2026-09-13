@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8f7a99a959a36e3609539695",
-  "job_id": "job-research-44ece09f5c0f4e7c",
-  "data": {
-    "limitations": "評価はH20×32 GPUの単一クラスタとQwen3系MoEモデル2種類に限られ、性能再生に使う主トレースも商用コーディングエージェントのTrace1である。Trace2は特性分析には使うが同規模の性能比較を行わず、検索・ブラウザ・音声など異なるエージェント負荷への一般化は未検証。主要な10〜16%のTPS改善はグローバルKV層が利用できる条件で現れ、グローバル層なしではBAILIANとの差は1%以内に縮む。極端な2倍負荷では全方式が過負荷になる。ルータは要求に会話履歴が含まれることを利用してターン番号を推定するため、履歴を省略する独自APIではセッション局所性を直接識別できない。クラスタ間の広域配置は対象外で、v1時点でコードとトレースの公開も未完了である。",
-    "differences": "純粋負荷分散はGPU負荷を均す代わりにローカルKVをほぼ捨て、BAILIANのようなキャッシュ優先方式は高い命中率を得る代わりに最初の配置へセッションを固定して負荷偏りを作る。LMetricは局所性と負荷を要求単位の指標で組み合わせるが、エージェントの強いセッション内再利用を独立した構造として扱わない。SMetricは初回ターンと後続ターンの役割を分け、初回だけ負荷均衡、後続は局所性維持という時間方向の制御へ置き換える。さらに過負荷とKV消失の二つだけを固定解除条件にするため、局所性を細かく揺らさず長大セッションだけを移せる。",
-    "implementation_status": "vLLM v0.12.0上で実装され、LMCacheとMooncakeによるCPUメモリのグローバルKV層、200 Gbps RDMA、プリフィル・デコード同居/分離の両構成で実機評価されている。論文はSMetric実装とトレースを正式公開時にオープンソース化すると明記するが、2026-09-14時点のarXiv v1では公式リポジトリURLを確認できない。",
-    "research_positioning": "LLMサービングの要求ルーティング・KVキャッシュ親和性の系統で、一般チャットではなくエージェントの長寿命セッションを第一級のスケジューリング単位として扱う研究である。新しいキャッシュ圧縮やGPUカーネルではなく、本番トレースから観測したセッション内再利用と負荷偏りを利用してルーティング規則を単純化する。ルータ側の永続セッション状態を持たないため、既存の階層KVストアやプリフィル・デコード分離基盤へ重ねやすい。",
-    "relation_to_existing_repository": "vLLMなどの連続バッチング、LMCache/Mooncake型の階層KV共有、プリフィル・デコード分離、KV親和性ルーティングと直接関係する。KV圧縮やCPU/SSDオフロードとは競合せず、それらが保持するKVの所在をSMetricの命中情報として利用できる。グローバルKV層の容量・帯域が主要効果へ影響するため、SSDやCXLを加えた多階層KV基盤では、セッション初回配置と下位層からの再取得費用を共同で扱う拡張が比較軸になる。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-8f7a99a959a36e3609539695", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a9879118b7ee6131d2a6caf4",
+  "job_id": "job-research-8409b6752444b980",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a9879118b7ee6131d2a6caf4",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
