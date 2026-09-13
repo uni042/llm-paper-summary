@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-274a2a6a90644c806341981c",
   "job_id": "job-research-b76cb796c54f83bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-274a2a6a90644c806341981c",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "中核構成はL40S、L4、A10Gを各1/2/4/8 GPUノードとして12構成・2地域で使い、3モデルを20〜40 GPU規模で実機評価する。拡張構成はH100、A100の各1/2/4/8 GPU構成を追加して計20 GPU構成・3地域、6モデルを100〜300 GPU規模でシミュレーションする。Helix比較ではA100 40GB×4、V100 16GB×6、L4 24GB×16、T4 16GB×38の64 GPUを用いる。",
+    "software": "Coral実行基盤はPython/C++約53K行。制御面はZeroMQ、パイプライン通信はNCCL上のRDMA/GPU Direct RDMA、プリフィル・デコード間KV転送はGLOO上のCPU RDMA、各ノードはvLLM。大規模評価用イベントシミュレータはPython約5K行で、各GPU構成のオフライン実測プロファイルから段単位の実行時間を再現する。オフラインテンプレート生成は384コアAWS c8i、オンライン資源割当は32コアc8iで解く。",
+    "methodology": "モデルはPhi-4 14B、GPT-OSS 20B、Qwen3 32B、Llama3 70B、GPT-OSS 120B、Qwen3 235Bの6種類。到着パターンと入出力長はAzure Code、Azure Conversation、BurstGPTから取り、モデルごとのプリフィル/デコードSLOを900〜1800 ms、30〜120 msの範囲で設定する。既定需要は中核構成10 req/s、拡張構成25 req/s/モデル。GPU在庫はAlibaba生産クラスタのトレースを用い、価格はAWS US-East-2、AP-Northeast-2、拡張時はGCP US-Central-1も加える。各実験30分、6分ごとに再構成し、起動費は生産運用を想定した60分調整間隔へ償却する。低在庫評価では推定需要より中核25%、拡張75%だけ多い在庫へ絞る。",
+    "scope": "中核の費用評価と低在庫評価は実機、拡張100〜300 GPU構成と需要偏り、Helix比較はシミュレーションである。シミュレータは実機再実行でプリフィル遅延平均5.6%、デコード遅延7.2%の誤差。地域間パイプラインは広域遅延が大きいため設計上除外し、各テンプレートは単一地域内に閉じる。実験時間は30分で、本番の長期価格変動・障害やスポット中断を直接評価しない。",
+    "workloads": ["Azure Code", "Azure Conversation", "BurstGPT", "均衡需要", "大型モデル80%需要", "小型モデル80%需要", "GPU在庫逼迫"],
+    "baselines": ["Homo（複製内部は同種GPU、モデルごとに費用効率最大構成を独立選択）", "Cauchy適応版（プリフィル/デコード分離の異種資源割当）", "Helix（固定異種GPU集合上の単一モデル配置）"],
+    "metrics": ["時間当たり費用", "SLO内有効スループット", "プリフィル/デコード遅延", "整数線形計画解時間", "モデル別資源費", "テンプレート数", "有効スループット/費用"],
+    "reproducibility": "モデル、SLO、トレース、地域価格の扱い、GPU構成、再構成周期、枝刈りパラメータ、比較方式、シミュレータ実機誤差、実装規模が記載されている。一方、2026-09-14時点でCoral固有の公式コード公開先は確認できず、拡張構成は数百GPUの実機ではないため、完全な再現には著者実装相当のランタイムとプロファイラが必要になる。"
+  },
+  "reservation": {"claim_id": "claim-274a2a6a90644c806341981c", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
