@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7054f9fdaebb50cecf903361",
-  "job_id": "job-research-934e7a9b83b10131",
-  "data": {
-    "hardware": "単一NVIDIA A40 GPU上でvLLM統合を評価する。論文の計算資源チェックリストも単一A40を明記する。",
-    "software": "vLLM v0.8.5 V0 engine、Qwen2.5-1.5B-Instruct。SAECacheと比較方針をvLLMのprefix cache evictorの差し替えとして実装する。",
-    "methodology": "実データはShareGPT（複数ターン74%）、LMSys（33%）、Chatbot-Arena（12%）で、要求投入間隔0.02、0.03、0.05、0.08秒を掃引して高負荷・GPU飽和条件を作る。主比較はvLLM既定LRUと、最も近い先行方式LPC。平均TTFTとprefix cache hit ratioを測る。追加の合成負荷では複数ターン優勢、均衡、単発優勢、ツール利用などを構成し、トークン種別重み、対数正規時間学習、位置減衰、キュー重みの寄与と、固定パラメータの負荷不一致を評価する。",
-    "datasets": ["ShareGPT", "LMSys", "Chatbot-Arena", "Qwen-Bailian usage trace", "CC-Bench-V1.1", "synthetic mixed workloads"],
-    "models": ["Qwen2.5-1.5B-Instruct"],
-    "baselines": ["LRU", "LPC", "fixed-parameter multi-queue variants"],
-    "metrics": ["mean TTFT", "prefix cache hit ratio", "predictor throughput", "predictor model size", "component-wise improvement"],
-    "scope": "主実機評価は単一A40・1.5Bモデルで、クラスタ間接頭辞配置やGPU間KV移行は対象外。実データでは単発要求優勢のChatbot-Arenaで管理オーバーヘッドがTTFT利得を上回る条件があり、全負荷で常に最速ではない。合成負荷の1.4〜2.7倍改善は主実データ表とは別の負荷構成を含むため、結果の条件を分けて解釈する必要がある。"
-  },
-  "reservation": {"claim_id": "claim-7054f9fdaebb50cecf903361", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-dfcf576a370956354a7c41fb",
+  "job_id": "job-research-990a57145fc3b85b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dfcf576a370956354a7c41fb",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

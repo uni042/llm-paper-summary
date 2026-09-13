@@ -2,25 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-7054f9fdaebb50cecf903361",
-  "job_id": "job-research-934e7a9b83b10131",
-  "data": {
-    "overview": "SAECacheはShareGPT、LMSys、Chatbot-Arenaと4種類の要求投入間隔を組み合わせた12条件すべてで接頭辞キャッシュ命中率を最良にし、各条件の最強比較方式より4.8〜5.9ポイント高い。複数ターン比33%のLMSysではLRUより平均TTFTを4〜8%、LPCより最大16%短縮し、複数ターン比74%のShareGPTでは高負荷条件で最良方式と同等だった。一方、複数ターン比12%のChatbot-Arenaでは命中率が高くても複数キュー管理と継続予測のオーバーヘッドが勝ち、最良比較方式よりTTFTが12〜34%悪化する。この境界条件は、命中率改善だけでは利用者待ち時間の改善を保証しないことを示す。合成負荷ではオンライン適応の各要素が固定パラメータ方式を累積的に改善し、負荷不一致への頑健性を示した。",
-    "key_results": [
-      {"metric": "接頭辞キャッシュ命中率", "value": "最強比較方式より4.8〜5.9ポイント改善", "baseline": "LRUまたはLPCの各条件で最良の方式", "condition": "ShareGPT・LMSys・Chatbot-Arena × 要求投入間隔0.02/0.03/0.05/0.08秒の全12条件", "interpretation": "トークン意味と再利用様式を区別する追い出し判断は、複数ターン比12〜74%の広い構成で一貫して再利用可能ブロックを多く残せる。"},
-      {"metric": "平均TTFT", "value": "LRU比4〜8%短縮、LPC比最大16%短縮", "baseline": "LRUおよびLPC", "condition": "LMSys、複数ターン比33%、4種類の高負荷投入間隔", "interpretation": "一定量の会話型再利用と十分なキャッシュ圧力があると、追加管理費用より事前計算削減の利得が大きくなる。"},
-      {"metric": "単発要求優勢時の平均TTFT", "value": "最良比較方式より12〜34%悪化", "baseline": "LRUまたはLPCの最良値", "condition": "Chatbot-Arena、複数ターン比12%", "interpretation": "命中率自体は最高でも再利用可能な会話接頭辞が少ないと、複数キューと継続分類器のオーバーヘッドを回収できない。"},
-      {"metric": "継続予測器の処理量", "value": "1,137予測/秒、LPCの129予測/秒に対して約8.8倍", "baseline": "LPC e5-small予測器", "condition": "約1MパラメータのSAECache分類器と118MパラメータのLPC埋め込みモデルの比較", "interpretation": "配信モデルの既計算隠れ状態を再利用することで、外部文章埋め込み推論より制御面の追加処理を小さくできる。"},
-      {"metric": "継続予測器メモリ", "value": "約4 MB対約472 MB", "baseline": "LPC e5-small", "condition": "SAECache約1Mパラメータ、LPC 118Mパラメータ", "interpretation": "キャッシュ容量を奪う補助モデルの常駐メモリを大幅に抑える。"},
-      {"metric": "オンライン学習の累積寄与", "value": "固定パラメータ複数キュー比で合計88%改善", "baseline": "Fixed-Param Multi-Queue", "condition": "合成混合負荷のアブレーション", "interpretation": "トークン種別重み23%、対数正規時間学習14%、位置減衰12%、キュー重み39%が順に寄与し、とくに負荷構成に応じたキュー容量再配分が大きい。"},
-      {"metric": "固定設定の負荷不一致", "value": "TTFTが最大2.7倍悪化", "baseline": "負荷に適合した固定設定またはオンライン学習方式", "condition": "チャット中心で調整した時間分布・キュー比率を単発要求中心へ適用", "interpretation": "配信負荷が変わる環境では、オフラインで決めた減衰時間や容量比率を固定すること自体が主要な失敗要因になる。"}
-    ],
-    "negative_results": "全条件で命中率は上がるが、Chatbot-Arenaのように複数ターン再利用が12%しかない単発要求優勢環境では、複数キュー bookkeeping と継続予測器の追加費用が事前計算削減を上回り、平均TTFTは最良比較方式より12〜34%悪い。低〜中負荷ではvLLMがKVキャッシュを満杯にしにくく追い出し自体が少ないため、本方式の恩恵は小さい。主実機評価は単一A40と小型1.5Bモデルであり、多GPUクラスタの経路選択やノード間キャッシュ局所性との相互作用は未評価で、著者も将来課題としている。",
-    "interpretation": "SAECacheの利得は『命中率を上げれば常に速い』という単純なものではなく、再利用で削れる事前計算量が制御オーバーヘッドを上回る領域で現れる。意味的重みは価値の低い思考過程を早く捨て、時間分布とキュー重みのオンライン更新はチャット・エージェント・単発テンプレートの比率変化へ容量配分を追随させる。その結果、固定設定が負荷不一致で崩れるケースを避ける一方、再利用が乏しい環境では簡単なLRUの方が待ち時間上有利になり得る。",
-    "quality_impact": "損失のある近似は導入しない。モデル重み、注意計算、保持されているKV値そのものは変更せず、正確なKVブロックのうち何をGPUメモリへ残すかだけを変えるため、生成品質を速度と交換する方式ではない。"
-  },
+  "attempt_id": "attempt-dfcf576a370956354a7c41fb",
+  "job_id": "job-research-990a57145fc3b85b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-7054f9fdaebb50cecf903361",
+    "claim_id": "claim-dfcf576a370956354a7c41fb",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }
