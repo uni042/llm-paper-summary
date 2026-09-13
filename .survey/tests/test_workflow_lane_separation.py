@@ -72,6 +72,20 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertIn("'references_checked_at' in text", text)
         self.assertIn("'references_total' in text", text)
 
+    def test_background_writers_recover_from_concurrent_main_pushes(self):
+        citation = self._text("citation-graph-backfill.yml")
+        self.assertIn("for publish_attempt in 1 2 3 4 5; do", citation)
+        self.assertIn("recomputing citation batch from latest main", citation)
+        self.assertIn("git reset --hard origin/main", citation)
+
+        maintenance = self._text("maintenance.yml")
+        self.assertIn("for push_attempt in 1 2 3 4 5; do", maintenance)
+        self.assertIn("Maintenance push race on attempt", maintenance)
+
+        rebuild = self._text("rebuild-paper-indexes.yml")
+        self.assertIn("for publish_attempt in 1 2 3 4 5; do", rebuild)
+        self.assertIn("recomputing indexes from latest main", rebuild)
+
 
 if __name__ == "__main__":
     unittest.main()
