@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 14:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 14:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **178** |
+| 未処理の論文候補（Research ready） | **177** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **212** |
+| 全文精読完了（累計） | **213** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **issues_found** |
 | 次回保守までの通常run | **12 / 24** |
@@ -36,12 +36,12 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **178** |
-| 処理中（Active claims） | **39** |
-| 今すぐ着手可能（Claimable） | **139** |
+| 未処理候補（Research ready） | **177** |
+| 処理中（Active claims） | **41** |
+| 今すぐ着手可能（Claimable） | **136** |
 | 最新通常run | **2026-09-13T13:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古claimの経過時間 | **120 min** |
+| 最新通常runのResearch完了 | **3** |
+| 最古claimの経過時間 | **127 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -53,8 +53,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **72** |
-| Repo収録 | **72** |
+| Research完了 | **73** |
+| Repo収録 | **73** |
 | Audit完了 | **0** |
 | 探索評価候補 | **724** |
 | Research候補採用 | **227** |
@@ -63,11 +63,11 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **147** |
 | 通常worker run（ledger観測） | **23** |
-| Fallback archive（全helper） | **8** |
+| Fallback archive（全helper） | **9** |
 
 ### 24時間の流れ
 
-**探索評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 72 → Repo収録 72**
+**探索評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 73 → Repo収録 73**
 
 ## 直近の通常worker
 
@@ -75,8 +75,8 @@ Run: **2026-09-13T13:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
-| Repo収録 | **2** |
+| Research完了 | **3** |
+| Repo収録 | **3** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
@@ -86,11 +86,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
-- P87 `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
-- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
+- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
+- P87 `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
+- P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
 
 ## 参考情報
 
@@ -272,6 +272,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
 - `arXiv:2502.09922` — λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
 - `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
 - `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
@@ -279,7 +280,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2608.22643` — NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching
 - `arXiv:2609.00097` — Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding
 - `arXiv:2609.01821` — Scaling Inference Prefill with High-Radix Photonic Interconnects
-- `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 
 ### 7日比較
 
