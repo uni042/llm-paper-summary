@@ -1,1 +1,44 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-2609.00097-20260913-1030-v10-b","job_id":"job-research-e0d8fce39a1b2522","data":{"canonical_id":"arXiv:2609.00097","arxiv_id":"2609.00097","doi":"10.48550/arXiv.2609.00097","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":["cs.AI"]},"title":"Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding","summary":"Faster Flash Decoding（FFD）は、長文デコードで毎トークンKVキャッシュ全体をHBMから読む帯域律速を、疎注意の選別処理そのものを軽量化して削る。鍵を2ビットの走査用表現と8ビット残差へ分け、2ビット表現を追加メタデータの代わりに全体走査する。注意最大値は冒頭のシンクトークンと直近局所領域から近似し、その値から一定差δ以内のブロックだけを残すtop-δ選別を使うため、固定件数のtop-kより注意分布へ適応し、top-pの全体同期も避ける。選別と本計算をTritonカーネル内で結合し、選別済みブロックだけ8ビット残差とVキャッシュを読む。RTX 4090でカーネル最大11.63倍、16K文脈の生成スループット最大2.37倍、H100で最大1.96倍を達成し、RULERとLongBenchではδ=7が密注意に近い精度を維持する。","list_summary":"2ビット鍵でKV全体を低帯域走査し、局所・シンク由来の近似最大値からtop-δで必要ブロックだけを選ぶ選別・計算融合カーネルにより、長文デコードを最大11.63倍のカーネル高速化、最大2.37倍の生成スループットへ高める。","authors":["Zhigeng Liu","Zhiyuan Ning","Ruixiao Li","Xiaoran Liu","Yuerong Song","Min Zhang","Ziwei He","Xipeng Qiu"],"authors_affiliations":"Fudan University、Shanghai Innovation Institute、Harbin Institute of Technology。","published":"2026-08-31","publication":"ICML 2026; arXiv:2609.00097v1","publication_type":"国際会議論文／プレプリント","publication_status":"Accepted at ICML 2026 / arXiv v1","lineage":"kv-cache-optimization-compression","topics":["疎注意","KVキャッシュ","長文デコード","2ビット量子化","top-δ選別","カーネル融合","CUDA Graph","HBM帯域"],"importance":"高。疎注意で重要位置を選ぶための補助メタデータや全体同期自体がデコードの帯域・同期コストになる問題へ、KV内容そのものの2ビット表現を選別器として再利用する。アルゴリズム上の疎性とGPU実装上のデータ移動を一体化し、精度・カーネル・端末間生成の三段階で検証している。","hardware_evaluation":"実機評価。NVIDIA GeForce RTX 4090とNVIDIA H100を使用し、PyTorch 2.8、Triton 3.4、CUDA 12.8で実装する。RTX 4090では4K〜256K文脈のカーネル遅延、RTX 4090/H100では最大16K文脈の端末間生成スループットを比較する。","hardware_details":"選別ではKキャッシュを2ビット量子化表現と8ビット残差に分け、採用ブロックだけ残差とVをHBMから追加読出しする。Tritonで擬似最大値計算、top-δ選別、精密化を実装し、デコード全体の99%をCUDA Graph内で実行する。","quality_effect":"近似疎注意なので完全無損失ではない。δ=7はRULER 32Kで平均89.4点に対し密注意90.6点、LongBenchでは26.35点で密注意26.22点と同等以上。δ=5は疎度82%まで高める代わりにRULER平均87.1点へ下がる。擬似最大値の過小推定は閾値を緩くする方向に働くため、重要トークン欠落より追加I/Oへ倒れる安全側の誤差になる。","storage_targets":["Kキャッシュ2ビット表現","Kキャッシュ8ビット残差","Vキャッシュ","疎注意ブロック索引"],"bottlenecks":["長文KVキャッシュ読出し帯域","選別用メタデータ帯域","top-k整列コスト","top-p全体同期","カーネル起動オーバーヘッド","量子化解除コスト"],"evidence_locations":["§1","§3.1–3.3","§4.1–4.5","§5.1–5.4","Appendix A–H"],"source":"https://arxiv.org/abs/2609.00097","sources":["https://arxiv.org/abs/2609.00097","https://arxiv.org/html/2609.00097v1","https://github.com/qluoluo/faster-flash-decoding"],"code":"https://github.com/qluoluo/faster-flash-decoding","implementation":"公式コードをGitHubで公開。Tritonカーネル、2ビット走査、top-δ選別、残差精密化、ブロック単位のCUDA Graph再捕捉、GPU側キャッシュ索引を組み合わせる。追加学習なしで既存モデルへ適用する。","last_checked":"2026-09-13","references":[{"canonical_id":"arXiv:2303.08774","arxiv_id":"2303.08774"},{"canonical_id":"arXiv:2403.05530","arxiv_id":"2403.05530"},{"canonical_id":"arXiv:2502.17129","arxiv_id":"2502.17129"},{"canonical_id":"arXiv:2307.08691","arxiv_id":"2307.08691"},{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2406.10774","arxiv_id":"2406.10774"},{"canonical_id":"arXiv:2312.04985","arxiv_id":"2312.04985"},{"canonical_id":"arXiv:2502.02770","arxiv_id":"2502.02770"},{"canonical_id":"arXiv:2512.02556","arxiv_id":"2512.02556"},{"canonical_id":"arXiv:2310.01801","arxiv_id":"2310.01801"},{"canonical_id":"arXiv:2309.17453","arxiv_id":"2309.17453"},{"canonical_id":"arXiv:2404.06654","arxiv_id":"2404.06654"},{"canonical_id":"arXiv:2311.01282","arxiv_id":"2311.01282"},{"canonical_id":"arXiv:2505.24179","arxiv_id":"2505.24179"},{"canonical_id":"arXiv:2402.02750","arxiv_id":"2402.02750"},{"canonical_id":"arXiv:2402.18096","arxiv_id":"2402.18096"}],"references_checked_at":"2026-09-13","references_source":"arXiv v1 HTML版参考文献節","references_total":27}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-2512.12990-20260913-0930-v10-a",
+  "job_id": "job-research-7c0598aabd36d6bf",
+  "data": {
+    "canonical_id": "arXiv:2512.12990",
+    "arxiv_id": "2512.12990",
+    "doi": "10.48550/arXiv.2512.12990",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
+    "title": "SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference",
+    "summary": "SliceMoEは、混合専門家モデル（Mixture of Experts; MoE）を端末内で動かす際、全専門家重みはFlashへ置き、頻繁に使う部分だけをDRAMへ保持する構成で、数％のキャッシュミスでも低速・高消費電力なFlashアクセスが支配的になる問題を扱う。従来は専門家単位で高精度重みを保持するため、容量を増やすには精度を一律に落とすか、ルーティングを強くキャッシュへ寄せる必要があった。SliceMoEは専門家重みを上位ビットと下位ビットのスライスへ分割し、重要度の高い専門家だけ両方を読み出して高精度で計算し、それ以外は上位ビットだけで計算する。これにより同じDRAM容量でも実質的により多くの専門家を常駐させる。さらに高精度表現から低精度表現を校正なしで切り出せる非対称Matryoshka量子化と、プリフィル時の専門家頻度を使ってデコード開始前にキャッシュを整える予測ウォームアップを組み合わせる。DeepSeek-V2-Liteではデコード消費エネルギーを最大2.37倍、遅延を最大1.81倍改善し、Qwen1.5-MoE-A2.7Bでは最大2.85倍、1.64倍改善した。",
+    "list_summary": "Flashミス率を5%未満へ抑えるため、MoE専門家重みを上位・下位ビットへ分け、重要な専門家だけ高精度化するビットスライス型キャッシュ方式。プリフィル履歴でデコード前のキャッシュも整え、最大2.85倍のデコード省エネルギー化を示す。",
+    "authors": ["Yuseon Choi","Sangjin Kim","Jungjun Oh","Gwangtae Park","Byeongcheol Kim","Hoi-Jun Yoo"],
+    "authors_affiliations": "Korea Advanced Institute of Science and Technology（KAIST）、Daejeon、Republic of Korea。",
+    "published": "2025-12-15",
+    "publication": "Design Automation Conference (DAC) 2026; arXiv:2512.12990v5",
+    "publication_type": "会議論文 / プレプリント",
+    "publication_status": "DAC 2026; arXiv v5（2026-09-08改訂）",
+    "lineage": "offload-hierarchical-memory",
+    "topics": ["MoE推論","専門家キャッシュ","Flashオフロード","ビットスライス","混合精度量子化","キャッシュウォームアップ","オンデバイス推論"],
+    "importance": "高。FlashとDRAMの大きな帯域・エネルギー差を前提に、専門家単位ではなくビットスライス単位でキャッシュ容量と精度を交換する。単純な低ビット化やルーティング局所化とは異なる階層メモリ設計であり、SSD/Flashを含むMoEオフロード研究へ直接つながる。",
+    "hardware_evaluation": "アーキテクチャモデルによるシステム評価。XPUは1GHz、8,192個の8-bit PE、16.4 TOPS、3.18 TOPS/W。主記憶はLPDDR4約104Gbps・約8GB・最大1.5pJ/bit、下位ストレージはUFS 3.1 Flash 10Gbps・128GB・103pJ/bitとしてモデル化する。",
+    "hardware_details": "単一バッチのオンプレミス／端末内構成を想定し、全専門家重みをUFS 3.1 Flashへ、キャッシュ済み専門家スライスをLPDDR4 DRAMへ置く。専門家ミス時だけFlashからDRAMへ読み出す。専門家キャッシュ容量は1.8GB、2.4GB、3.6GBを評価する。",
+    "quality_effect": "高精度専門家を少数だけ保持する方式では極低ミス率条件でルーティング制約により精度が崩れる一方、一律低精度では精度上限が生じる。DBSCとAMATは重要専門家だけ高精度へ再構成し、他を低精度化することで、同じミス率に対して両方式より高い精度のPareto前線を形成する。近似量子化のため品質は完全不変ではない。",
+    "storage_targets": ["XPU近傍の実行データ","LPDDR4 DRAM上の専門家MSB/LSBスライス","UFS 3.1 Flash上の全専門家重み"],
+    "bottlenecks": ["Flash→DRAM専門家重み読出し","極低ミス率を達成するためのDRAM容量","高精度専門家保持とキャッシュ可能専門家数の競合","プリフィルからデコードへの移行時のコールドミス"],
+    "evidence_locations": ["Abstract","§3 Motivation","§4.1 Dynamic Bit-Sliced Caching","§4.2 Calibration-Free Asymmetric Matryoshka Quantization","§4.3 Predictive Cache Warmup","§5 System Implementation","§6 Evaluation","Table 1","Figures 8–10"],
+    "source": "https://arxiv.org/abs/2512.12990",
+    "sources": ["https://arxiv.org/abs/2512.12990","https://arxiv.org/html/2512.12990v5","https://arxiv.org/pdf/2512.12990"],
+    "code": null,
+    "implementation": "論文はDBSC、AMAT、PCWを統合した単一バッチMoE推論系をアーキテクチャモデル上で評価する。2026-09-13時点で一次資料および著者情報から公式コード公開URLは確認できない。",
+    "last_checked": "2026-09-13",
+    "references": [{"canonical_id":"arXiv:2001.08361","arxiv_id":"2001.08361"},{"canonical_id":"arXiv:2302.13971","arxiv_id":"2302.13971"},{"canonical_id":"arXiv:2307.09288","arxiv_id":"2307.09288"},{"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"},{"canonical_id":"arXiv:2508.10925","arxiv_id":"2508.10925"},{"canonical_id":"arXiv:1701.06538","arxiv_id":"1701.06538"},{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},{"canonical_id":"arXiv:2405.04434","arxiv_id":"2405.04434"},{"canonical_id":"arXiv:2501.10062","arxiv_id":"2501.10062"},{"canonical_id":"arXiv:2407.09816","arxiv_id":"2407.09816"},{"canonical_id":"arXiv:2412.00099","arxiv_id":"2412.00099"},{"canonical_id":"arXiv:2511.10054","arxiv_id":"2511.10054"},{"canonical_id":"arXiv:2508.18983","arxiv_id":"2508.18983"},{"canonical_id":"arXiv:2503.04398","arxiv_id":"2503.04398"},{"canonical_id":"arXiv:2503.06823","arxiv_id":"2503.06823"},{"canonical_id":"arXiv:2410.22134","arxiv_id":"2410.22134"},{"canonical_id":"arXiv:2506.23266","arxiv_id":"2506.23266"},{"canonical_id":"arXiv:2504.06426","arxiv_id":"2504.06426"},{"canonical_id":"arXiv:2502.17298","arxiv_id":"2502.17298"},{"canonical_id":"arXiv:2408.10284","arxiv_id":"2408.10284"},{"canonical_id":"arXiv:2411.01433","arxiv_id":"2411.01433"},{"canonical_id":"arXiv:2502.06786","arxiv_id":"2502.06786"},{"canonical_id":"arXiv:2510.03293","arxiv_id":"2510.03293"},{"canonical_id":"arXiv:2110.14168","arxiv_id":"2110.14168"},{"canonical_id":"doi:10.1109/ISCA59077.2024.00078","doi":"10.1109/ISCA59077.2024.00078"},{"canonical_id":"doi:10.1109/LCA.2025.3592563","doi":"10.1109/LCA.2025.3592563"}],
+    "references_checked_at": "2026-09-13",
+    "references_source": "arXiv v5 HTML版の参考文献節",
+    "references_total": 35
+  }
+}

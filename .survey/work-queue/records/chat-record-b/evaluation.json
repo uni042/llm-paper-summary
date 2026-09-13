@@ -1,1 +1,17 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2609.00097-20260913-1030-v10-b","job_id":"job-research-e0d8fce39a1b2522","data":{"hardware":"NVIDIA GeForce RTX 4090とNVIDIA H100で実機評価する。RTX 4090ではバッチ1、4K〜256K文脈の注意カーネル遅延を測り、RTX 4090/H100では4K〜16K文脈の端末間生成スループットを測る。","software":"PyTorch 2.8、Triton 3.4、CUDA 12.8。FFDの公式実装を用い、FlashAttention-2、Quest、KIVI、Twilightと比較する。Twilightは当時完全な公式実装がないため著者らによる再実装を使用する。","methodology":"効率評価は、トレース駆動カーネル小規模計測と端末間生成の二段階。カーネルではRTX 4090上でFlashAttention-2相当のPyTorch注意とFFDのδ=5/7を4K〜256K文脈で比較する。端末間ではRTX 4090とH100でFlashAttention-2、Quest、KIVI、FFDを比較し、16K文脈までの最大トークン毎秒を測る。品質評価はLlama-3.1-8B-InstructのRULER 32KとLongBenchを中心に、Qwen2.5-7B-Instructでも一般化を確認する。δ=5は最大値比約1/148未満を落とす攻撃的設定、δ=7は約1/1096未満を落とす保守的設定。要素除去実験では2ビット走査、top-δ、融合実行、CUDA Graphの寄与を分離する。","scope":"評価はGQA型のLlama-3.1とQwen2.5が中心で、MLA型モデルは未検証。端末間性能は単一GPU・低バッチ中心で、大規模同時サービングや分散KVキャッシュ環境は評価していない。最大256Kはカーネル計測で、端末間スループットの代表比較は16Kまでである。品質はRULER/LongBenchで確認するが、全タスク・全注意頭に対する最悪時保証ではない。","workloads":["Llama-3.1-8B-Instruct長文デコード","Qwen2.5-7B-Instruct長文デコード","RULER 32K","LongBench","4K〜256K注意カーネル"],"baselines":["FlashAttention-2","Quest","KIVI 2-bit","Twilight","StreamingLLM"],"metrics":["カーネル遅延","生成トークン毎秒","RULER平均点","LongBench平均点","疎度","保持率","注意出力類似度","Log-Sum-Exp誤差"],"reproducibility":"公式GitHubコードが公開され、GPU、CUDA、PyTorch、Triton版、主要閾値、比較条件が論文に記載されるため再現性は比較的高い。Twilightのみ著者再実装のため比較再現性が一段弱い。CUDA GraphやTritonの性能はGPU世代とソフトウェア版に依存するため、別環境では絶対値が変わり得る。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2512.12990-20260913-0930-v10-a",
+  "job_id": "job-research-7c0598aabd36d6bf",
+  "data": {
+    "hardware": "システム仕様はXPU 1GHz、8,192個の8-bit PE、16.4 TOPS、3.18 TOPS/W、LPDDR4 DRAM約104Gbps・約8GB・最大1.5pJ/bit、UFS 3.1 Flash 10Gbps・128GB・103pJ/bit。専門家キャッシュ容量は1.8/2.4/3.6GB。",
+    "software": "DeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bを対象に、Cache-PriorとCumsumルーティングを比較する。キャッシュは統一LRUを基礎にし、DBSCではMSB/LSBへ異なる優先度を適用する。",
+    "methodology": "GSM8K 5-shotを使い、プリフィル約500トークン、デコード100トークン超の長めの生成で評価する。活性値はFP16、KVキャッシュはINT8、非専門家重みはG128対称INT8、専門家重みはG32非対称量子化。高ビット・低ビットの複数構成を掃引し、ミス率制約は最初の10デコードステップ後から適用する。精度はGSM8Kと量子化PPL、システム評価はデコードエネルギーと遅延を、精度を揃えた構成間で比較する。",
+    "scope": "単一バッチの端末内／オンプレミスMoEを対象としたアーキテクチャモデル評価で、商用スマートフォン上の実測エンドツーエンド評価ではない。モデルは2種類、主要ベンチマークはGSM8K、専門家キャッシュ容量は3点。プリフィルは高ビット計算を維持するため主な省エネルギー効果はデコードに出る。プリフィルの専門家頻度が初期デコードと相関しないワークロードではPCWの利得が小さくなる可能性がある。",
+    "workloads": ["DeepSeek-V2-Lite","Qwen1.5-MoE-A2.7B","GSM8K 5-shot"],
+    "baselines": ["Cache-Prior","Cumsum routing","一様高ビット専門家キャッシュ","一様低ビット専門家キャッシュ","AMATのみ","Empty/Last-layer/Random cache initialization"],
+    "metrics": ["GSM8K精度","困惑度（PPL）","高ビット換算キャッシュミス率","デコード消費エネルギー","デコード高速化倍率","キャッシュ初期化のエネルギー・遅延"],
+    "reproducibility": "モデル、ベンチマーク、量子化粒度、DRAM/Flash/XPU仕様、キャッシュ容量、比較ルーティング、ウォームアップ区間は記載される。公式コードは確認できず、評価の完全再現には論文記載のアーキテクチャモデルとキャッシュ制御を実装する必要がある。"
+  }
+}
