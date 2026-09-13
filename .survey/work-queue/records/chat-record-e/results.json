@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-813c91afa994773c80c27241","job_id":"job-research-ee741ee249b93f89","data":{"overview":"オフラインでは半自己回帰化によって並列ドラフトの後半受理率低下を抑え、Qwen3-4B/8B/14BでEagle3に対する平均受理長を30.9%、26.7%、30.0%、DFlashに対して16.3%、18.4%、18.3%改善した。提案長を7から15へ伸ばすほどDFlashとの差が広がり、長い候補列で逐次依存を戻す効果が大きい。生産系ではMTP-1と比べ、同等の総処理能力でユーザー当たり生成速度をV4-Flashで60〜85%、V4-Proで57〜78%高めた。中程度のサービス水準では総処理量も約51〜52%増え、混雑時には検証長を縮めることで静的な長い候補検証の性能崖を回避した。","key_results":[{"metric":"Qwen3系列の平均受理長改善","value":"Eagle3比 +30.9% / +26.7% / +30.0%","baseline":"Eagle3","condition":"Qwen3-4B / 8B / 14B、提案長7、9ベンチマークのマクロ平均","interpretation":"深い並列本体と軽量逐次依存の組合せが、浅い自己回帰ドラフトより長い受理接頭辞を作れる。"},{"metric":"並列ドラフトに対する平均受理長改善","value":"DFlash比 +16.3% / +18.4% / +18.3%","baseline":"DFlash","condition":"Qwen3-4B / 8B / 14B、同一フレームワーク・同一データ","interpretation":"後半位置へ実際の先行トークン依存を入れることが、完全並列方式の接尾辞劣化を抑える。"},{"metric":"長い提案での改善","value":"提案長15で数学 +30%、コード +26%、会話 +22%","baseline":"DFlash","condition":"Qwen3-4B、5層ドラフト、提案長15","interpretation":"候補列が長いほど独立予測の弱点が累積するため、半自己回帰化の相対利得が増える。"},{"metric":"逐次ヘッドの遅延増分","value":"+0.2%〜+1.3%","baseline":"DFlash","condition":"バッチ128、文脈長512〜4096の平均、提案長4から16","interpretation":"対象モデル検証が主要費用となる高バッチ条件では、軽量逐次補正の追加費用は小さい。"},{"metric":"信頼度較正","value":"期待較正誤差を3〜8%から平均約1%へ低減","baseline":"未較正信頼度ヘッド","condition":"逐次温度尺度化を適用","interpretation":"接頭辞生存確率を要求間で比較し、検証予算配分へ使うための確率精度が向上する。"},{"metric":"生産系のユーザー当たり生成速度","value":"V4-Flash +60〜85%、V4-Pro +57〜78%","baseline":"MTP-1","condition":"DeepSeek-V4実トラフィック、同等の総処理能力で比較","interpretation":"静的な1トークン予測より長い候補を使いつつ、負荷に応じて検証量を絞ることで対話性を高められる。"},{"metric":"中程度サービス水準の総処理量","value":"V4-Flash +51%、V4-Pro +52%","baseline":"MTP-1","condition":"80 tok/s/user と 35 tok/s/user の各アンカー","interpretation":"極端な性能境界ではない実用域でも、負荷適応検証が総処理量を押し上げる。"}],"negative_results":"RNNヘッドはマルコフヘッドより長い候補でわずかな追加利得を示すが、実装複雑性と配備特性を考えると既定方式には採用されない。またDSparkは検証対象を賢く減らせても、各要求で最初に最大長の並列ドラフトブロックを生成する固定費は残る。受理率が本質的に低い難問ではこの前払い計算を回収できず、ドラフト器自体の難易度適応早期終了が将来課題である。厳しいサービス水準で報告される+661%や+406%の総処理量差は、基準MTP-1が低並列の性能境界へ入るため倍率が膨らむと著者自身が注意している。","interpretation":"DSparkの主要な利得は、長い候補を常に検証することではなく、並列生成で安価に候補を用意したうえで、どこまで検証する価値があるかを要求内容と現在負荷の両方から決めることにある。軽負荷では余剰計算を利用して長く検証し、混雑時は棄却確率の高い後半を切るため、単一要求の受理長と全体バッチ効率を同じ制御面で扱える。","quality_impact":"拒否サンプリングによって対象モデル分布を保つ損失なし方式であり、品質向上を目的とする近似復号ではない。理論スケジューラは未来トークンへ依存しない停止規則を使い、生産版も過去ステップの容量予測のみを使うことで現在トークンの選択バイアスを避ける。"},"reservation":{"claim_id":"claim-813c91afa994773c80c27241","worker_id":"parallel-e2e-worker-a-20260913","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d36d1ce1db733edcd5699199",
+  "job_id": "job-research-1725e694fe58fcc2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d36d1ce1db733edcd5699199",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}

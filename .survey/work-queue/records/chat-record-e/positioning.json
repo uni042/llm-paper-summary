@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-813c91afa994773c80c27241","job_id":"job-research-ee741ee249b93f89","data":{"limitations":"第一に、並列バックボーンで最大長の候補ブロックを先に生成する固定費があり、低受理率要求では検証前に無駄が発生する。第二に、生産評価はDeepSeek-V4-Flash/Proの特定プレビュー環境と非公開トラフィックに依存し、GPU型番や全エンジン設定が開示されていないため外部環境で同じ前線が得られる保証はない。第三に、ハードウェア処理能力表と2ステップ前予測を使う制御は対象エンジンの容量曲線へ適合させる必要があり、異なるカーネルや連続バッチ方式では再プロファイルが必要である。","differences":"DFlashのような完全並列ドラフトは全位置を一度に作る代わりにブロック内依存を持たず、Eagle3のような自己回帰ドラフトは依存を持つ代わりに提案長に比例してドラフト遅延が増える。DSparkは重い本体を並列のままにして軽い出力補正だけ逐次化する。また固定長・固定閾値の投機的復号と異なり、候補の受理見込みと実機の現在容量を同じ目的関数で扱い、要求ごとの検証長を変える。","implementation_status":"DeepSpecのコードとDSparkチェックポイントが公開されている。論文はDeepSeek-V4の生産系へ実際に配備し、MTP-1を置き換えたと報告しているため、単なるシミュレーションではない。ただし生産用HAI-LLM、ゼロオーバーヘッドスケジューラ、変長検証カーネルの全実装は公開リポジトリだけでは再現できない。","research_positioning":"投機的復号系統のうち、ドラフト器設計とサービング負荷制御を横断する研究に位置する。受理長を増やすアルゴリズム研究と、同時要求数に応じて検証予算を配るシステム研究を一つの経路へ統合しており、高並列推論でのバッチ容量を第一級資源として扱う点が重要である。","relation_to_existing_repository":"既存のEAGLE系、多トークン予測、DFlashなどドラフト高速化の流れに対し、半自己回帰補正で並列方式の後半劣化を抑える。またTETRISや適応的検証長の系統に対し、較正済み接頭辞生存確率と実機処理能力表を結び付け、DeepSeek-V4の実運用まで示す。SSDやCPUオフロードを直接扱わないが、サービング側のGPU検証容量を負荷適応で節約するため、階層メモリ技術と直交して併用できる。","audit_required":false},"reservation":{"claim_id":"claim-813c91afa994773c80c27241","worker_id":"parallel-e2e-worker-a-20260913","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-d36d1ce1db733edcd5699199",
+  "job_id": "job-research-1725e694fe58fcc2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d36d1ce1db733edcd5699199",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
+}
