@@ -2,28 +2,110 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-f28659e9140a8f6e64753d6f",
+  "attempt_id": "attempt-bb08b015a9b7ba70b57debac",
   "job_id": "job-research-6a744249548dd135",
   "data": {
     "overview": "HILOSは通常SSDへKVを置くFLEX(SSD)に対して最大7.86倍の復号スループットを達成し、長文脈でCPU DRAM方式が容量不足になる領域でも175B・128K文脈を単一A100で処理する。4 SmartSSDでもFLEX(DRAM)を1.10〜1.36倍上回り、16台では1.88〜2.49倍へ拡大する。注意近傍処理単体はFLEX(SSD)比最大3.39倍で、遅延書戻しがさらに最大1.32倍、協調X-cacheが最大1.64倍を追加する。長い生成ほどプリフィル固定費が償却され、出力長感度では最大6.08倍となる。コスト効率は66BでFLEX(SSD)比最大2.02倍、175BではDRAM制約下で最大1.68倍となり、エネルギー消費は最大85%削減する。",
     "key_results": [
-      {"metric": "最大復号スループット改善", "value": "FLEX(SSD)比最大7.86×", "baseline": "FLEX(SSD)", "condition": "長文脈、最大16 SmartSSDの実機", "interpretation": "KV本体を共有PCIeへ運ばず各SSD内部で注意を処理するため、多台数CSDの内部帯域を集約できる。"},
-      {"metric": "DRAM方式に対する拡張性", "value": "4 SmartSSDで1.10〜1.36×、16 SmartSSDで1.88〜2.49×", "baseline": "FLEX(DRAM)", "condition": "30B/66B/175B、各文脈長", "interpretation": "DRAMだけでは大モデル・長文脈でバッチを縮めるか容量不足になる一方、SSD容量を使ってバッチを維持できる。"},
-      {"metric": "長文脈でのSSD方式比較", "value": "5.3〜7.8×", "baseline": "FLEX(SSD)", "condition": "FLEX(DRAM)がbatch=1でもOOMとなる長文脈", "interpretation": "容量不足領域ほど近傍ストレージ処理の帯域利得が直接効く。"},
-      {"metric": "注意近傍処理単体", "value": "最大3.39×", "baseline": "FLEX(SSD)", "condition": "ANS、遅延書戻し/X-cacheなし", "interpretation": "主要利得の第一段はKV読込みをホストPCIeから除去することにある。"},
-      {"metric": "遅延KV書戻しの追加効果", "value": "ANS比最大1.32×", "baseline": "ANS", "condition": "ANS+WB", "interpretation": "小粒度SSD書込みをDRAMへ蓄積し、臨界経路外へ移すことで復号停止を減らす。"},
-      {"metric": "協調X-cacheの追加効果", "value": "ANS比最大1.64×", "baseline": "ANS", "condition": "ANS+X", "interpretation": "余ったGPU演算をK/V再生成へ回し、CSD内部I/Oをさらに減らす。"},
-      {"metric": "モデル構造感度", "value": "1.16〜3.36×", "baseline": "FLEX系比較方式", "condition": "Qwen2.5-32B、Mixtral-8x7B、GLaM-143B", "interpretation": "GQAやMoEでも改善するが、KV/重み比が低いMoEでは利得が小さくなる。"},
-      {"metric": "出力長感度", "value": "最大6.08×", "baseline": "FLEX(SSD)", "condition": "生成トークン長を増加", "interpretation": "固定プリフィル時間が長い復号で償却され、近傍注意の効果が強くなる。"},
-      {"metric": "コスト効率", "value": "66BでFLEX(SSD)比最大2.02×、175BでDRAM制約下最大1.68×", "baseline": "FLEX(SSD)/FLEX(DRAM)", "condition": "tokens/sec/$", "interpretation": "SmartSSDと拡張筐体の追加費用を含めても、大モデルではDRAM容量制約を回避する処理量増が上回る。"},
-      {"metric": "H100更新との比較", "value": "速度1.29×、H100構成よりコスト効率2.91×", "baseline": "A100→H100更新", "condition": "I/O律速の長文脈構成", "interpretation": "GPU演算性能だけを上げてもSSD/PCIe律速が残るため、データ側計算の方が費用効率を改善する。"},
-      {"metric": "SSD耐久性", "value": "1.34〜1.47×改善、spill interval 32でさらに1.02〜1.05×", "baseline": "通常書戻し", "condition": "Small/Medium/Long要求、16 SmartSSD", "interpretation": "X-cacheで書込み量を減らし、まとめ書きで書込み増幅を抑える。"},
-      {"metric": "エネルギー", "value": "最大85%削減", "baseline": "最先端オフロード比較方式", "condition": "実機エネルギー内訳", "interpretation": "SmartSSD自体の消費電力は高いが、推論時間短縮が総エネルギーを大きく減らす。"},
-      {"metric": "8 GPU分散構成との比較", "value": "1.64〜1.81×高速", "baseline": "vLLM 0.9.1、8×RTX A6000、2ノード", "condition": "175B長文脈", "interpretation": "多GPU構成は小バッチとノード間通信の負担があり、単一GPU+大容量近傍ストレージがオフライン処理量で上回る条件がある。"}
+      {
+        "metric": "最大復号スループット改善",
+        "value": "FLEX(SSD)比最大7.86×",
+        "baseline": "FLEX(SSD)",
+        "condition": "長文脈、最大16 SmartSSDの実機",
+        "interpretation": "KV本体を共有PCIeへ運ばず各SSD内部で注意を処理するため、多台数CSDの内部帯域を集約できる。"
+      },
+      {
+        "metric": "DRAM方式に対する拡張性",
+        "value": "4 SmartSSDで1.10〜1.36×、16 SmartSSDで1.88〜2.49×",
+        "baseline": "FLEX(DRAM)",
+        "condition": "30B/66B/175B、各文脈長",
+        "interpretation": "DRAMだけでは大モデル・長文脈でバッチを縮めるか容量不足になる一方、SSD容量を使ってバッチを維持できる。"
+      },
+      {
+        "metric": "長文脈でのSSD方式比較",
+        "value": "5.3〜7.8×",
+        "baseline": "FLEX(SSD)",
+        "condition": "FLEX(DRAM)がbatch=1でもOOMとなる長文脈",
+        "interpretation": "容量不足領域ほど近傍ストレージ処理の帯域利得が直接効く。"
+      },
+      {
+        "metric": "注意近傍処理単体",
+        "value": "最大3.39×",
+        "baseline": "FLEX(SSD)",
+        "condition": "ANS、遅延書戻し/X-cacheなし",
+        "interpretation": "主要利得の第一段はKV読込みをホストPCIeから除去することにある。"
+      },
+      {
+        "metric": "遅延KV書戻しの追加効果",
+        "value": "ANS比最大1.32×",
+        "baseline": "ANS",
+        "condition": "ANS+WB",
+        "interpretation": "小粒度SSD書込みをDRAMへ蓄積し、臨界経路外へ移すことで復号停止を減らす。"
+      },
+      {
+        "metric": "協調X-cacheの追加効果",
+        "value": "ANS比最大1.64×",
+        "baseline": "ANS",
+        "condition": "ANS+X",
+        "interpretation": "余ったGPU演算をK/V再生成へ回し、CSD内部I/Oをさらに減らす。"
+      },
+      {
+        "metric": "モデル構造感度",
+        "value": "1.16〜3.36×",
+        "baseline": "FLEX系比較方式",
+        "condition": "Qwen2.5-32B、Mixtral-8x7B、GLaM-143B",
+        "interpretation": "GQAやMoEでも改善するが、KV/重み比が低いMoEでは利得が小さくなる。"
+      },
+      {
+        "metric": "出力長感度",
+        "value": "最大6.08×",
+        "baseline": "FLEX(SSD)",
+        "condition": "生成トークン長を増加",
+        "interpretation": "固定プリフィル時間が長い復号で償却され、近傍注意の効果が強くなる。"
+      },
+      {
+        "metric": "コスト効率",
+        "value": "66BでFLEX(SSD)比最大2.02×、175BでDRAM制約下最大1.68×",
+        "baseline": "FLEX(SSD)/FLEX(DRAM)",
+        "condition": "tokens/sec/$",
+        "interpretation": "SmartSSDと拡張筐体の追加費用を含めても、大モデルではDRAM容量制約を回避する処理量増が上回る。"
+      },
+      {
+        "metric": "H100更新との比較",
+        "value": "速度1.29×、H100構成よりコスト効率2.91×",
+        "baseline": "A100→H100更新",
+        "condition": "I/O律速の長文脈構成",
+        "interpretation": "GPU演算性能だけを上げてもSSD/PCIe律速が残るため、データ側計算の方が費用効率を改善する。"
+      },
+      {
+        "metric": "SSD耐久性",
+        "value": "1.34〜1.47×改善、spill interval 32でさらに1.02〜1.05×",
+        "baseline": "通常書戻し",
+        "condition": "Small/Medium/Long要求、16 SmartSSD",
+        "interpretation": "X-cacheで書込み量を減らし、まとめ書きで書込み増幅を抑える。"
+      },
+      {
+        "metric": "エネルギー",
+        "value": "最大85%削減",
+        "baseline": "最先端オフロード比較方式",
+        "condition": "実機エネルギー内訳",
+        "interpretation": "SmartSSD自体の消費電力は高いが、推論時間短縮が総エネルギーを大きく減らす。"
+      },
+      {
+        "metric": "8 GPU分散構成との比較",
+        "value": "1.64〜1.81×高速",
+        "baseline": "vLLM 0.9.1、8×RTX A6000、2ノード",
+        "condition": "175B長文脈",
+        "interpretation": "多GPU構成は小バッチとノード間通信の負担があり、単一GPU+大容量近傍ストレージがオフライン処理量で上回る条件がある。"
+      }
     ],
     "negative_results": "単一の現行SmartSSDはSSD-FPGA内部帯域そのものが通常SSDのホスト読込み帯域より高いわけではなく、HILOSの大きな利得は4〜16台へ増やしたときの内部帯域集約に依存する。SmartSSDを16台並べてもFPGAを無効にするとFLEX(SSD)の0.64〜0.94倍にしかならず、単純なSSD台数追加では共有PCIeがボトルネックになる。GLaM-143BのようにKV/重み比が低いMoEでは改善が小さい。30B/66BでホストDRAMが十分な条件ではFLEX(DRAM)の方が費用効率に優れる場合もあり、近傍ストレージは常に最安ではない。また主対象は高スループットのオフライン推論で、オンラインTTFT/TPOTは最適化していない。",
     "interpretation": "SSD階層の性能問題は媒体帯域だけでなく、KVを注意計算のためホストへ往復させるデータフローにある。HILOSは注意という帯域支配・低演算強度の処理をKVのそばへ移すことで、CSD追加に伴う内部帯域を共有PCIeから独立に増やす。するとボトルネックが内部SSD帯域や小粒度書込みへ移るため、GPUとの協調再計算と遅延書戻しを追加して資源全体を再均衡させる。この段階的なボトルネック移動への対応が、単純な計算SSD化以上の利得を生む。",
     "quality_impact": "KVを圧縮・量子化せず、FP16保存とFP32中間演算による標準注意を計算する。X-cacheもK/Vを投影前Xから同じ重みで再計算するため近似ではない。LongBench F1でFlashAttentionや比較注意実装との精度整合を検証しており、報告された高速化は品質劣化との交換ではない。"
   },
-  "reservation": {"claim_id": "claim-f28659e9140a8f6e64753d6f", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bb08b015a9b7ba70b57debac",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

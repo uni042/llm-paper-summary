@@ -2,30 +2,56 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f28659e9140a8f6e64753d6f",
+  "attempt_id": "attempt-bb08b015a9b7ba70b57debac",
   "job_id": "job-research-6a744249548dd135",
   "data": {
     "canonical_id": "arXiv:2502.09921",
     "arxiv_id": "2502.09921",
     "doi": "10.1145/3779212.3790119",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
     "title": "A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs",
     "summary": "長文脈のオフラインLLM推論では、大きなバッチでモデル重みを再利用してもKVキャッシュが文脈長とバッチ数に比例して増え、GPU・ホストメモリからSSDへあふれる。従来のSSDオフロードでは復号のたびに巨大なKVを共有PCIe経由でホストへ読み戻すため、KV入出力が推論時間の60%以上を占め、SSDをRAIDで増やしてもホスト側PCIe帯域で頭打ちになる。HILOSは市販Samsung SmartSSDのFPGAを使い、自己注意をストレージ近傍で計算してKV本体をホストへ送らない。さらに投影前活性Xを一部保存してGPUでKVを再生成する協調X-cache、新規KVをホストDRAMへ貯めて大きな粒度でSSDへ書く遅延書戻し、限られたFPGAメモリで長文脈注意を処理する専用アクセラレータを統合する。A100/H100と最大16 SmartSSDの実機でOPT、Qwen2.5、Mixtral、GLaMを評価し、通常SSD型オフロード比で最大7.86倍の復号スループットと最大85%のエネルギー削減を達成する。175Bモデル・128K文脈も単一A100で処理できる。",
     "list_summary": "市販SmartSSD上で自己注意をKVの近くへ移し、X-cacheと遅延KV書戻しを組み合わせることで、長文脈オフライン推論を通常SSD型オフロード比で最大7.86倍高速化する。",
-    "authors": ["Hongsun Jang", "Jaeyong Song", "Changmin Shin", "Si Ung Noh", "Jaewon Jung", "Jisung Park", "Jinho Lee"],
+    "authors": [
+      "Hongsun Jang",
+      "Jaeyong Song",
+      "Changmin Shin",
+      "Si Ung Noh",
+      "Jaewon Jung",
+      "Jisung Park",
+      "Jinho Lee"
+    ],
     "authors_affiliations": "Hongsun Jang、Jaeyong Song、Changmin Shin、Si Ung Noh、Jaewon Jung、Jinho LeeはSeoul National University、Jisung ParkはPOSTECH。",
     "published": "2026-03-22",
     "publication": "ASPLOS 2026, Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
     "publication_type": "Conference",
     "publication_status": "Published",
     "lineage": "offload-hierarchical-memory",
-    "topics": ["近傍ストレージ処理", "計算ストレージ", "KVキャッシュオフロード", "長文脈LLM", "SSD", "FPGA", "階層メモリ", "オフライン推論"],
+    "topics": [
+      "近傍ストレージ処理",
+      "計算ストレージ",
+      "KVキャッシュオフロード",
+      "長文脈LLM",
+      "SSD",
+      "FPGA",
+      "階層メモリ",
+      "オフライン推論"
+    ],
     "importance": "GPU・CPU・SSD階層で最大の障害になるKV転送を、SSD帯域を増やすだけでなく演算自体をSSD側へ移して削減する実機研究である。市販計算ストレージ16台で175B・128K文脈まで評価し、SSDを単なる容量階層ではなく注意計算の実行階層として利用するため、SSD/NVMe活用研究の直接的な基準になる。",
     "hardware_evaluation": "実機。NVIDIA A100 40GBまたはH100 80GB、Xeon Gold 6342 24C/48T、DDR4-3200 512GB、最大16台のSamsung SmartSSD 3.84TB。各SmartSSDはKintex UltraScale+ KU15P FPGAと4GB DDR4-2400を持つ。比較用SSDはSamsung PM9A3 3.84TB。",
     "quality_effect": "モデル重みやKVを量子化せずFP16で保持し、アクセラレータ内部の累積・指数演算はFP32で行う。協調X-cacheは投影前活性XからK/Vを正確に再計算する方式で、近似による品質低下を導入しない。LongBenchを用いたアクセラレータ精度検証も行う。",
     "source": "https://arxiv.org/abs/2502.09921",
-    "sources": ["https://arxiv.org/abs/2502.09921", "https://arxiv.org/pdf/2502.09921", "https://doi.org/10.1145/3779212.3790119", "https://github.com/hongsunjang/HILOS/tree/asplos26", "https://doi.org/10.5281/zenodo.18162119"],
+    "sources": [
+      "https://arxiv.org/abs/2502.09921",
+      "https://arxiv.org/pdf/2502.09921",
+      "https://doi.org/10.1145/3779212.3790119",
+      "https://github.com/hongsunjang/HILOS/tree/asplos26",
+      "https://doi.org/10.5281/zenodo.18162119"
+    ],
     "code": "https://github.com/hongsunjang/HILOS/tree/asplos26",
     "implementation": "PyTorch/DeepSpeed型オフロード推論へC++実行時とPythonバインディングを統合し、SmartSSD FPGA向けHLS注意カーネル、KV管理、書戻し管理、協調X-cacheを実装。ASPLOS'26 artifactとしてGitHubとZenodoでソース、ビットストリーム生成・検証手順を公開している。",
     "last_checked": "2026-09-14",
@@ -33,9 +59,19 @@
     "references_source": "primary-reference-section",
     "references_total": 167,
     "references": [
-      {"canonical_id": "arXiv:2409.04992", "arxiv_id": "2409.04992"},
-      {"canonical_id": "arXiv:2403.06664", "arxiv_id": "2403.06664"}
+      {
+        "canonical_id": "arXiv:2409.04992",
+        "arxiv_id": "2409.04992"
+      },
+      {
+        "canonical_id": "arXiv:2403.06664",
+        "arxiv_id": "2403.06664"
+      }
     ]
   },
-  "reservation": {"claim_id": "claim-f28659e9140a8f6e64753d6f", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bb08b015a9b7ba70b57debac",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

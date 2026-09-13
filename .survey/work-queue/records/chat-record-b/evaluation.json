@@ -2,17 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f28659e9140a8f6e64753d6f",
+  "attempt_id": "attempt-bb08b015a9b7ba70b57debac",
   "job_id": "job-research-6a744249548dd135",
   "data": {
     "hardware": "実機構成はNVIDIA A100 40GBまたはH100 80GB、Xeon Gold 6342 24C/48T、DDR4-3200 16×32GB、最大16台のSamsung SmartSSD 3.84TB。SmartSSDはKintex UltraScale+ KU15P FPGAと4GB DDR4-2400を内蔵する。通常SSD比較はSamsung PM9A3 3.84TBを4台。SmartSSD群はH3 Falcon 4109 PCIe拡張筐体を介して接続される。",
     "software": "Ubuntu 20.04 LTS、Python 3.12.4、PyTorch 2.4.1、DeepSpeed 1.15.1、AMD Vitis/XRT 2023.1/2.12.427、CUDA/OpenCL 12.1.105/2.2。HILOSはPyTorchオフロード推論へC++実行時とpybind11モジュールを統合し、FPGA HLSカーネルをVitisで合成する。",
     "methodology": "標準多頭注意のOPT-30B/66B/175B、GQAのQwen2.5-32B、MoE+GQAのMixtral-8x7B、MoE+MHAのGLaM-143Bを評価する。文脈長は32K〜128Kを中心に、一部モデルでは192K/256Kまで掃引する。既定バッチ16、FP16、生成64トークン。100B以下の重みは可能ならCPU DRAM、100B超はストレージへオフロードする。比較方式はFLEX(SSD)、FLEX(DRAM)、16台SSDをFPGA無効で使うFLEX構成、DeepSpeed+UVMなど。全方式のプリフィルにはFlashAttentionを使い、SSD比較はmdadm RAID-0、復号注意は従来方式ではCPUへオフロードする。X-cache比率、書戻し間隔、SmartSSD台数、バッチ、文脈長、モデル構造も感度評価する。",
     "scope": "市販計算ストレージを最大16台用いる実機評価で、単一A100/H100と大容量ホストDRAMを前提としたオフラインバッチ推論が主対象。オンライン低遅延配信は対象外。市販SmartSSDはFPGAとSSD間内部帯域が1台では通常SSDより高くないため、多台数での帯域集約に依存する。将来ISP型CSDについては帯域モデルと精度確認を示すが、実機ではない。",
-    "workloads": ["OPT-30B", "OPT-66B", "OPT-175B", "Qwen2.5-32B", "Mixtral-8x7B", "GLaM-143B", "32K〜128K以上の長文脈オフライン生成"],
-    "baselines": ["FLEX(SSD)", "FLEX(DRAM)", "FLEX with 16 SSDs and FPGA disabled", "DeepSpeed+UVM", "8×RTX A6000 vLLM multi-node comparison"],
-    "metrics": ["復号スループット", "総実行時間", "tokens/sec/$", "エネルギー", "SSD耐久性", "FPGA資源利用率", "アクセラレータ帯域", "LongBench F1"],
+    "workloads": [
+      "OPT-30B",
+      "OPT-66B",
+      "OPT-175B",
+      "Qwen2.5-32B",
+      "Mixtral-8x7B",
+      "GLaM-143B",
+      "32K〜128K以上の長文脈オフライン生成"
+    ],
+    "baselines": [
+      "FLEX(SSD)",
+      "FLEX(DRAM)",
+      "FLEX with 16 SSDs and FPGA disabled",
+      "DeepSpeed+UVM",
+      "8×RTX A6000 vLLM multi-node comparison"
+    ],
+    "metrics": [
+      "復号スループット",
+      "総実行時間",
+      "tokens/sec/$",
+      "エネルギー",
+      "SSD耐久性",
+      "FPGA資源利用率",
+      "アクセラレータ帯域",
+      "LongBench F1"
+    ],
     "reproducibility": "ASPLOS'26 artifactとしてHLSソース、ホスト側ソフトウェア、環境構築、FPGA合成、推論実行手順がGitHubとZenodoで公開されている。市販SmartSSD型番、ソフトウェア版、モデル、文脈長、バッチ、比較SSD、価格仮定も明記されており、専用ハード研究として再現性は比較的高い。ただし16台SmartSSDと専用PCIe拡張筐体は一般環境で容易に用意できる構成ではない。"
   },
-  "reservation": {"claim_id": "claim-f28659e9140a8f6e64753d6f", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-bb08b015a9b7ba70b57debac",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
