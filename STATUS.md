@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:34 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **174 / 50** |
-| Research ready | **174** |
+| Candidate在庫（Research ready） | **175 / 50** |
+| Research ready | **175** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -22,15 +22,15 @@
 
 ## 直近の通常worker
 
-Run: **2026-09-13T09:30:00+09:00**
+Run: **2026-09-13T10:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **13** |
-| 新規job | **36** |
-| Repo収録 | **1** |
+| Discovery完了 | **1** |
+| 新規job | **2** |
+| Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -50,13 +50,13 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **142** |
-| 探索評価候補 | **710** |
-| 重複除外 | **297** |
-| 重複率 | **41.8%** |
-| Novel候補 | **413** |
-| Research候補採用 | **234** |
+| 通常worker run（ledger観測） | **23** |
+| 探索round（stats観測） | **143** |
+| 探索評価候補 | **714** |
+| 重複除外 | **299** |
+| 重複率 | **41.9%** |
+| Novel候補 | **415** |
+| Research候補採用 | **235** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 710 → 重複除外後 413 → Research候補採用 234 → Research完了 69 → Repo収録 69**
+**探索評価 714 → 重複除外後 415 → Research候補採用 235 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -172,6 +172,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
 | エージェント推論・speculative tool execution | 4 | 2 | 2 | 50.0% | 50.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
+| 分離サービングSLO・batch fairness・resource allocation | 4 | 2 | 1 | 50.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA | 4 | 0 | 1 | 0.0% | 25.0% |
 | 投機的復号・高並列サービング・production評価 | 4 | 1 | 2 | 25.0% | 50.0% |
@@ -216,11 +217,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — 分離サービングSLO・batch fairness・resource allocation: 評価 4 / 重複 2 / 採用 1
 - **2026-09-13T10:16:01+09:00** — KVページ圧縮・低ランク表現・GPUカーネル: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T10:16:01+09:00** — 端末内LLM・OSメモリ圧力・Flash/NPU実行: 評価 6 / 重複 2 / 採用 3
 - **2026-09-13T10:16:01+09:00** — GPU実行環境・collective通信・prefill/decode共存: 評価 6 / 重複 5 / 採用 1
 - **2026-09-13T10:16:01+09:00** — 新着LLM推論システム・通信／疎注意／多ターンKV: 評価 7 / 重複 4 / 採用 3
-- **2026-09-13T09:57:59+09:00** — NVMe重み先読み・疎推論GPUカーネル・fleet資源配置: 評価 8 / 重複 3 / 採用 4
 
 ## 最近処理した論文
 
