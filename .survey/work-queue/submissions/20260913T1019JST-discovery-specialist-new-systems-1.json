@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "job_id": "job-067d00d93576a085",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.01821",
+      "title": "Scaling Inference Prefill with High-Radix Photonic Interconnects",
+      "source_url": "https://arxiv.org/abs/2609.01821",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md",
+      "priority": 89,
+      "reason": "長文脈プリフィルとMoE推論の拡張時に、電気配線のscale-up帯域・radix制約がGPU追加の効果を頭打ちにする問題を、3D photonic interconnectを用いた高radix接続で緩和するシステム研究。短文脈から128K/1M文脈までを対象に通信律速条件で大きな遅延短縮を示しており、LLM推論の通信・相互接続設計とMoEスケーリングの接点として研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.00097",
+      "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding",
+      "source_url": "https://arxiv.org/abs/2609.00097",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.00097-faster-than-flash-attention-sparsity-long-context-decoding.md",
+      "priority": 89,
+      "reason": "長文脈デコードで注意重みの疎性を利用し、低ビット選択走査と注意計算を融合したGPUカーネルへ落とし込むハードウェア・アルゴリズム協調設計。著者報告では注意カーネル最大11.6倍、256K文脈までのend-to-end throughput最大2.37倍を示し、公開コードもあるため、KV容量削減だけでなく実際の注意計算コストを削る長文脈推論系として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02027",
+      "title": "Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation",
+      "source_url": "https://arxiv.org/abs/2609.02027",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02027-multi-turn-lru-hit-ratio-mean-field.md",
+      "priority": 80,
+      "reason": "多ターンLLM会話で接頭辞KVをLRU管理した際のhit ratioを平均場近似から推定し、KVキャッシュ容量の設計へつなげる研究。理論中心だが実際のLLM会話トレースとQwen3-8B/Ascend NPU環境で検証しており、多ターンprefix reuseを経験則だけでなく容量計画へ落とす基礎として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-new-systems-1",
+    "axis": "新着LLM推論システム・通信／疎注意／多ターンKV",
+    "query_summary": "2026年9月の新着推論システムを、フォトニック相互接続、長文脈疎注意カーネル、多ターンKVキャッシュ容量設計へ広げて軽量評価し、既存identity/jobとの重複を投入直前に再確認した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arXiv:2609.11133",
+      "arXiv:2609.10790",
+      "arXiv:2609.00407",
+      "arXiv:2609.03515"
+    ],
+    "next_axis_hint": "GPU runtime・collective通信・networking隣接分野、または最近の高priority候補からforward citationへ探索軸を移す",
+    "empty_round_reason": null
+  }
+}
