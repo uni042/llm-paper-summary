@@ -2,7 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -126,6 +126,24 @@ class ClaimBankReservationTests(unittest.TestCase):
             self.assertEqual(new_claim.get("record_bank_fallback"), "library")
             self.assertIsNone(assignment.get("record_bank"))
             self.assertEqual(assignment.get("record_bank_fallback"), "library")
+
+    def test_expired_reservation_is_reused_when_same_ready_job_is_reclaimed(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            seed_job(root, "job-r1", 100)
+            seed_request(root, "req-a", "worker-a")
+
+            claim_worker_with_banks.process_requests(root, at=AT)
+            result_a = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
+            first_bank = result_a["assignments"][0]["record_bank"]
+
+            seed_request(root, "req-b", "worker-b")
+            claim_worker_with_banks.process_requests(root, at=AT + timedelta(hours=2))
+            result_b = json.loads((root / ".survey/work-queue/claim-results/req-b.json").read_text())
+            second_bank = result_b["assignments"][0]["record_bank"]
+
+            self.assertEqual(second_bank, first_bank)
 
 
 if __name__ == "__main__":

@@ -75,10 +75,54 @@ def _reservation_payload(slot: str, claim: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _placeholder_payload(slot: str) -> dict[str, Any]:
+    return {
+        "schema_version": 1,
+        "transport_version": 10,
+        "slot": slot,
+        "attempt_id": select_record_bank.PLACEHOLDER_ATTEMPT,
+        "job_id": select_record_bank.PLACEHOLDER_ATTEMPT,
+        "data": {},
+    }
+
+
 def _reserve_bank(root: Path, bank: str, claim: dict[str, Any]) -> None:
     bank_root = root / BANK_ROOTS[bank]
     for slot in SLOT_NAMES:
         _write(bank_root / f"{slot}.json", _reservation_payload(slot, claim))
+
+
+def _reclaim_expired_empty_reservations(root: Path, active_claim_ids: set[str]) -> int:
+    """Return reservation-only banks to placeholders once their claim is inactive.
+
+    Reclaim only when every slot is still the untouched empty reservation envelope.
+    If a worker has written any real slot data, leave the bank alone for explicit
+    recovery/inspection instead of guessing that partial research can be discarded.
+    """
+    reclaimed = 0
+    for bank, relative_root in BANK_ROOTS.items():
+        bank_root = root / relative_root
+        reservation_ids: set[str] = set()
+        untouched = True
+        for slot in SLOT_NAMES:
+            payload = _read(bank_root / f"{slot}.json")
+            if not isinstance(payload, dict) or payload.get("data") != {}:
+                untouched = False
+                break
+            reservation = payload.get("reservation")
+            if not isinstance(reservation, dict) or not reservation.get("claim_id"):
+                untouched = False
+                break
+            reservation_ids.add(str(reservation["claim_id"]))
+        if not untouched or len(reservation_ids) != 1:
+            continue
+        reservation_id = next(iter(reservation_ids))
+        if reservation_id in active_claim_ids:
+            continue
+        for slot in SLOT_NAMES:
+            _write(bank_root / f"{slot}.json", _placeholder_payload(slot))
+        reclaimed += 1
+    return reclaimed
 
 
 def _available_bank(root: Path, excluded: set[str]) -> str | None:
@@ -141,6 +185,12 @@ def reserve_new_claim_banks(
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
     claims = claim_state.current_claims(root, now)
+    active_ids = {
+        str(claim.get("claim_id"))
+        for claim in claims.values()
+        if claim.get("active") and claim.get("claim_id")
+    }
+    reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
     reserved = reused = fallback = 0
 
     used = {
@@ -191,7 +241,7 @@ def reserve_new_claim_banks(
         used.add(bank)
         reserved += 1
 
-    return {"reserved": reserved, "reused": reused, "fallback": fallback}
+    return {"reserved": reserved, "reused": reused, "fallback": fallback, "reclaimed": reclaimed}
 
 
 def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
