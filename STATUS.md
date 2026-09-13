@@ -274,7 +274,7 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
 | Research completed (24h) | **70** |
-| Oldest active claim age | **88 min** |
+| Oldest active claim age | **89 min** |
 
 ### Worker routing snapshot
 
