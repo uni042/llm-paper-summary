@@ -4,10 +4,38 @@
   "slot": "metadata",
   "attempt_id": "attempt-8f7a99a959a36e3609539695",
   "job_id": "job-research-44ece09f5c0f4e7c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8f7a99a959a36e3609539695",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2607.08565",
+    "arxiv_id": "2607.08565",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI"]},
+    "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+    "summary": "エージェント型LLMでは、一つの利用者セッションが何度も追加入力を送り、以前の会話履歴を再利用するため、KVキャッシュの局所性が通常チャットより非常に高い。BAILIANの本番トレースでは入力トークンの約81〜82%が再利用可能で、その約3分の2が同一セッション内の後続要求に由来する。一方、既存のキャッシュ優先ルーティングは最初に選んだGPUへ後続要求をほぼ固定し、長く重いセッションが一部インスタンスを過負荷にする。SMetricはセッションの最初の要求だけを純粋な負荷分散で配置し、後続要求は原則としてKV命中が最大のインスタンスへ戻す。これにより最初の一回でセッションを均等にばらまき、その後は高い局所再利用を維持する。さらに対象インスタンスが平均負荷を大きく超える場合や、セッションKVが実質的に追い出された場合は負荷分散へ戻して長大セッションを移行する。H20×32 GPUと本番由来トレースで、プリフィル・デコード同居構成のクラスタTPSを最良比較方式より10〜16%、分離構成のプリフィルTPSを2〜34%改善する。",
+    "list_summary": "セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。",
+    "authors": ["Jiahao Wang", "Kaizhan Lin", "Kaixi Zhang", "Jinbo Han", "Xingda Wei", "Sijie Shen", "Chenguang Fang", "Wenyuan Yu", "Rong Chen", "Haibo Chen"],
+    "authors_affiliations": "主な所属はShanghai Jiao Tong University Institute of Parallel and Distributed SystemsとAlibaba Group。Kaizhan LinはShanghaiTech University所属で、本研究はIPADS, Shanghai Jiao Tong Universityでのインターン中に実施したと記載されている。",
+    "published": "2026-07-09",
+    "publication": "arXiv preprint v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["エージェント型LLM配信", "セッション指向スケジューリング", "KVキャッシュ再利用", "負荷分散", "プリフィル・デコード分離", "グローバルKVストア"],
+    "importance": "エージェント負荷では要求単位のキャッシュ命中率最大化がクラスタ全体の処理量最大化と一致しないことを本番トレースで示し、セッション開始時の配置を負荷分散の制御点として使う。既存APIの会話履歴からターン番号を推定でき、ルータ側にセッション状態を持たないため実運用へ導入しやすい。",
+    "hardware_evaluation": "実機。4サーバー×各NVIDIA H20 GPU 8基、合計32 GPU。各GPUは96GB HBM3。サーバー当たり160 CPUコア、1280GB DRAM、サーバー間は200 Gbps RDMA。ルータは別CPUサーバー64コア・256GB DRAM。",
+    "quality_effect": "モデル重みやKV内容を近似せず、要求をどのインスタンスへ送るかだけを変えるため生成品質を直接変更しない。KVがない場所へ移した場合は必要な接頭辞をグローバルKV層から取得するか再計算する。",
+    "source": "https://arxiv.org/abs/2607.08565",
+    "sources": ["https://arxiv.org/abs/2607.08565", "https://arxiv.org/pdf/2607.08565"],
+    "code": null,
+    "implementation": "vLLM v0.12.0を基盤に、LMCacheとMooncakeを用いるグローバルKV層を組み合わせて実装。論文はSMetricと本番トレースを正式公開時にオープンソース化すると述べるが、2026-09-14時点のv1一次資料では恒久的な公式コードURLは確認できない。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 59,
+    "references": [
+      {"canonical_id": "arXiv:2602.00328", "arxiv_id": "2602.00328"},
+      {"canonical_id": "arXiv:2507.17769", "arxiv_id": "2507.17769"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-8f7a99a959a36e3609539695", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
