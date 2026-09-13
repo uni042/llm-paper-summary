@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 04:14 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 04:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,12 +36,12 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **130** |
-| 処理中（Active claims） | **1** |
-| 今すぐ着手可能（Claimable） | **129** |
-| :30 通常worker Active claims | **1** |
+| 処理中（Active claims） | **2** |
+| 今すぐ着手可能（Claimable） | **128** |
+| :30 通常worker Active claims | **2** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 04:11 JST** |
+| :30 通常worker 直近claim | **09-14 04:15 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
@@ -99,7 +99,7 @@ Run: **2026-09-14T03:30:00+09:00**
 - P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
 - P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
-- P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
+- P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 
 ## 参考情報
 
