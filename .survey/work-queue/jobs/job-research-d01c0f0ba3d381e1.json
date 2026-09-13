@@ -8,14 +8,13 @@
   "source_url": "https://arxiv.org/abs/2602.16603",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
   "selection_reason": "chunk sizeを小さくすることでしか得られなかったprefill interruptibilityをoperator-level preemptionで実現し、event-driven schedulingで制御overheadを抑える。production traceでheterogeneous SLOを満たしながら最大goodputを最大5.6倍改善と報告し、prefill HoL blockingへの異なる実行粒度設計を示す。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T17:15:59+00:00",
   "artifact_transport": "structured_record_v10",
-  "repair_required": true,
-  "validation_error": "ValueError: results.overview must explain the main result and its practical meaning",
-  "last_validation_failed_at": "2026-09-13T04:44:58+00:00"
+  "completed_at": "2026-09-13T17:24:38+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-439eb29ba8901a4bd7b7941a.json"
 }
