@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-51e656c50159f5f553d184be",
-  "job_id": "job-research-eb3b75f01826c8e7",
-  "data": {
-    "limitations": "主評価は単一NVIDIA H20上の1B〜8B級モデルであり、複数GPUや分散サービング、70B以上の標的モデルでは実測していない。論文自身が指摘するように、標的モデルが大きくなると検証遅延とKVキャッシュ処理が支配的になり、ドラフトLMヘッドを完全に除去しても全体高速化の上限が低くなる。動的語彙は平均受理長を完全語彙と全く同一には保たず、タスクやモデルによってわずかに低下する。DynaSpecは公式実装と一部設定が非公開のため著者再実装との比較である。EAGLE-3も公式チェックポイントが固定枝刈り語彙を含むため、完全語彙LMヘッドを持つドラフトを著者側で学習しており、既製チェックポイントをそのまま比較した結果ではない。GPU常駐状態は単一系列では小さいが、論文は追加VRAMがバッチ数に比例して増えると述べる。",
-    "differences": "FR-SpecやVocabTrimはコーパス頻度に基づく固定語彙を使うため、現在の文脈だけで重要な長尾語を拾うには数万トークンを残す必要がある。DynaSpecやCORALは文脈に応じて選択するが、あらかじめ作った語彙クラスタと学習済みルータへ依存する。NanoSpecは入力履歴、ドラフト木、標的モデル検証候補から毎ラウンド直接語彙を構成し、追加学習なしで3000未満まで縮める点が異なる。また、枝刈り後の疎なLMヘッドをそのまま計算せず、必要重みを連続バッファへ非同期収集して密行列積へ戻す。したがって語彙選択法だけでなく、GPU上で動的語彙を効率良く実行するシステム設計まで含む。",
-    "implementation_status": "arXiv v2時点で公式GitHub `csAugust/NanoSpec` が公開されている。FR-Spec基盤へのPython/CUDA変更として実装され、EAGLE-2とEAGLE-3への適用を論文で評価している。",
-    "research_positioning": "投機的デコードのドラフト高速化、特に大語彙モデルのLMヘッド最適化系統に位置する。EAGLE系がドラフト生成能力、FR-Spec/DynaSpec/CORALがドラフト語彙枝刈りを改善するのに対し、NanoSpecは時間局所性を使う極小動的語彙とGPUメモリアクセス最適化を結びつける。vLLMやSGLangのPagedAttention/RadixAttentionとは対象が異なり、標的モデル、KVキャッシュ、スケジューラを変更しないため補完的である。",
-    "relation_to_existing_repository": "リポジトリ内の投機的デコード系では、EAGLE-2/EAGLE-3などのドラフト方式の上に重ねる実行時最適化として整理できる。FR-Specの固定頻度語彙に対して、NanoSpecは候補履歴の時間局所性を使って語彙サイズを約32kから3k未満へさらに縮める。また、非同期収集とGPU常駐集合管理は、疎性を導入しただけではメモリアクセス効率が悪化するという一般的なGPUシステム課題への具体例でもあり、KVキャッシュやMoEとは別の『重みの部分集合を毎ステップ動的に連続化する』設計として参照価値がある。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-636dceef51cdacb2e889c0f9",
+  "job_id": "job-research-2909bb8eecc75840",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-51e656c50159f5f553d184be",
+    "claim_id": "claim-636dceef51cdacb2e889c0f9",
     "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
