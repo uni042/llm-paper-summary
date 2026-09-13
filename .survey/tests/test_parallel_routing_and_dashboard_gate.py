@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / ".survey/docs/survey-workflow"
 GATE = ROOT / ".survey/scripts/status_publish_gate.py"
 WORKFLOW = ROOT / ".github/workflows/status-dashboard.yml"
+REPOSITORY_TESTS = ROOT / ".github/workflows/repository-tests.yml"
 
 
 class SpecialistOverflowRoutingTests(unittest.TestCase):
@@ -28,6 +29,11 @@ class SpecialistOverflowRoutingTests(unittest.TestCase):
             "candidate在庫が50本、100本、それ以上でも、在庫数だけを理由に探索を弱めたり停止したりしない",
             specialist,
         )
+
+    def test_repository_tests_watch_overflow_policy_documents(self):
+        text = REPOSITORY_TESTS.read_text(encoding="utf-8")
+        self.assertGreaterEqual(text.count(".survey/docs/survey-workflow/discovery-specialist-worker.md"), 2)
+        self.assertGreaterEqual(text.count(".survey/docs/survey-workflow/candidate-buffer-policy.md"), 2)
 
 
 class StatusPublishGateTests(unittest.TestCase):
