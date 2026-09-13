@@ -54,7 +54,8 @@ class AuditMetadataRoutingTest(unittest.TestCase):
         created = add_job.call_args.args[0]
         self.assertEqual(created["workflow_version"], 10)
         self.assertEqual(created["artifact_transport"], "structured_record_v10")
-        self.assertIn("five-slot structured research record", created["instructions"])
+        self.assertIn("structured research record", created["instructions"])
+        self.assertIn("workflow v10 fixed-slot transport", created["instructions"])
         self.assertIn("five-slot structured research record", created["completion"])
         self.assertNotIn("complete Markdown", created["completion"])
 
