@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d1a35284aa68699f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.17063",
+      "title": "FlashMoE: Efficient Mixture-of-Experts Inference with SSD Offloading on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2601.17063",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md",
+      "priority": 90,
+      "reason": "GPUに収まらないMoE専門家をSSDへ退避するエッジ推論で、専門家アクセスの時系列特性を学習したcache replacementとI/O重畳により、LRU/LFUより高い専門家hit率を狙う。一般利用者級のデスクトップ環境で最大約51%のcache hitと最大2.6倍の高速化を報告しており、SSD expert offloadを直接扱う中核候補である。"
+    },
+    {
+      "canonical_id": "arXiv:2607.24787",
+      "title": "SpecPrefetch: Speculative Expert Prefetching for Efficient On-Device MoE Inference",
+      "source_url": "https://arxiv.org/abs/2607.24787",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.24787-specprefetch-on-device-moe-prefetch.md",
+      "priority": 89,
+      "reason": "オンデバイスMoEで専門家重み転送を隠すため、実行に使うnative routerとは分離した軽量予測器で次層expertだけを先読みし、誤予測が生成結果を変えない構成を取る。転送窓を意識したscheduleと組み合わせ、Qwen3-VL/DeepSeek-VL2系をSnapdragon 8 Eliteで評価し、compute最適化済みoffload runtime比で最大20%のthroughput改善を報告する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.00466",
+      "title": "ELDR: Expert-Locality-Aware Decode Routing for Prefill-Decode Disaggregated MoE Serving",
+      "source_url": "https://arxiv.org/abs/2607.00466",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.00466-eldr-expert-locality-decode-routing.md",
+      "priority": 88,
+      "reason": "prefill/decode分離MoEでprefill時のexpert選択履歴を要求のexpert signatureとして利用し、decode要求を既に必要expertが局所化しているworkerへ割り当てる。モデル出力を変えずにcache localityをroutingへ取り込み、vLLMベース最大40 GPU評価でload-balancing系baselineよりmedian TPOTを5.9〜13.9%低減しており、専門家配置とrequest routingの接点として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2608.11688",
+      "title": "APEX: Adaptive Expert Prefetching for Memory-Constrained Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2608.11688",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.11688-apex-adaptive-expert-prefetching.md",
+      "priority": 86,
+      "reason": "メモリ制約下のMoE offloadで、attention前に軽量prefetch routerを走らせて次の専門家転送を計算と重ねる。実際のrouterによる最終選択を維持するcorrectness-preserving経路を持ち、予測・転送の重畳率を高めてper-token latencyを最大26%、energy-delay productを最大41%改善しており、expert prefetchの実装設計として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.18261",
+      "title": "Cacheable by Design? Reassessing Expert Locality for SSD-Offloaded Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2608.18261",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.18261-cacheable-by-design-expert-locality.md",
+      "priority": 84,
+      "reason": "Qwen3-235B級MoEを小容量GPU+SSDで動かす際、通常学習済みrouterのexpert localityだけではSSD帯域壁を十分超えないことを実測・解析し、locality-aware trainingと品質制約付きtraining-free reroutingの限界を比較する。training-free reroutingでexpert missを約80%削減しつつperplexity増を3.4%以内に抑える条件を示しており、SSD expert cacheabilityの負結果と設計境界を与える研究として重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:00+09:00",
+    "round": "specialist-moe-expert-locality-prefetch-3",
+    "axis": "MoE expert locality・expert prefetch・SSD/edge cacheability",
+    "query_summary": "分離サービング軸から専門家重みの局所性・先読み・SSD offloadへ移り、expert cache replacement、correctness-preserving prefetch、decode routing、expert localityの限界を軽量評価した。最新HEADでidentifier、queue/jobs、Library pendingを再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/SSD-backed shared KV・cluster memory tier・temporal tieringへ軸を移す",
+    "empty_round_reason": null
+  }
+}
