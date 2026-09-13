@@ -36,11 +36,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **160** |
-| 処理中（Active claims） | **1** |
-| 今すぐ着手可能（Claimable） | **159** |
+| 処理中（Active claims） | **2** |
+| 今すぐ着手可能（Claimable） | **158** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **0** |
-| その他/帰属不明 Active claims | **0** |
+| その他/帰属不明 Active claims | **1** |
 | :30 通常worker 直近claim | **09-14 01:07 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P88 `arXiv:2512.22219` — Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs
 - P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
 - P88 `arXiv:2601.08800` — MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm
 - P88 `arXiv:2605.07238` — FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows
 - P88 `arXiv:2507.10069` — ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism
+- P88 `arXiv:2605.16867` — GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources
 
 ## 参考情報
 
