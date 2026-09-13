@@ -55,8 +55,78 @@ class StatusDashboardTests(unittest.TestCase):
             ]})
             module = _load_module(repo)
             text = module.build_dashboard(repo, now=datetime(2026, 9, 12, 6, 10, tzinfo=timezone.utc))
-            for expected in ("# 運用ダッシュボード", "Research ready | **2**", "Research完了 | **3**", "Repo収録 | **3**", "探索評価候補 | **15**", "重複除外 | **5**", "Research候補採用 | **9**", "33.3%", "SSD階層", "MoE expert", "New Paper", "Paper A", "履歴不足"):
+            for expected in (
+                "# 運用ダッシュボード",
+                "未処理の論文候補（Research ready） | **2**",
+                "Research完了 | **3**",
+                "Repo収録 | **3**",
+                "探索評価候補 | **15**",
+                "重複除外 | **5**",
+                "Research候補採用 | **9**",
+                "33.3%",
+                "SSD階層",
+                "MoE expert",
+                "New Paper",
+                "Paper A",
+                "履歴不足",
+            ):
                 self.assertIn(expected, text)
+
+    def test_dashboard_prioritizes_operational_status_and_explains_terms(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            _install_script(repo)
+            _write(repo / ".survey/work-queue/next-jobs.json", {
+                "counts": {"research": {"completed": 210, "ready": 180, "blocked": 0, "deferred": 3}},
+                "next_jobs": [
+                    {"type": "research", "canonical_id": "arXiv:2609.1", "title": "Paper A", "priority": 90},
+                ],
+            })
+            _write(repo / ".survey/work-queue/maintenance-cycle.json", {
+                "cadence_runs": 24,
+                "runs_since_maintenance": 12,
+                "maintenance_pending": False,
+                "last_maintenance_status": "passed",
+                "last_consistency_status": "passed",
+            })
+            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
+                {
+                    "run_key": "2026-09-13T12:30:00+09:00",
+                    "counts": {"research_completed": 2, "audit_completed": 0, "discovery_completed": 0, "blocked": 0, "new_jobs": 0, "new_papers": 2, "fallback_archived": 0},
+                    "terminal_transitions": [
+                        {"type": "research", "canonical_id": "arXiv:a", "title": "A", "to": "completed"},
+                    ],
+                },
+            ]})
+            _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
+                {"run_key": "2026-09-13T11:00:00+09:00", "round": "specialist-s1", "source_submission": "work-queue/submissions/discovery-specialist-s1.json", "axis": "SSD", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 2},
+            ]})
+            module = _load_module(repo)
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
+
+            for expected in (
+                "## このページの見方",
+                "Research ready",
+                "まだ全文精読が終わっていない論文候補",
+                "Claim",
+                "workerが処理権を確保している状態",
+                "Audit",
+                "既存の論文ページや要約の品質点検",
+                "## 現在の状態",
+                "## 直近24時間の処理量",
+                "## 直近の通常worker",
+                "## 次に処理する候補",
+                "## 参考情報",
+                "### 直近の探索専用worker",
+                "### 探索専用workerの探索効率（直近24時間）",
+            ):
+                self.assertIn(expected, text)
+
+            self.assertLess(text.index("## 現在の状態"), text.index("## 直近24時間の処理量"))
+            self.assertLess(text.index("## 直近24時間の処理量"), text.index("## 直近の通常worker"))
+            self.assertLess(text.index("## 直近の通常worker"), text.index("## 次に処理する候補"))
+            self.assertLess(text.index("## 次に処理する候補"), text.index("## 参考情報"))
+            self.assertLess(text.index("## 参考情報"), text.index("### 探索専用workerの探索効率（直近24時間）"))
 
     def test_dashboard_separates_specialist_discovery_and_groups_it_by_hourly_run(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -71,8 +141,6 @@ class StatusDashboardTests(unittest.TestCase):
                 "maintenance_pending": False, "last_maintenance_status": "passed",
                 "last_consistency_status": "passed",
             })
-            # The ledger bucket is intentionally polluted by helper events from the
-            # specialist worker. STATUS must not report those as normal-worker discovery.
             _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
                 {
                     "run_key": "2026-09-13T10:30:00+09:00",
@@ -105,7 +173,7 @@ class StatusDashboardTests(unittest.TestCase):
             module = _load_module(repo)
             text = module.build_dashboard(repo, now=datetime(2026, 9, 13, 1, 50, tzinfo=timezone.utc))
 
-            self.assertIn("Candidate在庫（Research ready） | **176**", text)
+            self.assertIn("未処理の論文候補（Research ready） | **176**", text)
             self.assertNotIn("176 / 50", text)
             self.assertIn("## 直近の通常worker", text)
             self.assertIn("Research完了 | **2**", text)
@@ -113,7 +181,7 @@ class StatusDashboardTests(unittest.TestCase):
             self.assertNotIn("Discovery完了 | **4**", text)
             self.assertNotIn("新規job | **7**", text)
 
-            self.assertIn("## 直近の探索専用worker", text)
+            self.assertIn("### 直近の探索専用worker", text)
             self.assertIn("Run: **2026-09-13T10:00:00+09:00**", text)
             self.assertIn("探索round | **4**", text)
             self.assertIn("評価候補 | **22**", text)
