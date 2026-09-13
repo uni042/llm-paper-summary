@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:38:06.982743+00:00",
+  "updated_at": "2026-09-13T01:39:23.803977+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,7 +17069,7 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T01:38:06.982743+00:00",
+      "last_recorded_at": "2026-09-13T01:39:23.803977+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -17078,9 +17078,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 0,
-        "new_jobs": 5,
+        "new_jobs": 6,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -17127,6 +17127,20 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34731008915:1",
+          "recorded_at": "2026-09-13T01:39:23.803977+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34731008915",
+            "run_attempt": "1",
+            "source_sha": "98a2cf4a554151eef285724f00977d9c4cd3fbae"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17151,6 +17165,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.01821",
           "title": "Scaling Inference Prefill with High-Radix Photonic Interconnects",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-3223d356f498e7ef",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
           "from": "ready",
           "to": "completed"
         }
@@ -17190,6 +17212,13 @@
           "type": "research",
           "canonical_id": "arXiv:2605.26444",
           "title": "MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies"
+        },
+        {
+          "job_id": "job-224a19df35fa6760",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -17197,12 +17226,13 @@
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T1031JST-discovery-specialist-scheduling-5.json",
-        ".survey/work-queue/results/20260913T1034JST-discovery-specialist-specdecode-6.json"
+        ".survey/work-queue/results/20260913T1034JST-discovery-specialist-specdecode-6.json",
+        ".survey/work-queue/results/20260913T1037JST-discovery-specialist-hierarchical-memory-7.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,
       "paper_active_count_after": 395,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

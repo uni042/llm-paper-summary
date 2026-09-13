@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:34:08+00:00",
+  "updated_at": "2026-09-13T01:38:25+00:00",
   "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-specdecode-6",
+  "last_round": "specialist-hierarchical-memory-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2830,6 +2830,32 @@
       ],
       "next_axis_hint": "階層KV memory service・SSD/DRAM tiering・prefix reuseの新着、次いでforward/backward citation経路を探索する",
       "source_submission": "work-queue/submissions/20260913T1034JST-discovery-specialist-specdecode-6.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-hierarchical-memory-7",
+      "axis": "SSD expert offload・peer GPU cache tier・階層メモリ",
+      "query_summary": "SSD/NVMe expert offloadとGPU/CPU/SSD/peer-GPU階層を探索した。Tutti、KVDrive、SwiftCache、Akashic、robust KV management、SAEM、SPICE、NPUMoE、OD-MoE、MoE Servingは既収録または既存jobとして除外し、FlashMoEとHarvestのみ最新HEADで未登録を再確認した。",
+      "candidate_count": 12,
+      "duplicate_filtered_count": 10,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8333333333333334,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.03375",
+        "arXiv:2605.18071",
+        "arXiv:2606.16135",
+        "arXiv:2607.05708",
+        "arXiv:2607.16892",
+        "arXiv:2608.21614",
+        "arXiv:2608.21240",
+        "arXiv:2604.18788",
+        "arXiv:2512.03927",
+        "arXiv:2607.17880"
+      ],
+      "next_axis_hint": "新規候補の引用・関連研究経路を辿るか、GPU runtime/networking・distributed servingの新着へ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T1037JST-discovery-specialist-hierarchical-memory-7.json"
     }
   ],
   "axes": {
@@ -4422,6 +4448,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "階層KV memory service・SSD/DRAM tiering・prefix reuseの新着、次いでforward/backward citation経路を探索する"
+    },
+    "SSD expert offload・peer GPU cache tier・階層メモリ": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 12,
+      "duplicate_filtered_count": 10,
+      "novel_candidate_count": 2,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8333333333333334,
+      "next_axis_hint": "新規候補の引用・関連研究経路を辿るか、GPU runtime/networking・distributed servingの新着へ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
