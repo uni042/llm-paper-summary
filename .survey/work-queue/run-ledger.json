@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T02:16:52.668962+00:00",
+  "updated_at": "2026-09-13T02:18:45.163051+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,7 +17069,7 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T02:16:52.668962+00:00",
+      "last_recorded_at": "2026-09-13T02:18:45.163051+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -17078,9 +17078,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 10,
+        "discovery_completed": 11,
         "blocked": 0,
-        "new_jobs": 17,
+        "new_jobs": 19,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -17269,6 +17269,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34732679907:1",
+          "recorded_at": "2026-09-13T02:18:45.163051+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34732679907",
+            "run_attempt": "1",
+            "source_sha": "83bd106c02ce346f172ceb4214a08853b118d805"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17370,6 +17384,14 @@
         },
         {
           "job_id": "job-20f6236718384c35",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d269169f035c8fc5",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -17496,6 +17518,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-39db2853fb399a18",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-b3027328474c4253",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2601.00227",
+          "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems"
         }
       ],
       "new_paper_ids": [
@@ -17513,7 +17549,8 @@
         ".survey/work-queue/results/20260913T1108JST-discovery-specialist-lineage-3.json",
         ".survey/work-queue/results/20260913T1110JST-discovery-specialist-heterogeneous-4.json",
         ".survey/work-queue/results/20260913T1113JST-discovery-specialist-speculative-5.json",
-        ".survey/work-queue/results/20260913T1115JST-discovery-specialist-agentic-6.json"
+        ".survey/work-queue/results/20260913T1115JST-discovery-specialist-agentic-6.json",
+        ".survey/work-queue/results/20260913T1117JST-discovery-specialist-runtime-7.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,

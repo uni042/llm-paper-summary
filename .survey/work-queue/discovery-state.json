@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:15:28+00:00",
+  "updated_at": "2026-09-13T02:17:42+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-agentic-serving-6",
+  "last_round": "specialist-runtime-kernel-7",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "agentic servingの強候補はすべて正本で既収録または既存job化されていた。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2989,6 +2989,26 @@
       ],
       "next_axis_hint": "GPU runtime/kernelとframework実装由来の新着を再確認し、その後ネットワーク・移動体KV migrationの隣接軸で枯渇確認する",
       "source_submission": "work-queue/submissions/20260913T1115JST-discovery-specialist-agentic-6.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-runtime-kernel-7",
+      "axis": "GPU runtime・kernel自動最適化とframework統合",
+      "query_summary": "GPU kernel/runtime/compilerとframework統合を確認した。ZipServ 2603.17435、moderate sparse GPU inference 2607.08786、Concordia 2606.23521、Mirage Persistent Kernel 2512.22219はidentity deltaまたは既存research jobで重複。FlashInfer-Bench 2601.00227は最新HEADでidentity delta、stable job、repoタイトル検索のいずれにも存在しないことを再確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2603.17435",
+        "arxiv:2607.08786",
+        "arxiv:2606.23521",
+        "arxiv:2512.22219"
+      ],
+      "next_axis_hint": "最終枯渇確認として最新新着、network/CXL/SSD階層メモリ、forward/backward citationの3経路を再走査する",
+      "source_submission": "work-queue/submissions/20260913T1117JST-discovery-specialist-runtime-7.json"
     }
   ],
   "axes": {
@@ -4661,6 +4681,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "GPU runtime/kernelとframework実装由来の新着を再確認し、その後ネットワーク・移動体KV migrationの隣接軸で枯渇確認する"
+    },
+    "GPU runtime・kernel自動最適化とframework統合": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "next_axis_hint": "最終枯渇確認として最新新着、network/CXL/SSD階層メモリ、forward/backward citationの3経路を再走査する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

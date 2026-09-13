@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-b3027328474c4253",
+  "type": "research",
+  "parent_job_id": "job-d269169f035c8fc5",
+  "priority": 84,
+  "canonical_id": "arXiv:2601.00227",
+  "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+  "source_url": "https://arxiv.org/abs/2601.00227",
+  "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+  "selection_reason": "LLMが生成するGPU kernelを実際の推論系へ取り込む際に、kernel記述・workload・implementation・評価が分断されている問題に対し、FlashInfer Trace、serving trace由来benchmark、correctness/performance評価、leaderboard、最良kernelをSGLang/vLLMへ動的差し替えするapply機構を統合する。単なるkernel生成benchmarkではなく、AIによるkernel探索をproduction LLM engineへ継続導入する閉ループを構築しており、FlashInfer/vLLM/SGLang系統のruntime・kernel自動最適化として重要な欠落候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T02:17:42+00:00",
+  "artifact_transport": "structured_record_v10"
+}
