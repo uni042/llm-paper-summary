@@ -39,6 +39,15 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
         self.assertIn('result["attempt_id"] = attempt_id', worker)
 
+    def test_maintenance_refreshes_metadata_coverage_before_health(self):
+        workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
+        metadata_command = (
+            "python .survey/scripts/audit_metadata_coverage.py --repo-root . "
+            "--json-out .survey/reports/metadata-coverage-latest.json --strict"
+        )
+        self.assertIn(metadata_command, workflow)
+        self.assertLess(workflow.index(metadata_command), workflow.index("python .survey/scripts/maintenance_health.py"))
+
 
 if __name__ == "__main__":
     unittest.main()
