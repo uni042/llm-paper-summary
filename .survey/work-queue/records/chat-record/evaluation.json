@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-00ad49beaa5eceaa4b67bfa2",
   "job_id": "job-research-666c253d539b3e43",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-00ad49beaa5eceaa4b67bfa2",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "実機評価ではLlama-3.1-8BをNVIDIA A40 PCIe 48GB、Qwen3-32BをNVIDIA H800 PCIe 96GB上で配信する。拡張性評価では最大64 GPUノードのシミュレータを構築する。",
+    "software": "vLLM v0.8.2を基盤としてSageSchedを実装する。意味履歴検索にはFAISS IndexFlatを使う。比較する予測器の一部にはDistilBERTを用いる。",
+    "methodology": "要求データはShareGPT、Alpaca-PubMed Summarization、Document-Writeの3種類を使い、混合集合と各データセット単独の双方で評価する。到着間隔はPoisson分布とし、要求率を変化させる。生成温度は0.6。主要な実機比較対象はvLLMのFCFS、FastServe、SSJF、LTR、TRAILで、それぞれ既定ハイパーパラメータを用いる。SageSchedの既定設定はプロンプト類似度閾値0.8、Gittins再計算の費用区間幅200。主指標は平均TTLTで、平均TTFTも測定する。構成要素評価では予測方式を意味非依存履歴型・DistilBERT分布型へ交換し、費用モデルを出力長のみ・入力出力の重み付き和へ交換し、スケジューリングを分布平均順・指数更新なしGittinsへ交換する。さらに予測分布へ一様雑音を混ぜて頑健性を測る。",
+    "scope": "主評価は単一GPU上で複数要求をスケジュールする条件で、分散プリフィル・デコードや複数レプリカへの要求ルーティングそのものは対象外である。64 GPU評価はシミュレーションであり実機クラスタではない。費用モデルはデコード中の注意計算が系列長へ線形に増える近似を中心にし、FFNの定数的計算時間を長いデコードや大バッチで償却されるとして省略する。したがって短いデコードや異なるカーネル構成では費用式の近似誤差が増え得る。",
+    "workloads": ["ShareGPT","Alpaca-PubMed Summarization","Document-Write","3データセット混合負荷","最大64 GPUノードのスケジューリングシミュレーション"],
+    "baselines": ["FCFS","FastServe","SSJF","LTR","TRAIL","分布平均順スケジューリング","指数更新なしGittins"],
+    "metrics": ["平均Time-to-Last-Token（TTLT）","平均Time-to-First-Token（TTFT）","予測遅延","スケジューリング遅延","大規模時の要求あたり追加遅延"],
+    "reproducibility": "論文はモデル、GPU、データセット、要求到着分布、比較手法、類似度閾値、費用区間幅を記載し、vLLM上で実装したと説明する。ただし一次資料にSageSched固有の公開コードURLは確認できない。"
+  },
+  "reservation": {"claim_id":"claim-00ad49beaa5eceaa4b67bfa2","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
