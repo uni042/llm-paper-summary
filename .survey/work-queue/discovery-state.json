@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:38:44+00:00",
+  "updated_at": "2026-09-13T00:42:47+00:00",
   "last_run_key": "2026-09-13T09:28:10+09:00",
-  "last_round": "specialist-speculative-serving-4",
+  "last_round": "specialist-network-saturation-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "強候補は全て正本の既存jobまたは収録済みidentityに一致したため。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2610,6 +2610,26 @@
       ],
       "next_axis_hint": "speculative decodingを直後に反復せず、RDMA/network disaggregationまたは収録済み重要論文からのforward citationへ移る",
       "source_submission": "work-queue/submissions/20260913T0938JST-discovery-specialist-speculative-serving-4.json"
+    },
+    {
+      "run_key": "2026-09-13T09:28:10+09:00",
+      "round": "specialist-network-saturation-5",
+      "axis": "RDMA・分離サービング・KV転送",
+      "query_summary": "投機的復号の新規候補投入後、RDMA/network disaggregationへ軸を変更した。SmartGen (arXiv:2607.28150) と KVServe (arXiv:2605.13734) を一次arXivから再評価したが、決定論的research jobを最新HEADで直接確認すると双方とも既収録duplicateだった。CacheFlow・LMCacheも既収録で、追加に値する新規強候補は得られなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.28150",
+        "arxiv:2605.13734",
+        "arxiv:2604.25080",
+        "arxiv:2510.09665"
+      ],
+      "next_axis_hint": "network/KV転送軸は直後反復せず、異種GPU・電力制御・Superchip/CPU-GPU offloadなど資源管理系へ移る",
+      "source_submission": "work-queue/submissions/20260913T0941JST-discovery-specialist-network-saturation-5.json"
     }
   ],
   "axes": {
@@ -4082,6 +4102,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.25,
       "next_axis_hint": "speculative decodingを直後に反復せず、RDMA/network disaggregationまたは収録済み重要論文からのforward citationへ移る"
+    },
+    "RDMA・分離サービング・KV転送": {
+      "last_run_key": "2026-09-13T09:28:10+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "network/KV転送軸は直後反復せず、異種GPU・電力制御・Superchip/CPU-GPU offloadなど資源管理系へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
