@@ -107,6 +107,34 @@ def live_reference_text(root):
     return "\n".join(chunks)
 
 
+def immutable_pair_collectable(root, submission_obj, result_obj):
+    """Return whether a settled immutable attempt is safe to retire."""
+    if not isinstance(submission_obj, dict) or not isinstance(result_obj, dict):
+        return False, "immutable_invalid_json"
+    job_id = submission_obj.get("job_id")
+    attempt_id = submission_obj.get("attempt_id")
+    if (
+        not isinstance(job_id, str)
+        or not isinstance(attempt_id, str)
+        or result_obj.get("job_id") != job_id
+        or result_obj.get("attempt_id") != attempt_id
+    ):
+        return False, "immutable_identity_mismatch"
+
+    job = read_json(root / ".survey/work-queue/jobs" / f"{job_id}.json")
+    if isinstance(job, dict):
+        if job.get("status") not in TERMINAL:
+            return False, "immutable_job_not_terminal"
+        return True, None
+
+    # Successful immutable results are already durable proof that processing
+    # settled. This also lets a later GC clean old pairs whose terminal job was
+    # removed by an earlier maintenance run before immutable transport GC existed.
+    if result_obj.get("ok") is True:
+        return True, None
+    return False, "immutable_job_unknown"
+
+
 def collect_settled_transport(root, retention_days, now):
     candidates = []
     skipped = []
@@ -128,6 +156,37 @@ def collect_settled_transport(root, retention_days, now):
             if not older_than(newest, retention_days, now):
                 continue
             for path, kind in ((sub, "settled_submission"), (result, "settled_result")):
+                candidates.append({"path": path, "kind": kind, "timestamp": newest.isoformat() if newest else None})
+                planned.add(path.resolve())
+
+    # Workflow-v10 immutable research/audit descriptors live one directory below
+    # the legacy transport. Only retire exact settled pairs after their canonical
+    # job is terminal (or a successful result survives a previously-GCed job).
+    for transport_kind in ("research", "audit"):
+        sub_folder = submissions / transport_kind
+        result_folder = results / transport_kind
+        if not sub_folder.is_dir():
+            continue
+        for sub in sorted(sub_folder.glob("*.json")):
+            rel = sub.relative_to(root).as_posix()
+            result = result_folder / sub.name
+            if not result.is_file():
+                skipped.append({"path": rel, "reason": "immutable_submission_not_settled"})
+                continue
+            submission_obj = read_json(sub)
+            result_obj = read_json(result)
+            collectable, reason = immutable_pair_collectable(root, submission_obj, result_obj)
+            if not collectable:
+                skipped.append({"path": rel, "reason": reason})
+                continue
+            timestamps = [ts for ts in (file_time(root, sub), file_time(root, result)) if ts]
+            newest = max(timestamps) if timestamps else None
+            if not older_than(newest, retention_days, now):
+                continue
+            for path, kind in (
+                (sub, "settled_immutable_submission"),
+                (result, "settled_immutable_result"),
+            ):
                 candidates.append({"path": path, "kind": kind, "timestamp": newest.isoformat() if newest else None})
                 planned.add(path.resolve())
 
