@@ -61,7 +61,11 @@ def _as_now(value: Any = None) -> dt.datetime:
 
 
 def current_claims(repo_root: Path, now: Any = None) -> dict[str, dict[str, Any]]:
-    """Return one current claim per job, retaining expired claims on disk."""
+    """Return one current claim per job, retaining expired claims on disk.
+
+    A release or lease invalidation is authoritative even when expires_at is
+    still in the future. Claim files remain on disk as audit history.
+    """
     root = Path(repo_root) / ".survey/work-queue/claims"
     current = _as_now(now)
     out: dict[str, dict[str, Any]] = {}
@@ -75,9 +79,13 @@ def current_claims(repo_root: Path, now: Any = None) -> dict[str, dict[str, Any]
         if not job_id:
             continue
         expires = parse_time(claim.get("expires_at"))
+        released = bool(claim.get("released_at"))
+        invalidated = bool(claim.get("lease_invalidated_at"))
         row = dict(claim)
         row["job_id"] = job_id
-        row["active"] = bool(expires and current < expires)
+        row["released"] = released
+        row["invalidated"] = invalidated
+        row["active"] = bool(expires and current < expires and not released and not invalidated)
         row["expired"] = bool(expires and current >= expires)
         out[job_id] = row
     return out
