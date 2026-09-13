@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:49 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:50 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **159 / 50** |
-| Research ready | **159** |
+| Candidate在庫（Research ready） | **160 / 50** |
+| Research ready | **160** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **13** |
+| Discovery完了 | **6** |
+| 新規job | **15** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **134** |
-| 探索評価候補 | **665** |
+| 探索round（stats観測） | **135** |
+| 探索評価候補 | **669** |
 | 重複除外 | **278** |
-| 重複率 | **41.8%** |
-| Novel候補 | **387** |
-| Research候補採用 | **219** |
+| 重複率 | **41.6%** |
+| Novel候補 | **391** |
+| Research候補採用 | **220** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 665 → 重複除外後 387 → Research候補採用 219 → Research完了 69 → Repo収録 69**
+**探索評価 669 → 重複除外後 391 → Research候補採用 220 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -167,6 +167,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | エージェント推論・speculative tool execution | 4 | 2 | 2 | 50.0% | 50.0% |
 | 分離LLMサービング・ネットワーク競合・prefill再配置 | 4 | 0 | 1 | 0.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
+| 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA | 4 | 0 | 1 | 0.0% | 25.0% |
 | 投機的復号・高並列サービング・production評価 | 4 | 1 | 2 | 25.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -208,11 +209,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T09:28:10+09:00** — multi-tenant runtime制御・適応parallelism・latency attribution: 評価 5 / 重複 3 / 採用 2
 - **2026-09-13T09:28:10+09:00** — RDMA・分離サービング・KV転送: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 投機的復号・高並列サービング・production評価: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 出力長不確実性・tail-aware scheduling隣接: 評価 3 / 重複 1 / 採用 2
-- **2026-09-13T09:28:10+09:00** — エージェント型LLM・サービングruntime・生成時特化: 評価 3 / 重複 1 / 採用 2
 
 ## 最近処理した論文
 
