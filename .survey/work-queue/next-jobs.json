@@ -16,22 +16,10 @@
   },
   "claiming": {
     "ready_research_audit": 174,
-    "actively_claimed": 37,
-    "claimable": 137
+    "actively_claimed": 38,
+    "claimable": 136
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-f3407b821f3f7dcf",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2607.00151",
-      "title": "SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering",
-      "source_url": "https://arxiv.org/abs/2607.00151",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-234066475107816a",
       "type": "research",
@@ -117,6 +105,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-ec01b6de422e6692",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2606.08635",
+      "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.08635",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.08635-spectrumkv-mixed-precision-pd-kv-transfer.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -129,5 +129,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T07:08:03+00:00"
+  "generated_at": "2026-09-13T07:14:32+00:00"
 }
