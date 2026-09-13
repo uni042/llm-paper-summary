@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:40 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T10:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **3** |
-| 新規job | **6** |
+| Discovery完了 | **4** |
+| 新規job | **7** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,10 +51,10 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **23** |
-| 探索round（stats観測） | **145** |
-| 探索評価候補 | **730** |
-| 重複除外 | **311** |
-| 重複率 | **42.6%** |
+| 探索round（stats観測） | **146** |
+| 探索評価候補 | **735** |
+| 重複除外 | **316** |
+| 重複率 | **43.0%** |
 | Novel候補 | **419** |
 | Research候補採用 | **237** |
 | Research完了 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 730 → 重複除外後 419 → Research候補採用 237 → Research完了 70 → Repo収録 70**
+**探索評価 735 → 重複除外後 419 → Research候補採用 237 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -138,6 +138,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
+| 分離サービング通信・KV転送・network flow scheduling | 5 | 5 | 0 | 100.0% | 0.0% |
 | 直近新着・hierarchical memory・serving runtime横断再確認 | 5 | 5 | 0 | 100.0% | 0.0% |
 | 2609新着・KVキャッシュ最適化/サービング | 4 | 3 | 1 | 75.0% | 25.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
@@ -219,11 +220,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — 分離サービング通信・KV転送・network flow scheduling: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T10:16:01+09:00** — SSD expert offload・peer GPU cache tier・階層メモリ: 評価 12 / 重複 10 / 採用 0
 - **2026-09-13T10:16:01+09:00** — 投機的復号runtime・draft resource・CPU制約: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T10:16:01+09:00** — 分離サービングSLO・batch fairness・resource allocation: 評価 4 / 重複 2 / 採用 1
 - **2026-09-13T10:16:01+09:00** — KVページ圧縮・低ランク表現・GPUカーネル: 評価 4 / 重複 1 / 採用 2
-- **2026-09-13T10:16:01+09:00** — 端末内LLM・OSメモリ圧力・Flash/NPU実行: 評価 6 / 重複 2 / 採用 3
 
 ## 最近処理した論文
 
