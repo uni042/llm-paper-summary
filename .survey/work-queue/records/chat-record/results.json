@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-00ad49beaa5eceaa4b67bfa2",
-  "job_id": "job-research-666c253d539b3e43",
-  "data": {
-    "overview": "SageSchedはLlama-3.1-8B/A40とQwen3-32B/H800、3種類の要求分布と複数到着率で一貫して平均TTLTを最小化する。代表例としてQwen3-32Bへ8 RPSを投入した混合負荷では、次点のTRAILより平均TTLTを28.7%改善する。長入力が多いAlpaca要約では、出力長だけでなく入力長によるKVキャッシュ・注意計算費用を反映するため優位性が特に大きい。履歴予測器は専用学習を不要にしながら要求あたり0.5ms未満で動作し、埋め込み抽出約0.22ms、ベクトル検索約0.15msである。最大64ノード、各8 RPS、最大1000待ち要求のシミュレーションでも予測・スケジューリングの追加遅延は要求あたり約100msに留まる。",
-    "key_results": [
-      {"metric":"Qwen3-32B混合負荷の平均TTLT","value":"次点TRAILより28.7%改善","baseline":"TRAIL","condition":"H800 96GB、ShareGPT/Alpaca/Document-Write混合、8 RPS","interpretation":"分布予測、混合資源費用、Gittins順位付けの組合せが競合の強い負荷で先頭閉塞をより効果的に避ける。"},
-      {"metric":"履歴予測の要求あたり遅延","value":"0.5ms未満","baseline":"DistilBERT系予測 約3.6ms","condition":"意味埋め込み抽出約0.22ms + FAISS検索約0.15ms","interpretation":"専用予測モデルの微調整を不要にし、オンライン要求経路へ入れても小さい固定費で分布を得られる。"},
-      {"metric":"大規模時の予測・スケジューリング追加遅延","value":"64ノードでも要求あたり約100ms","baseline":"小規模から線形増加","condition":"各ノード8 RPS、最大1000待ち要求、出力長1000のシミュレーション","interpretation":"数秒〜分単位のLLM推論に対して制御面の費用は小さく、必要なら複数スケジューラへ分割できる。"},
-      {"metric":"プロンプト類似度閾値","value":"0.8が最良","baseline":"より小さい/大きい閾値","condition":"感度分析","interpretation":"閾値が高過ぎると分布標本が不足し、低過ぎると意味の異なる履歴が混ざるため、中間値が不確実性推定に適する。"},
-      {"metric":"Gittins指数の更新区間幅","value":"200が最良","baseline":"より細かい/粗い区間","condition":"感度分析","interpretation":"細か過ぎる更新は再計算・再スケジュール費用を増やし、粗過ぎる更新は残余費用の変化へ追随できない。"}
-    ],
-    "negative_results": "TTFTだけを見るとFastServeが新着要求を積極的に優先するため最良となる条件があるが、その多段フィードバック実行は平均TTLTを悪化させる。SageSchedはTTFTだけを最小化する設計ではなく、完了までの平均遅延を主目的とする。また履歴類似度閾値を上げ過ぎると十分な過去標本が得られず、下げ過ぎると無関係な要求が混ざって分布が汚染される。Gittins指数の更新を過度に細かくすると制御費用と順位スラッシングが増え、粗くすると実行済みサービス量を反映しにくい。費用式はFFNの定数成分を省略しており、非常に短い出力や異なるモデル構造では近似誤差が残る。",
-    "interpretation": "結果は、LLMスケジューリングで『出力長を当てる精度』だけを競うより、予測を分布として保持し、その分布を計算・メモリ双方の実サービス費用へ写し、分布を直接扱える順位指標へ渡すことが重要だと示す。意味履歴予測器は生成過程を模倣せず実績を利用するため軽量で、費用式は入力長の大きい要求を適切に高コスト化する。Gittins指数は長い裾を持つ分布でも近く完了しやすい要求を評価でき、実行途中の指数更新によって予測誤差にも追随する。",
-    "quality_impact": "要求の実行順序とプリエンプションだけを変更し、同じvLLMモデルと生成設定を使うため、モデル出力品質を近似して遅延を削減する方式ではない。個々の要求の生成結果はスケジューリング方策から独立である。"
-  },
-  "reservation": {"claim_id":"claim-00ad49beaa5eceaa4b67bfa2","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-6ff7fcf9a77bead8e21921d8",
+  "job_id": "job-research-de92658797430cf6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-6ff7fcf9a77bead8e21921d8",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
