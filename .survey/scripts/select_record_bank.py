@@ -172,12 +172,14 @@ def inspect_bank(
     if missing:
         state = "dirty"
         reason = "one or more slot files are missing/invalid"
+    elif attempts == {PLACEHOLDER_ATTEMPT}:
+        # Older pre-created banks intentionally omitted job_id. Keep that legacy
+        # placeholder format free rather than treating the missing job identity as dirt.
+        state = "free"
+        reason = "unused pre-created bank"
     elif incomplete_identity:
         state = "dirty"
         reason = "one or more slot files lack attempt/job identifiers"
-    elif attempts == {PLACEHOLDER_ATTEMPT}:
-        state = "free"
-        reason = "unused pre-created bank"
     elif len(attempts) != 1 or len(jobs) != 1:
         if pairs and durable_pairs == pairs:
             state = "reusable"
