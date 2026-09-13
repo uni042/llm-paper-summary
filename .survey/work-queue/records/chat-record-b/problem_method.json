@@ -4,10 +4,25 @@
   "slot": "problem_method",
   "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
   "job_id": "job-research-b1be9294a63ee868",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bb9c6b2c2debb9e325fcf74b",
-    "worker_id": "scheduled-chat-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "KVキャッシュ量子化は長文脈推論のメモリを大幅に減らせるが、現在の配信系は平均RULERやLongBenchのスコアを見て量子化方式を事前選択するだけで、いま処理している特定要求・特定層・特定ヘッドで誤差が危険域へ入ったかを観測できない。低ビット方式は平均値を保っていても一部要求だけ静かに失敗し得るため、平均品質が高いことと各要求の安全性は同値ではない。さらに、単純に常時FP16へfallbackすれば品質は守れるが圧縮の容量利得を失う。必要なのは、圧縮後の注意分布が正確な注意分布からどれだけ離れ得るかを実行中に上から評価し、危険なセルだけ選択的に修復できる安価な信号である。",
+    "novelty": "WitCertは圧縮誤差を単なる実測誤差ではなく、各(layer, head, step)で全変動距離を上から抑える証明付きメータとしてサービングkernelへ埋め込む。Tier Aは各cached keyの再構成残差をRoPE周波数帯ごとのノルムへ縮約し、任意のqueryに対するlogit誤差上界をCauchy–SchwarzとRoPE帯域ユニタリ性から決定論的に算出する。Tier Bは減算ディザ付きINT8の誤差分布を制御し、要求全体に割り当てた失敗確率からより鋭いsub-Gaussian半径を得る。メータが閾値を超えたときは正確なbacking storeから寄与の大きいblockやheadだけをpage-inして再計算し、修復済みwitnessをゼロ化するため、観測と修復が閉ループになる。",
+    "method_overview": "書込み時、Tier Aでは量子化前key kと再構成key k_hatの残差rを計算し、RoPEの各周波数pairをB個の連続帯域へまとめて帯域ごとのL2ノルムwをFP16で保存する。実装既定B=16では32 B/token/headで、FP16 keyの12.5%に相当する。RoPE回転は各pairで直交変換なので、このノルムは将来query位置に依存しない。デコード時は現在queryを同じ帯域に分け、各tokenでsum_b ||q_b|| w_tb / sqrt(d)を計算してlogit誤差の絶対上界c_tを得る。圧縮attention確率を重みにA=E_p_tilde[exp(c)]を集約し、TV <= 0.5(A^2-1)へ変換する。これによりblack-boxなcache-preserving量子化でも、復元keyが存在する限りquery適応後を含め決定論的に安全側のメータを計算できる。Tier BではINT8量子化をsubtractively-dithered方式へ制御し、Philoxのcounter-based乱数を(request, layer, KV head, token, channel)で固定する。block scaleは非outlier channelがclipしないようamax/126.5とし、書込みと読出しで同じdither streamを再構成する。この条件下で量子化誤差のsub-Gaussian proxyを使い、delta_reqをlayer×head×decode-stepへ配分したdelta_locからtoken別半径を作る。確率Tierは非適応queryという証明条件がある一方、決定論Tierよりはるかに多くのstepをcertified fast pathへ通せる。SGLang統合では圧縮attentionを計算する同じdata pass中に証明accumulatorを更新し、KV splitごとの値をlog-sum-exp重みでmergeする。meterまたは飽和時のraw risk scoreが閾値tauを超えると、正確なFP16 backing storeから上位寄与block/headをpage-inし、attentionを再計算して圧縮poolへ書き戻す。incremental persistent repairでは一度直したslotのwitnessをゼロにするため同じKVを毎step再page-inせず、危険部分だけを徐々に正確化できる。",
+    "components": [
+      {
+        "name": "Tier A：帯域ノルムwitnessによる決定論的メータ",
+        "description": "再構成可能な任意のcache-preserving量子化を対象に、各key残差をRoPE周波数pairの帯域ごとのL2ノルムへ縮約して保存する。RoPEは各周波数pair上の回転であり帯域内ノルムを保存するため、書込み時に保存したwitnessを将来どの相対位置のqueryでもそのまま使える。デコードではqueryの帯域ノルムとwitnessの内積から各tokenのlogit誤差を必ず上回るc_tを計算し、softmax摂動に対するsoundなe-form TV上界へ変換する。分布仮定がなくadaptive queryにも安全だが、低ビットほど残差ノルムが大きくなり、4bit以下では上界が極端に緩くなって実用的な選択ゲートとして飽和する。"
+      },
+      {
+        "name": "Tier B：減算ディザINT8向け確率証明",
+        "description": "より鋭い保証が必要な場合、量子化方式自体をsubtractively-dithered INT8へ制御する。Philox4x32-10を要求・層・KV head・token・channelの5-tupleでseedし、batch順序やCUDA graph replayが変わっても同じ乱数を再生成する。FP16で実際に保存するscaleと同じ値を量子化にも使い、非outlier channelでclipしない条件を守ることで、量子化誤差のsub-Gaussian proxyを証明の仮定と実装で一致させる。要求単位deltaを全layer・head・stepへunion-bound配分し、失敗確率を明示したTV certificateを得る。決定論Tierよりcoverageが高いが、非適応queryの仮定と管理された量子化kernelが必要である。"
+      },
+      {
+        "name": "メータ駆動のincremental persistent repair",
+        "description": "証明値が閾値以下なら圧縮KVをそのまま使い、超過した場合だけ正確なCPU側backing storeから影響の大きいblockまたはheadをpage-inして再計算する。修復したslotは圧縮poolへ正確値を書き戻し、そのwitnessをゼロにするため、次step以降は同じ場所が再び不要にfallbackしない。論文では単純なwhole-request再page-inがgated fp8で1267 GiBに達したのに対し、修復済みslotを除外するpersistent repairで30.9 GiBまで41倍削減した。tau<1ではTV保証に基づくcertified gate、meterが飽和するtau>=1では保証ではなく危険度順位としてtraffic budgetを制御するrisk-ranked gateとして明確に使い分ける。"
+      }
+    ],
+    "system_design": "WitCertの観測系はSGLang 0.5.9のTriton decode attentionに追加され、圧縮KVの読出しと同じpassでcertificate accumulatorを更新する。write pathは圧縮payloadと必要なwitness/scaleを保存し、read pathはattentionとmeterを同時計算する。gateは要求単位またはhead単位で正確なbacking storeへのpage-inを決める。コード側では環境変数で無効化でき、off時は元SGLangとbit-identicalになるよう設計される。理論・kernel・配信経路を別物として扱わず、proof-kernel contract test、PyTorch/mpmath/独立実装との相互照合、Lean 4による主要定理検証で実装が証明仮定から逸脱していないか継続検査する。"
+  },
+  "reservation": {"claim_id": "claim-bb9c6b2c2debb9e325fcf74b", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
 }
