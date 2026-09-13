@@ -2,53 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-e59b30ee1e31a08039dfb0b7",
-  "job_id": "job-research-990eca6ba50d5285",
-  "data": {
-    "canonical_id": "arXiv:2608.15018",
-    "arxiv_id": "2608.15018",
-    "title": "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
-    "list_summary": "エッジ向けMoEで、専門家再利用を考慮した投機展開・ゲーティング・文脈共有を組み合わせ、専門家読み出しを抑えながら自己投機的復号を高速化する。",
-    "summary": "メモリ帯域が限られたエッジ機器で専門家混合モデルを動かすと、専門家重みの読み出しが律速になりやすい。通常の自己投機的復号をそのまま組み合わせると、候補トークンの検証によって新しい専門家を追加で読み込み、投機幅を増やすほど入出力負荷が膨らむ場合がある。S2-MoEは、各候補の受理見込みと新規専門家読み出し費用を比較して投機木を適応的に広げる機構、複数候補で再利用しやすい専門家を優先するゲーティング、ドラフトと本モデルでKVキャッシュの文脈を揃える機構を統合する。llama.cpp上で複数のMoEモデルを評価し、自己回帰復号に対してエッジ機器で最大5.3倍、平均約2倍の高速化を報告する。",
-    "source": "https://arxiv.org/abs/2608.15018",
-    "sources": [
-      "https://arxiv.org/abs/2608.15018",
-      "https://arxiv.org/html/2608.15018",
-      "https://github.com/angerybob/S2-MoE"
-    ],
-    "authors": [
-      "Haochen Huang",
-      "Shengxuan Qiu",
-      "Meng Li"
-    ],
-    "published": "2026-08-19",
-    "publication": "arXiv:2608.15018",
-    "publication_type": "preprint",
-    "publication_status": "arXiv v2",
-    "arxiv_categories": {
-      "primary": "cs.AI",
-      "cross_list": []
-    },
-    "topics": [
-      "MoE推論",
-      "自己投機的復号",
-      "専門家オフロード",
-      "エッジ推論",
-      "専門家再利用"
-    ],
-    "implementation": "llama.cppを基盤に自己投機的復号と専門家単位のオフロードを統合した研究実装。Jetsonでは共有DRAMを使い、容量超過分をSSDへ退避し、RTX 4090では低頻度専門家をCPUメモリへ退避する。",
-    "code": "https://github.com/angerybob/S2-MoE",
-    "last_checked": "2026-09-13",
-    "hardware_evaluation": "NVIDIA Jetson Orin 16GB・32GB・64GBと、利用可能GPUメモリを制限したRTX 4090を使用。JetsonではSSD、RTX 4090ではCPUメモリを専門家重みの下位階層として用いる。",
-    "quality_effect": "専門家選択へ再利用性を考慮した小さな偏りを加えるため、完全に損失なしの手法ではない。ただし各種推論課題と長文課題で精度低下は系統的に見られず、測定可能なモデルではパープレキシティ比1.012〜1.013、次トークン一致率89%以上だった。",
-    "references": [],
-    "references_checked_at": "2026-09-13",
-    "references_source": "arXiv HTML reference section",
-    "references_total": 52
-  },
+  "attempt_id": "attempt-65726a91bc5e5168cef13307",
+  "job_id": "job-research-f9d3c5ad391e4acc",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e59b30ee1e31a08039dfb0b7",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-65726a91bc5e5168cef13307",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }
 }
