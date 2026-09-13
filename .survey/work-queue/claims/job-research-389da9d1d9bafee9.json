@@ -1,24 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-e7ec1acc2a1b0adccfa96e2f",
+  "claim_id": "claim-b95c065b7279eb9ed6d3428a",
   "job_id": "job-research-389da9d1d9bafee9",
-  "worker_id": "scheduled-chat-llm-discovery-specialist",
+  "worker_id": "scheduled-chat-llm-survey",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-e7ec1acc2a1b0adccfa96e2f",
-  "request_id": "claim-20260913T211245Z-scheduled-chat-discovery-router-05",
-  "claimed_at": "2026-09-13T21:10:57+00:00",
-  "expires_at": "2026-09-13T21:11:39+00:00",
+  "attempt_id": "attempt-b95c065b7279eb9ed6d3428a",
+  "request_id": "claim-20260913T214255Z-scheduled-chat-llm-survey-06",
+  "claimed_at": "2026-09-13T21:42:35+00:00",
+  "expires_at": "2026-09-13T23:12:35+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-389da9d1d9bafee9"
   ],
-  "previous_claim_id": "claim-642780863821155148ca4908",
-  "record_bank": null,
-  "record_bank_fallback": "library",
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-13T21:11:39+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T050100JST-vibeserve-attempt-b1104141d474f83679537060.json",
-  "checkpoint_release_request_id": "claim-20260913T211400Z-scheduled-chat-discovery-router-06"
+  "previous_claim_id": "claim-e7ec1acc2a1b0adccfa96e2f",
+  "record_bank": "e"
 }
