@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-c6850610f1696da302c47466",
   "job_id": "job-research-78cb8002e7b50e8e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c6850610f1696da302c47466",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "Intel Xeon Platinum 8480C搭載サーバ、Linux 5.15.0。KVMベースのZerobootがFirecrackerメモリスナップショットをコピーオンライトで複製する実機環境。",
+    "software": "AgentZipをZeroboot上へ実装し、Linux userfaultfdで回収ページの復元を処理する。比較は無圧縮、zswap、KSM+zswap、圧縮時機や復元先読みの除去構成を含む。",
+    "methodology": "R2E-Gymの10個のPythonリポジトリを用いる。学習側は各課題16本の独立軌跡をDeepSeek-V4で作る並列ロールアウト、推論側は異なる役割指示と温度から4本の候補を走らせる生成・選別構成を再現する。収集済みツール操作列と各ツール前のLLM待ち時間を同一に再生し、毎秒のサンドボックス所有物理メモリと、全サンドボックス終了までの壁時計時間を測る。",
+    "scope": "CPU上のサンドボックスメモリ管理を対象にした単一ホスト実機評価。LLM本体のGPUメモリやKVキャッシュを圧縮する研究ではない。評価はR2E-Gym由来のソフトウェア開発エージェント軌跡が中心で、ブラウザ操作など異なるページ局所性を持つエージェントへの一般化は未検証。",
+    "workloads": ["16-way parallel rollout for agent training","4-way generate-and-filter for agent inference","R2E-Gymの10 Python repositories"],
+    "baselines": ["NoComp","zswap","KSM+zswap","reactive compression","generic proactive compression","dictionary-only compression","prefetch ablations"],
+    "metrics": ["平均サンドボックス所有メモリ削減率","壁時計時間倍率","需要復元増幅率","復元予測の網羅率と適合率","圧縮プール補助メタデータ比率","復元遅延分位点"]
+  },
+  "reservation": {"claim_id":"claim-c6850610f1696da302c47466","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
