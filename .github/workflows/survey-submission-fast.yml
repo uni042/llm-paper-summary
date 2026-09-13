@@ -117,7 +117,7 @@ jobs:
             git commit -m 'survey-submission: drain immutable research results'
             if git push origin HEAD:main; then
               if [ "$processing_failed" -ne 0 ]; then
-                echo 'One or more immutable submission failures were persisted to main.' >&2
+                echo 'Immutable submission failure result was persisted to main.' >&2
                 exit 1
               fi
               exit 0
