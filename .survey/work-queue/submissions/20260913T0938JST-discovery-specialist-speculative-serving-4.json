@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3e23e5daa0a22bf8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.05147",
+      "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+      "source_url": "https://arxiv.org/abs/2607.05147",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
+      "priority": 90,
+      "reason": "並列draftの長い候補列でacceptanceが急減し、高並列servingでは拒否されるtokenのverificationがbatch容量を浪費する問題に対し、semi-autoregressive draftでblock内依存を補い、prefix survival probabilityとengine throughput profileからrequestごとのverification長を動的制御する。DeepSeek-V4のlive trafficでMTP-1比、同等throughput時のper-user generation speedを60〜85%改善し、実運用のPareto frontierを押し広げたと報告しており、投機的復号をserving負荷へ直接適応させる強い新着候補。"
+    },
+    {
+      "canonical_id": "arXiv:2604.09557",
+      "title": "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2604.09557",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
+      "priority": 84,
+      "reason": "投機的復号の性能が入力分布・並列度へ強く依存するのに、従来評価が限定的なtaskやsynthetic inputへ偏る問題を扱う。意味多様性を重視したQualitative splitと、低batchから高concurrencyまで測るThroughput splitを用意し、vLLM/TensorRT-LLM上でsynthetic inputのthroughput過大評価、batch-size依存の最適draft長、低多様性dataのbiasを明示する。個別手法ではなくproduction-grade比較基盤として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.15051",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.15051",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.15051-interpretable-latency-model-speculative-serving.md",
+      "priority": 82,
+      "reason": "isolated/fixed-batchでは高速な投機的復号が、実serving負荷でなぜspeedupを失うかを解釈可能なlatency modelで整理する。Little's Lawからeffective batch sizeを推定し、prefill・draft・verificationをload-independent/load-dependent demandへ分解してvLLM実測で検証し、draft長・acceptance rate・verifier/drafter sizeと負荷の関係を説明する。MoEにも拡張しており、投機的復号システムの設計・capacity planning基盤として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-speculative-serving-4",
+    "axis": "投機的復号・高並列サービング・production評価",
+    "query_summary": "直前のscheduling軸から切り替え、投機的復号のload-aware verification、production benchmark、serving latency modelを探索した。SPECTREは決定論的research jobで既収録completedと確認し、DSpark・SPEED-Bench・latency modelは最新HEADで対応job不在を直接確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arxiv:2605.08151"],
+    "next_axis_hint": "speculative decodingを直後に反復せず、RDMA/network disaggregationまたは収録済み重要論文からのforward citationへ移る",
+    "empty_round_reason": null
+  }
+}
