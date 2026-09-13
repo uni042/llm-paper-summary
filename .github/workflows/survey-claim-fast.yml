@@ -12,6 +12,7 @@ on:
       - '.survey/scripts/select_record_bank.py'
       - '.survey/scripts/record_bank_config.py'
       - '.survey/scripts/refresh_queue_snapshot.py'
+      - '.survey/scripts/push_retry_policy.py'
   workflow_dispatch:
 
 permissions:
@@ -45,7 +46,8 @@ jobs:
             .survey/scripts/claim_worker_with_banks.py \
             .survey/scripts/select_record_bank.py \
             .survey/scripts/record_bank_config.py \
-            .survey/scripts/refresh_queue_snapshot.py
+            .survey/scripts/refresh_queue_snapshot.py \
+            .survey/scripts/push_retry_policy.py
 
       - name: Allocate claims, reserve record banks, and publish lightweight snapshot
         shell: bash
@@ -73,12 +75,26 @@ jobs:
             fi
 
             git commit -m 'survey-claim: allocate one-job claims and reserve banks'
-            if git push origin HEAD:main; then
+            set +e
+            push_output="$(git push origin HEAD:main 2>&1)"
+            push_status=$?
+            set -e
+            printf '%s\n' "$push_output"
+            if [ "$push_status" -eq 0 ]; then
               exit 0
             fi
 
-            echo "Claim push race on attempt ${attempt}; recomputing from latest main."
-            sleep $((attempt * 2))
+            push_log="$(mktemp)"
+            printf '%s\n' "$push_output" > "$push_log"
+            read -r push_kind retry_delay < <(
+              python .survey/scripts/push_retry_policy.py \
+                --attempt "$attempt" \
+                --entropy "${GITHUB_RUN_ID}:${GITHUB_JOB}" \
+                --stderr-file "$push_log"
+            )
+            rm -f "$push_log"
+            echo "Claim ${push_kind//_/ } on attempt ${attempt}; recomputing from latest main in ${retry_delay}s."
+            sleep "$retry_delay"
           done
 
           echo 'Failed to publish claim results after 5 retries.' >&2
