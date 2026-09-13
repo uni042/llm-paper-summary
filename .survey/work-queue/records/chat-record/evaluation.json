@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-10505b959184b0f204b5addc",
-  "job_id": "job-research-2fabaceee2c88fd9",
-  "data": {
-    "hardware": "実機はInfiniBand接続の2サーバで、各サーバにNVIDIA H100 80GB SXM5×8、ConnectX-7 400Gbps NIC×8、NVLink 4.0 900GB/s双方向を搭載する。大規模評価はSimAIで各サーバA100×8、200Gbps NIC×8のSpectrum-X RoCEv2構成を模擬し、32〜1024 GPUへ拡張する。",
-    "software": "学習はPyTorch 2.10.0、NCCL 2.23.4、Megatron-LM。推論はNCCL 2.23.4とvLLM v1。比較対象としてAdapCC、DéjàVu、サービス再起動、要求rerouteを用いる。通信マイクロベンチマークはNCCL-tests 2.17.1。",
-    "methodology": "実機学習ではGPT-3 2.7BをDP=16、13BをTP=8/PP=2で評価し、単一NIC障害と同一ノード上の2 NIC同時障害を注入する。大規模学習は7Bモデルを4〜64サーバ、175B事前学習を1024 GPU、RLHFを64 GPUで模擬する。推論はLlama-3.1-70B/405BをTP=8/PP=2またはプリフィル・デコード分離でvLLM提供し、2,000 token入力、最大256 token出力、100秒試験の50秒時点でNIC障害を注入する。DéjàVu比較ではOPT-66B/BLOOM-176B、500 token入力、1500 token出力、decode step 800で障害を入れる。マイクロベンチマークは8B〜16GBの通信サイズを測る。",
-    "scope": "物理実機は2ノードで、大規模クラスタ結果の多くはSimAIによる。複数NICと代替経路を持つサーバを前提とし、NVLink/NVSwitch障害、GPU/OS/プロセス障害、完全ネットワーク分断、代替経路のないswitch-wide障害は対象外。",
-    "workloads": ["GPT-3 2.7B/13B学習", "7B/175B大規模学習シミュレーション", "Llama-3.1-70B/405B vLLM推論", "OPT-66B/BLOOM-176B DéjàVu比較", "RLHF 64 GPU"],
-    "baselines": ["Vanilla NCCL", "AdapCC", "Restart Server", "Reroute Request", "DéjàVu", "No-failure baseline"],
-    "metrics": ["tokens/s", "障害時オーバーヘッド", "TTFT", "TPOT", "SLO内最大throughput", "集合通信bus bandwidth", "復旧時間"],
-    "reproducibility": "著者実装をGitHubで公開し、実機構成、ソフトウェア版、障害注入条件、学習・推論並列構成を記載している。大規模結果はシミュレーション依存だが、2ノードH100実機で通信・学習・推論の主要挙動を検証している。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-d0e5054b6a381715aab8671d","job_id":"job-research-ec01b6de422e6692","data":{"hardware":"クラウド上のNVIDIA RTX 4080 SUPER 32GBとRTX 4090 48GBでGPU検証する。主要モデルはQwen2.5-7B-Instruct、Mistral-7B-Instruct-v0.3、Gemma-2-9B-itで、Qwen2.5-14Bは注意局所性の比較に用いる。","software":"PyTorch 2.11.0+cu130、Transformers 5.9.0、Python 3.12。公開kvcache-labのスクリプトとraw JSONから表・図を再生成可能とする。","methodology":"WikiText-2でFP16基準に対するPPL変化を測り、正規化転送予算b=0.3/0.5/0.7を比較する。検索保持は4096トークンのNIAHを19挿入位置で測る。転送経路の性能はKV量子化・転送相当・復号を含むTTFTとデコード速度で測り、2K/4K/8K文脈を走査する。比較はPDTrim、Semantic Working Set、UniformINT8、RandomTier、およびGreedy/SinkProtect/Balanced/Adaptive。論文は最終データ生成前に注意計測、削除mask、NIAH質問欠落、Adaptive分岐、Gemma chat templateの不具合を修正し、旧ログを最終結果へ使わないと明記する。","scope":"完全な本番PDサービング基盤のエンドツーエンド評価ではない。ネットワーク混雑、複数要求の連続バッチ、prefix共有、ノード配置、コールド層取得を含まず、主要フル評価も7〜9B級3モデルに限定される。","workloads":["WikiText-2 PPL","4096トークンNIAH","コード文書","科学文書","2K/4K/8K文脈転送経路timing"],"baselines":["FP16 full KV","PDTrim","Semantic Working Set (SWS)","UniformINT8","RandomTier","SpectrumKV Greedy","SpectrumKV SinkProtect","SpectrumKV Balanced"],"metrics":["PPL相対変化","NIAH正解率","TTFT","デコードtokens/s","INT4キー/値コサイン類似度","注意局所性Gini係数"],"reproducibility":"公開artifactに全実験スクリプト、raw JSON、表・図再生成コード、モデル設定、ハイパーパラメータを含む。論文は実験途中で修正した不具合と、どのログを破棄したかもAppendix Bで明示する。"}}
