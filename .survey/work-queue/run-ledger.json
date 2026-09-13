@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:45:44.691139+00:00",
+  "updated_at": "2026-09-13T00:48:12.716048+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,11 +16414,12 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:45:44.691139+00:00",
+      "last_recorded_at": "2026-09-13T00:48:12.716048+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
-        "paper_materialized"
+        "paper_materialized",
+        "fallback_archived"
       ],
       "counts": {
         "research_completed": 1,
@@ -16427,7 +16428,7 @@
         "blocked": 0,
         "new_jobs": 13,
         "new_papers": 1,
-        "fallback_archived": 0
+        "fallback_archived": 1
       },
       "events": [
         {
@@ -16513,6 +16514,20 @@
           },
           "signals": [
             "discovery_or_queue_expanded"
+          ]
+        },
+        {
+          "event_id": "34728852797:1",
+          "recorded_at": "2026-09-13T00:48:12.716048+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728852797",
+            "run_attempt": "1",
+            "source_sha": "605fedab8dc47277b112370252ec5653c865b1e3"
+          },
+          "signals": [
+            "fallback_archived"
           ]
         }
       ],
@@ -16669,10 +16684,12 @@
         ".survey/work-queue/results/20260913T0941JST-discovery-specialist-network-saturation-5.json",
         ".survey/work-queue/results/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json"
       ],
-      "new_fallback_archive_files": [],
+      "new_fallback_archive_files": [
+        ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json"
+      ],
       "paper_active_count_before": 393,
       "paper_active_count_after": 394,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
