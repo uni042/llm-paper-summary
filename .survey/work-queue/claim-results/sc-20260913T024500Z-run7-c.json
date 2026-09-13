@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T024500Z-run7-c",
+  "worker_id": "scheduled-chat-20260913-1130-run7-c",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-4639566133723dd3",
+      "claim_id": "claim-7269e0878430ba1ab3a1d75b",
+      "worker_id": "scheduled-chat-20260913-1130-run7-c",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-7269e0878430ba1ab3a1d75b",
+      "claimed_at": "2026-09-13T02:43:52+00:00",
+      "expires_at": "2026-09-13T10:43:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-4639566133723dd3"
+      ],
+      "job": {
+        "job_id": "job-research-4639566133723dd3",
+        "type": "research",
+        "parent_job_id": "job-513b50afdb428d0f",
+        "priority": 88,
+        "canonical_id": "arXiv:2608.15241",
+        "title": "LOCAL: Enabling Learning On-device Contiguously for Agent LLMs",
+        "source_url": "https://arxiv.org/abs/2608.15241",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+        "selection_reason": "単一24GB GPU上でforeground agent inferenceを止めずにbackground adapter learningを継続するruntime。学習更新がKVの有効性を変える問題をversion-aware KV cacheで扱い、推論と学習を協調schedulerで共存させる。非preemptive training比でp95 queue waitを3.1倍、TTFT p95を1.55倍改善するなど、推論servingと継続学習の境界を直接扱うsystems contributionが強い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:50:07+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-ff9dfc8e1a733b56",
+      "claim_id": "claim-89b2abb4808345614f4711d0",
+      "worker_id": "scheduled-chat-20260913-1130-run7-c",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-89b2abb4808345614f4711d0",
+      "claimed_at": "2026-09-13T02:43:52+00:00",
+      "expires_at": "2026-09-13T10:43:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-ff9dfc8e1a733b56"
+      ],
+      "job": {
+        "job_id": "job-research-ff9dfc8e1a733b56",
+        "type": "research",
+        "parent_job_id": "job-fef140cd0cd0ddc9",
+        "priority": 88,
+        "canonical_id": "arXiv:2601.08800",
+        "title": "MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm",
+        "source_url": "https://arxiv.org/abs/2601.08800",
+        "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md",
+        "selection_reason": "ネットワーク/ハードウェア構成とモデル特性からテンソル並列・専門家並列の通信コストを評価し、融合AR-A2A通信によるTP-EPハイブリッド並列を自動選択する分散MoEサービング。DeepSeek-R1/Qwen3でTTFT 1.08〜3.80倍、ITL 1.03〜1.66倍、throughput 5.2〜50.3%改善を報告し、通信ボトルネックを直接扱うため重点テーマとの関連が強い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:58:10+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-b4e2d8cb129fd978",
+      "claim_id": "claim-4f427aedd2d379e578952d28",
+      "worker_id": "scheduled-chat-20260913-1130-run7-c",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-4f427aedd2d379e578952d28",
+      "claimed_at": "2026-09-13T02:43:52+00:00",
+      "expires_at": "2026-09-13T10:43:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b4e2d8cb129fd978"
+      ],
+      "job": {
+        "job_id": "job-research-b4e2d8cb129fd978",
+        "type": "research",
+        "parent_job_id": "job-0e120e1d91c12e9d",
+        "priority": 88,
+        "canonical_id": "arXiv:2605.07238",
+        "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows",
+        "source_url": "https://arxiv.org/abs/2605.07238",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.07238-fate-future-state-aware-workflow-scheduling.md",
+        "selection_reason": "workflow DAGの現在queueだけでなく、model residency、parent-output locality、prefix reuse、future device reachabilityなど次stageへ継承される状態をfirst-class objectiveとして扱う。CP-SAT frontier plannerとhorizon-aware scoringで、real-DAG benchmarkのmakespan/P95 latencyを強い非FATE baseline比約8.9%/8.8%削減し、workflow servingのstate-aware schedulingを補完する。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:20:22+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-2f20b6ae0c5a7fb6",
+      "claim_id": "claim-25b1a889383d13f09b250e7c",
+      "worker_id": "scheduled-chat-20260913-1130-run7-c",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-25b1a889383d13f09b250e7c",
+      "claimed_at": "2026-09-13T02:43:52+00:00",
+      "expires_at": "2026-09-13T10:43:52+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-2f20b6ae0c5a7fb6"
+      ],
+      "job": {
+        "job_id": "job-research-2f20b6ae0c5a7fb6",
+        "type": "research",
+        "parent_job_id": "job-b1661ff4851a4aad",
+        "priority": 88,
+        "canonical_id": "arXiv:2507.10069",
+        "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism",
+        "source_url": "https://arxiv.org/abs/2507.10069",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+        "selection_reason": "マルチモーダル推論で要求種別と推論段階ごとの資源特性が異なる問題に対し、modality groupへの分離、動的資源配分、段階分離と並列度調整・弾力的スケーリング、統一prefix cacheとnon-blocking encodeを組み合わせる。一次資料の抄録ではTTFT最大4.2倍改善、throughput 3.2〜4.5倍を報告しており、単純なencode/prefill/decode分離より広い弾力的並列化を扱うため価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:39:34+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T02:43:52+00:00"
+}
