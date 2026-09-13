@@ -1,45 +1,44 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "req-dspec-normal-20260913T1900JST-23",
+  "request_id": "req-dspec-normal-20260913T1900JST-24",
   "worker_id": "scheduled-chat-dspec-normal-20260913T1900JST",
   "worker_kind": "scheduled_chat",
   "ok": true,
   "assignments": [
     {
-      "job_id": "job-research-f3999676507a9c53",
-      "claim_id": "claim-d2bd615e8b7ad6fde25a5142",
+      "job_id": "job-research-d09e1c8e52097070",
+      "claim_id": "claim-257f6eb558ebdd1e9a226b04",
       "worker_id": "scheduled-chat-dspec-normal-20260913T1900JST",
       "worker_kind": "scheduled_chat",
-      "attempt_id": "attempt-d2bd615e8b7ad6fde25a5142",
-      "claimed_at": "2026-09-13T10:41:27+00:00",
+      "attempt_id": "attempt-257f6eb558ebdd1e9a226b04",
+      "claimed_at": "2026-09-13T10:42:42+00:00",
       "expires_at": "2026-09-13T12:12:42+00:00",
       "kind": "research",
       "depends_on_job_ids": [
-        "job-research-f3999676507a9c53"
+        "job-research-d09e1c8e52097070"
       ],
       "job": {
-        "job_id": "job-research-f3999676507a9c53",
+        "job_id": "job-research-d09e1c8e52097070",
         "type": "research",
-        "parent_job_id": "job-7d5f203e09ec3bc4",
+        "parent_job_id": "job-c6d3963bf6f5f699",
         "priority": 86,
-        "canonical_id": "arXiv:2505.23022",
-        "title": "SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
-        "source_url": "https://arxiv.org/abs/2505.23022",
-        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
-        "selection_reason": "TTFT/TPOTの異なるSLOを一律throughput最大化で扱わず、admission control・queue reorder・batch selectionをSLO指向で共同制御するservingシステム。arXiv抄録ではgoodput最大14.4倍、SLO adherence最大46.5%改善を報告しており、SLO-aware scheduler系統の重要候補。",
+        "canonical_id": "arXiv:2505.14468",
+        "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
+        "source_url": "https://arxiv.org/abs/2505.14468",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md",
+        "selection_reason": "serverless環境でLoRA functionごとにbackboneを重複保持する問題、adapter/依存物のcold start、multi-LoRA resource contentionを、secure backbone sharing・包括preload・contention-aware batching/offloadで解く。industrial workloadでTTFT最大86%削減、金銭コスト最大89%削減を報告し、multi-adapter servingとserverless elasticityを接続する。",
         "status": "ready",
         "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
         "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
         "schema_version": 1,
         "workflow_version": 10,
-        "created_at": "2026-09-12T14:14:39+00:00",
+        "created_at": "2026-09-12T18:15:00+00:00",
         "artifact_transport": "structured_record_v10"
       },
       "record_bank_fallback": "library"
     }
   ],
-  "processed_at": "2026-09-13T10:41:27+00:00",
-  "checkpoint_released": 1,
-  "heartbeat_at": "2026-09-13T10:42:42+00:00"
+  "processed_at": "2026-09-13T10:42:42+00:00",
+  "checkpoint_released": 1
 }
