@@ -2,19 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-42f1304a542fa612136cc65f",
-  "job_id": "job-research-234066475107816a",
-  "data": {
-    "problem": "既存の位置非依存キャッシュは、独立セグメントごとにトークン単位KVを保存し、要求ごとに任意位置へ連結した後、文脈差が大きい一部トークンだけを再計算する。しかしハイブリッド注意モデルでは大半の層が線形注意で、履歴をトークン別KVではなく1要求あたり固定サイズの再帰状態へ圧縮する。そのためトークン軸での連結対象がなく、独立セグメントの終端状態を単純加算すると減衰・ゲート・delta更新に含まれる遷移作用を失って大きな構造誤差が出る。少数残る全注意層でも、選択トークンを再計算しようとすると途中の線形層が非終端トークンの再帰状態を保存していないため、既存PICの任意トークン補正を実行できない。さらにキャッシュミス時は既存PICも長い要求を単一インスタンスでprefillし、長いコールド要求がTTFTの裾を支配する。",
-    "novelty": "HYPICはこの3つを別々の機構で解く。線形注意には、セグメントをゼロ状態から処理した終端状態だけでなく、任意の入力状態をそのセグメント通過後へ写す累積遷移演算子をキャッシュし、長さに依存せず状態を合成する。全注意層には、独立prefillとの差がセグメント先頭へ集中する観測を使い、各内部セグメントの先頭少数トークンだけを境界窓として全層へ再通過させる。キャッシュミスには、PICが各セグメントを自己完結にした性質を利用して複数インスタンスへ散布し、並列prefillした結果を1つの合成workerへ集める。これにより、ハイブリッド注意へのPIC適用、品質補正、コールド要求の分散加速を同一配信系で統合する。",
-    "method_overview": "要求が到着するとRouterがアプリケーション指定の区切りでプロンプトをセグメント列へ分解し、Storeに各セグメントのヒット有無を問い合わせる。ヒットしたセグメントは公開キャッシュから取得し、ミスしたセグメントは複数scatter workerへ最長処理時間優先で割り当てて独立prefillする。各scatter workerは線形注意層についてゼロ始動終端状態S_C|0と累積遷移演算子T_Cを生成し、全注意層についてセグメント局所KVを生成する。各セグメントが完成すると次の計算を続けながらNIXLでcombine workerへ非同期転送する。combine workerのAssemblerはセグメント順にT_Cを既存のrunning stateへ作用させてS_C|0を加え、線形注意の状態を短時間で組み立てる。全注意層では内部セグメント先頭の既定8トークンをキャッシュから除外しておき、現在の合成済みprefixの下で境界窓だけを再計算する。線形層でもこの窓の各トークンを逐次通して上位全注意層へhidden stateを渡すため、境界をまたぐ文脈を部分的に回復できる。先頭セグメントは位置0に固定なので完全キャッシュし、末尾queryは可変prefixへ全面的に依存するためend-to-endで計算する。prefill完了後は合成済みprivate state/KVを通常のprefill-decode分離経路へ渡してdecodeする。",
-    "components": [
-      {"name": "累積遷移演算子による線形注意状態合成", "description": "高度な線形注意は各トークンでS_i=T_i S_{i-1}+u_iという再帰を持つ。独立セグメントCをゼロ状態から処理したS_C|0だけを保存して単純に足すと、そのセグメント内のT_i積が前置状態へ作用する項を落としてしまう。HYPICは初回prefill時にT_C=∏T_iも保存し、任意prefix状態SへT_C S+S_C|0を適用する。複数セグメントでは後続Tの積を順に掛けながら各ゼロ始動状態を加えるため、同じ入力hidden stateを仮定すれば代数的に正確である。RetNet/Lightning-2/Mamba2のscalar familyではT_Cは1 scalar、GLAでは対角vector、DeltaNet/GDN/KDAではdense matrixとして保存する。denseでもd_k=d_v=128なら1 head・1 layer当たり32KBで、フル注意KVより小さい。再利用時コストはセグメント長に依存せず、scalar/diagonalでO(d_k d_v)、denseでO(d_k² d_v)となる。初回構築は追加費用を持つが、Qwen3.5-35Bでは256〜4k token segmentで主forward比5.2〜6.7%に留まり、以後の全再利用へ償却される。"},
-      {"name": "境界窓による全注意層補正", "description": "ハイブリッドstack内の全注意層だけ従来PIC方式で任意トークンを補正しようとしても、そのトークンを上位層へ再forwardするために必要な途中の線形注意状態が保存されていない。全token stateを保存すると線形注意の省メモリ性が失われ、対象token位置までゼロから再帰するとキャッシュ利点が消える。HYPICはFull Recomputeとの差を測ると各再利用segmentの先頭でKV/attention deviationが最大になることを利用し、内部segmentの先頭w tokenだけをseam windowとして再計算する。cache時にはそのw tokenのfull-attention KVを保存対象から外し、reuse時には合成済みprefixを参照して再生成する。線形層側もwindow部分をT_C/S_C|0の事前蓄積から除き、reuse時に各tokenを通過させてrunning stateを更新しながら上位層へhidden stateを出す。既定w=8はGovReport/MultiNewsでw=0/4/8/16/32を比較して最良品質となり、それ以上はTTFT増に対して明確な品質向上がなかった。"},
-      {"name": "公開・非公開二層キャッシュと位置補正", "description": "Storeは再利用可能なsegment単位情報を置くpublic poolと、1要求の組立済みrunning stateを置くprivate poolに分ける。public側には線形注意の(T_C,S_C|0)とfull-attentionのsegment-local KVを保持し、要求やinstanceをまたいで共有する。private側には現在prefixを反映済みのstate/KVだけを持ちdecodeへ使う。新要求ではまずprivate prefix hitを調べ、残りsegmentにpublic PIC hitを適用するので通常prefix cacheと位置非依存reuseが共存する。RoPEを使うfull-attention Kはcache時にlocal positionで保持し、reuse時にsegmentの新しいglobal startへre-rotationする。scalar transition内でRoPEを使うRing系線形attentionも回転行列の合成則でzero-start stateを新位置へ変換する。Qwen3.5など先頭にcausal conv1dを持つ場合はsegment末尾conv stateも保存し、次segment先頭のk-1 tokenを再計算して境界状態をwarm upする。これらにより位置を変えても同じpublic entryを再利用できる。"},
-      {"name": "コールドprefillのセグメント並列", "description": "PICでは各segmentのcache生成結果がそのsegment内部tokenだけから決まるため、cache miss segment同士は別instanceで同時にprefillできる。Routerは1つのidle instanceをcombine workerに指定し、miss segmentを複数scatter workerへ送る。segment長が不均一だと最遅workerがcritical pathになるので、長いsegmentから順に現在割当token数が最小のworkerへ置くLongest-Processing-Time-first法で負荷を均す。各scatter workerは担当segmentを1個完成するたび結果を待たずNIXLのone-sided GPUDirect RDMAでcombine workerの事前確保slotへ送信し、その転送中に次segmentを計算する。combine側はhit cacheとmiss結果を集め、state compositionとseam recomputeを実行する。この構成によりn segmentをm workerで処理するcold-prefillの主要項をO(n|C|)からO(ceil(n/m)|C|+c)へ変え、既存tensor/sequence parallelismとは別軸なので併用できる。32k token・8 segmentでは8 workerで2.83秒から0.49秒へ短縮し、転送は12〜15ms、combineは約120msに留まった。"}
-    ],
-    "system_design": "SGLangへ約14k行のPython/Tritonで実装し、PIC_SEPARATORでsegment境界をアプリケーションから渡す。sglang_routerはsegment hashによるhit照会、combine worker選択、LPT scatter割当を担当する。線形attentionのS_C|0とT_CはFLA kernelを2回使い、S0=0で状態を、S0=Iかつwrite項を0にしてT積を構築する。NIXLがworker間GPU cacheをRDMA転送し、Assemblerが線形state composition、seam forward、full-attention KV位置補正を実行する。"
-  },
-  "reservation": {"claim_id": "claim-42f1304a542fa612136cc65f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-12b96d8a83087a895d8a74df",
+  "job_id": "job-research-6a744249548dd135",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-12b96d8a83087a895d8a74df",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
