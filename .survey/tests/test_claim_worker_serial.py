@@ -113,7 +113,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             result = json.loads((root / ".survey/work-queue/claim-results/req-other.json").read_text())
             self.assertEqual(result["assignments"], [])
 
-    def test_settled_failed_descriptor_job_can_be_reclaimed(self):
+    def test_failed_descriptor_stays_pending_and_job_is_not_reclaimed(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             add_job(root, "job-a", 90)
@@ -144,7 +144,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             })
             claim_worker.process_requests(root, at=AT)
             result = json.loads((root / ".survey/work-queue/claim-results/req-other.json").read_text())
-            self.assertEqual([row["job_id"] for row in result["assignments"]], ["job-a"])
+            self.assertEqual(result["assignments"], [])
 
     def test_scheduled_chat_cannot_request_multiple_jobs_in_one_request(self):
         with tempfile.TemporaryDirectory() as td:

@@ -177,6 +177,7 @@ def _immutable_descriptors(root: Path) -> list[dict[str, Any]]:
                 isinstance(result, dict)
                 and result.get("job_id") == job_id
                 and result.get("attempt_id") == attempt_id
+                and result.get("ok") is True
             ):
                 continue
             row = dict(value)
