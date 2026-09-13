@@ -1,0 +1,46 @@
+name: Temporary bank pending semantics patch
+
+on:
+  push:
+    branches:
+      - cleanup/state-semantics-and-fast-triggers
+    paths:
+      - '.github/workflows/tmp-apply-bank-semantics.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: cleanup/state-semantics-and-fast-triggers
+
+      - name: Apply bank semantics fix
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('.survey/scripts/select_record_bank.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''            result = read_object(results / kind / path.name)\n            if result and result.get("attempt_id") == attempt_id and result.get("job_id") == job_id:\n                continue\n'''
+          new = '''            result = read_object(results / kind / path.name)\n            if immutable_submission.result_is_success_for(result, descriptor):\n                continue\n'''
+          if text.count(old) != 1:
+              raise SystemExit('target did not match exactly once')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+
+      - name: Verify diff
+        run: |
+          git diff --check
+          git diff -- .survey/scripts/select_record_bank.py
+
+      - name: Commit patch
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add .survey/scripts/select_record_bank.py
+          git commit -m 'fix: keep failed immutable bank owners pending'
+          git push origin HEAD:cleanup/state-semantics-and-fast-triggers
