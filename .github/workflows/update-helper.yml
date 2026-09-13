@@ -9,10 +9,9 @@ on:
 permissions:
   contents: write
 
-# Share the same concurrency group as the paper worker so both workers never
-# commit to main at the same time.
+# Serialize all broad background writers that may mutate queue, paper, or update state.
 concurrency:
-  group: survey-helper-main
+  group: survey-background-main
   cancel-in-progress: false
 
 jobs:
