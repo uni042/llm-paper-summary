@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:22:53+00:00",
+  "updated_at": "2026-09-13T02:24:43+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-forward-citation-9",
+  "last_round": "specialist-backward-reference-10",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "forward citationで新規論文は見つかったが、追加的なシステム機構が弱くシミュレータ評価中心のため強候補としては採用しなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3043,6 +3043,23 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はFlashInfer-Bench/Llumnixのbackward referenceから基礎runtime・memory管理の未収録を確認する",
       "source_submission": "work-queue/submissions/20260913T1122JST-discovery-specialist-forward-citation-9.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-backward-reference-10",
+      "axis": "FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management",
+      "query_summary": "FlashInfer-BenchからFlashInfer 2501.01005、vLLM/PagedAttention、Triton/KernelBench周辺を追跡。FlashInfer本体はidentity deltaで既収録、汎用Triton/KernelBenchはLLM推論システム候補として対象を広げすぎるため除外。vAttention 2405.04437はGPU仮想メモリを使うKV管理の独立システム貢献が強く、正本未登録だったため採用した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.25,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2501.01005"
+      ],
+      "next_axis_hint": "vAttention採用で枯渇判定をリセットし、forward citation、storage/CXL/SSD、live-migration query expansion、MoE/KV重点テーマを再一巡する",
+      "source_submission": "work-queue/submissions/20260913T1124JST-discovery-specialist-backward-reference-10.json"
     }
   ],
   "axes": {
@@ -4745,6 +4762,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はFlashInfer-Bench/Llumnixのbackward referenceから基礎runtime・memory管理の未収録を確認する"
+    },
+    "FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.25,
+      "next_axis_hint": "vAttention採用で枯渇判定をリセットし、forward citation、storage/CXL/SSD、live-migration query expansion、MoE/KV重点テーマを再一巡する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

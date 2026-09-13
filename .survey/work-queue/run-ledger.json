@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T02:23:57.852597+00:00",
+  "updated_at": "2026-09-13T02:25:28.657231+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,7 +17069,7 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T02:23:57.852597+00:00",
+      "last_recorded_at": "2026-09-13T02:25:28.657231+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -17078,9 +17078,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 13,
+        "discovery_completed": 14,
         "blocked": 0,
-        "new_jobs": 21,
+        "new_jobs": 23,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -17311,6 +17311,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34732970122:1",
+          "recorded_at": "2026-09-13T02:25:28.657231+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34732970122",
+            "run_attempt": "1",
+            "source_sha": "003dbe984956146390228ae942ea10c0378d7f92"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17436,6 +17450,14 @@
         },
         {
           "job_id": "job-a77e490c21453ce3",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6a19c317d70d531b",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -17590,6 +17612,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-97b950195ea1dc8a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-26a415f1493129b4",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2405.04437",
+          "title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention"
         }
       ],
       "new_paper_ids": [
@@ -17610,7 +17646,8 @@
         ".survey/work-queue/results/20260913T1115JST-discovery-specialist-agentic-6.json",
         ".survey/work-queue/results/20260913T1117JST-discovery-specialist-runtime-7.json",
         ".survey/work-queue/results/20260913T1119JST-discovery-specialist-important-omission-8.json",
-        ".survey/work-queue/results/20260913T1122JST-discovery-specialist-forward-citation-9.json"
+        ".survey/work-queue/results/20260913T1122JST-discovery-specialist-forward-citation-9.json",
+        ".survey/work-queue/results/20260913T1124JST-discovery-specialist-backward-reference-10.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,
