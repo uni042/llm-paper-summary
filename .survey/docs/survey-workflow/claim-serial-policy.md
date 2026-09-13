@@ -75,8 +75,11 @@ Research / Auditのclaim resultに `record_bank` が入っている場合、そ�
 lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 
 - 通常は`lease_seconds`を省略し、既定90分（5400秒）を使う。
+- Scheduled Chatのclaim fast laneでは5400秒を上限として強制する。5400秒を超える新規requestはassignmentせずerror resultにする。Work系workerの明示的な長いleaseはこのScheduled Chat上限の対象外とする。
 - 90分を超える可能性がある場合は、同じ`request_id` / `worker_id` / `worker_kind`で新しいUTC `requested_at`を使ったheartbeat更新だけを行う。
-- heartbeatは新規job取得ではない。同じjobのlease延長として扱う。
+- heartbeatは新規job取得ではない。同じjobのlease延長として扱う。Scheduled Chatのheartbeatも1回ごとの新しい期限は最新activityから最大90分とする。
+- 旧実装で作成済みのScheduled Chat長時間leaseは、claim fast laneが次に動いた時点で`heartbeat_at`、なければ`claimed_at`を基準に90分へ正規化する。正規化後の期限を既に超えているclaimはinvalidatedとして直ちにactive集合から外す。
+- invalidated claimに紐づく旧attemptからの新規immutable submissionは拒否する。一方、正規化前にimmutable descriptorを耐久保存してclaim fast laneが同一attemptをrelease済みの場合は、submission-fastがそのdescriptorを引き続き処理してよい。
 - expired claimファイルは履歴として残るがactiveではなく、他workerの新規claimを阻害しない。
 - lease期限切れ時点でまだ完全payloadを耐久保存していないworkerは、旧claimで新規送信せずfresh claimを取得し直す。
 
