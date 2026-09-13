@@ -2,23 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-077152d8f589bd6cc52ad6b2",
-  "job_id": "job-research-2032cc68b22d1cbe",
-  "data": {
-    "overview": "Concordiaの中心結果は、GPU上で総領域をHBM帯域で走査し、変更ページだけをホスト側ログへ送ることで、透明な差分チェックポイントをCPU側走査より最大219倍高速化した点にある。256 MB領域で4 KBだけが変わる条件ではGPU側0.56 msに対してCPU側約111 msであり、変更ページが32枚まで増えてもGPU側は0.60 ms程度に留まる。二GPUのKVキャッシュ試験では、33.6 MB全体の8,192ページに対し1トークン・1層あたり4 KBの1ページだけを差分化し、8,192対1の転送量削減を確認する。永続作業器の占有は188 SM中1ブロックの0.53%で、故障復旧試作は約1.5秒でサービスを戻し、標準NCCL再起動の47秒超の完全停止を短縮した。ただし永続経路は単一の小演算では通常PyTorch起動より遅く、性能高速化そのものではなく耐障害制御経路の常駐性が主目的である。",
-    "key_results": [
-      {"metric": "GPU側差分チェックポイント高速化", "value": "最大219x", "baseline": "CPU側透明ページ差分", "condition": "RTX PRO 6000、50 MB領域、4 KBの1ページ変更", "interpretation": "CPU側は領域全体のGPU→ホスト転送とCPUページ走査を毎回行うのに対し、GPU側はHBM上で差分を見つけ変更ページだけを転送するため総領域サイズへの依存を大幅に減らす。"},
-      {"metric": "256 MB領域の差分保存時間", "value": "0.56 ms vs 111.38 ms", "baseline": "CPU側透明ページ差分", "condition": "4 KBの1ページ変更", "interpretation": "8B級モデルのKV領域を想定した規模でも、HBM走査約0.53 msが支配的で追記転送は約0.04 msに留まる。"},
-      {"metric": "チェックポイント指示投入遅延", "value": "<0.1 us", "baseline": "同期cudaLaunchKernel 7.6 us", "condition": "永続カーネルのリングバッファ投入", "interpretation": "既にGPU上に存在する実行器へ記述子を書くだけなので、新規カーネル起動を避け、40回のNCCL境界では約304 usの起動時間を節約する。"},
-      {"metric": "Qwen3-0.6B生成スループット", "value": "108.2 tok/s、チェックポイント負荷18.9 msで生成時間の4%未満", "baseline": "チェックポイント付き推論の実測", "condition": "bf16、50トークン/プロンプト、各境界でホストDRAM追記", "interpretation": "初回ウォームアップでは20 MBのKVが変更されるが、その後重みが不変な境界では変更ページが0となり、疎な状態変化を利用できる。"},
-      {"metric": "KV差分データ削減率", "value": "8,192:1", "baseline": "33.6 MB KV領域の全量保存", "condition": "二GPU、4層Transformer模擬、各トークン・各層で4 KBの1ページ更新", "interpretation": "PagedAttention型KV更新の物理ページ粒度を追跡することで、全KV領域ではなく実際に書き換えた1ページだけをログへ送れる。"},
-      {"metric": "永続カーネルSM占有率", "value": "0.53%", "baseline": "CLC 5〜10%、Green Contexts 3〜8%", "condition": "RTX PRO 6000、188 SM中1ブロック", "interpretation": "チェックポイント、通信、復旧で同じ一つの常駐作業器を共有し、別々の常駐資源を予約しない。"},
-      {"metric": "単一GPU故障からの復旧時間", "value": "約1.5 s", "baseline": "標準NCCL再起動47+ sの完全停止", "condition": "二GPU試作、33.6 MB KVスナップショットとコミット済み差分", "interpretation": "検出約10 ms、通信隔離約300 ms、状態復元約800 ms、再統合約400 msに分解され、全モデル再読込とNCCL再初期化を避ける。"},
-      {"metric": "LoRA SFT差分保存高速化", "value": "約299x、1.4 ms vs 推定418 ms", "baseline": "CPU側全モデル差分", "condition": "Qwen2.5-0.5B-Instruct、959 MB、LoRA 4,296ページ変更", "interpretation": "基礎重み942 MBを不変として扱い、17 MBのLoRAページだけを追記するため、オンライン適応でも疎な可変状態を利用できる。"}
-    ],
-    "negative_results": "永続実行器は単一の小演算を高速化しない。RTX PRO 6000では小さな要素演算の往復遅延が約80 usで、同期PyTorch起動約7 usより大幅に遅い。そのため静的デコード区間ではCUDA Graph等を使うべきで、Concordiaはその代替を主張していない。透明な不透明領域追跡ではGPU内に影コピーが必要でHBMを消費する。Qwen3評価の初回KVウォームアップでは5,120ページ、20 MBが変更されるため保存負荷が増える。異種GPU経路は同一アーキテクチャ復旧より冷起動が高く、 full fine-tuning のように大部分の重みが変化する処理では差分方式の利点が縮む。",
-    "interpretation": "高速化の源泉は永続カーネルそのものの計算性能ではなく、状態変化が疎であるLLM推論の性質と、差分検出をPCIe越しのCPU側ではなくHBM上へ移したことにある。総領域が大きく変更量が小さいほどCPU側との差が広がる。一方、KV割当器が汚染ビットマップを提供できる場合はページ比較自体をさらに省けるため、透明経路よりアプリケーションの意味情報を利用する方が効率的である。47秒超から1.5秒への復旧短縮は差分保存だけでなく、故障前から用意した代替NCCL経路、待機GPU、コミット済み追記ログを組み合わせた結果である。",
-    "quality_impact": "同一アーキテクチャのチェックポイントではモデル計算を近似しないため、量子化や枝刈りに伴う精度低下はない。未コミット末尾を無視して最後の確定エポックへ戻るため、障害時には最新未確定処理を失う可能性があるが、コミット済み状態の整合性を保つ。任意の異種GPU移行では演算実装差による浮動小数点差があり得るが、論文の16K×16K行列積移行では非移行実行と浮動小数点精度内で一致した。"
-  },
-  "reservation": {"claim_id": "claim-077152d8f589bd6cc52ad6b2", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-b1377ad0e2e7ebab452d376f",
+  "job_id": "job-research-4639566133723dd3",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b1377ad0e2e7ebab452d376f",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

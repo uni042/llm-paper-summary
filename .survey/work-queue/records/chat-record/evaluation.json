@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-077152d8f589bd6cc52ad6b2",
-  "job_id": "job-research-2032cc68b22d1cbe",
-  "data": {
-    "hardware": "主評価機はNVIDIA RTX PRO 6000 Blackwell Server Edition（98 GB、188 SM）とGeForce RTX 5090（32 GB）。二GPU試験はPCIe 5.0で接続しNVLinkは用いない。任意の異種GPU復旧ではAMD Radeon RX 9070 XT（16 GB）、Intel Iris Xe、Tenstorrent BlackHole（32 GB）も用いる。",
-    "software": "CUDA 12.8、PyTorch 2.10.0、Transformers 4.57.3、NCCL 2.27.5+cuda12.9、Ubuntu 24.04。ConcordiaはRust約1,800行とCUDA C約200行で実装される。",
-    "methodology": "永続実行器の微小評価、16〜256 MB領域でのCPU側対GPU側差分保存、Qwen3-0.6Bのbf16推論（1プロンプト50トークン）、RTX PRO 6000とRTX 5090による二GPU NCCL AllReduce、Qwen2.5-0.5B-InstructのLoRA学習、単一GPU故障復旧を評価する。透明差分試験ではチェックポイントごとに連続した4 KBページ1枚だけを変更し、CPU側は領域全体をGPUからホストへ転送してページ比較、GPU側はHBM上で走査して変更ページだけを追記する。二GPU試験は4層Transformerの10トークンデコードを模し、各ランク40回のAllReduce境界で33.6 MBのKV領域を保存する。",
-    "datasets": ["合成要素演算微小評価", "Qwen3-0.6B生成ワークロード", "二GPU4層Transformer模擬デコード", "LoRA SFT評価", "SWE-Bench系実ワークロード評価"],
-    "models": ["Qwen3-0.6B", "Qwen2.5-0.5B-Instruct"],
-    "baselines": ["CPU側透明ページ差分", "通常cudaLaunchKernel起動", "標準NCCL再起動", "CLC", "CUDA Green Contexts"],
-    "metrics": ["差分チェックポイント遅延", "チェックポイント起動遅延", "生成スループット", "差分データ削減率", "SM占有率", "故障復旧時間"],
-    "scope": "中心結果は実機Blackwell GPU上の試作測定だが、規模は単一GPUまたは二GPUPCIe接続に限られる。Qwen3-0.6B評価では各境界18.9 msの保存負荷を含み、静的デコードに対するCUDA Graph最適化との直接比較は行っていない。故障モデルはアプリケーションカーネル、GPUランク、通信器の停止故障で、永続チェックポイント作業器の独立破損や任意の無音HBM破損は対象外。異種GPU経路は任意機能であり、同一GPU復旧の中心主張と分けて解釈する必要がある。"
-  },
-  "reservation": {"claim_id": "claim-077152d8f589bd6cc52ad6b2", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-b1377ad0e2e7ebab452d376f",
+  "job_id": "job-research-4639566133723dd3",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b1377ad0e2e7ebab452d376f",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
