@@ -4,10 +4,16 @@
   "slot": "problem_method",
   "attempt_id": "attempt-286ac5a93883c97edb55aa16",
   "job_id": "job-research-f379557cdc6a8294",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-286ac5a93883c97edb55aa16",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "長文脈LLMではKVキャッシュが文脈長に比例して増え、GPUメモリ容量とdecode時のメモリ帯域を圧迫する。静的圧縮はprefill時の注意重要度から不要tokenを不可逆に捨てるため、復号中に注意先が変わるattention driftで後から必要になる情報を失う。一方ShadowKVやOmniKVのような動的取得はCPUへ完全または補助状態を退避して必要情報を戻せるが、layer/headの異質性を十分使わず、頻繁で粗粒度なCPU-GPU転送がI/O待ちを増やす。実測観察では注意ヘッドごとにprefill時の重要token集合を長く保つ安定headと急速に変化するheadが混在し、さらに同一layer内には似たattention patternを持つheadが多い。全headへ同じ圧縮率と同じ取得頻度を適用すること自体が、品質とI/Oの両面で無駄になる。",
+    "novelty": "HeteroCacheは注意ヘッドを時間安定性と同一層内類似性の二軸で分類し、head単位でGPU常駐量と動的取得役割を変える。固有かつ急変するvolatile headは完全KVをGPUに残し、似たhead群は代表pivotだけ完全保持してattention drift監視器として使い、残りsatelliteの完全KVはCPUへ退避する。圧縮対象headでも安定度の逆数に比例して予算を配り、変化しやすいheadほど多くGPUへ残す。pivotの注意集合が過去baselineから十分変わった場合だけ、そのclusterのsatelliteに必要なtoken位置をCPUから非同期取得するため、毎step取得する動的方式よりI/O頻度を大きく下げる。",
+    "method_overview": "まず50件・各10K tokenのWikipedia calibration setで各attention headを観測する。時間安定性はprefill時のtop-k重要token集合と復号各stepのtop-k集合のoverlap coefficientをT step追跡し、そのmedianをstability scoreとする。空間冗長性は同一layer内の他headとの最大overlapを各stepで求め、そのmedianをsimilarity scoreとする。similarity thresholdより低いunique headはstabilityでanchorとvolatileへ分け、volatileは注意先が大きく変わるため完全KVをGPUに保持する。similar headはGreedy Star Clusteringでcluster化し、中心性の高い一つをpivotとして完全KVをGPUに残し、その他をsatelliteとして圧縮する。anchorとsatelliteからなるcompressed headには、stability scoreの逆数を重みとして総GPU KV予算を配る。安定headは短いcache、driftしやすいheadは長いcacheを持つ。prefill後、compressed headのGPU側には各headに割り当てた長さ分のtop-attention KVだけを残し、satellite headのfull KVはCPU RAMへoffloadする。decode中はpivot headだけが現在top token集合とbaseline集合のoverlapを監視する。単一stepの揺らぎでI/Oを発生させないためwindow内overlapのmedianがdrift thresholdを下回った時だけretrieve signalを立てる。signal発生時、pivotの現在attention上位indexを使って同clusterのsatellite KVをCPU reservoirから非同期取得し、GPU上のcompressed KVを更新した後baselineも更新する。anchorは高い時間安定性を前提に静的圧縮のまま維持する。CPU-GPU転送はattention計算と非同期overlapし、pivotによる疎なdrift監視によって通常stepではI/Oを起こさない。",
+    "components": [
+      {"name": "ヘッド異質性の校正と役割分類", "description": "各headについてprefillとdecodeのtop-k attention indexの重なりから時間安定性を、同一layer内の他headとの最大重なりから類似性を測る。uniqueかつ安定なheadをanchor、uniqueかつ変動の大きいheadをvolatileとし、similar head群はstar clusteringして代表pivotと残りsatelliteへ分ける。volatileとpivotはfull KVをGPUに保持するため、変動情報とcluster全体の監視精度を失わない。satelliteはpivotと冗長なので積極的に圧縮し、anchorは時間的に安定なため低い予算でも保持品質を維持しやすい。"},
+      {"name": "安定性逆比例の細粒度KV予算配分", "description": "compressed setであるanchorとsatelliteへ一律token数を与えず、各headのstability scoreの逆数をweightとして総memory budgetを配る。prefill時の注意領域が長く変わらないheadは短いKVでも十分で、急速にdriftするheadほどより多くのhistorical tokenをGPUに残す必要があるという観察を直接予算へ反映する。これによりlayer単位の粗い配分よりさらに細かく、限られたGPU KV容量を将来のattention変化リスクが高いheadへ集中させる。"},
+      {"name": "ピボット監視型のCPU-GPU階層取得", "description": "satelliteの完全KVはCPU RAMをretrieval reservoirとして保持し、GPU上には割当budget分だけを置く。clusterのpivotはfull KVをGPUに持ち、decode中のtop-attention indexがprefillまたは前回更新時baselineからどれだけ変化したかを監視する。window median overlapがthresholdを下回った時だけretrievalをtriggerし、pivotの現在上位indexに対応するsatellite KVだけをCPUから取得する。同じclusterのheadはattention patternが似るため、全satelliteで個別にdrift detectionする必要がなく、I/O triggerと監視計算を減らせる。取得はattention computeと非同期に重ね、decode stallを隠蔽する。"}
+    ],
+    "system_design": "offline calibrationでhead taxonomyとbudgetを生成し、online prefillでGPU/CPU階層配置を初期化、decodeでpivotのdrift signalに応じてsatelliteを非同期更新する三段構成である。A100 PCIe環境ではCPU full-KV reservoirがcontext lengthに応じて増える一方、GPU側はbudget ratioで制御される。prototypeは高水準PyTorch処理を中心としcustom CUDA sparse-attention/retrieval kernelは未実装だが、取得trigger率を低く保つことでI/Oをattention計算に重ねる。"
+  },
+  "reservation": {"claim_id": "claim-286ac5a93883c97edb55aa16", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
