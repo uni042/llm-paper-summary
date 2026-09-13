@@ -28,8 +28,8 @@ Run: **2026-09-13T10:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **2** |
-| 新規job | **5** |
+| Discovery完了 | **3** |
+| 新規job | **6** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,11 +51,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **23** |
-| 探索round（stats観測） | **144** |
-| 探索評価候補 | **718** |
-| 重複除外 | **301** |
-| 重複率 | **41.9%** |
-| Novel候補 | **417** |
+| 探索round（stats観測） | **145** |
+| 探索評価候補 | **730** |
+| 重複除外 | **311** |
+| 重複率 | **42.6%** |
+| Novel候補 | **419** |
 | Research候補採用 | **237** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 718 → 重複除外後 417 → Research候補採用 237 → Research完了 70 → Repo収録 70**
+**探索評価 730 → 重複除外後 419 → Research候補採用 237 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -73,6 +73,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 |---|---:|---:|---:|---:|---:|
 | adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | agent workflow/context runtime・branch admission・heterogeneous many-core runtime | 13 | 9 | 4 | 69.2% | 30.8% |
+| SSD expert offload・peer GPU cache tier・階層メモリ | 12 | 10 | 0 | 83.3% | 0.0% |
 | multi-node MoE活性パターン配置・edge expert類似性routing | 12 | 10 | 2 | 83.3% | 16.7% |
 | 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | MoE専門家先読み・I/O階層・エッジ異種実行 | 10 | 5 | 1 | 50.0% | 10.0% |
@@ -218,11 +219,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — SSD expert offload・peer GPU cache tier・階層メモリ: 評価 12 / 重複 10 / 採用 0
 - **2026-09-13T10:16:01+09:00** — 投機的復号runtime・draft resource・CPU制約: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T10:16:01+09:00** — 分離サービングSLO・batch fairness・resource allocation: 評価 4 / 重複 2 / 採用 1
 - **2026-09-13T10:16:01+09:00** — KVページ圧縮・低ランク表現・GPUカーネル: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T10:16:01+09:00** — 端末内LLM・OSメモリ圧力・Flash/NPU実行: 評価 6 / 重複 2 / 採用 3
-- **2026-09-13T10:16:01+09:00** — GPU実行環境・collective通信・prefill/decode共存: 評価 6 / 重複 5 / 採用 1
 
 ## 最近処理した論文
 
