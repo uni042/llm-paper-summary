@@ -60,6 +60,24 @@ def _read_raw_object(source: Path) -> dict[str, Any]:
     return value
 
 
+def _is_record_fallback(value: dict[str, Any]) -> bool:
+    """Route both current record bundles and incomplete legacy bundles to strict replay.
+
+    A damaged historical Research/Audit envelope can retain only the retired
+    ``chat-inbox.json`` write after partial loss. Treating that as a generic fallback
+    would recreate the retired fixed transport. Strict record replay instead validates
+    the five-slot invariant and quarantines the malformed envelope.
+    """
+    if record_replay.is_record_bundle(value):
+        return True
+    if value.get("kind") not in {"research", "audit"} and value.get("origin") != "claimed_worker":
+        return False
+    for write in value.get("writes") or []:
+        if isinstance(write, dict) and write.get("path") == record_replay.CHAT_INBOX:
+            return True
+    return False
+
+
 def dispatch(repo_root: Path) -> dict[str, Any]:
     repo_root = repo_root.resolve()
     inbox_dir = repo_root / ft.FALLBACK_INBOX
@@ -73,7 +91,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
     for source in sorted(inbox_dir.glob("*.json")):
         try:
             raw_object = _read_raw_object(source)
-            if record_replay.is_record_bundle(raw_object):
+            if _is_record_fallback(raw_object):
                 replay = record_replay.materialize(repo_root, raw_object)
                 if replay["action"] == "deferred":
                     deferred.append(
