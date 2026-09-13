@@ -1,0 +1,44 @@
+{
+  "job_id": "job-7a82e8821b14d511",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "reason": "Directly addresses SSD-backed KV-cache serving, replacing CPU-centric small-I/O control with a GPU-centric object store, GPU io_uring, and slack-aware I/O scheduling. The primary-source abstract reports 78.3% lower TTFT than GDS-enabled SSD-backed LMCache under strict SLOs and 2x achievable request rate, making this an especially high-value omission for the repository's SSD/NVMe focus.",
+      "priority": 96
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "reason": "Uses idle GPU memory and NVLink bandwidth of heterogeneous co-located models to host another model's prefix KV cache, avoiding slower PCIe reload paths and extending context capacity. The primary-source abstract reports up to 69% lower P99 TTFT and 3.98x longer maximum context, strongly relevant to hierarchical and cross-device KV-cache placement.",
+      "priority": 92
+    },
+    {
+      "canonical_id": "arXiv:2609.03335",
+      "title": "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2609.03335",
+      "reason": "Recent heterogeneous-GPU serving work that predicts device-specific activation latency, memory demand, and model-loading cost, then jointly chooses lifecycle actions, placement, and execution order for multi-agent workflows. The primary-source abstract reports up to 36.8% lower makespan and 25.9% lower p95 completion latency under burst arrivals.",
+      "priority": 89
+    },
+    {
+      "canonical_id": "arXiv:2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.18600",
+      "reason": "Combines heterogeneous-GPU model placement and parallelization optimization with interruption-aware migration for spot instances. Evaluation on L4, A10G, and L40S clusters reports higher throughput and cost efficiency, making it useful adjacent systems work for heterogeneous resource scheduling and resilient serving.",
+      "priority": 85
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:00:00+09:00",
+    "round": "specialist-heterogeneous-storage-2",
+    "axis": "ssd-kv-cache-heterogeneous-gpu-serving-orchestration",
+    "query_summary": "While the prior MoE batch was being processed, searched a materially distinct systems axis covering SSD/NVMe-backed KV caching, heterogeneous GPU memory sharing, heterogeneous workflow orchestration, and spot-GPU placement. Four strong primary-source candidates survived latest-HEAD dedupe.",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Rotate to GPU kernel/runtime and energy-aware execution, then networking/disaggregated-flow scheduling and citation/reference expansion rather than repeat heterogeneous placement queries.",
+    "empty_round_reason": null
+  }
+}
