@@ -11,14 +11,14 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 ## リポジトリ構成
 
 - [papers/](papers/) — **論文サーベイ**
-  - [Inference / 推論](papers/inference/) — **371本**
+  - [Inference / 推論](papers/inference/) — **372本**
   - [Training / 学習](papers/training/) — **19本（凍結）**
   - [Survey / サーベイ](papers/survey/) — **6本**
 - [framework-updates/](framework-updates/) — 主要runtime / frameworkの重要機能更新
 - [llm-releases/](llm-releases/) — 主要model familyのrelease情報
 - [.survey/](.survey/) — 運用手順・状態・補助スクリプト・テスト・templateなどの管理用領域
 
-現在の論文収録数: **396本**（推論371本 + 学習19本 + サーベイ6本）
+現在の論文収録数: **397本**（推論372本 + 学習19本 + サーベイ6本）
 
 ## 運用対象
 
@@ -27,5 +27,5 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 Framework更新とLLMリリースは論文サーベイとは別に整理します。
 
 <!-- survey:auto:start -->
-推論：**371本** ／ 学習：**19本** ／ サーベイ：**6本**。 [推論一覧](papers/inference/README.md) ／ [学習一覧](papers/training/README.md) ／ [サーベイ一覧](papers/survey/README.md) ／ [研究比較](papers/inference/comparison.md)
+推論：**372本** ／ 学習：**19本** ／ サーベイ：**6本**。 [推論一覧](papers/inference/README.md) ／ [学習一覧](papers/training/README.md) ／ [サーベイ一覧](papers/survey/README.md) ／ [研究比較](papers/inference/comparison.md)
 <!-- survey:auto:end -->

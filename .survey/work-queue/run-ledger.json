@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:50:03.081515+00:00",
+  "updated_at": "2026-09-13T01:55:10.169414+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,19 +17069,19 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T01:50:03.081515+00:00",
+      "last_recorded_at": "2026-09-13T01:55:10.169414+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
         "new_jobs": 7,
-        "new_papers": 2,
+        "new_papers": 3,
         "fallback_archived": 0
       },
       "events": [
@@ -17170,6 +17170,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34731629480:1",
+          "recorded_at": "2026-09-13T01:55:10.169414+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34731629480",
+            "run_attempt": "1",
+            "source_sha": "ffc08638a14e334bf1cbe49537a7fb8003aaea78"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17218,6 +17233,14 @@
           "type": "research",
           "canonical_id": "arXiv:2609.00097",
           "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-dddd01489d1d0d88",
+          "type": "research",
+          "canonical_id": "arXiv:2608.22643",
+          "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
           "from": "ready",
           "to": "completed"
         }
@@ -17275,7 +17298,8 @@
       ],
       "new_paper_ids": [
         "arXiv:2609.01821",
-        "arXiv:2609.00097"
+        "arXiv:2609.00097",
+        "arXiv:2608.22643"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T1031JST-discovery-specialist-scheduling-5.json",
@@ -17285,7 +17309,7 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,
-      "paper_active_count_after": 396,
+      "paper_active_count_after": 397,
       "last_successful_action": "paper_materialized"
     }
   ]

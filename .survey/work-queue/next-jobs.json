@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 207,
-      "ready": 175,
+      "completed": 208,
+      "ready": 174,
       "superseded": 44,
       "deferred": 3
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-dddd01489d1d0d88",
-      "type": "research",
-      "lane": null,
-      "priority": 92,
-      "canonical_id": "arXiv:2608.22643",
-      "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
-      "source_url": "https://arxiv.org/abs/2608.22643",
-      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2608.22643-neuroprefetcher-storage-aware-delta-prefetching.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-7c0598aabd36d6bf",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-dfc514a18ebaac1e",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2512.22219",
+      "title": "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+      "source_url": "https://arxiv.org/abs/2512.22219",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-a09df27010ed5f56",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T01:48:57+00:00"
+  "generated_at": "2026-09-13T01:53:41+00:00"
 }
