@@ -17,22 +17,10 @@
   },
   "claiming": {
     "ready_research_audit": 153,
-    "actively_claimed": 1,
-    "claimable": 152
+    "actively_claimed": 2,
+    "claimable": 151
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-934e7a9b83b10131",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2605.18825",
-      "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches",
-      "source_url": "https://arxiv.org/abs/2605.18825",
-      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18825-saecache-semantic-aware-prefix-eviction.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-b1cd2f28e2d09a3e",
       "type": "research",
@@ -118,6 +106,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-1725e694fe58fcc2",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2605.10670",
+      "title": "Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference",
+      "source_url": "https://arxiv.org/abs/2605.10670",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -130,5 +130,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T16:37:17+00:00"
+  "generated_at": "2026-09-13T16:37:29+00:00"
 }

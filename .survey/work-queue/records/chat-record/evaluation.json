@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3a02f3af18c9e81b698943bc",
-  "job_id": "job-research-d53ec8171f729e9e",
-  "data": {
-    "hardware": "H800 80GB、A800 80GB、A40 48GB、V100 32GB（テンソル並列度2）の4異種NVIDIA GPUインスタンスを10 Gbps Ethernetで接続する。プロキシルータはA40インスタンス上で動作する。大規模性は8、32、128、512の仮想インスタンスによるシミュレーションでも評価する。",
-    "software": "GoodServeは約2,500行の実装。バックエンドモデルはLlama3.1-8B-InstructとQwen2.5-14B-Instruct。予測器は8,680サンプルを500エポック学習し約25分を要する。既存サービングエンジンへ低侵襲なプロキシルータとして構成される。",
-    "methodology": "BIRD-bench、SWE-bench、LiveCodeBenchから混合作業負荷を作り、Mooncake本番トレースで要求到着時刻を再生する。要求ごとのSLOはA800単独で測った中央値を基準に1、1.5、2、2.5、3倍の緩和係数を掛けて設定し、温度0で期限設定時と実測時の出力を一致させる。比較方式はAIBrixのランダムと最少要求、ラウンドロビン、LiteLLMの最低TPM、Preble、Llumnix。各エンドツーエンド実験を5回繰り返し最大・最小を誤差棒で報告する。深掘りでは予測器と実行時移行を個別に無効化し、予測精度・遅延、トークンID移行とKV移行、専門家数、再確認間隔を比較する。",
-    "datasets": ["BIRD-bench", "SWE-bench", "LiveCodeBench", "Mooncake production trace"],
-    "models": ["Llama3.1-8B-Instruct", "Qwen2.5-14B-Instruct"],
-    "baselines": ["AIBrix random", "AIBrix least-request", "round-robin", "lowest-TPM", "Preble", "Llumnix"],
-    "metrics": ["goodput", "SLO violation ratio", "normalized output-length prediction MAE", "prediction latency", "request migration latency", "routing latency"],
-    "scope": "実機は4種類のNVIDIA GPUを各1インスタンスずつ用いる小規模異種クラスタで、ネットワークは10 Gbps Ethernet。大規模512インスタンスはルーティング処理のシミュレーションであり、実512 GPUの通信・待ち列挙動を測ったものではない。主評価は8B/14Bの二モデルと三種類のエージェント型ベンチマークの混合で、モデル並列や事前充填・復号分離構成の本格的評価は行っていない。"
-  },
-  "reservation": {"claim_id": "claim-3a02f3af18c9e81b698943bc", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-7054f9fdaebb50cecf903361",
+  "job_id": "job-research-934e7a9b83b10131",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7054f9fdaebb50cecf903361",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

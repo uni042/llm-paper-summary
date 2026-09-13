@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-3a02f3af18c9e81b698943bc",
-  "job_id": "job-research-d53ec8171f729e9e",
-  "data": {
-    "limitations": "実機評価はH800、A800、A40、V100の4インスタンスを10 Gbps Ethernetで接続した小規模クラスタに限られ、数百GPU規模はルータ処理のシミュレーションのみである。出力長予測とGPU能力推定はいずれも近似で、再評価・移行によって補正するものの、極端な予測外れや短時間の負荷急変ではSLO違反を完全には防げない。SLO達成不能と予測された要求への入場制御は未実装で、期限後完了がグッドプットに寄与しない場合でも資源を消費する。論文は事前充填・復号分離を式の変更で拡張可能と述べるが、主実験はP/D多重化構成であり、分離型クラスタ上の実測はない。",
-    "differences": "AIBrixの最少要求やランダム、ラウンドロビン、最低TPMは負荷均衡を中心にし、Prebleは接頭辞キャッシュと計算負荷、Llumnixは空きメモリと実行時移行を重視する。これらに対してGoodServeは要求ごとの端末間SLOと予測出力長を明示的に目的へ入れ、SLOを満たせる中で最も低性能なGPUを選ぶことで局所性能を意図的に犠牲にする。JITServeなどのSLO対応方式とも異なり、異種GPUプール上のルーティングと実行中の再配置を中心に据える。GPU構成自体を最適化するMélangeやSageServeとは補完関係で、GoodServeは与えられた資源集合への要求配置を解く。",
-    "implementation_status": "約2,500行の実装があり、論文ではソースコードを補足ファイルとして添付したと明記する。出力長予測器、GPU状態監視、必要十分ルータ、稼働要求再評価、トークンID型移行を試作し、異種4-GPU実機と最大512仮想インスタンスで評価する。2026-09-14時点で一次資料から恒久的な著者公式GitHubリポジトリは確認できないため、コード欄は未確認とする。",
-    "research_positioning": "エージェント型LLMのサービングでは、長い可変出力と完全出力待ちによりTTFT中心のチャット配信とは異なるSLO目的が生じる。GoodServeはこの端末間SLOを異種GPUルーティングの直接目的にし、出力長予測、GPU状態推定、接頭辞再利用、実行時移行を一つのグッドプット制御へ結ぶ。分離型サービングやワークフローDAG配置の上位で、各エージェント段階に割り当てられた単発LLM要求をどの異種バックエンドへ送るかを最適化する層として位置付けられる。"
-  },
-  "reservation": {"claim_id": "claim-3a02f3af18c9e81b698943bc", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-7054f9fdaebb50cecf903361",
+  "job_id": "job-research-934e7a9b83b10131",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7054f9fdaebb50cecf903361",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
