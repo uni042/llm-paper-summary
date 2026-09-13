@@ -19,6 +19,9 @@ from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 KINDS = {"research", "audit"}
 TRANSPORT_VERSION = 10
+COMPLETED_STATUS = "completed"
+NONARTIFACT_STATUSES = {"blocked", "deferred", "rejected"}
+STATUSES = {COMPLETED_STATUS, *NONARTIFACT_STATUSES}
 
 
 def git_blob_sha(data: bytes) -> str:
@@ -56,6 +59,15 @@ def _safe_rel(value: Any, label: str) -> str:
     return path.as_posix()
 
 
+def _safe_paper_path(value: Any, *, required: bool) -> str | None:
+    if value is None and not required:
+        return None
+    paper_path = _safe_rel(value, "paper_path")
+    if not paper_path.startswith("papers/") or not paper_path.endswith(".md"):
+        raise ValueError("paper_path must be a Markdown path under papers/")
+    return paper_path
+
+
 def result_path_for(repo_root: Path, descriptor_path: Path) -> Path:
     repo_root = Path(repo_root).resolve()
     descriptor_path = Path(descriptor_path)
@@ -71,6 +83,7 @@ def _result_matches(path: Path, descriptor: dict[str, Any]) -> bool:
     result = _read_object(path)
     return bool(
         result
+        and result.get("ok") is True
         and result.get("attempt_id") == descriptor.get("attempt_id")
         and result.get("job_id") == descriptor.get("job_id")
     )
@@ -161,12 +174,34 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
         raise ValueError("kind must be research or audit")
     attempt_id = _safe_id(descriptor.get("attempt_id"), "attempt_id")
     job_id = _safe_id(descriptor.get("job_id"), "job_id")
+    status = descriptor.get("status", COMPLETED_STATUS)
+    if status not in STATUSES:
+        raise ValueError("status must be completed, blocked, deferred, or rejected")
+
+    out = dict(descriptor)
+    out["kind"] = kind
+    out["attempt_id"] = attempt_id
+    out["job_id"] = job_id
+    out["status"] = status
+
+    if status in NONARTIFACT_STATUSES:
+        reason = descriptor.get("reason")
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError(f"{status} status requires a non-empty reason")
+        if any(field in descriptor for field in ("record_bank", "record_slots", "expected_blob_sha")):
+            raise ValueError(f"{status} is a status-only immutable descriptor; omit record transport fields")
+        paper_path = _safe_paper_path(descriptor.get("paper_path"), required=False)
+        if paper_path is not None:
+            out["paper_path"] = paper_path
+        else:
+            out.pop("paper_path", None)
+        out["reason"] = reason.strip()
+        return out
+
     bank = str(descriptor.get("record_bank") or "").lower()
     if bank not in BANK_ROOTS:
         raise ValueError("record_bank must be registered")
-    paper_path = _safe_rel(descriptor.get("paper_path"), "paper_path")
-    if not paper_path.startswith("papers/") or not paper_path.endswith(".md"):
-        raise ValueError("paper_path must be a Markdown path under papers/")
+    paper_path = _safe_paper_path(descriptor.get("paper_path"), required=True)
     expected_blob_sha = descriptor.get("expected_blob_sha")
     if expected_blob_sha is not None and (
         not isinstance(expected_blob_sha, str)
@@ -200,10 +235,6 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
             raise ValueError(f"{path_text} attempt_id/job_id mismatch")
         normalized_refs.append(normalized_ref)
 
-    out = dict(descriptor)
-    out["kind"] = kind
-    out["attempt_id"] = attempt_id
-    out["job_id"] = job_id
     out["record_bank"] = bank
     out["paper_path"] = paper_path
     out["record_slots"] = normalized_refs
