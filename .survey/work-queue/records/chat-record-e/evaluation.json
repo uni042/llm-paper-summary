@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-2f80cee47a027e34060ff493",
   "job_id": "job-research-e227d58af7e6af7e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2f80cee47a027e34060ff493",
-    "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "Qwen3-32B、Qwen3-4B、Qwen3.5-35B-A3BをNVIDIA H20-3e（143GiB）上で実機評価。主要評価はvLLM 0.19.1、TP=1、bf16。追加のBrowseComp解析は4基H20、TP=4、vLLM 0.18.1。",
+    "software": "vLLM互換のストリーミングchat completionとcompletion API、接頭辞キャッシュ、トークン確率出力を利用。D1/D2はPython制御層、D3はvLLM投機候補提案器への統合。公式GitHub実装あり。",
+    "models": "密モデルQwen3-32B、Qwen3-4Bと、活性パラメータ約3BのMoEモデルQwen3.5-35B-A3B。思考モードを有効にし、温度0、固定seed 42で評価する。",
+    "datasets": "GAIA 165問、HotpotQA 200問、tau2-bench 155件を中心に評価。GAIAとHotpotQAは実ネットワークツール、tau2-benchは0.5〜5秒の模擬ツール遅延を用いる。BrowseCompは追加の動作境界解析に使用する。",
+    "methodology": "各モデルで同じ配備形態の直列またはn-gram投機デコード比較対象とSPORKを比較し、問い合わせ単位のエンドツーエンド遅延、P50/P95、exact-match精度、F1を測定する。D1、D2、D3の除去試験、ツール遅延掃引、probe正解率、接頭辞一致長、ツール待ち内訳も測る。",
+    "scope": "主眼は思考列が数秒以上あり、読み取り専用の外部ツールを呼ぶ低〜中負荷のエージェント配備。閉鎖API、書込み副作用を持つツール、思考モードなし、高バッチでGPU余力が乏しい環境では前提が崩れる。"
+  },
+  "reservation": {"claim_id":"claim-2f80cee47a027e34060ff493","worker_id":"scheduled-chat-discovery-routing-20260914T0400JST","worker_kind":"scheduled_chat"}
 }
