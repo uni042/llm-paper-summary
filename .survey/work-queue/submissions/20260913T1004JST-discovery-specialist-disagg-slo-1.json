@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "job_id": "job-395a42f77fdb747e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 88,
+      "reason": "分離型LLMサービングでprefill側が混雑する一方decode側に計算余力が残る非対称性に対し、decodeノードへchunked prefillを一時的に逃がし、既存decodeのTBT SLOを守れる最大chunkを探索してTTFTが改善する場合だけdeflectionする。deflectした要求はdecodeノード上でprefillを完了するためGPU間KV転送も不要になり、vLLM実装・DeepSeek-V2-Lite・production-style traceでP95 TTFT最大81%削減、SLO達成率最大79%改善を報告する。分離型サービングの固定役割を負荷に応じて崩す実装指向の候補。"
+    },
+    {
+      "canonical_id": "arXiv:2508.01989",
+      "title": "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving",
+      "source_url": "https://arxiv.org/abs/2508.01989",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md",
+      "priority": 86,
+      "reason": "prefill/decode集約と分離のどちらが有利かがTTFT・TPOT SLOの組合せで変わる点を整理し、prefill-heavy/decode-heavy GPU instanceとchunk sizeを連続的に調整して両方式を統一するTaiChiを提案する。balanced SLOではlatency shiftingとlength-aware prefill schedulingを組み合わせ、既存方式比最大77%のgoodput向上を報告するため、分離/集約を二者択一せず動的に接続するサービング設計として収録価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:57:59+09:00",
+    "round": "specialist-disagg-slo-1",
+    "axis": "分離型サービングの負荷偏り・SLO適応",
+    "query_summary": "直前のfoundational-runtime軸を反復せず、prefill/decode分離サービングの負荷偏り、集約/分離切替、長文脈配置を探索。MetaKV、ZipServ、Prefill-as-a-Service、理論的prefill/decode制御など既収録候補を最新job/identityで除外し、未収録の実装指向2件を送信した。",
+    "candidate_count": 7,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2609.07966",
+      "arxiv:2603.17435",
+      "arxiv:2604.15039",
+      "arxiv:2602.02987"
+    ],
+    "next_axis_hint": "次は新着GPU kernel/量子化実行系と、MoE expert配置・I/O schedulingのforward/backward citationへ軸を移す",
+    "empty_round_reason": null
+  }
+}
