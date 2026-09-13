@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-31d5afb348eda048d7a7815c",
+  "claim_id": "claim-a5b56dfa209210cbe7adf075",
   "job_id": "job-research-5c8a51a10227b970",
   "worker_id": "scheduled-chat-llm-discovery-specialist",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-31d5afb348eda048d7a7815c",
-  "request_id": "claim-20260913T213020Z-scheduled-chat-discovery-router-16",
-  "claimed_at": "2026-09-13T21:24:51+00:00",
-  "expires_at": "2026-09-13T23:02:01+00:00",
+  "attempt_id": "attempt-a5b56dfa209210cbe7adf075",
+  "request_id": "claim-20260913T232130Z-scheduled-chat-llm-discovery-specialist-09h",
+  "claimed_at": "2026-09-13T23:17:39+00:00",
+  "expires_at": "2026-09-14T00:47:39+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-5c8a51a10227b970"
   ],
-  "previous_claim_id": "claim-0c9caae092f9a4537458d713",
-  "record_bank": null,
-  "record_bank_fallback": "library",
-  "released": false,
-  "invalidated": false,
-  "heartbeat_at": "2026-09-13T21:32:01+00:00"
+  "previous_claim_id": "claim-31d5afb348eda048d7a7815c",
+  "record_bank": "a",
+  "record_bank_recovery": "expired-same-job",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-0c9caae092f9a4537458d713"
+  ]
 }
