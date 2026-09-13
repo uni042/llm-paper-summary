@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 20:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 22:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,47 +36,47 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **168** |
-| 処理中（Active claims） | **6** |
-| 今すぐ着手可能（Claimable） | **162** |
-| :30 通常worker Active claims | **2** |
+| 処理中（Active claims） | **5** |
+| 今すぐ着手可能（Claimable） | **163** |
+| :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **0** |
-| その他/帰属不明 Active claims | **3** |
+| その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-13 20:24 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **46** |
+| 直近24h Research完了（帰属不明） | **45** |
 | 最新通常run | **2026-09-13T18:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **484 min** |
+| 最古の有効claimの経過時間 | **—** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
 - **処理速度 LOW**: ready=168 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
-- 直近24hのResearch完了のうち **46件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **45件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **55** |
-| Repo収録 | **57** |
+| Research完了 | **54** |
+| Repo収録 | **56** |
 | Audit完了 | **0** |
-| 探索評価候補 | **677** |
+| 探索評価候補 | **672** |
 | Research候補採用 | **209** |
 | 重複除外 | **304** |
-| 重複率 | **44.9%** |
-| 探索専用worker run（毎時枠） | **14** |
-| 探索専用worker round（stats観測） | **140** |
-| 通常worker run（ledger観測） | **20** |
+| 重複率 | **45.2%** |
+| 探索専用worker run（毎時枠） | **13** |
+| 探索専用worker round（stats観測） | **139** |
+| 通常worker run（ledger観測） | **19** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 677 → 重複除外後 373 → Research候補採用 209 → Research完了 55 → Repo収録 57**
+**探索評価 672 → 重複除外後 368 → Research候補採用 209 → Research完了 54 → Repo収録 56**
 
 ## 直近の通常worker
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T18:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P90 `arXiv:2607.05147` — DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 - P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
-- P88 `arXiv:2606.23521` — Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference
 
 ## 参考情報
 
@@ -175,7 +175,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | MoE専門家配置・先読み・協調スケジューリング | 5 | 5 | 0 | 100.0% | 0.0% |
 | SLO budget・KV restoration/reconfiguration・adaptive prefill execution | 5 | 0 | 1 | 0.0% | 20.0% |
 | agent session KV residency・near-memory scheduling | 5 | 4 | 1 | 80.0% | 20.0% |
-| critical_buffer_cross_axis_moe_heterogeneous_serving | 5 | 0 | 0 | 0.0% | 0.0% |
 | edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision | 5 | 1 | 3 | 20.0% | 60.0% |
 | heterogeneous GPU cluster・multi-agent workflow・routing/placement | 5 | 0 | 3 | 0.0% | 60.0% |
 | heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels | 5 | 2 | 3 | 40.0% | 60.0% |
