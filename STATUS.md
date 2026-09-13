@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 17:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **173** |
+| 未処理の論文候補（Research ready） | **172** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **217** |
+| 全文精読完了（累計） | **218** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **issues_found** |
 | 次回保守までの通常run | **13 / 24** |
@@ -35,27 +35,26 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
-| 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **173** |
-| 処理中（Active claims） | **43** |
-| 今すぐ着手可能（Claimable） | **130** |
-| :30 通常worker Active claims | **30** |
+| 処理速度 | **OK** |
+| 未処理候補（Research ready） | **172** |
+| 処理中（Active claims） | **38** |
+| 今すぐ着手可能（Claimable） | **134** |
+| :30 通常worker Active claims | **31** |
 | :00 補助worker Active claims | **4** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 17:00 JST** |
-| :00 補助worker 直近claim | **09-13 16:56 JST** |
+| :30 通常worker 直近claim | **09-13 17:05 JST** |
+| :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
-| 直近24h Research完了（:00 補助worker） | **3** |
+| 直近24h Research完了（:00 補助worker） | **4** |
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
-| 最新通常runのResearch完了 | **1** |
-| 最古claimの経過時間 | **296 min** |
+| 最新通常runのResearch完了 | **2** |
+| 最古claimの経過時間 | **299 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=173 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **63件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -63,8 +62,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **70** |
-| Repo収録 | **70** |
+| Research完了 | **71** |
+| Repo収録 | **71** |
 | Audit完了 | **0** |
 | 探索評価候補 | **720** |
 | Research候補採用 | **224** |
@@ -73,11 +72,11 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 探索専用worker run（毎時枠） | **17** |
 | 探索専用worker round（stats観測） | **146** |
 | 通常worker run（ledger観測） | **22** |
-| Fallback archive（全helper） | **16** |
+| Fallback archive（全helper） | **17** |
 
 ### 24時間の流れ
 
-**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 70 → Repo収録 70**
+**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 71 → Repo収録 71**
 
 ## 直近の通常worker
 
@@ -85,8 +84,8 @@ Run: **2026-09-13T16:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
-| Repo収録 | **1** |
+| Research完了 | **2** |
+| Repo収録 | **2** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
@@ -96,11 +95,11 @@ Run: **2026-09-13T16:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
+- P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
+- P87 `arXiv:2607.19539` — Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts
+- P87 `arXiv:2604.21231` — SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference
 - P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
-- P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
-- P86 `arXiv:2601.11590` — EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend
-- P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
-- P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 
 ## 参考情報
 
@@ -281,6 +280,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
 - `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
 - `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
 - `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
@@ -288,7 +288,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
 - `arXiv:2502.09922` — λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
 - `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
-- `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 
 ### 7日比較
 
