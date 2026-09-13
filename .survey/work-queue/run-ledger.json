@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T04:55:25.856695+00:00",
+  "updated_at": "2026-09-13T05:10:11.500174+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17946,20 +17946,20 @@
     {
       "run_key": "2026-09-13T13:30:00+09:00",
       "first_recorded_at": "2026-09-13T04:41:48.912006+00:00",
-      "last_recorded_at": "2026-09-13T04:55:25.856695+00:00",
+      "last_recorded_at": "2026-09-13T05:10:11.500174+00:00",
       "signals": [
         "fallback_archived",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 2,
-        "fallback_archived": 4
+        "new_papers": 3,
+        "fallback_archived": 5
       },
       "events": [
         {
@@ -18021,6 +18021,22 @@
             "fallback_archived",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34739540966:1",
+          "recorded_at": "2026-09-13T05:10:11.500174+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "34739540966",
+            "run_attempt": "1",
+            "source_sha": "d27295673b07873739403b187a18e6f4414f042c"
+          },
+          "signals": [
+            "research_completed",
+            "fallback_archived",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18039,22 +18055,32 @@
           "title": "λScale: Enabling Fast Scaling for Serverless Large Language Model Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-644adfa073507205",
+          "type": "research",
+          "canonical_id": "arXiv:2607.29678",
+          "title": "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
         "arXiv:2512.19179",
-        "arXiv:2502.09922"
+        "arXiv:2502.09922",
+        "arXiv:2607.29678"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T134500JST-research-2512.19179-cascadeinfer.json",
         ".survey/work-queue/fallback-archive/20260913T134000JST-research-2602.16603-flowprefill.json",
         ".survey/work-queue/fallback-archive/20260913T134700JST-research-2512.19179-cascadeinfer-repair.json",
-        ".survey/work-queue/fallback-archive/20260913T135000JST-research-2502.09922-lambdascale.json"
+        ".survey/work-queue/fallback-archive/20260913T135000JST-research-2502.09922-lambdascale.json",
+        ".survey/work-queue/fallback-archive/20260913T135500JST-research-2607.29678-toktier.json"
       ],
       "paper_active_count_before": 399,
-      "paper_active_count_after": 401,
+      "paper_active_count_after": 402,
       "last_successful_action": "paper_materialized"
     }
   ]
