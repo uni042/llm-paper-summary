@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-84d67d75abd88f7fe7ebc805",
   "job_id": "job-research-81e46dd484abb553",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84d67d75abd88f7fe7ebc805",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "NVIDIA GH200 Grace Hopper Superchipを評価基盤とし、Grace LPDDR5X 480GB、Hopper HBM3 96GB、最大約900GB/sのNVLink-C2Cを備える。フルGPUおよび1・2・3・4・7インスタンスのMIG構成を使用する。7分割時は各インスタンス12GB HBM、16 SM、約0.5TB/s HBM帯域となる。",
+    "software": "Ubuntu 22.04.5 LTS（aarch64）、CUDA 12.8、PyTorch 2.7.0、CUTLASS 4.3.5。C2CServeはMini-SGLangフォーク上に実装し、約5千行CUDA/C++、4千行Python、上流との差分約3千行である。",
+    "methodology": "生産負荷にはAlibabaの匿名化GenTD26を用いる。これは3週間、87モデル、300超GPU、350万要求を含む。遅延マイクロベンチマークの入力・出力長分布にはShareGPTを使う。密モデルはLlama-3B、Llama-8B、Llama-70B、MoEはMixtral-8x7BとQwen3-30B-A3Bで、全モデルBF16。比較対象はServerlessLLM、Aegaeon、MoE-Infinity、FineMoE。95パーセンタイルTTFT/TPOT、コールドスタート、温存ランタイムでのモデル切替遅延を評価する。フルGPU、MIG分割、動的トレース再生、HybridGEMM単体統合、帯域認識配置、チャンク制御、α調整の各構成要素試験を実施する。",
+    "scope": "評価はGH200一台を中心とし、GB200など将来機は簡易投影モデルのみで実測していない。CPUメモリとGPUがC2Cで密結合されたSuperchipを前提とするため、PCIeのみの一般的な離散GPUへ同じ性能を直接外挿できない。モデル重みをCPUに保持できるだけのホストメモリ容量が必要で、複数ノード間のモデル配置やネットワーク競合は対象外である。公式C2CServe実装の公開URLは一次資料から確認できない。",
+    "workloads": ["GenTD26生産トレース再生","ShareGPT長分布マイクロベンチ","密LLMサーバレス配信","MoEサーバレス配信","MIG多テナント競合"],
+    "baselines": ["ServerlessLLM","Aegaeon","MoE-Infinity","FineMoE","Mini-SGLang基盤"],
+    "metrics": ["p95初回トークン時間（TTFT）","p95出力トークン間時間（TPOT）","コールドスタート遅延","モデル切替遅延","p99 TTFT","HBM帯域利用率","NVLink-C2C帯域利用率"],
+    "reproducibility": "ハードウェア容量・帯域、OS/CUDA/PyTorch/CUTLASS版、モデル、精度、トレース、主要比較対象、実装規模とMini-SGLang統合箇所を明示する。実装は具体的だが、一次資料上では公開コードURLがないため完全再現には著者実装相当の再構築が必要である。"
+  },
+  "reservation": {"claim_id":"claim-84d67d75abd88f7fe7ebc805","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
