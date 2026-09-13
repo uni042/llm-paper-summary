@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-286ac5a93883c97edb55aa16",
   "job_id": "job-research-f379557cdc6a8294",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-286ac5a93883c97edb55aa16",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "現prototypeは高水準PyTorch実装で、疎attentionとdynamic retrieval向けcustom CUDA kernelを持たないため、実測speedupは理論上限を反映していない。CPU-GPU retrievalはinterconnect帯域へ依存し、PCIe Gen4/Gen3ではI/Oを十分隠せても極端な低帯域環境ではstallが残る可能性がある。GPU memoryを削る代わりにsatellite full KVをCPU RAMへ保持するのでhost memoryはcontext lengthに比例し、128Kでpeak 17.95 GBとなる。head taxonomyはoffline calibrationに依存し、LongBench Proで128K・異domainへの80%以上のcluster overlapを示すものの、model更新や極端なdomain shiftごとの再校正費用は残る。主latency評価はsingle A100であり、multi-GPU servingやconcurrent request batchingとの相互作用は未評価である。",
+    "differences": "SnapKV、PyramidKV、CAKEなど静的圧縮は一度捨てたKVを復元できずattention driftに弱い。Questはquery-aware sparsityでcritical pageだけをloadするがmemory自体を十分削減しない。ShadowKVはlow-rank key projectionをGPUへ残しvalueをCPUへoffloadして必要KVを復元し、OmniKVもCPUへKVを退避してlayer attentionに応じて取得するが、HeteroCacheはhead単位の時間安定性と同一layer内冗長性を使い、representative pivotだけにdrift監視を担わせることでretrieval頻度を下げる。KVQuant/KIVIの量子化は値表現を小さくする直交技法であり、HeteroCacheのtoken/head selectionと組合せ可能である。",
+    "implementation_status": "公式コードはhttps://github.com/ponytaill/HeteroCacheで公開されている。論文の評価prototypeはPyTorch中心で、CPU RAM reservoir、GPU head-level compressed KV、pivot-guided asynchronous updateを実装する。A100 PCIe 80GBで主評価し、RTX 4090/PCIe Gen3でも制約interconnect試験を行う。custom CUDA kernelは未実装で、著者はoptimized sparse-attention/retrieval kernelとhardware-aware prefetchを将来課題として挙げる。arXiv v2はACL 2026 Main Conference採択と明記される。",
+    "research_positioning": "本研究はKV cache compressionとCPU offloading/hierarchical memoryの境界に位置する。特に重要なのは、CPUを単なるoverflow storageとして毎step参照せず、attention headの構造的冗長性を使ってGPU resident pivotを監視器とし、将来価値が変化した時だけCPUから必要contextを戻す点である。これはSSD/NVMeを含む多階層memoryへ拡張する際にも、代表signalによるretrieval trigger、head/token別budget、asynchronous prefetchという設計原理を転用できる。既存offload研究が転送bandwidthを主にscheduleするのに対し、HeteroCacheは『どのheadのどのcontextをいつ戻す必要が生じたか』をattention driftから決めるため、semantic importanceとI/O schedulingを接続する研究として位置づけられる。"
+  },
+  "reservation": {"claim_id": "claim-286ac5a93883c97edb55aa16", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
