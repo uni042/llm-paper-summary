@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2410.16179-20260913-0600-v10-g",
-  "job_id": "job-research-eeddee746504f3dd",
-  "data": {
-    "hardware": "三つの実機系統を評価する。CodeLlama-34Bは80GB A100、CodeLlama-13Bは48GB L20、Llama-3.1-8BはL20の使用可能メモリを24GBへ制限してRTX 4090相当条件を模擬する。A100環境のCPUはIntel Platinum 8480+、L20環境はIntel 8563Cである。最後の条件はL20の864GB/s帯域がRTX 4090の約1TB/sより低いため、著者は実RTX 4090ではやや高速になると説明する。",
-    "software": "GPU側モデル計算とLSH射影はPyTorch、CPU側疎注意はFBGEMMのBF16を使用する。公式MagicPIG実装が公開されている。比較対象はGPU上の完全注意、24GB条件ではCPU上の完全注意を帯域から推定した基準、精度評価ではQuestや厳密TopKを含む。",
-    "methodology": "品質評価ではGSM8K-CoT、MMLU-Flan-CoT-Fewshot、COQAの中程度文脈課題、LongBenchからQASPER、LCC、RepoBench-P、TriviaQA、PassageRetrieval、TREC、さらにRULERの13種類の合成長文脈課題を使う。RULERでは複数モデル・16Kから256Kまで文脈長を変え、LSHのKビット数とL表数を変えて全注意に対する相対計算率と精度を測る。システム評価では16K文脈の34B/13Bモデルと96K文脈の8Bモデルを使い、単一要求遅延、デコードスループット、バッチ容量を測定する。追加評価では70Bモデル、512K対応モデル、長文脈推論課題、LSH表のメモリ量と追加GPU計算量を調べる。",
-    "scope": "主な対象はデコード段階の長文脈注意であり、論文自身がプリフィル処理を未実装の制約として挙げる。KVとLSH表をCPU DRAMへ置けるサーバを前提とするため、CPUメモリが小さい環境にはそのまま適用できない。24GB GPU条件は実RTX 4090そのものではなくL20のメモリ制限による模擬である。近似注意なので精度はハイパーパラメータと課題特性に依存し、厳密な出力一致は保証しない。",
-    "workloads": ["CodeLlama-34B", "CodeLlama-13B", "Llama-3.1-8B", "Llama-3.1-70B", "MegaBeam-Mistral-7B-512K", "Llama3-8B-Prolong-512K", "RULER", "LongBench", "GSM8K", "MMLU", "COQA"],
-    "baselines": ["GPU完全注意", "CPU完全注意", "Quest", "厳密TopK", "Oracle sampling"],
-    "metrics": ["回答精度", "完全注意に対する計算率", "デコードスループット", "単一要求遅延", "最大バッチ容量", "LSH表メモリ", "追加GPU計算量"],
-    "reproducibility": "公式実装、モデル・ハードウェア、LSH構成、主要データセットと比較対象が公開されている。CPU型番と実装ライブラリも記載される。一方、24GB GPU結果はメモリ制限したL20による模擬で、プリフィルは対象外であるため、完全なエンドツーエンドサービング再現ではその差を明示する必要がある。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2508.19559-20260913-0930-v10-g","job_id":"job-research-569c68f713c406a9","data":{"hardware":"P/D比率の実験は16ノード、各ノード8基のNVIDIA H20 GPUで実施する。本番Seed Serving PlatformはH20、L20などの異種GPUを含むKubernetes基盤で、複数データセンターとS0/S1/S2の階層ネットワーク、RDMAを使う。最終的な本番分析は数万GPU規模で、毎日数兆プリフィルトークンと数千億デコードトークンを処理するサービス群を対象とする。","software":"ByteDance Seed Serving Platform上のKubernetes環境へ、ポリシーエンジン、連合事前スケジューラ、サブクラスタスケジューラ、Deployment GroupとRDMA Subgroupの抽象化を統合する。対象モデルはDoubao-Seed-1.6-thinking。論文専用の公開公式コードは確認できないため、再現性は公開実装よりシステム記述と運用データに依存する。","methodology":"評価は三段階で行う。第一に異なる入力・出力長とSLOを持つ二サービスでP/D比率を掃引し、最大毎秒トークン数とSLO違反の関係を確認する。Service Aは平均入力約3,000トークン、出力約350トークン、TTFT 1秒以下・TBT 40ms以下、Service Bは平均入力約7,800、出力約700、TTFT 1秒以下・TBT 20ms以下である。第二にオープンドメイン対話サービスの8時間本番トレースを再生し、プリフィル／デコードTPS、GPU利用率、SM活動率、TTFT、TBTの八指標を、同じ初期インスタンス数・資源上限・スケール閾値で比較する。第三に数万GPUへ展開した本番サービスで、HeteroScale有無、指標駆動制御と周期制御、代表サービスの導入前後を比較する。視覚言語検索サービスでも定性的傾向を再確認する。","scope":"主張の中心は大規模本番のP/D分離LLMサービングであり、単一GPUや小規模研究クラスタのマイクロベンチマークではない。P/D比率はオンラインで固定値を維持し、ワークロード変動に応じて比率そのものを連続最適化する機構は未実装である。利用率改善値はByteDance固有のハードウェア構成、サービス集合、最小インスタンス数、SLO設定を含む運用条件で測られており、別クラスタへそのまま外挿できない。モデル品質は変更しないが、スケール過程の一時的なTTFT/TBT変動をサービス品質として評価する。","workloads":["Doubao-Seed-1.6-thinkingによるオープンドメイン対話","視覚言語検索","Service A: 約3K入力／350出力","Service B: 約7.8K入力／700出力","本番の検索・長文理解・音声会話・動画処理・コード生成相当サービス"],"baselines":["オートスケーリングなし","周期型スケーリング","各候補指標を使う独立スケーリング実験","ネットワーク構成を無視する配置","均一GPUプール"],"metrics":["GPU利用率","SM活動率","毎秒トークン数","TTFT","TBT","GPU使用量","GPU時間節約量","SLO遵守","P/D比率"],"reproducibility":"評価条件、主要制御式、配置手順、P/D比率実験のサービス長分布とSLO、本番で比較した指標は論文に記載される。一方、実運用プラットフォームは非公開で、数万GPUのクラスタ構成・全トレース・実装コードは公開されていないため、第三者が同規模結果を完全再現するのは難しい。論文の価値は公開ベンチマーク再現性より、本番規模の観測と設計知見にある。"}}
