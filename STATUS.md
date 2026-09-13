@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:51 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **176 / 50** |
-| Research ready | **176** |
+| Candidate在庫（Research ready） | **175 / 50** |
+| Research ready | **175** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **206** |
+| Research completed（累計） | **207** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **9 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T10:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | Discovery完了 | **4** |
 | 新規job | **7** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
@@ -57,15 +57,15 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 重複率 | **43.0%** |
 | Novel候補 | **419** |
 | Research候補採用 | **237** |
-| Research完了 | **70** |
-| Repo収録 | **70** |
+| Research完了 | **71** |
+| Repo収録 | **71** |
 | Audit完了 | **0** |
 | Blocked遷移 | **0** |
 | Fallback archive | **3** |
 
 ### 24時間ファネル
 
-**探索評価 735 → 重複除外後 419 → Research候補採用 237 → Research完了 70 → Repo収録 70**
+**探索評価 735 → 重複除外後 419 → Research候補採用 237 → Research完了 71 → Repo収録 71**
 
 ## 探索効率（直近24時間）
 
@@ -230,6 +230,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### Research完了
 
+- `arXiv:2609.00097` — Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding
 - `arXiv:2609.01821` — Scaling Inference Prefill with High-Radix Photonic Interconnects
 - `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
@@ -237,7 +238,6 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 - `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 - `arXiv:2506.21901` — A Survey of LLM Inference Systems
 - `arXiv:2606.29986` — HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators
-- `arXiv:2609.01024` — PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition
 
 ### 次に処理する候補
 
