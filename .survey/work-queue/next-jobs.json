@@ -16,10 +16,22 @@
   },
   "claiming": {
     "ready_research_audit": 171,
-    "actively_claimed": 44,
-    "claimable": 127
+    "actively_claimed": 43,
+    "claimable": 128
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-57f4550e61af7e09",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2606.15789",
+      "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
+      "source_url": "https://arxiv.org/abs/2606.15789",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-ec01b6de422e6692",
       "type": "research",
@@ -105,18 +117,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-666c253d539b3e43",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2603.07917",
-      "title": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
-      "source_url": "https://arxiv.org/abs/2603.07917",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -129,5 +129,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T08:39:34+00:00"
+  "generated_at": "2026-09-13T08:47:04+00:00"
 }
