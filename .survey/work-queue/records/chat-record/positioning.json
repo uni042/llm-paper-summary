@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-d76929b8794d7558d0c2ab77",
   "job_id": "job-research-b4e2d8cb129fd978",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d76929b8794d7558d0c2ab77",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主ベンチマークはWfCommons/WfInstancesの科学ワークフローをLLM段階へ持ち上げたもので、実運用のLLMワークフロートレースそのものではない。実行時間、モデル切替、GPU間転送、接頭辞再利用には代理コストを使い、GPU間親エッジや接頭辞局所性も直接の転送バイト数・KVヒット率ではない。KVFlow、Helix、HEFT比較は共通基盤上の方針適応で、元システムの完全再現ではない。固定manifestはDAGを最大64段階へ制限し、バースト到着、強いプロファイルドリフト、メモリ断片化、実測インターコネクト帯域、トークナイザ依存KV配置を扱わない。族別にはBWAやBLASTのような幅広い対称構造で強い非FATE比較対象が同等以上となり、将来状態計画が常に最善とは限らない。",
+    "differences": "PagedAttentionやSGLang、Sarathi-Serve、DistServeは単一または弱結合要求のメモリ管理・実行・プリフィル/デコード配置を主に最適化する。KVFlowは複数エージェントの接頭辞再利用、Helixは異種GPU・ネットワーク配置、HEFTはDAGの最早終了時刻を中心にする。FATEはこれら一つの信号を置き換えるのではなく、現在の配置が将来へ残すモデル常駐、親出力局所性、接頭辞再利用、GPU到達可能性を共通の状態として有限先読みで評価する。また全DAGを一括最適化せずreadyフロンティアだけをCP-SATで解いてローリングに確定するため、静的なオフラインDAG配置とも異なる。",
+    "implementation_status": "論文はCP-SATフロンティア計画器、状態条件付きコスト推定、WfCommons由来ベンチマーク生成器、比較方針、固定manifest、raw CSVと表出力器から成る再現用アーティファクトを記述する。付録では公開アーティファクトREADMEが環境構築、生成コマンド、manifest、スケジューラ設定、exporterコマンドを提供するとしている。arXiv本文上では著者公式GitHub URLを直接確認できなかったため、code欄は未確認としている。",
+    "research_positioning": "LLMサービングが単発要求から検索・ツール利用・検証を含むDAG型エージェントへ拡張する中で、FATEは『現在の段階を速く終える』だけでなく『次段階に何の実行状態を残すか』をスケジューリング目的へ追加する。モデル常駐、親出力位置、接頭辞再利用を同じ将来状態として扱うため、モデル配置、KVキャッシュ、ワークフローDAGスケジューリングの中間に位置する。今後、実測GPUメモリ容量、KV物理配置、NVLink/PCIe帯域、動的到着を状態へ組み込めば、実サービング基盤の多段階エージェント配置へつながる。"
+  },
+  "reservation": {"claim_id": "claim-d76929b8794d7558d0c2ab77", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
