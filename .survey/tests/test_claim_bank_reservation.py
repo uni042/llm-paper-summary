@@ -49,6 +49,23 @@ def seed_request(root: Path, request_id: str, worker_id: str):
     })
 
 
+def seed_active_claim(root: Path, job_id: str, request_id: str = "req-old"):
+    write_json(root / ".survey/work-queue/claims" / f"{job_id}.json", {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "job_id": job_id,
+        "kind": "research",
+        "claim_id": "claim-old",
+        "attempt_id": "attempt-old",
+        "request_id": request_id,
+        "worker_id": "legacy-worker",
+        "worker_kind": "work",
+        "claimed_at": "2026-09-12T23:30:00+00:00",
+        "expires_at": "2026-09-13T01:00:00+00:00",
+        "depends_on_job_ids": [job_id],
+    })
+
+
 def seed_free_banks(root: Path):
     for bank_root in BANK_ROOTS.values():
         for slot in SLOT_NAMES:
@@ -87,6 +104,25 @@ class ClaimBankReservationTests(unittest.TestCase):
             claim_b = json.loads((root / ".survey/work-queue/claims/job-r2.json").read_text())
             self.assertEqual(claim_a["record_bank"], bank_a)
             self.assertEqual(claim_b["record_bank"], bank_b)
+
+    def test_existing_unrelated_active_claim_is_not_reassigned_during_new_request(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            seed_job(root, "job-old", 100)
+            seed_active_claim(root, "job-old")
+            seed_job(root, "job-new", 90)
+            seed_request(root, "req-new", "worker-new")
+
+            claim_worker_with_banks.process_requests(root, at=AT)
+
+            old_claim = json.loads((root / ".survey/work-queue/claims/job-old.json").read_text())
+            new_claim = json.loads((root / ".survey/work-queue/claims/job-new.json").read_text())
+            new_result = json.loads((root / ".survey/work-queue/claim-results/req-new.json").read_text())
+
+            self.assertNotIn("record_bank", old_claim)
+            self.assertIsInstance(new_claim.get("record_bank"), str)
+            self.assertEqual(new_result["assignments"][0]["record_bank"], new_claim["record_bank"])
 
 
 if __name__ == "__main__":
