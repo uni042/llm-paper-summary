@@ -4,7 +4,8 @@
 Ingress-only worker writes are intentionally ignored. The authoritative follow-up
 Actions commit (claim allocation, submission result, queue mutation, etc.) will
 publish the dashboard instead, avoiding an extra main commit in the middle of a
-parallel worker hand-off.
+parallel worker hand-off. Merge commits are republished conservatively because
+``git diff-tree`` may emit no paths for them without parent-expansion flags.
 """
 from __future__ import annotations
 
@@ -24,8 +25,11 @@ INGRESS_ONLY_PREFIXES = (
 
 
 def should_publish(paths: list[str], commit_message: str) -> bool:
-    if commit_message.strip().startswith(SELF_COMMIT_PREFIX):
+    message = commit_message.strip()
+    if message.startswith(SELF_COMMIT_PREFIX):
         return False
+    if message.startswith("Merge "):
+        return True
     for raw in paths:
         path = raw.strip()
         if not path or path == "STATUS.md":
