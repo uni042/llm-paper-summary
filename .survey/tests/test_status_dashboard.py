@@ -96,6 +96,7 @@ class StatusDashboardTests(unittest.TestCase):
             _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
                 {"run_key": "2026-09-13T09:28:10+09:00", "round": "specialist-s1", "source_submission": "work-queue/submissions/discovery-specialist-s1.json", "axis": "SSD", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
                 {"run_key": "2026-09-13T09:28:10+09:00", "round": "specialist-s2", "source_submission": "work-queue/submissions/discovery-specialist-s2.json", "axis": "MoE", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 3},
+                {"run_key": "2026-09-13T09:57:59+09:00", "round": "specialist-s2b", "source_submission": "work-queue/submissions/discovery-specialist-s2b.json", "axis": "Runtime", "candidate_count": 3, "duplicate_filtered_count": 1, "novel_candidate_count": 2, "accepted_count": 1},
                 {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s3", "source_submission": "work-queue/submissions/discovery-specialist-s3.json", "axis": "Scheduling", "candidate_count": 6, "duplicate_filtered_count": 4, "novel_candidate_count": 2, "accepted_count": 2},
                 {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s4", "source_submission": "work-queue/submissions/discovery-specialist-s4.json", "axis": "SpecDecode", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 3},
                 {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s5", "source_submission": "work-queue/submissions/discovery-specialist-s5.json", "axis": "Hierarchical memory", "candidate_count": 7, "duplicate_filtered_count": 2, "novel_candidate_count": 5, "accepted_count": 4},
@@ -113,17 +114,18 @@ class StatusDashboardTests(unittest.TestCase):
             self.assertNotIn("新規job | **7**", text)
 
             self.assertIn("## 直近の探索専用worker", text)
-            self.assertIn("Run: **2026-09-13T10:16:01+09:00**", text)
+            self.assertIn("Run: **2026-09-13T10:00:00+09:00**", text)
             self.assertIn("探索round | **4**", text)
             self.assertIn("評価候補 | **22**", text)
             self.assertIn("重複除外 | **8**", text)
             self.assertIn("Novel候補 | **14**", text)
             self.assertIn("Research候補採用 | **11**", text)
             self.assertIn("探索専用worker run（stats観測） | **2**", text)
-            self.assertIn("探索専用worker round（stats観測） | **6**", text)
+            self.assertIn("探索専用worker round（stats観測） | **7**", text)
             self.assertIn("### 直近5探索専用worker run", text)
-            self.assertIn("2026-09-13T10:16:01+09:00 — 4 round", text)
-            self.assertIn("2026-09-13T09:28:10+09:00 — 2 round", text)
+            self.assertIn("2026-09-13T10:00:00+09:00 — 4 round", text)
+            self.assertIn("2026-09-13T09:00:00+09:00 — 3 round", text)
+            self.assertNotIn("2026-09-13T09:57:59+09:00 — 1 round", text)
 
     def test_dashboard_warns_when_candidate_stock_is_low(self):
         with tempfile.TemporaryDirectory() as tmp:
