@@ -2,102 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-4f7d4651a193282acf05d32f",
-  "job_id": "job-research-7a44d6a722722f10",
-  "data": {
-    "canonical_id": "arXiv:2502.15524",
-    "arxiv_id": "2502.15524",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
-    "summary": "サーバーレスLLMでは、アクセス頻度の低いモデルを要求時だけGPUへ立ち上げることで費用を抑えられる一方、遠隔ストレージから巨大な重みを取得し、コンテナ、CUDA、推論基盤を初期化するコールドスタートが数十秒に達する。HydraServeは、最終的に1台で動かすモデルでも起動時だけ複数サーバーへ層を分割し、各サーバーのネットワーク帯域を束ねて重みを並列取得する。さらに、モデル先読みをコンテナ生成前から始め、重み取得・GPU転送・ライブラリ読込みを重ね合わせる。起動後は各ワーカーが残りの重みを背景で取得し、負荷に応じて1台へ集約するか複数の完全モデルへ拡張するため、起動短縮のための一時的なパイプライン並列を通常運転へ持ち越さない。ネットワーク競合を予測して配置を避け、TTFTとTPOTのSLOからパイプライン数とGPUメモリ割当も選ぶ。A10/V100の実機と本番環境で、比較方式に対してコールドスタートを1.7〜4.7倍短縮し、先頭トークン時間のSLO達成率を1.43〜1.74倍へ改善した。",
-    "list_summary": "起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。",
-    "authors": [
-      "Chiheng Lou",
-      "Sheng Qi",
-      "Chao Jin",
-      "Dapeng Nie",
-      "Haoran Yang",
-      "Yu Ding",
-      "Xuanzhe Liu",
-      "Xin Jin"
-    ],
-    "authors_affiliations": "Chiheng Lou、Sheng Qi、Chao Jin、Xuanzhe Liu、Xin JinはPeking University、Dapeng Nie、Haoran Yang、Yu DingはAlibaba Group。",
-    "published": "2025-02-21",
-    "publication": "23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 2026), pp. 415-430",
-    "publication_type": "Conference",
-    "publication_status": "Published",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "サーバーレスLLM",
-      "コールドスタート",
-      "パイプライン並列",
-      "モデル取得",
-      "ネットワーク競合",
-      "SLO",
-      "KVキャッシュ移行"
-    ],
-    "importance": "キャッシュ済みモデルや高速なワーカー間ネットワークを前提にせず、帯域の細い公開クラウドで複数サーバーの取得帯域を起動時だけ束ねる点が特徴である。起動時の一時的な分散実行を、その後の集約・拡張まで含む制御問題として扱うため、サーバーレスLLM配信の資源割当研究として重要である。",
-    "hardware_evaluation": "実機。主な試験環境はA10単GPUサーバー4台とV100×4サーバー4台（各16 Gbps）、およびA10×4サーバー2台とV100×4サーバー4台。NVLinkなし。本番評価ではA10 24GB上でLlama2-7Bを実行する。",
-    "quality_effect": "モデルやKVキャッシュを近似して品質を落とす方式ではなく、起動時の配置・転送・実行形態を変更するシステム最適化である。集約時には進行中要求のKVキャッシュを完全モデル側へ移して継続する。",
-    "source": "https://arxiv.org/abs/2502.15524",
-    "sources": [
-      "https://arxiv.org/abs/2502.15524",
-      "https://arxiv.org/pdf/2502.15524",
-      "https://www.usenix.org/conference/nsdi26/presentation/lou",
-      "https://github.com/LLMServe/hydraserve"
-    ],
-    "code": "https://github.com/LLMServe/hydraserve",
-    "implementation": "vLLMを改造した約3,200行のC++/Pythonと、約3,000行のPythonによるサーバーレス基盤を実装。公式GitHubでOPT、Llama-2、Llama-3、Falcon系列向けの実験手順と実装を公開している。",
-    "last_checked": "2026-09-14",
-    "references_checked_at": "2026-09-14",
-    "references_source": "primary-reference-section",
-    "references_total": 77,
-    "references": [
-      {
-        "canonical_id": "arXiv:2412.17246",
-        "arxiv_id": "2412.17246"
-      },
-      {
-        "canonical_id": "arXiv:2502.09922",
-        "arxiv_id": "2502.09922"
-      },
-      {
-        "canonical_id": "arXiv:2501.14417",
-        "arxiv_id": "2501.14417"
-      },
-      {
-        "canonical_id": "arXiv:2401.17644",
-        "arxiv_id": "2401.17644"
-      },
-      {
-        "canonical_id": "arXiv:2306.03622",
-        "arxiv_id": "2306.03622"
-      },
-      {
-        "canonical_id": "arXiv:2305.05920",
-        "arxiv_id": "2305.05920"
-      },
-      {
-        "canonical_id": "arXiv:2404.02015",
-        "arxiv_id": "2404.02015"
-      },
-      {
-        "canonical_id": "arXiv:2107.03374",
-        "arxiv_id": "2107.03374"
-      },
-      {
-        "canonical_id": "arXiv:2308.16369",
-        "arxiv_id": "2308.16369"
-      }
-    ]
-  },
+  "attempt_id": "attempt-efc8e9feaf53ec425a01e723",
+  "job_id": "job-research-b1cd2f28e2d09a3e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-4f7d4651a193282acf05d32f",
+    "claim_id": "claim-efc8e9feaf53ec425a01e723",
     "worker_id": "scheduled-chat-paper-20260914T0130JST",
     "worker_kind": "scheduled_chat"
   }
