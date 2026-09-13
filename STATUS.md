@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 17:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,19 +37,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **173** |
-| 処理中（Active claims） | **42** |
-| 今すぐ着手可能（Claimable） | **131** |
-| :30 通常worker Active claims | **32** |
-| :00 補助worker Active claims | **7** |
+| 処理中（Active claims） | **43** |
+| 今すぐ着手可能（Claimable） | **130** |
+| :30 通常worker Active claims | **30** |
+| :00 補助worker Active claims | **4** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 16:58 JST** |
+| :30 通常worker 直近claim | **09-13 17:00 JST** |
 | :00 補助worker 直近claim | **09-13 16:56 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **3** |
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古claimの経過時間 | **292 min** |
+| 最古claimの経過時間 | **295 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -96,11 +96,11 @@ Run: **2026-09-13T16:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
 - P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
 - P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 - P86 `arXiv:2601.11590` — EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
+- P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 
 ## 参考情報
 
