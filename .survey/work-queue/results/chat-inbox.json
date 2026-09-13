@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-f3164989857499bb",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2605.05467.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-990eca6ba50d5285",
+  "validation_error": "ValueError: Japanese-first prose ratio is too low: 67.6% < 70% (Japanese=4614, Latin=2215)",
+  "repair_required": true,
+  "isolated_at": "2026-09-13T07:41:46+00:00"
 }
