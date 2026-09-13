@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Dispatch one eligible fallback envelope through the current workflow-v10 transport.
 
-Research/audit record bundles are converted directly into an attempt-specific
+Research/Audit record bundles are converted directly into an attempt-specific
 immutable descriptor by ``replay_record_fallback``. Historical bundles containing
 the retired reusable ``chat-inbox.json`` remain readable, but replay never recreates
-that fixed transport. Non-record envelopes keep the existing serialized fallback
-path for offline job seeds, lightweight queue requests, and update-worker inputs.
+that fixed transport. Non-record envelopes use the generic allowlisted transport for
+offline seeds, lightweight queue requests, and update-worker inputs.
 """
 from __future__ import annotations
 
@@ -111,28 +111,6 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                 # Keep the immutable GitHub ledger canonical so duplicate checks do
                 # not depend on whitespace/key ordering.
                 source.write_text(canonical, encoding="utf-8")
-
-            terminal = ft.terminal_job_id(repo_root, envelope)
-            if terminal:
-                archived = move_exact(source, archive_dir)
-                return {
-                    "action": "ack_terminal",
-                    "envelope_id": envelope["id"],
-                    "job_id": terminal,
-                    "archived": str(archived.relative_to(repo_root)),
-                    "deferred": deferred,
-                    "invalid": invalid,
-                }
-
-            accepted, claim_reason = ft.claimed_envelope_state(repo_root, envelope)
-            if not accepted:
-                raise ValueError(claim_reason or "claimed envelope is not current")
-
-            ready, reason = ft.dependency_state(repo_root, envelope)
-            if not ready:
-                deferred.append({"id": envelope["id"], "reason": reason or "dependency"})
-                continue
-
             changed = ft.apply_envelope(repo_root, envelope)
             archived = move_exact(source, archive_dir)
             return {
