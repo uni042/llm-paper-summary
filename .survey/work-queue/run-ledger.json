@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:22:31.252167+00:00",
+  "updated_at": "2026-09-13T01:24:30.647302+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T01:22:31.252167+00:00",
+      "last_recorded_at": "2026-09-13T01:24:30.647302+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 10,
+        "discovery_completed": 11,
         "blocked": 0,
-        "new_jobs": 27,
+        "new_jobs": 29,
         "new_papers": 1,
         "fallback_archived": 3
       },
@@ -16627,6 +16627,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34730388793:1",
+          "recorded_at": "2026-09-13T01:24:30.647302+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34730388793",
+            "run_attempt": "1",
+            "source_sha": "ce6c340f0e219d7216813fe7ebf36950022ef022"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16712,6 +16726,14 @@
         },
         {
           "job_id": "job-067d00d93576a085",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-2e0049dc1ae25b0e",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16908,6 +16930,20 @@
           "type": "research",
           "canonical_id": "arXiv:2609.00097",
           "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding"
+        },
+        {
+          "job_id": "job-9b5752caaf5ee298",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-1fe6d5cf08f23efe",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00993",
+          "title": "AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts"
         }
       ],
       "new_paper_ids": [
@@ -16923,7 +16959,8 @@
         ".survey/work-queue/results/20260913T0950JST-discovery-specialist-foundational-runtime-8.json",
         ".survey/work-queue/results/20260913T1004JST-discovery-specialist-disagg-slo-1.json",
         ".survey/work-queue/results/20260913T1007JST-discovery-specialist-storage-kernel-2.json",
-        ".survey/work-queue/results/20260913T1019JST-discovery-specialist-new-systems-1.json"
+        ".survey/work-queue/results/20260913T1019JST-discovery-specialist-new-systems-1.json",
+        ".survey/work-queue/results/20260913T1023JST-discovery-specialist-runtime-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",

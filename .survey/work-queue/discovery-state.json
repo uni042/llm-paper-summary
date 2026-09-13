@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:21:09+00:00",
+  "updated_at": "2026-09-13T01:23:20+00:00",
   "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-new-systems-1",
+  "last_round": "specialist-runtime-communication-2",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2738,6 +2738,27 @@
       ],
       "next_axis_hint": "GPU runtime・collective通信・networking隣接分野、または最近の高priority候補からforward citationへ探索軸を移す",
       "source_submission": "work-queue/submissions/20260913T1019JST-discovery-specialist-new-systems-1.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-runtime-communication-2",
+      "axis": "GPU実行環境・collective通信・prefill/decode共存",
+      "query_summary": "GPU runtime、collective communication、MoE rollout、長期運用の隣接軸を探索し、KVShareArena、HeadWiseKV、collective survey、SuperInfer、software agingは既存job/収録済みとして除外した。投入直前に最新mainとjob/コード検索でAInfer-PDの未登録を再確認した。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.10266",
+        "arXiv:2609.02029",
+        "arXiv:2608.15118",
+        "arXiv:2601.20309",
+        "arXiv:2606.11916"
+      ],
+      "next_axis_hint": "forward citation・backward reference、またはOS/DBMS由来のメモリ管理・スケジューリング機構をLLM servingへ接続する隣接軸へ移る",
+      "source_submission": "work-queue/submissions/20260913T1023JST-discovery-specialist-runtime-2.json"
     }
   ],
   "axes": {
@@ -4280,6 +4301,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.5714285714285714,
       "next_axis_hint": "GPU runtime・collective通信・networking隣接分野、または最近の高priority候補からforward citationへ探索軸を移す"
+    },
+    "GPU実行環境・collective通信・prefill/decode共存": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "next_axis_hint": "forward citation・backward reference、またはOS/DBMS由来のメモリ管理・スケジューリング機構をLLM servingへ接続する隣接軸へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
