@@ -5,22 +5,13 @@
   "attempt_id": "attempt-dd8752d0e6ecdac0e4a1c0da",
   "job_id": "job-research-f3407b821f3f7dcf",
   "data": {
-    "problem": "長時間agentはtool出力や対話履歴でcontextが増えるため、要約、古いturn切り捨て、tool結果の外部保存、sub-agent隔離を周期的に行う。過去prefixを書き換えると直前まで再利用できたKV cacheが無効になり、次のLLM呼出しで変換後context全体を再prefillする。要約では要約生成と再prefillが連続し、変換点TTFTに大きなspikeを作る。",
+    "problem": "長時間agentはtool出力や対話履歴でcontextが増えるため、要約、古いturn切り捨て、tool結果の外部保存、sub-agent隔離を周期的に行う。過去prefixを書き換えると直前まで再利用できたKV cacheが無効になり、次のLLM呼出しで変換後context全体を再prefillする。要約では要約生成と再prefillが連続し、変換点TTFTに大きなspikeを作る。従来のエージェント基盤は変換そのものを同期処理として呼び出し、サービング層は変換後の入力を新しい通常要求として受け取るため、変換が起きることを事前に知らずKV再利用や空きGPU時間を利用した準備ができない。単にKVを保存・ページ化しても接頭辞自体が書き換わればキャッシュキーが変わるので、この再計算遅延は解消しない。",
     "novelty": "多くのcontext変換はsegment-decomposableで、確定済みprefix segmentの変換結果が将来tokenに依存しないと捉え、各segment確定時に非同期で前倒しする。runtimeはworking contextとlookahead contextを並行維持し、commit時に完成済み変換prefixとKVへ差し替える。lookaheadをbest-effort requestとしてserving層へ明示し、foreground SLOを壊さない範囲だけGPU slackを使う。",
-    "method_overview": "agent frameworkはsegment境界、commit条件、promotion条件をstrategy interfaceとして登録する。segment確定時にruntimeはprefixのoffload/summary/truncation/isolation変換とprefillを背景requestとして発行し、変換済みprefixとKVをlookahead stateへ蓄積する。hard trigger時に完成済みならworking contextへspliceし、未完了ならpriorityを上げる。schedulerはlatency-criticalとbest-effortを分け、co-locatedではdecode→通常prefill→lookahead chunkの順にbatchを構成し、KV長を含むperformance modelでSLO超過を避ける。",
+    "method_overview": "agent frameworkはsegment境界、commit条件、promotion条件をstrategy interfaceとして登録する。segment確定時にruntimeはprefixのoffload/summary/truncation/isolation変換とprefillを背景requestとして発行し、変換済みprefixとKVをlookahead stateへ蓄積する。hard trigger時に完成済みならworking contextへspliceし、未完了ならpriorityを上げる。schedulerはlatency-criticalとbest-effortを分け、co-locatedではdecode→通常prefill→lookahead chunkの順にbatchを構成し、KV長を含むperformance modelでSLO超過を避ける。具体的には、確定済み区間が追加されるたびに先読み条件を判定し、対象区間の変換を順序付き背景要求として投入する。背景要求内で必要な補助LLM呼出しと変換後接頭辞のprefillまで完了させ、主実行が変換境界へ達したときは準備済み状態を差し替える。先読みが間に合わない場合だけ要求を昇格させて正しさを保つ。分離サービングでは先読みprefillも専用prefill側で処理し、完成KVをdecode側へ転送するため、同じ抽象を配置形態に依存せず使える。",
     "components": [
-      {
-        "name": "segment-decomposable lookahead programming model",
-        "description": "contextをtool callやturn等の確定segmentへ分け、未来に依存しない変換だけを先行実行する。runtimeは主状態とは別に変換済みprefixとKVを持つlookahead stateを維持し、on_segment_boundaryで背景変換を進めon_commitで完成結果をspliceする。offloading、keep-recent-K、summarization、sub-agent isolationを同じ抽象で表現する。この分解では、各区間が確定した時点で、その区間までの変換結果を将来の生成を待たずに計算できることが前提になる。これにより、要約や古い履歴の退避で接頭辞が書き換わる直前ではなく、通常生成と並行して変換後の文脈とKVキャッシュを準備できる。変換結果が締切までに完成しない場合は、未完成処理を前景要求へ昇格して正しい文脈を保証するため、意味を変えずに待ち時間だけを前倒しする設計である。"
-      },
-      {
-        "name": "変換済みKVの先行生成とcommit/promotion",
-        "description": "背景streamは文脈文字列だけでなく変換後prefixのprefillまで実行してKV cacheを準備する。hard threshold到達時に準備済みなら直接切り替え、同期変換と再prefillをcritical pathから除外する。未完了ならpromotion hookでpriorityを上げる。"
-      },
-      {
-        "name": "lookahead-aware SLO scheduler",
-        "description": "先行prefillをbest-effort、通常生成をlatency-criticalとして区別する。co-locatedではdecodeを最優先し、通常prefill、lookahead chunkの順に入れ、予測batch latencyがTBT上限を超える候補は排除する。固定token数だけでなく既存KV長を性能モデルへ入れる。"
-      }
+      {"name": "segment-decomposable lookahead programming model", "description": "contextをtool callやturn等の確定segmentへ分け、未来に依存しない変換だけを先行実行する。runtimeは主状態とは別に変換済みprefixとKVを持つlookahead stateを維持し、on_segment_boundaryで背景変換を進めon_commitで完成結果をspliceする。offloading、keep-recent-K、summarization、sub-agent isolationを同じ抽象で表現する。この分解では、各区間が確定した時点で、その区間までの変換結果を将来の生成を待たずに計算できることが前提になる。これにより、要約や古い履歴の退避で接頭辞が書き換わる直前ではなく、通常生成と並行して変換後の文脈とKVキャッシュを準備できる。変換結果が締切までに完成しない場合は、未完成処理を前景要求へ昇格して正しい文脈を保証するため、意味を変えずに待ち時間だけを前倒しする設計である。"},
+      {"name": "変換済みKVの先行生成とcommit/promotion", "description": "背景streamは文脈文字列だけでなく変換後prefixのprefillまで実行してKV cacheを準備する。hard threshold到達時に準備済みなら直接切り替え、同期変換と再prefillをcritical pathから除外する。未完了ならpromotion hookでpriorityを上げる。先読み状態には変換済みメッセージ列だけでなく、その接頭辞に対応する再利用可能なKVを紐付けるため、commit後の最初の生成で長い履歴を再計算しない。要約のように補助モデル生成が必要な場合も、その生成と新しい接頭辞のprefillを一続きの背景処理として実行する。境界到達時に未完了ならpromotionで通常要求に近い優先度へ切り替え、遅延隠蔽に失敗しても同期方式と同じ意味結果へ収束させる。"},
+      {"name": "lookahead-aware SLO scheduler", "description": "先行prefillをbest-effort、通常生成をlatency-criticalとして区別する。co-locatedではdecodeを最優先し、通常prefill、lookahead chunkの順に入れ、予測batch latencyがTBT上限を超える候補は排除する。固定token数だけでなく既存KV長を性能モデルへ入れる。先読み要求は余剰資源を使う一方で、通常decodeのトークン間遅延を悪化させてはならない。このため各候補バッチについて既存KV長を含む予測実行時間を計算し、SLO余裕に収まる先読みchunkだけを投入する。prefill/decode分離時も先読みを通常prefillと区別して扱い、負荷上昇時には背景仕事を抑制することで、前倒し計算の利益と利用者向け遅延を両立する。"}
     ],
     "system_design": "SmoothAgent runtimeはMiniAgent/LangChain等とSGLangの間に位置し、strategy hook、working/lookahead state、background request管理を担う。SGLang側はco-locatedとprefill/decode disaggregatedの双方でlookahead-aware schedulerを実行する。"
   }
