@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 11:46 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 12:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -240,11 +240,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P88 `arXiv:2605.16867` — GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources
-- P88 `arXiv:2502.15524` — HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds
-- P88 `arXiv:2605.18825` — Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches
-- P88 `arXiv:2605.05639` — TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference
 - P88 `arXiv:2603.19133` — A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference
+- P88 `arXiv:2605.04357` — Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs
+- P88 `arXiv:2601.13684` — HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference
+- P88 `arXiv:2607.08565` — SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling
+- P88 `arXiv:2602.06932` — When RL Meets Adaptive Speculative Training: A Unified Training-Serving System
 
 ## 7日比較
 
