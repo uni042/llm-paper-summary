@@ -1,4 +1,4 @@
-name: Temporary diagnose Vortex current record
+name: Temporary repair Vortex record
 
 on:
   push:
@@ -7,12 +7,12 @@ on:
       - '.github/workflows/tmp-diagnose-vortex-current-record.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  diagnose:
+  repair:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,198 +22,34 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
-      - name: Reconstruct and validate Vortex in memory
+      - name: Repair and process Vortex immutable record
+        run: python .survey/scripts/tmp_repair_vortex.py
+      - name: Verify repository Python and YAML
         run: |
+          python -m compileall -q .survey/scripts
           python - <<'PY'
-          import copy
-          import json
-          import re
-          import sys
-          from collections import Counter
           from pathlib import Path
-
-          root = Path('.').resolve()
-          sys.path.insert(0, str(root / '.survey/scripts'))
-          import assemble_research_record as assemble
-          import claim_worker_with_banks as banks
-          from japanese_style import clean_for_language_ratio, japanese_ratio, record_prose_text, find_bare_english
-
-          job_id = 'job-research-8df4b126a68a6be4'
-          claim = {'job_id': job_id, 'kind': 'research'}
-          source = None
-          payloads = None
-          attempts = set()
-
-          bank_candidate = banks._repair_bank_candidate(root, claim, set())
-          if bank_candidate is not None:
-              bank, payloads, attempts = bank_candidate
-              source = {'kind': 'retained_bank', 'bank': bank, 'attempts': sorted(attempts)}
-          else:
-              descriptor_candidate = banks._repair_descriptor_candidate(root, claim)
-              if descriptor_candidate is not None:
-                  submission, descriptor, payloads, attempts = descriptor_candidate
-                  source = {
-                      'kind': 'immutable_descriptor',
-                      'submission': submission,
-                      'attempt': descriptor.get('attempt_id'),
-                      'attempts': sorted(attempts),
-                  }
-          if payloads is None:
-              raise SystemExit('no unique recoverable Vortex record found')
-
-          original = {slot: copy.deepcopy(payloads[slot]['data']) for slot in assemble.SLOT_NAMES}
-          original = assemble.normalize_preferred_terms(original)
-          assemble.ensure_explanatory_summary(original)
-
-          replacements = [
-              ('query-independent', 'クエリ非依存'),
-              ('backward-compatible', '後方互換'),
-              ('memory-bound', 'メモリ律速'),
-              ('compute-bound', '計算律速'),
-              ('full-attention', '全注意'),
-              ('full attention', '全注意'),
-              ('sparse attention', '疎注意'),
-              ('block table remapping', 'ブロック表再マップ'),
-              ('block top-k', 'ブロック上位k'),
-              ('top-k', '上位k'),
-              ('end-to-end', '端から端まで'),
-              ('query', 'クエリ'),
-              ('attention', '注意機構'),
-              ('backend', 'バックエンド'),
-              ('frontend', 'フロントエンド'),
-              ('operator', '演算子'),
-              ('accuracy', '精度'),
-              ('layout', '配置'),
-              ('indexer', '索引器'),
-              ('index', '索引'),
-              ('metadata', 'メタデータ'),
-              ('page', 'ページ'),
-              ('paged', 'ページ化'),
-              ('radix', '基数'),
-              ('sequence', '系列'),
-              ('score', 'スコア'),
-              ('sparse', '疎'),
-              ('dense', '密'),
-              ('serving', 'サービング'),
-              ('server', 'サーバー'),
-              ('throughput', 'スループット'),
-              ('latency', '遅延'),
-              ('prompt', 'プロンプト'),
-              ('output', '出力'),
-              ('token', 'トークン'),
-              ('training', '学習'),
-              ('backward', '逆方向'),
-              ('decode', 'デコード'),
-              ('prefill', 'プリフィル'),
-              ('programming model', 'プログラミングモデル'),
-              ('program', 'プログラム'),
-              ('algorithm', 'アルゴリズム'),
-              ('system', 'システム'),
-              ('systems', 'システム'),
-              ('runtime', 'ランタイム'),
-              ('deployment', '配備'),
-              ('compiler', 'コンパイラ'),
-              ('cache', 'キャッシュ'),
-              ('kernel', 'カーネル'),
-              ('vendor', 'ベンダー'),
-              ('fallback', 'フォールバック'),
-              ('tensor', 'テンソル'),
-              ('recall', '再現率'),
-              ('budget', '予算'),
-              ('geometry', '形状'),
-              ('shape', '形状'),
-              ('size', 'サイズ'),
-              ('length', '長さ'),
-              ('mean', '平均'),
-              ('full', '全体'),
-              ('ragged', '可変長'),
-              ('prefix', '接頭辞'),
-              ('iteration', '反復'),
-              ('agent', 'エージェント'),
-              ('traffic', '転送量'),
-              ('allocation', '割り当て'),
-              ('stage', '段階'),
-              ('load', '読み出し'),
-              ('save', '保存'),
-              ('parallelism', '並列度'),
-              ('batching', 'バッチ処理'),
-              ('centroid', '重心'),
-              ('thread', 'スレッド'),
-              ('template', 'テンプレート'),
-              ('selection', '選択'),
-              ('approximate', '近似'),
-              ('approx', '近似'),
-              ('exact', '厳密'),
-              ('reduction', 'リダクション'),
-              ('semantics', '意味規則'),
-              ('named', '名前付き'),
-              ('continuous', '連続'),
-              ('pairwise', '対ごと'),
-              ('workload', 'ワークロード'),
-              ('memory', 'メモリ'),
-              ('compute', '計算'),
-              ('table', '表'),
-              ('config', '設定'),
-              ('step', 'ステップ'),
-              ('docs', '文書'),
-              ('user', '利用者'),
-              ('req', '要求'),
-              ('pareto', 'パレート'),
-              ('block', 'ブロック'),
-          ]
-
-          def translate_text(text):
-              if not isinstance(text, str) or text.startswith(('http://', 'https://')):
-                  return text
-              out = text
-              for source_word, target in replacements:
-                  pattern = re.compile(r'(?<![A-Za-z0-9_])' + re.escape(source_word) + r'(?![A-Za-z0-9_])', re.I)
-                  out = pattern.sub(target, out)
-              return out
-
-          def translate_value(value):
-              if isinstance(value, str):
-                  return translate_text(value)
-              if isinstance(value, list):
-                  return [translate_value(item) for item in value]
-              if isinstance(value, dict):
-                  return {key: translate_value(item) for key, item in value.items()}
-              return value
-
-          candidate = copy.deepcopy(original)
-          for slot in ('problem_method', 'evaluation', 'results', 'positioning'):
-              candidate[slot] = translate_value(candidate[slot])
-          candidate = assemble.normalize_preferred_terms(candidate)
-          assemble.ensure_explanatory_summary(candidate)
-
-          def metrics(record):
-              prose = record_prose_text(record)
-              ratio, jp_chars, latin_chars = japanese_ratio(prose)
-              cleaned = clean_for_language_ratio(prose)
-              words = Counter(word.lower() for word in re.findall(r'[A-Za-z][A-Za-z0-9_-]*', cleaned))
-              return ratio, jp_chars, latin_chars, words
-
-          old_ratio, old_jp, old_latin, _ = metrics(original)
-          ratio, jp_chars, latin_chars, words = metrics(candidate)
-          issues = assemble.collect_validation_issues(candidate)
-          components = (candidate.get('problem_method') or {}).get('components') or []
-          result = {
-              'source': source,
-              'before': {'ratio': old_ratio, 'japanese': old_jp, 'latin': old_latin},
-              'after': {'ratio': ratio, 'japanese': jp_chars, 'latin': latin_chars},
-              'issues': issues,
-              'issue_count': len(issues),
-              'method_overview_chars': len(str((candidate.get('problem_method') or {}).get('method_overview') or '').strip()),
-              'component_description_chars': [len(str(item.get('description') or '').strip()) for item in components if isinstance(item, dict)],
-              'bare_english': [
-                  {'term': hit.term, 'preferred': hit.preferred, 'count': hit.count}
-                  for hit in find_bare_english(record_prose_text(candidate))[:20]
-              ],
-              'top_latin_words_after': words.most_common(60),
-          }
-          print('VORTEX_DRY_RUN=' + json.dumps(result, ensure_ascii=False))
-          if issues:
-              raise SystemExit('candidate still fails current validator')
-          if ratio < 0.70:
-              raise SystemExit(f'candidate ratio still below threshold: {ratio:.3f}')
+          import yaml
+          for path in Path('.github/workflows').glob('*.yml'):
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+          print('workflow YAML valid')
           PY
+      - name: Commit repaired durable state
+        run: |
+          set -euo pipefail
+          git config user.name 'vortex-repair[bot]'
+          git config user.email 'vortex-repair[bot]@users.noreply.github.com'
+          git status --short
+          git add \
+            .survey/work-queue/records/chat-record-h \
+            .survey/work-queue/claims/job-research-8df4b126a68a6be4.json \
+            .survey/work-queue/submissions/research/attempt-manual-vortex-repair-20260914-001.json \
+            .survey/work-queue/results/research/attempt-manual-vortex-repair-20260914-001.json \
+            .survey/work-queue/jobs/job-research-8df4b126a68a6be4.json \
+            .survey/work-queue/state.json \
+            .survey/work-queue/next-jobs.json \
+            .survey/survey-state/identity-deltas \
+            papers/inference/07-kv-cache-optimization-compression/2026-2606.06453-vortex-programmable-sparse-attention-serving.md
+          git diff --cached --check
+          git commit -m 'repair: complete Vortex record under current validator'
+          git push origin HEAD:fix/validation-preflight-and-claim-telemetry-20260913
