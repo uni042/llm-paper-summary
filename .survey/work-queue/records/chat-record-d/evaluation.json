@@ -2,23 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2605.01708-20260913-0405-v10-d",
-  "job_id": "job-research-2466f653227bab25",
+  "attempt_id": "attempt-2608.22643-20260913-0930-v10-d",
+  "job_id": "job-research-dddd01489d1d0d88",
   "data": {
-    "hardware": ["NVIDIA H200 GPUを搭載したサーバ、dual-socket Intel Xeon Platinum 8468。", "Mellanox ConnectX-7 MT2910 InfiniBand/RDMA、ConnectX-4 Lx、Intel X550 Ethernet。"],
-    "software": ["Mooncake KV転送エンジンとSGLangへ統合。", "比較対象はnvCOMP LZ4/Cascaded/Bitcomp、DFloat11、ZipNN、ZipServ、Falcon。"],
-    "model": ["Qwen3-32B", "Qwen3-30B-A3B", "Llama-3-8B", "Qwen3-Coder-30B", "Llama-3.1-70B", "Qwen3-Next-80B-A3B", "Phi-2"],
-    "datasets": ["WikiText-2", "HumanEval", "GSM8K", "MMLU", "Penn Treebank"],
-    "baselines": ["生BF16 KV転送", "nvCOMP LZ4", "nvCOMP Cascaded", "nvCOMP Bitcomp", "DFloat11", "ZipNN", "ZipServ", "Falcon", "上位8の3ビット方式", "動的校正"],
-    "correctness": "各コーデック性能測定の前に圧縮・展開後のBF16ビット列が元テンソルと完全一致することを確認する。モデル実行経路は変更せず、KV転送表現だけを一時的に圧縮する。",
-    "settings": [
-      {"name": "コーデック処理量", "description": "Qwen3-32Bの実BF16 KVから256M要素のワークロードを構成し、ウォームアップ後10回平均で圧縮率、圧縮GB/s、展開GB/sを比較する。"},
-      {"name": "Mooncake転送", "description": "Llama-3-8BとQwen3-30B-A3Bで、batch=1の系列長512〜131K、batch=16の128〜64K、系列長1024のbatch1〜256、系列長32768のbatch1〜128を掃引する。"},
-      {"name": "SGLangエンドツーエンド", "description": "Qwen3-32Bで同様の系列長・batch掃引を行い、最初のトークンまでの時間と要求処理量を生KV転送と比較する。"},
-      {"name": "転送時間内訳", "description": "Qwen3-32B、batch16、系列長2K/16K/64K、RoCE 4×200G、実効700Gb/sとして、圧縮、圧縮済み転送、展開の加算内訳を測る。"},
-      {"name": "校正・符号化アブレーション", "description": "上位8対上位16、位置メタデータ対センチネル、事前校正対動的校正、テンソル/トークン/チャネル別校正、層別被覆、チャンクサイズを比較する。"}
-    ],
-    "methodology": "実KVテンソルで単体コーデックの処理量と圧縮率を測り、その後Mooncakeの実転送経路とSGLangサービングへ組み込んで、圧縮費を含めても通信削減がTTFT・処理量へ変換されるか確認する。短文から131K級の長文、batch1〜256を掃引して通信支配になる境界を示し、さらに校正表と例外処理の設計選択を細分化して高速化の理由を検証する。",
-    "scope": "圧縮率はBF16指数の冗長性に上限を持ち、理論上おおむね4/3倍へ近づくため、損失圧縮の数倍〜十数倍削減とは目的が異なる。短い系列や小さいKVでは固定カーネル起動費が勝ち、わずかに遅くなる場合がある。評価は主にH200と特定ネットワークで、通信帯域が十分高い環境や計算支配の負荷では利得が小さくなる。"
+    "hardware": "NVIDIA Jetson AGX Orin developer kit、32GiB統合LPDDR5、12-core Arm Cortex-A78AE、Ampere GPU 2048 CUDA cores (SM 8.7)、Samsung 990 PRO NVMe。オフライン準備・予測器学習はNVIDIA A100 80GB×8。",
+    "software": "Linux kernel memory limitで11〜17GiBの総メモリ上限を作り、CUDA利用可能量9.0〜14.8GiBを測定する。io_uring、O_DIRECT、CUDA mapped pinned staging、独自融合scatterと疎MLP実行を使用する。",
+    "methodology": "主性能評価はMistral-7B-v0.1 FP16、7.24B、13.49GiB、32層、hidden 4096、intermediate 14336。Kmax=5500/7168/9865で疎度62/50/31%を作る。WikiText-2から2048トークンの持続デコードスループットを測る。品質はWikiText-2 perplexityと10-shot normalized HellaSwagで、Llama-3-8Bも追加評価する。14GiB制限時には20種の生産・研究ランタイムの起動可否と性能を比較する。",
+    "scope": "単一のJetson AGX Orinという統合メモリエッジ環境が主対象で、離散GPUサーバや複数NVMe、複数モデル同時サービングは評価していない。主性能モデルはMistral-7B FP16で、Llama-3-8Bは品質評価中心。活性疎化は近似であり、予測器学習と中心準備はA100×8という端末外計算を必要とする。モデルがメモリへ収まる領域ではllama.cppとの差が1.1〜1.2倍へ縮む。",
+    "workloads": ["Mistral-7B-v0.1 FP16","Llama-3-8B品質評価","WikiText-2 2048-token decoding","HellaSwag 10-shot"],
+    "baselines": ["llama.cpp FP16","Ollama","FlexGen all-disk","HF Transformers","ZeRO-Inference","CATS","TEAL","SGLang","vLLM","TensorRT-LLM","MLC-LLM","PowerInfer","Candle","DejaVu"],
+    "metrics": ["tokens/s","NVMe MiB/token","major page faults","CPU iowait","GPU utilization","per-token latency","WikiText-2 perplexity","HellaSwag accuracy retention"],
+    "reproducibility": "GPU/CPU/メモリ/SSD、7段階のメモリ制約、モデル寸法、疎度、予測器構成、io_uring queue depth、レコードサイズ、スループット・品質測定方法は詳細に記載される。一方、一次資料中に公式コード公開URLは確認できないため、完全な実装再現には論文記述からランタイムを再構築する必要がある。"
   }
 }
