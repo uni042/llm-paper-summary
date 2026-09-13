@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-bb39aecbb008cd80668fbf17","job_id":"job-research-cd30ed212ad4a8ba","data":{"hardware":"単一NVIDIA H100 80GB GPUを使用し、モデル重みをGPUに常駐させる。KVキャッシュ用の階層はCPU DRAM 80GB、ローカルSSD 800GB、容量無制限と仮定したリモートストレージで構成する。","software":"vLLM v0.11.2、LMCache v0.3.9post2、PyTorch v2.9上に約3千行のPythonコードでEVICPRESSを実装する。圧縮候補は主にKeyDiff、K-Norm、SnapKVを用いる。","methodology":"LongBenchの12データセットから計555コンテキストを無作為抽出する。各コンテキストについてGPT-5で100個のQAを生成し、50問をプロファイル用、50問をテスト用に分ける。モデルはLlama-3.1-8B-Instruct、Qwen2.5-14B-Instruct、LongChat-7B-v1.5-32k、Mistral-7B-Instruct-v0.3、Qwen3-30B-A3B-Instruct-2507の5種。固定圧縮率+LRU、退避のみLRU、フルプリフィル、IMPRESSと比較し、品質とTTFTのPareto関係、QPSに対するTTFT/ITL、周期再プロファイルの影響を測る。品質は非圧縮KVによる回答と圧縮KVによる回答のMiniLM-L6-v2埋め込みコサイン類似度で定義する。","baselines":["Full prefill (vLLM)","LRU eviction only","KeyDiff + LRU eviction","K-Norm + LRU eviction","SnapKV + LRU eviction","IMPRESS"],"datasets":["narrativeqa","qasper","multifieldqa_en","hotpotqa","2wikimqa","musique","gov_report","qmsum","multi_news","trec","triviaqa","samsum"],"metrics":["generation quality score","TTFT","ITL","end-to-end latency","QPS","fast-tier cache hit rate"],"scope":"単一ノードのGPU+CPU DRAM+SSDという階層を対象とし、555コンテキストの繰り返し利用を想定する。実モデル・実推論エンジン上の評価だが、リモートストレージは容量無制限と仮定し、複数ノード間KV共有や強いマルチテナント隔離は未評価である。問い合わせドリフト評価にはAzure到着時刻トレースを使うが、トレースに本文がないため内容は生成QAで代替する。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d4f0137cfb44a9bbad1328a0",
+  "job_id": "job-research-a46283c0339631e6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d4f0137cfb44a9bbad1328a0",
+    "worker_id": "parallel-e2e-worker-b-20260913",
+    "worker_kind": "scheduled_chat"
+  }
+}

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-bb39aecbb008cd80668fbf17","job_id":"job-research-cd30ed212ad4a8ba","data":{"limitations":"EVICPRESSは単一ノードのH100+CPU DRAM+SSD階層で評価されており、複数GPU/複数ノード間のKV共有、強いマルチテナント隔離、ネットワーク越しの帯域競合は未評価である。各ストレージ階層のロード帯域がプロファイル期間内で比較的安定していることを仮定し、帯域が問い合わせバーストと相関して急変すると事前計算した効用値が一時的に不正確になる。圧縮感度をQA生成と回答埋め込み類似度で測るため、実ユーザー質問や別品質指標では最適構成が変わり得る。評価する圧縮方式もKeyDiff、K-Norm、SnapKV中心で、量子化との複合構成は将来課題である。KVが十分小さくDRAMに収まる環境では共同最適化の追加利益は小さい。","differences":"LMCacheやMooncake等はKVをGPU外へ効率良く移動・再利用するデータ経路を提供し、LRU等でどのKVを下位階層へ送るかを管理する。KeyDiff、K-Norm、SnapKV、KVzip等はKV内部のtokenを選んで容量を減らすが、通常は配置階層を同時最適化しない。IMPRESSは重要tokenを含むchunkだけを高速階層へ読み込む高度な退避方式だが、圧縮方式・比率の選択とは分離されている。EVICPRESSはこれらを補完し、文脈ごとの損失圧縮感度と階層ロード遅延を一つの効用関数へ入れ、どの圧縮方式・比率でどの階層に置くかを同時に選ぶ点が差分である。","implementation_status":"vLLM v0.11.2とLMCache v0.3.9post2を基盤に約3千行のPython実装を構築した研究プロトタイプ。arXiv v1本文ではEVICPRESS固有コードの公開URLは示されておらず、2026-09-13時点で著者公式実装公開を確認できない。基盤のvLLMとLMCacheは公開されている。","research_positioning":"階層KVオフロードと損失KV圧縮の間を埋めるシステム研究である。これまで『どのKVを高速階層へ残すか』と『各KVをどこまで小さくするか』は別系統として発展してきたが、実際には圧縮率が転送時間と容量を変え、配置先が必要圧縮率の価値を変えるため強く結合している。本研究はコンテキスト単位の品質感度を含む統一目的関数によりその結合を明示し、CPU/SSDを含む多階層メモリ管理の政策層として整理した。今後、量子化、token dropping、remote KV storeを同一配置器へ組み込む研究の比較基準になる。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-d4f0137cfb44a9bbad1328a0",
+  "job_id": "job-research-a46283c0339631e6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d4f0137cfb44a9bbad1328a0",
+    "worker_id": "parallel-e2e-worker-b-20260913",
+    "worker_kind": "scheduled_chat"
+  }
+}

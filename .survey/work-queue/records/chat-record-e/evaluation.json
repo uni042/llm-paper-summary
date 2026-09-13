@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dd8752d0e6ecdac0e4a1c0da",
-  "job_id": "job-research-f3407b821f3f7dcf",
-  "data": {
-    "hardware": "NVIDIA H100 80GB、NVLink、AMD EPYC。Qwen3-8Bは1 H100、Qwen3-32Bは4 H100 TP=4。分離構成は4 prefill H100 + 4 decode H100。",
-    "software": "SGLang v0.5.9、NIXL、MiniAgent、LangChain、LlamaIndex、AutoGen、OpenClaw。",
-    "methodology": "各agentがMiniAgentコードベースを28 step解析しstepごと600〜650 token増えるsessionを固定並行度で実行。offloading、keep-recent-K、summarization、sub-agent isolationの同期実行を同じstrategy内容のbaselineとして比較。変換点TTFT、foreground TTFT/TBT、scheduler予測誤差を測る。",
-    "scope": "実GPU評価だが主workloadはコード解析1種類で固定concurrency。到着率を持つ大規模multi-tenant production traceではない。32K context、dense Qwen3中心。",
-    "workloads": ["28-step code analysis agent", "offloading", "keep-recent-K", "summarization", "sub-agent isolation"],
-    "baselines": ["同期context engineering + SGLang", "vanilla SGLang scheduler"],
-    "metrics": ["transform-point TTFT", "tail TTFT", "TBT", "scheduler prediction error"]
+  "attempt_id": "attempt-813c91afa994773c80c27241",
+  "job_id": "job-research-ee741ee249b93f89",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-813c91afa994773c80c27241",
+    "worker_id": "parallel-e2e-worker-a-20260913",
+    "worker_kind": "scheduled_chat"
   }
 }

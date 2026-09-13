@@ -2,14 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-dd8752d0e6ecdac0e4a1c0da",
-  "job_id": "job-research-f3407b821f3f7dcf",
-  "data": {
-    "limitations": "コード解析中心の固定concurrency workload、Qwen3 dense、32K contextが主評価。実multi-tenant arrival trace、100K超context、異種modelは未評価。lookahead自体が余剰GPU計算を消費し、高負荷時はcommitまでに間に合わない可能性がある。",
-    "differences": "vLLM/SGLangが通常requestのbatching/KV管理を最適化するのに対し、SmoothAgentはagent frameworkのcontext transformationを未来のprefill requestとしてserving層へ公開する。ThunderAgent/CONCUR等はmemory thrashing/concurrencyを扱うがprefix書換えによるKV無効化を前倒ししない。",
-    "implementation_status": "SGLang v0.5.9へschedulerを実装し、MiniAgent、OpenClaw、LangChain、LlamaIndex、AutoGen統合を含むartifactをGitHub公開。",
-    "research_positioning": "agent-aware LLM servingとKV cache runtimeの交点。アプリ層のcontext engineeringをprefix cache再利用とprefill schedulingの問題へ変換する。",
-    "relation_to_existing_repository": "KV cache offload/圧縮が保存量を減らすのに対し、SmoothAgentはcontext書換えでKVが丸ごと無効になる時間的問題を扱う。prefill/decode分離やchunked prefill schedulerと直接組合せられる。",
-    "audit_required": true
+  "attempt_id": "attempt-813c91afa994773c80c27241",
+  "job_id": "job-research-ee741ee249b93f89",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-813c91afa994773c80c27241",
+    "worker_id": "parallel-e2e-worker-a-20260913",
+    "worker_kind": "scheduled_chat"
   }
 }

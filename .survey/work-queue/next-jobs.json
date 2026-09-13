@@ -17,34 +17,10 @@
   },
   "claiming": {
     "ready_research_audit": 165,
-    "actively_claimed": 1,
-    "claimable": 164
+    "actively_claimed": 3,
+    "claimable": 162
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-ee741ee249b93f89",
-      "type": "research",
-      "lane": null,
-      "priority": 90,
-      "canonical_id": "arXiv:2607.05147",
-      "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
-      "source_url": "https://arxiv.org/abs/2607.05147",
-      "paper_path": "papers/inference/06-speculative-decoding/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-a46283c0339631e6",
-      "type": "research",
-      "lane": null,
-      "priority": 89,
-      "canonical_id": "arXiv:2410.15332",
-      "title": "EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models",
-      "source_url": "https://arxiv.org/abs/2410.15332",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-43ee292714ed8d8c",
       "type": "research",
@@ -118,6 +94,30 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-b4e2d8cb129fd978",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2605.07238",
+      "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows",
+      "source_url": "https://arxiv.org/abs/2605.07238",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.07238-fate-future-state-aware-workflow-scheduling.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-2f20b6ae0c5a7fb6",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2507.10069",
+      "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism",
+      "source_url": "https://arxiv.org/abs/2507.10069",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -130,5 +130,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T15:29:16+00:00"
+  "generated_at": "2026-09-13T15:33:46+00:00"
 }

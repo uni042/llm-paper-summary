@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-bb39aecbb008cd80668fbf17","job_id":"job-research-cd30ed212ad4a8ba","data":{"overview":"EVICPRESSは、固定圧縮方式・圧縮率とLRU退避を組み合わせる方式に対し、同じ生成品質でTTFTを1.43〜3.77倍短縮し、同じTTFTなら品質を13.58〜55.40%改善する。フルプリフィル比では品質低下3%以内でTTFTを1.29〜2.19倍、LRU退避のみ比では同条件で1.22〜1.56倍短縮する。IMPRESS比でも品質を落とさずTTFTを1.5〜5.2倍短縮する。80%品質目標の負荷試験では、同じTTFT水準で処理QPSを2.0〜3.6倍、同じITL水準で1.9〜3.4倍に引き上げる。","key_results":[{"metric":"TTFT at equal quality","value":"固定圧縮+LRU比1.43〜3.77倍短縮","baseline":"KeyDiff/K-Norm/SnapKVを一律適用しLRU退避","condition":"5モデル、LongBench 12データセット・555コンテキスト","interpretation":"文脈ごとの圧縮感度に応じて方式・比率・配置先を変えることで、品質を保てるKVを積極的に小さくし高速階層のヒット率を上げられる。"},{"metric":"TTFT vs full prefill","value":"品質低下3%以内で1.29〜2.19倍短縮","baseline":"毎回フルプリフィル","condition":"同一評価構成","interpretation":"低速階層から圧縮KVを読み戻す方が、長文脈を毎回再計算するより速い範囲が広い。"},{"metric":"TTFT vs IMPRESS","value":"品質劣化なしで1.5〜5.2倍短縮","baseline":"IMPRESS重要度ベース多階層退避","condition":"品質-TTFT曲線で比較","interpretation":"chunk単位の重要KV読込だけでなく、KV自体の圧縮率と配置を共同選択することで高速階層容量をより効率的に使う。"},{"metric":"throughput/QPS","value":"品質目標80%で同TTFT時2.0〜3.6倍QPS、同ITL時1.9〜3.4倍QPS","baseline":"各比較方式中の最良baseline","condition":"Llama-3.1-8B、Mistral-7B、Qwen2.5-14Bの負荷変化","interpretation":"CPU DRAMのKVヒット率向上でslow-tierロードと再prefillを減らし、QPS増加時にも遅延上昇を抑える。"},{"metric":"periodic re-profiling quality gain","value":"時間経過後に約11%の品質改善へ収束","baseline":"初期プロファイルを固定","condition":"Azure到着時刻トレース、品質差閾値0.3で再プロファイル","interpretation":"問い合わせ分布のドリフトで古くなる圧縮感度を更新できるが、再プロファイル区間には一時的なend-to-end遅延スパイクが生じる。"}],"negative_results":"12タスク中11タスクでは改善するが、MusiqueではKeyDiff+LRUよりわずかに悪い。KVサイズが小さくCPU DRAMにほぼ収まるモデルでは高度な共同最適化の余地が小さく、Qwen3-30B-A3Bは1K token当たりKVが0.0915GBと小さいため改善が限定される。高速・低速階層の帯域差が小さい場合も配置最適化の価値は低下する。周期再プロファイルは品質を回復する一方、実行中に短い遅延スパイクを発生させる。","interpretation":"主要な利得源は、圧縮に強いコンテキストへ高速階層の容量を効率よく割り当て、圧縮に弱いコンテキストを無理に縮めないことにある。全KVへ同じ方式を適用すると、品質を壊しやすいKVに容量節約を強制し、圧縮余地の大きいKVでは容量を取り過ぎる。EVICPRESSはその機会費用を効用値で比較するため、CPU上により多くの再利用可能KVを置け、SSDへのヒットを減らす。","quality_impact":"損失圧縮を含むため品質は厳密には保持されないが、効用関数の品質重みを調整してサービス要求に合わせられる。評価では非圧縮回答との埋め込み類似度を品質指標とし、フルプリフィル比3%以内の品質低下でも有意なTTFT短縮を確認する。一方、この類似度指標がすべての意味的・事実的品質劣化を完全に捉えるとは限らない。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d4f0137cfb44a9bbad1328a0",
+  "job_id": "job-research-a46283c0339631e6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d4f0137cfb44a9bbad1328a0",
+    "worker_id": "parallel-e2e-worker-b-20260913",
+    "worker_kind": "scheduled_chat"
+  }
+}
