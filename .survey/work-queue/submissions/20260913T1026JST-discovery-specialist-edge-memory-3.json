@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "job_id": "job-9b5752caaf5ee298",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.01338",
+      "title": "mzCache: On-Device LLM Memory Management under Multitasking",
+      "source_url": "https://arxiv.org/abs/2609.01338",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2609.01338-mzcache-on-device-memory-management-multitasking.md",
+      "priority": 91,
+      "reason": "モバイル端末のマルチタスクによるOSメモリ圧力でモデル重みとKVキャッシュが退避され、再開時のストレージ読出し・再計算がTTFTを悪化させる問題を直接扱う。細粒度共有バッファ、部分退避・復元、CPU側復元とGPU推論の並行化を組み合わせ、llama.cppベースのAndroid実装でstorage-backed partial offload比TTFTを2.1〜5.5倍短縮しており、端末内階層メモリ・ストレージ活用の重点テーマに強く合致する。"
+    },
+    {
+      "canonical_id": "arXiv:2604.09083",
+      "title": "EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2604.09083",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md",
+      "priority": 87,
+      "reason": "モバイルLLMのコールドスタートをFlash帯域の浪費として捉え、重要度とNPU制約に応じた可変精度重み、SIMD向けpacking、CPU/NPU細粒度pipelineで起動時の重み搬送を削減する。llama.cpp、MNN、llm.npuとの比較で同等精度条件のcold-start latencyを最大4.07倍短縮しており、FlashストレージとNPU実行を結ぶシステム研究として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.13740",
+      "title": "Efficient On-Device Diffusion LLM Inference with Mobile NPU",
+      "source_url": "https://arxiv.org/abs/2606.13740",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.13740-llada-cpp-mobile-npu-diffusion-llm-inference.md",
+      "priority": 85,
+      "reason": "拡散LLMをスマートフォンNPUで効率実行するため、縮小するブロック処理量を投機処理で埋め、CPU側revision経路とNPU計算を並行化し、NPU可視アドレス空間のswap/remapを最適化するend-to-end実行環境。LLaDA-8BでCPU基準比17〜42倍の生成遅延短縮を報告しており、NPU・メモリ交換・推論方式の共同設計として未収録価値がある。"
+    },
+    {
+      "canonical_id": "arXiv:2603.09046",
+      "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+      "source_url": "https://arxiv.org/abs/2603.09046",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md",
+      "priority": 81,
+      "reason": "ARM TrustZone上でLLM推論を保護する際の固定的なメモリ/NPU隔離コストを、ページとNPUを動的に保護・非保護へ切り替える仕組み、LLM向けメモリ管理、secure inference pipeline、multi-model schedulerで削減する。モバイルNPU実機の隔離と推論性能を同時に扱うため、端末内推論実行環境の隣接系統として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-edge-memory-3",
+    "axis": "端末内LLM・OSメモリ圧力・Flash/NPU実行",
+    "query_summary": "モバイル端末のOSメモリ圧力、Flashコールドスタート、NPU実行、CPU-GPU/NPU協調を探索した。HybridGenとATSInferは既存job/収録済みとして除外し、4候補は最新HEAD上で決定論的job IDが未実体化であることを再確認した。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2604.18529",
+      "arXiv:2607.10183"
+    ],
+    "next_axis_hint": "新規端末内候補からstorage/runtime用語を拡張しつつ、別経路として重要論文のforward citationまたはDBMS/OSのcache・prefetch・NUMA研究へ移る",
+    "empty_round_reason": null
+  }
+}
