@@ -1,15 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-2601.22705-20260913-0430-v10-c",
-  "job_id": "job-research-e290cd912706acf4",
-  "data": {
-    "limitations": "Concurは大量エージェントを一括処理するオフライン推論を主対象とし、個々の対話要求の公平性や厳密なオンラインSLOを最適化する方式ではない。活動窓を縮小すると待機集合の一部エージェントは生成開始が遅れるため、一括処理量と個別待ち時間の交換条件は残る。制御パラメータは実験全体で固定され、特に低使用率閾値は感度が高い。異なるKVブロックサイズ、GPU容量、モデル構造では再校正が必要になる可能性がある。混雑信号としてKV使用率とヒット率を取得できる推論エンジンを前提とし、これらを公開しない基盤には計測フックが必要である。高使用率でも高ヒット率なら窓を維持するため、CPU退避や他階層の転送遅延を含む複雑な基盤では、二信号だけで最適状態を表せない場合がある。評価はH100、Qwen3-32B、DeepSeek-V3、SGLangが中心で、他エンジンでの実装・評価は未提示である。",
-    "differences": "PagedAttentionやSGLangのLRU接頭辞キャッシュは、メモリが不足した後にどのKVを追い出すかを決める反応型管理である。HiCache、Mooncake、CachedAttentionなどはCPUや分離メモリへKVを退避して再計算を減らすが、高並行ではPCIeやネットワーク転送が新しい律速になる。ContinuumやTokenCakeはエージェントの休止・再利用を意識したTTLや交換方策を持つが、基本的には既に受け入れた作業のKVをどう保つかを管理する。Concurは一段上で、そもそも活動中にするエージェント数をKV混雑信号から調整し、過剰な作業集合がGPUへ入る前に防ぐ。ParrotやAutellixのようなアプリケーション構造を使う要求並べ替えとも異なり、順序変更だけでは避けられない総KV作業集合の膨張を明示的な流量制御で抑える。",
-    "implementation_status": "SGLang等の推論エンジンの前段に置くエージェント単位制御器として実装され、GPU KV使用率とキャッシュヒット率を読み、活動窓を更新してadmit・pause・resumeを発行する。推論エンジン内部のカーネルやKV被害者選択は変更しない軽量ミドルウェア設計である。2026-09-13時点でarXiv一次資料から公式公開コードURLは確認できないためcodeはnullとする。",
-    "research_positioning": "リポジトリではLLM配信スケジューリング・分離系統に置きつつ、KVキャッシュ管理との境界研究として重要である。特にエージェント処理では、キャッシュ管理だけを局所最適化しても上位層が無制限に新しいエージェントを投入すればスラッシングを防げないことを示す。ネットワークで送信量を制御して輻輳崩壊を防ぐ考え方を、GPU KVキャッシュの活動作業集合へ移した点が特徴である。将来、CPU・CXL・SSDを含む階層KV基盤と組み合わせる場合、下位層は保持・転送、Concurは上位層で流入量を制御する補完関係を作れる。",
-    "relation_to_existing_repository": "MooncakeやKVオフロード方式は容量不足後の退避経路を改善し、UNISONやContinuumは休止セッションの再利用価値を見積もる。Concurはそれらと競合せず、過剰な活動セッション数自体を抑えて退避・再計算の発生頻度を下げる上位制御として組み合わせられる。特にSSD/NVMe階層では転送帯域がGPU HBMよりさらに遅いため、オフロード先を増やすだけでなく流入量を制御する必要性を示唆する。",
-    "audit_required": false
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2606.06453-20260913-0930-v10-c","job_id":"job-research-8df4b126a68a6be4","data":{"limitations":"現在のVortexはデコード段階に焦点を当て、プリフィル時の疎注意を実行しない。学習時の逆伝播も扱わず、RNNやMamba系も未対応である。近似索引の最適運用点はモデル、得点分布、系列長、精度許容幅へ依存する。","differences":"FlashInferやFlexAttentionは既知の疎パターンを高速に実行する注意演算の一般化が中心で、Vortexはその前段の動的索引構築とページ化データフローまで含める。SparseServeやLServeのような特定方式に対し、複数の動的疎注意を同じ基盤で比較できる。","implementation_status":"公式`vortex_torch`リポジトリ、Webサイト、文書が公開されている。SGLang v0.5.9への統合、GQA/MLAバックエンド、独自cuda_mlaを備える。","research_positioning":"KVそのものを圧縮・退避する研究ではなく、『どのKVを読むかを動的に決める疎注意』をサービング基盤へ一般化する研究である。","relation_to_existing_repository":"PagedAttention、FlashInfer、SGLang、KV圧縮・疎化、分離サービング、GPUカーネル最適化を接続する。SSD/NVMe直接評価はないが、疎注意で当面読まないKVを下位階層へ置く設計へ拡張できる。","audit_required":false}}

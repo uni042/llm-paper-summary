@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2601.22705-20260913-0430-v10-c",
-  "job_id": "job-research-e290cd912706acf4",
-  "data": {
-    "hardware": "NVIDIA H100 80GB GPUを使用し、同一ノードGPU間は900GB/s NVLink、ノード間は8本の400Gbps RoCEで接続する。Qwen3-32Bは2・4・8GPU条件、DeepSeek-V3は16GPU条件を含む。",
-    "software": "基盤はSGLang。比較対象として通常SGLang、固定要求数の受入れ制御を加えたSGLang、CPU側KV階層を使うHiCache、Concurを使用する。ソフトウェア環境はPyTorch 2.7.1、Python 3.12、CUDA 12.6。",
-    "methodology": "同一モデル重み、同一プロンプト、同一エージェントロールアウトを使い、Qwen3-32BとDeepSeek-V3のオフライン一括エージェント推論を比較する。Qwen3-32Bではバッチ256でテンソル並列8・4・2を変え、実効的な一GPU当たり並行度を段階的に高める。DeepSeek-V3では16GPU上でバッチ16・32・40を比較する。主指標は全バッチ完了までのエンドツーエンド時間で、短いほど処理量が高いとみなす。あわせてKVキャッシュヒット率と時間変化、GPU KV使用率を測り、中盤スラッシングの発生有無を確認する。固定窓30・32・64・128とも比較し、適応窓が単なる良い固定値の選択で説明できないかを検証する。制御パラメータは全条件でα=2、β=0.5、低使用率閾値0.2、高使用率閾値0.5、ヒット率閾値0.2に固定する。付録では高使用率閾値0.4〜0.8、低使用率閾値0.1〜0.5を掃引して感度を測る。",
-    "scope": "主対象は大量の長寿命エージェントを同時に流すオフライン一括推論で、対話型オンライン配信の個別要求SLOを直接最適化する研究ではない。エージェントはツール待ちで非同期に進み、履歴がターンごとに成長する。制御器はKV使用率とヒット率を推論エンジンから取得できることを前提とする。評価はH100クラスタ、SGLang、Qwen3-32B、DeepSeek-V3が中心で、他GPUや他推論エンジンへの移植費用は定量化されていない。",
-    "workloads": ["Qwen3-32Bのバッチ256・TP8/TP4/TP2", "DeepSeek-V3のバッチ16/32/40・16GPU", "実運用由来の長期エージェントロールアウト", "固定受入れ窓の感度評価", "AIMD閾値感度評価"],
-    "baselines": ["SGLang", "固定要求単位受入れ制御付きSGLang", "SGLang + HiCache", "固定エージェント受入れ窓30/32/64/128"],
-    "metrics": ["エンドツーエンド一括推論時間", "高速化倍率", "KVキャッシュヒット率", "KV使用率", "再計算発生", "閾値感度"],
-    "reproducibility": "論文は制御式と全ハイパーパラメータを明示し、全モデル・負荷・エンジン条件で同一値を使用する。公式コード公開先は一次資料から確認できないため、再現には論文記載のadmit・pause・resume制御とSGLangのKV統計取得を実装する必要がある。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2606.06453-20260913-0930-v10-c","job_id":"job-research-8df4b126a68a6be4","data":{"hardware":"Qwen3 0.6B、1.7B、4B、8BはNVIDIA H200 SXM 141GBで評価する。GLM-4.7-Flashは単一NVIDIA B200、MiniMax-M2.7 229BはNVIDIA B200×4をテンソル並列4で使用する。","software":"SGLang v0.5.9へVortexを統合し、GQAはFlashInferおよびTensorRT-LLM MHA、MLAはTensorRT-LLM MLAと独自cuda_mlaを使用する。公式vortex_torch実装・文書が公開されている。","methodology":"Qwen3系列ではBlock top-kとQuestを比較し、ブロックサイズ16、参照ブロック数32〜256を掃引する。AMC23/AIME24は入力最大4K、生成最大16Kでエンドツーエンド生成スループットと精度を測る。利用者側遅延は16K合成入力、512トークン生成、1〜8 req/s、P1D1分離構成でP95 TPOTを測る。GLM-4.7-FlashはAIME26・32K生成でMLA用rope-aware方式を評価し、MiniMax-M2.7はAIME26・32K生成・B200×4で大規模モデルへの拡張性を測る。AIエージェント評価ではQwen3-1.7B/H200でRULER、AMC23、AIME24を段階評価する。","scope":"実機のエンドツーエンド評価を含むが、Vortexが最適化するのは主にデコードで、プリフィルは未対応である。229B TP4では重み・通信の比率が増え、KV読み出し削減の相対効果が小さくなる。GLMの完全注意比較はベンダーMLA形状非対応により遅いTritonへ退避する条件なので、4.7倍という最大値の解釈には注意が必要である。","workloads":["Qwen3-0.6B","Qwen3-1.7B","Qwen3-4B","Qwen3-8B","GLM-4.7-Flash","MiniMax-M2.7 229B","RULER","AMC23","AIME24","AIME26"],"baselines":["SGLang完全注意","Block top-k","Quest"],"metrics":["エンドツーエンド生成スループット","精度","mean@16","pass@4","pass@8","P95 TPOT","top-k索引再現率","カーネル遅延"],"reproducibility":"公式コード、Webサイト、文書が公開され、対象モデル、GPU、SGLang版、ブロックサイズ、参照ブロック数、入力・生成長、要求率が記載されている。"}}

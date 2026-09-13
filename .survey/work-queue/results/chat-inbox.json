@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-dddd01489d1d0d88",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/01-offload-hierarchical-memory/2026-2608.22643-neuroprefetcher-storage-aware-delta-prefetching.md"
-  },
-  "job_status": "completed",
-  "reconciled": true
+  "ok": false,
+  "job_id": "job-research-8df4b126a68a6be4",
+  "validation_error": "ValueError: problem_method.components[0].description is too short",
+  "repair_required": true,
+  "isolated_at": "2026-09-13T02:36:42+00:00"
 }
