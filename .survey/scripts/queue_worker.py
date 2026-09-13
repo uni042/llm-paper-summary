@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Queue-oriented survey state worker (workflow v9).
+"""Queue-oriented survey state worker (workflow v10).
 
 GitHub Actions owns queue/state transitions. Chat owns research judgment and writes
-small immutable submission JSON files. No daily paper quota is used.
+small immutable submission JSON files. New research/audit jobs are created directly
+with the workflow-v10 five-slot structured-record contract. Root-level direct
+research/audit submissions remain readable only as historical compatibility input.
+No daily paper quota is used.
 """
 from __future__ import annotations
 
@@ -11,7 +14,7 @@ import hashlib
 import json
 import sys
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 HERE = Path(__file__).resolve().parent
@@ -30,6 +33,34 @@ DISCOVERY_STATE = QUEUE / "discovery-state.json"
 
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
 MAX_DISCOVERY_CANDIDATES = 5
+
+RESEARCH_INSTRUCTIONS = (
+    "Read the primary source in full. Produce a repository-quality structured research "
+    "record covering problem, novelty, method, evaluation conditions, key quantitative "
+    "results, limitations, implementation status, and relation to existing repository "
+    "lineages. Preserve publication date/status, implementation and source URLs; for an "
+    "arXiv paper, record its primary and cross-list categories from arXiv. Do not infer "
+    "missing text from abstracts/search snippets. Follow workflow v10 fixed-slot "
+    "transport; do not send completed Markdown from Scheduled Chat."
+)
+RESEARCH_COMPLETION = (
+    "Submit the complete workflow-v10 five-slot structured research record and source "
+    "evidence. If full text is unavailable, return blocked with retrieval evidence "
+    "instead of guessing."
+)
+AUDIT_INSTRUCTIONS = (
+    "Perform a formal audit using primary sources: identity/bibliography, authors/"
+    "affiliations, publication state/final version, code, hardware/model/dataset/"
+    "baselines, quantitative results, simulation vs real hardware, classification, "
+    "arXiv primary/cross-list categories, differences and limitations. Return a complete "
+    "workflow-v10 five-slot structured research record; do not send completed Markdown "
+    "from Scheduled Chat."
+)
+AUDIT_COMPLETION = (
+    "Submit the audited workflow-v10 five-slot structured research record. If the "
+    "required primary evidence cannot be obtained, return blocked/deferred rather than "
+    "guessing."
+)
 
 
 def now() -> str:
@@ -56,6 +87,30 @@ def stable_id(prefix: str, *parts: str) -> str:
     return f"{prefix}-{h}"
 
 
+def git_blob_sha(data: bytes) -> str:
+    header = f"blob {len(data)}\0".encode("utf-8")
+    return hashlib.sha1(header + data).hexdigest()
+
+
+def valid_paper_path(value: object) -> str | None:
+    if not isinstance(value, str) or not value.startswith("papers/"):
+        return None
+    path = PurePosixPath(value)
+    if path.is_absolute() or ".." in path.parts or not value.endswith(".md"):
+        return None
+    return path.as_posix()
+
+
+def current_paper_blob_sha(paper_path: object) -> str | None:
+    paper = valid_paper_path(paper_path)
+    if paper is None:
+        return None
+    target = ROOT.parent / paper
+    if not target.is_file():
+        return None
+    return git_blob_sha(target.read_bytes())
+
+
 def iter_jobs():
     JOBS.mkdir(parents=True, exist_ok=True)
     for p in sorted(JOBS.glob("*.json")):
@@ -70,7 +125,7 @@ def load_state():
         return st
     st = {
         "schema_version": 1,
-        "workflow_version": 9,
+        "workflow_version": 10,
         "mode": "queue",
         "created_at": now(),
         "updated_at": now(),
@@ -112,7 +167,7 @@ def add_job(job: dict):
     if p.exists():
         return False
     job.setdefault("schema_version", 1)
-    job.setdefault("workflow_version", 9)
+    job.setdefault("workflow_version", 10)
     job.setdefault("status", "ready")
     job.setdefault("created_at", now())
     job.setdefault("priority", 50)
@@ -236,8 +291,10 @@ def make_research_job(c: dict, parent: str):
         "paper_path": c.get("paper_path"),
         "selection_reason": c.get("reason"),
         "status": "ready",
-        "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
-        "completion": "Return complete Markdown and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": RESEARCH_INSTRUCTIONS,
+        "completion": RESEARCH_COMPLETION,
     })
 
 
@@ -251,17 +308,25 @@ def make_audit_job(sub: dict, research_job: dict):
         return False
     key = str(research_job.get("canonical_id") or research_job.get("job_id"))
     jid = stable_id("job-audit", key)
-    return add_job({
+    paper_path = sub.get("paper_path") or research_job.get("paper_path")
+    job = {
         "job_id": jid,
         "type": "audit",
         "priority": max(40, min(74, int(research_job.get("priority") or 50) - 10)),
         "canonical_id": research_job.get("canonical_id"),
         "title": research_job.get("title"),
         "source_url": research_job.get("source_url"),
-        "paper_path": sub.get("paper_path") or research_job.get("paper_path"),
+        "paper_path": paper_path,
         "reason": audit_reason or "research result left an explicit verification need",
-        "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quoted quantitative results, simulation vs real hardware, classification, differences and limitations. Update the full Markdown page.",
-    })
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": AUDIT_INSTRUCTIONS,
+        "completion": AUDIT_COMPLETION,
+    }
+    expected_blob_sha = current_paper_blob_sha(paper_path)
+    if expected_blob_sha:
+        job["expected_blob_sha"] = expected_blob_sha
+    return add_job(job)
 
 
 def record_discovery_stats(sub: dict, accepted_count: int) -> bool:
@@ -387,6 +452,7 @@ def process_discovery(sub: dict, job: dict, st: dict):
 
 
 def submission_content(sub: dict) -> str | None:
+    """Load a historical root-level Markdown submission payload."""
     content = sub.get("content")
     payload = sub.get("payload_path")
     if content is not None and payload is not None:
@@ -452,6 +518,7 @@ def process_audit(sub: dict, job: dict, st: dict):
 
 
 def apply_artifact(sub: dict, job: dict):
+    """Apply historical direct-Markdown research/audit submissions only."""
     if job.get("type") not in {"research", "audit"} or sub.get("status", "completed") != "completed":
         return None
     paper = sub.get("paper_path") or job.get("paper_path")
@@ -493,13 +560,14 @@ def apply_artifact(sub: dict, job: dict):
 
 
 def process_submissions(st: dict):
+    """Process root-level discovery/control submissions and historical direct results."""
     SUBMISSIONS.mkdir(parents=True, exist_ok=True)
     RESULTS.mkdir(parents=True, exist_ok=True)
     for p in sorted(SUBMISSIONS.glob("*.json")):
         rp = RESULTS / p.name
         if rp.exists():
             continue
-        result = {"schema_version": 1, "workflow_version": 9, "submission": str(p.relative_to(ROOT)), "ok": False}
+        result = {"schema_version": 1, "workflow_version": 10, "submission": str(p.relative_to(ROOT)), "ok": False}
         try:
             sub = read_json(p, {})
             sub["_file"] = str(p.relative_to(ROOT))
@@ -558,7 +626,8 @@ def process_submissions(st: dict):
         write_json(rp, result)
 
 
-def reconcile_v9_identity_deltas():
+def reconcile_legacy_identity_deltas():
+    """Keep identity deltas complete for historical direct-Markdown completions."""
     import subprocess
     seen = set()
     for j in iter_jobs():
@@ -609,6 +678,7 @@ def maybe_rebuild_views(st):
 
 
 def normalize_ready_jobs():
+    """Keep only live policy normalization that is independent of transport version."""
     changed = False
     for j in iter_jobs():
         if j.get("status") != "ready":
@@ -644,7 +714,10 @@ def queue_snapshot():
         "counts": counts,
         "claiming": claiming,
         "next_jobs": [{
-            k: j.get(k) for k in ("job_id", "type", "lane", "priority", "canonical_id", "title", "source_url", "paper_path", "instructions", "completion")
+            k: j.get(k) for k in (
+                "job_id", "type", "lane", "priority", "canonical_id", "title", "source_url",
+                "paper_path", "workflow_version", "artifact_transport", "instructions", "completion",
+            )
         } for j in visible_ready],
     }
 
@@ -660,6 +733,7 @@ def main():
     STATE, ARCHIVE = QUEUE / "state.json", QUEUE / "archive"
     DISCOVERY_STATE = QUEUE / "discovery-state.json"
     st = load_state()
+    st["workflow_version"] = 10
     st.setdefault("policy", {}).update({
         "fixed_daily_quota": False,
         "quality_over_quantity": True,
@@ -671,7 +745,7 @@ def main():
     # Keep a discovery lane available even while research/audit work is ready so the
     # specialist worker can replenish the shared candidate buffer independently.
     ensure_discovery_job()
-    reconcile_v9_identity_deltas()
+    reconcile_legacy_identity_deltas()
     normalize_ready_jobs()
     maybe_rebuild_views(st)
     save_state(st)

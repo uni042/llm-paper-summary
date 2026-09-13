@@ -1,68 +1,80 @@
 # Discovery continuation policy
 
-This policy governs **discovery continuation** for both the hourly discovery-specialist worker and the discovery phase of the normal paper worker. It supplements `candidate-buffer-policy.md`; it does not remove discovery from the normal worker.
+この文書は通常論文workerと毎時`:00` JSTの探索主体workerが、探索（discovery）をいつ継続し、いつ研究消化へ切り替えるかを定める。candidate水位とモード切替の正本は `candidate-buffer-policy.md`、探索主体worker固有の動作は `discovery-specialist-worker.md` とする。
 
-## Goal
+## 基本原則
 
-Discovery should keep producing strong research candidates for as long as productive work remains possible. A weak or empty search round is a signal to change search strategy, not a run-level stop condition.
+探索は、有望な候補を供給できる限り1回の空振りや重複だけで終了しない。ただし **candidate在庫が十分に積み上がった場合は探索を続けること自体が目的ではない。** `candidate_inventory > 50` かつactionable Research/Auditがある場合、探索主体workerはoverflow research modeへ切り替え、discoveryを一時停止して追加readerとしてbacklog消化に加勢する。
 
-## Non-stop conditions
+candidate在庫が50以下へ戻る、またはactionable Research/Auditがなくなった場合は、探索主体workerは通常探索モードへ戻る。candidate在庫の多さはrun終了条件ではなく、**discoveryからresearchへのモード切替条件**である。
 
-None of the following, by itself, ends discovery for the run:
+## Discovery modeでの非停止条件
 
-- one search axis returns zero useful candidates;
-- one axis returns only duplicates;
-- one axis has low acceptance rate or high duplicate rate;
-- `candidate_inventory` is already large;
-- one search source/API/query fails;
-- one candidate has inaccessible full text or insufficient evidence;
-- one candidate is rejected as weak or out of scope;
-- one GitHub write conflicts with concurrent work;
-- one fallback replay/save operation fails while another durable route remains available;
-- one discovery submission reaches its per-submission candidate limit.
+通常探索モード中、次のいずれも単独ではrun終了条件ではない。
 
-When any of these happens, preserve useful state and continue by changing axis, query, source, citation direction, or adjacent field. There is no fixed number of discovery rounds, total candidates, or candidate-inventory target per Scheduled Chat run.
+- 1探索軸で有力候補が0件だった。
+- 1探索軸の候補が全て重複だった。
+- 1探索軸の採用率が低い、または重複率が高い。
+- 1 source / API / queryが失敗した。
+- 1候補の全文取得や証拠が不足していた。
+- 1候補を弱い・対象外として見送った。
+- 1回のGitHub writeが競合した。
+- 1回のfallback保存・replayが失敗したが別の耐久経路が残っている。
+- 1 discovery submissionが候補上限5本に達した。
 
-## Search-space rotation
+この場合は有用な状態を保存し、探索軸、query family、source、引用方向、隣接分野を変えて継続する。
 
-Use multiple independent routes rather than retrying a depleted query mechanically:
+ただし各round開始前とcandidate投入前に `candidate_inventory` とactionable Research/Auditを再評価し、overflow条件を満たした時点で探索ループを中断してResearch modeへ切り替える。
 
-1. new papers / recent revisions;
-2. forward citations of collected or important papers;
-3. backward references from important papers;
-4. adjacent systems fields such as DBMS, OS, storage, distributed systems, HPC, GPU runtime, networking, and memory systems;
-5. query expansion from titles, abstracts, keywords, and terminology of recently successful candidates;
-6. priority themes: offload, hierarchical memory, SSD/NVMe, MoE expert placement/cache/prefetch, KV cache, scheduling, disaggregation, and inference frameworks.
+## 探索空間のローテーション
 
-Read `discovery-state.json` before choosing axes. Prefer axes with useful historical yield, but retain exploration of under-sampled axes. Do not overreact to a 0% or 100% rate based on only one or two candidates.
+同じ検索式を機械的に繰り返さず、次を独立経路として回す。
+
+1. 新着・recent revision
+2. 収録済み重要論文のforward citation
+3. 重要論文のbackward reference
+4. DBMS / OS / storage / distributed systems / HPC / GPU runtime / networking / memory systems等の隣接分野
+5. 直近で採用されたcandidateのtitle / abstract / keywordからのquery expansion
+6. offload / hierarchical memory / SSD/NVMe / MoE expert placement・cache・prefetch / KV cache / scheduling / disaggregation / inference framework等の重点テーマ
+
+`discovery-state.json` を読み、採用実績のある軸を利用しつつ未探索軸も残す。少数sampleの0% / 100%だけで軸を恒久的に切らない。
 
 ## Candidate quality
 
-There is no inventory target, quota, or cap. Do not lower the quality bar to fill inventory. Candidate selection may consider relevance, novelty, difference from collected work, real measured evaluation, implementation availability, citation value, and usefulness to the project’s priority themes.
+候補件数のquotaやhard capは設けない。件数維持のために品質基準を下げない。
 
-Discovery remains a lightweight stage: inspect title, abstract, bibliographic metadata, primary-source availability, duplicate status, and likely relevance. Full primary-source reading belongs to research. Do not infer research claims from snippets alone.
+Discoveryは軽量段階であり、title、abstract、書誌情報、一次資料の存在、重複状態、テーマ適合性、新規性の見込みを確認する。全文精読、詳細な科学的判断、5-slot structured record作成はResearch段階で行う。検索snippetやabstractだけからresearch内容を推測しない。
+
+## Overflow research mode
+
+`candidate_inventory > 50` かつactionable Research/Auditが存在する場合、探索主体workerは通常論文workerと同じResearch/Audit契約へ切り替える。
+
+1. 最新queue / identity / claim stateを再取得する。
+2. priority最上位のeligible Research/Auditを1件だけclaimする。
+3. 一次資料全文を精読する。
+4. claim resultで予約されたrecord bankへ5-slot structured research recordを書く。
+5. 事前検査（preflight）後、attempt固有の不変提出（immutable submission）またはLibrary checkpointへ完全payloadを耐久保存する。
+6. Actions terminal反映を同期的に待たず最新状態を取り直し、overflow条件が続く限り次の独立jobを処理する。
+7. `candidate_inventory <= 50` またはactionable Research/AuditなしになったらDiscovery modeへ戻る。
+
+1 workerが同時に保持する未完了claimは1件だけとする。探索主体workerのoverflow runも通常論文workerの24-run maintenance counterには加算しない。
 
 ## Durability and concurrency
 
-Before candidate submission, re-check the latest canonical identity/queue state. Concurrent discovery that finds the same paper must converge through canonical-ID / arXiv / DOI / OpenReview / normalized-title deduplication rather than producing intentional duplicate jobs.
+candidate submission前には最新canonical identity / queue / job stateを再確認する。複数workerが同じ論文を発見してもcanonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで1候補へ収束させる。
 
-Use GitHub direct persistence when available. If GitHub writes are unavailable but ChatGPT Library `/LLM-survey-outbox/pending/` can durably store a complete offline seed/envelope, continue discovery and persist there. Google Drive, Notion, and the old Library fallback are not active routes.
+GitHub direct persistenceを優先し、GitHub write不能でもChatGPT Library `/LLM-survey-outbox/pending/` へ完全なseed / envelopeを耐久保存できるなら継続する。Google Drive、Notion、旧Library fallbackは現行経路ではない。
 
-Every discovery round should submit `discovery_stats` so Actions can record evaluated candidates, pre-submit duplicates, final accepted count, axis/query, and the next-axis hint.
+Discovery roundでは `discovery_stats` を送り、評価候補数、事前重複数、最終採用数、探索軸、query概要、next-axis hintをActions側で記録する。
 
 ## Run-level stop conditions
 
-Discovery may stop only when one of these is true:
+runを終了してよいのは次の場合だけである。
 
-1. the canonical repository/rules cannot be read well enough to search safely;
-2. neither GitHub nor the approved Library fallback can durably preserve required candidate state;
-3. the execution environment reaches a hard platform/runtime/tool limit that prevents further useful work;
-4. the worker has reasonably exhausted the currently promising search space **after trying varied independent axes/sources**, and records what was attempted and why further rounds are unlikely to add value in this run.
+1. canonical repository / rulesを十分読めず、安全な重複判定やclaimができない。
+2. GitHubと承認済みLibrary fallbackの両方で必要な状態・成果を耐久保存できない。
+3. 実行環境のhard platform/runtime/tool limitに達し、追加の有用作業ができない。
+4. Discovery modeで、利用可能な互いに独立した探索軸を合理的に使い切り、未試行の有望軸も残っていない。
+5. Overflow research modeでactionable Research/Auditが尽き、Discovery modeへ戻っても条件4を満たす。
 
-A single empty round, all-duplicate round, large candidate inventory, or transient source failure never satisfies condition 4.
-
-## Worker roles
-
-- The discovery-specialist worker performs discovery only and does **not** increment the normal 24-run maintenance counter. Candidate inventory size does not throttle this worker.
-- The normal paper worker retains its own discovery capability and follows this same continuation policy during any discovery phase, but `candidate-buffer-policy.md` controls when research should take priority over discovery.
-- The specialist supplements the normal worker; it never assumes exclusive ownership of discovery.
+単一の空round、全重複round、大きなcandidate在庫、単一source障害はrun停止条件ではない。大きなcandidate在庫はoverflow research modeへの切替理由として扱う。

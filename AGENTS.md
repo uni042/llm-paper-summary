@@ -8,6 +8,6 @@
 - report pathが指定された場合、Lunaは詳細な証跡をそこへ書き、chatには状態、commit/change files、1行のテスト結果、懸念だけを返す。状態は `EVIDENCE_READY`、`BLOCKED_EVIDENCE`、`CONFLICT` のいずれかとする。
 - blocker reportには stage、class、exact error、再現コマンド、exit code、expected/actual、files、試行、未達の受入条件、次に調査すべきproblem domainを含める。同一root causeに対する総試行は初回を含め最大2回とし、その後は停止またはglobal Astra条件に従ってescalateする。
 - Lunasに重複するfile ownershipや未凍結interfaceを割り当てない。claim allocator/state、dispatcher/record bank、queue/discovery、GC/maintenanceはwrite setとinterfaceが凍結されている場合だけ別unitに分ける。workflow filesとcanonical docsは直列化する。
-- canonical repository writers、workflow定義、paper/index/state更新、shared generated outputsは直列化する。`survey-helper-main` はcanonical GitHub Actions writer groupであり、別名のconcurrency groupだけを根拠に安全とみなさない。
+- canonical repository writers、workflow定義、paper/index/state更新、shared generated outputsは直列化する。重いbackground writerは `survey-background-main`、claim高速レーンは `survey-claim-main`、不変提出（immutable submission）高速レーンは `survey-submission-main` を使う。単にconcurrency group名が異なることだけを根拠に同一write setへの並列書込みを安全とみなさない。
 - commit、push、PR/merge、GitHub settings、Actions dispatch/rerun、credential変更、dependency install、destructive/live operationはSol所有とする。Solは初期partition、blocker triage、最終acceptance、external effectsに介入する。
 - focused test、関連regression、`git diff --check` の順に確認する。local test、CI、pushの結果を区別する。

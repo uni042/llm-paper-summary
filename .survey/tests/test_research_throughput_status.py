@@ -63,6 +63,9 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             self.assertIn("最古の有効claimの経過時間 | **60 min**", text)
             self.assertIn("処理速度 | **LOW**", text)
             self.assertIn("最低3件", text)
+            self.assertIn("claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast", text)
+            self.assertIn("claim-fast / submission-fast / background", text)
+            self.assertIn("旧固定 `chat-inbox.json` は通常経路では使いません", text)
 
     def test_oldest_active_claim_age_ignores_unexpired_claim_for_terminal_job(self):
         with tempfile.TemporaryDirectory() as td:
@@ -111,8 +114,8 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             ]})
             module = _load_module(repo)
             text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
-            self.assertIn(":00 補助worker | **探索専用**", text)
-            self.assertIn("50本以下になると探索専用へ戻ります", text)
+            self.assertIn(":00 補助worker | **Discovery優先**", text)
+            self.assertIn("50本以下になるとDiscovery優先へ戻ります", text)
 
     def test_three_completed_is_not_flagged_low(self):
         with tempfile.TemporaryDirectory() as td:
@@ -128,7 +131,7 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             module = _load_module(repo)
             text = module.render_section(repo, now=datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc))
             self.assertIn("最新通常runのResearch完了 | **3**", text)
-            self.assertIn(":00 補助worker | **探索専用**", text)
+            self.assertIn(":00 補助worker | **Discovery優先**", text)
             self.assertIn("処理速度 | **OK**", text)
             self.assertNotIn("throughput LOW", text)
 
@@ -144,7 +147,18 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             module = _load_module(repo)
             status = repo / "STATUS.md"
             status.write_text(
-                "# 運用ダッシュボード\n\n## 現在の状態\n\nstate\n\n## 直近24時間の処理量\n\nmetrics\n\n## 参考情報\n",
+                "# 運用ダッシュボード\n\n"
+                "## 現在の状態\n\n"
+                "| 次回保守までの通常run | **12 / 24** |\n\n"
+                "state\n\n"
+                "## 直近24時間の処理量\n\n"
+                "| 探索専用worker run（毎時枠） | **2** |\n"
+                "| 探索専用worker round（stats観測） | **7** |\n\n"
+                "metrics\n\n"
+                "## 参考情報\n\n"
+                "### 直近の探索専用worker\n\n"
+                "### 探索専用workerの探索効率（直近24時間）\n\n"
+                "### 直近5探索専用worker run\n",
                 encoding="utf-8",
             )
             now = datetime(2026, 9, 13, 4, 0, tzinfo=timezone.utc)
@@ -154,6 +168,13 @@ class ResearchThroughputStatusTests(unittest.TestCase):
             self.assertEqual(text.count("## ワーカー稼働状況"), 1)
             self.assertLess(text.index("## ワーカー稼働状況"), text.index("## 直近24時間の処理量"))
             self.assertLess(text.index("## 現在の状態"), text.index("## ワーカー稼働状況"))
+            self.assertIn("保守カウンタ（通常run）", text)
+            self.assertIn(":00 補助worker Discovery run（毎時枠）", text)
+            self.assertIn(":00 補助worker Discovery round（stats観測）", text)
+            self.assertIn("### 直近の:00 補助worker Discovery", text)
+            self.assertIn("### :00 補助workerのDiscovery効率（直近24時間）", text)
+            self.assertIn("### 直近5件の:00 補助worker Discovery run", text)
+            self.assertNotIn("探索専用worker", text)
 
 
 if __name__ == "__main__":

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Dispatch one eligible immutable fallback envelope through the normal transport.
+"""Dispatch one eligible fallback envelope through the current workflow-v10 transport.
 
-All external fallback outboxes first converge on `.survey/work-queue/fallback-inbox/`.
-This dispatcher is the only component that expands an ingested envelope into the
-reusable record bank, Chat inbox, offline seed, or update-worker files.  It runs
-inside the same GitHub Actions concurrency group as the survey/update workers,
-so Drive and Library recovery cannot race each other on fixed transport files.
+Research/Audit record bundles are converted directly into an attempt-specific
+immutable descriptor by ``replay_record_fallback``. Historical bundles containing
+the retired reusable ``chat-inbox.json`` remain readable, but replay never recreates
+that fixed transport. Non-record envelopes use the generic allowlisted transport for
+offline seeds, lightweight queue requests, and update-worker inputs.
 """
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 import fallback_transport as ft
+import replay_record_fallback as record_replay
 
 
 def move_exact(source: Path, destination_dir: Path) -> Path:
@@ -52,6 +53,31 @@ def quarantine(source: Path, failed_dir: Path, error: Exception) -> None:
     )
 
 
+def _read_raw_object(source: Path) -> dict[str, Any]:
+    value = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(value, dict):
+        raise ValueError("fallback envelope root must be an object")
+    return value
+
+
+def _is_record_fallback(value: dict[str, Any]) -> bool:
+    """Route both current record bundles and incomplete legacy bundles to strict replay.
+
+    A damaged historical Research/Audit envelope can retain only the retired
+    ``chat-inbox.json`` write after partial loss. Treating that as a generic fallback
+    would recreate the retired fixed transport. Strict record replay instead validates
+    the five-slot invariant and quarantines the malformed envelope.
+    """
+    if record_replay.is_record_bundle(value):
+        return True
+    if value.get("kind") not in {"research", "audit"} and value.get("origin") != "claimed_worker":
+        return False
+    for write in value.get("writes") or []:
+        if isinstance(write, dict) and write.get("path") == record_replay.CHAT_INBOX:
+            return True
+    return False
+
+
 def dispatch(repo_root: Path) -> dict[str, Any]:
     repo_root = repo_root.resolve()
     inbox_dir = repo_root / ft.FALLBACK_INBOX
@@ -64,50 +90,46 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
 
     for source in sorted(inbox_dir.glob("*.json")):
         try:
-            envelope, canonical = ft.parse_envelope(source.read_bytes())
-            if canonical != source.read_text(encoding="utf-8"):
-                # Keep the immutable GitHub ledger canonical so duplicate checks
-                # across Drive/Library do not depend on whitespace/key ordering.
-                source.write_text(canonical, encoding="utf-8")
-
-            terminal = ft.terminal_job_id(repo_root, envelope)
-            if terminal:
+            raw_object = _read_raw_object(source)
+            if _is_record_fallback(raw_object):
+                replay = record_replay.materialize(repo_root, raw_object)
+                if replay["action"] == "deferred":
+                    deferred.append(
+                        {
+                            "id": str(raw_object.get("id") or source.stem),
+                            "reason": str(replay.get("reason") or "record replay deferred"),
+                        }
+                    )
+                    continue
                 archived = move_exact(source, archive_dir)
+                if replay["action"] == "ack_terminal":
+                    return {
+                        "action": "ack_terminal",
+                        "envelope_id": raw_object.get("id"),
+                        "job_id": replay.get("job_id"),
+                        "archived": str(archived.relative_to(repo_root)),
+                        "changed_paths": replay.get("changed_paths") or [],
+                        "deferred": deferred,
+                        "invalid": invalid,
+                    }
                 return {
-                    "action": "ack_terminal",
-                    "envelope_id": envelope["id"],
-                    "job_id": terminal,
+                    "action": "dispatched",
+                    "envelope_id": raw_object.get("id"),
+                    "job_id": replay.get("job_id"),
+                    "descriptor": replay.get("descriptor"),
+                    "record_bank": replay.get("record_bank"),
+                    "changed_paths": replay.get("changed_paths") or [],
                     "archived": str(archived.relative_to(repo_root)),
                     "deferred": deferred,
                     "invalid": invalid,
                 }
 
-            accepted, claim_reason = ft.claimed_envelope_state(repo_root, envelope)
-            if not accepted:
-                raise ValueError(claim_reason or "claimed envelope is not current")
-
-            ready, reason = ft.dependency_state(repo_root, envelope)
-            if not ready:
-                deferred.append({"id": envelope["id"], "reason": reason or "dependency"})
-                continue
-
-            if ft.is_chat_envelope(envelope) and not ft.chat_transport_settled(repo_root):
-                deferred.append({"id": envelope["id"], "reason": "chat transport still processing"})
-                continue
-
-            dispatch_envelope = envelope
-            remapped, remap_reason = ft.remap_research_bank(repo_root, envelope)
-            if remapped is None:
-                deferred.append({"id": envelope["id"], "reason": remap_reason or "no safe record bank"})
-                continue
-            dispatch_envelope = remapped
-            changed = ft.apply_envelope(repo_root, dispatch_envelope)
-            if any(write["path"] == ft.CHAT_INBOX for write in dispatch_envelope["writes"]):
-                # The previous reusable result belongs to the previous inbox.
-                # Removing it here lets the current workflow assemble/process the
-                # newly dispatched Chat transport in the same Actions run.
-                (repo_root / ft.CHAT_RESULT).unlink(missing_ok=True)
-
+            envelope, canonical = ft.parse_envelope(source.read_bytes())
+            if canonical != source.read_text(encoding="utf-8"):
+                # Keep the immutable GitHub ledger canonical so duplicate checks do
+                # not depend on whitespace/key ordering.
+                source.write_text(canonical, encoding="utf-8")
+            changed = ft.apply_envelope(repo_root, envelope)
             archived = move_exact(source, archive_dir)
             return {
                 "action": "dispatched",

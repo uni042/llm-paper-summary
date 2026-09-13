@@ -8,87 +8,83 @@
 
 耐久経路は **GitHub direct** と **ChatGPT Library fallback** の2つだけ。完成logical payloadまたは継続に必要なoffline job seedをどちらかへ耐久保存できた時点で後続作業へ進める。GitHub上のjob自体はActionsで最終反映されるまで未完了のまま残す。
 
-Google Drive fallbackは廃止済みであり、新規保存・replay・backlog判定には使わない。旧実装は `archive/drive-fallback-before-removal-20260910` ブランチに保存している。
+Google Drive fallbackは廃止済みであり、新規保存・replay・backlog判定には使わない。
 
-## 1. record bank
+## 1. Record bank
 
-利用可能bankの正本は `.survey/work-queue/records/bank-registry.json`。GitHubへ直接送る前は可能なら:
+通常Research/Auditではclaim resultの `record_bank` が正本である。workerは `select_record_bank.py` で別bankを選び直さない。`record_bank_fallback: "library"` の場合は完全payloadをLibraryへcheckpointする。
 
-```bash
-python .survey/scripts/select_record_bank.py --repo-root .
-```
-
-を実行し、`selected_bank`を使う。
+`select_record_bank.py` は診断・maintenance・fallback replayでbank状態を確認するために使う。
 
 A〜Hがすべて使用中・dirtyでも、Libraryへ完全payloadを保存できればrunを止めない。fallback backlogはbank数に拘束されない。
 
-## 2. backlog
+## 2. Backlog
 
-複数件が蓄積してよい場所は:
+複数件が蓄積してよい場所は次である。
 
 - ChatGPT Library: `/LLM-survey-outbox/pending/`
 - GitHub intake: `.survey/work-queue/fallback-inbox/`
 
 pending件数は、そのrunで新しく精読できる論文数を減らす条件にしない。
 
-research/auditは1論文につき1 envelopeとし、5 slot + `chat-inbox.json`を完全に含める。1論文を複数fragmentへ分割しない。完成Markdownはfallbackへ保存しない。
+新規Research/Audit fallbackは1論文につき1 envelopeとし、root-levelのjob/claim/attempt/paper identityと完全な5 record slotを含める。固定 `chat-inbox.json` と完成Markdownは新規fallbackへ保存しない。
+
+2026-09-14以前に保存済みの「5 slot + `chat-inbox.json`」形式は既存pending救済のため読込互換だけ残し、replay時に現行のattempt固有不変descriptorへ変換する。
 
 ## 3. Library障害
 
 Library保存失敗だけをSTOP_RUNにしない。GitHub direct writeが利用可能ならGitHubへ保存して研究を継続する。
 
-GitHub writeもrun-wideで利用不能かつLibraryにも必要な完全payload/offline seedを保存できない場合だけ、未checkpoint成果を増やす前にSTOP_RUNする。
+GitHub writeもrun-wideで利用不能かつLibraryにも必要な完全payload / offline seedを保存できない場合だけ、未checkpoint成果を増やす前にSTOP_RUNする。
 
 Library pending増加や単一payloadのreplay失敗はrun停止理由ではない。
 
-## 4. recovery
+## 4. Recovery
 
-Libraryは固定record bankへ直接replayしない。まずGitHubの不変受信箱へ送る。
+Libraryからrecord bankへ直接replayしない。まずGitHubの不変受信箱へ送る。
 
 `.survey/work-queue/fallback-inbox/<envelope-id>.json`
 
-`.survey/scripts/dispatch_fallback_inbox.py` がsurvey-helperの共通concurrency group内で1件ずつ固定transportへ展開する。処理済みenvelopeは `.survey/work-queue/fallback-archive/` へ移る。
+Research/Audit record bundleは `dispatch_fallback_inbox.py` から `replay_record_fallback.py` へ渡し、安全なbankへ5 slotをmaterializeした後、attempt固有descriptorを `.survey/work-queue/submissions/research/` または `audit/` に生成する。固定Chat transportは再生成しない。
 
-同じ`id`のpayloadを再発見した場合:
+Discovery seed、job request、framework / LLM update等の非record envelopeはgeneric fallback transportでallowlistされたJSON pathへ展開する。
 
-1. GitHub fallback-inbox/archiveに同じ`id`があるか確認する。
-2. 内容一致ならLibrary copyを再展開せずprocessedへ移す。
-3. 内容不一致ならID衝突としてfailedへ隔離する。
+処理済みenvelopeは `.survey/work-queue/fallback-archive/` へ移す。同じ`id`を再発見した場合、内容一致なら再展開せずprocessed扱いとし、内容不一致なら衝突としてfailedへ隔離する。
 
-## 5. dependency待ち
+## 5. Dependency待ち
 
-GitHub write不能中にoffline seedをLibraryへ保存し、その候補を同じrunで先に精読してresearch payloadも保存してよい。
+GitHub write不能中にoffline seedをLibraryへ保存し、その候補を同じrunで先に精読してResearch fallbackも保存してよい。
 
-復旧時にresearch payloadがseedより先にGitHub intakeへ入っても、対応jobがまだ存在しない間は `fallback-inbox` に残す。後続seedがdispatchされjobが実体化した後にeligibleになる。
+復旧時にResearch fallbackがseedより先にGitHub intakeへ入っても、対応canonical jobがまだ存在しない間は隔離せず `fallback-inbox` に残す。後続seedがdispatchされjobが実体化した後にeligibleになる。
 
-## 6. actionable work
+## 6. Actionable work
 
 workerは可能な範囲で次を統合して判断する。
 
 - GitHub ready jobs
-- Library/GitHub intake上のcheckpoint済みjob
+- Library / GitHub intake上のcheckpoint済みjob
 - Library seed由来のspillover candidates
 
-GitHub readyでも完全payloadがcheckpoint済みのjobは再精読しない。checkpoint済みreadyだけがGitHub queueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` でそれらを一時除外して新しいdiscovery jobを発行する。元jobのstatusは変更しない。
+GitHub readyでも完全payloadがcheckpoint済みのjobは再精読しない。checkpoint済みreadyだけがqueueを塞ぐ場合は `.survey/work-queue/transport/request-jobs.json` でそれらを一時除外して新しいDiscovery jobを発行する。元jobのstatusは変更しない。
 
-GitHub write不能時にactionable readyとspillover candidateが尽きても、Libraryへoffline seedを保存可能なら新規discoveryを続ける。
+GitHub write不能時にactionable readyとspillover candidateが尽きても、Libraryへoffline seedを保存可能なら新規Discoveryを続ける。
 
-## 7. replay fairness
+## 7. Replay fairness
 
-Library replayだけでScheduled Chat runを恒常的に使い切らない。
+Library replayだけでScheduled Chat / Work runを恒常的に使い切らない。
 
-- Library replayはGitHub immutable intakeへ渡すだけに留める。
-- 固定transport処理はActionsへ任せる。
-- 複数pendingをintakeできても、replayだけをrun終了理由にせずactionable researchを再評価する。
-- GitHub fallback dispatcherは1 Actions runにつき最大1 logical envelopeを展開する。
+- Library replayはGitHub fallback-inboxへのintakeまでをworkerが行う。
+- GitHub側のrecord replay / generic dispatchはActionsへ任せる。
+- 複数pendingをintakeできても、replayだけをrun終了理由にせずactionable Research/Auditとcandidate水位を再評価する。
+- GitHub fallback dispatcherは1 Actions runにつき最大1 logical envelopeを処理する。
 
 ## 8. 回復完了の意味
 
 - Library `processed`: GitHub immutable intakeへ受領済み。
-- GitHub `fallback-archive`: fallback envelopeのdispatchまたはterminal確認済み。
-- 論文job完了: Actions result + latest queueでterminal確認済み。
+- GitHub `fallback-archive`: fallback envelopeが現行transportへ変換・dispatchされた、またはterminal jobとしてacknowledgeされた。
+- 論文job完了: immutable result + latest queueでterminal確認済み。
 
-Libraryの`processed`をpaper publication完了と混同しない。
+Library `processed` やfallback archiveをpaper publication完了と混同しない。
 
 ## 9. STOP_RUN
 
@@ -98,9 +94,4 @@ Library pending数、GitHub fallback-inbox件数、未送信論文数、record b
 
 完成成果または必要なoffline seedをGitHubにもLibraryにも耐久保存できない、GitHub readが不能、プラットフォーム上限到達、fallback spilloverを含めても独立作業が残らない場合など、正本条件だけで停止する。
 
-Claim request/result/current-claim files are durable queue state. Maintenance
-protects active and expired claims for ready jobs and unprocessed requests or
-results. Even a settled request/result (including an orphan result) remains
-protected when any assignment names a non-terminal or unknown canonical job;
-only empty/error results or assignments whose jobs are all terminal, plus old
-terminal-job claim history, are eligible for retention GC.
+Claim request/result/current-claim filesはdurable queue stateである。maintenanceはready jobに対応するactive/expired claim、未処理request/result、非terminalまたは未知jobをassignmentに含む履歴を保護する。GC可能なのは、live参照がなく保持期間を満たしたterminal history等に限る。

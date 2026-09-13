@@ -42,31 +42,13 @@ class ClaimAndLegacyTransportStateTests(unittest.TestCase):
             self.assertFalse(current["invalidated"]["active"])
             self.assertTrue(current["invalidated"]["invalidated"])
 
-    def test_legacy_transport_requires_ok_true_and_matching_job_attempt(self):
+    def test_bank_selector_has_no_fixed_chat_transport_state(self):
+        self.assertFalse(hasattr(select_record_bank, "INBOX"))
+        self.assertFalse(hasattr(select_record_bank, "RESULT"))
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            inbox_path = root / select_record_bank.INBOX
-            result_path = root / select_record_bank.RESULT
-            inbox = {"job_id": "job-a", "attempt_id": "attempt-a", "record_bank": "b"}
-            write_json(inbox_path, inbox)
-
-            write_json(result_path, {
-                "job_id": "job-a", "attempt_id": "attempt-a", "ok": False, "repair_required": True,
-            })
-            _, settled = select_record_bank.current_transport(root)
-            self.assertFalse(settled)
-
-            write_json(result_path, {"job_id": "job-a", "attempt_id": "attempt-b", "ok": True})
-            _, settled = select_record_bank.current_transport(root)
-            self.assertFalse(settled)
-
-            write_json(result_path, {"job_id": "job-a", "attempt_id": "attempt-a", "ok": True})
-            _, settled = select_record_bank.current_transport(root)
-            self.assertTrue(settled)
-
-            write_json(result_path, {"job_id": "job-b", "attempt_id": "attempt-a", "ok": True})
-            _, settled = select_record_bank.current_transport(root)
-            self.assertFalse(settled)
+            inbox, settled = select_record_bank.current_transport(Path(td))
+        self.assertIsNone(inbox)
+        self.assertTrue(settled)
 
     def test_duplicate_claim_lease_policy_module_is_removed(self):
         self.assertFalse((SCRIPTS / "claim_lease_policy.py").exists())
