@@ -1,19 +1,20 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "name": "scheduled-chat-continuation-gate",
-  "principle": "A normal paper-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
+  "principle": "A normal survey-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
   "always_on_policy": {
     "canonical_doc": ".survey/docs/survey-workflow/always-on-worker.md",
     "paper_stock_zero_action": "DISCOVER_NOW",
     "empty_discovery_round_action": "CHANGE_AXIS_AND_DISCOVER_AGAIN",
     "after_research_or_checkpoint": "REFRESH_STATE_AND_CONTINUE",
+    "overflow_research_rule": "For the :00 discovery-specialist worker, candidate_inventory > 50 with actionable research/audit means switch to overflow research mode; large inventory is a mode switch, not a run stop.",
     "rule": "For a normal paper-worker run, zero actionable paper stock means discovery work exists. A single discovery round yielding zero novel candidates never proves that no independent work remains."
   },
   "stop_run_only_if": [
     "github_read_unavailable_for_repo_state",
     "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_or_library",
     "platform_time_context_or_execution_limit_reached",
-    "no_independent_work_can_be_generated_after_multi_axis_discovery_exhaustion"
+    "no_independent_work_can_be_generated_after_multi_axis_discovery_exhaustion_and_no_actionable_research_remains"
   ],
   "non_stop_conditions": [
     "paper_stock_zero",
@@ -22,9 +23,13 @@
     "one_discovery_round_returned_zero_novel_candidates",
     "one_discovery_round_returned_only_duplicates",
     "one_search_axis_is_saturated",
+    "candidate_inventory_above_overflow_threshold",
     "one_job_completed",
     "one_job_blocked",
-    "one_payload_checkpointed"
+    "one_payload_checkpointed",
+    "record_bank_exhausted_or_dirty",
+    "library_pending_backlog_growing",
+    "github_fallback_intake_backlog_growing"
   ],
   "job_local_failures": [
     "full_text_unavailable_for_one_paper",
@@ -34,11 +39,9 @@
     "chatgpt_library_outbox_save_failed_for_one_payload",
     "library_pending_replay_failed",
     "fallback_intake_dependency_not_materialized_yet",
-    "fallback_chat_transport_busy",
     "fallback_duplicate_already_intaken",
-    "record_bank_exhausted_or_dirty",
-    "library_pending_backlog_growing",
-    "github_fallback_intake_backlog_growing"
+    "legacy_fallback_metadata_conflict",
+    "record_bank_exhausted_or_dirty"
   ],
   "research_blocked_retry_policy": {
     "implementation": ".survey/scripts/blocked_retry.py",
@@ -60,14 +63,15 @@
     "retired_transports": [
       "google_drive",
       "notion",
-      "/LLM-survey-fallback/"
+      "/LLM-survey-fallback/",
+      ".survey/work-queue/submissions/chat-inbox.json"
     ],
-    "rule": "GitHub is the canonical direct transport. If GitHub write is unavailable, ChatGPT Library is the only external durable outbox. On recovery, Library submits immutable envelopes to GitHub fallback-inbox; only the serialized survey-helper dispatcher expands them into reusable transport files."
+    "rule": "GitHub is the canonical direct transport. If GitHub write is unavailable, ChatGPT Library is the only external durable outbox. On recovery, Library submits immutable envelopes to GitHub fallback-inbox. Research/audit record bundles are converted by replay_record_fallback.py into safe record-bank slots plus attempt-specific immutable descriptors; non-record envelopes use the generic allowlisted fallback transport. Historical chat-inbox bundles are read compatibility only and are never recreated."
   },
   "backlog_policy": {
     "bank_registry": ".survey/work-queue/records/bank-registry.json",
     "bank_selector": ".survey/scripts/select_record_bank.py",
-    "rule": "Record-bank count, Library pending count, GitHub fallback-inbox count, and unsent-paper count are transport-state metrics, not research-capacity limits."
+    "rule": "Record-bank count, Library pending count, GitHub fallback-inbox count, and unsent-paper count are transport-state metrics, not research-capacity limits. Normal research/audit workers use the bank reserved by the claim result; the selector is diagnostic/maintenance/fallback-replay support."
   },
   "github_write_failure_protocol": {
     "retry_failed_target": 1,
@@ -85,11 +89,12 @@
   "fallback_failure_protocol": {
     "chatgpt_library_failed": "if GitHub direct write can still durably preserve required state, continue through GitHub; otherwise STOP_RUN before producing an uncheckpointed completed result or undispatchable offline seed",
     "source_recovery_failed": "leave the Library source pending and continue other research or GitHub-direct work; never treat one replay failure as a global stop",
+    "dependency_not_materialized": "leave the valid research/audit envelope in GitHub fallback-inbox until its deterministic canonical job is materialized; do not quarantine it merely for arriving before the offline seed",
     "duplicate_intake": "if the same envelope id and content already exists in GitHub fallback-inbox/archive, acknowledge the Library copy without re-dispatching it",
     "id_conflict": "quarantine only the conflicting envelope; do not overwrite the GitHub ledger and do not stop unrelated work"
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. For a normal paper-worker run, refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, and discovery-state. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis and perform another discovery round. STOP_RUN for no-work is allowed only after multiple materially distinct search axes, citation/related-implementation expansion, and adjacent-topic expansion have been attempted and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
+    "rule": "Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. Refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, candidate inventory, and discovery-state. For the :00 specialist, overflow conditions require research rather than voluntary termination. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis. STOP_RUN for no-work is allowed only after multiple materially distinct search axes, citation/related-implementation expansion, and adjacent-topic expansion have been attempted and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
     "default_decision": "CONTINUE"
   }
 }
