@@ -4,10 +4,23 @@
   "slot": "results",
   "attempt_id": "attempt-257eb821df00174e3343bac4",
   "job_id": "job-research-7a44d6a722722f10",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-257eb821df00174e3343bac4",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "HydraServeはコールドスタート時間をServerless vLLM比で最大4.7倍、ServerlessLLM比で最大3.1倍短縮し、全条件のTTFT SLO達成率を比較方式の1.43〜1.74倍へ高めた。パイプライン並列で重み取得帯域を増やすだけでなく、ワーカー内部の処理重ね合わせが単一ワーカー時にも効く。起動後の集約により一時的な分散実行のTPOT悪化を早期に解消し、平均TPOT増加はServerless vLLM比1.06倍に留まる。GPUメモリ時間ベースの費用も平均1.12倍削減する。本番環境でもLlama2-7BのコールドスタートTTFTを平均2.6倍短縮した。",
+    "key_results": [
+      {"metric": "コールドスタート短縮", "value": "2.1〜4.7×（Serverless vLLM比）、1.7〜3.1×（ServerlessLLM比）", "baseline": "Serverless vLLM / ServerlessLLM", "condition": "複数モデル、最大パイプライン並列4", "interpretation": "複数サーバーの帯域集約とワーカー内部の処理重ね合わせが累積して起動時間を短縮する。"},
+      {"metric": "TTFT SLO達成率", "value": "比較方式比1.43〜1.74×", "baseline": "Serverless vLLM / ServerlessLLM", "condition": "異なるCV・RPSのエンドツーエンド評価", "interpretation": "SLOから並列数と配置を決め、ネットワーク競合を避けることで突発負荷でも期限内に最初のトークンを返せる要求が増える。"},
+      {"metric": "キャッシュ併用", "value": "HydraServe単体より最大1.11× SLO達成率改善", "baseline": "HydraServe without cache", "condition": "ホットモデルを含む負荷", "interpretation": "HydraServeはキャッシュと排他的ではなく、長尾は分散取得、頻出モデルはキャッシュで補完できる。"},
+      {"metric": "緩いSLOでのTTFT達成率", "value": "比較方式比1.38〜1.52×、キャッシュ併用で1.49〜1.58×", "baseline": "Serverless vLLM / ServerlessLLM", "condition": "CV=8、SLO倍率を変更", "interpretation": "起動時間へ余裕がある条件でも相対改善が維持される。"},
+      {"metric": "用途別SLO達成率", "value": "チャット最大1.61×、コード補完最大1.70×", "baseline": "比較方式", "condition": "CV=8、RPS=0.6", "interpretation": "要求寿命が短くコールドスタートが増えやすいコード補完でも改善が大きい。"},
+      {"metric": "平均TPOT", "value": "Serverless vLLM比1.06×", "baseline": "Serverless vLLM", "condition": "CV=8、RPS=0.6", "interpretation": "起動時パイプラインの層間通信で若干悪化するが、集約が早いため最初の数トークンに影響が限定される。"},
+      {"metric": "費用", "value": "平均1.12×削減", "baseline": "Serverless vLLM", "condition": "GPUメモリ時間積に比例する費用指標", "interpretation": "追加ワーカーを短時間で集約し、起動自体も短縮するため一時的な並列化が平均費用増にはつながらない。"},
+      {"metric": "パイプライン縮小", "value": "生成完了時間1.90〜2.67×短縮", "baseline": "集約なしのパイプライン継続", "condition": "Llama2-13B、V100、並列数4、入出力各512トークン", "interpretation": "完全モデルへ集約してKVを移すことで後続デコードを単一ワーカー速度へ戻す。"},
+      {"metric": "パイプライン拡張", "value": "128同時要求で平均TTFT 1.87×短縮、TPOTは1.08〜1.19×増加", "baseline": "小さいパイプライングループ", "condition": "16 V100、最大バッチ8", "interpretation": "突発負荷では起動時に多数ワーカーを作ることが早期スループット確保に有効だが、層間通信のTPOT負担が残る。"},
+      {"metric": "本番評価", "value": "平均コールドスタートTTFT 2.6×短縮", "baseline": "Serverless vLLM", "condition": "本番環境、A10 24GB、Llama2-7B、Azure trace由来到着", "interpretation": "ワーカー間直接TCPが使えず遠隔共有オブジェクトを介する環境でも主要効果が維持された。"}
+    ],
+    "negative_results": "TTFT SLOが極端に厳しい条件では全方式の達成率が約63%以下に頭打ちになり、HydraServeでも起動に必要な絶対時間を消せない。起動直後のパイプライン並列は層間通信とGPU共有を伴うため平均TPOTが約6%増え、拡張評価では1.08〜1.19倍のTPOT増加がある。閉源の高速ワーカー協調方式とは直接比較しておらず、ServerlessLLMも高速SSDを持たない試験環境向け構成である。",
+    "interpretation": "効果の中心は、最終配置をそのまま早く起動するのではなく、コールドスタート専用の一時的な分散形態を作る点にある。重み取得は帯域律速なので複数サーバーへ分ける価値が高く、通常推論では逆に層間通信が不要な完全モデルが有利になる。HydraServeは起動と定常運転で適切な実行形態が異なることを利用し、その間を背景重み取得とKV移行で接続する。",
+    "quality_impact": "生成アルゴリズムや重みを近似しないため、品質低下を性能と交換する方式ではない。主な交換条件は一時的なGPU資源増加、層間通信、KV移行、およびそれらによるTPOTの小幅な増加である。"
+  },
+  "reservation": {"claim_id": "claim-257eb821df00174e3343bac4", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
