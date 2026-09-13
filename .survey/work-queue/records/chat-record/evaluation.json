@@ -4,7 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-cab55fc578d5235c33c2f147",
   "job_id": "job-research-7c0598aabd36d6bf",
-  "data": {},
+  "data": {
+    "hardware": "評価系は単一バッチの端末内MoE推論を想定する。XPUは1 GHz、8,192個の8ビット処理要素、16.4 TOPS、3.18 TOPS/W。主記憶は8 GB LPDDR4で約104 Gbps、最大1.5 pJ/bit。下位記憶は128 GB UFS 3.1で10 Gbps、103 pJ/bit。エキスパート専用キャッシュ容量は1.8 GB、2.4 GB、3.6 GBを評価する。",
+    "software": "DeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bを対象にし、GSM8K 5-shotを使用する。入力は約500トークン、生成は100トークン超となる設定で、デコード段のキャッシュ挙動を測る。活性値はFP16、KVキャッシュはINT8、非エキスパート重みはG128対称INT8、エキスパート重みはG32非対称量子化とし、エキスパートのビット幅構成を変化させる。",
+    "methodology": "比較対象はキャッシュ済みエキスパートを優先するCache-Priorと、累積閾値に基づくCumsumルーティング。置換方式そのものの効果を分離するためキャッシュは標準LRUを使い、層をまたいだ統一キャッシュとする。ミス率制約は初期化の影響を避けるためデコード開始後10ステップから有効化する。精度はGSM8K 5-shotで測り、エネルギーと遅延は各モデルの最良条件へ正規化して比較する。PCWについては空、最終層保持、ランダム、ランダムなビット単位、利用頻度に基づく提案状態を比較する。",
+    "datasets": ["GSM8K 5-shot"],
+    "models": ["DeepSeek-V2-Lite", "Qwen1.5-MoE-A2.7B"],
+    "baselines": ["Cache-Prior", "Cumsum routing", "uniform low-bit caching", "high-bit caching", "AMAT-only mixed precision"],
+    "metrics": ["GSM8K accuracy", "high-bit normalized miss rate", "decode energy", "decode latency"],
+    "scope": "評価は端末向けの単一バッチ推論、特にプリフィル約500トークン・デコード100トークン超の長めのGSM8K生成に限定される。メモリ帯域とアクセスエネルギーは明示したXPU・LPDDR4・UFS 3.1仕様に基づくシステムモデルであり、量産端末や実チップ上での直接消費電力測定ではない。多数バッチのサーバ推論、別のフラッシュ規格、別のMoEルータ分布へそのまま一般化できるとは限らない。"
+  },
   "reservation": {
     "claim_id": "claim-cab55fc578d5235c33c2f147",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
