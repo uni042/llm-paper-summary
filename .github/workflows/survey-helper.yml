@@ -66,6 +66,7 @@ jobs:
             .survey/scripts/reusable_transport_baseline.py \
             .survey/scripts/reconcile_maintenance_state.py \
             .survey/scripts/record_run_ledger.py \
+            .survey/scripts/refresh_queue_snapshot.py \
             .survey/scripts/blocked_retry.py
 
       - name: Install dependencies
@@ -256,7 +257,11 @@ jobs:
             --fallback-report /tmp/fallback-dispatch.json
 
       - name: Commit background queue results
+        shell: bash
         run: |
+          set -euo pipefail
+          DERIVED_SNAPSHOT='.survey/work-queue/next-jobs.json'
+
           if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
             echo 'No queue changes to commit.'
             exit 0
@@ -265,9 +270,48 @@ jobs:
           git config user.email 'survey-helper[bot]@users.noreply.github.com'
           git add -A
           git commit -m 'survey-helper: process background queue'
+
+          recover_derived_snapshot_conflict() {
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            if [ "${#conflicts[@]}" -ne 1 ] || [ "${conflicts[0]:-}" != "$DERIVED_SNAPSHOT" ]; then
+              echo 'Rebase conflict touches durable/non-derived state; refusing automatic resolution.' >&2
+              printf 'Unmerged paths: %s\n' "${conflicts[*]:-none}" >&2
+              if git rev-parse --verify -q REBASE_HEAD >/dev/null; then
+                git rebase --abort || true
+              fi
+              return 1
+            fi
+
+            echo "Resolving derived snapshot conflict in ${DERIVED_SNAPSHOT} from latest main."
+            git checkout --ours -- "$DERIVED_SNAPSHOT"
+            git add "$DERIVED_SNAPSHOT"
+            if git diff --cached --quiet; then
+              git rebase --skip
+            else
+              GIT_EDITOR=true git rebase --continue
+            fi
+          }
+
+          refresh_derived_snapshot() {
+            python .survey/scripts/refresh_queue_snapshot.py --repo-root .
+            if git diff --quiet -- "$DERIVED_SNAPSHOT"; then
+              return 0
+            fi
+
+            git add "$DERIVED_SNAPSHOT"
+            if [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ]; then
+              git commit -m 'survey-helper: refresh derived queue snapshot after rebase'
+            else
+              git commit --amend --no-edit
+            fi
+          }
+
           for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git rebase origin/main
+            if ! git rebase origin/main; then
+              recover_derived_snapshot_conflict || exit 1
+            fi
+            refresh_derived_snapshot
             if git push origin HEAD:main; then
               exit 0
             fi
