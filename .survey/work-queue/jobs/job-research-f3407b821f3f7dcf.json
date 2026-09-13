@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2607.00151",
   "title": "SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering",
   "source_url": "https://arxiv.org/abs/2607.00151",
-  "paper_path": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00151-smoothagent-lookahead-context-engineering.md",
   "selection_reason": "長時間agent workflowでcontext offload/reduction/isolationがKVを無効化してre-prefillを生む問題に対し、segment-decomposableなcontext変換を先回り実行し変換済みKVを用意するlookahead runtimeとschedulerを提案する。既存agent framework/serving systemへ統合しTTFT最大11.9倍改善を報告しており、agent-aware KV/runtime系統の強候補。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

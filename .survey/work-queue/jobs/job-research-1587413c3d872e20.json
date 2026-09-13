@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2609.03236",
   "title": "Speculative Macro Commit for Faster Tool-Using Agents",
   "source_url": "https://arxiv.org/abs/2609.03236",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md",
   "selection_reason": "ツール利用エージェントの遅延をモデル推論だけでなく逐次action-observationの壁時計時間として扱い、高速draft modelが隔離環境スナップショット上で複数将来アクションを先行実行し、authoritative actorの次行動と一致した時だけ残りの事前実行結果をまとめてcommitするruntime機構。Qwen3.5-27B INT4＋Qwen3.5-4Bでτ²-Benchは逐次実行比18.59%、AppWorldは44.9%壁時計時間を削減。エージェント実行系の推論高速化として通常のtoken speculative decodingとは異なる。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

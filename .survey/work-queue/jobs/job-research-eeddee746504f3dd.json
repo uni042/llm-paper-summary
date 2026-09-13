@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2410.16179",
   "title": "MagicPIG: LSH Sampling for Efficient LLM Generation",
   "source_url": "https://arxiv.org/abs/2410.16179",
-  "paper_path": null,
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
   "selection_reason": "Top-K近似の代わりに局所性鋭敏型ハッシュ（LSH）でattention分布をサンプリングし、KVとハッシュ表をCPU側へ置くCPU-GPU協調の長文脈推論システム。最大5倍のdecode throughput改善と、RTX 4090で96K文脈の実測を報告しており、KV/attention計算のCPUオフロードとハッシュ型アクセスを結ぶ重要な未収録系統。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

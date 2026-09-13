@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2512.04013",
   "title": "AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving",
   "source_url": "https://arxiv.org/abs/2512.04013",
-  "paper_path": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md",
   "selection_reason": "外部ツール呼び出しを含む拡張LLMサービングで、要求特性と実行時状態を用いる二段階適応スケジューリングと動的token batch上限を組み合わせる。通常LLMサービングとは異なる中断・再開を伴う負荷でSLO達成率を扱うため、推論スケジューリング系統の重要な拡張。vLLM比4.7〜33.1倍の有効スループット、TTFT最大96.3%削減を報告する。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
