@@ -2,30 +2,52 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-cf763136f707815625b2cf96",
+  "attempt_id": "attempt-2958de5d3bae0eb54b9ba0cf",
   "job_id": "job-research-39ac27aff531cdb5",
   "data": {
     "canonical_id": "arXiv:2607.19539",
     "arxiv_id": "2607.19539",
     "doi": "10.1145/3832810.3832907",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts",
     "summary": "分散混合専門家モデル（Mixture of Experts; MoE）では、トークンを専門家GPUへ送る第1の全対全通信（all-to-all）の後に専門家行列積を実行し、その出力を元GPUへ戻す第2の全対全通信が必要になる。従来方式は専門家計算がすべて終わってから戻り通信を始めるか、粗いチャンク単位でしか重ねないため、計算終了後に通信の長い末尾待ちが残る。本研究は、戻り先GPUが同じ行をタイル境界へ揃えて配置し、遠隔GPUへ返すタイルを先に計算する。各タイルの行列積が終わるとCUTLASSの後処理部で準備完了を通知し、別の常駐通信カーネルが完成済み行帯をNVSHMEMで即座に送る。計算側と通信側へSMを分割し、最初と最後は小さい転送、中間は帯域を使い切れる大きさへまとめることで、専門家計算中に戻り通信の71.9〜99.9%を隠す。4基のA100実機では3種類のMoEモデルと複数のルーティング偏りを評価し、FasterMoE比でエンドツーエンド最大2.64倍、MoE層最大2.74倍、逐次実装比の演算子部分で最大3.01倍を達成した。一方、隠れ次元が小さく通信量が少ない条件や、通信側SMを2基まで絞る条件では既存方式に劣るため、資源配分の適応化が重要である。",
     "list_summary": "遠隔GPUへ返すMoE出力を先にタイル計算し、完成した行帯を専用通信カーネルが即時転送することで、第2の全対全通信の大半を専門家計算中へ隠し、4基A100でMoE層を最大2.74倍高速化する。",
-    "authors": ["Minyu Cui", "Anna Wingkvist", "Morgan Ericsson"],
+    "authors": [
+      "Minyu Cui",
+      "Anna Wingkvist",
+      "Morgan Ericsson"
+    ],
     "authors_affiliations": "Minyu Cui、Anna Wingkvist、Morgan EricssonはいずれもLinnaeus University, Växjö, Sweden。",
     "published": "2026-07-21",
     "publication": "ICPP 2026, 55th International Conference on Parallel Processing, Singapore, September 28–October 1, 2026",
     "publication_type": "Conference",
     "publication_status": "Accepted",
     "lineage": "moe-parallelism-communication",
-    "topics": ["混合専門家モデル", "専門家並列", "計算通信重畳", "タイル単位通知", "GPU間通信", "NVSHMEM", "常駐カーネル", "スケジューリング"],
+    "topics": [
+      "混合専門家モデル",
+      "専門家並列",
+      "計算通信重畳",
+      "タイル単位通知",
+      "GPU間通信",
+      "NVSHMEM",
+      "常駐カーネル",
+      "スケジューリング"
+    ],
     "importance": "MoEの戻り通信をチャンク単位ではなく行列積タイルの完成時点から開始し、計算順序・データ配置・通信粒度・SM配分を一体設計する低層ランタイム研究である。通信融合型方式ほど単一巨大カーネルへ侵入せずに細粒度重畳を実現し、専門家数増加時の通信末尾を大きく削減するため、MoE通信最適化系統の重要な比較対象になる。",
     "hardware_evaluation": "実機。単一ノードのNVIDIA A100 40GBを4基使用し、各GPUは108 SM。GPU間はNVLinkで接続され、GPU対GPUの一方向帯域上限は約100 GB/s。1 GPUにつき1ランクを配置する。",
     "quality_effect": "近似や量子化は導入しない。基準実装と同じ重み・ルーティング・入力を使い、FP16行列積実装差による丸め誤差だけを許容して1440件の出力比較を実施した。最大相対距離は1.913×10^-3で、設定した8×10^-3許容値以内だった。",
     "source": "https://arxiv.org/abs/2607.19539",
-    "sources": ["https://arxiv.org/abs/2607.19539", "https://arxiv.org/html/2607.19539v1", "https://doi.org/10.1145/3832810.3832907"],
+    "sources": [
+      "https://arxiv.org/abs/2607.19539",
+      "https://arxiv.org/html/2607.19539v1",
+      "https://doi.org/10.1145/3832810.3832907"
+    ],
     "code": null,
     "implementation": "PyTorch 2.6.0から呼び出すCUDAランタイムとして実装。CUDA 12.1、CUTLASS 3.9、NVSHMEM 3.6.5を用い、ランク全体を処理する常駐GEMMカーネル、CUTLASS後処理部のタイル完了通知、別SM群で動く常駐通信カーネルを組み合わせる。2026-09-14時点で論文から公式コード公開先は確認できない。",
     "last_checked": "2026-09-14",
@@ -33,14 +55,26 @@
     "references_source": "primary-reference-section",
     "references_total": 30,
     "references": [
-      {"canonical_id": "arXiv:2506.04667", "arxiv_id": "2506.04667"},
-      {"canonical_id": "arXiv:2504.19519", "arxiv_id": "2504.19519"},
-      {"canonical_id": "arXiv:1909.08053", "arxiv_id": "1909.08053"},
-      {"canonical_id": "arXiv:2409.15241", "arxiv_id": "2409.15241"}
+      {
+        "canonical_id": "arXiv:2506.04667",
+        "arxiv_id": "2506.04667"
+      },
+      {
+        "canonical_id": "arXiv:2504.19519",
+        "arxiv_id": "2504.19519"
+      },
+      {
+        "canonical_id": "arXiv:1909.08053",
+        "arxiv_id": "1909.08053"
+      },
+      {
+        "canonical_id": "arXiv:2409.15241",
+        "arxiv_id": "2409.15241"
+      }
     ]
   },
   "reservation": {
-    "claim_id": "claim-cf763136f707815625b2cf96",
+    "claim_id": "claim-2958de5d3bae0eb54b9ba0cf",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

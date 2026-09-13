@@ -2,20 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-cf763136f707815625b2cf96",
+  "attempt_id": "attempt-2958de5d3bae0eb54b9ba0cf",
   "job_id": "job-research-39ac27aff531cdb5",
   "data": {
     "hardware": "単一ノードのNVIDIA A100 40GBを4基使用。各GPUは108 SMで、GPU間はNVLink接続。GPU対GPUは4本のNVLinkレーンを使い、一方向の理論上限は約100 GB/s。1 GPUにつき1ランクを割り当てる。",
     "software": "CUDA 12.1、NCCL 2.29.3、PyTorch 2.6.0、CUTLASS 3.9、NVSHMEM 3.6.5。第1全対全通信と比較方式の通信はNCCL、本方式の第2通信はNVSHMEMを使用する。",
     "methodology": "12層Transformerを基にMoE層の挿入密度を変えたM-GPT、M-BERT、M-Trans-xlを用いる。全モデルは上位2専門家を選ぶルーティングで、合計64専門家を4 GPUへ16ずつ配置する。M-GPTは第11層だけ、M-BERTは第2・5・8・11層、M-Trans-xlは全12層をMoE化する。単一MoE層では1ランクあたり8192または16384トークン、入力隠れ幅2048、出力隠れ幅4096または8192、専門家数4〜64を掃引し、均等・中程度偏り・強偏りの3ルーティング分布を評価する。通信側CTA数を2〜24、内部転送の中間セグメントを1または2行帯として資源競合も調べる。複数回のウォームアップを捨てた後に測定する。",
     "scope": "4基A100の単一ノード内NVLink環境で、前向きMoE推論を対象とする。学習の逆伝播、複数ノードのネットワーク通信、異種GPU、大規模本番モデルそのものでは未評価。3種類のモデルは広く使われるTransformer形状から構成したMoE化モデルで、Llama 4など実運用MoEの完全構成ではない。",
-    "workloads": ["M-GPT: batch 8、系列長1024、隠れ幅768、MoE層1個", "M-BERT: batch 32、系列長512、隠れ幅1024、MoE層4個", "M-Trans-xl: batch 16、系列長512、隠れ幅512、全12層MoE", "単一MoE層で専門家数4〜64と3種類のルーティング偏り"],
-    "baselines": ["FasterMoE", "Tutel", "Megatron-CUTLASS", "Megatron-TE", "cuBLAS専門家計算後にNCCL第2全対全通信を逐次実行するPyTorch基準実装"],
-    "metrics": ["エンドツーエンド前向き遅延", "MoE層遅延", "専門家GEMM+第2通信の演算子遅延", "スループット", "第2通信の重畳率", "SM配分感度", "出力相対誤差"],
+    "workloads": [
+      "M-GPT: batch 8、系列長1024、隠れ幅768、MoE層1個",
+      "M-BERT: batch 32、系列長512、隠れ幅1024、MoE層4個",
+      "M-Trans-xl: batch 16、系列長512、隠れ幅512、全12層MoE",
+      "単一MoE層で専門家数4〜64と3種類のルーティング偏り"
+    ],
+    "baselines": [
+      "FasterMoE",
+      "Tutel",
+      "Megatron-CUTLASS",
+      "Megatron-TE",
+      "cuBLAS専門家計算後にNCCL第2全対全通信を逐次実行するPyTorch基準実装"
+    ],
+    "metrics": [
+      "エンドツーエンド前向き遅延",
+      "MoE層遅延",
+      "専門家GEMM+第2通信の演算子遅延",
+      "スループット",
+      "第2通信の重畳率",
+      "SM配分感度",
+      "出力相対誤差"
+    ],
     "reproducibility": "GPU型番、GPU数、NVLink帯域、主要ソフトウェア版、モデル形状、専門家数、ルーティング分布、通信側CTA数、転送行帯数が論文に明記されている。実装構成もCUTLASS後処理通知とNVSHMEM通信まで説明されるが、2026-09-14時点で公式コード公開先は確認できず、再現には論文記述から独自実装が必要である。"
   },
   "reservation": {
-    "claim_id": "claim-cf763136f707815625b2cf96",
+    "claim_id": "claim-2958de5d3bae0eb54b9ba0cf",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }

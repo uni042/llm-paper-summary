@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-cf763136f707815625b2cf96",
+  "attempt_id": "attempt-2958de5d3bae0eb54b9ba0cf",
   "job_id": "job-research-39ac27aff531cdb5",
   "data": {
     "limitations": "評価は4基A100の単一ノードNVLink環境と前向き推論に限定され、逆伝播、複数ノード、異種GPU、より大きな本番MoEは未検証である。送信先境界をタイルへ揃えるゼロ埋め計算が増え、偏りが強いほど相対負担が大きくなり得る。通信側SM数と中間セグメント行帯数は手動調整で、条件に合わないSM配分では基準より遅くなる。隠れ幅が小さく通信量が少ないモデルでは既存のTutelやMegatron系に優位でない。公式コード公開も確認できない。",
@@ -13,7 +13,7 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-cf763136f707815625b2cf96",
+    "claim_id": "claim-2958de5d3bae0eb54b9ba0cf",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
