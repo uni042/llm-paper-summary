@@ -9,6 +9,7 @@ on:
       - '.survey/docs/survey-workflow/discovery-specialist-worker.md'
       - '.survey/docs/survey-workflow/candidate-buffer-policy.md'
       - '.github/workflows/*.yml'
+      - 'papers/**/*.md'
   pull_request:
     paths:
       - '.survey/scripts/**/*.py'
@@ -17,6 +18,7 @@ on:
       - '.survey/docs/survey-workflow/discovery-specialist-worker.md'
       - '.survey/docs/survey-workflow/candidate-buffer-policy.md'
       - '.github/workflows/*.yml'
+      - 'papers/**/*.md'
   workflow_dispatch:
 
 permissions:
@@ -56,3 +58,20 @@ jobs:
 
       - name: Run all regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Validate current paper metadata
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out /tmp/metadata-coverage.json --strict
+
+      - name: Build current repository inventory
+        run: |
+          python .survey/scripts/build_repository_inventory.py \
+            --root . \
+            --output /tmp/repo-inventory.json \
+            --source-commit "$GITHUB_SHA"
+
+      - name: Run current repository structural check
+        run: |
+          python .survey/scripts/check_repository.py \
+            --root . \
+            --inventory /tmp/repo-inventory.json \
+            --report /tmp/consistency.json
