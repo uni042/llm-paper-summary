@@ -8,18 +8,54 @@
       "completed": 6
     },
     "research": {
-      "completed": 220,
-      "ready": 170,
+      "completed": 221,
+      "ready": 169,
       "superseded": 44,
       "deferred": 3
     }
   },
   "claiming": {
-    "ready_research_audit": 170,
-    "actively_claimed": 41,
-    "claimable": 129
+    "ready_research_audit": 169,
+    "actively_claimed": 34,
+    "claimable": 135
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-054d8fd9fb06ca0f",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2310.18547",
+      "title": "Punica: Multi-Tenant LoRA Serving",
+      "source_url": "https://arxiv.org/abs/2310.18547",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-990eca6ba50d5285",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2608.15018",
+      "title": "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2608.15018",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2608.15018-s2-moe-self-speculative-decoding-edge.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-cd30ed212ad4a8ba",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2512.14946",
+      "title": "EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2512.14946",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-234066475107816a",
       "type": "research",
@@ -29,6 +65,42 @@
       "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
       "source_url": "https://arxiv.org/abs/2607.01299",
       "paper_path": null,
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-23e9c491b745b825",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2604.09083",
+      "title": "EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2604.09083",
+      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-eb3b75f01826c8e7",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2605.26444",
+      "title": "MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies",
+      "source_url": "https://arxiv.org/abs/2605.26444",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.26444-microspec-lightweight-in-context-vocabularies.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-58b5be68410fbaab",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2503.18292",
+      "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2503.18292",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -45,78 +117,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-d09e1c8e52097070",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2505.14468",
-      "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
-      "source_url": "https://arxiv.org/abs/2505.14468",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-78cb8002e7b50e8e",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2609.11294",
-      "title": "Memory Compression for High-Fanout Agent Sandboxes",
-      "source_url": "https://arxiv.org/abs/2609.11294",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-02e232341d4ef088",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2608.14376",
-      "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
-      "source_url": "https://arxiv.org/abs/2608.14376",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-df0f9fdedbcbe3ac",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2604.13327",
-      "title": "Event Tensor: A Compiler Abstraction for Dynamic Megakernel Generation",
-      "source_url": "https://arxiv.org/abs/2604.13327",
-      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.13327-event-tensor-dynamic-megakernel-generation.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-a60dcea57ad2475d",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2604.23150",
-      "title": "Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns",
-      "source_url": "https://arxiv.org/abs/2604.23150",
-      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-2b6e9eed52cd4c32",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2606.06256",
-      "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
-      "source_url": "https://arxiv.org/abs/2606.06256",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -129,5 +129,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T09:00:52+00:00"
+  "generated_at": "2026-09-13T09:19:32+00:00"
 }
