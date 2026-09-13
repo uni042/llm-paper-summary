@@ -65,12 +65,14 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
             self.assertNotIn("group: survey-claim-main", text, name)
             self.assertNotIn("group: survey-submission-main", text, name)
 
-    def test_citation_schema_hook_is_idempotent_for_current_queue_contract(self):
-        text = self._text("citation-graph-backfill.yml")
-        self.assertIn("queue_has_reference_contract", text)
-        self.assertIn("if not queue_has_reference_contract:", text)
-        self.assertIn("'references_checked_at' in text", text)
-        self.assertIn("'references_total' in text", text)
+    def test_citation_schema_is_persistent_for_current_queue_contract(self):
+        workflow = self._text("citation-graph-backfill.yml")
+        self.assertNotIn("Install citation schema hooks", workflow)
+        self.assertNotIn("Commit schema and graph hooks", workflow)
+
+        queue = (ROOT / ".survey/docs/survey-workflow/queue-v10.md").read_text(encoding="utf-8")
+        for key in ("references", "references_checked_at", "references_source", "references_total"):
+            self.assertIn(key, queue)
 
     def test_background_writers_recover_from_concurrent_main_pushes(self):
         citation = self._text("citation-graph-backfill.yml")
