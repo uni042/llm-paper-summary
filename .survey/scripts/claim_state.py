@@ -61,17 +61,22 @@ def _as_now(value: Any = None) -> dt.datetime:
 
 
 def current_claims(repo_root: Path, now: Any = None) -> dict[str, dict[str, Any]]:
-    """Return one current claim per job, retaining expired claims on disk.
+    """Return one current claim per job, retaining inactive claims on disk.
 
-    A release or lease invalidation is authoritative even when expires_at is
-    still in the future. Claim files remain on disk as audit history.
+    A release, lease invalidation, expired lease, or terminal queue job is
+    authoritative. Claim files remain on disk as audit history, but a claim for a
+    terminal job can never block later work even when its lease timestamp is still
+    in the future. This also reconciles completions produced by legacy transports
+    that do not emit immutable per-attempt descriptors.
     """
-    root = Path(repo_root) / ".survey/work-queue/claims"
+    queue_root = Path(repo_root) / ".survey/work-queue"
+    claims_root = queue_root / "claims"
+    jobs_root = queue_root / "jobs"
     current = _as_now(now)
     out: dict[str, dict[str, Any]] = {}
-    if not root.is_dir():
+    if not claims_root.is_dir():
         return out
-    for path in sorted(root.glob("*.json")):
+    for path in sorted(claims_root.glob("*.json")):
         claim = _read(path)
         if not claim:
             continue
@@ -81,11 +86,22 @@ def current_claims(repo_root: Path, now: Any = None) -> dict[str, dict[str, Any]
         expires = parse_time(claim.get("expires_at"))
         released = bool(claim.get("released_at"))
         invalidated = bool(claim.get("lease_invalidated_at"))
+        job = _read(jobs_root / f"{job_id}.json")
+        job_status = job.get("status") if isinstance(job, dict) else None
+        terminal_job_status = job_status if job_status in TERMINAL else None
         row = dict(claim)
         row["job_id"] = job_id
         row["released"] = released
         row["invalidated"] = invalidated
-        row["active"] = bool(expires and current < expires and not released and not invalidated)
+        if terminal_job_status is not None:
+            row["terminal_job_status"] = terminal_job_status
+        row["active"] = bool(
+            expires
+            and current < expires
+            and not released
+            and not invalidated
+            and terminal_job_status is None
+        )
         row["expired"] = bool(expires and current >= expires)
         out[job_id] = row
     return out
