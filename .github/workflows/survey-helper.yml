@@ -14,6 +14,8 @@ on:
 permissions:
   contents: write
 
+# Maintenance mutates broad queue/index state. Serialize it with other heavyweight
+# background writers without blocking claim or immutable-submission fast lanes.
 concurrency:
   group: survey-background-main
   cancel-in-progress: false
@@ -97,7 +99,7 @@ jobs:
                   result_path.unlink(missing_ok=True)
 
           job_id = inbox.get('job_id')
-          if result and result.get('job_id') == job_id:
+          if result and result.get('job_id') == job_id and result.get('ok') is True:
               print('Reusable Chat result matches current inbox.')
               raise SystemExit(0)
 

@@ -55,7 +55,11 @@ def current_transport(repo_root: Path) -> tuple[dict[str, Any] | None, bool]:
     result = read_object(repo_root / RESULT)
     if not inbox or not inbox.get("job_id"):
         return inbox, True
-    settled = bool(result and result.get("job_id") == inbox.get("job_id"))
+    settled = bool(
+        result
+        and result.get("job_id") == inbox.get("job_id")
+        and result.get("ok") is True
+    )
     return inbox, settled
 
 
@@ -76,7 +80,7 @@ def pending_immutable_bank_owners(repo_root: Path) -> dict[str, set[Pair]]:
             if bank not in BANK_ROOTS or not attempt_id or not job_id:
                 continue
             result = read_object(results / kind / path.name)
-            if result and result.get("attempt_id") == attempt_id and result.get("job_id") == job_id:
+            if immutable_submission.result_is_success_for(result, descriptor):
                 continue
             owners.setdefault(bank, set()).add((attempt_id, job_id))
     return owners
