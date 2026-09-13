@@ -42,6 +42,13 @@ def _in_window(item: dict[str, Any], cutoff: datetime, now: datetime) -> bool:
     return cutoff <= dt.astimezone(timezone.utc) <= now.astimezone(timezone.utc)
 
 
+def _hour_slot_key(value: str | None) -> str:
+    dt = _parse_dt(value)
+    if dt is None:
+        return str(value or "")
+    return dt.astimezone(JST).replace(minute=0, second=0, microsecond=0).isoformat()
+
+
 def _is_specialist(row: dict[str, Any]) -> bool:
     """Return whether a discovery row came from the discovery-only worker.
 
@@ -106,17 +113,23 @@ def _axis_rows(history: list[dict[str, Any]]) -> list[tuple[str, int, int, int]]
     )
 
 
-def _group_discovery_runs(history: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Aggregate discovery rounds by one Scheduled Chat execution run_key."""
+def _group_discovery_runs(
+    history: list[dict[str, Any]],
+    *,
+    hourly_slot: bool = False,
+) -> list[dict[str, Any]]:
+    """Aggregate discovery rounds by run_key or by the JST hourly task slot."""
     grouped: dict[str, dict[str, Any]] = {}
     for row in history:
-        run_key = str(row.get("run_key") or "")
-        if not run_key:
+        raw_run_key = str(row.get("run_key") or "")
+        if not raw_run_key:
             continue
+        run_key = _hour_slot_key(raw_run_key) if hourly_slot else raw_run_key
         item = grouped.setdefault(
             run_key,
             {
                 "run_key": run_key,
+                "raw_run_keys": [],
                 "round_count": 0,
                 "axes": [],
                 "candidate_count": 0,
@@ -125,6 +138,8 @@ def _group_discovery_runs(history: list[dict[str, Any]]) -> list[dict[str, Any]]
                 "accepted_count": 0,
             },
         )
+        if raw_run_key not in item["raw_run_keys"]:
+            item["raw_run_keys"].append(raw_run_key)
         item["round_count"] += 1
         axis = str(row.get("axis") or "未分類")
         if axis not in item["axes"]:
@@ -175,14 +190,15 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
 
     # The run ledger can merge helper events into the latest normal-worker
     # maintenance bucket, so discovery worker attribution must come from the
-    # discovery rows themselves. A Scheduled Chat execution can start several
-    # minutes after its nominal hour; exact run_key groups its rounds into one
-    # task execution while round/source_submission identify the specialist.
+    # discovery rows themselves. Older specialist rows sometimes used the
+    # submission time as run_key; collapse those fragments into the same JST
+    # hourly Scheduled Chat slot. New specialist runs are instructed to use one
+    # fixed top-of-hour run_key for every round in that task.
     specialist_history = [row for row in discovery_history if _is_specialist(row)]
     normal_discovery_history = [row for row in discovery_history if not _is_specialist(row)]
     specialist_24 = [row for row in specialist_history if _in_window(row, cutoff_24h, now_utc)]
-    specialist_runs = _group_discovery_runs(specialist_history)
-    specialist_runs_24 = _group_discovery_runs(specialist_24)
+    specialist_runs = _group_discovery_runs(specialist_history, hourly_slot=True)
+    specialist_runs_24 = _group_discovery_runs(specialist_24, hourly_slot=True)
     normal_discovery_runs = _group_discovery_runs(normal_discovery_history)
     normal_discovery_by_key = {row["run_key"]: row for row in normal_discovery_runs}
 
@@ -287,7 +303,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "| 指標 | 件数 / 率 |",
         "|---|---:|",
         f"| 通常worker run（ledger観測） | **{len(ledger_24)}** |",
-        f"| 探索専用worker run（stats観測） | **{len(specialist_runs_24)}** |",
+        f"| 探索専用worker run（毎時枠） | **{len(specialist_runs_24)}** |",
         f"| 探索専用worker round（stats観測） | **{len(specialist_24)}** |",
         f"| 探索評価候補 | **{evaluated_24}** |",
         f"| 重複除外 | **{duplicate_24}** |",
