@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2512.12990-20260913-0930-v10-h",
-  "job_id": "job-research-7c0598aabd36d6bf",
+  "attempt_id": "attempt-2607.05147-20260913-0930-v10-h",
+  "job_id": "job-research-ee741ee249b93f89",
   "data": {
-    "hardware": "端末向けの単一バッチMoE構成を評価する。XPUは1GHzのシストリックテンソルPE配列、8,192個の8ビットPE、16.4 TOPS、3.18 TOPS/W。LPDDR4 DRAMは約104 Gbps、約8GB、最大1.5 pJ/bit。UFS 3.1 Flashは10 Gbps、128GB、103 pJ/bit。全専門家重みはFlash、専門家キャッシュはDRAMへ置く。",
-    "software": "DBSC、AMAT、PCWを統合したSliceMoEを評価し、専門家キャッシュ自体は方式差を切り分けるため標準LRUを使用する。非専門家重みはグループ128の対称INT8、専門家重みはグループ32の非対称量子化、活性値はFP16、KVキャッシュはINT8とする。",
-    "methodology": "DeepSeek-V2-LiteとQwen1.5-MoE-A2.7BをGSM8K 5-shotで評価する。プロンプト条件付けなしの正解率を測り、入力は約500トークン、出力は100トークン超でデコードの影響を大きくする。比較するルーティングはCache-PriorとCumsum。専門家専用キャッシュは1.8GB、2.4GB、3.6GBを掃引し、ミス率制約は最初の10デコードステップの温機後に有効化する。高精度のみ、低精度のみ、AMAT混合精度、DBSC+AMAT、PCW追加を比較し、同等精度条件でデコードエネルギーと遅延を比較する。",
-    "scope": "主対象は単一バッチの端末・オンプレミスMoEで、デコード段階のFlash専門家オフロードである。プリフィルは基本的に高ビット計算を使うため、主要な省エネルギー・高速化はデコードに限られる。評価ハードウェアは論文記載のXPU/DRAM/UFS仕様に基づき、一般的なGPUサーバ上の壁時計測定とは異なる。専門家キャッシュはLRU固定なので、より高度な置換器との相互作用は主評価から分離されている。",
-    "workloads": ["DeepSeek-V2-Lite","Qwen1.5-MoE-A2.7B","GSM8K 5-shot","約500トークンのプリフィル","100トークン超のデコード"],
-    "baselines": ["高ビットCache-Prior","低ビットキャッシュ","AMATのみ","Cumsum routing","空キャッシュ初期状態"],
-    "metrics": ["GSM8K正解率","高ビット正規化ミス率","デコードエネルギー","デコード遅延","高速化倍率","困惑度"],
-    "reproducibility": "モデル、ベンチマーク、量子化粒度、キャッシュ容量、メモリ／Flash仕様、主要比較方式と評価指標は論文に記載される。一方、論文専用の公開コードURLは確認できず、XPU仕様に基づく評価系を第三者がそのまま再現するには実装情報が不足する。"
+    "hardware": "オフラインではQwen3-4B/8B/14BとGemma4-12Bをターゲットにし、同一DeepSpec学習基盤でドラフタを比較する。本番ではDeepSeek-V4-Flash（preview）とDeepSeek-V4-Pro（preview）の実サービングエンジンへDSpark-5を展開し、実ユーザートラフィックのテレメトリを測る。GPU型自体の詳細値より、エンジン固有のSPS(B)実測曲線をスケジューラ入力とする。",
+    "software": "公開DeepSpecはMITライセンスでDSpark、DFlash、Eagle3の学習・評価を統一実装する。オフラインはDeepSpecで全比較ドラフタを同じデータ・特徴層設定から再学習する。本番はDeepSeek内部HAI-LLM学習基盤、Zero-Overhead Scheduling、連続CUDA graph、疎注意marker tensorを利用する。",
+    "methodology": "学習データはOpen-PerfectBlend 130万promptで、chat 17.6%、math 39.4%、code 38.9%、instruction 4.1%。各ターゲットモデルで応答を再生成し、非思考モード、10 epochで全ドラフタを学習する。Eagle3は1層・TTT horizon 7、DFlash/DSparkは5層・block 7を基本にし、同じターゲット特徴層を使う。オフライン評価はGSM8K/MATH500/AIME25、MBPP/HumanEval/LiveCodeBench、MT-Bench/Alpaca/Arena-Hardを温度1.0の標準投機デコーディングで測り、confidence schedulerを無効化して純粋な平均受理長を比較する。本番はMTP-1を旧生産基準とし、V4-Flashの80/120 tok/s/user、V4-Proの35/50 tok/s/userのSLA点、同等総スループット点、同時要求数別の動的検証長を比較する。",
+    "scope": "オフラインの受理長改善と本番のスケジューラ改善を分けて評価している。Qwen/Gemmaの表1はconfidence schedulerなしなので半自己回帰ドラフタ品質を測り、DeepSeek-V4の実トラフィック評価はドラフタと負荷認識スケジューラを含む統合効果を測る。厳格SLA点の661%/406%はMTP-1がほぼ容量崖に落ちた比率なので、著者自身が代表的な倍率ではなく新しい実行可能領域の証拠として解釈する。",
+    "workloads": ["GSM8K","MATH500","AIME25","MBPP","HumanEval","Live-CodeBench","MT-Bench","Alpaca","Arena-Hard","DeepSeek-V4 live user traffic"],
+    "baselines": ["Eagle3","DFlash","MTP-1 production baseline","fixed-length verification","static confidence threshold"],
+    "metrics": ["平均受理長","位置別条件付き受理率","ECE","ROC-AUC","全ラウンド遅延","aggregate output throughput","tok/s/user","verification budget"],
+    "reproducibility": "DeepSpecとQwen3/Gemma4用Eagle3/DFlash/DSparkチェックポイントが公開され、オフライン表1の再現性は高い。本番DeepSeek-V4のエンジン、実ユーザートラフィック、SPS曲線は内部環境であり完全再現はできないが、実装上の非同期化・可変長kernel統合方法を論文が説明する。"
   }
 }
