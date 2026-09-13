@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from datetime import datetime, timezone
@@ -176,22 +177,67 @@ def _success_result(
     return result
 
 
+def _record_unidentified_failure(
+    repo_root: Path,
+    submission_path: Path,
+    exc: Exception,
+) -> dict[str, Any] | None:
+    """Persist a path+digest tombstone when attempt/job identity cannot be trusted."""
+    try:
+        raw_bytes = submission_path.read_bytes()
+    except OSError:
+        return None
+
+    relative_submission = submission_path.relative_to(repo_root).as_posix()
+    digest = hashlib.sha256(raw_bytes).hexdigest()
+    result_path = immutable_submission.result_path_for(repo_root, submission_path)
+    existing = _read(result_path, {}) or {}
+    if existing:
+        if (
+            existing.get("submission") == relative_submission
+            and existing.get("descriptor_sha256") == digest
+        ):
+            return existing
+        raise ValueError("immutable result path already contains a conflicting unidentified descriptor")
+
+    result = {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "ok": False,
+        "attempt_id": None,
+        "job_id": None,
+        "job_type": submission_path.parent.name,
+        "job_status": None,
+        "artifact": None,
+        "submission": relative_submission,
+        "descriptor_sha256": digest,
+        "error": f"{type(exc).__name__}: {exc}",
+        "processed_at": _now(),
+    }
+    queue_worker.write_json(result_path, result)
+    return result
+
+
 def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> dict[str, Any] | None:
-    """Persist retryable processor failure history for this exact immutable attempt."""
+    """Persist durable processor failure state for one immutable submission."""
     repo_root = Path(repo_root).resolve()
     try:
         submission_path = _descriptor_path(repo_root, submission_path)
-        raw = immutable_submission.load_descriptor(submission_path)
     except Exception:
         return None
+
+    try:
+        raw = immutable_submission.load_descriptor(submission_path)
+    except Exception:
+        return _record_unidentified_failure(repo_root, submission_path, exc)
 
     attempt_id = raw.get("attempt_id")
     job_id = raw.get("job_id")
     kind = raw.get("kind") or submission_path.parent.name
     if not isinstance(attempt_id, str) or not attempt_id:
-        return None
+        return _record_unidentified_failure(repo_root, submission_path, exc)
     if not isinstance(job_id, str) or not job_id:
-        return None
+        return _record_unidentified_failure(repo_root, submission_path, exc)
     if kind not in {"research", "audit"}:
         kind = submission_path.parent.name
 
