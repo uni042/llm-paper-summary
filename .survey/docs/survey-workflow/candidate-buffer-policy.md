@@ -103,3 +103,7 @@ fallback envelopeにも探索時点の `discovery_stats` を保持し、GitHub�
 ## 08:30 reporting
 
 08:30 JSTの報告では従来どおり「直近24時間の発見数・追加数・残候補数」を示す。在庫がlow watermark未満ならその旨を短く示す。target inventoryは設けないため、`candidate_inventory / target_inventory` の比率表示は行わない。集計できない場合は推測値で埋めない。
+
+Claims do not change candidate-buffer or discovery visibility. They hide only
+actively claimed ready research/audit jobs from `next-jobs.json`; discovery stays
+visible under the existing priority-window policy.

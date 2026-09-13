@@ -75,3 +75,15 @@ bank枯渇は研究停止理由ではない。GitHubへ直接保存できなけ�
 `.survey/work-queue/maintenance-cycle.json` を正本とし、通常workerの24 counted runsごとにmaintenance専用runを行う。このrunはfull GC + repository-wide consistency checkだけを行い、通常のresearch / audit / discovery / update workerは実行しない。探索専用workerの毎時runはこのカウンタへ加算しない。
 
 maintenanceは `.survey/scripts/full_gc.py` と `.survey/scripts/check_repository.py` を使い、最新結果を `.survey/reports/full-gc-latest.json` と `.survey/reports/consistency-latest.json` に保存する。
+
+### Repository-backed worker claims (workflow-v10)
+
+Work helpers read the latest `main`, submit one unique request under
+`.survey/work-queue/claim-requests/`, wait for the immutable result, and only
+then read the assigned research/audit job in full. The assigned worker submits a
+complete five-slot `origin: claimed_worker` envelope to the fallback inbox; it
+never writes a fixed A-H bank, paper, identity state, or reusable Chat inbox.
+The allocator fences completion against the current claim, while terminal jobs
+are acknowledged without applying their envelope. Work currently processes the
+research/audit backlog without discovery; scheduled normal-worker and discovery
+specialist policies remain unchanged.

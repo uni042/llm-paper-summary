@@ -121,3 +121,11 @@ Library `processed`は「GitHub immutable intakeへの受領確認済み」を�
 - GitHub ready、fallback spillover、新規offline discoveryを考慮しても独立して安全に進められる作業が残らない。
 
 Library pending数、GitHub fallback-inbox件数、未送信論文数、bank exhaustion、単一payload障害はSTOP_RUN条件ではない。
+
+Claimed-worker envelopes carry job, claim, worker, and attempt identity. The
+dispatcher compares these values with the current repository claim before any
+record-bank or reusable Chat write. A missing or superseded claim is quarantined
+with an error sidecar; an expired but still-current claim is accepted. Legacy
+envelopes without `origin: claimed_worker` retain the existing routing behavior.
+There is no terminal wait barrier: a completion for an already-terminal job is
+acknowledged into the archive without changing its paper or transport.

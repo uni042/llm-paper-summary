@@ -97,3 +97,8 @@ Libraryの`processed`をpaper publication完了と混同しない。
 Library pending数、GitHub fallback-inbox件数、未送信論文数、record bank exhaustion、単一payload障害、dependency待ち1件だけでは停止しない。
 
 完成成果または必要なoffline seedをGitHubにもLibraryにも耐久保存できない、GitHub readが不能、プラットフォーム上限到達、fallback spilloverを含めても独立作業が残らない場合など、正本条件だけで停止する。
+
+Claim request/result/current-claim files are durable queue state. Maintenance
+protects active and expired claims for ready jobs and unprocessed requests or
+results; only old terminal-job claim history and settled claim transport are
+eligible for retention GC.

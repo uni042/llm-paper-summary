@@ -189,3 +189,8 @@ maintenance runを除く通常workerは、実作業中に具体的な摩擦、�
 3. 残っている論文候補数: 通知時点でresearch対象として未処理の候補数。GitHub queueのactionable readyと、Library/GitHub fallback由来の未checkpoint spillover候補を重複排除して数える。
 
 可能な限りrun ledger、discovery state、queue、fallback状態などrepoが保持する記録から集計し、推測値を確定値として報告しない。集計不能な項目がある場合は、その項目を「集計不能」と明示する。
+
+Workers claim only ready research/audit jobs. Discovery remains in the scheduled
+specialist lane, and normal Scheduled Chat discovery behavior is unchanged. A
+worker waits for the claim result before reading full text and returns all five
+logical record slots in one immutable envelope.

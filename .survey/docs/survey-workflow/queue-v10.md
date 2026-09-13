@@ -211,3 +211,11 @@ research開始時点で、論文を **Inference / Training / Survey** のどこ�
 Surveyと判定した論文を `papers/inference/**` へ保存してはならない。保存先は `papers/survey/<survey-lineage>/<filename>.md` とする。適切なsurvey lineageがまだなければ、対象範囲に沿った下位ディレクトリを新設してよい。
 
 判定が曖昧な場合は、タイトルに `survey` や `review` が含まれるかではなく、**論文の主たる貢献が新規システム提案か、既存研究群の体系化か**で決める。原著論文とsurveyを兼ねる場合、主要な評価・新規性が独自手法にあるならInference側を優先する。
+
+### Claim transport
+
+Claim requests are immutable JSON files in `claim-requests/`; Actions writes one
+result and one current claim per assigned job. Requests default to one job and an
+8-hour lease, and only ready research/audit jobs are eligible. An expired current
+claim remains valid for its worker until a newer assignment replaces the current
+claim file. Results are authoritative on rerun, so a request is never expanded.

@@ -77,3 +77,10 @@ research / audit / discoveryの完全なlogical payloadをGitHubへ送信済み�
 ## 7. 特殊run
 
 maintenance runは通常処理へ戻らず、maintenance要求発行後に終了する。08:30 JSTのその他更新workerは論文workerを同じ枠で実行しない。これは通常runの早期終了ではなく、明示的に別目的へ割り当てた特殊runである。将来repoで追加される明示的な特殊runも、その正本指示を優先する。
+
+### Claim-first execution
+
+The always-on Work helper uses latest-main → unique claim request → wait for the
+claim result → read only the assigned job → submit a complete immutable claimed
+envelope. It does not discover papers and does not write fixed record banks or
+Chat inbox files directly.
