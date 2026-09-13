@@ -10,6 +10,8 @@ code sees the bank as occupied before a worker starts writing research content.
 Pre-reservation active claims that still lack persisted bank routing are migrated to
 the durable Library fallback. This retires the rollout-era global fence: one legacy
 claim no longer disables direct-bank allocation for every unrelated new claim.
+Coherent same-job research left in a bank by an expired claim is retagged to the
+fresh claim instead of leaking one of the finite direct-write banks.
 """
 from __future__ import annotations
 
@@ -241,7 +243,75 @@ def _repair_descriptor_candidate(
     return matches[0] if len(matches) == 1 else None
 
 
-def _recover_repair_payloads(
+def _expired_same_job_bank_candidate(
+    root: Path,
+    claim: dict[str, Any],
+    excluded: set[str],
+    active_claim_ids: set[str],
+) -> tuple[str, dict[str, dict[str, Any]], set[str]] | None:
+    """Recover one coherent bank left by an inactive claim for the same ready job.
+
+    This is deliberately narrower than generic bank reuse. Every fixed slot must
+    still belong to the same job and one old attempt, carry the same reservation
+    claim id, and that reservation must no longer be active. A live reusable inbox
+    also protects its bank. Repair-required jobs stay on their dedicated recovery
+    path so validation failures retain the existing repair semantics.
+    """
+    if _repair_job(root, claim) is not None:
+        return None
+    job_id = str(claim.get("job_id") or "")
+    if not job_id:
+        return None
+
+    inbox, settled = select_record_bank.current_transport(root)
+    protected_inbox_bank = None
+    if inbox and not settled:
+        protected_inbox_bank = str(inbox.get("record_bank") or "a").lower()
+
+    matches: list[tuple[str, dict[str, dict[str, Any]], set[str]]] = []
+    state = select_record_bank.inspect(root)
+    for item in state.get("banks", []):
+        if not isinstance(item, dict) or item.get("state") != "occupied":
+            continue
+        bank = str(item.get("bank") or "").lower()
+        if bank not in BANK_ROOTS or bank in excluded or bank == protected_inbox_bank:
+            continue
+
+        payloads: dict[str, dict[str, Any]] = {}
+        attempts: set[str] = set()
+        reservation_ids: set[str] = set()
+        valid = True
+        for slot in SLOT_NAMES:
+            payload = _read(root / BANK_ROOTS[bank] / f"{slot}.json")
+            reservation = payload.get("reservation") if isinstance(payload, dict) else None
+            if (
+                not isinstance(payload, dict)
+                or payload.get("slot") != slot
+                or payload.get("job_id") != job_id
+                or not payload.get("attempt_id")
+                or "data" not in payload
+                or not isinstance(reservation, dict)
+                or not reservation.get("claim_id")
+            ):
+                valid = False
+                break
+            payloads[slot] = payload
+            attempts.add(str(payload["attempt_id"]))
+            reservation_ids.add(str(reservation["claim_id"]))
+
+        if not valid or len(payloads) != len(SLOT_NAMES):
+            continue
+        if len(attempts) != 1 or len(reservation_ids) != 1:
+            continue
+        reservation_id = next(iter(reservation_ids))
+        if reservation_id == claim.get("claim_id") or reservation_id in active_claim_ids:
+            continue
+        matches.append((bank, payloads, attempts))
+
+    return matches[0] if len(matches) == 1 else None
+
+
+def _recover_bank_payloads(
     root: Path,
     bank: str,
     claim: dict[str, Any],
@@ -251,7 +321,7 @@ def _recover_repair_payloads(
     previous_attempts: set[str],
     source_submission: str | None = None,
 ) -> None:
-    """Retag retained repair data to the new claim without clearing its content."""
+    """Retag retained same-job data to the new claim without clearing its content."""
     reservation = {
         "claim_id": claim["claim_id"],
         "worker_id": claim.get("worker_id"),
@@ -371,7 +441,7 @@ def reserve_new_claim_banks(
     }
     reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
     migrated_unbanked = _migrate_active_unbanked_claims(root, claims, new_claim_ids)
-    reserved = reused = recovered = recovered_from_descriptor = fallback = 0
+    reserved = reused = recovered = recovered_from_descriptor = recovered_expired = fallback = 0
 
     used = {
         str(claim.get("record_bank")).lower()
@@ -399,7 +469,7 @@ def reserve_new_claim_banks(
         repair = _repair_bank_candidate(root, claim, used)
         if repair is not None:
             bank, payloads, previous_attempts = repair
-            _recover_repair_payloads(
+            _recover_bank_payloads(
                 root,
                 bank,
                 claim,
@@ -418,7 +488,7 @@ def reserve_new_claim_banks(
             source_submission, _descriptor, payloads, previous_attempts = descriptor_repair
             bank = _available_bank(root, used)
             if bank is not None:
-                _recover_repair_payloads(
+                _recover_bank_payloads(
                     root,
                     bank,
                     claim,
@@ -432,6 +502,23 @@ def reserve_new_claim_banks(
                 used.add(bank)
                 recovered_from_descriptor += 1
                 continue
+
+        expired_same_job = _expired_same_job_bank_candidate(root, claim, used, active_ids)
+        if expired_same_job is not None:
+            bank, payloads, previous_attempts = expired_same_job
+            _recover_bank_payloads(
+                root,
+                bank,
+                claim,
+                payloads,
+                recovery_kind="expired-same-job",
+                previous_attempts=previous_attempts,
+            )
+            _write(claim_path, claim)
+            _persist_assignment_bank(root, claim, bank)
+            used.add(bank)
+            recovered_expired += 1
+            continue
 
         bank = _available_bank(root, used)
         if bank is None:
@@ -452,6 +539,7 @@ def reserve_new_claim_banks(
         "reused": reused,
         "recovered": recovered,
         "recovered_from_descriptor": recovered_from_descriptor,
+        "recovered_expired": recovered_expired,
         "fallback": fallback,
         "reclaimed": reclaimed,
         "migrated_unbanked": migrated_unbanked,
