@@ -127,6 +127,61 @@ def _reclaim_expired_empty_reservations(root: Path, active_claim_ids: set[str]) 
     return reclaimed
 
 
+def _reclaim_inactive_dirty_banks(root: Path, active_claim_ids: set[str]) -> int:
+    """Reset mixed record banks only when no active claim can still own them.
+
+    A delayed write from an expired attempt can overwrite one fixed slot after a
+    different job has already populated the bank, leaving multiple job/attempt
+    owners in the same bank indefinitely. Immutable submissions remain safe because
+    they address the exact committed slot blobs by Git SHA rather than relying on
+    the current reusable paths.
+
+    Keep coherent retained banks intact so same-job recovery can reuse them. Also
+    protect any bank referenced by the unsettled reusable transport and any bank
+    containing a reservation that still belongs to an active claim.
+    """
+    inbox, settled = select_record_bank.current_transport(root)
+    protected_inbox_bank = None
+    if inbox and not settled:
+        protected_inbox_bank = str(inbox.get("record_bank") or "a").lower()
+
+    reclaimed = 0
+    for bank, relative_root in BANK_ROOTS.items():
+        if bank == protected_inbox_bank:
+            continue
+        bank_root = root / relative_root
+        owner_pairs: set[tuple[str, str]] = set()
+        reservation_ids: set[str] = set()
+        valid = True
+        for slot in SLOT_NAMES:
+            payload = _read(bank_root / f"{slot}.json")
+            if (
+                not isinstance(payload, dict)
+                or payload.get("slot") != slot
+                or not isinstance(payload.get("job_id"), str)
+                or not payload.get("job_id")
+                or not isinstance(payload.get("attempt_id"), str)
+                or not payload.get("attempt_id")
+                or "data" not in payload
+            ):
+                valid = False
+                break
+            owner_pairs.add((str(payload["job_id"]), str(payload["attempt_id"])))
+            reservation = payload.get("reservation")
+            if isinstance(reservation, dict) and reservation.get("claim_id"):
+                reservation_ids.add(str(reservation["claim_id"]))
+
+        if not valid or len(owner_pairs) <= 1:
+            continue
+        if reservation_ids & active_claim_ids:
+            continue
+
+        for slot in SLOT_NAMES:
+            _write(bank_root / f"{slot}.json", _placeholder_payload(slot))
+        reclaimed += 1
+    return reclaimed
+
+
 def _available_bank(root: Path, excluded: set[str]) -> str | None:
     state = select_record_bank.inspect(root)
     for item in state.get("banks", []):
@@ -440,6 +495,7 @@ def reserve_new_claim_banks(
         if claim.get("active") and claim.get("claim_id")
     }
     reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
+    reclaimed_inactive_dirty = _reclaim_inactive_dirty_banks(root, active_ids)
     migrated_unbanked = _migrate_active_unbanked_claims(root, claims, new_claim_ids)
     reserved = reused = recovered = recovered_from_descriptor = recovered_expired = fallback = 0
 
@@ -542,6 +598,7 @@ def reserve_new_claim_banks(
         "recovered_expired": recovered_expired,
         "fallback": fallback,
         "reclaimed": reclaimed,
+        "reclaimed_inactive_dirty": reclaimed_inactive_dirty,
         "migrated_unbanked": migrated_unbanked,
     }
 
