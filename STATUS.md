@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 03:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 03:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -21,7 +21,7 @@
 | 全文精読完了（累計） | **253** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
-| 次回保守までの通常run | **19 / 24** |
+| 次回保守までの通常run | **20 / 24** |
 
 ### 要注意
 
@@ -45,38 +45,38 @@
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **25** |
+| 直近24h Research完了（帰属不明） | **21** |
 | 最新通常run | **2026-09-14T02:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **55 min** |
+| 最古の有効claimの経過時間 | **70 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
 - **処理速度 LOW**: ready=136 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
-- 直近24hのResearch完了のうち **25件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **21件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **35** |
-| Repo収録 | **64** |
+| Research完了 | **31** |
+| Repo収録 | **60** |
 | Audit完了 | **0** |
-| 探索評価候補 | **399** |
-| Research候補採用 | **101** |
-| 重複除外 | **228** |
-| 重複率 | **57.1%** |
-| 探索専用worker run（毎時枠） | **9** |
-| 探索専用worker round（stats観測） | **78** |
-| 通常worker run（ledger観測） | **16** |
+| 探索評価候補 | **375** |
+| Research候補採用 | **91** |
+| 重複除外 | **217** |
+| 重複率 | **57.9%** |
+| 探索専用worker run（毎時枠） | **8** |
+| 探索専用worker round（stats観測） | **73** |
+| 通常worker run（ledger観測） | **15** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 399 → 重複除外後 171 → Research候補採用 101 → Research完了 35 → Repo収録 64**
+**探索評価 375 → 重複除外後 158 → Research候補採用 91 → Research完了 31 → Repo収録 60**
 
 ## 直近の通常worker
 
@@ -132,7 +132,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 分離型LLMサービング・KV転送／フェーズ非対称性 | 8 | 6 | 1 | 75.0% | 12.5% |
 | 疎注意サービング・GPUメガカーネル・動的コンパイラ | 8 | 5 | 3 | 62.5% | 37.5% |
 | MoE expert cache・Flash階層・expert-parallel耐障害性 | 7 | 5 | 2 | 71.4% | 28.6% |
-| heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
 | hybrid-attention・MLA・位置非依存キャッシュ | 7 | 3 | 4 | 42.9% | 57.1% |
 | network・collective通信・distributed inference | 7 | 7 | 0 | 100.0% | 0.0% |
 | 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
@@ -155,8 +154,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
 | MoE speculative decoding・expert offloading・CPU/GPU共同実行 | 5 | 3 | 0 | 60.0% | 0.0% |
 | MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
-| edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision | 5 | 1 | 3 | 20.0% | 60.0% |
-| heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels | 5 | 2 | 3 | 40.0% | 60.0% |
 | multi-tenant runtime制御・適応parallelism・latency attribution | 5 | 3 | 2 | 60.0% | 40.0% |
 | serving software aging・runtime reliability・lossless compression・load-aware speculative serving | 5 | 4 | 0 | 80.0% | 0.0% |
 | 分離サービング・電力制御・KV転送・multi-turn routing | 5 | 0 | 0 | 0.0% | 0.0% |
@@ -175,7 +172,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
 | agentic workload・program/session-aware serving | 4 | 1 | 3 | 25.0% | 75.0% |
 | chunked prefill・prefix-aware batchingの基礎欠落 | 4 | 3 | 0 | 75.0% | 0.0% |
-| fault-tolerant distributed serving・KV recovery・GPU failure | 4 | 4 | 0 | 100.0% | 0.0% |
 | moe-cache-aware-routing-expert-skipping-fine-grained-execution | 4 | 0 | 0 | 0.0% | 0.0% |
 | recent検索から重要基礎系譜への欠落確認 | 4 | 3 | 0 | 75.0% | 0.0% |
 | ssd-kv-cache-heterogeneous-gpu-serving-orchestration | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -190,7 +186,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 2026年9月新着・KV圧縮と動的管理 | 3 | 0 | 0 | 0.0% | 0.0% |
 | GPU kernel生成・runtime最適化の隣接系 | 3 | 0 | 3 | 0.0% | 100.0% |
 | GPU低ビットkernel/runtime・大容量メモリ型chain serving | 3 | 1 | 2 | 33.3% | 66.7% |
-| edge/on-device offload・multitasking memory・cloud KV streaming | 3 | 0 | 2 | 0.0% | 66.7% |
 | near-storage KV処理・動的layer/KV runtime adaptation | 3 | 1 | 2 | 33.3% | 66.7% |
 | エージェント型LLM・サービングruntime・生成時特化 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 出力長不確実性・tail-aware scheduling隣接 | 3 | 1 | 2 | 33.3% | 66.7% |
