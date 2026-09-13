@@ -42,7 +42,7 @@
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 04:53 JST** |
-| :00 補助worker 直近claim | **09-14 05:26 JST** |
+| :00 補助worker 直近claim | **09-14 05:27 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **14** |
