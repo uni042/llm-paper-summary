@@ -169,7 +169,20 @@ def validate_references(meta: dict[str, Any]) -> None:
         seen.add(dedupe_key)
 
 
-def validate_record(record: dict[str, Any]) -> None:
+class RecordValidationError(ValueError):
+    """Structured-record validation failure carrying all current issues."""
+
+    def __init__(self, issues: list[str], *, aggregate: bool = False):
+        self.issues = list(issues)
+        message = self.issues[0]
+        if aggregate and len(self.issues) > 1:
+            message = "structured record validation failed: " + " | ".join(self.issues)
+        super().__init__(message)
+
+
+def collect_validation_issues(record: dict[str, Any]) -> list[str]:
+    """Return every independently checkable current record-validation issue."""
+    issues: list[str] = []
     meta = record.get("metadata") or {}
     pm = record.get("problem_method") or {}
     ev = record.get("evaluation") or {}
@@ -181,92 +194,105 @@ def validate_record(record: dict[str, Any]) -> None:
         "publication", "topics", "implementation", "last_checked",
     ):
         if not nonempty(meta.get(key)):
-            raise ValueError(f"metadata.{key} is required")
+            issues.append(f"metadata.{key} is required")
     if "code" not in meta:
-        raise ValueError("metadata.code is required; use null when no official URL was confirmed")
+        issues.append("metadata.code is required; use null when no official URL was confirmed")
     if prose_chars(meta.get("summary")) < 180:
-        raise ValueError("metadata.summary must be explanatory, not a one-line abstract")
+        issues.append("metadata.summary must be explanatory, not a one-line abstract")
     if not nonempty(meta.get("publication_type")):
-        raise ValueError("metadata.publication_type is required")
+        issues.append("metadata.publication_type is required")
     if not nonempty(meta.get("published")):
-        raise ValueError("metadata.published is required")
+        issues.append("metadata.published is required")
     if not nonempty(meta.get("publication_status")):
-        raise ValueError("metadata.publication_status is required")
+        issues.append("metadata.publication_status is required")
     if meta.get("arxiv_id"):
         categories = meta.get("arxiv_categories")
         if not isinstance(categories, dict) or not nonempty(categories.get("primary")):
-            raise ValueError("metadata.arxiv_categories.primary is required for arXiv papers")
-        cross_list = categories.get("cross_list")
-        if cross_list is not None and not isinstance(cross_list, list):
-            raise ValueError("metadata.arxiv_categories.cross_list must be a list")
+            issues.append("metadata.arxiv_categories.primary is required for arXiv papers")
+        elif categories.get("cross_list") is not None and not isinstance(categories.get("cross_list"), list):
+            issues.append("metadata.arxiv_categories.cross_list must be a list")
     if not nonempty(meta.get("hardware_evaluation")):
-        raise ValueError("metadata.hardware_evaluation is required")
+        issues.append("metadata.hardware_evaluation is required")
     if not nonempty(meta.get("quality_effect")):
-        raise ValueError("metadata.quality_effect is required")
-    validate_references(meta)
+        issues.append("metadata.quality_effect is required")
+    try:
+        validate_references(meta)
+    except ValueError as exc:
+        issues.append(str(exc))
 
     for key in ("problem", "novelty", "method_overview", "components", "system_design"):
         if not nonempty(pm.get(key)):
-            raise ValueError(f"problem_method.{key} is required")
+            issues.append(f"problem_method.{key} is required")
     if prose_chars(pm.get("problem")) < 250:
-        raise ValueError("problem_method.problem must explain the bottleneck and why prior approaches are insufficient")
+        issues.append("problem_method.problem must explain the bottleneck and why prior approaches are insufficient")
     if prose_chars(pm.get("novelty")) < 180:
-        raise ValueError("problem_method.novelty must explain the paper-specific idea")
+        issues.append("problem_method.novelty must explain the paper-specific idea")
     if prose_chars(pm.get("method_overview")) < 500:
-        raise ValueError("problem_method.method_overview must explain the end-to-end mechanism")
+        issues.append("problem_method.method_overview must explain the end-to-end mechanism")
     components = pm.get("components")
     if not isinstance(components, list) or len(components) < 2:
-        raise ValueError("problem_method.components requires at least two major mechanisms")
-    for index, item in enumerate(components):
-        if not isinstance(item, dict) or not nonempty(item.get("name")) or not nonempty(item.get("description")):
-            raise ValueError(f"problem_method.components[{index}] requires name and description")
-        if prose_chars(item.get("description")) < 240:
-            raise ValueError(f"problem_method.components[{index}].description is too short")
+        issues.append("problem_method.components requires at least two major mechanisms")
+    if isinstance(components, list):
+        for index, item in enumerate(components):
+            if not isinstance(item, dict) or not nonempty(item.get("name")) or not nonempty(item.get("description")):
+                issues.append(f"problem_method.components[{index}] requires name and description")
+                continue
+            if prose_chars(item.get("description")) < 240:
+                issues.append(f"problem_method.components[{index}].description is too short")
 
     if not (nonempty(ev.get("hardware")) or nonempty(ev.get("software")) or nonempty(ev.get("methodology"))):
-        raise ValueError("evaluation requires hardware/software/methodology evidence")
+        issues.append("evaluation requires hardware/software/methodology evidence")
     if not nonempty(ev.get("scope")):
-        raise ValueError("evaluation.scope is required to distinguish real-hardware/simulation and generalization limits")
+        issues.append("evaluation.scope is required to distinguish real-hardware/simulation and generalization limits")
 
     key_results = rs.get("key_results")
     if not isinstance(key_results, list) or not key_results:
-        raise ValueError("results.key_results requires at least one quantitative result")
+        issues.append("results.key_results requires at least one quantitative result")
     if not nonempty(rs.get("overview")) or prose_chars(rs.get("overview")) < 180:
-        raise ValueError("results.overview must explain the main result and its practical meaning")
-    for index, item in enumerate(key_results):
-        if not isinstance(item, dict):
-            raise ValueError(f"results.key_results[{index}] must be an object")
-        missing = [k for k in ("metric", "value", "baseline", "condition", "interpretation") if not nonempty(item.get(k))]
-        if missing:
-            raise ValueError(f"results.key_results[{index}] missing: " + ", ".join(missing))
+        issues.append("results.overview must explain the main result and its practical meaning")
+    if isinstance(key_results, list):
+        for index, item in enumerate(key_results):
+            if not isinstance(item, dict):
+                issues.append(f"results.key_results[{index}] must be an object")
+                continue
+            missing = [k for k in ("metric", "value", "baseline", "condition", "interpretation") if not nonempty(item.get(k))]
+            if missing:
+                issues.append(f"results.key_results[{index}] missing: " + ", ".join(missing))
     if not nonempty(rs.get("negative_results")):
-        raise ValueError("results.negative_results is required; record degradation and boundary conditions")
+        issues.append("results.negative_results is required; record degradation and boundary conditions")
     if not nonempty(rs.get("interpretation")):
-        raise ValueError("results.interpretation is required; explain why gains change across conditions")
+        issues.append("results.interpretation is required; explain why gains change across conditions")
     if not nonempty(rs.get("quality_impact")):
-        raise ValueError("results.quality_impact is required; distinguish lossless from approximate methods")
+        issues.append("results.quality_impact is required; distinguish lossless from approximate methods")
 
     for key in ("limitations", "differences", "implementation_status", "research_positioning"):
         if not nonempty(pos.get(key)):
-            raise ValueError(f"positioning.{key} is required")
+            issues.append(f"positioning.{key} is required")
 
     prose = record_prose_text(record)
     ratio, jp_chars, latin_chars = japanese_ratio(prose)
     if ratio < DEFAULT_MIN_JAPANESE_RATIO:
-        raise ValueError(
+        issues.append(
             f"Japanese-first prose ratio is too low: {ratio:.1%} "
             f"< {DEFAULT_MIN_JAPANESE_RATIO:.0%} (Japanese={jp_chars}, Latin={latin_chars})"
         )
     bare = find_bare_english(prose)
     if bare:
         preview = ", ".join(f"{hit.term}->{hit.preferred} x{hit.count}" for hit in bare[:12])
-        raise ValueError(
+        issues.append(
             "Japanese-first terminology violation; replace ordinary English prose "
             f"with Japanese/katakana or put the formal English name only in the first parentheses: {preview}"
         )
+    return issues
 
 
-def assemble(repo_root: Path) -> bool:
+def validate_record(record: dict[str, Any], *, collect_all: bool = False) -> None:
+    issues = collect_validation_issues(record)
+    if issues:
+        raise RecordValidationError(issues, aggregate=collect_all)
+
+
+def assemble(repo_root: Path, *, collect_all_validation_issues: bool = False) -> bool:
     inbox_path = repo_root / FIXED_INBOX
     inbox = read_json(inbox_path)
     refs = inbox.get("record_slots")
@@ -329,7 +355,7 @@ def assemble(repo_root: Path) -> bool:
 
     record = normalize_preferred_terms(record)
     ensure_explanatory_summary(record)
-    validate_record(record)
+    validate_record(record, collect_all=collect_all_validation_issues)
     markdown = render_paper(record)
     (repo_root / LEGACY_PAYLOAD).write_text(markdown, encoding="utf-8")
 

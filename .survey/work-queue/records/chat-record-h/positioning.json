@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2606.06453-20260913-0930-v10-vortex",
+  "attempt_id": "attempt-manual-vortex-repair-20260914-001",
   "job_id": "job-research-8df4b126a68a6be4",
   "data": {
-    "limitations": "decodeのみでprefill sparse attentionは未対応。training/backwardも対象外であり、vTensorはgradient layoutを扱わない。RNN/Mambaのような固定状態モデルはKV page抽象の外にある。AI-agentとの統合はprogram生成・評価環境を提供する段階で、仮説生成からkernel実装・検証まで完全自律する研究システムではない。性能はSGLang、FlashInfer、TensorRT-LLM、GPU世代とkernel supportに依存し、GLMの最大速度倍率にはdense backend不利が含まれる。",
-    "differences": "FlashInfer/FlexAttentionは主に疎indexが既に与えられた後のattention kernelを抽象化するのに対し、Vortexはquery依存index constructionと補助cacheまでprogramming modelへ含める。LServe/SparseServeは特定の疎注意方式やdeploymentをend-to-end最適化するが、Vortexは複数algorithmを同じoperator群から構成することを優先する。SGLang/vLLMはserving runtimeそのもので、新しい疎注意研究のDSLではない。SparseTIR等のcompiler abstractionをpaged KV servingへ特化して持ち込んだ位置づけである。",
-    "implementation_status": "公式GitHub Infini-AI-Lab/vortex_torch、Webサイト、docsが公開される。SGLang v0.5.9統合とH200/B200評価まで実装済み。",
-    "research_positioning": "KVキャッシュ最適化・圧縮系統のうち、どのKV blockを読むかというalgorithm設計と、その動的選択を実サービング上で高速に実装するsystems research。新しいsparse attention研究の実験サイクル自体を短縮する研究基盤として価値が高い。",
-    "relation_to_existing_repository": "MagicPig、Quest、H2O、NSA、SparseServe等の個別疎注意方式を同じ本番runtimeで比較・組合せる上位基盤に相当する。SSD/CPU KV offloadと組み合わせる場合、vTensorのpage metadataに階層locationを加え、indexerがGPU resident blockと下位階層blockの読出し費用を区別すれば、疎選択とprefetch/offloadを一つのprogramへ統合する拡張が考えられる。",
+    "limitations": "デコードのみでプリフィル 疎注意は未対応。学習/逆方向も対象外であり、vTensorはgradient 配置を扱わない。RNN/Mambaのような固定状態モデルはKV ページ抽象の外にある。AI-エージェントとの統合はプログラム生成・評価環境を提供する段階で、仮説生成からカーネル実装・検証まで完全自律する研究システムではない。性能はSGLang、FlashInfer、TensorRT-LLM、GPU世代とカーネル supportに依存し、GLMの最大速度倍率には密 バックエンド不利が含まれる。",
+    "differences": "FlashInfer/FlexAttentionは主に疎索引が既に与えられた後の注意機構 カーネルを抽象化するのに対し、Vortexはクエリ依存索引 constructionと補助キャッシュまでプログラミングモデルへ含める。LServe/SparseServeは特定の疎注意方式や配備を端から端まで最適化するが、Vortexは複数アルゴリズムを同じ演算子群から構成することを優先する。SGLang/vLLMはサービング ランタイムそのもので、新しい疎注意研究のDSLではない。SparseTIR等のコンパイラ abstractionをページ化 KV サービングへ特化して持ち込んだ位置づけである。",
+    "implementation_status": "公式GitHub Infini-AI-Lab/vortex_torch、Webサイト、文書が公開される。SGLang v0.5.9統合とH200/B200評価まで実装済み。",
+    "research_positioning": "KVキャッシュ最適化・圧縮系統のうち、どのKV ブロックを読むかというアルゴリズム設計と、その動的選択を実サービング上で高速に実装するシステム research。新しい疎注意研究の実験サイクル自体を短縮する研究基盤として価値が高い。",
+    "relation_to_existing_repository": "MagicPig、Quest、H2O、NSA、SparseServe等の個別疎注意方式を同じ本番ランタイムで比較・組合せる上位基盤に相当する。SSD/CPU KV オフロードと組み合わせる場合、vTensorのページ メタデータに階層locationを加え、索引器がGPU 常駐 ブロックと下位階層ブロックの読出し費用を区別すれば、疎選択とプリフェッチ/オフロードを一つのプログラムへ統合する拡張が考えられる。",
     "audit_required": false
   }
 }

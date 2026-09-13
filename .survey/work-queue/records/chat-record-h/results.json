@@ -2,13 +2,63 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2606.06453-20260913-0930-v10-vortex",
+  "attempt_id": "attempt-manual-vortex-repair-20260914-001",
   "job_id": "job-research-8df4b126a68a6be4",
   "data": {
-    "overview": "Vortexは疎注意の記述容易性だけでなくend-to-end serving利得を示す。Qwen3の長生成では5pp accuracy budgetでblock top-kがAMC23最大3.46倍、AIME24最大3.60倍、Questが2.73倍/2.98倍。1pp以内でもblock top-kはAMC23 2.14〜2.31倍、AIME24 2.42〜3.60倍。16K prompt・8 req/sではP95 latencyがblock top-k 11.7倍、Quest 12.8倍改善する。MiniMax-M2.7 229Bでもfull attention 3341 tok/s/mean@16 0.83に対しblock top-k 4110 tok/s/0.84で1.23倍、最大1.37倍。AI-agentの18時間探索はQwen3-1.7B AIME24で3437→11894 tok/s、精度38.54→38.96を達成した。",
-    "key_results": [{"metric":"Qwen3 block top-k throughput","value":"最大3.60×","baseline":"SGLang full attention","condition":"AIME24、5pp accuracy budget、H200","interpretation":"ページ化索引生成を含むend-to-endでも疎KV読出し削減が実効速度になる。"},{"metric":"Quest throughput","value":"最大2.98×","baseline":"full attention","condition":"AIME24、5pp accuracy budget、H200","interpretation":"動的indexerを含む方式でもfrontend/backend統合により大きな速度改善を得る。"},{"metric":"P95 user latency","value":"block top-k 11.7×、Quest 12.8×改善","baseline":"full attention","condition":"16K prompt、512 output、8 req/s","interpretation":"server offline throughputだけでなく高負荷user latencyでも疎注意が効く。"},{"metric":"MiniMax-M2.7 throughput","value":"1.23× at matched/higher accuracy、最大1.37×","baseline":"full attention 3341 tok/s, mean@16 0.83","condition":"229B、4×B200 TP=4、AIME26 32K generation","interpretation":"パラメータ通信比率が高い巨大モデルでもKV削減のend-to-end利得が残る。"},{"metric":"GLM-4.7-Flash sparse MLA","value":"約4×、最大4.7×","baseline":"full attention 1031 tok/s, mean@16 0.765","condition":"B200 1基、AIME26 32K、rope-aware mean@16 0.752","interpretation":"MLAのcontent+RoPE両成分をroutingへ使う設計を迅速に試せるが、dense側のTriton fallbackも倍率へ寄与する。"},{"metric":"AI-agent autonomous iteration","value":"3.46× (11894 vs 3437 tok/s)","baseline":"dense attention","condition":"Qwen3-1.7B、AIME24、18時間23 iteration/92 submissions","interpretation":"同一serving stackで短いprogramを実測できるためagentがsystem parameterを反復探索できる。"},{"metric":"approx radix top-k kernel","value":"平均1.49×、範囲1.30–1.62×","baseline":"exact radix top-k","condition":"recall@k >0.97","interpretation":"動的疎注意ではattention本体以外のindex selectionも最適化対象である。"}],
-    "negative_results": "Vortexは現時点でprefillとtraining/backwardを扱わない。MiniMax-M2.7のような巨大TPモデルではparameter/communication trafficの比率が増えるため、Qwen3ほど疎注意の相対利得は大きくない。GLM-4.7-Flashの最大4.7倍はfull-attention側が対象geometryをvendor kernelで処理できずTriton MLAへfallbackする条件を含むため、疎度だけの純粋倍率ではない。AI-agentの18時間探索は最終的に根本的新方式ではなくblock top-kへ収束し、自動研究が新規algorithmを保証するわけではない。",
-    "interpretation": "Vortexの主要貢献は疎注意kernel単体ではなく、index construction、paged layout、intermediate cache、attention backend、serving schedulerを同じ抽象でつないだことにある。Quest原実装がSGLang全注意より44.4倍遅いという例が示すように、attention FLOP削減だけではend-to-end速度を保証しない。vTensorでページ変換を排除し、operator fusionとtop-k最適化を入れ、最終attentionを既存vendor/backendへ渡すことで初めて理論的sparsityがuser-visible latencyへ反映される。",
-    "quality_impact": "疎注意自体は近似なのでaccuracy–throughput trade-offがある。論文は5pp/1pp accuracy budgetや同等mean@16点で比較し、品質を保つoperating pointを選ぶ。全注意と完全同一出力を保証する方式ではない。"
+    "overview": "Vortexは疎注意の記述容易性だけでなく端から端まで サービング利得を示す。Qwen3の長生成では5pp 精度 予算でブロック上位kがAMC23最大3.46倍、AIME24最大3.60倍、Questが2.73倍/2.98倍。1pp以内でもブロック上位kはAMC23 2.14〜2.31倍、AIME24 2.42〜3.60倍。16K プロンプト・8 要求/sではP95 遅延がブロック上位k 11.7倍、Quest 12.8倍改善する。MiniMax-M2.7 229Bでも全注意 3341 tok/s/平均@16 0.83に対しブロック上位k 4110 tok/s/0.84で1.23倍、最大1.37倍。AI-エージェントの18時間探索はQwen3-1.7B AIME24で3437→11894 tok/s、精度38.54→38.96を達成した。",
+    "key_results": [
+      {
+        "metric": "Qwen3 ブロック上位k スループット",
+        "value": "最大3.60×",
+        "baseline": "SGLang 全注意",
+        "condition": "AIME24、5pp 精度 予算、H200",
+        "interpretation": "ページ化索引生成を含む端から端まででも疎KV読出し削減が実効速度になる。"
+      },
+      {
+        "metric": "Quest スループット",
+        "value": "最大2.98×",
+        "baseline": "全注意",
+        "condition": "AIME24、5pp 精度 予算、H200",
+        "interpretation": "動的索引器を含む方式でもフロントエンド/バックエンド統合により大きな速度改善を得る。"
+      },
+      {
+        "metric": "P95 利用者 遅延",
+        "value": "ブロック上位k 11.7×、Quest 12.8×改善",
+        "baseline": "全注意",
+        "condition": "16K プロンプト、512 出力、8 要求/s",
+        "interpretation": "サーバー offline スループットだけでなく高負荷利用者 遅延でも疎注意が効く。"
+      },
+      {
+        "metric": "MiniMax-M2.7 スループット",
+        "value": "1.23× at matched/higher 精度、最大1.37×",
+        "baseline": "全注意 3341 tok/s, 平均@16 0.83",
+        "condition": "229B、4×B200 TP=4、AIME26 32K generation",
+        "interpretation": "パラメータ通信比率が高い巨大モデルでもKV削減の端から端まで利得が残る。"
+      },
+      {
+        "metric": "GLM-4.7-Flash 疎 MLA",
+        "value": "約4×、最大4.7×",
+        "baseline": "全注意 1031 tok/s, 平均@16 0.765",
+        "condition": "B200 1基、AIME26 32K、rope-aware 平均@16 0.752",
+        "interpretation": "MLAのcontent+RoPE両成分をルーティングへ使う設計を迅速に試せるが、密側のTriton フォールバックも倍率へ寄与する。"
+      },
+      {
+        "metric": "AI-エージェント autonomous 反復",
+        "value": "3.46× (11894 vs 3437 tok/s)",
+        "baseline": "密 注意機構",
+        "condition": "Qwen3-1.7B、AIME24、18時間23 反復/92 submissions",
+        "interpretation": "同一サービング stackで短いプログラムを実測できるためエージェントがシステム parameterを反復探索できる。"
+      },
+      {
+        "metric": "近似 基数 上位k カーネル",
+        "value": "平均1.49×、範囲1.30–1.62×",
+        "baseline": "厳密 基数 上位k",
+        "condition": "再現率@k >0.97",
+        "interpretation": "動的疎注意では注意機構本体以外の索引 選択も最適化対象である。"
+      }
+    ],
+    "negative_results": "Vortexは現時点でプリフィルと学習/逆方向を扱わない。MiniMax-M2.7のような巨大TPモデルではparameter/communication 転送量の比率が増えるため、Qwen3ほど疎注意の相対利得は大きくない。GLM-4.7-Flashの最大4.7倍は全注意側が対象形状をベンダー カーネルで処理できずTriton MLAへフォールバックする条件を含むため、疎度だけの純粋倍率ではない。AI-エージェントの18時間探索は最終的に根本的新方式ではなくブロック上位kへ収束し、自動研究が新規アルゴリズムを保証するわけではない。",
+    "interpretation": "Vortexの主要貢献は疎注意カーネル単体ではなく、索引 construction、ページ化 配置、intermediate キャッシュ、注意機構 バックエンド、サービング スケジューラを同じ抽象でつないだことにある。Quest原実装がSGLang全注意より44.4倍遅いという例が示すように、注意機構 FLOP削減だけでは端から端まで速度を保証しない。vTensorでページ変換を排除し、演算子 融合と上位k最適化を入れ、最終注意機構を既存ベンダー/バックエンドへ渡すことで初めて理論的sparsityが利用者-visible 遅延へ反映される。",
+    "quality_impact": "疎注意自体は近似なので精度–スループット trade-offがある。論文は5pp/1pp 精度 予算や同等平均@16点で比較し、品質を保つoperating pointを選ぶ。全注意と完全同一出力を保証する方式ではない。"
   }
 }

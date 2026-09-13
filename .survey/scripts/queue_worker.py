@@ -129,6 +129,7 @@ def clear_repair_state(job: dict):
     """Clear stale validation-isolation metadata after successful completion."""
     job.pop("repair_required", None)
     job.pop("validation_error", None)
+    job.pop("validation_errors", None)
     job.pop("last_validation_failed_at", None)
 
 

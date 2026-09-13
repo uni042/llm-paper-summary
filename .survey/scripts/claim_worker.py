@@ -465,15 +465,14 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
     leases_normalized, leases_invalidated = _normalize_legacy_scheduled_chat_leases(root, claims, now)
     claims = claim_state.current_claims(root, now)
-    processed = reused = errors = assigned = renewed = checkpoint_released = 0
+    processed = reused = errors = assigned_new = assigned_recovered = assigned_reused = renewed = checkpoint_released = 0
     for path in sorted(request_root.glob("*.json")):
         result_path = _result_path(root, path.stem)
         if result_path.exists():
             reused += 1
             existing = _read(result_path, {})
-            for item in existing.get("assignments", []) if isinstance(existing, dict) else []:
-                if isinstance(item, dict):
-                    assigned += 1
+            if isinstance(existing, dict) and isinstance(existing.get("assignments"), list):
+                assigned_reused += sum(1 for item in existing["assignments"] if isinstance(item, dict))
             renewed += _renew_existing_result(
                 root=root,
                 path=path,
@@ -507,7 +506,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
                 "ok": True, "assignments": recovered, "processed_at": _iso(now),
             })
-            assigned += len(recovered)
+            assigned_recovered += len(recovered)
             processed += 1
             continue
 
@@ -580,13 +579,17 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             "ok": True, "assignments": assignments, "processed_at": _iso(now),
             "checkpoint_released": released_now,
         })
-        assigned += len(assignments)
+        assigned_new += len(assignments)
         processed += 1
     return {
         "processed": processed,
         "reused": reused,
         "errors": errors,
-        "assigned": assigned,
+        "assigned": assigned_new,
+        "assigned_new": assigned_new,
+        "assigned_recovered": assigned_recovered,
+        "assigned_reused": assigned_reused,
+        "assigned_total_observed": assigned_new + assigned_recovered + assigned_reused,
         "renewed": renewed,
         "checkpoint_released": checkpoint_released,
         "leases_normalized": leases_normalized,
