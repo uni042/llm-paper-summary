@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:09:24.281792+00:00",
+  "updated_at": "2026-09-13T00:12:41.875243+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15975,16 +15975,16 @@
     {
       "run_key": "2026-09-13T08:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:31:39.543292+00:00",
-      "last_recorded_at": "2026-09-13T00:09:24.281792+00:00",
+      "last_recorded_at": "2026-09-13T00:12:41.875243+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 21,
+        "new_jobs": 22,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16086,6 +16086,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34727316217:1",
+          "recorded_at": "2026-09-13T00:12:41.875243+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34727316217",
+            "run_attempt": "1",
+            "source_sha": "ea60821e70f1a366066658d56a25309351c70d8a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16139,6 +16153,14 @@
         },
         {
           "job_id": "job-c848ae402fdf4008",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-7a82e8821b14d511",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16289,6 +16311,13 @@
         },
         {
           "job_id": "job-7a82e8821b14d511",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-40b815170765e1a7",
           "status": "ready",
           "type": "discovery",
           "canonical_id": null,
