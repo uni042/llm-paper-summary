@@ -85,6 +85,8 @@ def _completion_attribution(
 ) -> Counter[str]:
     """Attribute recent research completions using the durable final claim per job.
 
+    Use the same run-key-based 24-hour window as build_status_dashboard.py so the
+    worker-lane subtotal reconciles with the dashboard's aggregate Research total.
     Terminal jobs are not claimable again, so the retained claim file is the worker
     that owned the job when it reached a terminal state. Older completions without
     a retained claim remain explicitly unattributed rather than guessed.
@@ -93,7 +95,7 @@ def _completion_attribution(
     counts: Counter[str] = Counter()
     seen: set[str] = set()
     for entry in entries:
-        recorded = _dt(entry.get("last_recorded_at") or entry.get("run_key"))
+        recorded = _dt(entry.get("run_key") or entry.get("last_recorded_at"))
         if recorded is None or recorded < cutoff or recorded > now:
             continue
         for transition in entry.get("terminal_transitions") or []:
@@ -217,6 +219,7 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| 今すぐ着手可能（Claimable） | **{claimable}** |\n"
         f"| :30 通常worker Active claims | **{active_by_lane['normal']}** |\n"
         f"| :00 補助worker Active claims | **{active_by_lane['aux']}** |\n"
+        f"| その他/帰属不明 Active claims | **{active_by_lane['unknown']}** |\n"
         f"| :30 通常worker 直近claim | **{_fmt_time(latest_normal_claim)}** |\n"
         f"| :00 補助worker 直近claim | **{_fmt_time(latest_aux_claim)}** |\n"
         f"| 直近24h Research完了（:30 通常worker） | **{attributed['normal']}** |\n"
