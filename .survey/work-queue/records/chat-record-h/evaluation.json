@@ -2,40 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-975876ab1d6275d45b4eb0f0",
-  "job_id": "job-research-a60dcea57ad2475d",
-  "data": {
-    "hardware": "専門家活性データ収集は8×NVIDIA H100で300時間超。主要通信・実行評価はDP8TP8→EP64などの大規模専門家並列構成を用いる。",
-    "software": "vLLM v0.9へfusedMoEルータの活性ロギングを追加。モデルはLlama 4 Maverick、DeepSeek-V3-671B、Qwen3-235B-A22BをFP8で評価。",
-    "methodology": "GSM8K、MATH、MBPP、HumanEval、LMSYS-Chat、XSUM、TL;DRをほぼ均等に含む10万件超の要求をbatch size 1で記録する。要求・層・推論段階ごとの専門家トークン数から負荷偏り、分野間相関、プリフィル・デコード相関、クラスタ構造を解析する。要求種別分類は活性ベクトルを80:20のtrain/testへ分け、層ごとに多クラスロジスティック回帰で評価する。通信評価はDeepSeek-V3のDP8TP8→EP64で500 global batches（各8×128 requests）、実行時間はLlama MaverickとQwen3-235Bで100 global batchesの中央値を比較する。",
-    "scope": "3種類の最先端オープンMoEと7データセットにまたがるが、評価した要求分野の構成が変わるとクラスタ重心と専門家人気も変化する。主要配置評価では専門家複製を使っていないため、複製予算を含む完全アルゴリズムの利得・メモリ費用は別途検証が必要。",
-    "workloads": [
-      "GSM8K",
-      "MATH",
-      "MBPP",
-      "HumanEval",
-      "LMSYS-Chat",
-      "XSUM",
-      "TL;DR",
-      "Llama 4 Maverick",
-      "DeepSeek-V3",
-      "Qwen3-235B-A22B"
-    ],
-    "baselines": [
-      "linear expert-id placement in vLLM",
-      "DeepSeek EPLB load-balanced placement"
-    ],
-    "metrics": [
-      "expert imbalance factor",
-      "prefill-decode activation correlation",
-      "request-type classification accuracy",
-      "normalized inter-node all-to-all volume",
-      "all-to-all communication time",
-      "MoE layer runtime"
-    ]
-  },
+  "attempt_id": "attempt-1a2f27db29cc21845919957d",
+  "job_id": "job-research-2b6e9eed52cd4c32",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-975876ab1d6275d45b4eb0f0",
+    "claim_id": "claim-1a2f27db29cc21845919957d",
     "worker_id": "scheduled-chat-paper-20260914T0230JST",
     "worker_kind": "scheduled_chat"
   }
