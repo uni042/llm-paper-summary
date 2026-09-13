@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,18 +28,18 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **7** |
-| 新規job | **21** |
+| Discovery完了 | **8** |
+| 新規job | **22** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-moe-inference-1**
+Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-heterogeneous-storage-2**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | moe-cache-aware-routing-expert-skipping-fine-grained-execution |
+| 探索軸 | ssd-kv-cache-heterogeneous-gpu-serving-orchestration |
 | 評価候補 | **4** |
 | 重複除外 | **0** |
 | Novel候補 | **4** |
@@ -51,11 +51,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-moe-inference-1**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **126** |
-| 探索評価候補 | **633** |
+| 探索round（stats観測） | **127** |
+| 探索評価候補 | **637** |
 | 重複除外 | **264** |
-| 重複率 | **41.7%** |
-| Novel候補 | **369** |
+| 重複率 | **41.4%** |
+| Novel候補 | **373** |
 | Research候補採用 | **209** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-moe-inference-1**
 
 ### 24時間ファネル
 
-**探索評価 633 → 重複除外後 369 → Research候補採用 209 → Research完了 70 → Repo収録 70**
+**探索評価 637 → 重複除外後 373 → Research候補採用 209 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -158,6 +158,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-moe-inference-1**
 | multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
 | speculative decoding serving・composite multimodal serving | 4 | 0 | 3 | 0.0% | 75.0% |
+| ssd-kv-cache-heterogeneous-gpu-serving-orchestration | 4 | 0 | 0 | 0.0% | 0.0% |
 | エージェントサンドボックス・OS資源管理・状態管理 | 4 | 0 | 4 | 0.0% | 100.0% |
 | エージェント型サービング・KV再利用・ツール呼び出し待機 | 4 | 0 | 1 | 0.0% | 25.0% |
 | エージェント推論・speculative tool execution | 4 | 2 | 2 | 50.0% | 50.0% |
@@ -200,11 +201,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-moe-inference-1**
 
 ### 直近5探索round
 
+- **2026-09-13T09:00:00+09:00** — ssd-kv-cache-heterogeneous-gpu-serving-orchestration: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T09:00:00+09:00** — moe-cache-aware-routing-expert-skipping-fine-grained-execution: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T08:26:04+09:00** — 直近新着・hierarchical memory・serving runtime横断再確認: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T08:26:04+09:00** — network・collective通信・distributed inference: 評価 7 / 重複 7 / 採用 0
 - **2026-09-13T08:26:04+09:00** — GPU runtime安全性・software aging・many-core CPU inference: 評価 9 / 重複 6 / 採用 3
-- **2026-09-13T08:26:04+09:00** — agent workspace仮想化・NVMe階層・長時間runtime state: 評価 6 / 重複 3 / 採用 2
 
 ## 最近処理した論文
 
