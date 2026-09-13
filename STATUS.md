@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 14:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 14:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,11 +37,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **177** |
-| 処理中（Active claims） | **41** |
-| 今すぐ着手可能（Claimable） | **136** |
+| 処理中（Active claims） | **44** |
+| 今すぐ着手可能（Claimable） | **133** |
 | 最新通常run | **2026-09-13T13:30:00+09:00** |
 | 最新通常runのResearch完了 | **3** |
-| 最古claimの経過時間 | **127 min** |
+| 最古claimの経過時間 | **133 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -63,7 +63,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 探索専用worker run（毎時枠） | **18** |
 | 探索専用worker round（stats観測） | **147** |
 | 通常worker run（ledger観測） | **23** |
-| Fallback archive（全helper） | **9** |
+| Fallback archive（全helper） | **10** |
 
 ### 24時間の流れ
 
@@ -86,11 +86,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
-- P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
-- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P87 `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
 - P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
+- P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
+- P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
+- P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 
 ## 参考情報
 
