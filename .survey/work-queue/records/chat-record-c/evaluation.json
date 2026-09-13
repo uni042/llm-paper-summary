@@ -1,1 +1,17 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2606.06453-20260913-0930-v10-c","job_id":"job-research-8df4b126a68a6be4","data":{"hardware":"Qwen3 0.6B、1.7B、4B、8BはNVIDIA H200 SXM 141GBで評価する。GLM-4.7-Flashは単一NVIDIA B200、MiniMax-M2.7 229BはNVIDIA B200×4をテンソル並列4で使用する。","software":"SGLang v0.5.9へVortexを統合し、GQAはFlashInferおよびTensorRT-LLM MHA、MLAはTensorRT-LLM MLAと独自cuda_mlaを使用する。公式vortex_torch実装・文書が公開されている。","methodology":"Qwen3系列ではBlock top-kとQuestを比較し、ブロックサイズ16、参照ブロック数32〜256を掃引する。AMC23/AIME24は入力最大4K、生成最大16Kでエンドツーエンド生成スループットと精度を測る。利用者側遅延は16K合成入力、512トークン生成、1〜8 req/s、P1D1分離構成でP95 TPOTを測る。GLM-4.7-FlashはAIME26・32K生成でMLA用rope-aware方式を評価し、MiniMax-M2.7はAIME26・32K生成・B200×4で大規模モデルへの拡張性を測る。AIエージェント評価ではQwen3-1.7B/H200でRULER、AMC23、AIME24を段階評価する。","scope":"実機のエンドツーエンド評価を含むが、Vortexが最適化するのは主にデコードで、プリフィルは未対応である。229B TP4では重み・通信の比率が増え、KV読み出し削減の相対効果が小さくなる。GLMの完全注意比較はベンダーMLA形状非対応により遅いTritonへ退避する条件なので、4.7倍という最大値の解釈には注意が必要である。","workloads":["Qwen3-0.6B","Qwen3-1.7B","Qwen3-4B","Qwen3-8B","GLM-4.7-Flash","MiniMax-M2.7 229B","RULER","AMC23","AIME24","AIME26"],"baselines":["SGLang完全注意","Block top-k","Quest"],"metrics":["エンドツーエンド生成スループット","精度","mean@16","pass@4","pass@8","P95 TPOT","top-k索引再現率","カーネル遅延"],"reproducibility":"公式コード、Webサイト、文書が公開され、対象モデル、GPU、SGLang版、ブロックサイズ、参照ブロック数、入力・生成長、要求率が記載されている。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-113547512aeab9c5fa6c73f4",
+  "job_id": "job-research-e355b9d9df6bf3d0",
+  "data": {
+    "hardware": "単一サーバ実機はNVIDIA H100 80GB GPU×8で、GPU間を第4世代NVLink、各GPUとCPUをPCIe 5.0 x16で接続する。故障トレースの長時間評価ではこの8GPUサーバを8個の独立した8GPUノードとして模擬し、完全稼働時64GPU相当のクラスタとして集約スループットを算出する。",
+    "software": "FailSafeは約7千行の独自軽量推論エンジンへ実装され、正常時性能はvLLMとSGLangに匹敵すると報告される。評価モデルはLLaMA-3.1-70B-InstructとMixtral-8x22B-Instruct-v0.1。",
+    "methodology": "オフライン評価ではGCPクラウド可用性データ由来の実故障トレースを64GPU相当に拡大し、各故障イベントで8ノード中のGPUを無作為に1台停止、回復イベントで故障GPUを1台復帰させる。各構成切替時間は全方式共通で10秒に固定する。ワークロードはOpenThoughts-114kで、入力長平均422、出力長平均7295トークンの長文推論を用いる。標準方式は各ノードのテンソル並列台数を1・2・4・8台に制限し、FailSafeはモデルがメモリへ収まる範囲で任意台数を使う。オンライン評価はMooncake実会話トレースから3000要求を抽出し、到着時刻を伸縮して要求率を変え、プリフィルでは最初のトークンまでの時間、デコードではトークン間時間とトークンスループットを測る。詳細な復旧試験ではLLaMA-3.1-70Bの500要求区間を再生し、250番目の要求から100ミリ秒後にGPUを1台故障させ、KV再計算、CPU側KVバックアップ、必要重みのみの完全復旧、理想復旧を比較する。",
+    "scope": "主評価は単一ノード内のテンソル並列であり、複数ノード間のNUMAやネットワーク障害は未評価である。故障トレース自体は実クラウド由来だが、多ノード長時間評価は単一8GPU機を複数ノードとして模擬する。対象はGPUが完全に停止し、残りGPUで再構成できる硬故障であり、性能劣化だけが起きる部分故障、NVLink障害、CPUやストレージ障害などは直接扱わない。",
+    "workloads": ["LLaMA-3.1-70B-Instruct", "Mixtral-8x22B-Instruct-v0.1", "OpenThoughts-114k", "Mooncake会話トレース", "GCPクラウド由来GPU可用性トレース"],
+    "baselines": ["標準テンソル並列4台縮退", "故障なしテンソル並列8台", "利用可能GPU数へ線形比例した理想上限", "単純な不均一テンソル並列7台", "KV再計算による復旧", "CPU側KV復元", "理想メタデータ復旧"],
+    "metrics": ["平均トークンスループット", "最初のトークンまでの時間", "トークン間時間", "最大トークン間時間", "GPU状態復旧遅延", "故障なし上限に対する達成率"],
+    "reproducibility": "GPU構成、モデル、トレース、要求長統計、各比較方式、故障注入位置、復旧内訳は論文に記載されている。一方、FailSafe本体の公式コード公開先は確認できず、独自推論エンジンの実装詳細すべてを追試できる状態ではない。"
+  }
+}
