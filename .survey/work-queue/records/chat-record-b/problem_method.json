@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-389c48ae1c77e47b79167493",
+  "attempt_id": "attempt-52289f335a036782c4d9be15",
   "job_id": "job-research-234066475107816a",
   "data": {
     "problem": "既存の位置非依存キャッシュは、独立セグメントごとにトークン単位KVを保存し、要求ごとに任意位置へ連結した後、文脈差が大きい一部トークンだけを再計算する。しかしハイブリッド注意モデルでは大半の層が線形注意で、履歴をトークン別KVではなく1要求あたり固定サイズの再帰状態へ圧縮する。そのためトークン軸での連結対象がなく、独立セグメントの終端状態を単純加算すると減衰・ゲート・delta更新に含まれる遷移作用を失って大きな構造誤差が出る。少数残る全注意層でも、選択トークンを再計算しようとすると途中の線形層が非終端トークンの再帰状態を保存していないため、既存PICの任意トークン補正を実行できない。さらにキャッシュミス時は既存PICも長い要求を単一インスタンスでprefillし、長いコールド要求がTTFTの裾を支配する。",
@@ -29,8 +29,8 @@
     "system_design": "SGLangへ約14k行のPython/Tritonで実装し、PIC_SEPARATORでsegment境界をアプリケーションから渡す。sglang_routerはsegment hashによるhit照会、combine worker選択、LPT scatter割当を担当する。線形attentionのS_C|0とT_CはFLA kernelを2回使い、S0=0で状態を、S0=Iかつwrite項を0にしてT積を構築する。NIXLがworker間GPU cacheをRDMA転送し、Assemblerが線形state composition、seam forward、full-attention KV位置補正を実行する。"
   },
   "reservation": {
-    "claim_id": "claim-389c48ae1c77e47b79167493",
-    "worker_id": "scheduled-chat-discovery-specialist-run08",
+    "claim_id": "claim-52289f335a036782c4d9be15",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

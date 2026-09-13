@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-389c48ae1c77e47b79167493",
+  "attempt_id": "attempt-52289f335a036782c4d9be15",
   "job_id": "job-research-234066475107816a",
   "data": {
     "hardware": "単一ノードにNVIDIA H20-3e 141GBを8基搭載し、18-link NVLinkで全結合する。CPUはdual-socket Intel Xeon 6759P-C計120物理コア、DDR5 DRAM 2TB。Mellanox ConnectX RDMA NICを6基備え、200Gbps HDR/400Gbps NDRを使用する。",
@@ -37,8 +37,8 @@
     "reproducibility": "ハードウェア構成、4 model構成、5 workload、比較方式、既定seam width=8、cold-prefill worker数、SGLang/NIXL/FLAを含む実装方式が記載されている。HYPIC本体の公式公開コードURLは2026-09-14時点で論文から確認できないため、14k行規模の変更を完全再現するには独自実装が必要である。"
   },
   "reservation": {
-    "claim_id": "claim-389c48ae1c77e47b79167493",
-    "worker_id": "scheduled-chat-discovery-specialist-run08",
+    "claim_id": "claim-52289f335a036782c4d9be15",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
