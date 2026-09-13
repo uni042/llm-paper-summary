@@ -74,6 +74,12 @@ class StatusPublishGateTests(unittest.TestCase):
             "true",
         )
 
+    def test_merge_commit_publishes_even_when_diff_tree_emits_no_paths(self):
+        self.assertEqual(
+            self.run_gate([], message="Merge workflow-v10 transport cleanup"),
+            "true",
+        )
+
     def test_dashboard_self_commit_does_not_republish(self):
         self.assertEqual(
             self.run_gate([
