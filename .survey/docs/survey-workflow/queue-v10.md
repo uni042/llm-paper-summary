@@ -215,7 +215,9 @@ Surveyと判定した論文を `papers/inference/**` へ保存してはならな
 ### Claim transport
 
 Claim requests are immutable JSON files in `claim-requests/`; Actions writes one
-result and one current claim per assigned job. Requests default to one job and an
-8-hour lease, and only ready research/audit jobs are eligible. An expired current
-claim remains valid for its worker until a newer assignment replaces the current
-claim file. Results are authoritative on rerun, so a request is never expanded.
+result and one current claim per assigned job. Requests default to one job and a
+90-minute (5400-second) lease, and only ready research/audit jobs are eligible.
+Expired claim files remain on disk as durable history, but an expired claim is no
+longer active and no longer blocks a new assignment. A worker must renew before
+expiry or obtain a fresh claim before submitting work. Results are authoritative
+on rerun, so a request is never expanded.
