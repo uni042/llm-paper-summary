@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:08:28+00:00",
+  "updated_at": "2026-09-13T02:10:54+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-lineage-forward-backward-3",
+  "last_round": "specialist-heterogeneous-offload-4",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "異種実行・オフロード軸の強候補4件はすべて正本で既収録または既存job化されていた。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2930,6 +2930,26 @@
       ],
       "next_axis_hint": "GPU runtime/kernelの既収録確認後、SSD/CXL階層メモリやagent長時間推論の隣接軸を確認する",
       "source_submission": "work-queue/submissions/20260913T1108JST-discovery-specialist-lineage-3.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-heterogeneous-offload-4",
+      "axis": "CPU/GPU・NPU/PIM異種実行と階層オフロード",
+      "query_summary": "CPU/GPUハイブリッドKV・テンソル粒度配置、NPU/PIM動的演算配置、prefill/decode競合制御を横断確認した。HybridGen 2604.18529はidentity delta、ATSInfer 2607.10183とDOPS 2607.25498は既存research job、2602.02987はidentity deltaで既収録を確認したため新規強候補は残らなかった。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2604.18529",
+        "arxiv:2607.10183",
+        "arxiv:2607.25498",
+        "arxiv:2602.02987"
+      ],
+      "next_axis_hint": "GPU runtime/kernel、SSD/CXL、disaggregated servingの強候補は既収録率が高いため、最後に2026年9月新着のspeculative decoding・agent servingと隣接領域を広く確認する",
+      "source_submission": "work-queue/submissions/20260913T1110JST-discovery-specialist-heterogeneous-4.json"
     }
   ],
   "axes": {
@@ -4572,6 +4592,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "GPU runtime/kernelの既収録確認後、SSD/CXL階層メモリやagent長時間推論の隣接軸を確認する"
+    },
+    "CPU/GPU・NPU/PIM異種実行と階層オフロード": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 0,
+      "accepted_count": 0,
+      "duplicate_ratio": 1.0,
+      "next_axis_hint": "GPU runtime/kernel、SSD/CXL、disaggregated servingの強候補は既収録率が高いため、最後に2026年9月新着のspeculative decoding・agent servingと隣接領域を広く確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
