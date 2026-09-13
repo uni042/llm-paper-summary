@@ -15,7 +15,6 @@ from typing import Any
 from zoneinfo import ZoneInfo
 
 JST = ZoneInfo("Asia/Tokyo")
-TARGET_INVENTORY = 50
 LOW_WATERMARK = 25
 CRITICAL_WATERMARK = 15
 
@@ -43,13 +42,13 @@ def _in_window(item: dict[str, Any], cutoff: datetime, now: datetime) -> bool:
     return cutoff <= dt.astimezone(timezone.utc) <= now.astimezone(timezone.utc)
 
 
+def _run_minute(item: dict[str, Any]) -> int | None:
+    dt = _parse_dt(item.get("run_key"))
+    return None if dt is None else dt.astimezone(JST).minute
+
+
 def _fmt_pct(num: int, den: int) -> str:
     return "—" if den <= 0 else f"{100.0 * num / den:.1f}%"
-
-
-def _fmt_dt(value: str | None) -> str:
-    dt = _parse_dt(value)
-    return "—" if dt is None else dt.astimezone(JST).strftime("%Y-%m-%d %H:%M JST")
 
 
 def _sum_counts(entries: list[dict[str, Any]]) -> dict[str, int]:
@@ -68,15 +67,6 @@ def _sum_counts(entries: list[dict[str, Any]]) -> dict[str, int]:
         for key in keys:
             out[key] += int(counts.get(key) or 0)
     return out
-
-
-def _research_jobs_added(entries: list[dict[str, Any]]) -> int:
-    return sum(
-        1
-        for entry in entries
-        for job in (entry.get("new_jobs") or [])
-        if job.get("type") == "research" and job.get("status") not in {"superseded", "duplicate"}
-    )
 
 
 def _recent_completed(entries: list[dict[str, Any]], limit: int = 8) -> list[dict[str, Any]]:
@@ -109,6 +99,60 @@ def _axis_rows(history: list[dict[str, Any]]) -> list[tuple[str, int, int, int]]
     )
 
 
+def _group_discovery_runs(
+    history: list[dict[str, Any]],
+    *,
+    minute: int | None = None,
+) -> list[dict[str, Any]]:
+    """Aggregate discovery rounds by Scheduled Chat run_key.
+
+    The specialist Scheduled Chat runs at :00 JST and the normal worker at :30
+    JST. discovery-state.json carries the original Scheduled Chat run_key, so it
+    is the authoritative source for worker attribution. The run ledger is not:
+    helper events can be merged into the latest normal-worker maintenance bucket.
+    """
+    grouped: dict[str, dict[str, Any]] = {}
+    for row in history:
+        if minute is not None and _run_minute(row) != minute:
+            continue
+        run_key = str(row.get("run_key") or "")
+        if not run_key:
+            continue
+        item = grouped.setdefault(
+            run_key,
+            {
+                "run_key": run_key,
+                "round_count": 0,
+                "axes": [],
+                "candidate_count": 0,
+                "duplicate_filtered_count": 0,
+                "novel_candidate_count": 0,
+                "accepted_count": 0,
+            },
+        )
+        item["round_count"] += 1
+        axis = str(row.get("axis") or "未分類")
+        if axis not in item["axes"]:
+            item["axes"].append(axis)
+        item["candidate_count"] += int(row.get("candidate_count") or 0)
+        item["duplicate_filtered_count"] += int(row.get("duplicate_filtered_count") or 0)
+        item["novel_candidate_count"] += int(row.get("novel_candidate_count") or 0)
+        item["accepted_count"] += int(row.get("accepted_count") or 0)
+
+    def sort_key(item: dict[str, Any]):
+        return _parse_dt(item.get("run_key")) or datetime.min.replace(tzinfo=timezone.utc)
+
+    return sorted(grouped.values(), key=sort_key)
+
+
+def _normal_blocked(entry: dict[str, Any]) -> int:
+    return sum(
+        1
+        for transition in (entry.get("terminal_transitions") or [])
+        if transition.get("to") == "blocked" and transition.get("type") in {"research", "audit"}
+    )
+
+
 def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     now = now or datetime.now(timezone.utc)
     if now.tzinfo is None:
@@ -132,25 +176,37 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     ledger_entries = [e for e in (ledger.get("entries") or []) if isinstance(e, dict)]
     discovery_history = [e for e in (discovery.get("history") or []) if isinstance(e, dict)]
     ledger_24 = [e for e in ledger_entries if _in_window(e, cutoff_24h, now_utc)]
-    discovery_24 = [e for e in discovery_history if _in_window(e, cutoff_24h, now_utc)]
     counts_24 = _sum_counts(ledger_24)
 
-    evaluated_24 = sum(int(e.get("candidate_count") or 0) for e in discovery_24)
-    duplicate_24 = sum(int(e.get("duplicate_filtered_count") or 0) for e in discovery_24)
-    accepted_24 = sum(int(e.get("accepted_count") or 0) for e in discovery_24)
-    novel_24 = sum(int(e.get("novel_candidate_count") or 0) for e in discovery_24)
-    research_added_ledger = _research_jobs_added(ledger_24)
-    # discovery-state is the authoritative final-dedupe count for discovery submissions.
-    research_candidates_24 = accepted_24 if discovery_24 else research_added_ledger
+    # Attribution is based on the run_key stored in discovery-state, not on the
+    # run-ledger bucket. The ledger intentionally merges helper events under the
+    # latest maintenance-cycle run key and therefore can mix specialist events
+    # into a :30 normal-worker bucket.
+    specialist_history = [row for row in discovery_history if _run_minute(row) == 0]
+    normal_discovery_history = [row for row in discovery_history if _run_minute(row) == 30]
+    specialist_24 = [row for row in specialist_history if _in_window(row, cutoff_24h, now_utc)]
+    specialist_runs = _group_discovery_runs(specialist_history, minute=0)
+    specialist_runs_24 = _group_discovery_runs(specialist_24, minute=0)
+    normal_discovery_runs = _group_discovery_runs(normal_discovery_history, minute=30)
+    normal_discovery_by_key = {row["run_key"]: row for row in normal_discovery_runs}
+
+    evaluated_24 = sum(int(e.get("candidate_count") or 0) for e in specialist_24)
+    duplicate_24 = sum(int(e.get("duplicate_filtered_count") or 0) for e in specialist_24)
+    accepted_24 = sum(int(e.get("accepted_count") or 0) for e in specialist_24)
+    novel_24 = sum(int(e.get("novel_candidate_count") or 0) for e in specialist_24)
 
     latest_run = ledger_entries[-1] if ledger_entries else {}
     latest_run_counts = latest_run.get("counts") or {}
-    specialist_rounds = []
-    for row in discovery_history:
-        dt = _parse_dt(row.get("run_key"))
-        if dt and dt.astimezone(JST).minute == 0:
-            specialist_rounds.append(row)
-    latest_discovery = (specialist_rounds or discovery_history)[-1] if discovery_history else {}
+    latest_run_key = str(latest_run.get("run_key") or "")
+    latest_normal_discovery = normal_discovery_by_key.get(latest_run_key, {
+        "round_count": 0,
+        "candidate_count": 0,
+        "duplicate_filtered_count": 0,
+        "novel_candidate_count": 0,
+        "accepted_count": 0,
+        "axes": [],
+    })
+    latest_specialist = specialist_runs[-1] if specialist_runs else {}
 
     warnings: list[str] = []
     if ready < CRITICAL_WATERMARK:
@@ -164,13 +220,12 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     if maintenance.get("last_consistency_status") not in {None, "passed"}:
         warnings.append(f"Consistency check: **{maintenance.get('last_consistency_status')}**")
     if evaluated_24 and duplicate_24 / evaluated_24 >= 0.70:
-        warnings.append(f"直近24hの探索重複率が **{_fmt_pct(duplicate_24, evaluated_24)}** と高めです。探索軸の変更を優先。")
-    if research_candidates_24 > 0 and counts_24["research_completed"] > research_candidates_24 * 1.5:
-        warnings.append("Research消化が候補補充を上回っています。candidate枯渇に注意。")
-    if research_candidates_24 > counts_24["research_completed"] * 2 and research_candidates_24 >= 5:
+        warnings.append(f"直近24hの探索専用worker重複率が **{_fmt_pct(duplicate_24, evaluated_24)}** と高めです。探索軸の変更を優先。")
+    if accepted_24 > 0 and counts_24["research_completed"] > accepted_24 * 1.5:
+        warnings.append("Research消化が探索専用workerの候補補充を上回っています。candidate枯渇に注意。")
+    if accepted_24 > counts_24["research_completed"] * 2 and accepted_24 >= 5:
         warnings.append("候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。")
 
-    # Detect truncated discovery history: a full history buffer whose oldest row is newer than 24h.
     hist_limit = int(discovery.get("history_limit") or 0)
     if hist_limit and len(discovery_history) >= hist_limit:
         oldest = _parse_dt(discovery_history[0].get("run_key"))
@@ -186,7 +241,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "",
         "| 指標 | 状態 |",
         "|---|---:|",
-        f"| Candidate在庫（Research ready） | **{ready} / {TARGET_INVENTORY}** |",
+        f"| Candidate在庫（Research ready） | **{ready}** |",
         f"| Research ready | **{ready}** |",
         f"| Research blocked | **{blocked_now}** |",
         f"| Research deferred | **{deferred_now}** |",
@@ -210,64 +265,69 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "|---|---:|",
         f"| Research完了 | **{int(latest_run_counts.get('research_completed') or 0)}** |",
         f"| Audit完了 | **{int(latest_run_counts.get('audit_completed') or 0)}** |",
-        f"| Discovery完了 | **{int(latest_run_counts.get('discovery_completed') or 0)}** |",
-        f"| 新規job | **{int(latest_run_counts.get('new_jobs') or 0)}** |",
+        f"| 通常worker Discovery round | **{int(latest_normal_discovery.get('round_count') or 0)}** |",
+        f"| 通常worker Discovery採用 | **{int(latest_normal_discovery.get('accepted_count') or 0)}** |",
         f"| Repo収録 | **{int(latest_run_counts.get('new_papers') or 0)}** |",
-        f"| Blocked遷移 | **{int(latest_run_counts.get('blocked') or 0)}** |",
+        f"| Research/Audit blocked遷移 | **{_normal_blocked(latest_run)}** |",
         "",
-        "## 直近の探索専用worker / 探索round",
+        "> Discoveryは `discovery-state.json` のrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。",
         "",
-        f"Run: **{latest_discovery.get('run_key', '—')}** / Round: **{latest_discovery.get('round', '—')}**",
+        "## 直近の探索専用worker",
+        "",
+        f"Run: **{latest_specialist.get('run_key', '—')}**",
         "",
         "| 指標 | 値 |",
         "|---|---:|",
-        f"| 探索軸 | {latest_discovery.get('axis', '—')} |",
-        f"| 評価候補 | **{int(latest_discovery.get('candidate_count') or 0)}** |",
-        f"| 重複除外 | **{int(latest_discovery.get('duplicate_filtered_count') or 0)}** |",
-        f"| Novel候補 | **{int(latest_discovery.get('novel_candidate_count') or 0)}** |",
-        f"| Research候補採用 | **{int(latest_discovery.get('accepted_count') or 0)}** |",
-        f"| 重複率 | **{_fmt_pct(int(latest_discovery.get('duplicate_filtered_count') or 0), int(latest_discovery.get('candidate_count') or 0))}** |",
+        f"| 探索round | **{int(latest_specialist.get('round_count') or 0)}** |",
+        f"| 探索軸 | {' / '.join(latest_specialist.get('axes') or []) or '—'} |",
+        f"| 評価候補 | **{int(latest_specialist.get('candidate_count') or 0)}** |",
+        f"| 重複除外 | **{int(latest_specialist.get('duplicate_filtered_count') or 0)}** |",
+        f"| Novel候補 | **{int(latest_specialist.get('novel_candidate_count') or 0)}** |",
+        f"| Research候補採用 | **{int(latest_specialist.get('accepted_count') or 0)}** |",
+        f"| 重複率 | **{_fmt_pct(int(latest_specialist.get('duplicate_filtered_count') or 0), int(latest_specialist.get('candidate_count') or 0))}** |",
         "",
         "## 直近24時間",
         "",
         "| 指標 | 件数 / 率 |",
         "|---|---:|",
         f"| 通常worker run（ledger観測） | **{len(ledger_24)}** |",
-        f"| 探索round（stats観測） | **{len(discovery_24)}** |",
+        f"| 探索専用worker run（stats観測） | **{len(specialist_runs_24)}** |",
+        f"| 探索専用worker round（stats観測） | **{len(specialist_24)}** |",
         f"| 探索評価候補 | **{evaluated_24}** |",
         f"| 重複除外 | **{duplicate_24}** |",
         f"| 重複率 | **{_fmt_pct(duplicate_24, evaluated_24)}** |",
         f"| Novel候補 | **{novel_24}** |",
-        f"| Research候補採用 | **{research_candidates_24}** |",
+        f"| Research候補採用 | **{accepted_24}** |",
         f"| Research完了 | **{counts_24['research_completed']}** |",
         f"| Repo収録 | **{counts_24['new_papers']}** |",
         f"| Audit完了 | **{counts_24['audit_completed']}** |",
-        f"| Blocked遷移 | **{counts_24['blocked']}** |",
-        f"| Fallback archive | **{counts_24['fallback_archived']}** |",
+        f"| Fallback archive（全helper） | **{counts_24['fallback_archived']}** |",
         "",
         "### 24時間ファネル",
         "",
-        f"**探索評価 {evaluated_24} → 重複除外後 {max(evaluated_24 - duplicate_24, 0)} → Research候補採用 {research_candidates_24} → Research完了 {counts_24['research_completed']} → Repo収録 {counts_24['new_papers']}**",
+        f"**探索専用worker評価 {evaluated_24} → 重複除外後 {max(evaluated_24 - duplicate_24, 0)} → Research候補採用 {accepted_24} → Research完了 {counts_24['research_completed']} → Repo収録 {counts_24['new_papers']}**",
         "",
-        "## 探索効率（直近24時間）",
+        "## 探索専用workerの探索効率（直近24時間）",
         "",
         "| 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |",
         "|---|---:|---:|---:|---:|---:|",
     ]
-    axis_rows = _axis_rows(discovery_24)
+    axis_rows = _axis_rows(specialist_24)
     if axis_rows:
         for axis, cand, dup, accepted in axis_rows:
             lines.append(f"| {axis} | {cand} | {dup} | {accepted} | {_fmt_pct(dup, cand)} | {_fmt_pct(accepted, cand)} |")
     else:
         lines.append("| — | 0 | 0 | 0 | — | — |")
 
-    lines += ["", "### 直近5探索round", ""]
-    for row in discovery_history[-5:][::-1]:
+    lines += ["", "### 直近5探索専用worker run", ""]
+    for run in specialist_runs[-5:][::-1]:
+        axes = " / ".join(run.get("axes") or []) or "未分類"
         lines.append(
-            f"- **{row.get('run_key', '—')}** — {row.get('axis', '未分類')}: "
-            f"評価 {int(row.get('candidate_count') or 0)} / 重複 {int(row.get('duplicate_filtered_count') or 0)} / 採用 {int(row.get('accepted_count') or 0)}"
+            f"- {run.get('run_key', '—')} — {int(run.get('round_count') or 0)} round: "
+            f"評価 {int(run.get('candidate_count') or 0)} / 重複 {int(run.get('duplicate_filtered_count') or 0)} / "
+            f"採用 {int(run.get('accepted_count') or 0)} / 軸 {axes}"
         )
-    if not discovery_history:
+    if not specialist_runs:
         lines.append("- 履歴なし")
 
     lines += ["", "## 最近処理した論文", "", "### Research完了", ""]
@@ -284,7 +344,6 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     if not next_research:
         lines.append("- ready候補なし")
 
-    # Seven-day comparison is only meaningful when the durable ledger actually covers seven days.
     earliest_ledger = _parse_dt(ledger_entries[0].get("run_key")) if ledger_entries else None
     lines += ["", "## 7日比較", ""]
     if earliest_ledger is None or earliest_ledger.astimezone(timezone.utc) > cutoff_7d:
