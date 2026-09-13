@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-aef337aaa1c0f49c",
+  "type": "research",
+  "parent_job_id": "job-6f74bbb026a96c98",
+  "priority": 83,
+  "canonical_id": "arXiv:2608.08382",
+  "title": "LLMVisor: A Real-Time Latency Attribution Model for Multi-Tenant LLM Serving",
+  "source_url": "https://arxiv.org/abs/2608.08382",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md",
+  "selection_reason": "co-batchingされたmulti-tenant推論ではrequest/tenantごとのlatency寄与が見えず、fractional sharingや公平制御の基礎計測が欠ける問題に対し、roofline-guidedなpiecewise-linear modelでbatch latencyをrequest別へ加法分解する。A100/H100、Llama 3.1-8BとQwen 2.5-14B/32Bでmicrosecond級推定を行い、token-count baseline比でprefill/decodeの高percentile相対誤差を最大4.4倍改善と報告する。scheduler内で使える軽量attribution primitiveとして新しい設計点。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T00:44:57+00:00",
+  "artifact_transport": "structured_record_v10"
+}

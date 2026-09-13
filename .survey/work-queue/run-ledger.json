@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:43:56.343074+00:00",
+  "updated_at": "2026-09-13T00:45:44.691139+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:43:56.343074+00:00",
+      "last_recorded_at": "2026-09-13T00:45:44.691139+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16423,9 +16423,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 13,
         "new_papers": 1,
         "fallback_archived": 0
       },
@@ -16500,6 +16500,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34728746387:1",
+          "recorded_at": "2026-09-13T00:45:44.691139+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728746387",
+            "run_attempt": "1",
+            "source_sha": "d151d094fae943dba58c41fde31d2e46414e4269"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16537,6 +16551,14 @@
         },
         {
           "job_id": "job-f17d3d9e58cabe5c",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-6f74bbb026a96c98",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16614,6 +16636,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-ea7276e02d5dedfc",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-aef337aaa1c0f49c",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.08382",
+          "title": "LLMVisor: A Real-Time Latency Attribution Model for Multi-Tenant LLM Serving"
+        },
+        {
+          "job_id": "job-research-f3164989857499bb",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.05467",
+          "title": "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism"
         }
       ],
       "new_paper_ids": [
@@ -16623,7 +16666,8 @@
         ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json",
         ".survey/work-queue/results/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json",
         ".survey/work-queue/results/20260913T0938JST-discovery-specialist-speculative-serving-4.json",
-        ".survey/work-queue/results/20260913T0941JST-discovery-specialist-network-saturation-5.json"
+        ".survey/work-queue/results/20260913T0941JST-discovery-specialist-network-saturation-5.json",
+        ".survey/work-queue/results/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
