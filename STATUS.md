@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 16:43 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 16:44 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -40,7 +40,7 @@
 | 処理中（Active claims） | **37** |
 | 今すぐ着手可能（Claimable） | **136** |
 | :30 通常worker Active claims | **28** |
-| :00 補助worker Active claims | **6** |
+| :00 補助worker Active claims | **4** |
 | その他/帰属不明 Active claims | **3** |
 | :30 通常worker 直近claim | **09-13 16:37 JST** |
 | :00 補助worker 直近claim | **09-13 16:36 JST** |
@@ -49,7 +49,7 @@
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古claimの経過時間 | **274 min** |
+| 最古claimの経過時間 | **276 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
