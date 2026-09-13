@@ -1,0 +1,63 @@
+name: Temporary state semantics and trigger cleanup
+
+on:
+  push:
+    branches:
+      - cleanup/state-semantics-and-fast-triggers
+    paths:
+      - '.github/workflows/tmp-apply-state-trigger-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: cleanup/state-semantics-and-fast-triggers
+
+      - name: Apply exact cleanup
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('.survey/scripts/select_record_bank.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''            result = read_object(results / kind / path.name)\n            if result and result.get("attempt_id") == attempt_id and result.get("job_id") == job_id:\n                continue\n'''
+          new = '''            result = read_object(results / kind / path.name)\n            if immutable_submission.result_is_success_for(result, descriptor):\n                continue\n'''
+          if text.count(old) != 1:
+              raise SystemExit('pending immutable bank owner target did not match exactly once')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+
+          path = Path('.github/workflows/survey-claim-fast.yml')
+          text = path.read_text(encoding='utf-8')
+          old = '''    paths:\n      - '.survey/work-queue/claim-requests/*.json'\n      - '.github/workflows/survey-claim-fast.yml'\n      - '.survey/scripts/claim_worker.py'\n      - '.survey/scripts/claim_worker_with_banks.py'\n      - '.survey/scripts/claim_state.py'\n      - '.survey/scripts/select_record_bank.py'\n      - '.survey/scripts/record_bank_config.py'\n      - '.survey/scripts/refresh_queue_snapshot.py'\n'''
+          new = '''    paths:\n      - '.survey/work-queue/claim-requests/*.json'\n'''
+          if text.count(old) != 1:
+              raise SystemExit('claim fast trigger target did not match exactly once')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+
+          path = Path('.github/workflows/survey-submission-fast.yml')
+          text = path.read_text(encoding='utf-8')
+          old = '''    paths:\n      - '.survey/work-queue/submissions/research/*.json'\n      - '.survey/work-queue/submissions/audit/*.json'\n      - '.github/workflows/survey-submission-fast.yml'\n      - '.survey/scripts/process_immutable_submission.py'\n      - '.survey/scripts/isolate_failed_immutable_submission.py'\n      - '.survey/scripts/immutable_submission.py'\n'''
+          new = '''    paths:\n      - '.survey/work-queue/submissions/research/*.json'\n      - '.survey/work-queue/submissions/audit/*.json'\n'''
+          if text.count(old) != 1:
+              raise SystemExit('submission fast trigger target did not match exactly once')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+
+      - name: Verify diff
+        run: |
+          git diff --check
+          git diff -- .survey/scripts/select_record_bank.py .github/workflows/survey-claim-fast.yml .github/workflows/survey-submission-fast.yml
+
+      - name: Commit cleanup
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add .survey/scripts/select_record_bank.py .github/workflows/survey-claim-fast.yml .github/workflows/survey-submission-fast.yml
+          git commit -m 'fix: align bank pending state and fast-lane triggers'
+          git push origin HEAD:cleanup/state-semantics-and-fast-triggers
