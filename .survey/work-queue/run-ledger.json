@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:31:33.257138+00:00",
+  "updated_at": "2026-09-13T00:34:45.874652+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16405,6 +16405,80 @@
         ".survey/work-queue/results/20260913T0841JST-discovery-specialist-network-saturation.json",
         ".survey/work-queue/results/20260913T0843JST-discovery-specialist-recent-crosscheck.json",
         ".survey/work-queue/results/20260913T0928JST-discovery-specialist-kv-compression-1.json"
+      ],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 393,
+      "paper_active_count_after": 393,
+      "last_successful_action": "discovery_or_queue_expanded"
+    },
+    {
+      "run_key": "2026-09-13T09:30:00+09:00",
+      "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
+      "last_recorded_at": "2026-09-13T00:34:45.874652+00:00",
+      "signals": [
+        "discovery_or_queue_expanded"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 1,
+        "blocked": 0,
+        "new_jobs": 3,
+        "new_papers": 0,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34728269408:1",
+          "recorded_at": "2026-09-13T00:34:45.874652+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728269408",
+            "run_attempt": "1",
+            "source_sha": "710663b58129641e3d1c7f8a23b11fd8e179c727"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-0eff3bf13eae4ddf",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-fd3fcf48ef13a75d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-389da9d1d9bafee9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.06068",
+          "title": "VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?"
+        },
+        {
+          "job_id": "job-research-6cb2a2d661fb6b3a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.27744",
+          "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving"
+        }
+      ],
+      "new_paper_ids": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,

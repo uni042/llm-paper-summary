@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-6cb2a2d661fb6b3a",
+  "type": "research",
+  "parent_job_id": "job-0eff3bf13eae4ddf",
+  "priority": 84,
+  "canonical_id": "arXiv:2605.27744",
+  "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+  "source_url": "https://arxiv.org/abs/2605.27744",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.27744-policy-driven-runtime-agentic-serving.md",
+  "selection_reason": "エージェント基盤が持つ役割・ID・遷移構造と、推論エンジンが持つ実行時イベントの断絶を埋める中間runtime layerを提案し、observe/score/predict/actの共通primitiveへcache、batching、speculation、fairnessなどの方針を載せる。具体例CacheSageでは5種の実multi-agent workloadでcache hit率を13〜37ポイント、平均TTFTを12〜29%、throughputを6〜14%改善しており、agent-aware servingを個別patchではなく明示的なruntime abstractionとして扱う点が重要。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T00:33:41+00:00",
+  "artifact_transport": "structured_record_v10"
+}

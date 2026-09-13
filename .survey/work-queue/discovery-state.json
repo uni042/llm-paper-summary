@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:30:14+00:00",
+  "updated_at": "2026-09-13T00:33:41+00:00",
   "last_run_key": "2026-09-13T09:28:10+09:00",
-  "last_round": "specialist-kv-compression-reuse-1",
+  "last_round": "specialist-agentic-serving-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2559,6 +2559,23 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "KV圧縮の直後反復を避け、GPU runtime/kernel compilation、MoE expert placement/cache、またはnetwork/RDMA disaggregated servingへ軸を変更する",
       "source_submission": "work-queue/submissions/20260913T0928JST-discovery-specialist-kv-compression-1.json"
+    },
+    {
+      "run_key": "2026-09-13T09:28:10+09:00",
+      "round": "specialist-agentic-serving-2",
+      "axis": "エージェント型LLM・サービングruntime・生成時特化",
+      "query_summary": "agentic servingのfront-end/runtime境界とサービング基盤自動生成を探索した。3本を実質評価し、TokTierは決定論的research jobを直接確認して既存readyと判定、VibeServeとpolicy-driven runtimeは最新HEADで対応job不在・repo内title不在を確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.29678"
+      ],
+      "next_axis_hint": "agentic軸の直後反復を避け、network/RDMA型分離サービング、GPU runtime/kernel compilation、または隣接OS/storageの推論向け資源管理へ移る",
+      "source_submission": "work-queue/submissions/20260913T0933JST-discovery-specialist-agentic-serving-2.json"
     }
   ],
   "axes": {
@@ -4001,6 +4018,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "KV圧縮の直後反復を避け、GPU runtime/kernel compilation、MoE expert placement/cache、またはnetwork/RDMA disaggregated servingへ軸を変更する"
+    },
+    "エージェント型LLM・サービングruntime・生成時特化": {
+      "last_run_key": "2026-09-13T09:28:10+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.3333333333333333,
+      "next_axis_hint": "agentic軸の直後反復を避け、network/RDMA型分離サービング、GPU runtime/kernel compilation、または隣接OS/storageの推論向け資源管理へ移る"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
