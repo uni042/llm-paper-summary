@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-1a2f27db29cc21845919957d",
   "job_id": "job-research-2b6e9eed52cd4c32",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a2f27db29cc21845919957d",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "単一ノード8×NVIDIA H800 80GB（約3.3TB/s HBM、PCIe Gen5 x16）、2×Intel Xeon Platinum 8468V、2TB DDR、14TB NVMe RAID-0。PD分離は4本のRoCE v2、単方向約200Gbps。",
+    "software": "Ubuntu 24.04、CUDA 12.9、PyTorch 2.9.1、Triton 3.5.1、Transformers 4.57.1、Transformer Engine 2.10.0、SGLang。PD分離ではcustomized vLLM 0.13.0。",
+    "methodology": "Mistral-7B、Qwen3-32B、Llama-3.3-70B、Qwen3.5-397B-A17B、DeepSeek-V4-Flashを対象に、HotpotQA、MuSiQue、2WikiMQA、TriviaQA、MultiFieldQA、Qasper、NarrativeQA、GovReport等を8K〜128Kへ構成する。品質はF1、EM、dense recomputeに対するfirst-token logit cosine、top-1/top-10 agreementで測る。性能はTTFT、prefill FLOPs、KV転送量、QPS/GPU、GPU当たり同時session数、SegPagedAttention単体kernel latencyを測り、dense HuggingFace/FlashAttention-3、SGLang、vLLM型PD、CacheBlend、ProphetKVと比較する。オフラインsegment prefillはonline TTFTから除外し、必要な実験では別途計上する。",
+    "scope": "主要性能評価は8×H800単一ノードであり、複数ノードに跨る分散KV配置の完全な評価ではない。head分類とsparse FFN閾値はcalibration RAG promptから決めるため、モデル・task分布が変われば再profileが必要。品質と速度の両立は選択したglobal-head比率・local window・FFN sparsityに依存する。",
+    "workloads": ["8K–128K RAG/long-context QA","position-independent chunk reuse","SegPagedAttention microbenchmarks","PD-disaggregated KV transfer","MuSiQue real request-stream cache lifecycle replay","bursty serving concurrency"],
+    "baselines": ["dense HuggingFace SDPA","FlashAttention-3 dense recompute","SGLang","vLLM-style PD serving","CacheBlend","ProphetKV"],
+    "metrics": ["TTFT and TTFT speedup","F1 and EM","first-token logit cosine","top-1/top-10 agreement","prefill FLOPs","QPS/GPU","KV transfer bytes/time","concurrent sessions/GPU","attention kernel latency"],
+    "reproducibility": "ハードウェア・ソフトウェア版、各モデルのTP/PP構成、head budget、window、sparse-FFN閾値、dataset、比較方式が本文に明記され、公式GitHubも公開されている。"
+  },
+  "reservation": {"claim_id":"claim-1a2f27db29cc21845919957d","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
