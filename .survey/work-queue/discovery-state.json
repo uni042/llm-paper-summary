@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:02:47+00:00",
+  "updated_at": "2026-09-13T02:06:03+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-recent-kv-1",
+  "last_round": "specialist-moe-edge-2",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 3,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2892,6 +2892,26 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はMoE expert placement/cache/prefetchかGPU runtime/kernelの2026年9月新着へ軸を移す",
       "source_submission": "work-queue/submissions/20260913T1100JST-discovery-specialist-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-moe-edge-2",
+      "axis": "MoE専門家先読み・エッジ投機実行",
+      "query_summary": "前roundのKV軸から独立して、MoE expert prefetch、edge speculative decoding、無線分散expert、活性expert削減を軽量評価した。APEX 2608.11688、EdgeXpert 2608.05303、AirMoE 2608.22932、2609.04575はidentity deltaまたは既存jobで重複確認し、S2-MoE 2608.15018だけを最新HEADで再dedupe後に投入した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2608.11688",
+        "arxiv:2608.05303",
+        "arxiv:2608.22932",
+        "arxiv:2609.04575"
+      ],
+      "next_axis_hint": "GPU runtime/kernel・圧縮重み融合カーネル、または重要既収録論文のforward citationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T1105JST-discovery-specialist-moe-2.json"
     }
   ],
   "axes": {
@@ -4514,6 +4534,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はMoE expert placement/cache/prefetchかGPU runtime/kernelの2026年9月新着へ軸を移す"
+    },
+    "MoE専門家先読み・エッジ投機実行": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8,
+      "next_axis_hint": "GPU runtime/kernel・圧縮重み融合カーネル、または重要既収録論文のforward citationへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
