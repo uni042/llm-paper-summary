@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import claim_state
+import immutable_submission
 
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 WORKER_KINDS = {"scheduled_chat", "work"}
@@ -173,12 +174,7 @@ def _immutable_descriptors(root: Path) -> list[dict[str, Any]]:
             if not isinstance(attempt_id, str) or not SAFE_ID_RE.fullmatch(attempt_id):
                 continue
             result = _read(results / kind / path.name)
-            if (
-                isinstance(result, dict)
-                and result.get("job_id") == job_id
-                and result.get("attempt_id") == attempt_id
-                and result.get("ok") is True
-            ):
+            if immutable_submission.result_is_success_for(result, value):
                 continue
             row = dict(value)
             row["kind"] = value.get("kind") or kind

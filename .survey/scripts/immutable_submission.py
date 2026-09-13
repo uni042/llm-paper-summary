@@ -79,14 +79,22 @@ def result_path_for(repo_root: Path, descriptor_path: Path) -> Path:
     return repo_root / ".survey/work-queue/results" / kind / descriptor_path.name
 
 
-def _result_matches(path: Path, descriptor: dict[str, Any]) -> bool:
-    result = _read_object(path)
+def result_matches_identity(result: Any, descriptor: dict[str, Any]) -> bool:
+    """Return whether a result belongs to the descriptor's exact attempt/job."""
     return bool(
-        result
-        and result.get("ok") is True
+        isinstance(result, dict)
         and result.get("attempt_id") == descriptor.get("attempt_id")
         and result.get("job_id") == descriptor.get("job_id")
     )
+
+
+def result_is_success_for(result: Any, descriptor: dict[str, Any]) -> bool:
+    """Return whether the exact descriptor has a successful terminal processor result."""
+    return result_matches_identity(result, descriptor) and result.get("ok") is True
+
+
+def _result_matches(path: Path, descriptor: dict[str, Any]) -> bool:
+    return result_is_success_for(_read_object(path), descriptor)
 
 
 def pending_descriptors(repo_root: Path) -> list[dict[str, Any]]:
