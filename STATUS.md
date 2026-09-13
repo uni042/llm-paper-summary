@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -245,11 +245,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
-- P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
-- P87 `arXiv:2607.07388` — TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models
 - P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
 - P87 `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
+- P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
+- P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
+- P87 `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
 
 ## 7日比較
 
@@ -267,12 +267,12 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | 指標 | 値 |
 |---|---:|
 | Research ready | **180** |
-| Active claims | **26** |
-| Claimable | **154** |
+| Active claims | **29** |
+| Claimable | **151** |
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
 | Research completed (24h) | **72** |
-| Oldest active claim age | **58 min** |
+| Oldest active claim age | **63 min** |
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
