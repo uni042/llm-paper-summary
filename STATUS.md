@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 02:53 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 03:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,11 +36,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **136** |
-| 処理中（Active claims） | **4** |
-| 今すぐ着手可能（Claimable） | **132** |
+| 処理中（Active claims） | **5** |
+| 今すぐ着手可能（Claimable） | **131** |
 | :30 通常worker Active claims | **3** |
 | :00 補助worker Active claims | **0** |
-| その他/帰属不明 Active claims | **1** |
+| その他/帰属不明 Active claims | **2** |
 | :30 通常worker 直近claim | **09-14 02:53 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **25** |
 | 最新通常run | **2026-09-14T02:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **32 min** |
+| 最古の有効claimの経過時間 | **41 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -95,11 +95,11 @@ Run: **2026-09-14T02:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
 - P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
 - P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
+- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 
 ## 参考情報
 
