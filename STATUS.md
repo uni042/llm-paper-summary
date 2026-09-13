@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **162** |
+| 未処理の論文候補（Research ready） | **161** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **227** |
+| 全文精読完了（累計） | **228** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **17 / 24** |
@@ -35,9 +35,9 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **162** |
+| 未処理候補（Research ready） | **161** |
 | 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **160** |
+| 今すぐ着手可能（Claimable） | **159** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **1** |
@@ -54,7 +54,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=162 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=161 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **33件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
 - P88 `arXiv:2512.22219` — Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs
 - P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
 - P88 `arXiv:2601.08800` — MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm
 - P88 `arXiv:2605.07238` — FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows
+- P88 `arXiv:2507.10069` — ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism
 
 ## 参考情報
 
