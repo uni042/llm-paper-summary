@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 17:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **172** |
+| 未処理の論文候補（Research ready） | **171** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **218** |
+| 全文精読完了（累計） | **219** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **issues_found** |
 | 次回保守までの通常run | **13 / 24** |
@@ -36,20 +36,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **172** |
-| 処理中（Active claims） | **39** |
+| 未処理候補（Research ready） | **171** |
+| 処理中（Active claims） | **38** |
 | 今すぐ着手可能（Claimable） | **133** |
 | :30 通常worker Active claims | **32** |
-| :00 補助worker Active claims | **4** |
+| :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 17:07 JST** |
+| :30 通常worker 直近claim | **09-13 17:12 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
-| 直近24h Research完了（:00 補助worker） | **4** |
+| 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古claimの経過時間 | **301 min** |
+| 最新通常runのResearch完了 | **3** |
+| 最古の有効claimの経過時間 | **304 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -62,8 +62,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **71** |
-| Repo収録 | **71** |
+| Research完了 | **72** |
+| Repo収録 | **72** |
 | Audit完了 | **0** |
 | 探索評価候補 | **720** |
 | Research候補採用 | **224** |
@@ -72,11 +72,11 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 探索専用worker run（毎時枠） | **17** |
 | 探索専用worker round（stats観測） | **146** |
 | 通常worker run（ledger観測） | **22** |
-| Fallback archive（全helper） | **17** |
+| Fallback archive（全helper） | **18** |
 
 ### 24時間の流れ
 
-**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 71 → Repo収録 71**
+**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 72 → Repo収録 72**
 
 ## 直近の通常worker
 
@@ -84,8 +84,8 @@ Run: **2026-09-13T16:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **2** |
-| Repo収録 | **2** |
+| Research完了 | **3** |
+| Repo収録 | **3** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
@@ -280,6 +280,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
 - `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
 - `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
 - `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
@@ -287,7 +288,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2607.07388` — TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models
 - `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
 - `arXiv:2502.09922` — λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
-- `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
 
 ### 7日比較
 
