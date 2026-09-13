@@ -145,6 +145,22 @@ class ImmutableBankReleaseTests(unittest.TestCase):
         self.assertEqual(bank_a["state"], "reusable")
         self.assertIn("immutable", bank_a["reason"])
 
+    def test_duplicate_bank_reuses_global_immutable_capture_from_another_bank(self):
+        descriptor = commit_attempt(self.repo, bank="a", attempt="attempt-a", job="job-a")
+        write_json(self.repo / ".survey/work-queue/jobs/job-a.json", {
+            "job_id": "job-a", "type": "research", "status": "ready",
+        })
+
+        duplicate_root = self.repo / BANK_ROOTS["g"]
+        for index, slot in enumerate(SLOT_NAMES):
+            payload = immutable_submission.read_record_slot(self.repo, descriptor["record_slots"][index])
+            write_json(duplicate_root / f"{slot}.json", payload)
+
+        result = select_record_bank.inspect(self.repo)
+        bank_g = next(row for row in result["banks"] if row["bank"] == "g")
+        self.assertEqual(bank_g["state"], "reusable")
+        self.assertIn("immutable", bank_g["reason"])
+
 
 if __name__ == "__main__":
     unittest.main()
