@@ -3,9 +3,14 @@
 
 The existing claim allocator remains authoritative for job ownership. This wrapper
 runs inside the serialized ``survey-claim-main`` lane and adds a record-bank
-reservation to each newly active research/audit claim. A reservation is encoded as
-five coherent empty slot envelopes, so existing bank inspection/fallback code sees
-the bank as occupied before a worker starts writing research content.
+reservation only to claims allocated by the current invocation. A reservation is
+encoded as five coherent empty slot envelopes, so existing bank inspection/fallback
+code sees the bank as occupied before a worker starts writing research content.
+
+During rollout, any active pre-reservation claim without a persisted bank fences new
+direct-bank allocation. New claims then use the durable Library fallback until the
+legacy claim completes/expires, avoiding collisions with a worker that may already
+have selected a bank under the old advisory protocol.
 """
 from __future__ import annotations
 
@@ -44,6 +49,14 @@ def _as_time(value: Any) -> dt.datetime | None:
     if isinstance(value, dt.datetime):
         return value.astimezone(dt.timezone.utc)
     return claim_state.parse_time(value)
+
+
+def _active_claim_ids(root: Path, now: dt.datetime) -> set[str]:
+    return {
+        str(claim.get("claim_id"))
+        for claim in claim_state.current_claims(root, now).values()
+        if claim.get("active") and claim.get("claim_id")
+    }
 
 
 def _reservation_payload(slot: str, claim: dict[str, Any]) -> dict[str, Any]:
@@ -111,7 +124,20 @@ def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None
         _write(result_path, result)
 
 
-def reserve_active_claim_banks(repo_root: Path, at: Any = None) -> dict[str, int]:
+def _persist_library_fallback(root: Path, claim: dict[str, Any]) -> None:
+    claim_path = root / ".survey/work-queue/claims" / f"{claim['job_id']}.json"
+    claim["record_bank"] = None
+    claim["record_bank_fallback"] = "library"
+    _write(claim_path, claim)
+    _persist_assignment_bank(root, claim, None)
+
+
+def reserve_new_claim_banks(
+    repo_root: Path,
+    *,
+    new_claim_ids: set[str],
+    at: Any = None,
+) -> dict[str, int]:
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
     claims = claim_state.current_claims(root, now)
@@ -122,10 +148,16 @@ def reserve_active_claim_banks(repo_root: Path, at: Any = None) -> dict[str, int
         for claim in claims.values()
         if claim.get("active") and str(claim.get("record_bank") or "").lower() in BANK_ROOTS
     }
+    legacy_unbanked_active = any(
+        claim.get("active")
+        and claim.get("claim_id") not in new_claim_ids
+        and str(claim.get("record_bank") or "").lower() not in BANK_ROOTS
+        for claim in claims.values()
+    )
 
     for job_id in sorted(claims):
         current = claims[job_id]
-        if not current.get("active"):
+        if not current.get("active") or current.get("claim_id") not in new_claim_ids:
             continue
         claim_path = root / ".survey/work-queue/claims" / f"{job_id}.json"
         claim = _read(claim_path)
@@ -140,12 +172,14 @@ def reserve_active_claim_banks(repo_root: Path, at: Any = None) -> dict[str, int
             _persist_assignment_bank(root, claim, existing)
             continue
 
+        if legacy_unbanked_active:
+            _persist_library_fallback(root, claim)
+            fallback += 1
+            continue
+
         bank = _available_bank(root, used)
         if bank is None:
-            claim["record_bank"] = None
-            claim["record_bank_fallback"] = "library"
-            _write(claim_path, claim)
-            _persist_assignment_bank(root, claim, None)
+            _persist_library_fallback(root, claim)
             fallback += 1
             continue
 
@@ -161,8 +195,16 @@ def reserve_active_claim_banks(repo_root: Path, at: Any = None) -> dict[str, int
 
 
 def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
-    result = claim_worker.process_requests(repo_root, at=at)
-    bank_result = reserve_active_claim_banks(repo_root, at=at)
+    root = Path(repo_root).resolve()
+    now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
+    before_claim_ids = _active_claim_ids(root, now)
+    result = claim_worker.process_requests(root, at=now)
+    after_claim_ids = _active_claim_ids(root, now)
+    bank_result = reserve_new_claim_banks(
+        root,
+        new_claim_ids=after_claim_ids - before_claim_ids,
+        at=now,
+    )
     return {**result, **{f"banks_{key}": value for key, value in bank_result.items()}}
 
 
