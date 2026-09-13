@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 19:09 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 19:10 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -41,14 +41,14 @@
 | :30 通常worker Active claims | **23** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 19:09 JST** |
+| :30 通常worker 直近claim | **09-13 19:10 JST** |
 | :00 補助worker 直近claim | **09-13 17:35 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **55** |
 | 最新通常run | **2026-09-13T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **421 min** |
+| 最古の有効claimの経過時間 | **422 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -97,7 +97,7 @@ Run: **2026-09-13T17:30:00+09:00**
 
 - P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
-- P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
+- P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
 - P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
 - P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
 
