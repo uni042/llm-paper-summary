@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-851ec2bd9cf38cc1c76afe61",
+  "attempt_id": "attempt-71eeb07c7f418a95df699ae8",
   "job_id": "job-research-f9d3c5ad391e4acc",
   "data": {
     "problem": "実運用のLoRAでは、同じ基盤モデルから多数の利用者・タスク向けadapterが派生し、adapterの微調整と更新済みadapterの推論配信を同時に行いたい。しかし既存系は推論専用のMulti-LoRA基盤とPEFT学習基盤が分離され、基盤モデルやランタイムを重複保持しやすい。Punica系の高速Multi-LoRA kernelは複数層のLoRA重みを静的に連結するため、層ごとに異なるLoRA構成や学習中の動的更新と相性が悪く、adapter交換時に計算を停止して重みを再構成する必要がある。FlexLLMのようなco-serving系も複数LoRAや一部backward演算に制約があり、推論・微調整・評価・prefill・decodeという異質な処理を同一forwardへまとめにくい。課題は、共有基盤重みを壊さず複数adapterを独立管理し、学習に必要なgradient経路と推論用高速kernelを共存させながら、異種要求を十分大きなbatchへ統合することである。",
@@ -25,8 +25,8 @@
     "system_design": "Model Libraryに共有Llama基盤を置き、その上にadapter単位のVirtualized ModelとMixedLoraModelを生成する。context managerが異種requestを一つのforwardへ構成し、linearはSMLM、推論attentionはFlashInfer、学習attention/backwardはPyTorch Autogradへ振り分ける。Trainerはparameter maskで更新対象を隔離し、adapter状態だけをload/unload/migrateできる。"
   },
   "reservation": {
-    "claim_id": "claim-851ec2bd9cf38cc1c76afe61",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "claim_id": "claim-71eeb07c7f418a95df699ae8",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }

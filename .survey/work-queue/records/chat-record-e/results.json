@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-851ec2bd9cf38cc1c76afe61",
+  "attempt_id": "attempt-71eeb07c7f418a95df699ae8",
   "job_id": "job-research-f9d3c5ad391e4acc",
   "data": {
     "overview": "Loquetierは推論専用で高arrival rateほどFlexLLMとの差を広げ、論文総括ではSLO達成率がPEFT比20.8倍、FlexLLM比最大3.0倍になる。統一微調整・推論では推論専用時に近いSLOを維持しつつ、fine-tuning側も平均約40%の単独時効率を確保し、PEFT比46.4倍のSLO達成率を報告する。model loadingは合計5.336秒・追加storage 0Bで、FlexLLMの38.857秒・15.00GBを大きく下回る。BurstGPTを用いた120分実負荷模擬では全体SLO達成率92.37%で、失敗はhardware capacityを超える高負荷spike（RPS>5）へ集中した。",
@@ -48,8 +48,8 @@
     "quality_impact": "SMLMやVirtualized Moduleは同じLoRA演算を別のbatch/kernel構造で実行するシステム最適化で、モデル品質を近似して速度を得る方式ではない。論文の主評価はSLOとthroughputであり、精度改善を主張していない。fine-tuningのparameter maskにより各trainerが対応adapterだけを更新し、共有基盤weightを誤更新しない設計になっている。"
   },
   "reservation": {
-    "claim_id": "claim-851ec2bd9cf38cc1c76afe61",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "claim_id": "claim-71eeb07c7f418a95df699ae8",
+    "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
 }
