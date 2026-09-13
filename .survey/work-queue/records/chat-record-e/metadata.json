@@ -8,138 +8,26 @@
     "canonical_id": "arXiv:2605.10670",
     "arxiv_id": "2605.10670",
     "title": "Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference",
+    "list_summary": "専門家並列の部分ランク障害を、通信相手・専門家被覆・CUDAグラフ可視経路の個別修復で全体再起動なしに復旧するEEPを提案する。",
     "summary": "大規模な専門家混合モデル（Mixture-of-Experts; MoE）の推論では、多数GPUを専門家並列（expert parallelism; EP）で束ねるため、1つのランク障害でも通信相手、専門家配置、CUDAグラフ内の経路状態が同時に破綻し、従来はサービス全体の再起動が必要になる。本論文は、メンバーシップを初期化時の固定構造ではなく実行時に変更可能な状態として扱うEEPを提案し、到達可能な通信相手、全論理専門家の被覆、グラフから見える経路状態という3条件を個別に修復する。SGLangとMooncakeに実装し、DeepSeek-V3を用いた実機評価で通常時性能をDeepEP比4.4%以内に保ちつつ、局所障害を数秒から十数秒の停止へ縮小する。",
     "source": "https://arxiv.org/abs/2605.10670",
-    "sources": [
-      "https://arxiv.org/abs/2605.10670",
-      "https://arxiv.org/html/2605.10670",
-      "https://github.com/kvcache-ai/Mooncake",
-      "https://github.com/sgl-project/sglang"
-    ],
-    "authors": [
-      "Xun Sun",
-      "Shaoyuan Chen",
-      "Pingchuan Ma",
-      "Yue Chen",
-      "Ziwei Yuan",
-      "Zhanhao Cao",
-      "Han Han",
-      "Shangming Cai",
-      "Teng Ma",
-      "Xuchun Shang",
-      "Xinpeng Zhao",
-      "Ke Yang",
-      "Junlin Wei",
-      "Lianzhi Lin",
-      "Yuji Liu",
-      "Feng Ren",
-      "Haoran Hu",
-      "Cheng Wan",
-      "Yingdi Shan",
-      "Yongwei Wu",
-      "Mingxing Zhang"
-    ],
+    "sources": ["https://arxiv.org/abs/2605.10670", "https://arxiv.org/html/2605.10670", "https://github.com/kvcache-ai/Mooncake", "https://github.com/sgl-project/sglang"],
+    "authors": ["Xun Sun", "Shaoyuan Chen", "Pingchuan Ma", "Yue Chen", "Ziwei Yuan", "Zhanhao Cao", "Han Han", "Shangming Cai", "Teng Ma", "Xuchun Shang", "Xinpeng Zhao", "Ke Yang", "Junlin Wei", "Lianzhi Lin", "Yuji Liu", "Feng Ren", "Haoran Hu", "Cheng Wan", "Yingdi Shan", "Yongwei Wu", "Mingxing Zhang"],
     "published": "2026-05-11",
     "publication": "arXiv:2605.10670",
     "publication_type": "preprint",
     "publication_status": "arXiv v1",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "topics": [
-      "MoE推論",
-      "専門家並列",
-      "耐障害性",
-      "GPU間通信",
-      "弾力的メンバーシップ"
-    ],
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "topics": ["MoE推論", "専門家並列", "耐障害性", "GPU間通信", "弾力的メンバーシップ"],
     "implementation": "Mooncake EP/Mooncake PGの通信層とSGLangの推論層へ統合した実装。論文では合計約1万行の実装規模を報告し、両プロジェクトの公式GitHubを示している。",
     "code": "https://github.com/kvcache-ai/Mooncake",
     "last_checked": "2026-09-13",
     "hardware_evaluation": "6台の計算ノードを使用し、各ノードにNVLink接続のNVIDIA GPUを8基、ノード間に400 Gbps Mellanox RoCEを8系統搭載。GPUDirect RDMAを有効化し、DeepSeek-V3 671B（256専門家）で評価。",
     "quality_effect": "近似計算や専門家省略で品質を落とす方式ではない。復旧後に全論理専門家の被覆を回復してから推論を再開する設計で、障害発生時に実行中だった要求は失敗として返してクライアント再試行とする。精度ベンチマーク自体は報告していない。",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.06066",
-        "arxiv_id": "2401.06066"
-      },
-      {
-        "canonical_id": "arXiv:2405.04434",
-        "arxiv_id": "2405.04434"
-      },
-      {
-        "canonical_id": "arXiv:2412.19437",
-        "arxiv_id": "2412.19437"
-      },
-      {
-        "canonical_id": "arXiv:2211.15841",
-        "arxiv_id": "2211.15841"
-      },
-      {
-        "canonical_id": "arXiv:2603.13606",
-        "arxiv_id": "2603.13606"
-      },
-      {
-        "canonical_id": "arXiv:2511.15076",
-        "arxiv_id": "2511.15076"
-      },
-      {
-        "canonical_id": "arXiv:2206.03382",
-        "arxiv_id": "2206.03382"
-      },
-      {
-        "canonical_id": "arXiv:2309.06180",
-        "arxiv_id": "2309.06180"
-      },
-      {
-        "canonical_id": "arXiv:2509.17863",
-        "arxiv_id": "2509.17863"
-      },
-      {
-        "canonical_id": "arXiv:2512.19849",
-        "arxiv_id": "2512.19849"
-      },
-      {
-        "canonical_id": "arXiv:2201.05596",
-        "arxiv_id": "2201.05596"
-      },
-      {
-        "canonical_id": "arXiv:2604.00368",
-        "arxiv_id": "2604.00368"
-      },
-      {
-        "canonical_id": "arXiv:1701.06538",
-        "arxiv_id": "1701.06538"
-      },
-      {
-        "canonical_id": "arXiv:2510.02613",
-        "arxiv_id": "2510.02613"
-      },
-      {
-        "canonical_id": "arXiv:2408.15664",
-        "arxiv_id": "2408.15664"
-      },
-      {
-        "canonical_id": "arXiv:2407.04656",
-        "arxiv_id": "2407.04656"
-      },
-      {
-        "canonical_id": "arXiv:2312.07104",
-        "arxiv_id": "2312.07104"
-      },
-      {
-        "canonical_id": "arXiv:2504.02263",
-        "arxiv_id": "2504.02263"
-      }
-    ],
+    "references": [],
     "references_checked_at": "2026-09-13",
     "references_source": "arXiv HTML reference section",
     "references_total": 32
   },
-  "reservation": {
-    "claim_id": "claim-55f5f7acdb0aa02af8e80de1",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-55f5f7acdb0aa02af8e80de1","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
