@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:50 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:52 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **6** |
-| 新規job | **15** |
+| Discovery完了 | **7** |
+| 新規job | **16** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,21 +51,21 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **135** |
-| 探索評価候補 | **669** |
+| 探索round（stats観測） | **136** |
+| 探索評価候補 | **672** |
 | 重複除外 | **278** |
-| 重複率 | **41.6%** |
-| Novel候補 | **391** |
+| 重複率 | **41.4%** |
+| Novel候補 | **394** |
 | Research候補採用 | **220** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
 | Blocked遷移 | **0** |
-| Fallback archive | **1** |
+| Fallback archive | **2** |
 
 ### 24時間ファネル
 
-**探索評価 669 → 重複除外後 391 → Research候補採用 220 → Research完了 69 → Repo収録 69**
+**探索評価 672 → 重複除外後 394 → Research候補採用 220 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -194,6 +194,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 出力長不確実性・tail-aware scheduling隣接 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
+| 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse | 3 | 0 | 0 | 0.0% | 0.0% |
 | 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 推論システム横断サーベイ・KV・エッジ実行 | 3 | 0 | 2 | 0.0% | 66.7% |
 | 新着・長期推論KV圧縮と削除 | 3 | 0 | 0 | 0.0% | 0.0% |
@@ -209,11 +210,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T09:28:10+09:00** — multi-tenant runtime制御・適応parallelism・latency attribution: 評価 5 / 重複 3 / 採用 2
 - **2026-09-13T09:28:10+09:00** — RDMA・分離サービング・KV転送: 評価 4 / 重複 4 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 投機的復号・高並列サービング・production評価: 評価 4 / 重複 1 / 採用 2
-- **2026-09-13T09:28:10+09:00** — 出力長不確実性・tail-aware scheduling隣接: 評価 3 / 重複 1 / 採用 2
 
 ## 最近処理した論文
 
