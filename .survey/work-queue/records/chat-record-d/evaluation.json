@@ -1,1 +1,17 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-4a64c70ffdea2c27b5195d03","job_id":"job-research-39ac27aff531cdb5","data":{"hardware":"単一ノード4×NVIDIA A100 40GB、1GPUあたり108 SM。GPU対GPUは4本NVLinkで一方向帯域上限約100GB/s。1 rank/GPU。","software":"CUDA 12.1、NCCL 2.29.3、PyTorch 2.6.0、CUTLASS 3.9、NVSHMEM 3.6.5。比較対象はFasterMoE、Tutel、Megatron-CUTLASS、Megatron-TEと、cuBLAS+NCCLの直列基準実装。","methodology":"M-GPT、M-BERT、M-Trans-xlの12層派生MoEを使い、top-k=2、総専門家64、通常16 experts/GPUでE2EとMoE層遅延を測る。さらに専門家数4〜64、tokens/rank 8192/16384、GEMM出力次元4096/8192、balanced/moderate_skew/stress_skewの3ルータ分布、通信SM数2〜24、転送行帯粒度を掃引する。各試験はウォームアップ後の測定反復を用いる。","scope":"単一ノード4-A100のforward実行と第2 all-to-all返送を対象とする。学習backward、複数ノード、大規模機械、他の並列方式との同時利用は未評価で、SM分割は実行前の調整を必要とする。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-2608.15018-20260913-1230-v10-s2moe",
+  "job_id": "job-research-990eca6ba50d5285",
+  "data": {
+    "hardware": "NVIDIA Jetson Orin NX 16GB、Jetson AGX Orin 32GB/64GB、NVIDIA RTX 4090を実機評価する。Jetsonで容量超過専門家はSSD、RTX 4090でコールド専門家はCPUメモリへオフロードする。",
+    "software": "llama.cppを基盤に著者実装を統合。EAGLE-3は公開チェックポイントとllama.cppのPR #18039系実装を使用し、DeepSeek用EAGLE-3はSpecForge/SGLangを基礎に統合。Cascadeの中核方策も同じ評価パイプラインへ実装する。",
+    "methodology": "DeepSeek-V2-Lite-Chat（15.3B総/1.35B活性、64専門家、top-6）、OLMoE-1B-7B（6.7B/1.1B、64、top-8）、Qwen3-30B-A3B（30.5B/3.3B、128、top-8）、GPT-OSS-120B（116.8B/5.7B、128、top-4）を評価する。タスクは会話、RAG、要約、翻訳、QA、数学、HumanEval。品質はGSM8K、HumanEval、ARC-E/C、GPQA-Diamond、AIME24/25、HMMT、LongBenchのGovReport/NarrativeQA/Qasper、WikiText-2分布指標。比較は自己回帰、専門家疎ドラフト、層疎ドラフト、EAGLE-3、Cascade。ドラフト長8、基準幅2、S2-MoEのみ適応展開。",
+    "scope": "バッチ1〜2が中心となるメモリ帯域制約の強いエッジMoE推論を対象にする。GPUサーバ上の大バッチやマルチGPU分散MoEは主対象でない。オフロード機構自体は既存研究との包括比較ではなく、投機方式を同一llama.cpp環境で測るための専門家単位実装である。ホット専門家常駐はオフラインプロファイルを使い、オンライン人気変動や高度な専門家キャッシュ方策は対象外。",
+    "workloads": ["マルチターン会話","RAG","要約","翻訳","QA","数学推論","HumanEval","LongBench長文品質"],
+    "baselines": ["自己回帰デコード","専門家疎自己投機","層疎自己投機","EAGLE-3","Cascade+EAGLE-3"],
+    "metrics": ["tokens/s","自己回帰比高速化","受理長","受理率","専門家再利用比","タスク精度","LongBenchスコア","KL divergence","Top-1一致率","PPL比"],
+    "reproducibility": "著者公式GitHubを公開し、llama.cpp基盤、対象モデル、専門家構成、ドラフト設定、Jetsonメモリ予算、RTX 4090、比較方式、主要品質指標を明記している。エッジSSDの個別型番や実効帯域が本文で詳細に固定されていないため、SSD律速条件の絶対値は環境差を受ける。"
+  }
+}

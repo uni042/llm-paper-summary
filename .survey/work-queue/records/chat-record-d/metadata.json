@@ -1,1 +1,44 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-4a64c70ffdea2c27b5195d03","job_id":"job-research-39ac27aff531cdb5","data":{"canonical_id":"arXiv:2607.19539","arxiv_id":"2607.19539","doi":"10.1145/3832810.3832907","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":[]},"title":"Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts","summary":"本研究は、分散MoEの専門家出力射影の完了後に第2 all-to-all通信を始める直列実行が、GPU計算と相互接続を交互に遊休させる問題を扱う。専門家GEMMをランク全体の永続カーネルとして実行し、出力タイル完成をGPU内シグナルで通知する一方、別の永続通信カーネルが完成済み行帯を即座にNVSHMEMで返送する。行を元所有ランク単位に整列し、遠隔向けタイルを先に計算することで転送開始を早める。4基A100評価でFasterMoE比のE2E最大2.64倍、演算子単位最大約3倍の高速化を示す。","authors":["Minyu Cui","Anna Wingkvist","Morgan Ericsson"],"authors_affiliations":"Linnaeus University, Sweden。","published":"2026-07-21","publication":"ICPP 2026 / arXiv:2607.19539v1","publication_type":"国際会議論文","publication_status":"ICPP '26 proceedings DOI 10.1145/3832810.3832907; arXiv v1 (2026-07-21)","topics":["MoE専門家並列","計算通信重畳","タイル単位シグナリング","永続GPUカーネル","NVSHMEM"],"implementation":"PyTorch 2.6.0から呼び出すCUDA実行時を実装し、CUDA 12.1、CUTLASS 3.9、NVSHMEM 3.6.5を使用する。GEMMはCUTLASS上のランク全体永続カーネル、返送は独立NVSHMEM永続カーネルとして実装する。公式コード公開URLは論文中で確認できない。","last_checked":"2026-09-13","code":null,"hardware_evaluation":"単一ノードのNVIDIA A100 40GBを4基、各GPU 108 SM。GPU対GPUは4本NVLinkで一方向約100GB/s、1 rank/GPU。","quality_effect":"演算子や通信の数学的内容は変更せず実行順と重畳を変える。最終出力は基準実装とFP16丸め誤差の範囲で一致すると検証している。","source":"https://arxiv.org/abs/2607.19539","sources":["https://arxiv.org/abs/2607.19539","https://arxiv.org/html/2607.19539","https://doi.org/10.1145/3832810.3832907"],"references":[{"canonical_id":"arXiv:2506.04667","arxiv_id":"2506.04667"},{"canonical_id":"arXiv:2504.19519","arxiv_id":"2504.19519"},{"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053"},{"canonical_id":"arXiv:2409.15241","arxiv_id":"2409.15241"}],"references_checked_at":"2026-09-13","references_source":"arXiv v1 HTML参考文献節","references_total":29,"list_summary":"MoEの専門家GEMMで完成したタイルをGPU内シグナルで即時通知し、専用SMの永続通信カーネルが第2 all-to-allを計算中から返送する方式。4基A100でFasterMoE比E2E最大2.64倍を示す。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-2608.15018-20260913-1230-v10-s2moe",
+  "job_id": "job-research-990eca6ba50d5285",
+  "data": {
+    "canonical_id": "arXiv:2608.15018",
+    "arxiv_id": "2608.15018",
+    "doi": "10.48550/arXiv.2608.15018",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": []
+    },
+    "title": "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices",
+    "summary": "S2-MoEは、メモリ帯域が律速するエッジ端末で、投機的デコードとMixture-of-Experts（MoE）を単純に組み合わせると、棄却される候補まで別々の専門家を読み出して検証費が膨らみ、疎性の利点を失う問題を扱う。対象モデル自身から専門家数を減らした軽量ドラフトを作り、候補の受理見込みと追加専門家読出し費を同じ効用値で比較して投機木を適応展開する。さらに複数候補で同じ専門家を再利用するようゲートへ小さなバイアスを加え、ドラフトと本体で同じKVキャッシュを共有して文脈ずれを抑える。llama.cppへ実装し、Jetson Orinでは自己回帰比1.3〜5.3倍、RTX 4090では1.2〜2.9倍の高速化を報告する。",
+    "list_summary": "MoEの自己投機デコードで、候補の受理確率だけでなく新規専門家読出し費を見て投機展開し、候補間の専門家再利用も促進する。Jetson Orinで最大5.3倍、RTX 4090で最大2.9倍高速化。",
+    "authors": ["Haochen Huang","Shengxuan Qiu","Meng Li"],
+    "authors_affiliations": "Institute for Artificial Intelligence, Peking University、School of Integrated Circuits, Peking University、School of Electronics Engineering and Computer Science, Peking University。",
+    "published": "2026-08-15",
+    "publication": "arXiv:2608.15018v2",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v2 (2026-08-19)",
+    "lineage": "speculative-decoding",
+    "topics": ["自己投機デコード","MoE","エッジ推論","専門家再利用","専門家オフロード","llama.cpp","SSDオフロード","適応投機展開"],
+    "importance": "高。MoE投機デコードを受理率だけで最適化せず、候補追加が引き起こす専門家パラメータ読出しを明示的な限界費用として扱う。特にSSD/CPUへ専門家をオフロードするエッジ環境で、投機幅・ルーティング・文脈共有を一体化して実測高速化を示す。",
+    "hardware_evaluation": "NVIDIA Jetson Orin NX 16GB、Jetson AGX Orin 32GB/64GB、およびNVIDIA RTX 4090で実機評価。Jetsonでは容量超過専門家をSSDへ、RTX 4090ではコールド専門家をCPUメモリへオフロードする。",
+    "hardware_details": "DeepSeek-V2-Lite-Chat、OLMoE-1B-7B、Qwen3-30B-A3B、GPT-OSS-120Bを評価。専門家単位のオフロードをllama.cppへ追加し、共有パラメータと常用専門家はデバイス側へ残す。ドラフト長は8で、S2-MoEは効用に基づき幅を適応制御する。",
+    "quality_effect": "再利用認識ゲーティングは元のルーティングへ有界なバイアスを加えるため厳密無損失ではない。評価ではOLMoE、DeepSeek、Qwen3のPPL比が1.012〜1.013、Top-1一致率が89.13〜93.04%で、標準タスクとLongBenchの差は小さく非系統的だった。GPT-OSSはHarmony形式外の尤度が信頼できないためPPL/KLを報告しない。",
+    "storage_targets": ["Jetson上のSSDへオフロードされるコールド専門家重み","RTX 4090環境のCPUメモリ上コールド専門家","GPU/統合DRAM上の常駐専門家","ドラフト・本体共有KVキャッシュ"],
+    "bottlenecks": ["MoE投機検証で候補ごとに異なる専門家を読むメモリ帯域","棄却候補が生む無駄な専門家活性化","軽量ドラフトと本体の受理率低下","候補間専門家再利用率の低さ","エッジ容量不足に伴うSSD/CPU専門家オンデマンド読出し"],
+    "evidence_locations": ["§1","§3","§4.1–4.3","§5","§6.1–6.3","Appendix A"],
+    "source": "https://arxiv.org/abs/2608.15018",
+    "sources": ["https://arxiv.org/abs/2608.15018","https://arxiv.org/html/2608.15018v2","https://github.com/angerybob/S2-MoE"],
+    "code": "https://github.com/angerybob/S2-MoE",
+    "implementation": "著者公式コードをGitHubで公開。llama.cppのデコード経路へ自己投機、ルーティング費用推定、再利用認識ゲート、共有KV文脈、専門家単位オフロードを統合する。再利用認識ゲートは融合CUDAカーネルで実装する。",
+    "last_checked": "2026-09-13",
+    "references": [{"canonical_id":"arXiv:2604.10152","arxiv_id":"2604.10152"},{"canonical_id":"arXiv:2510.10302","arxiv_id":"2510.10302"},{"canonical_id":"arXiv:2505.19645","arxiv_id":"2505.19645"},{"canonical_id":"arXiv:2603.09983","arxiv_id":"2603.09983"},{"canonical_id":"arXiv:2503.01840","arxiv_id":"2503.01840"},{"canonical_id":"arXiv:2405.04434","arxiv_id":"2405.04434"},{"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},{"canonical_id":"arXiv:2310.07177","arxiv_id":"2310.07177"},{"canonical_id":"arXiv:2110.14168","arxiv_id":"2110.14168"},{"canonical_id":"arXiv:2107.03374","arxiv_id":"2107.03374"},{"canonical_id":"arXiv:1803.05457","arxiv_id":"1803.05457"}],
+    "references_checked_at": "2026-09-13",
+    "references_source": "arXiv v2 HTML版の参考文献節",
+    "references_total": null
+  }
+}
