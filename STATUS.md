@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:42 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:45 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -245,11 +245,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P87 `arXiv:2607.29678` — TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving
-- P87 `arXiv:2607.19539` — Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts
-- P87 `arXiv:2604.21231` — SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference
 - P87 `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
 - P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
+- P87 `arXiv:2607.00151` — SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering
+- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
+- P87 `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
 
 ## 7日比較
 
@@ -267,14 +267,14 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **LOW**
 | 指標 | 値 |
 |---|---:|
 | Research ready | **180** |
-| Active claims | **35** |
-| Claimable | **145** |
+| Active claims | **38** |
+| Claimable | **142** |
 | :00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)** |
 | :00切替閾値 | **ready > 50 → 通常worker補助 / ready ≤ 50 → 探索専用** |
 | Latest normal run | **2026-09-13T13:30:00+09:00** |
 | Latest research completed | **0** |
 | Research completed (24h) | **70** |
-| Oldest active claim age | **93 min** |
+| Oldest active claim age | **96 min** |
 
 ### Worker routing snapshot
 
