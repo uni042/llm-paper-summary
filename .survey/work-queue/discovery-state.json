@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T03:12:16+00:00",
+  "updated_at": "2026-09-13T03:14:00+00:00",
   "last_run_key": "2026-09-13T11:00:00+09:00",
-  "last_round": "specialist-cxl-tiered-storage-4",
+  "last_round": "specialist-serving-runtime-reliability-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3126,6 +3126,26 @@
       ],
       "next_axis_hint": "lossless model compression・serving software aging・load-aware speculative decoding",
       "source_submission": "work-queue/submissions/20260913T1213JST-discovery-304f617be9233e92.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:00+09:00",
+      "round": "specialist-serving-runtime-reliability-5",
+      "axis": "serving software aging・runtime reliability・lossless compression・load-aware speculative serving",
+      "query_summary": "runtime信頼性、lossless model compression、load-aware speculative decoding、multi-tenant speculative serving、edge memory-aware draft schedulingを探索した。送信直前の正本identityではZipServ、speculative latency model、SPECTRE、MemSpecが既収録で、software agingのみ未収録だった。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2603.17435",
+        "arxiv:2605.15051",
+        "arxiv:2605.08151",
+        "arxiv:2608.10362"
+      ],
+      "next_axis_hint": "recent inference-system implementation releases・GPU kernel/runtime co-design・request interruption/agent serving gaps",
+      "source_submission": "work-queue/submissions/20260913T1215JST-discovery-43fcba7f8079dfff.json"
     }
   ],
   "axes": {
@@ -4878,6 +4898,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.8333333333333334,
       "next_axis_hint": "lossless model compression・serving software aging・load-aware speculative decoding"
+    },
+    "serving software aging・runtime reliability・lossless compression・load-aware speculative serving": {
+      "last_run_key": "2026-09-13T11:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.8,
+      "next_axis_hint": "recent inference-system implementation releases・GPU kernel/runtime co-design・request interruption/agent serving gaps"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
