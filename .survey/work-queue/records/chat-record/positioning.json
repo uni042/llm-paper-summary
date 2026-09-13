@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-3576a86872aa70c9b0bbf4b8",
-  "job_id": "job-research-054d8fd9fb06ca0f",
-  "data": {
-    "limitations": "A100とLlama-2を中心とする評価で、LoRA rank 16が既定、現代のH100/B200やFP8、分離プリフィル/デコード、複数ノードでのLoRA大規模キャッシュは未評価である。アダプタ全体をホストからGPUへ約2msで移せることを前提にし、アダプタ数が非常に多い場合のホストDRAM・ストレージ階層管理は扱わない。KV移動を再計算で処理するため、長大文脈では移動コストが増え得る。性能評価のLoRAはランダム重みであり、実際のモデル品質やアダプタ間の精度差は対象外である。",
-    "differences": "vLLMやOrcaは同一モデル要求の連続バッチを効率化するが、PunicaはLoRA差分が異なる要求を同じ基盤モデルバッチへ入れる専用演算を加える。PetSは複数アダプタを共有GPUで扱う先行研究だが、Punicaは異なるLoRAを同一デコードバッチへ同時実行するSGMVを中心に据える。後続のS-LoRA等が多数アダプタのメモリ階層やページングを発展させるのに対し、Punicaは異種LoRAバッチ処理とクラスタ集約の基礎を与えた。",
-    "implementation_status": "公式Punicaリポジトリが公開され、CUDA SGMV、PyTorch拡張、Llama実装、scheduler/frontend/runnerを含む。論文中でも公開URLを明記する。",
-    "research_positioning": "LLMサービング・スケジューリング系統のうち多テナント適応モデル配備に位置する。モデル全体を複数保持せず、共有基盤と小さな差分を演算時に合成することで、モデル多様性とGPUバッチ効率を両立する代表的初期システムである。",
-    "relation_to_existing_repository": "LOCALのような継続LoRA更新基盤や、ElasticMM等の異種要求スケジューリングと接続する。ストレージ観点ではPunicaはLoRAをホストDRAMからGPUへオンデマンド転送するが、SSD/NVMeを直接使わない。多数アダプタをSSDまで階層化する場合、Punicaの集約スケジューラへアダプタ人気度・再利用距離・ロード費を加える方向が自然である。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-8c805808c02a755f3cb9a74d",
+  "job_id": "job-research-2fabaceee2c88fd9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3576a86872aa70c9b0bbf4b8",
+    "claim_id": "claim-8c805808c02a755f3cb9a74d",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }
