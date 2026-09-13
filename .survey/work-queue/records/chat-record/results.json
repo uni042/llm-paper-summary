@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-0c9caae092f9a4537458d713",
   "job_id": "job-research-5c8a51a10227b970",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0c9caae092f9a4537458d713",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "PPDの基礎となるFull AP-to-D（x=1）は、従来PD（x=0）に対してTurn 2 TTFTを48〜73%削減し、1P3D高負荷では73.3%改善する。2〜16ターン、Llama-3.1-8B/Qwen2.5-14B/Qwen3-30B-A3BでもTurn 2+ TTFTの利得は約70%で安定する。一方、3060構成点の92.2%ではTTFTとTPOTを最小にする構成が異なり、固定ルーティングに普遍的最適解はない。ShareGPT/WildChatで動的PPDを使うと、安定な1P3Dで平均要求遅延を15〜25%削減し、従来PDでは多数のQPS点で成功率95%未満に落ちる2P2D/3P1Dも全QPS・両データセットで100%成功率を維持する。平均3.1ターンではKV転送量を約75%削減する。prefill-heavy条件の重み調整ではTurn 2+ TTFTを94〜96%削減しながらTPOT悪化を7〜12%に抑える。",
+    "key_results": [
+      {"metric":"Full AP-to-DのTurn 2 TTFT改善","value":"48〜73%、1P3D高負荷で73.3%","baseline":"traditional PD x=0","condition":"4×H100、Llama-3.1-8B、0.5〜20 QPS","interpretation":"後続ターンがPボトルネックとP→D KV転送を迂回し、D上の既存KVへ直接追加できる。"},
+      {"metric":"モデル・ターン数拡張時のT2+ TTFT","value":"約70%改善を維持","baseline":"x=0 PD","condition":"2〜16ターン、8B/14B/30B級モデル","interpretation":"利得は特定モデルのカーネル特性より、毎ターンKVを転送しないアーキテクチャ特性に由来する。"},
+      {"metric":"最適構成の目的依存率","value":"92.2%でTTFT最適とTPOT最適が異なる","baseline":"3060 workload-QPS構成点","condition":"xとP/D比を網羅探索","interpretation":"x=1は均衡した既定候補だが、TPOT最重視ではx=0や部分routingが勝つため動的選択が必要である。"},
+      {"metric":"ShareGPT 1P3Dの平均要求遅延","value":"15〜25%削減","baseline":"traditional PD","condition":"1〜20 QPS、動的PPD w_ttft=w_tpot=1","interpretation":"実会話の不均一なターン長でもオフライン表引きが有効なD-local要求を選択できる。"},
+      {"metric":"実負荷のサービス安定性","value":"PPDは全QPS・両データセットで100%成功率","baseline":"PDは2P2Dで9/12、3P1Dで7/9 QPS点が95%未満","condition":"ShareGPT/WildChat","interpretation":"平均3.1ターンでKV転送量を約75%減らし、ネットワーク飽和由来の待ち・タイムアウトを解消する。"}
+    ],
+    "negative_results": "D-localは常に最良ではない。追加プリフィルは完全プリフィルより軽いがdecode interferenceを生むため、TPOTを最重視する条件ではtraditional PDや部分routingが勝つ。ReplicaはTurn 2 TTFTでは63.3%の構成点で最良だが、TPOTでは0.6%、throughputでは0%しか勝たず、prefill/decode干渉が大きい。Full AP-to-DもTTFT・TPOT・throughputの平均勝率は27.0%で、万能ではない。PPDのオフライン表はハードウェアや負荷区分を事前測定する必要があり、未知の分布では近傍点の選択誤差が残る。",
+    "interpretation": "複数ターン配信では『prefillを隔離するか』より『そのprefillがcold full-prefillか、既存KVへ追加するwarm append-prefillか』を区別することが重要である。後続ターンをKV所在地へ寄せると再計算・転送を同時に消せるが、Dのdecode帯域を使うためTPOTと交換関係になる。PPDはこの交換を一つの固定構成で解こうとせず、事前測定したワークロード表とSLO重みへ落として1ms未満の決定にすることで、安定性と低TTFTを両立する。",
+    "quality_impact": "同じKV状態とモデル計算を異なるノードで実行するだけで、KV圧縮や近似を行わないため、モデル出力品質は変えない。"
+  },
+  "reservation": {"claim_id":"claim-0c9caae092f9a4537458d713","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
