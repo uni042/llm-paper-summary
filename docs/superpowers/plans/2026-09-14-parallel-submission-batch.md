@@ -4,9 +4,9 @@
 
 **Goal:** Process independent immutable research/audit descriptors concurrently inside the serialized submission lane while preserving exact-once shared queue statistics and deterministic snapshots.
 
-**Architecture:** Keep the GitHub Actions `survey-submission-main` single-writer boundary for the final repository commit, but parallelize descriptor-local work inside one run. Each descriptor writes only its own paper/job/result/identity-delta plus a temporary state-effect JSON; after all descriptor workers finish, one reducer folds the temporary effects into `state.json` and rebuilds `next-jobs.json` once. A per-job filesystem lock prevents two attempts for the same job from mutating the same paper/job concurrently.
+**Architecture:** Keep the GitHub Actions `survey-submission-main` single-writer boundary for the final repository commit, but parallelize descriptor-local work inside one run. Each descriptor writes only its own paper/job/result/identity-delta plus a temporary state-effect JSON; after all descriptor workers finish, one reducer folds the temporary effects into `state.json` and rebuilds `next-jobs.json` once. The batch runner groups descriptors by `job_id`: descriptors for one job run sequentially, while different job groups run concurrently, so same-job paper/job mutations cannot overlap.
 
-**Tech Stack:** Python 3.12, GitHub Actions, Bash, `concurrent.futures`/subprocess-compatible CLI workers, Linux `fcntl` file locks, unittest.
+**Tech Stack:** Python 3.12, GitHub Actions, Bash, `concurrent.futures`, subprocess workers, unittest.
 
 **Spec:** `.github/workflows/survey-submission-fast.yml`, `.survey/scripts/process_immutable_submission.py`, `.survey/scripts/queue_worker.py`, `.survey/docs/survey-workflow/claim-serial-policy.md`
 
@@ -42,17 +42,18 @@
 ### Task 2: Same-job exclusion and parallel batch runner
 
 **Files:**
-- Modify: `.survey/scripts/process_immutable_submission.py`
 - Create: `.survey/scripts/process_immutable_submission_batch.py`
 - Test: `.survey/tests/test_parallel_submission_batch.py`
 
 **Interfaces:**
-- Descriptor-local mutation is guarded by a per-job lock keyed by a SHA-256 of `job_id`.
-- `process_immutable_submission_batch.py` accepts descriptor paths plus `--parallelism N` (default 4), runs independent descriptors concurrently, invokes existing isolation for failures, and runs the reducer after all workers finish.
+- The runner derives a group key from each descriptor: valid `job_id` values use `job:<job_id>`; malformed or unidentifiable descriptors use `path:<descriptor-path>`.
+- Descriptors within one group run sequentially; different groups run concurrently with `ThreadPoolExecutor`.
+- Production workers invoke `process_immutable_submission.py` as separate subprocesses, preserving module-global isolation.
+- `process_immutable_submission_batch.py` accepts descriptor paths plus `--parallelism N` (default 4, bounded to 1..8), invokes existing isolation for failures, and runs the reducer after all groups finish.
 - Exit status is nonzero if any descriptor failed, but successful descriptor outputs remain in the worktree for the workflow to commit.
 
 - [ ] **Step 1: Add failing tests** showing two distinct jobs overlap in execution while same-job attempts are serialized.
-- [ ] **Step 2: Implement per-job lock and batch runner** using process-level parallelism.
+- [ ] **Step 2: Implement grouped batch runner** with sequential execution inside a group and parallel execution across groups.
 - [ ] **Step 3: Verify failure aggregation** keeps successful results/effects and records failed-result state.
 - [ ] **Step 4: Run targeted tests** and verify GREEN.
 
@@ -65,7 +66,7 @@
 
 **Interfaces:**
 - Push-triggered backlog drain passes all unsettled descriptors to the batch runner.
-- `SUBMISSION_PARALLELISM` defaults to 4.
+- `SUBMISSION_PARALLELISM` defaults to 4 and the runner clamps it to 1..8.
 - The final Git commit/push remains one serialized transaction.
 
 - [ ] **Step 1: Add a workflow regression assertion** that the batch runner is used and `SUBMISSION_PARALLELISM` is bounded.
