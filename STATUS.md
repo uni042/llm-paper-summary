@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 22:29 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 22:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -19,7 +19,7 @@
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | 全文精読完了（累計） | **221** |
-| 保守状態（Maintenance） | **passed** |
+| 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **16 / 24** |
 
@@ -36,8 +36,8 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **168** |
-| 処理中（Active claims） | **5** |
-| 今すぐ着手可能（Claimable） | **163** |
+| 処理中（Active claims） | **0** |
+| 今すぐ着手可能（Claimable） | **168** |
 | :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **0** |
@@ -45,7 +45,7 @@
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **45** |
+| 直近24h Research完了（帰属不明） | **42** |
 | 最新通常run | **2026-09-13T18:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
 | 最古の有効claimの経過時間 | **—** |
@@ -55,15 +55,15 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
 - **処理速度 LOW**: ready=168 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
-- 直近24hのResearch完了のうち **45件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **42件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **54** |
-| Repo収録 | **56** |
+| Research完了 | **51** |
+| Repo収録 | **53** |
 | Audit完了 | **0** |
 | 探索評価候補 | **672** |
 | Research候補採用 | **209** |
@@ -71,12 +71,12 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **45.2%** |
 | 探索専用worker run（毎時枠） | **13** |
 | 探索専用worker round（stats観測） | **139** |
-| 通常worker run（ledger観測） | **19** |
+| 通常worker run（ledger観測） | **18** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 672 → 重複除外後 368 → Research候補採用 209 → Research完了 54 → Repo収録 56**
+**探索評価 672 → 重複除外後 368 → Research候補採用 209 → Research完了 51 → Repo収録 53**
 
 ## 直近の通常worker
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T18:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
 - P90 `arXiv:2607.05147` — DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
-- P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 
 ## 参考情報
 
