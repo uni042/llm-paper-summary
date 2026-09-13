@@ -4,10 +4,16 @@
   "slot": "problem_method",
   "attempt_id": "attempt-8c805808c02a755f3cb9a74d",
   "job_id": "job-research-2fabaceee2c88fd9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8c805808c02a755f3cb9a74d",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "大規模LLMの学習・推論は複数ノード間のAllReduce、ReduceScatter、AllGather、point-to-point通信へ継続的に依存するが、標準NCCLは初期化時に決めた通信グラフを実行中に固定し、NICやRDMA queue pairが故障すると進行中collectiveを中断する。上位層で復旧すると、学習では再起動、資源再割当、チェックポイント読込み、失われたiterationの再計算が必要となり、推論では接続再確立や要求再処理、KV状態再構築が発生する。一方、現代のGPUサーバは複数NICと複数railを持ち、1経路が壊れても別の経路が残ることが多い。課題は、通信中に障害箇所を素早く特定し、データの重複や欠落を生じさせず別経路へ移し、残存帯域が非対称になった後もcollective全体を遅い1経路へ引きずられないよう再スケジュールすることである。",
+    "novelty": "R²CCLは障害前後を別ジョブとして扱わず、collective実行中の接続そのものを移行する。全NICへ同じGPUバッファを事前登録し、送受信双方が帯域外通知とRDMA probeで障害位置を合意した後、最後に完了確認できたチャンクへDMA状態を巻き戻して未完了部分だけ再送する。復旧後は単に残ったNICへ通信を寄せるだけでなく、PCIe/NUMA/PXNの経路コストと各ノードの残存帯域を見てチャネル配分やAllReduce分解を変更する。さらに複数障害ではrailの共通部分が細る隣接ノードを論理的に並べ替え、帯域階層ごとに再帰的な部分AllReduceを構成する。",
+    "method_overview": "通信器初期化時、R²CCLは各GPU通信バッファをサーバ内の複数NICへ登録し、通常経路に加えてPCIe距離順の予備queue pairを準備する。実行中はInfiniBandプラグインとproxyのsend/receive進捗ループがCQ/QPエラーを監視する。片側が異常を検出すると帯域外のbootstrap経路で相手へ通知し、軽量RDMA probeでどのNIC・接続が壊れたかを両端で確定する。障害が確認されると未完了work requestを破棄し、最後に双方で完了が確認できたチャンクまで状態を戻し、最も近い健全な予備NICへ切り替えて残りを再発行する。これによりアプリケーションのcommunicator再初期化やジョブ再起動を避ける。\n\n接続が復旧した後は、残存NICへ均等に負荷を移すR²CCL-Balanceと、AllReduceそのもののデータ分担を変えるR²CCL-AllReduceを選ぶ。BalanceはNCCLがring/treeを作る前にNIC健全性を確認し、故障NICに割り当てられていたchannelを健全NICへ再配分する。PCIe rootやNUMA間帯域が詰まる場合はPXNやホスト経路も考慮する。AllReduce方式ではchannelを二群に分け、全ノード参加のglobal AllReduceと、低帯域ノードを除外したPartial AllReduceを並行実行し、後段で専用CUDA broadcastにより結果を低帯域ノードへ配る。小メッセージでは依存制御費が相対的に大きいためBalance、大メッセージでは低帯域ノードの送信量削減が効くAllReduceをα-βモデルで動的選択する。\n\n複数NIC障害では、ノードごとに残存rail数が異なるため単純な二群分割では不足する。R²CCLは隣接ノード間の共通railが少ないedgeを検出し、十分なrailを共有するbridgeノードを間へ入れて論理ring順を修復する。続いて最も遅いノード群を含むglobal ringと、それを除いた高速sub-ringを作り、帯域差が残る限り再帰的にsub-ringを追加する。各ringが扱うデータ量を増分帯域へ比例させ、reductionを並行実行することで、複数障害後の帯域スペクトラムも利用する。",
+    "components": [
+      {"name": "障害検知と無損失ライブ接続移行", "description": "InfiniBandのCQ/QPエラーをproxy進捗ループで検出し、帯域外bootstrap通知とRDMA probeで送受信双方が障害位置を一致させる。通信器初期化時に同一GPUバッファを複数NICへ事前登録して予備queue pairを用意するため、障害時に高価な再登録を行わず別NICへ切り替えられる。切替前には最後に双方が完了確認したチャンクまでDMA進行位置を戻し、未完了work requestを破棄して残りだけ再送する。これにより途中チャンクの重複・欠落を避けつつ、communicator再構築やアプリケーション再起動なしで進行中collectiveを継続する。さらに通常経路と予備経路で同じGPU仮想アドレスを使えるよう事前登録するため、通信上位層から見るバッファ配置を変更せずにNICだけを差し替えられる。送信側と受信側が独立に障害を判断して食い違うのを避けるため、帯域外合意を挟んでから移行し、完了境界を両端でそろえる。この設計により一部NICの故障をcollective全体のcommunicator failureへ昇格させず、実行中の操作単位で局所復旧する。"},
+      {"name": "残存帯域に応じたBalanceとR²CCL-AllReduce", "description": "単一NIC故障後に全channelを一つの代替NICへ集中させると、そのNICが新たなボトルネックになるため、R²CCL-Balanceは健全NIC群へchannelを再配分する。PCIe距離、NUMA、PXN経路を考慮してGPUから各NICへの実効経路を選ぶ。大きなAllReduceでは低帯域ノード自身の通信量を減らすため、global AllReduceと低帯域ノードを除くPartial AllReduceを並行実行し、最後に部分結果を専用broadcast kernelで戻す。NCCLのα-β性能モデルを利用し、メッセージサイズと機械固有の遅延・帯域からBalanceとAllReduceのどちらが有利か実行時に選択する。"},
+      {"name": "複数障害向け論理再順位付けと再帰分解", "description": "複数NICが異なるrailで故障すると、各ノードの残存帯域だけでなく隣接ノード同士が共有できるrail集合も異なる。R²CCLは共通railが閾値を下回る隣接edgeを見つけ、より広いrail集合を持つbridgeノードを挿入して論理ringを局所的に並べ替える。さらに最遅ノードを含むringから高速ノード群を段階的に切り出して再帰的sub-ringを作り、各層へ増分帯域に比例したデータを割り当てる。reduction phaseは並列化し、broadcastの依存だけを保つことで、障害数が増えて帯域が段階的になっても高速ノードの余剰帯域を利用する。"}
+    ],
+    "system_design": "R²CCLはNCCL 2.23.4のホストtransport層とcollective planningへ組み込むdrop-in方式で、PyTorch、Megatron-LM、vLLMなど上位アプリケーションを変更しない。ncclNet層が予備接続と複数NIC登録を管理し、proxyが障害検知・接続移行を実行、plannerが残存帯域に応じてchannel配置とcollective方式を再選択する。"
+  },
+  "reservation": {"claim_id": "claim-8c805808c02a755f3cb9a74d", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
