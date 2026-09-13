@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:43:10.067194+00:00",
+  "updated_at": "2026-09-13T01:50:03.081515+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,19 +17069,19 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T01:43:10.067194+00:00",
+      "last_recorded_at": "2026-09-13T01:50:03.081515+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 4,
         "blocked": 0,
         "new_jobs": 7,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -17155,6 +17155,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34731446232:1",
+          "recorded_at": "2026-09-13T01:50:03.081515+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34731446232",
+            "run_attempt": "1",
+            "source_sha": "57f2956dc57b8d746ef82c33ac80fd0fa2c02912"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17195,6 +17210,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-e0d8fce39a1b2522",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00097",
+          "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding",
           "from": "ready",
           "to": "completed"
         }
@@ -17251,7 +17274,8 @@
         }
       ],
       "new_paper_ids": [
-        "arXiv:2609.01821"
+        "arXiv:2609.01821",
+        "arXiv:2609.00097"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T1031JST-discovery-specialist-scheduling-5.json",
@@ -17261,8 +17285,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,
-      "paper_active_count_after": 395,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 396,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
