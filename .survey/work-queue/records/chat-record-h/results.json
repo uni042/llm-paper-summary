@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-a52c3081dddae57267f67a59",
   "job_id": "job-research-a60dcea57ad2475d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a52c3081dddae57267f67a59",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "専門家活性には強い構造があり、プリフィル活性だけから要求分野をQwen3-235Bで98.9±0.4%、DeepSeek-V3で98.4±0.4%、Llama Maverickで94.4±6.8%の平均精度で分類できる。プリフィルとデコードの層平均相関もMaverick 0.82、Qwen3 0.68、DeepSeek-V3 0.55で、デコード前の配置・小バッチ判断に利用できる。DeepSeek-V3の配置評価では線形配置とEPLBの正規化全対全量中央値1.00に対し0.94へ低下する。Llama Maverickではメッセージ量を最大20%減らし、通信時間9%、層全体5.5%短縮する。Qwen3-235Bでは通信時間12%、層全体6%短縮する。通信量削減に対して実行時間の利得が小さいのは、現行全対全カーネルが各rankの送信量を最大rank長へパディングするためである。",
+    "key_results": [
+      {"metric":"要求種別分類精度","value":"Qwen3 98.9±0.4%、DeepSeek-V3 98.4±0.4%、Maverick 94.4±6.8%","baseline":"expert activation features only","condition":"layer-wise logistic regression, 80:20 split","interpretation":"プロンプト内容を直接見なくてもプリフィル活性から要求群を高精度に判定でき、小バッチ形成へ利用できる。"},
+      {"metric":"プリフィル・デコード専門家活性相関","value":"Maverick 0.82、Qwen3 0.68、DeepSeek-V3 0.55","baseline":"layer-wise Pearson correlation","condition":"全データセット平均","interpretation":"プリフィルで観測した専門家集合がデコード時の局所性を予測する手掛かりになる。"},
+      {"metric":"全対全通信量","value":"DeepSeek-V3中央値0.94 vs Linear/EPLB 1.00、Llamaで最大20%削減","baseline":"Linear placement / EPLB","condition":"DP8TP8→EP64、global batch 8×128","interpretation":"要求群と専門家配置を共発火統計に合わせ、遠隔ノードへ送るトークンを減らす。"},
+      {"metric":"Llama Maverick層時間","value":"all-to-all time 9%削減、layer runtime 5.5%削減","baseline":"EPLB","condition":"100 global batches median","interpretation":"メッセージ量20%削減の一部だけが実行時間へ反映され、通信カーネルのパディングが利得を制限する。"},
+      {"metric":"Qwen3-235B層時間","value":"all-to-all time 12%削減、layer runtime 6%削減","baseline":"EPLB","condition":"representative MoE layer, 100 global batches median","interpretation":"異なるルーティング特性のモデルでも活性対応配置の利得が再現する。"}
+    ],
+    "negative_results": "通信量が最大20%減っても層時間は最大6%程度の改善に留まる。主因は評価時の全対全カーネルが各EP rankの送信を最も大きいrankのサイズまでパディングし、局所化で減った実データ量を完全には転送時間削減へ変換できないためである。またプリフィル・デコード相関はモデルにより0.55まで下がり、すべての層・要求で強く予測できるわけではない。主要評価では専門家複製をゼロにしているため、複製による追加改善とメモリ費用は未実証である。",
+    "interpretation": "MoEの専門家発火は完全なランダムではなく、要求分野とモデル構造に応じた持続的な共発火パターンを持つ。そのため専門家単体の負荷を均すだけより、要求群が同時に使う専門家を物理的に近づける方がノード間通信を直接減らせる。一方、配置最適化の価値を実行時間へ変えるには、可変メッセージ量を効率良く処理する全対全通信カーネルも必要である。",
+    "quality_impact": "要求のバッチ分けと専門家の配置だけを変え、ルーティング上位kやモデル計算自体を変更しないため生成品質の近似はない。ただし活性パターンから要求分野が高精度に分類できるため、テレメトリのアクセス制御やプライバシー上の配慮が必要になる。"
+  },
+  "reservation": {"claim_id":"claim-a52c3081dddae57267f67a59","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
