@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **154 / 50** |
-| Research ready | **154** |
+| Candidate在庫（Research ready） | **156 / 50** |
+| Research ready | **156** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **204** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **3** |
+| Discovery完了 | **2** |
+| 新規job | **6** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **130** |
-| 探索評価候補 | **649** |
-| 重複除外 | **269** |
+| 探索round（stats観測） | **131** |
+| 探索評価候補 | **652** |
+| 重複除外 | **270** |
 | 重複率 | **41.4%** |
-| Novel候補 | **380** |
-| Research候補採用 | **213** |
+| Novel候補 | **382** |
+| Research候補採用 | **215** |
 | Research完了 | **68** |
 | Repo収録 | **68** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 649 → 重複除外後 380 → Research候補採用 213 → Research完了 68 → Repo収録 68**
+**探索評価 652 → 重複除外後 382 → Research候補採用 215 → Research完了 68 → Repo収録 68**
 
 ## 探索効率（直近24時間）
 
@@ -187,6 +187,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | near-storage KV処理・動的layer/KV runtime adaptation | 3 | 1 | 2 | 33.3% | 66.7% |
 | エージェント型LLM・サービングruntime・生成時特化 | 3 | 1 | 2 | 33.3% | 66.7% |
 | エージェント配信・Multi-LoRA・意味検索型KV管理 | 3 | 0 | 1 | 0.0% | 33.3% |
+| 出力長不確実性・tail-aware scheduling隣接 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 分散推論・collective通信・disaggregated電力/runtime | 3 | 0 | 2 | 0.0% | 66.7% |
 | 分離サービングのnetwork flow・prefill迂回・専用interconnect | 3 | 0 | 1 | 0.0% | 33.3% |
 | 推論runtime・serving耐障害性 | 3 | 1 | 2 | 33.3% | 66.7% |
@@ -204,11 +205,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:28:10+09:00** — 出力長不確実性・tail-aware scheduling隣接: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — エージェント型LLM・サービングruntime・生成時特化: 評価 3 / 重複 1 / 採用 2
 - **2026-09-13T09:28:10+09:00** — 2026-09新着・KV圧縮・跨文脈再利用: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T09:00:00+09:00** — production-autoscaling-disaggregated-serving-runtime: 評価 6 / 重複 4 / 採用 2
 - **2026-09-13T09:00:00+09:00** — ssd-kv-cache-heterogeneous-gpu-serving-orchestration: 評価 4 / 重複 0 / 採用 0
-- **2026-09-13T09:00:00+09:00** — moe-cache-aware-routing-expert-skipping-fine-grained-execution: 評価 4 / 重複 0 / 採用 0
 
 ## 最近処理した論文
 
