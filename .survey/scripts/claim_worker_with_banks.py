@@ -202,6 +202,7 @@ def reserve_new_claim_banks(
         claim.get("active")
         and claim.get("claim_id") not in new_claim_ids
         and str(claim.get("record_bank") or "").lower() not in BANK_ROOTS
+        and claim.get("record_bank_fallback") != "library"
         for claim in claims.values()
     )
 

@@ -127,6 +127,34 @@ class ClaimBankReservationTests(unittest.TestCase):
             self.assertIsNone(assignment.get("record_bank"))
             self.assertEqual(assignment.get("record_bank_fallback"), "library")
 
+    def test_explicit_library_fallback_does_not_fence_new_bank_use(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            seed_job(root, "job-old", 100)
+            seed_active_claim(root, "job-old")
+            old_claim_path = root / ".survey/work-queue/claims/job-old.json"
+            old_claim = json.loads(old_claim_path.read_text())
+            old_claim["record_bank"] = None
+            old_claim["record_bank_fallback"] = "library"
+            write_json(old_claim_path, old_claim)
+
+            seed_job(root, "job-new", 90)
+            seed_request(root, "req-new", "worker-new")
+
+            result = claim_worker_with_banks.process_requests(root, at=AT)
+
+            new_claim = json.loads((root / ".survey/work-queue/claims/job-new.json").read_text())
+            new_result = json.loads((root / ".survey/work-queue/claim-results/req-new.json").read_text())
+            assignment = new_result["assignments"][0]
+
+            self.assertEqual(result["banks_reserved"], 1)
+            self.assertEqual(result["banks_fallback"], 0)
+            self.assertIsInstance(new_claim.get("record_bank"), str)
+            self.assertNotIn("record_bank_fallback", new_claim)
+            self.assertEqual(assignment.get("record_bank"), new_claim["record_bank"])
+            self.assertNotIn("record_bank_fallback", assignment)
+
     def test_expired_reservation_is_reused_when_same_ready_job_is_reclaimed(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
