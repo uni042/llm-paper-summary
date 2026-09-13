@@ -82,15 +82,19 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
+            processing_failed=0
 
             while IFS= read -r descriptor; do
               if [ ! -f "$descriptor" ]; then
                 echo "Descriptor no longer exists on main: $descriptor" >&2
-                exit 1
+                processing_failed=1
+                continue
               fi
-              python .survey/scripts/process_immutable_submission.py \
+              if ! python .survey/scripts/process_immutable_submission.py \
                 --repo-root . \
-                --submission "$descriptor"
+                --submission "$descriptor"; then
+                processing_failed=1
+              fi
             done < /tmp/immutable-submissions.txt
 
             git add \
@@ -103,12 +107,20 @@ jobs:
               .survey/survey-state/identity-deltas
 
             if git diff --cached --quiet; then
+              if [ "$processing_failed" -ne 0 ]; then
+                echo 'Immutable submission failed without new durable state.' >&2
+                exit 1
+              fi
               echo 'Immutable submissions already settled.'
               exit 0
             fi
 
             git commit -m 'survey-submission: publish immutable research results'
             if git push origin HEAD:main; then
+              if [ "$processing_failed" -ne 0 ]; then
+                echo 'Immutable submission failure result was persisted to main.' >&2
+                exit 1
+              fi
               exit 0
             fi
 
