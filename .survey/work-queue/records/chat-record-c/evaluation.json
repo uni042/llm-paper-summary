@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-113547512aeab9c5fa6c73f4",
-  "job_id": "job-research-e355b9d9df6bf3d0",
-  "data": {
-    "hardware": "単一サーバ実機はNVIDIA H100 80GB GPU×8で、GPU間を第4世代NVLink、各GPUとCPUをPCIe 5.0 x16で接続する。故障トレースの長時間評価ではこの8GPUサーバを8個の独立した8GPUノードとして模擬し、完全稼働時64GPU相当のクラスタとして集約スループットを算出する。",
-    "software": "FailSafeは約7千行の独自軽量推論エンジンへ実装され、正常時性能はvLLMとSGLangに匹敵すると報告される。評価モデルはLLaMA-3.1-70B-InstructとMixtral-8x22B-Instruct-v0.1。",
-    "methodology": "オフライン評価ではGCPクラウド可用性データ由来の実故障トレースを64GPU相当に拡大し、各故障イベントで8ノード中のGPUを無作為に1台停止、回復イベントで故障GPUを1台復帰させる。各構成切替時間は全方式共通で10秒に固定する。ワークロードはOpenThoughts-114kで、入力長平均422、出力長平均7295トークンの長文推論を用いる。標準方式は各ノードのテンソル並列台数を1・2・4・8台に制限し、FailSafeはモデルがメモリへ収まる範囲で任意台数を使う。オンライン評価はMooncake実会話トレースから3000要求を抽出し、到着時刻を伸縮して要求率を変え、プリフィルでは最初のトークンまでの時間、デコードではトークン間時間とトークンスループットを測る。詳細な復旧試験ではLLaMA-3.1-70Bの500要求区間を再生し、250番目の要求から100ミリ秒後にGPUを1台故障させ、KV再計算、CPU側KVバックアップ、必要重みのみの完全復旧、理想復旧を比較する。",
-    "scope": "主評価は単一ノード内のテンソル並列であり、複数ノード間のNUMAやネットワーク障害は未評価である。故障トレース自体は実クラウド由来だが、多ノード長時間評価は単一8GPU機を複数ノードとして模擬する。対象はGPUが完全に停止し、残りGPUで再構成できる硬故障であり、性能劣化だけが起きる部分故障、NVLink障害、CPUやストレージ障害などは直接扱わない。",
-    "workloads": ["LLaMA-3.1-70B-Instruct", "Mixtral-8x22B-Instruct-v0.1", "OpenThoughts-114k", "Mooncake会話トレース", "GCPクラウド由来GPU可用性トレース"],
-    "baselines": ["標準テンソル並列4台縮退", "故障なしテンソル並列8台", "利用可能GPU数へ線形比例した理想上限", "単純な不均一テンソル並列7台", "KV再計算による復旧", "CPU側KV復元", "理想メタデータ復旧"],
-    "metrics": ["平均トークンスループット", "最初のトークンまでの時間", "トークン間時間", "最大トークン間時間", "GPU状態復旧遅延", "故障なし上限に対する達成率"],
-    "reproducibility": "GPU構成、モデル、トレース、要求長統計、各比較方式、故障注入位置、復旧内訳は論文に記載されている。一方、FailSafe本体の公式コード公開先は確認できず、独自推論エンジンの実装詳細すべてを追試できる状態ではない。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-058720f42caad1129d81058b","job_id":"job-research-d09e1c8e52097070","data":{"hardware":"単一ノードはAWS EC2 g6e.48xlarge（384 CPUコア、1536GB RAM、NVIDIA L40S×8）。複数ノードはAWS g6e.24xlarge×4で、合計768 CPUコア、3072GB RAM、NVIDIA L40S×16。","software":"PyTorchとTransformersを基盤に、約5.5K行のPythonと600行のCUDAで完全なserverless prototypeを実装。基盤共有はCUDA IPC、事前読込みにはCUDA Streamsと非同期メモリ転送を用いる。","methodology":"Azure Functionsの14日間production traceを要求間隔の変動係数（CoV）でPredictable（≤1）、Normal（1<CoV≤4）、Bursty（>4）へ分類し、各型から8本の4時間traceを無作為選択して個別関数へ割り当てる。Llama2-7B/13B各4 LoRA関数、GSM8K promptを用い、InstaInfer、ServerlessLLM、dLoRA、vLLMと比較する。TTFT/TPOT、cold-start、E2E latency、monetary cost、1/(E2E latency×cost)のcost-effectiveness、token/request throughput、scalability、SLO violation、overheadを測る。SLOはParaServeに合わせて未加速warm-start TTFTの5倍で、7B 2500ms、13B 4000ms。","scope":"主評価はAWS L40SでLlama2-7B/13Bと8 LoRA関数。Azure traceはfunction invocation patternを借用したもので、実際の生成内容はGSM8K。より大規模な基盤モデル、異種GPU、multi-region、実クラウドprovider上の課金挙動やセキュリティ攻撃耐性は評価しない。","workloads":["Azure Functions由来Predictable/Normal/Bursty 4時間trace","Llama2-7B系列4関数","Llama2-13B系列4関数","GSM8K prompt","強/弱scaling workload"],"baselines":["InstaInfer","ServerlessLLM","dLoRA","vLLM","ServerlessLoRA component ablations"],"metrics":["cold-start latency","TTFT","TPOT","E2E latency","monetary cost","cost-effectiveness","token/s","request/s","peak batch size","SLO violation","scheduler/resource overhead"],"reproducibility":"実装規模、主要共有機構、AWS instance構成、モデル、adapter数、trace分類、dataset、baselines、SLO定義、ablation条件は記載されている。一方でServerlessLoRA固有の公式公開コードは確認できず、論文記載だけからの完全再現性には限界がある。"}}
