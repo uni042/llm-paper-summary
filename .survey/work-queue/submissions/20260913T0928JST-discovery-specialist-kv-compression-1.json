@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-fd0445ba2d1db2c9",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv-beacon-query-kv-compression.md",
+      "priority": 91,
+      "reason": "長いCoTで遠方文脈へ再注意するThought Revisiting Tokenを解析し、将来再利用されるKVを予測する代表queryを保持するtraining-free圧縮。4つのopen-source LRMで最大5.8倍のメモリ削減と4.3倍超のthroughput改善を報告し、ICML 2026採択・コード公開済み。長推論時のKV圧縮を直近attentionだけに依存しない設計へ広げるため、既存KV圧縮系統との差分が大きい。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-eviction.md",
+      "priority": 87,
+      "reason": "KV evictionでtoken scorerそのものではなくdecode step間の時間集約規則を独立要因として検証し、EMA型InertiaKVと更新頻度を下げたInertiaKV-Lazyを提案する。Lazy版はfull-refresh InertiaKV比1.34〜1.46倍のdecode throughputを報告し、6モデル・LongBench/LongBench-v2/RULERで評価。EMNLP 2026 Main採択で、既存のscore設計中心のKV圧縮研究を補完する価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.10266",
+      "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+      "source_url": "https://arxiv.org/abs/2609.10266",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md",
+      "priority": 84,
+      "reason": "exact-prefix以外のRAG chunkやagent report、さらにmodel checkpoint更新をまたぐKV再利用を統一評価するbenchmark。位置補正・部分再encoding・学習型repairの品質回復率に加えcompute/memory/request latencyを課金し、未修復cacheがno-cacheより悪化し得ることも示す。KV再利用研究の比較基盤とrolling update時のcache互換性評価として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-kv-compression-reuse-1",
+    "axis": "2026-09新着・KV圧縮・跨文脈再利用",
+    "query_summary": "2026年9月新着からdecode-time KV eviction、長CoT向けKV圧縮、exact-prefix外およびcheckpoint間KV再利用を探索し、一次arXiv書誌・abstractを軽量確認後、paper identityとrepo内ID検索で事前重複確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "KV圧縮の直後反復を避け、GPU runtime/kernel compilation、MoE expert placement/cache、またはnetwork/RDMA disaggregated servingへ軸を変更する",
+    "empty_round_reason": null
+  }
+}
