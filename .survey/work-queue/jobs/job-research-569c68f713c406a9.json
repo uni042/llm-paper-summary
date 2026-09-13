@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2508.19559",
   "title": "Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference",
   "source_url": "https://arxiv.org/abs/2508.19559",
-  "paper_path": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md",
   "selection_reason": "Production-scale coordinated autoscaling for heterogeneous prefill/decode-disaggregated LLM serving. The primary-source abstract reports deployment on tens of thousands of GPUs, topology-aware scheduling, joint prefill/decode scaling, a 26.6 percentage-point utilization gain, and large GPU-hour savings while preserving SLOs. This is strong systems evidence and a meaningful omission if not already represented.",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

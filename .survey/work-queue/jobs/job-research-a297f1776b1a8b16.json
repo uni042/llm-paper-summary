@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2604.18529",
   "title": "HybridGen: Efficient LLM Generative Inference via CPU-GPU Hybrid Computing",
   "source_url": "https://arxiv.org/abs/2604.18529",
-  "paper_path": null,
+  "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md",
   "selection_reason": "長文推論のKVキャッシュをGPUかCPUの片側だけで処理せず、CXL拡張メモリを含むCPU-GPU協調attentionとして実行する。attention logit並列化、フィードバック型スケジューラ、意味情報を考慮したKV配置を組み合わせ、階層メモリとCPU/GPU協調推論の系統に強く関連する。6手法に対し平均1.41〜3.2倍を報告する。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

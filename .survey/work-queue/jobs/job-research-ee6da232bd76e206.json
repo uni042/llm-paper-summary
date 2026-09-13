@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2606.10493",
   "title": "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
   "source_url": "https://arxiv.org/abs/2606.10493",
-  "paper_path": null,
+  "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md",
   "selection_reason": "ローカル環境で巨大MoEを容量削減なしに動かしつつクラウド級SLOを満たすことを狙い、stream-loading prefill、複数GPU向け分散SLP、同一ノード内prefill-decode分離、重みzero-copy共有、attention-MoE overlap、AVX-512 FP8 GEMVを統合するCPU-GPU協調推論システム。32K promptを30秒以内、2枚のRTX 5090で45K promptを30秒以内、混合負荷で50% throughput向上、DeepSeek-V3 decode 28 tok/sなどを報告しており、consumer/local MoE servingとして重要。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

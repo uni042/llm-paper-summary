@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2607.07388",
   "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models",
   "source_url": "https://arxiv.org/abs/2607.07388",
-  "paper_path": null,
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.07388-tf-engram-ssd-backed-memory.md",
   "selection_reason": "GPU・DRAM・SSDの階層を使う外部記憶と予測先読みをLLM推論へ組み込み、GPUメモリ外の大容量記憶を実行時に活用する設計。SSD階層、先読み、推論時メモリ管理という重点テーマに直接重なるため全文精読候補として価値が高い。",
   "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
