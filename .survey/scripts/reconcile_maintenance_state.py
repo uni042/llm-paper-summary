@@ -4,7 +4,8 @@
 This is intentionally conservative: it only copies fields from reports that are
 newer than the corresponding report timestamp already recorded in the state.
 It never changes cadence counters, run keys, maintenance sequence, or pending
-state.
+state. Overall maintenance status is derived from both structural consistency and
+maintenance-health whenever those statuses are known.
 """
 
 from __future__ import annotations
@@ -49,6 +50,22 @@ def newer(report_time: Any, recorded_time: Any) -> bool:
     return recorded_dt is None or report_dt > recorded_dt
 
 
+def combined_maintenance_status(state: dict[str, Any]) -> str | None:
+    known = [
+        status
+        for status in (
+            state.get("last_consistency_status"),
+            state.get("last_health_status"),
+        )
+        if isinstance(status, str) and status.strip()
+    ]
+    if not known:
+        return None
+    if any(status != "passed" for status in known):
+        return "issues_found"
+    return "passed"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", default=".")
@@ -57,6 +74,7 @@ def main() -> int:
     root = Path(args.repo_root)
     state_path = root / ".survey/work-queue/maintenance-cycle.json"
     consistency_path = root / ".survey/reports/consistency-latest.json"
+    health_path = root / ".survey/reports/maintenance-health-latest.json"
     gc_path = root / ".survey/reports/full-gc-latest.json"
 
     state = load_json(state_path)
@@ -65,22 +83,43 @@ def main() -> int:
         return 0
 
     changed_fields: list[str] = []
+    status_report_changed = False
+
     consistency = load_json(consistency_path)
     if consistency and newer(consistency.get("checked_at"), state.get("last_consistency_checked_at")):
         status = consistency.get("status")
-        checked_at = consistency.get("checked_at")
         if status is not None:
             state["last_consistency_status"] = status
-            # This field represents the currently known maintenance/consistency health.
-            state["last_maintenance_status"] = "passed" if status == "passed" else "issues_found"
-            state["last_maintenance_status_source"] = "consistency_report"
+            changed_fields.append("last_consistency_status")
+            status_report_changed = True
+        state["last_consistency_checked_at"] = consistency.get("checked_at")
+        changed_fields.append("last_consistency_checked_at")
+
+    health = load_json(health_path)
+    if health and newer(health.get("checked_at"), state.get("last_health_checked_at")):
+        status = health.get("status")
+        if status is not None:
+            state["last_health_status"] = status
+            changed_fields.append("last_health_status")
+            status_report_changed = True
+        state["last_health_checked_at"] = health.get("checked_at")
+        state["last_health_errors"] = health.get("error_count", state.get("last_health_errors", 0))
+        state["last_health_warnings"] = health.get("warning_count", state.get("last_health_warnings", 0))
+        changed_fields.extend([
+            "last_health_checked_at",
+            "last_health_errors",
+            "last_health_warnings",
+        ])
+
+    if status_report_changed:
+        combined = combined_maintenance_status(state)
+        if combined is not None:
+            state["last_maintenance_status"] = combined
+            state["last_maintenance_status_source"] = "reconciled_reports"
             changed_fields.extend([
-                "last_consistency_status",
                 "last_maintenance_status",
                 "last_maintenance_status_source",
             ])
-        state["last_consistency_checked_at"] = checked_at
-        changed_fields.append("last_consistency_checked_at")
 
     gc = load_json(gc_path)
     if gc and newer(gc.get("checked_at"), state.get("last_gc_checked_at")):
