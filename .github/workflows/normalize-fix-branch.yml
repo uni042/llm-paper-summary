@@ -1,0 +1,41 @@
+name: Normalize fix branch metadata
+
+on:
+  push:
+    branches: [fix/record-bank-consistency]
+    paths:
+      - '.github/workflows/normalize-fix-branch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Normalize nullable metadata
+        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
+
+      - name: Commit normalized papers
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'metadata-normalizer[bot]'
+          git config user.email 'metadata-normalizer[bot]@users.noreply.github.com'
+          git add papers
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'fix: normalize nullable paper metadata'
+          git push origin HEAD:fix/record-bank-consistency
