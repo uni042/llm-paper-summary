@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-b1377ad0e2e7ebab452d376f",
   "job_id": "job-research-4639566133723dd3",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b1377ad0e2e7ebab452d376f",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "LOCALは、背景学習を単純に止めるのではなく安全な中断点へ分割し、KV有効性とメモリ圧も同じスケジューラへ見せることで、単一GPU上の前景応答性と継続学習を両立する。前景優先ではFIFO比で待ちp95を4.403秒から1.433秒へ3.1倍、p99を5.908秒から1.758秒へ3.4倍改善しながら34回の学習コミットを完了する。学習中断は非中断時のTTFT p95 4.247秒を2.749秒へ改善する代わりに、学習処理量を21.6%下げる。版更新後の頻用接頭辞再計算は初回プリフィルp99を25.6%短縮し、複数エージェント先回りプリフィルはTTFT p99を21.9%短縮する。",
+    "key_results": [
+      {"metric": "前景キュー待ちp95", "value": "1.433 s vs 4.403 s、3.1x低下", "baseline": "FIFO", "condition": "tau-bench、前景推論・judge・学習・KV保守混在", "interpretation": "前景到着後に新しい背景作業を投入しないため、待ちを既に走っている非中断区間へ限定する。"},
+      {"metric": "前景キュー待ちp99", "value": "1.758 s vs 5.908 s、3.4x低下", "baseline": "FIFO", "condition": "同一混在ワークロード", "interpretation": "背景処理種別を公平に回すより前景を明示的に優先する方が長い外れ値を抑える。"},
+      {"metric": "学習中断時TTFT p95", "value": "2.749 s vs 4.247 s、1.55x低下", "baseline": "非中断学習", "condition": "tau-bench、judgeとLoRA学習を同居", "interpretation": "安全境界で学習を譲ることで利用者待ちを短縮する一方、学習処理量は346.8から271.8 steps/hourへ21.6%低下する。"},
+      {"metric": "vLLM full-LoRA比のキュー待ちp95", "value": "前景優先で5.9x、ラウンドロビンで12.8x、FIFOで6.3x低い", "baseline": "vLLM sleep/train/wake", "condition": "同一tau-bench作業", "interpretation": "約12.1秒の一括sleep/train/wakeではなく、評価・学習・公開・再計算を短いスケジューラ可視単位へ分ける効果を示す。"},
+      {"metric": "版更新後初回プリフィルp99", "value": "1.210 sから0.900 s、25.6%低下", "baseline": "stale-coverage prefill無効", "condition": "最大8頻用接頭辞、128トークン単位で新版KVを背景再計算", "interpretation": "新版公開後に頻用接頭辞の一部を先に実体化し、最初の前景要求が全接頭辞を再計算する負担を減らす。"},
+      {"metric": "複数エージェントTTFT p99", "value": "2.042 sから1.595 s、21.9%低下", "baseline": "cross-agent pre-prefill無効", "condition": "tau-bench共有文脈、judge・学習・版公開あり", "interpretation": "後続エージェントが使う可能性の高い共有接頭辞を空き時間に計算し、前景経路から計算を移す。"},
+      {"metric": "メモリ圧下の完走", "value": "ピーク21.6〜23.5 GB、31〜35学習コミット", "baseline": "KVページ512〜1280等の構成掃引", "condition": "xLAM-7b-r、24 GB GPU", "interpretation": "KV予算が単にOOM可否だけでなく背景投入余地と前景遅延を変えることを示し、1024ページ条件で待ちp95 0.850秒が最良となった。"}
+    ],
+    "negative_results": "協調中断は無料ではなく、学習処理量を346.8から271.8 steps/hourへ21.6%低下させる。ラウンドロビンはp95が前景優先に近くてもp99が3.625秒と大きく、学習コミットも21回に減る。KVページを増やせば常に速くなるわけではなく、512から1024ページではp95が1.312秒から0.850秒へ改善するが、1280ページでグラフ・保守予算も増やすと0.997秒へ悪化する。vLLM sleep/train/wakeはメモリピークを抑える利点があるが、約12.1秒の中断窓が対話用途の長い前景待ちを生む。",
+    "interpretation": "前景遅延を抑えた理由は、GPUを常に前景だけへ固定したからではない。背景作業を中断可能な小単位にし、各単位の時間とメモリを投入前に見積もり、利用者要求がない窓だけを使うため、34回程度のアダプタ更新を進めながら待ち時間を抑えられる。KV側でも全失効ではなく新版で頻用部分だけを再構築するため、正しさを維持したまま更新直後の再計算を減らす。メモリ構成が遅延へ影響する結果は、KV管理と学習投入を独立に調整できないという設計動機を支持する。",
+    "quality_impact": "ランタイム機構そのものはモデル出力を近似しない。旧アダプタ版で生成されたKVは新版要求で再利用しないため、キャッシュ最適化が異なる重み版の隠れ状態を混ぜることを防ぐ。tau-bench成功率や報酬は同一作業の完走確認に使われ、学習方策そのものの品質向上は本評価の主張外である。"
+  },
+  "reservation": {"claim_id": "claim-b1377ad0e2e7ebab452d376f", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
