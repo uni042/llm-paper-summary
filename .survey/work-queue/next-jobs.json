@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 306,
+      "completed": 307,
       "ready": 1
     },
     "audit": {
@@ -9,12 +9,24 @@
     },
     "research": {
       "completed": 204,
-      "ready": 150,
+      "ready": 152,
       "superseded": 44,
       "deferred": 3
     }
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-569c68f713c406a9",
+      "type": "research",
+      "lane": null,
+      "priority": 93,
+      "canonical_id": "arXiv:2508.19559",
+      "title": "Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.19559",
+      "paper_path": null,
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-7c0598aabd36d6bf",
       "type": "research",
@@ -100,19 +112,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-4639566133723dd3",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2608.15241",
-      "title": "LOCAL: Enabling Learning On-device Contiguously for Agent LLMs",
-      "source_url": "https://arxiv.org/abs/2608.15241",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-40b815170765e1a7",
+      "job_id": "job-fd0445ba2d1db2c9",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T00:11:47+00:00"
+  "generated_at": "2026-09-13T00:25:10+00:00"
 }

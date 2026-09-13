@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:12:41.875243+00:00",
+  "updated_at": "2026-09-13T00:25:36.872601+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -15975,16 +15975,16 @@
     {
       "run_key": "2026-09-13T08:30:00+09:00",
       "first_recorded_at": "2026-09-12T23:31:39.543292+00:00",
-      "last_recorded_at": "2026-09-13T00:12:41.875243+00:00",
+      "last_recorded_at": "2026-09-13T00:25:36.872601+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 22,
+        "new_jobs": 25,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -16100,6 +16100,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34727847994:1",
+          "recorded_at": "2026-09-13T00:25:36.872601+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34727847994",
+            "run_attempt": "1",
+            "source_sha": "2635b67cf90d3daec6796125d28c36716b5bd9b8"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16161,6 +16175,14 @@
         },
         {
           "job_id": "job-7a82e8821b14d511",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-40b815170765e1a7",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16322,6 +16344,27 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-fd0445ba2d1db2c9",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-420858d196a868b6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.09562",
+          "title": "StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving"
+        },
+        {
+          "job_id": "job-research-569c68f713c406a9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2508.19559",
+          "title": "Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference"
         }
       ],
       "new_paper_ids": [],

@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:11:21+00:00",
+  "updated_at": "2026-09-13T00:24:16+00:00",
   "last_run_key": "2026-09-13T09:00:00+09:00",
-  "last_round": "specialist-heterogeneous-storage-2",
+  "last_round": "specialist-runtime-autoscaling-3",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 4,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2524,6 +2524,26 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "Rotate to GPU kernel/runtime and energy-aware execution, then networking/disaggregated-flow scheduling and citation/reference expansion rather than repeat heterogeneous placement queries.",
       "source_submission": "work-queue/submissions/20260913T0909JST-specialist-heterogeneous-storage-2.json"
+    },
+    {
+      "run_key": "2026-09-13T09:00:00+09:00",
+      "round": "specialist-runtime-autoscaling-3",
+      "axis": "production-autoscaling-disaggregated-serving-runtime",
+      "query_summary": "Rotated from heterogeneous placement and SSD storage into production autoscaling and disaggregated runtime behavior. Several apparent candidates were rejected because the current identity index or existing research jobs already contained them; two strong unrepresented candidates remained after direct identity/job/fallback-ledger checks.",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.6666666666666666,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2607.07388",
+        "arxiv:2605.04357",
+        "arxiv:2604.23467",
+        "arxiv:2606.17949"
+      ],
+      "next_axis_hint": "Use forward-citation and backward-reference expansion around heterogeneous serving and SSD-backed inference, then inspect networking/collective scheduling and OS/storage mechanisms for unrepresented candidates.",
+      "source_submission": "work-queue/submissions/20260913T0916JST-specialist-runtime-autoscaling-3.json"
     }
   ],
   "axes": {
@@ -3946,6 +3966,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "Rotate to GPU kernel/runtime and energy-aware execution, then networking/disaggregated-flow scheduling and citation/reference expansion rather than repeat heterogeneous placement queries."
+    },
+    "production-autoscaling-disaggregated-serving-runtime": {
+      "last_run_key": "2026-09-13T09:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.6666666666666666,
+      "next_axis_hint": "Use forward-citation and backward-reference expansion around heterogeneous serving and SSD-backed inference, then inspect networking/collective scheduling and OS/storage mechanisms for unrepresented candidates."
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
