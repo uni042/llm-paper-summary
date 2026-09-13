@@ -1,18 +1,23 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-6c933c22e82d66d9899c79f4",
+  "claim_id": "claim-3576a86872aa70c9b0bbf4b8",
   "job_id": "job-research-054d8fd9fb06ca0f",
   "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-6c933c22e82d66d9899c79f4",
-  "request_id": "discovery-specialist-run7-normal-20260913T1707Z-p",
-  "claimed_at": "2026-09-13T17:07:05+00:00",
-  "expires_at": "2026-09-13T18:37:05+00:00",
+  "attempt_id": "attempt-3576a86872aa70c9b0bbf4b8",
+  "request_id": "discovery-specialist-run7-normal-20260913T1712Z-q",
+  "claimed_at": "2026-09-13T17:10:57+00:00",
+  "expires_at": "2026-09-13T18:40:57+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-054d8fd9fb06ca0f"
   ],
-  "previous_claim_id": "claim-e164c5e580aec79a1d767a1b",
-  "record_bank": "a"
+  "previous_claim_id": "claim-6c933c22e82d66d9899c79f4",
+  "record_bank": "a",
+  "record_bank_recovery": "repair-required-immutable-descriptor",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-6c933c22e82d66d9899c79f4"
+  ],
+  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-6c933c22e82d66d9899c79f4.json"
 }

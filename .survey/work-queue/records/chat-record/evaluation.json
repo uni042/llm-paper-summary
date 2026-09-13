@@ -1,14 +1,39 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-6c933c22e82d66d9899c79f4","job_id":"job-research-054d8fd9fb06ca0f",
-  "data":{
-    "hardware":"Testbed #1: NVIDIA A100 80GB×1。Testbed #2: NVIDIA HGX A100 40GB×8を2サーバ、計16 GPU、NVSwitch。",
-    "software":"PunicaのPyTorch/CUDA拡張、FlashInfer、Rust製スケジューラ・フロントエンド・runner。比較はHuggingFace Transformers+PEFT、DeepSpeed+PEFT、FasterTransformer、vLLM backbone-onlyなど。",
-    "methodology":"Llama-2 7B/13B/70B、LoRA rank 16を全dense projectionへ適用。ShareGPT由来のprompt/response長分布を使い、Distinct、Uniform、Zipf-1.5 Skewed、Identicalの4種のLoRA人気分布を評価する。単一GPUでは1000要求・約101k生成トークン、最大バッチ32。70Bは8 GPUテンソル並列。クラスタ実験は16 GPU、1時間、Poisson到着で負荷を増減する。LoRA重み値は遅延へ影響しないためランダム値を用いる。",
-    "scope":"A100世代とLlama-2中心の2023年評価で、現代のFlashAttention系・新GPU・より大きなLoRA rank・多数アダプタのキャッシュ階層は未評価。品質比較ではなく性能評価が中心で、LoRA重みはランダム。基準のvLLM/FasterTransformerはLoRA非対応のためbackbone-onlyであり、比較条件は現代の専用LoRA基盤との直接比較ではない。",
-    "workloads":["Llama-2 7B","Llama-2 13B","Llama-2 70B","ShareGPT長分布","Distinct/Uniform/Skewed/Identical LoRA popularity"],
-    "baselines":["HuggingFace Transformers+PEFT","DeepSpeed+PEFT","FasterTransformer backbone-only","vLLM backbone-only"],
-    "metrics":["tokens/s","1 token latency","SGMV kernel latency","GPU batch size","active GPU utilization"],
-    "reproducibility":"公式コード公開。ハードウェア、モデル、LoRA rank、要求分布、バッチ上限、比較系を記載しており、主要設計の再現性は高い。"
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-3576a86872aa70c9b0bbf4b8",
+  "job_id": "job-research-054d8fd9fb06ca0f",
+  "data": {
+    "hardware": "Testbed #1: NVIDIA A100 80GB×1。Testbed #2: NVIDIA HGX A100 40GB×8を2サーバ、計16 GPU、NVSwitch。",
+    "software": "PunicaのPyTorch/CUDA拡張、FlashInfer、Rust製スケジューラ・フロントエンド・runner。比較はHuggingFace Transformers+PEFT、DeepSpeed+PEFT、FasterTransformer、vLLM backbone-onlyなど。",
+    "methodology": "Llama-2 7B/13B/70B、LoRA rank 16を全dense projectionへ適用。ShareGPT由来のprompt/response長分布を使い、Distinct、Uniform、Zipf-1.5 Skewed、Identicalの4種のLoRA人気分布を評価する。単一GPUでは1000要求・約101k生成トークン、最大バッチ32。70Bは8 GPUテンソル並列。クラスタ実験は16 GPU、1時間、Poisson到着で負荷を増減する。LoRA重み値は遅延へ影響しないためランダム値を用いる。",
+    "scope": "A100世代とLlama-2中心の2023年評価で、現代のFlashAttention系・新GPU・より大きなLoRA rank・多数アダプタのキャッシュ階層は未評価。品質比較ではなく性能評価が中心で、LoRA重みはランダム。基準のvLLM/FasterTransformerはLoRA非対応のためbackbone-onlyであり、比較条件は現代の専用LoRA基盤との直接比較ではない。",
+    "workloads": [
+      "Llama-2 7B",
+      "Llama-2 13B",
+      "Llama-2 70B",
+      "ShareGPT長分布",
+      "Distinct/Uniform/Skewed/Identical LoRA popularity"
+    ],
+    "baselines": [
+      "HuggingFace Transformers+PEFT",
+      "DeepSpeed+PEFT",
+      "FasterTransformer backbone-only",
+      "vLLM backbone-only"
+    ],
+    "metrics": [
+      "tokens/s",
+      "1 token latency",
+      "SGMV kernel latency",
+      "GPU batch size",
+      "active GPU utilization"
+    ],
+    "reproducibility": "公式コード公開。ハードウェア、モデル、LoRA rank、要求分布、バッチ上限、比較系を記載しており、主要設計の再現性は高い。"
   },
-  "reservation":{"claim_id":"claim-6c933c22e82d66d9899c79f4","worker_id":"scheduled-chat-discovery-run7-normal-20260913T1601Z","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3576a86872aa70c9b0bbf4b8",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
