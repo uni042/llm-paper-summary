@@ -6,8 +6,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **175 / 50** |
-| Research ready | **175** |
+| Candidate在庫（Research ready） | **177 / 50** |
+| Research ready | **177** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T10:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **1** |
-| 新規job | **2** |
+| Discovery完了 | **2** |
+| 新規job | **5** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **23** |
-| 探索round（stats観測） | **143** |
-| 探索評価候補 | **714** |
-| 重複除外 | **299** |
+| 探索round（stats観測） | **144** |
+| 探索評価候補 | **718** |
+| 重複除外 | **301** |
 | 重複率 | **41.9%** |
-| Novel候補 | **415** |
-| Research候補採用 | **235** |
+| Novel候補 | **417** |
+| Research候補採用 | **237** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 714 → 重複除外後 415 → Research候補採用 235 → Research完了 69 → Repo収録 69**
+**探索評価 718 → 重複除外後 417 → Research候補採用 237 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -175,6 +175,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 分離サービングSLO・batch fairness・resource allocation | 4 | 2 | 1 | 50.0% | 25.0% |
 | 地理分散LLM serving・分散最適化 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA | 4 | 0 | 1 | 0.0% | 25.0% |
+| 投機的復号runtime・draft resource・CPU制約 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 投機的復号・高並列サービング・production評価 | 4 | 1 | 2 | 25.0% | 50.0% |
 | 新着分離サービング電力制御・MoE推論効率・KVメモリ回収 | 4 | 0 | 2 | 0.0% | 50.0% |
 | 最新PIM runtime・cache-aware MoE router・speculative資源共有・edge SSD expert cache | 4 | 0 | 0 | 0.0% | 0.0% |
@@ -217,11 +218,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — 投機的復号runtime・draft resource・CPU制約: 評価 4 / 重複 2 / 採用 2
 - **2026-09-13T10:16:01+09:00** — 分離サービングSLO・batch fairness・resource allocation: 評価 4 / 重複 2 / 採用 1
 - **2026-09-13T10:16:01+09:00** — KVページ圧縮・低ランク表現・GPUカーネル: 評価 4 / 重複 1 / 採用 2
 - **2026-09-13T10:16:01+09:00** — 端末内LLM・OSメモリ圧力・Flash/NPU実行: 評価 6 / 重複 2 / 採用 3
 - **2026-09-13T10:16:01+09:00** — GPU実行環境・collective通信・prefill/decode共存: 評価 6 / 重複 5 / 採用 1
-- **2026-09-13T10:16:01+09:00** — 新着LLM推論システム・通信／疎注意／多ターンKV: 評価 7 / 重複 4 / 採用 3
 
 ## 最近処理した論文
 
