@@ -36,11 +36,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **125** |
-| 処理中（Active claims） | **4** |
-| 今すぐ着手可能（Claimable） | **121** |
+| 処理中（Active claims） | **5** |
+| 今すぐ着手可能（Claimable） | **120** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **3** |
-| その他/帰属不明 Active claims | **0** |
+| その他/帰属不明 Active claims | **1** |
 | :30 通常worker 直近claim | **09-14 04:53 JST** |
 | :00 補助worker 直近claim | **09-14 05:29 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
@@ -95,11 +95,11 @@ Run: **2026-09-14T03:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
 - P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
+- P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 
 ## 参考情報
 
