@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **161 / 50** |
-| Research ready | **161** |
+| Candidate在庫（Research ready） | **165 / 50** |
+| Research ready | **165** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **8** |
-| 新規job | **18** |
+| Discovery完了 | **9** |
+| 新規job | **23** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **137** |
-| 探索評価候補 | **679** |
-| 重複除外 | **282** |
+| 探索round（stats観測） | **138** |
+| 探索評価候補 | **687** |
+| 重複除外 | **285** |
 | 重複率 | **41.5%** |
-| Novel候補 | **397** |
-| Research候補採用 | **221** |
+| Novel候補 | **402** |
+| Research候補採用 | **225** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 679 → 重複除外後 397 → Research候補採用 221 → Research完了 69 → Repo収録 69**
+**探索評価 687 → 重複除外後 402 → Research候補採用 225 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -82,6 +82,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | GPU runtime安全性・software aging・many-core CPU inference | 9 | 6 | 3 | 66.7% | 33.3% |
 | hpc_gpu_collective_serving | 9 | 6 | 0 | 66.7% | 0.0% |
 | network-data-movement-pnm-cross-dc-memory-dynamics | 9 | 5 | 4 | 55.6% | 44.4% |
+| NVMe重み先読み・疎推論GPUカーネル・fleet資源配置 | 8 | 3 | 4 | 37.5% | 50.0% |
 | heterogeneous-gpu-offload-parallelism-spot-serving | 8 | 5 | 2 | 62.5% | 25.0% |
 | 分離型LLMサービング・KV転送／フェーズ非対称性 | 8 | 6 | 1 | 75.0% | 12.5% |
 | 疎注意サービング・GPUメガカーネル・動的コンパイラ | 8 | 5 | 3 | 62.5% | 37.5% |
@@ -211,11 +212,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:57:59+09:00** — NVMe重み先読み・疎推論GPUカーネル・fleet資源配置: 評価 8 / 重複 3 / 採用 4
 - **2026-09-13T09:57:59+09:00** — 分離型サービングの負荷偏り・SLO適応: 評価 7 / 重複 4 / 採用 1
 - **2026-09-13T09:28:10+09:00** — 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA: 評価 4 / 重複 0 / 採用 1
 - **2026-09-13T09:28:10+09:00** — multi-tenant runtime制御・適応parallelism・latency attribution: 評価 5 / 重複 3 / 採用 2
-- **2026-09-13T09:28:10+09:00** — RDMA・分離サービング・KV転送: 評価 4 / 重複 4 / 採用 0
 
 ## 最近処理した論文
 
@@ -232,11 +233,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 次に処理する候補
 
+- P92 `arXiv:2608.22643` — NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching
 - P90 `arXiv:2512.12990` — SliceMoE: Bit-Sliced Expert Caching under Miss-Rate Constraints for Efficient MoE Inference
 - P90 `arXiv:2607.05147` — DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation
 - P89 `arXiv:2606.06453` — Vortex: A Programmable System for Efficient Sparse Attention Serving
 - P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
-- P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 
 ## 7日比較
 
