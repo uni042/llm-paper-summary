@@ -4,7 +4,12 @@
   "slot": "positioning",
   "attempt_id": "attempt-7054f9fdaebb50cecf903361",
   "job_id": "job-research-934e7a9b83b10131",
-  "data": {},
+  "data": {
+    "limitations": "主な評価は単一NVIDIA A40、Qwen2.5-1.5B-Instruct、vLLM v0.8.5に限られ、多GPU・多ノードで経路選択と接頭辞局所性が競合する環境は未検証である。低〜中負荷ではKVキャッシュが十分埋まらず追い出し回数自体が少ないため効果が限定される。単発要求が大半を占めるChatbot-Arenaでは命中率改善にもかかわらず管理費用でTTFTが悪化しており、方式を常時有効にするだけでは最適でない。複数ターン継続予測器の学習・初期化やトークン種別判定に必要な意味ラベルの生成方法も、配信環境によって追加統合が必要になり得る。論文は公開コードを採択後に出す方針で、確認時点では再利用可能な公式実装URLが明示されていない。",
+    "differences": "vLLMのLRUは最近度、一般的なLFUは頻度のみでblockを評価するのに対し、SAECacheはtoken種別、session再訪時間、prefix位置、queue別効率を組み合わせる。CachedAttentionはKVを異なるmemory tierへ置くこと、Prebleはcluster-levelでshared prefixを考慮したrouting、Marconiはhybrid attention向けprefix caching、KVFlowとCONTINUUMはagent workflowやmulti-turn agentへ特化した保持方針を扱う。一方SAECacheは単一node内のevictionを対象に、chat、agent、single-turn templateを同じpolicy内で分離する。最も近いLPCは118M parameterのembedding modelでconversation continuation probabilityを予測しconversation単位で一様なscoreを与えるが、SAECacheは約1M parameter predictorとblock-level semantic weightを使い、主要parameterをonline feedbackで更新する。",
+    "implementation_status": "論文著者はSAECacheをvLLM v0.8.5 V0 engineのCache Evictorとして実装し、default LRU Evictorを差し替えるだけでstandard OpenAI-compatible APIからrequestを処理できることを確認している。scheduler、model executor、serving infrastructureの変更は不要とされる。論文checklistはcodeをsubmission時に匿名化して用意しacceptance後公開すると説明するが、arXiv v1本文とlanding pageから2026-09-14時点で公式公開repository URLは確認できないため、現状はprototype実装の存在は確認できるが第三者が恒久URLから即取得できる状態とは扱わない。",
+    "research_positioning": "本研究はKVキャッシュ容量そのものを増やすoffloadやcompressionではなく、限られたGPU-resident prefix cacheの『どの正確なblockを残すか』を意味情報とruntime feedbackで最適化する系統に位置する。特にagentic servingではsystem prompt、tool description、tool output、model response、reasoning traceが同じprompt内に混在し再利用率が大きく異なるため、token-agnosticなLRUより細粒度な価値判断の必要性を示す。また固定parameterがworkload shiftで崩れる実測は、cache policyをoffline tuningだけで決めずonline adaptationへ移す動機になる。今後cluster-level routingやCPU/SSD offloadと組み合わせる場合、SAECacheのsemantic value scoreをtier placementやprefetch priorityへ拡張できる余地がある。"
+  },
   "reservation": {
     "claim_id": "claim-7054f9fdaebb50cecf903361",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
