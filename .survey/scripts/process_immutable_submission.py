@@ -58,24 +58,23 @@ def _descriptor_path(repo_root: Path, path: Path) -> Path:
 
 
 def render_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> str:
-    """Render one validated descriptor without mutating the reusable chat inbox."""
+    """Render one validated descriptor from its exact committed slot blobs."""
     import assemble_research_record as assemble
 
     record: dict[str, Any] = {}
     total_bytes = 0
     for ref in descriptor["record_slots"]:
         slot = str(ref["slot"])
-        path = repo_root / str(ref["path"])
-        raw = path.read_bytes()
+        payload = immutable_submission.read_record_slot(repo_root, ref)
+        raw_size = len(json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
         limit = assemble.MAX_SLOT_BYTES[slot]
-        if len(raw) > limit:
-            raise ValueError(f"record slot too large: {ref['path']} ({len(raw)} bytes > {limit})")
-        payload = json.loads(raw.decode("utf-8"))
+        if raw_size > limit:
+            raise ValueError(f"record slot too large: {ref['path']} ({raw_size} bytes > {limit})")
         data = payload.get("data")
         if not isinstance(data, dict):
             raise ValueError(f"{ref['path']} data must be an object")
         record[slot] = data
-        total_bytes += len(raw)
+        total_bytes += raw_size
 
     record = assemble.normalize_preferred_terms(record)
     assemble.ensure_explanatory_summary(record)
