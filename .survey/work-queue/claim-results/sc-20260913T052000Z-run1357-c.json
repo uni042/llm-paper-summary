@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T052000Z-run1357-c",
+  "worker_id": "scheduled-chat-router-20260913-1357",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-eb3b75f01826c8e7",
+      "claim_id": "claim-9337f24081b1418a63f741f4",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-9337f24081b1418a63f741f4",
+      "claimed_at": "2026-09-13T05:15:08+00:00",
+      "expires_at": "2026-09-13T06:45:08+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-eb3b75f01826c8e7"
+      ],
+      "job": {
+        "job_id": "job-research-eb3b75f01826c8e7",
+        "type": "research",
+        "parent_job_id": "job-f76f51c593bcba6f",
+        "priority": 87,
+        "canonical_id": "arXiv:2605.26444",
+        "title": "MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies",
+        "source_url": "https://arxiv.org/abs/2605.26444",
+        "paper_path": "papers/inference/06-speculative-decoding/2026-2605.26444-microspec-lightweight-in-context-vocabularies.md",
+        "selection_reason": "投機的復号のdraft modelで10万超tokenの出力射影がボトルネックになる点に対し、生成文脈の時間局所性からstepごとに3K未満のactive vocabularyを構築するtraining-free方式。非連続memory accessのoverheadを非同期gatherとGPU常駐状態で隠すsystem co-designによりdraft inference latencyを平均51.6%削減し、EAGLE-2比end-to-endで1.12〜1.32倍高速化するため、投機的復号のkernel/runtime最適化として強い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T01:34:08+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-58b5be68410fbaab",
+      "claim_id": "claim-24001c38aac79c49d7fe0750",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-24001c38aac79c49d7fe0750",
+      "claimed_at": "2026-09-13T05:15:08+00:00",
+      "expires_at": "2026-09-13T06:45:08+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-58b5be68410fbaab"
+      ],
+      "job": {
+        "job_id": "job-research-58b5be68410fbaab",
+        "type": "research",
+        "parent_job_id": "job-bb3c1124c61c2b01",
+        "priority": 87,
+        "canonical_id": "arXiv:2503.18292",
+        "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
+        "source_url": "https://arxiv.org/abs/2503.18292",
+        "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+        "selection_reason": "PagedAttention以降のLLMで埋め込み次元・注意構造・依存関係が層ごとに異なるため、単一ページサイズと一律キャッシュ方針では断片化・再利用効率が悪化する問題を扱う。異種埋め込み寸法の最小公倍数を利用する二段階メモリアロケータと層別キャッシュ・eviction APIをvLLM上に実装し、多様なモデル・データセット・GPU構成でGPUメモリ利用を最大79.6%改善、serving throughputを最大4.92倍（平均1.80倍）改善する。PagedAttention系統の重要な発展として未収録なら価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T02:08:28+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-57d78e1392b6c354",
+      "claim_id": "claim-d3e86eed6060f69be7fa32ff",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-d3e86eed6060f69be7fa32ff",
+      "claimed_at": "2026-09-13T05:15:08+00:00",
+      "expires_at": "2026-09-13T06:45:08+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-57d78e1392b6c354"
+      ],
+      "job": {
+        "job_id": "job-research-57d78e1392b6c354",
+        "type": "research",
+        "parent_job_id": "job-b4a7aa0b3a46fbdf",
+        "priority": 87,
+        "canonical_id": "arXiv:2604.20503",
+        "title": "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2604.20503",
+        "paper_path": "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
+        "selection_reason": "動的なオンライン負荷で従来の投機的復号がbatch単位の固定投機長とdraft/verification直列化に縛られる問題に対し、request単位の適応的投機長、verification中の早期枝刈り、verification frontier分割とdraftとの空間多重化を行う。vLLM試作で最先端方式比throughput最大53%向上、latency最大1.92倍改善を報告し、投機的復号をserving scheduler/runtime側から細粒度制御する点で収録価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T02:13:14+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T05:15:08+00:00"
+}
