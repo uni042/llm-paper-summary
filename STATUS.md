@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:58 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 18:00 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **171** |
+| 未処理の論文候補（Research ready） | **170** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **219** |
+| 全文精読完了（累計） | **220** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **14 / 24** |
@@ -35,26 +35,26 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **171** |
-| 処理中（Active claims） | **43** |
-| 今すぐ着手可能（Claimable） | **128** |
-| :30 通常worker Active claims | **32** |
+| 未処理候補（Research ready） | **170** |
+| 処理中（Active claims） | **41** |
+| 今すぐ着手可能（Claimable） | **129** |
+| :30 通常worker Active claims | **33** |
 | :00 補助worker Active claims | **5** |
-| その他/帰属不明 Active claims | **4** |
-| :30 通常worker 直近claim | **09-13 17:49 JST** |
+| その他/帰属不明 Active claims | **3** |
+| :30 通常worker 直近claim | **09-13 18:00 JST** |
 | :00 補助worker 直近claim | **09-13 17:35 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **57** |
 | 最新通常run | **2026-09-13T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **350 min** |
+| 最古の有効claimの経過時間 | **352 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=171 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=170 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **57件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **66** |
 | Repo収録 | **66** |
 | Audit完了 | **0** |
-| 探索評価候補 | **720** |
-| Research候補採用 | **224** |
-| 重複除外 | **316** |
-| 重複率 | **43.9%** |
-| 探索専用worker run（毎時枠） | **17** |
-| 探索専用worker round（stats観測） | **146** |
+| 探索評価候補 | **697** |
+| Research候補採用 | **215** |
+| 重複除外 | **314** |
+| 重複率 | **45.1%** |
+| 探索専用worker run（毎時枠） | **16** |
+| 探索専用worker round（stats観測） | **142** |
 | 通常worker run（ledger観測） | **22** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 66 → Repo収録 66**
+**探索評価 697 → 重複除外後 383 → Research候補採用 215 → Research完了 66 → Repo収録 66**
 
 ## 直近の通常worker
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T17:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
 - P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
-- P86 `arXiv:2604.13327` — Event Tensor: A Compiler Abstraction for Dynamic Megakernel Generation
 
 ## 参考情報
 
@@ -135,7 +135,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | NVMe重み先読み・疎推論GPUカーネル・fleet資源配置 | 8 | 3 | 4 | 37.5% | 50.0% |
 | 分離型LLMサービング・KV転送／フェーズ非対称性 | 8 | 6 | 1 | 75.0% | 12.5% |
 | 疎注意サービング・GPUメガカーネル・動的コンパイラ | 8 | 5 | 3 | 62.5% | 37.5% |
-| CXL共有メモリ・KV階層・near-memory processing | 7 | 2 | 2 | 28.6% | 28.6% |
 | MoE expert cache・Flash階層・expert-parallel耐障害性 | 7 | 5 | 2 | 71.4% | 28.6% |
 | agentic state・segment KV reuse・semantic eviction・stateful tokenization・hierarchical agent memory | 7 | 2 | 5 | 28.6% | 71.4% |
 | heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
@@ -161,7 +160,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | agentic multi-turn state・interruption・distributed prefix sharing | 6 | 2 | 1 | 33.3% | 16.7% |
 | position-independent KV再利用のforward/backward related-work補完 | 6 | 1 | 5 | 16.7% | 83.3% |
 | production-autoscaling-disaggregated-serving-runtime | 6 | 4 | 2 | 66.7% | 33.3% |
-| 新着edge/disaggregated serving・通信/電力制御 | 6 | 0 | 4 | 0.0% | 66.7% |
 | 端末内LLM・OSメモリ圧力・Flash/NPU実行 | 6 | 2 | 3 | 33.3% | 50.0% |
 | 2609新着・KVキャッシュ・階層メモリ・ストレージ | 5 | 0 | 0 | 0.0% | 0.0% |
 | CPU-free SmartNIC・lossless圧縮・CPU-GPU協調runtime | 5 | 0 | 1 | 0.0% | 20.0% |
@@ -170,7 +168,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | Flash・SSD階層メモリと予測先読み | 5 | 3 | 2 | 60.0% | 40.0% |
 | Foundry backward references・serverless cold-start・dynamic parallelism・MoE service elasticity | 5 | 0 | 5 | 0.0% | 100.0% |
 | GPU runtime cold-start・MoE network topology・heterogeneous/geo routing | 5 | 0 | 5 | 0.0% | 100.0% |
-| GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
 | GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
 | KVページ制御・MoEメモリ分離・復元系の再探索 | 5 | 5 | 0 | 100.0% | 0.0% |
 | MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
@@ -186,7 +183,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels | 5 | 2 | 3 | 40.0% | 60.0% |
 | multi-tenant runtime制御・適応parallelism・latency attribution | 5 | 3 | 2 | 60.0% | 40.0% |
 | output-length uncertainty・KV reservation・memory-constrained admission/scheduling | 5 | 0 | 1 | 0.0% | 20.0% |
-| production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | serving software aging・runtime reliability・lossless compression・load-aware speculative serving | 5 | 4 | 0 | 80.0% | 0.0% |
 | 分離サービング・電力制御・KV転送・multi-turn routing | 5 | 0 | 0 | 0.0% | 0.0% |
 | 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
