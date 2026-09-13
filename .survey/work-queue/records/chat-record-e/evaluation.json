@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d36d1ce1db733edcd5699199",
   "job_id": "job-research-1725e694fe58fcc2",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d36d1ce1db733edcd5699199",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "6ノード。各ノードはNVLink接続のNVIDIA GPU 8基と400 Gbps Mellanox RoCE 8系統を備え、GPUDirect RDMAを有効化している。GPU型番は本文に明記されていない。",
+    "software": "Ubuntu 24.04.2 LTS、CUDA 12.9、NVIDIA driver 535.161.08、Mellanox OFED 23.10、PyTorch 2.8.0、Python 3.12。実装基盤はMooncake EP/Mooncake PGとSGLang。",
+    "methodology": "DeepSeek-V3 671B・256専門家を使用。通常時性能は同じprefill/decode分離SGLang配置で固定メンバーシップのDeepEPと比較し、1024入力/1024出力の復号中心負荷と4096入力/256出力の事前充填中心負荷を同時実行数32〜256で測定した。障害・再統合では256入力/4096出力、最大同時実行512、2事前充填・4復号構成を使い、SIGKILLで1/2/4/8/16ランク障害を注入する。固定方式の障害時対照は同一ハードウェア上での全インスタンス再起動。",
+    "scope": "実機クラスタ上のエンドツーエンド推論評価であり、シミュレーションではない。一方、モデルはDeepSeek-V3、ネットワークはRoCE、対象障害は停止故障に限定され、無言の破損・分断や別モデル・別通信網への一般化は直接測っていない。精度・生成品質のベンチマークも実施していない。",
+    "workloads": ["復号中心: 1024入力/1024出力, 同時実行32-256", "事前充填中心: 4096入力/256出力, 同時実行32-256", "復旧・再統合: 256入力/4096出力, 最大同時実行512"],
+    "baselines": ["DeepEP固定メンバーシップ後端", "全インスタンス再起動"]
+  },
+  "reservation": {"claim_id":"claim-d36d1ce1db733edcd5699199","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
