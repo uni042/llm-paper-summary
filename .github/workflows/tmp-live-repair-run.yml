@@ -68,14 +68,29 @@ jobs:
                   record[slot] = payload['data']
               return record
 
-          def validation_error(assignment):
+          def normalized_record(assignment):
               record = assemble.normalize_preferred_terms(current_record(assignment))
               assemble.ensure_explanatory_summary(record)
+              return record
+
+          def validation_error(assignment):
+              record = normalized_record(assignment)
               try:
                   assemble.validate_record(record)
               except Exception as exc:
                   return f'{type(exc).__name__}: {exc}'
               return None
+
+          def language_report(assignment):
+              record = normalized_record(assignment)
+              text = assemble.record_prose_text(record)
+              ratio, jp_chars, latin_chars = assemble.japanese_ratio(text)
+              per_slot = {}
+              for slot in SLOT_NAMES:
+                  slot_text = assemble.record_prose_text({slot: record.get(slot, {})})
+                  sr, sj, sl = assemble.japanese_ratio(slot_text)
+                  per_slot[slot] = {'ratio': round(sr, 4), 'japanese': sj, 'latin': sl}
+              return {'ratio': round(ratio, 4), 'japanese': jp_chars, 'latin': latin_chars, 'per_slot': per_slot}
 
           now = dt.datetime.now(dt.timezone.utc)
           branch_jobs = root / '.survey/work-queue/jobs'
@@ -132,47 +147,45 @@ jobs:
               return assignment, process_result
 
           vortex_job = 'job-research-8df4b126a68a6be4'
-          vortex, vortex_claim_metrics = claim_target(
-              vortex_job, 'manual-repair-vortex-20260913', 'manual-repair-vortex'
-          )
+          vortex, vortex_claim_metrics = claim_target(vortex_job, 'manual-repair-vortex-20260913', 'manual-repair-vortex')
           assert vortex.get('record_bank') == 'h', vortex
           assert vortex.get('record_bank_recovery') == 'repair-required-same-job', vortex
 
-          spectrum, spectrum_claim_metrics = claim_target(
-              spectrum_job, 'manual-repair-spectrum-20260913', 'manual-repair-spectrum'
-          )
+          spectrum, spectrum_claim_metrics = claim_target(spectrum_job, 'manual-repair-spectrum-20260913', 'manual-repair-spectrum')
           assert spectrum.get('record_bank_recovery') == 'repair-required-immutable-descriptor', spectrum
           assert spectrum.get('record_bank_recovery_attempt_ids') == [spectrum_old_attempt], spectrum
 
           vortex_precheck = validation_error(vortex)
           spectrum_precheck = validation_error(spectrum)
+          print('PRECHECK_JSON=' + json.dumps({
+              'vortex': {'error': vortex_precheck, 'language': language_report(vortex)},
+              'spectrum': {'error': spectrum_precheck, 'language': language_report(spectrum)},
+          }, ensure_ascii=False, sort_keys=True))
           repairs = []
 
-          # Vortex's retained bank is newer than the stale job error; do not rewrite valid research.
           if vortex_precheck is not None:
               vortex_pm_path = root / BANK_ROOTS[vortex['record_bank']] / 'problem_method.json'
               vortex_pm = read(vortex_pm_path)
               before_vortex = vortex_pm['data']['components'][0]['description']
               if assemble.prose_chars(before_vortex) < 240:
                   extra_vortex = (
-                      'さらにcache stageの出力はnamed cacheとしてKV pageと同じ割当単位に保存され、'
-                      'indexerは各デコード反復でその統計と現在queryだけを組み合わせて候補blockを絞る。'
-                      'そのため毎tokenで全KVを走査せず、状態保持型の方式でも物理page位置を利用者コードへ露出しない。'
+                      'さらにキャッシュ段階の出力は名前付きキャッシュとしてKVページと同じ割当単位に保存され、'
+                      '索引段階は各デコード反復でその統計と現在のクエリだけを組み合わせて候補ブロックを絞る。'
+                      'そのため毎トークンで全KVを走査せず、状態保持型の方式でも物理ページ位置を利用者コードへ露出しない。'
                   )
                   vortex_pm['data']['components'][0]['description'] = before_vortex + extra_vortex
                   write(vortex_pm_path, vortex_pm)
                   repairs.append({'job_id': vortex_job, 'field': 'components[0].description', 'before_chars': assemble.prose_chars(before_vortex), 'after_chars': assemble.prose_chars(vortex_pm['data']['components'][0]['description'])})
 
-          # SpectrumKV's historical immutable record genuinely has a short method overview.
           spectrum_pm_path = root / BANK_ROOTS[spectrum['record_bank']] / 'problem_method.json'
           spectrum_pm = read(spectrum_pm_path)
           before_spectrum = spectrum_pm['data']['method_overview']
           if assemble.prose_chars(before_spectrum) < 500:
               extra_spectrum = (
                   'エンドツーエンドでは、プリフィルGPUで通常のFP16 KVを生成し、重要度を計算し、'
-                  '転送予算に沿ってtokenごとにFP16・INT8・INT4を選択して量子化する。次に量子化KVと'
-                  'token別precision mapをネットワーク越しにデコードGPUへ送り、受信側はmapに従って各KVを復号し、'
-                  '低重要度位置も削除せず全tokenを通常のattentionへ入力する。配備前probeでINT4不適合と判定された'
+                  '転送予算に沿ってトークンごとにFP16・INT8・INT4を選択して量子化する。次に量子化KVと'
+                  'トークン別の精度地図をネットワーク越しにデコードGPUへ送り、受信側は地図に従って各KVを復号し、'
+                  '低重要度位置も削除せず全トークンを通常の注意計算へ入力する。配備前の試験でINT4不適合と判定された'
                   'モデルでは同じ処理列の精度集合をFP16・INT8へ縮退させ、同じ予算制約の下で割当を再計算する。'
                   'したがって転送量削減、復号、生成までが一つの流れとして完結し、削除方式のような欠落位置の再取得を必要としない。'
               )
@@ -182,6 +195,11 @@ jobs:
 
           vortex_postcheck = validation_error(vortex)
           spectrum_postcheck = validation_error(spectrum)
+          print('POSTCHECK_JSON=' + json.dumps({
+              'vortex': {'error': vortex_postcheck, 'language': language_report(vortex)},
+              'spectrum': {'error': spectrum_postcheck, 'language': language_report(spectrum)},
+              'repairs': repairs,
+          }, ensure_ascii=False, sort_keys=True))
           assert vortex_postcheck is None, vortex_postcheck
           assert spectrum_postcheck is None, spectrum_postcheck
 
@@ -217,26 +235,18 @@ jobs:
               paper = root / job['paper_path']
               assert paper.is_file()
               return {
-                  'job_id': assignment['job_id'],
-                  'attempt_id': assignment['attempt_id'],
-                  'bank': bank,
-                  'recovery': assignment.get('record_bank_recovery'),
-                  'paper_path': job['paper_path'],
-                  'paper_bytes': paper.stat().st_size,
-                  'result_ok': result.get('ok'),
+                  'job_id': assignment['job_id'], 'attempt_id': assignment['attempt_id'], 'bank': bank,
+                  'recovery': assignment.get('record_bank_recovery'), 'paper_path': job['paper_path'],
+                  'paper_bytes': paper.stat().st_size, 'result_ok': result.get('ok'),
               }
 
           vortex_result = submit(vortex)
           spectrum_result = submit(spectrum)
-
           report = {
               'precheck': {'vortex': vortex_precheck, 'spectrum': spectrum_precheck},
               'postcheck': {'vortex': vortex_postcheck, 'spectrum': spectrum_postcheck},
-              'repairs': repairs,
-              'vortex': vortex_result,
-              'spectrum': spectrum_result,
-              'vortex_claim_metrics': vortex_claim_metrics,
-              'spectrum_claim_metrics': spectrum_claim_metrics,
+              'repairs': repairs, 'vortex': vortex_result, 'spectrum': spectrum_result,
+              'vortex_claim_metrics': vortex_claim_metrics, 'spectrum_claim_metrics': spectrum_claim_metrics,
           }
           write(root / '.survey/reports/live-repair-run-2026-09-13.json', report)
           print('LIVE_REPAIR_JSON=' + json.dumps(report, ensure_ascii=False, sort_keys=True))
