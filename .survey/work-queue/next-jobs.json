@@ -17,22 +17,10 @@
   },
   "claiming": {
     "ready_research_audit": 155,
-    "actively_claimed": 0,
-    "claimable": 155
+    "actively_claimed": 1,
+    "claimable": 154
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-2f20b6ae0c5a7fb6",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2507.10069",
-      "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism",
-      "source_url": "https://arxiv.org/abs/2507.10069",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.10069-elasticmm-elastic-multimodal-parallelism.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-d53ec8171f729e9e",
       "type": "research",
@@ -118,6 +106,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-44ece09f5c0f4e7c",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2607.08565",
+      "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling",
+      "source_url": "https://arxiv.org/abs/2607.08565",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.08565-smetric-session-centric-agent-scheduling.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -130,5 +130,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T16:25:00+00:00"
+  "generated_at": "2026-09-13T16:25:11+00:00"
 }

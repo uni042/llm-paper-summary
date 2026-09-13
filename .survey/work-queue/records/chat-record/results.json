@@ -2,81 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ead673a4a697aedcc03a62ec",
-  "job_id": "job-research-ff9dfc8e1a733b56",
-  "data": {
-    "overview": "MixServeはDeepSeek-R1とQwen3-235B-A22Bの両方、H20 GPUとAscend 910B NPUの両環境で比較構成より低い応答遅延と高いスループットを示した。TTFTは1.08〜3.80倍、ITLは1.03〜1.66倍高速化し、総トークンスループットは5.2〜50.3%向上する。特にノード間帯域が相対的に遅いAscend環境では純粋なTP+PPとの差が大きく、H20環境では通信改善幅は小さめでもスループット向上が大きい。DPとEPの最適比はハードウェアで変わり、分析器が固定経験則ではなくネットワーク構成に応じて選び直す必要性も確認される。",
-    "key_results": [
-      {
-        "metric": "TTFT高速化",
-        "value": "1.08〜3.80倍",
-        "baseline": "vLLM/Tutelの各並列構成",
-        "condition": "DeepSeek-R1/Qwen3、H20・Ascend 910B、2/4/8 req/s",
-        "interpretation": "プリフィルは通信量が大きく、ノード内TPとノード間EPを融合して重ねる効果が最も強く現れる。"
-      },
-      {
-        "metric": "Ascend 910B上のDeepSeek-R1 TTFT",
-        "value": "vLLM TP+PP比2.67倍、vLLM DP+EP比1.70倍",
-        "baseline": "vLLM",
-        "condition": "4ノード×8 Ascend 910B",
-        "interpretation": "低速なノード間RoCEへAll-Reduceを広げる構成を避け、階層帯域を意識した混合並列が大きく効く。"
-      },
-      {
-        "metric": "Ascend 910B上のQwen3 TTFT",
-        "value": "vLLM TP+PP比3.80倍、DP+EP比1.32〜1.93倍",
-        "baseline": "vLLM",
-        "condition": "Qwen3-235B-A22B、32 NPU",
-        "interpretation": "モデル形状と専門家構成が異なっても自動選択と融合通信の利得が維持される。"
-      },
-      {
-        "metric": "ITL高速化",
-        "value": "1.03〜1.66倍",
-        "baseline": "vLLM/Tutel",
-        "condition": "全評価構成",
-        "interpretation": "デコードはプリフィルより通信量が小さいためTTFTほど大きくないが、全条件で改善方向を維持する。"
-      },
-      {
-        "metric": "Ascend 910B上のITL",
-        "value": "DeepSeek-R1 227.33ms→160.06ms、Qwen3 134.27ms→81.1ms",
-        "baseline": "vLLM TP+PP",
-        "condition": "Ascend 910Bクラスタ",
-        "interpretation": "それぞれ1.42倍と1.66倍の高速化で、融合通信がデコード段階にも効く。"
-      },
-      {
-        "metric": "総トークンスループット",
-        "value": "5.2〜50.3%向上",
-        "baseline": "既存並列構成",
-        "condition": "全評価構成",
-        "interpretation": "遅延削減だけでなく、通信待ちが短くなることで同じクラスタが処理できるトークン数も増える。"
-      },
-      {
-        "metric": "H20上のDeepSeek-R1スループット",
-        "value": "362.78→545.23 tokens/s（+50.3%）",
-        "baseline": "vLLM TP+PP",
-        "condition": "2ノード×8 H20",
-        "interpretation": "高帯域NVLink環境でもノード間通信との重畳が大きな処理量改善につながる。"
-      },
-      {
-        "metric": "H20上のQwen3スループット",
-        "value": "435.82→625.45 tokens/s（+43.5%）",
-        "baseline": "vLLM TP+PP",
-        "condition": "2ノード×8 H20",
-        "interpretation": "別MoE構成でも同様に大きなスループット利得を得る。"
-      },
-      {
-        "metric": "DP/EP構成依存性",
-        "value": "AscendではDP=EPが良好、H20ではDP<EPが最良例",
-        "baseline": "複数DP/EP比",
-        "condition": "Qwen3例: Ascend 383.14ms・150.08 tokens/s、H20最小TTFT 228.99ms",
-        "interpretation": "単一の並列比を全クラスタへ固定せず、帯域階層に合わせて自動選択する設計を支持する。"
-      }
-    ],
-    "negative_results": "H20ではTTFT高速化が1.08〜1.23倍、ITLが1.03〜1.16倍に留まり、Ascend環境ほど劇的ではない。これはノード内NVLinkが高速で既存構成も比較的効率的なためである。融合RS-Combineは出力相当の一時領域を各rankに追加し、時間短縮とメモリを交換する。自動分析器の待ち時間モデルはM/M/1近似で、重い裾を持つ要求やバースト到着の精度は示されない。また公式コード公開が確認できず、比較実装の細部を第三者が完全再現する障壁がある。",
-    "interpretation": "結果は『EPを増やせば常に良い』という単純則を否定し、モデル・デバイス数・ノード内外帯域によってDP/EP/TPの最適点が変わることを示す。MixServeは低速なノード間リンクへ送るhidden stateをノード内TPで先にshardし、その通信と高速なノード内集約を重ねるため、帯域階層の差が大きいほど効果が出やすい。一方、もともと通信が小さいデコードや高帯域環境では利得も縮小する。",
-    "quality_impact": "モデル計算や専門家選択結果を近似しないため、性能最適化による意図的な推論品質低下はない。評価はシステム指標に集中し、精度ベンチマークを別途改善する手法ではない。"
-  },
+  "attempt_id": "attempt-95a8618581d24029b1e45af8",
+  "job_id": "job-research-2f20b6ae0c5a7fb6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ead673a4a697aedcc03a62ec",
+    "claim_id": "claim-95a8618581d24029b1e45af8",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }

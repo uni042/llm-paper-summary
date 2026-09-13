@@ -2,40 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ead673a4a697aedcc03a62ec",
-  "job_id": "job-research-ff9dfc8e1a733b56",
-  "data": {
-    "hardware": "2台のサーバーに各8枚のNVIDIA H20 96GBを搭載した16 GPU環境と、4台のAtlas 800T A2に各8個のAscend 910B 64GBを搭載した32 NPU環境を用いる。H20はノード内NVLink 4.0最大900GB/s、ノード間InfiniBand 400Gbps。910Bはノード内HCCS最大480Gbps、ノード間RoCE最大200Gbps。",
-    "software": "H20クラスタではTutel、Ascend 910BクラスタではvLLMを基盤にMixServeを実装する。比較ではvLLMのTP+PP、DP+EP構成と、H20でTutelのTP+EP構成を用い、TP並列度4・8など複数の分割を比較する。",
-    "methodology": "DeepSeek-R1 671B（256 routed experts＋1 shared expert、1トークン当たり37B活性）とQwen3-235B-A22B（128 experts、22B活性）をShareGPT-V3で評価する。要求率を2・4・8 req/s、最大バッチ16、最大系列長4096に設定し、TTFT、ITL、総トークンスループットを測定する。主要結果は10回実行の平均で、誤差棒は標準偏差。並列戦略のDP/EP比を3通りに変える試験と、融合AR-A2Aを同期実行／非同期重畳する試験で構成要素を分解する。",
-    "scope": "2種類の特定クラスタと2種類の大規模MoEに限定した実機評価であり、他のGPU世代、Ethernetのみのネットワーク、専門家偏りが極端な独自ワークロード、障害時の再構成は測らない。分析器の待ち時間はM/M/1近似を使うため、実際の要求到着やサービス時間が指数分布から外れる場合の予測精度は別途検証が必要である。",
-    "workloads": [
-      "DeepSeek-R1 671B",
-      "Qwen3-235B-A22B",
-      "ShareGPT-V3",
-      "2/4/8 req/s",
-      "最大バッチ16",
-      "最大系列長4096"
-    ],
-    "baselines": [
-      "vLLM TP+PP",
-      "vLLM DP+EP",
-      "Tutel TP+EP",
-      "TP並列度4/8の複数構成",
-      "融合通信の同期版"
-    ],
-    "metrics": [
-      "TTFT",
-      "ITL",
-      "総トークンスループット",
-      "P99遅延",
-      "通信オーバーヘッド",
-      "DP/EP並列度別性能"
-    ],
-    "reproducibility": "モデル、データセット、2クラスタのデバイス数・リンク仕様、要求率、最大バッチ、系列長、比較並列構成、10回平均という条件は記載される。一方、2026-09-14時点で一次資料から著者公式コード公開先は確認できず、実装差分や自動分析器の完全な再現には論文記述からの実装が必要である。"
-  },
+  "attempt_id": "attempt-95a8618581d24029b1e45af8",
+  "job_id": "job-research-2f20b6ae0c5a7fb6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-ead673a4a697aedcc03a62ec",
+    "claim_id": "claim-95a8618581d24029b1e45af8",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }
