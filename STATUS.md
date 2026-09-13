@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:47 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -61,7 +61,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | Repo収録 | **69** |
 | Audit完了 | **0** |
 | Blocked遷移 | **0** |
-| Fallback archive | **0** |
+| Fallback archive | **1** |
 
 ### 24時間ファネル
 
