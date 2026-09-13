@@ -4,10 +4,27 @@
   "slot": "results",
   "attempt_id": "attempt-12b96d8a83087a895d8a74df",
   "job_id": "job-research-6a744249548dd135",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-12b96d8a83087a895d8a74df",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "HILOSはKVをhostへ戻してattentionする従来SSD offloadのPCIe律速を避け、長文脈ほど利得が拡大する。16 SmartSSDではFLEX(DRAM)比1.88〜2.49倍、DRAMにも収まらない長文脈条件ではFLEX(SSD)比5.3〜7.8倍となり、論文全体の最大throughput改善は7.86倍。GQA/MoEを含むQwen2.5-32B、Mixtral-8x7B、GLaM-143Bでもbaseline比1.16〜3.36倍を維持する。attention-near-storage単独でも最大3.39倍で、delayed writebackがそこから最大1.32倍、X-cacheが最大1.64倍を追加する。出力系列が長いほどprefill固定費を償却でき、最大6.08倍まで利得が伸びる。16-device FPGA群の電力は約258Wで、総energyは最大85%減少し、66Bでtokens/s/$がFLEX(SSD)比最大2.02倍、175Bで最大1.68倍。",
+    "key_results": [
+      {"metric": "end-to-end decoding throughput", "value": "最大7.86×", "baseline": "state-of-the-art offloading baseline", "condition": "長文脈offline inference、最大16 SmartSSD", "interpretation": "KV本体を共有PCIeへ戻さずstorage側でattentionを終える効果が長文脈で最大化する。"},
+      {"metric": "16 SmartSSD vs DRAM offload", "value": "1.88〜2.49×", "baseline": "FLEX(DRAM)", "condition": "DRAMに収容可能な比較条件", "interpretation": "device内KV処理により容量だけでなくhost-side KV trafficを減らし、DRAM offloadにも勝つ。"},
+      {"metric": "長文脈でのstorage baseline比", "value": "5.3〜7.8×", "baseline": "FLEX(SSD)", "condition": "FLEX(DRAM)がbatch=1でもmemory exhaustionする長文脈", "interpretation": "従来SSDはcapacityを得る代わりにPCIe KV transferへ律速されるが、HILOSはそのtrafficをdevice内部へ閉じ込める。"},
+      {"metric": "GQA/MoE model speedup", "value": "1.16〜3.36×", "baseline": "評価baseline群", "condition": "Qwen2.5-32B、Mixtral-8x7B、GLaM-143B", "interpretation": "KV/weight比が低いGQAやMoEでは利得が縮むが、長文脈のmemory pressure緩和により優位を維持する。"},
+      {"metric": "attention-near-storage ablation", "value": "最大3.39×", "baseline": "FLEX(SSD)", "condition": "X-cache・delayed writebackなし", "interpretation": "主要利得の第一段はKV readをhost interconnectから除去することにある。"},
+      {"metric": "delayed writeback追加効果", "value": "ANS比最大1.32×", "baseline": "attention-near-storageのみ", "condition": "host bufferとpage-sized spillを追加", "interpretation": "small random KV writesをcritical pathから除外することで追加改善する。"},
+      {"metric": "X-cache追加効果", "value": "ANS比最大1.64×", "baseline": "attention-near-storageのみ", "condition": "一部KVをXとして保存しGPU再projection", "interpretation": "offload後に余ったGPUを使い、device内部flash read量そのものを削る効果が大きい。"},
+      {"metric": "X-cache最適比率", "value": "alpha=50%", "baseline": "alpha sweep", "condition": "実測B_SSD/B_PCI≈3", "interpretation": "解析式の予測と一致し、storage側とhost側の処理時間を釣り合わせる比率が最良。"},
+      {"metric": "spill interval", "value": "16が最良", "baseline": "複数interval", "condition": "典型KV entry 256B、SSD page 4KiB", "interpretation": "16 entryをまとめるとpage粒度へ一致し、小書込みを抑えつつ未spill情報の転送も抑えられる。"},
+      {"metric": "output length sensitivity", "value": "最大6.08×", "baseline": "baseline offload", "condition": "長いoutput sequence", "interpretation": "prefillの固定費が長いdecodeへ償却され、near-storage decodeの利得が支配的になる。"},
+      {"metric": "FPGA性能・電力", "value": "d_group=1/4/5で11.9/46.8/56.3 GFLOPS、11.25/15.39/16.08W", "baseline": "SmartSSD FPGA implementation", "condition": "296.05MHz", "interpretation": "GQA sharingを増やすとresource/powerを使ってthroughputを上げられる。16 device最大構成は約258W。"},
+      {"metric": "cost efficiency", "value": "66BでFLEX(SSD)比最大2.02× tokens/s/$、175Bで最大1.68×", "baseline": "FLEX(SSD)", "condition": "論文記載のhost/GPU/SSD価格", "interpretation": "SmartSSD追加費用は大きいが、長文脈・大modelでは高価なGPU upgradeよりthroughput/$が高い。"},
+      {"metric": "energy reduction", "value": "最大85%", "baseline": "offloading baselines", "condition": "end-to-end実機", "interpretation": "大量KVをsystem interconnect経由で搬送しCPU/GPU attentionする処理を減らすことでenergyも削減する。"},
+      {"metric": "SSD endurance", "value": "1.34〜1.47×改善", "baseline": "baseline KV storage", "condition": "Small/Medium/Long request profiles", "interpretation": "X-cacheで保存量を減らし、delayed writebackでwrite amplificationを抑える。"}
+    ],
+    "negative_results": "HILOSの効果はKV/weight比が大きくdecodeが長いほど高く、MoEやGQAのようにKV比率が低い構成では相対利得が小さくなる。現行SmartSSDは内部storage pathがPCIe 3.0相当で、将来PCIe 5.0 SSDでは同じFPGA throughputではflash bandwidthを飽和できず、accelerator性能を約4倍へ引き上げる必要がある。16 SmartSSD構成はPCIe expansionと各device購入費が大きく、DRAMだけで十分な小model/短contextではFLEX(DRAM)の方がcost-effectiveな条件もある。online low-latency servingではなくbatch offlineを前提とし、attention outputの戻しやweight offload自体は残る。",
+    "interpretation": "重要なのはSSD帯域を単純に増やすことではなく、最も大きいKV tensorをGPUへ移動しないことである。attentionをstorage側へ移すとsystem PCIe bottleneckは消えるが、内部flash I/Oが顕在化するため、X-cacheで一部データを半容量化してGPU再計算へ振り、writebackはhost bufferへ遅延させる。このようにGPUとstorage acceleratorの余剰資源を相互に使って各階層のbottleneckを順番に消すことで、device数増加を実スループットへ変換している。",
+    "quality_impact": "KV sparsificationやquantizationは用いず、FP16のK/Vを完全に利用する。FPGAではFP16 storageに対してFP32 accumulation/exponentialを用いるため、FlashAttention相当のlossless accuracyを維持する。比較対象InstAttentionの1/8 sparse compressionがLongBenchで3.52〜5.73ポイント低下するのに対し、HILOSはその品質交換を避ける。"
+  },
+  "reservation": {"claim_id": "claim-12b96d8a83087a895d8a74df", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
