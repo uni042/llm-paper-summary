@@ -4,10 +4,43 @@
   "slot": "metadata",
   "attempt_id": "attempt-dfcf576a370956354a7c41fb",
   "job_id": "job-research-990a57145fc3b85b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-dfcf576a370956354a7c41fb",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2603.19133",
+    "arxiv_id": "2603.19133",
+    "doi": "10.48550/arXiv.2603.19133",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
+    "summary": "PicoSpecは、端末側の小型言語モデルが候補トークンを生成し、クラウド側の大規模言語モデルが検証する端末・クラウド協調型投機的復号で、従来の停止待ち方式がネットワーク往復時間と検証時間のたびに端末を遊休させる問題を扱う。端末の次候補生成とクラウドの前候補検証を非同期パイプライン化し、部分候補が届いた段階からクラウド準備を始める高速検証で残余バブルも削減する。さらに棄却時の語彙分布を端末とクラウドで分離処理し、Top-K疎圧縮によって約500 KBの下り分布を100バイト未満まで縮める。Jetson AGXとA100クラスタでQwen 0.6B/32B、Llama 1B/70Bを評価し、クラウド単独自己回帰比で最大2.9倍の高速化を得る。",
+    "list_summary": "端末の候補生成とクラウド検証を非同期に重ね、棄却用確率分布を疎圧縮してネットワーク往復を隠すことで、端末・クラウド協調推論を最大2.9倍高速化する。",
+    "authors": ["Yida Zhang", "Zhiyong Gao", "Shuaibing Yue", "Jie Li", "Rui Wang"],
+    "authors_affiliations": "University of Science and Technology Beijing, School of Computer and Communication Engineering",
+    "published": "2026-03-19",
+    "publication": "arXiv preprint v2, revised 2026-03-27",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "speculative-decoding-moe",
+    "topics": ["投機的復号", "端末・クラウド協調", "非同期パイプライン", "通信圧縮", "棄却サンプリング", "Jetson"],
+    "importance": "端末・クラウド投機的復号で計算だけでなくWANの往復遅延と語彙分布転送を主要ボトルネックとして扱い、非同期化と通信削減を共同設計する。端末側計算とクラウド側検証の重畳という実行時設計として価値が高い。",
+    "hardware_evaluation": "実機。端末はNVIDIA Jetson AGX、クラウドはNVIDIA A100 40GB。Qwen3-32Bは2枚、Llama3.1-70Bは4枚のA100で検証する。端末・クラウド間は高遅延・帯域制約のあるWAN環境。",
+    "quality_effect": "標準の投機的サンプリングと同じ棄却補正を維持する訓練不要方式で、Top-K疎圧縮後の分離棄却サンプリングも目標分布との補正を端末側で行う。モデルを量子化・枝刈り・再学習せず、速度改善をモデル品質との近似交換にはしていない。",
+    "source": "https://arxiv.org/abs/2603.19133",
+    "sources": ["https://arxiv.org/abs/2603.19133", "https://arxiv.org/pdf/2603.19133"],
+    "code": null,
+    "implementation": "端末側Parallel Drafter、Rejection Sampler、Speculative KV Cache、Zero-Copy Communicatorと、クラウド側Verifier、Request Handler、KV Cache、Zero-Copy Communicatorを実装した試作。2026-09-14時点で著者公式公開リポジトリは確認できない。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 21,
+    "references": [
+      {"canonical_id": "arXiv:2302.01318", "arxiv_id": "2302.01318"},
+      {"canonical_id": "arXiv:2503.10325", "arxiv_id": "2503.10325"},
+      {"canonical_id": "arXiv:2511.04002", "arxiv_id": "2511.04002"},
+      {"canonical_id": "arXiv:2505.21594", "arxiv_id": "2505.21594"},
+      {"canonical_id": "arXiv:2503.18989", "arxiv_id": "2503.18989"},
+      {"canonical_id": "arXiv:2511.21669", "arxiv_id": "2511.21669"},
+      {"canonical_id": "arXiv:2506.11309", "arxiv_id": "2506.11309"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-dfcf576a370956354a7c41fb", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
