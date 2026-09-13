@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 12:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 12:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **180** |
-| Research ready | **180** |
+| Candidate在庫（Research ready） | **181** |
+| Research ready | **181** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **208** |
@@ -41,13 +41,13 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **12** |
-| 探索軸 | 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing |
-| 評価候補 | **49** |
+| 探索round | **13** |
+| 探索軸 | 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing / MoE expert locality・expert prefetch・SSD/edge cacheability |
+| 評価候補 | **54** |
 | 重複除外 | **25** |
-| Novel候補 | **24** |
-| Research候補採用 | **6** |
-| 重複率 | **51.0%** |
+| Novel候補 | **29** |
+| Research候補採用 | **7** |
+| 重複率 | **46.3%** |
 
 ## 直近24時間
 
@@ -55,12 +55,12 @@ Run: **2026-09-13T11:00:00+09:00**
 |---|---:|
 | 通常worker run（ledger観測） | **23** |
 | 探索専用worker run（毎時枠） | **18** |
-| 探索専用worker round（stats観測） | **144** |
-| 探索評価候補 | **708** |
+| 探索専用worker round（stats観測） | **145** |
+| 探索評価候補 | **713** |
 | 重複除外 | **308** |
-| 重複率 | **43.5%** |
-| Novel候補 | **400** |
-| Research候補採用 | **225** |
+| 重複率 | **43.2%** |
+| Novel候補 | **405** |
+| Research候補採用 | **226** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
 | Audit完了 | **0** |
@@ -68,7 +68,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 24時間ファネル
 
-**探索専用worker評価 708 → 重複除外後 400 → Research候補採用 225 → Research完了 70 → Repo収録 70**
+**探索専用worker評価 713 → 重複除外後 405 → Research候補採用 226 → Research完了 70 → Repo収録 70**
 
 ## 探索専用workerの探索効率（直近24時間）
 
@@ -123,6 +123,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | GPU runtime・SmartNIC・異種アクセラレータ・階層KV | 5 | 0 | 0 | 0.0% | 0.0% |
 | GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
 | KVページ制御・MoEメモリ分離・復元系の再探索 | 5 | 5 | 0 | 100.0% | 0.0% |
+| MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
 | MoE expert paging・SSD cache・runtime parallelism・prefetch | 5 | 0 | 0 | 0.0% | 0.0% |
 | MoE speculative decoding・expert offloading・CPU/GPU共同実行 | 5 | 3 | 0 | 60.0% | 0.0% |
 | MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -221,7 +222,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 直近5探索専用worker run
 
-- 2026-09-13T11:00:00+09:00 — 12 round: 評価 49 / 重複 25 / 採用 6 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing
+- 2026-09-13T11:00:00+09:00 — 13 round: 評価 54 / 重複 25 / 採用 7 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing / MoE expert locality・expert prefetch・SSD/edge cacheability
 - 2026-09-13T10:00:00+09:00 — 8 round: 評価 48 / 重複 31 / 採用 12 / 軸 新着LLM推論システム・通信／疎注意／多ターンKV / GPU実行環境・collective通信・prefill/decode共存 / 端末内LLM・OSメモリ圧力・Flash/NPU実行 / KVページ圧縮・低ランク表現・GPUカーネル / 分離サービングSLO・batch fairness・resource allocation / 投機的復号runtime・draft resource・CPU制約 / SSD expert offload・peer GPU cache tier・階層メモリ / 分離サービング通信・KV転送・network flow scheduling
 - 2026-09-13T09:00:00+09:00 — 13 round: 評価 58 / 重複 21 / 採用 16 / 軸 moe-cache-aware-routing-expert-skipping-fine-grained-execution / ssd-kv-cache-heterogeneous-gpu-serving-orchestration / production-autoscaling-disaggregated-serving-runtime / 2026-09新着・KV圧縮・跨文脈再利用 / エージェント型LLM・サービングruntime・生成時特化 / 出力長不確実性・tail-aware scheduling隣接 / 投機的復号・高並列サービング・production評価 / RDMA・分離サービング・KV転送 / multi-tenant runtime制御・適応parallelism・latency attribution / 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA / 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse / 分離型サービングの負荷偏り・SLO適応 / NVMe重み先読み・疎推論GPUカーネル・fleet資源配置
 - 2026-09-13T08:00:00+09:00 — 6 round: 評価 40 / 重複 25 / 採用 14 / 軸 hybrid-attention・MLA・位置非依存キャッシュ / position-independent KV再利用のforward/backward related-work補完 / agent workspace仮想化・NVMe階層・長時間runtime state / GPU runtime安全性・software aging・many-core CPU inference / network・collective通信・distributed inference / 直近新着・hierarchical memory・serving runtime横断再確認
@@ -242,11 +243,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P88 `arXiv:2603.19133` — A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference
-- P88 `arXiv:2605.04357` — Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs
-- P88 `arXiv:2601.13684` — HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference
-- P88 `arXiv:2607.08565` — SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling
 - P88 `arXiv:2602.06932` — When RL Meets Adaptive Speculative Training: A Unified Training-Serving System
+- P88 `arXiv:2502.09921` — INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing
+- P88 `arXiv:2605.10670` — Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference
+- P88 `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
+- P88 `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 
 ## 7日比較
 
