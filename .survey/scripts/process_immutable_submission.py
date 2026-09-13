@@ -142,6 +142,13 @@ def _matching_result(result_path: Path, descriptor: dict[str, Any]) -> dict[str,
     return None
 
 
+def _clear_repair_state(job: dict[str, Any]) -> None:
+    """Clear validation-isolation metadata after a successful retry."""
+    job.pop("repair_required", None)
+    job.pop("validation_error", None)
+    job.pop("last_validation_failed_at", None)
+
+
 def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> dict[str, Any] | None:
     """Persist a terminal attempt result so invalid descriptors do not occupy a bank forever."""
     repo_root = Path(repo_root).resolve()
@@ -248,6 +255,9 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
         if status == "completed":
             artifact = queue_worker.apply_artifact(sub, mutable_job)
         queue_worker.process_audit(sub, mutable_job, st)
+
+    if status == "completed":
+        _clear_repair_state(mutable_job)
 
     queue_worker.update_job(mutable_job)
     queue_worker.save_state(st)
