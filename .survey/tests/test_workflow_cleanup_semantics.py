@@ -43,6 +43,22 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("workflow v10", worker)
         self.assertNotIn("Queue-oriented survey state worker (workflow v9)", worker)
 
+    def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
+        retired = [
+            ".survey/scripts/normalize_v10_jobs.py",
+            ".survey/scripts/reusable_transport_baseline.py",
+            ".survey/scripts/preflight_chat_record.py",
+            ".survey/tests/test_reusable_transport_baseline.py",
+            ".github/workflows/repair-corrupted-lineages.yml",
+            ".survey/scripts/repair_corrupted_lineages.py",
+            ".survey/tests/test_repair_corrupted_lineages.py",
+            ".survey/work-queue/submissions/chat-inbox.json",
+            ".survey/work-queue/results/chat-inbox.json",
+        ]
+        for rel in retired:
+            with self.subTest(path=rel):
+                self.assertFalse((ROOT / rel).exists(), rel)
+
     def test_maintenance_refreshes_metadata_coverage_before_health(self):
         workflow = (ROOT / ".github/workflows/maintenance.yml").read_text(encoding="utf-8")
         metadata_command = (
