@@ -6,10 +6,6 @@ on:
     paths:
       - '.survey/work-queue/submissions/research/*.json'
       - '.survey/work-queue/submissions/audit/*.json'
-      - '.github/workflows/survey-submission-fast.yml'
-      - '.survey/scripts/process_immutable_submission.py'
-      - '.survey/scripts/isolate_failed_immutable_submission.py'
-      - '.survey/scripts/immutable_submission.py'
   workflow_dispatch:
     inputs:
       submission:
