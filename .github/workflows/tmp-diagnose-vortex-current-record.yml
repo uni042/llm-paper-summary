@@ -26,14 +26,16 @@ jobs:
         run: |
           python - <<'PY'
           import json
+          import re
           import sys
+          from collections import Counter
           from pathlib import Path
 
           root = Path('.').resolve()
           sys.path.insert(0, str(root / '.survey/scripts'))
           import assemble_research_record as assemble
           import claim_worker_with_banks as banks
-          from japanese_style import japanese_ratio, record_prose_text, find_bare_english
+          from japanese_style import clean_for_language_ratio, japanese_ratio, record_prose_text, find_bare_english
 
           job_id = 'job-research-8df4b126a68a6be4'
           claim = {'job_id': job_id, 'kind': 'research'}
@@ -66,6 +68,13 @@ jobs:
           prose = record_prose_text(record)
           ratio, jp_chars, latin_chars = japanese_ratio(prose)
           components = (record.get('problem_method') or {}).get('components') or []
+          cleaned = clean_for_language_ratio(prose)
+          words = Counter(word.lower() for word in re.findall(r'[A-Za-z][A-Za-z0-9_-]*', cleaned))
+          slot_ratios = {}
+          for slot in assemble.SLOT_NAMES:
+              slot_text = record_prose_text({slot: record[slot]}) if slot != 'metadata' else record_prose_text({'metadata': record[slot]})
+              sr, sj, sl = japanese_ratio(slot_text)
+              slot_ratios[slot] = {'ratio': sr, 'japanese': sj, 'latin': sl}
           result = {
               'source': source,
               'issues': issues,
@@ -79,6 +88,8 @@ jobs:
                   {'term': hit.term, 'preferred': hit.preferred, 'count': hit.count}
                   for hit in find_bare_english(prose)[:20]
               ],
+              'top_latin_words': words.most_common(80),
+              'slot_ratios': slot_ratios,
           }
           print('VORTEX_DIAG=' + json.dumps(result, ensure_ascii=False))
           PY
