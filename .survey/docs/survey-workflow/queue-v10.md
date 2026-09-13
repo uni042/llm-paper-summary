@@ -247,5 +247,9 @@ Claim requests are immutable JSON files in `.survey/work-queue/claim-requests/`;
 - expired claim files remain on disk as durable history, but are no longer active and do not block a new assignment
 - leaseを延長する場合は同じrequest/workerを新しいUTC `requested_at`でheartbeat更新する
 - 期限切れ後にworkerがまだ成果をGitHub/Libraryへ耐久保存していない場合は旧claimで新規送信せず、fresh claimを取得し直す
+- claimがactiveなのは、`expires_at`が未来で、かつ`released_at`と`lease_invalidated_at`のどちらも存在しない場合だけ。claimファイルは監査履歴として残す。
+- immutable Research/Audit resultは、同じjob/attemptに対する`ok: true`だけを成功確定として扱う。`ok: false`はdescriptorを未解決のまま残し、再処理可能とする。
+- reusable `chat-inbox.json` resultも、同じjob/attemptに対する`ok: true`だけをsettledとして扱う。失敗resultやattempt不一致resultはpreflight前に再利用しない。
+- legacy root-level submissionを`queue_worker.py`で処理する経路は一回限りのprocessing receiptであり、対応resultが存在すれば同じroot submissionを再処理しない。Research/Auditのretryable transportにはimmutable descriptor fast laneを使う。
 
 claim result待ち中に別requestを重ねず、完全payloadの耐久保存後は新しいrequest IDで次jobを1件だけ取得する。

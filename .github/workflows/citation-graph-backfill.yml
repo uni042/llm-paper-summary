@@ -47,71 +47,6 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r .survey/scripts/requirements.txt
 
-      - name: Install citation schema hooks
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          survey = Path('.survey/scripts/survey.py')
-          text = survey.read_text(encoding='utf-8')
-          old_paths = '''    paper_paths = list((repo / "papers/inference").glob("*/*.md"))
-              paper_paths += list((repo / "papers/survey").glob("*/*.md"))'''.replace('              ', '    ')
-          new_paths = '''    paper_paths = []
-              for family in PAPER_FAMILIES:
-                  paper_paths += list((repo / "papers" / family).glob("*/*.md"))'''.replace('              ', '    ')
-          if old_paths in text:
-              text = text.replace(old_paths, new_paths)
-          text = text.replace(
-              '''    """Inference and survey papers used by the canonical identity index.\n\n    Training remains excluded until its frozen legacy pages have canonical\n    metadata. Survey papers must participate so discovery cannot enqueue an\n    already registered review under a second lineage.\n    """''',
-              '''    """All repository paper families used by the canonical identity index.\n\n    Citation matching must cross Inference, Training, and Survey without\n    creating duplicate identities for papers that expose multiple identifiers.\n    """''',
-          )
-          replacement = '''def _citation_counts(records):
-              from citation_graph import citation_counts_from_view_records
-              return citation_counts_from_view_records(records)'''.replace('              ', '    ')
-          pattern = r'def _citation_counts\(records\):\n.*?\n\ndef _month_label'
-          if 'from citation_graph import citation_counts_from_view_records' not in text:
-              text, count = re.subn(pattern, replacement + '\n\ndef _month_label', text, count=1, flags=re.S)
-              if count != 1:
-                  raise SystemExit('could not replace legacy _citation_counts()')
-          text = text.replace(
-              '「リポジトリ内被引用」は収録済み別論文の本文・メタデータから arXiv ID / DOI の明示参照を数える。',
-              '「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。',
-          )
-          survey.write_text(text, encoding='utf-8')
-
-          template = Path('.survey/templates/paper.md')
-          text = template.read_text(encoding='utf-8')
-          if 'references_checked_at:' not in text:
-              text = text.replace(
-                  'evidence_locations: []\n',
-                  'evidence_locations: []\nreferences: []\nreferences_checked_at: YYYY-MM-DD\nreferences_source: primary-reference-section\nreferences_total: 0\n',
-                  1,
-              )
-          marker = '## 概要\n'
-          guidance = '''## 参考文献の構造化\n\n一次論文のreference sectionを本文とは別に確認し、識別できる参考文献をfrontmatterの`references`へ保存する。arXiv IDはversion suffixを除去し、DOIは小文字のbare DOI、OpenReviewはforum IDへ正規化する。同一参考文献が複数識別子を持つ場合は1要素へまとめる。本文中の単なる関連言及は`references`へ入れない。`references_total`は一次論文の参考文献総数、`references_checked_at`は確認日、`references_source`は根拠にした一次資料のreference sectionを示す。識別子を持つ参考文献が0件でも、reference sectionを確認済みなら`references: []`として保存する。\n\n'''
-          if '## 参考文献の構造化' not in text and marker in text:
-              text = text.replace(marker, guidance + marker, 1)
-          template.write_text(text, encoding='utf-8')
-
-          queue = Path('.survey/docs/survey-workflow/queue-v10.md')
-          text = queue.read_text(encoding='utf-8')
-          anchor = 'Markdown生成時にこれらのメタデータを捨てず、論文frontmatterへ引き継ぐ。\n'
-          addition = '''\nさらに一次論文のreference sectionを確認し、正規化した`references`、`references_checked_at`、`references_source`、`references_total`を`metadata.json`へ保存する。arXivのversion違いは同一IDへ正規化し、DOI / arXiv / OpenReviewの複数IDが同じ参考文献を指す場合は1要素へまとめる。本文中の関連言及はreferenceとして扱わない。reference sectionを確認済みで識別可能なIDが0件の場合も`references: []`を明示する。\n'''
-          queue_has_reference_contract = (
-              'references_checked_at' in text
-              and 'references_source' in text
-              and 'references_total' in text
-              and '`metadata.json`' in text
-          )
-          if not queue_has_reference_contract:
-              if anchor not in text:
-                  raise SystemExit('queue-v10 metadata anchor not found')
-              text = text.replace(anchor, anchor + addition, 1)
-          queue.write_text(text, encoding='utf-8')
-          PY
-
       - name: Validate citation implementation
         run: |
           python -m py_compile \
@@ -124,33 +59,6 @@ jobs:
             .survey/scripts/assemble_research_record.py \
             .survey/scripts/survey.py
           python -m unittest discover -s .survey/tests -p 'test_*.py'
-
-      - name: Commit schema and graph hooks
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'citation-graph[bot]'
-          git config user.email 'citation-graph[bot]@users.noreply.github.com'
-          git add .survey/scripts/survey.py .survey/templates/paper.md .survey/docs/survey-workflow/queue-v10.md
-          if git diff --cached --quiet; then
-            exit 0
-          fi
-          git commit -m 'feat: route indexes through structured citation graph'
-          for push_attempt in 1 2 3 4 5; do
-            git fetch origin main
-            if ! git rebase origin/main; then
-              git rebase --abort || true
-              echo 'Citation schema hook conflicted with newer main; rerun on a later trigger.' >&2
-              exit 1
-            fi
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Citation schema push race on attempt ${push_attempt}; retrying after refetch."
-            sleep $((push_attempt * 2))
-          done
-          echo 'Failed to publish citation schema hooks after 5 retries.' >&2
-          exit 1
 
       - name: Backfill references in durable batches
         shell: bash
