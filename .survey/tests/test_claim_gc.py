@@ -60,6 +60,24 @@ class ClaimGcTests(unittest.TestCase):
             self.assertIn(".survey/work-queue/claim-requests/req-b.json", paths)
             self.assertIn(".survey/work-queue/claim-results/req-b.json", paths)
 
+    def test_old_settled_pair_referencing_ready_job_is_protected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); old = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
+            write(root / ".survey/work-queue/jobs/job-r1.json", {"job_id": "job-r1", "type": "research", "status": "ready", "created_at": old})
+            write(root / ".survey/work-queue/claim-requests/req-r.json", {"request_id": "req-r", "requested_at": old})
+            write(root / ".survey/work-queue/claim-results/req-r.json", {"request_id": "req-r", "ok": True, "processed_at": old, "assignments": [{"job_id": "job-r1"}]})
+            candidates, _ = full_gc.collect_claim_artifacts(root, 7, datetime.now(timezone.utc))
+            paths = {item["path"].relative_to(root).as_posix() for item in candidates}
+            self.assertNotIn(".survey/work-queue/claim-requests/req-r.json", paths)
+            self.assertNotIn(".survey/work-queue/claim-results/req-r.json", paths)
+
+    def test_old_orphan_result_referencing_unknown_job_is_protected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); old = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
+            write(root / ".survey/work-queue/claim-results/orphan.json", {"request_id": "orphan", "ok": True, "processed_at": old, "assignments": [{"job_id": "job-missing"}]})
+            candidates, _ = full_gc.collect_claim_artifacts(root, 7, datetime.now(timezone.utc))
+            self.assertNotIn(".survey/work-queue/claim-results/orphan.json", {item["path"].relative_to(root).as_posix() for item in candidates})
+
 
 if __name__ == "__main__":
     unittest.main()

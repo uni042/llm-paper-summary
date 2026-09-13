@@ -115,6 +115,25 @@ class ClaimedDispatchTests(unittest.TestCase):
             self.assertEqual(result["action"], "idle")
             self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
 
+    def test_paper_path_mismatch_is_quarantined_before_bank_chat_or_paper_write(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); claim(root); self.seed_free_banks(root); value = envelope()
+            chat = json.loads(value["writes"][-1]["content"]); chat["paper_path"] = "papers/other.md"; value["writes"][-1]["content"] = json.dumps(chat); self.put(root, value)
+            before = {path.relative_to(root).as_posix(): path.read_bytes() for path in (root / ".survey/work-queue/records").rglob("*.json")}
+            result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(result["action"], "idle")
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertFalse((root / "papers/other.md").exists())
+            self.assertEqual({path.relative_to(root).as_posix(): path.read_bytes() for path in (root / ".survey/work-queue/records").rglob("*.json")}, before)
+
+    def test_null_new_research_paper_path_accepts_valid_papers_path(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); claim(root); self.seed_free_banks(root)
+            job_value = json.loads((root / ".survey/work-queue/jobs/job-r1.json").read_text()); job_value["paper_path"] = None; write_json(root / ".survey/work-queue/jobs/job-r1.json", job_value)
+            self.put(root, envelope())
+            self.assertEqual(dispatch_fallback_inbox.dispatch(root)["action"], "dispatched")
+
     def test_two_claimed_envelopes_do_not_overwrite_unsettled_bank_or_chat(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); seed_job(root); seed_job(root, "job-r2"); claim(root); claim(root, "job-r2", "claim-b", "worker-b", "attempt-b"); self.seed_free_banks(root)

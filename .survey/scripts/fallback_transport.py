@@ -174,6 +174,25 @@ def claimed_envelope_state(repo_root: Path, envelope: dict[str, Any]) -> tuple[b
     canonical_dependencies = claim_state.normalize_dependencies(job_id, raw_dependencies)
     if canonical_dependencies is None or canonical_dependencies != envelope["depends_on_job_ids"]:
         return False, "claimed envelope dependencies differ from canonical job"
+    payload = chat_payload(envelope)
+    if payload is None:
+        return False, "claimed envelope requires a chat-inbox payload"
+    canonical_paper = job.get("paper_path")
+    payload_paper = payload.get("paper_path")
+    if canonical_paper is not None:
+        if payload_paper != canonical_paper:
+            return False, "claimed envelope paper_path differs from canonical job"
+    elif envelope.get("kind") == "research":
+        if (
+            not isinstance(payload_paper, str)
+            or not payload_paper.startswith("papers/")
+            or "\\" in payload_paper
+            or ".." in PurePosixPath(payload_paper).parts
+            or PurePosixPath(payload_paper).is_absolute()
+        ):
+            return False, "new research claimed envelope requires a valid papers/ paper_path"
+    else:
+        return False, "audit claimed envelope requires canonical paper_path"
     current = claim_state.current_claims(repo_root).get(job_id)
     if current is None:
         return False, "missing current claim"

@@ -100,5 +100,7 @@ Library pending数、GitHub fallback-inbox件数、未送信論文数、record b
 
 Claim request/result/current-claim files are durable queue state. Maintenance
 protects active and expired claims for ready jobs and unprocessed requests or
-results; only old terminal-job claim history and settled claim transport are
-eligible for retention GC.
+results. Even a settled request/result (including an orphan result) remains
+protected when any assignment names a non-terminal or unknown canonical job;
+only empty/error results or assignments whose jobs are all terminal, plus old
+terminal-job claim history, are eligible for retention GC.

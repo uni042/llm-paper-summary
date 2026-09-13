@@ -192,6 +192,25 @@ def collect_terminal_jobs(root, retention_days, now):
     return candidates, skipped
 
 
+def claim_result_protected(root, result_obj):
+    """Keep settled claim transport while any assignment is still live/unknown."""
+    if not isinstance(result_obj, dict):
+        return True
+    assignments = result_obj.get("assignments")
+    if assignments is None:
+        return False
+    if not isinstance(assignments, list):
+        return True
+    jobs_root = root / ".survey/work-queue/jobs"
+    for assignment in assignments:
+        if not isinstance(assignment, dict) or not isinstance(assignment.get("job_id"), str):
+            return True
+        job = read_json(jobs_root / f"{assignment['job_id']}.json")
+        if not isinstance(job, dict) or job.get("status") not in TERMINAL:
+            return True
+    return False
+
+
 def collect_claim_artifacts(root, retention_days, now):
     """Collect only settled claim history; ready-job claims and pending IO live."""
     base = root / ".survey/work-queue"
@@ -224,6 +243,9 @@ def collect_claim_artifacts(root, retention_days, now):
             if not result.is_file() or processed is None:
                 skipped.append({"path": request.relative_to(root).as_posix(), "reason": "claim_request_not_settled"})
                 continue
+            if claim_result_protected(root, result_obj):
+                skipped.append({"path": request.relative_to(root).as_posix(), "reason": "claim_result_references_live_job"})
+                continue
             times = [ts for ts in (object_time(request_obj), processed) if ts]
             newest = max(times) if times else None
             if not older_than(newest, retention_days, now):
@@ -238,6 +260,8 @@ def collect_claim_artifacts(root, retention_days, now):
                 continue
             result_obj = read_json(result)
             processed = parse_time((result_obj or {}).get("processed_at"))
+            if claim_result_protected(root, result_obj):
+                continue
             if processed and older_than(processed, retention_days, now):
                 candidates.append({"path": result, "kind": "orphan_claim_result", "timestamp": processed.isoformat()})
     return candidates, skipped
