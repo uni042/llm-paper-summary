@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-fd3fcf48ef13a75d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.07917",
+      "title": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+      "source_url": "https://arxiv.org/abs/2603.07917",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md",
+      "priority": 86,
+      "reason": "出力長が事前不明で、要求が計算量とメモリ量の両方に制約されるというLLM推論固有の不確実性・ハイブリッド資源需要を同時に扱う。prompt内容と過去実績から出力長分布を予測し、計算・メモリを含む実サービス費用へ変換したうえで不確実性を考慮したスケジューリングを行い、多様な実機条件で28.7%以上の効率改善を報告する。単一出力長予測や計算量だけに依存するschedulerとの差分が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2604.00499",
+      "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
+      "source_url": "https://arxiv.org/abs/2604.00499",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00499-tie-uncertainty-aware-output-length-scheduling.md",
+      "priority": 83,
+      "reason": "SJF型LLM schedulingで出力長を一点推定する前提を見直し、デコード終了を確率過程としてheavy-tailなlog-t分布で表現する。Tail Inflated Expectationにより長大出力リスクを優先度へ織り込み、強いbaselineに対してオンライン推論のtoken latencyを2.31倍改善、offline data generationのthroughputを1.42倍改善すると報告する。不確実性を明示的にschedulerへ入れる簡潔な比較対象として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-uncertainty-scheduling-3",
+    "axis": "出力長不確実性・tail-aware scheduling隣接",
+    "query_summary": "agentic servingから軸を変え、出力長予測・需要不確実性・tail latencyを扱うLLM scheduling研究を探索した。Beyond Predictionは決定論的research jobで既収録completedと判定し、SageSchedとTIEは最新HEADで対応job不在を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arxiv:2606.18431"],
+    "next_axis_hint": "同じscheduling軸を反復せず、GPU kernel/runtime、network/RDMA disaggregation、またはspeculative decoding systemへ移る",
+    "empty_round_reason": null
+  }
+}
