@@ -16,22 +16,10 @@
   },
   "claiming": {
     "ready_research_audit": 174,
-    "actively_claimed": 39,
-    "claimable": 135
+    "actively_claimed": 40,
+    "claimable": 134
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-f3164989857499bb",
-      "type": "research",
-      "lane": null,
-      "priority": 87,
-      "canonical_id": "arXiv:2605.05467",
-      "title": "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism",
-      "source_url": "https://arxiv.org/abs/2605.05467",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-23e9c491b745b825",
       "type": "research",
@@ -117,6 +105,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-d09e1c8e52097070",
+      "type": "research",
+      "lane": null,
+      "priority": 86,
+      "canonical_id": "arXiv:2505.14468",
+      "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
+      "source_url": "https://arxiv.org/abs/2505.14468",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -129,5 +129,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T07:21:59+00:00"
+  "generated_at": "2026-09-13T07:27:11+00:00"
 }
