@@ -5,45 +5,14 @@
   "attempt_id": "attempt-73a0e418c00f418830f8a47e",
   "job_id": "job-research-f379557cdc6a8294",
   "data": {
-    "hardware": "主評価環境はIntel Xeon Gold 6338 2.00GHz、256 GiB DDR4、NVIDIA A100 PCIe 80GB、80GB HBM2e、PCIe Gen4 x16（理論片方向約31.5 GB/s）。補足の制約interconnect評価ではIntel Xeon Gold 5218RとNVIDIA GeForce RTX 4090、PCIe Gen3 x16（理論約15.75 GB/s）を使用する。",
-    "software": "高水準PyTorchベースのHeteroCache prototype。DeepSeek-R1-Distill-Llama-8Bではbitsandbytesによる4-bit weight quantizationも併用し、KV圧縮との直交性を確認する。custom CUDA kernelは未実装。",
-    "methodology": "Llama-3.1-8B-Instruct、Qwen2.5-14B-Instruct、DeepSeek-R1-Distill-Llama-8BをLongBench、LongBench v2、InfiniteBench、NIAH、U-NIAHで評価する。比較対象はFullAttention、Quest、ShadowKV、OmniKV、CAKE。memory budget ratioは主に0.3または0.5で公平に揃え、Llamaではstability/similarity threshold 0.5、Qwenではstability 0.4を用いる。latency評価はLlama-3.1-8Bでprefill TTFTと50生成tokenの平均decode latency/tokenを測り、context lengthを最大224Kまで拡張する。補足では128K時のCPU memory/PCIe bandwidth、1K token連続生成時のretrieval trigger率とtail latency、RTX 4090/PCIe Gen3での制約interconnect性能、128K LongBench Pro calibration transferabilityを調べる。",
-    "datasets": [
-      "LongBench",
-      "LongBench v2",
-      "InfiniteBench",
-      "NIAH",
-      "U-NIAH",
-      "LongBench Pro",
-      "Wikipedia calibration set"
-    ],
-    "models": [
-      "Llama-3.1-8B-Instruct",
-      "Qwen2.5-14B-Instruct",
-      "DeepSeek-R1-Distill-Llama-8B"
-    ],
-    "baselines": [
-      "FullAttention",
-      "Quest",
-      "ShadowKV",
-      "OmniKV",
-      "CAKE"
-    ],
-    "metrics": [
-      "benchmark score",
-      "KV memory budget ratio",
-      "TTFT",
-      "decode latency per token",
-      "CPU RAM usage",
-      "PCIe bandwidth utilization",
-      "retrieval trigger rate",
-      "P95/P99 decode latency"
-    ],
-    "scope": "品質評価は複数model・複数long-context benchmarkを含むが、主system latencyは単一A100 PCIe 80GBで測定される。CPU-GPU階層記憶には十分なCPU RAMが必要で、128Kではpeak 17.95 GBを使用する。PCIe Gen4ではpeak 21.07 GB/sで理論上限内だが、極端に低帯域なinterconnectでは非同期取得を完全に隠せない可能性が著者の制約として明記される。"
+    "hardware": "主評価環境はIntel Xeon Gold 6338（2.00GHz）、256GiBのDDR4メモリ、NVIDIA A100 PCIe 80GB、80GBのHBM2eで構成される。CPUとGPUの接続はPCIe第4世代x16で、理論上の片方向帯域は約31.5GB/sである。補足の低帯域接続試験ではIntel Xeon Gold 5218RとNVIDIA GeForce RTX 4090をPCIe第3世代x16で接続し、理論帯域約15.75GB/sの条件でも評価する。",
+    "software": "評価実装は高水準のPyTorch処理を中心としたHeteroCache試作系である。DeepSeek-R1-Distill-Llama-8Bではbitsandbytesを用いた4ビット重み量子化を併用し、KVキャッシュ選択と重み量子化が直交的に組み合わせられることも確認する。疎な注意計算と動的取得に特化した独自CUDAカーネルは現版では実装されていない。",
+    "methodology": "通常型モデルとしてLlama-3.1-8B-InstructとQwen2.5-14B-Instruct、推論特化モデルとしてDeepSeek-R1-Distill-Llama-8Bを用いる。長文理解はLongBench、LongBench v2、InfiniteBench、単一・複数needle検索はNIAHとU-NIAHで測定する。比較対象は完全注意、Quest、ShadowKV、OmniKV、CAKEで、圧縮方式は固定トークン数ではなく同じKVメモリ予算比率を持つよう揃える。主な予算比率は30%または50%である。Llama系では安定性と類似性のしきい値を0.5、Qwen系では安定性しきい値を0.4とし、注意ドリフトのしきい値は安定性しきい値と合わせる。遅延評価はLlama-3.1-8B-Instructを用い、プリフィルでは最初のトークンまでの時間、復号では50トークン生成時の一トークン当たり平均遅延を測る。文脈長は最大224Kまで伸ばす。補足では128K文脈におけるCPUメモリとPCIe帯域、1,000トークン連続生成における取得発火率と末尾遅延、RTX 4090とPCIe第3世代による低帯域接続条件、128KのLongBench Proを用いた校正結果の転用可能性を評価する。",
+    "datasets": ["LongBench長文理解", "LongBench v2長文推論", "InfiniteBench超長文脈", "NIAH単一needle検索", "U-NIAH複数needle検索", "LongBench Pro長文校正", "Wikipedia校正データ"],
+    "models": ["Llama-3.1-8B-Instruct", "Qwen2.5-14B-Instruct", "DeepSeek-R1-Distill-Llama-8B"],
+    "baselines": ["完全注意方式FullAttention", "Quest", "ShadowKV", "OmniKV", "CAKE"],
+    "metrics": ["長文ベンチマーク得点", "KVメモリ予算比率", "最初のトークンまでの時間TTFT", "一トークン当たり復号遅延", "CPUメモリ使用量", "PCIe帯域使用量", "動的取得の発火率", "95・99パーセンタイル復号遅延"],
+    "scope": "品質面では複数モデルと複数の長文脈課題を使うため、単一課題だけに依存しない。一方、主要なシステム遅延は単一A100 PCIe 80GBで測られており、多GPU配信や多数要求の同時処理は直接評価しない。CPU・GPU階層記憶には十分なホストメモリが必要で、128K文脈ではCPU側の最大使用量が17.95GBとなる。同条件でPCIe帯域の最大使用量は21.07GB/sで、第4世代x16の理論上限約31.5GB/s以内に収まる。低帯域の第3世代接続でも32Kまで追加試験しているが、著者は極端に狭い接続では非同期取得を計算の背後へ完全に隠せない可能性を明記している。"
   },
-  "reservation": {
-    "claim_id": "claim-73a0e418c00f418830f8a47e",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-73a0e418c00f418830f8a47e", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
