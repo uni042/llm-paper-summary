@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d36d1ce1db733edcd5699199",
+  "attempt_id": "attempt-55f5f7acdb0aa02af8e80de1",
   "job_id": "job-research-1725e694fe58fcc2",
   "data": {
     "limitations": "停止故障かつ検出可能な障害と過半数健全を前提とし、ビザンチン障害、無言のデータ破損、クラスタ分断は対象外である。現在の1秒タイムアウトより遅い一時的通信も故障と判定する。CPU DRAMバックアップは671Bモデルで各4ノード約167.5 GBという大きなメモリ容量を追加消費する。障害時に処理中の要求を内部再試行せずクライアント側再試行へ任せる。評価はDeepSeek-V3と特定RoCEクラスタに集中し、品質ベンチマークや長期運用での誤検出率は示していない。",
@@ -10,5 +10,9 @@
     "implementation_status": "研究プロトタイプだが、通信部分をMooncake EP/Mooncake PG、推論側をSGLangに統合した実装を実機で評価している。論文はMooncakeとSGLangの公開GitHubを実装先として明示し、合計約1万行の変更規模を報告する。ただし論文専用の固定コミットや再現手順、専用リリースは本文から確認できないため、公開リポジトリのどの版が評価版に一致するかは不明。",
     "research_positioning": "本リポジトリのMoE並列・通信系統では、通信量削減や専門家配置・負荷分散だけでなく、部分障害を受けた実行中インスタンスの状態整合性を第一級に扱う研究として重要である。特に固定通信器を縮小するのではなく、通信相手・専門家被覆・グラフ可視経路を独立した可変状態へ分解する考え方は、専門家キャッシュや動的配置、階層メモリと組み合わせる際にも有用な設計軸になる。追加CPU DRAMを高速復旧のための重み保険として使う点も、SSD/NVMeを下位バックアップ階層へ拡張する研究余地を示す。"
   },
-  "reservation": {"claim_id":"claim-d36d1ce1db733edcd5699199","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-55f5f7acdb0aa02af8e80de1",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
