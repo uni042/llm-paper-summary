@@ -1,16 +1,36 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-b73f0e24db9e216f606d6126",
+  "job_id": "job-research-58b5be68410fbaab",
   "slot": "evaluation",
-  "attempt_id": "attempt-d146a091c5d075707dcd3120",
-  "job_id": "job-research-e2c6f510b1f31074",
   "data": {
-    "hardware": "全実験をNVIDIA RTX A6000（49GB VRAM）GPU上で実施。異種配備ではモデルごとに推論エンジンを用意し、1.5B、3B、7B、8B、14B級を組み合わせる。",
-    "software": "vLLMを推論基盤としてChimeraミドルウェアを上位に実装。意味ルータはModernBERT-large、残り長予測器はCPU上の分位点ランダムフォレスト。比較対象はvLLM、複数段優先待ち行列（Multi-Level Feedback Queue; MLFQ）、学習順位付け（Learning-to-Rank; LTR）、真の残り総長を使う参考STJF。",
-    "models": "Qwen2.5-1.5B/3B/7B/14B-Instruct、Ministral3-8B-Instruct、Llama3.2-3B-Instructを用い、2モデルおよび3モデルの異種組合せを評価。",
-    "datasets": "コード生成APPSと数学推論MATH。ReAct型の1〜4段ワークフローを構成し、計画、実装・解法、検証などの依存段を順次実行する。",
-    "methodology": "要求到着率を変えながら、ワークフロー単位の平均エンドツーエンド遅延／トークンと最終タスク性能を同時測定し、遅延余裕の設定を変えて到達可能なパレート前線を比較する。APPSの性能はテスト通過率、MATHは完全一致率。意味ルータ除去、真値長予測器、真値ルータの除去・上界実験、スケジューリング追加時間、ルータ平均適合率、長さ順位誤差も測定する。",
-    "scope": "単一種類の同一複製ではなく、複数モデルを別エンジンとして持つGPUクラスタ上の多段エージェント処理が対象。推論カーネルやKV圧縮自体を改良する研究ではなく、既存vLLM上のモデル選択・混雑推定・要求優先度を扱う。モデル候補、処理段、入力分布が評価時と大きく変わる場合はルータと長さ予測器の再学習・再測定が必要になる。"
-  },
-  "reservation": {"claim_id":"claim-d146a091c5d075707dcd3120","worker_id":"scheduled-chat-discovery-routing-20260914T0400JST","worker_kind":"scheduled_chat"}
+    "hardware": "NVIDIA H100 80GB + 2×Intel Xeon Platinum 8480C (CUDA 12.5)、NVIDIA L4 24GB + 2×AMD EPYC 7F52 16-Core (CUDA 12.4)。",
+    "software": "vLLM v0.6.3をエンドツーエンド比較に使用。JengaはvLLM上約4000行Python。分解比較はvLLM、SGLang、TGI。",
+    "methodology": "Llama 3.2 Vision、Gemma-2、Ministral、Jamba-1.5、character.ai模擬モデル、PyramidKV、Llama 3.1などを、MMMU-pro、MMLU-pro、長文arXiv-QAで評価。標準vLLMからメモリ管理だけをJengaへ置換してスループット、E2E遅延、TTFT、TPOT、バッチサイズ、断片化、プレフィックスヒット率を測る。VLM視覚キャッシュと投機的復号もケーススタディ評価する。",
+    "scope": "異種KV/状態を持つLLM servingのGPUメモリ管理。均質なLlamaではオーバーヘッドがほぼないことも確認。",
+    "workloads": [
+      "MMMU-pro",
+      "MMLU-pro",
+      "arXiv-QA",
+      "55k-110k入力の長文合成負荷",
+      "VLM chunked prefill",
+      "speculative decoding"
+    ],
+    "baselines": [
+      "vLLM",
+      "SGLang",
+      "TGI"
+    ],
+    "metrics": [
+      "throughput",
+      "E2E latency",
+      "TTFT",
+      "TPOT",
+      "decode batch size",
+      "KV memory waste",
+      "prefix cache hit rate"
+    ],
+    "reproducibility": "モデル・GPU・CUDA・vLLM版・データセットと主要アルゴリズムは詳述される。独立コード公開URLは一次資料では確認できないため完全再現には実装作業が必要。"
+  }
 }

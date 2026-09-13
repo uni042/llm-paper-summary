@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T21:18:36.749654+00:00",
+  "updated_at": "2026-09-13T21:26:43.704950+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18614,9 +18614,10 @@
     {
       "run_key": "2026-09-14T05:30:00+09:00",
       "first_recorded_at": "2026-09-13T21:18:36.749654+00:00",
-      "last_recorded_at": "2026-09-13T21:18:36.749654+00:00",
+      "last_recorded_at": "2026-09-13T21:26:43.704950+00:00",
       "signals": [
-        "paper_materialized"
+        "paper_materialized",
+        "fallback_archived"
       ],
       "counts": {
         "research_completed": 0,
@@ -18625,7 +18626,7 @@
         "blocked": 0,
         "new_jobs": 0,
         "new_papers": 7,
-        "fallback_archived": 0
+        "fallback_archived": 1
       },
       "events": [
         {
@@ -18641,6 +18642,20 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34783725319:1",
+          "recorded_at": "2026-09-13T21:26:43.704950+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34783725319",
+            "run_attempt": "1",
+            "source_sha": "2bdd1ef57b9d5d6cd42ffc72e70cc69210f79300"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [],
@@ -18655,10 +18670,12 @@
         "arXiv:2607.03333"
       ],
       "new_discovery_results": [],
-      "new_fallback_archive_files": [],
+      "new_fallback_archive_files": [
+        ".survey/work-queue/fallback-archive/20260914T061200JST-jenga-repair-attempt-b73f0e24db9e216f606d6126.json"
+      ],
       "paper_active_count_before": 446,
       "paper_active_count_after": 453,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }

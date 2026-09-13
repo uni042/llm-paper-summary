@@ -14,5 +14,11 @@
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-13T02:08:28+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: problem_method.method_overview must explain the end-to-end mechanism",
+  "validation_errors": [
+    "problem_method.method_overview must explain the end-to-end mechanism"
+  ],
+  "last_validation_failed_at": "2026-09-13T21:24:35+00:00"
 }
