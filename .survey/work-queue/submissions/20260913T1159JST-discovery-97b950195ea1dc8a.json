@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-97b950195ea1dc8a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.09800",
+      "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution",
+      "source_url": "https://arxiv.org/abs/2609.09800",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.09800-hbfsim-high-bandwidth-flash-simulation.md",
+      "priority": 92,
+      "reason": "HBM直下へHigh-Bandwidth Flashを置く将来推論機の容量・配置設計を、実GPU上の実LLM実行へフラッシュ遅延・熱・保持制約を注入して評価する。未発売HBFを前提とする階層メモリ研究を実機GPU計算と結び付ける評価基盤で、vLLM/Qwen3-MoEを用いた検証もあり、SSD/NVMeより先のストレージ階層を考える上で研究価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.01338",
+      "title": "mzCache: On-Device LLM Memory Management under Multitasking",
+      "source_url": "https://arxiv.org/abs/2609.01338",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.01338-mzcache-on-device-memory-multitasking.md",
+      "priority": 90,
+      "reason": "モバイル端末のマルチタスクによる予測不能なメモリ圧迫で、モデル重みとKVキャッシュがOSから追い出される問題を扱う。細粒度共有バッファ、部分退避・復元、GPU推論とCPU復元の並行化をllama.cpp/Android上で実装し、ストレージ-backed部分offload比でTTFTを2.1〜5.5倍短縮しており、オンデバイス階層メモリ管理として直接的に有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv-reasoning-kv-compression.md",
+      "priority": 88,
+      "reason": "長い推論過程では直近queryだけでは将来重要になる遠距離KVを予測しにくい点に対し、過去の思考を再訪するquery群を少数のbeacon queryへ圧縮して保持対象を決める学習不要方式。4つの公開reasoning modelで最大5.8倍のメモリ削減と4.3倍超のthroughput向上を報告しており、長推論向けKV管理の新しい予測軸として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-kv-eviction.md",
+      "priority": 84,
+      "reason": "極端なKV evictionでは個々の重要度scorerより時間方向の集約と順位保存が支配的であることを分析し、EMA型のInertiaKVと更新を遅延するInertiaKV-Lazyを提案する。複数モデル・長文ベンチマークで評価し、Lazy版は全更新版に対してdecode throughputを1.34〜1.46倍にするため、KV eviction政策の設計原理と実装コストの両面で有用。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02027",
+      "title": "Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation",
+      "source_url": "https://arxiv.org/abs/2609.02027",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02027-lru-multiturn-hit-ratio-mean-field.md",
+      "priority": 80,
+      "reason": "複数ターン会話で成長するprefix KVを有限HBM上のLRUで管理した際のhit ratioを平均場極限で閉形式化し、実用的な容量見積り器へ落とし込む。Qwen3-8BをAscend NPU上で検証しており、新しいcache機構そのものではないが、会話型servingのHBM容量設計とcache policy評価に使える理論基盤として収録価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:00+09:00",
+    "round": "specialist-new-arrivals-kv-memory-1",
+    "axis": "2609新着・KVキャッシュ・階層メモリ・ストレージ",
+    "query_summary": "直前のbackward-reference軸を避け、2026年9月新着からKVキャッシュ圧縮・会話LRU容量設計、モバイル階層メモリ、High-Bandwidth Flash評価基盤を横断して軽量評価し、identity/queue/jobs/fallback/Library pendingを確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "分離サービングの電力制御・KVネットワーク転送・prefill/decode routingへ軸を移す",
+    "empty_round_reason": null
+  }
+}
