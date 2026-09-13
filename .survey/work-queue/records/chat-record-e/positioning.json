@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-65726a91bc5e5168cef13307",
   "job_id": "job-research-f9d3c5ad391e4acc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-65726a91bc5e5168cef13307",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はLlama-3 8Bと単一ノード4 GPU環境に限られ、70B級以上の基盤モデル、複数ノード、adapter migrationの実ネットワーク費用、数千adapter規模のmemory hierarchyは未評価である。Virtualized Moduleは基盤moduleのweight/configurationを破壊的に変更しないPEFT方式を前提とし、基盤を直接上書きする手法はforward設計を正規化する必要がある。runtime生成classは通常のfork/spawn/deep-copyと相性が悪く、独自serialization/void機構を要する。fine-tuning backwardはSMLM化されておらず、PyTorch Autogradによる独立LoRA linear callが残るため学習側はPEFTよりわずかに遅い。論文自身もSMLMと協調するbackward kernel、cluster managerとの統合、LoRA以外のPEFT支援を将来課題に挙げる。",
+    "differences": "Punicaは異なるLoRAを同一推論batchへまとめるSGMVを導入したが、層横断の静的weight concatenationが動的な学習・層別構成を制約する。S-LoRAはhost-device pagingとheterogeneous batchingで大量adapter推論を拡張するがfine-tuningを同一runtimeで扱わない。FlexLLMは推論とPEFT fine-tuningのco-servingを行うが、Loquetierの評価では複数LoRAや一部backward/module構成に制約がある。LoquetierはVirtualized Moduleでadapter状態を基盤から分離し、層単位SMLMと用途別attention backendを組み合わせて、複数LoRAの微調整・評価・prefill・decodeを一つのforward計画へ統合する点が異なる。",
+    "implementation_status": "NeurIPS 2025採択・公開済み。公式 `NJUDeepEngine/Loquetier` リポジトリにSMLM関連kernel、Virtualized Module/Loquetier runtime、Llamaの単一・mixed実行example、testを公開している。",
+    "research_positioning": "LLMサービング・Multi-LoRA・学習/配信統合系統に位置する。推論専用adapter servingの効率化を、adapter更新が継続する環境へ拡張し、巨大な基盤モデルを共有資産、LoRAを移動可能な仮想instanceとして扱うことでtraining-serving boundaryを薄くする研究である。オンライン適応や継続personalizationを同じGPU poolで実行するためのruntime基盤として位置付けられる。",
+    "relation_to_existing_repository": "PunicaのSGMV思想を学習可能な層単位SMLMへ発展させる直接的後続であり、S-LoRAの多数adapter memory management、FlexLLMのco-servingと比較される。Auroraのように配信トラフィックからadapter/speculatorを継続更新する系とも補完的で、Loquetier側は共有base上のadapter training/inference coexistenceを提供できる。一方SSD/NVMe offloadは直接扱わず、adapter数がGPU/host memoryを超える場合の階層配置は将来の接続点になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-65726a91bc5e5168cef13307", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
