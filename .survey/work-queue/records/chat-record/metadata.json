@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-22b875ab063d2b92e4796b28",
-  "job_id": "job-research-e355b9d9df6bf3d0",
-  "data": {
-    "canonical_id": "arXiv:2511.14116",
-    "arxiv_id": "2511.14116",
-    "title": "FailSafe: High-performance Resilient Serving",
-    "list_summary": "GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。",
-    "summary": "テンソル並列推論はGPU間を密結合するため、1台のGPUが故障すると実行停止だけでなく、そのGPU上のKVキャッシュ消失、モデル重みの再分割、故障後の不規則なGPU台数による計算・メモリ不均衡が同時に発生する。FailSafeは任意GPU数の非均一テンソル並列を基礎に、層ごとにKVキャッシュ配置を回転させる循環配置、余った注意ヘッドをデータ並列として処理する混合注意、GPU負荷に応じた細粒度要求ルーティングを組み合わせる。さらにKVキャッシュをホストメモリへ非同期バックアップし、故障後は失われた状態と不足重みだけを並列復旧する。8基のH100を用いた評価で通常の故障対応より最大2倍のスループットと最大183倍の復旧高速化を示す。",
-    "source": "https://arxiv.org/abs/2511.14116",
-    "sources": [
-      "https://arxiv.org/abs/2511.14116",
-      "https://arxiv.org/html/2511.14116"
-    ],
-    "authors": [
-      "Ziyi Xu",
-      "Zhiqiang Xie",
-      "Swapnil Gandhi",
-      "Christos Kozyrakis"
-    ],
-    "published": "2025-11-18",
-    "publication": "arXiv:2511.14116",
-    "publication_type": "preprint",
-    "publication_status": "arXiv v1; under review",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "topics": [
-      "LLM推論",
-      "テンソル並列",
-      "耐障害性",
-      "KVキャッシュ",
-      "負荷分散",
-      "状態復旧"
-    ],
-    "implementation": "約7000行の軽量カスタムLLMサービングエンジンとして実装し、vLLMやSGLangに近い通常時性能を持つと報告している。論文から公開コードURLは確認できない。",
-    "code": null,
-    "last_checked": "2026-09-13",
-    "hardware_evaluation": "NVIDIA H100 80GBを8基搭載したDGX相当サーバーを使用。GPU間は第4世代NVLink、GPUとCPU間はPCIe 5.0 x16で接続する。故障追跡評価では1台の8GPU機を8ノード分の挙動へ時間多重して集約スループットを算出する。",
-    "quality_effect": "モデル近似や量子化ではなく配置・並列方式・復旧経路を変えるため、生成品質を意図的に犠牲にする手法ではない。評価は性能と可用性が中心で、生成精度ベンチマークは報告していない。",
-    "references": [],
-    "references_checked_at": "2026-09-13",
-    "references_source": "arXiv HTML reference section",
-    "references_total": 45
-  },
+  "attempt_id": "attempt-439eb29ba8901a4bd7b7941a",
+  "job_id": "job-research-d01c0f0ba3d381e1",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-22b875ab063d2b92e4796b28",
+    "claim_id": "claim-439eb29ba8901a4bd7b7941a",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
