@@ -31,12 +31,15 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         ):
             self.assertNotIn(forbidden, text)
 
-    def test_submission_fast_lane_processes_only_changed_immutable_descriptors(self):
+    def test_submission_fast_lane_drains_backlog_through_parallel_batch_runner(self):
         text = self._text("survey-submission-fast.yml")
         self.assertIn("group: survey-submission-main", text)
         self.assertIn(".survey/work-queue/submissions/research/*.json", text)
         self.assertIn(".survey/work-queue/submissions/audit/*.json", text)
-        self.assertIn("process_immutable_submission.py", text)
+        self.assertIn("process_immutable_submission_batch.py", text)
+        self.assertIn("SUBMISSION_PARALLELISM: '4'", text)
+        self.assertIn('--parallelism "$SUBMISSION_PARALLELISM"', text)
+        self.assertNotIn("while IFS= read -r descriptor; do", text)
         self.assertNotIn("queue_worker.py --root", text)
         self.assertNotIn("dispatch_fallback_inbox.py", text)
         self.assertNotIn("backfill_citations.py", text)
@@ -44,7 +47,7 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
     def test_submission_fast_lane_persists_failure_result_before_failing(self):
         text = self._text("survey-submission-fast.yml")
         self.assertIn("processing_failed=0", text)
-        self.assertIn("if ! python .survey/scripts/process_immutable_submission.py", text)
+        self.assertIn("if ! python .survey/scripts/process_immutable_submission_batch.py", text)
         self.assertIn(".survey/work-queue/results/research", text)
         self.assertIn(".survey/work-queue/results/audit", text)
         self.assertIn("Immutable submission failure result was persisted to main.", text)
