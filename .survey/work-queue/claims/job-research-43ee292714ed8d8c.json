@@ -1,21 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-760cfad7c15f4e71cdef2214",
+  "claim_id": "claim-89c6e48a71f394424970c34a",
   "job_id": "job-research-43ee292714ed8d8c",
-  "worker_id": "scheduled-chat-20260913-1130-run7-b",
+  "worker_id": "scheduled-chat-hourly",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-760cfad7c15f4e71cdef2214",
-  "request_id": "sc-20260913T024200Z-run7-b",
-  "claimed_at": "2026-09-13T02:41:01+00:00",
-  "expires_at": "2026-09-13T05:32:12+00:00",
+  "attempt_id": "attempt-89c6e48a71f394424970c34a",
+  "request_id": "req-scheduled-chat-recovery-20260914T0058JST-02",
+  "claimed_at": "2026-09-13T15:57:47+00:00",
+  "expires_at": "2026-09-13T17:27:47+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-43ee292714ed8d8c"
   ],
-  "heartbeat_at": "2026-09-13T04:02:12+00:00",
-  "legacy_lease_original_expires_at": "2026-09-13T12:02:12+00:00",
-  "legacy_lease_normalized_at": "2026-09-13T11:23:44+00:00",
-  "lease_invalidated_at": "2026-09-13T11:23:44+00:00",
-  "lease_invalidation_reason": "legacy scheduled_chat lease exceeded 5400-second cap"
+  "previous_claim_id": "claim-760cfad7c15f4e71cdef2214",
+  "record_bank": "a"
 }
