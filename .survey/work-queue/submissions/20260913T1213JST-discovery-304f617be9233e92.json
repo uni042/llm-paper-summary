@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "job_id": "job-304f617be9233e92",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.08739",
+      "title": "Kareto: Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service",
+      "source_url": "https://arxiv.org/abs/2603.08739",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.08739-kareto-adaptive-tiered-storage-kv-cache.md",
+      "priority": 84,
+      "reason": "KVキャッシュをGPU/DRAM/SSDなどの階層へ置く際、固定構成ではなくサービス目標に応じて容量・配置を多目的最適化する。シミュレータとPareto探索を組み合わせ、固定1024GB DRAM構成に対して代表点でthroughputを9.3%向上、latencyを58.3%低減、またはcostを20.2%削減する選択肢を示しており、階層KVの機構研究を実配備の資源構成へ接続する候補として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:00+09:00",
+    "round": "specialist-cxl-tiered-storage-4",
+    "axis": "CXL/SSD shared KV・tiered storage resource optimization",
+    "query_summary": "CXL共有KV、CXL hybrid memory、temporal tiering、tiered-storage configurationを探索し、送信直前の正本identityで既収録5件を除外した。未収録のKaretoのみcandidateとして投入する。",
+    "candidate_count": 6,
+    "duplicate_filtered_count": 5,
+    "duplicate_canonical_ids": [
+      "arxiv:2609.10790",
+      "arxiv:2607.18141",
+      "arxiv:2606.12556",
+      "arxiv:2607.27187",
+      "arxiv:2604.19769"
+    ],
+    "next_axis_hint": "lossless model compression・serving software aging・load-aware speculative decoding",
+    "empty_round_reason": null
+  }
+}
