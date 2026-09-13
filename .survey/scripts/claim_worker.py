@@ -1,4 +1,4 @@
-"""Allocate immutable repository-backed claim leases for ready research/audit jobs."""
+"""Allocate renewable repository-backed claim leases for ready research/audit jobs."""
 from __future__ import annotations
 
 import argparse
@@ -16,7 +16,7 @@ SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 WORKER_KINDS = {"scheduled_chat", "work"}
 JOB_TYPES = {"research", "audit"}
 DEFAULT_MAX_JOBS = 1
-DEFAULT_LEASE_SECONDS = 28800
+DEFAULT_LEASE_SECONDS = 5400
 MIN_LEASE_SECONDS = 300
 MAX_LEASE_SECONDS = 43200
 
@@ -138,6 +138,73 @@ def _result_path(root: Path, request_id: str) -> Path:
     return root / ".survey/work-queue/claim-results" / f"{request_id}.json"
 
 
+def _renew_existing_result(
+    *,
+    root: Path,
+    path: Path,
+    result_path: Path,
+    existing: Any,
+    claims: dict[str, dict[str, Any]],
+    now: dt.datetime,
+) -> int:
+    """Treat a fresh authenticated replay of one request as a lease heartbeat."""
+    if not isinstance(existing, dict):
+        return 0
+    raw = _read(path)
+    try:
+        request = _normalize_request(path, raw)
+    except Exception:
+        return 0
+    if (
+        existing.get("request_id") != request["request_id"]
+        or existing.get("worker_id") != request["worker_id"]
+        or existing.get("worker_kind") != request["worker_kind"]
+    ):
+        return 0
+
+    heartbeat_requested_at = _as_time(request.get("requested_at"))
+    if heartbeat_requested_at is None or heartbeat_requested_at > now:
+        return 0
+
+    assignments = existing.get("assignments")
+    if not isinstance(assignments, list):
+        return 0
+    renewed = 0
+    new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
+    for item in assignments:
+        if not isinstance(item, dict):
+            continue
+        job_id = item.get("job_id")
+        claim_id = item.get("claim_id")
+        if not isinstance(job_id, str) or not isinstance(claim_id, str):
+            continue
+        current = claims.get(job_id)
+        if not current or not current.get("active"):
+            continue
+        if (
+            current.get("claim_id") != claim_id
+            or current.get("request_id") != request["request_id"]
+            or current.get("worker_id") != request["worker_id"]
+            or current.get("worker_kind") != request["worker_kind"]
+        ):
+            continue
+        last_activity = _as_time(current.get("heartbeat_at") or current.get("claimed_at"))
+        if last_activity is not None and heartbeat_requested_at <= last_activity:
+            continue
+        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+        claim["expires_at"] = new_expiry
+        claim["heartbeat_at"] = _iso(now)
+        _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
+        claims[job_id] = dict(claim, active=True, expired=False)
+        item["expires_at"] = new_expiry
+        renewed += 1
+
+    if renewed:
+        existing["heartbeat_at"] = _iso(now)
+        _write(result_path, existing)
+    return renewed
+
+
 def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     root = Path(repo_root).resolve()
     now = _as_time(at) or dt.datetime.now(dt.timezone.utc)
@@ -148,7 +215,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     result_root.mkdir(parents=True, exist_ok=True)
     claims_root.mkdir(parents=True, exist_ok=True)
     claims = claim_state.current_claims(root, now)
-    processed = reused = errors = assigned = 0
+    processed = reused = errors = assigned = renewed = 0
     for path in sorted(request_root.glob("*.json")):
         result_path = _result_path(root, path.stem)
         if result_path.exists():
@@ -157,6 +224,14 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             for item in existing.get("assignments", []) if isinstance(existing, dict) else []:
                 if isinstance(item, dict):
                     assigned += 1
+            renewed += _renew_existing_result(
+                root=root,
+                path=path,
+                result_path=result_path,
+                existing=existing,
+                claims=claims,
+                now=now,
+            )
             continue
         raw = _read(path)
         try:
@@ -235,7 +310,13 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         })
         assigned += len(assignments)
         processed += 1
-    return {"processed": processed, "reused": reused, "errors": errors, "assigned": assigned}
+    return {
+        "processed": processed,
+        "reused": reused,
+        "errors": errors,
+        "assigned": assigned,
+        "renewed": renewed,
+    }
 
 
 def main() -> int:
