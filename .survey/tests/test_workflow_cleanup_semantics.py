@@ -25,6 +25,15 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("group: survey-background-main", workflow)
         self.assertNotIn("group: survey-helper-main", workflow)
 
+    def test_reusable_chat_success_is_bound_to_exact_attempt(self):
+        workflow = (ROOT / ".github/workflows/survey-helper.yml").read_text(encoding="utf-8")
+        self.assertIn("attempt_id = inbox.get('attempt_id')", workflow)
+        self.assertIn("result.get('attempt_id') == attempt_id", workflow)
+        self.assertIn("'attempt_id': attempt_id", workflow)
+
+        worker = (ROOT / ".survey/scripts/queue_worker.py").read_text(encoding="utf-8")
+        self.assertIn('result["attempt_id"] = attempt_id', worker)
+
 
 if __name__ == "__main__":
     unittest.main()
