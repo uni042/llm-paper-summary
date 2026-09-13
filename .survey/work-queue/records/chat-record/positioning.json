@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2958de5d3bae0eb54b9ba0cf",
-  "job_id": "job-research-39ac27aff531cdb5",
-  "data": {
-    "limitations": "評価は4基A100の単一ノードNVLink環境と前向き推論に限定され、逆伝播、複数ノード、異種GPU、より大きな本番MoEは未検証である。送信先境界をタイルへ揃えるゼロ埋め計算が増え、偏りが強いほど相対負担が大きくなり得る。通信側SM数と中間セグメント行帯数は手動調整で、条件に合わないSM配分では基準より遅くなる。隠れ幅が小さく通信量が少ないモデルでは既存のTutelやMegatron系に優位でない。公式コード公開も確認できない。",
-    "differences": "FasterMoEやTutelはトークン次元を粗く分割して計算と通信をパイプライン化するため、チャンク完成まで戻り通信を始められない。COMET、CCFuser、FlashMoEなどは計算と通信を同一または強く融合したカーネルへ組み込み、細粒度重畳を得る代わりに対象ごとの侵入的最適化が大きい。本研究は、GEMM側と通信側を独立した2個の常駐カーネルとして保ち、タイル完了フラグと送信先整列行配置で両者を接続する。したがって融合方式より分離性を保ちながら、粗粒度パイプラインより早い通信開始を狙う。",
-    "implementation_status": "PyTorch 2.6.0向けCUDAランタイムとして実装され、CUTLASS 3.9のGEMM、CUTLASS後処理部の完了通知、NVSHMEM 3.6.5の常駐通信カーネルを統合して4基A100で実測されている。論文はICPP 2026採録予定でDOIも付与済み。2026-09-14時点で公式ソースコードの公開先は論文・arXivから確認できない。",
-    "research_positioning": "MoE専門家並列におけるGPU間通信最適化の中でも、第2全対全通信を専門家GEMMへ細粒度に重ねるランタイム系統に位置する。通信プリミティブそのもの、専門家配置、ルータ学習ではなく、タイル生成順とGPU上の生産者・消費者協調を主対象とするため、MoE並列通信とGPUランタイム最適化の境界にある。",
-    "relation_to_existing_repository": "FasterMoE/Tutel等の粗粒度MoEパイプライン、COMET/CCFuser/FlashMoE等の融合型計算通信重畳、TileLinkや汎用の通知・並べ替え型重畳研究と直接比較できる。SSDやCPUオフロードを扱わないが、専門家をGPU外から読み込むMoE系では、専門家I/Oと第2通信をさらに同一タイムラインへ重ねる際のタイル完了通知、遠隔優先スケジュール、資源配分の設計材料になる。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-92c559dc6fdfa30da7d2c749",
+  "job_id": "job-research-57f4550e61af7e09",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2958de5d3bae0eb54b9ba0cf",
+    "claim_id": "claim-92c559dc6fdfa30da7d2c749",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
