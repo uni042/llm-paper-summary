@@ -30,16 +30,16 @@ jobs:
           from pathlib import Path
           path = Path('.survey/scripts/claim_worker.py')
           text = path.read_text(encoding='utf-8')
-          old = '''            result = _read(results / kind / path.name)\n            if immutable_submission.result_is_success_for(result, value):\n                continue\n            row = dict(value)\n            row["kind"] = value.get("kind") or kind\n            row["_failure_result_durable"] = bool(\n                immutable_submission.result_matches_identity(result, value)\n                and isinstance(result, dict)\n                and result.get("ok") is False\n            )\n            out.append(row)\n'''
-          new = '''            result = _read(results / kind / path.name)\n            success_result_durable = immutable_submission.result_is_success_for(result, value)\n            failure_result_durable = bool(\n                immutable_submission.result_matches_identity(result, value)\n                and isinstance(result, dict)\n                and result.get("ok") is False\n            )\n            row = dict(value)\n            row["kind"] = value.get("kind") or kind\n            row["_success_result_durable"] = success_result_durable\n            row["_failure_result_durable"] = failure_result_durable\n            out.append(row)\n'''
+          marker = '''\ndef _release_durable_claims(\n    root: Path,\n    claims: dict[str, dict[str, Any]],\n    descriptors: list[dict[str, Any]],\n    now: dt.datetime,\n) -> set[str]:\n'''
+          helper = '''\ndef _successful_immutable_attempts(root: Path) -> set[tuple[str, str]]:\n    """Return exact job/attempt pairs whose immutable processor result is successful."""\n    successful: set[tuple[str, str]] = set()\n    submissions = root / ".survey/work-queue/submissions"\n    results = root / ".survey/work-queue/results"\n    for kind in sorted(JOB_TYPES):\n        folder = submissions / kind\n        for path in sorted(folder.glob("*.json")) if folder.is_dir() else []:\n            descriptor = _read(path)\n            if not isinstance(descriptor, dict):\n                continue\n            job_id = descriptor.get("job_id")\n            attempt_id = descriptor.get("attempt_id")\n            if not isinstance(job_id, str) or not SAFE_ID_RE.fullmatch(job_id):\n                continue\n            if not isinstance(attempt_id, str) or not SAFE_ID_RE.fullmatch(attempt_id):\n                continue\n            result = _read(results / kind / path.name)\n            if immutable_submission.result_is_success_for(result, descriptor):\n                successful.add((job_id, attempt_id))\n    return successful\n\n\ndef _release_durable_claims(\n    root: Path,\n    claims: dict[str, dict[str, Any]],\n    descriptors: list[dict[str, Any]],\n    now: dt.datetime,\n) -> set[str]:\n'''
+          if text.count(marker) != 1:
+              raise SystemExit(f'expected one release marker, found {text.count(marker)}')
+          text = text.replace(marker, helper)
+          old = '''    durable_attempts = {\n        (str(item.get("job_id")), str(item.get("attempt_id")))\n        for item in descriptors\n    }\n'''
+          new = '''    durable_attempts = {\n        (str(item.get("job_id")), str(item.get("attempt_id")))\n        for item in descriptors\n    }\n    durable_attempts |= _successful_immutable_attempts(root)\n'''
           if text.count(old) != 1:
-              raise SystemExit(f'expected one immutable descriptor block, found {text.count(old)}')
+              raise SystemExit(f'expected one durable_attempts block, found {text.count(old)}')
           text = text.replace(old, new)
-          old2 = '''    submitted_jobs = {str(item.get("job_id")) for item in descriptors}\n    submitted_jobs -= _repair_jobs_with_only_durable_failures(root, descriptors)\n'''
-          new2 = '''    submitted_jobs = {\n        str(item.get("job_id"))\n        for item in descriptors\n        if item.get("_success_result_durable") is not True\n    }\n    submitted_jobs -= _repair_jobs_with_only_durable_failures(root, descriptors)\n'''
-          if text.count(old2) != 1:
-              raise SystemExit(f'expected one submitted_jobs block, found {text.count(old2)}')
-          text = text.replace(old2, new2)
           path.write_text(text, encoding='utf-8')
           PY
       - name: Focused RED-to-GREEN check
