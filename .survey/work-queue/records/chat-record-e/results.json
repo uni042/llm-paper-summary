@@ -1,21 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-d880cf5cfb9f526f90eb762f",
-  "job_id": "job-research-e2c6f510b1f31074",
   "slot": "results",
-  "data": {
-    "overview": "Chimeraは異種モデル組合せと要求率をまたいで、単に待ち時間を削る基準よりも高いタスク性能を同時に達成するPareto前線を形成した。論文抄録は比較可能な条件の総括としてE2E遅延を1.2〜2.4倍改善し、タスク性能を平均8.0〜9.5ポイント向上と報告する。個別条件ではAPPSのQwen1.5B+7BでvLLM比3.4倍高速化と16.0ポイントの性能向上、Qwen1.5B+14Bで2.9倍高速化と10.5ポイント向上、3モデル構成で2.7倍高速化と8.2ポイント向上を示す。MATHではQwen1.5B+7Bで2.5倍高速化と2.2ポイント向上、Qwen1.5B+14Bで2.1倍高速化と5.0ポイント向上を示す。スケジューラ全体の追加費用はE2E遅延の最大2.2%で、多くの条件では1%未満だった。",
-    "key_results": [
-      {"metric":"APPS E2E遅延と性能","value":"vLLM比3.4倍高速化、性能+16.0ポイント","baseline":"vLLM","condition":"Qwen2.5-1.5B + 7B、RPS 8/12/16の平均比較","interpretation":"要求別品質ルーティングと残りワークフロー長優先を組み合わせることで、速度だけを改善するLTR/MLFQより品質も同時に高める。"},
-      {"metric":"APPS E2E遅延と性能","value":"vLLM比2.9倍高速化、性能+10.5ポイント","baseline":"vLLM","condition":"Qwen2.5-1.5B + 14B","interpretation":"大きいモデルの性能利得を利用しつつ混雑時は軽量側へ逃がすことで、強モデル固定より良い前線を作る。"},
-      {"metric":"APPS 三モデル構成","value":"vLLM比2.7倍高速化、性能+8.2ポイント","baseline":"vLLM","condition":"Qwen2.5-1.5B + 3B + 14B","interpretation":"候補モデルが増えても、負荷と成功確率を共同利用するルーティングが有効。"},
-      {"metric":"MATH E2E遅延と性能","value":"vLLM比2.5倍高速化、性能+2.2ポイント","baseline":"vLLM","condition":"Qwen2.5-1.5B + 7B","interpretation":"数学推論でも品質を犠牲にせずワークフロー待ち時間を削減する。"},
-      {"metric":"スケジューラ費用","value":"E2E遅延の最大2.2%、多くは1%未満","baseline":"Chimera E2E時間","condition":"APPS/MATH、RPS 8/16、Qwen1.5B+7B/14B","interpretation":"意味ルータと長さ予測を非同期バッチ化することで、予測制御自体の費用を小さく保つ。"}
-    ],
-    "negative_results": "性能改善幅はデータセットとモデル組合せに強く依存する。MATHの三モデル構成ではvLLM比2.1倍高速化に対して性能向上は1.6ポイントに留まる。Llama3B+Ministral8BのAPPSでは出力が長く全体遅延が大きく、vLLM比の速度向上は1.2倍である。Oracle PredictorはQwen1.5B+7Bの厳しい遅延制約でさらに改善し、Oracle RouterはQwen1.5B+14Bで前線を改善するため、長さ予測・ルーティング誤差の余地が残る。",
-    "interpretation": "利得は一つのカーネル高速化からではなく、品質が必要な要求だけ強いモデルへ送り、混雑を予測トークン量で避け、さらに短いワークフローを先に完了させる三段階の協調から生じる。遅延スラックを変更すると、同じ実装で低遅延寄りから高性能寄りまで運用点を動かせる。",
-    "quality_impact": "ルーティングによって利用モデル自体を変えるため品質は運用点に依存する。Chimeraは品質を固定して速度だけを上げる方式ではなく、実測では同等遅延域でタスク性能も高めることを目的とする。"
-  },
-  "reservation": {"claim_id":"claim-d880cf5cfb9f526f90eb762f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-2b873256408575b16dfcb5a3",
+  "job_id": "job-research-9094fc0c86937469",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-2b873256408575b16dfcb5a3",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
