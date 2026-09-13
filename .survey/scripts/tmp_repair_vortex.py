@@ -125,6 +125,12 @@ REPLACEMENTS = [
     ("block", "ブロック"),
 ]
 TARGET_SLOTS = ("problem_method", "evaluation", "results", "positioning")
+IDENTITY_METADATA_FIELDS = (
+    "canonical_id", "arxiv_id", "doi", "openreview_id", "title", "authors",
+    "authors_affiliations", "published", "publication", "publication_type",
+    "publication_status", "lineage", "source", "sources", "code", "references",
+    "references_checked_at", "references_source", "references_total",
+)
 
 
 def read_json(path: Path) -> Any:
@@ -197,10 +203,13 @@ def main() -> int:
     for slot in TARGET_SLOTS:
         candidate[slot] = translate_value(candidate[slot])
     candidate = assemble.normalize_preferred_terms(candidate)
-    candidate["metadata"] = copy.deepcopy(raw_record["metadata"])
     assemble.ensure_explanatory_summary(candidate)
 
-    assert candidate["metadata"] == raw_record["metadata"], "metadata changed"
+    for field in IDENTITY_METADATA_FIELDS:
+        assert candidate["metadata"].get(field) == raw_record["metadata"].get(field), f"metadata identity changed: {field}"
+    assert structure(candidate["metadata"]) == structure(raw_record["metadata"]), "metadata structure changed"
+    assert numbers(candidate["metadata"]) == numbers(raw_record["metadata"]), "metadata numeric evidence changed"
+    assert urls(candidate["metadata"]) == urls(raw_record["metadata"]), "metadata URLs changed"
     for slot in TARGET_SLOTS:
         assert structure(candidate[slot]) == structure(raw_record[slot]), f"structure changed in {slot}"
         assert numbers(candidate[slot]) == numbers(raw_record[slot]), f"numeric evidence changed in {slot}"
