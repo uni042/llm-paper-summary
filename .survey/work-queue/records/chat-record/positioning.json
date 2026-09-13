@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-274a2a6a90644c806341981c",
-  "job_id": "job-research-b76cb796c54f83bb",
-  "data": {
-    "limitations": "実機評価は3モデル・20〜40 GPUの中核構成が中心で、6モデル・100〜300 GPUの拡張構成は実機プロファイルで較正したシミュレーションに依存する。各実験は30分で6分ごとに再構成し、起動費は60分調整間隔へ償却するため、数日規模の需要・価格変動や障害時挙動は直接評価していない。テンプレートは単一地域に閉じ、広域パイプラインやスポット中断を対象外とする。枝刈りは実験上費用効率の飽和を確認しているが、全GPU世代・将来モデルで常に同じNmax=6、ρ=12が十分とは限らない。オンライン整数計画も資源逼迫時には最難関約2分まで伸びる。",
-    "differences": "SkyServeやSageServeなど資源割当系はモデル複製内部を固定・同種GPU構成として扱い、HelixやHexGenなど異種モデル配置系は与えられたGPU集合を固定して配置だけを最適化する。Cauchyはプリフィルとデコードで異なるGPU構成を選べるが、各段階の複製内部は同種構成のままである。Coralは異種GPUを一つの複製のパイプライン段へ混在させる配置と、複数モデル間のノード調整を同時に扱う。高価な配置探索を再利用可能テンプレートへ変換し、資源割当をオンラインで解ける点が既存方式との差になる。",
-    "implementation_status": "Python/C++約53K行の実行基盤とPython約5K行のイベントシミュレータを実装し、ZeroMQ、NCCL、RDMA/GPU Direct RDMA、GLOO、vLLMを組み合わせる。中核構成は実GPU上で動作し、シミュレータも実機との遅延誤差を検証しているため、概念のみではなくエンドツーエンド実装を伴う。2026-09-14時点でCoral固有の公式公開コードは一次資料から確認できない。",
-    "research_positioning": "LLMサービングの資源割当と異種並列配置を結ぶオーケストレーション研究である。単一要求のカーネル高速化やKV管理ではなく、複数モデル・複数地域・複数GPU世代のクラスタ全体を対象に、オフラインでモデル配置の複雑性を吸収しオンラインで経済性とSLOを最適化する。異種GPUが増え、モデル群が断片化するクラウド環境で、配置探索を再利用可能な中間表現へ変換する設計として位置づけられる。",
-    "relation_to_existing_repository": "DistServe/Cauchyなどプリフィル・デコード分離、ThunderServeなど異種GPU配信、Helix/HexGenなど異種モデル配置、SkyServe/SageServeなどクラウド資源割当と補完・比較関係にある。オフロードやSSDを直接利用しないが、GPUメモリ容量やモデル分割がテンプレート選択を左右すため、CPU/SSD階層を含む将来の配信構成をテンプレート候補へ追加する拡張と相性がよい。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-274a2a6a90644c806341981c", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-8f7a99a959a36e3609539695",
+  "job_id": "job-research-44ece09f5c0f4e7c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8f7a99a959a36e3609539695",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

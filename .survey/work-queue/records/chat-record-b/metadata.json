@@ -2,30 +2,56 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-286ac5a93883c97edb55aa16",
+  "attempt_id": "attempt-73a0e418c00f418830f8a47e",
   "job_id": "job-research-f379557cdc6a8294",
   "data": {
     "canonical_id": "arXiv:2601.13684",
     "arxiv_id": "2601.13684",
     "doi": "10.48550/arXiv.2601.13684",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": ["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference",
     "summary": "HeteroCacheは、長文脈推論のKVキャッシュを静的に捨てる方式では、復号中に注意先が変わる注意ドリフトによって後から重要になる情報を失い、CPUへ退避して動的取得する既存方式では粗粒度な取得がI/Oを増やす問題を扱う。校正時に各注意ヘッドの時間的安定性と同一層内の類似性を測り、固有・安定なアンカーヘッド、固有・変動の大きいボラタイルヘッド、冗長クラスタを代表するピボットヘッド、圧縮可能なサテライトヘッドへ分類する。変動しやすい圧縮ヘッドほど大きなGPU KV予算を与え、ボラタイルとピボットは完全KVをGPUに保持する。サテライトの完全KVはCPU RAMへ置き、ピボットが注意ドリフトを検知した場合だけ必要tokenを非同期取得してGPU側サテライトを更新する。A100 PCIe 80GB実機でLlama-3.1-8B、Qwen2.5-14B、DeepSeek-R1-Distill-Llama-8Bを評価し、224K文脈でFullAttention比約3倍、OmniKV比40倍超のdecode高速化を報告する。",
     "list_summary": "注意ヘッドの安定性・層内冗長性でKV予算を細粒度配分し、代表ヘッドのドリフト検知時だけCPUから非同期取得することで、224K文脈の復号をFullAttention比約3倍高速化する。",
-    "authors": ["Zhiyuan Shi", "Qibo Qiu", "Feng Xue", "Zhonglin Jiang", "Li Yu", "Jian Jiang", "Xiaofei He", "Wenxiao Wang"],
+    "authors": [
+      "Zhiyuan Shi",
+      "Qibo Qiu",
+      "Feng Xue",
+      "Zhonglin Jiang",
+      "Li Yu",
+      "Jian Jiang",
+      "Xiaofei He",
+      "Wenxiao Wang"
+    ],
     "authors_affiliations": "Zhejiang University、China Mobile (Zhejiang) Research & Innovation Institute、Geely Automobile Research Institute (Ningbo) Co., Ltd.、FABU Inc.。Wenxiao Wangがcorresponding author。",
     "published": "2026-01-20",
     "publication": "arXiv:2601.13684v2, revised 2026-04-18; Accepted to ACL 2026 Main Conference",
     "publication_type": "Conference paper / arXiv preprint",
     "publication_status": "ACL 2026 Main Conference accepted。arXiv v2が最新確認版。",
     "lineage": "kv-cache-optimization-compression",
-    "topics": ["KVキャッシュ圧縮", "長文脈推論", "階層記憶", "CPUオフロード", "非同期取得", "注意ドリフト", "注意ヘッド異質性"],
+    "topics": [
+      "KVキャッシュ圧縮",
+      "長文脈推論",
+      "階層記憶",
+      "CPUオフロード",
+      "非同期取得",
+      "注意ドリフト",
+      "注意ヘッド異質性"
+    ],
     "importance": "高。KV圧縮の品質問題とCPUオフロードのI/O問題を別々に扱わず、ヘッド単位の動的価値推定、GPU/CPU階層配置、非同期オンデマンド取得を一つの推論runtimeへ統合する。SSD/CPU階層化やprefetch研究へ接続しやすい。",
     "hardware_evaluation": "主実機はIntel Xeon Gold 6338 2.00GHz、256 GiB DDR4、NVIDIA A100 PCIe 80GB、PCIe Gen4 x16。補足でIntel Xeon Gold 5218RとGeForce RTX 4090、PCIe Gen3 x16も評価する。",
     "quality_effect": "圧縮によりGPU常駐KVを削減するため完全保持と比べれば近似的な情報選択を行うが、CPU側にサテライトヘッドの完全KVを保持し、注意ドリフト時に再取得して不可逆な情報消失を避ける。LongBench、LongBench v2、InfiniteBench、NIAH/U-NIAHでFullAttentionに近い品質を維持する。",
     "source": "https://arxiv.org/abs/2601.13684",
-    "sources": ["https://arxiv.org/abs/2601.13684", "https://arxiv.org/html/2601.13684", "https://arxiv.org/pdf/2601.13684"],
+    "sources": [
+      "https://arxiv.org/abs/2601.13684",
+      "https://arxiv.org/html/2601.13684",
+      "https://arxiv.org/pdf/2601.13684"
+    ],
     "code": "https://github.com/ponytaill/HeteroCache",
     "implementation": "高水準PyTorch中心のprototype。GPU/CPU階層KV、pivot-guided asynchronous retrieval、head-level budget allocationを実装。著者自身がcustom CUDA kernelは未実装と明記する。公式コードはgithub.com/ponytaill/HeteroCache。",
     "last_checked": "2026-09-14",
@@ -33,16 +59,47 @@
     "references_source": "arXiv v2 primary reference section",
     "references_total": 28,
     "references": [
-      {"canonical_id": "arXiv:2406.02069", "arxiv_id": "2406.02069"},
-      {"canonical_id": "arXiv:2412.19437", "arxiv_id": "2412.19437"},
-      {"canonical_id": "arXiv:2402.02750", "arxiv_id": "2402.02750"},
-      {"canonical_id": "arXiv:2503.12491", "arxiv_id": "2503.12491"},
-      {"canonical_id": "arXiv:2601.03267", "arxiv_id": "2601.03267"},
-      {"canonical_id": "arXiv:2410.21465", "arxiv_id": "2410.21465"},
-      {"canonical_id": "arXiv:2406.10774", "arxiv_id": "2406.10774"},
-      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388"},
-      {"canonical_id": "arXiv:2501.01005", "arxiv_id": "2501.01005"}
+      {
+        "canonical_id": "arXiv:2406.02069",
+        "arxiv_id": "2406.02069"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:2402.02750",
+        "arxiv_id": "2402.02750"
+      },
+      {
+        "canonical_id": "arXiv:2503.12491",
+        "arxiv_id": "2503.12491"
+      },
+      {
+        "canonical_id": "arXiv:2601.03267",
+        "arxiv_id": "2601.03267"
+      },
+      {
+        "canonical_id": "arXiv:2410.21465",
+        "arxiv_id": "2410.21465"
+      },
+      {
+        "canonical_id": "arXiv:2406.10774",
+        "arxiv_id": "2406.10774"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "arxiv_id": "2505.09388"
+      },
+      {
+        "canonical_id": "arXiv:2501.01005",
+        "arxiv_id": "2501.01005"
+      }
     ]
   },
-  "reservation": {"claim_id": "claim-286ac5a93883c97edb55aa16", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-73a0e418c00f418830f8a47e",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

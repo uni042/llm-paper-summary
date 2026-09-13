@@ -2,25 +2,89 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-286ac5a93883c97edb55aa16",
+  "attempt_id": "attempt-73a0e418c00f418830f8a47e",
   "job_id": "job-research-f379557cdc6a8294",
   "data": {
     "overview": "HeteroCacheは低いGPU KV予算でもFullAttentionに近いlong-context精度を保ち、特にQwen2.5-14BではLongBench平均49.97（FullAttention 50.55、30% memory）、LongBench v2平均33.6（FullAttention 33.2、30% memory）を得る。Llama-3.1-8Bでは50% memoryでLongBench 49.42（FullAttention 49.77）、InfiniteBench 47.34（47.56）を維持する。system面ではcontext lengthが伸びてもdecode latency増加を抑え、224KでFullAttention比約3倍、頻繁なCPU取得を行うOmniKV比40倍超の高速化を報告する。128KでCPU memory peakは17.95 GB、PCIe peak bandwidthは21.07 GB/sで、31.5 GB/sのGen4理論帯域内に収まる。",
     "key_results": [
-      {"metric": "LongBench average", "value": "49.97 at 30% KV memory", "baseline": "Qwen2.5-14B FullAttention 50.55", "condition": "Qwen2.5-14B-Instruct", "interpretation": "GPU常駐KVを70%削減してもFullAttentionとの差を0.58点に抑え、ShadowKV 46.93、OmniKV 46.48、CAKE 46.92を上回る。"},
-      {"metric": "LongBench v2 average", "value": "33.6 at 30% KV memory", "baseline": "Qwen2.5-14B FullAttention 33.2", "condition": "Qwen2.5-14B-Instruct", "interpretation": "圧縮条件でもFullAttentionと同等以上の平均値を示し、動的取得が長文脈 reasoning の情報損失を抑える。"},
-      {"metric": "LongBench v2 reasoning model average", "value": "28.9 at 50% KV memory", "baseline": "DeepSeek-R1-Distill-Llama-8B FullAttention 29.2", "condition": "DeepSeek-R1-Distill-Llama-8B", "interpretation": "長い思考過程でも0.3点差に収まり、動的に重要な中間contextを呼び戻す効果を示す。"},
-      {"metric": "InfiniteBench average", "value": "47.34 at 50% KV memory", "baseline": "Llama-3.1-8B FullAttention 47.56", "condition": "Llama-3.1-8B-Instruct", "interpretation": "100K超を含む超長文脈でもFullAttentionとの差を小さく保つ。"},
-      {"metric": "decode speedup", "value": "約3倍", "baseline": "FullAttention", "condition": "Llama-3.1-8B、224K context", "interpretation": "長文脈ほどGPU上で計算するKV量の削減が効き、prefill TTFTをほぼ増やさずdecodeを高速化する。"},
-      {"metric": "decode speedup", "value": "40倍超", "baseline": "OmniKV", "condition": "ultra-long context latency evaluation", "interpretation": "毎stepに近い粗粒度CPU retrievalを避け、pivot drift時だけ取得することがI/O律速を大きく削減する。"},
-      {"metric": "CPU memory / PCIe bandwidth", "value": "17.95 GB / 21.07 GB/s peak", "baseline": "PCIe Gen4 x16 theoretical 31.5 GB/s", "condition": "128K context、A100 PCIe 80GB", "interpretation": "CPU側full-KV reservoirは容量を消費するが、主要評価機では転送帯域がinterconnect上限以内に収まる。"},
-      {"metric": "retrieval trigger rate", "value": "0.823%", "baseline": "continuous retrieval", "condition": "1K-token continuous generation", "interpretation": "代表pivotによるdrift監視でCPU fetchを稀なeventに限定し、通常decodeでのI/Oを避ける。"},
-      {"metric": "U-NIAH ROUGE-1", "value": "2.195 at 128K", "baseline": "FullAttention 2.195", "condition": "Llama-3.1-8B-Instruct", "interpretation": "複数needle条件でも128KではFullAttentionと同値で、動的取得が複雑依存を保持できる。"},
-      {"metric": "ablation Qasper score", "value": "46.00 full / 44.97 without allocation / 45.32 without retrieval", "baseline": "full HeteroCache", "condition": "Llama-3.1-8B、50% memory", "interpretation": "head安定性に基づく予算配分とpivot-guided retrievalの双方が品質維持へ寄与する。"}
+      {
+        "metric": "LongBench average",
+        "value": "49.97 at 30% KV memory",
+        "baseline": "Qwen2.5-14B FullAttention 50.55",
+        "condition": "Qwen2.5-14B-Instruct",
+        "interpretation": "GPU常駐KVを70%削減してもFullAttentionとの差を0.58点に抑え、ShadowKV 46.93、OmniKV 46.48、CAKE 46.92を上回る。"
+      },
+      {
+        "metric": "LongBench v2 average",
+        "value": "33.6 at 30% KV memory",
+        "baseline": "Qwen2.5-14B FullAttention 33.2",
+        "condition": "Qwen2.5-14B-Instruct",
+        "interpretation": "圧縮条件でもFullAttentionと同等以上の平均値を示し、動的取得が長文脈 reasoning の情報損失を抑える。"
+      },
+      {
+        "metric": "LongBench v2 reasoning model average",
+        "value": "28.9 at 50% KV memory",
+        "baseline": "DeepSeek-R1-Distill-Llama-8B FullAttention 29.2",
+        "condition": "DeepSeek-R1-Distill-Llama-8B",
+        "interpretation": "長い思考過程でも0.3点差に収まり、動的に重要な中間contextを呼び戻す効果を示す。"
+      },
+      {
+        "metric": "InfiniteBench average",
+        "value": "47.34 at 50% KV memory",
+        "baseline": "Llama-3.1-8B FullAttention 47.56",
+        "condition": "Llama-3.1-8B-Instruct",
+        "interpretation": "100K超を含む超長文脈でもFullAttentionとの差を小さく保つ。"
+      },
+      {
+        "metric": "decode speedup",
+        "value": "約3倍",
+        "baseline": "FullAttention",
+        "condition": "Llama-3.1-8B、224K context",
+        "interpretation": "長文脈ほどGPU上で計算するKV量の削減が効き、prefill TTFTをほぼ増やさずdecodeを高速化する。"
+      },
+      {
+        "metric": "decode speedup",
+        "value": "40倍超",
+        "baseline": "OmniKV",
+        "condition": "ultra-long context latency evaluation",
+        "interpretation": "毎stepに近い粗粒度CPU retrievalを避け、pivot drift時だけ取得することがI/O律速を大きく削減する。"
+      },
+      {
+        "metric": "CPU memory / PCIe bandwidth",
+        "value": "17.95 GB / 21.07 GB/s peak",
+        "baseline": "PCIe Gen4 x16 theoretical 31.5 GB/s",
+        "condition": "128K context、A100 PCIe 80GB",
+        "interpretation": "CPU側full-KV reservoirは容量を消費するが、主要評価機では転送帯域がinterconnect上限以内に収まる。"
+      },
+      {
+        "metric": "retrieval trigger rate",
+        "value": "0.823%",
+        "baseline": "continuous retrieval",
+        "condition": "1K-token continuous generation",
+        "interpretation": "代表pivotによるdrift監視でCPU fetchを稀なeventに限定し、通常decodeでのI/Oを避ける。"
+      },
+      {
+        "metric": "U-NIAH ROUGE-1",
+        "value": "2.195 at 128K",
+        "baseline": "FullAttention 2.195",
+        "condition": "Llama-3.1-8B-Instruct",
+        "interpretation": "複数needle条件でも128KではFullAttentionと同値で、動的取得が複雑依存を保持できる。"
+      },
+      {
+        "metric": "ablation Qasper score",
+        "value": "46.00 full / 44.97 without allocation / 45.32 without retrieval",
+        "baseline": "full HeteroCache",
+        "condition": "Llama-3.1-8B、50% memory",
+        "interpretation": "head安定性に基づく予算配分とpivot-guided retrievalの双方が品質維持へ寄与する。"
+      }
     ],
     "negative_results": "CPU側にはfull satellite KVを保持するためhost memory使用量はcontext lengthにほぼ線形で増え、128Kで17.95 GBに達する。非同期取得の隠蔽能力はCPU-GPU interconnect帯域に依存し、著者も極端な低帯域ではI/Oを完全に隠せないと明記する。prototypeは高水準PyTorchでcustom CUDA kernelがなく、報告性能は実装最適化の上限ではない。圧縮はhead taxonomyをoffline calibrationで決めるため、未知domainでattention構造が大きく変わる場合の頑健性には追加検証余地がある。",
     "interpretation": "HeteroCacheの性能は単なるtoken evictionではなく、『常時GPUに置くhead』『CPUにfull copyを残して必要時だけ戻すhead』『静的圧縮で十分なhead』を分けることから生じる。head間冗長性を使ってpivotだけを監視すれば全compressed headを毎step検索する必要がなく、attention driftを検知した時だけI/Oを発生させられる。このため品質回復のためのdynamic retrievalとI/O削減を両立し、長文脈ほどFullAttentionとの速度差が広がる。",
     "quality_impact": "不可逆evictionより品質保持を重視し、satellite full KVをCPUへ残してdrift時に再取得する。30〜50%のGPU KV budgetでもLongBench/LongBench v2/InfiniteBenchでFullAttentionに近い結果を示すが、完全同一出力を保証するlossless方式ではなく、attention top-token選択に基づく近似圧縮である。"
   },
-  "reservation": {"claim_id": "claim-286ac5a93883c97edb55aa16", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-73a0e418c00f418830f8a47e",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

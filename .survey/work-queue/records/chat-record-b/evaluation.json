@@ -2,17 +2,48 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-286ac5a93883c97edb55aa16",
+  "attempt_id": "attempt-73a0e418c00f418830f8a47e",
   "job_id": "job-research-f379557cdc6a8294",
   "data": {
     "hardware": "主評価環境はIntel Xeon Gold 6338 2.00GHz、256 GiB DDR4、NVIDIA A100 PCIe 80GB、80GB HBM2e、PCIe Gen4 x16（理論片方向約31.5 GB/s）。補足の制約interconnect評価ではIntel Xeon Gold 5218RとNVIDIA GeForce RTX 4090、PCIe Gen3 x16（理論約15.75 GB/s）を使用する。",
     "software": "高水準PyTorchベースのHeteroCache prototype。DeepSeek-R1-Distill-Llama-8Bではbitsandbytesによる4-bit weight quantizationも併用し、KV圧縮との直交性を確認する。custom CUDA kernelは未実装。",
     "methodology": "Llama-3.1-8B-Instruct、Qwen2.5-14B-Instruct、DeepSeek-R1-Distill-Llama-8BをLongBench、LongBench v2、InfiniteBench、NIAH、U-NIAHで評価する。比較対象はFullAttention、Quest、ShadowKV、OmniKV、CAKE。memory budget ratioは主に0.3または0.5で公平に揃え、Llamaではstability/similarity threshold 0.5、Qwenではstability 0.4を用いる。latency評価はLlama-3.1-8Bでprefill TTFTと50生成tokenの平均decode latency/tokenを測り、context lengthを最大224Kまで拡張する。補足では128K時のCPU memory/PCIe bandwidth、1K token連続生成時のretrieval trigger率とtail latency、RTX 4090/PCIe Gen3での制約interconnect性能、128K LongBench Pro calibration transferabilityを調べる。",
-    "datasets": ["LongBench", "LongBench v2", "InfiniteBench", "NIAH", "U-NIAH", "LongBench Pro", "Wikipedia calibration set"],
-    "models": ["Llama-3.1-8B-Instruct", "Qwen2.5-14B-Instruct", "DeepSeek-R1-Distill-Llama-8B"],
-    "baselines": ["FullAttention", "Quest", "ShadowKV", "OmniKV", "CAKE"],
-    "metrics": ["benchmark score", "KV memory budget ratio", "TTFT", "decode latency per token", "CPU RAM usage", "PCIe bandwidth utilization", "retrieval trigger rate", "P95/P99 decode latency"],
+    "datasets": [
+      "LongBench",
+      "LongBench v2",
+      "InfiniteBench",
+      "NIAH",
+      "U-NIAH",
+      "LongBench Pro",
+      "Wikipedia calibration set"
+    ],
+    "models": [
+      "Llama-3.1-8B-Instruct",
+      "Qwen2.5-14B-Instruct",
+      "DeepSeek-R1-Distill-Llama-8B"
+    ],
+    "baselines": [
+      "FullAttention",
+      "Quest",
+      "ShadowKV",
+      "OmniKV",
+      "CAKE"
+    ],
+    "metrics": [
+      "benchmark score",
+      "KV memory budget ratio",
+      "TTFT",
+      "decode latency per token",
+      "CPU RAM usage",
+      "PCIe bandwidth utilization",
+      "retrieval trigger rate",
+      "P95/P99 decode latency"
+    ],
     "scope": "品質評価は複数model・複数long-context benchmarkを含むが、主system latencyは単一A100 PCIe 80GBで測定される。CPU-GPU階層記憶には十分なCPU RAMが必要で、128Kではpeak 17.95 GBを使用する。PCIe Gen4ではpeak 21.07 GB/sで理論上限内だが、極端に低帯域なinterconnectでは非同期取得を完全に隠せない可能性が著者の制約として明記される。"
   },
-  "reservation": {"claim_id": "claim-286ac5a93883c97edb55aa16", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-73a0e418c00f418830f8a47e",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
