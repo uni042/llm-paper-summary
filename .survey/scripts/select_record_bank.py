@@ -41,7 +41,6 @@ def ready_job_ids(repo_root: Path) -> set[str]:
             if isinstance(job, dict) and job.get("status") == "ready" and job.get("job_id"):
                 ids.add(str(job["job_id"]))
         return ids
-    # Keep compatibility for isolated callers that only provide the old snapshot.
     value = read_object(repo_root / NEXT_JOBS)
     jobs = value.get("next_jobs") if value else None
     return {str(job.get("job_id")) for job in jobs or [] if isinstance(job, dict) and job.get("job_id")}
@@ -56,7 +55,36 @@ def current_transport(repo_root: Path) -> tuple[dict[str, Any] | None, bool]:
     return inbox, settled
 
 
-def inspect_bank(repo_root: Path, bank: str, ready_ids: set[str], inbox: dict[str, Any] | None, settled: bool) -> dict[str, Any]:
+def pending_immutable_bank_owners(repo_root: Path) -> dict[str, set[tuple[str, str]]]:
+    owners: dict[str, set[tuple[str, str]]] = {}
+    submissions = repo_root / ".survey/work-queue/submissions"
+    results = repo_root / ".survey/work-queue/results"
+    for kind in ("research", "audit"):
+        root = submissions / kind
+        for path in sorted(root.glob("*.json")) if root.is_dir() else []:
+            descriptor = read_object(path)
+            if not descriptor:
+                continue
+            attempt_id = str(descriptor.get("attempt_id") or "")
+            job_id = str(descriptor.get("job_id") or "")
+            bank = str(descriptor.get("record_bank") or "").lower()
+            if bank not in BANK_ROOTS or not attempt_id or not job_id:
+                continue
+            result = read_object(results / kind / path.name)
+            if result and result.get("attempt_id") == attempt_id and result.get("job_id") == job_id:
+                continue
+            owners.setdefault(bank, set()).add((attempt_id, job_id))
+    return owners
+
+
+def inspect_bank(
+    repo_root: Path,
+    bank: str,
+    ready_ids: set[str],
+    inbox: dict[str, Any] | None,
+    settled: bool,
+    immutable_owners: dict[str, set[tuple[str, str]]],
+) -> dict[str, Any]:
     root = repo_root / BANK_ROOTS[bank]
     slot_state: list[dict[str, Any]] = []
     attempts: set[str] = set()
@@ -96,7 +124,11 @@ def inspect_bank(repo_root: Path, bank: str, ready_ids: set[str], inbox: dict[st
             and inbox.get("attempt_id") == attempt_id
             and inbox.get("job_id") == job_id
         )
-        if active_here and not settled:
+        immutable_here = (attempt_id, job_id) in immutable_owners.get(bank, set())
+        if immutable_here:
+            state = "occupied"
+            reason = "pending immutable submission still references this bank attempt"
+        elif active_here and not settled:
             state = "occupied"
             reason = "current reusable inbox still references this attempt without a matching result"
         elif job_id in ready_ids:
@@ -118,7 +150,11 @@ def inspect_bank(repo_root: Path, bank: str, ready_ids: set[str], inbox: dict[st
 def inspect(repo_root: Path) -> dict[str, Any]:
     ready_ids = ready_job_ids(repo_root)
     inbox, settled = current_transport(repo_root)
-    banks = [inspect_bank(repo_root, bank, ready_ids, inbox, settled) for bank in BANK_IDS]
+    immutable_owners = pending_immutable_bank_owners(repo_root)
+    banks = [
+        inspect_bank(repo_root, bank, ready_ids, inbox, settled, immutable_owners)
+        for bank in BANK_IDS
+    ]
     selectable = [b["bank"] for b in banks if b["state"] in {"free", "reusable"}]
     return {
         "schema_version": 1,
@@ -128,6 +164,7 @@ def inspect(repo_root: Path) -> dict[str, Any]:
         "ready_job_ids": sorted(ready_ids),
         "current_inbox_job_id": inbox.get("job_id") if inbox else None,
         "current_inbox_settled": settled,
+        "pending_immutable_banks": sorted(immutable_owners),
         "banks": banks,
     }
 
