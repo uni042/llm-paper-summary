@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 19:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 19:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -95,7 +95,7 @@ Run: **2026-09-13T17:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
+- P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
 - P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
 - P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
