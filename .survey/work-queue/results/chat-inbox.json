@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-644adfa073507205",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2607.29678.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-67fd071bb1792a36",
+  "validation_error": "ValueError: record slot blob mismatch: .survey/work-queue/records/chat-record-b/evaluation.json",
+  "repair_required": true,
+  "isolated_at": "2026-09-13T05:10:25+00:00"
 }

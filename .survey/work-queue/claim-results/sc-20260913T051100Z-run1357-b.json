@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T051100Z-run1357-b",
+  "worker_id": "scheduled-chat-router-20260913-1357",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-234066475107816a",
+      "claim_id": "claim-55b8e353cb90b0ce522f9b13",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-55b8e353cb90b0ce522f9b13",
+      "claimed_at": "2026-09-13T05:10:24+00:00",
+      "expires_at": "2026-09-13T06:40:24+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-234066475107816a"
+      ],
+      "job": {
+        "job_id": "job-research-234066475107816a",
+        "type": "research",
+        "parent_job_id": "job-0c31ddf1ad84e2df",
+        "priority": 87,
+        "canonical_id": "arXiv:2607.01299",
+        "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
+        "source_url": "https://arxiv.org/abs/2607.01299",
+        "paper_path": null,
+        "selection_reason": "hybrid-attention LLMへ位置非依存キャッシュを導入する際、線形attention層の再帰状態とfull-attention層の部分再計算が既存PICの前提を壊す問題を解く。segment cumulative transition operatorとzero-start end-stateをキャッシュし、境界の小窓だけを再計算し、cache-miss prefillもsegment単位で並列化する。4モデル・5 workloadで平均TTFT 2.45倍改善、peak throughput最大2倍を報告しており、LinearKVと対照的なhybrid PIC設計として比較価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T23:30:21+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-f3164989857499bb",
+      "claim_id": "claim-3c3aa97d42e37d1d8d35d68c",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-3c3aa97d42e37d1d8d35d68c",
+      "claimed_at": "2026-09-13T05:10:24+00:00",
+      "expires_at": "2026-09-13T06:40:24+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f3164989857499bb"
+      ],
+      "job": {
+        "job_id": "job-research-f3164989857499bb",
+        "type": "research",
+        "parent_job_id": "job-6f74bbb026a96c98",
+        "priority": 87,
+        "canonical_id": "arXiv:2605.05467",
+        "title": "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism",
+        "source_url": "https://arxiv.org/abs/2605.05467",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
+        "selection_reason": "対話型とbackground型が混在するmulti-tenant servingで、tensor parallelismを固定deployment設定ではなくruntime control surfaceとして扱い、TP level・prefill/decode GPU split・request schedulingを共同最適化する。頻繁なTP変更をTP-aware weight reuseと高速KV migrationで実用化し、実traceとmicrobenchmarkでSLO-compliant goodputを既存方式比最大5.3倍と報告する。Flying ServingのDP/TP切替とは異なりtiered SLO下のgoodput最適化を主眼とするため比較価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T00:44:57+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-23e9c491b745b825",
+      "claim_id": "claim-a0e4db88a95803bf8c12f92a",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-a0e4db88a95803bf8c12f92a",
+      "claimed_at": "2026-09-13T05:10:24+00:00",
+      "expires_at": "2026-09-13T06:40:24+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-23e9c491b745b825"
+      ],
+      "job": {
+        "job_id": "job-research-23e9c491b745b825",
+        "type": "research",
+        "parent_job_id": "job-9b5752caaf5ee298",
+        "priority": 87,
+        "canonical_id": "arXiv:2604.09083",
+        "title": "EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices",
+        "source_url": "https://arxiv.org/abs/2604.09083",
+        "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md",
+        "selection_reason": "モバイルLLMのコールドスタートをFlash帯域の浪費として捉え、重要度とNPU制約に応じた可変精度重み、SIMD向けpacking、CPU/NPU細粒度pipelineで起動時の重み搬送を削減する。llama.cpp、MNN、llm.npuとの比較で同等精度条件のcold-start latencyを最大4.07倍短縮しており、FlashストレージとNPU実行を結ぶシステム研究として価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T01:25:56+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T05:10:24+00:00"
+}
