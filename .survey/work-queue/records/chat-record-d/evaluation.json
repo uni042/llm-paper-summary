@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2608.15018-20260913-1230-v10-s2moe",
-  "job_id": "job-research-990eca6ba50d5285",
+  "attempt_id": "attempt-2310.18547-20260913-0930-v10-punica",
+  "job_id": "job-research-054d8fd9fb06ca0f",
   "data": {
-    "hardware": "NVIDIA Jetson Orin NX 16GB、Jetson AGX Orin 32GB/64GB、NVIDIA RTX 4090を実機評価する。Jetsonで容量超過専門家はSSD、RTX 4090でコールド専門家はCPUメモリへオフロードする。",
-    "software": "llama.cppを基盤に著者実装を統合。EAGLE-3は公開チェックポイントとllama.cppのPR #18039系実装を使用し、DeepSeek用EAGLE-3はSpecForge/SGLangを基礎に統合。Cascadeの中核方策も同じ評価パイプラインへ実装する。",
-    "methodology": "DeepSeek-V2-Lite-Chat（15.3B総/1.35B活性、64専門家、top-6）、OLMoE-1B-7B（6.7B/1.1B、64、top-8）、Qwen3-30B-A3B（30.5B/3.3B、128、top-8）、GPT-OSS-120B（116.8B/5.7B、128、top-4）を評価する。タスクは会話、RAG、要約、翻訳、QA、数学、HumanEval。品質はGSM8K、HumanEval、ARC-E/C、GPQA-Diamond、AIME24/25、HMMT、LongBenchのGovReport/NarrativeQA/Qasper、WikiText-2分布指標。比較は自己回帰、専門家疎ドラフト、層疎ドラフト、EAGLE-3、Cascade。ドラフト長8、基準幅2、S2-MoEのみ適応展開。",
-    "scope": "バッチ1〜2が中心となるメモリ帯域制約の強いエッジMoE推論を対象にする。GPUサーバ上の大バッチやマルチGPU分散MoEは主対象でない。オフロード機構自体は既存研究との包括比較ではなく、投機方式を同一llama.cpp環境で測るための専門家単位実装である。ホット専門家常駐はオフラインプロファイルを使い、オンライン人気変動や高度な専門家キャッシュ方策は対象外。",
-    "workloads": ["マルチターン会話","RAG","要約","翻訳","QA","数学推論","HumanEval","LongBench長文品質"],
-    "baselines": ["自己回帰デコード","専門家疎自己投機","層疎自己投機","EAGLE-3","Cascade+EAGLE-3"],
-    "metrics": ["tokens/s","自己回帰比高速化","受理長","受理率","専門家再利用比","タスク精度","LongBenchスコア","KL divergence","Top-1一致率","PPL比"],
-    "reproducibility": "著者公式GitHubを公開し、llama.cpp基盤、対象モデル、専門家構成、ドラフト設定、Jetsonメモリ予算、RTX 4090、比較方式、主要品質指標を明記している。エッジSSDの個別型番や実効帯域が本文で詳細に固定されていないため、SSD律速条件の絶対値は環境差を受ける。"
+    "hardware": "Testbed #1: NVIDIA A100 80GB×1。Testbed #2: NVIDIA HGX A100 40GB×8を2サーバ、計16 GPU、NVSwitch。",
+    "software": "PunicaのPyTorch/CUDA拡張、FlashInfer、Rust scheduler/frontend/runner。比較はHuggingFace Transformers+PEFT、DeepSpeed+PEFT、FasterTransformer、vLLM backbone-onlyなど。",
+    "methodology": "Llama-2 7B/13B/70B、LoRA rank 16を全dense projectionへ適用。ShareGPT由来のprompt/response長分布を使い、Distinct、Uniform、Zipf-1.5 Skewed、Identicalの4種のLoRA人気分布を評価する。単一GPUでは1000要求・約101k生成トークン、最大バッチ32。70Bは8 GPUテンソル並列。クラスタ実験は16 GPU、1時間、Poisson到着で負荷を増減する。LoRA重み値は遅延へ影響しないためランダム値を用いる。",
+    "scope": "A100世代とLlama-2中心の2023年評価で、現代のFlashAttention系・新GPU・より大きなLoRA rank・多数アダプタのキャッシュ階層は未評価。品質比較ではなく性能評価が中心で、LoRA重みはランダム。基準のvLLM/FasterTransformerはLoRA非対応のためbackbone-onlyであり、比較条件はPunicaに不利ではないが現代の専用LoRA基盤との直接比較ではない。",
+    "workloads": ["Llama-2 7B","Llama-2 13B","Llama-2 70B","ShareGPT長分布","Distinct/Uniform/Skewed/Identical LoRA popularity"],
+    "baselines": ["HuggingFace Transformers+PEFT","DeepSpeed+PEFT","FasterTransformer backbone-only","vLLM backbone-only"],
+    "metrics": ["tokens/s","1 token latency","SGMV kernel latency","GPU batch size","active GPU utilization"],
+    "reproducibility": "公式コード公開。ハードウェア、モデル、LoRA rank、要求分布、バッチ上限、比較系を記載しており、主要設計の再現性は高い。"
   }
 }

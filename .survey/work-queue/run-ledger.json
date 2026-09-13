@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T06:04:53.141794+00:00",
+  "updated_at": "2026-09-13T06:08:18.312389+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17946,7 +17946,7 @@
     {
       "run_key": "2026-09-13T13:30:00+09:00",
       "first_recorded_at": "2026-09-13T04:41:48.912006+00:00",
-      "last_recorded_at": "2026-09-13T06:04:53.141794+00:00",
+      "last_recorded_at": "2026-09-13T06:08:18.312389+00:00",
       "signals": [
         "fallback_archived",
         "research_completed",
@@ -17959,7 +17959,7 @@
         "blocked": 0,
         "new_jobs": 0,
         "new_papers": 3,
-        "fallback_archived": 7
+        "fallback_archived": 8
       },
       "events": [
         {
@@ -18065,6 +18065,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34741903733:1",
+          "recorded_at": "2026-09-13T06:08:18.312389+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34741903733",
+            "run_attempt": "1",
+            "source_sha": "6a515a9565299f7fd44fd35dbc362c456ee75f4c"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18107,7 +18121,8 @@
         ".survey/work-queue/fallback-archive/20260913T135000JST-research-2502.09922-lambdascale.json",
         ".survey/work-queue/fallback-archive/20260913T135500JST-research-2607.29678-toktier.json",
         ".survey/work-queue/fallback-archive/20260913T135600JST-research-2607.19539-tile-overlap.json",
-        ".survey/work-queue/fallback-archive/20260913T123000JST-research-2608.15018-s2moe.json"
+        ".survey/work-queue/fallback-archive/20260913T123000JST-research-2608.15018-s2moe.json",
+        ".survey/work-queue/fallback-archive/20260913T093000JST-research-2310.18547-punica.json"
       ],
       "paper_active_count_before": 399,
       "paper_active_count_after": 402,
