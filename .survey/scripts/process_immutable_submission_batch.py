@@ -18,6 +18,7 @@ if str(HERE) not in sys.path:
 
 import immutable_submission  # noqa: E402
 import reduce_submission_effects  # noqa: E402
+import survey  # noqa: E402
 
 MIN_PARALLELISM = 1
 MAX_PARALLELISM = 8
@@ -42,25 +43,52 @@ def _absolute_descriptor(repo_root: Path, descriptor_path: Path) -> Path:
     return path if path.is_absolute() else repo_root / path
 
 
-def _canonical_identity_key(repo_root: Path, descriptor: dict[str, Any]) -> str | None:
+def _normalize_identity(raw: Any, prefix: str | None = None) -> str | None:
+    if not isinstance(raw, str) or not raw.strip():
+        return None
+    value = raw.strip()
+    if prefix == "DOI:" and value.lower().startswith(("doi:", "https://doi.org/", "http://doi.org/")):
+        candidate = value
+    elif prefix and not value.lower().startswith(prefix.lower()):
+        candidate = prefix + value
+    else:
+        candidate = value
+    try:
+        return survey.norm_id(candidate)
+    except (TypeError, ValueError):
+        return None
+
+
+def _identity_resource_keys(repo_root: Path, descriptor: dict[str, Any]) -> set[str]:
+    """Return all paper-identity aliases exposed by the immutable metadata slot."""
     refs = descriptor.get("record_slots")
     if not isinstance(refs, list):
-        return None
+        return set()
     metadata_ref = next(
         (ref for ref in refs if isinstance(ref, dict) and ref.get("slot") == "metadata"),
         None,
     )
     if metadata_ref is None:
-        return None
+        return set()
     try:
         payload = immutable_submission.read_record_slot(repo_root, metadata_ref)
     except Exception:
-        return None
+        return set()
     data = payload.get("data") if isinstance(payload, dict) else None
-    canonical_id = data.get("canonical_id") if isinstance(data, dict) else None
-    if not isinstance(canonical_id, str) or not canonical_id.strip():
-        return None
-    return f"identity:{canonical_id.strip().casefold()}"
+    if not isinstance(data, dict):
+        return set()
+
+    identities = [
+        _normalize_identity(data.get("canonical_id")),
+        _normalize_identity(data.get("arxiv_id"), "arXiv:"),
+        _normalize_identity(data.get("doi"), "DOI:"),
+        _normalize_identity(data.get("openreview_id"), "OpenReview:"),
+    ]
+    return {
+        f"identity:{value.casefold()}"
+        for value in identities
+        if isinstance(value, str) and value
+    }
 
 
 def descriptor_resource_keys(repo_root: Path, descriptor_path: Path) -> frozenset[str]:
@@ -70,9 +98,7 @@ def descriptor_resource_keys(repo_root: Path, descriptor_path: Path) -> frozense
     value = _read_object(absolute)
     keys: set[str] = set()
     if isinstance(value, dict):
-        identity_key = _canonical_identity_key(repo_root, value)
-        if identity_key:
-            keys.add(identity_key)
+        keys.update(_identity_resource_keys(repo_root, value))
         paper_path = value.get("paper_path")
         if isinstance(paper_path, str) and paper_path.startswith("papers/") and ".." not in Path(paper_path).parts:
             keys.add(f"paper:{Path(paper_path).as_posix()}")
@@ -99,7 +125,7 @@ def descriptor_group_key(repo_root: Path, descriptor_path: Path) -> str:
 
 
 def _group_descriptor_indices(repo_root: Path, paths: list[Path]) -> list[list[int]]:
-    """Union descriptors that share any job, paper, or canonical identity resource."""
+    """Union descriptors sharing any job, paper, or normalized identity alias."""
     parents = list(range(len(paths)))
 
     def find(index: int) -> int:
@@ -288,6 +314,29 @@ def _read_descriptor_list(path: Path) -> list[Path]:
     return rows
 
 
+def run_cli(
+    *,
+    repo_root: Path,
+    descriptors_file: Path,
+    effects_dir: Path,
+    parallelism: int = DEFAULT_PARALLELISM,
+) -> int:
+    """Return 0=all settled, 1=descriptor failures persisted, 2=fatal batch failure."""
+    try:
+        descriptors = _read_descriptor_list(Path(descriptors_file))
+        summary = process_batch(
+            Path(repo_root),
+            descriptors,
+            Path(effects_dir),
+            parallelism=parallelism,
+        )
+    except Exception as exc:
+        print(f"Fatal immutable submission batch failure: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 2
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    return 1 if summary["failures"] else 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
@@ -295,16 +344,12 @@ def main() -> int:
     parser.add_argument("--effects-dir", type=Path, required=True)
     parser.add_argument("--parallelism", type=int, default=DEFAULT_PARALLELISM)
     args = parser.parse_args()
-
-    descriptors = _read_descriptor_list(args.descriptors_file)
-    summary = process_batch(
-        args.repo_root,
-        descriptors,
-        args.effects_dir,
+    return run_cli(
+        repo_root=args.repo_root,
+        descriptors_file=args.descriptors_file,
+        effects_dir=args.effects_dir,
         parallelism=args.parallelism,
     )
-    print(json.dumps(summary, ensure_ascii=False, indent=2))
-    return 1 if summary["failures"] else 0
 
 
 if __name__ == "__main__":
