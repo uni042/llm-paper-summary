@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-cf1831adcf0d875d",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2405.16444.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-2fabaceee2c88fd9",
+  "validation_error": "ValueError: metadata.references_total must be a non-negative integer",
+  "repair_required": true,
+  "isolated_at": "2026-09-13T04:12:49+00:00"
 }
