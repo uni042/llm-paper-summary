@@ -272,7 +272,7 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
 | Research completed (24h) | **72** |
-| Oldest active claim age | **69 min** |
+| Oldest active claim age | **70 min** |
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
