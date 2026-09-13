@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bb08b015a9b7ba70b57debac",
-  "job_id": "job-research-6a744249548dd135",
-  "data": {
-    "limitations": "主対象は大量要求をまとめて処理するオフライン推論であり、対話サービスの先頭トークン遅延や逐次トークン遅延を直接最小化する設計ではない。大きな性能向上は複数SmartSSDの内部帯域を並列利用できることに依存し、単体装置では通常SSDに対する帯域優位が小さい。16台構成は高いスループットを得られる一方、専用PCIe拡張筐体、FPGAビットストリーム、ホスト側実行時を必要とし、一般的なNVMe SSDだけで同じ結果を再現できない。KV容量に対してモデル重みの比率が大きいMoEでは、注意処理を高速化しても重み転送が支配しやすく、GLaM-143Bなどでは改善幅が縮む。ホストDRAMにモデルとKVが十分収まる小規模条件では、追加SmartSSD費用を含めるとDRAM方式の費用効率が高い場合もある。現行PCIe型CSDではホストDRAMとFPGA DRAM間の明示DMAが必要で、書戻し間隔を大きくするとこの管理費が増える。論文自身もCXLによる共有アドレス空間を将来の改善点として挙げている。",
-    "differences": "従来のFlexGen系オフロードはGPU容量を補うため重みやKVをCPU DRAM・SSDへ移し、注意計算時には必要データをホスト側へ戻す。そのためSSD容量を利用できても、長文脈ではKV転送が共有PCIeを圧迫する。HILOSはSSDを単なる低速容量階層として扱わず、KVの置き場所にFPGA注意計算を併置してデータ移動そのものを減らす点が異なる。DRAM内PIMやCXL近傍計算と比べると、市販PCIe SmartSSDとフラッシュを用い、TB級KVを低単価ストレージへ保持しながら計算することを狙う。単純な計算ストレージ適用とも異なり、注意近傍化で生じる次の律速を協調X-cacheと遅延KV書戻しで順に解消し、GPU・CPU・SSD・FPGAを一つの階層として均衡させる。リポジトリ内の階層メモリ／SSDオフロード系統に対しては、保存先選択や先読みを改善する研究ではなく、帯域支配演算を保存先へ移す方向の代表例として位置づけられる。",
-    "implementation_status": "研究用試作に留まらず、市販Samsung SmartSSDを最大16台用いた実機システムとして実装されている。ホスト側はPyTorchとDeepSpeed型オフロード基盤へC++実行時とPythonバインディングを接続し、SmartSSD側はVitis HLSで注意アクセラレータを構成する。ASPLOS 2026の成果物としてソースコード、HLSコード、実行・合成手順、設定ファイルがGitHubおよびZenodoで公開されている。したがって実装公開ありと判断できるが、再現にはSmartSSD実機と対応FPGA開発環境が必要で、通常GPUサーバへそのまま導入できる汎用ソフトウェア方式ではない。",
-    "research_positioning": "SSD活用研究として重要なのは、フラッシュを容量拡張だけに使うと上流PCIeが先に飽和するという限界を実機で示し、処理をデータ側へ移すことでSSD台数に伴う内部帯域を有効化した点である。さらに、近傍注意だけで完結せず、律速がSSD内部読込みへ移ればGPU再計算を使う協調X-cacheへ、細粒度書込みへ移れば遅延書戻しへ処理を分担する。これはGPU・CPU・SSDの階層配置を固定的な容量問題ではなく、律速の移動に応じて演算とデータを再配置する問題として捉える設計である。今後のSSD/NVMeオフロードでは、単なる先読みや圧縮だけでなく、どの低演算強度処理をストレージ側へ押し込み、余ったGPU計算とどう協調させるかを考える基準点になる。特に長文脈・大バッチ・大容量KVという条件では、通常SSDオフロード方式との比較基準として優先度が高い。"
-  },
+  "attempt_id": "attempt-642780863821155148ca4908",
+  "job_id": "job-research-389da9d1d9bafee9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-bb08b015a9b7ba70b57debac",
-    "worker_id": "scheduled-chat-llm-survey",
+    "claim_id": "claim-642780863821155148ca4908",
+    "worker_id": "scheduled-chat-discovery-specialist-run08",
     "worker_kind": "scheduled_chat"
   }
 }
