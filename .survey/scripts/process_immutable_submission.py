@@ -85,12 +85,13 @@ def render_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> str:
     return markdown
 
 
-def _verify_claim(repo_root: Path, descriptor: dict[str, Any]) -> None:
+def _verify_claim(repo_root: Path, descriptor: dict[str, Any]) -> bool:
+    """Validate a surviving claim record and report whether one was available."""
     claim_path = repo_root / ".survey/work-queue/claims" / f"{descriptor['job_id']}.json"
     claim = _read(claim_path, {}) or {}
     if not claim:
         # Fallback/recovery payloads may arrive after the lease file has been GC'd.
-        return
+        return False
     current_attempt = claim.get("attempt_id")
     if current_attempt and current_attempt != descriptor["attempt_id"]:
         raise ValueError(
@@ -102,6 +103,7 @@ def _verify_claim(repo_root: Path, descriptor: dict[str, Any]) -> None:
     descriptor_worker = descriptor.get("worker_id")
     if descriptor_worker and claim.get("worker_id") and descriptor_worker != claim.get("worker_id"):
         raise ValueError("stale attempt: descriptor worker_id no longer owns current claim")
+    return True
 
 
 def _precheck_paper(repo_root: Path, descriptor: dict[str, Any]) -> None:
@@ -130,12 +132,13 @@ def _refresh_snapshot(repo_root: Path) -> None:
 
 
 def _matching_result(result_path: Path, descriptor: dict[str, Any]) -> dict[str, Any] | None:
+    """Reuse only successful matching results; matching failures remain retryable."""
     result = _read(result_path, {}) or {}
     if (
         result.get("attempt_id") == descriptor.get("attempt_id")
         and result.get("job_id") == descriptor.get("job_id")
     ):
-        return result
+        return result if result.get("ok") is True else None
     if result_path.exists() and result:
         raise ValueError("immutable result path already contains a conflicting attempt/job")
     return None
@@ -146,6 +149,31 @@ def _clear_repair_state(job: dict[str, Any]) -> None:
     job.pop("repair_required", None)
     job.pop("validation_error", None)
     job.pop("last_validation_failed_at", None)
+
+
+def _success_result(
+    descriptor: dict[str, Any],
+    relative_submission: str,
+    *,
+    job_status: str | None,
+    artifact: dict[str, Any] | None,
+    reconciled: bool = False,
+) -> dict[str, Any]:
+    result = {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "ok": True,
+        "attempt_id": descriptor["attempt_id"],
+        "job_id": descriptor["job_id"],
+        "job_type": descriptor["kind"],
+        "job_status": job_status,
+        "artifact": artifact,
+        "submission": relative_submission,
+        "processed_at": _now(),
+    }
+    if reconciled:
+        result["reconciled"] = True
+    return result
 
 
 def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> dict[str, Any] | None:
@@ -213,30 +241,41 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
     if job.get("type") != descriptor["kind"]:
         raise ValueError(f"job type {job.get('type')} does not match descriptor kind {descriptor['kind']}")
 
-    _verify_claim(repo_root, descriptor)
+    claim_verified = _verify_claim(repo_root, descriptor)
+    status = descriptor.get("status", "completed")
 
     if job.get("status") in queue_worker.TERMINAL:
-        if job.get("artifact_submission") == relative_submission:
-            result = {
-                "schema_version": 1,
-                "workflow_version": 10,
-                "ok": True,
-                "attempt_id": descriptor["attempt_id"],
-                "job_id": descriptor["job_id"],
-                "job_type": descriptor["kind"],
-                "job_status": job.get("status"),
-                "artifact": {"paper": descriptor["paper_path"]} if job.get("status") == "completed" else None,
-                "submission": relative_submission,
-                "reconciled": True,
-                "processed_at": _now(),
-            }
+        if status == "completed" and job.get("artifact_submission") == relative_submission:
+            result = _success_result(
+                descriptor,
+                relative_submission,
+                job_status=job.get("status"),
+                artifact={"paper": descriptor["paper_path"]},
+                reconciled=True,
+            )
+            queue_worker.write_json(result_path, result)
+            return result
+        if (
+            status == "rejected"
+            and job.get("status") == "rejected"
+            and (claim_verified or job.get("status_submission") == relative_submission)
+        ):
+            if job.get("status_submission") != relative_submission:
+                job["status_submission"] = relative_submission
+                queue_worker.write_json(job_path, job)
+            result = _success_result(
+                descriptor,
+                relative_submission,
+                job_status="rejected",
+                artifact=None,
+                reconciled=True,
+            )
             queue_worker.write_json(result_path, result)
             return result
         raise ValueError(f"job already terminal under a different attempt: {job.get('status')}")
 
     sub = dict(descriptor)
     sub["_file"] = relative_submission
-    status = descriptor.get("status", "completed")
     sub["status"] = status
     if status == "completed":
         _precheck_paper(repo_root, descriptor)
@@ -257,24 +296,20 @@ def process(repo_root: Path, submission_path: Path) -> dict[str, Any]:
 
     if status == "completed":
         _clear_repair_state(mutable_job)
+    else:
+        mutable_job["status_submission"] = relative_submission
 
     queue_worker.update_job(mutable_job)
     queue_worker.save_state(st)
     _refresh_snapshot(repo_root)
 
     final_job = _read(job_path, {}) or {}
-    result = {
-        "schema_version": 1,
-        "workflow_version": 10,
-        "ok": True,
-        "attempt_id": descriptor["attempt_id"],
-        "job_id": descriptor["job_id"],
-        "job_type": descriptor["kind"],
-        "job_status": final_job.get("status"),
-        "artifact": artifact,
-        "submission": relative_submission,
-        "processed_at": _now(),
-    }
+    result = _success_result(
+        descriptor,
+        relative_submission,
+        job_status=final_job.get("status"),
+        artifact=artifact,
+    )
     queue_worker.write_json(result_path, result)
     return result
 
