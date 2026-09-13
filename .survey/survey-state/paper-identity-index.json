@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 454,
+  "active_count": 458,
   "papers": {
     "arXiv:2303.06865": {
       "path": "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
@@ -1319,6 +1319,14 @@
       ],
       "source_hash": "beae25f78c9e7d8d76f53deaf76718a04ebb3428fe1a18769edbbbe726302f50"
     },
+    "arXiv:2607.01299": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01299-hypic-hybrid-attention-position-independent-caching.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2607.01299",
+        "arXiv:2607.01299"
+      ],
+      "source_hash": "9856a86247372a194482f056e6f51515ae9dad7b41791a4ae879994618a634e6"
+    },
     "arXiv:2607.01831": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01831-lynx-progressive-kv-transfer.md",
       "identifiers": [
@@ -1758,6 +1766,14 @@
         "arXiv:2512.14946"
       ],
       "source_hash": "d97d1143c6ef1dd460ad8003b5becebc16700569b1804285aaddc121a867dae3"
+    },
+    "arXiv:2512.17910": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2512.17910",
+        "arXiv:2512.17910"
+      ],
+      "source_hash": "c9f06e5ab066babf114f6765ea829d2d9f8d1438266b4bc4b98122f52652d54e"
     },
     "arXiv:2601.19910": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2025-2601.19910-understanding-bottlenecks-kv-offloading.md",
@@ -2649,6 +2665,14 @@
       ],
       "source_hash": "27afa9d62dbdbd06eacce165cff7386a2418d82e47b95bca80972e63a1bee12d"
     },
+    "arXiv:2603.13358": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2603.13358",
+        "arXiv:2603.13358"
+      ],
+      "source_hash": "d705d8ac758799a30cf840284ffe4a110be87aa1d4f06f87bb9c8eaaa39823f0"
+    },
     "arXiv:2603.17456": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-multi-stage-flow-scheduling.md",
       "identifiers": [
@@ -2664,6 +2688,14 @@
         "arXiv:2603.21257"
       ],
       "source_hash": "f878b06b200bbe51b13e6bc8d769ba3fb04281e21f358b947f62ce5317a151e2"
+    },
+    "arXiv:2603.26498": {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+      "identifiers": [
+        "DOI:10.48550/arxiv.2603.26498",
+        "arXiv:2603.26498"
+      ],
+      "source_hash": "255b3a1597c50007f832842410c13786ce50583523bdfa09f6c08b0f8407bf40"
     },
     "arXiv:2603.29002": {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md",
@@ -3665,6 +3697,8 @@
     "arXiv:2606.06453": "arXiv:2606.06453",
     "arXiv:2606.24467": "arXiv:2606.24467",
     "arXiv:2607.01237": "arXiv:2607.01237",
+    "DOI:10.48550/arxiv.2607.01299": "arXiv:2607.01299",
+    "arXiv:2607.01299": "arXiv:2607.01299",
     "DOI:10.48550/arxiv.2607.01831": "arXiv:2607.01831",
     "arXiv:2607.01831": "arXiv:2607.01831",
     "DOI:10.48550/arxiv.2609.00097": "arXiv:2609.00097",
@@ -3751,6 +3785,8 @@
     "arXiv:2512.11920": "arXiv:2512.11920",
     "DOI:10.48550/arxiv.2512.14946": "arXiv:2512.14946",
     "arXiv:2512.14946": "arXiv:2512.14946",
+    "DOI:10.48550/arxiv.2512.17910": "arXiv:2512.17910",
+    "arXiv:2512.17910": "arXiv:2512.17910",
     "arXiv:2601.19910": "arXiv:2601.19910",
     "arXiv:2601.20309": "arXiv:2601.20309",
     "DOI:10.48550/arxiv.2602.03203": "arXiv:2602.03203",
@@ -3933,10 +3969,14 @@
     "arXiv:2603.10726": "arXiv:2603.10726",
     "DOI:10.48550/arxiv.2603.12707": "arXiv:2603.12707",
     "arXiv:2603.12707": "arXiv:2603.12707",
+    "DOI:10.48550/arxiv.2603.13358": "arXiv:2603.13358",
+    "arXiv:2603.13358": "arXiv:2603.13358",
     "DOI:10.48550/arxiv.2603.17456": "arXiv:2603.17456",
     "arXiv:2603.17456": "arXiv:2603.17456",
     "DOI:10.48550/arxiv.2603.21257": "arXiv:2603.21257",
     "arXiv:2603.21257": "arXiv:2603.21257",
+    "DOI:10.48550/arxiv.2603.26498": "arXiv:2603.26498",
+    "arXiv:2603.26498": "arXiv:2603.26498",
     "DOI:10.48550/arxiv.2603.29002": "arXiv:2603.29002",
     "arXiv:2603.29002": "arXiv:2603.29002",
     "DOI:10.48550/arxiv.2604.00368": "arXiv:2604.00368",
