@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-6d0ef40dd55512cf031d8671",
-  "job_id": "job-research-b1be9294a63ee868",
-  "data": {
-    "limitations": "第1段階は各トークンの再構成キーを持つ方式に限られ、トークン追い出し、トークン統合、潜在表現キャッシュ、再帰状態圧縮には直接適用できない。2〜4ビットでは決定論的な証拠値が過度に緩く、選択的な証明付きゲートは主に8ビット級に限定される。第2段階は制御された減算ディザと非適応問い合わせを仮定する。プリフィル支配の処理や学習は対象外で、FlashInfer側の実装、ランク間の証明値集約、CUDAグラフと両立する観測経路も未完成である。72Bでは保証成立率が25.5〜29.8%へ低下し、特定7B構成では長文脈の1トークン時間が9倍になる未解明性能問題もある。",
-    "differences": "KIVIやKVQuantなどはビット幅、尺度、外れ値処理を設計して平均品質と容量を改善するが、WitCertの中心は量子化器そのものではなく実行時の危険度証明と修復制御である。Runtime-Certified方式も保証付き配信を扱うが、WitCertは確率段階によりQwen2.5-1.5B条件のKVヘッド読戻し率を44.4%から22.0%へ下げ、さらに3.43ビット／次元ぶん深い圧縮を許可したと報告する。一方、トークン追い出し系は残差が存在しないため現行証明の適用範囲外であり、WitCertはあらゆるKV圧縮を単一保証で包む方式ではない。",
-    "implementation_status": "公開リポジトリwitcert-kv-certificatesにApache-2.0のコード、実験資料、SGLang 0.5.9変更、Lean 4証明がある。Triton研究カーネルと実配信向けデコード統合を実装済みで、RULER・LongBench、RTX 4090、8×H200まで評価している。実運用品質のカーネル最適化、FlashInfer対応、ランク間ゲート、CUDAグラフ互換の証明観測は未完了である。",
-    "research_positioning": "KVキャッシュ量子化とLLM配信の可観測性の間に位置し、圧縮方式を『固定して信頼する』運用から『圧縮しながら要求ごとに危険度を観測し必要箇所だけ戻す』運用へ変える。階層メモリ研究との接点では、正確KVの保管領域をCPUやSSDなど低位層へ置き、証明値が読戻し転送の優先度を決める構成へ発展できる。低位ストレージを使う場合、単なるキャッシュ再利用予測ではなく品質危険度を入出力スケジューリングへ渡せる点が特徴になる。",
-    "relation_to_existing_repository": "既存のKV量子化・追い出し・オフロード系統に対して横断的な安全制御層として位置付けられる。特にKV圧縮でDRAMやSSDとの転送量を削減する方式と組み合わせ、WitCertの危険度で正確KVの復元を必要なヘッドやブロックだけへ限定すれば、容量と入出力を品質危険度に応じて配分できる。ただし現行第1段階はトークン追い出しへ適用不能なので、リポジトリ内の追い出し系手法にはそのまま重ねられない。",
-    "audit_required": true,
-    "audit_reason": "公式コード、Lean 4形式証明、SGLang変更、複数GPUの大規模定量結果を伴うため、公開資料からの再現性と論文中の主張・数値の対応を追加監査する価値が高い。"
-  },
-  "reservation": {"claim_id": "claim-6d0ef40dd55512cf031d8671", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-28487ee4709e231070d69554",
+  "job_id": "job-research-dfc514a18ebaac1e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-28487ee4709e231070d69554",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
