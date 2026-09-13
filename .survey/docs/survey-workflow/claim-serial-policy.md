@@ -23,6 +23,24 @@ research / audit workerは、**未完了のassigned jobを同時に1件だけ保
 
 この時点で **submission-fast / background Actionsのterminal反映を待たず**、run内処理済みjobとして記録し、直ちに最新HEAD / queue / claim stateを再取得して、priority最上位の次jobを1件だけ新しいclaim requestで取得する。
 
+Libraryに完全payloadを耐久checkpoint済みのjobがある場合、以後のclaim requestにはそのjobを次の形で `checkpointed_jobs` に含める。
+
+```json
+"checkpointed_jobs": [
+  {
+    "job_id": "job-research-...",
+    "checkpoint_ref": "/LLM-survey-outbox/pending/<envelope>.json"
+  }
+]
+```
+
+- `checkpoint_ref`は実在をworkerが確認した完全payloadのLibrary pathだけを使う。
+- `checkpointed_jobs`はworker-localなclaim除外情報であり、job本体を`completed`へ変更しない。
+- 同workerがそのjobのactive claimをすでに持っている場合、claim-fastはそのclaimだけを解放し、jobは`ready`のまま残す。その後、同じrequest処理内で次のeligible jobを取得できる。
+- 他workerのactive claimは解放しない。
+- Library replayが完了してGitHub側のimmutable resultへ収束するまでは、checkpoint申告だけをrepository-wide completionの根拠にしない。
+- Library pendingを確認できるrunでは、既知の完全checkpointをclaim requestから省略して同じjobを再精読しない。
+
 通常ループ:
 
 `1件claim → 全文精読 → 5-slot record作成 → preflight → immutable descriptor送信/Library checkpoint → 最新queue再取得 → 次の1件claim`
@@ -49,6 +67,7 @@ Research / Auditのclaim resultに `record_bank` が入っている場合、そ�
 - claim request発行後は、そのrequestのresultが確定する前にさらに別のclaim requestを重ねない。
 - claim resultが0 assignmentの場合は、最新queue / claim state / Actions反映を再確認する。actionable researchが残っているなら、同じ空resultを仕事枯渇とみなさず、新しいrequest_idで次の1件取得を再試行する。
 - ただし未完了assigned jobを残したまま再試行して別jobを積み増してはならない。
+- Libraryへ完全checkpoint済みのjobが原因でactive claimが残っている場合は、次requestの`checkpointed_jobs`へそのjobと実在する`checkpoint_ref`を含めてclaimを解放する。lease expiry待ちをrun停止理由にしない。
 - 未解決immutable descriptorが参照しているrecord bankは上書きしない。別bankが空いていなければLibrary checkpointへ切り替え、bank枯渇をrun停止理由にしない。
 
 ## 5. Lease
@@ -70,8 +89,10 @@ lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 - claim result待ち中に別requestを何本も作る。
 - 「後で読むため」にpriority上位jobをまとめて確保する。
 - 前jobの完全payloadが未保存なのに次jobへ移る。
+- 実在する完全Library checkpointを確認せず`checkpointed_jobs`へjobを追加する。
+- `checkpointed_jobs`をjobのrepository-wide completion代わりに使う。
 - claim resultで予約されたbankとは別のbankへ書く。
 - `record_bank_fallback: "library"` を無視して独自にbankを確保する。
 - 新規通常Research/Auditで固定`chat-inbox.json`を上書きする。
 
-狙いは **claimの抱え込みとrecord bankの並列競合を防ぎつつ、1件終わるたびに次jobへ即時移行してworkerを遊ばせないこと** である。
+狙いは **claimの抱え込み・Library checkpointによる直列停止・record bankの並列競合を防ぎつつ、1件終わるたびに次jobへ即時移行してworkerを遊ばせないこと** である。
