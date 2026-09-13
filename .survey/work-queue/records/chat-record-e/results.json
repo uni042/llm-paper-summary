@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2f80cee47a027e34060ff493",
-  "job_id": "job-research-e227d58af7e6af7e",
-  "data": {
-    "overview": "SPORKは、ツール呼出しを主生成終了後に開始する直列経路から、思考生成中に同じLLM自身が予測して先行実行する経路へ変えることで末尾遅延を削減した。Qwen3-32BのGAIAではP95が131.9秒から108.1秒へ18%短縮し、Qwen3.5-35B-A3Bでもtau2、GAIA、HotpotQAで16〜20%のP95削減を示す。効果はツール時間と残り思考時間を十分重ねられる場合に大きく、短いツールや思考なしでは小さい。厳密一致判定により品質は全設定で比較対象から概ね1ポイント以内に保たれた。",
-    "key_results": [
-      {"metric":"P95エンドツーエンド遅延","value":"131.9秒→108.1秒、18%削減","baseline":"同一配備形態のQwen3-32B比較対象","condition":"GAIA、N=165、実Web検索、平均ツール時間4.8秒","interpretation":"ツール実行を残りの思考デコードへ重ねる余地が大きく、先行実行の効果が末尾遅延に現れる。"},
-      {"metric":"P95エンドツーエンド遅延","value":"16〜20%削減","baseline":"Qwen3.5-35B-A3Bの直列比較対象","condition":"tau2 59.4→49.8秒、GAIA 222.4→187.3秒、HotpotQA 18.9→15.2秒","interpretation":"密モデルだけでなくMoEモデルでも自己probeによるツール先行実行が成立する。"},
-      {"metric":"平均高速化倍率","value":"1.09倍→1.18倍","baseline":"直列実行","condition":"Qwen3-4B、tau2-bench、模擬ツール遅延0.5秒→5秒","interpretation":"ツール時間が長いほど重ねられる絶対時間が増え、費用モデルが予測する有利領域へ移る。"},
-      {"metric":"probe費用","value":"約1.6秒→0.35秒","baseline":"接頭辞を再計算するprobe","condition":"D1のKV接頭辞共有","interpretation":"probe自体の追加費用を下げることが、先行実行で得る時間がprobe費用を上回る損益分岐条件を満たしやすくする。"},
-      {"metric":"棄却probeの接頭辞再利用","value":"中央値18トークン、別解析で平均29.5トークン一致","baseline":"棄却時に全ツール呼出しを再デコード","condition":"GAIAおよびBrowseCompの棄却probe解析","interpretation":"完全一致しない予測もD3では無駄にならず、最初の不一致までを対象モデル検証で再利用できる。"}
-    ],
-    "negative_results": "思考モードを使わないとツール呼出し前に重ねられる生成時間がほぼ消え、高速化余地がない。HotpotQAのQwen3-32Bはツール時間が平均0.9秒と短く、P95改善は1.06倍に留まる。BrowseCompではprobe起動平均0.72秒より短いツールが36%あり、この範囲は実質的に重複不能だった。高並列ではprobeが主生成とGPU資源を競合する。またQwen3.5-35B-A3BのネイティブXML形式では最初のprobeが次の中間ツールではなく最終目的ツールを予測し、ツール名正解率が4.5%まで低下するため、JSON形式へ揃える必要がある。",
-    "interpretation": "得られる時間は『正しく採用できる確率×実際にツールとデコードを重ねられる時間』で決まり、そこからprobe追加費用を差し引く必要がある。したがってモデルが次の行動意図を早期に表現し、ツール実行がprobeより十分長く、主生成に残り思考時間がある場合に効く。D2は確信度の低い早すぎる予測を捨て、D3は外れた予測のトークンを回収することで、損益分岐点の両側を改善する。",
-    "quality_impact": "先行ツール結果は主生成のツール名と引数が厳密一致したときだけ採用され、不一致時は直列経路へ戻る。D3も対象モデルによる投機検証を通った一致接頭辞だけを受理する。実測では全モデル・ベンチマークでexact-match精度が比較対象から1ポイント以内、HotpotQAのQwen3-32Bではむしろ1.5ポイント高かった。"
-  },
-  "reservation": {"claim_id":"claim-2f80cee47a027e34060ff493","worker_id":"scheduled-chat-discovery-routing-20260914T0400JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-d146a091c5d075707dcd3120",
+  "job_id": "job-research-e2c6f510b1f31074",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d146a091c5d075707dcd3120",
+    "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

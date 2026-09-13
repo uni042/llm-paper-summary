@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2f80cee47a027e34060ff493",
-  "job_id": "job-research-e227d58af7e6af7e",
-  "data": {
-    "limitations": "現状は読み取り専用ツールだけを投機実行し、書込み・購入・外部状態変更のような副作用付き操作は扱わない。誤予測を安全に取り消すにはsandbox化またはエージェント状態のcheckpointが必要になる。主LLMを自己probeとして分岐するため、トークン確率、任意接頭辞completion、KV接頭辞共有を公開する配備基盤が必要で、閉鎖型APIではそのまま実装できない。思考時間が短いモデル、短時間ツール、高負荷バッチでは重複窓が小さいかprobe競合が増え、効果は中立まで縮む。ツール呼出し形式が主生成とprobeでずれる場合も採用率が急落する。",
-    "differences": "通常の投機的デコードは将来トークンを先読みしてモデル生成時間を短縮するが、外部ツール開始は依然としてツール呼出し確定後である。Speculative ActionsやDualSpecなどの行動単位投機は補助予測器や検証方針を使い、PASTEは過去traceの反復パターンを利用する。SPORKは追加モデルや履歴を持たず、実行中の主LLMとそのKV接頭辞から同じモデルを一時分岐して次ツールを予測する点が異なる。さらに誤予測probeの一致トークンをD3で投機デコードへ再利用し、行動単位とトークン単位の投機を一つのforkから接続する。",
-    "implementation_status": "著者公式GitHub `baihuajun24/spork` がMITライセンスで公開され、vLLM互換のD1/D2制御層、D3用HTTP/エンジン統合、tau2-bench、HotpotQA、GAIA向け評価コードを提供する。D1/D2は通常vLLMサーバで実行できるが、D3は投機候補提案経路への統合を必要とする。GAIAの一般Web検索は利用者側の検索基盤が必要で、論文の内部検索サービスそのものは公開されていない。",
-    "research_positioning": "LLM配備研究では、プリフィル・デコード分離、KVキャッシュ管理、連続バッチ処理などモデル内部の待ちを削る研究が中心だった。SPORKはエージェントがモデル外部へ出るツール呼出しを対象に、思考デコードと外部I/Oを重ねることで実行時の直列境界をまたぐ。外部ツールが高速化しにくいほどモデル生成高速化後に相対的な待ち割合が増えるため、今後のエージェントサービングではモデルカーネル最適化と補完関係にある。書込みツールへ拡張する場合は、投機実行の速度だけでなくtransaction的な副作用隔離・rollback設計が主要課題になる。"
-  },
-  "reservation": {"claim_id":"claim-2f80cee47a027e34060ff493","worker_id":"scheduled-chat-discovery-routing-20260914T0400JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-d146a091c5d075707dcd3120",
+  "job_id": "job-research-e2c6f510b1f31074",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d146a091c5d075707dcd3120",
+    "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
