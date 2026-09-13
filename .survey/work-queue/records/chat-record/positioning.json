@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-961161e394b3230955f09a30",
-  "job_id": "job-research-57f4550e61af7e09",
-  "data": {
-    "limitations": "損失なし圧縮はモデル精度を変えない一方、復号計算を追加するため、単一要求や小バッチの遅延改善には向かない。SGLang評価でも出力トークン時間は全条件で増えている。圧縮はモデルロード前のオフライン処理を前提とし、頻繁に重みが更新される学習やオンライン適応にはそのまま適用しにくい。GPU常駐推論が中心で、CPU/SSD階層から圧縮重みをストリーミングした場合の入出力との重畳は未評価である。公式コード公開先も確認できない。またQwen-14B・系列長1024の最大バッチについて本文と表の数値に不整合がある。",
-    "differences": "NeuZipやDFloat11もLLM重みの損失なし圧縮とGPU復号を扱うが、本研究はGEMMが消費するタイルと圧縮ストリームの境界を一致させ、復号結果をHBMへ展開せず共有メモリから直接テンソルコアへ供給する点を中心に据える。量子化研究とは異なり値を近似せず、AWQやSmoothQuantなど既存量子化の後にも追加できる。汎用gzip/Zstd等とも異なり、最高圧縮率だけでなくGPU上のランダムなタイルアクセス、並列復号、GEMMとの資源重畳を設計条件に含める。",
-    "implementation_status": "DietGPU由来のANS復号器を基盤に、タイル独立rANSストリーム、ワープ協調復号、共有メモリ多段バッファ、CUTLASS系テンソルコアGEMMを統合したCUDA実装を作成し、PyTorchラッパーを通してSGLangへ組み込んでA100/H200で実測している。論文時点ではプレプリントで、2026-09-14時点に公式公開リポジトリは確認できない。",
-    "research_positioning": "GPUカーネル・実行時最適化系統の中で、LLM重みの情報理論的圧縮とGEMMデータ供給を結びつける研究に位置する。主目的は算術量削減ではなく、同じ数値をより少ないHBM容量・転送量で保持し、復号を計算へ重ねることで大モデル配信の容量制約を緩和することにある。圧縮アルゴリズム単体ではなくSGLangの最大バッチとKV容量まで評価しており、カーネル最適化と配信システムの境界を扱う。",
-    "relation_to_existing_repository": "量子化・低ビットGEMM、重みオフロード、SSD/NVMeストリーミング、モデルロード高速化の各系統と補完関係にある。特にSSDやCPUへ重みを退避する方式では、圧縮状態のまま階層間を転送しGPU到着後に共有メモリへ直接復号できれば、保存容量だけでなくPCIe/NVMe転送量も減らせる可能性がある。一方、その場合はストレージ帯域、復号速度、GEMM速度を三者で釣り合わせる必要があり、本論文自体はそこまで検証していない。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-42f1304a542fa612136cc65f",
+  "job_id": "job-research-234066475107816a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-961161e394b3230955f09a30",
+    "claim_id": "claim-42f1304a542fa612136cc65f",
     "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
