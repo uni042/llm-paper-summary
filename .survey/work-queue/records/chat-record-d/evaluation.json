@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2608.11231-20260913-1230-v10-linearkv",
-  "job_id": "job-research-651c768da8e5f9fc",
+  "attempt_id": "attempt-2405.16444-20260913-1230-v10-cacheblend",
+  "job_id": "job-research-cf1831adcf0d875d",
   "data": {
-    "hardware": "NVIDIA H800 80GB GPU。各モデルは1 GPUに収まり、データセット単位にGPUへ分散して評価する。先頭トークン到達時間は排他的な単一GPUで測定する。",
-    "software": "HuggingFace Transformers、flash-linear-attentionのTriton系カーネル、bfloat16。比較する位置非依存キャッシュ選択器はCacheBlend、EPIC、ProphetKV。",
-    "methodology": "Granite-4.0-H-Tiny 7B（40層中Mamba-2が36層）、OLMo-Hybrid-7B-Instruct（32層中Gated DeltaNetが24層）、Qwen3.6-27B（64層中Gated DeltaNetが48層）を評価する。LongBenchのQA 5データセットは各200例、要約3データセットとRULER 8K/32Kは各100例。文脈を512トークンの固定チャンクへ分割して独立キャッシュし、主表では約20%を再計算する。完全プリフィル、再計算なしの素朴再利用、厳密合成、単一状態初期化を同じ選択位置で比較する。再計算率は3%、5%、10%、20%、30%、40%も掃引する。先頭トークン到達時間は4文書×3反復の中央値で、90パーセンタイルは中央値から2%以内。",
-    "scope": "LongBench QA・要約とRULER 8K〜32Kを使う検索拡張生成型の長文再利用条件が中心である。3モデルのうちMamba-2はGranite 1系統、Gated DeltaNetは2系統で、著者自身も再帰方式一般の法則ではなく評価モデル上の経験的境界としている。効率測定はアイドルGPU上の単一要求の先頭トークン到達時間であり、バッチサービング、同時要求、ホストからGPUへのキャッシュ転送を含むエンドツーエンドの実運用スループットは未評価。",
-    "workloads": ["LongBench QA", "LongBench summarization", "RULER 8K", "RULER 32K", "512トークン固定チャンクの再利用文脈"],
-    "baselines": ["完全プリフィル", "再計算なしの素朴再利用", "厳密状態合成", "HYPIC風境界選択器との同条件比較"],
-    "metrics": ["QAトークンF1", "ROUGE-L", "RULER文字列一致再現率", "完全プリフィル比品質", "先頭トークン到達時間", "再帰状態の相対誤差"],
-    "reproducibility": "モデル、層構成、データ件数、チャンク長、再計算率、GPU、精度形式、主要カーネル、反復方法は本文に記載される。著者公式コードは確認できないため、公開実装をそのまま再実行できる研究より再現性は低い。Mamba-2系カーネルには小さな非決定性があり、著者はGated DeltaNetの差が平均F1 0.013以内で符号も変わる場合を同等と解釈している。"
+    "hardware": "Runpod環境で128GBホストRAM、NVIDIA A40 GPU×2、1TB NVMe SSDを使用。SSD実測帯域は4.8GB/s。Mistral-7BとYi-34Bは1 GPU、Llama-70Bは2 GPUで実行する。",
+    "software": "vLLMを約3,000行のPythonコードで拡張し、PyTorch 2.0を使用。Yi-34BとLlama-70Bは8ビット量子化。CPU RAMまたはNVMe SSDをKV保存先として評価する。",
+    "methodology": "Mistral-7B、Yi-34B、Llama-70Bを用い、2WikiMQA 200例、Musique 150例、SAMSum 200例、MultiNews 60例を評価する。基本の文脈はLangChainで512トークンに分割し、SAMSumは元の200〜400トークンチャンクを使う。RAG負荷評価ではMusiqueと2WikiMQAから各1,500問い合わせを選び、GPT-4で各3件の類似問い合わせを生成して計6,000件とし、L2距離で上位6チャンクをランダム順に連結する。初期1,000件はキャッシュが空なのでスループット比較から除外する。品質はQAでF1、要約でROUGE-Lを使う。再計算率、チャンク数、チャンク長、バッチサイズ、保存媒体を変える感度分析も行う。",
+    "scope": "Transformer型モデルの複数文書RAG・要約を中心とする。MambaやGriffinなど再帰型構造は対象外で、量子化設定もYi-34B/Llama-70Bの8ビット以外を広く検証していない。KV保存はCPU RAMまたは単一SSD階層で、多段階層や複数計算ノード間の共有は未評価。DistServeなど分離サービング基盤との統合も未評価である。接頭辞キャッシュ比較ではRAM/SSDからGPUへの読出し遅延をゼロとする有利な仮定を置いている。",
+    "workloads": ["2WikiMQA", "Musique", "SAMSum", "MultiNews", "Musique extended", "2WikiMQA extended", "6チャンクRAG入力"],
+    "baselines": ["完全KV再計算", "接頭辞キャッシュ", "PromptCache型完全KV再利用", "MapReduce型RAG", "MapRerank型RAG"],
+    "metrics": ["先頭トークン到達時間", "F1", "ROUGE-L", "スループット", "要求遅延", "再計算率", "層単位KV読出し時間"],
+    "reproducibility": "モデル、GPU、RAM、SSD容量と実測帯域、主要データセット件数、チャンク長、比較方式、品質指標、実装インターフェースを本文に記載し、公式LMCacheコードも公開されている。クラウドGPU環境やモデル量子化の詳細版数には再現上の差が残り得るが、主要機構の再現性は高い。"
   }
 }
