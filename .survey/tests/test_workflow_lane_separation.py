@@ -31,20 +31,26 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         ):
             self.assertNotIn(forbidden, text)
 
-    def test_submission_fast_lane_processes_only_changed_immutable_descriptors(self):
+    def test_submission_fast_lane_drains_backlog_through_parallel_batch_runner(self):
         text = self._text("survey-submission-fast.yml")
         self.assertIn("group: survey-submission-main", text)
         self.assertIn(".survey/work-queue/submissions/research/*.json", text)
         self.assertIn(".survey/work-queue/submissions/audit/*.json", text)
-        self.assertIn("process_immutable_submission.py", text)
+        self.assertIn("process_immutable_submission_batch.py", text)
+        self.assertIn("SUBMISSION_PARALLELISM: '4'", text)
+        self.assertIn('--parallelism "$SUBMISSION_PARALLELISM"', text)
+        self.assertNotIn("while IFS= read -r descriptor; do", text)
         self.assertNotIn("queue_worker.py --root", text)
         self.assertNotIn("dispatch_fallback_inbox.py", text)
         self.assertNotIn("backfill_citations.py", text)
 
-    def test_submission_fast_lane_persists_failure_result_before_failing(self):
+    def test_submission_fast_lane_persists_descriptor_failures_but_aborts_fatal_batch_errors(self):
         text = self._text("survey-submission-fast.yml")
         self.assertIn("processing_failed=0", text)
-        self.assertIn("if ! python .survey/scripts/process_immutable_submission.py", text)
+        self.assertIn("batch_rc=$?", text)
+        self.assertIn('if [ "$batch_rc" -eq 1 ]; then', text)
+        self.assertIn('elif [ "$batch_rc" -ne 0 ]; then', text)
+        self.assertIn("Fatal immutable submission batch failure; refusing partial commit.", text)
         self.assertIn(".survey/work-queue/results/research", text)
         self.assertIn(".survey/work-queue/results/audit", text)
         self.assertIn("Immutable submission failure result was persisted to main.", text)

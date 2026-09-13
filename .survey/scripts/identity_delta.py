@@ -3,11 +3,13 @@
 
 The format-3 paper identity index is a compacted snapshot. Normal paper writes
 may publish a small delta with the paper and state instead of rewriting the
-whole snapshot. A checkout-capable runtime can later compact all deltas.
+whole snapshot.
 """
 import argparse
 import json
+import os
 import sys
+import tempfile
 from pathlib import Path
 from urllib.parse import quote
 
@@ -85,12 +87,36 @@ def assert_no_conflicts(record: dict):
             raise ValueError(f"Identifier conflict: {ident} -> {hit[0]}")
 
 
+def _atomic_write_json(target: Path, record: dict) -> None:
+    """Replace one visible .json atomically so parallel readers never see partial JSON."""
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=target.parent,
+            prefix=f".{target.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            json.dump(record, handle, ensure_ascii=False, indent=2)
+            handle.write("\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+            temporary = Path(handle.name)
+        os.replace(temporary, target)
+        temporary = None
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
 def prepare(relpath: str) -> str:
     record = paper_record(relpath)
     assert_no_conflicts(record)
     target = ROOT / delta_path(record["canonical_id"])
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n")
+    _atomic_write_json(target, record)
     return target.relative_to(ROOT).as_posix()
 
 
