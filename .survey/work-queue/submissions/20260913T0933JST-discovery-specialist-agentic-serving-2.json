@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-0eff3bf13eae4ddf",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.06068",
+      "title": "VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?",
+      "source_url": "https://arxiv.org/abs/2605.06068",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md",
+      "priority": 86,
+      "reason": "汎用サービング基盤を実行時に調整するのではなく、対象モデル・負荷・ハードウェアごとに複数AIエージェントがサービングスタック自体を設計・実装・正当性検査・性能測定する方式を提案する。標準条件ではvLLMと競争的で、非標準なモデル構造・既知ワークロード・ハードウェア特化条件では汎用基盤が逃す最適化を自動生成して上回ると報告し、コードも公開している。推論基盤を生成時特化する新しいシステム設計軸として収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.27744",
+      "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.27744",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.27744-policy-driven-runtime-agentic-serving.md",
+      "priority": 84,
+      "reason": "エージェント基盤が持つ役割・ID・遷移構造と、推論エンジンが持つ実行時イベントの断絶を埋める中間runtime layerを提案し、observe/score/predict/actの共通primitiveへcache、batching、speculation、fairnessなどの方針を載せる。具体例CacheSageでは5種の実multi-agent workloadでcache hit率を13〜37ポイント、平均TTFTを12〜29%、throughputを6〜14%改善しており、agent-aware servingを個別patchではなく明示的なruntime abstractionとして扱う点が重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-agentic-serving-2",
+    "axis": "エージェント型LLM・サービングruntime・生成時特化",
+    "query_summary": "agentic servingのfront-end/runtime境界とサービング基盤自動生成を探索した。3本を実質評価し、TokTierは決定論的research jobを直接確認して既存readyと判定、VibeServeとpolicy-driven runtimeは最新HEADで対応job不在・repo内title不在を確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arxiv:2607.29678"],
+    "next_axis_hint": "agentic軸の直後反復を避け、network/RDMA型分離サービング、GPU runtime/kernel compilation、または隣接OS/storageの推論向け資源管理へ移る",
+    "empty_round_reason": null
+  }
+}
