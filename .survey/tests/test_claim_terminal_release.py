@@ -8,6 +8,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
+import claim_state  # noqa: E402
 import claim_worker  # noqa: E402
 
 
@@ -77,9 +78,9 @@ class ClaimTerminalReleaseTests(unittest.TestCase):
 
             result = json.loads((queue / "claim-results/req-next.json").read_text(encoding="utf-8"))
             self.assertEqual([item["job_id"] for item in result["assignments"]], ["job-next"])
-            old_claim = json.loads((queue / "claims/job-done.json").read_text(encoding="utf-8"))
-            self.assertIn("released_at", old_claim)
-            self.assertEqual(old_claim.get("terminal_release_job_status"), "completed")
+            current = claim_state.current_claims(root, AT)
+            self.assertFalse(current["job-done"]["active"])
+            self.assertEqual(current["job-done"].get("terminal_job_status"), "completed")
 
 
 if __name__ == "__main__":
