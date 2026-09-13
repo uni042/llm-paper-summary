@@ -1,4 +1,4 @@
-name: Temporary diagnose completed jobs missing paper paths
+name: Temporary apply audited completed-job paper paths
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
       - '.github/workflows/tmp-diagnose-missing-paper-paths.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  diagnose:
+  apply-and-verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,243 +18,160 @@ jobs:
           ref: cleanup/backfill-completed-job-paper-paths-20260913
           fetch-depth: 0
 
-      - name: Strictly re-audit completed job paper path candidates
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install repository test dependencies
+        run: python -m pip install -r .survey/scripts/requirements.txt
+
+      - name: Guard audited base and latest main
+        run: |
+          git fetch origin main cleanup/backfill-completed-job-paper-paths-20260913
+          test "$(git rev-parse origin/main)" = "606f47bf32e8d0eb3d9a045915dd867efed947b9"
+          test "$(git rev-parse HEAD^)" = "653da4d29fe9169d20e6aa648df579789c904ff2"
+          git merge-base --is-ancestor origin/main HEAD
+          git diff --quiet 653da4d29fe9169d20e6aa648df579789c904ff2 -- .survey/work-queue/jobs papers .survey/work-queue/submissions .survey/work-queue/results
+
+      - name: Backfill only strictly audited completed jobs
         run: |
           python - <<'PY'
           import json
-          import subprocess
           from pathlib import Path
 
-          repo = Path('.')
-          jobs_root = repo / '.survey/work-queue/jobs'
-          claims_root = repo / '.survey/work-queue/claims'
-          reusable_submission = '.survey/work-queue/submissions/chat-inbox.json'
-          reusable_result = '.survey/work-queue/results/chat-inbox.json'
-
-          def load_path(path):
-              try:
-                  return json.loads(path.read_text(encoding='utf-8'))
-              except Exception:
-                  return None
-
-          def submission_path(raw):
-              if not isinstance(raw, str) or not raw.strip():
-                  return None
-              raw = raw.strip().replace('\\', '/')
-              if raw.startswith('.survey/'):
-                  return repo / raw
-              if raw.startswith('work-queue/'):
-                  return repo / '.survey' / raw
-              return None
-
-          def result_path(sub_path):
-              if sub_path is None:
-                  return None
-              rel = sub_path.as_posix()
-              marker = '.survey/work-queue/submissions/'
-              if marker not in rel:
-                  return None
-              return Path(rel.replace(marker, '.survey/work-queue/results/', 1))
-
-          def result_paper(result):
-              if not isinstance(result, dict):
-                  return None
-              artifact = result.get('artifact')
-              if isinstance(artifact, dict):
-                  return artifact.get('paper')
-              return artifact if isinstance(artifact, str) else None
-
-          def valid_paper(paper):
-              return (
-                  isinstance(paper, str)
-                  and paper.startswith('papers/')
-                  and '..' not in Path(paper).parts
-                  and (repo / paper).is_file()
-              )
-
-          def attempt_compatible(submission, result):
-              sa = submission.get('attempt_id') if isinstance(submission, dict) else None
-              ra = result.get('attempt_id') if isinstance(result, dict) else None
-              return not (sa and ra and sa != ra)
-
-          def history(path):
-              proc = subprocess.run(
-                  ['git', 'log', '--format=%H', '--', path],
-                  check=True, text=True, capture_output=True,
-              )
-              out = []
-              seen = set()
-              for sha in proc.stdout.splitlines():
-                  show = subprocess.run(
-                      ['git', 'show', f'{sha}:{path}'],
-                      text=True, capture_output=True,
-                  )
-                  if show.returncode != 0:
-                      continue
-                  try:
-                      payload = json.loads(show.stdout)
-                  except Exception:
-                      continue
-                  fingerprint = json.dumps(payload, ensure_ascii=False, sort_keys=True)
-                  if fingerprint in seen:
-                      continue
-                  seen.add(fingerprint)
-                  out.append((sha, payload))
-              return out
-
-          submission_history = history(reusable_submission)
-          result_history = history(reusable_result)
-
-          active_claims = []
-          for claim_file in sorted(claims_root.glob('*.json')):
-              claim = load_path(claim_file)
-              if isinstance(claim, dict) and not claim.get('released_at'):
-                  active_claims.append({
-                      'file': claim_file.as_posix(),
-                      'job_id': claim.get('job_id'),
-                      'claim_id': claim.get('claim_id'),
-                      'request_id': claim.get('request_id'),
-                      'expires_at': claim.get('expires_at'),
-                  })
-
-          missing = []
-          candidates = []
-          unresolved = []
-          for job_file in sorted(jobs_root.glob('*.json')):
-              job = load_path(job_file)
-              if not isinstance(job, dict):
-                  continue
-              if job.get('status') != 'completed' or job.get('type') not in {'research', 'audit'}:
-                  continue
-              if job.get('paper_path'):
-                  continue
-
-              jid = job.get('job_id')
-              base = {
-                  'job_id': jid,
-                  'job_file': job_file.as_posix(),
-                  'type': job.get('type'),
-                  'status': job.get('status'),
-                  'artifact_submission': job.get('artifact_submission'),
-              }
-              missing.append(dict(base))
-
-              sp = submission_path(job.get('artifact_submission'))
-              rp = result_path(sp)
-              desc = load_path(sp) if sp and sp.is_file() else None
-              result = load_path(rp) if rp and rp.is_file() else None
-              paper = desc.get('paper_path') if isinstance(desc, dict) else None
-              if (
-                  isinstance(desc, dict)
-                  and desc.get('job_id') == jid
-                  and desc.get('status') == 'completed'
-                  and valid_paper(paper)
-                  and isinstance(result, dict)
-                  and result.get('ok') is True
-                  and result.get('job_id') == jid
-                  and attempt_compatible(desc, result)
-                  and result_paper(result) == paper
-              ):
-                  row = dict(base)
-                  row.update({
-                      'paper_path': paper,
-                      'paper_exists': True,
-                      'submission_status': desc.get('status'),
-                      'submission_attempt_id': desc.get('attempt_id'),
-                      'result_attempt_id': result.get('attempt_id'),
-                      'evidence': 'current_submission_and_result',
-                      'submission': sp.as_posix(),
-                      'result': rp.as_posix(),
-                      'distinct_paper_count': 1,
-                  })
-                  candidates.append(row)
-                  continue
-
-              if job.get('artifact_submission') not in {'work-queue/submissions/chat-inbox.json', reusable_submission}:
-                  row = dict(base)
-                  row['reason'] = 'no_current_exact_success_and_not_legacy_reusable'
-                  unresolved.append(row)
-                  continue
-
-              desc_versions = []
-              for sha, payload in submission_history:
-                  if not isinstance(payload, dict) or payload.get('job_id') != jid:
-                      continue
-                  if payload.get('status') != 'completed':
-                      continue
-                  p = payload.get('paper_path')
-                  if valid_paper(p):
-                      desc_versions.append((sha, payload))
-
-              result_versions = []
-              for sha, payload in result_history:
-                  if not isinstance(payload, dict):
-                      continue
-                  if payload.get('ok') is not True or payload.get('job_id') != jid:
-                      continue
-                  p = result_paper(payload)
-                  if valid_paper(p):
-                      result_versions.append((sha, payload))
-
-              matches = []
-              for dsha, dpayload in desc_versions:
-                  dpaper = dpayload.get('paper_path')
-                  for rsha, rpayload in result_versions:
-                      if result_paper(rpayload) != dpaper:
-                          continue
-                      if not attempt_compatible(dpayload, rpayload):
-                          continue
-                      matches.append({
-                          'paper_path': dpaper,
-                          'paper_exists': True,
-                          'submission_status': dpayload.get('status'),
-                          'submission_attempt_id': dpayload.get('attempt_id'),
-                          'result_attempt_id': rpayload.get('attempt_id'),
-                          'attempt_id': dpayload.get('attempt_id') or rpayload.get('attempt_id'),
-                          'submission_commit': dsha,
-                          'result_commit': rsha,
-                      })
-
-              distinct = {}
-              for match in matches:
-                  distinct.setdefault(match['paper_path'], match)
-              if len(distinct) == 1:
-                  match = next(iter(distinct.values()))
-                  row = dict(base)
-                  row.update(match)
-                  row.update({
-                      'evidence': 'git_history_submission_and_success_result',
-                      'descriptor_versions': len(desc_versions),
-                      'success_result_versions': len(result_versions),
-                      'matching_pairs': len(matches),
-                      'distinct_paper_count': len(distinct),
-                  })
-                  candidates.append(row)
-              else:
-                  row = dict(base)
-                  row.update({
-                      'reason': 'no_unique_historical_success_match',
-                      'descriptor_versions': len(desc_versions),
-                      'success_result_versions': len(result_versions),
-                      'matching_pairs': len(matches),
-                      'matched_papers': sorted(distinct),
-                      'distinct_paper_count': len(distinct),
-                  })
-                  unresolved.append(row)
-
-          duplicate_jobs = sorted({x['job_id'] for x in candidates if sum(y['job_id'] == x['job_id'] for y in candidates) > 1})
-          report = {
-              'head': subprocess.run(['git', 'rev-parse', 'HEAD'], check=True, text=True, capture_output=True).stdout.strip(),
-              'active_claim_count': len(active_claims),
-              'active_claims': active_claims,
-              'missing_count': len(missing),
-              'candidate_count': len(candidates),
-              'unresolved_count': len(unresolved),
-              'duplicate_candidate_jobs': duplicate_jobs,
-              'candidates': candidates,
-              'unresolved': unresolved,
+          mapping = {
+              'job-research-1587413c3d872e20': 'papers/inference/99-other-inference-systems/2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md',
+              'job-research-175c317515b75ca5': 'papers/inference/07-kv-cache-optimization-compression/2026-2606.02964-multi-segment-attention-enabling-efficient-kv-cache-management-for-faster-large-language-model-serving.md',
+              'job-research-176f6ec6b8273a5c': 'papers/inference/02-hardware-accelerators/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md',
+              'job-research-569c68f713c406a9': 'papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md',
+              'job-research-5b8bc3f2f1ab32c5': 'papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression-for-constrained-llm-inference.md',
+              'job-research-5f3928ac49560aeb': 'papers/inference/99-other-inference-systems/2026-2603.17435-zipserv-fast-memory-efficient-llm-inference-hardware-aware-lossless-compression.md',
+              'job-research-651c768da8e5f9fc': 'papers/inference/10-kv-cache-offload-recomputation/2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md',
+              'job-research-67fd071bb1792a36': 'papers/inference/01-offload-hierarchical-memory/2026-2607.07388-tf-engram-ssd-backed-memory.md',
+              'job-research-821890bf5e9d5e8e': 'papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md',
+              'job-research-a190f4e7421fc3f8': 'papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12151-oserve-spatial-temporal-workload-orchestration.md',
+              'job-research-a297f1776b1a8b16': 'papers/inference/10-kv-cache-offload-recomputation/2026-2604.18529-hybridgen-efficient-llm-generative-inference-via-cpu-gpu-hybrid-computing.md',
+              'job-research-bb4463d4f717f17c': 'papers/inference/99-other-inference-systems/2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md',
+              'job-research-c17cf648935fd5ee': 'papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md',
+              'job-research-c7635853ef551bb8': 'papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md',
+              'job-research-cf1831adcf0d875d': 'papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md',
+              'job-research-ee6da232bd76e206': 'papers/inference/08-edge-on-device-llm-systems/2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md',
+              'job-research-eeddee746504f3dd': 'papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md',
+              'job-research-f3407b821f3f7dcf': 'papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00151-smoothagent-lookahead-context-engineering.md',
+              'job-research-f9f62bef5889e903': 'papers/inference/05-speculative-decoding-moe/2026-2602.16052-moe-spec-expert-budgeting-speculative-decoding.md',
+              'job-research-fcb9e0b363722b52': 'papers/inference/05-speculative-decoding-moe/2026-2607.24434-draftexpert-expansion-aware-self-speculative-decoding.md',
           }
-          print(json.dumps(report, ensure_ascii=False, indent=2))
-          if unresolved or duplicate_jobs or len(candidates) != len(missing):
-              raise SystemExit('strict audit did not produce a unique safe candidate for every missing job')
+
+          jobs_root = Path('.survey/work-queue/jobs')
+          for job_id, paper_path in mapping.items():
+              job_file = jobs_root / f'{job_id}.json'
+              if not job_file.is_file():
+                  raise SystemExit(f'missing job file: {job_file}')
+              if not Path(paper_path).is_file():
+                  raise SystemExit(f'missing audited paper: {paper_path}')
+              job = json.loads(job_file.read_text(encoding='utf-8'))
+              if job.get('job_id') != job_id:
+                  raise SystemExit(f'job id mismatch: {job_file}')
+              if job.get('status') != 'completed':
+                  raise SystemExit(f'job is no longer completed: {job_id}')
+              if job.get('type') not in {'research', 'audit'}:
+                  raise SystemExit(f'unexpected job type: {job_id}: {job.get("type")}')
+              if job.get('paper_path'):
+                  raise SystemExit(f'paper_path already changed; refuse overwrite: {job_id}: {job.get("paper_path")}')
+              job['paper_path'] = paper_path
+              job_file.write_text(json.dumps(job, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          print(json.dumps({'backfilled_count': len(mapping), 'jobs': sorted(mapping)}, indent=2))
           PY
+
+      - name: Re-scan completed jobs and dry-run identity reconciliation
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+          from types import SimpleNamespace
+          from unittest.mock import patch
+
+          jobs_root = Path('.survey/work-queue/jobs')
+          missing = []
+          target_paths = set()
+          for p in sorted(jobs_root.glob('*.json')):
+              job = json.loads(p.read_text(encoding='utf-8'))
+              if job.get('status') == 'completed' and job.get('type') in {'research', 'audit'}:
+                  if not job.get('paper_path'):
+                      missing.append(job.get('job_id'))
+                  if job.get('job_id') in {
+                      'job-research-1587413c3d872e20','job-research-175c317515b75ca5','job-research-176f6ec6b8273a5c','job-research-569c68f713c406a9','job-research-5b8bc3f2f1ab32c5','job-research-5f3928ac49560aeb','job-research-651c768da8e5f9fc','job-research-67fd071bb1792a36','job-research-821890bf5e9d5e8e','job-research-a190f4e7421fc3f8','job-research-a297f1776b1a8b16','job-research-bb4463d4f717f17c','job-research-c17cf648935fd5ee','job-research-c7635853ef551bb8','job-research-cf1831adcf0d875d','job-research-ee6da232bd76e206','job-research-eeddee746504f3dd','job-research-f3407b821f3f7dcf','job-research-f9f62bef5889e903','job-research-fcb9e0b363722b52'
+                  }:
+                      target_paths.add(job['paper_path'])
+          if missing:
+              raise SystemExit(f'completed research/audit jobs still missing paper_path: {missing}')
+
+          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
+          import queue_worker
+          seen = []
+          def fake_run(args, **kwargs):
+              if isinstance(args, (list, tuple)) and 'identity_delta.py' in ' '.join(map(str, args)) and '--paper' in args:
+                  seen.append(args[args.index('--paper') + 1])
+              return SimpleNamespace(returncode=0, stdout='', stderr='')
+
+          with patch('subprocess.run', side_effect=fake_run):
+              queue_worker.reconcile_v9_identity_deltas()
+          unseen = sorted(target_paths - set(seen))
+          if unseen:
+              raise SystemExit(f'backfilled papers not recognized by reconcile_v9_identity_deltas: {unseen}')
+          print(json.dumps({'missing_completed_jobs': 0, 'backfilled_paths_seen_by_reconcile': len(target_paths)}, indent=2))
+          PY
+
+      - name: Compile survey scripts
+        run: python -m compileall -q .survey/scripts
+
+      - name: Validate workflow YAML
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          for path in sorted(Path('.github/workflows').glob('*.yml')):
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+              print(path)
+          PY
+
+      - name: Run all regression tests
+        run: python -m unittest discover -s .survey/tests -p 'test_*.py'
+
+      - name: Verify and commit only the audited job metadata changes
+        run: |
+          python - <<'PY'
+          import subprocess
+          expected = {
+              '.survey/work-queue/jobs/job-research-1587413c3d872e20.json',
+              '.survey/work-queue/jobs/job-research-175c317515b75ca5.json',
+              '.survey/work-queue/jobs/job-research-176f6ec6b8273a5c.json',
+              '.survey/work-queue/jobs/job-research-569c68f713c406a9.json',
+              '.survey/work-queue/jobs/job-research-5b8bc3f2f1ab32c5.json',
+              '.survey/work-queue/jobs/job-research-5f3928ac49560aeb.json',
+              '.survey/work-queue/jobs/job-research-651c768da8e5f9fc.json',
+              '.survey/work-queue/jobs/job-research-67fd071bb1792a36.json',
+              '.survey/work-queue/jobs/job-research-821890bf5e9d5e8e.json',
+              '.survey/work-queue/jobs/job-research-a190f4e7421fc3f8.json',
+              '.survey/work-queue/jobs/job-research-a297f1776b1a8b16.json',
+              '.survey/work-queue/jobs/job-research-bb4463d4f717f17c.json',
+              '.survey/work-queue/jobs/job-research-c17cf648935fd5ee.json',
+              '.survey/work-queue/jobs/job-research-c7635853ef551bb8.json',
+              '.survey/work-queue/jobs/job-research-cf1831adcf0d875d.json',
+              '.survey/work-queue/jobs/job-research-ee6da232bd76e206.json',
+              '.survey/work-queue/jobs/job-research-eeddee746504f3dd.json',
+              '.survey/work-queue/jobs/job-research-f3407b821f3f7dcf.json',
+              '.survey/work-queue/jobs/job-research-f9f62bef5889e903.json',
+              '.survey/work-queue/jobs/job-research-fcb9e0b363722b52.json',
+          }
+          changed = set(subprocess.check_output(['git', 'diff', '--name-only'], text=True).splitlines())
+          if changed != expected:
+              raise SystemExit(f'unexpected working tree diff: expected={sorted(expected)} actual={sorted(changed)}')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .survey/work-queue/jobs
+          git commit -m 'chore: backfill completed job paper paths'
+          git push origin HEAD:cleanup/backfill-completed-job-paper-paths-20260913
