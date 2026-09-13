@@ -2,31 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-716670c2b523b653002fe62a",
-  "job_id": "job-research-ff9dfc8e1a733b56",
-  "data": {
-    "problem": "大規模MoEは総パラメータが巨大なため複数GPU/NPU・複数ノードへ分散する必要があるが、ノード内高速リンクとノード間ネットワークの帯域差が大きく、単一の並列方式を全通信域へ適用すると性能を失う。テンソル並列はAll-Reduceを頻繁に行うためノード間へ広げると帯域不足で急激に悪化し、専門家並列はAll-to-Allを使うため多ノードへ広げやすい一方、並列度が高いと専門家ごとの負荷不均衡とトークン通信量が問題になる。Attention側のデータ並列とMoE側の専門家並列の比率もネットワーク・メモリ・要求率によって最適値が変わるため、経験則だけでは構成を一意に決められない。",
-    "novelty": "MixServeは、モデルの層構成・専門家数・活性専門家数・バッチ・系列長と、計算性能・ノード内／ノード間帯域・トポロジを一つの費用モデルへ入れ、TP・DP・EP・PPの候補を自動評価する。そのうえでMoEブロックの通信を、ノード内TPのReduce-Scatter／All-Gatherとノード間EPのDispatch／Combineへ分解し、同じhidden state断片に対する通信を非同期に重ねる融合AR-A2Aを導入する。単なる並列度探索ではなく、選択した階層並列構成専用の通信アルゴリズムまで共同設計する点が中心的な新規性である。",
-    "method_overview": "MixServeはオフライン分析とオンライン配信の二段階で動く。オフラインではモデル形状といくつかのバッチ・系列長でのプロファイル値を取得し、GPU/NPUの計算性能、ノード内リンク、ノード間リンク、ノード数、各ノードのデバイス数を読み込む。並列戦略はAttentionとMoEを別々にTP・DP・EPへ分割し、必要に応じてDecoder層をPPへ分ける文法として列挙する。各候補について、All-ReduceをReduce-ScatterとAll-Gatherに分けた通信量、専門家All-to-Allの通信量、計算量、PPの点対点通信、要求率に基づくM/M/1近似の待ち時間を計算する。さらにAttention重み、MoE専門家重み、KVキャッシュがデバイスメモリへ収まる制約を課し、TTFT・ITL・スループットの推定値から目的に合う構成を選ぶ。オンラインでは選択結果に合わせて重みを分割・読み込み、Attention側のノード内TP／ノード間DPとMoE側のノード内TP／ノード間EPを構築する。MoEへ入るDispatchでは、各ノード内でhidden dimensionをTP shardへ分けた後、同じTP rank間だけをノード間Pairwise通信し、受信した断片ごとにノード内All-Gatherを重ねる。MoEから戻るCombineでは、ノード間Pairwise通信とノード内Reduce-Scatterを非同期に進め、top-k重み付き結果を集約した後にAll-Gatherで完全hidden stateを復元する。この構成により、低速なノード間通信のデータ量をTP shard分だけ減らしつつ、その時間を高速なノード内通信と重ねる。DPとEPの並列度が一致しない場合も、DPが大きい側では専門家重みを複製し、EPが大きい側では重複hidden stateを削除して通信群を調整する。",
-    "components": [
-      {
-        "name": "階層ネットワーク対応の自動並列分析器",
-        "description": "TP・DP・EP・PPの候補を、モデルの演算量・専門家数・活性専門家数とハードウェアの計算性能・帯域・メモリ制約から評価する。通信についてはTPのAll-ReduceをReduce-ScatterとAll-Gatherに、EPのAll-to-AllをDispatchとCombineに分けてデータ量と通信回数をモデル化する。さらに要求率と1トークン当たり処理時間からM/M/1近似の待ち時間を導入し、プリフィルでは入力長、デコードでは系列長1としてTTFTとITLを見積もる。これにより、単純な通信量最小化ではなく、メモリ制約とオンライン待ちを含む構成選択を行う。"
-      },
-      {
-        "name": "ノード内TP・ノード間EPの混合分割",
-        "description": "各ノード内では高帯域リンクを使うTPを採用し、ノード間では専門家を分けるEPを採用する。Attentionはノード内TPとノード間DP、MoEはノード内TPとノード間EPとして分けることで、ノードを跨ぐAll-Reduceを避ける。MoEのhidden stateはTP shardされた状態でノード間へ送るため、純粋なEPより一回当たり通信量をノード内TP並列度ぶん縮小できる。DPとEPの並列度が異なるケースも候補として扱い、重み複製とhidden state重複削除のトレードオフを費用モデルで選択する。"
-      },
-      {
-        "name": "融合Reduce-Scatter／Combine通信",
-        "description": "MoE出力側では、各ノード間で同じTP rank同士がPairwise方式でhidden state断片を非同期交換するのと並行して、到着済み断片に対してノード内Reduce-Scatterとtop-k重み付けを進める。全ノード分の断片を処理した後だけノード内All-Gatherを行い、完全なhidden stateへ戻す。ノード間Combine通信とノード内Reduce-Scatterを同時進行させるため、逐次実行時の通信時間和ではなく長い側へ近づける。代わりに各rankには出力相当の一時領域が必要で、総空間量はバッチ・系列長・hidden次元・ノード内デバイス数に比例する。"
-      },
-      {
-        "name": "融合All-Gather／Dispatch通信",
-        "description": "MoE入力側では、各rankが担当するhidden次元断片について専門家ルーティングを行い、同じTP rankの別ノードへ必要断片だけを非同期送信する。受信した専門家別断片はノード内All-Gatherで復元するが、最初と最後の通信を除いてノード間Dispatchとノード内All-Gatherを互いに重ねる。ノード内のローカル断片は送受信不要なので通信回数を削減し、追加一時領域は定数規模とする。この方式により、専門家並列のノード間通信量削減とTP側の高速ノード内帯域利用を同時に達成する。"
-      }
-    ],
-    "system_design": "オフライン分析器が最適な並列度を出し、オンラインの重みローダ／分割器がその構成に合わせてAttention・MoE重みを配置する。配信時のメモリ管理と要求スケジューリングはvLLM系の仕組みを利用し、混合通信群をモデルのforward経路へ注入する。H20環境ではTutel、Ascend 910B環境ではvLLMを基盤とし、同一設計をGPUとNPUの異なる階層ネットワークへ適用する。"
-  },
-  "reservation": {"claim_id": "claim-716670c2b523b653002fe62a", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-257eb821df00174e3343bac4",
+  "job_id": "job-research-7a44d6a722722f10",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-257eb821df00174e3343bac4",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
