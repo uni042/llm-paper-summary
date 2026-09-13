@@ -2,17 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-257eb821df00174e3343bac4",
+  "attempt_id": "attempt-4f7d4651a193282acf05d32f",
   "job_id": "job-research-7a44d6a722722f10",
   "data": {
     "hardware": "試験環境(i)はA10単GPUサーバー4台（各188GBメモリ）とV100×4サーバー4台（各368GBメモリ）で、各サーバーのネットワーク帯域は16 Gbps。試験環境(ii)はA10×4サーバー2台（各752GB、64 Gbps）とV100×4サーバー4台（各368GB、16 Gbps）。NVLinkはなく、評価モデルは単一GPUへ収まる。別途、本番環境でA10 24GB上のLlama2-7Bを評価する。",
     "software": "vLLMを基盤に約3,200行のC++/Pythonを変更し、約3,000行Pythonの独自サーバーレス基盤を実装。SafeTensors、共有メモリ、複数CUDAストリーム、Kubernetesを利用する。公式実装はLLMServe/hydraserveとして公開されている。",
     "methodology": "Serverless vLLMとServerlessLLMを主比較対象とする。ServerlessLLMは高速SSDがない環境のためサーバーメモリ全体をモデルキャッシュに使い、コンテナ生成時間の差を除くためコンテナを事前生成する。エンドツーエンド評価はFP16のLlama2-7B/13Bを用い、チャットはShareGPT、コード補完はHumanEval、要約はLongBenchから要求を作る。各用途64インスタンスを用意し、Microsoft Azure Functions Traceへ対応付け、Gamma分布で要求を標本化して変動係数（CV）と毎秒要求数（RPS）を変える。ウォーム要求は入力1024トークン、バッチ8で測り、通常のTTFT SLOをウォームTTFTの5倍、TPOT SLOを2倍とする。要約のTTFTはさらに2倍、チャットTPOTは毎分300語の読書速度に合わせる。",
     "scope": "主評価はLlama2-7B/13BとA10/V100の低帯域クラスタ。コールドスタート単体評価ではOPT、Llama、Falcon系列も扱う。大規模モデルを複数GPUへ常時分割する機能は設計上対応するが、評価環境にNVLinkがなく評価モデルは単一GPUへ収めている。512GPU級などの大規模クラスタ評価はない。",
-    "workloads": ["ShareGPTチャット", "HumanEvalコード補完", "LongBench要約", "Microsoft Azure Functions Trace由来の到着パターン", "本番サーバーレス環境のLlama2-7B"],
-    "baselines": ["Serverless vLLM", "ServerlessLLM", "HydraServe各機構のアブレーション"],
-    "metrics": ["コールドスタートTTFT", "TTFT SLO達成率", "TPOT SLO達成率", "平均TPOT", "GPUメモリ時間に比例する費用", "生成完了時間", "パイプライン拡張時のTTFT"],
+    "workloads": [
+      "ShareGPTチャット",
+      "HumanEvalコード補完",
+      "LongBench要約",
+      "Microsoft Azure Functions Trace由来の到着パターン",
+      "本番サーバーレス環境のLlama2-7B"
+    ],
+    "baselines": [
+      "Serverless vLLM",
+      "ServerlessLLM",
+      "HydraServe各機構のアブレーション"
+    ],
+    "metrics": [
+      "コールドスタートTTFT",
+      "TTFT SLO達成率",
+      "TPOT SLO達成率",
+      "平均TPOT",
+      "GPUメモリ時間に比例する費用",
+      "生成完了時間",
+      "パイプライン拡張時のTTFT"
+    ],
     "reproducibility": "モデル、データセット、SLO設定、ハードウェア構成、帯域、比較方式、主要実装量が記載され、公式コードも公開されている。ServerlessLLMは論文環境に高速SSDがないため原論文と同一構成ではなく、閉源のBlitzScaleやλScale系との直接比較も行っていない。本番環境の詳細は公開試験環境ほど再現可能ではない。"
   },
-  "reservation": {"claim_id": "claim-257eb821df00174e3343bac4", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-4f7d4651a193282acf05d32f",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
