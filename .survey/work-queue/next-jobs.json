@@ -8,16 +8,16 @@
       "completed": 6
     },
     "research": {
-      "completed": 213,
-      "ready": 177,
+      "completed": 214,
+      "ready": 176,
       "superseded": 44,
       "deferred": 3
     }
   },
   "claiming": {
-    "ready_research_audit": 177,
-    "actively_claimed": 43,
-    "claimable": 134
+    "ready_research_audit": 176,
+    "actively_claimed": 40,
+    "claimable": 136
   },
   "next_jobs": [
     {
@@ -69,6 +69,30 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-39ac27aff531cdb5",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2607.19539",
+      "title": "Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2607.19539",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2607.19539-tile-level-compute-communication-overlap-moe.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
+      "job_id": "job-research-a80e9a452b825fdf",
+      "type": "research",
+      "lane": null,
+      "priority": 87,
+      "canonical_id": "arXiv:2604.21231",
+      "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.21231",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.21231-sparkv-overhead-aware-on-device-kv-loading.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-f3999676507a9c53",
       "type": "research",
       "lane": null,
@@ -93,30 +117,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-325cb8d8e0a565f1",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2601.11590",
-      "title": "EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend",
-      "source_url": "https://arxiv.org/abs/2601.11590",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-d09e1c8e52097070",
-      "type": "research",
-      "lane": null,
-      "priority": 86,
-      "canonical_id": "arXiv:2505.14468",
-      "title": "ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs",
-      "source_url": "https://arxiv.org/abs/2505.14468",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.14468-serverlesslora-latency-cost-lora-serving.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -129,5 +129,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T06:10:21+00:00"
+  "generated_at": "2026-09-13T06:14:07+00:00"
 }

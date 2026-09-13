@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-13T05:10:03+00:00",
-  "paper_count": 402,
-  "edge_count": 2447,
+  "generated_at": "2026-09-13T06:14:54+00:00",
+  "paper_count": 403,
+  "edge_count": 2451,
   "citation_counts": {
-    "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 126,
+    "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md": 127,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md": 28,
     "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md": 33,
     "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md": 42,
@@ -31,6 +31,7 @@
     "papers/inference/01-offload-hierarchical-memory/2026-2606.12556-itme-cxl-hybrid-tiered-memory-expansion.md": 1,
     "papers/inference/01-offload-hierarchical-memory/2026-2606.21868-wisp-working-set-moe-serving-low-resource-hardware.md": 1,
     "papers/inference/01-offload-hierarchical-memory/2026-2606.25353-cache-resident-llm-inference-gb-scale-last-level-caches.md": 0,
+    "papers/inference/01-offload-hierarchical-memory/2026-2607.07388-tf-engram-ssd-backed-memory.md": 0,
     "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md": 0,
     "papers/inference/01-offload-hierarchical-memory/2026-2608.12103-kernel-managed-expert-cache-tiering.md": 0,
     "papers/inference/01-offload-hierarchical-memory/2026-2608.13127-hbf-llm-serving.md": 0,
@@ -258,10 +259,10 @@
     "papers/inference/10-kv-cache-offload-recomputation/2026-2609.09643-unison-agent-session-kv-residency.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md": 1,
     "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md": 9,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md": 131,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md": 132,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md": 44,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md": 40,
-    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 255,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md": 256,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md": 19,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md": 128,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md": 18,
@@ -387,7 +388,7 @@
     "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md": 0,
     "papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md": 2,
     "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md": 0,
-    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md": 30,
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md": 31,
     "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md": 3,
     "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md": 7,
     "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md": 2,
@@ -637,6 +638,12 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+    ],
+    "papers/inference/01-offload-hierarchical-memory/2026-2607.07388-tf-engram-ssd-backed-memory.md": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
     ],
     "papers/inference/01-offload-hierarchical-memory/2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md": [
       "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",

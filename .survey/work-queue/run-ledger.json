@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T06:08:18.312389+00:00",
+  "updated_at": "2026-09-13T06:14:59.082709+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17946,19 +17946,19 @@
     {
       "run_key": "2026-09-13T13:30:00+09:00",
       "first_recorded_at": "2026-09-13T04:41:48.912006+00:00",
-      "last_recorded_at": "2026-09-13T06:08:18.312389+00:00",
+      "last_recorded_at": "2026-09-13T06:14:59.082709+00:00",
       "signals": [
         "fallback_archived",
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 3,
+        "research_completed": 4,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 3,
+        "new_papers": 4,
         "fallback_archived": 8
       },
       "events": [
@@ -18079,6 +18079,21 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34742221197:1",
+          "recorded_at": "2026-09-13T06:14:59.082709+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34742221197",
+            "run_attempt": "1",
+            "source_sha": "2dbbe161cfc9777b7e7f689921435c99e29182c6"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18105,13 +18120,22 @@
           "title": "TokTier: Exact Stateful CPU+GPU Tokenization for Agentic LLM Serving",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-67fd071bb1792a36",
+          "type": "research",
+          "canonical_id": "arXiv:2607.07388",
+          "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
         "arXiv:2512.19179",
         "arXiv:2502.09922",
-        "arXiv:2607.29678"
+        "arXiv:2607.29678",
+        "arXiv:2607.07388"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [
@@ -18125,8 +18149,8 @@
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2310.18547-punica.json"
       ],
       "paper_active_count_before": 399,
-      "paper_active_count_after": 402,
-      "last_successful_action": "fallback_archived"
+      "paper_active_count_after": 403,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

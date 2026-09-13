@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（37本）
+## 自動生成の論文一覧（38本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -67,6 +67,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-08 · [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DASHは将来型High-Bandwidth FlashをGPU/HBM近傍へ接続し、専門家重みをGPUへ直送する経路とHBM経由経路を並行利用して、大容量MoEのフラッシュ転送待ちを減らす。
+
+- **2026-07 · [TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models](2026-2607.07388-tf-engram-ssd-backed-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フレーズ専用意味記憶を訓練なしで構築し、GPU・DRAM・NVMe SSDへ階層配置、中間層の早期予測でSSD読出しを先読みする外部記憶。100Mエントリで平均精度59.4、GPU使用3.06GBを報告。
 
 - **2026-07 · [NELSSA: A GPU–PNM Heterogeneous System for Mixed-Length LLM Serving via Length–based Request Placement](2026-2607.26633-nelssa-gpu-pnm-mixed-length-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -163,6 +167,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-10〜2023-09）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：126  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：127  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 <!-- survey:auto:end -->
