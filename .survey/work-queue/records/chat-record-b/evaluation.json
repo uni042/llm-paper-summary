@@ -2,17 +2,47 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
+  "attempt_id": "attempt-6d0ef40dd55512cf031d8671",
   "job_id": "job-research-b1be9294a63ee868",
   "data": {
     "hardware": "単一NVIDIA RTX 4090（Ada）から8×NVIDIA H200 143GB（Hopper）まで実機評価する。scale ladderでは7B/14B/32B、7B tensor parallel 2/4、70B tensor parallel 4を含み、Llama-3.1-8Bではnative 128k文脈を測る。",
     "software": "SGLang 0.5.9のTriton decode attentionへ約500行のenv-guarded patchを適用し、独自Triton研究kernel、PyTorch参照、50桁mpmath仕様、定理だけから書いた独立実装で数値を相互検査する。形式証明はLean 4/Mathlib。公開artifactはApache-2.0。",
     "methodology": "評価は複数層で構成される。理論soundnessは500,000 adversarial trials、長文脈でのzero-violation試験、adaptive free-running decoding 50 prompts×20 dither seedsなどで確認する。量子化品質はQwen2.5-7Bの実activation、RULER-4k 1300 samples、LongBench-E、hard RULER 6 tasks×25 samplesで測る。SGLang servingはRTX 4090上で1.5B/7B、batch 16×64 tokens、page_size=16をmedian-of-3で測り、capacity・throughput・request-level delta coverageを比較する。H200では同じpatch/protocolを7B〜70Bへ拡張する。",
     "scope": "主対象はdecode-bound long-context、memory-traffic limitedな配信で、S>=8kかつquery数が小さい領域。prefill-heavy workloadとtrainingは対象外。Tier Aはper-token再構成が存在するcache-preserving schemeだけを対象にし、eviction、token merge、latent/recurrent cacheには適用できない。Tier Bはcontrolled dithered INT8かつ非適応queryの理論条件を持つ。FlashInfer backendは未実装で、tensor parallelのcross-rank certificate aggregationは未検証。",
-    "workloads": ["Qwen2.5-7B RULER-4k 1300 samples", "LongBench-E 5 tasks×3 length buckets", "hard RULER 6 tasks×25 samples×3 disjoint slices", "1.5B/7B SGLang short-request serving", "Llama-3.1-8B native 8k/32k/128k", "7B〜70B H200 scale ladder"],
-    "baselines": ["FP16 KV", "RTN-INT8", "RTN-INT4", "KIVI-2bit", "SnapKV", "KnormPress", "Expected Attention", "Runtime-Certified bounded-error quantized attention"],
-    "metrics": ["certificate coverage", "soundness violation count", "fallback/page-in rate", "relative attention output error", "RULER/LongBench score", "KV capacity", "tokens/s", "certificate overhead", "bytes per token per head"],
+    "workloads": [
+      "Qwen2.5-7B RULER-4k 1300 samples",
+      "LongBench-E 5 tasks×3 length buckets",
+      "hard RULER 6 tasks×25 samples×3 disjoint slices",
+      "1.5B/7B SGLang short-request serving",
+      "Llama-3.1-8B native 8k/32k/128k",
+      "7B〜70B H200 scale ladder"
+    ],
+    "baselines": [
+      "FP16 KV",
+      "RTN-INT8",
+      "RTN-INT4",
+      "KIVI-2bit",
+      "SnapKV",
+      "KnormPress",
+      "Expected Attention",
+      "Runtime-Certified bounded-error quantized attention"
+    ],
+    "metrics": [
+      "certificate coverage",
+      "soundness violation count",
+      "fallback/page-in rate",
+      "relative attention output error",
+      "RULER/LongBench score",
+      "KV capacity",
+      "tokens/s",
+      "certificate overhead",
+      "bytes per token per head"
+    ],
     "reproducibility": "公開repositoryに凍結JSON artifact、claim guard、certificate regression、SGLang patch、Triton/PyTorch/mpmath/独立実装、Lean 4形式証明を含む。論文中の数値はartifactから再生成でき、formal/check_all.shで全証明とaxiom auditを再実行できる。Appendix Bには開発中に撤回・訂正した主張と再現手順も明記される。"
   },
-  "reservation": {"claim_id": "claim-bb9c6b2c2debb9e325fcf74b", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-6d0ef40dd55512cf031d8671",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }

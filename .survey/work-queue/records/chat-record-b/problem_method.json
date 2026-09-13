@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
+  "attempt_id": "attempt-6d0ef40dd55512cf031d8671",
   "job_id": "job-research-b1be9294a63ee868",
   "data": {
     "problem": "KVキャッシュ量子化は長文脈推論のメモリを大幅に減らせるが、現在の配信系は平均RULERやLongBenchのスコアを見て量子化方式を事前選択するだけで、いま処理している特定要求・特定層・特定ヘッドで誤差が危険域へ入ったかを観測できない。低ビット方式は平均値を保っていても一部要求だけ静かに失敗し得るため、平均品質が高いことと各要求の安全性は同値ではない。さらに、単純に常時FP16へfallbackすれば品質は守れるが圧縮の容量利得を失う。必要なのは、圧縮後の注意分布が正確な注意分布からどれだけ離れ得るかを実行中に上から評価し、危険なセルだけ選択的に修復できる安価な信号である。",
@@ -24,5 +24,9 @@
     ],
     "system_design": "WitCertの観測系はSGLang 0.5.9のTriton decode attentionに追加され、圧縮KVの読出しと同じpassでcertificate accumulatorを更新する。write pathは圧縮payloadと必要なwitness/scaleを保存し、read pathはattentionとmeterを同時計算する。gateは要求単位またはhead単位で正確なbacking storeへのpage-inを決める。コード側では環境変数で無効化でき、off時は元SGLangとbit-identicalになるよう設計される。理論・kernel・配信経路を別物として扱わず、proof-kernel contract test、PyTorch/mpmath/独立実装との相互照合、Lean 4による主要定理検証で実装が証明仮定から逸脱していないか継続検査する。"
   },
-  "reservation": {"claim_id": "claim-bb9c6b2c2debb9e325fcf74b", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-6d0ef40dd55512cf031d8671",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,54 +2,136 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
+  "attempt_id": "attempt-6d0ef40dd55512cf031d8671",
   "job_id": "job-research-b1be9294a63ee868",
   "data": {
     "canonical_id": "arXiv:2607.28699",
     "arxiv_id": "2607.28699",
     "doi": "10.48550/arXiv.2607.28699",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": ["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization",
     "summary": "WitCertは、KVキャッシュ量子化を平均ベンチマークだけで事前評価する従来運用では、実際に処理中の要求が圧縮によって壊れているかを配信系自身が判定できない問題を扱う。各層・各ヘッド・各デコードステップで、非圧縮attentionと圧縮attentionの全変動距離に対する上界を実行時に計算する二段階メータを導入する。Tier Aは保存したキー残差のRoPE周波数帯ごとのノルムを用いる決定論的保証で、再構成可能な任意のcache-preserving量子化へ適用できる。Tier Bは減算ディザ付きINT8に限定する代わりに、要求全体の失敗確率予算を明示したより鋭い確率的証明を与える。SGLang 0.5.9へメータと修復ゲートを統合し、危険なKVをFP16 backing storeから選択的に戻すことで、raw FP8で22.8まで崩れたhard RULER平均を79.7へ回復し、INT8では同じメモリで1.88倍のKVトークンを保持する。",
     "list_summary": "KV量子化の実行時リスクを層・ヘッド・ステップ単位で証明付き観測し、危険なKVだけ正確なbacking storeから修復することで品質崩壊を検出・回復しつつ、INT8で同一メモリのKV容量を1.88倍にする。",
-    "authors": ["Fanzhe Wei", "Li Liu", "Ziyang Wang", "Chenyu Wang"],
+    "authors": [
+      "Fanzhe Wei",
+      "Li Liu",
+      "Ziyang Wang",
+      "Chenyu Wang"
+    ],
     "authors_affiliations": "Metask Lab。",
     "published": "2026-07-30",
     "publication": "arXiv:2607.28699v2",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v2（2026-08-06改訂）",
     "lineage": "kv-cache-offload-recomputation",
-    "topics": ["KVキャッシュ量子化", "実行時証明", "品質ゲーティング", "SGLang", "長文脈推論", "INT8", "Lean 4形式検証"],
+    "topics": [
+      "KVキャッシュ量子化",
+      "実行時証明",
+      "品質ゲーティング",
+      "SGLang",
+      "長文脈推論",
+      "INT8",
+      "Lean 4形式検証"
+    ],
     "importance": "高。KV圧縮を単なる平均品質・容量の最適化から、要求単位で危険度を観測し必要時だけ正確なKVへ戻す閉ループ制御へ拡張し、圧縮率と品質リスクをサービング実装の制御変数として接続する。",
     "hardware_evaluation": "実機。単一RTX 4090と最大8×NVIDIA H200 143GBを使い、SGLang配信・長文脈・tensor parallelの評価を行う。",
     "hardware_details": "主要なSGLang end-to-end表はRTX 4090、batch 16×64 tokens、page_size=16。拡張評価は8×H200 Hopperで7B/14B/32B、tensor parallel 2/4、70Bまで測定し、Llama-3.1-8Bではnative 128k文脈も評価する。",
     "quality_effect": "量子化そのものは近似であり完全無損失ではない。メータは圧縮attentionと正確attentionの全変動距離上界を監視し、閾値超過時に正確KVをpage-inして再計算する。確率Tierの減算ディザは同ビットRTN比で品質中立で、品質改善は独立したoutlier bypassによる。",
-    "storage_targets": ["圧縮INT8 K/Vキャッシュ", "Tier Aの帯域ノルムwitness", "FP16の正確なbacking store", "SGLangのpaged KV pool"],
-    "bottlenecks": ["長文脈KVメモリ容量", "圧縮失敗の要求単位不可視性", "過剰fallbackによるpage-in traffic", "証明メータのdecode kernel overhead", "短系列・高並列時の証明処理コスト"],
-    "evidence_locations": ["Abstract", "§3 Sound TV bound", "§4 Two-tier meter", "§5 Risk-coverage", "§6.1-6.4 System Implementation and Results", "§7 Reproducibility", "Appendix A", "Appendix B"],
+    "storage_targets": [
+      "圧縮INT8 K/Vキャッシュ",
+      "Tier Aの帯域ノルムwitness",
+      "FP16の正確なbacking store",
+      "SGLangのpaged KV pool"
+    ],
+    "bottlenecks": [
+      "長文脈KVメモリ容量",
+      "圧縮失敗の要求単位不可視性",
+      "過剰fallbackによるpage-in traffic",
+      "証明メータのdecode kernel overhead",
+      "短系列・高並列時の証明処理コスト"
+    ],
+    "evidence_locations": [
+      "Abstract",
+      "§3 Sound TV bound",
+      "§4 Two-tier meter",
+      "§5 Risk-coverage",
+      "§6.1-6.4 System Implementation and Results",
+      "§7 Reproducibility",
+      "Appendix A",
+      "Appendix B"
+    ],
     "source": "https://arxiv.org/abs/2607.28699",
-    "sources": ["https://arxiv.org/abs/2607.28699", "https://arxiv.org/html/2607.28699v2", "https://github.com/metask-ai/witcert-kv-certificates"],
+    "sources": [
+      "https://arxiv.org/abs/2607.28699",
+      "https://arxiv.org/html/2607.28699v2",
+      "https://github.com/metask-ai/witcert-kv-certificates"
+    ],
     "code": "https://github.com/metask-ai/witcert-kv-certificates",
     "implementation": "Apache-2.0でコード・凍結済み実験artifact・Lean 4証明を公開。Triton研究kernel、PyTorch参照、50桁mpmath仕様、独立再実装の4系統を相互照合し、SGLang 0.5.9への約500行patchをintegration/witcert_sglang.patchとして提供する。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id": "arXiv:2605.20868", "arxiv_id": "2605.20868"},
-      {"canonical_id": "arXiv:2407.21118", "arxiv_id": "2407.21118"},
-      {"canonical_id": "arXiv:2401.18079", "arxiv_id": "2401.18079"},
-      {"canonical_id": "arXiv:2404.06654", "arxiv_id": "2404.06654"},
-      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180"},
-      {"canonical_id": "arXiv:2404.14469", "arxiv_id": "2404.14469"},
-      {"canonical_id": "arXiv:2402.02750", "arxiv_id": "2402.02750"},
-      {"canonical_id": "arXiv:2412.15115", "arxiv_id": "2412.15115"},
-      {"canonical_id": "arXiv:2406.10774", "arxiv_id": "2406.10774"},
-      {"canonical_id": "arXiv:2501.01005", "arxiv_id": "2501.01005"},
-      {"canonical_id": "arXiv:2312.07104", "arxiv_id": "2312.07104"},
-      {"canonical_id": "arXiv:2503.01586", "arxiv_id": "2503.01586"}
+      {
+        "canonical_id": "arXiv:2605.20868",
+        "arxiv_id": "2605.20868"
+      },
+      {
+        "canonical_id": "arXiv:2407.21118",
+        "arxiv_id": "2407.21118"
+      },
+      {
+        "canonical_id": "arXiv:2401.18079",
+        "arxiv_id": "2401.18079"
+      },
+      {
+        "canonical_id": "arXiv:2404.06654",
+        "arxiv_id": "2404.06654"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2404.14469",
+        "arxiv_id": "2404.14469"
+      },
+      {
+        "canonical_id": "arXiv:2402.02750",
+        "arxiv_id": "2402.02750"
+      },
+      {
+        "canonical_id": "arXiv:2412.15115",
+        "arxiv_id": "2412.15115"
+      },
+      {
+        "canonical_id": "arXiv:2406.10774",
+        "arxiv_id": "2406.10774"
+      },
+      {
+        "canonical_id": "arXiv:2501.01005",
+        "arxiv_id": "2501.01005"
+      },
+      {
+        "canonical_id": "arXiv:2312.07104",
+        "arxiv_id": "2312.07104"
+      },
+      {
+        "canonical_id": "arXiv:2503.01586",
+        "arxiv_id": "2503.01586"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v2 HTML版参考文献節",
     "references_total": 46
   },
-  "reservation": {"claim_id": "claim-bb9c6b2c2debb9e325fcf74b", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-6d0ef40dd55512cf031d8671",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }

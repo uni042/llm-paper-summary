@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-bb9c6b2c2debb9e325fcf74b",
+  "attempt_id": "attempt-6d0ef40dd55512cf031d8671",
   "job_id": "job-research-b1be9294a63ee868",
   "data": {
     "limitations": "Tier Aは再構成可能なper-token keyを持つcache-preserving方式に限られ、eviction、token pooling/merging、latent cache、recurrent state compressionには直接適用できない。2〜4bitでは決定論witnessが過度に緩く、selective certified gateは主に8bit級に限定される。Tier Bはcontrolled subtractive ditherと非適応queryを仮定する。prefill-heavyやtrainingは対象外で、FlashInfer backend、cross-rank certificate aggregation、CUDA-graph-safe telemetryも未完成。72Bでcoverageが25.5〜29.8%へ低下し、特定7B構成では長文脈TPOTが9倍になる未解明性能問題がある。",
@@ -13,5 +13,9 @@
     "audit_required": true,
     "audit_reason": "公式コード、Lean 4形式証明、SGLang patch、複数GPUの大規模定量結果を伴うため、artifact再現性・claim guard・published numbersの対応を追加監査する価値が高い。"
   },
-  "reservation": {"claim_id": "claim-bb9c6b2c2debb9e325fcf74b", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-6d0ef40dd55512cf031d8671",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
