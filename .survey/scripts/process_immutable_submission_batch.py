@@ -16,6 +16,7 @@ HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
+import immutable_submission  # noqa: E402
 import reduce_submission_effects  # noqa: E402
 
 MIN_PARALLELISM = 1
@@ -35,25 +36,101 @@ def _read_object(path: Path) -> dict[str, Any] | None:
     return value if isinstance(value, dict) else None
 
 
-def descriptor_group_key(repo_root: Path, descriptor_path: Path) -> str:
-    """Group by paper first, then job, so shared mutation targets never overlap."""
+def _absolute_descriptor(repo_root: Path, descriptor_path: Path) -> Path:
     repo_root = Path(repo_root).resolve()
-    descriptor_path = Path(descriptor_path)
-    if not descriptor_path.is_absolute():
-        descriptor_path = repo_root / descriptor_path
-    value = _read_object(descriptor_path)
+    path = Path(descriptor_path)
+    return path if path.is_absolute() else repo_root / path
+
+
+def _canonical_identity_key(repo_root: Path, descriptor: dict[str, Any]) -> str | None:
+    refs = descriptor.get("record_slots")
+    if not isinstance(refs, list):
+        return None
+    metadata_ref = next(
+        (ref for ref in refs if isinstance(ref, dict) and ref.get("slot") == "metadata"),
+        None,
+    )
+    if metadata_ref is None:
+        return None
+    try:
+        payload = immutable_submission.read_record_slot(repo_root, metadata_ref)
+    except Exception:
+        return None
+    data = payload.get("data") if isinstance(payload, dict) else None
+    canonical_id = data.get("canonical_id") if isinstance(data, dict) else None
+    if not isinstance(canonical_id, str) or not canonical_id.strip():
+        return None
+    return f"identity:{canonical_id.strip().casefold()}"
+
+
+def descriptor_resource_keys(repo_root: Path, descriptor_path: Path) -> frozenset[str]:
+    """Return every repository resource that requires same-group serialization."""
+    repo_root = Path(repo_root).resolve()
+    absolute = _absolute_descriptor(repo_root, descriptor_path)
+    value = _read_object(absolute)
+    keys: set[str] = set()
     if isinstance(value, dict):
+        identity_key = _canonical_identity_key(repo_root, value)
+        if identity_key:
+            keys.add(identity_key)
         paper_path = value.get("paper_path")
         if isinstance(paper_path, str) and paper_path.startswith("papers/") and ".." not in Path(paper_path).parts:
-            return f"paper:{Path(paper_path).as_posix()}"
+            keys.add(f"paper:{Path(paper_path).as_posix()}")
         job_id = value.get("job_id")
         if isinstance(job_id, str) and job_id:
-            return f"job:{job_id}"
-    try:
-        relative = descriptor_path.resolve().relative_to(repo_root).as_posix()
-    except ValueError:
-        relative = descriptor_path.resolve().as_posix()
-    return f"path:{relative}"
+            keys.add(f"job:{job_id}")
+    if not keys:
+        try:
+            relative = absolute.resolve().relative_to(repo_root).as_posix()
+        except ValueError:
+            relative = absolute.resolve().as_posix()
+        keys.add(f"path:{relative}")
+    return frozenset(keys)
+
+
+def descriptor_group_key(repo_root: Path, descriptor_path: Path) -> str:
+    """Compatibility/debug key: prefer paper, then job, then any resource key."""
+    keys = descriptor_resource_keys(repo_root, descriptor_path)
+    for prefix in ("paper:", "job:", "identity:", "path:"):
+        match = next((key for key in keys if key.startswith(prefix)), None)
+        if match is not None:
+            return match
+    return sorted(keys)[0]
+
+
+def _group_descriptor_indices(repo_root: Path, paths: list[Path]) -> list[list[int]]:
+    """Union descriptors that share any job, paper, or canonical identity resource."""
+    parents = list(range(len(paths)))
+
+    def find(index: int) -> int:
+        while parents[index] != index:
+            parents[index] = parents[parents[index]]
+            index = parents[index]
+        return index
+
+    def union(left: int, right: int) -> None:
+        a, b = find(left), find(right)
+        if a != b:
+            parents[b] = a
+
+    owner: dict[str, int] = {}
+    for index, path in enumerate(paths):
+        for resource in descriptor_resource_keys(repo_root, path):
+            previous = owner.get(resource)
+            if previous is None:
+                owner[resource] = index
+            else:
+                union(index, previous)
+
+    grouped: OrderedDict[int, list[int]] = OrderedDict()
+    for index in range(len(paths)):
+        grouped.setdefault(find(index), []).append(index)
+    return list(grouped.values())
+
+
+def group_descriptor_paths(repo_root: Path, descriptor_paths: Iterable[Path]) -> list[list[Path]]:
+    paths = [Path(path) for path in descriptor_paths]
+    return [[paths[index] for index in group] for group in _group_descriptor_indices(repo_root, paths)]
 
 
 def run_parallel_grouped(
@@ -63,27 +140,23 @@ def run_parallel_grouped(
     worker: Callable[[Path], Any],
     parallelism: int = DEFAULT_PARALLELISM,
 ) -> list[Any]:
-    """Run one mutation-target group sequentially while independent groups overlap."""
+    """Run one connected mutation group sequentially while independent groups overlap."""
     repo_root = Path(repo_root).resolve()
     paths = [Path(path) for path in descriptor_paths]
-    groups: OrderedDict[str, list[tuple[int, Path]]] = OrderedDict()
-    for index, path in enumerate(paths):
-        key = descriptor_group_key(repo_root, path)
-        groups.setdefault(key, []).append((index, path))
-
+    index_groups = _group_descriptor_indices(repo_root, paths)
     output: list[Any] = [None] * len(paths)
 
-    def run_group(items: list[tuple[int, Path]]) -> list[tuple[int, Any]]:
+    def run_group(indices: list[int]) -> list[tuple[int, Any]]:
         rows: list[tuple[int, Any]] = []
-        for index, path in items:
-            rows.append((index, worker(path)))
+        for index in indices:
+            rows.append((index, worker(paths[index])))
         return rows
 
-    max_workers = min(bounded_parallelism(parallelism), max(len(groups), 1))
-    if not groups:
+    max_workers = min(bounded_parallelism(parallelism), max(len(index_groups), 1))
+    if not index_groups:
         return output
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        futures = [pool.submit(run_group, items) for items in groups.values()]
+        futures = [pool.submit(run_group, indices) for indices in index_groups]
         for future in as_completed(futures):
             for index, value in future.result():
                 output[index] = value
@@ -106,9 +179,7 @@ def _run_command(command: list[str], *, cwd: Path) -> subprocess.CompletedProces
 
 def process_one(repo_root: Path, descriptor_path: Path, effects_dir: Path) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
-    descriptor_path = Path(descriptor_path)
-    if not descriptor_path.is_absolute():
-        descriptor_path = repo_root / descriptor_path
+    descriptor_path = _absolute_descriptor(repo_root, descriptor_path)
     try:
         relative = descriptor_path.resolve().relative_to(repo_root).as_posix()
     except ValueError as exc:
@@ -155,7 +226,7 @@ def _validate_unique_inputs(repo_root: Path, paths: list[Path]) -> None:
     seen_paths: set[str] = set()
     seen_identity: set[tuple[str, str]] = set()
     for path in paths:
-        absolute = path if path.is_absolute() else repo_root / path
+        absolute = _absolute_descriptor(repo_root, path)
         try:
             relative = absolute.resolve().relative_to(repo_root).as_posix()
         except ValueError as exc:
