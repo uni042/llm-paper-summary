@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 03:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 03:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **25** |
 | 最新通常run | **2026-09-14T02:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **41 min** |
+| 最古の有効claimの経過時間 | **44 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **35** |
 | Repo収録 | **64** |
 | Audit完了 | **0** |
-| 探索評価候補 | **442** |
-| Research候補採用 | **118** |
-| 重複除外 | **252** |
-| 重複率 | **57.0%** |
+| 探索評価候補 | **399** |
+| Research候補採用 | **101** |
+| 重複除外 | **228** |
+| 重複率 | **57.1%** |
 | 探索専用worker run（毎時枠） | **9** |
-| 探索専用worker round（stats観測） | **84** |
+| 探索専用worker round（stats観測） | **78** |
 | 通常worker run（ledger観測） | **16** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 442 → 重複除外後 190 → Research候補採用 118 → Research完了 35 → Repo収録 64**
+**探索評価 399 → 重複除外後 171 → Research候補採用 101 → Research完了 35 → Repo収録 64**
 
 ## 直近の通常worker
 
@@ -95,7 +95,7 @@ Run: **2026-09-14T02:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
+- P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
 - P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
@@ -126,9 +126,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | agent workflow/context runtime・branch admission・heterogeneous many-core runtime | 13 | 9 | 4 | 69.2% | 30.8% |
 | SSD expert offload・peer GPU cache tier・階層メモリ | 12 | 10 | 0 | 83.3% | 0.0% |
 | multi-node MoE活性パターン配置・edge expert類似性routing | 12 | 10 | 2 | 83.3% | 16.7% |
-| 2026年9月新着・HBF/Flash階層・attention実行・RAG/電力隣接serving | 10 | 5 | 5 | 50.0% | 50.0% |
 | 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 | 10 | 10 | 0 | 100.0% | 0.0% |
-| DBMS由来cache policy・real-time/best-effort混在QoS scheduling | 9 | 7 | 2 | 77.8% | 22.2% |
 | GPU runtime安全性・software aging・many-core CPU inference | 9 | 6 | 3 | 66.7% | 33.3% |
 | NVMe重み先読み・疎推論GPUカーネル・fleet資源配置 | 8 | 3 | 4 | 37.5% | 50.0% |
 | 分離型LLMサービング・KV転送／フェーズ非対称性 | 8 | 6 | 1 | 75.0% | 12.5% |
@@ -137,16 +135,13 @@ Run: **2026-09-13T11:00:00+09:00**
 | heterogeneous cloud multi-LLM・multi-timescale autoscaling・SLO-aware scaling | 7 | 4 | 2 | 57.1% | 28.6% |
 | hybrid-attention・MLA・位置非依存キャッシュ | 7 | 3 | 4 | 42.9% | 57.1% |
 | network・collective通信・distributed inference | 7 | 7 | 0 | 100.0% | 0.0% |
-| serverless production serving・cold start・multi-LoRA elasticity | 7 | 3 | 4 | 42.9% | 57.1% |
 | 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
 | 分離型サービングの負荷偏り・SLO適応 | 7 | 4 | 1 | 57.1% | 14.3% |
 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル | 7 | 2 | 4 | 28.6% | 57.1% |
 | 新着LLM推論システム・通信／疎注意／多ターンKV | 7 | 4 | 3 | 57.1% | 42.9% |
 | 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation | 7 | 7 | 0 | 100.0% | 0.0% |
 | 2609新着・端末メモリ管理・エッジクラウド協調推論 | 6 | 4 | 0 | 66.7% | 0.0% |
-| CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
-| GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
 | GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
 | MoE expert cache・offload・OS tiering | 6 | 6 | 0 | 100.0% | 0.0% |
 | MoE expert prefetch・offload・speculative execution再走査 | 6 | 5 | 0 | 83.3% | 0.0% |
@@ -160,7 +155,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
 | MoE speculative decoding・expert offloading・CPU/GPU共同実行 | 5 | 3 | 0 | 60.0% | 0.0% |
 | MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
-| agent session KV residency・near-memory scheduling | 5 | 4 | 1 | 80.0% | 20.0% |
 | edge-cloud speculative serving・latency modeling・deployment configuration・mixed precision | 5 | 1 | 3 | 20.0% | 60.0% |
 | heterogeneous KV retrieval・lossless weight compression・moderate sparse GPU kernels | 5 | 2 | 3 | 40.0% | 60.0% |
 | multi-tenant runtime制御・適応parallelism・latency attribution | 5 | 3 | 2 | 60.0% | 40.0% |
