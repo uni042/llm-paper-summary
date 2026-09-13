@@ -79,12 +79,19 @@ jobs:
             rm -rf /tmp/submission-effects
             mkdir -p /tmp/submission-effects
 
-            if ! python .survey/scripts/process_immutable_submission_batch.py \
+            set +e
+            python .survey/scripts/process_immutable_submission_batch.py \
               --repo-root . \
               --descriptors-file /tmp/immutable-submissions.txt \
               --effects-dir /tmp/submission-effects \
-              --parallelism "$SUBMISSION_PARALLELISM"; then
+              --parallelism "$SUBMISSION_PARALLELISM"
+            batch_rc=$?
+            set -e
+            if [ "$batch_rc" -eq 1 ]; then
               processing_failed=1
+            elif [ "$batch_rc" -ne 0 ]; then
+              echo 'Fatal immutable submission batch failure; refusing partial commit.' >&2
+              exit "$batch_rc"
             fi
 
             mkdir -p \
