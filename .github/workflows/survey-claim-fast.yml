@@ -6,6 +6,7 @@ on:
     paths:
       - '.survey/work-queue/claim-requests/*.json'
       - '.github/workflows/survey-claim-fast.yml'
+      - '.survey/scripts/claim_lease_policy.py'
       - '.survey/scripts/claim_worker.py'
       - '.survey/scripts/claim_state.py'
       - '.survey/scripts/refresh_queue_snapshot.py'
@@ -38,6 +39,7 @@ jobs:
         run: |
           python -m py_compile \
             .survey/scripts/claim_state.py \
+            .survey/scripts/claim_lease_policy.py \
             .survey/scripts/claim_worker.py \
             .survey/scripts/refresh_queue_snapshot.py
 
@@ -52,6 +54,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            python .survey/scripts/claim_lease_policy.py normalize --repo-root .
             python .survey/scripts/claim_worker.py --repo-root .
             python .survey/scripts/refresh_queue_snapshot.py --repo-root .
 
