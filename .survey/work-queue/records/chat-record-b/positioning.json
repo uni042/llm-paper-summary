@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-257eb821df00174e3343bac4",
   "job_id": "job-research-7a44d6a722722f10",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-257eb821df00174e3343bac4",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価は主にLlama2-7B/13B、A10/V100、最大16 GPUの試験環境で、70B級など常時複数GPUを必要とするモデルの実測はない。NVLinkなしのため評価モデルは単一GPUへ収めており、大規模モデルでのパイプライン集約やテンソル並列との相互作用は未検証である。到着負荷はAzure Functions Traceを写像・標本化したもので、完全な実LLMトレースではない。本番評価はあるがLlama2-7B中心である。ネットワーク配置器は同一サーバー内のモデル取得競合を主に扱い、PCIe競合はネットワークがボトルネックとの観測から明示的にモデル化しない。極端に厳しいTTFT SLOでは全方式が約63%以下に頭打ちになる。",
+    "differences": "ServerlessLLMやFaaSwapはローカルメモリ・SSDへモデルをキャッシュして重み取得を短縮するため、長尾モデルでは命中率が課題になる。BlitzScaleやλScaleは既存ワーカーからの重み取得や高速ネットワークを活用する。HydraServeはキャッシュ命中や同一モデルの既存ワーカーを必須とせず、遠隔モデルストレージからの取得自体を複数サーバーへ分割する。AlpaServeなどが負荷処理のためモデル並列を使うのに対し、HydraServeはモデルが最終的に1台で動く場合でもコールドスタート短縮のため一時的にパイプライン並列を作り、その後に集約する。",
+    "implementation_status": "vLLM改造約3,200行のC++/Pythonと独自サーバーレス基盤約3,000行Pythonを実装。公式GitHub `LLMServe/hydraserve` が公開され、OPT、Llama-2、Llama-3、Falcon系列の実験用イメージ・トレース生成・評価手順を提供する。NSDI 2026で正式発表済み。",
+    "research_positioning": "LLMサービングのスケジューリング・分散実行系統のうち、サーバーレスのコールドスタートをクラスタ帯域、ワーカー初期化、推論後の実行形態変更まで跨いで最適化するシステム研究である。パイプライン並列を定常推論の並列化ではなく、モデル重みを高速に取り込むための一時的な帯域集約機構として用いる点が核になる。",
+    "relation_to_existing_repository": "ServerlessLLM、FaaSwap、λScale、DeepFlowなどのサーバーレス起動高速化と直接比較できる。vLLMのKV管理やDistServeのプリフィル・デコード分離とは目的が異なり、HydraServeの起動高速化後に併用可能である。SSD/NVMeを主役にはしないが、ServerlessLLMのSSDキャッシュ型とは対照的に、遠隔ストレージから複数NICで帯域を束ねる設計であり、将来のSSD・ネットワーク・GPUを跨ぐ階層モデル配置を考える際の比較軸になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-257eb821df00174e3343bac4", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
