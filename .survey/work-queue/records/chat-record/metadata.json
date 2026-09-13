@@ -4,10 +4,39 @@
   "slot": "metadata",
   "attempt_id": "attempt-077152d8f589bd6cc52ad6b2",
   "job_id": "job-research-2032cc68b22d1cbe",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-077152d8f589bd6cc52ad6b2",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2606.23521",
+    "arxiv_id": "2606.23521",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.LG"]},
+    "title": "Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference",
+    "summary": "長時間動くLLMエージェントでは、KVキャッシュ、要求スケジューラ、通信状態、オンライン適応用の小さな重み更新などがGPU上に蓄積され、GPUや通信器の故障でそれらを失うと長い対話や外部ツール実行の状態を再現できない。Concordiaは、フレームワークごとに復旧処理を埋め込む代わりに、GPU上に常駐する永続カーネルを耐障害実行基盤として置き、PTX/SASSへ停止・チェックポイント用フックを挿入する。登録された状態領域ごとに差分検出器を実行時コンパイルし、KVキャッシュの変更ブロックやLoRAページをGPUのHBM帯域で検出して、CXLメモリまたはホストDRAM上の追記専用ログへコミットする。二GPU試作では単一GPU故障から約1.5秒で部分サービスを維持したまま復旧し、標準NCCL再起動の47秒超の完全停止を大きく短縮する。",
+    "list_summary": "GPU常駐の永続カーネルでKVキャッシュ等の差分を検出・追記保存し、NCCL境界でのチェックポイントとGPU故障復旧をホストCPU依存なしに高速化する耐障害LLM推論基盤。",
+    "authors": ["Yuhang Gan", "Yiwei Yang", "Yuyi Li", "Xiangyu Gao", "Yichen Wang", "Rain Jiang", "Xiaoning Ding", "Andi Quinn", "Chen Qian"],
+    "authors_affiliations": "UC Santa Cruz; UC Davis; University of Washington; ByteDance",
+    "published": "2026-06-22",
+    "publication": "arXiv preprint v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["耐障害LLM推論", "GPU永続カーネル", "差分チェックポイント", "KVキャッシュ", "NCCL復旧", "CXLメモリ"],
+    "importance": "長時間LLM推論のGPU常駐状態を、フレームワーク固有のログではなくGPU実行時境界で保護する。推論ランタイム、KVキャッシュ、CXL/DRAM階層、分散通信復旧を一つの制御経路へ統合しており、サービング系統と階層メモリ系統を接続する。",
+    "hardware_evaluation": "主評価はNVIDIA RTX PRO 6000 Blackwell Server Edition（98 GB、188 SM）とGeForce RTX 5090（32 GB）で行い、二GPU評価はPCIe 5.0接続でNVLinkなし。任意の異種GPU復旧経路ではAMD Radeon RX 9070 XT、Intel Iris Xe、Tenstorrent BlackHoleも用いる。",
+    "quality_effect": "モデル重みやKV値を近似する品質劣化手法ではない。チェックポイント復元はコミット済みページとメタデータを再生するため、同一アーキテクチャ復旧では状態保存の正確性を目的とする。任意の異種GPU移行では浮動小数点差があり得るが、論文の行列積移行実験では非移行実行と浮動小数点精度内で一致した。",
+    "source": "https://arxiv.org/abs/2606.23521",
+    "sources": ["https://arxiv.org/abs/2606.23521", "https://arxiv.org/pdf/2606.23521"],
+    "code": null,
+    "implementation": "Rust約1,800行とCUDA C約200行の永続カーネルで実装し、CUDAドライバAPI置換層へ統合。PyTorch 2.10.0、CUDA 12.8でQwen3-0.6B推論を通した試作を評価している。一次資料とarXiv付随情報で著者公式コード公開先は確認できなかった。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 41,
+    "references": [
+      {"canonical_id": "arXiv:2204.02311", "arxiv_id": "2204.02311"},
+      {"canonical_id": "arXiv:2502.02069", "arxiv_id": "2502.02069"},
+      {"canonical_id": "arXiv:2506.15993", "arxiv_id": "2506.15993"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-077152d8f589bd6cc52ad6b2", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
