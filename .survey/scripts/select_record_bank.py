@@ -24,6 +24,9 @@ INBOX = Path(".survey/work-queue/submissions/chat-inbox.json")
 RESULT = Path(".survey/work-queue/results/chat-inbox.json")
 NEXT_JOBS = Path(".survey/work-queue/next-jobs.json")
 
+SlotCapture = tuple[str, str, str, str]
+Pair = tuple[str, str]
+
 
 def read_object(path: Path) -> dict[str, Any] | None:
     try:
@@ -56,9 +59,9 @@ def current_transport(repo_root: Path) -> tuple[dict[str, Any] | None, bool]:
     return inbox, settled
 
 
-def pending_immutable_bank_owners(repo_root: Path) -> dict[str, set[tuple[str, str]]]:
+def pending_immutable_bank_owners(repo_root: Path) -> dict[str, set[Pair]]:
     """Return unresolved immutable descriptors for diagnostics only."""
-    owners: dict[str, set[tuple[str, str]]] = {}
+    owners: dict[str, set[Pair]] = {}
     submissions = repo_root / ".survey/work-queue/submissions"
     results = repo_root / ".survey/work-queue/results"
     for kind in ("research", "audit"):
@@ -79,17 +82,9 @@ def pending_immutable_bank_owners(repo_root: Path) -> dict[str, set[tuple[str, s
     return owners
 
 
-def immutable_descriptor_candidates(
-    repo_root: Path,
-) -> dict[str, dict[tuple[str, str], list[dict[str, Any]]]]:
-    """Index immutable descriptors without trusting them yet.
-
-    Validation is deferred until a descriptor could actually release a current bank
-    attempt. The outer bank index is retained for diagnostics, while durable capture
-    itself is pair-global because committed Git blobs no longer depend on a reusable
-    worktree bank continuing to hold the same payload.
-    """
-    out: dict[str, dict[tuple[str, str], list[dict[str, Any]]]] = {}
+def immutable_descriptor_candidates(repo_root: Path) -> dict[Pair, list[dict[str, Any]]]:
+    """Index immutable descriptors by attempt/job without trusting them yet."""
+    out: dict[Pair, list[dict[str, Any]]] = {}
     submissions = repo_root / ".survey/work-queue/submissions"
     for kind in ("research", "audit"):
         root = submissions / kind
@@ -104,63 +99,38 @@ def immutable_descriptor_candidates(
                 continue
             candidate = dict(descriptor)
             candidate["_path"] = path.relative_to(repo_root).as_posix()
-            out.setdefault(bank, {}).setdefault((attempt_id, job_id), []).append(candidate)
+            out.setdefault((attempt_id, job_id), []).append(candidate)
     return out
 
 
-def _durably_captured(
-    repo_root: Path,
-    bank: str,
-    pair: tuple[str, str],
-    candidates: dict[str, dict[tuple[str, str], list[dict[str, Any]]]],
-) -> bool:
-    """Return True when any transport-valid immutable descriptor captures the pair.
-
-    The descriptor may have been staged through another record bank. Once its exact
-    five slot blobs are committed and validated, a duplicate worktree copy in this
-    bank is redundant and can be overwritten safely.
-    """
-    del bank  # Pair durability is global after immutable blob capture.
-    for per_bank in candidates.values():
-        for candidate in per_bank.get(pair, []):
-            candidate = {key: value for key, value in candidate.items() if key != "_path"}
-            try:
-                validated = immutable_submission.validate_descriptor(repo_root, candidate)
-            except (ValueError, OSError):
-                continue
-            if (
-                validated.get("attempt_id") == pair[0]
-                and validated.get("job_id") == pair[1]
-            ):
-                return True
-    return False
-
-
-def inspect_bank(
-    repo_root: Path,
-    bank: str,
-    ready_ids: set[str],
-    inbox: dict[str, Any] | None,
-    settled: bool,
-    immutable_candidates: dict[str, dict[tuple[str, str], list[dict[str, Any]]]],
-) -> dict[str, Any]:
+def scan_bank(repo_root: Path, bank: str) -> dict[str, Any]:
+    """Read current worktree slot identities and exact Git-style blob SHAs."""
     root = repo_root / BANK_ROOTS[bank]
-    slot_state: list[dict[str, Any]] = []
+    slots: list[dict[str, Any]] = []
     attempts: set[str] = set()
     jobs: set[str] = set()
-    pairs: set[tuple[str, str]] = set()
+    pairs: set[Pair] = set()
+    captures: set[SlotCapture] = set()
     missing = False
     incomplete_identity = False
 
     for slot in SLOT_NAMES:
         path = root / f"{slot}.json"
-        payload = read_object(path)
-        if payload is None:
+        try:
+            raw = path.read_bytes()
+            payload = json.loads(raw.decode("utf-8"))
+        except (FileNotFoundError, OSError, UnicodeError, json.JSONDecodeError):
             missing = True
-            slot_state.append({"slot": slot, "state": "missing_or_invalid"})
+            slots.append({"slot": slot, "state": "missing_or_invalid"})
             continue
+        if not isinstance(payload, dict):
+            missing = True
+            slots.append({"slot": slot, "state": "missing_or_invalid"})
+            continue
+
         attempt_id = str(payload.get("attempt_id") or "")
         job_id = str(payload.get("job_id") or "")
+        blob_sha = immutable_submission.git_blob_sha(raw)
         if not attempt_id or not job_id:
             incomplete_identity = True
         if attempt_id:
@@ -168,15 +138,74 @@ def inspect_bank(
         if job_id:
             jobs.add(job_id)
         if attempt_id and job_id:
-            pairs.add((attempt_id, job_id))
-        slot_state.append({"slot": slot, "attempt_id": attempt_id, "job_id": job_id})
+            pair = (attempt_id, job_id)
+            pairs.add(pair)
+            captures.add((attempt_id, job_id, slot, blob_sha))
+        slots.append({
+            "slot": slot,
+            "attempt_id": attempt_id,
+            "job_id": job_id,
+            "blob_sha": blob_sha,
+        })
 
-    durable_pairs = {
-        pair for pair in pairs
-        if _durably_captured(repo_root, bank, pair, immutable_candidates)
+    return {
+        "bank": bank,
+        "root": BANK_ROOTS[bank],
+        "slots": slots,
+        "attempts": attempts,
+        "jobs": jobs,
+        "pairs": pairs,
+        "captures": captures,
+        "missing": missing,
+        "incomplete_identity": incomplete_identity,
     }
 
-    if missing:
+
+def durable_slot_captures(
+    repo_root: Path,
+    candidates: dict[Pair, list[dict[str, Any]]],
+    needed_pairs: set[Pair],
+) -> set[SlotCapture]:
+    """Return exact slot blobs protected by transport-valid immutable descriptors.
+
+    Capture is path-independent after commit: a descriptor staged through bank A may
+    protect a byte-identical duplicate currently sitting in bank G. Conversely, an
+    edited repair slot under the same attempt/job is not protected until a new
+    descriptor references that exact new blob SHA.
+    """
+    captured: set[SlotCapture] = set()
+    for pair in sorted(needed_pairs):
+        for candidate in candidates.get(pair, []):
+            candidate = {key: value for key, value in candidate.items() if key != "_path"}
+            try:
+                validated = immutable_submission.validate_descriptor(repo_root, candidate)
+            except (ValueError, OSError):
+                continue
+            if (validated.get("attempt_id"), validated.get("job_id")) != pair:
+                continue
+            for ref in validated.get("record_slots", []):
+                slot = str(ref.get("slot") or "")
+                blob_sha = str(ref.get("blob_sha") or "")
+                if slot in SLOT_NAMES and blob_sha:
+                    captured.add((pair[0], pair[1], slot, blob_sha))
+    return captured
+
+
+def inspect_bank(
+    scan: dict[str, Any],
+    ready_ids: set[str],
+    inbox: dict[str, Any] | None,
+    settled: bool,
+    durable_slots: set[SlotCapture],
+) -> dict[str, Any]:
+    bank = str(scan["bank"])
+    attempts: set[str] = scan["attempts"]
+    jobs: set[str] = scan["jobs"]
+    pairs: set[Pair] = scan["pairs"]
+    current_slots: set[SlotCapture] = scan["captures"]
+    all_slots_durable = bool(current_slots) and len(current_slots) == len(SLOT_NAMES) and current_slots <= durable_slots
+
+    if scan["missing"]:
         state = "dirty"
         reason = "one or more slot files are missing/invalid"
     elif attempts == {PLACEHOLDER_ATTEMPT}:
@@ -184,29 +213,28 @@ def inspect_bank(
         # placeholder format free rather than treating the missing job identity as dirt.
         state = "free"
         reason = "unused pre-created bank"
-    elif incomplete_identity:
+    elif scan["incomplete_identity"]:
         state = "dirty"
         reason = "one or more slot files lack attempt/job identifiers"
     elif len(attempts) != 1 or len(jobs) != 1:
-        if pairs and durable_pairs == pairs:
+        if all_slots_durable:
             state = "reusable"
-            reason = "mixed worktree is fully covered by durable immutable descriptor blobs"
+            reason = "mixed worktree is fully covered by durable immutable slot blobs"
         else:
             state = "dirty"
-            reason = "slot attempt/job identifiers are mixed without complete immutable coverage"
+            reason = "slot attempt/job identifiers are mixed without complete immutable blob coverage"
     else:
         attempt_id = next(iter(attempts))
         job_id = next(iter(jobs))
-        pair = (attempt_id, job_id)
         active_here = bool(
             inbox
             and str(inbox.get("record_bank") or "a").lower() == bank
             and inbox.get("attempt_id") == attempt_id
             and inbox.get("job_id") == job_id
         )
-        if pair in durable_pairs:
+        if all_slots_durable:
             state = "reusable"
-            reason = "immutable descriptor durably captures this attempt by committed blob SHA"
+            reason = "all current slot blobs are durably captured by immutable descriptors"
         elif active_here and not settled:
             state = "occupied"
             reason = "current reusable inbox still references this attempt without a matching result"
@@ -219,10 +247,10 @@ def inspect_bank(
 
     return {
         "bank": bank,
-        "root": BANK_ROOTS[bank],
+        "root": scan["root"],
         "state": state,
         "reason": reason,
-        "slots": slot_state,
+        "slots": scan["slots"],
     }
 
 
@@ -230,11 +258,11 @@ def inspect(repo_root: Path) -> dict[str, Any]:
     ready_ids = ready_job_ids(repo_root)
     inbox, settled = current_transport(repo_root)
     pending_owners = pending_immutable_bank_owners(repo_root)
-    immutable_candidates = immutable_descriptor_candidates(repo_root)
-    banks = [
-        inspect_bank(repo_root, bank, ready_ids, inbox, settled, immutable_candidates)
-        for bank in BANK_IDS
-    ]
+    scans = [scan_bank(repo_root, bank) for bank in BANK_IDS]
+    needed_pairs = {pair for scan in scans for pair in scan["pairs"]}
+    candidates = immutable_descriptor_candidates(repo_root)
+    durable_slots = durable_slot_captures(repo_root, candidates, needed_pairs)
+    banks = [inspect_bank(scan, ready_ids, inbox, settled, durable_slots) for scan in scans]
     selectable = [b["bank"] for b in banks if b["state"] in {"free", "reusable"}]
     return {
         "schema_version": 1,
