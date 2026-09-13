@@ -1,1 +1,8 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-c1efeb3236ffe37634e7ce3e","job_id":"job-research-3a13b608454c59c4","data":{"limitations":"前提となる強い共有構造は、中央スケジューラが各ラウンドの全エージェント出力を全員へ再配布する全収集型アプリケーションである。非同期エージェントや部分的な通信グラフでは同じ共有率を期待できない。評価は単一A100-80GB、Qwen2.5-7B/14B、GenerativeAgentsとAgentSocietyへ集中しており、複数GPU・異種GPU・本番の混合負荷は未評価である。アプリケーションが論理ブロック境界へ予約トークンを挿入する必要があり、現在の融合復元は注意カーネル内部ではなく転送経路止まりである。基盤にCacheBlendを用いるため、その選択的再計算の数値近似は継承する。著者公式の公開実装URLも本文から確認できない。","differences":"vLLM/SGLangの接頭辞キャッシュは要求先頭からの一致を再利用するため、私有履歴長が異なる兄弟エージェントの共有出力を認識しにくい。CacheBlend、EPIC、KVLink、KVCommなど位置非依存方式は任意位置を扱えるが、基本単位は1要求であり、同じ共有ブロックの位置補正・差分解析をエージェントごとに繰り返す。MooncakeやCacheGenなどは個々のKVを圧縮・移動し、Tokencakeなどのエージェント対応スケジューラは実行順・退避を最適化するが、兄弟キャッシュ間の90%以上の重複を1本へ統合しない。TokenDanceは通信ラウンドを第一級単位として、計算共有とキャッシュ間差分圧縮を一体化する点が異なる。","implementation_status":"arXiv v1のプレプリント。LMCacheとvLLM V1上の試作実装を論文内で説明し、約3,000行のPythonと500行のCUDA/C++を追加しているが、2026-09-13時点で論文本文から著者公式の公開コードURLは確認できなかった。","research_positioning":"KVキャッシュ最適化のうち、単一要求内の量子化・枝刈り・CPU/SSD退避ではなく、同一ラウンドに属する複数要求間の冗長性を除く系統に位置する。位置非依存キャッシュを下位機構として利用しながら、その処理単位を要求から集合へ拡張するため、既存の単一キャッシュ圧縮や階層オフロードとも直交的に組み合わせられる。マルチエージェントの通信構造をサービング基盤へ露出させるという設計方向を明示した点が、今後のエージェント特化推論基盤にとって重要である。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "unused-bank-placeholder",
+  "job_id": "unused-bank-placeholder",
+  "data": {}
+}
