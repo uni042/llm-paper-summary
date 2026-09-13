@@ -9,78 +9,36 @@
     "arxiv_id": "2607.01299",
     "doi": "10.48550/arXiv.2607.01299",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
     "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching",
-    "summary": "検索拡張生成やエージェント型LLMでは、同じ文書・技能・記憶セグメントが異なる位置や前置文脈の後ろへ再利用される。位置非依存キャッシュ（Position-Independent Caching; PIC）は純粋な全注意モデルでこの再利用を可能にするが、近年のハイブリッド注意モデルでは大半の層がトークン単位KVではなく固定サイズの再帰状態だけを残すため、既存PICの連結・選択再計算をそのまま使えない。HYPICは線形注意層について、各セグメントのゼロ始動終端状態に加えて、そのセグメントが任意の入力状態へ与える累積遷移演算子をキャッシュし、任意の前置状態へセグメントを長さ非依存で合成する。残る全注意層では、独立事前計算との差が各セグメント先頭へ集中することを利用し、先頭8トークン程度の境界窓だけをハイブリッド層全体へ通して再計算する。さらに未キャッシュの長い要求では、PICにより各セグメントが独立に事前計算できる性質を使い、複数推論インスタンスへ分散して並列prefillし、最長処理時間優先で負荷分散しながらNIXL転送を次セグメント計算と重ねる。8基H20-3e、4モデル・5ワークロードの評価では、Prefix Cache比で平均TTFTを3.25倍短縮し、1秒TTFT SLOで持続可能QPSを平均1.66倍へ高め、Full Recomputeとの品質差を平均1.71ポイントに抑える。完全コールドな32kトークン要求では8 workerでTTFTを2.83秒から0.49秒へ短縮し5.7倍高速化する。",
-    "list_summary": "線形注意セグメントの累積遷移演算子をキャッシュして状態を長さ非依存で合成し、全注意層は境界窓だけ再計算、コールドミスはセグメント並列化することで、ハイブリッド注意LLMのTTFTを平均3.25倍短縮する。",
-    "authors": [
-      "Yifei Liu",
-      "Juntong Wu",
-      "Yang Liu",
-      "Junhao Hu",
-      "Minghao Li",
-      "Xiaoxu Chen",
-      "Weihang Chen"
-    ],
+    "summary": "検索拡張生成やエージェント型言語モデルでは、同じ文書や記憶の断片が異なる前置文脈や位置で繰り返し使われる。従来の位置非依存キャッシュは完全注意モデルの鍵値キャッシュを区間ごとに再利用できるが、ハイブリッド注意モデルでは多数の層が履歴を固定長の再帰状態へ圧縮するため、そのまま連結できない。HYPICは、線形注意層について区間を任意の入力状態へ作用させる累積遷移演算子とゼロ始動終端状態を保存し、区間長に依存せず状態を合成する。少数の完全注意層では各区間先頭の短い境界窓だけを再計算し、独立事前計算による文脈差を補正する。さらに未保存区間を複数の推論実体へ分散して並列入力処理し、長いコールド要求の初トークン待ち時間も短縮する。8基のH20-3eを用いた4モデル・5ワークロードの評価では、通常の接頭辞キャッシュに比べ初トークン待ち時間を平均3.25倍短縮し、1秒制約下の持続可能な毎秒要求数を平均1.66倍へ高め、完全再計算との品質差を平均1.71ポイントに抑えた。",
+    "list_summary": "線形注意区間の累積遷移演算子とゼロ始動状態を保存して位置非依存に合成し、完全注意層は境界窓だけ再計算、未保存区間は複数実体で並列処理することで、ハイブリッド注意言語モデルの初トークン待ち時間を平均3.25倍短縮する。",
+    "authors": ["Yifei Liu", "Juntong Wu", "Yang Liu", "Junhao Hu", "Minghao Li", "Xiaoxu Chen", "Weihang Chen"],
     "authors_affiliations": "Yifei Liu、Minghao Li、Xiaoxu Chen、Weihang ChenはXiaohongshu Inc.、Juntong WuとJunhao HuはPeking University、Yang LiuはShanghai Jiao Tong University。",
     "published": "2026-07-01",
     "publication": "arXiv preprint arXiv:2607.01299",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "kv-cache-reuse-position-independent-caching",
-    "topics": [
-      "位置非依存キャッシュ",
-      "ハイブリッド注意",
-      "線形注意",
-      "状態合成",
-      "境界窓再計算",
-      "セグメント並列",
-      "RAG",
-      "SGLang"
-    ],
-    "importance": "純粋な全注意モデル向けPICを、線形注意が多数を占める実用ハイブリッドモデルへ拡張するための代数的キャッシュ単位と分散prefillを同時に提示する。状態空間型・線形注意型モデルの文脈再利用では、単純なKV再利用とは異なる中間表現が必要であることを具体化した重要な配信システム研究である。",
-    "hardware_evaluation": "実機。NVIDIA H20-3e 141GBを8基、18-link NVLinkで全結合した単一ノードを使用。CPUはdual-socket Intel Xeon 6759P-C計120物理コア、DRAM 2TB、Mellanox ConnectX RDMA NICを6基備える。",
-    "quality_effect": "完全再計算と厳密同一ではない。累積遷移式自体は同じ入力なら正確だが、セグメントを独立prefillしたことによる深層入力差が残る。4モデル×4公開データセットではFull Recomputeとの差は平均1.71ポイント。最深線形層の状態ずれはQwen3.5-35Bで相対L2 8.92%、Ring-flashで8.69%。",
+    "topics": ["位置非依存キャッシュ", "ハイブリッド注意", "線形注意", "状態合成", "境界窓再計算", "区間並列入力処理", "検索拡張生成", "SGLang"],
+    "importance": "完全注意モデル向けの位置非依存再利用を、多数の線形注意層を含む実用的なハイブリッド構成へ拡張する。線形注意では鍵値列の代わりに任意の前置状態を変換する演算子を再利用単位として保存する必要があることを明示し、品質補正とコールド要求の分散処理まで一体化した点が重要である。",
+    "hardware_evaluation": "実機評価。NVIDIA H20-3e 141GBを8基、18本のNVLinkで全結合した単一ノードを使用する。CPUはIntel Xeon 6759P-Cを2ソケット、計120物理コア、主記憶2TB。Mellanox ConnectX系ネットワークインターフェースを6基備え、200Gbpsまたは400Gbpsの遠隔直接メモリアクセス通信を用いる。",
+    "quality_effect": "完全再計算と数値的に同一ではない。累積遷移式は同じ入力なら正確だが、各区間を独立に事前計算したことで深層の隠れ表現に差が残る。4モデル×4公開データセットでは完全再計算との差は平均1.71ポイントで、最深部の線形注意状態の相対L2差はQwen3.5-35Bで8.92%、Ring-flashで8.69%だった。",
     "source": "https://arxiv.org/abs/2607.01299",
-    "sources": [
-      "https://arxiv.org/abs/2607.01299",
-      "https://arxiv.org/html/2607.01299v2"
-    ],
+    "sources": ["https://arxiv.org/abs/2607.01299", "https://arxiv.org/html/2607.01299v2"],
     "code": null,
-    "implementation": "SGLang上へ約14,000行のPython/Tritonコードで実装。sglang_routerをセグメントヒット照会とLPT割当へ拡張し、キャッシュ転送はNIXLの非同期片方向GPUDirect RDMA、線形注意状態構築はFLAカーネルを利用する。2026-09-14時点で論文からHYPIC本体の公式公開コードURLは確認できない。",
+    "implementation": "SGLang上に約14,000行のPythonおよびTritonコードを追加して実装する。ルータを区間ヒット照会と最長処理時間優先の割当に拡張し、キャッシュ転送にはNIXLによる非同期の片方向GPU間転送、線形注意状態の構築にはFLAカーネルを利用する。2026-09-14時点で論文本文からHYPIC本体の公式公開コードURLは確認できない。",
     "last_checked": "2026-09-14",
     "references_checked_at": "2026-09-14",
     "references_source": "primary-reference-section",
     "references_total": 56,
     "references": [
-      {
-        "canonical_id": "arXiv:2403.19887",
-        "arxiv_id": "2403.19887"
-      },
-      {
-        "canonical_id": "arXiv:1909.08053",
-        "arxiv_id": "1909.08053"
-      },
-      {
-        "canonical_id": "arXiv:2307.08621",
-        "arxiv_id": "2307.08621"
-      },
-      {
-        "canonical_id": "arXiv:2401.04658",
-        "arxiv_id": "2401.04658"
-      },
-      {
-        "canonical_id": "arXiv:2604.13226",
-        "arxiv_id": "2604.13226"
-      }
+      {"canonical_id": "arXiv:2403.19887", "arxiv_id": "2403.19887"},
+      {"canonical_id": "arXiv:1909.08053", "arxiv_id": "1909.08053"},
+      {"canonical_id": "arXiv:2307.08621", "arxiv_id": "2307.08621"},
+      {"canonical_id": "arXiv:2401.04658", "arxiv_id": "2401.04658"},
+      {"canonical_id": "arXiv:2604.13226", "arxiv_id": "2604.13226"}
     ]
   },
-  "reservation": {
-    "claim_id": "claim-e9e76d3d04a6e4369258f711",
-    "worker_id": "scheduled-chat-llm-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-e9e76d3d04a6e4369258f711", "worker_id": "scheduled-chat-llm-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
