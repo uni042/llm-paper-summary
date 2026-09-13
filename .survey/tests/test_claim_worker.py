@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 import claim_state  # noqa: E402
 import claim_worker  # noqa: E402
+from unittest.mock import patch  # noqa: E402
 
 
 AT = datetime(2026, 9, 13, 0, 0, tzinfo=timezone.utc)
@@ -24,7 +25,8 @@ def job(root: Path, job_id: str, *, priority=50, created="2026-09-12T00:00:00+00
     write_json(root / ".survey/work-queue/jobs" / f"{job_id}.json", {
         "schema_version": 1, "workflow_version": 10, "job_id": job_id,
         "type": kind, "lane": lane, "status": status, "priority": priority,
-        "created_at": created, "title": job_id,
+        "created_at": created, "title": job_id, "paper_path": f"papers/{job_id}.md",
+        "depends_on_job_ids": [job_id],
     })
 
 
@@ -60,6 +62,10 @@ class ClaimWorkerTests(unittest.TestCase):
             claim_worker.process_requests(root, at=AT)
             result = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
             self.assertEqual([x["job_id"] for x in result["assignments"]], ["job-low", "job-a", "job-z"])
+            self.assertEqual(result["assignments"][0]["job"]["type"], "research")
+            self.assertEqual(result["assignments"][0]["job"]["paper_path"], "papers/job-low.md")
+            self.assertEqual(result["assignments"][0]["job"]["depends_on_job_ids"], ["job-low"])
+            self.assertNotIn("_path", result["assignments"][0]["job"])
 
     def test_repeated_request_reuses_authoritative_result_and_claim(self):
         with tempfile.TemporaryDirectory() as td:
@@ -107,6 +113,53 @@ class ClaimWorkerTests(unittest.TestCase):
             self.assertFalse(result["ok"])
             self.assertEqual(result["assignments"], [])
             self.assertIn("request_id", result["error"])
+            self.assertIn("processed_at", result)
+
+    def test_claim_write_interruption_is_recovered_without_new_assignment(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); job(root, "job-r1"); request(root, "req-a")
+            original = claim_worker._write
+            def interrupted(path, obj):
+                if "claim-results" in str(path):
+                    raise RuntimeError("synthetic interruption")
+                return original(path, obj)
+            with patch.object(claim_worker, "_write", side_effect=interrupted):
+                with self.assertRaisesRegex(RuntimeError, "synthetic interruption"):
+                    claim_worker.process_requests(root, at=AT)
+            claim_path = root / ".survey/work-queue/claims/job-r1.json"
+            self.assertTrue(claim_path.exists())
+            claim_before = claim_path.read_text()
+            claim_worker.process_requests(root, at=AT + timedelta(seconds=1))
+            result = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
+            self.assertEqual([x["job_id"] for x in result["assignments"]], ["job-r1"])
+            self.assertEqual(claim_path.read_text(), claim_before)
+
+    def test_invalid_canonical_job_id_or_filename_is_not_claimed(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            write_json(root / ".survey/work-queue/jobs/job-bad.json", {"job_id": "../bad", "type": "research", "status": "ready"})
+            write_json(root / ".survey/work-queue/jobs/job-mismatch.json", {"job_id": "job-other", "type": "research", "status": "ready"})
+            request(root, "req-a")
+            claim_worker.process_requests(root, at=AT)
+            result = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
+            self.assertEqual(result["assignments"], [])
+            self.assertEqual(list((root / ".survey/work-queue/claims").glob("*.json")), [])
+
+    def test_schema_and_non_utc_request_timestamps_are_rejected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); write_json(root / ".survey/work-queue/claim-requests/req-a.json", {"schema_version": 2, "request_id": "req-a", "worker_id": "worker-a", "worker_kind": "work", "requested_at": "2026-09-13T00:00:00+00:00"})
+            write_json(root / ".survey/work-queue/claim-requests/req-b.json", {"schema_version": 1, "request_id": "req-b", "worker_id": "worker-a", "worker_kind": "work", "requested_at": "2026-09-13T09:00:00+09:00"})
+            claim_worker.process_requests(root, at=AT)
+            for request_id in ("req-a", "req-b"):
+                result = json.loads((root / ".survey/work-queue/claim-results" / f"{request_id}.json").read_text())
+                self.assertFalse(result["ok"])
+
+    def test_claim_is_inactive_at_exact_expiry(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); job(root, "job-r1"); request(root, "req-a", lease=300)
+            claim_worker.process_requests(root, at=AT)
+            claims = claim_state.current_claims(root, AT + timedelta(seconds=300))
+            self.assertFalse(claims["job-r1"]["active"])
 
     def test_claim_snapshot_marks_active_and_claimable(self):
         with tempfile.TemporaryDirectory() as td:

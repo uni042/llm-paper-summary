@@ -22,6 +22,7 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 
 from record_bank_config import BANK_PATH_PREFIXES, BANK_ROOTS, SLOT_NAMES
+import claim_state
 
 CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 CHAT_RESULT = ".survey/work-queue/results/chat-inbox.json"
@@ -35,7 +36,7 @@ MAX_ENVELOPE_BYTES = 2 * 1024 * 1024
 MAX_WRITES = 16
 MAX_CONTENT_BYTES = 1024 * 1024
 ENVELOPE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
-TERMINAL_JOB_STATES = {"completed", "rejected", "superseded", "blocked_permanent"}
+TERMINAL_JOB_STATES = claim_state.TERMINAL
 
 FALLBACK_INBOX = Path(".survey/work-queue/fallback-inbox")
 FALLBACK_ARCHIVE = Path(".survey/work-queue/fallback-archive")
@@ -118,9 +119,39 @@ def _validate_claimed_metadata(envelope: dict[str, Any]) -> None:
     payload = chat_payload(envelope)
     if payload is None:
         raise ValueError("claimed envelope requires a chat-inbox payload")
+    record_writes = [
+        write for write in envelope["writes"]
+        if any(write["path"].startswith(prefix) for prefix in BANK_PATH_PREFIXES)
+    ]
+    expected_names = {f"{slot}.json" for slot in SLOT_NAMES}
+    if len(record_writes) != len(SLOT_NAMES) or {PurePosixPath(write["path"]).name for write in record_writes} != expected_names:
+        raise ValueError("claimed envelope requires all five record slots")
+    roots = {str(PurePosixPath(write["path"]).parent) for write in record_writes}
+    if len(roots) != 1:
+        raise ValueError("claimed envelope record slots must use one bank")
+    for write in record_writes:
+        slot = json.loads(write["content"])
+        expected_slot = PurePosixPath(write["path"]).stem
+        if (
+            slot.get("slot") != expected_slot
+            or slot.get("job_id") != envelope["job_id"]
+            or slot.get("attempt_id") != envelope["attempt_id"]
+            or slot.get("transport_version") != 10
+        ):
+            raise ValueError(f"claimed envelope slot identity mismatch: {expected_slot}")
+    kind = envelope.get("kind")
+    dependencies = envelope.get("depends_on_job_ids")
+    if kind not in {"research", "audit"}:
+        raise ValueError("claimed envelope kind must be research or audit")
+    if not isinstance(dependencies, list) or envelope["job_id"] not in dependencies or any(
+        not isinstance(value, str) or not ENVELOPE_ID_RE.fullmatch(value) for value in dependencies
+    ):
+        raise ValueError("claimed envelope depends_on_job_ids must include job_id")
     for key in ("job_id", "claim_id", "worker_id", "attempt_id"):
         if payload.get(key) != envelope[key]:
             raise ValueError(f"claimed envelope {key} does not match chat payload")
+    if payload.get("kind") != kind or payload.get("depends_on_job_ids") != dependencies:
+        raise ValueError("claimed envelope kind/dependencies do not match chat payload")
 
 
 def claimed_envelope_state(repo_root: Path, envelope: dict[str, Any]) -> tuple[bool, str | None]:
@@ -132,9 +163,18 @@ def claimed_envelope_state(repo_root: Path, envelope: dict[str, Any]) -> tuple[b
     if envelope.get("origin") != "claimed_worker":
         return True, None
     _validate_claimed_metadata(envelope)
-    import claim_state  # noqa: WPS433
-
     job_id = envelope["job_id"]
+    job_path = repo_root / ".survey/work-queue/jobs" / f"{job_id}.json"
+    job = read_object(job_path)
+    if job is None or job.get("job_id") != job_id or job_path.stem != job_id:
+        return False, "canonical job identity is missing or unsafe"
+    if job.get("type") != envelope.get("kind"):
+        return False, "claimed envelope kind differs from canonical job type"
+    canonical_dependencies = job.get("depends_on_job_ids") or job.get("dependencies")
+    if isinstance(canonical_dependencies, list) and any(
+        dependency not in envelope["depends_on_job_ids"] for dependency in canonical_dependencies
+    ):
+        return False, "claimed envelope dependencies differ from canonical job"
     current = claim_state.current_claims(repo_root).get(job_id)
     if current is None:
         return False, "missing current claim"

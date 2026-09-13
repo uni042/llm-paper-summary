@@ -12,6 +12,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 import queue_worker  # noqa: E402
+import maintenance_health  # noqa: E402
 
 
 class AuditMetadataRoutingTest(unittest.TestCase):
@@ -98,6 +99,23 @@ class DiscoveryReplenishmentTest(unittest.TestCase):
             self.assertIn("job-research-1", visible)
             self.assertIn("job-discovery", visible)
             self.assertEqual(snapshot["claiming"], {"ready_research_audit": 2, "actively_claimed": 1, "claimable": 1})
+
+    def test_maintenance_snapshot_matches_queue_snapshot_claiming_fields(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); survey_root = root / ".survey"
+            jobs = [{"job_id": "job-r1", "type": "research", "status": "ready", "priority": 80, "created_at": "2026-09-12T00:00:00+00:00"}]
+            (survey_root / "work-queue/claims").mkdir(parents=True)
+            (survey_root / "work-queue/claims/job-r1.json").write_text('{"job_id":"job-r1","claim_id":"claim-a","expires_at":"2999-01-01T00:00:00+00:00"}', encoding="utf-8")
+            original_root = queue_worker.ROOT
+            try:
+                queue_worker.ROOT = survey_root
+                with patch.object(queue_worker, "iter_jobs", return_value=iter(jobs)):
+                    queue_snapshot = queue_worker.queue_snapshot()
+                maintenance_snapshot = maintenance_health.build_queue_snapshot({"job-r1": jobs[0]}, root)
+            finally:
+                queue_worker.ROOT = original_root
+            self.assertEqual(queue_snapshot["claiming"], maintenance_snapshot["claiming"])
+            self.assertEqual(queue_snapshot["next_jobs"], maintenance_snapshot["next_jobs"])
     def test_ready_research_does_not_block_discovery_replenishment(self) -> None:
         jobs = [
             {

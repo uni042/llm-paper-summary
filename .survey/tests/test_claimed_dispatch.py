@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 import dispatch_fallback_inbox  # noqa: E402
 import fallback_transport as ft  # noqa: E402
+import select_record_bank  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 
@@ -22,7 +23,7 @@ def claim(root: Path, job_id="job-r1", claim_id="claim-a", worker_id="worker-a",
     write_json(root / ".survey/work-queue/claims" / f"{job_id}.json", {
         "schema_version": 1, "workflow_version": 10, "job_id": job_id,
         "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id,
-        "expires_at": expires,
+        "claimed_at": "2026-09-13T00:00:00+00:00", "expires_at": expires,
     })
 
 
@@ -30,12 +31,12 @@ def envelope(job_id="job-r1", claim_id="claim-a", worker_id="worker-a", attempt_
     writes = []
     for slot in SLOT_NAMES:
         writes.append({"path": f".survey/work-queue/records/chat-record/{slot}.json", "content": json.dumps({"schema_version": 1, "transport_version": 10, "slot": slot, "job_id": job_id, "attempt_id": attempt_id, "data": {"slot": slot}})})
-    writes.append({"path": ft.CHAT_INBOX, "content": json.dumps({"schema_version": 1, "transport_version": 10, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "paper_path": "papers/test.md", "record_bank": "a"})})
-    return {"schema_version": 1, "id": envelope_id, "origin": origin, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "writes": writes}
+    writes.append({"path": ft.CHAT_INBOX, "content": json.dumps({"schema_version": 1, "transport_version": 10, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "kind": "research", "depends_on_job_ids": [job_id], "paper_path": "papers/test.md", "record_bank": "a"})})
+    return {"schema_version": 1, "id": envelope_id, "origin": origin, "job_id": job_id, "claim_id": claim_id, "worker_id": worker_id, "attempt_id": attempt_id, "kind": "research", "depends_on_job_ids": [job_id], "writes": writes}
 
 
 def seed_job(root: Path, job_id="job-r1", status="ready"):
-    write_json(root / ".survey/work-queue/jobs" / f"{job_id}.json", {"job_id": job_id, "type": "research", "status": status, "paper_path": "papers/test.md"})
+    write_json(root / ".survey/work-queue/jobs" / f"{job_id}.json", {"job_id": job_id, "type": "research", "status": status, "paper_path": "papers/test.md", "depends_on_job_ids": [job_id]})
 
 
 class ClaimedDispatchTests(unittest.TestCase):
@@ -67,6 +68,69 @@ class ClaimedDispatchTests(unittest.TestCase):
             inbox = json.loads((root / ft.CHAT_INBOX).read_text(encoding="utf-8"))
             self.assertEqual(inbox["record_bank"], "a")
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").exists())
+
+    def test_claimed_envelope_without_all_five_slots_is_quarantined_before_apply(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); claim(root); value = envelope(); value["writes"] = [value["writes"][-1]]; self.put(root, value)
+            result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(result["action"], "idle")
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+            self.assertFalse((root / ft.CHAT_INBOX).exists())
+
+    def test_claimed_envelope_with_one_missing_slot_is_quarantined(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); claim(root); value = envelope(); value["writes"].pop(1); self.put(root, value)
+            result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(result["action"], "idle")
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+
+    def test_slot_internal_identity_mismatch_is_quarantined_without_bank_or_chat_change(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); claim(root); self.seed_free_banks(root); value = envelope()
+            payload = json.loads(value["writes"][0]["content"]); payload["job_id"] = "job-other"; value["writes"][0]["content"] = json.dumps(payload); self.put(root, value)
+            result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(result["action"], "idle")
+            self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+            self.assertFalse((root / ft.CHAT_INBOX).exists())
+
+    def test_slot_name_or_transport_version_mismatch_is_quarantined(self):
+        for field, value in (("slot", "results"), ("transport_version", 9)):
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as td:
+                root = Path(td); seed_job(root); claim(root); self.seed_free_banks(root); envelope_value = envelope()
+                payload = json.loads(envelope_value["writes"][0]["content"]); payload[field] = value; envelope_value["writes"][0]["content"] = json.dumps(payload); self.put(root, envelope_value)
+                result = dispatch_fallback_inbox.dispatch(root)
+                self.assertEqual(result["action"], "idle")
+                self.assertTrue((root / ft.FALLBACK_FAILED / "env-a.json").exists())
+
+    def test_two_claimed_envelopes_do_not_overwrite_unsettled_bank_or_chat(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); seed_job(root); seed_job(root, "job-r2"); claim(root); claim(root, "job-r2", "claim-b", "worker-b", "attempt-b"); self.seed_free_banks(root)
+            first = envelope(); second = envelope("job-r2", "claim-b", "worker-b", "attempt-b", envelope_id="env-b")
+            self.put(root, first); self.put(root, second)
+            self.assertEqual(dispatch_fallback_inbox.dispatch(root)["action"], "dispatched")
+            first_inbox = (root / ft.CHAT_INBOX).read_text(encoding="utf-8")
+            second_result = dispatch_fallback_inbox.dispatch(root)
+            self.assertEqual(second_result["action"], "idle")
+            self.assertEqual((root / ft.CHAT_INBOX).read_text(encoding="utf-8"), first_inbox)
+            self.assertTrue((root / ft.FALLBACK_INBOX / "env-b.json").exists())
+
+    def test_selector_reads_all_canonical_ready_job_files_not_truncated_snapshot(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            jobs = root / ".survey/work-queue/jobs"
+            jobs.mkdir(parents=True)
+            for index in range(10):
+                write_json(jobs / f"job-r{index}.json", {"job_id": f"job-r{index}", "type": "research", "status": "ready"})
+            write_json(root / ".survey/work-queue/next-jobs.json", {"next_jobs": [{"job_id": "job-r0"}]})
+            self.assertEqual(len(select_record_bank.ready_job_ids(root)), 10)
+
+    def test_failed_and_cancelled_claimed_jobs_are_archived_without_apply(self):
+        for status in ("failed", "cancelled"):
+            with self.subTest(status=status), tempfile.TemporaryDirectory() as td:
+                root = Path(td); seed_job(root, status=status); claim(root); value = envelope(); self.put(root, value)
+                result = dispatch_fallback_inbox.dispatch(root)
+                self.assertEqual(result["action"], "ack_terminal")
+                self.assertFalse((root / ft.CHAT_INBOX).exists())
 
     def test_superseded_claim_is_quarantined_without_transport_write(self):
         with tempfile.TemporaryDirectory() as td:

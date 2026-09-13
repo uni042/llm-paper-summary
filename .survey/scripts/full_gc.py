@@ -72,7 +72,7 @@ def object_time(obj):
         return None
     for key in (
         "completed_at", "superseded_at", "rejected_at", "failed_at",
-        "processed_at", "submitted_at", "assigned_at", "expires_at", "updated_at", "created_at",
+        "processed_at", "submitted_at", "claimed_at", "assigned_at", "expires_at", "updated_at", "created_at",
     ):
         value = parse_time(obj.get(key))
         if value:

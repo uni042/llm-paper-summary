@@ -58,6 +58,8 @@ def _safe(value: Any, label: str) -> str:
 def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     if not isinstance(raw, dict):
         raise ValueError("request must be an object")
+    if raw.get("schema_version") != 1:
+        raise ValueError("schema_version must be 1")
     request_id = _safe(raw.get("request_id"), "request_id")
     if path.stem != request_id:
         raise ValueError("request_id must match request filename")
@@ -73,8 +75,8 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
         parsed_raw = dt.datetime.fromisoformat(requested_at_raw.replace("Z", "+00:00"))
     except ValueError:
         parsed_raw = None
-    if parsed_raw is None or parsed_raw.tzinfo is None:
-        raise ValueError("requested_at must include a UTC offset")
+    if parsed_raw is None or parsed_raw.tzinfo is None or parsed_raw.utcoffset() != dt.timedelta(0):
+        raise ValueError("requested_at must be UTC (Z or +00:00)")
     max_jobs = raw.get("max_jobs", DEFAULT_MAX_JOBS)
     if isinstance(max_jobs, bool) or not isinstance(max_jobs, int) or not 1 <= max_jobs <= 4:
         raise ValueError("max_jobs must be between 1 and 4")
@@ -107,10 +109,30 @@ def _job_files(root: Path) -> list[dict[str, Any]]:
     for path in sorted(jobs.glob("*.json")) if jobs.is_dir() else []:
         obj = _read(path)
         if isinstance(obj, dict):
+            job_id = obj.get("job_id")
+            if not isinstance(job_id, str) or not SAFE_ID_RE.fullmatch(job_id) or path.stem != job_id:
+                continue
             row = dict(obj)
-            row.setdefault("job_id", path.stem)
+            row.pop("_path", None)
             out.append(row)
     return out
+
+
+def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "job_id": claim["job_id"], "claim_id": claim["claim_id"],
+        "worker_id": claim["worker_id"], "worker_kind": claim["worker_kind"],
+        "attempt_id": claim["attempt_id"], "claimed_at": claim.get("claimed_at"),
+        "expires_at": claim["expires_at"], "job": dict(job),
+    }
+
+
+def _dependencies(job_id: str, job: dict[str, Any]) -> list[str]:
+    values = job.get("depends_on_job_ids") or job.get("dependencies") or []
+    values = [str(value) for value in values if isinstance(value, str)]
+    if job_id not in values:
+        values.append(job_id)
+    return values
 
 
 def _result_path(root: Path, request_id: str) -> Path:
@@ -144,13 +166,29 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             errors += 1
             _write(result_path, {
                 "schema_version": 1, "workflow_version": 10, "request_id": path.stem,
-                "ok": False, "assignments": [], "error": str(exc),
+                "ok": False, "assignments": [], "error": str(exc), "processed_at": _iso(now),
             })
             processed += 1
             continue
 
+        jobs = _job_files(root)
+        by_id = {str(item["job_id"]): item for item in jobs}
+        recovered = []
+        for job_id, current in claims.items():
+            if current.get("request_id") == request["request_id"] and job_id in by_id:
+                recovered.append(_assignment(by_id[job_id], current))
+        if recovered:
+            _write(result_path, {
+                "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
+                "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+                "ok": True, "assignments": recovered, "processed_at": _iso(now),
+            })
+            assigned += len(recovered)
+            processed += 1
+            continue
+
         available = []
-        for item in _job_files(root):
+        for item in jobs:
             job_id = str(item.get("job_id") or "")
             if item.get("status") != "ready" or item.get("type") not in request["job_types"]:
                 continue
@@ -171,7 +209,9 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
                 "claim_id": claim_id, "job_id": job_id,
                 "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
                 "attempt_id": attempt_id, "request_id": request["request_id"],
-                "assigned_at": _iso(now), "expires_at": _iso(expires),
+                "claimed_at": _iso(now), "expires_at": _iso(expires),
+                "kind": item.get("type"),
+                "depends_on_job_ids": _dependencies(job_id, item),
             }
             if previous and previous.get("claim_id") != claim_id:
                 claim["previous_claim_id"] = previous.get("claim_id")
@@ -180,7 +220,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             assignments.append({
                 "job_id": job_id, "claim_id": claim_id, "worker_id": request["worker_id"],
                 "worker_kind": request["worker_kind"], "attempt_id": attempt_id,
-                "assigned_at": _iso(now), "expires_at": _iso(expires),
+                "claimed_at": _iso(now), "expires_at": _iso(expires), "job": dict(item),
             })
         _write(result_path, {
             "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
