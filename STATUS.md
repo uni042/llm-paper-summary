@@ -1,16 +1,16 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 12:47 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:01 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **181** |
-| Research ready | **181** |
+| Candidate在庫（Research ready） | **180** |
+| Research ready | **180** |
 | Research blocked | **0** |
 | Research deferred | **3** |
-| Research completed（累計） | **209** |
+| Research completed（累計） | **210** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
 | Maintenance counter | **11 / 24** |
@@ -26,11 +26,11 @@ Run: **2026-09-13T12:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
-| Repo収録 | **1** |
+| Repo収録 | **2** |
 | Research/Audit blocked遷移 | **0** |
 
 > Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。
@@ -61,14 +61,14 @@ Run: **2026-09-13T11:00:00+09:00**
 | 重複率 | **43.8%** |
 | Novel候補 | **407** |
 | Research候補採用 | **227** |
-| Research完了 | **71** |
-| Repo収録 | **71** |
+| Research完了 | **72** |
+| Repo収録 | **72** |
 | Audit完了 | **0** |
 | Fallback archive（全helper） | **4** |
 
 ### 24時間ファネル
 
-**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 71 → Repo収録 71**
+**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 72 → Repo収録 72**
 
 ## 探索専用workerの探索効率（直近24時間）
 
@@ -234,6 +234,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### Research完了
 
+- `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 - `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
 - `arXiv:2608.22643` — NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching
 - `arXiv:2609.00097` — Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding
@@ -241,15 +242,14 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
 - `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 - `arXiv:2609.02737` — Language Models Can Control Their Own Attention
-- `arXiv:2604.06370` — ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache
 
 ### 次に処理する候補
 
-- P88 `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 - P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
 - P88 `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
 - P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
+- P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
 
 ## 7日比較
 
@@ -258,3 +258,22 @@ Run: **2026-09-13T11:00:00+09:00**
 ---
 
 このページは自動生成物です。手編集せず、集計ロジックは `.survey/scripts/build_status_dashboard.py` を修正してください。
+
+<!-- research-throughput-status:start -->
+## Research throughput health
+
+Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
+
+| 指標 | 値 |
+|---|---:|
+| Research ready | **180** |
+| Active claims | **23** |
+| Claimable | **157** |
+| Latest normal run | **2026-09-13T12:30:00+09:00** |
+| Latest research completed | **2** |
+| Research completed (24h) | **72** |
+| Oldest active claim age | **91 min** |
+
+高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
+
+<!-- research-throughput-status:end -->
