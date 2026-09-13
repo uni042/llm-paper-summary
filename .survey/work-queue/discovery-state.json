@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:51:07+00:00",
-  "last_run_key": "2026-09-13T09:28:10+09:00",
-  "last_round": "specialist-foundational-runtime-8",
+  "updated_at": "2026-09-13T01:03:15+00:00",
+  "last_run_key": "2026-09-13T09:57:59+09:00",
+  "last_round": "specialist-disagg-slo-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2679,6 +2679,26 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は長文脈・分離KV・preemptible cloudの基礎系（LoongServe、Mooncake、SpotServe）を確認し、その後はrecent kernel/edgeへ軸を変える",
       "source_submission": "work-queue/submissions/20260913T0950JST-discovery-specialist-foundational-runtime-8.json"
+    },
+    {
+      "run_key": "2026-09-13T09:57:59+09:00",
+      "round": "specialist-disagg-slo-1",
+      "axis": "分離型サービングの負荷偏り・SLO適応",
+      "query_summary": "直前のfoundational-runtime軸を反復せず、prefill/decode分離サービングの負荷偏り、集約/分離切替、長文脈配置を探索。MetaKV、ZipServ、Prefill-as-a-Service、理論的prefill/decode制御など既収録候補を最新job/identityで除外し、未収録の実装指向2件を送信した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5714285714285714,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2609.07966",
+        "arxiv:2603.17435",
+        "arxiv:2604.15039",
+        "arxiv:2602.02987"
+      ],
+      "next_axis_hint": "次は新着GPU kernel/量子化実行系と、MoE expert配置・I/O schedulingのforward/backward citationへ軸を移す",
+      "source_submission": "work-queue/submissions/20260913T1004JST-discovery-specialist-disagg-slo-1.json"
     }
   ],
   "axes": {
@@ -4191,6 +4211,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次は長文脈・分離KV・preemptible cloudの基礎系（LoongServe、Mooncake、SpotServe）を確認し、その後はrecent kernel/edgeへ軸を変える"
+    },
+    "分離型サービングの負荷偏り・SLO適応": {
+      "last_run_key": "2026-09-13T09:57:59+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.5714285714285714,
+      "next_axis_hint": "次は新着GPU kernel/量子化実行系と、MoE expert配置・I/O schedulingのforward/backward citationへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

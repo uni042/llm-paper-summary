@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:54:05.714409+00:00",
+  "updated_at": "2026-09-13T01:04:35.118636+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:54:05.714409+00:00",
+      "last_recorded_at": "2026-09-13T01:04:35.118636+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 0,
-        "new_jobs": 16,
+        "new_jobs": 18,
         "new_papers": 1,
         "fallback_archived": 3
       },
@@ -16585,6 +16585,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34729537672:1",
+          "recorded_at": "2026-09-13T01:04:35.118636+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34729537672",
+            "run_attempt": "1",
+            "source_sha": "b51a7a7503389b5996d09d43fb76a69194da650b"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16646,6 +16660,14 @@
         },
         {
           "job_id": "job-e9cf4499f0d72a37",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-395a42f77fdb747e",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16765,6 +16787,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-505b2997047a5030",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-de92658797430cf6",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2508.01989",
+          "title": "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -16777,7 +16813,8 @@
         ".survey/work-queue/results/20260913T0941JST-discovery-specialist-network-saturation-5.json",
         ".survey/work-queue/results/20260913T0944JST-discovery-specialist-multitenant-runtime-6.json",
         ".survey/work-queue/results/20260913T0947JST-discovery-specialist-foundational-omissions-7.json",
-        ".survey/work-queue/results/20260913T0950JST-discovery-specialist-foundational-runtime-8.json"
+        ".survey/work-queue/results/20260913T0950JST-discovery-specialist-foundational-runtime-8.json",
+        ".survey/work-queue/results/20260913T1004JST-discovery-specialist-disagg-slo-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",
@@ -16786,7 +16823,7 @@
       ],
       "paper_active_count_before": 393,
       "paper_active_count_after": 394,
-      "last_successful_action": "fallback_archived"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }

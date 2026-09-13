@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-de92658797430cf6",
+  "type": "research",
+  "parent_job_id": "job-395a42f77fdb747e",
+  "priority": 86,
+  "canonical_id": "arXiv:2508.01989",
+  "title": "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving",
+  "source_url": "https://arxiv.org/abs/2508.01989",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md",
+  "selection_reason": "prefill/decode集約と分離のどちらが有利かがTTFT・TPOT SLOの組合せで変わる点を整理し、prefill-heavy/decode-heavy GPU instanceとchunk sizeを連続的に調整して両方式を統一するTaiChiを提案する。balanced SLOではlatency shiftingとlength-aware prefill schedulingを組み合わせ、既存方式比最大77%のgoodput向上を報告するため、分離/集約を二者択一せず動的に接続するサービング設計として収録価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:03:15+00:00",
+  "artifact_transport": "structured_record_v10"
+}
