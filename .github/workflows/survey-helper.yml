@@ -40,6 +40,12 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Snapshot reusable Chat transport baseline
+        run: |
+          python .survey/scripts/reusable_transport_baseline.py snapshot \
+            --repo-root . \
+            --snapshot-dir /tmp/reusable-chat-baseline
+
       - name: Snapshot worker state for run ledger
         run: |
           python .survey/scripts/record_run_ledger.py snapshot \
@@ -55,6 +61,7 @@ jobs:
             .survey/scripts/fallback_transport.py \
             .survey/scripts/dispatch_fallback_inbox.py \
             .survey/scripts/preflight_chat_record.py \
+            .survey/scripts/reusable_transport_baseline.py \
             .survey/scripts/reconcile_maintenance_state.py \
             .survey/scripts/record_run_ledger.py \
             .survey/scripts/blocked_retry.py
@@ -232,10 +239,12 @@ jobs:
             --repo-root . \
             --snapshot /tmp/survey-helper-baseline.json
 
-      - name: Restore transient legacy transport files
+      - name: Restore reusable Chat transport after fallback replay
         run: |
-          git checkout -- .survey/work-queue/payloads/chat-payload.md
-          git checkout -- .survey/work-queue/submissions/chat-inbox.json
+          python .survey/scripts/reusable_transport_baseline.py restore \
+            --repo-root . \
+            --snapshot-dir /tmp/reusable-chat-baseline \
+            --fallback-report /tmp/fallback-dispatch.json
 
       - name: Commit background queue results
         run: |
