@@ -2,25 +2,18 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2604.06664-20260913-0254-v10-e",
-  "job_id": "job-research-b7ad70251596454b",
+  "attempt_id": "attempt-dd8752d0e6ecdac0e4a1c0da",
+  "job_id": "job-research-f3407b821f3f7dcf",
   "data": {
-    "overview": "FoundryはCUDA graph warmup/captureをonline起動経路からほぼ除去し、denseモデルでは従来28〜48秒級の初期化を1.3〜2.0秒、MoEでは112〜650秒級を2.7〜3.9秒へ短縮した。最大例のQwen3-235B-A22B EP8 BF16は650秒から3.9秒で99%削減する。CUDA-checkpointと比べてもsingle-GPU設定で2.6〜4.4倍高速で、archiveも概ね4〜5倍小さい。512 graphは12〜25個のunique topologyへ圧縮され、templateのin-place updateは新規graph constructionより24〜32倍速い。重要なのはcold startを下げるためeager modeへ落としたのではなく、native captureと同じCUDA graphを復元し、H200/B200でTPOT低下が観測されず生成tokenも一致したことである。",
+    "overview": "co-located構成ではQwen3-8Bで平均62.0%、Qwen3-32Bで61.5%の変換点TTFT削減。要約は要約生成とfull re-prefillを前倒しでき最大11.9倍改善した。prefill/decode分離でも最大64並行agentで平均64.5%削減し、agent framework別でも26.8〜80.5%改善した。",
     "key_results": [
-      {"metric":"Qwen3-14B initialization","value":"36〜48秒→1.7〜1.8秒、約95%削減","baseline":"vLLM native CUDA graph capture","condition":"H200、DP1〜DP8、512 graphs","interpretation":"rank数を1から8へ増やしてもFoundry LOADはほぼ一定で、single-rank archive共有と非計算型graph reconstructionがscaleする。"},
-      {"metric":"Llama3-8B / Gemma3-12B initialization","value":"28秒→1.3秒、45秒→2.0秒、各約95%削減","baseline":"vLLM native CUDA graph capture","condition":"H200 dense models","interpretation":"Qwen固有kernelだけでなく異なるdense architectureでもexecution-context materializationが機能する。"},
-      {"metric":"Qwen3-30B-A3B BF16 initialization","value":"112〜154秒→2.7〜2.8秒、97〜98%削減","baseline":"vLLM native capture","condition":"H200、EP2〜EP8","interpretation":"DeepEP/NVSHMEMを含むmulti-GPU MoE communication graphでもsingle-GPU SAVEからrank-specific restoreできる。"},
-      {"metric":"Qwen3-235B-A22B EP8 BF16 initialization","value":"650秒→3.9秒、99%削減","baseline":"vLLM native capture","condition":"8×H200、EP8","interpretation":"大規模MoEほどbatch-sizeごとのforward captureが高価なため、template restorationの絶対効果が最大になる。"},
-      {"metric":"FP8 MoE initialization","value":"Qwen3-30B-A3B 72〜83秒→2.8〜2.9秒、Qwen3-235B-A22B 136〜146秒→3.5秒、96〜97%削減","baseline":"vLLM native capture","condition":"DeepGEMM FP8、EP2〜EP8/EP4〜EP8","interpretation":"計算kernelがBF16 TritonからFP8 DeepGEMMへ変わってもLOAD timeはほぼ変わらず、kernel-agnostic restorationを支持する。"},
-      {"metric":"eager mode comparison","value":"Qwen3-14B DP8 5.0秒 eager vs 1.7秒 Foundry、Qwen3-235B EP8 62秒 eager vs 3.9秒 Foundry","baseline":"vLLM without CUDA graphs","condition":"H200","interpretation":"CUDA graphを諦めて起動を速めるよりFoundryの方が速い例があり、後続decode性能も保持する。"},
-      {"metric":"CUDA-checkpoint restore","value":"5.7〜6.1秒 vs Foundry 1.3〜2.3秒、Foundryが2.6〜4.4倍高速","baseline":"NVIDIA CUDA-checkpoint + CRIU","condition":"single-GPU configurations","interpretation":"process全CUDA stateを戻すより、graph replayに必要なmemory/binary/contextだけ保存する方が軽い。"},
-      {"metric":"serving TPOT","value":"native vLLM CUDA graphと観測可能な低下なし","baseline":"native captured graphs","condition":"H200/B200、batch16〜512、dense/MoE/custom kernels","interpretation":"restoreされたgraphはcold-start短縮のためperformanceを犠牲にしていない。生成tokenも一致。"},
-      {"metric":"template compression","value":"512 graph中unique topologyは12〜25、95〜98%をon-demand updateで処理","baseline":"全512 graphを個別build","condition":"Qwen3/Llama3/Gemma3各モデル","interpretation":"batch sizeが変わってもgraph topologyは少数パターンに収束し、template共有が広いarchitectureで成立する。"},
-      {"metric":"per-graph reconstruction","value":"driver construction 31.1〜69.5ms、stream capture 59.7〜198.6ms、in-place update 0.98〜2.89ms","baseline":"stream capture / full driver construction","condition":"Qwen3-14B DP4、Qwen3-30B-A3B EP4","interpretation":"updateはconstructionより24〜32倍速く、template以外をonline on-demand specializationできる。"},
-      {"metric":"archive size","value":"Qwen3-14B 1.1GB vs CUDA-checkpoint 3.7GB、Qwen3-235B EP8 2.2GB","baseline":"CUDA-checkpoint image","condition":"weights/KV excluded from checkpoint","interpretation":"graph metadataと必要kernel binaryだけを保存しrank間共有するため、process checkpointより小さい。"}
+      {"metric": "変換点TTFT", "value": "最大11.9倍改善", "baseline": "同期summarization", "condition": "Qwen3、summarization", "interpretation": "要約生成と再prefillを事前に背景実行してcritical pathから外す。"},
+      {"metric": "平均TTFT削減", "value": "Qwen3-8B 62.0%、Qwen3-32B 61.5%", "baseline": "同期context engineering", "condition": "PD co-located、4戦略", "interpretation": "モデル規模が変わっても変換spikeを安定して隠す。"},
+      {"metric": "PD分離構成", "value": "平均64.5%削減", "baseline": "同期方式", "condition": "4 prefill + 4 decode H100、最大64 agent", "interpretation": "KV転送とrouting費用があってもlookahead効果が維持される。"},
+      {"metric": "性能モデル誤差", "value": "最大13.7%（token-only 41.5%）", "baseline": "token budgetのみ", "condition": "decode 4件 + prefill chunk 2/4件、cached context長変化", "interpretation": "KV長を考慮し長文attention costをより正確に予測する。"}
     ],
-    "negative_results": "Foundryのinter-rank sharingはrankごとに同一execution flowを持つSPMD構成が前提で、Pipeline Parallelismのようにstageごとに異なるgraph topologyでは単一templateを全rank共有できない。deterministic address layoutは同じallocation sequenceと固定KV cache sizeを必要とし、vLLMではSAVE/LOAD前にKV cache sizeを明示的に固定する。archiveは最大モデルで2.2GBあり、kernel binariesだけで1.4GBを占めるため完全に無視できるstorageではない。LOADで新しいkernel/versionへ自動適応するわけではなく、engine/kernel更新後は対応archiveの再SAVEが必要である。またCUDA-checkpoint比較はそのIPC limitationのためsingle-GPUのみで、Medusaは現行CUDA/Hopperへ移植困難として直接比較していない。",
-    "interpretation": "重み転送の高速化によってcold startの主律速がCUDA graph captureへ移った環境では、Foundryはwarmup executionを『毎起動時の計算』から『offline archive生成時の一回だけの計算』へ移す。鍵はgraph topologyだけを保存するのではなく、pointerが期待するvirtual addressとkernel functionの由来binaryまで復元するため、opaque kernel argumentを理解しなくてよい点である。template化は復元可能性だけでなく、数百graphをdriver APIで再instantiateすると数十秒かかる二次律速も除去する。したがってautoscalingだけでなく、Gyges/EaaS/Flying Serving等のparallelism hot switchingでgraph recaptureが残る場合の補完層として価値が高い。",
-    "quality_impact": "復元したCUDA graphは同じkernel binaryとparameterを使い、論文はnative vLLMと生成tokenが同一であることを確認する。品質近似はなく、性能面でもTPOT曲線はほぼ完全に一致する。"
+    "negative_results": "offloading単独は古いsegmentを外部化した後の変換対象が小さくなり、高並行度では同期方式との差が縮む。単一インスタンスは長文KV容量により16並行以上へ拡張していない。",
+    "interpretation": "変換コストが大きく、soft thresholdから前倒しできる戦略ほどlookahead価値が高い。背景仕事を無制限に流すとforegroundを圧迫するためSLO-aware schedulerが必要。",
+    "quality_impact": "context変換の意味はbaselineと同じで、生成品質を近似で落とす方式ではない。"
   }
 }
