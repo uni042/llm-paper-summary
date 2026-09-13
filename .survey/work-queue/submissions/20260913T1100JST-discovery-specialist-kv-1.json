@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-a09df27010ed5f56",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04971",
+      "title": "BeaconKV: Key-Value Cache Compression Guided by Beacon Queries for Efficient Large Reasoning Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.04971",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04971-beaconkv-beacon-query-kv-compression.md",
+      "priority": 89,
+      "reason": "長いCoTで将来再参照される遠距離文脈を直近queryだけでは予測しにくい問題に対し、Thought Revisiting Tokenに対応するquery群を少数のbeacon queryとして保持し、将来重要になるKVを訓練不要で予測する。4つの公開LRMで最大5.8倍のKVメモリ削減と4.3倍超のthroughput改善を報告し、ICML 2026採択・コード公開あり。長時間推論のKV圧縮という重点テーマに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-compression.md",
+      "priority": 86,
+      "reason": "KV圧縮方式を固定せず、promptごとの遅延・peak memory制約と正答確率を軽量予測して、KVQuant/H2O/RocketKV等の構成から実行時に選択する。静的圧縮方式より制約下成功率を平均約0.07、最大0.135改善し、コードも公開されている。単一圧縮手法ではなく資源制約に応じたKV管理ポリシー層として既存系統との差分がある。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+      "priority": 84,
+      "reason": "デコード時KV evictionでtoken scorer自体だけでなく時間方向の集約規則が保持集合を支配する点を分析し、EMA集約のInertiaKVと周期更新版InertiaKV-Lazyを提案する。Lazy版はfull-refresh InertiaKV比1.34〜1.46倍のdecode throughputを報告し、6つの公開モデルとLongBench系で検証、EMNLP 2026 Main採択。KV evictionの設計軸を時間集約へ広げる点に研究価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-recent-kv-1",
+    "axis": "2026年9月新着・KV圧縮と動的管理",
+    "query_summary": "直前のnetworking/disaggregated-serving高重複軸を避け、2026年9月のKV cache圧縮・eviction・長時間推論向け動的管理を一次資料arXiv中心に軽量評価した。投入直前に最新mainと既存repo検索でarXiv ID重複を再確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はMoE expert placement/cache/prefetchかGPU runtime/kernelの2026年9月新着へ軸を移す",
+    "empty_round_reason": null
+  }
+}
