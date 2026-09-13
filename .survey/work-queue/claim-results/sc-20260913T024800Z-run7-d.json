@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T024800Z-run7-d",
+  "worker_id": "scheduled-chat-20260913-1130-run7-d",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-d53ec8171f729e9e",
+      "claim_id": "claim-6f9e9e6b2bc2c5cdf1674ad5",
+      "worker_id": "scheduled-chat-20260913-1130-run7-d",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-6f9e9e6b2bc2c5cdf1674ad5",
+      "claimed_at": "2026-09-13T02:46:09+00:00",
+      "expires_at": "2026-09-13T10:46:09+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-d53ec8171f729e9e"
+      ],
+      "job": {
+        "job_id": "job-research-d53ec8171f729e9e",
+        "type": "research",
+        "parent_job_id": "job-e15f3a03ac140338",
+        "priority": 88,
+        "canonical_id": "arXiv:2605.16867",
+        "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+        "source_url": "https://arxiv.org/abs/2605.16867",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
+        "selection_reason": "agentic inferenceのend-to-end SLOを異種GPU pool上で満たすため、出力長とGPU状態を予測してjust-enough instanceへrouteし、実行中のSLO違反riskを監視してruntime request migrationで補正するpredict-and-rectify型サービング。一次資料では既存routing比でgoodput最大27.4%改善を報告しており、異種資源とagent workflowを結ぶrouting研究として既存一般request schedulingを補完する。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:42:52+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-7a44d6a722722f10",
+      "claim_id": "claim-02011b088d0b5cf4119283b2",
+      "worker_id": "scheduled-chat-20260913-1130-run7-d",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-02011b088d0b5cf4119283b2",
+      "claimed_at": "2026-09-13T02:46:09+00:00",
+      "expires_at": "2026-09-13T10:46:09+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-7a44d6a722722f10"
+      ],
+      "job": {
+        "job_id": "job-research-7a44d6a722722f10",
+        "type": "research",
+        "parent_job_id": "job-93c319d7de58b930",
+        "priority": 88,
+        "canonical_id": "arXiv:2502.15524",
+        "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+        "source_url": "https://arxiv.org/abs/2502.15524",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.15524-hydraserve-serverless-cold-start.md",
+        "selection_reason": "Foundryが参照するserverless cold-start基盤。modelを複数serverへ先行配置し、worker内cold-start stageをoverlap、network contention-aware GPU placementとpipeline consolidationを組み合わせる。一次資料ではcold-start latency 1.7〜4.7倍短縮、SLO attainment 1.43〜1.74倍改善を報告し、NSDI'26採択。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:46:34+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-934e7a9b83b10131",
+      "claim_id": "claim-caeba9e84ff57a8ab2b7dea8",
+      "worker_id": "scheduled-chat-20260913-1130-run7-d",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-caeba9e84ff57a8ab2b7dea8",
+      "claimed_at": "2026-09-13T02:46:09+00:00",
+      "expires_at": "2026-09-13T10:46:09+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-934e7a9b83b10131"
+      ],
+      "job": {
+        "job_id": "job-research-934e7a9b83b10131",
+        "type": "research",
+        "parent_job_id": "job-bddc9082393babd6",
+        "priority": 88,
+        "canonical_id": "arXiv:2605.18825",
+        "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches",
+        "source_url": "https://arxiv.org/abs/2605.18825",
+        "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.18825-saecache-semantic-aware-prefix-eviction.md",
+        "selection_reason": "system prompt・user query・tool output・model response・CoTでreuse rateが最大756倍異なる観測を利用し、task-specific multi-queueとsemantic token weighting、online feedback学習でprefix-cache evictionを適応させるSAECache。異質workloadでproduction-style baseline比TTFT 1.4〜2.7倍改善を報告し、agentic prompt構造をcache価値へ直接反映する。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T17:51:14+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-b1cd2f28e2d09a3e",
+      "claim_id": "claim-4a7d9764a5e18b2f6009dd53",
+      "worker_id": "scheduled-chat-20260913-1130-run7-d",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-4a7d9764a5e18b2f6009dd53",
+      "claimed_at": "2026-09-13T02:46:09+00:00",
+      "expires_at": "2026-09-13T10:46:09+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b1cd2f28e2d09a3e"
+      ],
+      "job": {
+        "job_id": "job-research-b1cd2f28e2d09a3e",
+        "type": "research",
+        "parent_job_id": "job-bd760a2eca08ef00",
+        "priority": 88,
+        "canonical_id": "arXiv:2605.05639",
+        "title": "TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.05639",
+        "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "selection_reason": "HBM4 stackをdense capacity layerとPIM-enabled layerへ垂直分離し、logic base dieでKV移動・address translation・gather/broadcast・inline quantizationを管理する。topology-aware placement、workload-aware eviction、bounded replicationでhot KVだけをnear-memory computeへ寄せ、production-derived traceでAttAcc比token throughput 1.62倍、SLO capacity 1.70倍、energy 30〜47%削減を報告する。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:25:01+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T02:46:09+00:00"
+}
