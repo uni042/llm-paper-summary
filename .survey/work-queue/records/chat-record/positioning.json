@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2605.00254-20260913-0430-v10-c",
-  "job_id": "job-research-d335718873eaacf6",
+  "attempt_id": "attempt-10505b959184b0f204b5addc",
+  "job_id": "job-research-2fabaceee2c88fd9",
   "data": {
-    "limitations": "評価はDeepSeek-V3を代表MoEとしてdecode phaseのbatched inferenceへ絞り、prefillや非常に長い単一要求は対象外である。expert routingは十分大きなbatchでload balanceされるregular A2Aを仮定するため、偏ったexpert活性やhotspotが強い実運用の通信挙動は直接再現しない。switchless topologyは配線・故障対応・保守など運用面の複雑性が高いが、この非金銭コストはTCOへ完全に組み込まれていない。CapExは公開retail価格、OpExは主に電力/PUEであり、不動産・facility maintenance等は不足する。『安いclusterを複数増設できる』前提が崩れ、power/spaceが制約ならraw throughput/XPUの高いscale-upが重要になる。Blackwell/Rubin分析はrooflineによる将来予測で実機検証ではなく、Rubin以降もcompute/memoryがlinkより高速に伸びればswitchlessの費用優位は弱まる。",
-    "differences": "既存のcollective研究は通信完了時間を短縮するalgorithmやtraffic engineeringを主に評価し、network topology研究もtraining時のMFUやflow completion timeを中心にする。本論文はMoE serving固有の小batch、expert parallelism、TPOT SLO、KV memory constraint、DBO、speculative decodingを組み込み、通信のうちcomputeから露出する部分だけを端から端までの性能損失として扱う。また、単一clusterのraw performanceではなく、GPUとnetwork設備を含むthroughput per TCOを主な設計基準にする。既存のMoE overlap研究は与えられたnetwork上でcommunicationを隠すが、本研究はそのsoftware optimizationがhardware networkをどこまで安価にできるかへ設計問題を一段上げる。",
-    "implementation_status": "公開された専用コードリポジトリは確認できない。方法論はDGX H100 NCCL benchmark、A100上のcustom ring/recursive-doubling collective、Vidur型single-GPU profile、DeepSeek-V3/SGLang公開traceを組み合わせて検証されている。したがって再現には本文のmodel/TCO parameterと測定環境を再構築する必要がある。",
-    "research_positioning": "リポジトリではMoE並列・通信系統に置くべき重要なcross-layer systems studyである。MoE expert placementやrouting、collective kernelを直接最適化する研究とは異なり、network topologyとbandwidthそのものの設備選択へ踏み込み、ソフトウェア重畳がhardware provisionの最適点を変えることを定量化する。『communication bottleneckが大きいからbandwidthを最大化する』ではなく『ECTが0になるsweet spotまでで止める』という設計原則は、将来のMoE cluster capacity planningで再利用性が高い。",
-    "relation_to_existing_repository": "MoE expert parallelism、all-to-all最適化、communication-compute overlap、serving simulationの論文と補完関係にある。TokenWeave等のoverlap手法や将来のより強いcollectiveがECTを減らせば、本論文の方法論では最適network帯域がさらに低下する可能性がある。一方、expert imbalanceやplacement改善でtraffic量自体を減らす研究は通信モデルのmessage sizeを変える入力として統合できる。SSD/NVMeやKV offload系とは直接のデータ配置対象は異なるが、long contextでKV容量がbatch上限を決めることを通じてnetwork価値が変わるため、memory hierarchy最適化ともcross-layerに連動する。",
+    "limitations": "R²CCLはサーバ内に複数の健全NICと代替inter-node経路が残ることを前提にし、NVLink/NVSwitch障害、GPU・OS・プロセスクラッシュ、全経路を失うネットワーク分断やswitch-wide outageは扱わない。複数NICへのGPUバッファ事前登録、予備QP、OOB障害通知網の常設コストがあり、単一NICサーバへはそのまま適用できない。物理評価は2ノードH100に限られ、512〜1024 GPUのスケール結果はSimAIである。障害分布の相関、制御面障害、長時間のflappingなど本番特有の故障は追加検証が必要である。",
+    "differences": "チェックポイント復旧やElastic Trainingはジョブをいったん止めて計算状態を復元するのに対し、R²CCLは通信器の内部で進行中collectiveを継続する。AdapCCはcollective間で参加rankを変更できるがmid-collective faultを処理できず、TP/PPのようにrank除外不能な構成に弱い。DéjàVuは推論状態を複製して別workerへ要求を移すが、R²CCLは同じworkerとKVを保持したままネットワーク接続だけを移す。",
+    "implementation_status": "NCCLのnet plugin、proxy進行処理、enqueue/plannerへ統合した実装を著者がGitHubで公開している。論文はNCCL/RCCL互換pluginとしての利用を想定し、vLLMとMegatron-LMを変更せず評価する。",
+    "research_positioning": "LLMサービング・スケジューリング・分離実行系統の中でも、通信基盤の障害耐性を直接扱う研究である。従来の性能最適化が正常時の帯域・並列度を対象とするのに対し、R²CCLは故障後の残存トポロジを実行時資源として再解釈し、通信器の継続性をサービングSLOへ結び付ける。",
+    "relation_to_existing_repository": "DistServe、Splitwise、Mooncake等のmulti-node inferenceや、DeepEP・expert parallel通信を含むMoE servingではNIC障害がrequest再処理やworker離脱へ波及するため、R²CCLの通信層hot repairは補完的に適用できる。SSD/NVMeを直接使う方式ではないが、KVを外部階層へ複製して障害耐性を得る方式と比べ、ネットワーク冗長性で再処理を避けるため、KV checkpoint/offloadの必要量を減らす設計比較軸になる。",
     "audit_required": false
   }
 }
