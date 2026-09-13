@@ -96,7 +96,7 @@ class ImmutableSubmissionTests(unittest.TestCase):
             _write(result, {"schema_version": 1, "attempt_id": "attempt-a", "job_id": "job-a", "ok": True})
             self.assertEqual(module.pending_descriptors(repo), [])
 
-    def test_selector_keeps_bank_occupied_while_immutable_submission_is_unresolved(self):
+    def test_selector_does_not_release_bank_for_invalid_immutable_descriptor(self):
         self.assertTrue(SCRIPT.exists(), "immutable_submission.py must exist")
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
@@ -104,9 +104,10 @@ class ImmutableSubmissionTests(unittest.TestCase):
             scripts.mkdir(parents=True, exist_ok=True)
             (scripts / "select_record_bank.py").write_text(SELECTOR.read_text(encoding="utf-8"), encoding="utf-8")
 
-            # The selector imports record_bank_config from its script directory.
-            config_src = Path(__file__).parents[1] / "scripts" / "record_bank_config.py"
-            (scripts / "record_bank_config.py").write_text(config_src.read_text(encoding="utf-8"), encoding="utf-8")
+            # The selector imports shared transport helpers from its script directory.
+            for name in ("record_bank_config.py", "immutable_submission.py"):
+                src = Path(__file__).parents[1] / "scripts" / name
+                (scripts / name).write_text(src.read_text(encoding="utf-8"), encoding="utf-8")
             registry_src = Path(__file__).parents[1] / "work-queue" / "records" / "bank-registry.json"
             registry_dst = repo / ".survey/work-queue/records/bank-registry.json"
             registry_dst.parent.mkdir(parents=True, exist_ok=True)
@@ -143,11 +144,11 @@ class ImmutableSubmissionTests(unittest.TestCase):
                 "record_slots": [],
             })
 
-            selector = _load(scripts / "select_record_bank.py", "selector_with_immutable")
+            selector = _load(scripts / "select_record_bank.py", "selector_with_invalid_immutable")
             result = selector.inspect(repo)
             bank_a = next(row for row in result["banks"] if row["bank"] == "a")
             self.assertEqual(bank_a["state"], "occupied")
-            self.assertIn("immutable", bank_a["reason"])
+            self.assertIn("ready", bank_a["reason"])
             self.assertNotEqual(result["selected_bank"], "a")
 
 
