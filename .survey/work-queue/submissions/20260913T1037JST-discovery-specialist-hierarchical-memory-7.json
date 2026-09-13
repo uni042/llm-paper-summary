@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "job_id": "job-3223d356f498e7ef",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.17063",
+      "title": "FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2601.17063",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-expert-cache-replacement.md",
+      "priority": 90,
+      "reason": "DRAMへ全専門家を置けない端末内MoE推論でinactive expertをSSDへ退避し、recency/frequencyを軽量MLで適応合成したcache replacementによりstorage I/Oを削減する。ユーザー向けdesktop実機でLRU/LFU比cache hit rate最大51%改善、既存MoE推論系比最大2.6倍高速化を報告しており、SSD-backed expert offloadという重点テーマに直接該当する。"
+    },
+    {
+      "canonical_id": "arXiv:2602.00328",
+      "title": "Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.00328",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2602.00328-harvest-peer-gpu-cache-llm-inference.md",
+      "priority": 86,
+      "reason": "GPU memory不足に対しhost DRAMへ退避する代わりに、同一システム内で空いているpeer GPU memoryを一時的cache tierとして使い、高帯域P2P interconnectでmodel weightsとKV cacheの取得を高速化する。動的な空き容量を利用しつつ正しさを保ち、expert weightsとKV cache双方で2倍超のthroughput改善を示すため、GPU/CPU/SSDだけでない階層メモリ設計の比較対象として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-hierarchical-memory-7",
+    "axis": "SSD expert offload・peer GPU cache tier・階層メモリ",
+    "query_summary": "SSD/NVMe expert offloadとGPU/CPU/SSD/peer-GPU階層を探索した。Tutti、KVDrive、SwiftCache、Akashic、robust KV management、SAEM、SPICE、NPUMoE、OD-MoE、MoE Servingは既収録または既存jobとして除外し、FlashMoEとHarvestのみ最新HEADで未登録を再確認した。",
+    "candidate_count": 12,
+    "duplicate_filtered_count": 10,
+    "duplicate_canonical_ids": [
+      "arXiv:2605.03375",
+      "arXiv:2605.18071",
+      "arXiv:2606.16135",
+      "arXiv:2607.05708",
+      "arXiv:2607.16892",
+      "arXiv:2608.21614",
+      "arXiv:2608.21240",
+      "arXiv:2604.18788",
+      "arXiv:2512.03927",
+      "arXiv:2607.17880"
+    ],
+    "next_axis_hint": "新規候補の引用・関連研究経路を辿るか、GPU runtime/networking・distributed servingの新着へ軸を移す",
+    "empty_round_reason": null
+  }
+}
