@@ -50,8 +50,8 @@ class StatusDashboardTests(unittest.TestCase):
                 {"run_key": "2026-09-12T14:30:00+09:00", "counts": {"research_completed": 3, "audit_completed": 0, "discovery_completed": 1, "blocked": 1, "new_jobs": 2, "new_papers": 3, "fallback_archived": 1}, "terminal_transitions": [{"type": "research", "canonical_id": "arxiv:new", "title": "New Paper", "to": "completed"}], "new_jobs": [{"type": "research", "canonical_id": "arxiv:c1", "title": "Candidate 1", "status": "ready"}, {"type": "research", "canonical_id": "arxiv:c2", "title": "Candidate 2", "status": "ready"}], "new_paper_ids": ["n1", "n2", "n3"]},
             ]})
             _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
-                {"run_key": "2026-09-12T13:00:00+09:00", "round": "r1", "axis": "SSD階層", "candidate_count": 10, "duplicate_filtered_count": 4, "novel_candidate_count": 6, "accepted_count": 5},
-                {"run_key": "2026-09-12T14:00:00+09:00", "round": "r2", "axis": "MoE expert", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 4},
+                {"run_key": "2026-09-12T13:07:12+09:00", "round": "specialist-r1", "axis": "SSD階層", "candidate_count": 10, "duplicate_filtered_count": 4, "novel_candidate_count": 6, "accepted_count": 5},
+                {"run_key": "2026-09-12T14:06:41+09:00", "round": "specialist-r2", "axis": "MoE expert", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 4},
             ]})
             module = _load_module(repo)
             text = module.build_dashboard(repo, now=datetime(2026, 9, 12, 6, 10, tzinfo=timezone.utc))
@@ -94,12 +94,12 @@ class StatusDashboardTests(unittest.TestCase):
                 },
             ]})
             _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
-                {"run_key": "2026-09-13T09:00:00+09:00", "round": "s1", "axis": "SSD", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
-                {"run_key": "2026-09-13T09:00:00+09:00", "round": "s2", "axis": "MoE", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 3},
-                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s3", "axis": "Scheduling", "candidate_count": 6, "duplicate_filtered_count": 4, "novel_candidate_count": 2, "accepted_count": 2},
-                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s4", "axis": "SpecDecode", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 3},
-                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s5", "axis": "Hierarchical memory", "candidate_count": 7, "duplicate_filtered_count": 2, "novel_candidate_count": 5, "accepted_count": 4},
-                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s6", "axis": "Network", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
+                {"run_key": "2026-09-13T09:28:10+09:00", "round": "specialist-s1", "source_submission": "work-queue/submissions/discovery-specialist-s1.json", "axis": "SSD", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
+                {"run_key": "2026-09-13T09:28:10+09:00", "round": "specialist-s2", "source_submission": "work-queue/submissions/discovery-specialist-s2.json", "axis": "MoE", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 3},
+                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s3", "source_submission": "work-queue/submissions/discovery-specialist-s3.json", "axis": "Scheduling", "candidate_count": 6, "duplicate_filtered_count": 4, "novel_candidate_count": 2, "accepted_count": 2},
+                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s4", "source_submission": "work-queue/submissions/discovery-specialist-s4.json", "axis": "SpecDecode", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 3},
+                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s5", "source_submission": "work-queue/submissions/discovery-specialist-s5.json", "axis": "Hierarchical memory", "candidate_count": 7, "duplicate_filtered_count": 2, "novel_candidate_count": 5, "accepted_count": 4},
+                {"run_key": "2026-09-13T10:16:01+09:00", "round": "specialist-s6", "source_submission": "work-queue/submissions/discovery-specialist-s6.json", "axis": "Network", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
             ]})
             module = _load_module(repo)
             text = module.build_dashboard(repo, now=datetime(2026, 9, 13, 1, 50, tzinfo=timezone.utc))
@@ -113,7 +113,7 @@ class StatusDashboardTests(unittest.TestCase):
             self.assertNotIn("新規job | **7**", text)
 
             self.assertIn("## 直近の探索専用worker", text)
-            self.assertIn("Run: **2026-09-13T10:00:00+09:00**", text)
+            self.assertIn("Run: **2026-09-13T10:16:01+09:00**", text)
             self.assertIn("探索round | **4**", text)
             self.assertIn("評価候補 | **22**", text)
             self.assertIn("重複除外 | **8**", text)
@@ -122,8 +122,8 @@ class StatusDashboardTests(unittest.TestCase):
             self.assertIn("探索専用worker run（stats観測） | **2**", text)
             self.assertIn("探索専用worker round（stats観測） | **6**", text)
             self.assertIn("### 直近5探索専用worker run", text)
-            self.assertIn("2026-09-13T10:00:00+09:00 — 4 round", text)
-            self.assertIn("2026-09-13T09:00:00+09:00 — 2 round", text)
+            self.assertIn("2026-09-13T10:16:01+09:00 — 4 round", text)
+            self.assertIn("2026-09-13T09:28:10+09:00 — 2 round", text)
 
     def test_dashboard_warns_when_candidate_stock_is_low(self):
         with tempfile.TemporaryDirectory() as tmp:
