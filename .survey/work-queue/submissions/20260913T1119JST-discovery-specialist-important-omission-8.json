@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-39db2853fb399a18",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2406.03243",
+      "title": "Llumnix: Dynamic Scheduling for Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2406.03243",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "priority": 88,
+      "reason": "LLMサービングで要求の長さ・資源需要・優先度が実行中に変動し、静的なinstance割当では負荷偏り・断片化・tail latency悪化が生じる問題に対し、CPUのcontext switchに類似したrequest/KV状態の高速live migrationとruntime reschedulingを統合する。tail latencyを最大1桁改善、高優先度要求を最大1.5倍高速化、同等tail latencyで最大36%のcost savingを報告し、実装も公開されている。現在のdisaggregation・KV migration・SLO-aware schedulingにつながる重要な基礎系譜で、最新HEADのidentity delta、stable job、repoタイトル検索のいずれにも存在しなかった。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-important-serving-omission-8",
+    "axis": "recent検索から重要基礎系譜への欠落確認",
+    "query_summary": "recent serving queryでCrossPool 2606.24506、ORBITFLOW 2601.10729、P/D-Serve 2408.08147は既存jobとして重複確認。一方Llumnix 2406.03243はidentity delta・stable research job・repoタイトル検索の全てで未登録だったため、古い重要欠落として採用した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arxiv:2606.24506",
+      "arxiv:2601.10729",
+      "arxiv:2408.08147"
+    ],
+    "next_axis_hint": "Llumnix採用で枯渇判定をリセットし、forward citation、backward reference、network/CXL/SSD、query expansion、重点テーマを独立に一巡する",
+    "empty_round_reason": null
+  }
+}
