@@ -39,38 +39,10 @@ jobs:
       - name: Install survey dependencies
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
-      - name: Resolve immutable descriptors from triggering event
-        id: descriptors
+      - name: Drain all unsettled immutable descriptors
         shell: bash
         env:
           MANUAL_SUBMISSION: ${{ inputs.submission }}
-        run: |
-          set -euo pipefail
-          : > /tmp/immutable-submissions.txt
-          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
-            printf '%s\n' "$MANUAL_SUBMISSION" >> /tmp/immutable-submissions.txt
-          else
-            git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" \
-              | grep -E '^\.survey/work-queue/submissions/(research|audit)/[^/]+\.json$' \
-              | sort -u >> /tmp/immutable-submissions.txt || true
-          fi
-          if [ ! -s /tmp/immutable-submissions.txt ]; then
-            echo 'No immutable research/audit descriptor was changed.'
-            echo 'count=0' >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          while IFS= read -r path; do
-            case "$path" in
-              .survey/work-queue/submissions/research/*.json|.survey/work-queue/submissions/audit/*.json) ;;
-              *) echo "Unsupported submission path: $path" >&2; exit 1 ;;
-            esac
-          done < /tmp/immutable-submissions.txt
-          echo "count=$(wc -l < /tmp/immutable-submissions.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
-          cat /tmp/immutable-submissions.txt
-
-      - name: Process only triggering immutable descriptors
-        if: steps.descriptors.outputs.count != '0'
-        shell: bash
         run: |
           set -euo pipefail
           git config user.name 'survey-submission[bot]'
@@ -80,6 +52,28 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             processing_failed=0
+            : > /tmp/immutable-submissions.txt
+
+            if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+              printf '%s\n' "$MANUAL_SUBMISSION" > /tmp/immutable-submissions.txt
+            else
+              python .survey/scripts/list_unsettled_immutable_submissions.py \
+                --repo-root . > /tmp/immutable-submissions.txt
+            fi
+
+            if [ ! -s /tmp/immutable-submissions.txt ]; then
+              echo 'No unsettled immutable research/audit descriptors remain.'
+              exit 0
+            fi
+
+            while IFS= read -r path; do
+              case "$path" in
+                .survey/work-queue/submissions/research/*.json|.survey/work-queue/submissions/audit/*.json) ;;
+                *) echo "Unsupported submission path: $path" >&2; exit 1 ;;
+              esac
+            done < /tmp/immutable-submissions.txt
+
+            cat /tmp/immutable-submissions.txt
 
             while IFS= read -r descriptor; do
               if [ ! -f "$descriptor" ]; then
@@ -91,9 +85,11 @@ jobs:
                 --repo-root . \
                 --submission "$descriptor"; then
                 processing_failed=1
-                python .survey/scripts/isolate_failed_immutable_submission.py \
+                if ! python .survey/scripts/isolate_failed_immutable_submission.py \
                   --repo-root . \
-                  --submission "$descriptor"
+                  --submission "$descriptor"; then
+                  echo "Could not isolate failed immutable descriptor: $descriptor" >&2
+                fi
               fi
             done < /tmp/immutable-submissions.txt
 
@@ -118,7 +114,7 @@ jobs:
               exit 0
             fi
 
-            git commit -m 'survey-submission: publish immutable research results'
+            git commit -m 'survey-submission: drain immutable research results'
             if git push origin HEAD:main; then
               if [ "$processing_failed" -ne 0 ]; then
                 echo 'Immutable submission failure result was persisted to main.' >&2
@@ -127,7 +123,7 @@ jobs:
               exit 0
             fi
 
-            echo "Submission push race on attempt ${attempt}; recomputing from latest main."
+            echo "Submission push race on attempt ${attempt}; recomputing all unsettled descriptors from latest main."
             sleep $((attempt * 2))
           done
 
