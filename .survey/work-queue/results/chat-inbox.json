@@ -1,13 +1,10 @@
 {
   "schema_version": 1,
-  "workflow_version": 9,
+  "workflow_version": 10,
   "submission": "work-queue/submissions/chat-inbox.json",
-  "ok": true,
-  "job_id": "job-research-4cfe79f9779265c4",
-  "job_type": "research",
-  "artifact": {
-    "paper": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.09922-lambdascale-serverless-fast-scaling.md",
-    "identity_delta": "survey-state/identity-deltas/arxiv/2502.09922.json"
-  },
-  "job_status": "completed"
+  "ok": false,
+  "job_id": "job-research-67fd071bb1792a36",
+  "validation_error": "ValueError: record slot blob mismatch: .survey/work-queue/records/chat-record-b/evaluation.json",
+  "repair_required": true,
+  "isolated_at": "2026-09-13T05:00:05+00:00"
 }

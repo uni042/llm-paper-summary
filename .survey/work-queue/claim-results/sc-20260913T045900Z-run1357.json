@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T045900Z-run1357",
+  "worker_id": "scheduled-chat-router-20260913-1357",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-fad36d968e8bea93",
+      "claim_id": "claim-94b6994cc1590a0bda45ff7d",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-94b6994cc1590a0bda45ff7d",
+      "claimed_at": "2026-09-13T05:00:05+00:00",
+      "expires_at": "2026-09-13T06:30:05+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-fad36d968e8bea93"
+      ],
+      "job": {
+        "job_id": "job-research-fad36d968e8bea93",
+        "type": "research",
+        "parent_job_id": "job-3ee1465fb1dc2abf",
+        "priority": 87,
+        "canonical_id": "arXiv:2502.14617",
+        "title": "Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale",
+        "source_url": "https://arxiv.org/abs/2502.14617",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14617-sageserve-multi-timescale-cloud-autoscaling.md",
+        "selection_reason": "SageServeは遅延制約の厳しい要求と緩い要求を別資源へ固定分離せず、短時間スケールの地域間要求ルーティングと長時間スケールのGPU仮想機械（Virtual Machine; VM）増減・モデル再配置を共同で扱う。800万件超の本番トレースを使い、末尾遅延とサービス品質目標（Service-Level Objective; SLO）を維持しつつGPU時間を最大25%削減、スケール変更の無駄を最大80%削減しており、大規模クラウド運用の重要な未収録候補である。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:44:53+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-57f4550e61af7e09",
+      "claim_id": "claim-6f11d0c6a36c75e2b4ebc7cd",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-6f11d0c6a36c75e2b4ebc7cd",
+      "claimed_at": "2026-09-13T05:00:05+00:00",
+      "expires_at": "2026-09-13T06:30:05+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-57f4550e61af7e09"
+      ],
+      "job": {
+        "job_id": "job-research-57f4550e61af7e09",
+        "type": "research",
+        "parent_job_id": "job-af96ba3d9c2ab6d4",
+        "priority": 87,
+        "canonical_id": "arXiv:2606.15789",
+        "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
+        "source_url": "https://arxiv.org/abs/2606.15789",
+        "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.15789-shannon-bound-lossless-weight-compression.md",
+        "selection_reason": "大規模言語モデル（Large Language Model; LLM）の重みが保存ビット幅より低い実効エントロピーを持つことを測定し、非対称数値表現（Asymmetric Numeral Systems; ANS）をGEMMタイル単位のオンザフライ展開へ組み込む。SGLangへ統合した多GPU実装でMixtral-176Bの実行可能バッチを20から95へ拡大し、スループット最大1.6倍を報告しており、損失なし圧縮を配信時メモリ容量と実行カーネルへ接続する研究として有用である。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T18:49:00+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-f3407b821f3f7dcf",
+      "claim_id": "claim-833474830031f73717dc2fff",
+      "worker_id": "scheduled-chat-router-20260913-1357",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-833474830031f73717dc2fff",
+      "claimed_at": "2026-09-13T05:00:05+00:00",
+      "expires_at": "2026-09-13T06:30:05+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-f3407b821f3f7dcf"
+      ],
+      "job": {
+        "job_id": "job-research-f3407b821f3f7dcf",
+        "type": "research",
+        "parent_job_id": "job-4354f5042e6e20fc",
+        "priority": 87,
+        "canonical_id": "arXiv:2607.00151",
+        "title": "SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering",
+        "source_url": "https://arxiv.org/abs/2607.00151",
+        "paper_path": null,
+        "selection_reason": "長時間agent workflowでcontext offload/reduction/isolationがKVを無効化してre-prefillを生む問題に対し、segment-decomposableなcontext変換を先回り実行し変換済みKVを用意するlookahead runtimeとschedulerを提案する。既存agent framework/serving systemへ統合しTTFT最大11.9倍改善を報告しており、agent-aware KV/runtime系統の強候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T21:16:53+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T05:00:05+00:00"
+}
