@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-d4f0137cfb44a9bbad1328a0",
-  "job_id": "job-research-a46283c0339631e6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d4f0137cfb44a9bbad1328a0",
-    "worker_id": "parallel-e2e-worker-b-20260913",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-d4f0137cfb44a9bbad1328a0","job_id":"job-research-a46283c0339631e6","data":{"overview":"LegoLink-2は各チャンク先頭2トークン程度だけを再計算することで、完全再計算に近い品質を保ちながらCacheBlendより大幅に再計算量を減らす。単一要求ではCacheBlendに対し初回トークン時間を最大3倍短縮し、完全再計算に対する精度低下を0〜7%以内に抑えた。非同期負荷では入力文書数とキャッシュ読み込みが増えるほど差が拡大し、最大で初回トークン時間8倍、スループット7倍の改善を報告する。CacheBlendは少数再計算設定では品質が大きく崩れ、再計算率を上げると品質は戻るが動的選択と二乗注意の費用が初回トークン時間を支配する。","key_results":[{"metric":"単一要求の初回トークン時間","value":"最大3倍短縮","baseline":"CacheBlend","condition":"LegoLink-2、複数の文脈長・モデル・データセット","interpretation":"静的に少数のチャンク先頭だけを再計算することで、動的選択と広い再計算を避けられる。"},{"metric":"非同期負荷の初回トークン時間","value":"最大8倍短縮","baseline":"CacheBlend","condition":"Poisson到着、位置非依存キャッシュを繰り返し利用","interpretation":"同時要求が増えるとCacheBlendの再計算と選択処理がGPUを占有するため、線形に近いLegoLinkの優位が大きくなる。"},{"metric":"非同期負荷のスループット","value":"最大7倍","baseline":"CacheBlend","condition":"同一A100サーバー、非同期要求負荷","interpretation":"プリフィル再計算を減らすことでGPU時間をデコードへ回し、単なる単要求遅延だけでなくサーバー全体の処理量を高める。"},{"metric":"完全再計算に対する品質差","value":"0〜7%以内の低下","baseline":"完全プリフィル再計算","condition":"LegoLink-2、主要LongBench系タスク","interpretation":"チャンク先頭の注意シンクを修復すれば、残りの独立計算KVを再利用しても大部分の品質を保持できる。"},{"metric":"動的トークン選択の費用","value":"初回トークン時間の16.37〜63.56%","baseline":"CacheBlendの総初回トークン時間","condition":"文脈長と再計算設定を変化","interpretation":"重要トークンを要求ごとに探す処理自体が大きな費用となり、静的選択の設計余地を示す。"},{"metric":"少数再計算CacheBlendの品質低下","value":"最大約80%低下","baseline":"完全再計算","condition":"CacheBlend-1/5、データセット依存","interpretation":"再計算率を単純に絞るだけでは注意シンクを十分修復できず、再計算対象の位置構造が重要である。"}],"negative_results":"再計算ゼロのLegoLink-0は最速だが、データセットやモデルによってLegoLink-2より品質が悪化する。単純な位置非依存KV連結は各チャンク先頭の注意シンクを残すため品質低下が大きい。CacheBlendは再計算率を上げれば品質を戻せるが、動的選択と二乗注意の費用が増える。MultiNewsなどでは基礎モデル自体の絶対スコアが低く、キャッシュ方式の相対差だけから一般的な生成品質を断定できない。","interpretation":"主要な洞察は、独立チャンクを連結した際の誤差が入力全体に均等に広がるのではなく、各チャンク先頭の注意シンクへ集中することである。したがって高価な重要度探索を毎回行わず、構造的に誤差が生じる場所だけを再計算すれば品質と速度を両立できる。位置非依存キャッシュの実用化には、キャッシュヒット率だけでなくリンク時再計算の計算量を設計対象にする必要がある。","quality_impact":"完全再計算と数値的に同一ではない近似再利用方式である。LegoLink-2は主要タスクで品質低下を小さく抑えるが、再計算ゼロや少数設定ではタスク依存の劣化が残るため、用途ごとの精度確認が必要である。"},"reservation":{"claim_id":"claim-d4f0137cfb44a9bbad1328a0","worker_id":"parallel-e2e-worker-b-20260913","worker_kind":"scheduled_chat"}}
