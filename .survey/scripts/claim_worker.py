@@ -498,7 +498,7 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         by_id = {str(item["job_id"]): item for item in jobs}
         recovered = []
         for job_id, current in claims.items():
-            if current.get("request_id") == request["request_id"] and job_id in by_id:
+            if current.get("active") and current.get("request_id") == request["request_id"] and job_id in by_id:
                 recovered.append(_assignment(by_id[job_id], current))
         if recovered:
             _write(result_path, {
