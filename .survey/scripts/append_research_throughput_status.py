@@ -159,11 +159,8 @@ def _latest_claim_time(
 
 def _oldest_active_claim_age(repo_root: Path, now: datetime) -> int | None:
     claims = _load_claims(repo_root)
-    ready_ids = _ready_claimable_job_ids(repo_root)
     ages: list[int] = []
-    for job_id, claim in claims.items():
-        if job_id not in ready_ids:
-            continue
+    for claim in claims.values():
         expires = _dt(claim.get("expires_at"))
         if expires is None or expires <= now:
             continue
