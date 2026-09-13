@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-1a2f27db29cc21845919957d",
   "job_id": "job-research-2b6e9eed52cd4c32",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1a2f27db29cc21845919957d",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "RedKnotは長文位置非依存再利用で、密な全文再計算に近い品質を保ちながらTTFTを1.4〜5.2倍高速化する。代表的な密GQAモデルでは通常F1がdenseの95%以上で、Llama-3.3-70B HotpotQAでは32K/64KともEMがdense 0.60から0.80へ上がる条件もある。SegPagedAttention単体ではdense+maskに対し128K decodeを506.8msから24.1msへ、64-layer prefillを5.42sから0.23sへ短縮する。物理的なhead別KV配置により32Kで同時session数4→31、64Kで3→14となり、PD分離ではLlama-3.3-70BのKV転送量を最大5.7倍削減する。",
+    "key_results": [
+      {"metric":"TTFT","value":"dense recompute比1.4〜5.2倍高速化、代表設定で最大約5.16倍","baseline":"dense full recompute","condition":"Mistral-7B、Qwen3-32B、Llama-3.3-70B、Qwen3.5-397B-A17B、DeepSeek-V4-Flash、16K〜128K中心","interpretation":"global headだけを回復し、local-head KV再利用とdeep-layer sparse FFNを組み合わせることでattentionとFFNの両方のprefill費用を削減する。"},
+      {"metric":"品質","value":"通常dense F1の95%以上、first-token top-1 agreement 0.93、top-10 0.87","baseline":"dense recompute / CacheBlend / ProphetKV","condition":"RAG-style QA and long-context datasets","interpretation":"token-level回復よりhead-level回復がprefix感度の高いheadを取りこぼしにくく、低い再計算量でもdense分布に近い。"},
+      {"metric":"SegPagedAttention decode latency","value":"8K: 31.8→12.6ms、32Kで9.8倍、128K: 506.8→24.1ms（21.0倍）","baseline":"Dense+mask","condition":"Qwen3-32B-shaped 64-layer GQA, half global/half local heads","interpretation":"local headの不要KVを物理ページとして持たず、maskなしvarlen FlashAttentionへ渡すため、文脈長とともにdense+maskとの差が拡大する。"},
+      {"metric":"SegPagedAttention prefill latency","value":"8K 0.34→0.055s、32K 1.35→0.12s、128K 5.42→0.23s（6.3〜23.3倍）","baseline":"Dense+mask","condition":"64-layer microbenchmark","interpretation":"dense方式が全head×全文長で二次的注意計算を行うのに対し、full lengthを読むheadを少数へ限定する。"},
+      {"metric":"GPU当たり同時session数","value":"32K 4→31（7.8倍）、64K 3→14（4.7倍）","baseline":"dense vLLM-style KV storage","condition":"SegPagedAttention per-head physical storage","interpretation":"単一要求の速度よりHBM容量の増幅が大きく、memory-bound decodeでより多くの同時要求を収容できる。"},
+      {"metric":"PD間KV転送","value":"Llama-3.3-70Bで8K 4.3倍、16K 5.7倍のbyte削減、transfer timeは両方約4.1倍短縮","baseline":"dense PD transfer","condition":"prefill/decode GPU pools separated","interpretation":"local headが保持しないKVを転送対象からも除くため、HBMだけでなくネットワーク負荷も同じhead sparsityで削減できる。"},
+      {"metric":"cache lifecycle memory/recompute tradeoff","value":"MuSiQueでreuse>=20なら1.5GBで39% recompute削減、>=5なら7.8GBで75%、>=2なら25.5GBで99%","baseline":"cache-all requires 524GB","condition":"2417 questions, 48,315 chunk accesses, 17,629 unique passages","interpretation":"一度しか使われないchunkを保存せず、再利用頻度でadmissionすることで容量を大幅に抑えながら大部分の再計算を避けられる。"}
+    ],
+    "negative_results": "短い8K〜16Kでは、現行の一部RedKnot serving backendがhead sparsityをdense KV+maskで表すため、固定された低いtoken recovery ratioを持つCacheBlend/ProphetKVよりQPSがわずかに低い場合がある。Qwen3-32BやLlama-3.3-70BのPD評価でもSegPagedAttentionをまだ有効化していない経路では、KV byte削減が完全な計算速度改善へ直結しない。prefix圧縮は検索型taskで答えのtokenを中間部から落とす危険があり、retrieval headのallow-listなどtask-awareな保護が必要である。head classificationとsparse FFNは近似を含むため、全taskでbit-equivalentな出力を保証する方式ではない。",
+    "interpretation": "RedKnotの主要な結果は、KV削減率だけを高めても物理レイアウトとattention kernelがdenseのままでは速度・容量へ十分反映されないことを示す。head単位の再利用判断をhead単位ページ配置まで貫き、maskを排除することで、保存byte、HBM読み出し、attention work、PD転送量が同じ疎構造に沿って減る。FFN token sparsityはこれと独立なため、attentionがまだ支配的でない2K〜32KでもTTFT改善余地を残せる。",
+    "quality_impact": "平均的にはdense F1の95%以上を維持し、top-k logit一致も高いが、sparsity設定次第で短contextの品質が少し下がる。長contextでは低価値tokenを抑えるdenoising効果によりQwen3.5/DeepSeek-V4でdenseを上回る条件もあり、品質影響は単純な単調劣化ではない。"
+  },
+  "reservation": {"claim_id":"claim-1a2f27db29cc21845919957d","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
