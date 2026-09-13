@@ -116,6 +116,8 @@ def _normalize_request(path: Path, raw: Any) -> dict[str, Any]:
     lease_seconds = raw.get("lease_seconds", DEFAULT_LEASE_SECONDS)
     if isinstance(lease_seconds, bool) or not isinstance(lease_seconds, int) or not MIN_LEASE_SECONDS <= lease_seconds <= MAX_LEASE_SECONDS:
         raise ValueError("lease_seconds must be between 300 and 43200")
+    if worker_kind == "scheduled_chat" and lease_seconds > DEFAULT_LEASE_SECONDS:
+        raise ValueError(f"scheduled_chat lease_seconds must be between {MIN_LEASE_SECONDS} and {DEFAULT_LEASE_SECONDS}")
     job_types = raw.get("job_types", ["research", "audit"])
     if not isinstance(job_types, list) or not job_types or any(kind not in JOB_TYPES for kind in job_types):
         raise ValueError("job_types must contain only research or audit")
@@ -207,6 +209,41 @@ def _release_durable_claims(
         _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
         claims[job_id] = dict(claim, active=False, expired=True)
     return submitted_jobs
+
+
+def _normalize_legacy_scheduled_chat_leases(
+    root: Path,
+    claims: dict[str, dict[str, Any]],
+    now: dt.datetime,
+) -> tuple[int, int]:
+    """Cap pre-migration Scheduled Chat leases at 90 minutes from last activity."""
+    normalized = invalidated = 0
+    for job_id, current in list(claims.items()):
+        if current.get("worker_kind") != "scheduled_chat" or current.get("released_at"):
+            continue
+        last_activity = _as_time(current.get("heartbeat_at") or current.get("claimed_at"))
+        expires = _as_time(current.get("expires_at"))
+        if last_activity is None or expires is None:
+            continue
+        capped_expiry = last_activity + dt.timedelta(seconds=DEFAULT_LEASE_SECONDS)
+        if expires <= capped_expiry:
+            continue
+
+        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+        claim.setdefault("legacy_lease_original_expires_at", _iso(expires))
+        claim["expires_at"] = _iso(capped_expiry)
+        claim["legacy_lease_normalized_at"] = _iso(now)
+        expired = now >= capped_expiry
+        if expired:
+            claim["lease_invalidated_at"] = _iso(now)
+            claim["lease_invalidation_reason"] = (
+                f"legacy scheduled_chat lease exceeded {DEFAULT_LEASE_SECONDS}-second cap"
+            )
+            invalidated += 1
+        _write(root / ".survey/work-queue/claims" / f"{job_id}.json", claim)
+        claims[job_id] = dict(claim, active=not expired, expired=expired)
+        normalized += 1
+    return normalized, invalidated
 
 
 def _checkpoint_map(request: dict[str, Any]) -> dict[str, str]:
@@ -363,6 +400,8 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
     claims = claim_state.current_claims(root, now)
     descriptors = _immutable_descriptors(root)
     submitted_jobs = _release_durable_claims(root, claims, descriptors, now)
+    leases_normalized, leases_invalidated = _normalize_legacy_scheduled_chat_leases(root, claims, now)
+    claims = claim_state.current_claims(root, now)
     processed = reused = errors = assigned = renewed = checkpoint_released = 0
     for path in sorted(request_root.glob("*.json")):
         result_path = _result_path(root, path.stem)
@@ -487,6 +526,8 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         "assigned": assigned,
         "renewed": renewed,
         "checkpoint_released": checkpoint_released,
+        "leases_normalized": leases_normalized,
+        "leases_invalidated": leases_invalidated,
     }
 
 
