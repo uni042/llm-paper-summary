@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T08:11:59.883461+00:00",
+  "updated_at": "2026-09-13T08:38:57.832726+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18341,6 +18341,49 @@
       "paper_active_count_before": 405,
       "paper_active_count_after": 408,
       "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "2026-09-13T17:30:00+09:00",
+      "first_recorded_at": "2026-09-13T08:38:57.832726+00:00",
+      "last_recorded_at": "2026-09-13T08:38:57.832726+00:00",
+      "signals": [
+        "fallback_archived"
+      ],
+      "counts": {
+        "research_completed": 0,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 0,
+        "fallback_archived": 1
+      },
+      "events": [
+        {
+          "event_id": "34748140291:1",
+          "recorded_at": "2026-09-13T08:38:57.832726+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34748140291",
+            "run_attempt": "1",
+            "source_sha": "caadaf4ca2519ec0a8b3dd384a2197ce16754971"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
+        }
+      ],
+      "terminal_transitions": [],
+      "new_jobs": [],
+      "new_paper_ids": [],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [
+        ".survey/work-queue/fallback-archive/20260913T173000JST-research-2606.08635-spectrumkv.json"
+      ],
+      "paper_active_count_before": 408,
+      "paper_active_count_after": 408,
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
