@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-636dceef51cdacb2e889c0f9",
   "job_id": "job-research-2909bb8eecc75840",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-636dceef51cdacb2e889c0f9",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "AMAX深層学習ワークステーションを使用し、Intel Xeon Platinum 8358P CPU、512GB RAM、8基のNVIDIA RTX A6000 48GBを搭載する。CPUとGPUの転送はPCIe 4.0 x16で、理論最大帯域は32GB/sである。",
+    "software": "PyTorchとHuggingFace Transformersを基盤とする独自MoEオフロード推論系をPythonで実装し、キャッシュ項目管理、キャッシュ表参照、専門家の動的読み込みをモデル実装へ追加する。Mixtral-8x7BではHQQを用い、注意機構を4ビット、MoE部分を2ビットへ量子化する。",
+    "methodology": "Qwen1.5-MoEとMixtral-8x7BをMMLU 15,908問・57タスクで評価する。Qwen1.5-MoEは60専門家中4専門家をトークンごとに活性化する14.3Bモデルで16ビット評価、Mixtral-8x7Bは8専門家中2専門家を活性化する46.7BモデルでHQQ量子化版を使う。比較対象はPre-gated MoE、Mixtral-offloading、AdapMoE、MoE-Infinity。主要指標はプリフィルの初回トークン時間（TTFT）、デコードの出力トークン間時間（TPOT）、最大VRAM使用量である。全方式に同じ専門家キャッシュ用VRAM予算を与え、既定ではQwen1.5-MoEで完全専門家240個分、Mixtral-8x7Bで96個分とする。先読みバッファは各モデルの同時活性専門家数K個分。LCPは観測窓128、減衰係数0.25、構成アルゴリズムのVRAM移動粒度0.01、更新周期5000トークン。結果は5回独立実行の平均である。",
+    "scope": "評価は単一ワークステーションとPCIe 4.0環境で、Qwen1.5-MoEとMixtral-8x7Bの二モデルに限定される。NVLinkやCXL、複数ノード、SSDからの直接専門家読込みは主評価に含まれない。Mixtralは低ビットHQQを用いる一方、Qwenは16ビットであり、モデル間の絶対遅延を直接比較する実験ではない。キャッシュ構成は定常的な活性統計を5000トークン単位で更新するため、極端に短い要求や急激に分布が変わる負荷での収束特性は詳しく評価していない。",
+    "workloads": ["MMLU 57タスク","Qwen1.5-MoEプリフィル・デコード","Mixtral-8x7Bプリフィル・デコード","VRAM予算スイープ","構成要素除去試験","ハイパーパラメータ感度試験"],
+    "baselines": ["Pre-gated MoE","Mixtral-offloading","AdapMoE","MoE-Infinity","GPU全常駐設定"],
+    "metrics": ["初回トークン時間（TTFT）","出力トークン間時間（TPOT）","VRAM最大使用量","専門家キャッシュ命中率","層別専門家予測精度"],
+    "reproducibility": "論文はCPU、GPU、RAM、PCIe規格、モデル、量子化条件、データセット、キャッシュ予算、主要ハイパーパラメータ、5回平均を明記する。一次資料から公式コード公開先は確認できないため、完全再現には論文記述に基づく再実装が必要である。"
+  },
+  "reservation": {"claim_id":"claim-636dceef51cdacb2e889c0f9","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
