@@ -43,7 +43,7 @@ jobs:
           path.write_text(text, encoding='utf-8')
           PY
       - name: Focused RED-to-GREEN check
-        run: python -m unittest .survey/tests/test_claim_checkpoint_barrier.py
+        run: python -m unittest discover -s .survey/tests -p 'test_claim_checkpoint_barrier.py'
       - name: Full verification
         run: |
           python -m compileall -q .survey/scripts
