@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "job-bb3c1124c61c2b01",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2503.18292",
+      "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
+      "source_url": "https://arxiv.org/abs/2503.18292",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+      "priority": 87,
+      "reason": "PagedAttention以降のLLMで埋め込み次元・注意構造・依存関係が層ごとに異なるため、単一ページサイズと一律キャッシュ方針では断片化・再利用効率が悪化する問題を扱う。異種埋め込み寸法の最小公倍数を利用する二段階メモリアロケータと層別キャッシュ・eviction APIをvLLM上に実装し、多様なモデル・データセット・GPU構成でGPUメモリ利用を最大79.6%改善、serving throughputを最大4.92倍（平均1.80倍）改善する。PagedAttention系統の重要な発展として未収録なら価値が高い。"
+    },
+    {
+      "canonical_id": null,
+      "title": "IFMoE: An Inference Framework Design for Fine-grained MoE",
+      "source_url": "https://mlforsystems.org/assets/papers/neurips2024/paper41.pdf",
+      "paper_path": null,
+      "priority": 78,
+      "reason": "S2-MoEの後方参考文献から発見したNeurIPS 2024 Machine Learning for Systems Workshop論文。細粒度MoEで非expert共有パラメータの重複とGroupedGEMMの遅延が大きい問題に対し、共有部分をtensor parallelism、expert部分をexpert parallelismで処理する混成配置と、活性expert数を減らした同一MoEをdraftとして使う近似的投機復号・KV修整を組み合わせる。Qwen2-57B-A14B-Instructを4基A6000、DeepSeek-Lite-Chatを2基A6000で評価し、推論速度とthroughputをともに30%以上改善すると報告する。後続S2-MoEへつながる系譜上の重要な古い欠落候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-lineage-forward-backward-3",
+    "axis": "重要系譜の前方・後方引用追跡",
+    "query_summary": "PagedAttention系統の後続メモリ管理と、今回新規採用されたS2-MoEの後方参考文献を別経路で確認した。JengaはarXiv IDのidentity deltaとstable research jobが存在しないこと、IFMoEはrepo内タイトル検索で未収録であることを最新HEAD直前に再確認した。既収録のSpecMoE、SP-MoEなどは投入対象から除外した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arxiv:2604.10152",
+      "arxiv:2510.10302"
+    ],
+    "next_axis_hint": "GPU runtime/kernelの既収録確認後、SSD/CXL階層メモリやagent長時間推論の隣接軸を確認する",
+    "empty_round_reason": null
+  }
+}
