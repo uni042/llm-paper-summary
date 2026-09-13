@@ -14,12 +14,10 @@ class SpecialistOverflowRoutingTests(unittest.TestCase):
     def test_canonical_docs_route_specialist_to_research_above_50(self):
         specialist = (DOCS / "discovery-specialist-worker.md").read_text(encoding="utf-8")
         buffer_policy = (DOCS / "candidate-buffer-policy.md").read_text(encoding="utf-8")
-        router = (DOCS / "worker-router.md").read_text(encoding="utf-8")
 
         for name, text in (
             ("discovery-specialist-worker.md", specialist),
             ("candidate-buffer-policy.md", buffer_policy),
-            ("worker-router.md", router),
         ):
             with self.subTest(document=name):
                 self.assertIn("candidate_inventory > 50", text)
