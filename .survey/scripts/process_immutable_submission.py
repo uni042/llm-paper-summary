@@ -92,6 +92,8 @@ def _verify_claim(repo_root: Path, descriptor: dict[str, Any]) -> bool:
     if not claim:
         # Fallback/recovery payloads may arrive after the lease file has been GC'd.
         return False
+    if claim.get("lease_invalidated_at"):
+        raise ValueError("stale attempt: claim lease was invalidated before durable submission")
     current_attempt = claim.get("attempt_id")
     if current_attempt and current_attempt != descriptor["attempt_id"]:
         raise ValueError(
