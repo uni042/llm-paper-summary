@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-d3f26cc2a19d9fd5bd9d453e",
   "job_id": "job-research-f804d02bd63705d7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d3f26cc2a19d9fd5bd9d453e",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "TCM-Serveは、要求の重さを資源需要から分類して軽量クラスを先に進めることで、マルチモーダル混在時の先頭待ちを大幅に抑える。抄録では現行方式に対し平均TTFTを全体で54%、遅延重視要求で78.5%削減する。重量マルチモーダル負荷では軽量クラスのTTFTを1秒未満へ維持し、エージングを含む完全版は静的優先よりSLO違反をさらに減らす。KVメモリを通常の25%まで縮小しても軽量要求は平均TTFT 1秒未満を維持する一方、重量要求は遅延が悪化し、資源の厳しい条件では明確な優先順位の交換関係が現れる。",
+    "key_results": [
+      {"metric": "平均TTFT", "value": "全要求で54%削減", "baseline": "現行マルチモーダルサービング方式", "condition": "論文全体の評価要約", "interpretation": "重量要求を軽量要求の前へ無条件に置かないことで、プリフィル競合とキュー待ちを減らす。"},
+      {"metric": "遅延重視要求TTFT", "value": "78.5%削減", "baseline": "現行方式", "condition": "軽量・遅延重視要求", "interpretation": "時間・KV資源の両方で軽量と判定された要求へ先にGPU機会を与える効果が最も強く出る。"},
+      {"metric": "分類・静的優先の切り分け", "value": "正規化遅延を全体で約50%、SLO違反を約45%削減", "baseline": "vLLM先着順", "condition": "重量マルチモーダル構成", "interpretation": "モダリティ混在を別キューへ分離するだけでも先頭待ちの大部分を除ける。"},
+      {"metric": "軽量クラス正規化遅延", "value": "約60%低下", "baseline": "vLLM先着順", "condition": "スマート分類 + 静的優先", "interpretation": "実資源需要で軽量要求を特定することで、単純モダリティ分類より短い要求を正確に先行させる。"},
+      {"metric": "エージング効果", "value": "軽量クラスSLO違反を静的スマート分類からさらに約半減", "baseline": "スマート分類 + 静的優先", "condition": "完全な優先度レギュレータ", "interpretation": "待機時間を優先度へ反映しつつ、軽量要求の期限違反を追加で抑える。"},
+      {"metric": "KVメモリ圧力耐性", "value": "KV容量25%でも軽量クラス平均TTFT 1秒未満", "baseline": "vLLM / EDF", "condition": "GPU KVキャッシュを通常の25%へ制限", "interpretation": "短く終わる要求を先に完了してKVを解放することで、強いメモリ圧力下でも軽量要求を保護する。"},
+      {"metric": "テキストのみ負荷", "value": "平均TTFT約0.05秒、SLO違反0.5%未満", "baseline": "同論文設定", "condition": "テキストのみ構成", "interpretation": "モダリティ差がない場合でも追加スケジューリング機構が大きな悪化を招かない。"}
+    ],
+    "negative_results": "軽量要求を優先するため、重量truck要求の遅延は条件によってvLLMやEDFより悪化する。特にKV容量を25%まで縮めると重量要求が強く影響を受ける。単純モダリティ分類は実資源需要の重なりを捉えられず、truckの遅延を悪化させる場合がある。オフライン推定器はモデル・モダリティごとの約20分プロファイルを必要とし、モデル更新や入力分布変化で再調整が必要になる。",
+    "interpretation": "マルチモーダルサービングでは、全要求を公平な先着順へ置くことが必ずしも利用者体験の公平性にならない。十万トークン級の動画が短いテキストを数十秒止める状況では、資源需要を先に推定し短時間で完了する要求を抜き出す方が、多数の要求のSLOを満たしながらGPUとKVを早く解放できる。エージングが重量要求の進行保証を担うため、単純な短ジョブ優先より実運用へ適用しやすい。",
+    "quality_impact": "モデル内部計算や視覚トークンを削減しないため、生成品質を速度へ交換する近似方式ではない。交換条件はクラス間の待機時間と公平性であり、重量要求の遅延増加を許容して軽量要求のSLOを守る設計である。"
+  },
+  "reservation": {"claim_id": "claim-d3f26cc2a19d9fd5bd9d453e", "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST", "worker_kind": "scheduled_chat"}
 }
