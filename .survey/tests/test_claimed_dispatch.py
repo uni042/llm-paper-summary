@@ -66,8 +66,11 @@ class ClaimedDispatchTests(unittest.TestCase):
             self.put(root, envelope())
             result = dispatch_fallback_inbox.dispatch(root)
             self.assertEqual(result["action"], "dispatched")
-            inbox = json.loads((root / ft.CHAT_INBOX).read_text(encoding="utf-8"))
-            self.assertEqual(inbox["record_bank"], "a")
+            descriptor_path = root / ".survey/work-queue/submissions/research/attempt-a.json"
+            descriptor = json.loads(descriptor_path.read_text(encoding="utf-8"))
+            self.assertEqual(descriptor["record_bank"], "a")
+            self.assertEqual(len(descriptor["record_slots"]), len(SLOT_NAMES))
+            self.assertFalse((root / ft.CHAT_INBOX).exists())
             self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").exists())
 
     def test_claimed_envelope_without_all_five_slots_is_quarantined_before_apply(self):
@@ -134,17 +137,19 @@ class ClaimedDispatchTests(unittest.TestCase):
             self.put(root, envelope())
             self.assertEqual(dispatch_fallback_inbox.dispatch(root)["action"], "dispatched")
 
-    def test_two_claimed_envelopes_do_not_overwrite_unsettled_bank_or_chat(self):
+    def test_two_claimed_envelopes_replay_without_global_chat_barrier(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); seed_job(root); seed_job(root, "job-r2"); claim(root); claim(root, "job-r2", "claim-b", "worker-b", "attempt-b"); self.seed_free_banks(root)
             first = envelope(); second = envelope("job-r2", "claim-b", "worker-b", "attempt-b", envelope_id="env-b")
             self.put(root, first); self.put(root, second)
             self.assertEqual(dispatch_fallback_inbox.dispatch(root)["action"], "dispatched")
-            first_inbox = (root / ft.CHAT_INBOX).read_text(encoding="utf-8")
             second_result = dispatch_fallback_inbox.dispatch(root)
-            self.assertEqual(second_result["action"], "idle")
-            self.assertEqual((root / ft.CHAT_INBOX).read_text(encoding="utf-8"), first_inbox)
-            self.assertTrue((root / ft.FALLBACK_INBOX / "env-b.json").exists())
+            self.assertEqual(second_result["action"], "dispatched")
+            self.assertFalse((root / ft.CHAT_INBOX).exists())
+            self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-a.json").exists())
+            self.assertTrue((root / ft.FALLBACK_ARCHIVE / "env-b.json").exists())
+            self.assertTrue((root / ".survey/work-queue/submissions/research/attempt-a.json").exists())
+            self.assertTrue((root / ".survey/work-queue/submissions/research/attempt-b.json").exists())
 
     def test_selector_reads_all_canonical_ready_job_files_not_truncated_snapshot(self):
         with tempfile.TemporaryDirectory() as td:
