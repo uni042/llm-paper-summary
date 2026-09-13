@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 09:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,34 +28,34 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **6** |
-| 新規job | **20** |
+| Discovery完了 | **7** |
+| 新規job | **21** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
 ## 直近の探索専用worker / 探索round
 
-Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
+Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-moe-inference-1**
 
 | 指標 | 値 |
 |---|---:|
-| 探索軸 | 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 |
-| 評価候補 | **10** |
-| 重複除外 | **10** |
-| Novel候補 | **0** |
+| 探索軸 | moe-cache-aware-routing-expert-skipping-fine-grained-execution |
+| 評価候補 | **4** |
+| 重複除外 | **0** |
+| Novel候補 | **4** |
 | Research候補採用 | **0** |
-| 重複率 | **100.0%** |
+| 重複率 | **0.0%** |
 
 ## 直近24時間
 
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **125** |
-| 探索評価候補 | **629** |
+| 探索round（stats観測） | **126** |
+| 探索評価候補 | **633** |
 | 重複除外 | **264** |
-| 重複率 | **42.0%** |
-| Novel候補 | **365** |
+| 重複率 | **41.7%** |
+| Novel候補 | **369** |
 | Research候補採用 | **209** |
 | Research完了 | **70** |
 | Repo収録 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 629 → 重複除外後 365 → Research候補採用 209 → Research完了 70 → Repo収録 70**
+**探索評価 633 → 重複除外後 369 → Research候補採用 209 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -153,6 +153,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | chunked prefill・prefix-aware batchingの基礎欠落 | 4 | 3 | 0 | 75.0% | 0.0% |
 | cxl-near-data-kv-page-management-os-demand-paging | 4 | 0 | 2 | 0.0% | 50.0% |
 | fault-tolerant distributed serving・KV recovery・GPU failure | 4 | 4 | 0 | 100.0% | 0.0% |
+| moe-cache-aware-routing-expert-skipping-fine-grained-execution | 4 | 0 | 0 | 0.0% | 0.0% |
 | multi-LoRA・推論/微調整co-serving・cross-model KV reuse | 4 | 1 | 2 | 25.0% | 50.0% |
 | multi-adapter serving・推論/継続学習境界 | 4 | 0 | 3 | 0.0% | 75.0% |
 | multi-agent workflow scheduling・異種LLM配置 | 4 | 2 | 2 | 50.0% | 50.0% |
@@ -199,11 +200,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T09:00:00+09:00** — moe-cache-aware-routing-expert-skipping-fine-grained-execution: 評価 4 / 重複 0 / 採用 0
 - **2026-09-13T08:26:04+09:00** — 直近新着・hierarchical memory・serving runtime横断再確認: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T08:26:04+09:00** — network・collective通信・distributed inference: 評価 7 / 重複 7 / 採用 0
 - **2026-09-13T08:26:04+09:00** — GPU runtime安全性・software aging・many-core CPU inference: 評価 9 / 重複 6 / 採用 3
 - **2026-09-13T08:26:04+09:00** — agent workspace仮想化・NVMe階層・長時間runtime state: 評価 6 / 重複 3 / 採用 2
-- **2026-09-13T08:26:04+09:00** — position-independent KV再利用のforward/backward related-work補完: 評価 6 / 重複 1 / 採用 5
 
 ## 最近処理した論文
 
