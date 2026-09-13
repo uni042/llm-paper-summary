@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 01:12 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 01:13 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **160** |
+| 未処理の論文候補（Research ready） | **159** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **229** |
+| 全文精読完了（累計） | **230** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **17 / 24** |
@@ -35,26 +35,26 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **160** |
+| 未処理候補（Research ready） | **159** |
 | 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **158** |
+| 今すぐ着手可能（Claimable） | **157** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 01:07 JST** |
+| :30 通常worker 直近claim | **09-14 01:13 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **33** |
 | 最新通常run | **2026-09-13T19:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **5 min** |
+| 最古の有効claimの経過時間 | **0 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=160 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=159 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **33件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
 - P88 `arXiv:2601.08800` — MixServe: An Automatic Distributed Serving System for MoE Models with Hybrid Parallelism Based on Fused Communication Algorithm
 - P88 `arXiv:2605.07238` — FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows
 - P88 `arXiv:2507.10069` — ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism
 - P88 `arXiv:2605.16867` — GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources
+- P88 `arXiv:2502.15524` — HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds
 
 ## 参考情報
 
