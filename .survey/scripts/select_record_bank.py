@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Inspect reusable workflow-v10 record banks and choose a safe direct-write bank.
+"""Inspect workflow-v10 record banks and choose a safe reusable bank.
 
-This script is advisory for the Chat worker. Bank exhaustion is never a reason
-for STOP_RUN when the complete payload can be durably checkpointed to ChatGPT Library.
+Normal Research/Audit workers use the bank reserved by the claim result. This script
+is for diagnostics, maintenance, and fallback replay. Bank exhaustion is never a
+reason for STOP_RUN when the complete payload can be durably checkpointed to the
+ChatGPT Library.
 """
 from __future__ import annotations
 
@@ -20,8 +22,6 @@ import immutable_submission  # noqa: E402
 from record_bank_config import BANK_IDS, BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 PLACEHOLDER_ATTEMPT = "unused-bank-placeholder"
-INBOX = Path(".survey/work-queue/submissions/chat-inbox.json")
-RESULT = Path(".survey/work-queue/results/chat-inbox.json")
 NEXT_JOBS = Path(".survey/work-queue/next-jobs.json")
 
 SlotCapture = tuple[str, str, str, str]
@@ -48,20 +48,6 @@ def ready_job_ids(repo_root: Path) -> set[str]:
     value = read_object(repo_root / NEXT_JOBS)
     jobs = value.get("next_jobs") if value else None
     return {str(job.get("job_id")) for job in jobs or [] if isinstance(job, dict) and job.get("job_id")}
-
-
-def current_transport(repo_root: Path) -> tuple[dict[str, Any] | None, bool]:
-    inbox = read_object(repo_root / INBOX)
-    result = read_object(repo_root / RESULT)
-    if not inbox or not inbox.get("job_id"):
-        return inbox, True
-    settled = bool(
-        result
-        and result.get("job_id") == inbox.get("job_id")
-        and result.get("attempt_id") == inbox.get("attempt_id")
-        and result.get("ok") is True
-    )
-    return inbox, settled
 
 
 def pending_immutable_bank_owners(repo_root: Path) -> dict[str, set[Pair]]:
@@ -199,8 +185,6 @@ def durable_slot_captures(
 def inspect_bank(
     scan: dict[str, Any],
     ready_ids: set[str],
-    inbox: dict[str, Any] | None,
-    settled: bool,
     durable_slots: set[SlotCapture],
 ) -> dict[str, Any]:
     bank = str(scan["bank"])
@@ -213,8 +197,8 @@ def inspect_bank(
         state = "dirty"
         reason = "one or more slot files are missing/invalid"
     elif attempts == {PLACEHOLDER_ATTEMPT}:
-        # Older pre-created banks intentionally omitted job_id. Keep that legacy
-        # placeholder format free rather than treating the missing job identity as dirt.
+        # Older pre-created banks intentionally omitted job_id. Keep that placeholder
+        # format free rather than treating the missing job identity as dirt.
         state = "free"
         reason = "unused pre-created bank"
     elif scan["incomplete_identity"]:
@@ -228,26 +212,16 @@ def inspect_bank(
             state = "dirty"
             reason = "slot attempt/job identifiers are mixed without complete immutable blob coverage"
     else:
-        attempt_id = next(iter(attempts))
         job_id = next(iter(jobs))
-        active_here = bool(
-            inbox
-            and str(inbox.get("record_bank") or "a").lower() == bank
-            and inbox.get("attempt_id") == attempt_id
-            and inbox.get("job_id") == job_id
-        )
         if all_slots_durable:
             state = "reusable"
             reason = "all current slot blobs are durably captured by immutable descriptors"
-        elif active_here and not settled:
-            state = "occupied"
-            reason = "current reusable inbox still references this attempt without a matching result"
         elif job_id in ready_ids:
             state = "occupied"
-            reason = "bank belongs to a job that is still ready/incomplete in next-jobs"
+            reason = "bank belongs to a job that is still ready/incomplete"
         else:
             state = "reusable"
-            reason = "coherent old attempt is not an active/ready job"
+            reason = "coherent old attempt is not a ready job"
 
     return {
         "bank": bank,
@@ -260,13 +234,12 @@ def inspect_bank(
 
 def inspect(repo_root: Path) -> dict[str, Any]:
     ready_ids = ready_job_ids(repo_root)
-    inbox, settled = current_transport(repo_root)
     pending_owners = pending_immutable_bank_owners(repo_root)
     scans = [scan_bank(repo_root, bank) for bank in BANK_IDS]
     needed_pairs = {pair for scan in scans for pair in scan["pairs"]}
     candidates = immutable_descriptor_candidates(repo_root)
     durable_slots = durable_slot_captures(repo_root, candidates, needed_pairs)
-    banks = [inspect_bank(scan, ready_ids, inbox, settled, durable_slots) for scan in scans]
+    banks = [inspect_bank(scan, ready_ids, durable_slots) for scan in scans]
     selectable = [b["bank"] for b in banks if b["state"] in {"free", "reusable"}]
     return {
         "schema_version": 1,
@@ -274,8 +247,6 @@ def inspect(repo_root: Path) -> dict[str, Any]:
         "direct_bank_available": bool(selectable),
         "if_no_bank": "checkpoint complete logical payload to ChatGPT Library and continue; bank exhaustion is not STOP_RUN",
         "ready_job_ids": sorted(ready_ids),
-        "current_inbox_job_id": inbox.get("job_id") if inbox else None,
-        "current_inbox_settled": settled,
         "pending_immutable_banks": sorted(pending_owners),
         "banks": banks,
     }
