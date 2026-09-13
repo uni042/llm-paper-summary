@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 05:29 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 05:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -45,25 +45,25 @@
 | :00 補助worker 直近claim | **09-14 05:29 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **14** |
+| 直近24h Research完了（帰属不明） | **7** |
 | 最新通常run | **2026-09-14T03:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **40 min** |
+| 最古の有効claimの経過時間 | **41 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
 - **処理速度 LOW**: ready=125 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
-- 直近24hのResearch完了のうち **14件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **7件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **24** |
-| Repo収録 | **58** |
+| Research完了 | **17** |
+| Repo収録 | **51** |
 | Audit完了 | **0** |
 | 探索評価候補 | **302** |
 | Research候補採用 | **65** |
@@ -71,12 +71,12 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **58.9%** |
 | 探索専用worker run（毎時枠） | **6** |
 | 探索専用worker round（stats観測） | **56** |
-| 通常worker run（ledger観測） | **15** |
+| 通常worker run（ledger観測） | **14** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 302 → 重複除外後 124 → Research候補採用 65 → Research完了 24 → Repo収録 58**
+**探索評価 302 → 重複除外後 124 → Research候補採用 65 → Research完了 17 → Repo収録 51**
 
 ## 直近の通常worker
 
@@ -95,11 +95,11 @@ Run: **2026-09-14T03:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
 - P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
-- P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 
 ## 参考情報
 
