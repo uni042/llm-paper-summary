@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4ab4826dacf02fe8f8c6442d",
-  "job_id": "job-research-68c639f67ef98aac",
-  "data": {
-    "overview": "aLoRA対応vLLMは、長い履歴を別アダプタで再計算する標準LoRAと比べ、共有可能KVが増えるほど遅延差が拡大する。65Kトークン文脈の基盤→アダプタ評価ではアダプタ処理のエンドツーエンド遅延を最大58倍、先頭トークン到達時間を100倍超、プリフィルを最大45倍短縮する。1024トークン条件でもaLoRAのアダプタ評価KVヒット率は84%に対し標準LoRAは0%。プリフィル削減に伴うKVブロック割当減少とキュー詰まり抑制により、デコード時間も条件によって最大21倍改善する。非同期到着では負荷上昇とともにGPU利用率が上がり高速化が増えるが、長文脈でKV容量を使い切ると過去ブロックが追い出され高速化倍率が低下する。",
-    "key_results": [
-      {"metric": "アダプタ処理E2E", "value": "最大58倍高速化", "baseline": "標準LoRA + 未改変vLLM", "condition": "65Kトークン文脈、アダプタ評価ステップ", "interpretation": "起動前履歴の大部分を基盤モデルKVから再利用し、長い再プリフィルをほぼ除去する。"},
-      {"metric": "TTFT", "value": "100倍超高速化", "baseline": "標準LoRA", "condition": "65Kトークン文脈", "interpretation": "キュー時間とプリフィル時間の双方を減らし、長文脈アダプタ切替の最初の出力待ちを大幅に縮める。"},
-      {"metric": "プリフィル時間", "value": "最大45倍高速化", "baseline": "標準LoRA", "condition": "プロンプト長増加試験", "interpretation": "共有可能な起動前KVブロックを再利用し、再計算するトークン数を直接減らす。"},
-      {"metric": "デコード時間", "value": "最大21倍高速化", "baseline": "標準LoRA", "condition": "主に1024トークン超の長文脈", "interpretation": "プリフィル再利用で新規PagedAttentionブロック割当が減り、KVヒット率やページ配置が改善することが寄与すると著者は推測する。"},
-      {"metric": "KVヒット率", "value": "aLoRA 84%、標準LoRA 0%", "baseline": "標準LoRA", "condition": "基盤→アダプタ、プロンプト1024トークン", "interpretation": "基盤モデルが作った起動前KVをアダプタ要求が実際に再利用できていることを示す。"},
-      {"metric": "非同期負荷下の高速化", "value": "到着率上昇で高速化が増え、飽和後は頭打ち", "baseline": "標準LoRA", "condition": "500要求、Poisson到着、プロンプトと基盤生成各256、アダプタ生成16", "interpretation": "再プリフィルを避けることでキュー蓄積を抑え、高負荷時にGPU計算資源を有効利用する。"}
-    ],
-    "negative_results": "KV容量を超える到着率と長文脈では再利用可能ブロックが追い出され、速度向上が低下する。高速化は文脈長とモデル規模に強く依存し、短い要求ではデコードなど他段階の比率が高くなるため倍率は小さい。非同期試験はPoisson到着、品質評価はランダムアダプタと入力であり、本番エージェントの偏ったアダプタ人気や実タスク精度を直接再現しない。デコード高速化の一部について著者はページ配置・メモリアクセス改善を推測として述べ、因果を切り分けたカーネル測定ではない。",
-    "interpretation": "この研究の主な価値は、aLoRAというモデル設計上の局所互換性をサービング基盤のキャッシュ同一性へ落とし込んだ点にある。標準多LoRA基盤ではアダプタIDを安全側にハッシュへ含めるため、共有できる可能性があってもモデル境界でキャッシュを断絶する。起動前計算が本当に同一であるaLoRAだけ境界を緩めることで、長文会話の再計算を省き、その余波としてキュー・デコードにも改善が出る。利得はキャッシュが保持されている限り大きいが、容量管理とルーティングが悪ければ失われるため、将来の配置・負荷分散との共同設計が重要になる。",
-    "quality_impact": "本論文のシステム変更は計算近似を導入しない。品質面の交換条件はaLoRA学習方式自体にあり、性能実験はその精度差を測る設計ではない。"
-  },
-  "reservation": {"claim_id": "claim-4ab4826dacf02fe8f8c6442d", "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d3f26cc2a19d9fd5bd9d453e",
+  "job_id": "job-research-f804d02bd63705d7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d3f26cc2a19d9fd5bd9d453e",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

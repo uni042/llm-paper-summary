@@ -2,26 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4ab4826dacf02fe8f8c6442d",
-  "job_id": "job-research-68c639f67ef98aac",
-  "data": {
-    "hardware": ["Granite 3.2 8B: 1×NVIDIA H100 80GB HBM3", "Llama 3.3 70B: 4×NVIDIA H100 80GB", "Mistral Large 2 123B: 8×NVIDIA H100 80GB"],
-    "software": ["CUDA 12.1", "PyTorch 2.8", "vLLM 0.1.dev9582", "bfloat16", "公開aLoRA対応vLLMブランチ"],
-    "model": ["Granite 3.2 8B", "Llama 3.3 70B", "Mistral Large 2 123B", "標準LoRA rank 8", "aLoRA rank 32"],
-    "datasets": ["所定トークン長へランダム生成した性能測定用プロンプトとアダプタ", "非同期試験ではPoisson到着を生成"],
-    "baselines": ["未改変vLLM上の標準LoRA"],
-    "correctness": "サービング実装は起動前に基盤出力、起動後に適応出力を選び、aLoRAの数値的共有条件を維持する。性能比較では標準LoRAとaLoRAの双方で同じ起動トークンを入力へ含めて公平化する。生成品質は主評価ではなく、アダプタ値も性能へ影響しないとしてランダム生成する。",
-    "settings": [
-      {"name": "同期プロンプト長掃引", "description": "基盤モデルからアダプタへ渡す処理で基盤生成256トークン、アダプタ生成16トークン。最大プロンプト長を基準にKV容量を埋める固定バッチサイズを選び、短いプロンプトだけバッチが大きくなる交絡を避ける。"},
-      {"name": "非同期到着", "description": "プロンプト256、基盤生成256、アダプタ生成16、総500要求。Poisson到着率を変え、キュー蓄積・GPU利用率・KV容量超過の影響を測る。"},
-      {"name": "多アダプタ多ターン", "description": "5個のランダムaLoRAを並列に評価し、その結果を含む履歴を再び基盤モデルへ戻す、基盤→5アダプタ→基盤の処理を評価する。"},
-      {"name": "生成長掃引", "description": "初期プロンプト256で基盤生成長を増やし、プリフィル由来だけでなく生成済みKVの再利用も同じ効果を持つか確認する。"}
-    ],
-    "methodology": "要求をキュー、プリフィル、デコードへ分解し、Prometheusからエンドツーエンド遅延、先頭トークン到達時間、トークン間遅延、各段階時間、KVヒット率を収集する。長文脈の同期試験、到着率を変える非同期試験、基盤→アダプタとアダプタ→基盤の双方向、5アダプタを含む多ターン処理を比較し、キャッシュ再利用の効果がどの段階へ波及するかを分析する。",
-    "scope": "実機H100と8B/70B/123Bの3密モデルでvLLM実装を評価するが、実際のエージェントタスク品質や本番到着トレースは使わない。アダプタとプロンプトは性能測定用のランダム生成で、学習済み専門タスクの分布差は評価しない。最大モデルは8 GPUまでで、複数ノード・異種GPU・数千種類の実アダプタ人気分布は未検証。",
-    "workloads": ["基盤→アダプタ", "アダプタ→基盤", "基盤→アダプタ→基盤", "基盤→5アダプタ→基盤", "同期長文脈", "500要求Poisson非同期到着"],
-    "metrics": ["エンドツーエンド遅延", "先頭トークン到達時間", "トークン間遅延", "キュー時間", "プリフィル時間", "デコード時間", "KVキャッシュヒット率", "トークンスループット"],
-    "reproducibility": "モデル、GPU数、CUDA/PyTorch/vLLM版、精度、LoRA/aLoRAランク、処理構造、長さと到着条件を本文に記載し、aLoRA対応vLLMブランチを公開している。実験入力・アダプタはランダム生成で、論文記載条件から再生成可能だが乱数種の詳細は明示されない。"
-  },
-  "reservation": {"claim_id": "claim-4ab4826dacf02fe8f8c6442d", "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d3f26cc2a19d9fd5bd9d453e",
+  "job_id": "job-research-f804d02bd63705d7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d3f26cc2a19d9fd5bd9d453e",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
