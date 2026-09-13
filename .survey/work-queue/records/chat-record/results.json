@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-89c6e48a71f394424970c34a",
   "job_id": "job-research-43ee292714ed8d8c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-89c6e48a71f394424970c34a",
-    "worker_id": "scheduled-chat-hourly",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "PCRは評価したハードウェア・モデル・要求率の各条件で平均TTFTを短縮し、特に待機列が伸びてSSDプリフェッチ機会が増える高負荷で差が広がる。RTX 4090上のLlama 8BではvLLM比がワークロード1/2で2.13倍/1.42倍、高要求率では2.47倍/1.59倍まで改善した。性能分解では層単位重畳が平均約15%のTTFT削減を担い、Llama系のようにKVが大きくSSD再利用率が高い条件ほどプリフェッチの寄与が増えた。正確な接頭辞KVを再利用するため、近似的なKV融合・圧縮に伴う品質低下は導入しない。",
+    "key_results": [
+      {"metric": "平均TTFT高速化", "value": "最大2.47倍", "baseline": "vLLM", "condition": "RTX 4090上のLlama 8B、ワークロード1、高要求率", "interpretation": "負荷が高いほど待機列から先読みできる要求が増え、SSD読出しを実行前にDRAMへ移せるため差が拡大する。"},
+      {"metric": "平均TTFT高速化", "value": "2.13倍/1.42倍、高要求率で2.47倍/1.59倍", "baseline": "vLLM", "condition": "RTX 4090上のLlama 8B、ワークロード1/2", "interpretation": "再利用率が異なる二つの入力集合でも一貫して改善し、共有接頭辞が多いワークロード1で利得が大きい。"},
+      {"metric": "層単位重畳の寄与", "value": "平均約15%のTTFT削減", "baseline": "重畳なしのPCR基本構成", "condition": "Qwen2.5-7B/14B、Llama2-7B/13Bの性能分解", "interpretation": "CPU–GPU転送を層単位でGPU計算へ重ねるため、KVが大きいLlama系ほど転送隠蔽の価値が高い。"},
+      {"metric": "Llama2-7B高負荷の追加機構効果", "value": "11.133秒 → 重畳5.841秒 → プリフェッチ3.441秒", "baseline": "PCR基本構成", "condition": "1.0要求/秒", "interpretation": "KV容量が大きくSSDヒットが約20%ある条件では、PCIe重畳に加えSSD先読みが大きな追加効果を持つ。"},
+      {"metric": "先読み窓の調整", "value": "窓4→6でTTFT 31.06%削減", "baseline": "先読み窓4", "condition": "Llama2-7B、高要求率", "interpretation": "待機要求が十分あると少し遠い将来までSSD読出しを前倒しできるが、最適窓はモデル依存である。"},
+      {"metric": "1層KVチャンクのCPU→GPUコピー", "value": "0.671ms → 0.261ms", "baseline": "cudaMemcpyAsyncによるブロック逐次コピー", "condition": "Llama2-13B、PCIe 32GB/s条件", "interpretation": "非連続vLLMブロックをcudaMemcpyBatchAsyncでまとめ、層単位パイプラインの固定費を抑える。"}
+    ],
+    "negative_results": "小さいKVを持つQwen系では、CPU–GPU転送そのものが短いため層単位同期の固定費が相対的に大きく、0.5要求/秒のQwen2.5-7Bでは重畳後0.762秒に対してプリフェッチ追加後0.765秒とわずかに悪化する。QwenのSSD再利用率は実験設定で約10%に留まり、Llamaの約20%よりSSD先読みの利得が小さい。また論文内の尾部遅延記述には、ある図のP99エンドツーエンド遅延を86msとする説明と、別図で3,000〜6,000msとする説明があり、図・指標条件の違いが本文だけでは明瞭でないため、尾部数値の横比較には注意が必要である。",
+    "interpretation": "PCRの利得は、単にSSD容量を足したことではなく、I/Oを隠せる時間軸を二つ作ったことから生じる。PCIe転送はTransformer層間の計算時間へ重ね、SSD読出しはスケジューラ待機時間へ重ねる。したがってKVが大きいほど前者の削減余地が増え、高要求率で待機列が長いほど後者の削減余地が増える。一方、低負荷・小KV・再利用率が低い条件では重畳やプリフェッチの固定費が相対的に増え、改善幅が小さくなる。",
+    "quality_impact": "PCRは位置依存性を保った正確な接頭辞一致KVだけを再利用し、再利用できないチャンクは通常のプリフィルで再計算する。KV圧縮や位置非依存近似を導入しないため、PCR固有の高速化によるモデル出力品質の近似損失は想定しない。"
+  },
+  "reservation": {"claim_id": "claim-89c6e48a71f394424970c34a", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
 }
