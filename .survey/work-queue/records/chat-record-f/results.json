@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d1f4eb1433c298f9e9aff609",
-  "job_id": "job-research-f3999676507a9c53",
-  "data": {
-    "overview": "高負荷ほど異種SLOを区別する効果が大きい。QPS=15ではScorpioの有効スループットが比較方式より8.8〜14.4倍高く、到着要求に対するSLO達成率も40.7〜46.5ポイント高い。20分のAzure実運用トレースでもSLOを満たした要求の累積数はMooncake、vLLM、S3のそれぞれ1.25倍、2.01倍、2.11倍となる。低負荷ではGPUがボトルネックでないため各方式が大半のSLOを満たし、予測器を同居させる小さな費用のためScorpioの有効スループットがわずかに下がる場合がある。したがって主な価値は最大スループットそのものではなく、過負荷時に失敗する要求へ資源を使わず、緩い要求の処理頻度を下げて厳しい要求を救う点にある。",
-    "key_results": [
-      {"metric":"高負荷時の有効スループット","value":"比較方式比8.8〜14.4倍","baseline":"vLLM、S3、Mooncake","condition":"QPS=15、ShareGPT/LMSYS、Llama-3.1-8B/Gemma-2-27B","interpretation":"一律受入れで連鎖的にSLO違反する比較方式に対し、拒否と処理頻度制御で達成可能要求へ計算を集中する。"},
-      {"metric":"SLO達成率","value":"40.7〜46.5ポイント向上","baseline":"vLLM、S3、Mooncake","condition":"QPS=15の高負荷","interpretation":"TTFT締切とTPOT頻度を別制御するため、片方だけを最適化する方式より両条件を同時に満たす要求が増える。"},
-      {"metric":"実運用トレースのSLO達成要求数","value":"Mooncake比1.25倍、vLLM比2.01倍、S3比2.11倍","baseline":"Mooncake、vLLM、S3","condition":"20分Azure trace、ピーク60 req/s超","interpretation":"バースト時も過負荷を局所化し、累積達成数の優位を維持する。"},
-      {"metric":"スケジューリング費用","value":"0.11〜0.17%","baseline":"全処理時間","condition":"512要求、4つのモデル・データセット設定","interpretation":"TTFT/TPOT Guard自体の計算費は小さく、主な性能差は制御判断による。"},
-      {"metric":"遅延推定精度","value":"R²=0.90〜0.99","baseline":"実測遅延","condition":"TPOT/TTFT解析モデル","interpretation":"受入れと締切判定に使える相関を得るが、誤差ゼロではないため硬いSLO保証にはならない。"}
-    ],
-    "negative_results": "低負荷ではほぼ全方式がSLOを満たすためスケジューリングの余地が小さく、予測器の同居費用でScorpioの有効スループットがわずかに劣ることがある。TTFT GuardだけではTPOT違反が多く、TPOT GuardだけではTTFT違反が残るため、片方の機構だけでは十分でない。予測誤差があるので達成率は統計的なものであり、拒否された要求は達成数の分母から消えずSLO未達として数えられる。",
-    "interpretation": "負荷が低いときは資源不足が起きず、異種SLOを利用した再配分の価値がほぼない。負荷が上がると、全要求を毎反復へ入れる方式は1ステップ時間を延ばして多数のTPOT違反を同時に生む。Scorpioは緩い要求を間欠実行し、達成不能要求を早期に切り離すため、同じGPU容量をSLOを満たせる要求へ集中でき、負荷増大とともに差が拡大する。",
-    "quality_impact": "モデルの生成分布や重みは変更しないため、受け入れられた要求の生成品質を近似化する方式ではない。ただし要求を拒否したり、緩いTPOT要求のトークン生成間隔を意図的に長くする運用上の交換条件がある。"
-  },
-  "reservation": {"claim_id":"claim-d1f4eb1433c298f9e9aff609","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-c6850610f1696da302c47466",
+  "job_id": "job-research-78cb8002e7b50e8e",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c6850610f1696da302c47466",
+    "worker_id": "scheduled-chat-paper-20260914T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
