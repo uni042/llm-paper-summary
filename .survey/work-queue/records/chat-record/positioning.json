@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-55e279df2e506806075997c1",
+  "attempt_id": "attempt-51e656c50159f5f553d184be",
   "job_id": "job-research-eb3b75f01826c8e7",
   "data": {
     "limitations": "主評価は単一NVIDIA H20上の1B〜8B級モデルであり、複数GPUや分散サービング、70B以上の標的モデルでは実測していない。論文自身が指摘するように、標的モデルが大きくなると検証遅延とKVキャッシュ処理が支配的になり、ドラフトLMヘッドを完全に除去しても全体高速化の上限が低くなる。動的語彙は平均受理長を完全語彙と全く同一には保たず、タスクやモデルによってわずかに低下する。DynaSpecは公式実装と一部設定が非公開のため著者再実装との比較である。EAGLE-3も公式チェックポイントが固定枝刈り語彙を含むため、完全語彙LMヘッドを持つドラフトを著者側で学習しており、既製チェックポイントをそのまま比較した結果ではない。GPU常駐状態は単一系列では小さいが、論文は追加VRAMがバッチ数に比例して増えると述べる。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "リポジトリ内の投機的デコード系では、EAGLE-2/EAGLE-3などのドラフト方式の上に重ねる実行時最適化として整理できる。FR-Specの固定頻度語彙に対して、NanoSpecは候補履歴の時間局所性を使って語彙サイズを約32kから3k未満へさらに縮める。また、非同期収集とGPU常駐集合管理は、疎性を導入しただけではメモリアクセス効率が悪化するという一般的なGPUシステム課題への具体例でもあり、KVキャッシュやMoEとは別の『重みの部分集合を毎ステップ動的に連続化する』設計として参照価値がある。",
     "audit_required": false
   },
-  "reservation": {"claim_id":"claim-55e279df2e506806075997c1","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-51e656c50159f5f553d184be",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

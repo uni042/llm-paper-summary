@@ -2,17 +2,40 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-55e279df2e506806075997c1",
+  "attempt_id": "attempt-51e656c50159f5f553d184be",
   "job_id": "job-research-eb3b75f01826c8e7",
   "data": {
     "hardware": "主要実験は単一NVIDIA H20 GPUで実施する。追加メモリ分析ではLlama-3.1-8B、隠れ次元4096、W_max=3072、FP16を前提にする。",
     "software": "FR-Specの公開実装を基盤にPython制御とCUDAカーネルを変更し、NanoSpecをEAGLE-2およびEAGLE-3へ統合する。比較するDynaSpecは公開実装がないため、論文記述に従ってShareGPT上で256語彙クラスタを作り、8.6MパラメータのMLPルータを再実装する。",
     "methodology": "SpecBenchの機械翻訳、複数ターン会話、検索拡張生成、質問応答、数学推論、要約の6タスクにHumanEvalのコード生成を加えた7タスクを用いる。最大生成長は1024トークン、全タスクで貪欲生成を使用する。モデルはLlama-3.1-8B-Instruct、Llama-3.2-1B-Instruct、追加の堅牢性試験としてQwen-2-7B-Instructを用いる。EAGLE-2では公式ドラフトチェックポイントを使い、木の深さ5、最大ドラフトトークン60に統一する。EAGLE-3は公式チェックポイントが約32kの固定枝刈り語彙を持つため、完全語彙LMヘッドを持つドラフトモデルを独自学習して比較条件を揃える。NanoSpecはK_pre=3、K_ver=3、W_max=3072。平均速度は3回実行の平均として報告し、生成速度、平均受理長、ドラフト各構成要素の遅延、追加VRAM、アブレーションを測る。",
     "scope": "評価は単一H20上の1B〜8B級モデルが中心であり、70B以上や複数GPUサービング環境は実測していない。論文自身も、標的モデルが70B以上になると標的側の検証遅延が支配的になり、ドラフトLMヘッドを高速化してもアムダールの法則により相対利得が小さくなると議論する。DynaSpec比較は著者による再実装であり、非公開の詳細設定を完全には再現できない。EAGLE-3比較でも公式の固定枝刈りドラフトを使わず、完全語彙版を独自学習している点を解釈時に考慮する必要がある。",
-    "workloads": ["SpecBench 6タスク","HumanEvalコード生成","EAGLE-2投機的デコード","EAGLE-3投機的デコード","Qwen-2-7B大語彙堅牢性試験"],
-    "baselines": ["自己回帰デコード","EAGLE-2完全語彙","EAGLE-3完全語彙","FR-Spec","DynaSpec再実装"],
-    "metrics": ["生成速度（tokens/s）","自己回帰比高速化倍率","平均受理長","LMヘッド遅延","総ドラフトステップ遅延","追加VRAM使用量"],
+    "workloads": [
+      "SpecBench 6タスク",
+      "HumanEvalコード生成",
+      "EAGLE-2投機的デコード",
+      "EAGLE-3投機的デコード",
+      "Qwen-2-7B大語彙堅牢性試験"
+    ],
+    "baselines": [
+      "自己回帰デコード",
+      "EAGLE-2完全語彙",
+      "EAGLE-3完全語彙",
+      "FR-Spec",
+      "DynaSpec再実装"
+    ],
+    "metrics": [
+      "生成速度（tokens/s）",
+      "自己回帰比高速化倍率",
+      "平均受理長",
+      "LMヘッド遅延",
+      "総ドラフトステップ遅延",
+      "追加VRAM使用量"
+    ],
     "reproducibility": "公式コードがGitHubで公開されている。論文は主要ハイパーパラメータ、モデル、比較対象、単一H20というハードウェア条件を明示する。DynaSpecは元実装が非公開のため再実装だが、クラスタ数、ルータ規模、学習データを記載する。"
   },
-  "reservation": {"claim_id":"claim-55e279df2e506806075997c1","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-51e656c50159f5f553d184be",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

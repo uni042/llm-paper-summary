@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-55e279df2e506806075997c1",
+  "attempt_id": "attempt-51e656c50159f5f553d184be",
   "job_id": "job-research-eb3b75f01826c8e7",
   "data": {
     "problem": "投機的デコードでは、小さなドラフトモデルが複数候補を先に生成し、大きな標的モデルがまとめて検証する。標的モデルよりドラフトが十分速いことが前提だが、Llama-3.1の128k語彙やQwen系の152k語彙では、ドラフトの最後の線形射影で隠れ状態を全語彙へ写すLMヘッドが大きな負担になる。EAGLEやMedusaのようにドラフト本体が少数層しかない方式では、この射影だけでドラフト時間の大半を占め得る。固定高頻度語彙を使うFR-Specや、固定クラスタから学習済みルータで選ぶDynaSpecは語彙を減らせるものの、長尾語を落とすと受理長が急落するため、実用上は約27k〜32kトークンを残す必要がある。したがって計算量を大きく減らせる2k〜3k規模まで縮めながら、現在の文脈に必要な長尾語を残すことが課題となる。さらに、毎ステップ異なる語彙を選ぶとLMヘッド重みの非連続行を集める必要が生じ、単純な疎行列積ではGPUの連続メモリアクセスが崩れて帯域を使い切れず、理論的な演算削減が実時間短縮へつながらない。",
@@ -24,5 +24,9 @@
     ],
     "system_design": "標的モデルは従来どおり完全語彙で検証する。ドラフト側だけに、GPU常駐の候補履歴管理、3072程度の動的語彙生成、別CUDAストリームによるLMヘッド重み収集、連続バッファ上の密行列積を追加する。既存のEAGLE-2/EAGLE-3へ差し込める構造で、標的モデル、KVキャッシュ、スケジューラの変更を必要としない。"
   },
-  "reservation": {"claim_id":"claim-55e279df2e506806075997c1","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-51e656c50159f5f553d184be",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

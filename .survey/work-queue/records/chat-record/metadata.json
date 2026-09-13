@@ -2,34 +2,72 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-55e279df2e506806075997c1",
+  "attempt_id": "attempt-51e656c50159f5f553d184be",
   "job_id": "job-research-eb3b75f01826c8e7",
   "data": {
     "canonical_id": "arXiv:2605.26444",
     "arxiv_id": "2605.26444",
     "doi": "10.48550/arXiv.2605.26444",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.CL","cross_list":[]},
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
     "title": "NanoSpec: Accelerating Speculative Decoding using Minimalist In-Context Vocabularies",
     "summary": "NanoSpecは、投機的デコードのドラフトモデルで語彙が10万トークンを超えると、最後の出力射影で巨大な語彙全体との行列積が支配的になる問題を扱う。入力文脈、直近のドラフト木、標的モデルの高確率候補から候補トークン列を逐次更新し、最近の3072要素だけから動的な有効語彙を作ることで、平均有効語彙を3000未満へ縮める。非連続な重み参照をそのまま疎行列計算せず、必要なLMヘッド重みを別CUDAストリームで連続バッファへ非同期収集し、ドラフト本体計算と重ねる。単一NVIDIA H20上のSpecBenchとHumanEvalではドラフト時間をEAGLE-2比平均51.6%削減し、EAGLE-2に対して1.17〜1.29倍、EAGLE-3に対して1.19〜1.28倍の追加高速化を得る。標的モデル側の完全語彙検証は変えないため、最終出力品質は通常の投機的デコードと同一である。",
     "list_summary": "文脈と直近候補から毎ステップ3000未満の動的ドラフト語彙を作り、必要なLMヘッド重みを非同期収集して射影計算を削減する投機的デコード最適化。EAGLE-2のドラフト時間を平均51.6%削減する。",
-    "authors": ["Zhiyang Chen","Daliang Xu","Yinyuan Zhang","Chenghua Wang","Mengwei Xu","Yun Ma"],
+    "authors": [
+      "Zhiyang Chen",
+      "Daliang Xu",
+      "Yinyuan Zhang",
+      "Chenghua Wang",
+      "Mengwei Xu",
+      "Yun Ma"
+    ],
     "authors_affiliations": "Peking University、およびBeijing University of Posts and Telecommunicationsの研究者による共同研究。Peking UniversityのInstitute for Artificial IntelligenceとSchool of Computer Science、BUPTのState Key Laboratory of Networking and Switching Technologyなどに所属する。",
     "published": "2026-04-08",
     "publication": "arXiv preprint, version 2 revised 2026-06-01",
     "publication_type": "preprint",
     "publication_status": "Preprint",
     "lineage": "speculative-decoding",
-    "topics": ["投機的デコード","動的語彙枝刈り","LMヘッド最適化","非同期重み収集","GPU常駐状態管理","EAGLE-2","EAGLE-3"],
+    "topics": [
+      "投機的デコード",
+      "動的語彙枝刈り",
+      "LMヘッド最適化",
+      "非同期重み収集",
+      "GPU常駐状態管理",
+      "EAGLE-2",
+      "EAGLE-3"
+    ],
     "importance": "高。既存の語彙枝刈りが固定高頻度語彙または学習済みルータで数万トークン規模を残すのに対し、NanoSpecは学習なしで文脈の時間局所性を利用し、3000未満まで縮小しても受理長をほぼ維持する。さらに疎アクセスの実装上の損失をCUDAストリームと連続バッファで隠し、アルゴリズム上の疎性を実測高速化へ結びつけている。",
     "hardware_evaluation": "全主要実験を単一NVIDIA H20 GPUで実施する。Llama-3.1-8B-Instruct、Llama-3.2-1B-Instruct、Qwen-2-7B-Instructを用い、EAGLE-2およびEAGLE-3のドラフト機構と組み合わせて評価する。",
     "hardware_details": "単一NVIDIA H20 GPU。Llama-3.1-8Bでは動的語彙上限3072、隠れ次元4096、FP16時の追加VRAMは24.02MBである。",
     "quality_effect": "標的モデルの語彙と検証処理は変更せず、枝刈りはドラフトモデルだけへ適用する。ドラフト候補が動的語彙から外れても標的モデルが最終結果を完全語彙で検証するため、最終生成分布と出力品質は通常の自己回帰生成と同一である。",
-    "storage_targets": ["ドラフトモデルLMヘッド重み","GPU上の動的語彙インデックス","連続化したLMヘッド重みバッファ"],
-    "bottlenecks": ["10万超語彙に対するドラフトLMヘッド射影","動的語彙による非連続GPUメモリアクセス","CPU管理時のホスト・GPU同期"],
-    "evidence_locations": ["§1","§3.2","§3.3","§4.1–4.6","§5","Appendix A"],
+    "storage_targets": [
+      "ドラフトモデルLMヘッド重み",
+      "GPU上の動的語彙インデックス",
+      "連続化したLMヘッド重みバッファ"
+    ],
+    "bottlenecks": [
+      "10万超語彙に対するドラフトLMヘッド射影",
+      "動的語彙による非連続GPUメモリアクセス",
+      "CPU管理時のホスト・GPU同期"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§3.2",
+      "§3.3",
+      "§4.1–4.6",
+      "§5",
+      "Appendix A"
+    ],
     "source": "https://arxiv.org/abs/2605.26444",
-    "sources": ["https://arxiv.org/abs/2605.26444","https://arxiv.org/html/2605.26444v2","https://arxiv.org/pdf/2605.26444v2","https://github.com/csAugust/NanoSpec"],
+    "sources": [
+      "https://arxiv.org/abs/2605.26444",
+      "https://arxiv.org/html/2605.26444v2",
+      "https://arxiv.org/pdf/2605.26444v2",
+      "https://github.com/csAugust/NanoSpec"
+    ],
     "code": "https://github.com/csAugust/NanoSpec",
     "implementation": "公式コードを公開している。FR-Specの公開実装を基盤とし、Python側の制御とCUDAカーネルを改造して、EAGLE-2/EAGLE-3、動的語彙更新、非同期重み収集、GPU常駐状態管理を実装する。",
     "last_checked": "2026-09-14",
@@ -38,5 +76,9 @@
     "references_source": "arXiv v2 HTML references section",
     "references_total": 49
   },
-  "reservation": {"claim_id":"claim-55e279df2e506806075997c1","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-51e656c50159f5f553d184be",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

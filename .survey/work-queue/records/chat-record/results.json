@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-55e279df2e506806075997c1",
+  "attempt_id": "attempt-51e656c50159f5f553d184be",
   "job_id": "job-research-eb3b75f01826c8e7",
   "data": {
     "overview": "NanoSpecは、Llama-3.1-8BとEAGLE-2の組合せで平均392.7 tokens/sを達成し、完全語彙EAGLE-2の336.9 tokens/s、FR-Specの369.7 tokens/s、DynaSpec再実装の367.7 tokens/sを上回る。Llama-3.2-1Bでは完全語彙EAGLE-2が自己回帰比1.05倍に留まる一方、NanoSpecは900.7 tokens/s、自己回帰比1.35倍となる。EAGLE-3でもLlama-3.1-8Bで362.2から430.0 tokens/s、1Bで739.6から944.8 tokens/sへ改善する。ドラフト単体ではLMヘッド遅延を2.330msから0.237msへ9.8倍短縮し、総ドラフトステップを3.735msから1.640msへ56.1%短縮する。全タスク平均のドラフト時間ではEAGLE-2比51.6%、FR-Spec比20.3%削減した。追加VRAMは24.02MBである。",
     "key_results": [
-      {"metric":"Llama-3.1-8B、EAGLE-2平均生成速度","value":"392.7 tokens/s、自己回帰比2.25倍","baseline":"EAGLE-2 336.9、FR-Spec 369.7、DynaSpec 367.7 tokens/s","condition":"SpecBench 6タスク + HumanEval、単一H20","interpretation":"3000未満の動的語彙でも平均受理長3.59を維持し、語彙射影削減が受理長低下を上回る。"},
-      {"metric":"Llama-3.2-1B、EAGLE-2平均生成速度","value":"900.7 tokens/s、自己回帰比1.35倍","baseline":"EAGLE-2 700.9、FR-Spec 778.8、DynaSpec 762.8 tokens/s","condition":"同一7タスク、単一H20","interpretation":"小型モデルではドラフトLMヘッドの比率が大きいため、語彙削減の効果が特に強く現れる。"},
-      {"metric":"EAGLE-3への追加高速化","value":"8Bで1.19倍、1Bで1.28倍","baseline":"完全語彙EAGLE-3","condition":"8B: 430.0対362.2 tokens/s、1B: 944.8対739.6 tokens/s","interpretation":"ドラフト方式そのものを置き換えずLMヘッドだけを最適化するため、EAGLE-3にも補完的に効く。"},
-      {"metric":"ドラフトLMヘッド遅延","value":"2.330ms → 0.237ms、9.8倍短縮","baseline":"Llama-3.1-8B完全語彙EAGLE-2","condition":"ドラフト本体は約1.4msでほぼ不変","interpretation":"高速化の中心が語彙射影にあり、重み収集0.003ms相当は本体計算と重ねて隠される。"},
-      {"metric":"追加VRAM","value":"24.02MB、モデルメモリの約0.03%","baseline":"14GB超のモデルメモリ","condition":"8B、W_max=3072、FP16","interpretation":"再配置バッファ24MBが大半で、文脈長に依存しない小さな固定費である。"}
+      {
+        "metric": "Llama-3.1-8B、EAGLE-2平均生成速度",
+        "value": "392.7 tokens/s、自己回帰比2.25倍",
+        "baseline": "EAGLE-2 336.9、FR-Spec 369.7、DynaSpec 367.7 tokens/s",
+        "condition": "SpecBench 6タスク + HumanEval、単一H20",
+        "interpretation": "3000未満の動的語彙でも平均受理長3.59を維持し、語彙射影削減が受理長低下を上回る。"
+      },
+      {
+        "metric": "Llama-3.2-1B、EAGLE-2平均生成速度",
+        "value": "900.7 tokens/s、自己回帰比1.35倍",
+        "baseline": "EAGLE-2 700.9、FR-Spec 778.8、DynaSpec 762.8 tokens/s",
+        "condition": "同一7タスク、単一H20",
+        "interpretation": "小型モデルではドラフトLMヘッドの比率が大きいため、語彙削減の効果が特に強く現れる。"
+      },
+      {
+        "metric": "EAGLE-3への追加高速化",
+        "value": "8Bで1.19倍、1Bで1.28倍",
+        "baseline": "完全語彙EAGLE-3",
+        "condition": "8B: 430.0対362.2 tokens/s、1B: 944.8対739.6 tokens/s",
+        "interpretation": "ドラフト方式そのものを置き換えずLMヘッドだけを最適化するため、EAGLE-3にも補完的に効く。"
+      },
+      {
+        "metric": "ドラフトLMヘッド遅延",
+        "value": "2.330ms → 0.237ms、9.8倍短縮",
+        "baseline": "Llama-3.1-8B完全語彙EAGLE-2",
+        "condition": "ドラフト本体は約1.4msでほぼ不変",
+        "interpretation": "高速化の中心が語彙射影にあり、重み収集0.003ms相当は本体計算と重ねて隠される。"
+      },
+      {
+        "metric": "追加VRAM",
+        "value": "24.02MB、モデルメモリの約0.03%",
+        "baseline": "14GB超のモデルメモリ",
+        "condition": "8B、W_max=3072、FP16",
+        "interpretation": "再配置バッファ24MBが大半で、文脈長に依存しない小さな固定費である。"
+      }
     ],
     "negative_results": "完全語彙に比べて受理長が常に改善するわけではない。EAGLE-2の8Bでは完全語彙3.80に対しNanoSpecは3.59、1Bでは3.16に対し3.11で、候補語彙から必要語が外れる影響は残る。ただし計算削減がこの低下を上回り、最終速度は向上する。動的語彙を用いても非同期収集を外し、非連続行へ索引付き行列積を直接使う構成は364.1 tokens/sに留まり、完全構成の392.7 tokens/sより遅い。これは疎アクセスがGPU帯域を使い切れないためで、語彙枝刈りだけでは十分でない。また70B以上では標的モデルの検証とKVキャッシュ処理が支配的になるため、ドラフト側を高速化するNanoSpecの相対効果は小さくなる。",
     "interpretation": "NanoSpecの結果は、投機的デコードでドラフト精度だけを高めるのではなく、ドラフトの最終語彙射影が実際の律速になっている条件では、その計算構造を変えることが重要であることを示す。文脈由来候補だけでは平均313.3 tokens/s、生成途中の拡張候補だけでは351.4 tokens/sで、両者を併用した動的語彙が必要である。さらに同じ動的語彙でも非同期重み収集なしでは364.1 tokens/s、ありでは約392.7 tokens/sとなるため、時間局所性を利用するアルゴリズムとGPUメモリ配置・ストリーム処理の両方が利得に寄与する。",
     "quality_impact": "標的モデルは完全語彙を使ってドラフト候補を検証し、受理規則も変更しない。このためドラフト有効語彙の枝刈りは受理率と速度には影響するが、最終的な生成分布を近似する方式ではない。正しい候補が有効語彙にない場合はドラフトが棄却されやすくなるだけで、標的モデルが正しい次トークンを選び直すため、出力品質は無損失である。"
   },
-  "reservation": {"claim_id":"claim-55e279df2e506806075997c1","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-51e656c50159f5f553d184be",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
