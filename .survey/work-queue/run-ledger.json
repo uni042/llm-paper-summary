@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T17:38:26.621029+00:00",
+  "updated_at": "2026-09-13T19:09:44.645337+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18550,6 +18550,65 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 413,
       "paper_active_count_after": 440,
+      "last_successful_action": "paper_materialized"
+    },
+    {
+      "run_key": "2026-09-14T03:30:00+09:00",
+      "first_recorded_at": "2026-09-13T19:09:44.645337+00:00",
+      "last_recorded_at": "2026-09-13T19:09:44.645337+00:00",
+      "signals": [
+        "research_completed",
+        "paper_materialized"
+      ],
+      "counts": {
+        "research_completed": 1,
+        "audit_completed": 0,
+        "discovery_completed": 0,
+        "blocked": 0,
+        "new_jobs": 0,
+        "new_papers": 6,
+        "fallback_archived": 0
+      },
+      "events": [
+        {
+          "event_id": "34776711114:1",
+          "recorded_at": "2026-09-13T19:09:44.645337+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34776711114",
+            "run_attempt": "1",
+            "source_sha": "d7670e4cb3ef32d305b47176c1aea8b840832b6a"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
+        }
+      ],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-6a744249548dd135",
+          "type": "research",
+          "canonical_id": "arXiv:2502.09921",
+          "title": "INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [],
+      "new_paper_ids": [
+        "arXiv:2502.09921",
+        "arXiv:2511.00101",
+        "arXiv:2604.13327",
+        "arXiv:2604.23150",
+        "arXiv:2606.15789",
+        "arXiv:2607.19539"
+      ],
+      "new_discovery_results": [],
+      "new_fallback_archive_files": [],
+      "paper_active_count_before": 440,
+      "paper_active_count_after": 446,
       "last_successful_action": "paper_materialized"
     }
   ]
