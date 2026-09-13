@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-c66591cb8cc3d72be4a20c91",
   "job_id": "job-research-02e232341d4ef088",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c66591cb8cc3d72be4a20c91",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "大規模GPU環境でQwen3-235B-A22B、DeepSeek-V3、Hy3を実行。vLLM 0.25.0を基盤とし、固定形状デコードでは最大同時要求数256のCUDA Graphを用いる。",
+    "software": "vLLM 0.25.0。比較は標準vLLM、全面的なバッチ不変カーネルを使う決定論的構成、CoRun。",
+    "methodology": "BurstGPT由来のAzure OpenAI要求トレース、Blazeditコード編集ワークロード、固定入出力長の合成負荷を各300要求で評価する。再現性試験では各モデル32プロンプトについて、バッチ1とバッチ32を温度0.6、乱数種42、最大8生成トークンで比較し、トークン列とサンプル済みトークンのlogprobが一致するか確認する。さらに最大同時数、入力長分布、Split-KVの有無、プリフィル隔離の影響を除去・感度実験で測る。",
+    "scope": "同一ハードウェア、同一ソフトウェア、同一テンソル並列構成の内部で、同居要求、到着順、バッチ位置に対する再現性を対象にする。GPU世代、数値形式、カーネル版、テンソル並列度が変わる場合のビット完全一致は保証対象外。固定形状パディングは高同時実行を主対象とし、疎な対話型トラフィックには不利になり得る。",
+    "workloads": ["BurstGPT Azure OpenAI trace","Blazedit code-editing","synthetic fixed-length workload","32-prompt determinism test"],
+    "baselines": ["標準vLLM","batch-invariant deterministic vLLM","LLM-42 verified-speculation approach in sparse deterministic traffic analysis"],
+    "metrics": ["throughput","TTFT","TPOT","deterministic match rate","sampled-token logprob equality","kernel latency","padding efficiency"]
+  },
+  "reservation": {"claim_id":"claim-c66591cb8cc3d72be4a20c91","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
