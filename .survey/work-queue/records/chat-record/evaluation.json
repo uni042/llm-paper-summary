@@ -2,40 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a5b56dfa209210cbe7adf075",
-  "job_id": "job-research-5c8a51a10227b970",
-  "data": {
-    "hardware": "主要な構成探索はNVLink接続のNVIDIA H100 80GB HBM3 GPU×4で実施する。Llama-3.1-8Bを主モデルとし、Qwen2.5-14BとQwen3-30B-A3Bでもターン数・モデル規模の拡張検証を行う。",
-    "software": "vLLMのdisaggregated serving基盤、KV transfer protocol、prefix cacheを利用した試作実装。P/D/Rノードとセッション管理プロキシを追加し、Turn 2+要求のappend-prefillをD-localまたはP経由へ振り分ける。",
-    "methodology": "合成評価では4 GPU上で17構成、18種類の2ターン負荷、10段階QPS（0.5〜20）を組み合わせた3060点を測定する。Turn 2負荷はdecode-heavy、balanced、prefill-heavyへ分け、x=0、x=1、1/3、1/2、2/3などのappend-prefill D-local割合と1P3D・2P2D・3P1D等を比較する。各点10秒のPoisson到着を生成し、Turn-1 TTFT、Turn-2 TTFT、平均TPOT、tokens/sec、成功率を測る。実負荷検証はShareGPTとWildChatの複数ターン会話を1〜20 QPSで流し、動的PPDのTTFT/TPOT重みは既定で1:1。成功はタイムアウトせず95%以上の要求が完了することと定義する。さらにprefill-heavyな500会話でTPOT重みを変え、経路選択比とTTFT/TPOTのPareto曲線を評価する。",
-    "scope": "主評価は単一ノード4×H100/NVLinkで、複数ノードRDMAや外部KVストアを経由した場合のネットワーク・一貫性費用は直接評価していない。動的経路は事前測定した離散ワークロード表への最近傍写像であり、表にない急激な分布やハードウェア変化では最適経路を外す可能性がある。出力長はオンライン決定時点では未知なので、負荷型の推定・事前分布に依存する。",
-    "workloads": [
-      "18種類の合成multi-turn負荷",
-      "ShareGPT",
-      "WildChat",
-      "2〜16ターン拡張試験",
-      "prefill-heavy重み感度試験"
-    ],
-    "baselines": [
-      "traditional PD x=0",
-      "Full AP-to-D x=1",
-      "partial routing x=1/3,1/2,2/3",
-      "Replica",
-      "固定P/D構成"
-    ],
-    "metrics": [
-      "Turn-1 TTFT",
-      "Turn-2+ TTFT",
-      "平均TPOT",
-      "tokens/sec",
-      "平均要求遅延",
-      "成功率",
-      "KV転送量"
-    ],
-    "reproducibility": "論文はGPU、モデル、構成空間、QPS、合成負荷分類、実データセット、ルーティング式とオンライン表引きを明示し、AppendixにKV転送・セッション管理・サービス発見・プロキシ実装詳細を載せる。公式コードURLは一次資料では確認できない。"
-  },
+  "attempt_id": "attempt-ac646c13d1744242efbdf7e6",
+  "job_id": "job-research-cca875ddc6629317",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a5b56dfa209210cbe7adf075",
+    "claim_id": "claim-ac646c13d1744242efbdf7e6",
     "worker_id": "scheduled-chat-llm-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
