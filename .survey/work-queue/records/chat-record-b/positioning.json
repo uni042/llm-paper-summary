@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2512.12990-20260913-0930-v10-a",
-  "job_id": "job-research-7c0598aabd36d6bf",
+  "attempt_id": "attempt-b0828ffdc0038e6e8c458dc9",
+  "job_id": "job-research-67fd071bb1792a36",
   "data": {
-    "limitations": "評価は単一バッチの端末内推論を想定したアーキテクチャモデルで、実スマートフォン上のOS競合、FlashランダムI/O、熱制約、複数同時要求は直接測っていない。対象MoEはDeepSeek-V2-LiteとQwen1.5-MoE-A2.7B、主要タスクはGSM8Kに限られる。DBSCはゲート得点分布が少数重要専門家へ偏る性質を利用し、PCWはプリフィルの人気専門家が初期デコードでも有用という相関へ依存するため、その性質が弱いモデルやタスクでは改善幅が縮む可能性がある。プリフィルは高ビットで実行するため、長大プリフィルが支配するワークロードでは全体効果が限定される。",
-    "differences": "Cache-PriorやBuddyMoEは専門家選択をキャッシュ常駐側へ寄せてミスを抑えるのに対し、SliceMoEは専門家自体をMSB/LSBへ分割して「最低限の低精度版を多数保持し、重要時だけ追加LSBを要求する」。HOBBITの混合精度は高・低ビット重みを別コピーで保持するが、AMATは一つの入れ子表現から両方を作る。D2MoE系のMatryoshka量子化が校正や非一様量子化へ依存するのに対し、AMATは非対称線形量子化のゼロ点も同時に切り下げるだけで校正を不要にする。",
-    "implementation_status": "論文はシステム構成、XPU/DRAM/UFS 3.1仕様、キャッシュ管理、量子化式、評価条件を公開している。2026-09-13時点で著者公式コードリポジトリは確認できない。",
-    "research_positioning": "MoE専門家オフロードと階層メモリの交点に位置する。専門家を不可分なキャッシュ項目として扱う従来方式から、同一重みの情報量をスライス単位で階層化する方向へ拡張した点が重要である。Flash/SSDの下位階層を利用する際、アクセス回数だけでなく「ミス時に何ビットを上げるか」を制御変数にできることを示す。",
-    "relation_to_existing_repository": "MoE-InfinityやCPU/SSD専門家オフロード系では専門家単位の配置・先読み・キャッシュが中心だが、SliceMoEは専門家内部のビット平面を別キャッシュ項目にする。SpecMoEOffのような転送隠蔽とは直交し、SliceMoEで転送量とミス頻度を減らした上で、残るFlash/SSD転送を投機的デコードや非同期I/Oで隠す組合せが考えられる。複数NVMeやSSD内部並列を使う将来系では、MSBを高優先度・LSBを低優先度I/Oキューへ分けるスケジューリングも自然な拡張となる。",
+    "limitations": "評価はQwen3-0.6Bと単一RTX 5090ワークステーションに集中し、より大きいLLM、多GPUサービング、複数NVMe、共有storageでの競合は未評価である。100M entryで215.86GBとtable自体は大きく、さらに規模を増やすとSSD容量、index metadata、offline construction時間が増える。phrase accessは生成内容依存で予測誤りによる無駄I/Oがあり、Top-Kを大きくすれば帯域消費も増える。外部memoryは静的コーパス由来のため、鮮度、削除、更新、provenance管理は別途必要である。著者公式コード公開は確認できず、cache policyやphrase miningの実装差が再現性へ影響する。",
+    "differences": "RAGは文書chunkを検索してpromptへtokenとして追加するためattention costが増えるが、TF-Engramはphrase-level semantic vectorをhidden stateへ注入する。LoRAやadapterはbackboneに追加学習済みparameterを結合するのに対し、TF-Engram memory entryはコーパス処理と凍結encoderで構築する。従来EngramがGPU内hash tableで容量を圧縮するのに対し、TF-Engramはphrase固有entryを保持し、容量をSSDへ外出しすることでcollisionを避ける。FlexGen等のweight offloadとも異なり、SSDに置くのはモデル計算に必須な重みではなく、sparseでdata-dependentな外部意味記憶である。",
+    "implementation_status": "論文ではGPU–DRAM–NVMe SSD階層と非同期prefetchを単一ワークステーションで実装・計測している。TF-Engram固有の著者公式コードリポジトリは2026-09-13時点で一次資料から確認できない。",
+    "research_positioning": "階層メモリ・SSD活用系統に位置するが、重みやKVの退避ではなく『モデル外の知識容量をSSDで増やす』方向を示す点が特徴である。推論計算中に将来I/Oを予測し、残りlayerのcomputeをlatency hidingへ使う構造は、expert offloadやKV prefetchにも転用可能な一般的発想を含む。",
+    "relation_to_existing_repository": "SSD/NVMe weight offload、expert streaming、KV cache階層化では次に必要なデータがlayer順序やrouting、attention参照から決まるのに対し、TF-Engramはtoken生成から将来の外部memory accessを予測する。NeuroPrefetcher等の予測先読みと比較すると、prediction signalをTransformer中間hidden stateから直接得る点が重要である。SSDをより活躍させる新手法の種として、同じearly-exit signalをexpert/KV/adapterのprefetchへ統合する余地が大きい。",
     "audit_required": false
   }
 }
