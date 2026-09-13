@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-c6850610f1696da302c47466",
   "job_id": "job-research-78cb8002e7b50e8e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c6850610f1696da302c47466",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "16並列の学習ロールアウトではAgentZipが平均サンドボックス所有メモリを88.55%削減し、zswapの48.66%とKSM+zswapの51.24%を大幅に上回る。同時に壁時計時間は無圧縮比1.403倍で、zswapの1.436倍、KSM+zswapの1.517倍より短い。4候補の生成・選別ではメモリを64.29%削減し、比較方式の4.86〜21.25%を上回る一方、壁時計時間は1.468倍でzswap/KSM+zswapより遅く、容量との交換条件が残る。復元先読みを外して温かいページまで積極圧縮するとロールアウトのメモリ削減は94.22%まで増えるが3.052倍へ減速する。複数の先読みを重ねると減速を1.403倍まで戻せるため、AgentZipの容量利得を実用的な遅延へ近づける主要因は圧縮率そのものより需要復元を重要経路から外すことにある。",
+    "key_results": [
+      {"metric":"平均サンドボックス所有メモリ","value":"Rolloutで88.55%削減、GAFで64.29%削減","baseline":"無圧縮","condition":"16並列Rollout / 4並列GAF","interpretation":"テンプレート差分と兄弟群辞書が、ページ単独圧縮や完全一致共有では使えない冗長性を回収する。"},
+      {"metric":"既存Linux構成との容量差","value":"Rollout: zswap 48.66%、KSM+zswap 51.24%に対し88.55%","baseline":"zswap、KSM+zswap","condition":"R2E-Gym parallel rollout","interpretation":"コピーオンライト後に残る近似的ページ間類似性を使うことが大きな差になる。"},
+      {"metric":"壁時計時間倍率","value":"Rollout 1.403倍、GAF 1.468倍","baseline":"無圧縮=1.0","condition":"完全AgentZip","interpretation":"Rolloutでは既存圧縮方式より容量と遅延の双方で優れるが、GAFでは大きな容量削減と引き換えにzswapより遅い。"},
+      {"metric":"復元先読みの効果","value":"Rolloutの減速3.052倍→1.403倍、需要復元増幅0.419→0.147","baseline":"先読みなしAgentZip","condition":"stride→local temporal→cohort temporal→tool hotsetを累積","interpretation":"温かいページを圧縮対象へ含めるために発生する需要復元の多くを事前復元へ移す。"},
+      {"metric":"圧縮方式の組合せ","value":"辞書符号化ページ約60%削減、メモリ削減88.63%→88.55%をほぼ維持、減速2.703倍→1.403倍","baseline":"cohort dictionary only","condition":"Rollout","interpretation":"安価なテンプレート差分と連長圧縮を先に使い、共有辞書の高いCPU費用を必要なページへ限定する。"},
+      {"metric":"需要復元の尾部遅延","value":"p50 3.47 ms、p95 110.52 ms、p99 223.27 ms","baseline":"非同期先読み復元 p50 0.16 ms、p95 1.50 ms、p99 8.09 ms","condition":"圧縮ページ復元経路","interpretation":"復号計算より、需要フォルトでゲストを止めることの尾部費用が大きいため先読みが重要になる。"}
+    ],
+    "negative_results": "GAFではAgentZipの壁時計時間1.468倍がzswapの1.118倍、KSM+zswapの1.159倍より悪く、常に遅延でも優位ではない。兄弟候補の多様性が高いGAFでは辞書の兄弟数を1から4へ増やすと辞書単独のメモリ削減が85.81%から71.39%へ低下し、辞書容量も大きければ良いわけではない。先読みなしの積極圧縮は3倍前後の大幅減速を生み、予測の網羅率が不足するワークロードでは同様のリスクがある。",
+    "interpretation": "容量削減はサンドボックス間の類似性が高いほど強く、同じ課題から16軌跡を作るRolloutで特に大きい。GAFは役割指示を変えて軌跡を意図的に多様化するため兄弟間辞書の効率が落ちるが、テンプレート差分は依然として高い圧縮可能率を保つ。遅延面ではLLM待ち時間が長いほど重い圧縮を隠しやすく、復元アクセスが兄弟間やツール位置で再現しやすいほど先読みが需要フォルトを消せる。",
+    "quality_impact": "ページ内容を可逆復元する無損失のメモリ管理で、LLMやツール計算の数値品質は変えない。観測される影響はCPU消費、ページ復元停止、壁時計時間、実行可能な同時サンドボックス数である。"
+  },
+  "reservation": {"claim_id":"claim-c6850610f1696da302c47466","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
