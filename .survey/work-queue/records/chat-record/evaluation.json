@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-6ff7fcf9a77bead8e21921d8",
   "job_id": "job-research-de92658797430cf6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6ff7fcf9a77bead8e21921d8",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "8基のNVIDIA SXM A100 80GBをNVLinkで接続したクラスタを使用する。Qwen2.5-14Bは単GPUインスタンス、Qwen2.5-32BはHBMにKVキャッシュ余地を残すため2-way tensor parallelismで配信する。",
+    "software": "vLLM上にTaiChiを実装する。chunked prefillをP-heavy/D-heavyで異なるサイズに設定し、vLLMのKV転送をNCCLによるmany-to-many相互通信へ拡張する。KV転送をモデル実行から非同期化し、受信KVをpaged memoryへ格納するfused CUDA演算を追加する。",
+    "methodology": "チャット用途はShareGPT、要約用途はArXiv Summarizationを使用し、到着はPoisson過程で生成する。ShareGPTは2048トークン超、ArXiv Summarizationは16384トークン超を除外する。均衡SLOを2組用意し、ShareGPTは(3秒,110ms)/(4秒,70ms)、要約は(4秒,70ms)/(6秒,50ms)のTTFT/TPOTを用いる。32Bではtensor parallelism費用を考慮してTPOT SLOを10ms緩和する。指標は90%以上の要求が両SLOを満たす最大要求率であるgoodput。比較対象はvLLM上のPD aggregation（chunked prefill）とPD disaggregationで、後者はmany-to-many KV転送へ拡張する。さらにp90 TTFT/TPOT、構成要素追加による達成率、KV転送・スケジューリング費用を測る。",
+    "scope": "8×A100の単一クラスタとQwen2.5-14B/32Bに限定され、H100/H200、異種GPU、複数ノードをまたぐ低速ネットワーク環境では直接評価していない。最適なP-heavy/D-heavy比とチャンクサイズはオフライン探索し、負荷が大きく変化した際に分単位で再構成する前提で、秒単位に激変する負荷へ完全オンライン最適化する方式ではない。KV移送費用が小さい高帯域相互接続を前提とするため、ネットワークが遅い環境では要求フェーズ移動の利得が小さくなる。",
+    "workloads": ["ShareGPTチャット","ArXiv Summarization","Qwen2.5-14B","Qwen2.5-32B","2種類の均衡TTFT/TPOT SLO"],
+    "baselines": ["PD aggregation / chunked prefill","PD disaggregation","構成要素除去版TaiChi"],
+    "metrics": ["goodput","90% SLO達成率","p90 TTFT","p90 TPOT","KVキャッシュ転送費用","プリフィルスケジューリング費用","デコードスケジューリング費用"],
+    "reproducibility": "GPU数・型、モデル・精度、TP設定、データセット、入力長除外条件、SLO、比較設定、主要スケジューラ定数を本文で示す。vLLMを基盤にした実装内容は詳しいが、論文時点では『近く公開予定』で公開URLはない。"
+  },
+  "reservation": {"claim_id":"claim-6ff7fcf9a77bead8e21921d8","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
