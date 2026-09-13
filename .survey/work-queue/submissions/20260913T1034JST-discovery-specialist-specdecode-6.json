@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f76f51c593bcba6f",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.26444",
+      "title": "MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies",
+      "source_url": "https://arxiv.org/abs/2605.26444",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2605.26444-microspec-lightweight-in-context-vocabularies.md",
+      "priority": 87,
+      "reason": "投機的復号のdraft modelで10万超tokenの出力射影がボトルネックになる点に対し、生成文脈の時間局所性からstepごとに3K未満のactive vocabularyを構築するtraining-free方式。非連続memory accessのoverheadを非同期gatherとGPU常駐状態で隠すsystem co-designによりdraft inference latencyを平均51.6%削減し、EAGLE-2比end-to-endで1.12〜1.32倍高速化するため、投機的復号のkernel/runtime最適化として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.03876",
+      "title": "AdaptiveSD A Stability-Aware, Runtime-Adaptive Speculative Decoding Framework with Multi-Policy Orchestration for CPU-Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.03876",
+      "paper_path": "papers/inference/06-speculative-decoding/2026-2607.03876-adaptivesd-runtime-adaptive-cpu-constrained.md",
+      "priority": 78,
+      "reason": "CPUのみ・memory bandwidth制約下で固定draft長が帯域飽和やresource exhaustionを起こす問題に対し、runtime monitoring、11-rule adaptive draft controller、policy engine、INT8 shadow bufferを含むKV coordinationをfeedback loopとして統合する。単著かつ評価の一般性は精読確認が必要なためpriorityは抑えるが、端末内CPU推論でthroughputだけでなく安定性とresource preservationを第一級の制御目標に置く点は既存adaptive speculative decodingと異なる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-specdecode-6",
+    "axis": "投機的復号runtime・draft resource・CPU制約",
+    "query_summary": "投機的復号のserving/runtime軸を探索し、SPECTREとMemSpecは既収録済みとして除外した。MicroSpecとAdaptiveSDは最新HEADのexisting research jobsで未登録を再確認した。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2605.08151",
+      "arXiv:2608.10362"
+    ],
+    "next_axis_hint": "階層KV memory service・SSD/DRAM tiering・prefix reuseの新着、次いでforward/backward citation経路を探索する",
+    "empty_round_reason": null
+  }
+}
