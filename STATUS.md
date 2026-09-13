@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 18:22 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 18:27 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,9 +36,9 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **169** |
-| 処理中（Active claims） | **34** |
-| 今すぐ着手可能（Claimable） | **135** |
-| :30 通常worker Active claims | **29** |
+| 処理中（Active claims） | **33** |
+| 今すぐ着手可能（Claimable） | **136** |
+| :30 通常worker Active claims | **28** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **3** |
 | :30 通常worker 直近claim | **09-13 18:00 JST** |
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **57** |
 | 最新通常run | **2026-09-13T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **374 min** |
+| 最古の有効claimの経過時間 | **379 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -98,8 +98,8 @@ Run: **2026-09-13T17:30:00+09:00**
 - P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
 - P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
+- P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
 - P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
-- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 
 ## 参考情報
 
