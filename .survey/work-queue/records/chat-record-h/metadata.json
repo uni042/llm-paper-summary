@@ -2,48 +2,107 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-a52c3081dddae57267f67a59",
+  "attempt_id": "attempt-975876ab1d6275d45b4eb0f0",
   "job_id": "job-research-a60dcea57ad2475d",
   "data": {
     "canonical_id": "arXiv:2604.23150",
     "arxiv_id": "2604.23150",
     "doi": "10.48550/arXiv.2604.23150",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.LG","cross_list":["cs.AI","cs.AR"]},
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI",
+        "cs.AR"
+      ]
+    },
     "title": "Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns",
     "summary": "本論文は、マルチノードMoE推論で専門家を均等に置くだけでは、実際の要求が特定の専門家集合へ偏って発火し、トークンが遠隔ノードへ送られる全対全通信が支配的になる問題を扱う。Llama 4 Maverick、DeepSeek-V3、Qwen3-235B-A22Bについて10万件超の専門家活性トレースを収集し、分野ごとに人気専門家が変わること、プリフィルとデコードの専門家活性に相関があること、要求が活性パターンで明確にクラスタ化することを確認する。これを利用して、プリフィル活性から似た要求を同じデコード小バッチへまとめ、各要求群で頻出する専門家を同じ装置群へ配置する。全対全メッセージ量を最大20%、通信時間を最大12%、MoE層時間を最大6%削減する。",
     "list_summary": "プリフィル時の専門家活性から似た要求を小バッチ化し、要求群で共発火する専門家を同じノードへ置くことで、マルチノードMoEの全対全通信を削減する。",
-    "authors": ["Abhimanyu Bambhaniya","Geonhwa Jeong","Jason Park","Jiecao Yu","Jaewon Lee","Pengchao Wang","Changkyu Kim","Chunqiang Tang","Tushar Krishna"],
+    "authors": [
+      "Abhimanyu Bambhaniya",
+      "Geonhwa Jeong",
+      "Jason Park",
+      "Jiecao Yu",
+      "Jaewon Lee",
+      "Pengchao Wang",
+      "Changkyu Kim",
+      "Chunqiang Tang",
+      "Tushar Krishna"
+    ],
     "authors_affiliations": "Georgia Institute of Technology、Meta Platforms, Inc.。",
     "published": "2026-04-25",
     "publication": "arXiv",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "activation-aware expert placement and multi-node MoE inference",
-    "topics": ["MoE推論","専門家配置","全対全通信","要求クラスタリング","プリフィル・デコード分離","専門家並列"],
+    "topics": [
+      "MoE推論",
+      "専門家配置",
+      "全対全通信",
+      "要求クラスタリング",
+      "プリフィル・デコード分離",
+      "専門家並列"
+    ],
     "importance": "専門家の平均負荷だけでなく、要求単位でどの専門家が同時発火するかを配置と小バッチ形成へ使い、通信トポロジとワークロード構造を直接合わせる点が重要。",
     "hardware_evaluation": "活性トレース収集は8×NVIDIA H100で300時間超。評価はLlama 4 Maverick、DeepSeek-V3、Qwen3-235B-A22BをFP8で扱い、DP8TP8→EP64構成などを解析・実測する。",
     "source": "https://arxiv.org/abs/2604.23150",
-    "sources": ["https://arxiv.org/abs/2604.23150","https://arxiv.org/html/2604.23150"],
+    "sources": [
+      "https://arxiv.org/abs/2604.23150",
+      "https://arxiv.org/html/2604.23150"
+    ],
     "code": null,
     "implementation": "vLLM v0.9のfusedMoE routerへ専門家活性ロギングを追加し、要求クラスタリングとデータ依存専門家配置を評価。生産スタックへの統合案を示すが、一次資料で著者公式コードURLは確認できない。",
     "last_checked": "2026-09-14",
     "storage_targets": [],
-    "bottlenecks": ["専門家負荷不均衡","遠隔専門家への全対全通信","静的expert-id順配置","平均負荷だけを見るEPLB","通信カーネルの最大rank長へのパディング"],
+    "bottlenecks": [
+      "専門家負荷不均衡",
+      "遠隔専門家への全対全通信",
+      "静的expert-id順配置",
+      "平均負荷だけを見るEPLB",
+      "通信カーネルの最大rank長へのパディング"
+    ],
     "hardware_details": "8 H100 GPUs for >300 hours of trace collection; FP8 inference. Multi-node evaluations use DP8TP8→EP64 configurations with global batches of 8×128 requests in key experiments。",
     "quality_effect": "モデルのルータや重みを変更せず、要求の小バッチ割当と専門家の物理配置を変更するため生成品質を近似化しない。活性パターンから要求種別を高精度に推定できること自体は情報漏えい上の注意点になる。",
-    "evidence_locations": ["arXiv v1 §3 Characterization","§4 Workload-aware Grouping and Expert Placement","§5 Evaluations","References"],
+    "evidence_locations": [
+      "arXiv v1 §3 Characterization",
+      "§4 Workload-aware Grouping and Expert Placement",
+      "§5 Evaluations",
+      "References"
+    ],
     "references": [
-      {"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},
-      {"canonical_id":"arXiv:2505.09388","arxiv_id":"2505.09388"},
-      {"canonical_id":"arXiv:2401.14361","arxiv_id":"2401.14361"},
-      {"canonical_id":"arXiv:2401.08383","arxiv_id":"2401.08383"},
-      {"canonical_id":"arXiv:2309.11998","arxiv_id":"2309.11998"},
-      {"canonical_id":"arXiv:2202.08906","arxiv_id":"2202.08906"}
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:2505.09388",
+        "arxiv_id": "2505.09388"
+      },
+      {
+        "canonical_id": "arXiv:2401.14361",
+        "arxiv_id": "2401.14361"
+      },
+      {
+        "canonical_id": "arXiv:2401.08383",
+        "arxiv_id": "2401.08383"
+      },
+      {
+        "canonical_id": "arXiv:2309.11998",
+        "arxiv_id": "2309.11998"
+      },
+      {
+        "canonical_id": "arXiv:2202.08906",
+        "arxiv_id": "2202.08906"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v1 HTML版参考文献節",
     "references_total": 35
   },
-  "reservation": {"claim_id":"claim-a52c3081dddae57267f67a59","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-975876ab1d6275d45b4eb0f0",
+    "worker_id": "scheduled-chat-paper-20260914T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
