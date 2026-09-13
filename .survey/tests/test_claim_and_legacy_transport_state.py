@@ -42,7 +42,7 @@ class ClaimAndLegacyTransportStateTests(unittest.TestCase):
             self.assertFalse(current["invalidated"]["active"])
             self.assertTrue(current["invalidated"]["invalidated"])
 
-    def test_legacy_transport_requires_ok_true_not_just_matching_job(self):
+    def test_legacy_transport_requires_ok_true_and_matching_job_attempt(self):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             inbox_path = root / select_record_bank.INBOX
@@ -50,15 +50,21 @@ class ClaimAndLegacyTransportStateTests(unittest.TestCase):
             inbox = {"job_id": "job-a", "attempt_id": "attempt-a", "record_bank": "b"}
             write_json(inbox_path, inbox)
 
-            write_json(result_path, {"job_id": "job-a", "ok": False, "repair_required": True})
+            write_json(result_path, {
+                "job_id": "job-a", "attempt_id": "attempt-a", "ok": False, "repair_required": True,
+            })
             _, settled = select_record_bank.current_transport(root)
             self.assertFalse(settled)
 
-            write_json(result_path, {"job_id": "job-a", "ok": True})
+            write_json(result_path, {"job_id": "job-a", "attempt_id": "attempt-b", "ok": True})
+            _, settled = select_record_bank.current_transport(root)
+            self.assertFalse(settled)
+
+            write_json(result_path, {"job_id": "job-a", "attempt_id": "attempt-a", "ok": True})
             _, settled = select_record_bank.current_transport(root)
             self.assertTrue(settled)
 
-            write_json(result_path, {"job_id": "job-b", "ok": True})
+            write_json(result_path, {"job_id": "job-b", "attempt_id": "attempt-a", "ok": True})
             _, settled = select_record_bank.current_transport(root)
             self.assertFalse(settled)
 
