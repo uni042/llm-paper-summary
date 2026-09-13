@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-a9879118b7ee6131d2a6caf4",
+  "job_id": "job-research-8409b6752444b980",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-a9879118b7ee6131d2a6caf4.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references is required; use [] after checking a reference section with no normalized identifiers | problem_method.components[0].description is too short",
+  "processed_at": "2026-09-13T17:01:53+00:00",
+  "validation_errors": [
+    "metadata.references is required; use [] after checking a reference section with no normalized identifiers",
+    "problem_method.components[0].description is too short"
+  ]
+}
