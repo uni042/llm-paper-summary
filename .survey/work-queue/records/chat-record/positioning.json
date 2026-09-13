@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-b1377ad0e2e7ebab452d376f",
-  "job_id": "job-research-4639566133723dd3",
-  "data": {
-    "limitations": "評価は24タスク規模、RTX 3090級24 GB単一GPU、主にxLAM-7b-rとLoRA rank 4に限られ、長期間の複数エージェント利用や多数アダプタ、異なるGPU世代への一般化は未検証である。学習品質そのものは主評価対象ではなく、tau-bench成功率・報酬はワークロード完走確認としてのみ扱う。背景学習の協調中断には21.6%の学習処理量低下があり、前景応答性との交換条件がある。先回りプリフィルは後続利用予測が外れればGPU時間とKV容量を消費し、アダプタ版が更新されれば作成したKVを再利用できない。24 GB内で完走してもピークは最大23.5 GBで安全余裕が小さく、より大きいモデルや長い文脈では別の量子化・オフロードが必要になる。",
-    "differences": "vLLMやSGLangは基本的にサービング中の重みを安定状態とみなし、接頭辞とモデル状態が変わらない範囲でKV再利用を最適化する。分散RL基盤は逆に推論・報酬・学習を別GPUへ配置できる前提を持つ。LOCALは両方の前提を外し、一つのGPUで重みが更新され続ける状態を通常運用とする。S-LoRAやPunica等の複数アダプタサービングとも異なり、新しいLoRA配置方式を提案するのではなく、アダプタ版がKVの論理有効性を変えることをスケジューラとキャッシュ管理へ伝播する。LLM in FlashやPowerInferのような重み階層化ではなく、学習用一時メモリとKV常駐量の競合を前景遅延まで含めて制御する点が特徴である。",
-    "implementation_status": "Python約24,447行の研究試作で、FlashInferベースの推論エンジン、協調スケジューラ、アダプタ版管理、基数木型KV索引、ホスト退避、複数エージェント先回りプリフィルを実装している。CUDA 13.0のRTX 3090級24 GB GPU上で実機評価される。一次資料とarXiv付随情報では著者公式の公開リポジトリURLを確認できなかったため、現時点では論文内試作実装として扱う。",
-    "research_positioning": "サービング系統では、正常時の要求スケジューリングとKV再利用を、オンライン学習によって重みが変化する環境へ拡張する研究である。特に『同じトークン列でもアダプタ版が違えばKVは別物』という正しさ条件を、キャッシュキー、背景再計算、複数エージェント共有、メモリ退避へ一貫して反映する。学習系統から見ると、単一端末に別のロールアウトGPUや学習GPUを置けない条件で、利用者向けSLOを守りながら学習を少しずつ進めるランタイムとなる。今後、端末向け量子化・CPU/SSDオフロードと組み合わせれば、7B超のモデルでも継続学習を成立させる方向へ接続できる。"
-  },
-  "reservation": {"claim_id": "claim-b1377ad0e2e7ebab452d376f", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d76929b8794d7558d0c2ab77",
+  "job_id": "job-research-b4e2d8cb129fd978",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d76929b8794d7558d0c2ab77",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

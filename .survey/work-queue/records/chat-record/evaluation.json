@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b1377ad0e2e7ebab452d376f",
-  "job_id": "job-research-4639566133723dd3",
-  "data": {
-    "hardware": "大半の実験はRTX 3090級24 GB単一GPU、CUDA 13.0、単一モデル実体で行う。端末級の一枚GPUで推論・評価・学習・KV保守を同居させる設定である。",
-    "software": "主モデルはxLAM-7b-r、LoRA rank 4、FlashInferベースの独自推論エンジン。LOCAL試作はPython約24,447行。比較ではvLLMのfull-LoRA sleep/train/wake経路も使用する。",
-    "methodology": "tau-bench retail train splitの実ワークロードを主に用い、24タスク、各タスク最大4エージェントステップで、前景推論、judge推論、学習、古いKV接頭辞の再計算を混在させる。前景優先、ラウンドロビン、FIFOの投入方針を比較し、学習中断の有無、vLLM sleep/train/wake、版更新後の頻用接頭辞再プリフィル、複数エージェント先回りプリフィル、KVページ数・CUDA Graph登録数・頻用接頭辞数・再計算チャンク長を個別に変える。遅延、TTFT、学習進捗、アダプタ公開回数、ピークGPUメモリを測る。tau-benchの成功率・報酬は同一作業が完走したことの確認にのみ用い、モデル品質差の主張には使わない。",
-    "datasets": ["tau-bench retail train split"],
-    "models": ["xLAM-7b-r"],
-    "baselines": ["FIFO", "ラウンドロビン", "学習非中断", "vLLM full-LoRA sleep/train/wake", "古いKV再プリフィル無効", "複数エージェント先回りプリフィル無効"],
-    "metrics": ["foreground queue wait p95/p99", "TTFT p95/p99", "training steps/hour", "adapter training commits", "post-publish first-hit prefill", "peak GPU memory"],
-    "scope": "単一24 GB消費者GPU、7B級一モデル、LoRA rank 4、24タスク規模の機構評価であり、大規模同時利用者や複数GPU学習、長期間の方策品質向上は評価していない。主目的は実行時の応答性・正しいKV再利用・背景学習進捗の両立である。"
-  },
-  "reservation": {"claim_id": "claim-b1377ad0e2e7ebab452d376f", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-d76929b8794d7558d0c2ab77",
+  "job_id": "job-research-b4e2d8cb129fd978",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d76929b8794d7558d0c2ab77",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
