@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d146a091c5d075707dcd3120",
   "job_id": "job-research-e2c6f510b1f31074",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d146a091c5d075707dcd3120",
-    "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "全実験をNVIDIA RTX A6000（49GB VRAM）GPU上で実施。異種配備ではモデルごとに推論エンジンを用意し、1.5B、3B、7B、8B、14B級を組み合わせる。",
+    "software": "vLLMを推論基盤としてChimeraミドルウェアを上位に実装。意味ルータはModernBERT-large、残り長予測器はCPU上の分位点ランダムフォレスト。比較対象はvLLM、複数段優先待ち行列（Multi-Level Feedback Queue; MLFQ）、学習順位付け（Learning-to-Rank; LTR）、真の残り総長を使う参考STJF。",
+    "models": "Qwen2.5-1.5B/3B/7B/14B-Instruct、Ministral3-8B-Instruct、Llama3.2-3B-Instructを用い、2モデルおよび3モデルの異種組合せを評価。",
+    "datasets": "コード生成APPSと数学推論MATH。ReAct型の1〜4段ワークフローを構成し、計画、実装・解法、検証などの依存段を順次実行する。",
+    "methodology": "要求到着率を変えながら、ワークフロー単位の平均エンドツーエンド遅延／トークンと最終タスク性能を同時測定し、遅延余裕の設定を変えて到達可能なパレート前線を比較する。APPSの性能はテスト通過率、MATHは完全一致率。意味ルータ除去、真値長予測器、真値ルータの除去・上界実験、スケジューリング追加時間、ルータ平均適合率、長さ順位誤差も測定する。",
+    "scope": "単一種類の同一複製ではなく、複数モデルを別エンジンとして持つGPUクラスタ上の多段エージェント処理が対象。推論カーネルやKV圧縮自体を改良する研究ではなく、既存vLLM上のモデル選択・混雑推定・要求優先度を扱う。モデル候補、処理段、入力分布が評価時と大きく変わる場合はルータと長さ予測器の再学習・再測定が必要になる。"
+  },
+  "reservation": {"claim_id":"claim-d146a091c5d075707dcd3120","worker_id":"scheduled-chat-discovery-routing-20260914T0400JST","worker_kind":"scheduled_chat"}
 }
