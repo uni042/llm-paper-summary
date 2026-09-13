@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-42f1304a542fa612136cc65f",
   "job_id": "job-research-234066475107816a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-42f1304a542fa612136cc65f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "独立segment prefillで得たhidden stateは本来のcross-segment contextを見ていないため、累積遷移演算子によるstate compositionが同一入力に対して正確でも、深層ではFull Recomputeとの差が蓄積する。品質差は平均1.71 pointsで、Ring系では約3.3〜3.4 points残る。dense transition modelではT_Cがhead/layerごとにdense matrixとなり、scalar familyよりcache容量と初回構築計算が大きい。segment parallelismは複数idle instance、RDMA転送、十分長いsegmentを必要とし、常に使えるとは限らない。評価は8基H20-3eの単一node構成が中心で、より大規模なmulti-node運用や異種GPUでは未検証。HYPIC本体の公開コードURLも確認できない。",
+    "differences": "CacheBlend、CacheSlide、EPIC、ProphetKVなど従来PICはfull-attentionのper-token KVをsegment間でspliceし、選んだtokenを再計算して補正する。HYPICはhybrid stackの多数を占めるlinear-attention layerにはtoken KVが存在しないため、state recurrenceのsegment-cumulative transition T_Cとzero-start end-state S_C|0を新しいcache primitiveとする。残るfull-attention layerも任意token選択ではなく、segment先頭の固定小windowをhybrid stack全体へforwardして補正する。またprior PICがcache missを単一instanceで処理するのに対し、segment self-containmentを利用したinter-instance cold-prefill parallelismまで含む。",
+    "implementation_status": "SGLang上へ14k行のPython/Tritonで実装され、sglang_router、FLA kernel、NIXL/GPUDirect RDMAを統合して8×H20-3e実機で評価されている。PIC_SEPARATORによるapplication-level segment境界を要求し、public/private cache pool、LPT scheduler、scatter/combine workerを備える。論文は2026-07-01初稿、2026-07-12 v2のarXiv preprintで、2026-09-14時点にHYPIC本体の公式code repositoryは論文から確認できない。",
+    "research_positioning": "長文脈LLM配信の文脈cache再利用系統に属し、特に位置非依存cacheをhybrid-attention modelへ拡張するsystem研究である。linear attention/SSM系の固定長recurrent state、full-attention KV、distributed serving schedulerという異なる層を一つのreuse pathへ接続する。単なるKV容量削減やattention kernel高速化ではなく、同じsemantic segmentが異なるprefix/positionで繰り返されるRAG・agent workloadのprefill計算を省くことが中心である。",
+    "relation_to_existing_repository": "既存のPIC/CacheBlend/EPIC系と直接比較できるほか、LinearKVなどlinear-attention state cache研究とは、prefix依存状態をどう再利用可能なsegment表現へ変換するかという観点で比較価値が高い。prefill-decode分離、NIXL/RDMA cache transfer、multi-instance scheduling系統とも接続し、cold miss segmentをscatterする発想はKV cache transfer研究の新しい利用形態になる。SSD/NVMe offloadとは直接関係しないが、public segment cacheがGPU容量を超える場合に階層cacheへ拡張する際、T_C/S_C|0とfull-attention KVでサイズ・再利用価値が異なるため、異種cache object別の配置政策を考える材料になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-42f1304a542fa612136cc65f", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
