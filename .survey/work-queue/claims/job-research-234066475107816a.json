@@ -1,24 +1,23 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-3b751c6eafc93828f296505e",
+  "claim_id": "claim-389c48ae1c77e47b79167493",
   "job_id": "job-research-234066475107816a",
   "worker_id": "scheduled-chat-discovery-specialist-run08",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-3b751c6eafc93828f296505e",
-  "request_id": "claim-20260913T202100Z-scheduled-chat-discovery-specialist-run08",
-  "claimed_at": "2026-09-13T20:21:59+00:00",
-  "expires_at": "2026-09-13T20:22:41+00:00",
+  "attempt_id": "attempt-389c48ae1c77e47b79167493",
+  "request_id": "claim-20260913T204000Z-scheduled-chat-discovery-specialist-run08-11",
+  "claimed_at": "2026-09-13T20:29:24+00:00",
+  "expires_at": "2026-09-13T21:59:24+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-234066475107816a"
   ],
-  "previous_claim_id": "claim-1266e57534d088b4a61e4bdd",
-  "record_bank": null,
-  "record_bank_fallback": "library",
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-13T20:22:41+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T045300JST-hypic-repair-attempt-1266e57534d088b4a61e4bdd.json",
-  "checkpoint_release_request_id": "claim-20260913T202300Z-scheduled-chat-discovery-specialist-run08-02"
+  "previous_claim_id": "claim-3b751c6eafc93828f296505e",
+  "record_bank": "b",
+  "record_bank_recovery": "repair-required-immutable-descriptor",
+  "record_bank_recovery_attempt_ids": [
+    "attempt-42f1304a542fa612136cc65f"
+  ],
+  "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-42f1304a542fa612136cc65f.json"
 }
