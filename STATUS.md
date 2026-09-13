@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 20:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 20:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -41,14 +41,14 @@
 | :30 通常worker Active claims | **18** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 20:16 JST** |
+| :30 通常worker 直近claim | **09-13 20:20 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **49** |
 | 最新通常run | **2026-09-13T18:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **467 min** |
+| 最古の有効claimの経過時間 | **471 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -97,7 +97,7 @@ Run: **2026-09-13T18:30:00+09:00**
 
 - P88 `arXiv:2603.19133` — A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference
 - P88 `arXiv:2605.04357` — Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs
-- P88 `arXiv:2607.08565` — SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling
+- P88 `arXiv:2601.13684` — HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference
 - P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
 - P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 
