@@ -1,49 +1,71 @@
 # Discovery specialist worker
 
-この文書は、既存の論文workerとは別に毎時実行する **探索専用Scheduled Chat worker** の正本とする。目的はcandidate在庫を継続的に積み上げることであり、既存の論文workerからdiscovery責務を取り上げない。
+この文書は、既存の論文workerとは別に毎時実行する **探索主体のScheduled Chat worker** の正本とする。平常時はcandidate在庫を継続的に積み上げる。一方、research backlogが十分に大きいときは追加readerとして働き、既存の論文workerと並列にresearchを消化する。
 
 ## 役割
 
-- 探索専用worker: discovery、軽量重複判定、候補評価、priority付与、candidate投入だけを担当する。
+- 探索専用worker: 通常はdiscovery、軽量重複判定、候補評価、priority付与、candidate投入を担当する。
+- `candidate_inventory > 50` かつactionable researchがある場合: **overflow research mode** へ切り替え、そのrunでは通常論文workerと同じresearch / audit契約、claim直列契約、品質基準、耐久保存契約に従う。
 - 既存の論文worker: 従来どおりresearch / audit / discoveryを行う。探索機能を削除・停止しない。
 - GitHub Actions: queue/state/identityの最終整合、重複抑止、job materialization、および `discovery-state.json` の統計更新を担当する。
 
-探索専用workerはresearch、audit、5-slot structured research record作成、論文Markdown生成を行わない。候補発見後に全文精読へ進まず、candidate poolへ安全に投入して次の探索軸へ進む。
+通常探索モードではresearch、audit、5-slot structured research record作成、論文Markdown生成を行わない。候補発見後に全文精読へ進まず、candidate poolへ安全に投入して次の探索軸へ進む。overflow research modeではこの制約を解除し、`always-on-worker.md` / `claim-serial-policy.md` / `candidate-buffer-policy.md` に従ってpriority上位のresearch / auditを処理する。
 
 ## 実行時刻
 
-探索専用workerは毎時 `:00` JSTに実行する。既存の論文workerは従来どおり毎時 `:30` JSTで動作する。30分ずらすことで、両者が同じqueue/stateを書き換える時間的競合を減らす。
+探索主体workerは毎時 `:00` JSTに実行する。既存の論文workerは従来どおり毎時 `:30` JSTで動作する。平常時は30分ずらすことでdiscoveryとpaper workerのqueue/state write競合を減らす。overflow research modeでは`:00` workerが長く動けば`:30` workerと自然に重なり、異なるworker IDで別jobをclaimして並列readerとして動く。
 
-探索専用workerは既存の24-run maintenance counterへ加算しない。maintenance gateは既存の論文worker側の正本に従う。
+探索主体workerは既存の24-run maintenance counterへ加算しない。overflow research modeへ切り替わってもこの扱いは変えない。maintenance gateは既存の論文worker側の正本に従う。
 
 ## 必読正本
 
 毎回default branch最新HEADを取得し、同じHEADから最低限以下を読む。
 
 1. `candidate-buffer-policy.md`
-2. `queue-v10.md`
-3. `fallback-routing.md`
-4. `continuation-policy.json`
-5. `.survey/work-queue/next-jobs.json`
-6. `.survey/work-queue/discovery-state.json`
-7. `.survey/survey-state/paper-identity-index.json`
-8. 必要に応じて `.survey/survey-state/identity-deltas/**` と既存job
+2. `always-on-worker.md`
+3. `claim-serial-policy.md`
+4. `queue-v10.md`
+5. `fallback-routing.md`
+6. `continuation-policy.json`
+7. `.survey/work-queue/next-jobs.json`
+8. `.survey/work-queue/discovery-state.json`
+9. `.survey/survey-state/paper-identity-index.json`
+10. 必要に応じて `.survey/survey-state/identity-deltas/**` と既存job
 
-この文書と他文書が競合する場合、探索専用workerの役割分離については本書、candidate水位と探索経路については `candidate-buffer-policy.md`、transportについては `fallback-routing.md` / `continuation-policy.json` を優先する。
+この文書と他文書が競合する場合、探索主体workerのモード切替については本書と `candidate-buffer-policy.md`、research実行時の継続・claim・transportについては `always-on-worker.md` / `claim-serial-policy.md`、transportについては `fallback-routing.md` / `continuation-policy.json` を優先する。
 
-## candidate在庫
+## candidate在庫とモード切替
 
 `candidate-buffer-policy.md` の水位を共有する。
 
 - low watermark: 25
 - critical watermark: 15
+- overflow research threshold: `candidate_inventory > 50`
 - target / upper cap: なし
 
-探索専用workerはcandidate在庫が50本、100本、それ以上でも、在庫数だけを理由に探索を弱めたり停止したりしない。低コスト探索で高価値候補が見つかる場合は追加する。ただし在庫数を満たすために弱い候補を採用しない。通常論文workerはcandidate在庫が25本以上でactionable researchがある場合、広範なdiscoveryよりresearchを優先する。
+run開始時と、discovery submissionまたはresearch/auditの耐久保存後にcandidate在庫とactionable researchを再評価する。
+
+- `candidate_inventory > 50` かつactionable researchあり: overflow research mode。新規discoveryを停止し、通常論文workerと同じhigh-backlog research-only動作へ切り替える。
+- `candidate_inventory <= 50`、またはactionable researchなし: 通常探索モード。高価値候補のdiscoveryを継続する。
+
+overflow research modeではworker IDを通常論文workerと共有しない。同じScheduled Chat worker内でも未完了claimは1件だけ保持し、1件の完全payloadをGitHubまたはLibraryへ耐久保存した後で次の1件をclaimする。別workerが同時に別claimを持つことは許可される。
+
+## overflow research mode
+
+overflow research modeへ入ったrunでは、通常論文workerのhigh-backlog research-only契約をそのまま適用する。
+
+1. `checkpointed_job_ids` を除いたactionable readyからpriority順に1件claimする。
+2. 一次資料全文を取得・精読し、repository-qualityの5-slot structured research recordを作る。
+3. preflight後、immutable descriptorまたはLibrary checkpointへ完全payloadを耐久保存する。
+4. Actionsのterminal反映を待たず、最新HEAD / queue / claim stateを再取得して次の1件をclaimする。
+5. 一次資料取得・耐久保存・claimが利用可能でbacklogが十分なら、1runにつき最低3件を下限目標とし、3件を停止条件にしない。
+6. 各job保存後に `candidate_inventory` を再評価し、50以下まで減った場合は通常探索モードへ戻る。
+
+通常論文workerと同時に動く場合も、各workerは固有の `worker_id` を使い、同じjobの二重claimやrecord bankの二重予約はclaim-fastの直列化に任せる。
 
 ## 探索経路
 
-各runでは直近の `discovery-state.json` を読み、直前の高重複軸を機械的に繰り返さない。候補経路は少なくとも以下から選ぶ。
+通常探索モードでは直近の `discovery-state.json` を読み、直前の高重複軸を機械的に繰り返さない。候補経路は少なくとも以下から選ぶ。
 
 - 新着論文
 - 収録済み重要論文の被引用
@@ -88,13 +110,13 @@ priorityは少なくとも以下を考慮する。
 
 ## transport
 
-GitHub write可能時は既存workflow v10のdiscovery transportを使い、paper/state/READMEを直接編集しない。
+通常探索モードでGitHub write可能時は既存workflow v10のdiscovery transportを使い、paper/state/READMEを直接編集しない。
 
 各discovery submissionには、通常の `job_id` と `candidates` に加えて、トップレベルに `discovery_stats` を含める。
 
-1回の探索専用Scheduled Chat実行では、開始時に **1つだけ** `run_key` を確定し、そのrun内の全探索round・全submissionで同じ値を使う。原則として今回の予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` 形式で表す。round開始時刻、submission時刻、Actions待ち後の再開時刻を新しい `run_key` にしてはならない。予定実行枠を直接取得できない実行環境では、そのScheduled Chat実行の開始時刻をJSTで時単位に切り捨てた値を使い、その後はrun終了まで固定する。
+1回の探索主体Scheduled Chat実行では、開始時に **1つだけ** `run_key` を確定し、そのrun内の全探索round・全submissionで同じ値を使う。原則として今回の予定実行枠をJSTの `YYYY-MM-DDTHH:00:00+09:00` 形式で表す。round開始時刻、submission時刻、Actions待ち後の再開時刻を新しい `run_key` にしてはならない。予定実行枠を直接取得できない実行環境では、そのScheduled Chat実行の開始時刻をJSTで時単位に切り捨てた値を使い、その後はrun終了まで固定する。
 
-これにより `STATUS.md` は複数の探索roundを「毎時の探索専用worker 1回がどれだけ探索したか」という単位で集計できる。旧データで同一時間帯に複数 `run_key` が残っている場合、dashboard側はJSTの毎時枠へbest-effortで集約する。
+これにより `STATUS.md` は複数の探索roundを「毎時の探索主体worker 1回がどれだけ探索したか」という単位で集計できる。旧データで同一時間帯に複数 `run_key` が残っている場合、dashboard側はJSTの毎時枠へbest-effortで集約する。
 
 ```json
 {
@@ -116,15 +138,15 @@ GitHub write可能時は既存workflow v10のdiscovery transportを使い、pape
 
 Scheduled Chatは `accepted_count` を確定しない。最終投入直前以降にも通常workerやActionsによって同じ候補が既存化し得るため、実際の採用数はActionsが最終dedupe後の `research_jobs_added` から確定する。
 
-GitHub write不能時は `fallback-routing.md` に従い、ChatGPT Library `/LLM-survey-outbox/pending/` へoffline job seedを完全envelopeとして耐久保存する。fallback envelopeにも同じ `discovery_stats` を保持し、replay後にActionsが統計を確定できるようにする。完成Markdownやresearch recordを作らない。
+GitHub write不能時は `fallback-routing.md` に従う。通常探索モードではChatGPT Library `/LLM-survey-outbox/pending/` へoffline job seedを完全envelopeとして耐久保存する。overflow research modeでは通常論文workerと同じく、完成した5-slot research/audit payloadをLibraryへcheckpointして次jobへ進む。完成Markdownは直接保存しない。
 
 同一payloadの重複保存を避け、復旧時は既存のimmutable intake経路に従う。
 
 ## discovery-state
 
-`discovery-state.json` は **GitHub Actionsを単一writer** とする。探索専用Scheduled Chatも通常論文Scheduled Chatも、このファイルを直接更新しない。
+`discovery-state.json` は **GitHub Actionsを単一writer** とする。探索主体Scheduled Chatも通常論文Scheduled Chatも、このファイルを直接更新しない。
 
-各workerはdiscovery submissionの `discovery_stats` として、探索軸、query概要、候補数、Scheduled Chat側で除外した重複数、重複ID、次回推奨軸を渡す。Actionsはsubmission処理時に最終dedupe後の実採用数を確定し、以下を `discovery-state.json` へ1回だけ反映する。
+通常探索モードでは各workerはdiscovery submissionの `discovery_stats` として、探索軸、query概要、候補数、Scheduled Chat側で除外した重複数、重複ID、次回推奨軸を渡す。Actionsはsubmission処理時に最終dedupe後の実採用数を確定し、以下を `discovery-state.json` へ1回だけ反映する。
 
 - candidate count
 - duplicate filtered count
@@ -139,4 +161,4 @@ submission pathを統計イベントの一意キーとして扱い、同じsubmi
 
 ## 通知
 
-通常成功時はユーザーへ通知しない。GitHubとLibraryの両方へ候補状態を耐久保存できない、継続的な重複競合でcandidate投入不能、または正本が読めず安全に探索できない場合だけ問題として通知する。
+通常成功時はユーザーへ通知しない。GitHubとLibraryの両方へ候補またはresearch成果を耐久保存できない、継続的な重複競合でcandidate投入不能、または正本が読めず安全に探索・researchできない場合だけ問題として通知する。
