@@ -22,6 +22,7 @@ from typing import Any
 
 import claim_state
 import claim_worker
+import immutable_submission
 import select_record_bank
 from record_bank_config import BANK_ROOTS, SLOT_NAMES
 
@@ -137,6 +138,145 @@ def _available_bank(root: Path, excluded: set[str]) -> str | None:
     return None
 
 
+def _repair_job(root: Path, claim: dict[str, Any]) -> dict[str, Any] | None:
+    job_id = str(claim.get("job_id") or "")
+    job = _read(root / ".survey/work-queue/jobs" / f"{job_id}.json", {})
+    if not isinstance(job, dict) or job.get("repair_required") is not True:
+        return None
+    return job
+
+
+def _repair_bank_candidate(
+    root: Path,
+    claim: dict[str, Any],
+    excluded: set[str],
+) -> tuple[str, dict[str, dict[str, Any]], set[str]] | None:
+    """Find one coherent retained bank for this repair job, or decline recovery.
+
+    Repair recovery is intentionally conservative: the job must explicitly be in
+    ``repair_required`` state, every fixed slot must still belong to that job, and
+    exactly one occupied bank may match. Ambiguous or dirty ownership falls back to
+    normal allocation rather than guessing which research record is authoritative.
+    """
+    job_id = str(claim.get("job_id") or "")
+    if _repair_job(root, claim) is None:
+        return None
+
+    matches: list[tuple[str, dict[str, dict[str, Any]], set[str]]] = []
+    state = select_record_bank.inspect(root)
+    for item in state.get("banks", []):
+        if not isinstance(item, dict) or item.get("state") != "occupied":
+            continue
+        bank = str(item.get("bank") or "").lower()
+        if bank not in BANK_ROOTS or bank in excluded:
+            continue
+
+        payloads: dict[str, dict[str, Any]] = {}
+        attempts: set[str] = set()
+        valid = True
+        for slot in SLOT_NAMES:
+            payload = _read(root / BANK_ROOTS[bank] / f"{slot}.json")
+            if (
+                not isinstance(payload, dict)
+                or payload.get("slot") != slot
+                or payload.get("job_id") != job_id
+                or "data" not in payload
+            ):
+                valid = False
+                break
+            payloads[slot] = payload
+            if payload.get("attempt_id"):
+                attempts.add(str(payload["attempt_id"]))
+        if valid and len(payloads) == len(SLOT_NAMES):
+            matches.append((bank, payloads, attempts))
+
+    return matches[0] if len(matches) == 1 else None
+
+
+def _repair_descriptor_candidate(
+    root: Path,
+    claim: dict[str, Any],
+) -> tuple[str, dict[str, Any], dict[str, dict[str, Any]], set[str]] | None:
+    """Load one unambiguous failed immutable record for a repair job.
+
+    The descriptor/result pair must belong to the same job, carry an exact durable
+    failure result, and still resolve all five immutable Git blobs. If more than one
+    valid failed descriptor exists, decline recovery rather than guessing which
+    research snapshot is authoritative.
+    """
+    if _repair_job(root, claim) is None:
+        return None
+    job_id = str(claim.get("job_id") or "")
+    kind = str(claim.get("kind") or "research")
+    if kind not in immutable_submission.KINDS:
+        return None
+
+    submissions = root / ".survey/work-queue/submissions" / kind
+    results = root / ".survey/work-queue/results" / kind
+    matches: list[tuple[str, dict[str, Any], dict[str, dict[str, Any]], set[str]]] = []
+    for path in sorted(submissions.glob("*.json")) if submissions.is_dir() else []:
+        descriptor = _read(path)
+        if not isinstance(descriptor, dict) or descriptor.get("job_id") != job_id:
+            continue
+        if descriptor.get("status", immutable_submission.COMPLETED_STATUS) != immutable_submission.COMPLETED_STATUS:
+            continue
+        result = _read(results / path.name)
+        if not (
+            immutable_submission.result_matches_identity(result, descriptor)
+            and isinstance(result, dict)
+            and result.get("ok") is False
+        ):
+            continue
+        try:
+            normalized = immutable_submission.validate_descriptor(root, descriptor)
+            payloads = {
+                ref["slot"]: immutable_submission.read_record_slot(root, ref)
+                for ref in normalized["record_slots"]
+            }
+        except Exception:
+            continue
+        attempts = {str(normalized["attempt_id"])}
+        matches.append((path.relative_to(root).as_posix(), normalized, payloads, attempts))
+
+    return matches[0] if len(matches) == 1 else None
+
+
+def _recover_repair_payloads(
+    root: Path,
+    bank: str,
+    claim: dict[str, Any],
+    payloads: dict[str, dict[str, Any]],
+    *,
+    recovery_kind: str,
+    previous_attempts: set[str],
+    source_submission: str | None = None,
+) -> None:
+    """Retag retained repair data to the new claim without clearing its content."""
+    reservation = {
+        "claim_id": claim["claim_id"],
+        "worker_id": claim.get("worker_id"),
+        "worker_kind": claim.get("worker_kind"),
+    }
+    for slot in SLOT_NAMES:
+        payload = dict(payloads[slot])
+        payload["schema_version"] = 1
+        payload["transport_version"] = 10
+        payload["slot"] = slot
+        payload["attempt_id"] = claim["attempt_id"]
+        payload["job_id"] = claim["job_id"]
+        payload["reservation"] = reservation
+        _write(root / BANK_ROOTS[bank] / f"{slot}.json", payload)
+
+    claim["record_bank"] = bank
+    claim.pop("record_bank_fallback", None)
+    claim["record_bank_recovery"] = recovery_kind
+    claim["record_bank_recovery_attempt_ids"] = sorted(previous_attempts)
+    if source_submission:
+        claim["record_bank_recovery_submission"] = source_submission
+    else:
+        claim.pop("record_bank_recovery_submission", None)
+
+
 def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None) -> None:
     request_id = claim.get("request_id")
     if not isinstance(request_id, str) or not request_id:
@@ -163,6 +303,14 @@ def _persist_assignment_bank(root: Path, claim: dict[str, Any], bank: str | None
         elif bank is not None and "record_bank_fallback" in item:
             item.pop("record_bank_fallback", None)
             changed = True
+        for key in (
+            "record_bank_recovery",
+            "record_bank_recovery_attempt_ids",
+            "record_bank_recovery_submission",
+        ):
+            if key in claim and item.get(key) != claim[key]:
+                item[key] = claim[key]
+                changed = True
     if changed:
         _write(result_path, result)
 
@@ -223,7 +371,7 @@ def reserve_new_claim_banks(
     }
     reclaimed = _reclaim_expired_empty_reservations(root, active_ids)
     migrated_unbanked = _migrate_active_unbanked_claims(root, claims, new_claim_ids)
-    reserved = reused = fallback = 0
+    reserved = reused = recovered = recovered_from_descriptor = fallback = 0
 
     used = {
         str(claim.get("record_bank")).lower()
@@ -248,6 +396,43 @@ def reserve_new_claim_banks(
             _persist_assignment_bank(root, claim, existing)
             continue
 
+        repair = _repair_bank_candidate(root, claim, used)
+        if repair is not None:
+            bank, payloads, previous_attempts = repair
+            _recover_repair_payloads(
+                root,
+                bank,
+                claim,
+                payloads,
+                recovery_kind="repair-required-same-job",
+                previous_attempts=previous_attempts,
+            )
+            _write(claim_path, claim)
+            _persist_assignment_bank(root, claim, bank)
+            used.add(bank)
+            recovered += 1
+            continue
+
+        descriptor_repair = _repair_descriptor_candidate(root, claim)
+        if descriptor_repair is not None:
+            source_submission, _descriptor, payloads, previous_attempts = descriptor_repair
+            bank = _available_bank(root, used)
+            if bank is not None:
+                _recover_repair_payloads(
+                    root,
+                    bank,
+                    claim,
+                    payloads,
+                    recovery_kind="repair-required-immutable-descriptor",
+                    previous_attempts=previous_attempts,
+                    source_submission=source_submission,
+                )
+                _write(claim_path, claim)
+                _persist_assignment_bank(root, claim, bank)
+                used.add(bank)
+                recovered_from_descriptor += 1
+                continue
+
         bank = _available_bank(root, used)
         if bank is None:
             _persist_library_fallback(root, claim)
@@ -265,6 +450,8 @@ def reserve_new_claim_banks(
     return {
         "reserved": reserved,
         "reused": reused,
+        "recovered": recovered,
+        "recovered_from_descriptor": recovered_from_descriptor,
         "fallback": fallback,
         "reclaimed": reclaimed,
         "migrated_unbanked": migrated_unbanked,

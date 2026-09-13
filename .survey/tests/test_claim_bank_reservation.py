@@ -1,4 +1,5 @@
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -9,6 +10,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 import claim_worker_with_banks  # noqa: E402
+import immutable_submission  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 
@@ -77,6 +79,14 @@ def seed_free_banks(root: Path):
                 "job_id": "unused-bank-placeholder",
                 "data": {},
             })
+
+
+def commit_all(root: Path):
+    subprocess.run(["git", "init"], cwd=root, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(["git", "config", "user.email", "test@example.com"], cwd=root, check=True)
+    subprocess.run(["git", "config", "user.name", "test"], cwd=root, check=True)
+    subprocess.run(["git", "add", "-A"], cwd=root, check=True)
+    subprocess.run(["git", "commit", "-m", "seed immutable repair record"], cwd=root, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
 class ClaimBankReservationTests(unittest.TestCase):
@@ -176,6 +186,132 @@ class ClaimBankReservationTests(unittest.TestCase):
             second_bank = result_b["assignments"][0]["record_bank"]
 
             self.assertEqual(second_bank, first_bank)
+
+    def test_repair_claim_reuses_nonempty_bank_for_same_job_without_losing_data(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            seed_job(root, "job-repair", 100)
+            job_path = root / ".survey/work-queue/jobs/job-repair.json"
+            job = json.loads(job_path.read_text())
+            job["repair_required"] = True
+            job["validation_error"] = "ValueError: problem_method.components[0].description is too short"
+            write_json(job_path, job)
+
+            recovery_bank = "h"
+            original_data = {}
+            for index, slot in enumerate(SLOT_NAMES):
+                data = {"preserved": f"{slot}-{index}", "text": "already researched content"}
+                original_data[slot] = data
+                write_json(root / BANK_ROOTS[recovery_bank] / f"{slot}.json", {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "slot": slot,
+                    "attempt_id": "attempt-old-research",
+                    "job_id": "job-repair",
+                    "data": data,
+                })
+
+            seed_request(root, "req-repair", "worker-repair")
+            result = claim_worker_with_banks.process_requests(root, at=AT)
+
+            assignment = json.loads(
+                (root / ".survey/work-queue/claim-results/req-repair.json").read_text()
+            )["assignments"][0]
+            self.assertEqual(assignment["record_bank"], recovery_bank)
+            self.assertEqual(result["banks_recovered"], 1)
+
+            for slot in SLOT_NAMES:
+                payload = json.loads(
+                    (root / BANK_ROOTS[recovery_bank] / f"{slot}.json").read_text()
+                )
+                self.assertEqual(payload["job_id"], "job-repair")
+                self.assertEqual(payload["attempt_id"], assignment["attempt_id"])
+                self.assertEqual(payload["data"], original_data[slot])
+                self.assertEqual(payload["reservation"]["claim_id"], assignment["claim_id"])
+
+    def test_repair_claim_restores_failed_immutable_blobs_when_original_bank_was_overwritten(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            seed_job(root, "job-repair", 100)
+            job_path = root / ".survey/work-queue/jobs/job-repair.json"
+            job = json.loads(job_path.read_text())
+            job["repair_required"] = True
+            job["validation_error"] = "ValueError: method overview needs repair"
+            write_json(job_path, job)
+
+            source_bank = "h"
+            old_attempt = "attempt-old-repair"
+            original_data = {}
+            refs = []
+            for index, slot in enumerate(SLOT_NAMES):
+                data = {"preserved": f"{slot}-{index}", "text": "expensive full-paper research"}
+                original_data[slot] = data
+                path = root / BANK_ROOTS[source_bank] / f"{slot}.json"
+                write_json(path, {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "slot": slot,
+                    "attempt_id": old_attempt,
+                    "job_id": "job-repair",
+                    "data": data,
+                })
+                raw = path.read_bytes()
+                refs.append({
+                    "slot": slot,
+                    "path": f"{BANK_ROOTS[source_bank]}/{slot}.json",
+                    "blob_sha": immutable_submission.git_blob_sha(raw),
+                })
+
+            descriptor_path = root / ".survey/work-queue/submissions/research/attempt-old-repair.json"
+            write_json(descriptor_path, {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": "research",
+                "status": "completed",
+                "attempt_id": old_attempt,
+                "job_id": "job-repair",
+                "record_bank": source_bank,
+                "paper_path": "papers/job-repair.md",
+                "record_slots": refs,
+            })
+            write_json(root / ".survey/work-queue/results/research/attempt-old-repair.json", {
+                "schema_version": 1,
+                "workflow_version": 10,
+                "ok": False,
+                "attempt_id": old_attempt,
+                "job_id": "job-repair",
+                "error": "ValueError: method overview needs repair",
+            })
+            commit_all(root)
+
+            # Simulate later reuse of the original bank paths. The descriptor blobs stay in Git.
+            for slot in SLOT_NAMES:
+                write_json(root / BANK_ROOTS[source_bank] / f"{slot}.json", {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "slot": slot,
+                    "attempt_id": "unused-bank-placeholder",
+                    "job_id": "unused-bank-placeholder",
+                    "data": {},
+                })
+
+            seed_request(root, "req-repair", "worker-repair")
+            result = claim_worker_with_banks.process_requests(root, at=AT)
+            assignment = json.loads(
+                (root / ".survey/work-queue/claim-results/req-repair.json").read_text()
+            )["assignments"][0]
+
+            self.assertEqual(result["banks_recovered_from_descriptor"], 1)
+            self.assertEqual(assignment["record_bank_recovery"], "repair-required-immutable-descriptor")
+            self.assertEqual(assignment["record_bank_recovery_attempt_ids"], [old_attempt])
+            restored_bank = assignment["record_bank"]
+            for slot in SLOT_NAMES:
+                payload = json.loads((root / BANK_ROOTS[restored_bank] / f"{slot}.json").read_text())
+                self.assertEqual(payload["job_id"], "job-repair")
+                self.assertEqual(payload["attempt_id"], assignment["attempt_id"])
+                self.assertEqual(payload["data"], original_data[slot])
 
 
 if __name__ == "__main__":
