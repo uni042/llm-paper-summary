@@ -1,23 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-9fe6ab1edcfc47eb352c3ffe",
+  "claim_id": "claim-554e3db5621ca1ee0f4b8988",
   "job_id": "job-research-3d2c01823fde74e9",
-  "worker_id": "scheduled-chat-discovery-router",
+  "worker_id": "scheduled-chat-llm-survey",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-9fe6ab1edcfc47eb352c3ffe",
-  "request_id": "claim-20260913T215000Z-scheduled-chat-discovery-router-13",
-  "claimed_at": "2026-09-13T21:46:31+00:00",
-  "expires_at": "2026-09-13T21:47:07+00:00",
+  "attempt_id": "attempt-554e3db5621ca1ee0f4b8988",
+  "request_id": "claim-20260913T214930Z-scheduled-chat-llm-survey-10",
+  "claimed_at": "2026-09-13T21:49:30+00:00",
+  "expires_at": "2026-09-13T23:19:30+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-3d2c01823fde74e9"
   ],
-  "previous_claim_id": "claim-187d7d93e3eccf1e718d45f7",
-  "record_bank": "e",
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-13T21:47:07+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T052530JST-llada-cpp-attempt-8cdf2ff6b57eacb413826dcd.json",
-  "checkpoint_release_request_id": "claim-20260913T215100Z-scheduled-chat-discovery-router-14"
+  "previous_claim_id": "claim-9fe6ab1edcfc47eb352c3ffe",
+  "record_bank": "e"
 }
