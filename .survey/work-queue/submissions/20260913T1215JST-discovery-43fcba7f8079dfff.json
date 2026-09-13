@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-43fcba7f8079dfff",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.11916",
+      "title": "Characterizing Software Aging in GPU-Based LLM Serving Systems",
+      "source_url": "https://arxiv.org/abs/2606.11916",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2606.11916-software-aging-gpu-llm-serving.md",
+      "priority": 81,
+      "reason": "GPU LLM serving基盤を長時間動かした際のメモリ増加や資源劣化を、216時間・6 deploymentの同条件stress campaignで体系的に測定する。host/GPU/clientの時系列を同時観測し、自己相関と多重検定を考慮した統計手順で全deploymentに有意なmemory agingを確認し、その速度がruntime/configurationに強く依存することを示す。高速化手法ではないが、長期運用・rejuvenation設計の再現可能な評価基盤として既存serving研究の盲点を補う。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:00+09:00",
+    "round": "specialist-serving-runtime-reliability-5",
+    "axis": "serving software aging・runtime reliability・lossless compression・load-aware speculative serving",
+    "query_summary": "runtime信頼性、lossless model compression、load-aware speculative decoding、multi-tenant speculative serving、edge memory-aware draft schedulingを探索した。送信直前の正本identityではZipServ、speculative latency model、SPECTRE、MemSpecが既収録で、software agingのみ未収録だった。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2603.17435",
+      "arxiv:2605.15051",
+      "arxiv:2605.08151",
+      "arxiv:2608.10362"
+    ],
+    "next_axis_hint": "recent inference-system implementation releases・GPU kernel/runtime co-design・request interruption/agent serving gaps",
+    "empty_round_reason": null
+  }
+}
