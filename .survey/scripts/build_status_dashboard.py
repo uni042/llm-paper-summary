@@ -50,12 +50,7 @@ def _hour_slot_key(value: str | None) -> str:
 
 
 def _is_specialist(row: dict[str, Any]) -> bool:
-    """Return whether a discovery row came from the discovery-only worker.
-
-    Scheduled Chat can start late, so specialist run_key values are not
-    guaranteed to land exactly on :00. The durable discovery row itself carries
-    the stable attribution markers instead.
-    """
+    """Return whether a discovery row came from the discovery-only worker."""
     round_name = str(row.get("round") or "").lower()
     source_submission = str(row.get("source_submission") or "").lower()
     return round_name.startswith("specialist-") or "specialist" in source_submission
@@ -188,12 +183,6 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     ledger_24 = [e for e in ledger_entries if _in_window(e, cutoff_24h, now_utc)]
     counts_24 = _sum_counts(ledger_24)
 
-    # The run ledger can merge helper events into the latest normal-worker
-    # maintenance bucket, so discovery worker attribution must come from the
-    # discovery rows themselves. Older specialist rows sometimes used the
-    # submission time as run_key; collapse those fragments into the same JST
-    # hourly Scheduled Chat slot. New specialist runs are instructed to use one
-    # fixed top-of-hour run_key for every round in that task.
     specialist_history = [row for row in discovery_history if _is_specialist(row)]
     normal_discovery_history = [row for row in discovery_history if not _is_specialist(row)]
     specialist_24 = [row for row in specialist_history if _in_window(row, cutoff_24h, now_utc)]
@@ -249,25 +238,53 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "",
         f"> 自動生成: **{now_jst.strftime('%Y-%m-%d %H:%M JST')}**。正本は `.survey/work-queue/` のdurable stateです。",
         "",
-        "## 現在",
+        "## このページの見方",
+        "",
+        "上から順に、**現在の詰まり具合 → workerの稼働状況 → 直近24時間の処理量 → 最新run → 次に読む論文** を確認できます。日常確認はここまでで十分です。下部の「参考情報」は探索効率や履歴を詳しく見るための欄です。",
+        "",
+        "- **Research ready**: まだ全文精読が終わっていない論文候補。値が大きいほど「読む仕事」が溜まっています。",
+        "- **Claim**: workerが処理権を確保している状態。Active claimsは処理中、Claimableは今すぐ別workerが着手できる件数です。",
+        "- **Audit**: 既存の論文ページや要約の品質点検。新規論文の全文精読（Research）とは別工程です。",
+        "- **Maintenance / Consistency**: queueやstateの定期保守と、リポジトリ全体の整合性チェックです。",
+        "",
+        "## 現在の状態",
         "",
         "| 指標 | 状態 |",
         "|---|---:|",
-        f"| Candidate在庫（Research ready） | **{ready}** |",
-        f"| Research ready | **{ready}** |",
-        f"| Research blocked | **{blocked_now}** |",
-        f"| Research deferred | **{deferred_now}** |",
-        f"| Research completed（累計） | **{completed_total}** |",
-        f"| Maintenance | **{'pending' if maintenance.get('maintenance_pending') else maintenance.get('last_maintenance_status', '—')}** |",
-        f"| Consistency | **{maintenance.get('last_consistency_status', '—')}** |",
-        f"| Maintenance counter | **{maintenance.get('runs_since_maintenance', '—')} / {maintenance.get('cadence_runs', '—')}** |",
+        f"| 未処理の論文候補（Research ready） | **{ready}** |",
+        f"| 現在処理不能（Research blocked） | **{blocked_now}** |",
+        f"| 保留中（Research deferred） | **{deferred_now}** |",
+        f"| 全文精読完了（累計） | **{completed_total}** |",
+        f"| 保守状態（Maintenance） | **{'pending' if maintenance.get('maintenance_pending') else maintenance.get('last_maintenance_status', '—')}** |",
+        f"| 整合性チェック（Consistency） | **{maintenance.get('last_consistency_status', '—')}** |",
+        f"| 次回保守までの通常run | **{maintenance.get('runs_since_maintenance', '—')} / {maintenance.get('cadence_runs', '—')}** |",
         "",
-        "### 注意事項",
+        "### 要注意",
         "",
     ]
     lines.extend([f"- {w}" for w in warnings] or ["- 現在、集計stateから重大な警告は検出されていません。"])
 
     lines += [
+        "",
+        "## 直近24時間の処理量",
+        "",
+        "| 指標 | 件数 / 率 |",
+        "|---|---:|",
+        f"| Research完了 | **{counts_24['research_completed']}** |",
+        f"| Repo収録 | **{counts_24['new_papers']}** |",
+        f"| Audit完了 | **{counts_24['audit_completed']}** |",
+        f"| 探索評価候補 | **{evaluated_24}** |",
+        f"| Research候補採用 | **{accepted_24}** |",
+        f"| 重複除外 | **{duplicate_24}** |",
+        f"| 重複率 | **{_fmt_pct(duplicate_24, evaluated_24)}** |",
+        f"| 探索専用worker run（毎時枠） | **{len(specialist_runs_24)}** |",
+        f"| 探索専用worker round（stats観測） | **{len(specialist_24)}** |",
+        f"| 通常worker run（ledger観測） | **{len(ledger_24)}** |",
+        f"| Fallback archive（全helper） | **{counts_24['fallback_archived']}** |",
+        "",
+        "### 24時間の流れ",
+        "",
+        f"**探索評価 {evaluated_24} → 重複除外後 {max(evaluated_24 - duplicate_24, 0)} → Research候補採用 {accepted_24} → Research完了 {counts_24['research_completed']} → Repo収録 {counts_24['new_papers']}**",
         "",
         "## 直近の通常worker",
         "",
@@ -276,15 +293,30 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "| 指標 | 件数 |",
         "|---|---:|",
         f"| Research完了 | **{int(latest_run_counts.get('research_completed') or 0)}** |",
+        f"| Repo収録 | **{int(latest_run_counts.get('new_papers') or 0)}** |",
         f"| Audit完了 | **{int(latest_run_counts.get('audit_completed') or 0)}** |",
         f"| 通常worker Discovery round | **{int(latest_normal_discovery.get('round_count') or 0)}** |",
         f"| 通常worker Discovery採用 | **{int(latest_normal_discovery.get('accepted_count') or 0)}** |",
-        f"| Repo収録 | **{int(latest_run_counts.get('new_papers') or 0)}** |",
         f"| Research/Audit blocked遷移 | **{_normal_blocked(latest_run)}** |",
         "",
-        "> Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。",
+        "## 次に処理する候補",
         "",
-        "## 直近の探索専用worker",
+        "`next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。",
+        "",
+    ]
+    next_research = [j for j in (queue.get("next_jobs") or []) if j.get("type") == "research"][:5]
+    for job in next_research:
+        lines.append(f"- P{job.get('priority', '—')} `{job.get('canonical_id', '—')}` — {job.get('title') or 'title不明'}")
+    if not next_research:
+        lines.append("- ready候補なし")
+
+    lines += [
+        "",
+        "## 参考情報",
+        "",
+        "ここから下は、探索経路の良し悪しや履歴を詳しく確認するときに使う情報です。通常の稼働確認では上部だけ見れば十分です。",
+        "",
+        "### 直近の探索専用worker",
         "",
         f"Run: **{latest_specialist.get('run_key', '—')}**",
         "",
@@ -298,28 +330,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         f"| Research候補採用 | **{int(latest_specialist.get('accepted_count') or 0)}** |",
         f"| 重複率 | **{_fmt_pct(int(latest_specialist.get('duplicate_filtered_count') or 0), int(latest_specialist.get('candidate_count') or 0))}** |",
         "",
-        "## 直近24時間",
-        "",
-        "| 指標 | 件数 / 率 |",
-        "|---|---:|",
-        f"| 通常worker run（ledger観測） | **{len(ledger_24)}** |",
-        f"| 探索専用worker run（毎時枠） | **{len(specialist_runs_24)}** |",
-        f"| 探索専用worker round（stats観測） | **{len(specialist_24)}** |",
-        f"| 探索評価候補 | **{evaluated_24}** |",
-        f"| 重複除外 | **{duplicate_24}** |",
-        f"| 重複率 | **{_fmt_pct(duplicate_24, evaluated_24)}** |",
-        f"| Novel候補 | **{novel_24}** |",
-        f"| Research候補採用 | **{accepted_24}** |",
-        f"| Research完了 | **{counts_24['research_completed']}** |",
-        f"| Repo収録 | **{counts_24['new_papers']}** |",
-        f"| Audit完了 | **{counts_24['audit_completed']}** |",
-        f"| Fallback archive（全helper） | **{counts_24['fallback_archived']}** |",
-        "",
-        "### 24時間ファネル",
-        "",
-        f"**探索専用worker評価 {evaluated_24} → 重複除外後 {max(evaluated_24 - duplicate_24, 0)} → Research候補採用 {accepted_24} → Research完了 {counts_24['research_completed']} → Repo収録 {counts_24['new_papers']}**",
-        "",
-        "## 探索専用workerの探索効率（直近24時間）",
+        "### 探索専用workerの探索効率（直近24時間）",
         "",
         "| 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |",
         "|---|---:|---:|---:|---:|---:|",
@@ -342,22 +353,15 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     if not specialist_runs:
         lines.append("- 履歴なし")
 
-    lines += ["", "## 最近処理した論文", "", "### Research完了", ""]
+    lines += ["", "### 最近完了した論文", ""]
     completed = _recent_completed(ledger_24)
     for paper in completed:
         lines.append(f"- `{paper.get('canonical_id', '—')}` — {paper.get('title') or 'title不明'}")
     if not completed:
         lines.append("- 直近24hの完了記録なし")
 
-    lines += ["", "### 次に処理する候補", ""]
-    next_research = [j for j in (queue.get("next_jobs") or []) if j.get("type") == "research"][:5]
-    for job in next_research:
-        lines.append(f"- P{job.get('priority', '—')} `{job.get('canonical_id', '—')}` — {job.get('title') or 'title不明'}")
-    if not next_research:
-        lines.append("- ready候補なし")
-
     earliest_ledger = _parse_dt(ledger_entries[0].get("run_key")) if ledger_entries else None
-    lines += ["", "## 7日比較", ""]
+    lines += ["", "### 7日比較", ""]
     if earliest_ledger is None or earliest_ledger.astimezone(timezone.utc) > cutoff_7d:
         lines.append("**履歴不足** — durable run ledgerがまだ7日間を覆っていないため、7日平均との比較は表示しません。")
     else:
@@ -372,6 +376,12 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         ]
 
     lines += [
+        "",
+        "### 集計上の注意",
+        "",
+        "- Discoveryのworker帰属は `discovery-state.json` のworker識別子とrun_keyで判定します。run-ledgerのDiscovery/new_jobsはhelper処理が混ざり得るため、通常workerのDiscovery件数には直接使いません。",
+        "- `next-jobs.json` は優先スナップショットです。表示外にready jobが残っている場合があります。",
+        "- 探索専用workerのcandidate最大5本は1探索軸・1 submissionのtransport batch上限で、run全体の上限ではありません。",
         "",
         "---",
         "",
