@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b73f0e24db9e216f606d6126",
+  "attempt_id": "attempt-a2d551c7395a301682c453de",
   "job_id": "job-research-58b5be68410fbaab",
   "slot": "results",
   "data": {
@@ -46,5 +46,10 @@
     "negative_results": "低要求率ではvLLMとのE2E遅延差は平均2.6%程度で大きな利得はない。より多くの要求を同時実行するためJengaのTPOTはvLLMより大きくなる場合があるが、同じ同時要求数に揃えれば同等TPOTになる。プレフィックス記事数が少なく全てキャッシュできる条件では二段階割当の追加処理によりわずかなオーバーヘッドがある。",
     "interpretation": "Jengaの利得はカーネル高速化ではなく、異種状態に合わせて不要メモリを解放し、容量を要求間・層種別間で再配分してバッチと再利用率を増やすことから生じる。",
     "quality_impact": "モデル演算・重み・注意結果を近似せず、必要状態だけを正確に保持するため生成品質への変更はない。"
+  },
+  "reservation": {
+    "claim_id": "claim-a2d551c7395a301682c453de",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
   }
 }

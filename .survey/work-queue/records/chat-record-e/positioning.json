@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b73f0e24db9e216f606d6126",
+  "attempt_id": "attempt-a2d551c7395a301682c453de",
   "job_id": "job-research-58b5be68410fbaab",
   "slot": "positioning",
   "data": {
@@ -12,5 +12,10 @@
     "relation_to_existing_repository": "KVキャッシュ圧縮やオフロードでは容量を減らすのに対し、Jengaは正確な状態を保持したまま不要部分と断片化を除去する。vLLM/SGLang等のサービング基盤、スライディング窓、Mamba、VLM、投機的復号に横断的に効くため、メモリ管理系統の基準点として重要。",
     "audit_required": true,
     "audit_reason": "一次資料に独立した公式コード公開先が見当たらないため実装公開状況と、その後の正式採録状態を監査する。"
+  },
+  "reservation": {
+    "claim_id": "claim-a2d551c7395a301682c453de",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
   }
 }

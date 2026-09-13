@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b73f0e24db9e216f606d6126",
+  "attempt_id": "attempt-a2d551c7395a301682c453de",
   "job_id": "job-research-58b5be68410fbaab",
   "slot": "evaluation",
   "data": {
@@ -32,5 +32,10 @@
       "prefix cache hit rate"
     ],
     "reproducibility": "モデル・GPU・CUDA・vLLM版・データセットと主要アルゴリズムは詳述される。独立コード公開URLは一次資料では確認できないため完全再現には実装作業が必要。"
+  },
+  "reservation": {
+    "claim_id": "claim-a2d551c7395a301682c453de",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
   }
 }

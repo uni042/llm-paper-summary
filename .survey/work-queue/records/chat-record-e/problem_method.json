@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b73f0e24db9e216f606d6126",
+  "attempt_id": "attempt-a2d551c7395a301682c453de",
   "job_id": "job-research-58b5be68410fbaab",
   "slot": "problem_method",
   "data": {
@@ -27,5 +27,10 @@
       }
     ],
     "system_design": "vLLMのKVメモリを単一テンソルとして確保し、層種別ごとに異なるオフセットとページ表を与える。互換LCM大ページが種別間の容量交換を担い、その中の小ページを各層専用アロケータとエビクタが管理する。既存注意カーネルはstart_ptr、実行ページサイズ、page_idを受け取るだけなのでCUDA変更を不要にする。"
+  },
+  "reservation": {
+    "claim_id": "claim-a2d551c7395a301682c453de",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
   }
 }
