@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 04:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 04:24 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **128** |
+| 未処理の論文候補（Research ready） | **127** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **261** |
+| 全文精読完了（累計） | **262** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **20 / 24** |
@@ -35,10 +35,10 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **128** |
-| 処理中（Active claims） | **2** |
+| 未処理候補（Research ready） | **127** |
+| 処理中（Active claims） | **1** |
 | 今すぐ着手可能（Claimable） | **126** |
-| :30 通常worker Active claims | **2** |
+| :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 04:21 JST** |
@@ -48,13 +48,13 @@
 | 直近24h Research完了（帰属不明） | **22** |
 | 最新通常run | **2026-09-14T03:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **73 min** |
+| 最古の有効claimの経過時間 | **74 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=128 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=127 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **22件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
