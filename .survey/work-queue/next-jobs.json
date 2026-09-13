@@ -17,22 +17,10 @@
   },
   "claiming": {
     "ready_research_audit": 154,
-    "actively_claimed": 0,
-    "claimable": 154
+    "actively_claimed": 1,
+    "claimable": 153
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-d53ec8171f729e9e",
-      "type": "research",
-      "lane": null,
-      "priority": 88,
-      "canonical_id": "arXiv:2605.16867",
-      "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
-      "source_url": "https://arxiv.org/abs/2605.16867",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.16867-goodserve-agentic-heterogeneous-routing.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-7a44d6a722722f10",
       "type": "research",
@@ -118,6 +106,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-8409b6752444b980",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2602.06932",
+      "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
+      "source_url": "https://arxiv.org/abs/2602.06932",
+      "paper_path": "papers/inference/05-speculative-decoding/2026-2602.06932-aurora-adaptive-speculator-training-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -130,5 +130,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T16:31:48+00:00"
+  "generated_at": "2026-09-13T16:31:55+00:00"
 }

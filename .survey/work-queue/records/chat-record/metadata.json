@@ -2,89 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-8d2d5424b4871b5ee4ef6cc8",
-  "job_id": "job-research-2f20b6ae0c5a7fb6",
-  "data": {
-    "canonical_id": "arXiv:2507.10069",
-    "arxiv_id": "2507.10069",
-    "doi": null,
-    "openreview_id": "Zd6VyjmN1S",
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism",
-    "summary": "マルチモーダル大規模言語モデルでは、画像前処理・画像符号化・事前充填・復号の計算特性が大きく異なるうえ、テキストだけの要求と画像付き要求が同じサーバへ混在する。ElasticMMは、要求をモダリティ群へ分離して負荷に応じGPUを動的配分し、各群の内部でも符号化・事前充填・復号を別段階として分離し、段階ごとに並列度を弾力的に変更する弾力的マルチモーダル並列（Elastic Multimodal Parallelism; EMP）を提案する。さらにマルチモーダル入力と統合接頭辞を二段階でキャッシュし、画像符号化を非同期化して後続推論を塞がない。8枚のA800 GPUでQwen2.5-VL-7BとLLaMA3.2-Vision-11Bを評価し、vLLM比でTTFTを最大4.2倍短縮し、SLOを満たす最大スループットを3.2〜4.5倍へ高める。",
-    "list_summary": "テキスト要求とマルチモーダル要求を分離し、符号化・事前充填・復号ごとにGPU配分と並列度を動的変更することで、TTFTを最大4.2倍短縮しSLO内スループットを3.2〜4.5倍にする。",
-    "authors": [
-      "Zedong Liu",
-      "Shenggan Cheng",
-      "Guangming Tan",
-      "Yang You",
-      "Dingwen Tao"
-    ],
-    "authors_affiliations": "Institute of Computing Technology, Chinese Academy of Sciences; University of Electronic Science and Technology of China; National University of Singapore",
-    "published": "2025-07-14",
-    "publication": "NeurIPS 2025 Oral; arXiv v3 revised 2025-11-11",
-    "publication_type": "Conference paper",
-    "publication_status": "Published",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "マルチモーダルLLM配信",
-      "弾力的資源配分",
-      "段階分離",
-      "接頭辞キャッシュ",
-      "非同期画像符号化",
-      "vLLM"
-    ],
-    "importance": "テキスト・画像要求の分離だけでなく、符号化、事前充填、復号の各段階が必要とする並列度を別々に調整する。マルチモーダル配信における資源異質性を二階層で扱う実装済みサービング基盤であり、一般LLMのP/D分離を拡張する。",
-    "hardware_evaluation": "実機。8枚のNVIDIA A800 80GB、2基の64-core Intel Xeon 8358P、2 TB DDR4を備える単一ワークステーション。任意のGPU間NVLink帯域は400 GB/s。",
-    "quality_effect": "モデル重み、画像トークン、KV値を近似削減する方式ではなく、要求分離、並列度変更、キャッシュ再利用、非同期化によるシステム最適化である。論文は精度劣化を導入しない設計として位置付ける。",
-    "source": "https://arxiv.org/abs/2507.10069",
-    "sources": [
-      "https://arxiv.org/abs/2507.10069",
-      "https://arxiv.org/pdf/2507.10069",
-      "https://github.com/hpdps-group/ElasticMM"
-    ],
-    "code": "https://github.com/hpdps-group/ElasticMM",
-    "implementation": "vLLM上に実装され、公式GitHubリポジトリ hpdps-group/ElasticMM がApache-2.0で公開されている。公式READMEは2025年10月にvLLM V0対応を公開、2025年11月にvLLM V1 backendを追加したと記載する。",
-    "last_checked": "2026-09-14",
-    "references_checked_at": "2026-09-14",
-    "references_source": "primary-reference-section",
-    "references_total": 57,
-    "references": [
-      {
-        "canonical_id": "arXiv:2111.09734",
-        "arxiv_id": "2111.09734"
-      },
-      {
-        "canonical_id": "arXiv:2408.03326",
-        "arxiv_id": "2408.03326"
-      },
-      {
-        "canonical_id": "arXiv:2403.05530",
-        "arxiv_id": "2403.05530"
-      },
-      {
-        "canonical_id": "arXiv:2302.13971",
-        "arxiv_id": "2302.13971"
-      },
-      {
-        "canonical_id": "arXiv:2303.08774",
-        "arxiv_id": "2303.08774"
-      },
-      {
-        "canonical_id": "arXiv:2407.00079",
-        "arxiv_id": "2407.00079"
-      },
-      {
-        "canonical_id": "arXiv:2307.08691",
-        "arxiv_id": "2307.08691"
-      }
-    ]
-  },
+  "attempt_id": "attempt-3a02f3af18c9e81b698943bc",
+  "job_id": "job-research-d53ec8171f729e9e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8d2d5424b4871b5ee4ef6cc8",
+    "claim_id": "claim-3a02f3af18c9e81b698943bc",
     "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
     "worker_kind": "scheduled_chat"
   }
