@@ -58,6 +58,73 @@ class StatusDashboardTests(unittest.TestCase):
             for expected in ("# 運用ダッシュボード", "Research ready | **2**", "Research完了 | **3**", "Repo収録 | **3**", "探索評価候補 | **15**", "重複除外 | **5**", "Research候補採用 | **9**", "33.3%", "SSD階層", "MoE expert", "New Paper", "Paper A", "履歴不足"):
                 self.assertIn(expected, text)
 
+    def test_dashboard_separates_specialist_discovery_and_groups_it_by_hourly_run(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            _install_script(repo)
+            _write(repo / ".survey/work-queue/next-jobs.json", {
+                "counts": {"research": {"completed": 206, "ready": 176, "blocked": 0, "deferred": 3}},
+                "next_jobs": [],
+            })
+            _write(repo / ".survey/work-queue/maintenance-cycle.json", {
+                "cadence_runs": 24, "runs_since_maintenance": 9,
+                "maintenance_pending": False, "last_maintenance_status": "passed",
+                "last_consistency_status": "passed",
+            })
+            # The ledger bucket is intentionally polluted by helper events from the
+            # specialist worker. STATUS must not report those as normal-worker discovery.
+            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [
+                {
+                    "run_key": "2026-09-13T10:30:00+09:00",
+                    "counts": {
+                        "research_completed": 2,
+                        "audit_completed": 0,
+                        "discovery_completed": 4,
+                        "blocked": 0,
+                        "new_jobs": 7,
+                        "new_papers": 2,
+                        "fallback_archived": 0,
+                    },
+                    "terminal_transitions": [
+                        {"type": "research", "canonical_id": "arXiv:a", "title": "A", "to": "completed"},
+                        {"type": "research", "canonical_id": "arXiv:b", "title": "B", "to": "completed"},
+                    ],
+                    "new_jobs": [],
+                    "new_paper_ids": ["arXiv:a", "arXiv:b"],
+                },
+            ]})
+            _write(repo / ".survey/work-queue/discovery-state.json", {"history": [
+                {"run_key": "2026-09-13T09:00:00+09:00", "round": "s1", "axis": "SSD", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
+                {"run_key": "2026-09-13T09:00:00+09:00", "round": "s2", "axis": "MoE", "candidate_count": 5, "duplicate_filtered_count": 2, "novel_candidate_count": 3, "accepted_count": 3},
+                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s3", "axis": "Scheduling", "candidate_count": 6, "duplicate_filtered_count": 4, "novel_candidate_count": 2, "accepted_count": 2},
+                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s4", "axis": "SpecDecode", "candidate_count": 5, "duplicate_filtered_count": 1, "novel_candidate_count": 4, "accepted_count": 3},
+                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s5", "axis": "Hierarchical memory", "candidate_count": 7, "duplicate_filtered_count": 2, "novel_candidate_count": 5, "accepted_count": 4},
+                {"run_key": "2026-09-13T10:00:00+09:00", "round": "s6", "axis": "Network", "candidate_count": 4, "duplicate_filtered_count": 1, "novel_candidate_count": 3, "accepted_count": 2},
+            ]})
+            module = _load_module(repo)
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 13, 1, 50, tzinfo=timezone.utc))
+
+            self.assertIn("Candidate在庫（Research ready） | **176**", text)
+            self.assertNotIn("176 / 50", text)
+            self.assertIn("## 直近の通常worker", text)
+            self.assertIn("Research完了 | **2**", text)
+            self.assertIn("通常worker Discovery round | **0**", text)
+            self.assertNotIn("Discovery完了 | **4**", text)
+            self.assertNotIn("新規job | **7**", text)
+
+            self.assertIn("## 直近の探索専用worker", text)
+            self.assertIn("Run: **2026-09-13T10:00:00+09:00**", text)
+            self.assertIn("探索round | **4**", text)
+            self.assertIn("評価候補 | **22**", text)
+            self.assertIn("重複除外 | **8**", text)
+            self.assertIn("Novel候補 | **14**", text)
+            self.assertIn("Research候補採用 | **11**", text)
+            self.assertIn("探索専用worker run（stats観測） | **2**", text)
+            self.assertIn("探索専用worker round（stats観測） | **6**", text)
+            self.assertIn("### 直近5探索専用worker run", text)
+            self.assertIn("2026-09-13T10:00:00+09:00 — 4 round", text)
+            self.assertIn("2026-09-13T09:00:00+09:00 — 2 round", text)
+
     def test_dashboard_warns_when_candidate_stock_is_low(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp)
