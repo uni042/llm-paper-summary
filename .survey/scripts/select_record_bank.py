@@ -85,8 +85,9 @@ def immutable_descriptor_candidates(
     """Index immutable descriptors without trusting them yet.
 
     Validation is deferred until a descriptor could actually release a current bank
-    attempt. That keeps selector cost bounded by the at-most-five attempt/job pairs
-    present in each bank instead of re-validating every historical descriptor.
+    attempt. The outer bank index is retained for diagnostics, while durable capture
+    itself is pair-global because committed Git blobs no longer depend on a reusable
+    worktree bank continuing to hold the same payload.
     """
     out: dict[str, dict[tuple[str, str], list[dict[str, Any]]]] = {}
     submissions = repo_root / ".survey/work-queue/submissions"
@@ -113,19 +114,25 @@ def _durably_captured(
     pair: tuple[str, str],
     candidates: dict[str, dict[tuple[str, str], list[dict[str, Any]]]],
 ) -> bool:
-    """Return True only when a transport-valid immutable descriptor owns the pair."""
-    for candidate in candidates.get(bank, {}).get(pair, []):
-        candidate = {key: value for key, value in candidate.items() if key != "_path"}
-        try:
-            validated = immutable_submission.validate_descriptor(repo_root, candidate)
-        except (ValueError, OSError):
-            continue
-        if (
-            validated.get("record_bank") == bank
-            and validated.get("attempt_id") == pair[0]
-            and validated.get("job_id") == pair[1]
-        ):
-            return True
+    """Return True when any transport-valid immutable descriptor captures the pair.
+
+    The descriptor may have been staged through another record bank. Once its exact
+    five slot blobs are committed and validated, a duplicate worktree copy in this
+    bank is redundant and can be overwritten safely.
+    """
+    del bank  # Pair durability is global after immutable blob capture.
+    for per_bank in candidates.values():
+        for candidate in per_bank.get(pair, []):
+            candidate = {key: value for key, value in candidate.items() if key != "_path"}
+            try:
+                validated = immutable_submission.validate_descriptor(repo_root, candidate)
+            except (ValueError, OSError):
+                continue
+            if (
+                validated.get("attempt_id") == pair[0]
+                and validated.get("job_id") == pair[1]
+            ):
+                return True
     return False
 
 
