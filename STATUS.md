@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 19:54 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 20:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,19 +36,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **168** |
-| 処理中（Active claims） | **26** |
-| 今すぐ着手可能（Claimable） | **142** |
-| :30 通常worker Active claims | **23** |
+| 処理中（Active claims） | **25** |
+| 今すぐ着手可能（Claimable） | **143** |
+| :30 通常worker Active claims | **22** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 19:54 JST** |
+| :30 通常worker 直近claim | **09-13 20:06 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **49** |
 | 最新通常run | **2026-09-13T18:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **466 min** |
+| 最古の有効claimの経過時間 | **478 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **58** |
 | Repo収録 | **60** |
 | Audit完了 | **0** |
-| 探索評価候補 | **683** |
-| Research候補採用 | **210** |
-| 重複除外 | **305** |
-| 重複率 | **44.7%** |
-| 探索専用worker run（毎時枠） | **15** |
-| 探索専用worker round（stats観測） | **141** |
+| 探索評価候補 | **677** |
+| Research候補採用 | **209** |
+| 重複除外 | **304** |
+| 重複率 | **44.9%** |
+| 探索専用worker run（毎時枠） | **14** |
+| 探索専用worker round（stats観測） | **140** |
 | 通常worker run（ledger観測） | **21** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 683 → 重複除外後 378 → Research候補採用 210 → Research完了 58 → Repo収録 60**
+**探索評価 677 → 重複除外後 373 → Research候補採用 209 → Research完了 58 → Repo収録 60**
 
 ## 直近の通常worker
 
@@ -150,7 +150,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | CUDA compiler・JIT/Graph runtime・decode kernel serving | 6 | 4 | 2 | 66.7% | 33.3% |
 | CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
 | GPU L2/HBM prefetch・heterogeneous memory・MoE tile-level communication overlap | 6 | 1 | 3 | 16.7% | 50.0% |
-| GPU/SmartNIC実行系・storage KV経路・CXL疎注意・MoE cache制御 | 6 | 1 | 1 | 16.7% | 16.7% |
 | GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
 | MoE expert cache・offload・OS tiering | 6 | 6 | 0 | 100.0% | 0.0% |
 | MoE expert prefetch・offload・speculative execution再走査 | 6 | 5 | 0 | 83.3% | 0.0% |
