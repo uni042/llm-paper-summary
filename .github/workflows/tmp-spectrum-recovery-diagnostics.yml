@@ -1,0 +1,147 @@
+name: Temporary SpectrumKV repair recovery diagnostic
+
+on:
+  push:
+    branches: [diagnostics/stress-survey-pipeline-20260913]
+    paths:
+      - '.github/workflows/tmp-spectrum-recovery-diagnostics.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  spectrum-recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+
+      - name: Reproduce SpectrumKV recovery in isolated copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import datetime as dt
+          import json
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+
+          source = Path('.').resolve()
+          job_id = 'job-research-ec01b6de422e6692'
+          attempt_id = 'attempt-d0e5054b6a381715aab8671d'
+          descriptor_rel = f'.survey/work-queue/submissions/research/{attempt_id}.json'
+          result_rel = f'.survey/work-queue/results/research/{attempt_id}.json'
+
+          with tempfile.TemporaryDirectory() as td:
+              case = Path(td) / 'repo'
+              subprocess.run(
+                  ['git', 'clone', '--local', '--no-hardlinks', str(source), str(case)],
+                  check=True,
+                  stdout=subprocess.DEVNULL,
+                  stderr=subprocess.DEVNULL,
+              )
+              sys.path.insert(0, str(case / '.survey/scripts'))
+              import claim_worker_with_banks
+              import immutable_submission
+              from record_bank_config import BANK_ROOTS, SLOT_NAMES
+
+              result_path = case / result_rel
+              assert not result_path.exists(), 'SpectrumKV result unexpectedly already exists in branch state'
+              descriptor_path = case / descriptor_rel
+              descriptor = json.loads(descriptor_path.read_text(encoding='utf-8'))
+              normalized = immutable_submission.validate_descriptor(case, descriptor)
+              old_payloads = {
+                  ref['slot']: immutable_submission.read_record_slot(case, ref)
+                  for ref in normalized['record_slots']
+              }
+              assert set(old_payloads) == set(SLOT_NAMES)
+              assert all(payload.get('job_id') == job_id for payload in old_payloads.values())
+              assert all(payload.get('attempt_id') == attempt_id for payload in old_payloads.values())
+
+              historical_failure = {
+                  'schema_version': 1,
+                  'workflow_version': 10,
+                  'ok': False,
+                  'attempt_id': attempt_id,
+                  'job_id': job_id,
+                  'job_type': 'research',
+                  'job_status': None,
+                  'artifact': None,
+                  'submission': descriptor_rel,
+                  'error': 'ValueError: problem_method.method_overview must explain the end-to-end mechanism',
+                  'processed_at': '2026-09-13T08:51:43+00:00',
+              }
+              result_path.parent.mkdir(parents=True, exist_ok=True)
+              result_path.write_text(json.dumps(historical_failure, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+              job_path = case / '.survey/work-queue/jobs' / f'{job_id}.json'
+              job = json.loads(job_path.read_text(encoding='utf-8'))
+              assert job.get('status') == 'ready'
+              assert job.get('repair_required') is True
+              job['priority'] = 9999
+              job_path.write_text(json.dumps(job, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+              now = dt.datetime.now(dt.timezone.utc)
+              request_id = 'diag-spectrum-recovery'
+              request_path = case / '.survey/work-queue/claim-requests' / f'{request_id}.json'
+              request_path.parent.mkdir(parents=True, exist_ok=True)
+              request_path.write_text(json.dumps({
+                  'schema_version': 1,
+                  'request_id': request_id,
+                  'worker_id': 'diag-spectrum-worker',
+                  'worker_kind': 'work',
+                  'requested_at': now.isoformat(),
+                  'max_jobs': 1,
+                  'lease_seconds': 900,
+                  'job_types': ['research'],
+              }, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+              process_result = claim_worker_with_banks.process_requests(case, at=now)
+              claim_result = json.loads(
+                  (case / '.survey/work-queue/claim-results' / f'{request_id}.json').read_text(encoding='utf-8')
+              )
+              assignments = claim_result.get('assignments') or []
+              assert len(assignments) == 1, claim_result
+              assignment = assignments[0]
+              assert assignment['job_id'] == job_id, assignment
+              assert assignment.get('record_bank_recovery') == 'repair-required-immutable-descriptor', assignment
+              assert assignment.get('record_bank_recovery_attempt_ids') == [attempt_id], assignment
+              assert assignment.get('record_bank_recovery_submission') == descriptor_rel, assignment
+              assert process_result.get('banks_recovered_from_descriptor') == 1, process_result
+
+              restored_bank = assignment['record_bank']
+              restored_data_matches = {}
+              for slot in SLOT_NAMES:
+                  payload = json.loads(
+                      (case / BANK_ROOTS[restored_bank] / f'{slot}.json').read_text(encoding='utf-8')
+                  )
+                  restored_data_matches[slot] = payload.get('data') == old_payloads[slot].get('data')
+                  assert restored_data_matches[slot]
+                  assert payload.get('job_id') == job_id
+                  assert payload.get('attempt_id') == assignment['attempt_id']
+
+              print('SPECTRUM_RECOVERY_JSON=' + json.dumps({
+                  'job_id': job_id,
+                  'old_attempt_id': attempt_id,
+                  'new_attempt_id': assignment['attempt_id'],
+                  'source_bank': normalized['record_bank'],
+                  'restored_bank': restored_bank,
+                  'recovery': assignment['record_bank_recovery'],
+                  'source_submission': assignment['record_bank_recovery_submission'],
+                  'all_five_data_payloads_preserved': all(restored_data_matches.values()),
+                  'process_result': process_result,
+              }, ensure_ascii=False, sort_keys=True))
+          PY
