@@ -4,7 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-e6f9fac0ed89c24240db7c8a",
   "job_id": "job-research-bbe263213664b792",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA A30（ピーク165 TFLOPS、メモリ帯域933GB/s）＋Intel Xeon Gold 6426Y（CPU側2.43 TFLOPS、メモリ帯域357GB/s、CPU-GPU転送25GB/s、CPUメモリ250GB）と、GeForce RTX 4090D（83 TFLOPS、1008GB/s）＋Intel Xeon Gold 5418Y（1.45 TFLOPS、197GB/s、転送23GB/s、CPUメモリ190GB）の2環境。",
+    "software": "SGLang上にSpecMoEOffを実装し、Python/C++/CUDAを2万行超追加。DeepSpeed-ZeRO-Inference 0.17.4、MoE-Lightning、投機的デコードを無効化した自方式を比較対象とする。",
+    "models": "対象モデルはFP16のMixtral-8x7B（総87GB、専門家84GB、その他3GB）。ドラフトモデルは対応するEAGLEで2GB未満。",
+    "datasets": "APPSコード生成（平均入力566.17、標準偏差271.80）とCNN/DailyMail要約・質問応答（平均入力1005.56、標準偏差491.66）。出力長を変えた評価も行う。",
+    "methodology": "二つの実機環境でエンドツーエンドの総スループットとデコードスループットを測定し、データセット、出力長、候補トークン数、CPU/GPUメモリ容量を変える。さらに設定推定器について、対象モデル、CPU注意、GPU MoE、ホストからGPUへの転送、ドラフトモデル、反復全体の実測時間と推定時間を比較する。",
+    "scope": "実機のCPUメモリを外部階層として使うMixtral-8x7Bの大バッチ推論が中心で、SSDを直接使う評価や複数GPUクラスタ評価ではない。性能差にはAPPSとCNN/DailyMailにおけるEAGLE候補の受理率差が含まれるため、受理率が異なるモデル・タスクへ倍率をそのまま一般化できない。"
+  },
   "reservation": {
     "claim_id": "claim-e6f9fac0ed89c24240db7c8a",
     "worker_id": "scheduled-chat-discovery-routing-20260914T0400JST",
