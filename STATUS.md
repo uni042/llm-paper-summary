@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -245,11 +245,11 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 次に処理する候補
 
-- P88 `arXiv:2310.18547` — Punica: Multi-Tenant LoRA Serving
-- P88 `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
-- P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 - P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
+- P87 `arXiv:2607.07388` — TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models
+- P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
+- P87 `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
 
 ## 7日比較
 
@@ -267,12 +267,12 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | 指標 | 値 |
 |---|---:|
 | Research ready | **180** |
-| Active claims | **23** |
-| Claimable | **157** |
+| Active claims | **26** |
+| Claimable | **154** |
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
 | Research completed (24h) | **72** |
-| Oldest active claim age | **92 min** |
+| Oldest active claim age | **58 min** |
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
