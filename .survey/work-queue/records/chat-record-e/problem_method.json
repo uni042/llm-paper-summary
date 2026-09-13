@@ -2,18 +2,31 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-65726a91bc5e5168cef13307",
+  "attempt_id": "attempt-851ec2bd9cf38cc1c76afe61",
   "job_id": "job-research-f9d3c5ad391e4acc",
   "data": {
     "problem": "実運用のLoRAでは、同じ基盤モデルから多数の利用者・タスク向けadapterが派生し、adapterの微調整と更新済みadapterの推論配信を同時に行いたい。しかし既存系は推論専用のMulti-LoRA基盤とPEFT学習基盤が分離され、基盤モデルやランタイムを重複保持しやすい。Punica系の高速Multi-LoRA kernelは複数層のLoRA重みを静的に連結するため、層ごとに異なるLoRA構成や学習中の動的更新と相性が悪く、adapter交換時に計算を停止して重みを再構成する必要がある。FlexLLMのようなco-serving系も複数LoRAや一部backward演算に制約があり、推論・微調整・評価・prefill・decodeという異質な処理を同一forwardへまとめにくい。課題は、共有基盤重みを壊さず複数adapterを独立管理し、学習に必要なgradient経路と推論用高速kernelを共存させながら、異種要求を十分大きなbatchへ統合することである。",
     "novelty": "Loquetierは、PEFTによるモデル変更を共有基盤モデルから切り離すVirtualized Moduleと、PunicaのMulti-LoRA演算を層単位へ再設計したSegmented Multi-LoRA Multiplication（SMLM）を組み合わせる。前者により一つの読み取り専用基盤モデルから複数の独立仮想モデルを生成し、adapterの動的load/unloadやGPU間migrationを基盤重みの複製なしに扱う。後者によりLoRA重みを層横断で事前連結せず、その線形層で必要なadapterだけを一回のkernel呼出しへ集約できるため、fine-tuning・evaluation・prefill・decodeを同一forwardへ混在させられる。",
     "method_overview": "Loquetierは基盤LLMをCPU/GPU上の共有Model Libraryとして一度だけ読み込み、その各moduleへデータとmethodのproxyを提供するVirtualized Moduleを被せる。adapterごとにMixedLoraModelという仮想モデルを作り、LoRA A/B行列やscale、対象moduleなどPEFT固有状態は仮想側に保持する。基盤module自身のweightやconfigurationを破壊的に変更しないため、複数仮想モデルが同じ大きな基盤重みを共有したまま独立して微調整・推論できる。runtime生成classのdeep-copy問題には非local class定義とvoid/unvoid手順を用い、仮想側だけをserializeして別GPUの同じ基盤モデルへ結び直すことでinstance migrationを実現する。\n\n計算面では、PunicaのLoRA演算を改造したSMLMを各linear layer単位で適用する。Punicaは同じmodule位置のLoRA重みを層横断で静的連結して高速化するため、学習時に層ごとのadapter構成を変えにくく、交換時に再spliceが必要になる。Loquetierはその前処理をなくし、同じlinear layerへ到達したactive requestのLoRA A/B行列をsegment情報で一回のkernel呼出しにまとめる。静的scaleはMixedLoraModel生成時に重みへ畳み込み、動的scaleだけforward時にrequest単位で適用する。これによりadapter追加・削除や層ごとの異質構成を保ったままMulti-LoRA batchingを維持する。\n\n統一計算フローではfine-tuning、evaluation、prefill、decodeの入力を一つのhidden-state列へまとめ、Q/K/V projectionなど共有可能な線形演算とLoRA差分を先に一括計算する。その後attentionだけを用途別に分岐し、fine-tuningはgradientが必要なのでPyTorch Autograd対応の通常forward、prefill/decodeはFlashInferのbatch kernelを使う。出力を再結合してO projectionもSMLMで処理する。causal LM上では各fine-tuning/evaluation区間だけlogitsとlabelsを切り出してlossを計算し、gradient accumulation係数で正規化する。Transformers Trainerもinterruptibleな形へ拡張し、複数trainerが一つのMixedLoraModel計算フローを共有しつつparameter maskで自分のadapterだけ更新する。推論負荷が増えると共有forwardへ推論requestを多く入れ、学習側は残余計算資源を使うため、別service間の明示的な大規模model swapなしに容量を融通できる。",
     "components": [
-      {"name": "Virtualized Moduleと共有基盤モデル", "description": "基盤TransformerのLinear、Attention、MLPなどを直接書き換える代わりに、各moduleへmethod/data proxyを提供する仮想wrapperをruntimeで生成し、LoRAなどPEFT固有の状態だけを仮想モデルへ保持する。大容量の基盤weightは読み取り専用で共有されるため、adapter数が増えても基盤モデルを複製しない。各仮想モデルは独立したLoRA configurationとparameterを持ち、一つをfine-tuning中にしても別の仮想モデルをinferenceへ使える。runtime classのdeep-copy/serializationで基盤weightまで複製されないようvoid/unvoidを導入し、adapter状態を別GPU上の同一基盤モデルへ再接続できるため、fine-tuning instanceをservice停止なしにmigrationできる。"},
-      {"name": "Segmented Multi-LoRA Multiplication（SMLM）", "description": "複数LoRAをadapterごとに逐次計算すると小さなGEMMのkernel起動が増えるため、同じlinear layerへ入る入力をadapter segmentごとに整理して一回のMulti-LoRA kernelで処理する。PunicaのCutlassベース設計を出発点とするが、層をまたいだLoRA weightの静的concatenationをやめ、各linear layerで必要なA/B weightだけを渡す。これによりQ/K/V/OやMLPのup/gate/downの一部だけへLoRAを適用する異質構成、学習中に更新されるweight、adapterの動的交換を許容する。static scalingはmodel生成時にweightへ適用してhot pathから除外し、request依存scaleのみ実行時処理するため、柔軟性を増やしつつMulti-LoRA batchingのkernel呼出し削減を維持する。"},
-      {"name": "微調整・推論の統一forwardとcontext管理", "description": "fine-tuning、evaluation、prefill、decodeを別engineで順番に走らせず、各requestのbatch/sequence範囲をcontextとして保持し、共有可能なprojectionを同一forwardで一括実行する。attentionではfine-tuning区間だけPyTorch Autograd対応経路へ、prefill/decodeはFlashInferへ分岐し、結果を元のrequest順へ連結して次のlinearへ渡す。evaluationはlossを計算するがbackwardしない一回forward、prefillはKV cacheを初期化してdecodeへ移行するなど役割を明確に分離する。Trainer拡張では複数trainerの入力を共有forwardへ積み、parameter maskにより各backwardが対応LoRAだけを更新する。この構造により推論流量が増えたときGPU計算を推論へ寄せ、空き時間にはfine-tuning throughputを戻す動的な容量配分を同じruntime内で実現する。"}
+      {
+        "name": "Virtualized Moduleと共有基盤モデル",
+        "description": "基盤TransformerのLinear、Attention、MLPなどを直接書き換える代わりに、各moduleへmethod/data proxyを提供する仮想wrapperをruntimeで生成し、LoRAなどPEFT固有の状態だけを仮想モデルへ保持する。大容量の基盤weightは読み取り専用で共有されるため、adapter数が増えても基盤モデルを複製しない。各仮想モデルは独立したLoRA configurationとparameterを持ち、一つをfine-tuning中にしても別の仮想モデルをinferenceへ使える。runtime classのdeep-copy/serializationで基盤weightまで複製されないようvoid/unvoidを導入し、adapter状態を別GPU上の同一基盤モデルへ再接続できるため、fine-tuning instanceをservice停止なしにmigrationできる。"
+      },
+      {
+        "name": "Segmented Multi-LoRA Multiplication（SMLM）",
+        "description": "複数LoRAをadapterごとに逐次計算すると小さなGEMMのkernel起動が増えるため、同じlinear layerへ入る入力をadapter segmentごとに整理して一回のMulti-LoRA kernelで処理する。PunicaのCutlassベース設計を出発点とするが、層をまたいだLoRA weightの静的concatenationをやめ、各linear layerで必要なA/B weightだけを渡す。これによりQ/K/V/OやMLPのup/gate/downの一部だけへLoRAを適用する異質構成、学習中に更新されるweight、adapterの動的交換を許容する。static scalingはmodel生成時にweightへ適用してhot pathから除外し、request依存scaleのみ実行時処理するため、柔軟性を増やしつつMulti-LoRA batchingのkernel呼出し削減を維持する。"
+      },
+      {
+        "name": "微調整・推論の統一forwardとcontext管理",
+        "description": "fine-tuning、evaluation、prefill、decodeを別engineで順番に走らせず、各requestのbatch/sequence範囲をcontextとして保持し、共有可能なprojectionを同一forwardで一括実行する。attentionではfine-tuning区間だけPyTorch Autograd対応経路へ、prefill/decodeはFlashInferへ分岐し、結果を元のrequest順へ連結して次のlinearへ渡す。evaluationはlossを計算するがbackwardしない一回forward、prefillはKV cacheを初期化してdecodeへ移行するなど役割を明確に分離する。Trainer拡張では複数trainerの入力を共有forwardへ積み、parameter maskにより各backwardが対応LoRAだけを更新する。この構造により推論流量が増えたときGPU計算を推論へ寄せ、空き時間にはfine-tuning throughputを戻す動的な容量配分を同じruntime内で実現する。"
+      }
     ],
     "system_design": "Model Libraryに共有Llama基盤を置き、その上にadapter単位のVirtualized ModelとMixedLoraModelを生成する。context managerが異種requestを一つのforwardへ構成し、linearはSMLM、推論attentionはFlashInfer、学習attention/backwardはPyTorch Autogradへ振り分ける。Trainerはparameter maskで更新対象を隔離し、adapter状態だけをload/unload/migrateできる。"
   },
-  "reservation": {"claim_id": "claim-65726a91bc5e5168cef13307", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-851ec2bd9cf38cc1c76afe61",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

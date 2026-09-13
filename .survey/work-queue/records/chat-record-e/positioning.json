@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-65726a91bc5e5168cef13307",
+  "attempt_id": "attempt-851ec2bd9cf38cc1c76afe61",
   "job_id": "job-research-f9d3c5ad391e4acc",
   "data": {
     "limitations": "評価はLlama-3 8Bと単一ノード4 GPU環境に限られ、70B級以上の基盤モデル、複数ノード、adapter migrationの実ネットワーク費用、数千adapter規模のmemory hierarchyは未評価である。Virtualized Moduleは基盤moduleのweight/configurationを破壊的に変更しないPEFT方式を前提とし、基盤を直接上書きする手法はforward設計を正規化する必要がある。runtime生成classは通常のfork/spawn/deep-copyと相性が悪く、独自serialization/void機構を要する。fine-tuning backwardはSMLM化されておらず、PyTorch Autogradによる独立LoRA linear callが残るため学習側はPEFTよりわずかに遅い。論文自身もSMLMと協調するbackward kernel、cluster managerとの統合、LoRA以外のPEFT支援を将来課題に挙げる。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "PunicaのSGMV思想を学習可能な層単位SMLMへ発展させる直接的後続であり、S-LoRAの多数adapter memory management、FlexLLMのco-servingと比較される。Auroraのように配信トラフィックからadapter/speculatorを継続更新する系とも補完的で、Loquetier側は共有base上のadapter training/inference coexistenceを提供できる。一方SSD/NVMe offloadは直接扱わず、adapter数がGPU/host memoryを超える場合の階層配置は将来の接続点になる。",
     "audit_required": false
   },
-  "reservation": {"claim_id": "claim-65726a91bc5e5168cef13307", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-851ec2bd9cf38cc1c76afe61",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

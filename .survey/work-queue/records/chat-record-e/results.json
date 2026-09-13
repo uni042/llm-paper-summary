@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-65726a91bc5e5168cef13307",
+  "attempt_id": "attempt-851ec2bd9cf38cc1c76afe61",
   "job_id": "job-research-f9d3c5ad391e4acc",
   "data": {
     "overview": "Loquetierは推論専用で高arrival rateほどFlexLLMとの差を広げ、論文総括ではSLO達成率がPEFT比20.8倍、FlexLLM比最大3.0倍になる。統一微調整・推論では推論専用時に近いSLOを維持しつつ、fine-tuning側も平均約40%の単独時効率を確保し、PEFT比46.4倍のSLO達成率を報告する。model loadingは合計5.336秒・追加storage 0Bで、FlexLLMの38.857秒・15.00GBを大きく下回る。BurstGPTを用いた120分実負荷模擬では全体SLO達成率92.37%で、失敗はhardware capacityを超える高負荷spike（RPS>5）へ集中した。",
     "key_results": [
-      {"metric": "inference-only SLO attainment", "value": "PEFT比20.8×、FlexLLM比最大3.0×", "baseline": "PEFT / FlexLLM", "condition": "Llama-3 8B、A6000、arrival rateを増加", "interpretation": "層単位SMLMと推論用FlashInfer経路により、Multi-LoRAでも高いdecode throughputを維持する。"},
-      {"metric": "unified fine-tuning + inference SLO attainment", "value": "PEFT比46.4×", "baseline": "HuggingFace PEFT", "condition": "H800、single/multi fine-tune × single/multi inference", "interpretation": "PEFTは推論要求の90%以上が開始前にtimeoutする条件がある一方、Loquetierは推論SLOを優先しながら学習も進める。"},
-      {"metric": "fine-tuning efficiency under unified load", "value": "単独fine-tuning時の平均約40%", "baseline": "Loquetier fine-tuning-only", "condition": "3種類のinference arrival rateを併走", "interpretation": "推論へ資源を譲りつつ、別runtime停止ではなく同じforward内の残余容量をfine-tuningへ割り当てる。"},
-      {"metric": "model loading total time / additional storage", "value": "5.336 s / 0 B", "baseline": "PEFT 4.791 s / 0 B、S-LoRA 33.985 s / 0 B、FlexLLM 38.857 s / 15.00 GB", "condition": "Table 2 loading micro-experiment", "interpretation": "Virtualized Module生成でPEFTより少し遅いが、FlexLLMのweight transformation/cacheに伴う大きな時間・storage増を避ける。"},
-      {"metric": "real-world simulated SLO attainment", "value": "92.37%", "baseline": "Loquetier dynamic unified workload", "condition": "BurstGPT 120-minute composite workload", "interpretation": "失敗要求はRPS>5の一時的hardware-capacity超過へ集中し、それ以外の区間ではSLOを満たす。"}
+      {
+        "metric": "inference-only SLO attainment",
+        "value": "PEFT比20.8×、FlexLLM比最大3.0×",
+        "baseline": "PEFT / FlexLLM",
+        "condition": "Llama-3 8B、A6000、arrival rateを増加",
+        "interpretation": "層単位SMLMと推論用FlashInfer経路により、Multi-LoRAでも高いdecode throughputを維持する。"
+      },
+      {
+        "metric": "unified fine-tuning + inference SLO attainment",
+        "value": "PEFT比46.4×",
+        "baseline": "HuggingFace PEFT",
+        "condition": "H800、single/multi fine-tune × single/multi inference",
+        "interpretation": "PEFTは推論要求の90%以上が開始前にtimeoutする条件がある一方、Loquetierは推論SLOを優先しながら学習も進める。"
+      },
+      {
+        "metric": "fine-tuning efficiency under unified load",
+        "value": "単独fine-tuning時の平均約40%",
+        "baseline": "Loquetier fine-tuning-only",
+        "condition": "3種類のinference arrival rateを併走",
+        "interpretation": "推論へ資源を譲りつつ、別runtime停止ではなく同じforward内の残余容量をfine-tuningへ割り当てる。"
+      },
+      {
+        "metric": "model loading total time / additional storage",
+        "value": "5.336 s / 0 B",
+        "baseline": "PEFT 4.791 s / 0 B、S-LoRA 33.985 s / 0 B、FlexLLM 38.857 s / 15.00 GB",
+        "condition": "Table 2 loading micro-experiment",
+        "interpretation": "Virtualized Module生成でPEFTより少し遅いが、FlexLLMのweight transformation/cacheに伴う大きな時間・storage増を避ける。"
+      },
+      {
+        "metric": "real-world simulated SLO attainment",
+        "value": "92.37%",
+        "baseline": "Loquetier dynamic unified workload",
+        "condition": "BurstGPT 120-minute composite workload",
+        "interpretation": "失敗要求はRPS>5の一時的hardware-capacity超過へ集中し、それ以外の区間ではSLOを満たす。"
+      }
     ],
     "negative_results": "fine-tuning単独ではLoquetierはPEFTよりわずかに遅く、論文は理由をLoRA linearのbackwardが独立callになることと説明する。SMLMと協調する専用backward kernelは未実装で、Appendix Aでも今後の改善点とされる。FlexLLMは全7 LoRA moduleを扱えず、複数LoRA推論で10分以上のload loopへ入る条件があり、比較が完全に対称ではない。S-LoRAもLlama-3 GQA対応のworkaroundとkernelのNaN/Inf不安定性がある。さらに推論arrival rateが約3 RPSを超えるとA6000のmemory-access bottleneckに達し、Loquetier自身もSLO失敗が増える。",
     "interpretation": "主要な利得は、単にMulti-LoRA kernelを高速化したことではなく、base model・adapter状態・request種類の境界を分離し直したことにある。基盤weightを共有したまま仮想modelごとの更新対象を隔離し、forwardの共有可能部分だけを統合するため、学習と推論をservice単位で交互停止する必要がない。一方backwardはまだPyTorch Autograd経路なので、統一処理時の学習効率には明確な余地が残る。",
     "quality_impact": "SMLMやVirtualized Moduleは同じLoRA演算を別のbatch/kernel構造で実行するシステム最適化で、モデル品質を近似して速度を得る方式ではない。論文の主評価はSLOとthroughputであり、精度改善を主張していない。fine-tuningのparameter maskにより各trainerが対応adapterだけを更新し、共有基盤weightを誤更新しない設計になっている。"
   },
-  "reservation": {"claim_id": "claim-65726a91bc5e5168cef13307", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-851ec2bd9cf38cc1c76afe61",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
