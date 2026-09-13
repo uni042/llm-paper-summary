@@ -58,10 +58,28 @@ jobs:
               path.parent.mkdir(parents=True, exist_ok=True)
               path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
+          def current_record(assignment):
+              record = {}
+              bank = assignment['record_bank']
+              for slot in SLOT_NAMES:
+                  payload = read(root / BANK_ROOTS[bank] / f'{slot}.json')
+                  assert payload['attempt_id'] == assignment['attempt_id']
+                  assert payload['job_id'] == assignment['job_id']
+                  record[slot] = payload['data']
+              return record
+
+          def validation_error(assignment):
+              record = assemble.normalize_preferred_terms(current_record(assignment))
+              assemble.ensure_explanatory_summary(record)
+              try:
+                  assemble.validate_record(record)
+              except Exception as exc:
+                  return f'{type(exc).__name__}: {exc}'
+              return None
+
           now = dt.datetime.now(dt.timezone.utc)
           branch_jobs = root / '.survey/work-queue/jobs'
 
-          # Recover the exact failure result that the historical Action generated but failed to push.
           spectrum_job = 'job-research-ec01b6de422e6692'
           spectrum_old_attempt = 'attempt-d0e5054b6a381715aab8671d'
           spectrum_old_submission = f'.survey/work-queue/submissions/research/{spectrum_old_attempt}.json'
@@ -126,59 +144,46 @@ jobs:
           assert spectrum.get('record_bank_recovery') == 'repair-required-immutable-descriptor', spectrum
           assert spectrum.get('record_bank_recovery_attempt_ids') == [spectrum_old_attempt], spectrum
 
+          vortex_precheck = validation_error(vortex)
+          spectrum_precheck = validation_error(spectrum)
           repairs = []
 
-          # Vortex: preserve all previous research and extend only the undersized first component.
-          vortex_pm_path = root / BANK_ROOTS[vortex['record_bank']] / 'problem_method.json'
-          vortex_pm = read(vortex_pm_path)
-          before_vortex = vortex_pm['data']['components'][0]['description']
-          extra_vortex = (
-              'さらにcache stageの出力はnamed cacheとしてKV pageと同じ割当単位に保存され、'
-              'indexerは各デコード反復でその統計と現在queryだけを組み合わせて候補blockを絞る。'
-              'そのため毎tokenで全KVを走査せず、状態保持型の方式でも物理page位置を利用者コードへ露出しない。'
-          )
-          if extra_vortex not in before_vortex:
-              vortex_pm['data']['components'][0]['description'] = before_vortex + extra_vortex
-          write(vortex_pm_path, vortex_pm)
-          after_vortex = vortex_pm['data']['components'][0]['description']
-          assert assemble.prose_chars(before_vortex) < 240
-          assert assemble.prose_chars(after_vortex) >= 240
-          repairs.append({'job_id': vortex_job, 'field': 'components[0].description', 'before_chars': assemble.prose_chars(before_vortex), 'after_chars': assemble.prose_chars(after_vortex)})
+          # Vortex's retained bank is newer than the stale job error; do not rewrite valid research.
+          if vortex_precheck is not None:
+              vortex_pm_path = root / BANK_ROOTS[vortex['record_bank']] / 'problem_method.json'
+              vortex_pm = read(vortex_pm_path)
+              before_vortex = vortex_pm['data']['components'][0]['description']
+              if assemble.prose_chars(before_vortex) < 240:
+                  extra_vortex = (
+                      'さらにcache stageの出力はnamed cacheとしてKV pageと同じ割当単位に保存され、'
+                      'indexerは各デコード反復でその統計と現在queryだけを組み合わせて候補blockを絞る。'
+                      'そのため毎tokenで全KVを走査せず、状態保持型の方式でも物理page位置を利用者コードへ露出しない。'
+                  )
+                  vortex_pm['data']['components'][0]['description'] = before_vortex + extra_vortex
+                  write(vortex_pm_path, vortex_pm)
+                  repairs.append({'job_id': vortex_job, 'field': 'components[0].description', 'before_chars': assemble.prose_chars(before_vortex), 'after_chars': assemble.prose_chars(vortex_pm['data']['components'][0]['description'])})
 
-          # SpectrumKV: preserve the old immutable five-slot record and extend only the end-to-end flow.
+          # SpectrumKV's historical immutable record genuinely has a short method overview.
           spectrum_pm_path = root / BANK_ROOTS[spectrum['record_bank']] / 'problem_method.json'
           spectrum_pm = read(spectrum_pm_path)
           before_spectrum = spectrum_pm['data']['method_overview']
-          extra_spectrum = (
-              'エンドツーエンドでは、プリフィルGPUで通常のFP16 KVを生成し、重要度を計算し、'
-              '転送予算に沿ってtokenごとにFP16・INT8・INT4を選択して量子化する。次に量子化KVと'
-              'token別precision mapをネットワーク越しにデコードGPUへ送り、受信側はmapに従って各KVを復号し、'
-              '低重要度位置も削除せず全tokenを通常のattentionへ入力する。配備前probeでINT4不適合と判定された'
-              'モデルでは同じ処理列の精度集合をFP16・INT8へ縮退させ、同じ予算制約の下で割当を再計算する。'
-              'したがって転送量削減、復号、生成までが一つの流れとして完結し、削除方式のような欠落位置の再取得を必要としない。'
-          )
-          if extra_spectrum not in before_spectrum:
+          if assemble.prose_chars(before_spectrum) < 500:
+              extra_spectrum = (
+                  'エンドツーエンドでは、プリフィルGPUで通常のFP16 KVを生成し、重要度を計算し、'
+                  '転送予算に沿ってtokenごとにFP16・INT8・INT4を選択して量子化する。次に量子化KVと'
+                  'token別precision mapをネットワーク越しにデコードGPUへ送り、受信側はmapに従って各KVを復号し、'
+                  '低重要度位置も削除せず全tokenを通常のattentionへ入力する。配備前probeでINT4不適合と判定された'
+                  'モデルでは同じ処理列の精度集合をFP16・INT8へ縮退させ、同じ予算制約の下で割当を再計算する。'
+                  'したがって転送量削減、復号、生成までが一つの流れとして完結し、削除方式のような欠落位置の再取得を必要としない。'
+              )
               spectrum_pm['data']['method_overview'] = before_spectrum + extra_spectrum
-          write(spectrum_pm_path, spectrum_pm)
-          after_spectrum = spectrum_pm['data']['method_overview']
-          assert assemble.prose_chars(before_spectrum) < 500
-          assert assemble.prose_chars(after_spectrum) >= 500
-          repairs.append({'job_id': spectrum_job, 'field': 'method_overview', 'before_chars': assemble.prose_chars(before_spectrum), 'after_chars': assemble.prose_chars(after_spectrum)})
+              write(spectrum_pm_path, spectrum_pm)
+              repairs.append({'job_id': spectrum_job, 'field': 'method_overview', 'before_chars': assemble.prose_chars(before_spectrum), 'after_chars': assemble.prose_chars(spectrum_pm['data']['method_overview'])})
 
-          def validate_current_bank(assignment):
-              record = {}
-              bank = assignment['record_bank']
-              for slot in SLOT_NAMES:
-                  payload = read(root / BANK_ROOTS[bank] / f'{slot}.json')
-                  assert payload['attempt_id'] == assignment['attempt_id']
-                  assert payload['job_id'] == assignment['job_id']
-                  record[slot] = payload['data']
-              record = assemble.normalize_preferred_terms(record)
-              assemble.ensure_explanatory_summary(record)
-              assemble.validate_record(record)
-
-          validate_current_bank(vortex)
-          validate_current_bank(spectrum)
+          vortex_postcheck = validation_error(vortex)
+          spectrum_postcheck = validation_error(spectrum)
+          assert vortex_postcheck is None, vortex_postcheck
+          assert spectrum_postcheck is None, spectrum_postcheck
 
           def submit(assignment):
               job = read(branch_jobs / f"{assignment['job_id']}.json")
@@ -225,6 +230,8 @@ jobs:
           spectrum_result = submit(spectrum)
 
           report = {
+              'precheck': {'vortex': vortex_precheck, 'spectrum': spectrum_precheck},
+              'postcheck': {'vortex': vortex_postcheck, 'spectrum': spectrum_postcheck},
               'repairs': repairs,
               'vortex': vortex_result,
               'spectrum': spectrum_result,
