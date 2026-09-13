@@ -177,6 +177,49 @@ class ClaimBankReservationTests(unittest.TestCase):
 
             self.assertEqual(second_bank, first_bank)
 
+    def test_repair_claim_reuses_nonempty_bank_for_same_job_without_losing_data(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_free_banks(root)
+            seed_job(root, "job-repair", 100)
+            job_path = root / ".survey/work-queue/jobs/job-repair.json"
+            job = json.loads(job_path.read_text())
+            job["repair_required"] = True
+            job["validation_error"] = "ValueError: problem_method.components[0].description is too short"
+            write_json(job_path, job)
+
+            recovery_bank = "h"
+            original_data = {}
+            for index, slot in enumerate(SLOT_NAMES):
+                data = {"preserved": f"{slot}-{index}", "text": "already researched content"}
+                original_data[slot] = data
+                write_json(root / BANK_ROOTS[recovery_bank] / f"{slot}.json", {
+                    "schema_version": 1,
+                    "transport_version": 10,
+                    "slot": slot,
+                    "attempt_id": "attempt-old-research",
+                    "job_id": "job-repair",
+                    "data": data,
+                })
+
+            seed_request(root, "req-repair", "worker-repair")
+            result = claim_worker_with_banks.process_requests(root, at=AT)
+
+            assignment = json.loads(
+                (root / ".survey/work-queue/claim-results/req-repair.json").read_text()
+            )["assignments"][0]
+            self.assertEqual(assignment["record_bank"], recovery_bank)
+            self.assertEqual(result["banks_recovered"], 1)
+
+            for slot in SLOT_NAMES:
+                payload = json.loads(
+                    (root / BANK_ROOTS[recovery_bank] / f"{slot}.json").read_text()
+                )
+                self.assertEqual(payload["job_id"], "job-repair")
+                self.assertEqual(payload["attempt_id"], assignment["attempt_id"])
+                self.assertEqual(payload["data"], original_data[slot])
+                self.assertEqual(payload["reservation"]["claim_id"], assignment["claim_id"])
+
 
 if __name__ == "__main__":
     unittest.main()
