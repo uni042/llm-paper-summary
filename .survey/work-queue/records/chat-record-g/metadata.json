@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-c66591cb8cc3d72be4a20c91",
   "job_id": "job-research-02e232341d4ef088",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c66591cb8cc3d72be4a20c91",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.14376",
+    "arxiv_id": "2608.14376",
+    "doi": "10.48550/arXiv.2608.14376",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.OS","cross_list":["cs.PF"]},
+    "title": "CoRun: Padding is Simple and Efficient for Deterministic LLM Inference",
+    "summary": "CoRunは、同じ乱数種と入力を与えても、動的バッチに同居する別要求によってGPUカーネルの形状、タイル分割、縮約順序が変わり、浮動小数点の丸め差から生成結果が変化する問題を扱う。すべての演算をバッチ不変カーネルへ置き換える既存方式は再現性を得る代わりに高速な形状依存最適化を失う。CoRunは、多くの通常カーネルが固定形状の中ではバッチ位置に依存しない点を利用し、プリフィルは要求ごとに単独実行、デコードとサンプリングは最大同時数までダミー要求で埋めて常に同じ形状で実行する。vLLM 0.25.0上で全32プロンプト×3モデルの決定性を確認し、バッチ不変方式比でスループットを15〜324%改善、平均TTFTを51.8%、TPOTを48.6%削減する。",
+    "list_summary": "動的バッチによるカーネル形状変化を、単独プリフィルと固定形状のパディング付きデコードで封じ、全カーネルを低速なバッチ不変実装へ置換せず決定論的推論を実現する。",
+    "authors": ["Shiju Zhao","Jiacheng Yang","Qihang Chen","Junhao Hu","Jiaqi Zheng","Guihai Chen","Xusheng Chen"],
+    "authors_affiliations": "Nanjing University、Tencent Hunyuan Team、Peking University。",
+    "published": "2026-08-14",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "deterministic LLM inference runtime and serving scheduling",
+    "topics": ["決定論的LLM推論","固定形状デコード","パディング","CUDA Graph","vLLM"],
+    "importance": "決定性をカーネル全面改修ではなくスケジューラが保証する実行形状の不変性へ変換し、既存の高速カーネル資産をほぼそのまま利用できる点が重要。",
+    "hardware_evaluation": "GPU実機上のvLLM評価。Qwen3-235B-A22B、DeepSeek-V3、Hy3を用い、BurstGPT、Blazedit、合成ワークロードで測定。",
+    "source": "https://arxiv.org/abs/2608.14376",
+    "sources": ["https://arxiv.org/abs/2608.14376","https://arxiv.org/html/2608.14376"],
+    "code": null,
+    "implementation": "vLLM 0.25.0へスケジューラ層として実装。プリフィル単独実行、最大同時数256の固定形状デコード、固定形状サンプリング、CUDA Graph、決定論的集合通信を組み合わせる。一次資料で著者公式コードURLは確認できない。",
+    "last_checked": "2026-09-14",
+    "storage_targets": [],
+    "bottlenecks": ["動的バッチ形状による縮約順序変化","バッチ不変カーネルの低い性能","プリフィルとデコード混在による形状変化","固定最大同時数でのパディング費用"],
+    "hardware_details": "大規模GPUサービング環境。Qwen3-235B-A22B、DeepSeek-V3、Hy3をvLLM 0.25.0で実行し、デコード最大同時数256のCUDA Graphを利用。",
+    "quality_effect": "同一ハードウェア、同一ソフトウェア、同一テンソル並列度、同一乱数条件では同居要求に依存しない同一トークン列とサンプル済みトークンのlogprobを狙う。異なるGPU世代やカーネル版をまたぐビット完全一致は保証範囲外。",
+    "evidence_locations": ["arXiv v1 Method","arXiv v1 Evaluation","arXiv v1 Limitations","arXiv v1 References"],
+    "references": [
+      {"canonical_id":"arXiv:2601.17768","arxiv_id":"2601.17768"},
+      {"canonical_id":"arXiv:2605.30218","arxiv_id":"2605.30218"},
+      {"canonical_id":"arXiv:2412.19437","arxiv_id":"2412.19437"},
+      {"canonical_id":"arXiv:2606.19348","arxiv_id":"2606.19348"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML版参考文献節",
+    "references_total": 34
+  },
+  "reservation": {"claim_id":"claim-c66591cb8cc3d72be4a20c91","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
