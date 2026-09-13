@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-a20d167321270b2fec80b497",
   "job_id": "job-research-df0f9fdedbcbe3ac",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a20d167321270b2fec80b497",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2604.13327",
+    "arxiv_id": "2604.13327",
+    "doi": "10.48550/arXiv.2604.13327",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.DC","cross_list":["cs.LG","cs.PL"]},
+    "title": "Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel",
+    "summary": "Event Tensorは、複数演算子を一つの常駐メガカーネルへ融合するとカーネル起動待ちと演算子境界の大域同期を減らせる一方、連続バッチの可変形状やMoEの実行時ルーティングを静的タスクグラフで表しにくい問題を扱う。タイル単位のタスク完了イベントをデータテンソルと同じ多次元・記号形状の『イベントテンソル』としてコンパイラ中間表現へ昇格し、実行時データで通知先や起動タスク数を決められるようにする。Event Tensor Compiler（ETC）はこれを静的SM割当またはGPU上の動的タスクキューへ変換し、単一の常駐カーネルへ融合する。8×B200で通信・計算融合を最大1.40倍、MoE層を最大1.23倍高速化し、Qwen3低バッチ推論でvLLM比最大1.48倍、ウォームアップを123秒から35秒へ短縮する。",
+    "list_summary": "タイル依存関係を記号形状のイベントテンソルとして表し、可変形状とMoEのデータ依存分岐を再コンパイルせず静的・動的メガカーネルへ変換するコンパイラ抽象。",
+    "authors": ["Hongyi Jin","Bohan Hou","Guanjie Wang","Ruihang Lai","Jinqi Chen","Zihao Ye","Yaxing Cai","Yixin Dong","Xinhao Cheng","Zhihao Zhang","Yilong Zhao","Yingyi Huang","Lijie Yang","Jinchen Jiang","Gabriele Oliaro","Jianan Ji","Xupeng Miao","Vinod Grover","Todd C. Mowry","Zhihao Jia","Tianqi Chen"],
+    "authors_affiliations": "Carnegie Mellon University、Shanghai Jiao Tong University、NVIDIA、University of California Berkeley、Princeton University、Tsinghua University、Peking University。",
+    "published": "2026-04-14",
+    "publication": "MLSys 2026",
+    "publication_type": "Conference paper",
+    "publication_status": "Published / accepted at MLSys 2026",
+    "lineage": "dynamic megakernel compilation and GPU task scheduling",
+    "topics": ["メガカーネル","動的形状","イベント駆動GPUスケジューリング","MoE","計算通信重畳","AOTコンパイル"],
+    "importance": "メガカーネルの細粒度同期をコンパイラの第一級テンソル抽象として扱い、形状依存とデータ依存の両方を同じ表現でAOT処理できる点が重要。",
+    "hardware_evaluation": "8×NVIDIA B200をNVLink接続した実機。Ubuntu 24.04、PyTorch 2.8.0、CUDA 13.0、driver 580.82.07。",
+    "source": "https://arxiv.org/abs/2604.13327",
+    "sources": ["https://arxiv.org/abs/2604.13327","https://arxiv.org/html/2604.13327"],
+    "code": null,
+    "implementation": "Apache TVM上の一連のコンパイラパスとしてETCを実装。論文は主要オープンソースシステムへ統合済みと述べるが、arXiv一次資料のコード欄では著者公式リポジトリURLを特定できない。",
+    "last_checked": "2026-09-14",
+    "storage_targets": [],
+    "bottlenecks": ["カーネル起動遅延","演算子境界の大域同期","可変形状ごとの再コンパイル・CUDA Graph捕捉","MoEのデータ依存タスク関係","動的スケジューラの実行時費用"],
+    "hardware_details": "8 NVIDIA B200 GPUs connected via NVLink; Ubuntu 24.04; PyTorch 2.8.0; CUDA 13.0; NVIDIA driver 580.82.07。",
+    "quality_effect": "演算グラフのスケジューリングと融合を変える性能最適化で、モデルの重みや生成意味論を近似化しない。浮動小数点演算順序の変更によるビット単位再現性は本論文の主目的ではない。",
+    "evidence_locations": ["arXiv v2 §2 Event Tensor Abstraction","§3 Event Tensor Compilation","§4 Evaluation","References"],
+    "references": [
+      {"canonical_id":"arXiv:2506.04667","arxiv_id":"2506.04667"},
+      {"canonical_id":"arXiv:1701.06538","arxiv_id":"1701.06538"},
+      {"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053"},
+      {"canonical_id":"arXiv:2501.01005","arxiv_id":"2501.01005"},
+      {"canonical_id":"arXiv:2504.19442","arxiv_id":"2504.19442"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v2 HTML版参考文献節",
+    "references_total": 44
+  },
+  "reservation": {"claim_id":"claim-a20d167321270b2fec80b497","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
