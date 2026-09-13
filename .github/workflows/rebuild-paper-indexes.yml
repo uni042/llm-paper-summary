@@ -50,24 +50,22 @@ jobs:
             find papers -mindepth 3 -maxdepth 3 -name README.md -print0 | xargs -0 -r git add --
           }
 
-          stage_indexes
-          if git diff --cached --quiet; then
-            echo 'No index changes to commit.'
-            exit 0
-          fi
-          git commit -m 'docs: rebuild paper indexes'
-          if git push origin HEAD:main; then
-            exit 0
-          fi
+          for publish_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python .survey/scripts/survey.py --root .survey build
+            stage_indexes
+            if git diff --cached --quiet; then
+              echo 'Latest main already contains equivalent indexes.'
+              exit 0
+            fi
+            git commit -m 'docs: rebuild paper indexes'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Index push race on attempt ${publish_attempt}; recomputing indexes from latest main."
+            sleep $((publish_attempt * 2))
+          done
 
-          echo 'main advanced during rebuild; recomputing once from latest HEAD.'
-          git fetch origin main
-          git reset --hard origin/main
-          python .survey/scripts/survey.py --root .survey build
-          stage_indexes
-          if git diff --cached --quiet; then
-            echo 'Latest main already contains equivalent indexes.'
-            exit 0
-          fi
-          git commit -m 'docs: rebuild paper indexes'
-          git push origin HEAD:main
+          echo 'Failed to publish rebuilt indexes after 5 recomputations.' >&2
+          exit 1
