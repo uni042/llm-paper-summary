@@ -49,7 +49,7 @@
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古claimの経過時間 | **279 min** |
+| 最古claimの経過時間 | **280 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
