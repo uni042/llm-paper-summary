@@ -37,12 +37,12 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **174** |
-| 処理中（Active claims） | **40** |
-| 今すぐ着手可能（Claimable） | **134** |
-| :30 通常worker Active claims | **26** |
+| 処理中（Active claims） | **36** |
+| 今すぐ着手可能（Claimable） | **138** |
+| :30 通常worker Active claims | **27** |
 | :00 補助worker Active claims | **6** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 16:26 JST** |
+| :30 通常worker 直近claim | **09-13 16:32 JST** |
 | :00 補助worker 直近claim | **09-13 16:26 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **2** |
@@ -95,11 +95,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
 - P87 `arXiv:2605.26444` — MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies
 - P87 `arXiv:2503.18292` — Jenga: Effective Memory Management for Serving LLM with Heterogeneity
 - P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
-- P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
 
 ## 参考情報
 
