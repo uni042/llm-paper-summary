@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "job_id": "job-2fc4618f0ce91022",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.11133",
+      "title": "Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.11133",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.11133-phase-decoupled-power-control-disaggregated-serving.md",
+      "priority": 91,
+      "reason": "prefill/decode分離環境で両laneを同じ電力設定にする非効率を扱い、モデル・量子化・engine・hardwareごとに校正したSM clockとpower capを別々に制御する。8×B200上のQwen3 MoEでvendor Max-Qより高いtokens/Jと低い遅延増を両立し、3日間の継続運転でも電力削減を示しており、電力上限が実配備制約になるserving設計として新規性が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.02043",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02043-load-aware-prefill-deflection.md",
+      "priority": 89,
+      "reason": "prefill poolが詰まる一方でdecode GPUに計算余力がある状況を検出し、decode中要求のTBT SLOを守れる範囲でchunked prefillをdecode側へdeflectする。deflect時はKVのnode間転送そのものを消せる点が特徴で、vLLM/A100のproduction-style traceでP95 TTFTを最大81%、SLO達成率を最大79%改善している。"
+    },
+    {
+      "canonical_id": "arXiv:2606.08635",
+      "title": "SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.08635",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.08635-spectrumkv-mixed-precision-kv-transfer.md",
+      "priority": 87,
+      "reason": "PD分離でKVがnetwork payloadになる問題をtoken選択の送る/送らない二値問題ではなく、FP16/INT8/INT4のtoken別精度割当として扱う。モデルごとのINT4耐性をdeployment-time probeで判定し、安全な2-tier/3-tierへ切り替える設計で、同一転送予算で品質を大幅に改善しつつ転送pathのTTFTを50〜62%削減する。"
+    },
+    {
+      "canonical_id": "arXiv:2603.13358",
+      "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.13358",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-multiturn-disaggregation.md",
+      "priority": 85,
+      "reason": "multi-turnではTurn 2以降のappend-prefillがfull prefillよりdecode干渉を起こしにくい点を利用し、cached KVを持つdecode node上で局所処理するかprefill側へ送るかをSLOに応じて動的選択する。反復KV転送を減らしTurn 2+ TTFTを約68%短縮しており、会話・agent workload向けPD分離の重要な拡張。"
+    },
+    {
+      "canonical_id": "arXiv:2602.12029",
+      "title": "PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving",
+      "source_url": "https://arxiv.org/abs/2602.12029",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.12029-prefillshare-multi-llm-shared-prefill.md",
+      "priority": 83,
+      "reason": "複数のtask-specific LLMが同じcontextを繰り返しprefillするmulti-agent workloadに対し、prefill moduleを共有・固定してdecode側のみtask別に調整し、異種モデル間でprefill計算とKVを共有する。vLLMベースの分離servingでp95 latency 4.5倍低減、throughput 3.9倍向上を報告し、multi-model servingの重複除去という別軸を持つ。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:00+09:00",
+    "round": "specialist-disaggregated-power-network-2",
+    "axis": "分離サービング・電力制御・KV転送・multi-turn routing",
+    "query_summary": "前ラウンドのnext-axis hintに従い、prefill/decode分離で新たに生じる電力・KV network payload・prefill偏在・multi-turn append-prefill・multi-model共有prefillを独立に探索し、最新HEADでidentity/queue/jobsおよびLibrary pendingを再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "MoE expert locality・expert prefetch・edge storage/cacheabilityへ軸を移す",
+    "empty_round_reason": null
+  }
+}
