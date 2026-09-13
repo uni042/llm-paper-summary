@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "request_id": "claim-20260913T182600Z-scheduled-chat-discovery-routing-05",
+  "worker_id": "scheduled-chat-discovery-routing",
+  "worker_kind": "scheduled_chat",
+  "requested_at": "2026-09-13T18:26:00Z",
+  "max_jobs": 1,
+  "job_types": ["research"],
+  "checkpointed_jobs": [
+    {"job_id":"job-research-57f4550e61af7e09","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T030500JST-shannon-repair-attempt-7151144f39f8050e7956f5bb.json"},
+    {"job_id":"job-research-234066475107816a","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T031100JST-hypic-attempt-0ab8db1042909089c8895e32.json"},
+    {"job_id":"job-research-23e9c491b745b825","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T031800JST-edgeflow-attempt-352a9d5f51fbc8dcae0fa34d.json"},
+    {"job_id":"job-research-eb3b75f01826c8e7","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T032500JST-nanospec-attempt-8b6503a642b7e61be9c0c3f3.json"}
+  ]
+}
