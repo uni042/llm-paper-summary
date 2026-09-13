@@ -2,6 +2,7 @@ name: survey-maintenance
 
 on:
   push:
+    branches: [main]
     paths:
       - '.survey/work-queue/maintenance-cycle.json'
   workflow_dispatch:
