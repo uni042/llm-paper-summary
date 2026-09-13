@@ -4,10 +4,13 @@
   "slot": "evaluation",
   "attempt_id": "attempt-df9034a2c017ba052a92af6b",
   "job_id": "job-research-990eca6ba50d5285",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-df9034a2c017ba052a92af6b",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "NVIDIA Jetson Orinの16GB・32GB・64GB構成と、利用可能GPUメモリを制限したRTX 4090を評価に用いる。Jetsonでは統合メモリに収まらない専門家重みをSSDへ、RTX 4090では低頻度専門家をCPUメモリへ退避する。",
+    "software": "llama.cppを基盤にS2-MoEを実装し、専門家単位のオフロード、自己投機的復号、再利用考慮ゲーティング、共有KVキャッシュ管理を統合する。公開コードは著者のS2-MoEリポジトリで提供されている。",
+    "methodology": "DeepSeek-V2-Lite-Chat、OLMoE-1B-7B、Qwen3-30B-A3B、GPT-OSS-120Bを用い、翻訳、検索生成、要約、質問応答、数学、HumanEvalなど複数課題で速度を測定する。ドラフト長は8で、固定幅の比較条件では幅2、S2-MoEでは入出力費用に応じて幅を動的に決める。比較対象は通常の自己回帰復号、専門家疎性型の自己投機、層疎性型の自己投機、EAGLE-3、Cascadeである。品質面ではGSM8K、HumanEval、ARC、AIME、HMMT、GPQA、LongBench、WikiText-2などを使い、課題精度、長文性能、分布差、次トークン一致率、パープレキシティを確認する。",
+    "scope": "実機エッジ環境と単体GPU環境でのエンドツーエンド推論評価である。4種類のMoEモデルと複数タスクを含む一方、評価機器はJetson Orin系列とRTX 4090に限定され、SSDやCPUメモリの性能特性が異なる他の端末への一般化は直接測定していない。電力・エネルギー効率も主要指標としては報告していない。",
+    "models": ["DeepSeek-V2-Lite-Chat", "OLMoE-1B-7B", "Qwen3-30B-A3B", "GPT-OSS-120B"],
+    "baselines": ["自己回帰復号", "専門家疎性型自己投機", "層疎性型自己投機", "EAGLE-3", "Cascade"]
+  },
+  "reservation": {"claim_id":"claim-df9034a2c017ba052a92af6b","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
