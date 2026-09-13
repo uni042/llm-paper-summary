@@ -99,7 +99,13 @@ jobs:
           text = queue.read_text(encoding='utf-8')
           anchor = 'Markdown生成時にこれらのメタデータを捨てず、論文frontmatterへ引き継ぐ。\n'
           addition = '''\nさらに一次論文のreference sectionを確認し、正規化した`references`、`references_checked_at`、`references_source`、`references_total`を`metadata.json`へ保存する。arXivのversion違いは同一IDへ正規化し、DOI / arXiv / OpenReviewの複数IDが同じ参考文献を指す場合は1要素へまとめる。本文中の関連言及はreferenceとして扱わない。reference sectionを確認済みで識別可能なIDが0件の場合も`references: []`を明示する。\n'''
-          if 'さらに一次論文のreference sectionを確認し' not in text:
+          queue_has_reference_contract = (
+              'references_checked_at' in text
+              and 'references_source' in text
+              and 'references_total' in text
+              and '`metadata.json`' in text
+          )
+          if not queue_has_reference_contract:
               if anchor not in text:
                   raise SystemExit('queue-v10 metadata anchor not found')
               text = text.replace(anchor, anchor + addition, 1)
