@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dfcf576a370956354a7c41fb",
-  "job_id": "job-research-990a57145fc3b85b",
-  "data": {
-    "hardware": "端末はNVIDIA Jetson AGX、クラウドはNVIDIA A100 40GB。Qwen3-32BはA100 2枚、Llama3.1-70BはA100 4枚で動かす。端末とクラウドの間は高遅延かつ帯域制約のあるWAN環境として評価する。",
-    "software": "訓練不要の端末・クラウド協調投機的復号試作。ドラフト長既定値4。端末・クラウド双方にKVロールバック管理とゼロコピー通信経路を実装する。",
-    "methodology": "Qwen3-0.6Bを端末ドラフト、Qwen3-32Bをクラウド検証器とする組と、Llama3.2-1B / Llama3.1-70Bの組を評価する。GSM8KとHumanEvalでクラウド単独自己回帰、従来の同期投機的復号、最初の3層をJetsonへ置く分割推論、PicoSpecを比較し、tokens/s、TTFT、TPOT、平均受理長、ドラフト時間、検証時間を測る。アブレーションでは非同期ドラフト、高速検証、分離棄却サンプリングを個別に外し、さらにドラフト長3〜6を掃引する。",
-    "datasets": ["GSM8K", "HumanEval"],
-    "models": ["Qwen3-0.6B", "Qwen3-32B", "Llama3.2-1B", "Llama3.1-70B"],
-    "baselines": ["cloud autoregressive decoding", "vanilla collaborative speculative decoding", "split inference"],
-    "metrics": ["throughput tokens/s", "speedup", "TTFT", "TPOT", "average accepted length", "verification latency", "draft latency"],
-    "scope": "評価は単一Jetson AGXとA100クラウド、二つのモデル組、二ベンチマークに限られる。WANの具体的RTT・帯域分布の広範な掃引や複数同時利用者の公平性・スループット、端末の電力・熱制約は主結果に含まれない。Top-K疎分布は通信量を削減するが、異なるサンプリング温度や分布形状で必要なKの感度も限定的である。"
-  },
-  "reservation": {"claim_id": "claim-dfcf576a370956354a7c41fb", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-274a2a6a90644c806341981c",
+  "job_id": "job-research-b76cb796c54f83bb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-274a2a6a90644c806341981c",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

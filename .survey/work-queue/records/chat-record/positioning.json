@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-dfcf576a370956354a7c41fb",
-  "job_id": "job-research-990a57145fc3b85b",
-  "data": {
-    "limitations": "評価はJetson AGX一台とA100クラウド、QwenとLlamaの二つのモデル組、GSM8KとHumanEvalに限定される。高遅延・帯域制約WANを対象にするが、公開本文の主要表では多数のRTT・帯域条件やpacket lossを系統的に掃引せず、複数同時利用者がクラウドGPUを共有した場合の待ち行列、公平性、batchingとの相互作用も未評価である。高速化はドラフト・ターゲットの受理率へ強く依存し、低受理率では先行計算のrollbackが増えて利得が小さくなる。Top-K疎転送のKは例示・既定条件に依存し、異なる温度、top-p設定、分布形状で必要なKと通信・精度の関係を広く検証していない。端末の電力消費、熱制約、通信エネルギーも報告されない。",
-    "differences": "標準の投機的復号は同一ホストまたは低遅延接続を想定し、draft→verifyをround単位で同期する。Collaborative Speculative Inferenceなど端末・クラウド協調方式は小型モデルと大型モデルを分担するが、PicoSpecは特にWAN待ちを臨界経路から外す非同期pipelineを主設計にする。分割推論はモデル層自体を端末とクラウドへ分け、中間activationを通信するのに対し、PicoSpecは各側で独立したSLM/LLMを保持しtoken候補と疎な確率情報だけを交換する。Fast speculative edge-cloud方式やSwiftSpec等の関連手法に対しても、モデルearly-exitや追加訓練ではなく、Parallel Drafting、Fast Verification、Separate Rejection Sampling、speculative KV rollbackを統合したtraining-free runtimeとして差別化される。",
-    "implementation_status": "論文は端末側Parallel Drafter、Rejection Sampler、Speculative KV Cache Manager、Zero-Copy Communicatorと、クラウド側Verifier、Request Handler、KV Cache Manager、Zero-Copy Communicatorを備えた実機prototypeをJetson AGX/A100上で評価している。Qwen3-0.6B/32BとLlama3.2-1B/Llama3.1-70Bの既存モデル組へ追加学習なしで適用している。一方、arXiv v2の本文・landing pageから2026-09-14時点で著者公式の公開repository URLは確認できず、第三者が同じruntimeを直接取得できる公開実装状態とは扱わない。",
-    "research_positioning": "PicoSpecは投機的復号の計算削減系統と、端末・クラウド協調推論の通信最適化系統を接続する研究である。重要なのは受理率だけを上げるのではなく、draft、WAN、verifyを同時実行できるscheduleへ変え、reject時だけ発生する大容量確率転送も疎化して、network latencyを投機的復号のfirst-class bottleneckとして扱う点にある。LLM inference systemの観点では、compute/communication overlap、state rollback、adaptive chunk sizingという一般的なpipeline技法をtoken generationへ適用しており、今後はmulti-request batching、heterogeneous edge devices、cloud schedulerと組み合わせたresource-aware speculative servingへ拡張できる。"
-  },
+  "attempt_id": "attempt-274a2a6a90644c806341981c",
+  "job_id": "job-research-b76cb796c54f83bb",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-dfcf576a370956354a7c41fb",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "claim_id": "claim-274a2a6a90644c806341981c",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,23 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-dfcf576a370956354a7c41fb",
-  "job_id": "job-research-990a57145fc3b85b",
-  "data": {
-    "overview": "PicoSpecはすべてのモデル組・データセットでクラウド単独自己回帰を上回り、Qwen3-0.6B/32BではGSM8Kで13.89から20.19 tokens/sへ1.45倍、HumanEvalで14.18から16.04 tokens/sへ1.13倍、Llama3.2-1B/70BではGSM8Kで6.87から17.22 tokens/sへ2.51倍、HumanEvalで6.86から19.88 tokens/sへ2.90倍にする。従来の同期投機的復号はQwen HumanEvalで6.24 tokens/s、自己回帰比0.44倍まで悪化し、WAN停止待ちが投機利得を消す。非同期ドラフトを外すとLlama GSM8Kで17.22から12.51 tokens/sへ低下し、分離棄却を外すと検証時間が166.46から283.79 msへ増える。",
-    "key_results": [
-      {"metric": "最大スループット高速化", "value": "2.90x、6.86→19.88 tokens/s", "baseline": "cloud autoregressive", "condition": "Llama3.2-1B draft / Llama3.1-70B target、HumanEval", "interpretation": "大型70B検証器の遅延とWAN往復を端末ドラフトで重ねられるため、クラウド検証が重いほど非同期化の隠蔽余地が大きい。"},
-      {"metric": "Llama GSM8K throughput", "value": "2.51x、6.87→17.22 tokens/s", "baseline": "cloud autoregressive", "condition": "Llama 1B/70B、GSM8K", "interpretation": "平均受理長4.29と高い整合性によりパイプライン全採用状態が多く、RTTを有効に隠せる。"},
-      {"metric": "Qwen GSM8K throughput", "value": "1.45x、13.89→20.19 tokens/s", "baseline": "cloud autoregressive", "condition": "Qwen3 0.6B/32B、GSM8K", "interpretation": "32B検証器は70Bより速く隠せる遠隔遅延が小さいが、端末ドラフトとの並列化で45.3%改善する。"},
-      {"metric": "同期投機的復号の悪化", "value": "0.44x、6.24 vs 14.18 tokens/s", "baseline": "cloud autoregressive", "condition": "Qwen pair、HumanEval", "interpretation": "低受理率とWAN停止待ちが重なると投機処理の追加費用が利得を上回り、単純な分散化が逆効果になる。"},
-      {"metric": "非同期ドラフトの寄与", "value": "17.22→12.51 tokens/s", "baseline": "PicoSpec full", "condition": "Llama GSM8K、w/o Parallel Drafting", "interpretation": "端末をRTT＋検証時間の間遊休させないことが最大の性能要因である。"},
-      {"metric": "分離棄却サンプリングの通信効果", "value": "T_verify 166.46→283.79 ms when removed", "baseline": "PicoSpec full", "condition": "Llama GSM8K、w/o Split-rej", "interpretation": "完全語彙確率分布の転送・直列化がWAN帯域を圧迫するため、疎な拒否時転送が必要になる。"},
-      {"metric": "確率分布ペイロード削減", "value": "約500 KB→100 bytes未満", "baseline": "full vocabulary distribution", "condition": "V=128,256、Top-K=10、rejected token", "interpretation": "長い裾を持つ語彙分布の上位成分だけを送り、下り通信量を3桁以上削減する。"},
-      {"metric": "ドラフト長感度", "value": "n=4で20.19 tokens/sが最大、n=6で17.12 tokens/s", "baseline": "draft lengths 3-6", "condition": "Qwen GSM8K", "interpretation": "長い候補は受理長を伸ばす一方で端末ドラフト時間を増やすため、通信隠蔽とローカル計算の均衡点がある。"}
-    ],
-    "negative_results": "同期型投機的復号は高遅延WANで自己回帰より遅くなる条件があり、Qwen HumanEvalでは0.44倍、Qwen GSM8Kでは0.58倍に低下する。PicoSpec自体もドラフト・ターゲット整合性へ依存し、受理率が低いと先行生成を破棄する頻度が増えて同期方式へ近付く。ドラフト長を増やし過ぎるとローカル計算が支配的になり、Qwen GSM8Kではn=4の20.19 tokens/sからn=6の17.12 tokens/sへ低下する。HumanEvalのLlamaではTTFTが自己回帰より必ずしも改善するわけではなく、主利得は長い生成のTPOT・総スループットに現れる。",
-    "interpretation": "端末・クラウド協調ではクラウド計算を速くするだけでなく、WAN待ちを臨界経路から外すことが重要である。PicoSpecは高い受理率時に次ドラフトの有効確率が高いことを利用し、遠隔検証が重いほど端末計算との重畳余地を増やす。一方で誤投機はパイプラインをフラッシュするため、ドラフトモデル品質と端末速度の双方が上限を決める。通信圧縮は非同期化とは独立に、巨大な語彙分布転送で得られた重畳利得が失われることを防ぐ。",
-    "quality_impact": "モデルを再学習せず、標準のターゲットモデル分布に対する棄却補正を維持するため、速度と出力品質を意図的に交換しない。疎転送後も端末側で補正分布を再構成してサンプルする。"
-  },
-  "reservation": {"claim_id": "claim-dfcf576a370956354a7c41fb", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-274a2a6a90644c806341981c",
+  "job_id": "job-research-b76cb796c54f83bb",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-274a2a6a90644c806341981c",
+    "worker_id": "scheduled-chat-paper-20260914T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
