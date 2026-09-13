@@ -1,1 +1,16 @@
-{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-c1efeb3236ffe37634e7ce3e","job_id":"job-research-3a13b608454c59c4","data":{"hardware":"NVIDIA A100-80GB GPU。単一GPU上でローカルサービング容量を比較する。","software":"vLLM V1とLMCacheを基盤とし、位置非依存キャッシュの比較・基盤方式としてCacheBlendを利用する。TokenDanceは約3,000行のPythonと500行のCUDA/C++を追加する。","models":["Qwen2.5-7B-Instruct","Qwen2.5-14B-Instruct"],"datasets":["GenerativeAgents multi-agent traces","AgentSociety multi-agent traces"],"baselines":["vLLM + prefix caching","CacheBlend Ordinary Path","CacheBlend per-request PIC recovery"],"methodology":"GenerativeAgentsとAgentSocietyの同期ラウンドトレースを再生し、エージェント数を1〜10、投入率を1〜16 QPSで走査する。ラウンド遅延1,500msのサービス水準目標（SLO）を満たす最大エージェント数、KVキャッシュ占有量、復元遅延を主要指標とする。計算要因はGenerativeAgentsの1ラウンドを3、5、10、15、20エージェントおよび1〜16 QPSで再生し、要求単位の位置非依存再利用に対する集合的再利用の速度向上を測る。保存要因は32トークンブロック単位でマスターとの差分量を計測し、密復元と融合差分復元を比較する。品質は温度0の同一入力でvLLMとの応答分岐が初めて起きるラウンドを8シナリオで比較する。","scope":"実機GPU評価でありシミュレーション性能モデルではない。対象は全収集型の同期ラウンドを持つ社会シミュレーション系ワークロードと2種類のQwen2.5モデルであり、異なる通信パターンや大規模複数GPU構成への一般化は直接測定していない。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c7e4961a4f460a3e503937ae",
+  "job_id": "job-research-d01c0f0ba3d381e1",
+  "data": {
+    "hardware": "主評価は8基のNVIDIA A800-SXM4-80GBを200 GB/s NVLinkで接続したサーバで実施し、CPUはIntel Xeon Platinum 8470を2基（各52コア）、ホストメモリは1TB。動機付けの粒度実験はA100-SXM4-40GB。Llama3-8BはTP=1、Qwen2.5-14BはTP=2、Llama3-70BはTP=4、Qwen3-30B-A3BはTP=2で評価する。",
+    "software": "FlowPrefillはvLLM 0.11.2上に実装。各実行タスクはThreadPoolExecutorで管理され、専用thread・CUDA stream・vLLM runnerを持つ。公式GitHubはPython 3.12環境、CUDA対応依存関係、QwenTrace生成、offline profiling、single-node起動手順を公開する。PD-colocated評価ではGILを無効化したPython 3.14tも使用する。",
+    "models": ["Llama3-8B", "Qwen2.5-14B", "Llama3-70B", "Qwen3-30B-A3B"],
+    "datasets": ["QwenTrace", "ShareGPT"],
+    "baselines": ["DistServe FCFS", "DistServe-CP2K + EDF", "DistServe-CP8K + EDF", "vLLM 0.11.2 chunked prefill"],
+    "methodology": "QwenTraceのText、Image、Search、Fileの4種類について実際のtimestamped arrivalとprompt-length distributionを用い、prompt内容自体は長さに合うrandom tokenへ置換する。タスク別TTFT SLOはLlama3-8Bで0.25/0.5/4.0/6.0秒、Qwen2.5-14Bで0.4/0.8/6.5/9.0秒、Llama3-70Bで1.0/2.0/15/18秒を設定する。主要指標は90%のSLO attainmentを保てる最大request rate、すなわちgoodputで、request-rate scaleとSLO scaleを変えて比較する。DistServeは1P1D構成とし、FCFSだけでなく2048または8192 tokenのchunked prefillへEDFを追加した強い比較も含める。除去実験ではS-EDF、naive EDF、deadline-aware EDFを比較し、batch token budgetを変更する。runtime評価ではpreemption signalからACKまでのblocking time、TTFT予測誤差、event-driven schedulingの判断回数を測る。互換性としてsingle-SLO ShareGPT 500要求、chunked prefill併用、PD-colocation、MoE Qwen3-30B-A3Bも評価する。",
+    "scope": "性能は実機測定で、主題は異種TTFT SLOを持つオンライン事前充填のgoodputである。主結果はPD-disaggregated環境に集中するが、PD-colocatedとMoEにも追加評価を行う。品質やモデル精度は変更しないため品質ベンチマークは対象外。QwenTraceは内容を保持せずprompt長とarrivalを再現するため、意味的入力によるカーネル差は評価していない。またProxyの複数instance間load balancingは単純round-robinで、instance-level placement最適化は範囲外である。"
+  }
+}
