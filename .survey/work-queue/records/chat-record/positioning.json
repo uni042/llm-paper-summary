@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-6ff7fcf9a77bead8e21921d8",
   "job_id": "job-research-de92658797430cf6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6ff7fcf9a77bead8e21921d8",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価は8基A100の単一NVLinkクラスタとQwen2.5-14B/32Bに限られ、複数ノード、H100/H200、低帯域ネットワーク、異種GPUでは実測していない。KVキャッシュの要求間移送が小さいことを前提にするため、相互接続が遅い環境では混合モードの移動自由度がそのまま利得にならない。P-heavy/D-heavy比とチャンクサイズは負荷やSLOが大きく変わる時にオフライン探索して再構成する方式で、非常に短時間で変動する負荷へ瞬時に最適化するものではない。デコード要求の『現在出力が長いほど余裕が大きい』という選択規則は軽量だが、将来残り長を直接予測しているわけではない。論文時点では実装を近く公開予定としており、一次資料には公開URLがない。",
+    "differences": "Sarathi-ServeなどのPD aggregationはchunked prefillでデコード停止を緩和するが、すべてのインスタンスが同じ干渉特性を持つ。DistServe/SplitwiseなどのPD disaggregationはprefill/decodeを専用インスタンスへ固定し、フェーズ干渉を消す一方、decode専用GPUがprefill処理能力へ寄与できない。TaiChiはバッチ内では両フェーズを混在させる集約型の性質を保ち、要求単位ではprefillとdecodeを別インスタンスへ移せる分離型の性質を併用する。さらにSLO余裕のある要求を意図的に遅くする遅延移譲を中心に据え、インスタンス比と二つのchunk sizeで両端方式を同じ設計空間に含める。",
+    "implementation_status": "vLLM上へ実装済みで、異なるchunked prefill設定のP-heavy/D-heavy、NCCLによるmany-to-many KV転送、非同期転送、受信KVのpaged memory格納用fused CUDA演算、プロキシとインスタンス内スケジューラを備える。arXiv v1では近い将来のオープンソース化を予定していると記載され、公開リポジトリURLはまだ示されない。",
+    "research_positioning": "プリフィル・デコード分離、chunked prefill、SLO-aware scheduling、goodput最適化の交点に位置する。『aggregationかdisaggregationか』という構成選択を、TTFT/TPOT SLOに応じて連続調整する統一基盤へ置き換え、均衡SLOで要求ごとの余裕を移す。DistServe系の分離配信とSarathi-Serve系の集約配信を同一アーキテクチャ内で接続する研究として位置付けられる。",
+    "relation_to_existing_repository": "リポジトリのserving scheduling/disaggregation系ではDistServe、Splitwise、Mooncake、Sarathi-Serve、vLLMと直接関連する。分離型の独立スケールと集約型のGPU利用率を同時に利用するため、プリフィル・デコード比を固定する既存研究に対する上位の構成・要求制御として整理できる。KVキャッシュ転送を頻繁に使うため、階層KVキャッシュやネットワーク/SSDオフロードを組み合わせる場合には転送費用をTTFT余裕判定へ加える必要があり、その点が階層メモリ研究との接続点になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-6ff7fcf9a77bead8e21921d8","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
