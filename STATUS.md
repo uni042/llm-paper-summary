@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 14:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 14:58 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,11 +37,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **177** |
-| 処理中（Active claims） | **44** |
-| 今すぐ着手可能（Claimable） | **133** |
+| 処理中（Active claims） | **47** |
+| 今すぐ着手可能（Claimable） | **130** |
 | 最新通常run | **2026-09-13T13:30:00+09:00** |
 | 最新通常runのResearch完了 | **3** |
-| 最古claimの経過時間 | **133 min** |
+| 最古claimの経過時間 | **169 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -53,21 +53,21 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **73** |
-| Repo収録 | **73** |
+| Research完了 | **69** |
+| Repo収録 | **69** |
 | Audit完了 | **0** |
-| 探索評価候補 | **724** |
-| Research候補採用 | **227** |
-| 重複除外 | **317** |
-| 重複率 | **43.8%** |
-| 探索専用worker run（毎時枠） | **18** |
-| 探索専用worker round（stats観測） | **147** |
-| 通常worker run（ledger観測） | **23** |
+| 探索評価候補 | **720** |
+| Research候補採用 | **224** |
+| 重複除外 | **316** |
+| 重複率 | **43.9%** |
+| 探索専用worker run（毎時枠） | **17** |
+| 探索専用worker round（stats観測） | **146** |
+| 通常worker run（ledger観測） | **22** |
 | Fallback archive（全helper） | **10** |
 
 ### 24時間の流れ
 
-**探索評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 73 → Repo収録 73**
+**探索評価 720 → 重複除外後 404 → Research候補採用 224 → Research完了 69 → Repo収録 69**
 
 ## 直近の通常worker
 
@@ -86,11 +86,11 @@ Run: **2026-09-13T13:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
-- P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
-- P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
 - P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
 - P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
+- P86 `arXiv:2601.11590` — EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend
+- P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
+- P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 
 ## 参考情報
 
@@ -185,7 +185,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 動的投機的復号serving・agent隣接 | 5 | 3 | 1 | 60.0% | 20.0% |
 | 直近新着・hierarchical memory・serving runtime横断再確認 | 5 | 5 | 0 | 100.0% | 0.0% |
 | 2609新着・KVキャッシュ最適化/サービング | 4 | 3 | 1 | 75.0% | 25.0% |
-| 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | CPU/GPU・NPU/PIM異種実行と階層オフロード | 4 | 4 | 0 | 100.0% | 0.0% |
 | CXL・SSD・remote KV cache階層メモリ | 4 | 4 | 0 | 100.0% | 0.0% |
 | DistServe周辺のforward citation・backward reference補完 | 4 | 0 | 1 | 0.0% | 25.0% |
