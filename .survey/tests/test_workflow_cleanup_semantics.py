@@ -20,6 +20,11 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
             self.assertIn(key, template)
             self.assertIn(key.rstrip(":"), queue)
 
+    def test_citation_backfill_configures_commit_identity(self):
+        workflow = (ROOT / ".github/workflows/citation-graph-backfill.yml").read_text(encoding="utf-8")
+        self.assertIn("git config user.name 'citation-graph[bot]'", workflow)
+        self.assertIn("git config user.email 'citation-graph[bot]@users.noreply.github.com'", workflow)
+
     def test_update_helper_shares_background_writer_concurrency(self):
         workflow = (ROOT / ".github/workflows/update-helper.yml").read_text(encoding="utf-8")
         self.assertIn("group: survey-background-main", workflow)
