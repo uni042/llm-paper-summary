@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:27:09.671371+00:00",
+  "updated_at": "2026-09-13T01:29:31.390103+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T01:27:09.671371+00:00",
+      "last_recorded_at": "2026-09-13T01:29:31.390103+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 12,
+        "discovery_completed": 13,
         "blocked": 0,
-        "new_jobs": 33,
+        "new_jobs": 36,
         "new_papers": 1,
         "fallback_archived": 3
       },
@@ -16655,6 +16655,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34730597119:1",
+          "recorded_at": "2026-09-13T01:29:31.390103+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34730597119",
+            "run_attempt": "1",
+            "source_sha": "d13b99087fbd991a0d3530f983ea6d1ef93e24fe"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16756,6 +16770,14 @@
         },
         {
           "job_id": "job-9b5752caaf5ee298",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-d5c1389026b2527d",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16994,6 +17016,27 @@
           "type": "research",
           "canonical_id": "arXiv:2603.09046",
           "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation"
+        },
+        {
+          "job_id": "job-6ffea3ac8e0b44f6",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-174670c4ec67fe0a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2606.08382",
+          "title": "STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control"
+        },
+        {
+          "job_id": "job-research-73651b83b5a764d9",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23843",
+          "title": "PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression"
         }
       ],
       "new_paper_ids": [
@@ -17011,7 +17054,8 @@
         ".survey/work-queue/results/20260913T1007JST-discovery-specialist-storage-kernel-2.json",
         ".survey/work-queue/results/20260913T1019JST-discovery-specialist-new-systems-1.json",
         ".survey/work-queue/results/20260913T1023JST-discovery-specialist-runtime-2.json",
-        ".survey/work-queue/results/20260913T1026JST-discovery-specialist-edge-memory-3.json"
+        ".survey/work-queue/results/20260913T1026JST-discovery-specialist-edge-memory-3.json",
+        ".survey/work-queue/results/20260913T1028JST-discovery-specialist-kv-compression-4.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",

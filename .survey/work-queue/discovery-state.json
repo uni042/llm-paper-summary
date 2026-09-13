@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:25:56+00:00",
+  "updated_at": "2026-09-13T01:28:23+00:00",
   "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-edge-memory-3",
+  "last_round": "specialist-kv-compression-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2777,6 +2777,23 @@
       ],
       "next_axis_hint": "新規端末内候補からstorage/runtime用語を拡張しつつ、別経路として重要論文のforward citationまたはDBMS/OSのcache・prefetch・NUMA研究へ移る",
       "source_submission": "work-queue/submissions/20260913T1026JST-discovery-specialist-edge-memory-3.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-kv-compression-4",
+      "axis": "KVページ圧縮・低ランク表現・GPUカーネル",
+      "query_summary": "端末内メモリ探索からKVページ・圧縮へ軸を移し、PuzzleKV、STAR-KV、量子化KV品質回復、SPINを軽量評価した。SPINは既収録、品質回復論文はシステム寄与が相対的に弱いため候補投入を見送り、2件のみ送信する。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2604.26837"
+      ],
+      "next_axis_hint": "KV圧縮以外へ分離し、推論scheduler・batching・resource allocationの新着、または既存重要論文のforward citationを探索する",
+      "source_submission": "work-queue/submissions/20260913T1028JST-discovery-specialist-kv-compression-4.json"
     }
   ],
   "axes": {
@@ -4339,6 +4356,16 @@
       "accepted_count": 3,
       "duplicate_ratio": 0.3333333333333333,
       "next_axis_hint": "新規端末内候補からstorage/runtime用語を拡張しつつ、別経路として重要論文のforward citationまたはDBMS/OSのcache・prefetch・NUMA研究へ移る"
+    },
+    "KVページ圧縮・低ランク表現・GPUカーネル": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 3,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.25,
+      "next_axis_hint": "KV圧縮以外へ分離し、推論scheduler・batching・resource allocationの新着、または既存重要論文のforward citationを探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

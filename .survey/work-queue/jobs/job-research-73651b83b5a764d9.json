@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-73651b83b5a764d9",
+  "type": "research",
+  "parent_job_id": "job-d5c1389026b2527d",
+  "priority": 85,
+  "canonical_id": "arXiv:2608.23843",
+  "title": "PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression",
+  "source_url": "https://arxiv.org/abs/2608.23843",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md",
+  "selection_reason": "KVキャッシュを固定長ページ単位で低ランク分解し、密表現ページと因子化ページを混在させたまま注意計算を行うtraining/calibration-free方式。ページを圧縮単位にするためPagedAttention系の実行モデルとの接続が明確で、約60%容量でFull-KV性能の96%以上、量子化併用では18.7%容量で93%以上を維持すると報告しており、ページ型KV管理と圧縮の橋渡しとして有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:28:23+00:00",
+  "artifact_transport": "structured_record_v10"
+}
