@@ -16,17 +16,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: cleanup/backfill-completed-job-paper-paths-20260913
+          fetch-depth: 0
 
-      - name: Scan completed jobs with missing paper_path
+      - name: Recover completed job paper paths from durable state and git history
         run: |
           python - <<'PY'
           import json
+          import subprocess
           from pathlib import Path
 
           repo = Path('.')
           jobs_root = repo / '.survey/work-queue/jobs'
+          reusable_submission = '.survey/work-queue/submissions/chat-inbox.json'
+          reusable_result = '.survey/work-queue/results/chat-inbox.json'
 
-          def load(path):
+          def load_path(path):
               try:
                   return json.loads(path.read_text(encoding='utf-8'))
               except Exception:
@@ -51,67 +55,156 @@ jobs:
                   return None
               return Path(rel.replace(marker, '.survey/work-queue/results/', 1))
 
+          def result_paper(result):
+              if not isinstance(result, dict):
+                  return None
+              artifact = result.get('artifact')
+              if isinstance(artifact, dict):
+                  return artifact.get('paper')
+              return artifact if isinstance(artifact, str) else None
+
+          def valid_paper(paper):
+              return (
+                  isinstance(paper, str)
+                  and paper.startswith('papers/')
+                  and '..' not in Path(paper).parts
+                  and (repo / paper).is_file()
+              )
+
+          def history(path):
+              proc = subprocess.run(
+                  ['git', 'log', '--format=%H', '--', path],
+                  check=True, text=True, capture_output=True,
+              )
+              out = []
+              seen = set()
+              for sha in proc.stdout.splitlines():
+                  show = subprocess.run(
+                      ['git', 'show', f'{sha}:{path}'],
+                      text=True, capture_output=True,
+                  )
+                  if show.returncode != 0:
+                      continue
+                  try:
+                      payload = json.loads(show.stdout)
+                  except Exception:
+                      continue
+                  fingerprint = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+                  if fingerprint in seen:
+                      continue
+                  seen.add(fingerprint)
+                  out.append((sha, payload))
+              return out
+
+          submission_history = history(reusable_submission)
+          result_history = history(reusable_result)
+
           missing = []
           candidates = []
           unresolved = []
-          for path in sorted(jobs_root.glob('*.json')):
-              job = load(path)
+          for job_file in sorted(jobs_root.glob('*.json')):
+              job = load_path(job_file)
               if not isinstance(job, dict):
                   continue
               if job.get('status') != 'completed' or job.get('type') not in {'research', 'audit'}:
                   continue
               if job.get('paper_path'):
                   continue
+
               jid = job.get('job_id')
-              row = {
+              base = {
                   'job_id': jid,
                   'type': job.get('type'),
                   'artifact_submission': job.get('artifact_submission'),
               }
-              missing.append(row)
+              missing.append(dict(base))
+
+              # First use the current immutable submission/result when they still name this exact job.
               sp = submission_path(job.get('artifact_submission'))
-              if sp is None or not sp.is_file():
-                  row['reason'] = 'submission_missing_or_unsupported'
-                  unresolved.append(row)
-                  continue
-              desc = load(sp)
               rp = result_path(sp)
-              result = load(rp) if rp and rp.is_file() else None
-              if not isinstance(desc, dict) or desc.get('job_id') != jid:
-                  row['reason'] = 'submission_job_mismatch'
+              desc = load_path(sp) if sp and sp.is_file() else None
+              result = load_path(rp) if rp and rp.is_file() else None
+              paper = desc.get('paper_path') if isinstance(desc, dict) else None
+              if (
+                  isinstance(desc, dict)
+                  and desc.get('job_id') == jid
+                  and desc.get('status', 'completed') == 'completed'
+                  and valid_paper(paper)
+                  and isinstance(result, dict)
+                  and result.get('ok') is True
+                  and result.get('job_id') == jid
+                  and result_paper(result) == paper
+              ):
+                  row = dict(base)
+                  row.update({
+                      'paper_path': paper,
+                      'evidence': 'current_submission_and_result',
+                      'submission': sp.as_posix(),
+                      'result': rp.as_posix(),
+                  })
+                  candidates.append(row)
+                  continue
+
+              # Legacy reusable chat-inbox paths are mutable. Recover the exact old snapshots from Git history.
+              if job.get('artifact_submission') not in {'work-queue/submissions/chat-inbox.json', reusable_submission}:
+                  row = dict(base)
+                  row['reason'] = 'no_current_exact_success_and_not_legacy_reusable'
                   unresolved.append(row)
                   continue
-              if desc.get('status', 'completed') != 'completed':
-                  row['reason'] = 'submission_not_completed'
+
+              desc_versions = []
+              for sha, payload in submission_history:
+                  if not isinstance(payload, dict) or payload.get('job_id') != jid:
+                      continue
+                  if payload.get('status', 'completed') != 'completed':
+                      continue
+                  p = payload.get('paper_path')
+                  if valid_paper(p):
+                      desc_versions.append((sha, payload))
+
+              result_versions = []
+              for sha, payload in result_history:
+                  if not isinstance(payload, dict):
+                      continue
+                  if payload.get('ok') is not True or payload.get('job_id') != jid:
+                      continue
+                  p = result_paper(payload)
+                  if valid_paper(p):
+                      result_versions.append((sha, payload))
+
+              matches = []
+              for dsha, dpayload in desc_versions:
+                  dpaper = dpayload.get('paper_path')
+                  dattempt = dpayload.get('attempt_id')
+                  for rsha, rpayload in result_versions:
+                      if result_paper(rpayload) != dpaper:
+                          continue
+                      rattempt = rpayload.get('attempt_id')
+                      if dattempt and rattempt and dattempt != rattempt:
+                          continue
+                      matches.append({
+                          'paper_path': dpaper,
+                          'attempt_id': dattempt or rattempt,
+                          'submission_commit': dsha,
+                          'result_commit': rsha,
+                      })
+
+              distinct = {}
+              for match in matches:
+                  distinct.setdefault(match['paper_path'], match)
+              if len(distinct) == 1:
+                  match = next(iter(distinct.values()))
+                  row = dict(base)
+                  row.update(match)
+                  row['evidence'] = 'git_history_submission_and_success_result'
+                  candidates.append(row)
+              else:
+                  row = dict(base)
+                  row['reason'] = 'no_unique_historical_success_match'
+                  row['descriptor_versions'] = len(desc_versions)
+                  row['success_result_versions'] = len(result_versions)
+                  row['matched_papers'] = sorted(distinct)
                   unresolved.append(row)
-                  continue
-              paper = desc.get('paper_path')
-              if not isinstance(paper, str) or not paper.startswith('papers/') or '..' in Path(paper).parts:
-                  row['reason'] = 'invalid_submission_paper_path'
-                  unresolved.append(row)
-                  continue
-              if not (repo / paper).is_file():
-                  row['reason'] = 'paper_file_missing'
-                  row['paper_path'] = paper
-                  unresolved.append(row)
-                  continue
-              if not isinstance(result, dict) or result.get('ok') is not True or result.get('job_id') != jid:
-                  row['reason'] = 'matching_success_result_missing'
-                  row['paper_path'] = paper
-                  unresolved.append(row)
-                  continue
-              artifact = result.get('artifact')
-              result_paper = artifact.get('paper') if isinstance(artifact, dict) else artifact
-              if result_paper != paper:
-                  row['reason'] = 'result_paper_mismatch'
-                  row['paper_path'] = paper
-                  row['result_paper'] = result_paper
-                  unresolved.append(row)
-                  continue
-              row['paper_path'] = paper
-              row['submission'] = sp.as_posix()
-              row['result'] = rp.as_posix()
-              candidates.append(row)
 
           print(json.dumps({
               'missing_count': len(missing),
