@@ -120,7 +120,7 @@ class StatusDashboardTests(unittest.TestCase):
             self.assertIn("重複除外 | **8**", text)
             self.assertIn("Novel候補 | **14**", text)
             self.assertIn("Research候補採用 | **11**", text)
-            self.assertIn("探索専用worker run（stats観測） | **2**", text)
+            self.assertIn("探索専用worker run（毎時枠） | **2**", text)
             self.assertIn("探索専用worker round（stats観測） | **7**", text)
             self.assertIn("### 直近5探索専用worker run", text)
             self.assertIn("2026-09-13T10:00:00+09:00 — 4 round", text)
