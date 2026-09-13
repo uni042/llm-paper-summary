@@ -2,23 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2605.00254-20260913-0430-v10-c",
-  "job_id": "job-research-d335718873eaacf6",
+  "attempt_id": "attempt-10505b959184b0f204b5addc",
+  "job_id": "job-research-2fabaceee2c88fd9",
   "data": {
-    "hardware": ["現行世代の基準XPUはNVIDIA H100。", "NCCL通信モデル校正はDGX H100で4〜32 GPU、128B〜16GiB。", "custom ring/recursive-doubling検証はAWS p4.24xlargeの8×A100。", "設計探索は主に64 XPU（4×4×4）および256 XPU（8×8×4）クラスタ。", "将来世代はBlackwell/Rubinの公開スケーリング値を投影。"],
-    "software": ["NCCL all-reduce/all-to-all benchmark", "MoE対応へ拡張したVidur型profile-based compute model", "dual-batch overlap schedule model", "multi-head speculative decoding model", "custom ring/recursive-doubling NCCL kernels for validation"],
-    "model": ["DeepSeek-V3 671B、256 experts、top-8 routing"],
-    "datasets": ["特定の言語データセットで生成品質を測る研究ではなく、公開serving workloadに代表的な平均context length 512/4096とTPOT SLO 15/40/100msを合成してcapacity planningを評価。"],
-    "baselines": ["scale-up fat-tree", "scale-out fat-tree", "3D torus", "3D full-mesh", "450 GB/s現行scale-up帯域", "DBOなし/あり", "投機的デコードなし/あり"],
-    "correctness": "通信モデルはH100 NCCL実測に対してintra/inter-node平均相対誤差10.82%/7.97%、custom collectiveのA100実測に4.79%/3.32%。end-to-end decode推定は8×H100実測と96×H100公開SGLang traceに対して9.6%未満/7.5%未満の相対誤差で検証する。",
-    "settings": [
-      {"name":"現行64-XPU topology比較","description":"H100相当、DeepSeek-V3、context 512/4096、TPOT 15/40/100msでscale-up、scale-out、3D torus、3D full-meshを比較する。XPU当たり総network bandwidthを揃え、各topologyで最適なcollective、parallelism、batchを選ぶ。no optimizationとDBO+speculative decodingを評価する。"},
-      {"name":"link bandwidth sweet spot","description":"scale-upのper-XPU bandwidthを現行450 GB/sから50/150/300/450 GB/s等へ変え、最大throughputとnetwork costの両方からthroughput/costを計算する。network cost adjustment factorも掃引して価格モデル感度を確認する。"},
-      {"name":"cluster size比較","description":"64 XPU/EP64と256 XPU/EP256を比較する。256ではfat-treeが一段から二段へ増えるswitch/link費用と、all-to-all domain拡大の通信増加、expert/GPU数低下による小batch計算効率改善を同時に反映する。"},
-      {"name":"性能・費用Pareto探索","description":"topology、bandwidth、XPU count、parallelism、batchをすべて掃引し、各serving scenarioで(cluster cost/XPU, throughput/XPU)平面のPareto frontierを求める。傾きがthroughput/costを表す。"},
-      {"name":"将来世代投影","description":"BlackwellはH100比FP8 2.56×、memory capacity 2.33×、memory bandwidth 2.39×、link 2×。Rubinは4.49×/3.60×/6.57×/4×を仮定し、rooflineでH100 profileを短縮して10/40ms TPOTで必要帯域を推定する。"}
-    ],
-    "methodology": "直接実機が存在しないtorus/full-meshや仮想bandwidthまで含むため、通信・計算を実測で校正したモデルへ落とし込み、各topologyを同一のMoE workload/SLO/TCO条件で比較する。重要なのはcollective completion timeではなくDBO後の露出通信時間と最大SLO準拠capacityを使い、network設備費を含む単位費用当たり性能を最適化対象にする点である。",
-    "scope": "decode-onlyのbatched servingが主対象。prefill、極端に長い単一要求、動的expert imbalance、ネットワーク故障・運用性、施設不動産等の完全OpExは対象外。将来世代は性能スケーリング予測であり実機測定ではない。"
+    "hardware": "実機はInfiniBand接続の2サーバで、各サーバにNVIDIA H100 80GB SXM5×8、ConnectX-7 400Gbps NIC×8、NVLink 4.0 900GB/s双方向を搭載する。大規模評価はSimAIで各サーバA100×8、200Gbps NIC×8のSpectrum-X RoCEv2構成を模擬し、32〜1024 GPUへ拡張する。",
+    "software": "学習はPyTorch 2.10.0、NCCL 2.23.4、Megatron-LM。推論はNCCL 2.23.4とvLLM v1。比較対象としてAdapCC、DéjàVu、サービス再起動、要求rerouteを用いる。通信マイクロベンチマークはNCCL-tests 2.17.1。",
+    "methodology": "実機学習ではGPT-3 2.7BをDP=16、13BをTP=8/PP=2で評価し、単一NIC障害と同一ノード上の2 NIC同時障害を注入する。大規模学習は7Bモデルを4〜64サーバ、175B事前学習を1024 GPU、RLHFを64 GPUで模擬する。推論はLlama-3.1-70B/405BをTP=8/PP=2またはプリフィル・デコード分離でvLLM提供し、2,000 token入力、最大256 token出力、100秒試験の50秒時点でNIC障害を注入する。DéjàVu比較ではOPT-66B/BLOOM-176B、500 token入力、1500 token出力、decode step 800で障害を入れる。マイクロベンチマークは8B〜16GBの通信サイズを測る。",
+    "scope": "物理実機は2ノードで、大規模クラスタ結果の多くはSimAIによる。複数NICと代替経路を持つサーバを前提とし、NVLink/NVSwitch障害、GPU/OS/プロセス障害、完全ネットワーク分断、代替経路のないswitch-wide障害は対象外。",
+    "workloads": ["GPT-3 2.7B/13B学習", "7B/175B大規模学習シミュレーション", "Llama-3.1-70B/405B vLLM推論", "OPT-66B/BLOOM-176B DéjàVu比較", "RLHF 64 GPU"],
+    "baselines": ["Vanilla NCCL", "AdapCC", "Restart Server", "Reroute Request", "DéjàVu", "No-failure baseline"],
+    "metrics": ["tokens/s", "障害時オーバーヘッド", "TTFT", "TPOT", "SLO内最大throughput", "集合通信bus bandwidth", "復旧時間"],
+    "reproducibility": "著者実装をGitHubで公開し、実機構成、ソフトウェア版、障害注入条件、学習・推論並列構成を記載している。大規模結果はシミュレーション依存だが、2ノードH100実機で通信・学習・推論の主要挙動を検証している。"
   }
 }
