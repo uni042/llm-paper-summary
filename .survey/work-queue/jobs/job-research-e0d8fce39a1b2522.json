@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-e0d8fce39a1b2522",
+  "type": "research",
+  "parent_job_id": "job-067d00d93576a085",
+  "priority": 89,
+  "canonical_id": "arXiv:2609.00097",
+  "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding",
+  "source_url": "https://arxiv.org/abs/2609.00097",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.00097-faster-than-flash-attention-sparsity-long-context-decoding.md",
+  "selection_reason": "長文脈デコードで注意重みの疎性を利用し、低ビット選択走査と注意計算を融合したGPUカーネルへ落とし込むハードウェア・アルゴリズム協調設計。著者報告では注意カーネル最大11.6倍、256K文脈までのend-to-end throughput最大2.37倍を示し、公開コードもあるため、KV容量削減だけでなく実際の注意計算コストを削る長文脈推論系として優先度が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:21:09+00:00",
+  "artifact_transport": "structured_record_v10"
+}

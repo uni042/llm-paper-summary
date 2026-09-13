@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-2ab985bbc123336f",
+  "type": "research",
+  "parent_job_id": "job-067d00d93576a085",
+  "priority": 80,
+  "canonical_id": "arXiv:2609.02027",
+  "title": "Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation",
+  "source_url": "https://arxiv.org/abs/2609.02027",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.02027-multi-turn-lru-hit-ratio-mean-field.md",
+  "selection_reason": "多ターンLLM会話で接頭辞KVをLRU管理した際のhit ratioを平均場近似から推定し、KVキャッシュ容量の設計へつなげる研究。理論中心だが実際のLLM会話トレースとQwen3-8B/Ascend NPU環境で検証しており、多ターンprefix reuseを経験則だけでなく容量計画へ落とす基礎として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:21:09+00:00",
+  "artifact_transport": "structured_record_v10"
+}

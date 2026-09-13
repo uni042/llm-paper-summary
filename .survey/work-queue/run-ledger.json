@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:06:57.385992+00:00",
+  "updated_at": "2026-09-13T01:22:31.252167+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,7 +16414,7 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T01:06:57.385992+00:00",
+      "last_recorded_at": "2026-09-13T01:22:31.252167+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -16424,9 +16424,9 @@
       "counts": {
         "research_completed": 1,
         "audit_completed": 0,
-        "discovery_completed": 9,
+        "discovery_completed": 10,
         "blocked": 0,
-        "new_jobs": 23,
+        "new_jobs": 27,
         "new_papers": 1,
         "fallback_archived": 3
       },
@@ -16613,6 +16613,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34730301122:1",
+          "recorded_at": "2026-09-13T01:22:31.252167+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34730301122",
+            "run_attempt": "1",
+            "source_sha": "799a71f427dffbe79d8722b93dccd8bb00ae9495"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16690,6 +16704,14 @@
         },
         {
           "job_id": "job-505b2997047a5030",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-067d00d93576a085",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -16858,6 +16880,34 @@
           "type": "research",
           "canonical_id": "arXiv:2608.22643",
           "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching"
+        },
+        {
+          "job_id": "job-2e0049dc1ae25b0e",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2ab985bbc123336f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.02027",
+          "title": "Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation"
+        },
+        {
+          "job_id": "job-research-7299898f9408f63a",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.01821",
+          "title": "Scaling Inference Prefill with High-Radix Photonic Interconnects"
+        },
+        {
+          "job_id": "job-research-e0d8fce39a1b2522",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.00097",
+          "title": "Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding"
         }
       ],
       "new_paper_ids": [
@@ -16872,7 +16922,8 @@
         ".survey/work-queue/results/20260913T0947JST-discovery-specialist-foundational-omissions-7.json",
         ".survey/work-queue/results/20260913T0950JST-discovery-specialist-foundational-runtime-8.json",
         ".survey/work-queue/results/20260913T1004JST-discovery-specialist-disagg-slo-1.json",
-        ".survey/work-queue/results/20260913T1007JST-discovery-specialist-storage-kernel-2.json"
+        ".survey/work-queue/results/20260913T1007JST-discovery-specialist-storage-kernel-2.json",
+        ".survey/work-queue/results/20260913T1019JST-discovery-specialist-new-systems-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2512.12990-slicemoe.json",

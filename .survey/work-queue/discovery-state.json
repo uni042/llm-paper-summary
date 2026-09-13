@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:05:48+00:00",
-  "last_run_key": "2026-09-13T09:57:59+09:00",
-  "last_round": "specialist-storage-kernel-2",
+  "updated_at": "2026-09-13T01:21:09+00:00",
+  "last_run_key": "2026-09-13T10:16:01+09:00",
+  "last_round": "specialist-new-systems-1",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2718,6 +2718,26 @@
       ],
       "next_axis_hint": "次は最近の量子化実行系と、重要なMoE/KV論文からのforward citation・backward referenceを横断する",
       "source_submission": "work-queue/submissions/20260913T1007JST-discovery-specialist-storage-kernel-2.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-new-systems-1",
+      "axis": "新着LLM推論システム・通信／疎注意／多ターンKV",
+      "query_summary": "2026年9月の新着推論システムを、フォトニック相互接続、長文脈疎注意カーネル、多ターンKVキャッシュ容量設計へ広げて軽量評価し、既存identity/jobとの重複を投入直前に再確認した。",
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.5714285714285714,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2609.11133",
+        "arXiv:2609.10790",
+        "arXiv:2609.00407",
+        "arXiv:2609.03515"
+      ],
+      "next_axis_hint": "GPU runtime・collective通信・networking隣接分野、または最近の高priority候補からforward citationへ探索軸を移す",
+      "source_submission": "work-queue/submissions/20260913T1019JST-discovery-specialist-new-systems-1.json"
     }
   ],
   "axes": {
@@ -4250,6 +4270,16 @@
       "accepted_count": 4,
       "duplicate_ratio": 0.375,
       "next_axis_hint": "次は最近の量子化実行系と、重要なMoE/KV論文からのforward citation・backward referenceを横断する"
+    },
+    "新着LLM推論システム・通信／疎注意／多ターンKV": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 7,
+      "duplicate_filtered_count": 4,
+      "novel_candidate_count": 3,
+      "accepted_count": 3,
+      "duplicate_ratio": 0.5714285714285714,
+      "next_axis_hint": "GPU runtime・collective通信・networking隣接分野、または最近の高priority候補からforward citationへ探索軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
