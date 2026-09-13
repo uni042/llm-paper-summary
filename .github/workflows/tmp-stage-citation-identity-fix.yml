@@ -1,0 +1,45 @@
+name: Temporary stage citation identity fix
+
+on:
+  push:
+    branches:
+      - fix/citation-backfill-publisher-identity
+    paths:
+      - '.github/workflows/tmp-stage-citation-identity-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/citation-backfill-publisher-identity
+          fetch-depth: 0
+      - name: Generate fixed workflow mirror
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          src = Path('.github/workflows/citation-graph-backfill.yml')
+          text = src.read_text(encoding='utf-8')
+          anchor = "      - name: Install dependencies\n        run: python -m pip install -r .survey/scripts/requirements.txt\n\n"
+          addition = "      - name: Configure citation publisher identity\n        run: |\n          git config user.name 'citation-graph[bot]'\n          git config user.email 'citation-graph[bot]@users.noreply.github.com'\n\n"
+          if text.count(anchor) != 1:
+              raise SystemExit(f'expected dependency anchor once, got {text.count(anchor)}')
+          if 'Configure citation publisher identity' in text:
+              raise SystemExit('publisher identity step already exists')
+          text = text.replace(anchor, anchor + addition, 1)
+          out = Path('.survey/tmp/citation-graph-backfill.yml.txt')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(text, encoding='utf-8')
+          PY
+          git diff --check -- .survey/tmp/citation-graph-backfill.yml.txt
+      - name: Commit mirror only
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add .survey/tmp/citation-graph-backfill.yml.txt
+          git commit -m 'chore: stage fixed citation workflow mirror'
+          git push origin HEAD:fix/citation-backfill-publisher-identity
