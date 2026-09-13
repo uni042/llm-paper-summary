@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 08:43 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 09:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -28,8 +28,8 @@ Run: **2026-09-13T08:30:00+09:00**
 |---|---:|
 | Research完了 | **0** |
 | Audit完了 | **0** |
-| Discovery完了 | **5** |
-| 新規job | **19** |
+| Discovery完了 | **6** |
+| 新規job | **20** |
 | Repo収録 | **0** |
 | Blocked遷移 | **0** |
 
@@ -51,10 +51,10 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **124** |
-| 探索評価候補 | **624** |
-| 重複除外 | **259** |
-| 重複率 | **41.5%** |
+| 探索round（stats観測） | **125** |
+| 探索評価候補 | **629** |
+| 重複除外 | **264** |
+| 重複率 | **42.0%** |
 | Novel候補 | **365** |
 | Research候補採用 | **209** |
 | Research完了 | **70** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 24時間ファネル
 
-**探索評価 624 → 重複除外後 365 → Research候補採用 209 → Research完了 70 → Repo収録 70**
+**探索評価 629 → 重複除外後 365 → Research候補採用 209 → Research完了 70 → Repo収録 70**
 
 ## 探索効率（直近24時間）
 
@@ -130,6 +130,7 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 | production推論エンジン・tail/SLO scheduling・hardware-software co-design | 5 | 0 | 3 | 0.0% | 60.0% |
 | マルチエージェント・ワークフロー指向prefix状態スケジューリング | 5 | 4 | 1 | 80.0% | 20.0% |
 | 分離サービング負荷転送・異種GPU構成選択 | 5 | 3 | 1 | 60.0% | 20.0% |
+| 直近新着・hierarchical memory・serving runtime横断再確認 | 5 | 5 | 0 | 100.0% | 0.0% |
 | 2609新着・KVキャッシュ最適化/サービング | 4 | 3 | 1 | 75.0% | 25.0% |
 | 2609新着・分離サービング・動的ルーティング | 4 | 1 | 3 | 25.0% | 75.0% |
 | CXL・SSD・remote KV cache階層メモリ | 4 | 4 | 0 | 100.0% | 0.0% |
@@ -198,11 +199,11 @@ Run: **2026-09-13T07:00:13+09:00** / Round: **specialist-exhaustion-final-3**
 
 ### 直近5探索round
 
+- **2026-09-13T08:26:04+09:00** — 直近新着・hierarchical memory・serving runtime横断再確認: 評価 5 / 重複 5 / 採用 0
 - **2026-09-13T08:26:04+09:00** — network・collective通信・distributed inference: 評価 7 / 重複 7 / 採用 0
 - **2026-09-13T08:26:04+09:00** — GPU runtime安全性・software aging・many-core CPU inference: 評価 9 / 重複 6 / 採用 3
 - **2026-09-13T08:26:04+09:00** — agent workspace仮想化・NVMe階層・長時間runtime state: 評価 6 / 重複 3 / 採用 2
 - **2026-09-13T08:26:04+09:00** — position-independent KV再利用のforward/backward related-work補完: 評価 6 / 重複 1 / 採用 5
-- **2026-09-13T08:26:04+09:00** — hybrid-attention・MLA・位置非依存キャッシュ: 評価 7 / 重複 3 / 採用 4
 
 ## 最近処理した論文
 
