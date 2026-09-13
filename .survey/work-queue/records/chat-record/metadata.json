@@ -4,10 +4,46 @@
   "slot": "metadata",
   "attempt_id": "attempt-3a02f3af18c9e81b698943bc",
   "job_id": "job-research-d53ec8171f729e9e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3a02f3af18c9e81b698943bc",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.16867",
+    "arxiv_id": "2605.16867",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "GoodServe: Towards High-Goodput Serving of Agentic LLM Inferences over Heterogeneous Resources",
+    "summary": "エージェント型LLM推論では、最初のトークンではなく最終出力が期限内に完成することが重要で、出力長も要求ごとに大きく変動する。GoodServeは、異種GPU群に対する要求ルーティングを予測と補正の二段階で行う。まずタスク種別に専門化した複数MLPを混合専門家型に組み合わせて出力長を予測し、各GPUの待ち時間・事前充填速度・復号速度を指数移動平均によるブラックボックス観測で推定する。その情報からSLOを満たせる候補のうち必要十分な性能のGPUへ要求を送り、高性能GPUをより緊急な要求のために残す。実行中もSLO違反リスクを再評価し、必要ならKVキャッシュではなくトークンIDだけを転送して強いGPUへ移行する。H800、A800、A40、V100の異種クラスタで、既存ルーティング方式よりグッドプットを最大27.4%改善する。",
+    "list_summary": "出力長と各GPUの実効処理能力を予測し、SLOを満たす必要十分なGPUへ割り当て、実行中の違反リスクを軽量移行で補正してグッドプットを最大27.4%改善する。",
+    "authors": ["Boxiao Du", "Boning Huangfu", "Yizhou Luo", "Chen Chen", "Zijun Li", "Minchen Yu", "Xiaoyi Fan", "Minyi Guo"],
+    "authors_affiliations": "Boxiao Du、Boning Huangfu、Yizhou Luo、Chen Chen、Zijun Li、Minyi GuoはShanghai Jiao Tong University、Minchen YuはThe Chinese University of Hong Kong, Shenzhen、Xiaoyi FanはShenzhen MSU-BIT University。",
+    "published": "2026-05-16",
+    "publication": "arXiv preprint v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["エージェント型LLM配信", "異種GPU", "SLOルーティング", "出力長予測", "要求移行", "グッドプット"],
+    "importance": "異種GPUの局所負荷均衡ではなく、要求ごとの最終出力期限を満たす件数を直接最大化する。出力長の不確実性と実行中の性能変動を初期ルーティングと実行時移行で一体的に扱うため、エージェント型サービングのSLO制御として重要である。",
+    "hardware_evaluation": "実機。H800 80GB、A800 80GB、A40 48GB、V100 32GB（TP=2）の4異種NVIDIA GPUインスタンスを10 Gbps Ethernetで接続し、A40上にプロキシルータを配置する。加えて最大512インスタンスの大規模シミュレーションを行う。",
+    "quality_effect": "モデル重みや生成計算を近似せず、同じ推論要求の配置先と移行タイミングを変えるシステム最適化である。移行時は既生成トークンIDを送って移行先で事前充填を再実行するため、KV状態を近似圧縮して品質を変える方式ではない。温度0でSLO基準測定と本評価の出力一貫性を確保する。",
+    "source": "https://arxiv.org/abs/2605.16867",
+    "sources": ["https://arxiv.org/abs/2605.16867", "https://arxiv.org/pdf/2605.16867"],
+    "code": null,
+    "implementation": "約2,500行で実装し、論文はソースコードを補足ファイルとして添付したと記載する。出力長予測器は8,680サンプル、500エポック、25分で学習する。2026-09-14時点で一次資料から恒久的な著者公式GitHub URLは確認できない。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 40,
+    "references": [
+      {"canonical_id": "arXiv:2507.19635", "arxiv_id": "2507.19635"},
+      {"canonical_id": "arXiv:2501.12948", "arxiv_id": "2501.12948"},
+      {"canonical_id": "arXiv:2504.14527", "arxiv_id": "2504.14527"},
+      {"canonical_id": "arXiv:2502.14617", "arxiv_id": "2502.14617"},
+      {"canonical_id": "arXiv:2502.00722", "arxiv_id": "2502.00722"},
+      {"canonical_id": "arXiv:2407.00023", "arxiv_id": "2407.00023"},
+      {"canonical_id": "arXiv:2504.03648", "arxiv_id": "2504.03648"},
+      {"canonical_id": "arXiv:2510.13668", "arxiv_id": "2510.13668"},
+      {"canonical_id": "arXiv:2509.09505", "arxiv_id": "2509.09505"},
+      {"canonical_id": "arXiv:2504.20068", "arxiv_id": "2504.20068"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-3a02f3af18c9e81b698943bc", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
