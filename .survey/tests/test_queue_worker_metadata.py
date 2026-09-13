@@ -35,6 +35,28 @@ class AuditMetadataRoutingTest(unittest.TestCase):
         created = add_job.call_args.args[0]
         self.assertEqual(created["reason"], "会議版の数値を再確認")
         self.assertEqual(created["paper_path"], "papers/inference/test/paper.md")
+        self.assertEqual(created["workflow_version"], 10)
+        self.assertEqual(created["artifact_transport"], "structured_record_v10")
+        self.assertIn("five-slot structured research record", created["instructions"])
+        self.assertIn("five-slot structured research record", created["completion"])
+        self.assertNotIn("Markdown", created["completion"])
+
+    def test_research_job_is_created_directly_with_v10_contract(self) -> None:
+        candidate = {
+            "canonical_id": "arXiv:2601.00002",
+            "title": "Test paper",
+            "source_url": "https://arxiv.org/abs/2601.00002",
+            "priority": 70,
+            "reason": "test",
+        }
+        with patch.object(queue_worker, "add_job", return_value=True) as add_job:
+            self.assertTrue(queue_worker.make_research_job(candidate, "job-discovery-parent"))
+        created = add_job.call_args.args[0]
+        self.assertEqual(created["workflow_version"], 10)
+        self.assertEqual(created["artifact_transport"], "structured_record_v10")
+        self.assertIn("five-slot structured research record", created["instructions"])
+        self.assertIn("five-slot structured research record", created["completion"])
+        self.assertNotIn("complete Markdown", created["completion"])
 
     def test_short_completed_artifact_is_rejected_before_write(self) -> None:
         original_root = queue_worker.ROOT
@@ -116,6 +138,7 @@ class DiscoveryReplenishmentTest(unittest.TestCase):
                 queue_worker.ROOT = original_root
             self.assertEqual(queue_snapshot["claiming"], maintenance_snapshot["claiming"])
             self.assertEqual(queue_snapshot["next_jobs"], maintenance_snapshot["next_jobs"])
+
     def test_ready_research_does_not_block_discovery_replenishment(self) -> None:
         jobs = [
             {
