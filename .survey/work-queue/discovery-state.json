@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T00:24:16+00:00",
-  "last_run_key": "2026-09-13T09:00:00+09:00",
-  "last_round": "specialist-runtime-autoscaling-3",
+  "updated_at": "2026-09-13T00:30:14+00:00",
+  "last_run_key": "2026-09-13T09:28:10+09:00",
+  "last_round": "specialist-kv-compression-reuse-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2544,6 +2544,21 @@
       ],
       "next_axis_hint": "Use forward-citation and backward-reference expansion around heterogeneous serving and SSD-backed inference, then inspect networking/collective scheduling and OS/storage mechanisms for unrepresented candidates.",
       "source_submission": "work-queue/submissions/20260913T0916JST-specialist-runtime-autoscaling-3.json"
+    },
+    {
+      "run_key": "2026-09-13T09:28:10+09:00",
+      "round": "specialist-kv-compression-reuse-1",
+      "axis": "2026-09新着・KV圧縮・跨文脈再利用",
+      "query_summary": "2026年9月新着からdecode-time KV eviction、長CoT向けKV圧縮、exact-prefix外およびcheckpoint間KV再利用を探索し、一次arXiv書誌・abstractを軽量確認後、paper identityとrepo内ID検索で事前重複確認した。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "KV圧縮の直後反復を避け、GPU runtime/kernel compilation、MoE expert placement/cache、またはnetwork/RDMA disaggregated servingへ軸を変更する",
+      "source_submission": "work-queue/submissions/20260913T0928JST-discovery-specialist-kv-compression-1.json"
     }
   ],
   "axes": {
@@ -3976,6 +3991,16 @@
       "accepted_count": 2,
       "duplicate_ratio": 0.6666666666666666,
       "next_axis_hint": "Use forward-citation and backward-reference expansion around heterogeneous serving and SSD-backed inference, then inspect networking/collective scheduling and OS/storage mechanisms for unrepresented candidates."
+    },
+    "2026-09新着・KV圧縮・跨文脈再利用": {
+      "last_run_key": "2026-09-13T09:28:10+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "KV圧縮の直後反復を避け、GPU runtime/kernel compilation、MoE expert placement/cache、またはnetwork/RDMA disaggregated servingへ軸を変更する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
