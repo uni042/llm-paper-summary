@@ -8,25 +8,13 @@
       "completed": 6
     },
     "research": {
-      "completed": 204,
-      "ready": 158,
+      "completed": 205,
+      "ready": 157,
       "superseded": 44,
       "deferred": 3
     }
   },
   "next_jobs": [
-    {
-      "job_id": "job-research-569c68f713c406a9",
-      "type": "research",
-      "lane": null,
-      "priority": 93,
-      "canonical_id": "arXiv:2508.19559",
-      "title": "Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference",
-      "source_url": "https://arxiv.org/abs/2508.19559",
-      "paper_path": null,
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
     {
       "job_id": "job-research-7c0598aabd36d6bf",
       "type": "research",
@@ -112,6 +100,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-dfc514a18ebaac1e",
+      "type": "research",
+      "lane": null,
+      "priority": 88,
+      "canonical_id": "arXiv:2512.22219",
+      "title": "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+      "source_url": "https://arxiv.org/abs/2512.22219",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-f17d3d9e58cabe5c",
       "type": "discovery",
       "lane": "discovery",
@@ -124,5 +124,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-13T00:39:37+00:00"
+  "generated_at": "2026-09-13T00:40:58+00:00"
 }

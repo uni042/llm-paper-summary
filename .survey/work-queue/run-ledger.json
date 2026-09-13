@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T00:40:03.594608+00:00",
+  "updated_at": "2026-09-13T00:42:28.534701+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -16414,17 +16414,19 @@
     {
       "run_key": "2026-09-13T09:30:00+09:00",
       "first_recorded_at": "2026-09-13T00:34:45.874652+00:00",
-      "last_recorded_at": "2026-09-13T00:40:03.594608+00:00",
+      "last_recorded_at": "2026-09-13T00:42:28.534701+00:00",
       "signals": [
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "research_completed",
+        "paper_materialized"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 0,
         "new_jobs": 9,
-        "new_papers": 0,
+        "new_papers": 1,
         "fallback_archived": 0
       },
       "events": [
@@ -16469,6 +16471,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34728528213:1",
+          "recorded_at": "2026-09-13T00:42:28.534701+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34728528213",
+            "run_attempt": "1",
+            "source_sha": "a3b04c83c49fb6dd3fe59d8c62cfade2990adab9"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -16493,6 +16510,14 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-569c68f713c406a9",
+          "type": "research",
+          "canonical_id": "arXiv:2508.19559",
+          "title": "Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference",
           "from": "ready",
           "to": "completed"
         }
@@ -16562,7 +16587,9 @@
           "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation"
         }
       ],
-      "new_paper_ids": [],
+      "new_paper_ids": [
+        "arXiv:2508.19559"
+      ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json",
         ".survey/work-queue/results/20260913T0935JST-discovery-specialist-uncertainty-scheduling-3.json",
@@ -16570,8 +16597,8 @@
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 393,
-      "paper_active_count_after": 393,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 394,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
