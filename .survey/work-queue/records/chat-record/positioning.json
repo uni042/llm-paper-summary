@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-077152d8f589bd6cc52ad6b2",
   "job_id": "job-research-2032cc68b22d1cbe",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-077152d8f589bd6cc52ad6b2",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "故障モデルは停止故障を前提とし、永続チェックポイント作業器自体の独立ソフトウェア破損、ビザンチン故障、任意の無音HBM破損は扱わない。透明な可変領域はGPU内の影コピーを必要としHBMを消費するため、KV割当器などから汚染情報を得られる場合ほど有利である。追記ログはホストDRAMまたはCXL容量を消費し、復元時間を抑えるには定期圧縮が必要になる。Blackwellでは永続作業器実行中の動的GPU割当へ制約があり、動的cudaMallocを多用する実行系はメモリプール統合が必要である。評価規模は最大二GPUのPCIe構成で、NVLink・InfiniBandを用いた大規模データセンターでの故障復旧は未検証。静的デコードに対するCUDA Graph最適化済みvLLMやTensorRT-LLMとのエンドツーエンド速度比較も行っていない。",
+    "differences": "DMTCPやCRIUgpu、PhoenixなどのGPUチェックポイント方式は大きなGPU状態の保存・再開を扱うが、ConcordiaはLLM推論で基礎重みが不変、KVやアダプタだけが疎に変化する性質を利用し、変更検出自体をGPU側へ移す。アプリケーション専用KVログはさらに転送量を削減できる場合がある一方、各注意実装・割当器・生成カーネル・通信ライブラリへ手作業の復旧契約を埋め込む必要がある。ConcordiaはPTX/SASSの実行境界まで下がることで広い透明性を得つつ、PagedAttentionのブロック表など意味情報が利用できる場合は専用処理器へ取り込む。CUDA Graphは静的処理の起動効率化であり、故障時にも生きているGPU側制御経路を提供するConcordiaとは補完関係にある。",
+    "implementation_status": "Rust約1,800行、CUDA C永続カーネル約200行の試作があり、libnvcuda.so互換のCUDAドライバ置換層、PTX/SASS計装、領域登録、差分処理器の実行時コンパイル、追記ログ、NCCL復旧調停を実装する。PyTorch 2.10.0とCUDA 12.8でQwen3-0.6B推論を検証し、実機Blackwell二GPU試験を含む。ただし一次資料・arXiv情報から著者公式の公開ソースコードURLは確認できず、公開再現環境の有無は未確認である。",
+    "research_positioning": "LLMサービング研究では、従来のスケジューリングやKVメモリ効率化が正常時の性能を主に扱うのに対し、Concordiaは長時間エージェントのGPU常駐状態を障害後も維持するための実行時基盤を対象にする。KVキャッシュをCXL/ホストDRAMへ毎回全量退避するのではなく、HBM上で汚染ページを見つけて差分だけを階層外へ残すため、KVキャッシュ管理と階層メモリを耐障害性の観点で接続する。さらにNCCL通信境界を復旧点として使い、置換GPUへ差分状態を再生する設計は、分離型サービングや長時間推論で障害復旧時間をSLOへ組み込む研究の基盤候補となる。"
+  },
+  "reservation": {"claim_id": "claim-077152d8f589bd6cc52ad6b2", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
