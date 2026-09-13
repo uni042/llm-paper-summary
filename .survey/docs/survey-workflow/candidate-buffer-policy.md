@@ -2,7 +2,7 @@
 
 この文書は論文survey workerの **candidate供給・discovery水位制御** の正本とする。既存の `queue-v10.md` にある「actionable readyが尽きたらdiscovery」という受動的な記述より、本書の水位制御を優先する。research品質、transport、fallback、maintenance、08:30 routing等は従来の正本に従う。
 
-探索ラウンドの継続・停止判断は `.survey/docs/survey-workflow/discovery-continuation-policy.md` を正本とし、通常論文worker（毎時:30）と探索専用worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、candidate在庫が多いこと、単一sourceの一時障害だけを理由にdiscoveryを停止せず、同ポリシーに従って探索軸・source・query familyを切り替える。
+探索ラウンドの継続・停止判断は `.survey/docs/survey-workflow/discovery-continuation-policy.md` を正本とし、通常論文worker（毎時:30）と探索専用worker（毎時:00）は毎run本書と併読する。0件、全重複、低採用率、candidate在庫が多いこと、単一sourceの一時障害だけを理由に探索専用workerのdiscoveryを停止せず、同ポリシーに従って探索軸・source・query familyを切り替える。通常論文workerのdiscovery可否は本書の水位gateを優先する。
 
 ## 目的
 
@@ -17,7 +17,7 @@ research workerが候補枯渇で停止しないよう、discoveryをresearch開
 
 25本以上の候補がある状態は、通常論文workerがresearchへ十分に注力できる在庫水準とみなす。25本未満になった時点でdiscovery補充をresearchと並行して加速し、15本未満では候補枯渇防止を優先してdiscovery比重をさらに上げる。0本になるまで待ってから探索を始めてはならない。
 
-`candidate_inventory` には上限も目標件数も設けない。50本、100本、それ以上に増えても、それ自体を理由に探索専用workerのdiscoveryを弱めたり止めたりしない。一方、通常論文workerは候補が十分にある間はresearchを主処理とし、探索より全文精読・structured record作成・必要なauditを優先する。件数維持のために弱い候補を採用しない。
+`candidate_inventory` には上限も目標件数も設けない。50本、100本、それ以上に増えても、それ自体を理由に探索専用workerのdiscoveryを弱めたり止めたりしない。一方、通常論文workerはcandidate在庫が25本以上かつ処理可能なresearch jobがある間はresearch-onlyとし、全文精読・structured record作成・必要なauditに専念する。件数維持のために弱い候補を採用しない。
 
 `candidate_inventory` はGitHub queueの未処理research候補、Library/GitHub fallback由来の未checkpoint spillover、candidate pool相当の未処理候補をcanonical ID / arXiv ID / DOI / normalized titleで重複排除して数える。blocked/deferredで現在research不能な論文は通常在庫に含めない。
 
@@ -33,12 +33,12 @@ Research段階で初めて一次資料全文を取得・精読し、repository-q
 
 candidate供給は2つのScheduled Chat workerが共有する。
 
-1. **通常論文worker（毎時:30）**: research / auditを主担当とし、candidate在庫が不足した場合や低コストで高価値候補を拾える場合はdiscoveryも行う。
+1. **通常論文worker（毎時:30）**: research / auditを主担当とする。candidate在庫が25本未満、またはactionable researchが尽きた場合にdiscoveryも行う。25本以上かつactionable researchありの間はdiscoveryを行わない。
 2. **探索専用worker（毎時:00）**: discovery、軽量候補評価、priority付与、candidate投入だけを行う。
 
-探索専用workerはcandidate在庫が十分でも探索を継続し、高価値候補を広く供給する。通常論文workerはcandidate在庫が25本以上あり、処理可能なresearch jobが存在する場合、広範なdiscoveryよりresearchを優先する。探索専用workerの存在だけを理由に通常論文workerからdiscovery機能そのものを削除してはならないが、在庫が十分な間は通常論文workerのdiscovery比重を下げてよい。
+探索専用workerはcandidate在庫が十分でも探索を継続し、高価値候補を広く供給する。通常論文workerはcandidate在庫が25本以上あり、処理可能なresearch jobが存在する場合、high-backlog research-only modeとして新規discovery・低コスト新着確認・candidate投入を停止する。探索専用workerの存在を理由に通常論文workerのdiscovery機能自体は削除せず、在庫が25本未満になった場合やactionable researchが尽きた場合に再度有効化する。
 
-二重投入を防ぐため、両workerとも探索開始前とcandidate投入直前に最新HEADを再確認し、canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで再重複判定する。片方が探索中にもう片方やActionsが同じ候補を先に登録した場合、後発workerはその候補を送らない。競合が残る場合も正本側のdedupeで1候補へ収束させる。
+二重投入を防ぐため、discoveryを行うworkerは探索開始前とcandidate投入直前に最新HEADを再確認し、canonical ID / arXiv ID / DOI / OpenReview ID / normalized titleで再重複判定する。片方が探索中にもう片方やActionsが同じ候補を先に登録した場合、後発workerはその候補を送らない。競合が残る場合も正本側のdedupeで1候補へ収束させる。
 
 `discovery-state.json` はGitHub Actionsを単一writerとする。Scheduled Chatはこの共有stateを直接更新せず、各discovery submissionへトップレベル `discovery_stats` を添付する。Actionsは直列化されたqueue処理の中で最終dedupe後の実採用数を確定してから、探索軸ごとの統計を1回だけ加算する。同一submission pathは二重計上しない。
 
@@ -86,15 +86,17 @@ research workerは原則としてpriorityの高い候補から処理する。can
 
 maintenance runと08:30 other-update runを除くpaper workerでは、run開始時とjob処理後にcandidate_inventoryを再評価する。
 
-- 25以上: priority順researchを主処理とする。処理可能なresearch jobがある限り、広範なdiscoveryより全文精読・structured record作成・必要なauditを優先する。低コストな新着確認や高価値候補の発見は許可する。
+- 25以上: actionable researchがある間、通常論文workerはhigh-backlog research-only modeとし、通常worker側のdiscoveryを0にする。priority順の全文精読・structured record作成・必要なauditだけを行う。探索専用workerは従来どおりdiscoveryを継続する。
 - 15〜24: researchを継続しながらdiscovery補充を積極化する。
 - 0〜14: discovery補充を優先し、複数の探索経路を使って在庫回復を図る。見つかった高priority候補のresearchを同一runで進めてもよい。
 
-固定件数・固定batch数は設けない。候補が0件の探索ラウンドがあっても別軸へ切り替える。プラットフォーム上限、耐久保存不能、または合理的に有望探索軸を使い切った場合のみそのrunのdiscoveryを終了する。
+high-backlog research-only mode中は、一次資料取得と耐久保存経路が利用可能でactionable researchが十分ある限り、通常workerは1runにつき最低3件の異なるresearch jobを完全payloadとして送信または耐久checkpointすることを処理量の下限目標とする。3件は上限でも停止条件でもなく、3件後も処理可能なら継続する。platform limit、正本read不能、耐久保存不能、一次資料取得不能、claim不能等のhard conditionはこの目標より優先する。
+
+固定上限件数・固定batch数は設けない。候補が0件の探索ラウンドがあっても別軸へ切り替える。プラットフォーム上限、耐久保存不能、または合理的に有望探索軸を使い切った場合のみそのrunのdiscoveryを終了する。
 
 ## GitHub write不能時
 
-GitHub write不能でもLibrary `/LLM-survey-outbox/pending/` へoffline job seedを耐久保存できるなら、同じ水位方針でcandidateを補充する。candidate seedを保存した後は、必要に応じてpriority上位候補のresearchを同一runで進める。transport envelope、job ID、replayは `fallback-routing.md` と `continuation-policy.json` を正本とする。
+GitHub write不能でもLibrary `/LLM-survey-outbox/pending/` へoffline job seedを耐久保存できるなら、同じ水位方針でcandidateを補充する。high-backlog research-only modeでは新規candidate seedを作らず、priority上位researchの完成payloadをLibraryへcheckpointする。candidate在庫が25本未満等でdiscoveryが許可される場合はcandidate seedを保存した後、必要に応じてpriority上位候補のresearchを同一runで進める。transport envelope、job ID、replayは `fallback-routing.md` と `continuation-policy.json` を正本とする。
 
 fallback envelopeにも探索時点の `discovery_stats` を保持し、GitHub復旧後のreplayでActionsが通常submissionと同じ統計処理を行えるようにする。
 
