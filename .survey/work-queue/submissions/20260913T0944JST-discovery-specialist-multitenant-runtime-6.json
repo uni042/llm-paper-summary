@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "job_id": "job-6f74bbb026a96c98",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.05467",
+      "title": "Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism",
+      "source_url": "https://arxiv.org/abs/2605.05467",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.05467-nitsum-adaptive-tensor-parallelism-tiered-slo.md",
+      "priority": 87,
+      "reason": "対話型とbackground型が混在するmulti-tenant servingで、tensor parallelismを固定deployment設定ではなくruntime control surfaceとして扱い、TP level・prefill/decode GPU split・request schedulingを共同最適化する。頻繁なTP変更をTP-aware weight reuseと高速KV migrationで実用化し、実traceとmicrobenchmarkでSLO-compliant goodputを既存方式比最大5.3倍と報告する。Flying ServingのDP/TP切替とは異なりtiered SLO下のgoodput最適化を主眼とするため比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.08382",
+      "title": "LLMVisor: A Real-Time Latency Attribution Model for Multi-Tenant LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.08382",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md",
+      "priority": 83,
+      "reason": "co-batchingされたmulti-tenant推論ではrequest/tenantごとのlatency寄与が見えず、fractional sharingや公平制御の基礎計測が欠ける問題に対し、roofline-guidedなpiecewise-linear modelでbatch latencyをrequest別へ加法分解する。A100/H100、Llama 3.1-8BとQwen 2.5-14B/32Bでmicrosecond級推定を行い、token-count baseline比でprefill/decodeの高percentile相対誤差を最大4.4倍改善と報告する。scheduler内で使える軽量attribution primitiveとして新しい設計点。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-multitenant-runtime-6",
+    "axis": "multi-tenant runtime制御・適応parallelism・latency attribution",
+    "query_summary": "network軸の全重複後、異種GPU・電力制御・Superchip/CPU-GPU offloadを確認して既収録を多数除外し、さらにmulti-tenant runtime controlへ展開した。NitsumとLLMVisorは一次arXiv抄録を軽量評価し、最新HEADで決定論的research job不在を直接確認した。Flying Serving、Robust KV Cache Management、CrossPoolは既存jobで重複確認済み。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arxiv:2602.22593",
+      "arxiv:2607.16892",
+      "arxiv:2606.24506"
+    ],
+    "next_axis_hint": "multi-tenant servingの直後反復を避け、古い重要未収録の探索または新着kernel/runtime・edge系のforward/adjacent expansionへ移る",
+    "empty_round_reason": null
+  }
+}
