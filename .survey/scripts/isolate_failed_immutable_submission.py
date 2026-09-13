@@ -52,6 +52,7 @@ def isolate(repo_root: Path, submission: Path) -> dict:
         processor.render_descriptor(repo_root, descriptor)
     except Exception as exc:
         error = f"{type(exc).__name__}: {exc}"
+        validation_errors = list(getattr(exc, "issues", []) or [])
         job_path = repo_root / ".survey/work-queue/jobs" / f"{descriptor['job_id']}.json"
         try:
             job = json.loads(job_path.read_text(encoding="utf-8"))
@@ -70,6 +71,10 @@ def isolate(repo_root: Path, submission: Path) -> dict:
         job.pop("artifact_submission", None)
         job["repair_required"] = True
         job["validation_error"] = error
+        if validation_errors:
+            job["validation_errors"] = validation_errors
+        else:
+            job.pop("validation_errors", None)
         job["last_validation_failed_at"] = _now()
         _write(job_path, job)
         return {
@@ -77,6 +82,7 @@ def isolate(repo_root: Path, submission: Path) -> dict:
             "job_id": descriptor["job_id"],
             "attempt_id": descriptor["attempt_id"],
             "validation_error": error,
+            **({"validation_errors": validation_errors} if validation_errors else {}),
         }
 
     return {

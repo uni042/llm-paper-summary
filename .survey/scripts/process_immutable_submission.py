@@ -78,7 +78,7 @@ def render_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> str:
 
     record = assemble.normalize_preferred_terms(record)
     assemble.ensure_explanatory_summary(record)
-    assemble.validate_record(record)
+    assemble.validate_record(record, collect_all=True)
     markdown = assemble.render_paper(record)
     if len(markdown.strip()) < 500:
         raise ValueError("rendered research artifact is unexpectedly short")
@@ -147,6 +147,7 @@ def _clear_repair_state(job: dict[str, Any]) -> None:
     """Clear validation-isolation metadata after a successful retry."""
     job.pop("repair_required", None)
     job.pop("validation_error", None)
+    job.pop("validation_errors", None)
     job.pop("last_validation_failed_at", None)
 
 
@@ -214,6 +215,9 @@ def record_failure(repo_root: Path, submission_path: Path, exc: Exception) -> di
         "error": f"{type(exc).__name__}: {exc}",
         "processed_at": _now(),
     }
+    validation_errors = list(getattr(exc, "issues", []) or [])
+    if validation_errors:
+        result["validation_errors"] = validation_errors
     queue_worker.write_json(result_path, result)
     return result
 

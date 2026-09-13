@@ -108,27 +108,22 @@ def copy_transport(repo_root: Path, temp_root: Path) -> dict:
     return inbox
 
 
-def isolate_invalid_job(repo_root: Path, inbox: dict, error: str) -> None:
+def isolate_invalid_job(repo_root: Path, inbox: dict, error: str, validation_errors: list[str] | None = None) -> None:
     result_path = repo_root / ".survey/work-queue/results/chat-inbox.json"
     result_path.parent.mkdir(parents=True, exist_ok=True)
-    result_path.write_text(
-        json.dumps(
-            {
-                "schema_version": 1,
-                "workflow_version": 10,
-                "submission": "work-queue/submissions/chat-inbox.json",
-                "ok": False,
-                "job_id": inbox.get("job_id"),
-                "validation_error": error,
-                "repair_required": True,
-                "isolated_at": now(),
-            },
-            ensure_ascii=False,
-            indent=2,
-        )
-        + "\n",
-        encoding="utf-8",
-    )
+    result = {
+        "schema_version": 1,
+        "workflow_version": 10,
+        "submission": "work-queue/submissions/chat-inbox.json",
+        "ok": False,
+        "job_id": inbox.get("job_id"),
+        "validation_error": error,
+        "repair_required": True,
+        "isolated_at": now(),
+    }
+    if validation_errors:
+        result["validation_errors"] = list(validation_errors)
+    write_json(result_path, result)
 
     job_id = inbox.get("job_id")
     if not isinstance(job_id, str) or not job_id:
@@ -145,8 +140,12 @@ def isolate_invalid_job(repo_root: Path, inbox: dict, error: str) -> None:
     job.pop("artifact_submission", None)
     job["repair_required"] = True
     job["validation_error"] = error
+    if validation_errors:
+        job["validation_errors"] = list(validation_errors)
+    else:
+        job.pop("validation_errors", None)
     job["last_validation_failed_at"] = now()
-    job_path.write_text(json.dumps(job, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_json(job_path, job)
 
 
 def preflight(repo_root: Path, isolate: bool) -> dict:
@@ -171,17 +170,21 @@ def preflight(repo_root: Path, isolate: bool) -> dict:
         with tempfile.TemporaryDirectory(prefix="survey-preflight-") as td:
             temp_root = Path(td)
             copy_transport(repo_root, temp_root)
-            base.assemble(temp_root)
+            base.assemble(temp_root, collect_all_validation_issues=True)
     except Exception as exc:
         error = f"{type(exc).__name__}: {exc}"
+        validation_errors = list(getattr(exc, "issues", []) or [])
         if isolate:
-            isolate_invalid_job(repo_root, inbox, error)
-        return {
+            isolate_invalid_job(repo_root, inbox, error, validation_errors)
+        result = {
             "valid": False,
             "job_id": inbox.get("job_id"),
             "error": error,
             "isolated": isolate,
         }
+        if validation_errors:
+            result["validation_errors"] = validation_errors
+        return result
 
     return {"valid": True, "job_id": inbox.get("job_id"), "isolated": False}
 
