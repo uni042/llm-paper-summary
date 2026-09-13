@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d0e5054b6a381715aab8671d","job_id":"job-research-ec01b6de422e6692","data":{"limitations":"完全なプリフィル・デコード分離サービング基盤ではなく、TTFTは転送経路を切り出したGPU timingである。連続バッチ、実ネットワーク競合、複数ノード配置、prefix sharing、コールド層取得、SLO goodputは未評価。主要品質評価は7〜9B級3モデルで、Qwen2.5-14Bは局所性分析のみ。INT4安全probeも3回のNIAHに限られ、実ワークロードの全失敗様式を保証しない。科学文書では品質劣化が大きく、70B級、コード、多言語、エージェントtraceでの検証も必要である。","differences":"PDTrimやSWSはFP16で残す位置と完全に捨てる位置を選ぶのに対し、SpectrumKVは全トークンを保持し精度だけを変える。KVQuant/KIVIはKV量子化を行うが基本的にグループ内の精度を一様にするのに対し、SpectrumKVはトークン単位で精度tierを選ぶ。OrbitFlowは層ごとにGPU/CPU/disk配置を選び、SplitZipは無損失圧縮を行うため、これらは精度割当と直交し組合せ可能である。","implementation_status":"arXiv v1と公開artifact kvcache-labが存在する。実験コードとraw dataは公開済みだが、vLLM等へ統合された本番PD runtimeとしては未完成で、論文自身が次段階として明示する。","research_positioning":"KVキャッシュのオフロード・再計算・圧縮系統のうち、プリフィル・デコード分離時の通信圧縮に位置する。ストレージ階層をGPU/CPU/SSDの場所だけでなく、FP16/INT8/INT4という情報精度階層として捉える点が特徴で、将来のコールドKV取得や層配置と組み合わせやすい。","relation_to_existing_repository":"DistServe、Mooncake、FlowKVなど分離サービングが生むKV通信ボトルネックへ直接接続し、OrbitFlowの層配置、LMCacheのオフロード、SplitZipの無損失圧縮と補完関係にある。SSD/NVMeを直接評価しないが、低精度近似をデコード側へ残して必要時のみ高精度化する設計は、多階層KVで下位ストレージからの再取得量を減らす方向へ拡張できる。","audit_required":false}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-7187daa359aadea2b4085b99",
+  "job_id": "job-research-ee741ee249b93f89",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7187daa359aadea2b4085b99",
+    "worker_id": "sol-bank-e2e-20260913",
+    "worker_kind": "scheduled_chat"
+  }
+}
