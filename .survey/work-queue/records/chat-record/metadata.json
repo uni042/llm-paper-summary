@@ -1,13 +1,19 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-6c933c22e82d66d9899c79f4",
-  "job_id": "job-research-054d8fd9fb06ca0f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-6c933c22e82d66d9899c79f4",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-6c933c22e82d66d9899c79f4","job_id":"job-research-054d8fd9fb06ca0f",
+  "data":{
+    "canonical_id":"arXiv:2310.18547","arxiv_id":"2310.18547","doi":"10.48550/arXiv.2310.18547","openreview_id":null,
+    "arxiv_categories":{"primary":"cs.DC","cross_list":["cs.LG"]},"title":"Punica: Multi-Tenant LoRA Serving",
+    "summary":"Punicaは、多数の利用者が同じ基盤LLMへ別々の低ランク適応（Low-Rank Adaptation; LoRA）を適用したモデルを同時に利用すると、従来のサービング系では異なるアダプタの要求を同じバッチへまとめられず、GPUメモリと計算資源が分断される問題を扱う。基盤重みをGPUごとに1コピーだけ保持し、要求ごとに異なるLoRA行列を一つのCUDA演算へまとめる分割集約行列ベクトル積（Segmented Gather Matrix-Vector Multiplication; SGMV）を導入する。さらに負荷を少数GPUへ寄せるスケジューラ、オンデマンドLoRA読込み、KVキャッシュ再計算による要求移動、ページ化KV管理を組み合わせる。A100クラスタ上のLlama-2 7B/13B/70B評価では、複数LoRAが混在しても高いバッチ効率を維持し、固定GPU資源で従来系より最大12倍のスループットを約2ms/tokenの追加遅延で実現した。",
+    "list_summary":"異なるLoRAアダプタの要求をSGMVカーネルで同一バッチ処理し、基盤LLMを共有したまま多テナント推論を集約するサービング基盤。固定GPU資源で最大12倍のスループットを報告。",
+    "authors":["Lequn Chen","Zihao Ye","Yongji Wu","Danyang Zhuo","Luis Ceze","Arvind Krishnamurthy"],"authors_affiliations":"University of Washington、Duke University。",
+    "published":"2023-10-28","publication":"arXiv:2310.18547v1","publication_type":"プレプリント","publication_status":"arXiv v1","lineage":"llm-serving-scheduling-disaggregation",
+    "topics":["多テナントLoRAサービング","LoRA","GPUバッチ処理","CUDAカーネル","SGMV","要求スケジューリング","ページ化KVキャッシュ"],
+    "importance":"高。LoRAアダプタをモデル単位に分離して配備するのではなく、共有基盤モデル上で異種アダプタ要求を一つのバッチへ統合する設計を確立した初期の代表的システムで、後続のS-LoRAや多数アダプタサービング研究の基準点になる。",
+    "hardware_evaluation":"Testbed #1はNVIDIA A100 80GBを1基搭載した単一サーバ。Testbed #2はNVIDIA HGX A100 40GBを各8基搭載した2サーバ、計16 GPUで、NVSwitchを利用する。",
+    "quality_effect":"推論アルゴリズムやモデル精度を近似変更する方式ではなく、同じ基盤モデルとLoRA重みを別の実行方式で処理するため、主張上の品質劣化はない。評価用LoRA重みはランダム値であり、性能測定が中心で、実タスク品質の比較は主評価ではない。",
+    "source":"https://arxiv.org/abs/2310.18547","sources":["https://arxiv.org/abs/2310.18547","https://arxiv.org/html/2310.18547","https://github.com/punica-ai/punica"],"code":"https://github.com/punica-ai/punica",
+    "implementation":"公式GitHubでPunicaを公開。CUDAカーネルはPyTorch Extensionとして公開し、Llama実装、FlashInferベース注意、Rust製scheduler/frontend/runnerを組み合わせる。","last_checked":"2026-09-14",
+    "references":[{"canonical_id":"openreview:nZeVKeeFYf9","openreview_id":"nZeVKeeFYf9"},{"canonical_id":"doi:10.1145/3600006.3613165","doi":"10.1145/3600006.3613165"},{"canonical_id":"arXiv:2305.14314","arxiv_id":"2305.14314"},{"canonical_id":"arXiv:2210.17323","arxiv_id":"2210.17323"},{"canonical_id":"arXiv:2305.09781","arxiv_id":"2305.09781"},{"canonical_id":"doi:10.1145/3458817.3476209","doi":"10.1145/3458817.3476209"},{"canonical_id":"doi:10.1145/3341301.3359658","doi":"10.1145/3341301.3359658"},{"canonical_id":"arXiv:2305.17118","arxiv_id":"2305.17118"},{"canonical_id":"arXiv:2306.00978","arxiv_id":"2306.00978"},{"canonical_id":"doi:10.18653/v1/2021.acl-long.378","doi":"10.18653/v1/2021.acl-long.378"}],"references_checked_at":"2026-09-14","references_source":"arXiv v1 HTML版参考文献節","references_total":30
+  },
+  "reservation":{"claim_id":"claim-6c933c22e82d66d9899c79f4","worker_id":"scheduled-chat-discovery-run7-normal-20260913T1601Z","worker_kind":"scheduled_chat"}
 }
