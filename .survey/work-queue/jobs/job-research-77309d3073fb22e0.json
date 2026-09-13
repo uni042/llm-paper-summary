@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-77309d3073fb22e0",
+  "type": "research",
+  "parent_job_id": "job-6ffea3ac8e0b44f6",
+  "priority": 80,
+  "canonical_id": "arXiv:2608.02244",
+  "title": "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+  "source_url": "https://arxiv.org/abs/2608.02244",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.02244-resource-fair-batched-llm-serving.md",
+  "selection_reason": "decode batchの1 step費用が最大KV footprintの要求に引きずられ、短い要求が長い要求と同居すると自身のtoken量に不釣り合いなGPU資源を負担するbatching externalityを定式化する。要求間decode進捗差を制限するresource-fair schedulingとISJLを提案し3/4のcompetitive ratioを証明する。実システム実装より理論寄りだが、KV footprint・batch構成・token課金を同一モデルで扱うscheduler設計資料として有用。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T01:31:32+00:00",
+  "artifact_transport": "structured_record_v10"
+}
