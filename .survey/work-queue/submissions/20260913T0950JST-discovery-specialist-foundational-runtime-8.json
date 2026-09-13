@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e9cf4499f0d72a37",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2309.06180",
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "source_url": "https://arxiv.org/abs/2309.06180",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2023-2309.06180-pagedattention-vllm-memory-management.md",
+      "priority": 96,
+      "reason": "KVキャッシュの断片化・過剰予約をOSのpagingに着想したPagedAttentionで解消し、その上にvLLMを構築した基礎的推論システム論文。一次資料では同等遅延でFasterTransformer/Orca比2〜4倍のthroughputを報告し、現在のLLMサービング基盤に極めて大きな影響を与えた。未収録なら最優先級の基礎論文。"
+    },
+    {
+      "canonical_id": "arXiv:2312.07104",
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "source_url": "https://arxiv.org/abs/2312.07104",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-radixattention-structured-program-runtime.md",
+      "priority": 94,
+      "reason": "複数generation、control flow、構造化入出力を含むLLM programをfrontend languageとruntimeで統合し、RadixAttentionによるKV再利用やcompressed FSMを導入する基礎的実行基盤。一次資料では多様な言語・マルチモーダルtaskで最大6.4倍のthroughputを報告し、現在の主要推論基盤SGLangの原点として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2401.08671",
+      "title": "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference",
+      "source_url": "https://arxiv.org/abs/2401.08671",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+      "priority": 89,
+      "reason": "長いpromptとgenerationをDynamic SplitFuseで組み合わせ、prefillとdecodeの粒度を調整しながら高throughput・低latencyを両立するDeepSpeed系サービング基盤。一次資料ではvLLM等に対し最大2.3倍のeffective throughput、平均latency最大2倍改善、token-level tail latency最大3.7倍改善を報告する。chunked prefill/SplitFuse系の比較軸として重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T09:28:10+09:00",
+    "round": "specialist-foundational-runtime-8",
+    "axis": "基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse",
+    "query_summary": "基礎サービング重要未収録軸を別系統へ展開し、PagedAttention/vLLM、SGLang、DeepSpeed-FastGenを一次arXiv抄録で軽量評価した。送信直前の最新HEADで決定論的research jobはいずれも不存在で、repo内title/arXiv ID検索にも一致がなかったためActions最終identity gateへ送る。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は長文脈・分離KV・preemptible cloudの基礎系（LoongServe、Mooncake、SpotServe）を確認し、その後はrecent kernel/edgeへ軸を変える",
+    "empty_round_reason": null
+  }
+}
