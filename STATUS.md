@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 00:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 00:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,11 +36,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **165** |
-| 処理中（Active claims） | **1** |
-| 今すぐ着手可能（Claimable） | **164** |
+| 処理中（Active claims） | **3** |
+| 今すぐ着手可能（Claimable） | **162** |
 | :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **0** |
-| その他/帰属不明 Active claims | **1** |
+| その他/帰属不明 Active claims | **3** |
 | :30 通常worker 直近claim | **09-13 20:20 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **33** |
 | 最新通常run | **2026-09-13T19:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **2 min** |
+| 最古の有効claimの経過時間 | **4 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P90 `arXiv:2607.05147` — DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation
-- P89 `arXiv:2410.15332` — EPIC: Efficient Position-Independent Context Caching for Serving Large Language Models
 - P88 `arXiv:2603.23049` — PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
 - P88 `arXiv:2607.28699` — WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization
 - P88 `arXiv:2606.23521` — Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference
+- P88 `arXiv:2512.22219` — Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs
+- P88 `arXiv:2608.15241` — LOCAL: Enabling Learning On-device Contiguously for Agent LLMs
 
 ## 参考情報
 
