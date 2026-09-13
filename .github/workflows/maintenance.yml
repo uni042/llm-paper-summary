@@ -82,6 +82,10 @@ jobs:
             --markdown-out /tmp/overview-result-quality-audit.md \
             --json-out /tmp/overview-result-quality-audit.json
 
+      - name: Refresh metadata coverage
+        if: steps.pending.outputs.pending == 'true'
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out .survey/reports/metadata-coverage-latest.json --strict
+
       - name: Audit queue, state, quality regressions, and report freshness
         if: steps.pending.outputs.pending == 'true'
         id: health
