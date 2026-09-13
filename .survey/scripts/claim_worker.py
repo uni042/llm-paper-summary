@@ -178,8 +178,41 @@ def _immutable_descriptors(root: Path) -> list[dict[str, Any]]:
                 continue
             row = dict(value)
             row["kind"] = value.get("kind") or kind
+            row["_failure_result_durable"] = bool(
+                immutable_submission.result_matches_identity(result, value)
+                and isinstance(result, dict)
+                and result.get("ok") is False
+            )
             out.append(row)
     return out
+
+
+def _repair_jobs_with_only_durable_failures(
+    root: Path,
+    descriptors: list[dict[str, Any]],
+) -> set[str]:
+    """Return repair jobs whose pending attempts are all durably failed.
+
+    A descriptor without a matching result remains an in-flight barrier. Once every
+    pending descriptor for a ready ``repair_required`` job has an exact failure
+    result, a new claim may safely repair it without racing the submission processor.
+    """
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for descriptor in descriptors:
+        job_id = str(descriptor.get("job_id") or "")
+        if job_id:
+            grouped.setdefault(job_id, []).append(descriptor)
+
+    repairable: set[str] = set()
+    for job_id, pending in grouped.items():
+        job = _read(root / ".survey/work-queue/jobs" / f"{job_id}.json", {})
+        if not isinstance(job, dict):
+            continue
+        if job.get("status") != "ready" or job.get("repair_required") is not True:
+            continue
+        if pending and all(item.get("_failure_result_durable") is True for item in pending):
+            repairable.add(job_id)
+    return repairable
 
 
 def _release_durable_claims(
@@ -194,6 +227,7 @@ def _release_durable_claims(
         for item in descriptors
     }
     submitted_jobs = {str(item.get("job_id")) for item in descriptors}
+    submitted_jobs -= _repair_jobs_with_only_durable_failures(root, descriptors)
     for job_id, current in list(claims.items()):
         attempt_id = current.get("attempt_id")
         if (job_id, str(attempt_id)) not in durable_attempts:
