@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 19:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 19:19 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -46,7 +46,7 @@
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **55** |
-| 最新通常run | **2026-09-13T17:30:00+09:00** |
+| 最新通常run | **2026-09-13T18:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
 | 最古の有効claimの経過時間 | **430 min** |
 
@@ -63,7 +63,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 指標 | 件数 / 率 |
 |---|---:|
 | Research完了 | **64** |
-| Repo収録 | **64** |
+| Repo収録 | **66** |
 | Audit完了 | **0** |
 | 探索評価候補 | **683** |
 | Research候補採用 | **210** |
@@ -71,21 +71,21 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **44.7%** |
 | 探索専用worker run（毎時枠） | **15** |
 | 探索専用worker round（stats観測） | **141** |
-| 通常worker run（ledger観測） | **21** |
+| 通常worker run（ledger観測） | **22** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 683 → 重複除外後 378 → Research候補採用 210 → Research完了 64 → Repo収録 64**
+**探索評価 683 → 重複除外後 378 → Research候補採用 210 → Research完了 64 → Repo収録 66**
 
 ## 直近の通常worker
 
-Run: **2026-09-13T17:30:00+09:00**
+Run: **2026-09-13T18:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
 | Research完了 | **0** |
-| Repo収録 | **0** |
+| Repo収録 | **2** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
