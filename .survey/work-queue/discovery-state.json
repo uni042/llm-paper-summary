@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T01:31:32+00:00",
+  "updated_at": "2026-09-13T01:34:08+00:00",
   "last_run_key": "2026-09-13T10:16:01+09:00",
-  "last_round": "specialist-scheduling-5",
+  "last_round": "specialist-specdecode-6",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2812,6 +2812,24 @@
       ],
       "next_axis_hint": "投機的復号のruntime/resource sharing、特にremote drafter・draft vocabulary・edge memory-aware schedulingへ移る",
       "source_submission": "work-queue/submissions/20260913T1031JST-discovery-specialist-scheduling-5.json"
+    },
+    {
+      "run_key": "2026-09-13T10:16:01+09:00",
+      "round": "specialist-specdecode-6",
+      "axis": "投機的復号runtime・draft resource・CPU制約",
+      "query_summary": "投機的復号のserving/runtime軸を探索し、SPECTREとMemSpecは既収録済みとして除外した。MicroSpecとAdaptiveSDは最新HEADのexisting research jobsで未登録を再確認した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2605.08151",
+        "arXiv:2608.10362"
+      ],
+      "next_axis_hint": "階層KV memory service・SSD/DRAM tiering・prefix reuseの新着、次いでforward/backward citation経路を探索する",
+      "source_submission": "work-queue/submissions/20260913T1034JST-discovery-specialist-specdecode-6.json"
     }
   ],
   "axes": {
@@ -4394,6 +4412,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "投機的復号のruntime/resource sharing、特にremote drafter・draft vocabulary・edge memory-aware schedulingへ移る"
+    },
+    "投機的復号runtime・draft resource・CPU制約": {
+      "last_run_key": "2026-09-13T10:16:01+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "階層KV memory service・SSD/DRAM tiering・prefix reuseの新着、次いでforward/backward citation経路を探索する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

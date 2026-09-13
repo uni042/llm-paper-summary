@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T01:32:50.788455+00:00",
+  "updated_at": "2026-09-13T01:35:28.438037+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,16 +17069,16 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T01:32:50.788455+00:00",
+      "last_recorded_at": "2026-09-13T01:35:28.438037+00:00",
       "signals": [
         "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 0,
-        "new_jobs": 2,
+        "new_jobs": 5,
         "new_papers": 0,
         "fallback_archived": 0
       },
@@ -17096,11 +17096,33 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34730842925:1",
+          "recorded_at": "2026-09-13T01:35:28.438037+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34730842925",
+            "run_attempt": "1",
+            "source_sha": "9e37075a832af31add13e923e54cde21dd39c56f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
         {
           "job_id": "job-6ffea3ac8e0b44f6",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-f76f51c593bcba6f",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -17122,11 +17144,33 @@
           "type": "research",
           "canonical_id": "arXiv:2608.02244",
           "title": "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling"
+        },
+        {
+          "job_id": "job-3223d356f498e7ef",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-2d9b8557211e7f73",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.03876",
+          "title": "AdaptiveSD A Stability-Aware, Runtime-Adaptive Speculative Decoding Framework with Multi-Policy Orchestration for CPU-Constrained LLM Inference"
+        },
+        {
+          "job_id": "job-research-eb3b75f01826c8e7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2605.26444",
+          "title": "MicroSpec: Accelerating Speculative Decoding with Lightweight In-Context Vocabularies"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
-        ".survey/work-queue/results/20260913T1031JST-discovery-specialist-scheduling-5.json"
+        ".survey/work-queue/results/20260913T1031JST-discovery-specialist-scheduling-5.json",
+        ".survey/work-queue/results/20260913T1034JST-discovery-specialist-specdecode-6.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,
