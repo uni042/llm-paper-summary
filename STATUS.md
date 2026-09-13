@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 17:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 17:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -19,13 +19,12 @@
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | 全文精読完了（累計） | **219** |
-| 保守状態（Maintenance） | **issues_found** |
-| 整合性チェック（Consistency） | **issues_found** |
+| 保守状態（Maintenance） | **passed** |
+| 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **14 / 24** |
 
 ### 要注意
 
-- Consistency check: **issues_found**
 - 候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。
 
 <!-- research-throughput-status:start -->
@@ -35,7 +34,7 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
-| 処理速度 | **OK** |
+| 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **171** |
 | 処理中（Active claims） | **43** |
 | 今すぐ着手可能（Claimable） | **128** |
@@ -47,14 +46,15 @@
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **57** |
-| 最新通常run | **2026-09-13T16:30:00+09:00** |
-| 最新通常runのResearch完了 | **3** |
+| 最新通常run | **2026-09-13T17:30:00+09:00** |
+| 最新通常runのResearch完了 | **0** |
 | 最古の有効claimの経過時間 | **330 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
+- **処理速度 LOW**: ready=171 の高在庫状態で、最新通常runのResearch完了は 0 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **57件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -71,8 +71,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | 重複率 | **43.9%** |
 | 探索専用worker run（毎時枠） | **17** |
 | 探索専用worker round（stats観測） | **146** |
-| 通常worker run（ledger観測） | **21** |
-| Fallback archive（全helper） | **18** |
+| 通常worker run（ledger観測） | **22** |
+| Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
@@ -80,12 +80,12 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 ## 直近の通常worker
 
-Run: **2026-09-13T16:30:00+09:00**
+Run: **2026-09-13T17:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **3** |
-| Repo収録 | **3** |
+| Research完了 | **0** |
+| Repo収録 | **0** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
