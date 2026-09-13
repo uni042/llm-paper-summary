@@ -99,8 +99,14 @@ jobs:
                   result_path.unlink(missing_ok=True)
 
           job_id = inbox.get('job_id')
-          if result and result.get('job_id') == job_id and result.get('ok') is True:
-              print('Reusable Chat result matches current inbox.')
+          attempt_id = inbox.get('attempt_id')
+          if (
+              result
+              and result.get('job_id') == job_id
+              and result.get('attempt_id') == attempt_id
+              and result.get('ok') is True
+          ):
+              print('Reusable Chat result matches current inbox job/attempt.')
               raise SystemExit(0)
 
           paper = inbox.get('paper_path')
@@ -126,6 +132,7 @@ jobs:
                       'submission': 'work-queue/submissions/chat-inbox.json',
                       'ok': True,
                       'job_id': job_id,
+                      'attempt_id': attempt_id,
                       'job_type': job.get('type'),
                       'artifact': {'paper': paper},
                       'job_status': 'completed',
