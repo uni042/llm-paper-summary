@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-a5b56dfa209210cbe7adf075",
+  "job_id": "job-research-5c8a51a10227b970",
+  "claim_id": "claim-a5b56dfa209210cbe7adf075",
+  "worker_id": "scheduled-chat-llm-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "status": "completed",
+  "record_bank": "a",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.13358-ppd-disaggregation-multiturn-serving.md",
+  "record_slots": [
+    {"slot": "metadata", "path": ".survey/work-queue/records/chat-record/metadata.json", "blob_sha": "10cb312ae4c7ab03a1303e97d5df19112aa84d87"},
+    {"slot": "problem_method", "path": ".survey/work-queue/records/chat-record/problem_method.json", "blob_sha": "4564d29090209c0d8e5278f22a48f5faa12be723"},
+    {"slot": "evaluation", "path": ".survey/work-queue/records/chat-record/evaluation.json", "blob_sha": "20ae2ef4e5f9f4e39194e207bf6b9372cab517c7"},
+    {"slot": "results", "path": ".survey/work-queue/records/chat-record/results.json", "blob_sha": "13e146499c68df7fbaf2521a7dd171066bf851a1"},
+    {"slot": "positioning", "path": ".survey/work-queue/records/chat-record/positioning.json", "blob_sha": "bad114064d4fdaae7194ca2083c6693575dbcc57"}
+  ],
+  "audit_required": false,
+  "depends_on_job_ids": ["job-research-5c8a51a10227b970"]
+}
