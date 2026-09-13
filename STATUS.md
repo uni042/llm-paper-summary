@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 01:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 01:42 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **153** |
+| 未処理の論文候補（Research ready） | **152** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **236** |
+| 全文精読完了（累計） | **237** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **18 / 24** |
@@ -35,13 +35,13 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **153** |
+| 未処理候補（Research ready） | **152** |
 | 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **151** |
+| 今すぐ着手可能（Claimable） | **150** |
 | :30 通常worker Active claims | **2** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 01:39 JST** |
+| :30 通常worker 直近claim | **09-14 01:41 JST** |
 | :00 補助worker 直近claim | **09-13 17:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
@@ -54,7 +54,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=153 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=152 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **33件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P88 `arXiv:2605.05639` — TokenStack: A Heterogeneous HBM-PIM Architecture and Runtime for Efficient LLM Inference
 - P88 `arXiv:2603.19133` — A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference
 - P88 `arXiv:2605.04357` — Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs
 - P88 `arXiv:2601.13684` — HeteroCache: A Dynamic Retrieval Approach to Heterogeneous KV Cache Compression for Long-Context LLM Inference
 - P88 `arXiv:2607.08565` — SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling
+- P88 `arXiv:2602.06932` — When RL Meets Adaptive Speculative Training: A Unified Training-Serving System
 
 ## 参考情報
 
