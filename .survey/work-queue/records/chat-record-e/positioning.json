@@ -1,13 +1,17 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "positioning",
   "attempt_id": "attempt-d880cf5cfb9f526f90eb762f",
   "job_id": "job-research-e2c6f510b1f31074",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d880cf5cfb9f526f90eb762f",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "slot": "positioning",
+  "data": {
+    "limitations": "評価はRTX A6000上のQwen/Llama/Ministral、APPSとMATH、1〜4段階のReAct型ワークフローに限られる。実運用で見られる数十段階の分岐・並列エージェント、異種GPU、複数ノード、プリフィル・デコード分離環境は未検証である。モデルはワークフロー開始時に原則固定されるため、途中段階ごとに最適モデルへ切り替える可能性は利用していない。成功確率ルータはオフライン正誤ラベルを必要とし、新規モデル追加時には再学習・校正が必要になり得る。負荷推定は予測トークン量と平均復号時間に基づく近似で、KV容量、プリフィル費用、通信、バッチ形状の非線形性を直接モデル化しない。著者公式コードは一次資料から確認できない。",
+    "differences": "vLLMは同一モデル複製間の負荷分散、MLFQは受けたサービス時間に基づく優先度、LTRは単一要求の相対出力長予測を主に扱う。Chimeraは異種モデルの品質差そのものをモデル選択変数にし、現在の混雑を実行中予測トークン量で推定したうえで、現在段階ではなく残りワークフロー全体の出力長で順位付けする。Autellixのようなエージェントプログラム認識スケジューリングとは目的が近いが、Chimeraはさらに異種モデル能力と意味ルーティングを共同最適化する。",
+    "implementation_status": "vLLMの上位ミドルウェアとしてエンドツーエンド試作。OpenAI互換API、ModernBERT-large意味ルータ、CPU Quantile Random Forest長さ予測器、実行中トークン監視、モデル別優先待ち行列、加齢制御を統合する。一次資料から著者公式公開リポジトリは確認できない。",
+    "research_positioning": "複数エージェント型LLMサービング、異種モデルルーティング、出力長予測スケジューリングの交点に位置する。従来は別問題として扱われがちだった『どのモデルを使うか』と『どの要求をいつ実行するか』を、実時間混雑を介して一つの予測制御問題へまとめた研究である。",
+    "relation_to_existing_repository": "Autellixなどのエージェント認識サービングが同種エンジン上のプログラム待ち時間を最適化するのに対し、Chimeraは異なる能力のLLM間で品質も含めて仕事を配る。HexAGenTがプリフィル・デコード分離と異種GPUを含むワークフロー配置を扱うのに対し、Chimeraは異種LLMモデルそのものの選択と意味品質を扱うため補完的である。DistServe/Splitwiseのような計算段階分離、JengaのKVメモリ管理とも直交し、それらを各モデルの推論エンジン内部に置いたまま上位でルーティングできる。",
+    "audit_required": true,
+    "audit_reason": "著者公式コード公開状況、ICML正式採録状態、より大規模・分岐型ワークフローや異種GPUでの再現性を後続監査する。"
+  },
+  "reservation": {"claim_id":"claim-d880cf5cfb9f526f90eb762f","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
 }
