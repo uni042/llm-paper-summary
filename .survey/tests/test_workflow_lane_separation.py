@@ -65,6 +65,13 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
             self.assertNotIn("group: survey-claim-main", text, name)
             self.assertNotIn("group: survey-submission-main", text, name)
 
+    def test_citation_schema_hook_is_idempotent_for_current_queue_contract(self):
+        text = self._text("citation-graph-backfill.yml")
+        self.assertIn("queue_has_reference_contract", text)
+        self.assertIn("if not queue_has_reference_contract:", text)
+        self.assertIn("'references_checked_at' in text", text)
+        self.assertIn("'references_total' in text", text)
+
 
 if __name__ == "__main__":
     unittest.main()
