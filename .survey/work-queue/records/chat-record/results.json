@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-439eb29ba8901a4bd7b7941a",
-  "job_id": "job-research-d01c0f0ba3d381e1",
-  "data": {
-    "overview": "FlowPrefillは、長い事前充填を小さな固定チャンクへ常時分割しなくても、演算子境界で必要時だけ中断できるため、GPU効率を保ったまま厳しいTTFT要求を先頭待ちから救える。QwenTraceを用いた3種類の密モデル評価では、素のDistServeに対して持続可能な要求率を4.7〜5.6倍へ高め、実用上の主要比較である2048トークンのチャンク化方式に対しても最大2.0倍のgoodputを達成した。同じ負荷では満たせるSLOを最大3.1倍厳しくでき、演算子境界割込みの待ち時間はすべて4.5ミリ秒未満だった。つまり改善は単なる平均処理量ではなく、異なる用途の遅延目標を守りながら同じGPUで受けられる要求数を増やす効果として現れている。",
-    "key_results": [
-      {"metric":"異種SLO下の有効処理量","value":"素のDistServe比4.7〜5.6倍、DistServe-CP2K比最大2.0倍、DistServe-CP8K比最大4.5倍","baseline":"DistServeおよび固定チャンク事前充填","condition":"Llama3-8B、Qwen2.5-14B、Llama3-70B、QwenTrace、90% SLO達成をgoodput条件に使用","interpretation":"固定チャンクを細かくして応答性を得る方式より、必要時だけ演算子境界で割り込む方が、事前充填の高いGPU効率と短要求の低待ち時間を両立できる。"},
-      {"metric":"満たせるSLOの厳しさ","value":"DistServe-CP2K比1.5〜2.3倍、DistServe-CP8K比2.1〜3.1倍厳しいSLOを達成","baseline":"固定チャンク + EDF","condition":"同一QwenTrace負荷でSLO閾値を変化","interpretation":"処理量増加だけでなく、同じ到着率でより厳しいTTFT契約を維持できるため、用途別SLOを混載する実運用で余裕が増える。"},
-      {"metric":"割込み待ち時間","value":"層境界方式より平均3.5〜4.2倍短く、観測された全割込み待ち時間が4.5ミリ秒未満","baseline":"layer-level preemption","condition":"3種類の密モデルでの演算子境界割込み評価","interpretation":"一層全体の終了を待たず主要演算子ごとに安全点を置くことで、長い層を持つモデルでも高優先度要求へ数ミリ秒で切り替えられる。"},
-      {"metric":"通常経路のオーバーヘッド","value":"ShareGPT単一SLO負荷で基準系と同程度のスループットを維持しつつSLO達成率を改善","baseline":"割込み確認を持たない基準実行","condition":"500要求、入力2K未満、ポアソン到着","interpretation":"各演算子境界の確認処理は常時スケジューラを起動する方式と異なり、通常時の処理量を目立って損なわない。"},
-      {"metric":"MoE互換性","value":"Qwen3-30B-A3Bで固定チャンク方式より最大1.6倍高いgoodput、最大2.4倍厳しいSLOを達成","baseline":"DistServeのチャンク化方式","condition":"Qwen3-30B-A3B、テンソル並列2、ゲート・専門家演算周辺にも割込み点を追加","interpretation":"密モデル固有の演算境界に限定されず、MoEの融合演算を考慮した安全点を設ければ同じ設計原理を適用できる。"},
-      {"metric":"事前充填・復号同居時の復号SLO","value":"適応的割込みによりTBT SLO達成率を最大1.6倍改善","baseline":"同居配置での固定実行","condition":"prefill/decode colocated構成","interpretation":"主対象はTTFTだが、長い事前充填を素早く中断できることが復号の待ち時間にも波及し、同居環境の干渉を緩和する。"}
-    ],
-    "negative_results": "固定チャンクを併用する場合は中間的なチャンクサイズが最も良く、2048トークンのように小さすぎるチャンクでは分割オーバーヘッドが増え、16384トークンのように大きすぎるチャンクでは先頭待ちが残る。バッチ予算を大きくしても処理量が大幅に増えない条件があり、過大なバッチはSLO違反リスクを高める。複数事前充填インスタンス間の負荷不均衡は対象外で、プロキシはラウンドロビンに留まる。",
-    "interpretation": "結果は、事前充填を物理的に細切れにすることと、割込み可能性を高めることが同じ操作である必要はないことを示す。FlowPrefillは通常時には大きな連続計算を維持し、優先度変化が起きた時だけ短い演算子境界を利用するため、細粒度制御の費用をイベント発生時へ集中できる。さらにSLO余裕を見て既に達成不能な要求を後回しにすることで、一つの遅延要求が多数の達成可能要求を巻き込む状況を避ける。最大5.6倍というgoodput差は、単なる演算カーネル高速化ではなく、先頭待ちによるSLO失敗を減らして同一設備の有効容量を増やした結果である。",
-    "quality_impact": "モデル計算やトークン選択を近似せず、要求の実行順と事前充填の中断位置だけを変えるため、アルゴリズム上は生成品質を変えない。論文は品質ベンチマークではなくサービング性能を評価しており、出力一致の専用検証値は示していない。"
-  },
-  "reservation": {"claim_id":"claim-439eb29ba8901a4bd7b7941a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-cf763136f707815625b2cf96",
+  "job_id": "job-research-39ac27aff531cdb5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-cf763136f707815625b2cf96",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

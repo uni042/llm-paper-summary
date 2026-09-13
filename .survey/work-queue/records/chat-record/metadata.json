@@ -2,32 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-439eb29ba8901a4bd7b7941a",
-  "job_id": "job-research-d01c0f0ba3d381e1",
-  "data": {
-    "canonical_id": "arXiv:2602.16603",
-    "arxiv_id": "2602.16603",
-    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
-    "list_summary": "演算子境界で事前充填を協調的に割り込み、イベント駆動のSLOスケジューリングと組み合わせて長い要求の先頭待ちを抑え、有効処理量を高める。",
-    "summary": "異なる最初のトークンまでの時間（time to first token; TTFT）目標を持つ要求が同居する大規模言語モデル推論では、長い事前充填がGPUを占有すると、後から来た短い要求が待たされる先頭待ちが発生する。従来のチャンク化事前充填はチャンクを小さくすると割込みしやすい一方、カーネル起動増加、KVキャッシュ再読出し、GPU利用率低下で処理量を損なう。FlowPrefillはスケジューリング周期を細かくする代わりに、主要演算子の境界へ軽量な協調的割込み点を置き、要求到着・完了時だけ動くイベント駆動スケジューラから中断信号を送る。SLO余裕を考慮した優先度とバッチ形成を組み合わせ、実運用追跡で既存方式より最大5.6倍の有効処理量を報告する。",
-    "source": "https://arxiv.org/abs/2602.16603",
-    "sources": ["https://arxiv.org/abs/2602.16603", "https://arxiv.org/html/2602.16603"],
-    "authors": ["Chia-chi Hsieh", "Zan Zong", "Xinyang Chen", "Jianjiang Li", "Jidong Zhai", "Lijie Wen"],
-    "published": "2026-02-18",
-    "publication": "arXiv:2602.16603",
-    "publication_type": "preprint",
-    "publication_status": "arXiv v1",
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
-    "topics": ["LLM推論", "事前充填", "SLOスケジューリング", "協調的割込み", "先頭待ち", "事前充填・復号分離"],
-    "implementation": "vLLM 0.11.2を基盤に、主要演算子境界の協調的割込み、テンソル並列で安全な同期、イベント駆動スケジューラ、SLO余裕を用いる優先制御とバッチ形成を実装した研究プロトタイプ。",
-    "code": null,
-    "last_checked": "2026-09-13",
-    "hardware_evaluation": "主評価はNVIDIA A800-SXM4-80GBを8基、GPU間200 GB/s NVLink、Intel Xeon Platinum 8470を2基、ホストメモリ1 TBのサーバーで実施。動機付けの一部ではA100-SXM4-40GBも使用する。",
-    "quality_effect": "モデル重みや演算内容を近似する手法ではなく、事前充填の実行順序・割込み位置・バッチ構成を変える。したがって生成品質を意図的に低下させる方式ではない。評価はTTFT、SLO達成率、有効処理量、割込み遅延が中心で、生成品質ベンチマークは報告していない。",
-    "references": [],
-    "references_checked_at": "2026-09-13",
-    "references_source": "arXiv HTML reference section",
-    "references_total": 62
-  },
-  "reservation": {"claim_id":"claim-439eb29ba8901a4bd7b7941a","worker_id":"scheduled-chat-llm-survey","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-cf763136f707815625b2cf96",
+  "job_id": "job-research-39ac27aff531cdb5",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-cf763136f707815625b2cf96",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
