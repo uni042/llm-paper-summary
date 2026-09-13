@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-65726a91bc5e5168cef13307",
   "job_id": "job-research-f9d3c5ad391e4acc",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-65726a91bc5e5168cef13307",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "推論専用は4×NVIDIA A6000 48GB GPUのサーバ、微調整専用と統一微調整・推論は4×NVIDIA H800 80GB GPUのサーバを使用する。各test processは少なくとも128GBのhost memoryを利用できる。",
+    "software": "Loquetier公式実装、PyTorch/Transformers、PEFT、FlashInfer。比較はFlexLLM、S-LoRA+PEFT、HuggingFace Transformers+PEFT。FlexLLMは公開Docker手順に従い、論文Appendix Bで不足していたbackward operationを実装して評価可能な状態へ補正する。",
+    "methodology": "基盤モデルはLlama-3 8B。推論adapterはAlpacaで学習したLoRAを使用し、推論入力はShareGPT。fine-tuningは同じLoRA configurationでGaussian初期化し、AlpacaとGSM8Kを入力にする。推論専用ではrequest arrival rateを変え、SLO達成率、decode throughput、request throughputを測る。fine-tuning専用では指定epochを終えるまでの時間、training/evaluation throughputを測る。統一タスクでは単一/複数LoRAのfine-tuningと単一/複数LoRA inferenceを組み合わせ、fine-tuning efficiencyと推論SLOを同時評価する。さらにBurstGPTから低負荷・中負荷・高負荷の6区間を抽出した動的試験と、120分の実負荷模擬を行う。",
+    "scope": "評価対象はLlama-3 8BとLoRAが中心で、単一ノード4 GPU環境である。クラスタ間分散、70B以上の基盤モデル、複数ノードでのadapter migration、他のPEFT方式の性能は評価していない。S-LoRAはLlama-3のGQA形状にそのまま対応せず、K/V weight複製のworkaroundを用いており、kernel不安定性も観測されたため比較解釈には注意が必要である。",
+    "workloads": ["single/multi-LoRA inference", "single/multi-LoRA fine-tuning", "unified fine-tuning + inference", "BurstGPT dynamic workload"],
+    "baselines": ["FlexLLM", "S-LoRA + PEFT", "HuggingFace Transformers + PEFT"],
+    "metrics": ["SLO attainment", "request throughput (RPS)", "decode throughput (tokens/s)", "fine-tuning throughput (tokens/s)", "evaluation throughput", "model loading time", "additional storage footprint"],
+    "reproducibility": "NeurIPS再現性チェックリストで計算資源を明示し、公式GitHubにframework、kernel、examples、testsを公開する。論文はmodel、dataset、load区分、baseline制約、BurstGPTの利用区間とpeak RPSをAppendixまで記載している。"
+  },
+  "reservation": {"claim_id": "claim-65726a91bc5e5168cef13307", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
