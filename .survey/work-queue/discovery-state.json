@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:17:42+00:00",
+  "updated_at": "2026-09-13T02:20:24+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-runtime-kernel-7",
+  "last_round": "specialist-important-serving-omission-8",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3009,6 +3009,25 @@
       ],
       "next_axis_hint": "最終枯渇確認として最新新着、network/CXL/SSD階層メモリ、forward/backward citationの3経路を再走査する",
       "source_submission": "work-queue/submissions/20260913T1117JST-discovery-specialist-runtime-7.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-important-serving-omission-8",
+      "axis": "recent検索から重要基礎系譜への欠落確認",
+      "query_summary": "recent serving queryでCrossPool 2606.24506、ORBITFLOW 2601.10729、P/D-Serve 2408.08147は既存jobとして重複確認。一方Llumnix 2406.03243はidentity delta・stable research job・repoタイトル検索の全てで未登録だったため、古い重要欠落として採用した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2606.24506",
+        "arxiv:2601.10729",
+        "arxiv:2408.08147"
+      ],
+      "next_axis_hint": "Llumnix採用で枯渇判定をリセットし、forward citation、backward reference、network/CXL/SSD、query expansion、重点テーマを独立に一巡する",
+      "source_submission": "work-queue/submissions/20260913T1119JST-discovery-specialist-important-omission-8.json"
     }
   ],
   "axes": {
@@ -4691,6 +4710,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.8,
       "next_axis_hint": "最終枯渇確認として最新新着、network/CXL/SSD階層メモリ、forward/backward citationの3経路を再走査する"
+    },
+    "recent検索から重要基礎系譜への欠落確認": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.75,
+      "next_axis_hint": "Llumnix採用で枯渇判定をリセットし、forward citation、backward reference、network/CXL/SSD、query expansion、重点テーマを独立に一巡する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
