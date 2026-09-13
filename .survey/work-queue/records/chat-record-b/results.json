@@ -2,23 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-28487ee4709e231070d69554",
-  "job_id": "job-research-dfc514a18ebaac1e",
-  "data": {
-    "overview": "MPKはA100・H100・B200上の単一GPU推論で、vLLM/SGLangに対して概ね1.0〜1.7倍の遅延改善を示し、小さいモデルや新しいGPUほどカーネル起動・同期削減の効果が大きい。8×H100の多GPUでは1.1〜1.4倍、素のPyTorchに対しては条件により10倍超の高速化を示す。Qwen3-8Bでは1トークン当たり293回あったカーネル起動を常駐巨大カーネル内のタスク実行へ置き換え、カーネル内スケジューラ費用を総実行時間の0.28%に抑えた。細粒度の通信分解、イベント圧縮、タスク間共有メモリにより、単なる起動費用削減以上の演算・通信重畳も得ている。",
-    "key_results": [
-      {"metric": "単一GPUの推論遅延", "value": "vLLM/SGLang比で最大1.7倍改善", "baseline": "vLLMおよびSGLang", "condition": "A100・H100・B200、5モデル、バッチ1〜16", "interpretation": "小バッチでカーネル起動と演算子境界同期の占める割合が大きいほど、常駐巨大カーネル化の利得が大きい。"},
-      {"metric": "Qwen3-8Bの1トークン遅延", "value": "A100で約14.5ms → 12.5ms", "baseline": "vLLM/SGLang約14.5ms", "condition": "Qwen3-8B、A100、バッチ1", "interpretation": "16GB程度の重みを1.6TB/sで読む約10msの帯域下限へ近づき、残る余地が主にメモリ帯域側へ移る。"},
-      {"metric": "多GPU推論", "value": "1.1〜1.4倍改善、PyTorch比では最大約10倍", "baseline": "SGLang/vLLMおよびPyTorch", "condition": "最大8×H100のテンソル並列", "interpretation": "集合通信を転送と局所集約へ分解して、受信済み断片から後続計算を開始できるため、多GPUでも巨大カーネル化の利得が残る。"},
-      {"metric": "細粒度演算通信重畳", "value": "反復遅延を約1.1倍改善", "baseline": "粗粒度通信同期", "condition": "Qwen3-1.7B、4×H100", "interpretation": "NVSHMEM転送と局所集約をSM粒度タスクへ分け、通信完了をGPU全体で待たない効果を示す。"},
-      {"metric": "タスク間パイプライン", "value": "最終構成で約1.2〜1.3倍短縮", "baseline": "パイプライン化前", "condition": "Qwen3-8B、B200、線形層の構成要素分解", "interpretation": "共有メモリで中間値を直接渡し、次タスクの入力先読みを現在計算へ重ねることで演算子境界の大域メモリ往復を削減する。"},
-      {"metric": "カーネル起動費用", "value": "293起動×3.8usで約1.1ms、CUDA Graphでも約0.2ms、MPKスケジューラは総時間の0.28%", "baseline": "eager起動とCUDA Graph", "condition": "Qwen3-8Bの1トークン処理", "interpretation": "CPU起動費用だけでなくGPU内の演算子同期までまとめて除去しつつ、分散スケジューリング自体の費用は小さい。"},
-      {"metric": "イベント圧縮", "value": "同期イベント数を37〜118倍削減", "baseline": "素朴なタスク依存グラフ", "condition": "評価対象5モデルのtGraph", "interpretation": "6.9万〜16.2万規模の依存を約1,142〜2,366イベントへ圧縮し、常駐ランタイムが保持可能な制御状態にする。"},
-      {"metric": "後続表の圧縮", "value": "4.4〜5.9倍、MoEでは約15倍縮小", "baseline": "密な後続タスク一覧", "condition": "グラフ線形化、Qwen3-8Bでは110,932B→18,928B", "interpretation": "同じイベントで解放される後続を連続範囲へ並べることで、GPU上の制御メタデータを削減する。"}
-    ],
-    "negative_results": "利得は一様ではない。Qwen3-8BのA100バッチ1では既に重み読出し帯域が主要下限となり、vLLM/SGLang比の改善は約14.5msから12.5msに留まる。常駐カーネルではスレッドごとのレジスタ割当が実行中の最大要求量に固定されるため、タスクごとにレジスタ資源を完全に時分割できない。代表バッチサイズ向けtGraphを複数事前生成する方式なので、任意の動的形状へゼロ費用で適応するわけではない。またオフライン固定長評価は実サービスの到着ゆらぎや尾部遅延を直接示さない。",
-    "interpretation": "MPKの高速化は『巨大な一つの算術カーネルを手書きした』ことだけではなく、細粒度依存をGPU内部のイベントへ変換して、従来はカーネル境界で失われていた並列性を回収したことにある。カーネル起動費用が大きい小モデル・新GPUでは起動削減が効き、通信比率が高い多GPUでは細粒度通信重畳が効く。一方、重み帯域が既に支配的な大モデルでは理論帯域下限へ近づくため改善余地が縮む。",
-    "quality_impact": "モデル演算の意味を変えないシステム最適化であり、量子化や近似注意などによる意図的な品質低下はない。性能差はタスク分解、スケジューリング、共有メモリ経路、通信重畳によるもので、同じBF16モデル計算を実行する。"
-  },
-  "reservation": {"claim_id": "claim-28487ee4709e231070d69554", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-716670c2b523b653002fe62a",
+  "job_id": "job-research-ff9dfc8e1a733b56",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-716670c2b523b653002fe62a",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-28487ee4709e231070d69554",
-  "job_id": "job-research-dfc514a18ebaac1e",
-  "data": {
-    "hardware": "NVIDIA A100、H100、B200を実機評価する。単一GPU評価に加え、最大8×H100のテンソル並列構成を用いる。A100は108 SM中104、H100は132中128、B200は148中144を実行ワーカーへ割り当て、残り4 SM相当をスケジューラへ確保する。",
-    "software": "PyTorchコンパイラの後段としてMPKを接続し、タスク実装生成にはMirageの探索器を用いる。多GPU通信はNVSHMEM、注意機構はページ化KV、実行はBF16。比較対象はvLLM、SGLang、素のPyTorchとコンパイル済みPyTorch。",
-    "methodology": "Qwen3-0.6B、Llama-3.2-1B-Instruct、Qwen3-1.7B、Qwen3-8B、Qwen3-30B-A3Bの5モデルを使用する。主評価はオフラインのバッチ推論で、最大バッチサイズ1〜16、入力64トークン、生成1024トークン、貪欲デコードとする。ページ化注意機構と連続バッチをすべての実装で有効にし、artifact手順では4回のウォームアップ後に5回測定した中央値を採る。単一GPUの一貫遅延、多GPUのテンソル並列、MoE負荷分散、通信重畳、タスク間パイプライン、イベント融合、グラフ線形化、スケジューラ費用を個別に分解評価する。",
-    "scope": "固定入力64・生成1024のオフライン推論を中心とした評価であり、実サービスのポアソン到着、混合入力長、優先度、SLO尾部遅延は直接測らない。代表バッチサイズ向けtGraphを事前生成して実行時に選ぶため、任意形状を毎回完全動的に再コンパイルする方式ではない。タスク実装はGPU世代ごとのコード生成器へ依存し、B200など新世代では生成器更新が必要になる。",
-    "workloads": ["Qwen3-0.6B", "Llama-3.2-1B-Instruct", "Qwen3-1.7B", "Qwen3-8B", "Qwen3-30B-A3B", "バッチ1〜16", "入力64・生成1024"],
-    "baselines": ["vLLM", "SGLang", "PyTorch eager", "torch.compileを用いたPyTorch"],
-    "metrics": ["1トークン当たり遅延", "エンドツーエンド推論遅延", "多GPU反復遅延", "カーネル起動費用", "イベント数", "後続表メモリ", "スケジューラ費用", "タスク間パイプライン高速化"],
-    "reproducibility": "公開Mirageリポジトリにartifact評価用固定ブランチtgx-osdi26-aeとcommit 8b981a4、Zenodo DOI 10.5281/zenodo.20563064があり、A100/H100/B200向け実行手順、モデル取得、測定スクリプトを提供する。Qwen3-30B-A3Bの再現には80GB級GPUメモリが必要とされる。"
-  },
-  "reservation": {"claim_id": "claim-28487ee4709e231070d69554", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-716670c2b523b653002fe62a",
+  "job_id": "job-research-ff9dfc8e1a733b56",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-716670c2b523b653002fe62a",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }

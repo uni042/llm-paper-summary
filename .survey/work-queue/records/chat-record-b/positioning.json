@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-28487ee4709e231070d69554",
-  "job_id": "job-research-dfc514a18ebaac1e",
-  "data": {
-    "limitations": "主評価は入力64・生成1024のオフライン固定長推論で、実サービスの要求到着ゆらぎ、混合入力長、優先度、尾部SLOは直接評価していない。連続バッチへの対応は代表的な2のべき乗バッチサイズ向けtGraphを事前生成して選択する方式であり、任意形状を毎回完全動的に最適化するわけではない。常駐カーネルではスレッドのレジスタ割当が最大要求量へ固定され、タスクごとのレジスタ時分割はできない。タスク実装生成器はGPU世代別に更新が必要で、MoEの分割法も経験的な負荷分散に依存する。",
-    "differences": "CUDA Graphは既存カーネル列のCPU起動費用を削減するが、MPKは演算子境界自体をSM粒度タスクへ崩し、GPU内の依存・共有メモリ・通信を再スケジュールする。TritonやMirageのような個別演算子／小グラフのカーネル生成器と競合するのではなく、それらをタスク実装生成に利用した上でモデル全体のtGraphを常駐ランタイムへ載せる。既存の常駐カーネル研究が特定モデルや固定演算列へ強く手作業最適化するのに対し、MPKはグラフ正規化・線形化・動的キューをコンパイラとランタイムの一般機構として提供する。",
-    "implementation_status": "公開MirageリポジトリにMPKが実装され、PyTorchのtorch.compile後段、Mirage探索器、NVSHMEM通信、ページ化共有メモリ、連続バッチ、MoE処理を統合している。artifact評価用固定ブランチtgx-osdi26-ae、commit 8b981a4、Zenodo DOI 10.5281/zenodo.20563064が公開されており、A100/H100/B200向け再現手順がある。",
-    "research_positioning": "GPU推論のカーネル生成とサービングランタイムの間を埋める研究である。従来は個別カーネルを高速化した後にvLLM/SGLangのような配信系がそれらを順次起動するが、MPKはモデル全体をSM粒度の依存グラフへ落とし、起動・同期・通信をGPU内部スケジューラへ移す。モデルが小さくGPUが高速化するほど固定起動費用の割合が増えるため、将来世代GPUで重要性が上がる方向性を示す。",
-    "relation_to_existing_repository": "カーネル／ランタイム最適化系統の中で、演算子融合、CUDA Graph、個別GEMM最適化より上位の全モデル実行層に位置する。投機的デコード、MoEオフロード、KVオフロードなど別系統の手法とも直交し、それらが発生させる演算・通信・搬送タスクをtGraphへ分解して重ねる余地がある。一方、CPUやSSDまで含む階層メモリI/Oは本論文の中心ではなく、現状の常駐スケジューラは主にGPU内およびGPU間のタスクを扱う。",
-    "audit_required": true,
-    "audit_reason": "公式artifact・固定commit・Zenodo再現資料があり、A100/H100/B200と多GPUに跨る大きな性能主張を含むため、artifact再現性と各図表の数値対応を追加監査する価値が高い。"
-  },
-  "reservation": {"claim_id": "claim-28487ee4709e231070d69554", "worker_id": "scheduled-chat-hourly", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-716670c2b523b653002fe62a",
+  "job_id": "job-research-ff9dfc8e1a733b56",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-716670c2b523b653002fe62a",
+    "worker_id": "scheduled-chat-hourly",
+    "worker_kind": "scheduled_chat"
+  }
 }
