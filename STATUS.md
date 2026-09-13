@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:26 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:28 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
@@ -13,7 +13,7 @@
 | Research completed（累計） | **210** |
 | Maintenance | **issues_found** |
 | Consistency | **issues_found** |
-| Maintenance counter | **11 / 24** |
+| Maintenance counter | **12 / 24** |
 
 ### 注意事項
 
@@ -272,7 +272,7 @@ Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **OK**
 | Latest normal run | **2026-09-13T12:30:00+09:00** |
 | Latest research completed | **2** |
 | Research completed (24h) | **72** |
-| Oldest active claim age | **77 min** |
+| Oldest active claim age | **80 min** |
 
 高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
 
