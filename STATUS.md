@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 16:54 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 16:57 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -37,19 +37,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **173** |
-| 処理中（Active claims） | **39** |
-| 今すぐ着手可能（Claimable） | **134** |
-| :30 通常worker Active claims | **30** |
+| 処理中（Active claims） | **40** |
+| 今すぐ着手可能（Claimable） | **133** |
+| :30 通常worker Active claims | **31** |
 | :00 補助worker Active claims | **6** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 16:47 JST** |
+| :30 通常worker 直近claim | **09-13 16:53 JST** |
 | :00 補助worker 直近claim | **09-13 16:45 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **3** |
 | 直近24h Research完了（帰属不明） | **63** |
 | 最新通常run | **2026-09-13T16:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古claimの経過時間 | **285 min** |
+| 最古claimの経過時間 | **288 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -96,11 +96,11 @@ Run: **2026-09-13T16:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P87 `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
 - P86 `arXiv:2509.08342` — Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism
 - P86 `arXiv:2605.19481` — C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG
 - P86 `arXiv:2505.23022` — SCORPIO: Serving the Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference
+- P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 
 ## 参考情報
 
