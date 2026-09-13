@@ -4,10 +4,24 @@
   "slot": "results",
   "attempt_id": "attempt-274a2a6a90644c806341981c",
   "job_id": "job-research-b76cb796c54f83bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-274a2a6a90644c806341981c",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "通常在庫ではCoralは中核実機構成でHomo比1.62倍、Cauchy比1.60倍の費用削減、拡張構成でそれぞれ3.14倍、2.66倍の費用削減を達成する。大型モデル中心の需要ではHomo比最大2.79倍の費用削減を報告する。資源逼迫時は単純に安い構成を選ぶ比較方式が需要未達になる一方、Coralは異種GPUを複製内部で組み合わせ、全モデル間で希少GPUを再配分する。拡張構成ではCauchy比で費用を1.25倍削減しながら有効スループットを2.39倍へ改善し、Homo比では費用は1.52倍高いものの有効スループット7.64倍を得る。オンライン整数線形計画は通常時0.24〜9.68秒、逼迫した拡張構成でも平均41秒で、最難関エポック約2分に収まる。",
+    "key_results": [
+      {"metric": "中核構成の平均時間費用", "value": "Homo比1.62×削減、Cauchy比1.60×削減", "baseline": "Homo / Cauchy", "condition": "3モデル、20〜40 GPU、実機、通常在庫", "interpretation": "L4とL40Sなどを単一複製内で混在させ、非均等パイプライン分割を使うことで同種GPU複製より需要へ細かく合わせられる。"},
+      {"metric": "拡張構成の平均時間費用", "value": "Homo比3.14×削減、Cauchy比2.66×削減", "baseline": "Homo / Cauchy", "condition": "6モデル、100〜300 GPU、3地域シミュレーション、通常在庫", "interpretation": "235B級など複数GPU必須モデルでは異種ノードを一つの複製へ組み込める余地が大きく、費用差が拡大する。"},
+      {"metric": "Qwen3-235Bモデル別費用", "value": "Homo比4.93×削減、Cauchy比4.08×削減", "baseline": "Homo / Cauchy", "condition": "拡張構成のモデル別内訳", "interpretation": "8×A100/H100の単一ノード複製ではなく、1〜2GPUのA100/H100ノードを非均等パイプラインと段内複製で組み合わせる効果が大きい。"},
+      {"metric": "中核・低在庫の有効スループット", "value": "Homo比1.24×、Cauchyとほぼ同等", "baseline": "Homo / Cauchy", "condition": "推定需要+25%だけのGPU在庫、実機", "interpretation": "希少L40Sを重いQwen3へ回し、Phi-4をA10G/L4へ逃がす全モデル調整でHomoの競合を避ける。"},
+      {"metric": "拡張・低在庫の有効スループット", "value": "Homo比7.64×、Cauchy比2.39×", "baseline": "Homo / Cauchy", "condition": "推定需要+75%の在庫、100〜300 GPUシミュレーション", "interpretation": "比較方式が全モデルを同じ希少A100/H100へ寄せて需要未達になる一方、異種テンプレートを多数使って競合を解消する。"},
+      {"metric": "拡張・低在庫の費用", "value": "Cauchy比1.25×削減、Homo比1.52×高い", "baseline": "Cauchy / Homo", "condition": "資源逼迫時", "interpretation": "Homoは安く見えるが需要を大幅に満たせていないため、費用単独比較ではなくSLO内有効スループットと併読が必要。"},
+      {"metric": "大型モデル偏重需要の費用", "value": "拡張構成でHomo比2.79×削減、Cauchy比3.47×削減", "baseline": "Homo / Cauchy", "condition": "上位1/3の大型モデルへ80%の要求", "interpretation": "多GPU複製が費用を支配するほど複製内部の異種化余地が大きくなり、Coralの優位性が強まる。"},
+      {"metric": "小型モデル偏重需要の費用", "value": "中核構成では約10%削減に縮小", "baseline": "Homo / Cauchy", "condition": "下位1/3の小型モデルへ80%の要求", "interpretation": "1〜2 GPUに収まるPhi-4などが支配的だと複製内部を異種化する自由度が小さく、共同配置の利得が限定される。"},
+      {"metric": "Helix比較", "value": "費用21%削減、スループット26%向上", "baseline": "Helix", "condition": "64 GPU固定異種プール、Llama 70B、Coralはプリフィル/デコードSLOあり", "interpretation": "全64 GPUを一枚岩のパイプラインにするより、複数の小さい最適配信インスタンスへ分けて通信ボトルネックを避ける。"},
+      {"metric": "オンライン解時間", "value": "通常: 0.24秒（中核）、9.68秒（拡張）；低在庫: 0.11秒、41秒平均", "baseline": "共同配置をオンライン総当たりする場合の数時間級探索", "condition": "32コアc8iの資源割当整数線形計画", "interpretation": "高価なモデル配置探索をテンプレート生成へ移したことで周期的な再構成へ使える時間に収まる。"},
+      {"metric": "テンプレート枝刈り", "value": "Nmax=6, ρ=12で最良Goodput/USD=3910に到達し、それ以上で改善なし", "baseline": "より小さい/大きい列挙範囲", "condition": "GPT-OSS 120Bプリフィル", "interpretation": "巨大なノード集合は通信費で支配され、小さな複製へ分ける方が効率的なため、原理的枝刈りの近似損失が小さい。"}
+    ],
+    "negative_results": "利得は大型・多GPUモデルで大きいが、小型モデル偏重の中核構成では費用改善が約10%に縮む。低在庫の拡張構成では共同最適化問題が難しくなり、平均解時間41秒、最難関エポック約2分まで増える。Homoに対しては低在庫時に1.52倍高い費用となる条件もあり、これはHomoが需要を満たせず安く見えるためである。テンプレート列挙量はNmaxとρに対して指数的に増え、(7,14)では有効テンプレート168,695件、生成時間3358秒まで増える。実験は30分区間で、長期クラウド価格変動や実障害、スポット中断は評価しない。",
+    "interpretation": "Coralの費用差は単に安い旧GPUを使うことではなく、異なるGPUを一つの複製の異なるパイプライン段へ置き、モデルごとの最適構成候補を全モデル間で交換可能にしたことから生じる。需要や在庫に余裕がある場合は過剰割当を減らし、在庫が厳しい場合は希少GPUを最も必要なモデルへ渡して他モデルを異種構成へ逃がす。このため同じ機構が通常時には費用削減、逼迫時には可行性と有効スループット向上として現れる。",
+    "quality_impact": "モデル演算自体の近似や量子化は導入せず、配信配置と資源選択だけを変更するため、生成品質を下げる交換条件はない。性能面では各モデルの遅延SLOを整数計画の制約として扱い、SLOを満たすトークンだけを有効スループットとして評価する。"
+  },
+  "reservation": {"claim_id": "claim-274a2a6a90644c806341981c", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
