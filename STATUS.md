@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 06:50 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 08:02 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,19 +36,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **124** |
-| 処理中（Active claims） | **5** |
-| 今すぐ着手可能（Claimable） | **119** |
+| 処理中（Active claims） | **3** |
+| 今すぐ着手可能（Claimable） | **121** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **3** |
+| :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 06:49 JST** |
+| :30 通常worker 直近claim | **09-14 06:56 JST** |
 | :00 補助worker 直近claim | **09-14 06:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **7** |
 | 最新通常run | **2026-09-14T05:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **71 min** |
+| 最古の有効claimの経過時間 | **66 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **17** |
 | Repo収録 | **58** |
 | Audit完了 | **0** |
-| 探索評価候補 | **267** |
-| Research候補採用 | **57** |
-| 重複除外 | **155** |
-| 重複率 | **58.1%** |
-| 探索専用worker run（毎時枠） | **5** |
-| 探索専用worker round（stats観測） | **50** |
-| 通常worker run（ledger観測） | **14** |
+| 探索評価候補 | **211** |
+| Research候補採用 | **50** |
+| 重複除外 | **111** |
+| 重複率 | **52.6%** |
+| 探索専用worker run（毎時枠） | **4** |
+| 探索専用worker round（stats観測） | **42** |
+| 通常worker run（ledger観測） | **13** |
 | Fallback archive（全helper） | **20** |
 
 ### 24時間の流れ
 
-**探索評価 267 → 重複除外後 112 → Research候補採用 57 → Research完了 17 → Repo収録 58**
+**探索評価 211 → 重複除外後 100 → Research候補採用 50 → Research完了 17 → Repo収録 58**
 
 ## 直近の通常worker
 
@@ -124,17 +124,12 @@ Run: **2026-09-13T11:00:00+09:00**
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
 | SSD expert offload・peer GPU cache tier・階層メモリ | 12 | 10 | 0 | 83.3% | 0.0% |
-| multi-node MoE活性パターン配置・edge expert類似性routing | 12 | 10 | 2 | 83.3% | 16.7% |
-| 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 | 10 | 10 | 0 | 100.0% | 0.0% |
 | GPU runtime安全性・software aging・many-core CPU inference | 9 | 6 | 3 | 66.7% | 33.3% |
 | NVMe重み先読み・疎推論GPUカーネル・fleet資源配置 | 8 | 3 | 4 | 37.5% | 50.0% |
-| 疎注意サービング・GPUメガカーネル・動的コンパイラ | 8 | 5 | 3 | 62.5% | 37.5% |
-| MoE expert cache・Flash階層・expert-parallel耐障害性 | 7 | 5 | 2 | 71.4% | 28.6% |
 | hybrid-attention・MLA・位置非依存キャッシュ | 7 | 3 | 4 | 42.9% | 57.1% |
 | network・collective通信・distributed inference | 7 | 7 | 0 | 100.0% | 0.0% |
 | 分離型サービングの負荷偏り・SLO適応 | 7 | 4 | 1 | 57.1% | 14.3% |
 | 新着LLM推論システム・通信／疎注意／多ターンKV | 7 | 4 | 3 | 57.1% | 42.9% |
-| 2609新着・端末メモリ管理・エッジクラウド協調推論 | 6 | 4 | 0 | 66.7% | 0.0% |
 | CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
 | GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
 | agent workspace仮想化・NVMe階層・長時間runtime state | 6 | 3 | 2 | 50.0% | 33.3% |
@@ -143,9 +138,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | 端末内LLM・OSメモリ圧力・Flash/NPU実行 | 6 | 2 | 3 | 33.3% | 50.0% |
 | 2609新着・KVキャッシュ・階層メモリ・ストレージ | 5 | 0 | 0 | 0.0% | 0.0% |
 | GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
-| KVページ制御・MoEメモリ分離・復元系の再探索 | 5 | 5 | 0 | 100.0% | 0.0% |
 | MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
-| MoE speculative decoding・expert offloading・CPU/GPU共同実行 | 5 | 3 | 0 | 60.0% | 0.0% |
 | MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
 | multi-tenant runtime制御・適応parallelism・latency attribution | 5 | 3 | 2 | 60.0% | 40.0% |
 | serving software aging・runtime reliability・lossless compression・load-aware speculative serving | 5 | 4 | 0 | 80.0% | 0.0% |
@@ -171,7 +164,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | エージェント型LLM・サービングruntime・生成時特化 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 出力長不確実性・tail-aware scheduling隣接 | 3 | 1 | 2 | 33.3% | 66.7% |
 | 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse | 3 | 0 | 0 | 0.0% | 0.0% |
-| 適応プリフィル・KV予約・デコード干渉スケジューリング | 3 | 2 | 0 | 66.7% | 0.0% |
 | 収録済み重要論文のforward citation・Llumnix系譜 | 1 | 0 | 0 | 0.0% | 0.0% |
 
 ### 直近5探索専用worker run
