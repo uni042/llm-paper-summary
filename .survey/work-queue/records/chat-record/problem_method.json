@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-12b96d8a83087a895d8a74df",
   "job_id": "job-research-6a744249548dd135",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-12b96d8a83087a895d8a74df",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "単一GPUで巨大LLMをオフライン大バッチ推論する方式は、重みとKVキャッシュをCPU DRAMやSSDへ退避してGPU容量を拡張し、同じ重みを大きなバッチで再利用してスループットを稼ぐ。しかし文脈長とバッチ数が増えるとKVキャッシュはテラバイト級まで膨らみ、各デコードstepで過去K/VをSSDまたはDRAMからホストへ戻してattentionを計算するデータ移動が支配的になる。OPT-175Bの実測ではKV転送が総時間の60%以上を占め、SSD台数を増やしても共有PCIeリンクが飽和するため容量増加が帯域改善へ直結しない。計算ストレージへattentionを移せばホスト転送は減るが、今度はSSD内部読出し、小粒度KV書込み、限られたFPGA資源が新たな律速になる。",
+    "novelty": "HILOSは市販SmartSSDを使い、KVキャッシュを置くストレージ側でデコードattentionまで完結させるattention near storageを基盤に、残ったSSD内部I/Oと書込み律速もホスト資源との協調で削る。具体的には、一部履歴をK/Vではなく半分の容量で済む投影前活性Xとして保持してGPUでK/Vを再生成するcooperative X-cache、新規KVをホストDRAMでまとめて4KiB粒度にしてから書くdelayed KV cache writeback、長系列でもオンチップ容量を増やさないtemporal attention acceleratorを組み合わせる。近ストレージ処理を単体acceleratorとしてではなく、GPU・CPU・DRAM・SmartSSD内部DRAM・NANDを跨ぐ階層データフローとして共同設計した点が中心である。",
+    "method_overview": "prefillでは通常どおりGPUが入力系列を処理して各層のKVを生成するが、バッチ×headをSmartSSD群へ分割し、履歴データを各deviceへ配置する。デコードではGPUが層重みをホスト側から読み、現在tokenのQ/K/V projectionを行う。通常方式なら全過去KVをSSDからホストへ戻すところ、HILOSでは新しいQ/K/Vだけをdeviceへ送り、SmartSSD内FPGAがローカルNAND/DRAMから履歴KVを読みattentionを計算し、最終attention出力だけをホストへ返す。その結果、文脈長sに比例するKV read trafficをhost PCIeから除去する。ただし全attentionをstorageへ移すとSSD内部readが律速になるので、解析モデルから決めた比率alphaのbatch/headだけはKVではなくpre-projection Xを保存する。XはK+Vの半分の容量なので、GPUがGPUDirect StorageでXを読み、空いているGPU計算資源でK/Vを再生成する間、残りのattentionをSmartSSDが処理する。新規KVは毎step 256-byte級でSSDへ即時appendせずhost DRAMに保持し、CPUがbuffered Kに対するQK部分積だけを計算してFPGAへ渡す。16step程度たまったら4KiB page単位でSSDへspillする。FPGA側は128-token級blockを時間方向へ流すGEMV→softmax→GEMV pipelineを用い、off-chip DRAMを利用しながら長文脈を処理する。各層でこの流れを繰り返し、attention後のMLPはGPU側で実行する。",
+    "components": [
+      {"name": "近ストレージ注意計算", "description": "デコードstepごとにGPUは現在tokenのQ/K/Vだけを計算し、SmartSSD側へ転送する。FPGAは自deviceに割り当てられたbatch/headの過去KVをNANDからon-board DRAMへ専用内部PCIe経路で読み、QK^T、softmax、score×Vを実行してattention出力だけをhostへ返す。FP16ならbaselineの過去KV host-read trafficは約4sh bytesで文脈長sに比例するのに対し、近ストレージ方式は主に2h-byteのattention出力と新Q/K/V書込みだけが共有system interconnectを通る。batchとattention headを並列軸として複数SmartSSDへ分散するのでdevice数に応じてaggregate internal bandwidthを増やせる。一方、host PCIe律速を除くとdevice内部のflash read bandwidthが次の律速になり、attention offload単独では十分でないため後続のX-cacheが必要になる。"},
+      {"name": "協調X-cache", "description": "GPUをattentionから解放するとhost側計算資源が20%未満の利用率まで空くため、その余力をSSD内部I/O削減へ使う。履歴tokenのKとVを両方保存する代わりに、batch/headのうち比率alphaについてprojection前のactivation Xだけを保存する。XはK+V合計の半分の容量であり、デコード時にGPUDirect StorageでGPUへ直接読み、W_K/W_Vを再適用してK/Vを復元する。残り1-alphaのKV attentionは同時にSmartSSD FPGAで処理するため、GPU再計算がstorage-side attentionの背後へ隠れる範囲なら総遅延を増やさずflash trafficを減らせる。論文はGPU計算時間、host PCIe転送、SSD readをmaxで表すcost modelを作り、B_SSDとB_PCIの比からalpha=2B_PCI/(B_SSD+B_PCI)を選ぶ。実機では帯域比約3からalpha=50%が最良となり、固定経験則ではなくdevice構成に応じて協調比率を変える。"},
+      {"name": "遅延KVキャッシュ書戻し", "description": "デコードで毎token生成される新K/Vはhead当たり約256 bytesとSSDの4KiB pageよりはるかに小さく、即時direct I/Oするとwrite amplificationとcommit latencyがcritical pathへ入る。HILOSは新KVをhost DRAMの専用bufferへ保持し、通常16step分がたまるまでSSDへ書かない。まだ永続化されていないKをattentionへ反映する必要があるため、CPUが現在queryとのQK^T部分積を先に計算し、FPGAへはquery、少量のscalar部分積、新Vだけを送る。FPGAはSSDに既存のKVから得たattention途中結果とhostからの部分結果を統合して完全なattentionを作る。bufferが4KiB相当へ達した時点でpage単位にまとめてspillするため、小粒度write latencyを計算経路から外しつつSSD enduranceも改善する。spill intervalを長くし過ぎるとhostから送る未書込情報が増えるため、実機ではpage粒度に対応する16が最良だった。"},
+      {"name": "省資源attention accelerator", "description": "SmartSSD FPGAはGPUほど演算資源やSRAMを持たないため、長いsequence全体を空間展開する設計ではon-chip memoryが文脈長とともに増えて成立しない。HILOSは約128 token単位のblockを時間方向に処理するtemporal architectureを採用し、QK GEMV、softmax統計集約、normalization、score×V GEMVをpipeline化する。softmaxはglobal max探索・指数和・normalizeの3 passではなく、block local maxを使ってrunning global max/sumを更新する2-pass方式とし、off-chip memory trafficを削る。Kは書込みに適したrow-majorのまま保存しつつ、GEMV unitが読みながらonline transposeしてQK^Tを作るため、transposed copyを二重保存しない。GQAでは同じKVを複数query headが共有する性質をhardware上で利用し、d_groupに応じてdatapathを共有する。FP16 storageとFP32 accumulation/expでFlashAttention相当の数値精度を維持する。"}
+    ],
+    "system_design": "host側はPyTorch/FlexGen型オフロードruntimeを拡張し、model weight・activation・KVの配置、X-cache比率、spill buffer、複数SmartSSDへのbatch/head partitionを管理する。SmartSSD側は3.84TB NVMe、4GB DDR4、KU15P FPGAからなり、NAND→device DRAM→FPGAのprivate pathでKVを処理する。GPU-X-cache経路はGPUDirect Storage、通常weight/activation経路はhost memoryを使う。16台はPCIe expansion switchへ接続され、hostへの共有帯域をKV本体ではなく小さな入力/出力へ使うことでdevice数増加時のscalingを確保する。"
+  },
+  "reservation": {"claim_id": "claim-12b96d8a83087a895d8a74df", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
