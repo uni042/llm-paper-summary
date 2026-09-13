@@ -9,63 +9,30 @@
     "arxiv_id": "2602.06932",
     "doi": "10.48550/arXiv.2602.06932",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
     "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
     "summary": "Auroraは、投機的復号のドラフトモデルをオフラインで学習してから固定配備する従来方式が、新モデル公開時の配備遅延、実配信でしか分からない速度利得、利用者トラフィックの分布変化による陳腐化を招く問題を扱う。SGLangを用いる推論サーバと非同期学習サーバを接続し、実際の検証で採用・棄却された候補を分散バッファへ蓄積する。採用を正の学習信号、棄却枝を反実仮想的な負の信号としてドラフトを継続更新し、サービス停止なしで新しい重みへ差し替える。完全未学習のドラフトを初日から配備しても実トラフィックから短時間で適応でき、MiniMax M2.1やQwen3-Coder-Nextなど新しい大規模モデルで最大約1.5倍、分布変化下では十分学習済みの静的ドラフトより追加で約1.25倍の高速化を報告する。",
     "list_summary": "実配信の採用・棄却トレースからドラフトモデルを非同期更新し、停止なしで重みを差し替える閉ループ型の投機的復号により、初日配備と分布変化への継続適応を実現する。",
-    "authors": [
-      "Junxiong Wang",
-      "Fengxiang Bie",
-      "Jisen Li",
-      "Zhongzhu Zhou",
-      "Zelei Shao",
-      "Yubo Wang",
-      "Yinghui Liu",
-      "Qingyang Wu",
-      "Avner May",
-      "Sri Yanamandra",
-      "Ce Zhang",
-      "Tri Dao",
-      "Percy Liang",
-      "Ben Athiwaratkun",
-      "Shuaiwen Leon Song",
-      "Chenfeng Xu",
-      "Xiaoxia Wu"
-    ],
+    "authors": ["Junxiong Wang", "Fengxiang Bie", "Jisen Li", "Zhongzhu Zhou", "Zelei Shao", "Yubo Wang", "Yinghui Liu", "Qingyang Wu", "Avner May", "Sri Yanamandra", "Ce Zhang", "Tri Dao", "Percy Liang", "Ben Athiwaratkun", "Shuaiwen Leon Song", "Chenfeng Xu", "Xiaoxia Wu"],
     "authors_affiliations": "一次資料のHTML本文では著者所属の明示的な一覧を確認できないため、所属は未記載として扱う。プロジェクトページはTogether AIのロゴを掲載するが、個々の著者所属とは推定しない。",
     "published": "2026-02-06",
     "publication": "ICML 2026 accepted; arXiv v5 revised 2026-08-04",
     "publication_type": "国際会議論文",
     "publication_status": "ICML 2026採択済み。arXiv v5が最新確認版。",
     "lineage": "speculative-decoding",
-    "topics": [
-      "投機的復号",
-      "オンライン学習",
-      "非同期強化学習",
-      "学習・配信統合",
-      "SGLang",
-      "ドラフトモデル適応"
-    ],
+    "topics": ["投機的復号", "オンライン学習", "非同期強化学習", "学習・配信統合", "SGLang", "ドラフトモデル適応"],
     "importance": "高。投機的復号を固定された推論機構ではなく、実配信の失敗信号から継続的に学ぶ学習・配信閉ループとして再定義する。新規モデル公開直後から速度利得を得る初日対応と、分布変化下でのドラフト陳腐化を同じシステムで扱う。",
     "hardware_evaluation": "Qwen3-8BとLlama-3.1-8Bの実験はNVIDIA H100、MiniMax M2.1とQwen3-Coder-NextはNVIDIA H200で実施する。フロンティアモデルではターゲット推論にH200を4枚使用し、オンライン学習用に追加GPUを1枚割り当てる。",
     "quality_effect": "投機的復号はターゲットモデルの検証結果を最終出力として採用するため、ドラフト学習自体がターゲットモデルの出力品質を近似的に置き換える方式ではない。オンライン更新は採用長と配信速度を改善する目的で、最終生成品質はターゲット検証によって保持する。",
     "source": "https://arxiv.org/abs/2602.06932",
-    "sources": [
-      "https://arxiv.org/abs/2602.06932",
-      "https://arxiv.org/html/2602.06932v5",
-      "https://aurora-spec-ai.github.io/",
-      "https://github.com/togethercomputer/aurora"
-    ],
+    "sources": ["https://arxiv.org/abs/2602.06932", "https://arxiv.org/html/2602.06932v5", "https://aurora-spec-ai.github.io/", "https://github.com/togethercomputer/aurora"],
     "code": "https://github.com/togethercomputer/aurora",
     "implementation": "公式実装はMITライセンスで公開され、SGLang/TorchSpecを基盤にオンライン、外部ドラフトあり、外部ドラフトなしの三配備形態を提供する。訓練GPUと推論GPUは分離し、Ray制御、GPU間RPC、ドラフト重みの定期同期を実装する。",
-    "last_checked": "2026-09-14"
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v5一次資料の参考文献節を確認。今回の構造化記録では安定識別子を確実に正規化できた参照だけを登録する方針とし、推測を避けて空配列とする。",
+    "references_total": 38,
+    "references": []
   },
-  "reservation": {
-    "claim_id": "claim-3d2f4129c613aa101dc89f4e",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-3d2f4129c613aa101dc89f4e", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
