@@ -7,6 +7,7 @@ on:
       - '.survey/work-queue/submissions/research/*.json'
       - '.survey/work-queue/submissions/audit/*.json'
       - '.github/workflows/survey-submission-fast.yml'
+      - '.survey/scripts/claim_lease_policy.py'
       - '.survey/scripts/process_immutable_submission.py'
       - '.survey/scripts/isolate_failed_immutable_submission.py'
       - '.survey/scripts/immutable_submission.py'
@@ -41,7 +42,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install survey dependencies
-        run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+        run: |
+          python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
+          python -m py_compile .survey/scripts/claim_lease_policy.py
 
       - name: Resolve immutable descriptors from triggering event
         id: descriptors
@@ -88,6 +91,12 @@ jobs:
             while IFS= read -r descriptor; do
               if [ ! -f "$descriptor" ]; then
                 echo "Descriptor no longer exists on main: $descriptor" >&2
+                processing_failed=1
+                continue
+              fi
+              if ! python .survey/scripts/claim_lease_policy.py verify \
+                --repo-root . \
+                --submission "$descriptor"; then
                 processing_failed=1
                 continue
               fi
