@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path, PurePosixPath
 from typing import Any
@@ -93,6 +94,60 @@ def pending_descriptors(repo_root: Path) -> list[dict[str, Any]]:
     return out
 
 
+def _git_blob_bytes(repo_root: Path, blob_sha: str) -> bytes | None:
+    """Read an exact committed Git blob, independent of the current worktree path."""
+    try:
+        result = subprocess.run(
+            ["git", "cat-file", "blob", blob_sha],
+            cwd=repo_root,
+            capture_output=True,
+            check=False,
+        )
+    except OSError:
+        return None
+    return result.stdout if result.returncode == 0 else None
+
+
+def read_record_slot_bytes(repo_root: Path, ref: dict[str, Any]) -> bytes:
+    """Load the exact immutable slot bytes referenced by a descriptor.
+
+    In production the submission workflow uses a full Git checkout, so old blobs stay
+    readable even after the reusable bank path has been overwritten. The worktree
+    fallback is intentionally strict and is only for isolated/pre-commit callers where
+    the current file still has the declared blob SHA.
+    """
+    repo_root = Path(repo_root).resolve()
+    path_text = _safe_rel(ref.get("path"), "record slot path")
+    blob_sha = ref.get("blob_sha")
+    if not isinstance(blob_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", blob_sha):
+        raise ValueError("record slot requires a 40-character lowercase blob_sha")
+
+    raw = _git_blob_bytes(repo_root, blob_sha)
+    if raw is not None:
+        return raw
+
+    target = repo_root / path_text
+    if not target.is_file():
+        raise ValueError(f"record slot blob is unavailable: {path_text} ({blob_sha})")
+    raw = target.read_bytes()
+    if git_blob_sha(raw) != blob_sha:
+        raise ValueError(f"record slot blob is unavailable or mismatched: {path_text}")
+    return raw
+
+
+def read_record_slot(repo_root: Path, ref: dict[str, Any]) -> dict[str, Any]:
+    """Decode one immutable record slot as a JSON object."""
+    path_text = _safe_rel(ref.get("path"), "record slot path")
+    raw = read_record_slot_bytes(repo_root, ref)
+    try:
+        payload = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise ValueError(f"record slot blob must contain UTF-8 JSON: {path_text}") from exc
+    if not isinstance(payload, dict):
+        raise ValueError(f"record slot blob must contain a JSON object: {path_text}")
+    return payload
+
+
 def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     if not isinstance(descriptor, dict):
@@ -135,21 +190,15 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
         blob_sha = ref.get("blob_sha")
         if not isinstance(blob_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", blob_sha):
             raise ValueError(f"slot {slot} requires a 40-character lowercase blob_sha")
-        target = repo_root / path_text
-        if not target.is_file():
-            raise ValueError(f"missing record slot: {path_text}")
-        if git_blob_sha(target.read_bytes()) != blob_sha:
-            raise ValueError(f"record slot blob mismatch: {path_text}")
-        payload = _read_object(target)
-        if not payload:
-            raise ValueError(f"record slot must contain a JSON object: {path_text}")
+        normalized_ref = {"slot": slot, "path": path_text, "blob_sha": blob_sha}
+        payload = read_record_slot(repo_root, normalized_ref)
         if payload.get("transport_version") != TRANSPORT_VERSION:
             raise ValueError(f"{path_text} transport_version must be {TRANSPORT_VERSION}")
         if payload.get("slot") != slot:
             raise ValueError(f"{path_text} slot mismatch")
         if payload.get("attempt_id") != attempt_id or payload.get("job_id") != job_id:
             raise ValueError(f"{path_text} attempt_id/job_id mismatch")
-        normalized_refs.append({"slot": slot, "path": path_text, "blob_sha": blob_sha})
+        normalized_refs.append(normalized_ref)
 
     out = dict(descriptor)
     out["kind"] = kind
