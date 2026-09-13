@@ -2,17 +2,52 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-92c559dc6fdfa30da7d2c749",
+  "attempt_id": "attempt-961161e394b3230955f09a30",
   "job_id": "job-research-57f4550e61af7e09",
   "data": {
     "hardware": "主な実機はNVIDIA A100 80GBを8基搭載したサーバで、公称HBM帯域は1 GPUあたり約2 TB/s。エントロピー復号付き単層GEMMの比較にはNVIDIA H200も使用する。SGLang統合ではQwen-14Bを単一A100、Mixtral-176Bを4基A100で評価する。",
     "software": "PyTorch 2.5.1、CUDA 12.1を使用し、GEMM比較はCUTLASS系カーネルを基準とする。損失なし復号はDietGPUのANS実装をGPU向けタイル供給へ改変し、PyTorchラッパーを介してSGLangへ統合する。",
     "methodology": "まずQwen1.5B、Mistral7B、Qwen14B、DeepSeek67B、Mixtral176B、Llama405Bなどについて、bf16、FP8、INT8、FP4、INT4、SmoothQuant INT8、AWQ INT4の重みエントロピーを測定し、固定幅と理論下限の差を調べる。次にgzip、LZ4、Zstd、Brotli、Huffman、算術符号、rANSなど複数圧縮器を圧縮率と復号速度で比較する。GPUカーネル評価では行列形状、バッチ相当のM次元、A100/H200を変え、非圧縮CUTLASS、NeuZip、DFloat11等と比較する。最終的にSGLangへ組み込み、Qwen-14BとMixtral-176Bで系列長1024/2048、最大収容バッチ、スループット、出力トークン時間、重み/KV/総メモリを測定する。",
     "scope": "主眼は重み常駐量がボトルネックになるGPU推論、特に大モデルやMoEを同じGPUメモリ内でより大きなバッチへ拡張する用途である。圧縮は事前に行い、推論時に損失なく復号する。ネットワーク越しの重み配信、CPU/SSDオフロード、学習時の重み更新は対象外。小さいバッチでは復号時間をGEMMへ隠し切れず、単一要求遅延の改善を目的とする方式ではない。",
-    "workloads": ["Qwen系1.5B/14B", "Mistral-7B", "DeepSeek-67B", "Mixtral-176B", "Llama-405B", "bf16/FP8/INT8/FP4/INT4/SmoothQuant/AWQ重み", "SGLangで系列長1024/2048のQwen-14B・Mixtral-176B配信"],
-    "baselines": ["非圧縮固定幅重み", "gzip", "LZ4", "Zstd", "Brotli", "Huffman符号", "算術符号", "NeuZip", "DFloat11", "非圧縮CUTLASS GEMM"],
-    "metrics": ["重み当たりエントロピー", "実効ビット数/重み", "シャノン限界との差", "圧縮率", "復号付きGEMMスループット", "重みメモリ", "KVキャッシュ容量", "最大バッチ", "トークン/秒", "出力トークン時間", "メタデータ容量"],
+    "workloads": [
+      "Qwen系1.5B/14B",
+      "Mistral-7B",
+      "DeepSeek-67B",
+      "Mixtral-176B",
+      "Llama-405B",
+      "bf16/FP8/INT8/FP4/INT4/SmoothQuant/AWQ重み",
+      "SGLangで系列長1024/2048のQwen-14B・Mixtral-176B配信"
+    ],
+    "baselines": [
+      "非圧縮固定幅重み",
+      "gzip",
+      "LZ4",
+      "Zstd",
+      "Brotli",
+      "Huffman符号",
+      "算術符号",
+      "NeuZip",
+      "DFloat11",
+      "非圧縮CUTLASS GEMM"
+    ],
+    "metrics": [
+      "重み当たりエントロピー",
+      "実効ビット数/重み",
+      "シャノン限界との差",
+      "圧縮率",
+      "復号付きGEMMスループット",
+      "重みメモリ",
+      "KVキャッシュ容量",
+      "最大バッチ",
+      "トークン/秒",
+      "出力トークン時間",
+      "メタデータ容量"
+    ],
     "reproducibility": "モデル群、数値形式、GPU、PyTorch/CUDA版、SGLang評価条件、比較圧縮器、主要なGEMMタイル設計は論文に記載されている。損失なしであるため圧縮後の品質検証はビット一致で定義できる。一方、2026-09-14時点で論文から公式コード公開先を確認できず、SGLang統合や独自CUDAカーネルの完全再現には実装作業が必要である。"
   },
-  "reservation": {"claim_id": "claim-92c559dc6fdfa30da7d2c749", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-961161e394b3230955f09a30",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

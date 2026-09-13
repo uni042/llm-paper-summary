@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-92c559dc6fdfa30da7d2c749",
+  "attempt_id": "attempt-961161e394b3230955f09a30",
   "job_id": "job-research-57f4550e61af7e09",
   "data": {
     "problem": "大規模言語モデルの重みはbf16やINT4など固定幅で保存されるが、実際の値は全符号語を一様には使わない。特に指数部や量子化コードの出現頻度には強い偏りがあり、平均情報量であるシャノンエントロピーは物理的な保存ビット幅より小さい。それでも一般的な推論基盤は重みを固定幅のままHBMへ置くため、モデルが巨大になるほど重み容量がKVキャッシュやバッチ数を圧迫する。汎用圧縮器で重みを小さくしても、推論前に全体を展開してHBMへ戻す方式では実行時メモリ容量を減らせない。必要なのは、値を一切変えずに情報理論上の限界へ近い圧縮率を得ながら、圧縮重みをGEMMが必要とするタイル単位で直接復号し、展開済み全重みをHBMへ常駐させない方式である。",
@@ -28,5 +28,9 @@
     ],
     "system_design": "オフライン圧縮器は各層の重み分布とGEMMタイル形状から圧縮データ、層内共有符号表、タイルオフセットを生成する。実行側はDietGPU由来のANS復号器をGPU向けに拡張し、PyTorchから呼ぶ線形層としてCUTLASS系GEMMと統合する。圧縮データだけをHBMへ置き、復号タイルは共有メモリで短命に扱う。SGLangでは通常のモデル重み容量が減るため、同じGPUメモリ予算内でKVキャッシュ領域と同時リクエスト数を増やせる。圧縮処理はモデルロード前のオフライン工程であり、推論時には圧縮率を動的に変更しない。"
   },
-  "reservation": {"claim_id": "claim-92c559dc6fdfa30da7d2c749", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-961161e394b3230955f09a30",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

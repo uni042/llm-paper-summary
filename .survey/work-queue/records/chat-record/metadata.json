@@ -2,30 +2,51 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-92c559dc6fdfa30da7d2c749",
+  "attempt_id": "attempt-961161e394b3230955f09a30",
   "job_id": "job-research-57f4550e61af7e09",
   "data": {
     "canonical_id": "arXiv:2606.15789",
     "arxiv_id": "2606.15789",
     "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AR", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
     "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
     "summary": "LLMの重みはbf16やINT4など固定ビット幅で保存されるが、実際の値の出現分布は強く偏っており、情報理論上必要な平均ビット数は保存幅よりかなり小さい。本研究は1.5B〜405Bモデルとbf16、FP8、INT8、FP4、INT4、SmoothQuant、AWQを調べ、重みのシャノンエントロピーが保存幅より低く、bf16では4〜5ビット/重み、低ビット形式ではさらに大きな統計的冗長性が残ることを示す。その冗長性を厳密な損失なしで使うため、非対称数値表現（Asymmetric Numeral Systems; ANS）の一種であるrANSをGEMMタイルごとに独立符号化し、推論時には圧縮タイルを共有メモリへ直接復号してテンソルコアGEMMへ渡す。復号専用ワープとGEMMワープを同じスレッドブロック内で分離し、二重バッファで次タイルの復号と現在タイルの計算を重ねるため、展開済み重みをHBMへ書き戻さない。実効符号長は多くの形式でシャノン限界から0.01〜0.05ビット程度、bf16でも約0.1〜0.2ビットの差に収まる。SGLangへ統合したA100実機ではQwen-14Bの重みを27.5GBから18.1GB、Mixtral-176Bを261.9GBから163.7GBへ縮小し、空いたメモリをKVキャッシュへ回して最大バッチをそれぞれ47→75、20→95へ拡大する。結果として長さ2048のQwen-14Bでスループット1.2倍、長さ1024のMixtral-176Bで1.6倍を達成するが、復号処理が追加されるため単一要求の出力トークン時間はやや増え、小バッチでは復号側が律速しやすい。",
     "list_summary": "GEMMタイルごとにANSで重みを損失なく圧縮し、共有メモリへ復号しながらテンソルコア計算と重ねることで、Mixtral-176Bの最大バッチを20から95へ増やし、SGLangスループットを最大1.6倍にする。",
-    "authors": ["Hongshi Tan", "Yao Chen", "Gustavo Alonso", "Weng-Fai Wong", "Bingsheng He"],
+    "authors": [
+      "Hongshi Tan",
+      "Yao Chen",
+      "Gustavo Alonso",
+      "Weng-Fai Wong",
+      "Bingsheng He"
+    ],
     "authors_affiliations": "Hongshi Tan、Weng-Fai Wong、Bingsheng HeはNational University of Singapore、Yao ChenはHuazhong University of Science and Technology、Gustavo AlonsoはETH Zurich。",
     "published": "2026-06-14",
     "publication": "arXiv preprint arXiv:2606.15789",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "kernel-runtime-compilation",
-    "topics": ["損失なし重み圧縮", "ANS", "rANS", "オンザフライ復号", "GEMM融合", "共有メモリ", "SGLang", "GPUメモリ容量"],
+    "topics": [
+      "損失なし重み圧縮",
+      "ANS",
+      "rANS",
+      "オンザフライ復号",
+      "GEMM融合",
+      "共有メモリ",
+      "SGLang",
+      "GPUメモリ容量"
+    ],
     "importance": "量子化とは独立に残る重みの統計的冗長性を、保存容量削減だけでなくGPU実行時のタイル消費へ直接接続した研究である。圧縮重みを一度HBMへ展開する従来型損失なし圧縮を避け、共有メモリでの復号とGEMMを同時進行させるため、メモリ容量と帯域の両方へ効く。特に量子化済み重みにも追加適用できる点から、将来の低ビット推論基盤に対する直交的な圧縮層として重要である。",
     "hardware_evaluation": "実機。NVIDIA A100 80GBを8基備えるサーバとNVIDIA H200を用いる。SGLangのQwen-14B評価は単一A100、Mixtral-176Bは4基A100の専門家並列。A100の公称HBM帯域は2 TB/sとして記載される。",
     "quality_effect": "重みの数値表現を一切変更せず、圧縮前と復号後のビット列を一致させる損失なし符号化である。したがってANS自体はモデル出力品質を変えず、AWQやSmoothQuantなど既に量子化された重みに重ねた場合も、その量子化済み値を正確に保存・復元する。",
     "source": "https://arxiv.org/abs/2606.15789",
-    "sources": ["https://arxiv.org/abs/2606.15789", "https://arxiv.org/html/2606.15789"],
+    "sources": [
+      "https://arxiv.org/abs/2606.15789",
+      "https://arxiv.org/html/2606.15789"
+    ],
     "code": null,
     "implementation": "DietGPUのANS実装を基盤にタイル単位の独立rANSストリーム、ワープ協調復号、共有メモリ二重バッファ、CUTLASS系GEMMを統合したCUDAカーネルを実装し、PyTorchから呼べるラッパーとしてSGLangへ組み込む。PyTorch 2.5.1、CUDA 12.1で評価。2026-09-14時点で論文本文から公式コード公開先は確認できない。",
     "last_checked": "2026-09-14",
@@ -33,9 +54,19 @@
     "references_source": "primary-reference-section",
     "references_total": 50,
     "references": [
-      {"canonical_id": "arXiv:2507.14397", "arxiv_id": "2507.14397"},
-      {"canonical_id": "arXiv:2306.00978", "arxiv_id": "2306.00978"}
+      {
+        "canonical_id": "arXiv:2507.14397",
+        "arxiv_id": "2507.14397"
+      },
+      {
+        "canonical_id": "arXiv:2306.00978",
+        "arxiv_id": "2306.00978"
+      }
     ]
   },
-  "reservation": {"claim_id": "claim-92c559dc6fdfa30da7d2c749", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-961161e394b3230955f09a30",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

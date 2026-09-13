@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-92c559dc6fdfa30da7d2c749",
+  "attempt_id": "attempt-961161e394b3230955f09a30",
   "job_id": "job-research-57f4550e61af7e09",
   "data": {
     "limitations": "損失なし圧縮はモデル精度を変えない一方、復号計算を追加するため、単一要求や小バッチの遅延改善には向かない。SGLang評価でも出力トークン時間は全条件で増えている。圧縮はモデルロード前のオフライン処理を前提とし、頻繁に重みが更新される学習やオンライン適応にはそのまま適用しにくい。GPU常駐推論が中心で、CPU/SSD階層から圧縮重みをストリーミングした場合の入出力との重畳は未評価である。公式コード公開先も確認できない。またQwen-14B・系列長1024の最大バッチについて本文と表の数値に不整合がある。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "量子化・低ビットGEMM、重みオフロード、SSD/NVMeストリーミング、モデルロード高速化の各系統と補完関係にある。特にSSDやCPUへ重みを退避する方式では、圧縮状態のまま階層間を転送しGPU到着後に共有メモリへ直接復号できれば、保存容量だけでなくPCIe/NVMe転送量も減らせる可能性がある。一方、その場合はストレージ帯域、復号速度、GEMM速度を三者で釣り合わせる必要があり、本論文自体はそこまで検証していない。",
     "audit_required": false
   },
-  "reservation": {"claim_id": "claim-92c559dc6fdfa30da7d2c749", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-961161e394b3230955f09a30",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
