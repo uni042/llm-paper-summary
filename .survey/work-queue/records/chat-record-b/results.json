@@ -4,10 +4,23 @@
   "slot": "results",
   "attempt_id": "attempt-efc8e9feaf53ec425a01e723",
   "job_id": "job-research-b1cd2f28e2d09a3e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-efc8e9feaf53ec425a01e723",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "16個のモデル・トレース組合せで、TokenStackはAttAccに対してトークン処理量を幾何平均1.62倍にし、改善幅は1.03〜2.32倍だった。2倍遅延SLO以内で処理できる最大到着率は幾何平均1.70倍で、大モデルほど容量層によるKVあふれ吸収の効果が大きい。Devstral2-123Bではキュー遅延を条件によって86〜95%削減し、AttAccが飽和後に指数的な待ち時間増加へ入る領域でもTokenStackはより高いQPSまで線形域を維持する。エネルギーはDevstral2-123BでAttAcc比30〜47%低下した。一方、小型モデルかつ再利用の乏しい長文推論では高頻度・低頻度の分離価値が小さく、改善は1.03倍まで縮む。",
+    "key_results": [
+      {"metric": "トークン処理量", "value": "AttAcc比 幾何平均1.62×、範囲1.03〜2.32×", "baseline": "AttAcc", "condition": "4モデル×4本番由来トレース=16組合せ", "interpretation": "容量層が低頻度KVを吸収して計算層を高頻度KVへ集中させる効果は、KV圧力が大きいモデルほど強い。"},
+      {"metric": "モデル別処理量改善", "value": "4B 1.20×、32B 1.38×、123B 1.94×、175B 2.15×", "baseline": "AttAcc", "condition": "各モデルで4トレースの幾何平均", "interpretation": "モデルが大きいほどAttAccの平坦なPIM領域からKVがあふれ、追加の高密度容量層が効く。"},
+      {"metric": "SLO内処理容量", "value": "AttAcc比 幾何平均1.70×、範囲1.0〜3.8×", "baseline": "AttAcc", "condition": "p50 end-to-end latencyが各条件の最小値の2×以内となる最大QPS", "interpretation": "1要求の処理時間短縮が復号枠の解放を早め、飽和点を右へ動かすため、処理量差以上に到着率の余裕が増える。"},
+      {"metric": "大モデルの飽和QPS", "value": "最大処理量90%到達QPSがAttAcc比2〜3×高い", "baseline": "AttAcc", "condition": "GPT-175BとDevstral2-123B", "interpretation": "容量不足による再計算と遠隔KV移動を減らし、待ち行列の急増開始を遅らせる。"},
+      {"metric": "キュー遅延", "value": "86%削減(QPS 0.2)、95%削減(QPS 1.0)、55%削減(QPS 8.0)", "baseline": "AttAcc", "condition": "Mistral-Devstral2-123B / traceA", "interpretation": "アテンションの1ステップ短縮が高利用率では待ち行列へ非線形に効き、絶対遅延差が拡大する。"},
+      {"metric": "SLO境界後のp50遅延比", "value": "AttAcc/TokenStack 幾何平均25.2×、最大939×", "baseline": "AttAcc", "condition": "各16条件の比較打切りQPS", "interpretation": "極端な倍率は単一要求の演算が数百倍速い意味ではなく、AttAccが先に飽和して待ち行列が発散するため生じる。"},
+      {"metric": "TTFT/TBT", "value": "AttAccのp50 TTFTはTokenStack比幾何平均127×、TBTは1.8×", "baseline": "AttAcc", "condition": "Devstral2-123B/Qwen3-32Bの負荷走査", "interpretation": "TTFT差の大半は待ち行列で、TBT差は各復号ステップの局所的な帯域改善を反映する。"},
+      {"metric": "トークン当たりエネルギー", "value": "AttAcc比47%削減(traceA)、30%削減(traceB)", "baseline": "AttAcc", "condition": "Mistral-Devstral2-123B、QPS=32", "interpretation": "高頻度KVをPIM近傍へ置き、アテンションのオフチップDRAM転送をスタック内読込みへ置換する効果が中心。"},
+      {"metric": "最小改善条件", "value": "1.03× throughput", "baseline": "AttAcc", "condition": "Qwen3-4B / thinking", "interpretation": "小型モデルでKVが計算領域に収まり、長文推論で要求間共有もほぼないと高頻度/低頻度分離の価値が消える。"},
+      {"metric": "設計要素アブレーション", "value": "全機構で異種ハードウェア単体の約2× throughput", "baseline": "heterogeneous hardware only", "condition": "Devstral2-123B、QPS=32、traceA", "interpretation": "最大単独寄与はKey/Value非対称配置で、量子化、種別対応退避、限定複製が追加改善を積み上げる。"}
+    ],
+    "negative_results": "Qwen3-4B/thinkingでは処理量改善が1.03倍に留まり、平坦なPIM領域でKV全体が収まる小モデルや要求間KV再利用が乏しい長文推論では異種化の優位性がほぼない。容量層を増やしすぎるとPIM計算並列度が減り、例えばQwen3-32B/traceAでは容量:計算を4:4から7:1へ増やすとp50 TBTが11.2 msから12.2 msへ悪化する。容量不足側でも退避KVの再計算が発生して尾部遅延が急増するため、最適比率はモデルと負荷依存である。さらにK8V4量子化の生成品質への影響を測っておらず、実HBM4チップ上での検証もない。",
+    "interpretation": "TokenStackの利得はPIM演算器そのものを高速化した結果ではなく、PIMが必要な高頻度KVと、容量だけ必要な低頻度KV・重み・活性を物理的に別領域へ分けたことから生じる。KV圧力が低いと分離する必要がないため利得は小さく、モデルが大きい、共有接頭辞が多い、または高QPSで平坦なPIM容量が不足するほど利得が拡大する。処理時間の小さな差が飽和付近では待ち行列の発散時点を大きくずらすため、TTFTの倍率はthroughput倍率より非常に大きく見える。",
+    "quality_impact": "PIM配置自体は演算意味を変えないが、低頻度KVをK8V4で圧縮する部分は近似である。論文はシステム性能とエネルギーを評価し、生成品質のタスク指標や量子化誤差の出力影響を報告していないため、性能改善を完全に品質非劣化とみなすことはできない。"
+  },
+  "reservation": {"claim_id": "claim-efc8e9feaf53ec425a01e723", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
