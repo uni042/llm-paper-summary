@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-84d67d75abd88f7fe7ebc805",
   "job_id": "job-research-81e46dd484abb553",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-84d67d75abd88f7fe7ebc805",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "C2CServeはGrace HopperのようなCPU・GPU統合Superchipと高帯域NVLink-C2Cを前提とするため、PCIe接続の一般的なGPUサーバではCPU重み直接参照の帯域が不足し、同じ設計点が成立しない可能性が高い。評価は単一GH200を中心としており、複数Superchip間でモデルを配置する場合のネットワーク帯域、CPUメモリNUMA、複数ノードの失敗・移動は扱わない。全重みをCPU側へ常駐させるので、モデルカタログ総容量が480GBを超える環境ではさらにSSD等の下位階層が必要になる。定常TPOTはServerlessLLMなどHBM常駐系に常に勝つわけではなく、弾力性を優先した設計である。GB200への評価は帯域値を用いた投影で実機測定ではない。一次資料ではC2CServe本体の公開コードURLを確認できない。",
+    "differences": "ServerlessLLMはSSD・CPU・GPU間の高速チェックポイントロードと移動でコールドスタートを短縮するが、最終的には重みをGPUへ載せる。AegaeonはモデルをGPUプールで時間共有しトークン粒度でスケジューリングするが、モデル切替時のHBM常駐制約が残る。MoE-InfinityやFineMoEは専門家単位のオフロードを利用するためMoEの疎性に依存する。C2CServeは密モデルを含む全重みをCPUメモリに置いたままGPUカーネルが直接消費し、MIGを要求実行の固定した計算容器として保持する点が異なる。さらに通常GEMMをそのまま使わず、CPU重み帯域とMIG HBM帯域をSM単位で交換するHybridGEMMを導入し、共有C2C競合をサービングスケジューラまで含めて扱う。",
+    "implementation_status": "Mini-SGLangを基盤に約5千行CUDA/C++と4千行Pythonで実装され、HybridGEMMが注意機構・MLP射影のcuBLASを置換し、C2CServeスケジューラが要求バッチャを置換する。CPU重みはcudaHostAllocMappedで確保する。論文は実装規模と構成を明示するが、arXiv一次資料からC2CServe固有の公開リポジトリURLは確認できない。",
+    "research_positioning": "サーバレスLLM配信、GPU仮想化、CPU/GPU階層メモリ、異種メモリ向けカーネル、帯域競合スケジューリングの交点に位置する。従来のオフロード研究が『必要時に下位層からHBMへ移す』ことを中心にしたのに対し、C2CServeは高速C2Cの登場を利用してCPUメモリ自体を演算入力の常設層へ昇格させる。このためメモリ階層研究だけでなく、将来の統合CPU/GPUアーキテクチャでLLMサービングのモデル常駐概念がどう変わるかを示す研究である。",
+    "relation_to_existing_repository": "リポジトリ内ではCPU/GPUオフロード系とLLMサービング・スケジューリング系を橋渡しする。FlexGenやMoE専門家オフロードがCPU/SSDを容量拡張として使うのに対し、C2CServeは高帯域CPUメモリから重みを直接GEMMへ供給する。ServerlessLLMやAegaeonとは長尾モデルのコールドスタート削減という目的を共有するが、MIGで計算状態を温存し、重み常駐先をCPUへ固定する点が異なる。SSD活用の観点では、CPUモデルプールよりさらに下へNVMeを置き、人気度に応じてSSD→CPUのモデル常駐を管理する三階層化が自然な拡張点になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-84d67d75abd88f7fe7ebc805","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
