@@ -2,26 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-d3f26cc2a19d9fd5bd9d453e",
-  "job_id": "job-research-f804d02bd63705d7",
-  "data": {
-    "hardware": ["1×NVIDIA A100 40GB", "2×AMD EPYC 7313 16-core CPU（合計32スレッド）", "256GBホストDRAM"],
-    "software": ["vLLM 0.8.4 V1実行系", "チャンク化プリフィル", "TCM-Serveスケジューラ拡張"],
-    "model": ["LLaVA-OneVision 0.5B", "LLaVA-OneVision 7B", "Gemma 3 4B", "Gemma 3 12B", "Qwen2.5-VL 3B", "Qwen2.5-VL 7B", "Pixtral 12B"],
-    "datasets": ["ShareGPT（テキスト）", "LLaVA-Instruct（画像）", "LLaVA-Video（動画）"],
-    "baselines": ["vLLMチャンク化プリフィルの先着順", "最早期限優先（Earliest Deadline First; EDF）"],
-    "correctness": "要求順序とスケジューリングだけを変更し、視覚トークンやモデル演算を近似しない。したがって同じ要求を実行したときのモデル計算内容を変えず、品質低下を速度へ交換する方式ではない。",
-    "settings": [
-      {"name": "ワークロード混合", "description": "テキストのみ、軽量マルチモーダル、重量マルチモーダルの3構成を用意し、最近の本番特性報告を参考にテキスト・画像・動画比率を設定する。要求到着はPoisson過程で生成する。"},
-      {"name": "標準評価", "description": "LLaVA-OneVision 7B、重量マルチモーダル構成、到着率2要求/秒を既定とし、SLOは競合なしエンドツーエンド遅延の5倍に設定する。"},
-      {"name": "KV容量感度", "description": "GPU側KVキャッシュへ使えるメモリを通常量から25%まで段階的に減らし、資源圧力下で各クラスの遅延・SLO違反・プリエンプションがどう変わるかを測る。"},
-      {"name": "分類器切り分け", "description": "単純なモダリティ対応分類と、推定プリフィル時間・KV占有量によるスマート分類を比較し、さらに静的優先だけとエージング付き完全版を分離評価する。"}
-    ],
-    "methodology": "各モデルへ実データセット由来のテキスト・画像・動画要求を投入し、モダリティ混合率、到着率、KV容量を変えながら、平均およびP90のTTFT、正規化遅延、SLO違反率、違反深刻度、プリエンプション時間を測る。モデル横断評価に加え、分類方式と優先制御の切り分けを行い、軽量要求への利益が重量要求の飢餓によるものではないかを確認する。",
-    "scope": "単一A100ノードの実機評価であり、複数GPU・複数ノード通信、テンソル並列、段階分離は含まない。対象入力はテキスト・画像・動画で、音声、3D、任意入力任意出力モデルは未対応。要求到着はPoisson生成で、実サービスの長時間到着トレースを直接再生しない。GemmaとPixtralでは動画を画像列として模擬する。",
-    "workloads": ["テキストのみ", "軽量マルチモーダル", "重量マルチモーダル", "高到着率", "KVメモリ25%制約", "7種類のマルチモーダルLLM"],
-    "metrics": ["TTFT", "正規化エンドツーエンド遅延", "SLO違反率", "SLO違反深刻度", "P90遅延", "プリエンプション回数・時間", "KVキャッシュ圧力"],
-    "reproducibility": "ハードウェア、vLLM版、モデル群、データセット、負荷生成、SLO定義、分類器・優先度式と主要係数を本文へ記載する。プロファイルはモデル・モダリティ組ごとに平均約20分を要する。著者は実装を公開予定と述べるが、一次資料上の公式コードURLは確認できない。"
-  },
-  "reservation": {"claim_id": "claim-d3f26cc2a19d9fd5bd9d453e", "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-e3c8991dea481a214dec3f84",
+  "job_id": "job-research-b80b3af4b6abdc94",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e3c8991dea481a214dec3f84",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

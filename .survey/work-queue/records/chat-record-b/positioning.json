@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d3f26cc2a19d9fd5bd9d453e",
-  "job_id": "job-research-f804d02bd63705d7",
-  "data": {
-    "limitations": "単一A100 40GBノードでの評価に限定され、複数GPU・複数ノード、テンソル並列、プリフィル・デコード分離との相互作用は未検証である。対象はテキスト・画像・動画で、音声、3D、任意入力任意出力などの将来モダリティは扱わない。要求到着はPoisson生成であり、本番クラスタの時間相関やテナント偏りを直接再現しない。モデル・モダリティごとのオフラインプロファイルと回帰器を前提にするため、モデル更新、入力解像度分布、前処理実装が変わると再プロファイルが必要になる。軽量要求を優先する設計なのでtruckの遅延を悪化させる条件があり、KVメモリが極端に少ない場合はその交換条件が強くなる。一次資料はコードを公開予定と述べるが、現行arXivページから著者公式コードURLを確認できない。",
-    "differences": "ModServeは画像・動画の前処理やエンコーダなどモダリティ固有段階を別資源へ分離し、段階間の資源配置でスループットを高める。一方TCM-Serveは単一ノード内の既存vLLMを前提に、要求順序を時間・KV資源の2軸で制御して先頭待ちを減らす。視覚トークン削減やInf-MLLM系は入力表現自体を短くして計算を減らすが、品質影響を伴いうる。本方式はモデル計算を変えない。チャンク化プリフィルやSarathi系は長いプリフィルを分割してデコードとの干渉を減らすものの、極端に重い視覚要求を軽量要求より先に置く先着順の問題は残る。EDFはSLO期限だけを見るのに対し、TCM-Serveは資源需要クラスと待機時間を同時に使う。",
-    "implementation_status": "vLLM 0.8.4 V1実行系へ、オフラインプロファイラ、時間・KV影響推定器、3クラス分類、独立キュー、エージング付き優先制御、追加計測を実装した試作を評価する。著者はフレームワークを公開予定と記載するが、2026-09-14時点で一次資料から公式公開URLは確認できない。",
-    "research_positioning": "マルチモーダルLLMサービングにおける要求スケジューリング研究。モデルやカーネルを変えるのではなく、要求ごとの時間資源と空間資源を予測して、異質なワークロードを単一GPU上でどう順序付けるかを主対象とする。SLOスケジューリングとKVメモリ圧力を一つの要求分類へ接続する点が特徴である。",
-    "relation_to_existing_repository": "リポジトリ内のvLLM/SGLangスケジューリング、チャンク化プリフィル、プリフィル・デコード分離、KVキャッシュ管理と補完関係にある。段階分離が計算資源を物理的に分けるのに対し、TCM-Serveは同じGPU上で異質要求の順序を変えるため、少資源環境や分離前段の制御として組み合わせられる。KV容量が減るほど要求クラス間の差が大きくなる結果は、将来CPU/SSDへKVを階層化する場合にも、どの要求を先に進めてGPU KVを解放するかというスケジューリング信号として利用できる。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-d3f26cc2a19d9fd5bd9d453e", "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-e3c8991dea481a214dec3f84",
+  "job_id": "job-research-b80b3af4b6abdc94",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e3c8991dea481a214dec3f84",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
