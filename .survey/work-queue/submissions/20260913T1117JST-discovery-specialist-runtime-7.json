@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d269169f035c8fc5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.00227",
+      "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+      "source_url": "https://arxiv.org/abs/2601.00227",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+      "priority": 84,
+      "reason": "LLMが生成するGPU kernelを実際の推論系へ取り込む際に、kernel記述・workload・implementation・評価が分断されている問題に対し、FlashInfer Trace、serving trace由来benchmark、correctness/performance評価、leaderboard、最良kernelをSGLang/vLLMへ動的差し替えするapply機構を統合する。単なるkernel生成benchmarkではなく、AIによるkernel探索をproduction LLM engineへ継続導入する閉ループを構築しており、FlashInfer/vLLM/SGLang系統のruntime・kernel自動最適化として重要な欠落候補。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T11:00:43+09:00",
+    "round": "specialist-runtime-kernel-7",
+    "axis": "GPU runtime・kernel自動最適化とframework統合",
+    "query_summary": "GPU kernel/runtime/compilerとframework統合を確認した。ZipServ 2603.17435、moderate sparse GPU inference 2607.08786、Concordia 2606.23521、Mirage Persistent Kernel 2512.22219はidentity deltaまたは既存research jobで重複。FlashInfer-Bench 2601.00227は最新HEADでidentity delta、stable job、repoタイトル検索のいずれにも存在しないことを再確認した。",
+    "candidate_count": 5,
+    "duplicate_filtered_count": 4,
+    "duplicate_canonical_ids": [
+      "arxiv:2603.17435",
+      "arxiv:2607.08786",
+      "arxiv:2606.23521",
+      "arxiv:2512.22219"
+    ],
+    "next_axis_hint": "最終枯渇確認として最新新着、network/CXL/SSD階層メモリ、forward/backward citationの3経路を再走査する",
+    "empty_round_reason": null
+  }
+}
