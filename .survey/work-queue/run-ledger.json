@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T02:42:35.849043+00:00",
+  "updated_at": "2026-09-13T03:03:03.993401+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17657,16 +17657,17 @@
     {
       "run_key": "2026-09-13T11:30:00+09:00",
       "first_recorded_at": "2026-09-13T02:42:35.849043+00:00",
-      "last_recorded_at": "2026-09-13T02:42:35.849043+00:00",
+      "last_recorded_at": "2026-09-13T03:03:03.993401+00:00",
       "signals": [
-        "fallback_archived"
+        "fallback_archived",
+        "discovery_or_queue_expanded"
       ],
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 0,
-        "new_jobs": 0,
+        "new_jobs": 1,
         "new_papers": 0,
         "fallback_archived": 1
       },
@@ -17684,18 +17685,51 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34734453201:1",
+          "recorded_at": "2026-09-13T03:03:03.993401+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34734453201",
+            "run_attempt": "1",
+            "source_sha": "e7cbd55b274aa3c30d3172a7a03c54c1a60800aa"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
-      "terminal_transitions": [],
-      "new_jobs": [],
+      "terminal_transitions": [
+        {
+          "job_id": "job-97b950195ea1dc8a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
+      "new_jobs": [
+        {
+          "job_id": "job-2fc4618f0ce91022",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        }
+      ],
       "new_paper_ids": [],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260913T1159JST-discovery-97b950195ea1dc8a.json"
+      ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2410.15332-epic.json"
       ],
       "paper_active_count_before": 397,
       "paper_active_count_after": 397,
-      "last_successful_action": "fallback_archived"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
