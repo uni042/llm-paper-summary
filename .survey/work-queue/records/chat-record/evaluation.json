@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d76929b8794d7558d0c2ab77",
   "job_id": "job-research-b4e2d8cb129fd978",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d76929b8794d7558d0c2ab77",
-    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "再現性付録の実験サーバはNVIDIA RTX 4090を8枚、AMD EPYC 7763 64-Core Processor、503 GBのシステムメモリを備える。単一ベンチマーク実行は概ね2〜5分、報告された実験一式は約2〜3日を要する。",
+    "software": "CP-SATを用いるFATE計画器と、共通ワークフローサービング基盤上にRoundRobin、HEFT、Halo、KVFlow風、Helix風の方針を実装する。評価生成器、固定manifest、CSVログ、表出力器で結果の来歴を固定する。",
+    "methodology": "WfCommons/WfInstancesの科学ワークフローDAGを最大64段階に制限し、LLMの役割、モデル割当、実行時間、モデル切替、親転送、接頭辞再利用の代理コストを付与したLLM段階ワークフローへ変換する。加えて、共有接頭辞の繰返し率0、0.25、0.5、1.0を制御するベンチマークを作り、クエリバッチ16と32を評価する。主表は同一ワークフローでRoundRobinへ正規化したメイクスパンとP95遅延の幾何平均。機構分析ではGPU間親エッジ、同一モデル継続、接頭辞・局所性の代理指標を用い、これらは直接の転送バイト数やKVヒット率ではないことを明示する。全報告実験は固定manifestで2回繰り返し、正規化後の変動も確認する。",
+    "datasets": ["WfCommons/WfInstances-derived workflow DAGs", "controlled LongBench-style prefix-reuse workflows"],
+    "models": ["複数モデル役割を割り当てたLLM段階ワークフロー"],
+    "baselines": ["RoundRobin", "HEFT", "Halo", "KVFlow-style adaptation", "Helix-style adaptation"],
+    "metrics": ["normalized makespan", "normalized P95 latency", "cross-device parent edges", "same-model continuation", "prefix/locality proxy", "CP-SAT solve time"],
+    "scope": "主結果は実サーバ上の共通実行基盤で得るが、ワークフローDAGは科学ワークフローをLLM段階へ持ち上げ、実行時間・切替・転送・接頭辞便益に代理コストを使う。KVFlow、Helix、HEFT比較も元システムの完全再現ではなく共通基盤上の方針適応である。GPU間親エッジと接頭辞指標は機構診断用で、主張は正規化メイクスパンや完了時間などエンドツーエンド指標を中心に解釈する。バースト到着、強いプロファイル変化、64段階を超える大規模DAG、実測ネットワーク帯域やメモリ断片化は主評価に含まれない。"
+  },
+  "reservation": {"claim_id": "claim-d76929b8794d7558d0c2ab77", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
 }
