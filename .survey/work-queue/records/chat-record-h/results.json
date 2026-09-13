@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-a20d167321270b2fec80b497",
   "job_id": "job-research-df0f9fdedbcbe3ac",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a20d167321270b2fec80b497",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "ETCは、演算子単体の最適化ではなく演算子境界をまたぐ細粒度パイプライン化で利得を得る。8×B200のGEMM+Reduce-ScatterとAll-Gather+GEMMでは非融合cuBLAS+NCCL比で最大1.40倍、Qwen3-30B-A3Bの完全MoE層では最良のTriton/FlashInfer比較対象比で最大1.23倍高速化する。低バッチのQwen3-30B-A3Bではバッチ1でvLLM比1.48倍、SGLang比1.20倍、Qwen3-32BではvLLM比最大1.15倍、SGLang比最大1.09倍である。TP=4では0.99〜1.06倍でvLLMと同等に留まり、CPU側分散スケジューリング費の小さいSGLangが優位な条件もある。ウォームアップはvLLM 123秒、SGLang 583秒に対しETC 35秒で、動的形状をAOTで扱う効果が大きい。",
+    "key_results": [
+      {"metric":"計算通信融合","value":"最大1.40倍高速化","baseline":"cuBLAS+NCCL","condition":"8×B200、GEMM+Reduce-Scatter / All-Gather+GEMM、8192 tokens、TP=8","interpretation":"イベント単位の依存で通信完了を全体待ちせず、準備できた計算タイルから重ねる。"},
+      {"metric":"MoE層性能","value":"最良比較対象比最大1.23倍","baseline":"Triton 3.4.0 / FlashInfer 0.2.14.post1","condition":"Qwen3-30B-A3B、1024 tokens付近","interpretation":"ルーティング結果で動的にタスクを起動し、GroupGEMM段間の大域同期と専門家負荷不均衡を減らす。"},
+      {"metric":"低バッチQwen3-30B-A3B TPOT","value":"batch=1でvLLM比1.48倍、SGLang比1.20倍","baseline":"vLLM 0.11.0rc2、SGLang 0.5.3rc0","condition":"prefill 512、decode 100 tokens","interpretation":"カーネル起動費が相対的に大きい低バッチで、常駐メガカーネルと演算子間重畳が効く。"},
+      {"metric":"Qwen3-32B TP=4","value":"vLLM比0.99〜1.06倍","baseline":"vLLM","condition":"4-way tensor parallel","interpretation":"分散低バッチではCPUスケジューリングや通信費が露出し、単一GPUほど大きな利得は出ない。"},
+      {"metric":"エンジンウォームアップ","value":"ETC 35秒、vLLM 123秒、SGLang 583秒","baseline":"vLLM / SGLang JIT + CUDA Graph capture","condition":"Qwen3-32B","interpretation":"記号形状の単一AOTメガカーネルにより、vLLM 67回、SGLang 51回の実行時グラフ捕捉を不要にする。"},
+      {"metric":"スケジューリング方式の差","value":"MoE 1024 tokensで動的方式が静的比約4%高く、密TP=4では静的方式が非融合比6〜8%高い","baseline":"ETC static / dynamic / unfused megakernel","condition":"data-dependent vs regular workloads","interpretation":"不規則負荷では動的負荷分散、規則的低遅延負荷では静的キューの低オーバーヘッドが有利。"}
+    ],
+    "negative_results": "ETCが常に最速ではない。Qwen3-32Bの4-way TPではvLLM比0.99倍まで下回る条件があり、SGLangはCPU側分散スケジューラの低い費用により優位な設定がある。コンパイラ生成GEMMタイルが一部形状でcuBLASほど調整されていないことも小さな劣化要因である。動的スケジューラは規則的な分散Transformer層ではタスクキュー操作、とくに遠隔キュー操作の費用が大きく、静的方式より明確に遅い。",
+    "interpretation": "イベントテンソルの効果は、カーネル起動を一つへ減らすだけでなく、従来は演算子境界で隠れていたタイル単位の依存を公開する点にある。規則的な処理では依存順を事前に固定して同期費を最小化でき、MoEや通信揺らぎでは実行時に空いたSMへ仕事を渡すことでストラグラーを減らせる。形状を記号のままコンパイルできるため、この融合を多くの実行時形状へ再捕捉なしで適用できる。",
+    "quality_impact": "演算の配置・融合・実行順序を最適化するシステムで、近似推論やモデル圧縮ではない。モデル品質を意図的に変える方式ではないが、浮動小数点演算順の変更に伴うビット単位の差は品質評価項目として扱っていない。"
+  },
+  "reservation": {"claim_id":"claim-a20d167321270b2fec80b497","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
