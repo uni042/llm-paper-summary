@@ -2,38 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-manual-vortex-repair-20260914-001",
-  "job_id": "job-research-8df4b126a68a6be4",
-  "data": {
-    "hardware": "主要効率評価はNVIDIA H200 SXM 141GBでQwen3 0.6B〜8B。MLA検証は単一NVIDIA B200のGLM-4.7-Flash。最大規模は4×NVIDIA B200、TP=4のMiniMax-M2.7 229B。",
-    "software": "SGLang v0.5.9へ統合。注意機構 バックエンドはFlashInfer、TensorRT-LLM MHA/MLA、独自cuda_mla。公開vortex_torchと文書あり。",
-    "methodology": "Qwen3ではAMC23/AIME24、入力最大4K・生成最大16Kでブロック上位kとQuestのattended blocks 32〜256を掃引し、サーバー スループットと精度 パレートを測る。利用者 遅延は16K プロンプト、512 トークン生成、1〜8 要求/s、P1D1 disaggregated条件でP95 TPOTを測る。GLM-4.7-FlashはAIME26、32K生成、B200 1基でrope-aware 疎 MLAを全注意・Questと比較。MiniMax-M2.7はAIME26、32K生成、4×B200 TP=4、ブロック サイズ 16/32/64を掃引する。AI-エージェント研究ではQwen3-1.7B/H200、RULER 4K→AMC23→AIME24の段階評価と18時間の反復最適化を行う。",
-    "scope": "現版はデコードだけを対象としプリフィル 疎注意は未対応。学習/逆方向も未対応。精度と速度のパレートで評価する近似方式で、疎度を強めた場合の精度低下を許容予算で管理する。GLM 密 比較対象はベンダー MLA 形状未対応によりTriton フォールバックとなるため、4.7倍の最大倍率にはバックエンド差も含まれる。",
-    "workloads": [
-      "Qwen3-0.6B/1.7B/4B/8B",
-      "GLM-4.7-Flash",
-      "MiniMax-M2.7 229B",
-      "AMC23",
-      "AIME24",
-      "AIME26",
-      "RULER"
-    ],
-    "baselines": [
-      "SGLang 全注意",
-      "Quest",
-      "ブロック上位k",
-      "密 MLA Triton フォールバック"
-    ],
-    "metrics": [
-      "端から端まで トークン/s",
-      "P95 TPOT",
-      "平均@16",
-      "pass@4",
-      "pass@8",
-      "精度 予算",
-      "上位k 再現率",
-      "カーネル 遅延"
-    ],
-    "reproducibility": "コード、Webサイト、文書が公開され、Qwen/疎注意プログラムの再現性は高い。AI-エージェント生成algorithmsも論文appendixに記述される。一方、GPU依存カーネル性能と特定SGLang/TensorRT バックエンド versionに結果が依存する。"
+  "attempt_id": "attempt-a20d167321270b2fec80b497",
+  "job_id": "job-research-df0f9fdedbcbe3ac",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a20d167321270b2fec80b497",
+    "worker_id": "scheduled-chat-paper-20260914T0230JST",
+    "worker_kind": "scheduled_chat"
   }
 }
