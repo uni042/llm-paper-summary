@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-c6850610f1696da302c47466",
   "job_id": "job-research-78cb8002e7b50e8e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c6850610f1696da302c47466",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2609.11294",
+    "arxiv_id": "2609.11294",
+    "doi": "10.48550/arXiv.2609.11294",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.AI","cross_list":["cs.OS"]},
+    "title": "Memory Compression for High-Fanout Agent Sandboxes",
+    "summary": "AgentZipは、1つのエージェント課題から多数のサンドボックスを並列生成するとCPU計算より先にメモリ容量が詰まる問題に対し、同じテンプレートから派生したページと兄弟サンドボックス間の類似性を利用して物理メモリを圧縮する。各4KiBページについて、テンプレートとの差分、同一課題のサンドボックス群から学習した共有Zstd辞書、ページ内の連長圧縮を比較し、最小表現を選ぶ。従来のように温かいページを圧縮対象から外さず、復元時のストライド・時間相関・ツール位置予測で先読みして停止時間を抑える。さらに軽い候補探索はツール実行中、重い圧縮はLLM応答待ち中へ移す。実機のエージェント学習・推論再生で平均サンドボックス所有メモリを最大88.55%削減し、積極圧縮だけでは3.052倍になる壁時計時間を1.403倍まで抑える。",
+    "list_summary": "共有テンプレートと兄弟エージェントの類似ページを差分・共有辞書で圧縮し、LLM待ち時間への圧縮移動と復元先読みで、平均サンドボックス所有メモリを最大88.55%削減する。",
+    "authors": ["Mengming Li","Ceyu Xu","Qijun Zhang","Jiangnan Yu","Xiangfeng Sun","Haohui Mai","Zhiyao Xie"],
+    "authors_affiliations": "Hong Kong University of Science and Technology (HKUST)。",
+    "published": "2026-09-10",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "agent sandbox memory compression and operating-system memory management",
+    "topics": ["エージェントサンドボックス","メモリ圧縮","ページ復元先読み","コピーオンライト","実行段階連動スケジューリング"],
+    "importance": "LLM本体ではなく高ファンアウトのエージェント実行環境を第一級のメモリ階層問題として扱い、サンドボックス固有の類似性とLLM待ち時間を容量増幅へ使う点が重要。",
+    "hardware_evaluation": "Intel Xeon Platinum 8480C搭載サーバ、Linux 5.15.0、KVM/Firecrackerメモリスナップショットを使うZeroboot上の実機評価。",
+    "source": "https://arxiv.org/abs/2609.11294",
+    "sources": ["https://arxiv.org/abs/2609.11294","https://arxiv.org/html/2609.11294"],
+    "code": null,
+    "implementation": "Zeroboot上にユーザー空間圧縮プールとLinux userfaultfdを用いてAgentZipを実装し、E2B互換の制御・コマンド入口も提供する。論文は実装評価を示すが、一次資料でAgentZip本体の公式公開コードURLは確認できない。",
+    "last_checked": "2026-09-14",
+    "storage_targets": ["sandbox private physical pages","user-space compressed page pool","cohort compression dictionaries"],
+    "bottlenecks": ["高ファンアウト時のサンドボックス物理メモリ","ページ単独圧縮が見逃す近似的なページ間冗長性","温かいページを避ける保守的な圧縮範囲","前景ツール実行と圧縮処理の競合","需要復元の尾部遅延"],
+    "hardware_details": "Intel Xeon Platinum 8480C、Linux 5.15.0。ZerobootのKVMベースサンドボックスをFirecrackerメモリスナップショットからコピーオンライトで複製。",
+    "quality_effect": "サンドボックスのメモリ表現を可逆に圧縮・復元するためLLM出力やツール計算結果の意味論は変えない。性能上は復元待ちによる壁時計時間増加が交換条件になる。",
+    "evidence_locations": ["arXiv v1 §3–4 AgentZip Design","arXiv v1 §5 Experimental Methodology","arXiv v1 §6 Evaluation","arXiv v1 References"],
+    "references": [
+      {"canonical_id":"arXiv:2504.07164","arxiv_id":"2504.07164"},
+      {"canonical_id":"arXiv:2603.22206","arxiv_id":"2603.22206"},
+      {"canonical_id":"arXiv:2606.19348","arxiv_id":"2606.19348"},
+      {"canonical_id":"arXiv:2603.18815","arxiv_id":"2603.18815"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML版参考文献節",
+    "references_total": 29
+  },
+  "reservation": {"claim_id":"claim-c6850610f1696da302c47466","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
