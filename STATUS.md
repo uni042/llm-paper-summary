@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 18:36 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 19:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,19 +36,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **169** |
-| 処理中（Active claims） | **31** |
-| 今すぐ着手可能（Claimable） | **138** |
-| :30 通常worker Active claims | **26** |
-| :00 補助worker Active claims | **2** |
+| 処理中（Active claims） | **26** |
+| 今すぐ着手可能（Claimable） | **143** |
+| :30 通常worker Active claims | **23** |
+| :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 18:35 JST** |
+| :30 通常worker 直近claim | **09-13 19:06 JST** |
 | :00 補助worker 直近claim | **09-13 17:35 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **55** |
 | 最新通常run | **2026-09-13T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **387 min** |
+| 最古の有効claimの経過時間 | **418 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -65,18 +65,18 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 | Research完了 | **64** |
 | Repo収録 | **64** |
 | Audit完了 | **0** |
-| 探索評価候補 | **697** |
-| Research候補採用 | **215** |
-| 重複除外 | **314** |
-| 重複率 | **45.1%** |
-| 探索専用worker run（毎時枠） | **16** |
-| 探索専用worker round（stats観測） | **142** |
+| 探索評価候補 | **683** |
+| Research候補採用 | **210** |
+| 重複除外 | **305** |
+| 重複率 | **44.7%** |
+| 探索専用worker run（毎時枠） | **15** |
+| 探索専用worker round（stats観測） | **141** |
 | 通常worker run（ledger観測） | **21** |
 | Fallback archive（全helper） | **19** |
 
 ### 24時間の流れ
 
-**探索評価 697 → 重複除外後 383 → Research候補採用 215 → Research完了 64 → Repo収録 64**
+**探索評価 683 → 重複除外後 378 → Research候補採用 210 → Research完了 64 → Repo収録 64**
 
 ## 直近の通常worker
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T17:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P88 `arXiv:2608.15018` — S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices
 - P87 `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 - P87 `arXiv:2512.25059` — Reliable and Resilient Collective Communication Library for LLM Training and Serving
 - P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
-- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
+- P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
+- P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
 
 ## 参考情報
 
@@ -123,7 +123,6 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
-| adjacent-pim-hbm-gpu-runtime-chiplet | 14 | 9 | 5 | 64.3% | 35.7% |
 | agent workflow/context runtime・branch admission・heterogeneous many-core runtime | 13 | 9 | 4 | 69.2% | 30.8% |
 | SSD expert offload・peer GPU cache tier・階層メモリ | 12 | 10 | 0 | 83.3% | 0.0% |
 | multi-node MoE活性パターン配置・edge expert類似性routing | 12 | 10 | 2 | 83.3% | 16.7% |
