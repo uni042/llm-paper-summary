@@ -2,16 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2512.12990-20260913-0930-v10-a",
-  "job_id": "job-research-7c0598aabd36d6bf",
+  "attempt_id": "attempt-b0828ffdc0038e6e8c458dc9",
+  "job_id": "job-research-67fd071bb1792a36",
   "data": {
-    "hardware": "システム仕様はXPU 1GHz、8,192個の8-bit PE、16.4 TOPS、3.18 TOPS/W、LPDDR4 DRAM約104Gbps・約8GB・最大1.5pJ/bit、UFS 3.1 Flash 10Gbps・128GB・103pJ/bit。専門家キャッシュ容量は1.8/2.4/3.6GB。",
-    "software": "DeepSeek-V2-LiteとQwen1.5-MoE-A2.7Bを対象に、Cache-PriorとCumsumルーティングを比較する。キャッシュは統一LRUを基礎にし、DBSCではMSB/LSBへ異なる優先度を適用する。",
-    "methodology": "GSM8K 5-shotを使い、プリフィル約500トークン、デコード100トークン超の長めの生成で評価する。活性値はFP16、KVキャッシュはINT8、非専門家重みはG128対称INT8、専門家重みはG32非対称量子化。高ビット・低ビットの複数構成を掃引し、ミス率制約は最初の10デコードステップ後から適用する。精度はGSM8Kと量子化PPL、システム評価はデコードエネルギーと遅延を、精度を揃えた構成間で比較する。",
-    "scope": "単一バッチの端末内／オンプレミスMoEを対象としたアーキテクチャモデル評価で、商用スマートフォン上の実測エンドツーエンド評価ではない。モデルは2種類、主要ベンチマークはGSM8K、専門家キャッシュ容量は3点。プリフィルは高ビット計算を維持するため主な省エネルギー効果はデコードに出る。プリフィルの専門家頻度が初期デコードと相関しないワークロードではPCWの利得が小さくなる可能性がある。",
-    "workloads": ["DeepSeek-V2-Lite","Qwen1.5-MoE-A2.7B","GSM8K 5-shot"],
-    "baselines": ["Cache-Prior","Cumsum routing","一様高ビット専門家キャッシュ","一様低ビット専門家キャッシュ","AMATのみ","Empty/Last-layer/Random cache initialization"],
-    "metrics": ["GSM8K精度","困惑度（PPL）","高ビット換算キャッシュミス率","デコード消費エネルギー","デコード高速化倍率","キャッシュ初期化のエネルギー・遅延"],
-    "reproducibility": "モデル、ベンチマーク、量子化粒度、DRAM/Flash/XPU仕様、キャッシュ容量、比較ルーティング、ウォームアップ区間は記載される。公式コードは確認できず、評価の完全再現には論文記載のアーキテクチャモデルとキャッシュ制御を実装する必要がある。"
+    "hardware": "単一ノード実機。Intel Core i9-14900K、24 cores/32 threads、最大6.0GHz、NVIDIA GeForce RTX 5090 32GB、host DRAM 64GB、NVMe SSD 516GB、NUMA node 1。",
+    "software": "Qwen3-0.6Bをbackboneとして使用。phrase memoryはFineWeb-Edu、Wikipedia、C4 English、arXiv、PubMedの混合コーパスから構築し、凍結semantic encoderとしてQwen3-Embeddingを使用する。",
+    "methodology": "品質評価ではQwen3-0.6B、parameter-matched LoRA、TF-EngramをMMLU、ARC-Challenge、HellaSwag、PIQA、WinoGrande、BoolQ、OpenBookQA、SciQ、TruthfulQA-MC2、LAMBADAの10ベンチマークで比較する。system評価ではmemory tableを1M〜100M entryへ変え、offline construction時間、storage footprint、GPU memory、throughput、per-token latencyを測る。100M entryでは1024次元FP16 vectorを用いる。prefetch budgetはTop-Kを変え、SSD先読みなし、final-head-guided、early-exit-guided等を比較する。early-exit layer位置も変えてaccuracyとlatency hidingの交換関係を評価する。",
+    "scope": "評価backboneはQwen3-0.6Bのみで、単一RTX 5090ワークステーションに限定される。100M-entry表まで実測するが、数十億entry、複数SSD、multi-GPU servingは未評価。外部memory corpusは主に英語中心で、domain freshnessや更新運用も主評価外。",
+    "workloads": ["MMLU", "ARC-Challenge", "HellaSwag", "PIQA", "WinoGrande", "BoolQ", "OpenBookQA", "SciQ", "TruthfulQA-MC2", "LAMBADA", "1M〜100M phrase memory scale"],
+    "baselines": ["Qwen3-0.6B frozen backbone", "Parameter-matched LoRA", "GPU-resident phrase memory", "SSD-backed without prefetch", "Final-head-guided prefetch"],
+    "metrics": ["平均benchmark score", "GPU memory usage", "offline construction time", "storage footprint", "tokens/s", "ms/token", "prefetch sensitivity"],
+    "reproducibility": "ハードウェア構成、backbone、コーパス群、benchmark、memory size、主要prefetch parameterを論文で記載する。ただし著者公式コードは一次資料から確認できず、phrase mining/filteringやcache policyの実装細部には選択余地があるため完全再現性は限定的。"
   }
 }
