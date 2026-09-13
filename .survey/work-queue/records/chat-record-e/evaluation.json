@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-813c91afa994773c80c27241",
-  "job_id": "job-research-ee741ee249b93f89",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-813c91afa994773c80c27241",
-    "worker_id": "parallel-e2e-worker-a-20260913",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-813c91afa994773c80c27241","job_id":"job-research-ee741ee249b93f89","data":{"hardware":"オフラインではQwen3-4B、8B、14BとGemma4-12Bを対象にし、1ラウンド遅延はバッチサイズ128、文脈長512/1024/2048/4096トークンの平均で測る。生産評価はDeepSeek-V4-FlashとV4-Proのプレビュー系エンジンへDSpark-5を配備し、実ユーザートラフィックのテレメトリを用いる。GPU型番は本文で開示されていない。","software":"公開のDeepSpec学習・評価基盤とDSparkチェックポイントが提供される。生産系は内部基盤HAI-LLM、連続CUDAグラフ実行、ゼロオーバーヘッドスケジューリング、変長検証向け疎注意カーネルを利用する。","methodology":"オフラインではEagle3、DFlash、DSparkを同一フレームワーク・同一データで再学習し、提案長7をそろえて数学、コード、日常会話の9ベンチマークで1ラウンド当たり受理長を比較する。Open-PerfectBlendの130万プロンプトから対象モデル応答を再生成し、各ドラフト器を10エポック学習する。信頼度ヘッドは静的閾値走査と信頼度較正で識別・較正性能を確認する。生産評価ではMTP-1を従来基準として、実トラフィック上のユーザー当たり生成速度と総出力処理量の前線を比較し、複数のサービス水準アンカーで処理量を測る。","scope":"オフライン評価はドラフト品質を分離するため信頼度スケジューラを無効化している一方、生産評価は実トラフィックと実エンジンを使う。生産結果はDeepSeek-V4の特定プレビュー構成に基づき、GPU型番、要求分布の完全な公開、他社推論基盤での再現結果は示されないため、数値の外部一般化には制約がある。","workloads":["GSM8K","MATH500","AIME25","MBPP","HumanEval","Live-CodeBench","MT-Bench","Alpaca","Arena-Hard","DeepSeek-V4実ユーザートラフィック"],"baselines":["Eagle3","DFlash","MTP-1"],"metrics":["1ラウンド当たり受理長","条件付き受理率","ROC-AUC","期待較正誤差","1ラウンド遅延","ユーザー当たり生成トークン数/秒","総出力トークン処理量"],"reproducibility":"DeepSpecと学習済みチェックポイントは公開される。オフラインの対象モデル、データ、提案長、学習回数、評価ベンチマークは明示される。一方、生産エンジンの全構成と実ユーザートラフィックは公開されていないため、生産曲線の完全再現は困難である。"},"reservation":{"claim_id":"claim-813c91afa994773c80c27241","worker_id":"parallel-e2e-worker-a-20260913","worker_kind":"scheduled_chat"}}
