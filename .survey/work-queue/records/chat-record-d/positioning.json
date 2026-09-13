@@ -1,15 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-2608.22643-20260913-0930-v10-d",
-  "job_id": "job-research-dddd01489d1d0d88",
-  "data": {
-    "limitations": "評価はJetson AGX OrinとSamsung 990 PROの単一構成が中心で、PCIe離散GPUサーバ、複数NVMe、RAID、GPU Direct Storage、複数要求のバッチサービングは未評価である。予測器と活性中心はオフラインでA100×8を使って準備し、任意モデルへ即適用できる訓練不要方式ではない。主性能モデルはMistral-7B FP16で、より大きなモデル・MoEへの拡張は実証されない。差分I/Oを導入してもNVMeが遅延の80〜87%を占める。品質は疎化で低下し、特にLlama-3-8B、高疎度、小さい密前半で悪化する。",
-    "differences": "FlexGenやllama.cppは重みを層/ページ単位で必要時に移し、NeuroPrefetcherはMLPニューロン行を予測して実行前に動かす。PowerInferはGPUとCPU DRAMを別容量階層として使うが、統合メモリではCPUオフロードで容量が増えない。DejaVuは層ごとに活性を予測して計算量を減らすが、層へ到達してからではNVMe先読み時間が短い。LLM in a FlashやNeuralinkはFlash上の疎アクセスを改善するが、前トークンの常駐活性集合との差分だけを行単位で更新する仕組みを中心にしない。PRESERVEは層重み・KVを先読みするが、分散サービングの大粒度転送が主対象である。",
-    "implementation_status": "ICPP 2026論文として実機システムを実装・評価済み。ニューロン中心ファイル形式、共有予測器、固定スロット差分ランタイム、io_uring/O_DIRECT、Jetson向け整合ステージング、融合CUDA散布を実装している。一次資料から公式コード公開先は確認できない。",
-    "research_positioning": "SSD/NVMeオフロード系統の中でも、ストレージI/Oをモデル重みの固定階層配置としてではなく、トークンごとの活性集合予測に基づく需要駆動ストリーミングとして扱う。特に『前回と今回の需要差分だけ読む』という差分先読みは、階層メモリ研究でキャッシュ内容を全置換せず変更分だけ搬送する設計として直接応用できる。端末統合メモリというCPUオフロードが効かない条件を明確に切り出した点も重要である。",
-    "relation_to_existing_repository": "SliceMoEがMoE専門家重みをビットスライスしてFlashミスを減らすのに対し、NeuroPrefetcherは密モデルMLPの活性行を予測してNVMe差分を減らす。PCRのSSD先読みがRAG KVを要求待ち時間中に読み出すのに対し、本手法は次トークンの密前半計算を先読み窓に使う。将来は複数NVMeへのニューロン行配置、SSD内部並列性を意識したレコード順序、読出し優先度、GDSによるステージング削減、予測信頼度に応じた多段先読みを組み合わせる余地が大きい。",
-    "audit_required": false
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-2410.15332-20260913-0930-v10-epic","job_id":"job-research-a46283c0339631e6","data":{"limitations":"非同期負荷は実トレースではなく2WikiMQAを使った人工Poisson workload。単一A100で、分散KVStore・ネットワーク転送・複数GPUのcache placementは主評価しない。PICの明示APIでは利用者がcache ID生命周期を管理する必要がある。モデル自体のdocument理解能力が低いとPIC方式だけでは救えず、疎attentionによる過長出力も未解決。LegoLinkのkはchunk境界数とtask/modelに依存し、すべての文脈構造で同じ最適値とは限らない。","differences":"prefix cachingは絶対prefix一致を要求するがEPICはchunkを任意位置で再利用する。PromptCacheはmodular reuseを狙うが位置依存が残る。CacheBlendは第1層full recompute+動的約15%選択でPIC品質を回復するのに対し、LegoLinkはchunk先頭という静的構造だけを再計算する。RAGCache等はretrieved contentのcache利用を管理するが、EPICはPICの位置補正アルゴリズムとAPIを中心に据える。","implementation_status":"ICML 2025採択。公式GitHub `DerekHJH/epic` が公開され、vLLM 0.4.1を基盤に約2K行Pythonで実装。KVStoreはHBM/DRAM/local filesystemへ拡張。","research_positioning":"KVキャッシュ最適化・再利用系統の基礎論文。位置独立再利用という別軸を定義し、compile/link分離と静的sink補正を提示したことで、RAGやtool-useの反復immutable contextをprefix tree外でも資産化できる。","relation_to_existing_repository":"MemServe/Mooncake/LMCache等のKV階層や外部ストレージ研究とは相補的。EPIC自体がDRAM/local filesystemへKVStoreを拡張しており、PIC chunkをSSD/NVMeへ保持し、再利用頻度でHBM/DRAM/SSD間を移動する設計へ自然に拡張できる。LegoLinkはlink計算をO(kN)へ下げるため、下位階層からKVを読み戻すI/Oとのoverlap余地も大きい。","audit_required":false}}

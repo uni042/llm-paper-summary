@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "sc-20260913T024200Z-run7-b",
+  "worker_id": "scheduled-chat-20260913-1130-run7-b",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-43ee292714ed8d8c",
+      "claim_id": "claim-760cfad7c15f4e71cdef2214",
+      "worker_id": "scheduled-chat-20260913-1130-run7-b",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-760cfad7c15f4e71cdef2214",
+      "claimed_at": "2026-09-13T02:41:01+00:00",
+      "expires_at": "2026-09-13T10:41:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-43ee292714ed8d8c"
+      ],
+      "job": {
+        "job_id": "job-research-43ee292714ed8d8c",
+        "type": "research",
+        "parent_job_id": "job-71a219ce6f705a8b",
+        "priority": 88,
+        "canonical_id": "arXiv:2603.23049",
+        "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
+        "source_url": "https://arxiv.org/abs/2603.23049",
+        "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.23049-pcr-prefetch-cache-reuse-rag-serving.md",
+        "selection_reason": "RAG配信の共有prefix再利用で、scheduler待機列を使うlook-ahead LRU、KVロードとGPU計算の層単位重畳、SSDからDRAMへのqueue-based prefetchを統合する。SSD I/Oを明示的に含むKV再利用系で平均TTFT最大2.47倍改善を報告しており、SSD/NVMe活用の比較対象として重要。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:02:49+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-b1be9294a63ee868",
+      "claim_id": "claim-bd6d26005c2813cbc175c94a",
+      "worker_id": "scheduled-chat-20260913-1130-run7-b",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-bd6d26005c2813cbc175c94a",
+      "claimed_at": "2026-09-13T02:41:01+00:00",
+      "expires_at": "2026-09-13T10:41:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-b1be9294a63ee868"
+      ],
+      "job": {
+        "job_id": "job-research-b1be9294a63ee868",
+        "type": "research",
+        "parent_job_id": "job-262708a8729e8066",
+        "priority": 88,
+        "canonical_id": "arXiv:2607.28699",
+        "title": "WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization",
+        "source_url": "https://arxiv.org/abs/2607.28699",
+        "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md",
+        "selection_reason": "KVキャッシュ量子化をオフライン平均評価だけでなく、層・ヘッド・ステップ単位の実行時リスク計で監視する。任意のcache-preserving quantizerに適用できる決定論的上界と、制御付きINT8量子化向けの確率的証明を持ち、SGLangへ組み込んだ評価では危険な圧縮をgatingして品質を回復しつつ同一メモリで1.88倍のKV tokenを保持すると報告する。KV圧縮の安全性とserving実装を接続する点が強い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:31:01+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-2032cc68b22d1cbe",
+      "claim_id": "claim-fe89f2c5e75ae8b30c60d222",
+      "worker_id": "scheduled-chat-20260913-1130-run7-b",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-fe89f2c5e75ae8b30c60d222",
+      "claimed_at": "2026-09-13T02:41:01+00:00",
+      "expires_at": "2026-09-13T10:41:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-2032cc68b22d1cbe"
+      ],
+      "job": {
+        "job_id": "job-research-2032cc68b22d1cbe",
+        "type": "research",
+        "parent_job_id": "job-29dd7c44eff93660",
+        "priority": 88,
+        "canonical_id": "arXiv:2606.23521",
+        "title": "Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.23521",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.23521-concordia-persistent-kernel-checkpointing.md",
+        "selection_reason": "長時間動作するLLM agentのKV cache・scheduler・通信状態などGPU常駐stateを、framework固有のcheckpoint実装ではなくdevice-resident persistent kernelで保護するruntime。PTX/SASS instrumentationとJIT生成delta handlerによりdirty stateをCXL memoryまたはhost DRAMへ記録し、GPU/communicator障害からの復旧をhost CPUのcritical path外で扱う。推論runtime・階層メモリ・耐障害性を接続する未収録システムとして価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:33:06+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    },
+    {
+      "job_id": "job-research-dfc514a18ebaac1e",
+      "claim_id": "claim-dbb10b280e9110693d868f31",
+      "worker_id": "scheduled-chat-20260913-1130-run7-b",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-dbb10b280e9110693d868f31",
+      "claimed_at": "2026-09-13T02:41:01+00:00",
+      "expires_at": "2026-09-13T10:41:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-dfc514a18ebaac1e"
+      ],
+      "job": {
+        "job_id": "job-research-dfc514a18ebaac1e",
+        "type": "research",
+        "parent_job_id": "job-53325eb4d61afb8e",
+        "priority": 88,
+        "canonical_id": "arXiv:2512.22219",
+        "title": "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+        "source_url": "https://arxiv.org/abs/2512.22219",
+        "paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md",
+        "selection_reason": "multi-GPUモデル推論の多数kernel launchを、SM粒度の依存グラフとin-kernel分散schedulerにより単一persistent mega-kernelへ変換するcompiler/runtime。operator境界を越えたsoftware pipelineとkernel overlapを自動化し、既存kernel-per-operator serving比でend-to-end latency最大1.7倍改善と報告する。通信・演算・launch overheadをruntime/compiler層でまとめて最適化するため、推論基盤系統の重要な欠落候補。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:42:02+00:00",
+        "artifact_transport": "structured_record_v10"
+      }
+    }
+  ],
+  "processed_at": "2026-09-13T02:41:01+00:00"
+}

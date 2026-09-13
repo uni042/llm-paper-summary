@@ -1,17 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-2608.22643-20260913-0930-v10-d",
-  "job_id": "job-research-dddd01489d1d0d88",
-  "data": {
-    "hardware": "NVIDIA Jetson AGX Orin developer kit、32GiB統合LPDDR5、12-core Arm Cortex-A78AE、Ampere GPU 2048 CUDA cores (SM 8.7)、Samsung 990 PRO NVMe。オフライン準備・予測器学習はNVIDIA A100 80GB×8。",
-    "software": "Linux kernel memory limitで11〜17GiBの総メモリ上限を作り、CUDA利用可能量9.0〜14.8GiBを測定する。io_uring、O_DIRECT、CUDA mapped pinned staging、独自融合scatterと疎MLP実行を使用する。",
-    "methodology": "主性能評価はMistral-7B-v0.1 FP16、7.24B、13.49GiB、32層、hidden 4096、intermediate 14336。Kmax=5500/7168/9865で疎度62/50/31%を作る。WikiText-2から2048トークンの持続デコードスループットを測る。品質はWikiText-2 perplexityと10-shot normalized HellaSwagで、Llama-3-8Bも追加評価する。14GiB制限時には20種の生産・研究ランタイムの起動可否と性能を比較する。",
-    "scope": "単一のJetson AGX Orinという統合メモリエッジ環境が主対象で、離散GPUサーバや複数NVMe、複数モデル同時サービングは評価していない。主性能モデルはMistral-7B FP16で、Llama-3-8Bは品質評価中心。活性疎化は近似であり、予測器学習と中心準備はA100×8という端末外計算を必要とする。モデルがメモリへ収まる領域ではllama.cppとの差が1.1〜1.2倍へ縮む。",
-    "workloads": ["Mistral-7B-v0.1 FP16","Llama-3-8B品質評価","WikiText-2 2048-token decoding","HellaSwag 10-shot"],
-    "baselines": ["llama.cpp FP16","Ollama","FlexGen all-disk","HF Transformers","ZeRO-Inference","CATS","TEAL","SGLang","vLLM","TensorRT-LLM","MLC-LLM","PowerInfer","Candle","DejaVu"],
-    "metrics": ["tokens/s","NVMe MiB/token","major page faults","CPU iowait","GPU utilization","per-token latency","WikiText-2 perplexity","HellaSwag accuracy retention"],
-    "reproducibility": "GPU/CPU/メモリ/SSD、7段階のメモリ制約、モデル寸法、疎度、予測器構成、io_uring queue depth、レコードサイズ、スループット・品質測定方法は詳細に記載される。一方、一次資料中に公式コード公開URLは確認できないため、完全な実装再現には論文記述からランタイムを再構築する必要がある。"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-2410.15332-20260913-0930-v10-epic","job_id":"job-research-a46283c0339631e6","data":{"hardware":"A100-80GB 1基、Intel Xeon Platinum 8358P 128-core@2.60GHz、DRAM 1TB。","software":"vLLM 0.4.1、Python約2K行、Ubuntu 20.04、Linux 5.16.7、CUDA 12.6。","methodology":"LongBenchの2WikiMQA、MuSiQue、SAMSum、MultiNews、HotpotQA、Needle-in-a-Haystackを各200例で評価。モデルはMistral 7B Instruct、Llama 3.1 8B Instruct、Yi Coder 9B Chat。同期評価ではFR、Naive、CacheBlend-r、LegoLink-kの精度–TTFTを比較。非同期評価では2WikiMQAからd userを構成し、各userが40秒一定率で同一文書集合へ要求を送り、到着はPoisson、Context Cache Ratioを変える。長文評価はchunk 512でcontext lengthを伸ばす。","scope":"PICは比較的新しく実トレースがないため非同期workloadは人工的であり、著者も実世界への倍率外挿に注意を促す。単一A100評価で複数GPU・ネットワークKVStoreは主評価しない。","workloads":["2WikiMQA","MuSiQue","SAMSum","MultiNews","HotpotQA","Needle-in-a-Haystack"],"baselines":["Fully Recompute","Naive PIC","CacheBlend-r"],"metrics":["TTFT","throughput","F1","ROUGE-L","OOM context length","Context Cache Ratio"],"reproducibility":"公開コード、モデル、dataset、vLLM/CUDA/OS、CPU/GPU/DRAM条件、chunk sizeと非同期生成方法が示され再現性は比較的高い。非同期負荷だけは人工生成である。"}}
