@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:06:03+00:00",
+  "updated_at": "2026-09-13T02:08:28+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-moe-edge-2",
+  "last_round": "specialist-lineage-forward-backward-3",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -2912,6 +2912,24 @@
       ],
       "next_axis_hint": "GPU runtime/kernel・圧縮重み融合カーネル、または重要既収録論文のforward citationへ軸を移す",
       "source_submission": "work-queue/submissions/20260913T1105JST-discovery-specialist-moe-2.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-lineage-forward-backward-3",
+      "axis": "重要系譜の前方・後方引用追跡",
+      "query_summary": "PagedAttention系統の後続メモリ管理と、今回新規採用されたS2-MoEの後方参考文献を別経路で確認した。JengaはarXiv IDのidentity deltaとstable research jobが存在しないこと、IFMoEはrepo内タイトル検索で未収録であることを最新HEAD直前に再確認した。既収録のSpecMoE、SP-MoEなどは投入対象から除外した。",
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2604.10152",
+        "arxiv:2510.10302"
+      ],
+      "next_axis_hint": "GPU runtime/kernelの既収録確認後、SSD/CXL階層メモリやagent長時間推論の隣接軸を確認する",
+      "source_submission": "work-queue/submissions/20260913T1108JST-discovery-specialist-lineage-3.json"
     }
   ],
   "axes": {
@@ -4544,6 +4562,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.8,
       "next_axis_hint": "GPU runtime/kernel・圧縮重み融合カーネル、または重要既収録論文のforward citationへ軸を移す"
+    },
+    "重要系譜の前方・後方引用追跡": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 4,
+      "duplicate_filtered_count": 2,
+      "novel_candidate_count": 2,
+      "accepted_count": 2,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "GPU runtime/kernelの既収録確認後、SSD/CXL階層メモリやagent長時間推論の隣接軸を確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

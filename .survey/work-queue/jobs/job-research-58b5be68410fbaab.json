@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-58b5be68410fbaab",
+  "type": "research",
+  "parent_job_id": "job-bb3c1124c61c2b01",
+  "priority": 87,
+  "canonical_id": "arXiv:2503.18292",
+  "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
+  "source_url": "https://arxiv.org/abs/2503.18292",
+  "paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+  "selection_reason": "PagedAttention以降のLLMで埋め込み次元・注意構造・依存関係が層ごとに異なるため、単一ページサイズと一律キャッシュ方針では断片化・再利用効率が悪化する問題を扱う。異種埋め込み寸法の最小公倍数を利用する二段階メモリアロケータと層別キャッシュ・eviction APIをvLLM上に実装し、多様なモデル・データセット・GPU構成でGPUメモリ利用を最大79.6%改善、serving throughputを最大4.92倍（平均1.80倍）改善する。PagedAttention系統の重要な発展として未収録なら価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T02:08:28+00:00",
+  "artifact_transport": "structured_record_v10"
+}

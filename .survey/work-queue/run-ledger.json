@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T02:07:24.051160+00:00",
+  "updated_at": "2026-09-13T02:09:38.254520+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,7 +17069,7 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T02:07:24.051160+00:00",
+      "last_recorded_at": "2026-09-13T02:09:38.254520+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -17078,9 +17078,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 0,
-        "new_jobs": 10,
+        "new_jobs": 13,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -17213,6 +17213,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34732282866:1",
+          "recorded_at": "2026-09-13T02:09:38.254520+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34732282866",
+            "run_attempt": "1",
+            "source_sha": "912d5b57e69a6eba38c98eb1703ce0fb70aefdd3"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17282,6 +17296,14 @@
         },
         {
           "job_id": "job-86454d0b5bf5f7d1",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-bb3c1124c61c2b01",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -17359,6 +17381,27 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15018",
           "title": "S2-MoE: Enabling Efficient Self-Speculative Decoding for Mixture-of-Experts on Edge Devices"
+        },
+        {
+          "job_id": "job-c1cee5dda24c1cfe",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-3190de0b496967f3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": null,
+          "title": "IFMoE: An Inference Framework Design for Fine-grained MoE"
+        },
+        {
+          "job_id": "job-research-58b5be68410fbaab",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2503.18292",
+          "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity"
         }
       ],
       "new_paper_ids": [
@@ -17372,7 +17415,8 @@
         ".survey/work-queue/results/20260913T1037JST-discovery-specialist-hierarchical-memory-7.json",
         ".survey/work-queue/results/20260913T1040JST-discovery-specialist-network-8.json",
         ".survey/work-queue/results/20260913T1100JST-discovery-specialist-kv-1.json",
-        ".survey/work-queue/results/20260913T1105JST-discovery-specialist-moe-2.json"
+        ".survey/work-queue/results/20260913T1105JST-discovery-specialist-moe-2.json",
+        ".survey/work-queue/results/20260913T1108JST-discovery-specialist-lineage-3.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,

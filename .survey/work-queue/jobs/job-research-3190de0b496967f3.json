@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3190de0b496967f3",
+  "type": "research",
+  "parent_job_id": "job-bb3c1124c61c2b01",
+  "priority": 78,
+  "canonical_id": null,
+  "title": "IFMoE: An Inference Framework Design for Fine-grained MoE",
+  "source_url": "https://mlforsystems.org/assets/papers/neurips2024/paper41.pdf",
+  "paper_path": null,
+  "selection_reason": "S2-MoEの後方参考文献から発見したNeurIPS 2024 Machine Learning for Systems Workshop論文。細粒度MoEで非expert共有パラメータの重複とGroupedGEMMの遅延が大きい問題に対し、共有部分をtensor parallelism、expert部分をexpert parallelismで処理する混成配置と、活性expert数を減らした同一MoEをdraftとして使う近似的投機復号・KV修整を組み合わせる。Qwen2-57B-A14B-Instructを4基A6000、DeepSeek-Lite-Chatを2基A6000で評価し、推論速度とthroughputをともに30%以上改善すると報告する。後続S2-MoEへつながる系譜上の重要な古い欠落候補。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T02:08:28+00:00",
+  "artifact_transport": "structured_record_v10"
+}
