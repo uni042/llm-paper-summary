@@ -41,6 +41,14 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertNotIn("dispatch_fallback_inbox.py", text)
         self.assertNotIn("backfill_citations.py", text)
 
+    def test_submission_fast_lane_persists_failure_result_before_failing(self):
+        text = self._text("survey-submission-fast.yml")
+        self.assertIn("processing_failed=0", text)
+        self.assertIn("if ! python .survey/scripts/process_immutable_submission.py", text)
+        self.assertIn(".survey/work-queue/results/research", text)
+        self.assertIn(".survey/work-queue/results/audit", text)
+        self.assertIn("Immutable submission failure result was persisted to main.", text)
+
     def test_background_helper_no_longer_owns_claim_or_immutable_submission_triggers(self):
         text = self._text("survey-helper.yml")
         self.assertIn("group: survey-background-main", text)
