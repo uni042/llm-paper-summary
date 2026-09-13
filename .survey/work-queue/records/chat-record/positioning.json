@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-636dceef51cdacb2e889c0f9",
-  "job_id": "job-research-2909bb8eecc75840",
-  "data": {
-    "limitations": "評価はQwen1.5-MoEと量子化Mixtral-8x7B、単一ワークステーション、PCIe 4.0環境に限られる。DeepSeek-R1のように1トークンで8専門家を選ぶ超大規模MoEを例として動機付けているが、主評価では実行していない。SSDからの直接読込み、複数ノード、NVLinkなど別の相互接続、複数要求を同時処理する高バッチサービングでの転送競合も未評価である。構成器は過去の命中率・予測精度を統計化し5000トークンごとに更新するため、活性分布が急変する場合には古い統計が一時的に最適でなくなる可能性がある。分割は専門家FFNを単純に上下へ分けられる構造を前提とし、異なる専門家内部構造への一般化は検証されていない。公式コード公開先も一次資料では確認できない。",
-    "differences": "Mixtral-offloadingは専門家全体をLRUで保持しつつ次層専門家を先読みし、MoE-Infinityは利用頻度や複数層の活性パターンを使うが、キャッシュ単位は基本的に専門家全体である。AdapMoEは層ごとのキャッシュ量を適応させるが、専門家自体の分割比までは最適化しない。HOBBITは複数ビット幅を使って専門家転送量とキャッシュ量を調整するのに対し、MoEpicは数値精度を変えず一つの専門家を空間的に分割する。Pre-gated MoEは次層ルータを予測用に学習するがキャッシュを使わない。MoEpicは部分キャッシュ、隣接層活性による先読み、頻度・最近性統合キャッシュ、層別VRAMと分割比の適応を一体化している。",
-    "implementation_status": "arXiv v1論文ではPyTorchとHuggingFace Transformersを改造した実験用MoEオフロード推論系の実装を説明するが、一次資料内に公式GitHub等の公開実装URLは記載されていない。したがって論文時点では実装内容は評価済みだが、公開コードの存在は確認できない。",
-    "research_positioning": "CPU/GPU階層メモリを使うMoE専門家オフロード、専門家キャッシュ、専門家先読みの交点に位置する。既存研究が専門家を丸ごとGPU常駐かCPU常駐かで扱う傾向に対し、MoEpicは専門家内部を分割して部分常駐させることで、同じVRAMをより多くの専門家へ広げる。これはMoEの配置粒度を専門家単位から専門家区間単位へ細かくする方向であり、将来的には量子化、圧縮、SSD階層、複数GPU配置と組み合わせられる。",
-    "relation_to_existing_repository": "リポジトリの専門家オフロード系では、Mixtral-offloading、MoE-Infinity、HOBBIT、AdapMoE、ProMoEなどのキャッシュ・先読み研究に直接接続する。特にHOBBITが低精度専門家を高速転送し高精度版をキャッシュする精度方向の階層化であるのに対し、MoEpicは一つの専門家を空間方向に分割して同じ精度のまま部分キャッシュする。SSD活用研究との関係では、現在CPU RAMを下位階層としている部分をNVMeへ拡張した場合、上部・下部の分割比と層別予算にストレージ帯域・読込み遅延を追加した多階層構成へ発展させられる。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id":"claim-636dceef51cdacb2e889c0f9","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-84d67d75abd88f7fe7ebc805",
+  "job_id": "job-research-81e46dd484abb553",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-84d67d75abd88f7fe7ebc805",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

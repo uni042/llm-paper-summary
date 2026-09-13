@@ -1,22 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-e9cfe66d9407d8e53858150f",
+  "claim_id": "claim-84d67d75abd88f7fe7ebc805",
   "job_id": "job-research-81e46dd484abb553",
-  "worker_id": "scheduled-chat-dspec-normal-20260913T1900JST",
+  "worker_id": "scheduled-chat-discovery-router",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-e9cfe66d9407d8e53858150f",
-  "request_id": "req-dspec-normal-20260913T1900JST-19",
-  "claimed_at": "2026-09-13T10:37:06+00:00",
-  "expires_at": "2026-09-13T10:37:59+00:00",
+  "attempt_id": "attempt-84d67d75abd88f7fe7ebc805",
+  "request_id": "claim-20260913T192600Z-scheduled-chat-discovery-router-05",
+  "claimed_at": "2026-09-13T19:15:12+00:00",
+  "expires_at": "2026-09-13T20:45:12+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-81e46dd484abb553"
   ],
-  "previous_claim_id": "claim-6a426cc25dd271030b8db92c",
-  "record_bank": null,
-  "record_bank_fallback": "library",
-  "released_at": "2026-09-13T10:37:59+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260913T195000JST-c2cserve-rekey-attempt-e9cfe66d9407d8e53858150f.json",
-  "checkpoint_release_request_id": "req-dspec-normal-20260913T1900JST-20"
+  "previous_claim_id": "claim-e9cfe66d9407d8e53858150f",
+  "record_bank": "a"
 }

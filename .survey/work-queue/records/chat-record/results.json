@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-636dceef51cdacb2e889c0f9",
-  "job_id": "job-research-2909bb8eecc75840",
-  "data": {
-    "overview": "MoEpicはQwen1.5-MoEとMixtral-8x7Bの両方で、VRAM予算を変えてもプリフィルとデコードの双方で比較方式より低遅延となる。Qwen1.5-MoEで完全専門家480個分の予算を与えた場合、TTFTは1.43秒で、Pre-gated MoE 2.58秒、Mixtral-offloading 1.77秒、AdapMoE 1.78秒、MoE-Infinity 1.73秒を下回る。Mixtral-8x7Bで160専門家分の予算ではTPOTが85msで、比較方式の136〜248msに対し37.51〜65.73%短い。同じ目標遅延を満たすためのVRAMも37.45〜50.04%少なく、Qwen1.5-MoEでは全常駐26.67GB・57msに対し、12.38GBで60msを達成する。構成要素除去では層別キャッシュ構成アルゴリズムを外す影響が最も大きく、MixtralのTPOTが132msから193msへ1.46倍悪化する。",
-    "key_results": [
-      {"metric":"Qwen1.5-MoEのTTFT","value":"1.43秒","baseline":"Pre-gated MoE 2.58秒、Mixtral-offloading 1.77秒、AdapMoE 1.78秒、MoE-Infinity 1.73秒","condition":"完全専門家480個分のVRAM予算","interpretation":"専門家上部を広く常駐させ、キャッシュ済み部分の計算と不足部分の転送を重ねることでプリフィルの大量専門家読込みも短縮する。"},
-      {"metric":"Mixtral-8x7BのTPOT","value":"85ms","baseline":"Pre-gated MoE 248ms、Mixtral-offloading 162ms、AdapMoE 144ms、MoE-Infinity 136ms","condition":"完全専門家160個分のVRAM予算","interpretation":"比較方式に対してデコード遅延を37.51〜65.73%削減し、分割キャッシュと先読みの相乗効果が最も明確に現れる。"},
-      {"metric":"同一目標TPOTでのVRAM削減","value":"37.45〜50.04%削減","baseline":"Mixtral-offloading、AdapMoE、MoE-Infinity","condition":"モデルごとに複数の目標TPOTを設定","interpretation":"専門家全体をキャッシュする方式より、上部だけを多数保持することで限られたVRAMを広い専門家集合へ配分できる。"},
-      {"metric":"Qwen1.5-MoEの全常駐近似性能","value":"12.38GBでTPOT 60ms","baseline":"全GPU常駐26.67GBで57ms","condition":"GPU全常駐設定との比較","interpretation":"約半分のVRAMで遅延増加を5.26%に抑え、論文がいうGPUコスト約半減を具体化する。"},
-      {"metric":"構成アルゴリズム除去時のMixtral TPOT","value":"132ms → 193ms、1.46倍悪化","baseline":"完全MoEpic","condition":"VRAM一様配分、分割比0.5固定","interpretation":"先読みやLCPだけでなく、層ごとのVRAM量と分割比をハードウェア・活性統計へ合わせることが主要な性能要因である。"}
-    ],
-    "negative_results": "分割比には単調な最適性がなく、上部を小さくし過ぎると下部転送が長くなり、上部を大きくし過ぎるとキャッシュできる専門家数が減る。予備実験では0.4付近が最良だったが、最適値は層と装置に依存する。先読み予測も完全ではなく、特にモデル先頭付近では隣接層の中間活性値の類似度が低く、予測精度が落ちる。LCPだけの改善もキャッシュサイズという根本制約を解消せず、層あたり30専門家の例ではLFU60.68%に対して62.21%と改善幅は限定的である。感度試験ではVRAM移動粒度を0.01から0.05へ粗くするとTPOTが12.12%悪化する一方、細粒度化すると構成探索の反復回数が増える。",
-    "interpretation": "利得は、キャッシュ容量を増やすことと転送を隠すことを別々に最適化せず、専門家の分割比を介して一つの資源配分問題にした点から生じる。上部常駐は命中率を上げるだけでなく、下部だけを転送すればよいので先読み時間を短くし、さらに上部計算を先に始めて転送を隠す時間も増やす。層別構成器は、予測が難しい層や命中率が低い層へ追加VRAMを与え、比較的余裕のある層から回収する。このため一様なキャッシュ数を使うMixtral-offloadingや、層別キャッシュ量だけを調整するAdapMoEより、VRAMとPCIe帯域を同時に使い切りやすい。",
-    "quality_impact": "MoEpicの専門家分割は重み行列を近似・削除せず、GPUとCPUに置く範囲を変えるだけなので、同じ数値精度ならモデル出力は変わらない。性能評価でMixtralにHQQ量子化を用いる点はモデル品質へ別途影響し得るが、それはMoEpicの分割・キャッシュ機構そのものによる近似ではない。"
-  },
-  "reservation": {"claim_id":"claim-636dceef51cdacb2e889c0f9","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-84d67d75abd88f7fe7ebc805",
+  "job_id": "job-research-81e46dd484abb553",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-84d67d75abd88f7fe7ebc805",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
