@@ -4,10 +4,39 @@
   "slot": "metadata",
   "attempt_id": "attempt-274a2a6a90644c806341981c",
   "job_id": "job-research-b76cb796c54f83bb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-274a2a6a90644c806341981c",
-    "worker_id": "scheduled-chat-paper-20260914T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.04357",
+    "arxiv_id": "2605.04357",
+    "doi": null,
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI", "cs.CL", "cs.LG"]},
+    "title": "Coral: Cost-Efficient Multi-LLM Serving over Heterogeneous Cloud GPUs",
+    "summary": "複数LLMを公開クラウドで同時配信する場合、モデルごとに最も効率のよいGPUを独立に選ぶと、希少な高性能GPUへ需要が集中し、別モデルが必要資源を確保できない。さらに同じモデルでもプリフィルとデコード、密モデルとMoEではGPUの演算・帯域・容量への適性が異なり、単一種類のGPUだけで複製を作ると費用効率を取りこぼす。Coralは、モデル複製内部の異種GPU配置と、全モデル間のクラウド資源割当を共同最適化する。計算量の大きい配置探索は、モデルとSLOごとにGPUノード組合せを列挙して最適配置をオフライン計算し、再利用可能な配信テンプレートとして保存する。オンラインでは需要、GPU在庫、地域別価格からテンプレートの個数と地域だけを整数線形計画で選ぶ。これにより共同最適性を保ったままオンライン解時間を数時間級から数十秒級へ短縮する。6モデル・5 GPU種類・20構成の実機と検証済みシミュレーションで、比較方式に対して費用を最大2.79倍削減し、資源逼迫時の有効スループットを最大2.39倍改善する。",
+    "list_summary": "異種GPU上のモデル内部配置をオフラインの配信テンプレートへ落とし、オンラインでは全モデルの需要・価格・在庫を共同割当することで、費用を最大2.79倍削減し資源逼迫時の有効スループットを最大2.39倍高める。",
+    "authors": ["Yixuan Mei", "Zikun Li", "Zixuan Chen", "Shiqi Pan", "Mengdi Wu", "Xupeng Miao", "Zhihao Jia", "K. V. Rashmi"],
+    "authors_affiliations": "Yixuan Mei、Zikun Li、Zixuan Chen、Shiqi Pan、Mengdi Wu、Zhihao Jia、K. V. RashmiはCarnegie Mellon University、Xupeng MiaoはPeking University。",
+    "published": "2026-05-05",
+    "publication": "arXiv preprint v1",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["複数LLM配信", "異種GPU", "資源割当", "モデル配置", "パイプライン並列", "データ並列", "整数線形計画", "クラウド費用"],
+    "importance": "異種GPUのモデル配置とクラウド資源割当を別々に解くのではなく、最適配置を再利用可能なテンプレートへ変換することで共同最適化をオンライン運用可能な時間へ落とす。GPU在庫が変動し、多数モデルが希少GPUを奪い合う現実的なクラウド環境を対象にする点が重要である。",
+    "hardware_evaluation": "実機の中核構成は20〜40 GPU規模、拡張構成は100〜300 GPU規模を高精度イベントシミュレーションで評価する。GPU種類はH100、A100、L40S、L4、A10Gを含む。シミュレータは実機のプリフィル遅延を平均5.6%、デコード遅延を7.2%以内で再現する。",
+    "quality_effect": "モデル重みや注意計算を近似せず、配置・並列化・資源割当を変えるシステム最適化である。各モデルの遅延SLOを制約として守り、品質を落として費用を下げる方式ではない。",
+    "source": "https://arxiv.org/abs/2605.04357",
+    "sources": ["https://arxiv.org/abs/2605.04357", "https://arxiv.org/pdf/2605.04357"],
+    "code": null,
+    "implementation": "Coral実行基盤はPython/C++約53K行で、制御面にZeroMQ、ノード間パイプライン通信にNCCLとRDMA/GPU Direct RDMA、KV転送にCPU側RDMA、各ノードの推論エンジンにvLLMを用いる。大規模評価用にPython約5K行のイベントシミュレータも実装。2026-09-14時点で一次資料からCoral固有の公式公開リポジトリは確認できない。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 55,
+    "references": [
+      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388"},
+      {"canonical_id": "arXiv:2505.04021", "arxiv_id": "2505.04021"},
+      {"canonical_id": "arXiv:2406.11931", "arxiv_id": "2406.11931"}
+    ]
+  },
+  "reservation": {"claim_id": "claim-274a2a6a90644c806341981c", "worker_id": "scheduled-chat-paper-20260914T0130JST", "worker_kind": "scheduled_chat"}
 }
