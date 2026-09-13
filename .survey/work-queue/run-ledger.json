@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T02:12:15.624248+00:00",
+  "updated_at": "2026-09-13T02:14:20.440092+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17069,7 +17069,7 @@
     {
       "run_key": "2026-09-13T10:30:00+09:00",
       "first_recorded_at": "2026-09-13T01:32:50.788455+00:00",
-      "last_recorded_at": "2026-09-13T02:12:15.624248+00:00",
+      "last_recorded_at": "2026-09-13T02:14:20.440092+00:00",
       "signals": [
         "discovery_or_queue_expanded",
         "research_completed",
@@ -17078,9 +17078,9 @@
       "counts": {
         "research_completed": 3,
         "audit_completed": 0,
-        "discovery_completed": 8,
+        "discovery_completed": 9,
         "blocked": 0,
-        "new_jobs": 14,
+        "new_jobs": 16,
         "new_papers": 3,
         "fallback_archived": 0
       },
@@ -17241,6 +17241,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34732493778:1",
+          "recorded_at": "2026-09-13T02:14:20.440092+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34732493778",
+            "run_attempt": "1",
+            "source_sha": "39213d74ed73631ac39470a7200e6407ac6119b7"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17326,6 +17340,14 @@
         },
         {
           "job_id": "job-c1cee5dda24c1cfe",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-b4a7aa0b3a46fbdf",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -17431,6 +17453,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-20f6236718384c35",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-57d78e1392b6c354",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2604.20503",
+          "title": "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving"
         }
       ],
       "new_paper_ids": [
@@ -17446,7 +17482,8 @@
         ".survey/work-queue/results/20260913T1100JST-discovery-specialist-kv-1.json",
         ".survey/work-queue/results/20260913T1105JST-discovery-specialist-moe-2.json",
         ".survey/work-queue/results/20260913T1108JST-discovery-specialist-lineage-3.json",
-        ".survey/work-queue/results/20260913T1110JST-discovery-specialist-heterogeneous-4.json"
+        ".survey/work-queue/results/20260913T1110JST-discovery-specialist-heterogeneous-4.json",
+        ".survey/work-queue/results/20260913T1113JST-discovery-specialist-speculative-5.json"
       ],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 394,

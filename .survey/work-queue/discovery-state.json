@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T02:10:54+00:00",
+  "updated_at": "2026-09-13T02:13:14+00:00",
   "last_run_key": "2026-09-13T11:00:43+09:00",
-  "last_round": "specialist-heterogeneous-offload-4",
+  "last_round": "specialist-speculative-serving-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
-  "last_empty_round_reason": "異種実行・オフロード軸の強候補4件はすべて正本で既収録または既存job化されていた。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -2950,6 +2950,25 @@
       ],
       "next_axis_hint": "GPU runtime/kernel、SSD/CXL、disaggregated servingの強候補は既収録率が高いため、最後に2026年9月新着のspeculative decoding・agent servingと隣接領域を広く確認する",
       "source_submission": "work-queue/submissions/20260913T1110JST-discovery-specialist-heterogeneous-4.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:43+09:00",
+      "round": "specialist-speculative-serving-5",
+      "axis": "動的投機的復号serving・agent隣接",
+      "query_summary": "最新/隣接の投機的復号servingとagent KV管理を確認した。SPECTRE 2605.08151、PicoSpec 2603.19133、CacheScout 2608.14624はidentity deltaまたは既存jobで重複。FASER 2604.20503と投機的復号遅延モデル2605.15051は最新HEADでidentity delta・stable jobとも未存在を確認した。",
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2605.08151",
+        "arxiv:2603.19133",
+        "arxiv:2608.14624"
+      ],
+      "next_axis_hint": "最後に新着agentic serving、framework/runtime更新由来の論文、2026年9月の関連実装公開を広く確認する",
+      "source_submission": "work-queue/submissions/20260913T1113JST-discovery-specialist-speculative-5.json"
     }
   ],
   "axes": {
@@ -4602,6 +4621,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 1.0,
       "next_axis_hint": "GPU runtime/kernel、SSD/CXL、disaggregated servingの強候補は既収録率が高いため、最後に2026年9月新着のspeculative decoding・agent servingと隣接領域を広く確認する"
+    },
+    "動的投機的復号serving・agent隣接": {
+      "last_run_key": "2026-09-13T11:00:43+09:00",
+      "rounds": 1,
+      "candidate_count": 5,
+      "duplicate_filtered_count": 3,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.6,
+      "next_axis_hint": "最後に新着agentic serving、framework/runtime更新由来の論文、2026年9月の関連実装公開を広く確認する"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

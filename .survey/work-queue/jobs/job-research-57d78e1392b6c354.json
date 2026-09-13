@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-57d78e1392b6c354",
+  "type": "research",
+  "parent_job_id": "job-b4a7aa0b3a46fbdf",
+  "priority": 87,
+  "canonical_id": "arXiv:2604.20503",
+  "title": "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving",
+  "source_url": "https://arxiv.org/abs/2604.20503",
+  "paper_path": "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
+  "selection_reason": "動的なオンライン負荷で従来の投機的復号がbatch単位の固定投機長とdraft/verification直列化に縛られる問題に対し、request単位の適応的投機長、verification中の早期枝刈り、verification frontier分割とdraftとの空間多重化を行う。vLLM試作で最先端方式比throughput最大53%向上、latency最大1.92倍改善を報告し、投機的復号をserving scheduler/runtime側から細粒度制御する点で収録価値が高い。",
+  "status": "ready",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "workflow_version": 10,
+  "created_at": "2026-09-13T02:13:14+00:00",
+  "artifact_transport": "structured_record_v10"
+}
