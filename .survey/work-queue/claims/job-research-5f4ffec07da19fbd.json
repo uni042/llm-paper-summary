@@ -1,23 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-0419c7e2c31a993cb1beb3bc",
+  "claim_id": "claim-ff0fe496396f01c3727c6632",
   "job_id": "job-research-5f4ffec07da19fbd",
-  "worker_id": "scheduled-chat-discovery-specialist-run08",
+  "worker_id": "scheduled-chat-discovery-router",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-0419c7e2c31a993cb1beb3bc",
-  "request_id": "claim-20260913T205600Z-scheduled-chat-discovery-specialist-run08-19",
-  "claimed_at": "2026-09-13T20:35:24+00:00",
-  "expires_at": "2026-09-13T20:39:25+00:00",
+  "attempt_id": "attempt-ff0fe496396f01c3727c6632",
+  "request_id": "claim-20260913T215300Z-scheduled-chat-discovery-router-16",
+  "claimed_at": "2026-09-13T21:48:17+00:00",
+  "expires_at": "2026-09-13T23:18:17+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-5f4ffec07da19fbd"
   ],
-  "record_bank": null,
-  "record_bank_fallback": "library",
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-13T20:39:25+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T054000JST-omnipilot-attempt-0419c7e2c31a993cb1beb3bc.json",
-  "checkpoint_release_request_id": "claim-20260913T205800Z-scheduled-chat-discovery-specialist-run08-20"
+  "previous_claim_id": "claim-0419c7e2c31a993cb1beb3bc",
+  "record_bank": "e"
 }
