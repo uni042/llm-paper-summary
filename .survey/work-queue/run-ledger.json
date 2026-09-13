@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T03:09:46.926767+00:00",
+  "updated_at": "2026-09-13T03:13:03.921898+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17657,7 +17657,7 @@
     {
       "run_key": "2026-09-13T11:30:00+09:00",
       "first_recorded_at": "2026-09-13T02:42:35.849043+00:00",
-      "last_recorded_at": "2026-09-13T03:09:46.926767+00:00",
+      "last_recorded_at": "2026-09-13T03:13:03.921898+00:00",
       "signals": [
         "fallback_archived",
         "discovery_or_queue_expanded"
@@ -17665,9 +17665,9 @@
       "counts": {
         "research_completed": 0,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 0,
-        "new_jobs": 4,
+        "new_jobs": 6,
         "new_papers": 0,
         "fallback_archived": 1
       },
@@ -17727,6 +17727,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34734893373:1",
+          "recorded_at": "2026-09-13T03:13:03.921898+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34734893373",
+            "run_attempt": "1",
+            "source_sha": "2696d3bd64c7acf59fbf411af6b36e06ee40ea00"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17748,6 +17762,14 @@
         },
         {
           "job_id": "job-d1a35284aa68699f",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-304f617be9233e92",
           "type": "discovery",
           "canonical_id": null,
           "title": null,
@@ -17783,13 +17805,28 @@
           "type": "research",
           "canonical_id": "arXiv:2608.18261",
           "title": "Cacheable by Design? Reassessing Expert Locality for SSD-Offloaded Mixture-of-Experts Inference"
+        },
+        {
+          "job_id": "job-43fcba7f8079dfff",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-1ecc150ce081a47b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2603.08739",
+          "title": "Kareto: Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service"
         }
       ],
       "new_paper_ids": [],
       "new_discovery_results": [
         ".survey/work-queue/results/20260913T1159JST-discovery-97b950195ea1dc8a.json",
         ".survey/work-queue/results/20260913T1204JST-discovery-2fc4618f0ce91022.json",
-        ".survey/work-queue/results/20260913T1208JST-discovery-d1a35284aa68699f.json"
+        ".survey/work-queue/results/20260913T1208JST-discovery-d1a35284aa68699f.json",
+        ".survey/work-queue/results/20260913T1213JST-discovery-304f617be9233e92.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2410.15332-epic.json"

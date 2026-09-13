@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T03:08:25+00:00",
+  "updated_at": "2026-09-13T03:12:16+00:00",
   "last_run_key": "2026-09-13T11:00:00+09:00",
-  "last_round": "specialist-moe-expert-locality-prefetch-3",
+  "last_round": "specialist-cxl-tiered-storage-4",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -3105,6 +3105,27 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "CXL/SSD-backed shared KV・cluster memory tier・temporal tieringへ軸を移す",
       "source_submission": "work-queue/submissions/20260913T1208JST-discovery-d1a35284aa68699f.json"
+    },
+    {
+      "run_key": "2026-09-13T11:00:00+09:00",
+      "round": "specialist-cxl-tiered-storage-4",
+      "axis": "CXL/SSD shared KV・tiered storage resource optimization",
+      "query_summary": "CXL共有KV、CXL hybrid memory、temporal tiering、tiered-storage configurationを探索し、送信直前の正本identityで既収録5件を除外した。未収録のKaretoのみcandidateとして投入する。",
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arxiv:2609.10790",
+        "arxiv:2607.18141",
+        "arxiv:2606.12556",
+        "arxiv:2607.27187",
+        "arxiv:2604.19769"
+      ],
+      "next_axis_hint": "lossless model compression・serving software aging・load-aware speculative decoding",
+      "source_submission": "work-queue/submissions/20260913T1213JST-discovery-304f617be9233e92.json"
     }
   ],
   "axes": {
@@ -4847,6 +4868,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "CXL/SSD-backed shared KV・cluster memory tier・temporal tieringへ軸を移す"
+    },
+    "CXL/SSD shared KV・tiered storage resource optimization": {
+      "last_run_key": "2026-09-13T11:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 6,
+      "duplicate_filtered_count": 5,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.8333333333333334,
+      "next_axis_hint": "lossless model compression・serving software aging・load-aware speculative decoding"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
