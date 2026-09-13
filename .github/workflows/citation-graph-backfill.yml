@@ -132,11 +132,25 @@ jobs:
           git config user.name 'citation-graph[bot]'
           git config user.email 'citation-graph[bot]@users.noreply.github.com'
           git add .survey/scripts/survey.py .survey/templates/paper.md .survey/docs/survey-workflow/queue-v10.md
-          if ! git diff --cached --quiet; then
-            git commit -m 'feat: route indexes through structured citation graph'
-            git pull --rebase origin main
-            git push origin HEAD:main
+          if git diff --cached --quiet; then
+            exit 0
           fi
+          git commit -m 'feat: route indexes through structured citation graph'
+          for push_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Citation schema hook conflicted with newer main; rerun on a later trigger.' >&2
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Citation schema push race on attempt ${push_attempt}; retrying after refetch."
+            sleep $((push_attempt * 2))
+          done
+          echo 'Failed to publish citation schema hooks after 5 retries.' >&2
+          exit 1
 
       - name: Backfill references in durable batches
         shell: bash
@@ -144,28 +158,42 @@ jobs:
           set -euo pipefail
           mkdir -p .survey/reports
           for round in $(seq 1 20); do
-            echo "citation backfill batch ${round}"
-            result=$(python .survey/scripts/backfill_citations.py --root . --limit 25 --delay 0.75 --apply)
-            echo "$result"
-            python .survey/scripts/citation_graph.py \
-              --root . \
-              --graph-report .survey/reports/citation-graph-latest.json \
-              --coverage-report .survey/reports/citation-coverage-latest.json
-            python .survey/scripts/survey.py --root .survey build
+            published=0
+            result=''
+            for publish_attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git reset --hard origin/main
+              echo "citation backfill batch ${round}, publish attempt ${publish_attempt}"
+              result=$(python .survey/scripts/backfill_citations.py --root . --limit 25 --delay 0.75 --apply)
+              echo "$result"
+              python .survey/scripts/citation_graph.py \
+                --root . \
+                --graph-report .survey/reports/citation-graph-latest.json \
+                --coverage-report .survey/reports/citation-coverage-latest.json
+              python .survey/scripts/survey.py --root .survey build
 
-            git add README.md papers .survey/reports/citation-backfill-state.json \
-              .survey/reports/citation-coverage-latest.json \
-              .survey/reports/citation-graph-latest.json \
-              .survey/survey-state/paper-identity-index.json
-            if ! git diff --cached --quiet; then
-              git commit -m "data: backfill citation references batch ${round}"
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                git reset --hard origin/main
-                echo 'main advanced incompatibly; retrying this batch from latest main'
-                continue
+              git add README.md papers .survey/reports/citation-backfill-state.json \
+                .survey/reports/citation-coverage-latest.json \
+                .survey/reports/citation-graph-latest.json \
+                .survey/survey-state/paper-identity-index.json
+              if git diff --cached --quiet; then
+                published=1
+                break
               fi
-              git push origin HEAD:main
+
+              git commit -m "data: backfill citation references batch ${round}"
+              if git push origin HEAD:main; then
+                published=1
+                break
+              fi
+
+              echo "Citation push race on attempt ${publish_attempt}; recomputing citation batch from latest main."
+              sleep $((publish_attempt * 2))
+            done
+
+            if [ "$published" != '1' ]; then
+              echo "Failed to publish citation batch ${round} after 5 recomputations." >&2
+              exit 1
             fi
 
             attempted=$(python -c 'import json,sys; print(json.loads(sys.stdin.read())["attempted"])' <<< "$result")
@@ -271,8 +299,21 @@ jobs:
             exit 0
           fi
           git commit -m 'docs: finalize citation graph indexes and audits'
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for push_attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Final citation reports conflicted with newer main; a later citation trigger will recompute them.' >&2
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Final citation push race on attempt ${push_attempt}; retrying after refetch."
+            sleep $((push_attempt * 2))
+          done
+          echo 'Failed to publish final citation reports after 5 retries.' >&2
+          exit 1
 
       - name: Fail if final validation found issues
         shell: bash
