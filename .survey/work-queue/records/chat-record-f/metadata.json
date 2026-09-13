@@ -4,10 +4,41 @@
   "slot": "metadata",
   "attempt_id": "attempt-d1f4eb1433c298f9e9aff609",
   "job_id": "job-research-f3999676507a9c53",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d1f4eb1433c298f9e9aff609",
-    "worker_id": "scheduled-chat-paper-20260914T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2505.23022",
+    "arxiv_id": "2505.23022",
+    "doi": "10.48550/arXiv.2505.23022",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "Scorpio: Serving Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference",
+    "summary": "Scorpioは、同じLLM基盤を共有する要求ごとに先頭トークン時間（TTFT）と出力トークン間隔（TPOT）のサービス品質目標（Service-Level Objective; SLO）が異なる状況で、全要求を同じ頻度・順序で処理すると厳しいSLOの要求が緩い要求に巻き込まれて違反する問題を扱う。出力長と遅延を予測し、TTFTについては締切が近い要求を前へ並べ替えて達成不能要求を早期に拒否し、TPOTについてはSLOの厳しさに応じた処理機会をクレジットとして配分する。さらに実際の処理頻度を仮想バッチサイズへ反映して過負荷時の受入れを抑えることで、余裕の大きい要求の計算機会を厳しい要求へ譲る。vLLM上の実装で高負荷時の有効スループットを最大14.4倍、SLO達成率を最大46.5ポイント改善する。",
+    "list_summary": "要求ごとに異なるTTFT/TPOTのSLOを、締切順の並べ替え・達成不能要求の拒否・SLO比例の処理機会配分で共同制御し、高負荷時の有効スループットを最大14.4倍にする。",
+    "authors": ["Yinghao Tang", "Tingfeng Lan", "Bo Pan", "Xiuqi Huang", "Hui Lu", "Wei Chen"],
+    "authors_affiliations": "Zhejiang University、University of Virginia、The University of Texas at Arlington。",
+    "published": "2025-05-29",
+    "publication": "WISE 2026 Special Track on Innovative Web Technologies（採録、Springer LNCS収録予定）",
+    "publication_type": "Conference paper / arXiv preprint",
+    "publication_status": "Accepted; arXiv preprint, Version of Record pending",
+    "lineage": "SLO-aware LLM serving scheduling",
+    "topics": ["SLO指向LLMサービング", "要求スケジューリング", "受入れ制御", "動的バッチ選択", "出力長予測"],
+    "importance": "異種SLOを単一の固定閾値へ潰さず、TTFTとTPOTを別々の制御レバーで扱いながら一つの実行系へ統合した点が重要。",
+    "hardware_evaluation": "4×NVIDIA A100 80GBの実機。Llama-3.1-8Bは1 GPU、Gemma-2-27Bは4 GPUのテンソル並列で評価。",
+    "source": "https://arxiv.org/abs/2505.23022",
+    "sources": ["https://arxiv.org/abs/2505.23022", "https://arxiv.org/html/2505.23022"],
+    "code": null,
+    "implementation": "vLLMへScorpioのスケジューラ、軽量な出力長予測器、TTFT/TPOT遅延推定器を統合した研究実装。一次資料とarXivページでは著者公式コードURLを確認できない。",
+    "last_checked": "2026-09-14",
+    "storage_targets": [],
+    "bottlenecks": ["異種SLO要求の一律処理", "高負荷時の過剰受入れ", "緩いTPOT要求による計算資源占有", "TTFT締切の取りこぼし"],
+    "hardware_details": "4×NVIDIA A100 80GB。GPU0–1、GPU2–3はNVLink接続、ペア間はPCIe/NUMA。Gemma-2-27Bは4 GPUテンソル並列。",
+    "quality_effect": "モデル重みや生成アルゴリズム自体は変更しない。SLO達成不能と予測した要求は拒否するため、品質ではなく提供可否・待ち時間との交換条件がある。",
+    "evidence_locations": ["arXiv v2 §3 Method", "arXiv v2 §4 Experiments", "arXiv v2 References"],
+    "references": [
+      {"canonical_id":"arXiv:2308.16369","arxiv_id":"2308.16369"}, {"canonical_id":"arXiv:2406.04785","arxiv_id":"2406.04785"}, {"canonical_id":"arXiv:2408.15792","arxiv_id":"2408.15792"}, {"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"}, {"canonical_id":"arXiv:2504.03702","arxiv_id":"2504.03702"}, {"canonical_id":"arXiv:2306.06000","arxiv_id":"2306.06000"}, {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"}, {"canonical_id":"arXiv:2211.17192","arxiv_id":"2211.17192"}, {"canonical_id":"arXiv:2407.12391","arxiv_id":"2407.12391"}, {"canonical_id":"arXiv:2501.12162","arxiv_id":"2501.12162"}, {"canonical_id":"arXiv:2312.15234","arxiv_id":"2312.15234"}, {"canonical_id":"arXiv:2311.18677","arxiv_id":"2311.18677"}, {"canonical_id":"arXiv:2407.00079","arxiv_id":"2407.00079"}, {"canonical_id":"arXiv:2404.08509","arxiv_id":"2404.08509"}, {"canonical_id":"arXiv:2410.01035","arxiv_id":"2410.01035"}, {"canonical_id":"arXiv:2411.18424","arxiv_id":"2411.18424"}, {"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053"}, {"canonical_id":"arXiv:2408.00118","arxiv_id":"2408.00118"}, {"canonical_id":"arXiv:2309.11998","arxiv_id":"2309.11998"}, {"canonical_id":"arXiv:2401.09670","arxiv_id":"2401.09670"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v2 HTML版参考文献節",
+    "references_total": 35
+  },
+  "reservation": {"claim_id":"claim-d1f4eb1433c298f9e9aff609","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
 }
