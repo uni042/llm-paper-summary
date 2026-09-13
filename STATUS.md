@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 10:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 10:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## 現在
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **165 / 50** |
-| Research ready | **165** |
+| Candidate在庫（Research ready） | **168 / 50** |
+| Research ready | **168** |
 | Research blocked | **0** |
 | Research deferred | **3** |
 | Research completed（累計） | **205** |
@@ -28,8 +28,8 @@ Run: **2026-09-13T09:30:00+09:00**
 |---|---:|
 | Research完了 | **1** |
 | Audit完了 | **0** |
-| Discovery完了 | **9** |
-| 新規job | **23** |
+| Discovery完了 | **10** |
+| 新規job | **27** |
 | Repo収録 | **1** |
 | Blocked遷移 | **0** |
 
@@ -51,12 +51,12 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 指標 | 件数 / 率 |
 |---|---:|
 | 通常worker run（ledger観測） | **22** |
-| 探索round（stats観測） | **138** |
-| 探索評価候補 | **687** |
-| 重複除外 | **285** |
-| 重複率 | **41.5%** |
-| Novel候補 | **402** |
-| Research候補採用 | **225** |
+| 探索round（stats観測） | **139** |
+| 探索評価候補 | **694** |
+| 重複除外 | **289** |
+| 重複率 | **41.6%** |
+| Novel候補 | **405** |
+| Research候補採用 | **228** |
 | Research完了 | **69** |
 | Repo収録 | **69** |
 | Audit完了 | **0** |
@@ -65,7 +65,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 24時間ファネル
 
-**探索評価 687 → 重複除外後 402 → Research候補採用 225 → Research完了 69 → Repo収録 69**
+**探索評価 694 → 重複除外後 405 → Research候補採用 228 → Research完了 69 → Repo収録 69**
 
 ## 探索効率（直近24時間）
 
@@ -97,6 +97,7 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 | 分離サービングprefill制御・chunked prefill scheduling | 7 | 4 | 2 | 57.1% | 28.6% |
 | 分離型サービングの負荷偏り・SLO適応 | 7 | 4 | 1 | 57.1% | 14.3% |
 | 投機的デコードのserving・pipeline・メモリ制約・性能モデル | 7 | 2 | 4 | 28.6% | 57.1% |
+| 新着LLM推論システム・通信／疎注意／多ターンKV | 7 | 4 | 3 | 57.1% | 42.9% |
 | 最終multi-axis枯渇確認: 最新差分・MoE・KV/sparse-attention・storage/networking・GPU runtime・agent/workflow・citation/adjacent implementation | 7 | 7 | 0 | 100.0% | 0.0% |
 | 耐障害serving・予測型cross-layer scheduling | 7 | 5 | 2 | 71.4% | 28.6% |
 | 2609新着・端末メモリ管理・エッジクラウド協調推論 | 6 | 4 | 0 | 66.7% | 0.0% |
@@ -212,11 +213,11 @@ Run: **2026-09-13T09:00:00+09:00** / Round: **specialist-runtime-autoscaling-3**
 
 ### 直近5探索round
 
+- **2026-09-13T10:16:01+09:00** — 新着LLM推論システム・通信／疎注意／多ターンKV: 評価 7 / 重複 4 / 採用 3
 - **2026-09-13T09:57:59+09:00** — NVMe重み先読み・疎推論GPUカーネル・fleet資源配置: 評価 8 / 重複 3 / 採用 4
 - **2026-09-13T09:57:59+09:00** — 分離型サービングの負荷偏り・SLO適応: 評価 7 / 重複 4 / 採用 1
 - **2026-09-13T09:28:10+09:00** — 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse: 評価 3 / 重複 0 / 採用 0
 - **2026-09-13T09:28:10+09:00** — 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA: 評価 4 / 重複 0 / 採用 1
-- **2026-09-13T09:28:10+09:00** — multi-tenant runtime制御・適応parallelism・latency attribution: 評価 5 / 重複 3 / 採用 2
 
 ## 最近処理した論文
 
