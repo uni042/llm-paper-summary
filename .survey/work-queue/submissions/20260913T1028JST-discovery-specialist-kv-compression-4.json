@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "job_id": "job-d5c1389026b2527d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.23843",
+      "title": "PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2608.23843",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md",
+      "priority": 85,
+      "reason": "KVキャッシュを固定長ページ単位で低ランク分解し、密表現ページと因子化ページを混在させたまま注意計算を行うtraining/calibration-free方式。ページを圧縮単位にするためPagedAttention系の実行モデルとの接続が明確で、約60%容量でFull-KV性能の96%以上、量子化併用では18.7%容量で93%以上を維持すると報告しており、ページ型KV管理と圧縮の橋渡しとして有用。"
+    },
+    {
+      "canonical_id": "arXiv:2606.08382",
+      "title": "STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control",
+      "source_url": "https://arxiv.org/abs/2606.08382",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.08382-star-kv-adaptive-low-rank-cache-compression.md",
+      "priority": 84,
+      "reason": "ヘッド・ブロック単位の適応rank選択、K/V感度に応じた分解、低ランク対応mixed-precision量子化を組み合わせるKV圧縮方式。Triton GPU kernelまで実装し、注意モジュール最大6.9倍、end-to-end生成throughput最大3.1倍を報告するため、精度だけでなく実行効率まで測った低ランクKV研究として収録価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-13T10:16:01+09:00",
+    "round": "specialist-kv-compression-4",
+    "axis": "KVページ圧縮・低ランク表現・GPUカーネル",
+    "query_summary": "端末内メモリ探索からKVページ・圧縮へ軸を移し、PuzzleKV、STAR-KV、量子化KV品質回復、SPINを軽量評価した。SPINは既収録、品質回復論文はシステム寄与が相対的に弱いため候補投入を見送り、2件のみ送信する。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": [
+      "arXiv:2604.26837"
+    ],
+    "next_axis_hint": "KV圧縮以外へ分離し、推論scheduler・batching・resource allocationの新着、または既存重要論文のforward citationを探索する",
+    "empty_round_reason": null
+  }
+}
