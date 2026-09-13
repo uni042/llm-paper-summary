@@ -91,3 +91,16 @@ claim requestは`.survey/work-queue/claim-requests/<request-id>.json`へ送り�
 expired claimファイルは履歴としてGitHub上に残り得るがactiveではなく、他workerの新規claimを阻害しない。STATUSの「最古の有効claim」はready Research/Auditに紐づく未失効claimだけを対象とする。
 
 lease期限を過ぎた時点でまだdescriptor/Library payloadを耐久保存していないworkerは旧claimで新規送信せず、fresh claimを取得し直す。すでにimmutable descriptorを耐久保存済みなら、その後のActions処理遅延はdescriptorを無効化しない。
+
+## 9. Direct GitHub write conflict recovery
+
+複数worker、`status-dashboard`、`survey-submission-fast`などが同時に`main`を更新するため、workerが別record bankや別attemptだけを書いていても、Git参照更新時にnon-fast-forward / 409 / 422の競合が起こり得る。これは即座にGitHub write不能とは判定しない。
+
+- direct writeの直前に最新`main`を再取得する。
+- non-fast-forward、409、422など「branch headが先に進んだ」競合では、最新`main`を再取得し、**自workerが所有するrecord bankのslotまたはattempt固有descriptorだけ**を新しいtreeへ載せ直して再試行する。
+- 同じ内容のblob SHAとattempt identityは維持する。別workerの変更、paper、queue、stateを巻き戻さない。
+- force pushは禁止する。
+- 同じattempt固有descriptorが既に同一内容で存在する場合は成功済みとして扱う。内容が異なる場合は上書きせず衝突として停止・隔離する。
+- 一時競合は少なくとも5回まで最新`main`へ載せ直して再試行し、競合以外の認証・権限・到達不能や再試行枯渇が続いた場合だけ`fallback-routing.md`に従ってChatGPT Libraryへ切り替える。
+
+この再試行はslot保存とimmutable descriptor保存の両方に適用する。descriptorがGitHubへ耐久保存されるまでは次jobを先取りclaimしないが、保存後は従来どおりActions terminal待ちを同期障壁にしない。
