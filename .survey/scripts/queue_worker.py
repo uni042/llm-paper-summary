@@ -489,6 +489,9 @@ def process_submissions(st: dict):
         try:
             sub = read_json(p, {})
             sub["_file"] = str(p.relative_to(ROOT))
+            attempt_id = sub.get("attempt_id")
+            if isinstance(attempt_id, str) and attempt_id:
+                result["attempt_id"] = attempt_id
             if sub.get("operation") == "request_jobs":
                 before = {j["job_id"] for j in iter_jobs() if j.get("status") == "ready"}
                 ensure_discovery_job()

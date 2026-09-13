@@ -58,6 +58,7 @@ def current_transport(repo_root: Path) -> tuple[dict[str, Any] | None, bool]:
     settled = bool(
         result
         and result.get("job_id") == inbox.get("job_id")
+        and result.get("attempt_id") == inbox.get("attempt_id")
         and result.get("ok") is True
     )
     return inbox, settled
