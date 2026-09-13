@@ -8,6 +8,7 @@ on:
       - '.survey/work-queue/submissions/audit/*.json'
       - '.github/workflows/survey-submission-fast.yml'
       - '.survey/scripts/process_immutable_submission.py'
+      - '.survey/scripts/isolate_failed_immutable_submission.py'
       - '.survey/scripts/immutable_submission.py'
   workflow_dispatch:
     inputs:
@@ -94,6 +95,9 @@ jobs:
                 --repo-root . \
                 --submission "$descriptor"; then
                 processing_failed=1
+                python .survey/scripts/isolate_failed_immutable_submission.py \
+                  --repo-root . \
+                  --submission "$descriptor"
               fi
             done < /tmp/immutable-submissions.txt
 
