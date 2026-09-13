@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a20d167321270b2fec80b497",
-  "job_id": "job-research-df0f9fdedbcbe3ac",
-  "data": {
-    "hardware": "8×NVIDIA B200をNVLink接続したサーバ。Ubuntu 24.04、PyTorch 2.8.0、CUDA 13.0、driver 580.82.07。",
-    "software": "Apache TVM上のETC。比較対象はcuBLAS+NCCL、TP-Async、Triton Distributed 0.0.2-rc、cuBLASMp、Triton 3.4.0、FlashInfer 0.2.14.post1、vLLM 0.11.0rc2、SGLang 0.5.3rc0。",
-    "methodology": "計算通信融合では8 GPU・8192トークン・TP=8でGEMM+Reduce-ScatterとAll-Gather+GEMMを測定する。MoEではQwen3-30B-A3Bの128専門家・top-k=8を単一B200で可変トークン数評価する。エンドツーエンドではQwen3-30B-A3BとQwen3-32Bを用い、入力512トークンから100トークン生成し、バッチ1〜128のTPOTをvLLM/SGLangと比較する。Qwen3-32Bでは4-way TPも測る。さらにQwen3-32Bのエンジン起動から初要求までのウォームアップ時間と、静的・動的スケジューラの除去比較を行う。",
-    "scope": "B200世代の単一ノード8 GPUを中心とした実機評価。低バッチのデコードと融合カーネルを重点評価し、プリフィルや大バッチ単体演算はメガカーネル利得が小さいとして主対象外。コンパイラ抽象はGPU世代非依存を意図するが、他世代で同じ数値利得を実証したわけではない。",
-    "workloads": ["GEMM + Reduce-Scatter","All-Gather + GEMM","Qwen3-30B-A3B MoE layer","Qwen3-30B-A3B low-batch decoding","Qwen3-32B low-batch decoding","Qwen3-32B TP=4 serving warmup"],
-    "baselines": ["cuBLAS+NCCL","TP-Async","Triton Distributed","cuBLASMp","Triton","FlashInfer","vLLM","SGLang"],
-    "metrics": ["kernel execution time","speedup","TPOT","engine warmup time","JIT graph capture count","relative scheduling performance"]
-  },
-  "reservation": {"claim_id":"claim-a20d167321270b2fec80b497","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-a52c3081dddae57267f67a59",
+  "job_id": "job-research-a60dcea57ad2475d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a52c3081dddae57267f67a59",
+    "worker_id": "scheduled-chat-paper-20260914T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

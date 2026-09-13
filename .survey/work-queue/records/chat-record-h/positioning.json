@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a20d167321270b2fec80b497",
-  "job_id": "job-research-df0f9fdedbcbe3ac",
-  "data": {
-    "limitations": "実機評価はB200世代の単一ノードが中心で、異なるGPU世代や大規模複数ノードで同じスケジューリング交換条件が成立するかは未検証である。低バッチ分散推論ではCPU側スケジューリングと通信費が露出し、ETCがvLLMやSGLangを上回らない条件もある。静的方式はデータ依存の負荷偏りへ弱く、動的方式は規則的処理でキュー操作費が大きいため、最適方式の選択自体がワークロード依存である。現在の入力ではイベントテンソル付きタスクグラフを明示的に記述する必要があり、標準計算グラフから完全自動生成する高位パスは将来課題としている。",
-    "differences": "CUDA Graphは起動費を減らすが既存カーネル境界を保持し、形状ごとの捕捉が必要になる。従来のTVM、XLA、torch.compileなどは主に演算子単位のコード生成とグラフ最適化を行う。既存メガカーネル研究は単一バッチの密モデルや特定の手書きスケジューラへ対象が狭い。Event Tensorはタイル完了イベントを記号形状の第一級中間表現にして、形状変化とMoEルーティングのデータ依存性を同じ抽象で表し、同じプログラムから静的・動的スケジューラを生成する点が異なる。",
-    "implementation_status": "Apache TVM上のコンパイラパス群として実装し、MLSys 2026採録版で8×B200の実機評価を行っている。論文は主要オープンソースシステムへ組込み済みと述べるが、arXivページでETC単体の公式コードURLは確認できない。",
-    "research_positioning": "LLM推論のカーネル・ランタイム・コンパイラ系統に位置し、とくに常駐メガカーネルを実運用の動的形状とMoEへ拡張する研究である。サービング側の連続バッチや要求スケジューリングとは独立したGPUバックエンドとして利用でき、上位ランタイムが選んだバッチを低遅延に実行する役割を持つ。",
-    "relation_to_existing_repository": "Mirageや手書き常駐カーネル系が固定された計算グラフを大きく融合するのに対し、Event Tensorは実行時に変わるタイル依存そのものをコンパイラ表現へ持ち込む。Triton Distributedなどの計算通信重畳とは目的が重なるが、特定パターンの融合ではなく、MoEを含む複数演算子間依存を統一的なイベント表現から変換する点で補完・一般化方向にある。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id":"claim-a20d167321270b2fec80b497","worker_id":"scheduled-chat-paper-20260914T0230JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-a52c3081dddae57267f67a59",
+  "job_id": "job-research-a60dcea57ad2475d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a52c3081dddae57267f67a59",
+    "worker_id": "scheduled-chat-paper-20260914T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
