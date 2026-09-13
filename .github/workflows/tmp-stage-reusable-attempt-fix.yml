@@ -70,7 +70,7 @@ jobs:
           out.write_text(text, encoding='utf-8')
           PY
           git diff --check
-          python -m unittest .survey/tests/test_claim_and_legacy_transport_state.py
+          python -m unittest discover -s .survey/tests -p 'test_claim_and_legacy_transport_state.py'
       - name: Commit non-workflow changes and mirror
         run: |
           git config user.name 'survey-maintenance[bot]'
