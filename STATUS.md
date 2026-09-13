@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 02:16 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 02:17 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **143** |
+| 未処理の論文候補（Research ready） | **141** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **246** |
+| 全文精読完了（累計） | **248** |
 | 保守状態（Maintenance） | **issues_found** |
 | 整合性チェック（Consistency） | **passed** |
 | 次回保守までの通常run | **18 / 24** |
@@ -35,10 +35,10 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **143** |
-| 処理中（Active claims） | **3** |
-| 今すぐ着手可能（Claimable） | **140** |
-| :30 通常worker Active claims | **2** |
+| 未処理候補（Research ready） | **141** |
+| 処理中（Active claims） | **2** |
+| 今すぐ着手可能（Claimable） | **139** |
+| :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **0** |
 | その他/帰属不明 Active claims | **1** |
 | :30 通常worker 直近claim | **09-14 02:15 JST** |
@@ -54,7 +54,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
-- **処理速度 LOW**: ready=143 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
+- **処理速度 LOW**: ready=141 の高在庫状態で、最新通常runのResearch完了は 1 件です。探索よりResearch消化を優先します。
 - 直近24hのResearch完了のうち **33件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T19:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2511.14116` — FailSafe: High-performance Resilient Serving
 - P87 `arXiv:2511.00101` — Loquetier: A Virtualized Multi-LoRA Framework for Unified LLM Fine-tuning and Serving
 - P87 `arXiv:2602.16603` — FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving
 - P87 `arXiv:2607.19539` — Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts
 - P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
+- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
 
 ## 参考情報
 
