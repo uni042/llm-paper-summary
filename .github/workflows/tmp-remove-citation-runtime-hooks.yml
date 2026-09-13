@@ -1,0 +1,43 @@
+name: Temporary remove citation runtime hooks
+
+on:
+  push:
+    branches:
+      - cleanup/canonical-state-and-legacy
+    paths:
+      - '.github/workflows/tmp-remove-citation-runtime-hooks.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cleanup/canonical-state-and-legacy
+          fetch-depth: 0
+      - name: Remove completed citation migrations
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('.github/workflows/citation-graph-backfill.yml')
+          text = path.read_text(encoding='utf-8')
+          start = text.index('      - name: Install citation schema hooks\n')
+          end = text.index('      - name: Validate citation implementation\n', start)
+          text = text[:start] + text[end:]
+          start = text.index('      - name: Commit schema and graph hooks\n')
+          end = text.index('      - name: Backfill references in durable batches\n', start)
+          text = text[:start] + text[end:]
+          path.write_text(text, encoding='utf-8')
+          PY
+          git diff --check
+          git diff -- .github/workflows/citation-graph-backfill.yml
+      - name: Commit
+        run: |
+          git config user.name 'survey-maintenance[bot]'
+          git config user.email 'survey-maintenance[bot]@users.noreply.github.com'
+          git add .github/workflows/citation-graph-backfill.yml
+          git commit -m 'chore: remove completed citation runtime migration'
+          git push origin HEAD:cleanup/canonical-state-and-legacy
