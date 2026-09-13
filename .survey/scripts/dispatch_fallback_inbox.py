@@ -82,6 +82,10 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                     "invalid": invalid,
                 }
 
+            accepted, claim_reason = ft.claimed_envelope_state(repo_root, envelope)
+            if not accepted:
+                raise ValueError(claim_reason or "claimed envelope is not current")
+
             ready, reason = ft.dependency_state(repo_root, envelope)
             if not ready:
                 deferred.append({"id": envelope["id"], "reason": reason or "dependency"})
@@ -91,8 +95,14 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                 deferred.append({"id": envelope["id"], "reason": "chat transport still processing"})
                 continue
 
-            changed = ft.apply_envelope(repo_root, envelope)
-            if any(write["path"] == ft.CHAT_INBOX for write in envelope["writes"]):
+            dispatch_envelope = envelope
+            remapped, remap_reason = ft.remap_research_bank(repo_root, envelope)
+            if remapped is None:
+                deferred.append({"id": envelope["id"], "reason": remap_reason or "no safe record bank"})
+                continue
+            dispatch_envelope = remapped
+            changed = ft.apply_envelope(repo_root, dispatch_envelope)
+            if any(write["path"] == ft.CHAT_INBOX for write in dispatch_envelope["writes"]):
                 # The previous reusable result belongs to the previous inbox.
                 # Removing it here lets the current workflow assemble/process the
                 # newly dispatched Chat transport in the same Actions run.

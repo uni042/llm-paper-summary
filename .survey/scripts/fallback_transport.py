@@ -104,7 +104,44 @@ def validate_envelope(data: Any) -> dict[str, Any]:
     out["id"] = envelope_id
     out["writes"] = normalized_writes
     validate_logical_bundle(out)
+    _validate_claimed_metadata(out)
     return out
+
+
+def _validate_claimed_metadata(envelope: dict[str, Any]) -> None:
+    if envelope.get("origin") != "claimed_worker":
+        return
+    for key in ("job_id", "claim_id", "worker_id", "attempt_id"):
+        value = envelope.get(key)
+        if not isinstance(value, str) or not ENVELOPE_ID_RE.fullmatch(value):
+            raise ValueError(f"claimed envelope requires safe {key}")
+    payload = chat_payload(envelope)
+    if payload is None:
+        raise ValueError("claimed envelope requires a chat-inbox payload")
+    for key in ("job_id", "claim_id", "worker_id", "attempt_id"):
+        if payload.get(key) != envelope[key]:
+            raise ValueError(f"claimed envelope {key} does not match chat payload")
+
+
+def claimed_envelope_state(repo_root: Path, envelope: dict[str, Any]) -> tuple[bool, str | None]:
+    """Fence claimed completion against the immutable current claim.
+
+    An expired claim remains valid until a newer assignment replaces the current
+    claim file; a missing or superseded claim is never allowed to reach transport.
+    """
+    if envelope.get("origin") != "claimed_worker":
+        return True, None
+    _validate_claimed_metadata(envelope)
+    import claim_state  # noqa: WPS433
+
+    job_id = envelope["job_id"]
+    current = claim_state.current_claims(repo_root).get(job_id)
+    if current is None:
+        return False, "missing current claim"
+    for key in ("claim_id", "worker_id", "attempt_id"):
+        if current.get(key) != envelope[key]:
+            return False, f"superseded claim: current {key} differs"
+    return True, None
 
 
 def validate_logical_bundle(envelope: dict[str, Any]) -> None:
