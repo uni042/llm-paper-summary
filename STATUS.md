@@ -1,24 +1,73 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-13 13:53 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-13 13:57 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
-## 現在
+## このページの見方
+
+上から順に、**現在の詰まり具合 → workerの稼働状況 → 直近24時間の処理量 → 最新run → 次に読む論文** を確認できます。日常確認はここまでで十分です。下部の「参考情報」は探索効率や履歴を詳しく見るための欄です。
+
+- **Research ready**: まだ全文精読が終わっていない論文候補。値が大きいほど「読む仕事」が溜まっています。
+- **Claim**: workerが処理権を確保している状態。Active claimsは処理中、Claimableは今すぐ別workerが着手できる件数です。
+- **Audit**: 既存の論文ページや要約の品質点検。新規論文の全文精読（Research）とは別工程です。
+- **Maintenance / Consistency**: queueやstateの定期保守と、リポジトリ全体の整合性チェックです。
+
+## 現在の状態
 
 | 指標 | 状態 |
 |---|---:|
-| Candidate在庫（Research ready） | **179** |
-| Research ready | **179** |
-| Research blocked | **0** |
-| Research deferred | **3** |
-| Research completed（累計） | **211** |
-| Maintenance | **issues_found** |
-| Consistency | **issues_found** |
-| Maintenance counter | **12 / 24** |
+| 未処理の論文候補（Research ready） | **178** |
+| 現在処理不能（Research blocked） | **0** |
+| 保留中（Research deferred） | **3** |
+| 全文精読完了（累計） | **212** |
+| 保守状態（Maintenance） | **issues_found** |
+| 整合性チェック（Consistency） | **issues_found** |
+| 次回保守までの通常run | **12 / 24** |
 
-### 注意事項
+### 要注意
 
 - Consistency check: **issues_found**
 - 候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。
+
+<!-- research-throughput-status:start -->
+## ワーカー稼働状況
+
+| 指標 | 状態 |
+|---|---:|
+| :30 通常worker | **Research/Audit優先（高在庫）** |
+| :00 補助worker | **通常worker補助（Research/Audit）** |
+| 処理速度 | **OK** |
+| 未処理候補（Research ready） | **178** |
+| 処理中（Active claims） | **36** |
+| 今すぐ着手可能（Claimable） | **142** |
+| 最新通常run | **2026-09-13T13:30:00+09:00** |
+| 最新通常runのResearch完了 | **2** |
+| 最古claimの経過時間 | **109 min** |
+
+Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
+
+高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
+
+<!-- research-throughput-status:end -->
+
+## 直近24時間の処理量
+
+| 指標 | 件数 / 率 |
+|---|---:|
+| Research完了 | **72** |
+| Repo収録 | **72** |
+| Audit完了 | **0** |
+| 探索評価候補 | **724** |
+| Research候補採用 | **227** |
+| 重複除外 | **317** |
+| 重複率 | **43.8%** |
+| 探索専用worker run（毎時枠） | **18** |
+| 探索専用worker round（stats観測） | **147** |
+| 通常worker run（ledger観測） | **23** |
+| Fallback archive（全helper） | **8** |
+
+### 24時間の流れ
+
+**探索評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 72 → Repo収録 72**
 
 ## 直近の通常worker
 
@@ -26,16 +75,28 @@ Run: **2026-09-13T13:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
-| Research完了 | **1** |
+| Research完了 | **2** |
+| Repo収録 | **2** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
-| Repo収録 | **1** |
 | Research/Audit blocked遷移 | **0** |
 
-> Discoveryは `discovery-state.json` のworker識別子とrun_keyで帰属しています。run-ledgerのDiscovery/new_jobsは探索専用workerのhelper処理が混ざり得るため、この欄では使用しません。
+## 次に処理する候補
 
-## 直近の探索専用worker
+`next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
+
+- P87 `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
+- P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
+- P87 `arXiv:2607.00151` — SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering
+- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
+- P87 `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
+
+## 参考情報
+
+ここから下は、探索経路の良し悪しや履歴を詳しく確認するときに使う情報です。通常の稼働確認では上部だけ見れば十分です。
+
+### 直近の探索専用worker
 
 Run: **2026-09-13T11:00:00+09:00**
 
@@ -49,28 +110,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | Research候補採用 | **8** |
 | 重複率 | **52.3%** |
 
-## 直近24時間
-
-| 指標 | 件数 / 率 |
-|---|---:|
-| 通常worker run（ledger観測） | **23** |
-| 探索専用worker run（毎時枠） | **18** |
-| 探索専用worker round（stats観測） | **147** |
-| 探索評価候補 | **724** |
-| 重複除外 | **317** |
-| 重複率 | **43.8%** |
-| Novel候補 | **407** |
-| Research候補採用 | **227** |
-| Research完了 | **71** |
-| Repo収録 | **71** |
-| Audit完了 | **0** |
-| Fallback archive（全helper） | **7** |
-
-### 24時間ファネル
-
-**探索専用worker評価 724 → 重複除外後 407 → Research候補採用 227 → Research完了 71 → Repo収録 71**
-
-## 探索専用workerの探索効率（直近24時間）
+### 探索専用workerの探索効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
@@ -230,10 +270,9 @@ Run: **2026-09-13T11:00:00+09:00**
 - 2026-09-13T08:00:00+09:00 — 6 round: 評価 40 / 重複 25 / 採用 14 / 軸 hybrid-attention・MLA・位置非依存キャッシュ / position-independent KV再利用のforward/backward related-work補完 / agent workspace仮想化・NVMe階層・長時間runtime state / GPU runtime安全性・software aging・many-core CPU inference / network・collective通信・distributed inference / 直近新着・hierarchical memory・serving runtime横断再確認
 - 2026-09-13T07:00:00+09:00 — 8 round: 評価 56 / 重複 44 / 採用 7 / 軸 KVページ制御・MoEメモリ分離・復元系の再探索 / 適応プリフィル・KV予約・デコード干渉スケジューリング / 新着・引用追跡・プリフィル・MoE・CXL/SSD・GPU実行基盤・ネットワーク分離の横断再走査 / 2609新着・端末メモリ管理・エッジクラウド協調推論 / MoE expert cache・Flash階層・expert-parallel耐障害性 / MoE speculative decoding・expert offloading・CPU/GPU共同実行 / 疎注意サービング・GPUメガカーネル・動的コンパイラ / multi-node MoE活性パターン配置・edge expert類似性routing
 
-## 最近処理した論文
+### 最近完了した論文
 
-### Research完了
-
+- `arXiv:2502.09922` — λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
 - `arXiv:2512.19179` — L4: Low-Latency and Load-Balanced LLM Serving via Length-Aware Scheduling
 - `arXiv:2405.16444` — CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion
 - `arXiv:2608.11231` — LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs
@@ -241,52 +280,17 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2609.00097` — Faster Than Flash: Exploiting Attention Sparsity for Efficient Long-Context Decoding
 - `arXiv:2609.01821` — Scaling Inference Prefill with High-Radix Photonic Interconnects
 - `arXiv:2508.19559` — Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference
-- `arXiv:2410.16179` — MagicPIG: LSH Sampling for Efficient LLM Generation
 
-### 次に処理する候補
-
-- P87 `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
-- P87 `arXiv:2606.15789` — Approaching Shannon Bound with Lossless LLM Weight Compression
-- P87 `arXiv:2607.00151` — SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering
-- P87 `arXiv:2607.01299` — HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching
-- P87 `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
-
-## 7日比較
+### 7日比較
 
 **履歴不足** — durable run ledgerがまだ7日間を覆っていないため、7日平均との比較は表示しません。
+
+### 集計上の注意
+
+- Discoveryのworker帰属は `discovery-state.json` のworker識別子とrun_keyで判定します。run-ledgerのDiscovery/new_jobsはhelper処理が混ざり得るため、通常workerのDiscovery件数には直接使いません。
+- `next-jobs.json` は優先スナップショットです。表示外にready jobが残っている場合があります。
+- 探索専用workerのcandidate最大5本は1探索軸・1 submissionのtransport batch上限で、run全体の上限ではありません。
 
 ---
 
 このページは自動生成物です。手編集せず、集計ロジックは `.survey/scripts/build_status_dashboard.py` を修正してください。
-
-<!-- research-throughput-status:start -->
-## Research throughput health
-
-Mode: **HIGH-BACKLOG RESEARCH-ONLY** / Health: **LOW**
-
-| 指標 | 値 |
-|---|---:|
-| Research ready | **179** |
-| Active claims | **37** |
-| Claimable | **142** |
-| :00補助worker mode | **NORMAL-WORKER ASSIST (RESEARCH/AUDIT)** |
-| :00切替閾値 | **ready > 50 → 通常worker補助 / ready ≤ 50 → 探索専用** |
-| Latest normal run | **2026-09-13T13:30:00+09:00** |
-| Latest research completed | **1** |
-| Research completed (24h) | **71** |
-| Oldest active claim age | **104 min** |
-
-### Worker routing snapshot
-
-- 毎時`:30`の通常論文workerは、readyが **25本以上** かつactionable researchがある間はresearch / auditを優先し、通常worker側の広範なdiscoveryを止めます。
-- readyが **15〜24本** ではresearchを継続しつつdiscovery補充を積極化し、**0〜14本** では候補枯渇防止のためdiscovery比重を上げます。
-- 毎時`:00`の補助workerはreadyが **50本を超える** と通常workerと同じresearch / audit優先動作へ切り替わり、**50本以下** で探索専用へ戻ります。
-- `.survey/work-queue/next-jobs.json` は優先スナップショットであり、表示件数を処理量上限として扱いません。表示外readyもpriority順に処理対象です。
-- discoveryのcandidate最大5本は **1探索軸・1 submissionのtransport batch上限** であり、1run全体の候補数・round数・batch数の上限ではありません。
-- `:00`補助worker由来の実行は、research補助モード時も通常workerの24-run maintenance counterへ加算しません。
-- 上段の「探索専用worker」統計は実際にdiscoveryを行った履歴だけを集計します。`:00`補助workerがresearch補助モードの回は、探索roundとしては増えません。
-
-高在庫モードでは、hard stopに達しない限り通常runの下限目標は **最低3件**。3件は上限・終了条件ではありません。
-
-- **Research throughput LOW**: ready=179 の高在庫状態で、最新runのresearch完了は 1 件です。探索へ逃げずresearchを継続してください。
-<!-- research-throughput-status:end -->
