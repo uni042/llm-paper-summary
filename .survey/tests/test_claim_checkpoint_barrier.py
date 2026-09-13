@@ -107,6 +107,47 @@ class ClaimCheckpointBarrierTests(unittest.TestCase):
             checkpointed = json.loads((root / ".survey/work-queue/jobs/job-checkpointed.json").read_text())
             self.assertEqual(checkpointed["status"], "ready")
 
+    def test_successful_immutable_result_releases_scheduled_worker_for_next_job(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            seed_job(root, "job-finished", 100)
+            seed_job(root, "job-next", 90)
+            seed_request(root, "req-first")
+            claim_worker.process_requests(root, at=AT)
+            first = json.loads((root / ".survey/work-queue/claim-results/req-first.json").read_text())
+            assignment = first["assignments"][0]
+            self.assertEqual(assignment["job_id"], "job-finished")
+
+            attempt_id = assignment["attempt_id"]
+            descriptor = {
+                "schema_version": 1,
+                "transport_version": 10,
+                "kind": "research",
+                "status": "completed",
+                "attempt_id": attempt_id,
+                "job_id": "job-finished",
+            }
+            write_json(root / ".survey/work-queue/submissions/research" / f"{attempt_id}.json", descriptor)
+            write_json(root / ".survey/work-queue/results/research" / f"{attempt_id}.json", {
+                "schema_version": 1,
+                "workflow_version": 10,
+                "ok": True,
+                "attempt_id": attempt_id,
+                "job_id": "job-finished",
+            })
+            finished_path = root / ".survey/work-queue/jobs/job-finished.json"
+            finished = json.loads(finished_path.read_text())
+            finished["status"] = "completed"
+            write_json(finished_path, finished)
+
+            seed_request(root, "req-next", requested_at=AT + timedelta(minutes=1))
+            claim_worker.process_requests(root, at=AT + timedelta(minutes=1))
+
+            second = json.loads((root / ".survey/work-queue/claim-results/req-next.json").read_text())
+            self.assertEqual([item["job_id"] for item in second["assignments"]], ["job-next"])
+            released = json.loads((root / ".survey/work-queue/claims/job-finished.json").read_text())
+            self.assertIn("released_at", released)
+
 
 if __name__ == "__main__":
     unittest.main()

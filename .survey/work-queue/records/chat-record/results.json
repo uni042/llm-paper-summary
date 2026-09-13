@@ -2,7 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "unused-bank-placeholder",
-  "job_id": "unused-bank-placeholder",
-  "data": {}
+  "attempt_id": "attempt-a27ab827bda92ed2e69c1838",
+  "job_id": "job-research-ec01b6de422e6692",
+  "data": {
+    "overview": "同じ転送量なら、トークンを完全削除するより低精度で全位置を残す方が品質を大きく保った。b=0.5ではSpectrumKV Greedyが実質全INT8となり、Qwen/Mistral/GemmaのPPL変化は+1.97%/-0.06%/-0.44%だったのに対し、PDTrimは+25.85%/+22.07%/+35.63%悪化した。NIAHではQwenのAdaptiveがb=0.3で52.6%とPDTrim 26.3%の約2倍、b=0.5以上で100%へ到達し、Mistral/Gemmaは3段階方式で全予算100%を維持した。b=0.5の転送経路timingではTTFTを50〜62%削減し、デコード速度は概ね維持した。ただしQwenへINT4を使う3段階BalancedはPPL+7506.84%という破綻を示し、モデル別probeが不可欠だった。",
+    "key_results": [
+      {
+        "metric": "WikiText-2 PPL変化",
+        "value": "Qwen +1.97%、Mistral -0.06%、Gemma -0.44%",
+        "baseline": "PDTrim +25.85%、+22.07%、+35.63%",
+        "condition": "b=0.5、seq=2048、SpectrumKV Greedy",
+        "interpretation": "50%相当の転送量でも全トークンをINT8で保持する方が半数をFP16で残して他を消すより品質を保つ。"
+      },
+      {
+        "metric": "低予算PPL",
+        "value": "Mistral +5.41%、Gemma +2.45%",
+        "baseline": "PDTrim +30.90%、+81.74%; SWS +48.29%、+101.28%",
+        "condition": "b=0.3、seq=2048、3段階Greedy",
+        "interpretation": "INT4耐性のあるモデルでは強い帯域制約でも削除方式より劣化が小さい。QwenはINT4 unsafeとして使用しない。"
+      },
+      {
+        "metric": "NIAH検索正解率",
+        "value": "Qwen 52.6%@b=0.3、74.7%@0.4、100%@0.5以上",
+        "baseline": "PDTrim 26.3%、36.8%、47.4%、68.4% (b=.3/.4/.5/.7)",
+        "condition": "4096トークン、Adaptive 2-tier",
+        "interpretation": "削除されたneedleが消える方式と違い、低精度でも全位置を残すことが検索保持へ効く。"
+      },
+      {
+        "metric": "NIAH検索正解率",
+        "value": "Mistral/Gemmaは評価予算で100%",
+        "baseline": "PDTrimはMistral 26.3〜62.1%、Gemma 41.1〜74.7%",
+        "condition": "4096トークン、3-tier",
+        "interpretation": "INT4を安全に使えるモデルでは低予算でも検索情報を保持した。"
+      },
+      {
+        "metric": "転送経路TTFT",
+        "value": "50〜62%削減",
+        "baseline": "FP16 full KV",
+        "condition": "b=0.5、2K/4K/8K。例: Mistral 2K 274→116ms、Gemma 4K 709→270ms",
+        "interpretation": "KVペイロード削減が転送経路の初回トークン時間へ直接効く。ただし完全な本番PDシステムの値ではない。"
+      },
+      {
+        "metric": "INT4失敗例",
+        "value": "Qwen Balanced +7506.84% PPL",
+        "baseline": "FP16",
+        "condition": "b=0.5、3-tier",
+        "interpretation": "ベクトル類似度だけでは量子化安全性を判定できず、低エントロピー注意でsoftmax誤差が増幅する。"
+      },
+      {
+        "metric": "複数タスクb=0.5",
+        "value": "Mistral WikiText -0.1/Code +6.9/Science +33.9、Gemma -0.4/+8.0/+32.7、Qwen +2.0/+5.5/+30.5",
+        "baseline": "PDTrim: Mistral +22.1/+15.7/+152.8、Gemma +35.6/+11.4/+36.0、Qwen +25.8/+8.1/+35.4",
+        "condition": "相対PPL変化",
+        "interpretation": "科学文書は両方式とも難しく、注意が拡散する領域ではタスク適応予算やコールド層取得が必要になる。"
+      }
+    ],
+    "negative_results": "Qwen2.5-7BはINT4に極端に弱く、3段階Balancedが破綻した。低予算域では重要度順位付けよりINT4配置そのものの影響が大きく、ランキングを精緻化しても安全probeの代替にはならない。科学文書ではSpectrumKVでもPPL劣化が30%台に達する。Gemma 8K PPLはメモリ不足で未完了。負のPPL変化は品質改善の主張ではなく測定ノイズまたは軽い正則化効果の可能性として扱う。",
+    "interpretation": "主要利得は『重要な位置だけ残す』ことより、『全位置を何らかの精度で残し、重要度に応じてビットを配る』ことから生じる。ただし最下位精度の安全性は注意分布に依存するため、静的な量子化誤差指標だけでなく配備時の機能試験が必要である。",
+    "quality_impact": "帯域と品質の交換条件を明示的に持つ損失方式である。INT8中心では品質差が小さいが、INT4はモデル・タスク依存で大きく悪化し得る。Adaptive probeにより危険なモデルは2段階へ退避する。"
+  },
+  "reservation": {
+    "claim_id": "claim-a27ab827bda92ed2e69c1838",
+    "worker_id": "manual-repair-spectrum-final",
+    "worker_kind": "work"
+  }
 }
