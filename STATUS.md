@@ -36,19 +36,19 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **171** |
-| 処理中（Active claims） | **43** |
-| 今すぐ着手可能（Claimable） | **128** |
+| 処理中（Active claims） | **44** |
+| 今すぐ着手可能（Claimable） | **127** |
 | :30 通常worker Active claims | **35** |
 | :00 補助worker Active claims | **5** |
-| その他/帰属不明 Active claims | **3** |
-| :30 通常worker 直近claim | **09-13 17:30 JST** |
+| その他/帰属不明 Active claims | **4** |
+| :30 通常worker 直近claim | **09-13 17:39 JST** |
 | :00 補助worker 直近claim | **09-13 17:35 JST** |
 | 直近24h Research完了（:30 通常worker） | **4** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **57** |
 | 最新通常run | **2026-09-13T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **330 min** |
+| 最古の有効claimの経過時間 | **331 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になると探索専用へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -95,11 +95,11 @@ Run: **2026-09-13T17:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P86 `arXiv:2601.11590` — EPD-Serve: A Flexible Multimodal EPD Disaggregation Inference Serving System On Ascend
-- P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
+- P86 `arXiv:2606.08635` — SpectrumKV: Per-Token Mixed-Precision KV Cache Transfer for Prefill-Decode Disaggregated LLM Serving
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2604.13327` — Event Tensor: A Compiler Abstraction for Dynamic Megakernel Generation
+- P86 `arXiv:2604.23150` — Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns
 
 ## 参考情報
 
