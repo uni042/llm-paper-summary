@@ -2,17 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a9879118b7ee6131d2a6caf4",
+  "attempt_id": "attempt-3d2f4129c613aa101dc89f4e",
   "job_id": "job-research-8409b6752444b980",
   "data": {
     "hardware": "Qwen3-8BとLlama-3.1-8Bの実験はNVIDIA H100で行う。大規模モデル評価ではMiniMax M2.1 229BをH200 4枚・テンソル並列度4・FP8、Qwen3-Coder-Next 80BをH200 4枚・テンソル並列度4・専門家並列度4・FP8で配信し、Auroraのオンラインドラフト学習用に追加GPU一枚を使う。",
     "software": "推論側はSGLangベースの投機的復号、学習側は非同期 actor–learner 型の学習基盤を利用する。GPU間通信はtorch.distributed.rpcとTensorPipeを用いたバッチRPC。公式実装はTogether ComputerのAuroraリポジトリとして公開され、TorchSpecとSGLangを基盤にする。",
     "methodology": "初日学習ではQwen3-8Bをターゲット、EAGLE-3型ドラフトを乱数初期化し、数学推論、自然言語からSQL、コード、金融、一般会話の約44Kプロンプトを混合または領域順に流して実配信を模擬する。正解応答は学習に使わず、ターゲット検証で得られる採用・棄却トレースだけを学習信号にする。静的な事前学習済みドラフト、未学習からオンライン学習するAurora、事前学習済みから継続更新するAurora、投機なしを比較する。分布変化、棄却トークン利用、同期頻度、バッチサイズをアブレーションし、さらにMiniMax M2.1とQwen3-Coder-Nextへ拡張する。",
-    "datasets": ["GSM8K", "Spider", "CodeSearchNet", "Finance-Alpaca", "chatbot_instruction_prompts", "held-out coding prompts"],
-    "models": ["Qwen3-8B", "Llama-3.1-8B-Instruct", "MiniMax M2.1 229B", "Qwen3-Coder-Next 80B"],
-    "baselines": ["投機なし配信", "静的な事前学習済みドラフト", "オンライン蒸留型の投機的復号", "Auroraの棄却学習なし構成"],
-    "metrics": ["平均採用長", "要求単位トークン毎秒", "投機なし比の速度向上", "同期による配信揺らぎ", "バッチサイズ別スループット"],
+    "datasets": [
+      "GSM8K",
+      "Spider",
+      "CodeSearchNet",
+      "Finance-Alpaca",
+      "chatbot_instruction_prompts",
+      "held-out coding prompts"
+    ],
+    "models": [
+      "Qwen3-8B",
+      "Llama-3.1-8B-Instruct",
+      "MiniMax M2.1 229B",
+      "Qwen3-Coder-Next 80B"
+    ],
+    "baselines": [
+      "投機なし配信",
+      "静的な事前学習済みドラフト",
+      "オンライン蒸留型の投機的復号",
+      "Auroraの棄却学習なし構成"
+    ],
+    "metrics": [
+      "平均採用長",
+      "要求単位トークン毎秒",
+      "投機なし比の速度向上",
+      "同期による配信揺らぎ",
+      "バッチサイズ別スループット"
+    ],
     "scope": "実験は投機的復号に適した特定のドラフト構造とSGLang配信基盤を中心にし、オンライン学習用に推論GPUとは別のGPUを必要とする。初日学習のトラフィックは実利用者ログではなく複数公開データセットを逐次要求として再生したもので、長期本番運用での安全性・忘却・学習データ管理は主評価外である。大バッチではターゲット側の効率が上がり、投機検証費用が相対的に増えるため速度利得が縮小し、Qwen3-Coder-Nextではバッチ32で投機がわずかに遅くなる。"
   },
-  "reservation": {"claim_id": "claim-a9879118b7ee6131d2a6caf4", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3d2f4129c613aa101dc89f4e",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }

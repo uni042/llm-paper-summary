@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a9879118b7ee6131d2a6caf4",
+  "attempt_id": "attempt-3d2f4129c613aa101dc89f4e",
   "job_id": "job-research-8409b6752444b980",
   "data": {
     "limitations": "オンライン学習用の追加GPUを推論GPUとは別に必要とするため、資源が極端に限られる環境では配備費用が問題になる。学習データは実配信のターゲット出力と検証結果から連続生成されるので、長期運用ではプライバシー、データ保持、偏り、悪意ある入力による学習汚染への対策が必要だが、論文の主評価では扱わない。バッチが大きいとターゲット復号自体の効率が高まり投機費用の比率が増えるため、Qwen3-Coder-Nextのバッチ32では速度利得が消える。オンライン棄却学習の追加利得は条件依存で、単純な採用トークン微調整が大部分の改善を担う場合もある。同期を頻繁にすると新しい重みを早く使える一方、推論側キャッシュや配信安定性への負担が増えるため、鮮度と安定性の調整が必要である。",
@@ -10,5 +10,9 @@
     "implementation_status": "公式コードは https://github.com/togethercomputer/aurora でMITライセンス公開されている。オンライン学習と推論をRay制御下で同居させる形、外部SGLangサーバへ既存ドラフトを接続する形、ドラフトなしから学習を始める形の三モードを提供する。公式例にはQwen3系の初日学習、重み変換、語彙削減、複数ノードRay利用が含まれ、プロジェクトページはICML 2026採択を明記する。",
     "research_positioning": "投機的復号研究の中心課題を、より高い採用率を持つ静的ドラフト設計から『実配信の変化へドラフトを継続適応させる学習・配信システム』へ拡張する。推論基盤の観点では、SGLang上のドラフト・ターゲット検証経路と別GPUの学習経路をRPCで接続し、重み版をオンライン更新するため、サービングと継続学習の境界に位置する。新モデルが頻繁に登場する運用では、モデル公開後に数日かけて専用ドラフトを準備する代わりに、投機なしまたは低性能ドラフトから即時サービスを開始し、実需要へ合わせて高速化を獲得する初日対応基盤として意義がある。"
   },
-  "reservation": {"claim_id": "claim-a9879118b7ee6131d2a6caf4", "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3d2f4129c613aa101dc89f4e",
+    "worker_id": "scheduled-chat-discovery-run7-normal-20260913T1601Z",
+    "worker_kind": "scheduled_chat"
+  }
 }
