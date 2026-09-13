@@ -147,7 +147,7 @@ def _renew_existing_result(
     claims: dict[str, dict[str, Any]],
     now: dt.datetime,
 ) -> int:
-    """Treat an authenticated replay of one request as a lease heartbeat."""
+    """Treat a fresh authenticated replay of one request as a lease heartbeat."""
     if not isinstance(existing, dict):
         return 0
     raw = _read(path)
@@ -160,6 +160,10 @@ def _renew_existing_result(
         or existing.get("worker_id") != request["worker_id"]
         or existing.get("worker_kind") != request["worker_kind"]
     ):
+        return 0
+
+    heartbeat_requested_at = _as_time(request.get("requested_at"))
+    if heartbeat_requested_at is None or heartbeat_requested_at > now:
         return 0
 
     assignments = existing.get("assignments")
@@ -183,6 +187,9 @@ def _renew_existing_result(
             or current.get("worker_id") != request["worker_id"]
             or current.get("worker_kind") != request["worker_kind"]
         ):
+            continue
+        last_activity = _as_time(current.get("heartbeat_at") or current.get("claimed_at"))
+        if last_activity is not None and heartbeat_requested_at <= last_activity:
             continue
         claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
         claim["expires_at"] = new_expiry
