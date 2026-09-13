@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T03:39:00.785072+00:00",
+  "updated_at": "2026-09-13T03:48:59.683879+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -17868,18 +17868,18 @@
     {
       "run_key": "2026-09-13T12:30:00+09:00",
       "first_recorded_at": "2026-09-13T03:39:00.785072+00:00",
-      "last_recorded_at": "2026-09-13T03:39:00.785072+00:00",
+      "last_recorded_at": "2026-09-13T03:48:59.683879+00:00",
       "signals": [
         "research_completed",
         "paper_materialized"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 0,
-        "new_papers": 1,
+        "new_papers": 2,
         "fallback_archived": 0
       },
       "events": [
@@ -17897,6 +17897,21 @@
             "research_completed",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34736318311:1",
+          "recorded_at": "2026-09-13T03:48:59.683879+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34736318311",
+            "run_attempt": "1",
+            "source_sha": "f1b7d520305fbed0e39366c7e921fb821ab839d4"
+          },
+          "signals": [
+            "research_completed",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -17907,16 +17922,25 @@
           "title": "LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-cf1831adcf0d875d",
+          "type": "research",
+          "canonical_id": "arXiv:2405.16444",
+          "title": "CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [],
       "new_paper_ids": [
-        "arXiv:2608.11231"
+        "arXiv:2608.11231",
+        "arXiv:2405.16444"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 397,
-      "paper_active_count_after": 398,
+      "paper_active_count_after": 399,
       "last_successful_action": "paper_materialized"
     }
   ]
