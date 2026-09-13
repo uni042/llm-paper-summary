@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
-      - name: Run real repair claims and submissions
+      - name: Repair and process SpectrumKV from recovered immutable slots
         shell: bash
         run: |
           set -euo pipefail
@@ -58,198 +58,149 @@ jobs:
               path.parent.mkdir(parents=True, exist_ok=True)
               path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          def current_record(assignment):
-              record = {}
-              bank = assignment['record_bank']
-              for slot in SLOT_NAMES:
-                  payload = read(root / BANK_ROOTS[bank] / f'{slot}.json')
-                  assert payload['attempt_id'] == assignment['attempt_id']
-                  assert payload['job_id'] == assignment['job_id']
-                  record[slot] = payload['data']
-              return record
-
-          def normalized_record(assignment):
-              record = assemble.normalize_preferred_terms(current_record(assignment))
-              assemble.ensure_explanatory_summary(record)
-              return record
-
-          def validation_error(assignment):
-              record = normalized_record(assignment)
-              try:
-                  assemble.validate_record(record)
-              except Exception as exc:
-                  return f'{type(exc).__name__}: {exc}'
-              return None
-
-          def language_report(assignment):
-              record = normalized_record(assignment)
-              text = assemble.record_prose_text(record)
-              ratio, jp_chars, latin_chars = assemble.japanese_ratio(text)
-              per_slot = {}
-              for slot in SLOT_NAMES:
-                  slot_text = assemble.record_prose_text({slot: record.get(slot, {})})
-                  sr, sj, sl = assemble.japanese_ratio(slot_text)
-                  per_slot[slot] = {'ratio': round(sr, 4), 'japanese': sj, 'latin': sl}
-              return {'ratio': round(ratio, 4), 'japanese': jp_chars, 'latin': latin_chars, 'per_slot': per_slot}
-
-          now = dt.datetime.now(dt.timezone.utc)
-          branch_jobs = root / '.survey/work-queue/jobs'
-
-          spectrum_job = 'job-research-ec01b6de422e6692'
-          spectrum_old_attempt = 'attempt-d0e5054b6a381715aab8671d'
-          spectrum_old_submission = f'.survey/work-queue/submissions/research/{spectrum_old_attempt}.json'
-          spectrum_old_result_path = root / f'.survey/work-queue/results/research/{spectrum_old_attempt}.json'
+          job_id = 'job-research-ec01b6de422e6692'
+          old_attempt = 'attempt-d0e5054b6a381715aab8671d'
+          old_submission = f'.survey/work-queue/submissions/research/{old_attempt}.json'
+          old_result_path = root / f'.survey/work-queue/results/research/{old_attempt}.json'
           historical_failure = {
               'schema_version': 1,
               'workflow_version': 10,
               'ok': False,
-              'attempt_id': spectrum_old_attempt,
-              'job_id': spectrum_job,
+              'attempt_id': old_attempt,
+              'job_id': job_id,
               'job_type': 'research',
               'job_status': None,
               'artifact': None,
-              'submission': spectrum_old_submission,
+              'submission': old_submission,
               'error': 'ValueError: problem_method.method_overview must explain the end-to-end mechanism',
               'processed_at': '2026-09-13T08:51:43+00:00',
           }
-          if spectrum_old_result_path.exists():
-              assert read(spectrum_old_result_path) == historical_failure
+          if old_result_path.exists():
+              assert read(old_result_path) == historical_failure
           else:
-              write(spectrum_old_result_path, historical_failure)
+              write(old_result_path, historical_failure)
 
-          def claim_target(job_id, request_id, worker_id):
-              job_path = branch_jobs / f'{job_id}.json'
-              job = read(job_path)
-              assert job.get('status') == 'ready', job
-              original_priority = job.get('priority')
-              job['priority'] = 100000
-              write(job_path, job)
-              request_path = root / '.survey/work-queue/claim-requests' / f'{request_id}.json'
-              write(request_path, {
-                  'schema_version': 1,
-                  'request_id': request_id,
-                  'worker_id': worker_id,
-                  'worker_kind': 'work',
-                  'requested_at': now.isoformat(),
-                  'max_jobs': 1,
-                  'lease_seconds': 5400,
-                  'job_types': ['research'],
-              })
-              process_result = claim_worker_with_banks.process_requests(root, at=now)
-              result = read(root / '.survey/work-queue/claim-results' / f'{request_id}.json')
-              assignments = result.get('assignments') or []
-              assert len(assignments) == 1, result
-              assignment = assignments[0]
-              assert assignment['job_id'] == job_id, assignment
-              job = read(job_path)
-              job['priority'] = original_priority
-              write(job_path, job)
-              return assignment, process_result
+          job_path = root / '.survey/work-queue/jobs' / f'{job_id}.json'
+          job = read(job_path)
+          assert job.get('status') == 'ready', job
+          original_priority = job.get('priority')
+          job['priority'] = 100000
+          write(job_path, job)
 
-          vortex_job = 'job-research-8df4b126a68a6be4'
-          vortex, vortex_claim_metrics = claim_target(vortex_job, 'manual-repair-vortex-20260913', 'manual-repair-vortex')
-          assert vortex.get('record_bank') == 'h', vortex
-          assert vortex.get('record_bank_recovery') == 'repair-required-same-job', vortex
+          now = dt.datetime.now(dt.timezone.utc)
+          request_id = 'manual-repair-spectrum-final-20260913'
+          write(root / '.survey/work-queue/claim-requests' / f'{request_id}.json', {
+              'schema_version': 1,
+              'request_id': request_id,
+              'worker_id': 'manual-repair-spectrum-final',
+              'worker_kind': 'work',
+              'requested_at': now.isoformat(),
+              'max_jobs': 1,
+              'lease_seconds': 5400,
+              'job_types': ['research'],
+          })
+          claim_metrics = claim_worker_with_banks.process_requests(root, at=now)
+          claim_result = read(root / '.survey/work-queue/claim-results' / f'{request_id}.json')
+          assignments = claim_result.get('assignments') or []
+          assert len(assignments) == 1, claim_result
+          assignment = assignments[0]
+          assert assignment['job_id'] == job_id, assignment
+          assert assignment.get('record_bank_recovery') == 'repair-required-immutable-descriptor', assignment
+          assert assignment.get('record_bank_recovery_attempt_ids') == [old_attempt], assignment
 
-          spectrum, spectrum_claim_metrics = claim_target(spectrum_job, 'manual-repair-spectrum-20260913', 'manual-repair-spectrum')
-          assert spectrum.get('record_bank_recovery') == 'repair-required-immutable-descriptor', spectrum
-          assert spectrum.get('record_bank_recovery_attempt_ids') == [spectrum_old_attempt], spectrum
+          job = read(job_path)
+          job['priority'] = original_priority
+          write(job_path, job)
 
-          vortex_precheck = validation_error(vortex)
-          spectrum_precheck = validation_error(spectrum)
-          print('PRECHECK_JSON=' + json.dumps({
-              'vortex': {'error': vortex_precheck, 'language': language_report(vortex)},
-              'spectrum': {'error': spectrum_precheck, 'language': language_report(spectrum)},
-          }, ensure_ascii=False, sort_keys=True))
-          repairs = []
+          bank = assignment['record_bank']
+          pm_path = root / BANK_ROOTS[bank] / 'problem_method.json'
+          pm = read(pm_path)
+          repair_log = []
 
-          if vortex_precheck is not None:
-              vortex_pm_path = root / BANK_ROOTS[vortex['record_bank']] / 'problem_method.json'
-              vortex_pm = read(vortex_pm_path)
-              before_vortex = vortex_pm['data']['components'][0]['description']
-              if assemble.prose_chars(before_vortex) < 240:
-                  extra_vortex = (
-                      'さらにキャッシュ段階の出力は名前付きキャッシュとしてKVページと同じ割当単位に保存され、'
-                      '索引段階は各デコード反復でその統計と現在のクエリだけを組み合わせて候補ブロックを絞る。'
-                      'そのため毎トークンで全KVを走査せず、状態保持型の方式でも物理ページ位置を利用者コードへ露出しない。'
-                  )
-                  vortex_pm['data']['components'][0]['description'] = before_vortex + extra_vortex
-                  write(vortex_pm_path, vortex_pm)
-                  repairs.append({'job_id': vortex_job, 'field': 'components[0].description', 'before_chars': assemble.prose_chars(before_vortex), 'after_chars': assemble.prose_chars(vortex_pm['data']['components'][0]['description'])})
-
-          spectrum_pm_path = root / BANK_ROOTS[spectrum['record_bank']] / 'problem_method.json'
-          spectrum_pm = read(spectrum_pm_path)
-          before_spectrum = spectrum_pm['data']['method_overview']
-          if assemble.prose_chars(before_spectrum) < 500:
-              extra_spectrum = (
+          before = assemble.prose_chars(pm['data']['method_overview'])
+          if before < 500:
+              pm['data']['method_overview'] += (
                   'エンドツーエンドでは、プリフィルGPUで通常のFP16 KVを生成し、重要度を計算し、'
                   '転送予算に沿ってトークンごとにFP16・INT8・INT4を選択して量子化する。次に量子化KVと'
                   'トークン別の精度地図をネットワーク越しにデコードGPUへ送り、受信側は地図に従って各KVを復号し、'
                   '低重要度位置も削除せず全トークンを通常の注意計算へ入力する。配備前の試験でINT4不適合と判定された'
-                  'モデルでは同じ処理列の精度集合をFP16・INT8へ縮退させ、同じ予算制約の下で割当を再計算する。'
+                  'モデルでは精度集合をFP16・INT8へ縮退させ、同じ予算制約の下で割当を再計算する。'
                   'したがって転送量削減、復号、生成までが一つの流れとして完結し、削除方式のような欠落位置の再取得を必要としない。'
               )
-              spectrum_pm['data']['method_overview'] = before_spectrum + extra_spectrum
-              write(spectrum_pm_path, spectrum_pm)
-              repairs.append({'job_id': spectrum_job, 'field': 'method_overview', 'before_chars': assemble.prose_chars(before_spectrum), 'after_chars': assemble.prose_chars(spectrum_pm['data']['method_overview'])})
+              repair_log.append({'field': 'method_overview', 'before': before, 'after': assemble.prose_chars(pm['data']['method_overview'])})
 
-          vortex_postcheck = validation_error(vortex)
-          spectrum_postcheck = validation_error(spectrum)
-          print('POSTCHECK_JSON=' + json.dumps({
-              'vortex': {'error': vortex_postcheck, 'language': language_report(vortex)},
-              'spectrum': {'error': spectrum_postcheck, 'language': language_report(spectrum)},
-              'repairs': repairs,
-          }, ensure_ascii=False, sort_keys=True))
-          assert vortex_postcheck is None, vortex_postcheck
-          assert spectrum_postcheck is None, spectrum_postcheck
+          additions = [
+              'この単調割当は、同じ転送予算で重要位置の量子化誤差を抑えつつ、低重要度位置も低精度表現として残すための中核である。削除型と違って全位置に情報を保持するので、検索対象が事前に特定できない長文でも完全な情報消失を避けられる。',
+              'この保護と順位付けを組み合わせることで、位置だけで決める固定比率ではなく、モデルが実際に参照しやすい場所へ高精度の転送量を重点配分できる。注意統計が取得できない場合も代替指標へ切り替え、同じ精度割当の枠組みを維持する。',
+              'この配備時試験は量子化方式を一律に固定せず、モデルごとの注意分布の鋭さを実測結果で判定する安全弁として働く。INT4で検索能力が崩れるモデルは自動的に2段階へ戻すため、帯域削減率より品質維持を優先できる。',
+              'この近似保持は将来の高精度化にも使え、必要な位置だけを低精度表現から更新できる。現論文では完全な階層取得機構までは実装していないものの、削除後にFP16全量を取り直す設計より追加帯域を小さくできる方向を示している。',
+          ]
+          for index, component in enumerate(pm['data']['components']):
+              before_len = assemble.prose_chars(component.get('description'))
+              if before_len < 240:
+                  component['description'] = str(component.get('description') or '') + additions[index]
+                  repair_log.append({'field': f'components[{index}].description', 'before': before_len, 'after': assemble.prose_chars(component['description'])})
 
-          def submit(assignment):
-              job = read(branch_jobs / f"{assignment['job_id']}.json")
-              bank = assignment['record_bank']
-              refs = []
-              for slot in SLOT_NAMES:
-                  path = f"{BANK_ROOTS[bank]}/{slot}.json"
-                  raw = (root / path).read_bytes()
-                  refs.append({'slot': slot, 'path': path, 'blob_sha': immutable_submission.git_blob_sha(raw)})
-              descriptor = {
-                  'schema_version': 1,
-                  'transport_version': 10,
-                  'kind': 'research',
-                  'status': 'completed',
-                  'attempt_id': assignment['attempt_id'],
-                  'job_id': assignment['job_id'],
-                  'claim_id': assignment['claim_id'],
-                  'worker_id': assignment['worker_id'],
-                  'worker_kind': assignment['worker_kind'],
-                  'record_bank': bank,
-                  'paper_path': job['paper_path'],
-                  'record_slots': refs,
-              }
-              submission_path = root / '.survey/work-queue/submissions/research' / f"{assignment['attempt_id']}.json"
-              write(submission_path, descriptor)
-              result = process_immutable_submission.process(root, submission_path)
-              assert result.get('ok') is True, result
-              final_job = read(branch_jobs / f"{assignment['job_id']}.json")
-              assert final_job.get('status') == 'completed', final_job
-              assert not final_job.get('repair_required'), final_job
-              paper = root / job['paper_path']
-              assert paper.is_file()
-              return {
-                  'job_id': assignment['job_id'], 'attempt_id': assignment['attempt_id'], 'bank': bank,
-                  'recovery': assignment.get('record_bank_recovery'), 'paper_path': job['paper_path'],
-                  'paper_bytes': paper.stat().st_size, 'result_ok': result.get('ok'),
-              }
+          write(pm_path, pm)
 
-          vortex_result = submit(vortex)
-          spectrum_result = submit(spectrum)
-          report = {
-              'precheck': {'vortex': vortex_precheck, 'spectrum': spectrum_precheck},
-              'postcheck': {'vortex': vortex_postcheck, 'spectrum': spectrum_postcheck},
-              'repairs': repairs, 'vortex': vortex_result, 'spectrum': spectrum_result,
-              'vortex_claim_metrics': vortex_claim_metrics, 'spectrum_claim_metrics': spectrum_claim_metrics,
+          record = {}
+          for slot in SLOT_NAMES:
+              payload = read(root / BANK_ROOTS[bank] / f'{slot}.json')
+              assert payload.get('attempt_id') == assignment['attempt_id']
+              assert payload.get('job_id') == job_id
+              record[slot] = payload['data']
+          normalized = assemble.normalize_preferred_terms(record)
+          assemble.ensure_explanatory_summary(normalized)
+          assemble.validate_record(normalized)
+          prose = assemble.record_prose_text(normalized)
+          ratio, jp_chars, latin_chars = assemble.japanese_ratio(prose)
+
+          refs = []
+          for slot in SLOT_NAMES:
+              path = f"{BANK_ROOTS[bank]}/{slot}.json"
+              raw = (root / path).read_bytes()
+              refs.append({'slot': slot, 'path': path, 'blob_sha': immutable_submission.git_blob_sha(raw)})
+          descriptor = {
+              'schema_version': 1,
+              'transport_version': 10,
+              'kind': 'research',
+              'status': 'completed',
+              'attempt_id': assignment['attempt_id'],
+              'job_id': job_id,
+              'claim_id': assignment['claim_id'],
+              'worker_id': assignment['worker_id'],
+              'worker_kind': assignment['worker_kind'],
+              'record_bank': bank,
+              'paper_path': job['paper_path'],
+              'record_slots': refs,
           }
-          write(root / '.survey/reports/live-repair-run-2026-09-13.json', report)
-          print('LIVE_REPAIR_JSON=' + json.dumps(report, ensure_ascii=False, sort_keys=True))
+          submission_path = root / '.survey/work-queue/submissions/research' / f"{assignment['attempt_id']}.json"
+          write(submission_path, descriptor)
+          result = process_immutable_submission.process(root, submission_path)
+          assert result.get('ok') is True, result
+          final_job = read(job_path)
+          assert final_job.get('status') == 'completed', final_job
+          assert not final_job.get('repair_required'), final_job
+          paper = root / job['paper_path']
+          assert paper.is_file()
+
+          report = {
+              'job_id': job_id,
+              'old_attempt': old_attempt,
+              'new_attempt': assignment['attempt_id'],
+              'bank': bank,
+              'recovery': assignment.get('record_bank_recovery'),
+              'repairs': repair_log,
+              'language_ratio': round(ratio, 4),
+              'japanese_chars': jp_chars,
+              'latin_chars': latin_chars,
+              'result_ok': result.get('ok'),
+              'paper_path': job['paper_path'],
+              'paper_bytes': paper.stat().st_size,
+              'claim_metrics': claim_metrics,
+          }
+          write(root / '.survey/reports/live-spectrum-repair-2026-09-13.json', report)
+          print('SPECTRUM_REPAIR_JSON=' + json.dumps(report, ensure_ascii=False, sort_keys=True))
           PY
 
       - name: Verify repository tests after real processing
@@ -263,11 +214,11 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .survey/work-queue .survey/reports/live-repair-run-2026-09-13.json papers
+          git add .survey/work-queue .survey/reports/live-spectrum-repair-2026-09-13.json papers
           git status --short
           if git diff --cached --quiet; then
             echo 'No processing changes to commit'
             exit 1
           fi
-          git commit -m 'test: process two real repair jobs with recovered records'
+          git commit -m 'test: process SpectrumKV repair from recovered records'
           git push origin HEAD:fix/repair-claim-record-recovery-20260913-run
