@@ -4,10 +4,24 @@
   "slot": "evaluation",
   "attempt_id": "attempt-55df2b11c91038f1b18d0801",
   "job_id": "job-research-b0ca87eca87a5574",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-55df2b11c91038f1b18d0801",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["NVIDIA A40 48GB×4"],
+    "software": ["Ubuntu 20.04", "CUDA 12.8", "vLLM", "Kafka"],
+    "model": ["Llama3-8B", "Llama2-13B"],
+    "datasets": ["Question Answer: GSM8K+MMLU、MathQA+WorldHistoryQA、SVAMP+SocialIQA", "Report Generate: TruthfulQA、News Category Dataset、Natural Questions", "Code Generate: HumanEval、MBPP、APPS"],
+    "baselines": ["Parrot", "Ayo"],
+    "correctness": "全方式で同じLLM実行設定を用い、実運用LLM推論履歴の要求間隔分布を比例抽出して到着負荷を構成する。負荷は待ち時間がアプリケーション全体時間に占める割合が0〜90%になるよう調整し、単一アプリケーションと複数アプリケーション同居の双方で比較する。",
+    "settings": [
+      "主評価はLlama3-8B、4枚のA40で共有LLM実体を構成する。",
+      "大規模モデル拡張ではLlama2-13Bへ置換し、QA・RG・CGの同居負荷を用いる。",
+      "比較対象Parrotは到着順優先度と巡回配送、Ayoはワークフロー段数に基づく優先度と巡回配送を使う。",
+      "実運用推論履歴の要求間隔分布を保持しながら負荷率を変更し、低負荷から過剰負荷まで評価する。",
+      "配送の時間枠長は経験的に0.5秒。"
+    ],
+    "methodology": "まず30件の人気オープンソース・マルチエージェントプロジェクトを調査し、動的分岐、逐次実行、動的フィードバックの三類型を抽出する。その代表としてQA、レポート生成、コード生成を選び、Llama3-8B上で各エージェントの出力長と推論遅延を測定する。次にParrotとAyoを用いて高負荷時の優先度誤りと巡回配送による中断を観測する。Kairos評価では9つの単一アプリ・データ集合組合せと3アプリ同居負荷を用い、アプリケーション全体応答時間を生成トークン数で割ったプログラム単位トークン遅延の平均と末尾値を比較する。優先度順序の正確性は全要求対について理想的な残り実行時間順と一致する割合で測る。さらにLlama2-13Bで拡張性、優先度機構とメモリ配送機構をそれぞれ外す除去実験、エージェント数10〜5000での優先度更新時間、要求ごとの制御負担を測る。",
+    "metrics": ["プログラム単位トークン平均遅延", "P90/P95/P99末尾遅延", "優先度整列正確性", "要求中断率", "メモリ浪費率", "優先度更新時間", "要求単位スケジューリング・配送処理時間"],
+    "scope": "4枚のA40を中心とした単一クラスタで、3種類のマルチエージェント応用とLlama3-8B/Llama2-13Bを評価する。より大規模なモデル並列、複数ノードのネットワーク輻輳、異種GPU、エージェント間通信自体の帯域律速は主評価対象ではない。",
+    "reproducibility": "論文はGPU、OS、CUDA、モデル、ベンチマーク、比較方式、実運用履歴に基づく到着生成、0.5秒時間枠、実装規模と主要アルゴリズムを記載する。ただしKairos固有の公式コード公開先は一次資料で確認できず、完全再現には論文記述から約6000行規模のオーケストレーション機構を再実装する必要がある。"
+  },
+  "reservation": {"claim_id": "claim-55df2b11c91038f1b18d0801", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
