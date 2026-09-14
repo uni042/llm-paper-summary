@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-7381d916bdd79b3e46aeb209",
   "job_id": "job-research-b85568c75bac4939",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7381d916bdd79b3e46aeb209",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "エネルギー測定はSGLang実行中のGPUごとのNVMLハードウェアカウンタをイベント境界で読み、各セルで3回のウォームアップ後に10回反復する。論文本文はGPU型番を主要条件として特定しておらず、短いプリフィルでは約10 msの計測積分窓に収まり0 Jと記録される計器床の影響を別途分析している。",
+    "software": "基盤はSGLangのRadixCacheとFlashMLA。参照試作は約950行で、sitecustomize経由の安全なフックにより観測モードで内容ハッシュ命中を記録する。内容定義チャンクにはGear-hash、指紋にはxxHash64を使い、実運用想定では64次元krの差分回転をFlashMLAへ融合する。",
+    "methodology": "実エージェント再利用量はToolathlon、CC-Bench、Hermesの7,530軌跡・3.4×10^8トークンを母集団とし、1,035軌跡・5.1×10^7トークンの層化部分集合を詳細分析する。位置不変性は500内容ブロックを5絶対位置へ配置し、同内容異位置と異内容をコサイン類似度でROC評価する。品質はDeepSeek-V2-Lite、Moonlight-16B-A3B、JoyAI-Flashと追加のTransMLA-4Bで、QA、GovReport、NIAHについて完全再計算・位置補正PIC・単純再利用を比較し、KL、argmax一致率、最初の生成分岐位置を測る。回収率はHermes由来のOpenClaw型変化パターンで観測し、エネルギーはGQA、MLA、MHA、Mamba2、GDN、KDAを横断して完全不命中・部分再計算・命中を比較する。",
+    "scope": "回収率の主要表は観測モードで、内容ハッシュが命中しても実KVを差し替えない。そのため報告される最初のトークンまでの時間は比較用の基準値であり、融合差分回転を実際に通したエンドツーエンド遅延ではない。安全性主張はMLAが中心で、MHAは注意シンクの形が異なり同じ先頭切出しだけでは扱えない。ハイブリッドSSM・線形注意では再帰状態がトークン単位に分割できず、位置非依存キャッシュによるプリフィル省エネルギーはほぼ得られない。"
+  },
+  "reservation": {"claim_id": "claim-7381d916bdd79b3e46aeb209", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
