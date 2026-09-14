@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T01:15:57.532401+00:00",
+  "updated_at": "2026-09-14T01:24:17.110084+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,13 +18680,13 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T01:15:57.532401+00:00",
+      "last_recorded_at": "2026-09-14T01:24:17.110084+00:00",
       "signals": [
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 1,
+        "research_completed": 2,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18722,6 +18722,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34795790064:1",
+          "recorded_at": "2026-09-14T01:24:17.110084+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34795790064",
+            "run_attempt": "1",
+            "source_sha": "33202f393656df5f7bf0a4faba73b2e180051840"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18730,6 +18744,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.20868",
           "title": "Runtime-Certified Bounded-Error Quantized Attention",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2dbab0db43ceff0b",
+          "type": "research",
+          "canonical_id": "arXiv:2603.10342",
+          "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
           "from": "ready",
           "to": "completed"
         }
