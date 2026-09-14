@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T03:36:48.988555+00:00",
+  "updated_at": "2026-09-14T03:39:48.516153+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T03:36:48.988555+00:00",
+      "last_recorded_at": "2026-09-14T03:39:48.516153+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 29,
+        "research_completed": 30,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19102,6 +19102,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34803355218:1",
+          "recorded_at": "2026-09-14T03:39:48.516153+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34803355218",
+            "run_attempt": "1",
+            "source_sha": "1a1675734e3d17f6d3a0ad2db76ef422975ba90d"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19334,6 +19348,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.08075",
           "title": "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-174670c4ec67fe0a",
+          "type": "research",
+          "canonical_id": "arXiv:2606.08382",
+          "title": "STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control",
           "from": "ready",
           "to": "completed"
         }
