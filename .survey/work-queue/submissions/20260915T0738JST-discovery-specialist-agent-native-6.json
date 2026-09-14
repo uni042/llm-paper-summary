@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-15c0335aaa7eded8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25899",
+      "title": "Pythia: Toward Predictability-Driven Agent-Native LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.25899",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.25899-pythia-predictability-driven-agent-native-serving.md",
+      "priority": 80,
+      "reason": "マルチエージェントのワークフロートポロジーが将来の要求系列や共有接頭辞、資源競合に関する予測可能性を持つ点を利用し、その意味情報をサービング層へ渡して配置・キャッシュ・スケーリングを最適化するエージェントネイティブ基盤。通常の独立要求として扱う既存サービングとの差分が明確で、production traceとcoding assistantを用いた評価を含むため、AgentSysBenchやAriesの観測研究を実行系へ接続する候補として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-agent-native-6",
+    "axis": "エージェント型ワークロードの予測可能性・状態・実行系",
+    "query_summary": "agentic LLM servingの実行系を独立軸として探索し、AgentSysBench（arXiv:2608.15127）、VibeServe（arXiv:2605.06068）、Aries（arXiv:2607.29069）、Pythia（arXiv:2604.25899）を軽量評価した。最新identityでは前3件が既収録またはcheckpoint済みで、Pythiaのみ未収録だった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2608.15127",
+      "arXiv:2605.06068",
+      "arXiv:2607.29069"
+    ],
+    "next_axis_hint": "forward citation経路へ移り、既収録のFlexGen・vLLM・DistServe・Mooncake・FlashMoE等を起点に2026年の未収録systems論文を探索する。",
+    "empty_round_reason": null
+  }
+}
