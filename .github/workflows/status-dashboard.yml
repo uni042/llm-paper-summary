@@ -12,6 +12,7 @@ on:
       - '.survey/tests/test_status_dashboard.py'
       - '.survey/tests/test_research_throughput_status.py'
       - '.survey/tests/test_status_observability.py'
+      - '.survey/tests/test_status_activity_labels.py'
       - '.survey/tests/test_dashboard_history.py'
       - '.survey/tests/test_parallel_routing_and_dashboard_gate.py'
       - '.survey/docs/survey-workflow/discovery-continuation-policy.md'
@@ -28,6 +29,7 @@ on:
       - '.survey/tests/test_status_dashboard.py'
       - '.survey/tests/test_research_throughput_status.py'
       - '.survey/tests/test_status_observability.py'
+      - '.survey/tests/test_status_activity_labels.py'
       - '.survey/tests/test_dashboard_history.py'
       - '.survey/tests/test_parallel_routing_and_dashboard_gate.py'
       - '.github/workflows/status-dashboard.yml'
@@ -52,6 +54,7 @@ jobs:
         run: |
           python -m unittest discover -s .survey/tests -p 'test_*dashboard*.py'
           python -m unittest discover -s .survey/tests -p 'test_status_observability.py'
+          python -m unittest discover -s .survey/tests -p 'test_status_activity_labels.py'
       - name: Render dashboard in check mode
         run: |
           python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
