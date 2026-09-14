@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 10:27 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 11:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,17 +15,17 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **112** |
+| 未処理の論文候補（Research ready） | **103** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **277** |
+| 全文精読完了（累計） | **286** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
 
 ### 要注意
 
-- Research消化が:00 補助workerのDiscovery候補補充を上回っています。candidate枯渇に注意。
+- 現在、集計stateから重大な警告は検出されていません。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -34,21 +34,21 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
-| 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **112** |
-| 処理中（Active claims） | **3** |
-| 今すぐ着手可能（Claimable） | **109** |
-| :30 通常worker Active claims | **0** |
+| 処理速度 | **OK** |
+| 未処理候補（Research ready） | **103** |
+| 処理中（Active claims） | **4** |
+| 今すぐ着手可能（Claimable） | **100** |
+| :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 06:39 JST** |
-| :00 補助worker 直近claim | **09-14 10:24 JST** |
-| 直近24h Research完了（:30 通常worker） | **5** |
-| 直近24h Research完了（:00 補助worker） | **8** |
-| 直近24h Research完了（帰属不明） | **5** |
-| 最新通常run | **2026-09-14T06:30:00+09:00** |
-| 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **71 min** |
+| :30 通常worker 直近claim | **09-14 11:10 JST** |
+| :00 補助worker 直近claim | **09-14 11:10 JST** |
+| 直近24h Research完了（:30 通常worker） | **10** |
+| 直近24h Research完了（:00 補助worker） | **12** |
+| 直近24h Research完了（帰属不明） | **2** |
+| 最新通常run | **2026-09-14T10:30:00+09:00** |
+| 最新通常runのResearch完了 | **5** |
+| 最古の有効claimの経過時間 | **69 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -58,29 +58,28 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=112 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
-- 直近24hのResearch完了のうち **5件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **2件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **18** |
-| Repo収録 | **61** |
+| Research完了 | **24** |
+| Repo収録 | **58** |
 | Audit完了 | **0** |
-| 探索評価候補 | **65** |
-| Research候補採用 | **8** |
-| 重複除外 | **34** |
-| 重複率 | **52.3%** |
-| :00 補助worker Discovery run（毎時枠） | **1** |
-| :00 補助worker Discovery round（stats観測） | **15** |
-| 通常worker run（ledger観測） | **12** |
+| 探索評価候補 | **0** |
+| Research候補採用 | **0** |
+| 重複除外 | **0** |
+| 重複率 | **—** |
+| :00 補助worker Discovery run（毎時枠） | **0** |
+| :00 補助worker Discovery round（stats観測） | **0** |
+| 通常worker run（ledger観測） | **11** |
 | Fallback archive（全helper） | **17** |
 
 ### 24時間の流れ
 
-**探索評価 65 → 重複除外後 31 → Research候補採用 8 → Research完了 18 → Repo収録 61**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 24 → Repo収録 58**
 
 ## 直近の通常worker
 
@@ -103,7 +102,7 @@ Run: **2026-09-14T05:30:00+09:00**
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P85 `arXiv:2608.15473` — Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding
+- P84 `arXiv:2506.17615` — EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration
 
 ## 参考情報
 
@@ -127,21 +126,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
-| CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
-| 2609新着・KVキャッシュ・階層メモリ・ストレージ | 5 | 0 | 0 | 0.0% | 0.0% |
-| GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
-| MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
-| MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
-| serving software aging・runtime reliability・lossless compression・load-aware speculative serving | 5 | 4 | 0 | 80.0% | 0.0% |
-| 分離サービング・電力制御・KV転送・multi-turn routing | 5 | 0 | 0 | 0.0% | 0.0% |
-| 動的投機的復号serving・agent隣接 | 5 | 3 | 1 | 60.0% | 20.0% |
-| CPU/GPU・NPU/PIM異種実行と階層オフロード | 4 | 4 | 0 | 100.0% | 0.0% |
-| FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management | 4 | 1 | 1 | 25.0% | 25.0% |
-| agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
-| recent検索から重要基礎系譜への欠落確認 | 4 | 3 | 0 | 75.0% | 0.0% |
-| 重要系譜の前方・後方引用追跡 | 4 | 2 | 2 | 50.0% | 50.0% |
-| 2026年9月新着・KV圧縮と動的管理 | 3 | 0 | 0 | 0.0% | 0.0% |
-| 収録済み重要論文のforward citation・Llumnix系譜 | 1 | 0 | 0 | 0.0% | 0.0% |
+| — | 0 | 0 | 0 | — | — |
 
 ### 直近5件の:00 補助worker Discovery run
 
@@ -153,14 +138,14 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
-- `arXiv:2603.10342` — AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU
-- `arXiv:2605.20868` — Runtime-Certified Bounded-Error Quantized Attention
-- `arXiv:2502.09921` — INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing
-- `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
-- `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
-- `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
-- `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
-- `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
+- `arXiv:2608.23843` — PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression
+- `arXiv:2607.17715` — C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference
+- `arXiv:2606.13740` — Efficient On-Device Diffusion LLM Inference with Mobile NPU
+- `arXiv:2605.16637` — HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling
+- `arXiv:2605.11581` — Ada-MK: Adaptive Megakernel Compilation for Efficient LLM Inference
+- `arXiv:2503.03777` — FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference
+- `arXiv:2608.15473` — Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding
+- `arXiv:2606.15050` — Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters
 
 ### 7日比較
 
