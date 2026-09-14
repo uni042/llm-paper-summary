@@ -2,18 +2,48 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-eb4f7c2f64cc51ea777e0e73",
-  "job_id": "job-research-16aaac9973021cd8",
+  "attempt_id": "attempt-7ba91f6f26825e4554f3aa71",
+  "job_id": "job-research-b6c014b6c4d75daa",
   "data": {
-    "hardware":"Qwen2.5-14BはNVIDIA A100 80GB 1基、Qwen2.5-32BはNVIDIA H20 96GB 1基、Qwen2.5-72BはNVIDIA H20 2基をテンソル並列2で使用する。KV退避先としてCPUメモリ100GBを確保する。",
-    "software":"TokenCakeは約9,000行のPythonで実装し、vLLMの要求処理・KVブロック管理を再利用する。比較対象はvLLM v0.8.6、接頭辞キャッシュを有効にしたvLLM、Mooncake v0.3.0-beta、Parrot。専用非同期転送ストリームでCPU-GPU間KV移動を行い、vLLM V1へCPUブロックプールを再導入する。",
-    "model":"Qwen2.5-14B、Qwen2.5-32B、Qwen2.5-72B。72BのみH20 2基のテンソル並列2で動作する。",
-    "datasets":["Code-Writer: 11種類のエージェント型を持ち、ファイル入出力、検索、試験実行などの外部関数を含む","Deep Research: 検索と文章生成を反復する複数エージェント応用","利用者要求はShareGPTとAgentCodeを基に合成","要求到着はポアソン過程で生成し、外部関数はMCPで観測される遅延範囲を模擬"],
-    "baselines":["vLLM v0.8.6","vLLM-Prefix: 接頭辞キャッシュ有効","Mooncake v0.3.0-beta","Parrot","TokenCakeの構成要素除去: エージェント優先度のみ、退避のみ、全機構"],
-    "correctness":"モデル重みとKV内容は変更せず、同じ基盤モデルでキャッシュ配置と要求順序だけを変える。評価の主指標は応用全体の平均・末尾遅延、GPU KVキャッシュ利用率、スループット、KV移動回数であり、生成品質を近似する方式ではない。",
-    "settings":["Code-Writerでは要求率を0.2、0.5、1.0 QPSなどに変化させ、モデルサイズとGPU構成を変えて評価","関数所要時間予測へ人工的な誤差を加え、予測誤差0、0.25、0.5で感度評価","退避候補選択としてbest-fit、priority-first、first-fitを比較","空間圧力しきい値を振り、積極的な退避と退避拒否の交換条件を評価","4,096キャッシュ済みトークン・256ブロックでGPU→CPUとCPU→GPU転送時間を測定し、KV再計算時間と比較"],
-    "methodology":"まず複数モデル・GPU構成でvLLM系比較対象に対するCode-WriterとDeep Researchのエンドツーエンド遅延、GPU KV利用率を測る。次にエージェント優先度機構と時間方向退避機構を個別・同時に有効化する除去実験で寄与を分離する。Mooncakeとは同じ応用負荷で低・中要求率を比較し、Parrotとは異なる実行基盤であることを明示した上で応用全体の時間を比較する。さらに、関数時間予測誤差、退避候補選択、GPU圧力しきい値、CPU-GPU転送時間を個別に振り、予測型オフロードが常に有益ではない境界条件を調べる。",
-    "scope":"実GPU上のエンドツーエンド評価であり、単なるシミュレーションではない。主評価は単一GPUの14B/32Bモデルで、72BについてはH20 2基で複数GPU経路を確認するが、大規模な多数GPUクラスタでの性能評価は今後の課題である。アプリケーショングラフは再現性のため事前登録する一方、要求時の分岐は扱える。完全に動的な確率的グラフモデルは未実装である。"
+    "hardware": "ソフトウェアカーネルはNVIDIA A5000 Ampere（sm86、24GB GDDR6）1基で測定する。Sparse SIMT Coreは実チップではなく、専用機能の効果を模擬する改変A5000カーネルとRTL合成で評価する。",
+    "software": "CUDA 12.6、GCC 12.2。比較対象は密cuBLAS、Coruscantの疎行列×密行列、Flash-LLM、DASP。端から端LLM評価ではFlashAttentionを共通に使用し、Flash-LLM/DASP側の重み疎化はWanda、Celty側の二重疎化はDuoGPTを用いる。",
+    "model": "層形状評価はLLaMA-2-7B、LLaMA-2-13B、OPT-30B。端から端評価はLLaMA-2-13B。代表形状は4096×4096、4096×11008、5120×5120、5120×13824、7168×7168、7168×28672。",
+    "datasets": [
+      "ShareGPTから161入力トークンの代表プロンプト（端から端速度）",
+      "WikiText-2（パープレキシティ）",
+      "ARC-easy",
+      "ARC-challenge",
+      "HellaSwag",
+      "PIQA",
+      "WinoGrande等の一般課題精度"
+    ],
+    "baselines": [
+      "密cuBLAS",
+      "Coruscant",
+      "Flash-LLM",
+      "DASP",
+      "Macko",
+      "密FP16 LLaMA-2",
+      "SparseGPT非構造疎化",
+      "SparseGPT 2:4",
+      "ShortGPT",
+      "DuoGPT"
+    ],
+    "correctness": "速度だけでなく、二重疎化による言語モデル品質低下をWikiText-2パープレキシティと一般課題平均精度で測る。カーネル比較では既存疎手法へ同程度の重み保存量を与え、Celtyだけは重みと入力活性の両方の疎性を利用するため、利用できる疎性情報の違いを明示する。",
+    "settings": [
+      "二重疎性30%、50%、70%を中心に評価",
+      "カーネルの内側列タイルK=64を既定値",
+      "SpMM比較はTensor Core整列条件のためN次元を8へパディング",
+      "端から端評価は161トークン入力後の単一トークンデコード",
+      "専用走長復号器は400MHz・32nmで合成し7nmへ尺度換算",
+      "Sparse SIMT Core性能はA5000上で走長復号命令を除き直接レジスタアクセスへ置換した改変カーネルで推定"
+    ],
+    "methodology": "各代表全結合層でカーネル遅延を測り、密cuBLASと既存疎GPUカーネルに対する速度比を疎性ごとに比較する。ソフトウェアCeltyは実A5000測定で、Sparse SIMT Coreは専用復号とレジスタ部分和を理想化した改変カーネルの実測遅延をハードウェア性能見積もりとして使う。共有メモリ集約、内側タイル幅、レジスタ蓄積率を個別に変えるアブレーションも実施する。端から端ではLLaMA-2-13Bの全結合層を対象カーネルへ置換し、単一トークンデコード遅延とパープレキシティを測る。",
+    "scope": "ソフトウェアカーネルの速度値はA5000実測だが、専用Sparse SIMT Coreの最大5.27倍などは実シリコンではなく改変GPUカーネルによる性能推定である。面積・電力も論理合成とプロセス尺度換算に基づく。端から端評価は低バッチ・単一利用者デコードを主対象とし、大規模連続バッチ配信や学習処理は対象外。"
   },
-  "reservation":{"claim_id":"claim-eb4f7c2f64cc51ea777e0e73","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-7ba91f6f26825e4554f3aa71",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

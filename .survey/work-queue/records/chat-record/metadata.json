@@ -2,32 +2,139 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-eb4f7c2f64cc51ea777e0e73",
-  "job_id": "job-research-16aaac9973021cd8",
+  "attempt_id": "attempt-7ba91f6f26825e4554f3aa71",
+  "job_id": "job-research-b6c014b6c4d75daa",
   "data": {
-    "canonical_id":"arXiv:2510.18586","arxiv_id":"2510.18586","doi":"10.48550/arXiv.2510.18586","openreview_id":null,
-    "arxiv_categories":{"primary":"cs.DC","cross_list":[]},
-    "title":"TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
-    "summary":"TokenCakeは、複数エージェント型LLMアプリケーションで外部関数呼び出し中のエージェントがGPU上のKVキャッシュを長時間占有し、同時に重要な後続エージェントのキャッシュを追い出して再計算を誘発する問題を、時間方向と空間方向の2層スケジューリングで解くサービング基盤である。時間スケジューラは関数待機時間を予測し、待機が十分長く、解放メモリを有効利用できる場合だけKVをCPUへ退避し、復帰時刻を予測して関数完了前に先読みする。空間スケジューラは重要エージェント向け予約領域をGPU KVプール内へ動的に確保し、エージェントの構造的重要度、同期圧力、待ち時間、再計算費を使って実行優先度を決める。両者は同じメモリ圧力状態を共有して退避の乱発を避ける。Qwen2.5-14B/32B/72BをA100・H20で評価し、vLLM比で平均エンドツーエンド遅延を最大47.06%削減し、GPU KV利用率を最大16.9ポイント改善する。",
-    "list_summary":"関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。",
-    "authors":["Zhuohang Bian","Feiyang Wu","Zhuoran Li","Teng Ma","Youwei Zhuo"],
-    "authors_affiliations":"Zhuohang Bian、Feiyang Wu、Zhuoran Li、Youwei ZhuoはPeking University。Teng MaはAlibaba Group。",
-    "published":"2025-10-21","publication":"EuroSys 2027","publication_type":"Conference","publication_status":"Accepted","publication_version":"arXiv v4（2026-08-21改訂）、EuroSys '27採択",
-    "lineage":"kv-cache-offload-recomputation",
-    "topics":["複数エージェントLLMサービング","KVキャッシュ管理","CPUオフロード","予測先読み","動的メモリ予約","エージェント優先度","関数呼び出し"],
-    "importance":"高。通常のKV管理がトークン列や要求単位の再利用・退避を中心に扱うのに対し、TokenCakeはエージェントグラフと外部関数呼び出しの待機区間を明示的な資源管理信号へ変換する。特にCPU退避を常時行うのではなく、待機時間、GPU圧力、解放ブロックを使える待機要求の有無まで見て判断する点は、階層メモリ型サービングの転送判断に直接関係する。",
-    "hardware_evaluation":"実機GPU評価。Qwen2.5-14BをNVIDIA A100 80GB 1基、Qwen2.5-32BをNVIDIA H20 96GB 1基、Qwen2.5-72BをNVIDIA H20 2基のテンソル並列2で評価する。CPU側KV退避領域として100GBを確保する。",
-    "hardware_details":"単一GPU構成を主評価とし、72BではH20 2基を用いて複数GPU経路も確認する。CPUへのKV転送では4,096キャッシュ済みトークン・256ブロック時にGPU→CPU 32.0ms、CPU→GPU 31.7msを測定する。",
-    "quality_effect":"モデル重みやKV内容を近似せず、KVをCPUとGPU間で移動する方式であるため、基本的に生成品質を速度と交換しない。予測誤差は品質ではなく余分な転送や遅延として現れる。ただしキャッシュ追い出しが起きると再計算が必要となる。",
-    "storage_targets":["GPU上のエージェント別KVキャッシュ","CPU側KVキャッシュ退避領域","GPU予約KVブロック","CPU側接頭辞キャッシュ索引"],
-    "bottlenecks":["外部関数待機中のGPU KV占有","重要エージェントKVの追い出し","再計算による遅延","無差別オフロードによるPCIe転送競合","複数エージェント間のメモリ競合"],
-    "evidence_locations":["§1","§2","§4–§6","§7.1–7.7","Figures 1–16","Tables 1–2","References [1]–[28]"],
-    "source":"https://arxiv.org/abs/2510.18586","sources":["https://arxiv.org/abs/2510.18586","https://arxiv.org/pdf/2510.18586"],
-    "code":null,
-    "implementation":"約9,000行のPythonで実装し、vLLM構成要素を再利用する研究プロトタイプ。OpenAI Chat Completion APIへエージェントグラフ登録を拡張し、関数呼び出し開始・終了通知、専用非同期転送ストリーム、vLLM V1へ再導入したCPUブロックプール、CPU接頭辞キャッシュ索引を実装する。一次資料からTokenCake本体の公式公開コードURLは確認できない。",
-    "last_checked":"2026-09-14",
-    "references":[{"canonical_id":"arXiv:2402.01869","arxiv_id":"2402.01869"},{"canonical_id":"arXiv:2402.14034","arxiv_id":"2402.14034"},{"canonical_id":"arXiv:2308.00352","arxiv_id":"2308.00352"},{"canonical_id":"doi:10.1145/3600006.3613165","doi":"10.1145/3600006.3613165"},{"canonical_id":"arXiv:2506.14851","arxiv_id":"2506.14851"},{"canonical_id":"arXiv:2502.13965","arxiv_id":"2502.13965"},{"canonical_id":"arXiv:2502.08691","arxiv_id":"2502.08691"},{"canonical_id":"arXiv:2407.00079","arxiv_id":"2407.00079"},{"canonical_id":"arXiv:2407.00326","arxiv_id":"2407.00326"},{"canonical_id":"arXiv:2308.08155","arxiv_id":"2308.08155"},{"canonical_id":"arXiv:2412.20138","arxiv_id":"2412.20138"},{"canonical_id":"doi:10.1145/3689031.3696098","doi":"10.1145/3689031.3696098"},{"canonical_id":"arXiv:2401.07339","arxiv_id":"2401.07339"}],
-    "references_checked_at":"2026-09-14","references_source":"arXiv v4一次論文の参考文献節 [1]–[28] を確認し、主要関連文献の正規識別子を構造化","references_total":28
+    "canonical_id": "arXiv:2608.01536",
+    "arxiv_id": "2608.01536",
+    "doi": "10.1145/3831252.3833936",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.AR",
+      "cross_list": []
+    },
+    "title": "Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference",
+    "summary": "単一利用者の大規模言語モデル逐次生成は、各トークンで大きな重み行列を読むためメモリ帯域律速になりやすい。重みだけを疎にする方法はモデル容量を減らせるが、既存GPUでは不規則な疎行列計算の実効速度が伸びにくい。一方、活性値だけを疎にして列を飛ばす方法は計算量を減らせても重み容量を縮めない。Celtyは両者を同時に使う二重疎性を、疎行列×疎ベクトルとして専用最適化する。ソフトウェア側では列圧縮に4ビットの走長符号を組み合わせたRLC-CSC形式、同じ入力活性値を1ワープで共有してゼロ列を丸ごと飛ばす割当、128ビット連続重み読出し、ワープ内接頭和での行位置復元、共有メモリへの部分和集約を組み合わせる。さらに提案Sparse SIMT Coreでは、通常レジスタファイルの一部を部分和蓄積へ転用し、走長復号を3段専用回路へ移す。A5000実機のソフトウェアカーネルは50%二重疎性でcuBLAS比平均1.49倍、70%で2.19倍、最大2.80倍を達成し、Flash-LLM比でも最大2.41倍。専用コアの性能はA5000上で専用機能を理想化した改変カーネルから推定され、cuBLAS比平均1.78倍/2.73倍/4.06倍（30/50/70%）、最大5.27倍を報告する。LLaMA-2-13Bの単一トークンデコードでは50%二重疎性で端から端まで2.28倍高速化する一方、WikiText-2パープレキシティは密FP16の4.9から7.2へ悪化する。",
+    "list_summary": "重み疎性と実行時活性疎性の交差を疎行列×疎ベクトルとして扱い、走長圧縮形式、ワープ割当、レジスタ部分和、専用復号器を共同設計して低バッチLLMデコードを高速化する。",
+    "authors": [
+      "Ruokai Yin",
+      "Priyadarshini Panda"
+    ],
+    "authors_affiliations": "Yale University; University of Southern California",
+    "published": "2026-08-03",
+    "publication": "ICCAD 2026 / arXiv",
+    "publication_type": "Conference paper",
+    "publication_status": "Accepted",
+    "publication_version": "arXiv v2 (2026-09-05)",
+    "lineage": "GPU疎行列カーネル／二重疎LLM推論／SIMTマイクロアーキテクチャ",
+    "topics": [
+      "二重疎性",
+      "疎行列×疎ベクトル",
+      "GPUカーネル",
+      "SIMT",
+      "走長圧縮",
+      "単一利用者デコード"
+    ],
+    "importance": "既存の疎LLM高速化が重み疎性または活性疎性の片方だけを主に利用するのに対し、Celtyは両方の交差部分だけを読み計算するデータ形式・GPUカーネル・マイクロアーキテクチャを一体設計する。特にバッチ1付近のメモリ帯域律速デコードで、疎性を理論FLOPs削減ではなく実GPU速度へ変換する実装研究として重要である。",
+    "hardware_evaluation": "ソフトウェア評価はNVIDIA A5000 Ampere（sm86、24GB GDDR6）1基。提案Sparse SIMT Coreは実シリコンではなく、A5000上の改変カーネルによる性能推定と、走長復号器のRTL合成による面積・電力推定で評価する。",
+    "hardware_details": "CUDA 12.6、GCC 12.2。対象層はLLaMA-2-7Bの4096×4096/4096×11008、LLaMA-2-13Bの5120×5120/5120×13824、OPT-30Bの7168×7168/7168×28672。専用走長復号器は400MHz・32nmでSynopsys Design Compiler合成後、7nmへ尺度換算する。",
+    "quality_effect": "二重疎性は精度無損失ではない。LLaMA-2-13Bの50%二重疎性ではWikiText-2パープレキシティが密FP16の4.9から7.2へ悪化する。一般課題平均でも密68.3%に対しDuoGPT二重疎性59.7%で、速度向上と品質低下の交換がある。",
+    "storage_targets": [
+      "疎LLM重み",
+      "圧縮重み行位置情報",
+      "GPU共有メモリ部分和",
+      "SIMTレジスタ部分和"
+    ],
+    "bottlenecks": [
+      "単一トークンデコードの重みメモリ帯域",
+      "中程度疎性での不規則メモリアクセス",
+      "疎インデックス復元費用",
+      "共有メモリのバンク競合",
+      "グローバル部分和集約"
+    ],
+    "evidence_locations": [
+      "§1 問題設定",
+      "§3 二重疎SpMSpV",
+      "§4 RLC-CSCとGPUカーネル",
+      "§5 Sparse SIMT Core",
+      "§6 実験設定とカーネル結果",
+      "§7 端から端評価・面積・エネルギー",
+      "§8 アブレーション・精度",
+      "参考文献節"
+    ],
+    "source": "https://arxiv.org/abs/2608.01536",
+    "sources": [
+      "https://arxiv.org/abs/2608.01536",
+      "https://arxiv.org/html/2608.01536",
+      "https://arxiv.org/pdf/2608.01536",
+      "https://doi.org/10.1145/3831252.3833936"
+    ],
+    "code": "https://github.com/RuokaiYin/Celty",
+    "implementation": "著者公式コードが公開されている。ソフトウェア版はRLC-CSC形式とCUDAカーネルで実GPU評価される。Sparse SIMT Coreは提案マイクロアーキテクチャであり、性能はA5000上の改変カーネル、復号器はRTL合成で評価され、完全な専用GPUシリコン実装ではない。",
+    "implementation_status": "ソフトウェアカーネル公開・実GPU評価あり、専用SIMTコアは設計・推定評価段階",
+    "evaluation_type": "A5000実GPUカーネル評価＋LLaMA-2端から端デコード評価＋提案SIMTコアの性能/面積/電力推定",
+    "references": [
+      {
+        "canonical_id": "arXiv:2508.10925",
+        "arxiv_id": "2508.10925"
+      },
+      {
+        "canonical_id": "arXiv:2009.03300",
+        "arxiv_id": "2009.03300"
+      },
+      {
+        "canonical_id": "arXiv:2402.00025",
+        "arxiv_id": "2402.00025"
+      },
+      {
+        "canonical_id": "arXiv:2401.05459",
+        "arxiv_id": "2401.05459"
+      },
+      {
+        "canonical_id": "arXiv:2511.13061",
+        "arxiv_id": "2511.13061"
+      },
+      {
+        "canonical_id": "arXiv:2403.03853",
+        "arxiv_id": "2403.03853"
+      },
+      {
+        "canonical_id": "arXiv:1609.07843",
+        "arxiv_id": "1609.07843"
+      },
+      {
+        "canonical_id": "arXiv:2501.17771",
+        "arxiv_id": "2501.17771"
+      },
+      {
+        "canonical_id": "arXiv:2306.11695",
+        "arxiv_id": "2306.11695"
+      },
+      {
+        "canonical_id": "arXiv:2302.13971",
+        "arxiv_id": "2302.13971"
+      },
+      {
+        "canonical_id": "arXiv:2309.10285",
+        "arxiv_id": "2309.10285"
+      },
+      {
+        "canonical_id": "arXiv:2205.01068",
+        "arxiv_id": "2205.01068"
+      },
+      {
+        "canonical_id": "arXiv:2406.10594",
+        "arxiv_id": "2406.10594"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v2参考文献節",
+    "references_total": 43,
+    "last_checked": "2026-09-14"
   },
-  "reservation":{"claim_id":"claim-eb4f7c2f64cc51ea777e0e73","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-7ba91f6f26825e4554f3aa71",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
