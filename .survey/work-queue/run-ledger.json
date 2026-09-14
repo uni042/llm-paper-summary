@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T18:17:58.478784+00:00",
+  "updated_at": "2026-09-14T18:18:47.159132+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T18:17:58.478784+00:00",
+      "last_recorded_at": "2026-09-14T18:18:47.159132+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 67,
+        "research_completed": 68,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 11
       },
       "events": [
-        {
-          "event_id": "34799923794:1",
-          "recorded_at": "2026-09-14T02:39:32.036823+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34799923794",
-            "run_attempt": "1",
-            "source_sha": "47645183c3d3f092575423c973204a45ddd84182"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34800015132:1",
           "recorded_at": "2026-09-14T02:41:05.316984+00:00",
@@ -19597,6 +19583,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34880006452:1",
+          "recorded_at": "2026-09-14T18:18:47.159132+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34880006452",
+            "run_attempt": "1",
+            "source_sha": "7ecf042a4f71fb16142d44e1b99826058c0f4052"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20167,6 +20167,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-825504607247e69d",
+          "type": "research",
+          "canonical_id": "arXiv:2607.13093",
+          "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20313,7 +20321,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 531,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }

@@ -8,17 +8,13 @@
   "source_url": "https://arxiv.org/abs/2607.13093",
   "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md",
   "selection_reason": "端末側に入力前処理、埋め込み、KVキャッシュ認可、投機的デコード、低次元LM-head計算を残し、クラウド側に重いdecoder推論とKV管理・検証を置くedge-cloud協調推論。CPU/GPU/組込み端末向け実行経路を持ち、送信テンソルとlogitsを量子化・暗号化する。baseline split inference比でper-token latency最大46.1%削減、downlink payload最大67.4%削減を報告しており、端末/クラウド分割とKV制御の隣接系統として有望。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T09:05:24+00:00",
   "artifact_transport": "structured_record_v10",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: problem_method.components[2].description is too short",
-  "validation_errors": [
-    "problem_method.components[2].description is too short"
-  ],
-  "last_validation_failed_at": "2026-09-14T18:16:45+00:00"
+  "completed_at": "2026-09-14T18:18:43+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-62f7f7eb017737b776892798.json"
 }
