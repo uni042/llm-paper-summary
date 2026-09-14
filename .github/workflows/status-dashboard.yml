@@ -6,10 +6,12 @@ on:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/append_research_throughput_status.py'
+      - '.survey/scripts/refine_status_observability.py'
       - '.survey/scripts/ensure_dashboard_history.py'
       - '.survey/scripts/status_publish_gate.py'
       - '.survey/tests/test_status_dashboard.py'
       - '.survey/tests/test_research_throughput_status.py'
+      - '.survey/tests/test_status_observability.py'
       - '.survey/tests/test_dashboard_history.py'
       - '.survey/tests/test_parallel_routing_and_dashboard_gate.py'
       - '.survey/docs/survey-workflow/discovery-continuation-policy.md'
@@ -20,10 +22,12 @@ on:
       - '.survey/work-queue/**'
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/append_research_throughput_status.py'
+      - '.survey/scripts/refine_status_observability.py'
       - '.survey/scripts/ensure_dashboard_history.py'
       - '.survey/scripts/status_publish_gate.py'
       - '.survey/tests/test_status_dashboard.py'
       - '.survey/tests/test_research_throughput_status.py'
+      - '.survey/tests/test_status_observability.py'
       - '.survey/tests/test_dashboard_history.py'
       - '.survey/tests/test_parallel_routing_and_dashboard_gate.py'
       - '.github/workflows/status-dashboard.yml'
@@ -45,11 +49,14 @@ jobs:
         with:
           python-version: '3.12'
       - name: Dashboard regression tests
-        run: python -m unittest discover -s .survey/tests -p 'test_*dashboard*.py'
+        run: |
+          python -m unittest discover -s .survey/tests -p 'test_*dashboard*.py'
+          python -m unittest discover -s .survey/tests -p 'test_status_observability.py'
       - name: Render dashboard in check mode
         run: |
           python .survey/scripts/build_status_dashboard.py --output /tmp/STATUS.md
           python .survey/scripts/append_research_throughput_status.py --repo-root . --status /tmp/STATUS.md
+          python .survey/scripts/refine_status_observability.py --repo-root . --status /tmp/STATUS.md
 
   publish:
     if: >-
@@ -98,6 +105,7 @@ jobs:
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
             python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
+            python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
             git add STATUS.md .survey/work-queue/run-ledger.json .survey/work-queue/discovery-state.json
             if git diff --cached --quiet; then
               echo 'Dashboard already current.'

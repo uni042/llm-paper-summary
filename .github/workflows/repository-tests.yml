@@ -70,8 +70,16 @@ jobs:
             --source-commit "$GITHUB_SHA"
 
       - name: Run current repository structural check
+        shell: bash
         run: |
+          set +e
           python .survey/scripts/check_repository.py \
             --root . \
             --inventory /tmp/repo-inventory.json \
             --report /tmp/consistency.json
+          rc=$?
+          if [ "$rc" -ne 0 ]; then
+            echo 'Repository structural findings:'
+            cat /tmp/consistency.json
+            exit "$rc"
+          fi

@@ -41,7 +41,8 @@ jobs:
             .survey/scripts/refresh_queue_snapshot.py \
             .survey/scripts/ensure_dashboard_history.py \
             .survey/scripts/build_status_dashboard.py \
-            .survey/scripts/append_research_throughput_status.py
+            .survey/scripts/append_research_throughput_status.py \
+            .survey/scripts/refine_status_observability.py
 
       - name: Allocate claims, reserve record banks, and publish lightweight snapshot
         shell: bash
@@ -59,6 +60,7 @@ jobs:
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
             python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
             python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
+            python .survey/scripts/refine_status_observability.py --repo-root . --status STATUS.md
 
             git add \
               STATUS.md \
