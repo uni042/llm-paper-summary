@@ -1,18 +1,45 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-94a22fd70b5ff22c49de8779",
+  "job_id": "job-research-ad7e8d527bf159c7",
   "slot": "evaluation",
-  "attempt_id": "attempt-b56259f8a19e558884aa1e18",
-  "job_id": "job-research-abd22d64f0da4bcf",
   "data": {
-    "hardware": "独自ハードウェア実験なし。既存研究の評価基盤を分類し、スマートフォン、Raspberry Pi、NVIDIA Jetson Orin Nano/AGX、GPU/アクセラレータ等を実機例として挙げる。",
-    "software": "評価基盤としてgem5、Timeloop、NVSim、TVM、PyTorch profiler、MLPerf、ns-3、Mininet、llama.cpp、TensorRT-LLM、vLLM、ONNX Runtime、Core ML、Qualcomm AI Engine Directを整理する。",
-    "methodology": "既存研究を、システム構成、LLM固有/エッジ固有課題、モデル圧縮、デコード機構、配置、計算スケジューリング、メモリ管理、通信効率化、共同資源最適化、評価指標/プラットフォームの軸で比較・体系化する。個別研究の数値は代表例として引用し、論文自身の統一再実験ではない。",
-    "scope": "ネットワークエッジでのLLM推論全般を対象とする。単一端末のみの推論やGPUデータセンターのみのサービングより、端末・エッジ・クラウド間の通信と資源配分を含む構成を重視する。",
-    "workloads": ["短文/長文LLM生成","長文脈推論","複数利用者オンラインサービング","マルチモーダル/複数モデル","端末-エッジ-クラウド分割推論"],
-    "baselines": ["クラウド集中型LLM推論","単一端末LLM推論","従来DNNエッジ推論","単一資源のみを最適化する方式"],
-    "metrics": ["先頭トークンまでの時間（TTFT）","1トークン当たり時間（TPOT）","エンドツーエンド遅延","トークン/秒（TPS）","要求/秒（RPS）","有効スループット（goodput）","トークン/ジュール・要求/ジュール","モデル/KV/ピークメモリ","タスク精度・幻覚・バイアス/有害性"],
-    "reproducibility": "論文は統一ベンチマークを新規公開するのではなく、モデル、データセット、指標、シミュレータ、ネットワークエミュレータ、実機/ランタイムの候補を整理する。異なる先行研究間の設定差が大きいため、引用された高速化倍率を直接横並び比較する際には注意が必要。"
-  },
-  "reservation": {"claim_id":"claim-b56259f8a19e558884aa1e18","worker_id":"scheduled-chat-paper-20260915T0630JST","worker_kind":"scheduled_chat"}
+    "hardware": "Samsung 28nm FDSOI向けRTL合成。800MHz、1.0V、A8W4、8K MAC、512KB共有SRAM、8クラスタ、LPDDR4X 16GB/s。総投影面積9.3mm²、EMAを除くピーク電力1.52W、ピーク13.1 TOPS。",
+    "software": "Synopsys Design Compiler/PrimeTimeで合成・電力評価し、提案モジュールを行動モデル化した命令レベル専用シミュレータで最終アクセスパターン、命令列、DRAMトラフィックから遅延・エネルギーを積算。公開PyTorch成果物はLinux/Python 3.13、RTX A6000で機能確認可能。",
+    "methodology": "Granite-1B-A400M、OLMoE-1B-7B、DeepSeek-V2-Lite、Qwen3-30B-A3BをEAGLE-3と組み合わせ、64候補・最大深さ6で単一バッチ評価。比較対象はMoE-Pruner、EdgeMoE、SMoLPUで、28nm、800MHz、外部帯域16GB/sへ正規化する。MT-Bench、GSM8K、MMLU、HellaSwag、ARC-Challenge、WinoGrande、PIQAで品質と採択長を測り、プリフィル再利用、チャネル統合、計算補正を段階的に有効化する除去評価も行う。",
+    "scope": "実シリコンではなく合成とシミュレーションが主評価。外部メモリはLPDDR4X 16GB/s固定、単一バッチのエッジ推論を対象とし、連続バッチ、多ユーザー、熱スロットリング、実端末OS干渉、より高速なLPDDR5X/HBM環境は直接評価しない。",
+    "workloads": [
+      "Granite-1B-A400M",
+      "OLMoE-1B-7B",
+      "DeepSeek-V2-Lite",
+      "Qwen3-30B-A3B",
+      "MT-Bench",
+      "GSM8K",
+      "MMLU",
+      "HellaSwag",
+      "ARC-Challenge",
+      "WinoGrande",
+      "PIQA"
+    ],
+    "baselines": [
+      "MoE+EAGLE-3無最適化",
+      "SMoLPU",
+      "EdgeMoE",
+      "MoE-Pruner",
+      "自己回帰版のEdgeMoE/MoE-Pruner"
+    ],
+    "metrics": [
+      "端から端までの遅延",
+      "TTFT",
+      "TPOT",
+      "総エネルギー",
+      "外部メモリアクセス量",
+      "投機採択長",
+      "7ベンチマーク品質",
+      "面積",
+      "電力"
+    ],
+    "reproducibility": "モデル・ハードウェア条件・比較正規化・校正データ・主要ハイパーパラメータ・公開ソフトウェア成果物が明記される。Zenodo成果物は公開だがbf16のソフトウェア実装であり、論文のA8W4専用ハードウェア性能値をそのまま再現するRTL/シミュレータ公開範囲は付録だけでは完全には確認できない。"
+  }
 }
