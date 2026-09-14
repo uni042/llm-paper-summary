@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-b398f5917a1eff0518b4bce7",
   "job_id": "job-research-59a8ee8393fd93ee",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b398f5917a1eff0518b4bce7",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "二つの実験キャンペーンは実機の複数データセンタを使うが、規模は6および9レプリカであり、数百・数千GPUへ拡大した際の中央制御面の処理量やネットワーク費は測定していない。試験2は単一のLlama 3.1 70B AWQ INT4を各拠点で同種Blackwell GPUに載せ、本番形状を模した合成負荷を用いるため、複数モデル・実ユーザートレース・拠点間GPU世代混在を同時に扱う一般性は未確認である。コストと電力、複数地域同時障害、KV接頭辞局所性との相互作用も評価外である。圧力得点の重みは固定されており、別環境では再校正が必要になる可能性がある。",
+    "differences": "NVIDIA Dynamo、vLLM Router、SGLang router、llm-dは主に単一クラスタ内部でKV局所性や待ち行列を見てレプリカを選ぶのに対し、Solyxはその上位で地理的に離れたクラスタ間の送信先を決める。SkyWalkerは地域間負荷移動とKV局所性を扱うが、同種レプリカを前提とした模擬地域評価で、GPUハードウェア遠隔測定や連続WAN揺らぎを入力へ持たない。HelixやHexGen系は異種GPU上のモデル配置・分割を最適化するが、静的またはクラスタ内の配置問題が中心で、要求ごとの跨拠点オンラインルーティングとは役割が異なる。SolyxはEnvoyをデータ面として維持し、DCGM・vLLM・RTT/揺らぎを上位制御面へ統合する運用層である。",
+    "implementation_status": "米国3データセンタの二つの物理キャンペーンで実稼働する制御面を評価しており、単なるシミュレータや解析モデルではない。各GPUのcellagent、DCGM exporter、Prometheus経由vLLM指標、能動RTT/揺らぎ測定、gRPC心拍、圧力得点器、Envoy xDS重み配布、レプリカ状態機械まで実装されている。論文本文に著者公式コード公開URLは確認できない。",
+    "research_positioning": "リポジトリではLLMサービングのスケジューリング・分離系統に置く。従来の単一クラスタ内ルーティングを置換するより、複数拠点を束ねる上位階層として補完する研究である。GPU遠隔測定を要求ルーティングへ直接使い、アプリケーションSLO悪化より前に熱・PCIe競合を検出して要求を退避する点は、ハードウェア状態をオンライン制御へ結ぶ特徴が強い。将来的にKV接頭辞局所性を圧力得点へ組み込む課題も明示されており、KV認識ルータと地理分散圧力ルータを二層化する方向へ接続できる。"
+  },
+  "reservation": {"claim_id":"claim-b398f5917a1eff0518b4bce7","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
