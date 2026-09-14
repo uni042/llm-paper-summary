@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-90b1de190887f5039df1730a",
   "job_id": "job-research-337f218e5e352539",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-90b1de190887f5039df1730a",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "overview": "SPEED-Benchは、投機的復号の順位が入力分布とサービング条件で大きく変わることを示す。Llama 3.3 70B、バッチ32、ドラフト長3では温度0でEAGLE3 1.90倍、外部ドラフタ1.60倍、N-Gram 0.88倍だが、温度1では1.75倍、1.15倍、0.85倍へ変化する。GPT-OSS 120Bではモデル内MTPが温度0で1.45倍とEAGLE3 1.34倍を上回る。さらにランダム・合成入力は実データより投機的復号処理量を平均23%過大評価し、バッチ増加時には最適ドラフト長が短くなる。したがって受理率や単一バッチの速度倍率だけでは実運用性能を代表できない。",
+    "key_results": [
+      {"metric":"Llama 3.3 70B平均高速化倍率","value":"EAGLE3 1.90×、Vanilla 1.60×、N-Gram 0.88×","baseline":"通常自己回帰デコード 1.0×","condition":"batch=32、draft length=3、temperature=0","interpretation":"学習ドラフタは明確な利得を示す一方、N-Gramはこの条件では候補生成・検証費用を回収できず遅くなる。"},
+      {"metric":"GPT-OSS 120B平均高速化倍率","value":"MTP 1.45×、EAGLE3 1.34×、N-Gram 0.29×","baseline":"通常デコード 1.0×","condition":"batch=32、draft length=3、temperature=0","interpretation":"モデル内MTPは外部ドラフタとの通信・別モデル実行がなく、GPT-OSSではEAGLE3より高い平均値を示す。"},
+      {"metric":"合成入力の処理量バイアス","value":"実SPEED-Bench入力より平均23%過大評価","baseline":"自然言語Throughput split","condition":"GPT-OSS 120B + EAGLE3を含む実行基盤比較","interpretation":"ランダム・合成トークンは生成エントロピーや反復構造が本番入力と異なり、投機的復号の受理・計算特性を代表しない。"},
+      {"metric":"意味多様性","value":"SpecBenchより平均類似度40%低下、多言語で83%低下","baseline":"SpecBench","condition":"Qualitative split selection","interpretation":"意味的に重複した問題を減らすことで、特定テンプレートへのドラフト適合がベンチマーク全体を支配するのを防ぐ。"},
+      {"metric":"多言語での語彙枝刈り欠落","value":"標的トークンの約22%が枝刈りドラフト語彙に存在しない","baseline":"完全語彙EAGLE3","condition":"multilingual workloads","interpretation":"ドラフトモデルの語彙削減は計算を減らす一方、多言語・RAG・要約で候補生成能力を直接制約し、受理率低下の原因になる。"},
+      {"metric":"最適ドラフト長","value":"低batchでは長いドラフトが有利、高batchではdraft length=1が最適になる場合あり","baseline":"固定ドラフト長","condition":"batch-size sweep","interpretation":"低並列では標的モデルのメモリ帯域待ちを一回の検証で多く前進して隠せるが、高並列では検証が計算律速化し、余分なドラフト・棄却計算が逆効果になる。"}
+    ],
+    "negative_results": "N-Gramは複数の主評価で1.0倍未満となり、投機的復号を入れるだけで速くなるわけではない。EAGLE3は推論入力長がドラフト学習時の長さを越えると受理精度が急低下し、長文脈へ無条件に一般化しない。語彙枝刈りも多言語などで標的語彙を欠落させる。ランダム入力ではMoEの一部層で20〜30%のエキスパートが全く活性化しない例があり、実モデルのルーティング負荷も再現できない。高並列ではPython GILによりベンチマーククライアント自身がボトルネックになり得る。",
+    "interpretation": "投機的復号の速度は『受理されるトークン数』と『その候補を生成・検証する費用』の比で決まるため、受理率が同じでもバッチ・カーネル融合・モデルサイズで結果が変わる。低エントロピーのコード・数学は長い連続受理が起きやすく、高エントロピーのロールプレイ等では利得が縮む。TensorRT-LLMの統合CUDAグラフはドラフトと検証間のホスト往復を減らしピーク処理量に有利だが、vLLMの複数エンジン構成は柔軟性を持つ。このためベンチマークはアルゴリズム順位ではなく条件付き性能曲線として読むべきである。",
+    "quality_impact": "SPEED-Bench自体は生成結果を近似する手法ではない。評価対象の投機的復号は標的モデルの検証により分布を保つ方式を中心とするが、ドラフト近似品質は受理率・受理長として性能へ現れる。ベンチマークは意味カテゴリとエントロピーを広げることで、特定領域だけで高いドラフト適合を品質一般化と誤認するのを防ぐ。"
   }
 }
