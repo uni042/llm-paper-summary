@@ -1,60 +1,12 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-6db09bc58e9abef5d5642af2",
-  "job_id": "job-research-075303825b007242",
   "slot": "evaluation",
-  "data": {
-    "hardware": [
-      "NVIDIA A100-80GB / A100-SXM4-80GB（主評価）",
-      "NVIDIA L40S（発見瞬間評価・公開アーカイブ）",
-      "NVIDIA H100（公開アーカイブ）"
-    ],
-    "software": [
-      "Triton 3.3.1",
-      "CUDA/nvcc",
-      "最大報酬木探索（PUCT）",
-      "公開gpu-forecasters実装"
-    ],
-    "model": [
-      "Gemini-3 Flash",
-      "GPT-OSS-120B",
-      "GPT-OSS-20B",
-      "DeepSeek-V4",
-      "強化学習済みGPT-OSS-20B"
-    ],
-    "datasets": [
-      "GPU Mode競技6課題・480 Tritonカーネル",
-      "12,388個のLLM生成GPUカーネル公開アーカイブ・118問題",
-      "1,347親子カーネル対・27探索・21問題"
-    ],
-    "baselines": [
-      "全候補を実GPU計測する同一GPU予算の木探索",
-      "未学習GPT-OSS-20B代理",
-      "正解報酬のみRL",
-      "CRPS校正RL",
-      "複数既製LLM代理"
-    ],
-    "correctness": "実GPU評価では候補をコンパイルし、固定テスト入力で参照出力と照合した後に速度測定する。代理は主に速度予測を担当し、最終的なGPU計測対象ではこの正当性検査を維持する。保持評価は候補集合を実測済みなので予測順位と真の高速化を直接比較できる。",
-    "settings": [
-      {
-        "name": "保持代理評価",
-        "description": "GPU ModeのTriMul、cross-entropy、2種Gated DeltaNet forward、GDN W/U recompute、FP8 quantizationの6課題。各速度帯最大10件で合計480 Tritonカーネル。全実測はA100。各代理を温度1.0で3回サンプル。"
-      },
-      {
-        "name": "固定計測予算の探索",
-        "description": "Gemini-3 Flashを変異生成器、Brier学習済みGPT-OSS-20Bを代理とする。代理ありは親あたり候補を4倍生成し、上位1/4だけGPU計測して基準と同じGPU実測数/ステップにそろえる。"
-      },
-      {
-        "name": "評価待ち時間",
-        "description": "単一A100上でTriton実測は平均20.16秒（1,515件）、CUDA実測は152.55秒（6,446件）、GPT-OSS-20B代理は14.69秒。実測は速度干渉を避け1件同時、代理は複数予測を並行処理できる。"
-      }
-    ],
-    "methodology": "速度回収率、期待校正誤差、速度予測誤差を測る。速度回収率は代理順位上位1/5/10/25/50%だけを実測した場合に、その集合の最速候補が全候補中の最速速度の何%を回収するかの平均。別途、同じGPU実測予算の実探索で最良速度の推移を比較する。",
-    "scope": "評価の中心はGPUカーネル探索の測定費用削減であり、LLM推論ランタイムそのもののカーネル高速化手法ではない。保持評価はA100中心で、分布外GPUや新しい命令セットへの一般化は主要結果に含まれない。"
-  },
+  "attempt_id": "attempt-a66b01e805ef0e34139b0e59",
+  "job_id": "job-research-075303825b007242",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-6db09bc58e9abef5d5642af2",
+    "claim_id": "claim-a66b01e805ef0e34139b0e59",
     "worker_id": "scheduled-chat-paper-20260915T0630JST",
     "worker_kind": "scheduled_chat"
   }
