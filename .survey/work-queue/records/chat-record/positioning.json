@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-ddaa9f60a004a664b188d7a2",
   "job_id": "job-research-3ae94af47a718bbb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddaa9f60a004a664b188d7a2",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主評価クラスタの詳細なGPU型式・台数が本文テキストでは明示されず、公式実装公開URLも確認できないため完全再現性に制約がある。制御は現在の計算・メモリ利用率に反応する方式で履歴予測を使わず、急変前の先回りはできない。異種アクセラレータや通信ファブリックを十分考慮した最適化もなく、単一地域クラスタに限定され、WAN越しの共有KVは未対応である。",
+    "differences": "DistServeはプリフィルとデコードを別GPUへ分離するが資源比率は基本的に構成時に決まり、BanaServeは実行中に層の重み・KV状態や注意ヘッドKVを移してその境界を動かす。Mooncake/MemServeはKVキャッシュ中心の分離メモリを扱う一方、BanaServeは共有CPU/SSD KVストアをルーティング局所性の解除に使い、さらに計算モジュールの移動まで統合する。Llumnix等の負荷分散は要求・インスタンスを移すが、BanaServeはモデル内部の層・注意単位へ粒度を下げて資源不均衡を補正する。",
+    "implementation_status": "BanaServeは実装され、vLLMおよびDistServeを比較対象に13Bモデルで実機評価されている。著者所属にはAlibaba Group AIOS Teamが含まれ、同チームが大規模実験基盤を提供したと本文に明記される。ただし確認時点で著者公式の公開コードリポジトリURLはarXiv本文・ページに記載されていない。",
+    "research_positioning": "分離LLMサービング、動的負荷分散、KVキャッシュ階層化を横断する研究。特にCPU/SSD共有KVストアを単なる容量拡張ではなく『キャッシュ配置からルータを自由にする装置』として使い、その上でGPU間の層・注意ヘッド移動により計算資源を再配置する点が特徴である。SSD活用の観点でも、共有ストアが負荷分散を可能にする制御面の価値を示す。",
+    "relation_to_existing_repository": "リポジトリのプリフィル／デコード分離・サービングスケジューリング系統に直接属し、同時にCPU/SSDへのKV配置と転送重畳を扱うため階層メモリ／オフロード系統との関連が強い。既存方式との差分は、固定P/D比率を動的に変えるために状態移動を粗粒度の層と細粒度の注意で使い分け、Global KV Cache Storeによって接頭辞キャッシュ認識ルーティング自体を不要にする点である。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-ddaa9f60a004a664b188d7a2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
