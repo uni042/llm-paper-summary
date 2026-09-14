@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-dc445674c7fed3edac1f50a4",
-  "job_id": "job-research-2070373a31124502",
-  "data": {
-    "limitations": "各構成を36時間ずつ1回だけ実行しており、同一条件を独立反復した際のrun間ばらつきは測れていない。2×2要因比較ではvLLM V0/V1の世代差にソフトウェアバージョン差も重なるため、観測差をエンジン設計だけへ厳密に帰属できない。入力はarXiv由来の合成定常Poisson負荷で、実運用のバースト、昼夜変動、会話接頭辞再利用、障害復旧などを再現しない。ハードウェアはL40S、モデルはQwen2.5-7B-Instructに限られ、より大きなモデル、MoE、他GPU・CPUメモリ構成への一般化は未検証である。36時間より長い期間でリークが線形継続するか、飽和するか、実障害へ至るかも未確定で、具体的なコード上のリーク箇所は特定していない。",
-    "differences": "vLLM、PagedAttention、Jenga、SYMPHONY、KunServeなど既存のLLMサービング研究は、KVキャッシュ断片化や瞬時メモリ圧力を性能・容量管理問題として扱う。本研究は同じ資源を『時間とともに蓄積する変化』として観測し、短時間ピーク性能では見えない運用信頼性を評価する点が異なる。従来のソフトウェア老朽化研究はCPU中心の成熟スタックを対象としてきたのに対し、PythonホストとCUDAデバイスが結合し、要求コストが大幅に変動するLLMサーバへ自己相関補正・多重検定補正を含む方法論を移植する。",
-    "implementation_status": "著者はvLLM、NVIDIA Triton、PyTorch/HuggingFaceを用いた実機216時間キャンペーンと監視・解析パイプラインを実装しているため、概念提案ではなく実証研究である。一次資料から研究専用コードやデータの公式公開URLは確認できない。",
-    "research_positioning": "LLM推論基盤の高速化・メモリ管理系統に対し、長時間信頼性とソフトウェア若返り（software rejuvenation）の観点を追加する横断的な実証研究である。新しいスケジューラやキャッシュ機構を提案するのではなく、既存ランタイムを長時間計測して、どのデプロイ層で老朽化が現れるかを定量化する。今後の実運用では、性能ベンチマークだけでなくメモリ傾向、再起動周期、バージョン更新前後の老朽化回帰試験を設計する根拠になる。",
-    "relation_to_existing_repository": "リポジトリの`11-llm-serving-scheduling-disaggregation`やメモリ管理系統では、通常はTTFT、TPOT、スループット、KV容量、通信費などを評価する。本論文はそれらの方式を長期運転した際に、ホストプロセス資源が時間依存で増える可能性を示し、短時間評価に『36時間以上の資源ドリフト監査』という補完軸を与える。特にvLLM V0/V1とTritonの組合せ差は、フレームワーク更新監視や長期回帰評価に直接関係する。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-dc445674c7fed3edac1f50a4", "worker_id": "scheduled-chat-llm-survey-20260915T0012JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-8e9ccce76da09af7dd7d6b3a",
+  "job_id": "job-research-c6ac42b8bcec8aab",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8e9ccce76da09af7dd7d6b3a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0012JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
