@@ -334,9 +334,11 @@ def _release_worker_checkpointed_claims(
         current = claims.get(job_id)
         if not current or not current.get("active"):
             continue
-        if (
-            current.get("worker_id") != request["worker_id"]
-            or current.get("worker_kind") != request["worker_kind"]
+        if not _same_worker_lineage(
+            current.get("worker_id"),
+            current.get("worker_kind"),
+            request["worker_id"],
+            request["worker_kind"],
         ):
             continue
         claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
@@ -350,6 +352,32 @@ def _release_worker_checkpointed_claims(
     return released
 
 
+NORMAL_SCHEDULED_CHAT_RUN_RE = re.compile(
+    r"^scheduled-chat-llm-survey(?:-\d{8}T\d{4}JST)?$", re.IGNORECASE
+)
+
+
+def _same_worker_lineage(
+    current_worker_id: Any,
+    current_worker_kind: Any,
+    request_worker_id: Any,
+    request_worker_kind: Any,
+) -> bool:
+    """Match one logical worker across run-specific Scheduled Chat ids."""
+    if current_worker_kind != request_worker_kind:
+        return False
+    current_id = str(current_worker_id or "")
+    request_id = str(request_worker_id or "")
+    if current_id == request_id:
+        return True
+    if current_worker_kind != "scheduled_chat":
+        return False
+    return bool(
+        NORMAL_SCHEDULED_CHAT_RUN_RE.fullmatch(current_id)
+        and NORMAL_SCHEDULED_CHAT_RUN_RE.fullmatch(request_id)
+    )
+
+
 def _worker_has_active_claim(
     claims: dict[str, dict[str, Any]],
     *,
@@ -358,8 +386,12 @@ def _worker_has_active_claim(
 ) -> bool:
     return any(
         current.get("active")
-        and current.get("worker_id") == worker_id
-        and current.get("worker_kind") == worker_kind
+        and _same_worker_lineage(
+            current.get("worker_id"),
+            current.get("worker_kind"),
+            worker_id,
+            worker_kind,
+        )
         for current in claims.values()
     )
 
@@ -533,8 +565,12 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             for job_id, current in claims.items():
                 if not (
                     current.get("active")
-                    and current.get("worker_id") == request["worker_id"]
-                    and current.get("worker_kind") == request["worker_kind"]
+                    and _same_worker_lineage(
+                        current.get("worker_id"),
+                        current.get("worker_kind"),
+                        request["worker_id"],
+                        request["worker_kind"],
+                    )
                     and job_id in by_id
                 ):
                     continue
