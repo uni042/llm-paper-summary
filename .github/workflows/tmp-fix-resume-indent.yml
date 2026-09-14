@@ -20,57 +20,21 @@ jobs:
           fetch-depth: 0
       - name: Fix indentation and verify syntax
         shell: bash
+        env:
+          REPLACEMENT_B64: 'ICAgICAgICBpZiByZXF1ZXN0WyJ3b3JrZXJfa2luZCJdID09ICJzY2hlZHVsZWRfY2hhdCIgYW5kIF93b3JrZXJfaGFzX2FjdGl2ZV9jbGFpbSgKICAgICAgICAgICAgY2xhaW1zLAogICAgICAgICAgICB3b3JrZXJfaWQ9cmVxdWVzdFsid29ya2VyX2lkIl0sCiAgICAgICAgICAgIHdvcmtlcl9raW5kPXJlcXVlc3RbIndvcmtlcl9raW5kIl0sCiAgICAgICAgKToKICAgICAgICAgICAgcmVzdW1lZCA9IFtdCiAgICAgICAgICAgIG5ld19leHBpcnkgPSBfaXNvKG5vdyArIGR0LnRpbWVkZWx0YShzZWNvbmRzPXJlcXVlc3RbImxlYXNlX3NlY29uZHMiXSkpCiAgICAgICAgICAgIGZvciBqb2JfaWQsIGN1cnJlbnQgaW4gY2xhaW1zLml0ZW1zKCk6CiAgICAgICAgICAgICAgICBpZiBub3QgKAogICAgICAgICAgICAgICAgICAgIGN1cnJlbnQuZ2V0KCJhY3RpdmUiKQogICAgICAgICAgICAgICAgICAgIGFuZCBjdXJyZW50LmdldCgid29ya2VyX2lkIikgPT0gcmVxdWVzdFsid29ya2VyX2lkIl0KICAgICAgICAgICAgICAgICAgICBhbmQgY3VycmVudC5nZXQoIndvcmtlcl9raW5kIikgPT0gcmVxdWVzdFsid29ya2VyX2tpbmQiXQogICAgICAgICAgICAgICAgICAgIGFuZCBqb2JfaWQgaW4gYnlfaWQKICAgICAgICAgICAgICAgICk6CiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGNsYWltID0ge2tleTogdmFsdWUgZm9yIGtleSwgdmFsdWUgaW4gY3VycmVudC5pdGVtcygpIGlmIGtleSBub3QgaW4geyJhY3RpdmUiLCAiZXhwaXJlZCJ9fQogICAgICAgICAgICAgICAgY2xhaW1bImV4cGlyZXNfYXQiXSA9IG5ld19leHBpcnkKICAgICAgICAgICAgICAgIGNsYWltWyJoZWFydGJlYXRfYXQiXSA9IF9pc28obm93KQogICAgICAgICAgICAgICAgX3dyaXRlKGNsYWltc19yb290IC8gZiJ7am9iX2lkfS5qc29uIiwgY2xhaW0pCiAgICAgICAgICAgICAgICBjbGFpbXNbam9iX2lkXSA9IGRpY3QoY2xhaW0sIGFjdGl2ZT1UcnVlLCBleHBpcmVkPUZhbHNlKQogICAgICAgICAgICAgICAgcmVzdW1lZC5hcHBlbmQoX2Fzc2lnbm1lbnQoYnlfaWRbam9iX2lkXSwgY2xhaW0pKQoKICAgICAgICAgICAgaWYgcmVzdW1lZDoKICAgICAgICAgICAgICAgIF93cml0ZShyZXN1bHRfcGF0aCwgewogICAgICAgICAgICAgICAgICAgICJzY2hlbWFfdmVyc2lvbiI6IDEsICJ3b3JrZmxvd192ZXJzaW9uIjogMTAsICJyZXF1ZXN0X2lkIjogcmVxdWVzdFsicmVxdWVzdF9pZCJdLAogICAgICAgICAgICAgICAgICAgICJ3b3JrZXJfaWQiOiByZXF1ZXN0WyJ3b3JrZXJfaWQiXSwgIndvcmtlcl9raW5kIjogcmVxdWVzdFsid29ya2VyX2tpbmQiXSwKICAgICAgICAgICAgICAgICAgICAib2siOiBUcnVlLCAiYXNzaWdubWVudHMiOiByZXN1bWVkLCAicHJvY2Vzc2VkX2F0IjogX2lzbyhub3cpLAogICAgICAgICAgICAgICAgICAgICJyZWFzb24iOiAicmVzdW1lZCBhY3RpdmUgdW5zdWJtaXR0ZWQgY2xhaW0iLAogICAgICAgICAgICAgICAgICAgICJjaGVja3BvaW50X3JlbGVhc2VkIjogcmVsZWFzZWRfbm93LAogICAgICAgICAgICAgICAgfSkKICAgICAgICAgICAgICAgIGFzc2lnbmVkX3JlY292ZXJlZCArPSBsZW4ocmVzdW1lZCkKICAgICAgICAgICAgICAgIHJlbmV3ZWQgKz0gbGVuKHJlc3VtZWQpCiAgICAgICAgICAgICAgICBwcm9jZXNzZWQgKz0gMQogICAgICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgY2hlY2twb2ludGVkX2lkcyA9IHNldChfY2hlY2twb2ludF9tYXAocmVxdWVzdCkp'
         run: |
           python - <<'PY'
           from pathlib import Path
+          import base64
+          import os
           import re
-          import textwrap
-
           path = Path('.survey/scripts/claim_worker.py')
           text = path.read_text(encoding='utf-8')
           pattern = re.compile(
-              r'        if request\["worker_kind"\] == "scheduled_chat" and _worker_has_active_claim\(\n'
-              r'.*?'
-              r'checkpointed_ids = set\(_checkpoint_map\(request\)\)',
+              r'        if request\["worker_kind"\] == "scheduled_chat" and _worker_has_active_claim\(\n.*?checkpointed_ids = set\(_checkpoint_map\(request\)\)',
               re.DOTALL,
           )
-          body = '''if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
-    claims,
-    worker_id=request["worker_id"],
-    worker_kind=request["worker_kind"],
-):
-    resumed = []
-    new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
-    for job_id, current in claims.items():
-        if not (
-            current.get("active")
-            and current.get("worker_id") == request["worker_id"]
-            and current.get("worker_kind") == request["worker_kind"]
-            and job_id in by_id
-        ):
-            continue
-        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
-        claim["expires_at"] = new_expiry
-        claim["heartbeat_at"] = _iso(now)
-        _write(claims_root / f"{job_id}.json", claim)
-        claims[job_id] = dict(claim, active=True, expired=False)
-        resumed.append(_assignment(by_id[job_id], claim))
-
-    if resumed:
-        _write(result_path, {
-            "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
-            "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
-            "ok": True, "assignments": resumed, "processed_at": _iso(now),
-            "reason": "resumed active unsubmitted claim",
-            "checkpoint_released": released_now,
-        })
-        assigned_recovered += len(resumed)
-        renewed += len(resumed)
-        processed += 1
-        continue
-
-checkpointed_ids = set(_checkpoint_map(request))'''
-          replacement = textwrap.indent(body, '        ')
+          replacement = base64.b64decode(os.environ['REPLACEMENT_B64']).decode('utf-8')
           patched, count = pattern.subn(replacement, text, count=1)
           if count != 1:
               raise SystemExit(f'target block matches={count}')
