@@ -2,18 +2,33 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-874bf6fd581295f5dd4ca3a1",
+  "attempt_id": "attempt-8c7e08c9a775139662598898",
   "job_id": "job-research-b045bf747f93dbbe",
   "data": {
     "canonical_id": "arXiv:2603.18897",
     "arxiv_id": "2603.18897",
     "doi": "10.48550/arXiv.2603.18897",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.DC","cross_list":["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving",
     "summary": "道具を使う大規模言語モデル型エージェントでは、言語モデル生成と外部道具実行が直列化されるため、道具待ちがタスク全体の重要経路へ露出する。PASTEは過去の作業履歴から反復する道具系列と引数依存を学び、次に実行される具体的な道具呼出しを言語モデル生成中に先行実行する。結果は正式な呼出しと一致するまで隔離し、一致時だけ再利用する。さらに道具処理を早めた結果、多数の作業が画像処理装置側へ同時帰還して混雑する問題を、言語モデル負荷と道具側の待ち時間削減価値を共同で見るスケジューラにより抑える。32基のA100を用いた実機評価で平均タスク完了時間を最大43.5%、末尾遅延を最大55.4%削減し、観測される道具待ちも最大55.2%削減する。",
     "list_summary": "反復する道具系列と引数依存から次の具体的な道具呼出しを先行実行し、言語モデル側の混雑も共同制御して平均タスク完了時間を最大43.5%削減する。",
-    "authors": ["Yifan Sui","Han Zhao","Rui Ma","Zhiyuan He","Hao Wang","Kaiqiang Xu","Kai Chen","Jianxun Li","Yuqing Yang"],
+    "authors": [
+      "Yifan Sui",
+      "Han Zhao",
+      "Rui Ma",
+      "Zhiyuan He",
+      "Hao Wang",
+      "Kaiqiang Xu",
+      "Kai Chen",
+      "Jianxun Li",
+      "Yuqing Yang"
+    ],
     "authors_affiliations": "Shanghai Jiao Tong University; Microsoft Research; Stevens Institute of Technology; Google; Hong Kong University of Science and Technology",
     "published": "2026-03-19",
     "publication": "arXiv:2603.18897v3",
@@ -21,37 +36,104 @@
     "publication_status": "arXiv v3（2026-06-16）。一次資料では2026年conference表記があるが会議名が示されないため、査読付き採録先は未確認。",
     "publication_version": "v3 (2026-06-16)",
     "lineage": "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング",
-    "topics": ["エージェント型大規模言語モデル","投機的道具実行","道具呼出し予測","言語モデル・道具並列化","共同スケジューリング","vLLM","低遅延エージェント配信"],
+    "topics": [
+      "エージェント型大規模言語モデル",
+      "投機的道具実行",
+      "道具呼出し予測",
+      "言語モデル・道具並列化",
+      "共同スケジューリング",
+      "vLLM",
+      "低遅延エージェント配信"
+    ],
     "importance": "従来の投機的復号が言語モデル内部のトークン生成を先読みするのに対し、PASTEはエージェント作業の外部道具段階まで投機対象を広げる。さらに道具側だけを最短化すると画像処理装置への帰還集中で全体遅延が悪化し得ることを示し、言語モデルと中央処理装置・外部サービスを単一の閉ループ資源として扱う点が重要である。",
     "hardware_evaluation": "4ノード、各ノードAMD EPYC 7V13 96 vCPU、512 GBメモリ、NVIDIA A100 80 GBを8基、合計32 GPU。vLLM上で実機評価する。",
     "hardware_details": "深い調査作業ではQwen-DeepResearch-30B、コーディング・科学系ではQwen3-30B-A3Bを使用する。道具実行は中央処理装置・外部サービス側で行い、言語モデル実行器はvLLMへ接続する。",
     "quality_effect": "投機結果は正式な言語モデル道具呼出しと一致した場合だけ利用し、副作用を持つ道具は試行実行、隔離領域、非変更版など安全な形でのみ投機する。2万件超の投機中、潜在的に副作用のある602件はすべて確定操作を防ぎ、比較対象との最終出力差を観測しなかった。",
-    "storage_targets": ["投機道具結果キャッシュ","vLLMの鍵値キャッシュ","道具呼出し履歴・パターン情報"],
-    "bottlenecks": ["言語モデル生成と道具実行の直列待ち","道具実行の露出遅延","投機成功後の画像処理装置への帰還集中","言語モデル待ち行列と鍵値キャッシュ圧力","副作用を伴う道具の安全な投機"],
-    "evidence_locations": ["§2 動機と作業パターン","§3 パターン解析器","§4 道具投機スケジューラ","§5 言語モデル・道具共同スケジューラ","§6 実装","§7 評価","安全性・資源負荷評価"],
+    "storage_targets": [
+      "投機道具結果キャッシュ",
+      "vLLMの鍵値キャッシュ",
+      "道具呼出し履歴・パターン情報"
+    ],
+    "bottlenecks": [
+      "言語モデル生成と道具実行の直列待ち",
+      "道具実行の露出遅延",
+      "投機成功後の画像処理装置への帰還集中",
+      "言語モデル待ち行列と鍵値キャッシュ圧力",
+      "副作用を伴う道具の安全な投機"
+    ],
+    "evidence_locations": [
+      "§2 動機と作業パターン",
+      "§3 パターン解析器",
+      "§4 道具投機スケジューラ",
+      "§5 言語モデル・道具共同スケジューラ",
+      "§6 実装",
+      "§7 評価",
+      "安全性・資源負荷評価"
+    ],
     "references": [
-      {"canonical_id":"arXiv:2601.22705","arxiv_id":"2601.22705"},
-      {"canonical_id":"arXiv:2411.14199","arxiv_id":"2411.14199"},
-      {"canonical_id":"arXiv:2509.20175","arxiv_id":"2509.20175"},
-      {"canonical_id":"arXiv:2509.11067","arxiv_id":"2509.11067"},
-      {"canonical_id":"arXiv:2410.15332","arxiv_id":"2410.15332"},
-      {"canonical_id":"arXiv:2511.20048","arxiv_id":"2511.20048"},
-      {"canonical_id":"arXiv:2602.13692","arxiv_id":"2602.13692"},
-      {"canonical_id":"arXiv:2511.02230","arxiv_id":"2511.02230"},
-      {"canonical_id":"arXiv:2504.07347","arxiv_id":"2504.07347"},
-      {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},
-      {"canonical_id":"arXiv:2308.16369","arxiv_id":"2308.16369"}
+      {
+        "canonical_id": "arXiv:2601.22705",
+        "arxiv_id": "2601.22705"
+      },
+      {
+        "canonical_id": "arXiv:2411.14199",
+        "arxiv_id": "2411.14199"
+      },
+      {
+        "canonical_id": "arXiv:2509.20175",
+        "arxiv_id": "2509.20175"
+      },
+      {
+        "canonical_id": "arXiv:2509.11067",
+        "arxiv_id": "2509.11067"
+      },
+      {
+        "canonical_id": "arXiv:2410.15332",
+        "arxiv_id": "2410.15332"
+      },
+      {
+        "canonical_id": "arXiv:2511.20048",
+        "arxiv_id": "2511.20048"
+      },
+      {
+        "canonical_id": "arXiv:2602.13692",
+        "arxiv_id": "2602.13692"
+      },
+      {
+        "canonical_id": "arXiv:2511.02230",
+        "arxiv_id": "2511.02230"
+      },
+      {
+        "canonical_id": "arXiv:2504.07347",
+        "arxiv_id": "2504.07347"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2308.16369",
+        "arxiv_id": "2308.16369"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v3 primary reference section",
     "references_total": 59,
     "source": "https://arxiv.org/abs/2603.18897",
-    "sources": ["https://arxiv.org/abs/2603.18897","https://arxiv.org/html/2603.18897","https://arxiv.org/pdf/2603.18897"],
+    "sources": [
+      "https://arxiv.org/abs/2603.18897",
+      "https://arxiv.org/html/2603.18897",
+      "https://arxiv.org/pdf/2603.18897"
+    ],
     "code": null,
     "implementation": "約5,000行のTypeScriptによるエージェント側制御層と約2,000行のPythonによるvLLM側連携を実装する。vLLM本体のソース変更は行わず、起動時接続機構から準備済み言語モデル要求の投入と順序を制御する。複数のエージェント実装へ小規模な呼出しラッパーで統合する。",
     "implementation_status": "端から端まで動作する研究実装あり。著者公式の恒久公開コードURLは一次資料から未確認。",
     "evaluation_type": "32×A100実機でのエージェント端末間全体遅延・道具遅延・拡張性・要素除去・安全性評価",
     "last_checked": "2026-09-14"
   },
-  "reservation": {"claim_id":"claim-874bf6fd581295f5dd4ca3a1","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-8c7e08c9a775139662598898",
+    "worker_id": "scheduled-chat-discovery-overflow",
+    "worker_kind": "scheduled_chat"
+  }
 }

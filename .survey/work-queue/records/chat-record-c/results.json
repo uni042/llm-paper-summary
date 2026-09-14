@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-874bf6fd581295f5dd4ca3a1",
+  "attempt_id": "attempt-8c7e08c9a775139662598898",
   "job_id": "job-research-b045bf747f93dbbe",
   "data": {
     "overview": "PASTEは、道具実行をLLM生成中へ投機的に重ねるだけでなく、道具完了によるGPUへの帰還集中を共同スケジューリングで抑えることでend-to-end遅延を改善する。平均task completion timeは最大43.5%、p99は最大55.4%削減し、tool側平均latencyは最大55.2%、p99は最大60.6%削減する。tool-only ablationでは道具は速くなる一方LLM queueが65秒まで増え、full PASTEは270秒・queue45秒へ改善するため、toolとLLMの共同制御が主要な寄与である。予測器のTop-1 accuracyは最大27.8%と高くないが、実際に投機開始した候補は安全性・価値filter後のhit rateが93.8%に達する。",
@@ -93,7 +93,7 @@
     "quality_impact": "権威的LLM出力を変更せず、予測が一致した場合だけtool結果を再利用するため、投機そのものによる生成品質劣化を意図しない。安全性評価では副作用commitを防ぎ、最終task outputのbaselineとの差を観測しなかった。"
   },
   "reservation": {
-    "claim_id": "claim-874bf6fd581295f5dd4ca3a1",
+    "claim_id": "claim-8c7e08c9a775139662598898",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

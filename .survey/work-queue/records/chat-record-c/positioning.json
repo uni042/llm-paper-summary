@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-874bf6fd581295f5dd4ca3a1",
+  "attempt_id": "attempt-8c7e08c9a775139662598898",
   "job_id": "job-research-b045bf747f93dbbe",
   "data": {
     "limitations": [
@@ -34,7 +34,7 @@
     "research_positioning": "PASTEはエージェント型LLM配信におけるworkflow-level speculationと異種資源共同スケジューリングの研究に位置する。token generation、KV cache、GPU schedulingだけを対象にせず、CPUや外部serviceで動くtoolを同じcritical pathの資源として扱う点が特徴である。特に『上流toolを速くすると下流GPU queueが悪化する』という観測は、agent servingが複数resource queueを直列接続した系であることを示し、今後のsystemではtool prediction、workflow DAG scheduling、LLM admission、KV memory pressureを一体化する必要がある。HexAGenTのonline workflow risk、Heliumのquery-plan optimization、PASTEの未来tool speculationは相補的であり、これらを統合したagent runtimeが自然な発展方向となる。"
   },
   "reservation": {
-    "claim_id": "claim-874bf6fd581295f5dd4ca3a1",
+    "claim_id": "claim-8c7e08c9a775139662598898",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
