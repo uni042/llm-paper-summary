@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 03:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 03:08 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,11 +15,11 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **50** |
+| 未処理の論文候補（Research ready） | **49** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| GitHub反映済みResearch完了（job） | **340** |
-| 耐久checkpoint済み・GitHub未反映（job） | **24** |
+| GitHub反映済みResearch完了（job） | **341** |
+| 耐久checkpoint済み・GitHub未反映（job） | **23** |
 | 精読済みユニーク論文（推定） | **364** |
 | 保守状態（Maintenance） | **passed** |
 | 直近整合性チェック結果 | **passed** |
@@ -40,12 +40,12 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **50** |
-| 有効claim（lease） | **1** |
+| 未処理候補（Research ready） | **49** |
+| 有効claim（lease） | **0** |
 | 今すぐ着手可能（Claimable） | **51** |
-| 有効leaseを持つworker run | **1** |
-| :30 最新worker run | **2026-09-15T02:30:00+09:00** |
-| :30 最新run由来の有効claim | **1** |
+| 有効leaseを持つworker run | **0** |
+| :30 最新worker run | **—** |
+| :30 最新run由来の有効claim | **0** |
 | :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **—** |
 | :00 最新run由来の有効claim | **0** |
@@ -53,12 +53,12 @@
 | その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近lease活動 | **09-15 03:03 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
-| 直近24h Research完了（:30 通常worker） | **40** |
+| 直近24h Research完了（:30 通常worker） | **41** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T02:30:00+09:00** |
-| 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **0 min** |
+| 最新通常runのResearch完了 | **1** |
+| 最古の有効claimの経過時間 | **—** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -68,7 +68,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=50 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=49 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
 
 有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
@@ -77,7 +77,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **66** |
+| Research完了 | **67** |
 | Repo収録 | **76** |
 | Audit完了 | **0** |
 | 探索評価候補 | **4** |
@@ -91,7 +91,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 4 → 重複除外後 3 → Research候補採用 1 → Research完了 66 → Repo収録 76**
+**探索評価 4 → 重複除外後 3 → Research候補採用 1 → Research完了 67 → Repo収録 76**
 
 ## 次に処理する候補
 
@@ -138,6 +138,7 @@ Run: **2026-09-15T02:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2604.09562` — StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving
 - `arXiv:2510.13223` — BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure
 - `arXiv:2603.09046` — FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation
 - `arXiv:2603.04428` — Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices
@@ -145,7 +146,6 @@ Run: **2026-09-15T02:00:00+09:00**
 - `arXiv:2506.02006` — Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing
 - `arXiv:2602.09345` — AgentCgroup: Understanding and Controlling OS Resources of AI Agents
 - `arXiv:2502.13965` — Autellix: An Efficient Serving Engine for LLM Agents as General Programs
-- `arXiv:2607.08930` — BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving
 
 ### 7日比較
 
