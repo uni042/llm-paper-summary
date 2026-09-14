@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e00f52c8cc2c35eb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.18141",
+      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+      "source_url": "https://arxiv.org/abs/2607.18141",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.18141-hymcache-kv-cache-cxl-hybrid-memory.md",
+      "priority": 92,
+      "reason": "CXLハイブリッドメモリ（CXL-HM）の小容量DRAMと大容量SSDを一体のKV再利用層として扱い、multi-turn KVアクセスのread-dominant・predictable・append-only性を使ったrequest-level prefix prefetchとopportunistic write bufferingでSSD待ちをdevice DRAMへ隠蔽する。実CXL-HM prototypeをsingle-nodeとprefill/decode分離構成で評価し、同一DRAM予算でlocal LMCache比3.0倍／1.45倍、1TB distributed-DRAM Mooncake比では性能約30%低下と引き換えにDRAMを16分の1へ削減する。SSDをCXL背後の共有KV容量として本格利用する実機研究で、階層メモリ重点テーマへの関連が非常に強い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.12556",
+      "title": "ITME: Inference Tiered Memory Expansion with Disaggregated CXL-Hybrid Memories",
+      "source_url": "https://arxiv.org/abs/2606.12556",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.12556-itme-inference-tiered-memory-expansion-cxl-hybrid-memory.md",
+      "priority": 89,
+      "reason": "TB級の共有context stateを、CXL接続のbyte-addressable remote memoryとPCIe Gen5 NVMe SSDからなる階層へ展開し、モデル重み・prefix cacheの決定的アクセスパターンを利用してdata movementを先回り制御する。production-grade SK Hynix CMMとGen5 NVMe SSDで性能可能性を評価し、FPGA prototypeで機能実証、従来CPU offload比最大35.7% throughput改善を報告する。NVMe-oF/JBOFの複雑なsoftware pathとは異なるCXL+SSD共有context infrastructureとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+      "priority": 82,
+      "reason": "electrical CXL poolのswitch latency・reach・power scalingを避けるため、passive fiber shuffleによるswitch-free full-crossbarで16 hostsへ32TB共有メモリを提供するphotonic-CXL applianceをKV cache層として提案する。emulationではelectrical CXL pool比50%以上のlatency削減、simulationではmulti-turn workloadのTTFTを6.6倍改善と報告する。評価がemulation/simulation中心なので優先度は実機CXL-HM研究より下げるが、TB級shared KV fabricの将来アーキテクチャとして差分が大きい。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T02:00:00+09:00",
+    "round": "specialist-cxl-hybrid-memory-6",
+    "axis": "CXLハイブリッドメモリ・SSD-backed共有KV/context tier",
+    "query_summary": "SmartSSD単体のin-storage処理から、CXLでDRAMとSSDを統合したTB級共有KV/context tierへ探索軸を移した。HyMCache、ITME、Photonic-CXL applianceはいずれも最新default branchのcanonical ID検索で未収録、Library pending検索でも同一IDの耐久成果物を確認できなかったため候補化した。実CXL-HM prototypeを持つHyMCacheを最優先、production-grade CMM/NVMe評価とFPGA実証のITMEを次点、emulation/simulation中心のPhotonic-CXLを低めに設定した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "CXL/SSD共有KVから、CXLメモリpoolをMoE expert weightやmodel weight階層へ使う方式、またはNVMe computational storageでexpert/KV prefetchを協調する方式へ移る",
+    "empty_round_reason": null
+  }
+}
