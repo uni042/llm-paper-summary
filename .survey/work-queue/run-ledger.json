@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T03:43:25.533424+00:00",
+  "updated_at": "2026-09-14T03:49:19.282465+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T03:43:25.533424+00:00",
+      "last_recorded_at": "2026-09-14T03:49:19.282465+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 31,
+        "research_completed": 33,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19130,6 +19130,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34803810787:1",
+          "recorded_at": "2026-09-14T03:49:19.282465+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34803810787",
+            "run_attempt": "1",
+            "source_sha": "73528936774db549a78aefa0e73d63f0a09ec604"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19378,6 +19392,22 @@
           "type": "research",
           "canonical_id": "arXiv:2601.00227",
           "title": "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-16aaac9973021cd8",
+          "type": "research",
+          "canonical_id": "arXiv:2510.18586",
+          "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b6c014b6c4d75daa",
+          "type": "research",
+          "canonical_id": "arXiv:2608.01536",
+          "title": "Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference",
           "from": "ready",
           "to": "completed"
         }

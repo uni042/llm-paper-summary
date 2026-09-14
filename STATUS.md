@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **83** |
+| 未処理の論文候補（Research ready） | **81** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **306** |
+| 全文精読完了（累計） | **308** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,16 +35,16 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **83** |
+| 未処理候補（Research ready） | **81** |
 | 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **82** |
+| 今すぐ着手可能（Claimable） | **80** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **1** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 12:49 JST** |
 | :00 補助worker 直近claim | **09-14 12:49 JST** |
 | 直近24h Research完了（:30 通常worker） | **20** |
-| 直近24h Research完了（:00 補助worker） | **22** |
+| 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T12:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
@@ -58,14 +58,14 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=83 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=81 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **42** |
+| Research完了 | **44** |
 | Repo収録 | **56** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -79,7 +79,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 42 → Repo収録 56**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 44 → Repo収録 56**
 
 ## 次に処理する候補
 
@@ -89,7 +89,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P84 `arXiv:2510.18586` — Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications
+- P84 `arXiv:2604.21072` — Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization
 
 ## 参考情報
 
@@ -125,14 +125,14 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2608.01536` — Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference
+- `arXiv:2510.18586` — Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications
 - `arXiv:2601.00227` — FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems
 - `arXiv:2606.08382` — STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control
 - `arXiv:2604.08075` — Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving
 - `arXiv:2504.09590` — Efficient LLM Serving on Hybrid Real-time and Best-effort Requests
 - `arXiv:2605.27744` — A Policy-Driven Runtime Layer for Agentic LLM Serving
 - `arXiv:2604.09557` — SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding
-- `arXiv:2607.15498` — VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs
-- `arXiv:2512.16822` — MEPIC: Memory Efficient Position Independent Caching for LLM Serving
 
 ### 7日比較
 
