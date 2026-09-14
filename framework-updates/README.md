@@ -2,10 +2,10 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-09-13**
+- フレームワーク差分の最終確認: **2026-09-15**
 - 用語・可読性の最終監査: **2026-09-07**
 
-この2つは分けて扱う。2026-09-13の差分確認では、公式リリースと開発元リポジトリを基準に9月12日以降の主要な分散長文処理・MoE routing・metadata fusion関連変更を再確認した。
+この2つは分けて扱う。2026-09-15の差分確認では、公式リリースと開発元リポジトリを基準に9月13日以降の主要な投機的デコード、DeepSeek-V4.1向けkernel fusion・multi-stream実行関連変更を再確認した。
 
 ## 現在の機能マップ
 
@@ -65,6 +65,34 @@
 ---
 
 ## 最新更新
+
+### 2026-09-15
+
+#### vLLM
+
+- **draft model全般へオンライン受理推定を使うadaptive verificationを拡張 — merged 2026-09-15 JST**
+
+  draft logitsの `logit(max q)` から位置別のtoken受理確率をオンライン推定し、MTP / EAGLE3 / DFlash / DFlash2などconfidence headを持たないdraft modelでもverification量を動的に削減できるようにした。concurrency 64の測定ではMiMo-V2.5-Pro + DFlashで平均出力throughput **+19.0%**、Inkling + MTP8で **+17.6%**、Kimi-K2.5 + DFlashで **+44.5%**、Muse-Glimmer + DFlash2で **+14.7%**。DeepSeek-V4-Flashでは学習済みconfidence headと同等以上の識別性能を示し、確率的draftingでthroughput **+2.1%**、median TPOT **-3.8%**。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/52228
+
+- **ROCmのDeepSeek-V4.1でmHC postとdelayed pre projectionを融合 — merged 2026-09-15 JST**
+
+  AITERのfused post/pre kernelを使い、小batch decodeで各seamのkernel launchを1回削減する。40 layer × 2 seamの構成ではforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITLを **6.9015 ms → 6.8141 ms（1.28%低下）**。
+
+  一次資料: https://github.com/vllm-project/vllm/pull/56513
+
+#### SGLang
+
+- **DeepSeek-V4.1の低圧縮比attention prepareをmulti-stream化しverify compressionを融合 — merged 2026-09-15 JST**
+
+  compress ratio 1/2のdecode / target verifyでcompressor+indexer、KV write、Q chainを別streamへ重ね、ratio 1 verifyもfused compressionへ移した。4×GB300・TP4/EP4・DSpark・64K contextのtraceではattention layer medianが **122.9 us → 121.0 us**、verify cycle内のdistinct CUDA streamが **19 → 12**へ減少し、`_q_rope_store`単体も約2.0 usから1.2〜1.5 usへ短縮した。
+
+  一次資料: https://github.com/sgl-project/sglang/pull/39445
+
+#### 新規LLM
+
+- 2026-09-13以降に現在追跡している主要model familyで追加すべき新規の汎用LLM正式公開は確認できず。直近の収録は2026-09-10公開のDeepSeek-V4.1-Flash。
 
 ### 2026-09-13
 

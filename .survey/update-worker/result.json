@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "update-20260913-0830",
+  "attempt_id": "update-20260915-0830",
   "kind": "framework_llm_update",
   "updated_paths": [
     "framework-updates/README.md",
@@ -16,5 +16,5 @@
     "framework-updates/inference-engines/sglang/README.md",
     "llm-releases/README.md"
   ],
-  "summary": "2026-09-13確認: vLLMのsparse MLA向けPCP+DCP併用、SGLangのGLM-5.3 Flash KPool metadata fusion復旧・既定有効化とROCm向け統一Triton MoE router拡張を追加。9月12日以降、現在追跡する主要model familyで新規の汎用LLM正式公開は確認されず。"
+  "summary": "2026-09-15確認: vLLMのオンライン受理推定によるadaptive verification拡張とROCm DeepSeek-V4.1 mHC post/pre融合、SGLangのDeepSeek-V4.1低圧縮比層multi-stream prepareを追加。9月13日以降、現在追跡する主要model familyで新規の汎用LLM正式公開は確認されず。"
 }

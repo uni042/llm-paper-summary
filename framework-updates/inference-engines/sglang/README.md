@@ -29,6 +29,10 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-09-15
+
+- **DeepSeek-V4.1低圧縮比層のprepareをmulti-stream化・ratio 1 verify compressionを融合 — merged 2026-09-14 UTC**: compress ratio 1/2のdecode / target verifyでcompressor+indexer、KV write、Q chainを3 streamへ分離し、ratio 1のverify compressionもfused pathへ移した。4×GB300・TP4/EP4・DSpark・64K contextではattention-layer median **122.9 → 121.0 us**、distinct CUDA streams / verify cycle **19 → 12**。`_q_rope_store`のPDL適用ではkernel時間が約2.0 usから1.2〜1.5 usへ短縮。[PR #39445](https://github.com/sgl-project/sglang/pull/39445)
+
 ## 2026-09-13
 
 - **GLM-5.3 Flash向けKPool metadata fusionを復旧・既定有効化 — merged 2026-09-12 UTC**: decode / target verify / draft extendのKPool-aware metadata constructionをfused pathへ戻し、互換なMTP draft backend間で派生metadataを再利用する。4×B200でEAGLE / DFLASHの精度検証は行われているがfusion-offとの対応した速度比較はないため、性能向上率は未確定。[PR #38845](https://github.com/sgl-project/sglang/pull/38845)

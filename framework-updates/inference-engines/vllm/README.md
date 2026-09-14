@@ -30,6 +30,12 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 以下の更新履歴は、**memory階層、分離serving、MoE通信、量子化、投機的デコード、GPU kernel**がどこまで実用範囲を広げたかを追う。
 
+## 2026-09-15
+
+- **オンライン受理推定でadaptive verificationをMTP / EAGLE3 / DFlash系へ拡張 — merged 2026-09-14 UTC**: draft logitsの `logit(max q)` から受理確率を継続学習し、学習済みconfidence headなしでもverification batchを動的にtrimする。concurrency 64の測定でMiMo-V2.5-Pro + DFlash **+19.0%**、Inkling + MTP8 **+17.6%**、Kimi-K2.5 + DFlash **+44.5%**、Muse-Glimmer + DFlash2 **+14.7%**の平均出力throughput向上。DeepSeek-V4-Flashではtrained headに対して確率的draftingでthroughput **+2.1%**、median TPOT **-3.8%**。[PR #52228](https://github.com/vllm-project/vllm/pull/52228)
+
+- **ROCm DeepSeek-V4.1のmHC post + delayed pre projectionを融合 — merged 2026-09-14 UTC**: AITER fused kernelで小batch decodeの各seamから1 launchを除去。40 layer × 2 seamでforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITL **6.9015 → 6.8141 ms（-1.28%）**。[PR #56513](https://github.com/vllm-project/vllm/pull/56513)
+
 ## 2026-09-13
 
 - **Sparse MLAでPCP+DCP併用を追加 — merged 2026-09-12 UTC**: prefill queryを分割するPCPとdecode KVを分割するDCPを同じsparse-MLA deploymentで併用可能にした。4×GB200・GLM-5.3 NVFP4、32768 input / 1 outputの測定ではTP4のTTFT **5512.1 ms**に対しPCP4+DCP4は **3326.8 ms（約1.66倍高速）**。ただし1 input / 1024 outputでは現行PCP4+DCP4 piecewise pathが **735.9 tok/s**で、TP4 **3412.7 tok/s**やDCP4 **2236.8 tok/s**より遅い。長文prefillの構成自由度は増す一方、decode pathには最適化余地が残る。[PR #56157](https://github.com/vllm-project/vllm/pull/56157)
