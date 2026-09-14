@@ -65,7 +65,11 @@ def normalize(repo_root: Path, *, apply: bool = False) -> dict[str, Any]:
         if not _has_identity(job):
             unresolved_paths.append(relative)
             continue
-        paper_path = resolve_paper_path(job)
+        try:
+            paper_path = resolve_paper_path(job)
+        except (TypeError, ValueError):
+            unresolved_paths.append(relative)
+            continue
         if apply:
             job["paper_path"] = paper_path
             _write_object(path, job)
@@ -86,10 +90,15 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="return a non-zero status when any Research job cannot be normalized",
+    )
     args = parser.parse_args()
     result = normalize(args.repo_root, apply=args.apply)
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    return 0 if result["unresolved"] == 0 else 2
+    return 2 if args.strict and result["unresolved"] else 0
 
 
 if __name__ == "__main__":
