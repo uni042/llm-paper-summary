@@ -15,8 +15,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **61** |
-| 現在処理不能（Research blocked） | **0** |
+| 未処理の論文候補（Research ready） | **60** |
+| 現在処理不能（Research blocked） | **1** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **328** |
 | 耐久checkpoint済み・GitHub未反映（job） | **35** |
@@ -30,7 +30,7 @@
 
 ### 要注意
 
-- 現在、集計stateから重大な警告は検出されていません。
+- Research blocked が **1件** 残っています。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -40,9 +40,9 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **61** |
+| 未処理候補（Research ready） | **60** |
 | 有効claim（lease） | **4** |
-| 今すぐ着手可能（Claimable） | **58** |
+| 今すぐ着手可能（Claimable） | **57** |
 | 有効leaseを持つworker run | **4** |
 | :30 最新worker run | **2026-09-15T00:12:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
@@ -68,7 +68,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=61 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=60 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 
 有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
