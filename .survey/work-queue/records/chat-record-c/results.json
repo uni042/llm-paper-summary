@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-de4b5e639b1855520a8f3a27",
   "job_id": "job-research-d9bb056b1c54e053",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-de4b5e639b1855520a8f3a27",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "代表の分岐可能要求率50%、TPOT目標50msでは、全分岐を即時実行するEagerは生の並列度を増やす一方、高負荷区間で平均デコードステップが148ms、最大203msまで伸び、SLO達成率は41%へ低下する。固定上限C5とC2も平均97ms/62ms、SLO 45%/59%に留まる。TAPERは高負荷で受入分岐を約35%まで絞り、平均ステップ48ms、最大63ms、SLO達成99%を維持する。全トレース集計ではIRP-Off比の有効スループットが1.77倍で、Eagerの1.20倍を上回る。論文の要約値ではEager比1.48倍となる。負荷が下がると受入率を自動で上げ、低負荷ではほぼ100%の分岐を通すため、固定幅より余剰計算資源を利用できる。",
+    "key_results": [
+      {"metric": "有効スループット", "value": "1.77倍", "baseline": "IRP-Off", "condition": "Qwen3-32B、分岐可能要求率50%、TPOT 50ms、600分トレース", "interpretation": "分岐並列性を使いながらSLO違反トークンを増やさず、期限内完了に変換できる処理量を最大化する。"},
+      {"metric": "Eager比有効スループット", "value": "1.48倍", "baseline": "IRP-Eager", "condition": "主評価集計", "interpretation": "全枝を即投入して生スループットだけを追う方式より、遅延外部性を制御した方が実用上の有効処理量が高い。"},
+      {"metric": "高負荷SLO達成率", "value": "99%", "baseline": "Eager 41%、C5 45%、C2 59%", "condition": "Qwen3-32B、高負荷250〜400分、TPOT 50ms", "interpretation": "受入分岐率を約35%へ自動調整し、同居要求の最も厳しい余裕を保護する。"},
+      {"metric": "高負荷平均ステップ遅延", "value": "48ms", "baseline": "Eager 148ms、C5 97ms、C2 62ms", "condition": "Qwen3-32B、高負荷区間", "interpretation": "追加枝による一ステップの膨張をSLO予算内へ抑え、直列要求も枝要求も同じ長いステップへ巻き込まれる問題を避ける。"},
+      {"metric": "分岐可能要求率80%での有効スループット", "value": "2.15倍", "baseline": "IRP-Off", "condition": "TPOT 50ms", "interpretation": "利用可能な要求内並列性が多いほど、SLOを守って余剰枝を選ぶ効果が大きい。SLO達成率は98%。"},
+      {"metric": "Qwen2.5-72B有効スループット", "value": "1.72倍", "baseline": "IRP-Off", "condition": "同一8×A100、TPOT 100ms、予測器のみ再調整", "interpretation": "Qwen3-32B固有ではなく、より大きい別モデルでもSLO達成97%を保って同じ制御原理が機能する。"},
+      {"metric": "計画器オーバーヘッド", "value": "中央値0.31ms、P95 0.52ms、P99 0.81ms、最大1.24ms", "baseline": "典型的50msデコードステップ", "condition": "TAPER受入計画", "interpretation": "最大でも典型ステップの約2.5%未満で、毎ステップ再計画のCPUコストは支配的でない。"}
+    ],
+    "negative_results": "Eagerは低負荷でもSLO達成率89%まで落ち、高負荷では41%、中負荷では45%となる。固定C2は高負荷時にEagerより安全だが、低負荷では安全に使える追加枝を捨てるため資源を過小利用する。SLOを厳しく30msにするとEagerの有効スループットはIRP-Off比0.87倍、達成率28%まで悪化するのに対し、TAPERは1.35倍・97%を保つ。遅延予測器は極端なバッチサイズでは精度低下の可能性があり、分岐同士が依存するワークフローではスケジュール不変性の保証が成立しない。",
+    "interpretation": "要求内並列性の価値は『同時に多くのトークンを計算できるか』ではなく、その追加計算が同居要求のSLO余裕を食い切らない範囲で使えるかによって決まる。低負荷では残余余裕が大きいのでTAPERはほぼ全枝を許可し、固定幅の制約を受けずEagerに近い並列性を使う。高負荷では基準ステップ自体が長くなり余裕が縮むため枝受入を約35%へ下げ、SLO違反で無効になるトークン計算を防ぐ。この負荷連動が、生スループットを高めるEagerより有効スループットを高める理由である。",
+    "quality_impact": "独立分岐という適用条件内では近似的な品質低下を導入しない。1000プロンプトの決定論的評価ではTAPER、IRP-Off、Eagerの出力が100%バイト一致した。したがって評価上の利得は生成内容を削るのではなく、同じ分岐計算を異なる時刻へ配置することで得られる。"
+  },
+  "reservation": {"claim_id": "claim-de4b5e639b1855520a8f3a27", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
 }
