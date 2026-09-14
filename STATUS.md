@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 09:52 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 10:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -19,14 +19,13 @@
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | 全文精読完了（累計） | **275** |
-| 保守状態（Maintenance） | **pending** |
-| 整合性チェック（Consistency） | **issues_found** |
+| 保守状態（Maintenance） | **passed** |
+| 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
 
 ### 要注意
 
-- Maintenance が pending です。
-- Consistency check: **issues_found**
+- 現在、集計stateから重大な警告は検出されていません。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -40,16 +39,16 @@
 | 処理中（Active claims） | **3** |
 | 今すぐ着手可能（Claimable） | **111** |
 | :30 通常worker Active claims | **0** |
-| :00 補助worker Active claims | **2** |
-| その他/帰属不明 Active claims | **1** |
+| :00 補助worker Active claims | **3** |
+| その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 07:59 JST** |
-| :00 補助worker 直近claim | **09-14 09:16 JST** |
-| 直近24h Research完了（:30 通常worker） | **6** |
-| 直近24h Research完了（:00 補助worker） | **5** |
+| :00 補助worker 直近claim | **09-14 10:03 JST** |
+| 直近24h Research完了（:30 通常worker） | **5** |
+| 直近24h Research完了（:00 補助worker） | **6** |
 | 直近24h Research完了（帰属不明） | **5** |
 | 最新通常run | **2026-09-14T06:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **84 min** |
+| 最古の有効claimの経過時間 | **47 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -70,18 +69,18 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **16** |
 | Repo収録 | **61** |
 | Audit完了 | **0** |
-| 探索評価候補 | **128** |
-| Research候補採用 | **25** |
-| 重複除外 | **72** |
-| 重複率 | **56.2%** |
-| :00 補助worker Discovery run（毎時枠） | **3** |
-| :00 補助worker Discovery round（stats観測） | **25** |
+| 探索評価候補 | **113** |
+| Research候補採用 | **20** |
+| 重複除外 | **65** |
+| 重複率 | **57.5%** |
+| :00 補助worker Discovery run（毎時枠） | **2** |
+| :00 補助worker Discovery round（stats観測） | **23** |
 | 通常worker run（ledger観測） | **12** |
 | Fallback archive（全helper） | **17** |
 
 ### 24時間の流れ
 
-**探索評価 128 → 重複除外後 56 → Research候補採用 25 → Research完了 16 → Repo収録 61**
+**探索評価 113 → 重複除外後 48 → Research候補採用 20 → Research完了 16 → Repo収録 61**
 
 ## 直近の通常worker
 
@@ -129,8 +128,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
 | SSD expert offload・peer GPU cache tier・階層メモリ | 12 | 10 | 0 | 83.3% | 0.0% |
-| NVMe重み先読み・疎推論GPUカーネル・fleet資源配置 | 8 | 3 | 4 | 37.5% | 50.0% |
-| 分離型サービングの負荷偏り・SLO適応 | 7 | 4 | 1 | 57.1% | 14.3% |
 | 新着LLM推論システム・通信／疎注意／多ターンKV | 7 | 4 | 3 | 57.1% | 42.9% |
 | CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
 | GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
