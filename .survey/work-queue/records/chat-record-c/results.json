@@ -2,31 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-900e0b9bd6c1839bbd58f9c3",
-  "job_id": "job-research-b16bdf4c09cb7905",
-  "data": {
-    "overview": "主評価でSpecEdgeはserver-only tree-based speculative decodingに対しserver throughputを平均2.22倍へ高め、edge GPU費用を加味しても生成トークンあたり費用効率を平均1.91倍改善する。同時にトークン間遅延を平均11.24%削減し、平均RTT 14.07msのWANが存在してもネットワーク遅延ゼロのserver-onlyを上回る。Qwen3-14B/0.6BのMathでは33.53→83.88 tok/s（2.50倍）、費用効率29.80→63.56 k-token/$（2.13倍）を達成する。server-onlyからdraftをedgeへ分離するだけでは32.76 tok/sで遅延も悪化するが、proactive draftingでITLを28msへ下げ、pipeline schedulingまで加えると67.89 tok/s（2.07倍）へ増える。先行ドラフトにより検証一回あたり生成トークンは平均13.21%増加する。RTT感度では15msでITL 36.47msとserver-only 42.36msより13.90%低く、50ms未満までserver-onlyを下回り、65msでも44.47msへ留まる。",
-    "key_results": [
-      {"metric": "server throughput", "value": "平均2.22倍", "baseline": "server-only tree speculative decoding", "condition": "A100 server + RTX4090 edge、Qwen3 14B/32B、SpecBench", "interpretation": "高価なserverをverification専用にし、複数edge要求の検証をパイプライン化する効果が中心。"},
-      {"metric": "cost efficiency", "value": "平均1.91倍", "baseline": "server-only", "condition": "A100 $4.05/5.05h、RTX4090 $0.35/h価格前提", "interpretation": "edge GPU追加費用よりserver処理量増加が大きく、中央GPU一枚あたりの収益的処理能力を改善する。"},
-      {"metric": "inter-token latency", "value": "平均11.24%削減", "baseline": "network delayなしserver-only", "condition": "実測平均RTT 14.07ms", "interpretation": "先行ドラフトがWAN+verification待ちを覆うため、分散化しても対話遅延をむしろ下げられる。"},
-      {"metric": "server runtime", "value": "約40〜50%削減", "baseline": "server-only speculative decoding", "condition": "複数model pair", "interpretation": "draft計算をedgeへ移しserverのmodel parameter I/Oをbatch verificationへ集中する。"},
-      {"metric": "generated tokens per verification", "value": "平均13.21%増加", "baseline": "server-only speculative decoding", "condition": "3 target/draft pair", "interpretation": "complete draft alignment時に先行生成済み枝を保持して次周期のdraft treeを深くできる。"},
-      {"metric": "component ablation", "value": "basic disaggregation 32.76 tok/s → full SpecEdge 67.89 tok/s（2.07倍）", "baseline": "basic edge/server disaggregation", "condition": "Qwen3-14B/1.7B", "interpretation": "単なる分離では不十分で、proactive draftingとserver pipelineの両方が必要。"},
-      {"metric": "WAN感度", "value": "15ms RTTでITL 36.47ms（server-only 42.36msより13.90%低い）、65msで44.47ms", "baseline": "server-only、layer-split", "condition": "Qwen3-32B、SpecBench", "interpretation": "token-only通信とdraft depth適応によりWAN遅延への傾きが層分割より小さい。"},
-      {"metric": "軽量edge GPU", "value": "RTX3060 Ti/2080 Tiでも約50〜56 tok/s、A100 server-only約31 tok/s", "baseline": "A100 server-only", "condition": "Qwen3-14B/0.6B・1.7B", "interpretation": "4090に限定せず、より安価なedge GPUでもserver offload効果が残る。"},
-      {"metric": "非木構造投機的復号", "value": "server throughput最大1.96倍、費用効率最大1.67倍", "baseline": "server-only linear speculative decoding", "condition": "Vicuna/Llama2 target", "interpretation": "edge/server分離は特定のtree draftingアルゴリズムに依存しない。"}
-    ],
-    "negative_results": [
-      "WAN RTTが増えるほどITLの利得は縮小し、約50msを超えるとserver-onlyより低遅延という主利点を維持しにくくなる。65msでは15ms条件比22%遅くなる。",
-      "先行ドラフトはcomplete alignmentに失敗すると追加計算を廃棄する。draft modelとtarget modelの整合性が低いほど投機計算の無駄が増え、利得も小さくなる。",
-      "主構成は同時要求数に応じてedge RTX4090を増やし、実験では概ねbatch size×2のedge GPUを想定するため、edge資源が十分にない環境では同じthroughput倍率を得られない。",
-      "一枚edge GPUで複数要求をbatch draftingすると費用効率は4.4〜29.5%改善できる一方、ITLは5.9〜19.0%悪化し、費用と対話遅延の交換が発生する。",
-      "最大33B級までの評価で、70B以上やMoE targetでverification時間・edge draft整合性がどう変化するかは未評価。",
-      "ユーザー所有GPUを直接利用する将来構成では、故障、悪意あるedge、データ/プロンプト漏えい、結果偽装など信頼性・安全性が未解決である。"
-    ],
-    "interpretation": "SpecEdgeの利得は、edgeへ『モデルの一部』ではなく『品質決定権を持たない候補生成』を移す点にある。これによりWAN境界をtoken-onlyへ縮小し、target modelと品質保証は中央に残せる。さらにdistributed speculative decodingだけではedge/serverの交互待ちが生じるため、時間方向にはproactive draftで通信と検証を覆い、要求方向には複数userをinterleaveしてserver bubbleを覆う二重の重畳が必要になる。",
-    "quality_impact": "標準損失なし投機的復号の受理規則を維持するため、最終出力分布はtarget model単独と同一である。性能改善のために量子化や近似受理を追加していない。"
-  },
-  "reservation": {"claim_id": "claim-900e0b9bd6c1839bbd58f9c3", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a4d623d681056171d179a90a",
+  "job_id": "job-research-283313401d33cc78",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a4d623d681056171d179a90a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

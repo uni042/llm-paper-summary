@@ -2,28 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-900e0b9bd6c1839bbd58f9c3",
-  "job_id": "job-research-b16bdf4c09cb7905",
-  "data": {
-    "limitations": [
-      "主構成では各同時要求へ実質的に専用edge GPUを割り当て、edge台数をbatch sizeに合わせて増やす。多数同時利用者で十分なconsumer GPUを確保・管理するオーケストレーション費用は評価の中心ではない。",
-      "WAN RTTが約50msを超えるとserver-onlyより低ITLという優位が縮小し、地域間など高遅延ネットワークではproactive draftingだけで通信を完全に隠せない。",
-      "proactive draftはalignment失敗時に廃棄されるため、target/draftの分布差が大きいタスクではedge計算・電力を無駄にする。draft model選択と動的展開戦略には改善余地がある。",
-      "評価targetは13B〜33B級が中心で、70B以上やMoE、大規模tensor/pipeline parallel serverへverification batchingを統合した性能は未検証である。",
-      "user-owned edge GPUを用いる場合のfault tolerance、untrusted device security、プライバシー、悪意ある候補生成への防御は将来課題として明示される。",
-      "費用効率は2025年時点のA100/RTX4090クラウド価格に依存し、GPU価格や電力・ネットワーク転送料が変化すると倍率も変わる。",
-      "KV paddingを最長系列へ合わせるため、系列長差が極端なverification batchでは無駄メモリ・計算が増える可能性がある。"
-    ],
-    "differences": [
-      {"name": "従来のtensor/pipeline split inferenceとの差", "description": "層分割やtensor parallelismはedge/server間で中間活性・モデル計算を分け、自己回帰の各ステップで通信するためWANへ弱い。SpecEdgeは投機的復号のdraft/verify境界で分け、候補tokenだけを複数個まとめて通信する。target modelの全検証はserverへ残るため、WAN転送量を小さくしつつserver側parameter I/Oをbatch verificationで償却する。"},
-      {"name": "server-only speculative decodingとの差", "description": "通常の投機的復号は同じserver GPUまたは同一ノードGPU群がdraftとverifyを担当するため、高価な中央資源の一部を小型draft modelにも消費する。SpecEdgeはdraftを低価格edgeへ移し、serverをverification専用にする。ただし物理分離で生じるWAN待ちとserver bubbleをproactive draftingと複数request pipelineで相殺する必要がある。"},
-      {"name": "PEARL/AMUSD等のmulti-device speculative decodingとの差", "description": "同時draft/verifyを複数GPUへ分ける先行方式の多くは一つのserver node内や低遅延device間を想定し、追加server GPUをqueryごとに必要とする。SpecEdgeはWAN越しのconsumer GPUをdraft資源として使い、通信量をtoken-onlyに抑え、実RTTに合わせてdraft depthを調整する点に経済的・ネットワーク的な焦点がある。"},
-      {"name": "完全on-device LLMとの差", "description": "端末だけで小型・量子化LLMを走らせる方式は中央費用を減らすが、大型target modelと同じ品質を維持しにくい。SpecEdgeはedge modelを候補生成に限定し、server targetが全候補を検証するため品質分布を維持する。edge資源は品質決定ではなくserver I/Oの償却と計算重畳に使われる。"}
-    ],
-    "implementation_status": "KAISTが公開コード `https://github.com/kaist-ina/specedge` を提供している。A100 serverとRTX4090等edge GPUを実WANで接続し、tree-based/linear speculative decoding、複数target/draft model、edge batch draftingまで実装・評価済み。",
-    "research_positioning": "SpecEdgeは分散LLM配信の中でも、中央GPU・edge GPUを一つのモデル並列資源として扱わず、投機的復号を計算分業の境界に使う系統に位置する。重要なのは、WANの帯域・遅延を克服するために状態転送を減らすだけでなく、edgeの先行計算とserverのmulti-request verificationを同時にパイプライン化した点である。推論サーバ研究から見ると、server throughputを増やすためにserver内部のbatch schedulerだけを最適化するのではなく、外部の安価なdraft computeを要求ごとに供給する資源プールとして導入している。今後はedge drafterを一台/一要求に固定せず、edge群の能力・RTT・電力・信頼度を考慮してdraft taskを動的配置し、server側verification queueと共同スケジューリングする方向、あるいはKV/weight offloadとは別の第三資源階層としてedge speculative computeを扱う方向へ発展できる。",
-    "audit_required": false,
-    "audit_reason": null
-  },
-  "reservation": {"claim_id": "claim-900e0b9bd6c1839bbd58f9c3", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a4d623d681056171d179a90a",
+  "job_id": "job-research-283313401d33cc78",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a4d623d681056171d179a90a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }

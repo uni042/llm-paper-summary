@@ -2,27 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-900e0b9bd6c1839bbd58f9c3",
-  "job_id": "job-research-b16bdf4c09cb7905",
-  "data": {
-    "hardware": ["Server: NVIDIA A100 40GB（32Bモデル時80GB）", "Edge: NVIDIA RTX 4090", "追加edge: RTX 4070 Ti Super、RTX 3090、RTX 2080 Ti、RTX 3060 Ti"],
-    "software": ["SpecEdge公開実装", "木構造投機的復号", "線形投機的復号追加評価"],
-    "model": ["Target: Qwen3-32B/14B、Vicuna-33B、Llama2-13B-chat-hf", "Draft: Qwen3-1.7B/0.6B、Sheared Llama-1.3B、Tiny Llama-1.1B、JackFram-160M"],
-    "datasets": ["SpecBench", "C4 (en)", "OpenAssistant conversations", "WikiText-2", "MTBench"],
-    "baselines": ["Server-only tree-based speculative decoding", "Server-only autoregressive decoding", "Layer-split edge/server inference"],
-    "correctness": "SpecEdgeとserver-only speculative baselineは同じターゲット/ドラフトモデルを使い、投機的復号の受理規則を保つため同じ出力分布を生成する。主比較ではbatch size=1を使い対話向けITLを最小化し、server throughput、生成トークン/検証、費用効率、ITLを比較する。",
-    "settings": [
-      "主ネットワークはlocal edgeとGoogle Cloud間で平均RTT 14.07ms。",
-      "主評価では各concurrent requestに対しedge GPU数をbatch size×2へ拡張する。",
-      "Qwen3 target/draftとSpecBenchではtemperature=0.7、各query最大256出力トークン。",
-      "木構造draft tree sizeは各要求32。server-onlyはdraft depthを全探索で最適化し、SpecEdgeはverification timeとRTTから動的に選ぶ。",
-      "価格前提はA100 40GB $4.05/h、A100 80GB $5.05/h、RTX4090 $0.35/h。",
-      "ネットワーク感度はRTTを15msから65ms以上まで変化。"
-    ],
-    "methodology": "主評価ではA100サーバと複数RTX4090 edgeを実WANで接続し、Qwen3 14B/32B targetと0.6B/1.7B draftをSpecBenchの6タスクで実行する。server-only tree-based speculative decodingと同じbatch sizeで処理量・費用効率・ITLを比較する。次にbasic disaggregation、proactive drafting追加、完全pipeline-aware SpecEdgeを順に比較して各機構の寄与を分離する。draft model/target modelをVicuna、Llama2、Sheared/Tiny/160Mへ変え、C4/OAsst/WikiText/MTBenchで一般性を確認する。ネットワーク感度ではRTTごとにdraft depthを変え、layer-splitとserver-onlyへ比較する。edge GPU能力を4090から3060 Ti/2080 Ti等へ落とした条件、木構造でない線形投機的復号、一枚edgeで複数要求をbatch draftingする費用優先構成、reasoning mode、複数クラウド価格でも追加評価する。",
-    "metrics": ["server throughput (tokens/s)", "cost efficiency (1k tokens/$)", "inter-token latency", "generated tokens per verification", "server runtime", "autoregressive baselineに対するspeedup", "RTT感度"],
-    "scope": "主評価は単一A100サーバとedge GPU群の構成で、WAN越しのinteractive servingを対象にする。数百server GPUのクラスタルーティング、edge churn、実ユーザー所有端末の信頼境界は主評価外。targetは最大33B級まで。",
-    "reproducibility": "公開GitHubコード、モデル名、tree size、最大生成長、温度、GPU、ネットワークRTT、価格前提、主要データセットが記載され、再現可能性は比較的高い。クラウド価格は時期・地域依存で変化する。"
-  },
-  "reservation": {"claim_id": "claim-900e0b9bd6c1839bbd58f9c3", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a4d623d681056171d179a90a",
+  "job_id": "job-research-283313401d33cc78",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a4d623d681056171d179a90a",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
