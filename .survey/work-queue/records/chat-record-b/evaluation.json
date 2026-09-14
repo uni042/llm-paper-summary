@@ -2,18 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-14275c825f3527b15b5e8655",
-  "job_id": "job-research-c2ae91e7ef53c740",
-  "data": {
-    "hardware": "NVIDIA V100 GPU群。下書きモデルは各1 GPU、標的LLaMA-7Bは1 GPU、13Bは2 GPU、30Bは4 GPUにテンソル並列配置する。",
-    "software": "Ubuntu 20.04、Linux 5.15、CUDA 11.7、cuDNN 8.6.0、NVIDIA driver 525.85。",
-    "models": ["LLaMA-7B", "LLaMA-13B", "LLaMA-30B", "LLaMA-68M", "LLaMA-265M", "LLaMA-616M", "LLaMA-1.1B", "LLaMA-1.4B"],
-    "datasets": ["Alpaca", "ChatGPT Prompts", "Chatbot Instruction Prompts", "Mix（3系統の混合）"],
-    "baselines": ["均一な単一下書きモデルを使う通常の投機的デコード", "学習型選択のみを有効にした構成", "高速バッチ検証まで有効にした構成", "パイプラインまで含むSPIN完全構成"],
-    "correctness": "標的モデルによる検証と受理規則は通常の投機的デコードを維持する。要求分解時には元要求所属の指示情報を注意マスクへ反映し、分解前と同じ因果的注意関係を再現する。",
-    "settings": ["主要な全体比較はバッチサイズ8。", "高速バッチ検証ではバッチサイズを変え、候補長差とメモリ使用量への影響を測る。", "パイプライン評価では小バッチ数を変え、下書きと検証の重畳利得と小バッチ化によるGPU効率低下を比較する。", "学習型選択器は要求ごとの受理トークン毎秒を報酬として異種下書きモデルを選ぶ。"],
-    "methodology": "LLaMA-7B/13B/30Bを標的モデル、68M〜1.4Bの5種類を候補下書きモデルとして、4つの要求データセットで有効スループットと検証遅延を評価する。全体比較では均一な下書きモデルを使う通常方式に対してSPIN完全構成を比較し、要素別には異種モデル選択、高速バッチ検証、パイプラインを順に追加して寄与を分離する。選択器は貪欲選択やイプシロン貪欲法とも比較する。高速バッチ検証はバッチサイズ増加時の遅延とメモリ不足を調べ、パイプラインは小バッチ数ごとのスループットを測定してヒューリスティック選択が最適付近へ到達するか確認する。",
-    "scope": "LLaMA系列とV100 GPU群を中心とした実機評価。異種下書きモデルを複数GPUへ常駐させられる配信環境を前提とし、単一GPUだけの端末や最新GPU世代、異なるモデル族を混在させる場合の一般化は直接評価しない。"
-  },
-  "reservation": {"claim_id":"claim-14275c825f3527b15b5e8655","worker_id":"scheduled-chat-llm-survey-20260914T1130JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-43aa5fb73f133772cb25e68d",
+  "job_id": "job-research-8837d2430022aa08",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-43aa5fb73f133772cb25e68d",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
