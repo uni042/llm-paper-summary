@@ -15,7 +15,7 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **39** |
+| 未処理の論文候補（Research ready） | **42** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **350** |
@@ -40,9 +40,9 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **39** |
+| 未処理候補（Research ready） | **42** |
 | 有効claim（lease） | **1** |
-| 今すぐ着手可能（Claimable） | **40** |
+| 今すぐ着手可能（Claimable） | **43** |
 | 有効leaseを持つworker run | **1** |
 | :30 最新worker run | **2026-09-15T05:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
@@ -76,20 +76,20 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 指標 | 件数 / 率 |
 |---|---:|
 | Research完了 | **75** |
-| Repo収録 | **76** |
+| Repo収録 | **79** |
 | Audit完了 | **0** |
-| 探索評価候補 | **7** |
-| Research候補採用 | **1** |
+| 探索評価候補 | **10** |
+| Research候補採用 | **4** |
 | 重複除外 | **1** |
-| 重複率 | **14.3%** |
+| 重複率 | **10.0%** |
 | :00 補助worker Discovery run（毎時枠） | **3** |
-| :00 補助worker Discovery round（stats観測） | **4** |
+| :00 補助worker Discovery round（stats観測） | **5** |
 | 通常worker run（ledger観測） | **1** |
 | Fallback archive（全helper） | **32** |
 
 ### 24時間の流れ
 
-**探索評価 7 → 重複除外後 6 → Research候補採用 1 → Research完了 75 → Repo収録 76**
+**探索評価 10 → 重複除外後 9 → Research候補採用 4 → Research完了 75 → Repo収録 79**
 
 ## 次に処理する候補
 
@@ -111,18 +111,19 @@ Run: **2026-09-15T07:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **1** |
-| 探索軸 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング |
-| 評価候補 | **2** |
+| 探索round | **2** |
+| 探索軸 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング / 熱・再現性・プライバシー制約を扱うLLM推論ランタイム |
+| 評価候補 | **5** |
 | 重複除外 | **0** |
-| Novel候補 | **2** |
-| Research候補採用 | **0** |
+| Novel候補 | **5** |
+| Research候補採用 | **3** |
 | 重複率 | **0.0%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
+| 熱・再現性・プライバシー制約を扱うLLM推論ランタイム | 3 | 0 | 3 | 0.0% | 100.0% |
 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
@@ -130,7 +131,7 @@ Run: **2026-09-15T07:00:00+09:00**
 
 ### 直近5件の:00 補助worker Discovery run
 
-- 2026-09-15T07:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 0 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング
+- 2026-09-15T07:00:00+09:00 — 2 round: 評価 5 / 重複 0 / 採用 3 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング / 熱・再現性・プライバシー制約を扱うLLM推論ランタイム
 - 2026-09-15T03:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache所有権・OS page cache・階層メモリ
 - 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
 - 2026-09-13T11:00:00+09:00 — 15 round: 評価 65 / 重複 34 / 採用 8 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing / MoE expert locality・expert prefetch・SSD/edge cacheability / CXL/SSD shared KV・tiered storage resource optimization / serving software aging・runtime reliability・lossless compression・load-aware speculative serving
