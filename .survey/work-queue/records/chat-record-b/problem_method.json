@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-86683d3aef66c7e5c6951614",
+  "attempt_id": "attempt-af9e6bd43b53482767542e62",
   "job_id": "job-research-5b0daef0009e72b2",
   "slot": "problem_method",
   "data": {
@@ -31,8 +31,8 @@
     "failure_modes": "評価はoffline batch inferenceに限定され、動的到着を伴うonline servingでの待ち時間、公平性、入場制御は未評価である。blockを小さくしすぎるとscheduler/gather-scatter overheadが増え、逆に64 tokenなど大きくするとparallel decoding近似の品質悪化が増える。prompt長sortingは将来の到着順公平性と衝突し得る。token budgetは対象GPU上のoffline profilingに依存する。"
   },
   "reservation": {
-    "claim_id": "claim-86683d3aef66c7e5c6951614",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0030JST",
+    "claim_id": "claim-af9e6bd43b53482767542e62",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }
 }
