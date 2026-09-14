@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T19:09:54.099915+00:00",
+  "updated_at": "2026-09-14T19:16:27.339793+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T19:09:54.099915+00:00",
+      "last_recorded_at": "2026-09-14T19:16:27.339793+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 69,
+        "research_completed": 70,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 14
       },
       "events": [
-        {
-          "event_id": "34801568162:1",
-          "recorded_at": "2026-09-14T03:09:20.897777+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34801568162",
-            "run_attempt": "1",
-            "source_sha": "237845299eb2ffc619bec745273c78ddbaef046a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34801635026:1",
           "recorded_at": "2026-09-14T03:10:47.243693+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34885858147:1",
+          "recorded_at": "2026-09-14T19:16:27.339793+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34885858147",
+            "run_attempt": "1",
+            "source_sha": "f023efdbfb36bb5ee7f4856cd1843990fa89d3da"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20182,6 +20182,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.11916",
           "title": "Characterizing Software Aging in GPU-Based LLM Serving Systems",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-8f8cd2df2a210c58",
+          "type": "research",
+          "canonical_id": "arXiv:2507.21276",
+          "title": "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems",
           "from": "ready",
           "to": "completed"
         }
