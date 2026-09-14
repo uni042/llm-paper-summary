@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-10b0fd060950a22520ffad10",
   "job_id": "job-research-f3ec00db7d9723b7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-10b0fd060950a22520ffad10",
-    "worker_id": "scheduled-chat-20260915T0530JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "differences": "llama.cppにもNUMA分散オプションはあるが、主にスレッドを各ノードへ配置するだけで、各演算の重み・活性を対応するローカルメモリへ明示的に束縛しない。ArcLightはメモリ管理、スレッド群、計算グラフ、重み分割を一体設計し、NUMAノードをCPU内のテンソル並列単位として扱う。vLLMやSGLangなどGPU基盤がページ化KVやGPUカーネル・スケジューリングを中心に最適化するのに対し、ArcLightはCPUのNUMA帯域とスレッド同期が中心課題である。モデル圧縮のように転送量そのものを減らす手法とも異なり、既存Q4_0重みのまま複数メモリチャネルの帯域を局所的に使い切ることを狙う。",
+    "novelty_vs_prior": "NUMA対応だけなら既存CPUソフトウェアにも一般的な技術だが、LLMのTransformer構造へ合わせてQ/K/V・MLP重みを行列方向に分割し、Scatter/Gatherと動的スレッド群で単一グラフとNUMA別部分グラフを同じ軽量ランタイム上で切り替える点が特徴である。既存巨大基盤への後付けではなく最小構成から再設計したため、研究者が配置・同期方針を変更しやすい。",
+    "implementation_status": "OpenBMB/ArcLightとして公開され、ARM向けCPU演算、NUMAメモリ管理、テンソル並列、スレッド管理、計算グラフを含む。論文はACL 2026 Demo採択。低水準演算はllama.cpp由来実装を再利用し、フレームワーク構造とNUMA実行を主に独自化する。",
+    "research_positioning": "GPU中心のLLMサービング研究を補完するCPU実行基盤であり、特に多数コアサーバー、ネットワーク装置、GPUを持たない環境での高性能推論に位置付けられる。CPUを単一均質デバイスではなく複数の局所メモリ帯域領域として扱うため、CPUオフロードや異種推論で『CPU側へ移した後にどのNUMAへ置くか』まで考える際の基盤になる。",
+    "relation_to_existing_repository": "階層メモリ・CPUオフロード系ではGPUからCPUへ退避すること自体に注目しがちだが、ArcLightはCPU内にも約4倍の局所/遠隔帯域差があることを示す。したがってGPU/CPU/SSD階層を設計する場合、CPUを単一階層として扱わずNUMAノードまで配置単位へ細分化する必要性を支持する。MoE expert offloadingなら、expert重みを要求を処理するコア群と同じNUMAへ置き、expert選択・先読みとNUMA局所性を同時最適化する方向が考えられる。ただし論文自体はGPU、SSD、MoEオフロードを評価しない。",
+    "limitations": "実験はHUAWEI Kunpeng-920 ARMv8.2のみで、x86や異なるNUMA数・帯域比への一般化は未検証。比較対象は主にllama.cppで、ONNX Runtime等との実測比較はない。Scatter/Gather実装は初期段階で、著者もメモリ使用量と並列効率の改善を将来課題とする。プリフィルは演算律速なのでデコードほどNUMAテンソル並列の利得が大きくない。モデルはQwen3-4B Q4_0中心で、大規模MoEや長文KV負荷に対する評価は不足する。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-10b0fd060950a22520ffad10","worker_id":"scheduled-chat-20260915T0530JST","worker_kind":"scheduled_chat"}
 }
