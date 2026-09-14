@@ -2,11 +2,16 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-f438900b5da15a74a33257b8",
-  "job_id": "job-research-79f62fbfcb1294fd",
-  "data": {},
+  "attempt_id": "attempt-18cadbda7f7f0623cf7dfb1f",
+  "job_id": "job-research-e3455f9cc66c1448",
+  "data": {
+    "limitations": "評価はNVIDIA H100を中心としたHopper世代クラスタで行われ、異なるGPU世代、CPU/GPU異種cluster、disaggregated prefill/decode、MoE、長大context専用workloadへの一般化は直接示されない。要求到着はShareGPT prompt分布を使うPoisson synthetic workloadで、本番商用traceのburstinessやmodel popularity変動をそのまま再現していない。global placementは事前profileした要求率、平均activation/KV footprint、TTFTを利用するため、profileと実運用の乖離が大きい場合には再配置頻度とmigration costが課題になる。local schedulerはTTFTをhard SLOとしており、TPOTやend-to-end latency、複数SLO class、quality-aware routingは扱わない。Prism*比較ではKV managerをKV slabへ置換してscheduler差を分離しているため、原PrismのCUDA VMM overheadを含むsystem-to-system比較ではない。公式codeの恒久URLは一次資料から確定できておらず、artifactの再現性も追加確認が必要である。",
+    "differences": "vLLM/PagedAttentionは通常model instanceごとに独立KV block poolを持つため、同一GPU上の別modelが余剰KVを直接借りられない。FineServeは物理KV tensorをGPU単位で共有し、固定slabをmodel固有block sizeへview mappingすることでcross-model sharingを追加する。PrismはCUDA VMMで物理memoryを動的map/unmapしてcross-model sharingとplacementを行うのに対し、FineServeはpre-allocated tensorとuser-space slab metadataによりdriver callを避け、さらにweight/activation/KV precisionが異なるmodelの限界メモリ効率をplacement scoreへ組み込む。MuxServeなどのmulti-model servingはspatial/temporal compute multiplexingを中心に扱うが、FineServeはquantized KV token sizeとmemory fragmentationを第一級の配置変数とする。QServe/QoQ、AWQ、FP8 servingは単一modelの低precision executionを高速化するのに対し、FineServeはそれら複数precision variantが同じclusterを共有するときのmemory allocatorとschedulerを対象にする。",
+    "implementation_status": "論文はvLLMベースprototypeを実装し、H100 4基のsingle-node serverとAWS p5.48xlarge 2台の最大16 H100構成で実測している。KV slabは既存attention kernelを変更せずtensor viewとblock table mappingで共有し、global/local schedulerも実装してend-to-end評価しているため、単なるsimulationではない。2026-09-14の確認では、著者関係者の公開投稿にFineServe source codeへの短縮リンクが示される一方、arXiv本文にはrepository URLがなく、GitHub検索でもSamsung SDS著者公式repositoryを一意に確定できなかった。したがって実装存在は論文と著者投稿から確認できるが、公開code URLは監査対象として残す。",
+    "research_positioning": "FineServeはLLM servingの中でも、量子化modelの実行kernel最適化ではなく、mixed-precision multi-model clusterにおけるKV cache memory管理とSLO schedulerの共同設計に位置する。重要な設計原理は、memory容量をbyte数だけで比較せず『追加memory 1単位が何tokenの追加生成能力になるか』という限界効率へ変換し、precision差をplacement decisionへ接続したことにある。またfixed-size slabで物理allocation単位を統一しつつlogical block granularityはmodelごとに変える考え方は、異なるKV precisionやTP degreeが混在するserverでfragmentationとdriver overheadを同時に抑える一般的な手法として比較価値がある。既存repositoryではPagedAttention系KV管理、Prism/MuxServe系multi-model GPU sharing、quantized servingをつなぐ論文として扱い、特にshared KV poolを持つ後続研究との比較ではallocation granularity、mapping overhead、placement objective、SLO scopeの4点を分けて見るのが適切である。"
+  },
   "reservation": {
-    "claim_id": "claim-f438900b5da15a74a33257b8",
+    "claim_id": "claim-18cadbda7f7f0623cf7dfb1f",
     "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }

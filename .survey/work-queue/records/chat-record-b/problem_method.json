@@ -2,11 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-f438900b5da15a74a33257b8",
-  "job_id": "job-research-79f62fbfcb1294fd",
-  "data": {},
+  "attempt_id": "attempt-18cadbda7f7f0623cf7dfb1f",
+  "job_id": "job-research-e3455f9cc66c1448",
+  "data": {
+    "problem": "複数LLMを同一GPUに同居させると、各エンジンが固定量のKVキャッシュを私有する方式では、あるモデルの要求が少ない時間にもその予約メモリを別モデルが利用できず、待ち行列とSLO違反が増える。共有プールへ変えても、FP16、FP8、AWQ、QoQではKVの1トークン当たりバイト数や量子化パラメータが異なるため、モデルごとのブロック寸法をそのまま混在させれば外部断片化が起き、全モデルへ同一ブロック寸法を強制すれば小さいKV精度側で内部断片化が増える。CUDA仮想メモリ管理を用いて物理領域を動的にmap/unmapする方式は連続した論理ビューを保てるが、各層・各要求でドライバ呼出しが発生し数ミリ秒規模へ積み上がる。また量子化方式ごとにプレフィルの計算効率、デコードのメモリ効率、重み・活性値・KVの基礎占有量が異なるため、要求率やSLOだけで配置する精度非依存schedulerはメモリ逼迫を誤推定する。局所schedulerでも個々の要求時間だけを見て大きなバッチを形成すると、チャンク化プレフィルではバッチ全体の処理時間が伸び、最早期限の要求がSLOを破る。FineServeはこのメモリ共有と配置・バッチ処理を一体で扱う。",
+    "novelty": "第一の新規性は、GPU上に単一の大きな共有KVテンソルを事前確保し、それを固定物理寸法のKVスラブへ分割しながら、各スラブ内部を要求元モデルのKVブロック寸法に応じた個数の論理ブロックとして再解釈する点にある。これにより、物理単位を揃えて外部断片化を避けつつ、各モデルは自分に適したブロック寸法を維持して内部断片化も抑え、実行中のCUDA VMM呼出しを不要にする。第二の新規性は、追加KVメモリ当たり何トークンを多く生成できるかという限界メモリ効率をモデル・精度ごとの資源価値として定義し、重み・平均活性値・基礎KVを先に差し引いた残余容量の価値を用いて大域配置を決める点である。第三に、Moore-Hodgson型の期限スケジューリングをチャンク化プレフィルへ適応させ、個別要求ではなく仮バッチ全体の予測TTFTで最早期限を検証し、必要なら最長要求を除去してSLOとバッチ効率を両立する。",
+    "method_overview": "FineServeは起動前のプロファイル、大域モデル配置、GPU内KV共有、オンライン局所バッチ処理の順に動く。まず各モデル・量子化variantについて、要求率を処理できる最小バッチでの重み、平均活性値、基礎KVを含む必要メモリF_M、TTFT、追加KV容量に対する生成トークン増加量を測り、限界メモリ効率μを得る。大域schedulerはF_Mの大きいモデルから順に配置し、候補GPUまたはテンソル並列GPU群ごとに既存モデルと新モデルの基礎占有量を差し引いて残る争奪KV容量K_remを計算する。厳密なKV配分最適化の代わりに、同居モデルの平均μとK_remを掛け、モデル数で正規化した近似scoreを使って、残余メモリがより多くのトークンへ変換される配置を選ぶ。各GPUではKV slab managerが一つの共有KVテンソルを固定寸法slabへ分ける。workerは自身のKV block sizeを指定してslabを要求し、managerはslab内のlocal block IDとslab IDから各vLLM engineが理解する論理block IDを導出する。メモリは事前確保済みで、Python/CUDA tensor viewを通じて同じ物理領域をモデル固有のblock tableへ見せるため、attention kernelを変えずにcross-model sharingを行える。実行時のlocal schedulerはモデル別待ち行列を持ち、到着時刻+モデルTTFT SLOをdeadlineとする。単独即時実行でもdeadlineに間に合わない要求を先に除外し、残りをdeadline順に並べて仮batchを作る。チャンク化プレフィルでbatch全体を処理した場合の予測TTFTが最早deadlineを超える間は最長要求を一つずつ取り除き、最後に同時要求数とbatch token上限でtrimする。この構成により、静的予約で遊休するKVを精度の異なるモデル間で融通しながら、その容量を最も生成効率の高い配置へ与え、オンライン負荷変動時もSLOを壊しにくいbatchを形成する。",
+    "components": [
+      {
+        "name": "精度認識KVスラブ管理",
+        "description": "KV slab managerは各GPUに一つだけ大きな共有KV tensorを事前確保し、物理メモリを同一寸法のslabへ区切る。slab寸法は同居し得るモデルのKV block寸法を収容できる単位とし、workerが自身のblock sizeを指定すると、そのslabを何個の論理KV blockとして使えるかを決める。物理割当単位がslabで統一されるので異なるblock sizeを並べても穴が生じにくく、各モデルへ巨大な共通block sizeを強制しないため小さいFP8/KV4側の内部浪費も抑えられる。各engineはslab IDとslab内local block IDから自分の論理block IDを計算し、既存PagedAttentionのblock tableへviewとして接続するためattention kernel変更を必要としない。さらに共有tensorを初期化時に確保しておくことで、要求増減のたびにCUDA VMMのmap/unmapを呼ぶ必要がなく、cross-model KV融通をユーザ空間のmetadata操作へ落とし込む。"
+      },
+      {
+        "name": "限界メモリ効率による大域配置",
+        "description": "大域schedulerはモデルを単なる要求率やSLOだけで並べず、精度ごとに異なるメモリ価値を限界メモリ効率μとして扱う。μは追加のKV容量を与えたときに生成可能トークンがどれだけ増えるかを表し、同じ容量ならKV8やKV4のように1トークン当たり容量が小さいモデルほど高くなり得る。まず各モデルの重み、平均活性値、最低限のKVを含む基礎占有量F_Mをプロファイルし、F_Mの大きい順に先に置くことで後から巨大モデルが入らなくなる事態を避ける。各候補GPUでは基礎占有量を差し引いた残余KV容量と、配置後に同居する全モデルの平均μを用いて近似scoreを計算し、残ったメモリが多くのトークンへ変換される場所を選ぶ。テンソル並列時は単一GPUではなくTP-sized groupを候補として同じ判断を行い、基礎バッチがTTFT SLOを破る場合はdata-parallel replicaを増やす。"
+      },
+      {
+        "name": "SLO認識適応バッチ処理",
+        "description": "局所schedulerは各nodeでモデル別queueを維持し、要求ごとのdeadlineを到着時刻とモデルTTFT SLOの和として計算する。まず単独で即時処理してもdeadlineを超える要求は除外し、既に救えない要求がGPUメモリと計算時間を占有して他要求まで遅らせることを防ぐ。残りをearliest-deadline-first順に仮batchへ入れるが、古典的Moore-Hodgson法のように個々の処理時間だけを見るのではなく、chunked prefillで仮batch全体を処理したときの予測TTFTを使う。最早deadlineを超える場合は最も長いrequestを除き、batch全体の終了時刻がanchor requestのdeadline以内になるまで繰り返す。その後、現在利用可能なcomputeとKV容量から導く最大同時要求数N_maxと最大batched tokens T_maxでさらにtrimする。これによりchunked prefillの大batch利得を利用しつつ、過大batchによる早期deadline違反を抑える。"
+      },
+      {
+        "name": "vLLMワーカー統合",
+        "description": "FineServeではモデルshardとGPUの組ごとにvLLM-based workerを生成し、tensor parallelismがNならN GPUへworkerを配置する。同一モデルのdata-parallel replicaも配置上は独立model instanceとして扱うため、大域schedulerが負荷に応じて複数replicaへ資源を割り当てられる。各workerはモデル固有の論理block tableを保持する一方、物理KV領域はGPU側slab managerを介して他workerと共有する。これにより既存vLLMの推論engineとattention実装を大幅に書き換えず、メモリ管理だけを共有層へ持ち上げられる。global schedulerはnodeを跨ぐ配置とtarget rateを決め、local schedulerはそのnodeで実際の到着要求からbatchを再構成するため、オフラインのprecision-aware容量計画とオンラインの短時間負荷変動を別階層で扱える。"
+      }
+    ],
+    "system_design": "制御面ではglobal schedulerがプロファイル済みモデル特性、要求率、TTFT SLO、GPUメモリ予算を用いてmodel-to-GPU placementを作り、nodeごとのlocal schedulerへ目標負荷を渡す。実行面では各GPUのKV slab managerが同居workerのKV割当・解放とslab tableを管理し、worker側vLLM engineは自分専用に見える論理block tableを通じて共有物理tensorへアクセスする。memory poolを実行中に再mapしないのでcontext switchを回避できるが、基礎占有量F_MやTTFT予測は事前profileへ依存する。負荷変動はlocal schedulerがbatchを毎回作り直して吸収する一方、モデル構成や長期的要求率が大きく変わる場合はglobal placementを再計算する設計である。TTFTだけをhard constraintに採るため、出力長に依存するTPOTやend-to-end latencyを直接保証する仕組みではない。"
+  },
   "reservation": {
-    "claim_id": "claim-f438900b5da15a74a33257b8",
+    "claim_id": "claim-18cadbda7f7f0623cf7dfb1f",
     "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
