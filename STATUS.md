@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 11:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 11:41 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **98** |
+| 未処理の論文候補（Research ready） | **97** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **291** |
+| 全文精読完了（累計） | **292** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,20 +35,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **98** |
-| 処理中（Active claims） | **4** |
+| 未処理候補（Research ready） | **97** |
+| 処理中（Active claims） | **3** |
 | 今すぐ着手可能（Claimable） | **95** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **3** |
+| :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 11:39 JST** |
 | :00 補助worker 直近claim | **09-14 11:39 JST** |
 | 直近24h Research完了（:30 通常worker） | **13** |
-| 直近24h Research完了（:00 補助worker） | **14** |
+| 直近24h Research完了（:00 補助worker） | **15** |
 | 直近24h Research完了（帰属不明） | **2** |
 | 最新通常run | **2026-09-14T11:30:00+09:00** |
 | 最新通常runのResearch完了 | **1** |
-| 最古の有効claimの経過時間 | **49 min** |
+| 最古の有効claimの経過時間 | **50 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -58,7 +58,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=98 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=97 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
 - 直近24hのResearch完了のうち **2件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -66,7 +66,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **29** |
+| Research完了 | **30** |
 | Repo収録 | **58** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -80,7 +80,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 29 → Repo収録 58**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 30 → Repo収録 58**
 
 ## 次に処理する候補
 
@@ -126,6 +126,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2607.01579` — OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters
 - `arXiv:2506.01986` — SpecMemo: Speculative Decoding is in Your Pocket
 - `arXiv:2603.16104` — Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective
 - `arXiv:2506.17615` — EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration
@@ -133,7 +134,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2601.22438` — Towards Resiliency in Large Language Model Serving with KevlarFlow
 - `arXiv:2608.23843` — PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression
 - `arXiv:2607.17715` — C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference
-- `arXiv:2606.13740` — Efficient On-Device Diffusion LLM Inference with Mobile NPU
 
 ### 7日比較
 
