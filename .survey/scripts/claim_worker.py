@@ -365,7 +365,7 @@ def _worker_has_active_claim(
 
 
 def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
-    return {
+    assignment = {
         "job_id": claim["job_id"], "claim_id": claim["claim_id"],
         "worker_id": claim["worker_id"], "worker_kind": claim["worker_kind"],
         "attempt_id": claim["attempt_id"], "claimed_at": claim.get("claimed_at"),
@@ -373,6 +373,16 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "depends_on_job_ids": list(claim.get("depends_on_job_ids") or [claim["job_id"]]),
         "job": dict(job),
     }
+    for key in (
+        "record_bank",
+        "record_bank_fallback",
+        "record_bank_recovery",
+        "record_bank_recovery_attempt_ids",
+        "record_bank_recovery_submission",
+    ):
+        if key in claim:
+            assignment[key] = claim[key]
+    return assignment
 
 
 def _dependencies(job_id: str, job: dict[str, Any]) -> list[str] | None:
@@ -518,15 +528,35 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
             worker_id=request["worker_id"],
             worker_kind=request["worker_kind"],
         ):
-            _write(result_path, {
-                "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
-                "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
-                "ok": True, "assignments": [], "processed_at": _iso(now),
-                "reason": "worker already has an active unsubmitted claim",
-                "checkpoint_released": released_now,
-            })
-            processed += 1
-            continue
+            resumed = []
+            new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
+            for job_id, current in claims.items():
+                if not (
+                    current.get("active")
+                    and current.get("worker_id") == request["worker_id"]
+                    and current.get("worker_kind") == request["worker_kind"]
+                    and job_id in by_id
+                ):
+                    continue
+                claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+                claim["expires_at"] = new_expiry
+                claim["heartbeat_at"] = _iso(now)
+                _write(claims_root / f"{job_id}.json", claim)
+                claims[job_id] = dict(claim, active=True, expired=False)
+                resumed.append(_assignment(by_id[job_id], claim))
+
+            if resumed:
+                _write(result_path, {
+                    "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
+                    "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+                    "ok": True, "assignments": resumed, "processed_at": _iso(now),
+                    "reason": "resumed active unsubmitted claim",
+                    "checkpoint_released": released_now,
+                })
+                assigned_recovered += len(resumed)
+                renewed += len(resumed)
+                processed += 1
+                continue
 
         checkpointed_ids = set(_checkpoint_map(request))
         available = []
