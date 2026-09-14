@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-57e22664262505d22a992383",
-  "job_id": "job-research-aef337aaa1c0f49c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-57e22664262505d22a992383",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-57e22664262505d22a992383","job_id":"job-research-aef337aaa1c0f49c","data":{"limitations":["係数はモデル、GPU、テンソル並列配置ごとの短いプロファイルで較正する前提であり、未見配置へのゼロショット汎化は評価していない。","評価モデルはLlama3.1-8BとQwen2.5-14B/32Bで、MoE、MLA、ハイブリッド注意、投機的復号など異なる実行構造へ同じ特徴式が十分かは未検証である。","vLLM 0.7.3内部プロファイラをground truthに使っており、SGLang、TensorRT-LLM等の別エンジンや新しいvLLM実装への移植性は直接示していない。","H100/A100とテンソル並列1〜4を対象とし、複数ノード通信、分離prefill/decode、異種GPU、NPU等の通信・同期コストは式に明示的に含まれない。","論文は要求別遅延帰属の精度と計算量を評価するが、その帰属を用いた実際の分数GPU制御が長期公平性、SLO、利用率、課金誤差をどこまで改善するかは将来課題である。","prefillの平均改善倍率は著者指定の2外れ値を除いて計算され、個別構成ではVTCより悪いp90/p99値も存在する。"],"differences":[{"name":"VTCとの差","description":"VTCは処理トークン数を利用量proxyとして使うため、同じ1デコードトークンでも文脈長が異なる要求をほぼ同じコストとして扱う。LLMVisorは処理トークン、KV文脈、自己注意二次項、バッチ利用率を明示し、実測係数で各配置の実効性能を較正する。特にデコードの高百分位誤差で差が大きく、要求別GPU時間を公平制御へ使う精度を高める。"},{"name":"黒箱ML遅延予測との差","description":"ランダムフォレスト等はバッチ全体の時間を高精度に予測できても、その予測値を要求別へ厳密に加法分解する構造を持たず、推論コストもミリ秒級になり得る。LLMVisorは要求単位の特徴和として式を作るため、総時間と要求別寄与を同時に計算でき、オンライン評価をマイクロ秒級へ抑える。スケジューラのcritical pathへ入れることを第一級要件にした点が異なる。"},{"name":"理論ルーフラインモデルとの差","description":"従来の分析的ルーフラインはFLOPsやメモリbyteをモデル構造から詳細計算し、GPUの理論ピーク性能で割って時間を見積もるが、実効スループットやバッチ効果のずれで精度を失いやすい。LLMVisorはルーフラインを特徴選択と律速区間の設計にだけ使い、係数は短い実機プロファイルから回帰する。物理的解釈を保ちつつ、実装・GPU・並列度の現実的な性能差を吸収する折衷設計である。"},{"name":"物理GPU分割との差","description":"MIGや専用GPUは強い隔離を提供する一方、LLMの大きなメモリ常駐量と小バッチ対話負荷では資源を細かく再利用しにくい。LLMVisorは物理分割を行わず、複数テナントを同じバッチへ混載したままソフトウェアでGPU時間を帰属する。強い性能隔離そのものを保証する方式ではなく、共バッチの効率を保った分数共有を制御するための計測プリミティブとして補完的である。"}],"implementation_status":"vLLM 0.7.3のスケジューラ経路へ軽量プロトタイプを統合して実機評価済み。arXiv v1本文では2026-09-14確認時点で公開実装URLを提示していないため、外部で利用可能なコード公開状況は未確認として扱う。","research_positioning":"LLM配信の公平性・マルチテナント制御と性能モデリングの間を埋める研究である。PagedAttentionやスケジューラ研究はバッチをどう組むか、VTCは公平性をどの単位で追跡するかを扱うが、共バッチされたGPU実時間を要求別へ低コストで分ける基礎計測が弱かった。LLMVisorはここを加法的な遅延帰属として定義し、受付制御、時間quota、会計、what-if schedulingの共通入力にできる。今後は分離配信のKV転送時間、MoE expert通信、異種GPU、複数ノードcollective等も要求単位の加法特徴へ拡張し、実際のfair schedulerと閉ループで評価する方向が重要になる。","audit_required":false,"audit_reason":null},"reservation":{"claim_id":"claim-57e22664262505d22a992383","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
