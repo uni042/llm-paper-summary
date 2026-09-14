@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d2ff76406182a09db10f7939",
+  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
   "job_id": "job-research-2dbab0db43ceff0b",
   "data": {
     "limitations": "評価はRTX A5000/5090、3〜8B級Qwen/LLaMA、3〜6 concurrent agentsというsingle consumer-GPU regimeに限定される。長いcoding agent、深いreasoning trace、高batch cloud serving、multi-GPU clusterではphase比率やresource contentionが変わるため効果は未検証である。CUDA Green Contextを利用できるrecent NVIDIA/CUDA stackを前提とし、他vendor GPUや古いdeviceへ同じSM isolationを直接移植できない。resource controllerは10%刻みのdiscrete slotとfinite control intervalを使うため、allocation granularityとfeedback lagが残る。SLO thresholdもmodel-device pairごとのisolated profileから設定され、absolute universal SLAを保証するものではない。",
@@ -10,5 +10,9 @@
     "implementation_status": "論文実装はllama.cppを基盤とし、CUDA Green Context support、prefill/decode専用CPU thread、TPOT-driven Resource-Aware Scheduler、shared KV memory managerを追加している。実機評価まで完了しているため概念提案ではないが、2026-09-14時点で一次資料本文・参考文献から著者公式のAgentServe code repository URLは確認できない。Green Contextは起動時に10個事前生成し、runtimeはcontext creationではなくslot rebindのみ行う。",
     "research_positioning": "リポジトリではLLM serving scheduling/disaggregation系統に置く。従来のcluster-level PD分離やthroughput-oriented mixed batchingでは、tool-augmented agentの『長いcold prefill→短いdecode→tool→短いresume prefill』という反復構造が十分に表現されない。AgentServeはこのphase structureをscheduler signalとして使い、single-GPU内のSM partitionへ接続することでagentic serving向けのintra-GPU disaggregationを構成する。KV cache自体の圧縮・offload手法ではないが、shared KV poolを維持しながらcompute resourceを分離するため、KV migrationを避けたいsingle-device servingやagent session routing研究と補完的である。"
   },
-  "reservation": {"claim_id":"claim-d2ff76406182a09db10f7939","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a01b04d19277b6518b2161b4",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

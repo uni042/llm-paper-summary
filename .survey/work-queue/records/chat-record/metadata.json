@@ -2,54 +2,128 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-d2ff76406182a09db10f7939",
+  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
   "job_id": "job-research-2dbab0db43ceff0b",
   "data": {
     "canonical_id": "arXiv:2603.10342",
     "arxiv_id": "2603.10342",
     "doi": "10.48550/arXiv.2603.10342",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
     "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
     "summary": "AgentServeは、複数のツール利用エージェントを単一consumer GPU上で同時実行すると、長い初回プリフィルが短く遅延敏感なデコードを塞ぐ先頭待ちを起こす問題を扱う。エージェント要求をcold prefill、tool結果を追記するresume prefill、short decodeの三相へ分類し、cold prefillを専用キューへ隔離する一方、resume prefillは現在の出力1トークン当たり時間（Time Per Output Token; TPOT）に応じて同時実行可能なトークン予算を動的調整する。GPU側では起動時に10段階のCUDA Green Contextを作り、デコードへ必要なStreaming Multiprocessor（SM）数を10%刻みで予約し、残りをプリフィルへ割り当てる。KVキャッシュは単一エンジンの共有メモリプールに置くため、プロセス分離型のprefill/decode構成のようなKV転送を避ける。RTX A5000とRTX 5090、Qwen2.5-3B/7BとLLaMA-3-8B、ToolBench由来ReAct/Plan-and-Execute workloadsで、llama.cpp比最大2.8倍のTTFT改善と2.7倍のTPOT改善、vLLM/SGLang比でもtail latencyとthroughputの両立を報告する。",
     "list_summary": "agent workloadをcold/resume prefillとshort decodeへ分け、TPOT feedbackとCUDA Green ContextのSM予約で単一consumer GPU上のprefill/decode干渉を抑える。",
-    "authors": ["Yuning Zhang","Yan Yan","Nan Yang","Dong Yuan"],
+    "authors": [
+      "Yuning Zhang",
+      "Yan Yan",
+      "Nan Yang",
+      "Dong Yuan"
+    ],
     "authors_affiliations": "School of Electrical and Computer Engineering, The University of Sydney, Australia。",
     "published": "2026-03-11",
     "publication": "arXiv:2603.10342v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1（2026-03-11）。一次資料で査読付き会議・論文誌への採択は確認できない。",
     "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["エージェント向けLLMサービング","prefill/decode分離","GPU資源分割","CUDA Green Context","TPOTフィードバック制御","consumer GPU"],
+    "topics": [
+      "エージェント向けLLMサービング",
+      "prefill/decode分離",
+      "GPU資源分割",
+      "CUDA Green Context",
+      "TPOTフィードバック制御",
+      "consumer GPU"
+    ],
     "importance": "高。agentic workload特有のcold prefill・resume prefill・short decodeの非対称性を明示的にサービング制御へ取り込み、クラスタ級の分離ではなく単一consumer GPU内でSMを空間分割する。高価なKV転送なしにデコード遅延を保護するため、agent servingとintra-GPU disaggregationの接点として有用。",
     "hardware_evaluation": "NVIDIA RTX A5000 24GB（64 SM）+ AMD Threadripper PRO 3945WX/128GB RAM、NVIDIA RTX 5090 32GB（128 SM）+ Threadripper PRO 5955WX/128GB RAM。",
     "hardware_details": "両環境ともUbuntu 22.04、CUDA 12.4、driver 550.54.15。Qwen2.5-3B、Qwen2.5-7B、LLaMA-3-8Bを3〜6 concurrent agentで評価。AgentServeはllama.cppへCUDA Green Context対応、二つのCPU submission thread、共有KV memory managerを追加する。",
     "quality_effect": "モデル出力品質を変える近似手法ではなく、同じモデル推論の実行順とGPU資源割当を変えるサービング方式である。論文の評価対象はTTFT、TPOT、throughput、session-level SLO attainmentであり、タスク正答率や生成品質の改善は主張していない。KV再利用時はCPU mutexとcudaEventで部分書込み状態をデコードが読むことを防ぐ。",
-    "storage_targets": ["単一GPU共有メモリプール上のKVキャッシュ","prefill/decode共有モデル重み","CUDA Green ContextごとのSM資源枠"],
-    "bottlenecks": ["長いcold prefillによるhead-of-line blocking","頻繁なresume prefillとshort decodeの干渉","単一GPUでのdecode SM不足","chunked prefill境界によるtoken emission jitter","process-separated PD disaggregationのcoordination/KV-transfer overhead"],
-    "evidence_locations": ["§I","§II-B-II-C","§III-A-III-C","§IV-A-IV-E","§VI"],
+    "storage_targets": [
+      "単一GPU共有メモリプール上のKVキャッシュ",
+      "prefill/decode共有モデル重み",
+      "CUDA Green ContextごとのSM資源枠"
+    ],
+    "bottlenecks": [
+      "長いcold prefillによるhead-of-line blocking",
+      "頻繁なresume prefillとshort decodeの干渉",
+      "単一GPUでのdecode SM不足",
+      "chunked prefill境界によるtoken emission jitter",
+      "process-separated PD disaggregationのcoordination/KV-transfer overhead"
+    ],
+    "evidence_locations": [
+      "§I",
+      "§II-B-II-C",
+      "§III-A-III-C",
+      "§IV-A-IV-E",
+      "§VI"
+    ],
     "source": "https://arxiv.org/abs/2603.10342",
-    "sources": ["https://arxiv.org/abs/2603.10342","https://arxiv.org/html/2603.10342"],
+    "sources": [
+      "https://arxiv.org/abs/2603.10342",
+      "https://arxiv.org/html/2603.10342"
+    ],
     "code": null,
     "implementation": "論文はllama.cppを拡張し、prefill/decode専用CPU thread、TPOT-driven scheduler、10段階のpre-created CUDA Green Context、共有KV cache managerを実装したと記載する。一次資料本文・参考文献から著者公式コード公開URLは確認できない。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id":"arXiv:2506.02153","arxiv_id":"2506.02153"},
-      {"canonical_id":"arXiv:2303.04129","arxiv_id":"2303.04129"},
-      {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},
-      {"canonical_id":"arXiv:2501.15383","arxiv_id":"2501.15383"},
-      {"canonical_id":"arXiv:2403.02310","arxiv_id":"2403.02310"},
-      {"canonical_id":"arXiv:2507.06608","arxiv_id":"2507.06608"},
-      {"canonical_id":"arXiv:2504.19867","arxiv_id":"2504.19867"},
-      {"canonical_id":"arXiv:2504.14489","arxiv_id":"2504.14489"},
-      {"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"},
-      {"canonical_id":"arXiv:2305.05920","arxiv_id":"2305.05920"},
-      {"canonical_id":"arXiv:2509.07379","arxiv_id":"2509.07379"},
-      {"canonical_id":"arXiv:2502.13965","arxiv_id":"2502.13965"}
+      {
+        "canonical_id": "arXiv:2506.02153",
+        "arxiv_id": "2506.02153"
+      },
+      {
+        "canonical_id": "arXiv:2303.04129",
+        "arxiv_id": "2303.04129"
+      },
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2501.15383",
+        "arxiv_id": "2501.15383"
+      },
+      {
+        "canonical_id": "arXiv:2403.02310",
+        "arxiv_id": "2403.02310"
+      },
+      {
+        "canonical_id": "arXiv:2507.06608",
+        "arxiv_id": "2507.06608"
+      },
+      {
+        "canonical_id": "arXiv:2504.19867",
+        "arxiv_id": "2504.19867"
+      },
+      {
+        "canonical_id": "arXiv:2504.14489",
+        "arxiv_id": "2504.14489"
+      },
+      {
+        "canonical_id": "arXiv:2407.21783",
+        "arxiv_id": "2407.21783"
+      },
+      {
+        "canonical_id": "arXiv:2305.05920",
+        "arxiv_id": "2305.05920"
+      },
+      {
+        "canonical_id": "arXiv:2509.07379",
+        "arxiv_id": "2509.07379"
+      },
+      {
+        "canonical_id": "arXiv:2502.13965",
+        "arxiv_id": "2502.13965"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v1 HTML参考文献節",
     "references_total": 44
   },
-  "reservation": {"claim_id":"claim-d2ff76406182a09db10f7939","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a01b04d19277b6518b2161b4",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

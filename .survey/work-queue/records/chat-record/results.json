@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-d2ff76406182a09db10f7939",
+  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
   "job_id": "job-research-2dbab0db43ceff0b",
   "data": {
     "overview": "AgentServeは二世代のconsumer GPUと三モデルで、cold prefillをdecodeから隔離しつつresume prefillだけを動的budget内で混ぜることで、tail latencyを抑えながらthroughputも維持した。最大改善値はllama.cpp比TTFT 2.8倍、TPOT 2.7倍で、vLLMやSGLangに対しても一貫した改善を報告する。A5000のようなresource-constrained GPUほどprefill/decode contentionが強いため相対効果が大きい。ablationではfeedback schedulerとGreen Context isolationのどちらを外してもtail latencyが悪化し、algorithm-system co-designの両側が必要であることを示した。",
@@ -68,5 +68,9 @@
     "interpretation": "効果の本質はprefillを単にchunkすることではなく、agent workloadのphase情報を使ってcold prefillを強く隔離し、resume prefillだけをdecode latencyに応じて可変的に混ぜる点にある。さらにschedulerの意図をCUDA Green ContextによるSM spatial isolationで実際のGPU resource guaranteeへ落とすため、single-engineでもdecodeのheartbeatを守れる。A5000で改善幅が大きいことから、特にresource-constrained edge/local deploymentで価値が高い。",
     "quality_impact": "model weight、attention近似、sampling ruleは変更せず、serving order・admission・SM partitionを変えるsystem optimizationである。論文は生成accuracyやtask qualityの改善を評価しておらず、品質への直接影響は基本的に中立と位置付けられる。correctness面ではshared KV memory poolでprefill completion後のみregionをread-onlyとして公開し、CPU mutexとcudaEventでpartial writeを防ぐ。"
   },
-  "reservation": {"claim_id":"claim-d2ff76406182a09db10f7939","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a01b04d19277b6518b2161b4",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

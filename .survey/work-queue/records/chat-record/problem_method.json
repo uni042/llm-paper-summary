@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-d2ff76406182a09db10f7939",
+  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
   "job_id": "job-research-2dbab0db43ceff0b",
   "data": {
     "problem": "従来chatbot servingでは、入力prefillは比較的短くdecodeが長いため、continuous batchingやchunked prefillで総throughputを高める設計が有効だった。tool-augmented agentでは逆に、長いsystem promptを読むcold prefill、tool結果や追加指示を既存KVへ足す短いresume prefill、function callなど数十tokenのshort decodeが細かく交互に現れる。単一consumer GPU上で複数agentが重なると、巨大なcold prefill kernelがStreaming Multiprocessorとmemory bandwidthを長時間占有し、短いdecode streamのtoken emissionを止める。process-separated prefill/decodeは単一GPUではcoordinationとKV transferのoverheadが相対的に大きく、chunked prefillも非常に短いdecodeではchunk境界ごとの揺らぎを残すため、agent workload向けのより細粒度な干渉制御が必要になる。",
@@ -28,5 +28,9 @@
     ],
     "system_design": "AgentServeはapplication、orchestration、executionの三層構成で、CPU上のRequest ManagerとResource-Aware Schedulerがqueueとbudgetを管理し、GPU上のprefill/decode専用Green Contextが実際のresource isolationを行う。decode SLOを優先しつつ余剰SMをprefillへ返すため、static partitionよりworkload変動へ追従できる。一方、10%刻みというallocation granularity、TPOT control intervalによるlag、profile scalingの単調性を前提とし、Green Contextが使えないGPUやCUDA environmentでは同じ保証を直接得られない。target workloadもlocal tool-augmented SLM agentであり、長いgeneral coding agentやcluster-scale inferenceを直接最適化するものではない。"
   },
-  "reservation": {"claim_id":"claim-d2ff76406182a09db10f7939","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a01b04d19277b6518b2161b4",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
