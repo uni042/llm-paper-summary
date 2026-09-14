@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2602.09345",
   "title": "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
   "source_url": "https://arxiv.org/abs/2602.09345",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
   "selection_reason": "サンドボックス化されたAIコーディングエージェント144タスクを計測し、OS実行が端末間遅延の55〜60%を占め、メモリが同時実行数の主要制約で、ツール呼出し由来のピークが平均の最大15.4倍になることを示す。AgentCgroupはツール呼出し境界に沿う階層cgroupとeBPF／sched_extによるカーネル内制御を提案し、エージェントの宣言意図を資源制御へ使う。LLM推論以外の実行基盤ボトルネックを扱う隣接OS研究として価値がある。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

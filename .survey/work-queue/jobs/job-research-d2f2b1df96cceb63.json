@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2606.24467",
   "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
   "source_url": "https://arxiv.org/abs/2606.24467",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.24467-compresskv-semantic-retrieval-guided-kv-cache-compression-for-resource-efficient-long-context-llm-inference.md",
   "selection_reason": "GQA系LLMで全headのattention scoreを一律利用するKV evictionが意味的に重要なtokenを落とす問題に対し、意味検索headを同定してtoken保持判定に使い、layer別eviction error推定でcache budgetも配分する。LongBench QAでKVの3%のみでもfull-cache性能の97%以上、Needle-in-a-Haystackで0.7% KV storageでも90% accuracyを報告し、長文推論の容量削減と品質維持の設計として価値がある。",
   "status": "superseded",
   "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",

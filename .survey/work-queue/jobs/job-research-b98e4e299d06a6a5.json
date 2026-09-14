@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2509.24832",
   "title": "SemShareKV: Efficient KVCache Sharing for Semantically Similar Prompts via Token-Level LSH Matching",
   "source_url": "https://arxiv.org/abs/2509.24832",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2509.24832-semsharekv-efficient-kvcache-sharing-for-semantically-similar-prompts-via-token-level-lsh-matching.md",
   "selection_reason": "完全一致prefixに限定せず、token embeddingのLSH fuzzy matchingとRoPE補正で意味的に近い別prompt間からKVを選択再利用する。5K-token入力で最大6.25倍の高速化とGPUメモリ42%削減を報告しており、prefix cachingからsemantic cache sharingへ設計空間を広げる実装指向の候補。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

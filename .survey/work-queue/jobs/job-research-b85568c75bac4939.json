@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2605.05696",
   "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
   "source_url": "https://arxiv.org/abs/2605.05696",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md",
   "selection_reason": "エージェント型promptでは同一内容がturnごとに位置を変えて現れprefix cacheが無効化される一方、MLAは位置非依存latent KVと小さいRoPE成分へ分解できる点を利用する。IrminsulはSGLang radix cacheをcontent-hash keyingへ拡張し、chunk境界と位置差に応じてRoPE成分だけを補正するMLA-native PICを提案する。3種のMLA-MoE deploymentで最大約83%のprompt tokenをexact-prefix以上に再利用し、cache hit当たりprefill energyを63%削減しており、MLAとagentic servingのキャッシュ設計として価値がある。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

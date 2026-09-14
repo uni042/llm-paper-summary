@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2606.11916",
   "title": "Characterizing Software Aging in GPU-Based LLM Serving Systems",
   "source_url": "https://arxiv.org/abs/2606.11916",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md",
   "selection_reason": "GPU LLM servingを長時間運転した際のmemory leakやsoftware agingをhost・device・clientの同時計測で定量化する実証研究。6 deploymentを216時間同条件で稼働し、全構成で統計的に有意なmemory agingを観測し、leak rateがserving runtimeと構成に強く依存することを示す。長時間稼働・rejuvenation・障害予防というproduction runtimeの盲点を補う基盤資料として有用。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

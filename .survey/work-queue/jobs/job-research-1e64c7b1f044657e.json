@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2504.15364",
   "title": "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments",
   "source_url": "https://arxiv.org/abs/2504.15364",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md",
   "selection_reason": "KVキャッシュ内のkey多様性を重要度の代理に使い、attention scoreを参照せず類似度だけで追い出し対象を決める学習不要手法。FlashAttention等の最適化済みattentionと両立し、LongBenchでは8K cache budgetで約23%のKV削減時にfull-cacheとの差を0.04%未満に抑え、他のtoken eviction法に対してend-to-end推論遅延を最大30%削減したと報告する。NeurIPS 2025採択で、今回のECOKV探索から遡った重要な幾何学ベースKV evictionの未収録候補。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

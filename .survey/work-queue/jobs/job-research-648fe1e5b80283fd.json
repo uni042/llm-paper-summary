@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2609.06663",
   "title": "ECOKV: Geometry-Aware KV Cache Eviction via Complementary Diversity Metrics",
   "source_url": "https://arxiv.org/abs/2609.06663",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.06663-ecokv-geometry-aware-kv-cache-eviction-via-complementary-diversity-metrics.md",
   "selection_reason": "マルチモーダルLLMのKVキャッシュ圧縮で、従来のcosine similarity単独の多様性評価が表現の異方性と大きさ情報の欠落で機能しにくい点を分析し、Euclidean distanceとcosine similarityを組み合わせたgeometry-awareな多様性指標とheadごとの冗長性推定を用いる。複数圧縮率で既存KV evictionへ統合可能な改善を報告しており、KVキャッシュ最適化系統の新しい設計軸として研究価値がある。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

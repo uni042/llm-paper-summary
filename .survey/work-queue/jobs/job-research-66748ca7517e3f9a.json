@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2506.02006",
   "title": "Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing",
   "source_url": "https://arxiv.org/abs/2506.02006",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md",
   "selection_reason": "動的・バースト型負荷に対し、量子化layer swappingとmemory-pressure-aware KV cache resizingをtoken単位で非同期適用するMorphServeを提案する。実ワークロード評価でSLO違反を92.45%削減しP95 TTFTを2.2〜3.9倍改善すると報告し、model precisionとKV容量を実行時に連動させるserving runtime候補として価値がある。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

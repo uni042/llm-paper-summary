@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2609.11294",
   "title": "Memory Compression for High-Fanout Agent Sandboxes",
   "source_url": "https://arxiv.org/abs/2609.11294",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.11294-memory-compression-for-high-fanout-agent-sandboxes.md",
   "selection_reason": "AgentZipは多数のAIエージェント用サンドボックスが共有テンプレートと類似実行軌跡を持つことを利用し、テンプレート相対・サンドボックス間のメモリ冗長性を圧縮するOS系システム。LLM待ち時間へ圧縮処理を重ね、復元時プリフェッチで前景ツール実行への干渉を抑える。LLM学習・推論ワークロードでサンドボックス所有メモリを最大8.7倍削減し、積極圧縮時の遅延を最大3.1倍から1.40倍へ抑えており、エージェント実行基盤のメモリ階層管理として研究価値が高い。",
   "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",

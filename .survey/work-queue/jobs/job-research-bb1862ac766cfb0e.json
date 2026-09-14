@@ -6,7 +6,7 @@
   "canonical_id": "arXiv:2609.03515",
   "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
   "source_url": "https://arxiv.org/abs/2609.03515",
-  "paper_path": null,
+  "paper_path": "papers/inference/99-other-inference-systems/2026-2609.03515-what-matters-for-aggressive-decoding-time-kv-eviction-temporal-aggregation-and-ranking-preservation.md",
   "selection_reason": "デコード時KVキャッシュ圧縮で各トークンの重要度スコア設計より、時系列方向の指数移動平均集約とランキング保持が強く効くことを分離実験で示す。InertiaKV-Lazyは全ステップ更新版InertiaKV比1.34〜1.46倍のデコードスループットを報告し、Score-Free条件では初回ランキングを固定して以後のスコア計算を除去しても平均品質差+0.03。6つの公開モデル、LongBench/LongBench-v2/RULERで検証しており、既存KV eviction研究の設計仮定を再検討する重要な新着。",
   "status": "superseded",
   "instructions": "Read the primary source in full. Produce a repository-quality Japanese paper page covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, and relation to existing repository lineages. Do not infer missing text from abstracts/search snippets.",
