@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-be884a5e7da2da4e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.21198",
+      "title": "ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling",
+      "source_url": "https://arxiv.org/abs/2601.21198",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md",
+      "priority": 87,
+      "reason": "resource-constrained edgeでMoEをlossy quantizationなしに動かすため、expert parameterの統計的冗長性をlossless compressionで利用しつつ、cache-affinityを意識したschedulingと共同設計してI/O-boundからcompute-centricな実行へ移す。代表的edge platform・open-source MoE・real workloadでprototypeを評価し、既存system比inference latencyを最大72.77%削減、throughputを最大6.76倍向上する。expert cache/offloadをcompressionとschedulingで一体化しており、SSD/CPU系とは異なるon-device設計点として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.00466",
+      "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
+      "source_url": "https://arxiv.org/abs/2607.00466",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-aware-decode-routing.md",
+      "priority": 89,
+      "reason": "P/D-disaggregated MoE servingでloadだけを見たdecode routingでは、同程度のloadでもbatchが活性化するdistinct expert数の違いによりlatencyが変わる問題に対し、prefill時のexpert activationからdecode時のexpert signatureを予測してlocality-aware routingを行う。offline balanced K-meansでsignature spaceをdecode workerへpartitionし、onlineではlocality band内のleast-loaded workerへ送り、prefix caching下でもKV-block粒度でsignature cacheを整合させる。vLLM・最大40 GPUでmedian TPOTを強いload-balancing baseline比5.9〜13.9%削減し、expert localityとdisaggregated routingの共同設計として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-moe-locality-18",
+    "axis": "MoE lossless compression/cache-affinity・expert-locality-aware decode routing",
+    "query_summary": "MoE servingの未収録候補を追加探索し、ZipMoE（2601.21198）とELDR（2607.00466）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、Actions反映後の最新queueでもresearch ready 43でoverflow条件未満、新discovery job job-be884a5e7da2da4eを使用した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は最新Actions反映を再確認し、overflow未満ならrecent 2608-2609のserving/memory/MoE systemを探索する。",
+    "empty_round_reason": null
+  }
+}
