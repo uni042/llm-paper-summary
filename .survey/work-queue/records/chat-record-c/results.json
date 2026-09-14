@@ -2,22 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1acca798dcfd67fe1116edd9",
+  "attempt_id": "attempt-1bee06551c3e26fc2aadc68a",
   "job_id": "job-research-1b8b272a10ca2e7f",
   "data": {
     "overview": "同一20% KVメモリ予算のLongBench 16タスクで、VarRateはLlama-3.1-8Bで45.69、Qwen2.5-7Bで48.00を達成し、いずれも非圧縮モデルから0.8点以内に収まる。一様ランク版に対してはそれぞれ2.22点、17.50点改善し、Paluを評価予算全体で上回る。圧縮済みキャッシュを別クエリへ再利用すると、注意顕著度を使ってトークンを完全削除する選択型は11〜15点低下するのに対し、VarRateは全トークンを最低ランクで残すため3.53〜5.50点の低下に抑える。再利用専用のKVzipとは4条件中3条件で同等水準、全体でも概ね1点以内で、プリフィル負荷はVarRate +44.0%に対しKVzip約+372%で約8分の1である。",
     "key_results": [
-      {"metric": "LongBench平均", "value": "45.69", "baseline": "uniform-rank 43.47", "condition": "Llama-3.1-8B、20% KV予算、16タスク", "interpretation": "同じ保存量でも重要トークンへ多くのランクを配ることで2.22点改善し、非圧縮との差を0.8点以内に保つ。"},
-      {"metric": "LongBench平均", "value": "48.00", "baseline": "uniform-rank 30.50", "condition": "Qwen2.5-7B、20% KV予算、16タスク", "interpretation": "一様低ランクが厳しいモデルでも可変ランク配分が17.50点回復させ、容量配分の重要性を示す。"},
-      {"metric": "クエリ非依存再利用での性能低下", "value": "3.53〜5.50点", "baseline": "query-aware token selectionは11〜15点低下", "condition": "最初のクエリで圧縮したKVを別クエリで再利用", "interpretation": "誤って低重要度と判定したトークンも最低ランクで残るため、重要度信号が陳腐化しても不可逆な情報消失を避ける。"},
-      {"metric": "プリフィル時間オーバーヘッド", "value": "+44.0%", "baseline": "selection +2.0%、uniform/flat low-rank +24.4%、KVzip約+372%", "condition": "研究実装", "interpretation": "現在の未融合FP32実装では低ランク符号化の壁時計コストがあるが、KVzipの再符号化より大幅に軽い。"},
-      {"metric": "追加FLOP", "value": "前向き計算1回の2.61%", "baseline": "非圧縮プリフィル", "condition": "VarRate codec", "interpretation": "44%の実測プリフィル増加の多くは未融合実装由来で、演算量そのものは比較的小さい。BF16制御版ではオーバーヘッドが約25.1%まで低下し精度は維持される。"},
-      {"metric": "デコードスループット", "value": "37.4 tok/s", "baseline": "Full KV 37.5 tok/s", "condition": "完全長KVへ再構成する現実装", "interpretation": "圧縮表現を直接Attentionが消費していないため速度改善はほぼなく、メモリ削減を実機利得へ変えるには融合カーネルが必要。"},
-      {"metric": "Mistral passage retrieval", "value": "73.6", "baseline": "Full 75.6、uniform-rank 29.1", "condition": "Mistral-7B-Instruct-v0.2、15% KV予算", "interpretation": "モデル系列を変えても、一様ランクの崩壊を可変配分が大きく回復する傾向を再現する。"}
+      {
+        "metric": "LongBench平均",
+        "value": "45.69",
+        "baseline": "uniform-rank 43.47",
+        "condition": "Llama-3.1-8B、20% KV予算、16タスク",
+        "interpretation": "同じ保存量でも重要トークンへ多くのランクを配ることで2.22点改善し、非圧縮との差を0.8点以内に保つ。"
+      },
+      {
+        "metric": "LongBench平均",
+        "value": "48.00",
+        "baseline": "uniform-rank 30.50",
+        "condition": "Qwen2.5-7B、20% KV予算、16タスク",
+        "interpretation": "一様低ランクが厳しいモデルでも可変ランク配分が17.50点回復させ、容量配分の重要性を示す。"
+      },
+      {
+        "metric": "クエリ非依存再利用での性能低下",
+        "value": "3.53〜5.50点",
+        "baseline": "query-aware token selectionは11〜15点低下",
+        "condition": "最初のクエリで圧縮したKVを別クエリで再利用",
+        "interpretation": "誤って低重要度と判定したトークンも最低ランクで残るため、重要度信号が陳腐化しても不可逆な情報消失を避ける。"
+      },
+      {
+        "metric": "プリフィル時間オーバーヘッド",
+        "value": "+44.0%",
+        "baseline": "selection +2.0%、uniform/flat low-rank +24.4%、KVzip約+372%",
+        "condition": "研究実装",
+        "interpretation": "現在の未融合FP32実装では低ランク符号化の壁時計コストがあるが、KVzipの再符号化より大幅に軽い。"
+      },
+      {
+        "metric": "追加FLOP",
+        "value": "前向き計算1回の2.61%",
+        "baseline": "非圧縮プリフィル",
+        "condition": "VarRate codec",
+        "interpretation": "44%の実測プリフィル増加の多くは未融合実装由来で、演算量そのものは比較的小さい。BF16制御版ではオーバーヘッドが約25.1%まで低下し精度は維持される。"
+      },
+      {
+        "metric": "デコードスループット",
+        "value": "37.4 tok/s",
+        "baseline": "Full KV 37.5 tok/s",
+        "condition": "完全長KVへ再構成する現実装",
+        "interpretation": "圧縮表現を直接Attentionが消費していないため速度改善はほぼなく、メモリ削減を実機利得へ変えるには融合カーネルが必要。"
+      },
+      {
+        "metric": "Mistral passage retrieval",
+        "value": "73.6",
+        "baseline": "Full 75.6、uniform-rank 29.1",
+        "condition": "Mistral-7B-Instruct-v0.2、15% KV予算",
+        "interpretation": "モデル系列を変えても、一様ランクの崩壊を可変配分が大きく回復する傾向を再現する。"
+      }
     ],
     "negative_results": "最低ランクを全トークンへ保証するため、利用可能なメモリ予算にはおよそ10〜12%の下限があり、選択型のように任意に小さな保持率へ落とすことはできない。KIVI-4は実際には約31%のメモリを使うため20%条件と厳密には同一ではないが、要約タスクではVarRateより強い場合があり、VarRateが全圧縮方式を一律に上回るわけではない。ランダム顕著度へ置換するとpassage retrievalが約6.5点低下し、ウォーターフィリングを上位トークン高ランク・残り最低ランクという二値配分へ変えると、取得では競争力を保っても要約は29.0となり一様ランク30.1を下回る。情報が文脈全体へ分散するタスクでは、低重要度側にも段階的な容量を残す必要がある。",
     "interpretation": "結果は『顕著度推定を完全に正しくする』必要がないことを示す。選択型では一度の誤判定がトークン消失になるため再利用時に破綻するが、VarRateでは誤判定はそのトークンを低解像度へ落とすだけである。共有直交基底ではランクを追加するほど再構成誤差が単調に減るため、注意顕著度を細かなランク差へ変換するだけでメモリを重要箇所へ集中できる。アンカー、最近窓、内容依存の中間領域へ高ランクが自然に配られる観測も、この機構が位置固定ではなく入力ごとの情報分布へ適応していることを示す。",
     "quality_impact": "20%という強い圧縮でも非圧縮から0.8点以内を維持し、特に再利用時のロバスト性が主要利点である。一方、圧縮率を極端に下げると全トークン最低ランクの固定費が支配的になり、量子化が得意な一部要約では品質優位を持たない。"
   },
-  "reservation": {"claim_id": "claim-1acca798dcfd67fe1116edd9", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-1bee06551c3e26fc2aadc68a",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

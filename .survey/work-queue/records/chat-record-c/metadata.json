@@ -2,44 +2,96 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-1acca798dcfd67fe1116edd9",
+  "attempt_id": "attempt-1bee06551c3e26fc2aadc68a",
   "job_id": "job-research-1b8b272a10ca2e7f",
   "data": {
     "canonical_id": "arXiv:2607.15498",
     "arxiv_id": "2607.15498",
     "doi": "10.48550/arXiv.2607.15498",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": ["cs.LG"]},
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
     "title": "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs",
     "summary": "VarRateは、長文脈LLMのKVキャッシュをトークン削除ではなく『各トークンへ異なる低ランク容量を割り当てる』ことで圧縮する学習不要方式である。SnapKVなどの選択型は現在クエリの注意重みから重要トークンを判定して残りを不可逆に削除するため、同じ接頭辞キャッシュを別クエリで再利用すると重要度信号が陳腐化し、必要情報が既に失われている。一方Paluのような一様低ランク法は全トークンを残すが、重要度に関係なく同じランクを使う。VarRateはRoPE適用前の全ヘッドのK/Vをトークン単位で連結し、局所アンカーからの残差を、少数の未ラベル校正文脈からSVDで作った層共有直交基底へ投影する。最近の観測窓から得た注意顕著度に応じてウォーターフィリングで各トークンの保持ランクを配分し、最低ランクを必ず残すことで全トークンを粗くても保持する。LongBench 16タスクの20% KVメモリ予算ではLlama-3.1-8BとQwen2.5-7Bの両方で非圧縮モデルから0.8点以内を維持し、一様ランク版をそれぞれ2.22点、17.50点上回る。異なるクエリへの再利用では選択型が11〜15点崩れる条件でも低下を3.53〜5.50点に抑え、KVzipと4条件中3条件で同等水準ながらプリフィル負荷は約8分の1である。",
     "list_summary": "トークンを削除せず、注意顕著度に応じて各トークンの低ランク表現へ可変容量を配る学習不要KV圧縮で、20%メモリ予算でもLongBench平均を非圧縮から0.8点以内に保ち、再利用時の不可逆削除崩壊を抑える。",
-    "authors": ["Shahrzad Esmat", "Dhawal Shah", "Ali Jannesari"],
+    "authors": [
+      "Shahrzad Esmat",
+      "Dhawal Shah",
+      "Ali Jannesari"
+    ],
     "authors_affiliations": "Iowa State University。",
     "published": "2026-07-16",
     "publication": "arXiv:2607.15498v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1（2026-07-16）。",
     "lineage": "kv-cache-memory-management",
-    "topics": ["KVキャッシュ圧縮", "可変レート符号化", "低ランク近似", "長文脈", "接頭辞キャッシュ再利用", "学習不要圧縮"],
+    "topics": [
+      "KVキャッシュ圧縮",
+      "可変レート符号化",
+      "低ランク近似",
+      "長文脈",
+      "接頭辞キャッシュ再利用",
+      "学習不要圧縮"
+    ],
     "importance": "高。KV圧縮を『トークンを残す/捨てる』二値判断から、全トークンへ精度を可変配分する問題へ置き換え、接頭辞再利用とメモリ圧縮を両立させる。",
     "hardware_evaluation": "LongBench上でLlama-3.1-8B、Qwen2.5-7Bを中心に評価し、Mistral-7B-Instruct-v0.2でも交差検証。実装性能ではプリフィル負荷とデコードトークン毎秒を測定。",
     "hardware_details": "一次公開要約からGPU機種の確実な記載を確認できなかったため、ハードウェア型番は記録しない。",
     "quality_effect": "20% KV予算でLlama-3.1-8BはLongBench平均45.69、Qwen2.5-7Bは48.00となり、両方で非圧縮モデルとの差は0.8点以内。一様ランク版よりそれぞれ2.22点、17.50点高い。クエリ非依存再利用でも全トークンを非ゼロランクで保持するため劣化は3.53〜5.50点に留まる。",
-    "storage_targets": ["各層のKeyキャッシュ", "各層のValueキャッシュ", "低ランク係数", "アンカートークンの完全精度K/V", "トークン別ランクメタデータ"],
-    "bottlenecks": ["長文脈で線形増大するKVメモリ", "不可逆トークン削除による再利用時の情報欠落", "一様低ランク配分の容量浪費", "プリフィル時の圧縮演算", "圧縮表現を直接使う融合カーネル未整備"],
-    "evidence_locations": ["VarRate method/pipeline", "LongBench matched-budget evaluation", "query-agnostic reuse evaluation", "ablation study", "prefill/decode overhead analysis"],
+    "storage_targets": [
+      "各層のKeyキャッシュ",
+      "各層のValueキャッシュ",
+      "低ランク係数",
+      "アンカートークンの完全精度K/V",
+      "トークン別ランクメタデータ"
+    ],
+    "bottlenecks": [
+      "長文脈で線形増大するKVメモリ",
+      "不可逆トークン削除による再利用時の情報欠落",
+      "一様低ランク配分の容量浪費",
+      "プリフィル時の圧縮演算",
+      "圧縮表現を直接使う融合カーネル未整備"
+    ],
+    "evidence_locations": [
+      "VarRate method/pipeline",
+      "LongBench matched-budget evaluation",
+      "query-agnostic reuse evaluation",
+      "ablation study",
+      "prefill/decode overhead analysis"
+    ],
     "source": "https://arxiv.org/abs/2607.15498",
-    "sources": ["https://arxiv.org/abs/2607.15498", "https://www.alphaxiv.org/abs/2607.15498"],
+    "sources": [
+      "https://arxiv.org/abs/2607.15498",
+      "https://www.alphaxiv.org/abs/2607.15498"
+    ],
     "code": null,
     "implementation": "学習不要の研究実装。層ごとの共有SVD基底を少数の未ラベル校正文脈から一度作り、プリフィル中にアンカー残差・顕著度・可変ランク係数を生成する。現評価実装は圧縮K/Vをデコード時に完全長へ再構成するため、物理メモリ削減を実ランタイムへ反映するには融合カーネルが必要とされる。公開コードURLは確認できない。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id": "arXiv:2404.14469", "arxiv_id": "2404.14469", "note": "SnapKV"},
-      {"canonical_id": "arXiv:2407.02076", "arxiv_id": "2407.02076", "note": "Palu"},
-      {"canonical_id": "KVzip", "note": "Query-Agnostic KV Cache Compression with Context Reconstruction"}
+      {
+        "canonical_id": "arXiv:2404.14469",
+        "arxiv_id": "2404.14469",
+        "note": "SnapKV"
+      },
+      {
+        "canonical_id": "arXiv:2407.02076",
+        "arxiv_id": "2407.02076",
+        "note": "Palu"
+      },
+      {
+        "canonical_id": "KVzip",
+        "note": "Query-Agnostic KV Cache Compression with Context Reconstruction"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "論文本文で主要比較対象として明示された関連研究"
   },
-  "reservation": {"claim_id": "claim-1acca798dcfd67fe1116edd9", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-1bee06551c3e26fc2aadc68a",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
