@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T16:21:33.424237+00:00",
+  "updated_at": "2026-09-14T16:35:15.454052+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T16:21:33.424237+00:00",
+      "last_recorded_at": "2026-09-14T16:35:15.454052+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18688,7 +18688,7 @@
         "job_blocked"
       ],
       "counts": {
-        "research_completed": 56,
+        "research_completed": 57,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
@@ -19524,6 +19524,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34869507073:1",
+          "recorded_at": "2026-09-14T16:35:15.454052+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34869507073",
+            "run_attempt": "1",
+            "source_sha": "a041637e1c811f0739eac37d70a4a02bab8ba5f7"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19982,6 +19996,14 @@
           "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-cff945d042003c88",
+          "type": "research",
+          "canonical_id": "arXiv:2607.08786",
+          "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20064,7 +20086,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
       "paper_active_count_after": 518,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
