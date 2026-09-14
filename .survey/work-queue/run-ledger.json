@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T06:03:44.441396+00:00",
+  "updated_at": "2026-09-14T07:17:07.724627+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T06:03:44.441396+00:00",
+      "last_recorded_at": "2026-09-14T07:17:07.724627+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18692,7 +18692,7 @@
         "discovery_completed": 0,
         "blocked": 0,
         "new_jobs": 1,
-        "new_papers": 4,
+        "new_papers": 57,
         "fallback_archived": 0
       },
       "events": [
@@ -19424,6 +19424,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34816814504:1",
+          "recorded_at": "2026-09-14T07:17:07.724627+00:00",
+          "github": {
+            "event_name": "schedule",
+            "workflow": "Survey helper worker",
+            "run_id": "34816814504",
+            "run_attempt": "1",
+            "source_sha": "fcc8df153ba4e115e2506748f62349d6afd85bec"
+          },
+          "signals": [
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19865,13 +19879,66 @@
         "arXiv:2512.17910",
         "arXiv:2603.13358",
         "arXiv:2603.26498",
-        "arXiv:2607.01299"
+        "arXiv:2607.01299",
+        "arXiv:2503.03777",
+        "arXiv:2503.13737",
+        "arXiv:2503.15921",
+        "arXiv:2504.09590",
+        "arXiv:2505.12658",
+        "arXiv:2505.17052",
+        "arXiv:2506.01986",
+        "arXiv:2506.17615",
+        "arXiv:2508.06948",
+        "arXiv:2509.06261",
+        "arXiv:2509.23384",
+        "arXiv:2510.18586",
+        "arXiv:2511.22880",
+        "arXiv:2512.16822",
+        "arXiv:2601.00227",
+        "arXiv:2601.22438",
+        "arXiv:2601.22996",
+        "arXiv:2602.11808",
+        "arXiv:2602.12029",
+        "arXiv:2603.08739",
+        "arXiv:2603.10342",
+        "arXiv:2603.16104",
+        "arXiv:2603.18897",
+        "arXiv:2603.24595",
+        "arXiv:2604.08075",
+        "arXiv:2604.09557",
+        "arXiv:2604.19351",
+        "arXiv:2604.21072",
+        "arXiv:2605.06914",
+        "arXiv:2605.11581",
+        "arXiv:2605.16637",
+        "arXiv:2605.20868",
+        "arXiv:2605.22781",
+        "arXiv:2605.27744",
+        "arXiv:2606.08382",
+        "arXiv:2606.09061",
+        "arXiv:2606.09613",
+        "arXiv:2606.13740",
+        "arXiv:2606.15050",
+        "arXiv:2606.15555",
+        "arXiv:2606.23969",
+        "arXiv:2607.01579",
+        "arXiv:2607.01617",
+        "arXiv:2607.15498",
+        "arXiv:2607.17715",
+        "arXiv:2607.17979",
+        "arXiv:2608.01536",
+        "arXiv:2608.08382",
+        "arXiv:2608.09291",
+        "arXiv:2608.15473",
+        "arXiv:2608.15602",
+        "arXiv:2608.18261",
+        "arXiv:2608.23843"
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 464,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 517,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
