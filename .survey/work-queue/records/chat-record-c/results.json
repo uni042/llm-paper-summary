@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-5fcf7a060a77c39dcc2d2e09",
   "job_id": "job-research-d0c3e0e607ad747e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5fcf7a060a77c39dcc2d2e09",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "SpecMemoは投機的デコードの余分な候補木・一時バッファ・KV予約をGPU容量に合わせて削り、標準Medusaの速度利得をほぼ維持しながらメモリ制約下でOOMを避ける。Titan RTXのMT-Benchでは候補木1-10-16-17が1クエリ19.5 MB、20クエリで390 MBのバッファとなり、Medusa既定木の55 MB/クエリ・1.1 GB/対話に対して65%削減しつつスループットの96%を維持する。8×MI250のLlama-2-70Bでは、バッチ投機デコードが通常の分散バッチ復号に対しおおむね2倍で、batch 10では46.0 token/sとなりbatch 1の5.7 token/sから約8倍へ増える。",
+    "key_results": [
+      {"metric":"対話中の生成バッファメモリ","value":"55 MB/クエリ→19.5 MB/クエリ、20クエリで1.1 GB→390 MB、65%削減","baseline":"Medusa既定64ノード木","condition":"Titan RTX 24 GB、Vicuna-7B、MT-Bench、SpecMemo木1-10-16-17","interpretation":"深い木の低価値候補を削ることで、各生成反復で再利用する一時バッファを大幅に減らし、長い多ターン対話で削減量が累積する。"},
+      {"metric":"省メモリ時のスループット維持率","value":"標準投機的デコードの96%を維持","baseline":"元のMedusa候補木による投機デコード","condition":"Titan RTX 24 GB、MT-Bench、65%生成メモリ削減構成","interpretation":"候補木を無差別に縮めず、先頭レベルの多様性を残す枝刈りを使うため、メモリ削減に対する受理長・速度の低下を小さく抑える。"},
+      {"metric":"分散Llama-2-70Bバッチスループット","value":"batch 1/2/4/8/10で5.7/14.5/28.8/41.6/46.0 token/s","baseline":"分散Medusaのbatch 1","condition":"AMD MI250×8、Llama-2-70B-Chat、MT-Bench","interpretation":"複数利用者の候補検証をまとめることで、モデルを8 GPUへ分割した通信費を償却し、batch 10でbatch 1比約8倍まで処理量を伸ばす。"},
+      {"metric":"通常分散復号に対する高速化","value":"最大約2倍。batch 10では46.0対29.8 token/s、batch 4では28.8対14.2 token/s","baseline":"同一8×MI250上の分散・バッチ通常自己回帰復号","condition":"Llama-2-70B-Chat、batch 1〜10","interpretation":"可変受理長をパディングしても複数候補の一括検証による復号回数削減が残り、通常のバッチ化だけより高い処理量になる。"},
+      {"metric":"単一GPUの最良遅延構成","value":"3デコードヘッド・44ノード木がstory telling探索で最良のトークン当たり遅延","baseline":"2〜5ヘッド、16〜64ノード、KV 1〜7.2 GBの探索構成","condition":"Titan RTX、Vicuna-7B","interpretation":"最大候補木や最多ヘッドが常に最速ではなく、受理候補の増加と検証・メモリ負荷の間に中間的な最適点がある。"}
+    ],
+    "negative_results": "候補木を縮め過ぎたりデコードヘッド数を減らし過ぎると、候補の多様性と受理長が落ちて投機速度利得も低下する。粗い固定メモリ比率はモデル、KV、バッファのいずれかを不足させてOOMになりやすく、単純な容量比例配分では長い対話を保証できない。分散バッチ方式は可変受理長を固定長へパディングするため無駄トークンを含み、論文自身も連続バッチングによるパディング削減を将来課題とする。基盤モデルの学習済み最大文脈長も上限であり、メモリだけ増やして無制限に対話を延長できない。",
+    "interpretation": "投機的デコードの実用上の制約は基盤モデル重みだけでなく、候補木ノード数と葉数、ヘッド数、KV予約長、一時バッファが同時にVRAMを消費する点にある。SpecMemoはまず必要KVを正確に見積もり、候補木の形を調整し、それでも不足するとヘッド数、最後にモデル精度へ手を付けるため、速度へ直接効く投機構造を可能な限り残す。分散時にはこの考えを層分割とバッチ検証へ広げ、小容量GPU群でも70B級モデルの投機実行を可能にする。",
+    "quality_impact": "候補木枝刈り自体は基盤モデルの確率分布を変更せず、検証で受理されたトークンだけを確定するため、投機的デコードの正しさを保つ設計である。ただしメモリ不足時に基盤モデル量子化を選ぶ場合は量子化由来の品質影響が別途生じ得る。また候補木を削ると出力品質よりも主に受理長と速度が変化する。"
+  },
+  "reservation": {"claim_id":"claim-5fcf7a060a77c39dcc2d2e09","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
 }
