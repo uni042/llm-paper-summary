@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-14T23:11:49+00:00",
+  "updated_at": "2026-09-14T23:17:52+00:00",
   "last_run_key": "2026-09-15T08:00:00+09:00",
-  "last_round": "specialist-kv-restoration-compression-6",
+  "last_round": "specialist-moe-cache-routing-10",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 0,
-  "last_empty_round_reason": null,
+  "consecutive_empty_rounds": 1,
+  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3275,6 +3275,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次はSSD/NVMe・SmartSSDでのKV importance evaluation/prefetch、またはCXL/NVMにおけるKV quantizationとinterface-aware data movementへ軸を切り替える。",
       "source_submission": "work-queue/submissions/20260915T0834JST-discovery-specialist-kv-restoration-compression-6.json"
+    },
+    {
+      "run_key": "2026-09-15T08:00:00+09:00",
+      "round": "specialist-moe-cache-routing-10",
+      "axis": "MoE expert cache placement・PCIe window scheduling・fine-grained expert migration",
+      "query_summary": "MoE expert cache/offload系統でplacement、prefetch、migrationへ探索を展開し、DALI（2602.03495）、WiSP（2607.24434）、ElasticMoE（2606.21868）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で3 IDとも既収録を確認できず、run中取得済みidentity-delta一覧でも対応IDは見つからなかった。",
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はSSD/CXL/NVMを用いるexpert/KV階層化か、disaggregated prefill/decodeのnetwork・I/O schedulingへ軸を戻し、既存identityと差分が大きい候補だけを評価する。",
+      "source_submission": "work-queue/submissions/20260915T0816JST-discovery-specialist-moe-cache-routing-10.json"
     }
   ],
   "axes": {
@@ -5117,6 +5132,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次はSSD/NVMe・SmartSSDでのKV importance evaluation/prefetch、またはCXL/NVMにおけるKV quantizationとinterface-aware data movementへ軸を切り替える。"
+    },
+    "MoE expert cache placement・PCIe window scheduling・fine-grained expert migration": {
+      "last_run_key": "2026-09-15T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 3,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 3,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はSSD/CXL/NVMを用いるexpert/KV階層化か、disaggregated prefill/decodeのnetwork・I/O schedulingへ軸を戻し、既存identityと差分が大きい候補だけを評価する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
