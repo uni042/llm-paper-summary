@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
   "job_id": "job-research-0d6791ec792101b0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4d3ef5ca344439ed99771c72",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "Azure Machine Learningの二種類の実機クラスタを使用する。Standard_ND96asr_v4は各ノード8×NVIDIA A100 SXM 40GB、NVLink 3.0、AMD EPYC 7V12 96コア、900GiBホストメモリ、6TiBディスクを持ち、ノード間はInfiniBandとAzure Accelerated Networkingで接続する。Standard_NC24ads_A100_v4は各ノード1×NVIDIA A100 80GB、AMD EPYC 7V13 24コア、220GiBホストメモリ、960GiBディスクを持つ。",
+    "software": "LoRAServeをS-LoRA上へ実装し、LoRAServeと比較対象で同じLoRA実行カーネルを使う。クラスタ調整器に配置・ルーティング処理を追加し、遠隔アダプタ取得にInfiniBandとGPUDirect RDMAを使う。比較対象はS-LoRAのランダム配置、ランク順連続配置、負荷認識ルーティングを行うToppingsである。",
+    "models": ["Llama-7B","Llama-30B","Llama-70B","OPT系列による傾向確認"],
+    "datasets": ["Company Xの2025-10-22〜29 LoRA実運用トレース","Company X由来8時間・250,138要求の評価トレース","Azure Public Dataset 2024由来トレース"],
+    "baselines": ["S-LoRA Random","S-LoRA Contiguous","Toppings"],
+    "methodology": "主要実験は4台のLLM推論サーバで行い、拡張性評価では8台と12台まで増やす。基本設定はLlama-7B、テンソル並列度4である。Company Xトレースは5種類の実アダプタ要求を基にし、同一ランク内へべき分布でアダプタ名を付与して総数50、100、200の三条件を作る。要求時刻を比例縮尺して所望の毎秒要求数へ変換し、入力長・出力長・元の到着変動は維持する。公開トレース側ではrank 8/16/32/64/128の計25アダプタを用い、到着を一様またはポアソン、ランク人気度を一様・時間変動する偏り・指数分布として六種類の負荷を作る。主要指標はSLOを守れる最大要求スループット、95パーセンタイルTTFT、トークン間時間、必要GPU台数、各サーバの最大アダプタ保持数である。さらに4/8/12サーバの弱スケーリング、ランク偏り、Llama-7B/30B/70B、テンソル並列度の感度を評価する。",
+    "scope": "クラスタ上の実機評価でありシミュレーションではない。実運用トレースを利用する一方、機密性のためCompany Xの基盤モデル名や一部実アダプタ名は抽象化され、50/100/200アダプタ条件は実トレースを同一ランク内で合成分割して作る。主要評価は最大12サーバであり、数百ノード級クラスタや地域間通信は対象外である。配置需要予測は直近履歴の外挿に基づくため、極端に予測不能な急変では再配置が遅れる可能性がある。"
+  },
+  "reservation": {"claim_id":"claim-4d3ef5ca344439ed99771c72","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
