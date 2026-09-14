@@ -2,18 +2,18 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-fba6398e98141eab5071b77d",
-  "job_id": "job-research-7e6e9c9b89ab9c18",
+  "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
+  "job_id": "job-research-66748ca7517e3f9a",
   "data": {
-    "limitations": "特性調査は単一のコーディングエージェント基盤とSWE-rebenchに基づき、制御評価も単一ホスト上の少数トレース再生であるため、一般的なエージェントサービスへそのまま外挿できない。GPU、ネットワーク、ストレージは主要な制御対象外で、CPU用sched_ext経路も本番規模の強い競合評価が不足する。memcg_bpf_opsは論文時点で上流Linuxへ完全統合済みではない開発パッチへ依存する。1秒粒度の特性計測では極短時間ピークの詳細を捉えられず、総需要が恒常的に物理容量を超える場合は抑制だけでは進捗を保証できない。",
-    "differences": "従来のKubernetesやコンテナ単位cgroupは長時間のサービス単位に固定上限を付けるのに対し、AgentCgroupは資源ピークの原因である個々のツール呼出しへ子cgroupを割り当てる。履歴予測型の垂直スケーリングとも異なり、過去の利用率から将来を当てるよりカーネル内の現在状態とエージェントが宣言する資源意図を使う。LLM推論基盤のGPUスケジューリングとは補完関係にあり、推論の外側にあるコンパイル、テスト、パッケージ導入などホスト側ツール処理を扱う。",
-    "implementation_status": "公式コードはhttps://github.com/eunomia-bpf/agentcgroup でGPL-2.0公開され、ビルド手順、利用者空間デーモン、bashラッパー、cgroup/eBPF制御、論文実験の再現手順を含む。論文の試作はC、libbpf、BPF CO-REを使い、Agentsightを拡張している。ただしメモリ制御は開発中のmemcg_bpf_opsカーネル機能へ依存するため、一般的な本番Linuxへそのまま導入できる成熟度ではない。",
-    "research_positioning": "LLMシステム研究がGPU推論のKVキャッシュ、バッチ処理、オフロードへ集中する中、AgentCgroupはエージェントが推論とOSツールを交互に使うことでボトルネックの場所がホスト資源へ移ることを定量化する。高ファンアウトのエージェントサンドボックスや多数並列コーディングエージェントでは、GPUの推論効率を高めてもコンパイルやテストの短いメモリピークが同時実行密度を制限し得る。本研究はそのホスト側資源波形を第一級のシステム課題として扱い、状態を失う強制終了ではなく細粒度抑制で共存させる方向を示す。",
-    "relation_to_existing_repository": "主なLLM推論系統がGPU上のKVキャッシュ、重み、バッチ、オフロードを最適化するのに対し、本研究はエージェントが推論の外側で起動するOSプロセスのCPU・メモリ競合へ焦点を移す。Autellix/Agentixのようなプログラム単位LLMスケジューリングと補完関係にあり、AutellixがGPU呼び出し順やKV局所性を管理する一方、AgentCgroupは同一エージェントが起動したホスト側ツールの短時間バーストを制御する。将来CPU・GPU・SSDを跨ぐエージェント基盤を設計する際には、推論テンソルだけでなくツールプロセス状態も階層資源管理の対象へ含める必要性を示す。",
+    "limitations": "実行時交換のためフル精度と量子化版の重みをホスト側に保持する必要があり、CPUメモリ使用量が増える。評価はL4/A100と7B〜34B級モデルが中心で、巨大MoE、異種GPU、低帯域接続、多ノードでの層交換費用は直接検証されていない。MorphServeは負荷急増を予測せず、監視指標の悪化を見てから反応する。適応単位もTransformer層であり、注意機構やMLP単位のより細粒度な容量交換は将来課題である。",
+    "differences": "静的量子化は起動前にモデル精度を固定し、節約と品質損失を常時受ける。MorphServeは同一要求の実行途中でも選択層だけ低精度へ交換し、圧力低下後にフル精度へ戻せる。PagedAttentionはKVページを効率管理するが通常は重み用メモリとの境界を固定しており、本方式は量子化で解放した重み領域をKVページへ動的に移す。全面的なCPU/SSDオフロードとも異なり、通常計算はGPUに残し、必要な層バリアントだけCPUから短時間転送する。",
+    "implementation_status": "論文ではSwiftLLM上に約2,200行のPythonと約500行のC++/CUDAでLayerSwapper、KVResizer、監視制御を実装したと報告する。公式GitHubリポジトリはMITライセンスで公開されているが、2026-09-14確認時点のREADMEでは完全コードは公開準備中と明記され、リポジトリ内容はまだ限定的である。",
+    "research_positioning": "GPUメモリを『重み』と『KVキャッシュ』の固定用途へ分割せず、SLOと品質に応じて実行時に交換可能な資源として扱う弾力的サービング系統に位置する。特にCPU側の複数精度層を待機階層として利用し、GPU上の重み縮小分を動的KVへ渡すため、階層メモリ・オフロード研究との接点が強い。論文自身も将来課題としてSSDからホストへのオンデマンド層ストリーミングやGPUDirect Storageを挙げており、SSD階層を追加した発展余地が明確である。",
+    "relation_to_existing_repository": "既存のCPU/SSDオフロード系が『どのテンソルをどの階層へ置くか』を主問題にするのに対し、MorphServeはGPU内の用途境界そのものを負荷に応じて変える。KVオフロードやKV圧縮がKV側だけを縮小するのに対し、本方式は重み精度を下げてKV側を拡大する相補的手法であり、両者を組み合わせられる。",
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-fba6398e98141eab5071b77d",
+    "claim_id": "claim-51392e346b94b7a1e2807fcf",
     "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }

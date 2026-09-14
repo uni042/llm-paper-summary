@@ -2,67 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-fba6398e98141eab5071b77d",
-  "job_id": "job-research-7e6e9c9b89ab9c18",
+  "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
+  "job_id": "job-research-66748ca7517e3f9a",
   "data": {
-    "overview": "特性調査では、AIコーディングエージェントの端末間時間の55〜60%がモデル推論以外のOS実行に使われ、メモリがCPUより厳しい同時実行制約になることを確認した。メモリは約185MBの安定した基盤使用量の上に、テストや依存関係導入による短いバーストが重なり、最大ピーク対平均比は15.4倍、単一1秒区間の変化は最大約2.9GBへ達する。制御試作では、総需要が予算を超える条件で低優先度処理を一時的に抑えることでOOM終了を避け、高優先度処理の割当遅延も減らした。",
+    "overview": "MorphServeはピーク時のみ低影響層を量子化して重みメモリをKVキャッシュへ振り替え、フル精度固定構成より飽和点を後ろへ移す。論文全体では平均SLO違反を92.45%削減し、精度重視設定でもP95初回トークン遅延を2.2〜3.9倍改善する。静的INT4より品質を高く維持しつつ、末尾TPOTと処理量も改善した。",
     "key_results": [
       {
-        "metric": "OS側実行時間比率",
-        "value": "55〜60%",
-        "baseline": "端末間タスク時間全体",
-        "condition": "SWE-rebench 144課題、Claude Haiku 4.5 / GLM-4.7-Flash",
-        "interpretation": "エージェント基盤ではLLM推論だけでなくツール実行と初期化が主要な最適化対象になる。"
+        "metric": "平均SLO違反",
+        "value": "92.45%削減",
+        "baseline": "フル精度固定サービング",
+        "condition": "4モデル、Azure/BurstGPT負荷",
+        "interpretation": "動的KV容量拡張により待ち行列とプリエンプションを抑制した。"
       },
       {
-        "metric": "メモリのピーク対平均比",
-        "value": "最大15.4倍",
-        "baseline": "各実行の平均メモリ使用量",
-        "condition": "ツール呼出しに伴う資源波形",
-        "interpretation": "平均使用量に基づく固定予約ではピークを吸収できず、ピーク予約では平常時に大半のメモリを浪費する。"
+        "metric": "P95初回トークン遅延",
+        "value": "2.2〜3.9倍改善",
+        "baseline": "フル精度固定",
+        "condition": "MorphServe精度重視設定",
+        "interpretation": "ピーク時に追加KVブロックを確保し、新規プリフィルの待ち時間を減らした。"
       },
       {
-        "metric": "メモリ同時実行制約",
-        "value": "ピーク2〜4GB、128GBでピーク予約なら約32〜64インスタンス",
-        "baseline": "24コアCPUの利用余力",
-        "condition": "144課題の特性調査",
-        "interpretation": "平均CPU利用率は1コア換算で13%未満であり、同時実行密度はCPUよりメモリに先に制限される。"
+        "metric": "飽和処理量",
+        "value": "最大1.83倍",
+        "baseline": "フル精度固定",
+        "condition": "要求到着率を増加させる負荷試験",
+        "interpretation": "量子化で空いた重み領域をKVへ再配分することで同時実行可能量が増えた。"
       },
       {
-        "metric": "同一タスク再実行の変動",
-        "value": "実行時間1.8倍差、タスク間ピークメモリ約20倍差",
-        "baseline": "同一課題・同一エージェント設定",
-        "condition": "非決定的なエージェント実行",
-        "interpretation": "過去履歴や出力トークン数だけから将来ピークを予測する方式が不安定になる。"
+        "metric": "TPOT末尾遅延",
+        "value": "P99最大1.23倍改善",
+        "baseline": "フル精度固定",
+        "condition": "Azureトレース",
+        "interpretation": "KV不足による退避・再計算の長い停止を減らした。"
       },
       {
-        "metric": "競合時のプロセス生存率",
-        "value": "66%から100%",
-        "baseline": "AgentCgroup無効",
-        "condition": "総需要約1233MBに対し1100MB予算、3トレース再生",
-        "interpretation": "低優先度割当を遅延させる段階的制御により、OOM終了を避けて状態を保持できる。"
+        "metric": "Llama 2 7B DuReader品質/遅延",
+        "value": "AWQ静的INT4 F1 25.55、MorphServe 27.33、FP16 27.68; P95 TTFT 1.2420秒対5.5223秒(FP16)",
+        "baseline": "静的AWQ INT4およびFP16",
+        "condition": "BurstGPTトレース",
+        "interpretation": "静的INT4よりフル精度に近い品質を保ちながら、FP16より大幅にTTFTを短縮する。"
       },
       {
-        "metric": "高優先度P95メモリ割当遅延",
-        "value": "70.97msから50.14ms、29%削減",
-        "baseline": "AgentCgroup無効",
-        "condition": "1300MBの中程度メモリ予算",
-        "interpretation": "低優先度cgroupを先に抑制することで、高優先度処理が必要なメモリをより速く取得できる。"
-      },
-      {
-        "metric": "制御オーバーヘッド",
-        "value": "P50遅延+0.3%、総完了時間-1.1%",
-        "baseline": "制御なし",
-        "condition": "eBPF監視・抑制のトレース再生",
-        "interpretation": "カーネル内制御の追加費用は小さく、隔離改善を相殺しない。"
+        "metric": "層交換費用",
+        "value": "Llama 2 7BのINT4層で完全交換約6ms",
+        "baseline": "同期的なモデル再構成",
+        "condition": "PCIe Gen4、別CUDAストリーム",
+        "interpretation": "交換を通常デコードへ重ねられるためTPOTへの追加費用が小さい。"
       }
     ],
-    "negative_results": "評価は予備的で、制御部は3本のメモリトレース再生に限られる。CPU向けsched_ext経路を本番相当の強いCPU競合で十分検証していない。1秒粒度の特性計測では1秒未満のバースト形状を直接解像できず、初期化時間、大きなコンテナイメージ、再試行で蓄積するメモリなど、観測した無駄の全てをAgentCgroupが解決するわけではない。",
-    "interpretation": "生存率改善は総メモリ容量を増やした結果ではなく、低優先度処理を即座に終了する代わりに割当を短時間遅らせ、高優先度処理が完了してメモリを返すまで待てることから生じる。高優先度P95遅延改善も同じ優先制御の結果である。負荷が恒常的に容量を上回る場合は抑制時間が伸びるため、入場制御やクラスタ配置との併用が必要になる。",
-    "quality_impact": "生成品質を近似する手法ではなく、プロセス状態とエージェント文脈を強制終了から守る運用手法である。制御によりツールの完了時刻や再試行戦略が変わる可能性はあるが、LLM重みや推論結果を直接変更しない。"
+    "negative_results": "複数精度の重みをCPUに保持するためホストメモリ使用量が増え、論文では通常モデルサイズの2倍未満とする。負荷適応は予測型ではなく圧力検出後に反応する。層単位より細粒度な注意機構/MLP単位の変換は未実装で、極端な持続高負荷では低精度化だけで容量不足を解消できない可能性がある。",
+    "interpretation": "主要な効果は低ビットGEMMそのものの高速化だけではなく、重み用の固定GPUメモリを必要時だけKV容量へ変換してプリフィル待ちとデコード中断を減らす点にある。静的量子化との差は、負荷が下がった時にフル精度へ戻り恒常的な品質損失を避けることである。",
+    "quality_impact": "低精度層を通過する一部トークンには品質低下が生じるが、LISによる層選択と負荷期間だけの適用により静的INT4より小さく抑える。したがって完全無損失方式ではなく、SLO維持のため一時的で制御された精度低下を許容する方式である。"
   },
   "reservation": {
-    "claim_id": "claim-fba6398e98141eab5071b77d",
+    "claim_id": "claim-51392e346b94b7a1e2807fcf",
     "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }

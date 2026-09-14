@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260914T165250Z-scheduled-chat-llm-survey-07",
+  "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-66748ca7517e3f9a",
+      "claim_id": "claim-51392e346b94b7a1e2807fcf",
+      "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
+      "claimed_at": "2026-09-14T16:53:16+00:00",
+      "expires_at": "2026-09-14T18:23:16+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-66748ca7517e3f9a"
+      ],
+      "job": {
+        "job_id": "job-research-66748ca7517e3f9a",
+        "type": "research",
+        "parent_job_id": "job-980b3587f3155662",
+        "priority": 82,
+        "canonical_id": "arXiv:2506.02006",
+        "title": "Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing",
+        "source_url": "https://arxiv.org/abs/2506.02006",
+        "paper_path": "papers/inference/99-other-inference-systems/2025-2506.02006-efficient-and-workload-aware-llm-serving-via-runtime-layer-swapping-and-kv-cache-resizing.md",
+        "selection_reason": "動的・バースト型負荷に対し、量子化layer swappingとmemory-pressure-aware KV cache resizingをtoken単位で非同期適用するMorphServeを提案する。実ワークロード評価でSLO違反を92.45%削減しP95 TTFTを2.2〜3.9倍改善すると報告し、model precisionとKV容量を実行時に連動させるserving runtime候補として価値がある。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T21:14:42+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | results.overview must explain the main result and its practical meaning",
+        "validation_errors": [
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "results.overview must explain the main result and its practical meaning"
+        ],
+        "last_validation_failed_at": "2026-09-14T16:38:27+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-a4c42b4df6afaf3c4766238e"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-a4c42b4df6afaf3c4766238e.json"
+    }
+  ],
+  "processed_at": "2026-09-14T16:53:16+00:00",
+  "checkpoint_released": 0
+}
