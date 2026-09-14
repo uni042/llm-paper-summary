@@ -36,6 +36,7 @@ jobs:
             .survey/scripts/claim_state.py \
             .survey/scripts/claim_worker.py \
             .survey/scripts/claim_worker_with_banks.py \
+            .survey/scripts/normalize_research_paper_paths.py \
             .survey/scripts/select_record_bank.py \
             .survey/scripts/record_bank_config.py \
             .survey/scripts/refresh_queue_snapshot.py \
@@ -55,6 +56,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            python .survey/scripts/normalize_research_paper_paths.py --repo-root . --apply
             python .survey/scripts/claim_worker_with_banks.py --repo-root .
             python .survey/scripts/refresh_queue_snapshot.py --repo-root .
             python .survey/scripts/ensure_dashboard_history.py --repo-root .
@@ -64,6 +66,7 @@ jobs:
 
             git add \
               STATUS.md \
+              .survey/work-queue/jobs \
               .survey/work-queue/claims \
               .survey/work-queue/claim-results \
               .survey/work-queue/records \

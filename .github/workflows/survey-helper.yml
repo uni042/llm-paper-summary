@@ -54,6 +54,7 @@ jobs:
             .survey/scripts/reconcile_maintenance_state.py \
             .survey/scripts/record_run_ledger.py \
             .survey/scripts/normalize_required_metadata.py \
+            .survey/scripts/normalize_research_paper_paths.py \
             .survey/scripts/refresh_queue_snapshot.py \
             .survey/scripts/queue_worker.py \
             .survey/scripts/blocked_retry.py
@@ -104,6 +105,9 @@ jobs:
         run: |
           python .survey/scripts/blocked_retry.py --root .survey
           python .survey/scripts/queue_worker.py --root .survey
+
+      - name: Normalize Research paper paths
+        run: python .survey/scripts/normalize_research_paper_paths.py --repo-root . --apply
 
       - name: Normalize nullable required paper metadata
         run: python .survey/scripts/normalize_required_metadata.py --repo-root . --apply
