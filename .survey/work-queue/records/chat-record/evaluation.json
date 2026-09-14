@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-97e0f0447e2985015ad030ba",
-  "job_id": "job-research-420858d196a868b6",
-  "data": {
-    "hardware": ["NVIDIA A800 40GB GPU×4", "単一ノード内NVLink"],
-    "software": ["vLLM v0.4.x", "NVIDIA推論転送ライブラリ（NIXL）", "LLaMA-2-7B float16"],
-    "methodology": "4基のA800 40GBを2組のストリームペアに分け、GPU 0/2をプリフィル、GPU 1/3をデコードに割り当てる。全実験でLLaMA-2-7Bのfloat16を用い、ALPACA、GSM8K、HUMANEVAL、SUMから各80問、合計320問を処理する。比較対象は4個の独立vLLMインスタンスによるデータ並列と、4-wayテンソル並列の単一vLLMインスタンスで、どちらも通常の自己回帰デコードを使い投機的デコードは無効である。主指標はトークン毎秒、要求当たりエンドツーエンドレイテンシ、出力1トークン当たり時間（TPOT）。さらに同時要求数を増やしたスケーリング、レイテンシ百分位、構成要素ごとのアブレーション、固定投機深度3/5/7との比較を行う。",
-    "scope": "実機の単一ノード4GPU評価であり、シミュレーションではない。ただしモデルはLLaMA-2-7Bのみ、問いは320件、相互接続はNVLink、比較先はvLLMのデータ並列/テンソル並列に限定される。DistServe、Sarathi-Serve、Mooncakeなど他の分離型サービングとの直接比較、複数ノード、長時間の本番トラフィック、異種GPUは未評価で、報告倍率をそのまま大規模本番環境へ一般化できない。",
-    "workloads": ["ALPACA 80問", "GSM8K 80問", "HUMANEVAL 80問", "SUM 80問"],
-    "baselines": ["vLLMデータ並列（4独立GPU）", "vLLM 4-wayテンソル並列", "固定深度EAGLE型投機 d=3/5/7", "アブレーション各構成"],
-    "metrics": ["スループット（tokens/s）", "要求当たりレイテンシ", "出力1トークン当たり時間（TPOT）", "同時要求数に対するスケーリング", "レイテンシ百分位"],
-    "reproducibility": "GPU型・台数、モデル、精度、データセット件数、vLLM版、レーン構成、主要ルーティング重み、過負荷閾値、投機深度式は本文に記載される。一方、著者公式コードURLは確認できず、データセット抽出方法や実行スクリプト、全依存版が公開artifactとして固定されていないため、完全再現性は限定的である。"
-  },
-  "reservation": {"claim_id": "claim-97e0f0447e2985015ad030ba", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-9f543fdb6d6ec02bcc46ff9a",
+  "job_id": "job-research-92bd4538dc2f6002",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9f543fdb6d6ec02bcc46ff9a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
