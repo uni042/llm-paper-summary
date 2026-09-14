@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-7381d916bdd79b3e46aeb209",
   "job_id": "job-research-b85568c75bac4939",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7381d916bdd79b3e46aeb209",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.05696",
+    "arxiv_id": "2605.05696",
+    "doi": "10.48550/arXiv.2605.05696",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving",
+    "summary": "Irminsulは、エージェント型LLMで同じ文書やツール定義がターンごとに異なる位置へ移動し、完全一致接頭辞キャッシュが失効する問題を扱う。MLAではKV行の大部分が位置非依存の潜在表現cKVで、位置情報を持つRoPE部分krは64次元だけであることを利用する。内容定義チャンクを内容ハッシュで索引し、再利用時にはcKVをそのまま使い、krだけを元位置と新位置の差分で回転補正する。SGLangのRadixCacheを内容アドレス型へ拡張する設計で、位置がずれた共有文脈を再プリフィルせず利用する。",
+    "list_summary": "MLAのKVを位置非依存cKVと64次元RoPE部分へ分離し、内容定義チャンク＋内容ハッシュ＋差分回転で位置が変わった共有文脈を再利用する。",
+    "authors": ["Bole Ma", "Jan Eitzinger", "Harald Köstler"],
+    "authors_affiliations": "Erlangen National High Performance Computing Center, Erlangen, Germany",
+    "published": "2026-05-07",
+    "publication": "arXiv preprint arXiv:2605.05696",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "position-independent KV caching / MLA serving / agentic serving",
+    "topics": ["位置非依存KVキャッシュ", "MLA", "内容アドレス型キャッシュ", "エージェント推論", "SGLang", "RoPE補正"],
+    "importance": "従来のGQA向け位置非依存キャッシュではK全体の位置補正が必要だが、MLAでは位置補正対象がKV行の約11%に相当する64次元krだけになる。この構造差を実行基盤のキャッシュ設計へ直接利用した点が重要。",
+    "hardware_evaluation": "論文はGPU型番を主評価条件として明示せず、複数モデル上でSGLangのプリフィル処理とNVMLハードウェアエネルギーカウンタを測定する。モデルはDeepSeek-V2-Lite、Moonlight-16B-A3B、JoyAI-Flash、Qwen3-32Bなどを含む。",
+    "quality_effect": "bf16での差分回転誤差は相対L2で4.7×10^-3。複数MLAモデルとQA、要約、NIAHで完全再計算との出力整合性を検証し、単純な位置未補正再利用より概ね小さいKLずれと高いargmax一致率を示す。位置回転周波数を誤ると品質が崩壊するため、モデル固有RoPE設定の自動検出が必須である。",
+    "source": "https://arxiv.org/abs/2605.05696",
+    "sources": ["https://arxiv.org/abs/2605.05696", "https://arxiv.org/pdf/2605.05696"],
+    "code": null,
+    "implementation": "SGLangのRadixCacheへ観測モードで差し込む約950行の参照試作を実装し、内容ハッシュ回収率を測定している。実運用想定では64次元krの差分回転をFlashMLAのHBMからSRAMへの読込み経路へ融合する設計を示すが、融合カーネルによる実時間のエンドツーエンド評価は今後の課題である。",
+    "last_checked": "2026-09-14",
+    "references": [],
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 37
+  },
+  "reservation": {"claim_id": "claim-7381d916bdd79b3e46aeb209", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
