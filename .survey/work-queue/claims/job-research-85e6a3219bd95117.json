@@ -1,23 +1,18 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-5286c90d7c5f71d975e9cabf",
+  "claim_id": "claim-7beedc7eb9d4d9d176ab88f5",
   "job_id": "job-research-85e6a3219bd95117",
-  "worker_id": "scheduled-chat-discovery-overflow-20260914T0800JST",
+  "worker_id": "scheduled-chat-discovery-router",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-5286c90d7c5f71d975e9cabf",
-  "request_id": "claim-20260913T235900Z-discovery-overflow-09i",
-  "claimed_at": "2026-09-13T23:42:16+00:00",
-  "expires_at": "2026-09-13T23:43:13+00:00",
+  "attempt_id": "attempt-7beedc7eb9d4d9d176ab88f5",
+  "request_id": "claim-20260914T010600Z-scheduled-chat-discovery-router-12",
+  "claimed_at": "2026-09-14T01:02:51+00:00",
+  "expires_at": "2026-09-14T02:32:51+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-85e6a3219bd95117"
   ],
-  "previous_claim_id": "claim-6704d19f7e70b24860709ffc",
-  "record_bank": "b",
-  "released": false,
-  "invalidated": false,
-  "released_at": "2026-09-13T23:43:13+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T051751JST-ada-mk-attempt-ed669840907c5b29d6ab5537.json",
-  "checkpoint_release_request_id": "claim-20260914T000200Z-discovery-overflow-09j"
+  "previous_claim_id": "claim-5286c90d7c5f71d975e9cabf",
+  "record_bank": "a"
 }
