@@ -4,7 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-1ba4b34ba48ccb171084f2bf",
   "job_id": "job-research-389da9d1d9bafee9",
-  "data": {},
+  "data": {
+    "hardware": "6種類の対象条件を実機で評価する。標準Llama-3.1-8BとQwen3-32Bコード編集はNVIDIA H100、Olmo-Hybrid-7BとMoonshine StreamingはNVIDIA L4 24 GB、JSON制約生成とShow-o2ローカル画像生成はApple M3 Pro・36 GB搭載MacBookを使用し、Show-o2はH100上でも評価する。",
+    "software": "生成系の外側ループは課題追跡方策を使い、内側の実装担当・正当性判定担当・性能評価担当はいずれもCodex CLIで実装する。候補実行系は対象に応じてCUDA、PyTorch、vLLM関連部品、MLX、XGrammarなどを組み合わせる。正当性はHugging Face Transformers等の参照実装とユーザー提供チェッカーで判定する。",
+    "methodology": "標準条件ではLlama-3.1-8B-InstructをH100で8、32、64、128要求/秒のポアソン到着に対し各60秒、temperature 0、最大128出力トークンで測定し、vLLM・SGLangとスループット、初回トークン時間、トークン間時間を比較する。非標準条件は、Qwen3-32BのCodeEditorBench予測出力、Olmo-Hybrid-7Bの32k共有接頭辞RAG風負荷、Moonshine Streamingの同時実行32、MacBook上Llama-3.1-8BのJSONSchemaBench、Show-o2画像生成を対象とする。各反復で正当性門を通った候補だけ性能測定へ進み、エージェントが採用・撤回した最適化の軌跡も記録する。",
+    "baselines": ["vLLM", "SGLang", "vLLM投機的デコード", "vLLM Moonshineプラグイン", "PyTorch-MPSベースライン", "既存MLX経路"],
+    "models": ["Llama-3.1-8B-Instruct", "Qwen3-32B", "Olmo-Hybrid-7B", "Moonshine Streaming medium", "Show-o2 1.5B-HQ"],
+    "datasets": ["CodeEditorBench", "JSONSchemaBench", "32k共有接頭辞の合成RAG負荷", "ストリーミング音声負荷", "Show-o2テキスト画像生成負荷"],
+    "metrics": ["トークン生成スループット", "初回トークン時間", "トークン間時間", "単一バッチ遅延", "画像生成p50遅延", "参照実装との正当性一致"],
+    "scope": "実機上で、主流のNVIDIAデータセンターGPUからL4、Apple Siliconまで、ワークロード・モデル構造・ハードウェアの6条件を横断する。標準条件の公平な比較に加え、汎用基盤が高速経路を持たない長い尾の条件を意図的に選ぶ。一方、各シナリオは基本的に単一seedのエージェント探索であり、生成された実行系の保守費用、未知入力分布への頑健性、複数ノード規模の配備は直接評価していない。"
+  },
   "reservation": {
     "claim_id": "claim-1ba4b34ba48ccb171084f2bf",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
