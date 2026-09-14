@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-13T03:14:00+00:00",
-  "last_run_key": "2026-09-13T11:00:00+09:00",
-  "last_round": "specialist-serving-runtime-reliability-5",
+  "updated_at": "2026-09-14T17:21:56+00:00",
+  "last_run_key": "2026-09-15T02:00:00+09:00",
+  "last_round": "specialist-adaptive-kv-constraint-1",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 1,
+  "consecutive_empty_rounds": 2,
   "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
@@ -3146,6 +3146,23 @@
       ],
       "next_axis_hint": "recent inference-system implementation releases・GPU kernel/runtime co-design・request interruption/agent serving gaps",
       "source_submission": "work-queue/submissions/20260913T1215JST-discovery-43fcba7f8079dfff.json"
+    },
+    {
+      "run_key": "2026-09-15T02:00:00+09:00",
+      "round": "specialist-adaptive-kv-constraint-1",
+      "axis": "要求単位の資源制約適応・KV圧縮ポリシー選択",
+      "query_summary": "直近のKVキャッシュ研究から、圧縮アルゴリズム自体ではなく遅延・ピークメモリ・正答確率を予測して要求ごとに実行設定を選ぶ制御層を探索した。MetaKVを新規強候補として残し、出力長不確実性を扱うRobust KV Cache Managementは既存探索履歴で収録済みのため除外した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [
+        "arXiv:2607.16892"
+      ],
+      "next_axis_hint": "KV圧縮から離れ、サーバレスLLMの電力・SM分割・GPU動作点を協調制御するenergy-aware serving、または新着の分散通信runtimeへ軸を移す",
+      "source_submission": "work-queue/submissions/20260915T0222JST-discovery-specialist-adaptive-kv-1.json"
     }
   ],
   "axes": {
@@ -4908,6 +4925,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.8,
       "next_axis_hint": "recent inference-system implementation releases・GPU kernel/runtime co-design・request interruption/agent serving gaps"
+    },
+    "要求単位の資源制約適応・KV圧縮ポリシー選択": {
+      "last_run_key": "2026-09-15T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 1,
+      "novel_candidate_count": 1,
+      "accepted_count": 0,
+      "duplicate_ratio": 0.5,
+      "next_axis_hint": "KV圧縮から離れ、サーバレスLLMの電力・SM分割・GPU動作点を協調制御するenergy-aware serving、または新着の分散通信runtimeへ軸を移す"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."

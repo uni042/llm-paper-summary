@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T17:19:55.743461+00:00",
+  "updated_at": "2026-09-14T17:24:44.739518+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T17:19:55.743461+00:00",
+      "last_recorded_at": "2026-09-14T17:24:44.739518+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 65,
         "audit_completed": 0,
-        "discovery_completed": 0,
+        "discovery_completed": 1,
         "blocked": 1,
-        "new_jobs": 2,
+        "new_jobs": 3,
         "new_papers": 63,
         "fallback_archived": 9
       },
       "events": [
-        {
-          "event_id": "34797044789:1",
-          "recorded_at": "2026-09-14T01:47:24.448776+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34797044789",
-            "run_attempt": "1",
-            "source_sha": "ef36c9e4b367b032be05a386d565760942664c60"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34797374466:1",
           "recorded_at": "2026-09-14T01:53:50.225980+00:00",
@@ -19595,6 +19581,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34874263130:1",
+          "recorded_at": "2026-09-14T17:24:44.739518+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34874263130",
+            "run_attempt": "1",
+            "source_sha": "42f33044d2eed37263dda3374e5f5dc0ffe4e000"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20125,6 +20125,14 @@
           "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-e00f52c8cc2c35eb",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20141,6 +20149,13 @@
           "type": "audit",
           "canonical_id": "arXiv:2504.03775",
           "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling"
+        },
+        {
+          "job_id": "job-692a81c6f780c22d",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -20208,7 +20223,9 @@
         "arXiv:2607.08930",
         "arXiv:2608.02244"
       ],
-      "new_discovery_results": [],
+      "new_discovery_results": [
+        ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json"
+      ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
         ".survey/work-queue/fallback-archive/claimed-attempt-24001c38aac79c49d7fe0750-run1357.json",
@@ -20222,7 +20239,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 523,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
