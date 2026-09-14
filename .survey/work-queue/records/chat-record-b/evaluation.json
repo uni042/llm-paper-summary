@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-43aa5fb73f133772cb25e68d",
   "job_id": "job-research-8837d2430022aa08",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-43aa5fb73f133772cb25e68d",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "4ソケット、96物理コア/192ハードウェアスレッド、760GiB RAM、400GB NVMe SSDのサーバー。RL分岐評価は96GB GPU×4の単一ノードを追加利用。",
+    "software": "Firecracker microVM、カスタムLinux 6.8、XFS+reflink、OverlayFS、CRIU、DeltaFSカーネル拡張、DeltaCR Pythonデーモン。LangGraph統合アダプタも実装する。",
+    "model": "MCTS軌跡生成にQwen3-Coder-30Bを使用。RL分岐のGPU占有評価ではQwen2.5-7Bの生成とLoRA学習を用いる。Figure 1の能力例にはGPT-4o、Qwen-2.5-72B、DeepSeek V2.5等も含むが、DeltaBox基盤性能の主要測定対象とは別である。",
+    "datasets": ["SWE-bench VerifiedのDjango、SymPy、Scientific系、Tools/小規模リポジトリのMCTS軌跡", "SWE-bench Liteの探索能力例", "RL fan-out用の実軌跡・マイクロベンチマーク", "実SWE-searchエージェント編集を用いたファイルI/O測定"],
+    "baselines": ["replay+cp（shutil.copytree + コマンド再実行）", "FC-Diff+dm（Firecrackerメモリスナップショット + dm-snapshot）", "CRIU+cp（CRIU + ファイルコピー）", "E2B self-hosted incremental snapshot", "CubeSandbox", "Firecracker VM snapshot等の個別比較"],
+    "correctness": "全主要比較方式でファイル状態とプロセス状態の両方を復元する。DeltaBoxはチェックポイント時にCRIUとDeltaFSを同じSIGSTOP静止点へ同期し、復元時にもファイル層を先に対象節点へ戻してからプロセスを再開する。テンプレート消失時はCRIUへフォールバックし、性能低下だけで正しさは変えない。",
+    "settings": ["DeltaBox microVMは4 vCPU・8GB RAM。", "MCTSエンドツーエンド比較はQwen3-Coder-30Bの4系統軌跡を各30反復。", "RL fan-outはN=1,4,16,64を評価。", "コピーオンライト評価では1～256KBの実コード編集とext4/XFS/XFS+reflinkを比較。", "テンプレートプール、非同期ウォーム、軽量チェックポイント、到達可能性認識ガベージコレクションの個別効果も測定。"],
+    "methodology": "まずチェックポイント・復元の一回当たり停止時間を複数のファイル・プロセス状態管理方式で比較し、DeltaBoxの標準経路、軽量経路、低速CRIU復元を分離する。次にSWE-bench由来の実MCTS軌跡をエンドツーエンドで再生し、LLM+行動だけの理想時間に対してサンドボックス状態管理がどれだけ上乗せされるか測る。RL用途ではウォームテンプレートからN個の子を生成する時間、p50/p99、総常駐メモリ、生成・学習を含む同期GPU占有率を評価する。さらに復元後の非同期ウォームがコピーオンライト障害をどれだけ背景へ吸収するか、XFS reflinkが編集サイズと物理I/Oへ与える影響、軽量チェックポイントとガベージコレクションによる保存容量削減を測定する。",
+    "scope": "状態を持つコードエージェントやRLロールアウトのように、同じサンドボックスから高頻度に分岐・復元する用途が中心。外部ネットワーク副作用そのものの巻き戻しは対象外で、ネットワーク代理はfork安全性とLLM通信継続を目的とする。"
+  },
+  "reservation": {"claim_id":"claim-43aa5fb73f133772cb25e68d","worker_id":"scheduled-chat-llm-survey-20260914T1130JST","worker_kind":"scheduled_chat"}
 }
