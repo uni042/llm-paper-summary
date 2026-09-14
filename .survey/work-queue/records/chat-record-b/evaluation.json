@@ -1,2 +1,13 @@
 {
-"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-be479323bcae84e892d40029","job_id":"job-research-89a31b528bef1df7","data":{"hardware":"主評価はLLaMA-13B、30B、65Bを用い、A100およびRTX 4090を含むGPU環境で行う。高帯域45 GbpsのE1から、500、250、125、20 Mbpsへ帯域を制限したE2〜E5を設定した。さらにE6ではCaliforniaのA100、New JerseyのRTX 4090、CanadaのRTX 4090を実際の広域ネットワークで接続し、方向別に約280〜643 Mbpsの帯域を測定している。","software":"比較対象はPetalsとHelix。BloomBee実装は約31,216行とされ、FP16活性値圧縮にZSTDを用いる。主要評価はLLaMA系列で、付録ではFalcon-7B、Falcon-40B、Mixtral-8x7Bでも通信支配の傾向を確認している。","methodology":"LLaMA-30Bでは主にバッチ32を用い、配置・KV退避、マイクロバッチ、圧縮、投機的デコードを個別および組合せでアブレーションした。E2〜E5は高帯域環境を帯域制限して再現し、E6のみ地理的に分離した実ネットワークである。スループット、完了遅延、費用当たりスループット、転送量、受理率などを測り、帯域によって各最適化を有効・無効化した場合を比較する。","scope":"評価はオフライン寄りの高スループット生成を主眼とし、静的または事前測定可能な帯域と異種GPU構成を対象にする。E2〜E5は帯域制限による模擬環境であり、実際の広域変動やノード離脱を含むのは限定的である。線形パイプラインと連続層配置が中心で、任意グラフ型の経路選択や大規模な動的障害耐性までは評価していない。"},"reservation":{"claim_id":"claim-be479323bcae84e892d40029","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-c642c5fff9681a3567ab694d",
+  "job_id": "job-research-79f62fbfcb1294fd",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-c642c5fff9681a3567ab694d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
+}

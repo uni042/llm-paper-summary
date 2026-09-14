@@ -36,13 +36,13 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **78** |
-| 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **77** |
+| 処理中（Active claims） | **3** |
+| 今すぐ着手可能（Claimable） | **76** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **1** |
+| :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 13:00 JST** |
-| :00 補助worker 直近claim | **09-14 13:03 JST** |
+| :00 補助worker 直近claim | **09-14 13:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **22** |
 | 直近24h Research完了（:00 補助worker） | **25** |
 | 直近24h Research完了（帰属不明） | **0** |
@@ -88,7 +88,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P84 `arXiv:2602.12029` — PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving
+- P83 `arXiv:2607.17979` — Harness Engineering for LLM-Driven GPU Kernel Generation
 
 ## 参考情報
 
