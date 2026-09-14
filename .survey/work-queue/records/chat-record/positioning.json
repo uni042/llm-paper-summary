@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-97e0f0447e2985015ad030ba",
   "job_id": "job-research-420858d196a868b6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-97e0f0447e2985015ad030ba",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はLLaMA-2-7B、4×A800 40GB、単一ノードNVLink、2ストリームペア、各データセット80問の計320問に限定される。比較対象もvLLMのデータ並列/テンソル並列が中心で、DistServe、Sarathi-Serve、Mooncakeなど同じ分離型サービングとの直接比較がない。このため大きなレイテンシ改善のうち、分離基盤、NIXL、ルーティング、適応投機の各寄与を他システムに対して完全には切り分けられない。複数ノードではKV転送がネットワーク帯域に制約され得る。長時間の本番トレース、より大きなモデル、異種GPU、複雑なモデル並列との組合せも未評価である。さらにTPOTの安定を品質保持の根拠とするが、タスク品質指標を直接比較していない。",
+    "differences": "DistServeやSarathi-Serveがプリフィル/デコード分離とスケジューリングを中心に扱うのに対し、StreamServeは分離基盤を既知の前提と明記し、その上で複数の実行時指標を用いたレーン選択と投機深度の共同適応を追加する。Mooncakeのプレフィックス再利用重視ルーティングに対しては、キャッシュだけでなくメモリ、待ち行列、実行負荷も同時評価し、過負荷レーンを明示的に除外する。SpecDec++やAdaServeのような適応投機はトークン確信度やSLOを主に使うが、SpecuStreamは受理率勾配にシステム負荷と最近のスループットを加え、ルーティング側と監視基盤を共有する。したがって差分は新しい投機アルゴリズム単体ではなく、分離サービングの配置決定と投機計算量を同じ閉ループへ入れる点にある。",
+    "implementation_status": "論文はStreamScheduler、FlowGuard、2GPU単位のPipeServe実行、NIXLによるKV転送、SpecuStream、500ms間隔の性能監視を統合した実験システムを説明し、vLLM v0.4.xを比較基盤として用いる。arXiv本文とarXivの関連コード欄では著者公式リポジトリや再現artifactを確認できないため、公開実装ありとは扱わない。主要式と擬似コードは本文にあるが、完全な再現にはキュー処理、NIXL接続、投機モデル、監視系等を再実装する必要がある。",
+    "research_positioning": "推論サービングのスケジューリング・分離系統に位置し、特に『どのレーンへ要求を置くか』と『そのレーンでどれだけ投機計算を増やすか』を別階層の独立問題ではなく共同制御する研究として整理できる。実行時状態に応じた計算量調整という観点では、将来のKVキャッシュ階層化やGPU/CPU/SSD間転送にも、I/O混雑をルーティング指標へ取り込み、余力に応じて投機量を変える設計へ拡張可能である。ただし本論文自体はSSD/NVMeオフロードを扱わず、単一ノードGPU間KV転送の評価に留まる。",
+    "relation_to_existing_repository": "DistServe/Sarathi系のプリフィル・デコード分離、Mooncake等のKV再利用型ルーティング、EAGLE/Medusa系の投機的デコードの交点にある。既存repoで各機構を別系統として読む際、StreamServeは制御面の指標共有によって両者を結合する比較対象になる。特に固定ポリシーでは一方の最適化が他方の負荷条件を変えてしまうという問題を、同じ監視ループで協調させる設計例として有用である。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-97e0f0447e2985015ad030ba", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
 }
