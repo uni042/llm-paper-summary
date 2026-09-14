@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-290c9e1e770e3de2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2605.03375-tutti-ssd-backed-kv-cache.md",
+      "priority": 97,
+      "reason": "SSD-backed KV復元で断片化GPUメモリが大量の小さいrandom I/Oを生み、GDSでもCPU発行処理がボトルネックになる問題を、GPU-native object abstraction、GPU io_uring、slack-aware I/O schedulingで解く。vLLMへ統合し、GDS対応SSD-backed LMCache比で厳しいSLO下のTTFTを78.3%削減、request rateを2倍、serving costを27%削減と報告する。SSD/NVMe活用を直接扱う重点テーマの最優先候補。"
+    },
+    {
+      "canonical_id": "arXiv:2604.26557",
+      "title": "DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.26557",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md",
+      "priority": 94,
+      "reason": "メモリ圧迫時のpage cache thrashingとfilesystem overheadを避けるため、KV tensorをpage-cache pathとNVMe-direct pathへ動的配置し、direct pathでは連続LBAへ割り当ててfilesystemを迂回する。storage I/OとGPU DMAを適応pipelineで重ね、prefill/decode latencyを最大33.1%/42.4%削減、SSD利用率を2.2倍改善する。エッジ推論でのNVMe直接利用とI/O overlapの実測資料として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2604.25080-cacheflow-3d-parallel-kv-restoration.md",
+      "priority": 90,
+      "reason": "長文LLMのKV復元を単純な再計算対I/O転送の二択ではなく、token・layer・GPUの3次元並列実行として定式化し、再計算と外部ストレージI/Oを細粒度にoverlapする。batch-aware two-pointer schedulerで要求間のcompute/I/O競合も扱い、既存手法よりTTFTを10〜62%削減と報告する。CPU/remote storage/SSDを含むKV復元のI/O scheduling設計としてTuttiやPCRと比較価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T03:00:00+09:00",
+    "round": "specialist-nvme-kv-3",
+    "axis": "SSD/NVMe-backed KV cache・GPU直結I/O・KV復元のcompute/I/O overlap",
+    "query_summary": "SSD/NVMeを直接利用する長文LLM servingを探索し、GPU-centric I/O、NVMe-direct dual path、3D-parallel KV restorationの3候補を抽出した。GitHub default branchとLibrary pendingのcanonical ID/titleを再照合し、既収録PCR等とは別論文であることを確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "GPU runtimeとstorage/network I/Oの協調、または最新2609の分離サービング・collective runtimeへ移る",
+    "empty_round_reason": null
+  }
+}
