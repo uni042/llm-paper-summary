@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T03:52:53.825915+00:00",
+  "updated_at": "2026-09-14T03:55:47.326650+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T03:52:53.825915+00:00",
+      "last_recorded_at": "2026-09-14T03:55:47.326650+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 34,
+        "research_completed": 35,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19158,6 +19158,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34804239123:1",
+          "recorded_at": "2026-09-14T03:55:47.326650+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34804239123",
+            "run_attempt": "1",
+            "source_sha": "85f068882d132eed8f44d5059fa79d1dea7bf9d1"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19430,6 +19444,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.18261",
           "title": "Cacheable by Design? Reassessing Expert Locality for SSD-Offloaded Mixture-of-Experts Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-1ecc150ce081a47b",
+          "type": "research",
+          "canonical_id": "arXiv:2603.08739",
+          "title": "Kareto: Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service",
           "from": "ready",
           "to": "completed"
         }
