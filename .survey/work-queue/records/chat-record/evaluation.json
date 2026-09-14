@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-bd5c4c61bcb1a6ef981e1784",
   "job_id": "job-research-9094fc0c86937469",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-bd5c4c61bcb1a6ef981e1784",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "TTFTとdecode時間はGPU上でtorch.cuda.synchronize()を用いて測定するが、公開本文・付録ではGPU型番を明記していない。KVはホストメモリに保存済みとし、要求時のホスト→GPU転送をTTFTへ含める。",
+    "software": "公式実装は公開されている。基盤モデルを凍結し、C²Token埋込みと各層の専用QKV射影のみをBF16で学習する。",
+    "model": "主評価はQwen3-4B-Instruct-2507、Llama-3.1-8B-Instruct、Qwen2.5-7B-Instruct。拡張評価でQwen3-14Bを使用する。",
+    "datasets": ["学習: HotpotQA、2WikiMultiHopQA、LongMagpieから各40k、計120k sample、1 epoch","評価: LongBenchのHotpotQA、2WikiMQA、MuSiQue、QMSum、Qasper、MultiNews、GovReport、SAMSum等","長文脈: RULER 4k〜64k","few-shot: GSM8K"],
+    "baselines": ["Full KV Recompute","Naive Full KV Reuse","EPIC","CacheBlend","Block-Attention","SnapKVとの単純組合せ"],
+    "correctness": "元文書トークンはC²Tokenへattentionしないため凍結基盤モデル側の隠れ状態を維持する。品質はQAのF1、要約のROUGE-L、RULER retrievalで測り、速度だけでなく圧縮・reuse後の生成品質を比較する。",
+    "settings": ["AdamW、学習率5e-5、warmup 0.06、weight decay 0.1、global batch 32、gradient accumulation 4、BF16。", "通常評価は4倍圧縮を中心とし、固定4/8/16倍と動的4/8/16倍学習を比較する。", "greedy decoding、QA最大32 token、要約最大512 token。", "TTFTは文書KV準備完了までを測り、offline extractionと短いsystem/query prefillは除外する。"],
+    "methodology": "TTFT-品質評価では、Full Recomputeは文書全体のオンラインprefill、既存reuseはホストから通常KVをロードした上でblending・再計算、C²KVは4倍圧縮KVのロードと位置再割当だけを計時する。decode評価ではprefillを除外して平均token間時間を測り、文脈長16kから128kへ伸ばしたときのKV帯域負荷を比較する。品質評価は複数モデル・LongBench taskでFull Recomputeとreuse方式を比較し、圧縮率sweep、RULER長文脈、Qwen3-14B、SnapKV単純併用、構造化注意や位置再配置のablationを追加する。",
+    "scope": "文書単位で事前に再利用対象を識別しオフライン抽出できる設定を対象とする。TTFTでは抽出費を償却済みとして除外するため、初回しか使われない文書の総費用とは異なる。ハードウェア型番が明示されないため、絶対速度より相対的なTTFT・decode帯域削減と品質維持を中心に解釈する。"
+  },
+  "reservation": {"claim_id":"claim-bd5c4c61bcb1a6ef981e1784","worker_id":"scheduled-chat-llm-survey-20260914T1030JST","worker_kind":"scheduled_chat"}
 }
