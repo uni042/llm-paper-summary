@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-3a1a76f02fc138068798003d",
   "job_id": "job-research-f0ab820b8a884812",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3a1a76f02fc138068798003d",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "overview": "4データセットの直接比較ではMEPICの品質はCacheBlend/EPICとほぼ同等で、要求ごとのKV複製を減らした結果、ピークHBM使用率はSQuAD 27.67%、NewsQA 36.43%、NarrativeQA 29.67%、emrQA 23.20%まで低下した。比較対象はそれぞれ約37〜54%を使うため、通常データセットでも最大約2倍のメモリ差がある。QPSを2〜25へ上げた負荷試験ではCacheBlend比5.74倍、EPIC比5.25倍少ないHBMを使い、遅延も11.48%/9.1%低下した。2〜16チャンクへ伸ばす長文脈試験では2.97〜5.21倍少ないHBMで40%未満を維持した。利得は再利用率が高いほど大きいが、再利用率61.4%のNewsQAでもメモリ・遅延改善が残る。",
+    "key_results": [
+      {"metric":"SQuADピークHBM使用率 / 遅延","value":"27.67% / 116.03秒","baseline":"CacheBlend 54.47% / 119.41秒、EPIC 54.13% / 114.73秒","condition":"300要求、Mistral-7B-Instruct-v0.3","interpretation":"HBMはほぼ半減する一方、遅延はEPICより約1.3秒長く、この条件ではメモリ節約が常に最短遅延へ直結するわけではない。"},
+      {"metric":"NewsQAピークHBM使用率 / 遅延","value":"36.43% / 112.36秒","baseline":"CacheBlend 45.97% / 117.00秒、EPIC 45.43% / 115.39秒","condition":"再利用率61.4%、300要求","interpretation":"最も再利用率が低いワークロードでもHBMを約20%削減し、遅延も両比較対象より短いので、ほぼ全トークン再利用できる理想条件だけの効果ではない。"},
+      {"metric":"高負荷時HBM削減","value":"CacheBlend比5.74倍、EPIC比5.25倍少ない","baseline":"CacheBlend / EPIC","condition":"QPS 2〜25、200要求","interpretation":"同一正規チャンクページを並行要求が別コピーせず参照するため、要求数増加に伴うHBM複製が抑えられる。"},
+      {"metric":"高負荷時エンドツーエンド遅延","value":"EPIC比9.1%低下、CacheBlend比11.48%低下","baseline":"EPIC / CacheBlend","condition":"QPS 2〜25、200要求","interpretation":"HBM節約だけでなく、最初の1ブロック以外の再計算・再ステージングを省くことが応答時間にも寄与する。"},
+      {"metric":"長文脈HBM削減","value":"2.97〜5.21倍少ない、MEPICは40%未満を維持","baseline":"CacheBlend / EPIC","condition":"QPS=15、2〜16チャンク、200要求の合成拡張","interpretation":"比較対象は文脈増加でHBMを早く飽和するが、共有正本ページのためMEPICは追加バッチ余地を残す。"},
+      {"metric":"品質","value":"SQuAD 0.74、NewsQA 0.65、NarrativeQA 0.60、emrQA 0.39","baseline":"CacheBlend 0.73/0.66/0.61/0.39、EPIC 0.72/0.66/0.61/0.39","condition":"F1（SQuAD/NewsQA/emrQA）、Rouge-L（NarrativeQA）","interpretation":"最初のチャンクブロックのみ再計算し残りを位置非依存共有しても、比較対象と同程度の出力品質を保つ。"}
+    ],
+    "negative_results": "SQuADではMEPIC 116.03秒に対してEPIC 114.73秒で、MEPICが全条件で最短遅延ではない。利得は共有可能チャンク割合に依存し、NewsQAのように再利用率が低いほどHBM差は縮む。接頭辞KVを追い出さずチャンクと共有プールを使う設計は安定性を優先する反面、接頭辞中心ワークロードではチャンク常駐量を制限し得る。評価は単一モデル・単一NPU系統で、長文脈試験も合成拡張である。",
+    "interpretation": "MEPICのメモリ差はKVをさらに低精度化した結果ではなく、同じ論理チャンクについて複数要求が持っていた物理コピーを一つの正規ページ列へ畳み込むことで生じる。そのため同一チャンクを同時利用する要求が増える高QPS条件ほど倍率が大きくなる。遅延差は、固定1ブロック再計算による計算削減と、CPU/ディスクからの再搬入およびHBM内複製を避ける効果の組合せで説明できる。一方、再利用が少なければ共有対象自体が減るため効果も縮小する。",
+    "quality_impact": "近似によるKV値の圧縮ではなく、位置情報を実行時に適用し、要求固有の境界ブロックだけを再計算する方式である。完全な再計算と数学的に同一とは限らずPIC由来の近似性は残るが、4データセットのF1/Rouge-LではCacheBlend/EPICと同程度で、目立つ品質崩壊は観測されていない。"
   }
 }
