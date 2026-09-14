@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T02:41:05.316984+00:00",
+  "updated_at": "2026-09-14T02:41:46.637998+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T02:41:05.316984+00:00",
+      "last_recorded_at": "2026-09-14T02:41:46.637998+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 17,
+        "research_completed": 18,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18934,6 +18934,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34800058827:1",
+          "recorded_at": "2026-09-14T02:41:46.637998+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34800058827",
+            "run_attempt": "1",
+            "source_sha": "d48e16a1685fff3098c991ad70e0fcfd63ca9906"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19070,6 +19084,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.01579",
           "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-c2ae91e7ef53c740",
+          "type": "research",
+          "canonical_id": "arXiv:2503.15921",
+          "title": "SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models",
           "from": "ready",
           "to": "completed"
         }
