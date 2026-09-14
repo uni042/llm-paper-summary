@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0770d65152b7e1f7e2e050f8",
+  "attempt_id": "attempt-fba6398e98141eab5071b77d",
   "job_id": "job-research-7e6e9c9b89ab9c18",
   "data": {
     "limitations": "特性調査は単一のコーディングエージェント基盤とSWE-rebenchに基づき、制御評価も単一ホスト上の少数トレース再生であるため、一般的なエージェントサービスへそのまま外挿できない。GPU、ネットワーク、ストレージは主要な制御対象外で、CPU用sched_ext経路も本番規模の強い競合評価が不足する。memcg_bpf_opsは論文時点で上流Linuxへ完全統合済みではない開発パッチへ依存する。1秒粒度の特性計測では極短時間ピークの詳細を捉えられず、総需要が恒常的に物理容量を超える場合は抑制だけでは進捗を保証できない。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "主なLLM推論系統がGPU上のKVキャッシュ、重み、バッチ、オフロードを最適化するのに対し、本研究はエージェントが推論の外側で起動するOSプロセスのCPU・メモリ競合へ焦点を移す。Autellix/Agentixのようなプログラム単位LLMスケジューリングと補完関係にあり、AutellixがGPU呼び出し順やKV局所性を管理する一方、AgentCgroupは同一エージェントが起動したホスト側ツールの短時間バーストを制御する。将来CPU・GPU・SSDを跨ぐエージェント基盤を設計する際には、推論テンソルだけでなくツールプロセス状態も階層資源管理の対象へ含める必要性を示す。",
     "audit_required": false
   },
-  "reservation": {"claim_id":"claim-0770d65152b7e1f7e2e050f8","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-fba6398e98141eab5071b77d",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
