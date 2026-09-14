@@ -6,15 +6,15 @@
 
 ## 0. 次回Scheduled Chat枠への引き継ぎガード
 
-毎時`:30`の通常論文workerと毎時`:00`の探索主体workerは、互いの次回予定枠へ食い込まないことを優先する。各runは新しい独立作業（Research/Auditのclaim、新しいdiscovery round、maintenanceの新しい独立単位など）を開始する直前に、JSTで次に来る`:00`または`:30`の予定枠までの残り時間を確認する。
+毎時`:30`の通常論文workerは、同じScheduled Chatの次回`:30`実行と重ならないことを優先する。各runは新しい独立作業（Research/Auditのclaim、新しいdiscovery round、maintenanceの新しい独立単位など）を開始する直前に、JSTで次回`:30`予定枠までの残り時間を確認する。
 
-- 次の予定枠まで **600秒以下** なら、新しい独立作業を開始せず、現在までの成果を耐久保存し、新しいclaimを発行せず、安全な継続情報だけを残してrunを終了する。
-- 次の予定枠まで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など、孤立状態を残さないための最低限の終了処理だけを行う。
+- 次回`:30`予定枠まで **600秒以下** なら、新しい独立作業を開始せず、現在までの成果を耐久保存し、新しいclaimを発行せず、安全な継続情報だけを残してrunを終了する。
+- 次回`:30`予定枠まで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など、孤立状態を残さないための最低限の終了処理だけを行う。
 - 600秒の引き継ぎガードは、high-backlog時の最低3件目標、通常のwork-conserving継続、`CONTINUE`既定値より優先する。ガード内に入ったことを理由に新しい3件目・次job・次探索軸を開始してはならない。
 - すでに処理中で未保存のjobを乱暴に中断して成果を失うことはしない。まず現在の論理成果をGitHubまたはChatGPT Libraryへ耐久保存できる安全地点まで進め、その後は次の独立作業を開始しない。
-- `continuation_gate.py` を使う場合は、次の`:00`/`:30`予定枠までの秒数を `--seconds-to-next-scheduled-task` へ渡す。既定の `--scheduled-handoff-guard-seconds` は600秒とする。
+- `continuation_gate.py` を使う場合は、同じScheduled Chatの次回`:30`予定枠までの秒数を `--seconds-to-next-scheduled-task` へ渡す。既定の `--scheduled-handoff-guard-seconds` は600秒とする。
 
-この引き継ぎガードは通常runだけでなく、この2つのScheduled Chatから起動する特殊runにも適用する。ただし特殊run固有の終了条件がさらに早く成立する場合は、そちらで終了してよい。
+この引き継ぎガードは通常runだけでなく、この毎時`:30` Scheduled Chatから起動する特殊runにも適用する。ただし特殊run固有の終了条件がさらに早く成立する場合は、そちらで終了してよい。
 
 ## 1. 論文ストック0は停止条件ではない
 
@@ -81,7 +81,7 @@ high-backlog research-only modeでは、一次資料取得と耐久保存経路�
 
 通常論文workerが自発的に終了してよいのは原則として以下だけ。
 
-- §0の引き継ぎガードが成立し、次の`:00`/`:30`予定枠まで600秒以下になった。
+- §0の引き継ぎガードが成立し、同じScheduled Chatの次回`:30`予定枠まで600秒以下になった。
 - platform time/context/execution limitに到達した。
 - GitHub read不能で正本状態を安全に判断できない。
 - GitHub direct writeとChatGPT Libraryの両方で、必要な成果またはoffline seedを耐久保存できない。
@@ -93,7 +93,7 @@ high-backlog research-only modeでは探索枯渇を終了理由に使わず、a
 
 ## 7. 特殊run
 
-maintenance runは通常処理へ戻らず、maintenance要求発行後に終了する。08:30 JSTのその他更新workerは論文workerを同じ枠で実行しない。将来repoで追加される明示的な特殊runも、その正本指示を優先する。これらも次のペア予定枠が近い場合は§0の引き継ぎガードを適用する。
+maintenance runは通常処理へ戻らず、maintenance要求発行後に終了する。08:30 JSTのその他更新workerは論文workerを同じ枠で実行しない。将来repoで追加される明示的な特殊runも、その正本指示を優先する。これらも同じ毎時`:30` Scheduled Chatの次回実行が近い場合は§0の引き継ぎガードを適用する。
 
 ## 8. Claim-first execution and lease
 
