@@ -4,10 +4,22 @@
   "slot": "positioning",
   "attempt_id": "attempt-1c2c978dc673c6484d6228c8",
   "job_id": "job-research-b045bf747f93dbbe",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1c2c978dc673c6484d6228c8",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": [
+      "効果は過去履歴から再利用できるtool sequenceとargument依存が存在するworkloadに依存する。新規taskや自由形式の次toolが多い場合は予測可能な候補が減る。",
+      "副作用を安全にcommit前分離できないtoolは投機対象外であり、外部service側にdry-runやstaging機能がない場合は並列化できない。",
+      "外部APIのrate limit、課金、quotaは単なるCPU余剰とは異なるため、deploymentごとにspeculation budgetと価値modelを調整する必要がある。",
+      "評価は主にQwen系30Bモデルと3つのagent framework、32×A100環境で行われ、model family、より大規模GPU cluster、非常に遅いremote toolsへの一般化は追加検証が必要である。",
+      "raw predictorのTop-1精度は最大27.8%に留まり、高い実行hit率は強いfilterに依存する。予測可能な仕事量が少ない状況では投機可能性そのものがボトルネックになる。"
+    ],
+    "differences": [
+      {"name":"投機的復号との差","description":"通常の投機的復号はdraft modelなどで将来tokenを予測し、target modelの検証でaccept/rejectする。PASTEはLLM内部tokenではなくworkflow外部のtool invocationを予測し、正式LLM tool callとの一致を検証条件にする。toolはCPU・network・外部serviceを使うため、GPUだけでなく異種resource budgetと副作用安全性まで扱う必要がある。"},
+      {"name":"ORION・SpecFaaSとの差","description":"既存のspeculative tool executionはtool予測やserverless実行の先行開始に注目するが、PASTEはargument data dependencyをpatternとして学び、実行可能な具体的callを作る。さらにtool高速化によるGPU帰還burstを明示的に扱うLLM–Tool共同schedulerを組み合わせ、局所tool latencyではなくagent end-to-end latencyを目的にする。"},
+      {"name":"HexAGenTとの差","description":"HexAGenTは公開済みworkflow DAGと異種P-D GPUの配置・queue priorityを最適化するのに対し、PASTEはまだLLMが正式に生成していない次tool callを履歴patternから推測し、依存待ちそのものを投機で重ねる。両者はworkflow-level servingだが、前者は既知ready workの配置、後者は未来workの安全な先行実行が中心である。"},
+      {"name":"Heliumとの差","description":"Heliumは事前に解析可能なworkflow templateから共通subgraphやprefixを削除・cacheし、物理scheduleを最適化する。PASTEは完全templateを必要とせず、実行履歴から繰り返しpatternを抽出して次toolを動的に投機するため、構造が逐次現れるinteractive agentにも適用しやすい一方、予測confidenceに依存する。"}
+    ],
+    "implementation_status": "agent側約5,000行TypeScript、vLLM側約2,000行Pythonのend-to-end試作。vLLM本体のsource modificationなしにstartup hookでready turnを制御し、gemini-cli、Qwen Deep Research、VirtualLabへwrapper統合する。著者公式の恒久コードURLは一次資料から確認できない。",
+    "research_positioning": "PASTEはエージェント型LLM配信におけるworkflow-level speculationと異種資源共同スケジューリングの研究に位置する。token generation、KV cache、GPU schedulingだけを対象にせず、CPUや外部serviceで動くtoolを同じcritical pathの資源として扱う点が特徴である。特に『上流toolを速くすると下流GPU queueが悪化する』という観測は、agent servingが複数resource queueを直列接続した系であることを示し、今後のsystemではtool prediction、workflow DAG scheduling、LLM admission、KV memory pressureを一体化する必要がある。HexAGenTのonline workflow risk、Heliumのquery-plan optimization、PASTEの未来tool speculationは相補的であり、これらを統合したagent runtimeが自然な発展方向となる。"
+  },
+  "reservation": {"claim_id":"claim-1c2c978dc673c6484d6228c8","worker_id":"scheduled-chat-llm-survey-20260914T1030JST","worker_kind":"scheduled_chat"}
 }
