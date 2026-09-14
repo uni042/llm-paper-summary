@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-6da68fcbb653c16e9efc63d4",
-  "job_id": "job-research-5ae336587be983aa",
-  "data": {
-    "hardware": "異種評価ではプリフィル側とデコード側にA100/H100/H200を混在させる。Hetero-1は各プール8インスタンス（A100×2、H100×3、H200×3）、Hetero-2は各10インスタンス（A100×3、H100×4、H200×3）。同種評価はLlama3.1-70BをH200 TP4の4P+4D、Qwen3-235B-A22BをA100 TP8の4P+4Dで構成する。",
-    "software": "SGLang v0.5.9のプリフィル・デコード分離機能を基盤にPythonで実装する。ゲートウェイ・ワーカー統合に加え、約4.6K行のイベント駆動資源推定器を使用し、サービス時間はルーフライン型遅延モデルから取得する。",
-    "model": "Llama3.1-70BとQwen3-235B-A22B。LlamaはA100/H100/H200すべてTP4、QwenはA100/H100でTP8、H200でTP4。",
-    "datasets": ["ShareGPT型: 100ワークフロー、10 workflow/s", "BFCL-v3: 400関数呼出しワークフロー、40 workflow/s", "LATS: HotpotQA上の木探索由来100ワークフロー、40 workflow/s", "Mixed: ShareGPT/BFCL-v3/LATS混合100ワークフロー、10 workflow/s"],
-    "baselines": ["SGLang Workflow-FCFS＋負荷均衡", "SGLang Workflow-LLF（最小余裕時間優先）", "Autellix-ATLASのプログラム水準到達サービス量方式"],
-    "correctness": "生成モデルや推論計算自体は変更せず、同じワークロード・クラスタ条件でスケジューリング方策のみを比較する。各ワークフローの単独完了時間H_wを同一クラスタ上の基準としてSLO倍率を正規化する。",
-    "settings": ["Req95/Req99は95%/99%のワークフローがC_w≤αH_wを満たす最小SLO倍率αで、低いほどよい。", "異種2構成×2モデルを主評価し、各行はShareGPT/BFCL-v3/LATS/Mixedの4トレースを平均する。", "推定誤差耐性はHetero-1でプリフィル・デコード見積りへ0%、10%、20%、30%の乗法誤差を注入する。", "スケジューラ費用は総計画時間と1回当たり平均ミリ秒を測り、非同期計画中もサービングを継続する。"],
-    "methodology": "まず小規模特性評価で個別呼出しFCFS、ワークフローFCFS、HexAGenTを段階比較し、ワークフロー認識と異種配置認識の寄与を分ける。主評価ではトレースごとに最強となる3比較対象の値を基準にしてReq95/Req99を比較する。同種クラスタでも同じ評価を行い、利得がGPU異種性だけに由来しないかを確認する。さらに見積り誤差を人工注入し、投影危険度が不正確なサービス時間へどの程度頑健かを測る。",
-    "scope": "論文はSGLangへの実装を説明する一方、主要な大規模ワークフロー比較はイベント駆動資源推定器とルーフライン型サービス時間に基づく構成として記述される。したがって、異種A100/H100/H200の全構成を実機オンラインクラスタで直接再生した結果としてではなく、実装可能性を伴うスケジューリング評価として読むのが妥当である。"
-  },
+  "attempt_id": "attempt-22c77eaff2b1c9dcd57faac0",
+  "job_id": "job-research-5f4ffec07da19fbd",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-6da68fcbb653c16e9efc63d4",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "claim_id": "claim-22c77eaff2b1c9dcd57faac0",
+    "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
 }
