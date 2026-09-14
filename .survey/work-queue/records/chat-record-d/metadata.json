@@ -4,10 +4,92 @@
   "slot": "metadata",
   "attempt_id": "attempt-780edb4f8fe65484658fa733",
   "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-780edb4f8fe65484658fa733",
-    "worker_id": "scheduled-chat-llm-discovery-overflow",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "canonical_id": "arXiv:2504.03775",
+    "arxiv_id": "2504.03775",
+    "doi": "10.48550/arXiv.2504.03775",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+    "summary": "FlowKVは、プリフィルとデコードを別GPU群へ分離する推論で、KVキャッシュ転送そのものが長い待ち時間になる問題と、プリフィル側・デコード側の固定役割が負荷偏りを生む問題を同時に扱う。PagedAttentionのKV配置をブロック優先の連続形へ組み替え、セグメント単位で連続ブロックを割り当て、送受信側の連続区間を照合してNCCL呼び出しをまとめることで転送カーネル起動回数を削減する。さらに全体制御器が待ち行列、KV使用率、GPU利用率、メモリ帯域利用率などを監視し、通常時は転送と先頭トークン遅延が小さい経路を選び、片側過負荷時は空いているGPUの役割を一時的に切り替え、極端な負荷ではノード数を増減する。A100、L20、H20の実機評価では、KV転送遅延をvLLM-Disagg比で単機96.8%、異種複数機92%削減し、LongBenchの要約タスクではvLLMの同居実行比でエンドツーエンド遅延を15.2〜48.9%短縮した。",
+    "list_summary": "KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。",
+    "authors": [
+      "Weiqing Li",
+      "Guochao Jiang",
+      "Xiangyong Ding",
+      "Zhangcheng Tao",
+      "Chuzhan Hao",
+      "Chenfeng Xu",
+      "Yuewei Zhang",
+      "Hao Wang"
+    ],
+    "authors_affiliations": "Alibaba Cloud Computing",
+    "published": "2025-04-03",
+    "publication": "arXiv:2504.03775v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1。PDFにはPreprint / Under reviewと記載。",
+    "lineage": "11-llm-serving-scheduling-disaggregation",
+    "topics": [
+      "プリフィル・デコード分離",
+      "KVキャッシュ転送",
+      "NCCL",
+      "PagedAttention",
+      "負荷適応スケジューリング",
+      "異種GPU"
+    ],
+    "importance": "高。分離推論の通信経路を、通信ライブラリの交換ではなくKVレイアウト、割当器、送受信区間の整列まで一体で変え、同時にP/D役割の負荷偏りも扱う。",
+    "hardware_evaluation": "同種構成はNVIDIA A100-SXM4-80GBを8基搭載しNVLink接続したサーバー、異種構成はL20 48GB×4のサーバーとH20 96GB×8のサーバーをElastic Network Interfaceで接続して実機評価。",
+    "hardware_details": "Llama-3.1-8B-InstructとLlama-3.1-70B-Instructを使用。同種8Bでは2 GPU、70Bでは8 GPUを2ノード相当として各ノード内テンソル並列4。単機転送はIPCへ自動切替し、複数機ではNCCLを中心に評価する。",
+    "quality_effect": "モデル重み、注意近似、生成規則は変更せず、KVキャッシュの物理配置・転送方法とリクエスト配置を変えるシステム最適化であるため、論文の方式自体による生成品質近似はない。LongBenchでは要約品質ではなく遅延・TPOTを評価している。",
+    "storage_targets": [
+      "GPU上のKVキャッシュ",
+      "送受信ノード間のKVキャッシュ転送バッファ",
+      "全体制御器の負荷・KV状態"
+    ],
+    "bottlenecks": [
+      "PagedAttentionの非連続ブロックによる多数のNCCL呼び出し",
+      "NCCLカーネル起動と推論カーネルのGPU資源競合",
+      "プリフィル・デコード固定役割による負荷偏り",
+      "異種GPU間でのKV転送と計算能力の不均衡"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§3.2-3.4",
+      "§4.1-4.4",
+      "Appendix A",
+      "Appendix B.1-B.3",
+      "References"
+    ],
+    "source": "https://arxiv.org/abs/2504.03775",
+    "sources": [
+      "https://arxiv.org/abs/2504.03775",
+      "https://arxiv.org/pdf/2504.03775",
+      "https://arxiv.org/html/2504.03775"
+    ],
+    "code": null,
+    "implementation": "論文はFlowKVを実装し、KVキャッシュのレイアウト、PagedAttentionカーネル、セグメント割当器、IPC/RDMA/NCCL転送モジュール、全体制御器、各ノードの複合スケジューラを評価している。一方、一次資料本文・脚注には公式コードURLや公開リポジトリを記載していないため、公開実装は確認できない。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {"canonical_id": "arXiv:2308.16369", "arxiv_id": "2308.16369", "doi": "10.48550/arXiv.2308.16369"},
+      {"doi": "10.18653/v1/2024.acl-long.172"},
+      {"canonical_id": "arXiv:2501.14743", "arxiv_id": "2501.14743", "doi": "10.48550/arXiv.2501.14743"},
+      {"canonical_id": "arXiv:2407.21783", "arxiv_id": "2407.21783", "doi": "10.48550/arXiv.2407.21783"},
+      {"canonical_id": "arXiv:2406.17565", "arxiv_id": "2406.17565", "doi": "10.48550/arXiv.2406.17565"},
+      {"doi": "10.1109/TNNLS.2021.3070843"},
+      {"canonical_id": "arXiv:2406.00515", "arxiv_id": "2406.00515", "doi": "10.48550/arXiv.2406.00515"},
+      {"doi": "10.1145/3600006.3613165"},
+      {"canonical_id": "arXiv:2303.08774", "arxiv_id": "2303.08774", "doi": "10.48550/arXiv.2303.08774"},
+      {"doi": "10.1109/ISCA59077.2024.00019"},
+      {"canonical_id": "arXiv:2407.00079", "arxiv_id": "2407.00079", "doi": "10.48550/arXiv.2407.00079"},
+      {"doi": "10.1007/S11704-024-40555-Y"},
+      {"canonical_id": "arXiv:2303.18223", "arxiv_id": "2303.18223", "doi": "10.48550/arXiv.2303.18223"},
+      {"canonical_id": "arXiv:2312.07104", "arxiv_id": "2312.07104", "doi": "10.48550/arXiv.2312.07104"}
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv v1 reference section",
+    "references_total": 20
   }
 }
