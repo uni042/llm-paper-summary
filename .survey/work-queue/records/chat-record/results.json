@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-04f374b6b55a5cf420d50468",
-  "job_id": "job-research-420858d196a868b6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-04f374b6b55a5cf420d50468",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
+  "data":{"overview":"4ベンチマークではStreamServeはテンソル並列vLLMに対して遅延を11.3〜18.0倍短縮し、ALPACAを除く3種類でスループットも上回る。4種類平均では814 tokens/s、0.275秒で、TP-vLLMの237 tokens/s、3.53秒に対して平均4.4倍のスループット、15.75倍の遅延改善を報告する。","key_results":[{"metric":"ALPACAの遅延とスループット","value":"137 tokens/s、0.30秒；遅延11.3倍短縮","baseline":"TP-vLLM 171 tokens/s、3.40秒","condition":"LLaMA-2-7B、A800×4、ALPACA 80要求","interpretation":"短い出力では遅延は大幅に改善する一方、推測デコードの追加処理を回収しにくく、スループットはTP-vLLMを下回る。"},{"metric":"GSM8Kの遅延とスループット","value":"264 tokens/s、0.30秒；スループット9.5%向上、遅延11.7倍短縮","baseline":"TP-vLLM 241 tokens/s、3.50秒","condition":"LLaMA-2-7B、A800×4、GSM8K 80要求","interpretation":"推論系の中程度生成長では分離実行と適応推測がスループットと待ち時間の双方に寄与する。"},{"metric":"HUMANEVALの遅延とスループット","value":"639 tokens/s、0.20秒；約3.0倍のスループット、遅延18.0倍短縮","baseline":"TP-vLLM 210 tokens/s、3.60秒","condition":"LLaMA-2-7B、A800×4、HUMANEVAL 80要求","interpretation":"コード生成の比較的長い出力では受理された推測トークンをまとめて処理する効果が大きく表れる。"},{"metric":"SUMの遅延とスループット","value":"2235 tokens/s、0.30秒；6.8倍のスループット、遅延12.0倍短縮","baseline":"TP-vLLM 327 tokens/s、3.60秒","condition":"LLaMA-2-7B、A800×4、SUM 80要求","interpretation":"4ワークロード中最大のスループット差で、生成特性によって適応推測の利得が大きく変わることも示す。"},{"metric":"全データセットの遅延分布","value":"p50 0.24秒、p99 0.36秒","baseline":"TP-vLLM p50 3.44秒、p99 3.90秒；DP-vLLM p50 8.18秒、p99 9.32秒","condition":"4ベンチマーク合算の百分位比較","interpretation":"平均値だけでなく高百分位でも低遅延を維持し、この小規模実験ではキュー滞留の抑制が一貫している。"},{"metric":"構成要素アブレーション","value":"完全版814 tokens/s、0.275秒；ラウンドロビン520、1.15秒；SpecuStreamなし310、2.45秒；単一エンジン290、3.52秒","baseline":"完全版StreamServeと各機構の除去・置換","condition":"4ベンチマーク平均","interpretation":"分離実行、負荷認識ルーティング、適応推測のいずれか一つだけでは完全版に届かず、統合制御の寄与が大きい。"},{"metric":"固定推測深さとの比較","value":"814 tokens/s、0.275秒；最良固定深さ比2.4倍のスループット、8.8倍の低遅延","baseline":"TP-vLLM + 固定d=5: 342 tokens/s、2.41秒","condition":"d=3/5/7の固定推測と適応推測の4ベンチマーク平均","interpretation":"受理率と負荷に応じて深さを変えることが、単一の固定深さより幅広いワークロードで安定した性能を出すことを示す。"}],"negative_results":"ALPACAでは137 tokens/sがTP-vLLMの171 tokens/sを下回り、短い出力では適応型推測の恩恵が十分でない。固定推測深さもd=7ではd=5より悪化する。標準P2Pへ置換すると平均遅延は0.275秒から0.45秒へ悪化する。","interpretation":"プリフィル／デコード分離だけでなく、混雑レーンを避ける配置と負荷に応じた推測量調整を同時に使うと、単一ノード小規模環境では待ち時間を大きく削減できる。ただしTP-vLLMは分離型でなくStreamServe側だけが推測デコードを含むため、11〜18倍差を各機構単独の効果とはみなせない。","quality_impact":"本文はTPOT安定からトークン品質劣化がないと述べるが、TPOTは速度尺度で内容品質を測らない。GSM8K正解率、HumanEval pass@k、要約品質などは報告されず、品質保持は未検証である。"},
+  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
