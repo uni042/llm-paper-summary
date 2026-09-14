@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 14:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 14:37 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **68** |
+| 未処理の論文候補（Research ready） | **67** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **321** |
+| 全文精読完了（累計） | **322** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,20 +35,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **68** |
-| 処理中（Active claims） | **3** |
+| 未処理候補（Research ready） | **67** |
+| 処理中（Active claims） | **2** |
 | 今すぐ着手可能（Claimable） | **66** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **2** |
+| :00 補助worker Active claims | **1** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 14:30 JST** |
 | :00 補助worker 直近claim | **09-14 14:35 JST** |
 | 直近24h Research完了（:30 通常worker） | **28** |
-| 直近24h Research完了（:00 補助worker） | **23** |
+| 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T13:30:00+09:00** |
 | 最新通常runのResearch完了 | **5** |
-| 最古の有効claimの経過時間 | **72 min** |
+| 最古の有効claimの経過時間 | **74 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -64,7 +64,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **51** |
+| Research完了 | **52** |
 | Repo収録 | **50** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -78,7 +78,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 51 → Repo収録 50**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 52 → Repo収録 50**
 
 ## 次に処理する候補
 
@@ -124,6 +124,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2505.12658` — HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving
 - `arXiv:2505.17052` — SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs
 - `arXiv:2509.23384` — A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving
 - `arXiv:2601.22996` — Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference
@@ -131,7 +132,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2503.13737` — AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications
 - `arXiv:2608.08382` — LLMVisor: A Real-Time Latency Attribution Model for Multi-Tenant LLM Serving
 - `arXiv:2603.24595` — Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels
-- `arXiv:2607.17979` — Harness Engineering for LLM-Driven GPU Kernel Generation
 
 ### 7日比較
 
