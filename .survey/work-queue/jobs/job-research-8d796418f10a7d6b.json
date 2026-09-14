@@ -17,5 +17,16 @@
   "artifact_transport": "structured_record_v10",
   "completed_at": "2026-09-14T07:45:37+00:00",
   "blocker": "Primary-source full-text retrieval failed for current arXiv:2609.10861v1. The arXiv abstract page was available and confirms identity plus abstract-level claims, but current-version HTML/PDF full text could not be retrieved in this execution environment. An older related manuscript arXiv:2512.18152 has materially different reported performance/area metrics, so it was not used to infer missing current-version details. Retrieval attempted: https://arxiv.org/abs/2609.10861 (abstract accessible), https://arxiv.org/html/2609.10861 (full text unavailable), https://arxiv.org/pdf/2609.10861 (full text unavailable). Per workflow policy, do not complete from abstract/search snippets; retry when current primary full text is retrievable.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-1f4e92d675c7801b02672c7d.json"
+  "status_submission": ".survey/work-queue/submissions/research/attempt-1f4e92d675c7801b02672c7d.json",
+  "blocked_attempts": 1,
+  "last_recorded_blocked_event": "2026-09-14T07:45:37+00:00",
+  "block_history": [
+    {
+      "attempt": 1,
+      "blocked_at": "2026-09-14T07:45:37+00:00",
+      "reason": "Primary-source full-text retrieval failed for current arXiv:2609.10861v1. The arXiv abstract page was available and confirms identity plus abstract-level claims, but current-version HTML/PDF full text could not be retrieved in this execution environment. An older related manuscript arXiv:2512.18152 has materially different reported performance/area metrics, so it was not used to infer missing current-version details. Retrieval attempted: https://arxiv.org/abs/2609.10861 (abstract accessible), https://arxiv.org/html/2609.10861 (full text unavailable), https://arxiv.org/pdf/2609.10861 (full text unavailable). Per workflow policy, do not complete from abstract/search snippets; retry when current primary full text is retrievable."
+    }
+  ],
+  "last_blocked_at": "2026-09-14T07:45:37+00:00",
+  "retry_not_before": "2026-09-14T09:36:32+00:00"
 }
