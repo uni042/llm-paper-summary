@@ -4,10 +4,28 @@
   "slot": "results",
   "attempt_id": "attempt-92046f6b847ccb96a8ef81c4",
   "job_id": "job-research-174670c4ec67fe0a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-92046f6b847ccb96a8ef81c4",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview":"STAR-KVは低ランクだけで最大75%のKVキャッシュ削減を行い、LongChat-v1.5-7Bでは非圧縮のゼロショット平均61.53%に対して60%圧縮で61.53%、75%圧縮でも60.49%を維持する。LLaMA-2-7Bでも75%圧縮で62.73%となり、Paluの50%圧縮62.60%と同等以上をより高い圧縮率で達成する。低ランク75%圧縮へ平均3.2ビット混合精度量子化を重ねるとKVキャッシュを20倍削減し、LongChatのゼロショット平均59.18%を保つ。RTX 4090の注意処理では量子化なしで32Kまで実行でき最大約4倍、4ビット量子化併用で64Kまで実行でき最大6.9倍の速度向上を報告する。ただし32K・64KではPyTorch基準がメモリ不足のため基準遅延は線形外挿である。端から端までの生成スループットは1K〜16Kで約3.01〜3.14倍、平均約3.1倍向上し、STAR-KV自体は単一RTX 4090で128K文脈を収容できる。",
+    "key_results":[
+      {"metric":"ゼロショット平均精度","value":"61.53%→61.53%（60%圧縮）、60.49%（75%圧縮）","baseline":"LongChat-v1.5-7B非圧縮61.53%","condition":"OpenBookQA、PIQA、ARC-e/c、HellaSwag、WinoGrande","interpretation":"60%圧縮では平均精度を維持し、75%でも低下は約1.0ポイントに留まる。"},
+      {"metric":"静的ランクとの比較","value":"38.88%→60.49%","baseline":"75%圧縮の一様静的低ランク分解","condition":"LongChat-v1.5-7B、同じ75% KV圧縮目標","interpretation":"層・ヘッド単位の適応ランク配分が強い圧縮で特に重要であることを示す。"},
+      {"metric":"低ランク＋量子化の総KV削減","value":"20.0倍、ゼロショット平均59.18%","baseline":"LongChat-v1.5-7B FP16非圧縮、平均60.34%（5課題）","condition":"75%低ランク圧縮＋先頭20%を4ビット、残り80%を3ビット、平均3.2ビット","interpretation":"低ランク空間の特異値順序を利用した混合精度化で、低ランク単独を超える大幅な保存量削減を行う。"},
+      {"metric":"既存量子化法との精度・圧縮比較","value":"STAR-KV 20.0倍/59.18%、KVQuant 6.9倍/58.00%、Palu 8.0倍/56.71%（4ビット）","baseline":"KVQuantとPalu","condition":"LongChat-v1.5-7B常識推論5課題平均","interpretation":"より高い圧縮率で既存量子化・低ランク法以上の精度を示す。"},
+      {"metric":"RULER 16K","value":"85.69→84.16","baseline":"LongChat-v1.5-32K非圧縮85.69","condition":"60% KV低ランク圧縮、16K文脈","interpretation":"長文検索能力でも非圧縮に近い性能を保ち、同圧縮率Palu 62.94を大きく上回る。"},
+      {"metric":"LongBench平均","value":"42.23→40.79","baseline":"LLaMA-3.1-8B-Instruct非圧縮42.23","condition":"50%圧縮","interpretation":"Palu 30%圧縮36.93より高い圧縮率でも良い長文性能を示す。"},
+      {"metric":"端から端までの生成スループット","value":"3.01〜3.14倍、平均約3.1倍","baseline":"PyTorch SDPA FP16","condition":"RTX 4090、LLaMA-2-7B、1K〜16K、各方式でメモリ限界までバッチ増加","interpretation":"KV削減により最大実行可能バッチが8倍程度増え、実際の生成処理量へつながる。"},
+      {"metric":"注意処理速度","value":"16Kで約3.3倍、量子化込み3.5倍。32Kで4.1倍/4.9倍、64K量子化込み最大6.9倍","baseline":"PyTorch SDPA FP16","condition":"RTX 4090、LLaMA-2-7B、バッチ16","interpretation":"長文ほどKV読出し削減が支配的になる。ただし32K・64Kの基準値はメモリ不足のため外挿。"},
+      {"metric":"較正データ感度","value":"ゼロショット平均差 最大0.68ポイント","baseline":"FineWeb-Edu較正","condition":"C4、RedPajama、別乱数種との比較、60%圧縮","interpretation":"学習したランク割当は較正データ選択に比較的頑健。"},
+      {"metric":"トークン削除との併用","value":"84%圧縮で59.99%平均","baseline":"H2O 60%削除で59.95%","condition":"LongChat-v1.5-32K、STAR-KV 60%低ランク＋H2O 60%削除","interpretation":"隠れ次元圧縮とトークン次元削除は直交し、併用でさらに圧縮できる。"}
+    ],
+    "negative_results":[
+      {"name":"量子化は短い文脈では計算側の利得を弱める","description":"3/4ビットKVの量子化・逆量子化費用があるため、短い文脈では量子化なしSTAR-KVより計算側速度向上が小さい。8Kでは量子化なし全体2.6倍に対し量子化込み2.2倍である。文脈が長くなるとメモリ帯域削減が優勢になり逆転する。"},
+      {"name":"32K・64Kの基準注意遅延は実測ではない","description":"PyTorch SDPA基準がRTX 4090でメモリ不足になるため、8K・16Kの実測から線形外挿して速度比を計算する。STAR-KV側の32K・64K遅延は実測だが、最大4.9倍・6.9倍などの速度比には外挿基準の不確実性がある。"},
+      {"name":"高圧縮では品質低下が残る","description":"LongChatのゼロショット平均は60%圧縮なら非圧縮と同じ61.53%だが、75%圧縮では60.49%、平均3.2ビット量子化込み20倍削減では59.18%まで低下する。完全に無損失ではない。"},
+      {"name":"対象モデルごとの事前較正が必要","description":"後処理だけで適用できる一方、各モデルにFineWeb-Edu 3,000標本を使う圧縮・蒸留学習が必要で、論文条件では1エポック約6 GPU時間を要する。"}
+    ],
+    "interpretation":"STAR-KVの主要な利点は、低ランクKVを単なる容量削減手法で終わらせず、ランク配分・復元計算・量子化・GPUカーネルを共同設計して実行性能へ接続した点にある。特に長文では注意処理が計算よりKVメモリ読出しに強く支配されるため、隠れ次元を4分の1以下へ縮めることがメモリ帯域、最大バッチ、収容可能文脈長の三つへ同時に効く。鍵と値を同じ分解にしない設計は、RoPEによる重み吸収の可否と近似感度をシステム実装へ反映したものと解釈できる。",
+    "quality_impact":"60%程度の低ランク圧縮では複数モデルで非圧縮に近い品質を保つが、75%と低ビット量子化を重ねるほど小さいながら品質低下が生じる。したがって利用可能KV容量と要求品質に応じ、60%、75%、量子化込みなど複数の動作点から選ぶ方式が実運用上自然である。"
+  },
+  "reservation":{"claim_id":"claim-92046f6b847ccb96a8ef81c4","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
 }
