@@ -92,7 +92,7 @@ class RunLedgerCompletionMetricTests(unittest.TestCase):
                 "counts": {"research_completed": 0},
             },
         ]
-        latest = module._latest_run(entries)
+        latest = module._latest_normal_run(entries, {})
         self.assertEqual(latest["run_key"], "2026-09-14T07:30:00+09:00")
         self.assertEqual(latest["counts"]["research_completed"], 3)
 
