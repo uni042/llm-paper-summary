@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-22c2ec2cf001d1b96d89693d",
+  "attempt_id": "attempt-39f96b81311f7eee8c631afc",
   "job_id": "job-research-16aaac9973021cd8",
   "data": {
     "overview": "TokenCakeは、エージェントグラフを使う空間優先度制御と、外部関数待ちへKV転送を隠す時間方向制御を組み合わせることで、vLLM系比較対象よりエンドツーエンド遅延とGPU KV利用率を改善する。Code-WriterのQwen2.5-14Bでは1.0 QPSで平均遅延をvLLM比47.06%削減し、72Bの2 GPU構成でも1 QPSで30%以上削減する。GPU KV利用率はvLLMの69.9〜74.1%に対して85.8〜87.0%へ上がり、最大16.9ポイント改善する。除去実験では退避だけを積極化すると1万回を超えるKV移動が発生する一方、両機構を組み合わせると総時間344.6秒となり、退避のみより移動回数を51%削減する。",
@@ -86,8 +86,8 @@
     "quality_impact": "KVの内容やモデル演算を近似しないため、方式自体による生成品質低下は想定しない。誤予測や不適切な移動は追加遅延・転送競合・再計算として現れる。評価は主に性能指標であり、方式間の生成品質差を主要な評価軸にはしていない。"
   },
   "reservation": {
-    "claim_id": "claim-22c2ec2cf001d1b96d89693d",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-39f96b81311f7eee8c631afc",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
 }

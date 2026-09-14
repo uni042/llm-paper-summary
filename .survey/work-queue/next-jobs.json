@@ -18,8 +18,8 @@
   },
   "claiming": {
     "ready_research_audit": 84,
-    "actively_claimed": 3,
-    "claimable": 81
+    "actively_claimed": 2,
+    "claimable": 82
   },
   "next_jobs": [
     {
@@ -95,6 +95,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-b6c014b6c4d75daa",
+      "type": "research",
+      "lane": null,
+      "priority": 84,
+      "canonical_id": "arXiv:2608.01536",
+      "title": "Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.01536",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.01536-celty-dual-sparse-gpu-kernel.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-research-1ecc150ce081a47b",
       "type": "research",
       "lane": null,
@@ -103,18 +115,6 @@
       "title": "Kareto: Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service",
       "source_url": "https://arxiv.org/abs/2603.08739",
       "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2603.08739-kareto-adaptive-tiered-storage-kv-cache.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-research-ba4de6edc8a253cf",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2505.12658",
-      "title": "HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving",
-      "source_url": "https://arxiv.org/abs/2505.12658",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -131,5 +131,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-14T03:43:27+00:00"
+  "generated_at": "2026-09-14T03:43:57+00:00"
 }

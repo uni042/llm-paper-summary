@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-22c2ec2cf001d1b96d89693d",
+  "attempt_id": "attempt-39f96b81311f7eee8c631afc",
   "job_id": "job-research-16aaac9973021cd8",
   "data": {
     "hardware": "Qwen2.5-14BはNVIDIA A100 80GB 1基、Qwen2.5-32BはNVIDIA H20 96GB 1基、Qwen2.5-72BはNVIDIA H20 2基をテンソル並列2で使用する。KV退避先としてCPUメモリ100GBを確保する。",
@@ -33,8 +33,8 @@
     "scope": "実GPU上のエンドツーエンド評価であり、単なるシミュレーションではない。主評価は単一GPUの14B/32Bモデルで、72BについてはH20 2基で複数GPU経路を確認するが、大規模な多数GPUクラスタでの性能評価は今後の課題である。アプリケーショングラフは再現性のため事前登録する一方、要求時の分岐は扱える。完全に動的な確率的グラフモデルは未実装である。"
   },
   "reservation": {
-    "claim_id": "claim-22c2ec2cf001d1b96d89693d",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-39f96b81311f7eee8c631afc",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
 }

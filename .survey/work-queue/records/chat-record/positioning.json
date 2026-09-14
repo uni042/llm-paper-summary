@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-22c2ec2cf001d1b96d89693d",
+  "attempt_id": "attempt-39f96b81311f7eee8c631afc",
   "job_id": "job-research-16aaac9973021cd8",
   "data": {
     "limitations": [
@@ -38,8 +38,8 @@
     "research_positioning": "TokenCakeはKVキャッシュの階層メモリ管理とエージェント応用向けスケジューリングの交点に位置する。特に重要なのは、CPUオフロードを容量不足時の単純な退避先ではなく、外部関数呼び出しというアプリケーション固有の停止時間へ転送を隠す仕組みとして使う点である。これはSSD・CXL・遠隔メモリを含む多階層KV管理にも一般化可能で、移動費と次回利用時刻の予測を組み合わせる方向を示す。同時に、低圧力では退避しない方が速いこと、予測誤差で性能が悪化することも定量的に示しており、『移せるKVをすべて移す』設計への反例になる。今後は多数GPU、より遅いSSD階層、動的グラフ、予測不確実性を明示した転送判断へ拡張する余地が大きい。"
   },
   "reservation": {
-    "claim_id": "claim-22c2ec2cf001d1b96d89693d",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-39f96b81311f7eee8c631afc",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
 }
