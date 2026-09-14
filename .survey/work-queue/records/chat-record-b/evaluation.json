@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-b56259f8a19e558884aa1e18",
   "job_id": "job-research-abd22d64f0da4bcf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b56259f8a19e558884aa1e18",
-    "worker_id": "scheduled-chat-paper-20260915T0630JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "独自ハードウェア実験なし。既存研究の評価基盤を分類し、スマートフォン、Raspberry Pi、NVIDIA Jetson Orin Nano/AGX、GPU/アクセラレータ等を実機例として挙げる。",
+    "software": "評価基盤としてgem5、Timeloop、NVSim、TVM、PyTorch profiler、MLPerf、ns-3、Mininet、llama.cpp、TensorRT-LLM、vLLM、ONNX Runtime、Core ML、Qualcomm AI Engine Directを整理する。",
+    "methodology": "既存研究を、システム構成、LLM固有/エッジ固有課題、モデル圧縮、デコード機構、配置、計算スケジューリング、メモリ管理、通信効率化、共同資源最適化、評価指標/プラットフォームの軸で比較・体系化する。個別研究の数値は代表例として引用し、論文自身の統一再実験ではない。",
+    "scope": "ネットワークエッジでのLLM推論全般を対象とする。単一端末のみの推論やGPUデータセンターのみのサービングより、端末・エッジ・クラウド間の通信と資源配分を含む構成を重視する。",
+    "workloads": ["短文/長文LLM生成","長文脈推論","複数利用者オンラインサービング","マルチモーダル/複数モデル","端末-エッジ-クラウド分割推論"],
+    "baselines": ["クラウド集中型LLM推論","単一端末LLM推論","従来DNNエッジ推論","単一資源のみを最適化する方式"],
+    "metrics": ["先頭トークンまでの時間（TTFT）","1トークン当たり時間（TPOT）","エンドツーエンド遅延","トークン/秒（TPS）","要求/秒（RPS）","有効スループット（goodput）","トークン/ジュール・要求/ジュール","モデル/KV/ピークメモリ","タスク精度・幻覚・バイアス/有害性"],
+    "reproducibility": "論文は統一ベンチマークを新規公開するのではなく、モデル、データセット、指標、シミュレータ、ネットワークエミュレータ、実機/ランタイムの候補を整理する。異なる先行研究間の設定差が大きいため、引用された高速化倍率を直接横並び比較する際には注意が必要。"
+  },
+  "reservation": {"claim_id":"claim-b56259f8a19e558884aa1e18","worker_id":"scheduled-chat-paper-20260915T0630JST","worker_kind":"scheduled_chat"}
 }
