@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a8e4c78bc8a73de49c1a3270",
-  "job_id": "job-research-b3027328474c4253",
-  "data": {
-    "overview": "FlashInfer-Benchの現行snapshotでは、生成agentはRMSNormのようなmemory-bound演算では人手最適化へ近づく一方、GEMMやGQAなどcompute-bound演算では多くのworkloadでSOTAの半分未満に留まる。correctness上位はGPT-5 83.9%、o3 71.3%、Gemini-2.5-Pro 48.8%。観測した32件のcorrectness errorのうち30件はcompile failureで、数値・runtime errorは2件だけだった。TritonはCUDAより正しさと速度を得やすいが、CUDAは成功時の上限が高い。production差替えはkernel call当たり1〜2us、E2E overhead 0.8%未満で、差替えたkernel速度の差がSGLangのE2E latencyへ反映された。",
-    "key_results": [
-      {
-        "metric": "leaderboard correctness",
-        "value": "GPT-5 83.9%、o3 71.3%、Gemini-2.5-Pro 48.8% pass",
-        "baseline": "FlashInfer-Bench snapshot",
-        "condition": "実LLM serving由来kernel workloads",
-        "interpretation": "frontier modelでもproduction kernelの完全な正しさは未達で、評価・修正loopが必要。"
-      },
-      {
-        "metric": "correctness error breakdown",
-        "value": "32 errors中30 compile failures、2 runtime/numerical failures",
-        "baseline": "全観測correctness errors",
-        "condition": "agent-generated kernels",
-        "interpretation": "主障害はアルゴリズム理解よりAPI・dtype・host/device文脈など実装生成の成立性にある。"
-      },
-      {
-        "metric": "hard kernel capability",
-        "value": "GEMM(Triton)、GQA(CUDA/Triton)で半数超のworkloadがSOTA性能の50%未満",
-        "baseline": "FlashInfer等SOTA kernel",
-        "condition": "B200、feedback-loop agent",
-        "interpretation": "compute-bound kernelではtiling、pipeline、hardware intrinsic活用が依然弱い。"
-      },
-      {
-        "metric": "apply dispatch overhead",
-        "value": "kernel call当たり1〜2us、E2E overhead <0.8%",
-        "baseline": "native SGLang FlashInfer backend",
-        "condition": "Fused Add RMSNorm / Llama-3.1-8B-Instruct、batch 1/16/64",
-        "interpretation": "dynamic registry lookupをproduction pathへ入れても固定費は小さい。"
-      },
-      {
-        "metric": "batch64 isolated kernel latency",
-        "value": "FlashInfer 0.0112ms、Gemini-2.5-Pro Triton 0.0160ms、GPT-5 Triton 0.0247ms",
-        "baseline": "同一RMSNorm definition",
-        "condition": "batch 64",
-        "interpretation": "validated generated kernel間の速度差をtraceが定量化する。"
-      },
-      {
-        "metric": "end-to-end latency",
-        "value": "FlashInfer fallback 934ms、Gemini-2.5-Pro substitution 939ms、GPT-5 substitution 1055ms",
-        "baseline": "同一SGLang serving構成",
-        "condition": "代表RMSNorm substitution experiment",
-        "interpretation": "kernel単体の優劣が同方向のE2E差として現れ、deployment loopが実効的である。"
-      }
-    ],
-    "negative_results": "agentはBlackwellのtcgen05等の新hardware intrinsicを十分使えず、attention CUDAでもonline softmax以外のtiling/tensor-core/pipeline最適化を実装できなかった。GPT-5 high-reasoningへ最適化方針を明示しても、10回の試行で正しい高度CUDA kernelを生成できない事例がある。また現行datasetはmulti-GPU/communication kernelを含まず、本番coverageは限定的である。",
-    "interpretation": "主要成果は『LLMが人間kernel技術者を既に上回った』ことではなく、失敗しやすい生成カーネルを実workload・隔離correctness検証・定量性能評価でふるい、改善traceをagentへ返し、合格品だけをproductionへ導入できる運用基盤を示した点にある。Traceがデータセット形式とdeployment registryを兼ねるため、serving workloadの変化を次のagent学習・探索へ戻せる。",
-    "quality_impact": "apply()はreference semanticsを満たすvalidated solutionのみ選択し、モデル品質を変更する近似手法ではない。確率samplingも分布検定を行うため、単発出力一致を強制して誤ったkernelを通すことを避ける。"
-  },
+  "attempt_id": "attempt-77881af45c6d3c3040621e48",
+  "job_id": "job-research-2b5e5558ada44b0c",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a8e4c78bc8a73de49c1a3270",
+    "claim_id": "claim-77881af45c6d3c3040621e48",
     "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
     "worker_kind": "scheduled_chat"
   }
