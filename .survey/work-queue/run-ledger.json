@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T17:18:08.563415+00:00",
+  "updated_at": "2026-09-14T17:19:55.743461+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T17:18:08.563415+00:00",
+      "last_recorded_at": "2026-09-14T17:19:55.743461+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 64,
+        "research_completed": 65,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
@@ -18698,21 +18698,6 @@
         "fallback_archived": 9
       },
       "events": [
-        {
-          "event_id": "34796878579:1",
-          "recorded_at": "2026-09-14T01:44:21.343165+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34796878579",
-            "run_attempt": "1",
-            "source_sha": "3a61b52c53ed0fb9107bd54a2d28e68097e97865"
-          },
-          "signals": [
-            "research_completed",
-            "discovery_or_queue_expanded"
-          ]
-        },
         {
           "event_id": "34797044789:1",
           "recorded_at": "2026-09-14T01:47:24.448776+00:00",
@@ -19596,6 +19581,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34874066583:1",
+          "recorded_at": "2026-09-14T17:19:55.743461+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34874066583",
+            "run_attempt": "1",
+            "source_sha": "bad1bdfef7c08a6c5485ac736d18243fa1de53e6"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20116,6 +20115,14 @@
           "type": "research",
           "canonical_id": "arXiv:2603.09046",
           "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-3ae94af47a718bbb",
+          "type": "research",
+          "canonical_id": "arXiv:2510.13223",
+          "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
           "from": "ready",
           "to": "completed"
         }
