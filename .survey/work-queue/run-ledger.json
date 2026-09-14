@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:16:36.031542+00:00",
+  "updated_at": "2026-09-14T22:19:05.054368+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:16:36.031542+00:00",
+      "last_recorded_at": "2026-09-14T22:19:05.054368+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 6,
         "new_papers": 76,
-        "fallback_archived": 28
+        "fallback_archived": 29
       },
       "events": [
-        {
-          "event_id": "34805322361:1",
-          "recorded_at": "2026-09-14T04:15:21.175848+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34805322361",
-            "run_attempt": "1",
-            "source_sha": "c7526880f48300b74f1bac421e1c3cb063840b05"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34805602237:1",
           "recorded_at": "2026-09-14T04:19:38.857579+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34903078177:1",
+          "recorded_at": "2026-09-14T22:19:05.054368+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34903078177",
+            "run_attempt": "1",
+            "source_sha": "8391a6685c3123e664181e0486171e9c315ccfea"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20397,7 +20397,8 @@
         ".survey/work-queue/fallback-archive/20260915T034100JST-research-2603.20661-www-serve-attempt-cf1c319958b5949951463825.json",
         ".survey/work-queue/fallback-archive/20260915T034200JST-research-2503.08461-fastcache-attempt-4baea6740aec80b2a79b010f.json",
         ".survey/work-queue/fallback-archive/20260915T034500JST-research-2601.17768-llm42-attempt-9d715c96e499c8afcf786e63.json",
-        ".survey/work-queue/fallback-archive/20260915T034300JST-research-2504.07494-apt-serve-attempt-a3ff5598681924c50c62e155.json"
+        ".survey/work-queue/fallback-archive/20260915T034300JST-research-2504.07494-apt-serve-attempt-a3ff5598681924c50c62e155.json",
+        ".survey/work-queue/fallback-archive/20260915T034600JST-research-2608.06188-carbon-routing-attempt-b8bf85a356cf73aca16f3bb9.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 536,
