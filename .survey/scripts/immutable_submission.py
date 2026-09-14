@@ -14,6 +14,7 @@ HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
+from paper_path_resolver import resolve_paper_path  # noqa: E402
 from record_bank_config import BANK_ROOTS, SLOT_NAMES  # noqa: E402
 
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
@@ -169,6 +170,19 @@ def read_record_slot(repo_root: Path, ref: dict[str, Any]) -> dict[str, Any]:
     return payload
 
 
+def _completed_paper_path(repo_root: Path, descriptor: dict[str, Any], job_id: str) -> str:
+    explicit = descriptor.get("paper_path")
+    if explicit is not None:
+        value = _safe_paper_path(explicit, required=True)
+        assert value is not None
+        return value
+
+    job = _read_object(repo_root / ".survey/work-queue/jobs" / f"{job_id}.json")
+    if job is None or job.get("job_id") != job_id:
+        raise ValueError("paper_path is missing and canonical job metadata is unavailable")
+    return resolve_paper_path(job)
+
+
 def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str, Any]:
     repo_root = Path(repo_root).resolve()
     if not isinstance(descriptor, dict):
@@ -209,7 +223,7 @@ def validate_descriptor(repo_root: Path, descriptor: dict[str, Any]) -> dict[str
     bank = str(descriptor.get("record_bank") or "").lower()
     if bank not in BANK_ROOTS:
         raise ValueError("record_bank must be registered")
-    paper_path = _safe_paper_path(descriptor.get("paper_path"), required=True)
+    paper_path = _completed_paper_path(repo_root, descriptor, job_id)
     expected_blob_sha = descriptor.get("expected_blob_sha")
     if expected_blob_sha is not None and (
         not isinstance(expected_blob_sha, str)

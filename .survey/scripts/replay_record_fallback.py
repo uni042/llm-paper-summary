@@ -17,6 +17,7 @@ from typing import Any
 import claim_state
 import immutable_submission
 import select_record_bank
+from paper_path_resolver import resolve_paper_path
 from record_bank_config import BANK_PATH_PREFIXES, BANK_ROOTS, SLOT_NAMES
 
 CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
@@ -147,6 +148,14 @@ def _canonical_dependencies(job_id: str, value: Any) -> list[str]:
     return normalized
 
 
+def _write_if_changed(path: Path, text: str) -> bool:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
 def _validate_job_and_claim(repo_root: Path, envelope: dict[str, Any], meta: dict[str, Any]) -> tuple[dict[str, Any], str | None]:
     kind = meta.get("kind")
     if kind not in {"research", "audit"}:
@@ -169,10 +178,20 @@ def _validate_job_and_claim(repo_root: Path, envelope: dict[str, Any], meta: dic
     if canonical != submitted:
         raise ValueError("fallback dependencies differ from canonical job")
 
-    paper_path = _safe_paper_path(meta.get("paper_path") or job.get("paper_path"))
     canonical_paper = job.get("paper_path")
-    if canonical_paper is not None and paper_path != canonical_paper:
-        raise ValueError("fallback paper_path differs from canonical job")
+    submitted_paper = meta.get("paper_path")
+    if canonical_paper is not None:
+        paper_path = _safe_paper_path(canonical_paper)
+        if submitted_paper is not None and _safe_paper_path(submitted_paper) != paper_path:
+            raise ValueError("fallback paper_path differs from canonical job")
+    elif submitted_paper is not None:
+        paper_path = _safe_paper_path(submitted_paper)
+        job["paper_path"] = paper_path
+        _write_if_changed(job_path, json.dumps(job, ensure_ascii=False, indent=2) + "\n")
+    else:
+        paper_path = resolve_paper_path(job)
+        job["paper_path"] = paper_path
+        _write_if_changed(job_path, json.dumps(job, ensure_ascii=False, indent=2) + "\n")
     meta["paper_path"] = paper_path
 
     if envelope.get("origin") == "claimed_worker":
@@ -199,14 +218,6 @@ def _choose_bank(repo_root: Path, job_id: str, attempt_id: str) -> str | None:
         if bank.get("state") in {"free", "reusable"}:
             return str(bank.get("bank"))
     return None
-
-
-def _write_if_changed(path: Path, text: str) -> bool:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if path.exists() and path.read_text(encoding="utf-8") == text:
-        return False
-    path.write_text(text, encoding="utf-8")
-    return True
 
 
 def materialize(repo_root: Path, envelope: dict[str, Any]) -> dict[str, Any]:
