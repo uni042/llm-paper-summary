@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-d02e2084d863ffbc6514147e",
   "job_id": "job-research-2ab985bbc123336f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d02e2084d863ffbc6514147e",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "理論は新規会話のPoisson到着、ターン間待ち時間の共通分布、turn数・待ち時間・KV増分の独立性などを仮定し、会話履歴をwhole-content単位でLRU退去する。実vLLMはblock単位timestamp、参照中blockの退去保護、prefix-preserving/suffix-first部分退去を行うためモデルとは一致しない。検証もQwen3-8B、Ascend 910B2、ShareGPT、単一のP/D構成に限定され、実agentのburstやユーザー別相関、非定常負荷、別cache policy、cross-conversation prefix sharingが強い環境は未検証。有限測定窓によるcensoringも観測される。専用実装の公開コードURLは一次資料から確認できない。",
+    "differences": "PagedAttentionやKV圧縮・offload研究が『同じ容量へより多くのKVを載せる／どこへ退避するか』を変更するのに対し、本研究は既存LRUの挙動を変更せず『与えた容量なら多ターンprefixがどれだけHBMに残るか』を解析する。Radix/prefix-aware schedulerのようなrequest ordering方式とも異なり、cache policyを最適化するより前段のcapacity provisioningモデルである。",
+    "implementation_status": "著者らはQwen3-8BをvLLM v0.22.1、vLLM-Ascend v0.22.1rc1、Mooncake v0.3.9上で動かし、5台のAscend 910B2 NPUで実測検証している。推定器の式と実験手順は一次資料に記載されるが、研究専用コードの公開URLは確認できない。",
+    "research_positioning": "多ターンprefix KVの再利用研究に、確率的cache解析とLLM servingを接続する位置づけである。LLM固有の『turnごとにobject sizeが増える』『部分blockはhash reuseできない』『P/D分離でprefiller側HBMがreuseの要所になる』という条件をMCMへ取り込み、古典的LRU characteristic-time近似をそのまま適用するのではなく平均場収束として導出する。システムを高速化する新runtimeというより、runtime設計時のHBM配分を定量化する解析層として価値がある。",
+    "relation_to_existing_repository": "`07-kv-cache-optimization-compression`系統の圧縮・量子化・eviction方式に対し、本論文は圧縮率や退去heuristicではなく、LRUが既定であるときのhit ratioと容量の関係を与える補完的研究である。`10-kv-cache-offload-recomputation`系統がmiss後の下位storage取得やreprefill costを減らすのに対し、本研究はmiss自体がどの頻度で起きるかを予測するため、offload tier容量やHBM割当の上流パラメータとして組み合わせられる。P/D分離環境でprefiller HBMを対象にしているため、Mooncake系のKV転送・分離servingとも接点がある。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-d02e2084d863ffbc6514147e","worker_id":"scheduled-chat-llm-discovery-20260915T0000JST","worker_kind":"scheduled_chat"}
 }
