@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-2b99612d9dbe653a70b0ba5a",
   "job_id": "job-research-28c86979d5f2a372",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2b99612d9dbe653a70b0ba5a",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2411.07447",
+    "arxiv_id": "2411.07447",
+    "doi": "10.48550/arXiv.2411.07447",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.PF", "cross_list": ["cs.AI"]},
+    "title": "Saving GPU Hours in LLM Inference System Development and Online Workloads with Simulation and DBMS-Inspired Cache Replacement Policies",
+    "summary": "LLM推論基盤の開発・分析に大量のGPU時間を使う問題に対し、単純な理論コストモデルと少量の実測較正を用いるシミュレータで既存スケジューラの性能上限とKVキャッシュ競合を解析し、その解析から実システムへ移植できる最短要求優先（SRF）プリエンプション/キャッシュ置換方針を導く研究。Llama-2-7BでA100/H100を較正し、シミュレーションの平均/最大誤差を6%/12%に抑えつつ、KV容量を増やすだけでは最適にならず、高競合では短い要求をあえてプリエンプトすると遅延を最大2倍改善できることを示す。理論解析では再計算コストと1デコード段削減の便益を比較し、短い要求のプリエンプトが有利になる条件を導出する。SRFをvLLM、SGLang、Dynamoへ数行の変更で実装し、オンライン実負荷でvLLM最大15%、SGLang最大17%、Dynamo最大20%の遅延改善を、性能退行や公平性喪失なしで報告する。",
+    "list_summary": "単純なコストモデルによる推論シミュレーションから、短い要求を先にプリエンプトするSRFを導出。vLLM/SGLang/Dynamoへ数行で実装し、オンライン負荷で遅延を最大15〜20%改善する。",
+    "authors": ["Kyoungmin Kim", "Jiacheng Li", "Kijae Hong", "Qunyou Liu", "Darong Huang", "Anastasia Ailamaki"],
+    "authors_affiliations": "EPFL, National University of Singapore, POSTECH",
+    "published": "2024-11-12",
+    "publication": "arXiv:2411.07447v5",
+    "publication_type": "プレプリント / ジャーナル投稿中",
+    "publication_status": "arXiv v1は2024-11-12、v5は2026-07-05。本文は2025-11にデータベース系ジャーナルへ投稿し2026-04に査読結果受領と記すが、採録済みとは記載していない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["LLM推論シミュレーション", "KVキャッシュ", "プリエンプション", "キャッシュ置換", "SRF", "vLLM", "SGLang", "Dynamo", "DBMS由来最適化"],
+    "importance": "高。推論基盤のGPU時間を開発段階と本番運用の双方で減らす方法論を提示し、シミュレーション・理論上限・実システム実装を一つの流れで接続している。",
+    "hardware_evaluation": "実機とシミュレーションを併用。Llama-2-7BをA100/H100 80GBで較正し、実システム評価ではLlama-3-8Bを1 GPU、Llama-3-70Bを4 GPU、Dynamoでは2 prefill + 2 decode A100で評価。",
+    "hardware_details": "A100/H100 80GB。既定KVキャッシュは100K token相当。コストモデル較正に約4 GPU時間を使用。",
+    "quality_effect": "生成モデルや出力分布を変更しない。プリエンプト対象の順序だけを変えるため、モデル品質は原理上同じで、論文は公平性も維持すると報告する。",
+    "storage_targets": ["GPU KVキャッシュ", "DRAM KVオフロード", "KV再計算"],
+    "bottlenecks": ["高競合時のKVキャッシュ容量", "KV再計算コスト", "GPUメモリ帯域", "過度なプリエンプション回避", "開発段階のGPU試行錯誤コスト"],
+    "evidence_locations": ["§4 Simulator Design", "§5 Simulator Results", "§6 5-Minute Rule", "§7 Theoretical Analysis", "§8 Evaluation of SRF"],
+    "source": "https://arxiv.org/abs/2411.07447",
+    "sources": ["https://arxiv.org/abs/2411.07447", "https://arxiv.org/html/2411.07447", "https://arxiv.org/pdf/2411.07447"],
+    "code": "",
+    "implementation": "コストモデル・シミュレーションと、vLLM/SGLang/DynamoへのSRF統合を実装。vLLMではSRF 6行、SRF+Hist 24行、SGLangでは7行/27行、Dynamoでも10行未満の変更と報告。本文Table 2では本研究の公開実装をplannedと記しており、一次資料から専用公開コードURLは確認できない。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
+      {"canonical_id": "arXiv:2312.07104", "title": "SGLang: Efficient Execution of Structured Language Model Programs"},
+      {"canonical_id": "arXiv:2401.09670", "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"},
+      {"canonical_id": "arXiv:2403.02310", "title": "Sarathi-Serve: Taming the Throughput-Latency Tradeoff in LLM Inference"}
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv:2411.07447v5参考文献・関連研究節",
+    "references_total": 91
+  },
+  "reservation": {"claim_id": "claim-2b99612d9dbe653a70b0ba5a", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
 }
