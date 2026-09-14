@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T18:12:45.302060+00:00",
+  "updated_at": "2026-09-14T18:17:58.478784+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T18:12:45.302060+00:00",
+      "last_recorded_at": "2026-09-14T18:17:58.478784+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 67,
         "audit_completed": 0,
-        "discovery_completed": 2,
+        "discovery_completed": 3,
         "blocked": 1,
-        "new_jobs": 5,
-        "new_papers": 63,
+        "new_jobs": 6,
+        "new_papers": 71,
         "fallback_archived": 11
       },
       "events": [
-        {
-          "event_id": "34799770069:1",
-          "recorded_at": "2026-09-14T02:36:49.597459+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34799770069",
-            "run_attempt": "1",
-            "source_sha": "fdc7b1770334c8aab31667b8c96cd1e29216eeae"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34799923794:1",
           "recorded_at": "2026-09-14T02:39:32.036823+00:00",
@@ -19596,6 +19582,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34879214593:1",
+          "recorded_at": "2026-09-14T18:17:58.478784+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34879214593",
+            "run_attempt": "1",
+            "source_sha": "f2fde10aedeea42062e99d0ddb4b9aeb7030e5ee"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20158,6 +20159,14 @@
           "title": "MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-290c9e1e770e3de2",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20195,6 +20204,13 @@
           "type": "research",
           "canonical_id": "arXiv:2609.02109",
           "title": "MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs"
+        },
+        {
+          "job_id": "job-12e430d5a1798030",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -20260,7 +20276,15 @@
         "arXiv:2504.03775",
         "arXiv:2607.08786",
         "arXiv:2607.08930",
-        "arXiv:2608.02244"
+        "arXiv:2608.02244",
+        "arXiv:2506.02006",
+        "arXiv:2510.13223",
+        "arXiv:2602.09345",
+        "arXiv:2603.04428",
+        "arXiv:2603.09046",
+        "arXiv:2604.09562",
+        "arXiv:2607.17154",
+        "arXiv:2609.02109"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -20269,7 +20293,10 @@
         ".survey/work-queue/results/20260915T0228JST-discovery-specialist-agent-sandbox-4.json",
         ".survey/work-queue/results/20260915T0230JST-discovery-specialist-smartssd-kv-5.json",
         ".survey/work-queue/results/20260915T0232JST-discovery-specialist-cxl-hybrid-memory-6.json",
-        ".survey/work-queue/results/20260915T0234JST-discovery-specialist-heterogeneous-runtime-5.json"
+        ".survey/work-queue/results/20260915T0234JST-discovery-specialist-heterogeneous-runtime-5.json",
+        ".survey/work-queue/results/20260915T0300JST-discovery-specialist-kernel-tiering-2.json",
+        ".survey/work-queue/results/20260915T0300JST-discovery-specialist-memory-pooling-1.json",
+        ".survey/work-queue/results/20260915T0300JST-discovery-specialist-nvme-kv-3.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20285,8 +20312,8 @@
         ".survey/work-queue/fallback-archive/20260914T204000JST-research-2605.31464-gpu-forecasters-attempt-bafa49c4a685291f5311cc0a.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 523,
-      "last_successful_action": "research_completed"
+      "paper_active_count_after": 531,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }
