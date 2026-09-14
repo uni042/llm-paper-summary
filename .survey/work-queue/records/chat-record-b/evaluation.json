@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-92046f6b847ccb96a8ef81c4",
   "job_id": "job-research-174670c4ec67fe0a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-92046f6b847ccb96a8ef81c4",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware":"圧縮学習はNVIDIA RTX PRO 6000を2基使用する。システム性能の中心は単一NVIDIA RTX 4090でLLaMA-2-7Bを実行した注意カーネルおよび端から端までの生成測定で、別途RTX PRO 6000でもカーネル移植性を確認する。",
+    "software":"PyTorchのFP16 scaled-dot-product attentionを基準実装とし、適用可能な条件ではFlashAttention-2へ自動振り分けされる。STAR-KV側は低ランクKV表現、鍵/値の混成分解、重み吸収、3/4ビット混合精度量子化、専用Triton GPUカーネルを使用する。品質評価はLM-Eval-Harness、LongBench、RULERを用いる。",
+    "model":"主な品質評価はLongChat-v1.5-7B-32K、LLaMA-2-7B、LLaMA-3-8B-Instruct、LLaMA-3.1-8B-Instruct。追加評価としてMistral-7B-Instruct-v0.2とLLaMA-2-13Bを含む。システム速度評価はLLaMA-2-7B。",
+    "datasets":["FineWeb-Eduからランダム抽出した3,000標本（圧縮・蒸留学習）","WikiText-2","C4","OpenBookQA","PIQA","ARC-easy","ARC-challenge","HellaSwag","WinoGrande","LongBench","RULER","C4/RedPajamaを使う較正感度試験"],
+    "baselines":["非圧縮モデル","Palu","ReCalKV","KIVI","KVQuant","静的低ランク分解","H2Oトークン削除","PyTorch FP16 scaled-dot-product attention"],
+    "correctness":"圧縮率だけでなく、パープレキシティ、6種の常識推論ゼロショット精度、LongBench、RULERを用いて生成モデル能力の保持を確認する。60〜75%低ランク圧縮と量子化を別々に評価し、静的ランク、既存低ランク法、量子化法との比較で品質・圧縮のPareto関係を測る。",
+    "settings":["圧縮学習はFineWeb-Edu 3,000標本、AdamW","通常モデルパラメータ学習率2e-5、しきい値パラメータ学習率1e-2","まず圧縮損失＋KL蒸留で1エポック、その後圧縮損失を無効化して蒸留のみ1,000ステップ","LongChat/LLaMA-3系は学習系列長8,192、LLaMA-2-7Bは4,096","層0、1、31は感度が高いため圧縮しない","1エポック約6 GPU時間、RTX PRO 6000×2","注意速度評価はRTX 4090、バッチ16、文脈8K〜64K","生成スループットは各文脈長でGPUメモリ限界までバッチを増やす"],
+    "methodology":"品質評価では、非圧縮、Palu、ReCalKV、STAR-KVを同じモデル上で比較し、圧縮率60%・75%付近のパープレキシティとゼロショット平均を報告する。長文能力はRULER 4KとLongChatの16K試験、LongBenchで確認する。量子化は低ランク75%圧縮後、先頭20%チャネル4ビット・残り80%3ビットの平均3.2ビット設定を中心にKIVI、KVQuant、Palu量子化版と比較する。システム評価では実GPU上のSTAR-KV遅延を測り、PyTorch基準がメモリ不足となる32K・64Kだけ基準遅延を8K・16Kの実測から線形外挿する。端から端までの生成性能は1K〜16Kで各方式が収容できる最大バッチを用い、トークン毎秒を比較する。",
+    "scope":"圧縮学習は7B〜13B級の複数モデルへ適用されるが、速度評価は主にLLaMA-2-7Bと消費者向けRTX 4090である。32K・64Kの注意速度向上値は基準実装がメモリ不足のため基準側だけ外挿を含む。端から端までの表は16Kまでの実測を明示し、128KはSTAR-KVが単一RTX 4090へ収容可能であることを示す。モデル全体の学習不要ではあるが、各対象モデルへ約6 GPU時間の圧縮較正学習を必要とする。"
+  },
+  "reservation":{"claim_id":"claim-92046f6b847ccb96a8ef81c4","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
 }
