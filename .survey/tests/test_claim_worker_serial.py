@@ -53,6 +53,11 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             claim_worker.process_requests(root, at=AT)
             first = json.loads((root / ".survey/work-queue/claim-results/req-a.json").read_text())
             first_assignment = first["assignments"][0]
+            claim_path = root / ".survey/work-queue/claims/job-a.json"
+            current_claim = json.loads(claim_path.read_text())
+            current_claim["record_bank"] = None
+            current_claim["record_bank_fallback"] = "library"
+            write_json(claim_path, current_claim)
 
             add_request(root, "req-b")
             claim_worker.process_requests(root, at=AT)
@@ -63,7 +68,9 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             self.assertEqual(resumed["job_id"], "job-a")
             self.assertEqual(resumed["claim_id"], first_assignment["claim_id"])
             self.assertEqual(resumed["attempt_id"], first_assignment["attempt_id"])
+            self.assertEqual(resumed["claimed_at"], first_assignment["claimed_at"])
             self.assertEqual(resumed["worker_id"], "scheduled-chat-20260913-1530")
+            self.assertEqual(resumed["record_bank_fallback"], "library")
             self.assertEqual(second.get("reason"), "resumed active unsubmitted claim")
 
             job_b_claim = root / ".survey/work-queue/claims/job-b.json"
