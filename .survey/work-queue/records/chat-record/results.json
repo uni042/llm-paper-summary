@@ -4,10 +4,28 @@
   "slot": "results",
   "attempt_id": "attempt-32e9ba2b4cfed24c67d5030c",
   "job_id": "job-research-cccd56289285fe3d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-32e9ba2b4cfed24c67d5030c",
-    "worker_id": "scheduled-chat-paper-20260914T1430JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "GPU内計算はほぼ無損失なのに、機密VM–GPU転送だけが大幅に劣化するという分離が一貫して観測される。特に一つのCUDAコンテキストではH2D/D2H帯域が通常時の約2割に落ち、ストリームを増やしても改善しない。vLLMではこの転送則を無視した非同期スケジューリングが方針反転を起こし、同期化だけで密モデルの機密計算差の57%を回復する。モデルロードではコンテキストを使い捨てず事前生成して再利用することで約34倍高速化し、KV退避では再利用価値の低い状態を移動させないことで先頭トークン遅延を約3分の1へ下げる。",
+    "key_results": [
+      {"metric": "B300 BF16行列積", "value": "1569.81 TFLOPSで通常時の0.998倍", "baseline": "機密計算無効時1573.70 TFLOPS", "condition": "8192×8192 BF16行列積", "interpretation": "GPU演算器自体は性能低下の主因ではない。"},
+      {"metric": "単一CUDAコンテキストのH2D帯域", "value": "11.26 GB/sで通常時の0.203倍", "baseline": "機密計算無効時55.48 GB/s", "condition": "B300の持続ホスト→GPU転送", "interpretation": "大きな劣化はGPU外との境界通過に集中する。"},
+      {"metric": "複数プロセス時のH2D帯域", "value": "34.18 GB/sで通常時の0.615倍まで回復", "baseline": "単一コンテキスト機密計算時11.26 GB/s", "condition": "B300、複数CUDAコンテキストを別プロセスから利用", "interpretation": "転送並列性はストリームではなくCUDAコンテキスト数で増える。"},
+      {"metric": "密モデルサービング", "value": "機密計算有効時2873 tok/s、13.0%低下", "baseline": "機密計算無効時3302 tok/s", "condition": "Qwen3.6-27B-FP8", "interpretation": "GPU計算が速いモデルほど固定的な橋渡し費用が相対的に目立つ。"},
+      {"metric": "混合専門家モデルサービング", "value": "機密計算有効時3981 tok/s、24.7%低下", "baseline": "機密計算無効時5282 tok/s", "condition": "Qwen3.6-35B-A3B-FP8", "interpretation": "ホスト側との細かなやり取りが多い実行形状では影響がさらに大きい。"},
+      {"metric": "KV復元時のウォーム先頭トークン遅延", "value": "935.2 msで131%増", "baseline": "機密計算無効時405.4 ms", "condition": "Qwen2.5-3B、KV churn=3", "interpretation": "KV退避・復元は橋渡し転送を直接クリティカルパスへ載せる。"},
+      {"metric": "同期スケジューリングによる回復", "value": "機密計算時4104 tok/s、トークン間26.92 ms", "baseline": "非同期スケジューリングの機密計算時3550 tok/s、31.10 ms", "condition": "Qwen3.6-27B-FP8、並行度128", "interpretation": "重畳できない転送に重畳用の調停費用を払う方針を止めると、密モデルの性能差の57%が回復する。"},
+      {"metric": "GPT-OSS-120Bモデルロード", "value": "事前ウォームアップ構成で8.36秒", "baseline": "既定ローダ287.09秒", "condition": "B300機密計算環境", "interpretation": "安全なCUDAコンテキストをプールして生成・破棄をクリティカルパスから外すと約34倍高速化する。"},
+      {"metric": "再利用対応KV退避", "value": "ウォーム先頭トークン遅延544 ms、2.97倍改善", "baseline": "既定方針1615 ms", "condition": "RTX Pro 6000機密計算環境、再利用2回以上だけ退避", "interpretation": "転送量を2.3 GiBから2.3 MiBへ抑え、機密転送路をほぼ使わない方針が有効である。"},
+      {"metric": "機密NVLink P2P", "value": "510.4 GB/s", "baseline": "ホスト–GPU機密転送は十数GB/s級", "condition": "B300、2 GPU機密NVSwitchテナント", "interpretation": "GPU間NVLinkはホストの機密橋渡しを通らず、高速なスケールアップ経路として残る。"}
+    ],
+    "negative_results": [
+      {"name": "ストリーム増加", "description": "同一CUDAコンテキスト内でストリーム数を増やしても機密計算時の転送帯域はほぼ増えず、32バイトD2Hも1ストリーム約40マイクロ秒から16ストリーム約39マイクロ秒にしかならなかった。"},
+      {"name": "局所パッチ", "description": "小H2Dのまとめ、永続固定メモリ、ストリーム除去や単純なバッファ再利用だけではデコード性能差を十分に埋められず、実現しない重畳を前提にするスケジューリング方針そのものの変更が必要だった。"},
+      {"name": "ワーカースレッド回復値", "description": "B300高並行度で最大92%回復という値はアクセス期間終了前に再現できず、論文自身が限定付き結果として扱う。H200では機構は再現したが同じ回復率ではない。"},
+      {"name": "マルチGPU評価範囲", "description": "4 GPUテナントは構造確認のみでCUDA負荷試験を完了できず、8 GPUのCUDA/P2P/NCCL、2/4 GPUのNCCL collective、NVLinkの機密計算有効/無効差は未測定。"}
+    ],
+    "interpretation": "結果の中心は『機密計算はGPU全体を一様に遅くする』のではなく、ホスト–GPU境界を越えるたびに固定費と直列化を課すという非一様な性能契約である。したがってGPU内計算が長いワークロードでは影響が小さく、短いデコードステップ、小粒度出力回収、KV復元、モデルロードのように境界を頻繁に越える処理ほど悪化する。Blackwellで相対的な損失が大きいのも、GPU計算が高速化しているのに橋渡しの固定費が同程度に残るためである。改善策も転送を速くするだけでなく、不要な重畳を止める、待ちを別スレッドへ隔離する、コンテキストを再利用する、そもそも移動しないという形でこの契約に合わせると効果が出る。",
+    "quality_impact": "手法はモデルの重み、KV値、生成アルゴリズムを近似化しないため、論文が扱う回復策は原理上モデル品質を変えない。主なトレードオフは性能と資源管理であり、同期スケジューリングは機密計算無効時には本来得られる重畳利益を失う可能性があるため、機密計算モードを検出して方針を切り替える必要がある。"
+  },
+  "reservation": {"claim_id": "claim-32e9ba2b4cfed24c67d5030c", "worker_id": "scheduled-chat-paper-20260914T1430JST", "worker_kind": "scheduled_chat"}
 }
