@@ -4,10 +4,19 @@
   "slot": "results",
   "attempt_id": "attempt-779cb1f8d8bab20a380e7214",
   "job_id": "job-research-77309d3073fb22e0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-779cb1f8d8bab20a380e7214",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0012JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "ISJLは一般のバッチ幅B≥2で公平性を守りながら最適公平スケジュールの少なくとも3/4のスループットを保証する。B=2ではβ≈0.78αの設定で下限約0.77まで改善する。LMSYS-Chat-1M再生では比較したFCFS/SJF/LJFをスループットと平均遅延の両方で上回り、αを大きくするとバッチ充填率とスループットが上がり、αを小さくすると要求進捗を揃える力が強くなって平均遅延が下がる。利益分析ではLJFが外部性ゼロの原価整合基準、FCFSが小さいメイクスパンと大きい外部性の極、ISJLがその中間となる。",
+    "key_results": [
+      {"metric": "一般Bでの競争比", "value": "3/4以上", "baseline": "公平性制約下の最適スループット", "condition": "B≥2、オフラインの待機要求集合", "interpretation": "α公平性を課しても、ISJLは最悪の場合でも最適公平スケジュールの75%以上のスループットを維持する。"},
+      {"metric": "B=2での競争比", "value": "約0.77", "baseline": "公平性制約下の最適スループット", "condition": "β=(√17−1)α/4≈0.78α", "interpretation": "短い要求をどこまで挿入するかをαに合わせて調整すると、単純な3/4下限より少し強い保証になる。"},
+      {"metric": "B=16 スループット", "value": "ISJL α=150: 276", "baseline": "LJF 243 / SJF 196 / FCFS 216", "condition": "LMSYS 2,000会話", "interpretation": "LJF比約14%、SJF比約28%高い。公平性を緩めると新規要求を入れやすくなり、バッチ充填率が上がる。"},
+      {"metric": "B=16 平均エンドツーエンド遅延", "value": "ISJL α=50: 53", "baseline": "LJF 66 / SJF 60 / FCFS 62", "condition": "LMSYS 2,000会話", "interpretation": "LJF比約20%、SJF比約12%低い。厳しい進捗差制約が長短要求の同居による待ちを抑える。"},
+      {"metric": "B=32 スループット", "value": "ISJL α=150: 378", "baseline": "LJF 323 / SJF 259 / FCFS 278", "condition": "LMSYS 2,000会話", "interpretation": "LJF比約17%、SJF比約46%高い。"},
+      {"metric": "B=32 平均エンドツーエンド遅延", "value": "ISJL α=50: 62", "baseline": "LJF 78 / SJF 67 / FCFS 70", "condition": "LMSYS 2,000会話", "interpretation": "LJF比約21%、SJF比約7%低い。"}
+    ],
+    "negative_results": "αを小さくすれば常にすべての指標が改善するわけではない。α=50は平均遅延が最良だが、スループット最大値はα=150で得られる。完全静的なLJFはバッチ外部性をゼロにできても空いた枠を再利用しにくく、メイクスパンが長くなる。利益評価の基準パラメータでは固定段階オーバーヘッドcが小さいためLJFが高利益になり、ISJL α=50がLJFを利益で上回るのはc>0.0162の領域とされる。また大規模な待機要求プールがあり、長さが近い要求を容易にクラスタ化できる場合は、初期バッチ形成における本手法の優位性が小さくなる可能性を著者自身が指摘する。",
+    "interpretation": "本論文の中心的な結果は、スループットを落として公平性を得る単純な二者択一ではない。要求の進捗差を直接制限しつつ、公平性が許す瞬間だけ連続バッチ投入を再開することで、比較対象ではスループットと平均遅延を同時に改善できる。ただし評価は抽象段階モデルなので、実GPU上の段階時間が最大KV量にどの程度比例するか、プリフィルやカーネル融合がどの程度影響するかは別途検証が必要である。",
+    "quality_impact": "生成内容を近似しないため出力品質の劣化は想定されない。トレードオフは品質ではなく、資源公平性、バッチ充填率、遅延、推論原価の間に生じる。"
+  },
+  "reservation": {"claim_id": "claim-779cb1f8d8bab20a380e7214", "worker_id": "scheduled-chat-llm-survey-20260915T0012JST", "worker_kind": "scheduled_chat"}
 }
