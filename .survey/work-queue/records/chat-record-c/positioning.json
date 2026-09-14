@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-5fcf7a060a77c39dcc2d2e09",
   "job_id": "job-research-d0c3e0e607ad747e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5fcf7a060a77c39dcc2d2e09",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "中心実装はMedusa型の複数デコードヘッドと木状候補検証を前提にしており、EAGLE系など別の投機アーキテクチャへ同じ予算式・木探索がそのまま適用できるかは未評価である。単一GPUはTitan RTX/Vicuna-7B、分散は8×MI250/Llama-2-70Bに限られ、モバイル統合GPUを含む幅広い機器での遅延・電力は示していない。分散バッチは固定長パディングを用い、連続バッチングや動的到着率への対応は将来課題である。基盤モデルの最大文脈長は超えられず、量子化へフォールバックした場合の品質評価も十分ではない。",
+    "differences": "MedusaやEAGLEは候補生成・検証による復号高速化を主目的とし、通常は大きな候補木や最大文脈長相当のKV領域を確保する。SpecMemoは投機アルゴリズム自体を新しくするより、候補木・KV・ヘッド・モデル重みのメモリ式を使って利用可能VRAMへ構成を合わせる資源管理層である。Sequoiaのようなハードウェア依存候補木最適化と比べても、OOM回避と多ターン対話の必要KVを明示し、最終的には70Bモデルを複数小容量GPUへ層分割してバッチ投機実行する点まで含む。KV圧縮研究とは異なりKV値を近似圧縮せず、予約長と投機バッファを主に削る。",
+    "implementation_status": "Medusaコード系を基盤に、数式ベースのメモリ予算器、候補木の枝刈り／直接構築、ヘッド数とKV長の調整、必要時のモデル量子化、層分割分散、パディングを用いたバッチ投機デコードを実装し、実GPUで評価している。arXiv本文にはSpecMemo固有の公式公開コードURLは示されていないため、再現には論文記載アルゴリズムと既存Medusa実装を基にした再実装が必要になる。",
+    "research_positioning": "投機的デコード研究の中では、受理率やドラフト精度を高める系統ではなく、追加メモリを第一級の制約として扱うメモリ認識型実行系に位置する。特に、候補木のノード数が一時バッファへ、対話回数と系列長がKV予約へ、ヘッド数が固定重みへ効くことを統合し、単一GPUから小容量GPU群へ同じ予算思想を拡張する。今後は連続バッチング、PagedAttention型KV管理、異なる投機方式、端末電力制約と組み合わせることで、メモリ限界下の投機サービング基盤へ発展できる。"
+  },
+  "reservation": {"claim_id":"claim-5fcf7a060a77c39dcc2d2e09","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
 }
