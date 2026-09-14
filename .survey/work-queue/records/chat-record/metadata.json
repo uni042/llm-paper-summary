@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
   "job_id": "job-research-0d6791ec792101b0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4d3ef5ca344439ed99771c72",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2511.22880",
+    "arxiv_id": "2511.22880",
+    "doi": "10.48550/arXiv.2511.22880",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
+    "title": "Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems",
+    "summary": "LoRAServeは、同じ基盤LLMを共有する多数の低ランク適応（Low-Rank Adaptation; LoRA）をクラスタで同時提供するとき、アダプタのランク差と需要変動が混在バッチの遅延を悪化させる問題を扱う。既存系は各サーバへアダプタを静的配置したり全複製したりするが、高ランク要求と低ランク要求を同じGPUで処理すると低ランク側まで最大ランクに引きずられ、全複製はCPUメモリを大量消費する。LoRAServeは各アダプタのランク、直近のトークン需要、ランクごとのSLO下処理能力を使い、同じランクをなるべくまとめながらサーバ負荷を均す動的配置を周期的に再計算する。各要求は配置表の確率に従って対象サーバへ送られ、再配置後にアダプタがまだローカルにない場合はInfiniBand上のGPUDirect RDMAで別サーバから初回だけ取得し、その後ホストメモリへ保存する。Company Xの実運用トレースではS-LoRA比で最大2倍のSLO内スループット、比較対象比最大9倍のTTFT改善、同じ需要を満たすGPU台数最大50%削減、サーバ当たりアダプタ保存量最大16倍削減を報告する。",
+    "list_summary": "LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。",
+    "authors": ["Shashwat Jaiswal","Shrikara Arun","Anjaly Parayil","Ankur Mallick","Spyros Mastorakis","Alind Khare","Chloi Alverti","Renee St Amant","Chetan Bansal","Victor Rühle","Josep Torrellas"],
+    "authors_affiliations": "University of Illinois Urbana-Champaign、Microsoft、National Technical University of Athens。",
+    "published": "2025-11-28",
+    "publication": "arXiv:2511.22880v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2025-11-28）。本文は採択後にコードとトレースを公開予定と記載しており、2026-09-14時点の一次資料から査読付き採録は確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["Multi-LoRAサービング","動的アダプタ配置","ランク異質性","負荷認識ルーティング","GPUDirect RDMA","分散アダプタプール"],
+    "importance": "高。Multi-LoRAのカーネル最適化だけでなく、ランクごとの干渉をクラスタ配置問題として扱い、需要変動に応じた複製数・配置・要求分配と遠隔アダプタ取得を一体化する。実運用トレースに基づくクラスタ級評価とGPU台数削減を示すため、アダプタサービングの配置・ルーティング系統で重要である。",
+    "hardware_evaluation": "Azure ML上の2種類の実機クラスタ。Standard_ND96asr_v4は各ノード8×NVIDIA A100 SXM 40GB、NVLink 3.0、AMD EPYC 7V12 96コア、900GiBホストメモリ、6TiBディスク、ノード間InfiniBand。Standard_NC24ads_A100_v4は各ノード1×NVIDIA A100 80GB、AMD EPYC 7V13 24コア、220GiBホストメモリ、960GiBディスク。",
+    "hardware_details": "主要実験は4台のLLM推論サーバ、拡張性評価は最大12台。基本設定はLlama-7B、テンソル並列度4で、Llama-30B/70Bや異なる並列度への感度も測る。LoRAServeはS-LoRA上へ実装し、同じ基盤カーネルを比較対象にも使う。",
+    "quality_effect": "モデル重みやLoRA演算の数値近似は変更せず、どのサーバがどのアダプタを保持し、どの要求を処理するかを変えるシステム最適化である。そのため生成品質そのものの改善・低下は評価対象ではない。主な品質関連リスクはSLO違反によるサービス遅延であり、論文は95パーセンタイルTTFTとトークン間時間を中心に評価する。",
+    "storage_targets": ["各LLMサーバのホストメモリ上のLoRAアダプタ","GPU上の実行中アダプタ","クラスタ全体の分散アダプタプール","配置表とルーティング表"],
+    "bottlenecks": ["異なるLoRAランクを同一バッチで処理する際の最大ランク依存干渉","静的配置によるサーバ間負荷不均衡","全アダプタ複製によるCPUメモリ圧迫","需要変動に伴うアダプタ再配置","遠隔アダプタ初回取得の転送遅延"],
+    "evidence_locations": ["§I","§III-A-III-B","§IV-A-IV-B","§V-A-V-J","§VII"],
+    "source": "https://arxiv.org/abs/2511.22880",
+    "sources": ["https://arxiv.org/abs/2511.22880","https://arxiv.org/html/2511.22880"],
+    "code": null,
+    "implementation": "S-LoRAを基盤にクラスタ調整器、ランク・需要認識の配置器、確率ルータ、分散アダプタ位置表、InfiniBand/GPUDirect RDMA取得経路を実装して実機評価する。論文は採択後にコードとトレースを公開すると記載するが、2026-09-14時点で本文に著者公式コードURLはない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2106.09685","arxiv_id":"2106.09685"},
+      {"canonical_id":"arXiv:2305.14314","arxiv_id":"2305.14314"},
+      {"canonical_id":"arXiv:2311.03285","arxiv_id":"2311.03285"},
+      {"canonical_id":"arXiv:2310.18547","arxiv_id":"2310.18547"},
+      {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML参考文献節。識別子を確実に正規化できる主要関連研究のみ構造化し、総参考文献数は別欄に保持する。",
+    "references_total": 52
+  },
+  "reservation": {"claim_id":"claim-4d3ef5ca344439ed99771c72","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
