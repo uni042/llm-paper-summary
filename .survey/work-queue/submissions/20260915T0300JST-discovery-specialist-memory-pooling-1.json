@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-290c9e1e770e3de2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "paper_path": "papers/inference/04-moe-parallelism-communication/2026-2606.24506-crosspool-cold-moe-kv-weight-disaggregation.md",
+      "priority": 92,
+      "reason": "低頻度で利用される複数のMoEモデルを同時ホストする際、静的なFFN重みと動的なKVキャッシュが同じGPUメモリを奪い合う問題に対し、重みプールとKVキャッシュプールを分離する。KV仮想化、層単位パイプライン、永続カーネルを組み合わせ、長文かつバースト性のある要求で既存のmulti-LLM KV-cache方式よりP99 TBTを最大10.4倍改善と報告する。MoE配置、メモリプール、分離サービングを横断し、重点テーマとの関連が非常に高い。"
+    },
+    {
+      "canonical_id": "arXiv:2606.16135",
+      "title": "SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing",
+      "source_url": "https://arxiv.org/abs/2606.16135",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md",
+      "priority": 90,
+      "reason": "長期対話で増え続けるKVキャッシュがHBMからCPU/SSDへ追い出され、PCIe経由の再ロード遅延を生む問題に対し、同一サーバ内の低KV需要モデルが余剰GPUメモリを提供し、NVLink経由で高需要モデルのprefix cacheを保持する。さらに現在処理中の層だけKVをローカルHBMへ置く。vLLM/SGLang比でP99 TTFT最大69%削減、最大context length最大3.98倍を報告し、CPU/SSDオフロード回避と階層メモリ設計の比較対象として強い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.16892",
+      "title": "Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty",
+      "source_url": "https://arxiv.org/abs/2607.16892",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md",
+      "priority": 83,
+      "reason": "出力長が到着時に未知なため、KV予約不足ではpreemptionと再計算、過剰予約ではGPUメモリ浪費が起きる問題を、GPU並列構成・要求クラス別KV予約・異種serving groupへのrouting・prefix cachingの共同最適化として扱う。Wasserstein分布ロバスト最適化により分布変化へ対応し、BurstGPT/Azure/ShareGPT traceで固定quantile方式より最大56%低コストを報告する。KV容量管理とSLO schedulingの理論・運用両面で有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T03:00:00+09:00",
+    "round": "specialist-memory-pooling-1",
+    "axis": "KVキャッシュ階層化・MoEメモリプール・不確実性を考慮した容量管理",
+    "query_summary": "LLMサービングのKVキャッシュ、CPU/SSD退避回避、MoEの重み/KV分離、出力長不確実性下のメモリ予約を探索した。候補はarXiv一次書誌とabstractを確認し、投入直前にGitHub default branchとLibrary pendingを再照合した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "2609新着のGPU runtime・MoE expert cache/prefetch・NVMe/SSD階層メモリへ軸を移す",
+    "empty_round_reason": null
+  }
+}
