@@ -16,6 +16,7 @@ HIGH_BACKLOG = 25
 SPECIALIST_RESEARCH_SWITCH = 50
 LOW_COMPLETIONS = 2
 TARGET_COMPLETIONS = 3
+JST = timezone(timedelta(hours=9))
 WORKER_SLOT_RE = re.compile(r"(?P<hour>\d{2})(?P<minute>00|30)(?:\D|$)")
 WORKER_RUN_RE = re.compile(r"(?P<stamp>\d{8}T\d{4})JST", re.IGNORECASE)
 DASHBOARD_LABEL_REPLACEMENTS = (
@@ -62,7 +63,7 @@ def _is_ordinary_research_run(entry: dict[str, Any], maintenance: dict[str, Any]
     stamp = _dt(entry.get("run_key") or entry.get("last_recorded_at"))
     if stamp is None:
         return False
-    jst = stamp.astimezone(timezone(timedelta(hours=9)))
+    jst = stamp.astimezone(JST)
     if jst.minute != 30:
         return False
     # 08:30 is always routed away from the ordinary paper worker: maintenance
@@ -127,6 +128,8 @@ def _worker_lane(worker_id: Any) -> str:
         return "unknown"
     if "aux" in value or "specialist" in value:
         return "aux"
+    if "scheduled-chat-llm-survey" in value:
+        return "normal"
     if "normal" in value or "router" in value:
         return "normal"
 
@@ -137,19 +140,39 @@ def _worker_lane(worker_id: Any) -> str:
     return "aux" if minute == "00" else "normal"
 
 
+def _slot_from_claim_time(claim: dict[str, Any], lane: str) -> datetime | None:
+    """Infer a legacy Scheduled Chat slot from claim time when worker_id lacks one."""
+    claimed = _dt(claim.get("claimed_at"))
+    if claimed is None:
+        return None
+    local = claimed.astimezone(JST)
+    if lane == "normal":
+        if local.minute >= 30:
+            return local.replace(minute=30, second=0, microsecond=0)
+        return (local.replace(minute=30, second=0, microsecond=0) - timedelta(hours=1))
+    if lane == "aux":
+        return local.replace(minute=0, second=0, microsecond=0)
+    return None
+
+
 def _claim_run_key(claim: dict[str, Any]) -> str | None:
-    """Recover the originating Scheduled Chat run from the durable worker id."""
+    """Recover the originating Scheduled Chat run from durable claim metadata."""
     worker_id = str(claim.get("worker_id") or "")
     match = WORKER_RUN_RE.search(worker_id)
-    if match is None:
-        return None
-    try:
-        local = datetime.strptime(match.group("stamp"), "%Y%m%dT%H%M").replace(
-            tzinfo=timezone(timedelta(hours=9))
-        )
-    except ValueError:
-        return None
-    return local.isoformat(timespec="seconds")
+    if match is not None:
+        try:
+            local = datetime.strptime(match.group("stamp"), "%Y%m%dT%H%M").replace(tzinfo=JST)
+        except ValueError:
+            return None
+        return local.isoformat(timespec="seconds")
+
+    # Older claims used generic worker ids such as `scheduled-chat-llm-survey`.
+    # Recover their Scheduled Chat slot from claimed_at instead of losing the
+    # completion to the unknown bucket. Use claim creation time rather than a
+    # later heartbeat so a long-running job stays attached to its origin run.
+    lane = _worker_lane(worker_id)
+    local = _slot_from_claim_time(claim, lane)
+    return local.isoformat(timespec="seconds") if local is not None else None
 
 
 def _latest_claim_run_key(
@@ -165,7 +188,7 @@ def _latest_claim_run_key(
         stamp = _dt(run_key)
         if run_key is None or stamp is None:
             continue
-        jst = stamp.astimezone(timezone(timedelta(hours=9)))
+        jst = stamp.astimezone(JST)
         if lane == "normal" and (jst.minute != 30 or jst.hour == 8):
             continue
         candidates.append((stamp, run_key))
@@ -274,7 +297,7 @@ def _oldest_active_claim_age(repo_root: Path, now: datetime) -> int | None:
 def _fmt_time(value: datetime | None) -> str:
     if value is None:
         return "—"
-    return value.astimezone(timezone(timedelta(hours=9))).strftime("%m-%d %H:%M JST")
+    return value.astimezone(JST).strftime("%m-%d %H:%M JST")
 
 
 def render_section(repo_root: Path, now: datetime | None = None) -> str:
@@ -353,7 +376,8 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| 最新通常run | **{run_key}** |\n"
         f"| 最新通常runのResearch完了 | **{latest_completed}** |\n"
         f"| 最古の有効claimの経過時間 | **{age_text}** |\n\n"
-        "run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimのworker_idに埋め込まれた元Scheduled Chat run** へ帰属させます。\n\n"
+        "run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。"
+        "新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。\n\n"
         f"Research readyが **{SPECIALIST_RESEARCH_SWITCH}本を超える間は`:00` workerも論文精読側** に回り、"
         f"**{SPECIALIST_RESEARCH_SWITCH}本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、"
         f"readyが **{HIGH_BACKLOG}本以上** で処理可能なResearchがある間はResearch/Auditを優先します。\n\n"
