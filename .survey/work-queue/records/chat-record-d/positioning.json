@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-22c77eaff2b1c9dcd57faac0",
-  "job_id": "job-research-5f4ffec07da19fbd",
-  "data": {
-    "limitations": "評価はHarvard/Kempner系の単一異種GPU環境と単一ノードvLLM 0.11.2に限定され、マルチノード通信、別サービングエンジン、訓練、障害回復、他クラスタの料金体系へそのまま一般化できない。KV占有率0.85の折れ点、トークン価値、待ち時間や失敗の費用係数は運用環境依存である。教師データは観測実験なので未観測交絡を完全には除けず、支持外では予測が大きく崩れる。更新ゲートも1回の更新例であり、長期運用でのドリフト耐性は未検証である。",
-    "differences": "vLLM、SGLang、Sarathi-Serveなどが起動後のバッチ化・実行を最適化し、DistServe、Splitwise、Helixなどがプリフィル／デコード分離や異種資源配置を扱うのに対し、OmniPilotはジョブ投入前のGPU種類・テンソル並列度・精度選択を扱う。既存配置研究のように既知の性能モデルを前提に最適化するだけでなく、実測から多目的性能分布を学習し、支持外では推薦を拒否する点が差分である。実行時移行やきめ細かな再配置は行わず、既存サービング基盤の上位に置く助言層である。",
-    "implementation_status": "研究プロトタイプとして、型付き履歴収集、勾配ブースティング分位点回帰、適合予測、支持距離棄却、効用計算、更新ゲートを実装し、vLLM 0.11.2の実機ベンチマークで評価している。論文はコード／データをプロジェクトリポジトリに置く方針を述べるが、本文からOmniPilot専用の公式URLを確定できなかった。クラスタ全履歴はプライバシー等の理由から再配布できない。",
-    "research_positioning": "異種GPU LLMサービングの系統では、OmniPilotは「実行時にどう処理するか」ではなく「どの構成で起動するか」を不確実性込みで決めるマクロな制御層に位置する。特に、量子化の非単調性能、並列度ごとの失敗率、KV圧力を同じ推薦問題へ統合し、分布外検出を明示的に持つため、異種クラスタの自動運用や将来のスケジューラと性能モデルの接続点として価値がある。今後はマルチノード、オンライン負荷変化、構成変更コスト、出力品質制約まで含めることで、起動時助言から継続的な資源管理へ拡張できる。"
-  },
+  "attempt_id": "attempt-98e2f53bf422100fe7011bb9",
+  "job_id": "job-research-cca875ddc6629317",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-22c77eaff2b1c9dcd57faac0",
+    "claim_id": "claim-98e2f53bf422100fe7011bb9",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
