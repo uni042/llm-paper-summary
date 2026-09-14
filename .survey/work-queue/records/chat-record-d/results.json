@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-ebdfe1bfc6bf08876f45688e",
-  "job_id": "job-research-cff945d042003c88",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ebdfe1bfc6bf08876f45688e",
-    "worker_id": "scheduled-chat-llm-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-ebdfe1bfc6bf08876f45688e","job_id":"job-research-cff945d042003c88","data":{"overview":"提案カーネルは狙いどおり50%の中程度非構造疎性で最も強く、H100上でCUDA Core系・Tensor Core系の既存疎行列積をすべて上回る。Sputnik比では最大5.29倍・平均3.92倍、SparTA比最大1.82倍、FlashLLM比最大1.81倍、SpInfer比最大1.64倍で、著者らはHBM搭載現代GPU上で密行列積を上回る初の中程度非構造疎SpMMと位置付ける。端末間ではOPT-30Bのバッチ16・50%疎性でFlashLLM比41.4%、SpInfer比26.1%高いスループットを得る。メモリ面でもOPT-30Bで密形式比約21.4%削減する。","key_results":[{"metric":"50%疎性のSpMM高速化","value":"最大5.29倍、平均3.92倍","baseline":"Sputnik","condition":"H100、OPT系を中心とする行列形状、N=16/32","interpretation":"CUDA Coreだけで不規則SpMMを処理する方式より、主計算を疎Tensor Coreへ移して復号を並行化する効果が大きい。"},{"metric":"50%疎性のSpMM高速化","value":"最大1.64倍","baseline":"SpInfer","condition":"H100、50%非構造疎性","interpretation":"ビットマップで帯域を減らしても復号が臨界路になり得る既存方式に対し、PDD対象を約17.7%へ限定しTensor Coreと復号を重ねることで追加利得を得る。"},{"metric":"OPT-30B端末間スループット","value":"+41.4%","baseline":"FlashLLM","condition":"50%疎性、バッチ16、入力512・出力512","interpretation":"疎行列積だけでなく実モデルのデコード全体でも効果が残る。ただし行列積以外の演算があるためカーネル単体ほど倍率は伸びない。"},{"metric":"OPT-66B端末間スループット","value":"最大+37.6%","baseline":"FlashLLM","condition":"50%疎性、提案方式2 GPU、FlashLLM 4 GPU","interpretation":"提案格納形式の小さいメモリ占有によりFlashLLMより少ないGPUで評価可能で、スループットも高い。ただしGPU台数が異なるため単純な同数GPU比較ではない点に注意が必要。"},{"metric":"60%疎性SpMM平均高速化","value":"1.29倍 / 1.26倍 / 1.47倍","baseline":"SparTA / FlashLLM / SpInfer","condition":"H100、60%疎性","interpretation":"主標的の50%から疎性を上げても優位は維持するが、高疎性へ進むほどSlot-Fillingの再配置機会が減る。"},{"metric":"ピークGPUメモリ削減","value":"約21.4%","baseline":"密形式","condition":"OPT-30B、50%疎性、バッチ16","interpretation":"値本体だけでなく位置メタデータを抑える設計が、計算速度だけでなくモデル常駐メモリにも効く。"},{"metric":"疎形式への一回変換時間","value":"41.1秒 / 92.6秒","baseline":"該当なし","condition":"Intel Xeon Platinum 8460Y+、OPT-30B / OPT-66B","interpretation":"再配置と符号生成には前処理費があるが、モデル重みごとに一度だけで推論中には繰り返さない。"}],"negative_results":"高疎性では2:4窓に空きが多く余剰非零値が少ないため、Slot-Fillingで空きを有効利用する戦略が効きにくく、FlashLLMを上回らない。さらにプリフィルのようにNが大きい場合は演算量が増えて計算律速となり、デコード向けに帯域と復号を重ねた提案カーネルは密cuBLASより遅い。OPT-66BのFlashLLM比較ではFlashLLMが4 GPUを必要とする一方で提案方式は2 GPUなので、資源構成は揃っていない。","interpretation":"本質的な改善点は『疎性があるから演算を減らす』だけではなく、50%という中程度密度で支配的になる索引・復号・HBM帯域を、ハードウェアの別実行資源へ分割したことである。非構造枝刈りの品質上の利点を残したまま2:4 Tensor Coreの高速経路へ大部分を写し、規則から外れた値だけを安価に補正するため、疎形式の構造化と数値的完全性を両立する。","quality_impact":"本研究は高速実行方式であり、同じ枝刈り済み重みの行列積を正しく再現することを目的とする。品質の実証としては、導入部でWanda/RIAのWikiText-2パープレキシティを示し、50%非構造疎性が60〜70%より品質を維持しやすいことを動機にしている。端末間性能実験では新たな精度・パープレキシティ比較を報告しておらず、品質差ではなく既存疎モデルの実行効率を評価している。"},"reservation":{"claim_id":"claim-ebdfe1bfc6bf08876f45688e","worker_id":"scheduled-chat-llm-discovery-overflow","worker_kind":"scheduled_chat"}}
