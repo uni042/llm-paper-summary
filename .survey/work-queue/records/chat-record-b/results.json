@@ -1,78 +1,30 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
-  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "results",
+  "attempt_id": "attempt-08e554d84abc317af5940c6f",
+  "job_id": "job-research-382442b3f5faa67f",
   "data": {
-    "overview": "二地域A100実機では炭素重みを強めるにつれて清浄地域AZPSの要求比率が50→56→57→58→63%へ単調に増え、約196万要求ターンを配送失敗0件で処理した。最強設定は補正なし圧力ルータ比で配賦GPU運用排出を1.45%減らしたが、p95遅延は18.7秒から20.9秒へ11.7%増えた。長期再生では実機と同型の緩やかな乗数方式が22.7%削減、50%地域上限付き最清浄地域優先方式がラウンドロビン比50.9%削減となった。ただし後者は完全予見・均質H100・強い集中許容などを含む上限寄り条件である。ゼロMOERへの信用を保守的に弱めても約34%削減となり、削減幅を34〜51%の感度範囲として提示する。",
+    "overview": "Pancakeは既存のagent memory libraryに対し、単一agentの端から端までのthroughputを1.12〜26.18倍改善し、平均speedupは4.29倍超となる。memory operation単体は6.81倍超高速で、全実行時間に占めるmemory operationは平均3.2%（最大17.9%未満）まで低下する。2-agent混合では既存baselineが29.9〜55.9%低下するのに対しPancakeは9.8%以下、20 agentsまででも低下は10.2%未満に抑える。multi-level cacheは長時間負荷で最大2.23倍、hybrid graphはcoarse search costを20倍超削減し、GPU cacheはCPU版比最大1.92倍を示す。",
     "key_results": [
-      {
-        "metric": "実機配送信頼性",
-        "value": "約196万要求ターン、配送失敗0件",
-        "baseline": "炭素補正なしを含む5腕",
-        "condition": "A100二地域、約48時間",
-        "interpretation": "炭素信号を既存本番ルータへ重ねても、試験窓では配送機構を壊さず実負荷を動かせた。"
-      },
-      {
-        "metric": "清浄地域への実負荷移動",
-        "value": "AZPS比率 50→56→57→58→63%",
-        "baseline": "ラウンドロビン→補正なし→低/中/高炭素重み",
-        "condition": "A100二地域",
-        "interpretation": "炭素重みを強めるほど単調に清浄地域へ要求が移り、信号が配置判断へ実際に効いている。"
-      },
-      {
-        "metric": "実機配賦GPU運用排出",
-        "value": "1.45%削減",
-        "baseline": "補正なし本番圧力ルータ",
-        "condition": "A100二地域、約48時間、履歴MOERで精算",
-        "interpretation": "特定の低カーテイルメント週・二地域という狭い条件では削減量は小さいが方向は意図通り。一般化可能な削減率とは主張しない。"
-      },
-      {
-        "metric": "実機p95遅延",
-        "value": "18.7秒→20.9秒（11.7%増）",
-        "baseline": "補正なし本番圧力ルータ",
-        "condition": "意図的に飽和させたA100二地域試験",
-        "interpretation": "清浄地域への集中は待ち行列を増やし得る。共有GPUによる腕間干渉があるため純粋な因果効果ではない。"
-      },
-      {
-        "metric": "GPUエネルギー並行度効果",
-        "value": "H100 3.37→0.104 J/トークン、A100 3.51→0.123 J/トークン",
-        "baseline": "低並行→飽和",
-        "condition": "DCGM事前掃引",
-        "interpretation": "地域の炭素強度だけでなくGPU利用率が約30倍規模で1トークン当たりエネルギーを左右する。"
-      },
-      {
-        "metric": "緩やかな炭素乗数再生",
-        "value": "22.7%削減（95% CI 21.9〜23.5%）",
-        "baseline": "ラウンドロビン",
-        "condition": "19地域・1年、w=1、同じ50%地域上限",
-        "interpretation": "実機オーバーレイに近い配置規則でも、地域・季節多様性があればモデル上は一定の削減余地がある。"
-      },
-      {
-        "metric": "主要履歴再生",
-        "value": "50.9%削減（95% CI 48.5〜53.3%）",
-        "baseline": "ラウンドロビン",
-        "condition": "最清浄地域優先、地域上限50%、会話固定込み",
-        "interpretation": "特定の完全予見・強い集中許容条件で得られる上限寄りの機会推定であり、本番期待値ではない。"
-      },
-      {
-        "metric": "動的MOER信号の追加寄与",
-        "value": "約22.4ポイント、自由配置54.0%削減の約40%",
-        "baseline": "年平均MOERだけの静的配置",
-        "condition": "会話固定前の分解",
-        "interpretation": "単に年間平均が清浄な地域へ寄せるだけでなく、時刻ごとのカーテイルメント追随にも大きな追加価値がある。"
-      },
-      {
-        "metric": "ゼロMOER感度",
-        "value": "約34〜51%削減",
-        "baseline": "ラウンドロビン",
-        "condition": "ゼロ値を地域の非ゼロ中央値×αで再評価、α=1〜0",
-        "interpretation": "主要50.9%結果は再生可能電力カーテイルメントの扱いに強く依存するが、ゼロ信用を全て除いてもモデル上の削減余地は残る。"
-      }
+      {"metric":"単一agent end-to-end throughput","value":"1.12×〜26.18×、平均4.29×超","baseline":"A-Mem / MemGPT / LlamaIndex / LangMem","condition":"複数model・dataset・4 access patterns","interpretation":"外部memory処理が大きい条件ほど索引最適化がLLM serving全体へ直結する。"},
+      {"metric":"memory operation speedup","value":"6.81×超","baseline":"既存agent memory implementations","condition":"検索・挿入を含むmemory path","interpretation":"LLM計算ではなくANN memory layer自体を高速化した効果を分離して確認できる。"},
+      {"metric":"memory operation時間比","value":"平均3.2%、17.9%未満","baseline":"既存方式では規模増加時82%以上になり得る","condition":"end-to-end workloads","interpretation":"外部memoryが主要bottleneckになる状態を大きく緩和する。"},
+      {"metric":"2-agent mixed workload degradation","value":"9.8%以下","baseline":"既存baselineは29.9%〜55.9%低下","condition":"異なるdatasetを混合","interpretation":"hybrid graphとagent profileがcross-agent interferenceを抑える。"},
+      {"metric":"20-agent scaling degradation","value":"10.2%未満","baseline":"single-agent condition","condition":"最大20 concurrent agents","interpretation":"評価範囲ではagent数増加に対してほぼ線形にscalingする。"},
+      {"metric":"multi-level index cache","value":"最大2.23× latency reduction","baseline":"IVF static/split maintenance","condition":"long-serving dynamic workload","interpretation":"閾値splitの収束待ちより早くagent localityへ適応する。"},
+      {"metric":"coarse index search cost","value":"20×超削減","baseline":"agentごとの独立coarse index","condition":"multi-agent index management","interpretation":"hybrid graphによりagent数に比例する上位索引走査を避ける。"},
+      {"metric":"vector similarity computation","value":"hybrid graphで最大11.6%削減、agent profileでさらに平均21.8%削減","baseline":"independently constructed indexes","condition":"multi-agent shared memory","interpretation":"上位routingだけでなくfine-grained scan順にもagent-specific localityが効く。"},
+      {"metric":"GPU caching speedup","value":"CPU版比最大1.92×","baseline":"Pancake CPU","condition":"GPU cache、5〜15GB付近で多くのworkloadがplateau","interpretation":"索引全常駐なしでもhot clusterだけでGPU accelerationを引き出せる。"}
     ],
-    "negative_results": "初期H100試験で地域内百分位のsignal-indexを地域間比較へ使うと、絶対MOERでより清浄なDallasが高百分位、より汚いAtlantaが低百分位となり、ルータが汚い地域を選ぶ順位逆転が起きた。またA100実機では炭素最優先設定でp95遅延が11.7%増加した。実機削減率は1.45%にとどまり、H100期間も深いカーテイルメントを含まず短期終了した。ゼロMOER時刻を単純にデータから除外すると再生削減率は約24.5%まで下がり、結果がデータ処理とカーテイルメント仮定に敏感であることも示される。",
-    "interpretation": "本研究の強い結論は『50.9%削減できる』ことではなく、絶対MOERを使う単純な配置補正が本番に近いGPUサービングで安全に実負荷を動かせること、その削減幅が地域・季節・容量・利用率・キャッシュ局所性に大きく依存することにある。再生結果は、静的な清浄地域選択だけでなくリアルタイム信号にも追加価値がある一方、実用化には炭素、遅延、GPU利用効率、キャッシュ再利用を共同で扱う必要があることを示す。",
-    "quality_impact": "生成品質はモデルを変えないため直接劣化させない。ただし配置変更による遅延悪化、接頭辞キャッシュ失効、通信・再プリフィル増加は利用体験とエネルギーへ影響し得る。"
-  }
+    "negative_results": [
+      {"name":"GPU効果はworkload依存","description":"会話型datasetではquery-relevant clusterが広く分散するため、十分なspeedupへ到達するのにより大きなGPU cacheが必要で、5〜15GBでplateauするという傾向もworkloadごとに異なる。"},
+      {"name":"streaming insertで一時spike","description":"GPU版でも挿入がcluster splitを引き起こす瞬間には追加計算によりlatency spikeが発生する。多くのcluster operationをGPUで行うことで影響は小さくなるが、完全には消えない。"},
+      {"name":"IVFのrecall劣化","description":"素のIVFはsearch-onlyでもrecall 0.9超のため最大128 cluster scanが必要で、search-update混在では挿入vectorの散在によりさらにrecallが悪化する。Pancakeの利点はこの動的劣化を局所性cacheで補う点にある。"},
+      {"name":"大規模分散agentは未検証","description":"最大20 agents、単一CPU-GPU nodeの範囲では良好にscaleするが、より大きなagent populationやnode間で共有するmemory indexの通信・整合性は評価していない。"}
+    ],
+    "interpretation": "Pancakeの本質はエージェント外部memoryを一般的なvector DBとして扱わず、検索と更新の順序、agent identity、共有scope、GPU残容量というserving runtime固有の情報をindex maintenanceへ取り込む点にある。特に、頻繁なsmall updateが一般DBのbatch-oriented rebalancingと相性が悪いことを示し、動的memoryでは『検索アルゴリズム』だけでなく『誰がいつどのclusterへアクセスするか』を階層cacheとhybrid graphへ反映する必要がある。KV cacheとは別系統の外部memory hierarchyだが、CPU大容量層とGPU高速層をhotnessで往復させるという点でLLM servingの階層メモリ研究と接続する。",
+    "quality_impact": "モデルの生成品質を直接変更しないシステム最適化だが、外部memory retrievalのrecallはagent出力へ影響し得る。そのためPancakeは単なるlatency短縮ではなくrecall-latency trade-offを測定し、動的更新下で高recallを保ちながらscan量を減らす。評価はretrieval recall中心で、最終的なtask accuracyへの影響を網羅的に評価したものではない。"
+  },
+  "reservation": {"claim_id":"claim-2af8f46851e9d4a8a008b32a","worker_id":"scheduled-chat-llm-discovery-20260914T2200JST","worker_kind":"scheduled_chat"}
 }

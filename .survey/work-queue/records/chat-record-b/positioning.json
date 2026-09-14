@@ -1,15 +1,25 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
-  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "positioning",
+  "attempt_id": "attempt-08e554d84abc317af5940c6f",
+  "job_id": "job-research-382442b3f5faa67f",
   "data": {
-    "limitations": "実機試験は各2地域・各1GPU相当の小規模セルで、主要A100試験も約48時間・一つの季節条件しかない。配送腕がGPUと待ち行列を共有するため相互干渉があり、遅延差を独立した因果効果として解釈できない。長期再生は合成負荷、均質H100相当、固定J/トークン、地域当たり最大50%という非常に緩い集中上限、概ね均等な起点需要、履歴MOER完全予見を仮定する。地域間通信遅延・転送料金、vLLM接頭辞キャッシュ失効、施設PUE、GPU型の地域差、物理的カーテイルメント余力を含まず、MOER系列もWattTimeのモデル推定である。データはライセンス制で再配布不可、配置ロジックも特許出願中で非公開のため完全再現性は限定的。",
-    "differences": "EcoServeやSproutなど既存の炭素認識推論はモデル選択や時空間最適化まで含むのに対し、本研究はLlama-3.1-8Bと推論系を固定し、既存圧力ルータへ地域炭素の乗数を一つ追加する配置効果だけを分離する。GARのような制約最適化型ルーティングと比べても新しい最適化器を提案せず、実機配送、実測GPUエネルギー曲線、予測MOERでの配送と履歴MOERでの事後精算という運用検証を重視する。さらに各地域内の百分位信号を空間比較へ使う誤りを実機で露呈させ、絶対MOERを使うべきと整理した点が実務的に独自である。",
-    "implementation_status": "実機導入済みの試作／本番スライスで検証。Solyx AI Grid、vLLM、NVIDIA DCGM、WattTime V3を組み合わせている。ただし配置・再生ロジックは特許出願中で公開されておらず、著者公式の再現コードURLは一次資料から確認できない。",
-    "research_positioning": "LLMサービングスケジューリングの中でも、GPU内の計算効率ではなく地理分散クラスタの『どこで実行するか』を電力網の限界排出信号で制御する運用層の研究である。性能最適化だけを目的とする負荷分散に、環境コストを追加制約／目的として載せる系統に位置し、エネルギー効率・地理分散サービング・炭素会計を接続する。",
-    "relation_to_existing_repository": "既存リポジトリの分散サービング／ルーティング系統では、待ち行列、KV局所性、GPU性能、地域間通信を主に最適化する研究が中心で、本研究は電力網MOERを配置信号として追加する補完軸になる。Solyx AI Gridのハードウェア・テレメトリ認識ルーティングを直接の基盤とし、EcoServe、GAR、SAGESERVE、DynamoLLMとは炭素・性能の共同配置という隣接関係にある。特に本研究自身が未モデル化とする接頭辞キャッシュ局所性や並行度依存J/トークンを、既存のKV管理・スケジューラ研究と結合する余地が大きい。",
-    "audit_required": false
-  }
+    "limitations": [
+      {"name":"単一ノード・限定agent数","description":"実験はEPYC + H100×8の1ノードが中心で、multi-agent scalabilityも最大20 agentsまでである。分散memory service、node間network、partition/replication、failure recoveryを含む大規模deploymentへ結果をそのまま一般化できない。"},
+      {"name":"GPU-rich環境への依存","description":"評価機はH100 80GBを8枚備えるため、GPU cacheへ5〜15GB程度を割り当てられる。GPU容量が厳しい環境や推論modelがほぼ全VRAMを占有する条件ではGPU tierの効果が縮小する可能性がある。"},
+      {"name":"永続性・運用機能の評価不足","description":"論文は検索・更新・cache管理の性能を主題とし、クラッシュ整合性、耐久ログ、backup、multi-tenant isolation、access controlなどproduction vector storeの運用要件を中心には評価していない。"},
+      {"name":"task品質は間接評価","description":"retrieval recallは測定するが、memory indexの変更が最終agent task successや生成品質へ与える影響を全datasetで詳細に比較してはいない。高recall維持は示すものの、end-to-end qualityの保証とは別である。"},
+      {"name":"公開実装の確認不可","description":"Python interfaceとprototype implementationの詳細は記述されているが、arXivページと本文からPancake本体の公開repository URLは確認できず、第三者による再現性は公開コードがあるシステムより制約される。"}
+    ],
+    "differences": [
+      {"name":"MemGPT/A-Mem等との差","description":"既存agent memoryはmemory semanticsや管理機能を提供することを主眼に置くのに対し、PancakeはANN indexの動的保守とhardware hierarchyをserving bottleneckとして最適化するbackend systems研究である。既存workflowを置き換えるより、そのmemory backendとして統合する。"},
+      {"name":"SpFresh/Quake等との差","description":"動的vector DBもonline updateを扱うが、主にtraditional databaseのperiodic/batch-oriented updateを前提とする。PancakeはLLM agentで検索とsmall updateが各generation step近辺にinterleaveすること、agentごとに局所性が異なることを索引構成へ明示的に利用する。"},
+      {"name":"一般GPU vector searchとの差","description":"索引全体をGPUへ置く方式や静的index cacheではなく、LLM inferenceとVRAMを共有する前提でhot clusterだけをcacheし、insert bufferとasync transferで更新可能性を維持する。GPUを高速な一段階として使うhierarchical designである。"},
+      {"name":"KV cache階層化との差","description":"保存対象はtransformer内部のKV stateではなく、agentが長期的に参照・更新する外部embedding memoryである。ただしCPU大容量層とGPU高速層の間でhotnessに基づき配置するため、LLM servingにおける階層memory placementというsystems上の共通問題を持つ。"}
+    ],
+    "implementation_status": "CPU-GPU prototypeを実装し、Python API、Faiss IVF互換入力、multi-thread worker、GPU cache、async updateを実機評価。Pancake本体の公開コードURLは本文・arXivページでは確認できない。",
+    "research_positioning": "LLM推論システムの中では、agentic servingにより新たに生じる外部memory I/O・ANN計算をfirst-class resourceとして扱う研究である。KV cache、モデルoffload、RAG retrievalが主に一回の推論要求内のstateやstatic corpusを扱うのに対し、Pancakeは複数agentが長期間にわたり同じmemory baseへ細粒度にread/writeする状態を対象とする。SSD/NVMeを直接最適化する論文ではないが、将来memory corpusがDRAMを超える場合にはCPU/GPU tierの下へstorage tierを追加する自然な接続点があり、agent memoryの階層配置・prefetch・update schedulingを考える基盤になる。"
+  },
+  "reservation": {"claim_id":"claim-2af8f46851e9d4a8a008b32a","worker_id":"scheduled-chat-llm-discovery-20260914T2200JST","worker_kind":"scheduled_chat"}
 }

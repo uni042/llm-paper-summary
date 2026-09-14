@@ -1,107 +1,92 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
-  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "metadata",
+  "attempt_id": "attempt-08e554d84abc317af5940c6f",
+  "job_id": "job-research-382442b3f5faa67f",
   "data": {
-    "canonical_id": "arXiv:2608.06188",
-    "arxiv_id": "2608.06188",
-    "doi": "10.48550/arXiv.2608.06188",
+    "canonical_id": "arXiv:2602.21477",
+    "arxiv_id": "2602.21477",
+    "doi": "10.48550/arXiv.2602.21477",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.PF"
-      ]
+      "primary": "cs.MA",
+      "cross_list": []
     },
-    "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
-    "summary": "本研究は、地理的に分散したLLM推論要求を、その時点で追加電力需要を担う発電源の排出強度が低い地域へ寄せることで、モデルやGPUを変更せず運用時排出量を減らせるかを検証する。既存の本番圧力ルータを置き換えず、各地域の待ち行列・負荷・容量から得る配置重みに、限界運用排出率（Marginal Operating Emissions Rate; MOER）由来の乗数を掛ける可逆な追加層として実装する。推論要求の電力消費はGPUの公称消費電力ではなくNVIDIA DCGMの実測並行度曲線から要求単位へ配賦し、配置時の予測MOERではなく実行後の履歴MOERで炭素量を精算する。A100を用いた約48時間・約196万要求ターンの二地域実機試験では配送失敗0件で実際に負荷配分が変化し、最強設定は通常の圧力ルータ比で実測配賦排出量を1.45%減らした一方、p95遅延は18.7秒から20.9秒へ11.7%増加した。さらに19地域・1年分の履歴MOER再生では、運用寄りの緩やかな乗数方式で約22.7%、容量上限付き最清浄地域優先方式で50.9%のモデル化排出削減を示す。ただし後者は履歴値を直接見て配送する完全予見上限で、地域容量、接頭辞キャッシュ、通信遅延、施設PUE、実際の再生可能電力余力などを十分にモデル化していない。",
-    "list_summary": "本番の負荷圧力ルータへ絶対MOER由来の可逆な配置補正を重ね、実機二地域で配送失敗なく負荷を移動できることを確認し、19地域・1年再生では仮定依存ながら約23〜51%のGPU運用排出削減余地を示す。",
+    "title": "Pancake: Hierarchical Memory System for Multi-Agent LLM Serving",
+    "summary": "LLMエージェントの外部メモリは、記憶規模の拡大、検索と細粒度更新の高頻度な交互実行、複数エージェントによる共有・局所メモリの併存により、近似最近傍探索（ANN）が推論全体の主要ボトルネックになり得る。Pancakeは、単一エージェント向けの多段インデックスキャッシュ、複数エージェントの粗粒度インデックスをつなぐハイブリッドグラフとエージェント別アクセスプロファイル、CPU-GPU協調キャッシュを統合した階層型エージェントメモリ基盤である。8M件のMS MARCO知識ベースと複数の実エージェントデータセットを使ったCPU-GPUサーバ評価で、既存メモリライブラリに対し単一エージェントの端から端までの性能を1.12〜26.18倍、平均4.29倍超改善し、メモリ処理時間を平均3.2%まで抑える。",
+    "list_summary": "動的なエージェント記憶向けに多段インデックスキャッシュ、複数エージェント協調インデックス、CPU-GPU協調を統合し、既存メモリ基盤比で端から端まで平均4.29倍超の性能向上を示す。",
     "authors": [
-      "Aleks Bernhard",
-      "Arif Baran Yardimci"
+      "Zhengding Hu",
+      "Zaifeng Pan",
+      "Prabhleen Kaur",
+      "Vibha Murthy",
+      "Zhongkai Yu",
+      "Yue Guan",
+      "Zhen Wang",
+      "Steven Swanson",
+      "Yufei Ding"
     ],
-    "authors_affiliations": "Solyx AI, Inc.",
-    "published": "2026-08-06",
-    "publication": "arXiv:2608.06188v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2026-08-06）。18ページ、4図。査読済み採録先は一次資料から確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
+    "authors_affiliations": "Computer Science and Engineering, University of California, San Diego",
+    "published": "2026-02-25",
+    "publication": "arXiv:2602.21477v1",
+    "publication_type": "Preprint",
+    "publication_status": "プレプリント（arXiv v1、2026-02-25）",
+    "lineage": "エージェントメモリ、動的ベクトル検索、ANNインデックス、マルチエージェント基盤、CPU-GPU階層メモリ",
     "topics": [
-      "地理分散LLM推論",
-      "炭素認識ルーティング",
-      "限界運用排出率",
-      "GPU電力計測",
-      "負荷分散",
-      "多地域サービング"
+      "エージェントメモリ",
+      "マルチエージェント",
+      "近似最近傍探索",
+      "ベクトルデータベース",
+      "階層インデックス",
+      "GPUキャッシュ",
+      "動的更新",
+      "LLMサービング"
     ],
-    "importance": "中〜高。新しい推論カーネルやスケジューラ算法ではなく、本番ルータへの小さな配置補正だけで実負荷が動くことを実機で示し、炭素指標の選び方・GPU利用率依存の電力・事後精算まで含めた運用方法を具体化する。特に地域間比較では各地域内の百分位ではなく絶対MOERを使う必要があるという失敗例を実測で示す点が有用。",
-    "hardware_evaluation": "実機試験は2地域×各1GPUのA100構成とH100構成。主要なA100試験は2×NVIDIA A100 SXM4 40GB、H100試験は2×NVIDIA H100 SXM5 80GB。履歴再生は19地域の均質H100相当を仮定するモデル評価。",
-    "hardware_details": "Llama-3.1-8B-InstructをvLLMで提供。DCGMによる並行度掃引でA100は低並行3.51 J/出力トークンから飽和時0.123 J/トークン、H100は3.37から0.104 J/トークンへ低下した。主要A100実機試験はAZPSとPJM-DCの二地域、約48時間。",
-    "quality_effect": "モデル、量子化、推論計算自体は変更しないため、意味品質を近似して排出量を下げる方式ではない。一方、地域移動で接頭辞キャッシュが失われる場合の再計算や地域間遅延は十分に評価されておらず、応答性能への影響は配置条件に依存する。",
+    "importance": "KVキャッシュやモデル重みではなく、エージェントが推論中に継続的に読み書きする外部ベクトル記憶をシステム資源として扱う。検索局所性をエージェント固有のアクセス履歴から学習し、複数エージェントの索引共有とGPU容量制約を同時に扱うため、今後の長寿命・多エージェントLLMサービングにおける外部メモリ階層の設計点を具体化している。",
+    "hardware_evaluation": "64コアAMD EPYC 9534 CPUと80GB NVIDIA H100 GPU×8を備えるCPU-GPUハイブリッドサーバで実測。LLM生成とGPUキャッシュはH100、制御・スケジューリング・主要インデックス処理はCPUを使用。",
+    "hardware_details": "1ノード当たりAMD EPYC 9534 64-core、NVIDIA H100 80GB×8。GPUキャッシュ容量を変化させる実験も実施。",
+    "quality_effect": "生成モデル自体の近似・量子化手法ではない。検索再現率と検索レイテンシのトレードオフを評価し、動的更新下でも高いrecallを維持しながら検索量を削減することを狙う。",
     "storage_targets": [
-      "地域別GPU待ち行列・負荷・容量状態",
-      "要求ごとの配送時予測MOERと実行後履歴MOER",
-      "GPUテレメトリから作る並行度別J/トークン曲線",
-      "会話セッションの地域固定状態"
+      "エージェント外部メモリ",
+      "MS MARCO 8Mベクトル知識ベース",
+      "CPU側ANNインデックス",
+      "GPUホットクラスタキャッシュ",
+      "挿入バッファ"
     ],
     "bottlenecks": [
-      "炭素の低い地域への集中による待ち行列増加",
-      "地域ごとのMOER変動と予測誤差",
-      "低並行度で急増するGPU当たり消費エネルギー",
-      "地域間移動による接頭辞キャッシュ喪失",
-      "実際の再生可能電力余力と地域容量の不確実性"
+      "細粒度挿入でベクトルが多数クラスタへ散逸",
+      "複数エージェントごとの粗粒度索引探索",
+      "共有メモリでのアクセスパターン不一致",
+      "GPU容量とLLM推論の競合",
+      "検索と更新の高頻度インターリーブ"
     ],
     "evidence_locations": [
-      "§3 System design",
-      "§4 Experimental methodology",
-      "§5.1 Systems viability",
-      "§5.2 A100 live results",
-      "§5.3 absolute MOER interpretation",
-      "§5.4 Energy characterization",
-      "§6 Historical replay",
-      "§7 Discussion and limitations",
-      "Table 1-3"
+      "§1 Introduction",
+      "§4 Single-Agent Index Management",
+      "§5 Multi-Agent and CPU-GPU Index Management",
+      "§6 Evaluation",
+      "§7 Conclusion"
     ],
-    "source": "https://arxiv.org/abs/2608.06188",
-    "sources": [
-      "https://arxiv.org/abs/2608.06188",
-      "https://arxiv.org/html/2608.06188v1",
-      "https://arxiv.org/pdf/2608.06188"
-    ],
-    "code": null,
-    "implementation": "Solyx AI Gridの既存本番圧力ルータへ炭素乗数を重ねる形で実装し、WattTime V3とNVIDIA DCGM、vLLMを用いた実機試験を行っている。論文は配送・再生ロジックを説明するが、ルーティング／配置ロジックは特許出願中で公開されておらず、公式コード公開URLも一次資料では確認できない。",
-    "last_checked": "2026-09-14",
     "references": [
-      {
-        "canonical_id": "arXiv:2606.15050",
-        "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters"
-      },
-      {
-        "canonical_id": "arXiv:2502.05043",
-        "title": "EcoServe: Designing Carbon-Aware AI Inference Systems"
-      },
-      {
-        "canonical_id": "arXiv:2502.14617",
-        "title": "Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale (SAGESERVE)"
-      },
-      {
-        "canonical_id": "arXiv:2605.11603",
-        "title": "GAR: Carbon-Aware Routing for LLM Inference via Constrained Optimization"
-      },
-      {
-        "canonical_id": "arXiv:2408.00741",
-        "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency"
-      },
-      {
-        "title": "Sprout: Green Generative AI with Carbon-Efficient LLM Inference"
-      }
+      {"canonical_id":"arXiv:2502.12110","arxiv_id":"2502.12110"},
+      {"canonical_id":"arXiv:2506.03437","arxiv_id":"2506.03437"},
+      {"canonical_id":"arXiv:2411.00970","arxiv_id":"2411.00970"},
+      {"canonical_id":"arXiv:2504.19413","arxiv_id":"2504.19413"},
+      {"canonical_id":"arXiv:2404.13501","arxiv_id":"2404.13501"}
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2608.06188v1一次資料の参考文献節",
-    "references_total": 29,
+    "references_source": "primary-reference-section",
+    "references_total": 88,
+    "source": "https://arxiv.org/abs/2602.21477",
+    "sources": ["https://arxiv.org/abs/2602.21477","https://arxiv.org/pdf/2602.21477"],
+    "code": null,
+    "implementation": "Python APIとしてsearch/insert/update/deleteと複数memory scopeを実装し、既存Faiss IVFインデックスを読み込める。検索、更新、キャッシュ、GPU処理を独立スレッド化し、隣接操作のbatching、共有クラスタのlock、非同期GPU転送・挿入bufferを備える。論文本文およびarXivページからPancake本体の公開コードURLは確認できない。",
+    "implementation_status": "CPU-GPUサーバ上の実装・実機評価あり。論文本文でPancake本体の公開リポジトリは確認できない。",
+    "evaluation_type": "実機測定",
+    "last_checked": "2026-09-14",
     "last_audited": null,
     "audit_version": 0
-  }
+  },
+  "reservation": {"claim_id":"claim-2af8f46851e9d4a8a008b32a","worker_id":"scheduled-chat-llm-discovery-20260914T2200JST","worker_kind":"scheduled_chat"}
 }

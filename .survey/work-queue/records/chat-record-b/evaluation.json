@@ -1,49 +1,25 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
-  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "evaluation",
+  "attempt_id": "attempt-08e554d84abc317af5940c6f",
+  "job_id": "job-research-382442b3f5faa67f",
   "data": {
-    "hardware": [
-      "2×NVIDIA A100 SXM4 40GB（二地域実機試験）",
-      "2×NVIDIA H100 SXM5 80GB（二地域方向確認）",
-      "19地域の均質H100相当（履歴再生モデル）"
-    ],
-    "software": [
-      "vLLM",
-      "NVIDIA DCGM",
-      "WattTime V3 MOER API",
-      "Solyx AI Grid本番圧力ルータ"
-    ],
-    "model": [
-      "Llama-3.1-8B-Instruct"
-    ],
-    "datasets": [
-      "約48時間の合成・持続到着ワークロード（約196万要求ターン）",
-      "2025-07-06〜2026-07-06の19地域・8760時間MOER系列"
-    ],
-    "baselines": [
-      "ラウンドロビン",
-      "炭素補正なしの本番圧力ルータ",
-      "モデル化した炭素非認識serve-local/spill負荷分散"
-    ],
-    "correctness": "目的は出力品質ではなく配送機構・炭素帰属の妥当性である。実機では約196万要求ターンを配送失敗0件で処理し、各要求の配送時予測MOERと実行後履歴MOERを記録して精算する。モデルや生成手法は腕間で固定し、炭素配置以外の変数を可能な範囲で分離する。",
+    "hardware": ["AMD EPYC 9534 64-core CPU","NVIDIA H100 80GB GPU ×8"],
+    "software": ["Pancake Python interface","Faiss IVF-compatible index","vLLM for Llama models","GPT-5 API for remote model condition"],
+    "model": ["Llama3.1-8B","Llama3.1-70B","GPT-5 API"],
+    "datasets": "AgentGym、GSM8K、PRM800K、UltraChat、UltraFeedback、APIGenをエージェント負荷として使用。静的知識ベースはMS MARCO 8M passagesをE5（1024次元）で埋め込み。",
+    "baselines": ["A-Mem","MemGPT","LlamaIndex","LangMem/LangChain","Quake","SpFresh","DiskANN","Pancake-IVF-Static","Pancake-IVF-Split"],
+    "correctness": "ANN検索の品質はrecallとlatencyのtrade-offで検証する。Search-onlyでは素のIVFがrecall>0.9に最大128 cluster scanを要し、update混在では挿入ベクトルの散在でさらにrecallが低下する条件を含め、Pancakeが高recallを維持しながらscan量・latencyを削減できるかを比較する。",
     "settings": [
-      {
-        "name": "A100二地域実機",
-        "description": "AZPSとPJM-DC、2×A100 SXM4 40GB、約48時間。5 arrivals/sのセッション開始率、最大同時進行256。5配送腕を同時実行し、主要比較は炭素重み1.0と補正なし圧力ルータ。"
-      },
-      {
-        "name": "H100二地域実機",
-        "description": "ERCOT North-CentralとSOCO、2×H100 SXM5 80GB。初期signal-index方式の地域順位逆転を発見し、絶対MOER方式で清浄地域への移動方向を確認。期間が短く精算削減率は主張しない。"
-      },
-      {
-        "name": "1年履歴再生",
-        "description": "19 CONUS地域、8760時間。地域当たり瞬間需要50%上限、40%の多ターン負荷を起点地域へ平均2時間固定。固定0.104 J/出力トークンのH100飽和相当を用い、5日ブロック・1万回ブートストラップで信頼区間を算出。"
-      }
+      {"name":"単一エージェント end-to-end","description":"複数のエージェントデータセット、Llama3.1-8B/70BとGPT-5 API、local/shared memory条件で既存agent memory frameworkとthroughput・memory timeを比較する。"},
+      {"name":"複数エージェント混合・スケーリング","description":"異なるdatasetを組み合わせた2-agent mixed workloadと、最大20 concurrent agentsまでの条件で、既存memory libraryの干渉とPancakeのthroughput degradationを測る。"},
+      {"name":"ベクトルDB単体性能","description":"実エージェント負荷から生成されたmemory operation vectorを入力し、batch size 8でSpFresh、DiskANN、Quake、IVF variantsとquery throughputを比較する。"},
+      {"name":"recallと動的更新","description":"search-onlyとsearch-insert混在条件でscan cluster数、latency、recallを比較し、固定IVF、split型保守、多段cache、GPU協調の差を評価する。"},
+      {"name":"ablationとGPU cache","description":"multi-level cache、hybrid graph、agent profileの寄与を分離し、GPU cache容量を0〜30GB程度で変化させてCPU baselineからのspeedup、warm-up、split時のlatency spikeを測定する。"}
     ],
-    "methodology": "実機試験は同じワークロードを要求単位で無作為に各腕へ割り当てるが、腕同士は同じGPU・待ち行列・圧力状態を共有するため相互干渉がある。したがって実機の遅延差・1.45%排出差は記述的結果として扱う。長期再生は実機で測れない季節・地域多様性を補う一方、履歴MOERを配送にも直接使う完全予見条件なので、予測誤差を含む本番削減率の推定ではなく機会上限として解釈する。",
-    "scope": "GPUに帰属する運用時CO2のみを評価し、施設PUE、ネットワーク、ハードウェア製造時排出は除外する。再生では均質GPU、固定J/トークン、概ね均等な起点需要を仮定し、地域別実GPU台数、通信遅延、接頭辞キャッシュ喪失、物理的な再生可能電力余力を含めない。"
-  }
+    "methodology": "機能的なagent memory backendとのend-to-end比較と、動的ANN indexとのstandalone比較を分けて評価する。前者ではLLM生成を含むthroughput、memory operation比率、multi-agent interferenceを測り、後者ではquery throughput・recall・scan量を測る。さらにindex maintenance、cross-agent coordination、GPU cachingを個別に無効化・置換するablationにより、各機構の寄与と動的負荷への収束速度を検証する。",
+    "scope": "評価は単一種類のCPU-GPUサーバ構成を中心とし、初期knowledge baseはMS MARCO 8M passages。最大20 agentsまでの評価であり、数百〜数千agent規模、分散ノードを跨ぐindex、障害回復、永続storage I/Oの詳細は対象外。GPT-5条件はremote APIのためnetwork/API variabilityもend-to-end値へ含まれ得る。"
+  },
+  "reservation": {"claim_id":"claim-2af8f46851e9d4a8a008b32a","worker_id":"scheduled-chat-llm-discovery-20260914T2200JST","worker_kind":"scheduled_chat"}
 }
