@@ -2,34 +2,75 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-0955cddfea7e5b9a4dfbac9a",
+  "attempt_id": "attempt-62f7f7eb017737b776892798",
   "job_id": "job-research-825504607247e69d",
   "data": {
     "canonical_id": "arXiv:2607.13093",
     "arxiv_id": "2607.13093",
     "doi": "10.48550/arXiv.2607.13093",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CR", "cross_list": ["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.CR",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models",
     "summary": "本論文は、端末とクラウドで大規模言語モデル推論を分担しつつ、原文プロンプトや平文の履歴識別子をクラウドへ直接送らないエッジ・クラウド協調推論方式を提案する。端末側にトークン前処理、埋め込み、KVキャッシュ利用の認可、軽量なLoRA/草稿モデル、低次元の言語モデル出力層を残し、クラウド側には重いデコーダ本体、KV管理、投機トークン検証、高次元側の出力層を配置する。隠れ次元4096のうち既定96次元を端末へ残し、クラウド側4000次元の部分結果と端末側部分結果を融合する。送受信テンソルとロジットはINT8量子化し、転送時はAES-GCMで暗号化する。さらに中国語・英語では語彙候補を言語別に圧縮し、GPU端末では長さ5の投機的デコードを使う。H20クラウドとCPU/GPU/組込み端末で評価し、素朴な分割推論に対して1トークン当たり遅延を最大46.1%、下り通信量を最大67.4%削減した。ただし脅威モデルは正直だが好奇心のあるクラウドに限定され、認可済みテンソルはクラウド側で復号されるため、形式的なプライバシー保証を与える方式ではない。",
     "list_summary": "原文を送らず、端末にKV認可・軽量投機・低次元出力層を残し、クラウドの重いデコーダと協調する分割推論。H20＋3種端末で素朴な分割推論比の遅延最大46.1%、下り通信最大67.4%削減を報告する。",
-    "authors": ["Yi Li", "Chen Li", "Jiexiong Liu"],
+    "authors": [
+      "Yi Li",
+      "Chen Li",
+      "Jiexiong Liu"
+    ],
     "authors_affiliations": "KunlunMeta。一次論文前面の著者表記に基づく。",
     "published": "2026-07-14",
     "publication": "arXiv:2607.13093v1",
     "publication_type": "プレプリント",
     "publication_status": "Preprint; arXiv v1",
     "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["エッジ・クラウド協調推論", "分割推論", "プライバシー", "KVキャッシュ", "投機的デコード", "部分出力層", "通信量削減"],
+    "topics": [
+      "エッジ・クラウド協調推論",
+      "分割推論",
+      "プライバシー",
+      "KVキャッシュ",
+      "投機的デコード",
+      "部分出力層",
+      "通信量削減"
+    ],
     "importance": "中〜高。単純な層分割ではなく、KV認可、部分出力層、投機検証、言語別語彙圧縮を端末/クラウド間の役割分担としてまとめ、CPU・GPU・組込み端末ごとの実行経路まで設計している。プライバシーを形式保証ではなく露出面削減として扱う点は慎重に読む必要がある。",
     "hardware_evaluation": "実機評価。クラウドはNVIDIA H20 96GB GPU、64 vCPU、512GB RAM。端末側はCPU端末、GPU端末、8GB ARM組込み端末の3構成を評価する。",
     "hardware_details": "クラウドはUbuntu 22.04、CUDA 12.4、PyTorch 2.4、bf16。端末はPython 3.10、組込み経路はONNX Runtime 1.18と8-bit推論。ネットワークは100Mbps、RTT 20ms、ジッタ2msに制御。",
     "quality_effect": "クラウド完全推論に対し提案方式の次トークン一致率98.6%、perplexity 7.82→7.87、MMLU 54.6→54.3、GSM8K 49.8→49.4、HumanEval 27.4→27.1で、小幅な品質差を伴う。端末だけの軽量モデルでは一致84.2%、perplexity10.94まで悪化するため、クラウド検証と部分出力融合が品質維持に重要である。",
-    "storage_targets": ["端末側KVキャッシュ認可状態", "クラウド側KVキャッシュ", "端末側軽量モデルとLoRA", "端末/クラウド分割LM-head", "暗号化された転送テンソル"],
-    "bottlenecks": ["端末計算能力", "端末・クラウド間通信", "全語彙ロジット転送", "クラウドへの文脈露出", "投機長増大時の受理率低下"],
-    "evidence_locations": ["System Architecture", "Endpoint Execution Paths", "Privacy and Security", "Experimental Setup", "Latency and Throughput", "Bandwidth", "Ablation Study", "Quality Evaluation"],
+    "storage_targets": [
+      "端末側KVキャッシュ認可状態",
+      "クラウド側KVキャッシュ",
+      "端末側軽量モデルとLoRA",
+      "端末/クラウド分割LM-head",
+      "暗号化された転送テンソル"
+    ],
+    "bottlenecks": [
+      "端末計算能力",
+      "端末・クラウド間通信",
+      "全語彙ロジット転送",
+      "クラウドへの文脈露出",
+      "投機長増大時の受理率低下"
+    ],
+    "evidence_locations": [
+      "System Architecture",
+      "Endpoint Execution Paths",
+      "Privacy and Security",
+      "Experimental Setup",
+      "Latency and Throughput",
+      "Bandwidth",
+      "Ablation Study",
+      "Quality Evaluation"
+    ],
     "source": "https://arxiv.org/abs/2607.13093",
-    "sources": ["https://arxiv.org/abs/2607.13093", "https://arxiv.org/pdf/2607.13093"],
+    "sources": [
+      "https://arxiv.org/abs/2607.13093",
+      "https://arxiv.org/pdf/2607.13093"
+    ],
     "code": null,
     "implementation": "クラウド側PyTorchデコーダ、KV管理、部分LM-headとQUIC通信、端末側のCPU/GPU/ARM別実行経路、INT8転送、AES-GCM、投機的デコードを統合した研究実装。2026-09-15時点で一次資料から著者公式コードURLは確認できない。",
     "last_checked": "2026-09-15",
@@ -38,5 +79,9 @@
     "references_source": "arXiv v1本文参考文献節を確認したが、本runでは正規化識別子を安全に確定できた引用のみを採用する方針とし0件記録",
     "references_total": 24
   },
-  "reservation": {"claim_id": "claim-0955cddfea7e5b9a4dfbac9a", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-62f7f7eb017737b776892798",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0955cddfea7e5b9a4dfbac9a",
+  "attempt_id": "attempt-62f7f7eb017737b776892798",
   "job_id": "job-research-825504607247e69d",
   "data": {
     "limitations": "脅威モデルは正直だが好奇心のあるクラウドに限定され、クラウドは認可された特徴テンソル、KV制御メタデータ、投機候補の検証痕跡を処理時に観測できる。AES-GCMは転送路を保護するだけで、暗号化計算や差分プライバシー、表現逆転への形式保証はない。評価対象の目標モデルは7B級デコーダとしか記載されず具体名・重みが不明で、公式コードも確認できない。クラウドはH20 1基、ネットワークは100Mbps/20ms RTTへ固定され、実移動網・複数利用者・複数クラウド・能動攻撃は未評価である。混合言語では語彙圧縮が効かず、投機長や端末側射影次元にも最適範囲があり、端末計算を増やしすぎると逆に遅くなる。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "推論分離・サービング系統では、プリフィル/デコードをGPU群で分離するDistServe等よりさらに端末/クラウド境界へ分割を拡張した例である。KVキャッシュ系統では容量削減よりアクセス認可と露出制御が中心で、投機系統では受理率だけでなくネットワーク往復を償却する用途を示す。SSD/NVMeを直接利用しないが、将来端末・クラウド・ストレージの三階層を扱う場合、秘匿したい状態を端末へ残し、重い状態だけを上位階層へ移す配置基準の参考になる。",
     "audit_required": false
   },
-  "reservation": {"claim_id": "claim-0955cddfea7e5b9a4dfbac9a", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-62f7f7eb017737b776892798",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
