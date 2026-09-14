@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-2d0ab98b0f967d81be9c9946",
-  "job_id": "job-research-0e6e5ba9063713ac",
-  "data": {
-    "overview": "KV Packetは、文書KVのオンライン再計算をなくすことで、品質を単純連結より大きく回復しながら計算量を完全再計算比で5〜6桁削減した。Llama系ではBiographyでTTFTを1.36倍、HotpotQAで3.3倍、長文NIAHで19.45倍、MusiQueで5.81倍短縮する。FLOPsは単純再利用と同程度まで下がる一方、F1は多くの設定で完全再計算や選択的再計算方式に近い。圧縮との組合せでもアダプタを特別保護せず既存KV圧縮を適用できる。",
-    "key_results": [
-      {"metric": "推論前KV準備FLOPs", "value": "完全再計算比6.50×10^-6〜1.04×10^-5", "baseline": "完全再計算", "condition": "Llama-3.1-8B-InstructとQwen3-4B-Instruct、4データセット", "interpretation": "文書トークンの順伝播をなくしRoPE位置補正だけにするため、完全再計算より5〜6桁小さい計算量となり、単純再利用と同水準に近づく。"},
-      {"metric": "BiographyのTTFT", "value": "1.36倍短縮", "baseline": "Llama系の完全再計算", "condition": "Biography検索タスク", "interpretation": "比較的短い検索文脈でも再計算を除くことで最初のトークンまでの時間を削減する。"},
-      {"metric": "HotpotQAのTTFT", "value": "3.3倍短縮", "baseline": "Llama系の完全再計算", "condition": "多段推論HotpotQA", "interpretation": "複数文書を扱う設定で、文書ごとの部分再計算を避ける効果が大きくなる。"},
-      {"metric": "NIAHのTTFT", "value": "19.45倍短縮", "baseline": "Llama系の完全再計算", "condition": "長文Needle-in-a-Haystack", "interpretation": "文脈長が大きいほど再計算回避の絶対利益が増え、長文条件で最大級のTTFT改善を示す。"},
-      {"metric": "MusiQueのTTFT", "value": "5.81倍短縮", "baseline": "Llama系の完全再計算", "condition": "多段推論MusiQue", "interpretation": "品質を大きく保ちながら、長い複数文書文脈の再計算を除くことで遅延を削減する。"},
-      {"metric": "普遍アダプタの領域横断F1", "value": "Biography 0.95、HotpotQA 0.42、MusiQue 0.43、NIAH 0.71", "baseline": "単純再利用 0.06、0.24、0.01、0.39", "condition": "4領域混合でアダプタを学習しLlama-3.1-8B-Instructで評価", "interpretation": "単一領域アダプタは他領域へ弱いが、混合学習すると全領域で安定し、特にMusiQueでは単一領域学習より高い一般化を示す。"},
-      {"metric": "KV圧縮互換性", "value": "10〜50%圧縮でも既存圧縮器を直接適用可能", "baseline": "単一連結KVとアダプタ保護構成", "condition": "CUR、KVzap、LeverageScore、TOVA、ランダム削除", "interpretation": "再計算に必要な完全・連続KVを要求しないため非構造圧縮と両立し、アダプタを圧縮対象から除く特別処理も概して不要だった。"}
-    ],
-    "negative_results": "Qwen系MusiQueでは完全再計算とのF1差が残り、再計算なしで常に上限品質へ一致するわけではない。単一領域で学習したアダプタは領域外へ弱く、例えばBiography学習はBiography 0.96に対しHotpotQA 0.18、MusiQue 0.16に落ちる。NIAH学習もNIAH 0.80だがBiography 0.54、MusiQue 0.07である。したがって実運用では多様な文書分布で普遍アダプタを学習する必要がある。また手法は検索文書が概ね独立であることを仮定しており、前の文書を強く条件とする推論軌跡や依存文書鎖では、境界アダプタだけで失われた文書間相互作用を回復できるか未検証である。",
-    "interpretation": "結果は、独立KV連結の品質崩壊が文書間の深い意味依存だけでなく、各文書先頭へ複製される注意シンクと境界分布の不連続にも大きく起因するという仮説を支持する。注意解析では単純連結時に各文書先頭へ鋭い注意スパイクが現れるのに対し、KV PacketではH/Tがその注意質量を受け止め、文書内容への注意を平滑化する。境界問題を少数の共有パラメータへ吸収できるため、オンライン選択・再計算を省いても多くの検索・推論タスクで高いF1を維持できる。",
-    "quality_impact": "完全再計算を品質上限とすると、KV Packetは多くの4データセット・2モデル条件で近いF1を示し、単純RoPE連結を一貫して大幅に上回る。一方Qwen系MusiQueなど差が残る条件もあり、品質は学習分布と文書依存性に左右される。基盤モデルの重みは固定なので、アダプタ学習による一般能力の破滅的忘却は設計上発生しない。圧縮実験ではアダプタを含めた通常圧縮でも比較的頑健で、境界表現が少数アダプタKVの完全保持だけに依存していない。"
-  },
-  "reservation": {"claim_id": "claim-2d0ab98b0f967d81be9c9946", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-9b65f4310204211dcb8ce095",
+  "job_id": "job-research-87d11da7c0c30dc4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9b65f4310204211dcb8ce095",
+    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

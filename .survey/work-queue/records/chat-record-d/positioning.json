@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2d0ab98b0f967d81be9c9946",
-  "job_id": "job-research-0e6e5ba9063713ac",
-  "data": {
-    "limitations": "アダプタは訓練時の検索コーパス分布とある程度整合している必要があり、強い領域外データへの一般化は未解決である。評価モデルはLlama-3.1-8B-InstructとQwen3-4B-Instructに限られ、他の注意構造や大規模モデルで同じ品質・遅延特性になる保証はない。文書が概ね独立な検索拡張生成を対象としており、前文書の推論状態を後文書が強く参照する依存文書鎖や長い思考軌跡では境界アダプタだけで十分か未評価である。主要評価は単一A100で、分散KVストレージ、PCIe/NVLink競合、多数同時要求時のCPU→GPU転送などサービング系のボトルネックは扱わない。オフラインKV生成費もTTFT指標から除外される。",
-    "differences": "CacheBlend、EPIC、A3、SAM-KVは独立保存したKVを連結した後、一部トークンを選びTransformer層へ再投入して文脈依存KVを修復する。KV Packetは修復処理を推論時から排除し、共有H/Tソフトトークンをオフライン自己蒸留して各文書KVの境界に埋め込む。KVLinkやBlock-Attention、CacheClipのような基盤モデル変更・追加学習系とも異なり、基盤重みを固定したまま数個の連続ベクトルだけを学習する。さらに、再計算方式では層ごとに異なるトークンを捨てる非構造KV圧縮と再計算対象の整合が難しいのに対し、KV Packetは圧縮済みKVをそのまま不透明単位として使える。",
-    "implementation_status": "著者はGitHubでKVPacketのコードと実験結果を公開している。論文の評価実装ではH/T各8個のfloat32アダプタ、bf16基盤モデル、CPU上の文書KV保存、検索後のGPU転送、RoPE位置補正と直接連結を実装する。アダプタ学習は256〜512例・30エポックで行い、基盤モデルは固定する。サービングフレームワーク全体を置き換える方式ではなく、文書KV生成時の埋込みラッパと要求時の位置補正・連結経路を追加するため、選択的再計算方式よりモデル内部への侵襲が小さい。",
-    "research_positioning": "位置非依存KV再利用の研究系統で、オンライン再計算量を減らすのではなくゼロへ移すために、キャッシュ内容そのものをオフライン学習で合成可能にする研究である。CacheBlend/EPIC系の選択的再計算と、プロンプト調整・接頭辞調整のパラメータ効率学習を接続した設計とみなせる。階層メモリの観点ではCPUやSSDに保存した文書KVをGPUへ戻した後に再計算する必要がないため、低速階層からの再利用経路を単純化できる。特にKV圧縮と併用できるため、オフライン文書KVを圧縮して大容量階層へ保存し、検索時には転送・位置補正・連結だけを行う構成へ発展可能である。"
-  },
-  "reservation": {"claim_id": "claim-2d0ab98b0f967d81be9c9946", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-9b65f4310204211dcb8ce095",
+  "job_id": "job-research-87d11da7c0c30dc4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9b65f4310204211dcb8ce095",
+    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
