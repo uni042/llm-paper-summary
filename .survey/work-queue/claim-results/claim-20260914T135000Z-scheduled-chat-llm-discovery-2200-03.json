@@ -1,45 +1,44 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "claim-20260914T134900Z-scheduled-chat-llm-discovery-2200-02",
+  "request_id": "claim-20260914T135000Z-scheduled-chat-llm-discovery-2200-03",
   "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
   "worker_kind": "scheduled_chat",
   "ok": true,
   "assignments": [
     {
-      "job_id": "job-research-87d11da7c0c30dc4",
-      "claim_id": "claim-48770b1eef4276f27fe065fe",
+      "job_id": "job-research-705b1ab26eb807b1",
+      "claim_id": "claim-566acfd28ba7d7e816fc4a3d",
       "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
       "worker_kind": "scheduled_chat",
-      "attempt_id": "attempt-48770b1eef4276f27fe065fe",
-      "claimed_at": "2026-09-14T13:48:35+00:00",
+      "attempt_id": "attempt-566acfd28ba7d7e816fc4a3d",
+      "claimed_at": "2026-09-14T13:49:14+00:00",
       "expires_at": "2026-09-14T15:19:14+00:00",
       "kind": "research",
       "depends_on_job_ids": [
-        "job-research-87d11da7c0c30dc4"
+        "job-research-705b1ab26eb807b1"
       ],
       "job": {
-        "job_id": "job-research-87d11da7c0c30dc4",
+        "job_id": "job-research-705b1ab26eb807b1",
         "type": "research",
-        "parent_job_id": "job-0153f88c40851ebb",
-        "priority": 82,
-        "canonical_id": "arXiv:2504.03775",
-        "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
-        "source_url": "https://arxiv.org/abs/2504.03775",
-        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
-        "selection_reason": "prefill/decode分離でblock単位KV転送呼び出しと不連続memory layoutが生むtransfer overheadを削減し、P/D node役割も負荷に応じて変えるserving framework。arXiv抄録ではKV transfer latency 96%削減とLongBenchで15.2〜48.9%の推論高速化を報告しており、ネットワーク転送最適化の既存系統補完候補。",
+        "parent_job_id": "job-e15f3a03ac140338",
+        "priority": 80,
+        "canonical_id": "arXiv:2608.06188",
+        "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+        "source_url": "https://arxiv.org/abs/2608.06188",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md",
+        "selection_reason": "地理分散LLM inference routingへ電力網の限界排出原単位をproduction pressure routerのoverlayとして導入し、GPU telemetry由来のrequest energyと実績MOERでsettlementする。一次資料はlive multi-region GPU testbedでdispatch failureなしを確認し、年間replayではround-robin比50.9%のmodeled operational emissions削減を報告する。モデル変更なしのplacement policyとして分散サービングの運用評価に独立の観点を加える。",
         "status": "ready",
         "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
         "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
         "schema_version": 1,
         "workflow_version": 10,
-        "created_at": "2026-09-12T14:12:24+00:00",
+        "created_at": "2026-09-12T17:42:52+00:00",
         "artifact_transport": "structured_record_v10"
       },
       "record_bank_fallback": "library"
     }
   ],
-  "processed_at": "2026-09-14T13:48:35+00:00",
-  "checkpoint_released": 1,
-  "heartbeat_at": "2026-09-14T13:49:14+00:00"
+  "processed_at": "2026-09-14T13:49:14+00:00",
+  "checkpoint_released": 1
 }
