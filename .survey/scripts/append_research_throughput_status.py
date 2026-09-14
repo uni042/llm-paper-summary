@@ -17,6 +17,8 @@ SPECIALIST_RESEARCH_SWITCH = 50
 LOW_COMPLETIONS = 2
 TARGET_COMPLETIONS = 3
 WORKER_SLOT_RE = re.compile(r"(?P<hour>\d{2})(?P<minute>00|30)(?:\D|$)")
+WORKER_RUN_RE = re.compile(r"(?P<date>\d{8})T(?P<time>\d{4})JST", re.IGNORECASE)
+JST = timezone(timedelta(hours=9))
 DASHBOARD_LABEL_REPLACEMENTS = (
     ("次回保守までの通常run", "保守カウンタ（通常run）"),
     ("探索専用worker run（毎時枠）", ":00 補助worker Discovery run（毎時枠）"),
@@ -61,15 +63,11 @@ def _is_ordinary_research_run(entry: dict[str, Any], maintenance: dict[str, Any]
     stamp = _dt(entry.get("run_key") or entry.get("last_recorded_at"))
     if stamp is None:
         return False
-    jst = stamp.astimezone(timezone(timedelta(hours=9)))
+    jst = stamp.astimezone(JST)
     if jst.minute != 30:
         return False
-    # 08:30 is always routed away from the ordinary paper worker: maintenance
-    # gate wins first, otherwise the dedicated framework/model update worker runs.
     if jst.hour == 8:
         return False
-    # When the maintenance counter has just reset, last_counted_run_key is the
-    # maintenance slot until the next counted ordinary run advances it.
     if int(maintenance.get("runs_since_maintenance") or 0) == 0:
         maintenance_key = str(maintenance.get("last_counted_run_key") or "")
         if maintenance_key and str(entry.get("run_key") or "") == maintenance_key:
@@ -134,6 +132,79 @@ def _worker_lane(worker_id: Any) -> str:
         return "unknown"
     minute = matches[-1].group("minute")
     return "aux" if minute == "00" else "normal"
+
+
+def _worker_run_time(worker_id: Any) -> datetime | None:
+    """Recover the Scheduled Chat run start encoded in a durable worker_id."""
+    value = str(worker_id or "")
+    matches = list(WORKER_RUN_RE.finditer(value))
+    if not matches:
+        return None
+    match = matches[-1]
+    try:
+        parsed = datetime.strptime(match.group("date") + match.group("time"), "%Y%m%d%H%M")
+    except ValueError:
+        return None
+    return parsed.replace(tzinfo=JST)
+
+
+def _is_normal_worker_run(stamp: datetime, maintenance: dict[str, Any]) -> bool:
+    jst = stamp.astimezone(JST)
+    if jst.minute != 30 or jst.hour == 8:
+        return False
+    if int(maintenance.get("runs_since_maintenance") or 0) == 0:
+        maintenance_stamp = _dt(maintenance.get("last_counted_run_key"))
+        if maintenance_stamp is not None and jst == maintenance_stamp.astimezone(JST):
+            return False
+    return True
+
+
+def _completed_research_job_ids(entries: list[dict[str, Any]]) -> set[str]:
+    completed: set[str] = set()
+    for entry in entries:
+        for transition in entry.get("terminal_transitions") or []:
+            if not isinstance(transition, dict):
+                continue
+            if transition.get("type") == "research" and transition.get("to") == "completed":
+                job_id = str(transition.get("job_id") or "")
+                if job_id:
+                    completed.add(job_id)
+    return completed
+
+
+def _latest_normal_worker_run_metrics(
+    entries: list[dict[str, Any]],
+    claims: dict[str, dict[str, Any]],
+    maintenance: dict[str, Any],
+) -> tuple[str, int]:
+    """Return the latest actual normal worker run and its completed research count.
+
+    The run-ledger bucket is keyed by maintenance.last_counted_run_key, which is
+    the state-observation slot rather than the originating Scheduled Chat run.
+    Durable claim worker_ids encode the actual worker run and therefore take
+    precedence for per-run throughput attribution.
+    """
+    run_times: list[datetime] = []
+    for claim in claims.values():
+        stamp = _worker_run_time(claim.get("worker_id"))
+        if stamp is not None and _worker_lane(claim.get("worker_id")) == "normal" and _is_normal_worker_run(stamp, maintenance):
+            run_times.append(stamp)
+
+    if not run_times:
+        latest = _latest_normal_run(entries, maintenance)
+        return (
+            str(latest.get("run_key") or "—"),
+            int((latest.get("counts") or {}).get("research_completed") or 0),
+        )
+
+    latest_stamp = max(run_times)
+    completed_ids = _completed_research_job_ids(entries)
+    completed = 0
+    for job_id, claim in claims.items():
+        stamp = _worker_run_time(claim.get("worker_id"))
+        if stamp == latest_stamp and job_id in completed_ids and claim.get("worker_id"):
+            completed += 1
+    return latest_stamp.isoformat(), completed
 
 
 def _completion_attribution(
@@ -215,7 +286,7 @@ def _oldest_active_claim_age(repo_root: Path, now: datetime) -> int | None:
 def _fmt_time(value: datetime | None) -> str:
     if value is None:
         return "—"
-    return value.astimezone(timezone(timedelta(hours=9))).strftime("%m-%d %H:%M JST")
+    return value.astimezone(JST).strftime("%m-%d %H:%M JST")
 
 
 def render_section(repo_root: Path, now: datetime | None = None) -> str:
@@ -231,12 +302,11 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     research = ((queue.get("counts") or {}).get("research") or {})
     claiming = queue.get("claiming") or {}
     entries = [entry for entry in (ledger.get("entries") or []) if isinstance(entry, dict)]
-    latest = _latest_normal_run(entries, maintenance)
+    run_key, latest_completed = _latest_normal_worker_run_metrics(entries, claims, maintenance)
 
     ready = int(research.get("ready") or 0)
     active = int(claiming.get("actively_claimed") or 0)
     claimable = int(claiming.get("claimable") or 0)
-    latest_completed = int((latest.get("counts") or {}).get("research_completed") or 0)
     oldest_age = _oldest_active_claim_age(repo_root, now)
     high_backlog = ready >= HIGH_BACKLOG and (active + claimable) > 0
 
@@ -249,7 +319,7 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     auxiliary_mode = "通常worker補助（Research/Audit）" if ready > SPECIALIST_RESEARCH_SWITCH else "Discovery優先"
     health = "OK"
     warning = ""
-    if high_backlog and latest and latest_completed < LOW_COMPLETIONS:
+    if high_backlog and run_key != "—" and latest_completed < LOW_COMPLETIONS:
         health = "LOW"
         warning = (
             f"- **処理速度 LOW**: ready={ready} の高在庫状態で、最新通常runのResearch完了は "
@@ -265,7 +335,6 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         )
 
     age_text = "—" if oldest_age is None else f"{oldest_age} min"
-    run_key = str(latest.get("run_key") or "—")
     return (
         f"{START}\n"
         "## ワーカー稼働状況\n\n"
