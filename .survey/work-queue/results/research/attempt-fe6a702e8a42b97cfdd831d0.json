@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-fe6a702e8a42b97cfdd831d0",
+  "job_id": "job-research-2bc48bb7d3eef940",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-fe6a702e8a42b97cfdd831d0.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references[0] requires a normalized identity | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | problem_method.components[5].description is too short | Japanese-first prose ratio is too low: 64.6% < 70% (Japanese=4818, Latin=2641)",
+  "processed_at": "2026-09-14T03:32:04+00:00",
+  "validation_errors": [
+    "metadata.references[0] requires a normalized identity",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "problem_method.components[5].description is too short",
+    "Japanese-first prose ratio is too low: 64.6% < 70% (Japanese=4818, Latin=2641)"
+  ]
+}

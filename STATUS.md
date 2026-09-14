@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 12:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 12:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -45,10 +45,10 @@
 | :00 補助worker 直近claim | **09-14 12:23 JST** |
 | 直近24h Research完了（:30 通常worker） | **18** |
 | 直近24h Research完了（:00 補助worker） | **20** |
-| 直近24h Research完了（帰属不明） | **2** |
+| 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T11:30:00+09:00** |
 | 最新通常runのResearch完了 | **6** |
-| 最古の有効claimの経過時間 | **70 min** |
+| 最古の有効claimの経過時間 | **78 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -58,15 +58,14 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- 直近24hのResearch完了のうち **2件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **40** |
-| Repo収録 | **58** |
+| Research完了 | **38** |
+| Repo収録 | **56** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
 | Research候補採用 | **0** |
@@ -74,12 +73,12 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 重複率 | **—** |
 | :00 補助worker Discovery run（毎時枠） | **0** |
 | :00 補助worker Discovery round（stats観測） | **0** |
-| 通常worker run（ledger観測） | **10** |
+| 通常worker run（ledger観測） | **9** |
 | Fallback archive（全helper） | **16** |
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 40 → Repo収録 58**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 38 → Repo収録 56**
 
 ## 次に処理する候補
 
