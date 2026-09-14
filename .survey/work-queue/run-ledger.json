@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T16:39:48.285310+00:00",
+  "updated_at": "2026-09-14T16:42:32.985720+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T16:39:48.285310+00:00",
+      "last_recorded_at": "2026-09-14T16:42:32.985720+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,7 +18695,7 @@
         "blocked": 1,
         "new_jobs": 2,
         "new_papers": 58,
-        "fallback_archived": 1
+        "fallback_archived": 2
       },
       "events": [
         {
@@ -19553,6 +19553,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34869890136:1",
+          "recorded_at": "2026-09-14T16:42:32.985720+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34869890136",
+            "run_attempt": "1",
+            "source_sha": "a5d653b1c3e9a3bd6a012f871a1eefa2995fb520"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20099,7 +20113,8 @@
       ],
       "new_discovery_results": [],
       "new_fallback_archive_files": [
-        ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json"
+        ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
+        ".survey/work-queue/fallback-archive/claimed-attempt-24001c38aac79c49d7fe0750-run1357.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 518,
