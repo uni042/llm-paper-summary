@@ -2,18 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-8be1abfdf2512c2fb498bde0",
+  "attempt_id": "attempt-7aed2ba5fad7861be71ac96a",
   "job_id": "job-research-ba4de6edc8a253cf",
   "data": {
     "canonical_id": "arXiv:2505.12658",
     "arxiv_id": "2505.12658",
     "doi": "10.48550/arXiv.2505.12658",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
     "title": "HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving",
     "summary": "マルチモーダル大規模言語モデルの推論は、画像符号化、入力処理、逐次生成で計算量・メモリアクセス・遅延目標が異なるのに、既存基盤では三段階を同一インスタンスの単一スケジューリング単位として扱うため、段階間干渉と資源不整合が起きる。HydraInferは符号化・入力処理・デコードを独立タスクとして扱い、完全分離のE+P+Dだけでなく、画像処理と入力処理を同居させるEP+D、画像処理とデコードを同居させるED+Pを候補とする混成EPD分離を導入する。履歴トレース、各段階のサービス品質目標、プロファイルした処理率から三候補のインスタンス比を推定し、トレース再生でグッドプットが最大の構成を選ぶ。実行時には段階ごとに画像予算とトークン予算を設定するバッチ処理、画像モデル用と言語モデル用の二重CUDAストリーム、受信側が容量を確保してからキャッシュを要求するプル型移送を組み合わせる。4台×8基のNVIDIA H20実機群でLLaVA-1.5-7B、LLaVA-NeXT-7B、Qwen2-VL-7Bを五つの実負荷データセットで評価し、90%以上のSLO達成を保つグッドプットを、LLaVA系でvLLM比1.2〜3.7倍、Qwen2-VLでSGLang比2.0〜7.9倍へ改善する。TextCaps/LLaVA-NeXTの除去実験では最適混成構成の選択を外すと3.9から2.6 req/s、段階別バッチも外すと2.2 req/sまで低下する。",
     "list_summary": "画像符号化・入力処理・デコードを異種段階として扱い、負荷とSLOに応じてE+P+D、EP+D、ED+Pを選ぶ混成分離と段階別バッチ・二重ストリームを組み合わせ、マルチモーダル配信のグッドプットを高める。",
-    "authors": ["Xianzhe Dong", "Tongxuan Liu", "Yuting Zeng", "Xiaoyang Zhao", "Weizhe Huang", "Liangyu Liu", "Yang Liu", "Siyu Wu", "Yu Wu", "Hailong Yang", "Ke Zhang", "Jing Li"],
+    "authors": [
+      "Xianzhe Dong",
+      "Tongxuan Liu",
+      "Yuting Zeng",
+      "Xiaoyang Zhao",
+      "Weizhe Huang",
+      "Liangyu Liu",
+      "Yang Liu",
+      "Siyu Wu",
+      "Yu Wu",
+      "Hailong Yang",
+      "Ke Zhang",
+      "Jing Li"
+    ],
     "authors_affiliations": "University of Science and Technology of China; JD.com; Beihang University",
     "published": "2025-05-19",
     "publication": "arXiv",
@@ -21,38 +37,110 @@
     "publication_status": "Preprint / under review in the v2 manuscript",
     "publication_version": "v2 (2025-11-10)",
     "lineage": "マルチモーダルLLM配信／符号化・入力処理・デコード分離／SLO指向スケジューリング",
-    "topics": ["マルチモーダルLLM配信", "EPD分離", "段階別バッチ処理", "二重CUDAストリーム", "KVキャッシュ移送", "グッドプット"],
+    "topics": [
+      "マルチモーダルLLM配信",
+      "EPD分離",
+      "段階別バッチ処理",
+      "二重CUDAストリーム",
+      "KVキャッシュ移送",
+      "グッドプット"
+    ],
     "importance": "通常の入力処理・デコード分離を画像符号化まで拡張するだけでなく、常に完全分離するのではなく、負荷分布と遅延目標によって同居させる段階を選ぶ。画像処理は大きいバッチで効率が上がる一方、入力処理は小さいバッチでも飽和し、デコードは大きな同時系列数を要求するという非対称性を配信群構成へ反映した点が重要である。",
     "hardware_evaluation": "4台のサーバに各8基のNVIDIA H20 141GB GPUを搭載した計32 GPUの実機クラスタで評価する。各サーバは2×200Gbps InfiniBand、NVLink、96 CPU cores、2TB RAMを備える。",
     "hardware_details": "CUDA 12.4。モデル、KVキャッシュ、画像キャッシュ、中間値はFP16。KVブロックサイズ16、画像キャッシュブロック576。vLLMはeager modeで、全基盤で同じchat templateを使用し、prefix cacheとCUDA graphは無効化する。",
     "quality_effect": "モデル重みや画像・KV表現を近似せず、段階配置、バッチ形成、キャッシュ移送を変えるシステム最適化なので、生成品質を速度と交換する方式ではない。評価では同一モデル・同一出力トークン数を使い、主な交換条件はTTFT、TBT、移送量、GPU利用率である。",
-    "storage_targets": ["GPU上のKVキャッシュ", "GPU上の画像特徴キャッシュ", "分離インスタンス間を移送する画像キャッシュとKVキャッシュ"],
-    "bottlenecks": ["画像符号化・入力処理・デコードの計算特性不一致", "段階間のGPU資源干渉", "固定分離構成による過不足", "移送先KV容量不足", "バッチ時間超過によるTTFT/TBT違反"],
-    "evidence_locations": ["§2 SLO定義", "§3 段階特性と分離構成の動機", "§4.1 Request Processor", "§4.2 Stage-level Batching", "§4.3 Dual-stream Parallelism", "§4.4 Hybrid EPD Disaggregation", "§4.5 Migrate Scheduler", "§5 評価", "Appendix A SLO Settings", "Appendix B 計算・メモリアクセス分析"],
+    "storage_targets": [
+      "GPU上のKVキャッシュ",
+      "GPU上の画像特徴キャッシュ",
+      "分離インスタンス間を移送する画像キャッシュとKVキャッシュ"
+    ],
+    "bottlenecks": [
+      "画像符号化・入力処理・デコードの計算特性不一致",
+      "段階間のGPU資源干渉",
+      "固定分離構成による過不足",
+      "移送先KV容量不足",
+      "バッチ時間超過によるTTFT/TBT違反"
+    ],
+    "evidence_locations": [
+      "§2 SLO定義",
+      "§3 段階特性と分離構成の動機",
+      "§4.1 Request Processor",
+      "§4.2 Stage-level Batching",
+      "§4.3 Dual-stream Parallelism",
+      "§4.4 Hybrid EPD Disaggregation",
+      "§4.5 Migrate Scheduler",
+      "§5 評価",
+      "Appendix A SLO Settings",
+      "Appendix B 計算・メモリアクセス分析"
+    ],
     "source": "https://arxiv.org/abs/2505.12658",
-    "sources": ["https://arxiv.org/abs/2505.12658", "https://arxiv.org/html/2505.12658", "https://arxiv.org/pdf/2505.12658"],
+    "sources": [
+      "https://arxiv.org/abs/2505.12658",
+      "https://arxiv.org/html/2505.12658",
+      "https://arxiv.org/pdf/2505.12658"
+    ],
     "code": null,
     "implementation": "論文は約10,000行のPythonと約3,000行のC++/CUDAからなる実装を記述する。フロントエンドと推論エンジンはPython、キャッシュ転送とGPUカーネルはC++/CUDA、分散インスタンスはRay actorで管理する。画像・KV転送には同一ノードでCUDA IPC、ノード間でNCCLを利用し、PagedAttentionにはFlashAttention/FlashInferを利用する。一次論文とarXiv付随情報からHydraInfer本体の公式公開コードURLは確認できない。",
     "implementation_status": "研究プロトタイプを実クラスタ評価、公式コードURL未確認",
     "evaluation_type": "32基H20実機クラスタでのマルチモーダルSLOグッドプット評価＋構成要素除去・移送遅延・二重ストリーム評価",
     "references": [
-      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180"},
-      {"canonical_id": "arXiv:2312.07104", "arxiv_id": "2312.07104"},
-      {"canonical_id": "arXiv:2401.09670", "arxiv_id": "2401.09670"},
-      {"canonical_id": "arXiv:2311.18677", "arxiv_id": "2311.18677"},
-      {"canonical_id": "arXiv:2407.00079", "arxiv_id": "2407.00079"},
-      {"canonical_id": "arXiv:2502.00937", "arxiv_id": "2502.00937"},
-      {"canonical_id": "arXiv:2501.05460", "arxiv_id": "2501.05460"},
-      {"canonical_id": "arXiv:2408.08147", "arxiv_id": "2408.08147"},
-      {"canonical_id": "arXiv:2406.17565", "arxiv_id": "2406.17565"},
-      {"canonical_id": "arXiv:2401.11181", "arxiv_id": "2401.11181"},
-      {"canonical_id": "arXiv:2408.12757", "arxiv_id": "2408.12757"},
-      {"canonical_id": "arXiv:2307.08691", "arxiv_id": "2307.08691"}
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2312.07104",
+        "arxiv_id": "2312.07104"
+      },
+      {
+        "canonical_id": "arXiv:2401.09670",
+        "arxiv_id": "2401.09670"
+      },
+      {
+        "canonical_id": "arXiv:2311.18677",
+        "arxiv_id": "2311.18677"
+      },
+      {
+        "canonical_id": "arXiv:2407.00079",
+        "arxiv_id": "2407.00079"
+      },
+      {
+        "canonical_id": "arXiv:2502.00937",
+        "arxiv_id": "2502.00937"
+      },
+      {
+        "canonical_id": "arXiv:2501.05460",
+        "arxiv_id": "2501.05460"
+      },
+      {
+        "canonical_id": "arXiv:2408.08147",
+        "arxiv_id": "2408.08147"
+      },
+      {
+        "canonical_id": "arXiv:2406.17565",
+        "arxiv_id": "2406.17565"
+      },
+      {
+        "canonical_id": "arXiv:2401.11181",
+        "arxiv_id": "2401.11181"
+      },
+      {
+        "canonical_id": "arXiv:2408.12757",
+        "arxiv_id": "2408.12757"
+      },
+      {
+        "canonical_id": "arXiv:2307.08691",
+        "arxiv_id": "2307.08691"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v2参考文献節",
     "references_total": 41,
     "last_checked": "2026-09-14"
   },
-  "reservation": {"claim_id": "claim-8be1abfdf2512c2fb498bde0", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-7aed2ba5fad7861be71ac96a",
+    "worker_id": "scheduled-chat-llm-discovery",
+    "worker_kind": "scheduled_chat"
+  }
 }
