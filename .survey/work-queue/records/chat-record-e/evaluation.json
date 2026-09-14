@@ -1,40 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-a849c42583b8c4dd60873e8a",
-  "job_id": "job-research-2d5fb10dc2e0c88e",
   "slot": "evaluation",
-  "data": {
-    "hardware": "二つのクラウド仮想クラスタ。8ノード構成と16ノード構成で、各ノードはNVIDIA A10 Tensor Core GPU 1基、24GB GDDR6。ノードは米国内4地域のデータセンタへ分散し、1Gbps Ethernet経由で接続。InfiniBand等の専用相互接続はない。",
-    "software": "TensorRT-LLM PyTorch backend、MPICH、NCCL、gRPC、PyTorch TCPStore。ベースラインは同じTensorRT-LLM構成で、ノード故障時に該当パイプライン全体が停止し、処理中要求を再試行する標準的な障害挙動。",
-    "methodology": "Llama-3.1-8Bを4段パイプライン並列し、各インスタンスを4ノードへ配置する。8ノード群では2インスタンス、16ノード群では4インスタンスを均等負荷分散する。ShareGPT要求を使い、到着時刻をPoisson分布としてRPSを変化させる。8ノードで1ノード故障、16ノードで1ノード故障、16ノードで2ノード故障の3場面を注入し、平均/p99のエンドツーエンド遅延とTTFTを比較する。別に復旧時間をRPS別に測り、故障なし時には背景KV複製の遅延上乗せを測る。",
-    "scope": "単一モデルLlama-3.1-8B、4段パイプライン並列、NVIDIA A10、1Gbps Ethernetの地理分散環境が中心。テンソル並列や高速NVLink/InfiniBand主体の単一データセンタ構成、異種GPU、より大きなモデル、複数種類の同時故障は未評価。標準障害ベースラインとの比較が中心で、AnchorTPやR²CCL等を同一実装・同一環境で直接再実装した比較ではない。",
-    "workloads": [
-      "ShareGPT要求トレース",
-      "Poisson到着のRPSスイープ",
-      "8ノード1故障",
-      "16ノード1故障",
-      "16ノード2故障"
-    ],
-    "baselines": [
-      "TensorRT-LLMの標準障害挙動",
-      "処理中要求の即時再試行",
-      "パイプライン全体を故障扱いするロードバランサ挙動"
-    ],
-    "metrics": [
-      "平均エンドツーエンド遅延",
-      "p99エンドツーエンド遅延",
-      "平均TTFT",
-      "p99 TTFT",
-      "TPOT",
-      "障害復旧時間",
-      "平常時の遅延上乗せ"
-    ],
-    "reproducibility": "モデル、GPU、クラスタ規模、ネットワーク帯域、データセット、到着分布、障害場面、基盤ソフトウェアと主要実装部品は本文に記載されている。一方、著者公式のKevlarFlow実装URLは一次資料で確認できず、クラウド事業者や具体的障害注入手順の詳細も限定的なため、完全再現には不足がある。"
-  },
+  "attempt_id": "attempt-d3a3d4953747373a7d859a41",
+  "job_id": "job-research-7c979683209fb954",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-a849c42583b8c4dd60873e8a",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "claim_id": "claim-d3a3d4953747373a7d859a41",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }
