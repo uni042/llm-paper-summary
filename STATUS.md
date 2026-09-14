@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 11:45 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 11:48 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **95** |
+| 未処理の論文候補（Research ready） | **94** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **294** |
+| 全文精読完了（累計） | **295** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,20 +35,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **95** |
-| 処理中（Active claims） | **3** |
+| 未処理候補（Research ready） | **94** |
+| 処理中（Active claims） | **2** |
 | 今すぐ着手可能（Claimable） | **93** |
-| :30 通常worker Active claims | **1** |
+| :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 11:42 JST** |
 | :00 補助worker 直近claim | **09-14 11:44 JST** |
-| 直近24h Research完了（:30 通常worker） | **14** |
+| 直近24h Research完了（:30 通常worker） | **15** |
 | 直近24h Research完了（:00 補助worker） | **16** |
 | 直近24h Research完了（帰属不明） | **2** |
 | 最新通常run | **2026-09-14T11:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古の有効claimの経過時間 | **54 min** |
+| 最新通常runのResearch完了 | **3** |
+| 最古の有効claimの経過時間 | **57 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -65,7 +65,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **32** |
+| Research完了 | **33** |
 | Repo収録 | **58** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -79,7 +79,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 32 → Repo収録 58**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 33 → Repo収録 58**
 
 ## 次に処理する候補
 
@@ -125,6 +125,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2605.22781` — DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback
 - `arXiv:2603.18897` — Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution
 - `arXiv:2503.15921` — SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models
 - `arXiv:2607.01579` — OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters
@@ -132,7 +133,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2603.16104` — Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective
 - `arXiv:2506.17615` — EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration
 - `arXiv:2509.06261` — FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving
-- `arXiv:2601.22438` — Towards Resiliency in Large Language Model Serving with KevlarFlow
 
 ### 7日比較
 
