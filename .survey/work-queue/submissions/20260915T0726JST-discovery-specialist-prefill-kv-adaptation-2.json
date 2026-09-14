@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-12e430d5a1798030",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07883",
+      "title": "Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving",
+      "source_url": "https://arxiv.org/abs/2609.07883",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.07883-sloweave-deadline-aware-adaptive-prefill-chunking.md",
+      "priority": 84,
+      "reason": "固定プリフィルチャンクが、短いチャンクでは起動費用、大きいチャンクではデコード遅延を生む問題に対し、最も早い次トークン期限までに完了可能な最大チャンクを反復ごとに選ぶSLOWeaveを提案する。GPUランタイムと再現可能シミュレータで、出力トークン当たり時間（Time Per Output Token; TPOT）25ms制約では最強固定チャンク比で有効スループット（goodput）を38〜39%改善し、10ms制約では最大3.3倍に改善しており、連続バッチ処理の実用的なSLO制御として優先度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.07966-metakv-adaptive-kv-compression-under-constraints.md",
+      "priority": 78,
+      "reason": "KVキャッシュ圧縮を固定設定せず、各プロンプトについて遅延・最大メモリ・正答確率を軽量予測し、ユーザーの遅延/メモリ予算を満たす圧縮構成を選ぶ。KVQuant、H2O、RocketKVの10構成と非圧縮を横断し、制約付き成功率（Constrained Success Rate; CSR）を最良固定設定より平均約0.07、最大0.135改善しており、圧縮アルゴリズム間を実行時制約で選択する制御層として既存KV研究を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-prefill-kv-adaptation-2",
+    "axis": "SLO認識プリフィル制御と制約認識KVキャッシュ適応",
+    "query_summary": "2026年9月のLLMサービング新着を一次arXiv中心に探索し、固定プリフィル分割のSLO問題とプロンプト別KV圧縮構成選択を評価した。最新GitHub正本とLibrary pendingでcanonical_id/titleを再重複判定した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "分離プリフィル/デコード間のKV転送、ネットワーク・集合通信、GPUランタイム資源競合、または2026年9月サービング新着一覧の残りを探索する。",
+    "empty_round_reason": null
+  }
+}
