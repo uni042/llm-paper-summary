@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-d3a3d4953747373a7d859a41",
   "job_id": "job-research-7c979683209fb954",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d3a3d4953747373a7d859a41",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2604.00499",
+    "arxiv_id": "2604.00499",
+    "doi": "10.48550/arXiv.2604.00499",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
+    "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
+    "summary": "TIEは、LLMの出力長を一点予測して最短ジョブ優先へ使う従来方式が、EOSが確率的に出現する自己回帰生成の本質的不確実性を無視する問題を扱う。各要求の出力長を裾の重いlog-t分布として予測し、期待値へ条件付き裾平均CVaRを加えたTail Inflated Expectationで優先度を決める。待ち行列圧力に応じて裾リスク重みを上げ、待機時間減衰で長要求の飢餓も防ぐ。vLLM上では予測を非同期・動的バッチ化し、オンライン遅延とオフライン生成スループットを改善する。",
+    "list_summary": "出力長を一点ではなくlog-t分布として予測し、期待値＋適応CVaRのTIEスコアで裾の長大生成リスクを織り込む非先取りLLMスケジューラ。",
+    "authors": ["Haoyu Zheng", "Yongqiang Zhang", "Fangcheng Fu", "Xiaokai Zhou", "Hao Luo", "Hongchao Zhu", "Yuanyuan Zhu", "Hao Wang", "Xiao Yan", "Jiawei Jiang"],
+    "authors_affiliations": "Wuhan University; Dameng Database Co., Ltd.; Shanghai Jiao Tong University; Institute for Math and AI, Wuhan University; Central China Normal University",
+    "published": "2026-04-01",
+    "publication": "arXiv preprint arXiv:2604.00499, version 2 dated 2026-05-25; manuscript dated 2026-05-26",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "LLM inference scheduling / output-length prediction / stochastic scheduling",
+    "topics": ["LLMスケジューリング", "出力長分布予測", "裾リスク", "最短ジョブ優先", "CVaR", "vLLM"],
+    "importance": "一点出力長の予測誤差を単なるモデル精度問題ではなく、生成長そのものが確率分布であることから再定式化し、古典的確率スケジューリングの期待処理時間と裾リスクをLLMサービングへ接続する。",
+    "hardware_evaluation": "主評価はNVLink接続のNVIDIA A6000 48GB×8、128 vCPU、512GBメモリ。Meta-Llama-3-8B-Instructは単一GPU、70Bは8-wayテンソル並列。付録では7B〜80B級とMoEを含む複数モデルへ拡張する。",
+    "quality_effect": "生成内容やモデル品質自体を変更する方式ではなく、要求実行順だけを変える非先取りスケジューラである。したがって同一サンプリング設定なら個々の出力分布は変えず、主影響は待ち時間、HOLブロッキング、公平性にある。",
+    "source": "https://arxiv.org/abs/2604.00499",
+    "sources": ["https://arxiv.org/abs/2604.00499", "https://arxiv.org/pdf/2604.00499", "https://github.com/Hyzheng-code/TIE"],
+    "code": "https://github.com/Hyzheng-code/TIE",
+    "implementation": "vLLM 0.11.1へTIE優先度キュー、非同期予測スレッド、最大32件・3ms待ちの動的予測バッチ、待機時間減衰を統合した実装を公開している。",
+    "last_checked": "2026-09-14",
+    "references": [],
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 40
+  },
+  "reservation": {"claim_id": "claim-d3a3d4953747373a7d859a41", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
