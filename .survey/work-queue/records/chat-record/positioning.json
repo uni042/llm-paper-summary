@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-4b822552e694f543c380d433",
+  "attempt_id": "attempt-3e927ca72942b923fd9a208d",
   "job_id": "job-research-cff945d042003c88",
   "data": {
     "limitations": [
@@ -41,8 +41,8 @@
     "research_positioning": "リポジトリのGPUカーネル・ランタイム最適化系統に属し、モデル圧縮側の『品質を保てる疎性』とGPU側の『実際に速く計算できる疎性』のずれを埋める研究として位置づけられる。特に、疎性を高めれば転送量が減るという単純な議論ではなく、位置メタデータ、オンチップ復号、テンソルコア制約まで含めてメモリ帯域と計算資源を共同設計する。プリフィルとデコードで最適カーネルが異なるという結果は、段階分離サービングや動的ランタイム選択とも接続しやすく、将来的には要求形状に応じて密・疎カーネルを切り替える実行基盤の部品になる。"
   },
   "reservation": {
-    "claim_id": "claim-4b822552e694f543c380d433",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0012JST",
+    "claim_id": "claim-3e927ca72942b923fd9a208d",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0030JST",
     "worker_kind": "scheduled_chat"
   }
 }

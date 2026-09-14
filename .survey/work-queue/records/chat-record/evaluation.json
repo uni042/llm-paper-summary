@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4b822552e694f543c380d433",
+  "attempt_id": "attempt-3e927ca72942b923fd9a208d",
   "job_id": "job-research-cff945d042003c88",
   "data": {
     "hardware": [
@@ -53,8 +53,8 @@
     "scope": "実機H100上の評価でありシミュレーションではない。主要な高速化対象は小Nでメモリ律速となるデコード時の重み行列積で、プリフィルのような大N計算律速領域には一般化できない。実機評価はH100中心で、A100やMI300への適用可能性はハードウェア機能から論じるに留まり性能測定はない。"
   },
   "reservation": {
-    "claim_id": "claim-4b822552e694f543c380d433",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0012JST",
+    "claim_id": "claim-3e927ca72942b923fd9a208d",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0030JST",
     "worker_kind": "scheduled_chat"
   }
 }
