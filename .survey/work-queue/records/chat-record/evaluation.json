@@ -2,58 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3e927ca72942b923fd9a208d",
+  "attempt_id": "attempt-949719927786444760bbe49b",
   "job_id": "job-research-cff945d042003c88",
-  "data": {
-    "hardware": [
-      "NVIDIA H100 SXM5 80 GB HBM3",
-      "GPU間NVLink",
-      "形式変換測定用Intel Xeon Platinum 8460Y+"
-    ],
-    "software": [
-      "GCC 12.3.0",
-      "NVCC 12.6",
-      "cuBLAS",
-      "Sputnik",
-      "SparTA",
-      "FlashLLM",
-      "SpInfer"
-    ],
-    "model": [
-      "OPT-30B",
-      "OPT-66B",
-      "LLaMA-7B",
-      "LLaMA-13B",
-      "OPT-1.3B"
-    ],
-    "datasets": "端から端までの推論ではOPT-30B/66BをWandaで枝刈りし、入力系列長512、出力系列長512、バッチ8/16/32を評価。枝刈り品質の動機付けではWikiText-2困惑度をLLaMA-7B/13BとOPT-1.3Bで比較。",
-    "baselines": [
-      "dense cuBLAS",
-      "Sputnik",
-      "SparTA",
-      "FlashLLM",
-      "SpInfer"
-    ],
-    "correctness": "三層形式は非ゼロ値を主層・スロット充填層・残差層に分配して全値を保持するため、同じ枝刈り済み重みに対して行列積の意味を変えない。品質差はカーネルではなく事前の枝刈り方式と疎性から生じる。",
-    "settings": [
-      {
-        "name": "カーネル形状",
-        "description": "主にOPT-30B/66Bの線形層に由来する疎行列形状を使い、活性側の列数N=16/32を中心に50%、60%、70%疎性を比較する。"
-      },
-      {
-        "name": "端から端までの推論",
-        "description": "OPT-30B/66BをWandaで50%または60%非構造枝刈りし、バッチ8/16/32、入力512トークン・生成512トークンでスループットとピークGPUメモリを測る。OPT-66Bは本手法などで2 GPU、FlashLLMはメモリ制約のため4 GPUを使用する。"
-      },
-      {
-        "name": "品質動機付け",
-        "description": "WandaとRIAで50%、60%、70%非構造疎性と2:4構造疎性を作り、WikiText-2困惑度を密モデルと比較して中程度の非構造疎性が品質面で有利な領域を確認する。"
-      }
-    ],
-    "methodology": "疎行列積単体とLLM端から端までの二段階で評価する。単体では同じ行列形状・疎性・小N条件で複数のGPU疎行列実装と密cuBLASを比較し、三層形式と重畳パイプラインがカーネル性能へ与える効果を見る。端から端までではOPTモデルの線形層を提案カーネルへ置換して、活性関数や注意機構など高速化対象外を含む実際の推論スループットを測る。さらにピークGPUメモリ、オフライン形式変換時間、プリフィル相当の大N条件も測り、適用範囲と境界を明示する。",
-    "scope": "実機H100上の評価でありシミュレーションではない。主要な高速化対象は小Nでメモリ律速となるデコード時の重み行列積で、プリフィルのような大N計算律速領域には一般化できない。実機評価はH100中心で、A100やMI300への適用可能性はハードウェア機能から論じるに留まり性能測定はない。"
-  },
+  "data": {},
   "reservation": {
-    "claim_id": "claim-3e927ca72942b923fd9a208d",
+    "claim_id": "claim-949719927786444760bbe49b",
     "worker_id": "scheduled-chat-llm-survey-20260915T0030JST",
     "worker_kind": "scheduled_chat"
   }
