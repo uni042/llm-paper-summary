@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-0955cddfea7e5b9a4dfbac9a",
   "job_id": "job-research-825504607247e69d",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0955cddfea7e5b9a4dfbac9a",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["クラウド: NVIDIA H20 96GB、64 vCPU、512GB RAM", "CPU端末", "GPU端末", "ARM 8GB組込み端末"],
+    "software": ["クラウド Ubuntu 22.04 / CUDA 12.4 / PyTorch 2.4", "端末 Python 3.10", "組込み端末 ONNX Runtime 1.18", "QUIC", "AES-GCM"],
+    "methodology": "7B級のデコーダ専用Transformer（隠れ次元4096、語彙150,000）を用い、既定入力長512・出力長128で評価する。クラウドはbf16、転送する特徴テンソルとロジットはINT8。ネットワークは100Mbps、RTT 20ms、ジッタ2msへ制御する。1000プロンプト（中国語400、英語400、混合200）を使い、100プロンプトのウォームアップ後に5回反復する。CPU/GPU/Edgeの3端末経路について、クラウドのみ、暗号化クラウドのみ、素朴な分割、端末のみ軽量モデル、提案方式を比較する。遅延はトークン化、埋め込み、量子化、AES-GCM、ネットワーク、クラウドデコード、部分射影、投機検証、融合、サンプリング、KV更新を含み、モデルロードや初期化は除外する。さらに分割次元、投機長、言語圧縮、分割射影、CPUブロック重畳、KV制御を個別アブレーションする。",
+    "scope": "実機の単一クラウドGPUと3種類の端末プロフィールを用いた制御環境評価である。モデルは『7B-class decoder-only Transformer』とだけ記され、具体的なモデル名・重みを特定できない。ネットワークも固定100Mbps/20ms RTTで、モバイル回線の変動、複数クラウド、マルチテナント負荷、攻撃者による能動攻撃は扱わない。プライバシー評価は露出する情報種別の比較で、形式的な秘密性や復元攻撃耐性を証明するものではない。",
+    "workloads": ["中国語400プロンプト", "英語400プロンプト", "混合言語200プロンプト", "入力512 / 出力128を既定とするデコード"],
+    "baselines": ["Cloud-only", "Cloud-only + encryption", "Naive split inference", "Endpoint-only lightweight model", "各アブレーション構成"],
+    "metrics": ["1トークン当たり遅延", "出力128トークン総遅延", "tokens/s", "下り通信量 KB/token", "投機受理率", "次トークン一致率", "perplexity", "MMLU", "GSM8K", "HumanEval", "クラウドへの情報露出種別"],
+    "reproducibility": "ハードウェア、主要ソフトウェア版、ネットワーク条件、隠れ次元・語彙数、分割次元、投機長、量子化、プロンプト構成、ウォームアップ/反復数は記載される。ただし目標モデルの具体名と公開コードが示されず、CPU/GPU端末の完全な型番も一次資料だけでは十分特定できないため、完全再現性は限定的である。"
+  },
+  "reservation": {"claim_id": "claim-0955cddfea7e5b9a4dfbac9a", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
 }
