@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e82635abb5120aa7260dbed6",
-  "job_id": "job-research-bada04a844a16b47",
-  "data": {
-    "limitations": "主評価はJetson AGX Orin上のW4A4非構造化疎性に集中し、サーバGPUや異なるメモリ階層、構造化疎性へ同じ利得が出るとは限らない。Jetson Thorではハードウェア固有調整を行わず固定領域分割を使うため、移植先ごとの再最適化が必要である。端末全体評価はOPT-13B一モデルで、タスク品質の再測定を行わない。行並べ替えは局所タイル単位の部分集合動的計画法をオフラインで実行し、その前処理費用はオンライン遅延から除外される。さらに入力処理では疎行列積の占有率が低く、カーネル改善だけでは全体の非疎処理、KVキャッシュ、注意機構、サンプリングを高速化できない。",
-    "differences": "FlashLLMは疎重みを読み込んで密形式としてTensor Core計算することで転送量を減らし、SpInferはTensor Core向けビットマップ表現と共有メモリ復号を共同設計する。UnionSparseはさらに、低ビット化によって位置情報が相対的に重くなることをPMRで明示し、複数領域で位置情報を共有するIE-BMEと行並べ替えで表現側の位置情報量を削減する。その圧縮形式をLSPDで直接レジスタ断片へ復号し、ワープ分業の二重バッファで搬送を隠すため、『疎性を使うか』ではなく『低ビット疎値1単位をどれだけ少ない位置情報と復号費用でTensor Coreへ届けるか』を中心に置く。",
-    "implementation_status": "CUDA実装とFasterTransformer統合を実機評価し、公式コードを https://github.com/Victor-Alen/UnionSparse で公開している。論文はESWEEK 2026 Journal Track経由でIEEE Transactions on Computer-Aided Design of Integrated Circuits and Systemsへの掲載受理と記載されている。",
-    "research_positioning": "エッジ大規模言語モデル推論、非構造化疎性、低ビット量子化、Tensor Core向け疎行列積カーネルの交点に位置する。モデル圧縮そのものより、圧縮後の位置情報・メモリ交通・復号を含む実行経路を最適化するシステム研究であり、量子化が進むほどメタデータ設計が重要になることを定量化した点が特徴である。",
-    "relation_to_existing_repository": "kernel-runtime-compilation系統ではFlashLLMやSpInferなどの疎Tensor Core実行と直接比較できる。quantization/compression系統に対しては、ビット幅を下げた後に残る疎位置情報が新しい帯域ボトルネックになるという実装上の補完知見を与える。memory-architecture系統に対しても、エッジでは重み本体だけでなく位置情報の転送量を削減しなければメモリ帯域削減が実効性能へ結び付かない例として位置づけられる。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id":"claim-e82635abb5120aa7260dbed6","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-37e62296473e532739f73eab",
+  "job_id": "job-research-b8afd28ccc02f095",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-37e62296473e532739f73eab",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
