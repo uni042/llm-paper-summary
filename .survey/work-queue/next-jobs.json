@@ -18,8 +18,8 @@
   },
   "claiming": {
     "ready_research_audit": 80,
-    "actively_claimed": 2,
-    "claimable": 78
+    "actively_claimed": 3,
+    "claimable": 77
   },
   "next_jobs": [
     {
@@ -83,18 +83,6 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-fd5c72ea06dbb8a6",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2606.09061",
-      "title": "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
-      "source_url": "https://arxiv.org/abs/2606.09061",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
       "job_id": "job-research-63f40e784a6127a2",
       "type": "research",
       "lane": null,
@@ -119,6 +107,18 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
+      "job_id": "job-research-0e6e5ba9063713ac",
+      "type": "research",
+      "lane": null,
+      "priority": 83,
+      "canonical_id": "arXiv:2604.13226",
+      "title": "KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs",
+      "source_url": "https://arxiv.org/abs/2604.13226",
+      "paper_path": null,
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
+    {
       "job_id": "job-e00f52c8cc2c35eb",
       "type": "discovery",
       "lane": "discovery",
@@ -131,5 +131,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-14T03:57:57+00:00"
+  "generated_at": "2026-09-14T04:00:46+00:00"
 }
