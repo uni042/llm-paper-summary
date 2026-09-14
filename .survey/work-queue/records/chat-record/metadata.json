@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-e82635abb5120aa7260dbed6",
   "job_id": "job-research-bada04a844a16b47",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e82635abb5120aa7260dbed6",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2608.09291",
+    "arxiv_id": "2608.09291",
+    "doi": "10.48550/arXiv.2608.09291",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
+    "title": "UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge",
+    "summary": "UnionSparseは、低ビット量子化と非構造化疎性を同時に使うエッジ向け大規模言語モデル推論で、重み本体が小さくなるほど疎行列の位置情報が相対的に重くなる問題を扱う。論文は有効データ量と位置情報量の比をPMRとして定義し、低PMRが実効計算強度を下げて小バッチ逐次生成を帯域律速へ戻すことを示す。そこで複数領域が1つの共有ビットマップを使うIE-BME表現、ビットマップ活動量を減らすオフライン行並べ替え、共有メモリ上で低ビット値を並列復号するLSPD、次タイル転送と現タイル計算を重ねるワープ分業パイプラインを共同設計する。Jetson AGX Orin上のW4A4・40〜70%疎性の832カーネル条件ではFlashLLM比2.30倍、SpInfer比1.43倍、CUTLASS比1.56倍、cuBLAS Tensor Core比3.46倍の平均高速化を報告する。OPT-13Bの実機端末推論ではFasterTransformer比で最大2.63倍のスループット改善を示し、疎性の量だけでなく残存重みを少ない位置情報で取り出す効率が低ビット疎推論の主要設計軸であることを実証する。",
+    "list_summary": "低ビット化で相対的に増える疎行列の位置情報負担をPMRで定量化し、共有ビットマップ表現と並列復号カーネルを共同設計してJetson上の小バッチ疎推論を高速化する。",
+    "authors": ["Tianhao Jiang","Hang Gu","Teng Wang","Qianyu Cheng","ZhenDong Zheng","Cheng Tang","Qiyue Su","Wenqi Lou","Lei Gong","Chao Wang","Xi Li","Xuehai Zhou"],
+    "authors_affiliations": "University of Science and Technology of China",
+    "published": "2026-08-10",
+    "publication": "arXiv:2608.09291v1 / ESWEEK 2026 Journal Track",
+    "publication_type": "Journal-track accepted preprint",
+    "publication_status": "Accepted via the ESWEEK 2026 Journal Track for publication in IEEE TCAD",
+    "lineage": "低ビット疎推論／GPUカーネル／エッジ推論",
+    "topics": ["疎行列積","低ビット量子化","位置情報効率","Tensor Core","エッジLLM推論"],
+    "importance": "量子化で重み値だけを縮めると疎形式の位置情報が相対的に支配的になるという、疎性と量子化の組合せ特有の逆説を明示する。PMRを解析指標にし、表現形式とGPU実行を一体で最適化した点が重要である。",
+    "hardware_evaluation": "主評価はJetson AGX Orin 64GB（Ampere、Compute Capability 8.7）の実機。補助的にJetson Thorでもカーネル傾向を確認し、OPT-13Bの端末推論と電力測定もOrin上で実施する。",
+    "hardware_details": "Ubuntu 22.04.5 LTS、JetPack 6.1、CUDA 12.6、GCC 11.4、NVCC 12.6。MAXN動作でCPU・GPU・EMC周波数を最大へ固定する。",
+    "quality_effect": "Wandaで50%非構造化枝刈りし、AtomでW4A4量子化したモデルを対象とするため、品質影響はUnionSparseカーネル固有ではなく枝刈り・量子化設定に由来する。論文の主評価は速度とエネルギーであり、タスク精度の追加比較は報告しない。",
+    "storage_targets": ["低ビット疎重み本体","共有ビットマップとタイルオフセット","共有メモリ上の重み・活性タイル"],
+    "bottlenecks": ["量子化後も縮まらない疎位置情報の相対負担","小バッチ逐次生成における低い計算強度","不規則な疎走査と共有メモリ衝突","メモリ転送待ちを隠せない短いタイル計算"],
+    "evidence_locations": ["§III PMR解析","§IV 全体設計","§V IE-BMEと行並べ替え","§VI DW-PCとLSPD","§VII 評価","Table II–IV"],
+    "source": "https://arxiv.org/abs/2608.09291",
+    "sources": ["https://arxiv.org/abs/2608.09291","https://arxiv.org/html/2608.09291","https://github.com/Victor-Alen/UnionSparse"],
+    "code": "https://github.com/Victor-Alen/UnionSparse",
+    "implementation": "CUDA上にIE-BME、LSPD、非同期二重バッファ型の疎行列積カーネルを実装し、FasterTransformerへ統合してOPT-13Bを評価する。公式コードはGitHubで公開されている。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2309.10285","arxiv_id":"2309.10285"},
+      {"canonical_id":"arXiv:2408.11551","arxiv_id":"2408.11551"},
+      {"canonical_id":"arXiv:2307.09288","arxiv_id":"2307.09288"},
+      {"canonical_id":"arXiv:2205.01068","arxiv_id":"2205.01068"},
+      {"canonical_id":"arXiv:2407.10671","arxiv_id":"2407.10671"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1参考文献節",
+    "references_total": 50
+  },
+  "reservation": {"claim_id":"claim-e82635abb5120aa7260dbed6","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
