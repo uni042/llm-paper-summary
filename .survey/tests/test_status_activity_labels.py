@@ -55,6 +55,31 @@ class StatusActivityLabelTests(unittest.TestCase):
             self.assertIn(":30 通常worker 直近lease活動 | **09-14 18:33 JST**", text)
             self.assertNotIn(":30 通常worker 直近claim |", text)
 
+    def test_consistency_result_shows_when_it_was_last_checked(self):
+        refiner = _load(REFINER_SCRIPT, "status_refiner_consistency_timestamp")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _write(repo / ".survey/work-queue/maintenance-cycle.json", {
+                "last_consistency_status": "passed",
+                "last_consistency_checked_at": "2026-09-14T00:53:22+00:00",
+            })
+            text = (
+                "## 現在の状態\n\n"
+                "| 指標 | 状態 |\n"
+                "|---|---:|\n"
+                "| 整合性チェック（Consistency） | **passed** |\n"
+            )
+
+            refined = refiner.refine_text(
+                repo,
+                text,
+                now=datetime(2026, 9, 14, 10, 0, tzinfo=timezone.utc),
+            )
+
+            self.assertIn("直近整合性チェック結果 | **passed**", refined)
+            self.assertIn("直近整合性チェック時刻 | **09-14 09:53 JST**", refined)
+            self.assertNotIn("整合性チェック（Consistency）", refined)
+
 
 if __name__ == "__main__":
     unittest.main()
