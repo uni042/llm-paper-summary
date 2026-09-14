@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-04f374b6b55a5cf420d50468",
-  "job_id": "job-research-420858d196a868b6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-04f374b6b55a5cf420d50468",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
+  "data":{"limitations":"評価はLLaMA-2-7B、4×A800 40GB、NVLink単一ノード、合計320要求に限定される。複数ノードではKV転送帯域と遅延が変わるため同じ改善幅を期待できるとは限らない。本番トレースや長時間の定常負荷も未評価である。比較対象はvLLMのデータ並列・テンソル並列が中心で、DistServe、Sarathi-Serve、Mooncakeなど同じプリフィル／デコード分離系との直接比較がない。生成品質も正解率等では測られていない。","differences":"DistServeやSarathi-Serveがプリフィルとデコードの資源分離・スケジューリングを主眼とするのに対し、StreamServeは分離を前提として複数レーン間の配置を実行時指標で変える。Mooncakeのようなキャッシュ局所性中心のルーティングに対しては、キャッシュ再利用に加えてメモリ、待ち行列、実行中負荷を同時に扱う。適応型推測デコード研究に対しては、受理率だけでなくシステム負荷と実測スループットを使い、ルーティング側と同じ監視情報へ接続する点が異なる。","implementation_status":"StreamScheduler、FlowGuard、PipeServe-Engine、SpecuStreamのアルゴリズムと主要パラメータを記述し、NIXLとvLLM系の実装を用いた実機結果を示す。ただし確認時点でarXiv本文・論文ページから著者公式の公開リポジトリURLは特定できない。","research_positioning":"LLMサービングの分離実行系統と推測デコード系統を横断する研究。計算レーンの配置制御と推測量の制御を別々に最適化せず、同じ実行時状態を用いる閉ループ制御へ統合する設計例として位置付けられる。報告倍率は大きいが比較の非対称性があるため、有望な統合設計と小規模実証として読むのが妥当である。","relation_to_existing_repository":"既存リポジトリではプリフィル／デコード分離、KVキャッシュ転送、サービングスケジューリング、推測デコードを個別に扱う系統との接点が強い。StreamServeの差分は、キャッシュ局所性・待ち行列・負荷を使う配置と、受理率・負荷・スループットを使う推測深さを一つのフィードバック系として結合したことにある。","audit_required":false},
+  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
