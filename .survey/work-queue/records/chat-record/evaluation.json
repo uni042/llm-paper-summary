@@ -2,23 +2,67 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-f6e9bf75bac91682199c8e08",
+  "attempt_id": "attempt-14285bb9ea690ea905b1622a",
   "job_id": "job-research-f1288f57de066f0f",
   "data": {
-    "hardware": ["異種GPUを持つ実分散エッジテストベッド", "GPU計算性能20〜110 TFLOPS", "GPUメモリ12〜48GB", "サーバ間帯域1〜10Gbps", "伝搬遅延0.2〜20ms"],
-    "software": ["PyTorchベースOrderMoE実装"],
-    "model": ["Switch-Base-8E", "Qwen-MoE-A2.7B", "Mixtral-8x7B"],
-    "datasets": ["WikiText-103（perplexity）", "SQuAD（F1）", "GSM8K（accuracy）", "専門家類似度・活性化頻度・遷移統計用の保持校正集合"],
-    "baselines": ["Edge-LLM", "EdgeShard", "WDMoE", "MoE²", "Random Deployment", "Popularity-based Replication", "Similarity Deployment without Substitute", "Local Substitute Only", "OrderMoE without Look-Ahead", "OrderMoE without Redundancy"],
+    "hardware": [
+      "異種GPUを持つ実分散エッジテストベッド",
+      "GPU計算性能20〜110 TFLOPS",
+      "GPUメモリ12〜48GB",
+      "サーバ間帯域1〜10Gbps",
+      "伝搬遅延0.2〜20ms"
+    ],
+    "software": [
+      "PyTorchベースOrderMoE実装"
+    ],
+    "model": [
+      "Switch-Base-8E",
+      "Qwen-MoE-A2.7B",
+      "Mixtral-8x7B"
+    ],
+    "datasets": [
+      "WikiText-103（perplexity）",
+      "SQuAD（F1）",
+      "GSM8K（accuracy）",
+      "専門家類似度・活性化頻度・遷移統計用の保持校正集合"
+    ],
+    "baselines": [
+      "Edge-LLM",
+      "EdgeShard",
+      "WDMoE",
+      "MoE²",
+      "Random Deployment",
+      "Popularity-based Replication",
+      "Similarity Deployment without Substitute",
+      "Local Substitute Only",
+      "OrderMoE without Look-Ahead",
+      "OrderMoE without Redundancy"
+    ],
     "correctness": "正確な対象専門家から類似専門家へ置換するため完全同値ではない。WikiText-103 perplexity、SQuAD F1、GSM8K accuracyを正確実行と比較し、利用者ごとの品質予算と層別類似度制約により劣化を定量制御する。",
     "settings": [
-      {"name":"既定負荷","description":"要求到着率40 requests/s、利用者はエッジサーバへ非一様に関連付ける。先読みH=3、層別類似度閾値は浅い層0.9・深い層0.5相当、メモリ予算比2.0を既定にする。"},
-      {"name":"総合比較","description":"Mixtral-8x7Bで平均推論遅延、1000トークン当たりサーバ間通信量、推論処理率、専門家実行種別、品質を比較する。"},
-      {"name":"モデル横断","description":"Switch-Base-8E、Qwen-MoE-A2.7B、Mixtral-8x7Bで平均遅延と集中型完全モデルに対する品質保持率を比較する。"},
-      {"name":"感度・拡張性","description":"先読み深さ、類似度閾値、メモリ予算比1.0〜3.0、要求負荷10〜80 requests/s、サーバ数4〜16相当を変化させ、遅延・通信・SLA・判断費用を測る。"}
+      {
+        "name": "既定負荷",
+        "description": "要求到着率40 requests/s、利用者はエッジサーバへ非一様に関連付ける。先読みH=3、層別類似度閾値は浅い層0.9・深い層0.5相当、メモリ予算比2.0を既定にする。"
+      },
+      {
+        "name": "総合比較",
+        "description": "Mixtral-8x7Bで平均推論遅延、1000トークン当たりサーバ間通信量、推論処理率、専門家実行種別、品質を比較する。"
+      },
+      {
+        "name": "モデル横断",
+        "description": "Switch-Base-8E、Qwen-MoE-A2.7B、Mixtral-8x7Bで平均遅延と集中型完全モデルに対する品質保持率を比較する。"
+      },
+      {
+        "name": "感度・拡張性",
+        "description": "先読み深さ、類似度閾値、メモリ予算比1.0〜3.0、要求負荷10〜80 requests/s、サーバ数4〜16相当を変化させ、遅延・通信・SLA・判断費用を測る。"
+      }
     ],
     "methodology": "小・中・大の3種類のMoEモデルを、計算能力・GPUメモリ・ネットワーク帯域・伝搬遅延が異なるエッジ環境へ配置し、正確な専門家実行中心の分散推論方式、人気度複製、類似配置のみ、局所代替のみ、および内部アブレーションと比較する。単一の平均遅延だけでなく、通信量、処理率、ローカル/遠隔・正確/代替の実行割合、品質、重負荷時SLA、サーバ増加時の拡張性を評価する。",
     "scope": "主評価はPyTorch試作と単一の実エッジテストベッドで行い、追加サーバ数評価の一部は同じ異種性プロファイルを用いたエミュレーションで4〜16サーバへ拡張する。データセンター級高速相互接続や数百ノードの大規模クラスタは直接評価しない。"
   },
-  "reservation": {"claim_id":"claim-f6e9bf75bac91682199c8e08","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-14285bb9ea690ea905b1622a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

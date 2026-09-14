@@ -2,43 +2,96 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f6e9bf75bac91682199c8e08",
+  "attempt_id": "attempt-14285bb9ea690ea905b1622a",
   "job_id": "job-research-f1288f57de066f0f",
   "data": {
     "canonical_id": "arXiv:2607.17154",
     "arxiv_id": "2607.17154",
     "doi": "10.48550/arXiv.2607.17154",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.NI", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.NI",
+      "cross_list": []
+    },
     "title": "OrderMoE: An expert similarity driven distributed edge MoE inference",
     "summary": "OrderMoEは、帯域が限られ計算・メモリ性能も不均一なエッジサーバ群へMoEを分散配置すると、ルータが選んだ正確な専門家が別サーバにあるたびトークン表現をネットワーク転送する必要がある問題を、同一層内の専門家の機能類似性を使って緩和する。校正データ上のルータlogit行ベクトルから専門家類似度を求め、層深度に応じた類似グループを構成し、同グループの代表専門家を複数サーバへ分散する。実行時には品質予算、現在の通信・計算遅延、サーバ負荷、今後の層でのトークン移動費を同時に考え、遠隔の正確な専門家を呼ぶか、品質的に許容できるローカル代替専門家を使うかを選ぶ。実エッジテストベッド上のMixtral-8x7Bでは平均遅延187ms、サーバ間通信1.5GB/1000トークン、処理率1380トークン/秒を達成し、EdgeShard比51.0%、MoE²比40.1%の遅延削減を報告する。",
     "list_summary": "MoE専門家の機能類似性をルータlogitから学習し、類似専門家をエッジサーバ間へ分散配置して、品質予算内なら遠隔の正確な専門家をローカル類似専門家で代替することで通信と遅延を削減する。",
-    "authors": ["Xin Yuan", "Ning Li", "Quan Chen", "Wenchao Xu", "Athanasios V. Vasilakos", "Song Guo", "Haijun Zhang"],
+    "authors": [
+      "Xin Yuan",
+      "Ning Li",
+      "Quan Chen",
+      "Wenchao Xu",
+      "Athanasios V. Vasilakos",
+      "Song Guo",
+      "Haijun Zhang"
+    ],
     "authors_affiliations": "Harbin Institute of Technology; Guangdong University of Technology; Hong Kong University of Science and Technology; Universidad Politécnica de Madrid など。",
     "published": "2026-07-19",
     "publication": "arXiv preprint",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v2。PDFはIEEE Transactions形式の投稿原稿だが、一次資料から最終採録先は確認できない。",
     "lineage": "moe-parallelism-communication",
-    "topics": ["MoE", "エッジ推論", "専門家配置", "専門家類似性", "分散推論", "通信削減"],
+    "topics": [
+      "MoE",
+      "エッジ推論",
+      "専門家配置",
+      "専門家類似性",
+      "分散推論",
+      "通信削減"
+    ],
     "importance": "従来の分散MoEが正確な専門家の配置・複製・キャッシュ・通信順序を最適化するのに対し、専門家の機能類似性そのものを資源として使い、遠隔専門家呼出しを局所代替へ変換する点が新しい。特に帯域が狭く不安定なエッジでは、正確な専門家位置への通信を高速化するだけでなく、通信自体を品質予算付きで回避する設計が有効である。",
     "hardware_evaluation": "実エッジテストベッド。本文実験節では異種GPUを持つ物理エッジサーバ群を用い、GPU計算性能20〜110 TFLOPS、GPUメモリ12〜48GB、サーバ間帯域1〜10Gbps、伝搬遅延0.2〜20msの不均一環境を構成する。",
     "hardware_details": "Mixtral-8x7Bを含む3種類のMoEモデルを、異種GPU・異種リンクの分散エッジ環境へ配置して評価する。追加の拡張性評価では4〜16サーバ相当へ規模を変化させる。",
     "quality_effect": "ローカル代替は近似であり完全無損失ではないが、層別類似度閾値と利用者ごとの累積品質予算で制約する。WikiText-103のperplexity増加0.3、SQuAD F1低下0.6、GSM8K精度低下0.7に抑え、3モデル全体で品質保持率99.3%以上を報告する。",
-    "storage_targets": ["各エッジサーバ上のMoE専門家重み", "重要専門家の冗長複製", "ルータ由来専門家類似度・遷移統計"],
-    "bottlenecks": ["遠隔専門家呼出しによるサーバ間トークン転送", "低帯域・高遅延のエッジネットワーク", "異種GPUの計算・メモリ差", "代替専門家による品質低下"],
-    "evidence_locations": ["§III Problem Formulation", "§IV Similarity-Aware Expert Grouping and Distributed Deployment", "§V Token Trajectory Aware Online Server-Expert Selection", "§VI Performance Evaluation", "Figures 4–12"],
+    "storage_targets": [
+      "各エッジサーバ上のMoE専門家重み",
+      "重要専門家の冗長複製",
+      "ルータ由来専門家類似度・遷移統計"
+    ],
+    "bottlenecks": [
+      "遠隔専門家呼出しによるサーバ間トークン転送",
+      "低帯域・高遅延のエッジネットワーク",
+      "異種GPUの計算・メモリ差",
+      "代替専門家による品質低下"
+    ],
+    "evidence_locations": [
+      "§III Problem Formulation",
+      "§IV Similarity-Aware Expert Grouping and Distributed Deployment",
+      "§V Token Trajectory Aware Online Server-Expert Selection",
+      "§VI Performance Evaluation",
+      "Figures 4–12"
+    ],
     "source": "https://arxiv.org/abs/2607.17154",
-    "sources": ["https://arxiv.org/abs/2607.17154", "https://arxiv.org/pdf/2607.17154"],
+    "sources": [
+      "https://arxiv.org/abs/2607.17154",
+      "https://arxiv.org/pdf/2607.17154"
+    ],
     "code": null,
     "implementation": "PyTorchベースのOrderMoE試作を実エッジテストベッドへ実装したと本文に記載されるが、一次資料および公開検索から公式コード公開先は確認できない。",
     "last_checked": "2026-09-14",
-    "references": [{"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},{"canonical_id":"arXiv:2508.12851","arxiv_id":"2508.12851"},{"canonical_id":"arXiv:2503.13421","arxiv_id":"2503.13421"}],
+    "references": [
+      {
+        "canonical_id": "arXiv:2401.04088",
+        "arxiv_id": "2401.04088"
+      },
+      {
+        "canonical_id": "arXiv:2508.12851",
+        "arxiv_id": "2508.12851"
+      },
+      {
+        "canonical_id": "arXiv:2503.13421",
+        "arxiv_id": "2503.13421"
+      }
+    ],
     "references_checked_at": "2026-09-14",
     "references_source": "一次論文参考文献節",
     "references_total": 3,
     "last_audited": null,
     "audit_version": 0
   },
-  "reservation": {"claim_id":"claim-f6e9bf75bac91682199c8e08","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-14285bb9ea690ea905b1622a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
