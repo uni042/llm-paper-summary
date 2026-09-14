@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-708d0d6004574355ab7ed68e",
-  "job_id": "job-research-b80b3af4b6abdc94",
-  "data": {
-    "limitations": "PipeBoostは同じ基盤モデルを複数GPUへ同時展開する状況を強く前提とし、単一GPUだけを起動する場合には集約PCIe帯域の利点が小さい。暫定パイプラインは完全複製前の起動には有効だが、高要求密度ではGPU間活性値通信が支配的になり得るため、完全ロード後に別の並列方式へ移行する必要がある。評価は単一サーバ内2〜4 GPUが中心で、複数ノードのネットワーク障害、NVLink中心の最新構成、GPUDirect Storage実機条件は未評価である。障害回復では生存GPU資源が減るため一時的なスループット低下は避けられず、GPU数増加の利得も同期費で逓減する。",
-    "differences": "ServerlessLLMはローカル高速ストレージ、起動時間推定、GPU間ライブマイグレーションを使って最も速く起動できる配置を選ぶのに対し、PipeBoostは同じ基盤モデルを同一GPUサーバへ集約し、そのサーバ内GPUのPCIe転送を同時に使う。AlpaServe等のモデル並列は定常サービング時の配置を主対象とするが、PipeBoostはモデルロード途中だけでも分散層配置を有効な推論状態として扱う。DistServeやSplitwiseのprefill/decode分離とは直交し、完全ロード後の実行形態として併用可能である。dLoRA等のLoRAサービングはアダプタ配置・負荷分散が中心だが、PipeBoostは基盤モデルのコールドスタートと同じ経路へアダプタ切替を組み込む。",
-    "implementation_status": "PyTorchとHugging Face Transformers上で実装され、OPT、Falcon、MistralをA100およびRTX 4090実機で評価している。各モデルをPipeBoostへ対応させる変更は約300行とされ、concurrent.futuresによるスレッド実装、連続バッチ、LoRA切替、障害注入・復旧まで動作させているため、シミュレーションのみではない。一方、確認時点で一次資料から公式コード公開URLは確認できない。",
-    "research_positioning": "LLMサービングのコールドスタート研究では、モデルを高速ストレージから単一GPUへ速くロードする経路、GPUの事前配置、ライブマイグレーションなどが中心だった。PipeBoostは同じモデルを複数GPUへ立ち上げるバースト時の冗長性を利用し、重みの完全複製が終わる前の『部分モデルの集合』を第一級の実行状態として扱う。この発想はモデル配置、ストレージ・PCIe転送、パイプライン並列、耐障害復旧を一つの時間軸へ統合するもので、サーバーレス弾力性と推論並列化の接点に位置する。とくにGPUへモデルを載せ終えることを起動完了とみなさず、利用可能な部分状態からサービスを始める設計は、階層メモリやオフロード系研究にも応用可能な考え方である。"
-  },
+  "attempt_id": "attempt-2f1ba32c74ff42e14419c6de",
+  "job_id": "job-research-6be22b91f978c683",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-708d0d6004574355ab7ed68e",
+    "claim_id": "claim-2f1ba32c74ff42e14419c6de",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

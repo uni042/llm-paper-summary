@@ -2,20 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-708d0d6004574355ab7ed68e",
-  "job_id": "job-research-b80b3af4b6abdc94",
-  "data": {
-    "hardware": "2台の実機サーバを用いる。各サーバは512 GB DDR4、Intel Xeon Platinum 8338C、Samsung 980 PRO 2 TB NVMe SSDを備え、一方はNVIDIA RTX 4090 24 GBを4基、もう一方はNVIDIA A100 40 GBを2基搭載する。特記がない主要性能評価はA100環境で行い、4 GPU障害復旧評価ではRTX 4090環境を使う。",
-    "software": "PyTorchとHugging Face Transformersを基盤としたPipeBoost試作を用い、Pythonのconcurrent.futuresでGPUごとのロード・推論処理を並行化する。比較対象はTransformersとServerlessLLMで、Rayはワーカー初期化に4〜6秒を要するためPipeBoostの実装には用いない。連続バッチ処理を有効化し、LoRAのエポック切替と障害注入機構も評価する。",
-    "methodology": "OPT系列を中心に1.3Bから13Bまでのモデル規模を変え、FalconとMistralでも一般性を確認する。モデルをNVMeまたはDRAMから起動し、初回トークン時間、モデル読込時間、完了遅延、トークンスループットを測る。LoRA評価ではMistral-7BやOPT-13Bへアダプタを適用し、アダプタ切替確率20%の動的要求を再生する。エポック切替では要求率を段階的に増やす。耐障害評価では読込中の4基RTX 4090のうち2基へ障害を注入し、推論中にもGPUクラッシュを注入して、完全再起動およびServerlessLLMと回復時間・TTFT・スループットを比較する。GSM8Kの実ユーザー質問を負荷入力として利用する。",
-    "baselines": ["Hugging Face Transformers", "ServerlessLLM", "PipeBoost完全再起動", "LoRA即時切替"],
-    "models": ["OPT-1.3B", "OPT-2.7B", "OPT-6.7B", "OPT-13B", "Falcon", "Mistral-7B"],
-    "datasets": ["GSM8K", "動的LoRA切替負荷"],
-    "metrics": ["初回トークン時間", "モデル読込時間", "完了遅延", "トークンスループット", "障害回復時間", "LoRA切替遅延"],
-    "scope": "単一サーバ内の2〜4 GPUによるサーバーレスLLMコールドスタートと障害回復が中心である。NVMe・DRAMからGPUへの重み転送、LoRAアダプタ、GPU故障を実機で評価する一方、複数ノード間ネットワーク、GPUDirect Storageを実際に用いた構成、H100世代やNVLink中心のサーバ、数十GPU規模のクラスタは直接評価していない。"
-  },
+  "attempt_id": "attempt-2f1ba32c74ff42e14419c6de",
+  "job_id": "job-research-6be22b91f978c683",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-708d0d6004574355ab7ed68e",
+    "claim_id": "claim-2f1ba32c74ff42e14419c6de",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
