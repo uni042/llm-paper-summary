@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-98e2f53bf422100fe7011bb9",
-  "job_id": "job-research-cca875ddc6629317",
-  "data": {
-    "overview": "EQuARXの効果は通信テンソルが大きく帯域支配になるほど大きい。TPU v5eの大テンソルAllReduceでは、int8 EQuARXはBF16比で実行時間を約55%まで下げて最大約1.8倍高速化し、通信量を半減した理想的な2倍高速化の約90%まで到達する。一方、2 MiB未満ではホップ遅延と量子化計算が支配し、BF16との差はほぼ消える。Gemma 3ではプリフィル限定で12Bを約1.1倍、27Bを最大1.28倍高速化する。量子化は近似なので品質差はゼロではなく、semi-loopはfull-loopより少し遅い代わりに誤差を抑える。",
-    "key_results": [
-      {"metric": "大テンソルAllReduce高速化", "value": "BF16比最大約1.8倍、実行時間は約55%", "baseline": "BF16 AllReduce", "condition": "TPU v5e、大規模テンソル、int8 EQuARX", "interpretation": "通信量半減の理想上限2倍に対し約90%へ達し、量子化・逆量子化の大部分を通信へ重ねられている。"},
-      {"metric": "速度と量子化誤差の交換", "value": "最速full-loop構成は約1.8倍・MSE 0.0014、semi-loop両段量子化は約1.6倍・MSE 0.001、All-Gatherのみ量子化は約1.3倍・MSE 0.0003", "baseline": "BF16 AllReduce、および単純FP8 E5M2変換", "condition": "TPU v5e 4×2、4096×4096標準正規テンソル", "interpretation": "単純FP8は約1.9倍でもMSE 0.13と大きく、EQuARXは帯域削減を保ちながら段階的な逆量子化・高精度加算で誤差を二桁以上抑える。"},
-      {"metric": "Gemma 3 27Bプリフィル遅延", "value": "2048トークン: 111.44ms→87.24msで1.28倍、4096: 242.57ms→194.87msで1.25倍、8192: 550.36ms→452.97msで1.22倍", "baseline": "BF16 AllReduce", "condition": "Gemma 3 27B、TPU v5e 4×4、16-wayモデル並列、semi-loop", "interpretation": "各層の大きなAllReduceがプリフィルのクリティカルパスにあるため、通信削減がエンドツーエンド遅延へ反映される。ただし文脈長が伸びると通信以外の計算比率も増え、倍率は少し下がる。"},
-      {"metric": "Gemma 3 12Bプリフィル高速化", "value": "full-loopで約1.10倍、semi-loopで約1.06倍", "baseline": "BF16 AllReduce", "condition": "Gemma 3 12B、TPU v5e 2×2、4-wayモデル並列、プリフィル長2048〜8192", "interpretation": "12Bでは27Bより並列通信の占有率が小さく、量子化通信の改善がモデル全体へ反映される割合も小さい。"},
-      {"metric": "Gemma 3品質差", "value": "12Bでは10課題の差はいずれも統計的有意でない。27BではHellaSwag 83.26→81.46、AGIEval 67.44→65.08(semi-loop)／64.86(full-loop)が有意低下", "baseline": "BF16 AllReduce", "condition": "MBPP、HumanEval、BoolQ、HellaSwag、TriviaQA、Winogrande、AGIEval、MMLU、GPQA、MedQA", "interpretation": "通信量削減は完全無損失ではなく、用途によっては速度向上と品質低下の交換が現れる。semi-loopでも全課題の差を消せるわけではない。"}
-    ],
-    "negative_results": "小さい通信テンソルでは帯域ではなくホップ遅延が支配するため、約2 MiB未満ではEQuARXとBF16の実行時間差がほぼなくなる。デコード段階も1トークンずつの小テンソル通信なので主評価では高速化対象から外し、プリフィルだけに適用している。量子化は近似で、Gemma 3 27BのHellaSwagとAGIEvalでは有意な精度低下が出る。FP8形式を支援するが、主要エンドツーエンド評価はint8中心であり、GPUや他TPU世代の性能も直接評価していない。",
-    "interpretation": "EQuARXは『低精度にすれば通信が半分になる』だけでは十分でなく、量子化計算そのものをネットワーク転送へ重ね、低精度のまま部分和を足さないことが重要だと示す。大テンソルでは帯域削減が支配的なので理想上限へ近づくが、小テンソルでは固定遅延が残る。full-loopは速度側、semi-loopは誤差側へ寄った選択肢であり、Reduce-Scatter／All-Gatherのどこまで量子化するかも含めて用途別に選ぶ設計である。",
-    "quality_impact": "近似通信なので無損失ではない。マイクロベンチマークでは単純FP8よりMSEを大幅に抑え、Gemma 3 12Bでは有意差を検出しなかったが、27Bの一部課題では有意な低下がある。したがって推論品質が厳しい用途ではsemi-loopや量子化段数の少ない構成を選び、実モデル品質を確認して使う必要がある。"
-  },
+  "attempt_id": "attempt-2d0ab98b0f967d81be9c9946",
+  "job_id": "job-research-0e6e5ba9063713ac",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-98e2f53bf422100fe7011bb9",
-    "worker_id": "scheduled-chat-discovery-overflow",
+    "claim_id": "claim-2d0ab98b0f967d81be9c9946",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

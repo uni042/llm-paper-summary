@@ -2,20 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-98e2f53bf422100fe7011bb9",
-  "job_id": "job-research-cca875ddc6629317",
-  "data": {
-    "hardware": "全実験はGoogle TPU v5eで行う。マイクロベンチマークでは2×2や4×2などのTPUトポロジを用い、Gemma 3 12Bは2×2の4-wayモデル並列、27Bは4×4の16-wayモデル並列で実行する。TPU間通信はInter-Chip Interconnectを使用する。",
-    "software": "EQuARXをXLAコンパイラのTPU向けネイティブAllReduceとして実装する。量子化形式はint8、FP8 E4M3、FP8 E5M2を支援し、論文の性能評価は主に対称int8量子化を扱う。Gemma 3はBF16重みを使用する。",
-    "datasets": "通信単体評価では4096×4096の標準正規分布テンソルなどを用いる。エンドツーエンド品質評価ではGemma 3 12Bと27BをMBPP、HumanEval、BoolQ、HellaSwag、TriviaQA、Winogrande、AGIEval、MMLU、GPQA、MedQAの10課題で評価する。",
-    "methodology": "まずBF16 AllReduceとint8 EQuARXの実行時間をテンソルサイズ別に比較し、通信量を理想的に半減した場合の上限にどれだけ近づくかを測る。次に4×2トポロジの4096×4096テンソルで、full-loop／semi-loopとReduce-Scatterのみ／All-Gatherのみ／両段量子化の6構成を速度とBF16基準MSEで比較し、単純FP8変換も上限比較に使う。Gemma 3ではプリフィル長2048、4096、8192で遅延を測り、同じモデルのBF16 AllReduceを比較対象とする。品質は10課題の精度差を測り、差の統計的有意性も確認する。",
-    "scope": "シミュレーションではなくTPU v5e実機評価である。ただし通信単体の最大1.8倍は大テンソルで帯域支配となる条件の結果であり、2 MiB未満ではホップ遅延が支配してBF16との差がほぼ消える。Gemma評価もプリフィルだけへEQuARXを適用し、デコードは小テンソルで遅延支配のため対象外である。GPUや他世代TPU、訓練エンドツーエンドへの性能一般化は直接評価していない。",
-    "baselines": ["BF16 AllReduce", "単純FP8 E5M2 AllReduce"],
-    "evaluation_conditions": ["TPU v5e", "2×2・4×2・4×4トポロジ", "Gemma 3 12B/27B", "プリフィル長2048/4096/8192", "int8 EQuARX", "10品質課題"]
-  },
+  "attempt_id": "attempt-2d0ab98b0f967d81be9c9946",
+  "job_id": "job-research-0e6e5ba9063713ac",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-98e2f53bf422100fe7011bb9",
-    "worker_id": "scheduled-chat-discovery-overflow",
+    "claim_id": "claim-2d0ab98b0f967d81be9c9946",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -42,7 +42,7 @@
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 13:10 JST** |
-| :00 補助worker 直近claim | **09-14 13:08 JST** |
+| :00 補助worker 直近claim | **09-14 13:11 JST** |
 | 直近24h Research完了（:30 通常worker） | **23** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
@@ -88,7 +88,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P83 `arXiv:2604.13226` — KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs
+- P83 `arXiv:2605.05696` — Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving
 
 ## 参考情報
 
