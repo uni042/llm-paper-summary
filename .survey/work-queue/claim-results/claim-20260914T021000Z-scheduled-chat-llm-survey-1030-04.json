@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260914T021000Z-scheduled-chat-llm-survey-1030-04",
+  "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-5ae336587be983aa",
+      "claim_id": "claim-289d78baff9e15a9f398b387",
+      "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-289d78baff9e15a9f398b387",
+      "claimed_at": "2026-09-14T01:52:28+00:00",
+      "expires_at": "2026-09-14T03:22:28+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-5ae336587be983aa"
+      ],
+      "job": {
+        "job_id": "job-research-5ae336587be983aa",
+        "type": "research",
+        "parent_job_id": "job-4354f5042e6e20fc",
+        "priority": 85,
+        "canonical_id": "arXiv:2605.16637",
+        "title": "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling",
+        "source_url": "https://arxiv.org/abs/2605.16637",
+        "paper_path": null,
+        "selection_reason": "オンラインで段階的に明らかになるagent workflow DAGを、異種A100/H100/H200のprefill/decode分離cluster上でworkflow-level SLOを満たすよう共同配置・優先制御する。KV容量とcross-stage transferも含め、異種性とworkflow進行を統合して扱うためFATE/TOPASと比較価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T21:16:53+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-14T01:52:09+00:00"
+      },
+      "record_bank": "a",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-6da68fcbb653c16e9efc63d4"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-6da68fcbb653c16e9efc63d4.json"
+    }
+  ],
+  "processed_at": "2026-09-14T01:52:28+00:00",
+  "checkpoint_released": 0
+}

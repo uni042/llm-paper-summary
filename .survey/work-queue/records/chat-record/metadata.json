@@ -2,54 +2,153 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5d8552722433f879a0d0bd7b",
-  "job_id": "job-research-e3455f9cc66c1448",
+  "attempt_id": "attempt-289d78baff9e15a9f398b387",
+  "job_id": "job-research-5ae336587be983aa",
   "data": {
-    "canonical_id": "arXiv:2509.06261",
-    "arxiv_id": "2509.06261",
-    "doi": "10.48550/arXiv.2509.06261",
+    "canonical_id": "arXiv:2605.16637",
+    "arxiv_id": "2605.16637",
+    "doi": "10.48550/arXiv.2605.16637",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
-      "cross_list": ["cs.LG"]
+      "cross_list": []
     },
-    "title": "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving",
-    "summary": "FineServeは、FP16、FP8、AWQ、QoQなど精度の異なる大規模言語モデルを同じGPU群で同時配信すると、KVキャッシュのトークン当たり容量とブロック寸法がモデルごとに異なるため共有メモリが断片化し、さらに計算効率とメモリ効率も精度ごとに異なるため既存の精度非依存スケジューリングではGPU資源を使い切れない問題を扱う。各GPUに大きな共有KVテンソルを一度だけ確保し、固定物理寸法のスラブをモデル固有のKVブロック寸法へビューベースで再解釈するKVスラブと、追加KV容量1単位当たりの生成トークン増加量である限界メモリ効率を用いる大域配置、チャンク化プレフィルのバッチ処理時間を考慮してTTFT期限を守る局所適応バッチ処理を組み合わせる。vLLM上の試作をH100クラスタで評価し、Prism相当方式に対してSLO達成率最大2.2倍、トークン生成スループット最大1.8倍を報告する。",
-    "list_summary": "混合精度モデル間で共有できるKVスラブと、精度別の限界メモリ効率・TTFT期限を使う二段スケジューリングにより、Prism相当方式比でSLO達成率最大2.2倍、生成スループット最大1.8倍を実現する。",
-    "authors": ["Kyungmin Bin", "Seungbeom Choi", "Jimyoung Son", "Jieun Choi", "Daseul Bae", "Daehyeon Baek", "Kihyo Moon", "Minsung Jang", "Hyojung Lee"],
-    "authors_affiliations": "著者はSamsung SDS Cloud Research Team所属。",
-    "published": "2025-09-08",
-    "publication": "arXiv:2509.06261v2",
-    "publication_type": "arXivプレプリント",
-    "publication_status": "arXiv初稿は2025-09-08提出、v2は2025-09-15改訂。一次資料中のWoodstock '18表記はテンプレート由来のダミー会議情報と判断し、正式採録先として扱わない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["混合精度LLMサービング", "KVキャッシュ", "GPUメモリ管理", "メモリ断片化", "モデル配置", "SLO認識スケジューリング", "量子化モデル", "vLLM"],
-    "importance": "量子化による重み削減だけでなく、精度ごとに異なるKVトークン寸法と計算特性を、共有KVメモリ管理とクラスタ配置・オンラインバッチ処理の両方へ明示的に取り込む。単一モデル向けPagedAttentionや精度非依存のGPU共有方式の間を埋める実装研究として重要。",
-    "hardware_evaluation": "単一ノードはIntel Xeon Platinum 8468の32 vCPU、NVIDIA H100 80GB SXM5を4基、900GB/s NVSwitch、DDR5 720GB。多ノード評価はAWS p5.48xlargeを2台、各ノード384 vCPU・H100 80GBを8基・2TBメモリ・3200Gbps EFA・900GB/s NVSwitch。いずれも実GPUクラスタ上の測定。",
-    "quality_effect": "FineServe自体はモデル重みや量子化方式を変更せず、既存のFP16/FP8/AWQ/QoQモデルを配置・共有するサービング層であるため追加のモデル品質劣化を導入しない。QoQなど元の量子化方式に伴う精度差はFineServe固有ではない。",
-    "storage_targets": ["GPU HBM", "共有KVキャッシュ", "モデル重み・活性値の基礎メモリ領域"],
-    "bottlenecks": ["異種KVブロックによる外部断片化", "異種トークン寸法による内部断片化", "CUDA VMMのmap/unmapオーバーヘッド", "精度非依存モデル配置", "チャンク化プレフィルを無視した過大バッチ", "静的KV分割による遊休容量"],
-    "source": "https://arxiv.org/abs/2509.06261",
-    "sources": ["https://arxiv.org/abs/2509.06261", "https://arxiv.org/html/2509.06261"],
-    "code": null,
-    "implementation": "vLLMを基盤とするFineServe試作を実装し、モデルごとのworker、GPUごとのKV slab manager、大域scheduler、ノードごとの局所schedulerを統合して評価している。著者関係者の公開投稿にはソースコードへの短縮リンクが示されるが、2026-09-14確認時点で一次資料またはGitHub検索から著者公式リポジトリの恒久URLを確定できなかったためcodeは未確認とした。",
-    "last_checked": "2026-09-14",
+    "title": "HexAGenT: Efficient Agentic LLM Serving via Workflow- and Heterogeneity-Aware Scheduling",
+    "summary": "エージェント型LLMでは1ユーザー要求が計画、ツール呼出し、分岐、再推論を含む複数のLLM呼出しへ展開するため、個々の呼出し遅延ではなくワークフロー全体の完了時間が利用者体験を決める。HexAGenTは、実行中に段階的に明らかになるワークフローをオンライン有向非巡回グラフとして管理し、現在までに見えている部分グラフを単独実行したときの完了時間をワークフロー固有の地平として逐次更新する。各待機呼出しについて、その呼出しを具体的なプリフィル・デコード装置へ置いた場合に地平を超える危険度を予測し、異種A100/H100/H200の処理時間、KVキャッシュ容量、段階間転送時間、局所キュー順を同時に考慮して配置と優先度を決める。SGLang上に非同期スケジューラとして実装し、ワークフロー水準のSLO達成に必要な倍率を強い比較対象より縮小する。",
+    "list_summary": "HexAGenTは逐次公開されるエージェントワークフローの完了危険度を追跡し、異種GPU上のプリフィル・デコード配置とキュー優先度を共同決定して、ワークフロー全体のSLO達成を改善する。",
+    "authors": [
+      "You Peng",
+      "Youhe Jiang",
+      "Wenshuang Li",
+      "Xu Xu",
+      "Ke Zhou",
+      "Jiawei Jiang",
+      "Chen Wang",
+      "Binhang Yuan"
+    ],
+    "authors_affiliations": "HKUST; Webank; Wuhan University; Tsinghua University",
+    "published": "2026-05-15",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "publication_version": "v1 (2026-05-15)",
+    "lineage": "エージェント型LLMサービング／プリフィル・デコード分離／異種GPUスケジューリング",
+    "topics": [
+      "エージェントワークフロー",
+      "オンラインDAG",
+      "ワークフローSLO",
+      "異種GPU",
+      "プリフィル・デコード分離",
+      "KVキャッシュ容量",
+      "非同期スケジューリング"
+    ],
+    "importance": "既存のLLMサービングが個別要求、あるいは既知のプログラム単位で最適化するのに対し、HexAGenTは将来ノードが未確定なエージェントワークフローを逐次再評価し、異種プリフィル・デコード配置とワークフロー水準の緊急度を1つの決定へ結び付ける。古いA100と新しいH100/H200を混在させた資源再利用を、単なる負荷分散ではなく最終ワークフローSLOに基づいて選ぶ点が運用上重要である。",
+    "hardware_evaluation": "主評価はA100/H100/H200の異種プリフィル・デコード構成をモデル化したイベント駆動シミュレータで行う。Hetero-1は各段階8インスタンス（A100×2、H100×3、H200×3）、Hetero-2は各段階10インスタンス（A100×3、H100×4、H200×3）。同種構成ではLlamaにH200 TP4を4P+4D、QwenにA100 TP8を4P+4Dとして評価する。",
+    "hardware_details": "Llama3.1-70BはA100/H100/H200でテンソル並列度4、Qwen3-235B-A22BはA100/H100で8、H200で4を用いる構成。サービス時間はルーフライン型遅延モデル、KV転送時間はGPUクラス間の実効帯域を用いて推定する。",
+    "quality_effect": "モデルの数値計算や生成アルゴリズムは変更せず、待機中の呼出しの配置と優先順位だけを変えるため、生成品質そのものを変える手法ではない。代わりに推定誤差がスケジューリング品質へ与える影響を0〜30%の乗法誤差で測定する。",
+    "storage_targets": [
+      "デコード側KVキャッシュ",
+      "プリフィル・デコード間KV転送",
+      "GPUメモリ容量"
+    ],
+    "bottlenecks": [
+      "オンラインで未確定なワークフロー依存",
+      "異種GPUごとの処理時間差",
+      "デコードKV容量制約",
+      "段階間KV転送遅延",
+      "局所キュー順とワークフロー臨界経路の不一致"
+    ],
+    "evidence_locations": [
+      "第3節 ワークロード特性",
+      "第4節 オンラインDAGとシステム構成",
+      "第5節 地平・危険度・共同配置",
+      "第6節 SGLang実装とシミュレータ",
+      "第7節 異種・同種構成評価、推定誤差、スケジューラ費用"
+    ],
     "references": [
-      {"canonical_id": "arXiv:2404.02015", "arxiv_id": "2404.02015"},
-      {"canonical_id": "arXiv:2405.04532", "arxiv_id": "2405.04532"},
-      {"canonical_id": "arXiv:2505.04021", "arxiv_id": "2505.04021"},
-      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388"},
-      {"doi": "10.1145/3600006.3613163"},
-      {"doi": "10.1145/3698038.3698523"},
-      {"doi": "10.1145/3419111.3421284"}
+      {
+        "canonical_id": "arXiv:2602.14516",
+        "arxiv_id": "2602.14516"
+      },
+      {
+        "canonical_id": "arXiv:2209.13258",
+        "arxiv_id": "2209.13258"
+      },
+      {
+        "canonical_id": "arXiv:2602.12151",
+        "arxiv_id": "2602.12151"
+      },
+      {
+        "canonical_id": "arXiv:2502.00722",
+        "arxiv_id": "2502.00722"
+      },
+      {
+        "canonical_id": "arXiv:2602.10729",
+        "arxiv_id": "2602.10729"
+      },
+      {
+        "canonical_id": "arXiv:2506.04203",
+        "arxiv_id": "2506.04203"
+      },
+      {
+        "canonical_id": "arXiv:2604.07144",
+        "arxiv_id": "2604.07144"
+      },
+      {
+        "canonical_id": "arXiv:2311.11514",
+        "arxiv_id": "2311.11514"
+      },
+      {
+        "canonical_id": "arXiv:2502.07903",
+        "arxiv_id": "2502.07903"
+      },
+      {
+        "canonical_id": "arXiv:2408.08147",
+        "arxiv_id": "2408.08147"
+      },
+      {
+        "canonical_id": "arXiv:2511.02230",
+        "arxiv_id": "2511.02230"
+      },
+      {
+        "canonical_id": "arXiv:2502.13965",
+        "arxiv_id": "2502.13965"
+      },
+      {
+        "canonical_id": "arXiv:2505.05286",
+        "arxiv_id": "2505.05286"
+      },
+      {
+        "canonical_id": "arXiv:2410.01035",
+        "arxiv_id": "2410.01035"
+      },
+      {
+        "canonical_id": "arXiv:2305.05920",
+        "arxiv_id": "2305.05920"
+      },
+      {
+        "canonical_id": "arXiv:2411.16102",
+        "arxiv_id": "2411.16102"
+      }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v2 HTML参考文献節",
-    "references_total": 39
+    "references_source": "primary-reference-section",
+    "references_total": 56,
+    "source": "https://arxiv.org/abs/2605.16637",
+    "sources": [
+      "https://arxiv.org/abs/2605.16637",
+      "https://arxiv.org/pdf/2605.16637",
+      "https://arxiv.org/html/2605.16637"
+    ],
+    "code": null,
+    "implementation": "SGLang v0.5.9のプリフィル・デコード分離機能を基盤に、Python中心でゲートウェイ側のワークフローメタデータ、状態収集、非同期計画適用、改訂番号検査、ワーカー側の状態公開・優先度更新・完了フィードバックを実装する。加えて約4.6K行のイベント駆動資源推定器を実装する。公式公開コードURLは一次資料およびGitHub検索では確認できない。",
+    "implementation_status": "SGLang上の実装報告あり・公開コード未確認",
+    "evaluation_type": "イベント駆動シミュレーション＋SGLang統合実装のスケジューラ費用評価",
+    "last_checked": "2026-09-14"
   },
   "reservation": {
-    "claim_id": "claim-5d8552722433f879a0d0bd7b",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-289d78baff9e15a9f398b387",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

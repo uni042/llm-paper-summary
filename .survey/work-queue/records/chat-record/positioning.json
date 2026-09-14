@@ -2,17 +2,40 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5d8552722433f879a0d0bd7b",
-  "job_id": "job-research-e3455f9cc66c1448",
+  "attempt_id": "attempt-289d78baff9e15a9f398b387",
+  "job_id": "job-research-5ae336587be983aa",
   "data": {
-    "limitations": "評価はNVIDIA H100を中心としたHopper世代クラスタで行われ、異なるGPU世代、CPU/GPU異種cluster、disaggregated prefill/decode、MoE、長大context専用workloadへの一般化は直接示されない。要求到着はShareGPT prompt分布を使うPoisson synthetic workloadで、本番商用traceのburstinessやmodel popularity変動をそのまま再現していない。global placementは事前profileした要求率、平均activation/KV footprint、TTFTを利用するため、profileと実運用の乖離が大きい場合には再配置頻度とmigration costが課題になる。local schedulerはTTFTをhard SLOとしており、TPOTやend-to-end latency、複数SLO class、quality-aware routingは扱わない。Prism*比較ではKV managerをKV slabへ置換してscheduler差を分離しているため、原PrismのCUDA VMM overheadを含むsystem-to-system比較ではない。公式codeの恒久URLは一次資料から確定できておらず、artifactの再現性も追加確認が必要である。",
-    "differences": "vLLM/PagedAttentionは通常model instanceごとに独立KV block poolを持つため、同一GPU上の別modelが余剰KVを直接借りられない。FineServeは物理KV tensorをGPU単位で共有し、固定slabをmodel固有block sizeへview mappingすることでcross-model sharingを追加する。PrismはCUDA VMMで物理memoryを動的map/unmapしてcross-model sharingとplacementを行うのに対し、FineServeはpre-allocated tensorとuser-space slab metadataによりdriver callを避け、さらにweight/activation/KV precisionが異なるmodelの限界メモリ効率をplacement scoreへ組み込む。MuxServeなどのmulti-model servingはspatial/temporal compute multiplexingを中心に扱うが、FineServeはquantized KV token sizeとmemory fragmentationを第一級の配置変数とする。QServe/QoQ、AWQ、FP8 servingは単一modelの低precision executionを高速化するのに対し、FineServeはそれら複数precision variantが同じclusterを共有するときのmemory allocatorとschedulerを対象にする。",
-    "implementation_status": "論文はvLLMベースprototypeを実装し、H100 4基のsingle-node serverとAWS p5.48xlarge 2台の最大16 H100構成で実測している。KV slabは既存attention kernelを変更せずtensor viewとblock table mappingで共有し、global/local schedulerも実装してend-to-end評価しているため、単なるsimulationではない。2026-09-14の確認では、著者関係者の公開投稿にFineServe source codeへの短縮リンクが示される一方、arXiv本文にはrepository URLがなく、GitHub検索でもSamsung SDS著者公式repositoryを一意に確定できなかった。したがって実装存在は論文と著者投稿から確認できるが、公開code URLは監査対象として残す。",
-    "research_positioning": "FineServeはLLM servingの中でも、量子化modelの実行kernel最適化ではなく、mixed-precision multi-model clusterにおけるKV cache memory管理とSLO schedulerの共同設計に位置する。重要な設計原理は、memory容量をbyte数だけで比較せず『追加memory 1単位が何tokenの追加生成能力になるか』という限界効率へ変換し、precision差をplacement decisionへ接続したことにある。またfixed-size slabで物理allocation単位を統一しつつlogical block granularityはmodelごとに変える考え方は、異なるKV precisionやTP degreeが混在するserverでfragmentationとdriver overheadを同時に抑える一般的な手法として比較価値がある。既存repositoryではPagedAttention系KV管理、Prism/MuxServe系multi-model GPU sharing、quantized servingをつなぐ論文として扱い、特にshared KV poolを持つ後続研究との比較ではallocation granularity、mapping overhead、placement objective、SLO scopeの4点を分けて見るのが適切である。"
+    "limitations": [
+      "将来のワークフローノードは実行時にしか公開されないため、現在公開された部分グラフの単独完了時間を地平として用いる。完全な将来DAGを知るオフライン最適化とは異なり、後続分岐を予見できない。",
+      "サービス時間とKV需要はルーフライン型モデルや出力長予測に依存し、Qwenでは10%推定誤差でReq99が9.5%悪化する条件がある。",
+      "計画は非同期で、既にプリフィルまたはデコードを開始した呼出しは移動できない。計画計算が遅い場合にはフォールバックや古い割当に従う呼出しが増える。",
+      "主要評価はイベント駆動資源推定器を用いる構成で、異種A100/H100/H200の大規模オンライン実機クラスタにおけるネットワーク輻輳やGPU実行時変動をすべて直接測定したものではない。",
+      "公開論文ではSGLang統合実装を説明するが、公式公開コードURLは確認できず、独立再現には実装詳細の不足が残る。"
+    ],
+    "differences": [
+      {
+        "name": "vLLM・SGLangの要求単位スケジューリングとの差",
+        "description": "一般的なサービング基盤は個別要求の待ち時間、バッチ形成、KV管理を中心に最適化する。HexAGenTは複数呼出しが同じ最終要求へ属することを保持し、個別呼出しを速くするよりワークフロー全体の現在地平に対する危険度を優先する。"
+      },
+      {
+        "name": "DistServe・Splitwiseとの差",
+        "description": "プリフィル・デコード分離方式は段階ごとの資源特性を利用するが、依存するエージェント呼出しのオンライン公開やワークフローSLOを直接扱わない。HexAGenTは分離基盤を前提に、P-D組の配置、KV転送、デコード容量、局所キュー順をワークフロー目標へ結び付ける。"
+      },
+      {
+        "name": "Autellix・Continuumなどプログラム認識型との差",
+        "description": "既存プログラム認識型はプログラム単位の公平性、到達サービス量、複数ターン状態を扱う。HexAGenTは部分DAGの単独完了地平を逐次更新し、異種P-D装置への具体的配置結果まで投影して危険度を計算する点を追加する。"
+      },
+      {
+        "name": "HexGen系異種配置との差",
+        "description": "HexGen/HexGen-2は異種GPU・ネットワーク上のモデル配置や分離推論そのものを最適化する。HexAGenTは同じ異種性をエージェントワークフローの実行時スケジューリングへ持ち込み、どの呼出しをいつどのP-D組へ送るかをオンラインで決める。"
+      }
+    ],
+    "implementation_status": "SGLang v0.5.9のP-D分離機能へ、ルーター側ワークフロー状態、非同期計画、改訂検査、ワーカー側優先度・再割当更新を追加した実装を報告する。資源推定用のPythonイベント駆動シミュレータは約4.6K行。公式公開コードURLは論文およびGitHub検索で確認できない。",
+    "research_positioning": "HexAGenTは、エージェント型LLMサービング研究と異種プリフィル・デコード分離研究の接点に位置する。従来の個別要求SLOやプログラム公平性から一段上がり、逐次公開されるワークフロー全体の単独完了地平を第一級のスケジューリング状態とする。同時に、異種GPUの演算速度だけでなくKV容量と段階間転送まで含むため、ワークフロー認識を単なるキュー優先度変更で終わらせず資源配置へ接続する。今後は実機大規模クラスタでの検証、ネットワーク・GPU変動を含むオンライン推定、公開実装、より動的な再配置との統合が重要になる。"
   },
   "reservation": {
-    "claim_id": "claim-5d8552722433f879a0d0bd7b",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-289d78baff9e15a9f398b387",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

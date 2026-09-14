@@ -2,54 +2,92 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5d8552722433f879a0d0bd7b",
-  "job_id": "job-research-e3455f9cc66c1448",
+  "attempt_id": "attempt-289d78baff9e15a9f398b387",
+  "job_id": "job-research-5ae336587be983aa",
   "data": {
-    "overview": "FineServeは混合精度モデルのGPU共有において、SLO scale 20・request rate scale 8の条件でPrism*よりTTFT SLO attainmentを2.2倍、Static*より1.2倍高め、decode token generation throughputをPrism*より1.8倍、Static*より1.5倍高める。request rateを2倍から8倍へ増やしてもFineServeは高いSLO達成率を維持し、8倍負荷で約2.3K tokens/sまで伸びる。8〜16 GPUのmulti-node評価ではFineServeのSLO attainment最低値が96.9%で、Static*は80.1%からGPU増加に伴って改善する一方、Prism*はAWQとのco-locationでmemory usageを過小評価してSLOが低下する。scheduler ablationではglobal placementだけで8倍負荷時のaggregate throughputをPrism*比最大3倍へ高め、local adaptive batchingはFCFS比最大45.34%、Prism*比最大8.87%高いSLO attainmentを示す。",
+    "overview": "HexAGenTは異種プリフィル・デコード構成で、トレースごとに最も強いワークフロー水準比較対象よりReq95を平均13.0%、Req99を平均24.5%削減する。Qwen Hetero-1のMixedではReq99を8.96から3.94へ56.0%下げ、オンラインで枝が増える混合ワークフローと異種配置が同時に難しい条件で効果が大きい。同種クラスタでもReq95/Req99を約23〜37%削減するため、利得はGPU世代混在だけでなくワークフロー危険度に基づくキュー順からも生じる。",
     "key_results": [
       {
-        "metric": "TTFT SLO達成率",
-        "value": "Prism*比2.2倍、Static*比1.2倍",
-        "baseline": "Prism* / Static*",
-        "condition": "SLO scale 20、request rate scale 8のend-to-end mixed-precision serving",
-        "interpretation": "精度ごとの基礎memory footprintと限界メモリ効率を反映する配置により、AWQなどKV容量要求の大きいモデルとの誤ったco-locationを避け、局所schedulerがchunked prefillを含むbatch全体のTTFTを見て期限違反を抑える。"
+        "metric": "異種構成のReq95",
+        "value": "平均13.0%削減",
+        "baseline": "各トレースで最強のSGLang Workflow-FCFS、Workflow-LLF、Autellix-ATLAS",
+        "condition": "Llama3.1-70B/Qwen3-235B-A22B、Hetero-1/Hetero-2、4ワークロード平均",
+        "interpretation": "95%のワークフローを期限内に収めるために必要な単独完了時間倍率を、既存ワークフロー方策より小さくできる。"
       },
       {
-        "metric": "decode token generation throughput",
-        "value": "Prism*比1.8倍、Static*比1.5倍、8倍負荷で約2.3K tokens/s",
-        "baseline": "Prism* / Static*",
-        "condition": "SLO scale 20を固定しrequest rate scaleを最大8倍へ増加",
-        "interpretation": "静的partitionの遊休KVをモデル間で融通し、残余KV容量を追加token生成効率の高いprecision/modelへ寄せることで、高負荷でもGPU memoryがthroughputへ変換される。"
+        "metric": "異種構成のReq99",
+        "value": "平均24.5%削減",
+        "baseline": "各トレースで最強の比較対象",
+        "condition": "2モデル×2異種クラスタ、4ワークロード平均",
+        "interpretation": "より厳しい99%尾部で改善が大きく、異種配置とワークフロー危険度を同時に扱う効果が尾部に現れる。"
       },
       {
-        "metric": "multi-node SLO達成率",
-        "value": "8〜16 GPUで最低96.9%",
-        "baseline": "Static*は80.1%から増加、Prism*は同等水準へ到達せず",
-        "condition": "2台のAWS p5.48xlarge、GPU数を8から16へ2基ずつ増加",
-        "interpretation": "precision-aware placementがGPU追加時にも安定してmemory pressureを配分し、論文ではPrism*が2倍のGPUを用いてもFineServeのSLO水準へ届かない例からGPU必要数を半減し得る可能性を示す。ただしこれは評価条件内のpotential savingであり一般的な50% cost reduction保証ではない。"
+        "metric": "Qwen Hetero-1 Mixed Req95/Req99",
+        "value": "3.48 / 3.94、40.6% / 56.0%削減",
+        "baseline": "Workflow-LLF 5.85 / 8.96",
+        "condition": "Qwen3-235B-A22B、A100×2/H100×3/H200×3を各P/Dプール、Mixed",
+        "interpretation": "異なるワークフロー形状が同居し両段階の混雑が非均一な条件では、余裕時間だけでなく具体的なP-D配置結果まで予測する価値が大きい。"
       },
       {
-        "metric": "global scheduler aggregate throughput",
-        "value": "Prism*比最大3倍",
-        "baseline": "Prism* model placement",
-        "condition": "static KV partitionとFCFS local schedulerを共通化、request rate scale 8",
-        "interpretation": "大きい基礎memory footprintを先に置き、残余KV容量と平均限界メモリ効率でco-locationを選ぶことで、後からmemory-intensive modelが無理な共有へ押し込まれることを防ぐ。"
+        "metric": "Qwen Hetero-1平均Req95/Req99",
+        "value": "4.48 / 4.69、21.1% / 33.1%削減",
+        "baseline": "最強比較対象平均5.60 / 7.22",
+        "condition": "ShareGPT、BFCL-v3、LATS、Mixedの平均",
+        "interpretation": "大規模MoEモデルと異種装置の組合せで配置感度が高く、共同配置の寄与が明確になる。"
       },
       {
-        "metric": "local scheduler SLO達成率",
-        "value": "FCFS比最大45.34%、Prism*比最大8.87%改善",
-        "baseline": "FCFS / Prism* local scheduling",
-        "condition": "単一Llama3.1-8B FP16、static KV、request rate scale 1.66倍と2.0倍、FCFS P90 TTFTをSLO baselineに利用",
-        "interpretation": "個別requestの処理時間ではなくchunked-prefill batch全体の予測時間で最早deadlineを検査し、長いrequestを除いてbatchを再構成するため、大batch化によるSLO違反を抑えながらchunked prefillを利用できる。"
+        "metric": "同種Llama Req95/Req99",
+        "value": "4.99 / 5.19、24.8% / 36.8%削減",
+        "baseline": "最強比較対象6.52 / 8.37",
+        "condition": "H200 TP4の4P+4D、4ワークロード平均",
+        "interpretation": "全装置が同種でもワークフロー水準の危険度とキュー順だけで大きな尾部改善が残る。"
+      },
+      {
+        "metric": "同種Qwen Req95/Req99",
+        "value": "5.48 / 5.62、23.1% / 33.9%削減",
+        "baseline": "最強比較対象6.89 / 8.33",
+        "condition": "A100 TP8の4P+4D、4ワークロード平均",
+        "interpretation": "異種性を除いても同様の傾向があり、手法を単なる異種負荷均衡とみなせない。"
+      },
+      {
+        "metric": "サービス時間推定誤差への耐性",
+        "value": "Llamaは30%誤差でもReq99劣化1.5%、Qwenは30%で5.4%",
+        "baseline": "誤差0%のHexAGenT",
+        "condition": "Hetero-1、4トレース平均、10〜30%乗法誤差",
+        "interpretation": "個別呼出し推定が多少ずれても、ワークフロー地平で正規化した優先信号が順序を平滑化し、利得の多くを維持する。"
+      },
+      {
+        "metric": "スケジューラ1回当たり費用",
+        "value": "7.1〜14.7 ms平均、トレース別最悪平均23.7 ms",
+        "baseline": "HexAGenT計画処理",
+        "condition": "異種4モデル・クラスタ組合せ",
+        "interpretation": "共同配置計画はミリ秒級のCPU側費用を要するが、非同期適用により実行中呼出しを直接停止させない。"
       }
     ],
-    "negative_results": "FineServeはTTFTを主SLOとし、TPOTや出力長依存のend-to-end latencyを直接保証しない。global schedulerは事前profileした平均activation/KV footprintと要求率に依存するため、モデル特性や長期負荷が急変した場合にはplacement再計算が必要になる。評価のPrism*はoriginal kvcachedではなくFineServeのKV slabを共通利用しており、VMM overheadを含むPrism実装全体との直接比較ではない。またGPU cost半減は、Prism*が評価例で2倍GPUでも同等SLOへ届かなかったことから導く可能性の議論で、全workloadに成立する測定済みcost reductionではない。",
-    "interpretation": "FineServeの効果は、量子化を単なるモデル縮小として扱わず、precisionによって1GBのKV memoryが生成可能tokenへ変換される効率も変わると捉えた点にある。KV slabはこの異種モデル間でmemoryを動的に貸し借りできる土台を作り、global schedulerはその貸し出し先をμで選び、local schedulerは実際の短期負荷とdeadlineに合わせてcompute側batch sizeを調整する。memory managerだけではco-locationの組み合わせが悪い場合にthroughputを落とし、schedulerだけではstatic poolに残った遊休memoryを使えないため、両者の共同設計がend-to-end改善につながる。",
-    "quality_impact": "FineServeはFP16、FP8、AWQ、QoQなど既存precision variantをそのままserveし、model output qualityを変える追加近似は行わない。論文が述べる量子化に伴うaccuracy-throughput tradeoffは元のPTQ方式に由来し、FineServeはそのprecision差をresource managementへ利用する。"
+    "negative_results": [
+      {
+        "name": "BFCL-v3ではReq95の余地が小さい",
+        "description": "Qwen Hetero-1のBFCL-v3では最強Workflow-LLFに対するReq95削減は5.7%に留まる。短い関数呼出しが多い条件では単純な緊急度方策でもかなり有効で、異種共同配置の追加利得は尾部Req99の23.0%に強く現れる。"
+      },
+      {
+        "name": "Qwenは推定誤差の尾部影響が大きい",
+        "description": "Hetero-1で10%の乗法誤差を入れるとQwenのReq99は9.5%悪化し、Llamaより感度が高い。30%では5.4%と非単調であり、貪欲な配置順序の離散変化に左右される。"
+      },
+      {
+        "name": "完全DAGの先読み最適化ではない",
+        "description": "将来ノードは親完了まで見えないため、現在公開された部分グラフの単独完了時間を代理目標として使う。後から大きな枝が現れる場合、早期判断は完全情報最適解と異なり得る。"
+      },
+      {
+        "name": "計画結果は実行開始後に移動できない",
+        "description": "非同期計画の安全性を優先し、プリフィルまたはデコードを開始した呼出しはその段階で固定される。遅れて得られたより良い配置は待機中呼出しにしか適用できない。"
+      }
+    ],
+    "interpretation": "結果は、エージェントサービングでは『どの個別呼出しが短いか』だけでなく『その呼出しを遅らせるとワークフロー全体が現在の単独完了基準に対してどれだけ危険になるか』を優先度にする価値を示す。異種環境ではさらに、速いGPUを選ぶだけでなくKV転送・デコード容量・将来キューまで含めたP-D組を選ぶことで尾部が改善する。一方、短いBFCLや推定誤差のあるQwenでは利得が縮むため、常に大幅改善する万能方策ではなく、複雑なワークフローと異種混雑が強いほど効果が大きい。",
+    "quality_impact": "モデル出力品質には介入せず、SLO達成と資源配置のみを最適化する。評価上の『品質』はスケジューラのサービス品質であり、生成内容の正確さではない。サービス時間予測を最大30%乱しても多くの条件でReq95/Req99の悪化が限定的かを検証している。"
   },
   "reservation": {
-    "claim_id": "claim-5d8552722433f879a0d0bd7b",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-289d78baff9e15a9f398b387",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }

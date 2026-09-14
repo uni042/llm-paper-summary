@@ -2,20 +2,36 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5d8552722433f879a0d0bd7b",
-  "job_id": "job-research-e3455f9cc66c1448",
+  "attempt_id": "attempt-289d78baff9e15a9f398b387",
+  "job_id": "job-research-5ae336587be983aa",
   "data": {
-    "hardware": "単一ノード評価はIntel Xeon Platinum 8468 @2.1GHzの32 vCPU、NVIDIA H100 80GB SXM5を4基、GPU間900GB/s NVSwitch、PCIe Gen5 x16、DDR5 720GB。多ノード評価はAWS p5.48xlargeを2台使用し、各ノード384 vCPU、H100 80GBを8基、2TBメモリ、3200Gbps EFA、GPU間900GB/s NVSwitchで、合計16 GPUまで評価する。",
-    "software": "vLLMを基盤にFineServe prototypeを実装。各GPUにKV slab manager、クラスタ側にglobal scheduler、node側にlocal schedulerを追加する。Prism比較ではCUDA VMMベースkvcached自体のmap/unmap overheadを混ぜないため、Prismの配置・deadline scheduling algorithmをFineServe内へ再実装し、KV管理には同じKV slabを使用する。",
-    "models": ["Llama 3.1-8B FP16", "Llama 3.1-8B FP8 W8A8KV8", "Llama 3.1-8B AWQ W4A16", "Llama 3-8B QoQ W4A8KV4", "Llama 3.1-70B FP16", "Llama 3.1-70B FP8 W8A8KV8", "Llama 3.1-70B AWQ W4A16", "Qwen3-32B FP16", "Qwen3-32B FP8 W8A8KV8"],
-    "datasets": ["ShareGPT prompts", "ShareGPT由来要求長分布を保ったPoisson arrival workload"],
-    "baselines": ["Static*: FineServe placement + model別静的memory partition + FCFS batching", "Prism*: Prism model placement/deadline schedulingを再実装しKV Slabを共通利用", "FCFS local scheduling"],
-    "methodology": "ShareGPTからpromptをsamplingし、要求到着間隔をPoisson分布で生成する。元のrequest rateを2倍から8倍などへscaleして負荷を増やし、TTFT SLOも倍率で変化させる。TTFT SLOの基準は各モデルについてShareGPTで得たP95 prefill latencyで、TTFT SLO attainment、完了requests/s、prefillを除いたdecode token generation throughputを測定する。end-to-endではSLO scaleとrequest rate scaleを変え、単一nodeと8〜16 GPUのmulti-nodeで比較する。global schedulerの除去評価ではKVをstatic partition、local schedulerをFCFSへ固定して配置だけを比較し、local scheduler評価では単一Llama3.1-8B FP16をGPUへ置きstatic KV条件でFineServe、Prism*、FCFSを比較する。さらに動的KV共有の動機実験では同一GPU上のLlama3.1-8B FP16とFP8を用い、静的予約による遊休メモリとqueue増加を観測する。",
-    "scope": "評価はH100世代GPUとvLLMを中心とし、Hopper以前・以後の別GPU、異なるattention backend、MoEモデル、小型edge GPUは直接検証していない。QoQはLlama3-8Bにのみ適用され、すべてのモデルで全precision variantを揃えた比較ではない。到着はShareGPT由来promptとPoisson processで合成しており、本番traceそのものではない。latency constraintは予測可能性を優先してTTFTを採り、出力長に依存するTPOTやend-to-end SLOを直接最適化していない。Prism*は原実装のkvcachedではなく共通KV slabを使う再実装なので、比較は主にscheduler policy差を測る構成である。"
+    "hardware": "異種評価ではプリフィル側とデコード側にA100/H100/H200を混在させる。Hetero-1は各プール8インスタンス（A100×2、H100×3、H200×3）、Hetero-2は各10インスタンス（A100×3、H100×4、H200×3）。同種評価はLlama3.1-70BをH200 TP4の4P+4D、Qwen3-235B-A22BをA100 TP8の4P+4Dで構成する。",
+    "software": "SGLang v0.5.9のプリフィル・デコード分離機能を基盤にPythonで実装する。ゲートウェイ・ワーカー統合に加え、約4.6K行のイベント駆動資源推定器を使用し、サービス時間はルーフライン型遅延モデルから取得する。",
+    "model": "Llama3.1-70BとQwen3-235B-A22B。LlamaはA100/H100/H200すべてTP4、QwenはA100/H100でTP8、H200でTP4。",
+    "datasets": [
+      "ShareGPT型: 100ワークフロー、10 workflow/s",
+      "BFCL-v3: 400関数呼出しワークフロー、40 workflow/s",
+      "LATS: HotpotQA上の木探索由来100ワークフロー、40 workflow/s",
+      "Mixed: ShareGPT/BFCL-v3/LATS混合100ワークフロー、10 workflow/s"
+    ],
+    "baselines": [
+      "SGLang Workflow-FCFS＋負荷均衡",
+      "SGLang Workflow-LLF（最小余裕時間優先）",
+      "Autellix-ATLASのプログラム水準到達サービス量方式"
+    ],
+    "correctness": "生成モデルや推論計算自体は変更せず、同じワークロード・クラスタ条件でスケジューリング方策のみを比較する。各ワークフローの単独完了時間H_wを同一クラスタ上の基準としてSLO倍率を正規化する。",
+    "settings": [
+      "Req95/Req99は95%/99%のワークフローがC_w≤αH_wを満たす最小SLO倍率αで、低いほどよい。",
+      "異種2構成×2モデルを主評価し、各行はShareGPT/BFCL-v3/LATS/Mixedの4トレースを平均する。",
+      "推定誤差耐性はHetero-1でプリフィル・デコード見積りへ0%、10%、20%、30%の乗法誤差を注入する。",
+      "スケジューラ費用は総計画時間と1回当たり平均ミリ秒を測り、非同期計画中もサービングを継続する。"
+    ],
+    "methodology": "まず小規模特性評価で個別呼出しFCFS、ワークフローFCFS、HexAGenTを段階比較し、ワークフロー認識と異種配置認識の寄与を分ける。主評価ではトレースごとに最強となる3比較対象の値を基準にしてReq95/Req99を比較する。同種クラスタでも同じ評価を行い、利得がGPU異種性だけに由来しないかを確認する。さらに見積り誤差を人工注入し、投影危険度が不正確なサービス時間へどの程度頑健かを測る。",
+    "scope": "論文はSGLangへの実装を説明する一方、主要な大規模ワークフロー比較はイベント駆動資源推定器とルーフライン型サービス時間に基づく構成として記述される。したがって、異種A100/H100/H200の全構成を実機オンラインクラスタで直接再生した結果としてではなく、実装可能性を伴うスケジューリング評価として読むのが妥当である。"
   },
   "reservation": {
-    "claim_id": "claim-5d8552722433f879a0d0bd7b",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-289d78baff9e15a9f398b387",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }
