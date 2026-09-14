@@ -2,18 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-2b99612d9dbe653a70b0ba5a",
-  "job_id": "job-research-28c86979d5f2a372",
-  "data": {
-    "hardware": "Llama-2-7Bのシミュレータ較正はA100/H100 80GB。実システムではLlama-3-8Bを1×A100/H100、Llama-3-70Bを4×A100/H100、Dynamoは2 prefill + 2 decode A100で評価する。",
-    "software": "vLLM v0.6.3をシミュレーション検証に使用し、SRFをvLLM、SGLang、NVIDIA Dynamoへ実装。Dynamo評価ではLMCacheによるDRAM KVオフロードも有効化。理論最適スケジュールはGurobiの制約充足問題で求める。",
-    "methodology": "コストモデルはLlama-2-7Bの演算子時間をA100/H100で約4 GPU時間測定して較正する。オフライン解析では1024要求を同時到着させ、入力長I・出力長Oを1〜1024、KV容量を100〜1Mまで変えてvLLM/Sarathi系と仮想プリエンプションなし版を比較する。実vLLMとの比較でシミュレーション誤差を検証した後、オンライン評価ではAzureConv、LongForm、SelfConsistency、Alibaba提供Reason2/Chat15を用い、Llama-3-8B/70BでNRF、SRF、SRF+Histを比較する。主要指標はエンドツーエンド遅延、TPOT、TTFT、KV使用量、プリエンプション、性能上限。SGLangではprefix共有、Dynamoではprefill/decode分離とDRAMオフロードを含めて一般性を確認する。",
-    "scope": "開発時GPU節約のためのシミュレーション/理論解析と、本番オンライン推論でのKVプリエンプション方針の双方を評価。単一モデルのオフライン推論ではなく、多数の同時/連続要求を持つオンラインサービングが主対象。",
-    "workloads": ["1024-request synthetic high-contention workload", "AzureConv", "LongForm", "SelfConsistency", "Reason2", "Chat15"],
-    "baselines": ["NRF", "vLLM scheduler", "Sarathi variants", "preemption-free hypothetical schedulers", "Infinite KV cache", "theoretical hardware bound"],
-    "metrics": ["end-to-end latency", "TPOT", "TTFT", "TPS", "KV cache usage", "preemption rate", "simulation relative error", "fairness"],
-    "reproducibility": "数式、シミュレータのスケジューラ設定、モデル/GPU、KV容量、オンライン負荷統計、SRFの実装変更行数を具体的に記載する。Table 2では研究実装の公開をplannedとしており、現時点の一次資料から専用コードURLは確認できない。",
-    "evaluation_notes": "線形コストモデルの平均/最大誤差は実vLLM GPU時間比6%/12%。オンライン実システムでは異なる基盤・モデルサイズ・GPU世代を跨いでSRFを検証し、高競合時の改善と低競合時に差が縮む条件の双方を報告する。"
-  },
-  "reservation": {"claim_id": "claim-2b99612d9dbe653a70b0ba5a", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-18e2a6f6e4081046cef8c27d",
+  "job_id": "job-research-ad7e8d527bf159c7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-18e2a6f6e4081046cef8c27d",
+    "worker_id": "scheduled-chat-20260915T0530JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

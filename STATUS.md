@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 04:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 06:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -39,26 +39,26 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
-| 処理速度 | **OK** |
+| 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **44** |
 | 有効claim（lease） | **1** |
 | 今すぐ着手可能（Claimable） | **45** |
 | 有効leaseを持つworker run | **1** |
-| :30 最新worker run | **2026-09-15T03:30:00+09:00** |
+| :30 最新worker run | **2026-09-15T05:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
 | :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **—** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 04:17 JST** |
+| :30 通常worker 直近lease活動 | **09-15 06:04 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **44** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
-| 最新通常run | **2026-09-15T03:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古の有効claimの経過時間 | **3 min** |
+| 最新通常run | **2026-09-15T05:30:00+09:00** |
+| 最新通常runのResearch完了 | **0** |
+| 最古の有効claimの経過時間 | **0 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -68,6 +68,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
+- **処理速度 LOW**: ready=44 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+
 有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
 
@@ -76,7 +78,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 指標 | 件数 / 率 |
 |---|---:|
 | Research完了 | **70** |
-| Repo収録 | **78** |
+| Repo収録 | **74** |
 | Audit完了 | **0** |
 | 探索評価候補 | **5** |
 | Research候補採用 | **1** |
@@ -84,12 +86,12 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 重複率 | **20.0%** |
 | :00 補助worker Discovery run（毎時枠） | **2** |
 | :00 補助worker Discovery round（stats観測） | **3** |
-| 通常worker run（ledger観測） | **2** |
-| Fallback archive（全helper） | **15** |
+| 通常worker run（ledger観測） | **1** |
+| Fallback archive（全helper） | **21** |
 
 ### 24時間の流れ
 
-**探索評価 5 → 重複除外後 4 → Research候補採用 1 → Research完了 70 → Repo収録 78**
+**探索評価 5 → 重複除外後 4 → Research候補採用 1 → Research完了 70 → Repo収録 74**
 
 ## 次に処理する候補
 
