@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T04:33:56.710231+00:00",
+  "updated_at": "2026-09-14T04:42:49.251823+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T04:33:56.710231+00:00",
+      "last_recorded_at": "2026-09-14T04:42:49.251823+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 42,
+        "research_completed": 43,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19270,6 +19270,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34807041084:1",
+          "recorded_at": "2026-09-14T04:42:49.251823+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34807041084",
+            "run_attempt": "1",
+            "source_sha": "e0b50bae5683e7c142baf46adef317e79c43efda"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19606,6 +19620,14 @@
           "type": "research",
           "canonical_id": "arXiv:2503.13737",
           "title": "AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-b0ca87eca87a5574",
+          "type": "research",
+          "canonical_id": "arXiv:2508.06948",
+          "title": "Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud",
           "from": "ready",
           "to": "completed"
         }
