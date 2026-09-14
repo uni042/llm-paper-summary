@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2f1ba32c74ff42e14419c6de",
-  "job_id": "job-research-6be22b91f978c683",
-  "data": {
-    "limitations": "フィンガープリント推定はデコーダ専用LLMの反復隠れ層と層数に対するほぼ線形な遅延・メモリ関係を前提とする。マルチモーダルモデルなど固有層が多い構造では追加プロファイルが必要で、異種GPUを一つの並列実行へ混在させる場合の段階別性能差も未解決である。評価はRTX A6000×8の同種クラスタが中心で、GPU型が増えるたびにプロファイルを追加する必要がある。圧縮方式を構成候補に含めるが、利用者の精度要求は現実装の意図として扱わない。さらに推論要求の実行時スケジューリング自体は単純FCFSであり、トークン単位の高度なSLOスケジューラは別問題として残る。",
-    "differences": "AlpaServeはLLM群の並列配置をSLO達成へ最適化するが、将来到着パターンを事前に与え、比較的高価なプロファイルを必要とする。iServeはモデル自身を縮めたフィンガープリントから構成地図を作り、将来トレースなしで配備時の意図と現在GPU状態を使う。Vidurはシミュレーションで並列・スケジューリングを予測するのに対し、iServeは対象モデル部品を保持した実行可能代理を少数実測して外挿する。TensorRT-LLMやvLLMは特定構成を高速実行するデータ面であり、iServeはその上でTP/PP・圧縮・配置を選ぶ制御面なので補完関係にある。SpotServeの可用性変動対応とも直交し、iServeの軽量プロファイルをその配置制御に利用できる。",
-    "implementation_status": "TensorRT-LLMを基盤に実装し、Fingerprint Controller、Deployment Controller、Worker、監視デーモンを実機8 GPU環境で動作させている。PyTorch APIでsafetensorsからフィンガープリントを生成し、アンバランスなPP層割当もTensorRT-LLMへ追加する。6モデル、複数Azureトレース、圧縮・並列構成で評価済みであり、概念提案だけではない。論文本文ではiServeをオープンソース化すると記すが匿名版のリンクは省略されており、確認時点で一次資料から公式公開URLを確定できない。",
-    "research_positioning": "LLMサービングでは、vLLMやTensorRT-LLMのような実行基盤がカーネル、KVキャッシュ、連続バッチを最適化し、AlpaServeやSpotServeがモデル配置・資源変動を扱う。iServeはその中間で『どの実行構成を採用するか』を第一級の自動化対象とし、モデル反復構造を利用して構成探索費用を下げる。新しい並列方式を一つ提案するのではなく、既存のTP、PP、量子化、枝刈りを利用者意図と資源状態へ合わせて組み合わせるため、配備計画・自動チューニング系統の基礎システムとして重要である。特にフィンガープリントは、完全モデルを毎回ロードしない性能推定という点で、巨大モデルの構成探索を実運用の制御ループへ持ち込む設計点を示す。"
-  },
+  "attempt_id": "attempt-f857346d91a0305041b26080",
+  "job_id": "job-research-d0c3e0e607ad747e",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2f1ba32c74ff42e14419c6de",
+    "claim_id": "claim-f857346d91a0305041b26080",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
