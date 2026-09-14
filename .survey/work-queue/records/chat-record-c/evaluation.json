@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-984a765e25dffea7ef715f48",
-  "job_id": "job-research-fd5c72ea06dbb8a6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-984a765e25dffea7ef715f48",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-984a765e25dffea7ef715f48","job_id":"job-research-fd5c72ea06dbb8a6","data":{"hardware":["NVIDIA RTX 4090 1基","NVIDIA RTX 5090 2基","NVIDIA RTX PRO 5000 72GB 1基","Huawei Ascend 910B NPU 1基"],"software":["Sarathi-Serve","vLLM-Ascend","Ubuntu 24.04.4 LTS"],"model":["Qwen3-8B","OpenPangu系モデル（Ascend移植評価）"],"datasets":["ShareGPT実会話要求","LPRS用オフライン計測36,868サンプル"],"baselines":["先着順（FCFS）プリフィル順序","固定トークン予算1024のスケジューラ","LPRS単独（APC無効）"],"correctness":"モデル演算や数値精度を変えず、同じ配信エンジンのスケジューリング方策のみを比較する。各機構は別々の比較実験で評価されるため、エージング、LPRS、APCの効果を区別できる。","settings":["エージング単GPU: RTX 4090、Qwen3-8B、最大文脈長512、最大生成512、ShareGPT 100または200要求、到着間隔0.1秒。","LPRS/APC: RTX PRO 5000 72GB、Qwen3-8B、テンソル並列1、パイプライン並列1。予測データ36,868件を8:1:1分割し、テスト3,713件。オンライン各1,000要求、到着間隔0.1秒または1.0秒、最大系列長4096。","APC: 短入力30〜50トークン対長入力200〜220トークンを49:1で混在し、到着率を動的に変化。","マルチGPU: RTX 5090×2、ShareGPT 200要求。","Ascend: Ascend 910B単NPU、OpenPangu系モデル、ShareGPT 200要求。"],"methodology":"実機上で要求単位のエンドツーエンド遅延、先頭トークン時間、プリフィル完了遅延と百分位を測定する。エージングはチャンク長256、512、1024および待ち時間重みを変え、FCFSとの差を比較する。LPRSは軽量予測器のMAE、RMSE、MAPE、誤差百分位を検証した後、105ミリ秒目標の時間制御を固定1024トークン予算と比較する。APCは同一LPRS上で有効・無効を切り替え、遅延に加えて同時プリフィル数、平均チャンク量、介入回数を測る。Ascendは絶対性能の機種間比較ではなく移植可能性の確認として扱う。","metrics":["平均・P50/P80/P90/P95/P99エンドツーエンド遅延","先頭トークン時間","プリフィル遅延","予測MAE/RMSE/MAPE","要求スループット","同時プリフィル数","プリフィルチャンク量"],"scope":"すべて実ハードウェア測定で、シミュレーションではない。ただし主要評価はQwen3-8BとShareGPT中心であり、モデル族、長文分布、到着過程、クラスタ規模への一般化は限定的である。Ascend評価は移植性確認で、NVIDIAとの性能優劣比較を意図していない。","reproducibility":"著者はNVIDIA向けとAscend向けのコードを公開している。ハードウェア、モデル、要求数、到着間隔、予測器構成、主要スケジューリング式が本文に記載される。"},"reservation":{"claim_id":"claim-984a765e25dffea7ef715f48","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
