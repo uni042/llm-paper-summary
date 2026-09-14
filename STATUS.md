@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 09:45 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 09:52 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -42,16 +42,16 @@
 | :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **1** |
-| :30 通常worker 直近claim | **09-14 04:21 JST** |
+| :30 通常worker 直近claim | **09-14 07:59 JST** |
 | :00 補助worker 直近claim | **09-14 09:16 JST** |
-| 直近24h Research完了（:30 通常worker） | **5** |
+| 直近24h Research完了（:30 通常worker） | **6** |
 | 直近24h Research完了（:00 補助worker） | **5** |
-| 直近24h Research完了（帰属不明） | **6** |
-| 最新通常run | **2026-09-14T02:30:00+09:00** |
+| 直近24h Research完了（帰属不明） | **5** |
+| 最新通常run | **2026-09-14T06:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **77 min** |
+| 最古の有効claimの経過時間 | **84 min** |
 
-run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimのworker_idに埋め込まれた元Scheduled Chat run** へ帰属させます。
+run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -60,7 +60,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
 - **処理速度 LOW**: ready=114 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
-- 直近24hのResearch完了のうち **6件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
+- 直近24hのResearch完了のうち **5件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
