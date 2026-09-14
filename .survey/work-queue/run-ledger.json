@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T19:27:26.008581+00:00",
+  "updated_at": "2026-09-14T20:40:52.719490+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T19:27:26.008581+00:00",
+      "last_recorded_at": "2026-09-14T20:40:52.719490+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 6,
         "new_papers": 74,
-        "fallback_archived": 14
+        "fallback_archived": 16
       },
       "events": [
-        {
-          "event_id": "34801825235:1",
-          "recorded_at": "2026-09-14T03:13:19.847075+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34801825235",
-            "run_attempt": "1",
-            "source_sha": "25f1bde1388fd30ba70260de3c1c7b0bda7bc0bf"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34802055566:1",
           "recorded_at": "2026-09-14T03:17:03.959579+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34894084703:1",
+          "recorded_at": "2026-09-14T20:40:52.719490+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34894084703",
+            "run_attempt": "1",
+            "source_sha": "bb6539bc0f8c51f9ddf1218ba2c34dfe3bddc5de"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20341,11 +20341,13 @@
         ".survey/work-queue/fallback-archive/20260914T204000JST-research-2605.31464-gpu-forecasters-attempt-bafa49c4a685291f5311cc0a.json",
         ".survey/work-queue/fallback-archive/claimed-attempt-94b6994cc1590a0bda45ff7d-run1357.json",
         ".survey/work-queue/fallback-archive/claimed-attempt-a0e4db88a95803bf8c12f92a-run1357.json",
-        ".survey/work-queue/fallback-archive/claimed-attempt-55b8e353cb90b0ce522f9b13-run1357.json"
+        ".survey/work-queue/fallback-archive/claimed-attempt-55b8e353cb90b0ce522f9b13-run1357.json",
+        ".survey/work-queue/fallback-archive/20260913T073000JST-research-2508.21706-specmoeoff.json",
+        ".survey/work-queue/fallback-archive/20260913T073000JST-research-2602.16603-flowprefill.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 534,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
