@@ -163,14 +163,15 @@ def dispatch(repo_root: Path, *, max_items: int = DEFAULT_MAX_ITEMS) -> dict[str
                     )
                     continue
                 archived = move_exact(source, archive_dir)
+                public_action = "ack_terminal" if replay["action"] == "ack_terminal" else "dispatched"
                 row: dict[str, Any] = {
-                    "action": replay["action"],
+                    "action": public_action,
                     "envelope_id": raw_object.get("id"),
                     "job_id": replay.get("job_id"),
                     "archived": str(archived.relative_to(repo_root)),
                     "changed_paths": replay.get("changed_paths") or [],
                 }
-                if replay["action"] == "dispatched":
+                if public_action == "dispatched":
                     row["descriptor"] = replay.get("descriptor")
                     row["record_bank"] = replay.get("record_bank")
                 processed.append(row)
