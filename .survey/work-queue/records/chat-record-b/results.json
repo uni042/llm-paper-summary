@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-103100fe66ff521e20fe8bd0",
   "job_id": "job-research-89a31b528bef1df7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-103100fe66ff521e20fe8bd0",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "低帯域になるほど通信削減と通信隠蔽の価値が増え、BloomBeeはLLaMA-30Bの20 Mbps条件で67 token/sに達し、Petalsの1.76倍、Helixの1.46倍を報告した。一方、高帯域では投機的デコードが効きやすく、低帯域では候補木転送が重くなるため投機を止め、圧縮・マイクロバッチ・KV退避を優先する。したがって主結果は単一技法の常時高速化ではなく、通信条件に応じて有利な機構を切り替えることである。",
+    "key_results": [
+      {"metric": "LLaMA-30Bスループット", "value": "67 token/s", "baseline": "Petals 38 token/s、Helixは約45.9 token/s相当", "condition": "E5、20 Mbps、BloomBeeの組合せ最適化", "interpretation": "最も通信が厳しい条件でPetals比1.76倍、Helix比1.46倍となり、計算配置だけでなく転送量と待ちを減らすことの効果が大きい。"},
+      {"metric": "平均完了遅延", "value": "最大43.20%削減", "baseline": "自己回帰生成または比較設定", "condition": "論文全体で報告された最大値。投機的デコードのE1ではP50が約40.2秒から22.8秒", "interpretation": "十分な帯域では複数トークンを一度に受理でき、逐次デコード段数の削減が通信追加費を上回る。"},
+      {"metric": "KV退避の費用効率", "value": "E5で1.82倍", "baseline": "3 GPU構成の約22.9 token/s per $/h", "condition": "LLaMA-30B、バッチ32、系列長128、BloomBeeは全KVをCPUへ退避して2 GPU、比較側は3 GPU", "interpretation": "KVをCPUへ移してGPU数とホップを減らすことで、低帯域では追加CPU処理よりネットワーク削減の利益が大きい。"},
+      {"metric": "マイクロバッチ単独のスループット改善", "value": "E3 +5.3%、E4 +17.9%、E5 +39.5%", "baseline": "マイクロバッチなし", "condition": "LLaMA-30B、バッチ32、系列長128、圧縮・KV退避・投機を無効化", "interpretation": "帯域が低いほど通信時間をGPU計算へ重ねる余地が増える。E1/E2では利益が小さく自動的に無効化された。"},
+      {"metric": "FP16活性値圧縮率", "value": "元サイズの46%", "baseline": "ZSTD 69%、ZipNN 71%", "condition": "LLaMA-13B活性値の無損失圧縮", "interpretation": "上位・下位バイトを分離してから圧縮することで、上位バイトの偏りを利用し、通常ZSTDやZipNNより転送量を小さくした。"},
+      {"metric": "投機枝刈り", "value": "候補木転送量を約60%削減、受理率の96%を維持", "baseline": "枝刈りなし投機的デコード", "condition": "最初のワーカーで近似出力分布と分類器を用いる設定", "interpretation": "通信量を抑えながら投機の受理効果を大部分残し、高帯域〜中帯域で投機の損益分岐を改善する。"},
+      {"metric": "実広域E6スループット", "value": "108 token/s", "baseline": "Petals 89 token/s、Helix 66 token/s", "condition": "California A100、New Jersey RTX 4090、Canada RTX 4090。圧縮とマイクロバッチ併用", "interpretation": "模擬帯域制限だけでなく実地理分散でもPetals比21.3%、Helix比63.6%向上し、特にマイクロバッチが主要因だった。"}
+    ],
+    "negative_results": "投機的デコードは帯域が下がると候補木の転送量が利益を上回り、例としてE3では投機設定が自己回帰設定より遅くなるため無効化が必要だった。圧縮も高帯域ではCPU圧縮時間の方が転送削減より大きくなりうる。マイクロバッチはE1/E2でほぼ利益がなく無効化された。モデルが大きくなるとGPU計算が増えて通常のパイプラインでも通信を隠しやすくなるため、Helixに対する相対差は縮む。",
+    "interpretation": "BloomBeeの利得は帯域が狭いほど一様に増えるのではなく、どの機構がボトルネックを削るかで変わる。KV退避はGPUメモリを空けてノード数とホップを減らし、マイクロバッチは残った通信を計算へ重ね、無損失圧縮は各ホップのバイト数を減らす。投機的デコードだけは候補数に比例して転送量が増えるため、帯域が十分なときにのみ段数削減が勝つ。各技法の有効条件を測定し、損になる場合に停止する適応制御が総合性能を支えている。",
+    "quality_impact": "活性値圧縮はビット列を完全復元する無損失方式で、モデル出力品質を変えない。投機的デコードも最終的には大きな対象モデルで候補を検証するため、正しい実装では対象モデルの分布を保つ。早期枝刈りは投機候補の効率を変えるが、論文では受理率の96%を保持し、品質低下ではなく高速化機会の一部を失う形として評価されている。"
+  },
+  "reservation": {"claim_id": "claim-103100fe66ff521e20fe8bd0", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
