@@ -2,21 +2,37 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-d02e2084d863ffbc6514147e",
+  "attempt_id": "attempt-c2341532b0b52ab5132ae3fb",
   "job_id": "job-research-2ab985bbc123336f",
   "data": {
     "problem": "多ターンLLMサービスでは、同じ会話の次ターンが来るたびに過去のprompt/response全体をprefixとして再利用できるため、履歴KVがHBMに残っていればprefillを大幅に省ける。一方、会話履歴はターンごとに成長し、複数会話が非同期に戻ってくるので、有限HBM上のLRU退去は『オブジェクトサイズが成長し、再参照間隔も確率的』なキャッシュ系になる。ヒット率は到着率、ターン数、各ターンのKV増分、次ターンまでの待ち時間、HBM容量の全てに依存し、単純な静的working-set推定では容量計画が難しい。",
     "novelty": "会話をLRU管理単位として扱うMulti-Turn Conversation Modelを導入し、HBM容量Nと会話到着率を比例して大きくする平均場スケーリングで、LRUヒット率がcharacteristic timeに基づく明示的極限へ収束することを示す。さらに実システムでは各ターン末尾の部分KVブロックがprefix matchingで再利用できない点を差し引いた実用版を導出し、有限システムでもワークロード統計からヒット率を直接推定できる式へ落とし込む。",
     "method_overview": "新規会話はPoisson過程で到着し、会話ごとのターン数M、各ターンで増えるKVブロックZj、次ターンまでの待ち時間Wを確率変数として持つ。turn j後の履歴サイズRjは過去の増分和で増大する。次ターン到着時に会話がHBMへ残っていればRj分を再利用し、更新後の拡大履歴をMRU側へ移す。容量超過時はLRU側から会話履歴を退去する。タグ付き会話の前に挿入・更新される正規化KV量をdisplacement processとして解析し、その平均d(t)=λ0E[B]t+λ0AH∫_0^t F̄(u)duが1へ達するcharacteristic time TCを求める。極限ヒット率は再利用可能履歴比AH/ARと、次ターンがTC以内に戻る確率F(TC)の積になる。実用版では非hashableな末尾blockを各非最終turnから1個差し引き、観測・推定した到着率、履歴統計、待ち時間分布から同じ構造の推定器を解く。",
     "components": [
-      {"name":"Multi-Turn Conversation Model","description":"会話単位の到着、ターン数、ターンごとのKV増分、ターン間待ち時間、増大する履歴サイズを明示し、有限HBMのLRU下で会話履歴が残るかをモデル化する。"},
-      {"name":"平均場characteristic time","description":"HBM容量と会話到着率を比例拡大し、タグ付き会話より新しい位置へ蓄積するKV量が容量相当へ達する時刻をTCとして定義する。TCより早く次ターンが戻ればprefixが残るという直観を極限定理へ変換する。"},
-      {"name":"実用ヒット率推定器","description":"実装では各ターン最後の部分blockがhashable prefixとして使えないため再利用可能workloadを補正し、有限Nに対して未スケール到着率と経験統計からcharacteristic timeを数値的に解いてhit ratioを推定する。"},
-      {"name":"実システム差分の検証","description":"理論は会話全体を同時刻でLRU管理する単純化を置くが、vLLMではblockごとのtimestamp、参照中blockの保護、suffix-first部分退去などがある。これらを残した実システムで推定精度を測り、近似の実用性を検証する。"}
+      {
+        "name": "Multi-Turn Conversation Model",
+        "description": "会話単位の到着、ターン数、ターンごとのKV増分、ターン間待ち時間、増大する履歴サイズを明示し、有限HBMのLRU下で会話履歴が残るかをモデル化する。"
+      },
+      {
+        "name": "平均場characteristic time",
+        "description": "HBM容量と会話到着率を比例拡大し、タグ付き会話より新しい位置へ蓄積するKV量が容量相当へ達する時刻をTCとして定義する。TCより早く次ターンが戻ればprefixが残るという直観を極限定理へ変換する。"
+      },
+      {
+        "name": "実用ヒット率推定器",
+        "description": "実装では各ターン最後の部分blockがhashable prefixとして使えないため再利用可能workloadを補正し、有限Nに対して未スケール到着率と経験統計からcharacteristic timeを数値的に解いてhit ratioを推定する。"
+      },
+      {
+        "name": "実システム差分の検証",
+        "description": "理論は会話全体を同時刻でLRU管理する単純化を置くが、vLLMではblockごとのtimestamp、参照中blockの保護、suffix-first部分退去などがある。これらを残した実システムで推定精度を測り、近似の実用性を検証する。"
+      }
     ],
     "system_design": "推定器を容量計画に使う場合、対象ワークロードから会話到着率、総KV block数、累積履歴workload、再利用可能hashable workload、ターン間隔分布を推定し、候補HBM容量Nごとにcharacteristic-time方程式を解く。得られたヒット率曲線から目標再利用率を満たすNを選べる。オンラインの退去アルゴリズム自体を変更する方式ではなく、既存LRUを前提とした性能予測・provisioning層である。",
     "why_it_works": "LRUでprefixが残るかは、最後に参照してから次ターンまでの間に、そのprefixより新しいKVがどれだけHBMへ入り込むかで決まる。大規模系では多数会話からの挿入量が平均へ集中するため、その累積量が容量へ達する時刻をほぼ決定論的なTCで近似できる。再利用対象の平均量と『次ターンがTCより前に来る確率』を分離することで、複雑なLRU状態分布を直接追跡せずにヒット率を求められる。",
     "failure_modes": "理論では新規会話のPoisson到着、ターン間隔の共通分布、M・W・block増分間の独立性などを仮定する。実際のagent workloadで強いburst、ユーザー別相関、時間帯変動があると推定誤差が増え得る。実験でも次ターンはdecode完了前に出せないため、短い目標待ち時間では実現分布が想定指数分布からずれ、長い待ち時間では有限測定窓によるcensoringが起きる。さらに実vLLMのblock-level LRUは会話単位全退去という理論モデルと異なるため、極端なprefix共有や参照中blockが多い条件で一般化には追加検証が必要である。"
   },
-  "reservation": {"claim_id":"claim-d02e2084d863ffbc6514147e","worker_id":"scheduled-chat-llm-discovery-20260915T0000JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-c2341532b0b52ab5132ae3fb",
+    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d02e2084d863ffbc6514147e",
+  "attempt_id": "attempt-c2341532b0b52ab5132ae3fb",
   "job_id": "job-research-2ab985bbc123336f",
   "data": {
     "limitations": "理論は新規会話のPoisson到着、ターン間待ち時間の共通分布、turn数・待ち時間・KV増分の独立性などを仮定し、会話履歴をwhole-content単位でLRU退去する。実vLLMはblock単位timestamp、参照中blockの退去保護、prefix-preserving/suffix-first部分退去を行うためモデルとは一致しない。検証もQwen3-8B、Ascend 910B2、ShareGPT、単一のP/D構成に限定され、実agentのburstやユーザー別相関、非定常負荷、別cache policy、cross-conversation prefix sharingが強い環境は未検証。有限測定窓によるcensoringも観測される。専用実装の公開コードURLは一次資料から確認できない。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "`07-kv-cache-optimization-compression`系統の圧縮・量子化・eviction方式に対し、本論文は圧縮率や退去heuristicではなく、LRUが既定であるときのhit ratioと容量の関係を与える補完的研究である。`10-kv-cache-offload-recomputation`系統がmiss後の下位storage取得やreprefill costを減らすのに対し、本研究はmiss自体がどの頻度で起きるかを予測するため、offload tier容量やHBM割当の上流パラメータとして組み合わせられる。P/D分離環境でprefiller HBMを対象にしているため、Mooncake系のKV転送・分離servingとも接点がある。",
     "audit_required": false
   },
-  "reservation": {"claim_id":"claim-d02e2084d863ffbc6514147e","worker_id":"scheduled-chat-llm-discovery-20260915T0000JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-c2341532b0b52ab5132ae3fb",
+    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
