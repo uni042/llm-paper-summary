@@ -2,111 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-109544c151ee7ef15991a199",
-  "job_id": "job-research-3ae94af47a718bbb",
-  "data": {
-    "canonical_id": "arXiv:2510.13223",
-    "arxiv_id": "2510.13223",
-    "doi": "10.1002/spe.70054",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": []
-    },
-    "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
-    "summary": "BanaServeは、プリフィルとデコードを別GPU群へ固定分割する分離型LLMサービングで、負荷が変動すると一方が過負荷でも他方の計算・メモリ資源を使えない問題と、接頭辞キャッシュの局所性を優先するルーティングが高ヒット率ノードへ要求を集中させる問題を同時に扱う。粗い再均衡では連続するTransformer層の重みと対応KVキャッシュを別GPUへ移し、細かな再均衡では注意ヘッド単位にKV状態だけを低負荷GPUへ移して注意計算を分担する。さらにCPU/SSDを背後に持つ共有Global KV Cache Storeへ接頭辞KVを集約し、各プリフィルGPUが同じキャッシュへアクセスできるようにすることで、ルータをキャッシュ配置から解放し、計算・メモリ負荷だけで配送可能にする。KV転送は層ごとに次層の取得、現層の計算、前層の保存を重ねて隠蔽する。LLaMA-13BとOPT-13B、AlpacaとLongBench、1〜20 RPSでvLLM・DistServeと比較し、条件によりvLLM比1.2〜3.9倍、DistServe比1.1〜2.8倍のスループット向上と大幅な遅延低下を報告する。ただし制御は反応型で、異種ハードウェアや複数地域は未対応である。",
-    "list_summary": "分離サービングの固定GPU配分と接頭辞キャッシュ偏在を、層単位の重み移動・注意ヘッド単位のKV移動・CPU/SSD共有KVストアで切り離し、負荷だけを見た再配置とルーティングを可能にする。",
-    "authors": [
-      "Yiyuan He",
-      "Minxian Xu",
-      "Jingfeng Wu",
-      "Jianmin Hu",
-      "Chong Ma",
-      "Min Shen",
-      "Le Chen",
-      "Chengzhong Xu",
-      "Lin Qu",
-      "Kejiang Ye"
-    ],
-    "authors_affiliations": "Southern University of Science and Technology; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences; State Key Lab of IOTSC, University of Macau; Alibaba Group AIOS Team.",
-    "published": "2025-10-15",
-    "publication": "Software: Practice and Experience 2026; DOI 10.1002/spe.70054",
-    "publication_type": "学術誌論文",
-    "publication_status": "Journal reference listed on arXiv; arXiv v1 dated 2025-10-15",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "プリフィル・デコード分離",
-      "動的モジュール移動",
-      "KVキャッシュ共有",
-      "CPU/SSD KVストア",
-      "負荷分散",
-      "階層メモリ"
-    ],
-    "importance": "高。計算配置とKV状態配置の結合を解くため、重み・注意ヘッド・共有KVストアという異なる粒度を組み合わせ、分離サービングと階層メモリの双方に直接関係する。",
-    "hardware_evaluation": "実機評価。13Bモデルを用い、Alibaba AIOS Team提供の大規模実験基盤で性能検証したと本文が記載する。本文テキストから本評価クラスタのGPU型式・台数の完全な構成は確認できない。",
-    "hardware_details": "導入部の資源利用分析では単一A100上のLLaMA-13Bを使用。主評価ではLLaMA-13B/OPT-13Bを用いたが、HTML本文で評価クラスタのGPU型式・台数を明示する記述は確認できなかったため推測しない。共有KVストアはCPU/SSD-backedとして設計され、例示計算では200 Gbpsの有効帯域を用いる。",
-    "quality_effect": "システム性能を主対象とし、モデルの意味品質を変更する圧縮・近似は導入しない。層移動では重みとKV状態を共に移し、注意ヘッド分割でも部分結果を合成して元の注意計算を再現する設計だが、タスク品質指標の比較は主評価では報告されていない。",
-    "storage_targets": [
-      "GPU上のモデル重み",
-      "GPU上のKVキャッシュ",
-      "共有CPU/SSD-backed Global KV Cache Store"
-    ],
-    "bottlenecks": [
-      "固定されたプリフィル／デコードGPU比率",
-      "プリフィルとデコード間の計算・メモリ利用率非対称",
-      "接頭辞キャッシュ局所性によるルーティング偏り",
-      "重み移動コスト",
-      "KVキャッシュ転送",
-      "動的負荷変動"
-    ],
-    "evidence_locations": [
-      "§1 Introduction",
-      "§2.3–2.4",
-      "§4.1 Dynamic Migration For Modules",
-      "§4.2 Global KV Cache Store",
-      "§4.3 Performance Model",
-      "§4.4 Runtime Algorithms",
-      "§5 Evaluations",
-      "§6 Conclusions, Discussions and Future Work"
-    ],
-    "source": "https://arxiv.org/abs/2510.13223",
-    "sources": [
-      "https://arxiv.org/abs/2510.13223",
-      "https://arxiv.org/html/2510.13223v1",
-      "https://doi.org/10.1002/spe.70054"
-    ],
-    "code": "",
-    "implementation": "vLLMおよびDistServe系のサービング基盤上にBanaServeを実装したと本文に記載。確認したarXivページと本文には著者公式コードリポジトリURLの明示はない。",
-    "last_checked": "2026-09-15",
-    "references": [
-      {
-        "canonical_id": "arXiv:2407.00079",
-        "arxiv_id": "2407.00079"
-      },
-      {
-        "canonical_id": "arXiv:2406.17565",
-        "arxiv_id": "2406.17565"
-      },
-      {
-        "canonical_id": "arXiv:2501.14743",
-        "arxiv_id": "2501.14743"
-      },
-      {
-        "canonical_id": "arXiv:2504.19867",
-        "arxiv_id": "2504.19867"
-      },
-      {
-        "canonical_id": "arXiv:2401.08671",
-        "arxiv_id": "2401.08671"
-      }
-    ],
-    "references_checked_at": "2026-09-15",
-    "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": 37
-  },
+  "attempt_id": "attempt-99472a28aecd6daa3d12d9ad",
+  "job_id": "job-research-ad7e8d527bf159c7",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-109544c151ee7ef15991a199",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "claim_id": "claim-99472a28aecd6daa3d12d9ad",
+    "worker_id": "scheduled-chat-paper-20260915T0630JST",
     "worker_kind": "scheduled_chat"
   }
 }

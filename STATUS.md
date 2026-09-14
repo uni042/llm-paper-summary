@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 06:17 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 06:31 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -39,25 +39,25 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
-| 処理速度 | **OK** |
+| 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **42** |
-| 有効claim（lease） | **1** |
-| 今すぐ着手可能（Claimable） | **43** |
-| 有効leaseを持つworker run | **1** |
-| :30 最新worker run | **2026-09-15T05:30:00+09:00** |
+| 有効claim（lease） | **2** |
+| 今すぐ着手可能（Claimable） | **42** |
+| 有効leaseを持つworker run | **2** |
+| :30 最新worker run | **2026-09-15T06:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
-| :30 旧run由来の有効claim | **0** |
+| :30 旧run由来の有効claim | **1** |
 | :00 最新worker run | **—** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 06:17 JST** |
+| :30 通常worker 直近lease活動 | **09-15 06:31 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **46** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
-| 最新通常run | **2026-09-15T05:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
+| 最新通常run | **2026-09-15T06:30:00+09:00** |
+| 最新通常runのResearch完了 | **0** |
 | 最古の有効claimの経過時間 | **0 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
@@ -67,6 +67,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
+
+- **処理速度 LOW**: ready=42 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 
 有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
