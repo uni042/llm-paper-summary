@@ -4,10 +4,47 @@
   "slot": "metadata",
   "attempt_id": "attempt-4b9a71ce575511cd9107babd",
   "job_id": "job-research-706a6d2571f24fb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4b9a71ce575511cd9107babd",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2603.09046",
+    "arxiv_id": "2603.09046",
+    "doi": "10.48550/arXiv.2603.09046",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.CR","cross_list":["cs.LG","cs.OS"]},
+    "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+    "summary": "端末内大規模言語モデル（LLM）をARM TrustZoneのセキュア世界（secure world）で保護すると、GB級の連続セキュアメモリ確保、通常世界（normal world）と分断された資源管理、NPUの固定隔離が大きな起動遅延と通常アプリへの資源圧迫を生む。FlexServeはアクセス権と管理権を分離し、通常OSから内容は読めないままページ単位で割当・回収できるFlex-Memと、必要時だけセキュア世界へ切り替えるFlex-NPUを構築する。さらに層単位のセキュア推論パイプライン、モデル重み/KVの動的キャッシュ、二段階非同期回収、ワークフロー認識先読みを組み合わせる。NanoPC-T6実機で単一モデルの先頭トークン遅延を素朴なTrustZone構成比平均10.05倍、最適化TrustZone構成比平均2.44倍高速化し、通常アプリ性能を非推論時の97.2%に維持する。",
+    "list_summary": "TrustZoneのアクセス権と資源管理権を分離してページ単位セキュアメモリと切替可能NPUを実現し、LLM向けキャッシュ・回収・先読みでセキュア端末内推論の起動遅延を大幅に削減する。",
+    "authors": ["Yinpeng Wu","Yitong Chen","Lixiang Wang","Jinyu Gu","Zhichao Hua","Yubin Xia"],
+    "authors_affiliations": "Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University",
+    "published": "2026-03-10",
+    "publication": "arXiv:2603.09046v3",
+    "publication_type": "プレプリント",
+    "publication_status": "プレプリント（arXiv v3、2026-07-01改訂）",
+    "lineage": "on-device LLM serving / TEE / TrustZone / mobile NPU isolation",
+    "topics": ["端末内LLM","ARM TrustZone","TEE","NPU隔離","セキュアメモリ","KVキャッシュ","メモリ管理","マルチモデルエージェント"],
+    "importance": "従来のTrustZone設計で固定的にセキュア資源を切り出すのではなく、内容へのアクセスを禁止したまま通常OSへ資源管理権を残す権限分離で、セキュリティと端末資源利用率を両立する。モデル重み・KVの再利用特性までセキュアメモリ回収へ接続する点が、端末内LLMシステムとして重要である。",
+    "hardware_evaluation": "NanoPC-T6開発ボード（8-core CPU、16GB DRAM、6 TOPS NPU、2.65GB/s SSD）で実機評価する。",
+    "hardware_details": "Linux kernel 6.1.57、OP-TEE 4.5.0。NPUはベンダー非公開ランタイムの代わりにコミュニティのリバースエンジニアリング実装を利用してINT8 GEMMを実行する。",
+    "quality_effect": "FlexServe自体はモデルの数値近似を追加しない。同一のINT8モデルをセキュア世界で実行する隔離・資源管理方式であり、主要な交換条件は起動遅延、キャッシュ占有量、通常アプリ性能、保護範囲である。",
+    "storage_targets": ["Flex-Mem","通常世界DRAM","SSD","モデル重みキャッシュ","KVキャッシュ"],
+    "bottlenecks": ["GB級セキュアメモリの連続物理確保","NPUのsecure/normal切替","モデルロードI/O","暗号化・復号","secure/normal間で分断されたメモリ管理"],
+    "evidence_locations": ["§4 Recallable Resource Isolation","§5 FlexServe Framework","§6 Implementation","§7 Evaluation","§8.1 Security Analysis"],
+    "references": [
+      {"canonical_id":"arXiv:2511.13717","arxiv_id":"2511.13717"},
+      {"canonical_id":"arXiv:2409.00088","arxiv_id":"2409.00088"},
+      {"canonical_id":"arXiv:2509.00531","arxiv_id":"2509.00531"},
+      {"canonical_id":"arXiv:2412.08905","arxiv_id":"2412.08905"},
+      {"canonical_id":"arXiv:2503.19786","arxiv_id":"2503.19786"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv:2603.09046v3 一次資料の参考文献節",
+    "references_total": 80,
+    "source": "https://arxiv.org/abs/2603.09046",
+    "sources": ["https://arxiv.org/abs/2603.09046","https://arxiv.org/pdf/2603.09046"],
+    "code": null,
+    "implementation": "NanoPC-T6上に試作実装。Flex-Monitor約4.5K LoC、C/C++の信頼アプリケーション（Trusted Application）としてFlexServe Framework約8.3K LoCを実装し、Llama3/Qwen3系列をサポートする。論文本文からFlexServe本体の公開リポジトリURLは確認できない。",
+    "last_checked": "2026-09-14",
+    "last_audited": null,
+    "audit_version": 0
+  },
+  "reservation": {"claim_id":"claim-4b9a71ce575511cd9107babd","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
