@@ -35,6 +35,32 @@ def _parse_dt(value: str | None) -> datetime | None:
         return None
 
 
+def _is_ordinary_research_run(entry: dict[str, Any], maintenance: dict[str, Any]) -> bool:
+    """Return whether a ledger entry represents an ordinary :30 paper-worker run."""
+    stamp = _parse_dt(entry.get("run_key") or entry.get("last_recorded_at"))
+    if stamp is None:
+        return False
+    jst = stamp.astimezone(JST)
+    if jst.minute != 30 or jst.hour == 8:
+        return False
+    if int(maintenance.get("runs_since_maintenance") or 0) == 0:
+        maintenance_key = str(maintenance.get("last_counted_run_key") or "")
+        if maintenance_key and str(entry.get("run_key") or "") == maintenance_key:
+            return False
+    return True
+
+
+def _latest_normal_run(entries: list[dict[str, Any]], maintenance: dict[str, Any]) -> dict[str, Any]:
+    valid = [entry for entry in entries if _is_ordinary_research_run(entry, maintenance)]
+    if not valid:
+        return {}
+    return max(
+        valid,
+        key=lambda entry: _parse_dt(entry.get("run_key") or entry.get("last_recorded_at"))
+        or datetime.min.replace(tzinfo=timezone.utc),
+    )
+
+
 def _in_window(item: dict[str, Any], cutoff: datetime, now: datetime) -> bool:
     dt = _parse_dt(item.get("run_key") or item.get("last_recorded_at") or item.get("recorded_at"))
     if dt is None:
@@ -196,7 +222,7 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     accepted_24 = sum(int(e.get("accepted_count") or 0) for e in specialist_24)
     novel_24 = sum(int(e.get("novel_candidate_count") or 0) for e in specialist_24)
 
-    latest_run = ledger_entries[-1] if ledger_entries else {}
+    latest_run = _latest_normal_run(ledger_entries, maintenance)
     latest_run_counts = latest_run.get("counts") or {}
     latest_run_key = str(latest_run.get("run_key") or "")
     latest_normal_discovery = normal_discovery_by_key.get(latest_run_key, {
