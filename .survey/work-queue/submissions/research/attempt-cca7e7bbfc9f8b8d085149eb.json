@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-cca7e7bbfc9f8b8d085149eb",
+  "job_id": "job-research-8d796418f10a7d6b",
+  "claim_id": "claim-cca7e7bbfc9f8b8d085149eb",
+  "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+  "worker_kind": "scheduled_chat",
+  "depends_on_job_ids": ["job-research-8d796418f10a7d6b"],
+  "status": "blocked",
+  "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10861-reach-controller-managed-hbm-ecc-ai-inference.md",
+  "reason": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The arXiv abstract/search result is accessible and confirms the current identity and abstract-level metrics, but direct current-version arXiv HTML fetch returned a cache-miss error and no full 53-page manuscript was retrievable. Retrieval retried at https://arxiv.org/abs/2609.10861 and https://arxiv.org/html/2609.10861. The older related arXiv:2512.18152 reports materially different results and is not substituted. Per workflow v10, no five-slot record is inferred from abstract/search snippets; retry when the current primary full text is retrievable."
+}
