@@ -2,11 +2,45 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ae38ae394f339045ee86f008",
-  "job_id": "job-research-89a31b528bef1df7",
-  "data": {},
+  "attempt_id": "attempt-ae339d2dff463d632d44d8d8",
+  "job_id": "job-research-cc8a88103bff770a",
+  "data": {
+    "hardware": "NVIDIA A100 80GB単一GPU。共有メモリ164KB/SMを前提に既定μ=8を評価。",
+    "software": "公開FluxBin CUDA実装。Hugging Face生成コードを変更し、CUDA Graphと静的KVキャッシュを使用。比較にはFP16、GPTQ、OmniQuant、SLiM-LLM、AQLM、QuIP#、AutoAWQなどを使用。",
+    "models": [
+      "LLaMA-2 7B",
+      "LLaMA-2 13B",
+      "LLaMA-2 70B",
+      "LLaMA-3.1 8B",
+      "LLaMA-3.1 70B",
+      "Qwen3 8B",
+      "Qwen3 14B",
+      "Qwen3 32B"
+    ],
+    "datasets": [
+      "WikiText-2",
+      "PIQA",
+      "ARC-easy",
+      "ARC-challenge",
+      "BoolQ",
+      "HellaSwag",
+      "Winogrande",
+      "C4校正データ"
+    ],
+    "baselines": [
+      "FP16",
+      "GPTQ",
+      "OmniQuant",
+      "SLiM-LLM",
+      "AQLM",
+      "QuIP#",
+      "AutoAWQ"
+    ],
+    "methodology": "主表ではLLaMA-2系列の困惑度、6種ゼロショット課題の平均精度、トークン毎秒を比較する。速度評価は入力長512・出力長512を基本とし、バッチサイズを変えたエンドツーエンドとデコード単独も測る。最大GPUメモリは入力512・出力512で測定する。電力はnvidia-smiを100ms間隔で定常デコード中に採取し、最初の10秒を除いて電力を積分して総エネルギーを算出する。量子化校正はC4から256サンプルを既定とし、重要列数、グループサイズ、校正サンプル数、部分ベクトル長の感度も評価する。",
+    "scope": "実機性能は単一NVIDIA A100 80GB中心で、他GPU世代やCPU、モバイル、複数GPU通信は実測していない。量子化は学習不要の学習後量子化であり、タスク別微調整を含まない。"
+  },
   "reservation": {
-    "claim_id": "claim-ae38ae394f339045ee86f008",
+    "claim_id": "claim-ae339d2dff463d632d44d8d8",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }

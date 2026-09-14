@@ -2,11 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ae38ae394f339045ee86f008",
-  "job_id": "job-research-89a31b528bef1df7",
-  "data": {},
+  "attempt_id": "attempt-ae339d2dff463d632d44d8d8",
+  "job_id": "job-research-cc8a88103bff770a",
+  "data": {
+    "overview": "FluxBinはLLaMA-2でFP16比最大5.92倍の生成速度向上を示し、デコード単独ではバッチ1で6.3〜6.6倍の高速化を報告する。2基底・重要列8/16の構成は7Bで約251〜254トークン/秒、13Bで約163トークン/秒、70Bで約61トークン/秒である。LLaMA-2-70BはFP16ではA100 80GBでメモリ不足になる一方、純2ビット構成は約20.2GBで動作する。13Bの電力・エネルギー測定ではFP16の225.49W・5908.03Jに対し純2ビット構成が113.86W・579.23Jで、総エネルギーは10.19倍削減された。",
+    "key_results": [
+      {
+        "metric": "最大エンドツーエンド高速化",
+        "value": "5.92倍",
+        "baseline": "FP16",
+        "condition": "NVIDIA A100 80GB、評価対象LLM生成",
+        "interpretation": "重み転送削減だけでなく、逆量子化をLUT参照へ置換した効果が実速度へ反映される。"
+      },
+      {
+        "metric": "デコード単独高速化",
+        "value": "6.3〜6.6倍",
+        "baseline": "FP16",
+        "condition": "バッチ1",
+        "interpretation": "自己回帰デコードのHBM律速で約2ビット重みとLUT計算が特に効く。"
+      },
+      {
+        "metric": "LLaMA-2-70B最大メモリ",
+        "value": "20.25GB",
+        "baseline": "FP16はOOM",
+        "condition": "FluxBin 2b-g128、入力512・出力512",
+        "interpretation": "70B級を単一A100へ収容でき、重み圧縮が実配置可能性を変える。"
+      },
+      {
+        "metric": "LLaMA-2-13B総エネルギー",
+        "value": "579.23J",
+        "baseline": "FP16 5908.03J",
+        "condition": "FluxBin 2b-g128、入力128・出力128、バッチ1",
+        "interpretation": "推論時間短縮と平均電力低下が重なり10.19倍のエネルギー削減になる。"
+      },
+      {
+        "metric": "LLaMA-2-7B平均ゼロショット精度",
+        "value": "59.15%",
+        "baseline": "QuIP# 59.41%、AQLM 58.64%",
+        "condition": "FluxBin 2b-s16-g128、実効2.75ビット",
+        "interpretation": "学習不要でも追加重要列基底により微調整型のQuIP#に近い精度を維持する。"
+      }
+    ],
+    "negative_results": "精度はFP16と同等ではない。LLaMA-2-7BではFP16平均67.07%に対し主な2.75ビット構成は59.15%である。重要列探索を外すとWikiText-2困惑度が8.20から26.02へ悪化し、追加基底を外しても13.71へ悪化する。仮想列マッピングを外すと速度は250.87から205.68トークン/秒へ低下し、最大メモリは3475MBから4640MBへ増える。校正サンプルを1024まで増やすと平均精度が256サンプル時58.77%から58.07%へ低下し、校正時間も約25.5分から約74.6分へ増える。",
+    "interpretation": "高速化は三つの効果で説明できる。約2ビット重みによりHBM転送量を大幅に減らし、LUTで複数FMAを一回の共有メモリ参照へまとめ、さらに逆量子化のビット操作・型変換をALUから外す。実測でもGPU busy時間は99.8%以上となり、FP16の67〜87%より待ちが少ない。一方で共有メモリ上のLUT容量が新たな資源制約になるため、任意ハードウェアで同じ設定が使えるわけではない。",
+    "quality_impact": "重要列追加基底は純2ビットより精度を改善するが、FP16との差は残る。精度、平均ビット幅、重要列数、LUT共有メモリ量の間に明確なトレードオフがある。"
+  },
   "reservation": {
-    "claim_id": "claim-ae38ae394f339045ee86f008",
+    "claim_id": "claim-ae339d2dff463d632d44d8d8",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }

@@ -2,11 +2,108 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-ae38ae394f339045ee86f008",
-  "job_id": "job-research-89a31b528bef1df7",
-  "data": {},
+  "attempt_id": "attempt-ae339d2dff463d632d44d8d8",
+  "job_id": "job-research-cc8a88103bff770a",
+  "data": {
+    "canonical_id": "arXiv:2608.15602",
+    "arxiv_id": "2608.15602",
+    "doi": "10.48550/arXiv.2608.15602",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy",
+    "summary": "FluxBinは、重みを約2〜3ビットへ圧縮しても実機で十分速くならない問題を、量子化アルゴリズムとCUDAカーネルの共同設計で解く学習不要の推論方式である。まず行方向と列方向の尺度を分離した二値基底分解で重みを表し、入力活性から推定したヘッセ行列に基づいて誤差へ敏感な列だけを選び、その列に追加の二値基底を与える。これにより全要素を高精度化せず表現力を補う。実行時には重要列を仮想列マッピングで密な行列へ詰め替え、列尺度をルックアップ表構築へ融合したLUT-BSFカーネルで、FP16へ逆量子化せず圧縮ビット列から部分和を直接参照する。NVIDIA A100 80GBの実測では最大5.92倍の推論高速化、LLaMA-2-13Bで最大10.19倍の総エネルギー削減を報告し、FP16では収まらないLLaMA-2-70Bを約20.2GBで実行する。主な制約は、ルックアップ表が部分ベクトル長に対して指数的に共有メモリを消費することと、純粋な学習後量子化のため微調整方式に対して精度差が残ることである。",
+    "list_summary": "重要列だけをヘッセ行列で選んで追加二値基底を与え、逆量子化を避けるLUT融合CUDAカーネルで約2〜3ビットLLMを実行し、A100で最大5.92倍高速化・10.19倍省エネルギーを報告する。",
+    "authors": [
+      "Qingyao Yang",
+      "Runming Yang",
+      "He Xiao",
+      "Wendong Xu",
+      "Junyu Chen",
+      "Haobo Liu",
+      "Chenchen Ding",
+      "Ruihan Hu",
+      "Yik-Chung Wu",
+      "Ngai Wong"
+    ],
+    "authors_affiliations": "主にThe University of Hong Kong。Ruihan HuはHarbin Institute of Technology。",
+    "published": "2026-08-16",
+    "publication": "arXiv:2608.15602v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-08-16）。",
+    "lineage": "hardware-accelerators",
+    "topics": [
+      "超低ビット量子化",
+      "二値基底",
+      "LUT推論",
+      "CUDAカーネル",
+      "学習後量子化",
+      "GPU推論"
+    ],
+    "importance": "高。圧縮率だけでなく、逆量子化を避ける実行カーネルまで共同設計し、70B級単一GPU実行・速度・エネルギーを同時に実測している。",
+    "hardware_evaluation": "NVIDIA A100 80GB単一GPU。LLaMA-2 7B/13B/70B、LLaMA-3.1 8B/70B、Qwen3 8B/14B/32Bを評価。",
+    "hardware_details": "NVIDIA A100 80GB。共有メモリは164KB/SM。主設定μ=8ではバッチ8のブロック当たり共有メモリ136KBと報告される。",
+    "quality_effect": "2.63〜2.75実効ビット幅の主設定ではFP16より精度低下するが、LLaMA-2-7Bの平均ゼロショット精度は59.15%でQuIP# 59.41%に近く、AQLM 58.64%を上回る構成がある。純粋な2ビット化より重要列追加基底で精度を回復する。",
+    "storage_targets": [
+      "LLM重み",
+      "二値基底の行・列尺度",
+      "重要列インデックスと追加基底"
+    ],
+    "bottlenecks": [
+      "低ビット重みのFP16逆量子化オーバーヘッド",
+      "HBMからの重み転送",
+      "非構造重要重みによる不規則アクセス",
+      "LUTの共有メモリ容量"
+    ],
+    "evidence_locations": [
+      "§3 Methodology",
+      "§4 Experiments",
+      "Table 1",
+      "Table 2",
+      "§5 Limitations",
+      "Appendix C.2-C.3",
+      "Appendix E.1-E.2"
+    ],
+    "source": "https://arxiv.org/abs/2608.15602",
+    "sources": [
+      "https://arxiv.org/abs/2608.15602",
+      "https://arxiv.org/html/2608.15602"
+    ],
+    "code": "https://github.com/nicyyyy/FluxBin",
+    "implementation": "公開CUDA実装あり。Hugging Face生成経路を変更しCUDA Graphと静的KVキャッシュを用い、プリフィルとデコードの両カーネルを捕捉して評価している。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {
+        "canonical_id": "arXiv:2210.17323",
+        "arxiv_id": "2210.17323"
+      },
+      {
+        "canonical_id": "arXiv:2206.09557",
+        "arxiv_id": "2206.09557"
+      },
+      {
+        "canonical_id": "arXiv:2307.09288",
+        "arxiv_id": "2307.09288"
+      },
+      {
+        "canonical_id": "arXiv:2405.14917",
+        "arxiv_id": "2405.14917"
+      },
+      {
+        "canonical_id": "arXiv:2410.03129",
+        "arxiv_id": "2410.03129"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 38
+  },
   "reservation": {
-    "claim_id": "claim-ae38ae394f339045ee86f008",
+    "claim_id": "claim-ae339d2dff463d632d44d8d8",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
