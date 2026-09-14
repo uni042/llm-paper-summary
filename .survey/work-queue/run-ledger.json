@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-13T23:48:17.478426+00:00",
+  "updated_at": "2026-09-14T01:15:57.532401+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,12 +18680,13 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-13T23:48:17.478426+00:00",
+      "last_recorded_at": "2026-09-14T01:15:57.532401+00:00",
       "signals": [
-        "paper_materialized"
+        "paper_materialized",
+        "research_completed"
       ],
       "counts": {
-        "research_completed": 0,
+        "research_completed": 1,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18707,9 +18708,32 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34795341440:1",
+          "recorded_at": "2026-09-14T01:15:57.532401+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34795341440",
+            "run_attempt": "1",
+            "source_sha": "0aaf3e523a690302089f67e4b057c74ef4a58b4e"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
-      "terminal_transitions": [],
+      "terminal_transitions": [
+        {
+          "job_id": "job-research-0a982340eead3672",
+          "type": "research",
+          "canonical_id": "arXiv:2605.20868",
+          "title": "Runtime-Certified Bounded-Error Quantized Attention",
+          "from": "ready",
+          "to": "completed"
+        }
+      ],
       "new_jobs": [],
       "new_paper_ids": [
         "arXiv:2512.17910",
@@ -18720,8 +18744,8 @@
       "new_discovery_results": [],
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 458,
-      "last_successful_action": "paper_materialized"
+      "paper_active_count_after": 464,
+      "last_successful_action": "research_completed"
     }
   ]
 }
