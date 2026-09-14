@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-1ebd066dfd741cf5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.13734",
+      "title": "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.13734",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.13734-kvserve-service-aware-kv-compression.md",
+      "priority": 93,
+      "reason": "prefill/decode分離やKV state分離ではKV自体がnetwork/storageを跨ぐ主要payloadとなる一方、固定compression設定ではworkload mix・bandwidth・SLO/quality budget変動に追随できない問題に対し、複数compression componentを再構成可能なstrategy space、Bayesian profilingで3D Pareto候補を抽出するoffline engine、analytical latency modelとlightweight banditを組み合わせるonline controllerを設計する。vLLM統合評価でPD-separated servingのJCTを最大9.13倍、KV-disaggregated servingのTTFTを最大32.8倍改善し、通信圧縮とruntime resource adaptationを結ぶsystems研究として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-kvserve-25",
+    "axis": "service-aware KV communication compression・disaggregated serving",
+    "query_summary": "disaggregated servingのnetwork/storage bottleneckを探索し、KVServe（2605.13734）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、最新queueはresearch ready 44でoverflow条件未満だった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Actions反映後のinventoryを再確認し、overflow未満ならrecent distributed KV/prefix cache・MoE servingを追加探索する。",
+    "empty_round_reason": null
+  }
+}
