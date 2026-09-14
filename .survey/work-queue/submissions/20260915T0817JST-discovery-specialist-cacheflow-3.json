@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f7399b3e773e1558",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2604.25080",
+      "title": "CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration",
+      "source_url": "https://arxiv.org/abs/2604.25080",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.25080-cacheflow-3d-parallel-kv-cache-restoration.md",
+      "priority": 85,
+      "reason": "長文脈LLMで外部ストレージからのKV復元と再計算を要求単位の二択として扱う従来方式に対し、token・layer・GPUの3次元並列として再定式化し、計算とI/Oを構造依存に沿って細粒度に重畳する。さらにbatch内の複数要求を対象に、再計算コスト削減の限界利益が高い処理へ資源を配るbatch-aware two-pointer schedulerを導入する。多様なモデル・workload・hardwareで既存手法比TTFTを10〜62%削減しており、KV offload・階層メモリ・I/O schedulingの重点テーマへ直接つながる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-cacheflow-3",
+    "axis": "KV復元の計算・I/O協調と3次元並列化",
+    "query_summary": "長文脈要求のKV復元を外部I/Oと再計算の協調問題として扱う研究を探索した。CacheFlow（arXiv:2604.25080）は一次資料で3D parallel restorationとbatch-aware schedulerを確認し、最新repo検索・commit検索では同IDを確認できなかったため候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はKV圧縮対tensor parallelismのコスト境界、または外部KV復元をSSD/NVMeのI/O schedulingへ直接接続する研究を探索する。",
+    "empty_round_reason": null
+  }
+}
