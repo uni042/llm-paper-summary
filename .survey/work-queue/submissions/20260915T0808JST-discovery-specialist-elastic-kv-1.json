@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f7399b3e773e1558",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.23658",
+      "title": "Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap",
+      "source_url": "https://arxiv.org/abs/2608.23658",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.23658-elastic-kv-cache-reclamation-chunked-prefill.md",
+      "priority": 79,
+      "reason": "LLM servingでprefill活性化用に固定予約されるGPUメモリをdecode優勢期間だけKV poolへ貸し出し、次prefill前にCUDA仮想メモリ（CUDA virtual memory）で回収するuserspace機構を実装・評価する。動的decommit/recommit自体が実用的に成立することを示す一方、chunked prefillの設定変更だけでほぼ同等以上の容量回復が得られ、TP4では予約領域比率も2.7%まで薄まるという負の結果を明示している。KV容量管理・CUDA VMM・scheduler協調の境界条件を実装付きで定量化しており、既存のKV offload/eviction研究とは異なるメモリ再利用の設計点として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-elastic-kv-1",
+    "axis": "動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域",
+    "query_summary": "KV容量不足に対する動的メモリ回収と近接する最近のserving研究を軽量評価した。Elastic KV Cache（arXiv:2608.23658）は最新identityに未収録。Robust KV Cache Management（arXiv:2607.16892）とSwiftCache（arXiv:2606.16135）は最新identityで既収録のため除外した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2607.16892",
+      "arXiv:2606.16135"
+    ],
+    "next_axis_hint": "次はGPU HBMとPNM/CXLを跨ぐretrieval-based sparse attention、またはKV圧縮とtensor parallelismのコスト境界へ軸を移し、既収録identityと照合する。",
+    "empty_round_reason": null
+  }
+}
