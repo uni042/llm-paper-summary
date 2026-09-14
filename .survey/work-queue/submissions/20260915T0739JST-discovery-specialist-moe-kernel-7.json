@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-15c0335aaa7eded8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04244",
+      "title": "MonoMoE: An Efficient Fused Mega-kernel for Quantized MoE Decoding",
+      "source_url": "https://arxiv.org/abs/2609.04244",
+      "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.04244-monomoe-fused-megakernel-quantized-moe-decoding.md",
+      "priority": 84,
+      "reason": "量子化MoEの自己回帰デコードで、少数トークン/専門家ゆえにgrouped GEMMのパディング・前処理・短命kernel起動が帯域利用を悪化させる問題に対し、重み主導の永続mega-kernelへrouting、top-k、量子化、2段の専門家射影、活性化、reductionを融合する。vLLM統合のH200評価でMoE演算を最大1.54倍、FlashMoE-FP8適応比2.20〜3.84倍高速化し、出力トークン時間を最大18.7%削減すると報告している。FlashInfer実装公開もあり、MoE推論kernelの重点テーマに直接該当する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-moe-kernel-7",
+    "axis": "MoEデコードkernel・CPU/GPU協調・エネルギー制御",
+    "query_summary": "FlexGen/FlashMoE/DistServe系統から2026年の派生・隣接systemsを探索し、FlashMoE（arXiv:2601.17063）、BiScale（arXiv:2602.18755）、CoX-MoE（arXiv:2605.17889）、MonoMoE（arXiv:2609.04244）を軽量評価した。最新identityで前3件は既収録、MonoMoEのみ未収録だった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2601.17063",
+      "arXiv:2602.18755",
+      "arXiv:2605.17889"
+    ],
+    "next_axis_hint": "重要論文のbackward referenceとOS/DBMS隣接分野へ移り、ページング、キャッシュ置換、I/O優先制御のLLM応用で未収録の基礎またはsystems論文を探索する。",
+    "empty_round_reason": null
+  }
+}
