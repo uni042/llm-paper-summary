@@ -1,20 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-aa50a0cd3dff67ae166e5ed4",
-  "job_id": "job-research-3d2c01823fde74e9",
   "slot": "results",
-  "data": {
-    "overview": "llada.cppは、単なるNPU演算置換ではなく復号とメモリ管理を共同最適化することで、LLaDA-8Bを接頭辞KV再利用付きCPU基準より17～42倍高速化する。SM8750のGSM8K 128トークン分解ではCPU 2996.2秒から最終構成16.1秒まで縮小し、単純NPUオフロードやKV再利用の上に交換最適化、多ブロック投機、段階的安定化が累積的に効く。品質面では多ブロック投機単独の低下を二経路改訂が回復し、4タスクでCPU版LLaDAと概ね同程度を保つ。",
-    "key_results": [
-      {"metric": "LLaDA-8B生成遅延", "value": "17～42倍短縮", "baseline": "接頭辞KVキャッシュ再利用付きCPU基準", "condition": "スマートフォン実機、32/64/128トークンを含むエンドツーエンド評価", "interpretation": "NPU向け復号・メモリ共同設計がCPU側KV再利用だけより大幅に速い。"},
-      {"metric": "128トークンGSM8K遅延", "value": "16.1秒", "baseline": "CPU 2996.2秒、CPU+prefix KV 607.0秒", "condition": "OnePlus Ace5 Pro/SM8750、全主要機構を有効化", "interpretation": "分解表ではCPU比186.34倍、CPU+prefix比約37.7倍で、抽象化した全体17～42倍という主張の範囲を具体例で裏付ける。"},
-      {"metric": "4タスク品質", "value": "GSM8K 43.5、BoolQ 80.5、ARC-C 85.0、HellaSwag 49.5", "baseline": "LLaDA CPU 39.0/82.5/84.0/51.0", "condition": "各200例、NPU+MBSD+DPPR", "interpretation": "高速化が一貫した精度崩壊を伴わず、CPU経路との差は数ポイント以内。"},
-      {"metric": "メモリ境界", "value": "256/512トークン設定を実行可能", "baseline": "SOMRなしは両設定でfailed、paging-onlyも512でfailed", "condition": "SM8750、NPU可視アドレス圧力を高める長出力", "interpretation": "グラフ誘導配置と転送重畳が単なるページ置換より実行可能領域を広げる。"}
-    ],
-    "negative_results": "128トークン生成では古いSM8650上のllada.cppは同規模Llama自己回帰よりまだ遅く、SM8750/SM8850で初めて上回る。多ブロック投機だけを有効にするとGSM8K 41.5→37.5、BoolQ 82.0→79.5、ARC-C 83.5→82.0、HellaSwag 50.0→46.0へ低下し、品質維持には二経路改訂が必要。交換最適化を有効にしても256目標で224、512目標で401トークン出力となる境界ケースがあり、目標長を完全に満たすことまでは示していない。SM8850ではNPU FlashAttention未対応でCPUを使う。",
-    "interpretation": "利得はNPUのピークTOPSだけでは決まらない。古いSoCでは密計算能力が不足して自己回帰Llamaを越えず、新しいSoCではNPU演算が速くなるほどCPU側の状態管理やスケジューリングが露出して相対速度向上が単調でなくなる。段階分解では接頭辞KV再利用とNPU化が大きな基礎利得を作り、その後にSOMRと投機が上積みし、最も大きい追加改善はトークン安定化で得られる。",
-    "quality_impact": "損失なしを数学的に保証する方式ではなく、投機と確信度しきい値を使う近似的実行である。多ブロック投機単独は品質を下げるが、未安定トークンを改訂可能に保つDPPRと疎なCPU側更新により、評価した4タスクではCPU LLaDAに近い精度へ回復する。"
-  },
-  "reservation": {"claim_id": "claim-aa50a0cd3dff67ae166e5ed4", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-1ff47e348a4a8a751a184287",
+  "job_id": "job-research-73651b83b5a764d9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1ff47e348a4a8a751a184287",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

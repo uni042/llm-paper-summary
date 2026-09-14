@@ -1,49 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-aa50a0cd3dff67ae166e5ed4",
-  "job_id": "job-research-3d2c01823fde74e9",
   "slot": "metadata",
-  "data": {
-    "canonical_id": "arXiv:2606.13740",
-    "arxiv_id": "2606.13740",
-    "doi": "10.48550/arXiv.2606.13740",
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.LG", "cross_list": []},
-    "title": "Efficient On-Device Diffusion LLM Inference with Mobile NPU",
-    "summary": "llada.cppは、ブロック単位の拡散大規模言語モデル（diffusion large language model; dLLM）をスマートフォンのニューラル処理装置（neural processing unit; NPU）へ適合させる推論実行系である。後半ほど有効トークン数が減ってNPUの密行列演算性能を使い切れない問題、未確定トークンの改訂が接頭辞KVキャッシュ再利用を難しくする問題、NPU可視仮想アドレス空間が狭く重み・KV・作業領域の再マッピングと転送が発生する問題を共同で扱う。将来ブロックを投機的に混ぜる多ブロック投機復号、可視化と安定化を分離してCPU側で疎に状態を更新する二経路漸進改訂、計算グラフに基づくNPU可視メモリ配置と二重バッファ転送を組み合わせる。Qualcomm Hexagon NPU向けにllama.cppを12,000行超拡張し、LLaDA-8Bで接頭辞KV再利用付きCPU基準より生成遅延を17～42倍短縮しつつ、4種ベンチマークでCPU経路に近い精度を維持した。",
-    "list_summary": "スマートフォンNPU向けに多ブロック投機復号、CPU側の疎な改訂、NPU可視メモリの交換最適化を統合し、LLaDA-8Bを接頭辞KV再利用付きCPU基準比17～42倍高速化する。",
-    "authors": ["Tuowei Wang", "Yanfan Sun", "Ju Ren"],
-    "authors_affiliations": "Tuowei WangとJu RenはTsinghua University、Yanfan SunはBeihang University。Ju Renが責任著者。",
-    "published": "2026-06-11",
-    "publication": "arXiv:2606.13740v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2026-06-11）。一次資料で査読付き会議・論文誌への採択は確認できない。",
-    "lineage": "edge-on-device-llm-systems",
-    "topics": ["オンデバイスLLM", "拡散LLM", "モバイルNPU", "KVキャッシュ", "投機的復号", "メモリ管理"],
-    "importance": "高。拡散LLMの復号アルゴリズムだけでなく、NPUの静的・密計算特性、CPUによる改訂経路、NPU可視仮想アドレス制約を一体として扱い、スマートフォン実機上のエンドツーエンド実行系まで実装している。",
-    "hardware_evaluation": "OnePlus 12（Snapdragon 8 Gen3/SM8650）、OnePlus Ace5 Pro（Snapdragon 8 Elite/SM8750）、OnePlus 15（Snapdragon 8 Elite Gen5/SM8850）の実機評価。",
-    "hardware_details": "各端末は16 GB LPDDR5X。NPU INT8性能はSM8650 45 TOPS、SM8750 65.25 TOPS、SM8850 89.4 TOPS。主評価はSM8750。SM8650/SM8750ではNPU FlashAttention、SM8850では実行時対応制約からCPU FlashAttentionを使用。",
-    "quality_effect": "近似的な多ブロック投機だけでは精度が低下するが、二経路漸進改訂により不安定トークンをCPU側で疎に更新し、CPU経路に近い品質へ回復する。4タスクではllada.cppの精度がLLaDA CPUに対しGSM8K +4.5、BoolQ -2.0、ARC-C +1.0、HellaSwag -1.5ポイントで、単純な一方向の品質劣化ではない。",
-    "storage_targets": ["Q4_0量子化モデル重み", "接頭辞KVキャッシュ", "NPU可視長寿命テンソル", "短寿命アクティベーションと一時バッファ"],
-    "bottlenecks": ["ブロック後半の有効トークン減少によるNPU低利用率", "トークン改訂とKVキャッシュ整合性の衝突", "NPU可視仮想アドレス空間不足による再マッピング・転送", "安定済みトークンへの不要なロジット計算"],
-    "evidence_locations": ["Abstract", "§2.3", "§3.2-3.4", "§4", "§5.1-5.7", "Table 5-7"],
-    "source": "https://arxiv.org/abs/2606.13740",
-    "sources": ["https://arxiv.org/abs/2606.13740", "https://arxiv.org/html/2606.13740"],
-    "code": null,
-    "implementation": "llama.cppを12,000行超拡張したエンドツーエンド試作。Qualcomm Hexagon SDKでHMX/HVX向け演算ライブラリとAndroid側GGML Hexagonバックエンドを実装し、FastRPC、RPCMEM、DMABUFでCPU/NPU共有ページを扱う。論文本文から著者の公開コードURLは確認できなかった。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {"canonical_id": "arXiv:2602.08676", "arxiv_id": "2602.08676"},
-      {"canonical_id": "arXiv:2602.05305", "arxiv_id": "2602.05305"},
-      {"canonical_id": "arXiv:2509.26488", "arxiv_id": "2509.26488"},
-      {"canonical_id": "arXiv:2312.16886", "arxiv_id": "2312.16886"},
-      {"canonical_id": "arXiv:1803.05457", "arxiv_id": "1803.05457"},
-      {"canonical_id": "arXiv:2110.14168", "arxiv_id": "2110.14168"}
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML版の参考文献節",
-    "references_total": 46
-  },
-  "reservation": {"claim_id": "claim-aa50a0cd3dff67ae166e5ed4", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-1ff47e348a4a8a751a184287",
+  "job_id": "job-research-73651b83b5a764d9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1ff47e348a4a8a751a184287",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

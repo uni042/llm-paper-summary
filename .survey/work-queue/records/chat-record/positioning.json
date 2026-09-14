@@ -1,14 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-aa50a0cd3dff67ae166e5ed4",
-  "job_id": "job-research-3d2c01823fde74e9",
   "slot": "positioning",
-  "data": {
-    "limitations": "Qualcomm Hexagon NPUに実装・評価が集中し、他社モバイルNPUでの実機検証はない。NPU可視アドレス制約やFlashAttention対応はSoC世代依存で、SM8850では一部注意計算をCPUへ戻している。品質維持は4データセット各200例での経験的評価であり、可視化・安定化しきい値が異なるモデルや生成分布でも同様に機能する保証はない。長出力のメモリ境界では実行可能性を改善するが目標トークン数を完全には生成していない。著者公式の公開コードURLは本文から確認できなかった。",
-    "differences": "Fast-dLLMやdKV-Cacheなどが拡散復号アルゴリズムや反復間状態再利用を主に最適化するのに対し、llada.cppはスマートフォンNPUの静的な密計算、CPU側改訂、NPU可視仮想アドレスという実機制約まで共同設計する。従来のllama.cpp-npuやHeteroLLMが自己回帰または静的な密グラフ中心なのに対し、ブロック拡散LLM固有の「有効仕事量が反復中に縮む」性質を将来ブロック投機で埋める。リポジトリ内の一般的なエッジLLM実行系に対して、拡散LLMとNPUの組合せを直接扱う補完的な位置にある。",
-    "implementation_status": "研究試作だが、llama.cppを12,000行超拡張したエンドツーエンド実装を3世代のOnePlus/Qualcomm端末で動作させている。Hexagon DSP共有オブジェクト、HMX/HVX向け演算、GGUF変換、Android GGMLバックエンド、共有メモリと交換実行時まで含む。本文で著者公式コード公開URLは確認できず、再現には実装入手性とHexagon開発環境が制約になる。",
-    "research_positioning": "オンデバイスLLM推論と拡散LLMシステムの交点に位置する。とくに、CPU/GPU/NPUへ単純に演算を割り当てる研究から一歩進み、復号の意味論を変更してNPUの稼働率を上げ、品質整合性はCPU側の疎な改訂経路で守り、メモリ制約はグラフ誘導交換で隠すというアルゴリズム・実行時共同設計を示す。NPU向け静的グラフ最適化、モバイルメモリ階層、非自己回帰生成を統合した代表例として価値が高い。"
-  },
-  "reservation": {"claim_id": "claim-aa50a0cd3dff67ae166e5ed4", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-1ff47e348a4a8a751a184287",
+  "job_id": "job-research-73651b83b5a764d9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-1ff47e348a4a8a751a184287",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
