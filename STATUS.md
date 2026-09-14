@@ -42,7 +42,7 @@
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 11:48 JST** |
-| :00 補助worker 直近claim | **09-14 12:00 JST** |
+| :00 補助worker 直近claim | **09-14 12:04 JST** |
 | 直近24h Research完了（:30 通常worker） | **15** |
 | 直近24h Research完了（:00 補助worker） | **16** |
 | 直近24h Research完了（帰属不明） | **2** |
@@ -89,7 +89,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P84 `arXiv:2604.21072` — Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization
+- P84 `arXiv:2602.12029` — PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving
 
 ## 参考情報
 

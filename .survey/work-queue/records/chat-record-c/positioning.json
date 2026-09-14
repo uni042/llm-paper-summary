@@ -1,3 +1,13 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-d81aec8e8c6ef0b775526983","job_id":"job-research-cc8a88103bff770a","data":{"limitations":"実機評価がNVIDIA A100 80GBへ偏っており、共有メモリが少ないGPUでは既定μ=8や大きいブロック内バッチを維持できない。LUT容量は2^μで増え、バッチ数にも線形に増えるため、共有メモリ容量がスケーラビリティ上限になる。手法は純粋な学習後量子化なので、反復微調整を許す方式に対して小さな精度差が残る。70Bを単一A100へ収容できる点は強いが、複数GPUサービングや実サービスの同時要求・長文脈条件は評価していない。","differences":"GPTQやOmniQuantなどが主に量子化誤差を抑えるアルゴリズムに重点を置くのに対し、FluxBinは二値基底表現をLUT CUDAカーネルで直接消費し、FP16への逆量子化を避ける。AQLMやQuIP#のような超低ビット方式と比べても、重要列を仮想列マッピングで密に並べ替えて同じ高速カーネルへ載せる点が特徴である。LUT-GEMM系の表引き推論に対しては、行・列尺度分離とヘッセ行列誘導の混合基底を同じLUT構築へ融合し、精度と実行効率を同時に調整する。","implementation_status":"著者公開コードがGitHubにあり、CUDA専用カーネルを含む実装を提供する。論文ではHugging Face生成経路、CUDA Graph、静的KVキャッシュを組み合わせ、A100上でエンドツーエンド、カーネル、電力、メモリを実測している。","research_positioning":"推論システムでは低ビット量子化とGPUカーネル共同設計の系統に位置する。メモリ階層研究の観点では、HBMから運ぶバイト数を減らすだけでなく、圧縮形式を復元する計算そのものを避けなければ実効高速化が得られないことを示す事例である。SSD/NVMeオフロードへ直接適用する手法ではないが、圧縮転送と消費側カーネルを共同設計するという原理は、階層メモリ間の転送量削減にも応用価値がある。"},"reservation":{"claim_id":"claim-d81aec8e8c6ef0b775526983","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-ae38ae394f339045ee86f008",
+  "job_id": "job-research-89a31b528bef1df7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ae38ae394f339045ee86f008",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
