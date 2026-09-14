@@ -22,7 +22,8 @@
 | 耐久checkpoint済み・GitHub未反映（job） | **27** |
 | 精読済みユニーク論文（推定） | **355** |
 | 保守状態（Maintenance） | **passed** |
-| 整合性チェック（Consistency） | **passed** |
+| 直近整合性チェック結果 | **passed** |
+| 直近整合性チェック時刻 | **09-14 09:53 JST** |
 | 保守カウンタ（通常run） | **0 / 24** |
 
 > **精読数の数え方**: 「GitHub反映済み」はResearch jobのterminal state、「耐久checkpoint済み・GitHub未反映」はworkerがcheckpoint_refをGitHubへ記録済みだがterminal stateが未反映のjobです。「精読済みユニーク論文（推定）」は両者をcanonical IDで重複排除して数えます。
@@ -50,14 +51,14 @@
 | :00 最新run由来の有効claim | **1** |
 | :00 旧run由来の有効claim | **2** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近claim | **09-14 18:33 JST** |
-| :00 補助worker 直近claim | **09-14 19:13 JST** |
+| :30 通常worker 直近lease活動 | **09-14 18:33 JST** |
+| :00 補助worker 直近lease活動 | **09-14 19:13 JST** |
 | 直近24h Research完了（:30 通常worker） | **31** |
 | 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **39 min** |
+| 最古の有効claimの経過時間 | **40 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
