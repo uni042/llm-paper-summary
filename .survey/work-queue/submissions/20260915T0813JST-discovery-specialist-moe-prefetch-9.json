@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-18b34945adc3866a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.21240",
+      "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.21240",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates.md",
+      "priority": 90,
+      "reason": "MoE expert offloadingでPCIe転送がdecode latencyを支配する問題に対し、target MoEに整合した軽量draft modelとconfidence-aware adaptive lookaheadでexpertを先読みし、prediction miss時はresident shared expert+low-rank expert surrogateによる近似とCPU上のexact residual実行をconfidence/costに応じて使い分ける。DeepSeek-V2-LiteとQwen2-57B-A14Bを複数GPUで評価し、品質劣化を小さく保ったままTPOTを最大3.12倍高速化すると報告する。prefetch精度だけでなくmiss処理をCPU/GPU間で分解する点がexpert cache/offload schedulingとして重要。"
+    },
+    {
+      "canonical_id": "arXiv:2603.19289",
+      "title": "Speculating Experts Accelerates Inference for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2603.19289",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2603.19289-speculating-experts-prefetching-moe.md",
+      "priority": 84,
+      "reason": "CPUへexpert weightをoffloadするmemory-constrained MoE decodeで、現在計算中の内部表現から将来expertを予測し、CPU→GPU transferをcomputeと重畳するexpert speculation/prefetchを提案する。speculated expertをそのまま実行してrouter選択expertの再取得を避けられるケースを示し、複数MoE architectureを統合した最適化engineでon-demand CPU loading比TPOTを最大14%削減する。精度が不足するモデル向けには軽量estimatorでhit rateを補う。実装公開済みで、expert prefetch predictorの直接比較対象として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2604.18788",
+      "title": "Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs",
+      "source_url": "https://arxiv.org/abs/2604.18788",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md",
+      "priority": 72,
+      "reason": "Apple Neural Engine上でMoEのdynamic routing・irregular operators・多数small expert kernelsがNPU制約と衝突する問題に対し、offline calibrationからexpert capacity/popularityを推定し、static capacity tiers、grouped expert execution、load-aware expert compute graph residencyを導入するNPUMoEを提案する。Apple M-series、3 MoEモデル、4 long-context workloadでlatencyを1.32〜5.55倍、energy efficiencyを1.81〜7.37倍、CPU cycleを1.78〜5.54倍改善する。GPU/CPU以外のheterogeneous offload先におけるexpert residency設計として比較価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-moe-prefetch-9",
+    "axis": "MoE expert speculation/prefetch・miss recovery・heterogeneous expert residency",
+    "query_summary": "expert offloadのprefetch predictorとheterogeneous residencyを探索し、SPICE（2608.21240）、Speculating Experts（2603.19289）、NPUMoE（2604.18788）を一次arXiv abstractで軽量評価した。run開始後に取得したidentity-delta一覧には3 IDのdeltaがなく、既存repository検索でも同一IDの収録を確認できなかったため候補化した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はMoE expert cache replacement・CPU/GPU dynamic assignment・routing workload predictionへ進み、DALI等の未収録 여부をidentity正本で確認する。",
+    "empty_round_reason": null
+  }
+}
