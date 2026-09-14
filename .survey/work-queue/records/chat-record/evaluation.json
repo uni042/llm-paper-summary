@@ -4,10 +4,21 @@
   "slot": "evaluation",
   "attempt_id": "attempt-1f85e0ade61d32c74f3d8c8f",
   "job_id": "job-research-9ac9e9ad81401213",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1f85e0ade61d32c74f3d8c8f",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["GCP Compute Engine a2-ultragpu-8g", "NVIDIA A100-SXM4-80GB×8、NVLink", "ホストメモリ1360GB", "PCIe 4.0×16", "ディスク2TB"],
+    "software": ["Autellix/Agentix研究実装", "vLLM v0.6.1", "Python", "CUDA/C++"],
+    "model": ["LLaMA-3.1-8B（1 GPU）", "LLaMA-3.1-70B（4 GPU）", "Falcon-180B（8 GPU）"],
+    "datasets": ["ShareGPT: 会話全体を1プログラムとして再生、平均6.66呼び出し・最大80", "BFCLv3: 多ターン関数呼び出し、平均10.75呼び出し・最大70", "LATS on HotpotQA: MCTS、平均159.7呼び出し", "混合: 上記3種を等確率で混合"],
+    "baselines": ["vLLM v0.6.1 先着順", "vLLM-opt（分割プリフィル、接頭辞キャッシュ、複数段スケジューリング）", "MLFQ on vLLM-opt", "複数エンジンの巡回方式", "複数エンジンの最少負荷方式"],
+    "correctness": "同じモデルとプログラムトレースを実行し、生成アルゴリズムを変更せずサービング性能を比較する。プログラム単位トークン遅延はプログラム応答時間を生成トークン数で割り、並列プログラムでは重要経路の応答時間を全スレッドの総生成トークン数で割る。",
+    "settings": [
+      {"name":"単一エンジン","description":"ShareGPT、BFCL、LATS、混合負荷をポアソン到着で再生し、8B/70B/180Bについて到着率を増やしながら平均・P95・P99のプログラム単位遅延と達成可能処理率を比較する。"},
+      {"name":"複数エンジン","description":"LLaMA-3.1-8Bを4複製、70Bを2複製としてShareGPTとLATSを実行し、同じPLAS/ATLASの下で巡回方式、最少負荷方式、局所性認識方式を比較する。"},
+      {"name":"伸縮性","description":"ShareGPTとLLaMA-3.1-8Bで複製数を増やし、同一サービス品質目標の下で達成できる最大プログラム到着率を測る。"},
+      {"name":"一括推論とアブレーション","description":"全プログラムを一括投入して総完了時間を測り、待ち時間、スケジューリング費用、KV交換時間、理想的スケジューリングとの差、一括KV転送カーネルの寄与を分離する。"}
+    ],
+    "methodology": "実際のエージェント系データセットからプログラム単位で負荷を構成し、個々のLLM呼び出しではなくプログラム全体を到着単位として合成する。要求単位の初回トークン時間や出力トークン時間だけではなく、エージェントプログラム全体の進捗を反映するプログラム単位トークン遅延を主指標にし、同一遅延で処理できるプログラム到着率を比較する。ShareGPTは平均プリフィル256・デコード277トークン、BFCLは平均プリフィル735.06・デコード34.14トークン、LATSは平均プリフィル467.2・デコード72.6トークンで、呼び出し数と入出力長の性質が大きく異なる。",
+    "scope": "単一モデルを共有する同種A100環境を中心としたエージェント型サービング。動的な単一・並列プログラム、接頭辞KV再利用、プリエンプション、複数エンジン負荷分散を対象とする。"
+  },
+  "reservation": {"claim_id":"claim-1f85e0ade61d32c74f3d8c8f","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
