@@ -2,24 +2,82 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ef6bb2e2e1d5f5bb044a43ed",
+  "attempt_id": "attempt-966be1f05ed782535f311505",
   "job_id": "job-research-8f8cd2df2a210c58",
   "data": {
     "overview": "LeMixは固定分離のSeparateと比べ、学習と推論を同じノードへ置くだけのMix-RRよりさらに細かく、タスク長・予測応答時間・メモリ状態を使って配置と順序を変えることで、混合ワークロードの空きGPU時間を削減した。合成負荷ではスループット最大3.53倍、推論デコード損失最大0.61倍、SLO達成率最大2.12倍。LMSYS由来負荷では累積エンドツーエンド時間を最大0.43倍、平均TTFTを最大0.22倍へ低減した。生成評価ではSeparate比でTTFT最大0.43倍、TBT最大0.50倍。アブレーションでは大域優先度を外すと100 RPSでSLO達成率が95%から30%未満、150 RPSで0%まで落ち、メモリ制御を外すと100 RPSで95%から55%へ低下するため、単なる共置ではなく推論保護とメモリ制御が主要因である。",
     "key_results": [
-      {"metric": "混合タスクスループット", "value": "最大3.53倍", "baseline": "Separate", "condition": "Llama系、要求率・学習率を変化", "interpretation": "推論到着ギャップと学習パイプラインの空きを相互利用し、固定ノード分割の遊休を減らす。"},
-      {"metric": "推論デコード損失", "value": "最大0.61倍", "baseline": "Separate", "condition": "継続再学習", "interpretation": "学習結果を同じノードへ即時反映でき、周期的な重み同期待ちを避けるため品質改善が早い。"},
-      {"metric": "SLO達成率", "value": "最大2.12倍", "baseline": "Separate", "condition": "高学習率・大規模Llama", "interpretation": "予測応答時間に基づき危険な学習タスクを後回しにする効果が大きい。"},
-      {"metric": "実トレース累積E2E時間", "value": "最大0.43倍", "baseline": "Separate", "condition": "LMSYS由来負荷、GPT系", "interpretation": "低負荷時に必要ノード数を減らし、入力長に応じた配置でパイプライン空きを削減する。"},
-      {"metric": "平均TTFT", "value": "最大0.22倍", "baseline": "Separate", "condition": "Llama-8B、複数学習率", "interpretation": "学習との共置下でも推論を優先配置することで先頭応答を短縮する。"},
-      {"metric": "生成TTFT/TBT", "value": "最大0.43倍 / 0.50倍", "baseline": "Separate", "condition": "GPT-2.5B、学習率50%、KVプール1000トークン", "interpretation": "プレフィルのノード配置とデコード中のメモリ-aware実行を分けて制御する効果。"},
-      {"metric": "優先度制御アブレーション", "value": "SLO 95%→30%未満（100 RPS）、0%（150 RPS）", "baseline": "完全LeMix", "condition": "Llama-70B", "interpretation": "高負荷では学習タスクの大域的な後回しが推論SLO維持に不可欠。"},
-      {"metric": "メモリ制御アブレーション", "value": "SLO 95%→55%、throughput 8→6 task/s", "baseline": "完全LeMix", "condition": "100 RPS付近", "interpretation": "GPUメモリ競合を待機・CPU退避で制御しないと、共置による遅延が性能を相殺する。"},
-      {"metric": "スケジューラオーバーヘッド", "value": "実行予測0.14ms、予測メモリ9.6MB、他モジュール4MB未満", "baseline": "モデル前向き0.03〜0.73s", "condition": "50 RPS・学習率50%", "interpretation": "GPU利用率を都度問い合わせるMix-LUFの76ms/727.5MBより軽く、オンライン判断の費用は小さい。"}
+      {
+        "metric": "混合タスクスループット",
+        "value": "最大3.53倍",
+        "baseline": "Separate",
+        "condition": "Llama系、要求率・学習率を変化",
+        "interpretation": "推論到着ギャップと学習パイプラインの空きを相互利用し、固定ノード分割の遊休を減らす。"
+      },
+      {
+        "metric": "推論デコード損失",
+        "value": "最大0.61倍",
+        "baseline": "Separate",
+        "condition": "継続再学習",
+        "interpretation": "学習結果を同じノードへ即時反映でき、周期的な重み同期待ちを避けるため品質改善が早い。"
+      },
+      {
+        "metric": "SLO達成率",
+        "value": "最大2.12倍",
+        "baseline": "Separate",
+        "condition": "高学習率・大規模Llama",
+        "interpretation": "予測応答時間に基づき危険な学習タスクを後回しにする効果が大きい。"
+      },
+      {
+        "metric": "実トレース累積E2E時間",
+        "value": "最大0.43倍",
+        "baseline": "Separate",
+        "condition": "LMSYS由来負荷、GPT系",
+        "interpretation": "低負荷時に必要ノード数を減らし、入力長に応じた配置でパイプライン空きを削減する。"
+      },
+      {
+        "metric": "平均TTFT",
+        "value": "最大0.22倍",
+        "baseline": "Separate",
+        "condition": "Llama-8B、複数学習率",
+        "interpretation": "学習との共置下でも推論を優先配置することで先頭応答を短縮する。"
+      },
+      {
+        "metric": "生成TTFT/TBT",
+        "value": "最大0.43倍 / 0.50倍",
+        "baseline": "Separate",
+        "condition": "GPT-2.5B、学習率50%、KVプール1000トークン",
+        "interpretation": "プレフィルのノード配置とデコード中のメモリ-aware実行を分けて制御する効果。"
+      },
+      {
+        "metric": "優先度制御アブレーション",
+        "value": "SLO 95%→30%未満（100 RPS）、0%（150 RPS）",
+        "baseline": "完全LeMix",
+        "condition": "Llama-70B",
+        "interpretation": "高負荷では学習タスクの大域的な後回しが推論SLO維持に不可欠。"
+      },
+      {
+        "metric": "メモリ制御アブレーション",
+        "value": "SLO 95%→55%、throughput 8→6 task/s",
+        "baseline": "完全LeMix",
+        "condition": "100 RPS付近",
+        "interpretation": "GPUメモリ競合を待機・CPU退避で制御しないと、共置による遅延が性能を相殺する。"
+      },
+      {
+        "metric": "スケジューラオーバーヘッド",
+        "value": "実行予測0.14ms、予測メモリ9.6MB、他モジュール4MB未満",
+        "baseline": "モデル前向き0.03〜0.73s",
+        "condition": "50 RPS・学習率50%",
+        "interpretation": "GPU利用率を都度問い合わせるMix-LUFの76ms/727.5MBより軽く、オンライン判断の費用は小さい。"
+      }
     ],
     "negative_results": "単純なMix-RRは固定分離より利用率を改善するが、学習後ろ向き計算との干渉で高負荷時の推論遅延が増える。Mix-LUFは低負荷では有効だが、GPU利用率問い合わせ自体が重く高到着率で遅延を増やす。LeMixも入力長不均一性が大きくなると損失と処理時間は悪化し、パラメータで応答性・学習品質・利用率の交換条件が残る。",
     "interpretation": "学習と推論を共置するだけでは、空きGPUを使える利点と資源干渉が同時に生じる。LeMixの改善は、将来のパイプライン軌跡を予測して空きへ収まるタスクを選ぶこと、SLO違反を予測した学習を後回しにすること、GPUメモリ逼迫を段階的に待機/退避することの組合せによる。したがって継続学習を本番サービングへ統合するには、平均利用率だけでなく推論期限とメモリを同じスケジューラで扱う必要がある。",
     "quality_impact": "共置により更新済み重みを推論へ素早く反映し推論損失を下げる一方、SLO保護のため学習を延期すると短期的な品質改善量は減る。論文はこの交換条件を優先度重みで調整する。"
   },
-  "reservation": {"claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-966be1f05ed782535f311505",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

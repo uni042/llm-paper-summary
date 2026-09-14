@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-ef6bb2e2e1d5f5bb044a43ed",
+  "attempt_id": "attempt-966be1f05ed782535f311505",
   "job_id": "job-research-8f8cd2df2a210c58",
   "data": {
     "differences": "Orca、Llumnix、DistServe、Sarathi-Serve、ServerlessLLMなどの既存サービング研究は主として推論要求同士のバッチ化、移行、プリフィル/デコード分離、レプリカ配置を最適化し、学習GPUは別資源として扱う。分散学習研究は逆にパイプライン・データ・モデル並列の学習効率を改善するが、オンライン推論SLOを同じ実行キューで扱わない。LeMixは継続再学習と推論を同一ノードへ共置し、タスク長から将来の前向き/後ろ向き軌跡を予測してノード配置を決め、さらに推論SLOとGPUメモリを実行時に保護する点が異なる。単なる空きGPUへのバックフィルではなく、品質更新速度、推論応答性、利用率の三目的を同じスケジューラで調整する。",
@@ -13,5 +13,9 @@
     "limitations": "実機評価は4ノード・8GPU規模で、GPT系とLlama系でハードウェアも異なる。クラスタ級スケジューラは150 RPS未満を想定し、超大規模サービスでは前段の負荷分散が別途必要。実行時間予測は入力長二乗とバッチサイズの簡潔なモデルに依存し、カーネル、量子化、並列方式が変わると再測定が必要。各ノードが独立に重み更新する方式は完全同期学習とは異なり、分散更新の収束特性は主題ではない。CPUへのKV/活性値退避はPCIe費用を伴うが、SSD/NVMeや複数メモリ階層との比較はない。専用コード公開URLがないため完全再現にも制約がある。",
     "audit_required": false
   },
-  "reservation": {"claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-966be1f05ed782535f311505",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

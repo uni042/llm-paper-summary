@@ -2,18 +2,43 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ef6bb2e2e1d5f5bb044a43ed",
+  "attempt_id": "attempt-966be1f05ed782535f311505",
   "job_id": "job-research-8f8cd2df2a210c58",
   "data": {
     "hardware": "GPT系は4サーバ、各NVIDIA RTX 6000 Ada 48GB×2、AMD EPYC-7543 64コア、2TB DRAM。Llama系は4台のAWS EC2、各NVIDIA A100 80GB×2で、ペアGPUをNVLINK接続。",
     "software": "LeMixはvLLM、DeepSpeed、FlashAttention、Python concurrent library上に実装。比較対象はSeparate、Mix-RR（NaiveMix）、Mix-LUF。",
     "methodology": "HH-RLHFとSHPから各オンライン試験で1000組を抽出し、GPT-400M/1.4B/2.5BとLlama-8B/13B/70Bを評価する。合成要求はPoisson到着で要求率と学習率を変化させ、実負荷ではLMSYS Chatbot Arenaの到着トレースを再尺度化して学習サンプルを混ぜる。指標は混合タスクの完了スループット、全ノードのエンドツーエンド時間、推論デコード損失、TTFT、TBT、SLO達成率。SLOはTTFTがモデル前向き時間の5倍以内。入力長の不均一性、要求率、学習率、モデルサイズを変え、事前測定・優先度制御・メモリ制御のアブレーションとスケジューラ自身の時間/メモリオーバーヘッドも測る。",
     "scope": "推論と継続学習を同一クラスタで同時実行する混合ワークロード。モデル並列・パイプライン並列、連続バッチ、プレフィル/デコードを含む。評価規模は4ノード・8GPU。",
-    "workloads": ["HH-RLHF", "SHP", "LMSYS Chatbot Arenaトレース", "GPT-400M/1.4B/2.5B", "Llama-8B/13B/70B", "Poisson合成到着"],
-    "baselines": ["Separate", "Mix-RR / NaiveMix", "Mix-LUF"],
-    "metrics": ["task/s", "エンドツーエンド処理時間", "推論デコード損失", "TTFT", "TBT", "SLO達成率", "GPU利用率", "スケジューラ遅延", "スケジューラメモリ"],
+    "workloads": [
+      "HH-RLHF",
+      "SHP",
+      "LMSYS Chatbot Arenaトレース",
+      "GPT-400M/1.4B/2.5B",
+      "Llama-8B/13B/70B",
+      "Poisson合成到着"
+    ],
+    "baselines": [
+      "Separate",
+      "Mix-RR / NaiveMix",
+      "Mix-LUF"
+    ],
+    "metrics": [
+      "task/s",
+      "エンドツーエンド処理時間",
+      "推論デコード損失",
+      "TTFT",
+      "TBT",
+      "SLO達成率",
+      "GPU利用率",
+      "スケジューラ遅延",
+      "スケジューラメモリ"
+    ],
     "reproducibility": "モデル構成、2種類の実機クラスタ、データセット、比較対象、SLO定義、主要パラメータ、スケジューラ式とアルゴリズムを本文に記載。専用コードリポジトリURLは一次資料で確認できないため完全再現性には制限がある。",
     "evaluation_notes": "合成負荷だけでなくLMSYS由来の実到着パターン、入力長不均一性、生成時プレフィル/デコード分解、構成要素アブレーションを含む一方、8GPUより大きいクラスタでは実測していない。"
   },
-  "reservation": {"claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-966be1f05ed782535f311505",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
