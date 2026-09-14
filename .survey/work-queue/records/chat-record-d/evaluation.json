@@ -4,7 +4,33 @@
   "slot": "evaluation",
   "attempt_id": "attempt-5aae5b401b72e747053748e6",
   "job_id": "job-research-cff945d042003c88",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA H100 SXM5、80GB HBM3。GPU間接続はNVLink。モデル形式変換のCPU評価にはIntel Xeon Platinum 8460Y+を使用する。",
+    "software": "GCC 12.3、NVCC 12.6。比較対象は密行列積のcuBLAS、および疎行列積実装Sputnik、SparTA、FlashLLM、SpInfer。エンドツーエンドではWandaで枝刈りしたOPT-30BとOPT-66Bを使用する。著者実装は公式リポジトリ `https://github.com/moui0/cudac` で公開されている。",
+    "methodology": "カーネル評価はOPT-30B/66Bで現れる代表的な行列形状を中心に、バッチ16・32、疎性50%・60%・70%を測定する。中程度の疎性で密cuBLASを含む比較対象を上回れるか、特にメモリ帯域律速のデコード条件を検証する。エンドツーエンド評価はOPT-30BとOPT-66BをWandaで枝刈りし、入力512トークン・出力512トークン、バッチ8・16・32で生成スループットを比較する。OPT-66Bは通常2 GPUで実行し、FlashLLMはメモリ使用量のため4 GPUを必要とする条件がある。品質面ではWikiText-2のパープレキシティを、密モデル、50%の2:4構造疎性、50/60/70%の非構造疎性についてWandaとRIAで比較する。メモリ使用量とオフライン形式変換時間も個別に測る。",
+    "scope": "GPUカーネルとモデル生成はいずれも実機測定である。ただし対象GPUはH100中心で、実装中核の `wgmma` はHopper固有命令である。論文はA100やAMD MI300/CDNA3など疎行列演算機能を持つ他世代への概念的適用可能性に触れるが、同じ実装の実測は示さない。対象モデルもOPT-30B/66Bが中心で、MoE、量子化併用、長文コンテキスト、多様なTransformer系列、プリフィル主体ワークロードは未評価または制約として残る。",
+    "workloads": [
+      "OPT-30B/66B相当の疎行列積、バッチ16/32",
+      "疎性50%・60%・70%",
+      "OPT-30B生成、入力512・出力512、バッチ8/16/32",
+      "OPT-66B生成、入力512・出力512、バッチ8/16/32",
+      "WikiText-2パープレキシティ評価"
+    ],
+    "baselines": [
+      "cuBLAS密行列積",
+      "Sputnik",
+      "SparTA",
+      "FlashLLM",
+      "SpInfer"
+    ],
+    "metrics": [
+      "疎行列積実行時間／高速化倍率",
+      "生成スループット",
+      "GPUメモリ使用量",
+      "形式変換時間",
+      "WikiText-2パープレキシティ"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-5aae5b401b72e747053748e6",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
