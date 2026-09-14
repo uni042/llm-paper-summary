@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-53d2e73cb4e28aeb786bbf9d",
-  "job_id": "job-research-4ff85aa229e8d65c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53d2e73cb4e28aeb786bbf9d",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-53d2e73cb4e28aeb786bbf9d","job_id":"job-research-4ff85aa229e8d65c",
+  "data":{
+    "canonical_id":"arXiv:2602.11808","arxiv_id":"2602.11808","doi":"10.48550/arXiv.2602.11808","openreview_id":null,"arxiv_categories":{"primary":"cs.LG","cross_list":[]},
+    "title":"Deep Kernel Fusion for Transformers",
+    "summary":"長文脈・長生成の大規模言語モデル推論ではKVキャッシュが増えて実用バッチサイズが小さくなり、SwiGLU型MLPの巨大な重みを毎トークン高帯域メモリから読む費用が支配的になる。DeepFusionKernelは、SGLangやvLLMで二つ以上のCUDAカーネルに分かれる上射影・ゲート射影・SiLU・要素積を単一カーネルへ深く融合し、大きな中間活性を高帯域メモリへ書き戻さずレジスタ・共有メモリ上で流す。行優先と列優先のタイル順序を用意し、モデル形状、バッチ、GPUごとに短い事前測定で最速候補を選ぶ軽量カーネルスケジューラとSGLang統合を組み合わせる。Llama 3.1 70Bを4基のA100またはH100 80GBでテンソル並列4、FP16として評価し、出力1024トークンではSGLang比でA100最大9.7%、H100最大13.2%のデコード処理率向上を示す。出力16384までの長生成でも改善を維持し、注意機構のKV負荷が増えてもMLPの重み交通削減が有効であることを示す。",
+    "list_summary":"SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。",
+    "authors":["Zixi Zhang","Zhiwen Mo","Yiren Zhao","Robert Mullins"],"authors_affiliations":"Imperial College London; University of Cambridge","published":"2026-02-12","publication":"arXiv","publication_type":"Preprint","publication_status":"arXiv preprint v1",
+    "lineage":"GPUカーネル融合／SwiGLU／LLM推論ランタイム","topics":["SwiGLU","CUDAカーネル融合","HBM帯域","Tensor Core","SGLang","テンソル並列"],
+    "importance":"注意機構以外にも、長生成時の小バッチではMLP重み交通が主要な帯域ボトルネックになることを示し、演算量を変えずに中間活性の読書きを消す深い融合を実サービング基盤へ統合した点が重要である。",
+    "hardware_evaluation":"4基のNVIDIA A100 80GB SXMまたは4基のNVIDIA H100 80GB SXMを単一クラスタとしてテンソル並列4で使用。","hardware_details":"Llama 3.1 70B FP16。SGLang v0.4.6.post4、FlashInfer、CUDA Graphsを使用し、vLLM v0.10.1.1とPyTorch分散実行も比較する。",
+    "quality_effect":"同じFP16モデルのSwiGLU計算を等価に再配置するカーネル最適化で、追加の量子化や近似を導入しないためモデル品質を変更しない。","storage_targets":["SwiGLUの巨大重み","中間活性","共有メモリ・レジスタ上のタイル"],"bottlenecks":["小バッチでのMLP重みHBM読出し","中間活性のHBM書戻し・再読出し","GPUごとに異なる計算帯域比","テンソル並列の集団通信ジッタ"],
+    "evidence_locations":["§3 Method","§4.1 Experiment Setup","Table 1","Table 2","§4.4 Discussion","Limitations","Appendix A"],"source":"https://arxiv.org/abs/2602.11808","sources":["https://arxiv.org/abs/2602.11808","https://arxiv.org/html/2602.11808"],"code":null,
+    "implementation":"DeepFusionKernelをCUDAで実装しSGLangへ統合する。事前プロファイルで候補カーネルを選択後、CUDA Graphへ取り込むため推論反復ごとの分岐・選択費用は発生しない。一次資料から論文固有の公式コード公開URLは確認できない。","last_checked":"2026-09-14",
+    "references":[{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2404.14294","arxiv_id":"2404.14294"},{"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"}],"references_checked_at":"2026-09-14","references_source":"arXiv v1参考文献節","references_total":33
+  },"reservation":{"claim_id":"claim-53d2e73cb4e28aeb786bbf9d","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
