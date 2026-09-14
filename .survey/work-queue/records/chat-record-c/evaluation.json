@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-57e22664262505d22a992383",
-  "job_id": "job-research-aef337aaa1c0f49c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-57e22664262505d22a992383",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-57e22664262505d22a992383","job_id":"job-research-aef337aaa1c0f49c","data":{"hardware":["4× NVIDIA H100 SXM 80GB、104-core vCPU、1800 GiB memory","8× NVIDIA A100 SXM 80GB、240-core vCPU、1800 GiB memory"],"software":["vLLM 0.7.3","vLLM internal profiler"],"model":["Llama3.1-8B","Qwen2.5-14B","Qwen2.5-32B"],"datasets":["128〜2048同時要求の合成マルチテナント負荷","総トークン4096からKVキャッシュ容量の90%までを高分散で要求へランダム配分"],"baselines":["VTC: トークン数に基づく線形利用量・遅延proxy"],"correctness":"vLLM内部プロファイラが各処理ステップの実測遅延をground truthとして提供し、LLMVisorとVTCの予測を同一ステップに対して比較する。評価はprefillとdecodeを分離し、決定係数R²と相対誤差p90/p99を報告する。","settings":["H100サーバではテンソル並列1/2/4をH1/H2/H4として評価。","A100サーバではテンソル並列1/2をA1/A2として評価。","モデルとハードウェアの組合せはprefill/decodeそれぞれ9構成。","要求数は128〜2048、総トークンは4096から各エンジンKVキャッシュ容量Cの90%まで増やす。","系列長は高分散になるよう総トークンを要求へランダム配分し、共バッチ時の文脈長・バッチ変動を強くする。"],"methodology":"各ハードウェア、モデル、テンソル並列構成で短いプロファイルを実行し、LLMVisorの二区間×prefill/decodeの係数を最小二乗で較正する。その後、異なる同時要求数と総トークン量の負荷をvLLMへ投入し、内部プロファイラのステップ遅延を実測値として、VTCとLLMVisorの予測精度を比較する。prefill表はLlama3.1-8BのA1/H1/H4、Qwen2.5-14BのH1/H2/H4、Qwen2.5-32BのA2/H2/H4を、decode表はLlama3.1-8BのA1/H1/H2、Qwen2.5-14BのH1/H2/H4、Qwen2.5-32BのA2/H2/H4を含む。著者はprefillの平均倍率計算では表中の2つの外れ値を除外したことを明記するため、その条件を結果解釈へ保持する。","metrics":["決定係数R²","相対誤差p90","相対誤差p99","オンライン推定時間"],"scope":"A100/H100、3モデル、5テンソル並列設定を含む実機評価で、共バッチ時のステップ遅延帰属に焦点を当てる。MIGや他推論エンジン、MoE、AMD/NPU、実運用の長期テナント公平性は直接評価していない。モデルは配置ごとに係数を再較正する前提であり、未見ハードウェアへ同一係数をゼロショット適用する評価ではない。","reproducibility":"arXiv本文と付録にvLLM版、GPUサーバ構成、モデル、テンソル並列度、要求数、KVキャッシュ負荷範囲、指標、表の全数値が記載される。一次資料に公開コードURLは見当たらず、完全な再実行には著者実装または式をvLLMへ再実装する必要がある。"},"reservation":{"claim_id":"claim-57e22664262505d22a992383","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
