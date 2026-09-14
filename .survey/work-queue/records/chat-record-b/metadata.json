@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
+  "attempt_id": "attempt-eff39fce395692aeefdea477",
   "job_id": "job-research-bd7341cf457984b7",
   "data": {
     "canonical_id": "arXiv:2609.12449",
@@ -11,43 +11,90 @@
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
-      "cross_list": ["cs.PF", "eess.SY"]
+      "cross_list": [
+        "cs.PF",
+        "eess.SY"
+      ]
     },
     "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
     "summary": "HeatCacheは、暖かい室温設定で運用する小規模なLLMサーバ室では、GPUを速く動かすだけでなく、冷却系が今どれだけ追加熱を受け止められるかを考えなければ、熱スロットリングによって遅延と消費電力量が逆に増える問題を扱う。対象は市販のシャーシ内一体型液冷（all-in-one liquid cooling; AIO）GPUで、著者らは冷却水・ラジエータ・GPU部品が持つ熱容量を短時間だけ使える「熱予算」とみなす。まずGPUジャンクション、パッケージ、冷却液、ラジエータの4状態からなる集中定数RC熱モデルを各GPUごとに校正し、現在温度と室温からスロットリング閾値までに蓄えられる残余熱量を計算する。次にHeatiTSというiTransformerベースの予測器が、直近ジョブの利用率・電力・温度、バッチ量、プロンプト長、デコード量、GPU周波数などから、候補ジョブの平均電力、保守的な高分位の発熱電力、実行時間を予測する。学習時には実測誤差だけでなく、電圧・周波数と動的電力の関係を弱い物理事前として正則化へ入れるため、候補DVFS状態に対する電力推定を安定させる。オンライン制御ではvLLMが作る候補のバッチ・GPU割当・周波数状態を再順位付けし、予測発熱量が熱予算を超える候補を即座に除外する。熱予算の90%以上を使う境界候補だけRCモデルを1ステップ進めて温度を精査し、さらにTTFT/TPOTの保守的遅延上界を満たす候補だけ残して、予測ITエネルギーが最小の行動を選ぶ。これにより熱余裕がある間は高スループットで処理し、余裕が減ればバッチ量や周波数を下げ、AIOの熱慣性をスケジューリング資源として利用する。4台のRTX 4090を改造AIO水冷し、2m×2mの囲い内で18〜48℃を再現した実機評価では、LMSYS-Chat-1M、CodeAlpaca-20K、QReCCを用いたLlama-3.1、Qwen2.5-Coder、DeepSeek-R1の負荷に対し、vLLM、固定周波数DVFS、TAPAS、GreenLLM、CoolEdgeより計算エネルギーを最大18.0%削減し、TTFT/TPOTのSLO違反を最大82.5%削減した。48±2℃でもSLO違反率を0.9%未満に保ち、スロットリング曝露率を0.8〜2.8%へ抑える。RCモデルを外すとTTFT/TPOT違反と熱曝露が大幅に悪化し、HeatiTSを外すとワークロード依存の熱変動を捉えられず、DVFS単独またはバッチ制御単独でも安定した両立はできない。一方、対象は単一サーバのAIO液冷に限定され、設備配管型液冷・浸漬冷却、複数ノード配置、共有電力上限、HVACとの共同最適化は扱わない。サーバ構成ごとの短いRC校正も必要である。",
     "list_summary": "HeatCacheはAIO液冷ループの残存熱容量を「熱予算」として推定し、ジョブ別の発熱予測とTTFT/TPOT制約を使ってvLLMのバッチ・GPU割当・周波数を再順位付けする。48℃級の実機環境で計算エネルギーを最大18.0%削減し、熱スロットリング曝露を大幅に抑える。",
-    "authors": ["Rui Lu", "Huanghuang Liang", "Kaiqi Guan", "Dan Wang"],
+    "authors": [
+      "Rui Lu",
+      "Huanghuang Liang",
+      "Kaiqi Guan",
+      "Dan Wang"
+    ],
     "authors_affiliations": "Rui Lu: The Hong Kong Polytechnic University、Huanghuang Liang / Kaiqi Guan: Wuhan University、Dan Wang: The Hong Kong University of Science and Technology。",
     "published": "2026-09-11",
     "publication": "arXiv:2609.12449v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1（2026-09-11提出）。一次資料から査読済み採録は確認できない。",
     "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["熱制約付きLLMサービング", "AIO液冷", "熱慣性", "SLO-aware scheduling", "DVFS", "エネルギー効率", "vLLM", "時系列予測"],
+    "topics": [
+      "熱制約付きLLMサービング",
+      "AIO液冷",
+      "熱慣性",
+      "SLO-aware scheduling",
+      "DVFS",
+      "エネルギー効率",
+      "vLLM",
+      "時系列予測"
+    ],
     "importance": "高。LLMサービング側のバッチ・ルーティング・DVFSと、通常は設備側へ分離される液冷ループの過渡熱容量を同じ制御問題へ結び付け、熱余裕を使い切る前に行動を変える実装と実機評価を示す。",
     "hardware_evaluation": "Intel Core i9-13900K、128GB RAM、RTX 4090 24GB×4をAIO水冷へ改造した単一ワークステーション。2m×2mの囲いで室温18〜48℃を制御。",
     "hardware_details": "各GPUに冷却板、既定600mLの閉ループ冷却液、外部ラジエータ/ファン、ポンプ、流量制御、タンクを備える。ポンプとファンは1ループ平均約25W。GPUモデル適合のため提供LLMは量子化して評価する。",
     "quality_effect": "HeatCache自体はモデル出力を近似・圧縮しないため、品質劣化ではなくTTFT/TPOTのSLOと熱安全性を制約として扱う。ただし実機評価では24GB GPUへ収めるため各LLMを量子化しており、その量子化による精度影響は本論文の評価対象ではない。",
-    "storage_targets": ["AIO液冷ループとGPU部品に蓄えられる短時間の熱容量"],
-    "bottlenecks": ["高室温でのGPU熱スロットリング", "熱スロットリングに伴うTTFT/TPOT悪化", "熱状態を無視したバッチ・GPU割当", "保守的DVFSによる実行時間増加", "設備冷却と推論スケジューリングの分離"],
-    "evidence_locations": ["§1–3", "§4.1 Implementation", "§4.2 Evaluation Setup", "§4.3 Evaluation Results", "§4.4 Ablation Studies", "Appendix A", "Appendix B", "Appendix C"],
+    "storage_targets": [
+      "AIO液冷ループとGPU部品に蓄えられる短時間の熱容量"
+    ],
+    "bottlenecks": [
+      "高室温でのGPU熱スロットリング",
+      "熱スロットリングに伴うTTFT/TPOT悪化",
+      "熱状態を無視したバッチ・GPU割当",
+      "保守的DVFSによる実行時間増加",
+      "設備冷却と推論スケジューリングの分離"
+    ],
+    "evidence_locations": [
+      "§1–3",
+      "§4.1 Implementation",
+      "§4.2 Evaluation Setup",
+      "§4.3 Evaluation Results",
+      "§4.4 Ablation Studies",
+      "Appendix A",
+      "Appendix B",
+      "Appendix C"
+    ],
     "source": "https://arxiv.org/abs/2609.12449",
-    "sources": ["https://arxiv.org/abs/2609.12449", "https://arxiv.org/html/2609.12449", "https://arxiv.org/pdf/2609.12449"],
+    "sources": [
+      "https://arxiv.org/abs/2609.12449",
+      "https://arxiv.org/html/2609.12449",
+      "https://arxiv.org/pdf/2609.12449"
+    ],
     "code": "",
     "implementation": "vLLM上の軽量ユーザー空間プラグインとして実装。Kubernetes、KServe、NVIDIA DCGM、Kubeletプラグインを用い、マイクロバッチ調整、SLOメタデータ付きルーティング、GPU周波数制御、各GPUのRC熱モデルを統合する。論文本文・arXivメタデータから専用コード公開URLは確認できない。",
     "last_checked": "2026-09-15",
     "references": [
-      {"canonical_id":"arXiv:2309.06180","title":"Efficient Memory Management for Large Language Model Serving with PagedAttention"},
-      {"title":"TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms"},
-      {"title":"GreenLLM"},
-      {"title":"CoolEdge: Hotspot-Relievable Warm-Water Cooling for Energy-Efficient Edge Datacenters"}
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+      },
+      {
+        "title": "TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms"
+      },
+      {
+        "title": "GreenLLM"
+      },
+      {
+        "title": "CoolEdge: Hotspot-Relievable Warm-Water Cooling for Energy-Efficient Edge Datacenters"
+      }
     ],
     "references_checked_at": "2026-09-15",
     "references_source": "arXiv:2609.12449v1参考文献節",
     "references_total": null
   },
   "reservation": {
-    "claim_id": "claim-b1966b5c09cb8552b368d98f",
+    "claim_id": "claim-eff39fce395692aeefdea477",
     "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
     "worker_kind": "scheduled_chat"
   }

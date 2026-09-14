@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
+  "attempt_id": "attempt-eff39fce395692aeefdea477",
   "job_id": "job-research-bd7341cf457984b7",
   "data": {
     "novelty_vs_prior": "vLLMなどの一般的なLLMサービングはバッチ・待ち行列・GPUメモリを主に扱い、DSO/GreenLLM系はDVFSで電力を下げるが冷却系の過渡状態を明示的な資源として扱わない。TAPASのような熱対応配置は温度・電力を使って低温GPUへ仕事を寄せる一方、AIO液冷ループの熱容量そのものをジョブごとの残余予算へ変換しない。CoolEdgeは冷却液側の制御が中心で、LLM要求のバッチ・GPU割当・SLOと発熱を共同最適化しない。HeatCacheはAIOの熱慣性を『今使える熱予算』としてスケジューラへ持ち込み、物理モデルと学習予測を接続する点が差分である。",
@@ -13,7 +13,7 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-b1966b5c09cb8552b368d98f",
+    "claim_id": "claim-eff39fce395692aeefdea477",
     "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
     "worker_kind": "scheduled_chat"
   }

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260914T224830Z-scheduled-chat-discovery-overflow-02",
+  "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-bd7341cf457984b7",
+      "claim_id": "claim-eff39fce395692aeefdea477",
+      "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-eff39fce395692aeefdea477",
+      "claimed_at": "2026-09-14T22:49:01+00:00",
+      "expires_at": "2026-09-15T00:19:01+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-bd7341cf457984b7"
+      ],
+      "job": {
+        "job_id": "job-research-bd7341cf457984b7",
+        "type": "research",
+        "parent_job_id": "job-15c0335aaa7eded8",
+        "priority": 80,
+        "canonical_id": "arXiv:2609.12449",
+        "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+        "source_url": "https://arxiv.org/abs/2609.12449",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.12449-heatcache-thermal-aware-energy-efficient-llm-inference-scheduling.md",
+        "selection_reason": "持続可能な高温設定のエッジサーバ室で、液冷ループを一時的な熱バッファとして扱い、熱安全性とサービス水準目標（SLO）を守りながら要求を割り当てる推論スケジューラ。vLLM上の実装で計算エネルギーを最大18.0%削減、熱スロットリング曝露を81.7%削減し、48℃までSLO違反率0.9%未満を報告しており、従来のGPU負荷・遅延中心のスケジューリングに熱状態を直接組み込む運用系の差分が明確。",
+        "status": "ready",
+        "workflow_version": 10,
+        "artifact_transport": "structured_record_v10",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "created_at": "2026-09-14T22:35:02+00:00",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | positioning.differences is required",
+        "validation_errors": [
+          "metadata.references_total must be a non-negative integer",
+          "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+          "problem_method.method_overview must explain the end-to-end mechanism",
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short",
+          "positioning.differences is required"
+        ],
+        "last_validation_failed_at": "2026-09-14T22:47:22+00:00"
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-b1966b5c09cb8552b368d98f"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-b1966b5c09cb8552b368d98f.json"
+    }
+  ],
+  "processed_at": "2026-09-14T22:49:01+00:00",
+  "checkpoint_released": 0
+}

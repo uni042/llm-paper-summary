@@ -2,27 +2,81 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
+  "attempt_id": "attempt-eff39fce395692aeefdea477",
   "job_id": "job-research-bd7341cf457984b7",
   "data": {
     "overview": "HeatCacheは暖かい48±2℃の環境を含む実機評価で、AIO液冷の過渡熱容量を明示的に使うことで、温度だけを見て抑制する方式や熱を無視するDVFSよりエネルギー・SLO・熱安全を同時に改善する。18℃空冷vLLMを基準に正規化した計算エネルギーでは最大18.0%削減し、vLLM系は高温でスロットリングと実行時間増加のため削減が最大6.0%、固定DVFSのDSOも6.8〜7.0%程度に留まる。TTFT/TPOTのSLO違反はvLLM-A/W比で最大82.5%減り、論文要約では48℃まで違反率0.9%未満を維持する。熱スロットリング曝露率はHeatCacheが0.8〜2.8%で最小となる。アブレーションではRC熱予算を外すと完全版に比べTTFT/TPOT違反がそれぞれ大きく悪化し、完全版はその方式より80.50%/86.07%少ない違反と81.69%少ない熱曝露を示す。HeatiTSを外すとプロンプト長やバースト依存の熱変動を捉えられず、過小推定によるスロットリングか過大推定による未利用余裕のどちらかが増える。DVFSのみではBatch-only比で熱曝露を38.19%下げるが処理が遅くなって待ち時間とSLOが悪化し、バッチ制御のみでは持続バースト時に熱飽和を防げない。境界候補に行う精密RC検証を外すと熱曝露は完全版と近い一方、完全版は検証費用のため遅延が約7%増えると報告しており、安全側検証にも明示的なオーバーヘッドがある。",
     "key_results": [
-      {"metric":"GPU計算エネルギー","value":"最大18.0%削減","baseline":"vLLM-A@18℃で正規化した各比較方式","condition":"Chat/Code/Sum、暖かい室温を含む実機評価","interpretation":"熱予算がある局面では処理を進め、スロットリング前に負荷を落とすため、単純な高温抑制より実行時間と電力の積を小さくできる。"},
-      {"metric":"vLLMの計算エネルギー削減上限","value":"最大6.0%","baseline":"vLLM-A@18℃","condition":"vLLM-A/W、高温設定","interpretation":"温度を考慮しないと高温でスロットリングして実行時間が伸び、液冷だけでは省エネルギー余地を十分使えない。"},
-      {"metric":"DSO計算エネルギー削減","value":"6.8〜7.0%","baseline":"vLLM-A@18℃","condition":"固定周波数DVFS","interpretation":"固定周波数ではワークロードと熱余裕の時間変化へ追随できない。"},
-      {"metric":"TTFT/TPOT SLO違反","value":"vLLM-A/W比で最大82.5%削減","baseline":"熱状態を見ないvLLM-A/W","condition":"3ワークロード","interpretation":"熱スロットリングによる遅延スパイクを発生前に避ける効果がSLOへ直結する。"},
-      {"metric":"高温でのSLO違反率","value":"48℃まで0.9%未満","baseline":"HeatCache","condition":"持続的な高い室温設定","interpretation":"冷却電力を下げる高温運用でもサービス品質を維持できることを示す。"},
-      {"metric":"熱スロットリング曝露率","value":"0.8〜2.8%","baseline":"比較方式中最小","condition":"Chat/Code/Sum","interpretation":"熱需要を残余熱予算以内へ抑える制御が高温状態の滞在時間を減らす。"},
-      {"metric":"RC熱予算のアブレーション","value":"TTFT違反80.50%、TPOT違反86.07%、熱曝露81.69%削減","baseline":"w/o RC","condition":"full HeatCacheとの比較","interpretation":"現在温度だけの反応的閾値ではなく、冷却系の熱慣性を容量として持つことが主要因である。"},
-      {"metric":"DVFS-onlyの熱曝露","value":"Batch-only比38.19%削減","baseline":"Batch-only","condition":"単一制御ノブ比較","interpretation":"周波数低下は発熱を抑えるが、処理時間増加により待ち行列とSLOを悪化させるため単独では不十分。"},
-      {"metric":"精密RC検証の遅延費用","value":"w/o PFCVより約7%遅い","baseline":"w/o PFCV","condition":"fullで境界候補を精密検証","interpretation":"安全確認には制御オーバーヘッドがあり、全候補ではなく熱予算90%以上を使う場合へ限定する設計理由になる。"}
+      {
+        "metric": "GPU計算エネルギー",
+        "value": "最大18.0%削減",
+        "baseline": "vLLM-A@18℃で正規化した各比較方式",
+        "condition": "Chat/Code/Sum、暖かい室温を含む実機評価",
+        "interpretation": "熱予算がある局面では処理を進め、スロットリング前に負荷を落とすため、単純な高温抑制より実行時間と電力の積を小さくできる。"
+      },
+      {
+        "metric": "vLLMの計算エネルギー削減上限",
+        "value": "最大6.0%",
+        "baseline": "vLLM-A@18℃",
+        "condition": "vLLM-A/W、高温設定",
+        "interpretation": "温度を考慮しないと高温でスロットリングして実行時間が伸び、液冷だけでは省エネルギー余地を十分使えない。"
+      },
+      {
+        "metric": "DSO計算エネルギー削減",
+        "value": "6.8〜7.0%",
+        "baseline": "vLLM-A@18℃",
+        "condition": "固定周波数DVFS",
+        "interpretation": "固定周波数ではワークロードと熱余裕の時間変化へ追随できない。"
+      },
+      {
+        "metric": "TTFT/TPOT SLO違反",
+        "value": "vLLM-A/W比で最大82.5%削減",
+        "baseline": "熱状態を見ないvLLM-A/W",
+        "condition": "3ワークロード",
+        "interpretation": "熱スロットリングによる遅延スパイクを発生前に避ける効果がSLOへ直結する。"
+      },
+      {
+        "metric": "高温でのSLO違反率",
+        "value": "48℃まで0.9%未満",
+        "baseline": "HeatCache",
+        "condition": "持続的な高い室温設定",
+        "interpretation": "冷却電力を下げる高温運用でもサービス品質を維持できることを示す。"
+      },
+      {
+        "metric": "熱スロットリング曝露率",
+        "value": "0.8〜2.8%",
+        "baseline": "比較方式中最小",
+        "condition": "Chat/Code/Sum",
+        "interpretation": "熱需要を残余熱予算以内へ抑える制御が高温状態の滞在時間を減らす。"
+      },
+      {
+        "metric": "RC熱予算のアブレーション",
+        "value": "TTFT違反80.50%、TPOT違反86.07%、熱曝露81.69%削減",
+        "baseline": "w/o RC",
+        "condition": "full HeatCacheとの比較",
+        "interpretation": "現在温度だけの反応的閾値ではなく、冷却系の熱慣性を容量として持つことが主要因である。"
+      },
+      {
+        "metric": "DVFS-onlyの熱曝露",
+        "value": "Batch-only比38.19%削減",
+        "baseline": "Batch-only",
+        "condition": "単一制御ノブ比較",
+        "interpretation": "周波数低下は発熱を抑えるが、処理時間増加により待ち行列とSLOを悪化させるため単独では不十分。"
+      },
+      {
+        "metric": "精密RC検証の遅延費用",
+        "value": "w/o PFCVより約7%遅い",
+        "baseline": "w/o PFCV",
+        "condition": "fullで境界候補を精密検証",
+        "interpretation": "安全確認には制御オーバーヘッドがあり、全候補ではなく熱予算90%以上を使う場合へ限定する設計理由になる。"
+      }
     ],
     "negative_results": "熱状態を無視するvLLMは高温でスロットリングしてエネルギー削減が頭打ちになり、固定DVFSも動的な熱余裕を使えない。TAPASのように単に低温GPUへ流すだけではAIOの残存熱容量を把握できず、バーストで熱余裕を使い切る。GreenLLM型の保守的DVFSは電力を下げても実行時間と待ち時間を増やし得る。HeatCache自身も精密RC検証で約7%の遅延増加があり、RC/HeatiTSの校正・予測を必要とする。",
     "interpretation": "結果は『GPU温度を低く保つ』こと自体より、冷却ループが時間方向に持つ熱容量を有限資源として予算化することが重要だと示す。熱予算が残る間に短い高負荷処理を許すことで、低周波に固定するより早くジョブを終えられ、予算が尽きる前にDVFSとバッチ量を調整してスロットリングを避ける。HeatiTSは同じバッチ数でもプロンプト長・履歴・周波数で発熱が異なる点を補い、SLOフィルタが省電力制御のやり過ぎを防ぐ。",
     "quality_impact": "モデル出力品質を近似する手法ではなく、評価軸は遅延SLOと熱安全である。実験上は各LLMを24GB GPUへ収めるため量子化しているため、モデル精度そのものを非量子化環境と比較した結果ではない。"
   },
   "reservation": {
-    "claim_id": "claim-b1966b5c09cb8552b368d98f",
+    "claim_id": "claim-eff39fce395692aeefdea477",
     "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
     "worker_kind": "scheduled_chat"
   }

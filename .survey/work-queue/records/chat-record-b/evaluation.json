@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
+  "attempt_id": "attempt-eff39fce395692aeefdea477",
   "job_id": "job-research-bd7341cf457984b7",
   "data": {
     "hardware": "Intel Core i9-13900K、128GB RAM、RTX 4090 24GB×4のワークステーション。4 GPUをAIO水冷へ改造し、2m×2mの囲いで18〜48℃の室温設定を再現する。",
@@ -32,7 +32,7 @@
     "reproducibility": "CPU、GPU数/VRAM、AIO構成、冷却液量、室温範囲、データセット、モデル、到着分布、SLO閾値、比較方式、実装スタックを本文で記載する。RCモデルは各GPU/AIO構成ごとに定電力ステップ負荷でオフライン校正する。専用実装の公開コードURLは一次資料から確認できず、再現には改造AIO水冷テストベッドと環境温度制御が必要。"
   },
   "reservation": {
-    "claim_id": "claim-b1966b5c09cb8552b368d98f",
+    "claim_id": "claim-eff39fce395692aeefdea477",
     "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
     "worker_kind": "scheduled_chat"
   }
