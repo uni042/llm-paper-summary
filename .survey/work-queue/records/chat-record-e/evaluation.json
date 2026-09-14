@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d3a3d4953747373a7d859a41",
   "job_id": "job-research-7c979683209fb954",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d3a3d4953747373a7d859a41",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主実験はNVLink接続のNVIDIA A6000 48GB×8、128仮想CPUコア、512GBメモリの単一サーバで行う。Meta-Llama-3-8B-Instructは主に単一GPU、Meta-Llama-3-70B-Instructは8-wayテンソル並列でFP16実行する。付録ではGPT-oss-20B、Qwen3-30B-A3B、Qwen3-Next-80B-A3B、DeepSeek-R1-Distill-Qwen-32B、Mistral-7B、Mixtral-8x7B、OpenPangu-Embedded-7Bを1〜8 GPUで追加評価する。",
+    "software": "vLLM 0.11.1へ非先取りTIEスケジューラを実装する。出力長分布予測器はDeBERTa-v3-base 86Mと2つのMLPヘッドで、比較対象はvLLM既定のFCFS、SSJF、Learning-to-Rank系LTR。予測処理は専用スレッドで非同期に行い、最大32要求または3msでバッチ化する。",
+    "methodology": "オンラインチャットではLMSYS-Chat-1Mを主負荷とし、20〜100要求/秒で平均・P90のトークン当たり遅延とTTFTを測る。一般化評価では予測器をLMSYS-Chat-1MかつLlama-3-8Bのデータだけで学習し、ShareGPT、Alpaca、70Bモデルおよび付録の異種モデルへ転用する。公平な学習データ量比較のためSSJF/LTRは900K単一生成例、TIEは45K入力×20反復生成で同じ900K生成サンプルを使う。オフライン合成データ生成ではAlpaca 10K要求を投入し、3K件完了までの時間と3分以内の完了件数を測る。アブレーションではlog-tとlog-normal、期待値だけのSEPT、固定CVaR重み、適応重み、反復サンプル数、自由度νを比較する。",
+    "scope": "主実験は単一サーバの非先取り連続バッチ環境であり、複数ノードの通信やプリフィル・デコード分離環境は直接扱わない。性能向上は要求順序変更によるため、極端に低負荷で待ち行列が形成されない場合の利得は小さい。予測器の訓練には同一入力を複数回生成する必要があり、既存サービングログだけで一点予測器を学ぶ方式よりデータ収集費が高い。"
+  },
+  "reservation": {"claim_id": "claim-d3a3d4953747373a7d859a41", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
