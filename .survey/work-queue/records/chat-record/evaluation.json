@@ -4,7 +4,26 @@
   "slot": "evaluation",
   "attempt_id": "attempt-62aa4927d0e8e8128d1176e5",
   "job_id": "job-research-0a982340eead3672",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA RTX PRO 6000 WS 96GB（Blackwell）1基。性能測定専用ホストはAMD EPYC 9534 64コア、221GBシステムメモリ、PCIe 5.0 x16。品質評価は同一型GPUを持つホストへ分散して実施。",
+    "software": "LLaMA 3.1-8B基盤モデル、bitsandbytes INT8重み、PyTorch scaled dot-product attentionを密KV比較として使用。認証方式は著者実装の圧縮KVカーネル、誤差認証器、CPU固定ページからのFP16復旧経路を利用する。公式成果物はGitHubとZenodoで公開。",
+    "models": [
+      "LLaMA 3.1-8B（NousResearch/Meta-Llama-3.1-8B）"
+    ],
+    "datasets": [
+      "PG-19",
+      "Needle-in-a-Haystack（NIAH）",
+      "RULER"
+    ],
+    "baselines": [
+      "Dense FP16 KV + PyTorch scaled dot-product attention",
+      "無認証INT8キー/INT4値KV",
+      "FP16値を使う認証方式のアブレーション",
+      "値誤差閾値を変更する認証方式のアブレーション"
+    ],
+    "methodology": "文脈長8K、32K、64K、128Kを中心にバッチ1・貪欲デコードで比較する。PG-19は各文脈長20チャンクの困惑度、NIAHは各条件100組の対応試行と10種類のneedle、RULERは7サブタスクを用いる。性能評価では密FP16 KVのFlash Attention経路と認証方式の生成ステップ遅延、CPU→GPUページイン、順位整合性検査、作業領域を分解する。メモリ評価ではGPU上の圧縮KV本体だけでなく、FP16昇格用作業領域、CPUに残す正確なKV原本も別々に計測する。128Kでは対称作業領域と、キー2048ブロック・値512ブロックの非対称作業領域を比較する。",
+    "scope": "主評価は単一LLaMA 3.1-8B、単一Blackwell GPU、バッチ1であり、複数GPU・高バッチ・他モデル系列への一般化は未検証。保証は各注意ヘッド・各生成ステップの局所出力誤差に対するもので、層間や自己回帰系列全体の意味品質を直接保証しない。CPU側に密FP16 KVを保持できることを前提にするため、ホストメモリ不足やPCIe帯域制約の強い環境では適用範囲が狭まる。"
+  },
   "reservation": {
     "claim_id": "claim-62aa4927d0e8e8128d1176e5",
     "worker_id": "scheduled-chat-discovery-router",
