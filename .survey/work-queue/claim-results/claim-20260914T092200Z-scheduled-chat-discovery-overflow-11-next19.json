@@ -1,45 +1,44 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "claim-20260914T091000Z-scheduled-chat-discovery-overflow-11-next18",
+  "request_id": "claim-20260914T092200Z-scheduled-chat-discovery-overflow-11-next19",
   "worker_id": "scheduled-chat-discovery-overflow",
   "worker_kind": "scheduled_chat",
   "ok": true,
   "assignments": [
     {
-      "job_id": "job-research-d66acc5736f090e9",
-      "claim_id": "claim-140098b18d44f1fd690847a5",
+      "job_id": "job-research-706a6d2571f24fb8",
+      "claim_id": "claim-c56c265a53c02ccef52fadc7",
       "worker_id": "scheduled-chat-discovery-overflow",
       "worker_kind": "scheduled_chat",
-      "attempt_id": "attempt-140098b18d44f1fd690847a5",
-      "claimed_at": "2026-09-14T09:08:46+00:00",
+      "attempt_id": "attempt-c56c265a53c02ccef52fadc7",
+      "claimed_at": "2026-09-14T09:13:33+00:00",
       "expires_at": "2026-09-14T10:43:33+00:00",
       "kind": "research",
       "depends_on_job_ids": [
-        "job-research-d66acc5736f090e9"
+        "job-research-706a6d2571f24fb8"
       ],
       "job": {
-        "job_id": "job-research-d66acc5736f090e9",
+        "job_id": "job-research-706a6d2571f24fb8",
         "type": "research",
-        "parent_job_id": "job-b55a5f6b28feb0e9",
-        "priority": 80,
-        "canonical_id": "arXiv:2603.07169",
-        "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
-        "source_url": "https://arxiv.org/abs/2603.07169",
-        "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md",
-        "selection_reason": "共通LLM kernelを含む複数領域・FP32/BF16のMSKernelBenchと、profile情報を使ってcompile/execute toolchainまで自動構築するhardware-aware multi-agent optimizer CUDAMasterを提案する。Astra比約35%向上し一部でcuBLAS級に達すると報告しており、推論kernel自動最適化の一般化可能性を評価する比較対象として有用。",
+        "parent_job_id": "job-9b5752caaf5ee298",
+        "priority": 81,
+        "canonical_id": "arXiv:2603.09046",
+        "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+        "source_url": "https://arxiv.org/abs/2603.09046",
+        "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2603.09046-flexserve-secure-mobile-llm-serving.md",
+        "selection_reason": "ARM TrustZone上でLLM推論を保護する際の固定的なメモリ/NPU隔離コストを、ページとNPUを動的に保護・非保護へ切り替える仕組み、LLM向けメモリ管理、secure inference pipeline、multi-model schedulerで削減する。モバイルNPU実機の隔離と推論性能を同時に扱うため、端末内推論実行環境の隣接系統として有用。",
         "status": "ready",
         "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
         "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
         "schema_version": 1,
         "workflow_version": 10,
-        "created_at": "2026-09-12T19:09:45+00:00",
+        "created_at": "2026-09-13T01:25:56+00:00",
         "artifact_transport": "structured_record_v10"
       },
       "record_bank_fallback": "library"
     }
   ],
-  "processed_at": "2026-09-14T09:08:46+00:00",
-  "checkpoint_released": 1,
-  "heartbeat_at": "2026-09-14T09:13:33+00:00"
+  "processed_at": "2026-09-14T09:13:33+00:00",
+  "checkpoint_released": 1
 }
