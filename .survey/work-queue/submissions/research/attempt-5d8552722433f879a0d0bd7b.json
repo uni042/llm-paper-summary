@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "submission_id": "chat-attempt-5d8552722433f879a0d0bd7b-fineserve",
+  "attempt_id": "attempt-5d8552722433f879a0d0bd7b",
+  "job_id": "job-research-e3455f9cc66c1448",
+  "status": "completed",
+  "record_bank": "a",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.06261-fineserve-precision-aware-kv-slab-scheduling.md",
+  "record_slots": [
+    {"slot":"metadata","path":".survey/work-queue/records/chat-record/metadata.json","blob_sha":"3fbe88cca6f9079315a156055f734e264ff57ae2"},
+    {"slot":"problem_method","path":".survey/work-queue/records/chat-record/problem_method.json","blob_sha":"d36820ca2d277db861ba23efe51f2abc8ff21b4a"},
+    {"slot":"evaluation","path":".survey/work-queue/records/chat-record/evaluation.json","blob_sha":"1797013a79f8ebd98376f8b38461b3a75cc96464"},
+    {"slot":"results","path":".survey/work-queue/records/chat-record/results.json","blob_sha":"91e9dd190b14ba73a429d7d9de944b0fec91f1da"},
+    {"slot":"positioning","path":".survey/work-queue/records/chat-record/positioning.json","blob_sha":"3976a8c76e42c76242c427a44cb0a5425bc3ec93"}
+  ],
+  "audit_required": true,
+  "audit_reason": "著者公式FineServeコードの恒久URL、arXiv v2の正式公開・採録状態、著者投稿が示すsource codeとの対応、およびreferences_totalと実装詳細を追加確認する。",
+  "claim_id": "claim-5d8552722433f879a0d0bd7b",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "kind": "research",
+  "depends_on_job_ids": ["job-research-e3455f9cc66c1448"],
+  "source_urls": ["https://arxiv.org/abs/2509.06261", "https://arxiv.org/html/2509.06261"]
+}
