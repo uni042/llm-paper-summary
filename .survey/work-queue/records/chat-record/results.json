@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-10b0fd060950a22520ffad10",
   "job_id": "job-research-f3ec00db7d9723b7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-10b0fd060950a22520ffad10",
-    "worker_id": "scheduled-chat-20260915T0530JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "ArcLightの評価は、多数コアCPUで性能を制限する主因が単純なコア不足ではなくNUMA越しメモリアクセスであることを示す。4 NUMA実機ではローカルDDRアクセスが約101〜103 GB/sなのに対し遠隔ノードは約22〜26 GB/sで、約4倍の帯域差がある。単一NUMAノードではArcLightとllama.cppの差は比較的小さいが、2・4 NUMAへ広げるとArcLightのノード別メモリ配置とテンソル並列が効き、論文全体ではllama.cpp比で推論スループット最大46%向上を報告する。部分グラフ間を毎演算で大域同期せず非同期に進める変更だけでも約5 token/sを追加で改善する。300トークン入力の付録評価ではデコード優位は維持する一方、演算律速のプリフィルでは差が縮み、手法が主にメモリ帯域壁を解くことと整合する。",
+    "key_results": [
+      {"metric":"ローカル対遠隔NUMAメモリ帯域","value":"ローカル約101〜103 GB/s、遠隔約22〜26 GB/s","baseline":"同一4-NUMA機のコア・メモリ組合せ","condition":"各NUMA 48 Kunpeng-920コア＋6 DDR4チャネル","interpretation":"遠隔アクセスはローカルの約4分の1であり、多数コア推論ではテンソル配置を無視すると帯域損失が支配的になり得る。"},
+      {"metric":"推論スループット","value":"llama.cpp比で最大46%向上","baseline":"llama.cpp","condition":"Qwen3-4B Q4_0、192コア・4 NUMA ARM環境","interpretation":"スレッド束縛だけでなくメモリ配置とテンソル分割をNUMA境界へ揃えることで複数ノードの帯域を有効利用できる。"},
+      {"metric":"非同期部分グラフ実行の寄与","value":"約5 token/sの追加改善","baseline":"各演算ごとに全スレッド群を大域同期する方式","condition":"NUMA対応テンソル並列区間","interpretation":"独立部分グラフ間の不要な待機を外すことで、ノード間の進捗差によるアイドル時間を削減する。"},
+      {"metric":"単一NUMAスケーリング","value":"6から48スレッドへ増やすと両基盤ともスループット向上、ArcLightは僅かに優位","baseline":"llama.cpp単一NUMA","condition":"高いノード内メモリ帯域を利用可能","interpretation":"提案手法の大きな利得は一般的なCPUカーネル高速化ではなく、複数NUMAを跨ぐ条件で生じることを示す。"},
+      {"metric":"300トークン入力のプリフィル","value":"ArcLightがllama.cppを上回るが、デコードほど差は大きくない","baseline":"llama.cpp","condition":"付録の複数NUMA評価","interpretation":"テンソル並列はメモリアクセス壁を主に解くため、行列演算が支配するプリフィルでは改善上限が小さくなる。"}
+    ],
+    "negative_results": "ArcLightはすべてのCPU条件で大幅に速いわけではない。単一NUMAノード内ではllama.cppもコア増加に伴って良好に伸び、差は小さい。長いプロンプトのプリフィルは演算律速なのでNUMA帯域最適化の効果が相対的に下がる。評価はKunpeng-920 ARMだけで、x86や別NUMA構成に対する速度向上率は未確認である。Scatter/Gatherも初期実装で、通信・一時メモリの最適化余地が残る。",
+    "interpretation": "ArcLightの結果は、CPU LLM推論で『全コアを一つの演算へ投入する』ことが必ずしも最大性能にならないことを示す。多数コア機では各NUMAノードが独立した帯域資源を持つため、重み・活性・スレッドをノード単位に揃え、Transformerの連続行列積を対応する部分グラフへ分割する方が遠隔メモリ交通を抑えられる。軽量な実行基盤に作り直したことで、この配置とスレッド編成をグラフ全体で一貫して制御できる。",
+    "quality_impact": "同じQwen3-4B Q4_0重みを同じ推論意味論で実行するシステム最適化であり、報告された速度改善は精度との交換ではない。量子化自体の品質影響はArcLight固有ではなく比較両側に共通する。"
+  },
+  "reservation": {"claim_id":"claim-10b0fd060950a22520ffad10","worker_id":"scheduled-chat-20260915T0530JST","worker_kind":"scheduled_chat"}
 }
