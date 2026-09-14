@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "claim-20260914T133903Z-scheduled-chat-llm-survey-2230-02",
+  "worker_id": "scheduled-chat-llm-survey-20260914T2230JST",
+  "worker_kind": "scheduled_chat",
+  "requested_at": "2026-09-14T13:39:03Z",
+  "max_jobs": 1,
+  "job_types": ["research", "audit"],
+  "checkpointed_jobs": [
+    {
+      "job_id": "job-research-64153047cf155e5c",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T220000JST-research-2503.08461-fastcache-attempt-39b0297a3ba8ed6b96624d65.json"
+    },
+    {
+      "job_id": "job-research-d09e1c8e52097070",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/20260913T200500JST-serverlesslora-attempt-257f6eb558ebdd1e9a226b04.json"
+    },
+    {
+      "job_id": "job-research-02e232341d4ef088",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/20260913T201500JST-corun-attempt-b91431d388276d9bab4bda0e.json"
+    }
+  ]
+}
