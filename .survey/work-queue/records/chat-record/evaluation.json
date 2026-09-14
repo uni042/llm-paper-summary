@@ -1,13 +1,14 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-53d2e73cb4e28aeb786bbf9d",
-  "job_id": "job-research-4ff85aa229e8d65c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53d2e73cb4e28aeb786bbf9d",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-53d2e73cb4e28aeb786bbf9d","job_id":"job-research-4ff85aa229e8d65c",
+  "data":{
+    "hardware":"4×NVIDIA A100 80GB SXMまたは4×NVIDIA H100 80GB SXMを用い、テンソル並列4でLlama 3.1 70Bを実行する。H100はA100より演算能力が大きく、論文は1979 TFLOPs/s対312 TFLOPs/sとして、演算能力増加に対して帯域が相対的制約として残る点を議論する。",
+    "software":"SGLang v0.4.6.post4へDeepFusionKernelを統合し、FlashInferとCUDA Graphsを有効化する。比較はSGLang既定カーネル、vLLM v0.10.1.1、PyTorch分散推論。",
+    "model":"Llama 3.1 70B FP16",
+    "datasets":["合成デコード設定：入力長1、出力長1024","長生成設定：出力長1024/4096/16384"],
+    "baselines":["SGLang default kernels","vLLM","PyTorch distributed inference"],
+    "correctness":"同一のLlama 3.1 70B FP16計算を実行し、融合カーネルは中間値の物質化順序を変えるだけでモデル・生成条件を変えない。主評価はデコードthroughputで、各構成を4回測り平均と標準偏差を報告する。",
+    "settings":["TP=4","入力長1","基本評価の出力長1024","バッチ1/2/4/8/16/32/64","長生成はバッチ1/4/16、出力1024/4096/16384","事前プロファイラで融合カーネル候補を選択","選択後CUDA Graphで固定"],
+    "methodology":"まずモデル全体のデコードでバッチ1〜64を掃引し、A100/H100それぞれについてPyTorch、SGLang、DeepFusionKernelの処理率を比較する。次に長文生成を想定して出力長を1024、4096、16384へ伸ばし、バッチ1、4、16でSGLang、vLLM、DeepFusionKernelを比較し、KVキャッシュと注意機構の負担が増えた状態でもMLP融合の利得が維持されるかを確認する。DeepFusionKernelは同じSGLang集団通信を使うため、GPU間通信方式は統制されるが、実測のばらつきには通信ジッタが含まれる。",
+    "scope":"評価は70B級FP16モデル、4GPUテンソル並列、A100/H100 SXMという単一ノード中心の構成に限定される。異なるGPU間接続、ノード間ネットワーク、量子化モデル、MoE、他のMLP形状を網羅的には測らない。最適化対象はデコードのSwiGLUであり、入力処理や注意機構そのものは変更しない。"
+  },"reservation":{"claim_id":"claim-53d2e73cb4e28aeb786bbf9d","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
