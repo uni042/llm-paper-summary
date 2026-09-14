@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-a0eb09a53bc2577a801ac1fe",
+  "attempt_id": "attempt-42c672a52215fe4efe8a606a",
   "job_id": "job-research-e4755632664990fb",
   "data": {
     "limitations": "最大の制約は、論文が主張する1ビット検索を低レベルGPU演算として実装していない点である。試作は二値コードをFP16で表現してPyTorch演算を使い、ストレージ量と高速化利得の一部は厳密な1ビット圧縮格納モデルから計算する。具体的GPU型番も記載されないため、22msという遅延や128kでのスケーリングを特定ハードウェアの再現可能なエンドツーエンド性能として扱いにくい。さらに初期・終端層は近似に弱く完全精度を残す必要があり、全層を線形化できるわけではない。著者コードURLも確認時点ではGitHubから取得不能だった。",
@@ -12,5 +12,10 @@
     "relation_to_existing_repository": "既存のKV量子化・KV追い出し・階層KV研究に対し、どのKVを保存するかではなく、どのKVへ高精度計算を使うかを学習済み検索で決める軸を追加する。SpectrumKVのような混合精度保持はトークンごとの表現精度を変えるのに対し、DASH-KVはクエリ依存で計算精度を三段階化するため補完可能である。VeriCache型の下位層検証と組み合わせれば、ハッシュを候補生成、完全KVを検証用正本にする二段階構成も考えられる。",
     "audit_required": true,
     "audit_reason": "著者公式コードURLが現在404で取得不能であり、論文が示す公開実装の状態を後日再確認する価値がある。また具体的GPU型番が本文に見当たらず、Table 2の22msがどのハードウェア条件か補足資料・コードで確認できれば再現性が改善する。"
+  },
+  "reservation": {
+    "claim_id": "claim-42c672a52215fe4efe8a606a",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
   }
 }

@@ -2,47 +2,112 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-a0eb09a53bc2577a801ac1fe",
+  "attempt_id": "attempt-42c672a52215fe4efe8a606a",
   "job_id": "job-research-e4755632664990fb",
   "data": {
     "canonical_id": "arXiv:2604.19351",
     "arxiv_id": "2604.19351",
     "doi": "10.48550/arXiv.2604.19351",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
+    "arxiv_categories": {
+      "primary": "cs.CL",
+      "cross_list": []
+    },
     "title": "DASH-KV: Accelerating Long-Context LLM Inference via Asymmetric KV Cache Hashing",
     "summary": "DASH-KVは、長文脈推論で各クエリと全キーを高精度内積する注意機構の二乗計算を、ハミング空間での近似近傍検索へ置き換える手法である。動的なクエリには3層MLP、再利用されるキーには線形射影という非対称ハッシュ器を使い、複数ヘッドの合意と前層の注意分布で検索距離を補正する。さらに重要度に応じて完全精度、ハッシュ＋残差補正、計算除外の3段階へ振り分ける。LongBenchでは3モデルでFull Attentionと同程度の平均品質を保つ一方、学習済み非対称ハッシュはRecall@100 86.06%、1トークン当たり22msを示した。ただし実験は1ビット演算を実装せずFP16で模擬しており、理論上の1ビット圧縮格納による容量・高速化と実測を区別して解釈する必要がある。",
     "list_summary": "注意の全キー内積を学習済み非対称ハッシュ検索へ置換し、重要トークンだけ完全精度へ戻すことで、長文脈の計算量を線形化しつつLongBench品質をFull Attention近傍に維持する。",
-    "authors": ["Jinyu Guo", "Zhihan Zhang", "Jiehui Xie", "Md. Tamim Iqbal", "Dongshen Han", "Lik-Hang Lee", "Sung-Ho Bae", "Jie Zou", "Yang Yang", "Chaoning Zhang"],
+    "authors": [
+      "Jinyu Guo",
+      "Zhihan Zhang",
+      "Jiehui Xie",
+      "Md. Tamim Iqbal",
+      "Dongshen Han",
+      "Lik-Hang Lee",
+      "Sung-Ho Bae",
+      "Jie Zou",
+      "Yang Yang",
+      "Chaoning Zhang"
+    ],
     "authors_affiliations": "University of Electronic Science and Technology of Chinaを中心に、Bangladesh University of Engineering and Technology、The Hong Kong Polytechnic University、Kyung Hee Universityの著者が参加。",
     "published": "2026-04-21",
     "publication": "arXiv:2604.19351v4",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "長文脈注意・KVキャッシュ最適化 / 近似近傍検索・深層ハッシュ",
-    "topics": ["長文脈推論", "KVキャッシュ", "近似近傍検索", "深層ハッシュ", "疎注意", "混合精度"],
+    "topics": [
+      "長文脈推論",
+      "KVキャッシュ",
+      "近似近傍検索",
+      "深層ハッシュ",
+      "疎注意",
+      "混合精度"
+    ],
     "importance": "高。KVを単に量子化・追い出しするのではなく、注意の類似度計算そのものを学習済み1ビット近似検索へ変えるため、KV容量と注意計算を同じ検索問題として扱う設計軸を提示する。ただしネイティブ1ビットGPUカーネル未実装のため、システム実測としては未完成部分が大きい。",
     "hardware_evaluation": "論文本文は具体的なGPU型番を明示していない。PyTorchのFP16演算で二値ハッシュを模擬し、3kトークンで学習、最大32kでLongBench評価、合成系列では4k〜128kの拡張性を調べる。",
     "hardware_details": "具体的GPU型番・CPU・メモリ構成は本文から確認できない。二値コードは実際のビット演算ではなくFP16テンソルとして試作されているため、報告遅延はネイティブ1ビット実装の実測ではない。",
     "quality_effect": "Qwen2-7BのLongBench平均はFull Attention 38.71に対して38.73、Llama-3.1-8Bは42.70に対して42.43、Qwen2.5-14Bは42.26に対して42.92。近似法だが平均品質は密注意とほぼ同等で、一部タスクは上回る。層別には初期・終端層を置換すると大きく崩れるため中間層中心の配置が必要。",
-    "storage_targets": ["KVキャッシュ中のキー表現", "注意検索用1ビットハッシュコード", "長文脈のキー候補集合"],
-    "bottlenecks": ["長文脈注意の二乗計算", "高次元浮動小数点類似度計算", "KVキャッシュ容量", "ハッシュ誤差による検索漏れ", "ネイティブ1ビット演算未実装"],
-    "evidence_locations": ["§3.1–3.4", "Table 1", "Table 2", "§4.1–4.3", "§5.2–5.4", "§7 Limitations"],
+    "storage_targets": [
+      "KVキャッシュ中のキー表現",
+      "注意検索用1ビットハッシュコード",
+      "長文脈のキー候補集合"
+    ],
+    "bottlenecks": [
+      "長文脈注意の二乗計算",
+      "高次元浮動小数点類似度計算",
+      "KVキャッシュ容量",
+      "ハッシュ誤差による検索漏れ",
+      "ネイティブ1ビット演算未実装"
+    ],
+    "evidence_locations": [
+      "§3.1–3.4",
+      "Table 1",
+      "Table 2",
+      "§4.1–4.3",
+      "§5.2–5.4",
+      "§7 Limitations"
+    ],
     "source": "https://arxiv.org/abs/2604.19351",
-    "sources": ["https://arxiv.org/abs/2604.19351", "https://arxiv.org/html/2604.19351", "https://github.com/Zhihan-Zh/DASH-KV"],
+    "sources": [
+      "https://arxiv.org/abs/2604.19351",
+      "https://arxiv.org/html/2604.19351",
+      "https://github.com/Zhihan-Zh/DASH-KV"
+    ],
     "code": "https://github.com/Zhihan-Zh/DASH-KV",
     "implementation": "論文は著者コードとしてZhihan-Zh/DASH-KVを提示するが、2026-09-14の確認時点でGitHub APIから当該リポジトリは404で取得できなかった。論文実験自体も1ビットGPU演算を実装せず、PyTorchのFP16演算で二値コードを模擬する試作段階である。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id": "arXiv:2402.02750", "arxiv_id": "2402.02750"},
-      {"canonical_id": "arXiv:2309.17453", "arxiv_id": "2309.17453"},
-      {"canonical_id": "arXiv:2306.14048", "arxiv_id": "2306.14048"},
-      {"canonical_id": "arXiv:2404.14469", "arxiv_id": "2404.14469"},
-      {"canonical_id": "arXiv:2001.04451", "arxiv_id": "2001.04451"},
-      {"canonical_id": "arXiv:2312.13558", "arxiv_id": "2312.13558"}
+      {
+        "canonical_id": "arXiv:2402.02750",
+        "arxiv_id": "2402.02750"
+      },
+      {
+        "canonical_id": "arXiv:2309.17453",
+        "arxiv_id": "2309.17453"
+      },
+      {
+        "canonical_id": "arXiv:2306.14048",
+        "arxiv_id": "2306.14048"
+      },
+      {
+        "canonical_id": "arXiv:2404.14469",
+        "arxiv_id": "2404.14469"
+      },
+      {
+        "canonical_id": "arXiv:2001.04451",
+        "arxiv_id": "2001.04451"
+      },
+      {
+        "canonical_id": "arXiv:2312.13558",
+        "arxiv_id": "2312.13558"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v4 HTML版 References節",
     "references_total": 51
+  },
+  "reservation": {
+    "claim_id": "claim-42c672a52215fe4efe8a606a",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
   }
 }

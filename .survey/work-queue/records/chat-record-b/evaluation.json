@@ -2,16 +2,43 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a0eb09a53bc2577a801ac1fe",
+  "attempt_id": "attempt-42c672a52215fe4efe8a606a",
   "job_id": "job-research-e4755632664990fb",
   "data": {
     "hardware": "具体的なGPU型番、CPU、メモリ容量は本文に記載されていない。二値コードの格納・類似度計算はPyTorchのFP16演算で模擬され、ネイティブ1ビット演算器は使っていない。",
     "software": "Qwen2-7B-Instruct、Llama-3.1-8B-Instruct、Qwen2.5-14B-Instructを用い、PyTorch最適化カーネル上で試作した。論文は著者コードURLを示すが、2026-09-14のGitHub API確認ではリポジトリを取得できなかった。",
     "methodology": "学習系列長は3kトークン、LongBench推論は最大32kトークン。NarrativeQA、HotpotQA、Qasper、MultiNews、GovReport、TriviaQAの6課題を3モデルで評価し、Full Attention、StreamingLLM、H2O、SnapKVと比較する。ハッシュ部分では局所性鋭敏ハッシュ、対称学習ハッシュ、提案法をRecall@100、完全精度注意分布とのKL距離、1トークン当たり遅延で比較する。さらに4k〜128kの合成系列で拡張性、層単位置換で感度を調べる。",
     "scope": "LongBenchの品質比較は実モデル推論だが、ネイティブ1ビットカーネルや実際の1ビット圧縮KV格納は実装していない。したがって品質・検索再現率は実験結果として扱える一方、1ビット圧縮格納の容量削減やビット演算による将来速度は理論・モデル化を含む。具体的ハードウェアが非開示のため、他GPUへの遅延一般化にも制約がある。",
-    "workloads": ["LongBench NarrativeQA", "LongBench HotpotQA", "LongBench Qasper", "LongBench MultiNews", "LongBench GovReport", "LongBench TriviaQA", "4k〜128k合成長文系列"],
-    "baselines": ["Full Attention", "StreamingLLM", "H2O", "SnapKV", "局所性鋭敏ハッシュによるDASH-KV-Naive", "対称ハッシュによるDASH-KV-Sym"],
-    "metrics": ["LongBench課題スコアと6課題平均", "Recall@100", "完全精度注意分布とのKL距離", "1トークン当たり遅延", "系列長に対する遅延スケーリング", "層単位置換時の品質低下"],
+    "workloads": [
+      "LongBench NarrativeQA",
+      "LongBench HotpotQA",
+      "LongBench Qasper",
+      "LongBench MultiNews",
+      "LongBench GovReport",
+      "LongBench TriviaQA",
+      "4k〜128k合成長文系列"
+    ],
+    "baselines": [
+      "Full Attention",
+      "StreamingLLM",
+      "H2O",
+      "SnapKV",
+      "局所性鋭敏ハッシュによるDASH-KV-Naive",
+      "対称ハッシュによるDASH-KV-Sym"
+    ],
+    "metrics": [
+      "LongBench課題スコアと6課題平均",
+      "Recall@100",
+      "完全精度注意分布とのKL距離",
+      "1トークン当たり遅延",
+      "系列長に対する遅延スケーリング",
+      "層単位置換時の品質低下"
+    ],
     "reproducibility": "本文はモデル、課題、学習3k・推論32k、比較法、損失構成を記載する一方、具体的GPU型番や詳細実行環境を示さない。論文にコードURLはあるが現在取得不能で、さらにビット演算は未実装のため、報告された理論的な1ビット効率をそのまま再現するには追加実装が必要である。"
+  },
+  "reservation": {
+    "claim_id": "claim-42c672a52215fe4efe8a606a",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
   }
 }
