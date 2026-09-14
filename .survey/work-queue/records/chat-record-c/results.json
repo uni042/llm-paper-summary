@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-514ad57b9d8cf039e2f24bee",
-  "job_id": "job-research-fbca0f6d99c20b64",
-  "data": {
-    "overview":"本論文自身の新規ベンチマーク結果ではなく、三層分類に沿って代表システムの既報効果を整理したことが主要成果である。通信計画ではSCCLが小メッセージのAllGatherでNCCL比最大2.2倍、TE-CCLがRCCL比でアルゴリズム帯域最大3.18倍、実行・適応ではMSCCL++が通信1.7倍・推論1.2倍、MCCSがNCCL比最大2.4倍、計算通信協調ではCoCoNetがGPT-2推論でMegatron-LM比最大1.77倍、MegaScale-InferがTensorRT-LLM比でGPU当たりデコード最大1.90倍、NanoFlowが平均1.91倍の推論スループットを報告している。これらは条件の異なる個別研究値で直接順位付けできないが、通信スケジュール、実機適応、計算との重畳のどの層にも大きな改善余地があり、最終的なLLM性能には層を跨ぐ設計が必要であることを示す。",
-    "key_results":[
-      {"metric":"SCCLのAllGather速度","value":"最大2.2倍","baseline":"NCCL","condition":"SCCL一次研究の評価トポロジ、小入力","interpretation":"制約解法でトポロジ専用のチャンク通信順序を合成すると固定ライブラリアルゴリズムを上回り得る。"},
-      {"metric":"TE-CCLのアルゴリズム帯域","value":"最大3.18倍","baseline":"RCCL","condition":"TE-CCL一次研究のGPU試験環境","interpretation":"リンク容量と混雑を多品種フローとして明示する計画が異種ネットワークで有効である。"},
-      {"metric":"MSCCL++の性能","value":"通信1.7倍、推論1.2倍（幾何平均）","baseline":"同研究の既存通信・推論基準","condition":"プログラム可能なGPU通信実行","interpretation":"計画を表現できる低水準実行抽象が通信原語だけでなく推論全体へ利得を伝えられる。"},
-      {"metric":"CoCoNetのGPT-2推論","value":"最大1.77倍","baseline":"Megatron-LM","condition":"計算と通信の分割・並べ替え・融合・重畳","interpretation":"通信単体ではなく計算グラフと共同変換することでクリティカルパス上の露出通信を減らせる。"},
-      {"metric":"MegaScale-InferのGPU当たりデコード処理率","value":"最大1.90倍","baseline":"TensorRT-LLM","condition":"大規模MoE、注意機構と専門家モジュールの分離＋交互微小バッチ","interpretation":"推論アーキテクチャ自体を通信協調の対象にするとノード間転送を計算で隠せる。"},
-      {"metric":"NanoFlowの推論スループット","value":"平均1.91倍","baseline":"TensorRT-LLM","condition":"微小処理単位の依存関係スケジューリング","interpretation":"動的推論でも十分な並列性があれば計算・メモリアクセス・通信を細粒度に重畳できる。"}
-    ],
-    "negative_results":"サーベイが示す境界条件として、SCCL型の自動合成は装置・チャンク・段数とともに探索空間が急増する。AutoCCLの初期測定型適応は通信パターンが頻繁に変化すると最適設定が安定しにくい。CoCoNetの細粒度融合は小テンソルで逆に性能を落とす場合がある。MegaScale-Inferは注意機構と専門家処理の均衡が崩れるとパイプライン空泡が利得を相殺し、NanoFlowも小要求や独立計算が少ない条件では細粒度スケジューリングの追加費用に見合わない。",
-    "interpretation":"各層の改善倍率が大きくても、計画で得た理論帯域が実行ランタイムで再現され、さらに通信が最終実行グラフのクリティカルパスから外れなければLLM全体の利得にはならない。推論では学習より反復計算が小さく負荷変動が大きいため、通信を隠す余地が少なく、実行時適応とサービング構成を一体で設計する重要性が高い。",
-    "quality_impact":"比較対象の多くは通信経路・実行順序・重畳を変更する損失なしのシステム最適化であり、モデル出力品質を交換条件にしない。ただし将来課題として挙げる圧縮対応集団通信では、転送量削減による速度利得と量子化・疎化誤差の蓄積を同時評価する必要がある。"
-  },
-  "reservation":{"claim_id":"claim-514ad57b9d8cf039e2f24bee","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-b6f798d6756ce2916ac086f4",
+  "job_id": "job-research-9ac9e9ad81401213",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b6f798d6756ce2916ac086f4",
+    "worker_id": "scheduled-chat-llm-survey-20260914T2230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
