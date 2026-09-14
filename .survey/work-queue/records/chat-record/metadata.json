@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-ef6bb2e2e1d5f5bb044a43ed",
   "job_id": "job-research-8f8cd2df2a210c58",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2507.21276",
+    "arxiv_id": "2507.21276",
+    "doi": "10.48550/arXiv.2507.21276",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AI", "cross_list": ["cs.CL", "cs.DC"]},
+    "title": "LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems",
+    "summary": "LeMixは、継続再学習とオンライン推論を別GPU群へ固定分離すると、推論の低負荷時間とパイプライン並列学習の空き時間が互いに利用できず、さらに学習済み重みの同期まで遅れる問題を扱う。vLLMとDeepSpeed上で両ワークロードを同じ複数GPUノードへ共置し、事前測定した入力長・バッチサイズ別の実行時間とメモリ量から各新規タスクのパイプライン軌跡を予測する。その予測を使って、増加するGPU空き時間、推論応答時間、入力長の整合性を組み合わせた優先度でノードを選び、SLO違反を招きそうな学習タスクは大域キューで後回しにする。実行時には各段のメモリを監視し、短時間は待機、上限を超えれば活性値やKVキャッシュをCPUへ退避してOOMと推論遅延を抑える。GPT/Llama系を8 GPU・4ノードで評価し、固定分離構成に比べて混合ワークロードのスループットを最大3.53倍、推論損失を最大0.61倍、応答時間SLO達成率を最大2.12倍へ改善した。",
+    "list_summary": "LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。",
+    "authors": ["Yufei Li", "Zexin Li", "Yinglun Zhu", "Cong Liu"],
+    "authors_affiliations": "University of California, Riverside",
+    "published": "2025-07-28",
+    "publication": "RTSS 2025 / arXiv:2507.21276v1",
+    "publication_type": "査読会議論文",
+    "publication_status": "RTSS 2025採録。arXiv v1は2025-07-28提出。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["学習・推論共置", "GPUスケジューリング", "継続学習", "パイプライン並列", "SLO", "KVキャッシュ退避", "vLLM", "DeepSpeed"],
+    "importance": "高。推論専用スケジューラでは扱わない継続学習との資源共有を、ノード配置・パイプライン予測・実行時メモリ制御まで一体化し、学習品質と推論SLOを同時に扱う。",
+    "hardware_evaluation": "実機。GPT系は4サーバ×RTX 6000 Ada 48GB×2、Llama系は4 AWS EC2サーバ×A100 80GB×2で評価。",
+    "hardware_details": "GPT評価環境は各サーバにNVIDIA RTX 6000 Ada 48GB×2、AMD EPYC-7543 64コア、2TBメモリ。Llama評価環境は4台のAWS EC2、各A100 80GB×2、GPU間はNVLINK。",
+    "quality_effect": "継続学習を推論と同じノードで即時反映するため、固定分離で周期同期する場合より推論損失を最大0.61倍へ低減。学習タスクをSLO保護のため後回しにすると短期的な品質改善と応答性の交換条件が生じる。",
+    "storage_targets": ["GPU KVキャッシュ", "GPU活性値", "モデル重み", "CPUメモリへの退避領域"],
+    "bottlenecks": ["低トラフィック時の推論GPU遊休", "パイプライン学習のバブル", "学習と推論の同時実行干渉", "GPUメモリ競合", "学習済み重みのノード間同期"],
+    "evidence_locations": ["§II-C", "§IV-A–IV-D", "§V-A–V-D", "§VI-A–VI-G", "Figures 10–18", "Table III"],
+    "source": "https://arxiv.org/abs/2507.21276",
+    "sources": ["https://arxiv.org/abs/2507.21276", "https://arxiv.org/html/2507.21276v1", "https://arxiv.org/pdf/2507.21276"],
+    "code": "",
+    "implementation": "vLLMとDeepSpeedを基盤に、FlashAttention、Python並行実行、クラスタ大域スケジューラ、ノード内段別実行スレッド、メモリ監視とCPU退避を実装。一次資料では専用公開コードURLは確認できない。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
+      {"canonical_id": "arXiv:2406.03243", "title": "Llumnix: Dynamic Scheduling for Large Language Model Serving"},
+      {"canonical_id": "arXiv:2401.09670", "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"},
+      {"canonical_id": "arXiv:2403.02310", "title": "Sarathi-Serve: Taming the Throughput-Latency Tradeoff in LLM Inference"},
+      {"canonical_id": "arXiv:2402.09353", "title": "ServerlessLLM: Low-Latency Serverless Inference for Large Language Models"}
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv:2507.21276v1参考文献節",
+    "references_total": 74
+  },
+  "reservation": {"claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
 }
