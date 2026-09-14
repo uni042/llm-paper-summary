@@ -222,17 +222,6 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
     accepted_24 = sum(int(e.get("accepted_count") or 0) for e in specialist_24)
     novel_24 = sum(int(e.get("novel_candidate_count") or 0) for e in specialist_24)
 
-    latest_run = _latest_normal_run(ledger_entries, maintenance)
-    latest_run_counts = latest_run.get("counts") or {}
-    latest_run_key = str(latest_run.get("run_key") or "")
-    latest_normal_discovery = normal_discovery_by_key.get(latest_run_key, {
-        "round_count": 0,
-        "candidate_count": 0,
-        "duplicate_filtered_count": 0,
-        "novel_candidate_count": 0,
-        "accepted_count": 0,
-        "axes": [],
-    })
     latest_specialist = specialist_runs[-1] if specialist_runs else {}
 
     warnings: list[str] = []
@@ -311,19 +300,6 @@ def build_dashboard(repo_root: Path, now: datetime | None = None) -> str:
         "### 24時間の流れ",
         "",
         f"**探索評価 {evaluated_24} → 重複除外後 {max(evaluated_24 - duplicate_24, 0)} → Research候補採用 {accepted_24} → Research完了 {counts_24['research_completed']} → Repo収録 {counts_24['new_papers']}**",
-        "",
-        "## 直近の通常worker",
-        "",
-        f"Run: **{latest_run.get('run_key', '—')}**",
-        "",
-        "| 指標 | 件数 |",
-        "|---|---:|",
-        f"| Research完了 | **{int(latest_run_counts.get('research_completed') or 0)}** |",
-        f"| Repo収録 | **{int(latest_run_counts.get('new_papers') or 0)}** |",
-        f"| Audit完了 | **{int(latest_run_counts.get('audit_completed') or 0)}** |",
-        f"| 通常worker Discovery round | **{int(latest_normal_discovery.get('round_count') or 0)}** |",
-        f"| 通常worker Discovery採用 | **{int(latest_normal_discovery.get('accepted_count') or 0)}** |",
-        f"| Research/Audit blocked遷移 | **{_normal_blocked(latest_run)}** |",
         "",
         "## 次に処理する候補",
         "",
