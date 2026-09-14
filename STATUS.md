@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 13:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 13:34 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,12 +36,12 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **72** |
-| 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **71** |
-| :30 通常worker Active claims | **0** |
+| 処理中（Active claims） | **3** |
+| 今すぐ着手可能（Claimable） | **70** |
+| :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 13:31 JST** |
+| :30 通常worker 直近claim | **09-14 13:34 JST** |
 | :00 補助worker 直近claim | **09-14 13:22 JST** |
 | 直近24h Research完了（:30 通常worker） | **24** |
 | 直近24h Research完了（:00 補助worker） | **23** |

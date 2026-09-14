@@ -2,45 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-6b041a0d266d15ef6cc2a08d",
-  "job_id": "job-research-6ec0e9028edbe67e",
-  "data": {
-    "canonical_id": "arXiv:2503.13737",
-    "arxiv_id": "2503.13737",
-    "doi": "10.48550/arXiv.2503.13737",
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.CL", "cross_list": []},
-    "title": "AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications",
-    "summary": "短い対話入力と4千〜10万トークン級の長い入力、厳しいオンライン応答目標と緩いオフライン完了時間目標が同じ推論サーバへ混在すると、固定分割と到着順処理では厳しい目標に合わせて処理単位を小さくし過ぎたり、複数の長い入力がKVキャッシュを長時間占有してGPU計算余力を使えなくなる。AccelGenはvLLMのスケジューラを置き換え、GPUを飽和させる基準順伝播量と処理群内の最小サービス水準目標（SLO）から各反復のトークン予算を動的に計算し、その予算まで長い入力を可変長に分割する。要求は次反復までの残り猶予で優先付けし、似たSLOを近くへ集める。さらにGPUのトークン余力と未割当KVキャッシュの二次元残量へ最も適合する要求・分割片を選び、計算資源とKV資源を同時に埋める。A100実機の混合履歴評価で既存方式より処理量1.42〜11.21倍、有効処理量1.43〜13.71倍、SLO達成率37〜90%改善を報告する。",
-    "list_summary": "SLOから各反復のトークン予算を決める動的分割、残り猶予順の優先付け、GPU計算とKVキャッシュを同時に詰める処理群選択を組み合わせ、長短入力混在で有効処理量とSLO達成率を改善する。",
-    "authors": ["Haiying Shen", "Tanmoy Sen"],
-    "authors_affiliations": "University of Virginia",
-    "published": "2025-03-17",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "SLO-aware LLM serving / chunked prefill / multi-resource scheduling",
-    "topics": ["LLM配信", "サービス水準目標", "動的分割", "KVキャッシュ", "複数資源スケジューリング", "有効処理量"],
-    "importance": "長い入力の分割量、反復単位のSLO優先度、GPU計算量とKVキャッシュ占有を別々に扱わず、同一スケジューラで共同最適化する設計を示し、混合用途環境の有効処理量を理想的な上限に近づける。",
-    "hardware_evaluation": "AWS p4d.24xlarge、NVIDIA A100 80GB×8、NVSwitch 600 GB/s。OPT-13Bを1 GPU、OPT-175Bを8 GPU、Llama-13Bを1 GPU、Llama-3-70Bを4 GPUで評価。",
-    "quality_effect": "生成モデル、重み、数値精度を変更せずスケジューラと入力分割だけを変えるため、生成品質を意図的に変更しない。長い入力の分割や処理中断により要求ごとの待ち方は変化する。",
-    "storage_targets": [],
-    "bottlenecks": ["長い入力による反復遅延", "異種SLOの混在", "KVキャッシュ長時間占有", "GPU計算余力とKV余力の片側断片化", "到着順処理による資源利用低下"],
-    "source": "https://arxiv.org/abs/2503.13737",
-    "sources": ["https://arxiv.org/abs/2503.13737", "https://arxiv.org/html/2503.13737"],
-    "code": null,
-    "implementation": "公開vLLMを基盤に既定の到着順スケジューラを置換。優先度制御を約9千行のPython、動的分割などを約3千行のC++で実装し、複数資源を考慮した処理群形成はvLLMのブロック管理器からKVキャッシュ状態を取得する。FlashAttention2の関数を追加し、KV容量超過時の処理中断はvLLM機構を利用する。一次資料にAccelGen固有コード公開URLは記載されない。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {"canonical_id": "arXiv:2205.01068", "arxiv_id": "2205.01068"},
-      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180"},
-      {"canonical_id": "arXiv:2306.06000", "arxiv_id": "2306.06000"},
-      {"canonical_id": "arXiv:2405.05465", "arxiv_id": "2405.05465"},
-      {"canonical_id": "arXiv:2307.08691", "arxiv_id": "2307.08691"}
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML版参考文献節",
-    "references_total": 39
-  },
-  "reservation": {"claim_id": "claim-6b041a0d266d15ef6cc2a08d", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-a3daac9a319d796e8d7d816c",
+  "job_id": "job-research-87d11da7c0c30dc4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-a3daac9a319d796e8d7d816c",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
