@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-37e62296473e532739f73eab",
-  "job_id": "job-research-b8afd28ccc02f095",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-37e62296473e532739f73eab",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"attempt_id":"attempt-37e62296473e532739f73eab","job_id":"job-research-b8afd28ccc02f095","slot":"evaluation","data":{"hardware":["NVIDIA B200 180 GB HBM3e・NVLink","NVIDIA RTX PRO 6000 96 GB GDDR7・PCIe","通常CPU上のシミュレーション評価"],"software":["AgentServeSim","LLMServingSim 2.0","ASTRA-Sim","vLLM 0.19","OpenEvolve"],"model":["Llama-3.1-8B TP1","Llama-3.1-70B TP2"],"datasets":["50 SWE-benchプログラムをmini-SWE-agentで収集、中央値47ターン","100 BFCL v4関数呼出しプログラム、中央値5.5ターン","単一ターン退行確認にShareGPT 300要求"],"baselines":["同一保持・スケジューリング方策を実行する実vLLM 0.19","保持: LRU、固定TTL、圧力適応TTL、ツール別TTL、最小浪費","順序付け: FCFS、Program-FCFS、PLAS","ルーティング: ラウンドロビン、最小負荷、セッション親和性"],"correctness":"各対比較では同じ入力トークン数、生成トークン数、ツール所要時間を実vLLMとシミュレータへ与え、エージェント生成内容の非決定性を除外する。一方、各ターンの解放時刻、順序、KV常駐はそれぞれの実行結果から因果的に生成する。","settings":[{"name":"実機忠実度20セル","description":"B200 8B SWE-bench、B200 8B BFCL、B200 70B SWE-bench、RTX PRO 6000 70B SWE-benchの4構成を、0.02、0.04、0.06、0.08、0.1 jobs/sの5到着率で評価する。保持はTTL 2秒、順序付けはPLASでそろえる。"},{"name":"強メモリ圧力条件","description":"RTX PRO 6000上のLlama-3.1-70B TP2ではKVプールが114,768トークンなのに対し、SWE-bench全体は38.7M文脈トークンを含む。メイクスパンが到着区間の約5倍になる飽和条件で追い出しと待ち行列の再現性を検証する。"},{"name":"設計空間掃引","description":"RTX 70B、50プログラム、0.02 jobs/sで保持と順序付けを組合せ、LRU+FCFSの平均JCT 3726秒を基準にする。各シミュレーション点は約1 CPUコア時間で、対応実vLLM評価は2 GPUを3〜6時間占有する。"},{"name":"進化方策探索","description":"RTX PRO 6000、Llama-3.1-70B TP2、SWE-bench 30プログラム、0.1 jobs/sを対象に保持とスケジューリングの各軸で50反復。候補評価中央値は1 CPUコアで19分。"},{"name":"単一要求退行確認","description":"B200、Llama-3.1-8B TP1、ShareGPT 300要求、10 requests/sでプログラム層を実質無効化し、通常要求サービングの遅延・TTFT・TPOT・生成スループットが実vLLMと整合するか確認する。"}],"methodology":"実機別の演算子遅延プロファイル、NCCL AllReduce実測帯域、バッチ形状別の実測残差、エンジン自身が報告するKVプール容量をシミュレータへ投入する。主な忠実度指標は平均JCT、p99 JCT、プログラム別MAPEであり、補助として要求単位TTFT、TPOT、キュー遅延、生成トークンスループットを比較する。設計探索では同じ校正済みモデルを使い、実機で高価な保持・スケジューリング組合せとLLM生成方策をCPU上で反復評価する。","scope":"多輪エージェントのプログラム単位保持・順序付け・配置方策を評価するシミュレーション基盤。実機忠実度検証は保持と順序付けを中心に行い、複数サービングインスタンス間のルーティングはシミュレーション設計対象ではあるが実機対比較の範囲外。","workloads":["長い多輪コード修正エージェント","関数呼出しエージェント","強いKVメモリ圧力","通常の単一要求サービング"],"metrics":["平均ジョブ完了時間","p99ジョブ完了時間","プログラム別MAPE","TTFT","TPOT","キュー遅延","生成トークンスループット","CPU評価時間とGPU評価時間"],"reproducibility":"本文はハードウェア、モデル、到着率、方策、トレース統計、進化探索設定、実機校正法を詳細に記載する。著者公式コードURLは本文から確認できず、完全再現には実装入手性の制約が残る。"}}
