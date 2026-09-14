@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T03:06:46.588542+00:00",
+  "updated_at": "2026-09-14T03:09:20.897777+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T03:06:46.588542+00:00",
+      "last_recorded_at": "2026-09-14T03:09:20.897777+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 21,
+        "research_completed": 22,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18990,6 +18990,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34801568162:1",
+          "recorded_at": "2026-09-14T03:09:20.897777+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34801568162",
+            "run_attempt": "1",
+            "source_sha": "237845299eb2ffc619bec745273c78ddbaef046a"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19158,6 +19172,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.15602",
           "title": "FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-e4755632664990fb",
+          "type": "research",
+          "canonical_id": "arXiv:2604.19351",
+          "title": "DASH-KV: Accelerating Long-Context LLM Inference via Asymmetric KV Cache Hashing",
           "from": "ready",
           "to": "completed"
         }
