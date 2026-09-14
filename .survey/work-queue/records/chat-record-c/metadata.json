@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-de4b5e639b1855520a8f3a27",
   "job_id": "job-research-d9bb056b1c54e053",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-de4b5e639b1855520a8f3a27",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.06914",
+    "arxiv_id": "2605.06914",
+    "doi": "10.48550/arXiv.2605.06914",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["cs.AI", "cs.CL"]},
+    "title": "Regulating Branch Parallelism in LLM Serving",
+    "summary": "TAPERは、1つのLLM要求の応答を複数の独立分岐へ分けて並列生成する要求内並列性が、継続バッチ処理では同居する別要求のデコードステップまで遅くする『分岐外部性』を制御する受入制御方式である。各デコードステップで全要求を1トークンずつ進める保護基準ステップをまず定義し、最も期限が厳しい要求の残余余裕時間から、そのステップで追加分岐へ使える遅延予算を計算する。単調なステップ遅延予測器で候補分岐を追加した場合の遅延増分を見積もり、予算内の分岐だけを限界効用/限界遅延比の高い順に受け入れる。分岐は共通接頭辞KVキャッシュを共有するため、後回しにしても大きな復元転送を必要とせず、次ステップで再検討できる。8台のA100 80GB上のQwen3-32B/SGLang評価では、固定幅や全分岐即時実行が高負荷時にSLO達成率を41〜59%まで落とす一方、TAPERは平均ステップ遅延を約48msに抑えて99%のSLO達成率を保ち、IRP無効化比で有効スループットを最大1.77倍、全分岐即時実行比で1.48倍へ改善する。分岐独立性が成立する場合は実行順を変えても条件付き分布が不変で、1000プロンプトの決定論的生成は全比較で完全一致した。",
+    "list_summary": "各デコードステップの残余SLO余裕から追加分岐の遅延予算を作り、予算内だけを動的に実行することで、分岐並列化による他要求の遅延悪化を防ぎつつQwen3-32Bで有効スループットを最大1.77倍へ高める。",
+    "authors": ["Swapnil Gandhi", "Siva Hari", "William J. Dally", "Christos Kozyrakis"],
+    "authors_affiliations": "Stanford University、NVIDIA。William J. DallyとChristos KozyrakisはStanford UniversityとNVIDIAの両方に所属。",
+    "published": "2026-05-07",
+    "publication": "arXiv:2605.06914v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-05-07）。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["要求内並列性", "分岐スケジューリング", "継続バッチ処理", "SLO", "KVキャッシュ共有", "有効スループット"],
+    "importance": "高。枝分かれ型推論を単独要求の高速化としてではなく、共存要求への遅延外部性を持つ共有資源問題として定式化し、ステップ単位のSLO余裕を使う動的制御へ落としている。",
+    "hardware_evaluation": "主評価は8×NVIDIA A100 80GB、NVLink、テンソル並列度8。Qwen3-32B BF16をSGLangで提供。追加評価は同一構成のQwen2.5-72B。",
+    "hardware_details": "単一8-GPUノード。高負荷時のピークGPUメモリ使用率は約78%、KVキャッシュが約62%を占める。SGLangのradix-tree KVキャッシュを利用。",
+    "quality_effect": "独立分岐が兄弟分岐へ注意せず、最後の縮約が正準的である条件ではスケジュール順序は条件付き出力分布を変えない。決定論的生成1000件でTAPER、IRP-Off、Eagerの出力は100%バイト一致した。確率的生成では分岐ごとに乱数系列を固定すれば同じ性質を保てる。",
+    "storage_targets": ["共通接頭辞KVキャッシュ", "分岐固有KVキャッシュ", "要求ごとの期限・余裕時間状態"],
+    "bottlenecks": ["分岐幅増加によるデコードステップ遅延", "継続バッチ内の分岐外部性", "固定分岐上限の負荷依存性", "KVキャッシュ圧力", "SLO違反による有効スループット低下"],
+    "evidence_locations": ["§2 Motivation and Characterization", "§3 TAPER Design", "§4 Implementation", "§6 Evaluation", "Appendix C-E"],
+    "source": "https://arxiv.org/abs/2605.06914",
+    "sources": ["https://arxiv.org/abs/2605.06914", "https://arxiv.org/html/2605.06914v1"],
+    "code": null,
+    "implementation": "SGLangのスケジューリング経路にTAPERのステップ単位受入制御を統合した研究実装を評価している。分岐発見とMap-Process-Reduce実行にはMultiverseフロントエンドを使用。論文本文からTAPER固有の公開コードURLは確認できない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id": "arXiv:2307.15337", "arxiv_id": "2307.15337"},
+      {"canonical_id": "arXiv:2401.06761", "arxiv_id": "2401.06761"},
+      {"canonical_id": "arXiv:2506.05745", "arxiv_id": "2506.05745"},
+      {"canonical_id": "arXiv:2505.09388", "arxiv_id": "2505.09388"},
+      {"canonical_id": "arXiv:2412.15115", "arxiv_id": "2412.15115"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 45
+  },
+  "reservation": {"claim_id": "claim-de4b5e639b1855520a8f3a27", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
 }
