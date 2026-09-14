@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-b4f98614fa22d7e73fab59f5",
   "job_id": "job-research-25e24814dedb76cb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b4f98614fa22d7e73fab59f5",
-    "worker_id": "scheduled-chat-paper-20260915T0630JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主評価は実機実行ではなく、NVIDIA A100相当のworkerを模した離散事象シミュレーション。LongBenchでは256 worker、BurstGPTでは16 worker。負荷不均衡の動機付けには32 GPU・436デコード段階の産業トレースを利用する。",
+    "software": "公開シミュレータはBF-IO、FCFS、JSQ、ラウンドロビン等を実装し、要求列からworker負荷、スループット、遅延、利用率、電力、エネルギーを計算する。論文では整数最適化を各割当時に解き、Hを0、20、40、60、80、100で比較する。",
+    "methodology": "LongBench由来要求を定常Poisson到着で供給し、システム容量を上回る過負荷条件で256 worker・容量72を評価する。段階時間は実トレースから回帰したC=9.775×10^-3秒とt_l=1.005×10^-7秒を使い、最大worker負荷で進める。比較はFCFS、JSQ、BF-IO H=0〜100。平均負荷偏り、トークン毎秒、出力1トークン当たり時間、総エネルギーを測る。BurstGPTでは16 worker・容量72の軽負荷寄り条件でも再評価する。",
+    "scope": "性能値は校正済みシミュレーションであり、BF-IOを本番vLLM/SGLangクラスタへ統合した実機測定ではない。LongBench主結果は十分な待機要求がある過負荷状態を意図的に作る。BurstGPTでは効果が小さくなるため、利得は負荷偏りの大きさに依存する。理論は主にH=0と非減少負荷ドリフトを扱う。",
+    "workloads": ["LongBench由来要求", "BurstGPT到着トレース", "32 GPU産業デコードトレース"],
+    "baselines": ["FCFS", "JSQ", "BF-IO H=0"],
+    "metrics": ["平均負荷偏り", "スループット", "出力1トークン当たり時間", "総エネルギー", "worker利用率", "GPU電力"],
+    "reproducibility": "A100相当の電力パラメータ、worker数、容量、段階時間回帰係数、各H、主要比較表が記載され、公開シミュレータも確認できる。一方、動機付けに使う産業トレースの生データや、本番サービング統合コードの公開は一次資料から確認できない。"
+  },
+  "reservation": {"claim_id": "claim-b4f98614fa22d7e73fab59f5", "worker_id": "scheduled-chat-paper-20260915T0630JST", "worker_kind": "scheduled_chat"}
 }
