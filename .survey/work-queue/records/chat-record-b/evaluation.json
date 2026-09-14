@@ -1,35 +1,49 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
+  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "evaluation",
-  "attempt_id": "attempt-a3ff5598681924c50c62e155",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "hardware": "NVIDIA A100 40GB。OPT-13Bは1 GPU、OPT-30Bは2 GPU、OPT-66Bは4 GPU。GPU間NVLink。",
-    "software": "vLLMベースの公開Apt-Serve実装。FP16、FlashAttention、iteration-level batching、NCCLテンソル並列、専用hidden-cache CUDAカーネル。",
-    "methodology": "ShareGPT（チャット）、HumanEval（コード補完）、LongBench（要約）から各1,000要求を無作為抽出し、Poisson到着率を掃引。OPT-13B/30B/66BでvLLM、Sarathi-Serve、DeepSpeed-FastGenと比較し、全方式でキャッシュ用GPUメモリ利用率を揃える。TTFTと各要求のP99 TBTの双方を満たす要求割合をSLO達成率とし、同一達成率で維持可能な最大到着率を有効スループットとする。Gamma到着でburstiness、構成除去、スケジューラオーバーヘッド、Sarathi統合、超長文モデル・データも追加評価。",
-    "scope": "主評価は単一サーバ内A100とOPT 13B–66B。超長文ではLLaMA3-8B-Instruct-262KとYi-6B-200Kへ拡張するが、異種GPU、複数サーバの独立インスタンス間ルーティング、本番到着トレースは主評価外。",
-    "workloads": [
-      "ShareGPT",
-      "HumanEval",
-      "LongBench",
-      "WikiText（超長文追加評価）",
-      "Arxiv（超長文追加評価）",
-      "BookCorpus（超長文追加評価）"
+    "hardware": [
+      "2×NVIDIA A100 SXM4 40GB（二地域実機試験）",
+      "2×NVIDIA H100 SXM5 80GB（二地域方向確認）",
+      "19地域の均質H100相当（履歴再生モデル）"
+    ],
+    "software": [
+      "vLLM",
+      "NVIDIA DCGM",
+      "WattTime V3 MOER API",
+      "Solyx AI Grid本番圧力ルータ"
+    ],
+    "model": [
+      "Llama-3.1-8B-Instruct"
+    ],
+    "datasets": [
+      "約48時間の合成・持続到着ワークロード（約196万要求ターン）",
+      "2025-07-06〜2026-07-06の19地域・8760時間MOER系列"
     ],
     "baselines": [
-      "vLLM",
-      "Sarathi-Serve",
-      "DeepSpeed-FastGen"
+      "ラウンドロビン",
+      "炭素補正なしの本番圧力ルータ",
+      "モデル化した炭素非認識serve-local/spill負荷分散"
     ],
-    "metrics": [
-      "SLO達成率",
-      "有効スループット（req/s）",
-      "TTFT",
-      "P99 TBT",
-      "tail latency",
-      "スケジューリング時間"
+    "correctness": "目的は出力品質ではなく配送機構・炭素帰属の妥当性である。実機では約196万要求ターンを配送失敗0件で処理し、各要求の配送時予測MOERと実行後履歴MOERを記録して精算する。モデルや生成手法は腕間で固定し、炭素配置以外の変数を可能な範囲で分離する。",
+    "settings": [
+      {
+        "name": "A100二地域実機",
+        "description": "AZPSとPJM-DC、2×A100 SXM4 40GB、約48時間。5 arrivals/sのセッション開始率、最大同時進行256。5配送腕を同時実行し、主要比較は炭素重み1.0と補正なし圧力ルータ。"
+      },
+      {
+        "name": "H100二地域実機",
+        "description": "ERCOT North-CentralとSOCO、2×H100 SXM5 80GB。初期signal-index方式の地域順位逆転を発見し、絶対MOER方式で清浄地域への移動方向を確認。期間が短く精算削減率は主張しない。"
+      },
+      {
+        "name": "1年履歴再生",
+        "description": "19 CONUS地域、8760時間。地域当たり瞬間需要50%上限、40%の多ターン負荷を起点地域へ平均2時間固定。固定0.104 J/出力トークンのH100飽和相当を用い、5日ブロック・1万回ブートストラップで信頼区間を算出。"
+      }
     ],
-    "reproducibility": "公開GitHub実装、モデル/GPU構成、SLO、データセット、到着生成法、主要比較方式を明示。実運用トレースではなく合成Poisson/Gamma到着である点は外的妥当性の制約。"
+    "methodology": "実機試験は同じワークロードを要求単位で無作為に各腕へ割り当てるが、腕同士は同じGPU・待ち行列・圧力状態を共有するため相互干渉がある。したがって実機の遅延差・1.45%排出差は記述的結果として扱う。長期再生は実機で測れない季節・地域多様性を補う一方、履歴MOERを配送にも直接使う完全予見条件なので、予測誤差を含む本番削減率の推定ではなく機会上限として解釈する。",
+    "scope": "GPUに帰属する運用時CO2のみを評価し、施設PUE、ネットワーク、ハードウェア製造時排出は除外する。再生では均質GPU、固定J/トークン、概ね均等な起点需要を仮定し、地域別実GPU台数、通信遅延、接頭辞キャッシュ喪失、物理的な再生可能電力余力を含めない。"
   }
 }

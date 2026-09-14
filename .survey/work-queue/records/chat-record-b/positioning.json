@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
+  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "positioning",
-  "attempt_id": "attempt-a3ff5598681924c50c62e155",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "limitations": "主評価はA100同質サーバとOPT系列に集中し、到着時刻はPoisson/Gammaで合成されるため、本番の相関・日内変動や異種GPUクラスタでの外挿には注意が必要。cache type切替時は既存キャッシュを破棄してprefillを再実行する。SLO最大化目的のfallbackは既に違反した要求を強く降格するため、約10%で飢餓が観測される。論文自身も複数インスタンスを将来課題としている。",
-    "differences": "PagedAttention/vLLMはKVの断片化を抑えて容量を効率利用するが、保存表現自体はKVのまま。Sarathi-Serve/FastGenはprefill/decode混在で計算干渉を抑えるが、キャッシュ表現と要求選択を共同最適化しない。Apt-Serveはhidden stateという半容量の正確な代替表現を導入し、要求採用と表現選択を一つのメモリ制約付き最適化として反復ごとに解く。",
-    "implementation_status": "vLLM上の実装を著者がGitHub（eddiegaoo/Apt-Serve）で公開。専用CUDAカーネルとスケジューラを含む。査読済みPACMMOD/SIGMOD 2025論文。",
-    "research_positioning": "KVキャッシュ管理とSLO認識サービング・スケジューリングの境界にある。キャッシュ圧縮・オフロードのように容量だけを下げるのではなく、正確な中間表現を切り替えて計算量と容量を動的に交換する。",
-    "relation_to_existing_repository": "KV-cache offload/recomputation系の『低速階層へ退避するか再計算するか』という交換関係と近いが、Apt-ServeはGPU HBM内で表現粒度を変える。FlowKVのような転送最適化、Agent MemoryのようなSSD永続化、SAECacheの追い出し優先度とは相補的で、将来はKV/hidden/CPU/SSDを複数段階の候補として同じ限界価値/メモリ・I/O費用に拡張できる。Sarathi-Serveとの組合せで元方式よりさらに改善することも論文が実証している。",
+    "limitations": "実機試験は各2地域・各1GPU相当の小規模セルで、主要A100試験も約48時間・一つの季節条件しかない。配送腕がGPUと待ち行列を共有するため相互干渉があり、遅延差を独立した因果効果として解釈できない。長期再生は合成負荷、均質H100相当、固定J/トークン、地域当たり最大50%という非常に緩い集中上限、概ね均等な起点需要、履歴MOER完全予見を仮定する。地域間通信遅延・転送料金、vLLM接頭辞キャッシュ失効、施設PUE、GPU型の地域差、物理的カーテイルメント余力を含まず、MOER系列もWattTimeのモデル推定である。データはライセンス制で再配布不可、配置ロジックも特許出願中で非公開のため完全再現性は限定的。",
+    "differences": "EcoServeやSproutなど既存の炭素認識推論はモデル選択や時空間最適化まで含むのに対し、本研究はLlama-3.1-8Bと推論系を固定し、既存圧力ルータへ地域炭素の乗数を一つ追加する配置効果だけを分離する。GARのような制約最適化型ルーティングと比べても新しい最適化器を提案せず、実機配送、実測GPUエネルギー曲線、予測MOERでの配送と履歴MOERでの事後精算という運用検証を重視する。さらに各地域内の百分位信号を空間比較へ使う誤りを実機で露呈させ、絶対MOERを使うべきと整理した点が実務的に独自である。",
+    "implementation_status": "実機導入済みの試作／本番スライスで検証。Solyx AI Grid、vLLM、NVIDIA DCGM、WattTime V3を組み合わせている。ただし配置・再生ロジックは特許出願中で公開されておらず、著者公式の再現コードURLは一次資料から確認できない。",
+    "research_positioning": "LLMサービングスケジューリングの中でも、GPU内の計算効率ではなく地理分散クラスタの『どこで実行するか』を電力網の限界排出信号で制御する運用層の研究である。性能最適化だけを目的とする負荷分散に、環境コストを追加制約／目的として載せる系統に位置し、エネルギー効率・地理分散サービング・炭素会計を接続する。",
+    "relation_to_existing_repository": "既存リポジトリの分散サービング／ルーティング系統では、待ち行列、KV局所性、GPU性能、地域間通信を主に最適化する研究が中心で、本研究は電力網MOERを配置信号として追加する補完軸になる。Solyx AI Gridのハードウェア・テレメトリ認識ルーティングを直接の基盤とし、EcoServe、GAR、SAGESERVE、DynamoLLMとは炭素・性能の共同配置という隣接関係にある。特に本研究自身が未モデル化とする接頭辞キャッシュ局所性や並行度依存J/トークンを、既存のKV管理・スケジューラ研究と結合する余地が大きい。",
     "audit_required": false
   }
 }

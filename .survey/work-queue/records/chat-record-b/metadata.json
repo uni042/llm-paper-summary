@@ -1,95 +1,107 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
+  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "metadata",
-  "attempt_id": "attempt-a3ff5598681924c50c62e155",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "canonical_id": "arXiv:2504.07494",
-    "arxiv_id": "2504.07494",
-    "doi": "10.1145/3725394",
+    "canonical_id": "arXiv:2608.06188",
+    "arxiv_id": "2608.06188",
+    "doi": "10.48550/arXiv.2608.06188",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
+      "primary": "cs.DC",
+      "cross_list": [
+        "cs.PF"
+      ]
     },
-    "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving",
-    "summary": "Apt-Serveは、高負荷な大規模言語モデル（LLM）サービングで最初のトークンまでの時間（Time To First Token; TTFT）のサービス水準目標（Service-Level Objective; SLO）達成率が急落し、有効スループットが頭打ちになる問題を、キャッシュ表現と要求スケジューリングを一体化して解く。各層のキー・値を保持するKVキャッシュに加え、同じ層の入力隠れ状態だけを保持するhidden cacheを導入する。hidden cacheはKVの約半分のメモリで済む代わりに復号時にK/V投影を再計算する。このメモリ・計算交換を要求ごと・反復ごとに選び、待機時間とキャッシュ所要量からバッチ構成をナップサック型最適化として定式化し、近似比2の貪欲法で解く。vLLM上の実装をA100 40GB、OPT-13B/30B/66B、ShareGPT・HumanEval・LongBenchで評価し、60% SLO達成点でvLLM比最大8.8倍、90%点で最大4.0倍の有効スループット向上を示す。",
-    "list_summary": "KVキャッシュと半分の容量で済む隠れ状態キャッシュを反復ごとに切り替え、待機時間・メモリ量に基づく近似比2の適応バッチ編成でTTFTのSLO崩壊を抑え、有効スループットをvLLM比最大8.8倍へ高める。",
+    "title": "Routing LLM Inference to the Cleanest Grid in Real Time",
+    "summary": "本研究は、地理的に分散したLLM推論要求を、その時点で追加電力需要を担う発電源の排出強度が低い地域へ寄せることで、モデルやGPUを変更せず運用時排出量を減らせるかを検証する。既存の本番圧力ルータを置き換えず、各地域の待ち行列・負荷・容量から得る配置重みに、限界運用排出率（Marginal Operating Emissions Rate; MOER）由来の乗数を掛ける可逆な追加層として実装する。推論要求の電力消費はGPUの公称消費電力ではなくNVIDIA DCGMの実測並行度曲線から要求単位へ配賦し、配置時の予測MOERではなく実行後の履歴MOERで炭素量を精算する。A100を用いた約48時間・約196万要求ターンの二地域実機試験では配送失敗0件で実際に負荷配分が変化し、最強設定は通常の圧力ルータ比で実測配賦排出量を1.45%減らした一方、p95遅延は18.7秒から20.9秒へ11.7%増加した。さらに19地域・1年分の履歴MOER再生では、運用寄りの緩やかな乗数方式で約22.7%、容量上限付き最清浄地域優先方式で50.9%のモデル化排出削減を示す。ただし後者は履歴値を直接見て配送する完全予見上限で、地域容量、接頭辞キャッシュ、通信遅延、施設PUE、実際の再生可能電力余力などを十分にモデル化していない。",
+    "list_summary": "本番の負荷圧力ルータへ絶対MOER由来の可逆な配置補正を重ね、実機二地域で配送失敗なく負荷を移動できることを確認し、19地域・1年再生では仮定依存ながら約23〜51%のGPU運用排出削減余地を示す。",
     "authors": [
-      "Shihong Gao",
-      "Xin Zhang",
-      "Yanyan Shen",
-      "Lei Chen"
+      "Aleks Bernhard",
+      "Arif Baran Yardimci"
     ],
-    "authors_affiliations": "The Hong Kong University of Science and Technology; Shanghai Jiao Tong University; The Hong Kong University of Science and Technology (Guangzhou).",
-    "published": "2025-04-10",
-    "publication": "Proceedings of the ACM on Management of Data (PACMMOD), Vol. 3, No. 3 (SIGMOD), Article 130, June 2025",
-    "publication_type": "査読済み国際会議論文・arXivプレプリント",
-    "publication_status": "PACMMOD Vol.3 No.3 (SIGMOD 2025), DOI 10.1145/3725394。arXiv v1は2025-04-10。",
+    "authors_affiliations": "Solyx AI, Inc.",
+    "published": "2026-08-06",
+    "publication": "arXiv:2608.06188v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-08-06）。18ページ、4図。査読済み採録先は一次資料から確認できない。",
     "lineage": "llm-serving-scheduling-disaggregation",
     "topics": [
-      "LLMサービング",
-      "適応スケジューリング",
-      "KVキャッシュ",
-      "隠れ状態キャッシュ",
-      "有効スループット",
-      "TTFT",
-      "SLO"
+      "地理分散LLM推論",
+      "炭素認識ルーティング",
+      "限界運用排出率",
+      "GPU電力計測",
+      "負荷分散",
+      "多地域サービング"
     ],
-    "importance": "高。キャッシュの省メモリ化を単なる圧縮ではなく、反復ごとのバッチ選択と同じ最適化問題へ組み込み、計算量増加と同時実行数増加の交換関係を明示的に制御する。",
-    "hardware_evaluation": "実機。NVIDIA A100 40GBを1/2/4 GPU構成で使用し、NVLinkを利用。",
-    "hardware_details": "OPT-13Bは1×A100 40GB、OPT-30Bは2×A100 80GB、OPT-66Bは4×A100 160GB。FP16、複数GPU時はテンソル並列。",
-    "quality_effect": "モデル重みや生成確率を近似しないため出力品質を意図的に変更しない。hidden cacheは過去K/Vを再計算する実行方式であり、主な代償は復号計算量とTBTの増加。評価は品質スコアではなくSLO達成率を主対象とする。",
+    "importance": "中〜高。新しい推論カーネルやスケジューラ算法ではなく、本番ルータへの小さな配置補正だけで実負荷が動くことを実機で示し、炭素指標の選び方・GPU利用率依存の電力・事後精算まで含めた運用方法を具体化する。特に地域間比較では各地域内の百分位ではなく絶対MOERを使う必要があるという失敗例を実測で示す点が有用。",
+    "hardware_evaluation": "実機試験は2地域×各1GPUのA100構成とH100構成。主要なA100試験は2×NVIDIA A100 SXM4 40GB、H100試験は2×NVIDIA H100 SXM5 80GB。履歴再生は19地域の均質H100相当を仮定するモデル評価。",
+    "hardware_details": "Llama-3.1-8B-InstructをvLLMで提供。DCGMによる並行度掃引でA100は低並行3.51 J/出力トークンから飽和時0.123 J/トークン、H100は3.37から0.104 J/トークンへ低下した。主要A100実機試験はAZPSとPJM-DCの二地域、約48時間。",
+    "quality_effect": "モデル、量子化、推論計算自体は変更しないため、意味品質を近似して排出量を下げる方式ではない。一方、地域移動で接頭辞キャッシュが失われる場合の再計算や地域間遅延は十分に評価されておらず、応答性能への影響は配置条件に依存する。",
     "storage_targets": [
-      "GPU HBM上のKVキャッシュ",
-      "GPU HBM上の入力隠れ状態キャッシュ",
-      "ブロック単位キャッシュメモリプール"
+      "地域別GPU待ち行列・負荷・容量状態",
+      "要求ごとの配送時予測MOERと実行後履歴MOER",
+      "GPUテレメトリから作る並行度別J/トークン曲線",
+      "会話セッションの地域固定状態"
     ],
     "bottlenecks": [
-      "KVキャッシュ容量によるバッチサイズ上限",
-      "高負荷時のTTFT待ち行列遅延",
-      "FCFSによる硬直したバッチ構成",
-      "hidden cache利用時のK/V再投影計算",
-      "キャッシュ形式切替時の再prefill"
+      "炭素の低い地域への集中による待ち行列増加",
+      "地域ごとのMOER変動と予測誤差",
+      "低並行度で急増するGPU当たり消費エネルギー",
+      "地域間移動による接頭辞キャッシュ喪失",
+      "実際の再生可能電力余力と地域容量の不確実性"
     ],
     "evidence_locations": [
-      "§3.1–3.2",
-      "§4.1–4.3",
-      "§5",
-      "§6.1–6.7",
-      "Tables 2–6",
-      "Figures 8–12"
+      "§3 System design",
+      "§4 Experimental methodology",
+      "§5.1 Systems viability",
+      "§5.2 A100 live results",
+      "§5.3 absolute MOER interpretation",
+      "§5.4 Energy characterization",
+      "§6 Historical replay",
+      "§7 Discussion and limitations",
+      "Table 1-3"
     ],
-    "source": "https://arxiv.org/abs/2504.07494",
+    "source": "https://arxiv.org/abs/2608.06188",
     "sources": [
-      "https://arxiv.org/abs/2504.07494",
-      "https://arxiv.org/html/2504.07494v1",
-      "https://arxiv.org/pdf/2504.07494",
-      "https://github.com/eddiegaoo/Apt-Serve",
-      "https://doi.org/10.1145/3725394"
+      "https://arxiv.org/abs/2608.06188",
+      "https://arxiv.org/html/2608.06188v1",
+      "https://arxiv.org/pdf/2608.06188"
     ],
-    "code": "https://github.com/eddiegaoo/Apt-Serve",
-    "implementation": "vLLM上に公開実装。反復ごとの実行時情報追跡、適応スケジューラ、KV/hidden cache共用のブロック型メモリプール、断片化したhidden cacheのreshapeと読み書きを融合する専用CUDAカーネルを追加し、複数GPUではNCCLテンソル並列を用いる。",
+    "code": null,
+    "implementation": "Solyx AI Gridの既存本番圧力ルータへ炭素乗数を重ねる形で実装し、WattTime V3とNVIDIA DCGM、vLLMを用いた実機試験を行っている。論文は配送・再生ロジックを説明するが、ルーティング／配置ロジックは特許出願中で公開されておらず、公式コード公開URLも一次資料では確認できない。",
     "last_checked": "2026-09-14",
     "references": [
       {
-        "canonical_id": "arXiv:2309.06180",
-        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+        "canonical_id": "arXiv:2606.15050",
+        "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters"
       },
       {
-        "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"
+        "canonical_id": "arXiv:2502.05043",
+        "title": "EcoServe: Designing Carbon-Aware AI Inference Systems"
       },
       {
-        "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+        "canonical_id": "arXiv:2502.14617",
+        "title": "Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale (SAGESERVE)"
       },
       {
-        "canonical_id": "arXiv:2308.14508",
-        "title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
+        "canonical_id": "arXiv:2605.11603",
+        "title": "GAR: Carbon-Aware Routing for LLM Inference via Constrained Optimization"
+      },
+      {
+        "canonical_id": "arXiv:2408.00741",
+        "title": "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency"
+      },
+      {
+        "title": "Sprout: Green Generative AI with Carbon-Efficient LLM Inference"
       }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": null
+    "references_source": "arXiv:2608.06188v1一次資料の参考文献節",
+    "references_total": 29,
+    "last_audited": null,
+    "audit_version": 0
   }
 }

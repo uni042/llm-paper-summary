@@ -1,64 +1,78 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-b8bf85a356cf73aca16f3bb9",
+  "job_id": "job-research-705b1ab26eb807b1",
   "slot": "results",
-  "attempt_id": "attempt-a3ff5598681924c50c62e155",
-  "job_id": "job-research-b22f71500ae1903a",
   "data": {
-    "overview": "Apt-Serveは全モデル・全データセットで基準方式より高いSLO維持可能到着率を示し、特に長い出力や長い入力でKV寿命・容量が支配的になるShareGPT/LongBenchで差が大きい。90% SLO達成点ではvLLM/Sarathi/FastGen比の平均が2.3/1.9/1.8倍、最大4.0/3.4/3.3倍。60%点では平均4.9/4.4/4.3倍、最大8.8/7.9/7.5倍。",
+    "overview": "二地域A100実機では炭素重みを強めるにつれて清浄地域AZPSの要求比率が50→56→57→58→63%へ単調に増え、約196万要求ターンを配送失敗0件で処理した。最強設定は補正なし圧力ルータ比で配賦GPU運用排出を1.45%減らしたが、p95遅延は18.7秒から20.9秒へ11.7%増えた。長期再生では実機と同型の緩やかな乗数方式が22.7%削減、50%地域上限付き最清浄地域優先方式がラウンドロビン比50.9%削減となった。ただし後者は完全予見・均質H100・強い集中許容などを含む上限寄り条件である。ゼロMOERへの信用を保守的に弱めても約34%削減となり、削減幅を34〜51%の感度範囲として提示する。",
     "key_results": [
       {
-        "metric": "最大有効スループット改善",
-        "value": "8.8倍",
-        "baseline": "vLLM",
-        "condition": "60% SLO達成点、3モデル×3データセット中の最大値",
-        "interpretation": "HBM容量とバッチ構成が強い制約になる高負荷域で最大差が出る。"
+        "metric": "実機配送信頼性",
+        "value": "約196万要求ターン、配送失敗0件",
+        "baseline": "炭素補正なしを含む5腕",
+        "condition": "A100二地域、約48時間",
+        "interpretation": "炭素信号を既存本番ルータへ重ねても、試験窓では配送機構を壊さず実負荷を動かせた。"
       },
       {
-        "metric": "90% SLO達成点の平均到着率倍率",
-        "value": "2.3倍 / 1.9倍 / 1.8倍",
-        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
-        "condition": "ShareGPT・HumanEval・LongBench、OPT-13B/30B/66B平均",
-        "interpretation": "厳しいSLO達成率でも一貫して有効スループットを改善。"
+        "metric": "清浄地域への実負荷移動",
+        "value": "AZPS比率 50→56→57→58→63%",
+        "baseline": "ラウンドロビン→補正なし→低/中/高炭素重み",
+        "condition": "A100二地域",
+        "interpretation": "炭素重みを強めるほど単調に清浄地域へ要求が移り、信号が配置判断へ実際に効いている。"
       },
       {
-        "metric": "ShareGPT 60%点",
-        "value": "7.4倍 / 6.8倍 / 6.4倍",
-        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
-        "condition": "3モデル平均",
-        "interpretation": "長い出力でKV寿命が長くなるほどhybrid cacheの同時実行数増加が効く。"
+        "metric": "実機配賦GPU運用排出",
+        "value": "1.45%削減",
+        "baseline": "補正なし本番圧力ルータ",
+        "condition": "A100二地域、約48時間、履歴MOERで精算",
+        "interpretation": "特定の低カーテイルメント週・二地域という狭い条件では削減量は小さいが方向は意図通り。一般化可能な削減率とは主張しない。"
       },
       {
-        "metric": "LongBench 90%点",
-        "value": "2.8倍 / 2.5倍 / 2.3倍",
-        "baseline": "vLLM / Sarathi-Serve / DeepSpeed-FastGen",
-        "condition": "3モデル平均",
-        "interpretation": "長い入力による大きなキャッシュ占有をhidden cacheで緩和。"
+        "metric": "実機p95遅延",
+        "value": "18.7秒→20.9秒（11.7%増）",
+        "baseline": "補正なし本番圧力ルータ",
+        "condition": "意図的に飽和させたA100二地域試験",
+        "interpretation": "清浄地域への集中は待ち行列を増やし得る。共有GPUによる腕間干渉があるため純粋な因果効果ではない。"
       },
       {
-        "metric": "burst到着のSLO達成率",
-        "value": "最大7.5倍",
-        "baseline": "vLLM/Sarathi-Serve",
-        "condition": "OPT-13B、Gamma到着のCV掃引",
-        "interpretation": "到着のバースト性が増すほど適応バッチ再編の価値が高まる。"
+        "metric": "GPUエネルギー並行度効果",
+        "value": "H100 3.37→0.104 J/トークン、A100 3.51→0.123 J/トークン",
+        "baseline": "低並行→飽和",
+        "condition": "DCGM事前掃引",
+        "interpretation": "地域の炭素強度だけでなくGPU利用率が約30倍規模で1トークン当たりエネルギーを左右する。"
       },
       {
-        "metric": "適応スケジューリングの除去影響",
-        "value": "LongBench 1.5 req/s, CV=1: 11.8%→98.2%",
-        "baseline": "FCFS → adaptive",
-        "condition": "hybrid cacheは維持",
-        "interpretation": "利得の大部分はキャッシュだけでなくバッチ構成最適化にも依存。"
+        "metric": "緩やかな炭素乗数再生",
+        "value": "22.7%削減（95% CI 21.9〜23.5%）",
+        "baseline": "ラウンドロビン",
+        "condition": "19地域・1年、w=1、同じ50%地域上限",
+        "interpretation": "実機オーバーレイに近い配置規則でも、地域・季節多様性があればモデル上は一定の削減余地がある。"
       },
       {
-        "metric": "スケジューラ実行時間",
-        "value": "1,600候補で10.8 ms",
-        "baseline": "50候補で0.3 ms",
-        "condition": "OPT-13B単一GPU",
-        "interpretation": "50要求decode反復約120 msに対し大規模候補でも制御オーバーヘッドは小さい。"
+        "metric": "主要履歴再生",
+        "value": "50.9%削減（95% CI 48.5〜53.3%）",
+        "baseline": "ラウンドロビン",
+        "condition": "最清浄地域優先、地域上限50%、会話固定込み",
+        "interpretation": "特定の完全予見・強い集中許容条件で得られる上限寄りの機会推定であり、本番期待値ではない。"
+      },
+      {
+        "metric": "動的MOER信号の追加寄与",
+        "value": "約22.4ポイント、自由配置54.0%削減の約40%",
+        "baseline": "年平均MOERだけの静的配置",
+        "condition": "会話固定前の分解",
+        "interpretation": "単に年間平均が清浄な地域へ寄せるだけでなく、時刻ごとのカーテイルメント追随にも大きな追加価値がある。"
+      },
+      {
+        "metric": "ゼロMOER感度",
+        "value": "約34〜51%削減",
+        "baseline": "ラウンドロビン",
+        "condition": "ゼロ値を地域の非ゼロ中央値×αで再評価、α=1〜0",
+        "interpretation": "主要50.9%結果は再生可能電力カーテイルメントの扱いに強く依存するが、ゼロ信用を全て除いてもモデル上の削減余地は残る。"
       }
     ],
-    "negative_results": "HumanEvalは出力が短く長さ分散も小さいため改善幅が小さく、90% SLO点でvLLM/Sarathi/FastGen比平均1.7/1.4/1.4倍に留まる。また元のSLO-aware fallbackは一部（約10%）要求を飢餓させ高いtail latencyを生む。hidden cacheのみでは改善が限定的な条件もあり、例えばShareGPT 3 req/s, CV=1ではKVのみ/Hybridとも99.5%で差がない。",
-    "interpretation": "Apt-Serveの主要な示唆は、LLMサービングのキャッシュを『保持する/捨てる』だけでなく、再計算費用の異なる複数の正確な中間表現として扱い、スケジューラが同時実行数と反復速度の交換点を選べることにある。メモリ最適化とスケジューリングを別々に行うより、同じ目的関数で共同最適化する方が高負荷で有効。",
-    "quality_impact": "hidden cacheは同じTransformer隠れ状態からK/Vを再生成するためモデル出力品質の近似を導入しない。主な品質外の代償はTBT、tail latency、再prefill費用。"
+    "negative_results": "初期H100試験で地域内百分位のsignal-indexを地域間比較へ使うと、絶対MOERでより清浄なDallasが高百分位、より汚いAtlantaが低百分位となり、ルータが汚い地域を選ぶ順位逆転が起きた。またA100実機では炭素最優先設定でp95遅延が11.7%増加した。実機削減率は1.45%にとどまり、H100期間も深いカーテイルメントを含まず短期終了した。ゼロMOER時刻を単純にデータから除外すると再生削減率は約24.5%まで下がり、結果がデータ処理とカーテイルメント仮定に敏感であることも示される。",
+    "interpretation": "本研究の強い結論は『50.9%削減できる』ことではなく、絶対MOERを使う単純な配置補正が本番に近いGPUサービングで安全に実負荷を動かせること、その削減幅が地域・季節・容量・利用率・キャッシュ局所性に大きく依存することにある。再生結果は、静的な清浄地域選択だけでなくリアルタイム信号にも追加価値がある一方、実用化には炭素、遅延、GPU利用効率、キャッシュ再利用を共同で扱う必要があることを示す。",
+    "quality_impact": "生成品質はモデルを変えないため直接劣化させない。ただし配置変更による遅延悪化、接頭辞キャッシュ失効、通信・再プリフィル増加は利用体験とエネルギーへ影響し得る。"
   }
 }
