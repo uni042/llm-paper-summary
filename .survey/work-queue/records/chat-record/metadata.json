@@ -4,10 +4,30 @@
   "slot": "metadata",
   "attempt_id": "attempt-eb4f7c2f64cc51ea777e0e73",
   "job_id": "job-research-16aaac9973021cd8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-eb4f7c2f64cc51ea777e0e73",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id":"arXiv:2510.18586","arxiv_id":"2510.18586","doi":"10.48550/arXiv.2510.18586","openreview_id":null,
+    "arxiv_categories":{"primary":"cs.DC","cross_list":[]},
+    "title":"TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+    "summary":"TokenCakeは、複数エージェント型LLMアプリケーションで外部関数呼び出し中のエージェントがGPU上のKVキャッシュを長時間占有し、同時に重要な後続エージェントのキャッシュを追い出して再計算を誘発する問題を、時間方向と空間方向の2層スケジューリングで解くサービング基盤である。時間スケジューラは関数待機時間を予測し、待機が十分長く、解放メモリを有効利用できる場合だけKVをCPUへ退避し、復帰時刻を予測して関数完了前に先読みする。空間スケジューラは重要エージェント向け予約領域をGPU KVプール内へ動的に確保し、エージェントの構造的重要度、同期圧力、待ち時間、再計算費を使って実行優先度を決める。両者は同じメモリ圧力状態を共有して退避の乱発を避ける。Qwen2.5-14B/32B/72BをA100・H20で評価し、vLLM比で平均エンドツーエンド遅延を最大47.06%削減し、GPU KV利用率を最大16.9ポイント改善する。",
+    "list_summary":"関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。",
+    "authors":["Zhuohang Bian","Feiyang Wu","Zhuoran Li","Teng Ma","Youwei Zhuo"],
+    "authors_affiliations":"Zhuohang Bian、Feiyang Wu、Zhuoran Li、Youwei ZhuoはPeking University。Teng MaはAlibaba Group。",
+    "published":"2025-10-21","publication":"EuroSys 2027","publication_type":"Conference","publication_status":"Accepted","publication_version":"arXiv v4（2026-08-21改訂）、EuroSys '27採択",
+    "lineage":"kv-cache-offload-recomputation",
+    "topics":["複数エージェントLLMサービング","KVキャッシュ管理","CPUオフロード","予測先読み","動的メモリ予約","エージェント優先度","関数呼び出し"],
+    "importance":"高。通常のKV管理がトークン列や要求単位の再利用・退避を中心に扱うのに対し、TokenCakeはエージェントグラフと外部関数呼び出しの待機区間を明示的な資源管理信号へ変換する。特にCPU退避を常時行うのではなく、待機時間、GPU圧力、解放ブロックを使える待機要求の有無まで見て判断する点は、階層メモリ型サービングの転送判断に直接関係する。",
+    "hardware_evaluation":"実機GPU評価。Qwen2.5-14BをNVIDIA A100 80GB 1基、Qwen2.5-32BをNVIDIA H20 96GB 1基、Qwen2.5-72BをNVIDIA H20 2基のテンソル並列2で評価する。CPU側KV退避領域として100GBを確保する。",
+    "hardware_details":"単一GPU構成を主評価とし、72BではH20 2基を用いて複数GPU経路も確認する。CPUへのKV転送では4,096キャッシュ済みトークン・256ブロック時にGPU→CPU 32.0ms、CPU→GPU 31.7msを測定する。",
+    "quality_effect":"モデル重みやKV内容を近似せず、KVをCPUとGPU間で移動する方式であるため、基本的に生成品質を速度と交換しない。予測誤差は品質ではなく余分な転送や遅延として現れる。ただしキャッシュ追い出しが起きると再計算が必要となる。",
+    "storage_targets":["GPU上のエージェント別KVキャッシュ","CPU側KVキャッシュ退避領域","GPU予約KVブロック","CPU側接頭辞キャッシュ索引"],
+    "bottlenecks":["外部関数待機中のGPU KV占有","重要エージェントKVの追い出し","再計算による遅延","無差別オフロードによるPCIe転送競合","複数エージェント間のメモリ競合"],
+    "evidence_locations":["§1","§2","§4–§6","§7.1–7.7","Figures 1–16","Tables 1–2","References [1]–[28]"],
+    "source":"https://arxiv.org/abs/2510.18586","sources":["https://arxiv.org/abs/2510.18586","https://arxiv.org/pdf/2510.18586"],
+    "code":null,
+    "implementation":"約9,000行のPythonで実装し、vLLM構成要素を再利用する研究プロトタイプ。OpenAI Chat Completion APIへエージェントグラフ登録を拡張し、関数呼び出し開始・終了通知、専用非同期転送ストリーム、vLLM V1へ再導入したCPUブロックプール、CPU接頭辞キャッシュ索引を実装する。一次資料からTokenCake本体の公式公開コードURLは確認できない。",
+    "last_checked":"2026-09-14",
+    "references":[{"canonical_id":"arXiv:2402.01869","arxiv_id":"2402.01869"},{"canonical_id":"arXiv:2402.14034","arxiv_id":"2402.14034"},{"canonical_id":"arXiv:2308.00352","arxiv_id":"2308.00352"},{"canonical_id":"doi:10.1145/3600006.3613165","doi":"10.1145/3600006.3613165"},{"canonical_id":"arXiv:2506.14851","arxiv_id":"2506.14851"},{"canonical_id":"arXiv:2502.13965","arxiv_id":"2502.13965"},{"canonical_id":"arXiv:2502.08691","arxiv_id":"2502.08691"},{"canonical_id":"arXiv:2407.00079","arxiv_id":"2407.00079"},{"canonical_id":"arXiv:2407.00326","arxiv_id":"2407.00326"},{"canonical_id":"arXiv:2308.08155","arxiv_id":"2308.08155"},{"canonical_id":"arXiv:2412.20138","arxiv_id":"2412.20138"},{"canonical_id":"doi:10.1145/3689031.3696098","doi":"10.1145/3689031.3696098"},{"canonical_id":"arXiv:2401.07339","arxiv_id":"2401.07339"}],
+    "references_checked_at":"2026-09-14","references_source":"arXiv v4一次論文の参考文献節 [1]–[28] を確認し、主要関連文献の正規識別子を構造化","references_total":28
+  },
+  "reservation":{"claim_id":"claim-eb4f7c2f64cc51ea777e0e73","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
 }
