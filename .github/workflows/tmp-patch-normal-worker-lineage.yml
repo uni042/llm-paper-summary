@@ -1,0 +1,57 @@
+name: Temporary normal worker lineage patch
+
+on:
+  push:
+    branches:
+      - fix/resume-normal-worker-lineage-20260914
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/resume-normal-worker-lineage-20260914
+          fetch-depth: 0
+      - name: Apply patch
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('.survey/scripts/claim_worker.py')
+          text = path.read_text(encoding='utf-8')
+
+          marker = '''def _worker_has_active_claim(\n    claims: dict[str, dict[str, Any]],\n    *,\n    worker_id: str,\n    worker_kind: str,\n) -> bool:\n    return any(\n        current.get("active")\n        and current.get("worker_id") == worker_id\n        and current.get("worker_kind") == worker_kind\n        for current in claims.values()\n    )\n'''
+          replacement = '''NORMAL_SCHEDULED_CHAT_RUN_RE = re.compile(\n    r"^scheduled-chat-llm-survey(?:-\\d{8}T\\d{4}JST)?$", re.IGNORECASE\n)\n\n\ndef _same_worker_lineage(\n    current_worker_id: Any,\n    current_worker_kind: Any,\n    request_worker_id: Any,\n    request_worker_kind: Any,\n) -> bool:\n    """Match one logical worker across run-specific Scheduled Chat ids."""\n    if current_worker_kind != request_worker_kind:\n        return False\n    current_id = str(current_worker_id or "")\n    request_id = str(request_worker_id or "")\n    if current_id == request_id:\n        return True\n    if current_worker_kind != "scheduled_chat":\n        return False\n    return bool(\n        NORMAL_SCHEDULED_CHAT_RUN_RE.fullmatch(current_id)\n        and NORMAL_SCHEDULED_CHAT_RUN_RE.fullmatch(request_id)\n    )\n\n\ndef _worker_has_active_claim(\n    claims: dict[str, dict[str, Any]],\n    *,\n    worker_id: str,\n    worker_kind: str,\n) -> bool:\n    return any(\n        current.get("active")\n        and _same_worker_lineage(\n            current.get("worker_id"),\n            current.get("worker_kind"),\n            worker_id,\n            worker_kind,\n        )\n        for current in claims.values()\n    )\n'''
+          if marker not in text:
+              raise SystemExit('worker_has_active_claim marker not found')
+          text = text.replace(marker, replacement, 1)
+
+          old_checkpoint = '''        if (\n            current.get("worker_id") != request["worker_id"]\n            or current.get("worker_kind") != request["worker_kind"]\n        ):\n            continue\n'''
+          new_checkpoint = '''        if not _same_worker_lineage(\n            current.get("worker_id"),\n            current.get("worker_kind"),\n            request["worker_id"],\n            request["worker_kind"],\n        ):\n            continue\n'''
+          if old_checkpoint not in text:
+              raise SystemExit('checkpoint lineage marker not found')
+          text = text.replace(old_checkpoint, new_checkpoint, 1)
+
+          old_resume = '''                if not (\n                    current.get("active")\n                    and current.get("worker_id") == request["worker_id"]\n                    and current.get("worker_kind") == request["worker_kind"]\n                    and job_id in by_id\n                ):\n                    continue\n'''
+          new_resume = '''                if not (\n                    current.get("active")\n                    and _same_worker_lineage(\n                        current.get("worker_id"),\n                        current.get("worker_kind"),\n                        request["worker_id"],\n                        request["worker_kind"],\n                    )\n                    and job_id in by_id\n                ):\n                    continue\n'''
+          if old_resume not in text:
+              raise SystemExit('resume lineage marker not found')
+          text = text.replace(old_resume, new_resume, 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+          python -m py_compile .survey/scripts/claim_worker.py
+          python -m unittest discover -s .survey/tests -p 'test_claim_worker_serial.py'
+      - name: Commit patch and remove temporary workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/tmp-patch-normal-worker-lineage.yml
+          git add .survey/scripts/claim_worker.py
+          git commit -m 'fix: resume normal Scheduled Chat claims across run ids'
+          git push origin HEAD:fix/resume-normal-worker-lineage-20260914
