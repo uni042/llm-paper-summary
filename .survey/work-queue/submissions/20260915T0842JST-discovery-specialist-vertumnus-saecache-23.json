@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-be884a5e7da2da4e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.04774",
+      "title": "Adaptive Context Parallelism for Production LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.04774",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04774-vertumnus-adaptive-context-parallelism.md",
+      "priority": 92,
+      "reason": "長文脈servingでcontext parallelism（CP）degreeを固定するとworkload heterogeneityと時間変動に追随できず、request単位だけのCP変更でもcluster構成とprefix localityが噛み合わない問題に対し、request側では予測queueing delay・cache-aware prefill time・GPU-time costで異なるCP degree workerへroutingし、cluster側ではseconds-scaleのsplit/mergeでworker compositionを適応変更する。さらに異CP degree間も含むglobal prefix-cache placement/replicationでcache localityを維持する。64-GPU clusterのpublic/production workloadでmean TTFTを最大28.1%削減、token-weighted SLO attainmentを最大13.3pt改善しており、parallelism adaptationとcache schedulingの共同設計として重要。"
+    },
+    {
+      "canonical_id": "arXiv:2605.18825",
+      "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches",
+      "source_url": "https://arxiv.org/abs/2605.18825",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2605.18825-saecache-semantic-aware-prefix-eviction.md",
+      "priority": 87,
+      "reason": "prefix cacheのLRU等がKV blockを同価値に扱う一方、system prompt・user query・tool output・model response・reasoning tokenでreuse rateが最大756倍異なる観測に基づき、task-specific multi-queue、semantic token weighting、eviction feedbackによる完全online adaptationを組み合わせるSAECacheを提案する。heterogeneous workloadでproduction-style baseline比TTFTを1.4〜2.7倍改善し、固定parameter policyがworkload mismatchで最大2.7倍悪化するケースも回避する。agentic/templated workloadのsemantic structureをcache replacementへ入れる実装系として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-vertumnus-saecache-23",
+    "axis": "adaptive context parallelism・semantic-aware prefix cache eviction",
+    "query_summary": "recent production servingとprefix cache schedulingを探索し、Vertumnus（2609.04774）とSAECache（2605.18825）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はActions反映後のcandidate inventoryを再確認し、overflow未満ならrecent production servingまたはdistributed cache infrastructureを探索する。",
+    "empty_round_reason": null
+  }
+}
