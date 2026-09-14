@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-3c787b5fa5e9d8325c952f00",
+  "attempt_id": "attempt-8530085cbcd21ea087c9e46a",
   "job_id": "job-research-cff945d042003c88",
   "data": {
     "overview": "50%程度の非構造疎性という従来カーネルが苦手だった領域で、提案カーネルはSputnik比平均3.92倍・最大5.29倍、SpInfer比最大1.64倍まで高速化し、現代HBM GPUで密行列積を上回る領域を作る。端から端までのOPT推論ではカーネル外処理が残るため差は縮むが、50%疎性のOPT-30BでFlashLLM比最大41.4%、SpInfer比最大26.1%、OPT-66Bでそれぞれ最大37.6%、20.2%のスループット向上を報告する。一方、高疎性や大Nプリフィルでは設計前提が崩れ、FlashLLMや密cuBLASへ劣る。",
@@ -79,8 +79,8 @@
     "quality_impact": "格納形式とカーネルは枝刈り済み行列の全非ゼロ値を保持するので追加の数値近似はない。ただし高速化の前提となる重み枝刈りには品質損失がある。論文は2:4構造疎性や60〜70%非構造疎性より、約50%の非構造疎性で困惑度の悪化を比較的小さく保てることを示し、その『品質を保ちやすいが既存GPUカーネルでは速くしにくい領域』を主対象にしている。"
   },
   "reservation": {
-    "claim_id": "claim-3c787b5fa5e9d8325c952f00",
-    "worker_id": "scheduled-chat-llm-survey-20260914T2230JST",
+    "claim_id": "claim-8530085cbcd21ea087c9e46a",
+    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
     "worker_kind": "scheduled_chat"
   }
 }
