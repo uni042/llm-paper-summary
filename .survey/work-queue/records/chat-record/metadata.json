@@ -2,11 +2,90 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-06accd887c2f3bdd9e080fd3",
-  "job_id": "job-research-9094fc0c86937469",
-  "data": {},
+  "attempt_id": "attempt-55a8e95ab98c7e6d07a348e1",
+  "job_id": "job-research-87da19d91d5900c3",
+  "data": {
+    "canonical_id": "arXiv:2503.03777",
+    "arxiv_id": "2503.03777",
+    "doi": "10.48550/arXiv.2503.03777",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.OS",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
+    "summary": "FlexInferは、端末内メモリに収まらない大規模言語モデルをCPU中心のローカル環境で動かすと、重みをストレージから都度読み込む入出力が推論を支配する問題を扱う。計算と重み読出しを別スレッドで重ねる非同期先読み、利用可能メモリを各層へ均等に割り当てて読出し量を平準化するメモリ固定、残り容量に応じて注意機構または全結合ネットワークのテンソルを選択保持する方式を組み合わせる。llama.cppを828行のC/C++で拡張し、4ビット量子化したLlama 2とCodeLlamaをCPU上で評価した結果、mmap方式に対して最大12.5倍のスループットを報告する。モデル自体を剪定・蒸留せず、利用者が指定したメモリ上限へ実行時の配置を適応させる点が特徴である。",
+    "list_summary": "重み読出しを計算と非同期化し、各層へ固定メモリを均等配分し、容量に応じて保持テンソルを切り替えることで、端末向けCPU推論をmmap比最大12.5倍高速化する。",
+    "authors": [
+      "Hongchao Du",
+      "Shangyu Wu",
+      "Arina Kharlamova",
+      "Nan Guan",
+      "Chun Jason Xue"
+    ],
+    "authors_affiliations": "Hongchao Du、Shangyu Wu、Nan GuanはCity University of Hong Kong、Arina KharlamovaとChun Jason XueはMohamed bin Zayed University of Artificial Intelligence。",
+    "published": "2025-03-04",
+    "publication": "arXiv:2503.03777v1; arXivコメントではEuroMLSys '25で発表予定と記載",
+    "publication_type": "会議論文予定・arXivプレプリント",
+    "publication_status": "arXiv v1（2025-03-04）。arXivコメントにEuroMLSys '25で発表予定との記載がある。",
+    "lineage": "offload-hierarchical-memory",
+    "topics": [
+      "端末内LLM推論",
+      "重みオフロード",
+      "非同期先読み",
+      "メモリ固定",
+      "テンソル保持",
+      "CPU推論"
+    ],
+    "importance": "サーバ向けCPU/GPU/SSD階層オフロードとは異なり、GPUを前提にしない資源制約環境で、利用可能メモリ量に応じて重み読出しと保持方法を動的に変える実装研究として重要。",
+    "hardware_evaluation": "AMD Ryzen Threadripper PRO 7995WXと512GB RAMを備えたUbuntuサーバを用い、cgroupとtasksetでメモリ量とCPUコア数を制限して資源制約端末を模擬したCPU実測。実スマートフォンやNPU/GPUでの評価ではない。",
+    "quality_effect": "FlexInfer自体は重みを近似・剪定せず、ストレージとメモリ間の配置と転送方法だけを変えるため、同じ4ビット量子化モデルに対して追加のモデル品質劣化を導入しない。",
+    "storage_targets": [
+      "CPUメモリ",
+      "ローカルストレージ"
+    ],
+    "bottlenecks": [
+      "重み入出力帯域",
+      "同期読出し待ち",
+      "層間の入出力量不均衡"
+    ],
+    "source": "https://arxiv.org/abs/2503.03777",
+    "sources": [
+      "https://arxiv.org/abs/2503.03777",
+      "https://arxiv.org/html/2503.03777"
+    ],
+    "code": null,
+    "implementation": "論文はllama.cppを828行のC/C++で拡張した試作を説明する。2026-09-14確認時点で、一次資料から著者公式のFlexInferコード公開URLは確認できなかった。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {
+        "canonical_id": "arXiv:2303.06865",
+        "arxiv_id": "2303.06865"
+      },
+      {
+        "canonical_id": "arXiv:2312.11514",
+        "arxiv_id": "2312.11514"
+      },
+      {
+        "canonical_id": "arXiv:2312.12456",
+        "arxiv_id": "2312.12456"
+      },
+      {
+        "canonical_id": "arXiv:2305.13245",
+        "arxiv_id": "2305.13245"
+      },
+      {
+        "doi": "10.1145/3600006.3613165"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 65
+  },
   "reservation": {
-    "claim_id": "claim-06accd887c2f3bdd9e080fd3",
+    "claim_id": "claim-55a8e95ab98c7e6d07a348e1",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
