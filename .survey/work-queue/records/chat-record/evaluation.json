@@ -1,73 +1,56 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-bafa49c4a685291f5311cc0a",
+  "job_id": "job-research-075303825b007242",
   "slot": "evaluation",
-  "attempt_id": "attempt-08adc02deaead45fbd4cfdd5",
-  "job_id": "job-research-4588133b1e6a7663",
   "data": {
     "hardware": [
-      "4×NVIDIA H100"
+      "NVIDIA A100-80GB / A100-SXM4-80GB（主評価）",
+      "NVIDIA L40S（発見瞬間評価・公開アーカイブ）",
+      "NVIDIA H100（公開アーカイブ）"
     ],
     "software": [
-      "e5-base-v2",
-      "FAISS",
-      "著者公開REVA実装"
+      "Triton 3.3.1",
+      "CUDA/nvcc",
+      "最大報酬木探索（PUCT）",
+      "公開gpu-forecasters実装"
     ],
     "model": [
-      "Llama-3.1-8B-Instruct",
-      "Qwen3.5-9B",
-      "Gemma-4-E4B-it"
+      "Gemini-3 Flash",
+      "GPT-OSS-120B",
+      "GPT-OSS-20B",
+      "DeepSeek-V4",
+      "強化学習済みGPT-OSS-20B"
     ],
     "datasets": [
-      "Natural Questions",
-      "TriviaQA",
-      "HotpotQA",
-      "2WikiMultihopQA"
+      "GPU Mode競技6課題・480 Tritonカーネル",
+      "12,388個のLLM生成GPUカーネル公開アーカイブ・118問題",
+      "1,347親子カーネル対・27探索・21問題"
     ],
     "baselines": [
-      "文書別/全体先頭切り詰め",
-      "Selective Context",
-      "LLMLingua-2",
-      "RECOMP-e",
-      "LongLLMLingua",
-      "EXIT",
-      "FaviComp"
+      "全候補を実GPU計測する同一GPU予算の木探索",
+      "未学習GPT-OSS-20B代理",
+      "正解報酬のみRL",
+      "CRPS校正RL",
+      "複数既製LLM代理"
     ],
-    "correctness": "テスト要求自身の質問・回答をその要求向けスコア表へ入れない厳密再利用条件で、F1、完全一致率、ROUGE-Lを測る。",
+    "correctness": "実GPU評価では候補をコンパイルし、固定テスト入力で参照出力と照合した後に速度測定する。代理は主に速度予測を担当し、最終的なGPU計測対象ではこの正当性検査を維持する。保持評価は候補集合を実測済みなので予測順位と真の高速化を直接比較できる。",
     "settings": [
       {
-        "name": "固定検索",
-        "description": "e5-base-v2とFAISSでtop-10結果を事前固定し全方式へ同じ文書を渡す。"
+        "name": "保持代理評価",
+        "description": "GPU ModeのTriMul、cross-entropy、2種Gated DeltaNet forward、GDN W/U recompute、FP8 quantizationの6課題。各速度帯最大10件で合計480 Tritonカーネル。全実測はA100。各代理を温度1.0で3回サンプル。"
       },
       {
-        "name": "部分被覆",
-        "description": "訓練分割だけで表を作り、未被覆文書は先頭切り詰め。保持予算512トークン。"
+        "name": "固定計測予算の探索",
+        "description": "Gemini-3 Flashを変異生成器、Brier学習済みGPT-OSS-20Bを代理とする。代理ありは親あたり候補を4倍生成し、上位1/4だけGPU計測して基準と同じGPU実測数/ステップにそろえる。"
       },
       {
-        "name": "完全被覆診断",
-        "description": "top-10全文書に履歴がある質問のみを3モデル×4データセット×10予算、120セルで評価。"
-      },
-      {
-        "name": "グローバル配分",
-        "description": "各文書上位10%語で効用を計算し、各文書上限25%、検索上位5文書に保護枠を付与。"
+        "name": "評価待ち時間",
+        "description": "単一A100上でTriton実測は平均20.16秒（1,515件）、CUDA実測は152.55秒（6,446件）、GPT-OSS-20B代理は14.69秒。実測は速度干渉を避け1件同時、代理は複数予測を並行処理できる。"
       }
     ],
-    "methodology": "回答品質と要求時の圧縮/再構成壁時計時間を測る。オンライン処理時間は検索、スコア表構築、生成、非同期更新を除く。語単位化、原文順、採点源、配分方式を切り分ける。",
-    "scope": "公開QAのtop-10 RAGと3モデル、4×H100が中心。企業長文、会話、多モーダル、巨大モデル、分布ドリフトは未直接検証。",
-    "workloads": [
-      "訓練履歴固定表",
-      "部分被覆",
-      "完全被覆",
-      "複数圧縮予算"
-    ],
-    "metrics": [
-      "F1",
-      "完全一致率",
-      "ROUGE-L",
-      "オンラインオーバーヘッド",
-      "出力文脈長",
-      "生成時間"
-    ],
-    "reproducibility": "主要パラメータと著者公式コードが公開されている。"
+    "methodology": "速度回収率、期待校正誤差、速度予測誤差を測る。速度回収率は代理順位上位1/5/10/25/50%だけを実測した場合に、その集合の最速候補が全候補中の最速速度の何%を回収するかの平均。別途、同じGPU実測予算の実探索で最良速度の推移を比較する。",
+    "scope": "評価の中心はGPUカーネル探索の測定費用削減であり、LLM推論ランタイムそのもののカーネル高速化手法ではない。保持評価はA100中心で、分布外GPUや新しい命令セットへの一般化は主要結果に含まれない。"
   }
 }

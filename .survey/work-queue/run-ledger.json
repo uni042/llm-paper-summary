@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T17:40:43.338391+00:00",
+  "updated_at": "2026-09-14T17:45:16.582570+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T17:40:43.338391+00:00",
+      "last_recorded_at": "2026-09-14T17:45:16.582570+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 5,
         "new_papers": 63,
-        "fallback_archived": 10
+        "fallback_archived": 11
       },
       "events": [
-        {
-          "event_id": "34798476004:1",
-          "recorded_at": "2026-09-14T02:13:43.127899+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34798476004",
-            "run_attempt": "1",
-            "source_sha": "cc4bc04062cd26100034b464de5e65da5567b97f"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34798657108:1",
           "recorded_at": "2026-09-14T02:16:31.173298+00:00",
@@ -19596,6 +19582,20 @@
             "discovery_or_queue_expanded",
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34876343042:1",
+          "recorded_at": "2026-09-14T17:45:16.582570+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34876343042",
+            "run_attempt": "1",
+            "source_sha": "2d12baf549d1b2b3689ac178d30dd567a7b7726b"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20265,7 +20265,8 @@
         ".survey/work-queue/fallback-archive/claimed-attempt-3c3aa97d42e37d1d8d35d68c-run1357.json",
         ".survey/work-queue/fallback-archive/claimed-attempt-6f11d0c6a36c75e2b4ebc7cd-run1357.json",
         ".survey/work-queue/fallback-archive/claimed-run1630-c2cserve-repair-current.json",
-        ".survey/work-queue/fallback-archive/20260914T234700JST-research-2609.11209-reva-attempt-08adc02deaead45fbd4cfdd5.json"
+        ".survey/work-queue/fallback-archive/20260914T234700JST-research-2609.11209-reva-attempt-08adc02deaead45fbd4cfdd5.json",
+        ".survey/work-queue/fallback-archive/20260914T204000JST-research-2605.31464-gpu-forecasters-attempt-bafa49c4a685291f5311cc0a.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 523,
