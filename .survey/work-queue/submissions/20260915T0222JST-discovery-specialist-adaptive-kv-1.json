@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e00f52c8cc2c35eb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression-for-constrained-llm-inference.md",
+      "priority": 85,
+      "reason": "固定のKV圧縮設定を全要求へ適用せず、各入力と利用者指定の遅延・ピークメモリ制約に対して、候補設定ごとの端から端遅延、ピークメモリ、正答確率を軽量予測し、KVQuant・H2O・RocketKV・FP16を含む設定から要求単位で選択する適応型実行フレームワーク。4データセット・10圧縮設定で、両制約を満たしつつ正答した割合を表すconstrained success rateを最良の静的設定より平均約0.07、最大0.135改善し、公式コードも公開している。KV圧縮そのものではなく、実行時の資源制約と入力特性に応じて圧縮方式を切り替える制御層として既存収録との差分が明確。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T02:00:00+09:00",
+    "round": "specialist-adaptive-kv-constraint-1",
+    "axis": "要求単位の資源制約適応・KV圧縮ポリシー選択",
+    "query_summary": "直近のKVキャッシュ研究から、圧縮アルゴリズム自体ではなく遅延・ピークメモリ・正答確率を予測して要求ごとに実行設定を選ぶ制御層を探索した。MetaKVを新規強候補として残し、出力長不確実性を扱うRobust KV Cache Managementは既存探索履歴で収録済みのため除外した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2607.16892"],
+    "next_axis_hint": "KV圧縮から離れ、サーバレスLLMの電力・SM分割・GPU動作点を協調制御するenergy-aware serving、または新着の分散通信runtimeへ軸を移す",
+    "empty_round_reason": null
+  }
+}
