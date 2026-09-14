@@ -4,10 +4,18 @@
   "slot": "evaluation",
   "attempt_id": "attempt-37e7dace4d142c5fc45d47e3",
   "job_id": "job-research-b3027328474c4253",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-37e7dace4d142c5fc45d47e3",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "生成agentの主要評価はNVIDIA B200。Trace例もB200上で実測し、end-to-end評価はSGLangでLlama-3.1-8B-Instructを配信する。",
+    "software": "FlashInfer-Bench、FlashInfer、SGLang、PyTorch、Triton、CUDAを利用。Trace例ではPyTorch 2.8.0+cu128、Triton 3.4.0、CUDA 12.8。",
+    "models": ["DeepSeek-V3","Llama-3.1-8B / Llama-3.1-8B-Instruct","Qwen3-30B-A3B"],
+    "workloads": "8種類の代表的推論kernel type（GEMM、Ragged/Paged GQA、Ragged/Paged MLA、Fused MoE、RMSNorm、Sampling）を41 distinct Definitionへ展開し、SGLangの実入力traceからshape deduplication後1,600 workloadsを構築する。各Definitionは概ね50 workloadsを持つ。",
+    "agents": ["GPT-5-2025-08-07","o3","Gemini-2.5-Proほか"],
+    "baselines": ["FlashInfer","PyTorch（対応FlashInfer kernelがない場合）","native SGLang FlashInfer backend"],
+    "correctness": "通常演算はreferenceとの数値誤差とNaN/Infを検査。低精度演算は要素一致率等の専用基準を用いる。samplingは期待確率分布と反復実行の経験分布のtotal variation distanceを測り、top-k/top-p mask違反も即失敗とする。",
+    "performance_measurement": "GPU単位lock取得後、w回warm-upとm回timed runを行いCUDA eventで平均latencyを計測。完全隔離modeではsolutionごとにsubprocessとCUDA contextを破棄し、persistent modeではpre-warmed worker poolを使う。",
+    "agent_methodology": "各Definition・言語・hardwareについて初回kernelを生成し、FlashInfer-BenchのTrace feedbackを最大N round返して修正・最適化する。正しく動いた候補のうち最大speedupを採用し、workloadごとにbaselineのp倍超かつcorrectな割合fast_pを集計する。",
+    "deployment_methodology": "Fused Add RMSNorm（hidden size 4096）を代表例としてSGLang/Llama-3.1-8B-Instructへapply()で差替え、batch/concurrency 1・16・64でisolated kernel latencyとE2E request latencyを比較。各構成はwarm-up後、同じinput/output lengthの4 requests平均を測定する。",
+    "scope": "現版は単一GPU上のLLM推論kernelが中心で、multi-GPU collectiveや通信kernelは未対応。対応hardware・model・programming languageも限定される。"
+  },
+  "reservation": {"claim_id":"claim-37e7dace4d142c5fc45d47e3","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}
 }
