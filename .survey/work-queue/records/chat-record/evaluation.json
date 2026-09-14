@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-8be1abfdf2512c2fb498bde0",
   "job_id": "job-research-ba4de6edc8a253cf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8be1abfdf2512c2fb498bde0",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "4台のサーバに各8基のNVIDIA H20 141GB GPUを搭載した計32 GPUクラスタ。各サーバはNVLink、2×200Gbps InfiniBand NIC、96 CPU cores、2TB RAMを備える。論文要旨には単一ノード8×H800との記述もあるが、v2本文の評価節は4×8 H20クラスタを実験環境として明記するため、定量結果の評価条件は本文側を優先する。",
+    "software": "CUDA 12.4。HydraInferは約10K行Python＋3K行C++/CUDA。vLLM 0.11.0、SGLang 0.5.3を比較対象とする。FlashAttention/FlashInferのページ化注意を利用し、Ray actorでインスタンスを管理する。画像・KVキャッシュ移送は同一ノードでCUDA IPC、ノード間でNCCL。",
+    "model": "LLaVA-1.5-7B、LLaVA-NeXT-7B、Qwen2-VL-7B。LLaVA-1.5は各画像を576トークンへ符号化し、LLaVA-NeXTとQwen2-VLは画像解像度によって視覚トークン数が変わる。",
+    "datasets": ["TextCaps", "POPE", "MME", "TextVQA", "VizWiz"],
+    "baselines": ["vLLM 0.11.0", "SGLang 0.5.3", "HydraInferの完全分離E+P+D固定構成", "段階別バッチ処理を無効化した構成", "視覚と言語を直列実行する構成"],
+    "correctness": "グッドプットは、要求のTTFTが設定上限未満で、かつその要求のTBT値の90%以上がTBT上限未満という条件を満たす要求が全体の90%以上となる最大要求率として定義する。モデルや生成内容を変えず、比較間で出力トークン数を固定するため、主評価は同じ生成仕事量に対するSLO達成能力である。",
+    "settings": ["各データセットの10%を配置プロファイル用履歴トレース、残り90%を性能評価に使用", "実運用由来の到着時刻トレースを要求率に合わせて尺度変更", "比較間の負荷を揃えるため事前に生成トークン数を記録し、max_tokensとignore_eosで出力長を固定", "KV cache block size=16、image cache block size=576", "モデル・中間値・KV・画像キャッシュはFP16", "vLLM eager mode、prefix cache/CUDA graph無効", "基準系は32インスタンスをラウンドロビンで使用", "段階別予算係数α=0.5、配置計画のSLO余裕係数β=0.5、KV容量利用係数γ=0.9"],
+    "methodology": "各モデル・データセットについて要求率を上げながらSLO達成率曲線を測定し、90%を維持できる最大要求率をグッドプットとして比較する。LLaVA-NeXT/TextCapsでは混成EPD選択と段階別バッチの除去実験を行う。LLaVA-1.5/TextCapsの1E3P4D構成で要求の符号化待ち・実行、EP移送、入力処理待ち・実行、PD移送、デコード待ち・実行を分解して移送オーバーヘッドを測る。さらにLLaVA-1.5の符号化とデコードを別CUDAストリームで並列実行した場合と50%ずつ直列に割り当てた場合のGPU当たり処理率を複数バッチサイズで比較する。",
+    "scope": "マルチモーダル7B級三モデルと五データセットを32基H20クラスタで評価する。既存のマルチモーダルEPD分離研究は論文時点で公開実装がないため直接比較せず、主比較は汎用vLLM/SGLangである。プロファイル用履歴と評価データは同じデータセット分布から分割されるため、急激な分布変化下での配置追随性能は限定的。SLO値はモデル・データセットごとに設定し、LLaVA-1.5ではTTFT 4秒/TBT 0.08秒、LLaVA-NeXTではTTFT 8秒/TBT 0.30〜0.60秒、Qwen2-VLではTTFT 8秒/TBT 0.10〜0.60秒を使う。"
+  },
+  "reservation": {"claim_id": "claim-8be1abfdf2512c2fb498bde0", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
 }
