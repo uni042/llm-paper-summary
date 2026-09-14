@@ -1,25 +1,19 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "claim_id": "claim-9778ac49ef0d495e80efecfa",
+  "claim_id": "claim-6f595a24896a81b42cc84ec9",
   "job_id": "job-research-cff945d042003c88",
-  "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
+  "worker_id": "scheduled-chat-llm-discovery-overflow",
   "worker_kind": "scheduled_chat",
-  "attempt_id": "attempt-9778ac49ef0d495e80efecfa",
-  "request_id": "req-dspec-overflow-20260914T1800JST-01",
-  "claimed_at": "2026-09-14T09:27:18+00:00",
-  "expires_at": "2026-09-14T09:28:03+00:00",
+  "attempt_id": "attempt-6f595a24896a81b42cc84ec9",
+  "request_id": "claim-20260914T095600Z-scheduled-chat-llm-discovery-overflow-01",
+  "claimed_at": "2026-09-14T09:56:20+00:00",
+  "expires_at": "2026-09-14T11:26:20+00:00",
   "kind": "research",
   "depends_on_job_ids": [
     "job-research-cff945d042003c88"
   ],
-  "previous_claim_id": "claim-a76eaeb7528cc4a0ad62564b",
+  "previous_claim_id": "claim-9778ac49ef0d495e80efecfa",
   "record_bank": null,
-  "record_bank_fallback": "library",
-  "released": false,
-  "invalidated": false,
-  "heartbeat_at": "2026-09-14T09:28:03+00:00",
-  "released_at": "2026-09-14T09:28:03+00:00",
-  "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T184500JST-research-2607.08786-repair-attempt-a76eaeb7528cc4a0ad62564b.json",
-  "checkpoint_release_request_id": "req-dspec-overflow-20260914T1800JST-02"
+  "record_bank_fallback": "library"
 }
