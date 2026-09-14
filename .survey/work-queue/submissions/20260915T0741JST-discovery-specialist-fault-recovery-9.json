@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-15c0335aaa7eded8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.00831",
+      "title": "GhostServe: A Lightweight Checkpointing System in the Shadow for Fault-Tolerant LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.00831",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00831-ghostserve-shadow-checkpointing-fault-tolerant-serving.md",
+      "priority": 79,
+      "reason": "長時間・長文脈のLLMサービングでGPU障害時に失われるKVキャッシュを、ホストメモリ上の消失訂正符号パリティとしてshadow checkpointし、全再計算や完全複製なしに復旧する。単一batchでcheckpoint遅延を最大2.7倍、recovery遅延を2.1倍改善し、障害下の中央値応答遅延を既存方式比1.2倍改善すると報告する。ConcordiaやLUMENとは異なる符号化冗長性によるKV保護方式で、耐障害サービング系統を補完する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-fault-recovery-9",
+    "axis": "長時間LLMサービングのcheckpoint・KV復旧・耐障害性",
+    "query_summary": "fault-tolerant LLM servingを探索し、LUMEN（arXiv:2606.17787）、Concordia（arXiv:2606.23521）、Blackwell GPU confidential computingのSerialized Bridge（arXiv:2606.23969）、GhostServe（arXiv:2605.00831）を軽量評価した。最新identityで前3件は既収録、GhostServeのみ未収録だった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.17787",
+      "arXiv:2606.23521",
+      "arXiv:2606.23969"
+    ],
+    "next_axis_hint": "分離サービングのネットワーク転送、RDMA/NVLink/CXLファブリック、集合通信のランタイム適応へ移り、既収録通信系統から未収録候補を探索する。",
+    "empty_round_reason": null
+  }
+}
