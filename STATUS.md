@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 01:51 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 01:53 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -16,10 +16,10 @@
 | 指標 | 状態 |
 |---|---:|
 | 未処理の論文候補（Research ready） | **54** |
-| 現在処理不能（Research blocked） | **1** |
+| 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| GitHub反映済みResearch完了（job） | **334** |
-| 耐久checkpoint済み・GitHub未反映（job） | **30** |
+| GitHub反映済みResearch完了（job） | **335** |
+| 耐久checkpoint済み・GitHub未反映（job） | **29** |
 | 精読済みユニーク論文（推定） | **364** |
 | 保守状態（Maintenance） | **passed** |
 | 直近整合性チェック結果 | **passed** |
@@ -30,7 +30,7 @@
 
 ### 要注意
 
-- Research blocked が **1件** 残っています。
+- 現在、集計stateから重大な警告は検出されていません。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -41,11 +41,11 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **54** |
-| 有効claim（lease） | **2** |
-| 今すぐ着手可能（Claimable） | **54** |
-| 有効leaseを持つworker run | **2** |
-| :30 最新worker run | **2026-09-15T01:30:00+09:00** |
-| :30 最新run由来の有効claim | **1** |
+| 有効claim（lease） | **1** |
+| 今すぐ着手可能（Claimable） | **55** |
+| 有効leaseを持つworker run | **1** |
+| :30 最新worker run | **—** |
+| :30 最新run由来の有効claim | **0** |
 | :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **2026-09-15T00:00:00+09:00** |
 | :00 最新run由来の有効claim | **1** |
@@ -53,12 +53,12 @@
 | その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近lease活動 | **09-15 01:51 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
-| 直近24h Research完了（:30 通常worker） | **34** |
+| 直近24h Research完了（:30 通常worker） | **35** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T01:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古の有効claimの経過時間 | **69 min** |
+| 最新通常runのResearch完了 | **3** |
+| 最古の有効claimの経過時間 | **70 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -75,8 +75,8 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **60** |
-| Repo収録 | **98** |
+| Research完了 | **61** |
+| Repo収録 | **103** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
 | Research候補採用 | **0** |
@@ -85,11 +85,11 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | :00 補助worker Discovery run（毎時枠） | **0** |
 | :00 補助worker Discovery round（stats観測） | **0** |
 | 通常worker run（ledger観測） | **4** |
-| Fallback archive（全helper） | **3** |
+| Fallback archive（全helper） | **10** |
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 60 → Repo収録 98**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 61 → Repo収録 103**
 
 ## 次に処理する候補
 
@@ -135,6 +135,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2602.09345` — AgentCgroup: Understanding and Controlling OS Resources of AI Agents
 - `arXiv:2502.13965` — Autellix: An Efficient Serving Engine for LLM Agents as General Programs
 - `arXiv:2607.08930` — BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving
 - `arXiv:2607.08786` — Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices
@@ -142,7 +143,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2608.02244` — Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling
 - `arXiv:2609.02027` — Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation
 - `arXiv:2606.23969` — The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing
-- `arXiv:2602.11808` — Deep Kernel Fusion for Transformers
 
 ### 7日比較
 
