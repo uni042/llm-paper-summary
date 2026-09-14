@@ -1,13 +1,16 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-53d2e73cb4e28aeb786bbf9d",
-  "job_id": "job-research-4ff85aa229e8d65c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53d2e73cb4e28aeb786bbf9d",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-53d2e73cb4e28aeb786bbf9d","job_id":"job-research-4ff85aa229e8d65c",
+  "data":{
+    "overview":"DeepFusionKernelは4GPUテンソル並列のLlama 3.1 70BデコードでSGLangの既定実装を一貫して上回り、出力1024ではA100で最大9.7%、H100で最大13.2%の処理率向上を示した。A100のバッチ16では453.75から497.69 token/s、H100のバッチ2では107.05から121.13 token/sへ改善する。一方、バッチが大きく演算律速へ近づくとA100バッチ64の改善は1.3%まで縮む。出力を16384まで伸ばした長生成でも全評価点でSGLang/vLLMを上回り、KVキャッシュ・注意機構の費用が増加してもMLPのHBM交通削減が残ることを確認した。実用上は、モデルや推論スケジューラを変更せず既存SGLangへ局所的に導入でき、長生成の総トークン数が大きいほど小さな一トークン当たり短縮を繰り返し積み上げられる。",
+    "key_results":[
+      {"metric":"A100最大デコード速度向上","value":"+9.7%（453.75→497.69 token/s）","baseline":"SGLang","condition":"Llama 3.1 70B FP16、TP=4、B=16、出力1024","interpretation":"小〜中バッチの帯域律速域で中間HBM交通削減がモデル全体処理率へ反映される。"},
+      {"metric":"H100最大デコード速度向上","value":"+13.2%（107.05→121.13 token/s）","baseline":"SGLang","condition":"Llama 3.1 70B FP16、TP=4、B=2、出力1024","interpretation":"演算能力が大きいH100でも小バッチではメモリ帯域が相対的ボトルネックとして残る。"},
+      {"metric":"A100大バッチでの改善","value":"+1.3%（1391.76→1410.39 token/s）","baseline":"SGLang","condition":"B=64、出力1024","interpretation":"演算律速へ寄ると融合によるメモリ交通削減の限界利得は小さくなる。"},
+      {"metric":"A100長生成 B=1","value":"出力16384で34.97→36.79 token/s","baseline":"SGLang","condition":"TP=4、FP16","interpretation":"KVキャッシュ増大後もMLPが十分な割合を占めるため利得を維持する。"},
+      {"metric":"H100長生成 B=4","value":"出力4096で219.48→234.61 token/s","baseline":"SGLang","condition":"TP=4、FP16","interpretation":"長生成・軽い並行実行でも選択カーネルが既定SGLangを上回る。"}
+    ],
+    "negative_results":"利得は全条件で一定ではなく、A100ではバッチ64で1.3%まで低下する。論文は異なるGPUクラスタ間接続を網羅せず、GPU間通信の変動を定量分離していない。DeepFusionKernelは既存AllReduceをそのまま用いるため通信ボトルネックそのものは改善せず、高並行度では通信ジッタが処理率分散を増やす。",
+    "interpretation":"深い融合の価値はカーネル起動回数削減より、巨大な中間活性をHBMへ往復させないことにある。長文脈でKVキャッシュが大きくなると注意機構費用は上がるが、SwiGLU重みも毎トークン読み込む必要があるため、MLPの局所最適化は長生成でも消えない。事前プロファイルがGPU・バッチに合うタイル順序を選ぶことで、固定融合の逆効果を避ける。",
+    "quality_impact":"FP16の同一数式を計算順序・タイル配置だけ変更し、量子化・枝刈り・推測生成を導入しない。論文は品質指標を別途測定していないが、アルゴリズム上は生成意味品質との交換条件を持たない。"
+  },"reservation":{"claim_id":"claim-53d2e73cb4e28aeb786bbf9d","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
