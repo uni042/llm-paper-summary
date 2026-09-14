@@ -4,7 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
   "job_id": "job-research-bd7341cf457984b7",
-  "data": {},
+  "data": {
+    "novelty_vs_prior": "vLLMなどの一般的なLLMサービングはバッチ・待ち行列・GPUメモリを主に扱い、DSO/GreenLLM系はDVFSで電力を下げるが冷却系の過渡状態を明示的な資源として扱わない。TAPASのような熱対応配置は温度・電力を使って低温GPUへ仕事を寄せる一方、AIO液冷ループの熱容量そのものをジョブごとの残余予算へ変換しない。CoolEdgeは冷却液側の制御が中心で、LLM要求のバッチ・GPU割当・SLOと発熱を共同最適化しない。HeatCacheはAIOの熱慣性を『今使える熱予算』としてスケジューラへ持ち込み、物理モデルと学習予測を接続する点が差分である。",
+    "implementation_status": "vLLM上のユーザー空間プラグインとして実装済みで、Kubernetes/KServe、NVIDIA DCGM、Kubeletプラグインを統合した実機プロトタイプを評価している。専用実装の公開リポジトリURLは論文本文とarXivメタデータから確認できない。",
+    "research_positioning": "llm-serving-scheduling-disaggregation系統の中でも、推論スケジューリングと設備・デバイス熱管理の境界に位置する。サーバの計算資源だけでなく冷却系の時間的な熱容量を制約資源として扱うため、エネルギー/炭素対応サービングや電力上限制御を、温度・冷却ダイナミクスまで拡張する研究として位置付けられる。",
+    "relation_to_existing_repository": "vLLM/PagedAttentionなどの既存サービング基盤を置換せず上位制御として使う点で、スケジューラ系研究と補完関係にある。電力制御・炭素対応配置の論文が時間・価格・電力予算を扱うのに対し、HeatCacheは各GPU/AIOループの熱余裕を時間変化する予算として追加する。エッジ/オンデバイス系のEnerInferのような熱・電力制御とは問題意識を共有するが、HeatCacheは4GPUサーバのAIO液冷慣性とvLLMバッチ/ルーティングを直接結合する。",
+    "limitations": "評価は単一ワークステーション、RTX 4090×4、改造AIO液冷、2m×2m囲いに限定される。施設配管型direct-to-chip/CDUや浸漬冷却では熱状態と操作ノブが異なり、そのまま最適とは限らない。複数サーバの配置・移行、共有ラック/クラスタ電力上限、マルチテナント制御、HVAC/CRACの設定温度や風量との共同最適化は扱わない。RCモデルは各GPU/AIO構成ごとにステップ負荷で校正が必要で、経年劣化や保守後に再校正が必要になり得る。HeatiTSの未知分布への一般化は限定的にしか評価されていない。計算エネルギーの主要比較では各AIOポンプ/ファン約25Wを除外しており、総施設エネルギー全体の削減率と同一ではない。24GB GPUへ収めるためモデルを量子化している。精密RC検証には約7%の遅延費用が報告される。",
+    "audit_required": false
+  },
   "reservation": {
     "claim_id": "claim-b1966b5c09cb8552b368d98f",
     "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
