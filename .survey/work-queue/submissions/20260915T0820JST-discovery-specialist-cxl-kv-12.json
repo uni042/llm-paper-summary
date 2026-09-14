@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.18141",
+      "title": "HyMCache: A KV Cache Framework for Multi-Turn LLM Serving with CXL-Hybrid Memory",
+      "source_url": "https://arxiv.org/abs/2607.18141",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md",
+      "priority": 95,
+      "reason": "multi-turn/agentic workloadの再利用KVをTB-scaleへ拡張する際、HBM/host DRAMのcostとSSD latencyの間を埋めるため、small in-device DRAMとlarge SSD-backed capacityをCXL interface配下で組み合わせたCXL-hybrid memory向けKV frameworkを提案する。read-dominant・predictable・append-onlyなKV accessを利用し、request-level prefix prefetchingとopportunistic write bufferingでlatency-critical readをdevice DRAMへstageする。実CXL-HM prototypeで同じDRAM budgetのlocal LMCache比3.0倍（single node）/1.45倍（P/D disaggregated）を達成し、1TB distributed-DRAM Mooncake比約30%低性能ながらDRAM量を16分の1に削減する。CXL+SSDの階層KVとして重点テーマに極めて近い。"
+    },
+    {
+      "canonical_id": "arXiv:2607.27187",
+      "title": "A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27187",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2607.27187-photonic-cxl-memory-appliance-kv-cache.md",
+      "priority": 80,
+      "reason": "KV cacheがTB級容量と高帯域を同時要求するmemory wallに対し、electrical CXL switchのlatency・reach・power scalingを避けるphotonic-CXL hybrid memory applianceを提案する。passive fiber shuffleによるswitch-free full-crossbarで16 host間に32TB shared memoryを提供し、multi-generation GPU/LLaMA characterizationではhost-memory retrievalがrecompute比最大100倍高速な一方concurrencyに限界があることを示す。emulationでelectrical CXL pool比latencyを50%以上削減し、simulationのmulti-turn workloadでcache eviction cliffを除きTTFTを6.6倍改善する。ソフトウェアsystemよりhardware寄りだが、将来のKV pooled-memory substrateの境界条件を示す比較対象として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-cxl-kv-12",
+    "axis": "CXL-hybrid SSD-backed KV・photonic pooled memory",
+    "query_summary": "CXLをKV階層/transfer substrateとして使う近接研究を探索し、HyMCache（2607.18141）とPhotonic-CXL Memory Appliance（2607.27187）を一次arXiv情報で軽量評価した。送信前のdefault branch検索では両IDとも既収録を確認できず、最新queueもresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はGPU-direct SSD/NVMeのI/O stack、KV object store、SmartSSD/near-storage compute、またはCXL-attached expert cacheへ軸を広げる。",
+    "empty_round_reason": null
+  }
+}
