@@ -4,10 +4,40 @@
   "slot": "metadata",
   "attempt_id": "attempt-900e0b9bd6c1839bbd58f9c3",
   "job_id": "job-research-b16bdf4c09cb7905",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-900e0b9bd6c1839bbd58f9c3",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2505.17052",
+    "arxiv_id": "2505.17052",
+    "doi": "10.48550/arXiv.2505.17052",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.CL", "cross_list": ["cs.AI"]},
+    "title": "SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs",
+    "summary": "SpecEdgeは、データセンタGPUだけでLLMのドラフト生成と検証を行う従来の投機的復号を、安価な消費者GPU側のドラフト生成とサーバ側の最終検証へ分離するエッジ支援型配信基盤である。モデル中間状態ではなく候補トークンだけを広域ネットワーク越しに交換するため、層分割推論のような大容量・毎トークン通信を避ける。エッジ側はサーバの検証結果を待たず、最も確率の高いドラフト木の経路から先行生成を続け、完全整合時には先行計算を次周期へ再利用する。サーバ側は複数エッジ要求の検証を交互に処理してドラフト待ちによる計算空洞を埋め、実測した検証時間とネットワーク往復時間に合わせてドラフト深さを動的調整する。A100サーバとRTX 4090エッジ群、平均RTT 14.07msの実ネットワークで、サーバ単独の木構造投機的復号比でサーバ処理量2.22倍、費用効率1.91倍、トークン間遅延11.24%削減を報告する。投機的検証なので最終出力分布はサーバモデル単独と一致する。",
+    "list_summary": "消費者GPUをエッジ側ドラフト生成へ使い、先行ドラフトと複数要求の検証パイプラインでWAN遅延を隠しつつ、A100サーバの処理量を平均2.22倍へ高めるエッジ支援投機的配信。",
+    "authors": ["Jinwoo Park", "Seunggeun Cho", "Dongsu Han"],
+    "authors_affiliations": "KAIST",
+    "published": "2025-05-16",
+    "publication": "arXiv",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint; v2 revised 2025-11-18",
+    "lineage": "speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling",
+    "topics": ["エッジ支援推論", "投機的復号", "先行ドラフト", "検証パイプライン", "広域ネットワーク", "消費者GPU", "費用効率"],
+    "importance": "GPU間でモデル層やKV状態を転送するのではなく、投機的復号のドラフト/検証境界をそのままWAN境界に利用することで、安価なエッジGPUを品質損失なしにデータセンタ配信へ組み込む。ネットワーク遅延をドラフト深さ制御と先行計算で隠し、サーバGPUを検証専用化して高価な中央資源の処理量を増やす点が重要である。",
+    "hardware_evaluation": "主評価はサーバNVIDIA A100 40GB（Qwen3-32B時は80GB）とエッジRTX 4090群。追加評価はRTX 4070 Ti Super、RTX 3090、RTX 2080 Ti、RTX 3060 Ti。サーバとGoogle Cloud側を結ぶ実測平均RTTは14.07ms。",
+    "quality_effect": "投機的復号の検証段階をサーバ側ターゲットモデルが実行するため、ドラフトモデルが異なっても最終出力分布はサーバモデル単独の通常復号と同一に保たれる。",
+    "source": "https://arxiv.org/abs/2505.17052",
+    "sources": ["https://arxiv.org/abs/2505.17052", "https://arxiv.org/html/2505.17052v2", "https://github.com/kaist-ina/specedge"],
+    "code": "https://github.com/kaist-ina/specedge",
+    "implementation": "公開コードあり。エッジでドラフトモデルのKVキャッシュと木候補を管理し、サーバでターゲットモデル検証を行う。サーバ検証は異なる系列長を同じ処理群へ入れるため要求別attention maskと最長系列へのKV paddingを使う。ドラフト深さは実測検証時間、エッジforward時間、RTTに合わせて動的設定する。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180"},
+      {"canonical_id": "arXiv:2302.01318", "arxiv_id": "2302.01318"},
+      {"canonical_id": "arXiv:2402.12374", "arxiv_id": "2402.12374"},
+      {"canonical_id": "arXiv:2406.01566", "arxiv_id": "2406.01566"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v2 HTML版参考文献節",
+    "references_total": 57
+  },
+  "reservation": {"claim_id": "claim-900e0b9bd6c1839bbd58f9c3", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
