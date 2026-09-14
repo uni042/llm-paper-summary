@@ -1,7 +1,7 @@
 {
   "counts": {
     "discovery": {
-      "completed": 350,
+      "completed": 351,
       "ready": 1
     },
     "audit": {
@@ -10,7 +10,7 @@
     },
     "research": {
       "completed": 351,
-      "ready": 44,
+      "ready": 45,
       "superseded": 44,
       "deferred": 3,
       "blocked_permanent": 1,
@@ -18,11 +18,23 @@
     }
   },
   "claiming": {
-    "ready_research_audit": 46,
+    "ready_research_audit": 47,
     "actively_claimed": 0,
-    "claimable": 46
+    "claimable": 47
   },
   "next_jobs": [
+    {
+      "job_id": "job-research-3df42686de08919b",
+      "type": "research",
+      "lane": null,
+      "priority": 94,
+      "canonical_id": "arXiv:2607.13095",
+      "title": "Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit",
+      "source_url": "https://arxiv.org/abs/2607.13095",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13095-mimo-hybrid-swa-full-pipeline-serving.md",
+      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
+    },
     {
       "job_id": "job-research-229f0f103fc45c25",
       "type": "research",
@@ -108,19 +120,7 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-7c979683209fb954",
-      "type": "research",
-      "lane": null,
-      "priority": 83,
-      "canonical_id": "arXiv:2604.00499",
-      "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
-      "source_url": "https://arxiv.org/abs/2604.00499",
-      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.00499-tie-uncertainty-aware-output-length-scheduling.md",
-      "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
-      "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
-    },
-    {
-      "job_id": "job-1ebd066dfd741cf5",
+      "job_id": "job-a01992ffb24ee484",
       "type": "discovery",
       "lane": "discovery",
       "priority": 50,
@@ -132,5 +132,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-14T23:28:41+00:00"
+  "generated_at": "2026-09-14T23:31:56+00:00"
 }

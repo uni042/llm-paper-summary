@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T23:28:40.024174+00:00",
+  "updated_at": "2026-09-14T23:31:55.805217+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T23:28:40.024174+00:00",
+      "last_recorded_at": "2026-09-14T23:31:55.805217+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 76,
         "audit_completed": 0,
-        "discovery_completed": 10,
+        "discovery_completed": 11,
         "blocked": 1,
-        "new_jobs": 19,
+        "new_jobs": 21,
         "new_papers": 79,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34863780241:1",
-          "recorded_at": "2026-09-14T15:48:23.837262+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey helper worker",
-            "run_id": "34863780241",
-            "run_attempt": "1",
-            "source_sha": "982d647d09ad7c4de08d0aa393ab4faf090b55e4"
-          },
-          "signals": [
-            "paper_materialized"
-          ]
-        },
         {
           "event_id": "34865078123:1",
           "recorded_at": "2026-09-14T15:53:20.686464+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34908866300:1",
+          "recorded_at": "2026-09-14T23:31:55.805217+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34908866300",
+            "run_attempt": "1",
+            "source_sha": "0a21b4a633b4b793dd29cbd6988d85280fbd1ef7"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20297,6 +20297,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-1ebd066dfd741cf5",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20432,6 +20440,20 @@
           "type": "research",
           "canonical_id": "arXiv:2601.21198",
           "title": "ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling"
+        },
+        {
+          "job_id": "job-a01992ffb24ee484",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-3df42686de08919b",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2607.13095",
+          "title": "Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit"
         }
       ],
       "new_paper_ids": [
@@ -20561,7 +20583,9 @@
         ".survey/work-queue/results/20260915T0836JST-discovery-specialist-tangram-20.json",
         ".survey/work-queue/results/20260915T0838JST-discovery-specialist-crosspool-orbitflow-21.json",
         ".survey/work-queue/results/20260915T0840JST-discovery-specialist-cox-shuntserve-22.json",
-        ".survey/work-queue/results/20260915T0842JST-discovery-specialist-vertumnus-saecache-23.json"
+        ".survey/work-queue/results/20260915T0842JST-discovery-specialist-vertumnus-saecache-23.json",
+        ".survey/work-queue/results/20260915T0844JST-discovery-specialist-mimo-production-24.json",
+        ".survey/work-queue/results/20260915T0846JST-discovery-specialist-kvserve-25.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",

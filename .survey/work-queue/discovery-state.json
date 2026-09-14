@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-14T23:23:12+00:00",
+  "updated_at": "2026-09-14T23:29:06+00:00",
   "last_run_key": "2026-09-15T08:00:00+09:00",
-  "last_round": "specialist-moe-locality-18",
+  "last_round": "specialist-mimo-production-24",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -3305,6 +3305,21 @@
       "duplicate_canonical_ids": [],
       "next_axis_hint": "次は最新Actions反映を再確認し、overflow未満ならrecent 2608-2609のserving/memory/MoE systemを探索する。",
       "source_submission": "work-queue/submissions/20260915T0832JST-discovery-specialist-moe-locality-18.json"
+    },
+    {
+      "run_key": "2026-09-15T08:00:00+09:00",
+      "round": "specialist-mimo-production-24",
+      "axis": "Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling",
+      "query_summary": "production-scale distributed cache infrastructureを探索し、MiMo-V2.5 full-pipeline serving（2607.13095）を一次arXiv本文で軽量評価した。競合後に最新HEAD・queue・repo検索を再取得し、同IDの既収録なし、research ready 44でoverflow条件未満、新discovery job job-1ebd066dfd741cf5を確認して再送した。",
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "Actions反映後のcandidate inventoryを再確認し、overflow未満ならproduction/disaggregated servingのrecent omissionを探索する。",
+      "source_submission": "work-queue/submissions/20260915T0844JST-discovery-specialist-mimo-production-24.json"
     }
   ],
   "axes": {
@@ -5167,6 +5182,16 @@
       "accepted_count": 1,
       "duplicate_ratio": 0.0,
       "next_axis_hint": "次は最新Actions反映を再確認し、overflow未満ならrecent 2608-2609のserving/memory/MoE systemを探索する。"
+    },
+    "Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling": {
+      "last_run_key": "2026-09-15T08:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 1,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "Actions反映後のcandidate inventoryを再確認し、overflow未満ならproduction/disaggregated servingのrecent omissionを探索する。"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
