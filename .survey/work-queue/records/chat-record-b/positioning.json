@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-9d715c96e499c8afcf786e63",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "positioning",
-  "attempt_id": "attempt-4baea6740aec80b2a79b010f",
-  "job_id": "job-research-64153047cf155e5c",
   "data": {
-    "limitations": "評価は単一H100 80GBとLLaVA-1.5-7Bに限定される。複数GPU間KV移動、異種アクセラレータ、CPU/SSDへの階層退避、ネットワーク分離prefill/decodeは未評価。MileBenchでは単純説明プロンプトを使うため、本来の長文マルチ画像推論を全面的に評価していない。提案MLP圧縮器の訓練コスト・モデル移植性、要求間公平性、P99待ち時間、失敗時のメモリ回収についても情報が少ない。著者公式実装URLを一次資料から確認できない。",
-    "differences": "SnapKVやKnormなどはどのKVを残すかという圧縮規則が中心で、vLLMやDistServeは未圧縮KVを前提にメモリ・prefill/decodeを管理する。FastCacheは圧縮演算が追加されたことで生じる第三段階の待ち行列とKV寿命問題を対象にし、圧縮器自体をバッチしやすいMLPへ変え、prefill/compress/decode全体を共同スケジューリングする。",
-    "implementation_status": "約6.5K行のPython試作を論文で評価。SPSCオンライン処理、動的バッチング、KVメモリプール、ゼロコピー参照管理を実装。一次資料から公開コードURLは確認できない。",
-    "research_positioning": "KVキャッシュ圧縮とLLMサービングの接点にあるシステム研究。圧縮品質研究を、キューイング・GPU利用率・メモリ断片化・SLOというオンライン実行問題へ拡張する。",
-    "relation_to_existing_repository": "KV-cache-offload-recomputation系統では、圧縮率・量子化・追い出し・再計算を扱う論文が多い。FastCacheはGPU内で圧縮前後状態が共存する期間と圧縮処理のバッチ性を明示的に扱うため、CPU/SSD階層化とは補完的である。将来はFastCacheのメモリプールをGPU/CPU/NVMeへ拡張し、圧縮率・配置階層・prefetchを同じメモリ地図から決める方向が考えられる。",
+    "limitations": "性能評価はLlama-3.1-8B-Instructが中心で、追加Qwenモデルは正しさ確認に限られる。現H100 PCIe環境はmultimem/NVLSを利用できず、公平な多GPU性能比較をしていない。検証は全要求へ一時停止を波及させ、選択的決定性でも非対象要求に遅延を加える。プリフィルとデコードが異なる削減戦略を使うため接頭辞KV共有をサポートせず、通常の投機的復号とも未統合である。",
+    "differences": "既存のバッチ不変推論はGEMM等をバッチ形状に依存しない削減順序へ全面的に置き換え、全要求を常に決定的にする。LLM-42は通常の高速カーネルと動的バッチを候補生成に残し、固定形状の検証だけを決定的な基準実行にするため、カーネル改変を減らし、決定的要求比率に応じて費用を支払う。通常の投機的復号が小型ドラフト等の近似計算から候補を作るのに対し、LLM-42は同一モデルの通常計算で候補を作り、浮動小数点削減順序の違いだけを検証する。",
+    "implementation_status": "公開実装あり。MicrosoftのGitHubリポジトリはSGLang派生コード、LLM-42本体、カーネル、ベンチマーク、SOSP 2026成果物評価用スクリプトを含む。",
+    "research_positioning": "LLMサービングのスケジューリングと再現可能推論の交点に位置する。連続バッチ、PagedAttention、分離サービング等が通常は非決定性を前提に性能を追求するのに対し、LLM-42は高性能な動的実行を維持しつつ、必要な要求だけに再現性を後付けする。",
+    "relation_to_existing_repository": "SGLang/vLLMのバッチ不変推論系統とは目的を共有するが、決定性をカーネル設計からスケジューラの検証へ移す点で補完・対照関係にある。投機的復号系統からは候補生成・検証・巻き戻しという制御構造を借りる一方、候補生成の近似や小型モデルは使わない。サービングスケジューリング系統に対しては、要求属性としての決定性を優先度・バッチ編成へ組み込む新しい制約を与える。",
     "audit_required": false
   }
 }

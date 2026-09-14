@@ -1,71 +1,14 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-9d715c96e499c8afcf786e63",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "results",
-  "attempt_id": "attempt-4baea6740aec80b2a79b010f",
-  "job_id": "job-research-64153047cf155e5c",
   "data": {
-    "overview": "動的バッチ付きFastCacheはGQA/MileBenchの両方で高負荷ほど大きな利得を示す。MileBenchではp1c1d8の10 req/s条件でTTFT最大19.3倍短縮、throughput最大10.9倍、p2c2d8ではTPOT最大2.4倍改善する。GQAではthroughput最大12.1倍を報告する。圧縮品質も比較対象より高く、メモリプールは平均使用量を20%削減する。",
-    "key_results": [
-      {
-        "metric": "TTFT",
-        "value": "最大19.3倍短縮",
-        "baseline": "KV圧縮比較方式",
-        "condition": "MileBench、p1c1d8、10 req/s",
-        "interpretation": "圧縮を個別処理せず多段動的バッチへまとめることで高負荷時の待ち行列を抑える。"
-      },
-      {
-        "metric": "throughput",
-        "value": "最大12.1倍向上",
-        "baseline": "比較方式",
-        "condition": "GQA、p1c1d8系",
-        "interpretation": "圧縮段階を含めたGPU演算をまとめ、並列度を引き上げる。"
-      },
-      {
-        "metric": "MileBench throughput",
-        "value": "最大10.9倍 / 6.9倍",
-        "baseline": "比較方式",
-        "condition": "p1c1d8 / p2c2d8",
-        "interpretation": "固定されたprefill/compress/decodeバッチより動的構成が高負荷へ適応する。"
-      },
-      {
-        "metric": "TPOT",
-        "value": "最大2.4倍改善",
-        "baseline": "比較方式",
-        "condition": "MileBench、p2c2d8",
-        "interpretation": "デコード段階にもメモリ余力に合わせたバッチ形成が効く。"
-      },
-      {
-        "metric": "SLO",
-        "value": "4〜10 req/sで全統合圧縮方式がTTFT 2秒未満、10 req/sでは1秒未満",
-        "baseline": "統合前Knormは高負荷時TTFT約42秒",
-        "condition": "LLaVA-1.5-7B",
-        "interpretation": "FastCacheのスケジューリング層を既存圧縮へ組み込むだけでも待ち時間を大きく減らせる。"
-      },
-      {
-        "metric": "時間利用率",
-        "value": "10 req/sで80.03%",
-        "baseline": "単純prefill/decode分離55.80%",
-        "condition": "同リクエスト率",
-        "interpretation": "実処理以外のキュー待ち割合を削減する。"
-      },
-      {
-        "metric": "平均GPUメモリ",
-        "value": "35.1GB→28.1GB（20%削減）",
-        "baseline": "メモリプールなし",
-        "condition": "同一モデル・負荷",
-        "interpretation": "圧縮前ゾンビKVを即時回収し、断片化を抑える。"
-      },
-      {
-        "metric": "圧縮品質",
-        "value": "BLEU 23.8、ROUGE-1 32.1、ROUGE-L 23.9",
-        "baseline": "次点BLEU Knorm 18.9、ROUGE-1 Knorm 19.7、ROUGE-L ExpectedAttention 12.3",
-        "condition": "GQA",
-        "interpretation": "軽量圧縮が性能向上だけでなく比較圧縮方式以上の出力一致度を示す。"
-      }
-    ],
-    "negative_results": "固定バッチ構成は要求率が上がると遅延が大きく変動し、40 req/sではFastCache正規化遅延0.17秒に対してp3c3d6は0.46秒、p4c4d8は0.33秒。既存圧縮を単純に挿入すると4 req/sだけでも圧縮段階が3.662秒を追加し、圧縮によるメモリ節約がSLO悪化へ転じる。",
-    "interpretation": "FastCacheの主要メッセージは『圧縮率が高いほど良い』ではなく、圧縮をオンラインサービングの一段階としてスケジュールし、解放されたメモリを即座に次の並列要求へ再投資する必要があるという点にある。軽量圧縮、段階別バッチング、寿命管理の三者が循環して性能を作る。",
-    "quality_impact": "5倍KV圧縮を行うが、GQAのBLEU/ROUGEでは比較圧縮方式より良好。ただしFullCacheに対する一般的タスク正答率や人手品質評価ではなく文字列重複指標中心であり、圧縮がすべてのマルチモーダル推論品質を維持するとは言えない。"
+    "overview": "SGLangのバッチ不変決定的モードはオフラインで非決定的モードより24〜36%スループットが低下した。LLM-42は通常カーネルを維持するため、決定的要求比率が低いほど非決定的上限へ近づく。ArXivでは決定的要求5/10/20/50%で上限との差がそれぞれ8/2/1/1%となり、10%決定的時にはShareGPTでSGLang決定的モードより33%高速、別の長さ構成では最大48%高速だった。巻き戻しは多くの条件で少なく、全要求決定的な最悪ArXivでも4096要求に3351回、再計算トークン割合10.97%だった。",
+    "key_results": [{"metric":"SGLang決定的モードのオフライン性能損失","value":"24〜36%低下","baseline":"SGLang非決定的モード","condition":"8オフライン構成","interpretation":"バッチ不変カーネルを全要求へ常時適用する固定費用が大きい。"},{"metric":"LLM-42の選択的決定性スループット","value":"最大48%高速","baseline":"SGLang決定的モード","condition":"10%決定的トラフィック、入力2048/出力256等","interpretation":"対象要求だけ検証するため、決定性が少数なら通常高速経路の性能をほぼ維持する。"},{"metric":"ArXivで非決定的上限との差","value":"5%時8%、10%時2%、20%時1%、50%時1%","baseline":"SGLang非決定的モード","condition":"オフラインArXiv","interpretation":"トラフィック構成に応じて検証費用が滑らかに増える。"},{"metric":"最悪の巻き戻し頻度","value":"3351回 / 4096要求","baseline":"なし","condition":"ArXiv、100%決定的","interpretation":"最悪構成でも平均1要求1回未満で、高速経路候補の大半は採用できる。"},{"metric":"最悪の再計算割合","value":"10.97%","baseline":"総生成トークン","condition":"ArXiv、100%決定的","interpretation":"不一致修復の追加計算は有限で、多くの他構成ではさらに小さい。"},{"metric":"高負荷TTFT","value":"P90 101.2ms vs 171.6ms","baseline":"SGLang決定的モード","condition":"18 QPS、100%決定的","interpretation":"全要求が決定的でも高負荷では固定バッチ不変方式より先頭応答の裾を抑えられる。"},{"metric":"グループ検証P99","value":"34〜35秒","baseline":"単一要求検証の最良56.18秒","condition":"12 QPS、100%決定的、総256検証トークン","interpretation":"短い窓を複数要求でまとめることで再計算増加を抑えながらGPU利用効率を上げる。"}],
+    "negative_results": "100%決定的かつ低いQPSでは、現実装の検証が全進行中要求を一時停止することとプリフィルを要求間でバッチ化しないことにより、LLM-42がSGLang決定的モードより遅くなる条件がある。ShareGPTの100%決定的オフラインでもSGLang決定的モードより6%遅い。単一要求検証で窓を512まで広げると再計算費用42.33%となり、P99も128窓の56.18秒から99.94秒へ悪化する。",
+    "interpretation": "決定性のためにすべての演算を最悪条件へ固定する必要はなく、通常は一致するというLLMデコードの性質を利用して、まれな不一致だけを検証・修復すればよいことを示す。特に決定性が評価・監査等の一部トラフィックだけに必要な運用では、固定費用型のバッチ不変方式より有利である。",
+    "quality_impact": "出力意味品質を近似する方式ではない。固定サンプリング条件での実行間再現性を強制し、不一致候補は利用者へ返さず再計算する。"
   }
 }

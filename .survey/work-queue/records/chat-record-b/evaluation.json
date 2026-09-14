@@ -1,40 +1,18 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-9d715c96e499c8afcf786e63",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "evaluation",
-  "attempt_id": "attempt-4baea6740aec80b2a79b010f",
-  "job_id": "job-research-64153047cf155e5c",
   "data": {
-    "hardware": "NVIDIA H100 80GB HBM3を1基使用。",
-    "software": "LLaVA-1.5-7Bと約6.5K行のPython FastCache試作。提案圧縮器、KVメモリプール、動的バッチング、ゼロコピー参照管理を実装。",
-    "methodology": "GQAとMileBenchの画像を単純説明プロンプトと組み合わせ、1〜10 req/sでFullCacheおよび複数KV圧縮方式を比較。静的バッチp1c1d8・p2c2d8と動的バッチを比較し、高負荷10〜40 req/sではp3c3d6・p4c4d8とも比較する。圧縮品質はFullCache応答に対するBLEU/ROUGE、性能はTTFT、TPOT、throughput、時間利用率、GPUメモリを測る。",
-    "scope": "単一GPU・単一MLLM。MileBenchは平均15.2画像・422.3語、6,440事例を持つが、評価では画像成分と単純な説明文プロンプトを用いてシステム負荷を制御する。実サービスの複雑な会話履歴や多種モデル同居は対象外。",
-    "workloads": [
-      "GQA",
-      "MileBench",
-      "LLaVA-1.5-7B",
-      "1〜40 requests/s"
-    ],
-    "baselines": [
-      "FullCache",
-      "SnapKV",
-      "Knorm",
-      "ExpectedAttention",
-      "StreamingLLM",
-      "NVIDIA KV-cache compression",
-      "FCFS",
-      "固定バッチ構成"
-    ],
-    "metrics": [
-      "TTFT",
-      "TPOT",
-      "throughput",
-      "BLEU",
-      "ROUGE-1",
-      "ROUGE-L",
-      "GPUメモリ使用量",
-      "時間利用率"
-    ],
-    "reproducibility": "GPU、モデル、データセット、静的バッチ記法、主要リクエスト率、圧縮率、実装規模を記載するが、著者公式コードURLは一次資料に見当たらず、圧縮器学習データ・訓練ハイパーパラメータや要求生成の完全な再現条件は不足する。"
+    "hardware": ["NVIDIA H100 PCIe 80GB HBM3 ×4（各114 SM）","64物理コア/128スレッドCPU","約1.65TB DRAM"],
+    "software": ["SGLang 0.5.3rc0","FlashAttention-3","公開LLM-42実装"],
+    "model": ["Llama-3.1-8B-Instruct"],
+    "datasets": ["ShareGPT 92,812要求","ArXiv test split 5,941要求","入力/出力長を変えた合成ワークロード"],
+    "baselines": ["SGLang非決定的モード","SGLang決定的モード（バッチ不変計算）"],
+    "correctness": "固定したサンプリング条件で、検証済みトークンだけを利用者へ返し、内部KV状態も検証パスへ修復することで実行間の同一出力を保証する。追加モデルではQwen-4B-Instruct-2507、Qwen3-14B、Qwen3-30B-A3B-Instruct-2507でも正しさを確認したが、性能値はLlama-3.1-8Bのみ。",
+    "settings": [{"name":"オフライン","description":"8構成、各4096要求。決定的要求割合を2/5/10/20/50/100%に変化。グループ検証の代表設定は8要求×64トークン。"},{"name":"オンライン","description":"ShareGPTで各4096要求、12/14/16/18 QPS。エンドツーエンド遅延と先頭トークン時間を測定。"},{"name":"グループ検証除去評価","description":"12 QPS、全要求決定的。要求ごとの窓を16〜512、同時検証要求数を1〜32へ掃引。"}],
+    "methodology": "決定的トラフィック比率を変えて、バッチ不変方式が全要求へ固定費用を課すのに対し、LLM-42の費用が対象要求量に追随するかを比較する。巻き戻し回数と再計算トークン数も測定して高速経路の一致率を検証する。",
+    "scope": "主性能評価は単一モデルかつH100 PCIe 4基の環境。追加モデルと1〜4GPUでは正しさのみ確認し、NVLS/multimemを使う公平な多GPU性能比較は未実施。"
   }
 }

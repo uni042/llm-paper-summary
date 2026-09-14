@@ -1,103 +1,43 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-9d715c96e499c8afcf786e63",
+  "job_id": "job-research-1fc8cd177d28f575",
   "slot": "metadata",
-  "attempt_id": "attempt-4baea6740aec80b2a79b010f",
-  "job_id": "job-research-64153047cf155e5c",
   "data": {
-    "canonical_id": "arXiv:2503.08461",
-    "arxiv_id": "2503.08461",
-    "doi": "10.48550/arXiv.2503.08461",
+    "canonical_id": "arXiv:2601.17768",
+    "arxiv_id": "2601.17768",
+    "doi": "10.48550/arXiv.2601.17768",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.MM",
-      "cross_list": [
-        "cs.DC"
-      ]
-    },
-    "title": "FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework",
-    "summary": "FastCacheは、マルチモーダル大規模言語モデル（MLLM）でKVキャッシュ圧縮を導入すると、圧縮計算そのものと先着順処理が新たな待ち行列を作り、メモリ削減が応答遅延悪化へ転じる問題を扱う。画像・テキストを別々の小型MLPで5倍に圧縮する軽量圧縮器、プリフィル・圧縮・デコードの各段階で空きGPUメモリに合わせてバッチを動的構成するスケジューラ、圧縮前の不要KVを即時回収するゼロコピーKVメモリプールを統合する。LLaVA-1.5-7BをH100 80GB上でGQAとMileBenchに評価し、静的処理系に対してTTFT最大19.3倍短縮、スループット最大12.1倍、TPOT最大2.4倍改善し、平均GPUメモリ使用量を35.1GBから28.1GBへ20%削減した。",
-    "list_summary": "軽量な画像/テキスト別KV圧縮と、プリフィル・圧縮・デコードをメモリ量に応じて動的バッチ化するメモリプールを統合し、TTFT最大19.3倍短縮・スループット最大12.1倍を達成する。",
-    "authors": [
-      "Jianian Zhu",
-      "Hang Wu",
-      "Haojie Wang",
-      "Yinghui Li",
-      "Biao Hou",
-      "Ruixuan Li",
-      "Jidong Zhai"
-    ],
-    "authors_affiliations": "Huazhong University of Science and Technology、Xidian University、Tsinghua University",
-    "published": "2025-03-11",
-    "publication": "arXiv:2503.08461v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2025-03-11）。14ページ。一次資料から査読済み採録先は確認できない。",
-    "lineage": "kv-cache-offload-recomputation",
-    "topics": [
-      "マルチモーダルLLMサービング",
-      "KVキャッシュ圧縮",
-      "動的バッチング",
-      "GPUメモリプール",
-      "キューイング遅延",
-      "メモリ断片化"
-    ],
-    "importance": "中〜高。KV圧縮率だけでなく、圧縮段階を実オンラインサービングの待ち行列・バッチング・メモリ寿命管理と共同設計しないとSLOを悪化させることを示し、圧縮をシステムパイプラインの第一級段階として扱う。",
-    "hardware_evaluation": "実機。単一NVIDIA H100 80GB HBM3。",
-    "hardware_details": "LLaVA-1.5-7BをGQAおよびMileBenchで評価。通常評価は1〜10 req/s、高負荷評価は10〜40 req/s。静的構成p1c1d8、p2c2d8、p3c3d6、p4c4d8などと動的バッチングを比較する。",
-    "quality_effect": "提案圧縮器は5倍圧縮。GQAではBLEU 23.8、ROUGE-1 32.1、ROUGE-L 23.9で、比較したSnapKV、ExpectedAttention、StreamingLLM、Knormを上回る。ただし評価はFullCache正解との生成文字列重なりに依存し、一般的なVQA正答率や長文推論品質を網羅していない。",
-    "storage_targets": [
-      "GPU HBM上の圧縮前KVキャッシュ",
-      "圧縮後KVキャッシュ",
-      "KVキャッシュメモリプール"
-    ],
-    "bottlenecks": [
-      "注意量に依存する圧縮計算",
-      "プリフィル・圧縮・デコード間の待ち行列",
-      "FCFSによる先頭ブロッキング",
-      "圧縮前KVの残留によるゾンビキャッシュ",
-      "GPUメモリ断片化"
-    ],
-    "evidence_locations": [
-      "§2.2 System Bottlenecks",
-      "§3 System Design",
-      "§4 Implementation and Evaluation",
-      "§5.1 Main Results",
-      "§5.3 High Load and Memory Utilization",
-      "§5.4 Ablation"
-    ],
-    "source": "https://arxiv.org/abs/2503.08461",
-    "sources": [
-      "https://arxiv.org/abs/2503.08461",
-      "https://arxiv.org/html/2503.08461v1",
-      "https://arxiv.org/pdf/2503.08461"
-    ],
-    "code": null,
-    "implementation": "約6.5K行のPythonで単一生産者・単一消費者型の同時サービングフレームワークを実装。サービス中間層、実行エンジン、圧縮パイプライン、資源管理器、KVメモリプール、優先度付きオンラインスケジューラ、ゼロコピー参照管理を含む。一次資料から著者公式コード公開URLは確認できない。",
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI", "cs.DC"]},
+    "title": "LLM-42: Enabling Determinism in LLM Inference with Verified Speculation",
+    "summary": "LLM-42は、動的バッチ処理によって同じトークン位置でもGPUカーネルの浮動小数点加算順序が変わり、同一プロンプトの出力が実行ごとに分岐する問題を、全カーネルをバッチ不変へ書き換えずに解くサービング方式である。通常の高速デコードでは既存の最適化済みカーネルをそのまま使い、一定数の候補トークンがたまった時だけ固定形状で再実行する検証を挟む。検証結果と候補が一致する範囲だけを確定し、不一致が出た位置以降を巻き戻してKVキャッシュも検証側の値へ置き換える。さらに複数要求の短い検証窓をまとめるグループ検証により、短窓の低い再計算量と大きなバッチの高いGPU効率を両立する。SGLang 0.5.3rc0上で4基のH100 PCIeを用い、Llama-3.1-8B-Instructを評価した結果、バッチ不変SGLangがオフラインで24〜36%のスループット低下を受けるのに対し、決定的要求が少ないと非決定的SGLangの性能へ近づき、10%決定的トラフィックではShareGPTでSGLang決定的モードより33%高速、別条件では最大48%高速だった。",
+    "list_summary": "動的バッチの高速カーネルで先に生成し、固定形状の再実行でトークンとKVを検証・巻き戻すことで、要求単位の決定性をカーネル全面書換えなしに保証する。",
+    "authors": ["Raja Gond","Aditya K Kamath","Ramachandran Ramjee","Ashish Panwar"],
+    "authors_affiliations": "Microsoft Research; University of Washington",
+    "published": "2026-01-25",
+    "publication": "SOSP 2026 / arXiv:2601.17768v2",
+    "publication_type": "査読付き国際会議論文",
+    "publication_status": "SOSP 2026採録。arXiv初稿は2026-01-25、v2は2026-01-30。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["決定的LLM推論","動的バッチ処理","検証付き投機実行","デコード・検証・巻き戻し","SGLang","再現性"],
+    "importance": "高。決定性をGPUカーネル固有の性質からスケジューラへ移し、決定性が必要な要求だけに検証費用を課す設計を示すため、再現可能推論と高スループットの両立という新しいサービング設計点を提供する。",
+    "hardware_evaluation": "4×NVIDIA H100 PCIe 80GB HBM3、各GPU 114 SM。ホストは64物理コア/128ハードウェアスレッド、約1.65TB DRAM。",
+    "hardware_details": "主性能評価はLlama-3.1-8B-Instruct、SGLang 0.5.3rc0、FlashAttention-3。検証時はKV分割数を1に固定し、通常デコードは既定設定を使う。",
+    "quality_effect": "固定したサンプリング条件に対してビットレベルの再現性を保証することが目的で、モデル近似による意味品質低下を導入する方式ではない。非貪欲サンプリングではSGLangのseed付き決定的サンプラを用いる。",
+    "storage_targets": ["GPU HBM上のKVキャッシュ","検証窓の候補トークンと状態","巻き戻し時に修復されるKVエントリ"],
+    "bottlenecks": ["バッチ不変カーネルによる固定性能損失","検証再実行の計算費用","不一致時の巻き戻しと再計算","オンライン負荷変動による検証効率低下"],
+    "evidence_locations": ["§3 Observations","§4 LLM-42","§4.2 Decode-Verify-Rollback","§4.3 Grouped Verification","§5 Evaluation","Table 4-5","Figure 10-12","§5 Discussion"],
+    "source": "https://arxiv.org/abs/2601.17768",
+    "sources": ["https://arxiv.org/abs/2601.17768","https://arxiv.org/pdf/2601.17768","https://github.com/microsoft/llm-42"],
+    "code": "https://github.com/microsoft/llm-42",
+    "implementation": "SGLang v0.5.3系を基盤に実装され、Microsoftの公開リポジトリにデコード・検証・巻き戻し本体、バッチ不変比較実装、ベンチマーク、SOSP 2026成果物再現スクリプトが公開されている。",
     "last_checked": "2026-09-14",
-    "references": [
-      {
-        "canonical_id": "arXiv:2404.14469",
-        "title": "SnapKV"
-      },
-      {
-        "canonical_id": "arXiv:2406.11430",
-        "title": "A Simple and Effective L2 Norm-Based Strategy for KV Cache Compression"
-      },
-      {
-        "canonical_id": "arXiv:2309.06180",
-        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"
-      },
-      {
-        "canonical_id": "arXiv:2401.09670",
-        "title": "DistServe"
-      },
-      {
-        "canonical_id": "arXiv:2303.06865",
-        "title": "LLaVA"
-      }
-    ],
+    "references": [{"canonical_id":"arXiv:2302.01318","title":"Accelerating Large Language Model Decoding with Speculative Sampling"},{"canonical_id":"arXiv:2505.09056","title":"A Comprehensive Analysis of Large Language Model Outputs: Similarity, Diversity, and Bias"},{"canonical_id":"arXiv:2001.08361","title":"Scaling Laws for Neural Language Models"},{"canonical_id":"arXiv:2506.09501","title":"Give Me FP32 or Give Me Death? Challenges and Solutions for Reproducible Reasoning"},{"canonical_id":"arXiv:2407.03582","title":"Integrating Randomness in Large Language Models"}],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": 55
+    "references_source": "arXiv:2601.17768v2一次資料の参考文献節",
+    "references_total": 48,
+    "last_audited": null,
+    "audit_version": 0
   }
 }
