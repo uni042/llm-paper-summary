@@ -100,7 +100,7 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "scheduled_handoff_active": bool(
             seconds_to_next is not None and int(seconds_to_next) <= handoff_guard
         ),
-        "rule": "A single transport failure, pending claim result, pending backlog, or bank exhaustion is never by itself a whole-run stop condition. The next paired scheduled task entering its handoff guard is a hard stop for starting new independent work.",
+        "rule": "A single transport failure, pending claim result, pending backlog, or bank exhaustion is never by itself a whole-run stop condition. The next scheduled invocation of the current worker entering its handoff guard is a hard stop for starting new independent work.",
     }
 
 
