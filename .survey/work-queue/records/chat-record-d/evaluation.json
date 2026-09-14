@@ -4,10 +4,21 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d02e2084d863ffbc6514147e",
   "job_id": "job-research-2ab985bbc123336f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d02e2084d863ffbc6514147e",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["Ascend 910B2 NPU ×5（1 prefiller + 4 decoder、各約64GB HBM）"],
+    "software": ["vLLM v0.22.1", "vLLM-Ascend v0.22.1rc1", "Mooncake v0.3.9"],
+    "model": ["Qwen3-8B BF16"],
+    "datasets": ["ShareGPT multi-turn conversations"],
+    "baselines": ["実測vLLM LRU hit ratio", "prior mean-field estimator using target interarrival distribution", "posterior mean-field estimator using measured mean interarrival time"],
+    "correctness": "生成品質ではなくhit-ratio推定精度を検証する。ShareGPTの既存prompt/response系列を保つため、decoderには記録済みresponseと同じtoken数だけ生成させるが生成textとresponse KVは破棄し、次turnには元の記録promptを投入する。これにより会話内容のずれを避けつつdecode時間とKV増分を再現する。",
+    "settings": [
+      {"name":"HBM/KV設定","description":"prefillerの40GB HBMをKV cacheへ割り当てる。Qwen3-8Bは36層・8 KV heads・head dimension 128、BF16で144KB/token。block size 128 tokensなので約18MB/block、容量N=2,275 blocks。"},
+      {"name":"workload","description":"2 turn以上のShareGPT 6,000会話を抽出。最初の1,000会話・4,690 turnsでcacheをwarm-upし、残り5,000会話を測定。測定集合は22,347 complete user-assistant turns、平均4.4694 turns/conversation、最大37 turns。"},
+      {"name":"Experiment 1","description":"会話到着率λ0=1.5/sを固定し、目標平均turn間隔µFを90〜240秒で変化。次turn到着はsampled exponential intervalと前turnのdecode完了時間の最大値になる。prior estimatorは目標µF、posterior estimatorは実測平均µ̂Fを使う。"},
+      {"name":"Experiment 2","description":"µF=135秒を固定し、会話到着率λ0を0.5〜2.0/sで変化。実測hit ratioとprior/posterior estimatorの絶対誤差・相対誤差を比較する。"}
+    ],
+    "methodology": "理論モデルそのものをシミュレーションするのではなく、実vLLMのblock-level LRU、参照countによる退去保護、prefix-preserving/suffix-first evictionをそのまま使う。理論との実装差を残した上で、経験統計から推定したAR、A_H^hash、E[B]、turn間隔分布を推定器へ入力し実測hit ratioとの誤差を測る。",
+    "scope": "単一モデルQwen3-8B、Ascend NPU、ShareGPT、P/D分離、LRUという限定された環境での検証。GPU環境、別モデル、実運用agent trace、非定常到着、他のcache policyは評価対象外。"
+  },
+  "reservation": {"claim_id":"claim-d02e2084d863ffbc6514147e","worker_id":"scheduled-chat-llm-discovery-20260915T0000JST","worker_kind":"scheduled_chat"}
 }
