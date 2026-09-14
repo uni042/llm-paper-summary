@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-984a765e25dffea7ef715f48","job_id":"job-research-fd5c72ea06dbb8a6","data":{"canonical_id":"arXiv:2606.09061","arxiv_id":"2606.09061","doi":"10.48550/arXiv.2606.09061","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.PF"]},"title":"Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving","summary":"分割プリフィルを使うLLM配信では、先着順だけで処理すると長い入力が短い入力を何度も待たせ、固定トークン予算では同じトークン数でも復号並行度や文脈長、GPU状態によって実行時間が変わるため、平均遅延と裾遅延の両方が不安定になる。本論文は、待ち時間と残りプリフィル量から優先度を更新するエージング型順序制御、候補チャンクの実行時間を軽量予測器で見積もり目標時間へ近づける遅延予測型要求スケジューリング（Latency-Prediction-Based Request Scheduling; LPRS）、同時に進めるプリフィル数と最小有効チャンクを制限する能動プリフィル制御（Active Prefill Control; APC）を組み合わせる。これにより実行カーネルやKVキャッシュ機構を変えず、誰を先に進めるか、1回にどれだけ進めるか、何件を同時に進めるかを別々に制御する。","list_summary":"待ち時間と残りプリフィル量で処理順を更新し、遅延予測でチャンク量を目標時間へ合わせ、同時プリフィル数も制限することで、分割プリフィル配信の公平性と裾遅延を改善する。","authors":["Haoxin Liu","Jiayi Wang","Yueshen Xu","Rui Li"],"authors_affiliations":"","published":"2026-06-08","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"chunked-prefill scheduling / fairness / latency control","topics":["LLM配信","分割プリフィル","スケジューリング","公平性","遅延予測","裾遅延"],"importance":"分割プリフィルの順序、公平性、時間予算、同時実行数を独立した制御機構として整理し、NVIDIA GPUとAscend NPUの実機で移植性まで示す。","hardware_evaluation":"NVIDIA RTX 4090単GPU、NVIDIA RTX 5090×2、NVIDIA RTX PRO 5000 72GB単GPU、Huawei Ascend 910B単NPUで実機評価。","quality_effect":"近似計算やモデル圧縮は導入せず、要求の実行順序とチャンク割当を変えるため、生成品質を意図的に変更しない。","storage_targets":[],"bottlenecks":["プリフィル待ち","先頭要求による後続阻害","要求飢餓","静的トークン予算による遅延揺らぎ","プリフィル断片化"],"source":"https://arxiv.org/abs/2606.09061","sources":["https://arxiv.org/abs/2606.09061","https://www.researchgate.net/publication/406464253_Fairness-Aware_and_Latency-Controllable_Scheduling_for_Chunked-Prefill_LLM_Serving"],"code":"https://github.com/Charmstok/Chunked_Prefill_Serving","implementation":"著者はNVIDIA向け実装をGitHubで公開し、Ascend向け移植版も https://github.com/lhx-666-cool/vllm-ascend/tree/aging で公開している。エージング型制御はSarathi-Serve上、Ascend移植はvLLM-Ascend上で実装される。","last_checked":"2026-09-14","references":[],"references_checked_at":"2026-09-14","references_source":"一次資料の参考文献節","references_total":24},"reservation":{"claim_id":"claim-984a765e25dffea7ef715f48","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-42021fcfbd6e08335fc4b361",
+  "job_id": "job-research-63f40e784a6127a2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-42021fcfbd6e08335fc4b361",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
+}

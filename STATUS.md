@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 13:05 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 13:06 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -41,14 +41,14 @@
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 13:00 JST** |
+| :30 通常worker 直近claim | **09-14 13:06 JST** |
 | :00 補助worker 直近claim | **09-14 13:05 JST** |
 | 直近24h Research完了（:30 通常worker） | **22** |
 | 直近24h Research完了（:00 補助worker） | **25** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T12:30:00+09:00** |
 | 最新通常runのResearch完了 | **3** |
-| 最古の有効claimの経過時間 | **4 min** |
+| 最古の有効claimの経過時間 | **5 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -88,7 +88,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P83 `arXiv:2607.17979` — Harness Engineering for LLM-Driven GPU Kernel Generation
+- P83 `arXiv:2606.09061` — Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving
 
 ## 参考情報
 

@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-984a765e25dffea7ef715f48","job_id":"job-research-fd5c72ea06dbb8a6","data":{"limitations":["主要なNVIDIA評価はQwen3-8BとShareGPT中心で、モデル構造、長文比率、到着分布、複数利用者SLOが大きく異なる環境への一般化は十分に検証されていない。","エージングの係数、LPRSの目標時間と超過罰則、APCの最小有効チャンクや同時数上限は運用側で設定する必要があり、負荷変動に応じた統一的な自動調整器は示されていない。","マルチGPU評価は2×RTX 5090までで、複数ノードや大規模テンソル並列・パイプライン並列、ネットワーク通信を含むクラスタ評価はない。","LPRSは反復単位で非プリエンプティブなため、反復途中に到着した要求の量子化待ちは残る。予測器が正確でもこの構造的待ちを除去できない。","Ascend実験は移植性検証でFCFS等との直接比較を行っておらず、同プラットフォームでの改善量は分離できない。"],"differences":[{"name":"Sarathi-Serve等の固定分割との差","description":"既存の分割プリフィルはデコード干渉を抑えるため入力を分割するが、要求順序や1ラウンド仕事量を先着順・固定予算で決める。本方式はその実行構造を維持したまま、要求の順序、時間目標、同時プリフィル数を動的に制御する。"},{"name":"最短仕事優先との差","description":"残りプリフィル量だけで短い要求を優先すると長い要求が飢餓化し得る。エージングは待ち時間項を増やし続けることで、長い要求にも最終的な昇格機会を与え、公平性と平均応答性の比率を係数で調整する。"},{"name":"固定トークン予算との差","description":"トークン数を実行時間の代理値にせず、現在のデコード並行度、文脈長、メモリ状態などから候補バッチ時間を予測する。高負荷で同じトークン数の実時間が揺れる条件を直接制御できる。"},{"name":"LPRS単独との差","description":"時間目標だけでは多数の小チャンクが候補になり、断片化とアクティブ集合肥大化が起こる。APCは最小有効進捗と同時数上限という構造制約を追加し、時間制御とは別の原因を抑える。"}],"implementation_status":"NVIDIA向けコードは https://github.com/Charmstok/Chunked_Prefill_Serving で公開され、Ascend向けエージング移植は https://github.com/lhx-666-cool/vllm-ascend/tree/aging で公開されている。論文はarXivプレプリントであり、確認時点で査読済み会議・誌への掲載情報は一次資料から確認できない。","research_positioning":"LLM配信の分割プリフィルとスケジューリング研究に位置し、Sarathi-Serve系のプリフィル・デコード混在制御へ公平性と裾遅延の制御面を追加する。特に固定チャンクや固定トークン予算を単なる資源上限として扱うのではなく、実時間予測とアクティブ集合制御へ分解した点が、SLO指向のサービング研究との接点になる。階層KVやオフロード研究が『どこへ状態を置くか』を主に扱うのに対し、本方式は同じGPU/NPU内で『どの要求をいつ、どれだけ進めるか』を扱うため補完的である。高負荷時のKV容量制約や分離配信のネットワーク遅延を加えた統合制御へ拡張する余地がある。","audit_required":false,"audit_reason":null},"reservation":{"claim_id":"claim-984a765e25dffea7ef715f48","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-42021fcfbd6e08335fc4b361",
+  "job_id": "job-research-63f40e784a6127a2",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-42021fcfbd6e08335fc4b361",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
