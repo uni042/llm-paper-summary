@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 10:04 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 10:27 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,17 +15,17 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **114** |
+| 未処理の論文候補（Research ready） | **112** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **275** |
+| 全文精読完了（累計） | **277** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
 
 ### 要注意
 
-- 現在、集計stateから重大な警告は検出されていません。
+- Research消化が:00 補助workerのDiscovery候補補充を上回っています。candidate枯渇に注意。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -35,20 +35,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **114** |
+| 未処理候補（Research ready） | **112** |
 | 処理中（Active claims） | **3** |
-| 今すぐ着手可能（Claimable） | **111** |
+| 今すぐ着手可能（Claimable） | **109** |
 | :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
-| :30 通常worker 直近claim | **09-14 07:59 JST** |
-| :00 補助worker 直近claim | **09-14 10:03 JST** |
+| :30 通常worker 直近claim | **09-14 06:39 JST** |
+| :00 補助worker 直近claim | **09-14 10:24 JST** |
 | 直近24h Research完了（:30 通常worker） | **5** |
-| 直近24h Research完了（:00 補助worker） | **6** |
+| 直近24h Research完了（:00 補助worker） | **8** |
 | 直近24h Research完了（帰属不明） | **5** |
 | 最新通常run | **2026-09-14T06:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **47 min** |
+| 最古の有効claimの経過時間 | **71 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -58,7 +58,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=114 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=112 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 - 直近24hのResearch完了のうち **5件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -66,30 +66,30 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **16** |
+| Research完了 | **18** |
 | Repo収録 | **61** |
 | Audit完了 | **0** |
-| 探索評価候補 | **113** |
-| Research候補採用 | **20** |
-| 重複除外 | **65** |
-| 重複率 | **57.5%** |
-| :00 補助worker Discovery run（毎時枠） | **2** |
-| :00 補助worker Discovery round（stats観測） | **23** |
+| 探索評価候補 | **65** |
+| Research候補採用 | **8** |
+| 重複除外 | **34** |
+| 重複率 | **52.3%** |
+| :00 補助worker Discovery run（毎時枠） | **1** |
+| :00 補助worker Discovery round（stats観測） | **15** |
 | 通常worker run（ledger観測） | **12** |
 | Fallback archive（全helper） | **17** |
 
 ### 24時間の流れ
 
-**探索評価 113 → 重複除外後 48 → Research候補採用 20 → Research完了 16 → Repo収録 61**
+**探索評価 65 → 重複除外後 31 → Research候補採用 8 → Research完了 18 → Repo収録 61**
 
 ## 直近の通常worker
 
-Run: **2026-09-14T08:30:00+09:00**
+Run: **2026-09-14T05:30:00+09:00**
 
 | 指標 | 件数 |
 |---|---:|
 | Research完了 | **0** |
-| Repo収録 | **4** |
+| Repo収録 | **7** |
 | Audit完了 | **0** |
 | 通常worker Discovery round | **0** |
 | 通常worker Discovery採用 | **0** |
@@ -127,26 +127,18 @@ Run: **2026-09-13T11:00:00+09:00**
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
-| SSD expert offload・peer GPU cache tier・階層メモリ | 12 | 10 | 0 | 83.3% | 0.0% |
-| 新着LLM推論システム・通信／疎注意／多ターンKV | 7 | 4 | 3 | 57.1% | 42.9% |
 | CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
-| GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
-| 端末内LLM・OSメモリ圧力・Flash/NPU実行 | 6 | 2 | 3 | 33.3% | 50.0% |
 | 2609新着・KVキャッシュ・階層メモリ・ストレージ | 5 | 0 | 0 | 0.0% | 0.0% |
 | GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
 | MoE expert locality・expert prefetch・SSD/edge cacheability | 5 | 0 | 1 | 0.0% | 20.0% |
 | MoE専門家先読み・エッジ投機実行 | 5 | 4 | 1 | 80.0% | 20.0% |
 | serving software aging・runtime reliability・lossless compression・load-aware speculative serving | 5 | 4 | 0 | 80.0% | 0.0% |
 | 分離サービング・電力制御・KV転送・multi-turn routing | 5 | 0 | 0 | 0.0% | 0.0% |
-| 分離サービング通信・KV転送・network flow scheduling | 5 | 5 | 0 | 100.0% | 0.0% |
 | 動的投機的復号serving・agent隣接 | 5 | 3 | 1 | 60.0% | 20.0% |
 | CPU/GPU・NPU/PIM異種実行と階層オフロード | 4 | 4 | 0 | 100.0% | 0.0% |
 | FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management | 4 | 1 | 1 | 25.0% | 25.0% |
-| KVページ圧縮・低ランク表現・GPUカーネル | 4 | 1 | 2 | 25.0% | 50.0% |
 | agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
 | recent検索から重要基礎系譜への欠落確認 | 4 | 3 | 0 | 75.0% | 0.0% |
-| 分離サービングSLO・batch fairness・resource allocation | 4 | 2 | 1 | 50.0% | 25.0% |
-| 投機的復号runtime・draft resource・CPU制約 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 重要系譜の前方・後方引用追跡 | 4 | 2 | 2 | 50.0% | 50.0% |
 | 2026年9月新着・KV圧縮と動的管理 | 3 | 0 | 0 | 0.0% | 0.0% |
 | 収録済み重要論文のforward citation・Llumnix系譜 | 1 | 0 | 0 | 0.0% | 0.0% |
@@ -161,14 +153,14 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2603.10342` — AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU
+- `arXiv:2605.20868` — Runtime-Certified Bounded-Error Quantized Attention
 - `arXiv:2502.09921` — INF^2: High-Throughput Generative Inference of Large Language Models using Near-Storage Processing
 - `arXiv:2512.14946` — EVICPRESS: Joint KV-Cache Compression and Eviction for Efficient LLM Serving
 - `arXiv:2604.03143` — TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing
 - `arXiv:2405.04437` — vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
 - `arXiv:2605.05467` — Nitsum: Serving Tiered LLM Requests with Adaptive Tensor Parallelism
 - `arXiv:2502.14617` — Serving Models, Fast and Slow: Optimizing Heterogeneous LLM Inferencing Workloads at Scale
-- `arXiv:2609.00993` — AInfer-PD: Communication-Safe In-Place Prefill-Decode Multiplexing for Distributed MoE Rollouts
-- `arXiv:2607.07388` — TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models
 
 ### 7日比較
 
