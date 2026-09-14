@@ -4,10 +4,21 @@
   "slot": "evaluation",
   "attempt_id": "attempt-0770d65152b7e1f7e2e050f8",
   "job_id": "job-research-7e6e9c9b89ab9c18",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0770d65152b7e1f7e2e050f8",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["Intel Core Ultra 9 285K、24コア、128GB DDR5（特性調査）", "Intel Core Ultra 7 258V、4コア、16GB RAM（制御評価）"],
+    "software": ["Ubuntu 24.04", "Linux 6.15.11", "Linux 6.19.0-rc5 + bpf-next/memcg struct_ops RFC patches", "Podman", "eBPF", "sched_ext", "BPF CO-RE", "libbpf"],
+    "model": ["Claude Haiku 4.5", "GLM-4.7-Flash"],
+    "datasets": ["SWE-rebench 144課題", "実エージェント由来3本の資源トレース"],
+    "baselines": ["資源制限なしの標準実行", "AgentCgroup無効のメモリ競合"],
+    "correctness": "資源制御はLLM重みやツール計算結果を近似せず、実行順序と資源割当だけを変更する。評価では課題実行時の資源波形に加え、プロセス生存率、メモリ割当遅延、制御費用を測る。",
+    "settings": [
+      {"name":"特性調査","description":"Claude Codeを用い、GLM-4.7-Flashで111課題、Claude Haiku 4.5でそのうち33課題を実行する。CPU利用率とメモリを1秒間隔で計測し、ツール種別と時刻、初期化時間、ツール実行時間を収集する。"},
+      {"name":"厳しいメモリ競合","description":"実トレース3本を50倍速で同時再生し、高優先度1セッションと低優先度2セッションを競合させる。合計需要約1233MBに対し1100MBの予算を与え、生存率と高優先度への追加費用を測る。"},
+      {"name":"中程度メモリ競合","description":"同じトレース構成で1300MBの予算を使い、高優先度処理のP95メモリ割当遅延を比較する。低優先度cgroupはmemory.high 400MBで抑制される。"},
+      {"name":"制御費用","description":"eBPF監視・抑制を有効化した場合のP50遅延、総完了時間、設定した2000ms遅延に対するBPFスロットリング精度を測る。"}
+    ],
+    "methodology": "まず144課題の実行を用いて、エージェントの実行時間内訳、CPU・メモリ波形、ピーク対平均比、タスク間・同一タスク再実行間の変動を定量化する。その観測から固定コンテナ制限、利用者空間の反応型制御、履歴予測の三つの不一致を導出する。続く予備評価では実エージェントのメモリトレースを高速再生し、カーネル内制御による生存率と優先度別遅延を比較する。",
+    "scope": "特性調査はClaude CodeとSWE-rebench、制御評価は単一ホスト・3トレース再生に限定される。大規模クラスタ、GPU資源、ネットワーク、ストレージ制御への一般化は未検証である。"
+  },
+  "reservation": {"claim_id":"claim-0770d65152b7e1f7e2e050f8","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
