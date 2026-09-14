@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f7399b3e773e1558",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.23962",
+      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.23962",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2608.23962-tensor-parallelism-vs-kv-compression-cost.md",
+      "priority": 76,
+      "reason": "KV容量不足に対する2つの代表的な対策、テンソル並列（tensor parallelism）とKV圧縮を、同一のコスト正規化軸で直接比較する。A100/A40/H100で較正したプロファイル型シミュレータを用い、Llama-2 7B/70B、TP degree 1〜8、KV 16/8/4-bit・保持率0.25までを比較し、比較可能な全構成で圧縮が1.20〜2.00倍安価、80GB級では約36B parametersを境にweight容量が支配してTPが必須になると報告する。一方、圧縮はtoken latencyを8〜93%悪化させうるが容量/ドルを16.5倍へ伸ばす。階層メモリやKV圧縮を『GPU追加と比べていつ使うべきか』というシステム設計境界を定量化しており比較資料として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-kv-tp-cost-4",
+    "axis": "KV圧縮対テンソル並列のコスト・容量・遅延境界",
+    "query_summary": "KVメモリ不足をGPU追加とcache圧縮のどちらで解消すべきかを定量比較する研究を探索した。arXiv:2608.23962は一次arXiv情報でA100/A40/H100上のcost-normalized比較を確認し、最新repo検索では同IDを確認できなかったため候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は新着・recent revisionへ軸を切り替え、2609中旬のserving / memory / MoE systems論文を探索する。",
+    "empty_round_reason": null
+  }
+}
