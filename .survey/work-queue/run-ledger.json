@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T04:05:00.183098+00:00",
+  "updated_at": "2026-09-14T04:06:18.152590+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T04:05:00.183098+00:00",
+      "last_recorded_at": "2026-09-14T04:06:18.152590+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 36,
+        "research_completed": 37,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19186,6 +19186,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34804802964:1",
+          "recorded_at": "2026-09-14T04:06:18.152590+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34804802964",
+            "run_attempt": "1",
+            "source_sha": "5e2d565471d15e531fcc9fd17f407555f3145b5a"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19474,6 +19488,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.21072",
           "title": "Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-fd5c72ea06dbb8a6",
+          "type": "research",
+          "canonical_id": "arXiv:2606.09061",
+          "title": "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
           "from": "ready",
           "to": "completed"
         }
