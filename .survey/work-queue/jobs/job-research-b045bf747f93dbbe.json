@@ -6,20 +6,15 @@
   "canonical_id": "arXiv:2603.18897",
   "title": "Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution",
   "source_url": "https://arxiv.org/abs/2603.18897",
-  "paper_path": null,
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md",
   "selection_reason": "LLM-tool間の直列待ちを、過去のtool sequenceとdata dependencyから予測したspeculative tool executionで隠蔽する。token generation内部ではなくagent workflow全体をserving対象として扱い、平均task completion time 48.5%削減・tool throughput 1.8倍を報告するため、agentic serving系統の重要候補。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T15:10:13+00:00",
   "artifact_transport": "structured_record_v10",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | Japanese-first prose ratio is too low: 57.0% < 70% (Japanese=4790, Latin=3609)",
-  "validation_errors": [
-    "metadata.references_total must be a non-negative integer",
-    "Japanese-first prose ratio is too low: 57.0% < 70% (Japanese=4790, Latin=3609)"
-  ],
-  "last_validation_failed_at": "2026-09-14T02:27:52+00:00"
+  "completed_at": "2026-09-14T02:45:12+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-8c7e08c9a775139662598898.json"
 }
