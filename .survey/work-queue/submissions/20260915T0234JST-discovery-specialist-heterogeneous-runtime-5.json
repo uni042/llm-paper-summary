@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-692a81c6f780c22d",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.03335",
+      "title": "Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs",
+      "source_url": "https://arxiv.org/abs/2609.03335",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.03335-latency-aware-orchestration-multi-agent-heterogeneous-gpus.md",
+      "priority": 86,
+      "reason": "複数エージェントLLMワークフローを異種GPU群で実行する際、将来の依存関係、モデル常駐状態、ロード時間、メモリ制約、時変負荷を予測して物理実行グラフを構築し、fusion・model lifecycle・配置・実行順序を共同最適化する。3種類のワークフローで既存scheduler比end-to-end makespan最大36.8%、burst時p95完了遅延最大25.9%削減、完了session当たり最大24.63 GPU-s節約を報告し、agent servingとheterogeneous GPU schedulingの接点として収録価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.02109",
+      "title": "MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2609.02109",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.02109-meanfield-surrogate-runtime-scheduling-shared-gpus.md",
+      "priority": 82,
+      "reason": "共有GPU上で異種AIモデルを同時実行する際の組合せ爆発的なprofiling負担を、各モデルの局所構成と集約GPU状態から性能を予測するmean-field surrogateで抑える。LLMとvisionの2〜6モデル並行評価でR^2約0.96、5モデル・78,732構成のschedulerで全探索との差0.10%以内、SLA違反0、online GA決定中央値26msを報告し、動的multi-model inference schedulingの実装指向候補として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T02:00:00+09:00",
+    "round": "specialist-heterogeneous-runtime-5",
+    "axis": "異種GPU・multi-agent workflow・shared-GPU runtime scheduling",
+    "query_summary": "直近のagent sandbox/KV系探索から軸を変え、異種GPU群におけるmulti-agent workflow orchestrationと、複数異種モデルの共有GPU runtime schedulingを新着一次資料から軽量評価した。投入直前にcanonical arXiv IDをGitHub default branchで再検索し、既存収録・jobの一致を確認できなかった2件のみ残した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はforward citationまたは隣接するGPU memory/runtime resource contentionへ移し、同じheterogeneous scheduling検索式は直後に反復しない",
+    "empty_round_reason": null
+  }
+}
