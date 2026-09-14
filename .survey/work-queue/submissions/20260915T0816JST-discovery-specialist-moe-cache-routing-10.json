@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.03495",
+      "title": "DALI: Day-Ahead Dynamic Module Assignment and Expert Load Routing for Efficient MoE Serving",
+      "source_url": "https://arxiv.org/abs/2602.03495",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2602.03495-dali-dynamic-module-assignment-expert-load-routing.md",
+      "priority": 91,
+      "reason": "MoE servingでexpert activation imbalanceと限られたexpert cache容量を同時に扱い、頻繁に共活性化するexpert pairを優先して複数compute engineへco-allocationするcache-aware placementと、expert overlapが大きいrequest同士をbatch化するrequest routingを組み合わせる。token/layerを跨ぐ時間的coactivationを利用してcache hit率とcontentionを改善し、実MoEモデル群で既存手法比throughput最大2.69倍、平均latencyを揃えた条件でも1.97倍を報告する。expert cache配置とrouting localityの共同最適化として重点テーマに直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.24434",
+      "title": "WiSP: Workload-Aware Scheduling for Low-Latency MoE Inference",
+      "source_url": "https://arxiv.org/abs/2607.24434",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2607.24434-wisp-workload-aware-scheduling-moe-offloading.md",
+      "priority": 93,
+      "reason": "expert offloading時のPCIe転送をlayer単位・expert単位に局所最適化するとsmall transferとcongestionで帯域利用率が落ちる問題に対し、sliding layer window内でexpert placement/loadingを大域的に調整するWindowed Scheduling and Prefetchingを提案する。execution timeを共通尺度にtransfer size・cache capacity・heterogeneous expert loadを同時考慮し、popularityに応じたCPU/GPU非対称配置で大きなtensor transferを形成、lookaheadで転送と計算を重畳する。Qwen1.5-MoEを2×RTX4090/4090Dで評価し、I/O transfer timeを56.62%削減、平均生成性能を26.3%改善しており、expert prefetch/I-O schedulingの強い比較対象となる。"
+    },
+    {
+      "canonical_id": "arXiv:2606.21868",
+      "title": "ElasticMoE: Elastic Fine-grained Expert Migration for Disaggregated MoE Serving",
+      "source_url": "https://arxiv.org/abs/2606.21868",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2606.21868-elasticmoe-fine-grained-expert-migration.md",
+      "priority": 88,
+      "reason": "disaggregated MoE servingでrouting由来のexpert負荷偏りがtail bottleneckを生む問題に対し、coarse autoscalingの間を埋めるfine-grained expert migrationを体系化する。balanced expert placementをquantization問題として定式化してdynamic programmingで解き、未知のrouting分布に対してFeedback-Quantized Gradient Descentでroutingとplacementを共同最適化し、migration dynamicsを考慮するpredictive feedback controlでGPU replenishmentも調整する。latency SLOを維持しつつbaseline比throughput最大30%向上を報告し、expert placement・migration・負荷分散の動的制御として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-moe-cache-routing-10",
+    "axis": "MoE expert cache placement・PCIe window scheduling・fine-grained expert migration",
+    "query_summary": "MoE expert cache/offload系統でplacement、prefetch、migrationへ探索を展開し、DALI（2602.03495）、WiSP（2607.24434）、ElasticMoE（2606.21868）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で3 IDとも既収録を確認できず、run中取得済みidentity-delta一覧でも対応IDは見つからなかった。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はSSD/CXL/NVMを用いるexpert/KV階層化か、disaggregated prefill/decodeのnetwork・I/O schedulingへ軸を戻し、既存identityと差分が大きい候補だけを評価する。",
+    "empty_round_reason": null
+  }
+}
