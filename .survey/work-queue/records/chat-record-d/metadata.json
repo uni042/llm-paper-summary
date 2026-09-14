@@ -4,7 +4,66 @@
   "slot": "metadata",
   "attempt_id": "attempt-ebdfe1bfc6bf08876f45688e",
   "job_id": "job-research-cff945d042003c88",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2607.08786",
+    "arxiv_id": "2607.08786",
+    "doi": "10.1145/3770743.3804227",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI",
+        "cs.AR"
+      ]
+    },
+    "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices",
+    "summary": "本論文は、品質を保ちやすい約50%の非構造枝刈りで重みを半減しても、位置メタデータと復号処理のため既存GPU疎行列積が密行列積を上回れない問題を扱う。非零要素を、2:4制約へ直接載せるSparse-TC層、2:4窓の余剰要素を空きスロットへ再配置して4ビット差分距離で位置を圧縮するSlot-Filling層、残り1%未満をCSRで処理するResidual層へ分解する。さらに、疎Tensor Coreで主計算を行う間にCUDA Coreで次タイルの位置復号と残差処理を進め、HBMからの疎重み読出し、L2上の活性値再利用、オンチップ計算を重ねる。H100 SXM5上では50%疎性でSpInfer比最大1.64倍のカーネル高速化、OPT-30BではFlashLLM比41.4%高い端末間スループットを示す。一方、プリフィルの大きなNや高疎性では再配置の利点が薄れ、密cuBLASやFlashLLMに劣る境界も明示する。",
+    "list_summary": "約50%の非構造疎重みを2:4疎テンソルコア層・差分距離で再配置する補助層・微小残差層へ分解し、疎テンソルコアとCUDAコアを重ねて実行してSpInfer比最大1.64倍を達成する。",
+    "authors": [
+      "Tao Lu",
+      "Haoyu Wang",
+      "Zonghui Wang",
+      "Keshen Xiang",
+      "Jiaheng Zhang",
+      "Wenzhi Chen"
+    ],
+    "authors_affiliations": "National University of Singapore; Zhejiang University",
+    "published": "2026-06-13",
+    "publication": "63rd ACM/IEEE Design Automation Conference (DAC 2026)",
+    "publication_type": "Conference paper",
+    "publication_status": "Published",
+    "lineage": "unstructured sparse LLM inference / sparse matrix multiplication kernels / Tensor Core-CUDA Core co-execution",
+    "topics": [
+      "非構造疎性",
+      "疎行列積",
+      "Tensor Core",
+      "CUDA Core",
+      "重み枝刈り",
+      "GPUカーネル",
+      "メタデータ圧縮"
+    ],
+    "importance": "中程度の非構造疎性では計算量削減よりメタデータ転送・復号が支配的になるという実装上の逆転を、格納形式とGPU実行パイプラインの共同設計で解消し、H100のHBM環境で密行列積を上回る領域を実測した点が重要である。",
+    "hardware_evaluation": "NVIDIA H100 SXM5 80GB HBM3。GPU間はNVLink。カーネル評価は主にOPT-30B/66B由来行列、バッチ16/32、50/60/70%疎性。端末間評価はOPT-30B/66B、バッチ8/16/32、入力512・出力512。疎形式変換時間のみIntel Xeon Platinum 8460Y+ CPUで測定。",
+    "quality_effect": "枝刈り方式そのものの品質改善は主張せず、既存のWandaで生成した疎モデルを高速実行する。論文のTable 1では50%非構造疎性が60〜70%よりパープレキシティ悪化を抑えやすいことを示すが、端末間性能評価では生成品質指標を別途測定していない。",
+    "source": "https://arxiv.org/abs/2607.08786",
+    "sources": [
+      "https://arxiv.org/abs/2607.08786",
+      "https://arxiv.org/html/2607.08786v1",
+      "https://doi.org/10.1145/3770743.3804227"
+    ],
+    "code": "https://github.com/moui0/cudac",
+    "implementation": "著者公式の公開コードリポジトリ moui0/cudac が存在する。論文はカスタムSpMMカーネルとOPT-30B/66Bの端末間推論統合を実装し、GCC 12.3.0とNVCC 12.6でH100上評価している。",
+    "last_checked": "2026-09-14",
+    "references": [],
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 36,
+    "evidence_locations": [
+      "arXiv HTML lines 38-49: 書誌・カテゴリ・コード",
+      "arXiv HTML lines 108-168: 三層格納形式とGPUパイプライン",
+      "arXiv HTML lines 169-196: H100評価、端末間結果、制約"
+    ]
+  },
   "reservation": {
     "claim_id": "claim-ebdfe1bfc6bf08876f45688e",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
