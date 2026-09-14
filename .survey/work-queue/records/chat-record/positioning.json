@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-37e62296473e532739f73eab",
-  "job_id": "job-research-b8afd28ccc02f095",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-37e62296473e532739f73eab",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"attempt_id":"attempt-37e62296473e532739f73eab","job_id":"job-research-b8afd28ccc02f095","slot":"positioning","data":{"limitations":"実機対比較は単一サービングインスタンスで行われ、保持と順序付けは直接検証される一方、複数インスタンス間のルーティング忠実度は未検証である。シミュレータはGPUごとの演算プロファイルや集合通信帯域を実測校正するが、B200低負荷で見られるアイドル復帰約60 msのような細かなエンジン状態は未モデル化で、BFCL平均JCT誤差-5.5%につながる。強メモリ圧力下では個別プログラムMAPEが11.2%まで上がる。方策探索の改善量は対象配備固有であり、別モデル・別到着率・別ツール分布への一般化は保証しない。著者公式コードURLを本文から確認できず、実装の完全再現性にも制約がある。","differences":"Vidur、APEX、LLMServingSimなどの従来サービングシミュレータは要求を到着・実行・KV寿命の基本単位として扱う。Frontierは状態を持つ要求鎖を因果的に解放するが、後続要求を前要求と同じレプリカへ固定し、KV保持はエンジン標準接頭辞キャッシュへ任せる。AgentServeSimはプログラム所有のKV状態をツール待ち横断で保持し、保持、ルーティング、スケジューリングを同じプログラム状態へ接続する。InferCept、Continuum、Autellix、SMetricなどは特定のエージェント方策を実エンジン上で提案・評価するのに対し、本研究はそれらの方策要素を共通インターフェースで組み替え、同じ論理プログラムに対する反実仮想を安価に比較する評価基盤として位置付く。","implementation_status":"LLMServingSim 2.0とASTRA-Simを拡張した研究プロトタイプで、vLLM 0.19側にも同じ方策を実行する薄いアダプタを実装し、B200とRTX PRO 6000で実機検証している。論文本文では公開リポジトリURLを提示していない。","research_positioning":"エージェントサービング、KVキャッシュ管理、スケジューリング、ハードウェア対応シミュレーションを横断する評価・設計探索基盤。特に『ツール待ち中にKVをどこまで残すか』『次ターンをどこへ戻すか』『プログラム全体の進捗をどう優先度へ反映するか』を独立要求ではなく一つの状態機械として扱う点が重要である。CPU評価器としてLLM生成方策探索までつなげるため、将来の階層メモリやCXL/ホストDRAMへのKV退避方策を実機構成が揃う前に比較する用途とも親和性が高い。","relation_to_existing_repository":"リポジトリのInferCept、Continuum、Autellix、SMetric、LLMServingSim系統に対して、個別方策ではなくそれらを共通プログラム状態の上で比較する評価レイヤを提供する。SSD/CXL/ホストDRAMを含む将来の階層KV管理研究では、ツールギャップ、再利用価値、再プリフィル費用、容量圧力を同時に変えたときの効果を、GPUを占有せず探索する足場として利用できる。","audit_required":false}}
