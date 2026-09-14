@@ -1,13 +1,19 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "problem_method",
-  "attempt_id": "attempt-8a33a3b216cec7e1341f57c2",
-  "job_id": "job-research-6cb2a2d661fb6b3a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8a33a3b216cec7e1341f57c2",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "schema_version":1,
+  "transport_version":10,
+  "slot":"problem_method",
+  "attempt_id":"attempt-8a33a3b216cec7e1341f57c2",
+  "job_id":"job-research-6cb2a2d661fb6b3a",
+  "data":{
+    "problem":"現在のエージェント型LLM基盤は、上位のエージェント枠組みと下位の推論エンジンに分かれている。上位はエージェントID、役割、道具、遷移構造を知る一方、KVブロック接触、待ち行列、追い出しなど実行時イベントを見ない。下位は実行イベントを全て見るが、その要求がどの役割・遷移に属するかを知らない。この分断のため、KVキャッシュ、バッチ形成、prefill/decode配置、投機的エージェント実行、公平性、安全方針など、両方の情報を必要とする最適化が個別ラッパーやエンジン内ヒューリスティックとして作られる。方針ごとに新しいengine surgeryが必要になり、別ワークロードへ移植しにくい。KVキャッシュでは特に、エージェントのsystem+toolsアンカーが次セッションでも再利用されるのに、通常LRUはセッション間の空白時間だけを見て追い出してしまう。",
+    "novelty":"論文の中心提案は特定のKV方策ではなく、フレームワークと推論エンジンの間へ第三層のエージェント実行時層を置き、方針依存の処理を観測（observe）、採点（score）、予測（predict）、作用（act）の4原語へ統一することである。エージェントIDを全イベントの共有座標として保持するため、同じ観測流からKV、バッチ、公平性、安全など異なる方針を実装できる。実証例CacheScoutでは、静的ワークフロー宣言ではなく実行中のagent遷移をオンライン学習し、将来再利用されるエージェントのKVを予測的に保護・先読みする。構造が弱い場合は予測項が消え、既存LRUへ自然に退化する設計も特徴である。",
+    "method_overview":"実行時層はフレームワークとエンジンの既存責務を奪わず、エージェント意味情報と実行イベントの交点だけを保持する。observeはブロック接触、要求到着、道具返却などをエージェントID付きで受け、状態を更新する。scoreは追い出し対象や要求などへ順位値を返し、predictは次エージェントや次道具など将来活動の確率分布を返す。actだけが隣接層へ副作用を出し、キャッシュ温存、要求延期、投機呼出しなどをクリティカルパス外で行う。KV事例では、同じエージェントのsystem+tools領域から安定IDを作り、遷移履歴を一次マルコフ連鎖としてオンライン更新する。\n\n各agent aからbへの遷移回数を滑動窓で保持し、P(b|a)=n(a,b)/n(a)をO(1)で更新する。評価ワークロードでは現在agentを知ることで次agent不確実性が40〜48%減るため、一次遷移だけでも予測信号になる。全エージェント数は50未満で、遷移行列状態はワークロード当たり20KB以下と小さい。追い出し時に正確なKステップ生存確率を毎回行列演算すると高価なので、確率0.01以上の遷移辺だけを残したグラフ上で現在agentから幅優先探索し、到達ホップ数から0〜1の生存近似値を作る。KVブロックの既存LRU新しさにこの予測値を重み1で加え、最小スコアから追い出す。\n\nこの採点により、次に呼ばれそうなagentのアンカーはセッション境界で一時的に使われていなくてもLRUより保護される。遷移構造が学習できない場合はグラフが分断され予測値が0へ近づき、元のLRU採点だけが残る。キャッシュに存在しない次agentについては、現在agentから最確率の次agentを選び、system prompt、一文字のuser message、1生成tokenからなる軽量warmupを通常推論経路へ発行する。これによりセッション固有履歴を入れず、共有可能なエージェントアンカーのKVだけを事前に作る。カーネルやスケジューラを別経路にせず、通常エンジンのキャッシュ生成を利用する。\n\n論文は同じ4原語を九つの方針へ写像する。たとえばバッチ形成ならqueueをobserveしagent compositionをpredictしてpack/deferをactし、公平性ならagent resource usageをobserveしてlong-term shareをscoreする。ただしこれら八つは設計可能性の整理で、実装評価されたのはKV事例のみである。したがって論文の実証範囲と、ランタイム抽象が将来ホストできる方針群は区別する必要がある。",
+    "components":[
+      {"name":"4原語のエージェント実行時層","description":"エージェント枠組みと推論エンジンの間に、方針に依存しない四つの操作だけを持つ中間層を置く。observeはエンジン・フレームワークからイベントを受け、agent identity付き状態へ蓄積する。scoreは追い出し、入場、branch commitなど隣接層が既に持つ順位決定へ数値を返す。predictは将来agentやtool、tenant burstの確率予測を返し、actはcache warmupやrequest deferなど副作用を非同期に実行する。エージェントIDを共通座標にすることで、イベント形式やエンジン内部構造ごとに方針専用APIを増やさず、複数方針が同じ観測ストリームを共有できる。KV事例では必要なエンジン変更をblock touch転送とeviction score参照の2フックへ限定しており、抽象化の目的は方針追加時のengine surgeryを減らすことにある。"},
+      {"name":"オンライン遷移学習","description":"CacheScoutはdeploy時に固定したagent workflow graphを前提にせず、実際のdispatch履歴からagent間遷移を一次マルコフ連鎖として学ぶ。各blockにはsystem+toolsアンカー領域から導いた安定agent IDを付け、observeがagent切替のたびに滑動窓内のpair countを更新する。同じ6-agent supervisorでもTester→Planner確率がGSM8K 0.53からMT-Bench 1.00まで変わるため、静的グラフはワークロードによって過保護・過小保護になる。オンライン推定なら実負荷の構造へ追従できる。評価ではcurrent agentを条件にするとnext agentのエントロピーが40〜48%減り、一次モデルでも実用信号がある。agent数50未満では状態量20KB以下なので、予測モデル自体がGPUキャッシュ節約を相殺しない。"},
+      {"name":"生存確率近似によるKV追い出し","description":"将来K step以内に各agentが再登場する正確な確率を毎回求めると行列計算が追い出しhot pathへ入るため、遷移確率0.01以上の辺で作ったグラフを使う近似へ落とす。現在agentから一度幅優先探索し、各agentまでのhop数を最大距離で正規化して生存近似値を作る。その値を既存エンジンのLRU recency residualへ加え、次に近いagentのKVを約1単位追加で保護する。予測構造が強ければセッション境界を越えてアンカーKVを保持でき、構造が弱ければ到達不能agentが増えて予測値が0へ落ちるため、scoreは元のrecencyへ戻る。このgraceful fallbackにより、予測を信頼できない負荷でも静的TTLのように無関係KVを長時間pinし続ける危険を小さくする。"},
+      {"name":"次エージェントのクロスセッション先読み","description":"追い出し保護だけでは、既に失われたagentアンカーを次呼出し前に戻せない。CacheScoutは各scheduler step間で現在agentから最大遷移確率の次agentを予測し、そのagentのsystem promptと最小のuser入力、1 token生成からなるwarmup要求を発行する。warmupは特別なカーネルを使わず通常のserving pathを通るので、既存prefix cacheへ自然にアンカーKVが入る。セッション履歴を混ぜず共有可能領域だけを温める点が重要である。actをoff-critical-path primitiveとして分離することで、本要求のdecodeを停止せず将来のTTFTを減らせる。誤予測時には余分な小要求とKV占有が発生するため、遷移学習・eviction scoreと組み合わせて利用価値の高いagentだけを狙う。"}
+    ],
+    "system_design":"CacheScoutはagent runtime layer内のtransition learner、survival-probability scorer、prefetch hookで構成される。フレームワークからagent metadataを受け、エンジンのblock touchをobserveし、agent change時に遷移グラフとBFS距離を更新する。evictionでは既存recencyにprediction scoreを足し、step間ではnext-agent predictionからwarmupをactする。KV保存キー自体は従来のblock hashを保ち、agent identityは予測索引として上乗せするため、既存cache correctnessを変えない。論文が列挙する他の八方針は同一runtime contractへの設計写像であり、現時点の実装完成度はCacheScoutより低い。"
   }
 }
