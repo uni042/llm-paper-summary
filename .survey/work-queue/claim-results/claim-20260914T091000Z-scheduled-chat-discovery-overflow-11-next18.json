@@ -1,45 +1,44 @@
 {
   "schema_version": 1,
   "workflow_version": 10,
-  "request_id": "claim-20260914T090600Z-scheduled-chat-discovery-overflow-11-next17",
+  "request_id": "claim-20260914T091000Z-scheduled-chat-discovery-overflow-11-next18",
   "worker_id": "scheduled-chat-discovery-overflow",
   "worker_kind": "scheduled_chat",
   "ok": true,
   "assignments": [
     {
-      "job_id": "job-research-77f3e91a5c224daf",
-      "claim_id": "claim-403a51361e94243b66985254",
+      "job_id": "job-research-d66acc5736f090e9",
+      "claim_id": "claim-140098b18d44f1fd690847a5",
       "worker_id": "scheduled-chat-discovery-overflow",
       "worker_kind": "scheduled_chat",
-      "attempt_id": "attempt-403a51361e94243b66985254",
-      "claimed_at": "2026-09-14T09:04:57+00:00",
+      "attempt_id": "attempt-140098b18d44f1fd690847a5",
+      "claimed_at": "2026-09-14T09:08:46+00:00",
       "expires_at": "2026-09-14T10:38:46+00:00",
       "kind": "research",
       "depends_on_job_ids": [
-        "job-research-77f3e91a5c224daf"
+        "job-research-d66acc5736f090e9"
       ],
       "job": {
-        "job_id": "job-research-77f3e91a5c224daf",
+        "job_id": "job-research-d66acc5736f090e9",
         "type": "research",
-        "parent_job_id": "job-c6d3963bf6f5f699",
+        "parent_job_id": "job-b55a5f6b28feb0e9",
         "priority": 80,
-        "canonical_id": "arXiv:2512.20210",
-        "title": "Predictive-LoRA: A Proactive and Fragmentation-Aware Serverless Inference System for LLMs",
-        "source_url": "https://arxiv.org/abs/2512.20210",
-        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md",
-        "selection_reason": "multi-LoRA serverless servingでtraffic予測に基づくadapter prefetchとpage-based GPU adapter memory管理を組み合わせ、cold startとfragmentationを同時に扱う。adapter demand予測でcold startを最大68%削減し、異種rankでもGPU memory utilization 87%以上、S-LoRA比1.52倍throughput・高並列時TTFT 35%削減を報告する。",
+        "canonical_id": "arXiv:2603.07169",
+        "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
+        "source_url": "https://arxiv.org/abs/2603.07169",
+        "paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md",
+        "selection_reason": "共通LLM kernelを含む複数領域・FP32/BF16のMSKernelBenchと、profile情報を使ってcompile/execute toolchainまで自動構築するhardware-aware multi-agent optimizer CUDAMasterを提案する。Astra比約35%向上し一部でcuBLAS級に達すると報告しており、推論kernel自動最適化の一般化可能性を評価する比較対象として有用。",
         "status": "ready",
         "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
         "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
         "schema_version": 1,
         "workflow_version": 10,
-        "created_at": "2026-09-12T18:15:00+00:00",
+        "created_at": "2026-09-12T19:09:45+00:00",
         "artifact_transport": "structured_record_v10"
       },
       "record_bank_fallback": "library"
     }
   ],
-  "processed_at": "2026-09-14T09:04:57+00:00",
-  "checkpoint_released": 1,
-  "heartbeat_at": "2026-09-14T09:08:46+00:00"
+  "processed_at": "2026-09-14T09:08:46+00:00",
+  "checkpoint_released": 1
 }
