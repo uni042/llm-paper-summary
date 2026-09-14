@@ -1,49 +1,91 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-6db09bc58e9abef5d5642af2",
+  "job_id": "job-research-075303825b007242",
   "slot": "metadata",
-  "attempt_id": "attempt-b4f98614fa22d7e73fab59f5",
-  "job_id": "job-research-25e24814dedb76cb",
   "data": {
-    "canonical_id": "arXiv:2601.17855",
-    "arxiv_id": "2601.17855",
-    "doi": "10.48550/arXiv.2601.17855",
+    "canonical_id": "arXiv:2605.31464",
+    "arxiv_id": "2605.31464",
+    "doi": "10.48550/arXiv.2605.31464",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": ["stat.ML"]},
-    "title": "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
-    "summary": "本研究は、データ並列デコードで各GPUが保持するKVキャッシュを実行途中に自由移送できず、各デコード段階が最も遅いGPUを待つ同期障壁によって進むため、リクエスト長のばらつきが持続的な遊休時間を生む問題を扱う。将来の総出力長を当てるのではなく、短い先読み区間で既存リクエストがいつ空き枠を作るかだけを見積もり、その区間の負荷偏りを最小化する整数最適化BF-IOを各割当時に解く。256基のA100を模したLongBenchシミュレーションでは、FCFS比で平均負荷偏りを約15分の1、スループットを約92%向上、出力1トークン当たり時間を約44%短縮し、推定消費エネルギーを約29%削減した。理論面では先読みなしのBF-IOについて、バッチ容量とGPU数が増えるほど既存割当より負荷偏り改善率が拡大する最悪時保証を与える。",
-    "list_summary": "同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。",
-    "authors": ["Zixi Chen", "Tianci Bu", "Chendong Song", "Xin Lu", "Yinyu Ye", "Zijie Zhou"],
-    "authors_affiliations": "The Hong Kong University of Science and Technology; National University of Defense Technology; Peking University; Stanford University",
-    "published": "2026-01-25",
-    "publication": "arXiv:2601.17855v2",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v2（2026-02-01）。一次資料から査読済み採録先は確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["データ並列LLMサービング", "同期障壁", "負荷分散", "整数最適化", "短期先読み", "KVキャッシュ固定配置", "エネルギー効率"],
-    "importance": "高。個別エンジンの経験則ではなく、状態を移送しにくい同期型デコードの負荷偏りを一般化した整数最適化として定式化し、先読みなしの場合には最悪時保証まで与える。短期的な完了予測だけを利用するため、総出力長予測へ強く依存しない点も実運用上重要である。",
-    "hardware_evaluation": "主性能評価は実機ではなく、実トレースで校正した離散事象シミュレーション。LongBenchではNVIDIA A100相当の256 GPU worker、BurstGPTでは16 GPU workerを模擬する。冒頭の負荷不均衡観測には32 GPU・436デコード段階の産業トレースを用いる。",
-    "hardware_details": "LongBench設定は256 worker、各workerのバッチ容量72。デコード段階時間は実トレースから最小平均二乗誤差で得た固定費用C=9.775e-3秒と、最大局所負荷へ掛ける係数t_l=1.005e-7秒から進める。電力モデルはA100を想定し、アイドル100W、最大400W、利用率指数0.7を用いる。",
-    "quality_effect": "モデルの計算や生成確率を近似する方式ではなく、リクエストをどのデコードworkerへ固定配置するかだけを変更するため、生成品質を意図的に変えない。ただし本文の性能結果は実機サービングではなくシミュレーションに基づく。",
-    "storage_targets": ["各デコードworkerのKVキャッシュ", "中央待機プールの未割当リクエスト", "短期先読み用の進行状態", "workerごとの現在負荷"],
-    "bottlenecks": ["同期障壁による最遅worker待ち", "出力長未知による固定配置の負荷偏り", "KVキャッシュ移送困難による割当修正不能", "待機GPUのアイドル電力", "長い先読み区間での予測誤差"],
-    "evidence_locations": ["§1 Introduction", "§2 LLM Serving Architecture", "§3 Problem Formulation", "§4 BF-IO", "§5 Theoretical Guarantees", "§6 Experiments", "§7 Discussion and Limitations", "Appendix A", "Table 1", "Table 2", "Figures 1–14"],
-    "source": "https://arxiv.org/abs/2601.17855",
-    "sources": ["https://arxiv.org/abs/2601.17855", "https://arxiv.org/html/2601.17855v2", "https://github.com/Echoscd/Load-Balancing-Release"],
-    "code": "https://github.com/Echoscd/Load-Balancing-Release",
-    "implementation": "公開リポジトリでBF-IO、FCFS、JSQ、ラウンドロビン等を比較する離散事象シミュレータが提供され、ShareGPT、ArXiv、BurstGPTなどの要求列を読み込み、負荷偏り、スループット、遅延、電力、総エネルギーを測定できる。論文の中心評価も実トレースで校正したシミュレーションであり、BF-IOをvLLMやSGLang本体へ統合した実機サービング実装の評価ではない。",
-    "last_checked": "2026-09-15",
-    "references": [
-      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
-      {"canonical_id": "arXiv:2312.07104", "title": "SGLang: Efficient Execution of Structured Language Model Programs"},
-      {"canonical_id": "arXiv:2401.09670", "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"},
-      {"canonical_id": "arXiv:2308.16369", "title": "Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"}
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
+    "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
+    "summary": "GPUカーネル探索では、生成自体が高速化しても各候補のコンパイル、正当性検査、実GPU上の反復計測が探索の律速になる。本研究は、言語モデルを『仮想GPU』として使い、参照カーネルと候補コード、対象GPUから相対速度を8段階の確率分布として予測させる選択的代理評価を提案する。確信度が高い候補は代理予測で順位付けし、不確実な候補だけ実GPUへ委ねる。さらにGPT-OSS-20Bを正解報酬と校正報酬で強化学習し、Brier報酬では校正と探索順位の双方が改善した。480個のTritonカーネルを用いる保持評価ではGemini-3 Flashが限られた実測予算で利用可能な最大高速化の93.1%を平均回収し、GPT-OSS-20Bは82.9%。実探索ではBrier学習済みGPT-OSS-20Bで親ごとの候補を4倍生成し上位1/4だけをGPU計測することで、同一GPU計測予算の基準に対して6課題中4課題で同等以上、うち3課題ではより速いカーネルを発見した。12,388個、118問題、CUDA/Triton、A100/L40S/H100を含む実測アーカイブも公開する。",
+    "list_summary": "実GPU計測をLLMの相対速度予測で選択的に代替し、同じGPU計測予算で候補数を4倍へ広げて6課題中4課題で基準と同等以上の高速カーネルを発見する。",
+    "authors": [
+      "Zaid Khan",
+      "Justin Chih-Yao Chen",
+      "Jaemin Cho",
+      "Elias Stengel-Eskin",
+      "Mohit Bansal"
     ],
-    "references_checked_at": "2026-09-15",
-    "references_source": "arXiv:2601.17855v2本文・関連研究節と参考文献節。HTML変換では参考文献の個別書誌が展開されないため、本文中で正規識別子を確認できた主要関連文献を記録。",
-    "references_total": 4,
+    "authors_affiliations": "UNC Chapel Hill; Allen Institute for AI (AI2); Johns Hopkins University; University of Texas at Austin",
+    "published": "2026-05-29",
+    "publication": "arXiv:2605.31464v1",
+    "publication_type": "プレプリント",
+    "publication_status": "2026-05-29にarXiv v1提出。査読済み採録先は一次資料から確認できない。",
+    "lineage": "kernel-runtime-compilation",
+    "topics": [
+      "GPUカーネル最適化",
+      "LLM代理モデル",
+      "実行時間予測",
+      "選択的予測",
+      "校正",
+      "強化学習",
+      "GPU計測予算"
+    ],
+    "importance": "高。LLMによるカーネル生成そのものではなく、探索で大量に発生する実GPU評価を削減する新しい律速点を扱う。候補生成と計測の非対称性が拡大するほど価値が増し、自動カーネル探索基盤の測定層を変える可能性がある。",
+    "hardware_evaluation": "保持評価と主要探索はNVIDIA A100。公開アーカイブ全体はA100、L40S、H100を含む。単一A100でTriton実測20.16秒/候補、CUDA実測152.55秒/候補、GPT-OSS-20B代理予測14.69秒/候補を計測し、代理側は並列化可能。",
+    "hardware_details": "主設定はA100-80GB/A100-SXM4-80GB。GPU Mode由来6課題の480 TritonカーネルをA100で実測。発見瞬間評価ではA100とL40Sを含む1,347親子対。公開アーカイブは合計約618 GPU時間。",
+    "quality_effect": "カーネル候補の正当性最終判定を完全に代理へ置き換えるものではなく、代理は速度予測と候補順位付けに使う。実探索では上位候補だけをGPUでコンパイル・正当性確認・実測するため、採用カーネルの出力正当性は実測経路で担保する。",
+    "storage_targets": [
+      "参照カーネルと候補コード",
+      "対象GPU仕様",
+      "8速度帯の確率分布",
+      "候補ごとの実測速度・正当性履歴",
+      "探索木と候補アーカイブ"
+    ],
+    "bottlenecks": [
+      "nvcc/Tritonコンパイル時間",
+      "GPUを専有する正確な速度測定",
+      "候補生成速度と実測評価速度の非対称性",
+      "代理予測の校正不足",
+      "極端に高速な候補を過小評価する予測偏り"
+    ],
+    "evidence_locations": [
+      "§1 Introduction",
+      "§2 Method",
+      "§3.2 Setup",
+      "Table 1-2",
+      "Fig.4-7",
+      "Appendix B-C",
+      "Appendix D-E"
+    ],
+    "source": "https://arxiv.org/abs/2605.31464",
+    "sources": [
+      "https://arxiv.org/abs/2605.31464",
+      "https://arxiv.org/html/2605.31464",
+      "https://github.com/codezakh/gpu-forecasters"
+    ],
+    "code": "https://github.com/codezakh/gpu-forecasters",
+    "implementation": "公開コードあり。最大報酬木探索、代理評価、GPT-OSS-20B強化学習、GPU計測プロトコルと再現設定を付録・リポジトリで提供する。12,388個の実測カーネルアーカイブも公開対象。",
+    "last_checked": "2026-09-14",
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv一次資料",
+    "references_total": null,
+    "references": [],
     "last_audited": null,
     "audit_version": 0
   },
-  "reservation": {"claim_id": "claim-b4f98614fa22d7e73fab59f5", "worker_id": "scheduled-chat-paper-20260915T0630JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-6db09bc58e9abef5d5642af2",
+    "worker_id": "scheduled-chat-paper-20260915T0630JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

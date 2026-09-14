@@ -1,18 +1,61 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-6db09bc58e9abef5d5642af2",
+  "job_id": "job-research-075303825b007242",
   "slot": "evaluation",
-  "attempt_id": "attempt-b4f98614fa22d7e73fab59f5",
-  "job_id": "job-research-25e24814dedb76cb",
   "data": {
-    "hardware": "主評価は実機実行ではなく、NVIDIA A100相当のworkerを模した離散事象シミュレーション。LongBenchでは256 worker、BurstGPTでは16 worker。負荷不均衡の動機付けには32 GPU・436デコード段階の産業トレースを利用する。",
-    "software": "公開シミュレータはBF-IO、FCFS、JSQ、ラウンドロビン等を実装し、要求列からworker負荷、スループット、遅延、利用率、電力、エネルギーを計算する。論文では整数最適化を各割当時に解き、Hを0、20、40、60、80、100で比較する。",
-    "methodology": "LongBench由来要求を定常Poisson到着で供給し、システム容量を上回る過負荷条件で256 worker・容量72を評価する。段階時間は実トレースから回帰したC=9.775×10^-3秒とt_l=1.005×10^-7秒を使い、最大worker負荷で進める。比較はFCFS、JSQ、BF-IO H=0〜100。平均負荷偏り、トークン毎秒、出力1トークン当たり時間、総エネルギーを測る。BurstGPTでは16 worker・容量72の軽負荷寄り条件でも再評価する。",
-    "scope": "性能値は校正済みシミュレーションであり、BF-IOを本番vLLM/SGLangクラスタへ統合した実機測定ではない。LongBench主結果は十分な待機要求がある過負荷状態を意図的に作る。BurstGPTでは効果が小さくなるため、利得は負荷偏りの大きさに依存する。理論は主にH=0と非減少負荷ドリフトを扱う。",
-    "workloads": ["LongBench由来要求", "BurstGPT到着トレース", "32 GPU産業デコードトレース"],
-    "baselines": ["FCFS", "JSQ", "BF-IO H=0"],
-    "metrics": ["平均負荷偏り", "スループット", "出力1トークン当たり時間", "総エネルギー", "worker利用率", "GPU電力"],
-    "reproducibility": "A100相当の電力パラメータ、worker数、容量、段階時間回帰係数、各H、主要比較表が記載され、公開シミュレータも確認できる。一方、動機付けに使う産業トレースの生データや、本番サービング統合コードの公開は一次資料から確認できない。"
+    "hardware": [
+      "NVIDIA A100-80GB / A100-SXM4-80GB（主評価）",
+      "NVIDIA L40S（発見瞬間評価・公開アーカイブ）",
+      "NVIDIA H100（公開アーカイブ）"
+    ],
+    "software": [
+      "Triton 3.3.1",
+      "CUDA/nvcc",
+      "最大報酬木探索（PUCT）",
+      "公開gpu-forecasters実装"
+    ],
+    "model": [
+      "Gemini-3 Flash",
+      "GPT-OSS-120B",
+      "GPT-OSS-20B",
+      "DeepSeek-V4",
+      "強化学習済みGPT-OSS-20B"
+    ],
+    "datasets": [
+      "GPU Mode競技6課題・480 Tritonカーネル",
+      "12,388個のLLM生成GPUカーネル公開アーカイブ・118問題",
+      "1,347親子カーネル対・27探索・21問題"
+    ],
+    "baselines": [
+      "全候補を実GPU計測する同一GPU予算の木探索",
+      "未学習GPT-OSS-20B代理",
+      "正解報酬のみRL",
+      "CRPS校正RL",
+      "複数既製LLM代理"
+    ],
+    "correctness": "実GPU評価では候補をコンパイルし、固定テスト入力で参照出力と照合した後に速度測定する。代理は主に速度予測を担当し、最終的なGPU計測対象ではこの正当性検査を維持する。保持評価は候補集合を実測済みなので予測順位と真の高速化を直接比較できる。",
+    "settings": [
+      {
+        "name": "保持代理評価",
+        "description": "GPU ModeのTriMul、cross-entropy、2種Gated DeltaNet forward、GDN W/U recompute、FP8 quantizationの6課題。各速度帯最大10件で合計480 Tritonカーネル。全実測はA100。各代理を温度1.0で3回サンプル。"
+      },
+      {
+        "name": "固定計測予算の探索",
+        "description": "Gemini-3 Flashを変異生成器、Brier学習済みGPT-OSS-20Bを代理とする。代理ありは親あたり候補を4倍生成し、上位1/4だけGPU計測して基準と同じGPU実測数/ステップにそろえる。"
+      },
+      {
+        "name": "評価待ち時間",
+        "description": "単一A100上でTriton実測は平均20.16秒（1,515件）、CUDA実測は152.55秒（6,446件）、GPT-OSS-20B代理は14.69秒。実測は速度干渉を避け1件同時、代理は複数予測を並行処理できる。"
+      }
+    ],
+    "methodology": "速度回収率、期待校正誤差、速度予測誤差を測る。速度回収率は代理順位上位1/5/10/25/50%だけを実測した場合に、その集合の最速候補が全候補中の最速速度の何%を回収するかの平均。別途、同じGPU実測予算の実探索で最良速度の推移を比較する。",
+    "scope": "評価の中心はGPUカーネル探索の測定費用削減であり、LLM推論ランタイムそのもののカーネル高速化手法ではない。保持評価はA100中心で、分布外GPUや新しい命令セットへの一般化は主要結果に含まれない。"
   },
-  "reservation": {"claim_id": "claim-b4f98614fa22d7e73fab59f5", "worker_id": "scheduled-chat-paper-20260915T0630JST", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-6db09bc58e9abef5d5642af2",
+    "worker_id": "scheduled-chat-paper-20260915T0630JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
