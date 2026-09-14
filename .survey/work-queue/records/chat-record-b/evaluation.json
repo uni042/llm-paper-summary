@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c642c5fff9681a3567ab694d",
-  "job_id": "job-research-79f62fbfcb1294fd",
-  "data": {
-    "hardware": "追加学習は単一ノードの8基A100-SXM4-80GBで実施する。サービング評価は同じ総GPU予算として4基をプリフィル側、4基をデコード側へ割り当て、LLaMA3.1-8Bを主対象にする。付録では同一の処理構成をQwen3-14Bへ置き換えて再評価している。",
-    "software": "追加学習にはLMFlowを使い、MetaMathQA-40K、EvolInstruct-Code-80K、xLAM-function-calling-60Kを用いる。サービング試作はvLLMの分離サービング基盤を拡張し、利用者固定ルーティング、共有プリフィルプール、複数の専門デコードワーカー、KV転送をプロキシで統括する。",
-    "methodology": "学習品質はLLaMA3.1-8BとQwen3-8Bを中心に、数学、コード生成、関数呼出しの複数指標で通常の完全追加学習と比較する。学習はバッチ1、勾配蓄積16、最大系列長1024、1エポック、AdamWで実施する。サービングでは4エージェントが順次呼ばれ、長い共有文脈が増えていくReActとReflexionの処理を用いる。各モデル呼出しの入力・出力長は既存測定に基づいて固定し、セッション到着率や最大同時セッション数を変化させ、P95エンドツーエンド遅延、スループット、最初のトークンまでの時間、接頭辞キャッシュ命中率を測る。",
-    "scope": "主なサービング実験は単一A100ノード内の分離サービングであり、複数ノード間ネットワークをまたぐKV転送や生産環境の長さ分布変動は直接評価していない。対象は同じ共有基盤モデルから派生した専門デコーダで、任意の異種アーキテクチャ間共有ではない。比較は同じ8 GPU総予算で行うため計算資源条件は揃っているが、専門デコーダを事前にKV条件付き追加学習できることが前提になる。"
-  },
-  "reservation": {"claim_id": "claim-c642c5fff9681a3567ab694d", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-7381d916bdd79b3e46aeb209",
+  "job_id": "job-research-b85568c75bac4939",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-7381d916bdd79b3e46aeb209",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

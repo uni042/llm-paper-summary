@@ -36,13 +36,13 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **76** |
-| 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **75** |
+| 処理中（Active claims） | **3** |
+| 今すぐ着手可能（Claimable） | **74** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **1** |
+| :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 13:06 JST** |
-| :00 補助worker 直近claim | **09-14 13:05 JST** |
+| :00 補助worker 直近claim | **09-14 13:08 JST** |
 | 直近24h Research完了（:30 通常worker） | **23** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
@@ -88,7 +88,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P83 `arXiv:2605.05696` — Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving
+- P83 `arXiv:2604.13226` — KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs
 
 ## 参考情報
 
