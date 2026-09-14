@@ -98,6 +98,10 @@ jobs:
               exit "$batch_rc"
             fi
 
+            python .survey/scripts/normalize_required_metadata.py \
+              --repo-root . \
+              --apply
+
             python .survey/scripts/record_run_ledger.py record \
               --repo-root . \
               --snapshot /tmp/submission-fast-baseline.json
