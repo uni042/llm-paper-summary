@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T01:44:21.343165+00:00",
+  "updated_at": "2026-09-14T01:47:24.448776+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T01:44:21.343165+00:00",
+      "last_recorded_at": "2026-09-14T01:47:24.448776+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 6,
+        "research_completed": 7,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18794,6 +18794,20 @@
             "research_completed",
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34797044789:1",
+          "recorded_at": "2026-09-14T01:47:24.448776+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34797044789",
+            "run_attempt": "1",
+            "source_sha": "ef36c9e4b367b032be05a386d565760942664c60"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18844,6 +18858,14 @@
           "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-85e6a3219bd95117",
+          "type": "research",
+          "canonical_id": "arXiv:2605.11581",
+          "title": "Ada-MK: Adaptive Megakernel Compilation for Efficient LLM Inference",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -18865,7 +18887,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
       "paper_active_count_after": 464,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "research_completed"
     }
   ]
 }
