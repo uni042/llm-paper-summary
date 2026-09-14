@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 11:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 11:32 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -36,10 +36,10 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **101** |
-| 処理中（Active claims） | **5** |
-| 今すぐ着手可能（Claimable） | **97** |
+| 処理中（Active claims） | **4** |
+| 今すぐ着手可能（Claimable） | **98** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **4** |
+| :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 11:28 JST** |
 | :00 補助worker 直近claim | **09-14 11:30 JST** |
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **2** |
 | 最新通常run | **2026-09-14T11:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **88 min** |
+| 最古の有効claimの経過時間 | **42 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -90,7 +90,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P84 `arXiv:2607.01579` — OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters
+- P85 `arXiv:2506.01986` — SpecMemo: Speculative Decoding is in Your Pocket
 
 ## 参考情報
 
