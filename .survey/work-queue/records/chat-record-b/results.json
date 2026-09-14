@@ -1,13 +1,21 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-8a33a3b216cec7e1341f57c2",
-  "job_id": "job-research-6cb2a2d661fb6b3a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8a33a3b216cec7e1341f57c2",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "schema_version":1,
+  "transport_version":10,
+  "slot":"results",
+  "attempt_id":"attempt-8a33a3b216cec7e1341f57c2",
+  "job_id":"job-research-6cb2a2d661fb6b3a",
+  "data":{
+    "overview":"CacheScoutは5 workloadすべてでvLLM/Continuumより高いKV hit rateと低いturn latencyを示した。vLLM比hit rate改善は13〜37ポイント、本文Figure 4説明ではend-to-end latencyを6〜26%削減、throughputを6〜14%改善する。abstractはmean TTFTについて12〜29%低減と要約しており、指標表現が本文Figure説明と異なるため区別して記録する。agent anchorはfirst turn promptの34〜52%を占め、current agentを条件にするとnext agent不確実性は40〜48%減るため、予測保護の利用可能面が実測されている。hot path overheadはblock touch observe平均約1µs、BFS scorerはsingle-digit µs、24 agentsでもcoordinator state 25KB未満である。",
+    "key_results":[
+      {"metric":"KV cache hit-rate lift","value":"+13〜+37 percentage points","baseline":"unmodified vLLM","condition":"5 multi-agent workloads","interpretation":"通常LRUがsession boundaryで落とすagent anchorを、次agent予測で保護・prefetchすることでcross-session reuseを回収する。"},
+      {"metric":"end-to-end per-turn latency","value":"6〜26% reduction","baseline":"vLLM/Continuum","condition":"Figure 4, 5 workloads","interpretation":"cache hit増加によりprefill再計算が減り、全workloadでlatency改善を報告する。abstractのmean TTFT 12〜29%という別指標の要約とは分けて読む必要がある。"},
+      {"metric":"throughput","value":"+6〜+14%","baseline":"unmodified serving stack","condition":"5 workloads","interpretation":"anchor再計算削減がGPU処理余力を増やし、turn/sを改善する。"},
+      {"metric":"first-turn shareable surface phi","value":"0.34〜0.52","baseline":"なし","condition":"5 real multi-agent workloads characterization","interpretation":"各session冒頭promptの3〜5割がsystem+tools+few-shot anchorとしてcross-session reuse可能で、最適化対象が無視できない。"},
+      {"metric":"relative conditional entropy reduction R","value":"0.40〜0.48","baseline":"current-agent情報なしのnext-agent entropy","condition":"5 workloads","interpretation":"一次Markovだけでもnext-agent uncertaintyの40%以上を除けるため、複雑なsequence predictorなしでcache policy信号が得られる。"},
+      {"metric":"runtime overhead","value":"observe 約1µs/block-touch、BFS scorer single-digit µs、state <25KB at 24 agents","baseline":"なし","condition":"CacheScout runtime","interpretation":"予測方針自体のhot-path負担は小さく、cache利得を大きく相殺しない。"}
+    ],
+    "negative_results":"ContinuumのTTL pinは4実タスク中3つでhit rateを9〜23ポイント下げたと報告され、固定時間の保護が短いinter-turn timescaleと合わない場合にcache pollutionを起こす。CacheScoutについても、評価は予備的であり、full memory/latency microbenchmark、cache budgetとconcurrency sensitivity、runtime disabled時挙動を今後へ延期している。九つの提案方針のうち実測したのはKV cacheだけであり、batching・fairness・safety等の一般性は設計仮説の段階である。",
+    "interpretation":"利得の源泉はagent-aware情報をcache keyそのものに置き換えることではなく、block hashによる正しい保存・照合を維持したまま、agent identityを将来利用価値のprediction keyとして追加することにある。session内部では既存prefix cacheが十分に働くが、session間ではrecency gapがanchorを追い出す。Markov transitionがそのgapを跨ぐ追加信号になるため、特にsession開始時のTTFTを改善する。静的TTLと異なりworkloadごとのtransitionをonline学習し、構造が弱い時にLRUへ退化することが過保護を抑える。",
+    "quality_impact":"生成品質を近似・圧縮する手法ではないため、論文はaccuracy degradationを主要結果として扱わない。ただしprefetchは予測agentの通常warmup requestを発行するため、誤予測時には余分な計算とcache占有が生じる可能性がある。cache eviction順序が変わることで他promptのhit機会にも影響し得るため、性能品質としてはhit-rate・latency・fairnessの感度評価が今後必要である。"
   }
 }
