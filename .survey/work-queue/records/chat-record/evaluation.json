@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-1f2447b8c5da322c3903a058",
   "job_id": "job-research-2070373a31124502",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1f2447b8c5da322c3903a058",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "NVIDIA L40S 46GBを3基搭載した単一ホスト。主比較の3サーバはそれぞれ専用GPUを1基使用し、ホストCPU・DRAM・I/Oは共有する。",
+    "software": "Qwen2.5-7B-Instruct（BF16）。vLLM V1 standalone 0.21.0、Triton 25.09 + vLLM V0 0.10.1.1+nv、PyTorch + HuggingFace Transformers + FastAPI、追加比較としてvLLM V0 standalone 0.7.3とTriton + V1。監視はNVMLとpsutilを用いる。",
+    "methodology": "6構成を各36時間、計216時間運転する。主比較E1/E2/E3は各エンジンの最大持続スループットを事前較正し、その85%を目標要求率とする。E3bはPyTorch構成を0.05 RPSの低負荷で再実行する。A1/A2を追加してvLLM V0/V1×Standalone/Tritonの2×2比較を完成させる。入力は3000件のarXiv題名・抄録から合成し、256〜7500トークン、中央値1500。出力は中央値200、最大1500トークン。GPUを1秒、プロセス/ホストを5秒、クライアントを要求単位で観測し、約34指標を解析する。自己相関補正付きMann-Kendall検定、Theil-Sen傾きと95%信頼区間、Benjamini-Hochberg偽発見率q=0.10を用い、検定と信頼区間の双方が一致したときのみ有意傾向とする。",
+    "scope": "長時間運転時の信頼性特性を測る実証研究であり、新しい推論アルゴリズムやメモリ管理方式の速度向上を競う研究ではない。36時間以内に現れるCPU側/プロセス側/GPU側の資源傾向と、利用者側性能への波及を比較する。",
+    "workloads": ["Qwen2.5-7B-Instruct", "合成Poisson到着", "256〜7500トークン入力", "最大1500トークン出力", "85%飽和負荷", "低負荷PyTorchアブレーション"],
+    "baselines": ["vLLM V1 standalone", "Triton + vLLM V0", "PyTorch + HuggingFace", "vLLM V0 standalone", "Triton + vLLM V1"],
+    "metrics": ["USS/RSS/VMS/PSS", "VRAM", "CPU利用率", "スレッド数", "ファイル記述子数", "I/O率", "遅延p50/p95/p99", "先頭トークン時間", "出力スループット", "要求ドロップ率", "メモリ傾きと95%信頼区間"],
+    "reproducibility": "要求率較正、固定された入力長/出力長分布、監視周期、判定手順、6構成のバージョンと要求率を論文中に記載しており再現手順は比較的明確。ただし各構成は1回だけで、専用コードリポジトリは一次資料から確認できない。",
+    "statistics": "監視値の強い自己相関をHamed-Rao補正付きMann-Kendall検定で扱い、Theil-Sen傾きの分散をAR(1)係数で補正する。約200検定に対してBenjamini-Hochberg法で偽発見率を0.10に制御する。"
+  },
+  "reservation": {"claim_id": "claim-1f2447b8c5da322c3903a058", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
 }
