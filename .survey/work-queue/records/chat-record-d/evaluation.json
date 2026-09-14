@@ -4,7 +4,17 @@
   "slot": "evaluation",
   "attempt_id": "attempt-c67b456d5eaef96f80779516",
   "job_id": "job-research-85e6a3219bd95117",
-  "data": {},
+  "data": {
+    "hardware": "Intel Xeon Platinum 8558（96コア/192スレッド）、1 TB DDR5、NVIDIA L20 48 GB GDDR6を1基搭載したサーバー。L20の公称メモリ帯域は864 GB/s、計算能力は8.9。GPUは排他的に使用する。",
+    "software": "Linux 5.10.0、NVIDIAドライバ535.161.07、CUDA 12.2。比較系はvLLM v0.19.0、SGLang v0.5.10、TensorRT-LLM v1.1.0rc5。Ada-MKはTensorRT-LLMへメガカーネルをプラグイン統合する。",
+    "model": "Qwen3-1.7BとQwen2.5-1.5BをGPTQ-W4A16量子化で評価する。",
+    "datasets": ["固定短系列: 入力64トークン、出力12トークン", "CSL: おおむね200〜1000トークン級の実データ", "Human-eval: 実データ系列"],
+    "baselines": ["TensorRT-LLM v1.1.0rc5", "vLLM v0.19.0", "SGLang v0.5.10", "元のStanford MegaKernel系実装"],
+    "correctness": "同一のGPTQ-W4A16モデルを各実行系で用い、モデル品質を変える近似ではなく実行経路のみを変更する。主要評価指標は生成スループットで、精度比較は主目的ではない。",
+    "settings": ["バッチサイズ1、2、4、8、16を評価する。", "全フレームワークをオフラインバッチモードで実行し、同時要求数を固定する。", "生成完了後にスループットを集計し、オンラインスケジューラの違いをできるだけ除いて演算実行効率を比較する。"],
+    "methodology": "固定短系列では、カーネル起動と演算融合が支配的になる条件でAda-MKと3つの推論フレームワークを比較する。CSLとHuman-evalでは系列長が変動する現実的な入力へ広げ、バッチ増加時にメガカーネルの融合利得と、vLLM/SGLangが持つスケジューリング・KV管理などシステム全体の利得がどう交差するかを見る。加えて、有向非巡回グラフ探索で生成した構成と元のStanford MegaKernel系構成を比較し、探索自体の寄与を分離する。",
+    "scope": "評価は単一L20、2つの約1.5〜1.7Bモデル、GPTQ-W4A16に限定される。また全比較をオフラインバッチモードで行うため、実オンライン広告システムにおける要求到着変動、サービス品質目標、P99遅延、スケジューラ干渉は制御比較されていない。論文は商用展開を報告するが、実サービスの詳細なオンライン遅延表とは区別して読む必要がある。"
+  },
   "reservation": {
     "claim_id": "claim-c67b456d5eaef96f80779516",
     "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
