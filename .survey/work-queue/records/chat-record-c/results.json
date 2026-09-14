@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-5408261d6f8f32ffb0310619",
+  "attempt_id": "attempt-0b8a39423dcf38d7fb41bb9b",
   "job_id": "job-research-57d78e1392b6c354",
   "data": {
     "overview": "FASERはQwen3とLlama3の両モデル組、ShareGPT・LongBench・HumanEvalのすべてで比較対象より低い遅延と高いスループットを示す。最大ではQwen3のLongBenchで遅延を48%削減し、Llama3でもLongBenchで42%削減する。スループットはQwen3で最大1.53倍、Llama3で最大1.49倍となる。改善は単一機構からではなく、負荷に応じた投機長調整、棄却予定トークンの層途中枝刈り、ドラフト・検証の空間多重化を組み合わせ、低負荷時の段階待ちと高負荷時の検証浪費の双方を減らすことで得られる。",
@@ -48,7 +48,7 @@
     "quality_impact": "標準的な投機的デコードと同様に、確定するトークンはターゲットモデルの検証結果に従うため、フロンティア重畳自体は生成分布を変更しない。早期枝刈りは予測的であるが、棄却候補を後続層から除くための制御で、誤って有望な候補を落とすと再ドラフトが増える形で性能へ返る。論文の主張は品質を変えて高速化する方式ではなく、同じターゲット検証意味論の範囲で不要計算と待ちを減らす方式である。"
   },
   "reservation": {
-    "claim_id": "claim-5408261d6f8f32ffb0310619",
+    "claim_id": "claim-0b8a39423dcf38d7fb41bb9b",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

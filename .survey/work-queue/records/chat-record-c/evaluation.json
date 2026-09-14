@@ -2,20 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-5408261d6f8f32ffb0310619",
+  "attempt_id": "attempt-0b8a39423dcf38d7fb41bb9b",
   "job_id": "job-research-57d78e1392b6c354",
   "data": {
     "hardware": "2基のNVIDIA H100 GPUを搭載した実機サーバで評価する。各GPUは96 GBのHBMを持ちPCIe 4.0で接続され、ホストは64コアAMD EPYC Milan CPUと256 GBメモリを備える。Qwen3-0.6B/Qwen3-32BはH100 1基、Llama3.2-1B/Llama3.3-70BはH100 2基のテンソル並列で実行する。",
     "software": "vLLM v0.15.1を基盤に約5千行のPythonでFASERを実装し、PyTorch、NumPy、SciPy、cuda-python経由のCUDA Green Contextsを利用する。CUDA 13.1とNVIDIA Driver 590.48.01を使用する。",
     "methodology": "ShareGPT、LongBench、HumanEvalを用い、平均入出力長はそれぞれ755/200、1738/90、171/98トークンである。到着パターンはDynamoLLMで利用されたAzure LLM呼出トレースから生成し、各構成を60秒ずつ5回、平均26リクエスト毎秒で測定する。主要評価は正規化遅延と出力トークン毎秒のスループットで、早期終了率、バッチサイズ・投機長分布、オフライン遅延モデルの平均絶対百分率誤差、各機構を段階的に加えるアブレーションも調べる。",
-    "baselines": ["SpecInfer", "AdaSpec", "Smurfs"],
-    "models": ["Qwen3-0.6B/Qwen3-32B", "Llama3.2-1B/Llama3.3-70B"],
-    "datasets": ["ShareGPT", "LongBench", "HumanEval", "Azure LLM呼出トレース"],
-    "metrics": ["要求遅延", "出力トークンスループット", "早期終了トークン率", "SM使用率", "プロファイル平均絶対百分率誤差"],
+    "baselines": [
+      "SpecInfer",
+      "AdaSpec",
+      "Smurfs"
+    ],
+    "models": [
+      "Qwen3-0.6B/Qwen3-32B",
+      "Llama3.2-1B/Llama3.3-70B"
+    ],
+    "datasets": [
+      "ShareGPT",
+      "LongBench",
+      "HumanEval",
+      "Azure LLM呼出トレース"
+    ],
+    "metrics": [
+      "要求遅延",
+      "出力トークンスループット",
+      "早期終了トークン率",
+      "SM使用率",
+      "プロファイル平均絶対百分率誤差"
+    ],
     "scope": "実機GPU上のオンライン投機的デコード・サービングを対象とし、動的な要求到着を再生する。Qwen3とLlama3の2つのドラフト・ターゲット組、3データセットで確認するが、H100以外のGPU、異種GPUクラスタ、複数ノード、モデル並列の多様な構成、実商用の長時間SLO違反率は直接評価していない。"
   },
   "reservation": {
-    "claim_id": "claim-5408261d6f8f32ffb0310619",
+    "claim_id": "claim-0b8a39423dcf38d7fb41bb9b",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
