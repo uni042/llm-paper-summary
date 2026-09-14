@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.14624",
+      "title": "Learning Agent Execution for KV-Cache Management in Agentic Serving",
+      "source_url": "https://arxiv.org/abs/2608.14624",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14624-cachescout-learning-agent-execution-kv-management.md",
+      "priority": 89,
+      "reason": "multi-agent servingでsystem prompt/tool definition等の固定contextが再利用可能にもかかわらずrecency-based KV evictionで次回実行前に失われる問題に対し、agent execution transitionをonline学習して将来reuseを予測し、evictionとproactive prefetchへ反映するCacheScoutを提案する。workflow graphやoffline trainingを要求せずvLLM上に実装し、実multi-agent workloadでKV hit rateを10〜18pt向上、mean TTFTを18〜45%削減、per-turn latencyを29〜38%削減、peak throughputを最大57%向上する。agent semanticsをcache replacement/prefetchへ直接接続する新しいworkload-aware KV管理として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2510.18586",
+      "title": "Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications",
+      "source_url": "https://arxiv.org/abs/2510.18586",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.18586-tokencake-agent-aware-kv-scheduling.md",
+      "priority": 84,
+      "reason": "function/tool callでagentが停止するmulti-agent workloadにおいて、GPU KV cacheのspace contentionとtool-call待ち中のidle residencyを同時に扱うagent-aware frameworkを提案する。Space Schedulerはdynamic memory partitioningでcritical agentのKVを保護し、Time Schedulerはtool call stall中にproactive offloadとpredictive uploadを行ってGPU memoryを再利用する。代表的multi-agent benchmarkでend-to-end latencyを47.06%以上削減し、effective GPU memory utilizationを最大16.9%改善する。offload/prefetchとprogram semanticsの共同設計として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2511.02230",
+      "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live",
+      "source_url": "https://arxiv.org/abs/2511.02230",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-ttl-scheduling.md",
+      "priority": 85,
+      "reason": "multi-turn agent programでtool callによるpauseごとにKV eviction/reload/recomputeとbatch再参加待ちが発生する問題に対し、tool durationを予測してKVをTTL付きでGPUへselective pinし、program-level FCFS schedulingでturn間のcontinuityを維持する。SWE-Bench/BFCL、Llama-3.1 8B/70Bで異なるhardware・DRAM offloading条件にわたりjob completion timeを改善する。tool-aware KV residencyとprogram-level schedulingを統合するためagentic servingのcache policy比較対象として重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-agentic-kv-15",
+    "axis": "agent semanticsを使うKV eviction・prefetch・TTL・offload scheduling",
+    "query_summary": "agentic servingへ探索を広げ、CacheScout（2608.14624）、Tokencake（2510.18586）、Continuum（2511.02230）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で3 IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はserving scheduler全般とspeculative decoding systemへ探索範囲を広げ、memory/offload系との差分が明確な強い未収録候補を探す。",
+    "empty_round_reason": null
+  }
+}
