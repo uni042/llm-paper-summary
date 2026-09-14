@@ -88,6 +88,21 @@ Library checkpoint bypassの正常系は、原則として `checkpoint_released 
 
 コミット名やrequest作成コミットだけを見て成功・失敗を推定しない。**最終的なclaim成否は対応するresult JSONの内容を正本とする。**
 
+### 4.2 最新requestのresult未生成時
+
+最新のclaim requestをGitHubへ耐久保存した直後、対応する `.survey/work-queue/claim-results/<request_id>.json` がまだ存在しないことは、claim-fastのpush反映待ちとして正常に起こり得る。**result未生成そのものをclaim失敗、queue停止、global dependency、STOP_RUNの根拠にしてはならない。**
+
+Scheduled Chat / Work workerは次を守る。
+
+1. request作成直後に対応resultが404 / not foundでも、同じrequest_idをpendingとして保持する。
+2. 別request_idを追加発行せず、最新HEADと同一request_idのresultを再取得する。
+3. Actions runが取得可能なら `survey-claim-fast` の当該push runを確認し、queued / in_progressはtransient pendingとして扱う。
+4. runがsuccessになったら最新HEADを再取得し、対応result JSONを読み、その内容でassignment有無を判定する。
+5. runがfailure / cancelled等でterminalになった場合だけclaim-fast障害として診断し、最新queue・write可否・fallback経路を再評価する。
+6. pending中にplatform limitなど別のhard conditionが成立していなければ、自発的にrunを終了しない。`continuation_gate.py`を使う場合は `--claim-result-pending yes` を渡す。
+
+特に、claim requestのcommitだけを読んで「高速レーンが詰まっている」「結果を取得できないため終了」と判断するのは禁止する。高速レーンが通常どおり数秒〜数十秒でresult commitを生成する場合があるため、**少なくとも対応Actionsのterminal状態または対応resultの出現のどちらかを確認してから**現行claim経路の成否を判断する。
+
 ## 5. Lease
 
 lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
@@ -116,5 +131,6 @@ lease運用は`always-on-worker.md` / `queue-v10.md`を優先する。
 - `record_bank_fallback: "library"` を無視して独自にbankを確保する。
 - 新規通常Research/Auditで固定`chat-inbox.json`を上書きする。
 - 古いclaim resultやコミット名だけを根拠に、現行claim経路が壊れていると断定する。
+- 最新requestのresultがまだ未生成という理由だけで、claim-fast停止やSTOP_RUNを宣言する。
 
 狙いは **claimの抱え込み・Library checkpointによる直列停止・record bankの並列競合を防ぎつつ、1件終わるたびに次jobへ即時移行してworkerを遊ばせないこと** である。
