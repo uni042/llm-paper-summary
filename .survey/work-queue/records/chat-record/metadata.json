@@ -4,10 +4,44 @@
   "slot": "metadata",
   "attempt_id": "attempt-b398f5917a1eff0518b4bce7",
   "job_id": "job-research-59a8ee8393fd93ee",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b398f5917a1eff0518b4bce7",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2606.15050",
+    "arxiv_id": "2606.15050",
+    "doi": "10.48550/arXiv.2606.15050",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
+    "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters: An Empirical Study of Multi-Site LLM Inference",
+    "summary": "Solyx AI Gridは、複数データセンタへ地理分散したGPU推論クラスタを単純なラウンドロビンや同時要求数だけで振り分けると、GPU世代差、構成不一致、障害、WAN遅延揺らぎを捉えられない問題を扱う。各GPUからDCGMでGPU利用率、VRAM利用率、SM・Tensor Core占有率、メモリ帯域利用率を取り、vLLMから待ち行列長、95パーセンタイルTTFT、エラー率、KVキャッシュ充填率を取り、さらに各拠点への往復時間と揺らぎを測る。合計10信号を0〜1の圧力値へ正規化して加重合成し、その逆数をEnvoyのxDSエンドポイント重みへ投影することで、要求ごとの送信先を連続的に変える。各レプリカにはLoading、Ready、Draining、Failed、Terminatedの状態機械を持たせ、500ms心拍の消失で障害先を素早く除外する。米国3データセンタのH100/H200計6基と、別試験のRTX PRO 6000 Blackwell SE計9基で実測し、8負荷すべてでラウンドロビン比1.56〜1.75倍のSLO内スループット、能力不一致誤送信率0.43%、障害迂回p99 1,247ms、WAN揺らぎ下でネットワーク信号追加によるP95 TTFT 27.8%改善を報告する。",
+    "list_summary": "DCGM・vLLM・WANの10信号を圧力値へ統合し、地理分散GPUへの要求重みをxDSで更新する。障害・能力差・ネットワーク揺らぎを単一制御面で扱う。",
+    "authors": ["Aleks Bernhard","Nithin Katla"],
+    "authors_affiliations": "Solyx AI, Inc., Miami, FL。",
+    "published": "2026-06-13",
+    "publication": "arXiv:2606.15050v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-06-13）。一次資料から査読付き採録は確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["地理分散LLM推論","GPUハードウェア遠隔測定","要求ルーティング","DCGM","WAN遅延","障害迂回","Envoy xDS"],
+    "importance": "高。クラスタ内部のKV認識ルータではなく、複数拠点をまたぐ上位制御面としてGPUハードウェア状態、アプリケーション指標、ネットワーク品質を要求配置へ同時利用する。実機の地理分散GPU群で能力不一致、障害、ネットワーク揺らぎまで分離評価しており、地域間LLMサービングの運用設計に直接関係する。",
+    "hardware_evaluation": "試験1は米国3データセンタにNVIDIA H100 SXM 80GBとH200 SXM 144GBを計6基。試験2は米国3データセンタにNVIDIA RTX PRO 6000 Blackwell SE 96GBを各3基、計9基。拠点間は公開インターネットWANを通る。",
+    "hardware_details": "試験1はLlama 3.1 70B AWQ INT4をH100/H200の同種・異種・能力不一致構成で評価。試験2は9基すべてでLlama 3.1 70B AWQ INT4をvLLM 0.6.6.post1、awq_marlin、接頭辞キャッシュ、分割プリフィル有効で実行する。各GPUにcellagentを置き500ms周期で制御面へ心拍と遠隔測定値を送る。",
+    "quality_effect": "モデルの生成計算や重みを変更せず、同じモデルを提供する複数レプリカのどこへ要求を送るかだけを変える。生成品質への直接的な近似影響はなく、サービス品質としてTTFT、成功率、SLO内処理量、障害迂回時間を改善する。能力不一致では長文要求を処理できないレプリカへの誤送信をエラー率信号で抑える。",
+    "storage_targets": ["各拠点のGPU推論レプリカ","制御面の10信号状態","Envoy xDSエンドポイント重み","vLLM KVキャッシュ状態"],
+    "bottlenecks": ["地理分散拠点間のWAN RTTと揺らぎ","GPUごとの熱・PCIe・利用率差","モデル能力不一致による高速失敗","障害検知のポーリング遅延","拠点横断ルーティングとKV接頭辞局所性の競合"],
+    "evidence_locations": ["§2.2-2.3","§4.1-4.4","§5.1-5.4","§6.1-6.9","§7.1-7.6","Appendix A-C"],
+    "source": "https://arxiv.org/abs/2606.15050",
+    "sources": ["https://arxiv.org/abs/2606.15050","https://arxiv.org/html/2606.15050"],
+    "code": null,
+    "implementation": "Envoyをデータ面としてそのまま使い、Solyx制御面がDCGM、Prometheus経由vLLM指標、能動WAN測定を集約し、xDS重みを継続更新する実システムを構築している。論文本文に著者公式コード公開URLは確認できない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2505.24095","arxiv_id":"2505.24095"},
+      {"canonical_id":"arXiv:2502.07903","arxiv_id":"2502.07903"},
+      {"canonical_id":"arXiv:2603.04445","arxiv_id":"2603.04445"},
+      {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML参考文献節。arXiv識別子を明示できる主要関連研究を構造化。",
+    "references_total": 12
+  },
+  "reservation": {"claim_id":"claim-b398f5917a1eff0518b4bce7","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
