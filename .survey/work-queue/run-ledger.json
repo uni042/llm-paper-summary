@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:28:22.341407+00:00",
+  "updated_at": "2026-09-14T22:31:39.653714+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:28:22.341407+00:00",
+      "last_recorded_at": "2026-09-14T22:31:39.653714+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34807211491:1",
-          "recorded_at": "2026-09-14T04:45:43.450799+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34807211491",
-            "run_attempt": "1",
-            "source_sha": "9b4e7dab79d0f7676bf32cf1ac4242f3698bbf56"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34807403344:1",
           "recorded_at": "2026-09-14T04:49:04.617401+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34904164521:1",
+          "recorded_at": "2026-09-14T22:31:39.653714+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34904164521",
+            "run_attempt": "1",
+            "source_sha": "e6a23f600ecffebdadfd2eded4233014251e745f"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20383,7 +20383,9 @@
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-memory-pooling-1.json",
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-nvme-kv-3.json",
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-recheck-empty-4.json",
-        ".survey/work-queue/results/20260915T0724JST-discovery-specialist-kv-agent-scheduling-1.json"
+        ".survey/work-queue/results/20260915T0724JST-discovery-specialist-kv-agent-scheduling-1.json",
+        ".survey/work-queue/results/20260915T0726JST-discovery-specialist-prefill-kv-adaptation-2.json",
+        ".survey/work-queue/results/20260915T0728JST-discovery-specialist-serving-security-routing-3.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
