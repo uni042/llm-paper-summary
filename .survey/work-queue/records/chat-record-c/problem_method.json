@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-f857346d91a0305041b26080",
+  "attempt_id": "attempt-2abf80a7bc3bccdd095302c9",
   "job_id": "job-research-d0c3e0e607ad747e",
   "data": {
     "problem": "投機的デコードは、複数候補トークンを作って基盤モデルで一括検証する代わりに追加メモリを消費する。Medusaのような候補木方式では、デコードヘッド重み、候補木Attention mask、候補ごとの一時バッファ、長い会話を想定したKVキャッシュが同時に必要になり、データセンターGPUでは許容できても24 GB以下のGPUではOOMになりやすい。特に多ターンチャットでは、最大コンテキスト長でKVを事前確保すると実際に使わない領域が大きく、候補木の多くは検証で棄却されるにもかかわらずバッファを占有する。大型モデルでは基盤モデル自体が単一GPUに収まらず、分散するとバッチ内要求ごとに受理トークン数が異なるため、通常の固定長バッチ処理をそのまま適用できない。",
@@ -29,8 +29,8 @@
     "system_design": "実行開始前のOptimizer Engineがメモリ予算からKV、候補木、ヘッド数、モデル精度を決定し、その結果でMedusaベース生成器を構成する。単一GPUでは候補木・KVの細粒度制御を中心にし、複数GPUでは基盤モデル層とKVを分割し、padding・position ID・Attention maskによるバッチ整列を追加する。資源量に応じて同じ制御順序を適用するため、固定構成の投機デコードを各GPUへ手動調整する必要を減らす。"
   },
   "reservation": {
-    "claim_id": "claim-f857346d91a0305041b26080",
-    "worker_id": "scheduled-chat-llm-discovery-overflow",
+    "claim_id": "claim-2abf80a7bc3bccdd095302c9",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
     "worker_kind": "scheduled_chat"
   }
 }

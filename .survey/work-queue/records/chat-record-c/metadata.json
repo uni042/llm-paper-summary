@@ -2,51 +2,103 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-f857346d91a0305041b26080",
+  "attempt_id": "attempt-2abf80a7bc3bccdd095302c9",
   "job_id": "job-research-d0c3e0e607ad747e",
   "data": {
     "canonical_id": "arXiv:2506.01986",
     "arxiv_id": "2506.01986",
     "doi": null,
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.DC"]},
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.DC"
+      ]
+    },
     "title": "SpecMemo: Speculative Decoding is in Your Pocket",
     "summary": "投機的デコードは複数候補を同時生成・検証して逐次復号を高速化する一方、候補木、Attention mask、複数デコードヘッド、将来長まで大きく確保したKVキャッシュのため、メモリ制約GPUではOOMを起こしやすい。SpecMemoは利用可能GPUメモリ、想定チャット回数・系列長、基盤モデル、KVキャッシュ、候補木、デコードヘッドの必要量を事前にモデル化し、予算内に収まるよう候補木を枝刈りし、必要ならヘッド数やモデル精度も段階的に下げる。単一GPUではMedusa型の投機デコードをメモリ予算へ適合させ、複数小容量GPUではLlama-2-70Bを層分割してKVも分散し、可変受理長に対応したバッチ投機デコードを提供する。",
     "list_summary": "投機的デコードの候補木・KVキャッシュ・デコードヘッドをGPUメモリ予算に合わせて自動調整し、Titan RTXで生成メモリ65%削減・スループット96%維持、8×MI250のLlama-2-70Bでは通常分散復号比2倍を示す。",
-    "authors": ["Selin Yildirim", "Deming Chen"],
+    "authors": [
+      "Selin Yildirim",
+      "Deming Chen"
+    ],
     "authors_affiliations": "University of Illinois Urbana-Champaign",
     "published": "2025-05-16",
     "publication": "arXiv",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
     "lineage": "投機的デコード／メモリ制約推論／分散・バッチ投機実行",
-    "topics": ["投機的デコード", "メモリ予算", "KVキャッシュ", "候補木枝刈り", "Medusa", "分散推論", "バッチ推論"],
+    "topics": [
+      "投機的デコード",
+      "メモリ予算",
+      "KVキャッシュ",
+      "候補木枝刈り",
+      "Medusa",
+      "分散推論",
+      "バッチ推論"
+    ],
     "importance": "投機的デコードの高速化率だけでなく、候補木やKV予約が生む追加メモリを明示的な資源予算として扱い、限られたVRAMに合わせて投機構成を変える点が重要である。さらに単一GPUの省メモリ化と、70Bモデルを小容量GPU群へ分散したバッチ投機デコードを同じ設計思想で扱い、投機実行系をデータセンター向け高メモリGPU以外へ広げる。",
     "hardware_evaluation": "単一GPU評価ではNVIDIA Titan RTX 24 GBを使用し、Vicuna-7B系Medusa構成をMT-Bench等で測定する。分散評価ではAMD MI250 GPUを8基用いてLlama-2-70B-Chatを層分割し、通常の分散バッチ復号と比較する。論文は16 GB級の制約GPUを想定したメモリ配分例も分析する。",
     "quality_effect": "候補木を小さくすると受理長が下がり得るため、SpecMemoは単純な最小メモリ化ではなく、同一予算内で候補系列数と受理率を保つ木形状を探索する。必要メモリがさらに不足する場合はデコードヘッド数を減らし、最後の手段として基盤モデル量子化へ移るため、その段階では品質影響が発生し得る。主要Titan RTX結果では生成メモリ65%削減時にも元の投機デコードスループットの96%を維持する。",
     "source": "https://arxiv.org/abs/2506.01986",
-    "sources": ["https://arxiv.org/abs/2506.01986", "https://arxiv.org/pdf/2506.01986"],
+    "sources": [
+      "https://arxiv.org/abs/2506.01986",
+      "https://arxiv.org/pdf/2506.01986"
+    ],
     "code": null,
     "implementation": "Medusaを基盤として、メモリモデル、候補木生成・枝刈り、ヘッド数・KVキャッシュ・量子化の自動調整、複数GPU層分割、可変受理長に対応するバッチ化を実装して評価する。論文本文から公式公開コードURLは確認できない。",
     "last_checked": "2026-09-14",
-    "storage_targets": ["GPU HBM/VRAM", "KVキャッシュ", "投機候補バッファ", "モデル重み"],
-    "bottlenecks": ["候補木Attention maskのバッファ", "過大なKVキャッシュ事前確保", "複数デコードヘッドの固定メモリ", "大型モデルの単一GPU収容不能", "可変受理長のバッチ化"],
+    "storage_targets": [
+      "GPU HBM/VRAM",
+      "KVキャッシュ",
+      "投機候補バッファ",
+      "モデル重み"
+    ],
+    "bottlenecks": [
+      "候補木Attention maskのバッファ",
+      "過大なKVキャッシュ事前確保",
+      "複数デコードヘッドの固定メモリ",
+      "大型モデルの単一GPU収容不能",
+      "可変受理長のバッチ化"
+    ],
     "hardware_details": "NVIDIA Titan RTX 24 GB、AMD MI250×8。単一GPUではVicuna-7B/Medusa、分散ではLlama-2-70B-Chatを評価。",
-    "evidence_locations": ["第1節 問題設定", "第3節 メモリモデルとSpecMemo", "第3.2節 Attention mask最適化", "分散・バッチ設計", "第4節 評価", "付録A"],
+    "evidence_locations": [
+      "第1節 問題設定",
+      "第3節 メモリモデルとSpecMemo",
+      "第3.2節 Attention mask最適化",
+      "分散・バッチ設計",
+      "第4節 評価",
+      "付録A"
+    ],
     "references": [
-      {"canonical_id": "arXiv:2401.10774", "arxiv_id": "2401.10774"},
-      {"canonical_id": "arXiv:2302.01318", "arxiv_id": "2302.01318"},
-      {"canonical_id": "arXiv:2401.15077", "arxiv_id": "2401.15077"},
-      {"canonical_id": "arXiv:2406.16858", "arxiv_id": "2406.16858"},
-      {"canonical_id": "arXiv:2502.17421", "arxiv_id": "2502.17421"}
+      {
+        "canonical_id": "arXiv:2401.10774",
+        "arxiv_id": "2401.10774"
+      },
+      {
+        "canonical_id": "arXiv:2302.01318",
+        "arxiv_id": "2302.01318"
+      },
+      {
+        "canonical_id": "arXiv:2401.15077",
+        "arxiv_id": "2401.15077"
+      },
+      {
+        "canonical_id": "arXiv:2406.16858",
+        "arxiv_id": "2406.16858"
+      },
+      {
+        "canonical_id": "arXiv:2502.17421",
+        "arxiv_id": "2502.17421"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "primary-reference-section",
     "references_total": 36
   },
   "reservation": {
-    "claim_id": "claim-f857346d91a0305041b26080",
-    "worker_id": "scheduled-chat-llm-discovery-overflow",
+    "claim_id": "claim-2abf80a7bc3bccdd095302c9",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
     "worker_kind": "scheduled_chat"
   }
 }
