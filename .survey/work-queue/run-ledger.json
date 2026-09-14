@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:51:52.793092+00:00",
+  "updated_at": "2026-09-14T23:08:14.195490+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:51:52.793092+00:00",
+      "last_recorded_at": "2026-09-14T23:08:14.195490+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 76,
         "audit_completed": 0,
-        "discovery_completed": 6,
+        "discovery_completed": 7,
         "blocked": 1,
-        "new_jobs": 13,
+        "new_jobs": 14,
         "new_papers": 79,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34810630368:1",
-          "recorded_at": "2026-09-14T05:43:10.954904+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34810630368",
-            "run_attempt": "1",
-            "source_sha": "e1177bc430991f68e4a4d5c48a29de5850c3e815"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34810859428:1",
           "recorded_at": "2026-09-14T05:47:14.668410+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34907191201:1",
+          "recorded_at": "2026-09-14T23:08:14.195490+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34907191201",
+            "run_attempt": "1",
+            "source_sha": "2c414406a7a70b179e47b9a6b76ef7cd937ca5f4"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20265,6 +20265,14 @@
           "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-f7399b3e773e1558",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20358,6 +20366,13 @@
           "type": "research",
           "canonical_id": "arXiv:2512.16056",
           "title": "MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services"
+        },
+        {
+          "job_id": "job-18b34945adc3866a",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
         }
       ],
       "new_paper_ids": [
@@ -20464,7 +20479,9 @@
         ".survey/work-queue/results/20260915T0741JST-discovery-specialist-fault-recovery-9.json",
         ".survey/work-queue/results/20260915T0742JST-discovery-specialist-transfer-path-10.json",
         ".survey/work-queue/results/20260915T0743JST-discovery-specialist-emulation-jit-security-11.json",
-        ".survey/work-queue/results/20260915T0744JST-discovery-specialist-simulation-12.json"
+        ".survey/work-queue/results/20260915T0744JST-discovery-specialist-simulation-12.json",
+        ".survey/work-queue/results/20260915T0808JST-discovery-specialist-elastic-kv-1.json",
+        ".survey/work-queue/results/20260915T0812JST-discovery-specialist-pnm-kv-2.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20502,7 +20519,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 539,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
