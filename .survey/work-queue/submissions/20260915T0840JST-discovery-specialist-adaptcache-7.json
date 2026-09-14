@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-18b34945adc3866a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2509.00105",
+      "title": "AdaptCache: Adaptive KV Cache Storage Hierarchy for Low-Delay LLM Serving",
+      "source_url": "https://arxiv.org/abs/2509.00105",
+      "paper_path": "papers/inference/05-kv-cache-offloading/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md",
+      "priority": 84,
+      "reason": "DRAM+SSDのKV cache hierarchyで、単純なplacementではSSD hit時のload delayが支配的になる問題に対し、KV entryごとに圧縮方式・圧縮率・配置tierを選び、生成品質を維持しながらDRAM hit率とload delayを最適化する。SOSP 2025 Big Memory workshop採択版で、3 taskにおいて同等品質時のdelayを1.43〜2.4倍削減、同等delay時のqualityを6〜55%改善と報告する。SSD-backed KVを単純容量拡張ではなく品質・圧縮・配置の共同最適化として扱うため、階層メモリ/SSD重点系統に有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-adaptcache-7",
+    "axis": "DRAM/SSD KV階層における圧縮率・配置・品質の共同最適化",
+    "query_summary": "SmartSSD/NVMe隣接軸からSSD-backed KV hierarchyを探索し、AdaptCache（arXiv:2509.00105）を評価した。最新identityのKV offloading lineageでは2507.03153から2511.00321の間に同IDがなく、identity-delta一覧にも2509.00105.jsonが存在しないことを確認した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はMoE expert cache/offloadへ移り、SSD/CPU expert residency、routing locality、prefetch schedulingの未収録候補を探索する。",
+    "empty_round_reason": null
+  }
+}
