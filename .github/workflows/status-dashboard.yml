@@ -77,7 +77,8 @@ jobs:
           if [ "$EVENT_NAME" = 'workflow_dispatch' ]; then
             should_publish=true
           else
-            git diff-tree --no-commit-id --name-only -r "$TRIGGER_SHA" \
+            git diff-tree --no-commit-id --name-only -r -m "$TRIGGER_SHA" \
+              | sort -u \
               | python .survey/scripts/status_publish_gate.py --commit-message "$TRIGGER_MESSAGE" \
               > /tmp/status-publish-gate.txt
             should_publish="$(cat /tmp/status-publish-gate.txt)"
