@@ -166,6 +166,9 @@ def render_paper(record: dict[str, Any]) -> str:
     front_meta["summary"] = summary
     front_meta["list_summary"] = list_summary
     front_meta["source"] = source
+    # `code` is a required nullable schema key. Keep an explicit null when no
+    # official implementation URL is known instead of silently dropping it.
+    front_meta["code"] = meta.get("code")
     if "references" in meta:
         front_meta["references"] = meta["references"]
     front_meta.setdefault("last_audited", None)

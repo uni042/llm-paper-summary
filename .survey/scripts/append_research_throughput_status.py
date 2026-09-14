@@ -17,6 +17,7 @@ SPECIALIST_RESEARCH_SWITCH = 50
 LOW_COMPLETIONS = 2
 TARGET_COMPLETIONS = 3
 WORKER_SLOT_RE = re.compile(r"(?P<hour>\d{2})(?P<minute>00|30)(?:\D|$)")
+WORKER_RUN_RE = re.compile(r"(?P<stamp>\d{8}T\d{4})JST", re.IGNORECASE)
 DASHBOARD_LABEL_REPLACEMENTS = (
     ("次回保守までの通常run", "保守カウンタ（通常run）"),
     ("探索専用worker run（毎時枠）", ":00 補助worker Discovery run（毎時枠）"),
@@ -136,6 +137,64 @@ def _worker_lane(worker_id: Any) -> str:
     return "aux" if minute == "00" else "normal"
 
 
+def _claim_run_key(claim: dict[str, Any]) -> str | None:
+    """Recover the originating Scheduled Chat run from the durable worker id."""
+    worker_id = str(claim.get("worker_id") or "")
+    match = WORKER_RUN_RE.search(worker_id)
+    if match is None:
+        return None
+    try:
+        local = datetime.strptime(match.group("stamp"), "%Y%m%dT%H%M").replace(
+            tzinfo=timezone(timedelta(hours=9))
+        )
+    except ValueError:
+        return None
+    return local.isoformat(timespec="seconds")
+
+
+def _latest_claim_run_key(
+    claims: dict[str, dict[str, Any]],
+    lane: str,
+) -> str | None:
+    """Return the newest Scheduled Chat run represented by durable claims."""
+    candidates: list[tuple[datetime, str]] = []
+    for claim in claims.values():
+        if _worker_lane(claim.get("worker_id")) != lane:
+            continue
+        run_key = _claim_run_key(claim)
+        stamp = _dt(run_key)
+        if run_key is None or stamp is None:
+            continue
+        jst = stamp.astimezone(timezone(timedelta(hours=9)))
+        if lane == "normal" and (jst.minute != 30 or jst.hour == 8):
+            continue
+        candidates.append((stamp, run_key))
+    return max(candidates)[1] if candidates else None
+
+
+def _completion_counts_by_claim_run(
+    entries: list[dict[str, Any]],
+    claims: dict[str, dict[str, Any]],
+) -> Counter[str]:
+    """Count completed Research by the run that claimed it, not Actions completion time."""
+    counts: Counter[str] = Counter()
+    seen: set[str] = set()
+    for entry in entries:
+        for transition in entry.get("terminal_transitions") or []:
+            if not isinstance(transition, dict):
+                continue
+            if transition.get("type") != "research" or transition.get("to") != "completed":
+                continue
+            job_id = str(transition.get("job_id") or "")
+            if not job_id or job_id in seen:
+                continue
+            seen.add(job_id)
+            run_key = _claim_run_key(claims.get(job_id) or {})
+            if run_key:
+                counts[run_key] += 1
+    return counts
+
+
 def _completion_attribution(
     entries: list[dict[str, Any]],
     claims: dict[str, dict[str, Any]],
@@ -231,12 +290,19 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     research = ((queue.get("counts") or {}).get("research") or {})
     claiming = queue.get("claiming") or {}
     entries = [entry for entry in (ledger.get("entries") or []) if isinstance(entry, dict)]
-    latest = _latest_normal_run(entries, maintenance)
+    latest_ledger = _latest_normal_run(entries, maintenance)
+    completed_by_run = _completion_counts_by_claim_run(entries, claims)
+    latest_claim_run = _latest_claim_run_key(claims, "normal")
 
     ready = int(research.get("ready") or 0)
     active = int(claiming.get("actively_claimed") or 0)
     claimable = int(claiming.get("claimable") or 0)
-    latest_completed = int((latest.get("counts") or {}).get("research_completed") or 0)
+    if latest_claim_run:
+        run_key = latest_claim_run
+        latest_completed = int(completed_by_run.get(latest_claim_run) or 0)
+    else:
+        run_key = str(latest_ledger.get("run_key") or "—")
+        latest_completed = int((latest_ledger.get("counts") or {}).get("research_completed") or 0)
     oldest_age = _oldest_active_claim_age(repo_root, now)
     high_backlog = ready >= HIGH_BACKLOG and (active + claimable) > 0
 
@@ -249,7 +315,7 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
     auxiliary_mode = "通常worker補助（Research/Audit）" if ready > SPECIALIST_RESEARCH_SWITCH else "Discovery優先"
     health = "OK"
     warning = ""
-    if high_backlog and latest and latest_completed < LOW_COMPLETIONS:
+    if high_backlog and run_key != "—" and latest_completed < LOW_COMPLETIONS:
         health = "LOW"
         warning = (
             f"- **処理速度 LOW**: ready={ready} の高在庫状態で、最新通常runのResearch完了は "
@@ -265,7 +331,6 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         )
 
     age_text = "—" if oldest_age is None else f"{oldest_age} min"
-    run_key = str(latest.get("run_key") or "—")
     return (
         f"{START}\n"
         "## ワーカー稼働状況\n\n"
@@ -288,6 +353,7 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
         f"| 最新通常run | **{run_key}** |\n"
         f"| 最新通常runのResearch完了 | **{latest_completed}** |\n"
         f"| 最古の有効claimの経過時間 | **{age_text}** |\n\n"
+        "run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimのworker_idに埋め込まれた元Scheduled Chat run** へ帰属させます。\n\n"
         f"Research readyが **{SPECIALIST_RESEARCH_SWITCH}本を超える間は`:00` workerも論文精読側** に回り、"
         f"**{SPECIALIST_RESEARCH_SWITCH}本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、"
         f"readyが **{HIGH_BACKLOG}本以上** で処理可能なResearchがある間はResearch/Auditを優先します。\n\n"
