@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-103100fe66ff521e20fe8bd0",
+  "attempt_id": "attempt-be479323bcae84e892d40029",
   "job_id": "job-research-89a31b528bef1df7",
   "data": {
     "limitations": "評価の中心はオフライン高スループット推論で、対話型サービスの厳密な尾遅延やサービス品質目標を中心には扱わない。E2〜E5は45 Gbps環境を帯域制限した模擬広域条件で、実ネットワークの帯域変動、パケット損失、ノード参加離脱、障害復旧の影響は十分に検証されていない。配置は連続層を持つ線形パイプラインが基本で、Helixの任意経路に比べ一般性が低い。圧縮はFP16活性値のバイト分布に依存し、他精度形式や将来モデルで同じ圧縮率になる保証はない。投機と圧縮は条件次第で逆効果になるため、プロファイルと切替判断が外れると性能が悪化しうる。",
@@ -10,5 +10,9 @@
     "implementation_status": "著者公開のBloomBee実装がGitHubにあり、論文では約31,216行、複数の現実的ユースケースへの展開を報告する。モデル統合用の仕様記述とコード生成も付録で説明され、統合時間85%、コードレビュー70%、配備エラー95%削減、反復速度3倍という開発工程の測定も示される。ただしこれら開発工程指標は主たる通信性能評価とは別の付録結果である。",
     "research_positioning": "データセンター外の遊休GPUを束ねる分散推論では、計算量削減だけではなくネットワーク帯域を一次資源として扱う必要があることを実測で示す研究。特に、メモリ退避によるノード削減と通信最適化を結び付けているため、階層メモリやKVキャッシュ研究とサービング・スケジューリング研究の接点に位置する。SSD/NVMeを直接利用する方式ではないが、より遅い階層へ状態を逃がして高価な資源使用量と通信ホップを減らす設計原理は、CPU/SSD階層を含む将来の分散推論にも関連する。"
   },
-  "reservation": {"claim_id": "claim-103100fe66ff521e20fe8bd0", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-be479323bcae84e892d40029",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
