@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:41:36.019229+00:00",
+  "updated_at": "2026-09-14T22:44:55.015484+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:41:36.019229+00:00",
+      "last_recorded_at": "2026-09-14T22:44:55.015484+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 75,
         "audit_completed": 0,
-        "discovery_completed": 5,
+        "discovery_completed": 6,
         "blocked": 1,
-        "new_jobs": 11,
+        "new_jobs": 13,
         "new_papers": 79,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34810278371:1",
-          "recorded_at": "2026-09-14T05:37:09.680281+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34810278371",
-            "run_attempt": "1",
-            "source_sha": "14a514e1c5bbd73a0afc5b6d6994405a881cea3a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34810421646:1",
           "recorded_at": "2026-09-14T05:39:37.647283+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34905238438:1",
+          "recorded_at": "2026-09-14T22:44:55.015484+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34905238438",
+            "run_attempt": "1",
+            "source_sha": "58fae9ef437a39496fde2ebc1e47b9c3021c0ed6"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20249,6 +20249,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-4869ced76a02ed91",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20328,6 +20336,20 @@
           "type": "research",
           "canonical_id": "arXiv:2609.12449",
           "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms"
+        },
+        {
+          "job_id": "job-f7399b3e773e1558",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-4714939abf3ccf8f",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2512.16056",
+          "title": "MultiPath Transfer Engine: Breaking GPU and Host-Memory Bandwidth Bottlenecks in LLM Services"
         }
       ],
       "new_paper_ids": [
@@ -20431,7 +20453,9 @@
         ".survey/work-queue/results/20260915T0738JST-discovery-specialist-agent-native-6.json",
         ".survey/work-queue/results/20260915T0739JST-discovery-specialist-moe-kernel-7.json",
         ".survey/work-queue/results/20260915T0740JST-discovery-specialist-edge-energy-8.json",
-        ".survey/work-queue/results/20260915T0741JST-discovery-specialist-fault-recovery-9.json"
+        ".survey/work-queue/results/20260915T0741JST-discovery-specialist-fault-recovery-9.json",
+        ".survey/work-queue/results/20260915T0742JST-discovery-specialist-transfer-path-10.json",
+        ".survey/work-queue/results/20260915T0743JST-discovery-specialist-emulation-jit-security-11.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
