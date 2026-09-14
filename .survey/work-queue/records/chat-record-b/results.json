@@ -4,10 +4,24 @@
   "slot": "results",
   "attempt_id": "attempt-4b9a71ce575511cd9107babd",
   "job_id": "job-research-706a6d2571f24fb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4b9a71ce575511cd9107babd",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "FlexServeは、セキュア推論の計算そのものよりも、GB級メモリとNPUをセキュア世界へ出し入れする資源管理費を削減することで大きな効果を得る。Flex-Memは8GBのセキュアメモリ割当を6440.67msから568.58msへ11.33倍、回収を503.64msから157.69msへ3.19倍高速化し、二段階非同期回収は128MBのクリティカル待ちを74.69msから2.89msへ縮める。Flex-NPUのsecure/normal切替は0.21msである。単一モデルのコールドスタートではCPUのみの素朴TrustZone構成比で平均7.15倍・最大14.44倍、パイプラインとセキュアNPUを既に使うStrawman-OPT比でも平均1.85倍・最大2.42倍の先頭トークン遅延改善を示す。論文の全条件集約では平均10.05倍/2.44倍を報告する。複数モデルとエージェントワークフローでは動的キャッシュと先読みの効果が加わり、通常アプリ性能も非推論時の97.2%を維持する。",
+    "key_results": [
+      {"metric":"8GBセキュアメモリ割当","value":"568.58ms、11.33倍高速","baseline":"CMA 6440.67ms","condition":"Flex-Memと連続セキュアメモリ確保の比較","interpretation":"通常ページを権限切替でセキュア化するため、断片化環境で高価な物理ページ圧縮を避けられる。"},
+      {"metric":"8GBセキュアメモリ回収","value":"157.69ms、3.19倍高速","baseline":"CMA 503.64ms","condition":"Flex-Mem reclaim","interpretation":"ページ単位の回収と非同期後処理により通常世界へ資源を早く返せる。"},
+      {"metric":"128MBクリティカル回収待ち","value":"2.89ms","baseline":"二段階・非同期回収なし74.69ms","condition":"two-stage asynchronous reclamation","interpretation":"モデル重みを先に返し、KVの暗号化書戻しを後段へ移すことで、高価な状態整理を通常アプリの待ち時間から外す。"},
+      {"metric":"Flex-NPU切替","value":"0.21ms","baseline":"固定セキュアNPUまたはCPU-only推論","condition":"secure/normal mode transition","interpretation":"必要な期間だけNPUをセキュア側へ貸し出せるため、固定予約による通常アプリへの資源損失を抑える。"},
+      {"metric":"単一モデル先頭トークン遅延","value":"平均7.15倍、最大14.44倍高速","baseline":"CPU-only Strawman","condition":"キャッシュなし、複数モデル・入力長","interpretation":"NPU利用と細粒度セキュアメモリ割当を組み合わせることで素朴なTrustZone実行の主要律速を除去する。"},
+      {"metric":"単一モデル先頭トークン遅延","value":"平均1.85倍、最大2.42倍高速","baseline":"Strawman-OPT","condition":"両方式ともパイプラインとsecure NPUを利用","interpretation":"計算器の高速化だけでは残るメモリ確保・ロード・資源競合の費用をFlexServeがさらに削減する。"},
+      {"metric":"背景メモリ圧力下の先頭トークン遅延","value":"平均1.87倍、最大3.05倍高速","baseline":"Strawman-OPT","condition":"background memory load 0〜10GB","interpretation":"通常メモリが断片化するほどCMAを使わないFlex-Memの効果が大きくなる。"},
+      {"metric":"マルチモデル先頭トークン遅延","value":"Strawman比平均8.84倍、Strawman-OPT比最大2.53倍高速","baseline":"二つのTrustZone構成","condition":"4GBキャッシュ、複数モデル群","interpretation":"モデル/KVの動的キャッシュとワークフロー先読みがモデル切替のロード遅延を削減する。"},
+      {"metric":"エージェントワークフロー応答遅延","value":"最大24.30倍/4.05倍、平均14.15倍/2.94倍高速","baseline":"Strawman / Strawman-OPT","condition":"10 mobile agent workflows","interpretation":"複数モデルを連鎖的に呼ぶ処理では、次モデル重みとKVの先読みがコールドスタートを繰り返し回避する。"},
+      {"metric":"通常世界アプリ性能","value":"非推論baselineの97.2%","baseline":"LLM推論なし","condition":"協調メモリ管理下の通常アプリ群","interpretation":"セキュアLLMキャッシュを固定占有せず必要量をOSへ返すため、通常アプリとの共存性を高く保てる。"},
+      {"metric":"FlexServeと非保護NW-Baseのデコード処理率差","value":"0.57〜6.29%低下、平均3.01%","baseline":"normal-world NPU inference","condition":"重み常駐、NPU/パイプライン使用","interpretation":"定常デコード時のセキュリティ隔離そのものの処理率費用は比較的小さい。"}
+    ],
+    "negative_results": "NanoPC-T6にはインラインストレージ暗号化・復号ハードウェアがないため、論文が示す平均16.06%の追加先頭トークン遅延削減は実機測定ではなくエミュレーションである。通常世界のクライアントアプリが要求を送る場合、侵害されたカーネルはそのクライアントの入力・出力を観測または改変でき、端から端の保護にはセキュア世界クライアントが必要になる。サイドチャネル、物理攻撃、サービス拒否も範囲外である。またデコードが長いワークフローではコールドスタート最適化が全処理に占める割合が小さくなり、最大値ほど大きな全体高速化は得られない。",
+    "interpretation": "結果は、端末内セキュアLLMの主な性能問題が暗号処理やTEE境界そのものだけでなく、固定セキュア領域と通常OSの間で資源を融通できない管理方式にあることを示す。モデル重みやKVのようなGB級状態は再利用価値が高い一方、通常アプリも同じDRAM/NPUを必要とするため、固定予約と毎回破棄のどちらも非効率である。FlexServeはアクセス権だけを厳しく隔離し、量の決定を通常OS、具体的なページ選択をLLMランタイムへ分担することで、セキュリティ境界を維持したまま既存OSの資源圧力制御を利用する。",
+    "quality_impact": "FlexServeは推論品質を近似して速度を得る方式ではなく、同一モデルのセキュア実行経路と資源管理を改善する。評価モデルはNPUに合わせてINT8量子化されるが、Flex-Mem、Flex-NPU、キャッシュ、回収、先読み自体は生成品質を追加で変化させない。"
+  },
+  "reservation": {"claim_id":"claim-4b9a71ce575511cd9107babd","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
