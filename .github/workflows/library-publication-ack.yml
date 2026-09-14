@@ -1,0 +1,86 @@
+name: Library publication acknowledgement
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.survey/work-queue/fallback-archive/*.json'
+      - '.survey/work-queue/submissions/research/*.json'
+      - '.survey/work-queue/submissions/audit/*.json'
+      - '.survey/work-queue/results/research/*.json'
+      - '.survey/work-queue/results/audit/*.json'
+      - '.survey/work-queue/jobs/*.json'
+      - 'papers/**/*.md'
+  workflow_dispatch:
+  schedule:
+    - cron: '7/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: library-publication-ack-main
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build acknowledgement manifest
+        run: |
+          python .survey/scripts/library_ack_manifest.py \
+            --repo-root . \
+            --output .survey/work-queue/library-ack-manifest.json
+
+      - name: Commit acknowledgement manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET='.survey/work-queue/library-ack-manifest.json'
+          git config user.name 'survey-helper[bot]'
+          git config user.email 'survey-helper[bot]@users.noreply.github.com'
+
+          if git diff --quiet -- "$TARGET" && [ -z "$(git ls-files --others --exclude-standard -- "$TARGET")" ]; then
+            echo 'Library acknowledgement manifest is already current.'
+            exit 0
+          fi
+
+          git add "$TARGET"
+          git commit -m 'survey-helper: refresh Library publication acknowledgements'
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Concurrent durable-state change; rebuilding acknowledgement manifest.'
+              git reset --hard origin/main
+              python .survey/scripts/library_ack_manifest.py \
+                --repo-root . \
+                --output "$TARGET"
+              if git diff --quiet -- "$TARGET" && [ -z "$(git ls-files --others --exclude-standard -- "$TARGET")" ]; then
+                echo 'Latest main already contains an equivalent acknowledgement manifest.'
+                exit 0
+              fi
+              git add "$TARGET"
+              git commit -m 'survey-helper: refresh Library publication acknowledgements'
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race on attempt ${attempt}; retrying."
+            sleep $((attempt * 2))
+          done
+
+          echo 'Failed to publish Library acknowledgement manifest after retries.' >&2
+          exit 1
