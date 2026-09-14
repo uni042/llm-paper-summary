@@ -2,67 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-62f7f7eb017737b776892798",
-  "job_id": "job-research-825504607247e69d",
-  "data": {
-    "overview": "提案方式は素朴な分割推論に対して、1トークン当たり遅延をCPU端末214.5→151.4ms（29.4%削減）、GPU端末178.2→96.0ms（46.1%削減）、組込み端末224.0→164.0ms（26.8%削減）へ短縮した。GPU端末では128出力トークンの総遅延が12.3秒となり、投機長5、96次元の端末側部分LM-head、言語適応ロジット圧縮が主要な寄与を持つ。下り通信は中国語で約56〜58%、英語で約66〜67%削減する一方、混合言語では全語彙を残すためほぼ削減しない。品質は完全クラウドに対して次トークン一致98.6%、perplexity 7.82→7.87、MMLU 54.6→54.3など小幅な差に留まる。性能と露出削減の両方を得るが、クラウドは認可された特徴テンソルや投機検証痕跡を閲覧でき、形式的プライバシー保証はない。",
-    "key_results": [
-      {
-        "metric": "GPU端末の1トークン当たり遅延",
-        "value": "178.2ms → 96.0±2.8ms、46.1%削減",
-        "baseline": "Naive split inference",
-        "condition": "H20クラウド＋GPU端末、100Mbps/20ms RTT、入力512",
-        "interpretation": "投機的デコード、部分LM-head、通信圧縮、GPUローカル実行の組合せで最も大きい遅延削減を得る。"
-      },
-      {
-        "metric": "CPU端末の1トークン当たり遅延",
-        "value": "214.5ms → 151.4±4.1ms、29.4%削減",
-        "baseline": "Naive split inference",
-        "condition": "CPU端末経路",
-        "interpretation": "GPU投機ほど深く並列化できないが、ブロックストリーミングと部分射影で通信・待ち時間を削減する。"
-      },
-      {
-        "metric": "組込み端末の1トークン当たり遅延",
-        "value": "224.0ms → 164.0±4.6ms、26.8%削減",
-        "baseline": "Naive split inference",
-        "condition": "8GB ARM、ONNX Runtime 8-bit、投機長2",
-        "interpretation": "端末能力が低くても量子化と短い投機を使うことで分割方式の利得を維持する。"
-      },
-      {
-        "metric": "下り通信量",
-        "value": "GPU端末: 中国語62.1KB/token（57.6%減）、英語47.8KB/token（67.4%減）、混合151.3KB/token（0%）",
-        "baseline": "全15万語INT8ロジット相当",
-        "condition": "言語適応マスク、中国語40%・英語30%",
-        "interpretation": "語彙候補を安全に絞れる単一言語で通信削減が大きく、混合言語では利得を捨てて全語彙を維持する。"
-      },
-      {
-        "metric": "投機長感度",
-        "value": "N=1:119ms/8.4tps、N=5:96ms/10.4tps、N=8:110ms/9.1tps",
-        "baseline": "同一GPU端末経路",
-        "condition": "受理率は96.5%→85.4%→73.6%",
-        "interpretation": "投機を深くしすぎると棄却計算が増え、N=5付近で速度と受理率の均衡が最良になる。"
-      },
-      {
-        "metric": "品質差",
-        "value": "次トークン一致98.6%、PPL 7.82→7.87、MMLU 54.6→54.3、GSM8K 49.8→49.4、HumanEval 27.4→27.1",
-        "baseline": "Full cloud",
-        "condition": "提案方式",
-        "interpretation": "通信圧縮・部分投影を導入しても品質差は小さいが、完全一致ではなく近似的な差が残る。"
-      },
-      {
-        "metric": "構成要素アブレーション",
-        "value": "GPU完全構成96ms/62.1KB；投機なし126ms；言語圧縮なし114ms/151.3KB；分割射影なし137ms/151.3KB；CPUブロック重畳なし184ms",
-        "baseline": "Full proposed system",
-        "condition": "各主要機構を個別無効化",
-        "interpretation": "投機・語彙圧縮・分割射影・CPU重畳がそれぞれ性能へ寄与し、単一機構だけの改善ではない。"
-      }
-    ],
-    "negative_results": "混合言語では語彙マスクを適用せず151KB/token前後を送るため通信量削減がほぼ得られない。GPU投機長はN=5を超えると受理率低下で悪化し、N=8では110msまで戻る。端末側LM-head次元も増やし続ければよいわけではなく、D_end=512では109msへ悪化する。提案方式は完全クラウドと品質が完全一致せず、perplexityや下流評価で小幅な低下がある。さらに暗号化は転送路のみを守り、クラウド処理時の認可テンソルは復号されるため、悪意あるクラウドや表現逆転攻撃に対する形式保証は示されない。",
-    "interpretation": "性能改善は三つの資源を別々に最適化した結果と読める。端末計算は部分LM-headと軽量草稿へ限定し、重いデコーダをH20へ残す。往復回数は投機で複数トークンをまとめて検証して償却し、1回当たり通信量は言語別語彙圧縮とINT8で減らす。GPU端末は端末計算余力が大きいため三者の重畳が最も効き、CPU/ARMでは投機を浅くして局所計算の増大を抑える。混合言語や過剰投機では圧縮/並列化の前提が崩れるため利得が低下する。",
-    "quality_impact": "完全クラウドと同一計算を厳密に保つ方式ではなく、INT8転送、部分LM-head、言語候補マスク、軽量草稿を用いるため小幅な品質差が実測される。一方、クラウド目標モデルによる投機検証と端末での部分ロジット融合により、端末だけの軽量モデル（次トークン一致84.2%、PPL10.94）より大幅に完全モデル品質へ近い。"
-  },
+  "attempt_id": "attempt-cca7e7bbfc9f8b8d085149eb",
+  "job_id": "job-research-8d796418f10a7d6b",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-62f7f7eb017737b776892798",
+    "claim_id": "claim-cca7e7bbfc9f8b8d085149eb",
     "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
     "worker_kind": "scheduled_chat"
   }
