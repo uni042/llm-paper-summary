@@ -38,7 +38,7 @@ class FallbackDispatchBatchTests(unittest.TestCase):
                 mock.patch.object(dispatcher, "_is_record_fallback", return_value=True),
                 mock.patch.object(dispatcher.record_replay, "materialize", side_effect=materialize),
             ):
-                result = dispatcher.dispatch(root)
+                result = dispatcher.dispatch(root, max_items=50)
 
             self.assertEqual(result["processed_count"], 2)
             self.assertEqual([row["envelope_id"] for row in result["processed"]], ["env-a", "env-b"])
@@ -62,7 +62,7 @@ class FallbackDispatchBatchTests(unittest.TestCase):
                 mock.patch.object(dispatcher, "_is_record_fallback", return_value=True),
                 mock.patch.object(dispatcher.record_replay, "materialize", side_effect=materialize),
             ):
-                result = dispatcher.dispatch(root)
+                result = dispatcher.dispatch(root, max_items=50)
 
             self.assertEqual(result["processed_count"], 1)
             self.assertEqual(result["processed"][0]["envelope_id"], "env-b")
