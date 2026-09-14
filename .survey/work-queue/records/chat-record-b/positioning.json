@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-b56259f8a19e558884aa1e18",
   "job_id": "job-research-abd22d64f0da4bcf",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b56259f8a19e558884aa1e18",
-    "worker_id": "scheduled-chat-paper-20260915T0630JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "novelty_vs_prior": "一般的なLLM推論サーベイがGPUデータセンターの圧縮・KV・クラスタスケジューリングに偏り、オンデバイスLLMサーベイが単一スマートフォン/PC内の圧縮と実行系を中心にするのに対し、本論文は無線ネットワークを含む端末・エッジ・クラウド間の配置と通信を第一級の設計変数にする。既存のエッジLLM概説より、LLM固有の状態保持/二相非対称性と、無線変動/移動/異質性を明示的に接続し、評価指標と実験基盤までまとめる。",
+    "implementation_status": "新規システム実装を提案するサーベイではないため、著者固有の実装公開は主成果ではない。既存の公開ランタイム、評価ツール、モデル/データセットを体系化している。",
+    "research_positioning": "`papers/survey/llm-serving-systems`に置くべき横断サーベイ。推論手法そのものではなく、ネットワークエッジでのLLMサービング研究を、配置、圧縮/デコード、計算、KV/階層メモリ、無線通信、評価方法の接点から整理する。",
+    "relation_to_existing_repository": "FlexGen等のGPU-CPU-ストレージオフロード、vLLM/PagedAttention等のKV管理、Sarathi-Serve等のプリフィル/デコードスケジューリング、分割推論/端末協調を、無線エッジの変動と地理分散を含む上位設計空間へ位置付ける。SSD/NVMe活用の研究に対しては、ストレージ階層だけでなく端末/エッジ間の状態配置・移送を統合する拡張方向を示す。",
+    "limitations": "2026年4月時点までの急速に変化する分野を対象とするプレプリントであり、後発のシステムを含まない。分類と先行研究の数値整理が中心で、共通ハードウェア/ネットワーク条件による再実験は行わないため方式間の定量順位は確定できない。無線上計算、RIS、意味通信など通信寄り技術をLLM推論へ接続する議論には、実運用LLMワークロードでの検証がまだ薄い部分がある。セキュリティ、マルチモーダル、低消費電力化は将来方向として整理されるが、具体的制御器やエンドツーエンド改善値は提示されない。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-b56259f8a19e558884aa1e18","worker_id":"scheduled-chat-paper-20260915T0630JST","worker_kind":"scheduled_chat"}
 }
