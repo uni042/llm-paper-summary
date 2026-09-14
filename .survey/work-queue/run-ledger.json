@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T21:40:26.982363+00:00",
+  "updated_at": "2026-09-14T21:49:12.086255+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T21:40:26.982363+00:00",
+      "last_recorded_at": "2026-09-14T21:49:12.086255+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 73,
+        "research_completed": 74,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 21
       },
       "events": [
-        {
-          "event_id": "34803810787:1",
-          "recorded_at": "2026-09-14T03:49:19.282465+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34803810787",
-            "run_attempt": "1",
-            "source_sha": "73528936774db549a78aefa0e73d63f0a09ec604"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34804073724:1",
           "recorded_at": "2026-09-14T03:52:53.825915+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34900852105:1",
+          "recorded_at": "2026-09-14T21:49:12.086255+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34900852105",
+            "run_attempt": "1",
+            "source_sha": "208588311b71dee4077687b77802aae111bccab5"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20214,6 +20214,14 @@
           "type": "research",
           "canonical_id": "arXiv:2601.17855",
           "title": "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-075303825b007242",
+          "type": "research",
+          "canonical_id": "arXiv:2605.31464",
+          "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
           "from": "ready",
           "to": "completed"
         }
