@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-103100fe66ff521e20fe8bd0",
   "job_id": "job-research-89a31b528bef1df7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-103100fe66ff521e20fe8bd0",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2604.21072",
+    "arxiv_id": "2604.21072",
+    "doi": "10.48550/arXiv.2604.21072",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
+    "title": "Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization",
+    "summary": "BloomBeeは、一般のインターネット回線で接続された異種GPUノードによる大規模言語モデル推論で、計算より通信が支配的になる問題を扱う。層配置とKVキャッシュのCPU退避でノード間ホップ数を減らし、マイクロバッチ化とFP16活性値の無損失圧縮で各ホップの転送量と待ちを隠し、帯域に応じて投機的デコードと早期枝刈りを有効化する。これらを通信帯域、GPU性能、メモリ容量に合わせて組み合わせ、低帯域環境でスループットと費用効率を改善する。",
+    "list_summary": "一般インターネット上の異種GPU推論で、層配置・KV退避・マイクロバッチ・無損失活性値圧縮・帯域適応型投機デコードを組み合わせ、通信ホップ数・転送量・生成段数を共同削減する。",
+    "authors": ["Jiu Chen", "Shuangyan Yang", "Xu Xiong", "Hexiao Duan", "Xinran Zhang", "Jie Ren", "Dong Li"],
+    "authors_affiliations": "University of California, Merced; University of California, Berkeley; William & Mary; Yotta Labs",
+    "published": "2026-04-22",
+    "publication": "arXiv preprint arXiv:2604.21072, version 2 dated 2026-05-05",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "distributed LLM inference / communication-aware serving",
+    "topics": ["分散LLM推論", "通信最適化", "KVキャッシュ退避", "マイクロバッチ", "活性値圧縮", "投機的デコード"],
+    "importance": "データセンター級ネットワークを前提にしない分散推論を、通信ホップ数・バイト数・生成段数の三軸で共同最適化する点が重要。実インターネット環境でも評価し、既存のPetalsとHelixを上回る条件を示す。",
+    "hardware_evaluation": "A100とRTX 4090を含む異種GPUノードを用い、45 Gbpsから20 Mbpsまでの帯域制限環境と、California・New Jersey・Canada間の実インターネット配置で評価している。",
+    "quality_effect": "活性値圧縮は無損失で品質を変えない。投機的デコードの早期枝刈りは候補木を約60%削減しつつ受理率の96%を維持したと報告する。帯域が低すぎる場合は投機を無効化し自己回帰生成へ戻す。",
+    "source": "https://arxiv.org/abs/2604.21072",
+    "sources": ["https://arxiv.org/abs/2604.21072", "https://arxiv.org/pdf/2604.21072", "https://github.com/ai-decentralized/BloomBee"],
+    "code": "https://github.com/ai-decentralized/BloomBee",
+    "implementation": "著者はBloomBeeを約31,216行のオープンソース実装として公開し、複数の実利用相当ユースケースに展開したと記載している。",
+    "last_checked": "2026-09-14",
+    "references": [],
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 49
+  },
+  "reservation": {"claim_id": "claim-103100fe66ff521e20fe8bd0", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
