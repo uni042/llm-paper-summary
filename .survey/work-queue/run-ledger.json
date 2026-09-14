@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:07:24.693328+00:00",
+  "updated_at": "2026-09-14T22:11:04.814869+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:07:24.693328+00:00",
+      "last_recorded_at": "2026-09-14T22:11:04.814869+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 6,
         "new_papers": 76,
-        "fallback_archived": 23
+        "fallback_archived": 24
       },
       "events": [
-        {
-          "event_id": "34804802964:1",
-          "recorded_at": "2026-09-14T04:06:18.152590+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34804802964",
-            "run_attempt": "1",
-            "source_sha": "5e2d565471d15e531fcc9fd17f407555f3145b5a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34804932354:1",
           "recorded_at": "2026-09-14T04:08:23.867511+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34902524938:1",
+          "recorded_at": "2026-09-14T22:11:04.814869+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34902524938",
+            "run_attempt": "1",
+            "source_sha": "55f643ea6d36850194b1bbff4cfaac96bd8e3421"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20392,11 +20392,12 @@
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2604.08075-dualpool.json",
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2608.09291-unionsparse.json",
         ".survey/work-queue/fallback-archive/20260915T035300JST-research-2607.29069-aries-attempt-1029596fe50d541546a5dba8.json",
-        ".survey/work-queue/fallback-archive/20260915T035100JST-research-2603.07169-cudamaster-attempt-3c42eb75bc9ae2ee431ee157.json"
+        ".survey/work-queue/fallback-archive/20260915T035100JST-research-2603.07169-cudamaster-attempt-3c42eb75bc9ae2ee431ee157.json",
+        ".survey/work-queue/fallback-archive/20260915T033900JST-research-2608.05303-edgexpert-attempt-94a22fd70b5ff22c49de8779.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 536,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
