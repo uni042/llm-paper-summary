@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ddaa9f60a004a664b188d7a2",
-  "job_id": "job-research-3ae94af47a718bbb",
-  "data": {
-    "overview": "BanaServeはLLaMA-13B/OPT-13B、Alpaca/LongBench、1〜20 RPSの全構成でvLLMとDistServeに対する性能向上を報告する。改善幅はモデルと文脈長により大きく異なり、特にOPT-13B短文で最大になる。長文でも優位性は維持するが倍率は縮小する。",
-    "key_results": [
-      {"metric":"LLaMA-13B短文スループット","value":"BanaServeが1.1〜1.2倍高い","baseline":"DistServeおよびvLLM","condition":"Alpaca、1〜20 RPS"},
-      {"metric":"OPT-13B短文スループット","value":"DistServe比2.8〜3.9倍、vLLM比最大3.9倍","baseline":"DistServe/vLLM","condition":"Alpaca、1〜20 RPS"},
-      {"metric":"OPT-13B短文平均遅延","value":"vLLM比3.9〜78.4%削減、DistServe比1.4〜70.1%削減","baseline":"vLLM/DistServe","condition":"Alpaca、1〜20 RPS"},
-      {"metric":"LLaMA-13B長文スループット","value":"DistServe比1.3〜1.5倍、vLLM比最大1.5倍","baseline":"DistServe/vLLM","condition":"LongBench、1〜20 RPS"},
-      {"metric":"LLaMA-13B長文遅延","value":"vLLM比20.6〜65.3%削減、DistServe比1.4〜20.6%削減","baseline":"vLLM/DistServe","condition":"LongBench、1〜20 RPS"},
-      {"metric":"OPT-13B長文スループット","value":"DistServe比1.1〜1.3倍、vLLM比最大1.3倍","baseline":"DistServe/vLLM","condition":"LongBench、1〜20 RPS"},
-      {"metric":"共有KV転送の重畳条件例","value":"1層計算4.22msに対しKV転送0.082ms","baseline":"転送を層計算と重ねない場合は転送待ちが露出","condition":"Llama-3.1-8B例、1000入力トークン、50%ヒット率、200Gbps"}
-    ],
-    "negative_results": "改善幅は一様ではなく、LLaMA-13B短文ではスループット向上が1.1〜1.2倍、OPT-13B長文では1.1〜1.3倍に留まる。論文自身も、異種ハードウェア最適化不足、瞬時負荷だけを見る反応型制御、単一地域限定を制約として挙げる。",
-    "interpretation": "大きな効果は、分離型サービングで余っている計算・メモリを状態移動により別段階へ貸し出せることと、共有KVストアによりキャッシュ局所性とルーティングを切り離せることから生じる。高負荷では従来系のキャッシュ競合やパイプライン待ちが増えるため差が広がる。一方で長文やモデル構造によってはKV転送・状態管理の負担も増え、改善倍率が小さくなる。",
-    "quality_impact": "近似的なKV削減ではなく状態を保存・移送して計算を継続する設計で、意味品質を意図的に変更しない。ただし主評価はサービング性能であり、Alpaca/LongBenchのタスク品質指標をベースラインと比較した結果は示されていない。"
-  },
-  "reservation": {"claim_id":"claim-ddaa9f60a004a664b188d7a2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-04f374b6b55a5cf420d50468",
+  "job_id": "job-research-420858d196a868b6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-04f374b6b55a5cf420d50468",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

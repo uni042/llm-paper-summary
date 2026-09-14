@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260914T171650Z-scheduled-chat-discovery-specialist-04",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-420858d196a868b6",
+      "claim_id": "claim-04f374b6b55a5cf420d50468",
+      "worker_id": "scheduled-chat-discovery-specialist",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-04f374b6b55a5cf420d50468",
+      "claimed_at": "2026-09-14T17:16:39+00:00",
+      "expires_at": "2026-09-14T18:46:39+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-420858d196a868b6"
+      ],
+      "job": {
+        "job_id": "job-research-420858d196a868b6",
+        "type": "research",
+        "parent_job_id": "job-40b815170765e1a7",
+        "priority": 82,
+        "canonical_id": "arXiv:2604.09562",
+        "title": "StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving",
+        "source_url": "https://arxiv.org/abs/2604.09562",
+        "paper_path": "papers/inference/99-other-inference-systems/2026-2604.09562-streamserve-adaptive-speculative-flows-for-low-latency-disaggregated-llm-serving.md",
+        "selection_reason": "Combines disaggregated prefill/decode serving with adaptive speculative execution and metric-aware routing. The primary-source abstract reports evaluation on four A800 GPUs and large latency reductions versus tensor-parallel vLLM, making it a relevant candidate for the scheduling/disaggregation lineage despite the relatively small evaluation setup.",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-13T00:24:16+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: results.key_results[0] missing: interpretation | results.key_results[1] missing: interpretation | results.key_results[2] missing: interpretation | results.key_results[3] missing: interpretation | results.key_results[4] missing: interpretation | results.key_results[5] missing: interpretation | results.key_results[6] missing: interpretation",
+        "validation_errors": [
+          "results.key_results[0] missing: interpretation",
+          "results.key_results[1] missing: interpretation",
+          "results.key_results[2] missing: interpretation",
+          "results.key_results[3] missing: interpretation",
+          "results.key_results[4] missing: interpretation",
+          "results.key_results[5] missing: interpretation",
+          "results.key_results[6] missing: interpretation"
+        ],
+        "last_validation_failed_at": "2026-09-14T17:13:38+00:00"
+      },
+      "record_bank": "a"
+    }
+  ],
+  "processed_at": "2026-09-14T17:16:39+00:00",
+  "checkpoint_released": 0
+}
