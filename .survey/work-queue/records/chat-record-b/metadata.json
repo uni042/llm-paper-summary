@@ -4,10 +4,35 @@
   "slot": "metadata",
   "attempt_id": "attempt-c642c5fff9681a3567ab694d",
   "job_id": "job-research-79f62fbfcb1294fd",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-c642c5fff9681a3567ab694d",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2602.12029",
+    "arxiv_id": "2602.12029",
+    "doi": "10.48550/arXiv.2602.12029",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.DC"]},
+    "title": "PrefillShare: A Shared Prefill Module for KV Reuse in Multi-LLM Disaggregated Serving",
+    "summary": "PrefillShareは、複数の専門LLMが同じ長い文脈を繰り返し読むエージェント型処理で、モデルごとに同じプリフィル計算とKVキャッシュを作り直す無駄を除く。凍結した共通基盤モデルを共有プリフィル専用にし、そのKVキャッシュを各タスク固有デコーダへ渡す。単純共有では精度が崩れるため、事前計算した共有KVを条件として専門デコーダだけを追加学習する。実行時は利用者単位の接頭辞局所性を保つルーティングで、増分トークンだけを再プリフィルし、複数モデル間で共通文脈の計算とメモリを一度に集約する。",
+    "list_summary": "複数LLMが同じ文脈を別々にプリフィルする重複を、凍結共有プリフィル＋KV条件付き追加学習でモデル横断共有し、エージェント処理の尾遅延とKVメモリを削減する。",
+    "authors": ["Sunghyeon Woo", "Hoseung Kim", "Sunghwan Shim", "Minjung Jo", "Hyunjoon Jeong", "Jeongtae Lee", "Joonghoon Kim", "Sungjae Lee", "Baeseong Park", "Se Jung Kwon", "Dongsoo Lee"],
+    "authors_affiliations": "NAVER Cloud",
+    "published": "2026-02-12",
+    "publication": "arXiv preprint arXiv:2602.12029",
+    "publication_type": "Preprint",
+    "publication_status": "Preprint",
+    "lineage": "multi-model serving / disaggregated serving / cross-model KV reuse",
+    "topics": ["複数LLMサービング", "共有プリフィル", "KVキャッシュ再利用", "分離サービング", "エージェント推論"],
+    "importance": "同一モデル内の接頭辞キャッシュではなく、異なるタスク固有モデル間で同じ長文脈のプリフィル結果を共有する。学習側の整合化とサービング側の局所性制御を一体化している点が重要。",
+    "hardware_evaluation": "追加学習は単一ノードの8基A100-SXM4-80GBで実施。主要サービング評価はA100ノード上のvLLM分離サービングを拡張し、4つのプリフィルGPUと4つのデコードGPUを同じ総GPU予算で比較する。",
+    "quality_effect": "共有KVをそのまま異なる専門モデルへ渡す単純方式では共有率が高いほど精度が崩れるが、KV条件付き追加学習後はGSM8K、HumanEval、BFCLなどで通常の完全追加学習と同程度の精度を維持する。近似キャッシュ削減ではなく、専門デコーダを共有KV分布へ適応させる方式である。",
+    "source": "https://arxiv.org/abs/2602.12029",
+    "sources": ["https://arxiv.org/abs/2602.12029", "https://arxiv.org/pdf/2602.12029"],
+    "code": null,
+    "implementation": "vLLMの分離サービング基盤上に、利用者単位ルーティング、共有プリフィルプール、複数タスク固有デコードワーカーを備えるプロキシ型試作系を実装して評価している。公開コードURLは一次資料で確認できなかった。",
+    "last_checked": "2026-09-14",
+    "references": [],
+    "references_checked_at": "2026-09-14",
+    "references_source": "primary-reference-section",
+    "references_total": 49
+  },
+  "reservation": {"claim_id": "claim-c642c5fff9681a3567ab694d", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
