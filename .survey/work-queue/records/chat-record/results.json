@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-e82635abb5120aa7260dbed6",
   "job_id": "job-research-bada04a844a16b47",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e82635abb5120aa7260dbed6",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "UnionSparseはJetson AGX Orin上のW4A4低ビット疎行列積832条件で、代表的なTensor Core疎方式であるFlashLLM比2.30倍、SpInfer比1.43倍、密Tensor Core基準のCUTLASS比1.56倍、cuBLAS比3.46倍の平均高速化を達成した。端末全体でも50%疎性・W4A4のOPT-13BをFasterTransformerへ統合し、短入力の逐次生成で最大2.63倍のスループット改善を報告する。実用上の意味は、低ビット量子化後の疎推論では非ゼロ演算数を減らすだけでは不十分で、位置情報を少ない転送量で解釈しTensor Core用断片へ復号する経路を最適化しなければ疎性の理論利得を得られないことを示した点にある。利得は逐次生成の小バッチで最大であり、大バッチや入力処理では他の処理が支配するため縮小する。",
+    "key_results": [
+      {"metric":"W4A4カーネル平均高速化","value":"FlashLLM比2.30倍、SpInfer比1.43倍、CUTLASS比1.56倍、cuBLAS Tensor Core比3.46倍","baseline":"各比較基準","condition":"Jetson AGX Orin、832条件、N=1〜32、疎性40〜70%","interpretation":"既存の疎Tensor Core方式と密Tensor Core方式の双方を上回り、低ビット疎形式の位置情報効率が実測速度へ直結する。"},
+      {"metric":"CUDA Core疎方式に対する平均高速化","value":"SparTA比11.84倍、Sputnik比19.63倍、cuSPARSE比207.21倍","baseline":"各CUDA Core疎方式","condition":"対応しているW4A4条件のみで算術平均","interpretation":"低ビット小バッチでは汎用疎カーネルの不規則走査・位置情報処理が極めて重く、Tensor Core向け共同設計の効果が大きい。"},
+      {"metric":"LSPD除去実験","value":"126.40µs → 102.72µs","baseline":"提案最適化なし","condition":"統一した代表カーネル条件","interpretation":"共有メモリ上の並列低ビット復号が単独で最大のオンライン寄与を持つ。"},
+      {"metric":"LSPD＋二重バッファ＋行並べ替え","value":"99.52µs","baseline":"126.40µs","condition":"同一除去実験","interpretation":"二重バッファを加えると99.90µs、さらに行並べ替えで99.52µsとなり、表現側と実行側が補完する。"},
+      {"metric":"OPT-13B端末全体スループット","value":"最大2.63倍、出力1024でも2.40倍","baseline":"FasterTransformer","condition":"Jetson AGX Orin、50%疎性、W4A4、平均入力長10","interpretation":"カーネル単体だけでなく端末全体へ改善が伝播するが、出力長が伸びるほど非疎行列積部分の比率が増えて倍率は下がる。"},
+      {"metric":"逐次生成内のSpMM比率","value":"69〜75%","baseline":"入力処理では12〜23%","condition":"FasterTransformer端末全体内訳","interpretation":"主利得が逐次生成で大きく、入力処理で小さい理由を時間内訳から説明できる。"},
+      {"metric":"生成1トークン当たり増分エネルギー","value":"バッチ1で2.05J、バッチ8で0.30J","baseline":"同一UnionSparse構成のバッチ差","condition":"OPT-13B、入力64、出力128、平均電力約33W","interpretation":"バッチで重み読出しと実行時費用を償却すると、速度だけでなくトークン当たりエネルギーも改善する。"}
+    ],
+    "negative_results": "UnionSparseの利得はN=32のような大きい逐次生成幅で縮小し、Jetson Thorではハードウェア固有最適化を行わずRA=2、CA=2を固定したためOrinほど良くない。入力処理ではSpMMが全時間の12〜23%にすぎず、カーネル高速化の全体寄与が限定される。端末全体速度倍率もピークのカーネル倍率より小さく、KVキャッシュ管理、埋込み、注意機構の実行制御、サンプリングなど未変更部分が上限になる。オフラインの枝刈り、量子化、形式変換、行並べ替え時間はオンライン性能に含めていない。",
+    "interpretation": "結果は、低ビット疎推論のボトルネックが『残した重みの積和数』だけでは決まらず、それらを見つける位置情報の量、共有メモリでの復号規則性、転送と演算の重なりで大きく変わることを示す。小Nでは演算量が少ないため位置情報費用が支配的で、PMR改善がそのまま有効計算強度の上昇につながる。Nが増えると密カーネルの規則的なデータ流と高い算術強度が有利になり、相対差が狭まる。",
+    "quality_impact": "UnionSparse自体は同じ枝刈り・量子化済み重みに対する疎行列積の表現と実行を変更するため、追加の近似を導入する手法ではない。ただし評価モデルはWandaによる50%枝刈りとAtomによるW4A4量子化を受けており、その圧縮によるタスク品質変化を本論文では再評価していない。"
+  },
+  "reservation": {"claim_id":"claim-e82635abb5120aa7260dbed6","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
