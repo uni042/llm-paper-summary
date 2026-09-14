@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-12e430d5a1798030",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.08306",
+      "title": "HoneyRoute: Honeypot-Model Routing for Adversarial LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.08306",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.08306-honeyroute-adversarial-llm-serving-routing.md",
+      "priority": 77,
+      "reason": "悪意ある要求を本番モデルから低コストのハニーポットモデルへ分流して、攻撃時のGPU/トークン資源消費を抑えるLLMサービング経路制御を提案する。ルータF1 0.911、追加遅延中央値38msで、13種の敵対変換に対する回避率0%、同時フラッディング下では本番モデルの悪意トークン消費を97.8%削減しており、通常の性能最適化ルーティングとは異なる資源保護・耐攻撃性の設計軸を提供する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-serving-security-routing-3",
+    "axis": "敵対的トラフィック下のLLMサービング経路制御と資源保護",
+    "query_summary": "2026年9月のLLMサービング新着から、攻撃要求を別モデルへ分流する実行時ルーティングを探索した。最新GitHub正本とLibrary pendingのcanonical_id/titleで再重複判定し、評価値が未確定のプレプリントは候補から除外した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "NVMe/SSD直接利用、CXL/遠隔メモリ、GPU Direct Storage、分離サービングのKV転送・ネットワーク協調へ探索軸を移す。",
+    "empty_round_reason": null
+  }
+}
