@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-11e0bc962a7c28c7d0c14bdf",
   "job_id": "job-research-7505ea2231cb7ff0",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-11e0bc962a7c28c7d0c14bdf",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "hardware": "OPT-13B/30BはUbuntu 20.04上の4×NVIDIA A100-SXM4-40GB（NVLink）、Llama-3-70Bは8×NVIDIA A100-SXM8-80GB（NVSwitch）。テンソル並列度は順に2、4、8。",
+    "software": "BROSは8.5k LoC Python + 2k LoC C++/CUDA。Ray RPC、NCCL、PyTorch、xFormersを使用し、PagedAttention kernelを双方向ブロック向けに改変。vLLM、TGI、BROS-Round-Robinと比較する。",
+    "methodology": "RT要求はShareGPTとLMSYS-CHAT-1Mの実会話長分布から合成し、到着は複数rateのPoisson過程。BEはFlexGenに倣いprompt 512〜1024、output 32〜128の一様分布で合成し、前バッチ完了時に次バッチを投入する。RTのTTFT SLOは0.4秒、TPOT SLOは0.2秒。各条件10分traceを実行し、正規化遅延、TTFT/TPOT SLO達成率、BE requests/sを測る。KV block sizeはBROS/vLLM/RRで16に統一する。",
+    "scope": "13B/30B/70Bと二つのRTトレース、複数GPU構成を含む実機評価である。BE側には代表的公開トレースがないため合成長分布を使い、品質評価ではなくサービングQoSを測る。TGI比較はpure RT microbenchmarkに限定され、主要hybrid比較はvLLMとRR。オフライン専用FlexGen/LLM-PQはcontinuous batching非対応のためhybrid baselineから除外される。",
+    "workloads": ["ShareGPT-derived RT + synthetic BE", "LMSYS-CHAT-1M-derived RT + synthetic BE", "pure RT microbenchmark", "OPT-30B cache-management ablation"],
+    "baselines": ["vLLM", "Text Generation Inference (TGI)", "BROS Round-Robin without bidirectional KV management"],
+    "metrics": ["normalized RT latency", "TTFT", "TPOT", "TTFT SLO attainment", "TPOT SLO attainment", "BE throughput requests/s", "per-iteration scheduling overhead"],
+    "reproducibility": "モデル、GPU、テンソル並列度、block size、SLO値、トレース生成法、BE長分布、10分測定窓、実装規模は明示される。BROSの著者公式コードURLは本文にないため、改変PagedAttentionやschedulerの完全再現には論文記述からの実装が必要である。"
   }
 }
