@@ -41,17 +41,17 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **59** |
-| 有効claim（lease） | **3** |
-| 今すぐ着手可能（Claimable） | **57** |
-| 有効leaseを持つworker run | **3** |
-| :30 最新worker run | **2026-09-14T23:10:00+09:00** |
+| 有効claim（lease） | **4** |
+| 今すぐ着手可能（Claimable） | **56** |
+| 有効leaseを持つworker run | **4** |
+| :30 最新worker run | **2026-09-15T00:12:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
-| :30 旧run由来の有効claim | **0** |
+| :30 旧run由来の有効claim | **1** |
 | :00 最新worker run | **2026-09-15T00:00:00+09:00** |
 | :00 最新run由来の有効claim | **1** |
 | :00 旧run由来の有効claim | **1** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 00:30 JST** |
+| :30 通常worker 直近lease活動 | **09-15 00:33 JST** |
 | :00 補助worker 直近lease活動 | **09-15 00:25 JST** |
 | 直近24h Research完了（:30 通常worker） | **31** |
 | 直近24h Research完了（:00 補助worker） | **24** |

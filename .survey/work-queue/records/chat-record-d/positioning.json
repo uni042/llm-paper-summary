@@ -1,16 +1,13 @@
 {
-  "schema_version":1,
-  "transport_version":10,
-  "slot":"positioning",
-  "attempt_id":"attempt-2512183ef81b426438d6e5f6",
-  "job_id":"job-research-2ab985bbc123336f",
-  "data":{
-    "limitations":"理論は新規会話のポアソン到着、ターン間待ち時間の共通分布、ターン数・待ち時間・鍵値増分の独立性などを仮定し、会話履歴を一まとまりとして最終使用時刻順に退去する。実vLLMはブロック単位の時刻、参照中ブロックの退去保護、接頭辞を残して後方から部分退去する挙動を持つためモデルとは一致しない。検証もQwen3-8B、Ascend 910B2、ShareGPT、単一の前処理・生成分離構成に限定され、実エージェント負荷のバースト、利用者別相関、非定常負荷、別退去方針、会話間の強い接頭辞共有は未検証である。有限測定窓による打ち切りも観測される。専用実装の公開コードURLは一次資料から確認できない。",
-    "differences":"PagedAttentionや鍵値圧縮・オフロード研究が『同じ容量へより多くの鍵値を載せる、またはどこへ退避するか』を変更するのに対し、本研究は既存の最終使用時刻型退去を変更せず『与えた容量なら多ターン接頭辞がどれだけ高帯域メモリに残るか』を解析する。接頭辞を意識した要求順序制御とも異なり、退去方針を最適化するより前段の容量設計モデルである。",
-    "implementation_status":"著者らはQwen3-8BをvLLM v0.22.1、vLLM-Ascend v0.22.1rc1、Mooncake v0.3.9上で動かし、5台のAscend 910B2 NPUで実測検証している。推定器の式と実験手順は一次資料に記載されるが、研究専用コードの公開URLは確認できない。",
-    "research_positioning":"多ターン接頭辞鍵値の再利用研究に、確率的キャッシュ解析と大規模言語モデルサービングを接続する位置づけである。ターンごとに保存対象が増えること、部分ブロックは再利用できないこと、前処理・生成分離では前処理側高帯域メモリが再利用の要所になることをモデルへ取り込み、古典的な特徴時刻近似を単なる経験式ではなく平均場収束として導出する。新しい実行基盤を高速化する方式ではなく、既存実行基盤の高帯域メモリ配分を定量化する解析層として価値がある。",
-    "relation_to_existing_repository":"`07-kv-cache-optimization-compression`系統の圧縮・量子化・退去方式に対し、本論文は圧縮率や退去ヒューリスティックではなく、最終使用時刻型管理が既定であるときのヒット率と容量の関係を与える補完的研究である。`10-kv-cache-offload-recomputation`系統がミス後の下位記憶取得や再前処理費を減らすのに対し、本研究はミス自体がどの頻度で起きるかを予測するため、オフロード階層容量や高帯域メモリ割当の上流パラメータとして組み合わせられる。前処理・生成分離環境で前処理側高帯域メモリを対象にしているため、Mooncake系の鍵値転送・分離サービングとも接点がある。",
-    "audit_required":false
-  },
-  "reservation":{"claim_id":"claim-2512183ef81b426438d6e5f6","worker_id":"scheduled-chat-llm-survey-20260915T0012JST","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-779cb1f8d8bab20a380e7214",
+  "job_id": "job-research-77309d3073fb22e0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-779cb1f8d8bab20a380e7214",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0012JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
