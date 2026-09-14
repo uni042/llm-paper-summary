@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 07:27 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 07:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -58,7 +58,7 @@
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T06:30:00+09:00** |
 | 最新通常runのResearch完了 | **3** |
-| 最古の有効claimの経過時間 | **55 min** |
+| 最古の有効claimの経過時間 | **63 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -78,18 +78,18 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **75** |
 | Repo収録 | **76** |
 | Audit完了 | **0** |
-| 探索評価候補 | **5** |
+| 探索評価候補 | **7** |
 | Research候補採用 | **1** |
 | 重複除外 | **1** |
-| 重複率 | **20.0%** |
-| :00 補助worker Discovery run（毎時枠） | **2** |
-| :00 補助worker Discovery round（stats観測） | **3** |
+| 重複率 | **14.3%** |
+| :00 補助worker Discovery run（毎時枠） | **3** |
+| :00 補助worker Discovery round（stats観測） | **4** |
 | 通常worker run（ledger観測） | **1** |
 | Fallback archive（全helper） | **32** |
 
 ### 24時間の流れ
 
-**探索評価 5 → 重複除外後 4 → Research候補採用 1 → Research完了 75 → Repo収録 76**
+**探索評価 7 → 重複除外後 6 → Research候補採用 1 → Research完了 75 → Repo収録 76**
 
 ## 次に処理する候補
 
@@ -107,15 +107,15 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 直近の:00 補助worker Discovery
 
-Run: **2026-09-15T03:00:00+09:00**
+Run: **2026-09-15T07:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
 | 探索round | **1** |
-| 探索軸 | MoE expert cache所有権・OS page cache・階層メモリ |
-| 評価候補 | **1** |
+| 探索軸 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング |
+| 評価候補 | **2** |
 | 重複除外 | **0** |
-| Novel候補 | **1** |
+| Novel候補 | **2** |
 | Research候補採用 | **0** |
 | 重複率 | **0.0%** |
 
@@ -123,17 +123,18 @@ Run: **2026-09-15T03:00:00+09:00**
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
+| 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
 | 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
 | MoE expert cache所有権・OS page cache・階層メモリ | 1 | 0 | 0 | 0.0% | 0.0% |
 
 ### 直近5件の:00 補助worker Discovery run
 
+- 2026-09-15T07:00:00+09:00 — 1 round: 評価 2 / 重複 0 / 採用 0 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング
 - 2026-09-15T03:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache所有権・OS page cache・階層メモリ
 - 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
 - 2026-09-13T11:00:00+09:00 — 15 round: 評価 65 / 重複 34 / 採用 8 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing / MoE expert locality・expert prefetch・SSD/edge cacheability / CXL/SSD shared KV・tiered storage resource optimization / serving software aging・runtime reliability・lossless compression・load-aware speculative serving
 - 2026-09-13T10:00:00+09:00 — 8 round: 評価 48 / 重複 31 / 採用 12 / 軸 新着LLM推論システム・通信／疎注意／多ターンKV / GPU実行環境・collective通信・prefill/decode共存 / 端末内LLM・OSメモリ圧力・Flash/NPU実行 / KVページ圧縮・低ランク表現・GPUカーネル / 分離サービングSLO・batch fairness・resource allocation / 投機的復号runtime・draft resource・CPU制約 / SSD expert offload・peer GPU cache tier・階層メモリ / 分離サービング通信・KV転送・network flow scheduling
-- 2026-09-13T09:00:00+09:00 — 13 round: 評価 58 / 重複 21 / 採用 16 / 軸 moe-cache-aware-routing-expert-skipping-fine-grained-execution / ssd-kv-cache-heterogeneous-gpu-serving-orchestration / production-autoscaling-disaggregated-serving-runtime / 2026-09新着・KV圧縮・跨文脈再利用 / エージェント型LLM・サービングruntime・生成時特化 / 出力長不確実性・tail-aware scheduling隣接 / 投機的復号・高並列サービング・production評価 / RDMA・分離サービング・KV転送 / multi-tenant runtime制御・適応parallelism・latency attribution / 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA / 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse / 分離型サービングの負荷偏り・SLO適応 / NVMe重み先読み・疎推論GPUカーネル・fleet資源配置
 
 ### 最近完了した論文
 
