@@ -2,20 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8d9851549641acf20eb4e9e3",
-  "job_id": "job-research-23e9c491b745b825",
-  "data": {
-    "hardware": "Xiaomi 15 Pro実機を使用し、Qualcomm Snapdragon 8 Elite SoC、16 GB RAM、512 GBフラッシュストレージ、Arm 8コアCPU、Hexagon NPU、Adreno GPU上で測定する。主要なコールドスタート評価はこの単一端末で行われ、シミュレーション結果ではない。",
-    "software": "EdgeFlowは約8千行で、Pythonの量子化・格納ツールと、Qualcomm Neural Network（QNN）を利用するC++ランタイムから構成される。比較対象はllama.cpp、MNN、llm.npuで、llm.npuには実行グラフの事前生成と層間重畳を加えた強化版も用いる。",
-    "methodology": "Llama3 8B、Mistral 7B、Phi3 3.8B、Qwen1.5 1.8Bを、LAMBADA、WinoGrande、OpenBookQA、MMLU、HellaSwagなど入力長の異なるデータセットで評価する。初回トークン時間を主要指標とし、量子化精度、WikiText-2のパープレキシティ、各機構の除去・追加によるアブレーション、CPU/NPU待ち率、デコード速度、メモリ、電力・エネルギーも測る。同等精度条件で既存基盤と比較し、単なる低ビット化による品質劣化を高速化として数えない。",
-    "baselines": ["llama.cpp", "MNN", "llm.npu", "llm.npu+", "INT4一様量子化", "INT8一様量子化", "SmoothQuant", "CMPQ", "影外れ値方式（shadow outlier）"],
-    "models": ["Llama3 8B", "Mistral 7B", "Phi3 3.8B", "Qwen1.5 1.8B"],
-    "datasets": ["LAMBADA", "WinoGrande", "OpenBookQA", "MMLU", "HellaSwag", "WikiText-2"],
-    "metrics": ["初回トークン時間", "分類・選択精度", "パープレキシティ", "CPU/NPU実行時間", "CPU/NPU待ち率", "デコード速度", "ピークメモリ", "平均電力", "総エネルギー"],
-    "scope": "実端末上でのモバイルLLMコールドスタートを対象とし、Qualcomm Snapdragon 8 EliteとQNN/Hexagon NPUに重点を置く。4種類のモデルと複数の入力長で一般性を確認する一方、異なるSoC、Apple Neural Engine、低価格端末、ストレージ世代、長期運用時の熱制約については直接評価していない。"
-  },
+  "attempt_id": "attempt-5408261d6f8f32ffb0310619",
+  "job_id": "job-research-57d78e1392b6c354",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8d9851549641acf20eb4e9e3",
+    "claim_id": "claim-5408261d6f8f32ffb0310619",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8d9851549641acf20eb4e9e3",
-  "job_id": "job-research-23e9c491b745b825",
-  "data": {
-    "limitations": "評価端末はSnapdragon 8 Eliteを搭載したXiaomi 15 Proが中心で、QNNの実行グラフ形式やHexagon NPU、Arm SIMD命令を前提とする部分が大きい。他社NPUや異なるモバイルSoCへ移植した場合の効果は未検証である。可変精度量子化は近似手法なので、平均ビット幅を下げすぎると品質が低下する。また平均電力はllm.npu+より17.6%高く、熱制約が強い長時間利用で同じ挙動になるかは評価されていない。論文時点では実装公開を予定すると述べるだけで、公式コードURLは確認できない。",
-    "differences": "llm.npuはNPU向け実行グラフの事前生成と層単位の重み読込・プリフィル重畳で起動を短縮するのに対し、EdgeFlowはその上にフラッシュ帯域そのものを減らす出力チャネル別可変精度量子化と、詰め物による読込増幅を避けるSIMD向け格納を追加する。さらにCPU/NPU間の演算配置を演算子粒度へ細分化し、入力位置優先度とタスク移譲で依存待ちを減らす点が異なる。LLM in a FlashやELMSなどストレージからの重み搬送を扱う研究と問題意識を共有するが、EdgeFlowはモバイルNPUの量子化制約とCPU/NPU協調まで一体化している。",
-    "implementation_status": "論文では約8千行の実装を報告し、Pythonのオフライン量子化・格納ツールとC++のQNNランタイムを実機で評価しているため、概念提案やシミュレーションのみではない。QNNの専用実行グラフ形式を解析し、重みの動的読込を可能にしたとしている。一方、論文本文ではコードを近く公開予定と記載するのみで、確認時点で公式リポジトリURLは提示されていない。",
-    "research_positioning": "端末内LLM推論では、モデル圧縮やNPUカーネル高速化だけでなく、フラッシュストレージからDRAM、CPU、NPUへ重みが移る起動時の階層メモリ経路が性能を決める。EdgeFlowはストレージ帯域を量子化精度の割当問題へ直接結び付け、さらに復元処理と異種計算資源のスケジューリングを同時設計するため、オンデバイス推論、階層メモリ、ストレージ指向モデル実行の交点に位置する。特にSSD/NVMeやCPUオフロードを含む大規模サーバ側研究と比較すると、低帯域・小容量・専用NPUという別の資源制約下で、重み転送量そのものを意味のある精度予算へ変換する設計例として参照価値が高い。"
-  },
+  "attempt_id": "attempt-5408261d6f8f32ffb0310619",
+  "job_id": "job-research-57d78e1392b6c354",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8d9851549641acf20eb4e9e3",
+    "claim_id": "claim-5408261d6f8f32ffb0310619",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
