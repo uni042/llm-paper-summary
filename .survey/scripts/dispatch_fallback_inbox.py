@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Dispatch one eligible fallback envelope through the current workflow-v10 transport.
+"""Dispatch eligible fallback envelopes through the current workflow-v10 transport.
 
-Research/Audit record bundles are converted directly into an attempt-specific
-immutable descriptor by ``replay_record_fallback``. Historical bundles containing
-the retired reusable ``chat-inbox.json`` remain readable, but replay never recreates
-that fixed transport. Non-record envelopes use the generic allowlisted transport for
-offline seeds, lightweight queue requests, and update-worker inputs.
+Research/Audit record bundles are converted directly into attempt-specific immutable
+descriptors by ``replay_record_fallback``. A single invocation drains multiple record
+bundles so a temporary Library/GitHub transport outage does not take hours to recover.
+Historical bundles containing the retired reusable ``chat-inbox.json`` remain readable,
+but replay never recreates that fixed transport. Non-record envelopes keep their
+single-dispatch semantics because some generic routes target mutable singleton inputs.
 """
 from __future__ import annotations
 
@@ -17,6 +18,8 @@ from typing import Any
 
 import fallback_transport as ft
 import replay_record_fallback as record_replay
+
+DEFAULT_MAX_ITEMS = 50
 
 
 def move_exact(source: Path, destination_dir: Path) -> Path:
@@ -78,7 +81,57 @@ def _is_record_fallback(value: dict[str, Any]) -> bool:
     return False
 
 
-def dispatch(repo_root: Path) -> dict[str, Any]:
+def _append_changed(target: list[str], seen: set[str], paths: Any) -> None:
+    for path in paths or []:
+        text = str(path)
+        if text and text not in seen:
+            seen.add(text)
+            target.append(text)
+
+
+def _batch_result(
+    processed: list[dict[str, Any]],
+    changed_paths: list[str],
+    deferred: list[dict[str, str]],
+    invalid: list[str],
+) -> dict[str, Any]:
+    if not processed:
+        return {
+            "action": "idle",
+            "processed_count": 0,
+            "processed": [],
+            "changed_paths": changed_paths,
+            "deferred": deferred,
+            "invalid": invalid,
+        }
+
+    # Preserve the legacy top-level action expected by existing callers. When at least
+    # one envelope created new work the invocation is a dispatch; otherwise every
+    # processed record was an already-terminal acknowledgement.
+    action = "dispatched" if any(row.get("action") == "dispatched" for row in processed) else "ack_terminal"
+    first = processed[0]
+    result: dict[str, Any] = {
+        "action": action,
+        "processed_count": len(processed),
+        "processed": processed,
+        "changed_paths": changed_paths,
+        "deferred": deferred,
+        "invalid": invalid,
+        # Keep the historical single-item fields available for consumers that have not
+        # migrated to ``processed`` yet.
+        "envelope_id": first.get("envelope_id"),
+        "archived": first.get("archived"),
+    }
+    for key in ("job_id", "descriptor", "record_bank"):
+        if first.get(key) is not None:
+            result[key] = first[key]
+    return result
+
+
+def dispatch(repo_root: Path, *, max_items: int = DEFAULT_MAX_ITEMS) -> dict[str, Any]:
+    if max_items < 1:
+        raise ValueError("max_items must be >= 1")
+
     repo_root = repo_root.resolve()
     inbox_dir = repo_root / ft.FALLBACK_INBOX
     archive_dir = repo_root / ft.FALLBACK_ARCHIVE
@@ -87,8 +140,16 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
 
     deferred: list[dict[str, str]] = []
     invalid: list[str] = []
+    processed: list[dict[str, Any]] = []
+    changed_paths: list[str] = []
+    changed_seen: set[str] = set()
+    generic_dispatched = False
 
+    # Take a stable snapshot. A deferred entry is inspected at most once per invocation,
+    # so it cannot spin or starve eligible envelopes later in the directory.
     for source in sorted(inbox_dir.glob("*.json")):
+        if len(processed) >= max_items:
+            break
         try:
             raw_object = _read_raw_object(source)
             if _is_record_fallback(raw_object):
@@ -102,27 +163,31 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                     )
                     continue
                 archived = move_exact(source, archive_dir)
-                if replay["action"] == "ack_terminal":
-                    return {
-                        "action": "ack_terminal",
-                        "envelope_id": raw_object.get("id"),
-                        "job_id": replay.get("job_id"),
-                        "archived": str(archived.relative_to(repo_root)),
-                        "changed_paths": replay.get("changed_paths") or [],
-                        "deferred": deferred,
-                        "invalid": invalid,
-                    }
-                return {
-                    "action": "dispatched",
+                row: dict[str, Any] = {
+                    "action": replay["action"],
                     "envelope_id": raw_object.get("id"),
                     "job_id": replay.get("job_id"),
-                    "descriptor": replay.get("descriptor"),
-                    "record_bank": replay.get("record_bank"),
-                    "changed_paths": replay.get("changed_paths") or [],
                     "archived": str(archived.relative_to(repo_root)),
-                    "deferred": deferred,
-                    "invalid": invalid,
+                    "changed_paths": replay.get("changed_paths") or [],
                 }
+                if replay["action"] == "dispatched":
+                    row["descriptor"] = replay.get("descriptor")
+                    row["record_bank"] = replay.get("record_bank")
+                processed.append(row)
+                _append_changed(changed_paths, changed_seen, row["changed_paths"])
+                continue
+
+            # Generic envelopes can target mutable singleton inputs. Preserve the old
+            # one-at-a-time behavior for that route while still allowing record bundles
+            # later in the same snapshot to drain.
+            if generic_dispatched:
+                deferred.append(
+                    {
+                        "id": str(raw_object.get("id") or source.stem),
+                        "reason": "another generic fallback was already dispatched in this invocation",
+                    }
+                )
+                continue
 
             envelope, canonical = ft.parse_envelope(source.read_bytes())
             if canonical != source.read_text(encoding="utf-8"):
@@ -131,32 +196,30 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
                 source.write_text(canonical, encoding="utf-8")
             changed = ft.apply_envelope(repo_root, envelope)
             archived = move_exact(source, archive_dir)
-            return {
+            row = {
                 "action": "dispatched",
                 "envelope_id": envelope["id"],
                 "changed_paths": changed,
                 "archived": str(archived.relative_to(repo_root)),
-                "deferred": deferred,
-                "invalid": invalid,
             }
+            processed.append(row)
+            generic_dispatched = True
+            _append_changed(changed_paths, changed_seen, changed)
         except Exception as exc:
             invalid.append(source.name)
             quarantine(source, failed_dir, exc)
             # Invalid entries never starve valid entries behind them.
             continue
 
-    return {
-        "action": "idle",
-        "deferred": deferred,
-        "invalid": invalid,
-    }
+    return _batch_result(processed, changed_paths, deferred, invalid)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
+    parser.add_argument("--max-items", type=int, default=DEFAULT_MAX_ITEMS)
     args = parser.parse_args()
-    result = dispatch(args.repo_root)
+    result = dispatch(args.repo_root, max_items=args.max_items)
     print(json.dumps(result, ensure_ascii=False))
     return 0
 
