@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "request_id": "claim-20260914T093100Z-scheduled-chat-discovery-overflow-11-next23",
+  "worker_id": "scheduled-chat-discovery-overflow",
+  "worker_kind": "scheduled_chat",
+  "requested_at": "2026-09-14T09:31:00Z",
+  "max_jobs": 1,
+  "job_types": ["research", "audit"],
+  "checkpointed_jobs": [
+    {"job_id":"job-research-5b0daef0009e72b2","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T172300JST-research-2607.08930-blockserve-repair-attempt-cc515106f0930fe031fbf10a.json"},
+    {"job_id":"job-research-cff945d042003c88","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T173900JST-research-2607.08786-repair-attempt-2baa58ceebd16684d6605ff8.json"},
+    {"job_id":"job-research-87d11da7c0c30dc4","checkpoint_ref":"/LLM-survey-outbox/pending/20260914T173700JST-research-2504.03775-flowkv-attempt-3933688cb0c44d9a0064e469.json"}
+  ]
+}
