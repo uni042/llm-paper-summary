@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-25d2476fc6175ec3b9d8205c",
   "job_id": "job-research-f1288f57de066f0f",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-25d2476fc6175ec3b9d8205c",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2607.17154",
+    "arxiv_id": "2607.17154",
+    "doi": "10.48550/arXiv.2607.17154",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.NI", "cross_list": []},
+    "title": "OrderMoE: An expert similarity driven distributed edge MoE inference",
+    "summary": "OrderMoEは、帯域・遅延・GPU性能が不均一なエッジサーバ群へ専門家混合（MoE）モデルを分散配置したとき、ルータが選んだ正確な専門家が遠隔にあるたび中間表現を転送する費用を、専門家同士の機能類似性を使って削減する方式である。較正データに対するルータのロジット応答から同一層の専門家類似度を推定し、類似群を複数サーバへ分散配置する。実行時は通信・計算・負荷・品質損失と数層先のトークン移動を同時に見て、遠隔の正確な専門家か品質予算内の局所類似専門家かを選ぶ。Mixtral-8x7Bでは平均遅延187ms、通信1.5GB/1000トークン、処理率1380トークン/秒を報告し、EdgeShard比51.0%、MoE²比40.1%の遅延削減を示す。",
+    "list_summary": "ルータ応答から専門家の機能類似性を推定し、類似専門家をエッジ間へ分散配置して、品質予算内なら遠隔の正確な専門家を局所類似専門家で代替し通信と遅延を削減する。",
+    "authors": ["Xin Yuan", "Ning Li", "Quan Chen", "Wenchao Xu", "Athanasios V. Vasilakos", "Song Guo", "Haijun Zhang"],
+    "authors_affiliations": "Harbin Institute of Technology; Guangdong University of Technology; Hong Kong University of Science and Technology; Universidad Politécnica de Madrid など。",
+    "published": "2026-07-19",
+    "publication": "arXiv preprint",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v2。PDFはIEEE Transactions形式の投稿原稿だが、一次資料から最終採録先は確認できない。",
+    "lineage": "moe-parallelism-communication",
+    "topics": ["専門家混合", "エッジ推論", "専門家配置", "専門家類似性", "分散推論", "通信削減"],
+    "importance": "従来の分散専門家混合（MoE）が正確な専門家の配置・複製・キャッシュ・通信順序を最適化するのに対し、専門家の機能類似性そのものを資源として使い、遠隔専門家呼出しを品質制約付きの局所代替へ変換する点が新しい。",
+    "hardware_evaluation": "実エッジテストベッド。異種GPUを持つ物理エッジサーバ群を用い、GPU計算性能20〜110 TFLOPS、GPUメモリ12〜48GB、サーバ間帯域1〜10Gbps、伝搬遅延0.2〜20msの不均一環境を構成する。",
+    "hardware_details": "Mixtral-8x7Bを含む3種類の専門家混合モデルを異種GPU・異種リンクの分散エッジ環境へ配置して評価し、追加の拡張性評価では4〜16サーバ相当へ規模を変化させる。",
+    "quality_effect": "局所代替は近似で完全無損失ではないが、層別類似度閾値と利用者ごとの累積品質予算で制約する。WikiText-103の困惑度増加0.3、SQuAD F1低下0.6、GSM8K精度低下0.7に抑え、3モデル全体で品質保持率99.3%以上を報告する。",
+    "storage_targets": ["各エッジサーバ上の専門家重み", "重要専門家の冗長複製", "ルータ由来の専門家類似度・遷移統計"],
+    "bottlenecks": ["遠隔専門家呼出しによるサーバ間トークン転送", "低帯域・高遅延のエッジネットワーク", "異種GPUの計算・メモリ差", "代替専門家による品質低下"],
+    "evidence_locations": ["§III Problem Formulation", "§IV Similarity-Aware Expert Grouping and Distributed Deployment", "§V Token Trajectory Aware Online Server-Expert Selection", "§VI Performance Evaluation", "Figures 4–12"],
+    "source": "https://arxiv.org/abs/2607.17154",
+    "sources": ["https://arxiv.org/abs/2607.17154", "https://arxiv.org/pdf/2607.17154"],
+    "code": null,
+    "implementation": "PyTorchベースのOrderMoE試作を実エッジテストベッドへ実装したと本文に記載されるが、一次資料および公開検索から著者公式コード公開先は確認できない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2401.04088","arxiv_id":"2401.04088"},
+      {"canonical_id":"arXiv:2508.12851","arxiv_id":"2508.12851"},
+      {"canonical_id":"arXiv:2503.13421","arxiv_id":"2503.13421"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "一次論文参考文献節",
+    "references_total": 3,
+    "last_audited": null,
+    "audit_version": 0
+  },
+  "reservation": {"claim_id":"claim-25d2476fc6175ec3b9d8205c","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
