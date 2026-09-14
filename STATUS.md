@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 08:20 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 08:21 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -78,18 +78,18 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **76** |
 | Repo収録 | **79** |
 | Audit完了 | **0** |
-| 探索評価候補 | **18** |
+| 探索評価候補 | **21** |
 | Research候補採用 | **6** |
 | 重複除外 | **6** |
-| 重複率 | **33.3%** |
+| 重複率 | **28.6%** |
 | :00 補助worker Discovery run（毎時枠） | **4** |
-| :00 補助worker Discovery round（stats観測） | **8** |
+| :00 補助worker Discovery round（stats観測） | **9** |
 | 通常worker run（ledger観測） | **1** |
 | Fallback archive（全helper） | **32** |
 
 ### 24時間の流れ
 
-**探索評価 18 → 重複除外後 12 → Research候補採用 6 → Research完了 76 → Repo収録 79**
+**探索評価 21 → 重複除外後 15 → Research候補採用 6 → Research完了 76 → Repo収録 79**
 
 ## 次に処理する候補
 
@@ -111,19 +111,20 @@ Run: **2026-09-15T08:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **2** |
-| 探索軸 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline |
-| 評価候補 | **4** |
+| 探索round | **3** |
+| 探索軸 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration |
+| 評価候補 | **7** |
 | 重複除外 | **2** |
-| Novel候補 | **2** |
+| Novel候補 | **5** |
 | Research候補採用 | **1** |
-| 重複率 | **50.0%** |
+| 重複率 | **28.6%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
 | GPU・ホストメモリ間の複数経路転送と分離サービング通信 | 4 | 3 | 1 | 75.0% | 25.0% |
+| MoE expert cache placement・PCIe window scheduling・fine-grained expert migration | 3 | 0 | 0 | 0.0% | 0.0% |
 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 | 3 | 2 | 0 | 66.7% | 0.0% |
 | 熱・再現性・プライバシー制約を扱うLLM推論ランタイム | 3 | 0 | 3 | 0.0% | 100.0% |
 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
@@ -134,7 +135,7 @@ Run: **2026-09-15T08:00:00+09:00**
 
 ### 直近5件の:00 補助worker Discovery run
 
-- 2026-09-15T08:00:00+09:00 — 2 round: 評価 4 / 重複 2 / 採用 1 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline
+- 2026-09-15T08:00:00+09:00 — 3 round: 評価 7 / 重複 2 / 採用 1 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration
 - 2026-09-15T07:00:00+09:00 — 3 round: 評価 9 / 重複 3 / 採用 4 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング / 熱・再現性・プライバシー制約を扱うLLM推論ランタイム / GPU・ホストメモリ間の複数経路転送と分離サービング通信
 - 2026-09-15T03:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache所有権・OS page cache・階層メモリ
 - 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
