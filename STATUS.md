@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 03:38 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 03:39 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -16,7 +16,7 @@
 | 指標 | 状態 |
 |---|---:|
 | 未処理の論文候補（Research ready） | **46** |
-| 現在処理不能（Research blocked） | **1** |
+| 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **343** |
 | 耐久checkpoint済み・GitHub未反映（job） | **22** |
@@ -30,7 +30,6 @@
 
 ### 要注意
 
-- Research blocked が **1件** 残っています。
 - Research消化が:00 補助workerのDiscovery候補補充を上回っています。candidate枯渇に注意。
 
 <!-- research-throughput-status:start -->
@@ -52,7 +51,7 @@
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 03:38 JST** |
+| :30 通常worker 直近lease活動 | **09-15 03:39 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **42** |
 | 直近24h Research完了（:00 補助worker） | **26** |
@@ -88,7 +87,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | :00 補助worker Discovery run（毎時枠） | **2** |
 | :00 補助worker Discovery round（stats観測） | **3** |
 | 通常worker run（ledger観測） | **2** |
-| Fallback archive（全helper） | **12** |
+| Fallback archive（全helper） | **13** |
 
 ### 24時間の流れ
 
