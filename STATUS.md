@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 19:18 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 19:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -41,24 +41,24 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **60** |
-| 有効claim（lease） | **4** |
-| 今すぐ着手可能（Claimable） | **57** |
+| 有効claim（lease） | **5** |
+| 今すぐ着手可能（Claimable） | **56** |
 | 有効leaseを持つworker run | **3** |
 | :30 最新worker run | **2026-09-14T17:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
 | :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **2026-09-14T19:00:00+09:00** |
-| :00 最新run由来の有効claim | **1** |
+| :00 最新run由来の有効claim | **2** |
 | :00 旧run由来の有効claim | **2** |
 | その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近lease活動 | **09-14 18:33 JST** |
-| :00 補助worker 直近lease活動 | **09-14 19:18 JST** |
-| 直近24h Research完了（:30 通常worker） | **31** |
+| :00 補助worker 直近lease活動 | **09-14 19:30 JST** |
+| 直近24h Research完了（:30 通常worker） | **30** |
 | 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **44 min** |
+| 最古の有効claimの経過時間 | **56 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -77,8 +77,8 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **55** |
-| Repo収録 | **98** |
+| Research完了 | **54** |
+| Repo収録 | **97** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
 | Research候補採用 | **0** |
@@ -86,12 +86,12 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 重複率 | **—** |
 | :00 補助worker Discovery run（毎時枠） | **0** |
 | :00 補助worker Discovery round（stats観測） | **0** |
-| 通常worker run（ledger観測） | **5** |
+| 通常worker run（ledger観測） | **4** |
 | Fallback archive（全helper） | **1** |
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 55 → Repo収録 98**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 54 → Repo収録 97**
 
 ## 次に処理する候補
 
