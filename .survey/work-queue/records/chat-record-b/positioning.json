@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-3a1a76f02fc138068798003d",
   "job_id": "job-research-f0ab820b8a884812",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-3a1a76f02fc138068798003d",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "limitations": "評価はMistral-7B-Instruct-v0.3とAscend 910B 64GBの一構成に集中し、CUDA GPUや異なるKVページサイズ、複数モデルでの実測一般化は示していない。長文脈の2〜16チャンク試験は合成拡張であり、意味依存や実運用の検索分布を完全には再現しない。Prefix KVを追い出さずChunk KVだけをLRU対象とする方針は予測可能性を得る代わりに、接頭辞主体の負荷でチャンク側を圧迫し得る。チャンク境界の意味分割と再利用識別子が既知であることも前提で、プライバシーを跨ぐ利用者間共有は将来課題として残る。",
+    "differences": "CacheBlendやEPICは位置非依存KVの『どのトークンを再計算するか』を主に最適化するが、要求ごとに出来上がったKVをページ化HBMへ別々に置くため、同一チャンクの物理複製を十分には除かない。MEPICは再計算方策そのものより、共有単位をページ境界へ固定し、最初の1ブロックだけを要求固有化し、位置符号を保存表現から分離することで、vLLMの注意カーネルが直接参照できる一つの正規チャンクKVを作る。LMCacheはGPU/CPU/ストレージ間のKVデータ面を提供するのに対し、MEPICはその上でHBM内のチャンク常駐・共有・追い出しを第一級に扱う。",
+    "implementation_status": "vLLMのページ化KV管理とLMCacheを拡張した実機システムをAscend 910B上で評価しており、概念提案だけではない。スケジューラ側にチャンク認識・正規配置・HBM常駐管理を、計算側に固定ブロック再計算とRoPE融合注意を実装する。ただし論文本文ではMEPIC本体の著者公式コード公開URLを確認できないため、公開成果物だけで同一差分を再現できる状態かは不明である。",
+    "research_positioning": "位置非依存キャッシュ、PagedAttention、階層KVキャッシュを接続するサービング基盤研究である。特に『再利用可能KVをCPU/ディスクから毎回持ってくる』段階から、『HBM内で多数要求が同じ物理ページを直接共有する』段階へPICを進める。SSD/NVMe研究との関係では、LMCacheの下位層に退避した正規チャンクを再取得する単位が安定するため、チャンク熱度・先読み・SSD配置をページ列単位で最適化しやすい。将来的には共有HBM正本、DRAM、SSDを同一チャンク識別子で階層化する土台になる。",
+    "relation_to_existing_repository": "RAGCacheやShared RAG-DCacheなどの階層・共有KV研究とは、MEPICの正規チャンクページをどの階層に置くかという形で補完できる。KIVIやQAQ、SpectrumKVなどのKV量子化は一コピー当たりのサイズを減らすのに対し、MEPICはコピー数そのものを減らすため直交的で、正規チャンクを量子化して共有すれば両方の利得を重ねられる。vLLMのPagedAttention、LMCacheの多階層転送、PIC系の位置非依存再利用を一つの運用経路へ接続する点がリポジトリ内での主要な位置付けである。",
+    "audit_required": true,
+    "audit_reason": "MEPIC本体の著者公式コードURLが本文から確認できず、実装差分の公開有無とvLLM/LMCacheの具体的バージョンを追加確認すると再現性評価が改善する。また単一Ascend構成のため、GPU系でのRoPE融合カーネルとページ共有の実測が公開された場合は追跡価値がある。"
   }
 }
