@@ -8,7 +8,7 @@
   "source_url": "https://arxiv.org/abs/2609.10861",
   "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10861-reach-controller-managed-hbm-ecc-ai-inference.md",
   "selection_reason": "LLMデコードの読み出し偏重特性を利用して、HBM向け長スパン誤り訂正をメモリコントローラ側で効率化する。性能だけでなくHBM帯域・面積・電力・信頼性を同時に扱うため、階層メモリや推論基盤をハードウェア信頼性側から補完する研究価値がある。",
-  "status": "blocked",
+  "status": "ready",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
@@ -32,6 +32,5 @@
     }
   ],
   "last_blocked_at": "2026-09-14T15:15:28+00:00",
-  "completed_at": "2026-09-14T15:15:28+00:00",
-  "retry_not_before": "2026-09-14T16:46:40+00:00"
+  "retry_queued_at": "2026-09-14T16:51:37+00:00"
 }
