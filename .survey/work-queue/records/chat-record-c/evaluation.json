@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-5fcf7a060a77c39dcc2d2e09",
   "job_id": "job-research-d0c3e0e607ad747e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-5fcf7a060a77c39dcc2d2e09",
-    "worker_id": "scheduled-chat-discovery-overflow",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "単一GPU評価ではNVIDIA Titan RTX 24 GBを使用し、メモリ制約端末の比較として16 GB GPUを備えるAMD AI X1 Mini Proも用いる。大規模分散評価ではAMD MI250 GPUを8基使い、Llama-2-70B-Chatを層単位で均等分割して各GPUへKVキャッシュも対応配置する。",
+    "software": "Medusaを基盤にSpecMemoのメモリ予算器、候補木の生成・枝刈り、KVキャッシュ事前割当、デコードヘッド削減、必要時の基盤モデル量子化、分散・バッチ投機デコードを実装する。単一GPUはVicuna-7B系Medusa、分散系はLlama-2-70B-Chatを用いる。",
+    "datasets": "単一GPUではMT-Benchの多ターン対話とstory tellingベンチマークで候補木・ヘッド数・KV割当を探索する。分散Llama-2-70BでもMT-Benchを用い、バッチサイズ1、2、4、8、10でスループットを測る。候補木の受理長とバッファ量は付録の木構造群でも評価する。",
+    "methodology": "まず基盤モデル重み、デコードヘッド、KVキャッシュ、候補木由来の一時バッファを数式化し、GPU容量に対する可否を事前判定する。Titan RTXではMedusa既定木とSpecMemoが作る複数の木形状について、候補木ノード数、ヘッド数、KV容量、トークン当たり遅延、スループット、対話全体のバッファ量を比較する。16 GB端末ではKV:モデルの固定比率1:2〜1:15による粗いメモリ配分と、SpecMemoの細粒度予算を比較し、何件の128トークンクエリをOOMなしで処理できるかを見る。8×MI250では同じ分散基盤モデルについて、通常のバッチ自己回帰復号と分散Medusaをバッチサイズ別に比較する。",
+    "scope": "実機評価でありシミュレーションではないが、主要な省メモリ結果はMedusa型投機デコードとVicuna-7B/Titan RTXに依存し、分散結果は8×MI250上のLlama-2-70Bに限定される。連続バッチングは未実装で、可変受理長を固定長へパディングする方式を採る。候補木の品質・速度特性は基盤モデルや投機ヘッドの学習状態にも依存するため、他の投機方式へ同一数値がそのまま移るわけではない。",
+    "baselines": ["標準Medusa", "固定メモリ比率によるKV・モデル配分", "分散・バッチ通常自己回帰復号"],
+    "evaluation_conditions": ["Titan RTX 24 GB", "AMD AI X1 Mini Pro 16 GB GPU", "AMD MI250×8", "Vicuna-7B/Medusa", "Llama-2-70B-Chat", "MT-Bench", "batch 1〜10"]
+  },
+  "reservation": {"claim_id":"claim-5fcf7a060a77c39dcc2d2e09","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
 }
