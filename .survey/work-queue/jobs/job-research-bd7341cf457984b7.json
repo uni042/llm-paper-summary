@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-bd7341cf457984b7",
+  "type": "research",
+  "parent_job_id": "job-15c0335aaa7eded8",
+  "priority": 80,
+  "canonical_id": "arXiv:2609.12449",
+  "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+  "source_url": "https://arxiv.org/abs/2609.12449",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.12449-heatcache-thermal-aware-energy-efficient-llm-inference-scheduling.md",
+  "selection_reason": "持続可能な高温設定のエッジサーバ室で、液冷ループを一時的な熱バッファとして扱い、熱安全性とサービス水準目標（SLO）を守りながら要求を割り当てる推論スケジューラ。vLLM上の実装で計算エネルギーを最大18.0%削減、熱スロットリング曝露を81.7%削減し、48℃までSLO違反率0.9%未満を報告しており、従来のGPU負荷・遅延中心のスケジューリングに熱状態を直接組み込む運用系の差分が明確。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-14T22:35:02+00:00"
+}

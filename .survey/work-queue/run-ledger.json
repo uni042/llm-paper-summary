@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:31:39.653714+00:00",
+  "updated_at": "2026-09-14T22:38:49.324438+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:31:39.653714+00:00",
+      "last_recorded_at": "2026-09-14T22:38:49.324438+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 75,
         "audit_completed": 0,
-        "discovery_completed": 4,
+        "discovery_completed": 5,
         "blocked": 1,
-        "new_jobs": 7,
-        "new_papers": 76,
+        "new_jobs": 11,
+        "new_papers": 79,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34807403344:1",
-          "recorded_at": "2026-09-14T04:49:04.617401+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34807403344",
-            "run_attempt": "1",
-            "source_sha": "b801175c61b32d5ff1ad110a4bba84c3b7afe2d8"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34807646481:1",
           "recorded_at": "2026-09-14T04:53:24.558858+00:00",
@@ -19598,6 +19584,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34904797404:1",
+          "recorded_at": "2026-09-14T22:38:49.324438+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34904797404",
+            "run_attempt": "1",
+            "source_sha": "a0604f5cfe7a57446ca930b04353f3dfbc082165"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "paper_materialized"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20240,6 +20241,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-15c0335aaa7eded8",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20291,6 +20300,34 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-4869ced76a02ed91",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-a8b5b2b70328c222",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.04748",
+          "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving"
+        },
+        {
+          "job_id": "job-research-aa4d7a102619f4b3",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.12378",
+          "title": "An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference"
+        },
+        {
+          "job_id": "job-research-bd7341cf457984b7",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.12449",
+          "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms"
         }
       ],
       "new_paper_ids": [
@@ -20369,7 +20406,10 @@
         "arXiv:2606.11916",
         "arXiv:2607.13093",
         "arXiv:2411.07447",
-        "arXiv:2504.15364"
+        "arXiv:2504.15364",
+        "arXiv:2601.17855",
+        "arXiv:2604.22906",
+        "arXiv:2605.31464"
       ],
       "new_discovery_results": [
         ".survey/work-queue/results/20260915T0222JST-discovery-specialist-adaptive-kv-1.json",
@@ -20385,7 +20425,8 @@
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-recheck-empty-4.json",
         ".survey/work-queue/results/20260915T0724JST-discovery-specialist-kv-agent-scheduling-1.json",
         ".survey/work-queue/results/20260915T0726JST-discovery-specialist-prefill-kv-adaptation-2.json",
-        ".survey/work-queue/results/20260915T0728JST-discovery-specialist-serving-security-routing-3.json"
+        ".survey/work-queue/results/20260915T0728JST-discovery-specialist-serving-security-routing-3.json",
+        ".survey/work-queue/results/20260915T0735JST-discovery-specialist-runtime-constraints-4.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20422,8 +20463,8 @@
         ".survey/work-queue/fallback-archive/20260915T035000JST-research-2512.20210-predictive-lora-attempt-303dac5e3c1a671043d00ee0.json"
       ],
       "paper_active_count_before": 454,
-      "paper_active_count_after": 536,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "paper_active_count_after": 539,
+      "last_successful_action": "paper_materialized"
     }
   ]
 }

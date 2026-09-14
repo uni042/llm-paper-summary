@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1本）
+## 自動生成の論文一覧（2本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-10〜2026-09**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -13,4 +13,8 @@
 - **2026-08 · [LLM Serving in the Wild: An Empirical Study of Frameworks, Methods, and System Designs](2026-2608.03036-llm-serving-in-the-wild.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GitHub上の実ソフトウェアを調べ、vLLMなど5基盤の採用数、効率化手法、併用関係、利用用途を実証分析し、vLLMの突出した採用と並列計算・メモリ管理の広い利用、複数基盤併用の少なさを明らかにした。
+
+- **2026-04 · [Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities](2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エッジLLM推論を4つの協調構成で整理し、圧縮・デコード高速化・分割配置・KV管理・オフロード・無線通信を通信/計算/メモリの共同最適化として体系化するサーベイ。
 <!-- survey:auto:end -->

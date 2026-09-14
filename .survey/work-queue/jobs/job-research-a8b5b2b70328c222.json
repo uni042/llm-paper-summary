@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-a8b5b2b70328c222",
+  "type": "research",
+  "parent_job_id": "job-15c0335aaa7eded8",
+  "priority": 79,
+  "canonical_id": "arXiv:2609.04748",
+  "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving",
+  "source_url": "https://arxiv.org/abs/2609.04748",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md",
+  "selection_reason": "接頭辞キャッシュを透過的最適化とみなした場合の再現性コストを、2つの推論基盤・4つの重み形式・80エピソードのエージェント型ツール利用で測定する。キャッシュ有効化による軌跡変化が16-bitで36.2%、4-bitで75.0%に達し、キャッシュ無効時は800エピソードで反復実行がbit-identicalだったと報告する。性能だけでなく推論基盤の決定性・キャッシュ状態管理を設計軸として扱うため、サービング信頼性の未収録候補として価値が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-14T22:35:02+00:00"
+}
