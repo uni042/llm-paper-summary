@@ -2,28 +2,92 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-fe6a702e8a42b97cfdd831d0",
+  "attempt_id": "attempt-082db31c9337a02edce843fb",
   "job_id": "job-research-2bc48bb7d3eef940",
   "data": {
     "overview": "8K short poolと65K long poolへ分けたtoken-budget routingは、Llama-3-70B/A100のtrace-driven simulationで1,000 req/s時の必要GPU数をAzure由来traceで358から208へ、LMSYS由来traceで358から246へ削減する。Azureでは同じ90% aggregate utilizationでもpreemptionが47.3‰から8.7‰、OOMが2.1から0.4 events/hrへ低下し、P99 TTFTは1.82秒から1.71秒へ改善する。カテゴリ別bytes/token推定は50観測で相対誤差3.5%以内に収束し、固定4 bytes/tokenのmis-route 4.1%に対して各カテゴリ1%未満となる。4K〜16Kの閾値範囲でpeak savingsの80%以上を維持するため、細かなthreshold tuningへの依存も小さい。",
     "key_results": [
-      {"metric":"GPU instances / savings","value":"358→208、41.9%削減","baseline":"65K homogeneous fleet","condition":"Azure-derived trace、1,000 req/s、Llama-3-70B/A100 simulation","interpretation":"trafficの80%を4倍throughputのshort poolへ移すことでfleet全体の必要GPU数を大きく減らす。"},
-      {"metric":"GPU instances / savings","value":"358→246、31.3%削減","baseline":"65K homogeneous fleet","condition":"LMSYS-derived trace、1,000 req/s","interpretation":"compactな分布でもpool right-sizingの利得は残るが、Azureより削減幅は小さい。"},
-      {"metric":"preemption rate","value":"47.3‰→8.7‰、5.4倍低減","baseline":"homogeneous","condition":"Azure、1,000 req/s、90% utilization","interpretation":"80%の短いtrafficが128-slot short poolへ移り、長文poolのKV圧力も同時に下がる。"},
-      {"metric":"OOM events / success rate","value":"2.1→0.4 events/hr、99.69%→99.95%","baseline":"homogeneous","condition":"Azure、90% utilization","interpretation":"容量に合うpoolへ振り分けることでKV不足由来の障害を減らす。"},
-      {"metric":"TTFT / TPOT","value":"P50 TTFT 0.42→0.28 s、P99 1.82→1.71 s、P50 TPOT 28→25 ms、P99 67→62 ms","baseline":"homogeneous","condition":"Azure、1,000 req/s","interpretation":"short poolの大きい同時実行枠がqueueingを減らし、短いKVでdecode batchも拡大できる。"},
-      {"metric":"token estimation calibration","value":"50 samples/categoryで相対誤差<=3.5%、mis-route <1%","baseline":"global static 4 bytes/tokenでmis-route 4.1%","condition":"Azure trace、beta=0.95、gamma=1.0","interpretation":"言語・コード差をカテゴリ別に学ぶことでtokenizerなしでも安全なrouting精度を得る。"},
-      {"metric":"threshold robustness","value":"4K〜16Kでpeak savingsの80%以上","baseline":"8K付近がpeak","condition":"Azure sensitivity study","interpretation":"thresholdの精密な手動調整なしでも大半の利得を得られる。"},
-      {"metric":"MI300X fleet projection","value":"1,576→1,096 GPUs、30.5%削減、$15.4M/year節約","baseline":"32K homogeneous Qwen3-235B fleet","condition":"10,000 req/s、MI300X、$3.67/GPU-hr","interpretation":"容量モデル上は大規模MoE fleetでも同じ構造的利得が見込まれるが、これはprojectionで実測ではない。"}
+      {
+        "metric": "GPU instances / savings",
+        "value": "358→208、41.9%削減",
+        "baseline": "65K homogeneous fleet",
+        "condition": "Azure-derived trace、1,000 req/s、Llama-3-70B/A100 simulation",
+        "interpretation": "trafficの80%を4倍throughputのshort poolへ移すことでfleet全体の必要GPU数を大きく減らす。"
+      },
+      {
+        "metric": "GPU instances / savings",
+        "value": "358→246、31.3%削減",
+        "baseline": "65K homogeneous fleet",
+        "condition": "LMSYS-derived trace、1,000 req/s",
+        "interpretation": "compactな分布でもpool right-sizingの利得は残るが、Azureより削減幅は小さい。"
+      },
+      {
+        "metric": "preemption rate",
+        "value": "47.3‰→8.7‰、5.4倍低減",
+        "baseline": "homogeneous",
+        "condition": "Azure、1,000 req/s、90% utilization",
+        "interpretation": "80%の短いtrafficが128-slot short poolへ移り、長文poolのKV圧力も同時に下がる。"
+      },
+      {
+        "metric": "OOM events / success rate",
+        "value": "2.1→0.4 events/hr、99.69%→99.95%",
+        "baseline": "homogeneous",
+        "condition": "Azure、90% utilization",
+        "interpretation": "容量に合うpoolへ振り分けることでKV不足由来の障害を減らす。"
+      },
+      {
+        "metric": "TTFT / TPOT",
+        "value": "P50 TTFT 0.42→0.28 s、P99 1.82→1.71 s、P50 TPOT 28→25 ms、P99 67→62 ms",
+        "baseline": "homogeneous",
+        "condition": "Azure、1,000 req/s",
+        "interpretation": "short poolの大きい同時実行枠がqueueingを減らし、短いKVでdecode batchも拡大できる。"
+      },
+      {
+        "metric": "token estimation calibration",
+        "value": "50 samples/categoryで相対誤差<=3.5%、mis-route <1%",
+        "baseline": "global static 4 bytes/tokenでmis-route 4.1%",
+        "condition": "Azure trace、beta=0.95、gamma=1.0",
+        "interpretation": "言語・コード差をカテゴリ別に学ぶことでtokenizerなしでも安全なrouting精度を得る。"
+      },
+      {
+        "metric": "threshold robustness",
+        "value": "4K〜16Kでpeak savingsの80%以上",
+        "baseline": "8K付近がpeak",
+        "condition": "Azure sensitivity study",
+        "interpretation": "thresholdの精密な手動調整なしでも大半の利得を得られる。"
+      },
+      {
+        "metric": "MI300X fleet projection",
+        "value": "1,576→1,096 GPUs、30.5%削減、$15.4M/year節約",
+        "baseline": "32K homogeneous Qwen3-235B fleet",
+        "condition": "10,000 req/s、MI300X、$3.67/GPU-hr",
+        "interpretation": "容量モデル上は大規模MoE fleetでも同じ構造的利得が見込まれるが、これはprojectionで実測ではない。"
+      }
     ],
     "negative_results": [
-      {"name":"閉形式cost modelは実現値を過大評価","description":"Azureでは式が60.0% savingsを予測するのにsimulationは41.9%、LMSYSでは51.0%対31.3%となる。queueing、load imbalance、整数GPU数を無視するため、本文後半では実現可能削減率の上限として扱う。"},
-      {"name":"long poolの障害は消えない","description":"long poolではpreemption 38.6‰、OOM 1.8 events/hrが残る。64K級要求そのものは大きなKVを必要とするため、routingだけでは長文処理の根本的な容量圧力を消せない。"},
-      {"name":"過大thresholdではthroughput差が縮む","description":"B_shortを16Kより大きくするとshort pool自体の最大文脈長が増えてconcurrency ratioが1へ近づき、送れるtraffic割合が増えても節約率が低下する。"},
-      {"name":"多段poolの追加利得は小さい","description":"4K/16K/64Kなどpool数を増やしても追加節約は約2%とされ、監視・容量計画・設定管理の複雑性が増えるため二段構成を推奨する。"}
+      {
+        "name": "閉形式cost modelは実現値を過大評価",
+        "description": "Azureでは式が60.0% savingsを予測するのにsimulationは41.9%、LMSYSでは51.0%対31.3%となる。queueing、load imbalance、整数GPU数を無視するため、本文後半では実現可能削減率の上限として扱う。"
+      },
+      {
+        "name": "long poolの障害は消えない",
+        "description": "long poolではpreemption 38.6‰、OOM 1.8 events/hrが残る。64K級要求そのものは大きなKVを必要とするため、routingだけでは長文処理の根本的な容量圧力を消せない。"
+      },
+      {
+        "name": "過大thresholdではthroughput差が縮む",
+        "description": "B_shortを16Kより大きくするとshort pool自体の最大文脈長が増えてconcurrency ratioが1へ近づき、送れるtraffic割合が増えても節約率が低下する。"
+      },
+      {
+        "name": "多段poolの追加利得は小さい",
+        "description": "4K/16K/64Kなどpool数を増やしても追加節約は約2%とされ、監視・容量計画・設定管理の複雑性が増えるため二段構成を推奨する。"
+      }
     ],
     "interpretation": "効果の本質はattention kernelを速くすることではなく、短い要求に対して『長文を受ける可能性』だけのためにKV容量とsequence slotを全インスタンスで縛る必要をなくすことにある。要求長に応じて静的構成の異なるpoolを使い分けると、同じGPUでも短文側の並列性が上がり、queueingとKV圧力が同時に下がる。したがってPagedAttentionやprefill/decode disaggregationとは競合せず、その上位のfleet-level資源割当として併用できる。",
     "quality_impact": "生成結果そのものを圧縮・近似しないため、モデル品質との速度交換ではない。ただしmax_output_tokensが実際の生成上限を適切に表すこと、カテゴリ別比率が収束すること、capacity checkが正しく実装されることが安全性の前提になる。"
   },
-  "reservation": {"claim_id":"claim-fe6a702e8a42b97cfdd831d0","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-082db31c9337a02edce843fb",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

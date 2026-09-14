@@ -2,21 +2,43 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-fe6a702e8a42b97cfdd831d0",
+  "attempt_id": "attempt-082db31c9337a02edce843fb",
   "job_id": "job-research-2bc48bb7d3eef940",
   "data": {
     "problem": "本番LLM配信では、少数の長文要求を受けられるよう全インスタンスの最大文脈長を64K級に合わせる運用が一般的だが、実トレースでは要求の80〜95%が8K以下である。最大文脈長は1系列に予約できるKVキャッシュ量と同時実行系列数を左右するため、Llama-3-70B/A100の例では64K設定が約16系列、8K設定が約128系列となり、短文中心の交通に長文設定を使うだけで大きな並列性を失う。長いprefillを分割するchunked prefillは計算待ちを和らげても系列全体のKV容量要求と最大文脈設定を変えないため、このメモリ側の不一致は残る。高負荷時には同じ不一致がpreemption、OOM、要求拒否、tail latencyとして現れる。",
     "novelty": "提案の中心は、GPU型やモデルを変えず同じfleetを最大文脈長の異なる短文poolと長文poolへ分け、各要求の『入力＋最大生成』の総トークン予算を入口で推定して正しいpoolへ送る点にある。モデル固有tokenizerをルータへ持たせず、要求バイト数と応答後に得られる正確なprompt token数からカテゴリ別bytes/token比をオンライン学習する。誤差の害が非対称であることを利用し、不確実性分だけトークン数を多めに見積もって安全側へ倒す。さらに単純な閾値振り分けだけでなく、pool過負荷時のspilloverと最終容量検査を組み込み、効率と信頼性を同じルータで扱う。",
     "method_overview": "入口ルータは要求をコード、英語文、CJKなどのカテゴリkとして扱い、本文バイト数|r|をカテゴリ別の推定bytes/token比ĉ_kで割って入力トークン数を概算し、max_output_tokensを加えたL_totalを得る。ĉ_kは初期値4.0から始め、各応答のusage.prompt_tokensで観測したbytes/token比をβ=0.95の指数移動平均へ反映する。標準偏差推定σ̂_kも追跡し、実際の振り分けではĉ_k−γσ̂_k（γ=1）を分母に使うため、トークン数を保守的に多めに見積もる。L_totalが短文poolの最大文脈長を超えれば即座に長文poolへ送り、収まる場合は閾値B_short（既定8,192）以下なら短文pool、それより大きければ長文poolを選ぶ。選択先が一時的に過負荷なら、別poolが容量条件を満たす場合だけspilloverする。最後にもう一度容量検査を行い、短文poolへ収まらない要求を長文poolへ戻す。poolごとのvLLM内部ではPagedAttention、continuous batching、chunked prefill、prefill/decode分離をそのまま併用できる。",
     "components": [
-      {"name":"短文・長文の二重pool","description":"同一モデル・同一GPU種のfleetを、最大文脈長が小さく同時実行数の多い短文poolと、最大文脈長が大きく任意の長文を処理できる長文poolへ分ける。A100評価では短文poolを8K/128系列/11.2 req/s、長文poolを65K/16系列/2.8 req/sに設定する。短い要求を前者へ集めることで、長文対応のために全GPUで8倍近い同時実行容量を犠牲にする状態を避ける一方、長文poolを残して機能範囲は維持する。"},
-      {"name":"tokenizer不要の総トークン予算推定","description":"ルータは要求本文のバイト長をカテゴリ別bytes/token比で割り、入力トークン数をO(1)で推定する。そこへmax_output_tokensを必ず加えるため、短い入力から長い生成を要求するケースも短文と誤認しにくい。tokenizerを入口に置かないので、複数モデルを扱う上流ルータでもモデル別tokenizerの初期化・実行コストを持たずに使える。"},
-      {"name":"カテゴリ別オンライン自己較正","description":"英語、コード、CJKではbytes/token比が大きく異なるため、一つの固定比率では系統的な誤振り分けが生じる。各応答のusage.prompt_tokensを教師信号として観測比率を計算し、カテゴリごとに指数移動平均とばらつきを更新する。β=0.95では約50観測で各カテゴリの相対誤差を3.5%以内へ収束させ、固定比率のmis-route 4.1%を各カテゴリ1%未満へ抑える。"},
-      {"name":"非対称誤差を考慮した安全側補正","description":"長い要求を短文poolへ誤送信するとKV容量不足、preemption、OOMにつながる一方、短い要求を長文poolへ送る誤差は主に効率損失で済む。この非対称性に合わせ、平均bytes/token比から標準偏差分を引いた小さな分母を使い、推定トークン数を意図的に多めにする。加えて振り分け前後で最大文脈長をhard checkし、容量超過要求がspilloverで短文poolへ入らないようにする。"},
-      {"name":"負荷連動spillover","description":"静的閾値だけでは短文poolへ一時的な到着集中が起きたとき待ち行列が伸びる。ルータはqueue depthまたは利用率を観測し、選択poolが過負荷なら、代替poolがその要求の総トークン予算を収容できる場合だけ送り先を切り替える。これにより平常時は短文poolの高い並列性を使いつつ、burst時は長文poolの空き容量を安全弁として利用し、tail latencyとSLO違反を抑える。"},
-      {"name":"事前費用モデル","description":"短文閾値以下の要求比率αと、短文pool/長文poolの実測スループット比ρだけから、理想化したfleet節約率α(1−1/ρ)を計算する。これにより配備前にトラフィックCDFと少数のthroughput profileから上限効果を見積もれる。ただし本文のシミュレーションではqueueing、整数GPU数、負荷不均衡を含むため、Azureで理論60.0%に対し実現41.9%となり、この式は実運用値そのものではなく粗い上限推定として扱う必要がある。"}
+      {
+        "name": "短文・長文の二重pool",
+        "description": "同一モデル・同一GPU種のfleetを、最大文脈長が小さく同時実行数の多い短文poolと、最大文脈長が大きく任意の長文を処理できる長文poolへ分ける。A100評価では短文poolを8K/128系列/11.2 req/s、長文poolを65K/16系列/2.8 req/sに設定する。短い要求を前者へ集めることで、長文対応のために全GPUで8倍近い同時実行容量を犠牲にする状態を避ける一方、長文poolを残して機能範囲は維持する。"
+      },
+      {
+        "name": "tokenizer不要の総トークン予算推定",
+        "description": "ルータは要求本文のバイト長をカテゴリ別bytes/token比で割り、入力トークン数をO(1)で推定する。そこへmax_output_tokensを必ず加えるため、短い入力から長い生成を要求するケースも短文と誤認しにくい。tokenizerを入口に置かないので、複数モデルを扱う上流ルータでもモデル別tokenizerの初期化・実行コストを持たずに使える。"
+      },
+      {
+        "name": "カテゴリ別オンライン自己較正",
+        "description": "英語、コード、CJKではbytes/token比が大きく異なるため、一つの固定比率では系統的な誤振り分けが生じる。各応答のusage.prompt_tokensを教師信号として観測比率を計算し、カテゴリごとに指数移動平均とばらつきを更新する。β=0.95では約50観測で各カテゴリの相対誤差を3.5%以内へ収束させ、固定比率のmis-route 4.1%を各カテゴリ1%未満へ抑える。"
+      },
+      {
+        "name": "非対称誤差を考慮した安全側補正",
+        "description": "長い要求を短文poolへ誤送信するとKV容量不足、preemption、OOMにつながる一方、短い要求を長文poolへ送る誤差は主に効率損失で済む。この非対称性に合わせ、平均bytes/token比から標準偏差分を引いた小さな分母を使い、推定トークン数を意図的に多めにする。加えて振り分け前後で最大文脈長をhard checkし、容量超過要求がspilloverで短文poolへ入らないようにする。"
+      },
+      {
+        "name": "負荷連動spillover",
+        "description": "静的閾値だけでは短文poolへ一時的な到着集中が起きたとき待ち行列が伸びる。ルータはqueue depthまたは利用率を観測し、選択poolが過負荷なら、代替poolがその要求の総トークン予算を収容できる場合だけ送り先を切り替える。これにより平常時は短文poolの高い並列性を使いつつ、burst時は長文poolの空き容量を安全弁として利用し、tail latencyとSLO違反を抑える。"
+      },
+      {
+        "name": "事前費用モデル",
+        "description": "短文閾値以下の要求比率αと、短文pool/長文poolの実測スループット比ρだけから、理想化したfleet節約率α(1−1/ρ)を計算する。これにより配備前にトラフィックCDFと少数のthroughput profileから上限効果を見積もれる。ただし本文のシミュレーションではqueueing、整数GPU数、負荷不均衡を含むため、Azureで理論60.0%に対し実現41.9%となり、この式は実運用値そのものではなく粗い上限推定として扱う必要がある。"
+      }
     ],
     "system_design": "入口に軽量ルータを置き、その後段に同じモデルを異なるmax_model_lenで動かすshort/long vLLM poolを置く。ルータは要求ごとに総予算推定、容量検査、閾値判定、負荷spilloverを行い、応答後にはprompt token数を受けてカテゴリ統計だけ更新する。したがってデータ面の追加状態はカテゴリごとの平均・分散程度で、要求ごとのtokenizer実行や大規模最適化器を必要としない。"
   },
-  "reservation": {"claim_id":"claim-fe6a702e8a42b97cfdd831d0","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-082db31c9337a02edce843fb",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
