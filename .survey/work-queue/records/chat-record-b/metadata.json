@@ -2,47 +2,131 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-2301ef4abff314e4c204d926",
-  "job_id": "job-research-1ecc150ce081a47b",
+  "attempt_id": "attempt-c7b18dfc7a3295024839abb2",
+  "job_id": "job-research-2b5e5558ada44b0c",
   "data": {
-    "canonical_id": "arXiv:2603.08739",
-    "arxiv_id": "2603.08739",
-    "doi": "10.48550/arXiv.2603.08739",
+    "canonical_id": "arXiv:2608.18261",
+    "arxiv_id": "2608.18261",
+    "doi": "10.48550/arXiv.2608.18261",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.AR","cross_list":["cs.DC"]},
-    "title": "Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service",
-    "summary": "Karetoは、大規模言語モデルのKVキャッシュをGPU高帯域メモリ、主記憶、SSDなどへ階層配置するとき、固定容量や単一の追い出し方針では要求密度、接頭辞再利用、入出力帯域、クラウド料金の変化に追従できない問題を扱う。遅延、処理量、運用費を同時目的とし、非線形な相互作用や料金の段差を解析式で近似する代わりに、高忠実度の離散事象シミュレータで構成候補を評価する。探索では容量を増やしたときの限界改善が小さくなった方向を打ち切り、変化の大きい領域だけ細分化してパレート前線を効率的に近似する。さらに接頭辞木の頻出部分木ごとに再利用間隔を集計し、容量予算あたりのヒット利益が高い保持時間を割り当てる。Qwen3-480BをSGLangで配信するAlibaba Cloud相当環境を三種類の2時間トレースで評価し、固定1024GB DRAM構成に対して目的別の代表点で処理量を最大9.3%向上、平均初回トークン時間を最大58.3%短縮、総費用を最大20.2%削減した。シミュレータの実機との差は最大で初回トークン時間19.2%、処理量6.5%、ヒット率2.0%だった。",
-    "list_summary": "実負荷を再生するシミュレータでDRAM・SSD容量と保持時間のパレート前線を探索し、固定1TB DRAM比で処理量最大9.3%向上・平均初回トークン時間最大58.3%短縮・費用最大20.2%削減する階層KV構成最適化。",
-    "authors": ["Xianzhe Zheng","Zhengheng Wang","Ruiyan Ma","Rui Wang","Xiyu Wang","Rui Chen","Peng Zhang","Sicheng Pan","Zhangheng Huang","Chenxin Wu","Yi Zhang","Bo Cai","Kan Liu","Teng Ma","Yin Du","Dong Deng","Sai Wu","Guoyun Zhu","Wei Zhang","Feifei Li"],
-    "authors_affiliations": "Zhejiang University、Alibaba Group。",
-    "published": "2026-02-25",
-    "publication": "arXiv:2603.08739v1",
-    "publication_type": "プレプリント",
-    "publication_status": "2026年2月25日投稿のarXiv v1。一次資料から査読付き採択は確認できない。",
-    "lineage": "kv-cache-offload-recomputation",
-    "topics": ["KVキャッシュ","階層ストレージ","DRAM","SSD","多目的最適化","パレート前線","保持時間制御","SGLang","費用最適化"],
-    "importance": "高。KVキャッシュの移動・追い出し機構そのものではなく、変動する実負荷と料金体系に応じて各階層へどれだけ容量を割り当てるべきかという配備設計を自動化し、性能と費用を同じ最適化問題へ接続する。",
-    "hardware_evaluation": "主評価はデュアルソケットIntel Xeon 8369Bサーバ上の高忠実度シミュレータ。Alibaba Cloud ecs.gn8v-8x.48xlarge相当の推論環境、Qwen3-480B、SGLang、Alibaba Cloud ESSD PL1をモデル化する。実システム測定との精度検証も行う。",
-    "hardware_details": "シミュレータはGPU実行時間を対象GPU上の経験的プロファイルから補間し、GPU、主記憶、SSDの三構成について実系と比較する。評価は1インスタンスの計算制約条件と4インスタンスの計算余裕条件を使う。",
-    "quality_effect": "モデル重みや生成アルゴリズムは変更せず、同一KVキャッシュをどの階層へ保持・再利用するかを変えるため、生成品質を近似で落とす手法ではない。性能差は再計算量、待ち時間、入出力停止時間として現れる。",
-    "storage_targets": ["GPU高帯域メモリ上のKVブロック","主記憶上のKVブロック","SSD上のKVブロック","接頭辞木と再利用間隔統計","構成候補とシミュレーション結果"],
-    "bottlenecks": ["固定容量による過剰・不足配置","接頭辞再利用分布の負荷依存性","SSD容量と帯域・料金の結合","主記憶容量増加の限界効用低下","低密度時のSSD先読み窓不足","多目的構成空間の探索費用"],
-    "evidence_locations": ["§3.1-3.3","§4.1-4.3","§5.1-5.4","Figure 3-19","Algorithm 1-2"],
-    "source": "https://arxiv.org/abs/2603.08739",
-    "sources": ["https://arxiv.org/abs/2603.08739","https://arxiv.org/html/2603.08739","https://arxiv.org/pdf/2603.08739"],
-    "code": null,
-    "implementation": "高忠実度KVキャッシュ・推論サービスシミュレータ、適応パレート探索、接頭辞部分木別の保持時間最適化を実装して評価する。一次資料から著者公式コード公開URLは確認できない。",
+    "arxiv_categories": {
+      "primary": "cs.AI",
+      "cross_list": [
+        "cs.LG"
+      ]
+    },
+    "title": "Cacheable by Design? Training Mixture-of-Experts Routers for Locality Against the Edge Memory-Bandwidth Wall: A Pre-Registered Negative Result with a Systems Measurement Study",
+    "summary": "巨大な混合専門家モデルを小容量GPUとSSDで動かす際、活性化された専門家重みをトークンごとに低速階層から読み込むため、計算量ではなくメモリ帯域が律速になる。本研究はまずQwen3-235B-A22Bの4ビット版134GBをRTX 3070 8GB、主記憶32GB、NVMe SSDという一般的な構成で実測し、温間デコード0.44トークン毎秒が専門家読出し量とSSD帯域から予測できることを示す。次にルータ判断をモデル重みに手を入れず記録する約120行の計測器を実装し、Qwen3-30B-A3Bで隣接トークン間専門家再利用が偶然期待の2倍、13.4%の専門家容量を持つLRUキャッシュで65.9%の要求を処理できることを確認する。さらに、隣接トークンで同じ専門家を選びやすくする学習損失と、ドメインごとに専門家群を制限する損失を137Mおよび340M規模で事前登録評価する。キャッシュミス自体は最大約60%減るものの、厳格な品質基準である困惑度増加1%以下を全設定が満たさず、局所性を学習させれば無料で高速化できるという仮説を否定した。一方、学習済み局所性へ推論時のキャッシュ認識再ルーティングを重ねると、137Mでミス80%減・困惑度2.4%増、340Mで82%減・3.4%増となり、単独手法より良い交換点を示す。",
+    "list_summary": "SSDオフロードMoEでは自然な専門家局所性だけで帯域壁を越えられず、局所性学習も品質低下なしには成立しないことを事前登録で示し、学習＋キャッシュ認識再ルーティングなら約80%のミス削減を得る境界を測定した。",
+    "authors": [
+      "Shriniwas Ramesh Suram"
+    ],
+    "authors_affiliations": "University of the Cumberlands, Williamsburg, USA。研究は個人所有のRTX 3070上で独立に実施。",
+    "published": "2026-08-18",
+    "publication": "arXiv:2608.18261v1",
+    "publication_type": "プレプリント・事前登録否定結果",
+    "publication_status": "2026年8月18日投稿のarXiv v1。査読付き採択は一次資料から確認できない。",
+    "lineage": "offload-hierarchical-memory",
+    "topics": [
+      "混合専門家モデル",
+      "専門家オフロード",
+      "NVMe SSD",
+      "専門家キャッシュ",
+      "ルータ局所性",
+      "キャッシュ認識再ルーティング",
+      "事前登録否定結果",
+      "エッジ推論"
+    ],
+    "importance": "高。専門家キャッシュや先読みの前提となる『ルーティング局所性を増やせばほぼ無料でSSD読出しを減らせる』という期待を、実機帯域測定と事前登録された品質基準で反証し、どこまでなら品質との交換が成立するかを定量化する。",
+    "hardware_evaluation": "実機はIntel Core i9-12900、RTX 3070 8GB、DDR4 32GB、WD SN530 NVMe SSD。巨大モデル測定はQwen3-235B-A22B Q4_K_M、ルータ計測はQwen3-30B-A3B。学習実験は同じRTX 3070で137Mおよび340Mの16専門家モデルを使用。",
+    "hardware_details": "GPUメモリ帯域約448GB/s、主記憶約50GB/s、NVMe冷間逐次約2.4GB/s。134GBモデルのうち高速階層へ収まるのは約40GBで、約70%がSSD側に残る。",
+    "quality_effect": "固定モデルの配置測定では重みを変更せず完全精度を維持する。ルータ学習と推論時再ルーティングでは困惑度増加を明示的に測り、キャッシュ改善だけで成功扱いしない。主否定結果は困惑度増加1%以下という事前登録基準を満たさなかったことに基づく。",
+    "storage_targets": [
+      "SSD上の専門家重み",
+      "主記憶上の専門家重み",
+      "GPUメモリ上のホット専門家",
+      "専門家ルーティング履歴",
+      "専門家キャッシュ状態"
+    ],
+    "bottlenecks": [
+      "SSD専門家読出し帯域",
+      "ページフォルト集中による大バッチ崩壊",
+      "限定した高速メモリ容量",
+      "ルータ局所性とモデル品質の競合",
+      "ドメイン切替時の専門家集合変化"
+    ],
+    "evidence_locations": [
+      "§3 帯域壁",
+      "§4 ルーティング構造測定",
+      "§5 配置上限",
+      "§6 局所性学習",
+      "§7 結果",
+      "§8 規模検証",
+      "§9 制約",
+      "付録E-G"
+    ],
+    "source": "https://arxiv.org/abs/2608.18261",
+    "sources": [
+      "https://arxiv.org/abs/2608.18261",
+      "https://arxiv.org/html/2608.18261v1",
+      "https://github.com/Shriniwas410/cacheable-by-design"
+    ],
+    "code": "https://github.com/Shriniwas410/cacheable-by-design",
+    "implementation": "著者は凍結済み事前登録、学習・解析・実験統括コード、llama.cppへ約120行追加したルータ計測器、全ルータ追跡、設定・乱数種・データSHA-256、7本の単体試験を公開している。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},
-      {"canonical_id":"arXiv:2406.17565","arxiv_id":"2406.17565"},
-      {"canonical_id":"arXiv:2511.02230","arxiv_id":"2511.02230"},
-      {"canonical_id":"arXiv:2107.03374","arxiv_id":"2107.03374"},
-      {"canonical_id":"arXiv:2404.14294","arxiv_id":"2404.14294"}
+      {
+        "canonical_id": "arXiv:2607.00466",
+        "arxiv_id": "2607.00466"
+      },
+      {
+        "canonical_id": "arXiv:2401.06066",
+        "arxiv_id": "2401.06066"
+      },
+      {
+        "canonical_id": "arXiv:2412.19437",
+        "arxiv_id": "2412.19437"
+      },
+      {
+        "canonical_id": "arXiv:2502.12224",
+        "arxiv_id": "2502.12224"
+      },
+      {
+        "canonical_id": "arXiv:2101.03961",
+        "arxiv_id": "2101.03961"
+      },
+      {
+        "canonical_id": "arXiv:2210.17323",
+        "arxiv_id": "2210.17323"
+      },
+      {
+        "canonical_id": "arXiv:2410.17954",
+        "arxiv_id": "2410.17954"
+      },
+      {
+        "canonical_id": "arXiv:2402.07033",
+        "arxiv_id": "2402.07033"
+      },
+      {
+        "canonical_id": "arXiv:2607.08780",
+        "arxiv_id": "2607.08780"
+      },
+      {
+        "canonical_id": "arXiv:2006.16668",
+        "arxiv_id": "2006.16668"
+      },
+      {
+        "canonical_id": "arXiv:2211.17192",
+        "arxiv_id": "2211.17192"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": 28
+    "references_total": 30
   },
-  "reservation": {"claim_id":"claim-2301ef4abff314e4c204d926","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-c7b18dfc7a3295024839abb2",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
