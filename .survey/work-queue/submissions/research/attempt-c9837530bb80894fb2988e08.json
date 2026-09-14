@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "kind": "research",
+  "attempt_id": "attempt-c9837530bb80894fb2988e08",
+  "job_id": "job-research-8d796418f10a7d6b",
+  "claim_id": "claim-c9837530bb80894fb2988e08",
+  "worker_id": "scheduled-chat-llm-survey-20260914T2230JST",
+  "worker_kind": "scheduled_chat",
+  "depends_on_job_ids": ["job-research-8d796418f10a7d6b"],
+  "status": "blocked",
+  "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10861-reach-controller-managed-hbm-ecc-ai-inference.md",
+  "reason": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The current arXiv abstract/search index is accessible and confirms identity plus abstract-level metrics, but direct arXiv HTML/PDF fetches still fail, so the 53-page current manuscript could not be read end-to-end. Retrieval attempted again: https://arxiv.org/abs/2609.10861, https://arxiv.org/html/2609.10861, https://arxiv.org/pdf/2609.10861 and https://arxiv.org/pdf/2609.10861.pdf. The older related arXiv:2512.18152 reports materially different figures and is not substituted. Per workflow v10, do not infer a five-slot record from abstract/search snippets; retry when the current primary full text is retrievable."
+}
