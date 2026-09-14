@@ -89,16 +89,8 @@ jobs:
       - name: Refresh metadata coverage
         if: steps.pending.outputs.pending == 'true'
         id: metadata
-        shell: bash
-        run: |
-          set +e
-          python .survey/scripts/audit_metadata_coverage.py \
-            --repo-root . \
-            --json-out .survey/reports/metadata-coverage-latest.json \
-            --strict
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit 0
+        continue-on-error: true
+        run: python .survey/scripts/audit_metadata_coverage.py --repo-root . --json-out .survey/reports/metadata-coverage-latest.json --strict
 
       - name: Audit queue, state, quality regressions, and report freshness
         if: steps.pending.outputs.pending == 'true'
@@ -142,11 +134,9 @@ jobs:
 
       - name: Finalize maintenance state
         if: steps.pending.outputs.pending == 'true'
-        env:
-          METADATA_EXIT_CODE: ${{ steps.metadata.outputs.exit_code }}
         run: |
           python - <<'PY'
-          import datetime as dt, json, os
+          import datetime as dt, json
           from pathlib import Path
           state_path = Path('.survey/work-queue/maintenance-cycle.json')
           state = json.loads(state_path.read_text())
@@ -154,7 +144,7 @@ jobs:
           health = json.loads(Path('.survey/reports/maintenance-health-latest.json').read_text())
           consistency = json.loads(Path('.survey/reports/consistency-latest.json').read_text())
           metadata = json.loads(Path('.survey/reports/metadata-coverage-latest.json').read_text())
-          metadata_exit_code = int(os.environ.get('METADATA_EXIT_CODE') or 0)
+          metadata_incomplete = int((metadata.get('summary') or {}).get('incomplete') or 0)
           state['maintenance_pending'] = False
           state['last_maintenance_completed_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
           state['last_gc_deleted'] = gc.get('deleted_count', 0)
@@ -169,9 +159,9 @@ jobs:
               len(v) for v in health.get('quality', {}).get('new_failures', {}).values()
               if isinstance(v, list)
           )
-          state['last_metadata_status'] = 'passed' if metadata_exit_code == 0 else 'issues_found'
+          state['last_metadata_status'] = 'passed' if metadata_incomplete == 0 else 'issues_found'
           state['last_metadata_checked_at'] = metadata.get('checked_at')
-          state['last_metadata_incomplete'] = int((metadata.get('summary') or {}).get('incomplete') or 0)
+          state['last_metadata_incomplete'] = metadata_incomplete
           state['last_consistency_status'] = consistency.get('status')
           state['last_consistency_checked_at'] = consistency.get('checked_at')
           state['last_maintenance_status'] = (
@@ -179,7 +169,7 @@ jobs:
               if (
                   consistency.get('status') == 'passed'
                   and health.get('status') == 'passed'
-                  and metadata_exit_code == 0
+                  and metadata_incomplete == 0
               )
               else 'issues_found'
           )
