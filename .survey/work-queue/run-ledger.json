@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T02:16:31.173298+00:00",
+  "updated_at": "2026-09-14T02:35:55.952598+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T02:16:31.173298+00:00",
+      "last_recorded_at": "2026-09-14T02:35:55.952598+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 13,
+        "research_completed": 14,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18878,6 +18878,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34799731788:1",
+          "recorded_at": "2026-09-14T02:35:55.952598+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34799731788",
+            "run_attempt": "1",
+            "source_sha": "ea27ee447ea6d05a7b46265a82ff3e3aba2f836a"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18982,6 +18996,14 @@
           "type": "research",
           "canonical_id": "arXiv:2509.06261",
           "title": "FineServe: Precision-Aware KV Slab and Two-Level Scheduling for Heterogeneous Precision LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-cca875ddc6629317",
+          "type": "research",
+          "canonical_id": "arXiv:2506.17615",
+          "title": "EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration",
           "from": "ready",
           "to": "completed"
         }
