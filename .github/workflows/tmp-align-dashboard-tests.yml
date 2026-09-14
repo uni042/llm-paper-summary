@@ -1,0 +1,36 @@
+name: Temporary align dashboard tests
+on:
+  push:
+    branches: [fix/remove-duplicate-normal-run-dashboard-20260914]
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/remove-duplicate-normal-run-dashboard-20260914
+      - name: Align tests
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('.survey/tests/test_status_dashboard.py')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('            self.assertIn("通常worker Discovery round | **0**", text)\n', '')
+          s = s.replace('            self.assertNotIn("Discovery完了 | **4**", text)\n', '')
+          s = s.replace('            self.assertNotIn("新規job | **7**", text)\n', '')
+          p.write_text(s, encoding='utf-8')
+
+          p = Path('.survey/tests/test_status_dashboard_normal_slot.py')
+          p.write_text('''import importlib.util\nimport json\nimport tempfile\nimport unittest\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\n\nSCRIPT = Path(__file__).parents[1] / "scripts" / "build_status_dashboard.py"\n\n\ndef _write(path: Path, payload):\n    path.parent.mkdir(parents=True, exist_ok=True)\n    path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")\n\n\ndef _load(repo: Path):\n    dst = repo / ".survey/scripts/build_status_dashboard.py"\n    dst.parent.mkdir(parents=True, exist_ok=True)\n    dst.write_text(SCRIPT.read_text(encoding="utf-8"), encoding="utf-8")\n    spec = importlib.util.spec_from_file_location("build_status_dashboard_normal_slot", dst)\n    module = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(module)\n    return module\n\n\nclass StatusDashboardNormalSlotTests(unittest.TestCase):\n    def test_base_dashboard_does_not_render_ledger_based_normal_run_block(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            repo = Path(tmp)\n            _write(repo / ".survey/work-queue/next-jobs.json", {\n                "counts": {"research": {"completed": 10, "ready": 100, "blocked": 0, "deferred": 0}},\n                "next_jobs": [],\n            })\n            _write(repo / ".survey/work-queue/maintenance-cycle.json", {\n                "cadence_runs": 24,\n                "runs_since_maintenance": 7,\n                "maintenance_pending": False,\n                "last_maintenance_status": "passed",\n                "last_consistency_status": "passed",\n            })\n            _write(repo / ".survey/work-queue/run-ledger.json", {"entries": [\n                {\n                    "run_key": "2026-09-14T07:30:00+09:00",\n                    "counts": {"research_completed": 3, "audit_completed": 0, "discovery_completed": 0, "blocked": 0, "new_jobs": 0, "new_papers": 3, "fallback_archived": 0},\n                    "terminal_transitions": [],\n                    "new_jobs": [],\n                    "new_paper_ids": ["a", "b", "c"],\n                },\n                {\n                    "run_key": "2026-09-14T08:30:00+09:00",\n                    "counts": {"research_completed": 5, "audit_completed": 0, "discovery_completed": 0, "blocked": 0, "new_jobs": 0, "new_papers": 5, "fallback_archived": 0},\n                    "terminal_transitions": [],\n                    "new_jobs": [],\n                    "new_paper_ids": ["d", "e", "f", "g", "h"],\n                },\n            ]})\n            _write(repo / ".survey/work-queue/discovery-state.json", {"history": []})\n\n            module = _load(repo)\n            text = module.build_dashboard(repo, now=datetime(2026, 9, 14, 2, 0, tzinfo=timezone.utc))\n\n            self.assertNotIn("## 直近の通常worker", text)\n            self.assertIn("## 直近24時間の処理量", text)\n            self.assertIn("Research完了 | **8**", text)\n            self.assertIn("## 次に処理する候補", text)\n\n\nif __name__ == "__main__":\n    unittest.main()\n''', encoding='utf-8')
+          PY
+      - name: Commit and remove temporary workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm .github/workflows/tmp-align-dashboard-tests.yml
+          git add .survey/tests/test_status_dashboard.py .survey/tests/test_status_dashboard_normal_slot.py .github/workflows/tmp-align-dashboard-tests.yml
+          git commit -m 'test: align dashboard checks with claim-attributed run status'
+          git push origin HEAD:fix/remove-duplicate-normal-run-dashboard-20260914
