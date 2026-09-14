@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260914T045800Z-scheduled-chat-llm-survey",
+  "worker_id": "scheduled-chat-llm-survey",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-e2ac49197d4db145",
+      "claim_id": "claim-59ba0eb6b2bb06454ccb8a16",
+      "worker_id": "scheduled-chat-llm-survey",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-59ba0eb6b2bb06454ccb8a16",
+      "claimed_at": "2026-09-14T04:42:54+00:00",
+      "expires_at": "2026-09-14T06:12:54+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-e2ac49197d4db145"
+      ],
+      "job": {
+        "job_id": "job-research-e2ac49197d4db145",
+        "type": "research",
+        "parent_job_id": "job-95ad016f315feba5",
+        "priority": 82,
+        "canonical_id": "arXiv:2601.22996",
+        "title": "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2601.22996",
+        "paper_path": null,
+        "selection_reason": "未知の生成長によりKV使用量が伸びる状況を、事前のjob size予測なしで扱うnon-clairvoyant KV schedulerを定式化し、定数competitive ratioを与えるGeometric Slicing Algorithmを提案する。実request traceでも評価しており、予測依存schedulerに対する理論的基準とmemory-aware scheduling設計の参照として有用。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T16:07:40+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[2].description is too short",
+          "problem_method.components[3].description is too short"
+        ],
+        "last_validation_failed_at": "2026-09-14T04:41:12+00:00"
+      },
+      "record_bank": "c",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-bfc2f175928593655e22fb1d"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-bfc2f175928593655e22fb1d.json"
+    }
+  ],
+  "processed_at": "2026-09-14T04:42:54+00:00",
+  "checkpoint_released": 0
+}
