@@ -105,11 +105,15 @@ jobs:
             python .survey/scripts/record_run_ledger.py record \
               --repo-root . \
               --snapshot /tmp/submission-fast-baseline.json
+            python .survey/scripts/ensure_dashboard_history.py --repo-root .
+            python .survey/scripts/build_status_dashboard.py --repo-root . --output STATUS.md
+            python .survey/scripts/append_research_throughput_status.py --repo-root . --status STATUS.md
 
             mkdir -p \
               .survey/work-queue/results/research \
               .survey/work-queue/results/audit
             git add \
+              STATUS.md \
               papers \
               .survey/work-queue/jobs \
               .survey/work-queue/results/research \
@@ -117,6 +121,7 @@ jobs:
               .survey/work-queue/run-ledger.json \
               .survey/work-queue/state.json \
               .survey/work-queue/next-jobs.json \
+              .survey/work-queue/discovery-state.json \
               .survey/survey-state/identity-deltas
 
             if git diff --cached --quiet; then

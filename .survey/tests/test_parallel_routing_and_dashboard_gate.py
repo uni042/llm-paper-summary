@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / ".survey/docs/survey-workflow"
 GATE = ROOT / ".survey/scripts/status_publish_gate.py"
 WORKFLOW = ROOT / ".github/workflows/status-dashboard.yml"
+CLAIM_WORKFLOW = ROOT / ".github/workflows/survey-claim-fast.yml"
+SUBMISSION_WORKFLOW = ROOT / ".github/workflows/survey-submission-fast.yml"
 REPOSITORY_TESTS = ROOT / ".github/workflows/repository-tests.yml"
 
 
@@ -93,6 +95,14 @@ class StatusPublishGateTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertNotIn("github.actor != 'github-actions[bot]'", text)
         self.assertIn("status_publish_gate.py", text)
+
+    def test_fast_lanes_publish_dashboard_in_the_authoritative_commit(self):
+        for workflow in (CLAIM_WORKFLOW, SUBMISSION_WORKFLOW):
+            text = workflow.read_text(encoding="utf-8")
+            with self.subTest(workflow=workflow.name):
+                self.assertIn("build_status_dashboard.py --repo-root . --output STATUS.md", text)
+                self.assertIn("append_research_throughput_status.py --repo-root . --status STATUS.md", text)
+                self.assertIn("STATUS.md", text)
 
 
 if __name__ == "__main__":
