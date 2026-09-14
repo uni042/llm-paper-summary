@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7fc60f3ad8017adc6c35d012",
-  "job_id": "job-research-04150be55266345e",
-  "data": {
-    "limitations": [
-      "workflow templateをbatch実行前に解析できることを前提とし、tool結果に応じて次のoperatorやprompt構造そのものが予測不能に生成される完全動的agentでは、将来prefixを先読みする利点が小さくなる。",
-      "同一workflow内のagentsは同じbase LLMを使い、role差をpromptで表す設定に限定する。複数の異なるmodel familyや専門fine-tuned modelを跨ぐKV共有は扱わない。",
-      "remote API呼出しを含むagent workflowを対象外とし、on-premise複数GPUでworker配置とKV memoryを直接制御できる環境を前提とする。",
-      "評価はH100 NVL 2基の単一マシン中心で、複数nodeのnetwork transferや大規模clusterでのscheduler scalabilityは未評価である。",
-      "費用modelはoperatorごとの平均出力token数など事前profileを必要とし、実行時に生成長分布が大きく変化する場合はschedule推定誤差が増える。"
-    ],
-    "differences": [
-      {"name": "vLLM/SGLangのprefix cacheとの差", "description": "一般的なprefix cacheはready requestとして到着したtoken列の共通prefixを受動的にreuseする。Heliumはworkflow templateから将来呼出しの静的prefixと依存を事前に抽出し、KVを先行計算するとともに、cacheが残る順序へ物理実行計画自体を変更する。"},
-      {"name": "KVFlowとの差", "description": "KVFlowはagent step graphを用いてcache evictionとprefetchをworkflow-awareに改善するが、Heliumはさらに論理DAGの不要枝・共通部分式を削除し、決定論的operatorを結果cacheへ置換し、prefix sharingとcontinuous batchingを共同で最適化する。評価ではKVFlow比最大1.56倍、Tradingで最大1.34倍の差を報告する。"},
-      {"name": "Parrotとの差", "description": "ParrotはSemantic Variableでrequest間のdata依存を公開し、cacheを持つengineへroutingするが、prompt構造は個別call中心でglobal prefix hierarchyを持たない。Heliumのテンプレート付き基数木は将来callを含む接頭辞構造とDAG依存を一体化し、worker負荷とcache localityを費用modelで同時に決める。"},
-      {"name": "Autellixなどprogram-aware servingとの差", "description": "program-aware engineがagent program単位のfairnessやcritical pathを扱うのに対し、Heliumはbatch workloadに現れるcross-query redundancy、同一subgraph、静的prefix、決定論的outputをdata-systemのmulti-query optimizationとして利用する。目的は個々のsession優先度より、batch全体の共有計算を除くことにある。"}
-    ],
-    "implementation_status": "著者公式GitHub `mlsys-io/helium_demo` が公開されている。Pythonでworkflow DSL、optimizer、テンプレート付き基数木、scheduler、processorを構築し、vLLM v0.16.0へprecomputed prefix KVの優先保持機能を追加している。",
-    "research_positioning": "Heliumはagent servingをデータベースの問い合わせ処理として再定式化する系統に位置する。個別LLM requestを速くするMLSys最適化と、DAGを管理するagent orchestratorの間にある情報境界をなくし、論理計画の共通部分削除、演算子結果cache、KV prefix cache、物理scheduleを一つのoptimizerへ統合する点が特徴である。特に同じtemplateを多数入力へ適用するbatch agent analyticsや投機探索では、workflowをcompileできること自体を性能資源として利用する。一方、オンラインで構造が逐次公開されるagentではHexAGenTのようなonline risk scheduling、複数model間ではPrefillShareやcross-model KV変換が補完的であり、これらを統合した動的multi-model workflow optimizerが次の方向となる。"
-  },
-  "reservation": {"claim_id": "claim-7fc60f3ad8017adc6c35d012", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-df4ab8761f2d98bf71342326",
+  "job_id": "job-research-cca875ddc6629317",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-df4ab8761f2d98bf71342326",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

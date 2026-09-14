@@ -2,18 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7fc60f3ad8017adc6c35d012",
-  "job_id": "job-research-04150be55266345e",
-  "data": {
-    "hardware": "AMD EPYC 9554 64コアCPUと94GB NVIDIA H100 NVLを2基搭載した単一マシン。各LLM workerは1 GPU上の独立engine instanceとして動作する。",
-    "software": "HeliumはPythonで実装し、vLLM v0.16.0を基盤に自動prefix cachingとchunked prefillを有効化する。KVFlowのみ論文公開のSGLang実装を用いる。公式コードは https://github.com/mlsys-io/helium_demo 。",
-    "model": "主評価はQwen3-8BとQwen3-14B。感度分析ではLlama-3.1-8BとQwen3-32Bも使用する。",
-    "datasets": ["MMLU: Map-Reduce/Debateで200問", "TAT-QA: Map-Reduce/Debateで100 context×6問、Reflectionで200 context×6問", "Amazon Reviews: Iterative 200 item、Parallel 100 item、各item 60 reviewを6 chunkへ分割", "Trading: 100銘柄の2日分finance data。1日目をwarm-up、2日目を評価"],
-    "baselines": ["vLLM naive query-wise execution", "OpWise", "LangGraph", "AgentScope v0.1.6", "Parrot", "KVFlow"],
-    "correctness": "高速化は意味保存を前提とし、近似modelは使わない。出力cache置換は非LLM演算またはgreedy生成など決定論的LLM演算に限定し、全評価のLLM呼出しをgreedy samplingに固定する。",
-    "settings": ["基本workflowはMap-Reduce、Multi-Agent Debate、Reflection、Iterative Refinement、Parallel Chainsの5種類。", "Tradingは19 agent・88 LLM operatorを持ち、Parallel、Debate、Map-Reduceを複合する。", "全systemでend-to-end batch latencyを計測し、Heliumはquery optimization、TRT構築、schedulingを含む。", "単一batch microbenchmarkではproactive KV cachingとcache-aware schedulingだけを有効化し、batch間prompt cacheの効果を分離する。"],
-    "methodology": "まず5種類のprimitive workflowで、個別要求中心のvLLM、operator単位batchのOpWise、一般agent orchestrator、prefix-aware Parrot、workflow-aware KVFlowと比較する。次に19-agent Tradingで複合workflowのend-to-end latencyを測る。ablationではproactive KV、plan pruning、prompt cache、cache-aware schedulingを一つずつ無効化し、scheduling単独評価ではQueryWise、OpWise、Random、LSPFと比較する。小規模構成はMILPで理論最適scheduleを求めてtoken-step costのoptimality gapを測る。さらにbatch size、branch数、debate round、worker数、model size、KV容量、prefix共有率を変え、計画overheadと管理metadata memoryも測定する。",
-    "scope": "on-premiseで複数GPUを直接制御でき、workflowのDAG templateを実行前に解析できるbatch agent workloadを対象とする。remote API callは対象外で、同一workflow内のagentsは同じbase LLMを異なるprompt roleとして使う。したがって異なるmodel familyを跨ぐagent routingや、将来構造が完全に未確定なオンラインagent executionには直接適用しない。"
-  },
-  "reservation": {"claim_id": "claim-7fc60f3ad8017adc6c35d012", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-df4ab8761f2d98bf71342326",
+  "job_id": "job-research-cca875ddc6629317",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-df4ab8761f2d98bf71342326",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

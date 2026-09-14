@@ -2,19 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-7fc60f3ad8017adc6c35d012",
-  "job_id": "job-research-04150be55266345e",
-  "data": {
-    "problem": "エージェント型ワークフローは、1つの利用者要求を複数のLLM呼出し、検索、変換、批評、集約へ展開し、同じ接頭辞や中間結果を別の演算子・別の入力バッチで繰り返し利用する。しかしvLLMなどの推論基盤は個々のLLM要求だけを見て連続バッチ処理や受動的な接頭辞キャッシュを行うため、まだ実行可能になっていない将来の呼出し、他演算子と共有する静的system prompt、同一入力で再登場する決定論的部分計算を事前に把握できない。一方、LangGraphや一般データ処理基盤はワークフローDAGを把握しても、KVキャッシュ、prefill/decodeの費用、連続バッチ処理などLLM固有の物理特性をブラックボックス化する。この論理計画と物理推論の情報分断により、共通部分の再計算、KV早期追い出し、負荷不均衡、依存待ちによる小さいバッチが発生する。",
-    "novelty": "Heliumは、エージェント型ワークフローをデータベースの問い合わせ計画として扱い、LLM呼出しを第一級の演算子へ昇格させる。まず不要演算子と同一部分グラフを論理計画から除去し、同一入力の決定論的演算子を大域的な結果キャッシュからの取得へ置換する。次に、複数演算子のprompt templateと依存辺を一つのテンプレート付き基数木へ統合し、まだ実行可能でない呼出しも含めた接頭辞共有構造を事前に可視化する。その構造とtoken費用、worker容量、依存待ちを使って、同じ接頭辞を持つ呼出しを近接実行しながら独立仕事を間に挟む費用認識スケジュールを作る。さらに静的接頭辞のKVを最初のbatchで事前計算してGPUへ固定するため、受動的LRUだけに依存しない。",
-    "method_overview": "利用者は同じ構造を多数の入力へ適用するエージェント型ワークフローを専用DSLで記述し、Heliumのparserが各LLM呼出し、検索、ローカル変換と依存関係をDAGへ変換する。論理最適化では最終出力へ寄与しない枝を後向き走査で削除し、同じ入力と構造を持つ部分DAGをhashして共通部分として統合する。さらに既に実行済みの決定論的演算子について、演算子種別と具体化済み入力から署名を作り、大域prompt cacheに一致すればその演算子を軽量なCacheFetchへ置き換える。次に物理計画器は、各LLM promptを静的token列と前段出力を埋め込むplaceholderへ分解し、全演算子の接頭辞階層とDAG依存を同時に持つテンプレート付き基数木を構築する。静的でbatchをまたいで不変な接頭辞は初回実行時にprefillしてKVをGPU上へ固定し、以後のbatchで再利用する。cache-aware schedulerは各呼出しをworkerへ割り当てるとともに順序を決める。費用モデルでは直前に同じworkerで実行した呼出しとの最長共通接頭辞を差し引いた新規prefill token数、生成中の累積decode token step、worker性能、依存する後続呼出しを待たせるprecedence delayを計上する。同じ接頭辞を持つ呼出しを連続させればKV再利用を増やせる一方、依存呼出しをすぐ実行せず独立呼出しを挟むとcontinuous batchingの有効batchを大きくできるため、両者のmakespanを共同最小化する。生成された実行計画をquery processorがready状態に従ってworkerへ送り、vLLMの通常continuous batchingとPinned prefix cacheを利用して実行する。",
-    "components": [
-      {"name": "論理DAGの共通部分除去と結果キャッシュ置換", "description": "最初の最適化段階ではGPUへ割り当てる前に、ワークフロー自体から実行不要な仕事を減らす。最終出力から逆向きに辿って未使用枝を除去し、同じ入力に依存する同型部分グラフを共通部分式として一つへ統合する。さらに非LLM処理や温度0のLLM呼出しなど決定論的演算子に限り、演算子型と具体的入力値から署名を作って大域prompt cacheを照会し、既存出力があればCacheFetchへ置換する。これにより単なるKV接頭辞共有より粗い粒度で演算子全体を省略でき、複数batchで繰り返す日次分析や投機枝に有効となる。"},
-      {"name": "テンプレート付き基数木", "description": "通常の基数木は実際に到着済みのtoken列だけを整理するため、依存先の出力がまだ生成されていない将来promptの構造を表せない。Heliumは静的token列に加え、前段演算子の出力が入る位置をplaceholderとして保持するテンプレート付き基数木を作る。各leafはLLM呼出しに対応し、leaf間にはDAG依存辺も保存するため、接頭辞階層と実行順序制約を一つの構造で表現できる。これによりオンライン到着を待たず、どの呼出しを連続させれば静的接頭辞KVを再利用できるか、どの独立呼出しを依存待ちの間に挟めるかを物理計画前に把握できる。"},
-      {"name": "先行KV・promptキャッシュ", "description": "batchワークロードでは将来利用する静的system promptや文脈が事前に分かるため、受動的なcache hitを待つ必要がない。Heliumはテンプレート付き基数木からbatch間で不変な接頭辞を識別し、最初の実行時に専用要求としてvLLMへprefillさせ、そのKV blockをGPU上で優先保持する。容量圧力が高い場合はvLLMのblock単位LRUや最長接頭辞規則で追い出し、次batchで必要なら再生成する。これとは別に決定論的演算子の完全な出力を大域prompt cacheへ保持し、KV再利用と演算子省略を異なる粒度で併用する。"},
-      {"name": "費用・キャッシュ認識スケジューリング", "description": "各workerに割り当てる呼出し順を、単純なready順や最大共通prefix順ではなく、prefillとdecodeのtoken stepおよび依存待ちを含むmakespanとして評価する。直前呼出しとの最低共通祖先より下のtokenだけを新規prefill費として数え、生成長からdecodeの累積費を見積もる。また前段が出力を生成している間に別の独立呼出しを進めれば後続呼出しがreadyになる時点でbatchを大きくできるため、precedence delayを明示的に入れる。こうしてKVを守る局所性と演算並列性の双方を考慮し、prefix hitを増やすだけでworker負荷が偏るParrot型heuristicを避ける。"}
-    ],
-    "system_design": "HeliumはDSL parser、論理問い合わせ最適化器、テンプレート付き基数木構築器、cache-aware scheduler、query processorからなる。各workerは独立したvLLM v0.16.0 engineを別processで動かしIPC queueで制御する。事前計算したprefix KVをpinできるようvLLMを拡張し、worker統計と想定出力token数は事前profileから取得する。実行時には最適化済みDAGのready演算子だけを連続バッチ処理へ投入し、依存解除とcache状態を更新しながら計画を進める。"
-  },
-  "reservation": {"claim_id": "claim-7fc60f3ad8017adc6c35d012", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-df4ab8761f2d98bf71342326",
+  "job_id": "job-research-cca875ddc6629317",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-df4ab8761f2d98bf71342326",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
