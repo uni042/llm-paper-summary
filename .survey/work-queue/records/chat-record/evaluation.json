@@ -1,13 +1,17 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "slot": "evaluation",
   "attempt_id": "attempt-aa50a0cd3dff67ae166e5ed4",
   "job_id": "job-research-3d2c01823fde74e9",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-aa50a0cd3dff67ae166e5ed4",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "slot": "evaluation",
+  "data": {
+    "hardware": "OnePlus Ace5 Pro（Snapdragon 8 Elite SM8750、16 GB LPDDR5X、NPU INT8 65.25 TOPS）を主評価に使用。世代差確認としてOnePlus 12（SM8650、45 TOPS）とOnePlus 15（SM8850、89.4 TOPS）も使用。",
+    "software": "llama.cppを12,000行超拡張したllada.cpp。Qualcomm Hexagon SDK、HMX/HVX、GGML Hexagonバックエンド、FastRPC、RPCMEM/DMABUF。SM8650/SM8750ではNPU版FlashAttention、SM8850では実行時制約からCPU版を使用。",
+    "models": ["LLaDA-8B-Instruct", "Llama-3-8B-Instruct", "Dream-7B"],
+    "datasets": ["GSM8K", "BoolQ", "ARC-C", "HellaSwag"],
+    "baselines": ["CPUで全列を毎反復する通常dLLM", "CPU + 接頭辞KVキャッシュ再利用", "密Transformer演算のみをNPUへ移すNPU基準", "同規模Llama-3-8B自己回帰生成"],
+    "methodology": "4データセット各200例から品質評価。遅延は各データセット5例、各実行3回反復し、32/64/128目標生成トークンの壁時計時間を測定する。温度は0。品質はlm-evaluation-harness準拠の正解率。電力はbattery sysfsをサンプリングし、アイドル分を差し引いた積分で要求当たりエネルギーを求める。段階別アブレーション、投機開始しきい値、可視化・安定化しきい値、NPU可視重み予算、長出力のメモリ境界を追加評価。",
+    "scope": "実機スマートフォン3機種でのオンデバイス評価。Qualcomm Hexagon NPUに実装が特化し、他社NPUへの可搬性は設計上主張されるが実測されない。主なエンドツーエンド・アブレーション・エネルギー結果はSM8750であり、SM8850ではFlashAttentionがCPU実行になる。"
+  },
+  "reservation": {"claim_id": "claim-aa50a0cd3dff67ae166e5ed4", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
 }
