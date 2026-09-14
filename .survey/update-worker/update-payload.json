@@ -1,67 +1,67 @@
 {
   "schema_version": 1,
-  "attempt_id": "update-20260913-0830",
+  "attempt_id": "update-20260915-0830",
   "kind": "framework_llm_update",
   "artifacts": [
     {
       "path": "framework-updates/README.md",
-      "expected_blob_sha": "e0a39fc8bc51d70c4371f2d84615b3f39ed7fce1",
+      "expected_blob_sha": "321d1b8265f0a8e805ccc4b8d0870be07df1be0d",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-09-12**",
-          "new": "- フレームワーク差分の最終確認: **2026-09-13**"
+          "old": "- フレームワーク差分の最終確認: **2026-09-13**",
+          "new": "- フレームワーク差分の最終確認: **2026-09-15**"
         },
         {
           "op": "replace_once",
-          "old": "この2つは分けて扱う。2026-09-12の差分確認では、公式リリースと開発元リポジトリを基準に9月11日以降の主要な性能・長文処理・投機的デコード関連変更を再確認した。",
-          "new": "この2つは分けて扱う。2026-09-13の差分確認では、公式リリースと開発元リポジトリを基準に9月12日以降の主要な分散長文処理・MoE routing・metadata fusion関連変更を再確認した。"
+          "old": "この2つは分けて扱う。2026-09-13の差分確認では、公式リリースと開発元リポジトリを基準に9月12日以降の主要な分散長文処理・MoE routing・metadata fusion関連変更を再確認した。",
+          "new": "この2つは分けて扱う。2026-09-15の差分確認では、公式リリースと開発元リポジトリを基準に9月13日以降の主要な投機的デコード、DeepSeek-V4.1向けkernel fusion・multi-stream実行関連変更を再確認した。"
         },
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-09-12\n",
-          "text": "### 2026-09-13\n\n#### vLLM\n\n- **Sparse MLAでPCPとDCPの併用を追加 — merged 2026-09-13 JST**\n\n  長文prefillのquery処理を分割するPCPと、decode側でKV cacheを分割するDCPをsparse MLAモデルで同時利用できる経路を追加。4×GB200・GLM-5.3 NVFP4の32K-token prefillではTP4のTTFT **5512.1 ms**に対してPCP4+DCP4は **3326.8 ms（約1.66倍高速）**。一方、現時点のpiecewise graph decodeはTP4 **3412.7 tok/s**に対して **735.9 tok/s**と大幅に遅く、decode側は明確なtrade-offが残る。長文prefillの分散構成自由度を広げる更新として記録する。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/56157\n\n#### SGLang\n\n- **GLM-5.3 Flash向けKPool metadata fusionを復旧し対応構成で既定有効化 — merged 2026-09-13 JST**\n\n  decode / target verify / draft extendのKPool metadata生成をfused pathへ戻し、互換なMTP draft backend間で派生metadataを再利用する経路も復旧した。4×B200で精度検証は実施されているが、このPRにはfusion無効時との対応した性能比較はないため、速度向上量は断定せず実行経路の統合・既定有効化として扱う。\n\n  一次資料: https://github.com/sgl-project/sglang/pull/38845\n\n- **統一Triton MoE routerをROCmとsingle-group routingへ拡張 — merged 2026-09-13 JST**\n\n  これまでCUDAかつ複数expert groupに限定していたopt-inの統一routing kernelをROCmとsingle-group構成でも利用可能にした。MI355X / ROCm 7.2で10ケースを検証。既定ではopt-inのままで、end-to-end性能値は提示されていないため、MoE実行backendの適用範囲拡大として記録する。\n\n  一次資料: https://github.com/sgl-project/sglang/pull/38328\n\n#### 新規LLM\n\n- 2026-09-12以降に現在追跡している主要model familyで追加すべき新規の汎用LLM正式公開は確認できず。直近の収録は2026-09-10公開のDeepSeek-V4.1-Flash。\n\n"
+          "anchor": "### 2026-09-13\n",
+          "text": "### 2026-09-15\n\n#### vLLM\n\n- **draft model全般へオンライン受理推定を使うadaptive verificationを拡張 — merged 2026-09-15 JST**\n\n  draft logitsの `logit(max q)` から位置別のtoken受理確率をオンライン推定し、MTP / EAGLE3 / DFlash / DFlash2などconfidence headを持たないdraft modelでもverification量を動的に削減できるようにした。concurrency 64の測定ではMiMo-V2.5-Pro + DFlashで平均出力throughput **+19.0%**、Inkling + MTP8で **+17.6%**、Kimi-K2.5 + DFlashで **+44.5%**、Muse-Glimmer + DFlash2で **+14.7%**。DeepSeek-V4-Flashでは学習済みconfidence headと同等以上の識別性能を示し、確率的draftingでthroughput **+2.1%**、median TPOT **-3.8%**。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/52228\n\n- **ROCmのDeepSeek-V4.1でmHC postとdelayed pre projectionを融合 — merged 2026-09-15 JST**\n\n  AITERのfused post/pre kernelを使い、小batch decodeで各seamのkernel launchを1回削減する。40 layer × 2 seamの構成ではforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITLを **6.9015 ms → 6.8141 ms（1.28%低下）**。\n\n  一次資料: https://github.com/vllm-project/vllm/pull/56513\n\n#### SGLang\n\n- **DeepSeek-V4.1の低圧縮比attention prepareをmulti-stream化しverify compressionを融合 — merged 2026-09-15 JST**\n\n  compress ratio 1/2のdecode / target verifyでcompressor+indexer、KV write、Q chainを別streamへ重ね、ratio 1 verifyもfused compressionへ移した。4×GB300・TP4/EP4・DSpark・64K contextのtraceではattention layer medianが **122.9 us → 121.0 us**、verify cycle内のdistinct CUDA streamが **19 → 12**へ減少し、`_q_rope_store`単体も約2.0 usから1.2〜1.5 usへ短縮した。\n\n  一次資料: https://github.com/sgl-project/sglang/pull/39445\n\n#### 新規LLM\n\n- 2026-09-13以降に現在追跡している主要model familyで追加すべき新規の汎用LLM正式公開は確認できず。直近の収録は2026-09-10公開のDeepSeek-V4.1-Flash。\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/vllm/README.md",
-      "expected_blob_sha": "5b07a9b89c4e5774f1d33019c048b2e0340cbfa9",
+      "expected_blob_sha": "b6f63d5436b25a254685a45cebfebaca8febe24b",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 2026-09-12\n",
-          "text": "## 2026-09-13\n\n- **Sparse MLAでPCP+DCP併用を追加 — merged 2026-09-12 UTC**: prefill queryを分割するPCPとdecode KVを分割するDCPを同じsparse-MLA deploymentで併用可能にした。4×GB200・GLM-5.3 NVFP4、32768 input / 1 outputの測定ではTP4のTTFT **5512.1 ms**に対しPCP4+DCP4は **3326.8 ms（約1.66倍高速）**。ただし1 input / 1024 outputでは現行PCP4+DCP4 piecewise pathが **735.9 tok/s**で、TP4 **3412.7 tok/s**やDCP4 **2236.8 tok/s**より遅い。長文prefillの構成自由度は増す一方、decode pathには最適化余地が残る。[PR #56157](https://github.com/vllm-project/vllm/pull/56157)\n\n"
+          "anchor": "## 2026-09-13\n",
+          "text": "## 2026-09-15\n\n- **オンライン受理推定でadaptive verificationをMTP / EAGLE3 / DFlash系へ拡張 — merged 2026-09-14 UTC**: draft logitsの `logit(max q)` から受理確率を継続学習し、学習済みconfidence headなしでもverification batchを動的にtrimする。concurrency 64の測定でMiMo-V2.5-Pro + DFlash **+19.0%**、Inkling + MTP8 **+17.6%**、Kimi-K2.5 + DFlash **+44.5%**、Muse-Glimmer + DFlash2 **+14.7%**の平均出力throughput向上。DeepSeek-V4-Flashではtrained headに対して確率的draftingでthroughput **+2.1%**、median TPOT **-3.8%**。[PR #52228](https://github.com/vllm-project/vllm/pull/52228)\n\n- **ROCm DeepSeek-V4.1のmHC post + delayed pre projectionを融合 — merged 2026-09-14 UTC**: AITER fused kernelで小batch decodeの各seamから1 launchを除去。40 layer × 2 seamでforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITL **6.9015 → 6.8141 ms（-1.28%）**。[PR #56513](https://github.com/vllm-project/vllm/pull/56513)\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/sglang/README.md",
-      "expected_blob_sha": "567a6fa21010d4172855236091b6e42a5ac8c866",
+      "expected_blob_sha": "3c27495662dbd1a0b648de9d079b3f6d72fdd7e9",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 2026-09-11\n",
-          "text": "## 2026-09-13\n\n- **GLM-5.3 Flash向けKPool metadata fusionを復旧・既定有効化 — merged 2026-09-12 UTC**: decode / target verify / draft extendのKPool-aware metadata constructionをfused pathへ戻し、互換なMTP draft backend間で派生metadataを再利用する。4×B200でEAGLE / DFLASHの精度検証は行われているがfusion-offとの対応した速度比較はないため、性能向上率は未確定。[PR #38845](https://github.com/sgl-project/sglang/pull/38845)\n\n- **統一Triton MoE routerをROCmとsingle-groupへ拡張 — merged 2026-09-12 UTC**: opt-inの統一grouped top-k routing kernelをROCmでも使えるようにし、single expert groupも許可。shared expertのslot処理とscalingも整合させ、MI355X / ROCm 7.2で10ケースを検証した。既定flagはoffのままで、end-to-end速度比較は提示されていない。[PR #38328](https://github.com/sgl-project/sglang/pull/38328)\n\n"
+          "anchor": "## 2026-09-13\n",
+          "text": "## 2026-09-15\n\n- **DeepSeek-V4.1低圧縮比層のprepareをmulti-stream化・ratio 1 verify compressionを融合 — merged 2026-09-14 UTC**: compress ratio 1/2のdecode / target verifyでcompressor+indexer、KV write、Q chainを3 streamへ分離し、ratio 1のverify compressionもfused pathへ移した。4×GB300・TP4/EP4・DSpark・64K contextではattention-layer median **122.9 → 121.0 us**、distinct CUDA streams / verify cycle **19 → 12**。`_q_rope_store`のPDL適用ではkernel時間が約2.0 usから1.2〜1.5 usへ短縮。[PR #39445](https://github.com/sgl-project/sglang/pull/39445)\n\n"
         }
       ]
     },
     {
       "path": "llm-releases/README.md",
-      "expected_blob_sha": "205e0d1e0711f24ae10018052be03050b904126c",
+      "expected_blob_sha": "b03d7bb6507c96fca32d71261f16370787d13af3",
       "edits": [
         {
           "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-09-12**",
-          "new": "- リリース情報の最終確認: **2026-09-13**"
+          "old": "- リリース情報の最終確認: **2026-09-13**",
+          "new": "- リリース情報の最終確認: **2026-09-15**"
         },
         {
           "op": "replace_once",
-          "old": "2026-09-12に主要提供元の公式公開を再確認した。9月11日以降に追加すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月10日のDeepSeek-V4.1-Flash。トップ表は各model familyの最新リリースを示す。",
-          "new": "2026-09-13に主要提供元の公式公開を再確認した。9月12日以降に現在追跡している主要model familyへ追加すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月10日のDeepSeek-V4.1-Flash。トップ表は各model familyの最新リリースを示す。"
+          "old": "2026-09-13に主要提供元の公式公開を再確認した。9月12日以降に現在追跡している主要model familyへ追加すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月10日のDeepSeek-V4.1-Flash。トップ表は各model familyの最新リリースを示す。",
+          "new": "2026-09-15に主要提供元の公式公開を再確認した。9月13日以降に現在追跡している主要model familyへ追加すべき新規の汎用LLM正式公開は確認できず、直近の追加は9月10日のDeepSeek-V4.1-Flash。トップ表は各model familyの最新リリースを示す。"
         }
       ]
     }
   ],
-  "summary": "2026-09-13確認: vLLMのsparse MLA向けPCP+DCP併用、SGLangのGLM-5.3 Flash KPool metadata fusion復旧・既定有効化とROCm向け統一Triton MoE router拡張を追加。9月12日以降、現在追跡する主要model familyで新規の汎用LLM正式公開は確認されず。"
+  "summary": "2026-09-15確認: vLLMのオンライン受理推定によるadaptive verification拡張とROCm DeepSeek-V4.1 mHC post/pre融合、SGLangのDeepSeek-V4.1低圧縮比層multi-stream prepareを追加。9月13日以降、現在追跡する主要model familyで新規の汎用LLM正式公開は確認されず。"
 }
