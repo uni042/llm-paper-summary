@@ -23,25 +23,18 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
 
           path = Path('.survey/scripts/claim_worker.py')
           text = path.read_text(encoding='utf-8')
-          old = '''        if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
-              claims,
-              worker_id=request["worker_id"],
-              worker_kind=request["worker_kind"],
-          ):
-              _write(result_path, {
-                  "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
-                  "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
-                  "ok": True, "assignments": [], "processed_at": _iso(now),
-                  "reason": "worker already has an active unsubmitted claim",
-                  "checkpoint_released": released_now,
-              })
-              processed += 1
-              continue
-          '''
-          new = '''        if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
+          pattern = re.compile(
+              r'        if request\["worker_kind"\] == "scheduled_chat" and _worker_has_active_claim\(\n'
+              r'.*?'
+              r'            continue\n\n'
+              r'        checkpointed_ids = set\(_checkpoint_map\(request\)\)',
+              re.DOTALL,
+          )
+          replacement = '''        if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
               claims,
               worker_id=request["worker_id"],
               worker_kind=request["worker_kind"],
@@ -75,10 +68,12 @@ jobs:
                   renewed += len(resumed)
                   processed += 1
                   continue
-          '''
-          if old not in text:
-              raise SystemExit('target block not found')
-          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          checkpointed_ids = set(_checkpoint_map(request))'''
+          patched, count = pattern.subn(replacement, text, count=1)
+          if count != 1:
+              raise SystemExit(f'target block matches={count}')
+          path.write_text(patched, encoding='utf-8')
           PY
           rm .github/workflows/tmp-patch-resume-claim.yml
           git config user.name 'github-actions[bot]'
