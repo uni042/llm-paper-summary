@@ -2,40 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-2e36a0b7326b0f7d7c69871f",
-  "job_id": "job-research-9094fc0c86937469",
-  "data": {
-    "limitations": [
-      "再利用対象の文書を事前に識別し、C²Extractorでoffline抽出できるdocument-level reuseを前提とする。オンライン到着した新規文書を逐次圧縮する経路は今後の課題である。",
-      "現在は文書・層を通じて一様な圧縮率を使い、重要度や内容密度に応じたadaptive compressionを行わない。",
-      "基盤モデルは凍結できるが、Qwen3-4B/Llama3.1-8Bで約10%の追加QKV projectionパラメータをモデルごとに学習する必要があるため完全training-freeではない。",
-      "最大17倍の速度評価はoffline文書抽出費を除外した再利用時の測定であり、reuse回数が少ない文書では総費用の優位が小さくなる。",
-      "公開論文ではGPU型番が明記されず、絶対的なTTFT/TBT値の別環境への外挿には制約がある。"
-    ],
-    "differences": [
-      {
-        "name": "Prefix cacheとの差",
-        "description": "vLLMのPagedAttentionやSGLangのRadixAttentionは同一prefix位置に現れるKVを正確に再利用するが、文書順が変わるRAGではhitしにくい。C²KVは文書を独立した位置非依存KV部品へ変換し、最終要求で位置を再割当するため非prefix配置でもreuseできる。"
-      },
-      {
-        "name": "CacheBlend・EPICとの差",
-        "description": "training-free non-prefix方式は通常KVを保存し、query時に選択的再計算やblendingで文脈ずれを修復する。C²KVは文書抽出時に合成可能な圧縮KVを学習するため、query時のblendingを不要にし、保存量とホスト→GPU転送量まで削減する。"
-      },
-      {
-        "name": "Block-Attentionとの差",
-        "description": "Block-Attention等は基盤モデルのattention構造を変更し継続学習して文書間独立性を得るため、元能力への影響とモデル更新時の再学習範囲が大きい。C²KVは元トークンの計算経路を凍結し、sidecarの圧縮トークン用射影だけを学習する。"
-      },
-      {
-        "name": "SnapKV・KV量子化との差",
-        "description": "一般的なKV圧縮は単一context内のdecodeメモリ削減が主目的で、圧縮後KVが別contextへ連結できることを保証しない。C²KVは圧縮率だけでなく再配置・連結後の回答損失まで共同学習し、reuseとcompressionを同じ表現設計へ統合する。"
-      }
-    ],
-    "implementation_status": "著者公式の公開GitHubリポジトリ `s7a9/C2KV` が存在する。論文はKDD 2026採択済みで、学習・評価に必要なExtractor設計と実験設定を公開している。",
-    "research_positioning": "C²KVは非prefix KV再利用とKVキャッシュ圧縮の交点に位置し、長文脈サービングで計算量だけでなく保存容量とデータ移動を同時に減らす。特にGPU外へKVを置くCPU/SSD/CXL階層メモリでは、4倍以上に短い再利用KVを保存できれば容量と転送時間の双方を直接減らせるため、オフロード研究との相補性が高い。一方で抽出器学習とoffline cache生成を必要とするため、頻繁に再利用される文書集合があるRAG・agent memoryへ最も適し、一過性context中心の一般chatでは償却条件が異なる。"
-  },
+  "attempt_id": "attempt-6744c4e38a2886fbf7b25936",
+  "job_id": "job-research-16aaac9973021cd8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-2e36a0b7326b0f7d7c69871f",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-6744c4e38a2886fbf7b25936",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
 }
