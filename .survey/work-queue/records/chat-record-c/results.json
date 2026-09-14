@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "results",
-  "attempt_id": "attempt-57e22664262505d22a992383",
-  "job_id": "job-research-aef337aaa1c0f49c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-57e22664262505d22a992383",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-57e22664262505d22a992383","job_id":"job-research-aef337aaa1c0f49c","data":{"overview":"LLMVisorはprefillとdecodeの全報告構成でVTCより裾誤差を大きく下げる。prefillではVTCも多くの構成でR²>0.995と全体傾向を捉えるが、p99誤差が最大1.24まで膨らむ。著者が指定する2外れ値を除く平均では、VTCのp90/p99相対誤差0.05/0.30をLLMVisorが0.02/0.09へ下げ、約2.5倍/3.3倍超改善する。decodeではVTCの弱点がより明確で、Llama3.1-8B H2でR²=0.778、p99誤差0.88となるのに対し、LLMVisorは全構成R²>0.97、平均p90/p99誤差を0.21/0.44から0.06/0.10へ下げて3.5倍/4.4倍改善する。オンライン評価は要求当たりマイクロ秒級で、Random Forest等のミリ秒級予測器より100倍以上高速と報告する。","key_results":[{"metric":"Prefill平均p90相対誤差","value":"0.05→0.02、約2.5倍改善","baseline":"VTC","condition":"9構成中、著者が青表示した2外れ値を平均から除外","interpretation":"トークン数だけでもprefillの粗い傾向は捉えられるが、自己注意の二次項とバッチ効果を入れることで裾の予測が安定する。"},{"metric":"Prefill平均p99相対誤差","value":"0.30→0.09、3.3倍超改善","baseline":"VTC","condition":"同じ外れ値除外条件","interpretation":"高百分位でVTCの誤差が大きくなる問題を抑え、受付制御や予算超過判定に使いやすくする。"},{"metric":"Decode平均p90/p99相対誤差","value":"0.21/0.44→0.06/0.10、3.5倍/4.4倍改善","baseline":"VTC","condition":"全9decode構成","interpretation":"デコードでは処理トークン数がほぼ同じでも文脈長とバッチ規模でKV転送・利用率が変わるため、c_iとbatch効果が特に重要になる。"},{"metric":"Decode最悪VTC構成","value":"Llama3.1-8B H2: R² 0.778、p90 0.42、p99 0.88 → LLMVisor R² 0.995、p90 0.05、p99 0.09","baseline":"VTC","condition":"H100×2テンソル並列","interpretation":"単純トークンproxyが全体傾向さえ崩す条件でも、ルーフライン誘導特徴がバッチ・文脈変動を捉える。"},{"metric":"オンライン推定速度","value":"要求当たりマイクロ秒級、Random Forest等より100倍以上高速","baseline":"一般的なML予測器","condition":"スケジューラcritical pathでの評価","interpretation":"毎デコードステップで要求別帰属を更新できる計算量に抑えている点が、オフライン性能予測器との差になる。"}],"negative_results":["PrefillのLlama3.1-8B H1ではLLMVisor p90/p99誤差が0.10/0.92で、VTCの0.09/0.79よりわずかに悪い。全構成で常に全指標が優位なわけではない。","PrefillのQwen2.5-32B H4でもLLMVisor p90は0.03でVTCの0.02より悪い一方、p99は0.08でVTC 0.11より改善する。","著者がprefill平均改善倍率を算出する際に2つの外れ値を除外しているため、2.5倍/3.3倍という要約値は無条件の全構成平均ではない。","配置ごとに短いプロファイルから係数を再較正する設計であり、未知GPU・モデル・テンソル並列へ一組の係数をそのまま適用できることは示していない。","論文は帰属精度を評価するが、実際に分数GPU割当を長時間運用した際のテナント公平性、SLO改善、収益・利用率への効果は評価範囲外である。"],"interpretation":"VTCがprefillで高R²を得ながらp99誤差を大きくすることは、平均的なトークン増加傾向を捉えるだけでは資源会計には不十分であることを示す。特にdecodeでは各要求が1トークンずつ進むため、トークン数だけでは要求間のコスト差がほぼ消えてしまうが、実際には長い文脈ほどKVキャッシュ転送が増え、バッチ構成によってGPU利用率も変わる。LLMVisorはこれらを物理的に意味のある少数特徴へ残しつつ、実測係数でハードウェアの実効性能を吸収するため、解釈可能性・加法性・オンライン速度を同時に保てる。性能予測モデルというより、共バッチ処理の中でGPU時間を誰に帰属させるかという制御面の計測原語として捉えるのが適切である。","quality_impact":"生成品質やモデル数値を変えない。誤差が大きい場合は要求の受付、割当、課金、公平制御が不正確になるため、品質上の主なリスクは推論内容ではなく資源管理判断である。"},"reservation":{"claim_id":"claim-57e22664262505d22a992383","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
