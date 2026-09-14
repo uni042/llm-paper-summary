@@ -9,7 +9,6 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-import process_immutable_submission as processor  # noqa: E402
 import retry_adopted_checkpoint_submissions as retry  # noqa: E402
 
 
@@ -64,11 +63,25 @@ class RetryAdoptedCheckpointSubmissionsTests(unittest.TestCase):
                 "job_id": job_id,
                 "claim_id": "claim-new",
                 "worker_id": "worker-new",
+                "worker_kind": "scheduled_chat",
                 "attempt_id": "attempt-new",
                 "released_at": "2026-09-14T21:32:05+00:00",
                 "checkpoint_ref": f"/LLM-survey-outbox/pending/{checkpoint_name}",
             },
         )
+        slot = {
+            "schema_version": 1,
+            "transport_version": 10,
+            "attempt_id": old_attempt,
+            "job_id": job_id,
+            "slot": "metadata",
+            "reservation": {
+                "claim_id": "claim-old",
+                "worker_id": "worker-old",
+                "attempt_id": old_attempt,
+            },
+            "data": {"canonical_id": "arXiv:2600.00001"},
+        }
         self._write(
             root,
             ".survey/work-queue/fallback-archive/env-a.json",
@@ -81,7 +94,12 @@ class RetryAdoptedCheckpointSubmissionsTests(unittest.TestCase):
                 "attempt_id": old_attempt,
                 "claim_id": "claim-old",
                 "worker_id": "worker-old",
-                "writes": [],
+                "writes": [
+                    {
+                        "path": ".survey/work-queue/records/chat-record/metadata.json",
+                        "content": json.dumps(slot, ensure_ascii=False),
+                    }
+                ],
             },
         )
         return descriptor
@@ -91,38 +109,42 @@ class RetryAdoptedCheckpointSubmissionsTests(unittest.TestCase):
             root = Path(td)
             descriptor = self._seed(root)
 
-            selected = retry.eligible_descriptors(root)
+            selected = retry.eligible_adoptions(root)
 
-            self.assertEqual(selected, [descriptor])
+            self.assertEqual(len(selected), 1)
+            self.assertEqual(selected[0]["source_descriptor"], descriptor)
+            self.assertEqual(selected[0]["source_attempt_id"], "attempt-old")
+            self.assertEqual(selected[0]["claim"]["attempt_id"], "attempt-new")
 
     def test_does_not_select_when_checkpoint_ref_does_not_match_archive(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             self._seed(root, checkpoint_name="different.json")
 
-            self.assertEqual(retry.eligible_descriptors(root), [])
+            self.assertEqual(retry.eligible_adoptions(root), [])
 
-    def test_processor_accepts_exact_archived_checkpoint_adoption(self) -> None:
+    def test_rebind_changes_transport_identity_but_preserves_record_data(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
-            descriptor_path = self._seed(root)
-            descriptor = json.loads(descriptor_path.read_text(encoding="utf-8"))
+            self._seed(root)
+            envelope = json.loads(
+                (root / ".survey/work-queue/fallback-archive/env-a.json").read_text(encoding="utf-8")
+            )
             claim = json.loads(
                 (root / ".survey/work-queue/claims/job-research-a.json").read_text(encoding="utf-8")
             )
 
-            self.assertTrue(processor._checkpoint_adoption_matches(root, descriptor, claim))
+            rebound = retry.rebind_envelope(envelope, claim)
+            payload = json.loads(rebound["writes"][0]["content"])
 
-    def test_processor_rejects_unrelated_checkpoint_adoption(self) -> None:
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            descriptor_path = self._seed(root, checkpoint_name="different.json")
-            descriptor = json.loads(descriptor_path.read_text(encoding="utf-8"))
-            claim = json.loads(
-                (root / ".survey/work-queue/claims/job-research-a.json").read_text(encoding="utf-8")
-            )
-
-            self.assertFalse(processor._checkpoint_adoption_matches(root, descriptor, claim))
+            self.assertEqual(rebound["attempt_id"], "attempt-new")
+            self.assertEqual(rebound["claim_id"], "claim-new")
+            self.assertEqual(rebound["worker_id"], "worker-new")
+            self.assertEqual(payload["attempt_id"], "attempt-new")
+            self.assertEqual(payload["job_id"], "job-research-a")
+            self.assertEqual(payload["reservation"]["claim_id"], "claim-new")
+            self.assertEqual(payload["reservation"]["worker_id"], "worker-new")
+            self.assertEqual(payload["data"], {"canonical_id": "arXiv:2600.00001"})
 
 
 if __name__ == "__main__":
