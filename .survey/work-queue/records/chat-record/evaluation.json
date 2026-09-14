@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-d2ff76406182a09db10f7939",
   "job_id": "job-research-2dbab0db43ceff0b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d2ff76406182a09db10f7939",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "2台のconsumer/edge向けserverで実機評価。RTX A5000 24GB・64 SM + AMD Threadripper PRO 3945WX 12-core + 128GB RAMと、RTX 5090 32GB・128 SM + Threadripper PRO 5955WX 16-core + 128GB RAM。",
+    "software": "Ubuntu 22.04、CUDA 12.4、driver 550.54.15。AgentServeはllama.cppへCUDA Green Context、prefill/decode dual CPU thread、TPOT-driven scheduler、shared KV memory managerを追加。比較対象はSGLang、vLLM、llama.cpp。",
+    "models": ["Qwen2.5-3B","Qwen2.5-7B","LLaMA-3-8B"],
+    "datasets": ["ToolBench由来ReAct workload","ToolBench由来Plan-and-Execute workload"],
+    "baselines": ["SGLang single-GPU prefill/decode disaggregation","vLLM continuous batching + chunked prefill","llama.cpp general single-device serving","No-Alg static SM partition ablation","No-Green on-demand stream allocation ablation"],
+    "methodology": "各sessionは1回のcold prefill後、tool outputを追加するresume prefillとshort decodeを交互に実行する。concurrent agent数を3〜6へ変え、ReActとPlan-and-Executeを三モデル・二GPUで評価する。主要指標はtime-to-first-token（TTFT）、time-per-output-token（TPOT）のp50/p95、aggregate output throughput、TTFTとTPOTを同時に満たすsession-level SLO attainment。SLO thresholdはmodel-device pairごとのisolated performanceをprofileして定数倍した値を用いる。ablationは4 concurrent agentでfull system、resource-aware schedulerなし、Green Context isolationなしを比較する。Green Context rebind overhead、phase別token distributionも測る。",
+    "scope": "実機のsingle-GPU serving評価でありsimulationではない。対象はconsumer/edge GPUで3〜8B級SLMを動かすlocal tool-augmented agentsで、3〜6 concurrent sessionsを想定する。cloud-scale multi-GPU、非常に長いcoding agent、arbitrarily deep reasoning trace、高batch throughput中心のdeploymentは評価範囲外。SLO thresholdは絶対共通値ではなく各model-device pairのisolated profileから校正されるため、別hardwareへそのまま数値移植はできない。"
+  },
+  "reservation": {"claim_id":"claim-d2ff76406182a09db10f7939","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
