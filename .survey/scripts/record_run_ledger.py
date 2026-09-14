@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Capture meaningful survey-helper transitions into a bounded Scheduled Chat run ledger.
+"""Capture meaningful worker transitions into a bounded Scheduled Chat run ledger.
 
-A Scheduled Chat run may trigger survey-helper many times. Events sharing the same
-maintenance-cycle ``last_counted_run_key`` are merged into one ledger entry so the
-48-entry retention limit means roughly 48 Scheduled Chat runs, not 48 helper jobs.
-Scheduled helper no-ops do not touch the ledger.
+A Scheduled Chat run may trigger queue-processing workflows many times. Events sharing
+the same maintenance-cycle ``last_counted_run_key`` are merged into one ledger entry so
+the retention limit means Scheduled Chat runs, not background jobs. Workflow no-ops do
+not touch the ledger.
 """
 
 from __future__ import annotations
@@ -52,7 +52,7 @@ def collect_snapshot(root: Path) -> dict[str, Any]:
 
     results_dir = survey / "work-queue/results"
     result_files = sorted(
-        p.relative_to(root).as_posix() for p in results_dir.glob("*.json")
+        p.relative_to(root).as_posix() for p in results_dir.rglob("*.json")
     ) if results_dir.is_dir() else []
 
     archive_dir = survey / "work-queue/fallback-archive"
@@ -199,6 +199,21 @@ def build_event(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any]
     }
 
 
+def _recompute_known_counts(entry: dict[str, Any]) -> None:
+    transitions = entry.get("terminal_transitions") if isinstance(entry.get("terminal_transitions"), list) else []
+    completed = [t for t in transitions if isinstance(t, dict) and t.get("to") == "completed"]
+    blocked = [t for t in transitions if isinstance(t, dict) and t.get("to") == "blocked"]
+    counts = entry.get("counts") if isinstance(entry.get("counts"), dict) else {}
+    counts["research_completed"] = sum(t.get("type") == "research" for t in completed)
+    counts["audit_completed"] = sum(t.get("type") == "audit" for t in completed)
+    counts["discovery_completed"] = sum(t.get("type") == "discovery" for t in completed)
+    counts["blocked"] = len(blocked)
+    counts["new_jobs"] = len(entry.get("new_jobs") or [])
+    counts["new_papers"] = len(entry.get("new_paper_ids") or [])
+    counts["fallback_archived"] = len(entry.get("new_fallback_archive_files") or [])
+    entry["counts"] = counts
+
+
 def merge_event(entry: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
     existing_events = entry.get("events") if isinstance(entry.get("events"), list) else []
     event_id = event.get("event_id")
@@ -214,11 +229,6 @@ def merge_event(entry: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
     entry["events"] = existing_events[-MAX_EVENTS_PER_RUN:]
     entry["last_recorded_at"] = event.get("recorded_at")
     entry["signals"] = unique_strings((entry.get("signals") or []) + (event.get("signals") or []))
-
-    counts = entry.get("counts") if isinstance(entry.get("counts"), dict) else {}
-    for key, value in (event.get("counts") or {}).items():
-        counts[key] = int(counts.get(key, 0) or 0) + int(value or 0)
-    entry["counts"] = counts
 
     entry["terminal_transitions"] = unique_dicts(
         (entry.get("terminal_transitions") or []) + (event.get("terminal_transitions") or []),
@@ -237,6 +247,7 @@ def merge_event(entry: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
     entry["new_fallback_archive_files"] = unique_strings(
         (entry.get("new_fallback_archive_files") or []) + (event.get("new_fallback_archive_files") or [])
     )
+    _recompute_known_counts(entry)
     if entry.get("paper_active_count_before") is None:
         entry["paper_active_count_before"] = event.get("paper_active_count_before")
     entry["paper_active_count_after"] = event.get("paper_active_count_after")
@@ -313,7 +324,7 @@ def record(root: Path, baseline_path: Path) -> int:
         "run_key": run_key,
         "event_id": event.get("event_id"),
         "signals": event.get("signals"),
-        "counts": event.get("counts"),
+        "counts": target.get("counts"),
     }, ensure_ascii=False))
     return 0
 
