@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-90b1de190887f5039df1730a",
-  "job_id": "job-research-337f218e5e352539",
-  "data": {
-    "limitations": "SPEED-BenchはNVIDIAハードウェアと主要な公開推論基盤を広く扱うが、測定クライアント自体はPython asyncioであり、バッチ256超ではGILが処理量測定へ影響し得る。意味多様性選択はOpenAIの埋め込みモデルへ依存し、一部データ整形・出力長検証にも外部モデルを利用する。Throughput splitは長さと生成エントロピーを厳密に統制する代わりに細粒度の意味領域をまとめるため、ドメイン別解釈にはQualitative splitが必要である。また推論エンジン、カーネル、ドラフトcheckpointは更新が速く、絶対順位は版依存となる。",
-    "differences": "SpecBenchなど従来ベンチマークが少数の一般タスクでドラフト品質を比較するのに対し、SPEED-Benchは意味多様性を明示的に最適化し、別のThroughput splitで入力長・エントロピー・並列度を制御する。MLPerf型の単純な処理量試験とも異なり、投機的復号固有の受理率・受理長を同時に測るため、アルゴリズム精度とサービング実装のどちらが速度差を作ったかを切り分けやすい。ランダム入力との対照を正式な分析項目にし、その過大評価を数値化した点も重要である。",
-    "implementation_status": "Qualitative/Throughputデータ分割を公開し、vLLM、TensorRT-LLM、SGLang等を統一測定するクライアント設計を論文で詳述する。公開データはHugging Faceへ提供される。論文本文では独立した公式コードリポジトリURLを確認できないため、測定クライアント全体の公開状態と版固定方法は追加確認が必要である。",
-    "research_positioning": "個別の投機的復号手法ではなく、投機的復号研究の評価方法論と本番サービング比較基盤に位置付けるべき論文である。受理長だけでなく、意味多様性、生成エントロピー、長文脈、バッチ規模、実行基盤を同時に扱うため、今後のEAGLE系、MTP、N-Gram、外部ドラフタ、木探索型方式を比較する基準として有用である。特にシステム研究では、合成入力のピークTPSではなく自然入力上の利用者TPS・TTFTまで報告する根拠を与える。",
-    "relation_to_existing_repository": "リポジトリ内のEAGLE系、FASER、動的ドラフト長、投機的サービング論文を比較する共通評価軸として価値がある。FASER等が負荷に応じてドラフト長や実行段階を動的制御する理由を、SPEED-Benchの『最適ドラフト長はバッチで変わる』観測が裏付ける。またGPU実行基盤比較ではTensorRT-LLMの統合グラフとvLLMの柔軟な複数エンジン構成の差を示し、アルゴリズム改良とランタイム改良を混同しない監査基準として使える。",
-    "audit_required": true,
-    "audit_reason": "投機的復号エンジンとdraft checkpointの更新が速く、論文結果が版依存である。公開データセット・測定クライアントの最新URLと、vLLM/TensorRT-LLMの後続版で順位が再現されるかを定期監査する価値がある。"
+  "attempt_id": "attempt-11e0bc962a7c28c7d0c14bdf",
+  "job_id": "job-research-7505ea2231cb7ff0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-11e0bc962a7c28c7d0c14bdf",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
   }
 }
