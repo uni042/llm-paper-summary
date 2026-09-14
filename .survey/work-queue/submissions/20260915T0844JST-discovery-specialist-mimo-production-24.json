@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-1ebd066dfd741cf5",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2607.13095",
+      "title": "Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit",
+      "source_url": "https://arxiv.org/abs/2607.13095",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13095-mimo-hybrid-swa-full-pipeline-serving.md",
+      "priority": 94,
+      "reason": "Hybrid Sliding Window Attention（Hybrid SWA）+ sparse MoE + multimodal encoderをproductionで効率化するため、Full/SWA KV dual pool、layerwise KV prefetch、SWA-aware prefix cache tree、memory/disk/remoteを跨ぐRDMA最適化distributed GCache、KV-affinity router、prefill/decode・multimodal pipelineを一体で最適化する。SWA KV容量を約7倍改善し、GCacheはGDRで約350 GB/s、KV-affinity routingでL2 hit rate約25%・node input throughput約30%改善、decode KV容量約5倍、MTPで初期decode最大2.3倍などproduction実測を報告する。階層cache、RDMA、prefetch、MoE、multimodalを同一production stackで扱う包括的system paperとして価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-mimo-production-24",
+    "axis": "Hybrid SWAのmulti-tier KV cache・RDMA distributed cache・production scheduling",
+    "query_summary": "production-scale distributed cache infrastructureを探索し、MiMo-V2.5 full-pipeline serving（2607.13095）を一次arXiv本文で軽量評価した。競合後に最新HEAD・queue・repo検索を再取得し、同IDの既収録なし、research ready 44でoverflow条件未満、新discovery job job-1ebd066dfd741cf5を確認して再送した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "Actions反映後のcandidate inventoryを再確認し、overflow未満ならproduction/disaggregated servingのrecent omissionを探索する。",
+    "empty_round_reason": null
+  }
+}
