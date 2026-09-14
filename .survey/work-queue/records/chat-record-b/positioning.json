@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-4b9a71ce575511cd9107babd",
   "job_id": "job-research-706a6d2571f24fb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4b9a71ce575511cd9107babd",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "評価はNanoPC-T6一機種と6 TOPS NPUを中心としており、商用モバイルSoCごとに異なるTrustZone、SMMU、NPUドライバ、メモリ帯域へ性能値をそのまま一般化できない。ベンダーNPUランタイムが非公開のためコミュニティのリバースエンジニアリング実装を使っており、商用ドライバ最適化を完全には反映しない。試験機にインラインストレージ暗号がなく、その効果はエミュレーションである。脅威モデルはカーネル侵害を含むが、通常世界クライアントの入出力、サイドチャネル、物理攻撃、サービス拒否は範囲外である。モデル/KVキャッシュを保持するほど起動遅延は改善する一方、通常アプリへ返せるメモリは減るため、動的キャッシュ方針にはワークロード依存の交換条件が残る。",
+    "differences": "既存のTrustZone向けLLM推論研究がモデルをセキュア世界で実行することやセキュア計算そのものを中心に扱うのに対し、FlexServeはGB級DRAMとNPUを通常/セキュアワークロード間で動的に貸し借りするOS・実行時系の問題を主対象にする。固定セキュアパーティションとは異なり、通常OSが確保した任意ページをS2PT/SMMUで保護へ切り替え、内容アクセスを禁止したままOSに割当・回収量の決定を残す。一般的な端末内LLMサービングが量子化、モデルロード、NPUスケジューリングを最適化するのに対し、本方式は侵害されたカーネルを脅威モデルに含め、モデル/KVキャッシュ、SSD書戻し、先読み、メモリ回収をセキュリティ境界の切替と一体で設計する。",
+    "implementation_status": "NanoPC-T6上に実機試作がある。Flex-Monitorは約4.5K LoC、FlexServe FrameworkはC/C++の信頼アプリケーションとして約8.3K LoCで、Llama3/Qwen3系列、Flex-Mem、Flex-NPU、層単位パイプライン、モデル/KVキャッシュ、協調回収を実装する。2026-09-14時点で論文本文からFlexServe本体の著者公式公開リポジトリURLは確認できない。",
+    "research_positioning": "端末内LLM実行基盤のうち、信頼実行環境（Trusted Execution Environment; TEE）のセキュリティとメモリ/NPUオーケストレーションを同時に扱うOS・実行時系研究である。階層メモリの観点では、モデル重みとKVをDRAMとSSDの間で動かす際に、単なる容量・I/O最適化だけでなく、どのセキュリティ領域がページを管理し、いつアクセス権を切り替えるかが先頭トークン遅延と通常アプリ性能を左右することを示す。LLM認識型回収とワークフロー認識先読みは、複数モデルを同じNPUとDRAM上へ安全に多重化する将来の端末内エージェント実行基盤へ直接つながる。",
+    "relation_to_existing_repository": "リポジトリの端末内推論、階層メモリ、KVキャッシュ、SSDオフロード系統に対し、FlexServeはセキュリティ領域をまたぐ資源管理という追加軸を与える。SSDからモデル重みやKVを先読みする点はストレージ階層研究と接続し、再利用確率と回収費用からページを選ぶ点は価値ベースのキャッシュ/オフロード方針と近い。一方、通常OSへ管理権を残しつつ内容アクセスだけをTEEで遮断するため、将来SSD/NVMeをより積極利用する場合にも暗号化書戻し、先読み、回収優先度、NPU切替を一体で設計する必要があることを示す比較対象になる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-4b9a71ce575511cd9107babd","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
