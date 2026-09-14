@@ -2,11 +2,11 @@
 """Retry stale Library fallback attempts through the claim that adopted their checkpoint.
 
 A historical Library envelope can be archived after its original immutable descriptor
-fails claim fencing because the job was re-claimed before recovery.  Claim recovery
+fails claim fencing because the job was re-claimed before recovery. Claim recovery
 records the original Library path in the newer released claim's ``checkpoint_ref``.
 That pointer is the durable proof that the newer claim adopted the already-read record.
 
-This helper never weakens immutable processor claim fencing.  Instead it rebinds only
+This helper never weakens immutable processor claim fencing. Instead it rebinds only
 the transport identity (attempt/claim/worker) of the archived five-slot payload to the
 newer adopting claim, materializes a fresh immutable descriptor, records provenance
 back to the source Library envelope, pins the exact slot blobs, and publishes it.
@@ -20,7 +20,6 @@ from pathlib import Path
 from typing import Any
 
 import drain_fallback_recovery as recovery
-import process_immutable_submission_batch as submission_batch
 import replay_record_fallback as replay
 
 QUEUE = Path(".survey/work-queue")
@@ -104,6 +103,12 @@ def eligible_adoptions(repo_root: Path) -> list[dict[str, Any]]:
             if not all(isinstance(value, str) and value for value in (new_attempt, new_claim, new_worker)):
                 continue
             if new_attempt == descriptor.get("attempt_id"):
+                continue
+
+            # Rebinding is single-shot for each adopting claim. If a current descriptor
+            # already exists, publication or validation repair owns it from here.
+            current_descriptor = repo_root / QUEUE / "submissions" / kind / f"{new_attempt}.json"
+            if current_descriptor.exists():
                 continue
 
             archive_path = _archive_from_checkpoint(repo_root, claim.get("checkpoint_ref"))
@@ -242,7 +247,9 @@ def main() -> int:
     args = parser.parse_args()
     summary = run(args.repo_root, max_items=args.max_items, parallelism=args.parallelism)
     print(json.dumps(summary, ensure_ascii=False, indent=2, default=str))
-    return 1 if summary["failures"] else 0
+    # Per-record publication failures are durable state, not workflow-fatal. The helper
+    # must still commit successful siblings and validation-isolation metadata.
+    return 0
 
 
 if __name__ == "__main__":
