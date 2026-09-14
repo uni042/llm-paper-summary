@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T18:08:30.324167+00:00",
+  "updated_at": "2026-09-14T18:12:45.302060+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T18:08:30.324167+00:00",
+      "last_recorded_at": "2026-09-14T18:12:45.302060+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 66,
+        "research_completed": 67,
         "audit_completed": 0,
         "discovery_completed": 2,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 11
       },
       "events": [
-        {
-          "event_id": "34799731788:1",
-          "recorded_at": "2026-09-14T02:35:55.952598+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34799731788",
-            "run_attempt": "1",
-            "source_sha": "ea27ee447ea6d05a7b46265a82ff3e3aba2f836a"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34799770069:1",
           "recorded_at": "2026-09-14T02:36:49.597459+00:00",
@@ -19596,6 +19582,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34879391762:1",
+          "recorded_at": "2026-09-14T18:12:45.302060+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34879391762",
+            "run_attempt": "1",
+            "source_sha": "41121c37e9cf74acfb916ac3c243155c056738d4"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20148,6 +20148,14 @@
           "type": "research",
           "canonical_id": "arXiv:2604.09562",
           "title": "StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-92bd4538dc2f6002",
+          "type": "research",
+          "canonical_id": "arXiv:2609.02109",
+          "title": "MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs",
           "from": "ready",
           "to": "completed"
         }
