@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4869ced76a02ed91",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.00397",
+      "title": "Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2601.00397",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md",
+      "priority": 78,
+      "reason": "LLMサービング構成評価を実GPUなしで行うため、CUDA APIをinterceptして実サービングコードをそのまま実行し、GPU kernel実行だけを予測時間のtime-warpへ置き換えるエミュレータ。vLLMとSGLangで複数モデル・並列構成に対し予測誤差5%未満、実GPU実行比5〜17倍高速と報告し、制御ロジックを再実装する離散イベントシミュレータとの差分が明確。既存LLM-Emuと異なるCUDA仮想化方式として比較価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2608.29745",
+      "title": "JITterFlip: Uncovering Fault Attack Surfaces in JIT-Compiled LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.29745",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.29745-jitterflip-jit-compiled-llm-serving-fault-surfaces.md",
+      "priority": 70,
+      "reason": "即時コンパイル（JIT）を使うLLMサービングのCPU側制御面に対するビット反転攻撃を系統的に分析し、model weightではなくcompiled artifact選択・実行制御を攻撃面として示す。4つのテキスト/マルチモーダルLLMで出力破壊と最大181.9倍の遅延増幅、Rowhammerのend-to-end実証を報告しており、JIT runtimeの信頼性・セキュリティ設計上の未収録systems候補として有用。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-emulation-jit-security-11",
+    "axis": "推論runtimeのエミュレーション・即時コンパイル制御面・kernel実行基盤",
+    "query_summary": "runtime/kernel系を探索し、Revati（arXiv:2601.00397）、LLM-Emu（arXiv:2605.00616）、JITterFlip（arXiv:2608.29745）、Nitsum（arXiv:2605.05467）を軽量評価した。最新identityでLLM-EmuとNitsumは既収録、RevatiとJITterFlipは未収録だった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2605.00616",
+      "arXiv:2605.05467"
+    ],
+    "next_axis_hint": "candidate inventoryを再確認し、overflow条件に達していなければquantization・compression runtime、達していれば通常workerと同じResearch/Auditへ切り替える。",
+    "empty_round_reason": null
+  }
+}
