@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-779cb1f8d8bab20a380e7214",
-  "job_id": "job-research-77309d3073fb22e0",
-  "data": {
-    "limitations": "主理論は全要求が同時に待機するオフラインのスナップショットであり、到着が敵対的な完全オンライン環境へ3/4保証をそのまま持ち込めない。要求総トークン長を既知とする主解析も現実には成立しにくく、Robust-ISJLで予測不確実性を扱うが、予測誤差が大きいほど性能保証は弱くなる。計算制約型の単一workerモデルなので、KVキャッシュ容量が先に上限へ達するメモリ制約型環境、複数GPU間の移動、KV再配置、プリエンプション、ネットワーク費用は含まれない。主要評価は実GPUではなくトークン段階シミュレーションで、最大KV進捗が壁時計費用を十分表すかの実機校正がない。利益モデルでは受理済み需要を固定し、遅延が将来需要や支払意思へ与える影響を扱わない。待機プールが非常に大きい多サーバ環境では長さの近い要求を単純にまとめやすくなり、本方式の初期バッチ形成上の差が縮む可能性がある。",
-    "differences": "Fairness in Serving Large Language ModelsやEnsuring Fair LLM Serving amid Diverse Applicationsなどがサービス量・待ち時間の公平性を中心に扱うのに対し、本論文は同じGPUバッチ内で誰のKV量が共有計算費用を決めるかという資源消費の公平性を主対象にする。vLLM/PagedAttention、Sarathi-Serve等はKV管理やプリフィル・デコード混載を実装面から効率化するが、本論文はそれらの上に載り得るバッチ構成規則を理論解析する。KV容量制約を直接扱うOnline Scheduling for LLM Inference with KV Cache Constraintsとは、主制約が総KV容量ではなく最大同時実行数Bである点が異なる。",
-    "implementation_status": "arXiv v1の理論・数値研究。著者はISJL、Robust-ISJL、整数計画による最適解比較、LMSYSを用いたシミュレーションを記述するが、一次資料から公式公開コードやvLLM/SGLang統合実装は確認できない。",
-    "research_positioning": "LLMサービングのスケジューリングを、単なる待ち時間最小化ではなく『トークン課金は各要求に加算的なのに、実際のバッチ原価は最大KV量で非加算的に決まる』という原価整合問題として扱う点に価値がある。長さ予測、KVキャッシュ管理、連続バッチ制御と組み合わせる際に、要求間の進捗差を追加制約として入れる理論的根拠を与える。実システムへ導入するなら、αを固定トークン差ではなく実測GPU時間・KVバイト・SLOへ校正することが次の課題になる。",
-    "relation_to_existing_repository": "既存リポジトリのサービング・スケジューリング系統、特にPagedAttention/vLLM、Sarathi/Sarathi-Serve、DistServe、長さ予測スケジューリング、KVキャッシュ制約付きオンラインスケジューリングと接続する。これらがメモリ配置、プリフィル混載、分離実行、予測に基づく順序付けを改善するのに対し、本論文は『異なる進捗の要求を同じバッチへ入れてよいか』を明示的な公平性窓で制御する。SSD/NVMeオフロードへ直接触れないが、KVがGPU外へ退避される環境でも、要求間のKV占有差が転送量や復元費用の不均衡を生む場合、同様の資源公平性指標を階層メモリのバイト量・I/O時間へ拡張する余地がある。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-779cb1f8d8bab20a380e7214", "worker_id": "scheduled-chat-llm-survey-20260915T0012JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-333919194e40f18bad7c1466",
+  "job_id": "job-research-87d11da7c0c30dc4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-333919194e40f18bad7c1466",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0030JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

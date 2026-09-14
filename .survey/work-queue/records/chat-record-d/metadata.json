@@ -2,55 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-779cb1f8d8bab20a380e7214",
-  "job_id": "job-research-77309d3073fb22e0",
-  "data": {
-    "canonical_id": "arXiv:2608.02244",
-    "arxiv_id": "2608.02244",
-    "doi": "10.48550/arXiv.2608.02244",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": ["eess.SY"]
-    },
-    "title": "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
-    "summary": "大規模言語モデル（LLM）の連続バッチ推論では、短い要求と長い要求を同じデコードバッチに入れると、注意計算の実行時間がバッチ内で最大のKVキャッシュ量に引きずられ、短い要求が自分のトークン量に見合わない共有計算費用を負担する。本論文はこの現象をバッチ外部性として形式化し、同時実行要求のデコード進捗差をαトークン以内に保つ資源公平性を導入する。提案する短いジョブ制限挿入法（Insert-Short-Jobs-with-Limit; ISJL）は、長い要求を軸に短い要求を公平性制約の範囲だけ組み込み、条件が整った後は空いた実行枠へ要求を連続投入する半静的・イベント駆動の混成方式である。一般のバッチ幅B≥2で最悪時競争比3/4を保証し、出力長予測が不確かな場合にも実進捗で公平性を守るRobust-ISJLへ拡張する。LMSYS-Chat-1Mから抽出した2,000会話を用いるトークン段階シミュレーションでは、B=32でα=150のスループットがLJF比17%高く、α=50の平均エンドツーエンド遅延がLJF比21%低い。実GPU実装の性能評価ではなく、抽象化した計算量モデルとシミュレーションに基づく理論寄りの研究である。",
-    "list_summary": "長短要求を同居させたバッチで短い要求まで最大KV量相当の費用を負担する外部性を定式化し、デコード進捗差を制限するISJLを提案。一般のバッチ幅で競争比3/4を保証し、LMSYS再生ではLJFより最大17%高いスループットと21%低い平均遅延を示す。",
-    "authors": ["Dayi Yao", "Zijie Zhou"],
-    "authors_affiliations": "Dayi Yao: University of Washington。Zijie Zhou: IEDA, The Hong Kong University of Science and Technology (HKUST)。",
-    "published": "2026-08-03",
-    "publication": "arXiv:2608.02244v1",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint; arXiv v1 submitted 2026-08-03。一次資料上で査読済み採録先は確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["連続バッチ推論", "資源公平性", "KVキャッシュ", "スケジューリング", "競争解析", "推論原価", "トークン課金"],
-    "importance": "中〜高。既存の公平サービング研究が待ち時間や利用者間サービス量を主に扱うのに対し、本論文は同一バッチ内で最大KVキャッシュが短い要求へ押し付ける共有計算費用を直接定式化する。理論保証と原価分解を接続しており、長さ依存のバッチ編成、GPU資源会計、課金と推論原価の整合を考える際の基礎資料になる。",
-    "hardware_evaluation": "実GPUサーバのエンドツーエンド計測ではない。主要な実証は離散トークン段階シミュレーションで、LMSYS-Chat-1Mから無作為抽出した2,000会話を総トークン長として再生する。バッチ幅B=16/32、α=50/100/150を評価する。",
-    "hardware_details": "具体的なGPU、モデル、CUDAカーネル、推論エンジンは主要評価に含めない。計算負荷がバッチ内最大KVキャッシュ進捗に支配される計算制約型の単一worker抽象を用いるため、実機のメモリ帯域、カーネル効率、プリフィル費用、通信費は直接測定していない。",
-    "quality_effect": "モデル重みや生成アルゴリズムを変更せず、要求の実行順序とバッチ同居関係だけを制御するため、生成品質への近似誤差は導入しない。影響対象は完了時刻、スループット、バッチ内資源負担、推論原価である。",
-    "storage_targets": ["各要求のKVキャッシュ占有量", "バッチ内の最大デコード進捗", "要求ごとの累積生成トークン数"],
-    "bottlenecks": ["長短要求混在による最大KV量支配のバッチ外部性", "公平性制約を強めた際のバッチ充填率低下", "未知の出力長でのスケジューリング", "オンライン到着時にoffline保証を維持できない問題", "メモリ制約型・多GPU環境を直接扱わない抽象化"],
-    "evidence_locations": ["§2 Model", "§3 Fair Scheduling Algorithms", "§3.4 Robust Scheduling under Prediction Uncertainty", "§4 Theoretical Extensions", "§5 Profit and Cost Alignment under Linear Pricing", "§6 System Efficiency Under Resource-Fair Scheduling", "§7 Conclusion", "References"],
-    "source": "https://arxiv.org/abs/2608.02244",
-    "sources": ["https://arxiv.org/abs/2608.02244", "https://arxiv.org/html/2608.02244v1", "https://arxiv.org/pdf/2608.02244"],
-    "code": "",
-    "implementation": "理論アルゴリズムとトークン段階シミュレーションによる研究。arXiv一次資料のCode/Data欄および本文には、vLLM等へ統合した公式実装や著者公式コードURLは示されていない。",
-    "last_checked": "2026-09-15",
-    "references": [
-      {"canonical_id": "arXiv:2403.02310", "title": "Taming throughput-latency tradeoff in LLM inference with Sarathi-Serve"},
-      {"canonical_id": "arXiv:2308.16369", "title": "Sarathi: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills"},
-      {"canonical_id": "arXiv:2502.07115", "title": "Online Scheduling for LLM Inference with KV Cache Constraints"},
-      {"canonical_id": "arXiv:2508.06133", "title": "LLM Serving Optimization with Variable Prefill and Decode Lengths"},
-      {"canonical_id": "arXiv:2508.14544", "title": "Adaptively Robust LLM Inference Optimization under Prediction Uncertainty"},
-      {"canonical_id": "arXiv:2504.11320", "title": "Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints"},
-      {"canonical_id": "arXiv:2411.15997", "title": "Ensuring Fair LLM Serving amid Diverse Applications"},
-      {"canonical_id": "arXiv:2410.01035", "title": "Don't Stop Me Now: Embedding Based Scheduling for LLMs"}
-    ],
-    "references_checked_at": "2026-09-15",
-    "references_source": "arXiv v1 HTML References節",
-    "references_total": 45,
-    "last_audited": null,
-    "audit_version": 0
-  },
-  "reservation": {"claim_id": "claim-779cb1f8d8bab20a380e7214", "worker_id": "scheduled-chat-llm-survey-20260915T0012JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-333919194e40f18bad7c1466",
+  "job_id": "job-research-87d11da7c0c30dc4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-333919194e40f18bad7c1466",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0030JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

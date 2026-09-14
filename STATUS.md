@@ -41,24 +41,24 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **58** |
-| 有効claim（lease） | **2** |
-| 今すぐ着手可能（Claimable） | **57** |
-| 有効leaseを持つworker run | **2** |
-| :30 最新worker run | **2026-09-14T23:10:00+09:00** |
+| 有効claim（lease） | **3** |
+| 今すぐ着手可能（Claimable） | **56** |
+| 有効leaseを持つworker run | **3** |
+| :30 最新worker run | **2026-09-15T00:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
-| :30 旧run由来の有効claim | **0** |
+| :30 旧run由来の有効claim | **1** |
 | :00 最新worker run | **2026-09-15T00:00:00+09:00** |
 | :00 最新run由来の有効claim | **1** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 00:42 JST** |
+| :30 通常worker 直近lease活動 | **09-15 00:53 JST** |
 | :00 補助worker 直近lease活動 | **09-15 00:42 JST** |
 | 直近24h Research完了（:30 通常worker） | **32** |
 | 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
-| 最新通常run | **2026-09-14T22:30:00+09:00** |
+| 最新通常run | **2026-09-15T00:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **68 min** |
+| 最古の有効claimの経過時間 | **69 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
