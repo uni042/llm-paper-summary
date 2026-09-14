@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "job-4869ced76a02ed91",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.21312",
+      "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation",
+      "source_url": "https://arxiv.org/abs/2605.21312",
+      "paper_path": "papers/inference/12-benchmarking-modeling-emulation/2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md",
+      "priority": 82,
+      "reason": "分離プリフィル/デコード、Attention-FFN分離、CUDA Graph、投機的デコード、状態付き要求まで同一シミュレータで扱い、計算・通信・メモリ費用を統合予測する離散イベント型LLM推論シミュレータ。16台H800評価で平均スループット誤差4%未満、既存シミュレータのエンドツーエンド遅延誤差を同居構成44.9%→6.4%、分離構成51.7%→2.6%へ削減し、一般CPU上で1000超GPU規模まで拡張できると報告する。現代的な分離サービング設計のdecision-grade評価基盤として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-simulation-12",
+    "axis": "現代的分離LLMサービングの高忠実度シミュレーション",
+    "query_summary": "サービングシミュレーションを探索し、Frontier（arXiv:2605.21312）、AgentServeSim（arXiv:2606.09613）、LLM-Emu（arXiv:2605.00616）を軽量評価した。最新identityでAgentServeSimとLLM-Emuは既収録、Frontierは未収録・未job化だった。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 2,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.09613",
+      "arXiv:2605.00616"
+    ],
+    "next_axis_hint": "candidate inventoryがoverflow条件へ到達する見込みのため、最新queue/stateを再取得し、>50かつactionable Research/Auditなら通常worker契約へ切り替える。",
+    "empty_round_reason": null
+  }
+}
