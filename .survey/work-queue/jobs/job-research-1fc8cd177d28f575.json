@@ -14,5 +14,16 @@
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T16:42:02+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: problem_method.problem must explain the bottleneck and why prior approaches are insufficient | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+  "validation_errors": [
+    "problem_method.problem must explain the bottleneck and why prior approaches are insufficient",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "last_validation_failed_at": "2026-09-14T22:11:18+00:00"
 }
