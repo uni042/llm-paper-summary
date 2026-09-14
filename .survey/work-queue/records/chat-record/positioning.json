@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-777e6f19d52b432f52d0b98a",
+  "attempt_id": "attempt-128d57e31f4e61847fa8c634",
   "job_id": "job-research-1e64c7b1f044657e",
   "data": {
     "differences": "H2O、TOVA、SnapKVなどは注意重みを観測して過去KVの重要度を推定するのに対し、KeyDiffは注意重みを一切使わずキー空間の多様性だけで選ぶ。これにより、将来ブロックが未観測な逐次プリフィルでもスコアの意味が崩れにくく、注意行列を実体化しないFlashAttentionとの併用も可能になる。KVQuantやKIVIのような量子化は各KVを残したままビット幅を下げ、Questなどの疎注意は保持KV全体から読み出す部分を減らすのに対し、KeyDiffはキャッシュからトークン単位のKVそのものを削除して容量を固定する。",
@@ -13,5 +13,9 @@
     "limitations": "主評価はLlama/Qwen系のGQA注意で、MLAなど別形式への拡張は将来課題である。キー多様性は将来クエリ重要度の代理であり、厳しい予算では情報損失が避けられない。モデルによって削除感度が異なり、Qwen蒸留モデルではMath-500の低下がLlamaより大きい。全プロンプトを十分なメモリで一括処理できる場合は完全な注意重み型選択が有利になり得る。コードが非公開なので、公開実装間でのカーネル最適化や本番統合コストの比較は不足している。",
     "audit_required": false
   },
-  "reservation": {"claim_id":"claim-777e6f19d52b432f52d0b98a","worker_id":"scheduled-chat-20260915T0530JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-128d57e31f4e61847fa8c634",
+    "worker_id": "scheduled-chat-20260915T0530JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,20 +2,54 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-777e6f19d52b432f52d0b98a",
+  "attempt_id": "attempt-128d57e31f4e61847fa8c634",
   "job_id": "job-research-1e64c7b1f044657e",
   "data": {
     "overview": "KeyDiffは、処理途中から固定KV予算を守る難しい条件で、注意重み型削除より精度と遅延の両面で安定した。LongBenchではLlama 3.1-8B/3.2-3Bを中心に、6K予算で平均約33%のKV削減を行っても非削除基準からの低下を約1.5%に抑え、8K予算で約23%削減時には差を0.04%以下にした。注意重みを実体化しないためFlashAttentionを利用でき、Llama 3.2-3Bの最初のトークンまでの時間はTOVAやSnapKVより最大30%短い。推論課題ではDeepSeek-R1-Distill-Llama-8Bに滑動窓を併用すると非削除に近い性能を維持する一方、Qwen蒸留モデルでは削除感度が高く、万能な無損失法ではないことも示す。",
     "key_results": [
-      {"metric":"LongBench・6K KV予算","value":"非削除基準から約1.5%低下、平均約33% KV削減","baseline":"非削除KVキャッシュ","condition":"Llama 3.1-8B-Instruct / Llama 3.2-3B-Instruct、主にブロックサイズ128","interpretation":"全プロンプトを一括保持せず処理途中から容量を制限しても、キー多様性による選択で大半の長文性能を維持できる。"},
-      {"metric":"LongBench・8K KV予算","value":"非削除基準との差0.04%以下、平均約23% KV削減","baseline":"非削除KVキャッシュ","condition":"Llama 3.1-8B-Instruct / Llama 3.2-3B-Instruct","interpretation":"比較的緩い予算では、実質的に基準精度を保ちながらメモリを削減できる。"},
-      {"metric":"最初のトークンまでの時間","value":"TOVA/SnapKV比で最大30%短縮","baseline":"TOVAおよびSnapKV","condition":"Llama 3.2-3B-Instruct、NVIDIA A100 80GB、FlashAttention、複数ブロックサイズ","interpretation":"注意重み行列を実体化しないため高速注意を維持でき、削除スコアの追加費用を含めてもエンドツーエンド遅延を抑えられる。"},
-      {"metric":"キー幾何と注意重要度の相関","value":"Spearman順位相関の平均約0.94±0.02","baseline":"負のキー余弦類似度と注意重みの比較","condition":"Llama 3.2-3B-Instruct、LongBench-Musique、各層平均","interpretation":"キー空間で特徴的な方向が注意上の重要トークンを代理できるという中心仮説を複数層で支持する。"},
-      {"metric":"Math-500・Llama蒸留モデル","value":"8K生成・4K予算でFlex 0.844 / Exact 0.634、非削除0.840 / 0.628","baseline":"DeepSeek-R1-Distill-Llama-8B非削除","condition":"KeyDiff＋滑動窓、複数応答平均","interpretation":"生成が長い推論でも適切な予算と直近保持を組み合わせれば、削除なしに近い、場合によっては僅かに上回る結果を得る。"}
+      {
+        "metric": "LongBench・6K KV予算",
+        "value": "非削除基準から約1.5%低下、平均約33% KV削減",
+        "baseline": "非削除KVキャッシュ",
+        "condition": "Llama 3.1-8B-Instruct / Llama 3.2-3B-Instruct、主にブロックサイズ128",
+        "interpretation": "全プロンプトを一括保持せず処理途中から容量を制限しても、キー多様性による選択で大半の長文性能を維持できる。"
+      },
+      {
+        "metric": "LongBench・8K KV予算",
+        "value": "非削除基準との差0.04%以下、平均約23% KV削減",
+        "baseline": "非削除KVキャッシュ",
+        "condition": "Llama 3.1-8B-Instruct / Llama 3.2-3B-Instruct",
+        "interpretation": "比較的緩い予算では、実質的に基準精度を保ちながらメモリを削減できる。"
+      },
+      {
+        "metric": "最初のトークンまでの時間",
+        "value": "TOVA/SnapKV比で最大30%短縮",
+        "baseline": "TOVAおよびSnapKV",
+        "condition": "Llama 3.2-3B-Instruct、NVIDIA A100 80GB、FlashAttention、複数ブロックサイズ",
+        "interpretation": "注意重み行列を実体化しないため高速注意を維持でき、削除スコアの追加費用を含めてもエンドツーエンド遅延を抑えられる。"
+      },
+      {
+        "metric": "キー幾何と注意重要度の相関",
+        "value": "Spearman順位相関の平均約0.94±0.02",
+        "baseline": "負のキー余弦類似度と注意重みの比較",
+        "condition": "Llama 3.2-3B-Instruct、LongBench-Musique、各層平均",
+        "interpretation": "キー空間で特徴的な方向が注意上の重要トークンを代理できるという中心仮説を複数層で支持する。"
+      },
+      {
+        "metric": "Math-500・Llama蒸留モデル",
+        "value": "8K生成・4K予算でFlex 0.844 / Exact 0.634、非削除0.840 / 0.628",
+        "baseline": "DeepSeek-R1-Distill-Llama-8B非削除",
+        "condition": "KeyDiff＋滑動窓、複数応答平均",
+        "interpretation": "生成が長い推論でも適切な予算と直近保持を組み合わせれば、削除なしに近い、場合によっては僅かに上回る結果を得る。"
+      }
     ],
     "negative_results": "極端な容量制約では削除による情報損失が避けられず、全課題で非削除と同等になるわけではない。DeepSeek-R1-Distill-Qwen-7BではLlama蒸留モデルより低下が大きく、著者らはQwenの少ないKVヘッドによる情報圧縮が削除感度を高める可能性を指摘する。Phonebook Lookupでも文脈が長くなるほどKeyDiffの検索精度は低下し、完全保持との差が広がる。全プロンプトを一括処理できる十分なメモリがある場合には、将来を含む注意重みで重要度を測れる注意型削除が有利になり得る。",
     "interpretation": "改善の核は『より賢い注意重み集計』ではなく、重要度推定から注意行列への依存そのものを外したことである。ブロック処理では未来クエリが見えないため現在の注意重みは不完全だが、キー自身の方向的な希少性は将来ブロックが来ても変わりにくい。加えて平均アンカーとの線形スコアに落としたことで、削除処理が長文推論の新しい二乗ボトルネックになることを避け、高速注意の利点も保持する。",
     "quality_impact": "近似KV削除であり品質は予算依存。8K程度ではほぼ無損失に近いが、6K以下やモデル構造によって低下する。モデル重みや算術精度を変更しないため、品質変化は保持する文脈トークンの選択だけから生じる。"
   },
-  "reservation": {"claim_id":"claim-777e6f19d52b432f52d0b98a","worker_id":"scheduled-chat-20260915T0530JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-128d57e31f4e61847fa8c634",
+    "worker_id": "scheduled-chat-20260915T0530JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
