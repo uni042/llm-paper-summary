@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e00f52c8cc2c35eb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.30391",
+      "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs",
+      "source_url": "https://arxiv.org/abs/2606.30391",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-festina-energy-aware-scheduling-serverless-llm-serving.md",
+      "priority": 82,
+      "reason": "FestinaはサーバレスLLM配信で、要求配置だけでなくGPU内のSM分割、推論フェーズごとのバッチ／計算資源調整、GPU動作点、SLOを守ったワークロード統合・移行を一つの電力最小化制御面で協調させる。オフラインプロファイルとGPU状態要約による低コストな全体スケジューラと、TTFT/TBT余裕を使う局所スケジューラを組み合わせ、4つの既存LLM serving系とDVFS追加系に対してSLO達成率を2%以内に保ちながら最大56%のエネルギー削減を報告する。通常の性能中心スケジューリングとは目的関数と制御対象が異なり、共有GPUの実行時資源配分研究として収録価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T02:00:00+09:00",
+    "round": "specialist-energy-aware-serverless-2",
+    "axis": "サーバレスLLMの電力・SM分割・GPU動作点協調制御",
+    "query_summary": "KV圧縮軸から離れ、共有GPU上のサーバレスLLMでSLOを守りつつ要求配置、SM割当、GPU動作点、統合・移行を協調するenergy-aware servingを探索した。Festinaを未収録候補として残し、地域間炭素ルーティングarXiv:2608.06188はLibrary pendingに完全Research payloadがあるため重複として除外した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2608.06188"],
+    "next_axis_hint": "電力最適化から分離し、collective communication、通信・計算協調、または新着MoE expert placement/runtimeへ軸を移す",
+    "empty_round_reason": null
+  }
+}
