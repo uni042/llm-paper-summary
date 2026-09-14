@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "submission_id": "chat-attempt-443ec8e0bdeb1310d8bbdd8b-flexinfer",
+  "attempt_id": "attempt-443ec8e0bdeb1310d8bbdd8b",
+  "job_id": "job-research-87da19d91d5900c3",
+  "status": "completed",
+  "record_bank": "a",
+  "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
+  "record_slots": [
+    {
+      "slot": "metadata",
+      "path": ".survey/work-queue/records/chat-record/metadata.json",
+      "blob_sha": "75d5c13f8ad05e2aad2b1f339419f382d755f353"
+    },
+    {
+      "slot": "problem_method",
+      "path": ".survey/work-queue/records/chat-record/problem_method.json",
+      "blob_sha": "7b68d63da015e1062c3302b3b18348807a14b80d"
+    },
+    {
+      "slot": "evaluation",
+      "path": ".survey/work-queue/records/chat-record/evaluation.json",
+      "blob_sha": "71d1bcdc0b677902864c741aa83b91f0b1c9d3b2"
+    },
+    {
+      "slot": "results",
+      "path": ".survey/work-queue/records/chat-record/results.json",
+      "blob_sha": "ca88344aaaa8127e5438c2c0560d9ba7dc992b18"
+    },
+    {
+      "slot": "positioning",
+      "path": ".survey/work-queue/records/chat-record/positioning.json",
+      "blob_sha": "d6de6944c484b6d0d0ffedcbe4c53f1a3fe3fb85"
+    }
+  ],
+  "audit_required": true,
+  "audit_reason": "著者公式コード公開先、実スマートフォン・組み込み端末での再現性、arXivコメントのEuroMLSys '25発表予定の最終採録状態、本文表と図注の70B全メモリ時スループット表記の整合を追加確認する。",
+  "claim_id": "claim-443ec8e0bdeb1310d8bbdd8b",
+  "worker_id": "scheduled-chat-discovery-specialist",
+  "worker_kind": "scheduled_chat",
+  "kind": "research",
+  "depends_on_job_ids": ["job-research-87da19d91d5900c3"],
+  "source_urls": ["https://arxiv.org/abs/2503.03777", "https://arxiv.org/html/2503.03777"]
+}
