@@ -4,10 +4,24 @@
   "slot": "evaluation",
   "attempt_id": "attempt-e82635abb5120aa7260dbed6",
   "job_id": "job-research-bada04a844a16b47",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-e82635abb5120aa7260dbed6",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "Jetson AGX Orin 64GBを主評価機とし、Ampere GPU（Compute Capability 8.7）上でカーネル・端末推論・電力を実測する。別途Jetson Thorでも移植時のカーネル傾向を測る。",
+    "software": "Ubuntu 22.04.5 LTS、JetPack 6.1、CUDA 12.6、GCC 11.4、NVCC 12.6。端末全体評価はFasterTransformerへUnionSparseを統合し、Wandaで枝刈り、AtomでW4A4量子化する。",
+    "model": ["LLaMA2-7B","LLaMA2-13B","OPT-13B","Qwen2-7B","LLaMA3-8B"],
+    "datasets": ["各モデルの代表的な線形層行列形状から構成した832件のカーネル条件","OPT-13Bの短入力端末推論ワークロード"],
+    "baselines": ["SpInfer","FlashLLM","CUTLASS","cuBLAS Tensor Core","cuSPARSE","Sputnik","SparTA","FasterTransformer"],
+    "correctness": "カーネル結果は各方式が対象条件で生成する行列積を同じ計算対象として比較する。端末推論は50%非構造化枝刈りとW4A4量子化済みOPT-13Bを共通条件とする。論文はタスク精度を主要評価に含めず、品質影響は圧縮設定に依存する。",
+    "settings": [
+      "主カーネル評価はW4A4、疎性40/50/60/70%、逐次生成幅N=1/2/4/8/16/32",
+      "5モデル由来の行列形状を合わせて832有効条件",
+      "各カーネルを原則25回実行し平均遅延を使用",
+      "オフライン枝刈り・量子化・形式変換・行並べ替え時間はカーネル遅延から除外",
+      "端末推論はOPT-13B、50%疎性、W4A4、平均入力長10トークンで複数バッチ・出力長を測定",
+      "電力評価は入力64・出力128、INA3221を50ms周期で測定し、アイドル3.19Wを差し引く",
+      "OrinはMAXNでCPU/GPU/EMC周波数を最大へ固定"
+    ],
+    "methodology": "まずPMRと実効計算強度の解析を行い、W4A4の多数の行列形状・小バッチ条件でUnionSparseと密・疎のGPUカーネルを比較する。速度倍率は各条件の基準遅延をUnionSparse遅延で割り、その算術平均を報告する。次にLSPD、二重バッファ、行並べ替えを段階的に有効化する除去実験で寄与を分離し、Nsight Computeにより帯域利用、命令発行効率、Tensor Core活動、共有メモリ衝突などを測る。最後にFasterTransformerへ統合したOPT-13Bで端末全体のスループットと入力処理・逐次生成の時間内訳を測り、INA3221で生成1系列・1トークン当たりエネルギーも評価する。",
+    "scope": "主張の中心はエッジGPU上の低ビット非構造化疎行列積、とくに逐次生成の小N領域である。OrinのW4A4評価が最も詳細で、W2A4とJetson Thorは追加の一般化確認に留まる。サーバGPU、大規模バッチ、学習、構造化疎性は主対象ではない。端末全体評価もOPT-13B一モデルであり、品質ベンチマークは含まれない。"
+  },
+  "reservation": {"claim_id":"claim-e82635abb5120aa7260dbed6","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
