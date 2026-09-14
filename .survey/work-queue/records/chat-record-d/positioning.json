@@ -2,19 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5aae5b401b72e747053748e6",
+  "attempt_id": "attempt-ebdfe1bfc6bf08876f45688e",
   "job_id": "job-research-cff945d042003c88",
-  "data": {
-    "limitations": "実装と主要評価はH100 Hopper世代に強く依存し、特に `wgmma` を用いるため、AmpereやAMD GPUへ同じカーネルをそのまま移せるわけではない。評価モデルはOPT-30B/66B中心で、Llama等の品質動機は示すもののエンドツーエンド性能の一般化範囲は限定的である。プリフィルのようにNが大きい計算律速条件ではcuBLASより遅くなり得るため、全推論段階を置換する万能カーネルではない。高疎性ではSlot-Fillingへ移す余剰値が減り、ゼロ埋めが支配的になるためFlashLLM等に対する利点が失われる場合がある。また枝刈りそのものは品質劣化を伴い、50%でも密モデルと同等ではない。形式変換には30Bで41.1秒、66Bで92.6秒が必要で、頻繁に重みが変わる用途では無視できない。",
-    "differences": "SputnikやCSR系は任意の非構造疎性を直接扱える一方、値ごとの位置情報が重くなりやすい。SpInferのような圧縮位置情報方式は帯域を減らすが、位置復号がCUDA Core側の律速になり得る。FlashLLMは疎重みを別形式で扱い、高疎性では強いが、中程度疎性でのメタデータ・計算効率に課題がある。本論文は非構造疎性を一つの表現へ固定せず、大部分を2:4疎Tensor Core層へ、余剰をPDD付きSlot-Filling層へ、例外をCSR残差層へ分割する。その上でTensor CoreとCUDA Coreを同時に働かせるため、保存形式と実行スケジューリングを共同設計している点が主差分である。",
-    "implementation_status": "DAC 2026採録論文で、著者の公式CUDA実装が `https://github.com/moui0/cudac` として公開されている。論文はH100上で実装を評価し、GCC 12.3・NVCC 12.6を使用する。3層形式へのCPU変換器と、Hopper `wgmma` を利用する疎Tensor Core/CUDA Core協調カーネルを含む。論文記載からは主要な再現要素が公開されているが、他GPU世代への移植版やvLLM等の汎用推論基盤への上流統合は確認できない。",
-    "research_positioning": "リポジトリではカーネル・ランタイム・コンパイル系統に置くのが妥当である。オフロードやKVキャッシュではなく、HBMから読む重み量、疎性メタデータ、Tensor Core/CUDA Coreの利用率を直接最適化する低層推論手法だからである。特に『品質を保ちやすい50%前後の非構造疎性は、GPUではかえって速くしにくい』という実装上の空白を対象にしており、量子化や強い枝刈りとは別の性能・品質折衷点を提供する。将来的には量子化併用、MoEエキスパート重み、階層メモリからロードする圧縮重みとの組み合わせを検討する際の基礎になるが、本論文自体はSSD/NVMeやCPUオフロードを評価していない。",
-    "relation_to_existing_repository": "09-kernel-runtime-compilation系統。既存の疎行列積、Tensor Core活用、GPUメモリ帯域最適化論文との比較対象になり、SpInferやFlashLLMに対して中程度非構造疎性を主戦場とする点が差分である。",
-    "audit_required": false,
-    "audit_reason": "一次論文、DAC掲載情報、公式実装URL、主要評価条件と制約を確認済み。通常の後続メタデータ監査は必要だが、このresearch完了時点で追加の特別監査を要求する未解決点はない。"
-  },
+  "data": {},
   "reservation": {
-    "claim_id": "claim-5aae5b401b72e747053748e6",
+    "claim_id": "claim-ebdfe1bfc6bf08876f45688e",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
