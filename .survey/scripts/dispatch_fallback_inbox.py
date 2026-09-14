@@ -2,8 +2,9 @@
 """Dispatch eligible fallback envelopes through the current workflow-v10 transport.
 
 Research/Audit record bundles are converted directly into attempt-specific immutable
-descriptors by ``replay_record_fallback``. A single invocation drains multiple record
-bundles so a temporary Library/GitHub transport outage does not take hours to recover.
+descriptors by ``replay_record_fallback``. The CLI drains multiple record bundles per
+invocation so a temporary Library/GitHub transport outage does not take hours to recover.
+The Python ``dispatch()`` API remains single-item by default for backwards compatibility.
 Historical bundles containing the retired reusable ``chat-inbox.json`` remain readable,
 but replay never recreates that fixed transport. Non-record envelopes keep their
 single-dispatch semantics because some generic routes target mutable singleton inputs.
@@ -19,7 +20,8 @@ from typing import Any
 import fallback_transport as ft
 import replay_record_fallback as record_replay
 
-DEFAULT_MAX_ITEMS = 50
+DEFAULT_DISPATCH_MAX_ITEMS = 1
+DEFAULT_CLI_MAX_ITEMS = 50
 
 
 def move_exact(source: Path, destination_dir: Path) -> Path:
@@ -128,7 +130,7 @@ def _batch_result(
     return result
 
 
-def dispatch(repo_root: Path, *, max_items: int = DEFAULT_MAX_ITEMS) -> dict[str, Any]:
+def dispatch(repo_root: Path, *, max_items: int = DEFAULT_DISPATCH_MAX_ITEMS) -> dict[str, Any]:
     if max_items < 1:
         raise ValueError("max_items must be >= 1")
 
@@ -218,7 +220,7 @@ def dispatch(repo_root: Path, *, max_items: int = DEFAULT_MAX_ITEMS) -> dict[str
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--max-items", type=int, default=DEFAULT_MAX_ITEMS)
+    parser.add_argument("--max-items", type=int, default=DEFAULT_CLI_MAX_ITEMS)
     args = parser.parse_args()
     result = dispatch(args.repo_root, max_items=args.max_items)
     print(json.dumps(result, ensure_ascii=False))
