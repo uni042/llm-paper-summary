@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e00f52c8cc2c35eb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2603.06350",
+      "title": "MoEless: Efficient MoE LLM Serving via Serverless Computing",
+      "source_url": "https://arxiv.org/abs/2603.06350",
+      "paper_path": "papers/inference/08-moe-serving-expert-offload/2026-2603.06350-moeless-efficient-moe-llm-serving-via-serverless-computing.md",
+      "priority": 85,
+      "reason": "MoEの専門家（expert）負荷偏りを、GPU内キャッシュや静的な専門家並列（Expert Parallelism; EP）の再配置だけで処理せず、層単位の軽量予測器で将来の専門家負荷を推定し、過負荷になりそうな専門家をサーバレス関数として事前に増設・配置する弾性型serving。関数局所性とGPU利用率を考慮したスケーリング／配置戦略をMegatron-LM上に実装し、8 GPU実機で既存方式比43%の推論遅延削減と84%の推論コスト削減を報告する。expert cache/offloadとは異なる『専門家そのものを弾性的なサービス単位にする』設計で、MoE serving系統への差分が明確。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T02:00:00+09:00",
+    "round": "specialist-serverless-moe-3",
+    "axis": "MoE専門家負荷予測・サーバレス弾性配置",
+    "query_summary": "通信runtime軸からMoEの実行時配置へ移り、expert stragglerをserverless scalingで吸収する方式と既知のedge expert offloadを比較した。MoElessを新規候補として残し、OD-MoE arXiv:2512.03927は過去runで既に採用済みのため除外した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": ["arXiv:2512.03927"],
+    "next_axis_hint": "MoEの弾性配置から、専門家通信collectiveの動的適応またはdistributed LLM communication runtimeへ軸を移す",
+    "empty_round_reason": null
+  }
+}
