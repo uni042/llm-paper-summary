@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-9f543fdb6d6ec02bcc46ff9a",
-  "job_id": "job-research-92bd4538dc2f6002",
-  "data": {
-    "limitations": "単一RTX 3090、Qwen2.5系とYOLO11系、最大6モデルに限定され、H100等の異なる資源比率や複数GPUへ一般化できるかは未検証である。平均場は現在のVRAM使用率・GPU利用率・負荷を固定文脈として候補性能を予測し、候補変更後のGPU状態遷移を内生的には予測しない。LLMについてプリフィル/デコード段階、KVキャッシュ占有、系列長変化を明示的に表さず、著者も将来課題に挙げる。StaticFullがほぼGAと同等だったため、評価された8シナリオでは動的適応の必要性は限定的である。公式コードURLも確認できない。",
-    "differences": "従来のJoint MLP型代理器が複数モデルの全局所構成をまとめて入力し、モデル数とともに入力次元・測定空間が膨らむのに対し、MeanFieldは各モデルを『局所構成＋集約GPU場』へ分解する。Clockwork/Nexus/Clipper等が配置・バッチ化を行う一方、本研究は異種モデル同居時の干渉予測とプロファイル量の拡張性を主眼に置く。LLMサービング専用スケジューラと違い、視覚モデルとの同居を含む一般的な異種AI共有GPUを対象にし、品質係数と変種再読み込み費も目的関数に組み込む。",
-    "implementation_status": "RTX 3090上でvLLMとUltralyticsを組み合わせた測定系、64–32多層パーセプトロン代理器、遺伝的アルゴリズムスケジューラを実装して評価している。論文本文とarXiv情報に著者公式コード公開URLはなく、研究実装の再利用性は未確認である。",
-    "research_positioning": "LLM推論基盤の中では、単一モデルのカーネル・KV最適化ではなく、共有GPUへ複数AIモデルを配置する上位の実行時スケジューリング層に位置する。特にプロファイルコストを抑える代理性能モデルという観点で、モデル追加時に組合せ爆発しない制御器設計の参考になる。将来LLMのプリフィル/デコード・KV占有を状態へ追加すれば、複数LLMサービングや階層メモリ制御にも接続可能である。",
-    "relation_to_existing_repository": "既存のサービング・スケジューリング系統に対し、要求順序やGPU間配置そのものより『候補構成の性能をどう低コストに予測するか』を補う研究である。SSD/NVMeを直接扱わないが、将来GPU/CPU/SSD階層の選択肢が増えた際にも、各モデルの局所配置と集約I/O圧力を入力する平均場代理器で探索空間を圧縮する発想へ応用できる。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id": "claim-9f543fdb6d6ec02bcc46ff9a", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-0955cddfea7e5b9a4dfbac9a",
+  "job_id": "job-research-825504607247e69d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0955cddfea7e5b9a4dfbac9a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

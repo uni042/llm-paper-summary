@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-9f543fdb6d6ec02bcc46ff9a",
-  "job_id": "job-research-92bd4538dc2f6002",
-  "data": {
-    "hardware": ["NVIDIA RTX 3090 24GB GDDR6X"],
-    "software": ["CUDA 12.6", "Ubuntu 20.04", "vLLM", "Ultralytics", "Qwen2.5 FP16/AWQ", "YOLO11 n/s/m"],
-    "methodology": "共有GPU上でQwen2.5系LLMとYOLO11系視覚モデルを2〜6本同時実行する。2モデル時は6 LLM構成×27視覚構成×4負荷水準の648測定を基礎にし、N>2は層化抽出を用いる。各測定セルは10回実行し2ウォームアップを除外、固定クロック・70℃未満・同期開始とする。代理器は5乱数種×5分割交差検証で評価し、平均R² 0.95到達標本数と最終R²を測る。5モデルのスケジューラ評価では3 LLM＋2 YOLO、78,732 VRAM実行可能構成、8動的シナリオ×3 seedで網羅代理探索、固定構成、限定標本固定構成、ランダムと比較する。",
-    "scope": "単一RTX 3090上の実機評価で、異種LLM＋視覚推論の共有GPU干渉を対象とする。複数GPUや分散推論は扱わず、LLM内部もプリフィル/デコード段階やKVキャッシュ占有を明示的に分けない。実行時状態は現在の集約利用率等を条件として固定し、候補適用後の状態遷移を予測しない。",
-    "workloads": ["Qwen2.5系LLM FP16/AWQ", "YOLO11n/s/m", "負荷水準 low/medium/high/burst", "2〜6モデル同時実行"],
-    "baselines": ["Joint MLP（N=2のみ）", "網羅的代理探索", "StaticFull", "StaticBudget K=5000/500", "Random"],
-    "metrics": ["平均R²", "R²≥0.95到達標本数", "目的関数Jの最適値ギャップ", "SLA違反率", "代理評価時間", "探索決定時間"],
-    "reproducibility": "モデル構成空間、測定反復数、温度・クロック条件、代理器構造、遺伝的アルゴリズム設定、SLAと切替費用は本文に詳述される。一方で著者公式コードURLは確認できず、正確なモデルサイズ構成や動的シナリオ生成の再現には追加実装が必要である。"
-  },
-  "reservation": {"claim_id": "claim-9f543fdb6d6ec02bcc46ff9a", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-0955cddfea7e5b9a4dfbac9a",
+  "job_id": "job-research-825504607247e69d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0955cddfea7e5b9a4dfbac9a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

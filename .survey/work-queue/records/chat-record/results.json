@@ -2,21 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-9f543fdb6d6ec02bcc46ff9a",
-  "job_id": "job-research-92bd4538dc2f6002",
-  "data": {
-    "overview": "MeanFieldは、同時実行モデル数を2から6へ増やしても最終予測精度をR² 0.9588以上に保ち、R² 0.95へ到達する実測標本数を約40、60、80、100、120とほぼ20Nで増やした。これは全結合構成を列挙するO(k^N)型代理器に対して、実測上のプロファイル量を大幅に抑えられることを示す。5モデル・78,732実行可能構成では、平均場代理器＋遺伝的探索が全候補を同じ代理器で網羅評価する方式に対して平均目的値0.10%差、最悪0.38%差、SLA違反0で、意思決定時間を131msから26msへ約5倍短縮した。一方、全空間を知る静的最良構成も平均0.05%差とほぼ最適で、8シナリオでは動的適応自体の追加価値は小さい。論文の主要成果は適応性そのものより、少ない測定で干渉を予測し、巨大構成空間を短時間で近似探索できる点にある。",
-    "key_results": [
-      {"metric": "R² 0.95到達標本数", "value": "N=2,3,4,5,6で約40,60,80,100,120、経験則 n*≈20N", "baseline": "全結合プロファイルの組合せ増大", "condition": "5 seed×5-fold層化交差検証", "interpretation": "モデル数増加に対する必要測定量が評価範囲ではほぼ線形で、平均場表現の主目的を支持する。"},
-      {"metric": "最終予測精度", "value": "MeanField R²=0.9860,0.9779,0.9689,0.9645,0.9588（N=2〜6）", "baseline": "N=2 Joint MLP R²=0.9826", "condition": "各Nのフル学習予算", "interpretation": "同居相手の個別構成を直接入力しなくても6モデルまで高い予測力を保つ。"},
-      {"metric": "同居干渉", "value": "AWQ LLM平均8.4%低下、視覚モデル17〜24% FPS低下", "baseline": "孤立実行", "condition": "RTX 3090上の異種同時実行", "interpretation": "干渉は無視できず、共有GPU構成選択に性能代理器が必要である。"},
-      {"metric": "5モデル遺伝的探索品質", "value": "全探索比 平均ギャップ0.10%、最悪0.38%、SLA違反0%", "baseline": "同じMeanField代理器上の78,732構成網羅探索", "condition": "8動的シナリオ×3 seed", "interpretation": "代理器が与える性能地形では、全候補を調べずにほぼ同じ構成品質へ到達できる。"},
-      {"metric": "オンライン意思決定時間", "value": "MeanField評価8.5ms＋GA17ms＝26ms中央値、網羅代理探索131ms", "baseline": "78,732構成の代理器網羅探索", "condition": "N=5", "interpretation": "探索を近似化することで同じ代理器を使う全探索より約5倍高速化し、実行時制御に近い時間へ縮める。"},
-      {"metric": "適応性アブレーション", "value": "StaticFull平均ギャップ0.05%、GA 0.10%", "baseline": "全探索", "condition": "8動的シナリオ", "interpretation": "この評価シナリオでは全空間から選んだ静的構成もほぼ最適で、動的適応そのものの優位は限定的である。"}
-    ],
-    "negative_results": "8つの動的シナリオではStaticFullが全探索比0.05%差、GAが0.10%差で、十分な全空間情報を持つなら静的最良構成もほぼ同等だった。したがって遺伝的オンライン適応の価値はこの評価だけでは強く示されない。限定標本のStaticBudgetはK=5000で5.22%、K=500で10.51%目的値を失い、主な難所は適応より事前測定不足である。また現在のLLM表現は要求並列度を主な実行パラメータとし、プリフィル/デコード段階やKVキャッシュ占有を明示的にモデル化していない。",
-    "interpretation": "精度が保たれる理由として、実測干渉が特定ペア固有の相互作用より、負荷強度や視覚側スキップ率を通じた集約SM・帯域圧力へ強く依存したことが挙げられる。平均場入力はこの集約圧力を直接観測するため、同居相手を列挙せず性能変化を捉えられる。スケジューラ側では代理器評価が既に高速なので、N=5では全探索131msも絶対的には小さいが、遺伝的探索で26msへ落とし、構成数増大への余地を作る。",
-    "quality_impact": "スケジューラはモデル変種の品質係数を目的関数へ明示的に含めるため、速度だけを最大化して量子化・小型変種へ偏ることを防ぐ。AWQ LLMには相対perplexity由来0.979、FP16は1.0、YOLO11はmAP由来係数を用いる。ただし個々の要求品質をオンライン測定するものではなく、固定された変種品質係数による近似である。"
-  },
-  "reservation": {"claim_id": "claim-9f543fdb6d6ec02bcc46ff9a", "worker_id": "scheduled-chat-llm-survey-20260915T0230JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-0955cddfea7e5b9a4dfbac9a",
+  "job_id": "job-research-825504607247e69d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-0955cddfea7e5b9a4dfbac9a",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
