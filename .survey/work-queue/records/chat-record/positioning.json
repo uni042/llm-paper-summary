@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-0770d65152b7e1f7e2e050f8",
   "job_id": "job-research-7e6e9c9b89ab9c18",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-0770d65152b7e1f7e2e050f8",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "特性調査は単一のコーディングエージェント基盤とSWE-rebenchに基づき、制御評価も単一ホスト上の少数トレース再生であるため、一般的なエージェントサービスへそのまま外挿できない。GPU、ネットワーク、ストレージは主要な制御対象外で、CPU用sched_ext経路も本番規模の強い競合評価が不足する。memcg_bpf_opsは論文時点で上流Linuxへ完全統合済みではない開発パッチへ依存する。1秒粒度の特性計測では極短時間ピークの詳細を捉えられず、総需要が恒常的に物理容量を超える場合は抑制だけでは進捗を保証できない。",
+    "differences": "従来のKubernetesやコンテナ単位cgroupは長時間のサービス単位に固定上限を付けるのに対し、AgentCgroupは資源ピークの原因である個々のツール呼出しへ子cgroupを割り当てる。履歴予測型の垂直スケーリングとも異なり、過去の利用率から将来を当てるよりカーネル内の現在状態とエージェントが宣言する資源意図を使う。LLM推論基盤のGPUスケジューリングとは補完関係にあり、推論の外側にあるコンパイル、テスト、パッケージ導入などホスト側ツール処理を扱う。",
+    "implementation_status": "公式コードはhttps://github.com/eunomia-bpf/agentcgroup でGPL-2.0公開され、ビルド手順、利用者空間デーモン、bashラッパー、cgroup/eBPF制御、論文実験の再現手順を含む。論文の試作はC、libbpf、BPF CO-REを使い、Agentsightを拡張している。ただしメモリ制御は開発中のmemcg_bpf_opsカーネル機能へ依存するため、一般的な本番Linuxへそのまま導入できる成熟度ではない。",
+    "research_positioning": "LLMシステム研究がGPU推論のKVキャッシュ、バッチ処理、オフロードへ集中する中、AgentCgroupはエージェントが推論とOSツールを交互に使うことでボトルネックの場所がホスト資源へ移ることを定量化する。高ファンアウトのエージェントサンドボックスや多数並列コーディングエージェントでは、GPUの推論効率を高めてもコンパイルやテストの短いメモリピークが同時実行密度を制限し得る。本研究はそのホスト側資源波形を第一級のシステム課題として扱い、状態を失う強制終了ではなく細粒度抑制で共存させる方向を示す。",
+    "relation_to_existing_repository": "主なLLM推論系統がGPU上のKVキャッシュ、重み、バッチ、オフロードを最適化するのに対し、本研究はエージェントが推論の外側で起動するOSプロセスのCPU・メモリ競合へ焦点を移す。Autellix/Agentixのようなプログラム単位LLMスケジューリングと補完関係にあり、AutellixがGPU呼び出し順やKV局所性を管理する一方、AgentCgroupは同一エージェントが起動したホスト側ツールの短時間バーストを制御する。将来CPU・GPU・SSDを跨ぐエージェント基盤を設計する際には、推論テンソルだけでなくツールプロセス状態も階層資源管理の対象へ含める必要性を示す。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id":"claim-0770d65152b7e1f7e2e050f8","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
