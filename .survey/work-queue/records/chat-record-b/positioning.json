@@ -2,14 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-cf1c319958b5949951463825",
-  "job_id": "job-research-22ee1955e766f2b1",
+  "attempt_id": "attempt-4baea6740aec80b2a79b010f",
+  "job_id": "job-research-64153047cf155e5c",
   "data": {
-    "limitations": "評価規模は最大8ノードで、実験時間も有限であり、世界規模の数百〜数千提供者、広域ネットワークの遅延・帯域揺らぎ、長時間の参加離脱、ネットワーク分断は未検証である。主評価では本来の信用ブロックチェーンを共有台帳へ簡略化しているため、多数決検証、ブロック伝搬、競合履歴の解消など完全分散合意の費用を性能値へ含めていない。持分証明と対戦・審判はSybil攻撃、共謀、審判偏り、初期信用配分など実運用上の攻撃面を残す。信用を実通貨へ接続した場合の経済設計も未確立である。",
-    "differences": "vLLM、SGLang、DistServe、Helixなどは信頼された単一管理領域内でGPUや要求を最適化する。Petalsは固定モデルをボランティアGPUで共同実行し、DeServeは一部中央機能に依存し、GenTorrentは信頼組織を仮定する。WWW.Serveは各ノードが独自モデル・GPU・実行系・利益方針を保持したまま、信用と持分証明を使って要求そのものをサービス間で売買する点が異なる。",
-    "implementation_status": "著者公式GitHubで公開実装を提供。ZeroMQ通信、非同期要求管理、持分証明ルーティング、信用管理、利用者方針、OpenAI互換モデル接続、YAML構成を含む。論文の主評価では完全ブロックチェーンを共有台帳で代替する。",
-    "research_positioning": "クラスタ内LLMサービングと分散市場・P2P資源管理の境界にある研究。GPU内KV配置やプリフィル・デコード分離より一段上のサービス間ルーティングを扱い、複数事業者の自律性とインセンティブをスケジューリング制約へ組み込む。",
-    "relation_to_existing_repository": "既存のllm-serving-scheduling-disaggregation系統が単一クラスタ内の待ち行列、GPU配置、KV転送を最適化するのに対し、WWW.Serveはクラスタ境界を越えた要求委譲を扱う。将来的には各提供者内部でDistServe/FlowKV/SMetricなどを動かし、その上位層でWWW.Serveがサービス間負荷を交換する二層構成が自然であり、内部効率と市場レベル資源配分は補完関係にある。",
+    "limitations": "評価は単一H100 80GBとLLaVA-1.5-7Bに限定される。複数GPU間KV移動、異種アクセラレータ、CPU/SSDへの階層退避、ネットワーク分離prefill/decodeは未評価。MileBenchでは単純説明プロンプトを使うため、本来の長文マルチ画像推論を全面的に評価していない。提案MLP圧縮器の訓練コスト・モデル移植性、要求間公平性、P99待ち時間、失敗時のメモリ回収についても情報が少ない。著者公式実装URLを一次資料から確認できない。",
+    "differences": "SnapKVやKnormなどはどのKVを残すかという圧縮規則が中心で、vLLMやDistServeは未圧縮KVを前提にメモリ・prefill/decodeを管理する。FastCacheは圧縮演算が追加されたことで生じる第三段階の待ち行列とKV寿命問題を対象にし、圧縮器自体をバッチしやすいMLPへ変え、prefill/compress/decode全体を共同スケジューリングする。",
+    "implementation_status": "約6.5K行のPython試作を論文で評価。SPSCオンライン処理、動的バッチング、KVメモリプール、ゼロコピー参照管理を実装。一次資料から公開コードURLは確認できない。",
+    "research_positioning": "KVキャッシュ圧縮とLLMサービングの接点にあるシステム研究。圧縮品質研究を、キューイング・GPU利用率・メモリ断片化・SLOというオンライン実行問題へ拡張する。",
+    "relation_to_existing_repository": "KV-cache-offload-recomputation系統では、圧縮率・量子化・追い出し・再計算を扱う論文が多い。FastCacheはGPU内で圧縮前後状態が共存する期間と圧縮処理のバッチ性を明示的に扱うため、CPU/SSD階層化とは補完的である。将来はFastCacheのメモリプールをGPU/CPU/NVMeへ拡張し、圧縮率・配置階層・prefetchを同じメモリ地図から決める方向が考えられる。",
     "audit_required": false
   }
 }
