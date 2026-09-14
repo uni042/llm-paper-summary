@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T05:40:08.500964+00:00",
+  "updated_at": "2026-09-14T05:43:10.954904+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T05:40:08.500964+00:00",
+      "last_recorded_at": "2026-09-14T05:43:10.954904+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 49,
+        "research_completed": 50,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19368,6 +19368,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34810630368:1",
+          "recorded_at": "2026-09-14T05:43:10.954904+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34810630368",
+            "run_attempt": "1",
+            "source_sha": "e1177bc430991f68e4a4d5c48a29de5850c3e815"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19760,6 +19774,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.09291",
           "title": "UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-95786e300fa60d16",
+          "type": "research",
+          "canonical_id": "arXiv:2606.15555",
+          "title": "Service-Induced Congestion in Memory-Constrained LLM Serving",
           "from": "ready",
           "to": "completed"
         }
