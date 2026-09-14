@@ -1,13 +1,5 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "metadata",
-  "attempt_id": "attempt-04f374b6b55a5cf420d50468",
-  "job_id": "job-research-420858d196a868b6",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-04f374b6b55a5cf420d50468",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
+  "data":{"canonical_id":"arXiv:2604.09562","arxiv_id":"2604.09562","doi":"10.48550/arXiv.2604.09562","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving","summary":"StreamServeは、プリフィルとデコードを別GPUへ分離したLLMサービングで残る二つの動的問題を扱う。第一に、複数の計算レーンへ要求を送る際、キャッシュ局所性だけを優先すると混雑が偏り、均等配分だけではキャッシュ再利用を失う。第二に、推測デコードの適切な深さは受理率と実行時負荷で変わるため固定値では無駄な推測か高速化機会の損失が生じる。FlowGuardはキャッシュ再利用率、メモリ、待ち行列、実行中負荷を統合してレーンを選び、SpecuStreamは受理率変化、負荷、実測スループットから推測深さとマイクロバッチを要求ごとに調整する。プリフィル後のKVキャッシュはNIXLで対応デコードGPUへ転送する。LLaMA-2-7Bを4×A800 40GBで評価し、テンソル並列vLLM比で11.3〜18.0倍の遅延短縮と最大6.8倍のスループット向上を報告する。ただし単一ノード320要求、既存分離型システムとの直接比較なし、生成品質指標なしという制約がある。","list_summary":"プリフィル／デコード分離に、キャッシュ・待ち行列・負荷を使うレーン選択と、受理率・負荷・スループットから推測深さを変える制御を統合し、4×A800でTP-vLLM比11〜18倍の遅延短縮を報告する。","authors":["Satyam Kumar","Arpit Singh Gautam","Kailash Talreja","Saurabh Jha"],"authors_affiliations":"arXiv本文の著者欄では所属を確認できないため未確定。","published":"2026-02-11","publication":"arXiv:2604.09562v1","publication_type":"プレプリント","publication_status":"Preprint; arXiv v1","lineage":"llm-serving-scheduling-disaggregation","topics":["プリフィル・デコード分離","適応型推測デコード","負荷認識ルーティング","KVキャッシュ転送","LLMサービング","NIXL"],"importance":"中〜高。分離型サービングのルーティングと推測デコードを共通の実行時指標で閉ループ制御する設計は有用だが、評価規模と比較対象は限定的。","hardware_evaluation":"実機。NVIDIA A800 40GB GPU×4を単一ノード内で2組のプリフィル／デコード対として使用。","hardware_details":"4×NVIDIA A800 40GB、NVLink接続。GPU 0/2をプリフィル、GPU 1/3をデコードに割り当て、LLaMA-2-7BをFP16で評価する。","quality_effect":"生成品質の正解率、pass@k、分布一致は直接評価していない。本文はTPOT安定を品質劣化なしの根拠にするが、TPOTは速度指標なので品質保持は未検証。","storage_targets":["GPU上のKVキャッシュ","プリフィルGPUからデコードGPUへ移送するKV状態"],"bottlenecks":["プリフィルとデコードの資源競合","複数レーン間の静的ルーティング","固定推測深さ","待ち行列増大","KVキャッシュ転送","高負荷時のメモリ圧力"],"evidence_locations":["§1 Introduction","§3.2–3.5","§4.1–4.8","§5 Ablation Study","Limitations & Threats to Validity","Tables 3–9"],"source":"https://arxiv.org/abs/2604.09562","sources":["https://arxiv.org/abs/2604.09562","https://arxiv.org/html/2604.09562v1","https://arxiv.org/pdf/2604.09562"],"code":"","implementation":"FastAPI、vLLM系実行、NIXLによるGPU間KV転送を組み合わせた試作システム。arXiv本文から著者公式コードURLは確認できなかった。","last_checked":"2026-09-15","references":[{"canonical_id":"arXiv:2405.08691","arxiv_id":"2405.08691"},{"canonical_id":"arXiv:2510.14392","arxiv_id":"2510.14392"},{"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},{"canonical_id":"arXiv:2509.24328","arxiv_id":"2509.24328"},{"canonical_id":"arXiv:2301.02001","arxiv_id":"2301.02001"}],"references_checked_at":"2026-09-15","references_source":"arXiv v1 HTML参考文献節","references_total":27},
+  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
