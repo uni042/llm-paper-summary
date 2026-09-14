@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T05:47:14.668410+00:00",
+  "updated_at": "2026-09-14T05:49:18.863068+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T05:47:14.668410+00:00",
+      "last_recorded_at": "2026-09-14T05:49:18.863068+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 51,
+        "research_completed": 52,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19396,6 +19396,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34811008477:1",
+          "recorded_at": "2026-09-14T05:49:18.863068+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34811008477",
+            "run_attempt": "1",
+            "source_sha": "3341575bce87b306e13addf637e2554eb6011400"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19804,6 +19818,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.09613",
           "title": "AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-4ff85aa229e8d65c",
+          "type": "research",
+          "canonical_id": "arXiv:2602.11808",
+          "title": "Deep Kernel Fusion for Transformers",
           "from": "ready",
           "to": "completed"
         }
