@@ -4,10 +4,27 @@
   "slot": "results",
   "attempt_id": "attempt-43aa5fb73f133772cb25e68d",
   "job_id": "job-research-8837d2430022aa08",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-43aa5fb73f133772cb25e68d",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "DeltaBoxは標準チェックポイントの局所作業を約10.83msに抑えてLLM推論待ちへ隠し、凍結テンプレート命中時の復元を約1.86msで完了する。実MCTS軌跡ではDeltaBoxのエンドツーエンド時間がLLM+行動だけの理想値の1.01～1.02倍に留まる一方、self-hosted E2B差分スナップショットは1.30～1.93倍で、状態管理比率はE2Bの23～48%から1～2%へ低下する。RL分岐では64子でもfork p50 5.47ms、p99 14.74msで、同期GPU占有率はN=16/64で95～97%となる。",
+    "key_results": [
+      {"metric":"チェックポイント局所作業","value":"約10.83ms、推論待ちへ隠蔽","baseline":"全状態複製型のサンドボックス","condition":"標準DeltaBoxチェックポイント","interpretation":"高頻度チェックポイントをエージェントの知覚上ほぼ非停止にできる。"},
+      {"metric":"テンプレート命中時ロールバック","value":"約1.86ms","baseline":"E2B復元は約480倍、FC-Diff約1800倍、replay系約15000倍遅い条件","condition":"凍結テンプレートがプールに存在","interpretation":"物理メモリ再読込みではなくページ表複製主体のforkにする効果が大きい。"},
+      {"metric":"MCTSエンドツーエンド上乗せ","value":"理想LLM+行動時間の1.01～1.02倍","baseline":"E2B差分方式1.30～1.93倍","condition":"Qwen3-Coder-30B、4系統SWE-bench軌跡、各30反復","interpretation":"LLM推論が秒級でも状態管理が探索の主ボトルネックになりにくい。"},
+      {"metric":"状態管理時間比率","value":"1～2%","baseline":"E2B差分方式23～48%","condition":"実MCTS軌跡","interpretation":"深い探索で繰返すC/Rの累積負担を大幅に減らす。"},
+      {"metric":"64分岐fork","value":"p50 5.47ms、p99 14.74ms、165.9 forks/s","baseline":"N=1でp50 0.57ms","condition":"ウォームテンプレートからN=64","interpretation":"コピーオンライト共有により分岐幅増加に対してfork時間が比較的緩やかに伸びる。"},
+      {"metric":"RL同期GPU占有率","value":"N=16で97%、N=64で95%","baseline":"CubeSandbox 80%/77%、E2B 36%/29%","condition":"Qwen2.5-7B生成+LoRA学習、4 GPU","interpretation":"サンドボックス分岐待ちでGPUを遊ばせる時間を抑えられる。"},
+      {"metric":"ガベージコレクションによるダンプ容量削減","value":"46～63%削減","baseline":"全チェックポイント保持","condition":"9本のSWE-bench MCTS軌跡","interpretation":"高速化のための履歴保持が探索木成長に伴い無制限に膨らむのを抑える。"},
+      {"metric":"XFS+reflinkの書込み増幅","value":"大ファイルでも変更ブロック中心の低く平坦なcopy-up","baseline":"ext4/XFS非reflinkはファイルサイズに比例","condition":"1～256KBの実エージェント編集","interpretation":"差分層方式をファイル単位コピーに戻さず、ブロック粒度の共有を維持できる。"}
+    ],
+    "negative_results": [
+      {"name":"テンプレート回収後は低速経路になる","description":"メモリ上の凍結テンプレートには上限があり、対象節点が回収済みならCRIU lazy-pagesで復元する。正しさは保つが数ミリ秒の高速経路は使えない。"},
+      {"name":"外部ネットワーク副作用は巻き戻さない","description":"ネットワーク代理でLLM SDK状態をエージェントのfork対象から分離するが、外部サービスへ送った副作用そのものをロールバックする機構ではない。"},
+      {"name":"復元直後にコピーオンライト障害が残る","description":"forkした子は最初の書込み時にページ複製を行うため、背景ウォーム処理が追いつかないほど直後からCPU処理が集中すると残留遅延が発生する。"},
+      {"name":"全状態が大きく変化する処理では差分利得が縮む","description":"DeltaBoxの根本仮定は連続節点の変更量が小さいことなので、大規模ファイル書換えや大量メモリ汚染が各段階で起こるワークロードでは保存・コピー量が増える。"},
+      {"name":"コード成果物はまだ非公開","description":"著者GitHubはプロジェクトページを公開しているが、2026-09-14時点のREADMEではカーネルパッチ、利用者空間制御器、ベンチマークスクリプトを公開前としている。"}
+    ],
+    "interpretation": "DeltaBoxの主要な成果は、エージェントのテスト時計算を増やす際のボトルネックがLLM推論だけではなく、探索枝ごとの外部OS状態の複製・復元にもあることを示し、その費用を差分状態とOSのコピーオンライト機構へ落とした点にある。ファイル側とメモリ側の両方を差分化し、さらにLLM待ち時間へチェックポイントを隠すため、個別の高速snapshot技術よりもエージェント探索ループ全体での効果が大きい。",
+    "quality_impact": "探索方策やモデル出力を近似せず、同じファイル・メモリ状態へ戻す基盤最適化であるため、探索結果の意味を変えない。むしろ状態管理時間を減らすことで固定時間予算内に探索できる節点数を増やせる。"
+  },
+  "reservation": {"claim_id":"claim-43aa5fb73f133772cb25e68d","worker_id":"scheduled-chat-llm-survey-20260914T1130JST","worker_kind":"scheduled_chat"}
 }
