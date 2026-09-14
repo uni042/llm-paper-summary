@@ -4,6 +4,8 @@
 
 Google Drive fallbackは2026-09-10に廃止済み。旧Drive実装は `archive/drive-fallback-before-removal-20260910` ブランチに保存している。Notionと旧 `/LLM-survey-fallback/` も新規保存には使わない。
 
+Library上のcheckpoint lifecycle、再精読barrier、`processed/` の意味は `library-checkpoint-registry.md` を正本とする。本書と表現が衝突する場合は同文書を優先する。
+
 ## 1. 基本原則
 
 耐久経路は2つだけ。
@@ -11,17 +13,21 @@ Google Drive fallbackは2026-09-10に廃止済み。旧Drive実装は `archive/d
 1. GitHub direct transport
 2. ChatGPT Library outbox `/LLM-survey-outbox/pending/`
 
-GitHub writeが正常ならGitHubを優先する。GitHub writeがrun-wideで利用不能なら、完成logical payloadまたは継続に必要なoffline job seedをLibraryへ保存する。Libraryへの耐久保存が成功すれば、そのjobをGitHub上で完了扱いにはせず、checkpoint済みとして後続の独立作業へ進んでよい。
+GitHub writeが正常ならGitHubを優先する。GitHub writeがrun-wideで利用不能なら、完成logical payloadまたは継続に必要なoffline job seedをLibraryへ保存する。Research/Auditでは完全payload保存後に `/LLM-survey-outbox/checkpoints/<job-id>.json` markerを作成し、Library markerまたはGitHub claimの`checkpoint_ref`のどちらかが精読済みを示すjobを再精読しない。Libraryへの耐久保存が成功すれば、そのjobをGitHub上で完了扱いにはせず、checkpoint済みとして後続の独立作業へ進んでよい。
 
 Library pending件数、GitHub fallback-inbox件数、未送信論文数、record bank使用数は研究容量ではなく、run停止理由にしない。
 
 ## 2. ChatGPT Library outbox
 
-新規fallback保存先:
+新規fallback payload保存先:
 
 `/LLM-survey-outbox/pending/<unique-id>.json`
 
-GitHub writeが復旧したrunで、workerはpending envelopeをGitHubの不変intakeへ送る。GitHub intake成功確認後だけLibrary側を `/LLM-survey-outbox/processed/` へ移す。不正・再生不能payloadは `/LLM-survey-outbox/failed/` へ隔離する。
+Research/Auditの精読済みregistry:
+
+`/LLM-survey-outbox/checkpoints/<job-id>.json`
+
+GitHub writeが復旧したrunで、workerはcheckpoint registryを先に読み、pending envelopeをGitHubの不変intakeへ送る。同一payloadがGitHub intake/archiveに耐久保存されたことを確認したらmarkerを`transported`へ更新するが、**この時点ではLibrary payloadを`processed/`へ移さない。** canonical jobのterminal化、対応immutable result成功、Researchならpaper artifact整合まで確認してmarkerを`reflected`へ更新した後だけ `/LLM-survey-outbox/processed/` へ移す。不正・再生不能payloadは `/LLM-survey-outbox/failed/` へ隔離する。
 
 旧 `/LLM-survey-fallback/` はlegacy領域であり、新規保存には使わない。
 
@@ -58,6 +64,8 @@ GitHub writeが復旧したrunで、workerはpending envelopeをGitHubの不変i
 
 GitHub direct書込み時にclaim resultがbankを予約していたとしても、Library fallback envelope内のbank pathは永続的な所有権を意味しない。復旧時には最新のbank状態を再評価し、安全なbankへ再配置してよい。
 
+Library fallbackを確定する順序は、完全payload保存 → payload再読によるidentity確認 → job単位checkpoint marker作成/更新 → claim解放、とする。marker作成前にclaimを解放しない。
+
 ## 4. GitHub immutable fallback intake
 
 Library pendingをrecord bankへ直接replayしない。まず1 envelope = 1 immutable fileとして次へ送る。
@@ -68,6 +76,8 @@ Library pendingをrecord bankへ直接replayしない。まず1 envelope = 1 imm
 
 同じ`id`がinbox/archiveにあり内容も同一なら再投入しない。同じ`id`で内容が異なる場合は衝突としてfailed扱いにし、上書きしない。
 
+GitHub intake/archiveへの同一payload保存確認はLibrary markerを`transported`に進める条件であり、Library payload自体を`processed/`へ移す条件ではない。
+
 ## 5. Research/Audit replay
 
 `.survey/scripts/dispatch_fallback_inbox.py` はrecord bundleを検出すると `.survey/scripts/replay_record_fallback.py` へ渡す。
@@ -75,7 +85,7 @@ Library pendingをrecord bankへ直接replayしない。まず1 envelope = 1 imm
 Research/Audit replayは次の順で行う。
 
 1. envelopeと5 slotのschema / identity / dependencies / paper pathを検証する。
-2. `origin: claimed_worker` なら現在のcanonical claimと`claim_id`、`worker_id`、`attempt_id`を照合する。
+2. `origin: claimed_worker` なら現在のcanonical claimとidentityを照合する。通常は`claim_id`、`worker_id`、`attempt_id`の完全一致を要求する。ただし旧不具合により後続の重複claimが作られ、その**解放済みcurrent claim自身が `checkpoint_ref=/LLM-survey-outbox/pending/<このenvelope-id>.json` を正確に保持している場合に限り**、current claimが元Library checkpointを明示的にadoptしたものとして元attemptのreplayを許可する。単なるsuperseded attemptは引き続き拒否する。
 3. jobがterminalならpaperやbankへ再適用せずacknowledgeしてarchiveする。
 4. 同attemptの既存bank、またはfree/reusable bankから安全なbankを選ぶ。安全なbankがなければinboxに残してdeferredとする。
 5. 5 slotを選択bankへmaterializeする。
@@ -122,38 +132,42 @@ seed保存後はjob実体化を同期的に待たず同じrunで候補を全文�
 Scheduled Chat / Work workerは可能な範囲で次を読む。
 
 - GitHub queue
+- ChatGPT Library `/LLM-survey-outbox/checkpoints/`
 - ChatGPT Library `/LLM-survey-outbox/pending/`
 - GitHub fallback-inbox
 - GitHub fallback-archive
 
 一時的に次を構築する。
 
-- `checkpointed_job_ids`: 完全Research/Audit payloadがLibraryまたはGitHub fallbackへ耐久保存済みのjob
+- `checkpointed_job_ids`: Library markerが`checkpointed`/`transported`、GitHub claimが有効な`checkpoint_ref`を持つ、またはGitHub fallbackへ完全Research/Audit payloadが耐久保存済みのjob
 - `spillover_candidates`: offline seedに存在し、まだ完成payloadがcheckpointされていない候補
 
-GitHub上で`ready`でもcheckpoint済みjobは再精読しない。Actions反映までcanonical statusは未完了のまま維持する。
+GitHub上で`ready`でもcheckpoint済みjobは再精読しない。Actions反映までcanonical statusは未完了のまま維持する。claim requestへはLibrary registry由来の`checkpointed_jobs`を渡し、GitHub側の`.survey/scripts/apply_library_checkpoint_barriers.py`もpersisted claimの`checkpoint_ref`を未処理requestへマージして二重に保護する。
 
 実行順は `always-on-worker.md` と `continuation-policy.json` を優先する。
 
 ## 10. Recovery ownership
 
-- Library pending → Scheduled Chat / Work workerがGitHub fallback-inboxへ送る。
+- Library checkpoint registry / pending → Scheduled Chat / Work workerが新規claimより先に確認し、GitHub fallback-inboxへ送る。
 - GitHub fallback-inbox内のResearch/Audit → `dispatch_fallback_inbox.py` + `replay_record_fallback.py` がimmutable descriptorへ変換する。
 - GitHub fallback-inbox内の非record envelope → background dispatcherがallowlistされたtransportへ展開する。
 - GitHub fallback-archive → global dedupe ledger。再writeしない。
 
-Library `processed`は「GitHub intakeへの受領確認済み」を意味し、paper publication完了を意味しない。Research/Auditのpublication完了はimmutable result + latest queueで判定する。
+Library `processed/` は **GitHub publicationまで確認済みのpayload** を意味する。GitHub intake受領だけでは`processed/`へ移さない。Research/Auditのpublication完了はcanonical terminal job + immutable result成功 + Research paper artifact整合で判定する。
+
+旧運用で`processed/`へ移動済みなのにcanonical jobがnonterminalのpayloadは反映済みとみなさない。対応payloadとjob/claim/attemptを照合してcheckpoint markerを再構築し、必要ならpendingへ戻してreplayする。再精読はしない。
 
 ## 11. Claim fencing
 
 Claimed-worker envelopeはjob、claim、worker、attempt identityを持つ。replay前に現在のrepository claimと照合する。
 
-- missing/superseded claimは隔離する。
+- missing/superseded claimは原則隔離する。
+- 例外は、解放済みcurrent claim自身が元envelopeへの完全一致`checkpoint_ref`を保持し、そのLibrary payloadを明示的にadoptしている場合だけ。
 - terminal jobは再適用せずarchiveする。
-- replay可能なcurrent attemptだけをslot + descriptorへ変換する。
+- replay可能なcurrent/adopted attemptだけをslot + descriptorへ変換する。
 - stale payloadが別workerのbankやpaperを上書きしてはならない。
 
-claim詳細は `claim-serial-policy.md` を正本とする。
+claim詳細は `claim-serial-policy.md`、Library checkpoint詳細は `library-checkpoint-registry.md` を正本とする。
 
 ## 12. 停止条件
 

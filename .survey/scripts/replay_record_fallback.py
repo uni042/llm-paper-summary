@@ -23,6 +23,7 @@ from record_bank_config import BANK_PATH_PREFIXES, BANK_ROOTS, SLOT_NAMES
 CHAT_INBOX = ".survey/work-queue/submissions/chat-inbox.json"
 SAFE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,159}$")
 TERMINAL = claim_state.TERMINAL
+LIBRARY_PENDING_PREFIX = "/LLM-survey-outbox/pending/"
 
 
 def read_object(path: Path) -> dict[str, Any] | None:
@@ -156,6 +157,25 @@ def _write_if_changed(path: Path, text: str) -> bool:
     return True
 
 
+def _current_claim_adopts_checkpoint(current: dict[str, Any], envelope: dict[str, Any]) -> bool:
+    """Return whether a newer released claim explicitly adopted this Library payload.
+
+    Older deployments could re-claim a ready job after its completed record had been
+    checkpointed to Library. The duplicate claim was then released while retaining the
+    original payload path in ``checkpoint_ref``. That durable pointer is authoritative
+    evidence that the newer claim adopted the older completed attempt; accepting any
+    other superseded attempt would weaken claim fencing.
+    """
+    envelope_id = _safe_id(envelope.get("id"), "id")
+    assert envelope_id is not None
+    expected_ref = f"{LIBRARY_PENDING_PREFIX}{envelope_id}.json"
+    return bool(
+        current.get("released_at")
+        and not current.get("active")
+        and current.get("checkpoint_ref") == expected_ref
+    )
+
+
 def _validate_job_and_claim(repo_root: Path, envelope: dict[str, Any], meta: dict[str, Any]) -> tuple[dict[str, Any], str | None]:
     kind = meta.get("kind")
     if kind not in {"research", "audit"}:
@@ -200,9 +220,15 @@ def _validate_job_and_claim(repo_root: Path, envelope: dict[str, Any], meta: dic
         current = claim_state.current_claims(repo_root).get(job_id)
         if current is None:
             raise ValueError("missing current claim")
-        for key, expected in (("claim_id", claim_id), ("worker_id", worker_id), ("attempt_id", attempt_id)):
-            if current.get(key) != expected:
-                raise ValueError(f"superseded claim: current {key} differs")
+        identity_matches = all(
+            current.get(key) == expected
+            for key, expected in (("claim_id", claim_id), ("worker_id", worker_id), ("attempt_id", attempt_id))
+        )
+        if not identity_matches and not _current_claim_adopts_checkpoint(current, envelope):
+            for key, expected in (("claim_id", claim_id), ("worker_id", worker_id), ("attempt_id", attempt_id)):
+                if current.get(key) != expected:
+                    raise ValueError(f"superseded claim: current {key} differs")
+            raise ValueError("superseded claim identity differs")
     return job, None
 
 
