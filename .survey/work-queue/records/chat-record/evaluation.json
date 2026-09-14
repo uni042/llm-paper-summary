@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-b398f5917a1eff0518b4bce7",
-  "job_id": "job-research-59a8ee8393fd93ee",
-  "data": {
-    "hardware": "試験1は2026年4月、米国3データセンタにNVIDIA H100 SXM 80GBとH200 SXM 144GBを計6基配置し、同種構成、H100/H200混在構成、最大文脈長不一致構成を評価する。試験2は2026年5月、米国3データセンタにNVIDIA RTX PRO 6000 Blackwell SE 96GBを各3基、計9基配置し、拠点間は公開インターネットWANを使う。",
-    "software": "試験1はLlama 3.1 70B AWQ INT4。試験2はvLLM 0.6.6.post1、awq_marlin、接頭辞キャッシュ、分割プリフィルを有効化したLlama 3.1 70B AWQ INT4。各GPUにDCGM exporterとcellagentを置き、制御面はEnvoyへxDS重みを配る。負荷生成はGuideLLMを使用する。比較対象はラウンドロビンとEnvoyのLeast-Request。",
-    "models": ["Llama 3.1 70B AWQ INT4"],
-    "datasets": ["baseline_mixed","rapid_shift","code_heavy","adversarial_spike","multiturn","rag_multidoc","long_context","very_long"],
-    "baselines": ["Round-Robin","Least-Request","Solyx GPU-only 8信号（ネットワーク寄与分離用）"],
-    "methodology": "試験2では8種類の負荷、3種類のルーティング、3段階のSLO、各3反復からなる216条件を評価する。各条件では二分探索で、95パーセンタイルTTFTがSLO以下かつ成功率0.95以上となる最大持続RPSを求める。各探索点は45秒の一定レート負荷、30秒のウォームアップ、15秒のクールダウンで構成し、各条件500標本以上を確保する。追加試験としてGPUへの熱負荷・PCIe競合によるハードウェア予兆、vLLM強制終了による障害迂回、10RPS定常+30秒ごとの50要求バースト、最大文脈長1024セルへの能力不一致、DCGM exporter停止、20ms WAN揺らぎ注入を個別に評価する。試験1では6基H100/H200を用い、12RPSと20RPSで同種・異種・能力不一致時の尾部遅延と成功率を測る。",
-    "scope": "両試験とも実機の物理的な複数拠点環境であり、SkyWalkerなどの模擬地域評価とは異なる。ただし利用したレプリカは6基と9基で、数百・数千GPU規模は未評価である。試験2は単一モデルかつ各拠点内で同種Blackwell GPUを使い、実ユーザートレースではなく本番形状を模した合成負荷を用いる。コスト、消費電力、複数モデル間ルーティング、複数拠点同時障害、KV接頭辞局所性との相互作用は評価外である。"
-  },
-  "reservation": {"claim_id":"claim-b398f5917a1eff0518b4bce7","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-5b0d3b78cde5a02d608aee75",
+  "job_id": "job-research-73651b83b5a764d9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5b0d3b78cde5a02d608aee75",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

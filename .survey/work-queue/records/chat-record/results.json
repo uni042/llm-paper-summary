@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-b398f5917a1eff0518b4bce7",
-  "job_id": "job-research-59a8ee8393fd93ee",
-  "data": {
-    "overview": "Solyxは、ハードウェア・アプリケーション・WANの状態を同時に見て跨拠点ルーティングを変えることで、単純なラウンドロビンと同時要求数だけを見るLeast-Requestを一貫して上回った。試験2の8負荷すべてで中位SLO下の持続RPSをラウンドロビン比1.56〜1.75倍へ高め、熱・PCIe競合ではDCGM信号が利用者向けSLO違反より平均11.2秒先行した。能力不一致では長文要求の誤送信率を0.43%まで下げ、障害迂回p99を1,247msへ短縮した。WAN揺らぎ下ではRTT・揺らぎ信号そのものがGPU・アプリケーション信号だけの方式よりP95 TTFTを27.8%追加改善した。一方、同種GPUが完全飽和し、障害もネットワーク差もない狭い条件ではLeast-Requestとの差がほぼ消える。",
-    "key_results": [
-      {"metric":"SLO内持続スループット","value":"8負荷すべてでRound-Robin比1.56〜1.75倍","baseline":"Round-Robin","condition":"試験2、tier-2 SLO、各条件3反復の中央値","interpretation":"単一の待ち行列情報より、GPU状態とWAN品質を含む圧力得点がSLO余裕を有効利用できる。"},
-      {"metric":"ハードウェア信号の先行時間","value":"平均11.2秒、範囲8.7〜13.1秒","baseline":"アプリケーション側TTFT SLO違反時点","condition":"6セル熱負荷、3セルPCIe競合","interpretation":"DCGM信号を使うと利用者遅延が悪化する前に予防的な要求退避が可能で、9事象すべてでSLO違反を回避した。"},
-      {"metric":"障害迂回p99","value":"Solyx 1,247ms、Least-Request 2,104ms、Round-Robin 4,226ms","baseline":"Least-Request / Round-Robin","condition":"vLLMをSIGKILL、10RPS持続負荷","interpretation":"500ms心拍の失効検知により既定の複数回HTTP健康確認より素早く障害先を除外する。"},
-      {"metric":"能力不一致誤送信率","value":"0.43%対28.71%（Least-Request）、32.11%（Round-Robin）","baseline":"Least-Request / Round-Robin","condition":"1セルmax_model_len=1024、他8セル131072、長文負荷10RPS","interpretation":"失敗がすぐ返って同時要求数が減るレプリカへLeast-Requestが再送し続ける問題を、エラー率信号で抑える。"},
-      {"metric":"長文要求成功率","value":"Solyx 99.57%、Least-Request 71.29%、Round-Robin 67.89%","baseline":"Least-Request / Round-Robin","condition":"能力不一致試験","interpretation":"能力差を事前設定しなくても、失敗率から重みを自動低下させて長文を処理可能セルへ集める。"},
-      {"metric":"WAN信号の追加効果","value":"20ms揺らぎ下でGPU-only比P95 TTFT 27.8%改善。全ネットワーク条件平均でRound-Robin比42%低いP95","baseline":"Solyx GPU-only / Round-Robin","condition":"5種類のWAN条件","interpretation":"RTTと揺らぎはGPU状態だけでは代替できない独立した配置信号になる。"},
-      {"metric":"DCGM停止時の縮退","value":"平均成功率99.90%、代替経路有効化平均824ms、通信断0","baseline":"通常10信号動作","condition":"9セルそれぞれでDCGM exporterを負荷中に停止","interpretation":"一つの観測源が壊れても残るvLLM指標だけで制御を続けられる。"},
-      {"metric":"試験1の同種H100尾部遅延","value":"12RPSでP99 9,894msから7,138msへ27.9%削減。20RPS完全飽和時は3方式が0.3%以内へ収束","baseline":"Round-Robin","condition":"6×H100 SXM","interpretation":"余裕・障害・経路差があると信号認識が効くが、完全均一・完全飽和では使える差分信号がなくなる。"},
-      {"metric":"制御面更新費","value":"0.2ms","baseline":"xDS重み更新1周期","condition":"全構成","interpretation":"制御知能はデータ面要求経路外にあり、更新自体の費用は小さい。"}
-    ],
-    "negative_results": "同種GPUが全て完全飽和し、障害も能力差もWAN差もない条件では、SolyxはLeast-Requestに対して測定可能な優位をほぼ持たない。評価は6基・9基のGPUに留まり、数百・数千レプリカでの中央制御面の計算・通信費は未測定である。試験2は単一モデルで、本番利用者トレースではなく本番形状を模した合成負荷を使う。複数モデル選択、コスト、電力、複数地域同時障害、KV接頭辞局所性との競合も未評価である。",
-    "interpretation": "最も重要な知見は、跨拠点推論では『現在何件処理中か』だけでなく、GPUの劣化原因とネットワーク経路品質を上位ルータへ露出する価値がある点である。特にDCGMが平均11.2秒先行する結果は、ルーティングを反応型から予防型へ変えられることを示す。Solyxは拠点内ルータを置換するのではなく、その上でどの拠点へ送るかを決める層として位置付けるのが適切である。",
-    "quality_impact": "モデル計算は変更せず、要求配置のみを変えるため生成精度への数値的影響はない。品質面の効果はサービス可用性と遅延であり、能力不一致時の長文要求成功率、障害時の成功率、TTFT SLOを改善する。"
-  },
-  "reservation": {"claim_id":"claim-b398f5917a1eff0518b4bce7","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-5b0d3b78cde5a02d608aee75",
+  "job_id": "job-research-73651b83b5a764d9",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-5b0d3b78cde5a02d608aee75",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
