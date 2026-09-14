@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-303dac5e3c1a671043d00ee0",
-  "job_id": "job-research-77f3e91a5c224daf",
-  "data": {
-    "limitations": "需要予測が規則性へ依存し、不規則・敵対的アクセスでは不要プリフェッチ、PCIe帯域浪費、誤った追い出しが増え得る。主要性能評価は合成LoRAと単一A100で、8GPU構成を持つ実験機の分散アダプタ配置・転送は評価していない。Azure FunctionsをLoRA要求へ写像するため到着パターンは実運用由来でもモデル選択との相関は人工的で、実LoRAサービスの人気変動をそのまま再現しない。ページサイズ2MBは固定で、内部断片化やモデル/rank別最適値を自動調整しない。生成品質、障害回復、費用、複数テナント隔離、PCIe/NVLink競合の尾部遅延、反復回数・信頼区間も十分報告されない。",
-    "differences": "S-LoRAは多数LoRAを一つの基盤モデルで計算するための統合ページングとカーネルを提供するが、必要アダプタの読み込みは要求駆動である。PunicaもLoRAバッチ計算が主眼で、dLoRAは要求とアダプタの動的編成を扱う。ServerlessLLMは基盤モデル全体のサーバーレスコールドスタートを多階層チェックポイント読込で短縮する。一方P-LoRAは、より小さく種類数が多いLoRAアダプタの将来需要を予測してCPU→GPU転送を前倒しし、さらにKVキャッシュ向けPagedAttentionの発想を静的アダプタ重みへ適用して異種rankの外部断片化を抑える。",
-    "implementation_status": "vLLMを約3,200行のPythonと800行のCUDAで拡張した研究試作を実機評価している。CPU非同期LSTM、共有メモリ連携、アダプタページ表、scatter-gather CUDAカーネル、予測連携スケジューラを実装。2026-09-14時点で一次資料・公開検索から著者公式コードリポジトリは確認できない。",
-    "research_positioning": "サーバーレスLLM、複数LoRAサービング、予測型資源管理、GPUメモリ仮想化の交点に位置する。リポジトリのServerlessLLMやモデル配置研究が基盤モデル単位のロード/配置を扱うのに対し、P-LoRAは同じ基盤モデル内で頻繁に切り替わる数十〜100MB級アダプタを予測対象とする。階層メモリの観点では、CPU側LoRAプールとGPUページプールの二階層間で将来アクセスを用いて先読みする具体例であり、SSD/NVMeまで拡張する場合はアダプタ人気予測を多段先読み・昇格判断に利用できる。",
-    "relation_to_existing_repository": "ServerlessLLMのモデル重み多階層ロード、S-LoRA/Punica/dLoRAの複数LoRAサービング、PagedAttention型メモリ管理に直接接続する。予測を使うModel Commitmentのような先行配置研究とは時間スケールと粒度が異なるが、『将来需要が発生する前に状態を準備する』原理は共通する。FastCacheやApt-ServeがKV/中間状態の表現・バッチ編成を最適化するのに対し、P-LoRAはアダプタ重みの常駐集合と転送時刻を最適化するため相補的である。",
-    "audit_required": false
-  },
-  "reservation": {"claim_id":"claim-403a51361e94243b66985254","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
+  "job_id": "job-research-bd7341cf457984b7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b1966b5c09cb8552b368d98f",
+    "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

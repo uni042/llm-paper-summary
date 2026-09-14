@@ -2,17 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-303dac5e3c1a671043d00ee0",
-  "job_id": "job-research-77f3e91a5c224daf",
-  "data": {
-    "hardware": "8×NVIDIA A100 40GB、512GB DDR4、dual AMD EPYC 7763。特記のない主要グラフは単一GPU結果。",
-    "software": "vLLMを約3,200行のPythonと800行のCUDAで拡張。CPU非同期LSTM予測器、共有メモリ連携、固定ページ式アダプタ管理、scatter-gather CUDAカーネル、予測連携バッチスケジューラを実装。",
-    "methodology": "Llama2-7B、Llama2-13B、Mistral-7Bに、Q/V投影へrank 8/16/32/64の合成LoRAアダプタを適用する。Azure Functionsの公開トレースで各関数IDを一つのアダプタへ対応付け、到着間隔を縮尺して10〜500 req/sを作る。入出力長はShareGPTから標本化する。vLLM、S-LoRA、dLoRAと比較し、スループット、TTFT、1出力トークン当たり時間（Time Per Output Token; TPOT）、GPUメモリ利用率、断片化率を測る。アダプタ数を最大1000まで増やす拡張性、24時間の断片化推移、rank別/混合rankメモリ利用率、要求率感度、構成除去、予測窓感度、追加管理オーバーヘッドを評価する。",
-    "scope": "実機サーバーは8×A100だが主要値は単一GPU。ワークロード到着は実Azure Functionsトレース由来でも、LLMアダプタへの対応は関数IDを人工的に割り当て、LoRAも合成である。実アダプタ品質、複数GPU間のアダプタ配置・転送、本番サーバーレスの課金・スケールアウト、障害条件は主評価外。論文は反復回数や信頼区間を主要結果で明示していない。",
-    "workloads": ["Azure Functionsトレース由来のアダプタ到着系列","ShareGPT由来の入出力長","10〜500 requests/s","最大1000 LoRAアダプタ","rank 8/16/32/64および混合rank"],
-    "baselines": ["vLLM","S-LoRA","dLoRA","従来の可変長ブロック割当"],
-    "metrics": ["スループット","TTFT","TPOT","コールドスタート遅延","予測精度","GPUメモリ利用率","メモリ断片化率","管理オーバーヘッド"],
-    "reproducibility": "ハードウェア、モデル、rank、到着トレース、入出力長分布、主要ハイパーパラメータ（2層LSTM、64隠れ、2MBページ、100ms予測周期、10,000観測再生バッファ）と実装規模は記載される。一方、著者公式コード公開URL、追い出し重みα/β/γ、プリフェッチ閾値θの具体値、反復回数・乱数種・信頼区間などは本文から確認できず、完全再現には不足がある。"
-  },
-  "reservation": {"claim_id":"claim-403a51361e94243b66985254","worker_id":"scheduled-chat-discovery-overflow","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-b1966b5c09cb8552b368d98f",
+  "job_id": "job-research-bd7341cf457984b7",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b1966b5c09cb8552b368d98f",
+    "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
