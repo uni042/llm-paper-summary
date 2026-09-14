@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-514ad57b9d8cf039e2f24bee",
   "job_id": "job-research-fbca0f6d99c20b64",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-514ad57b9d8cf039e2f24bee",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations":"代表研究を教材的に選ぶチュートリアル型サーベイであり、検索戦略・採否基準を固定した系統的レビューではない。Table Iの性能値は異なるモデル、GPU、ネットワーク、メッセージサイズ、基準系から引用されており、倍率を横断的な順位として比較できない。ネットワーク内集約や全ての計算通信重畳研究は範囲外で、通信圧縮、異種ハードウェア、障害耐性も主に将来課題として論じる。さらに2026年8月時点の急速に変化する分野を扱うため、新しい通信ライブラリや推論アーキテクチャにより分類内の代表例は更新が必要になる。",
+    "differences":"従来の分散学習通信サーベイがデータ並列・テンソル並列等の並列方式や通信ライブラリ・ネットワーク階層を軸に整理するのに対し、本論文は一つの集団通信が計画され、実機で実行・適応され、計算グラフへ統合される流れを軸にする。これによりSCCL/TE-CCLの通信スケジュール合成、MSCCL++/AutoCCL/MCCSの実行層、CoCoNet/Centauri/MegaScale-Infer/NanoFlowの計算通信協調を連続した設計問題として比較する。また推論を明示的に扱い、MoEのAlltoAll、微小バッチ、入力処理・デコード分離のKV転送が利用者向け遅延のクリティカルパスへ乗る点を強調する。",
+    "implementation_status":"サーベイ論文のため新規実装・公式コードはない。17件の参考文献を中心に代表システムを三層分類し、性能・意思決定時点・統合範囲・対象ワークロードを比較表へ整理する。",
+    "research_positioning":"分散LLMのネットワーキングとシステム実行を横断する参照サーベイである。個々の集団通信原語のアルゴリズム研究と、学習・推論ランタイムの最終性能研究の間を接続し、通信最適化を『論理計画→物理実行・適応→計算との協調』として読むための分類軸を提供する。特に推論システム研究では、通信を単なる下位ライブラリ問題ではなくSLO、MoEルーティング、微小バッチ、分離配信と相互依存する設計要素として位置付ける。",
+    "relation_to_existing_repository":"推論リポジトリではDistServe、MegaScale-Infer、NanoFlow、MoE expert-parallel通信、分離サービング系統を共通の通信観点で接続する。カーネル・ランタイム系統に対してはMSCCL++やCoCoNetの実行抽象、スケジューリング系統に対しては動的通信適応、MoE系統に対してはAlltoAllと専門家配置、KVオフロード・分離系統に対してはKV転送をクリティカルパスとして評価する横断的な索引になる。",
+    "audit_required":false
+  },
+  "reservation":{"claim_id":"claim-514ad57b9d8cf039e2f24bee","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
