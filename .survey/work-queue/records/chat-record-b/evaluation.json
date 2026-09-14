@@ -2,38 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-975831e59330779916870e92",
-  "job_id": "job-research-73651b83b5a764d9",
-  "data": {
-    "hardware": "精度評価はNVIDIA GH200 120GBを1基、72-core ARM Neoverse-V2、212.70 GiBシステムメモリ上で実施する。システム効率評価も同じハードウェアを用いる。",
-    "software": "精度環境はRocky Linux 9.7、Python 3.11.8、CUDA 12.8、PyTorch 2.9.1+cu128、Hugging Face Transformers 5.10.2、Triton 3.5.1。システム効率評価ではSVD性能上の理由からCUDA 13.0、PyTorch 2.12.0+cu130を使用する。評価にはlm-eval-harnessを使う。",
-    "model": "Qwen3-8BとLlama-3.1-8B-Instruct。主設定では両モデルのKVヘッド次元d=128、ページ長P=32、キーランク16、値ランク14を用いる。",
-    "datasets": [
-      "RULER: 16Kおよび32K、13タスク、各500例",
-      "LongBench: 英語14タスクとコード2タスクを主表で評価し、付録で中国語5タスクも提示",
-      "システム効率: Qwen3のRULER NIAH-S1から抽出した入力"
-    ],
-    "baselines": [
-      "Full KV",
-      "Global SVD: 圧縮領域全体で共有する系列単位の低ランク基底",
-      "Palu G-LRD: 較正ありの重み側低ランク圧縮",
-      "H2O: heavy-hitterと直近トークンを残す追い出し方式",
-      "付録でOjaKV-PFを再現評価",
-      "量子化比較ではFull KV + INT3/INT4"
-    ],
-    "correctness": "全評価はgreedy decodingで単一実行し、固定乱数seed 42を使う。PuzzleKVはトークンを追い出さず全トークンを低ランク因子として保持するため、圧縮誤差はあるが履歴位置そのものは保持される。品質はRULER各タスクとLongBench各タスクの標準指標でFull KV比を比較する。",
-    "settings": [
-      "主評価のKV容量予算は約60%。PuzzleKVはP=32、(rK,rV)=(16,14)で因子化ページ比0.586。密な注意シンクと直近領域を含む実使用量は入力長に依存する。",
-      "Llama-3.1-8B-Instructは既定チャットテンプレートを使用。Qwen3は付録設定でthinkingを無効化。",
-      "Paluは公式G-LRD、4ヘッド群、Fisher-uniformランク配分、量子化なし。H2OはKV予算0.6をheavy-hitter 0.3とrecent 0.3へ等分。",
-      "システム効率はbatch size 1、PyTorch SDPA FlashAttentionバックエンドを明示的に使用し、StaticCache、圧縮なしの同一ページ実装Raw KV、PuzzleKVを比較。",
-      "INT4併用では低ランク因子へ対称4bit量子化を適用し、Full KV側の直接INT3/INT4と容量・精度を比較。"
-    ],
-    "methodology": "まず約60%という同一KV容量予算の下でRULER 16K/32KとLongBenchを比較し、ページ局所基底と系列全体の共有基底、較正型低ランク方式、追い出し方式の品質差を測る。次にキー・値ランク配分とページ長16/32/64を振って品質と分解費の関係を評価する。量子化互換性では低ランク因子をINT4化し、18.7%まで容量を下げた場合のRULER品質を測る。システム評価では同じページ管理を使うRaw KVを置くことで、Paged KV実装自体ではなくPuzzleKV固有の分解・混合注意コストを分離し、TTFT、TPOT、プリフィル後および生成中の論理KV占有量を測定する。",
-    "scope": "実GPUで品質と実行時性能を評価しているが、現実装はバッチ1の独立プロトタイプであり、vLLMのような連続バッチ型サーバへ統合したエンドツーエンドの要求スループットや多数同時要求は未評価である。また主モデルは8B級2種、文脈長は主に16K/32Kであり、128K級やより大規模モデルへ品質・分解費をそのまま外挿できない。"
-  },
+  "attempt_id": "attempt-90c789dd26077c8f86b93ccb",
+  "job_id": "job-research-b045bf747f93dbbe",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-975831e59330779916870e92",
+    "claim_id": "claim-90c789dd26077c8f86b93ccb",
     "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
