@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f7399b3e773e1558",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.21548",
+      "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
+      "source_url": "https://arxiv.org/abs/2602.21548",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21548-dualpath-storage-bandwidth-agentic-kv-loading.md",
+      "priority": 91,
+      "reason": "分離型LLM servingで外部ストレージからKVをprefill engineだけへ読む従来経路がstorage NICを飽和させる一方、decode側NICが遊休する非対称性を対象に、storage→decode→prefillという第二経路を追加し、compute network上のRDMAでKVをprefillへ転送するdual-path loadingを提案する。全体schedulerでprefill/decode間の負荷を動的に均衡し、production agentic workloads・3モデルでoffline throughput最大1.87倍、SLOを守るonline throughput平均1.96倍を報告する。外部KVストレージ、RDMA、ネットワーク/I-Oスケジューリングを直接扱うため重点テーマとの適合度が非常に高い。"
+    },
+    {
+      "canonical_id": "arXiv:2603.08739",
+      "title": "Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service",
+      "source_url": "https://arxiv.org/abs/2603.08739",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2603.08739-kareto-adaptive-tiered-kv-storage-configuration.md",
+      "priority": 88,
+      "reason": "GPU HBMから安価な外部階層へKV cacheをoffloadする際の容量・throughput・latency・costを、固定構成ではなく多目的最適化のPareto frontierとして探索するKaretoを提案する。高忠実度end-to-end simulatorとdiminishing-return-guided pruningで大きな構成空間を削減し、KV block access patternとtier別evictionを用いるfine-grained adaptive tunerを組み合わせる。実workload traceで1024GB DRAM固定構成に対し、目的に応じthroughput最大9.3%向上、latency最大58.3%削減、cost最大20.2%削減を報告する。階層メモリ資源配分の自動最適化として既存offload論文群との比較価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-tiered-storage-5",
+    "axis": "外部KVストレージ帯域・階層構成最適化・prefill/decode経路",
+    "query_summary": "CacheFlowから外部KV storageの隣接研究へ展開し、DualPath（arXiv:2602.21548）とKareto（arXiv:2603.08739）を軽量評価した。最新identityの同一lineageでは2602.18755→2602.21626間、2603.07917→2603.10342間に各IDが存在しないことを確認し、未収録候補として送信した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は同じ外部KV復元系のbackward referenceから、conversation-specific KV圧縮・recompute/load pipeline、またはSSD/NVMe直結I/O schedulerへ軸をずらす。",
+    "empty_round_reason": null
+  }
+}
