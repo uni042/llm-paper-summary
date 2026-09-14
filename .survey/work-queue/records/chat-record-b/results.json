@@ -1,23 +1,83 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-9222c0d0b79b159c16264bb3",
+  "job_id": "job-research-5b0daef0009e72b2",
   "slot": "results",
-  "attempt_id": "attempt-7381d916bdd79b3e46aeb209",
-  "job_id": "job-research-b85568c75bac4939",
   "data": {
-    "overview": "Irminsulの価値は、完全一致接頭辞がほぼ使えない早期位置ずれに集中する。エージェントメタデータが入力先頭近くで変わる条件では、DeepSeek-V2-Liteで接頭辞命中1.9%に対して追加77.2%、JoyAI-48Bで1.5%に対して追加82.7%のトークンを回収した。一方、差分が入力深部にある条件では既存接頭辞だけで74〜100%近くを覆い、追加回収はほぼ不要になる。MLAではキャッシュ完全命中のプリフィルエネルギーが不命中比で63%減少し、品質面では差分回転により単純再利用より出力分布が完全再計算へ近づく。",
+    "overview": "BlockServeはFast-dLLMの単一要求高速化を共通に組み込んだうえで、LLaDAでは5ベンチマークにわたり2.6〜7.7倍、Dreamでは1.9〜10.6倍のthroughput向上を示した。LLaDA HumanEval・生成上限256ではFast-dLLMの最良231.5 TPSに対しFixedが552.6 TPS、token-budget版が597.8 TPSで2.6倍となる。TruthfulQAのように実出力が生成上限より大幅に短い負荷ではstatic batchの有効計算比がbatch16で0.07まで落ちる一方、Fixedはほぼ1.0を維持し、Budgetは条件によって2を超える。1024生成上限での最大safe batchは両モデル・複数benchmarkで2〜4倍へ拡大した。",
     "key_results": [
-      {"metric": "エージェントメタデータ条件の追加回収率", "value": "77.2%", "baseline": "SGLang完全一致接頭辞 1.9%", "condition": "DeepSeek-V2-Lite、先頭近くのメタデータ差で共有本体が位置移動", "interpretation": "完全一致方式が最も弱い早期位置ずれで、内容アドレス型再利用が大部分の共有本体を取り戻す。合計キャッシュ供給率は79.1%。"},
-      {"metric": "別MLAモデルでの追加回収率", "value": "82.7%", "baseline": "完全一致接頭辞 1.5%", "condition": "JoyAI-48B、エージェントメタデータ条件", "interpretation": "3倍規模のモデルでも高70〜低80%帯の回収となり、利益がモデル規模より入力の位置ずれ構造に支配されることを示す。"},
-      {"metric": "MLAのプリフィルエネルギー削減", "value": "63%", "baseline": "不命中47.1 Jに対し完全命中17.2 J", "condition": "DeepSeek-V2-LiteとJoyAI-FlashのMLAセル平均、系列長4096中心", "interpretation": "位置非依存再利用で完全命中相当の処理を増やせれば、再計算回避は計算時間だけでなくGPUエネルギー削減へ直接つながる。"},
-      {"metric": "位置非依存成分の識別性", "value": "MLA cKV AUC約0.77", "baseline": "MLA kr 0.432、GQA K 0.453、MHA K 0.402", "condition": "500内容ブロックを5絶対位置へ配置した位置不変性試験", "interpretation": "MLAの大部分cKVには内容信号が位置雑音より強く残る一方、RoPE部分は補正なし再利用が有害であることを定量化する。"},
-      {"metric": "差分回転の数値誤差", "value": "相対L2 4.7×10^-3", "baseline": "実運用FP8 KV量子化の代表的摂動10^-2〜3×10^-2", "condition": "bf16差分回転", "interpretation": "位置補正自体の丸め誤差は、一般に受容されるKV量子化の誤差帯より小さい。"},
-      {"metric": "JoyAI-48B NIAHの出力整合性", "value": "KL 0.484、argmax一致0.823、最初の分岐5.2トークン", "baseline": "単純再利用 KL 0.624、一致0.744、分岐2.7。完全再計算のneedle recall 0.820", "condition": "長文NIAH、位置補正PIC", "interpretation": "単純な位置未補正KV再利用より完全再計算へ近い生成軌跡を保ち、needle recallは完全再計算と同値だった。"},
-      {"metric": "内容定義＋補助探索の再利用発見量", "value": "固定ブロック比3.8〜4.8倍", "baseline": "位置整列した固定ブロックハッシュ", "condition": "ToolathlonとHermesの非自明な再利用条件", "interpretation": "エージェント入力の挿入・並替えでは固定境界がずれやすく、内容に応じた境界または補助窓探索が必要である。"}
+      {
+        "metric": "throughput speedup",
+        "value": "LLaDA 2.6〜7.7倍、Dream 1.9〜10.6倍",
+        "baseline": "best-performing Fast-dLLM Static",
+        "condition": "H200、5 benchmarks、複数generation limit",
+        "interpretation": "単一要求decoderを同じ条件で使ってもblock-grained continuous batchingが大幅な上積みを与える。"
+      },
+      {
+        "metric": "HumanEval throughput",
+        "value": "231.5 → 552.6 → 597.8 TPS",
+        "baseline": "Fast-dLLM → BlockServe Fixed → BlockServe Budget",
+        "condition": "LLaDA、gen limit 256、Fast-dLLM/Fixedはbest BSを含む",
+        "interpretation": "eviction/refillに加えtoken budgetでさらに実効並列度を増やせる。"
+      },
+      {
+        "metric": "最大speedup",
+        "value": "10.6倍",
+        "baseline": "Fast-dLLM",
+        "condition": "Dream、TruthfulQA、generation length 1024",
+        "interpretation": "実出力が短くばらつくためstatic batchのstraggler浪費が最大化する条件で効果が大きい。"
+      },
+      {
+        "metric": "effective compute ratio",
+        "value": "Fast-dLLM 0.07、BlockServe Fixed 約1.0",
+        "baseline": "Fast-dLLM",
+        "condition": "Dream TruthfulQA gen512、BS16",
+        "interpretation": "完了要求をblock境界で抜くことで固定枠の大半がidleになる状況をほぼ解消する。"
+      },
+      {
+        "metric": "effective compute ratio",
+        "value": "約2.4",
+        "baseline": "基準batch size=4を1.0とした比率",
+        "condition": "Dream HumanEval、BlockServe Budget",
+        "interpretation": "token budgetによるoversubscriptionで固定batch sizeを超える実効並列度を安全に使う。"
+      },
+      {
+        "metric": "最大safe batch capacity",
+        "value": "2.0〜4.0倍",
+        "baseline": "Fast-dLLM fixed limit",
+        "condition": "generation limit 1024、Dream/LLaDA各benchmark",
+        "interpretation": "block完了とbounding-box縮小をメモリ容量へ直ちに反映できる。"
+      },
+      {
+        "metric": "LLaDA MBPP safe batch",
+        "value": "16 → 64、4.0倍",
+        "baseline": "Fast-dLLM",
+        "condition": "generation limit 1024",
+        "interpretation": "同一H200で固定予約より大幅に多い同時要求を許容。"
+      },
+      {
+        "metric": "prompt-length sorting",
+        "value": "throughput +4.7〜9.2%",
+        "baseline": "unsorted pending queue",
+        "condition": "BS16、Dream/LLaDA、GSM8K/HumanEval/MATH",
+        "interpretation": "近いrow幅をまとめてdense bounding boxのpaddingを減らす効果を確認。"
+      },
+      {
+        "metric": "block length trade-off",
+        "value": "L=64でDream GSM8K精度がL=32比およそ9ポイント低下",
+        "baseline": "L=32",
+        "condition": "GSM8K gen256",
+        "interpretation": "粗すぎるblockはparallel decoding近似を増幅するためL=32を既定に選ぶ。"
+      }
     ],
-    "negative_results": "差分が入力の深い位置にあるsysvar、compact、rerank、tool_variantsでは、既存完全一致接頭辞が73.7〜99.96%をすでに覆い、Irminsul固有の追加回収は26.3%から0.04%まで小さくなる。境界マーカーを省くと内容ハッシュ照合率が約77%から約1%へ崩れ、入力組立てとの協調が重要である。ハイブリッドMamba2、GDN、KDAでは再帰状態をトークン単位で再利用できず、キャッシュ部分命中・完全命中のエネルギーが不命中とほぼ同じで削減率は約0%だった。さらにモデルのRoPE周波数を誤って回転するとTransMLA-4Bでargmax一致率0.125、KL 3.51まで崩れ、単純再利用より悪化する。参照試作は観測モードなので、融合カーネルを含む実エンドツーエンドTTFT改善値は未報告である。",
-    "interpretation": "Irminsulはすべての入力を高速化する万能キャッシュではなく、既存接頭辞キャッシュが早期の差分で失う位置移動済み共有内容を補完する。利益はモデル規模より、最初の差分がどこに現れ、その後にどれだけ既知内容が残るかで予測できる。MLAはKVの89%を位置非依存のまま共有できるため、GQA向け位置非依存方式より補正幅が小さく、内容アドレス型KVを実時間経路へ置きやすい。ただし内容定義チャンクの安定化、正しいRoPE設定、注意シンクの扱いが品質を成立させる必須条件である。",
-    "quality_impact": "完全再計算を教師軌跡として比較すると、位置補正PICは多くのQA、要約、長文検索セルで単純再利用よりKLずれを小さくし、argmax一致率を同等以上にする。DeepSeek-V2-LiteのGovReportだけはKLが0.297対単純再利用0.276とわずかに劣るが差は約0.02である。JoyAI-48BのNIAHではneedle recallが完全再計算と同じ0.820だった。品質保証はMLA固有の64次元krへモデル固有RoPE差分回転を正しく適用することに依存し、設定誤りは無音で大きな品質崩壊を起こしうる。"
+    "negative_results": "batch size 1〜2ではFast-dLLMとのlatency差は小さく、stragglerを含む確率が低い条件ではscheduler利得が限定的である。block length 16は細粒度化のoverheadで32よりthroughputが低いことが多く、64は一部でthroughputを上げても生成精度を悪化させる。BlockServeはonline arrivalを評価しておらず、offline batchのthroughput最適化がそのままonline SLOや公平性改善になるとは示していない。",
+    "interpretation": "dLLMのbatch性能は単一requestのdenoising速度だけでなく、異なる収束状態を同じdense executionへ残せるかで決まる。BlockServeはblock境界を安全なpreemption点として使い、完了行を除去した瞬間に計算枠とdense tensor幅を回収するため、長さばらつきが大きくbatchが大きいほどstatic方式との差が広がる。",
+    "quality_impact": "全体としてbaselineと概ね同等のtask accuracyを維持するが、block granularity自体に品質との交換条件があり、L=64では一部taskの精度低下が顕著である。"
   },
-  "reservation": {"claim_id": "claim-7381d916bdd79b3e46aeb209", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9222c0d0b79b159c16264bb3",
+    "worker_id": "scheduled-chat-llm-survey-20260914T2230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

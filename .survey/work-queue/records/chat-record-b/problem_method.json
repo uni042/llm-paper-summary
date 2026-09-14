@@ -1,20 +1,38 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-9222c0d0b79b159c16264bb3",
+  "job_id": "job-research-5b0daef0009e72b2",
   "slot": "problem_method",
-  "attempt_id": "attempt-7381d916bdd79b3e46aeb209",
-  "job_id": "job-research-b85568c75bac4939",
   "data": {
-    "problem": "エージェント型LLMでは、長いシステム指示、ツール定義、検索文書、会話履歴がターンごとに組み替えられる。同じバイト列の文書が再登場しても前に挿入されたメタデータや検索順位が変われば絶対位置がずれ、SGLangなどの完全一致接頭辞キャッシュは最初の差分以降をすべて再計算する。実トレース分析では、同一内容が異なる位置へ再出現する割合がセッション内P95で48%に達する。既存の位置非依存キャッシュはGQAのK全体に埋め込まれたRoPEを補正するため、再利用のたびに高次元Kへ補正計算が必要になる。MLAはKVの89%に相当するcKVが位置非依存で、位置を持つkrが11%だけという異なる構造なので、この分離を直接利用すれば補正費を小さくできる。",
-    "novelty": "IrminsulはMLA固有のKV分解を位置非依存キャッシュへ利用し、内容が同じチャンクを絶対位置とは無関係に一度だけ保存する。512次元cKVはそのまま再利用し、64次元krだけを保存元位置から利用先位置への差分δで回転させるため、GQAで1024次元K全体を補正する例に対して補正幅を16分の1にできる。さらに、内容定義チャンクの境界ずれを防ぐ固定境界マーカー、系列先頭の注意シンクだけを通常プリフィルする先頭チャンク切出し、SGLangの既存接頭辞経路との併用を組み合わせ、内容アドレス型キャッシュをMLAサービングの通常経路へ組み込む。",
-    "method_overview": "受信した入力では、まずSGLangの既存RadixCacheで完全一致接頭辞を探し、その命中部分は従来どおり再利用する。残りの尾部はGear-hashのローリング状態を使う内容定義チャンク化へ渡す。チャンク長は32〜512トークン、期待値は約128トークンで、各チャンクにxxHash64内容指紋を付ける。運用側が入力組立てを制御できる場合は、共有領域の前後に64トークンの固定境界マーカーを置き、前方文脈が異なってもローリング状態を既知状態へ揃えて同じ内容が同じチャンク境界を生成するようにする。各チャンクは内容ハッシュからレジストリを検索し、未登録なら通常プリフィルしてcKV、基準kr、保存位置を登録する。登録済みならcKVは位置に依存しないためそのまま利用する一方、krは現在位置pと保存位置p_srcの差δ=p-p_srcを求め、RoPE回転R(δ)を掛けて新位置のkrへ変換する。MLAのKV行576次元のうち512次元cKVはセッション間で共有し、64次元krだけを要求ごとに実体化する。系列の絶対位置0付近には注意シンクが集中するため、位置32未満の最初の領域は内容キャッシュせず通常プリフィルし、後続チャンクにだけ位置非依存再利用を適用する。実運用ではkr回転をFlashMLAのHBM読込みからSRAM展開する経路へ融合し、余分なHBM帯域を発生させない設計を想定する。入力組立てへ境界マーカーを入れられない場合は、内容定義チャンクが不命中したとき固定128トークン窓へ細分して再照合する検出・回収経路を補助的に使う。",
+    "problem": "拡散型大規模言語モデルは固定長ブロックを複数回のdenoisingで生成するため、自己回帰型のように各トークン生成後に要求を入れ替えることができない。同じ生成上限を持つ要求でも実際のEOS到達やブロック数は異なり、固定バッチでは早く完了した要求が最遅要求の終了までバッチ枠と密テンソル領域を占有する。この収束異質性により計算空洞と長いtail latencyが生じ、バッチを大きくするほどstragglerを含む確率が高まる。さらにFast-dLLMのDual Cacheや並列デコードは同一要求または同一進行状態を前提とし、異なるブロック位置の要求を一つの密バッチへ混ぜると位置ID、attention mask、KVの物理位置がずれる。固定バッチ上限は最大生成長を前提にメモリを予約するため、短い実出力が多い負荷では容量も浪費する。",
+    "novelty": "BlockServeは拡散型LLMの一ブロック周期をスケジューリング量子として定義し、各周期後に完了要求を即座にevictして新規要求で補充するblock-grained continuous batchingを導入する。異なるblock indexを持つ要求を同じ密テンソルで処理するため、左paddingと明示位置ID、gather/scatterで論理位置と物理アドレスを分離する混在状態実行を設計する。さらに固定batch sizeではなく、現在のprompt長とblock進捗が作るdense bounding boxのトークン数を予算として入場制御するため、完了要求の除去で境界箱が縮むと同じGPUメモリでさらに要求を追加できる。",
+    "method_overview": "待機要求はprompt長で並べられ、active setへ入る各要求はprompt長、目標生成長、現在のblock indexを持つ。各反復の最初にcompute-aware admission controllerが、active setへ候補を追加したときのコストを『active要求数×各要求のprompt長+現在処理対象blockまでの長さの最大値』として計算し、事前プロファイルしたtoken budget以下なら要求を追加する。既存の最大row幅を広げずに入る近いprompt長の要求を優先するsand-fillingによりpaddingを抑える。次に全active要求を一つのblock-cycleだけ進める。要求ごとにblock indexが異なっていても、left paddingとattention maskの累積和から論理position IDを再構築し、RoPE上の相対位置を保つ。各要求の現在block領域だけをgatherでcompact tensorへ集め、denoisingを行い、結果をscatterで元の物理offsetへ戻す。Dual Cacheのfrozen prefixは論理位置と物理アドレスを分離して保持し、batch再構成後も破壊しない。blockのmasked token数をSステップへ配るtransfer quotaはblockごとに独立して計算できるため、異なるblock indexの要求を同じ実行ループで進められる。一周期後、block上限到達またはEOSを満たした要求を即座にactive setから除去する。大きなrow幅を規定していた要求が抜ければbounding box自体が縮み、token budgetに空きが生まれるため次反復で複数要求を追加できる。これをpendingとactiveが空になるまで繰り返す。",
     "components": [
-      {"name": "内容定義チャンクと内容ハッシュ索引", "description": "位置ではなく内容で同一領域を見つけるため、尾部をGear-hashのローリング状態で可変長チャンクへ分割し、各チャンクをxxHash64で索引する。チャンクは最小32、最大512、期待約128トークンに制約する。単純な固定ブロックは、前方に1トークン挿入されただけでも以後のブロック境界がすべてずれて同一文書を見失う。内容定義方式は内容に応じて境界を選ぶためずれへ強いが、前方文脈が異なるとローリング状態自体が変わり境界漂移が残る。そこで運用側が共有領域を知る場合は64トークンの固定境界マーカーで状態をリセットし、同一領域が異なる絶対位置でも決定論的に同じチャンクへ分割されるようにする。実測ではこのマーカーを外すと内容照合率が約77%から約1%へ崩れるため、実装上の主要条件である。"},
-      {"name": "MLA固有のcKV共有とkr差分回転", "description": "MLAは1トークンのKVを、位置に依存しない512次元の潜在cKVと、RoPE位置情報を持つ64次元krへ分離して保存する。内容ハッシュが命中した場合、cKVは保存時の絶対位置に関係なくそのまま利用し、krだけに保存元と現在位置の差δに対応する回転行列を掛ける。回転の合成則により、保存時回転R(p_src)へR(δ)を掛けると目標位置R(p)が得られる。GQAではK全体を補正する必要があるのに対し、IrminsulはKV行の11%だけを補正すればよい。さらにcKV用共有プールと要求ごとのkrプールを分け、位置がずれた同一内容について89%のKVペイロードをHBM上でも重複保存しない。モデル固有のRoPE周波数を誤ると出力が大きく崩れるため、回転設定は各モデルの実際の回転クラスから取得する。"},
-      {"name": "系列先頭の注意シンク切出し", "description": "位置非依存KVが代数的に補正できても、系列先頭のトークンへ注意が集中する注意シンクの影響で、チャンク境界付近の再利用品質が崩れる可能性がある。論文はMLAとGQAについて、チャンク先頭32トークンへの注意集中が絶対位置0に局在し、位置32へ移ると後方位置の基準値近くまで落ちることを測定した。このためすべてのチャンク境界を再計算するのではなく、絶対位置32未満だけを通常プリフィルする先頭チャンク切出しを採用する。後続チャンクでは境界再計算をせず内容ハッシュ再利用を許す。PICで位置移動した本体から絶対位置0〜31への注意質量も完全再計算との差が平均絶対偏差0.003以内であり、単純再利用より安定していることを確認している。"},
-      {"name": "既存接頭辞キャッシュとの二段階統合", "description": "Irminsulは完全一致接頭辞キャッシュを置き換えず、まず既存RadixCacheで最長接頭辞を再利用し、その後ろの位置ずれ領域だけを内容アドレス型照合へ渡す。したがって、変更が入力の深い位置にあり既存接頭辞だけで74〜100%を覆える処理では追加機構の出番が小さく、先頭近くのメタデータ差で共有本体が丸ごとずれる処理では内容アドレス型再利用が大きな残差を埋める。入力組立てを制御できない場合は不命中チャンクを128トークン窓へ分割する回収経路も用意する。これにより一つのキャッシュ方式を常に優先するのではなく、完全一致と位置非依存再利用を相補的に使い、変化位置から期待利益を予測できる構成にしている。"}
+      {
+        "name": "ブロック単位連続バッチング",
+        "description": "各要求を生成完了まで固定バッチへ閉じ込めず、S回のdenoisingで一つのblockを処理するblock-cycleをスケジューリング量子にする。周期終了ごとに各要求のblock indexを更新し、予定block数へ達した要求またはEOSを生成した要求を即時にactive setから除去する。これにより早く収束した要求は最遅stragglerを待たずGPU枠を解放し、次の要求を補充できる。自己回帰型のtoken-level preemptionより粗いが、dLLMの実行構造と整合する最小の安全なpreemption境界として機能する。"
+      },
+      {
+        "name": "混在状態メモリ管理",
+        "description": "異なるblock indexの要求を同一batchへ混ぜると各行の有効長と現在denoise対象領域が異なる。BlockServeは各要求をleft-padしてprompt末尾とgeneration領域の論理位置を合わせ、attention maskの累積indexからposition IDを生成する。さらにactive block領域をgatherしてcompact tensorへ集約し、計算結果だけをscatterで元位置へ戻す。これによりbatchの物理row配置が入替わってもRoPE、mask、frozen prefix KVの論理整合性を維持し、Fast-dLLM由来のDual Cacheと並列デコードをheterogeneous batchへ拡張できる。"
+      },
+      {
+        "name": "計算量対応入場制御",
+        "description": "固定batch sizeの代わりに、その反復で実際に物理化するdense tensorのbounding boxをtoken budgetとして扱う。各要求のrow幅はprompt長に現在blockまでの生成領域を加えた値であり、batch costはactive数と最大row幅の積で近似する。最大rowを作っていた長い要求が完了すればpadding領域も同時に消え、同じメモリ予算で複数の新要求を入れられる。pending queueをprompt長順に保ち、既存bounding box内に収まりやすい候補を優先することでpaddingをさらに減らす。H200では固定方式より実効batch容量を2〜4倍へ拡張した。"
+      },
+      {
+        "name": "既存dLLM高速化との直交統合",
+        "description": "BlockServe自体はdenoisingアルゴリズムやモデル重みを変更せず、Fast-dLLMのDual Cacheとconfidence-aware parallel decodingを比較側と提案側の双方で有効化する。したがって報告される差分は主として要求のeviction/refill、mixed-state layout、token-budget admissionに由来する。gather/scatterは専用GPU kernelを要求する新しい生成アルゴリズムではなく、既存のdense tensor計算へ異なる要求状態を写像する実行基盤として使う。この分離により、将来より高速な単一要求dLLM decoderが登場してもBlockServeのschedulerへdrop-inで組み合わせられる。"
+      }
     ],
-    "system_design": "SGLangのRadixCacheを基盤として、既存の接頭辞探索、内容定義チャンク器、内容ハッシュレジストリ、共有cKVプール、要求別krプールを追加する。参照試作は約950行で観測モードを持ち、実KVを差し替えずに命中候補と回収率を記録できる。実運用版ではkrの差分回転をFlashMLAの読込みカーネルへ融合する想定で、共有cKVをHBMから読みながら64次元krだけをSRAM上で回転させる。MLA以外のハイブリッドSSM層では状態がトークン単位に分離されないため、この内容キャッシュ機構を直接適用できない。"
+    "system_design": "pending queue、active set、block-grained scheduler、compute-aware admission controller、mixed-state memory managerから成る。schedulerが一block-cycle単位で進行と完了を管理し、admission controllerがtoken budgetで補充、memory managerが位置整合とKV更新を担う。",
+    "why_it_works": "dLLMの固定batchで失われる性能は、遅い要求そのものの計算だけでなく、完了済み行に対しても同じdense batch形状を維持することから生じる。block境界で完了行を除去すれば実効並列度を保て、さらに最大rowが消えるとpaddingも減る。混在状態を論理位置と物理offsetの分離で扱うため、状態が異なる要求を一つのGPU効率の良いdense実行へ残せる。",
+    "failure_modes": "評価はoffline batch inferenceに限定され、動的到着を伴うonline servingでの待ち時間、公平性、入場制御は未評価である。blockを小さくしすぎるとscheduler/gather-scatter overheadが増え、逆に64 tokenなど大きくするとparallel decoding近似の品質悪化が増える。prompt長sortingは将来の到着順公平性と衝突し得る。token budgetは対象GPU上のoffline profilingに依存する。"
   },
-  "reservation": {"claim_id": "claim-7381d916bdd79b3e46aeb209", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9222c0d0b79b159c16264bb3",
+    "worker_id": "scheduled-chat-llm-survey-20260914T2230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
