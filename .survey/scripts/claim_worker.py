@@ -365,7 +365,7 @@ def _worker_has_active_claim(
 
 
 def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
-    return {
+    assignment = {
         "job_id": claim["job_id"], "claim_id": claim["claim_id"],
         "worker_id": claim["worker_id"], "worker_kind": claim["worker_kind"],
         "attempt_id": claim["attempt_id"], "claimed_at": claim.get("claimed_at"),
@@ -373,6 +373,16 @@ def _assignment(job: dict[str, Any], claim: dict[str, Any]) -> dict[str, Any]:
         "depends_on_job_ids": list(claim.get("depends_on_job_ids") or [claim["job_id"]]),
         "job": dict(job),
     }
+    for key in (
+        "record_bank",
+        "record_bank_fallback",
+        "record_bank_recovery",
+        "record_bank_recovery_attempt_ids",
+        "record_bank_recovery_submission",
+    ):
+        if key in claim:
+            assignment[key] = claim[key]
+    return assignment
 
 
 def _dependencies(job_id: str, job: dict[str, Any]) -> list[str] | None:
