@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-022b9f637cf7cc5a822fdef4","job_id":"job-research-f023091bfca94e41","data":{"canonical_id":"arXiv:2603.24595","arxiv_id":"2603.24595","doi":"10.48550/arXiv.2603.24595","openreview_id":null,"arxiv_categories":{"primary":"cs.PL","cross_list":["cs.AI"]},"title":"Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels","summary":"LLM推論のCUDAカーネルは、モデル依存テンソル形状、可変長入力、巨大なスレッド並列、32ビット添字計算が組み合わさるため、特定モデル・長文条件でのみ現れる整数オーバーフローや範囲外アクセスを含み得る。Model2Kernelは、モデルがどのカーネルをどの引数関係で呼ぶかをGPUなしで観測するHFProbeと、CUDA向け記号実行器cuKLEEを結合する。HFProbeはPythonの呼出しグラフ、偽GPUバックエンド、モデル設定変異から、モデル構造で固定される値とユーザー入力で変化する値を推定する。cuKLEEは動的テンソルを離散メモリ領域として抽象化し、テンソルAPI、CUDAスレッド識別子、起動構成を記号変数化して、範囲外アクセス、整数オーバーフロー、データ競合、NULL参照の成立可能性をZ3で検査する。120モデル・173カーネルで未知353件を発見し、誤検出は9件だった。","list_summary":"モデル側からCUDA呼出し条件を抽出するHFProbeと、動的テンソル・全CUDAスレッドを記号化するcuKLEEを組み合わせ、LLM推論カーネルの未知メモリバグ353件を9誤検出で検出した。","authors":["Mengting He","Shihao Xia","Haomin Jia","Wenfei Wu","Linhai Song"],"authors_affiliations":"The Pennsylvania State University; State Key Lab of Processors, Institute of Computing Technology, CAS; Peking University","published":"2026-03-06","publication":"arXiv","publication_type":"Preprint","publication_status":"Preprint","lineage":"LLM inference kernel safety / CUDA symbolic execution / model-aware verification","topics":["LLM推論安全性","CUDA","記号実行","メモリ安全性","vLLM","カーネル検証"],"importance":"実際のLLMモデルと推論フレームワークから到達可能なカーネル条件を抽出して記号実行の探索空間を現実的に制約し、従来GPU解析器が扱えなかった動的テンソルと可変起動条件を実運用規模で検査する。","hardware_evaluation":"HFProbe自体はGPUを使わずモデル呼出しを模擬する。cuKLEEはLLVM IRとZ3上で記号解析し、既知バグ比較では現代vLLMカーネルを既存解析器向けに簡略化した比較も行う。","quality_effect":"推論出力品質を変更する方式ではない。モデル・カーネルのメモリ安全性を静的/記号的に検証し、クラッシュ、誤計算、GPUメモリ破壊につながる欠陥を検出する。","storage_targets":[],"bottlenecks":["モデル依存カーネル条件の推定","動的テンソル形状","CUDAスレッド並列の状態爆発","大規模融合カーネルの経路爆発","設定依存カーネルのカバレッジ"],"source":"https://arxiv.org/abs/2603.24595","sources":["https://arxiv.org/abs/2603.24595"],"code":null,"implementation":"論文はcuKLEEをKLEE v3.1上の約31,000行C++として実装し、HFProbe用にvLLM/TransformersのGPU実行・重み読込み・KVキャッシュ経路を模擬するバックエンドを構築している。確認時点で一次資料から公式公開コードURLは特定できなかった。","last_checked":"2026-09-14","references":[{"canonical_id":"arXiv:2511.12294","arxiv_id":"2511.12294"},{"canonical_id":"arXiv:2303.18223","arxiv_id":"2303.18223"}],"references_checked_at":"2026-09-14","references_source":"arXiv v1本文の参考文献節","references_total":92},"reservation":{"claim_id":"claim-022b9f637cf7cc5a822fdef4","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-57e22664262505d22a992383",
+  "job_id": "job-research-aef337aaa1c0f49c",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-57e22664262505d22a992383",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
