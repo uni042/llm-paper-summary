@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-90b1de190887f5039df1730a",
   "job_id": "job-research-337f218e5e352539",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-90b1de190887f5039df1730a",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "hardware": "主な推論評価はNVIDIA B200単体。DeepSeek R1、Qwen系の一部大規模推論とGPT-OSS EAGLE3学習では8 GPUを使用する。",
+    "software": "vLLM、TensorRT-LLM、SGLangを共通クライアントから評価し、N-Gram、通常の外部ドラフタ投機的復号、EAGLE3、モデル内MTPを比較する。",
+    "methodology": "Qualitative splitは18公開データ源・11カテゴリ・各80例の880例で、約20%を2〜5ターン入力とする。Throughput splitは1k/2k/8k/16k/32k入力長ごとに低・混合・高エントロピー各512例、計1536例/桶を構成する。Llama 3.3 70B、GPT-OSS 120B、Qwen3 235B、Qwen3-Next、DeepSeek R1等を標的に、ドラフト方式、温度、バッチサイズ、ドラフト長、入力長を掃引する。受理率、受理長、出力TPS、利用者TPS、TTFT、ステップ・総遅延を測る。",
+    "scope": "実行基盤・モデル・ドラフト方式を横断する大規模比較だが、NVIDIAハードウェア中心である。Qualitative splitの意味多様性選択には外部埋め込みモデルを使い、一部の出力長検証にはGPT-4を用いる。Throughput splitは領域を細かく分けるより長さ・エントロピー統制を優先するため、個別ドメインの細粒度比較にはQualitative splitを併用する必要がある。バッチ256超ではPython GILによるクライアント側処理が測定を歪め得る。",
+    "workloads": ["Qualitative split 880 prompts / 11 categories", "Throughput split 1k・2k・8k・16k・32k", "低・混合・高生成エントロピー", "単一利用者から高並列バッチ", "ランダム・合成入力との対照"],
+    "baselines": ["N-Gram speculative decoding", "Vanilla external drafter", "EAGLE3", "native MTP", "SpecBench", "random/synthetic input throughput testing"],
+    "metrics": ["conditional acceptance rate", "expected accepted length", "output tokens/s", "user tokens/s", "TTFT", "step latency", "total latency", "semantic similarity"],
+    "reproducibility": "データ分割、カテゴリ数、入力長・エントロピー桶、主要モデル、ドラフト方式、バッチ・ドラフト長掃引、統一メトリクス定義が詳述される。データはHugging Faceで公開される。一方、エンジンやcheckpoint更新に結果が敏感で、Python負荷生成器の高並列限界もあるため、版を固定した再測定が必要である。"
   }
 }
