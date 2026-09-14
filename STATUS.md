@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 08:25 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 08:26 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,7 +15,7 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **43** |
+| 未処理の論文候補（Research ready） | **44** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **351** |
@@ -40,9 +40,9 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **43** |
+| 未処理候補（Research ready） | **44** |
 | 有効claim（lease） | **0** |
-| 今すぐ着手可能（Claimable） | **45** |
+| 今すぐ着手可能（Claimable） | **46** |
 | 有効leaseを持つworker run | **0** |
 | :30 最新worker run | **—** |
 | :30 最新run由来の有効claim | **0** |
@@ -78,28 +78,28 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **76** |
 | Repo収録 | **79** |
 | Audit完了 | **0** |
-| 探索評価候補 | **21** |
-| Research候補採用 | **6** |
+| 探索評価候補 | **23** |
+| Research候補採用 | **7** |
 | 重複除外 | **6** |
-| 重複率 | **28.6%** |
+| 重複率 | **26.1%** |
 | :00 補助worker Discovery run（毎時枠） | **4** |
-| :00 補助worker Discovery round（stats観測） | **9** |
+| :00 補助worker Discovery round（stats観測） | **10** |
 | 通常worker run（ledger観測） | **1** |
 | Fallback archive（全helper） | **32** |
 
 ### 24時間の流れ
 
-**探索評価 21 → 重複除外後 15 → Research候補採用 6 → Research完了 76 → Repo収録 79**
+**探索評価 23 → 重複除外後 17 → Research候補採用 7 → Research完了 76 → Repo収録 79**
 
 ## 次に処理する候補
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
+- P87 `arXiv:2601.21198` — ZipMoE: Efficient On-Device MoE Serving via Lossless Compression and Cache-Affinity Scheduling
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P83 `arXiv:2605.05696` — Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving
 
 ## 参考情報
 
@@ -111,13 +111,13 @@ Run: **2026-09-15T08:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **3** |
-| 探索軸 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration |
-| 評価候補 | **7** |
+| 探索round | **4** |
+| 探索軸 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing |
+| 評価候補 | **9** |
 | 重複除外 | **2** |
-| Novel候補 | **5** |
-| Research候補採用 | **1** |
-| 重複率 | **28.6%** |
+| Novel候補 | **7** |
+| Research候補採用 | **2** |
+| 重複率 | **22.2%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
 
@@ -128,6 +128,7 @@ Run: **2026-09-15T08:00:00+09:00**
 | 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 | 3 | 2 | 0 | 66.7% | 0.0% |
 | 熱・再現性・プライバシー制約を扱うLLM推論ランタイム | 3 | 0 | 3 | 0.0% | 100.0% |
 | 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング | 2 | 0 | 0 | 0.0% | 0.0% |
+| MoE lossless compression/cache-affinity・expert-locality-aware decode routing | 2 | 0 | 1 | 0.0% | 50.0% |
 | 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
 | MoE expert cache所有権・OS page cache・階層メモリ | 1 | 0 | 0 | 0.0% | 0.0% |
@@ -135,7 +136,7 @@ Run: **2026-09-15T08:00:00+09:00**
 
 ### 直近5件の:00 補助worker Discovery run
 
-- 2026-09-15T08:00:00+09:00 — 3 round: 評価 7 / 重複 2 / 採用 1 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration
+- 2026-09-15T08:00:00+09:00 — 4 round: 評価 9 / 重複 2 / 採用 2 / 軸 動的KVメモリ回収・CUDA仮想メモリ・prefill予約領域 / multi-turn KV restoration・cross-layer sharing・recompute/load pipeline / MoE expert cache placement・PCIe window scheduling・fine-grained expert migration / MoE lossless compression/cache-affinity・expert-locality-aware decode routing
 - 2026-09-15T07:00:00+09:00 — 3 round: 評価 9 / 重複 3 / 採用 4 / 軸 2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング / 熱・再現性・プライバシー制約を扱うLLM推論ランタイム / GPU・ホストメモリ間の複数経路転送と分離サービング通信
 - 2026-09-15T03:00:00+09:00 — 1 round: 評価 1 / 重複 0 / 採用 0 / 軸 MoE expert cache所有権・OS page cache・階層メモリ
 - 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
