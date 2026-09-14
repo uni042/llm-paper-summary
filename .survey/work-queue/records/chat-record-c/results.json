@@ -2,54 +2,96 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8c7ccdc94d77f30ad6ebd066",
-  "job_id": "job-research-2070373a31124502",
+  "attempt_id": "attempt-1029596fe50d541546a5dba8",
+  "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
-    "overview": "全6構成でプロセス固有メモリに統計的な増加が検出された一方、36時間の観測範囲ではクライアント側の遅延・スループット・要求失敗率とGPU VRAMに対応する悪化はほぼ見られなかった。主要3構成のUSS増加率はvLLM V1 standaloneが約+1.8 KB/h、PyTorch+HuggingFaceが約+31 KB/h、Triton+vLLM V0が約+157 KB/hで、同一モデルを提供しても約2桁の差がある。低負荷PyTorchでも約+103 KB/hで増加したため、飽和負荷だけが原因ではない。2×2比較ではV0がV1より大きく、Tritonラップも増幅要因となり、特にTriton+V0だけがRSSとVMSの数MB級の段階的ジャンプを示した。",
+    "overview": "Ariesの測定ではagent servingのcritical pathがGPU推論だけで決まらない。tool executionは13〜48%のend-to-end latency、harnessはさらに最大9%を占め、tool latencyは複数桁にまたがるlong tailを持つ。agent contextは通常会話より大きく、Qwen3.6で25GB KV budgetを固定すると最大resident capacityが176超から40へ約4.4倍低下する。DeepResearch/OpenClawはcontext overflowを消す160Kで95%成功に達するが、他workloadは中小windowでplateau/degradeし、最大history保持は常に有益ではない。32-session backlogではtoken pool utilizationが97%へ達する一方median concurrent requestは22、p95 internal queue delayは7.9s。sandboxはCPU 80%以上、memory 50%以上の時間idleだがtool call中はidle率20%未満へ落ちる。毎tool call後に停止するとinstance costは65%下がるもののsnapshot C/R込み総費用はpersistent baselineの4.9倍で、理想的state managementならbaseline比3倍まで総費用を下げる余地がある。",
     "key_results": [
       {
-        "metric": "主要構成のUSS増加率",
-        "value": "E1 vLLM V1 standalone 約+1.8 KB/h、E3 PyTorch+HF 約+31 KB/h、E2 Triton+vLLM V0 約+157 KB/h",
-        "baseline": "同一Qwen2.5-7B-Instructを提供する3デプロイ構成",
-        "condition": "各36時間、主要runは機械的上限の85%負荷、L40S各1基",
-        "interpretation": "共通のモデル推論経路より、サービングランタイムとホスティング構成がメモリ老朽化率を強く左右する。"
+        "metric": "tool execution latency share",
+        "value": "13〜48%",
+        "baseline": "end-to-end trajectory latency",
+        "condition": "公開3 benchmark×複数harness",
+        "interpretation": "GPU token生成だけを改善しても最大半分近いcritical pathが残る。"
       },
       {
-        "metric": "低負荷PyTorchでのUSS増加",
-        "value": "約+103 KB/h",
-        "baseline": "高負荷PyTorch E3 約+31 KB/h",
-        "condition": "E3b 0.05 RPS、36時間",
-        "interpretation": "負荷を下げてもリークが消えず、処理要求数や飽和だけでは説明できない時間依存のランタイム挙動を示す。"
+        "metric": "harness overhead share",
+        "value": "最大9%",
+        "baseline": "end-to-end trajectory latency",
+        "condition": "公開harness controlled profiling",
+        "interpretation": "tool以外のorchestrationもLLM呼び出し間を延ばし、state residencyを長期化する。"
       },
       {
-        "metric": "vLLM世代とホスティング層の影響",
-        "value": "standaloneではV0約+13 KB/h対V1約+1.8 KB/h、TritonではV0約+157 KB/h対V1約+5.9 KB/h",
-        "baseline": "V0/V1×standalone/Tritonの2×2比較",
-        "condition": "同一研究キャンペーンの36時間run",
-        "interpretation": "古いV0が両ホスティング条件でV1より大きく、Tritonの外側層も特にV0で増加を増幅する。"
+        "metric": "resident capacity",
+        "value": "176超→40（約4.4倍低下）",
+        "baseline": "conventional request vs agent context",
+        "condition": "Qwen3.6、固定25GB KV budget",
+        "interpretation": "trajectory state amplificationが同時実行容量を大幅に削る。"
       },
       {
-        "metric": "GPU VRAMの時間傾向",
-        "value": "全構成で有意なVRAM老朽化傾向なし",
-        "baseline": "各デプロイの36時間時系列",
-        "condition": "NVML 1Hz監視",
-        "interpretation": "観測された主要老朽化はGPUメモリのPagedAttention/KV領域ではなく、主にホスト側プロセス資源に現れる。"
+        "metric": "DeepResearch task success",
+        "value": "160K contextで95%",
+        "baseline": "小さいcontext window",
+        "condition": "OpenClaw、context sweep",
+        "interpretation": "overflow回避まではcontext増加が効くが、その先は効用が頭打ちになる。"
       },
       {
-        "metric": "クライアント側性能",
-        "value": "大半の遅延・スループット・失敗率は36時間で実用上安定。E1の一部遅延傾向も小さい",
-        "baseline": "run開始時から終了時の要求指標",
-        "condition": "開ループPoisson負荷",
-        "interpretation": "内部メモリ増加は利用者から見える性能劣化より先に進行し得るため、外形監視だけでは早期検知できない。"
+        "metric": "KV/token-pool pressure",
+        "value": "utilization peak 97%、median concurrency 22",
+        "baseline": "32-session backlog",
+        "condition": "256K context、controlled serving",
+        "interpretation": "backlogがあっても長寿命状態がbatching可能数を制限する。"
+      },
+      {
+        "metric": "internal queue p95",
+        "value": "7.9秒",
+        "baseline": "controlled serving",
+        "condition": "高KV圧力、32 active sessions",
+        "interpretation": "状態保持はtoken throughput以外のtail latencyとして表面化する。"
+      },
+      {
+        "metric": "sandbox idle fraction",
+        "value": "CPU >80%、memory >50%の時間idle",
+        "baseline": "trajectory time",
+        "condition": "OpenClaw/Hermesおよびproduction傾向",
+        "interpretation": "peak固定割当は大きなstranded capacityを生む。"
+      },
+      {
+        "metric": "per-tool-call teardown instance cost",
+        "value": "65%低下",
+        "baseline": "persistent sandbox",
+        "condition": "AWS Lambda MicroVM pricing replay",
+        "interpretation": "短keepalive自体はidle課金を下げる。"
+      },
+      {
+        "metric": "snapshot C/R込みtotal cost",
+        "value": "persistent比4.9倍",
+        "baseline": "persistent sandbox",
+        "condition": "tool callごとteardown",
+        "interpretation": "現行capture/restoreが細粒度scale-to-zeroを逆に高価にする。"
+      },
+      {
+        "metric": "ideal sandbox total-cost opportunity",
+        "value": "persistent baseline比最大3倍削減余地",
+        "baseline": "persistent sandbox",
+        "condition": "snapshot/state overheadを理想化",
+        "interpretation": "状態と実行資源を分離したelasticityには大きな余地がある。"
+      },
+      {
+        "metric": "Linux CVE trend",
+        "value": "2026 Q2 published CVEがprevious record比3.5倍",
+        "baseline": "previous records",
+        "condition": "AI-assisted discovery proxy",
+        "interpretation": "agent tool sandboxは性能だけでなく攻撃面最小化が必要。"
       }
     ],
-    "negative_results": "36時間の範囲では、プロセス固有メモリの増加が明確でもクライアント性能の大規模な劣化やGPU VRAMの継続増加には結びつかなかった。したがって本研究は『現時点で障害を起こすほど深刻なリーク』を示すものではなく、長期間にわたり蓄積し得る初期老朽化の証拠を示す。低負荷PyTorchのリーク率が高負荷より大きいことから、要求数に単純比例するモデルも支持されない。",
-    "interpretation": "最も重要なのは、最適化の多いサーバほど必ず老朽化が大きいわけではない点である。最も軽いPyTorchが最小ではなく、vLLM V1 standaloneが最も小さい。Triton+V0の段階的RSS/VMS同時増加は、継続的な小オブジェクト漏れとは異なり、ある時点でOSから新しいメモリ領域を確保して保持する機構を示唆する。一方PyTorchの大きなVMS成長はCUDAキャッシュアロケータ等による仮想領域予約との整合性があり、同じ『メモリ増加』でも機序が異なる可能性が高い。運用上はクライアントSLOだけでなくUSS/RSS/VMSを長期トレンドとして監視し、構成別に再起動・若返り周期を設計する必要がある。",
-    "quality_impact": "生成品質そのものを変更する研究ではない。36時間内では老朽化が出力品質や大規模なサービス性能劣化へ波及した証拠は示されていない。将来的な影響は、メモリ増加がさらに長期化してホストメモリ圧迫、スワップ、OOM、GC停止などを誘発するかどうかに依存し、論文の観測窓では未確定である。"
+    "negative_results": "文脈を最大まで保持しても全workloadで精度が上がるわけではなく、Terminal-Bench 2/SWE-Bench Proはoverflow解消後にplateauまたは悪化する。snapshot-based stateful scale-to-zeroは短keepaliveほどinstance費を減らすがcapture/restore費が支配し、tool callごとの停止はpersistentより総費用が高い。token throughputはtask goodput/solved tasks per hourと乖離し得るため、従来指標単独では最適化方向を誤る。",
+    "interpretation": "Agent workloadでは資源需要がtrajectory phaseに応じてGPU inference→host orchestration→tool sandboxへ移動し、contextはその間も残る。したがって最適化対象をtoken生成へ限定せず、進捗価値とstate costをtrajectory単位で測り、将来効用の低いcontextを圧縮/階層化し、tool burstだけCPU/memoryを垂直拡張する設計が合理的である。",
+    "quality_impact": "Ariesは性能改善のためにモデル出力を近似しない。context managementの候補政策は将来方向であり、測定結果はcontext削減が成功率へ影響するためworkload-specific thresholdを越えて攻撃的に圧縮すべきでないことを示す。"
   },
   "reservation": {
-    "claim_id": "claim-8c7ccdc94d77f30ad6ebd066",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
+    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
     "worker_kind": "scheduled_chat"
   }
 }

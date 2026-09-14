@@ -2,54 +2,45 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8c7ccdc94d77f30ad6ebd066",
-  "job_id": "job-research-2070373a31124502",
+  "attempt_id": "attempt-1029596fe50d541546a5dba8",
+  "job_id": "job-research-c6ac42b8bcec8aab",
   "data": {
-    "hardware": [
-      "NVIDIA L40S 46GB ×3（単一ホスト）"
-    ],
-    "software": [
-      "vLLM V1 standalone 0.21.0",
-      "NVIDIA Triton 25.09 + vLLM V0 0.10.1.1+nv",
-      "PyTorch + HuggingFace Transformers + FastAPI",
-      "NVML",
-      "psutil"
-    ],
-    "model": [
-      "Qwen2.5-7B-Instruct BF16"
-    ],
-    "datasets": [
-      "3000件のarXivタイトル・抄録を元にした合成プロンプト群"
+    "hardware": "制御実験: 96-core node、NVIDIA H100 94GB HBM×1。production characterization: 商用platformの10 LLM serving instanceと100超agent sandbox。",
+    "software": "Aries、OpenHands、Hermes Agent、OpenClaw、SGLang、Qwen3.6-35B-A3B-FP8。sandbox弾力性の解析ではAWS Lambda MicroVM pricing model、別のtool utilization再現ではcloud DeepSeek V4 Flash API。",
+    "methodology": "商用platformの8時間workday traceから10 serving instanceのrequest/context長と、100超sandboxのCPU/メモリを1分粒度で収集する。詳細cross-layer分析はSWE-Bench Pro、Terminal-Bench 2、DeepResearch Benchから各20 taskを選び、OpenClawで概ね50%成功になるセットを各5回反復。OpenClaw/Hermes/OpenHandsを比較し、trajectory breakdownを取る。context budget sweepではOpenClaw/Hermesでwindowを変え成功率・overflow/compactionを測定し、32 active session/256K windowで1秒ごとのbackend資源を計測。sandboxではOpenClaw/Hermesを1秒計測し、tool traceをAWS Lambda MicroVMのkeepalive/capture-restore費用モデルへreplayする。",
+    "scope": "実運用traceと公開benchmarkのcharacterization/measurement framework。Ariesは新しいLLM scheduler、KV圧縮アルゴリズム、sandbox autoscalerを実装して性能改善を直接競うものではなく、それらを設計するための観測基盤と問題設定を提供する。",
+    "workloads": [
+      "SWE-Bench Pro 20 task",
+      "Terminal-Bench 2 20 task",
+      "DeepResearch Bench 20 task",
+      "各task 5反復",
+      "production 8-hour trace",
+      "100超production agent sandbox"
     ],
     "baselines": [
-      "vLLM V1 standalone (E1)",
-      "Triton + vLLM V0 (E2)",
-      "PyTorch+HuggingFace (E3)",
-      "低負荷PyTorch+HuggingFace (E3b)",
-      "vLLM V0 standalone (A1)",
-      "Triton + vLLM V1 (A2)"
+      "token-centric LLM metrics (TTFT/TPOT/token throughput)",
+      "conventional request-centric capacity",
+      "persistent sandbox",
+      "snapshot-based stateful scale-to-zero with multiple keepalive timeout"
     ],
-    "correctness": "モデル出力品質の改善を競う研究ではなく、同一モデルを長時間提供した際の資源使用量とサービス指標の時間傾向を比較する。クライアント側では36時間の範囲で遅延、スループット、エラーに大きな実用劣化はほぼ見られず、内部メモリ増加が先行して現れる。",
-    "settings": [
-      {
-        "name": "主要3構成の同時36時間run",
-        "description": "L40S 3基を搭載した単一ホストで、vLLM V1 standalone、Triton+vLLM V0、PyTorch+HuggingFaceを各GPUに1構成ずつ割り当てる。Qwen2.5-7B-Instruct BF16を共通モデルとし、各エンジンの機械的上限の85%のPoisson到着率で36時間同時運転する。"
-      },
-      {
-        "name": "低負荷PyTorch除去実験",
-        "description": "素朴なPyTorch+HuggingFace構成を0.05 RPSで36時間再運転し、主要runの0.17 RPS付近の高負荷条件と比較する。負荷飽和や待ち行列がメモリ成長を生んでいるのか、それとも経過時間に依存するランタイム挙動なのかを切り分ける。"
-      },
-      {
-        "name": "vLLM世代×ホスティング2×2要因実験",
-        "description": "V0/V1のエンジン世代とstandalone/Tritonのホスティング層を交差させる。主要runのE1/E2にA1/A2を加え、エンジン内部設計と外側オーケストレーション層の寄与を分離してUSS増加率と成長形状を比較する。"
-      }
+    "metrics": [
+      "end-to-end latency breakdown",
+      "tool/harness latency share",
+      "context overflow/compaction count",
+      "task success rate",
+      "KV/token-pool utilization",
+      "resident/concurrent request count",
+      "internal queueing delay",
+      "CPU/memory utilization CDF",
+      "sandbox instance cost",
+      "snapshot capture/restore cost",
+      "task goodput/solved tasks per token/hour"
     ],
-    "methodology": "GPU指標はNVMLで1Hz、プロセスとホスト指標はpsutilで5秒間隔、クライアント指標は要求ごとに取得する。主要リーク指標はプロセス固有常駐メモリUSSで、RSS、PSS、VMSも併用する。自己相関を補正したMann-Kendall検定で単調傾向を判定し、Theil-Sen傾きと95%信頼区間で変化量を推定する。約200件のトレンド検定にBenjamini-Hochberg補正を適用し、偽発見率をq=0.10へ制御する。累積I/Oやコンテキストスイッチなどは毎秒率へ変換して自明な単調増加を除く。",
-    "scope": "6構成×36時間の計216時間、単一ホスト、L40S、Qwen2.5-7B-Instruct、定常Poisson負荷に限定される。各構成の独立反復は1回で、数週間・数か月の実測、他GPU世代、大規模モデル、MoE、実運用のバースト負荷、具体的なリーク箇所のコードレベル特定は評価範囲外である。"
+    "reproducibility": "論文はAries code/toolchainと匿名化production tracesをGitHubで公開すると明記。公開harness/benchmark、モデル、GPU、反復数、sampling粒度を記載。一方、商用traceはプライバシー上normalization/anonymizationされ、詳細platform構成と完全同期イベントは非公開。"
   },
   "reservation": {
-    "claim_id": "claim-8c7ccdc94d77f30ad6ebd066",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
+    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
     "worker_kind": "scheduled_chat"
   }
 }
