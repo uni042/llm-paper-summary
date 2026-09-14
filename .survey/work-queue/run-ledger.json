@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T21:35:11.590429+00:00",
+  "updated_at": "2026-09-14T21:40:26.982363+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T21:35:11.590429+00:00",
+      "last_recorded_at": "2026-09-14T21:40:26.982363+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 72,
+        "research_completed": 73,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 21
       },
       "events": [
-        {
-          "event_id": "34803544547:1",
-          "recorded_at": "2026-09-14T03:43:25.533424+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34803544547",
-            "run_attempt": "1",
-            "source_sha": "fb6b230b47d4c781c3ba2d6d626f9dc6b254bc71"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34803810787:1",
           "recorded_at": "2026-09-14T03:49:19.282465+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34900084369:1",
+          "recorded_at": "2026-09-14T21:40:26.982363+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34900084369",
+            "run_attempt": "1",
+            "source_sha": "74413d147dba5fecf06d03931e8aacdc41b19f47"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20208,6 +20208,14 @@
           "title": "KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-25e24814dedb76cb",
+          "type": "research",
+          "canonical_id": "arXiv:2601.17855",
+          "title": "A Universal Load Balancing Principle and Its Application to Large Language Model Serving",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20370,7 +20378,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 536,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
