@@ -1,0 +1,18 @@
+{
+  "job_id": "job-audit-bc50ab844f1e2ebf",
+  "type": "audit",
+  "priority": 72,
+  "canonical_id": "arXiv:2504.03775",
+  "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+  "source_url": "https://arxiv.org/abs/2504.03775",
+  "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md",
+  "reason": "research result left an explicit verification need",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Perform a formal audit using primary sources: identity/bibliography, authors/affiliations, publication state/final version, code, hardware/model/dataset/baselines, quantitative results, simulation vs real hardware, classification, arXiv primary/cross-list categories, differences and limitations. Return a complete workflow-v10 five-slot structured research record; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the audited workflow-v10 five-slot structured research record. If the required primary evidence cannot be obtained, return blocked/deferred rather than guessing.",
+  "expected_blob_sha": "29d3245bc7162fbce4df3ba84cad414164f67d4d",
+  "schema_version": 1,
+  "status": "ready",
+  "created_at": "2026-09-14T16:21:29+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T15:53:20.686464+00:00",
+  "updated_at": "2026-09-14T16:21:33.424237+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T15:53:20.686464+00:00",
+      "last_recorded_at": "2026-09-14T16:21:33.424237+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18688,11 +18688,11 @@
         "job_blocked"
       ],
       "counts": {
-        "research_completed": 55,
+        "research_completed": 56,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
-        "new_jobs": 1,
+        "new_jobs": 2,
         "new_papers": 58,
         "fallback_archived": 0
       },
@@ -19509,6 +19509,21 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34868044446:1",
+          "recorded_at": "2026-09-14T16:21:33.424237+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34868044446",
+            "run_attempt": "1",
+            "source_sha": "e507b738caee568ba1da1e0216f10d882e615c63"
+          },
+          "signals": [
+            "research_completed",
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19959,6 +19974,14 @@
           "title": "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-87d11da7c0c30dc4",
+          "type": "research",
+          "canonical_id": "arXiv:2504.03775",
+          "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -19968,6 +19991,13 @@
           "type": "audit",
           "canonical_id": "arXiv:2503.03777",
           "title": "FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference"
+        },
+        {
+          "job_id": "job-audit-bc50ab844f1e2ebf",
+          "status": "ready",
+          "type": "audit",
+          "canonical_id": "arXiv:2504.03775",
+          "title": "FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling"
         }
       ],
       "new_paper_ids": [
@@ -20034,7 +20064,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
       "paper_active_count_after": 518,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
