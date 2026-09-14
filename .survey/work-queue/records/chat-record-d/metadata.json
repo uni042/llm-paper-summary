@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-780edb4f8fe65484658fa733",
+  "attempt_id": "attempt-8b40f84e1a8159115ac44ac4",
   "job_id": "job-research-87d11da7c0c30dc4",
   "data": {
     "canonical_id": "arXiv:2504.03775",
@@ -73,23 +73,74 @@
     "implementation": "論文はFlowKVを実装し、KVキャッシュのレイアウト、PagedAttentionカーネル、セグメント割当器、IPC/RDMA/NCCL転送モジュール、全体制御器、各ノードの複合スケジューラを評価している。一方、一次資料本文・脚注には公式コードURLや公開リポジトリを記載していないため、公開実装は確認できない。",
     "last_checked": "2026-09-15",
     "references": [
-      {"canonical_id": "arXiv:2308.16369", "arxiv_id": "2308.16369", "doi": "10.48550/arXiv.2308.16369"},
-      {"doi": "10.18653/v1/2024.acl-long.172"},
-      {"canonical_id": "arXiv:2501.14743", "arxiv_id": "2501.14743", "doi": "10.48550/arXiv.2501.14743"},
-      {"canonical_id": "arXiv:2407.21783", "arxiv_id": "2407.21783", "doi": "10.48550/arXiv.2407.21783"},
-      {"canonical_id": "arXiv:2406.17565", "arxiv_id": "2406.17565", "doi": "10.48550/arXiv.2406.17565"},
-      {"doi": "10.1109/TNNLS.2021.3070843"},
-      {"canonical_id": "arXiv:2406.00515", "arxiv_id": "2406.00515", "doi": "10.48550/arXiv.2406.00515"},
-      {"doi": "10.1145/3600006.3613165"},
-      {"canonical_id": "arXiv:2303.08774", "arxiv_id": "2303.08774", "doi": "10.48550/arXiv.2303.08774"},
-      {"doi": "10.1109/ISCA59077.2024.00019"},
-      {"canonical_id": "arXiv:2407.00079", "arxiv_id": "2407.00079", "doi": "10.48550/arXiv.2407.00079"},
-      {"doi": "10.1007/S11704-024-40555-Y"},
-      {"canonical_id": "arXiv:2303.18223", "arxiv_id": "2303.18223", "doi": "10.48550/arXiv.2303.18223"},
-      {"canonical_id": "arXiv:2312.07104", "arxiv_id": "2312.07104", "doi": "10.48550/arXiv.2312.07104"}
+      {
+        "canonical_id": "arXiv:2308.16369",
+        "arxiv_id": "2308.16369",
+        "doi": "10.48550/arXiv.2308.16369"
+      },
+      {
+        "doi": "10.18653/v1/2024.acl-long.172"
+      },
+      {
+        "canonical_id": "arXiv:2501.14743",
+        "arxiv_id": "2501.14743",
+        "doi": "10.48550/arXiv.2501.14743"
+      },
+      {
+        "canonical_id": "arXiv:2407.21783",
+        "arxiv_id": "2407.21783",
+        "doi": "10.48550/arXiv.2407.21783"
+      },
+      {
+        "canonical_id": "arXiv:2406.17565",
+        "arxiv_id": "2406.17565",
+        "doi": "10.48550/arXiv.2406.17565"
+      },
+      {
+        "doi": "10.1109/TNNLS.2021.3070843"
+      },
+      {
+        "canonical_id": "arXiv:2406.00515",
+        "arxiv_id": "2406.00515",
+        "doi": "10.48550/arXiv.2406.00515"
+      },
+      {
+        "doi": "10.1145/3600006.3613165"
+      },
+      {
+        "canonical_id": "arXiv:2303.08774",
+        "arxiv_id": "2303.08774",
+        "doi": "10.48550/arXiv.2303.08774"
+      },
+      {
+        "doi": "10.1109/ISCA59077.2024.00019"
+      },
+      {
+        "canonical_id": "arXiv:2407.00079",
+        "arxiv_id": "2407.00079",
+        "doi": "10.48550/arXiv.2407.00079"
+      },
+      {
+        "doi": "10.1007/S11704-024-40555-Y"
+      },
+      {
+        "canonical_id": "arXiv:2303.18223",
+        "arxiv_id": "2303.18223",
+        "doi": "10.48550/arXiv.2303.18223"
+      },
+      {
+        "canonical_id": "arXiv:2312.07104",
+        "arxiv_id": "2312.07104",
+        "doi": "10.48550/arXiv.2312.07104"
+      }
     ],
     "references_checked_at": "2026-09-15",
     "references_source": "arXiv v1 reference section",
     "references_total": 20
+  },
+  "reservation": {
+    "claim_id": "claim-8b40f84e1a8159115ac44ac4",
+    "worker_id": "scheduled-chat-llm-discovery-overflow",
+    "worker_kind": "scheduled_chat"
   }
 }

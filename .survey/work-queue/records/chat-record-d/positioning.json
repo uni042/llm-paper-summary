@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-780edb4f8fe65484658fa733",
+  "attempt_id": "attempt-8b40f84e1a8159115ac44ac4",
   "job_id": "job-research-87d11da7c0c30dc4",
   "data": {
     "limitations": "評価はLlama-3.1の8B/70B、A100・L20・H20、単機または2サーバー規模に限られる。複数機のネットワークはENIとだけ記載され、帯域・遅延条件の詳細や大規模クラスタでの輻輳、複数テナント、障害時挙動は示されない。負荷適応スケジューラの重み係数は成功した実験から決めたとされ、閾値・滑動窓長・感度分析や自動調整方法は未提示である。KV連続化は送受信双方の断片化状態に依存し、長期運転でどの程度連続区間を維持できるかの測定もない。公式コードURLは一次資料で確認できず、再現性と既存基盤への移植コストを外部から検証しにくい。",
@@ -12,5 +12,10 @@
     "relation_to_existing_repository": "11-llm-serving-scheduling-disaggregation系統。既収録または追跡対象のDistServe、Mooncake、MemServe、KVDirectなどと近く、FlowKVはNCCL利用時の連続KV配置・転送呼び出し集約とP/D役割切替を主差分とする。",
     "audit_required": true,
     "audit_reason": "公式コード公開の有無、プレプリント後の採択・改訂状況、参考文献のうちDOI/arXiv識別子を持たない文献の追加正規化、および論文が明示していないENIネットワーク詳細を後続監査で確認する価値がある。"
+  },
+  "reservation": {
+    "claim_id": "claim-8b40f84e1a8159115ac44ac4",
+    "worker_id": "scheduled-chat-llm-discovery-overflow",
+    "worker_kind": "scheduled_chat"
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-780edb4f8fe65484658fa733",
+  "attempt_id": "attempt-8b40f84e1a8159115ac44ac4",
   "job_id": "job-research-87d11da7c0c30dc4",
   "data": {
     "hardware": "同種構成はNVIDIA A100-SXM4-80GBを8基搭載しNVLinkで接続したサーバー。異種構成はL20 48GB×4とH20 96GB×8の2サーバーを弾性ネットワークインターフェース（Elastic Network Interface; ENI）で接続する。KV転送の単機評価ではL20サーバー、複数機評価ではL20とH20を使用する。",
@@ -30,5 +30,10 @@
       "KVキャッシュ転送遅延",
       "NCCLカーネル呼び出し数"
     ]
+  },
+  "reservation": {
+    "claim_id": "claim-8b40f84e1a8159115ac44ac4",
+    "worker_id": "scheduled-chat-llm-discovery-overflow",
+    "worker_kind": "scheduled_chat"
   }
 }
