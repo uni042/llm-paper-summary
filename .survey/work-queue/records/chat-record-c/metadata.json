@@ -4,10 +4,43 @@
   "slot": "metadata",
   "attempt_id": "attempt-514ad57b9d8cf039e2f24bee",
   "job_id": "job-research-fbca0f6d99c20b64",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-514ad57b9d8cf039e2f24bee",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id":"arXiv:2608.15118",
+    "arxiv_id":"2608.15118",
+    "doi":"10.48550/arXiv.2608.15118",
+    "openreview_id":null,
+    "arxiv_categories":{"primary":"cs.DC","cross_list":[]},
+    "title":"Collective Communication for Distributed LLM Systems: Planning, Runtime Adaptation, and Computation Coordination",
+    "summary":"分散大規模言語モデルでは、データ並列、テンソル並列、専門家並列、入力処理・デコード分離などがAllReduce、ReduceScatter、AllGather、AlltoAllといった集団通信を頻繁に発生させる。本論文は個別の通信ライブラリや単一アルゴリズムを列挙するのではなく、集団通信の一生を、通信計画、実行時の実装・適応、計算通信協調の三層に整理するチュートリアル型サーベイである。計画層では階層・異種トポロジを意識した手設計と制約解法・フロー最適化による自動合成、実行層ではGPU側のプログラム可能な通信抽象と実行時チューニング、協調層では学習グラフや推論パイプラインで通信を計算・メモリアクセスへ重ねる技術を体系化する。代表例としてSCCLのAllGather最大2.2倍、TE-CCLのアルゴリズム帯域最大3.18倍、MSCCL++の推論1.2倍、MegaScale-InferのGPU当たりデコード最大1.90倍、NanoFlowの平均スループット1.91倍などを同じ比較表へ配置し、通信原語の高速化が最終的なLLM処理性能へ届くには複数層の共同設計が必要だと整理する。",
+    "list_summary":"集団通信最適化を通信計画、実行時適応、計算通信協調の三層で整理し、学習からMoE・分離推論までの通信ボトルネックと代表手法を横断的に比較する。",
+    "authors":["Xuebin Song","Menghao Zhang","Yuezheng Liu","Jinyi Xia","Shucan Yang","Xiaohe Hu","Chunming Hu","Mingwei Xu"],
+    "authors_affiliations":"Beihang University; State Key Laboratory of Internet Architecture, Tsinghua University; Infrawaves",
+    "published":"2026-08-15",
+    "publication":"arXiv",
+    "publication_type":"Tutorial survey preprint",
+    "publication_status":"arXiv preprint v1",
+    "lineage":"分散LLM通信／集団通信／推論通信協調",
+    "topics":["集団通信","通信計画","実行時適応","計算通信協調","MoE通信","分離推論"],
+    "importance":"分散LLMの通信研究を、通信原語そのもの、ランタイム実装、LLM実行グラフの三層へ分解して比較できる共通座標系を与える。推論系では低遅延要求、動的バッチ、専門家ルーティング、KV転送などにより学習より通信を隠しにくい点を明確化している。",
+    "hardware_evaluation":"本論文自身の新規ハードウェア実験は行わない。既存研究の実機結果を比較表と本文で整理し、DGX-H100・InfiniBand環境における既報の通信時間割合などを導入例として引用する。",
+    "hardware_details":"サーベイ対象はNVIDIA GPUクラスタ、異種ネットワーク、多NIC、NVLink/NVSwitch、InfiniBand、クラウド共有ネットワークなど幅広い。特定単一環境への実装評価ではない。",
+    "quality_effect":"通信スケジュール、実行ランタイム、計算通信重畳を扱うサーベイであり、モデル品質を直接変更する手法ではない。将来課題として圧縮対応集団通信では量子化・疎化の誤差蓄積と通信削減の交換条件を明示する。",
+    "storage_targets":["GPU間の勾配・活性・パラメータ","MoEトークン交換","分離推論のKVキャッシュ・中間状態"],
+    "bottlenecks":["異種リンクによる通信経路不均衡","固定集団アルゴリズムの環境不適合","GPU計算資源と通信進行の競合","推論の短い反復で通信を隠せないこと","多通信ライブラリ間の帯域競合"],
+    "evidence_locations":["§III 三層システム観","Table I 代表システム比較","§IV 通信計画","§V 実行・適応","§VI 計算通信協調","§VII 未解決課題"],
+    "source":"https://arxiv.org/abs/2608.15118",
+    "sources":["https://arxiv.org/abs/2608.15118","https://arxiv.org/html/2608.15118"],
+    "code":null,
+    "implementation":"チュートリアル型サーベイであり、論文固有の通信ライブラリ実装は提供しない。既存のBlueConnect、Themis、SCCL、TE-CCL、MSCCL++、AutoCCL、MCCS、CoCoNet、Centauri、MegaScale-Infer、NanoFlow等を比較する。",
+    "last_checked":"2026-09-14",
+    "references":[
+      {"canonical_id":"arXiv:2409.15241","arxiv_id":"2409.15241"},
+      {"canonical_id":"arXiv:2407.00023","arxiv_id":"2407.00023"},
+      {"canonical_id":"arXiv:2401.09670","arxiv_id":"2401.09670"}
+    ],
+    "references_checked_at":"2026-09-14",
+    "references_source":"arXiv v1参考文献節",
+    "references_total":17
+  },
+  "reservation":{"claim_id":"claim-514ad57b9d8cf039e2f24bee","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
