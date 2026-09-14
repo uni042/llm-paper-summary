@@ -2,18 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-dbca4ee8fc632785a4cc9ca7",
+  "attempt_id": "attempt-22c2ec2cf001d1b96d89693d",
   "job_id": "job-research-16aaac9973021cd8",
   "data": {
     "hardware": "Qwen2.5-14BはNVIDIA A100 80GB 1基、Qwen2.5-32BはNVIDIA H20 96GB 1基、Qwen2.5-72BはNVIDIA H20 2基をテンソル並列2で使用する。KV退避先としてCPUメモリ100GBを確保する。",
     "software": "TokenCakeは約9,000行のPythonで実装し、vLLMの要求処理・KVブロック管理を再利用する。比較対象はvLLM v0.8.6、接頭辞キャッシュを有効にしたvLLM、Mooncake v0.3.0-beta、Parrot。専用非同期転送ストリームでCPU-GPU間KV移動を行い、vLLM V1へCPUブロックプールを再導入する。",
     "model": "Qwen2.5-14B、Qwen2.5-32B、Qwen2.5-72B。72BのみH20 2基のテンソル並列2で動作する。",
-    "datasets": ["Code-Writer: 11種類のエージェント型を持ち、ファイル入出力、検索、試験実行などの外部関数を含む", "Deep Research: 検索と文章生成を反復する複数エージェント応用", "利用者要求はShareGPTとAgentCodeを基に合成", "要求到着はポアソン過程で生成し、外部関数はMCPで観測される遅延範囲を模擬"],
-    "baselines": ["vLLM v0.8.6", "vLLM-Prefix: 接頭辞キャッシュ有効", "Mooncake v0.3.0-beta", "Parrot", "TokenCakeの構成要素除去: エージェント優先度のみ、退避のみ、全機構"],
+    "datasets": [
+      "Code-Writer: 11種類のエージェント型を持ち、ファイル入出力、検索、試験実行などの外部関数を含む",
+      "Deep Research: 検索と文章生成を反復する複数エージェント応用",
+      "利用者要求はShareGPTとAgentCodeを基に合成",
+      "要求到着はポアソン過程で生成し、外部関数はMCPで観測される遅延範囲を模擬"
+    ],
+    "baselines": [
+      "vLLM v0.8.6",
+      "vLLM-Prefix: 接頭辞キャッシュ有効",
+      "Mooncake v0.3.0-beta",
+      "Parrot",
+      "TokenCakeの構成要素除去: エージェント優先度のみ、退避のみ、全機構"
+    ],
     "correctness": "モデル重みとKV内容は変更せず、同じ基盤モデルでキャッシュ配置と要求順序だけを変える。評価の主指標は応用全体の平均・末尾遅延、GPU KVキャッシュ利用率、スループット、KV移動回数であり、生成品質を近似する方式ではない。",
-    "settings": ["Code-Writerでは要求率を0.2、0.5、1.0 QPSなどに変化させ、モデルサイズとGPU構成を変えて評価", "関数所要時間予測へ人工的な誤差を加え、予測誤差0、0.25、0.5で感度評価", "退避候補選択としてbest-fit、priority-first、first-fitを比較", "空間圧力しきい値を振り、積極的な退避と退避拒否の交換条件を評価", "4,096キャッシュ済みトークン・256ブロックでGPU→CPUとCPU→GPU転送時間を測定し、KV再計算時間と比較"],
+    "settings": [
+      "Code-Writerでは要求率を0.2、0.5、1.0 QPSなどに変化させ、モデルサイズとGPU構成を変えて評価",
+      "関数所要時間予測へ人工的な誤差を加え、予測誤差0、0.25、0.5で感度評価",
+      "退避候補選択としてbest-fit、priority-first、first-fitを比較",
+      "空間圧力しきい値を振り、積極的な退避と退避拒否の交換条件を評価",
+      "4,096キャッシュ済みトークン・256ブロックでGPU→CPUとCPU→GPU転送時間を測定し、KV再計算時間と比較"
+    ],
     "methodology": "まず複数モデル・GPU構成でvLLM系比較対象に対するCode-WriterとDeep Researchのエンドツーエンド遅延、GPU KV利用率を測る。次にエージェント優先度機構と時間方向退避機構を個別・同時に有効化する除去実験で寄与を分離する。Mooncakeとは同じ応用負荷で低・中要求率を比較し、Parrotとは異なる実行基盤であることを明示した上で応用全体の時間を比較する。さらに、関数時間予測誤差、退避候補選択、GPU圧力しきい値、CPU-GPU転送時間を個別に振り、予測型オフロードが常に有益ではない境界条件を調べる。",
     "scope": "実GPU上のエンドツーエンド評価であり、単なるシミュレーションではない。主評価は単一GPUの14B/32Bモデルで、72BについてはH20 2基で複数GPU経路を確認するが、大規模な多数GPUクラスタでの性能評価は今後の課題である。アプリケーショングラフは再現性のため事前登録する一方、要求時の分岐は扱える。完全に動的な確率的グラフモデルは未実装である。"
   },
-  "reservation": {"claim_id": "claim-dbca4ee8fc632785a4cc9ca7", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-22c2ec2cf001d1b96d89693d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

@@ -2,28 +2,92 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-dbca4ee8fc632785a4cc9ca7",
+  "attempt_id": "attempt-22c2ec2cf001d1b96d89693d",
   "job_id": "job-research-16aaac9973021cd8",
   "data": {
     "overview": "TokenCakeは、エージェントグラフを使う空間優先度制御と、外部関数待ちへKV転送を隠す時間方向制御を組み合わせることで、vLLM系比較対象よりエンドツーエンド遅延とGPU KV利用率を改善する。Code-WriterのQwen2.5-14Bでは1.0 QPSで平均遅延をvLLM比47.06%削減し、72Bの2 GPU構成でも1 QPSで30%以上削減する。GPU KV利用率はvLLMの69.9〜74.1%に対して85.8〜87.0%へ上がり、最大16.9ポイント改善する。除去実験では退避だけを積極化すると1万回を超えるKV移動が発生する一方、両機構を組み合わせると総時間344.6秒となり、退避のみより移動回数を51%削減する。",
     "key_results": [
-      {"metric": "平均エンドツーエンド遅延", "value": "最大47.06%削減", "baseline": "vLLM", "condition": "Qwen2.5-14B、Code-Writer、1.0 QPS", "interpretation": "関数待機中のKVを必要時だけ退避し、重要経路のKVを予約領域で守ることで、キャッシュ再計算と待ち行列を同時に減らす。"},
-      {"metric": "72Bモデルの平均遅延", "value": "1.0 QPSで30%以上削減", "baseline": "vLLM", "condition": "Qwen2.5-72B、H20 2基、Code-Writer", "interpretation": "単一GPUだけでなく限定的な2 GPUテンソル並列構成でも、エージェント状態を利用するKV管理の効果が残る。"},
-      {"metric": "GPU KVキャッシュ利用率", "value": "85.8〜87.0%、最大+16.9ポイント", "baseline": "vLLM 69.9〜74.1%", "condition": "主要Code-Writer評価", "interpretation": "停止中エージェントのKVをCPUへ移すことで空いたGPU領域へ実行可能要求を入れ、KVプールの実効利用率を上げる。"},
-      {"metric": "Qwen2.5-32BのGPU KV利用率", "value": "79.6%", "baseline": "vLLM 53.5%", "condition": "1.0 QPS", "interpretation": "メモリ圧力が高い大きめのモデルほど、停止KVを選択的に移す余地が大きい。"},
-      {"metric": "構成要素除去の総実行時間", "value": "全TokenCake 344.6秒、退避のみ403.1秒、エージェント優先度のみ424.8秒、基準502.2秒", "baseline": "機構なし基準", "condition": "Code-Writer、14B、20応用、1.0 QPS、メモリ利用率0.5", "interpretation": "時間方向・空間方向のどちらか一方だけより共同制御が速く、退避で生じた空きを重要要求へ正しく配分する必要がある。"},
-      {"metric": "KV移動回数", "value": "全TokenCakeは退避のみ方式より51%少ない", "baseline": "退避のみ方式は11,339回のオフロード", "condition": "構成要素除去実験", "interpretation": "メモリを空けられるだけで無差別に移すと転送が過剰になるため、空間側の需要情報を共有することが移動抑制に効く。"},
-      {"metric": "Mooncake比平均遅延", "value": "0.5 QPSで28.0%削減", "baseline": "Mooncake 533秒、TokenCake 384秒", "condition": "Code-Writer", "interpretation": "中程度以上の負荷ではエージェント依存関係と関数待機を理解する制御が、一般的なKV分離サービングより有利になる。"},
-      {"metric": "CPU往復転送対再計算", "value": "4,096キャッシュ済みトークンで往復63.7ms、再計算1,815ms。再計算は28.5倍遅い", "baseline": "KV再計算", "condition": "256 KVブロック", "interpretation": "待機時間へ転送を隠せる条件では、CPUへ退避して戻す方がKVを失って再計算するより大幅に安い。"}
+      {
+        "metric": "平均エンドツーエンド遅延",
+        "value": "最大47.06%削減",
+        "baseline": "vLLM",
+        "condition": "Qwen2.5-14B、Code-Writer、1.0 QPS",
+        "interpretation": "関数待機中のKVを必要時だけ退避し、重要経路のKVを予約領域で守ることで、キャッシュ再計算と待ち行列を同時に減らす。"
+      },
+      {
+        "metric": "72Bモデルの平均遅延",
+        "value": "1.0 QPSで30%以上削減",
+        "baseline": "vLLM",
+        "condition": "Qwen2.5-72B、H20 2基、Code-Writer",
+        "interpretation": "単一GPUだけでなく限定的な2 GPUテンソル並列構成でも、エージェント状態を利用するKV管理の効果が残る。"
+      },
+      {
+        "metric": "GPU KVキャッシュ利用率",
+        "value": "85.8〜87.0%、最大+16.9ポイント",
+        "baseline": "vLLM 69.9〜74.1%",
+        "condition": "主要Code-Writer評価",
+        "interpretation": "停止中エージェントのKVをCPUへ移すことで空いたGPU領域へ実行可能要求を入れ、KVプールの実効利用率を上げる。"
+      },
+      {
+        "metric": "Qwen2.5-32BのGPU KV利用率",
+        "value": "79.6%",
+        "baseline": "vLLM 53.5%",
+        "condition": "1.0 QPS",
+        "interpretation": "メモリ圧力が高い大きめのモデルほど、停止KVを選択的に移す余地が大きい。"
+      },
+      {
+        "metric": "構成要素除去の総実行時間",
+        "value": "全TokenCake 344.6秒、退避のみ403.1秒、エージェント優先度のみ424.8秒、基準502.2秒",
+        "baseline": "機構なし基準",
+        "condition": "Code-Writer、14B、20応用、1.0 QPS、メモリ利用率0.5",
+        "interpretation": "時間方向・空間方向のどちらか一方だけより共同制御が速く、退避で生じた空きを重要要求へ正しく配分する必要がある。"
+      },
+      {
+        "metric": "KV移動回数",
+        "value": "全TokenCakeは退避のみ方式より51%少ない",
+        "baseline": "退避のみ方式は11,339回のオフロード",
+        "condition": "構成要素除去実験",
+        "interpretation": "メモリを空けられるだけで無差別に移すと転送が過剰になるため、空間側の需要情報を共有することが移動抑制に効く。"
+      },
+      {
+        "metric": "Mooncake比平均遅延",
+        "value": "0.5 QPSで28.0%削減",
+        "baseline": "Mooncake 533秒、TokenCake 384秒",
+        "condition": "Code-Writer",
+        "interpretation": "中程度以上の負荷ではエージェント依存関係と関数待機を理解する制御が、一般的なKV分離サービングより有利になる。"
+      },
+      {
+        "metric": "CPU往復転送対再計算",
+        "value": "4,096キャッシュ済みトークンで往復63.7ms、再計算1,815ms。再計算は28.5倍遅い",
+        "baseline": "KV再計算",
+        "condition": "256 KVブロック",
+        "interpretation": "待機時間へ転送を隠せる条件では、CPUへ退避して戻す方がKVを失って再計算するより大幅に安い。"
+      }
     ],
     "negative_results": [
-      {"name": "予測誤差0.25で悪化", "description": "関数時間予測へ中程度の誤差を加えると、TokenCakeはエージェント優先度のみ方式より平均遅延が8.3%悪化する。早過ぎる先読みや不要な退避がGPU領域と転送帯域を消費するため、予測利用は常に有益ではない。"},
-      {"name": "低圧力では退避しない方が良い", "description": "空間圧力しきい値0.08で退避をすべて拒否した条件は107.5秒となり、積極的に退避するしきい値群の約157秒より32%短い。解放メモリを有効利用する仕事が少ない局面では、CPU往復転送は純粋な追加費になる。"},
-      {"name": "退避のみは転送過多", "description": "構成要素除去では退避のみ方式が11,339回のKV移動を発生させる。全TokenCakeは移動回数を51%減らしながら総時間も短縮しており、階層メモリを使う量を最大化すること自体は目的にならない。"},
-      {"name": "候補選択方針に交換条件", "description": "priority-firstは平均150.6秒と速いがP95 173.2秒、first-fitは平均152.6秒、P95 164.7秒で最高スループット0.058 req/sを示す。平均だけを最小化する方針が末尾遅延やスループットで最良とは限らない。"}
+      {
+        "name": "予測誤差0.25で悪化",
+        "description": "関数時間予測へ中程度の誤差を加えると、TokenCakeはエージェント優先度のみ方式より平均遅延が8.3%悪化する。早過ぎる先読みや不要な退避がGPU領域と転送帯域を消費するため、予測利用は常に有益ではない。"
+      },
+      {
+        "name": "低圧力では退避しない方が良い",
+        "description": "空間圧力しきい値0.08で退避をすべて拒否した条件は107.5秒となり、積極的に退避するしきい値群の約157秒より32%短い。解放メモリを有効利用する仕事が少ない局面では、CPU往復転送は純粋な追加費になる。"
+      },
+      {
+        "name": "退避のみは転送過多",
+        "description": "構成要素除去では退避のみ方式が11,339回のKV移動を発生させる。全TokenCakeは移動回数を51%減らしながら総時間も短縮しており、階層メモリを使う量を最大化すること自体は目的にならない。"
+      },
+      {
+        "name": "候補選択方針に交換条件",
+        "description": "priority-firstは平均150.6秒と速いがP95 173.2秒、first-fitは平均152.6秒、P95 164.7秒で最高スループット0.058 req/sを示す。平均だけを最小化する方針が末尾遅延やスループットで最良とは限らない。"
+      }
     ],
     "interpretation": "TokenCakeの効果はCPUオフロードそのものではなく、外部関数待ちを『KVを動かしても計算が止まらない時間窓』として利用し、解放されたGPU領域をアプリケーション重要度に従って使う点から生じる。要求率が上がりGPU KV圧力が強くなるほど、停止KVの占有を解消する価値が増える。一方、低負荷では退避不要という実験や予測誤差での悪化が示す通り、転送を増やすだけでは逆効果になる。このため共有圧力状態、退避拒否条件、段階的先読みが主要な安全弁になっている。",
     "quality_impact": "KVの内容やモデル演算を近似しないため、方式自体による生成品質低下は想定しない。誤予測や不適切な移動は追加遅延・転送競合・再計算として現れる。評価は主に性能指標であり、方式間の生成品質差を主要な評価軸にはしていない。"
   },
-  "reservation": {"claim_id": "claim-dbca4ee8fc632785a4cc9ca7", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-22c2ec2cf001d1b96d89693d",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
