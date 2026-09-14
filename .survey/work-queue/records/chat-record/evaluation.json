@@ -2,40 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-128d57e31f4e61847fa8c634",
-  "job_id": "job-research-1e64c7b1f044657e",
-  "data": {
-    "hardware": "LongBenchおよび最初のトークンまでの時間の主要評価はNVIDIA A100 80GB GPUで実測する。",
-    "software": "Hugging Face標準推論経路を用い、通常注意とFlashAttentionを切り替えて削除法の追加費用を比較する。コードは著者方針により非公開。",
-    "methodology": "Llama 3.1-8B-Instruct、Llama 3.2-3B-Instruct、Qwen 2.5-3B/7B-InstructをLongBenchとNeedle-in-a-Haystackで評価し、H2O、TOVA、SnapKV、StreamingLLM系のシンク保持、非削除を比較する。厳しいメモリ環境を再現するためプロンプトを主に128トークンのブロックへ分け、生成時は1トークン単位で処理する。KV予算は2K、4K、6K、8Kを掃引する。推論課題ではDeepSeek-R1-Distill-Llama-8B/Qwen-7BをMath-500で評価し、滑動窓併用も調べる。遅延実験ではLlama 3.2-3B-Instruct、A100 80GB、ブロックサイズ64/128/256で最初のトークンまでの時間を測り、通常注意とFlashAttentionの双方でTOVA/SnapKVと比較する。",
-    "scope": "固定KV予算を推論途中から守るメモリ制約型の長文推論が主対象で、一般的なサーバーで全プロンプトを一括プリフィルできる条件だけを想定した圧縮評価ではない。実GPU評価を含む一方、主要モデルはGQA系であり、MLA等への一般化は未検証である。",
-    "workloads": [
-      "LongBench",
-      "Needle-in-a-Haystack",
-      "Math-500",
-      "Phonebook Lookup",
-      "RULER"
-    ],
-    "baselines": [
-      "非削除KVキャッシュ",
-      "H2O",
-      "TOVA",
-      "SnapKV",
-      "StreamingLLM系シンク保持"
-    ],
-    "metrics": [
-      "LongBench平均スコア",
-      "検索再現率",
-      "Math-500 Flex/Exact Match",
-      "最初のトークンまでの時間",
-      "KV圧縮率",
-      "キー類似度と注意重みの順位相関"
-    ],
-    "reproducibility": "モデル、ブロックサイズ、KV予算、各基準法の設定、LongBench標準評価、Math-500のサンプリング条件、A100 80GBという計算資源は論文に記載される。一方、著者コードは独占的として公開されておらず、完全再現には記載された削除処理を再実装する必要がある。",
-    "evaluation_notes": "LongBenchでは全標本の51%が8Kより長く、6K/8K予算で平均圧縮率はそれぞれ約33%/23%。Math-500ではLlama蒸留モデルで非削除に近い一方、Qwen蒸留モデルでは削除による低下が大きく、モデル構造による感度差も明示される。"
-  },
+  "attempt_id": "attempt-10b0fd060950a22520ffad10",
+  "job_id": "job-research-f3ec00db7d9723b7",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-128d57e31f4e61847fa8c634",
+    "claim_id": "claim-10b0fd060950a22520ffad10",
     "worker_id": "scheduled-chat-20260915T0530JST",
     "worker_kind": "scheduled_chat"
   }
