@@ -4,7 +4,87 @@
   "slot": "metadata",
   "attempt_id": "attempt-5aae5b401b72e747053748e6",
   "job_id": "job-research-cff945d042003c88",
-  "data": {},
+  "data": {
+    "canonical_id": "arXiv:2607.08786",
+    "arxiv_id": "2607.08786",
+    "doi": "10.1145/3770743.3804227",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices",
+    "summary": "本論文は、LLMの重みを約50〜60%の中程度な非構造疎行列へ枝刈りすると品質を保ちやすい一方、既存の疎行列積では位置情報の転送・復号費が大きく、H100級GPUでは密行列積より速くならない問題を扱う。重みを、2:4疎Tensor Coreへ直接載る層、余った非ゼロ要素を空きスロットへ再配置するSlot-Filling層、残差をCSRで保持する層の3段へ分け、Tensor CoreとCUDA Coreを並行利用する。復号時には入力活性をL2キャッシュに置き、重みはHBMから疎なまま読み、Tensor Core計算と位置差分の復号・再配置を細粒度パイプラインで重ねる。H100実機では50%疎性でSpInfer比最大1.64倍の疎行列カーネル高速化を示し、Wandaで枝刈りしたOPT-30B/66Bの生成ではFlashLLM比最大1.41倍のエンドツーエンド高速化を報告する。",
+    "list_summary": "約50〜60%の非構造疎重みを2:4疎Tensor Core層・再配置層・残差層へ分け、Tensor Core計算と位置復号を重畳して、SpInfer比最大1.64倍のカーネル高速化を実現。",
+    "authors": [
+      "Tao Lu",
+      "Haoyu Wang",
+      "Zonghui Wang",
+      "Keshen Xiang",
+      "Jiaheng Zhang",
+      "Wenzhi Chen"
+    ],
+    "authors_affiliations": "National University of Singapore、Zhejiang University",
+    "published": "2026-06-13",
+    "publication": "63rd ACM/IEEE Design Automation Conference (DAC '26), July 26-29, 2026, Long Beach, CA, USA",
+    "publication_type": "査読済み国際会議論文",
+    "publication_status": "DAC 2026採録・arXiv:2607.08786v1",
+    "lineage": "09-kernel-runtime-compilation",
+    "topics": [
+      "非構造疎性",
+      "疎行列積",
+      "疎Tensor Core",
+      "GPUカーネル",
+      "枝刈り",
+      "HBM帯域"
+    ],
+    "importance": "高。品質を保ちやすい中程度の非構造疎性と、GPUが高速に扱いやすい2:4構造疎性の間をデータ配置とカーネル協調で橋渡しし、密行列積を上回りにくかった50%前後の領域を直接狙う。",
+    "hardware_evaluation": "NVIDIA H100 SXM5、80GB HBM3、GPU間はNVLink。形式変換時間はIntel Xeon Platinum 8460Y+上でも測定。",
+    "hardware_details": "GCC 12.3、NVCC 12.6。カーネル評価は主にOPT-30B/66B相当の行列形状、バッチ16/32、疎性50/60/70%。エンドツーエンド評価はWandaで枝刈りしたOPT-30B/66B、入力512・出力512、バッチ8/16/32。",
+    "quality_effect": "カーネルと保存形式自体は与えられた疎重みを近似せず計算するが、前段の枝刈りは損失を伴う。WikiText-2では50%非構造疎性が2:4構造疎性や70%非構造疎性よりパープレキシティ劣化を小さく保つ一方、密モデルと完全同等ではない。",
+    "storage_targets": [
+      "GPU HBM上の疎重み",
+      "疎Tensor Core層の値と位置情報",
+      "Slot-Filling層の差分位置情報",
+      "Residual層のCSR重み",
+      "L2キャッシュ上の入力活性"
+    ],
+    "bottlenecks": [
+      "中程度疎性での位置情報転送量",
+      "圧縮位置情報のCUDA Core復号負荷",
+      "2:4 Tensor Core制約と非構造疎性の不一致",
+      "HBMからの疎重み読み込み",
+      "プリフィルの大きなNで計算律速になること"
+    ],
+    "evidence_locations": [
+      "§1",
+      "Table 1",
+      "§3.1-3.3",
+      "§4.1-4.4",
+      "§5",
+      "References"
+    ],
+    "source": "https://arxiv.org/abs/2607.08786",
+    "sources": [
+      "https://arxiv.org/abs/2607.08786",
+      "https://arxiv.org/pdf/2607.08786",
+      "https://arxiv.org/html/2607.08786",
+      "https://github.com/moui0/cudac"
+    ],
+    "code": "https://github.com/moui0/cudac",
+    "implementation": "著者はCUDA実装を公開しており、Hopperの `wgmma` を用いる疎Tensor Core経路、CUDA Coreでの差分位置復号・残差処理、3層保存形式への変換処理を含む。論文本文から公式リポジトリとして `https://github.com/moui0/cudac` が示されている。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {"canonical_id": "arXiv:1904.10509", "arxiv_id": "1904.10509", "doi": "10.48550/arXiv.1904.10509"},
+      {"canonical_id": "arXiv:2501.12948", "arxiv_id": "2501.12948", "doi": "10.48550/arXiv.2501.12948"},
+      {"canonical_id": "arXiv:2407.00079", "arxiv_id": "2407.00079", "doi": "10.48550/arXiv.2407.00079"},
+      {"canonical_id": "arXiv:2205.01068", "arxiv_id": "2205.01068", "doi": "10.48550/arXiv.2205.01068"},
+      {"doi": "10.1109/ISCA59077.2024.00019"}
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv v1 reference section",
+    "references_total": 36
+  },
   "reservation": {
     "claim_id": "claim-5aae5b401b72e747053748e6",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
