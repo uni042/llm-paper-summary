@@ -4,10 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-10b0fd060950a22520ffad10",
   "job_id": "job-research-f3ec00db7d9723b7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-10b0fd060950a22520ffad10",
-    "worker_id": "scheduled-chat-20260915T0530JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "192コア・4 NUMAノードのARMサーバー。各ノードは48個のHUAWEI Kunpeng-920 ARMv8.2コアと6本のDDR4メモリチャネルを持つ。",
+    "software": "Ubuntu 22.04。ArcLightとllama.cppを比較し、演算はNEONベクトル命令を使用する。Qwen3-4BをQ4_0形式へ量子化する。",
+    "methodology": "主評価は入力15トークン、生成256トークンでデコードスループットを測る。まず単一NUMAノードへ6〜48スレッドを束縛して両基盤の同一ノード内スケーリングを比較し、次に2ノード・4ノードへスレッドを均等配置して、llama.cppのNUMA分散とArcLightのNUMA対応テンソル並列を比較する。別の帯域測定では4 NUMAの全コア・メモリ組合せを測り、ローカルアクセスが約101〜103 GB/s、遠隔アクセスが約22〜26 GB/sであることを確認する。付録では入力長300のデコードとプリフィルも測り、テンソル並列が主にメモリ律速のデコードに効くことを検証する。",
+    "scope": "多数コアARM CPU上の単一モデル推論が主対象。分散サーバー、GPU、x86 CPUは実験対象外。比較対象も主にllama.cppであり、CPU推論基盤全般に対する網羅比較ではない。",
+    "workloads": ["Qwen3-4B Q4_0・15トークン入力/256トークン生成", "Qwen3-4B Q4_0・300トークン入力の付録評価", "NUMAローカル/遠隔メモリ帯域マイクロベンチマーク"],
+    "baselines": ["llama.cpp単一NUMA", "llama.cpp --numa distribute・複数NUMA", "ArcLight・テンソル並列なし", "ArcLight・NUMA対応テンソル並列"],
+    "metrics": ["デコードtoken/s", "プリフィルtoken/s", "NUMAメモリアクセスGB/s", "スレッド数・NUMAノード数に対するスケーリング"],
+    "reproducibility": "CPU型番、NUMA構成、メモリチャネル数、OS、モデル、量子化形式、入力・生成長、llama.cpp起動コマンドを記載し、ArcLight実装も公開する。性能グラフの具体値は図中心だが、実行環境は比較的詳細に提示される。",
+    "evaluation_notes": "単一NUMAでは両基盤ともスレッド増加に応じて伸び、ArcLightの優位は小さい。複数NUMAで差が広がり、提案手法の利得がNUMA遠隔帯域の回避に由来することを支持する。付録ではプリフィル優位がデコードほど大きくなく、プリフィルが演算律速であるという説明と整合する。"
+  },
+  "reservation": {"claim_id":"claim-10b0fd060950a22520ffad10","worker_id":"scheduled-chat-20260915T0530JST","worker_kind":"scheduled_chat"}
 }
