@@ -4,10 +4,29 @@
   "slot": "results",
   "attempt_id": "attempt-df812e3e2b60a70b34f00cdf",
   "job_id": "job-research-301f737893441797",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-df812e3e2b60a70b34f00cdf",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "8枚H100の同種クラスタでNexusSchedは、5種類の負荷シナリオにわたりP50/P90端末間遅延を比較方式より20〜50%削減し、SLO達成率を平均43%以上改善する。特に長文Summarizationの高負荷では、SLOを維持したまま最良比較方式の3倍超の要求を処理する。除去実験ではLENS単独がSLO達成率を平均2.5倍、限定情報でPRISMを使う構成が1.4倍に高め、SummarizationではLENSが最大3.1倍改善するが、両層を統合した完全NexusSchedが一貫して最良となる。H100/A100/A6000異種クラスタでは、直近2秒平均遅延、静的QPS重み、待ち行列長を使うルータよりP50端末間遅延を7〜36%削減し、高負荷時SLO達成率を10〜25ポイント高く保つ。事前計測なしH100への投入ではオンライン学習が30秒で理想オフライン設定近傍へ収束し、性能モデルは異種GPU・2モデルでR²=0.95〜0.99、LENS決定は1ms未満、PRISMは要求あたり約1msの制御負担に収まる。",
+    "key_results": [
+      {"metric": "端末間遅延", "value": "P50/P90を20〜50%削減", "baseline": "vLLM/Sarathi系エンジンとRR/Session Affinityの組合せ", "condition": "8×H100、FlowGPT・Coding・ShareGPT・Summarization等5シナリオ", "interpretation": "局所処理群と大域配送を同じ予測信号で協調させることで、負荷上昇時も遅延曲線が比較方式より平坦に保たれる。"},
+      {"metric": "SLO達成率", "value": "平均43%以上改善", "baseline": "複数SOTA構成", "condition": "用途別TTFT/TPOT SLO、8×H100", "interpretation": "単純な総処理量だけでなく、対話のTPOTや長文要約のTTFTといった用途別制約を守る要求割合が改善する。"},
+      {"metric": "長文脈高負荷処理能力", "value": "SummarizationでSLO内要求処理数3倍超", "baseline": "最良比較方式", "condition": "平均入力8936トークンの長文要約、高負荷", "interpretation": "固定トークン予算の弱点が大きいプリフィル主体負荷で、LENSの動的反復予算が特に効く。"},
+      {"metric": "LENS単独の除去実験", "value": "SLO達成率平均2.5倍、Summarization最大3.1倍", "baseline": "Sarathi+RR", "condition": "8×H100、高負荷", "interpretation": "二層協調の中でもエンジン内部の静的経験則を性能モデルで置き換える効果が大きい。"},
+      {"metric": "限定情報PRISMの除去実験", "value": "SLO達成率平均1.4倍", "baseline": "Sarathi+RR", "condition": "8×H100、高負荷", "interpretation": "ルーティング改善だけでも効果はあるが、エンジンが高品質な前向き状態を出さなければ完全PRISMの利点を発揮できない。"},
+      {"metric": "異種クラスタP50遅延", "value": "7〜36%削減", "baseline": "Latency-Based、Weighted-Based、Least-Loaded（全てLENS上）", "condition": "H100+A100+2×A6000、Llama3-8B", "interpretation": "GPU能力差をPmaxで正規化し、現在負荷と将来容量を同時に見るため、同じ待ち行列長を同じ負荷とみなす誤りを避ける。"},
+      {"metric": "異種クラスタSLO達成率", "value": "高負荷時10〜25ポイント高い", "baseline": "3種の業界型ルーティング", "condition": "異種GPU、Summarization除外", "interpretation": "予測遅延と有効KV空き容量に基づく先読み配送が、バースト時の実体過負荷を抑える。"},
+      {"metric": "ゼロ設定適応", "value": "約30秒で事前計測済み理想設定近傍へ収束", "baseline": "Sarathi、オフライン最適NexusSched", "condition": "未知H100を高負荷中に追加", "interpretation": "オンライン多時間尺度学習により、新規GPUやスポット実体の事前性能プロファイルを省ける可能性を示す。"},
+      {"metric": "性能モデル精度", "value": "R² 0.95〜0.99", "baseline": "実測反復遅延", "condition": "H100/A100/A6000、Llama3-8B/QwQ-32B、数千処理群", "interpretation": "エンジン内処理群探索とクラスタ予測配送の共通信号として使える精度を実測で示す。"},
+      {"metric": "制御負担", "value": "LENS <1ms/反復、PRISM 約1ms/要求", "baseline": "GPU実行20〜200ms超", "condition": "マイクロベンチマーク", "interpretation": "予測を導入しても制御面が新たな律速にならない。"}
+    ],
+    "negative_results": [
+      "未計測GPUを追加した直後は性能モデルが不正確なため一時的に遅延が悪化し、学習が収束するまで約30秒を要する。瞬間的な短命スポット資源ではこの暖機時間が無視できない可能性がある。",
+      "除去実験ではPRISMだけの改善がLENSより小さく、特にエンジン側から高品質な予測状態が得られない場合、賢いルータだけでは大きな改善を得にくい。これは二層協調への依存でもある。",
+      "性能モデルはR² 0.95〜0.99と高いが完全ではなく、未知の演算バックエンド、極端な処理群形状、急激なソフトウェア性能変化では誤予測がSLO目標や配送先選択へ伝播し得る。",
+      "実FlowGPT履歴を用いるものの公開データだけでは完全再現できず、論文の本番導入評価について詳細な長期運用統計や障害時挙動は限定的である。",
+      "評価クラスタは最大8枚H100および4実体異種構成であり、数十〜数百推論実体へPRISM状態集約を拡大したときの通信量・状態鮮度・ルータ拡張性は直接示されない。"
+    ],
+    "interpretation": "結果は、エンジン内スケジューラとクラスタルータをそれぞれ高度化するだけでは二層構成の非効率を十分に解けず、エンジンが『これから何ミリ秒で現在処理群を終え、どの程度のKV・処理能力を残すか』を予測して上位へ渡すことが重要だと示す。LENSの寄与が大きいのは処理群形状がTTFT/TPOT交換関係を直接支配するためであり、PRISMはその高品質状態をクラスタ全体へ拡張する役割を持つ。異種環境では単純な待ち行列長や過去遅延が能力差を表さないので、Pmaxで正規化した相対負荷と予測遅延が特に効く。",
+    "quality_impact": "生成品質を犠牲にする近似は導入しない。FP8 QwQ-32Bを含むモデル設定は評価条件として固定され、方式間差は要求の処理順、反復トークン予算、実体配送に由来する。"
+  },
+  "reservation": {"claim_id": "claim-df812e3e2b60a70b34f00cdf", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
