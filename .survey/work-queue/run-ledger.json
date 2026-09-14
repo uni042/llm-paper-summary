@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T16:35:15.454052+00:00",
+  "updated_at": "2026-09-14T16:39:48.285310+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,12 +18680,13 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T16:35:15.454052+00:00",
+      "last_recorded_at": "2026-09-14T16:39:48.285310+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded",
-        "job_blocked"
+        "job_blocked",
+        "fallback_archived"
       ],
       "counts": {
         "research_completed": 57,
@@ -18694,7 +18695,7 @@
         "blocked": 1,
         "new_jobs": 2,
         "new_papers": 58,
-        "fallback_archived": 0
+        "fallback_archived": 1
       },
       "events": [
         {
@@ -19538,6 +19539,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34869697473:1",
+          "recorded_at": "2026-09-14T16:39:48.285310+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34869697473",
+            "run_attempt": "1",
+            "source_sha": "1650a10e517be9523784f7b121a6de2e4b8c2c61"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20083,10 +20098,12 @@
         "arXiv:2609.02027"
       ],
       "new_discovery_results": [],
-      "new_fallback_archive_files": [],
+      "new_fallback_archive_files": [
+        ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json"
+      ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 518,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }
