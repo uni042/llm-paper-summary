@@ -2,15 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d3668d57a818e3151a950097",
-  "job_id": "job-research-95786e300fa60d16",
-  "data": {
-    "limitations":"中心理論は要求クラス内の入力長・生成長が既知かつ決定論的で、単一デコードGPU、特定の追い出し優先規則、飽和入力を基本とする。現実には生成長は不確実で、確率的ばらつきが完了同期を崩して安定化する場合と、長い外れ値が予期しないメモリ圧を作る場合の両方があり、境界は未解明である。二クラスの鋭い最大公約数条件は共通入力長かつ大入力長の漸近設定で証明され、複数クラス・異種入力長は付録で構造を拡張するものの同じ単純条件が常に成立するわけではない。要求混合は十分なクラス重なりを必要とし、短いバーストや偏った到着では効果が弱い。率制限は平衡率を知る必要があり、実装の離散受入れ上限は調整が要る。",
-    "differences":"PagedAttentionやRadixAttentionはKVキャッシュの配置・共有・断片化を改善し、DistServeやSarathiは入力処理と逐次生成の資源干渉やバッチ形成を改善する。本論文は新しいKV記憶方式を提案するのではなく、そうした基盤でも『処理中にKV使用量が増える』という状態依存性が受入れと追い出しの帰還を作ることを解析する。既存のオンラインスケジューリング研究が平均スループット最適性や競合比を扱うのに対し、平衡点が存在しても局所的に不安定で極限周期へ落ちる条件を力学系として特定する点が異なる。さらに要求長の最大公約数という算術構造を、完了同期と安定性を診断する指標へ結びつける。",
-    "implementation_status":"理論・シミュレーション中心の研究で、独自本番サーバ実装は提示しない。モデルベースシミュレータ、Vidur上のSarathi派生受入れ制御、SGLangとNVIDIA A800 80GB上の実GPU試験で機構を検証する。一次資料から公式コード公開URLは確認できない。",
-    "research_positioning":"LLM配信のKVキャッシュ管理と連続バッチ処理を、待ち行列理論・離散力学系・安定性解析から扱う理論基盤研究である。メモリ制約を固定容量の可否条件として見るのではなく、サービス進行で各要求の占有量が増えるため将来容量が内生的に悪化する系として捉える。配信スケジューラの性能比較に対して、なぜ高利用率の貪欲方策が追い出し周期へ崩れるかを説明する失敗条件モデルを提供する。",
-    "relation_to_existing_repository":"llm-serving-scheduling-disaggregation系統のPagedAttention、Sarathi、DistServe、SGLangなどを補完し、KV容量の使い方と受入れ順序に対する理論的安定性基準を与える。特にメモリ使用量監視だけでなく、生成長分布・完了同期・追い出し率を制御信号として扱うべきことを示すため、キャッシュ効率化手法や分離サービングを評価する際の『高利用率でも不安定にならないか』という追加の観点になる。",
-    "audit_required":false
-  },
-  "reservation":{"claim_id":"claim-d3668d57a818e3151a950097","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-514ad57b9d8cf039e2f24bee",
+  "job_id": "job-research-fbca0f6d99c20b64",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-514ad57b9d8cf039e2f24bee",
+    "worker_id": "scheduled-chat-llm-discovery",
+    "worker_kind": "scheduled_chat"
+  }
 }
