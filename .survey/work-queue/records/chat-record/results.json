@@ -2,27 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-acdbd2cb06582cb45eb44d14",
-  "job_id": "job-research-cff945d042003c88",
-  "data": {
-    "overview": "50%程度の非構造疎性という従来カーネルが苦手だった領域で、提案カーネルはSputnik比平均3.92倍・最大5.29倍、SpInfer比最大1.64倍まで高速化し、現代HBM GPUで密行列積を上回る領域を作る。端から端までのOPT推論ではカーネル外処理が残るため差は縮むが、50%疎性のOPT-30BでFlashLLM比最大41.4%、SpInfer比最大26.1%、OPT-66Bでそれぞれ最大37.6%、20.2%のスループット向上を報告する。一方、高疎性や大Nプリフィルでは設計前提が崩れ、FlashLLMや密cuBLASへ劣る。",
-    "key_results": [
-      {"metric": "50%疎性の疎行列積", "value": "Sputnik比最大5.29倍、平均3.92倍", "baseline": "Sputnik", "condition": "H100、OPT由来行列、小Nデコード形状", "interpretation": "CUDAコア主体の汎用疎行列積に対して、疎テンソルコア利用とメタデータ削減が大きく効く。"},
-      {"metric": "50%疎性の疎行列積", "value": "最大1.82倍、1.81倍、1.64倍", "baseline": "それぞれSparTA、FlashLLM、SpInfer", "condition": "H100、OPT由来行列、小Nデコード形状", "interpretation": "テンソルコア系の既存手法に対しても、中程度疎性向けの格納形式と復号重畳が優位になる。"},
-      {"metric": "OPT-30B端から端までの推論スループット", "value": "FlashLLM比最大41.4%、SpInfer比最大26.1%向上", "baseline": "FlashLLMおよびSpInfer", "condition": "50%非構造疎性、バッチ8/16/32、入力512・出力512", "interpretation": "単体カーネルの改善が注意機構など他処理を含む実推論でも有意な高速化へつながる。"},
-      {"metric": "OPT-66B端から端までの推論スループット", "value": "FlashLLM比最大37.6%、SpInfer比最大20.2%向上", "baseline": "FlashLLMおよびSpInfer", "condition": "50%非構造疎性、入力512・出力512", "interpretation": "より大きいモデルでもデコード重み読み出しの削減効果が維持される。"},
-      {"metric": "60%疎性の端から端までの推論", "value": "FlashLLM比最大19.7%、SpInfer比最大27.4%向上", "baseline": "FlashLLMおよびSpInfer", "condition": "OPT-30B/66Bの60%非構造疎性", "interpretation": "50%だけでなく中程度からやや高い疎性にも有効だが、さらに高疎性では優位性が失われる。"},
-      {"metric": "OPT-30BピークGPUメモリ", "value": "密モデル比約21.4%削減", "baseline": "dense cuBLAS構成", "condition": "50%疎性、バッチ16", "interpretation": "重み圧縮により推論メモリも減るが、位置ビットマップが簡潔なSpInferよりはわずかに多い。"},
-      {"metric": "オフライン形式変換", "value": "OPT-30B 41.1秒、OPT-66B 92.6秒", "baseline": "変換なしの密重み", "condition": "Intel Xeon Platinum 8460Y+上の一回変換", "interpretation": "オンライン推論の高速化と引き換えに事前変換時間が必要だが、長時間サービングでは償却可能な一回費用である。"}
-    ],
-    "negative_results": [
-      {"name": "高疎性", "description": "高い疎性では多くの領域がゼロ埋めを必要とし、余剰非ゼロ値を空きスロットへ再配置する機会が減るため、FlashLLMを上回れない。"},
-      {"name": "大Nプリフィル", "description": "Nが大きく計算律速になると、提案方式はSpInferやFlashLLMと同様に密cuBLASより遅くなる。設計は小Nでメモリ律速のデコードに最適化されている。"},
-      {"name": "品質と疎性", "description": "50%非構造枝刈りでも密モデルと完全同一品質ではない。例えばRIAのWikiText-2困惑度はLLaMA-7Bで5.47から6.88、LLaMA-13Bで4.88から5.95へ悪化し、70%ではさらに急激に劣化する。"},
-      {"name": "メモリ最小化", "description": "提案形式は計算性能を優先しているため、単純なビットマップ中心のSpInferよりピークメモリがわずかに大きい条件がある。"}
-    ],
-    "interpretation": "50%前後では、単にゼロ値を省くだけでは位置メタデータと復号費が大きく、圧縮率だけでは密行列積に勝てない。提案方式は大部分の値をハードウェア2:4形式へ寄せ、例外だけを圧縮層と残差層へ追い出すことで、メタデータ量と復号仕事を同時に減らす。さらに復号をテンソルコア計算と重ねるため、HBMからの重み読み出しが支配的な小Nデコードでは圧縮分が実時間短縮へ反映される。逆に大Nではテンソル演算そのものが律速となり、疎形式の管理費が隠れなくなるため密cuBLASが有利になる。この境界から、プリフィルとデコードでカーネルを切り替える運用が自然である。",
-    "quality_impact": "格納形式とカーネルは枝刈り済み行列の全非ゼロ値を保持するので追加の数値近似はない。ただし高速化の前提となる重み枝刈りには品質損失がある。論文は2:4構造疎性や60〜70%非構造疎性より、約50%の非構造疎性で困惑度の悪化を比較的小さく保てることを示し、その『品質を保ちやすいが既存GPUカーネルでは速くしにくい領域』を主対象にしている。"
-  },
-  "reservation": {"claim_id": "claim-acdbd2cb06582cb45eb44d14", "worker_id": "scheduled-chat-paper-20260914T1430JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-e40333bc015f6e932d2b1e68",
+  "job_id": "job-research-9ac9e9ad81401213",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-e40333bc015f6e932d2b1e68",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
