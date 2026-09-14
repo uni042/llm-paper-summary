@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 08:54 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 09:11 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **120** |
+| 未処理の論文候補（Research ready） | **117** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **269** |
+| 全文精読完了（累計） | **272** |
 | 保守状態（Maintenance） | **pending** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -26,7 +26,6 @@
 ### 要注意
 
 - Maintenance が pending です。
-- 候補補充がResearch消化を大きく上回っています。ready在庫の増加を監視。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -36,9 +35,9 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **120** |
+| 未処理候補（Research ready） | **117** |
 | 処理中（Active claims） | **3** |
-| 今すぐ着手可能（Claimable） | **117** |
+| 今すぐ着手可能（Claimable） | **114** |
 | :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **1** |
@@ -47,9 +46,9 @@
 | 直近24h Research完了（:30 通常worker） | **5** |
 | 直近24h Research完了（:00 補助worker） | **5** |
 | 直近24h Research完了（帰属不明） | **7** |
-| 最新通常run | **2026-09-14T08:30:00+09:00** |
+| 最新通常run | **2026-09-14T05:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **54 min** |
+| 最古の有効claimの経過時間 | **71 min** |
 
 Research readyが **50本を超える間は`:00` workerも論文精読側** に回り、**50本以下になるとDiscovery優先へ戻ります**。`:30`通常workerは、readyが **25本以上** で処理可能なResearchがある間はResearch/Auditを優先します。
 
@@ -57,7 +56,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=120 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=117 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 - 直近24hのResearch完了のうち **7件** はclaim workerを復元できず、worker別集計では「帰属不明」としています。
 <!-- research-throughput-status:end -->
 
@@ -68,18 +67,18 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **17** |
 | Repo収録 | **62** |
 | Audit完了 | **0** |
-| 探索評価候補 | **171** |
-| Research候補採用 | **36** |
-| 重複除外 | **86** |
-| 重複率 | **50.3%** |
+| 探索評価候補 | **157** |
+| Research候補採用 | **34** |
+| 重複除外 | **82** |
+| 重複率 | **52.2%** |
 | :00 補助worker Discovery run（毎時枠） | **3** |
-| :00 補助worker Discovery round（stats観測） | **36** |
+| :00 補助worker Discovery round（stats観測） | **33** |
 | 通常worker run（ledger観測） | **13** |
 | Fallback archive（全helper） | **20** |
 
 ### 24時間の流れ
 
-**探索評価 171 → 重複除外後 85 → Research候補採用 36 → Research完了 17 → Repo収録 62**
+**探索評価 157 → 重複除外後 75 → Research候補採用 34 → Research完了 17 → Repo収録 62**
 
 ## 直近の通常worker
 
@@ -98,11 +97,11 @@ Run: **2026-09-14T08:30:00+09:00**
 
 `next-jobs.json` に見えている優先候補の先頭5件です。表示枠は処理量の上限ではありません。
 
-- P87 `arXiv:2604.09083` — EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices
-- P87 `arXiv:2604.20503` — FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving
 - P86 `arXiv:2505.14468` — ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
+- P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
+- P85 `arXiv:2603.22206` — Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs
 
 ## 参考情報
 
@@ -132,7 +131,6 @@ Run: **2026-09-13T11:00:00+09:00**
 | 新着LLM推論システム・通信／疎注意／多ターンKV | 7 | 4 | 3 | 57.1% | 42.9% |
 | CXL/SSD shared KV・tiered storage resource optimization | 6 | 5 | 1 | 83.3% | 16.7% |
 | GPU実行環境・collective通信・prefill/decode共存 | 6 | 5 | 1 | 83.3% | 16.7% |
-| production-autoscaling-disaggregated-serving-runtime | 6 | 4 | 2 | 66.7% | 33.3% |
 | 端末内LLM・OSメモリ圧力・Flash/NPU実行 | 6 | 2 | 3 | 33.3% | 50.0% |
 | 2609新着・KVキャッシュ・階層メモリ・ストレージ | 5 | 0 | 0 | 0.0% | 0.0% |
 | GPU runtime・kernel自動最適化とframework統合 | 5 | 4 | 1 | 80.0% | 20.0% |
@@ -148,9 +146,7 @@ Run: **2026-09-13T11:00:00+09:00**
 | KVページ圧縮・低ランク表現・GPUカーネル | 4 | 1 | 2 | 25.0% | 50.0% |
 | RDMA・分離サービング・KV転送 | 4 | 4 | 0 | 100.0% | 0.0% |
 | agentic serving・workflow-aware KV管理 | 4 | 4 | 0 | 100.0% | 0.0% |
-| moe-cache-aware-routing-expert-skipping-fine-grained-execution | 4 | 0 | 0 | 0.0% | 0.0% |
 | recent検索から重要基礎系譜への欠落確認 | 4 | 3 | 0 | 75.0% | 0.0% |
-| ssd-kv-cache-heterogeneous-gpu-serving-orchestration | 4 | 0 | 0 | 0.0% | 0.0% |
 | 分離サービングSLO・batch fairness・resource allocation | 4 | 2 | 1 | 50.0% | 25.0% |
 | 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA | 4 | 0 | 1 | 0.0% | 25.0% |
 | 投機的復号runtime・draft resource・CPU制約 | 4 | 2 | 2 | 50.0% | 50.0% |
