@@ -4,10 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-ef6bb2e2e1d5f5bb044a43ed",
   "job_id": "job-research-8f8cd2df2a210c58",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "differences": "Orca、Llumnix、DistServe、Sarathi-Serve、ServerlessLLMなどの既存サービング研究は主として推論要求同士のバッチ化、移行、プリフィル/デコード分離、レプリカ配置を最適化し、学習GPUは別資源として扱う。分散学習研究は逆にパイプライン・データ・モデル並列の学習効率を改善するが、オンライン推論SLOを同じ実行キューで扱わない。LeMixは継続再学習と推論を同一ノードへ共置し、タスク長から将来の前向き/後ろ向き軌跡を予測してノード配置を決め、さらに推論SLOとGPUメモリを実行時に保護する点が異なる。単なる空きGPUへのバックフィルではなく、品質更新速度、推論応答性、利用率の三目的を同じスケジューラで調整する。",
+    "novelty_vs_prior": "固定分離のSeparateでは推論の到着ギャップと学習パイプラインのバブルを相互利用できず、NaiveMixでは干渉を予測できない。LeMixは事前測定係数から各タスクをノードへ仮想挿入し、遊休増加量と応答時間を予測したうえで、入力長整合性を含むノード優先度、大域的な学習延期、段単位メモリ待機/CPU退避へ接続する点が新しい。",
+    "implementation_status": "vLLM、DeepSpeed、FlashAttentionを基盤とする実装を構築。Pythonの並行実行でパイプライン段をスレッド管理し、クラスタ大域キューとノード内メモリ-aware実行を実装して実機評価している。専用公開コードURLは一次資料では確認できない。",
+    "research_positioning": "LLMサービングの動的スケジューリングと継続学習/パイプライン並列学習の境界に位置する。推論専用クラスタと学習専用クラスタの静的分離を前提にせず、『学びながら提供する』構成で利用率・品質・応答期限を共同最適化する初期システム研究として有用。",
+    "relation_to_existing_repository": "LlumnixやDistServeなどの推論資源再配置研究へ、継続学習タスクという別種のGPU負荷を加えた隣接系統。KVキャッシュ研究とは、学習活性値とのメモリ競合時にKVをCPUへ退避する点で接続する。オフロード研究の観点では、LeMixのCPU退避は容量不足の最終手段であり、SSD/NVMe階層や退避先選択、転送先読みまでは最適化していないため、より深い階層メモリ制御を組み込む余地がある。",
+    "limitations": "実機評価は4ノード・8GPU規模で、GPT系とLlama系でハードウェアも異なる。クラスタ級スケジューラは150 RPS未満を想定し、超大規模サービスでは前段の負荷分散が別途必要。実行時間予測は入力長二乗とバッチサイズの簡潔なモデルに依存し、カーネル、量子化、並列方式が変わると再測定が必要。各ノードが独立に重み更新する方式は完全同期学習とは異なり、分散更新の収束特性は主題ではない。CPUへのKV/活性値退避はPCIe費用を伴うが、SSD/NVMeや複数メモリ階層との比較はない。専用コード公開URLがないため完全再現にも制約がある。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
 }
