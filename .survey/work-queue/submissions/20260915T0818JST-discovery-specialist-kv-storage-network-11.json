@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.03375",
+      "title": "Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving",
+      "source_url": "https://arxiv.org/abs/2605.03375",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.03375-tutti-ssd-backed-kv-cache-gpu-centric-io.md",
+      "priority": 96,
+      "reason": "長文脈servingでNVMe SSDへoffloadしたKV cacheの復元が、fragmented GPU memory由来の大量small random I/OとCPU介在でGPU stallを生む問題に対し、CPUをcritical data/control pathから外したGPU-centric KV object storeを提案する。GPU-native object abstraction、GPU io_uring、slack-aware I/O schedulingでNVMe帯域を飽和させつつGPU resource contentionを抑え、vLLMへ統合。GDS対応SSD-backed LMCache比でstrict SLO下TTFTを78.3%削減、request rateを2倍、serving costを27%削減し、DRAM-backed LMCacheに近い性能を実現する。SSD/NVMe、I/O scheduling、GPU-direct data pathという重点テーマの中心に位置する。"
+    },
+    {
+      "canonical_id": "arXiv:2607.28150",
+      "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+      "source_url": "https://arxiv.org/abs/2607.28150",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.28150-smartgen-selective-kv-cache-transfer.md",
+      "priority": 90,
+      "reason": "prefill/decode分離構成で巨大KV cacheの全量転送がlimited inter-node bandwidthを飽和させる問題に対し、必要KVだけを選択的に送る3-path transfer engineを設計する。profile-based proactive transferでprefill中に重要KVを先送りし、decode時はremote/local KVをparallel on-demand fetch、最終的にspeculative transferで残余を補う。full KV transfer比でtime-to-second-tokenを最大4.3倍改善し、その後のdecode性能とaccuracyを維持すると報告する。KV transfer量削減とprefetch/fetch schedulingを組み合わせるためdisaggregated servingのnetwork bottleneck研究として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2512.18194",
+      "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+      "source_url": "https://arxiv.org/abs/2512.18194",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2025-2512.18194-tract-cxl-shared-memory-kv-cache-rack-scale.md",
+      "priority": 92,
+      "reason": "prefill/decode間KV転送をRDMA network経由ではなくrack-scale CXL shared memoryへ置き換え、同じpoolをprefix-aware shared KV cacheとしても利用する。GPUがCXL load/store/DMAでKV blockを直接write/readしNIC hopを除去する一方、non-coherent CXLで必要な同期・整合性・data managementにtwo-tier inter-node synchronization等を導入し、Dynamo上へ実装する。RDMA/DRAM caching baseline比でaverage TTFT最大9.8倍、P99 latency最大6.2倍、peak throughput最大1.6倍改善し、CXLをKV transfer substrateとmemory tierの双方に用いる設計として重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-kv-storage-network-11",
+    "axis": "SSD-backed KV I/O・selective KV network transfer・CXL shared KV memory",
+    "query_summary": "外部KV階層とdisaggregated transferへ探索軸を戻し、Tutti（2605.03375）、SmartGen（2607.28150）、TraCT（2512.18194）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で3 IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だったためDiscovery専用のまま候補投入した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はCXL/photonic pooled memoryのKV管理、GPU-direct NVMe I/Oの近接研究、またはSSD-backed expert cacheへ探索を広げる。",
+    "empty_round_reason": null
+  }
+}
