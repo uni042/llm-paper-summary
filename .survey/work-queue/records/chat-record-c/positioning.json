@@ -2,16 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1bee06551c3e26fc2aadc68a",
-  "job_id": "job-research-1b8b272a10ca2e7f",
+  "attempt_id": "attempt-111a373b22118eb2383ab1da",
+  "job_id": "job-research-6cb2a2d661fb6b3a",
   "data": {
-    "limitations": "全トークンへ非ゼロの最低ランクを割り当てるため、VarRateにはおよそ10〜12%程度の最低メモリ予算があり、トークン削除法のように保持率をほぼゼロまで下げられない。共有低ランク基底は少数の未ラベル校正文脈からオフライン推定されるため、校正分布と大きく異なる専門領域で基底品質が維持されるかは十分検証されていない。現研究実装は圧縮係数から完全長KVを再構成して通常Attentionを実行するので、表現上のメモリ節約を実際のデコード帯域・容量向上へ変えるには可変ランクを直接処理する融合カーネルが必要である。KIVIなど数値量子化が一部の要約タスクで強く、VarRate単独が常に最高品質ではない。vLLM等のPagedAttention、継続バッチ、投機的デコードとの実サービス統合も今後の工学課題である。",
-    "differences": "SnapKV、Ada-KV、PyramidKVのような選択型は注意顕著度を『残す/捨てる』判断へ変換するのに対し、VarRateは同じ安価な信号を『何個の低ランク係数を残すか』へ変換する。そのためクエリが変わって顕著度判断が外れてもトークン自体は消えない。Paluのような低ランク法とは、全トークンを共有基底で表す点は近いが、Paluが一様ランクなのに対しVarRateは総予算の中でトークン別ランクをウォーターフィリングする。KVzipは再利用に強いクエリ非依存信号を得るため全文脈の再符号化を行うのに対し、VarRateは安いクエリ依存信号を使い続けながら、その誤りを不可逆にしないことで同等に近いロバスト性を約8分の1のプリフィル負荷で得る。量子化とは係数本数と係数ビット幅という別軸なので競合ではなく合成可能である。",
-    "implementation_status": "学習不要の実験実装があり、層別SVD基底の校正、プリフィル中のアンカー残差符号化、注意顕著度取得、可変ランク配分、完全KV再構成まで評価されている。追加FLOPは前向き計算の2.61%だが未融合FP32実装のプリフィル時間増加は44%。BF16版では約25.1%へ下がる。デコードは37.4 tok/s対Full 37.5 tok/sで、融合カーネルによる圧縮表現直接消費は未実装。論文固有の公開コードURLは確認できない。",
-    "research_positioning": "KVキャッシュ圧縮・メモリ管理系統に位置し、とくに接頭辞キャッシュや多ターン会話のような『一度作ったKVを複数クエリで再利用する』状況を重視する。重要度ベース削除と低ランク圧縮を、情報理論的な可変レート配分として統合した点が特徴である。階層メモリ研究の観点では、HBMに残すKV量を減らすだけでなく、どの情報を完全に失うかを避けることで、圧縮済み接頭辞を長期保持・共有しやすくする。SSD/NVMeへの直接オフロード手法ではないが、可変ランク係数を低速層へ保存し、必要時に段階的に復元する設計との相性がよく、トークン単位の重要度を容量配分へ使う発想は階層キャッシュにも移植可能である。"
+    "limitations": "本論文はarchitecture proposalにCacheScoutという一事例を組み合わせた予備的研究である。9つのagent-aware policyを同じ4 primitiveへ整理するが、実装・定量評価されたのはKV cachingだけで、batch shaping、disaggregated P/D placement、speculative agent execution、fairness、安全、retry等はopen challengeとして残る。評価はH100 1種類、Llama-3.1-8B 1モデル、AutoGen supervisor中心で、別framework・model・大規模clusterでの移植性は未検証である。さらにcache budget・concurrency感度、runtimeを無効化したablation、完全なmemory/latency microbenchmarkはextended versionへ延期されている。",
+    "differences": "ContinuumやTokencake、InferCeptはtool pauseやmulti-turn agentのKVをpin/migrateする特定のcache policyであり、KVFlowはdeploy時にagent step graphを宣言してevictionを最適化する。CacheScoutはlive dispatchからtransitionを学び、workloadごとに変わるroutingへ適応する。より重要なのは、論文がCacheScoutだけを目的とせず、agent-level metadataとengine eventを統合する独立runtime tierを置く点である。AutellixやAgent.xpuのようにagent-aware schedulingをengine内部へ直接実装する方式と比べ、policyごとのengine surgeryを4 primitiveのhookへ局所化することを狙う。",
+    "implementation_status": "CacheScout case studyはNVIDIA H100上のvLLM系cacheへ接続して実測され、transition learner、survival scorer、cross-session prefetchを実装している。block touch observeとeviction score consultの2 engine hookを使い、prefetchはnormal serving pathを通る。一方、runtime layerが列挙する他8 policyは完成実装ではなく、著者公式code repositoryのURLも本文・arXiv関連欄で確認できない。",
+    "research_positioning": "エージェント型LLMサービングにおけるsemantic/runtime gapを埋めるmiddleware・control-plane研究として位置付けられる。従来のscheduler、KV cache、speculation研究が個別にagent情報を取り込むのに対し、agent identityを共通座標として複数policyへ再利用可能なruntime abstractionを提案する。KV研究としてはcross-session prefix reuseとpredictive eviction/prefetchの系統であり、serving architectureとしてはframeworkとengineの間にpolicy control layerを追加する提案である。",
+    "relation_to_existing_repository": "Tokencake、Continuum、InferCept、KVFlow等のagent-aware KV管理に対し、CacheScoutは静的TTLや宣言済みgraphではなくonline transition predictionを用いる点で差別化される。Autellix等のagent scheduling、PASTE/Sherlockのspeculative tool/agent executionとは、同じobserve/predict/act substrateへ統合できるという上位抽象を提示する。SSD/NVMe階層へは直接踏み込まないが、agent transitionを将来KV需要のsignalとして使えば、GPU保持だけでなくDRAM/SSDからのprefetchやtier placementにも拡張できるため、階層memory研究のpolicy inputとして有用である。",
+    "audit_required": true,
+    "audit_reason": "現版はpreliminary evaluationで、著者自身がcache budget・concurrency sensitivity、runtime-disabled ablation、full microbenchmarkをextended versionへ延期している。今後の改訂でこれらが追加される可能性が高く、公式code公開有無とともに再監査価値がある。"
   },
   "reservation": {
-    "claim_id": "claim-1bee06551c3e26fc2aadc68a",
+    "claim_id": "claim-111a373b22118eb2383ab1da",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }

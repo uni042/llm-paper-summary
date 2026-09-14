@@ -2,38 +2,37 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1bee06551c3e26fc2aadc68a",
-  "job_id": "job-research-1b8b272a10ca2e7f",
+  "attempt_id": "attempt-111a373b22118eb2383ab1da",
+  "job_id": "job-research-6cb2a2d661fb6b3a",
   "data": {
-    "hardware": "Llama-3.1-8B、Qwen2.5-7Bを中心に長文脈推論を評価。公開一次メタデータからGPU型番は確実に確認できないため特定しない。",
-    "software": "学習不要VarRateコーデックの研究実装。層別SVD基底を校正時に作成し、プリフィルで顕著度ベースの可変ランク係数へ符号化。現性能実装はデコード時に完全長KVへ再構成する。",
-    "models": [
-      "Llama-3.1-8B",
-      "Qwen2.5-7B",
-      "Mistral-7B-Instruct-v0.2"
-    ],
-    "datasets": [
-      "LongBench 16 tasks",
-      "passage retrieval subsets",
-      "summarization subsets",
-      "query-agnostic reuse settings"
+    "hardware": "NVIDIA H100 80GB GPU。",
+    "software": "Llama-3.1-8B-Instruct、AutoGen SelectorGroupChat、vLLMを基盤とする。CacheScoutはblock touchのobserve転送とeviction時のscore参照を主なエンジンフックとして追加する。",
+    "methodology": "MMLU、MT-Bench、GAIA、GSM8Kの4実タスクを同じ6-agent supervisor構成で実行し、さらに遷移構造が強い12-agent合成chainをstress caseとして加える。実タスクは並行度4・120-block cache budget、合成は並行度1・250-block budget。各workload 50 task trace、合計948〜1417 turnを使う。vLLMとContinuumを比較対象にし、cached_tokens/prompt_tokensでhit rate、turn単位end-to-end latency、turns/s throughputを測る。workload characterizationではfirst-turn agent anchor比率と条件付きentropy reductionも測定する。",
+    "scope": "キャッシュが実際に圧迫される小さなblock budgetを意図的に設定し、cross-session anchor保持の効果を測る。主要モデル・GPUは1種類で、5 workloadのうちSyntheticは実タスクではない。論文自身が結果をpreliminaryと呼び、完全なmemory/latency microbenchmark、cache budget・concurrency sensitivity、runtime disabled時挙動はextended versionへ延期している。",
+    "workloads": [
+      "MMLU multi-agent trace",
+      "MT-Bench multi-agent trace",
+      "GAIA multi-agent trace",
+      "GSM8K multi-agent trace",
+      "12-agent Synthetic chain"
     ],
     "baselines": [
-      "Full KV",
-      "SnapKV",
-      "Ada-KV",
-      "PyramidKV",
-      "Palu",
-      "uniform-rank ablation",
-      "KVzip",
-      "KIVI-2",
-      "KIVI-4"
+      "unmodified vLLM",
+      "Continuum KV cache TTL scheduling"
     ],
-    "methodology": "主要比較はKVキャッシュを非圧縮比20%へ揃え、LongBenchの16タスクで平均スコアを測る。VarRate、一様低ランク、選択型、量子化系を可能な限り同一メモリ条件で比較する。VarRateの共有基底は六つの未ラベル校正文脈からSVDで作り、追加学習やタスクラベルを使わない。再利用耐性では、あるクエリで圧縮したKVキャッシュを異なる後続クエリへ再利用し、最初の注意顕著度が陳腐化したときの性能低下を測る。KVzipとは精度だけでなく、コンテキスト再符号化を含むプリフィル負荷も比較する。アブレーションでは顕著度をランダム信号へ置換、一様ランク化、ウォーターフィリングを上位/下位の二値配分へ置換して、重要度信号と連続的ランク配分の寄与を分離する。実装コストは追加FLOP、プリフィル時間、デコードトークン毎秒、取得中心/要約中心ワークロードのエンドツーエンド時間で測る。Mistral-7B-Instruct-v0.2でも主要傾向を交差検証する。",
-    "scope": "長文脈のKVメモリ容量と再利用品質が中心。現実装は圧縮表現をAttentionカーネルが直接読むものではないため、論文が報告するメモリ予算は表現上の保存量であり、融合カーネルなしのデコード速度改善は限定的。低ランク基底の校正分布依存性、極端に低い予算、実サービングでのページ化KVとの統合は追加検証が必要。"
+    "metrics": [
+      "GPU KV cache hit rate",
+      "turn単位end-to-end latency",
+      "throughput turns/s",
+      "first-turn shareable anchor fraction",
+      "next-agent conditional entropy reduction",
+      "runtime hot-path overhead",
+      "coordinator state size"
+    ],
+    "reproducibility": "GPU、model、framework、concurrency、block budget、trace数、遷移閾値tau=0.01、prediction weight=1.0、agent ID hashのskip=4/take=4など主要設定は本文にある。一方、著者公式コードURLと完全なmicrobenchmark・感度評価は現版で示されず、再現性は部分的である。"
   },
   "reservation": {
-    "claim_id": "claim-1bee06551c3e26fc2aadc68a",
+    "claim_id": "claim-111a373b22118eb2383ab1da",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }

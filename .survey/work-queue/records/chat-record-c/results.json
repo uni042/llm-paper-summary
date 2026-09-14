@@ -2,67 +2,60 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1bee06551c3e26fc2aadc68a",
-  "job_id": "job-research-1b8b272a10ca2e7f",
+  "attempt_id": "attempt-111a373b22118eb2383ab1da",
+  "job_id": "job-research-6cb2a2d661fb6b3a",
   "data": {
-    "overview": "同一20% KVメモリ予算のLongBench 16タスクで、VarRateはLlama-3.1-8Bで45.69、Qwen2.5-7Bで48.00を達成し、いずれも非圧縮モデルから0.8点以内に収まる。一様ランク版に対してはそれぞれ2.22点、17.50点改善し、Paluを評価予算全体で上回る。圧縮済みキャッシュを別クエリへ再利用すると、注意顕著度を使ってトークンを完全削除する選択型は11〜15点低下するのに対し、VarRateは全トークンを最低ランクで残すため3.53〜5.50点の低下に抑える。再利用専用のKVzipとは4条件中3条件で同等水準、全体でも概ね1点以内で、プリフィル負荷はVarRate +44.0%に対しKVzip約+372%で約8分の1である。",
+    "overview": "CacheScoutは5 workloadすべてでvLLM/Continuumより高いKV hit rateと低いturn latencyを示した。vLLM比hit rate改善は13〜37ポイント、本文Figure 4説明ではend-to-end latencyを6〜26%削減、throughputを6〜14%改善する。abstractはmean TTFTについて12〜29%低減と要約しており、指標表現が本文Figure説明と異なるため区別して記録する。agent anchorはfirst turn promptの34〜52%を占め、current agentを条件にするとnext agent不確実性は40〜48%減るため、予測保護の利用可能面が実測されている。hot path overheadはblock touch observe平均約1µs、BFS scorerはsingle-digit µs、24 agentsでもcoordinator state 25KB未満である。",
     "key_results": [
       {
-        "metric": "LongBench平均",
-        "value": "45.69",
-        "baseline": "uniform-rank 43.47",
-        "condition": "Llama-3.1-8B、20% KV予算、16タスク",
-        "interpretation": "同じ保存量でも重要トークンへ多くのランクを配ることで2.22点改善し、非圧縮との差を0.8点以内に保つ。"
+        "metric": "KV cache hit-rate lift",
+        "value": "+13〜+37 percentage points",
+        "baseline": "unmodified vLLM",
+        "condition": "5 multi-agent workloads",
+        "interpretation": "通常LRUがsession boundaryで落とすagent anchorを、次agent予測で保護・prefetchすることでcross-session reuseを回収する。"
       },
       {
-        "metric": "LongBench平均",
-        "value": "48.00",
-        "baseline": "uniform-rank 30.50",
-        "condition": "Qwen2.5-7B、20% KV予算、16タスク",
-        "interpretation": "一様低ランクが厳しいモデルでも可変ランク配分が17.50点回復させ、容量配分の重要性を示す。"
+        "metric": "end-to-end per-turn latency",
+        "value": "6〜26% reduction",
+        "baseline": "vLLM/Continuum",
+        "condition": "Figure 4, 5 workloads",
+        "interpretation": "cache hit増加によりprefill再計算が減り、全workloadでlatency改善を報告する。abstractのmean TTFT 12〜29%という別指標の要約とは分けて読む必要がある。"
       },
       {
-        "metric": "クエリ非依存再利用での性能低下",
-        "value": "3.53〜5.50点",
-        "baseline": "query-aware token selectionは11〜15点低下",
-        "condition": "最初のクエリで圧縮したKVを別クエリで再利用",
-        "interpretation": "誤って低重要度と判定したトークンも最低ランクで残るため、重要度信号が陳腐化しても不可逆な情報消失を避ける。"
+        "metric": "throughput",
+        "value": "+6〜+14%",
+        "baseline": "unmodified serving stack",
+        "condition": "5 workloads",
+        "interpretation": "anchor再計算削減がGPU処理余力を増やし、turn/sを改善する。"
       },
       {
-        "metric": "プリフィル時間オーバーヘッド",
-        "value": "+44.0%",
-        "baseline": "selection +2.0%、uniform/flat low-rank +24.4%、KVzip約+372%",
-        "condition": "研究実装",
-        "interpretation": "現在の未融合FP32実装では低ランク符号化の壁時計コストがあるが、KVzipの再符号化より大幅に軽い。"
+        "metric": "first-turn shareable surface phi",
+        "value": "0.34〜0.52",
+        "baseline": "なし",
+        "condition": "5 real multi-agent workloads characterization",
+        "interpretation": "各session冒頭promptの3〜5割がsystem+tools+few-shot anchorとしてcross-session reuse可能で、最適化対象が無視できない。"
       },
       {
-        "metric": "追加FLOP",
-        "value": "前向き計算1回の2.61%",
-        "baseline": "非圧縮プリフィル",
-        "condition": "VarRate codec",
-        "interpretation": "44%の実測プリフィル増加の多くは未融合実装由来で、演算量そのものは比較的小さい。BF16制御版ではオーバーヘッドが約25.1%まで低下し精度は維持される。"
+        "metric": "relative conditional entropy reduction R",
+        "value": "0.40〜0.48",
+        "baseline": "current-agent情報なしのnext-agent entropy",
+        "condition": "5 workloads",
+        "interpretation": "一次Markovだけでもnext-agent uncertaintyの40%以上を除けるため、複雑なsequence predictorなしでcache policy信号が得られる。"
       },
       {
-        "metric": "デコードスループット",
-        "value": "37.4 tok/s",
-        "baseline": "Full KV 37.5 tok/s",
-        "condition": "完全長KVへ再構成する現実装",
-        "interpretation": "圧縮表現を直接Attentionが消費していないため速度改善はほぼなく、メモリ削減を実機利得へ変えるには融合カーネルが必要。"
-      },
-      {
-        "metric": "Mistral passage retrieval",
-        "value": "73.6",
-        "baseline": "Full 75.6、uniform-rank 29.1",
-        "condition": "Mistral-7B-Instruct-v0.2、15% KV予算",
-        "interpretation": "モデル系列を変えても、一様ランクの崩壊を可変配分が大きく回復する傾向を再現する。"
+        "metric": "runtime overhead",
+        "value": "observe 約1µs/block-touch、BFS scorer single-digit µs、state <25KB at 24 agents",
+        "baseline": "なし",
+        "condition": "CacheScout runtime",
+        "interpretation": "予測方針自体のhot-path負担は小さく、cache利得を大きく相殺しない。"
       }
     ],
-    "negative_results": "最低ランクを全トークンへ保証するため、利用可能なメモリ予算にはおよそ10〜12%の下限があり、選択型のように任意に小さな保持率へ落とすことはできない。KIVI-4は実際には約31%のメモリを使うため20%条件と厳密には同一ではないが、要約タスクではVarRateより強い場合があり、VarRateが全圧縮方式を一律に上回るわけではない。ランダム顕著度へ置換するとpassage retrievalが約6.5点低下し、ウォーターフィリングを上位トークン高ランク・残り最低ランクという二値配分へ変えると、取得では競争力を保っても要約は29.0となり一様ランク30.1を下回る。情報が文脈全体へ分散するタスクでは、低重要度側にも段階的な容量を残す必要がある。",
-    "interpretation": "結果は『顕著度推定を完全に正しくする』必要がないことを示す。選択型では一度の誤判定がトークン消失になるため再利用時に破綻するが、VarRateでは誤判定はそのトークンを低解像度へ落とすだけである。共有直交基底ではランクを追加するほど再構成誤差が単調に減るため、注意顕著度を細かなランク差へ変換するだけでメモリを重要箇所へ集中できる。アンカー、最近窓、内容依存の中間領域へ高ランクが自然に配られる観測も、この機構が位置固定ではなく入力ごとの情報分布へ適応していることを示す。",
-    "quality_impact": "20%という強い圧縮でも非圧縮から0.8点以内を維持し、特に再利用時のロバスト性が主要利点である。一方、圧縮率を極端に下げると全トークン最低ランクの固定費が支配的になり、量子化が得意な一部要約では品質優位を持たない。"
+    "negative_results": "ContinuumのTTL pinは4実タスク中3つでhit rateを9〜23ポイント下げたと報告され、固定時間の保護が短いinter-turn timescaleと合わない場合にcache pollutionを起こす。CacheScoutについても、評価は予備的であり、full memory/latency microbenchmark、cache budgetとconcurrency sensitivity、runtime disabled時挙動を今後へ延期している。九つの提案方針のうち実測したのはKV cacheだけであり、batching・fairness・safety等の一般性は設計仮説の段階である。",
+    "interpretation": "利得の源泉はagent-aware情報をcache keyそのものに置き換えることではなく、block hashによる正しい保存・照合を維持したまま、agent identityを将来利用価値のprediction keyとして追加することにある。session内部では既存prefix cacheが十分に働くが、session間ではrecency gapがanchorを追い出す。Markov transitionがそのgapを跨ぐ追加信号になるため、特にsession開始時のTTFTを改善する。静的TTLと異なりworkloadごとのtransitionをonline学習し、構造が弱い時にLRUへ退化することが過保護を抑える。",
+    "quality_impact": "生成品質を近似・圧縮する手法ではないため、論文はaccuracy degradationを主要結果として扱わない。ただしprefetchは予測agentの通常warmup requestを発行するため、誤予測時には余分な計算とcache占有が生じる可能性がある。cache eviction順序が変わることで他promptのhit機会にも影響し得るため、性能品質としてはhit-rate・latency・fairnessの感度評価が今後必要である。"
   },
   "reservation": {
-    "claim_id": "claim-1bee06551c3e26fc2aadc68a",
+    "claim_id": "claim-111a373b22118eb2383ab1da",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
