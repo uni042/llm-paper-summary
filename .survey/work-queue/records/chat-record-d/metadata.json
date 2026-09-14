@@ -9,78 +9,36 @@
     "arxiv_id": "2609.02027",
     "doi": "10.48550/arXiv.2609.02027",
     "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.PF",
-      "cross_list": [
-        "math.PR"
-      ]
-    },
+    "arxiv_categories": {"primary":"cs.PF","cross_list":["math.PR"]},
     "title": "Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation",
-    "summary": "多ターンLLMでは会話履歴のKVキャッシュがターンごとに増え、有限HBMではLRU退去が発生するため、どれだけ既存KVを再利用できるかを表すヒット率の容量依存性を事前に見積もることが難しい。本論文は、会話到着、ターン数、各ターンのKVブロック増分、次ターンまでの待ち時間を確率変数として表すMulti-Turn Conversation Modelを構築し、会話到着率とHBM容量を比例拡大する平均場極限で、LRUヒット率が明示的な極限式へ収束することを証明する。実装上の部分ブロック非再利用も補正した実用推定器を導き、Qwen3-8B、Ascend 910B2 NPU 5台、vLLM-AscendとMooncakeによるP/D分離環境でShareGPT 5,000会話を用いて検証した。推定器は到着率やターン間隔によるヒット率低下を追従し、実現ターン間隔が想定に近い条件では相対誤差10%未満、到着率を0.5〜2.0へ変える評価では絶対誤差0.015未満・相対誤差7%未満を報告する。",
-    "list_summary": "多ターン会話のLRU型KVキャッシュを確率モデル化し、HBM容量と会話到着率からヒット率を推定する平均場式を導出。Qwen3-8B/Ascend実験で到着率0.5〜2.0の条件において絶対誤差0.015未満・相対誤差7%未満を確認する。",
-    "authors": [
-      "Heyuan Yao",
-      "Chutong Gao",
-      "Yuan Lyu",
-      "Izzy Grosof",
-      "David Simchi-Levi"
-    ],
+    "summary": "多ターン型の大規模言語モデルサービスでは、会話履歴の鍵値キャッシュがターンごとに増え、有限の高帯域メモリでは最終使用時刻が古い会話から追い出される。このため、どれだけ既存履歴を再利用できるかを示すヒット率を容量から予測するのが難しい。本論文は、会話到着、ターン数、各ターンの鍵値ブロック増分、次ターンまでの待ち時間を確率変数として表す多ターン会話モデルを構築し、会話到着率とメモリ容量を比例して大きくする平均場極限で、ヒット率が明示的な極限式へ収束することを証明する。実装上、各ターン末尾の未充填ブロックは接頭辞一致で再利用できない点も補正した実用推定器を導く。Qwen3-8BをAscend 910B2 NPU 5台で動かし、前処理と生成を分離した環境でShareGPT 5,000会話を測定した結果、会話到着率を0.5〜2.0毎秒へ変える条件で絶対誤差0.015未満、相対誤差7%未満を報告する。",
+    "list_summary": "多ターン会話の最終使用時刻型鍵値キャッシュを確率モデル化し、メモリ容量と会話到着率からヒット率を推定する平均場式を導出。Qwen3-8B実機評価で到着率0.5〜2.0毎秒の条件において絶対誤差0.015未満・相対誤差7%未満を確認する。",
+    "authors": ["Heyuan Yao","Chutong Gao","Yuan Lyu","Izzy Grosof","David Simchi-Levi"],
     "authors_affiliations": "Northwestern University; Purdue University; HKUST",
     "published": "2026-09-02",
     "publication": "arXiv:2609.02027v1",
     "publication_type": "プレプリント",
     "publication_status": "2026-09-02にarXiv v1提出。一次資料上で査読済み採録先は確認できない。",
     "lineage": "kv-cache-optimization-compression",
-    "topics": [
-      "多ターン会話",
-      "KVキャッシュ",
-      "LRU",
-      "平均場解析",
-      "ヒット率推定",
-      "HBM容量設計",
-      "P/D分離"
-    ],
-    "importance": "中〜高。新しいKV圧縮方式ではなく、既存LRU管理下で必要HBM容量と再利用率を理論的に結びつける容量計画手法であり、経験的チューニングが中心だった多ターンprefix reuseに解析的な基準を与える。",
-    "hardware_evaluation": "Qwen3-8Bを5台のAscend 910B2 NPUでBF16実行。1台をprefill、4台をdecode poolとし、各NPUは約64GB HBM。prefillerの40GBをKVキャッシュ専用に割り当て、128-token block、18MB/blockとして2,275ブロックを収容する。",
-    "hardware_details": "vLLM v0.22.1、vLLM-Ascend v0.22.1rc1、Mooncake v0.3.9を使用。ShareGPTの6,000会話のうち1,000会話をwarm-up、5,000会話を測定に利用。",
-    "quality_effect": "モデル出力品質を近似・変更する方式ではなく、KVヒット率を推定する解析・容量設計手法であるため、生成品質への直接影響は評価対象外。実験では既存ShareGPT応答長を再現してKVワークロードを保持する。",
-    "storage_targets": [
-      "prefiller HBM上の会話履歴KVブロック",
-      "LRU順序で管理される会話prefix",
-      "再利用可能なhashable prefix blocks"
-    ],
-    "bottlenecks": [
-      "有限HBMによる会話履歴KVの退去",
-      "ターン進行に伴うKV履歴サイズ増大",
-      "会話到着率と次ターン待ち時間が絡むLRUヒット率の予測困難性",
-      "容量過小時のreprefillまたは下位ストレージ取得"
-    ],
-    "evidence_locations": [
-      "§1 Introduction",
-      "§2 The Model",
-      "§3 Main results",
-      "§4 LLM Serving Experiments",
-      "Appendix C.2",
-      "Appendix E"
-    ],
+    "topics": ["多ターン会話","鍵値キャッシュ","最終使用時刻型退去","平均場解析","ヒット率推定","高帯域メモリ容量設計","前処理・生成分離"],
+    "importance": "中〜高。新しい圧縮方式ではなく、既存の最終使用時刻型管理を前提として必要メモリ容量と再利用率を理論的に結びつける。経験的調整が中心だった多ターン接頭辞再利用に解析的な容量設計基準を与える。",
+    "hardware_evaluation": "Qwen3-8Bを5台のAscend 910B2 NPUでBF16実行。1台を前処理、4台を生成側とし、各NPUは約64GB HBM。前処理側の40GBを鍵値キャッシュ専用に割り当て、128トークン単位、約18MB/ブロックとして2,275ブロックを収容する。",
+    "hardware_details": "vLLM v0.22.1、vLLM-Ascend v0.22.1rc1、Mooncake v0.3.9を使用。ShareGPTの6,000会話のうち1,000会話を事前充填、5,000会話を測定に利用する。",
+    "quality_effect": "モデル重みや生成アルゴリズムを近似する方式ではなく、鍵値キャッシュのヒット率を推定する解析・容量設計手法であるため、生成品質への直接影響は評価対象外である。",
+    "storage_targets": ["前処理側高帯域メモリ上の会話履歴鍵値ブロック","最終使用時刻順で管理される会話接頭辞","再利用可能な接頭辞ブロック"],
+    "bottlenecks": ["有限高帯域メモリによる会話履歴の退去","ターン進行に伴う履歴サイズ増大","会話到着率と次ターン待ち時間が絡むヒット率予測の難しさ","容量不足時の再前処理または下位記憶からの取得"],
+    "evidence_locations": ["§1 Introduction","§2 The Model","§3 Main results","§4 LLM Serving Experiments","Appendix C.2","Appendix E"],
     "source": "https://arxiv.org/abs/2609.02027",
-    "sources": [
-      "https://arxiv.org/abs/2609.02027",
-      "https://arxiv.org/pdf/2609.02027"
-    ],
+    "sources": ["https://arxiv.org/abs/2609.02027","https://arxiv.org/pdf/2609.02027"],
     "code": "",
     "implementation": "vLLM-AscendとMooncakeを用いた実機検証を実施しているが、一次資料から本研究専用コードの公開URLは確認できない。",
     "last_checked": "2026-09-15",
     "references_checked_at": "2026-09-15",
     "references_source": "arXiv一次資料References節",
-    "references_total": null,
+    "references_total": 0,
     "references": [],
     "last_audited": null,
     "audit_version": 0
   },
-  "reservation": {
-    "claim_id": "claim-c2341532b0b52ab5132ae3fb",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-c2341532b0b52ab5132ae3fb","worker_id":"scheduled-chat-llm-discovery-20260915T0000JST","worker_kind":"scheduled_chat"}
 }
