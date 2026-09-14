@@ -2,93 +2,135 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-5a6cdfba59781dc162c5a76f",
-  "job_id": "job-research-5f4ffec07da19fbd",
+  "attempt_id": "attempt-874bf6fd581295f5dd4ca3a1",
+  "job_id": "job-research-b045bf747f93dbbe",
   "data": {
-    "canonical_id": "arXiv:2607.01579",
-    "arxiv_id": "2607.01579",
-    "doi": "10.48550/arXiv.2607.01579",
+    "canonical_id": "arXiv:2603.18897",
+    "arxiv_id": "2603.18897",
+    "doi": "10.48550/arXiv.2603.18897",
     "openreview_id": null,
     "arxiv_categories": {
       "primary": "cs.DC",
       "cross_list": []
     },
-    "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters",
-    "summary": "共有された異種GPUクラスタで大規模言語モデルを起動する際、GPU種類、テンソル並列度、数値精度の組合せはモデルごとに性能・メモリ・失敗率が非単調に変わるため、固定ルールでは高価な誤配置が起きる。OmniPilotは約28個の構成・負荷特徴からスループット、先頭トークン遅延、起動時間、KVキャッシュ量、電力などを分位点回帰で予測し、適合予測で区間を校正したうえで経済的効用により候補構成を順位付けする。さらに既知の測定領域から離れた要求は支持集合距離で検出して回答を控えるため、未知構成で過信した推薦を出しにくい。460回のA100/H100/H200実測では集約スループット誤差6.2%、構成選択の上位1位正解率95%、平均効用後悔0.003を報告する。",
-    "list_summary": "GPU種類・テンソル並列度・精度を実測ベースの不確実性付き費用モデルで順位付けし、未知領域では推薦を控える起動助言器。460実測でスループット誤差6.2%、上位1位正解率95%を示す。",
+    "title": "Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving",
+    "summary": "LLMエージェントは通常、LLMが道具呼出しを生成し終えてから外部道具を起動し、その結果が戻るまで次のLLM生成を始めないため、推論と道具実行が直列化される。PASTEは、過去の実行履歴から繰り返し現れる道具列と引数の依存関係を学び、次に実行される具体的な道具呼出しをLLM生成中に投機実行する。投機結果は隔離し、権威的なLLM出力と一致した場合だけ再利用するため、最終出力の意味を変えず待ち時間を重ねられる。さらに、道具処理を速くし過ぎると多数sessionが同時にGPUへ戻ってLLM待ち行列を悪化させる問題を、LLM圧力と道具側の露出遅延削減量を用いる共同スケジューラで制御する。32基A100の実機環境で、平均タスク完了時間を最大43.5%、p99を最大55.4%削減し、道具側平均遅延を最大55.2%削減する。",
+    "list_summary": "過去の道具列と引数依存から次の具体的な道具呼出しを投機実行し、LLM待ち行列圧力も見ながら道具実行と生成を重ね、平均完了時間を最大43.5%削減する。",
     "authors": [
-      "D. Balamurugan",
-      "Thomas W. Bush"
+      "Yifan Sui",
+      "Han Zhao",
+      "Rui Ma",
+      "Zhiyuan He",
+      "Hao Wang",
+      "Kaiqiang Xu",
+      "Kai Chen",
+      "Jianxun Li",
+      "Yuqing Yang"
     ],
-    "authors_affiliations": "Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University",
-    "published": "2026-07-02",
-    "publication": "arXiv",
+    "authors_affiliations": "Shanghai Jiao Tong University; Microsoft Research; Stevens Institute; Google; Hong Kong University of Science and Technology",
+    "published": "2026-03-18",
+    "publication": "arXiv:2603.18897v3",
     "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "異種GPUクラスタ／LLMサービング構成選択／性能予測／不確実性校正",
+    "publication_status": "arXiv v3（2026-06-16）。一次資料では2026年conference表記があるが会議名が示されないため、査読付き採録先は未確認。",
+    "publication_version": "v3 (2026-06-16)",
+    "lineage": "エージェント型LLMサービング／投機的道具実行／LLM・道具共同スケジューリング",
     "topics": [
-      "異種GPU",
-      "LLMサービング",
-      "構成選択",
-      "テンソル並列",
-      "量子化",
-      "性能予測",
-      "不確実性校正",
-      "分布外検出"
+      "エージェント型LLM",
+      "投機的道具実行",
+      "道具呼出し予測",
+      "LLM・道具並列化",
+      "共同スケジューリング",
+      "vLLM",
+      "低遅延エージェント配信"
     ],
-    "importance": "実行中の細粒度スケジューリングではなく、ジョブ投入前にGPU種類・並列度・精度をまとめて選ぶ上位層の助言問題を扱う。量子化やKV圧力、起動成功率の非単調な相互作用を実測から学び、未知領域では推薦を拒否するため、異種GPU環境の安全な自動構成選択を既存サービング系統へ補完する。",
-    "hardware_evaluation": "NVIDIA A100 40 GB、H100 80 GB、H200 141 GBを用いた単一ノードvLLM実測を中心に、モデル群、テンソル並列度1/2/4/8、BF16・FP8・AWQ・GPTQの4精度を横断して評価する。主評価は460行・約65ワークロードセルで、後続更新では476行・66セルも報告する。",
-    "quality_effect": "モデル品質そのものを変更する手法ではないが、推薦候補にはBF16、FP8、AWQ、GPTQが含まれるため、選択した精度が品質へ影響し得る。論文の効用関数は主に性能・費用・起動失敗・SLO・KV飽和を扱い、生成品質の直接測定は主評価に含まれない。したがって低精度構成の品質要件は運用側で別途制約すべきである。",
-    "source": "https://arxiv.org/abs/2607.01579",
-    "sources": [
-      "https://arxiv.org/abs/2607.01579",
-      "https://arxiv.org/pdf/2607.01579"
-    ],
-    "code": null,
-    "implementation": "vLLM 0.11.2上の実測データと勾配ブースティング分位点回帰、適合予測、支持集合距離による棄却、効用計算を組み合わせたプロトタイプとして評価する。論文はプロジェクト用コード／データの存在を述べるが、本文からOmniPilot専用の公式公開URLは確定できなかったためcodeはnullとする。",
-    "last_checked": "2026-09-14",
+    "importance": "従来の投機的復号がLLM内部のtoken生成を先読みするのに対し、PASTEはエージェントworkflowの外部道具段階まで投機対象を広げる。さらに道具側だけを最短化するとGPUへの帰還集中で逆に全体遅延が悪化し得ることを示し、LLMとCPU・外部サービスを単一の閉ループ資源として扱う点が重要である。",
+    "hardware_evaluation": "4ノード、各ノードAMD EPYC 7V13 96 vCPU、512 GBメモリ、NVIDIA A100 80 GBを8基、合計32 GPU。vLLM上で実機評価する。",
+    "hardware_details": "Deep ResearchではQwen-DeepResearch-30B、coding/science系ではQwen3-30B-A3Bを使用。道具実行はCPU・外部サービス側で行い、LLM workerはvLLMへ接続する。",
+    "quality_effect": "投機結果は権威的なLLM道具呼出しと一致した場合だけ利用し、副作用を持つ道具はdry-run、staging、非変更版など安全な形でのみ投機する。2万件超の投機中、潜在的に副作用のある602件はすべてcommitを防ぎ、比較対象との最終出力差を観測しなかった。",
     "storage_targets": [
-      "GPU HBM/VRAM",
-      "KVキャッシュ"
+      "投機道具結果キャッシュ",
+      "vLLMのKVキャッシュ",
+      "道具呼出し履歴・pattern metadata"
     ],
     "bottlenecks": [
-      "異種GPU間の非単調な性能差",
-      "テンソル並列度ごとの起動失敗率",
-      "量子化形式ごとの性能差",
-      "KVキャッシュ飽和",
-      "未知構成への外挿"
+      "LLM生成と道具実行の直列待ち",
+      "道具実行の露出遅延",
+      "投機成功後のGPU帰還burst",
+      "LLM待ち行列とKV圧力",
+      "副作用を伴う道具の安全な投機"
     ],
-    "hardware_details": "A100 40 GB、H100 80 GB、H200 141 GB。単一ノードvLLM 0.11.2。テンソル並列度1/2/4/8、BF16・FP8・AWQ・GPTQを含む。",
     "evidence_locations": [
-      "第2節 データ収集と問題設定",
-      "第3節 OmniPilot設計",
-      "第4節 評価",
-      "付録A〜D"
+      "§2 動機とworkflow pattern",
+      "§3 Pattern Analyzer",
+      "§4 Tool Speculation Scheduler",
+      "§5 LLM–Tool Co-Scheduler",
+      "§6 実装",
+      "§7 評価",
+      "安全性・resource overhead評価"
     ],
     "references": [
+      {
+        "canonical_id": "arXiv:2601.22705",
+        "arxiv_id": "2601.22705"
+      },
+      {
+        "canonical_id": "arXiv:2411.14199",
+        "arxiv_id": "2411.14199"
+      },
+      {
+        "canonical_id": "arXiv:2509.20175",
+        "arxiv_id": "2509.20175"
+      },
+      {
+        "canonical_id": "arXiv:2509.11067",
+        "arxiv_id": "2509.11067"
+      },
+      {
+        "canonical_id": "arXiv:2410.15332",
+        "arxiv_id": "2410.15332"
+      },
+      {
+        "canonical_id": "arXiv:2511.20048",
+        "arxiv_id": "2511.20048"
+      },
+      {
+        "canonical_id": "arXiv:2602.13692",
+        "arxiv_id": "2602.13692"
+      },
+      {
+        "canonical_id": "arXiv:2511.02230",
+        "arxiv_id": "2511.02230"
+      },
+      {
+        "canonical_id": "arXiv:2504.07347",
+        "arxiv_id": "2504.07347"
+      },
       {
         "canonical_id": "arXiv:2309.06180",
         "arxiv_id": "2309.06180"
       },
       {
-        "canonical_id": "arXiv:2401.09670",
-        "arxiv_id": "2401.09670"
-      },
-      {
-        "canonical_id": "arXiv:2311.18677",
-        "arxiv_id": "2311.18677"
-      },
-      {
-        "canonical_id": "arXiv:2406.01566",
-        "arxiv_id": "2406.01566"
+        "canonical_id": "arXiv:2308.16369",
+        "arxiv_id": "2308.16369"
       }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "primary-reference-section",
-    "references_total": 29
+    "references_source": "arXiv v3 primary reference section",
+    "references_total": null,
+    "source": "https://arxiv.org/abs/2603.18897",
+    "sources": [
+      "https://arxiv.org/abs/2603.18897",
+      "https://arxiv.org/html/2603.18897",
+      "https://arxiv.org/pdf/2603.18897"
+    ],
+    "code": null,
+    "implementation": "約5,000行のTypeScriptによるagent側middlewareと約2,000行のPythonによるvLLM側連携を実装する。vLLM本体のsource変更は行わず、起動hookからready LLM turnのadmissionと順序を制御する。gemini-cli、Qwen Deep Research、VirtualLabへ小規模dispatch wrapperで統合する。",
+    "implementation_status": "end-to-end研究実装あり。著者公式の恒久公開コードURLは一次資料から未確認。",
+    "evaluation_type": "32×A100実機でのagent end-to-end latency・tool latency・scaling・ablation・safety評価",
+    "last_checked": "2026-09-14"
   },
   "reservation": {
-    "claim_id": "claim-5a6cdfba59781dc162c5a76f",
+    "claim_id": "claim-874bf6fd581295f5dd4ca3a1",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

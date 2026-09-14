@@ -36,13 +36,13 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **97** |
-| 処理中（Active claims） | **3** |
-| 今すぐ着手可能（Claimable） | **95** |
+| 処理中（Active claims） | **4** |
+| 今すぐ着手可能（Claimable） | **94** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **2** |
+| :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 11:39 JST** |
-| :00 補助worker 直近claim | **09-14 11:39 JST** |
+| :00 補助worker 直近claim | **09-14 11:41 JST** |
 | 直近24h Research完了（:30 通常worker） | **13** |
 | 直近24h Research完了（:00 補助worker） | **15** |
 | 直近24h Research完了（帰属不明） | **2** |
@@ -90,7 +90,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 - P86 `arXiv:2609.11294` — Memory Compression for High-Fanout Agent Sandboxes
 - P86 `arXiv:2608.14376` — CoRun: Padding is Simple and Efficient for Deterministic LLM Inference
 - P86 `arXiv:2606.06256` — RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention
-- P84 `arXiv:2603.18897` — Act While Thinking: Accelerating LLM Agents via Pattern-Aware Speculative Tool Execution
+- P84 `arXiv:2604.21072` — Distributed Generative Inference of LLM at Internet Scales with Multi-Dimensional Communication Optimization
 
 ## 参考情報
 

@@ -2,34 +2,34 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-5a6cdfba59781dc162c5a76f",
-  "job_id": "job-research-5f4ffec07da19fbd",
+  "attempt_id": "attempt-874bf6fd581295f5dd4ca3a1",
+  "job_id": "job-research-b045bf747f93dbbe",
   "data": {
-    "problem": "LLM推論を共有異種GPUクラスタへ投入する前には、利用者がGPU種類、テンソル並列度、数値精度を決める必要がある。ところが性能はモデルサイズだけでは決まらず、量子化カーネル、文脈長、同時実行数、KVキャッシュ圧力、並列度ごとの通信、GPU世代が相互作用する。論文の561回のベンチマークでは80回、約14%が互換性不足やメモリ不足で即時失敗し、H100でも1 GPU構成と4 GPU構成で起動成功率が大きく異なる。さらにFP8は高速化する一方でAWQが遅くなる組合せもあり、単純な「新しいGPU」「低精度」「GPUを増やす」といった固定規則では高価なノード時間を浪費する。既存のサービングシステムは実行開始後のバッチ化や配置移動を改善するが、投入前に異種GPU・並列度・精度をまとめて安全に選び、未知領域で過信を避ける問題を直接は解かない。",
-    "novelty": "OmniPilotの特徴は、投入前構成選択を単一の点推定ではなく、不確実性付きの多目的費用予測と棄却判断として解く点にある。勾配ブースティング分位点回帰で複数の性能指標を予測し、適合分位点回帰で区間を校正する。さらに区間幅だけでは未知領域を検知できないことを実験で示し、学習済み支持集合からの距離を独立に計算して分布外要求を低信頼として棄却する。最後に、予測した性能、計算費用、待ち時間、起動失敗、SLO違反、KV飽和を同じ経済的効用へ変換して構成を順位付けし、単なる最速構成ではなく運用者の選好を反映する。",
-    "method_overview": "入力はモデル名・モデル規模、想定同時実行数、文脈長、候補GPU種類、テンソル並列度、数値精度などである。OmniPilotはまず、モデル規模や同時実行数、文脈長を対数変換した数値特徴、テンソル並列度、メモリ利用率、有効ビット幅、モデル系列・GPU種類・量子化形式のカテゴリ特徴など約28個を作る。量子化は有効ビット幅だけではAWQやFP8の非単調差を表せないため、精度形式のカテゴリも残す。次に同じ特徴から、集約トークン毎秒、要求スループット、先頭トークン遅延、コールドスタート、ピークKV量、平均電力などを対象に、0.1・0.5・0.9分位点を別々の勾配ブースティング回帰器で予測する。中央値を点予測として使い、保持セルの残差から適合予測の補正量を求めて予測区間を広げる。ここで「区間が広いから未知」とは判断せず、学習データの特徴空間で要求が既知支持集合からどれだけ離れているかを別に測る。支持距離が閾値を越える要求は、数値予測を出せても信頼できないとして推薦を控える。既知領域では、各候補構成について予測スループットと実行時間から処理価値を求め、GPU時間の費用、待ち時間、起動失敗の再実行損失、SLO違反、KVキャッシュ占有率が約0.85を越える領域の危険を差し引く。起動成功率は構成ごとの観測回数が少ないためベータ二項事前分布で縮約し、少数観測の極端値をそのまま使わない。全候補の効用を比較し、支持領域内なら順位付き起動案を返し、領域外なら低信頼として棄却する。学習データは個人実験履歴とクラスタ履歴を型付き行として保存し、モデル・ソフトウェア指紋を付けて更新時の再現性を保つ。更新時には新しいモデルが既存モデルより集約スループット誤差を0.5ポイント超悪化させないことを昇格条件にし、データ追加による退行を抑える。",
+    "problem": "エージェント型LLMでは、LLMが道具呼出しを生成し、その呼出しを外部実行し、結果を次のLLM入力へ戻す処理が直列に繰り返される。一次資料の実測では、単一sessionでも道具実行がend-to-end時間の45〜57%を占める。一方、同じagentやtask familyでは道具列に強い規則性があり、例えば成功したfile_editor呼出しの55%はterminal実行へ続き、web visitのURLの95%は直前search結果の厳密な部分文字列である。この規則性を使って次の道具を先に実行できるが、単に投機数を増やすと誤投機がCPU・network資源を浪費し、副作用のある呼出しは安全性を壊す。さらに道具処理だけを高速化すると、多数sessionが短時間にLLMへ戻るためGPU queueが膨らみ、制御実験では道具を2倍速くしただけで高負荷時のend-to-end latencyが悪化する。したがって、予測、安全な投機、CPU/外部道具資源、GPU推論負荷を共同制御する必要がある。",
+    "novelty": "PASTEの中心は、次の道具名だけでなく『実行可能な具体的呼出し』を過去のworkflow patternから予測し、LLM生成と同時に走らせることである。Pattern Analyzerは道具eventの列だけでなくargument payload間の写像を学び、直前search結果のURLや過去file pathなど既に確定している値をlate bindingして次のargumentを構成する。Tool Speculation Schedulerは予測confidence、期待される露出遅延削減、投機予算、安全性policyを満たす候補だけを実行し、結果は権威的LLM呼出しが一致するまで隔離する。さらにLLM–Tool Co-Schedulerは、投機道具を早く終わらせる価値と、それによってsessionがGPUへ戻った際に生じるLLM queue/KV圧力を同じpriorityへ入れ、道具側の局所最速化が全体を悪化させる現象を抑える。",
+    "method_overview": "オフライン・継続学習側では、agent実行履歴をevent signatureとargument payloadへ正規化し、直前数eventのsuffixから次に現れる道具呼出しを数える。繰り返し現れるcontextについて、次道具のempirical confidenceが閾値を超えるpatternだけを保持し、引数については過去payloadのどのfield、substring、定数から生成されたかを推定してargument mappingを付与する。オンラインでは現在sessionのevent suffixをpattern tableへ照合し、現在までに観測済みのpayloadから具体的argumentを組み立てられる候補だけを投機対象にする。Schedulerは候補ごとにconfidence、予測される道具時間、resource budget、policy safetyを確認し、権威的な道具呼出しより低いpriorityでCPUや外部serviceへdispatchする。投機結果はsession本体から隔離し、LLMが同一toolと同一argumentを正式に出した時だけ既完了結果を即時返す。まだ実行中なら投機処理を昇格し、不一致なら破棄または低priorityのまま終了させる。副作用のあるtoolはdry-run、staging、non-mutating variantなどcommitを伴わない安全経路が存在する時だけ投機する。次にLLM–Tool Co-Schedulerが全sessionを見て、各投機候補のExposedToolGainを、現在のdecode loadとKV loadから作るLLMPressureで割り、starvation防止のagingを加えてpriorityを作る。tool完了によりGPUへ戻るsessionが多過ぎるとLLMPressureが上がり、投機toolの優先度を下げる。LLM側でもready turnを即座にすべて投入せず、engine pressureが所定帯域へ収まるようpre-engine admissionとin-engine load shapingを行う。これによりtoolとLLMを別々に最適化せず、片方の高速化が他方のqueueを悪化させない閉ループ制御を行う。",
     "components": [
       {
-        "name": "多目的分位点費用モデル",
-        "description": "約28個の特徴から複数のサービング指標を直接予測する。モデル規模、同時実行数、文脈長、KV圧力などの連続量に加え、モデル系列、GPU種類、量子化形式をカテゴリとして保持する。特に量子化はビット数だけでは性能順序を説明できず、論文では量子化特徴を外すとFP8の集約スループット誤差が3.88%から7.36%へ悪化した。0.1・0.5・0.9分位点を学習することで中央値だけでなく予測幅を得て、後段の不確実性校正と意思決定へ渡す。出力は候補構成ごとのスループット、遅延、起動時間、KV量、電力などである。"
+        "name": "Pattern Analyzer",
+        "description": "履歴中のtool sequenceをevent signatureへ正規化し、直近contextごとに次のtool出現頻度を数えて経験的confidenceを持つpatternを抽出する。tool名だけでは実行できないため、argument payload間のデータ依存も解析する。例えば直前search結果のURL一覧から後続web visitのURLが選ばれる場合、固定文字列ではなく『直前payload中の該当fieldを参照する』写像として保存する。オンラインでは現在suffixに一致するpatternだけを候補化し、必要なargument sourceがすでに観測済みなら具体的なinvocationを構築する。予測不能な未来LLM textへ依存する引数は投機しないため、単純な次tool分類器より実行可能性を重視する。"
       },
       {
-        "name": "適合予測による校正と支持距離による棄却",
-        "description": "保持したワークロードセルで分位点予測の残差を測り、目標被覆率に達するよう予測区間を補正する。通常の無作為分割では64〜69%程度だった区間被覆が、セル単位校正で約80%へ改善する。一方、未学習のモデル系列や極端な文脈・同時実行数では予測区間そのものが過信し、5個の分布外セルを1件も被覆できなかった。そこで特徴空間の支持集合からの距離を独立に使い、既知測定領域から遠い要求を推薦対象から外す。未知領域では誤差24〜46%まで上がっても5件すべてを低信頼として検出した。つまり予測区間は既知分布内の統計的不確実性を表す役割、支持距離は入力自体が学習領域から外れていないかを判定する役割として分離される。両者を別機構にすることで、数値上は狭い予測区間が出てしまう未知構成でも安全側に回答を控え、追加計測を促せる。"
+        "name": "Tool Speculation Scheduler",
+        "description": "予測候補を無制限に起動せず、confidence、期待tool latency、現在の資源予算、policy safetyを使って投機価値を判定する。権威的なtool callは常に高priority、投機処理は低priority・preemptibleとして扱い、CPU coreや外部API容量を通常処理から奪い過ぎない。投機結果は正式callと照合するまで隔離され、同一tool・同一argumentならcompleted resultを再利用し、実行中ならauthoritativeへpromoteする。不一致なら結果をsessionへ露出しない。file更新や送信など副作用を伴うtoolは、dry-runやstaging、read-only equivalentがある場合だけ投機し、commit phaseは正式call確認後まで禁止する。"
       },
       {
-        "name": "効用ベースの起動構成順位付け",
-        "description": "各候補構成の予測性能を単純な速度順位へせず、処理価値からGPU計算費用、クラスタ待ち時間、起動失敗後の再実行損失、SLO違反、KV飽和危険を差し引いた効用へ変換する。トークン価値は運用者の過去選択から得た顕示選好を使って校正する。KV占有率は0.85付近を越えると遅延が急増する実測を反映して罰則を入れ、構成別起動成功率はベータ二項縮約で安定化する。これにより最速構成を常に選ぶ比較法とは異なり、性能と費用、失敗リスクを同じ尺度で比較できる。候補ごとのスループット差が小さくても、GPU単価や待ち時間、起動失敗率が異なれば最終順位は変わるため、異種クラスタの実運用に近い意思決定になる。評価では単なる最大スループット選択ではなく、実測効用最大構成との一致率と効用後悔を測り、95%の上位1位正解率と0.003の平均後悔を報告する。"
+        "name": "LLM–Tool Co-Scheduler",
+        "description": "tool側だけを高速化するとready LLM turnが一斉に増えGPU queueが悪化するため、sessionごとのtool gainをGPU側pressureで正規化する。ExposedToolGainは今そのtoolを先に終わらせると隠せる待ち時間を表し、LLMPressureはdecode loadとKV cache負荷を組み合わせる。priorityにはagingも加えて低priority taskのstarvationを防ぐ。GPUが空いている時は価値の高いtool投機を積極化し、GPUが混雑している時はtool完了を意図的に平準化する。さらにready LLM turnのadmissionとengine内順序もpressure bandに合わせ、tool→LLM帰還burstを抑える。これによりCPU/外部serviceとGPUを別queueとして独立運用するのではなく、agent workflow全体の完了時間を目的に共同制御する。"
       },
       {
-        "name": "型付き履歴と更新ゲート",
-        "description": "実験履歴は個人側1667行、クラスタ側50万件規模を型付きレコードとして保持し、内容ハッシュ、スキーマ版、ソフトウェア指紋を付ける。クラスタ全履歴は需要やGPU利用率の把握には使えるが、ジョブ側のモデル・負荷・スループット情報が不足するため、そのまま性能教師データにはしない。新しい測定を追加して再学習した候補モデルは、集約スループット誤差が既存モデルより0.5ポイントを超えて悪化しない場合だけ昇格させる。測定軸の追加を単なる行数増加より重視する設計で、未観測領域を段階的に支持集合へ取り込む。"
+        "name": "安全な投機結果再利用",
+        "description": "PASTEはLLM出力を予測値で置き換えるのではなく、正式なLLM callを真実のsourceとして残す。投機toolは別contextで実行し、その結果をまだagent stateへcommitしない。正式な呼出しが予測と一致した場合のみ結果を公開するため、予測が外れてもagentの論理実行はbaselineと同じになる。副作用toolはcommit barrierを持ち、潜在的に状態を書き換える602件の投機actionを評価中すべてcommit前に遮断した。これにより、投機的復号のaccept/rejectと類似した『一致時だけ高速経路を採用する』意味保存をtool executionへ拡張している。"
       }
     ],
-    "system_design": "OmniPilotはサービングエンジン内部のトークンスケジューラではなく、ジョブ投入前の助言層として配置される。利用者の要求を特徴化し、費用モデルが候補構成ごとの性能分布を予測し、校正層が区間を補正し、支持距離層が既知領域か判定する。既知領域だけを効用計算へ渡して順位付き起動案を返し、未知領域は低信頼として棄却する。実際の起動後はvLLMなど既存サービング基盤が処理を担当するため、OmniPilotは実行時スケジューリングと競合せず、その一段上で初期構成の誤選択を減らす。"
+    "system_design": "PASTEはagentとtool endpointの間にmiddleware/proxyとして入り、event履歴、pattern table、投機状態、tool resource budgetを管理する。LLM worker側はvLLM本体を改変せず起動hookからready turnのadmission/orderを調整する。agent側は約5,000行TypeScript、LLM側は約2,000行Pythonで、gemini-cli、Qwen Deep Research、VirtualLabにはdispatch wrapperを追加する。tool実行・LLM実行の完了eventを一つのschedulerへ戻し、現在のCPU/tool資源とGPU pressureを継続更新する。"
   },
   "reservation": {
-    "claim_id": "claim-5a6cdfba59781dc162c5a76f",
+    "claim_id": "claim-874bf6fd581295f5dd4ca3a1",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

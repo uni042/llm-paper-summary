@@ -2,16 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-5a6cdfba59781dc162c5a76f",
-  "job_id": "job-research-5f4ffec07da19fbd",
+  "attempt_id": "attempt-874bf6fd581295f5dd4ca3a1",
+  "job_id": "job-research-b045bf747f93dbbe",
   "data": {
-    "limitations": "評価はHarvard/Kempner系の単一異種GPU環境と単一ノードvLLM 0.11.2に限定され、マルチノード通信、別サービングエンジン、訓練、障害回復、他クラスタの料金体系へそのまま一般化できない。KV占有率0.85の折れ点、トークン価値、待ち時間や失敗の費用係数は運用環境依存である。教師データは観測実験なので未観測交絡を完全には除けず、支持外では予測が大きく崩れる。更新ゲートも1回の更新例であり、長期運用でのドリフト耐性は未検証である。",
-    "differences": "vLLM、SGLang、Sarathi-Serveなどが起動後のバッチ化・実行を最適化し、DistServe、Splitwise、Helixなどがプリフィル／デコード分離や異種資源配置を扱うのに対し、OmniPilotはジョブ投入前のGPU種類・テンソル並列度・精度選択を扱う。既存配置研究のように既知の性能モデルを前提に最適化するだけでなく、実測から多目的性能分布を学習し、支持外では推薦を拒否する点が差分である。実行時移行やきめ細かな再配置は行わず、既存サービング基盤の上位に置く助言層である。",
-    "implementation_status": "研究プロトタイプとして、型付き履歴収集、勾配ブースティング分位点回帰、適合予測、支持距離棄却、効用計算、更新ゲートを実装し、vLLM 0.11.2の実機ベンチマークで評価している。論文はコード／データをプロジェクトリポジトリに置く方針を述べるが、本文からOmniPilot専用の公式URLを確定できなかった。クラスタ全履歴はプライバシー等の理由から再配布できない。",
-    "research_positioning": "異種GPU LLMサービングの系統では、OmniPilotは「実行時にどう処理するか」ではなく「どの構成で起動するか」を不確実性込みで決めるマクロな制御層に位置する。特に、量子化の非単調性能、並列度ごとの失敗率、KV圧力を同じ推薦問題へ統合し、分布外検出を明示的に持つため、異種クラスタの自動運用や将来のスケジューラと性能モデルの接続点として価値がある。今後はマルチノード、オンライン負荷変化、構成変更コスト、出力品質制約まで含めることで、起動時助言から継続的な資源管理へ拡張できる。"
+    "limitations": [
+      "効果は過去履歴から再利用できるtool sequenceとargument依存が存在するworkloadに依存する。新規taskや自由形式の次toolが多い場合は予測可能な候補が減る。",
+      "副作用を安全にcommit前分離できないtoolは投機対象外であり、外部service側にdry-runやstaging機能がない場合は並列化できない。",
+      "外部APIのrate limit、課金、quotaは単なるCPU余剰とは異なるため、deploymentごとにspeculation budgetと価値modelを調整する必要がある。",
+      "評価は主にQwen系30Bモデルと3つのagent framework、32×A100環境で行われ、model family、より大規模GPU cluster、非常に遅いremote toolsへの一般化は追加検証が必要である。",
+      "raw predictorのTop-1精度は最大27.8%に留まり、高い実行hit率は強いfilterに依存する。予測可能な仕事量が少ない状況では投機可能性そのものがボトルネックになる。"
+    ],
+    "differences": [
+      {
+        "name": "投機的復号との差",
+        "description": "通常の投機的復号はdraft modelなどで将来tokenを予測し、target modelの検証でaccept/rejectする。PASTEはLLM内部tokenではなくworkflow外部のtool invocationを予測し、正式LLM tool callとの一致を検証条件にする。toolはCPU・network・外部serviceを使うため、GPUだけでなく異種resource budgetと副作用安全性まで扱う必要がある。"
+      },
+      {
+        "name": "ORION・SpecFaaSとの差",
+        "description": "既存のspeculative tool executionはtool予測やserverless実行の先行開始に注目するが、PASTEはargument data dependencyをpatternとして学び、実行可能な具体的callを作る。さらにtool高速化によるGPU帰還burstを明示的に扱うLLM–Tool共同schedulerを組み合わせ、局所tool latencyではなくagent end-to-end latencyを目的にする。"
+      },
+      {
+        "name": "HexAGenTとの差",
+        "description": "HexAGenTは公開済みworkflow DAGと異種P-D GPUの配置・queue priorityを最適化するのに対し、PASTEはまだLLMが正式に生成していない次tool callを履歴patternから推測し、依存待ちそのものを投機で重ねる。両者はworkflow-level servingだが、前者は既知ready workの配置、後者は未来workの安全な先行実行が中心である。"
+      },
+      {
+        "name": "Heliumとの差",
+        "description": "Heliumは事前に解析可能なworkflow templateから共通subgraphやprefixを削除・cacheし、物理scheduleを最適化する。PASTEは完全templateを必要とせず、実行履歴から繰り返しpatternを抽出して次toolを動的に投機するため、構造が逐次現れるinteractive agentにも適用しやすい一方、予測confidenceに依存する。"
+      }
+    ],
+    "implementation_status": "agent側約5,000行TypeScript、vLLM側約2,000行Pythonのend-to-end試作。vLLM本体のsource modificationなしにstartup hookでready turnを制御し、gemini-cli、Qwen Deep Research、VirtualLabへwrapper統合する。著者公式の恒久コードURLは一次資料から確認できない。",
+    "research_positioning": "PASTEはエージェント型LLM配信におけるworkflow-level speculationと異種資源共同スケジューリングの研究に位置する。token generation、KV cache、GPU schedulingだけを対象にせず、CPUや外部serviceで動くtoolを同じcritical pathの資源として扱う点が特徴である。特に『上流toolを速くすると下流GPU queueが悪化する』という観測は、agent servingが複数resource queueを直列接続した系であることを示し、今後のsystemではtool prediction、workflow DAG scheduling、LLM admission、KV memory pressureを一体化する必要がある。HexAGenTのonline workflow risk、Heliumのquery-plan optimization、PASTEの未来tool speculationは相補的であり、これらを統合したagent runtimeが自然な発展方向となる。"
   },
   "reservation": {
-    "claim_id": "claim-5a6cdfba59781dc162c5a76f",
+    "claim_id": "claim-874bf6fd581295f5dd4ca3a1",
     "worker_id": "scheduled-chat-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
