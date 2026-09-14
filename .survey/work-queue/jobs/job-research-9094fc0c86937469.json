@@ -6,19 +6,15 @@
   "canonical_id": "arXiv:2607.17715",
   "title": "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
   "source_url": "https://arxiv.org/abs/2607.17715",
-  "paper_path": null,
+  "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2607.17715-c2kv-compressed-composable-kv-cache-reuse.md",
   "selection_reason": "non-prefix KV reuseがprefill計算を減らしても、大量KVの保存・転送コストが残り、単純な圧縮併用では品質が崩れる問題を扱う。軽量sidecar Extractorとcompression tokenでposition-agnosticかつ圧縮・合成可能なKV表現を学習し、compression-concatenation co-trainingで再利用時の挙動まで整合させる。複数モデル・長文benchmarkで最大17倍のinference speedupを報告し、KV reuseとstorage/transfer削減を同時最適化する点が特徴。",
-  "status": "ready",
+  "status": "completed",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T23:32:38+00:00",
   "artifact_transport": "structured_record_v10",
-  "repair_required": true,
-  "validation_error": "RecordValidationError: metadata.references is required; use [] after checking a reference section with no normalized identifiers",
-  "validation_errors": [
-    "metadata.references is required; use [] after checking a reference section with no normalized identifiers"
-  ],
-  "last_validation_failed_at": "2026-09-14T01:59:07+00:00"
+  "completed_at": "2026-09-14T02:02:48+00:00",
+  "artifact_submission": ".survey/work-queue/submissions/research/attempt-2e36a0b7326b0f7d7c69871f.json"
 }
