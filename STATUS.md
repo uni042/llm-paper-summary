@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 06:49 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 07:07 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,12 +15,12 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **40** |
+| 未処理の論文候補（Research ready） | **39** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| GitHub反映済みResearch完了（job） | **349** |
+| GitHub反映済みResearch完了（job） | **350** |
 | 耐久checkpoint済み・GitHub未反映（job） | **18** |
-| 精読済みユニーク論文（推定） | **367** |
+| 精読済みユニーク論文（推定） | **368** |
 | 保守状態（Maintenance） | **passed** |
 | 直近整合性チェック結果 | **passed** |
 | 直近整合性チェック時刻 | **09-14 09:53 JST** |
@@ -40,25 +40,25 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **40** |
-| 有効claim（lease） | **2** |
+| 未処理候補（Research ready） | **39** |
+| 有効claim（lease） | **1** |
 | 今すぐ着手可能（Claimable） | **40** |
-| 有効leaseを持つworker run | **2** |
-| :30 最新worker run | **2026-09-15T06:30:00+09:00** |
+| 有効leaseを持つworker run | **1** |
+| :30 最新worker run | **2026-09-15T05:30:00+09:00** |
 | :30 最新run由来の有効claim | **1** |
-| :30 旧run由来の有効claim | **1** |
+| :30 旧run由来の有効claim | **0** |
 | :00 最新worker run | **—** |
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近lease活動 | **09-15 06:49 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
-| 直近24h Research完了（:30 通常worker） | **48** |
+| 直近24h Research完了（:30 通常worker） | **49** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-15T06:30:00+09:00** |
-| 最新通常runのResearch完了 | **2** |
-| 最古の有効claimの経過時間 | **17 min** |
+| 最新通常runのResearch完了 | **3** |
+| 最古の有効claimの経過時間 | **35 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -75,7 +75,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **74** |
+| Research完了 | **75** |
 | Repo収録 | **76** |
 | Audit完了 | **0** |
 | 探索評価候補 | **5** |
@@ -85,11 +85,11 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | :00 補助worker Discovery run（毎時枠） | **2** |
 | :00 補助worker Discovery round（stats観測） | **3** |
 | 通常worker run（ledger観測） | **1** |
-| Fallback archive（全helper） | **21** |
+| Fallback archive（全helper） | **23** |
 
 ### 24時間の流れ
 
-**探索評価 5 → 重複除外後 4 → Research候補採用 1 → Research完了 74 → Repo収録 76**
+**探索評価 5 → 重複除外後 4 → Research候補採用 1 → Research完了 75 → Repo収録 76**
 
 ## 次に処理する候補
 
@@ -137,6 +137,7 @@ Run: **2026-09-15T03:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2604.22906` — Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities
 - `arXiv:2605.31464` — GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization
 - `arXiv:2601.17855` — A Universal Load Balancing Principle and Its Application to Large Language Model Serving
 - `arXiv:2504.15364` — KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments
@@ -144,7 +145,6 @@ Run: **2026-09-15T03:00:00+09:00**
 - `arXiv:2507.21276` — LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems
 - `arXiv:2606.11916` — Characterizing Software Aging in GPU-Based LLM Serving Systems
 - `arXiv:2607.13093` — Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models
-- `arXiv:2609.02109` — MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs
 
 ### 7日比較
 

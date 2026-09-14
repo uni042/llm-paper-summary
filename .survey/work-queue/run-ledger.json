@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:00:30.587202+00:00",
+  "updated_at": "2026-09-14T22:07:24.693328+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:00:30.587202+00:00",
+      "last_recorded_at": "2026-09-14T22:07:24.693328+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 74,
+        "research_completed": 75,
         "audit_completed": 0,
         "discovery_completed": 3,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 23
       },
       "events": [
-        {
-          "event_id": "34804741299:1",
-          "recorded_at": "2026-09-14T04:05:00.183098+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34804741299",
-            "run_attempt": "1",
-            "source_sha": "7b0b42c706b53b375a0a83cb090ad91209cbf417"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34804802964:1",
           "recorded_at": "2026-09-14T04:06:18.152590+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34902464996:1",
+          "recorded_at": "2026-09-14T22:07:24.693328+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34902464996",
+            "run_attempt": "1",
+            "source_sha": "06bcf7d30d18f25d7d46461ab21f1886ba3d6536"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20224,6 +20224,14 @@
           "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-abd22d64f0da4bcf",
+          "type": "research",
+          "canonical_id": "arXiv:2604.22906",
+          "title": "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20388,7 +20396,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 536,
-      "last_successful_action": "fallback_archived"
+      "last_successful_action": "research_completed"
     }
   ]
 }

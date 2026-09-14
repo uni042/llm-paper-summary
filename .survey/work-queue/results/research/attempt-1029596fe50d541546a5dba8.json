@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-1029596fe50d541546a5dba8",
+  "job_id": "job-research-c6ac42b8bcec8aab",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-1029596fe50d541546a5dba8.json",
+  "error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | positioning.differences is required | Japanese-first prose ratio is too low: 46.4% < 70% (Japanese=3432, Latin=3971)",
+  "processed_at": "2026-09-14T22:07:22+00:00",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "positioning.differences is required",
+    "Japanese-first prose ratio is too low: 46.4% < 70% (Japanese=3432, Latin=3971)"
+  ]
+}
