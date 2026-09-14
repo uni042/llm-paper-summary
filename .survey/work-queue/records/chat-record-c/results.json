@@ -2,53 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-0b8a39423dcf38d7fb41bb9b",
-  "job_id": "job-research-57d78e1392b6c354",
-  "data": {
-    "overview": "FASERはQwen3とLlama3の両モデル組、ShareGPT・LongBench・HumanEvalのすべてで比較対象より低い遅延と高いスループットを示す。最大ではQwen3のLongBenchで遅延を48%削減し、Llama3でもLongBenchで42%削減する。スループットはQwen3で最大1.53倍、Llama3で最大1.49倍となる。改善は単一機構からではなく、負荷に応じた投機長調整、棄却予定トークンの層途中枝刈り、ドラフト・検証の空間多重化を組み合わせ、低負荷時の段階待ちと高負荷時の検証浪費の双方を減らすことで得られる。",
-    "key_results": [
-      {
-        "metric": "遅延削減率",
-        "value": "最大48%削減（約1.92倍改善）",
-        "baseline": "SpecInfer、AdaSpec、Smurfsの最良比較対象",
-        "condition": "Qwen3-0.6B/Qwen3-32B、LongBench、Azure由来の動的到着トレース",
-        "interpretation": "長い入力ではターゲット検証の計算と段階間待ちが大きくなるため、早期枝刈りとドラフト・検証重畳を同時に効かせる効果が最も大きい。"
-      },
-      {
-        "metric": "遅延削減率",
-        "value": "最大42%削減",
-        "baseline": "SpecInfer、AdaSpec、Smurfs",
-        "condition": "Llama3.2-1B/Llama3.3-70B、LongBench、H100 2基テンソル並列",
-        "interpretation": "70B級ターゲットモデルでも細粒度制御の効果が維持され、特定のQwen3組だけに依存しないことを示す。"
-      },
-      {
-        "metric": "スループット向上倍率",
-        "value": "Qwen3最大1.53倍、Llama3最大1.49倍",
-        "baseline": "SpecInfer、AdaSpec、Smurfs",
-        "condition": "3データセットを用いた動的オンラインサービング",
-        "interpretation": "枝刈りによって不要なターゲット計算を減らし、段階重畳によって空いていたGPU演算資源を有効な処理へ回すため、同じ時間で完了する出力トークン数が増える。"
-      },
-      {
-        "metric": "早期終了トークン率",
-        "value": "Qwen3で平均8.8〜16.2%、最大22.8〜23.5%；Llama3で平均9.1〜12.4%、最大16.7〜19.3%",
-        "baseline": "早期終了なしのFASER構成",
-        "condition": "HumanEval、ShareGPT、LongBenchの実行時挙動",
-        "interpretation": "実際に枝刈りされる割合が極端に高くなくても、ターゲット検証の深い層を省略するためクリティカルパス削減へ寄与する。"
-      },
-      {
-        "metric": "遅延モデルの平均絶対百分率誤差",
-        "value": "大半で18%未満；最大はドラフト遅延でQwen3 17.2%、Llama3 15.6%",
-        "baseline": "実測遅延",
-        "condition": "バッチサイズ4〜256、投機長2〜10、SM配分10〜100%の保留標本",
-        "interpretation": "粗い区分線形モデルでもオンラインの投機長・資源配分判断に使える程度の予測精度を維持する。"
-      }
-    ],
-    "negative_results": "FASERの効果は負荷変動が大きいほど強く、固定条件や段階間の空きが少ない場合には重畳余地が小さくなる。CUDA Green ContextsでSMを分割してもHBM帯域とキャッシュ階層は共有するため、同時実行によるメモリ干渉は完全には消せない。また早期終了判定には中間ロジット計算と枝刈り費用があり、残り検証層で節約できる時間がその費用以下なら判定結果を使わない設計である。誤枝刈りは再ドラフトを増やすため、浅い層では保守的な閾値が必要になる。",
-    "interpretation": "高負荷ではターゲット検証が支配的になり、バッチサイズ256では検証が全遅延の約83%まで増えるため、棄却接尾部を途中で落とす価値が高い。低負荷ではドラフトが相対的に大きな割合を占めるので、ターゲット検証中に次のドラフトを進める重畳が効く。FASERはこの二つの状況を同じ固定方策で処理せず、最近の受理率・バッチサイズ・資源配分を使って投機長と重畳条件を変えるため、動的トレースで一貫した改善を得る。",
-    "quality_impact": "標準的な投機的デコードと同様に、確定するトークンはターゲットモデルの検証結果に従うため、フロンティア重畳自体は生成分布を変更しない。早期枝刈りは予測的であるが、棄却候補を後続層から除くための制御で、誤って有望な候補を落とすと再ドラフトが増える形で性能へ返る。論文の主張は品質を変えて高速化する方式ではなく、同じターゲット検証意味論の範囲で不要計算と待ちを減らす方式である。"
-  },
+  "attempt_id": "attempt-1ba4b34ba48ccb171084f2bf",
+  "job_id": "job-research-389da9d1d9bafee9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0b8a39423dcf38d7fb41bb9b",
+    "claim_id": "claim-1ba4b34ba48ccb171084f2bf",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

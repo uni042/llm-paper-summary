@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-0b8a39423dcf38d7fb41bb9b",
-  "job_id": "job-research-57d78e1392b6c354",
-  "data": {
-    "limitations": "評価はH100世代GPUとCUDA Green Contextsを前提とし、他世代GPUや異なるアクセラレータで同じ空間分割特性が得られるかは未検証である。SMを分けてもHBM帯域とキャッシュは共有されるため、メモリ律速条件では同時実行干渉が残る。オンライン制御はオフライン遅延モデルと最近の受理統計へ依存し、急激な分布変化や未観測のバッチ・資源構成では予測誤差が増え得る。早期枝刈りは中間層の予測を用いるため、閾値が不適切なら再ドラフトが増える。2GPUを超える大規模分散構成や実商用の長時間SLO挙動は評価対象外である。",
-    "differences": "AdaSpecは投機長を適応化するが、ターゲットが投機列全体を検証するラウンド構造とドラフト・検証直列化を残す。Smurfsはドラフトと検証をパイプライン化するが、粗い粒度であり、検証途中に棄却接尾部を落としてターゲット側の計算量を縮めない。SpecInferは木構造の候補で検証回数を減らす一方、木構築と全体検証の費用を持つ。FASERはリクエスト別投機長、層途中のトークン枝刈り、フロンティア単位の空間多重化を一つの制御器にまとめ、負荷によって移動するドラフト側・検証側ボトルネックを両方扱う。",
-    "implementation_status": "vLLM v0.15.1上に約5千行のPythonで実装され、H100実機で動的トレースを用いた評価まで行われている。PyTorch、NumPy、SciPy、cuda-python、CUDA Green Contextsを利用し、プロファイル更新用の別プロセスも含む。したがってシミュレーションのみの提案ではない。一方、確認時点で論文本文から公式の公開コードURLは確認できない。",
-    "research_positioning": "投機的デコード研究では受理率、ドラフトモデル品質、投機木などアルゴリズム側の改善が多いが、FASERはオンラインサービングの実行時状態を中心に据える。連続バッチで各要求の投機長を変え、ターゲットモデルの途中層から不要検証を削り、GPU演算資源をドラフトと検証へ動的に分割するため、投機的デコードとLLMサービングスケジューラ、GPU空間多重化の交点に位置する。特に『高い受理率が必ずしも低遅延ではない』ことを実測で示し、検証計算量と段階間待ちを独立した最適化対象として扱う点が、サービング系統の論文群との比較で重要である。"
-  },
+  "attempt_id": "attempt-1ba4b34ba48ccb171084f2bf",
+  "job_id": "job-research-389da9d1d9bafee9",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-0b8a39423dcf38d7fb41bb9b",
+    "claim_id": "claim-1ba4b34ba48ccb171084f2bf",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
