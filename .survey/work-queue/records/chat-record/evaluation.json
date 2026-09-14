@@ -2,23 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-32e9ba2b4cfed24c67d5030c",
-  "job_id": "job-research-cccd56289285fe3d",
-  "data": {
-    "hardware": ["NVIDIA HGX B300 8 GPU（SXM6、各GPU約267 GiB HBMを観測）", "NVIDIA RTX Pro 6000 Blackwell Server Edition 2 GPU（各96 GB GDDR7、PCIe Gen5）", "NVIDIA H200 1 GPU（機構の境界確認のみ）"],
-    "software": ["Intel TDX上の機密VM", "NVIDIA GPU Confidential Computing", "dstack 0.5.9（B300）", "vLLM（B300はSM100対応の新しいコンテナ、H200境界確認は0.22.1）", "PyTorch/CUDAマイクロベンチマーク"],
-    "model": ["GPT-OSS-120B", "Qwen3.6-27B-FP8", "Gemma-4-31B-it", "Qwen3.6-35B-A3B-FP8", "Gemma-4-26B-A4B-it", "Qwen2.5-3B"],
-    "datasets": "オンラインサービング形状、デコード並行度スイープ、KV churn、モデルロード、転送マイクロベンチマーク。特定の言語データセット精度評価は対象外。",
-    "baselines": ["機密計算無効の同一プラットフォーム", "vLLM既定の非同期スケジューリング", "同期スケジューリング", "局所的なバッファ・ストリーム変更パッチ", "safetensors既定/8スレッド/fastsafetensors"],
-    "correctness": "モデル重みやKVの数値表現を近似変更する最適化ではなく、同一計算のデータ移動と実行時方針を変更する。したがってモデル品質差ではなくシステム性能を評価対象とする。",
-    "settings": [
-      {"name": "B300計算対照", "description": "8192×8192 BF16行列積、96,000回の連鎖行列積、1 GiBのHBM風アクセスを機密計算有効/無効で比較。"},
-      {"name": "転送並列性", "description": "一つのCUDAコンテキストでストリーム数を増やす場合、ドライバAPIの複数コンテキストを使う場合、複数プロセスを使う場合を分離してH2D/D2H帯域を測定。"},
-      {"name": "サービング", "description": "密モデル、混合専門家モデル、KV復元、並行度128や512などの条件で、スループット、トークン間時間、先頭トークン時間を比較。"},
-      {"name": "モデルロード", "description": "GPT-OSS-120Bを既定safetensors、8スレッド、fastsafetensors、永続8ワーカー、事前ウォームアップ付き構成で比較。"}
-    ],
-    "methodology": "B300とPro 6000の二つのBlackwell環境で、機密計算有効/無効の制御比較と、ストリーム数・コンテキスト数・スケジューリング方針・ローダ構成を一変数ずつ変える切り分けを行う。H200は同じ機構がBlackwell固有かどうかを確認する補助実験として用いる。B300の主要値は時間制約のあるアクセス期間中に保存した単回測定が含まれるため、小差ではなく13%以上、2倍以上など大きな効果を主張の根拠にしている。",
-    "scope": "主結果は実機Blackwell上のシステム測定であり、シミュレーションではない。ただしB300は期間限定環境で統計的に十分な反復がない項目があり、Pro 6000とB300のvLLMソフトウェア版も完全一致しない。H200は機構確認であり、Blackwellの性能値を一般化するための第三プラットフォームではない。"
-  },
-  "reservation": {"claim_id": "claim-32e9ba2b4cfed24c67d5030c", "worker_id": "scheduled-chat-paper-20260914T1430JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-b9436ca0ba29c32192abb850",
+  "job_id": "job-research-87d11da7c0c30dc4",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b9436ca0ba29c32192abb850",
+    "worker_id": "scheduled-chat-paper-20260914T1430JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
