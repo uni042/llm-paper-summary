@@ -4,10 +4,18 @@
   "slot": "results",
   "attempt_id": "attempt-a0eb09a53bc2577a801ac1fe",
   "job_id": "job-research-e4755632664990fb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-a0eb09a53bc2577a801ac1fe",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "overview": "LongBench平均ではDASH-KVは3モデルすべてでFull Attention近傍に留まり、Qwen2.5-14Bでは42.92と密注意42.26をわずかに上回った。対してStreamingLLM/H2O/SnapKVは多くの長文課題で平均が大きく低下する。検索機構の比較では提案非対称ハッシュがRecall@100 86.06%、KL距離0.4054、1トークン22msで、対称ハッシュ68.28%・1.3200・38ms、素朴なLSH 8.91%・3.2000・28msより精度と遅延の両方で良い。これは学習済みのクエリ・キー別写像と残差補正が検索品質を支えることを示す。一方、ネイティブ1ビット演算は未実装なので、論文の線形計算量と理論的圧縮利得を実GPUの最終高速化倍率として読んではならない。",
+    "key_results": [
+      {"metric": "LongBench 6課題平均", "value": "38.73", "baseline": "Full Attention 38.71、SnapKV 35.84", "condition": "Qwen2-7B-Instruct", "interpretation": "近似検索へ置き換えても平均品質を密注意と同等に保ち、代表的なKV選択法を約2.89点上回る。"},
+      {"metric": "LongBench 6課題平均", "value": "42.43", "baseline": "Full Attention 42.70、SnapKV 34.57", "condition": "Llama-3.1-8B-Instruct", "interpretation": "密注意との差は0.27点に収まり、SnapKVとの差は7.86点あるため、モデルが変わっても検索近似による品質損失は小さい。"},
+      {"metric": "LongBench 6課題平均", "value": "42.92", "baseline": "Full Attention 42.26、SnapKV 34.76", "condition": "Qwen2.5-14B-Instruct", "interpretation": "平均では密注意を0.66点上回るが、近似法が本質的に密注意より正確という意味ではなく、課題ごとのばらつきや近似の正則化効果を含む評価結果として解釈すべきである。"},
+      {"metric": "Recall@100", "value": "86.06%", "baseline": "対称ハッシュ68.28%、素朴なLSH 8.91%", "condition": "Table 2の検索比較", "interpretation": "クエリとキーを別符号器で学習する非対称設計が、一般的な対称写像や非学習LSHより重要キーを候補集合へ戻しやすい。"},
+      {"metric": "注意分布KL距離 / 1トークン遅延", "value": "0.4054 / 22ms", "baseline": "対称ハッシュ1.3200 / 38ms、素朴なLSH 3.2000 / 28ms", "condition": "Table 2", "interpretation": "提案法は検索精度を上げただけでなく、この試作条件では対称版より短い遅延も示す。ただし二値演算はFP16模擬でありネイティブ1ビットカーネルの測定ではない。"},
+      {"metric": "拡張性", "value": "4k〜128kでDASH-KVは線形O(N)スケーリングを主張", "baseline": "標準注意O(N^2)", "condition": "合成系列のストレス試験", "interpretation": "全キーとの高精度内積を避ける設計上、系列長増大時の計算量の増え方を抑えられる。ただし図の速度値と1ビット格納利得は実装制約を踏まえて読む必要がある。"}
+    ],
+    "negative_results": "初期層0〜4と終端層27〜32をDASH-KVへ置換すると品質が大きく崩れ、全層一律置換は適さない。中間層だけを置換するサンドイッチ配置が必要である。また著者自身が、二値コードをFP16で模擬し低レベルのビット演算を実装していないと明記する。したがって1ビット圧縮格納に基づく容量削減と、ビット演算がもたらす理論上の高速化は完全な実機エンドツーエンド検証ではない。",
+    "interpretation": "品質面の優位は、重要キーを永久削除せず毎ステップ再選択できること、重要トークンを完全精度へ戻すこと、ハッシュ誤差を残差・ヘッド合意・前層情報で補うことから説明できる。特にHotpotQAではQwen2-7Bが44.50、Llama-3.1-8Bが58.01とFull Attention 44.04/57.43に近く、長距離検索型課題での候補再現が保たれている。一方、層感度が高い部分では近似誤差が後段へ増幅するため両端層を完全精度に残す必要がある。実装面ではFP16模擬のため、実際のGPU上でビット演算・メモリアクセスがボトルネックになった場合の最終性能は未確定である。",
+    "quality_impact": "近似手法であり理論的に無損失ではない。6課題平均はFull Attentionと同程度だが、個別課題・層配置では差が出る。弱関連キーはそのステップの計算から外されるもののKV自体は保持され、重要キーと保護トークンは完全精度へ戻すため、不可逆追い出しより品質を守りやすい。"
   }
 }
