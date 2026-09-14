@@ -2,66 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-fdcbaf1eb3d1ca214325848b",
-  "job_id": "job-research-63f40e784a6127a2",
-  "data": {
-    "overview": "Agent-Assisted方式の保持カーネルは、5演算子すべてで提供FlashInfer基準を上回り、平均遅延高速化は1.12倍から29.68倍に達する。最大改善はDSA attentionの29.68倍、次いでDSA top-kの18.05倍、GDN prefillの13.70倍で、MoE FP8は1.62倍、GDN decodeは1.12倍だった。同一種の最終評価にかけたFull-Agent成果は全演算子でAgent-Assistedより遅く、MoE FP8とGDN decodeではFlashInfer基準すら下回る。論文の解釈は、生成モデルの自由度を増やすことより、構造的に異なる実装経路を良質な参照・プロファイル・全分布昇格ゲートへ結び付ける方が、現時点の高性能GPU最適化では安定しているというものになる。",
-    "key_results": [
-      {
-        "metric": "DSA attention平均遅延高速化",
-        "value": "29.68倍",
-        "baseline": "提供FlashInfer基準",
-        "condition": "NVIDIA B200、公式準拠全形状平均、Agent-Assisted保持成果",
-        "interpretation": "疎注意の形状領域ごとに実行経路を特化し、低波数起動など形状固有の律速を避けた構造変更が大きく効く。"
-      },
-      {
-        "metric": "DSA top-k平均遅延高速化",
-        "value": "18.05倍",
-        "baseline": "提供FlashInfer基準",
-        "condition": "B200、保持成果0.006893 ms",
-        "interpretation": "スコア計算と選択を分離したCuTe経路など、単なるタイル調整でなく演算構造を変える候補が採用された。"
-      },
-      {
-        "metric": "GDN prefill平均遅延高速化",
-        "value": "13.70倍",
-        "baseline": "提供FlashInfer基準",
-        "condition": "B200、保持成果0.051992 ms",
-        "interpretation": "Blackwell向けチャンク化CuTe DSL経路でテンソルメモリ、TMA、ワープ特化を使い、長いプリフィルの主要律速を置き換えた。"
-      },
-      {
-        "metric": "MoE FP8平均遅延高速化",
-        "value": "1.62倍",
-        "baseline": "提供FlashInfer基準",
-        "condition": "B200、保持成果0.286342 ms",
-        "interpretation": "GEMMとパッキングがCUDA時間81.6%を占め、占有率も約18.7%に制限されるため、改善余地は大きいが構造制約も強い。"
-      },
-      {
-        "metric": "GDN decode平均遅延高速化",
-        "value": "1.12倍",
-        "baseline": "提供FlashInfer基準",
-        "condition": "B200、保持成果0.006201 ms",
-        "interpretation": "極短デコード領域は元の基準が既に高速で、起動オーバーヘッド支配のため改善幅が小さい。"
-      },
-      {
-        "metric": "Agent-Assisted対Full-Agent",
-        "value": "5演算子すべてでAgent-Assistedが高速。Full-Agentは保持成果より約1.35〜13.25倍遅い範囲を示し、MoE FP8とGDN decodeではFlashInfer基準未満",
-        "baseline": "LoongFlow PES Full-Agent",
-        "condition": "同一種の最終評価プロトコル",
-        "interpretation": "参照選択、プロファイル解釈、停滞時の路線変更、保守的昇格を人間が設計する価値がまだ大きい。"
-      }
-    ],
-    "negative_results": [
-      "MoEを強制的にTritonへ置き換えた候補は約0.496 msで、保持した約0.286 msより大きく退行し、実装言語変更そのものを改善とみなせない。",
-      "MoEのNタイルを32へ変更するなど、局所的にもっともらしいタイル変更も全分布では退行し、棄却された。",
-      "GDNで40組の形状分岐を追加する経路は十分な全体利得を持たず、複雑な分岐を保持しなかった。",
-      "DSA top-kでは低い正当性試行回数で合格した候補が高試行再検証で稀な数値失敗を示した。最速値をそのまま採用せず、安全な後退候補を分離して扱う必要があった。",
-      "Full-Agent探索は一部で基準未満に留まり、探索回数や自律性だけではハーネス品質を代替できなかった。"
-    ],
-    "interpretation": "改善倍率の大きさはLLMモデルの能力そのものより、対象演算子に構造的な別経路が残っているかで変わる。DSAやGDN prefillでは疎性、形状特化、Blackwell固有機構を使う別実装へ移れるため二桁改善が出るが、短いGDN decodeのように基準が既に起動時間近傍まで詰められている領域では1.12倍に留まる。プロファイルを先に律速の証拠へ変換し、一度に一方向だけ試して全形状で昇格する設計は、LLMが生成する多数の『もっともらしいが遅い』変更を早く棄却するために効く。Full-Agentとの差は、人間がコードを直接書くことより、参照・制約・測定・路線変更を設計する部分が現状の探索性能を支えていることを示す。",
-    "quality_impact": "性能最適化に伴う意図的な数値精度低下を許さず、コンテストの正当性条件を満たすことを昇格の前提にする。低試行検査で見逃した稀な誤差が実際に観測されているため、性能値だけでなく高試行正当性検証を最終ゲートへ含める必要性も実証している。"
-  },
+  "attempt_id": "attempt-022b9f637cf7cc5a822fdef4",
+  "job_id": "job-research-f023091bfca94e41",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-fdcbaf1eb3d1ca214325848b",
+    "claim_id": "claim-022b9f637cf7cc5a822fdef4",
     "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
     "worker_kind": "scheduled_chat"
   }

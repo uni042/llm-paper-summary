@@ -2,58 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-fdcbaf1eb3d1ca214325848b",
-  "job_id": "job-research-63f40e784a6127a2",
-  "data": {
-    "hardware": [
-      "NVIDIA Blackwell B200 GPUの隔離実行環境"
-    ],
-    "software": [
-      "CUDA 13.2",
-      "PyTorch 2.12",
-      "Triton 3.6",
-      "cupti-python",
-      "Torch Profiler",
-      "NVIDIA Nsight Compute",
-      "CUDA",
-      "Triton",
-      "CuTe DSL"
-    ],
-    "model": [
-      "Codex GPT-5系、特にGPT-5.3-Codex",
-      "Claude Code Claude Opus 4.6",
-      "Full-Agent比較ではLoongFlow PES"
-    ],
-    "datasets": [
-      "MLSys 2026 FlashInfer AI Kernel Generation Contestの公式準拠ワークロード分布",
-      "DeepSeekMoE型FP8 MoE、DeepSeek-V3.2型DSA、Gated Delta Networkのデコード・プリフィル形状"
-    ],
-    "baselines": [
-      "コンテスト提供FlashInfer基準カーネル",
-      "同一評価プロトコルのFull-Agent LoongFlow探索成果"
-    ],
-    "correctness": "候補は公式準拠の数値正当性検査に合格してから性能比較へ進む。代表形状だけでなく全形状分布で正当性を再確認し、高速でも回帰した候補は昇格しない。DSA top-kでは低試行検査を通った候補が高試行再検証で稀な失敗を示し、安全な後退版へ戻した事例を明示する。",
-    "settings": [
-      "主要評価はMLSys 2026 FlashInfer AI Kernel Generation ContestのNVIDIA Trackに合わせたB200実機。",
-      "主目的は全形状の平均遅延最小化。形状別遅延、中央値、P95、退行形状を副指標として扱う。",
-      "Agent-Assistedは人間がハーネス、参照、評価予算、最終昇格を設計し、Codex/Claude Codeが候補生成とプロファイル解釈を担当。",
-      "Full-AgentはLoongFlowの計画・実行・要約探索を同一種の最終評価へかける。",
-      "候補は同一ラウンド基準との代表形状ゲートを通した後、全ワークロード走査で昇格判定する。"
-    ],
-    "methodology": "5種類の演算子定義について、保持されたAgent-Assisted成果とFlashInfer基準、Full-Agent成果を同じ公式準拠実機計測で比較する。各最適化ラウンドでは一つの仮説へ候補生成を制限し、合格候補をプロファイルして形状別律速を特定する。性能だけでなく正当性、コンパイル、包装、成果物来歴を評価ハーネスで固定し、最終的な平均遅延高速化を報告する。プロファイル例ではMoEでGEMMとパッキングがCUDA時間81.6%を占め、占有率約18.7%、DSA top-kでは1ブロック経路が約0.01 wave/SM、GDN prefillではBlackwell向けチャンクカーネルがCUDA時間98.5%を占めるなど、採用した構造変更と律速の対応を検証する。",
-    "metrics": [
-      "全形状平均遅延",
-      "FlashInfer基準比高速化倍率",
-      "形状別遅延",
-      "中央値・P95遅延",
-      "正当性合格率",
-      "プロファイル上のCUDA時間・占有率・waves/SM・メモリ転送"
-    ],
-    "scope": "実機B200上のコンテスト固有5演算子を対象にしたシステム評価で、生成モデル単体の能力評価ではない。人間の参照選択・方向付け・評価予算が主要な構成要素であり、完全自律性や他GPU世代への一般化を直接示すものではない。",
-    "reproducibility": "著者コードリポジトリはAgent-Assisted/Full-Agentのカーネル、スキル、評価スクリプト、ベンチマーク成果物、プロファイル、探索トレースを公開する。論文記載の環境はCUDA 13.2、PyTorch 2.12、Triton 3.6、隔離B200で、公式コンテストワークロードへ整合させている。"
-  },
+  "attempt_id": "attempt-022b9f637cf7cc5a822fdef4",
+  "job_id": "job-research-f023091bfca94e41",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-fdcbaf1eb3d1ca214325848b",
+    "claim_id": "claim-022b9f637cf7cc5a822fdef4",
     "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
     "worker_kind": "scheduled_chat"
   }

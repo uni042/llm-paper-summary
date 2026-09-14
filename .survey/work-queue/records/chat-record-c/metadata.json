@@ -2,91 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-fdcbaf1eb3d1ca214325848b",
-  "job_id": "job-research-63f40e784a6127a2",
-  "data": {
-    "canonical_id": "arXiv:2607.17979",
-    "arxiv_id": "2607.17979",
-    "doi": "10.48550/arXiv.2607.17979",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
-    "title": "Harness Engineering for LLM-Driven GPU Kernel Generation",
-    "summary": "LLMにGPUカーネルを書かせるだけでは、コンパイル可能性、全形状での数値正当性、測定ノイズ、特定形状だけの過適合、古い比較結果の混入を防げず、生成候補を実運用品質へ昇格できない。本論文はNVIDIA Blackwell B200向けFlashInfer AI Kernel Generation Contestを題材に、候補を公式準拠環境でコンパイル・正当性検査・計時・成果物保存する評価ハーネスと、プロファイル証拠から一度に一つの最適化仮説だけを選ぶ制御器を分離する。人間が制約、参照実装、評価予算、昇格規則を設計し、CodexやClaude CodeがCUDA・Triton・CuTe候補を生成する。採用候補だけでなく棄却理由も軌跡記憶として残し、代表形状の対比較から全分布走査を経て、正当性回帰なしに平均遅延が改善した候補だけを昇格する。",
-    "list_summary": "LLM生成GPUカーネルを、公式準拠のコンパイル・正当性・計時・全形状評価とプロファイル駆動の保守的昇格ループで管理し、B200上の5演算子でFlashInfer比1.12〜29.68倍を得たハーネス設計。",
-    "authors": [
-      "Yue Shui",
-      "Chenyu Ma",
-      "Hangfei Xu",
-      "Shengzhao Wen",
-      "Yanpeng Wang"
-    ],
-    "authors_affiliations": "",
-    "published": "2026-07-20",
-    "publication": "arXiv; extended technical report on MLSys 2026 FlashInfer AI Kernel Generation Contest submission",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "agentic GPU kernel generation / harness engineering / profile-guided optimization",
-    "topics": [
-      "GPUカーネル生成",
-      "LLMエージェント",
-      "評価ハーネス",
-      "プロファイル駆動最適化",
-      "Blackwell B200",
-      "FlashInfer"
-    ],
-    "importance": "生成モデル本体より、候補生成を安全なカーネルへ変換する測定・検証・証拠記憶のシステム設計を明示し、完全自律探索との差も同一プロトコルで測定する。",
-    "hardware_evaluation": "NVIDIA Blackwell B200の隔離実行環境で、MLSys 2026 FlashInfer AI Kernel Generation Contestの5演算子・公式準拠ワークロードを実機評価。",
-    "quality_effect": "数値近似を研究目的にせず、コンテスト許容誤差を満たす正当性検査を昇格条件にする。正当性回帰した高速候補は採用しない。",
-    "storage_targets": [],
-    "bottlenecks": [
-      "生成候補の正当性検証",
-      "測定ノイズ",
-      "形状過適合",
-      "プロファイル証拠の散逸",
-      "最適化探索の反復・退行"
-    ],
-    "source": "https://arxiv.org/abs/2607.17979",
-    "sources": [
-      "https://arxiv.org/abs/2607.17979",
-      "https://arxiv.org/html/2607.17979",
-      "https://github.com/syhya/mlsys26-flashinfer-contest"
-    ],
-    "code": "https://github.com/syhya/mlsys26-flashinfer-contest",
-    "implementation": "著者の再現パッケージにAgent-AssistedとFull-Agentのカーネル、最適化スキル、評価スクリプト、計測成果物、プロファイル結果、LoongFlow探索トレースを収録する。公式準拠環境はCUDA 13.2、PyTorch 2.12、Triton 3.6、cupti-python計時を用いる。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {
-        "canonical_id": "arXiv:2603.24517",
-        "arxiv_id": "2603.24517"
-      },
-      {
-        "canonical_id": "arXiv:2512.02556",
-        "arxiv_id": "2512.02556"
-      },
-      {
-        "canonical_id": "arXiv:2603.21331",
-        "arxiv_id": "2603.21331"
-      },
-      {
-        "canonical_id": "arXiv:2512.23236",
-        "arxiv_id": "2512.23236"
-      },
-      {
-        "canonical_id": "arXiv:2506.13131",
-        "arxiv_id": "2506.13131"
-      }
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML版参考文献節",
-    "references_total": 24
-  },
+  "attempt_id": "attempt-022b9f637cf7cc5a822fdef4",
+  "job_id": "job-research-f023091bfca94e41",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-fdcbaf1eb3d1ca214325848b",
+    "claim_id": "claim-022b9f637cf7cc5a822fdef4",
     "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
     "worker_kind": "scheduled_chat"
   }
