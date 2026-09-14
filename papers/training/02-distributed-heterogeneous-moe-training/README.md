@@ -34,6 +34,10 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
   実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：2  
   注意機構とMoEで異なるGPU並列化グループを組み、同じGPU集合を処理ごとに組み替えて、エキスパートの不要なノード間通信を減らす大規模学習方式。
 
+- **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  新旧GPUの性能差に合わせて注意機構を新GPU、エキスパート計算を旧GPUへ主に割り当て、処理を重ねて異種GPUクラスタの待ち時間を減らすMoE学習方式。
+
 - **2025-08 · [X-MoE: Enabling Scalable Training for Emerging Mixture-of-Experts Architectures on HPC Platforms](2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) ・ リポジトリ内被引用：0  
   大規模MoEで実トークンだけを詰めて通信し、同一ノード宛ての重複送信をまとめ、MoE部分の系列分割も変えて、paddingとノード間通信を減らすHPC学習システム。
@@ -41,10 +45,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 - **2025-04 · [SYMI: Efficient Mixture-of-Experts Training via Model and Optimizer State Decoupling](2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動的に複製するエキスパート重みと、移動させない巨大な最適化状態を分離配置し、ルーティング負荷に応じて重みの複製数だけを毎反復調整するMoE学習システム。
-
-- **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  新旧GPUの性能差に合わせて注意機構を新GPU、エキスパート計算を旧GPUへ主に割り当て、処理を重ねて異種GPUクラスタの待ち時間を減らすMoE学習方式。
 
 ### 4年前（2022-10〜2023-09）
 

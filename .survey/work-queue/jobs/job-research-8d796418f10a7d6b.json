@@ -17,16 +17,21 @@
   "artifact_transport": "structured_record_v10",
   "blocker": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The current arXiv abstract/search index is accessible and confirms identity plus abstract-level metrics, but direct arXiv HTML/PDF fetches still fail, so the 53-page current manuscript could not be read end-to-end. Retrieval attempted again: https://arxiv.org/abs/2609.10861, https://arxiv.org/html/2609.10861, https://arxiv.org/pdf/2609.10861 and https://arxiv.org/pdf/2609.10861.pdf. The older related arXiv:2512.18152 reports materially different figures and is not substituted. Per workflow v10, do not infer a five-slot record from abstract/search snippets; retry when the current primary full text is retrievable.",
   "status_submission": ".survey/work-queue/submissions/research/attempt-c9837530bb80894fb2988e08.json",
-  "blocked_attempts": 1,
-  "last_recorded_blocked_event": "2026-09-14T07:45:37+00:00",
+  "blocked_attempts": 2,
+  "last_recorded_blocked_event": "2026-09-14T15:15:28+00:00",
   "block_history": [
     {
       "attempt": 1,
       "blocked_at": "2026-09-14T07:45:37+00:00",
       "reason": "Primary-source full-text retrieval failed for current arXiv:2609.10861v1. The arXiv abstract page was available and confirms identity plus abstract-level claims, but current-version HTML/PDF full text could not be retrieved in this execution environment. An older related manuscript arXiv:2512.18152 has materially different reported performance/area metrics, so it was not used to infer missing current-version details. Retrieval attempted: https://arxiv.org/abs/2609.10861 (abstract accessible), https://arxiv.org/html/2609.10861 (full text unavailable), https://arxiv.org/pdf/2609.10861 (full text unavailable). Per workflow policy, do not complete from abstract/search snippets; retry when current primary full text is retrievable."
+    },
+    {
+      "attempt": 2,
+      "blocked_at": "2026-09-14T15:15:28+00:00",
+      "reason": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The current arXiv abstract/search index is accessible and confirms identity plus abstract-level metrics, but direct arXiv HTML/PDF fetches still fail, so the 53-page current manuscript could not be read end-to-end. Retrieval attempted again: https://arxiv.org/abs/2609.10861, https://arxiv.org/html/2609.10861, https://arxiv.org/pdf/2609.10861 and https://arxiv.org/pdf/2609.10861.pdf. The older related arXiv:2512.18152 reports materially different figures and is not substituted. Per workflow v10, do not infer a five-slot record from abstract/search snippets; retry when the current primary full text is retrievable."
     }
   ],
-  "last_blocked_at": "2026-09-14T07:45:37+00:00",
-  "retry_queued_at": "2026-09-14T14:12:32+00:00",
-  "completed_at": "2026-09-14T15:15:28+00:00"
+  "last_blocked_at": "2026-09-14T15:15:28+00:00",
+  "completed_at": "2026-09-14T15:15:28+00:00",
+  "retry_not_before": "2026-09-14T16:46:40+00:00"
 }
