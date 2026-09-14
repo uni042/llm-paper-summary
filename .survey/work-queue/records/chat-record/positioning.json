@@ -2,11 +2,19 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-26e223cca5a6be32a0893510",
-  "job_id": "job-research-22ee1955e766f2b1",
-  "data": {},
+  "attempt_id": "attempt-3324cdf4836bf16111b8b485",
+  "job_id": "job-research-28c86979d5f2a372",
+  "data": {
+    "differences": "vLLMやSGLangはPagedAttentionやRadixAttentionでKVの配置・prefix共有を効率化し、Sarathi/DistServeなどはバッチ形成やprefill/decode配置を最適化するが、KVが足りなくなった瞬間に『どの実行中要求を追い出すか』はNRFなど単純な規則に任せることが多い。Vidur系シミュレータは実測モデルで設定探索を行うのに対し、本研究は閉形式で単調なモデルを用いて性能上限と改善原理を説明し、その解析から新しい置換方針SRFそのものを導く。SRFは要求開始順や既存スケジューラを置き換えず、KV不足時の被害要求選択だけをDBMS的な進捗/再計算費の観点で変更する点が異なる。",
+    "novelty_vs_prior": "推論シミュレーションをパラメータ調整器ではなく、実装前のwhat-if解析と理論上限推定へ使い、そこから実機へ移植する方針を導く開発手順が特徴。さらにDBMSの5分ルールとバッファ管理の発想をKVへ適用し、短要求を優先して追い出すという一見反直感的な結論を制約充足問題と実システムの両方で裏付ける。",
+    "implementation_status": "vLLM v0.6.3でシミュレーションとの照合を行い、SRF/SRF+HistをvLLM、SGLang、Dynamoへ数行〜数十行で実装して実機評価済み。Dynamoでは既存のprefill/decode分離とLMCache DRAM offloadを維持したままdecode側へ統合する。論文Table 2では研究実装の公開をplannedと記載し、専用公開URLは確認できない。",
+    "research_positioning": "LLMサービングのスケジューリング系統とKVキャッシュ管理系統の境界に位置し、さらにDBMSのコストモデル/バッファ管理を推論基盤へ移すDB4LLMの色が強い。新しい巨大スタックを構築するより、成熟したvLLM/SGLang/Dynamoの未探索なプリエンプション規則を理論と軽量実験で改善する研究である。",
+    "relation_to_existing_repository": "PagedAttention、SGLang、DistServe、Sarathi、LMCacheなど既存収録系統に対し、KVの『置き場所』や『移し方』ではなく『容量不足時にどの要求のKVを失うか』という直交する選択軸を追加する。SSD/NVMeオフロードとの関係では、論文自身がKV再計算とDRAM swap-inの損益を比較し、低PCIe帯域では再計算が優位な場合が多いと示す。一方、より高速な接続やSSD/DRAM階層が使える環境では、SRFの被害選択と再計算/オフロード先選択を組み合わせる余地があり、階層メモリ研究の置換ポリシー設計にも直接参考になる。",
+    "limitations": "コストモデルはCPUスケジューリングやtoken samplingを主に重畳可能として省略し、投機的デコード、疎注意、SSMなども対象外。制約充足問題はNP困難で、数千要求のオンライン最適スケジュールを直接解く用途には使えない。SRFは高競合で効き、H100上の8Bのように帯域が十分でプリエンプション自体がほぼ消えると改善余地も消える。SRF+Histは出力長分布のオンライン推定に依存する。評価は一般会話・長文・prefix共有・Alibabaトレースを含むが、全てのmulti-tenant公平性やSLO形式を網羅してはいない。",
+    "audit_required": false
+  },
   "reservation": {
-    "claim_id": "claim-26e223cca5a6be32a0893510",
+    "claim_id": "claim-3324cdf4836bf16111b8b485",
     "worker_id": "scheduled-chat-20260915T0530JST",
     "worker_kind": "scheduled_chat"
   }
