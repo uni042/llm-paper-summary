@@ -4,7 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-4e7bf78fc2160df7744ea2a6",
   "job_id": "job-research-2070373a31124502",
-  "data": {},
+  "data": {
+    "novelty_vs_prior": "PagedAttention、Jenga、SYMPHONY、KunServe、vAttentionなどは主にGPUメモリの配置・断片化・弾力性を短時間の性能問題として扱うのに対し、本研究は同じサービングソフトウェアを36時間連続運転し、時間経過に伴うホスト側資源増加を信頼性問題として測る。従来のソフトウェア経年劣化研究はCPU中心であり、GPU常駐モデル、KVキャッシュ、連続バッチ処理、Python/CUDAの二層実行を持つ現代LLMサービングへ自己相関補正付きの長時間測定を持ち込む点が新しい。",
+    "implementation_status": "新しいサービング実装ではなく実証評価手法。vLLM、NVIDIA Triton、PyTorch/HuggingFace、NVML、psutilを組み合わせた6構成の長時間キャンペーンを定義する。一次論文では専用の公開コードリポジトリを確認できない。",
+    "research_positioning": "推論システムの性能最適化では見落とされやすい長期信頼性・ソフトウェア若返りの系統に位置する。特にサービング基盤の選択を、短時間のTTFT/TPOT/スループットだけでなく、数日から数か月のホストメモリ傾向と再起動・若返りコストまで含めて評価する必要性を示す基礎資料である。",
+    "relation_to_existing_repository": "既存リポジトリのvLLM、PagedAttention、KVメモリ管理、スケジューリング研究は主に容量と性能を改善する。本論文はそれらのランタイムを長寿命サービスとして運転した際の別軸の性質を補う。とくにV0/V1世代やTritonラッパーでリーク率が大きく変わるため、サービング基盤比較では平均性能が同等でも運用寿命・監視・若返り設計が異なり得ることを示す。SSD/NVMeオフロードを直接扱わないが、階層メモリ方式でもホスト側バッファ、キャッシュ、通信ランタイムが長時間に蓄積する可能性を監査する必要性につながる。",
+    "limitations": "各構成は1回の36時間実行のみで反復がなく、報告傾きは実行間変動を含まない。vLLM V0/V1比較は版が揃っておらず世代差とバージョン差が交絡する。3構成の同時実行は実運用に近い一方、共有CPU・DRAM・I/Oの干渉を含む。ワークロードは定常Poisson到着の合成要求で、本番のバースト、時間的局所性、同一プロンプト反復を再現しない。GPUはL40S、モデルはQwen2.5-7B-Instructだけであり、H100/B200や大規模モデルへの定量的一般化は未検証。Triton+V0の段階的増加についてもヒープ単位の原因特定は行っておらず、将来のプロファイリング課題として残る。",
+    "audit_required": false
+  },
   "reservation": {
     "claim_id": "claim-4e7bf78fc2160df7744ea2a6",
     "worker_id": "scheduled-chat-paper-20260915T0330JST",
