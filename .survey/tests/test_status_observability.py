@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).parents[2]
 THROUGHPUT_SCRIPT = ROOT / ".survey" / "scripts" / "append_research_throughput_status.py"
 DASHBOARD_SCRIPT = ROOT / ".survey" / "scripts" / "build_status_dashboard.py"
+REFINER_SCRIPT = ROOT / ".survey" / "scripts" / "refine_status_observability.py"
 
 
 def _load(path: Path, name: str):
@@ -26,7 +27,8 @@ def _write(path: Path, payload):
 
 class StatusObservabilityTests(unittest.TestCase):
     def test_worker_status_separates_latest_run_from_old_valid_leases(self):
-        module = _load(THROUGHPUT_SCRIPT, "status_throughput_observability")
+        throughput = _load(THROUGHPUT_SCRIPT, "status_throughput_observability")
+        refiner = _load(REFINER_SCRIPT, "status_refiner_worker_observability")
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
             _write(repo / ".survey/work-queue/next-jobs.json", {
@@ -59,10 +61,9 @@ class StatusObservabilityTests(unittest.TestCase):
                 "expires_at": "2026-09-14T10:05:00+00:00",
             })
 
-            text = module.render_section(
-                repo,
-                now=datetime(2026, 9, 14, 9, 40, tzinfo=timezone.utc),
-            )
+            now = datetime(2026, 9, 14, 9, 40, tzinfo=timezone.utc)
+            base = throughput.render_section(repo, now=now)
+            text = refiner.refine_text(repo, base, now=now)
 
             self.assertIn("有効claim（lease） | **3**", text)
             self.assertIn(":30 最新worker run | **2026-09-14T18:30:00+09:00**", text)
@@ -75,7 +76,8 @@ class StatusObservabilityTests(unittest.TestCase):
             self.assertIn("Scheduled Chatプロセスの生存そのものではありません", text)
 
     def test_dashboard_distinguishes_integrated_checkpointed_and_unique_read_papers(self):
-        module = _load(DASHBOARD_SCRIPT, "status_dashboard_observability")
+        dashboard = _load(DASHBOARD_SCRIPT, "status_dashboard_observability")
+        refiner = _load(REFINER_SCRIPT, "status_refiner_progress_observability")
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
             _write(repo / ".survey/work-queue/next-jobs.json", {
@@ -116,16 +118,40 @@ class StatusObservabilityTests(unittest.TestCase):
                 ]
             })
 
-            text = module.build_dashboard(
-                repo,
-                now=datetime(2026, 9, 14, 9, 40, tzinfo=timezone.utc),
-            )
+            now = datetime(2026, 9, 14, 9, 40, tzinfo=timezone.utc)
+            base = dashboard.build_dashboard(repo, now=now)
+            text = refiner.refine_text(repo, base, now=now)
 
             self.assertIn("GitHub反映済みResearch完了（job） | **2**", text)
             self.assertIn("耐久checkpoint済み・GitHub未反映（job） | **2**", text)
             self.assertIn("精読済みユニーク論文（推定） | **3**", text)
             self.assertNotIn("全文精読完了（累計）", text)
             self.assertIn("canonical IDで重複排除", text)
+
+    def test_refinement_is_idempotent(self):
+        refiner = _load(REFINER_SCRIPT, "status_refiner_idempotence")
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            _write(repo / ".survey/work-queue/jobs/job-a.json", {
+                "job_id": "job-a", "type": "research", "canonical_id": "arXiv:A", "status": "completed"
+            })
+            base = (
+                "# 運用ダッシュボード\n\n"
+                "## 現在の状態\n\n"
+                "| 指標 | 状態 |\n|---|---:|\n| 全文精読完了（累計） | **1** |\n\n"
+                "### 要注意\n\n"
+                "<!-- research-throughput-status:start -->\n"
+                "## ワーカー稼働状況\n\n"
+                "| 指標 | 状態 |\n|---|---:|\n"
+                "| 未処理候補（Research ready） | **0** |\n"
+                "| 処理中（Active claims） | **0** |\n"
+                "| 今すぐ着手可能（Claimable） | **0** |\n"
+                "<!-- research-throughput-status:end -->\n"
+            )
+            now = datetime(2026, 9, 14, 9, 40, tzinfo=timezone.utc)
+            once = refiner.refine_text(repo, base, now=now)
+            twice = refiner.refine_text(repo, once, now=now)
+            self.assertEqual(once, twice)
 
 
 if __name__ == "__main__":
