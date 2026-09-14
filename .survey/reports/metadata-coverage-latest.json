@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-13T23:04:40+00:00",
+  "checked_at": "2026-09-14T00:35:44+00:00",
   "required_fields": [
     "canonical_id",
     "title",
@@ -18,9 +18,40 @@
   ],
   "families": {
     "inference": {
-      "total": 429,
-      "complete": 429,
-      "incomplete": []
+      "total": 439,
+      "complete": 434,
+      "incomplete": [
+        {
+          "path": "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
+          "missing": [
+            "code"
+          ]
+        },
+        {
+          "path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md",
+          "missing": [
+            "code"
+          ]
+        },
+        {
+          "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.13111-iserve-intent-based-llm-serving.md",
+          "missing": [
+            "code"
+          ]
+        },
+        {
+          "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md",
+          "missing": [
+            "code"
+          ]
+        },
+        {
+          "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
+          "missing": [
+            "code"
+          ]
+        }
+      ]
     },
     "training": {
       "total": 19,
@@ -34,8 +65,8 @@
     }
   },
   "summary": {
-    "total": 454,
-    "complete": 454,
-    "incomplete": 0
+    "total": 464,
+    "complete": 459,
+    "incomplete": 5
   }
 }

@@ -1,229 +1,743 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-09-12T16:29:33.872609+00:00",
+  "checked_at": "2026-09-14T00:35:08.968582+00:00",
   "mode": "apply",
   "job_retention_days": 7,
   "transport_retention_days": 1,
-  "candidate_count": 208,
+  "candidate_count": 361,
   "candidate_counts_by_kind": {
-    "settled_submission": 104,
-    "settled_result": 104
+    "settled_submission": 180,
+    "settled_result": 180,
+    "orphan_result": 1
   },
-  "deleted_count": 208,
+  "deleted_count": 361,
   "deleted": [
-    ".survey/work-queue/submissions/20260911T0128JST-discovery-7afb8a934b1edaa3.json",
-    ".survey/work-queue/results/20260911T0128JST-discovery-7afb8a934b1edaa3.json",
-    ".survey/work-queue/submissions/20260911T0145JST-discovery-f6c4789f353a56da.json",
-    ".survey/work-queue/results/20260911T0145JST-discovery-f6c4789f353a56da.json",
-    ".survey/work-queue/submissions/20260911T0151JST-discovery-06f2169ce2ecebe4.json",
-    ".survey/work-queue/results/20260911T0151JST-discovery-06f2169ce2ecebe4.json",
-    ".survey/work-queue/submissions/20260911T0232JST-discovery-905c587af00ec25c.json",
-    ".survey/work-queue/results/20260911T0232JST-discovery-905c587af00ec25c.json",
-    ".survey/work-queue/submissions/20260911T0234JST-discovery-1eeaee8a7ab27e13.json",
-    ".survey/work-queue/results/20260911T0234JST-discovery-1eeaee8a7ab27e13.json",
-    ".survey/work-queue/submissions/20260911T0240JST-discovery-4e0bc8f9d84a8444.json",
-    ".survey/work-queue/results/20260911T0240JST-discovery-4e0bc8f9d84a8444.json",
-    ".survey/work-queue/submissions/20260911T0248JST-discovery-825a3fe8fd3b5c49.json",
-    ".survey/work-queue/results/20260911T0248JST-discovery-825a3fe8fd3b5c49.json",
-    ".survey/work-queue/submissions/20260911T0254JST-discovery-a0f9b155ba2cea14.json",
-    ".survey/work-queue/results/20260911T0254JST-discovery-a0f9b155ba2cea14.json",
-    ".survey/work-queue/submissions/20260911T0307JST-discovery-ed3be0b3453134d0.json",
-    ".survey/work-queue/results/20260911T0307JST-discovery-ed3be0b3453134d0.json",
-    ".survey/work-queue/submissions/20260911T0321JST-discovery-job-9f34569ffff872b2.json",
-    ".survey/work-queue/results/20260911T0321JST-discovery-job-9f34569ffff872b2.json",
-    ".survey/work-queue/submissions/20260911T0324JST-discovery-job-0c36e7e6318b3a35.json",
-    ".survey/work-queue/results/20260911T0324JST-discovery-job-0c36e7e6318b3a35.json",
-    ".survey/work-queue/submissions/20260911T0335JST-discovery-e22703146ab852cf.json",
-    ".survey/work-queue/results/20260911T0335JST-discovery-e22703146ab852cf.json",
-    ".survey/work-queue/submissions/20260911T0341JST-discovery-fe565c0916692e87.json",
-    ".survey/work-queue/results/20260911T0341JST-discovery-fe565c0916692e87.json",
-    ".survey/work-queue/submissions/20260911T0348JST-discovery-80761b12c62667c8.json",
-    ".survey/work-queue/results/20260911T0348JST-discovery-80761b12c62667c8.json",
-    ".survey/work-queue/submissions/20260911T0355JST-discovery-4d147d9508b33125.json",
-    ".survey/work-queue/results/20260911T0355JST-discovery-4d147d9508b33125.json",
-    ".survey/work-queue/submissions/20260911T0358JST-discovery-4d630057e24cd28e.json",
-    ".survey/work-queue/results/20260911T0358JST-discovery-4d630057e24cd28e.json",
-    ".survey/work-queue/submissions/20260911T0359JST-discovery-2e3a57c5ee1b198f.json",
-    ".survey/work-queue/results/20260911T0359JST-discovery-2e3a57c5ee1b198f.json",
-    ".survey/work-queue/submissions/20260911T0412JST-discovery-3b8e09c2d256c523.json",
-    ".survey/work-queue/results/20260911T0412JST-discovery-3b8e09c2d256c523.json",
-    ".survey/work-queue/submissions/20260911T0420JST-discovery-27f82c4b8a64d3b2.json",
-    ".survey/work-queue/results/20260911T0420JST-discovery-27f82c4b8a64d3b2.json",
-    ".survey/work-queue/submissions/20260911T0423JST-discovery-57932fbc2db6dcaf.json",
-    ".survey/work-queue/results/20260911T0423JST-discovery-57932fbc2db6dcaf.json",
-    ".survey/work-queue/submissions/20260911T0430JST-discovery-0764aa7a60dcbf12.json",
-    ".survey/work-queue/results/20260911T0430JST-discovery-0764aa7a60dcbf12.json",
-    ".survey/work-queue/submissions/20260911T0430JST-discovery-07ca72ad7cc621a3.json",
-    ".survey/work-queue/results/20260911T0430JST-discovery-07ca72ad7cc621a3.json",
-    ".survey/work-queue/submissions/20260911T0430JST-discovery-b7c0549b213d456a.json",
-    ".survey/work-queue/results/20260911T0430JST-discovery-b7c0549b213d456a.json",
-    ".survey/work-queue/submissions/20260911T0435JST-discovery-0c1f66c072921e49.json",
-    ".survey/work-queue/results/20260911T0435JST-discovery-0c1f66c072921e49.json",
-    ".survey/work-queue/submissions/20260911T0437JST-discovery-ccc820e8748a6b32.json",
-    ".survey/work-queue/results/20260911T0437JST-discovery-ccc820e8748a6b32.json",
-    ".survey/work-queue/submissions/20260911T0451JST-discovery-cee6fbbb4ad4d3b0.json",
-    ".survey/work-queue/results/20260911T0451JST-discovery-cee6fbbb4ad4d3b0.json",
-    ".survey/work-queue/submissions/20260911T0530JST-discovery-d7ae4619b26c6035.json",
-    ".survey/work-queue/results/20260911T0530JST-discovery-d7ae4619b26c6035.json",
-    ".survey/work-queue/submissions/20260911T0535JST-discovery-2fd1a07b2ec76308.json",
-    ".survey/work-queue/results/20260911T0535JST-discovery-2fd1a07b2ec76308.json",
-    ".survey/work-queue/submissions/20260911T0638JST-discovery-01c3d3ead58cced3.json",
-    ".survey/work-queue/results/20260911T0638JST-discovery-01c3d3ead58cced3.json",
-    ".survey/work-queue/submissions/20260911T0641JST-discovery-e4fab7ab96322990.json",
-    ".survey/work-queue/results/20260911T0641JST-discovery-e4fab7ab96322990.json",
-    ".survey/work-queue/submissions/20260911T0643JST-discovery-2220260173f7525d.json",
-    ".survey/work-queue/results/20260911T0643JST-discovery-2220260173f7525d.json",
-    ".survey/work-queue/submissions/20260911T0645JST-discovery-8412768777dbc61d.json",
-    ".survey/work-queue/results/20260911T0645JST-discovery-8412768777dbc61d.json",
-    ".survey/work-queue/submissions/20260911T0741JST-discovery-cbafd4e803a329a5.json",
-    ".survey/work-queue/results/20260911T0741JST-discovery-cbafd4e803a329a5.json",
-    ".survey/work-queue/submissions/20260911T0748JST-discovery-2b92b80082f335b9.json",
-    ".survey/work-queue/results/20260911T0748JST-discovery-2b92b80082f335b9.json",
-    ".survey/work-queue/submissions/20260911T0755JST-discovery-9ac4f6172daefb14.json",
-    ".survey/work-queue/results/20260911T0755JST-discovery-9ac4f6172daefb14.json",
-    ".survey/work-queue/submissions/20260911T0759JST-discovery-09bf82dae3c959dd.json",
-    ".survey/work-queue/results/20260911T0759JST-discovery-09bf82dae3c959dd.json",
-    ".survey/work-queue/submissions/20260911T0802JST-discovery-f513abae44407875.json",
-    ".survey/work-queue/results/20260911T0802JST-discovery-f513abae44407875.json",
-    ".survey/work-queue/submissions/20260911T0815JST-discovery-527bd72a0f02b02a.json",
-    ".survey/work-queue/results/20260911T0815JST-discovery-527bd72a0f02b02a.json",
-    ".survey/work-queue/submissions/20260911T0817JST-discovery-8d98bc0d01484eb6.json",
-    ".survey/work-queue/results/20260911T0817JST-discovery-8d98bc0d01484eb6.json",
-    ".survey/work-queue/submissions/20260911T0819JST-research-1015750e825f4035-deferred.json",
-    ".survey/work-queue/results/20260911T0819JST-research-1015750e825f4035-deferred.json",
-    ".survey/work-queue/submissions/20260911T0821JST-discovery-a07bff81409aa153.json",
-    ".survey/work-queue/results/20260911T0821JST-discovery-a07bff81409aa153.json",
-    ".survey/work-queue/submissions/20260911T0823JST-discovery-e5f6131772d61147.json",
-    ".survey/work-queue/results/20260911T0823JST-discovery-e5f6131772d61147.json",
-    ".survey/work-queue/submissions/20260911T0948JST-discovery-bd3cac529b644852.json",
-    ".survey/work-queue/results/20260911T0948JST-discovery-bd3cac529b644852.json",
-    ".survey/work-queue/submissions/20260911T0956JST-discovery-4b2230b86b73cd99.json",
-    ".survey/work-queue/results/20260911T0956JST-discovery-4b2230b86b73cd99.json",
-    ".survey/work-queue/submissions/20260911T1005JST-discovery-9f3a1e76abe547d0.json",
-    ".survey/work-queue/results/20260911T1005JST-discovery-9f3a1e76abe547d0.json",
-    ".survey/work-queue/submissions/20260911T1032JST-discovery-394e9e8c39c0dac6.json",
-    ".survey/work-queue/results/20260911T1032JST-discovery-394e9e8c39c0dac6.json",
-    ".survey/work-queue/submissions/20260911T1040JST-discovery-0e78629b096238d9.json",
-    ".survey/work-queue/results/20260911T1040JST-discovery-0e78629b096238d9.json",
-    ".survey/work-queue/submissions/20260911T1101JST-discovery-51de467467408979.json",
-    ".survey/work-queue/results/20260911T1101JST-discovery-51de467467408979.json",
-    ".survey/work-queue/submissions/20260911T1103JST-discovery-75f1caf8613a10d5.json",
-    ".survey/work-queue/results/20260911T1103JST-discovery-75f1caf8613a10d5.json",
-    ".survey/work-queue/submissions/20260911T1108JST-discovery-cf8b0e58e9d070d5.json",
-    ".survey/work-queue/results/20260911T1108JST-discovery-cf8b0e58e9d070d5.json",
-    ".survey/work-queue/submissions/20260911T1113JST-discovery-d7077ea85e263fb4.json",
-    ".survey/work-queue/results/20260911T1113JST-discovery-d7077ea85e263fb4.json",
-    ".survey/work-queue/submissions/20260911T1115JST-discovery-27f2c95070471aa1.json",
-    ".survey/work-queue/results/20260911T1115JST-discovery-27f2c95070471aa1.json",
-    ".survey/work-queue/submissions/20260911T1116JST-discovery-8a72402a8d65d7b0.json",
-    ".survey/work-queue/results/20260911T1116JST-discovery-8a72402a8d65d7b0.json",
-    ".survey/work-queue/submissions/20260911T1122JST-discovery-540607ac2c56795f.json",
-    ".survey/work-queue/results/20260911T1122JST-discovery-540607ac2c56795f.json",
-    ".survey/work-queue/submissions/20260911T1136JST-discovery-34d58f798d6809bc.json",
-    ".survey/work-queue/results/20260911T1136JST-discovery-34d58f798d6809bc.json",
-    ".survey/work-queue/submissions/20260911T1138JST-discovery-23004462feabf795.json",
-    ".survey/work-queue/results/20260911T1138JST-discovery-23004462feabf795.json",
-    ".survey/work-queue/submissions/20260911T1140JST-research-46ccd443c865ae7d-deferred.json",
-    ".survey/work-queue/results/20260911T1140JST-research-46ccd443c865ae7d-deferred.json",
-    ".survey/work-queue/submissions/20260911T1148JST-research-78039bd17bfaca0f-deferred.json",
-    ".survey/work-queue/results/20260911T1148JST-research-78039bd17bfaca0f-deferred.json",
-    ".survey/work-queue/submissions/20260911T1151JST-discovery-04676dbdfb36284d.json",
-    ".survey/work-queue/results/20260911T1151JST-discovery-04676dbdfb36284d.json",
-    ".survey/work-queue/submissions/20260911T1154JST-discovery-a273f839dfbdd6ee.json",
-    ".survey/work-queue/results/20260911T1154JST-discovery-a273f839dfbdd6ee.json",
-    ".survey/work-queue/submissions/20260911T1203JST-discovery-b18cb287a414a209.json",
-    ".survey/work-queue/results/20260911T1203JST-discovery-b18cb287a414a209.json",
-    ".survey/work-queue/submissions/20260911T1227JST-discovery-a3093f5c71fb5c98.json",
-    ".survey/work-queue/results/20260911T1227JST-discovery-a3093f5c71fb5c98.json",
-    ".survey/work-queue/submissions/20260911T1233JST-discovery-7b3846a7671b0417.json",
-    ".survey/work-queue/results/20260911T1233JST-discovery-7b3846a7671b0417.json",
-    ".survey/work-queue/submissions/20260911T1238JST-discovery-815a631357ed1267.json",
-    ".survey/work-queue/results/20260911T1238JST-discovery-815a631357ed1267.json",
-    ".survey/work-queue/submissions/20260911T1240JST-discovery-2bf1c1226566f2a6.json",
-    ".survey/work-queue/results/20260911T1240JST-discovery-2bf1c1226566f2a6.json",
-    ".survey/work-queue/submissions/20260911T1242JST-discovery-654656f6403a60c6.json",
-    ".survey/work-queue/results/20260911T1242JST-discovery-654656f6403a60c6.json",
-    ".survey/work-queue/submissions/20260911T1244JST-discovery-ec5561e7d5e28c0a.json",
-    ".survey/work-queue/results/20260911T1244JST-discovery-ec5561e7d5e28c0a.json",
-    ".survey/work-queue/submissions/20260911T1330JST-discovery-9bcb2e884a1e3a83.json",
-    ".survey/work-queue/results/20260911T1330JST-discovery-9bcb2e884a1e3a83.json",
-    ".survey/work-queue/submissions/20260911T1332JST-discovery-add45d98dbbafd02.json",
-    ".survey/work-queue/results/20260911T1332JST-discovery-add45d98dbbafd02.json",
-    ".survey/work-queue/submissions/20260911T1334JST-discovery-d13a93faa1d04cbc.json",
-    ".survey/work-queue/results/20260911T1334JST-discovery-d13a93faa1d04cbc.json",
-    ".survey/work-queue/submissions/20260911T1405JST-discovery-2b6230a20253ead5.json",
-    ".survey/work-queue/results/20260911T1405JST-discovery-2b6230a20253ead5.json",
-    ".survey/work-queue/submissions/20260911T1410JST-discovery-7024bb6bb516bd83.json",
-    ".survey/work-queue/results/20260911T1410JST-discovery-7024bb6bb516bd83.json",
-    ".survey/work-queue/submissions/20260911T1430JST-discovery-a923b40a38aac177.json",
-    ".survey/work-queue/results/20260911T1430JST-discovery-a923b40a38aac177.json",
-    ".survey/work-queue/submissions/20260911T1430JST-discovery-b929523ba1be53c2.json",
-    ".survey/work-queue/results/20260911T1430JST-discovery-b929523ba1be53c2.json",
-    ".survey/work-queue/submissions/20260911T1435JST-discovery-81adab78d36bd4bb.json",
-    ".survey/work-queue/results/20260911T1435JST-discovery-81adab78d36bd4bb.json",
-    ".survey/work-queue/submissions/20260911T1446JST-discovery-1f9b736a87f9638c.json",
-    ".survey/work-queue/results/20260911T1446JST-discovery-1f9b736a87f9638c.json",
-    ".survey/work-queue/submissions/20260911T1450JST-discovery-dc51ce84c438adb2.json",
-    ".survey/work-queue/results/20260911T1450JST-discovery-dc51ce84c438adb2.json",
-    ".survey/work-queue/submissions/20260911T1543JST-discovery-b7d2560206d7b78d.json",
-    ".survey/work-queue/results/20260911T1543JST-discovery-b7d2560206d7b78d.json",
-    ".survey/work-queue/submissions/20260911T1555JST-discovery-3732a5ada325b4a2.json",
-    ".survey/work-queue/results/20260911T1555JST-discovery-3732a5ada325b4a2.json",
-    ".survey/work-queue/submissions/20260911T1559JST-discovery-9f406f6b27cacd78.json",
-    ".survey/work-queue/results/20260911T1559JST-discovery-9f406f6b27cacd78.json",
-    ".survey/work-queue/submissions/20260911T1619JST-discovery-001ad03b4536492d.json",
-    ".survey/work-queue/results/20260911T1619JST-discovery-001ad03b4536492d.json",
-    ".survey/work-queue/submissions/20260911T1624JST-discovery-75a3e4e48e35224e.json",
-    ".survey/work-queue/results/20260911T1624JST-discovery-75a3e4e48e35224e.json",
-    ".survey/work-queue/submissions/20260911T1636JST-discovery-1cf1bb093db0f2b0.json",
-    ".survey/work-queue/results/20260911T1636JST-discovery-1cf1bb093db0f2b0.json",
-    ".survey/work-queue/submissions/20260911T1637JST-discovery-add94fca07b82c40.json",
-    ".survey/work-queue/results/20260911T1637JST-discovery-add94fca07b82c40.json",
-    ".survey/work-queue/submissions/20260911T1639JST-discovery-3e5c753d0d72de11.json",
-    ".survey/work-queue/results/20260911T1639JST-discovery-3e5c753d0d72de11.json",
-    ".survey/work-queue/submissions/20260911T1641JST-discovery-06a978d956ba3116.json",
-    ".survey/work-queue/results/20260911T1641JST-discovery-06a978d956ba3116.json",
-    ".survey/work-queue/submissions/20260911T1643JST-discovery-9a6f7c6dafd7396c.json",
-    ".survey/work-queue/results/20260911T1643JST-discovery-9a6f7c6dafd7396c.json",
-    ".survey/work-queue/submissions/20260911T1730JST-discovery-83bcad427dc46233.json",
-    ".survey/work-queue/results/20260911T1730JST-discovery-83bcad427dc46233.json",
-    ".survey/work-queue/submissions/20260911T1736JST-discovery-af83b07786e20df5.json",
-    ".survey/work-queue/results/20260911T1736JST-discovery-af83b07786e20df5.json",
-    ".survey/work-queue/submissions/20260911T1744JST-discovery-305b63a35c012b0a.json",
-    ".survey/work-queue/results/20260911T1744JST-discovery-305b63a35c012b0a.json",
-    ".survey/work-queue/submissions/20260911T1755JST-discovery-02d1cb2d50392215.json",
-    ".survey/work-queue/results/20260911T1755JST-discovery-02d1cb2d50392215.json",
-    ".survey/work-queue/submissions/20260911T1756JST-discovery-2985ba59040164a3.json",
-    ".survey/work-queue/results/20260911T1756JST-discovery-2985ba59040164a3.json",
-    ".survey/work-queue/submissions/20260911T1759JST-discovery-80f8aa6f5bbc165b.json",
-    ".survey/work-queue/results/20260911T1759JST-discovery-80f8aa6f5bbc165b.json",
-    ".survey/work-queue/submissions/20260911T1802JST-discovery-cf8806698ad633c6.json",
-    ".survey/work-queue/results/20260911T1802JST-discovery-cf8806698ad633c6.json",
-    ".survey/work-queue/submissions/20260911T1805JST-discovery-c1ec790fefc60212.json",
-    ".survey/work-queue/results/20260911T1805JST-discovery-c1ec790fefc60212.json",
-    ".survey/work-queue/submissions/20260911T1808JST-discovery-efe114fe19d772d8.json",
-    ".survey/work-queue/results/20260911T1808JST-discovery-efe114fe19d772d8.json",
-    ".survey/work-queue/submissions/20260911T1824JST-discovery-ee63b15e506badec.json",
-    ".survey/work-queue/results/20260911T1824JST-discovery-ee63b15e506badec.json",
-    ".survey/work-queue/submissions/20260911T1828JST-discovery-d953c583d54986c3.json",
-    ".survey/work-queue/results/20260911T1828JST-discovery-d953c583d54986c3.json",
-    ".survey/work-queue/submissions/20260911T1908JST-discovery-12f4462c0de876df.json",
-    ".survey/work-queue/results/20260911T1908JST-discovery-12f4462c0de876df.json",
-    ".survey/work-queue/submissions/20260911T1912JST-discovery-071438061be959b0.json",
-    ".survey/work-queue/results/20260911T1912JST-discovery-071438061be959b0.json",
-    ".survey/work-queue/submissions/20260911T1920JST-discovery-6fc4f4d29330489e.json",
-    ".survey/work-queue/results/20260911T1920JST-discovery-6fc4f4d29330489e.json",
-    ".survey/work-queue/submissions/20260911T1921JST-discovery-f3a30776d31345b4.json",
-    ".survey/work-queue/results/20260911T1921JST-discovery-f3a30776d31345b4.json",
-    ".survey/work-queue/submissions/20260911T1924JST-discovery-7335d4ff43b2ce6b.json",
-    ".survey/work-queue/results/20260911T1924JST-discovery-7335d4ff43b2ce6b.json",
-    ".survey/work-queue/submissions/20260912T0030JST-discovery-cadebf3fc3fe03cd.json",
-    ".survey/work-queue/results/20260912T0030JST-discovery-cadebf3fc3fe03cd.json"
+    ".survey/work-queue/submissions/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
+    ".survey/work-queue/results/20260912T0138JST-discovery-19ab44e12f4a5cb3.json",
+    ".survey/work-queue/submissions/20260912T0141JST-discovery-c83cadf5c6444540.json",
+    ".survey/work-queue/results/20260912T0141JST-discovery-c83cadf5c6444540.json",
+    ".survey/work-queue/submissions/20260912T0146JST-discovery-3ac62172fb9e78c3.json",
+    ".survey/work-queue/results/20260912T0146JST-discovery-3ac62172fb9e78c3.json",
+    ".survey/work-queue/submissions/20260912T0149JST-discovery-6cc60ed928024068.json",
+    ".survey/work-queue/results/20260912T0149JST-discovery-6cc60ed928024068.json",
+    ".survey/work-queue/submissions/20260912T0151JST-discovery-cc882eea8b949779.json",
+    ".survey/work-queue/results/20260912T0151JST-discovery-cc882eea8b949779.json",
+    ".survey/work-queue/submissions/20260912T0156JST-discovery-ffdf36811f2a8f46.json",
+    ".survey/work-queue/results/20260912T0156JST-discovery-ffdf36811f2a8f46.json",
+    ".survey/work-queue/submissions/20260912T0209JST-discovery-70aa105074246bd1.json",
+    ".survey/work-queue/results/20260912T0209JST-discovery-70aa105074246bd1.json",
+    ".survey/work-queue/submissions/20260912T0220JST-discovery-5c9ef0e67820b9c5.json",
+    ".survey/work-queue/results/20260912T0220JST-discovery-5c9ef0e67820b9c5.json",
+    ".survey/work-queue/submissions/20260912T0233JST-discovery-59aade11c82016df.json",
+    ".survey/work-queue/results/20260912T0233JST-discovery-59aade11c82016df.json",
+    ".survey/work-queue/submissions/20260912T0234JST-discovery-59aade11c82016df.json",
+    ".survey/work-queue/results/20260912T0234JST-discovery-59aade11c82016df.json",
+    ".survey/work-queue/submissions/20260912T0234JST-discovery-da03c189a4140e9b.json",
+    ".survey/work-queue/results/20260912T0234JST-discovery-da03c189a4140e9b.json",
+    ".survey/work-queue/submissions/20260912T0237JST-discovery-da03c189a4140e9b.json",
+    ".survey/work-queue/results/20260912T0237JST-discovery-da03c189a4140e9b.json",
+    ".survey/work-queue/submissions/20260912T0239JST-discovery-13bc7801d03fb798.json",
+    ".survey/work-queue/results/20260912T0239JST-discovery-13bc7801d03fb798.json",
+    ".survey/work-queue/submissions/20260912T0241JST-discovery-6ef6a0fc3ae5401b.json",
+    ".survey/work-queue/results/20260912T0241JST-discovery-6ef6a0fc3ae5401b.json",
+    ".survey/work-queue/submissions/20260912T0330JST-discovery-5cd301a0353d0b12.json",
+    ".survey/work-queue/results/20260912T0330JST-discovery-5cd301a0353d0b12.json",
+    ".survey/work-queue/submissions/20260912T0430JST-discovery-job-e7e41591dea37887.json",
+    ".survey/work-queue/results/20260912T0430JST-discovery-job-e7e41591dea37887.json",
+    ".survey/work-queue/submissions/20260912T0530JST-discovery-job-d40b6253afc79dcb.json",
+    ".survey/work-queue/results/20260912T0530JST-discovery-job-d40b6253afc79dcb.json",
+    ".survey/work-queue/submissions/20260912T0534JST-discovery-job-b3d9f37a3793a771.json",
+    ".survey/work-queue/results/20260912T0534JST-discovery-job-b3d9f37a3793a771.json",
+    ".survey/work-queue/submissions/20260912T0634JST-discovery-job-4de2dbac40f79f4c.json",
+    ".survey/work-queue/results/20260912T0634JST-discovery-job-4de2dbac40f79f4c.json",
+    ".survey/work-queue/submissions/20260912T0730JST-discovery-job-6dc13d71f1f5bd2b.json",
+    ".survey/work-queue/results/20260912T0730JST-discovery-job-6dc13d71f1f5bd2b.json",
+    ".survey/work-queue/submissions/20260912T0732JST-discovery-job-27185df551e42273.json",
+    ".survey/work-queue/results/20260912T0732JST-discovery-job-27185df551e42273.json",
+    ".survey/work-queue/submissions/20260912T0734JST-discovery-job-e3bba266dd7f2f89.json",
+    ".survey/work-queue/results/20260912T0734JST-discovery-job-e3bba266dd7f2f89.json",
+    ".survey/work-queue/submissions/20260912T0744JST-discovery-job-46cbb110ea4d042f.json",
+    ".survey/work-queue/results/20260912T0744JST-discovery-job-46cbb110ea4d042f.json",
+    ".survey/work-queue/submissions/20260912T0748JST-discovery-job-896e21ff5f94cb6c.json",
+    ".survey/work-queue/results/20260912T0748JST-discovery-job-896e21ff5f94cb6c.json",
+    ".survey/work-queue/submissions/20260912T0938JST-discovery-job-05056a15d6adfe06.json",
+    ".survey/work-queue/results/20260912T0938JST-discovery-job-05056a15d6adfe06.json",
+    ".survey/work-queue/submissions/20260912T0942JST-discovery-job-5cd36eaf5a789dc2.json",
+    ".survey/work-queue/results/20260912T0942JST-discovery-job-5cd36eaf5a789dc2.json",
+    ".survey/work-queue/submissions/20260912T0947JST-discovery-job-56a6b0dba9fd04b0.json",
+    ".survey/work-queue/results/20260912T0947JST-discovery-job-56a6b0dba9fd04b0.json",
+    ".survey/work-queue/submissions/20260912T0951JST-blocked-job-research-a6fb90f535b639f2.json",
+    ".survey/work-queue/results/20260912T0951JST-blocked-job-research-a6fb90f535b639f2.json",
+    ".survey/work-queue/submissions/20260912T1002JST-discovery-job-f88892c48010420d.json",
+    ".survey/work-queue/results/20260912T1002JST-discovery-job-f88892c48010420d.json",
+    ".survey/work-queue/submissions/20260912T1010JST-discovery-job-277958357510167b.json",
+    ".survey/work-queue/results/20260912T1010JST-discovery-job-277958357510167b.json",
+    ".survey/work-queue/submissions/20260912T1130JST-discovery-job-9e21235b2f0e941b.json",
+    ".survey/work-queue/results/20260912T1130JST-discovery-job-9e21235b2f0e941b.json",
+    ".survey/work-queue/submissions/20260912T1138JST-discovery-job-3f9471b1e296ec5a.json",
+    ".survey/work-queue/results/20260912T1138JST-discovery-job-3f9471b1e296ec5a.json",
+    ".survey/work-queue/submissions/20260912T1142JST-discovery-job-5e072a3b3ed253fb.json",
+    ".survey/work-queue/results/20260912T1142JST-discovery-job-5e072a3b3ed253fb.json",
+    ".survey/work-queue/submissions/20260912T1144JST-discovery-job-ade6e82a0a3929c9.json",
+    ".survey/work-queue/results/20260912T1144JST-discovery-job-ade6e82a0a3929c9.json",
+    ".survey/work-queue/submissions/20260912T1146JST-discovery-job-83007e2af8147ce5.json",
+    ".survey/work-queue/results/20260912T1146JST-discovery-job-83007e2af8147ce5.json",
+    ".survey/work-queue/submissions/20260912T1230JST-discovery-job-b5c065705f405af7.json",
+    ".survey/work-queue/results/20260912T1230JST-discovery-job-b5c065705f405af7.json",
+    ".survey/work-queue/submissions/20260912T1330JST-discovery-8ad6b0886ce60c75.json",
+    ".survey/work-queue/results/20260912T1330JST-discovery-8ad6b0886ce60c75.json",
+    ".survey/work-queue/submissions/20260912T1338JST-discovery-746299a613b638bf.json",
+    ".survey/work-queue/results/20260912T1338JST-discovery-746299a613b638bf.json",
+    ".survey/work-queue/submissions/20260912T1343JST-discovery-a944bb9472d5d7c8.json",
+    ".survey/work-queue/results/20260912T1343JST-discovery-a944bb9472d5d7c8.json",
+    ".survey/work-queue/submissions/20260912T1422JST-discovery-specialist-62f183afd4a5d83a.json",
+    ".survey/work-queue/results/20260912T1422JST-discovery-specialist-62f183afd4a5d83a.json",
+    ".survey/work-queue/submissions/20260912T1422JST-discovery-stats-backfill.json",
+    ".survey/work-queue/results/20260912T1422JST-discovery-stats-backfill.json",
+    ".survey/work-queue/submissions/20260912T1445JST-discovery-9085c528d4fdb21e.json",
+    ".survey/work-queue/results/20260912T1445JST-discovery-9085c528d4fdb21e.json",
+    ".survey/work-queue/submissions/20260912T1602JST-discovery-specialist-7c31f0a8b6e24d91.json",
+    ".survey/work-queue/results/20260912T1602JST-discovery-specialist-7c31f0a8b6e24d91.json",
+    ".survey/work-queue/submissions/20260912T1630JST-discovery-7c31e8b2a460d1f4.json",
+    ".survey/work-queue/results/20260912T1630JST-discovery-7c31e8b2a460d1f4.json",
+    ".survey/work-queue/submissions/20260912T1630JST-discovery-d197921c62f4db41.json",
+    ".survey/work-queue/results/20260912T1630JST-discovery-d197921c62f4db41.json",
+    ".survey/work-queue/submissions/20260912T1651JST-discovery-7c0d2ac0d1cbe774.json",
+    ".survey/work-queue/results/20260912T1651JST-discovery-7c0d2ac0d1cbe774.json",
+    ".survey/work-queue/submissions/20260912T1658JST-discovery-job-d5dc1f38c992d14e.json",
+    ".survey/work-queue/results/20260912T1658JST-discovery-job-d5dc1f38c992d14e.json",
+    ".survey/work-queue/submissions/20260912T1732JST-discovery-memory-serving-refill.json",
+    ".survey/work-queue/results/20260912T1732JST-discovery-memory-serving-refill.json",
+    ".survey/work-queue/submissions/20260912T1741JST-discovery-memory-serving-refill-retry.json",
+    ".survey/work-queue/results/20260912T1741JST-discovery-memory-serving-refill-retry.json",
+    ".survey/work-queue/submissions/20260912T1750JST-discovery-moe-io-refill.json",
+    ".survey/work-queue/results/20260912T1750JST-discovery-moe-io-refill.json",
+    ".survey/work-queue/submissions/20260912T1758JST-discovery-204a21f0325d1761.json",
+    ".survey/work-queue/results/20260912T1758JST-discovery-204a21f0325d1761.json",
+    ".survey/work-queue/submissions/20260912T1800JST-discovery-cxl-storage-3.json",
+    ".survey/work-queue/results/20260912T1800JST-discovery-cxl-storage-3.json",
+    ".survey/work-queue/submissions/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json",
+    ".survey/work-queue/results/20260912T1800JST-discovery-e2a7c91d4b8f03a1.json",
+    ".survey/work-queue/submissions/20260912T1800JST-discovery-heterogeneous-runtime-2.json",
+    ".survey/work-queue/results/20260912T1800JST-discovery-heterogeneous-runtime-2.json",
+    ".survey/work-queue/submissions/20260912T1800JST-discovery-scheduling-engine-4.json",
+    ".survey/work-queue/results/20260912T1800JST-discovery-scheduling-engine-4.json",
+    ".survey/work-queue/submissions/20260912T1902JST-discovery-specialist-01.json",
+    ".survey/work-queue/results/20260912T1902JST-discovery-specialist-01.json",
+    ".survey/work-queue/submissions/20260912T1930JST-discovery-c797669b52ac6c35.json",
+    ".survey/work-queue/results/20260912T1930JST-discovery-c797669b52ac6c35.json",
+    ".survey/work-queue/submissions/20260912T1946JST-discovery-9fd635bf1f1ee4f2.json",
+    ".survey/work-queue/results/20260912T1946JST-discovery-9fd635bf1f1ee4f2.json",
+    ".survey/work-queue/submissions/20260912T1957JST-discovery-job-a6656c3eeb0b76a3.json",
+    ".survey/work-queue/results/20260912T1957JST-discovery-job-a6656c3eeb0b76a3.json",
+    ".survey/work-queue/submissions/20260912T2000JST-discovery-specialist-01.json",
+    ".survey/work-queue/results/20260912T2000JST-discovery-specialist-01.json",
+    ".survey/work-queue/submissions/20260912T2015JST-discovery-1c7f24f8a3b650de.json",
+    ".survey/work-queue/results/20260912T2015JST-discovery-1c7f24f8a3b650de.json",
+    ".survey/work-queue/submissions/20260912T2018JST-discovery-job-4649dafe5fe3736a.json",
+    ".survey/work-queue/results/20260912T2018JST-discovery-job-4649dafe5fe3736a.json",
+    ".survey/work-queue/submissions/20260912T2034JST-discovery-3d74b84c91f65e2a.json",
+    ".survey/work-queue/results/20260912T2034JST-discovery-3d74b84c91f65e2a.json",
+    ".survey/work-queue/submissions/20260912T2040JST-discovery-4ae9c512db20f673.json",
+    ".survey/work-queue/results/20260912T2040JST-discovery-4ae9c512db20f673.json",
+    ".survey/work-queue/submissions/20260912T2058JST-discovery-specialist-1.json",
+    ".survey/work-queue/results/20260912T2058JST-discovery-specialist-1.json",
+    ".survey/work-queue/submissions/20260912T2130JST-discovery-815a11adca713d7e.json",
+    ".survey/work-queue/results/20260912T2130JST-discovery-815a11adca713d7e.json",
+    ".survey/work-queue/submissions/20260912T2147JST-discovery-ef040c02e2978658.json",
+    ".survey/work-queue/results/20260912T2147JST-discovery-ef040c02e2978658.json",
+    ".survey/work-queue/submissions/20260912T2150JST-discovery-080d4b5d49ec5db4.json",
+    ".survey/work-queue/results/20260912T2150JST-discovery-080d4b5d49ec5db4.json",
+    ".survey/work-queue/submissions/20260912T2154JST-discovery-0674ed4e6a95bc3a.json",
+    ".survey/work-queue/results/20260912T2154JST-discovery-0674ed4e6a95bc3a.json",
+    ".survey/work-queue/submissions/20260912T2200JST-discovery-specialist-critical-cross-axis-01.json",
+    ".survey/work-queue/results/20260912T2200JST-discovery-specialist-critical-cross-axis-01.json",
+    ".survey/work-queue/submissions/20260912T2230JST-discovery-job-176b1e153b696e02.json",
+    ".survey/work-queue/results/20260912T2230JST-discovery-job-176b1e153b696e02.json",
+    ".survey/work-queue/submissions/20260912T2230JST-discovery-job-9d2b0bca513ba597.json",
+    ".survey/work-queue/results/20260912T2230JST-discovery-job-9d2b0bca513ba597.json",
+    ".survey/work-queue/submissions/20260912T2300JST-discovery-specialist-01.json",
+    ".survey/work-queue/results/20260912T2300JST-discovery-specialist-01.json",
+    ".survey/work-queue/submissions/20260912T2304JST-discovery-specialist-02.json",
+    ".survey/work-queue/results/20260912T2304JST-discovery-specialist-02.json",
+    ".survey/work-queue/submissions/20260912T2308JST-discovery-specialist-03.json",
+    ".survey/work-queue/results/20260912T2308JST-discovery-specialist-03.json",
+    ".survey/work-queue/submissions/20260912T2310JST-discovery-specialist-04.json",
+    ".survey/work-queue/results/20260912T2310JST-discovery-specialist-04.json",
+    ".survey/work-queue/submissions/20260912T2312JST-discovery-specialist-05.json",
+    ".survey/work-queue/results/20260912T2312JST-discovery-specialist-05.json",
+    ".survey/work-queue/submissions/20260912T2314JST-discovery-specialist-06.json",
+    ".survey/work-queue/results/20260912T2314JST-discovery-specialist-06.json",
+    ".survey/work-queue/submissions/20260912T2316JST-discovery-specialist-07.json",
+    ".survey/work-queue/results/20260912T2316JST-discovery-specialist-07.json",
+    ".survey/work-queue/submissions/20260912T2318JST-discovery-specialist-08.json",
+    ".survey/work-queue/results/20260912T2318JST-discovery-specialist-08.json",
+    ".survey/work-queue/submissions/20260912T2320JST-discovery-specialist-09.json",
+    ".survey/work-queue/results/20260912T2320JST-discovery-specialist-09.json",
+    ".survey/work-queue/submissions/20260912T2322JST-discovery-specialist-10.json",
+    ".survey/work-queue/results/20260912T2322JST-discovery-specialist-10.json",
+    ".survey/work-queue/submissions/20260912T2324JST-discovery-specialist-11.json",
+    ".survey/work-queue/results/20260912T2324JST-discovery-specialist-11.json",
+    ".survey/work-queue/submissions/20260913T0005JST-discovery-storage-hierarchy-1.json",
+    ".survey/work-queue/results/20260913T0005JST-discovery-storage-hierarchy-1.json",
+    ".survey/work-queue/submissions/20260913T0008JST-discovery-serving-scheduling-2.json",
+    ".survey/work-queue/results/20260913T0008JST-discovery-serving-scheduling-2.json",
+    ".survey/work-queue/submissions/20260913T0010JST-discovery-agentic-serving-3.json",
+    ".survey/work-queue/results/20260913T0010JST-discovery-agentic-serving-3.json",
+    ".survey/work-queue/submissions/20260913T0012JST-discovery-gpu-runtime-4.json",
+    ".survey/work-queue/results/20260913T0012JST-discovery-gpu-runtime-4.json",
+    ".survey/work-queue/submissions/20260913T0013JST-discovery-multi-agent-scheduling-5.json",
+    ".survey/work-queue/results/20260913T0013JST-discovery-multi-agent-scheduling-5.json",
+    ".survey/work-queue/submissions/20260913T0015JST-discovery-moe-saturated-6.json",
+    ".survey/work-queue/results/20260913T0015JST-discovery-moe-saturated-6.json",
+    ".survey/work-queue/submissions/20260913T0017JST-discovery-kv-saturated-7.json",
+    ".survey/work-queue/results/20260913T0017JST-discovery-kv-saturated-7.json",
+    ".survey/work-queue/submissions/20260913T0019JST-discovery-fresh-framework-saturated-8.json",
+    ".survey/work-queue/results/20260913T0019JST-discovery-fresh-framework-saturated-8.json",
+    ".survey/work-queue/submissions/20260913T0059JST-discovery-specialist-agent-kv-1.json",
+    ".survey/work-queue/results/20260913T0059JST-discovery-specialist-agent-kv-1.json",
+    ".survey/work-queue/submissions/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json",
+    ".survey/work-queue/results/20260913T0102JST-discovery-specialist-tiering-prefetch-2.json",
+    ".survey/work-queue/submissions/20260913T0105JST-discovery-specialist-network-runtime-3.json",
+    ".survey/work-queue/results/20260913T0105JST-discovery-specialist-network-runtime-3.json",
+    ".survey/work-queue/submissions/20260913T0108JST-discovery-specialist-slo-memory-4.json",
+    ".survey/work-queue/results/20260913T0108JST-discovery-specialist-slo-memory-4.json",
+    ".survey/work-queue/submissions/20260913T0110JST-discovery-specialist-heterogeneous-edge-5.json",
+    ".survey/work-queue/results/20260913T0110JST-discovery-specialist-heterogeneous-edge-5.json",
+    ".survey/work-queue/submissions/20260913T0113JST-discovery-specialist-runtime-reconfig-6.json",
+    ".survey/work-queue/results/20260913T0113JST-discovery-specialist-runtime-reconfig-6.json",
+    ".survey/work-queue/submissions/20260913T0115JST-discovery-specialist-multitenant-agent-prefix-7.json",
+    ".survey/work-queue/results/20260913T0115JST-discovery-specialist-multitenant-agent-prefix-7.json",
+    ".survey/work-queue/submissions/20260913T0117JST-discovery-specialist-longcontext-tiering-8.json",
+    ".survey/work-queue/results/20260913T0117JST-discovery-specialist-longcontext-tiering-8.json",
+    ".survey/work-queue/submissions/20260913T0121JST-discovery-specialist-latest-runtime-moe-9.json",
+    ".survey/work-queue/results/20260913T0121JST-discovery-specialist-latest-runtime-moe-9.json",
+    ".survey/work-queue/submissions/20260913T0128JST-discovery-81ef6cac67a27161.json",
+    ".survey/work-queue/results/20260913T0128JST-discovery-81ef6cac67a27161.json",
+    ".survey/work-queue/submissions/20260913T0132JST-discovery-262708a8729e8066.json",
+    ".survey/work-queue/results/20260913T0132JST-discovery-262708a8729e8066.json",
+    ".survey/work-queue/submissions/20260913T0134JST-discovery-29dd7c44eff93660.json",
+    ".survey/work-queue/results/20260913T0134JST-discovery-29dd7c44eff93660.json",
+    ".survey/work-queue/submissions/20260913T0136JST-discovery-a510d87d9cbc3222.json",
+    ".survey/work-queue/results/20260913T0136JST-discovery-a510d87d9cbc3222.json",
+    ".survey/work-queue/submissions/20260913T0138JST-discovery-d3909a842ae76980.json",
+    ".survey/work-queue/results/20260913T0138JST-discovery-d3909a842ae76980.json",
+    ".survey/work-queue/submissions/20260913T0140JST-discovery-1f8a64f753d53399.json",
+    ".survey/work-queue/results/20260913T0140JST-discovery-1f8a64f753d53399.json",
+    ".survey/work-queue/submissions/20260913T0142JST-discovery-53325eb4d61afb8e.json",
+    ".survey/work-queue/results/20260913T0142JST-discovery-53325eb4d61afb8e.json",
+    ".survey/work-queue/submissions/20260913T0144JST-discovery-5945231575e3ff8c.json",
+    ".survey/work-queue/results/20260913T0144JST-discovery-5945231575e3ff8c.json",
+    ".survey/work-queue/submissions/20260913T0147JST-discovery-1cf1e2dacbb5ac28.json",
+    ".survey/work-queue/results/20260913T0147JST-discovery-1cf1e2dacbb5ac28.json",
+    ".survey/work-queue/submissions/20260913T0149JST-discovery-513b50afdb428d0f.json",
+    ".survey/work-queue/results/20260913T0149JST-discovery-513b50afdb428d0f.json",
+    ".survey/work-queue/submissions/20260913T0159JST-discovery-fef140cd0cd0ddc9.json",
+    ".survey/work-queue/results/20260913T0159JST-discovery-fef140cd0cd0ddc9.json",
+    ".survey/work-queue/submissions/20260913T0201JST-discovery-3b02629fd6ced942.json",
+    ".survey/work-queue/results/20260913T0201JST-discovery-3b02629fd6ced942.json",
+    ".survey/work-queue/submissions/20260913T0203JST-discovery-e847b9b136f87890.json",
+    ".survey/work-queue/results/20260913T0203JST-discovery-e847b9b136f87890.json",
+    ".survey/work-queue/submissions/20260913T0205JST-discovery-2ffa05ee82127e80.json",
+    ".survey/work-queue/results/20260913T0205JST-discovery-2ffa05ee82127e80.json",
+    ".survey/work-queue/submissions/20260913T0207JST-discovery-376c29b504bdcaf6.json",
+    ".survey/work-queue/results/20260913T0207JST-discovery-376c29b504bdcaf6.json",
+    ".survey/work-queue/submissions/20260913T0209JST-discovery-d4eb0caeda27a63f.json",
+    ".survey/work-queue/results/20260913T0209JST-discovery-d4eb0caeda27a63f.json",
+    ".survey/work-queue/submissions/20260913T0211JST-discovery-582553a19b973e3b.json",
+    ".survey/work-queue/results/20260913T0211JST-discovery-582553a19b973e3b.json",
+    ".survey/work-queue/submissions/20260913T0214JST-discovery-79f44962fd7f926b.json",
+    ".survey/work-queue/results/20260913T0214JST-discovery-79f44962fd7f926b.json",
+    ".survey/work-queue/submissions/20260913T0216JST-discovery-5d7000d72e974f06.json",
+    ".survey/work-queue/results/20260913T0216JST-discovery-5d7000d72e974f06.json",
+    ".survey/work-queue/submissions/20260913T0218JST-discovery-0716b90ddce6dee3.json",
+    ".survey/work-queue/results/20260913T0218JST-discovery-0716b90ddce6dee3.json",
+    ".survey/work-queue/submissions/20260913T0220JST-discovery-0e120e1d91c12e9d.json",
+    ".survey/work-queue/results/20260913T0220JST-discovery-0e120e1d91c12e9d.json",
+    ".survey/work-queue/submissions/20260913T0230JST-discovery-specialist-kv-compression.json",
+    ".survey/work-queue/results/20260913T0230JST-discovery-specialist-kv-compression.json",
+    ".survey/work-queue/submissions/20260913T0236JST-discovery-specialist-systems-omissions.json",
+    ".survey/work-queue/results/20260913T0236JST-discovery-specialist-systems-omissions.json",
+    ".survey/work-queue/submissions/20260913T0239JST-discovery-specialist-multimodal-scheduling.json",
+    ".survey/work-queue/results/20260913T0239JST-discovery-specialist-multimodal-scheduling.json",
+    ".survey/work-queue/submissions/20260913T0241JST-discovery-specialist-runtime-network-routing.json",
+    ".survey/work-queue/results/20260913T0241JST-discovery-specialist-runtime-network-routing.json",
+    ".survey/work-queue/submissions/20260913T0245JST-discovery-specialist-foundry-backward.json",
+    ".survey/work-queue/results/20260913T0245JST-discovery-specialist-foundry-backward.json",
+    ".survey/work-queue/submissions/20260913T0250JST-discovery-specialist-agent-state.json",
+    ".survey/work-queue/results/20260913T0250JST-discovery-specialist-agent-state.json",
+    ".survey/work-queue/submissions/20260913T0310JST-discovery-specialist-recent-systems-1.json",
+    ".survey/work-queue/results/20260913T0310JST-discovery-specialist-recent-systems-1.json",
+    ".survey/work-queue/submissions/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json",
+    ".survey/work-queue/results/20260913T0314JST-discovery-specialist-agent-kv-residency-2.json",
+    ".survey/work-queue/submissions/20260913T0318JST-discovery-specialist-serverless-omissions-3.json",
+    ".survey/work-queue/results/20260913T0318JST-discovery-specialist-serverless-omissions-3.json",
+    ".survey/work-queue/submissions/20260913T0320JST-discovery-specialist-compiler-runtime-4.json",
+    ".survey/work-queue/results/20260913T0320JST-discovery-specialist-compiler-runtime-4.json",
+    ".survey/work-queue/submissions/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json",
+    ".survey/work-queue/results/20260913T0323JST-discovery-specialist-dbms-hybrid-scheduling-5.json",
+    ".survey/work-queue/submissions/20260913T0326JST-discovery-specialist-memory-overlap-6.json",
+    ".survey/work-queue/results/20260913T0326JST-discovery-specialist-memory-overlap-6.json",
+    ".survey/work-queue/submissions/20260913T0336JST-discovery-specialist-edge-memory-1.json",
+    ".survey/work-queue/results/20260913T0336JST-discovery-specialist-edge-memory-1.json",
+    ".survey/work-queue/submissions/20260913T0341JST-discovery-specialist-speculative-serving-2.json",
+    ".survey/work-queue/results/20260913T0341JST-discovery-specialist-speculative-serving-2.json",
+    ".survey/work-queue/submissions/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json",
+    ".survey/work-queue/results/20260913T0345JST-discovery-specialist-cloud-autoscaling-3.json",
+    ".survey/work-queue/submissions/20260913T0347JST-discovery-specialist-kv-compression-kernel-4.json",
+    ".survey/work-queue/results/20260913T0347JST-discovery-specialist-kv-compression-kernel-4.json",
+    ".survey/work-queue/submissions/20260913T0352JST-discovery-specialist-fault-tolerance-5.json",
+    ".survey/work-queue/results/20260913T0352JST-discovery-specialist-fault-tolerance-5.json",
+    ".survey/work-queue/submissions/20260913T0400JST-discovery-f033ef629abac6f2.json",
+    ".survey/work-queue/results/20260913T0400JST-discovery-f033ef629abac6f2.json",
+    ".survey/work-queue/submissions/20260913T0406JST-discovery-f4b6607a934a6b11.json",
+    ".survey/work-queue/results/20260913T0406JST-discovery-f4b6607a934a6b11.json",
+    ".survey/work-queue/submissions/20260913T0410JST-discovery-b55a5f6b28feb0e9.json",
+    ".survey/work-queue/results/20260913T0410JST-discovery-b55a5f6b28feb0e9.json",
+    ".survey/work-queue/submissions/20260913T0412JST-discovery-727b21710a6e6ab9.json",
+    ".survey/work-queue/results/20260913T0412JST-discovery-727b21710a6e6ab9.json",
+    ".survey/work-queue/submissions/20260913T0415JST-discovery-74c76d42ca141850.json",
+    ".survey/work-queue/results/20260913T0415JST-discovery-74c76d42ca141850.json",
+    ".survey/work-queue/submissions/20260913T0418JST-discovery-05a9d866af44dccd.json",
+    ".survey/work-queue/results/20260913T0418JST-discovery-05a9d866af44dccd.json",
+    ".survey/work-queue/submissions/20260913T0420JST-discovery-a86e6cabe6f79c37.json",
+    ".survey/work-queue/results/20260913T0420JST-discovery-a86e6cabe6f79c37.json",
+    ".survey/work-queue/submissions/20260913T0423JST-discovery-2d36b87fa9ca1a41.json",
+    ".survey/work-queue/results/20260913T0423JST-discovery-2d36b87fa9ca1a41.json",
+    ".survey/work-queue/submissions/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json",
+    ".survey/work-queue/results/20260913T0506JST-discovery-specialist-kv-reuse-eviction.json",
+    ".survey/work-queue/submissions/20260913T0508JST-discovery-specialist-agent-os-memory.json",
+    ".survey/work-queue/results/20260913T0508JST-discovery-specialist-agent-os-memory.json",
+    ".survey/work-queue/submissions/20260913T0513JST-discovery-specialist-disaggregated-serving.json",
+    ".survey/work-queue/results/20260913T0513JST-discovery-specialist-disaggregated-serving.json",
+    ".survey/work-queue/submissions/20260913T0517JST-discovery-specialist-survey-gap.json",
+    ".survey/work-queue/results/20260913T0517JST-discovery-specialist-survey-gap.json",
+    ".survey/work-queue/submissions/20260913T0521JST-discovery-specialist-moe-expert-cache.json",
+    ".survey/work-queue/results/20260913T0521JST-discovery-specialist-moe-expert-cache.json",
+    ".survey/work-queue/submissions/20260913T0524JST-discovery-specialist-gpu-runtime.json",
+    ".survey/work-queue/results/20260913T0524JST-discovery-specialist-gpu-runtime.json",
+    ".survey/work-queue/submissions/20260913T0704JST-discovery-02deb7897ac2d559.json",
+    ".survey/work-queue/results/20260913T0704JST-discovery-02deb7897ac2d559.json",
+    ".survey/work-queue/submissions/20260913T0707JST-discovery-909ac1eecafe8335.json",
+    ".survey/work-queue/results/20260913T0707JST-discovery-909ac1eecafe8335.json",
+    ".survey/work-queue/submissions/20260913T0709JST-discovery-3120d962d29ad791.json",
+    ".survey/work-queue/results/20260913T0709JST-discovery-3120d962d29ad791.json",
+    ".survey/work-queue/submissions/20260913T0830JST-discovery-specialist-hybrid-pic.json",
+    ".survey/work-queue/results/20260913T0830JST-discovery-specialist-hybrid-pic.json",
+    ".survey/work-queue/submissions/20260913T0833JST-discovery-specialist-pic-relatedwork.json",
+    ".survey/work-queue/results/20260913T0833JST-discovery-specialist-pic-relatedwork.json",
+    ".survey/work-queue/submissions/20260913T0836JST-discovery-specialist-agent-storage-state.json",
+    ".survey/work-queue/results/20260913T0836JST-discovery-specialist-agent-storage-state.json",
+    ".survey/work-queue/submissions/20260913T0839JST-discovery-specialist-runtime-reliability-cpu.json",
+    ".survey/work-queue/results/20260913T0839JST-discovery-specialist-runtime-reliability-cpu.json",
+    ".survey/work-queue/submissions/20260913T0841JST-discovery-specialist-network-saturation.json",
+    ".survey/work-queue/results/20260913T0841JST-discovery-specialist-network-saturation.json",
+    ".survey/work-queue/submissions/20260913T0843JST-discovery-specialist-recent-crosscheck.json",
+    ".survey/work-queue/results/20260913T0843JST-discovery-specialist-recent-crosscheck.json",
+    ".survey/work-queue/submissions/20260913T0900JST-specialist-moe-inference-1.json",
+    ".survey/work-queue/results/20260913T0900JST-specialist-moe-inference-1.json",
+    ".survey/work-queue/submissions/20260913T0909JST-specialist-heterogeneous-storage-2.json",
+    ".survey/work-queue/results/20260913T0909JST-specialist-heterogeneous-storage-2.json",
+    ".survey/work-queue/submissions/20260913T0916JST-specialist-runtime-autoscaling-3.json",
+    ".survey/work-queue/results/20260913T0916JST-specialist-runtime-autoscaling-3.json",
+    ".survey/work-queue/submissions/20260913T0928JST-discovery-specialist-kv-compression-1.json",
+    ".survey/work-queue/results/20260913T0928JST-discovery-specialist-kv-compression-1.json",
+    ".survey/work-queue/submissions/20260913T0933JST-discovery-specialist-agentic-serving-2.json",
+    ".survey/work-queue/results/20260913T0933JST-discovery-specialist-agentic-serving-2.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260912T2028Z-recent-kv.json",
+    ".survey/work-queue/results/discovery-specialist-20260912T2028Z-recent-kv.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260912T2034Z-kv-backref.json",
+    ".survey/work-queue/results/discovery-specialist-20260912T2034Z-kv-backref.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260912T2036Z-hash-kv-family.json",
+    ".survey/work-queue/results/discovery-specialist-20260912T2036Z-hash-kv-family.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0602JST-kv-serving-1.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0602JST-kv-serving-1.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0607JST-kernel-chain-2.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0607JST-kernel-chain-2.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0610JST-moe-prefetch-3.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0610JST-moe-prefetch-3.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0613JST-storage-runtime-4.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0613JST-storage-runtime-4.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0616JST-agent-runtime-5.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0616JST-agent-runtime-5.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0618JST-exhaustion-final-6.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0618JST-exhaustion-final-6.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0804JST-new-arrivals-1.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0804JST-new-arrivals-1.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0807JST-moe-cache-fault-2.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0811JST-moe-serving-runtime-3.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0815JST-sparse-kernel-compiler-4.json",
+    ".survey/work-queue/submissions/discovery-specialist-20260913T0820JST-moe-placement-network-5.json",
+    ".survey/work-queue/results/discovery-specialist-20260913T0820JST-moe-placement-network-5.json",
+    ".survey/work-queue/results/20260912T0232JST-discovery-job-59aade11c82016df.json"
   ],
   "skipped": [
     {
-      "path": ".survey/work-queue/submissions/20260913T0128JST-discovery-81ef6cac67a27161.json",
-      "reason": "submission_not_settled"
+      "path": ".survey/work-queue/submissions/research/attempt-058720f42caad1129d81058b-retry1.json",
+      "reason": "immutable_job_not_terminal"
+    },
+    {
+      "path": ".survey/work-queue/submissions/research/attempt-058720f42caad1129d81058b.json",
+      "reason": "immutable_job_not_terminal"
+    },
+    {
+      "path": ".survey/work-queue/submissions/research/attempt-1a2f27db29cc21845919957d.json",
+      "reason": "immutable_job_not_terminal"
+    },
+    {
+      "path": ".survey/work-queue/submissions/research/attempt-c66591cb8cc3d72be4a20c91.json",
+      "reason": "immutable_job_not_terminal"
+    },
+    {
+      "path": ".survey/work-queue/submissions/research/attempt-c6850610f1696da302c47466.json",
+      "reason": "immutable_job_not_terminal"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-02e232341d4ef088.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-0a982340eead3672.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-16aaac9973021cd8.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-2b6e9eed52cd4c32.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-2d5fb10dc2e0c88e.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-2dbab0db43ceff0b.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-3d2c01823fde74e9.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-5ae336587be983aa.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-5f4ffec07da19fbd.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-73651b83b5a764d9.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-78cb8002e7b50e8e.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-79f62fbfcb1294fd.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-7c396c8966095e9f.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-85e6a3219bd95117.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-89a31b528bef1df7.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-9094fc0c86937469.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-b045bf747f93dbbe.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-cca875ddc6629317.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-d09e1c8e52097070.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claims/job-research-d0c3e0e607ad747e.json",
+      "reason": "current_ready_or_unknown_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T201612Z-scheduled-chat-discovery-specialist-11.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T201916Z-scheduled-chat-discovery-specialist-12.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T202221Z-scheduled-chat-discovery-specialist-13.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T202600Z-scheduled-chat-discovery-specialist-07.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T202700Z-scheduled-chat-discovery-specialist-14.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T203100Z-scheduled-chat-discovery-specialist-15.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T203300Z-scheduled-chat-discovery-specialist-08.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T203800Z-scheduled-chat-discovery-specialist-16.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T203800Z-scheduled-chat-discovery-specialist-run08-10.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T204200Z-scheduled-chat-discovery-specialist-run08-12.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T204400Z-scheduled-chat-discovery-specialist-run08-13.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T204500Z-scheduled-chat-discovery-specialist-10.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T204600Z-scheduled-chat-discovery-specialist-run08-14.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T204800Z-scheduled-chat-discovery-specialist-run08-15.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T205000Z-scheduled-chat-discovery-specialist-run08-16.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T205200Z-scheduled-chat-discovery-specialist-run08-17.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T205400Z-scheduled-chat-discovery-specialist-run08-18.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T205600Z-scheduled-chat-discovery-specialist-run08-19.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T205800Z-scheduled-chat-discovery-specialist-run08-20.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T210000Z-scheduled-chat-discovery-specialist-run08-21.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T210200Z-scheduled-chat-discovery-specialist-run08-22.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T212050Z-scheduled-chat-discovery-router-10.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T212220Z-scheduled-chat-discovery-router-11.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T212350Z-scheduled-chat-discovery-router-12.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T212510Z-scheduled-chat-discovery-router-13.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T212640Z-scheduled-chat-discovery-router-14.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T214500Z-scheduled-chat-discovery-router-08.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T214600Z-scheduled-chat-discovery-router-09.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T214700Z-scheduled-chat-discovery-router-10.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T214800Z-scheduled-chat-discovery-router-11.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T214900Z-scheduled-chat-discovery-router-12.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T214930Z-scheduled-chat-llm-survey-10.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215000Z-scheduled-chat-discovery-router-13.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215020Z-scheduled-chat-llm-survey-11.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215100Z-scheduled-chat-discovery-router-14.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215115Z-scheduled-chat-llm-survey-12.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215200Z-scheduled-chat-discovery-router-15.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215210Z-scheduled-chat-llm-survey-13.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215300Z-scheduled-chat-discovery-router-16.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215300Z-scheduled-chat-llm-survey-14.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215400Z-scheduled-chat-discovery-router-17.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215400Z-scheduled-chat-llm-survey-15.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215500Z-scheduled-chat-discovery-router-18.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215500Z-scheduled-chat-llm-survey-16.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215600Z-scheduled-chat-discovery-router-19.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T215700Z-scheduled-chat-llm-survey-17.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T232230Z-scheduled-chat-llm-discovery-specialist-09i.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T232400Z-scheduled-chat-llm-discovery-specialist-09j.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T235230Z-discovery-overflow-09f.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T235500Z-discovery-overflow-09g.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T235700Z-discovery-overflow-09h.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260913T235900Z-discovery-overflow-09i.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T000200Z-discovery-overflow-09j.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T000430Z-discovery-overflow-09k.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T000630Z-discovery-overflow-09l.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T000830Z-discovery-overflow-09m.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T001030Z-discovery-overflow-09n.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T001300Z-discovery-overflow-09o.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/claim-20260914T002200Z-scheduled-chat-llm-discovery-overflow-08.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/req-dspec-normal-20260913T1900JST-24.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/req-dspec-normal-20260913T1900JST-25.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/req-dspec-normal-20260913T1900JST-26.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/sc-20260913T084300Z-normal-3.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/scheduled-chat-paper-20260914T0230JST-02.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/scheduled-chat-paper-20260914T0230JST-03.json",
+      "reason": "claim_result_references_live_job"
+    },
+    {
+      "path": ".survey/work-queue/claim-requests/scheduled-chat-paper-20260914T0230JST-07.json",
+      "reason": "claim_result_references_live_job"
     }
   ],
   "live_reference_paths": [
@@ -248,6 +762,9 @@
     ".survey/work-queue/maintenance-cycle.json",
     ".survey/work-queue/discovery-state.json",
     ".survey/work-queue/run-ledger.json",
+    ".survey/work-queue/claim-requests/**",
+    ".survey/work-queue/claim-results/**",
+    ".survey/work-queue/claims/**",
     ".survey/work-queue/records/**",
     ".survey/work-queue/transport/**",
     ".survey/work-queue/fallback-inbox/**",
