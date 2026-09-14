@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:38:49.324438+00:00",
+  "updated_at": "2026-09-14T22:41:36.019229+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:38:49.324438+00:00",
+      "last_recorded_at": "2026-09-14T22:41:36.019229+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34807646481:1",
-          "recorded_at": "2026-09-14T04:53:24.558858+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34807646481",
-            "run_attempt": "1",
-            "source_sha": "476f700aab5249ed07747d28ec4a75f0d5c79c54"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34810278371:1",
           "recorded_at": "2026-09-14T05:37:09.680281+00:00",
@@ -19599,6 +19585,20 @@
             "discovery_or_queue_expanded",
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34905120191:1",
+          "recorded_at": "2026-09-14T22:41:36.019229+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34905120191",
+            "run_attempt": "1",
+            "source_sha": "b1a7e65ad5dc793fdd37cf3429accccaac00d27d"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20426,7 +20426,12 @@
         ".survey/work-queue/results/20260915T0724JST-discovery-specialist-kv-agent-scheduling-1.json",
         ".survey/work-queue/results/20260915T0726JST-discovery-specialist-prefill-kv-adaptation-2.json",
         ".survey/work-queue/results/20260915T0728JST-discovery-specialist-serving-security-routing-3.json",
-        ".survey/work-queue/results/20260915T0735JST-discovery-specialist-runtime-constraints-4.json"
+        ".survey/work-queue/results/20260915T0735JST-discovery-specialist-runtime-constraints-4.json",
+        ".survey/work-queue/results/20260915T0737JST-discovery-specialist-heterogeneous-runtime-5.json",
+        ".survey/work-queue/results/20260915T0738JST-discovery-specialist-agent-native-6.json",
+        ".survey/work-queue/results/20260915T0739JST-discovery-specialist-moe-kernel-7.json",
+        ".survey/work-queue/results/20260915T0740JST-discovery-specialist-edge-energy-8.json",
+        ".survey/work-queue/results/20260915T0741JST-discovery-specialist-fault-recovery-9.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20464,7 +20469,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 539,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
