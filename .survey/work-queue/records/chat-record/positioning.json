@@ -1,13 +1,11 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-53d2e73cb4e28aeb786bbf9d",
-  "job_id": "job-research-4ff85aa229e8d65c",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-53d2e73cb4e28aeb786bbf9d",
-    "worker_id": "scheduled-chat-llm-discovery",
-    "worker_kind": "scheduled_chat"
-  }
+  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-53d2e73cb4e28aeb786bbf9d","job_id":"job-research-4ff85aa229e8d65c",
+  "data":{
+    "limitations":"評価はLlama 3.1 70B FP16と4基A100/H100のテンソル並列に集中し、量子化、MoE、異なるFFN比率、ノード間ネットワークを網羅しない。GPU間通信方式はSGLang既存実装を継承し、その時間変動を独立に定量化していないため、規模拡大で通信が支配する条件の効果は不明である。最適候補を選ぶ事前プロファイルが必要で、頻繁にモデル形状やバッチ領域が変わる配信では再測定が必要になり得る。融合対象はタイル局所性の高いSwiGLU前半であり、Softmaxのような大域縮約まで同じ方法で深く融合できない。",
+    "differences":"SGLangやvLLMは既にGEMMと要素演算の浅い融合を用いるが、DeepFusionKernelはUp/Gate GEMMとSiLU・ゲート積を単一CUDAカーネルへ押し込み、大規模な中間活性のHBM物質化を避ける。WelderやTVMの一般コンパイラ融合はグラフ・パターン規則から候補を決めるのに対し、本手法はSwiGLUへ特化した複数のタイル走査を用意し、配信先GPUと実バッチ上のプロファイルで選択する。BlockbusterのSwiGLU融合試作と比べても、SGLang統合、テンソル並列、CUDA Graph、長生成のモデル全体処理率まで評価する点がシステム寄りである。",
+    "implementation_status":"CUDAのDeepFusionKernelと軽量プロファイル駆動スケジューラをSGLangへ統合して実機評価している。PyTorch 2.6.0、SGLang v0.4.6.post4、vLLM v0.10.1.1等の版は明記されるが、論文固有コードの公式公開URLは一次資料で確認できない。",
+    "research_positioning":"LLM推論のカーネル・ランタイム共同設計に位置し、注意機構・KVキャッシュ中心の最適化に対して、長生成の小バッチではSwiGLU MLPの重み交通も主要ボトルネックになることを示す。汎用コンパイラではなくモデル構造に特化した深い融合と、実行時条件を測る軽量スケジューラの組合せで、局所カーネル改善を既存配信基盤のモデル全体速度へ接続する。",
+    "relation_to_existing_repository":"kernel-runtime-compilation系統のFlashAttention、FlashInfer、Triton、SGLangカーネル最適化と直接比較できる。KV-cache-memory-management系統とは競合せず、長文脈でKVがバッチを制限する結果としてMLPが帯域律速になるため補完関係にある。distributed-serving系統ではAllReduceを変更しないので、通信最適化と組み合わせた際のローカル計算側改善要素として扱える。",
+    "audit_required":false
+  },"reservation":{"claim_id":"claim-53d2e73cb4e28aeb786bbf9d","worker_id":"scheduled-chat-llm-discovery","worker_kind":"scheduled_chat"}
 }
