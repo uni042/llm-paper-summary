@@ -4,10 +4,25 @@
   "slot": "problem_method",
   "attempt_id": "attempt-02889913936ed3f48eb80a73",
   "job_id": "job-research-2d5fb10dc2e0c88e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-02889913936ed3f48eb80a73",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "現在のLLM servingはMPIやNCCLでmodel-parallel communicatorを起動時に固定し、その通信topologyへmodel executorを強く束縛する。pipeline parallelismで1 nodeが故障すると、そのnodeと同じcommunicatorに属する他の健全GPUも要求処理へ使えなくなり、load balancerは壊れたinstance全体を切り離す。さらに復旧には新instance準備、通信初期化、大容量model weightsのremote storageからの再loadが必要で、最大約10分のcapacity lossを生む。途中まで処理したrequestはGPU上のKV cacheも失うためpromptからretryされ、failure直後にretry requestと新規requestが残存pipelineへ集中してqueueとTTFTが急増する。従来のKV streamingはstate保存を速めてもcommunicatorとserving instance自体の再起動を不要にはせず、NIC failoverはnode failureを扱えない。hot spareは復旧を速められるが平常時にGPUをidleにする。KevlarFlowはload-balancing groupに既に存在する同一model-weight replicaを、通常時のserving capacityと障害時のreplacement stageの両方として利用し、failure domainをinstance単位からnode単位へ細分化する。",
+    "novelty": "KevlarFlowの核は、model weightの物理配置とmodel-parallel communicatorの論理構成を分離し、稼働中にcommunicatorだけを再形成できるようにした点である。各pipeline replicaの同じstageは同じmodel weightsを持つため、一方のstageが故障した場合に別replicaの同一stageをhealthy stageとして借り、残った元pipeline stageと組み合わせた新pipelineを形成する。これにdynamic traffic reroutingを組み合わせ、failureを含むpipeline全体を捨てず健全stageを継続利用する。さらにrequestのKV cacheを同load-balancing group内の別GPUへblock単位で非同期複製し、failure時はreplica側KVから生成を続けることでin-flight requestのprompt replayを避ける。背景replicationはdedicated CUDA streamでcomputeと重畳し、memory pressure時にはreplicaを捨てるため、可用性のための固定hot spare GPUを要求しない。",
+    "method_overview": "KevlarFlowは4-stage pipeline parallelismのようにmodelをnode間へ分割し、同じstage weightsを持つ複数pipeline replicaをload-balancing group内へ配置する。通常frameworkは全rankを一度に起動してstate store、communicator、model loadを密結合するが、KevlarFlowは各nodeが個別にweightsをloadした後でもMPI dynamic process機構でpeerへ接続し、健康確認後に必要なrankだけでcommunicatorを作れるようTensorRT-LLM backendを変更する。failure detectorがnode lossを認識するとcontrollerは壊れたpipelineの欠損stageと同じweightsを保持する別replicaのhealthy nodeを探し、元pipelineの残存stageとそのnodeで新communicatorを構成する。load balancerはこの一時的なcross-replica pipelineへtrafficをrerouteし、replacement resourceの完全初期化中もdegraded capacityでrequestを処理し続ける。in-flight request用には各GPUのPagedAttention型KV blockがring状の別replica GPUへbackground送信され、NCCL send/recvとdedicated CUDA streamによりtoken computeと重畳される。failure時、新pipelineに採用されたreplication targetは最後に複製済みのKV stateを使い、requestをpromptからやり直さず継続する。traffic reroutingで使用中のnodeは新replication targetから除外して負荷集中を避け、memory headroomが不足した場合はreplicated KVをdropして通常servingを優先する。通信再構成にはMPICHのMPI_Open_port、MPI_Comm_connect、MPI_Intercomm_mergeを利用し、node間control planeはgRPC、KV transferはNCCL、ring replication deadlock回避にはPyTorch TCPStoreのdistributed lockを用いる。",
+    "components": [
+      {
+        "name": "分離型モデル並列初期化",
+        "description": "model weightsのloadとmodel-parallel communicatorのcreationを別段階にし、全rankを固定したMPI_COMM_WORLD前提から外す。各nodeは自身のpipeline stage weightsを保持したまま独立して起動し、必要になった時点でpeerを発見・health checkした後にdynamic communicatorへ参加する。node failure時には健全nodeをrestartしたりweightsをreloadしたりせず、欠損stageと同一weightsを持つ別pipeline replicaのnodeを選び、元pipelineのsurviving stageと新communicatorを形成する。これにより従来の復旧で支配的だったinstance provisionとmodel loadをrequest-servingのcritical pathから外し、既存のload-balancing redundancyを即時replacement resourceとして使える。実装ではTensorRT-LLM PyTorch backendをOpenMPIからMPICHへportし、MPI_Open_port、MPI_Comm_connect、MPI_Intercomm_mergeを利用してruntime接続を実現する。"
+      },
+      {
+        "name": "動的トラフィック再ルーティング",
+        "description": "従来はpipelineの1 stageが故障するとcommunicator全体をoffline扱いし、残る3 stageのGPUもidleになる。KevlarFlowはfailureをnode単位に局所化し、壊れたstageだけを別replicaの対応stageへ置換したtemporary pipelineを作る。load balancerとcontrollerは新communicatorへrequestを送り直し、healthy stageを継続利用するため、capacity lossは原則として失われたnode分に限定される。例えば4-stage pipelineを複数replica持つ構成でstage 2が落ちた場合、別replicaのstage 2を借りてstage 0/1/3はそのまま使う。完全replacement instanceのbackground initializationが終わるまでこのdegraded-but-functional経路で処理するため、failure直後のincoming queue蓄積を抑え、TTFTの爆発を避ける。複数node failureでも異なるhealthy replica stageを組み合わせられる範囲で同じ考え方を適用する。"
+      },
+      {
+        "name": "背景KVキャッシュ複製",
+        "description": "communicator再形成だけではin-flight requestのattention stateが故障GPUとともに失われるため、KevlarFlowは各requestのKV cacheをPagedAttention同様のblockへ分け、同じload-balancing group内の別GPUへ継続的に複製する。copyは専用CUDA streamとNCCL GPU-to-GPU通信でtoken computeへ重ね、blockが完成するごとにbackground転送する。failure発生後はreplicated KVを持つtarget nodeを新pipeline stageとして利用し、最後に保存されたstateからdecodeを継続できる。ring型replicationでNCCL send/recvが相互待ちしないようTCPStore distributed lockを使う。通常production servingではSLO余裕のためGPU utilizationが50〜60%程度に保たれることが多いという観察を利用してmemory headroomへreplicaを置くが、memory pressure時にはreplica KVを破棄してlive trafficを優先し、障害時だけrecomputeへfallbackする。"
+      }
+    ],
+    "system_design": "data planeは複数の4-stage pipeline replicaからなり、各nodeは1 stage weightsとrequest KVを保持する。control planeはnodeごとのgRPC endpoint、load balancer、health/failure処理、dynamic MPI communicator formationから構成される。正常時には各pipelineが独立してrequestを処理しつつKVを他replicaへ複製する。failure時にはcontrollerが同stage weightsを持つhealthy nodeを選び、surviving nodesとのcommunicatorを生成し、traffic routeとKV replication topologyを更新する。rerouted trafficを処理するnodeやfailure nodeはreplication targetから除外して追加負荷を避ける。新resourceの完全復旧はbackgroundで進み、その間もtemporary pipelineがサービスするため、recovery timeとservice outage timeを分離できる。ただし設計はstageごとのweight redundancyを前提とするため、load-balancing groupに代替stageが残っていない同時故障ではcontinuous serviceを保証できない。"
+  },
+  "reservation": {"claim_id":"claim-02889913936ed3f48eb80a73","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
