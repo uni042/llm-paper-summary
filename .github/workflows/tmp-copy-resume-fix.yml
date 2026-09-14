@@ -1,0 +1,35 @@
+name: Temporary copy verified resume fix
+
+on:
+  push:
+    branches:
+      - fix/resume-active-scheduled-claim-clean-20260914
+    paths:
+      - '.github/workflows/tmp-copy-resume-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/resume-active-scheduled-claim-clean-20260914
+          fetch-depth: 0
+      - name: Copy verified two-file fix from tested branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin fix/resume-active-scheduled-claim-20260914
+          git checkout origin/fix/resume-active-scheduled-claim-20260914 -- \
+            .survey/scripts/claim_worker.py \
+            .survey/tests/test_claim_worker_serial.py
+          python -m py_compile .survey/scripts/claim_worker.py
+          rm .github/workflows/tmp-copy-resume-fix.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'fix: resume active scheduled chat claims across runs'
+          git push origin HEAD:fix/resume-active-scheduled-claim-clean-20260914
