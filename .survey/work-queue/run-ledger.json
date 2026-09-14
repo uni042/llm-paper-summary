@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T22:25:07.277617+00:00",
+  "updated_at": "2026-09-14T22:28:22.341407+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T22:25:07.277617+00:00",
+      "last_recorded_at": "2026-09-14T22:28:22.341407+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 75,
         "audit_completed": 0,
-        "discovery_completed": 3,
+        "discovery_completed": 4,
         "blocked": 1,
-        "new_jobs": 6,
+        "new_jobs": 7,
         "new_papers": 76,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34807041084:1",
-          "recorded_at": "2026-09-14T04:42:49.251823+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34807041084",
-            "run_attempt": "1",
-            "source_sha": "e0b50bae5683e7c142baf46adef317e79c43efda"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34807211491:1",
           "recorded_at": "2026-09-14T04:45:43.450799+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34903939405:1",
+          "recorded_at": "2026-09-14T22:28:22.341407+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34903939405",
+            "run_attempt": "1",
+            "source_sha": "8edc2d79789c377a923af0068323fd984ea125de"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20232,6 +20232,14 @@
           "title": "Network Edge Inference for Large Language Models: Principles, Techniques, and Opportunities",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-12e430d5a1798030",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20272,6 +20280,13 @@
         },
         {
           "job_id": "job-12e430d5a1798030",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-15c0335aaa7eded8",
           "status": "ready",
           "type": "discovery",
           "canonical_id": null,
@@ -20367,7 +20382,8 @@
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-kernel-tiering-2.json",
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-memory-pooling-1.json",
         ".survey/work-queue/results/20260915T0300JST-discovery-specialist-nvme-kv-3.json",
-        ".survey/work-queue/results/20260915T0300JST-discovery-specialist-recheck-empty-4.json"
+        ".survey/work-queue/results/20260915T0300JST-discovery-specialist-recheck-empty-4.json",
+        ".survey/work-queue/results/20260915T0724JST-discovery-specialist-kv-agent-scheduling-1.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20405,7 +20421,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 536,
-      "last_successful_action": "fallback_archived"
+      "last_successful_action": "discovery_or_queue_expanded"
     }
   ]
 }
