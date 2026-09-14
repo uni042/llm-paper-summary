@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.17063",
+      "title": "FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2601.17063",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2601.17063-flashmoe-ssd-io-cache-replacement-edge-moe.md",
+      "priority": 94,
+      "reason": "数百GB級MoEをRAM制約の厳しいedge/desktopで動かすためinactive expertをSSDへoffloadし、storage I/Oがdecodeを律速する問題をlightweight ML-based cache replacementで緩和する。recencyとfrequency signalを適応的に組み合わせてexpert reuseを予測し、実user-grade desktop上でLRU/LFU等よりcache hit rateを最大51%向上、既存MoE inference system比最大2.6倍高速化する。CPU offloadでは収まらないexpertをSSDまで階層化した実装評価であり、SSD expert cache・replacement policyという重点テーマへ直接対応する。"
+    },
+    {
+      "canonical_id": "arXiv:2602.07721",
+      "title": "ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2602.07721",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2602.07721-pariskv-drift-robust-kv-retrieval.md",
+      "priority": 86,
+      "reason": "million-token長文脈で全KVをHBMへ置けない状況に対し、collision-based candidate selectionとquantized inner-product rerankingを組み合わせたGPU-native KV retrievalを提案する。CPU-offloaded KVは統合仮想アドレス（Unified Virtual Addressing; UVA）経由でtop-kだけon-demand fetchし、distribution driftへ頑健にする。full attention同等以上の品質を保ちつつ、その実行可能範囲でthroughput最大2.8倍、million-tokenではMagicPIG/PQCache比decode latencyを17倍/44倍削減する。CPU階層からの選択fetchとretrieval computationを統合したKV offload系として比較価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-ssd-expert-retrieval-13",
+    "axis": "SSD expert cache replacement・CPU-offloaded KV retrieval",
+    "query_summary": "SSD/CXL軸をexpert storageとretrieval-based KVへ展開し、FlashMoE（2601.17063）とParisKV（2602.07721）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はSSD/CXL expert prefetchの近接研究、GPU-direct storage stack、またはdisaggregated KV cache transferのrecent 2026論文を追加探索する。",
+    "empty_round_reason": null
+  }
+}
