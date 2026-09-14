@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-12e430d5a1798030",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.10964",
+      "title": "Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows",
+      "source_url": "https://arxiv.org/abs/2609.10964",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.10964-tail-aware-agentic-workflow-release-scheduling.md",
+      "priority": 83,
+      "reason": "エージェント型LLMワークフローで、実行可能になったターンを即時投入する従来方式が混雑時に再順序化不能な未完了仕事を蓄積して尾部遅延を悪化させる点を扱う。平均値と条件付きバリュー・アット・リスク（Conditional Value-at-Risk; CVaR）を用いて投入順と未完了仕事予算を共同制御し、実エージェント実行トレースでP95ワークフロー完了時間を最大3.50倍改善しており、agentic servingの上位スケジューリングとして既存サービング系統を補完する。"
+    },
+    {
+      "canonical_id": "arXiv:2609.03515",
+      "title": "What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation",
+      "source_url": "https://arxiv.org/abs/2609.03515",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md",
+      "priority": 80,
+      "reason": "強いデコード時KV削減で、トークン重要度の瞬時スコアより時間集約と順位保存が保持集合を支配することを系統的に検証し、指数移動平均（Exponential Moving Average; EMA）型InertiaKVと周期更新版InertiaKV-Lazyを提案する。6つの公開重みモデルとLongBench系評価でInertiaKV-Lazyが全更新版比1.34〜1.46倍のデコードスループットを示し、KVキャッシュ削減の制御頻度という既存収録群と異なる設計軸を与える。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-kv-agent-scheduling-1",
+    "axis": "2026年9月新着のKVキャッシュ実行時制御とエージェントワークフロー・スケジューリング",
+    "query_summary": "arXiv一次情報を中心に、2026年9月のKVキャッシュ削減、GPU/LLMサービング実行時制御、エージェント型ワークフローの尾部遅延スケジューリングを探索し、最新GitHub正本とLibrary pendingでcanonical_id/titleを再重複判定した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はNVMe/SSD直接利用、GPU Direct Storage、通信・I/O協調、または最近の分離サービング論文からの引用追跡へ軸を移す。",
+    "empty_round_reason": null
+  }
+}
