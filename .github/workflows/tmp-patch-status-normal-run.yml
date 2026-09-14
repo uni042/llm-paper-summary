@@ -42,7 +42,7 @@ jobs:
           path.write_text(text, encoding='utf-8')
           PY
           python -m py_compile .survey/scripts/build_status_dashboard.py
-          python -m unittest .survey/tests/test_status_dashboard_normal_slot.py
+          python -m unittest discover -s .survey/tests -p 'test_status_dashboard_normal_slot.py'
           rm .github/workflows/tmp-patch-status-normal-run.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
