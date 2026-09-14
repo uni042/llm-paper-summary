@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-e354f4d76f3f90be0997a008",
-  "job_id": "job-research-ba4de6edc8a253cf",
-  "data": {
-    "limitations": "負荷パターンが数十分〜時間単位で安定する前提があり、急激な分布変化ではhistorical traceに基づく構成選択が陳腐化する。Profilerは数分、モデルweights再読込も数分かかるため高速な弾力配置ではない。32×H20の比較的大規模な同質クラスタであり、異種GPUや帯域の狭い環境への一般化は不明。EPD専用関連研究を直接比較せずvLLM/SGLangを主baselineとしているため、同種システム間の優位性は未確定。コードURLは一次資料で確認できず、再現性にも制約がある。",
-    "differences": "DistServeはLLMのprefill/decodeを分離するが、HydraInferはMLLMの画像encodeを第3の独立段階として扱い、E+P+D、EP+D、ED+Pを負荷とSLOで切り替える。Sarathi-Serveのchunked prefillは同一instance内でTBTを守るが画像encode時間を直接制御しない。既存MLLM EPD方式は固定分離または順次実行を前提とするのに対し、HydraInferは同居したvision/language処理もdual CUDA streamsで並列実行し、stage-level budgetと組み合わせる。",
-    "implementation_status": "約13K行のPython/C++/CUDA実装を4サーバ32×H20で評価。Ray actor、CUDA IPC、NCCL、FlashAttention、FlashInferを使用。arXiv v2本文に公式repository URLは記載されていない。",
-    "research_positioning": "LLMサービングのprefill/decode分離研究をMLLMへ拡張し、encodeを含む三段階の計算特性・SLO・cache移行をまとめて扱うサービング基盤。固定architectureではなくtrace駆動で分離topologyとinstance比を選ぶため、disaggregation schedulingとmultimodal servingの交点に位置する。",
-    "relation_to_existing_repository": "llm-serving-scheduling-disaggregation系統のDistServe、Mooncake、P/D-Serve等と接続しつつ、MLLM固有のimage cache、encode stage、dual-stream GPU共存を追加する。固定P/D構成を前提とする論文に対し、E/P/Dの結合方法そのものをSLOとtraceで選ぶ上位配置層として比較できる。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-e82635abb5120aa7260dbed6",
+  "job_id": "job-research-bada04a844a16b47",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e354f4d76f3f90be0997a008",
+    "claim_id": "claim-e82635abb5120aa7260dbed6",
     "worker_id": "scheduled-chat-llm-discovery",
     "worker_kind": "scheduled_chat"
   }

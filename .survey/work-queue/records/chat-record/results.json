@@ -2,60 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-e354f4d76f3f90be0997a008",
-  "job_id": "job-research-ba4de6edc8a253cf",
-  "data": {
-    "overview": "HydraInferは、画像符号化・入力処理・デコードを常に完全分離するのではなく、負荷とサービス品質目標に応じてE+P+D、EP+D、ED+Pを選び、さらに各段階の実行時間をTTFT/TBT予算内へ収めることで、3モデル・5データセットすべてでSLO内に処理できる最大要求率を引き上げた。Qwen2-VLではSGLang比2.0〜7.9倍、LLaVA-1.5ではvLLM比1.3〜3.7倍、LLaVA-NeXTでは1.2〜2.1倍のグッドプットを報告する。実用上の意味は、マルチモーダル推論では単純なプリフィル・デコード分離だけでなく、画像符号化まで含めた段階の結合方法とバッチ上限を負荷に合わせて選ぶことで、同じGPU台数でもSLOを守れる同時要求量を増やせる点にある。",
-    "key_results": [
-      {
-        "metric": "Qwen2-VL-7B goodput",
-        "value": "2.0×–7.9×",
-        "baseline": "SGLang",
-        "condition": "5 multimodal datasets, 90% SLO attainment",
-        "interpretation": "モデル・データセットで幅は大きいが、全条件でより高いSLO内request rateを報告。"
-      },
-      {
-        "metric": "LLaVA-1.5-7B goodput",
-        "value": "1.3×–3.7×",
-        "baseline": "vLLM",
-        "condition": "5 datasets",
-        "interpretation": "TextCapsなど出力が長い負荷で改善が大きく、MMEのように出力が短い負荷では効果が小さい。"
-      },
-      {
-        "metric": "LLaVA-NeXT-7B goodput",
-        "value": "1.2×–2.1×",
-        "baseline": "vLLM",
-        "condition": "5 datasets",
-        "interpretation": "画像トークン数とSLOが変わっても改善を維持。"
-      },
-      {
-        "metric": "Hybrid EPD ablation",
-        "value": "3.9 → 2.6 req/s",
-        "baseline": "full HydraInfer → fixed evenly-partitioned E+P+D",
-        "condition": "TextCaps, LLaVA-NeXT-7B",
-        "interpretation": "負荷/SLOに応じた分離形態・instance比選択がgoodputの約1/3を担う。"
-      },
-      {
-        "metric": "stage-level scheduling ablation",
-        "value": "2.6 → 2.2 req/s",
-        "baseline": "fixed E+P+D with scheduler → without stage-level policy",
-        "condition": "TextCaps, LLaVA-NeXT-7B",
-        "interpretation": "バッチ実行時間をTBT/TTFT予算へ制約することが追加のSLO達成率を生む。"
-      },
-      {
-        "metric": "cache migration overhead",
-        "value": "<1% of total latency",
-        "baseline": "request lifecycle",
-        "condition": "LLaVA-1.5-7B, TextCaps, 1E3P4D",
-        "interpretation": "95%のimage cache移行は2ms以内、KV cache移行は8ms以内で、評価環境では単一decode batchより短い。"
-      }
-    ],
-    "negative_results": "MMEは生成トークンが少なくTBT最適化余地が小さいためgoodput改善が最小。Profilerは全構成を常時連続最適化するのではなく、安定した負荷の数分トレースを使い、推定・再生とモデル再読込に数分ずつ要する。関連する専用MLLM分離システムは未公開/未実装を理由に直接比較されていない。",
-    "interpretation": "MLLMでは単純なP/D分離だけでなく、画像エンコードを独立段階として扱い、段階ごとにバッチ上限と配置を変える必要があることを実測で示す。特に固定E+P+Dが常に最適ではなく、TTFT/TBT条件によってEP+DやED+Pが勝つ点は、分離トポロジ自体を運用時の設計変数にする根拠になる。",
-    "quality_impact": "モデル演算を近似する手法ではなく、同じモデルと固定output lengthでサービング性能を比較するため、原理上の品質損失は導入しない。ただし評価は意味品質の再測定ではなく性能/SLO中心である。"
-  },
+  "attempt_id": "attempt-e82635abb5120aa7260dbed6",
+  "job_id": "job-research-bada04a844a16b47",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-e354f4d76f3f90be0997a008",
+    "claim_id": "claim-e82635abb5120aa7260dbed6",
     "worker_id": "scheduled-chat-llm-discovery",
     "worker_kind": "scheduled_chat"
   }

@@ -36,13 +36,13 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
 | 未処理候補（Research ready） | **67** |
-| 処理中（Active claims） | **2** |
-| 今すぐ着手可能（Claimable） | **66** |
+| 処理中（Active claims） | **3** |
+| 今すぐ着手可能（Claimable） | **65** |
 | :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **1** |
+| :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 14:30 JST** |
-| :00 補助worker 直近claim | **09-14 14:35 JST** |
+| :00 補助worker 直近claim | **09-14 14:37 JST** |
 | 直近24h Research完了（:30 通常worker） | **28** |
 | 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
