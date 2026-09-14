@@ -2,74 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-62aa4927d0e8e8128d1176e5",
-  "job_id": "job-research-0a982340eead3672",
-  "data": {
-    "overview": "品質面では、認証付きINT8キー/INT4値KVがPG-19とNIAHで密FP16 KVに近い結果を保ち、32K以上のRULERでも差を小さく抑える一方、同じ低精度KVを認証・復旧なしで使う方式は大幅に崩れる。容量面では圧縮KV本体がFP16の約56%となり、128Kの調整済み作業領域を含むGPU使用量も密KV比約72%まで下げられる。ただしCPUには元のFP16 KVを丸ごと保持するため総システム容量は増え、認証・順位確認・ページインのため生成遅延は密なFlash Attentionの2.7〜4.8倍になる。結果は、低精度KVを安全に使える条件をオンライン判定する価値を示す一方、現実装が速度最適化ではなく品質保証を優先した研究試作であることも示している。",
-    "key_results": [
-      {
-        "metric": "PG-19困惑度差",
-        "value": "Certified−Denseは8K -0.002、32K +0.001、64K +0.001、128K +0.001",
-        "baseline": "Dense FP16 KV",
-        "condition": "各文脈長20チャンク",
-        "interpretation": "言語モデル困惑度では長文脈まで実質的に密KVと同等で、信頼区間もゼロ差を含む。"
-      },
-      {
-        "metric": "NIAH成功率",
-        "value": "8K 39%対39%、32K 51%対49%、64K 66%対66%（Dense対Certified）",
-        "baseline": "Dense FP16 KV",
-        "condition": "各条件100組の対応試行、McNemar p=1.0/0.727/1.0",
-        "interpretation": "検索型長文タスクでは認証付き圧縮が密KVの成功率をほぼ維持する。128KはDense自身が0%のため比較対象から外れる。"
-      },
-      {
-        "metric": "RULER精度差",
-        "value": "Certified−Denseは8K -0.069、32K -0.019、64K +0.015、128K +0.004",
-        "baseline": "Dense FP16 KV",
-        "condition": "7サブタスク集約",
-        "interpretation": "長文側では差が小さいが、8Kでは値に敏感なVT/CWE/FWEが弱点となり、局所誤差保証が系列全体の無損失を意味しないことを示す。"
-      },
-      {
-        "metric": "無認証低精度KVとの比較",
-        "value": "NIAHは無認証方式5〜10%に対しCertified 39〜66%、RULERの無認証差はDense比 -44〜-56ポイント",
-        "baseline": "同じINT8キー/INT4値を認証・フォールバックなしで使用",
-        "condition": "主要長文条件",
-        "interpretation": "単にビット幅を下げるだけでは破綻し、オンライン認証と高精度復旧が品質回復の主要因である。"
-      },
-      {
-        "metric": "GPU KV容量",
-        "value": "Tier 1 KV本体はFP16の約56%。128KでDense KV 17.18GB、圧縮KV 9.71GB",
-        "baseline": "Dense FP16 KV",
-        "condition": "LLaMA 3.1-8B、128K",
-        "interpretation": "低精度キー・値によりKV本体のGPU常駐容量を約44%削減する。"
-      },
-      {
-        "metric": "実用作業領域を含むVRAM",
-        "value": "128K、キー2048ブロック/値512ブロックの非対称作業領域でDense比約0.72倍。64Kでは約0.83倍",
-        "baseline": "Dense FP16 KV",
-        "condition": "調整済みFP16昇格用作業領域を含む",
-        "interpretation": "長文では復旧用バッファを含めても17〜28%のVRAM削減が残るが、短文では固定作業領域が利得を相殺し得る。"
-      },
-      {
-        "metric": "生成ステップ遅延",
-        "value": "認証方式はDense Flash Attentionの約2.7〜4.8倍",
-        "baseline": "Dense FP16 KV + Flash Attention",
-        "condition": "8K〜128K、対称2048ブロック作業領域",
-        "interpretation": "現実装は速度向上を達成しておらず、品質保証とGPU容量削減のために大きな計算・転送費を払う。"
-      },
-      {
-        "metric": "値精度アブレーション",
-        "value": "FP16値でRULER差は8K約-0.4ポイント、32K約-0.5ポイントまで縮小。値誤差閾値0.02では32K差をほぼ解消するが遅延は約9%増加",
-        "baseline": "標準INT4値設定",
-        "condition": "値依存課題と厳格な値誤差閾値",
-        "interpretation": "残る品質差の主因が値量子化にある条件では、値だけ選択的に高精度化する設計が有効だがページイン費用が増える。"
-      }
-    ],
-    "negative_results": "短文脈8KのRULERでは密KV比約6.9ポイント低く、局所出力誤差を制限しても複数層・複数生成ステップでの影響を完全には防げない。認証処理は高速化ではなく2.7〜4.8倍の遅延増を生み、64Kでは順位整合性確認が1ステップ時間の約28%、CPU→GPUページインが約11%を占める。CPU側FP16原本を常時保持するため総メモリは密KV単独の約1.56倍となる。短文脈では固定の高精度作業領域によりGPUメモリがDenseより増える場合がある。INT4値のグループ長を16から32へ緩めると困惑度が約26.4悪化する急峻な品質崖も観測され、d=128では中間の扱いやすい量子化点がない。",
-    "interpretation": "この結果は、KV圧縮の評価軸を『平均精度と圧縮率』から『現在のステップで近似を許可できるかを判断し、危険なら確実に戻れるか』へ広げる。GPU側圧縮とCPU側正確コピーを同時保持するため、メモリ全体を減らす方式ではなく、希少なGPU容量を豊富なCPU容量とPCIe転送へ置き換える方式である。したがって、GPUメモリ不足が支配的で多少の遅延増を許容できる長文脈推論、または品質保証が必要な研究・高信頼用途で価値が高く、純粋なスループット最適化が目的なら現実装は不利である。",
-    "quality_impact": "各認証済み出力について、同じ認証カーネルのFP16参照注意出力との差をヘッド単位・ステップ単位で上界化する。条件を満たせない場合はFP16原本をページインし、最終的にはDense基準と同じscaled dot-product attentionへ再計算する。ただし、この保証はモデル全体の最終トークン列、複数層を通じた誤差蓄積、意味的正しさを保証しない。実験上も8K RULERの値依存課題に残差があり、保証範囲を超える品質評価は別途必要である。"
-  },
+  "attempt_id": "attempt-4f9b3c7701e888c670cec8f7",
+  "job_id": "job-research-7c396c8966095e9f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-62aa4927d0e8e8128d1176e5",
+    "claim_id": "claim-4f9b3c7701e888c670cec8f7",
     "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }

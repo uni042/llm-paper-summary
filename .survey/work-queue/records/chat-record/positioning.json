@@ -2,16 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-62aa4927d0e8e8128d1176e5",
-  "job_id": "job-research-0a982340eead3672",
-  "data": {
-    "limitations": "保証は各注意ヘッド・各生成ステップの出力誤差上界に限定され、複数層と自己回帰生成を通じた誤差伝播や最終生成品質までは証明しない。安全網としてCPU側にFP16 KV原本を丸ごと保持するため、総システムメモリは密KV単独より増え、ホストメモリ容量とPCIeページイン帯域を必要とする。現在の研究カーネルはFlash Attentionほど最適化されておらず、順位整合性確認と高精度ページインが大きな遅延要因で、認証方式全体はDenseより2.7〜4.8倍遅い。固定作業領域のため64K未満ではGPUメモリ利得が小さいか逆転し得る。評価はLLaMA 3.1-8B、単一Blackwell GPU、バッチ1に限定され、複数GPUや高並列サービングでのページイン競合は未検証である。",
-    "differences": "KVQuant、KIVI、QJL、HACKなど既存KV量子化は低ビット表現の平均品質・速度・容量を主に評価し、一度選んだ量子化を各生成ステップで実行時検証して危険時だけ密計算へ戻す契約を持たない。本手法は現在の注意分布と保存済み量子化誤差から入力依存の上界を計算し、キーと値を別々に高精度化できる点が異なる。H2Oのような追い出し方式はトークン自体を失うため、FP16原本を保持して可逆に高精度化する本方式とは保証構造が異なる。PagedAttentionやvAttentionのようなページ割当・仮想メモリ方式とは競合せず、どのKVをどこへ置くかという管理層の上で、ページ内容を低精度化して必要時に復旧する補完技術として位置付けられる。",
-    "implementation_status": "著者公式GitHub `DeanoC/certified-quantized-attention` に研究実装、実験スクリプト、再現手順をMITライセンスで公開し、論文対応タグ `arxiv-v1` を付与する。成果物はZenodo DOI 10.5281/zenodo.19915933 にも固定版として保存される。GPU上の量子化KV、圧縮領域融合注意、誤差認証、CPU固定ページからの高精度復帰までエンドツーエンドに実装されているが、論文自身がテンソルコア向け最適化やより高速な認証カーネルを今後の課題として挙げる。",
-    "research_positioning": "リポジトリ上ではKVキャッシュのオフロード・再計算系統に置くのが適切である。理由は、単なるINT8/INT4圧縮ではなく、GPUへ低精度版、CPUへ正確なFP16版を同時配置し、実行時の証明結果に応じてCPUから必要ブロックをページインする階層メモリ制御が手法の成立条件だからである。純粋なKV圧縮論文と、CPU/NVMeへのKV退避論文の中間にあり、『品質が危険なときだけ高精度データを動かす』という検証駆動の階層KV設計を追加する。後続のよりデータ依存な証明方式やSGLang統合系とは比較対象になるが、本論文自体の主張と実測を独立して記録する。"
-  },
+  "attempt_id": "attempt-4f9b3c7701e888c670cec8f7",
+  "job_id": "job-research-7c396c8966095e9f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-62aa4927d0e8e8128d1176e5",
+    "claim_id": "claim-4f9b3c7701e888c670cec8f7",
     "worker_id": "scheduled-chat-discovery-router",
     "worker_kind": "scheduled_chat"
   }
