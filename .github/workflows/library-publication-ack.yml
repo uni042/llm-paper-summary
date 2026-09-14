@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/library-publication-ack.yml'
+      - '.survey/scripts/library_ack_manifest.py'
       - '.survey/work-queue/fallback-archive/*.json'
       - '.survey/work-queue/submissions/research/*.json'
       - '.survey/work-queue/submissions/audit/*.json'
