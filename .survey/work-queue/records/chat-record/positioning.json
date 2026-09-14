@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"attempt_id":"attempt-93a287ffe40b87f0f07591ee","job_id":"job-research-5b0daef0009e72b2","slot":"positioning","data":{"limitations":"評価は単一H200上のoffline batch inferenceに限られ、動的到着を含むonline servingの待ち時間、公平性、SLO、キャンセル、優先度混在は扱わない。token budgetは対象GPUでのoffline peak-memory profilingに依存するため、別ハードウェアやkernelへ移植する際は再校正が必要である。mixed-state実行はdense bounding boxを物理化するためpaddingを完全には除けず、prompt sortingもオンライン到着順や公平性との交換条件を持ち得る。block lengthは性能と品質の双方に影響し、64ではDream GSM8Kで大きな精度低下が観測される。評価モデルはDream/LLaDAの2種類であり、他のdiffusion LLMやmulti-GPU servingへの一般化は未検証。","differences":"Fast-dLLMはDual Cacheとparallel decodingで一要求のdenoising計算を高速化するが、複数要求を固定groupで処理すると早期完了要求がstragglerを待つ。BlockServeはその単一要求最適化を内部にそのまま組み込み、block境界でのeviction/refillとmixed-state batchを追加するため補完関係にある。自己回帰型のOrca/vLLM/Sarathiはtoken iterationごとにrequestを入れ替えられるが、dLLMは一blockで複数denoising stepを必要とするため同じ粒度を使えない。dLLM-Serveはmemory footprintやphase heterogeneityを扱うのに対し、BlockServeはrequestごとの収束時刻が異なることによるbatch stragglerを主要対象にする。","implementation_status":"研究プロトタイプを単一NVIDIA H200上で実装し、LLaDA-8B-InstructとDream-v0-Instruct-7Bの公式実装、Fast-dLLMのDual Cacheとparallel decodingを統合して実測している。arXiv本文から著者公式コード公開URLは確認できない。","research_positioning":"自己回帰型LLMで確立したcontinuous batchingを拡散型LLMの実行構造へ再定義するserving scheduler研究。blockを最小preemption単位とし、request lifecycle、KV/prefix state、dense tensor geometry、admission capacityを一つのloopへ結び付ける。dLLMの単一要求kernel高速化が進んだ後に顕在化するbatch-level utilization問題を扱うため、今後のdiffusion serving基盤のscheduler比較軸になる。","relation_to_existing_repository":"リポジトリのvLLM/Orca/Sarathi/DistServeなど自己回帰serving系統に対し、token-level schedulerが前提にする逐次生成とは異なるblock-denoising型の連続バッチングを追加する。Fast-dLLMなどdiffusion inference高速化とは競合せず、単一要求最適化を内包した上でbatch utilizationを改善する。KV管理の観点では、異なるlogical block位置のcacheをgather/scatterで同一batchへ整列するため、将来の階層KVやoffloadでもphysical placementとlogical scheduleを分離する設計の参考になる。","audit_required":false}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-32e9ba2b4cfed24c67d5030c",
+  "job_id": "job-research-cccd56289285fe3d",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-32e9ba2b4cfed24c67d5030c",
+    "worker_id": "scheduled-chat-paper-20260914T1430JST",
+    "worker_kind": "scheduled_chat"
+  }
+}
