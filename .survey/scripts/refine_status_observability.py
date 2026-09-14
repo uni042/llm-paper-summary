@@ -291,6 +291,14 @@ def _replace_claim_explanation(text: str) -> str:
     return "\n".join(lines)
 
 
+def _replace_activity_labels(text: str) -> str:
+    """Label heartbeat-derived timestamps as lease activity, not claim creation."""
+    return (
+        text.replace(":30 通常worker 直近claim", ":30 通常worker 直近lease活動")
+        .replace(":00 補助worker 直近claim", ":00 補助worker 直近lease活動")
+    )
+
+
 def _replace_worker_section(text: str, metrics: dict[str, Any]) -> str:
     if START not in text or END not in text:
         return text
@@ -348,6 +356,7 @@ def refine_text(repo_root: Path, text: str, now: datetime | None = None) -> str:
         now = now.replace(tzinfo=timezone.utc)
     now = now.astimezone(timezone.utc)
     text = _replace_claim_explanation(text)
+    text = _replace_activity_labels(text)
     text = _replace_progress(text, research_progress(repo_root))
     text = _replace_worker_section(text, worker_observability(repo_root, now))
     return text.rstrip() + "\n"
