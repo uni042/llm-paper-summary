@@ -2,35 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-082db31c9337a02edce843fb",
+  "attempt_id": "attempt-0661b76e4efb81bfbce1622c",
   "job_id": "job-research-2bc48bb7d3eef940",
-  "data": {
-    "hardware": "主要評価はNVIDIA A100-80GB上でLlama-3-70B-Instructをtensor parallelism 2で配信する構成をモデル化する。追加ケーススタディではAMD Instinct MI300X 192GBを8 GPU/node、TP=8としてQwen3-235B-A22B FP8のfleet容量を推計する。",
-    "software": "vLLMのPagedAttention・continuous batching・chunked prefillを前提とし、性能評価はVidurで較正した離散事象シミュレータを使用する。入口ルータはカテゴリ別EMA、容量検査、token-budget閾値、load-aware spilloverを実装する。",
-    "model": "主要評価: Llama-3-70B-Instruct BF16、80層、8 KV heads、head dimension 128。規模推計: Qwen3-235B-A22B FP8、235B総パラメータ/22B active、94層、4 KV heads、GQA 16:1。",
-    "datasets": [
-      "Azure LLM Inference Dataset由来100,000 requests",
-      "LMSYS-Chat-1M由来100,000 requests"
-    ],
-    "baselines": [
-      "65K max contextのhomogeneous vLLM fleet＋round-robin routing",
-      "提案の8K short pool＋65K long pool＋token-budget routing"
-    ],
-    "correctness": "モデル出力品質ではなく、安全な容量適合と配信SLOを検証する。short poolへ送る要求は推定L_totalが8,192以下であることを入口・spillover後の二重capacity checkで保証し、preemption/OOM/rejection率を信頼性指標として比較する。",
-    "settings": [
-      "各trace 100K requests、Poisson arrivals",
-      "最大90% aggregate utilizationまで負荷を上げる",
-      "homogeneous: Cmax 65K、Nseq 16、batch budget 8K、2.8 req/s/instance",
-      "short pool: Cmax 8K、Nseq 128、batch budget 16K、11.2 req/s/instance",
-      "long pool: Cmax 65K、Nseq 16、2.8 req/s/instance",
-      "B_short=8192、EMA beta=0.95、uncertainty bias gamma=1.0",
-      "SLO: P99 TTFT <=2 s、P99 TPOT <=80 ms"
-    ],
-    "methodology": "Azure由来traceは80%が2K以下で最大64Kまでのheavy tail、LMSYS由来traceは平均入力69.5 token・平均出力214.5 tokenのcompact workloadとして構成する。固定arrival rateでwarm-up後のsteady stateを測り、必要GPU数、TTFT/TPOT、preemption、OOM、rejection、success rateを比較する。100/1,000/2,000 req/sで規模変化を確認し、閾値1K〜16K超の感度、カテゴリ別token推定の50観測時収束も測る。MI300X事例は論文のKV容量式とGPU時間単価を用いる投影で、実機ベンチマークではない。",
-    "scope": "実トレース分布を使うが主要結果は較正済みシミュレーションであり、実本番fleetでのA/B試験ではない。二つのpool、単一モデルfleet、既知のmax_output_tokensとカテゴリ判定を前提とする。モデル切替、カテゴリ分類誤り、異種GPU混在、ネットワーク障害、実機でのルータCPU負荷は十分に評価されていない。"
-  },
+  "data": {},
   "reservation": {
-    "claim_id": "claim-082db31c9337a02edce843fb",
+    "claim_id": "claim-0661b76e4efb81bfbce1622c",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }

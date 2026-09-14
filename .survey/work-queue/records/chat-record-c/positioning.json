@@ -2,44 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-082db31c9337a02edce843fb",
+  "attempt_id": "attempt-0661b76e4efb81bfbce1622c",
   "job_id": "job-research-2bc48bb7d3eef940",
-  "data": {
-    "limitations": [
-      "主要な31〜42% GPU削減、信頼性、遅延結果は実本番fleetの実測ではなく、Vidurで較正した離散事象シミュレータに基づく。MI300X/Qwen3の$15.4M/year節約も容量式によるprojectionである。",
-      "二つのpoolで同一モデルを同一GPU種へ載せる設定が中心で、異種GPU混在、モデルごとのtokenizer差、複数モデルを同一routerで扱う場合の配置最適化は評価していない。",
-      "routingにはmax_output_tokensが実際の生成上限を十分に表すことが必要で、利用者が過小指定するAPIや上限が動的に変わる生成ではL_totalを過小評価し得る。",
-      "カテゴリ別bytes/token較正はtraffic categoryを正しく付与できる前提で、カテゴリ分類器の誤りや新しい言語・入力形式の急な分布変化は本文で十分に検証されていない。",
-      "long poolへ送られる非常に長い要求自体のKV圧力は残り、long poolではpreemption/OOMが完全には消えない。KV圧縮・offload・cache migrationなど別技術が必要になる。",
-      "cost modelの式はqueueingや整数GPU数を無視するため、本文の実現savingsより18〜20 percentage pointsほど高い値を出しており、精密なcapacity planningにはsimulationまたは実測が必要である。"
-    ],
-    "differences": [
-      {
-        "name": "PagedAttentionとの差",
-        "description": "PagedAttentionは単一instance内でKVをpage単位管理して断片化と予約無駄を減らす。Dual-Poolはその上でinstance自体のmax context設定をtraffic長に合わせ、fleet入口で短文を高concurrency構成へ送るため、作用点がinstance内memory managerではなくfleet configurationとroutingにある。"
-      },
-      {
-        "name": "chunked prefill / Sarathi-Serveとの差",
-        "description": "chunked prefillは長い入力計算を小分けにしdecodeと交互実行してhead-of-line blockingを緩和するが、系列全体のKV容量とmax_model_lenは変えない。本手法は短文trafficを小さいmax contextのpoolへ分離してmemory provisioning自体を変えるため、両者は補完的である。"
-      },
-      {
-        "name": "DistServe / Splitwiseとの差",
-        "description": "prefillとdecodeを別資源へ分離してphaseごとの計算特性に合わせる方式に対し、本手法は要求サイズによってfleetを分ける。各short/long pool内部でprefill/decode disaggregationを適用でき、request-levelとphase-levelの二つの分解軸を組み合わせられる。"
-      },
-      {
-        "name": "Llumnixとの差",
-        "description": "LlumnixはKV cacheをGPU間でmigrationして実行中requestを動的に再配置し負荷を均す。本手法は要求到着時に総token budgetからpoolを選ぶ軽量な入口routingで、実行中KV移動を必要としない代わりにpool構成は粗粒度で静的である。"
-      },
-      {
-        "name": "KV圧縮・offloadとの差",
-        "description": "KVShare、OrbitFlow、Mooncake等は保存済みKVの共有、再構成、階層memory配置によって1 token当たりまたは実効cache容量を改善する。本手法は短文要求に長文用capacityを用意しないことでprovisioned context windowを縮めるため、KVの表現や保存媒体を変えずに上位層で効率を得る。"
-      }
-    ],
-    "implementation_status": "論文はrouting algorithm、EMA較正式、trace-driven simulator、eval/reproduce.pyによる再現手順を記述する。著者所属にvLLM Semantic Router Projectが含まれるが、一次資料から本論文専用の公開GitHub URLは確認できない。",
-    "research_positioning": "LLM servingの資源最適化を、kernelやKV block単位だけでなく『max context設定が異なる複数poolへtrafficを分級するfleet-level configuration』として扱う研究である。長文対応を全GPUへ一律課している構成では単純な入口routingだけで大きな余地があることを示し、今後は閾値をpreemption/OOM信号から自動調整する適応型pool sizing、異種GPU配置、KV圧縮・offloadとの共同最適化へ接続できる。一方で主要評価がsimulationであるため、production vLLM clusterでの実測再現とrouter failure mode検証が重要な次段階となる。"
-  },
+  "data": {},
   "reservation": {
-    "claim_id": "claim-082db31c9337a02edce843fb",
+    "claim_id": "claim-0661b76e4efb81bfbce1622c",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
