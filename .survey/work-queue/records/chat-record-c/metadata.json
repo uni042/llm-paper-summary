@@ -2,41 +2,80 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-bfc2f175928593655e22fb1d",
-  "job_id": "job-research-e2ac49197d4db145",
+  "attempt_id": "attempt-3e8d203b8681be5eaa12c378",
+  "job_id": "job-research-b0ca87eca87a5574",
   "data": {
-    "canonical_id": "arXiv:2601.22996",
-    "arxiv_id": "2601.22996",
-    "doi": "10.48550/arXiv.2601.22996",
+    "canonical_id": "arXiv:2508.06948",
+    "arxiv_id": "2508.06948",
+    "doi": "10.48550/arXiv.2508.06948",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DS", "cross_list": []},
-    "title": "Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference",
-    "summary": "LLMデコードでは生成トークンごとにKVキャッシュが増えるため、開始時に収まる要求群でも進行後にGPUメモリ上限を超え得る。一方で最終生成長は事前には分からず、予測器へ依存すると誤差に対する最悪時保証がない。本論文は全要求が時刻0に到着する単一GPUのオフライン一括処理を対象に、生成長を一切知らない非先見的スケジューラとして幾何分割アルゴリズム（GSA）を提案する。要求へ幾何級数的に増える実行時間片を与え、各段階末に未完了要求を意図的に再開始することで未知の長要求がメモリを占有し続けるのを防ぐ。各時間片内では開始時刻をずらす段階的パイプラインにより要求のKV使用ピークを時間方向へ分散し、同一メモリ容量で高い同時実行度を保つ。一般条件で最適先見スケジューラに対する競合比61.92、大容量メモリ極限で32を証明する。生成長既知版GBAは一般条件10.67、大容量条件6.75の近似比を与え、従来の9216および48を大幅に改善する。LMSYS-Chat-1Mに基づく数値実験でも実用変種GSA-SpecがvLLM型到着順方式やA-Minを安定して上回る。",
-    "list_summary": "未知の生成長に対し、幾何級数的な時間片ごとの再開始と開始時刻をずらすKVメモリ平滑化を組み合わせ、一般条件で初の定数競合比を与える非先見的KVスケジューリング理論。",
-    "authors": ["Yiding Feng", "Zonghan Yang", "Yuhao Zhang"],
-    "authors_affiliations": "Hong Kong University of Science and Technology; Shanghai Jiao Tong University",
-    "published": "2026-01-30",
-    "publication": "arXiv preprint arXiv:2601.22996",
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud",
+    "summary": "Kairosは、複数のエージェントが同じLLM群を共有する高負荷環境で、エージェントごとに異なる残り実行時間とKVキャッシュ需要をサービング判断へ持ち込むマルチエージェント向けオーケストレーション基盤である。実行時にメッセージ識別子、上流エージェント名、実行時刻を自動伝播して動的ワークフローを再構成し、各エージェントの単一要求遅延分布と残りワークフロー遅延分布をオンライン学習する。優先度制御では残り遅延分布同士のWasserstein距離を一次元へ埋め込み、ゼロ遅延分布に近いエージェントを先に処理し、同一エージェント内ではアプリケーション全体で長く待った要求を優先する。さらに入力長と履歴的な実行時間分布から将来のKVメモリ利用を0.5秒刻みで予測し、予測ピークメモリが最小になるLLM実体へ要求を配送する。4枚のA40上のvLLM実装で、Parrot比の平均遅延を単一アプリで17.8〜28.4%、複数アプリ同居で45.1〜72.8%削減する。",
+    "list_summary": "動的ワークフローから残り遅延分布を学習して短く完了しやすいエージェントを優先し、将来KVメモリ需要を時間枠で予測してLLM実体へ配置するマルチエージェント配信基盤。",
+    "authors": [
+      "Jinyuan Chen",
+      "Jiuchen Shi",
+      "Quan Chen",
+      "Minyi Guo"
+    ],
+    "authors_affiliations": "Shanghai Jiao Tong University",
+    "published": "2025-08-09",
+    "publication": "arXiv preprint arXiv:2508.06948",
     "publication_type": "Preprint",
     "publication_status": "Preprint",
-    "lineage": "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
-    "topics": ["KVキャッシュスケジューリング", "非先見的スケジューリング", "競合解析", "段階的パイプライン", "幾何分割", "総フロー時間"],
-    "importance": "出力長予測を仮定せず、KVキャッシュが進行とともに成長するLLM固有のメモリ制約下で最悪時定数保証を初めて与える。実運用の予測器精度に依存しない理論的な基準として、メモリ認識型スケジューラ設計を比較する土台になる。",
-    "hardware_evaluation": "実機GPU評価ではなく、論文の離散時間メモリ制約モデルを忠実に実装した事象シミュレータによる数値評価。実要求分布にはLMSYS-Chat-1Mの最初の助手応答トークン数を使用する。",
-    "quality_effect": "モデルや生成内容を変更せず要求の実行順、開始時刻、中断・再開始だけを扱う理論であり、生成品質への近似誤差はない。ただし中断時に進捗を全廃棄する厳しいモデルを置く。",
-    "source": "https://arxiv.org/abs/2601.22996",
-    "sources": ["https://arxiv.org/abs/2601.22996", "https://arxiv.org/html/2601.22996v1"],
+    "lineage": "agentic serving / workflow-aware scheduling / memory-aware dispatch",
+    "topics": [
+      "マルチエージェント配信",
+      "ワークフロー認識型スケジューリング",
+      "KVキャッシュ",
+      "GPUメモリ認識配送",
+      "vLLM",
+      "高負荷クラウド推論"
+    ],
+    "importance": "単一LLM要求の処理順だけでなく、要求が属するエージェントのワークフロー上の位置と残り処理時間分布を使ってアプリケーション全体の完了時間を最適化し、同時にKVメモリ予測で再計算を減らす。エージェント型LLM配信でアプリケーション層の情報を推論基盤へ接続する代表的な設計である。",
+    "hardware_evaluation": "NVIDIA A40 48GB×4、Ubuntu 20.04、CUDA 12.8。主評価はLlama3-8B、拡張評価はLlama2-13B。",
+    "quality_effect": "モデル重みや生成アルゴリズムを変更せず要求順序とLLM実体への配送だけを変えるため、生成品質を近似しない。性能指標はアプリケーション単位の遅延と資源利用である。",
+    "source": "https://arxiv.org/abs/2508.06948",
+    "sources": [
+      "https://arxiv.org/abs/2508.06948",
+      "https://arxiv.org/html/2508.06948"
+    ],
     "code": null,
-    "implementation": "本論文の主成果は理論アルゴリズムと離散時間事象シミュレータであり、vLLMへ統合した実運用サーバ実装ではない。数値実験ではGBA/GSAに加えて、空き時間へ即座に要求を補充するGBA-Dと、空きメモリで投機的実行を追加するGSA-Specを実装する。一次資料に公式コード公開URLは記載されない。",
+    "implementation": "約6000行のPythonで実装し、vLLMの標準APIを推論実行・状態監視に利用する。エージェント間通信にはKafkaを用い、オーケストレータ、負荷分散器、エージェント群を複数プロセスで分散配置し、高並行要求は複数スレッドで処理する。OpenAI API形式互換のHTTP窓口を提供する。一次論文中にKairos固有の公開コードURLは確認できない。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180"},
-      {"canonical_id": "arXiv:2410.13277", "arxiv_id": "2410.13277"},
-      {"canonical_id": "arXiv:2403.02310", "arxiv_id": "2403.02310"}
+      {
+        "canonical_id": "arXiv:2402.14034",
+        "arxiv_id": "2402.14034"
+      },
+      {
+        "canonical_id": "arXiv:2502.13965",
+        "arxiv_id": "2502.13965"
+      },
+      {
+        "canonical_id": "arXiv:2401.02669",
+        "arxiv_id": "2401.02669"
+      },
+      {
+        "canonical_id": "arXiv:2307.07924",
+        "arxiv_id": "2307.07924"
+      },
+      {
+        "canonical_id": "arXiv:2311.17541",
+        "arxiv_id": "2311.17541"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v1 HTML版参考文献節",
-    "references_total": 52
+    "references_total": 45
   },
-  "reservation": {"claim_id": "claim-bfc2f175928593655e22fb1d", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-3e8d203b8681be5eaa12c378",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
