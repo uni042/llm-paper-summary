@@ -2,20 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-37e7dace4d142c5fc45d47e3",
+  "attempt_id": "attempt-a8e4c78bc8a73de49c1a3270",
   "job_id": "job-research-b3027328474c4253",
   "data": {
     "problem": "LLMがGPUカーネルを生成できても、それを推論基盤の改善へ結び付けるには三つの断絶がある。第一に、実servingの複雑な演算契約・可変shape・paged KV layout・低精度条件をagentへ正確に伝える共通表現がない。第二に、単純な合成shapeでは本番分布と乖離し、生成カーネルが実負荷で速いか分からない。第三に、正しさと性能を確認した後もSGLang/vLLM内部へ手動統合する必要があり、生成→評価→改善→配備の自動反復が閉じない。加えてagent生成コードはコンパイル失敗、確率演算の誤検証、benchmark状態への依存といった問題を持つ。",
     "novelty": "FlashInfer-Benchはカーネル課題をDefinition、具体Workload、候補Solution、不変Evaluationの4要素からなるFlashInfer Traceへ統一し、実serving traceから課題を採取する。評価系は決定的演算、FP8等の低精度、samplingのような確率的演算をそれぞれ適切なcorrectness判定で扱い、隔離実行でreward hackingや破損CUDA contextの影響を抑える。さらに検証済みtraceから入力shape等をkeyに最速solutionを引くAOT indexを作り、flashinfer_bench.apply()が本番呼出しをO(1) lookupで動的dispatchする。これによりbenchmarkがagentへのfeedback sourceであると同時にproduction kernel registryになる。",
     "method_overview": "DefinitionはI/O、dtype、定数・可変axis、制約、PyTorch reference semanticsを記述する。WorkloadはそのDefinitionに実tensor、seeded random input、scalar等を束縛し、SGLang上でDeepSeek-V3、Llama-3.1-8B、Qwen3-30B-A3Bなどを実行して得たshape分布から重複除去して保存する。SolutionはTriton/CUDA等のsource、entry point、対象hardwareを持つ。EvaluationはDefinition×Solution×Workloadに対する環境、correctness、latencyを不変記録する。benchmark serviceはGPU単位lock、warm-up、CUDA event timing、persistent workerと隔離subprocessを使い、失敗solutionは隔離modeへ送る。複数GPUへのjob割当はbaseline residencyとcompile cacheを考慮したcost matrixをHungarian algorithmで解き、EWMAでcost modelを更新する。agent評価では初回生成→benchmark trace feedback→再最適化を反復し、fast_pでcorrectnessとbaseline超過率を同時評価する。apply()はofflineでerror thresholdを通ったtraceからinput feature key→最速solutionのindexを構築し、頻出solutionをAOT compile、残りをJIT compileしてruntimeに差替える。",
     "components": [
-      {"name":"FlashInfer Trace","description":"演算契約、具体workload、実装、評価を同一schemaで結び、生成・benchmark・leaderboard・deployment間の情報損失を防ぐ。"},
-      {"name":"実serving workload dataset","description":"SGLangで主要LLMを実行し、GEMM、GQA/MLA、MoE、RMSNorm、Sampling等の実shape・cache layoutを収集する。"},
-      {"name":"頑健benchmark service","description":"deterministic、low-precision、stochastic correctnessを分けて検証し、GPU lock、CUDA-event timing、process isolation、fault recovery、compiled cacheで大量生成コードを測る。"},
-      {"name":"feedback-loop agent evaluation","description":"benchmark traceのcompile/runtime/numerical feedbackを次の生成roundへ返し、最良solutionを選ぶ。fast_p曲線でcorrectnessとspeedupを一体評価する。"},
-      {"name":"flashinfer_bench.apply()","description":"validation済みsolutionからshape等に対応する最速kernelを選び、decoratorまたはimperative APIでserving engineへ動的差替えする。AOT indexによりonline lookupはO(1)。"}
+      {
+        "name": "FlashInfer Trace",
+        "description": "演算契約、具体workload、実装、評価を同一schemaで結び、生成・benchmark・leaderboard・deployment間の情報損失を防ぐ。"
+      },
+      {
+        "name": "実serving workload dataset",
+        "description": "SGLangで主要LLMを実行し、GEMM、GQA/MLA、MoE、RMSNorm、Sampling等の実shape・cache layoutを収集する。"
+      },
+      {
+        "name": "頑健benchmark service",
+        "description": "deterministic、low-precision、stochastic correctnessを分けて検証し、GPU lock、CUDA-event timing、process isolation、fault recovery、compiled cacheで大量生成コードを測る。"
+      },
+      {
+        "name": "feedback-loop agent evaluation",
+        "description": "benchmark traceのcompile/runtime/numerical feedbackを次の生成roundへ返し、最良solutionを選ぶ。fast_p曲線でcorrectnessとspeedupを一体評価する。"
+      },
+      {
+        "name": "flashinfer_bench.apply()",
+        "description": "validation済みsolutionからshape等に対応する最速kernelを選び、decoratorまたはimperative APIでserving engineへ動的差替えする。AOT indexによりonline lookupはO(1)。"
+      }
     ],
     "system_design": "trace datasetを中心に、workload収集→candidate generation→distributed benchmark→leaderboard/feedback→validated solution registry→apply() deploymentが循環する。production側で新しい実workloadが生まれると再びtraceへ取り込み、agent改善とkernel更新へ還流させる設計である。"
   },
-  "reservation": {"claim_id":"claim-37e7dace4d142c5fc45d47e3","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a8e4c78bc8a73de49c1a3270",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
