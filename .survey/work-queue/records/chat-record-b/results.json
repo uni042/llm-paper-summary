@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-b4f98614fa22d7e73fab59f5",
   "job_id": "job-research-25e24814dedb76cb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b4f98614fa22d7e73fab59f5",
-    "worker_id": "scheduled-chat-paper-20260915T0630JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "LongBenchの256 worker・容量72条件では、BF-IO H=40がFCFSの平均負荷偏り37.0×10^8を2.49×10^8へ約15分の1に抑え、スループットを5.47×10^3から10.5×10^3トークン/秒へ約92%高め、出力1トークン当たり時間を2.97秒から1.67秒へ約44%短縮した。推定総エネルギーも29.1MJから20.6MJへ約29%減少する。Hを40より長くしても利得はほぼ飽和し、軽いBurstGPT条件ではエネルギー削減は3.3%に縮む。",
+    "key_results": [
+      {"metric": "LongBench平均負荷偏り", "value": "37.0×10^8 → 2.49×10^8（約15分の1）", "baseline": "FCFS", "condition": "256 worker、B=72、BF-IO H=40", "interpretation": "同期段階の最重workerを継続的に抑え、障壁待ちを大幅に減らす。"},
+      {"metric": "LongBenchスループット", "value": "5.47×10^3 → 10.5×10^3 token/s（約92%向上）", "baseline": "FCFS", "condition": "256 worker、B=72、BF-IO H=40", "interpretation": "総計算量を変えず、負荷偏り由来の遊休時間を実処理へ戻した効果である。"},
+      {"metric": "LongBench出力1トークン当たり時間", "value": "2.97 → 1.67 s/token（約44%短縮）", "baseline": "FCFS", "condition": "256 worker、B=72、BF-IO H=40", "interpretation": "最遅workerの局所処理時間が小さくなり、全workerが次段階へ早く進める。"},
+      {"metric": "LongBench総エネルギー", "value": "29.1 → 20.6 MJ（約29%削減）", "baseline": "FCFS", "condition": "A100相当電力模型、BF-IO H=40", "interpretation": "瞬間消費電力は高利用率で上がるが、処理終了が早まり、アイドル電力を積算する時間が短くなる。"},
+      {"metric": "BurstGPT平均負荷偏り", "value": "27.9×10^4 → 1.65×10^4（17倍改善）", "baseline": "FCFS", "condition": "16 worker、B=72、BF-IO H=20", "interpretation": "軽い負荷でも配置平準化は機能する。"},
+      {"metric": "BurstGPTスループット・遅延・エネルギー", "value": "8.00×10^4→9.13×10^4 token/s、1.42×10^-2→1.25×10^-2 s/token、396→383 kJ", "baseline": "FCFS", "condition": "16 worker、B=72、BF-IO H=20", "interpretation": "スループット約14%向上、遅延約12%短縮、エネルギー3.3%削減で、重負荷LongBenchより効果は小さい。"},
+      {"metric": "理論エネルギー削減下限", "value": "大規模極限で52.6%以上", "baseline": "FCFS型の不均衡状態", "condition": "A100例、アイドル100W、最大400W、利用率指数0.7、理論模型", "interpretation": "実測値ではなく、偏り改善保証と電力模型を組み合わせた漸近的保証である。"}
+    ],
+    "negative_results": "先読みHを20から40へ伸ばすと大きく改善するが、H=60〜100では平均偏り・スループット・遅延がほぼ飽和し、一部ではわずかに悪化する。軽負荷のBurstGPTではエネルギー削減が3.3%に留まり、BF-IOの省エネルギー効果は元の同期待ちが大きいほど強い。またJSQはBurstGPTでFCFSとほぼ同等で、要求数だけの平準化がトークン負荷平準化にならないことを示す。",
+    "interpretation": "BF-IOの利得はカーネル高速化やKV圧縮ではなく、同期系で段階時間を決める最大局所負荷を小さくすることから生じる。重負荷・大規模ほど固定配置の誤りが積み上がるため改善余地が大きく、軽負荷では元々の障壁待ちが小さいので省エネルギー利得も縮む。短い先読みは直近の完了予定を使って現在だけの貪欲配置を修正するが、長すぎる先読みは予測精度の低下と追加計算により限界効用が下がる。",
+    "quality_impact": "生成モデル、重み、サンプリング、KV値を変更しない配置最適化なので、モデル出力品質を近似して性能を得る方式ではない。品質上の主なリスクではなく、スケジューラ計算費、待機プール仮定、予測誤差、尾部遅延・公平性などの運用制約が境界条件になる。"
+  },
+  "reservation": {"claim_id": "claim-b4f98614fa22d7e73fab59f5", "worker_id": "scheduled-chat-paper-20260915T0630JST", "worker_kind": "scheduled_chat"}
 }
