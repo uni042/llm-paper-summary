@@ -2,12 +2,14 @@
 """Refine STATUS.md so durable queue state is not mistaken for live process state.
 
 The base dashboard and throughput renderer intentionally remain the owners of
-routing/throughput policy. This final pass only clarifies two observability
+routing/throughput policy. This final pass only clarifies observability
 boundaries:
 
 * a valid claim lease is not the same thing as a live Scheduled Chat process;
+* heartbeat activity is not the same thing as a newly created claim;
 * a Research job can have a durable worker checkpoint before GitHub terminal
-  state has caught up.
+  state has caught up;
+* a consistency result is historical unless its checked-at time is shown.
 
 All values are derived from repository-persisted state. ChatGPT Library is not
 queried by this script; Library checkpoints are counted only after a worker has
@@ -33,6 +35,11 @@ PROGRESS_LABELS = {
     "GitHub反映済みResearch完了（job）",
     "耐久checkpoint済み・GitHub未反映（job）",
     "精読済みユニーク論文（推定）",
+}
+CONSISTENCY_LABELS = {
+    "整合性チェック（Consistency）",
+    "直近整合性チェック結果",
+    "直近整合性チェック時刻",
 }
 WORKER_REPLACED_LABELS = {
     "処理中（Active claims）",
@@ -247,6 +254,25 @@ def _table_label(line: str) -> str | None:
     return cells[0] if cells else None
 
 
+def _replace_consistency_observability(repo_root: Path, text: str) -> str:
+    maintenance = _load(repo_root / ".survey/work-queue/maintenance-cycle.json")
+    status = str(maintenance.get("last_consistency_status") or "—")
+    checked = _dt(maintenance.get("last_consistency_checked_at"))
+    checked_text = checked.astimezone(JST).strftime("%m-%d %H:%M JST") if checked else "—"
+
+    lines = text.splitlines()
+    indexes = [i for i, line in enumerate(lines) if _table_label(line) in CONSISTENCY_LABELS]
+    if not indexes:
+        return text
+    insert_at = min(indexes)
+    lines = [line for line in lines if _table_label(line) not in CONSISTENCY_LABELS]
+    lines[insert_at:insert_at] = [
+        f"| 直近整合性チェック結果 | **{status}** |",
+        f"| 直近整合性チェック時刻 | **{checked_text}** |",
+    ]
+    return "\n".join(lines)
+
+
 def _replace_progress(text: str, progress: dict[str, int]) -> str:
     lines = text.splitlines()
     indexes = [i for i, line in enumerate(lines) if _table_label(line) in PROGRESS_LABELS]
@@ -357,6 +383,7 @@ def refine_text(repo_root: Path, text: str, now: datetime | None = None) -> str:
     now = now.astimezone(timezone.utc)
     text = _replace_claim_explanation(text)
     text = _replace_activity_labels(text)
+    text = _replace_consistency_observability(repo_root, text)
     text = _replace_progress(text, research_progress(repo_root))
     text = _replace_worker_section(text, worker_observability(repo_root, now))
     return text.rstrip() + "\n"
