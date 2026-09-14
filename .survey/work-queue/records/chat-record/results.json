@@ -2,71 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
-  "job_id": "job-research-0d6791ec792101b0",
-  "data": {
-    "overview": "LoRAServeは実運用由来の需要変動下で、アダプタのランクと需要を同時に考慮して配置を動的に変えることで、ランクだけを見る静的配置と、負荷だけを見る要求単位ルーティングの弱点を両方抑えた。Company XトレースではSLO内で処理できる要求量がToppings比最大20%、S-LoRA比最大2倍増え、同じ負荷を処理するGPU台数をそれぞれ17%、50%削減できる。95パーセンタイルTTFTは比較対象比最大9倍改善し、各サーバが保持すべきアダプタ数もToppings比最大16倍削減した。トークン間時間は悪化せず最大15%改善し、4台から12台までの弱スケーリングでもノード数に比例した処理量を維持した。",
-    "key_results": [
-      {
-        "metric": "SLO内要求スループット",
-        "value": "Toppings比最大20%高く、S-LoRA比最大2倍",
-        "baseline": "Toppings、S-LoRA Random、S-LoRA Contiguous",
-        "condition": "Company X実運用トレース、総アダプタ数50/100/200、主要4サーバ構成",
-        "interpretation": "需要だけでなくランク干渉も見て配置を分けることで、負荷平準化と同一バッチ内の最大ランク抑制を同時に実現する。"
-      },
-      {
-        "metric": "同一負荷で必要なGPU台数",
-        "value": "Toppings比17%削減、S-LoRA比最大50%削減",
-        "baseline": "同じSLO制約下で各比較対象が必要とするGPU容量",
-        "condition": "Company Xトレース",
-        "interpretation": "SLO違反を避けるための過剰なGPU増設を減らし、クラスタ容量効率を改善する。"
-      },
-      {
-        "metric": "95パーセンタイルTTFT",
-        "value": "比較対象比最大9倍改善",
-        "baseline": "S-LoRA Random、S-LoRA Contiguous、Toppings",
-        "condition": "Company Xトレースおよび公開トレース由来の六種類の負荷",
-        "interpretation": "静的配置の負荷偏りと、ランクを無視した要求ルーティングによる高ランク混在を避けることで、待ち時間を大幅に削減する。"
-      },
-      {
-        "metric": "トークン間時間",
-        "value": "多くの条件で同程度、最大15%改善",
-        "baseline": "各比較対象",
-        "condition": "公開トレース由来六負荷",
-        "interpretation": "TTFT改善のためにデコード側を犠牲にしておらず、負荷平準化によりデコード間隔も一部改善する。"
-      },
-      {
-        "metric": "サーバ当たりアダプタ保存量",
-        "value": "Toppings比最大16倍削減",
-        "baseline": "全アダプタを各サーバへ複製するToppings型運用",
-        "condition": "Company Xトレース、需要・ランクに基づく選択配置",
-        "interpretation": "全複製をやめ、担当分だけローカル保持する分散プールによりCPUメモリ圧迫を大幅に下げる。"
-      },
-      {
-        "metric": "弱スケーリング",
-        "value": "4サーバで約32 RPS、8サーバで約64 RPS、12サーバで約96 RPSを10秒の95パーセンタイルTTFT SLO内で処理",
-        "baseline": "ノード数に比例して要求量とアダプタ数を増加",
-        "condition": "4/8/12 LLM推論サーバ",
-        "interpretation": "評価範囲ではサーバ増加にほぼ比例して処理能力が伸び、配置調整器が明確な中央ボトルネックにはなっていない。"
-      },
-      {
-        "metric": "ランク異質性の干渉",
-        "value": "rank 8とrank 128を同一Llama-7Bサーバで共用するとrank 8要求の95パーセンタイルTTFTが単独rank 8負荷比84%悪化",
-        "baseline": "同量のrank 8要求だけを処理するサーバ",
-        "condition": "Multi-LoRA混在バッチ",
-        "interpretation": "低ランク要求も最大ランクに引きずられるため、ランクを無視した負荷平準化だけでは尾部遅延を抑えられないことを実証する。"
-      },
-      {
-        "metric": "モデル・テンソル並列度への感度",
-        "value": "Llama-7B/30B/70Bと複数テンソル並列度で比較対象に対する改善傾向を維持",
-        "baseline": "各配置・ルーティング比較対象",
-        "condition": "モデルサイズとテンソル並列度を変更",
-        "interpretation": "配置制御が特定の単一モデルサイズや並列構成だけに依存しないことを確認する。"
-      }
-    ],
-    "negative_results": "LoRAServeは全アダプタをローカル保持しないため、再配置後の初回要求では遠隔転送が必要である。論文はInfiniBand上のGPU間転送がローカルCPUメモリからGPUへの転送と同程度と報告するが、低速ネットワーク環境ではこの前提が崩れる。また各サーバSSDへ全アダプタを複製する案は、測定上遅延と帯域が不十分で採用されなかった。配置は直近需要を外挿するため、急激で予測不能な人気変化には遅れて追従する。主要実験は4サーバ、最大12サーバであり、数百ノード規模での中央調整器負荷は未検証である。",
-    "interpretation": "結果は、Multi-LoRAサービングのクラスタ効率を要求数だけで平準化すると不十分で、ランクに由来する一要求当たりの実効計算負荷と混在干渉を配置単位で管理する必要があることを示す。人気の高い同ランクアダプタには専用容量を与え、長い裾の低需要アダプタはまとめて共有し、需要変化時だけ複製数と配置を変えることでGPU利用率とCPUメモリ容量を同時に改善できる。遠隔転送を通常経路ではなく配置変更後の初回だけに限定したことも、分散プールを実用的にする重要点である。",
-    "quality_impact": "LoRA重みや基盤モデル計算の数値を近似せず、アダプタの場所と要求送信先だけを変えるため、生成内容の意味品質は原理上変えない。評価も精度指標ではなくTTFT、トークン間時間、SLO内処理量を対象とする。運用品質への主な効果は、ランク干渉と負荷偏りによる尾部遅延を減らすことにある。"
-  },
-  "reservation": {"claim_id":"claim-4d3ef5ca344439ed99771c72","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-b398f5917a1eff0518b4bce7",
+  "job_id": "job-research-59a8ee8393fd93ee",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b398f5917a1eff0518b4bce7",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

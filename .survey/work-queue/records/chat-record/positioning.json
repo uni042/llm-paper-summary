@@ -2,13 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
-  "job_id": "job-research-0d6791ec792101b0",
-  "data": {
-    "limitations": "需要予測は直近履歴の外挿に基づくため、突発的な人気変化では次の配置更新まで負荷偏りが残る。遠隔取得はInfiniBandとGPUDirect RDMAを利用できる高速クラスタを前提とし、一般的なEthernetや低速ネットワークでは初回取得費用が大きくなり得る。評価は主要4サーバ、最大12サーバであり、数百ノード規模で中央調整器や位置表更新がどこまで伸びるかは未検証である。Company Xトレースは実運用由来だが、機密性のためモデル・アダプタ名が抽象化され、50/100/200アダプタ条件の一部は同一ランク内を合成分割している。また地域をまたぐ配置はデータ境界のため対象外で、同一地域・同一基盤モデルのサーバ群を前提とする。",
-    "differences": "S-LoRAとPunicaは異なるLoRAを同一バッチで効率よく実行するカーネルやメモリ管理を提供するが、クラスタ内のどのサーバへどのランクを置くかは最適化しない。Toppingsは要求時点の待ち行列負荷を見て送信先を選ぶが、全アダプタを全サーバへ複製する前提でランク混在による計算干渉も配置段階では抑えない。ChameleonはGPU内アダプタキャッシュと要求スケジューリング、dLoRAはアダプタの基盤モデルへの結合・解除や複製間移動を扱う。LoRAServeはランク別処理能力と需要を使ってクラスタ配置と複製数そのものを周期的に作り直し、全複製をやめた分を分散アダプタプールと遠隔初回取得で補う点が異なる。",
-    "implementation_status": "S-LoRAを基盤とした実装をAzure実機クラスタで評価済みで、配置器、確率ルータ、分散位置表、GPUDirect RDMA取得経路まで動作する。基盤サービングカーネルは比較対象と共通に保ち、配置・ルーティング層の効果を比較している。論文本文は採択後にコードとトレースを公開予定と記載するが、2026-09-14時点で一次資料に著者公式コードURLは示されていない。",
-    "research_positioning": "リポジトリではLLMサービングのスケジューリング・分離系統に置く。Multi-LoRA研究のうち、GPU内カーネル効率よりもクラスタ全体の配置・ルーティング・メモリ常駐範囲を主対象とする。アダプタをホストメモリ上の分散オブジェクトとして扱い、需要に応じて複製数と保持場所を変えるため、モデル重み・KVキャッシュの階層配置研究とも共通するシステム課題を持つ。ただし主ボトルネックはKVではなくLoRAランク異質性とアダプタ保存量であり、ネットワーク経由の遠隔取得を配置変更の遅延移動に使う点が特徴である。"
-  },
-  "reservation": {"claim_id":"claim-4d3ef5ca344439ed99771c72","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-b398f5917a1eff0518b4bce7",
+  "job_id": "job-research-59a8ee8393fd93ee",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-b398f5917a1eff0518b4bce7",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
