@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 12:33 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 12:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **87** |
+| 未処理の論文候補（Research ready） | **86** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **302** |
+| 全文精読完了（累計） | **303** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,20 +35,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **87** |
-| 処理中（Active claims） | **3** |
+| 未処理候補（Research ready） | **86** |
+| 処理中（Active claims） | **2** |
 | 今すぐ着手可能（Claimable） | **85** |
-| :30 通常worker Active claims | **1** |
+| :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 12:32 JST** |
 | :00 補助worker 直近claim | **09-14 12:33 JST** |
-| 直近24h Research完了（:30 通常worker） | **18** |
+| 直近24h Research完了（:30 通常worker） | **19** |
 | 直近24h Research完了（:00 補助worker） | **20** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T11:30:00+09:00** |
-| 最新通常runのResearch完了 | **6** |
-| 最古の有効claimの経過時間 | **80 min** |
+| 最新通常runのResearch完了 | **7** |
+| 最古の有効claimの経過時間 | **81 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -64,7 +64,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **38** |
+| Research完了 | **39** |
 | Repo収録 | **56** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -78,7 +78,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 38 → Repo収録 56**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 39 → Repo収録 56**
 
 ## 次に処理する候補
 
@@ -124,6 +124,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2504.09590` — Efficient LLM Serving on Hybrid Real-time and Best-effort Requests
 - `arXiv:2605.27744` — A Policy-Driven Runtime Layer for Agentic LLM Serving
 - `arXiv:2604.09557` — SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding
 - `arXiv:2607.15498` — VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs
@@ -131,7 +132,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2605.06914` — Regulating Branch Parallelism in LLM Serving
 - `arXiv:2604.19351` — DASH-KV: Accelerating Long-Context LLM Inference via Asymmetric KV Cache Hashing
 - `arXiv:2608.15602` — FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy
-- `arXiv:2605.22781` — DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback
 
 ### 7日比較
 

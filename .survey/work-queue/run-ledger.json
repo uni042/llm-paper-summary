@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T03:23:45.772829+00:00",
+  "updated_at": "2026-09-14T03:35:07.724910+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T03:23:45.772829+00:00",
+      "last_recorded_at": "2026-09-14T03:35:07.724910+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 27,
+        "research_completed": 28,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19074,6 +19074,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34803085133:1",
+          "recorded_at": "2026-09-14T03:35:07.724910+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34803085133",
+            "run_attempt": "1",
+            "source_sha": "c6af326a7b6b33a126e8ef51e33243e2da4b7f3b"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19290,6 +19304,14 @@
           "type": "research",
           "canonical_id": "arXiv:2605.27744",
           "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7505ea2231cb7ff0",
+          "type": "research",
+          "canonical_id": "arXiv:2504.09590",
+          "title": "Efficient LLM Serving on Hybrid Real-time and Best-effort Requests",
           "from": "ready",
           "to": "completed"
         }
