@@ -1,15 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-bafa49c4a685291f5311cc0a",
-  "job_id": "job-research-075303825b007242",
   "slot": "positioning",
-  "data": {
-    "limitations": "主な保持評価はA100上の6 GPU Mode課題に集中し、異なるGPU世代へのゼロショット転移や、未知の演算カテゴリに対する一般化は主要結果として検証していない。代理モデル自体もGPUで動かすため、その推論資源とLLMトークン費用を含む総コスト評価が必要である。確率予測は最速候補を取りこぼすことがあり、全探索で基準を上回る保証はない。失敗候補はRL訓練行に使っておらず、コンパイル不能や正当性失敗そのものを代理で精密に予測する設計は中心ではない。",
-    "differences": "従来のCUDA Agent、TTT-Discover、K-Search等は主に次のカーネルをどう生成するかを改善する。本研究は生成器を置き換えるのではなく、候補を実GPUで測る前の評価層へLLMを配置する。解析的な性能モデルやコンパイラコストモデルとも異なり、GPU動作を粗い相対速度分布として言語モデルに推論させ、校正された不確実性で実測との混成を制御する。",
-    "implementation_status": "コードと大規模実測カーネルアーカイブを公開。A100上の実評価時間、実探索ループ、RL設定まで再現詳細があるため、概念実証より一段実装寄り。ただし一般的なコンパイラやPyTorch/Triton自動調整器へ標準統合された状態ではない。",
-    "research_positioning": "自動GPUカーネル生成・探索の系統に対する評価側の補完研究で、測定予算配分、代理支援最適化、選択的予測を結び付ける。LLMをコード生成器ではなく物理GPUの世界モデルとして使う位置付けが新しい。",
-    "relation_to_existing_repository": "kernel-runtime-compilation系統の研究が生成器、探索器、コンパイラ、低層カーネルの高速化を主に扱うのに対し、本研究は探索ループ内の測定律速を削減する。CUDA Master等の自動探索系へ組み合わせれば、同じGPU時間でより多くの候補を事前選別できる可能性があり、GPU時間が希少な研究・CI環境でも有用。",
-    "audit_required": false
+  "attempt_id": "attempt-97e0f0447e2985015ad030ba",
+  "job_id": "job-research-420858d196a868b6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-97e0f0447e2985015ad030ba",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
   }
 }

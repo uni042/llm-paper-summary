@@ -1,50 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-bafa49c4a685291f5311cc0a",
-  "job_id": "job-research-075303825b007242",
   "slot": "results",
-  "data": {
-    "overview": "既製代理ではGemini-3 Flashが速度回収率93.12%、GPT-OSS-120Bが86.85%、GPT-OSS-20Bが82.88%、DeepSeek-V4が79.86%。未学習GPT-OSS-20Bは上位5%だけ実GPU計測して最良速度の77%、上位50%で94%を回収する。GPT-OSS-20BへBrier校正報酬を加えると基礎モデル比で速度回収率+2.06ポイント、ECE -0.106となり、確信度と誤差の単調性も0.22から0.05へ改善する。実探索では候補を4倍生成して上位1/4だけ測る方式が6課題中4課題で基準と同等以上、うち3課題でより高速なカーネルを発見した。",
-    "key_results": [
-      {
-        "metric": "既製LLMの速度回収率",
-        "value": "Gemini-3 Flash 93.12±0.97%、GPT-OSS-120B 86.85±2.51%、GPT-OSS-20B 82.88±3.85%、DeepSeek-V4 79.86±3.98%",
-        "baseline": "全候補実測時の真の最速",
-        "condition": "A100、480 Tritonカーネル、GPU測定上位1〜50%予算の平均",
-        "interpretation": "厳密な速度値を当てなくても、有望候補を測定予算内へ集める順位信号としては強い。"
-      },
-      {
-        "metric": "GPT-OSS-20Bの低予算回収",
-        "value": "上位5%実測で最良速度の77%、上位50%で94%",
-        "baseline": "全候補実測",
-        "condition": "保持候補集合",
-        "interpretation": "GPU実測件数を大きく減らしても候補順位付けで最速近傍へ到達できる。"
-      },
-      {
-        "metric": "Brier校正RL",
-        "value": "速度回収率+2.06ポイント、ECE -0.106、確信度単調性指標0.22→0.05",
-        "baseline": "未学習GPT-OSS-20B",
-        "condition": "同一保持評価",
-        "interpretation": "単なる正解率でなく確率分布全体を校正すると、棄却判断と候補順位の双方が改善する。"
-      },
-      {
-        "metric": "実探索",
-        "value": "6課題中4課題で同等以上、うち3課題で代理あり探索がより高速",
-        "baseline": "全生成候補をGPU測定する同一測定予算探索",
-        "condition": "代理ありは4倍候補生成・上位1/4のみGPU測定",
-        "interpretation": "予測指標だけでなく、同じ実測予算で探索空間を広げる実用上の利得が確認できる。"
-      },
-      {
-        "metric": "評価待ち時間",
-        "value": "Triton実測20.16秒、CUDA実測152.55秒、GPT-OSS-20B代理14.69秒/候補",
-        "baseline": "実GPU評価",
-        "condition": "単一A100",
-        "interpretation": "代理は単発でもTritonより短く、特にCUDAコンパイルに対して大差がある。さらに代理予測は同時実行でき、処理能力差が拡大する。"
-      }
-    ],
-    "negative_results": "正解帯だけのRLは速度回収率を1.29ポイント下げ、確信度単調性も0.22から0.52へ悪化する。CRPS付きRLも速度回収率は約1.05ポイント低下し、Brierだけが主評価で順位を改善した。実探索ではcross-entropyで基準が約5%上、GDN ChunkFwd-hで基準が7%上であり、代理支援が全課題で勝つわけではない。",
-    "interpretation": "カーネル探索のボトルネックを『コード生成』から『真値計測』へ捉え直した点が重要である。代理の価値はGPUを完全に不要にすることではなく、GPUを高価なオラクルとして少数の重要候補へ集中することにある。確信度校正は単なる見栄えの指標ではなく、どこで実測へフォールバックするかを決める運用信号になる。",
-    "quality_impact": "最終採用前の実GPU正当性検証を維持する限り、計算結果の品質を犠牲にする必要はない。ただし代理の誤順位により最良候補を測定対象から落とす探索品質リスクは残り、実際2/6課題では基準が上回った。"
+  "attempt_id": "attempt-97e0f0447e2985015ad030ba",
+  "job_id": "job-research-420858d196a868b6",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-97e0f0447e2985015ad030ba",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0230JST",
+    "worker_kind": "scheduled_chat"
   }
 }

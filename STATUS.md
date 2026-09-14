@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 02:35 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 03:03 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,7 +15,7 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **49** |
+| 未処理の論文候補（Research ready） | **50** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
 | GitHub反映済みResearch完了（job） | **340** |
@@ -30,7 +30,7 @@
 
 ### 要注意
 
-- 現在、集計stateから重大な警告は検出されていません。
+- Research消化が:00 補助workerのDiscovery候補補充を上回っています。candidate枯渇に注意。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -39,26 +39,26 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **Discovery優先** |
-| 処理速度 | **OK** |
-| 未処理候補（Research ready） | **49** |
+| 処理速度 | **LOW** |
+| 未処理候補（Research ready） | **50** |
 | 有効claim（lease） | **1** |
-| 今すぐ着手可能（Claimable） | **50** |
+| 今すぐ着手可能（Claimable） | **51** |
 | 有効leaseを持つworker run | **1** |
-| :30 最新worker run | **—** |
-| :30 最新run由来の有効claim | **0** |
+| :30 最新worker run | **2026-09-15T02:30:00+09:00** |
+| :30 最新run由来の有効claim | **1** |
 | :30 旧run由来の有効claim | **0** |
-| :00 最新worker run | **2026-09-15T02:00:00+09:00** |
-| :00 最新run由来の有効claim | **1** |
+| :00 最新worker run | **—** |
+| :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 02:17 JST** |
-| :00 補助worker 直近lease活動 | **09-15 02:17 JST** |
+| :30 通常worker 直近lease活動 | **09-15 03:03 JST** |
+| :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **40** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
-| 最新通常run | **2026-09-15T01:30:00+09:00** |
-| 最新通常runのResearch完了 | **8** |
-| 最古の有効claimの経過時間 | **17 min** |
+| 最新通常run | **2026-09-15T02:30:00+09:00** |
+| 最新通常runのResearch完了 | **0** |
+| 最古の有効claimの経過時間 | **0 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -67,6 +67,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 高在庫時の通常runは、hard stopに達しない限り **最低3件** のResearch完了を下限目標にします。3件は上限・終了条件ではありません。
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
+
+- **処理速度 LOW**: ready=50 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 
 有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
@@ -78,18 +80,18 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | Research完了 | **66** |
 | Repo収録 | **76** |
 | Audit完了 | **0** |
-| 探索評価候補 | **2** |
-| Research候補採用 | **0** |
+| 探索評価候補 | **4** |
+| Research候補採用 | **1** |
 | 重複除外 | **1** |
-| 重複率 | **50.0%** |
+| 重複率 | **25.0%** |
 | :00 補助worker Discovery run（毎時枠） | **1** |
-| :00 補助worker Discovery round（stats観測） | **1** |
+| :00 補助worker Discovery round（stats観測） | **2** |
 | 通常worker run（ledger観測） | **3** |
-| Fallback archive（全helper） | **10** |
+| Fallback archive（全helper） | **12** |
 
 ### 24時間の流れ
 
-**探索評価 2 → 重複除外後 1 → Research候補採用 0 → Research完了 66 → Repo収録 76**
+**探索評価 4 → 重複除外後 3 → Research候補採用 1 → Research完了 66 → Repo収録 76**
 
 ## 次に処理する候補
 
@@ -111,23 +113,24 @@ Run: **2026-09-15T02:00:00+09:00**
 
 | 指標 | 値 |
 |---|---:|
-| 探索round | **1** |
-| 探索軸 | 要求単位の資源制約適応・KV圧縮ポリシー選択 |
-| 評価候補 | **2** |
+| 探索round | **2** |
+| 探索軸 | 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling |
+| 評価候補 | **4** |
 | 重複除外 | **1** |
-| Novel候補 | **1** |
-| Research候補採用 | **0** |
-| 重複率 | **50.0%** |
+| Novel候補 | **3** |
+| Research候補採用 | **1** |
+| 重複率 | **25.0%** |
 
 ### :00 補助workerのDiscovery効率（直近24時間）
 
 | 探索軸 | 評価 | 重複 | 採用 | 重複率 | 採用率 |
 |---|---:|---:|---:|---:|---:|
+| 異種GPU・multi-agent workflow・shared-GPU runtime scheduling | 2 | 0 | 1 | 0.0% | 50.0% |
 | 要求単位の資源制約適応・KV圧縮ポリシー選択 | 2 | 1 | 0 | 50.0% | 0.0% |
 
 ### 直近5件の:00 補助worker Discovery run
 
-- 2026-09-15T02:00:00+09:00 — 1 round: 評価 2 / 重複 1 / 採用 0 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択
+- 2026-09-15T02:00:00+09:00 — 2 round: 評価 4 / 重複 1 / 採用 1 / 軸 要求単位の資源制約適応・KV圧縮ポリシー選択 / 異種GPU・multi-agent workflow・shared-GPU runtime scheduling
 - 2026-09-13T11:00:00+09:00 — 15 round: 評価 65 / 重複 34 / 採用 8 / 軸 2026年9月新着・KV圧縮と動的管理 / MoE専門家先読み・エッジ投機実行 / 重要系譜の前方・後方引用追跡 / CPU/GPU・NPU/PIM異種実行と階層オフロード / 動的投機的復号serving・agent隣接 / agentic serving・workflow-aware KV管理 / GPU runtime・kernel自動最適化とframework統合 / recent検索から重要基礎系譜への欠落確認 / 収録済み重要論文のforward citation・Llumnix系譜 / FlashInfer-Bench・FlashInfer周辺のbackward referenceと基礎memory management / 2609新着・KVキャッシュ・階層メモリ・ストレージ / 分離サービング・電力制御・KV転送・multi-turn routing / MoE expert locality・expert prefetch・SSD/edge cacheability / CXL/SSD shared KV・tiered storage resource optimization / serving software aging・runtime reliability・lossless compression・load-aware speculative serving
 - 2026-09-13T10:00:00+09:00 — 8 round: 評価 48 / 重複 31 / 採用 12 / 軸 新着LLM推論システム・通信／疎注意／多ターンKV / GPU実行環境・collective通信・prefill/decode共存 / 端末内LLM・OSメモリ圧力・Flash/NPU実行 / KVページ圧縮・低ランク表現・GPUカーネル / 分離サービングSLO・batch fairness・resource allocation / 投機的復号runtime・draft resource・CPU制約 / SSD expert offload・peer GPU cache tier・階層メモリ / 分離サービング通信・KV転送・network flow scheduling
 - 2026-09-13T09:00:00+09:00 — 13 round: 評価 58 / 重複 21 / 採用 16 / 軸 moe-cache-aware-routing-expert-skipping-fine-grained-execution / ssd-kv-cache-heterogeneous-gpu-serving-orchestration / production-autoscaling-disaggregated-serving-runtime / 2026-09新着・KV圧縮・跨文脈再利用 / エージェント型LLM・サービングruntime・生成時特化 / 出力長不確実性・tail-aware scheduling隣接 / 投機的復号・高並列サービング・production評価 / RDMA・分離サービング・KV転送 / multi-tenant runtime制御・適応parallelism・latency attribution / 基礎サービング重要未収録・prefill/decode分離・chunked prefill・multi-tenant LoRA / 基礎推論runtime・PagedAttention/vLLM・SGLang/RadixAttention・SplitFuse / 分離型サービングの負荷偏り・SLO適応 / NVMe重み先読み・疎推論GPUカーネル・fleet資源配置
