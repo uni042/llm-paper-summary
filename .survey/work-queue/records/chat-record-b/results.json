@@ -2,60 +2,77 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-02889913936ed3f48eb80a73",
-  "job_id": "job-research-2d5fb10dc2e0c88e",
+  "attempt_id": "attempt-2e36a0b7326b0f7d7c69871f",
+  "job_id": "job-research-9094fc0c86937469",
   "data": {
-    "overview": "KevlarFlowの主要効果は、ノード故障時にパイプライン全体を停止して要求を残存レプリカへ押し付ける代わりに、健全な段を再利用して一時パイプラインを組み直し、複製済みKVキャッシュから処理途中要求を継続することで、障害直後の待ち行列と再計算を大幅に減らす点にある。3つの故障条件で平均遅延・p99遅延・TTFTを一貫して改善し、復旧時間も従来の約10分という報告値から約30秒へ短縮した。一方、通常時には背景KV複製のため数%程度の追加遅延が生じる。",
+    "overview": "C²KVは、従来の非prefix KV再利用がprefill計算だけを減らし非圧縮KVの保存・転送を残す問題に対し、4倍圧縮した位置非依存KVを直接連結できるよう学習する。LongBenchでは4倍圧縮でも複数モデルで既存reuse方式を上回り、Llama3.1-8BではMuSiQue 0.3587、2WikiMQA 0.4477、SAMSum 0.3904とFull Recomputeに近い、または一部で上回る。圧縮率を16倍まで上げると徐々に品質低下するが破綻は緩やかで、RULERでは4倍圧縮のまま64kまで安定する。速度面では長文脈で最大17倍の推論高速化を報告し、16k〜128kのdecodeでも圧縮KVによりtoken間時間の増加を抑える。",
     "key_results": [
       {
-        "metric": "平均エンドツーエンド遅延",
-        "value": "最大3.1倍改善",
-        "baseline": "TensorRT-LLMの標準障害動作",
-        "condition": "8/16ノードの故障注入3条件、要求率を変化",
-        "interpretation": "故障した1段だけを別レプリカの対応段で置換し、健全GPUを遊休化しないため、故障時の実効処理容量低下を小さくできる。"
+        "metric": "最大推論高速化",
+        "value": "最大17倍",
+        "baseline": "既存方式",
+        "condition": "長文脈の圧縮・非prefix KV reuse",
+        "interpretation": "prefill再計算の削減だけでなく、ロードするKV量とdecode中に走査するKV長の双方を削減した効果を示す。"
       },
       {
-        "metric": "p99エンドツーエンド遅延",
-        "value": "最大2.8倍改善",
-        "baseline": "TensorRT-LLMの標準障害動作",
-        "condition": "16ノードで2ノード故障を含む3条件",
-        "interpretation": "標準方式で発生する再試行と残存パイプラインへの負荷集中を抑えることで、長い待ち時間の裾を縮める。"
+        "metric": "Llama3.1-8B MuSiQue F1",
+        "value": "0.3587",
+        "baseline": "Full Recompute 0.3198、Naive 0.1970、EPIC 0.2498、CacheBlend 0.2720",
+        "condition": "C²KV 4倍圧縮",
+        "interpretation": "4倍に系列を圧縮しても、既存reuseより大きく高い品質を保ちFull Recomputeを上回る。"
       },
       {
-        "metric": "平均TTFT",
-        "value": "最大378.9倍改善",
-        "baseline": "TensorRT-LLMの標準障害動作",
-        "condition": "部分故障条件",
-        "interpretation": "障害後も一時パイプラインが要求を受け続けるため、要求が復旧完了まで待ち行列に滞留する時間を大幅に短縮する。"
+        "metric": "Llama3.1-8B 2WikiMQA F1",
+        "value": "0.4477",
+        "baseline": "Full Recompute 0.4018、EPIC 0.2821、CacheBlend 0.1334",
+        "condition": "C²KV 4倍圧縮",
+        "interpretation": "複数文書の順序・配置が変わるQAで合成可能KVの利点が強く現れる。"
       },
       {
-        "metric": "p99 TTFT",
-        "value": "最大574.6倍改善",
-        "baseline": "TensorRT-LLMの標準障害動作",
-        "condition": "8ノード1故障を含む部分故障条件",
-        "interpretation": "障害直後の要求集中と処理途中要求の全面再試行を回避する効果が、特に末尾遅延へ強く現れる。"
+        "metric": "Qwen3-14B WikiMQA F1",
+        "value": "4倍0.5625、8倍0.5654、16倍0.5679",
+        "baseline": "Full 0.5514、EPIC 0.3826、CacheBlend 0.3955",
+        "condition": "Qwen3-14Bの圧縮率sweep",
+        "interpretation": "モデルを14Bへ拡大しても非prefix連結に強く、圧縮率増加で全taskが単調に崩れるわけではない。"
       },
       {
-        "metric": "障害復旧時間",
-        "value": "場面1で平均35.95秒、場面2で30.04秒、場面3で29.25秒。著者は約10分から約30秒、約20倍短縮と整理",
-        "baseline": "従来LLMサービングの完全再初期化・重み再読込に最大約10分かかるという既報値",
-        "condition": "8ノード1故障、16ノード1故障、16ノード2故障",
-        "interpretation": "代替段を既存レプリカから即座に借りて通信グループを再形成し、完全な新規インスタンス準備を要求処理の重要経路から外すことで復旧を短縮する。"
+        "metric": "Llama3.1-8B 動的圧縮率の未見10倍",
+        "value": "MuSiQue 0.3198、WikiMQA 0.4310、SAMSum 0.3570、MultiNews 0.2357",
+        "baseline": "4/8/16倍だけをsampleして学習",
+        "condition": "Dynamic-ratio modelを10倍で評価",
+        "interpretation": "単一抽出器で配備時のKV予算を変える余地があり、圧縮率ごとの別モデルを必須にしない。"
       },
       {
-        "metric": "通常時の平均/p99遅延オーバーヘッド",
-        "value": "8ノードで平均2.3%/2.8%、16ノードで平均4.0%/3.6%",
-        "baseline": "背景KVキャッシュ複製なしの比較対象",
-        "condition": "故障なし、複数要求率",
-        "interpretation": "KVブロック複製を専用CUDAストリームで計算と重畳するため、常時有効化しても通常時の性能損失は数%に留まる。"
+        "metric": "長文脈retrieval",
+        "value": "4k〜64kで安定",
+        "baseline": "Full model",
+        "condition": "RULER、4倍圧縮、約4kごとの文書segment",
+        "interpretation": "圧縮KVを多数連結する長文脈でも情報保持が急激に悪化しない。"
       }
     ],
-    "negative_results": "通常時オーバーヘッドはゼロではなく、8ノードで平均2.3%、16ノードで平均4.0%の平均遅延増加が観測される。図では非決定性により負のオーバーヘッド値も出るが、著者は実質0%として扱う。さらに、複製KVを保持するGPUメモリ余裕が不足すると複製を破棄して必要時に再計算するため、最も混雑した条件では無中断継続の利点が弱くなる。対応する同一段の健全レプリカが残らない同時故障も設計上の境界条件である。",
-    "interpretation": "改善倍率がTTFTで特に大きいのは、標準障害動作では故障パイプライン停止後に新規要求と再試行要求が少数の残存パイプラインへ集中し、先頭トークン生成までの待ち時間が急増するからである。KevlarFlowは壊れた段だけを差し替え、健全段を継続利用するため処理容量の落ち込みを局所化できる。さらに複製KVにより処理途中要求を先頭からやり直さないので、末尾TTFTの悪化を強く抑える。復旧時間は要求率が増えても約30秒前後で大きく伸びず、通信グループ再形成が要求処理量とは比較的独立していることを示す。ただし最大改善倍率は飽和や故障条件に依存し、通常運用すべてで同じ倍率が得られるわけではない。",
-    "quality_impact": "近似圧縮やモデル変更は行わないため、通常は生成品質を犠牲にして速度を得る方式ではない。KVキャッシュも同じ状態を複製する。メモリ不足で複製を破棄した場合はKV再計算が必要になるが、これは品質低下ではなく遅延増加として現れる。"
+    "negative_results": [
+      {
+        "name": "汎用KV圧縮との単純併用は破綻",
+        "description": "Llama3.1-8B HotpotQAでNaive reuse 0.3973へSnapKV 4倍を重ねると0.0547、CacheBlend 0.2970は0.0532まで低下する。圧縮とreuseを別々に設計するとKVの文脈ずれと情報削減が重なり、単純な組合せでは品質を保てない。"
+      },
+      {
+        "name": "高圧縮では一部taskが低下",
+        "description": "Llama3.1-8Bでは4倍から16倍へ上げるとMuSiQue 0.3587→0.2746、MultiNews 0.2532→0.2234となり、情報量と容量のtrade-offは残る。"
+      },
+      {
+        "name": "document-level offline extractionが前提",
+        "description": "再利用文書を事前に識別し抽出できる設定を主対象とし、ストリーム中に初めて現れる内容のincremental extractionは未対応である。"
+      },
+      {
+        "name": "圧縮率は文書・層で一様",
+        "description": "現在は同じ圧縮率を全対象へ適用するため、重要文書やattention headごとの情報密度に応じた予算配分は行わない。"
+      }
+    ],
+    "interpretation": "主要な示唆は、KV再利用とKV圧縮を逐次適用する二つの独立最適化として扱うと品質が崩れる一方、保存されるKV表現そのものを『後から別文脈へ連結される圧縮部品』として共同学習すれば、計算・容量・転送・decode帯域を同時に削減できることである。ただし最大17倍はoffline extractionを除外した再利用時の値であり、文書のreuse頻度が低い場合には抽出費の償却を別途考える必要がある。",
+    "quality_impact": "4倍圧縮ではLongBenchの多数taskでFull Recomputeへ近い品質を維持し、既存reuse方式より安定する。元モデルは凍結されるためparametric knowledgeの直接的な書換えは避けるが、生成は圧縮表現に依存するためtask別の損失はゼロではない。構造化attention、共同学習、reuse時の位置再配置を外すablationはいずれも性能を落とし、合成可能性を保つ設計要素が必要である。"
   },
   "reservation": {
-    "claim_id": "claim-02889913936ed3f48eb80a73",
+    "claim_id": "claim-2e36a0b7326b0f7d7c69871f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }

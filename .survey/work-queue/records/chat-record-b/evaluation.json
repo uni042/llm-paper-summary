@@ -2,21 +2,38 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-02889913936ed3f48eb80a73",
-  "job_id": "job-research-2d5fb10dc2e0c88e",
+  "attempt_id": "attempt-2e36a0b7326b0f7d7c69871f",
+  "job_id": "job-research-9094fc0c86937469",
   "data": {
-    "hardware": "実機クラウド上の2構成で評価する。8ノード構成と16ノード構成を用い、各ノードはNVIDIA A10 Tensor Core GPU 1基と24GB GDDR6を搭載する。ノード間は1Gbps Ethernetで接続し、InfiniBandなどの専用相互接続は使わない。ノードは米国東部・中部・西部・南部の4地域へ分散し、地理分散ロードバランシング群を模擬する。",
-    "software": "KevlarFlowはTensorRT-LLMのPyTorchバックエンド上へ実装される。動的な通信グループ形成にはMPICHのMPI_Open_port、MPI_Comm_connect、MPI_Intercomm_mergeを使用し、ノード間制御はgRPC、KVキャッシュ複製はNCCL、複製リングの排他制御はPyTorch TCPStoreで実装する。比較対象はTensorRT-LLMを用いた標準的な障害動作である。",
-    "model": "Llama-3.1-8Bを4段のパイプライン並列で提供する。各段を1ノードへ置き、8ノード構成では2つ、16ノード構成では4つのモデルインスタンスをロードバランシング群として動かす。",
-    "datasets": ["ShareGPT由来の要求を使用", "要求到着は複数の要求率に対するポアソン分布で生成"],
-    "baselines": ["TensorRT-LLMの標準障害動作: パイプライン内の1ノードが故障すると当該パイプライン全体を停止し、処理途中の要求を再試行する", "論文中ではDejaVu、AnchorTP、R2CCLなど既存耐障害方式の制約を議論するが、主要な定量比較は標準障害動作との比較"],
-    "correctness": "モデル計算自体を近似する方式ではない。障害がなければ通常のTensorRT-LLM相当の生成を行い、障害時は複製済みKVキャッシュから処理途中の要求を継続する。GPUメモリ圧力が高い場合は複製KVを破棄し、必要時に再計算へ戻るため、品質低下ではなく復旧遅延との交換になる。",
-    "settings": ["8ノード構成では1ノード故障で2本中1本のパイプラインが欠損する条件", "16ノード構成では1ノード故障と2ノード故障の2条件", "要求率を変化させ、平均遅延、p99遅延、平均TTFT、p99 TTFT、TPOT、復旧時間を測定", "通常時の背景KVキャッシュ複製による平均・p99遅延オーバーヘッドも測定"],
-    "methodology": "まず故障のないTensorRT-LLMで8ノード・16ノード構成の飽和点を確認し、8ノードでは要求率3から4、16ノードでは6から7付近で待ち行列が大きくなることを確認する。次に、8ノードで1ノード、16ノードで1ノード、16ノードで2ノードを故障させる3場面を用意し、標準障害動作とKevlarFlowを同じ要求率範囲で比較する。障害後は残存パイプラインへの要求集中、処理途中要求の再試行、通信グループ再形成を含むエンドツーエンド挙動を測定する。復旧時間は代替段の探索、通信グループ再形成、要求処理再開までを測り、通常時オーバーヘッドは背景KV複製を有効化した状態と比較対象との差から求める。",
-    "scope": "評価は実GPUを用いたクラウド実験でありシミュレーションだけではないが、GPUはA10、モデルはLlama-3.1-8B、並列方式は4段パイプライン並列に限定される。1Gbpsの地理分散ネットワークという比較的低帯域な条件を意図的に採用しており、H100とNVLinkのような単一データセンター高帯域構成へ数値をそのまま外挿できない。また、代替段として同じ重みを持つ健全な別レプリカが残ることを前提とし、対応段をすべて同時に失う障害は連続提供の対象外である。"
+    "hardware": "TTFTとdecode時間はGPU上でtorch.cuda.synchronize()を用いて測定するが、公開本文・付録ではGPU型番を明記していない。KVはホストメモリに保存済みとし、要求時のホスト→GPU転送をTTFTへ含める。",
+    "software": "公式実装は公開されている。基盤モデルを凍結し、C²Token埋込みと各層の専用QKV射影のみをBF16で学習する。",
+    "model": "主評価はQwen3-4B-Instruct-2507、Llama-3.1-8B-Instruct、Qwen2.5-7B-Instruct。拡張評価でQwen3-14Bを使用する。",
+    "datasets": [
+      "学習: HotpotQA、2WikiMultiHopQA、LongMagpieから各40k、計120k sample、1 epoch",
+      "評価: LongBenchのHotpotQA、2WikiMQA、MuSiQue、QMSum、Qasper、MultiNews、GovReport、SAMSum等",
+      "長文脈: RULER 4k〜64k",
+      "few-shot: GSM8K"
+    ],
+    "baselines": [
+      "Full KV Recompute",
+      "Naive Full KV Reuse",
+      "EPIC",
+      "CacheBlend",
+      "Block-Attention",
+      "SnapKVとの単純組合せ"
+    ],
+    "correctness": "元文書トークンはC²Tokenへattentionしないため凍結基盤モデル側の隠れ状態を維持する。品質はQAのF1、要約のROUGE-L、RULER retrievalで測り、速度だけでなく圧縮・reuse後の生成品質を比較する。",
+    "settings": [
+      "AdamW、学習率5e-5、warmup 0.06、weight decay 0.1、global batch 32、gradient accumulation 4、BF16。",
+      "通常評価は4倍圧縮を中心とし、固定4/8/16倍と動的4/8/16倍学習を比較する。",
+      "greedy decoding、QA最大32 token、要約最大512 token。",
+      "TTFTは文書KV準備完了までを測り、offline extractionと短いsystem/query prefillは除外する。"
+    ],
+    "methodology": "TTFT-品質評価では、Full Recomputeは文書全体のオンラインprefill、既存reuseはホストから通常KVをロードした上でblending・再計算、C²KVは4倍圧縮KVのロードと位置再割当だけを計時する。decode評価ではprefillを除外して平均token間時間を測り、文脈長16kから128kへ伸ばしたときのKV帯域負荷を比較する。品質評価は複数モデル・LongBench taskでFull Recomputeとreuse方式を比較し、圧縮率sweep、RULER長文脈、Qwen3-14B、SnapKV単純併用、構造化注意や位置再配置のablationを追加する。",
+    "scope": "文書単位で事前に再利用対象を識別しオフライン抽出できる設定を対象とする。TTFTでは抽出費を償却済みとして除外するため、初回しか使われない文書の総費用とは異なる。ハードウェア型番が明示されないため、絶対速度より相対的なTTFT・decode帯域削減と品質維持を中心に解釈する。"
   },
   "reservation": {
-    "claim_id": "claim-02889913936ed3f48eb80a73",
+    "claim_id": "claim-2e36a0b7326b0f7d7c69871f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
