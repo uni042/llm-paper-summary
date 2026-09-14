@@ -4,10 +4,14 @@
   "slot": "evaluation",
   "attempt_id": "attempt-de4b5e639b1855520a8f3a27",
   "job_id": "job-research-d9bb056b1c54e053",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-de4b5e639b1855520a8f3a27",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "主評価は単一ノード8×NVIDIA A100 80GB、NVLink、テンソル並列度8。高負荷時のピークGPUメモリ使用率は約78%。",
+    "software": "SGLangにTAPER受入制御を統合し、radix-tree KVキャッシュを利用。Multiverseフロントエンドで分岐型Map-Process-Reduceワークフローを構成する。",
+    "models": ["Qwen3-32B BF16", "Qwen2.5-72B BF16"],
+    "datasets": ["ShareGPT", "RAG-12K", "Math-220K", "Azure由来到着トレース"],
+    "baselines": ["IRP-Off", "IRP-C2", "IRP-C5", "IRP-Eager", "TAPER"],
+    "methodology": "主実験はQwen3-32Bで、直列ShareGPT要求と分解可能要求を等量混合する。分解可能要求はShareGPT、RAG-12K、Math-220Kから採り、代表設定では分岐可能要求率約50%、平均利用可能分岐数4.1、並列実行可能トークン比58%となる。600分のAzure由来到着トレースを低負荷0〜240分、平均0.23要求/秒、高負荷250〜400分、平均1.27・最大1.54要求/秒、中負荷400〜600分、平均0.60要求/秒に分ける。全要求の目標TPOTを50msとし、生スループット、SLOを満たした要求からのトークンだけを数える有効スループット、SLO達成率、ステップ遅延を測る。TAPERはρ=0.8、線形効用を既定とする。分岐可能要求率20/50/80%、SLO 30/50/100ms、モデルQwen2.5-72Bへの感度評価も行う。品質確認は1000プロンプトの決定論的生成をIRP-Off、Eager、TAPERで比較する。受入計画器のCPU側オーバーヘッドも分位点で測定する。",
+    "scope": "単一8-GPUノード上の推論サービングが対象。複数ノード通信、異機種GPU、枝間依存を持つ推論グラフは対象外。主ワークロードは分岐が独立で最後に縮約可能な要求である。"
+  },
+  "reservation": {"claim_id": "claim-de4b5e639b1855520a8f3a27", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
 }
