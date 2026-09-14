@@ -514,41 +514,41 @@ def process_requests(repo_root: Path, at: Any = None) -> dict[str, int]:
         checkpoint_released += released_now
 
         if request["worker_kind"] == "scheduled_chat" and _worker_has_active_claim(
-    claims,
-    worker_id=request["worker_id"],
-    worker_kind=request["worker_kind"],
-):
-    resumed = []
-    new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
-    for job_id, current in claims.items():
-        if not (
-            current.get("active")
-            and current.get("worker_id") == request["worker_id"]
-            and current.get("worker_kind") == request["worker_kind"]
-            and job_id in by_id
+            claims,
+            worker_id=request["worker_id"],
+            worker_kind=request["worker_kind"],
         ):
-            continue
-        claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
-        claim["expires_at"] = new_expiry
-        claim["heartbeat_at"] = _iso(now)
-        _write(claims_root / f"{job_id}.json", claim)
-        claims[job_id] = dict(claim, active=True, expired=False)
-        resumed.append(_assignment(by_id[job_id], claim))
+            resumed = []
+            new_expiry = _iso(now + dt.timedelta(seconds=request["lease_seconds"]))
+            for job_id, current in claims.items():
+                if not (
+                    current.get("active")
+                    and current.get("worker_id") == request["worker_id"]
+                    and current.get("worker_kind") == request["worker_kind"]
+                    and job_id in by_id
+                ):
+                    continue
+                claim = {key: value for key, value in current.items() if key not in {"active", "expired"}}
+                claim["expires_at"] = new_expiry
+                claim["heartbeat_at"] = _iso(now)
+                _write(claims_root / f"{job_id}.json", claim)
+                claims[job_id] = dict(claim, active=True, expired=False)
+                resumed.append(_assignment(by_id[job_id], claim))
 
-    if resumed:
-        _write(result_path, {
-            "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
-            "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
-            "ok": True, "assignments": resumed, "processed_at": _iso(now),
-            "reason": "resumed active unsubmitted claim",
-            "checkpoint_released": released_now,
-        })
-        assigned_recovered += len(resumed)
-        renewed += len(resumed)
-        processed += 1
-        continue
+            if resumed:
+                _write(result_path, {
+                    "schema_version": 1, "workflow_version": 10, "request_id": request["request_id"],
+                    "worker_id": request["worker_id"], "worker_kind": request["worker_kind"],
+                    "ok": True, "assignments": resumed, "processed_at": _iso(now),
+                    "reason": "resumed active unsubmitted claim",
+                    "checkpoint_released": released_now,
+                })
+                assigned_recovered += len(resumed)
+                renewed += len(resumed)
+                processed += 1
+                continue
 
-checkpointed_ids = set(_checkpoint_map(request))
+        checkpointed_ids = set(_checkpoint_map(request))
         available = []
         for item in jobs:
             job_id = str(item.get("job_id") or "")
