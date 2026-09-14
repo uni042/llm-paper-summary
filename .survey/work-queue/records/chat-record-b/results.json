@@ -4,10 +4,27 @@
   "slot": "results",
   "attempt_id": "attempt-7fc60f3ad8017adc6c35d012",
   "job_id": "job-research-04150be55266345e",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7fc60f3ad8017adc6c35d012",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "Heliumは5種類の基本agent workflowすべてで比較対象を上回り、特にworkflow全体のprefix構造を利用できない方式との差が大きい。KVFlowに対して基本workflowで最大1.56倍、19-agent・88-operatorのTrading workflowで最大1.34倍高速化する。Tradingのablationでは共通部分を消すplan pruningを外すと23.35%、cache-aware schedulingを外すと17.66%、prompt cacheを外すと13.56%、proactive KVを外すと3.55%遅くなる。cacheだけを無効化したscheduler単独比較でもLSPFより1.26倍高速で、prefix hit率56.5%対37.9%。小規模MILP比較では平均optimality gap 0.9%、最大3.6%と理論最適に近い。",
+    "key_results": [
+      {"metric": "基本workflowでの速度向上", "value": "KVFlow比最大1.56倍、LangGraph比最大1.83倍、Parrot比最大2.21倍", "baseline": "各workflow対応system", "condition": "Qwen3-8B/14B、H100 NVL×2、5 primitive workflows", "interpretation": "workflow全体のprefix構造と依存を同時に見た計画が、cache管理だけ、graph実行だけ、オンラインprefix heuristicだけより有効である。"},
+      {"metric": "Trading workflow end-to-end speedup", "value": "KVFlow比最大1.34倍、LangGraph比最大1.49倍、AgentScope比最大1.46倍、Parrot比最大2.51倍", "baseline": "各agent serving system", "condition": "19 agent・88 LLM operator、100銘柄finance dataset", "interpretation": "複数primitive patternを混ぜた複合workflowでも大域的な共通部分削除とcache-aware schedulingの利得が残る。"},
+      {"metric": "plan pruning ablation", "value": "130.14s→160.53s、23.35%悪化", "baseline": "Helium full", "condition": "Trading、Qwen3-8B、batch 16", "interpretation": "同一部分グラフの統合がprefix識別とschedule改善の前提となり、最大の寄与を持つ。"},
+      {"metric": "cache-aware scheduling ablation", "value": "130.14s→153.12s、17.66%悪化", "baseline": "Helium full", "condition": "Trading、Qwen3-8B、batch 16", "interpretation": "cacheを持つだけでは不十分で、依存とprefixを考えた実行順が重要である。"},
+      {"metric": "scheduler単独性能", "value": "LSPF比1.26倍、Random比1.29倍", "baseline": "LSPF / Random", "condition": "proactive KVとprompt cacheを無効化、Trading", "interpretation": "将来workflow構造を含む大域計画はready要求だけを見るonline prefix sortingより高いreuseと並列性を得る。"},
+      {"metric": "scheduler cache hit率", "value": "56.5%", "baseline": "LSPF 37.9%、Random 37.1%", "condition": "cache機構を無効化してschedule順序だけ比較", "interpretation": "実行順だけでprefix KVの残存確率を高められる。"},
+      {"metric": "理論最適scheduleとのgap", "value": "平均0.9%、最大3.6%", "baseline": "MILPによる最適解", "condition": "7つの縮小workflow構成、1 worker、8192-token KV上限、solver最大6時間", "interpretation": "heuristic scheduleが小規模問題でほぼ最適token-step costへ到達する。"},
+      {"metric": "計画overhead", "value": "16 branchでもQO+CAS+TRT合計230ms未満", "baseline": "LLM query processing latency", "condition": "Trading、Qwen3-8B", "interpretation": "CPU側workflow最適化の費用は数十秒〜百秒級のLLM実行に比べ小さい。"},
+      {"metric": "tail latency case study", "value": "p95 51.7s→37.2s、median 28.3s→20.5s", "baseline": "LangGraph", "condition": "Trading batch16、prompt result cache無効化", "interpretation": "prefix localityを保ちながら有効batchを増やすscheduleが混雑とstragglerを減らす。"}
+    ],
+    "negative_results": [
+      {"name": "naive vLLMとの100倍差は公平なsystem比較指標ではない", "description": "vLLM baselineはworkflowをquery-wiseに逐次実行し、agent orchestrationによる並列化を使わないため、最大100.92倍という差はHelium固有cache最適化だけでなく実行model差を含む。強い比較対象としてKVFlowやLangGraphを見る必要がある。"},
+      {"name": "完全オンラインagentには構造先読み前提が合わない", "description": "Heliumはbatch agent workflowのtemplateをcompile時に解析して将来prefixと依存を知る。tool結果で次のbranch自体が動的に生成されるようなworkflowでは、テンプレート付き基数木が事前に共有機会を把握できる範囲が狭くなる。"},
+      {"name": "GPU memory制約でprecomputed KVは追い出される", "description": "proactive cacheを優先保持するが容量不足時にはvLLMのblock evictionへ従い、追い出されたprefixは次batchで再計算する。固定pinだけで無制限にcacheを保持する設計ではない。"},
+      {"name": "prompt result cacheは決定論的演算に限定", "description": "意味保存を優先するため、temperatureを持つ非決定論的LLM outputを以前の結果で置き換えることはしない。再利用できるsubworkflowはworkloadのdeterminismに依存する。"}
+    ],
+    "interpretation": "結果は、agent servingでcache容量だけを増やすよりも『どの共通計算を消すか』『どのprefixを先に作るか』『どの順序ならcacheを残しつつcontinuous batchを大きくできるか』をworkflow全体で共同決定する方が有効であることを示す。Trading ablationではplan pruningとscheduleの寄与がproactive KV単独より大きく、単なるcache techniqueではなくquery optimizationとしての価値が中心である。",
+    "quality_impact": "意味保存を設計条件とし、近似modelやtoken削減で品質を犠牲にしない。決定論的演算の完全output reuseと同一prefix KV reuseだけを行うため、greedy生成条件では最適化前後の計算意味を維持する。"
+  },
+  "reservation": {"claim_id": "claim-7fc60f3ad8017adc6c35d012", "worker_id": "scheduled-chat-llm-survey-20260914T1030JST", "worker_kind": "scheduled_chat"}
 }
