@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"attempt_id":"attempt-a4d623d681056171d179a90a","job_id":"job-research-283313401d33cc78","slot":"evaluation","data":{"hardware":["Tesla Dojo D1を16×16へスケールした計算モデル","二段ロジック3D積層のモデル","UCIe風横方向D2DとUCIe-3D級縦方向リンク"],"software":["テンソル並列・層単位計算/通信・KV転送を含むトレース駆動社内シミュレータ"],"model":["LLaMA3-8B (TP=4)","LLaMA3-70B (TP=8)","OPT-175B (TP=16)"],"datasets":["Azure conversation trace：生成が長いデコード優勢負荷","Azure code trace：入力/KVが長いプリフィル・KV転送優勢負荷"],"baselines":["Naive Planar：KV転送とAllReduceが同じ横方向D2Dを共有","PM-Planar：別仮想チャネル + 静的重み付き帯域予約だが物理リンクは共有"],"correctness":"モデル演算と通信量を変えず、同一モデル・同一負荷・等帯域設定で通信経路だけを比較する。生成品質ではなくアーキテクチャ性能を評価する。","settings":[{"name":"等帯域比較","description":"平面の横リンク、3DLSの横リンク、縦リンクを同じ512 GB/s級として評価し、3Dによる追加生帯域ではなく経路隔離の効果を測る。縦リンクは全二重で各方向256 GB/s。"},{"name":"計算・メモリ設定","description":"ピーク261.12 TFLOPS、メモリ帯域3.35 TB/s。プリフィル:デコードの論理プール比は2:1。"},{"name":"優先度平面","description":"PM-PlanarはKVT:ARの静的予約を25:75、50:50、75:25で探索し、会話負荷は25:75、コード負荷は75:25という各負荷に有利な設定を報告する。"},{"name":"負荷掃引","description":"各モデル・負荷で到着率をスケールし、プリフィルバッチとデコードバッチを掃引する。Naive Planarの遅延・スループットが均衡する代表点を選び、同じ点をPM-Planarと3DLSへ適用する。"},{"name":"競合特性評価","description":"OPT-175B、TP=16、D2D 512 GB/sでKV負荷を(1,1K)から(16,16K)まで変え、出力長128〜1024で累積AllReduce遅延と平均トークン間時間を測る。"}],"methodology":"まず共有平面でKV転送とAllReduce競合の増幅度を定量化し、その後、同じトレース・モデル・帯域条件でNaive Planar、負荷別に最適化したPM-Planar、3DLSを比較する。性能はエンドツーエンド遅延と要求スループットを中心に測り、3DLSの優位が単なる帯域増加や不利な優先度設定によるものではないよう比較条件をそろえる。","scope":"チップレット型PD分離サービングのパッケージ内通信に限定したアーキテクチャ研究。実GPU/実シリコン、NIC/RDMAをまたぐラック間分離、動的オンライン帯域制御、実装コストの詳細回路評価は対象外。","workloads":["会話型長生成","コード型長入力","大KVバッチ・長文脈","TP=4/8/16"],"metrics":["エンドツーエンド遅延","要求スループット","累積AllReduce遅延","デコードのトークン間時間"],"reproducibility":"ハードウェアモデル、帯域、計算性能、TP度、負荷源、比較方法は本文に明記されるが、社内シミュレータの公開コードは確認できないため完全な独立再現性は限定的。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-d3668d57a818e3151a950097",
+  "job_id": "job-research-95786e300fa60d16",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d3668d57a818e3151a950097",
+    "worker_id": "scheduled-chat-llm-discovery",
+    "worker_kind": "scheduled_chat"
+  }
+}

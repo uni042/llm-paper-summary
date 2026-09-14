@@ -1,1 +1,13 @@
-{"schema_version":1,"transport_version":10,"attempt_id":"attempt-a4d623d681056171d179a90a","job_id":"job-research-283313401d33cc78","slot":"results","data":{"overview":"3DLSは共有横方向リンクからKV転送を外すことで、長文・大モデル・高TP度ほど深刻になるKV/AllReduce干渉を抑えた。Naive Planar比では6つのモデル×負荷組合せの幾何平均でエンドツーエンド遅延40.6%削減、スループット1.22倍、最大では60.2%削減と1.49倍を達成した。ワークロードごとに有利な静的帯域予約を選んだPM-Planarに対しても、幾何平均18.2%低遅延・1.11倍スループットであり、共有物理リンク上の優先度制御だけでは残る干渉を物理分離が除くことを示す。","key_results":[{"metric":"競合時累積AllReduce遅延","value":"510 ms → 16.37 s、32.1倍","baseline":"同一条件の競合なし","condition":"OPT-175B、TP=16、KV負荷=(batch 16, context 16K)、出力128、D2D 512 GB/s","interpretation":"KV転送の一時的な混雑が各層の集合通信へ積み重なる。"},{"metric":"デコードのトークン間時間","value":"61.11 ms → 184.92 ms、3.03倍","baseline":"競合なし","condition":"同上、出力128","interpretation":"共有リンク競合が生成トークン間隔へ直接現れる。出力1024でも2.39倍で問題は残る。"},{"metric":"エンドツーエンド遅延","value":"最大60.2%削減、幾何平均40.6%削減","baseline":"Naive Planar","condition":"最大はConversation / OPT-175B。6モデル×負荷組合せ全体で平均","interpretation":"KVとAllReduceの物理経路分離が特に大モデル・デコード優勢条件で効く。"},{"metric":"スループット","value":"最大1.49倍、幾何平均1.22倍","baseline":"Naive Planar","condition":"最大はCode / LLaMA3-8B","interpretation":"KV優勢のコード負荷でも横網を集合通信専用に戻すことで処理率が上がる。"},{"metric":"エンドツーエンド遅延","value":"最大31.4%削減、幾何平均18.2%削減","baseline":"ワークロード最適PM-Planar","condition":"各負荷でKVT:AR予約を有利に選択","interpretation":"論理分離・優先度管理を強くした平面構成よりも物理分離が優位。"},{"metric":"スループット","value":"最大1.17倍、幾何平均1.11倍","baseline":"ワークロード最適PM-Planar","condition":"最大はCode / LLaMA3-70B","interpretation":"静的帯域配分は負荷依存で、共有リンクを残す限り完全には競合を除けない。"},{"metric":"代表遅延","value":"44.99 s / 26.08 s / 17.89 s","baseline":"Naive Planar / PM-Planar / 3DLS","condition":"Conversation / OPT-175B、scale=1、PB=16、DB=64","interpretation":"大規模・デコード優勢条件で物理隔離の差が大きい。"},{"metric":"代表スループット","value":"24.32 / 32.92 / 36.30 req/s","baseline":"Naive Planar / PM-Planar / 3DLS","condition":"Code / LLaMA3-8B、scale=8、PB=1、DB=4","interpretation":"優先度制御でも改善するが、3DLSは同じ帯域でさらに上積みする。"}],"negative_results":"PM-Planarの最適帯域比は会話負荷とコード負荷で逆になり、静的分割を外すとNaive Planarを下回る場合がある。3DLS自身については実シリコン測定がなく、3D積層の熱・面積・接合・歩留まりコストを性能値へ織り込んだ詳細評価はない。上段HBM読出しの追加縦ホップも、プリフィル計算と十分重畳できるというモデル仮定に依存する。","interpretation":"平均帯域を増やすだけでは、遅延に敏感な集合通信とバースト状KV転送が同じキューを共有する問題は残る。3DLSの利得は帯域量ではなく、通信のクリティカル性と方向性に応じて別の物理経路を与えることから生じる。これは分離サービングをソフトウェア資源配置だけでなくパッケージ配線まで共同設計する価値を示す。","quality_impact":"推論の数値内容を変更しないため生成品質への近似劣化はない。"}}
+{
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-d3668d57a818e3151a950097",
+  "job_id": "job-research-95786e300fa60d16",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-d3668d57a818e3151a950097",
+    "worker_id": "scheduled-chat-llm-discovery",
+    "worker_kind": "scheduled_chat"
+  }
+}
