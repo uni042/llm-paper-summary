@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T01:24:17.110084+00:00",
+  "updated_at": "2026-09-14T01:28:02.591284+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,13 +18680,13 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T01:24:17.110084+00:00",
+      "last_recorded_at": "2026-09-14T01:28:02.591284+00:00",
       "signals": [
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 2,
+        "research_completed": 3,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18736,6 +18736,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34795990053:1",
+          "recorded_at": "2026-09-14T01:28:02.591284+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34795990053",
+            "run_attempt": "1",
+            "source_sha": "9bca8d2800c1836226fc926adc4529edb031ad22"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18752,6 +18766,14 @@
           "type": "research",
           "canonical_id": "arXiv:2603.10342",
           "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-0d6791ec792101b0",
+          "type": "research",
+          "canonical_id": "arXiv:2511.22880",
+          "title": "Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems",
           "from": "ready",
           "to": "completed"
         }
