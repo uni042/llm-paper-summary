@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.18071",
+      "title": "KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.18071",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2605.18071-kvdrive-multi-tier-kv-cache-management.md",
+      "priority": 95,
+      "reason": "長文脈でGPU HBM・host DRAM・SSDの3階層にまたがるKVを、単なる高sparsity化ではなくplacement・pipeline scheduling・cross-tier coordinationのsystems問題として共同最適化する。attention behaviorに応じて再利用を最大化し不要転送を減らし、I/OとCPU/GPU compute stageを重畳するdecode pipeline、tier間data movementの協調でGPU/DRAM限界を超える容量を扱う。実装済みprototypeを長文脈benchmarkで評価し、accuracyを維持したまま既存手法比throughput最大1.74倍を報告する。HBM/DRAM/SSDの階層KVとI/O schedulingを正面から扱うため重点テーマに極めて近い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-kvdrive-14",
+    "axis": "HBM/DRAM/SSD multi-tier KV placement・pipeline・cross-tier coordination",
+    "query_summary": "SSD-backed KVの近接研究を追加探索し、KVDrive（2605.18071）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はrecent 2026 serving scheduling、speculative decoding systems、またはGPU-direct/CXL/SSDに跨るデータ配置研究へ探索軸を広げる。",
+    "empty_round_reason": null
+  }
+}
