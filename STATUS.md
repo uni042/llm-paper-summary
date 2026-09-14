@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **62** |
+| 未処理の論文候補（Research ready） | **61** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **327** |
+| 全文精読完了（累計） | **328** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -34,20 +34,20 @@
 |---|---:|
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
-| 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **62** |
+| 処理速度 | **OK** |
+| 未処理候補（Research ready） | **61** |
 | 処理中（Active claims） | **3** |
-| 今すぐ着手可能（Claimable） | **60** |
+| 今すぐ着手可能（Claimable） | **59** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 15:03 JST** |
 | :00 補助worker 直近claim | **09-14 15:02 JST** |
-| 直近24h Research完了（:30 通常worker） | **30** |
+| 直近24h Research完了（:30 通常worker） | **31** |
 | 直近24h Research完了（:00 補助worker） | **27** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T14:30:00+09:00** |
-| 最新通常runのResearch完了 | **1** |
+| 最新通常runのResearch完了 | **2** |
 | 最古の有効claimの経過時間 | **14 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
@@ -58,14 +58,13 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=62 の高在庫状態で、最新通常runのResearch完了は 1 件です。DiscoveryよりResearch消化を優先します。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **57** |
+| Research完了 | **58** |
 | Repo収録 | **50** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -79,7 +78,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 57 → Repo収録 50**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 58 → Repo収録 50**
 
 ## 次に処理する候補
 
@@ -125,6 +124,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2606.23969` — The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing
 - `arXiv:2602.11808` — Deep Kernel Fusion for Transformers
 - `arXiv:2606.09613` — AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving
 - `arXiv:2606.15555` — Service-Induced Congestion in Memory-Constrained LLM Serving
@@ -132,7 +132,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2607.01617` — 3DLS: A 3D Logic-Stacked Architecture for Disaggregated LLM Serving
 - `arXiv:2505.12658` — HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving
 - `arXiv:2505.17052` — SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs
-- `arXiv:2509.23384` — A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving
 
 ### 7日比較
 
