@@ -4,10 +4,11 @@
   "slot": "positioning",
   "attempt_id": "attempt-7381d916bdd79b3e46aeb209",
   "job_id": "job-research-b85568c75bac4939",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-7381d916bdd79b3e46aeb209",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主要な回収率測定は約950行の参照試作を観測モードで動かし、命中候補を数えるだけで実KVを差し替えない。そのため差分回転をFlashMLAへ融合した状態の実エンドツーエンドTTFTは未測定である。既定方式は入力組立て側が共有領域へ64トークンの境界マーカーを挿入できることを前提とし、制御できない入力では補助的な固定窓探索が必要になる。品質面の安全性主張はMLAが中心で、MHAは注意シンク構造が異なり同じ先頭切出しでは保証されない。DeepSeek-V4のHCAのように複数トークンを集約する表現ではトークン単位内容ハッシュが成立せず、そのまま適用できない。NVMLエネルギー測定は短いプリフィルが積分窓より短い場合に0 J標本が発生する計器床を持ち、非ゼロ標本平均で補正している。",
+    "differences": "CacheBlend、EPIC、MEPIC、KV Packetなどの既存位置非依存KV方式は主にGQAを対象とし、絶対位置が変わったK全体の補正や境界再計算を必要とする。IrminsulはMLAの表現自体が位置非依存cKVと小さいRoPE部分krへ分離されている点を利用し、KV行の89%は補正なし、11%だけを64次元差分回転する。EPICのように各チャンク境界を再計算する代わりに、MLAで注意シンクが系列先頭に局在する測定結果から絶対位置0〜31だけを通常計算する。SGLangの完全一致接頭辞も残し、接頭辞が弱い早期位置ずれだけを内容アドレス型キャッシュで補完するため、既存方式との競合ではなく二段階構成である。",
+    "implementation_status": "SGLang RadixCacheへ差し込む約950行の参照試作があり、内容定義チャンク、内容ハッシュレジストリ、観測モード、共有cKVと要求別krを分けるメモリ配置を実装している。参照版はkr回転をPyTorchのgather・rotate・scatterで実体化するため、実運用遅延の評価には不向きである。著者が想定する実運用版はFlashMLAのHBM→SRAM読込みへ回転を融合し、追加HBM転送なしでkrを補正するが、この融合カーネルは論文時点でサービング経路へ統合済みではない。一次資料から著者公式の公開コードURLは確認できなかった。",
+    "research_positioning": "エージェント推論で同一内容が位置だけ変えて再出現する問題を、キャッシュ索引だけでなくモデルのKV表現構造まで踏み込んで解く研究である。位置非依存キャッシュとMLAサービングの交点にあり、既存の接頭辞キャッシュ、KV圧縮、PagedAttention系メモリ管理と補完関係を持つ。特にHBM容量の観点では、位置移動した同一内容の512次元cKVをセッションごとに複製せず、64次元の位置部分だけを個別保持するため、計算再利用と物理メモリ重複排除を同じ内容ハッシュで実現する。将来の階層メモリ系では、内容同一性で重複を畳んだ後に残るKVだけをCPUやSSDへ階層化する設計と組み合わせられる。"
+  },
+  "reservation": {"claim_id": "claim-7381d916bdd79b3e46aeb209", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
