@@ -4,10 +4,22 @@
   "slot": "results",
   "attempt_id": "attempt-2b99612d9dbe653a70b0ba5a",
   "job_id": "job-research-28c86979d5f2a372",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2b99612d9dbe653a70b0ba5a",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "単純な線形コストモデルでも実vLLMのGPU時間を平均6%、最大12%の誤差で再現し、実装前に性能上限とボトルネックを絞り込めた。高いKV競合ではプリエンプションを避けるより短い要求をあえてプリエンプトする方が速く、極小KV容量ではvLLM最大1.9倍、Sarathi最大2倍の遅延改善を示した。理論解析から導いたSRFを実システムへ適用すると、vLLMでSRF最大8%、SRF+Hist最大15%、Llama-3-70Bでは最大13%、SGLangでは最大17%、Dynamoでは本番トレースで最大20%改善し、NRF比の性能退行や公平性喪失は観測されなかった。",
+    "key_results": [
+      {"metric": "シミュレーション精度", "value": "平均6%、最大12%相対誤差", "baseline": "vLLM実GPU時間", "condition": "Llama-2-7B、A100/H100", "interpretation": "約4 GPU時間の較正で、開発探索に十分な精度の単純モデルを得られる。"},
+      {"metric": "小KV容量でのプリエンプション効果", "value": "遅延最大1.9倍/2.0倍改善", "baseline": "preemption-free vLLM / Sarathi", "condition": "M=100、高競合", "interpretation": "容量不足時にプリエンプションを完全回避すると開始待ちが長くなり、かえって総遅延が悪化する。"},
+      {"metric": "制約充足問題の最適解", "value": "短い入力で最大17%改善、長い入力では回避で最大40%改善", "baseline": "preemption-free / preemptive schedules", "condition": "4 requests、O=4、Iを変化", "interpretation": "短要求と長要求で最適なプリエンプション判断が反転することを理論例で示す。"},
+      {"metric": "SRF / SRF+Hist in vLLM", "value": "最大8% / 15%遅延改善", "baseline": "NRF", "condition": "Llama-3-8B、A100、オンライン負荷", "interpretation": "数行の置換規則変更だけで本番型負荷のGPU時間を削減できる。"},
+      {"metric": "Llama-3-70B vLLM", "value": "最大13%改善", "baseline": "NRF", "condition": "4×A100", "interpretation": "大モデルで競合が強まるとSRFの利点が維持・拡大する。"},
+      {"metric": "H100上の70B", "value": "SRF 6%、SRF+Hist 11%改善", "baseline": "NRF", "condition": "4×H100", "interpretation": "高帯域化で競合は緩和するが70Bでは依然KV容量・プリエンプション方針が効く。"},
+      {"metric": "SGLang prefix-sharing", "value": "8B: 12%/16%、70B: 14%/17%改善（A100/H100）", "baseline": "NRF", "condition": "SelfConsistency", "interpretation": "prefix木のleaf置換にも長さ順SRFを適用できる。"},
+      {"metric": "Dynamo disaggregated serving", "value": "Reason2 7%、Chat15 20%改善", "baseline": "NRF", "condition": "2 prefill + 2 decode A100、LMCache DRAM offload", "interpretation": "prefill/decode分離やKVオフロードを変えず、decode側の置換規則だけでも改善する。"},
+      {"metric": "シミュレーション上の無限KV容量上限", "value": "最大40%遅延削減", "baseline": "現行KV容量", "condition": "vLLMオンライン評価", "interpretation": "置換方針改善後にも容量側の残存余地があるが、帯域との相対的重要度はモデル規模で変わる。"}
+    ],
+    "negative_results": "SRFは競合が弱い条件ではNRFとの差が小さい。A100からH100へ移すとLlama-3-8Bでは帯域増加で競合がほぼ解消し、SRFの改善もほぼ消える。無限KV容量も万能ではなく、大きなバッチを作り過ぎて個別要求の完了を遅らせる場合がある。DRAMからのKV swap-inは一般にはPCIe帯域が低いため再計算より不利で、優位になるのはKV数が100未満程度の小領域や将来の高速接続などに限られる。",
+    "interpretation": "KV不足時の最適判断は『プリエンプションを減らす』ではなく、失う進捗と再充填費を要求ごとに比較する必要がある。保持KVが短い要求は再処理費が小さく、先に1トークン進める価値が相対的に高いので、SRFは到着時刻だけを見るNRFよりGPU時間を有効に使える。また簡易シミュレーションで容量・帯域・方針の上限を先に推定すれば、効果の薄い機構を実GPU上で長時間試作する開発コストも削減できる。",
+    "quality_impact": "モデル計算やサンプリングを変更しないため生成品質への直接影響はない。SRFはFCFSの要求開始順を維持しつつプリエンプト対象だけを変更し、論文では早着要求を先に完了する公平性も維持すると報告する。"
+  },
+  "reservation": {"claim_id": "claim-2b99612d9dbe653a70b0ba5a", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
 }
