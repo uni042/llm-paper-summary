@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-aea2518d56a64d77be03e327",
+  "attempt_id": "attempt-a849c42583b8c4dd60873e8a",
   "job_id": "job-research-2d5fb10dc2e0c88e",
   "slot": "positioning",
   "data": {
@@ -12,5 +12,10 @@
     "relation_to_existing_repository": "既収録のR²CCLのような通信耐障害化、AnchorTPの弾力的並列化、DéjàVu/SpotServe系のKV状態保存と近接するが、対象故障と復旧単位が異なるため補完的である。通常のvLLM/SGLangスケジューリングやプリフィル・デコード分離は平常時効率を扱うのに対し、KevlarFlowは障害で失われる容量と状態を扱う。今後は、動的再構成とKV階層配置・オフロード、故障予測、NICレベルフェイルオーバを組み合わせた多層耐障害配信との比較軸になる。",
     "audit_required": true,
     "audit_reason": "論文PDFはICML 2026様式だが採択状態を一次資料から確認できず、KevlarFlow固有コードの公開URLも確認できない。最大TTFT改善は故障時の待ち行列効果に強く依存するため、出版状態・コード公開・比較条件を正式監査したい。"
+  },
+  "reservation": {
+    "claim_id": "claim-a849c42583b8c4dd60873e8a",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "worker_kind": "scheduled_chat"
   }
 }

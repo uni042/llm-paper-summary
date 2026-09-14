@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-aea2518d56a64d77be03e327",
+  "attempt_id": "attempt-a849c42583b8c4dd60873e8a",
   "job_id": "job-research-2d5fb10dc2e0c88e",
   "slot": "problem_method",
   "data": {
@@ -27,5 +27,10 @@
       }
     ],
     "system_design": "TensorRT-LLM PyTorch backendにOpenAI互換エンドポイントを持たせ、各ノードにgRPC RPC endpointを置く。制御面はMPICHで動的に通信器を再構成し、データ面のKV複製はNCCLを使う。複製はリング状で、NCCL send/recvの制約によるデッドロックを避けるためTCPStore分散ロックを置く。ロードバランサは複数モデルインスタンスを一つの耐障害プールとして扱い、故障段の代替候補と複製KVの位置に基づいて要求を再経路化する。"
+  },
+  "reservation": {
+    "claim_id": "claim-a849c42583b8c4dd60873e8a",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
+    "worker_kind": "scheduled_chat"
   }
 }
