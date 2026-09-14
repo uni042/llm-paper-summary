@@ -2,14 +2,14 @@
 """Refine STATUS.md so durable queue state is not mistaken for live process state.
 
 The base dashboard and throughput renderer intentionally remain the owners of
-routing/throughput policy.  This final pass only clarifies two observability
+routing/throughput policy. This final pass only clarifies two observability
 boundaries:
 
 * a valid claim lease is not the same thing as a live Scheduled Chat process;
 * a Research job can have a durable worker checkpoint before GitHub terminal
   state has caught up.
 
-All values are derived from repository-persisted state.  ChatGPT Library is not
+All values are derived from repository-persisted state. ChatGPT Library is not
 queried by this script; Library checkpoints are counted only after a worker has
 recorded their checkpoint_ref in durable claim-request/claim state.
 """
@@ -18,7 +18,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -268,13 +267,16 @@ def _replace_progress(text: str, progress: dict[str, int]) -> str:
     except ValueError:
         warning_index = -1
     if warning_index >= 0:
+        while warning_index > 0 and not lines[warning_index - 1].strip():
+            del lines[warning_index - 1]
+            warning_index -= 1
         note = (
             f"{COUNT_NOTE_PREFIX} 「GitHub反映済み」はResearch jobのterminal state、"
             "「耐久checkpoint済み・GitHub未反映」はworkerがcheckpoint_refをGitHubへ記録済みだが"
             "terminal stateが未反映のjobです。「精読済みユニーク論文（推定）」は両者を"
             "canonical IDで重複排除して数えます。"
         )
-        lines[warning_index:warning_index] = [note, ""]
+        lines[warning_index:warning_index] = ["", note, ""]
     return "\n".join(lines)
 
 
