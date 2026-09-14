@@ -4,7 +4,49 @@
   "slot": "results",
   "attempt_id": "attempt-5d8552722433f879a0d0bd7b",
   "job_id": "job-research-e3455f9cc66c1448",
-  "data": {},
+  "data": {
+    "overview": "FineServeは混合精度モデルのGPU共有において、SLO scale 20・request rate scale 8の条件でPrism*よりTTFT SLO attainmentを2.2倍、Static*より1.2倍高め、decode token generation throughputをPrism*より1.8倍、Static*より1.5倍高める。request rateを2倍から8倍へ増やしてもFineServeは高いSLO達成率を維持し、8倍負荷で約2.3K tokens/sまで伸びる。8〜16 GPUのmulti-node評価ではFineServeのSLO attainment最低値が96.9%で、Static*は80.1%からGPU増加に伴って改善する一方、Prism*はAWQとのco-locationでmemory usageを過小評価してSLOが低下する。scheduler ablationではglobal placementだけで8倍負荷時のaggregate throughputをPrism*比最大3倍へ高め、local adaptive batchingはFCFS比最大45.34%、Prism*比最大8.87%高いSLO attainmentを示す。",
+    "key_results": [
+      {
+        "metric": "TTFT SLO達成率",
+        "value": "Prism*比2.2倍、Static*比1.2倍",
+        "baseline": "Prism* / Static*",
+        "condition": "SLO scale 20、request rate scale 8のend-to-end mixed-precision serving",
+        "interpretation": "精度ごとの基礎memory footprintと限界メモリ効率を反映する配置により、AWQなどKV容量要求の大きいモデルとの誤ったco-locationを避け、局所schedulerがchunked prefillを含むbatch全体のTTFTを見て期限違反を抑える。"
+      },
+      {
+        "metric": "decode token generation throughput",
+        "value": "Prism*比1.8倍、Static*比1.5倍、8倍負荷で約2.3K tokens/s",
+        "baseline": "Prism* / Static*",
+        "condition": "SLO scale 20を固定しrequest rate scaleを最大8倍へ増加",
+        "interpretation": "静的partitionの遊休KVをモデル間で融通し、残余KV容量を追加token生成効率の高いprecision/modelへ寄せることで、高負荷でもGPU memoryがthroughputへ変換される。"
+      },
+      {
+        "metric": "multi-node SLO達成率",
+        "value": "8〜16 GPUで最低96.9%",
+        "baseline": "Static*は80.1%から増加、Prism*は同等水準へ到達せず",
+        "condition": "2台のAWS p5.48xlarge、GPU数を8から16へ2基ずつ増加",
+        "interpretation": "precision-aware placementがGPU追加時にも安定してmemory pressureを配分し、論文ではPrism*が2倍のGPUを用いてもFineServeのSLO水準へ届かない例からGPU必要数を半減し得る可能性を示す。ただしこれは評価条件内のpotential savingであり一般的な50% cost reduction保証ではない。"
+      },
+      {
+        "metric": "global scheduler aggregate throughput",
+        "value": "Prism*比最大3倍",
+        "baseline": "Prism* model placement",
+        "condition": "static KV partitionとFCFS local schedulerを共通化、request rate scale 8",
+        "interpretation": "大きい基礎memory footprintを先に置き、残余KV容量と平均限界メモリ効率でco-locationを選ぶことで、後からmemory-intensive modelが無理な共有へ押し込まれることを防ぐ。"
+      },
+      {
+        "metric": "local scheduler SLO達成率",
+        "value": "FCFS比最大45.34%、Prism*比最大8.87%改善",
+        "baseline": "FCFS / Prism* local scheduling",
+        "condition": "単一Llama3.1-8B FP16、static KV、request rate scale 1.66倍と2.0倍、FCFS P90 TTFTをSLO baselineに利用",
+        "interpretation": "個別requestの処理時間ではなくchunked-prefill batch全体の予測時間で最早deadlineを検査し、長いrequestを除いてbatchを再構成するため、大batch化によるSLO違反を抑えながらchunked prefillを利用できる。"
+      }
+    ],
+    "negative_results": "FineServeはTTFTを主SLOとし、TPOTや出力長依存のend-to-end latencyを直接保証しない。global schedulerは事前profileした平均activation/KV footprintと要求率に依存するため、モデル特性や長期負荷が急変した場合にはplacement再計算が必要になる。評価のPrism*はoriginal kvcachedではなくFineServeのKV slabを共通利用しており、VMM overheadを含むPrism実装全体との直接比較ではない。またGPU cost半減は、Prism*が評価例で2倍GPUでも同等SLOへ届かなかったことから導く可能性の議論で、全workloadに成立する測定済みcost reductionではない。",
+    "interpretation": "FineServeの効果は、量子化を単なるモデル縮小として扱わず、precisionによって1GBのKV memoryが生成可能tokenへ変換される効率も変わると捉えた点にある。KV slabはこの異種モデル間でmemoryを動的に貸し借りできる土台を作り、global schedulerはその貸し出し先をμで選び、local schedulerは実際の短期負荷とdeadlineに合わせてcompute側batch sizeを調整する。memory managerだけではco-locationの組み合わせが悪い場合にthroughputを落とし、schedulerだけではstatic poolに残った遊休memoryを使えないため、両者の共同設計がend-to-end改善につながる。",
+    "quality_impact": "FineServeはFP16、FP8、AWQ、QoQなど既存precision variantをそのままserveし、model output qualityを変える追加近似は行わない。論文が述べる量子化に伴うaccuracy-throughput tradeoffは元のPTQ方式に由来し、FineServeはそのprecision差をresource managementへ利用する。"
+  },
   "reservation": {
     "claim_id": "claim-5d8552722433f879a0d0bd7b",
     "worker_id": "scheduled-chat-discovery-specialist",
