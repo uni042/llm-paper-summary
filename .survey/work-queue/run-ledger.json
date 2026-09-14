@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T18:18:47.159132+00:00",
+  "updated_at": "2026-09-14T18:19:35.759275+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T18:18:47.159132+00:00",
+      "last_recorded_at": "2026-09-14T18:19:35.759275+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18698,20 +18698,6 @@
         "fallback_archived": 11
       },
       "events": [
-        {
-          "event_id": "34800015132:1",
-          "recorded_at": "2026-09-14T02:41:05.316984+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34800015132",
-            "run_attempt": "1",
-            "source_sha": "8c8caa32b429ef92d26c172b078d7e27863d186c"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34800058827:1",
           "recorded_at": "2026-09-14T02:41:46.637998+00:00",
@@ -19597,6 +19583,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34880086264:1",
+          "recorded_at": "2026-09-14T18:19:35.759275+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34880086264",
+            "run_attempt": "1",
+            "source_sha": "d7a2ae216bb87fcd882e5dd5a762fe0222ef60cb"
+          },
+          "signals": [
+            "job_blocked"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20321,7 +20321,7 @@
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 531,
-      "last_successful_action": "research_completed"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

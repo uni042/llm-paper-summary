@@ -8,15 +8,15 @@
   "source_url": "https://arxiv.org/abs/2609.10861",
   "paper_path": "papers/inference/02-hardware-accelerators/2026-2609.10861-reach-controller-managed-hbm-ecc-ai-inference.md",
   "selection_reason": "LLMデコードの読み出し偏重特性を利用して、HBM向け長スパン誤り訂正をメモリコントローラ側で効率化する。性能だけでなくHBM帯域・面積・電力・信頼性を同時に扱うため、階層メモリや推論基盤をハードウェア信頼性側から補完する研究価値がある。",
-  "status": "ready",
+  "status": "blocked",
   "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T10:12:06+00:00",
   "artifact_transport": "structured_record_v10",
-  "blocker": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The current arXiv abstract/search index is accessible and confirms identity plus abstract-level metrics, but direct arXiv HTML/PDF fetches still fail, so the 53-page current manuscript could not be read end-to-end. Retrieval attempted again: https://arxiv.org/abs/2609.10861, https://arxiv.org/html/2609.10861, https://arxiv.org/pdf/2609.10861 and https://arxiv.org/pdf/2609.10861.pdf. The older related arXiv:2512.18152 reports materially different figures and is not substituted. Per workflow v10, do not infer a five-slot record from abstract/search snippets; retry when the current primary full text is retrievable.",
-  "status_submission": ".survey/work-queue/submissions/research/attempt-c9837530bb80894fb2988e08.json",
+  "blocker": "Primary-source full-text retrieval remains unavailable for current arXiv:2609.10861v1 in this execution. The arXiv abstract/search result is accessible and confirms the current identity and abstract-level metrics, but direct current-version arXiv HTML fetch returned a cache-miss error and no full 53-page manuscript was retrievable. Retrieval retried at https://arxiv.org/abs/2609.10861 and https://arxiv.org/html/2609.10861. The older related arXiv:2512.18152 reports materially different results and is not substituted. Per workflow v10, no five-slot record is inferred from abstract/search snippets; retry when the current primary full text is retrievable.",
+  "status_submission": ".survey/work-queue/submissions/research/attempt-cca7e7bbfc9f8b8d085149eb.json",
   "blocked_attempts": 2,
   "last_recorded_blocked_event": "2026-09-14T15:15:28+00:00",
   "block_history": [
@@ -32,5 +32,6 @@
     }
   ],
   "last_blocked_at": "2026-09-14T15:15:28+00:00",
-  "retry_queued_at": "2026-09-14T16:51:37+00:00"
+  "retry_queued_at": "2026-09-14T16:51:37+00:00",
+  "completed_at": "2026-09-14T18:19:32+00:00"
 }
