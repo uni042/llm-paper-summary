@@ -17,8 +17,8 @@
   },
   "claiming": {
     "ready_research_audit": 111,
-    "actively_claimed": 4,
-    "claimable": 107
+    "actively_claimed": 5,
+    "claimable": 106
   },
   "next_jobs": [
     {
@@ -106,14 +106,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
     {
-      "job_id": "job-research-3d2c01823fde74e9",
+      "job_id": "job-research-73651b83b5a764d9",
       "type": "research",
       "lane": null,
       "priority": 85,
-      "canonical_id": "arXiv:2606.13740",
-      "title": "Efficient On-Device Diffusion LLM Inference with Mobile NPU",
-      "source_url": "https://arxiv.org/abs/2606.13740",
-      "paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2606.13740-llada-cpp-mobile-npu-diffusion-llm-inference.md",
+      "canonical_id": "arXiv:2608.23843",
+      "title": "PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2608.23843",
+      "paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing."
     },
@@ -130,5 +130,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-09-14T01:28:32+00:00"
+  "generated_at": "2026-09-14T01:30:12+00:00"
 }
