@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T15:48:23.837262+00:00",
+  "updated_at": "2026-09-14T15:53:20.686464+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T15:48:23.837262+00:00",
+      "last_recorded_at": "2026-09-14T15:53:20.686464+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18688,7 +18688,7 @@
         "job_blocked"
       ],
       "counts": {
-        "research_completed": 54,
+        "research_completed": 55,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
@@ -19495,6 +19495,20 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34865078123:1",
+          "recorded_at": "2026-09-14T15:53:20.686464+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34865078123",
+            "run_attempt": "1",
+            "source_sha": "3d9c942eb1783ab72a733b1fd4c4ff5f909fce4e"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19937,6 +19951,14 @@
           "title": "Multi-Turn LLM Conversations under the Least-Recently-Used Policy: Mean-Field Asymptotics and Hit Ratio Approximation",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-77309d3073fb22e0",
+          "type": "research",
+          "canonical_id": "arXiv:2608.02244",
+          "title": "Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling",
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20012,7 +20034,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
       "paper_active_count_after": 518,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "research_completed"
     }
   ]
 }
