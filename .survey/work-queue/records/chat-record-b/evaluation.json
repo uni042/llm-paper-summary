@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-3a1a76f02fc138068798003d",
-  "job_id": "job-research-f0ab820b8a884812",
-  "data": {
-    "hardware": "Huawei Ascend 910B NPU、各64GB HBM。",
-    "software": "Mistral-7B-Instruct-v0.3をvLLM+LMCache上で実行し、MEPIC、CacheBlend、EPICを同じスケジューリング・バッチ・実行条件で実装する。CacheBlendは15%再計算、EPICは各チャンク16トークン再計算に設定する。",
-    "methodology": "SQuAD、NewsQA、NarrativeQA、emrQAから各300要求を構成し、段落を再利用可能な意味チャンクとして扱う。平均要求長は1435〜2224トークン、再利用率はNewsQA 61.4%、SQuAD 84.9%、NarrativeQA 93.9%、emrQA 98.2%。通常比較ではエンドツーエンド遅延、KVだけのピークHBM使用率、F1またはRouge-Lを測る。負荷試験ではQPS 2〜25で200要求、長文脈試験ではQPS 15、2〜16チャンクへ合成拡張した200要求を評価する。",
-    "scope": "実機NPU上のシステム評価であり、HBM値はモデル重み・活性値・最適化器状態を除いたKVキャッシュ使用量である。品質・遅延・メモリを同一基盤の比較対象と測っている一方、モデルはMistral-7B-Instruct-v0.3の1種類、アクセラレータもAscend 910Bの1種類に限られる。長文脈スケーリングは意味内容を固定した実データではなく合成的にチャンク数を増やした評価である。",
-    "workloads": ["SQuAD 300要求", "NewsQA 300要求", "NarrativeQA 300要求", "emrQA 300要求", "QPS 2〜25の200要求負荷試験", "2〜16チャンクの合成長文脈200要求"],
-    "baselines": ["CacheBlend（15%再計算）", "EPIC（16トークン再計算）"],
-    "metrics": ["要求投入から最終生成トークンまでのエンドツーエンド遅延", "KVキャッシュのピークHBM使用率", "平均HBM使用量", "SQuAD/NewsQA/emrQA F1", "NarrativeQA Rouge-L"],
-    "reproducibility": "モデル、NPU型番とHBM容量、データセット、要求数、再利用率、比較設定、QPS、長文脈チャンク数は本文に明示される。基盤は公開vLLMとLMCacheだが、MEPIC本体の著者コードURLや詳細バージョンは本文から確認できず、完全な再現には実装差分が必要である。"
+  "attempt_id": "attempt-8a33a3b216cec7e1341f57c2",
+  "job_id": "job-research-6cb2a2d661fb6b3a",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-8a33a3b216cec7e1341f57c2",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
   }
 }
