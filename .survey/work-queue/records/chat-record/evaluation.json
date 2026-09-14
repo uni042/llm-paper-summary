@@ -2,23 +2,53 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-4f044b0c64aaf3bf8cc393e6",
+  "attempt_id": "attempt-d2d80a73c2ad0868ec6ffcf5",
   "job_id": "job-research-60c04e3a8b0d8caf",
   "data": {
     "hardware": "主要実験はApple MacBook Pro M4 Pro（MX2E3LL/A、24GB統合LPDDR5X、273GB/s）1台で実施する。論文は内部NVMeを最大約7GB/sとし、モデル重み6.8GBとOS等約7GBを差し引いた約10.2GBをKV予算として容量計算する。離散GPUや複数GPUは実測していない。",
     "software": "Apple MLX / mlx-lm上の公開実装agent-memoryを使用する。Q4 KVはsafetensorsへ保存し、mlx-lmの量子化注意演算を利用する。量子化KVのバッチ処理用にBatchQuantizedKVCacheを追加し、推論は単一スケジューラスレッドで時分割する。比較対象にはvllm-mlxのFP16接頭辞キャッシュを含む。",
-    "model": ["Gemma 3 12B Instruct","DeepSeek-Coder-V2-Lite 16B Instruct","Llama 3.1 8B Instruct"],
-    "datasets": ["約37.7KトークンのWikipedia由来長文脈","WikiText-2","5フェーズの囚人のジレンマ型会話","10専門エージェントのWikipedia質問"],
-    "baselines": ["KVなしの全プリフィル","RAM内hot cache","SSD warm restore","vllm-mlx FP16 prefix cache"],
+    "model": [
+      "Gemma 3 12B Instruct",
+      "DeepSeek-Coder-V2-Lite 16B Instruct",
+      "Llama 3.1 8B Instruct"
+    ],
+    "datasets": [
+      "約37.7KトークンのWikipedia由来長文脈",
+      "WikiText-2",
+      "5フェーズの囚人のジレンマ型会話",
+      "10専門エージェントのWikipedia質問"
+    ],
+    "baselines": [
+      "KVなしの全プリフィル",
+      "RAM内hot cache",
+      "SSD warm restore",
+      "vllm-mlx FP16 prefix cache"
+    ],
     "correctness": "SSD永続化そのものは同じKV状態の復元を狙うが、Q4量子化は近似である。品質はFP16 KVとのWikiText-2困惑度比較で測り、Gemma -0.7%、DeepSeek +3.0%、Llama +2.8%を報告する。",
     "settings": [
-      {"name":"TTFT評価","description":"文脈長1K〜32K、温度0、出力64トークン、ストリーミング要求で、KVなしの再プリフィル、SSDからのQ4復元、メモリ常駐復元を比較する。各設定を原則6回実行し中央値を用いる。"},
-      {"name":"同時処理評価","description":"2エージェントの非ストリーミング条件でシステム全体の生成トークン毎秒を測り、復元済みKVによるプリフィル削減が複数要求でも残るか確認する。"},
-      {"name":"再起動比較","description":"Llama 3.1 8Bでvllm-mlxのFP16接頭辞キャッシュと比較し、プロセス再起動後にもSSD永続KVが再プリフィルを避けられるかを各3回中央値で測る。"},
-      {"name":"品質とワークフロー","description":"WikiText-2を512トークン窓・256ストライドでQ4/FP16比較し、加えて5フェーズ4エージェント会話と10専門エージェントルーティングで実ワークフローの総時間と復元遅延を測る。"}
+      {
+        "name": "TTFT評価",
+        "description": "文脈長1K〜32K、温度0、出力64トークン、ストリーミング要求で、KVなしの再プリフィル、SSDからのQ4復元、メモリ常駐復元を比較する。各設定を原則6回実行し中央値を用いる。"
+      },
+      {
+        "name": "同時処理評価",
+        "description": "2エージェントの非ストリーミング条件でシステム全体の生成トークン毎秒を測り、復元済みKVによるプリフィル削減が複数要求でも残るか確認する。"
+      },
+      {
+        "name": "再起動比較",
+        "description": "Llama 3.1 8Bでvllm-mlxのFP16接頭辞キャッシュと比較し、プロセス再起動後にもSSD永続KVが再プリフィルを避けられるかを各3回中央値で測る。"
+      },
+      {
+        "name": "品質とワークフロー",
+        "description": "WikiText-2を512トークン窓・256ストライドでQ4/FP16比較し、加えて5フェーズ4エージェント会話と10専門エージェントルーティングで実ワークフローの総時間と復元遅延を測る。"
+      }
     ],
     "methodology": "Gemma 394、DeepSeek 378、Llama 360の計1,132測定に加え、36件のずらし到着試験を行う。文脈長を1K〜32Kへ変え、冷状態の再プリフィル、SSD復元、統合メモリ常駐復元を比較する。容量評価ではFP16とQ4の理論・実容量を約10.2GBのKV予算へ当てはめる。復元利益だけでなく生成速度、同時処理率、再起動耐性、複数フェーズ処理、困惑度まで測り、SSD永続化が有利な条件と不利な条件を分けている。",
     "scope": "全主要結果は単一M4 Proであり、PCIe接続GPU、複数GPU、ネットワークストレージへそのまま外挿できない。TTFT主要表は単一要求・固定64出力トークンでプリフィル比率が高い。品質評価は短いWikiText-2窓中心で、長文での累積量子化誤差、事実精度、長期作業記憶品質を直接測らない。"
   },
-  "reservation": {"claim_id":"claim-4f044b0c64aaf3bf8cc393e6","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d2d80a73c2ad0868ec6ffcf5",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

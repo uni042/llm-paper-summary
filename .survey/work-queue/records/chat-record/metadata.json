@@ -2,45 +2,102 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-4f044b0c64aaf3bf8cc393e6",
+  "attempt_id": "attempt-d2d80a73c2ad0868ec6ffcf5",
   "job_id": "job-research-60c04e3a8b0d8caf",
   "data": {
     "canonical_id": "arXiv:2603.04428",
     "arxiv_id": "2603.04428",
     "doi": "10.48550/arXiv.2603.04428",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.LG","cross_list":["cs.AI"]},
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI"
+      ]
+    },
     "title": "Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices",
     "summary": "本研究は、エッジ端末上で複数の大規模言語モデル（LLM）エージェントを切り替えると、各エージェントのKVキャッシュが統合メモリを圧迫し、追い出し・切替・再起動後に長いプリフィルを再計算する問題を扱う。Apple M4 ProではGemma 3 12Bの8K文脈をFP16で保持すると、約10.2GBのKV予算に3エージェントしか収まらない。提案系はエージェントごとのKVを256トークン単位の独立ブロックへ分け、4ビット量子化（Q4）のままsafetensorsへSSD永続化し、再利用時にはプロンプト全体を再入力せず注意機構へ直接復元する。量子化KVを複数エージェントでまとめるBatchQuantizedKVCache、プリフィルとデコードを交互実行する協調スケジューラ、フェーズ間で既存KVへ追記する文脈注入も統合する。Gemma 3 12B、DeepSeek-Coder-V2-Lite 16B、Llama 3.1 8BをM4 Proで評価し、固定KV容量あたり概ね4倍の文脈を保持し、復元による先頭トークン遅延を最大136倍短縮する。",
     "list_summary": "複数エージェントのKVをQ4ブロックとしてSSDへ永続化し、再プリフィルせず注意機構へ直接復元することで、固定KV容量あたり約4倍の文脈を保持し先頭トークン遅延を最大136倍短縮する。",
-    "authors": ["Yakov Pyotr Shkolnikov"],
+    "authors": [
+      "Yakov Pyotr Shkolnikov"
+    ],
     "authors_affiliations": "独立研究者",
     "published": "2026-02-17",
     "publication": "arXiv:2603.04428v1",
     "publication_type": "プレプリント",
     "publication_status": "arXiv v1（2026-02-17提出）のプレプリント",
     "lineage": "KV cache persistence / edge multi-agent inference / storage offload",
-    "topics": ["KVキャッシュ永続化","Q4量子化","SSDオフロード","複数エージェント","Apple Silicon","階層メモリ"],
+    "topics": [
+      "KVキャッシュ永続化",
+      "Q4量子化",
+      "SSDオフロード",
+      "複数エージェント",
+      "Apple Silicon",
+      "階層メモリ"
+    ],
     "importance": "SSDを単なる入力履歴の保存先ではなく、再計算を置換する注意状態の永続階層として用いる具体的なシステム例である。Q4化による容量・I/O削減と、再起動をまたぐ状態復元を一つの実行経路へ統合しており、KVキャッシュのCPU/SSD/NVMe階層化に直接関係する。",
     "hardware_evaluation": "Apple MacBook Pro M4 Pro（MX2E3LL/A、24GB統合LPDDR5X、273GB/s）の単一実機。Gemma 3 12B Instruct、DeepSeek-Coder-V2-Lite 16B Instruct、Llama 3.1 8B Instructを評価する。",
     "hardware_details": "内部NVMeは論文中で最大約7GB/sとされ、モデル重み6.8GBとOS等約7GBを除いた約10.2GBをKV予算として容量比較する。",
     "quality_effect": "Q4 KVは完全無損失ではない。WikiText-2の512トークン窓・256ストライド評価で、FP16 KVに対する困惑度変化はGemma -0.7%、Llama +2.8%、DeepSeek +3.0%。信頼区間と長文での誤差蓄積は未評価である。",
-    "storage_targets": ["SSD/NVMe","統合メモリ上のKVキャッシュ"],
-    "bottlenecks": ["長文プリフィル再計算","KVキャッシュ容量","エージェント切替・再起動時の状態復元","同期的SSD保存"],
-    "evidence_locations": ["§3.1–3.6 system design","§4.1 evaluation setup","Table 2 capacity","Table 3 TTFT","Table 4 throughput","Table 5 vllm-mlx comparison","§4.7–4.8 multi-phase and Q4 quality","§5.6 limitations"],
+    "storage_targets": [
+      "SSD/NVMe",
+      "統合メモリ上のKVキャッシュ"
+    ],
+    "bottlenecks": [
+      "長文プリフィル再計算",
+      "KVキャッシュ容量",
+      "エージェント切替・再起動時の状態復元",
+      "同期的SSD保存"
+    ],
+    "evidence_locations": [
+      "§3.1–3.6 system design",
+      "§4.1 evaluation setup",
+      "Table 2 capacity",
+      "Table 3 TTFT",
+      "Table 4 throughput",
+      "Table 5 vllm-mlx comparison",
+      "§4.7–4.8 multi-phase and Q4 quality",
+      "§5.6 limitations"
+    ],
     "source": "https://arxiv.org/abs/2603.04428",
-    "sources": ["https://arxiv.org/abs/2603.04428","https://arxiv.org/pdf/2603.04428","https://arxiv.org/html/2603.04428","https://github.com/yshk-mxim/agent-memory"],
+    "sources": [
+      "https://arxiv.org/abs/2603.04428",
+      "https://arxiv.org/pdf/2603.04428",
+      "https://arxiv.org/html/2603.04428",
+      "https://github.com/yshk-mxim/agent-memory"
+    ],
     "code": "https://github.com/yshk-mxim/agent-memory",
     "implementation": "著者公開のMITライセンス実装agent-memoryがあり、MLX向けOpenAI互換API、エージェント別256トークンブロック、Q4 safetensors保存、BatchQuantizedKVCache、ベンチマークを含む。",
     "last_checked": "2026-09-14",
     "references": [
-      {"canonical_id":"arXiv:2601.19139","arxiv_id":"2601.19139"},
-      {"canonical_id":"arXiv:2405.04434","arxiv_id":"2405.04434"},
-      {"canonical_id":"arXiv:2511.02230","arxiv_id":"2511.02230"},
-      {"canonical_id":"arXiv:2511.05502","arxiv_id":"2511.05502"},
-      {"canonical_id":"arXiv:2601.12904","arxiv_id":"2601.12904"},
-      {"canonical_id":"arXiv:2507.08045","arxiv_id":"2507.08045"},
-      {"canonical_id":"arXiv:2511.11907","arxiv_id":"2511.11907"}
+      {
+        "canonical_id": "arXiv:2601.19139",
+        "arxiv_id": "2601.19139"
+      },
+      {
+        "canonical_id": "arXiv:2405.04434",
+        "arxiv_id": "2405.04434"
+      },
+      {
+        "canonical_id": "arXiv:2511.02230",
+        "arxiv_id": "2511.02230"
+      },
+      {
+        "canonical_id": "arXiv:2511.05502",
+        "arxiv_id": "2511.05502"
+      },
+      {
+        "canonical_id": "arXiv:2601.12904",
+        "arxiv_id": "2601.12904"
+      },
+      {
+        "canonical_id": "arXiv:2507.08045",
+        "arxiv_id": "2507.08045"
+      },
+      {
+        "canonical_id": "arXiv:2511.11907",
+        "arxiv_id": "2511.11907"
+      }
     ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv:2603.04428v1 一次資料の参考文献節",
@@ -48,5 +105,9 @@
     "last_audited": null,
     "audit_version": 0
   },
-  "reservation": {"claim_id":"claim-4f044b0c64aaf3bf8cc393e6","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d2d80a73c2ad0868ec6ffcf5",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

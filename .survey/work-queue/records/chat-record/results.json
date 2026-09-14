@@ -2,22 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-4f044b0c64aaf3bf8cc393e6",
+  "attempt_id": "attempt-d2d80a73c2ad0868ec6ffcf5",
   "job_id": "job-research-60c04e3a8b0d8caf",
   "data": {
     "overview": "キャッシュ未使用の先頭トークン遅延は文脈長にほぼ比例して増える一方、SSDからのQ4復元と統合メモリ常駐復元は長文でも大幅に短い。Gemmaは4Kで15,736msからSSD復元577ms、32Kで172,096msから1,819msへ縮み、メモリ常駐32Kでは1,264msで最大約136倍となる。Llamaは16Kで47,629msからSSD431msへ縮み111倍、DeepSeekは32Kで47,315msからSSD633msへ縮み約75倍である。Q4容量削減はGemmaの固定KV予算で概ね4倍のエージェント文脈を許す。ただし単発の冷開始では提案系のオーケストレーション負荷が残り、価値は再利用、切替、再起動がある条件で最大化する。",
     "key_results": [
-      {"metric":"Gemma 3 12Bの4K先頭トークン遅延","value":"cold 15,736 ms → warm SSD 577 ms / hot memory 719 ms","baseline":"KVなしの全プリフィル","condition":"M4 Pro、batch=1、streaming、64出力トークン、6回中央値","interpretation":"永続KVを直接復元すると約27倍のSSD復元高速化となり、長いプリフィルをサブ秒級I/Oへ置換できる。"},
-      {"metric":"最大先頭トークン遅延高速化","value":"Gemma最大136倍、DeepSeek最大約76倍、Llama最大111倍","baseline":"各文脈長のcold prefill","condition":"Gemma/DeepSeekは最大32K、Llamaは最大16K","interpretation":"再プリフィル側だけが文脈長に比例して伸びるため、長文ほど復元経路の相対利益が拡大する。"},
-      {"metric":"固定KV予算で保持できるGemmaエージェント数","value":"4K: 6→24、8K: 3→12、16K: 1→6、32K: 0→3","baseline":"FP16 KV","condition":"M4 ProでKV予算10.2GB、Q4理論比0.281","interpretation":"Q4により1文脈のKVが約72%小さくなり、複数エージェントを追い出さず保持できる範囲が大きく広がる。"},
-      {"metric":"2エージェントwarmシステム処理率","value":"1K: Gemma 22.6 / DeepSeek 63.0 / Llama 37.8 tok/s、4K: 19.6 / 52.6 / 34.5、16K: 11.9 / 27.9 / 26.1","baseline":"同条件coldでは1K 10.4/35.5/16.6、4K 3.5/13.5/5.9、16K 0.8/3.1/1.3 tok/s","condition":"batch=2、non-streaming、6回中央値","interpretation":"復元済みKVではプリフィルが消えるため、同時処理時も生成側の計算が支配的になり総処理率が大きく上がる。"},
-      {"metric":"vllm-mlxとの再起動耐性","value":"agent-memoryはLlama 1K〜16Kでwarmとrestartが同じ260〜431ms","baseline":"vllm-mlx FP16 prefixは再起動後1K 2,262ms、2K 4,134ms、4K 8,079ms","condition":"Llama 3.1 8B、各3回中央値","interpretation":"揮発性接頭辞キャッシュに対し、ディスク永続化はプロセス再起動後にも再プリフィルを避ける。"},
-      {"metric":"5フェーズ作業の総時間","value":"Gemma 72.9s→56.1s（23%減）、DeepSeek 33.6s→27.8s（17%減）","baseline":"各フェーズで文脈を再計算","condition":"囚人のジレンマ型5フェーズ会話","interpretation":"単一復元の大きな倍率がそのまま全処理倍率にはならないが、フェーズ間KV継承でも実時間短縮が残る。"},
-      {"metric":"Q4 KVの困惑度変化","value":"Gemma -0.7%、DeepSeek +3.0%、Llama +2.8%","baseline":"FP16 KV","condition":"ローカルWikiText-2 7,935トークン、512窓・256ストライド","interpretation":"短い評価窓ではQ4誤差は小さいが、長文や層別感度を保証する結果ではない。"}
+      {
+        "metric": "Gemma 3 12Bの4K先頭トークン遅延",
+        "value": "cold 15,736 ms → warm SSD 577 ms / hot memory 719 ms",
+        "baseline": "KVなしの全プリフィル",
+        "condition": "M4 Pro、batch=1、streaming、64出力トークン、6回中央値",
+        "interpretation": "永続KVを直接復元すると約27倍のSSD復元高速化となり、長いプリフィルをサブ秒級I/Oへ置換できる。"
+      },
+      {
+        "metric": "最大先頭トークン遅延高速化",
+        "value": "Gemma最大136倍、DeepSeek最大約76倍、Llama最大111倍",
+        "baseline": "各文脈長のcold prefill",
+        "condition": "Gemma/DeepSeekは最大32K、Llamaは最大16K",
+        "interpretation": "再プリフィル側だけが文脈長に比例して伸びるため、長文ほど復元経路の相対利益が拡大する。"
+      },
+      {
+        "metric": "固定KV予算で保持できるGemmaエージェント数",
+        "value": "4K: 6→24、8K: 3→12、16K: 1→6、32K: 0→3",
+        "baseline": "FP16 KV",
+        "condition": "M4 ProでKV予算10.2GB、Q4理論比0.281",
+        "interpretation": "Q4により1文脈のKVが約72%小さくなり、複数エージェントを追い出さず保持できる範囲が大きく広がる。"
+      },
+      {
+        "metric": "2エージェントwarmシステム処理率",
+        "value": "1K: Gemma 22.6 / DeepSeek 63.0 / Llama 37.8 tok/s、4K: 19.6 / 52.6 / 34.5、16K: 11.9 / 27.9 / 26.1",
+        "baseline": "同条件coldでは1K 10.4/35.5/16.6、4K 3.5/13.5/5.9、16K 0.8/3.1/1.3 tok/s",
+        "condition": "batch=2、non-streaming、6回中央値",
+        "interpretation": "復元済みKVではプリフィルが消えるため、同時処理時も生成側の計算が支配的になり総処理率が大きく上がる。"
+      },
+      {
+        "metric": "vllm-mlxとの再起動耐性",
+        "value": "agent-memoryはLlama 1K〜16Kでwarmとrestartが同じ260〜431ms",
+        "baseline": "vllm-mlx FP16 prefixは再起動後1K 2,262ms、2K 4,134ms、4K 8,079ms",
+        "condition": "Llama 3.1 8B、各3回中央値",
+        "interpretation": "揮発性接頭辞キャッシュに対し、ディスク永続化はプロセス再起動後にも再プリフィルを避ける。"
+      },
+      {
+        "metric": "5フェーズ作業の総時間",
+        "value": "Gemma 72.9s→56.1s（23%減）、DeepSeek 33.6s→27.8s（17%減）",
+        "baseline": "各フェーズで文脈を再計算",
+        "condition": "囚人のジレンマ型5フェーズ会話",
+        "interpretation": "単一復元の大きな倍率がそのまま全処理倍率にはならないが、フェーズ間KV継承でも実時間短縮が残る。"
+      },
+      {
+        "metric": "Q4 KVの困惑度変化",
+        "value": "Gemma -0.7%、DeepSeek +3.0%、Llama +2.8%",
+        "baseline": "FP16 KV",
+        "condition": "ローカルWikiText-2 7,935トークン、512窓・256ストライド",
+        "interpretation": "短い評価窓ではQ4誤差は小さいが、長文や層別感度を保証する結果ではない。"
+      }
     ],
     "negative_results": "冷状態の単発要求では提案実装のオーケストレーション負荷が残り、Llama 4Kでagent-memory 10,235msに対しvllm-mlx 4,394msなど再利用しない要求では不利である。生成速度も提案経路は概ね39〜46 tok/sでvllm-mlxの49〜55 tok/sより低い。短文脈では統合メモリ常駐の復元がSSD復元より遅い条件もあり、ブロックプールの層別探索・検査・散在アクセスが小ファイルの順次SSD読込より高コストになる。2エージェントのずらし到着実験では総壁時計時間は逐次実行とほぼ同じで、理論的なI/O隠蔽が大きな全体高速化としては示されていない。",
     "interpretation": "主要利益は計算器そのものを高速化することではなく、一度計算した注意状態をSSDへ保持し、後で計算結果そのものを復元することである。したがって再利用率が高く、エージェント切替や再起動が多く、文脈が長いほど有利になる。Q4で容量も縮めるため、追い出し頻度を下げる効果と、追い出した場合の復元I/Oを減らす効果が同時に働く。逆に一度しか使わない要求、短文脈、長いデコードが支配する要求では追加実装負荷や生成速度差が目立つ。",
     "quality_impact": "Q4 KVは短いWikiText-2窓でGemma -0.7%、Llama +2.8%、DeepSeek +3.0%の困惑度差を示す。Gemmaの改善は測定雑音の可能性があり、信頼区間、長文での誤差蓄積、層ごとの量子化感度は評価していない。永続化自体は同じKV状態の復元を目的とし、品質変化は主に量子化に由来する。"
   },
-  "reservation": {"claim_id":"claim-4f044b0c64aaf3bf8cc393e6","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d2d80a73c2ad0868ec6ffcf5",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

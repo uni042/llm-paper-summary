@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-4f044b0c64aaf3bf8cc393e6",
+  "attempt_id": "attempt-d2d80a73c2ad0868ec6ffcf5",
   "job_id": "job-research-60c04e3a8b0d8caf",
   "data": {
     "problem": "複数エージェント型の大規模言語モデル（LLM）では、各エージェントが独立した会話履歴と注意状態を持つため、エージェント数と文脈長に比例してKVキャッシュ容量が増える。24GB統合メモリのM4 Proでは、モデル重みとOS等を除くとKVへ約10.2GBしか残らず、Gemma 3 12Bの8K文脈をFP16で保持できるのは3エージェント程度である。容量超過時にKVを捨てる方式では、再びそのエージェントへ戻るたびに全入力をプリフィルし直す必要があり、Gemmaの4Kで15.7秒、32Kで172秒に達する。エッジ端末ではデータセンターGPUよりプリフィルが遅いため、単なるキャッシュ追い出しが対話遅延へ直結し、サーバ再起動でも同じ状態が失われる。",
@@ -34,5 +34,9 @@
     "why_it_works": "SSDはRAMより遅いが、比較対象がRAMヒットではなく追い出された長文脈の全プリフィル再計算であれば、数百ミリ秒級の順次I/Oが数秒から数十秒の演算より安い。Q4はI/O量と常駐容量の双方を改善し、復元可能性を高める。",
     "failure_modes": "単一M4 ProとMLXに強く依存し、離散GPUではSSDからホストを経てPCIe・VRAMへ追加転送が必要になる。短文脈や一度しか使わない要求ではオーケストレーション費用が利益を上回り得る。Q4品質の長文での蓄積誤差は未評価で、プロンプトが追記型でない場合は差分再利用も成立しにくい。"
   },
-  "reservation": {"claim_id":"claim-4f044b0c64aaf3bf8cc393e6","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-d2d80a73c2ad0868ec6ffcf5",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
