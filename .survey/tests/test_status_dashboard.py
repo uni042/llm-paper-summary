@@ -114,7 +114,6 @@ class StatusDashboardTests(unittest.TestCase):
                 "既存の論文ページや要約の品質点検",
                 "## 現在の状態",
                 "## 直近24時間の処理量",
-                "## 直近の通常worker",
                 "## 次に処理する候補",
                 "## 参考情報",
                 "### 直近の探索専用worker",
@@ -123,8 +122,8 @@ class StatusDashboardTests(unittest.TestCase):
                 self.assertIn(expected, text)
 
             self.assertLess(text.index("## 現在の状態"), text.index("## 直近24時間の処理量"))
-            self.assertLess(text.index("## 直近24時間の処理量"), text.index("## 直近の通常worker"))
-            self.assertLess(text.index("## 直近の通常worker"), text.index("## 次に処理する候補"))
+            self.assertLess(text.index("## 直近24時間の処理量"), text.index("## 次に処理する候補"))
+            self.assertNotIn("## 直近の通常worker", text)
             self.assertLess(text.index("## 次に処理する候補"), text.index("## 参考情報"))
             self.assertLess(text.index("## 参考情報"), text.index("### 探索専用workerの探索効率（直近24時間）"))
 
@@ -175,7 +174,7 @@ class StatusDashboardTests(unittest.TestCase):
 
             self.assertIn("未処理の論文候補（Research ready） | **176**", text)
             self.assertNotIn("176 / 50", text)
-            self.assertIn("## 直近の通常worker", text)
+            self.assertNotIn("## 直近の通常worker", text)
             self.assertIn("Research完了 | **2**", text)
             self.assertIn("通常worker Discovery round | **0**", text)
             self.assertNotIn("Discovery完了 | **4**", text)
