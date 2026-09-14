@@ -2,81 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-14285bb9ea690ea905b1622a",
+  "attempt_id": "attempt-25d2476fc6175ec3b9d8205c",
   "job_id": "job-research-f1288f57de066f0f",
-  "data": {
-    "overview": "OrderMoEは、正確な専門家が遠隔にあるトークンを必ず送信する既存分散MoEと異なり、品質予算を守れる場合だけローカル類似専門家へ置き換えることで、通信を減らしながら推論品質をほぼ維持する。Mixtral-8x7Bの総合比較では平均遅延187ms、サーバ間通信1.5GB/1000トークン、処理率1380トークン/秒となり、平均遅延はEdgeShardより51.0%、MoE²より40.1%低い。実行の83%をローカル化し、そのうち31%をローカル代替が占める一方、WikiText-103 perplexity増加0.3、SQuAD F1低下0.6、GSM8K精度低下0.7に抑えた。さらにサーバ数を4から16へ増やしても遅延は198msから約183msへほぼ横ばいで、正確な専門家位置に束縛される比較群とは異なる拡張性を示す。",
-    "key_results": [
-      {
-        "metric": "Mixtral-8x7B平均遅延",
-        "value": "187ms、EdgeShard比51.0%削減、MoE²比40.1%削減",
-        "baseline": "EdgeShard / MoE²",
-        "condition": "既定の異種エッジ環境、Mixtral-8x7B",
-        "interpretation": "類似専門家をサーバ間へ分散し、正確または代替専門家を近場で選ぶことで遠隔転送を大幅に減らす。"
-      },
-      {
-        "metric": "サーバ間通信量",
-        "value": "1.5GB / 1000トークン",
-        "baseline": "全比較方式",
-        "condition": "Mixtral-8x7B総合比較",
-        "interpretation": "対象専門家が遠隔でも品質許容なローカル代替を選べるため、正確な専門家アクセスを前提とする方式より通信自体を回避する。"
-      },
-      {
-        "metric": "推論処理率",
-        "value": "1380トークン/秒",
-        "baseline": "全比較方式",
-        "condition": "Mixtral-8x7B総合比較",
-        "interpretation": "ネットワーク待ちを減らし、異種サーバ上のローカル実行機会を増やすことで最高処理率を達成する。"
-      },
-      {
-        "metric": "ローカル実行率",
-        "value": "83%（ローカル正確52%、ローカル代替31%）",
-        "baseline": "Similarity Deployment without Substituteでは遠隔正確実行62%",
-        "condition": "Mixtral-8x7B",
-        "interpretation": "性能改善の主要因が単なる配置ではなく、実行時の代替専門家利用にあることを示す。"
-      },
-      {
-        "metric": "品質劣化",
-        "value": "WikiText-103 perplexity +0.3、SQuAD F1 -0.6、GSM8K accuracy -0.7",
-        "baseline": "常に正確な専門家を使う方式",
-        "condition": "品質評価",
-        "interpretation": "局所代替を31%まで使っても層別類似度と利用者品質予算により劣化を小さく制約する。"
-      },
-      {
-        "metric": "モデル横断品質保持率",
-        "value": "3モデルすべて99.3%以上",
-        "baseline": "集中型完全モデル",
-        "condition": "Switch-Base-8E、Qwen-MoE-A2.7B、Mixtral-8x7B",
-        "interpretation": "モデル規模を跨いで通信削減と品質保持が両立する。"
-      },
-      {
-        "metric": "メモリ予算比2.0のローカルグループ被覆率",
-        "value": "88%",
-        "baseline": "人気度のみの複製",
-        "condition": "Mixtral-8x7B、冗長配置評価",
-        "interpretation": "未被覆グループと重要専門家を意識した複製が限られた追加メモリを局所代替機会へ効率よく変換する。"
-      },
-      {
-        "metric": "サーバ数拡張時の遅延",
-        "value": "4サーバ198msから12サーバ以降約183msで安定",
-        "baseline": "EdgeShardは約20%、MoE²は約19%悪化",
-        "condition": "4〜16サーバ相当、負荷をサーバ数に比例",
-        "interpretation": "類似グループ被覆がサーバ増加とともに改善するため、専門家分散が遠隔確率増加へ直結しない。"
-      },
-      {
-        "metric": "先読み費用と遅延",
-        "value": "先読みなし216msからH=3相当で約190ms、深くすると判断費用0.31msから2.40msへ増加",
-        "baseline": "近視眼的選択",
-        "condition": "Mixtral-8x7B先読み感度",
-        "interpretation": "数層先のトークン移動を考慮することで現在層の局所最適による将来通信を避けるが、深すぎる探索は制御費が支配する。"
-      }
-    ],
-    "negative_results": "局所代替は完全無損失ではなく、品質予算を広げれば通信と遅延をさらに下げられる代わりに品質劣化が増える。先読み深さを3より増やしても推論遅延の改善はほぼ飽和し、候補経路展開による判断費用が急増する。追加専門家複製はGPUメモリを消費するため、メモリ予算比が小さい環境ではローカル被覆を十分に作れない。類似度と専門家遷移統計は校正集合に基づくため、本番分布変化への頑健性は大規模には評価されていない。",
-    "interpretation": "この結果は、エッジMoEの通信問題を『遠隔専門家アクセスを高速化する』問題から『品質を壊さず遠隔アクセスを不要にできるか』へ置き換える価値を示す。配置段階で同じ機能グループを各サーバへ散らし、実行時に品質予算をフェンスとして近場の代替を使うことで、サーバ数を増やして専門家が物理的に分散しても遠隔率が増えにくい。先読みはトークン現在位置を次層へ引き継ぐMoE分散推論特有の結合を扱い、一層だけの最短経路より全体通信を減らす。",
-    "quality_impact": "近似専門家を使うため小さな品質低下は明示的に存在する。ただし代替対象を同一類似グループに限定し、利用者単位の累積品質予算を超える場合は正確実行へ戻すため、品質損失は制御可能な交換条件として扱われる。実験では品質保持率99.3%以上を維持した。"
-  },
+  "data": {},
   "reservation": {
-    "claim_id": "claim-14285bb9ea690ea905b1622a",
+    "claim_id": "claim-25d2476fc6175ec3b9d8205c",
     "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }
