@@ -2,12 +2,72 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-7df083f0e56299c85818e13c",
-  "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {},
+  "attempt_id": "attempt-6b041a0d266d15ef6cc2a08d",
+  "job_id": "job-research-6ec0e9028edbe67e",
+  "data": {
+    "hardware": [
+      "AWS p4d.24xlarge",
+      "8× NVIDIA A100 80GB",
+      "NVSwitch 600 GB/s"
+    ],
+    "software": [
+      "vLLM",
+      "Sarathi-Serve",
+      "DeepSpeed-FastGen",
+      "FasterTransformerベース自作Orca",
+      "FastServe",
+      "Vidur Oracle simulator",
+      "FlashAttention2",
+      "gpustat"
+    ],
+    "model": [
+      "OPT-13B",
+      "OPT-175B",
+      "Llama-13B",
+      "Llama-3-70B"
+    ],
+    "datasets": [
+      "Alpaca 52K requests",
+      "ShareGPT 90K requests",
+      "BookCorpus 11K books",
+      "3 traceからreplacement samplingした20K mixed requests、35% BookCorpus"
+    ],
+    "baselines": [
+      "vLLM",
+      "Orca",
+      "FastGen",
+      "Sarathi-Serve",
+      "FastServe",
+      "全未来情報を知るOracle"
+    ],
+    "correctness": "同じ混合trace、SLO生成法、モデル・GPU環境でthroughput、goodput、SLO/JCT-SLO attainment、JCT、GPU/KV資源利用を比較する。Oracleは到着時刻と出力長・残完了時間を既知としてVidurでgoodput最大scheduleを探索し、実現可能上限の参考値にする。",
+    "settings": [
+      "OPT-13Bは1 GPU、OPT-175Bは8 GPUでpipeline/tensor parallel degree 8/2、fp16。",
+      "Llama-13Bは1 GPU、Llama-3-70Bは4 GPU。",
+      "OPT-13B KVC 12GB、OPT-175Bは各GPU 33.75GB、Llama-13B 12GB、Llama-3-70B 135GB。",
+      "mixed traceは20K requests、BookCorpus 35%、promptは短いものから最大100K token、生成最大2048 token。",
+      "arrivalはPoisson 8 requests/s。",
+      "TTFT SLOはprompt長512-token groupごとのTriton/FasterTransformer実測平均×0.5〜1.5 scale、TBTは0.1875s×0.75〜1.25 scale。",
+      "multi-resource候補窓γ=0.75s。",
+      "vLLM block sizeは32 token。"
+    ],
+    "methodology": "まずOPT-13B/175Bで既存systemのiteration時間、GPU compute utilization、KV cache utilization、SLO attainmentをtrace-driven実測し、pivot forward sizeをそれぞれ768/1280と測定する。その観察からAccelGenを設計した後、同じA100環境へvLLMベース実装を載せ、4モデルでvLLM/Orca/FastGen/Sarathi/FastServeと比較する。throughputはtoken/sとrequest/s、goodputは期限T=1s等を満たした仕事量、SLOはiteration-levelとJCT-levelの双方を測る。さらにChunk/Order/Batchの各機構を一つずつ外すablation、長prompt比率・arrival rateのsensitivity、Alpaca/ShareGPT/BookCorpus個別traceを評価し、利得が特定機構やdatasetだけに依存しないかを確認する。",
+    "metrics": [
+      "throughput token/s・request/s",
+      "goodput",
+      "iteration-level SLO attainment",
+      "JCT SLO attainment",
+      "JCT",
+      "GPU compute utilization",
+      "unallocated KV cache/KVC utilization",
+      "scheduler time overhead"
+    ],
+    "scope": "A100単一nodeを中心とした実機trace-driven評価で、OPT/Llamaの13B〜175B規模を含む。ネットワーク分離prefill/decode、異種GPUクラスタ、MoE、超大規模multi-nodeは評価しない。SLO生成には合成scaleを用いるため、実運用テナントの契約SLO分布そのものではない。",
+    "reproducibility": "arXiv本文はモデル、p4dハードウェア、各KVC量、trace構成、arrival rate、SLO生成、block size、γ、比較system、実装行数と主要algorithmを記載する。AccelGen固有コードの公開URLは一次資料で確認できず、完全再現には論文記述からschedulerを再実装する必要がある。"
+  },
   "reservation": {
-    "claim_id": "claim-7df083f0e56299c85818e13c",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "claim_id": "claim-6b041a0d266d15ef6cc2a08d",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,12 +2,44 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-7df083f0e56299c85818e13c",
-  "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {},
+  "attempt_id": "attempt-6b041a0d266d15ef6cc2a08d",
+  "job_id": "job-research-6ec0e9028edbe67e",
+  "data": {
+    "limitations": [
+      "実機評価はAWS p4dのA100単一nodeと4つのOPT/Llamaモデルに限られ、H100/B200、複数node、異種GPU、MoE等で同じpivot/SLO制御が機能するかは未検証である。",
+      "SLOは実traceの契約値ではなく、prompt groupの実測latencyや標準読書速度へランダムscaleを掛けて生成するため、本番tenantのSLO分布を完全には再現しない。",
+      "offline JCT SLOの優先度計算には出力token数の推定が必要で、本文自身も正確な出力長予測は未解決としている。予測誤差は残時間とpreemption判断へ伝播する。",
+      "長promptをchunkingすると単一promptの完了が遅れる可能性があり、要求ごとのSLOとsystem goodputを両立するadaptive chunk sizeは将来課題である。",
+      "長promptをどの条件でpreemptすべきか、sequence lengthとSLOを組み合わせたpreemption policyは十分検討されていない。",
+      "multi-resource batchingとSLO排序によりFCFSよりscheduler overheadが増え、現実装の制御latency低減を著者も課題として挙げる。",
+      "AccelGen固有実装の公開URLが本文に示されず、外部での再現性は公開baselineより低い。"
+    ],
+    "differences": [
+      {
+        "name": "Sarathi-Serveとの差",
+        "description": "Sarathi-Serveはchunked prefillで長promptを固定に近いchunkへ分け、stall-free schedulingでdecodeと混在させるが、system-wide SLOとGPU forward budgetが中心になる。AccelGenはbatch内の最も厳しいSLOからtoken budget自体をiterationごとに伸縮し、似たSLOをまとめ、さらに新規長promptの開始を抑えてKV cache占有期間を短縮する。異種SLOとKV cache解放を第一級の制御量にした点が違う。"
+      },
+      {
+        "name": "vLLM/PagedAttentionとの差",
+        "description": "vLLMはblock-based KV cache管理で外部断片化を減らし、より多くのsequenceを収容できるが、schedulerはどの要求を選べばGPU計算と未割当KV blockを同時に使い切れるかを直接最適化しない。AccelGenはblock managerの現在状態を読み、候補要求ごとの追加KV需要を計算してGPU token残量との二次元距離でbatchを選ぶ。PagedAttentionを置き換えるのではなく、そのmemory primitiveをSLO-aware resource schedulingへ利用する。"
+      },
+      {
+        "name": "FastServe/JCT最小化との差",
+        "description": "FastServeはmulti-level feedback queueとpreemptionで平均JCTを下げるが、memory swap/preemption overheadが大きく、異なるTTFT/TBT/JCT SLOをiteration単位で統一的に扱わない。AccelGenは各要求の残猶予を同一指標へ変換し、urgent要求を優先しながら同じSLO帯の要求をbatchする。JCTだけでなくgoodputとiteration-level SLO attainmentを明示的に最大化する点が異なる。"
+      },
+      {
+        "name": "DistServe/Splitwiseとの差",
+        "description": "DistServeやSplitwiseはprefillとdecodeを別GPU poolへ分離して干渉を減らし、配置とparallelismでSLO goodputを改善する。AccelGenは同じGPU群でprefill chunkとdecodeを混載する前提のschedulerで、GPU計算budgetとKV cache容量をiterationごとに共同利用する。したがって分離配信と競合するというより、各pool内部または非分離構成で異種SLOを扱う補完的な制御手法として位置付けられる。"
+      }
+    ],
+    "implementation_status": "vLLMを基盤に約9K行Python+3K行C++で実装しA100実機評価済み。優先度、dynamic chunking、multi-resource batching、block manager連携、FlashAttention2追加まで本文に記載されるが、2026-09-14確認時点でarXiv本文からAccelGen固有の公開コードURLは確認できない。",
+    "research_positioning": "chunked prefillとSLO-aware servingの間で、GPU computeだけでなくKV cacheを独立した制約資源としてschedulerへ組み込んだ研究に位置する。後続のfairness-aware chunk scheduling、output-length uncertainty、disaggregated serving研究へ対しては、『iteration時間を守るための計算budget』『要求の残deadline』『KV cache占有』を同時に見る設計基準を提供する。特に長context化でKV cacheが主要bottleneckになるほど、token budgetだけを満たすschedulerの限界が強くなる。一方、将来の分離prefill/decodeやtiered KV cacheではnetwork/CPU/SSD帯域も追加資源になるため、AccelGenの二資源距離選択を多次元resource fittingへ一般化し、output length不確実性を含む予測制御と結合する方向が自然である。",
+    "audit_required": false,
+    "audit_reason": null
+  },
   "reservation": {
-    "claim_id": "claim-7df083f0e56299c85818e13c",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "claim_id": "claim-6b041a0d266d15ef6cc2a08d",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,12 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-7df083f0e56299c85818e13c",
-  "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {},
+  "attempt_id": "attempt-6b041a0d266d15ef6cc2a08d",
+  "job_id": "job-research-6ec0e9028edbe67e",
+  "data": {
+    "problem": "既存のLLM推論schedulerは、短promptと長promptが混ざっていてもFCFSで要求を取り出し、固定token budgetや固定chunk sizeをGPU計算資源へ詰めることを主目的にする。しかし長promptを複数同時に進めると、それぞれの生成期間中にKV cacheを保持し続けてメモリを占有するため、計算budgetが残っていても新しい要求を収容できない。さらにオンラインchatはTTFT/TBTを厳しく要求する一方、offline生成はjob全体のJCTだけを気にするなどSLOが異なる。batch中の最も厳しいSLOへ全要求を合わせると緩い要求まで早く処理し過ぎてbatchを小さくし、逆に一律SLOを緩めると厳しい要求を違反する。したがって、iterationごとの時間budgetを要求SLOから決め、長promptの分割量と実行順序を調整しながら、GPU計算とKV cacheの両方の残資源を同時に埋める必要がある。",
+    "novelty": "AccelGenはchunked prefillを単なる固定分割として使わず、最も厳しいiteration SLOから毎iterationのtarget forward sizeを動的に決定する点、要求を残りSLO猶予順へ並べて似たSLOを自然に同一batchへ集める点、GPU token容量とKV cache容量を二次元のbin packingとして同時に近づける点を統合する。加えて、新しい長promptを次々開始せず既存の長promptを先に終わらせるExclusive Request AllocationでKV cache保持期間を短縮する。SLO、計算資源、メモリ資源を別々のheuristicではなくiteration-level scheduler内で結合することが中心的な新規性である。",
+    "method_overview": "まず各モデル・GPU配置について、forward sizeを変えたprofilingからGPU計算がほぼ飽和するpivot forward size S_pfと、その実行時間T_pfを測る。次batchに含まれる要求の最小iteration SLOをSLO_minとすると、token budget S_b=S_pf×SLO_min/T_pfとし、厳しいSLOでは小さく、緩いSLOでは大きなbatchを許す。要求はTTFT/TBTまたはJCT SLOから『次に実行されるまでに残された時間』T_rを計算し、T_rが小さい順にqueueへ並べる。オンライン要求では残promptを平均chunk長で割って残iteration数を見積もり、待ち時間と最大batch実行時間から残猶予を更新する。offline JCT SLOでは予測した出力token数とpreemption確率から残り総実行時間を見積もり、許容待ち時間を残iterationへ分配し、早着・遅延分を次iterationへ繰り越す。batch形成時は次iterationで必ず走らなければSLOを破るurgent要求を先に入れ、必要なら残猶予が大きい既存要求をpreemptする。その後、T_rが先頭要求からγ以内の似たSLOの候補を対象に、GPU残token量A_cとKV cache残量A_mを同時に考える。長promptはGPU budgetまたはKV cacheのどちらかをちょうど埋める長さまで動的に切り、各候補のGPU需要D_cとKV需要D_mを推定する。残資源との差のユークリッド距離sqrt((A_c-D_c)^2+(A_m-D_m)^2)が最小の要求を反復選択し、どちらかの資源で追加不能になるまでbatchへ入れる。長promptは既に走っているものを先に終わらせ、新規長prompt開始を抑えることでKV cache解放を早める。形成済みbatchは既存vLLM backendへ渡し、実行後に未完了TGをschedulerへ戻して次iterationを再計算する。",
+    "components": [
+      {
+        "name": "SLO保証付き動的chunking",
+        "description": "モデル・GPUごとにforward sizeを増やして計算が飽和するpivot forward size S_pfと対応時間T_pfを事前計測し、次batchで最も厳しいSLO_minに比例してtoken budget S_bを伸縮する。固定512 token等のchunkでは、既存decode数が変わるたび残budgetに隙間が生じるため、AccelGenはordered queueからtokenを順に取り、ちょうどS_f=S_bになる位置で長promptを切る。これにより厳しいSLOではiterationを短く保ち、緩いSLOでは大きなforward sizeでGPUを飽和できる。また既存長promptが終わるまで新しい長promptのchunk開始を抑えるExclusive Request Allocationを組み合わせ、複数長promptが同時にKV cacheを占有し続ける時間を減らす。"
+      },
+      {
+        "name": "iteration-level SLO優先度制御",
+        "description": "オンライン要求はTTFTと各TBT、offline要求はJCTという異なるSLO形式を受け取る。各queue entryについて、残promptから必要chunk数と最大iteration時間を見積もり、SLOから既経過待ち時間と残実行時間を引いた残猶予T_rを計算する。JCTの場合は予測出力長とpreemptionを含む総実行時間を見積もって残許容待ち時間を各iterationへ割り、実際の早着・遅延分を後続iterationへ繰り越す。queueをT_r昇順に保つことで、tight SLOの要求を先に処理すると同時に似たSLOの要求が近くへ集まり、一つの厳しい要求のために本来大きくできるbatch全体を過度に縮める問題を避ける。次iterationで実行しないと違反する要求はurgentとして必ず優先する。"
+      },
+      {
+        "name": "GPU・KV cache同時認識batching",
+        "description": "token budgetだけを満たしてもKV cache残量が断片化すると新しい要求を収容できず、GPU計算余力が遊ぶ。AccelGenは各要求・chunkについてGPU需要D_cを処理token数、KV需要D_mをPagedAttention block単位の追加必要量として計算し、urgent要求を入れた後のGPU残量A_cとKV残量A_mを二次元で追跡する。似た残SLOを持つ候補から、(A_c-D_c,A_m-D_m)のユークリッド距離が最小になるものを優先して詰める。長promptについてはGPU budgetを埋める長さとKV残量を埋める長さの小さい方でchunkを作るため、一方だけを満杯にして他方を使えなくする配置を減らす。vLLM block managerの現在状態を直接参照し、iterationごとに選択をやり直す。"
+      },
+      {
+        "name": "長prompt同時実行数の抑制とpreemption連携",
+        "description": "Sarathi-Serve型に複数長promptへ少しずつchunkを配ると、それぞれのKV cacheが完了まで保持され、総メモリを長時間占有する。AccelGenはExclusive Request Allocationにより、既に実行中の長promptへ優先してbudgetを割り当て、可能な限り完了させてKV cacheを早く返す。SLO上どうしても新しいurgent要求を入れる必要がありGPUまたはKV容量が不足する場合は、現在batch内で残猶予T_rが最大、すなわち延期余地が最も大きい要求をpreemptする。KV overflowや実際のpreemption処理はvLLMへ委ねるため、scheduler側は『誰を残し誰を延期するか』のSLO判断と資源選択に集中できる。"
+      }
+    ],
+    "system_design": "vLLMの既定FCFS schedulerをAccelGenへ置換する。要求到着または長promptの一部がbatchへ入るたびにSLO残時間でqueue順を更新し、各iteration終了後に動的token budget、urgent集合、GPU/KV残量を再計算する。Python実装の優先度制御とC++実装のdynamic chunking、多資源batchingがvLLM block managerと連携し、形成したbatchを既存vLLM backendとFlashAttention2へ渡す。実行基盤・KV block allocatorを再実装せず、制御面だけを拡張する構成である。"
+  },
   "reservation": {
-    "claim_id": "claim-7df083f0e56299c85818e13c",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "claim_id": "claim-6b041a0d266d15ef6cc2a08d",
+    "worker_id": "scheduled-chat-llm-survey",
     "worker_kind": "scheduled_chat"
   }
 }
