@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-7aed2ba5fad7861be71ac96a",
+  "attempt_id": "attempt-e354f4d76f3f90be0997a008",
   "job_id": "job-research-ba4de6edc8a253cf",
   "data": {
     "overview": "HydraInferは3モデル・5データセットでSLO達成率を維持できる最大要求率を引き上げ、特にQwen2-VLでSGLangとの差が大きい。アブレーションでは分離方式を負荷に合わせて選ぶことと段階単位バッチの双方がグッドプットへ寄与する。キャッシュ移行は評価環境では全体遅延の1%未満だが、主要時間はデコードに残る。",
@@ -55,7 +55,7 @@
     "quality_impact": "モデル演算を近似する手法ではなく、同じモデルと固定output lengthでサービング性能を比較するため、原理上の品質損失は導入しない。ただし評価は意味品質の再測定ではなく性能/SLO中心である。"
   },
   "reservation": {
-    "claim_id": "claim-7aed2ba5fad7861be71ac96a",
+    "claim_id": "claim-e354f4d76f3f90be0997a008",
     "worker_id": "scheduled-chat-llm-discovery",
     "worker_kind": "scheduled_chat"
   }

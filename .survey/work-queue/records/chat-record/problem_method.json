@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-7aed2ba5fad7861be71ac96a",
+  "attempt_id": "attempt-e354f4d76f3f90be0997a008",
   "job_id": "job-research-ba4de6edc8a253cf",
   "data": {
     "problem": "マルチモーダルLLMの一要求は、画像を視覚トークンへ変換する符号化、画像トークンと文章を処理して最初の生成状態を作る入力処理、1トークンずつ生成するデコードの三段階を通る。三者は同じGPU上でも最適なバッチサイズと資源特性が異なり、論文の測定では符号化は画像数を増やすと処理率が伸びる一方、入力処理は小さいバッチで早く飽和し、デコードは多数の同時系列を束ねるほど処理率が上がる。既存vLLM/SGLang型の一体配置では、計算集約的な画像符号化や入力処理がメモリ帯域寄りのデコードと同じ実行列を競合し、TTFTとTBTを同時に守りにくい。単純にE+P+Dへ完全分離しても、負荷によっては段階ごとのGPUが遊び、キャッシュ移送も増えるため常に最適ではない。",
@@ -33,7 +33,7 @@
     "system_design": "フロントエンド、要求処理器、複数種類の推論インスタンス、配置プロファイラ、移送スケジューラからなる。インスタンスはE/P/D/EP/ED/EPD等の役割を持ち、段階別バッチ処理とPagedAttention・画像ページキャッシュを使う。Rayで分散制御し、同一ノードはCUDA IPC、ノード間はNCCLでキャッシュを渡す。負荷変化時には履歴を基に配置候補を再評価し、必要ならインスタンス役割を変更する。"
   },
   "reservation": {
-    "claim_id": "claim-7aed2ba5fad7861be71ac96a",
+    "claim_id": "claim-e354f4d76f3f90be0997a008",
     "worker_id": "scheduled-chat-llm-discovery",
     "worker_kind": "scheduled_chat"
   }
