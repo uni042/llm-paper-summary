@@ -2,32 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c67b456d5eaef96f80779516",
-  "job_id": "job-research-85e6a3219bd95117",
-  "data": {
-    "overview": "Ada-MKは、固定短系列から実データまでTensorRT-LLMに対して一貫して正の生成スループット差を示し、とくに低バッチでカーネル起動費と中間メモリ往復を融合する利得が大きい。Qwen3-1.7Bの固定短系列ではバッチ1でTensorRT-LLM比23.6%、vLLM比50.2%の改善を報告する。実データでは改善幅が4.0〜19.5%へ縮まり、高バッチのCSLではvLLMが3.5%上回るため、メガカーネル単体の利得とランタイム全体のスケジューリング利得が条件によって交差する。",
-    "key_results": [
-      {"metric": "Qwen3-1.7Bの生成スループット", "value": "最大23.6%向上", "baseline": "TensorRT-LLM v1.1.0rc5", "condition": "入力64・出力12トークン、単一L20、バッチ1", "interpretation": "低バッチでは小カーネルの起動費とHBM往復の比率が高く、デコード全体を1メガカーネルへ融合する効果が最も出やすい。"},
-      {"metric": "Qwen3-1.7Bの生成スループット", "value": "50.2%向上", "baseline": "vLLM v0.19.0", "condition": "入力64・出力12トークン、単一L20、バッチ1", "interpretation": "短系列・小バッチという演算実行効率が支配する条件では、汎用ランタイムより固定経路メガカーネルの利得が大きい。"},
-      {"metric": "Qwen3-1.7Bの低バッチ差", "value": "バッチ1で+50.2%、バッチ2で+64.5%", "baseline": "vLLM", "condition": "固定64入力・12出力", "interpretation": "要求数が少ない領域ではオンライン向けの高度なスケジューリングより、融合による起動・メモリ費削減が性能を支配する。"},
-      {"metric": "Qwen3-1.7Bの低バッチ差", "value": "バッチ1で+71.9%、バッチ2で+49.3%", "baseline": "SGLang", "condition": "固定64入力・12出力", "interpretation": "同じく小バッチでの実行経路固定が有効で、汎用サービング系の機能オーバーヘッドを避けられる。"},
-      {"metric": "Qwen2.5-1.5Bの生成スループット", "value": "6.7%〜15.6%向上", "baseline": "TensorRT-LLM", "condition": "固定64入力・12出力、バッチ1〜16", "interpretation": "モデルを変えてもTensorRT-LLMのネイティブデコードより正の差を保ち、特定Qwen3モデルだけの最適化ではないことを示す。"},
-      {"metric": "実データでの生成スループット", "value": "4.0%〜19.5%向上", "baseline": "TensorRT-LLM", "condition": "CSLとHuman-eval、バッチ1〜16", "interpretation": "可変長・長めの系列でも融合利得は残るが、固定短系列より改善幅は条件依存になる。"},
-      {"metric": "Human-eval高バッチの生成スループット", "value": "19.5%向上", "baseline": "TensorRT-LLM", "condition": "Human-eval、バッチ16", "interpretation": "実データの高バッチでもTensorRT-LLMに対して大きな差が残る一例である。同条件でvLLM比1.6%、SGLang比3.5%に縮まる。"},
-      {"metric": "共有メモリピーク需要", "value": "約50%削減", "baseline": "K次元を粗く保持する構成", "condition": "K次元の細粒度分割を適用", "interpretation": "L20の128 KB共有メモリ制約内に候補を収め、より深いパイプラインやページ再利用を可能にする。"},
-      {"metric": "デコード性能", "value": "約30%改善", "baseline": "元のStanford MegaKernel系構成", "condition": "Ada-MKの細粒度DAG探索で実行経路を最適化", "interpretation": "単に既存メガカーネルをL20へ移植するのではなく、依存グラフから実行順序を再探索する部分が大きな寄与を持つ。"}
-    ],
-    "negative_results": [
-      {"name": "CSLの高バッチではvLLMが上回る", "description": "CSLのバッチ16ではvLLMがAda-MKより3.5%高い生成スループットを示す。長めの文脈と高い同時実行度では、vLLMのスケジューリングやKV管理などシステム水準の最適化がメガカーネル融合の利得を上回り得る。"},
-      {"name": "オンライン遅延の制御比較がない", "description": "評価はオフラインバッチモードで要求到着を固定しており、商用広告系で重要なP99遅延や動的到着下のサービス品質目標を比較していない。"},
-      {"name": "ハードウェアとモデル範囲が狭い", "description": "単一L20とQwen3-1.7B/Qwen2.5-1.5BのGPTQ-W4A16だけを評価し、より大きなモデルやBlackwellなど他世代GPUへの一般化は今後の課題としている。"},
-      {"name": "固定配備条件への依存", "description": "実行時分岐を消す代わりに、モデル形状・GPU・代表ワークロードが変わればオフライン探索と再コンパイルが必要になる。適応性をオンラインではなく配備時へ移した設計である。"}
-    ],
-    "interpretation": "改善幅はメガカーネルが常に汎用サービング系を上回るという意味ではない。固定短系列・小バッチではカーネル起動とHBM往復が相対的に大きいためAda-MKの融合が強く効く。系列が長く同時要求が増えると、各演算の実時間やKV管理・スケジューリングの比率が上がり、vLLM/SGLangとの差は縮小し一部で逆転する。したがってAda-MKは、低遅延の固定配備へコンパイル時特化を持ち込む設計として評価すべきで、汎用オンラインサービング全体を置き換える結果ではない。",
-    "quality_impact": "GPTQ-W4A16という同一量子化済みモデルの演算順序・融合・データ移動を変更するだけで、追加の近似や枝刈りによるモデル品質低下は導入しない。論文の主要評価は性能であり、生成品質を詳細に再測定してはいないため、品質影響は演算意味を保持する実装設計に基づく。"
-  },
+  "attempt_id": "attempt-6da68fcbb653c16e9efc63d4",
+  "job_id": "job-research-5ae336587be983aa",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c67b456d5eaef96f80779516",
+    "claim_id": "claim-6da68fcbb653c16e9efc63d4",
     "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
     "worker_kind": "scheduled_chat"
   }
