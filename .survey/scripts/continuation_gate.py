@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Deterministic stop/continue gate for the Scheduled Chat survey worker.
 
-The gate decides only whether the whole run may stop. Transport backlogs and
-job-local failures are not stop conditions when independent work can continue
-and required state can be durably checkpointed in GitHub or ChatGPT Library.
+The gate decides only whether the whole run may stop. Transport backlogs,
+claim-result propagation delay, and job-local failures are not stop conditions
+when the repository state remains readable and no explicit hard condition holds.
 """
 from __future__ import annotations
 
@@ -45,7 +45,13 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         or args.spillover_work
         or (args.can_discover and any_durable_transport)
     )
-    if args.global_dependency and not independent_work:
+
+    # A freshly written claim request whose matching result has not propagated
+    # yet is a transient synchronization state, not proof that all remaining
+    # work is globally blocked. Keep the run alive so the same request/result
+    # pair can be re-read. A second claim request must not be issued meanwhile.
+    transient_claim_wait = bool(args.claim_result_pending and args.github_read)
+    if args.global_dependency and not independent_work and not transient_claim_wait:
         reasons.append("all_remaining_work_blocked_after_fallback_consideration")
 
     decision = "STOP_RUN" if reasons else "CONTINUE"
@@ -66,15 +72,24 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
             write_scope = "unclassified"
             write_action = "run_fixed_health_probe_once_before_classifying"
 
+    claim_wait_action = "none"
+    if transient_claim_wait:
+        claim_wait_action = (
+            "keep_same_request_id; do_not_issue_another_claim; refresh_latest_head_and_"
+            "matching_claim_result; if_available_check_survey_claim_fast_until_terminal"
+        )
+
     return {
         "decision": decision,
         "stop_reasons": reasons,
         "write_failure_scope": write_scope,
         "write_action": write_action,
+        "claim_result_pending": bool(args.claim_result_pending),
+        "claim_wait_action": claim_wait_action,
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
-        "rule": "A single transport failure, pending backlog, or bank exhaustion is never by itself a whole-run stop condition.",
+        "rule": "A single transport failure, pending claim result, pending backlog, or bank exhaustion is never by itself a whole-run stop condition.",
     }
 
 
@@ -92,6 +107,7 @@ def main() -> int:
     ap.add_argument("--independent-work", type=yn, default=True)
     ap.add_argument("--spillover-work", type=yn, default=False)
     ap.add_argument("--can-discover", type=yn, default=True)
+    ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
     args = ap.parse_args()
