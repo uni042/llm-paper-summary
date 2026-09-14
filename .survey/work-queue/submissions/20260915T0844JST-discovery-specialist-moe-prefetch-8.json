@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-18b34945adc3866a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.10493",
+      "title": "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+      "source_url": "https://arxiv.org/abs/2606.10493",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2606.10493-cloud-grade-local-moe-cpu-gpu-hybrid.md",
+      "priority": 88,
+      "reason": "大規模MoEをdual-socket CPUとconsumer GPUで元精度のまま動かし、長いprefill、decode、混在concurrencyのSLOを同時に満たすCPU-GPU hybrid systemを提案する。stream-loading prefillで1,200 tokens/s、2×RTX 5090のdistributed SLPで1,800 tokens/s、zero-copy shared weightsとdual-batch attention-MoE overlapで混在時のlatency増を15%未満に抑えつつthroughputを50%向上し、AVX-512 FP8 GEMVでCPU latencyを4〜5倍削減する。INT4 DeepSeek-V3で28 tokens/s、intact FP8 V3で21.5 tokens/sを達成し、OSDI '26採択済み。expert weight streaming・CPU/GPU offload・overlap schedulingを一体化しており重点テーマとの適合度が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2605.02960",
+      "title": "MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving",
+      "source_url": "https://arxiv.org/abs/2605.02960",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2605.02960-moe-prefill-async-expert-weight-streaming.md",
+      "priority": 85,
+      "reason": "prefill-onlyの分類・推薦・検証workloadでは長いcompute windowを利用してexpert weightを非同期streamingできる点に着目し、activation AllToAllの代わりにexpert weight AllGatherを計算と完全重畳するAsyncEPを提案する。prefix-aware routingとtrue-FLOPs load trackingで飽和閾値も制御し、Qwen3-235B-A22Bの4 hardware/precision構成で最強distributed baseline比1.35〜1.37倍、long-context syntheticで最大1.59倍のthroughput、29.8〜36.2%のper-GPU model FLOPs utilizationを報告する。expert placementとcommunicationをprefill特性に合わせて再設計するためMoE serving系統で比較価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-moe-prefetch-8",
+    "axis": "MoE expert weight streaming・CPU/GPU hybrid・prefill通信重畳",
+    "query_summary": "KV階層からMoE expert cache/offload軸へ移動し、consumer CPU-GPUでのexpert streaming（arXiv:2606.10493）とprefill-onlyでのasynchronous expert weight gathering（arXiv:2605.02960）を一次arXivで軽量評価した。最新identityのexpert-offloading/serving関連lineageで両IDが見当たらず、identity-delta一覧にも対応IDが存在しないことを確認した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はexpert prefetch predictor・routing locality・CPU/SSD expert cacheに軸をずらし、既存CoX/FlashMoE等との差分が大きい候補だけを評価する。",
+    "empty_round_reason": null
+  }
+}
