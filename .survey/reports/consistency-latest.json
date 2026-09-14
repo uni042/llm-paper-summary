@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "post-maintenance-working-tree",
-  "checked_at": "2026-09-14T00:35:56.552224+00:00",
-  "status": "issues_found",
+  "source_commit": "citation-backfill-working-tree",
+  "checked_at": "2026-09-14T00:47:01.191024+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 2806,
-  "checked_file_count": 2806,
+  "inventory_file_count": 2808,
+  "checked_file_count": 2808,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,31 +26,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 387,
-  "findings": [
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/06-speculative-decoding/2026-2604.20503-faser-fine-grained-phase-management.md",
-      "detail": "code"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md",
-      "detail": "code"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.13111-iserve-intent-based-llm-serving.md",
-      "detail": "code"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md",
-      "detail": "code"
-    },
-    {
-      "code": "paper_missing_metadata",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22206-chimera-latency-performance-aware-multi-agent-serving.md",
-      "detail": "code"
-    }
-  ]
+  "findings": []
 }
