@@ -1,0 +1,51 @@
+name: Temporary patch status normal run selection
+
+on:
+  push:
+    branches:
+      - fix/status-normal-run-selection-20260914
+    paths:
+      - '.github/workflows/tmp-patch-status-normal-run.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/status-normal-run-selection-20260914
+          fetch-depth: 0
+      - name: Apply focused dashboard fix
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('.survey/scripts/build_status_dashboard.py')
+          text = path.read_text(encoding='utf-8')
+
+          marker = '''def _in_window(item: dict[str, Any], cutoff: datetime, now: datetime) -> bool:\n'''
+          helper = '''def _is_ordinary_research_run(entry: dict[str, Any], maintenance: dict[str, Any]) -> bool:\n    \"\"\"Return whether a ledger entry represents an ordinary :30 paper-worker run.\"\"\"\n    stamp = _parse_dt(entry.get(\"run_key\") or entry.get(\"last_recorded_at\"))\n    if stamp is None:\n        return False\n    jst = stamp.astimezone(JST)\n    if jst.minute != 30 or jst.hour == 8:\n        return False\n    if int(maintenance.get(\"runs_since_maintenance\") or 0) == 0:\n        maintenance_key = str(maintenance.get(\"last_counted_run_key\") or \"\")\n        if maintenance_key and str(entry.get(\"run_key\") or \"\") == maintenance_key:\n            return False\n    return True\n\n\ndef _latest_normal_run(entries: list[dict[str, Any]], maintenance: dict[str, Any]) -> dict[str, Any]:\n    valid = [entry for entry in entries if _is_ordinary_research_run(entry, maintenance)]\n    if not valid:\n        return {}\n    return max(\n        valid,\n        key=lambda entry: _parse_dt(entry.get(\"run_key\") or entry.get(\"last_recorded_at\"))\n        or datetime.min.replace(tzinfo=timezone.utc),\n    )\n\n\n'''
+          if helper not in text:
+              if marker not in text:
+                  raise SystemExit('helper insertion marker not found')
+              text = text.replace(marker, helper + marker, 1)
+
+          old = '    latest_run = ledger_entries[-1] if ledger_entries else {}\n'
+          new = '    latest_run = _latest_normal_run(ledger_entries, maintenance)\n'
+          if old not in text:
+              raise SystemExit('latest_run selection target not found')
+          text = text.replace(old, new, 1)
+          path.write_text(text, encoding='utf-8')
+          PY
+          python -m py_compile .survey/scripts/build_status_dashboard.py
+          python -m unittest .survey/tests/test_status_dashboard_normal_slot.py
+          rm .github/workflows/tmp-patch-status-normal-run.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'fix: exclude dedicated slots from latest normal worker'
+          git push origin HEAD:fix/status-normal-run-selection-20260914
