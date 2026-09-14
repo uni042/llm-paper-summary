@@ -66,12 +66,8 @@ def _is_ordinary_research_run(entry: dict[str, Any], maintenance: dict[str, Any]
     jst = stamp.astimezone(JST)
     if jst.minute != 30:
         return False
-    # 08:30 is always routed away from the ordinary paper worker: maintenance
-    # gate wins first, otherwise the dedicated framework/model update worker runs.
     if jst.hour == 8:
         return False
-    # When the maintenance counter has just reset, last_counted_run_key is the
-    # maintenance slot until the next counted ordinary run advances it.
     if int(maintenance.get("runs_since_maintenance") or 0) == 0:
         maintenance_key = str(maintenance.get("last_counted_run_key") or "")
         if maintenance_key and str(entry.get("run_key") or "") == maintenance_key:
@@ -126,7 +122,10 @@ def _worker_lane(worker_id: Any) -> str:
     value = str(worker_id or "").lower()
     if not value:
         return "unknown"
-    if "aux" in value or "specialist" in value:
+    # The :00 discovery worker may stay alive well past the hour while working
+    # overflow Research. Its historical ids contain "discovery-router", so this
+    # check must precede the generic "router" fallback below.
+    if "discovery" in value or "aux" in value or "specialist" in value:
         return "aux"
     if "scheduled-chat-llm-survey" in value:
         return "normal"
@@ -149,7 +148,7 @@ def _slot_from_claim_time(claim: dict[str, Any], lane: str) -> datetime | None:
     if lane == "normal":
         if local.minute >= 30:
             return local.replace(minute=30, second=0, microsecond=0)
-        return (local.replace(minute=30, second=0, microsecond=0) - timedelta(hours=1))
+        return local.replace(minute=30, second=0, microsecond=0) - timedelta(hours=1)
     if lane == "aux":
         return local.replace(minute=0, second=0, microsecond=0)
     return None
@@ -166,10 +165,6 @@ def _claim_run_key(claim: dict[str, Any]) -> str | None:
             return None
         return local.isoformat(timespec="seconds")
 
-    # Older claims used generic worker ids such as `scheduled-chat-llm-survey`.
-    # Recover their Scheduled Chat slot from claimed_at instead of losing the
-    # completion to the unknown bucket. Use claim creation time rather than a
-    # later heartbeat so a long-running job stays attached to its origin run.
     lane = _worker_lane(worker_id)
     local = _slot_from_claim_time(claim, lane)
     return local.isoformat(timespec="seconds") if local is not None else None
