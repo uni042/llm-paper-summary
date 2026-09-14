@@ -1,109 +1,13 @@
 {
   "schema_version": 1,
   "transport_version": 10,
-  "attempt_id": "attempt-af9e6bd43b53482767542e62",
-  "job_id": "job-research-5b0daef0009e72b2",
   "slot": "metadata",
-  "data": {
-    "canonical_id": "arXiv:2607.08930",
-    "arxiv_id": "2607.08930",
-    "doi": null,
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.LG",
-      "cross_list": []
-    },
-    "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
-    "summary": "BlockServeは、拡散型大規模言語モデルで同一バッチ内の要求が異なる速さで収束し、完了済み要求が最遅要求に引きずられてGPU枠を占有し続ける収束異質性を扱う。提案手法は生成を固定長ブロック単位のスケジューリング量子として扱い、各ブロック境界で完了要求を即時除去して空きを補充する。異なるブロック位置にいる要求を同一密テンソルで進めるため、論理位置合わせとgather/scatterによる混在状態メモリ管理を導入し、Dual Cacheと並列デコードを異質バッチへ拡張する。さらに固定バッチ数ではなく実際に物理化するトークン境界箱の予算で新規要求を投入する。単一H200上のDreamとLLaDA、5ベンチマークでFast-dLLM比1.9〜10.6倍のスループットを示し、同一ハードウェアで安全な実効バッチ容量を2〜4倍へ拡大しながら概ね同等の生成品質を維持する。",
-    "list_summary": "拡散型LLMの要求ごとの収束速度差を、ブロック境界での即時evict・異なる拡散状態の混在実行・トークン予算補充で吸収する連続バッチング。Dream/LLaDAでFast-dLLM比1.9〜10.6倍のスループットを報告。",
-    "authors": [
-      "Yuanjie Zhu",
-      "Liangwei Yang",
-      "Ke Xu",
-      "Weizhi Zhang",
-      "Shanghao Li",
-      "Zihe Song",
-      "Philip S. Yu"
-    ],
-    "authors_affiliations": "University of Illinois Chicago（イリノイ大学シカゴ校）。",
-    "published": "2026-07-09",
-    "publication": "arXiv:2607.08930v1",
-    "publication_type": "プレプリント",
-    "publication_status": "2026-07-09にarXiv v1公開。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "拡散型大規模言語モデル",
-      "連続バッチング",
-      "ブロック単位スケジューリング",
-      "混在状態実行",
-      "トークン予算",
-      "KVキャッシュ",
-      "H200"
-    ],
-    "importance": "高。自己回帰型のトークン単位連続バッチングをそのまま適用できない拡散型LLMに対し、ブロックを新しいスケジューリング単位として定義し、完了時刻の異質性をサービング層で直接吸収する。",
-    "hardware_evaluation": "NVIDIA H200 141GB HBM3e単一GPU上でDream-v0-Instruct-7BとLLaDA-8B-Instructを実測。",
-    "hardware_details": "単一NVIDIA H200 141GB HBM3e、bfloat16。既定ブロック長32、各ブロック32 denoising steps、temperature=0、固定seed。",
-    "quality_effect": "基礎モデル構造を変更せず、Fast-dLLMのDual Cacheと並列デコードを共通に有効化した上でスケジューリング差を比較する。多くの条件で精度は概ね同等だが、ブロック長64では一部タスクで精度低下が大きくなる。",
-    "storage_targets": [
-      "拡散型LLMのprefix/KV状態",
-      "要求ごとの現在ブロック領域",
-      "混在状態バッチの密テンソル境界箱",
-      "gather/scatter対象の物理オフセット"
-    ],
-    "bottlenecks": [
-      "異なる要求の収束速度差によるstraggler",
-      "完了要求が固定バッチ枠を占有する計算空洞",
-      "異なるブロック位置を同一バッチで扱う位置・KV整合性",
-      "固定最大長に基づくメモリ予約とpadding浪費"
-    ],
-    "evidence_locations": [
-      "§I",
-      "§II-B〜E",
-      "§III-A〜F",
-      "Table II〜VII",
-      "§V"
-    ],
-    "source": "https://arxiv.org/abs/2607.08930",
-    "sources": [
-      "https://arxiv.org/abs/2607.08930",
-      "https://arxiv.org/html/2607.08930"
-    ],
-    "code": null,
-    "implementation": "著者はBlockServeと比較方式をH200上で実装して評価しているが、arXiv本文から公式コード公開URLは確認できない。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.08671",
-        "arxiv_id": "2401.08671"
-      },
-      {
-        "canonical_id": "arXiv:2502.09992",
-        "arxiv_id": "2502.09992"
-      },
-      {
-        "canonical_id": "arXiv:2508.15487",
-        "arxiv_id": "2508.15487"
-      },
-      {
-        "canonical_id": "arXiv:2505.22618",
-        "arxiv_id": "2505.22618"
-      },
-      {
-        "canonical_id": "arXiv:2308.16369",
-        "arxiv_id": "2308.16369"
-      },
-      {
-        "canonical_id": "arXiv:2512.17077",
-        "arxiv_id": "2512.17077"
-      }
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML版参考文献節。全21件を確認し、明示されたarXiv識別子のうち主要6件を構造化。",
-    "references_total": 21
-  },
+  "attempt_id": "attempt-c578b7c423835dbc9202ea64",
+  "job_id": "job-research-420858d196a868b6",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-af9e6bd43b53482767542e62",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "claim_id": "claim-c578b7c423835dbc9202ea64",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }
