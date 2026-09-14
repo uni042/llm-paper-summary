@@ -2,19 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-d2d80a73c2ad0868ec6ffcf5",
-  "job_id": "job-research-60c04e3a8b0d8caf",
-  "data": {
-    "limitations": "評価はApple M4 Pro 24GBの1台だけで、複数GPU、PCIe接続の離散GPU、ネットワーク共有ストレージ、複数端末間のKV転送を実測していない。3モデルまでで70B級以上は未評価である。Q4品質は512トークン窓に限られ、長文での累積誤差、層別感度、信頼区間がない。出力を64トークンへ固定した主要TTFT評価はプリフィル比率が高く、長い生成では全体高速化率が小さくなる。MLXのスレッド非安全性から推論は単一スケジューラスレッドの時分割であり、CPU/GPUをまたぐ真の並列エージェント実行ではない。KVはモデルと量子化方式に依存するためモデル更新で無効化される。SSD書込み耐久性、暗号化、破損回復など長期運用の論点も主要評価外である。",
-    "differences": "vLLMやSGLangは主にGPU/CPUメモリ上でページや共有接頭辞を再利用するが、再起動や容量超過後のSSD永続復元を主目的にしない。vllm-mlxはApple SiliconでFP16接頭辞キャッシュと連続バッチ処理を提供するがディスクへ永続化しない。llama.cppにはスロット保存・復元や量子化機構があるものの、本方式は自動的な複数エージェント用ブロックプール、量子化KVのバッチ実行、フェーズ間作業記憶を一つの運用経路へ統合する。LMCacheのような階層KV技術とは対象が近いが、本研究は固定統合メモリのエッジ端末、エージェント分離、再起動耐性へ焦点を置く。",
-    "implementation_status": "著者公開の `yshk-mxim/agent-memory` が存在し、MITライセンスでOpenAI互換API、永続Q4 safetensors、ブロックプール、量子化KVバッチ、ベンチマーク群を含む。論文は同実装を用いて1,132件の主要測定と36件のずらし到着試験を行っている。MLX/Apple Silicon向けの具体的な実装であり、CUDA環境へそのまま移植できるとは確認されていない。",
-    "research_positioning": "本研究はKVキャッシュ圧縮だけでなく、SSDを注意状態の永続階層として使うエッジ推論システムに位置づく。階層メモリ研究の観点では、GPUまたは統合メモリ上のKVを捨てるか保持するかの二択ではなく、エージェントIDとプロンプト接頭辞を鍵にSSDへページアウトし、再プリフィルという計算を避けて戻す具体例である。特にQ4へ統一することでI/O量と容量を同時に削減し、順次SSD読込が一部の短文脈で散在メモリアクセスより速いという実測も示す。一方、専用I/Oスケジューリング、完全非同期プリフェッチ、SSD帯域共有、将来アクセス予測は未発展であり、既存の階層KV・プリフェッチ研究を組み合わせる余地が大きい。",
-    "relation_to_existing_repository": "リポジトリのKVキャッシュオフロード・再計算回避・階層メモリ系統に直接属する。重みや専門家をSSDへ退避する研究と異なり、ここではユーザー・エージェント固有の注意状態を永続化対象にするため、再利用価値、プライバシー、書込み頻度、文脈寿命が異なる。今後はKVの再利用確率と再計算費用からRAM/SSD/破棄を選ぶ価値ベース配置、複数NVMeへの帯域分散、GPU Direct Storage相当の転送経路、生成中エージェントを利用した先読みを組み合わせる比較対象として有用である。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-ddaa9f60a004a664b188d7a2",
+  "job_id": "job-research-3ae94af47a718bbb",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-d2d80a73c2ad0868ec6ffcf5",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "claim_id": "claim-ddaa9f60a004a664b188d7a2",
+    "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
 }

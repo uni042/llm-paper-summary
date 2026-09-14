@@ -2,22 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-edf8d212a130f009043d0d16",
-  "job_id": "job-research-420858d196a868b6",
-  "data": {
-    "overview": "4ベンチマークでは、StreamServeはテンソル並列vLLMに対して遅延を11.3〜18.0倍短縮し、ALPACAを除く3種類ではスループットも上回る。4種類平均では814 tokens/s、0.275秒で、テンソル並列vLLMの237 tokens/s、3.53秒に対して平均4.4倍のスループット、15.75倍の遅延改善を報告する。アブレーションでは分離実行、FlowGuard、SpecuStreamのいずれを外しても性能が低下し、著者は相互作用が単純加算以上だと解釈している。",
-    "key_results": [
-      {"metric":"ALPACAの遅延とスループット","value":"137 tokens/s、0.30秒；遅延11.3倍短縮","baseline":"TP-vLLM 171 tokens/s、3.40秒","condition":"LLaMA-2-7B、A800×4、ALPACA 80要求"},
-      {"metric":"GSM8Kの遅延とスループット","value":"264 tokens/s、0.30秒；スループット9.5%向上、遅延11.7倍短縮","baseline":"TP-vLLM 241 tokens/s、3.50秒","condition":"LLaMA-2-7B、A800×4、GSM8K 80要求"},
-      {"metric":"HUMANEVALの遅延とスループット","value":"639 tokens/s、0.20秒；約3.0倍のスループット、遅延18.0倍短縮","baseline":"TP-vLLM 210 tokens/s、3.60秒","condition":"LLaMA-2-7B、A800×4、HUMANEVAL 80要求"},
-      {"metric":"SUMの遅延とスループット","value":"2235 tokens/s、0.30秒；6.8倍のスループット、遅延12.0倍短縮","baseline":"TP-vLLM 327 tokens/s、3.60秒","condition":"LLaMA-2-7B、A800×4、SUM 80要求"},
-      {"metric":"全データセットの遅延分布","value":"p50 0.24秒、p99 0.36秒","baseline":"TP-vLLM p50 3.44秒、p99 3.90秒；DP-vLLM p50 8.18秒、p99 9.32秒","condition":"4ベンチマーク合算の百分位比較"},
-      {"metric":"構成要素アブレーション","value":"完全版814 tokens/s、0.275秒；ラウンドロビン520、1.15秒；SpecuStreamなし310、2.45秒；単一エンジン290、3.52秒","baseline":"完全版StreamServeと各機構の除去・置換","condition":"4ベンチマーク平均"},
-      {"metric":"固定推測深さとの比較","value":"814 tokens/s、0.275秒；最良固定深さ比2.4倍のスループット、8.8倍の低遅延","baseline":"TP-vLLM + EAGLE系固定d=5: 342 tokens/s、2.41秒","condition":"d=3/5/7の固定推測とStreamServe適応推測の4ベンチマーク平均"}
-    ],
-    "negative_results": "ALPACAではStreamServeの137 tokens/sがTP-vLLMの171 tokens/sを下回り、短い出力では適応型推測の恩恵が十分でないことを示す。固定推測深さもd=7ではd=5より悪化し、深く推測すれば常に良いわけではない。標準P2Pへ置換すると平均遅延は0.275秒から0.45秒へ悪化するため、KV転送経路も性能に寄与する。",
-    "interpretation": "結果は、プリフィル／デコード分離だけでなく、混雑レーンを避ける配置と、負荷に応じた推測量調整を同時に使うと、単一ノードの小規模環境では待ち時間を大きく削減できることを示す。ただし比較対象のTP-vLLMは分離型ではなく、StreamServe側だけが推測デコードを含むため、11〜18倍という差をFlowGuardやSpecuStream単独の効果とはみなせない。既存の分離型システムとの直接比較が必要である。",
-    "quality_impact": "本文はTPOTがほぼ一定であることからトークン品質劣化がないと述べるが、TPOTは生成速度の尺度であり内容品質を測らない。GSM8K正解率、HumanEval pass@k、要約品質などを報告していないため、推測デコードが品質を保持したという主張は評価上未検証として扱う。"
-  },
-  "reservation": {"claim_id": "claim-edf8d212a130f009043d0d16", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-4b9a71ce575511cd9107babd",
+  "job_id": "job-research-706a6d2571f24fb8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4b9a71ce575511cd9107babd",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

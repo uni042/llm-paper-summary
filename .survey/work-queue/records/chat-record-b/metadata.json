@@ -2,108 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-edf8d212a130f009043d0d16",
-  "job_id": "job-research-420858d196a868b6",
-  "data": {
-    "canonical_id": "arXiv:2604.09562",
-    "arxiv_id": "2604.09562",
-    "doi": "10.48550/arXiv.2604.09562",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.AI"
-      ]
-    },
-    "title": "StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving",
-    "summary": "StreamServeは、LLM推論で入力処理（プリフィル）と逐次生成（デコード）を別GPUへ分離するだけでは、複数の計算レーンへ要求をどう振り分けるか、推測デコードの深さを変動負荷へどう合わせるかが静的なまま残る点を扱う。各要求はFlowGuardでキャッシュ再利用率、メモリ利用率、待ち行列長、実行中負荷をまとめて評価し、過負荷レーンを除外してプリフィルGPUへ送る。生成側ではSpecuStreamが直近の推測トークン受理率の変化、負荷、実測スループットを観測し、推測深さとマイクロバッチを要求ごとに調整する。プリフィル後のKVキャッシュはNIXLで対応するデコードGPUへ転送する。LLaMA-2-7Bを4台のA800 40GB上で2組のプリフィル／デコード対として評価し、テンソル並列vLLMに対して4ベンチマークで11〜18倍の遅延短縮、最大6.8倍のスループット向上を報告する。ただし評価は単一ノード320要求に限られ、DistServe、Sarathi-Serve、Mooncake等の分離型システムとの直接比較がなく、TPOTの安定だけでは生成品質保持を証明できない。",
-    "list_summary": "プリフィル／デコード分離に、キャッシュ・待ち行列・負荷を使うレーン選択と、受理率・負荷・スループットから推測深さを変える制御を統合し、4×A800環境でTP-vLLM比11〜18倍の遅延短縮を報告する。",
-    "authors": [
-      "Satyam Kumar",
-      "Arpit Singh Gautam",
-      "Kailash Talreja",
-      "Saurabh Jha"
-    ],
-    "authors_affiliations": "arXiv本文の著者欄では所属を確認できないため未確定。",
-    "published": "2026-02-11",
-    "publication": "arXiv:2604.09562v1",
-    "publication_type": "プレプリント",
-    "publication_status": "Preprint; arXiv v1",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": [
-      "プリフィル・デコード分離",
-      "適応型推測デコード",
-      "負荷認識ルーティング",
-      "KVキャッシュ転送",
-      "LLMサービング",
-      "NIXL"
-    ],
-    "importance": "中〜高。分離型サービングのルーティングと推測デコードを同じ実行時指標で閉ループ制御する設計は有用だが、比較対象と評価規模が限定的で、報告された大幅な倍率を既存の分離型システムに対する優位性としては解釈できない。",
-    "hardware_evaluation": "実機。NVIDIA A800 40GB GPU×4を単一ノード内で2組のプリフィル／デコード対として使用。",
-    "hardware_details": "4×NVIDIA A800 40GB、NVLink接続。GPU 0/2をプリフィル、GPU 1/3をデコードに割り当て、LLaMA-2-7BをFP16で評価する。",
-    "quality_effect": "推測デコードを用いるが、本文は生成品質の正解率、pass@k、分布一致などを直接評価していない。TPOTがほぼ一定であることを品質劣化がない根拠として述べるが、TPOTは速度指標であり品質指標ではないため、品質保持はこの評価からは確定できない。",
-    "storage_targets": [
-      "GPU上のKVキャッシュ",
-      "プリフィルGPUからデコードGPUへ移送するKV状態"
-    ],
-    "bottlenecks": [
-      "プリフィルとデコードの資源競合",
-      "複数レーン間の静的ルーティング",
-      "固定推測深さによる過剰・不足推測",
-      "待ち行列増大",
-      "KVキャッシュ転送",
-      "高負荷時のメモリ圧力"
-    ],
-    "evidence_locations": [
-      "§1 Introduction",
-      "§3.2 System Architecture Overview",
-      "§3.3 FlowGuard",
-      "§3.4 PipeServe-Engine",
-      "§3.5 SpecuStream",
-      "§4.1 Experimental Setup",
-      "§4.2–4.8 Results",
-      "§5 Ablation Study",
-      "Limitations & Threats to Validity",
-      "Tables 3–9"
-    ],
-    "source": "https://arxiv.org/abs/2604.09562",
-    "sources": [
-      "https://arxiv.org/abs/2604.09562",
-      "https://arxiv.org/html/2604.09562v1",
-      "https://arxiv.org/pdf/2604.09562"
-    ],
-    "code": "",
-    "implementation": "論文はFastAPI、vLLM系実行、NIXLによるGPU間KV転送を組み合わせた試作システムを説明する。arXivの論文ページと本文から、著者による公開コードのURLは確認できなかった。",
-    "last_checked": "2026-09-15",
-    "references": [
-      {
-        "canonical_id": "arXiv:2405.08691",
-        "arxiv_id": "2405.08691"
-      },
-      {
-        "canonical_id": "arXiv:2510.14392",
-        "arxiv_id": "2510.14392"
-      },
-      {
-        "canonical_id": "arXiv:2510.09665",
-        "arxiv_id": "2510.09665"
-      },
-      {
-        "canonical_id": "arXiv:2509.24328",
-        "arxiv_id": "2509.24328"
-      },
-      {
-        "canonical_id": "arXiv:2301.02001",
-        "arxiv_id": "2301.02001"
-      }
-    ],
-    "references_checked_at": "2026-09-15",
-    "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": 27
-  },
+  "attempt_id": "attempt-4b9a71ce575511cd9107babd",
+  "job_id": "job-research-706a6d2571f24fb8",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-edf8d212a130f009043d0d16",
-    "worker_id": "scheduled-chat-discovery-specialist",
+    "claim_id": "claim-4b9a71ce575511cd9107babd",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }
 }
