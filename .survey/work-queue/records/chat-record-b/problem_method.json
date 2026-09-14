@@ -4,10 +4,17 @@
   "slot": "problem_method",
   "attempt_id": "attempt-1c2c978dc673c6484d6228c8",
   "job_id": "job-research-b045bf747f93dbbe",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1c2c978dc673c6484d6228c8",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1030JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "エージェント型LLMでは、LLMが道具呼出しを生成し、その呼出しを外部実行し、結果を次のLLM入力へ戻す処理が直列に繰り返される。一次資料の実測では、単一sessionでも道具実行がend-to-end時間の45〜57%を占める。一方、同じagentやtask familyでは道具列に強い規則性があり、例えば成功したfile_editor呼出しの55%はterminal実行へ続き、web visitのURLの95%は直前search結果の厳密な部分文字列である。この規則性を使って次の道具を先に実行できるが、単に投機数を増やすと誤投機がCPU・network資源を浪費し、副作用のある呼出しは安全性を壊す。さらに道具処理だけを高速化すると、多数sessionが短時間にLLMへ戻るためGPU queueが膨らみ、制御実験では道具を2倍速くしただけで高負荷時のend-to-end latencyが悪化する。したがって、予測、安全な投機、CPU/外部道具資源、GPU推論負荷を共同制御する必要がある。",
+    "novelty": "PASTEの中心は、次の道具名だけでなく『実行可能な具体的呼出し』を過去のworkflow patternから予測し、LLM生成と同時に走らせることである。Pattern Analyzerは道具eventの列だけでなくargument payload間の写像を学び、直前search結果のURLや過去file pathなど既に確定している値をlate bindingして次のargumentを構成する。Tool Speculation Schedulerは予測confidence、期待される露出遅延削減、投機予算、安全性policyを満たす候補だけを実行し、結果は権威的LLM呼出しが一致するまで隔離する。さらにLLM–Tool Co-Schedulerは、投機道具を早く終わらせる価値と、それによってsessionがGPUへ戻った際に生じるLLM queue/KV圧力を同じpriorityへ入れ、道具側の局所最速化が全体を悪化させる現象を抑える。",
+    "method_overview": "オフライン・継続学習側では、agent実行履歴をevent signatureとargument payloadへ正規化し、直前数eventのsuffixから次に現れる道具呼出しを数える。繰り返し現れるcontextについて、次道具のempirical confidenceが閾値を超えるpatternだけを保持し、引数については過去payloadのどのfield、substring、定数から生成されたかを推定してargument mappingを付与する。オンラインでは現在sessionのevent suffixをpattern tableへ照合し、現在までに観測済みのpayloadから具体的argumentを組み立てられる候補だけを投機対象にする。Schedulerは候補ごとにconfidence、予測される道具時間、resource budget、policy safetyを確認し、権威的な道具呼出しより低いpriorityでCPUや外部serviceへdispatchする。投機結果はsession本体から隔離し、LLMが同一toolと同一argumentを正式に出した時だけ既完了結果を即時返す。まだ実行中なら投機処理を昇格し、不一致なら破棄または低priorityのまま終了させる。副作用のあるtoolはdry-run、staging、non-mutating variantなどcommitを伴わない安全経路が存在する時だけ投機する。次にLLM–Tool Co-Schedulerが全sessionを見て、各投機候補のExposedToolGainを、現在のdecode loadとKV loadから作るLLMPressureで割り、starvation防止のagingを加えてpriorityを作る。tool完了によりGPUへ戻るsessionが多過ぎるとLLMPressureが上がり、投機toolの優先度を下げる。LLM側でもready turnを即座にすべて投入せず、engine pressureが所定帯域へ収まるようpre-engine admissionとin-engine load shapingを行う。これによりtoolとLLMを別々に最適化せず、片方の高速化が他方のqueueを悪化させない閉ループ制御を行う。",
+    "components": [
+      {"name":"Pattern Analyzer","description":"履歴中のtool sequenceをevent signatureへ正規化し、直近contextごとに次のtool出現頻度を数えて経験的confidenceを持つpatternを抽出する。tool名だけでは実行できないため、argument payload間のデータ依存も解析する。例えば直前search結果のURL一覧から後続web visitのURLが選ばれる場合、固定文字列ではなく『直前payload中の該当fieldを参照する』写像として保存する。オンラインでは現在suffixに一致するpatternだけを候補化し、必要なargument sourceがすでに観測済みなら具体的なinvocationを構築する。予測不能な未来LLM textへ依存する引数は投機しないため、単純な次tool分類器より実行可能性を重視する。"},
+      {"name":"Tool Speculation Scheduler","description":"予測候補を無制限に起動せず、confidence、期待tool latency、現在の資源予算、policy safetyを使って投機価値を判定する。権威的なtool callは常に高priority、投機処理は低priority・preemptibleとして扱い、CPU coreや外部API容量を通常処理から奪い過ぎない。投機結果は正式callと照合するまで隔離され、同一tool・同一argumentならcompleted resultを再利用し、実行中ならauthoritativeへpromoteする。不一致なら結果をsessionへ露出しない。file更新や送信など副作用を伴うtoolは、dry-runやstaging、read-only equivalentがある場合だけ投機し、commit phaseは正式call確認後まで禁止する。"},
+      {"name":"LLM–Tool Co-Scheduler","description":"tool側だけを高速化するとready LLM turnが一斉に増えGPU queueが悪化するため、sessionごとのtool gainをGPU側pressureで正規化する。ExposedToolGainは今そのtoolを先に終わらせると隠せる待ち時間を表し、LLMPressureはdecode loadとKV cache負荷を組み合わせる。priorityにはagingも加えて低priority taskのstarvationを防ぐ。GPUが空いている時は価値の高いtool投機を積極化し、GPUが混雑している時はtool完了を意図的に平準化する。さらにready LLM turnのadmissionとengine内順序もpressure bandに合わせ、tool→LLM帰還burstを抑える。これによりCPU/外部serviceとGPUを別queueとして独立運用するのではなく、agent workflow全体の完了時間を目的に共同制御する。"},
+      {"name":"安全な投機結果再利用","description":"PASTEはLLM出力を予測値で置き換えるのではなく、正式なLLM callを真実のsourceとして残す。投機toolは別contextで実行し、その結果をまだagent stateへcommitしない。正式な呼出しが予測と一致した場合のみ結果を公開するため、予測が外れてもagentの論理実行はbaselineと同じになる。副作用toolはcommit barrierを持ち、潜在的に状態を書き換える602件の投機actionを評価中すべてcommit前に遮断した。これにより、投機的復号のaccept/rejectと類似した『一致時だけ高速経路を採用する』意味保存をtool executionへ拡張している。"}
+    ],
+    "system_design": "PASTEはagentとtool endpointの間にmiddleware/proxyとして入り、event履歴、pattern table、投機状態、tool resource budgetを管理する。LLM worker側はvLLM本体を改変せず起動hookからready turnのadmission/orderを調整する。agent側は約5,000行TypeScript、LLM側は約2,000行Pythonで、gemini-cli、Qwen Deep Research、VirtualLabにはdispatch wrapperを追加する。tool実行・LLM実行の完了eventを一つのschedulerへ戻し、現在のCPU/tool資源とGPU pressureを継続更新する。"
+  },
+  "reservation": {"claim_id":"claim-1c2c978dc673c6484d6228c8","worker_id":"scheduled-chat-llm-survey-20260914T1030JST","worker_kind":"scheduled_chat"}
 }
