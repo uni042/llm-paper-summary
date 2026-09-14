@@ -2,71 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
-  "job_id": "job-research-2dbab0db43ceff0b",
-  "data": {
-    "overview": "AgentServeは二世代の民生GPUと三モデルで、長い初回プリフィルをデコードから隔離しつつ、短い再開プリフィルだけを動的予算内で混ぜることで、末尾遅延を抑えながらスループットも維持した。最大改善値はllama.cpp比でTTFT 2.8倍、TPOT 2.7倍であり、vLLMやSGLangに対しても一貫した改善を報告する。A5000のように資源が限られたGPUほどプリフィルとデコードの競合が強いため相対効果が大きい。要素除去評価ではTPOTフィードバック制御とCUDAグリーンコンテキストによる資源隔離のどちらを外しても末尾遅延が悪化し、要求受付制御とGPU内部資源制御の両方が必要であることを示した。",
-    "key_results": [
-      {
-        "metric": "TTFT",
-        "value": "SGLang比で中央値1.1〜1.3倍高速、95パーセンタイル最大1.3倍改善。vLLM比1.5〜1.8倍、llama.cpp比では高負荷時に最大2.8倍高速",
-        "baseline": "SGLang / vLLM / llama.cpp",
-        "condition": "Qwen2.5-3B/7B・LLaMA-3-8B、RTX A5000/5090、同時エージェント3〜6個",
-        "interpretation": "長いプリフィルをデコードと資源分離し、デコード用SM下限を守ることで、新規要求の先頭トークン待ちと末尾悪化を抑える。"
-      },
-      {
-        "metric": "TPOT",
-        "value": "中央値はSGLang比約1.1〜1.2倍、vLLM比1.3〜1.8倍、llama.cpp比1.5倍超。95パーセンタイルはSGLang比最大1.3倍、vLLM比約2.0倍、llama.cpp比最大2.7倍改善",
-        "baseline": "SGLang / vLLM / llama.cpp",
-        "condition": "同一モデル・装置・処理条件",
-        "interpretation": "短いデコードが大きなプリフィルカーネルに計算資源を奪われる状況を、SM隔離とTPOTフィードバックで抑えてトークン出力間隔を安定化する。"
-      },
-      {
-        "metric": "合計出力スループット",
-        "value": "高同時実行時にvLLM比1.2〜1.5倍、SGLang比1.3〜1.5倍、llama.cpp比最大2.0〜2.2倍",
-        "baseline": "SGLang / vLLM / llama.cpp",
-        "condition": "全モデル・装置の組合せ",
-        "interpretation": "デコード保護を強めてもプリフィルを完全停止せず、余剰SMと短い再開プリフィルを利用することで遅延とスループットの両立を改善する。"
-      },
-      {
-        "metric": "セッション単位SLO達成率",
-        "value": "RTX 5090では評価した範囲でほぼ全セッションが達成。RTX A5000でも各比較対象より高く、LLaMA-3-8B/A5000では比較対象が同時実行4超で急落する一方、AgentServeは6エージェントまで安定",
-        "baseline": "SGLang / vLLM / llama.cpp",
-        "condition": "TTFTとTPOTの両閾値を同時に満たすセッションを成功と定義",
-        "interpretation": "個別要求の平均遅延だけでなく、複数段からなるエージェントセッション全体の対話SLOへ効果が波及する。"
-      },
-      {
-        "metric": "資源認識制御を外す要素除去",
-        "value": "95パーセンタイルTTFTが15〜25%増加し、Qwen系でTPOTの95パーセンタイルが最大1.4倍悪化",
-        "baseline": "完全なAgentServe",
-        "condition": "同時エージェント4個、動的フィードバックを無効化して静的SM分割",
-        "interpretation": "CUDAグリーンコンテキストだけでは負荷変動へ追従できず、TPOTに基づく要求受付と資源量の動的制御が必要である。"
-      },
-      {
-        "metric": "CUDAグリーンコンテキストを外す要素除去",
-        "value": "TTFTの突発的悪化が増え、TPOT分散が20〜30%増加。LLaMA-3-8B/A5000ではTTFTが500〜1000ms、TPOTが5〜10ms増加",
-        "baseline": "完全なAgentServe",
-        "condition": "同時エージェント4個、事前生成したGPU内資源隔離を除去",
-        "interpretation": "CPU側スケジューラだけでなく、GPU内部で最低SM量を確保する空間隔離がデコードの資源枯渇防止に必要である。"
-      },
-      {
-        "metric": "CUDAグリーンコンテキスト切替費用",
-        "value": "1回50マイクロ秒未満、典型的なデコードバッチ遅延の0.1%未満",
-        "baseline": "実行時生成を避けた事前生成済み資源枠の切替",
-        "condition": "10%刻みで事前作成した10個の資源枠の間を切替",
-        "interpretation": "細粒度なGPU資源制御を行っても、制御経路の追加費用は十分小さい。"
-      },
-      {
-        "metric": "エージェント各相のトークン長",
-        "value": "初回プリフィル2.5k〜3.5kトークン。ReActの再開プリフィル30〜127（平均56）、Plan-and-Executeは125〜421（平均251）。デコードは概ね数十〜100余トークン",
-        "baseline": "処理特性の観測",
-        "condition": "Qwen2.5-3B/7B、LLaMA-3-8B",
-        "interpretation": "長い初回プリフィル、頻繁な短い再開プリフィル、短いデコードという三相分解が複数モデルで成立することを確認する。"
-      }
-    ],
-    "negative_results": "AgentServeはクラウド規模の一般エージェントサービングを万能に高速化する方式ではない。対象は3〜8B級モデルを単一の民生GPUで動かすローカルなツール利用セッションであり、非常に長いコーディング・推論処理や複数GPUクラスタは評価していない。RTX 5090では資源余裕が大きいためA5000より相対改善が小さい場面があり、プリフィルとデコードの競合が弱い環境ではGPU内空間分割の利点も縮む。10%刻みの離散SM割当には粒度損失があり、フィードバック制御には有限の反応遅れと予約量の行き過ぎが残る。",
-    "interpretation": "効果の本質はプリフィルを単に小分けすることではなく、エージェント処理の相情報を使って長い初回プリフィルを強く隔離し、短い再開プリフィルだけをデコード遅延に応じて可変的に混ぜる点にある。さらにCPU側スケジューラの意図をCUDAグリーンコンテキストによるSM空間隔離へ落とし込むため、単一エンジンのままでもデコードの最低進行速度を守れる。A5000で改善幅が大きいことから、特に資源制約の強い端末・ローカル運用で価値が高い。",
-    "quality_impact": "モデル重み、注意計算、サンプリング規則は変更せず、サービング順序、要求受付、SM分割を変えるシステム最適化である。論文は生成正答率やタスク品質の改善を評価しておらず、品質への直接影響は基本的に中立と位置付けられる。正しさの面では共有KVメモリ領域でプリフィル完了後のみ対象領域を読出し可能にし、CPU側の排他制御とCUDAイベントで書込み途中のKVをデコードが読むことを防ぐ。"
-  },
-  "reservation": {"claim_id":"claim-a01b04d19277b6518b2161b4","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
+  "job_id": "job-research-0d6791ec792101b0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4d3ef5ca344439ed99771c72",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

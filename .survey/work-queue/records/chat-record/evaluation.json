@@ -2,16 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
-  "job_id": "job-research-2dbab0db43ceff0b",
-  "data": {
-    "hardware": "二つの民生・端末向け実機環境で評価する。第1環境はRTX A5000 24GB・64 SMとAMD Threadripper PRO 3945WX 12コア、128GB RAM、第2環境はRTX 5090 32GB・128 SMとThreadripper PRO 5955WX 16コア、128GB RAMである。",
-    "software": "Ubuntu 22.04、CUDA 12.4、driver 550.54.15を使用する。AgentServeはllama.cppへCUDAグリーンコンテキスト、プリフィル・デコード用の二つのCPU投入スレッド、TPOT駆動スケジューラ、共有KVメモリ管理器を追加する。比較対象はSGLang、vLLM、llama.cppである。",
-    "models": ["Qwen2.5-3B","Qwen2.5-7B","LLaMA-3-8B"],
-    "datasets": ["ToolBench由来ReAct処理","ToolBench由来Plan-and-Execute処理"],
-    "baselines": ["SGLangの単一GPUプリフィル・デコード分離","vLLMの連続バッチ処理と分割プリフィル","llama.cppの一般単一装置サービング","資源認識制御を外した静的SM分割","CUDAグリーンコンテキストを外したオンデマンド資源割当"],
-    "methodology": "各セッションは1回の初回プリフィル後、ツール出力を追加する再開プリフィルと短いデコードを交互に実行する。同時エージェント数を3〜6へ変え、ReActとPlan-and-Executeを三モデル・二GPUで評価する。主要指標は先頭トークン時間（Time To First Token; TTFT）、出力1トークン当たり時間（Time Per Output Token; TPOT）の中央値と95パーセンタイル、合計出力スループット、TTFTとTPOTを同時に満たすセッション単位SLO達成率である。SLO閾値は各モデル・装置の単独実行性能を事前測定し、その値に定数倍した基準を用いる。要素除去評価では同時エージェント4個で完全系、資源認識スケジューラなし、CUDAグリーンコンテキストによる隔離なしを比較する。さらにコンテキスト切替費用と処理相ごとのトークン長分布も測定する。",
-    "scope": "シミュレーションではなく実機の単一GPUサービング評価である。対象は民生・端末向けGPUで3〜8B級の小型言語モデルを動かすローカルなツール利用エージェントで、3〜6個の同時セッションを想定する。クラウド規模の複数GPU、大幅に長いコーディングエージェント、任意に深い推論履歴、大規模バッチの総スループットを主目的とする運用は評価範囲外である。SLO閾値は絶対共通値ではなく各モデル・装置の単独実行測定から校正されるため、別ハードウェアへそのまま数値移植はできない。"
-  },
-  "reservation": {"claim_id":"claim-a01b04d19277b6518b2161b4","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
+  "job_id": "job-research-0d6791ec792101b0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4d3ef5ca344439ed99771c72",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }

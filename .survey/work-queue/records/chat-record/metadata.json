@@ -2,43 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-a01b04d19277b6518b2161b4",
-  "job_id": "job-research-2dbab0db43ceff0b",
-  "data": {
-    "canonical_id": "arXiv:2603.10342",
-    "arxiv_id": "2603.10342",
-    "doi": "10.48550/arXiv.2603.10342",
-    "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.DC","cross_list":[]},
-    "title": "AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU",
-    "summary": "AgentServeは、複数のツール利用エージェントを単一の民生GPUで同時実行すると、長い初回プリフィルが短く遅延に敏感なデコードを塞ぐ先頭待ちを起こす問題を扱う。要求を初回プリフィル、ツール結果などを追加する再開プリフィル、短いデコードの三相へ分類し、初回プリフィルを専用キューへ隔離する一方、再開プリフィルは現在の出力1トークン当たり時間（Time Per Output Token; TPOT）に応じて同時実行可能なトークン予算を動的に調整する。GPU側では起動時に10段階のCUDAグリーンコンテキスト（CUDA Green Context）を作り、デコードへ必要なストリーミングマルチプロセッサ（Streaming Multiprocessor; SM）数を10%刻みで予約し、残りをプリフィルへ割り当てる。KVキャッシュは単一エンジンの共有メモリ領域に置くため、プロセス分離型のプリフィル・デコード構成で必要になるKV転送を避ける。RTX A5000とRTX 5090、Qwen2.5-3B/7BとLLaMA-3-8B、ToolBench由来のReActとPlan-and-Executeで評価し、llama.cpp比で先頭トークン時間を最大2.8倍、TPOTを最大2.7倍改善した。",
-    "list_summary": "エージェント処理を初回・再開プリフィルと短いデコードへ分け、TPOTフィードバックとGPU内SM予約で民生GPU上の相互干渉を抑える。",
-    "authors": ["Yuning Zhang","Yan Yan","Nan Yang","Dong Yuan"],
-    "authors_affiliations": "School of Electrical and Computer Engineering, The University of Sydney, Australia。",
-    "published": "2026-03-11",
-    "publication": "arXiv:2603.10342v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2026-03-11）。一次資料で査読付き会議・論文誌への採択は確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["エージェント向けLLMサービング","プリフィル・デコード分離","GPU資源分割","CUDAグリーンコンテキスト","TPOTフィードバック制御","民生GPU"],
-    "importance": "高。エージェント型処理に特有の長い初回プリフィル、短い再開プリフィル、短いデコードの非対称性をサービング制御へ取り込み、クラスタ級の分離ではなく単一GPU内でSMを空間分割する。高価なKV転送なしにデコード遅延を保護するため、エージェント向けサービングとGPU内プリフィル・デコード分離の接点として有用である。",
-    "hardware_evaluation": "NVIDIA RTX A5000 24GB（64 SM）+ AMD Threadripper PRO 3945WX/128GB RAM、NVIDIA RTX 5090 32GB（128 SM）+ Threadripper PRO 5955WX/128GB RAM。",
-    "hardware_details": "両環境ともUbuntu 22.04、CUDA 12.4、driver 550.54.15。Qwen2.5-3B、Qwen2.5-7B、LLaMA-3-8Bを3〜6個の同時エージェントで評価する。AgentServeはllama.cppへCUDAグリーンコンテキスト対応、二つのCPU投入スレッド、共有KVメモリ管理器を追加する。",
-    "quality_effect": "モデル重み、注意計算の近似方法、サンプリング規則は変えず、同じモデル推論の実行順とGPU資源割当だけを変えるシステム最適化である。評価対象はTTFT、TPOT、スループット、セッション単位のSLO達成率であり、タスク正答率や生成品質の改善は主張していない。KV再利用時はCPU側の排他制御とCUDAイベントで、プリフィルが書込み途中のKVをデコードが読むことを防ぐ。",
-    "storage_targets": ["単一GPU共有メモリ上のKVキャッシュ","プリフィル・デコード共有モデル重み","CUDAグリーンコンテキストごとのSM資源枠"],
-    "bottlenecks": ["長い初回プリフィルによる先頭待ち","頻繁な再開プリフィルと短いデコードの干渉","単一GPUでのデコード用SM不足","分割プリフィル境界によるトークン出力間隔の揺らぎ","プロセス分離型プリフィル・デコード構成の調整費用とKV転送費用"],
-    "evidence_locations": ["§I","§II-B-II-C","§III-A-III-C","§IV-A-IV-E","§VI"],
-    "source": "https://arxiv.org/abs/2603.10342",
-    "sources": ["https://arxiv.org/abs/2603.10342","https://arxiv.org/html/2603.10342"],
-    "code": null,
-    "implementation": "論文はllama.cppを拡張し、プリフィル・デコード専用CPUスレッド、TPOT駆動スケジューラ、10段階の事前生成CUDAグリーンコンテキスト、共有KVキャッシュ管理器を実装したと記載する。一次資料本文・参考文献から著者公式コード公開URLは確認できない。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {"canonical_id":"arXiv:2506.02153","arxiv_id":"2506.02153"},{"canonical_id":"arXiv:2303.04129","arxiv_id":"2303.04129"},{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2501.15383","arxiv_id":"2501.15383"},{"canonical_id":"arXiv:2403.02310","arxiv_id":"2403.02310"},{"canonical_id":"arXiv:2507.06608","arxiv_id":"2507.06608"},{"canonical_id":"arXiv:2504.19867","arxiv_id":"2504.19867"},{"canonical_id":"arXiv:2504.14489","arxiv_id":"2504.14489"},{"canonical_id":"arXiv:2407.21783","arxiv_id":"2407.21783"},{"canonical_id":"arXiv:2305.05920","arxiv_id":"2305.05920"},{"canonical_id":"arXiv:2509.07379","arxiv_id":"2509.07379"},{"canonical_id":"arXiv:2502.13965","arxiv_id":"2502.13965"}
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v1 HTML参考文献節",
-    "references_total": 44
-  },
-  "reservation": {"claim_id":"claim-a01b04d19277b6518b2161b4","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-4d3ef5ca344439ed99771c72",
+  "job_id": "job-research-0d6791ec792101b0",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-4d3ef5ca344439ed99771c72",
+    "worker_id": "scheduled-chat-discovery-router",
+    "worker_kind": "scheduled_chat"
+  }
 }
