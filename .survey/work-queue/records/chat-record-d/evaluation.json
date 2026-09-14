@@ -2,37 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8b40f84e1a8159115ac44ac4",
-  "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {
-    "hardware": "同種構成はNVIDIA A100-SXM4-80GBを8基搭載しNVLinkで接続したサーバー。異種構成はL20 48GB×4とH20 96GB×8の2サーバーを弾性ネットワークインターフェース（Elastic Network Interface; ENI）で接続する。KV転送の単機評価ではL20サーバー、複数機評価ではL20とH20を使用する。",
-    "software": "Llama-3.1-8B-InstructとLlama-3.1-70B-Instructを対象とし、比較対象はvLLMの同居実行、vLLM-Disagg、Mooncake、DistServe。FlowKVは同一機内でIPC、複数機ではNCCLを中心に使い、転送モジュール自体はIPC、RDMA、NCCLを選択可能としている。",
-    "methodology": "合成要求は入力1K・5K・10Kトークン、出力256トークンを中心に100件生成し、ポアソン到着でRPSを0.1から2.0まで変えてスループットを比較する。8Bは2 GPUの1P1D、70Bは8 A100を用いて2ノード相当・各ノード内テンソル並列4として評価する。実ワークロードはLongBenchの要約3課題 `gov_report`、`multi_news`、`qmsum` を使い、L20をプリフィル・H20をデコードへ割り当てる構成と逆配置、およびvLLM同居実行のエンドツーエンド遅延とTPOTを比較する。KV転送単体ではLlama-3.1-8B-Instructの1P1Dで入力500〜12000・出力100トークンを測り、Mooncake、vLLM-Disagg、層単位のFlowKV転送との遅延を比較する。",
-    "scope": "すべて論文記載の実GPU評価であり、シミュレータだけの結果ではない。単機同種、複数機異種、合成到着、LongBench要約を含むが、ネットワークは論文記載のENI環境に限られ、より大規模な本番クラスタ、長時間運転、他モデル系列、広い到着分布、スケジューラの重み・閾値感度は評価されていない。",
-    "workloads": [
-      "合成要求100件、入力1K/5K/10K・出力256、RPS 0.1〜2.0",
-      "LongBench gov_report",
-      "LongBench multi_news",
-      "LongBench qmsum",
-      "KV転送単体: 入力500〜12000・出力100"
-    ],
-    "baselines": [
-      "vLLMのプリフィル・デコード同居実行",
-      "vLLM-Disagg",
-      "Mooncake",
-      "DistServe",
-      "FlowKVの層単位転送"
-    ],
-    "metrics": [
-      "スループット",
-      "エンドツーエンド遅延",
-      "TPOT",
-      "KVキャッシュ転送遅延",
-      "NCCLカーネル呼び出し数"
-    ]
-  },
+  "attempt_id": "attempt-5aae5b401b72e747053748e6",
+  "job_id": "job-research-cff945d042003c88",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8b40f84e1a8159115ac44ac4",
+    "claim_id": "claim-5aae5b401b72e747053748e6",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

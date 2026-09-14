@@ -2,19 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-8b40f84e1a8159115ac44ac4",
-  "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {
-    "limitations": "評価はLlama-3.1の8B/70B、A100・L20・H20、単機または2サーバー規模に限られる。複数機のネットワークはENIとだけ記載され、帯域・遅延条件の詳細や大規模クラスタでの輻輳、複数テナント、障害時挙動は示されない。負荷適応スケジューラの重み係数は成功した実験から決めたとされ、閾値・滑動窓長・感度分析や自動調整方法は未提示である。KV連続化は送受信双方の断片化状態に依存し、長期運転でどの程度連続区間を維持できるかの測定もない。公式コードURLは一次資料で確認できず、再現性と既存基盤への移植コストを外部から検証しにくい。",
-    "differences": "DistServeやSplitwiseがP/D分離そのものと段階別資源配分を中心に扱い、MooncakeやMemServeがKVを中心とした分散保存・再利用・RDMA経路を強く扱うのに対し、FlowKVはPagedAttention上のGPU KV物理レイアウトとNCCL呼び出し粒度を直接変更する。具体的には `(L,2,B,H)` から `(B,L,2,H)` へ並びを変え、セグメント型割当と送受信区間整列まで組み合わせることで、既存のブロック単位／層単位通信の起動回数を減らす。また固定P/D比だけに頼らず、各ノードがプリフィル・デコード両方の局所スケジューラを持ち、片側過負荷時に一時的な役割切替を許す点が特徴である。",
-    "implementation_status": "論文内の実験はFlowKV実装上で行われ、全体制御器、複合スケジューラ、KV転送モジュール、KVレイアウト変更、PagedAttention側の対応、セグメント型ブロック割当を実装したことが読み取れる。転送はIPC、RDMA、NCCLを選択可能としている。ただしarXiv v1本文、脚注、参考文献から公式GitHub等の公開コードは確認できない。プレプリントはUnder review表記であり、正式会議版や上流vLLM等への統合も一次資料では確認できない。",
-    "research_positioning": "分離推論におけるKV移送を『ネットワーク帯域』だけでなく『メモリレイアウトと通信起動粒度』の問題として切り出した点が重要で、リポジトリのLLMサービング・スケジューリング・分離推論系統を補完する。特に23,469回から1回というカーネル呼び出し削減は、PagedAttentionの柔軟なブロック管理が通信時には逆に固定費を増やすという境界を示しており、KVDirect、Mooncake、MemServeなど通信・メモリ階層系との比較軸になる。一方でSSD/NVMeやCPUオフロードを主対象とせず、GPU間KV転送を主に扱うため、階層ストレージ系統へ直接分類するより分離サービング系統に置くのが妥当である。",
-    "relation_to_existing_repository": "11-llm-serving-scheduling-disaggregation系統。既収録または追跡対象のDistServe、Mooncake、MemServe、KVDirectなどと近く、FlowKVはNCCL利用時の連続KV配置・転送呼び出し集約とP/D役割切替を主差分とする。",
-    "audit_required": true,
-    "audit_reason": "公式コード公開の有無、プレプリント後の採択・改訂状況、参考文献のうちDOI/arXiv識別子を持たない文献の追加正規化、および論文が明示していないENIネットワーク詳細を後続監査で確認する価値がある。"
-  },
+  "attempt_id": "attempt-5aae5b401b72e747053748e6",
+  "job_id": "job-research-cff945d042003c88",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8b40f84e1a8159115ac44ac4",
+    "claim_id": "claim-5aae5b401b72e747053748e6",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
