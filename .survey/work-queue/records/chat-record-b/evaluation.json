@@ -4,10 +4,21 @@
   "slot": "evaluation",
   "attempt_id": "attempt-4b9a71ce575511cd9107babd",
   "job_id": "job-research-706a6d2571f24fb8",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-4b9a71ce575511cd9107babd",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["NanoPC-T6 development board","8-core ARM CPU","16GB DRAM","6 TOPS NPU","2.65GB/s SSD"],
+    "software": ["Linux kernel 6.1.57","OP-TEE 4.5.0","Flex-Monitor","C/C++ FlexServe Trusted Application","community reverse-engineered NPU runtime"],
+    "model": ["Llama3.2 3B","Llama3.1 8B","Qwen3 0.6B","Qwen3 1.7B","Qwen3 8B"],
+    "datasets": ["input length 64/128/256/512 synthetic request sweep","UltraChat","OpenAssistant","Dolly Dataset","Alpaca Data","10 mobile agent workflows"],
+    "baselines": ["NW-Base: normal world + pipeline + NPU","Strawman: TrustZone + CMA secure memory + CPU","Strawman-OPT: TrustZone + CMA + pipeline + secure NPU"],
+    "correctness": "脅威モデルはカーネル権限の攻撃者を想定し、モデル重みとセキュアクライアント経由の入力・出力の機密性と完全性をS2PT、SMMU、セキュアブート、応答証明で保護する。通常世界クライアント自体の入出力、サイドチャネル、物理攻撃、サービス拒否は範囲外である。性能最適化は同じモデルの実行経路を変えるもので、追加の近似推論を導入しない。",
+    "settings": [
+      {"name":"資源隔離マイクロベンチマーク","description":"8GBセキュアメモリの割当・回収、128MB緊急回収、NPU SMMU設定、NPUタスク発行、Flex-NPU切替、S2PT起動時保護とハッシュ検証など、セキュア資源の遷移に伴う基本費用を個別に測定する。"},
+      {"name":"単一モデルのコールドスタート","description":"モデル/KVキャッシュを無効化し、Llama/Qwen各モデルをINT8で実行する。入力長64〜512トークンと背景メモリ負荷0〜10GBを変化させ、先頭トークン遅延、デコード処理率、断片化による影響をNW-Base、Strawman、Strawman-OPT、FlexServeで比較する。"},
+      {"name":"マルチモデルとエージェントワークフロー","description":"4GBのセキュアキャッシュ予算で複数モデルへ実データセット由来要求を振り分け、モデル/KV動的キャッシュとワークフロー認識先読みの効果を測る。さらに10種類のモバイルエージェントワークフローで複数モデルを連続呼出しし、応答遅延を比較する。"},
+      {"name":"通常世界アプリへの影響","description":"SQLite、SPEC CPU 2017、sysbench、pgbench、memtier、アプリ起動を使い、Flex-Memの動的拡縮、仮想化、協調回収が通常アプリの性能と利用可能メモリへ与える影響を評価する。"}
+    ],
+    "methodology": "同一NanoPC-T6上で、保護なしの性能上限であるNW-Base、固定的な連続セキュアメモリとCPU推論を使う素朴構成、パイプラインとセキュアNPUを加えた最適化構成、FlexServeを段階的に比較する。マイクロベンチマークでページ/NPU隔離機構の費用を分離した後、単一モデルのコールドスタート、メモリ圧力、複数モデル、エージェントワークフロー、通常アプリ共存へ評価を広げる。さらにFlex-NPU、Flex-Mem、パイプライン、キャッシュ、非同期回収、インライン暗号想定を除去・追加する分析で、改善の寄与を切り分ける。",
+    "scope": "評価の中心はNanoPC-T6一機種であり、商用Android SoCごとに異なるTrustZone、SMMU、NPUドライバへ数値をそのまま一般化できない。ベンダーNPUランタイムが非公開のためコミュニティ実装を使う。また試験機はインラインストレージ暗号化・復号を備えず、その高速化効果はエミュレーションで推定される。"
+  },
+  "reservation": {"claim_id":"claim-4b9a71ce575511cd9107babd","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
