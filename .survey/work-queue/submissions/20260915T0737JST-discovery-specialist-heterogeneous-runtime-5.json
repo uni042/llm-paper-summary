@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "job_id": "job-15c0335aaa7eded8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.18600",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18600-shuntserve-heterogeneous-spot-gpu-serving.md",
+      "priority": 78,
+      "reason": "複数種類のスポットGPUを混在させるLLMサービングで、ルーフラインモデルに基づく性能推定と動的計画法によるモデル配置を組み合わせ、ノード構成・並列化方式・層配置を共同最適化する。さらに共有テンソルストアと出力保持型の要求移行でスポット中断への復旧を扱う。L4/A10G/L40Sを使うAWS評価で先行方式比1.42倍・1.35倍のスループット、オンデマンド比で約31%のコスト効率改善を報告しており、異種GPU配置と障害回復を一体化した実運用系として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-heterogeneous-runtime-5",
+    "axis": "異種GPU・通信・実行時耐障害性を扱うLLMサービング",
+    "query_summary": "GPU通信・ランタイム・異種GPU協調の独立軸を探索し、Concordia（arXiv:2606.23521）、Multi-stage Flow Scheduling（arXiv:2603.17456）、Large-Scale LLM Inference with Heterogeneous Workloads（arXiv:2602.02987）、ShuntServe（arXiv:2606.18600）を軽量評価した。最新identity確認で前3件は既収録、ShuntServeのみ未収録だった。",
+    "candidate_count": 4,
+    "duplicate_filtered_count": 3,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.23521",
+      "arXiv:2603.17456",
+      "arXiv:2602.02987"
+    ],
+    "next_axis_hint": "収録済み重要論文のforward citationと、OS・DBMS・ストレージ系の隣接研究からLLM推論へ転用可能なメモリ管理・I/O schedulingを探索する。",
+    "empty_round_reason": null
+  }
+}
