@@ -4,7 +4,14 @@
   "slot": "positioning",
   "attempt_id": "attempt-11e0bc962a7c28c7d0c14bdf",
   "job_id": "job-research-7505ea2231cb7ff0",
-  "data": {},
+  "data": {
+    "limitations": "評価は単一A100サーバ内のOPT-13B/30BとLlama-3-70Bに限定され、異種GPUクラスタ、複数サーバ間要求移動、長期の日周需要、実運用BEトレースは未検証である。BE入力・出力長は合成分布で、固定TTFT 0.4秒・TPOT 0.2秒というSLO設定もサービスごとに再調整を要する。反復時間モデルとメモリ転送モデルは対象モデル・GPU構成ごとのオフライン測定に依存する。双方向KVブロックも極端なメモリ圧力を完全に解消せず、最終的には要求KVのCPU退避が必要になる。",
+    "differences": "vLLMはPagedAttentionとFCFS連続バッチを中心に高スループットを狙い、Sarathi-Serveは長いプリフィルを分割して進行中デコードの停止を抑える。DistServeはプリフィルとデコードを別GPUへ分けて干渉を避ける。BROSはこれらと異なり、同じモデル・同じGPU群へRTとBEという異なるQoS要求を共置し、各反復でRTトークン期限を制約にBEを詰める。FastServeのMLFQ型事前占有は平均遅延を下げるが、BROSはTTFTとTPOTを別期限として扱い、さらにKVブロックをRT/BEが左右から共有してメモリ制約も同時に解く。",
+    "implementation_status": "Python約8.5k行とC++/CUDA約2k行で独自実装し、Ray RPC、NCCL、PyTorch、Xformersを利用する。OPTとLlamaをテンソル並列実行し、PagedAttentionへ方向表と逆方向読出しを追加、非連続KVのGPU/CPU交換用カーネルも実装してA100実機で評価済み。一次資料から著者公式コード公開URLは確認できない。",
+    "research_positioning": "リポジトリではLLMサービングのスケジューリング・分離系統に置く。プリフィル・デコード分離ではなく、同一モデル上で実時間とベストエフォートというQoSクラスを統合する研究であり、GPU計算時間とKVメモリを二種類の要求間で融通する。特に双方向KVブロックと部分チェックポイントは、スケジューラが高優先度RTを選んでもKV容量不足で実行できないという制御面・メモリ面の不整合を解消するため、QoS認識サービングとKV管理の接点として重要である。",
+    "relation_to_existing_repository": "vLLM/PagedAttention系のページ化KV管理と、Sarathi-Serve・DistServe・FastServe等のサービングスケジューリング系統に接続する。既存研究がプリフィル対デコード、短要求対長要求など計算段階の干渉を主に扱うのに対し、BROSはRT/BEというサービス品質クラスを直接制御対象にし、KV物理共有まで同じ制御ループへ含める点が差分である。",
+    "audit_required": false
+  },
   "reservation": {
     "claim_id": "claim-11e0bc962a7c28c7d0c14bdf",
     "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
