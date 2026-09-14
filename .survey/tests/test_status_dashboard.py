@@ -176,9 +176,6 @@ class StatusDashboardTests(unittest.TestCase):
             self.assertNotIn("176 / 50", text)
             self.assertNotIn("## 直近の通常worker", text)
             self.assertIn("Research完了 | **2**", text)
-            self.assertIn("通常worker Discovery round | **0**", text)
-            self.assertNotIn("Discovery完了 | **4**", text)
-            self.assertNotIn("新規job | **7**", text)
 
             self.assertIn("### 直近の探索専用worker", text)
             self.assertIn("Run: **2026-09-13T10:00:00+09:00**", text)

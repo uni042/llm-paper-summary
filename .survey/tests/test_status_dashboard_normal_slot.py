@@ -25,7 +25,7 @@ def _load(repo: Path):
 
 
 class StatusDashboardNormalSlotTests(unittest.TestCase):
-    def test_latest_normal_worker_excludes_dedicated_0830_update_slot(self):
+    def test_base_dashboard_does_not_render_ledger_based_normal_run_block(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp)
             _write(repo / ".survey/work-queue/next-jobs.json", {
@@ -49,21 +49,21 @@ class StatusDashboardNormalSlotTests(unittest.TestCase):
                 },
                 {
                     "run_key": "2026-09-14T08:30:00+09:00",
-                    "counts": {"research_completed": 0, "audit_completed": 0, "discovery_completed": 0, "blocked": 0, "new_jobs": 0, "new_papers": 4, "fallback_archived": 0},
+                    "counts": {"research_completed": 5, "audit_completed": 0, "discovery_completed": 0, "blocked": 0, "new_jobs": 0, "new_papers": 5, "fallback_archived": 0},
                     "terminal_transitions": [],
                     "new_jobs": [],
-                    "new_paper_ids": ["d", "e", "f", "g"],
+                    "new_paper_ids": ["d", "e", "f", "g", "h"],
                 },
             ]})
             _write(repo / ".survey/work-queue/discovery-state.json", {"history": []})
 
             module = _load(repo)
-            text = module.build_dashboard(repo, now=datetime(2026, 9, 14, 1, 30, tzinfo=timezone.utc))
-            section = text.split("## 直近の通常worker", 1)[1].split("## 次に処理する候補", 1)[0]
+            text = module.build_dashboard(repo, now=datetime(2026, 9, 14, 2, 0, tzinfo=timezone.utc))
 
-            self.assertIn("Run: **2026-09-14T07:30:00+09:00**", section)
-            self.assertIn("Research完了 | **3**", section)
-            self.assertNotIn("2026-09-14T08:30:00+09:00", section)
+            self.assertNotIn("## 直近の通常worker", text)
+            self.assertIn("## 直近24時間の処理量", text)
+            self.assertIn("Research完了 | **8**", text)
+            self.assertIn("## 次に処理する候補", text)
 
 
 if __name__ == "__main__":
