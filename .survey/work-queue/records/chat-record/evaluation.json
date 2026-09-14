@@ -4,10 +4,15 @@
   "slot": "evaluation",
   "attempt_id": "attempt-ddaa9f60a004a664b188d7a2",
   "job_id": "job-research-3ae94af47a718bbb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-ddaa9f60a004a664b188d7a2",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "実機クラスタ。本文はAlibaba Group AIOS Teamの大規模実験基盤提供を明記するが、主評価クラスタのGPU型式・台数はHTML本文では明示されていない。導入部の資源利用分析ではA100 GPUを使用する。",
+    "software": "BanaServeをvLLMおよびDistServe系のサービング基盤上に実装し、vLLMとDistServeを比較対象とする。",
+    "methodology": "LLaMA-13BとOPT-13Bの2モデルを、短文のAlpacaと長文のLongBenchで評価する。要求到着率を1〜20 RPSまで変え、ポアソン到着で負荷を与える。各構成は60秒のウォームアップ後、異なる乱数種で5回繰り返し、平均と95%信頼区間を報告する。最大出力長は512トークンに固定する。主要指標はスループット、全処理時間、平均要求遅延で、遅延はTTFTとトークン間遅延も扱う。",
+    "scope": "2種類の13Bモデル、短文・長文の2ワークロード、1〜20 RPSの単一地域クラスタ評価。異種アクセラレータ、複数地域、WAN越しKV共有は対象外。",
+    "workloads": ["Alpaca短文入力: 実験では概ね5〜40トークン", "LongBench: 約2,000〜85,000超トークンの長文タスク", "1〜20 RPSのポアソン到着", "最大生成長512トークン"],
+    "baselines": ["vLLM: 連続バッチ処理とPagedAttentionを用いる同居型サービング", "DistServe: プリフィル／デコード分離型サービング"],
+    "metrics": ["スループット（tokens/s）", "総処理時間", "平均要求遅延", "TTFT", "トークン間遅延"],
+    "reproducibility": "モデル、ベンチマーク、RPS範囲、到着分布、ウォームアップ、反復回数は記載される。一方、主評価クラスタのGPU型式・台数や公式実装公開URLは本文から確定できず、完全再現には不足がある。"
+  },
+  "reservation": {"claim_id":"claim-ddaa9f60a004a664b188d7a2","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
 }
