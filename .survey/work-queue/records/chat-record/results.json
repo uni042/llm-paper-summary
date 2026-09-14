@@ -2,22 +2,68 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1f85e0ade61d32c74f3d8c8f",
+  "attempt_id": "attempt-a92d63540323d32627be85e6",
   "job_id": "job-research-9ac9e9ad81401213",
   "data": {
     "overview": "プログラム単位の履歴を使うPLASとATLASは、単なる要求単位プリエンプションより高負荷時のプログラム先頭待ちを抑え、同じプログラム単位遅延でより高い到着率を処理した。単一スレッド負荷ではvLLM比最大8倍、並列LATSでは最大5倍、ShareGPT・BFCL・LATSを混ぜた異質負荷では最大15倍の処理率を報告する。末尾遅延についても、プログラム単位の飢餓防止を組み込むことで8条件中7条件でMLFQやvLLM-optより低いP95/P99遅延を維持した。複数エンジンでは、長い入力を同じプログラムのホームエンジンへ残す局所性認識方式が巡回・最少負荷方式より最大1.4倍の処理率を示した。",
     "key_results": [
-      {"metric":"単一スレッド処理率","value":"最大8倍（vLLM比）、2倍（vLLM-opt比）、1.5倍（MLFQ比）","baseline":"vLLM / vLLM-opt / MLFQ","condition":"ShareGPT・BFCL系、高負荷、同一プログラム単位トークン遅延","interpretation":"PLASが要求単位とプログラム単位の両方の先頭待ちを減らし、長いプログラムの後続要求による繰り返し追い越しを抑える。"},
-      {"metric":"並列LATS処理率","value":"最大5倍（vLLM比）、2倍（vLLM-opt比）、2.5倍（MLFQ比）","baseline":"vLLM / vLLM-opt / MLFQ","condition":"LATS、多スレッドプログラム","interpretation":"ATLASが短い要求だけを優先する方式よりDAG全体の重要経路を進め、プログラム完了を遅らせるスレッド間不均衡を抑える。"},
-      {"metric":"混合ワークロード処理率","value":"最大15倍（vLLM比）、4倍（vLLM-opt比）、5.5倍（MLFQ比）","baseline":"vLLM / vLLM-opt / MLFQ","condition":"ShareGPT・BFCL・LATS混合、同一遅延","interpretation":"呼び出し数やデコード長の異質性が高いほど、個別要求ではなくプログラム履歴を使う価値が大きくなる。"},
-      {"metric":"P95/P99末尾条件での処理率","value":"最大1.7倍","baseline":"MLFQ / vLLM-opt","condition":"8シナリオ中7シナリオでより低い末尾遅延","interpretation":"待ち時間とサービス時間の比を使うプログラム単位の飢餓防止により、プリエンプションが長いプログラムを極端に遅らせる問題を抑える。"},
-      {"metric":"複数エンジン処理率","value":"最大1.4倍","baseline":"巡回方式 / 最少負荷方式","condition":"8B×4または70B×2、ShareGPT/LATS","interpretation":"長い要求のKV局所性を守りつつ、短い要求だけを負荷分散へ利用することで再計算と負荷偏りを両方抑える。"},
-      {"metric":"一括推論の総完了時間","value":"10〜40%短縮","baseline":"vLLM系比較群","condition":"ShareGPT、最大4000プログラム一括投入","interpretation":"高並行度でもプログラム単位の優先制御が総処理時間を改善する。4000件ではMLFQが大量KV交換によるメモリ競合で完走できなかった。"},
-      {"metric":"KV交換最適化","value":"交換回数最大18倍削減、交換時間3〜7倍短縮、処理率1.3倍","baseline":"vLLMのブロック別交換実装","condition":"A100環境、プリエンプション負荷","interpretation":"複数KVブロックを一括転送することで細粒度DMAの固定費とPCI Express帯域の断片化を減らす。"}
+      {
+        "metric": "単一スレッド処理率",
+        "value": "最大8倍（vLLM比）、2倍（vLLM-opt比）、1.5倍（MLFQ比）",
+        "baseline": "vLLM / vLLM-opt / MLFQ",
+        "condition": "ShareGPT・BFCL系、高負荷、同一プログラム単位トークン遅延",
+        "interpretation": "PLASが要求単位とプログラム単位の両方の先頭待ちを減らし、長いプログラムの後続要求による繰り返し追い越しを抑える。"
+      },
+      {
+        "metric": "並列LATS処理率",
+        "value": "最大5倍（vLLM比）、2倍（vLLM-opt比）、2.5倍（MLFQ比）",
+        "baseline": "vLLM / vLLM-opt / MLFQ",
+        "condition": "LATS、多スレッドプログラム",
+        "interpretation": "ATLASが短い要求だけを優先する方式よりDAG全体の重要経路を進め、プログラム完了を遅らせるスレッド間不均衡を抑える。"
+      },
+      {
+        "metric": "混合ワークロード処理率",
+        "value": "最大15倍（vLLM比）、4倍（vLLM-opt比）、5.5倍（MLFQ比）",
+        "baseline": "vLLM / vLLM-opt / MLFQ",
+        "condition": "ShareGPT・BFCL・LATS混合、同一遅延",
+        "interpretation": "呼び出し数やデコード長の異質性が高いほど、個別要求ではなくプログラム履歴を使う価値が大きくなる。"
+      },
+      {
+        "metric": "P95/P99末尾条件での処理率",
+        "value": "最大1.7倍",
+        "baseline": "MLFQ / vLLM-opt",
+        "condition": "8シナリオ中7シナリオでより低い末尾遅延",
+        "interpretation": "待ち時間とサービス時間の比を使うプログラム単位の飢餓防止により、プリエンプションが長いプログラムを極端に遅らせる問題を抑える。"
+      },
+      {
+        "metric": "複数エンジン処理率",
+        "value": "最大1.4倍",
+        "baseline": "巡回方式 / 最少負荷方式",
+        "condition": "8B×4または70B×2、ShareGPT/LATS",
+        "interpretation": "長い要求のKV局所性を守りつつ、短い要求だけを負荷分散へ利用することで再計算と負荷偏りを両方抑える。"
+      },
+      {
+        "metric": "一括推論の総完了時間",
+        "value": "10〜40%短縮",
+        "baseline": "vLLM系比較群",
+        "condition": "ShareGPT、最大4000プログラム一括投入",
+        "interpretation": "高並行度でもプログラム単位の優先制御が総処理時間を改善する。4000件ではMLFQが大量KV交換によるメモリ競合で完走できなかった。"
+      },
+      {
+        "metric": "KV交換最適化",
+        "value": "交換回数最大18倍削減、交換時間3〜7倍短縮、処理率1.3倍",
+        "baseline": "vLLMのブロック別交換実装",
+        "condition": "A100環境、プリエンプション負荷",
+        "interpretation": "複数KVブロックを一括転送することで細粒度DMAの固定費とPCI Express帯域の断片化を減らす。"
+      }
     ],
     "negative_results": "非予見的なPLAS/ATLASは、将来の全呼び出し数と実行時間を知る理想的な最短残余処理時間方式より最適性が低く、シミュレーションでも差が残る。要求単位プリエンプションを積極化するMLFQは4000プログラムの一括負荷で1.2TB超の交換領域があってもGPU-CPU交換が増え過ぎてメモリ不足となった。Autellixもプリエンプション由来のKV交換費用を持つため、一括転送と複数段スケジューリングが必要である。局所性認識負荷分散の利益は会話履歴再利用が大きいShareGPTで強く、異なるプログラム間で共有できる接頭辞が小さい負荷では差が縮む。",
     "interpretation": "エージェント型サービングでは個々のLLM呼び出しの待ち時間だけでなく、その呼び出しを生んだプログラムが既に受けたサービス量と、並列プログラムの重要経路をスケジューリング状態に持ち込むことが重要である。完全な将来グラフを知るコンパイラがなくても、オンラインで観測した累積時間だけでプログラム単位の先頭待ちを大きく減らせる。複数エンジンでは同じプログラム内のKV再利用率が高いという意味情報を負荷分散へ使うことで、計算資源の均等化だけを目的とする方式を上回る。",
     "quality_impact": "モデル圧縮や近似計算を導入しないため、生成品質を意図的に変える方式ではない。主な交換条件は平均完了時間、末尾遅延、公平性、KV交換量、データ局所性である。"
   },
-  "reservation": {"claim_id":"claim-1f85e0ade61d32c74f3d8c8f","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a92d63540323d32627be85e6",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

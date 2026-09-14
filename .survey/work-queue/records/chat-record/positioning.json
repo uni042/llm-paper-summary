@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1f85e0ade61d32c74f3d8c8f",
+  "attempt_id": "attempt-a92d63540323d32627be85e6",
   "job_id": "job-research-9ac9e9ad81401213",
   "data": {
     "limitations": "動的DAGを事前に知らない非予見方式であるため、将来の呼び出し長を正確に知る理想的な最短残余処理時間方式には及ばず、論文のシミュレーションでも最適方式との差が残る。評価環境は主に同種A100 GPUで構成され、異種GPU、複数モデルを同時に載せる環境、広域ネットワークを介した分散構成での一般性は限定的である。長い要求を同じエンジンへ残すかを決める2048トークンの閾値も、モデル、接頭辞共有率、ハードウェア、負荷構成によって再調整が必要になる可能性がある。プリエンプションを増やす方式なので、KV交換を高速化してもGPUメモリ圧力とホストメモリ消費が完全に消えるわけではない。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "リポジトリのvLLM、SGLang、Sarathi、DistServe、Mooncakeなどの要求・KV・プリフィル/デコード資源最適化を、上位のプログラム意味論から補完する。これらの下位サービング基盤が一要求または一バッチの効率を高めても、複数呼び出しを持つエージェント全体では呼び出し間依存とプログラム単位先頭待ちが残る。AutellixのPLAS/ATLASはその上で動くスケジューリング方策として組み合わせられる。また長い要求を同一エンジンへ残す設計は、将来CPU・SSDを含む階層KVキャッシュを使う場合にも、プログラム局所性を配置判断へ持ち込む比較軸となる。",
     "audit_required": false
   },
-  "reservation": {"claim_id":"claim-1f85e0ade61d32c74f3d8c8f","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a92d63540323d32627be85e6",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

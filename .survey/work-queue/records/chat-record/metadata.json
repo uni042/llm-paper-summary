@@ -2,41 +2,105 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-1f85e0ade61d32c74f3d8c8f",
+  "attempt_id": "attempt-a92d63540323d32627be85e6",
   "job_id": "job-research-9ac9e9ad81401213",
   "data": {
     "canonical_id": "arXiv:2502.13965",
     "arxiv_id": "2502.13965",
     "doi": "10.48550/arXiv.2502.13965",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.LG", "cross_list": ["cs.AI", "cs.DC"]},
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.AI",
+        "cs.DC"
+      ]
+    },
     "title": "Autellix: An Efficient Serving Engine for LLM Agents as General Programs",
     "summary": "Autellix（NSDI 2026最終版ではAgentix）は、エージェント型LLMアプリケーションを独立した要求の集合ではなく、実行時に形が決まる動的なプログラムとして扱うサービング基盤である。単一スレッド型では、同じプログラムが過去に受けた累積GPUサービス時間が小さい呼び出しを優先するPLASを用い、長いプログラムの後続呼び出しが短いプログラムを繰り返し追い越すプログラム単位の先頭待ちを抑える。並列・有向非巡回グラフ型では、親呼び出しまでの累積サービス時間から観測済み最長経路を近似するATLASを使い、プログラム完了時刻を支配する重要経路の進捗を守る。複数エンジン構成では、短い要求を最少負荷エンジンへ分散し、長い要求は同じプログラムの既存エンジンへ固定して共有接頭辞のKVキャッシュを再利用する。A100 80GB×8上でLLaMA-3.1-8B/70BとFalcon-180B、ShareGPT・BFCL・LATS・混合負荷を評価し、単一エンジンの混合負荷ではvLLM比最大15倍、複数エンジンの局所性認識負荷分散では標準方式比最大1.4倍の処理率を報告する。",
     "list_summary": "エージェントのLLM呼び出しをプログラム単位で追跡し、累積サービス時間と動的DAGの重要経路近似で優先順位を付け、KV局所性を保つ複数GPUルーティングまで組み合わせてプログラム全体の待ち時間を削減する。",
-    "authors": ["Michael Luo", "Xiaoxiang Shi", "Colin Cai", "Tianjun Zhang", "Justin Wong", "Yichuan Wang", "Chi Wang", "Yanping Huang", "Zhifeng Chen", "Joseph E. Gonzalez", "Ion Stoica"],
+    "authors": [
+      "Michael Luo",
+      "Xiaoxiang Shi",
+      "Colin Cai",
+      "Tianjun Zhang",
+      "Justin Wong",
+      "Yichuan Wang",
+      "Chi Wang",
+      "Yanping Huang",
+      "Zhifeng Chen",
+      "Joseph E. Gonzalez",
+      "Ion Stoica"
+    ],
     "authors_affiliations": "UC Berkeley、Google DeepMind、Shanghai Jiao Tong University。",
     "published": "2025-02-19",
     "publication": "23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 26), pp.2443–2459; final title: Agentix: An Efficient Serving Engine for LLM Agents as General Programs",
     "publication_type": "査読付き国際会議論文 / arXivプレプリント",
     "publication_status": "NSDI 2026でAgentix名として出版済み。arXiv v1はAutellix名。",
     "lineage": "llm-serving-scheduling-disaggregation",
-    "topics": ["エージェント型LLMサービング", "プログラム認識スケジューリング", "PLAS", "ATLAS", "プリエンプション", "KVキャッシュ局所性", "複数エンジン負荷分散"],
+    "topics": [
+      "エージェント型LLMサービング",
+      "プログラム認識スケジューリング",
+      "PLAS",
+      "ATLAS",
+      "プリエンプション",
+      "KVキャッシュ局所性",
+      "複数エンジン負荷分散"
+    ],
     "importance": "要求単位ではなくエージェントプログラム全体を第一級スケジューリング単位にし、動的DAGを事前に知らずに完了時刻を改善する代表的なエージェント型サービング研究である。",
     "hardware_evaluation": "実機。Google Cloud a2-ultragpu-8g、NVIDIA A100-SXM4-80GB×8（NVLink）、ホストメモリ1360GB、PCIe 4.0×16、ディスク2TB。",
     "hardware_details": "LLaMA-3.1-8Bは1 GPU、70Bは4 GPU、Falcon-180Bは8 GPU。複数エンジン評価では8Bを4レプリカ、70Bを2レプリカで使用する。",
     "quality_effect": "モデル重みや生成アルゴリズムを近似しないため、生成品質を意図的に犠牲にする方式ではない。主な交換条件はプリエンプションによる公平性・末尾遅延とKVスワップであり、プログラム単位の飢餓防止で緩和する。",
-    "storage_targets": ["GPU上のKVキャッシュ", "CPUホストメモリへのKV退避", "同一プログラム内の接頭辞KV再利用"],
-    "bottlenecks": ["LLM呼び出し単位の先頭待ち", "プログラム単位の先頭待ち", "動的DAGの重要経路推定", "プリエンプション時のGPU-CPU KV交換", "複数エンジンでの負荷分散とKV局所性の競合"],
-    "evidence_locations": ["§3", "§4.2–4.3", "§5", "§6.1–6.5", "Figures 12–19", "NSDI 2026 publication page"],
+    "storage_targets": [
+      "GPU上のKVキャッシュ",
+      "CPUホストメモリへのKV退避",
+      "同一プログラム内の接頭辞KV再利用"
+    ],
+    "bottlenecks": [
+      "LLM呼び出し単位の先頭待ち",
+      "プログラム単位の先頭待ち",
+      "動的DAGの重要経路推定",
+      "プリエンプション時のGPU-CPU KV交換",
+      "複数エンジンでの負荷分散とKV局所性の競合"
+    ],
+    "evidence_locations": [
+      "§3",
+      "§4.2–4.3",
+      "§5",
+      "§6.1–6.5",
+      "Figures 12–19",
+      "NSDI 2026 publication page"
+    ],
     "source": "https://arxiv.org/abs/2502.13965",
-    "sources": ["https://arxiv.org/abs/2502.13965", "https://arxiv.org/html/2502.13965", "https://www.usenix.org/conference/nsdi26/presentation/luo"],
+    "sources": [
+      "https://arxiv.org/abs/2502.13965",
+      "https://arxiv.org/html/2502.13965",
+      "https://www.usenix.org/conference/nsdi26/presentation/luo"
+    ],
     "code": null,
     "implementation": "vLLM v0.6.1を基盤に状態保持フロントエンド、プログラム認識スケジューラ、複数エンジン負荷分散器、KV交換最適化を追加した研究実装。公開論文ページから公式コード公開先は確認できない。",
     "last_checked": "2026-09-14",
-    "references": [{"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180"},{"canonical_id":"arXiv:2407.00079","arxiv_id":"2407.00079"},{"canonical_id":"arXiv:2312.07104","arxiv_id":"2312.07104"}],
+    "references": [
+      {
+        "canonical_id": "arXiv:2309.06180",
+        "arxiv_id": "2309.06180"
+      },
+      {
+        "canonical_id": "arXiv:2407.00079",
+        "arxiv_id": "2407.00079"
+      },
+      {
+        "canonical_id": "arXiv:2312.07104",
+        "arxiv_id": "2312.07104"
+      }
+    ],
     "references_checked_at": "2026-09-14",
     "references_source": "arXiv v1 HTML版参考文献節",
     "references_total": 95
   },
-  "reservation": {"claim_id":"claim-1f85e0ade61d32c74f3d8c8f","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-a92d63540323d32627be85e6",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
