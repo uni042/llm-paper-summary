@@ -4,10 +4,54 @@
   "slot": "results",
   "attempt_id": "attempt-780edb4f8fe65484658fa733",
   "job_id": "job-research-87d11da7c0c30dc4",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-780edb4f8fe65484658fa733",
-    "worker_id": "scheduled-chat-llm-discovery-overflow",
-    "worker_kind": "scheduled_chat"
+  "data": {
+    "overview": "FlowKVの最も大きい単体効果はKV転送の呼び出し集約である。論文では層単位方式で1要求あたり23,469回だったNCCLカーネル呼び出しを1回まで減らし、vLLM-Disagg比の平均KV転送遅延を単機で96.8%、L20/H20複数機で92%削減した。システム全体では通信だけでなくP/D分離と負荷適応スケジューリングが効き、8B合成負荷でvLLM同居実行より平均25%高いスループット、DistServe・Mooncake・vLLM-Disaggよりそれぞれ最大級の比較で95%・40%・35%高いスループットを報告する。異種GPUのLongBench要約では、デコードをメモリ資源の大きいH20へ置く構成が逆配置より有利で、vLLM同居実行比のエンドツーエンド遅延短縮は15.2〜48.9%だった。転送単体の96%級改善がそのまま全体遅延改善にはならず、入力長・P/D計算・GPU配置に応じて効果量が変わる点が重要である。",
+    "key_results": [
+      {
+        "metric": "KVキャッシュ転送遅延",
+        "value": "平均96.8%削減、31.5倍高速化",
+        "baseline": "vLLM-Disagg",
+        "condition": "単一L20サーバー、Llama-3.1-8B-Instruct、1P1D、入力500〜12000・出力100",
+        "interpretation": "KVレイアウトと連続割当、区間整列により細粒度NCCL呼び出しの固定費をほぼ除去した。"
+      },
+      {
+        "metric": "KVキャッシュ転送遅延",
+        "value": "平均92%削減、12.6倍高速化",
+        "baseline": "vLLM-Disagg",
+        "condition": "L20とH20の異種複数サーバー、Llama-3.1-8B-Instruct、1P1D",
+        "interpretation": "ネットワーク越しでも呼び出し集約は有効だが、単機より通信そのものの帯域・固定費が残るため改善率は小さくなる。"
+      },
+      {
+        "metric": "NCCLカーネル呼び出し数",
+        "value": "23,469回から1回",
+        "baseline": "層単位KV転送",
+        "condition": "論文の連続区間が最大限まとまる転送評価",
+        "interpretation": "レイヤー×K/V×ブロックに分割されていた送受信を、連続区間単位へまとめる設計の直接的効果を示す。"
+      },
+      {
+        "metric": "スループット",
+        "value": "vLLM同居実行比で平均25%向上",
+        "baseline": "vLLM PD-colocated",
+        "condition": "A100、Llama-3.1-8B-Instruct、入力1K/5K/10K・出力256の合成要求",
+        "interpretation": "P/D干渉の除去に加え、負荷適応スケジューリングで片側GPUの遊休を抑えるため、転送最適化以外の効果も含む。"
+      },
+      {
+        "metric": "スループット",
+        "value": "DistServe比95%、Mooncake比40%、vLLM-Disagg比35%向上",
+        "baseline": "各1P1D分離推論方式",
+        "condition": "A100同種構成の合成負荷。70Bでもおおむね95%・39%・35%向上と報告",
+        "interpretation": "連続KV転送とスケジューリングを一体化した効果が、既存分離基盤との比較でも現れている。"
+      },
+      {
+        "metric": "エンドツーエンド遅延",
+        "value": "48.9%、29.4%、15.2%短縮",
+        "baseline": "vLLM PD-colocated",
+        "condition": "P=L20、D=H20の4P4D、LongBenchのgov_report・multi_news・qmsum",
+        "interpretation": "メモリ帯域・容量が大きいH20をデコードへ置く異種配置が長い出力処理に適し、P/D分離のハードウェア適合性を利用できる。"
+      }
+    ],
+    "negative_results": "改善幅は一様ではない。LongBenchではqmsumのエンドツーエンド短縮が15.2%にとどまり、gov_reportの48.9%より小さい。異種配置もP=H20/D=L20よりP=L20/D=H20がgov_reportで34.67%、multi_newsで40.1%、qmsumで8.8%速く、GPUの役割割当を逆にすると利点が縮む。KV転送最適化は物理ブロックが送受信双方で連続しているほど効くため、断片化が強ければ複数回の送受信が必要になる。またMooncakeは長い入力で一部Failureとなり、比較可能な範囲が揃わない条件もある。負荷点数の重みと閾値は実験的に決められており、未評価の到着分布で同じ役割切替が最適とは限らない。",
+    "interpretation": "転送単体の極端に大きい改善は、NCCL帯域そのものを高速化したというより、少量の通信を何万回も起動していたソフトウェア構造を連続区間へ畳み込んだ結果である。そのためKV転送が全体遅延の大きな割合を占める長入力や分離構成ほど寄与しやすい。一方、エンドツーエンドではプリフィル計算、デコード計算、到着待ちが残るため改善は15〜49%程度になる。さらにLoad-Aware Schedulerが片側過負荷時のGPU空白を埋めるため、高負荷でのスループット差は通信最適化単独の効果ではない。異種評価ではデコードをH20へ置く方が良く、デコードのメモリ帯域・KV保持要求へ高資源GPUを対応付ける設計意図と整合する。",
+    "quality_impact": "KVキャッシュの物理レイアウト、通信回数、処理ノードの役割を変更するが、モデル重みや数値精度、注意対象トークン、サンプリング規則は近似しない。したがって方式は原理上無損失のシステム最適化である。論文は生成品質の同等性を独立指標で再評価せず、性能評価を中心にしている。"
   }
 }
