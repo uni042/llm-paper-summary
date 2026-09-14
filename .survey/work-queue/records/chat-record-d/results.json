@@ -2,54 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-c2341532b0b52ab5132ae3fb",
-  "job_id": "job-research-2ab985bbc123336f",
-  "data": {
-    "overview": "理論面では、HBM容量Nと会話到着率を比例拡大する平均場極限で、LRU hit ratioが(AH/AR)F(TC)へ収束することを証明する。実用推定器は部分block非再利用を補正したA_H^hashを使い、実vLLMとの差分を残したAscend実験でもhit ratioの変化をよく追従した。Experiment 1では目標平均turn間隔90〜240秒の全条件で絶対誤差0.02未満、相対誤差16%未満で、目標と実測のturn間隔が近い120〜165秒では両推定器とも相対誤差10%未満だった。Experiment 2ではµF=135秒で会話到着率を0.5〜2.0/sへ変え、絶対誤差0.015未満・相対誤差7%未満を報告する。",
-    "key_results": [
-      {
-        "metric": "平均場hit-ratio収束",
-        "value": "h^(N) → (AH/AR)F(TC)",
-        "baseline": "有限NのLRU MCM",
-        "condition": "HBM容量Nと会話到着率が比例して無限大へ増加",
-        "interpretation": "複雑なLRU状態をcharacteristic timeとワークロード統計に縮約できる理論的根拠。"
-      },
-      {
-        "metric": "Experiment 1 絶対誤差",
-        "value": "全条件で0.02未満",
-        "baseline": "実測vLLM LRU hit ratio",
-        "condition": "λ0=1.5/s、target µF=90〜240s",
-        "interpretation": "実装差や有限容量があっても推定値が実測へ近い。"
-      },
-      {
-        "metric": "Experiment 1 相対誤差",
-        "value": "全体で16%未満、120≤µF≤165sでは10%未満",
-        "baseline": "実測hit ratio",
-        "condition": "targetとrealized interarrival分布の一致度に依存",
-        "interpretation": "主な誤差源が平均場近似だけでなく入力するturn間隔分布のずれであることを示す。"
-      },
-      {
-        "metric": "Experiment 2 推定誤差",
-        "value": "絶対誤差0.015未満、相対誤差7%未満",
-        "baseline": "実測hit ratio",
-        "condition": "µF=135s、λ0=0.5〜2.0/s",
-        "interpretation": "負荷強度を変えた場合のhit-ratio低下も推定器が追従する。"
-      },
-      {
-        "metric": "実測workload規模",
-        "value": "5,000測定会話、22,347 complete turns、平均4.4694 turns/conversation",
-        "baseline": "ShareGPT",
-        "condition": "別途1,000会話・4,690 turnsでwarm-up",
-        "interpretation": "単純な小規模simulationではなく実LLM serving stackで検証している。"
-      }
-    ],
-    "negative_results": "短い目標turn間隔では前turnのdecode完了が次turn到着を制約するため、実現interarrival distributionが想定指数分布より長くなる。長い目標間隔では有限測定窓により遅いturnがcensorされ、逆方向の分布ずれが起きる。このためprior estimatorの誤差は増え、実測平均を使うposterior estimatorとの差が現れる。また理論のwhole-conversation LRUとvLLMのblock-level/suffix-first evictionは一致しない。",
-    "interpretation": "容量計画では、HBMを増やせばhit ratioが上がるという定性的理解だけでなく、会話到着率・履歴サイズ・turn間隔の統計を与えて目標hit ratioに必要な容量を推定できる。特にagentic workloadのように会話履歴が長期間生存する場合、GPU/NPUのHBMをKVへ何GB割り当てるべきかをworkload-awareに決めるための基礎モデルになる。ただし入力分布の推定誤差がそのままhit-ratio誤差へ反映されるため、非定常環境では統計の継続更新が必要である。",
-    "quality_impact": "生成アルゴリズムやモデル重みを変更しないため、推定手法自体による生成品質劣化はない。論文の評価指標はhit ratioと推定誤差であり、回答品質は主要評価対象ではない。"
-  },
+  "attempt_id": "attempt-dbb121371544335d13596c9e",
+  "job_id": "job-research-9ac9e9ad81401213",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-c2341532b0b52ab5132ae3fb",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "claim_id": "claim-dbb121371544335d13596c9e",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0012JST",
     "worker_kind": "scheduled_chat"
   }
 }
