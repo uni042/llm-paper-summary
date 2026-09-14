@@ -1,0 +1,39 @@
+name: Temporary remove normal-run dashboard block
+on:
+  push:
+    branches: [fix/remove-duplicate-normal-run-dashboard-20260914]
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/remove-duplicate-normal-run-dashboard-20260914
+      - name: Remove duplicate ledger-based normal-run block
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('.survey/scripts/build_status_dashboard.py')
+          s = p.read_text(encoding='utf-8')
+          old_setup = '''    latest_run = _latest_normal_run(ledger_entries, maintenance)\n    latest_run_counts = latest_run.get("counts") or {}\n    latest_run_key = str(latest_run.get("run_key") or "")\n    latest_normal_discovery = normal_discovery_by_key.get(latest_run_key, {\n        "round_count": 0,\n        "candidate_count": 0,\n        "duplicate_filtered_count": 0,\n        "novel_candidate_count": 0,\n        "accepted_count": 0,\n        "axes": [],\n    })\n'''
+          if old_setup not in s:
+              raise SystemExit('latest normal-run setup block not found')
+          s = s.replace(old_setup, '', 1)
+          start = '''        "## 直近の通常worker",\n        "",\n        f"Run: **{latest_run.get('run_key', '—')}**",\n        "",\n        "| 指標 | 件数 |",\n        "|---|---:|",\n        f"| Research完了 | **{int(latest_run_counts.get('research_completed') or 0)}** |",\n        f"| Repo収録 | **{int(latest_run_counts.get('new_papers') or 0)}** |",\n        f"| Audit完了 | **{int(latest_run_counts.get('audit_completed') or 0)}** |",\n        f"| 通常worker Discovery round | **{int(latest_normal_discovery.get('round_count') or 0)}** |",\n        f"| 通常worker Discovery採用 | **{int(latest_normal_discovery.get('accepted_count') or 0)}** |",\n        f"| Research/Audit blocked遷移 | **{_normal_blocked(latest_run)}** |",\n        "",\n'''
+          if start not in s:
+              raise SystemExit('normal-run render block not found')
+          s = s.replace(start, '', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+          python -m py_compile .survey/scripts/build_status_dashboard.py
+      - name: Commit patch and remove temporary workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm .github/workflows/tmp-remove-normal-run-block.yml
+          git add .survey/scripts/build_status_dashboard.py .github/workflows/tmp-remove-normal-run-block.yml
+          git commit -m 'fix: remove duplicate ledger-based normal-run block'
+          git push origin HEAD:fix/remove-duplicate-normal-run-dashboard-20260914
