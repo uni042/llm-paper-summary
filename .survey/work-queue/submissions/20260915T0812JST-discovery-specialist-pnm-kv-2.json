@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "job_id": "job-f7399b3e773e1558",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.03555",
+      "title": "Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2608.03555",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2608.03555-karat-pnm-retrieval-sparse-attention-serving.md",
+      "priority": 84,
+      "reason": "million-token級のretrieval-based sparse attentionでKV cacheと検索indexをGPU外の大容量LPDDR近傍へ配置し、GPUはprojection/MoE、汎用処理近傍メモリ（processing-near-memory; PNM）側はKV/index参照演算を担当する異種decodeサービング構成を提案する。KARATの汎用PNM設計に加え、expert all-to-allを別micro-batchのGEMMへ隠す細粒度スケジューリングと文脈長別micro-batch再平衡を組み合わせ、3モデルと実エージェントtraceでSLO下throughput/TDPをGPU-only比2.09〜6.13倍、training-free sparse attentionを1.36〜3.21倍改善すると報告する。KVの容量階層化とMoE通信重畳を同時に扱うため重点テーマとの関連が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-pnm-kv-2",
+    "axis": "retrieval-based sparse attention向けKV常駐PNM・異種decode serving",
+    "query_summary": "GPU HBM外へKVを置く長文脈servingを探索し、KARAT（arXiv:2608.03555）とSwiftCache（arXiv:2606.16135）を軽量評価した。最新identityでSwiftCacheは既収録、KARATは未収録・未job化と判断した。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 1,
+    "duplicate_canonical_ids": [
+      "arXiv:2606.16135"
+    ],
+    "next_axis_hint": "次はKV圧縮とtensor parallelismの費用対効果境界、またはCXL/PCIe上のretrieval index・KV配置と通信スケジューリングへ展開する。",
+    "empty_round_reason": null
+  }
+}
