@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-2301ef4abff314e4c204d926",
   "job_id": "job-research-1ecc150ce081a47b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2301ef4abff314e4c204d926",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2603.08739",
+    "arxiv_id": "2603.08739",
+    "doi": "10.48550/arXiv.2603.08739",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.AR","cross_list":["cs.DC"]},
+    "title": "Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service",
+    "summary": "Karetoは、大規模言語モデルのKVキャッシュをGPU高帯域メモリ、主記憶、SSDなどへ階層配置するとき、固定容量や単一の追い出し方針では要求密度、接頭辞再利用、入出力帯域、クラウド料金の変化に追従できない問題を扱う。遅延、処理量、運用費を同時目的とし、非線形な相互作用や料金の段差を解析式で近似する代わりに、高忠実度の離散事象シミュレータで構成候補を評価する。探索では容量を増やしたときの限界改善が小さくなった方向を打ち切り、変化の大きい領域だけ細分化してパレート前線を効率的に近似する。さらに接頭辞木の頻出部分木ごとに再利用間隔を集計し、容量予算あたりのヒット利益が高い保持時間を割り当てる。Qwen3-480BをSGLangで配信するAlibaba Cloud相当環境を三種類の2時間トレースで評価し、固定1024GB DRAM構成に対して目的別の代表点で処理量を最大9.3%向上、平均初回トークン時間を最大58.3%短縮、総費用を最大20.2%削減した。シミュレータの実機との差は最大で初回トークン時間19.2%、処理量6.5%、ヒット率2.0%だった。",
+    "list_summary": "実負荷を再生するシミュレータでDRAM・SSD容量と保持時間のパレート前線を探索し、固定1TB DRAM比で処理量最大9.3%向上・平均初回トークン時間最大58.3%短縮・費用最大20.2%削減する階層KV構成最適化。",
+    "authors": ["Xianzhe Zheng","Zhengheng Wang","Ruiyan Ma","Rui Wang","Xiyu Wang","Rui Chen","Peng Zhang","Sicheng Pan","Zhangheng Huang","Chenxin Wu","Yi Zhang","Bo Cai","Kan Liu","Teng Ma","Yin Du","Dong Deng","Sai Wu","Guoyun Zhu","Wei Zhang","Feifei Li"],
+    "authors_affiliations": "Zhejiang University、Alibaba Group。",
+    "published": "2026-02-25",
+    "publication": "arXiv:2603.08739v1",
+    "publication_type": "プレプリント",
+    "publication_status": "2026年2月25日投稿のarXiv v1。一次資料から査読付き採択は確認できない。",
+    "lineage": "kv-cache-offload-recomputation",
+    "topics": ["KVキャッシュ","階層ストレージ","DRAM","SSD","多目的最適化","パレート前線","保持時間制御","SGLang","費用最適化"],
+    "importance": "高。KVキャッシュの移動・追い出し機構そのものではなく、変動する実負荷と料金体系に応じて各階層へどれだけ容量を割り当てるべきかという配備設計を自動化し、性能と費用を同じ最適化問題へ接続する。",
+    "hardware_evaluation": "主評価はデュアルソケットIntel Xeon 8369Bサーバ上の高忠実度シミュレータ。Alibaba Cloud ecs.gn8v-8x.48xlarge相当の推論環境、Qwen3-480B、SGLang、Alibaba Cloud ESSD PL1をモデル化する。実システム測定との精度検証も行う。",
+    "hardware_details": "シミュレータはGPU実行時間を対象GPU上の経験的プロファイルから補間し、GPU、主記憶、SSDの三構成について実系と比較する。評価は1インスタンスの計算制約条件と4インスタンスの計算余裕条件を使う。",
+    "quality_effect": "モデル重みや生成アルゴリズムは変更せず、同一KVキャッシュをどの階層へ保持・再利用するかを変えるため、生成品質を近似で落とす手法ではない。性能差は再計算量、待ち時間、入出力停止時間として現れる。",
+    "storage_targets": ["GPU高帯域メモリ上のKVブロック","主記憶上のKVブロック","SSD上のKVブロック","接頭辞木と再利用間隔統計","構成候補とシミュレーション結果"],
+    "bottlenecks": ["固定容量による過剰・不足配置","接頭辞再利用分布の負荷依存性","SSD容量と帯域・料金の結合","主記憶容量増加の限界効用低下","低密度時のSSD先読み窓不足","多目的構成空間の探索費用"],
+    "evidence_locations": ["§3.1-3.3","§4.1-4.3","§5.1-5.4","Figure 3-19","Algorithm 1-2"],
+    "source": "https://arxiv.org/abs/2603.08739",
+    "sources": ["https://arxiv.org/abs/2603.08739","https://arxiv.org/html/2603.08739","https://arxiv.org/pdf/2603.08739"],
+    "code": null,
+    "implementation": "高忠実度KVキャッシュ・推論サービスシミュレータ、適応パレート探索、接頭辞部分木別の保持時間最適化を実装して評価する。一次資料から著者公式コード公開URLは確認できない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},
+      {"canonical_id":"arXiv:2406.17565","arxiv_id":"2406.17565"},
+      {"canonical_id":"arXiv:2511.02230","arxiv_id":"2511.02230"},
+      {"canonical_id":"arXiv:2107.03374","arxiv_id":"2107.03374"},
+      {"canonical_id":"arXiv:2404.14294","arxiv_id":"2404.14294"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 28
+  },
+  "reservation": {"claim_id":"claim-2301ef4abff314e4c204d926","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}
 }
