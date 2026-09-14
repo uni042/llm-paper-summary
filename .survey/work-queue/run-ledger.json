@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T01:31:28.606578+00:00",
+  "updated_at": "2026-09-14T01:41:32.596126+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,13 +18680,13 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T01:31:28.606578+00:00",
+      "last_recorded_at": "2026-09-14T01:41:32.596126+00:00",
       "signals": [
         "paper_materialized",
         "research_completed"
       ],
       "counts": {
-        "research_completed": 4,
+        "research_completed": 5,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18764,6 +18764,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34796723011:1",
+          "recorded_at": "2026-09-14T01:41:32.596126+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34796723011",
+            "run_attempt": "1",
+            "source_sha": "7d62f8ffeec17eea007fc67a894708708e6d6eb1"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18796,6 +18810,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.15050",
           "title": "Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-7c396c8966095e9f",
+          "type": "research",
+          "canonical_id": "arXiv:2608.15473",
+          "title": "Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding",
           "from": "ready",
           "to": "completed"
         }
