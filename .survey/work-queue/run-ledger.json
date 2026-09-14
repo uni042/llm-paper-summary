@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T02:07:38.181694+00:00",
+  "updated_at": "2026-09-14T02:13:43.127899+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T02:07:38.181694+00:00",
+      "last_recorded_at": "2026-09-14T02:13:43.127899+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 11,
+        "research_completed": 12,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18850,6 +18850,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34798476004:1",
+          "recorded_at": "2026-09-14T02:13:43.127899+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34798476004",
+            "run_attempt": "1",
+            "source_sha": "cc4bc04062cd26100034b464de5e65da5567b97f"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18938,6 +18952,14 @@
           "type": "research",
           "canonical_id": "arXiv:2608.23843",
           "title": "PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-2d5fb10dc2e0c88e",
+          "type": "research",
+          "canonical_id": "arXiv:2601.22438",
+          "title": "Towards Resiliency in Large Language Model Serving with KevlarFlow",
           "from": "ready",
           "to": "completed"
         }

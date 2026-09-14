@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **103** |
+| 未処理の論文候補（Research ready） | **102** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **286** |
+| 全文精読完了（累計） | **287** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,19 +35,19 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **103** |
+| 未処理候補（Research ready） | **102** |
 | 処理中（Active claims） | **4** |
-| 今すぐ着手可能（Claimable） | **100** |
+| 今すぐ着手可能（Claimable） | **99** |
 | :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 11:13 JST** |
 | :00 補助worker 直近claim | **09-14 11:13 JST** |
-| 直近24h Research完了（:30 通常worker） | **10** |
+| 直近24h Research完了（:30 通常worker） | **11** |
 | 直近24h Research完了（:00 補助worker） | **12** |
 | 直近24h Research完了（帰属不明） | **2** |
 | 最新通常run | **2026-09-14T10:30:00+09:00** |
-| 最新通常runのResearch完了 | **5** |
+| 最新通常runのResearch完了 | **6** |
 | 最古の有効claimの経過時間 | **71 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
@@ -65,7 +65,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **24** |
+| Research完了 | **25** |
 | Repo収録 | **58** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -79,7 +79,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 24 → Repo収録 58**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 25 → Repo収録 58**
 
 ## 直近の通常worker
 
@@ -138,6 +138,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2601.22438` — Towards Resiliency in Large Language Model Serving with KevlarFlow
 - `arXiv:2608.23843` — PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression
 - `arXiv:2607.17715` — C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference
 - `arXiv:2606.13740` — Efficient On-Device Diffusion LLM Inference with Mobile NPU
@@ -145,7 +146,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2605.11581` — Ada-MK: Adaptive Megakernel Compilation for Efficient LLM Inference
 - `arXiv:2503.03777` — FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference
 - `arXiv:2608.15473` — Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding
-- `arXiv:2606.15050` — Solyx AI Grid: Hardware-Telemetry-Aware Routing Across Geographically Distributed GPU Clusters
 
 ### 7日比較
 
