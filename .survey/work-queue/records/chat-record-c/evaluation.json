@@ -4,7 +4,16 @@
   "slot": "evaluation",
   "attempt_id": "attempt-2f1ba32c74ff42e14419c6de",
   "job_id": "job-research-6be22b91f978c683",
-  "data": {},
+  "data": {
+    "hardware": "NVIDIA RTX A6000 48 GBを8基搭載した単一サーバを使用する。GPUはペア単位でNVLink、それ以外はPCIeで接続され、ホストCPUはAMD EPYC 7763 64コアである。Ubuntu 22.04、NVIDIA Driver 535.171.04、CUDA 12.2を使用する。",
+    "software": "iServeはTensorRT-LLM上に構築し、アンバランスなパイプライン並列の層割当を追加する。比較対象はTensorRT-LLMの既定TP構成、Hugging Face Accelerate、AlpaServe、および全モデルを捨てずに配備するよう調整したAlpaServe*である。モデル登録・構成選択・GPU配置はiServe Controllerが行う。",
+    "methodology": "Falcon-7B、Falcon-40B、GPT-J-6B、Llama-2-7B、Llama-2-13B、Llama-2-70Bを用い、TP/PP、FP16、INT8、INT4、GPTQ4、KVキャッシュ量子化、複数枝刈り方式を含む構成空間を評価する。実負荷としてAzure LLMサービングのcode traceとconversation traceを用い、到着率スケールを変えながら、遅延最小、費用最小、メモリ最小、GPU時間最小、遅延SLO達成の各意図を測定する。指標は遅延、GPUスループット、使用GPU数、総メモリ、GPU時間、推定費用、SLO達成率である。プロファイル方式は完全モデル総当たりやAlpaServeとGPU時間・精度を比較し、空きGPUを用いたオンラインプロファイルのSLO影響も測る。",
+    "baselines": ["TensorRT-LLM TP", "Hugging Face Accelerate", "AlpaServe", "AlpaServe*", "完全モデル総当たりプロファイル"],
+    "models": ["Falcon-7B", "Falcon-40B", "GPT-J-6B", "Llama-2-7B", "Llama-2-13B", "Llama-2-70B"],
+    "datasets": ["Azure LLM code trace", "Azure LLM conversation trace", "合成出力長プロファイル要求"],
+    "metrics": ["p50/p95推論遅延", "GPUスループット", "使用GPU数", "総GPUメモリ", "GPU時間", "費用", "SLO達成率", "プロファイルGPU時間", "推定誤差"],
+    "scope": "同種RTX A6000×8の単一サーバを中心に、複数モデルを同時配備する動的負荷で評価する。論文はA100/H100など別GPU型にもフィンガープリントを型ごとに再測定すれば拡張できると議論するが、異種GPUを同一モデルの一つの並列構成内で混在させる配置は未対応である。マルチモーダルなど反復的でない特殊層を持つモデルは追加の固有層プロファイルが必要になる。"
+  },
   "reservation": {
     "claim_id": "claim-2f1ba32c74ff42e14419c6de",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
