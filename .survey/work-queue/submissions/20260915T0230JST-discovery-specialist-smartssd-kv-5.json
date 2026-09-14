@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-e00f52c8cc2c35eb",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2602.18750",
+      "title": "HillInfer: Efficient Long-Context LLM Inference on the Edge with Hierarchical KV Eviction using SmartSSD",
+      "source_url": "https://arxiv.org/abs/2602.18750",
+      "paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-hierarchical-kv-eviction-smartssd.md",
+      "priority": 88,
+      "reason": "長文脈LLMのKVキャッシュをGPU/CPU/SmartSSDへ単に追い出すのではなく、SmartSSD内部でKV重要度評価を行って不要なデータ移動を減らし、CPUとSmartSSDの階層KVプールを共同管理するedge向け推論系。さらに適応prefetchでGPU計算、CPU/SSD間転送、GPUへのKV供給を重畳し、commodity GPU搭載PC上で複数モデル・benchmarkに対して精度を維持しつつ最大8.56倍の高速化を報告する。SSDを容量退避先だけでなくimportance evaluationの計算場所として使うため、InstInferのin-storage attentionや通常のCPU/SSD KV offloadと差別化でき、SSD活用重点テーマにも直接合致する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T02:00:00+09:00",
+    "round": "specialist-smartssd-kv-5",
+    "axis": "SmartSSD/CSDを用いるKV階層管理・in-storage重要度評価",
+    "query_summary": "agent runtimeからstorage-side inferenceへ軸を移し、SmartSSD/CSDをKVの単純退避先ではなく、重要度評価や注意処理の計算場所として使う方式を探索した。HillInferはGitHub default branchとLibrary pendingで同一canonical IDが見つからず、新規候補として残した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "SmartSSD KV階層から、CXLメモリpoolやNVMe computational storageを使うMoE expert/KV協調offloadへ軸を移す",
+    "empty_round_reason": null
+  }
+}
