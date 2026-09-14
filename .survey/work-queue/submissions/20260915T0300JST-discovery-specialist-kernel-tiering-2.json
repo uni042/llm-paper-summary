@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-290c9e1e770e3de2",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2608.12103",
+      "title": "Who Should Own the Expert Cache? Kernel-Managed Tiering for Trillion-Parameter MoE Inference",
+      "source_url": "https://arxiv.org/abs/2608.12103",
+      "paper_path": "papers/inference/03-moe-offload-hierarchical-memory/2026-2608.12103-kernel-managed-tiering-trillion-parameter-moe.md",
+      "priority": 95,
+      "reason": "最大1.45TBのexpert poolを持つtrillion-parameter MoEについて、user-spaceのexpert cacheではなくOS page cache/LRUを専門家階層として使う設計を実機GH200で評価する。等メモリ条件でkernel LRUがoracle frequency tableと同等以上のhit率を示し、router lookahead prefetchの利得が小さいこと、end-to-end decodeを1.09〜1.10倍改善することを報告する。CPU/DRAM階層、expert cache所有権、prefetchの価値を直接検証しており、本リポジトリのMoE offload・階層メモリ重点テーマに極めて強く関連する。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T03:00:00+09:00",
+    "round": "specialist-kernel-tiering-2",
+    "axis": "MoE expert cache所有権・OS page cache・階層メモリ",
+    "query_summary": "MoE expert cache、CPU/DRAM tiering、kernel LRU、router lookahead prefetchを探索し、trillion-parameter実機評価を持つ強い候補を抽出した。GitHub default branchとLibrary pendingでarXiv ID/titleの重複を再確認した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "2609新着のNVMe/SSD直接利用またはGPU runtime・通信/I/O協調へ移る",
+    "empty_round_reason": null
+  }
+}
