@@ -4,6 +4,18 @@
 
 本書は通常論文workerの **run内継続・待ち時間削減・可視queueの扱い** の正本とする。discoveryの詳細な継続・停止判断は `discovery-continuation-policy.md` と `discovery-exhaustive-run-policy.md`、transportは `fallback-routing.md` / `queue-v10.md`、claim同時保有数は `claim-serial-policy.md`、全体STOP判定は `continuation-policy.json` を併用する。
 
+## 0. 次回Scheduled Chat枠への引き継ぎガード
+
+毎時`:30`の通常論文workerは、同じScheduled Chatの次回`:30`実行と重ならないことを優先する。各runは新しい独立作業（Research/Auditのclaim、新しいdiscovery round、maintenanceの新しい独立単位など）を開始する直前に、JSTで次回`:30`予定枠までの残り時間を確認する。
+
+- 次回`:30`予定枠まで **600秒以下** なら、新しい独立作業を開始せず、現在までの成果を耐久保存し、新しいclaimを発行せず、安全な継続情報だけを残してrunを終了する。
+- 次回`:30`予定枠まで **180秒以下** なら、未保存成果の耐久保存、既存claimの安全な着地、必要な継続情報の記録など、孤立状態を残さないための最低限の終了処理だけを行う。
+- 600秒の引き継ぎガードは、high-backlog時の最低3件目標、通常のwork-conserving継続、`CONTINUE`既定値より優先する。ガード内に入ったことを理由に新しい3件目・次job・次探索軸を開始してはならない。
+- すでに処理中で未保存のjobを乱暴に中断して成果を失うことはしない。まず現在の論理成果をGitHubまたはChatGPT Libraryへ耐久保存できる安全地点まで進め、その後は次の独立作業を開始しない。
+- `continuation_gate.py` を使う場合は、同じScheduled Chatの次回`:30`予定枠までの秒数を `--seconds-to-next-scheduled-task` へ渡す。既定の `--scheduled-handoff-guard-seconds` は600秒とする。
+
+この引き継ぎガードは通常runだけでなく、この毎時`:30` Scheduled Chatから起動する特殊runにも適用する。ただし特殊run固有の終了条件がさらに早く成立する場合は、そちらで終了してよい。
+
 ## 1. 論文ストック0は停止条件ではない
 
 `actionable ready`、Library seed由来の`spillover_candidates`、その他処理可能なresearch/audit jobを合わせた論文ストックが0件になった場合、通常論文workerはアイドル終了してはならない。ストック0を新規discovery開始条件として扱い、直ちにdiscoveryを実行する。
@@ -59,9 +71,9 @@ GitHub Actionsはclaim、immutable submission、backgroundの3レーンに分離
 6. actionable readyがなければspillover candidateを処理する。
 7. 論文ストック0、candidate在庫low watermark未満、またはactionable researchが尽きた場合だけdiscoveryする。25本以上かつactionable researchありならdiscovery分岐へ入らない。
 8. discovery各ラウンド、blocked化、checkpoint後にもqueue/backlog/discovery stateを再取得する。
-9. 次の独立作業があれば1へ戻る。
+9. 次の独立作業を始める前に§0の引き継ぎガードを評価する。ガード外で次の独立作業があれば1へ戻る。ガード内なら耐久保存と終了処理を行って終了する。
 
-high-backlog research-only modeでは、一次資料取得と耐久保存経路が利用可能でactionable researchが十分ある限り、**1通常runにつき最低3件の異なるresearch jobを完全payloadとして送信または耐久checkpointすることを下限目標**とする。3件はrun終了条件でも上限でもない。
+high-backlog research-only modeでは、一次資料取得と耐久保存経路が利用可能でactionable researchが十分ある限り、**1通常runにつき最低3件の異なるresearch jobを完全payloadとして送信または耐久checkpointすることを下限目標**とする。3件はrun終了条件でも上限でもない。§0の引き継ぎガードが成立した場合は、3件未満でもガードを優先して終了する。
 
 「readyが空」「候補0」「1本完了」「3本完了」「1探索ラウンド完了」「discoveryで5本送信」「固定bankが埋まった」「fallback backlogがある」「Actions terminal反映待ち」「`next_jobs`表示枠を処理し切った」は終了理由ではない。
 
@@ -69,18 +81,19 @@ high-backlog research-only modeでは、一次資料取得と耐久保存経路�
 
 通常論文workerが自発的に終了してよいのは原則として以下だけ。
 
+- §0の引き継ぎガードが成立し、同じScheduled Chatの次回`:30`予定枠まで600秒以下になった。
 - platform time/context/execution limitに到達した。
 - GitHub read不能で正本状態を安全に判断できない。
 - GitHub direct writeとChatGPT Libraryの両方で、必要な成果またはoffline seedを耐久保存できない。
 - discoveryが必要な水位で、`discovery-exhaustive-run-policy.md` に従って materially distinct な探索軸・source・citation方向・隣接テーマを十分に回しても独立作業を合理的に生成できない。
 
-high-backlog research-only modeでは探索枯渇を終了理由に使わず、actionable researchを優先する。
+high-backlog research-only modeでは探索枯渇を終了理由に使わず、actionable researchを優先する。ただし§0の引き継ぎガードはhigh-backlog時にも優先する。
 
-終了直前には `continuation-policy.json` を評価し、可能なら `.survey/scripts/continuation_gate.py` を使う。`CONTINUE` なら最終応答だけを出して終了せず、同じrunで次の独立作業へ進む。
+終了直前には `continuation-policy.json` を評価し、可能なら `.survey/scripts/continuation_gate.py` を使う。`CONTINUE` なら最終応答だけを出して終了せず、同じrunで次の独立作業へ進む。ただし§0の引き継ぎガードが成立している場合は `STOP_RUN` とし、次の独立作業へ進まない。
 
 ## 7. 特殊run
 
-maintenance runは通常処理へ戻らず、maintenance要求発行後に終了する。08:30 JSTのその他更新workerは論文workerを同じ枠で実行しない。将来repoで追加される明示的な特殊runも、その正本指示を優先する。
+maintenance runは通常処理へ戻らず、maintenance要求発行後に終了する。08:30 JSTのその他更新workerは論文workerを同じ枠で実行しない。将来repoで追加される明示的な特殊runも、その正本指示を優先する。これらも同じ毎時`:30` Scheduled Chatの次回実行が近い場合は§0の引き継ぎガードを適用する。
 
 ## 8. Claim-first execution and lease
 

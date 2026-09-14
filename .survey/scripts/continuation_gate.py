@@ -27,6 +27,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
 
     if args.platform_limit:
         reasons.append("platform_limit_reached")
+
+    seconds_to_next = getattr(args, "seconds_to_next_scheduled_task", None)
+    handoff_guard = int(getattr(args, "scheduled_handoff_guard_seconds", 600))
+    if seconds_to_next is not None and int(seconds_to_next) <= handoff_guard:
+        reasons.append("next_scheduled_task_within_handoff_guard")
+
     if not args.github_read:
         reasons.append("github_read_unavailable_for_repo_state")
 
@@ -89,7 +95,12 @@ def decide(args: argparse.Namespace) -> dict[str, object]:
         "fallback_writable": fallback_writable,
         "durable_transport_available": any_durable_transport,
         "independent_work_after_fallback": independent_work,
-        "rule": "A single transport failure, pending claim result, pending backlog, or bank exhaustion is never by itself a whole-run stop condition.",
+        "seconds_to_next_scheduled_task": seconds_to_next,
+        "scheduled_handoff_guard_seconds": handoff_guard,
+        "scheduled_handoff_active": bool(
+            seconds_to_next is not None and int(seconds_to_next) <= handoff_guard
+        ),
+        "rule": "A single transport failure, pending claim result, pending backlog, or bank exhaustion is never by itself a whole-run stop condition. The next scheduled invocation of the current worker entering its handoff guard is a hard stop for starting new independent work.",
     }
 
 
@@ -110,6 +121,8 @@ def main() -> int:
     ap.add_argument("--claim-result-pending", type=yn, default=False)
     ap.add_argument("--write-failed", type=yn, default=False)
     ap.add_argument("--probe", choices=("success", "failure", "not-run"), default="not-run")
+    ap.add_argument("--seconds-to-next-scheduled-task", type=int, default=None)
+    ap.add_argument("--scheduled-handoff-guard-seconds", type=int, default=600)
     args = ap.parse_args()
     print(json.dumps(decide(args), ensure_ascii=False, indent=2))
     return 0

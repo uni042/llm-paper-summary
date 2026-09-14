@@ -1,5 +1,5 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "name": "scheduled-chat-continuation-gate",
   "principle": "A normal survey-worker run is work-conserving: local job failure, empty paper stock, one empty discovery round, or transport backlog is not a run stop condition. Preserve affected state durably and keep generating or processing independent work until a hard stop condition is reached. Special runs such as maintenance and the 08:30 update worker keep their dedicated termination rules.",
   "always_on_policy": {
@@ -10,7 +10,15 @@
     "overflow_research_rule": "For the :00 discovery-specialist worker, candidate_inventory > 50 with actionable research/audit means switch to overflow research mode; large inventory is a mode switch, not a run stop.",
     "rule": "For a normal paper-worker run, zero actionable paper stock means discovery work exists. A single discovery round yielding zero novel candidates never proves that no independent work remains."
   },
+  "scheduled_handoff_policy": {
+    "timezone": "Asia/Tokyo",
+    "handoff_guard_seconds": 600,
+    "hard_finalize_seconds": 180,
+    "implementation": ".survey/scripts/continuation_gate.py",
+    "rule": "Before claiming or starting any new independent Research/Audit/discovery/maintenance unit, compute seconds until the next scheduled invocation of the same Scheduled Chat worker from that worker's canonical schedule. For the hourly :30 survey worker the next boundary is the next :30; for the hourly :00 discovery worker it is the next :00. If that next invocation is within handoff_guard_seconds, do not start another unit. Durably preserve the current completed work, avoid creating a new claim, record any safe continuation hint, and end the run. This schedule handoff guard overrides throughput targets and normal work-conserving continuation. If the run is already within hard_finalize_seconds, perform only the minimum durable finalization needed to leave no orphaned claim or unpublished completed result."
+  },
   "stop_run_only_if": [
+    "next_scheduled_task_within_handoff_guard",
     "github_read_unavailable_for_repo_state",
     "completed_result_or_required_spillover_seed_cannot_be_durably_preserved_in_github_or_library",
     "platform_time_context_or_execution_limit_reached",
@@ -94,7 +102,7 @@
     "id_conflict": "quarantine only the conflicting envelope; do not overwrite the GitHub ledger and do not stop unrelated work"
   },
   "end_of_run_gate": {
-    "rule": "Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. Refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, candidate inventory, and discovery-state. For the :00 specialist, overflow conditions require research rather than voluntary termination. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis. STOP_RUN for no-work is allowed only after multiple materially distinct search axes, citation/related-implementation expansion, and adjacent-topic expansion have been attempted and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
+    "rule": "Before emitting a final response or ending voluntarily, first apply scheduled_handoff_policy. When the next scheduled invocation of the same worker is within handoff_guard_seconds, STOP_RUN after durable finalization and do not claim or start another independent unit. Before emitting a final response or ending voluntarily, first classify whether this is a special run. Maintenance and the 08:30 update worker follow their dedicated rules. Refresh GitHub actionable ready jobs, checkpointed jobs, Library spillover candidates, GitHub fallback-intake work, candidate inventory, and discovery-state. For the :00 specialist, overflow conditions require research rather than voluntary termination. If actionable paper stock is zero, decision is CONTINUE with DISCOVER_NOW. If a discovery round yields zero novel papers or only duplicates, decision remains CONTINUE and the worker must change search axis. STOP_RUN for no-work is allowed only after multiple materially distinct search axes, citation/related-implementation expansion, and adjacent-topic expansion have been attempted and no independent work can reasonably be generated. Platform execution/context limit or inability to durably save required state remains a hard stop.",
     "default_decision": "CONTINUE"
   }
 }
