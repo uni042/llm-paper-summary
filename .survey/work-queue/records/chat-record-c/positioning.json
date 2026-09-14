@@ -2,19 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-111a373b22118eb2383ab1da",
+  "attempt_id": "attempt-28e497fe6b93098a0d17c7dc",
   "job_id": "job-research-6cb2a2d661fb6b3a",
-  "data": {
-    "limitations": "本論文はarchitecture proposalにCacheScoutという一事例を組み合わせた予備的研究である。9つのagent-aware policyを同じ4 primitiveへ整理するが、実装・定量評価されたのはKV cachingだけで、batch shaping、disaggregated P/D placement、speculative agent execution、fairness、安全、retry等はopen challengeとして残る。評価はH100 1種類、Llama-3.1-8B 1モデル、AutoGen supervisor中心で、別framework・model・大規模clusterでの移植性は未検証である。さらにcache budget・concurrency感度、runtimeを無効化したablation、完全なmemory/latency microbenchmarkはextended versionへ延期されている。",
-    "differences": "ContinuumやTokencake、InferCeptはtool pauseやmulti-turn agentのKVをpin/migrateする特定のcache policyであり、KVFlowはdeploy時にagent step graphを宣言してevictionを最適化する。CacheScoutはlive dispatchからtransitionを学び、workloadごとに変わるroutingへ適応する。より重要なのは、論文がCacheScoutだけを目的とせず、agent-level metadataとengine eventを統合する独立runtime tierを置く点である。AutellixやAgent.xpuのようにagent-aware schedulingをengine内部へ直接実装する方式と比べ、policyごとのengine surgeryを4 primitiveのhookへ局所化することを狙う。",
-    "implementation_status": "CacheScout case studyはNVIDIA H100上のvLLM系cacheへ接続して実測され、transition learner、survival scorer、cross-session prefetchを実装している。block touch observeとeviction score consultの2 engine hookを使い、prefetchはnormal serving pathを通る。一方、runtime layerが列挙する他8 policyは完成実装ではなく、著者公式code repositoryのURLも本文・arXiv関連欄で確認できない。",
-    "research_positioning": "エージェント型LLMサービングにおけるsemantic/runtime gapを埋めるmiddleware・control-plane研究として位置付けられる。従来のscheduler、KV cache、speculation研究が個別にagent情報を取り込むのに対し、agent identityを共通座標として複数policyへ再利用可能なruntime abstractionを提案する。KV研究としてはcross-session prefix reuseとpredictive eviction/prefetchの系統であり、serving architectureとしてはframeworkとengineの間にpolicy control layerを追加する提案である。",
-    "relation_to_existing_repository": "Tokencake、Continuum、InferCept、KVFlow等のagent-aware KV管理に対し、CacheScoutは静的TTLや宣言済みgraphではなくonline transition predictionを用いる点で差別化される。Autellix等のagent scheduling、PASTE/Sherlockのspeculative tool/agent executionとは、同じobserve/predict/act substrateへ統合できるという上位抽象を提示する。SSD/NVMe階層へは直接踏み込まないが、agent transitionを将来KV需要のsignalとして使えば、GPU保持だけでなくDRAM/SSDからのprefetchやtier placementにも拡張できるため、階層memory研究のpolicy inputとして有用である。",
-    "audit_required": true,
-    "audit_reason": "現版はpreliminary evaluationで、著者自身がcache budget・concurrency sensitivity、runtime-disabled ablation、full microbenchmarkをextended versionへ延期している。今後の改訂でこれらが追加される可能性が高く、公式code公開有無とともに再監査価値がある。"
-  },
+  "data": {},
   "reservation": {
-    "claim_id": "claim-111a373b22118eb2383ab1da",
+    "claim_id": "claim-28e497fe6b93098a0d17c7dc",
     "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
