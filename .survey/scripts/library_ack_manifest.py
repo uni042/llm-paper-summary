@@ -2,14 +2,13 @@
 """Build deterministic acknowledgements for ChatGPT Library fallback payloads.
 
 The Library transport is outside GitHub Actions, so GitHub cannot move Library files
-itself.  Instead this script publishes a derived manifest containing only fallback
-envelopes whose exact immutable attempt is proven reflected on the canonical repo.
-Scheduled Chat may move only those envelope ids from Library pending/ to processed/.
+itself. This script publishes a derived manifest containing only fallback envelopes
+whose content is proven reflected on the canonical repo.
 
-An archive entry alone is intentionally insufficient.  For an acknowledgement we
-require the exact attempt descriptor, a matching successful durable result, and a
-terminal canonical job owned by that descriptor.  Completed Research additionally
-requires the published paper artifact to exist and match the result/job metadata.
+Normally proof is the exact immutable attempt. A historical stale-attempt fallback may
+instead be rebound to a newer released claim that explicitly adopted its checkpoint.
+Such a rebound is acknowledged only when the canonical successful descriptor records
+provenance back to the exact source envelope and source attempt.
 """
 from __future__ import annotations
 
@@ -69,6 +68,105 @@ def _paper_path(
     return None
 
 
+def _ack_row(
+    repo_root: Path,
+    archive_path: Path,
+    envelope: dict[str, Any],
+    descriptor_path: Path,
+    result_path: Path,
+    job_path: Path,
+    *,
+    paper_path: str | None,
+    published_attempt_id: str | None = None,
+) -> dict[str, Any]:
+    envelope_id = str(envelope["id"])
+    row: dict[str, Any] = {
+        "envelope_id": envelope_id,
+        "job_id": envelope["job_id"],
+        "attempt_id": envelope["attempt_id"],
+        "kind": envelope["kind"],
+        "status": "reflected",
+        "pending_path": f"/LLM-survey-outbox/pending/{envelope_id}.json",
+        "processed_path": f"/LLM-survey-outbox/processed/{envelope_id}.json",
+        "archive_path": _relative(repo_root, archive_path),
+        "submission_path": _relative(repo_root, descriptor_path),
+        "result_path": _relative(repo_root, result_path),
+        "job_path": _relative(repo_root, job_path),
+    }
+    if published_attempt_id is not None:
+        row["published_attempt_id"] = published_attempt_id
+        row["rebound"] = True
+    if paper_path is not None:
+        row["paper_path"] = paper_path
+    return row
+
+
+def _rebound_ack(
+    repo_root: Path,
+    archive_path: Path,
+    envelope: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Prove that this source payload was published through a newer rebound descriptor."""
+    queue = repo_root / QUEUE_REL
+    if envelope.get("kind") != "research":
+        return None
+    job_id = envelope.get("job_id")
+    source_attempt = envelope.get("attempt_id")
+    envelope_id = envelope.get("id")
+    if not all(isinstance(value, str) and value for value in (job_id, source_attempt, envelope_id)):
+        return None
+
+    job_path = queue / "jobs" / f"{job_id}.json"
+    job = _read_object(job_path)
+    if not job or job.get("status") != "completed":
+        return None
+    submission = job.get("artifact_submission")
+    if not isinstance(submission, str) or not submission.startswith(".survey/work-queue/submissions/research/"):
+        return None
+    descriptor_path = repo_root / submission
+    descriptor = _read_object(descriptor_path)
+    if not descriptor:
+        return None
+    published_attempt = descriptor.get("attempt_id")
+    if not isinstance(published_attempt, str) or not published_attempt or published_attempt == source_attempt:
+        return None
+    if (
+        descriptor.get("kind") != "research"
+        or descriptor.get("job_id") != job_id
+        or descriptor.get("source_fallback_envelope_id") != envelope_id
+        or descriptor.get("source_attempt_id") != source_attempt
+    ):
+        return None
+
+    result_path = queue / "results" / "research" / f"{published_attempt}.json"
+    result = _read_object(result_path)
+    if not result or result.get("ok") is not True:
+        return None
+    if (
+        result.get("job_id") != job_id
+        or result.get("attempt_id") != published_attempt
+        or result.get("job_status") != "completed"
+        or result.get("submission") != submission
+    ):
+        return None
+    artifact = result.get("artifact")
+    if not isinstance(artifact, dict):
+        return None
+    paper_path = _paper_path(envelope, descriptor, job)
+    if paper_path is None or artifact.get("paper") != paper_path or not (repo_root / paper_path).is_file():
+        return None
+    return _ack_row(
+        repo_root,
+        archive_path,
+        envelope,
+        descriptor_path,
+        result_path,
+        job_path,
+        paper_path=paper_path,
+        published_attempt_id=published_attempt,
+    )
+
+
 def _evaluate_archive(repo_root: Path, archive_path: Path) -> tuple[str, dict[str, Any]]:
     queue = repo_root / QUEUE_REL
     envelope = _read_object(archive_path)
@@ -83,6 +181,10 @@ def _evaluate_archive(repo_root: Path, archive_path: Path) -> tuple[str, dict[st
         return "waiting", _waiting(envelope, archive_path, "archive_identity_incomplete")
     if kind not in {"research", "audit"}:
         return "waiting", _waiting(envelope, archive_path, "unsupported_kind")
+
+    rebound = _rebound_ack(repo_root, archive_path, envelope)
+    if rebound is not None:
+        return "ack", rebound
 
     descriptor_path = queue / "submissions" / kind / f"{attempt_id}.json"
     descriptor = _read_object(descriptor_path)
@@ -140,22 +242,15 @@ def _evaluate_archive(repo_root: Path, archive_path: Path) -> tuple[str, dict[st
         if status_submission != relative_submission:
             return "waiting", _waiting(envelope, archive_path, "terminal_status_owned_by_different_submission")
 
-    row: dict[str, Any] = {
-        "envelope_id": envelope_id,
-        "job_id": job_id,
-        "attempt_id": attempt_id,
-        "kind": kind,
-        "status": "reflected",
-        "pending_path": f"/LLM-survey-outbox/pending/{envelope_id}.json",
-        "processed_path": f"/LLM-survey-outbox/processed/{envelope_id}.json",
-        "archive_path": _relative(repo_root, archive_path),
-        "submission_path": relative_submission,
-        "result_path": _relative(repo_root, result_path),
-        "job_path": _relative(repo_root, job_path),
-    }
-    if paper_path is not None:
-        row["paper_path"] = paper_path
-    return "ack", row
+    return "ack", _ack_row(
+        repo_root,
+        archive_path,
+        envelope,
+        descriptor_path,
+        result_path,
+        job_path,
+        paper_path=paper_path,
+    )
 
 
 def build_manifest(repo_root: Path) -> dict[str, Any]:
