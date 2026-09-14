@@ -4,10 +4,29 @@
   "slot": "problem_method",
   "attempt_id": "attempt-d2ff76406182a09db10f7939",
   "job_id": "job-research-2dbab0db43ceff0b",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d2ff76406182a09db10f7939",
-    "worker_id": "scheduled-chat-discovery-router",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "problem": "従来chatbot servingでは、入力prefillは比較的短くdecodeが長いため、continuous batchingやchunked prefillで総throughputを高める設計が有効だった。tool-augmented agentでは逆に、長いsystem promptを読むcold prefill、tool結果や追加指示を既存KVへ足す短いresume prefill、function callなど数十tokenのshort decodeが細かく交互に現れる。単一consumer GPU上で複数agentが重なると、巨大なcold prefill kernelがStreaming Multiprocessorとmemory bandwidthを長時間占有し、短いdecode streamのtoken emissionを止める。process-separated prefill/decodeは単一GPUではcoordinationとKV transferのoverheadが相対的に大きく、chunked prefillも非常に短いdecodeではchunk境界ごとの揺らぎを残すため、agent workload向けのより細粒度な干渉制御が必要になる。",
+    "novelty": "AgentServeは要求をcold prefill、resume prefill、decodeの三相へ分け、decodeの出力1トークン当たり時間（Time Per Output Token; TPOT）をfeedback signalとしてresume prefillの許容量とdecodeへのSM予約量を同時に調整する。system側ではCUDA Green Contextを起動時に複数作ってSMを空間分割し、prefillとdecodeを別CPU threadから単一engineへ投入する。これによりprocess分離なしでdecodeの最低資源を守り、KV cacheは共有memory poolに残して転送を避ける。algorithmic admission controlとGPU-level isolationを同じfeedback loopで結んだ点が主な新規性である。",
+    "method_overview": "Application layerはLangChainやAutoGen等から届くtool-augmented requestをbackendへ渡す。CPU-side orchestration layerのRequest Managerは、KV cache状態とrequest内容から各要求をcold prefill、resume prefill、decodeへ分類する。cold prefillは長くhead-of-line blockingの主因なので専用prefill queueへ送り、decodeはdecode queueへ入れる。resume prefillは現在のdynamic token budget以下ならdecode側と一緒に実行してparallelismを稼ぎ、budgetを超える長いものはcold prefill側へ退避する。\n\nResource-Aware Schedulerは一定control intervalごとにdecode処理時間と完了decode step数を集計し、step-level TPOTを求める。TPOTが上側thresholdを超えると保護modeに入り、resume prefill token budgetを縮小すると同時にdecodeへ予約する最低SM数を増やす。逆にTPOTが下側thresholdより十分小さければbudgetを広げ、decode SM floorを下げてprefillへ資源を返す。このhysteresis型feedbackにより、decodeが苦しいときだけprefill concurrencyを抑え、余裕があるときはGPU利用率を回収する。\n\nGPU execution layerではprefill threadとdecode threadを分離し、両方が同じmodel weightsとKV memory poolを共有する。起動時にGPU SMの10%〜100%を10%刻みで確保した10個のCUDA Green Contextを事前生成し、schedulerが要求するdecode SM floor以上となる最小contextへdecode threadをrebindする。例えば37%必要なら40% slotを選び、残りをprefillへ割り当てる。contextをrun-timeに作り直さず事前生成済みslotへ切り替えるため、rebind overheadを50 microseconds未満に抑える。\n\nKV cacheはprocess間転送せず同じGPU memory poolで共有する。prefillが書き終えたKV領域をread-onlyとしてdecodeへ公開し、CPU mutexでallocation/releaseを排他し、GPU-side cudaEventでkernel completionの順序を保証する。これによりdecodeがpartial KVを読むraceを防ぐ。設計全体は、長いcold prefillを空間的に隔離し、短いresume prefillだけをbudget内でdecodeと混ぜ、decode TPOTを観測してSM配分とadmissionを閉loopで調節する構成になっている。",
+    "components": [
+      {
+        "name": "三相request分類とresume prefill予算",
+        "description": "AgentServeはprefillを一種類として扱わず、初回の長いsystem promptを処理するcold prefillと、tool resultやsteering textをcached contextへ追加するresume prefillを分ける。cold prefillは常に専用prefill queueへ隔離し、resume prefillだけは長さが現在のdynamic budget以下ならdecode queue側へ入れて並列実行する。budgetを超えるresume prefillはprefill queueへ送るため、短い追記はGPU利用率を高めながら、長い追記がdecodeを塞ぐのを防げる。agentではdecodeが数十tokenと短くstallが次のtool invocationへ連鎖するため、このphase-aware classificationがchatbot向けchunkingより直接的にhead-of-line blockingを制御する。"
+      },
+      {
+        "name": "TPOT駆動の二変数feedback scheduler",
+        "description": "schedulerはcontrol interval内の累積decode時間を完了decode step数で割り、step-level TPOTを算出する。TPOTがhigh thresholdを超えればresume prefill token budgetを所定量だけ減らし、同時にdecode最低SM予約を増やす。TPOTがlow thresholdを下回れば逆操作を行い、prefillへ資源を戻す。つまりadmission controlとcompute partitionを独立に決めず、同じdecode latency signalから共同調整する。論文はprofiled throughputがSM数に対して単調で、discrete Green Context granularityとcontroller overshoot、bounded control overheadを仮定したcompetitive-ratio解析も与え、decode SLOを守るoffline optimumに対するprefill service lossをこれら三要因で上界化する。"
+      },
+      {
+        "name": "事前生成CUDA Green ContextによるSM空間分離",
+        "description": "単一GPU内でprefillとdecodeを別processへ分けず、CUDA Green Contextを用いてStreaming Multiprocessorを空間的にpartitionする。system initialization時にSMの10%、20%から100%まで10段階のcontextを作り、runtimeでは必要なdecode floor以上となる最小slotへdecode threadをrebindし、complementary slotをprefillへ与える。context creationは高価なのでrequestごとには行わず、pre-created slot間のswitchだけを使うことでrebindを50 microseconds未満、typical decode batch latencyの0.1%未満へ抑える。大型prefill kernelがdefault CUDA scheduler上でdecodeをstarveする状況を避け、decodeへ最低compute shareを物理的に確保する。"
+      },
+      {
+        "name": "単一engine共有KV memory manager",
+        "description": "prefill/decodeをprocess-separated engineへ分けると同一GPUでもKV handoff、IPC coordination、memory-bandwidth overheadが生じる。AgentServeは二つのCPU submission threadを同じengineへ接続し、model weightsとKV cacheを同じGPU memory poolで共有する。prefill完了後のKV regionをread-onlyとしてdecodeへ即時公開し、CPU mutexでbuffer allocation/releaseを保護し、cudaEventでGPU kernelの書込み完了をdecode側readより前へorderingする。これにより追加copyなしでcached stateをreuseしつつpartial write raceを防ぐ。resource isolationはSM contextで、data sharingはmemory managerで実現するため、単一deviceに適したlightweight prefill/decode disaggregationになる。"
+      }
+    ],
+    "system_design": "AgentServeはapplication、orchestration、executionの三層構成で、CPU上のRequest ManagerとResource-Aware Schedulerがqueueとbudgetを管理し、GPU上のprefill/decode専用Green Contextが実際のresource isolationを行う。decode SLOを優先しつつ余剰SMをprefillへ返すため、static partitionよりworkload変動へ追従できる。一方、10%刻みというallocation granularity、TPOT control intervalによるlag、profile scalingの単調性を前提とし、Green Contextが使えないGPUやCUDA environmentでは同じ保証を直接得られない。target workloadもlocal tool-augmented SLM agentであり、長いgeneral coding agentやcluster-scale inferenceを直接最適化するものではない。"
+  },
+  "reservation": {"claim_id":"claim-d2ff76406182a09db10f7939","worker_id":"scheduled-chat-discovery-router","worker_kind":"scheduled_chat"}
 }
