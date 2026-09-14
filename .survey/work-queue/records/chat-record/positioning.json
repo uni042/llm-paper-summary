@@ -1,5 +1,15 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
-  "data":{"limitations":"評価はLLaMA-2-7B、4×A800 40GB、NVLink単一ノード、合計320要求に限定される。複数ノードではKV転送帯域と遅延が変わるため同じ改善幅を期待できるとは限らない。本番トレースや長時間の定常負荷も未評価である。比較対象はvLLMのデータ並列・テンソル並列が中心で、DistServe、Sarathi-Serve、Mooncakeなど同じプリフィル／デコード分離系との直接比較がない。生成品質も正解率等では測られていない。","differences":"DistServeやSarathi-Serveがプリフィルとデコードの資源分離・スケジューリングを主眼とするのに対し、StreamServeは分離を前提として複数レーン間の配置を実行時指標で変える。Mooncakeのようなキャッシュ局所性中心のルーティングに対しては、キャッシュ再利用に加えてメモリ、待ち行列、実行中負荷を同時に扱う。適応型推測デコード研究に対しては、受理率だけでなくシステム負荷と実測スループットを使い、ルーティング側と同じ監視情報へ接続する点が異なる。","implementation_status":"StreamScheduler、FlowGuard、PipeServe-Engine、SpecuStreamのアルゴリズムと主要パラメータを記述し、NIXLとvLLM系の実装を用いた実機結果を示す。ただし確認時点でarXiv本文・論文ページから著者公式の公開リポジトリURLは特定できない。","research_positioning":"LLMサービングの分離実行系統と推測デコード系統を横断する研究。計算レーンの配置制御と推測量の制御を別々に最適化せず、同じ実行時状態を用いる閉ループ制御へ統合する設計例として位置付けられる。報告倍率は大きいが比較の非対称性があるため、有望な統合設計と小規模実証として読むのが妥当である。","relation_to_existing_repository":"既存リポジトリではプリフィル／デコード分離、KVキャッシュ転送、サービングスケジューリング、推測デコードを個別に扱う系統との接点が強い。StreamServeの差分は、キャッシュ局所性・待ち行列・負荷を使う配置と、受理率・負荷・スループットを使う推測深さを一つのフィードバック系として結合したことにある。","audit_required":false},
-  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "positioning",
+  "attempt_id": "attempt-08adc02deaead45fbd4cfdd5",
+  "job_id": "job-research-4588133b1e6a7663",
+  "data": {
+    "limitations": "4公開QA、top-10固定検索、3モデル、4×H100に限定。企業RAG、頻繁なコーパス更新、会話、多モーダル、100B級モデルは未評価。履歴重要度は経験的事前分布なので質問分布変化で陳腐化する。オンライン指標は履歴注意の構築・更新費を除外する。グローバル配分はデータセット依存。",
+    "differences": "RAGCache、CacheBlend、Cache-Craft、IC-Cache等は繰り返し文書のKVや中間状態を再利用してプリフィル計算を減らす。REVAはモデル内部状態を保存せず、過去注意から文書重要度を作って短い普通のテキストへ変換する。RECOMPやLLMLingua系は現在質問へ毎回適応できる代わりに要求時スコアリングが必要で、REVAは質問特異性の一部を履歴償却と交換する。",
+    "implementation_status": "著者公式 `UIUC-MLSys/REVA` を公開。ICDM 2026採録済み著者原稿。",
+    "research_positioning": "RAGの文脈/KVコスト削減とLLMサービングの交点。キャッシュの階層配置ではなく、どのテキストを残すかという選択情報を再利用可能なサービング資産へ変える。",
+    "relation_to_existing_repository": "KVキャッシュ再利用・RAGサービング研究とは繰り返し文脈の再計算削減を共有するが、保存対象が語重要度なので階層KVキャッシュと直交し併用可能。REVAで入力を短くした後、残存接頭辞KVを既存キャッシュで再利用すれば計算量とキャッシュ占有の双方を削減できる。",
+    "audit_required": false
+  }
 }

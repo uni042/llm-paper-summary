@@ -1,5 +1,73 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
-  "data":{"hardware":"単一ノードのNVIDIA A800 40GB GPU×4をNVLinkで接続し、2組のプリフィル／デコード対として使用する。","software":"LLaMA-2-7BをFP16で実行。比較対象はvLLM v0.4.xの4GPUデータ並列構成と4-wayテンソル並列構成。StreamServeはNIXLによるGPU間KV転送を使用し、標準P2P転送への置換もアブレーションする。","methodology":"ALPACA、GSM8K、HUMANEVAL、SUMの4ベンチマークを各80要求、合計320要求で評価する。主比較ではStreamServeの2組の分離レーンと、標準自己回帰生成のvLLMデータ並列・テンソル並列を比較する。要求当たりエンドツーエンド遅延、入力と出力を合わせたトークン毎秒、出力1トークン当たり時間（TPOT）を測定する。さらに同時要求数を変えたスケーリング、p50〜p99遅延、FlowGuard・SpecuStream・分離実行・NIXLの個別除去、固定推測深さ3/5/7との比較を行う。","scope":"モデルはLLaMA-2-7Bのみ、ハードウェアは4×A800単一ノードのみで、持続的な本番トレースや複数ノードは対象外。DistServe、Sarathi-Serve、Mooncakeとの直接比較は行っていない。","workloads":["ALPACA: 80要求","GSM8K: 80要求","HUMANEVAL: 80要求","SUM: 80要求","同時要求数を変える負荷試験"],"baselines":["vLLM v0.4.x データ並列","vLLM v0.4.x 4-wayテンソル並列","TP-vLLM + 固定推測深さ d=3","同 d=5","同 d=7","ラウンドロビンおよび各構成要素除去アブレーション"],"metrics":["エンドツーエンド遅延","スループット（tokens/s）","TPOT","p50/p90/p95/p99遅延","同時実行時性能"],"reproducibility":"主要ハードウェア、モデル、精度、要求数、ルーティング重み、過負荷閾値、推測深さ範囲は記載される。一方、著者公式コードURL、完全なソフトウェア固定、入力選択乱数、到着過程などは十分確認できず、厳密な再現には不足が残る。"},
-  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "evaluation",
+  "attempt_id": "attempt-08adc02deaead45fbd4cfdd5",
+  "job_id": "job-research-4588133b1e6a7663",
+  "data": {
+    "hardware": [
+      "4×NVIDIA H100"
+    ],
+    "software": [
+      "e5-base-v2",
+      "FAISS",
+      "著者公開REVA実装"
+    ],
+    "model": [
+      "Llama-3.1-8B-Instruct",
+      "Qwen3.5-9B",
+      "Gemma-4-E4B-it"
+    ],
+    "datasets": [
+      "Natural Questions",
+      "TriviaQA",
+      "HotpotQA",
+      "2WikiMultihopQA"
+    ],
+    "baselines": [
+      "文書別/全体先頭切り詰め",
+      "Selective Context",
+      "LLMLingua-2",
+      "RECOMP-e",
+      "LongLLMLingua",
+      "EXIT",
+      "FaviComp"
+    ],
+    "correctness": "テスト要求自身の質問・回答をその要求向けスコア表へ入れない厳密再利用条件で、F1、完全一致率、ROUGE-Lを測る。",
+    "settings": [
+      {
+        "name": "固定検索",
+        "description": "e5-base-v2とFAISSでtop-10結果を事前固定し全方式へ同じ文書を渡す。"
+      },
+      {
+        "name": "部分被覆",
+        "description": "訓練分割だけで表を作り、未被覆文書は先頭切り詰め。保持予算512トークン。"
+      },
+      {
+        "name": "完全被覆診断",
+        "description": "top-10全文書に履歴がある質問のみを3モデル×4データセット×10予算、120セルで評価。"
+      },
+      {
+        "name": "グローバル配分",
+        "description": "各文書上位10%語で効用を計算し、各文書上限25%、検索上位5文書に保護枠を付与。"
+      }
+    ],
+    "methodology": "回答品質と要求時の圧縮/再構成壁時計時間を測る。オンライン処理時間は検索、スコア表構築、生成、非同期更新を除く。語単位化、原文順、採点源、配分方式を切り分ける。",
+    "scope": "公開QAのtop-10 RAGと3モデル、4×H100が中心。企業長文、会話、多モーダル、巨大モデル、分布ドリフトは未直接検証。",
+    "workloads": [
+      "訓練履歴固定表",
+      "部分被覆",
+      "完全被覆",
+      "複数圧縮予算"
+    ],
+    "metrics": [
+      "F1",
+      "完全一致率",
+      "ROUGE-L",
+      "オンラインオーバーヘッド",
+      "出力文脈長",
+      "生成時間"
+    ],
+    "reproducibility": "主要パラメータと著者公式コードが公開されている。"
+  }
 }

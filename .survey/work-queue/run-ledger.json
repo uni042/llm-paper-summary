@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T17:31:19.016988+00:00",
+  "updated_at": "2026-09-14T17:40:43.338391+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T17:31:19.016988+00:00",
+      "last_recorded_at": "2026-09-14T17:40:43.338391+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 65,
         "audit_completed": 0,
-        "discovery_completed": 1,
+        "discovery_completed": 2,
         "blocked": 1,
-        "new_jobs": 3,
+        "new_jobs": 5,
         "new_papers": 63,
-        "fallback_archived": 9
+        "fallback_archived": 10
       },
       "events": [
-        {
-          "event_id": "34798130951:1",
-          "recorded_at": "2026-09-14T02:07:38.181694+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34798130951",
-            "run_attempt": "1",
-            "source_sha": "c9a6bf9cb65ce39b3d85c19e5de3841a48e4dbde"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34798476004:1",
           "recorded_at": "2026-09-14T02:13:43.127899+00:00",
@@ -19595,6 +19581,21 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34875583637:1",
+          "recorded_at": "2026-09-14T17:40:43.338391+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34875583637",
+            "run_attempt": "1",
+            "source_sha": "edfaeec3f4ea328a8f606709c70b289d9eab0c88"
+          },
+          "signals": [
+            "discovery_or_queue_expanded",
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20133,6 +20134,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-692a81c6f780c22d",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20156,6 +20165,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-290c9e1e770e3de2",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-92bd4538dc2f6002",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2609.02109",
+          "title": "MeanField Surrogate Modeling for Scalable Runtime Scheduling of Concurrent Heterogeneous AI Inference on Shared GPUs"
         }
       ],
       "new_paper_ids": [
@@ -20229,7 +20252,8 @@
         ".survey/work-queue/results/20260915T0226JST-discovery-specialist-serverless-moe-3.json",
         ".survey/work-queue/results/20260915T0228JST-discovery-specialist-agent-sandbox-4.json",
         ".survey/work-queue/results/20260915T0230JST-discovery-specialist-smartssd-kv-5.json",
-        ".survey/work-queue/results/20260915T0232JST-discovery-specialist-cxl-hybrid-memory-6.json"
+        ".survey/work-queue/results/20260915T0232JST-discovery-specialist-cxl-hybrid-memory-6.json",
+        ".survey/work-queue/results/20260915T0234JST-discovery-specialist-heterogeneous-runtime-5.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",
@@ -20240,11 +20264,12 @@
         ".survey/work-queue/fallback-archive/claimed-attempt-15dd9c3fbf75de3172fbd161-run1357.json",
         ".survey/work-queue/fallback-archive/claimed-attempt-3c3aa97d42e37d1d8d35d68c-run1357.json",
         ".survey/work-queue/fallback-archive/claimed-attempt-6f11d0c6a36c75e2b4ebc7cd-run1357.json",
-        ".survey/work-queue/fallback-archive/claimed-run1630-c2cserve-repair-current.json"
+        ".survey/work-queue/fallback-archive/claimed-run1630-c2cserve-repair-current.json",
+        ".survey/work-queue/fallback-archive/20260914T234700JST-research-2609.11209-reva-attempt-08adc02deaead45fbd4cfdd5.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 523,
-      "last_successful_action": "discovery_or_queue_expanded"
+      "last_successful_action": "fallback_archived"
     }
   ]
 }

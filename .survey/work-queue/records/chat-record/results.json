@@ -1,5 +1,57 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"results","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
-  "data":{"overview":"4ベンチマークではStreamServeはテンソル並列vLLMに対して遅延を11.3〜18.0倍短縮し、ALPACAを除く3種類でスループットも上回る。4種類平均では814 tokens/s、0.275秒で、TP-vLLMの237 tokens/s、3.53秒に対して平均4.4倍のスループット、15.75倍の遅延改善を報告する。","key_results":[{"metric":"ALPACAの遅延とスループット","value":"137 tokens/s、0.30秒；遅延11.3倍短縮","baseline":"TP-vLLM 171 tokens/s、3.40秒","condition":"LLaMA-2-7B、A800×4、ALPACA 80要求","interpretation":"短い出力では遅延は大幅に改善する一方、推測デコードの追加処理を回収しにくく、スループットはTP-vLLMを下回る。"},{"metric":"GSM8Kの遅延とスループット","value":"264 tokens/s、0.30秒；スループット9.5%向上、遅延11.7倍短縮","baseline":"TP-vLLM 241 tokens/s、3.50秒","condition":"LLaMA-2-7B、A800×4、GSM8K 80要求","interpretation":"推論系の中程度生成長では分離実行と適応推測がスループットと待ち時間の双方に寄与する。"},{"metric":"HUMANEVALの遅延とスループット","value":"639 tokens/s、0.20秒；約3.0倍のスループット、遅延18.0倍短縮","baseline":"TP-vLLM 210 tokens/s、3.60秒","condition":"LLaMA-2-7B、A800×4、HUMANEVAL 80要求","interpretation":"コード生成の比較的長い出力では受理された推測トークンをまとめて処理する効果が大きく表れる。"},{"metric":"SUMの遅延とスループット","value":"2235 tokens/s、0.30秒；6.8倍のスループット、遅延12.0倍短縮","baseline":"TP-vLLM 327 tokens/s、3.60秒","condition":"LLaMA-2-7B、A800×4、SUM 80要求","interpretation":"4ワークロード中最大のスループット差で、生成特性によって適応推測の利得が大きく変わることも示す。"},{"metric":"全データセットの遅延分布","value":"p50 0.24秒、p99 0.36秒","baseline":"TP-vLLM p50 3.44秒、p99 3.90秒；DP-vLLM p50 8.18秒、p99 9.32秒","condition":"4ベンチマーク合算の百分位比較","interpretation":"平均値だけでなく高百分位でも低遅延を維持し、この小規模実験ではキュー滞留の抑制が一貫している。"},{"metric":"構成要素アブレーション","value":"完全版814 tokens/s、0.275秒；ラウンドロビン520、1.15秒；SpecuStreamなし310、2.45秒；単一エンジン290、3.52秒","baseline":"完全版StreamServeと各機構の除去・置換","condition":"4ベンチマーク平均","interpretation":"分離実行、負荷認識ルーティング、適応推測のいずれか一つだけでは完全版に届かず、統合制御の寄与が大きい。"},{"metric":"固定推測深さとの比較","value":"814 tokens/s、0.275秒；最良固定深さ比2.4倍のスループット、8.8倍の低遅延","baseline":"TP-vLLM + 固定d=5: 342 tokens/s、2.41秒","condition":"d=3/5/7の固定推測と適応推測の4ベンチマーク平均","interpretation":"受理率と負荷に応じて深さを変えることが、単一の固定深さより幅広いワークロードで安定した性能を出すことを示す。"}],"negative_results":"ALPACAでは137 tokens/sがTP-vLLMの171 tokens/sを下回り、短い出力では適応型推測の恩恵が十分でない。固定推測深さもd=7ではd=5より悪化する。標準P2Pへ置換すると平均遅延は0.275秒から0.45秒へ悪化する。","interpretation":"プリフィル／デコード分離だけでなく、混雑レーンを避ける配置と負荷に応じた推測量調整を同時に使うと、単一ノード小規模環境では待ち時間を大きく削減できる。ただしTP-vLLMは分離型でなくStreamServe側だけが推測デコードを含むため、11〜18倍差を各機構単独の効果とはみなせない。","quality_impact":"本文はTPOT安定からトークン品質劣化がないと述べるが、TPOTは速度尺度で内容品質を測らない。GSM8K正解率、HumanEval pass@k、要約品質などは報告されず、品質保持は未検証である。"},
-  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "results",
+  "attempt_id": "attempt-08adc02deaead45fbd4cfdd5",
+  "job_id": "job-research-4588133b1e6a7663",
+  "data": {
+    "overview": "部分被覆条件でREVA-localは文書別先頭切り詰めに対し平均F1を34.11→37.83、完全一致率を24.10→26.98へ改善し、オンライン処理は17.0→27.5msに留まる。RECOMP-eは120ms、LLMLingua-2は256〜343ms、LongLLMLinguaは598.9ms。完全被覆診断ではREVA-globalが平均F1 43.72、EM 32.75でRECOMP-eの43.66/32.69をわずかに上回り、処理時間48.7ms対155ms。REVA-localは43.34/32.73、31.5ms。",
+    "key_results": [
+      {
+        "metric": "部分被覆F1/EM",
+        "value": "37.83 / 26.98",
+        "baseline": "Trunc-local 34.11 / 24.10",
+        "condition": "B=512、12設定平均",
+        "interpretation": "未被覆文書を単純切り詰めへ戻しても被覆済み文書の履歴重要度が品質を押し上げる。"
+      },
+      {
+        "metric": "オンライン処理",
+        "value": "REVA-local 27.5ms",
+        "baseline": "RECOMP-e 120ms、LLMLingua-2 256–343ms、LongLLM 598.9ms",
+        "condition": "B=512",
+        "interpretation": "採点を履歴側へ移した効果。"
+      },
+      {
+        "metric": "完全被覆平均F1",
+        "value": "global 43.72 / local 43.34",
+        "baseline": "RECOMP-e 43.66、Trunc-local 38.75",
+        "condition": "120セル",
+        "interpretation": "履歴が揃うと要求時圧縮器と同等以上の平均品質。"
+      },
+      {
+        "metric": "少なくとも1文書の履歴被覆",
+        "value": "85.2–91.6%",
+        "baseline": "訓練履歴",
+        "condition": "top-10",
+        "interpretation": "文書再利用を資産化する余地が大きい。"
+      },
+      {
+        "metric": "語単位化の寄与",
+        "value": "除去でF1 53.52→52.23、EM 46.13→44.47",
+        "baseline": "完全REVA",
+        "condition": "Qwen3.5-9B、B=512",
+        "interpretation": "サブワード断片化が証拠品質を落とす。"
+      },
+      {
+        "metric": "EXIT/FaviComp比較",
+        "value": "REVA 26–41ms、EXIT 3858ms、FaviComp 12838ms",
+        "baseline": "要求時抽出/書換え",
+        "condition": "B=512",
+        "interpretation": "補助推論を要求経路から外すことで数桁の遅延差。"
+      }
+    ],
+    "negative_results": "NQではREVA-globalがRECOMP-eよりF1で0.62低く、TriviaQAでは0.96低い。単純なnaive-globalはREVA-localより低品質かつ約106msへ増大する。オンライン時間は表構築・更新費を含まない。",
+    "interpretation": "中心的な利得は圧縮器を複雑化することではなく、重要度推定の時間軸を現在要求から過去履歴へ移し、繰り返し文書アクセスで前払い費を償却する点にある。",
+    "quality_impact": "証拠削除のため品質は履歴分布・被覆率・予算に依存する。単純切り詰めより改善するが、最良の要求時圧縮器に全条件で勝つわけではない。"
+  }
 }

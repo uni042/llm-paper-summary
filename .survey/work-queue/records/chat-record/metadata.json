@@ -1,5 +1,91 @@
 {
-  "schema_version":1,"transport_version":10,"slot":"metadata","attempt_id":"attempt-04f374b6b55a5cf420d50468","job_id":"job-research-420858d196a868b6",
-  "data":{"canonical_id":"arXiv:2604.09562","arxiv_id":"2604.09562","doi":"10.48550/arXiv.2604.09562","openreview_id":null,"arxiv_categories":{"primary":"cs.DC","cross_list":["cs.AI"]},"title":"StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving","summary":"StreamServeは、プリフィルとデコードを別GPUへ分離したLLMサービングで残る二つの動的問題を扱う。第一に、複数の計算レーンへ要求を送る際、キャッシュ局所性だけを優先すると混雑が偏り、均等配分だけではキャッシュ再利用を失う。第二に、推測デコードの適切な深さは受理率と実行時負荷で変わるため固定値では無駄な推測か高速化機会の損失が生じる。FlowGuardはキャッシュ再利用率、メモリ、待ち行列、実行中負荷を統合してレーンを選び、SpecuStreamは受理率変化、負荷、実測スループットから推測深さとマイクロバッチを要求ごとに調整する。プリフィル後のKVキャッシュはNIXLで対応デコードGPUへ転送する。LLaMA-2-7Bを4×A800 40GBで評価し、テンソル並列vLLM比で11.3〜18.0倍の遅延短縮と最大6.8倍のスループット向上を報告する。ただし単一ノード320要求、既存分離型システムとの直接比較なし、生成品質指標なしという制約がある。","list_summary":"プリフィル／デコード分離に、キャッシュ・待ち行列・負荷を使うレーン選択と、受理率・負荷・スループットから推測深さを変える制御を統合し、4×A800でTP-vLLM比11〜18倍の遅延短縮を報告する。","authors":["Satyam Kumar","Arpit Singh Gautam","Kailash Talreja","Saurabh Jha"],"authors_affiliations":"arXiv本文の著者欄では所属を確認できないため未確定。","published":"2026-02-11","publication":"arXiv:2604.09562v1","publication_type":"プレプリント","publication_status":"Preprint; arXiv v1","lineage":"llm-serving-scheduling-disaggregation","topics":["プリフィル・デコード分離","適応型推測デコード","負荷認識ルーティング","KVキャッシュ転送","LLMサービング","NIXL"],"importance":"中〜高。分離型サービングのルーティングと推測デコードを共通の実行時指標で閉ループ制御する設計は有用だが、評価規模と比較対象は限定的。","hardware_evaluation":"実機。NVIDIA A800 40GB GPU×4を単一ノード内で2組のプリフィル／デコード対として使用。","hardware_details":"4×NVIDIA A800 40GB、NVLink接続。GPU 0/2をプリフィル、GPU 1/3をデコードに割り当て、LLaMA-2-7BをFP16で評価する。","quality_effect":"生成品質の正解率、pass@k、分布一致は直接評価していない。本文はTPOT安定を品質劣化なしの根拠にするが、TPOTは速度指標なので品質保持は未検証。","storage_targets":["GPU上のKVキャッシュ","プリフィルGPUからデコードGPUへ移送するKV状態"],"bottlenecks":["プリフィルとデコードの資源競合","複数レーン間の静的ルーティング","固定推測深さ","待ち行列増大","KVキャッシュ転送","高負荷時のメモリ圧力"],"evidence_locations":["§1 Introduction","§3.2–3.5","§4.1–4.8","§5 Ablation Study","Limitations & Threats to Validity","Tables 3–9"],"source":"https://arxiv.org/abs/2604.09562","sources":["https://arxiv.org/abs/2604.09562","https://arxiv.org/html/2604.09562v1","https://arxiv.org/pdf/2604.09562"],"code":"","implementation":"FastAPI、vLLM系実行、NIXLによるGPU間KV転送を組み合わせた試作システム。arXiv本文から著者公式コードURLは確認できなかった。","last_checked":"2026-09-15","references":[{"canonical_id":"arXiv:2405.08691","arxiv_id":"2405.08691"},{"canonical_id":"arXiv:2510.14392","arxiv_id":"2510.14392"},{"canonical_id":"arXiv:2510.09665","arxiv_id":"2510.09665"},{"canonical_id":"arXiv:2509.24328","arxiv_id":"2509.24328"},{"canonical_id":"arXiv:2301.02001","arxiv_id":"2301.02001"}],"references_checked_at":"2026-09-15","references_source":"arXiv v1 HTML参考文献節","references_total":27},
-  "reservation":{"claim_id":"claim-04f374b6b55a5cf420d50468","worker_id":"scheduled-chat-discovery-specialist","worker_kind":"scheduled_chat"}
+  "schema_version": 1,
+  "transport_version": 10,
+  "slot": "metadata",
+  "attempt_id": "attempt-08adc02deaead45fbd4cfdd5",
+  "job_id": "job-research-4588133b1e6a7663",
+  "data": {
+    "canonical_id": "arXiv:2609.11209",
+    "arxiv_id": "2609.11209",
+    "doi": "10.48550/arXiv.2609.11209",
+    "openreview_id": null,
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": [
+        "cs.CL",
+        "cs.IR"
+      ]
+    },
+    "title": "REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving",
+    "summary": "検索拡張生成（Retrieval-Augmented Generation; RAG）は検索文書を追加するほど知識問題に強くなる一方、プリフィル遅延、KVキャッシュ容量、トークン費が増える。既存の文脈圧縮は要求ごとに補助モデルで選別・書換えするため、圧縮自体が数百ms〜秒単位の遅延を生む。REVAは過去に同じ文書が検索された際の対象LLM自身の注意重みを語単位へ集約し、文書ごとの再利用可能な重要度表として保存する。新規要求では保存済み重要度から予算内の語を選び、元の文書順で普通のテキストとして再構成する。未被覆文書は先頭切り詰めへ退避する。4種QA、Llama-3.1-8B、Qwen3.5-9B、Gemma-4-E4B-it、4×H100で評価し、完全被覆条件ではREVA-globalが平均F1 43.72でRECOMP-eの43.66を上回り、オンライン処理は48.7ms対155ms。REVA-localはF1 43.34、31.5msだった。",
+    "list_summary": "過去のRAG要求で対象LLMが文書のどこへ注意したかを文書単位で蓄積し、次回は保存済み重要度から普通のテキスト証拠を数十msで再構成して要求ごとの重い圧縮を避ける。",
+    "authors": [
+      "Tuan Nguyen",
+      "Qiran Hu",
+      "Banruo Liu",
+      "Khoa D. Doan",
+      "Kok-Seng Wong",
+      "Fan Lai"
+    ],
+    "authors_affiliations": "VinUni-Illinois Smart Health Center, VinUniversity；University of Illinois Urbana-Champaign",
+    "published": "2026-09-10",
+    "publication": "2026 IEEE International Conference on Data Mining (ICDM) accepted manuscript / arXiv:2609.11209v1",
+    "publication_type": "査読会議採録済み原稿",
+    "publication_status": "2026 IEEE ICDM採録済み著者受理原稿。arXiv v1は2026-09-10提出。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "RAGサービング",
+      "文脈圧縮",
+      "注意重み再利用",
+      "文書単位証拠ビュー",
+      "KVキャッシュ削減"
+    ],
+    "importance": "高。繰り返し検索文書に対する生成モデルの過去注意を、KVテンソルではなく短い普通のテキストへ変換して再利用する。要求時圧縮を非同期履歴集約へ移す設計として比較価値が高い。",
+    "hardware_evaluation": "実機。4×NVIDIA H100サーバ。",
+    "hardware_details": "4×NVIDIA H100。3生成モデル、Natural Questions、TriviaQA、HotpotQA、2WikiMultihopQA。検索はe5-base-v2とFAISS、top-10固定。",
+    "quality_effect": "入力証拠を削る近似なので重要証拠を落とすと回答品質が下がり得る。評価では単純切り詰めを改善するが、NQやTriviaQAなどRECOMP-eを下回る条件もある。未被覆文書は先頭切り詰めへ退避する。",
+    "storage_targets": [
+      "文書ごとの語重要度合計と観測回数",
+      "原文参照と語境界",
+      "互換性キー来歴"
+    ],
+    "bottlenecks": [
+      "長いRAG入力のプリフィル遅延とKV増大",
+      "要求ごとの補助圧縮モデル推論",
+      "文書再利用を無視した重複圧縮",
+      "未被覆文書の重要度不足"
+    ],
+    "evidence_locations": [
+      "§I",
+      "§III",
+      "§IV-A–IV-D",
+      "Algorithm 1",
+      "§V-A–V-C",
+      "Tables I–VI",
+      "§VI"
+    ],
+    "source": "https://arxiv.org/abs/2609.11209",
+    "sources": [
+      "https://arxiv.org/abs/2609.11209",
+      "https://arxiv.org/html/2609.11209v1",
+      "https://github.com/UIUC-MLSys/REVA"
+    ],
+    "code": "https://github.com/UIUC-MLSys/REVA",
+    "implementation": "著者公式コードを公開。オンライン経路は保存済みスコア検索、予算配分、語選択、原文順テキスト再構成のみで、履歴注意の構築・更新はオフラインまたは要求完了後に行う。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {
+        "title": "IC-Cache: Efficient large language model serving via in-context caching"
+      },
+      {
+        "title": "Cache-Craft: Managing chunk-caches for efficient retrieval-augmented generation"
+      },
+      {
+        "title": "RECOMP: Improving retrieval-augmented LMs with context compression and selective augmentation"
+      }
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv v1 HTML版参考文献節",
+    "references_total": 37
+  }
 }

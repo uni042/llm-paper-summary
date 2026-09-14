@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-14T17:21:56+00:00",
+  "updated_at": "2026-09-14T17:37:50+00:00",
   "last_run_key": "2026-09-15T02:00:00+09:00",
-  "last_round": "specialist-adaptive-kv-constraint-1",
+  "last_round": "specialist-heterogeneous-runtime-5",
   "paper_stock_zero_count": 3,
-  "consecutive_empty_rounds": 2,
-  "last_empty_round_reason": "探索候補は正本側で重複抑止されるか、新規強候補として採用されなかった。",
+  "consecutive_empty_rounds": 0,
+  "last_empty_round_reason": null,
   "next_action_when_stock_zero": "discover_now",
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
@@ -3163,6 +3163,21 @@
       ],
       "next_axis_hint": "KV圧縮から離れ、サーバレスLLMの電力・SM分割・GPU動作点を協調制御するenergy-aware serving、または新着の分散通信runtimeへ軸を移す",
       "source_submission": "work-queue/submissions/20260915T0222JST-discovery-specialist-adaptive-kv-1.json"
+    },
+    {
+      "run_key": "2026-09-15T02:00:00+09:00",
+      "round": "specialist-heterogeneous-runtime-5",
+      "axis": "異種GPU・multi-agent workflow・shared-GPU runtime scheduling",
+      "query_summary": "直近のagent sandbox/KV系探索から軸を変え、異種GPU群におけるmulti-agent workflow orchestrationと、複数異種モデルの共有GPU runtime schedulingを新着一次資料から軽量評価した。投入直前にcanonical arXiv IDをGitHub default branchで再検索し、既存収録・jobの一致を確認できなかった2件のみ残した。",
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": "次はforward citationまたは隣接するGPU memory/runtime resource contentionへ移し、同じheterogeneous scheduling検索式は直後に反復しない",
+      "source_submission": "work-queue/submissions/20260915T0234JST-discovery-specialist-heterogeneous-runtime-5.json"
     }
   ],
   "axes": {
@@ -4935,6 +4950,16 @@
       "accepted_count": 0,
       "duplicate_ratio": 0.5,
       "next_axis_hint": "KV圧縮から離れ、サーバレスLLMの電力・SM分割・GPU動作点を協調制御するenergy-aware serving、または新着の分散通信runtimeへ軸を移す"
+    },
+    "異種GPU・multi-agent workflow・shared-GPU runtime scheduling": {
+      "last_run_key": "2026-09-15T02:00:00+09:00",
+      "rounds": 1,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "novel_candidate_count": 2,
+      "accepted_count": 1,
+      "duplicate_ratio": 0.0,
+      "next_axis_hint": "次はforward citationまたは隣接するGPU memory/runtime resource contentionへ移し、同じheterogeneous scheduling検索式は直後に反復しない"
     }
   },
   "notes": "Scheduled Chat discovery state. Record per-round candidate counts, duplicate filtering, novelty yield, and next-axis hints. High-duplicate axes should not be mechanically repeated in the immediately following run. For normal paper-worker runs, zero actionable paper stock immediately triggers discovery. A zero-novel or all-duplicate round increments consecutive_empty_rounds but does not stop the run; rotate to a materially different axis and continue until a hard stop from continuation-policy.json applies."
