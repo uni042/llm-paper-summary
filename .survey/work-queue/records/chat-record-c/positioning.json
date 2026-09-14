@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "positioning",
-  "attempt_id": "attempt-022b9f637cf7cc5a822fdef4",
-  "job_id": "job-research-f023091bfca94e41",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-022b9f637cf7cc5a822fdef4",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"positioning","attempt_id":"attempt-022b9f637cf7cc5a822fdef4","job_id":"job-research-f023091bfca94e41","data":{"limitations":["現実装はHugging Face形式モデルとTensor入力を持つCUDAカーネルへ限定され、Triton、TensorFlow、NPUカーネルは未対応である。","各カーネルの記号実行を1時間で打ち切るため、600行超の大型融合カーネルを中心に778解析文脈がtimeoutし、全経路を網羅できない。","HFProbeはGPU計算と重み読込みを模擬するため、fake kernel境界を跨ぐtensor値や実weight依存条件を失い、誤検出の原因になる。","設定変異は到達範囲を大幅に増やすが、現実に取り得る全configを列挙するものではなく、条件付きカーネルの未観測は残り得る。","cuKLEEはKLEEのC/C++向け経路探索戦略を継承しており、CUDA特有のSIMT・融合カーネルに最適化された探索ではない。","複数GPU間メモリアクセス、std::map等未対応ライブラリ、shape metadataと実メモリlayoutが不一致なコードでは既知バグを見逃した。","総解析時間約986時間と設定変異agent費用が必要で、大規模継続統合へ入れるには差分解析や並列化、timeout管理が必要になる。"],"differences":[{"name":"Compute Sanitizer等の動的検査との差","description":"動的検査は実行した入力・スレッド経路で起きた不正アクセスを検出するが、危険条件を事前に知る必要がある。Model2Kernelはモデルから得たbatch/sequence/token範囲を記号化し、実GPUで巨大入力を走らせずにその範囲内の危険条件をsolverで探索するため、極端だが合法な長文条件も対象にできる。"},{"name":"GPUVerify/GKLEE等の静的GPU解析との差","description":"従来解析器は孤立したカーネルや固定サイズbufferを前提にしやすく、PyTorch Tensorの実行時shapeやwrapperが計算するlaunch configurationを扱いにくい。cuKLEEはTensor領域とTensor APIを専用抽象化し、HFProbeがモデル由来の制約を与えることで現代LLM推論コードを対象にする。"},{"name":"一般的なKLEE記号実行との差","description":"symbolic mallocサイズを連続アドレス空間へ置くと、後続allocation位置までsymbolicになりpointer所属判定が難しくなる。cuKLEEはframework管理Tensorを互いに離れた領域へ置き、CUDA thread/block IDも記号変数化して、一つの状態で多数スレッドを代表する。これはLLM CUDA wrapperの構造に合わせた専用化である。"},{"name":"カーネル性能最適化系統との差","description":"Harness Engineeringや自動カーネル生成が速度と正当性を両立した候補生成を扱うのに対し、Model2Kernelは既存カーネルがモデル依存条件でメモリ安全性を破らないかを検証する。高速化とは独立した安全性レイヤーであり、生成・最適化された候補を本番へ昇格する前の自動検証器として補完的に利用できる。"}],"implementation_status":"論文ではHFProbeとcuKLEEの実装規模・構成を詳細に説明しているが、2026-09-14の確認ではarXiv一次資料に公式コード公開URLを確認できなかった。したがって手法は実装済み・大規模評価済みだが、外部再現用コード公開状況は未確認として扱う。","research_positioning":"LLM推論基盤の信頼性・セキュリティとGPUカーネル検証の交点に位置する。推論システム研究ではスケジューリング、KVキャッシュ、カーネル高速化が性能中心になりやすい一方、コンテキスト長やモデル多様化で古い整数幅・shape前提が破れると、同じ最適化カーネルが本番障害や攻撃面になる。Model2Kernelはモデル構造を解析文脈として使うことで、検証対象を下位CUDAだけに閉じない点が重要である。今後はTritonや自動生成カーネルを含むCI/CDへ統合し、性能ハーネスの昇格条件にメモリ安全性証明を追加する方向、CUDA向け経路探索器を導入して大型融合カーネルのtimeoutを減らす方向が自然な発展になる。","audit_required":false,"audit_reason":null},"reservation":{"claim_id":"claim-022b9f637cf7cc5a822fdef4","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
