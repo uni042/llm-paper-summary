@@ -1,13 +1,17 @@
 {
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-8a33a3b216cec7e1341f57c2",
-  "job_id": "job-research-6cb2a2d661fb6b3a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-8a33a3b216cec7e1341f57c2",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
-    "worker_kind": "scheduled_chat"
+  "schema_version":1,
+  "transport_version":10,
+  "slot":"evaluation",
+  "attempt_id":"attempt-8a33a3b216cec7e1341f57c2",
+  "job_id":"job-research-6cb2a2d661fb6b3a",
+  "data":{
+    "hardware":"NVIDIA H100 80GB GPU。",
+    "software":"Llama-3.1-8B-Instruct、AutoGen SelectorGroupChat、vLLMを基盤とする。CacheScoutはblock touchのobserve転送とeviction時のscore参照を主なエンジンフックとして追加する。",
+    "methodology":"MMLU、MT-Bench、GAIA、GSM8Kの4実タスクを同じ6-agent supervisor構成で実行し、さらに遷移構造が強い12-agent合成chainをstress caseとして加える。実タスクは並行度4・120-block cache budget、合成は並行度1・250-block budget。各workload 50 task trace、合計948〜1417 turnを使う。vLLMとContinuumを比較対象にし、cached_tokens/prompt_tokensでhit rate、turn単位end-to-end latency、turns/s throughputを測る。workload characterizationではfirst-turn agent anchor比率と条件付きentropy reductionも測定する。",
+    "scope":"キャッシュが実際に圧迫される小さなblock budgetを意図的に設定し、cross-session anchor保持の効果を測る。主要モデル・GPUは1種類で、5 workloadのうちSyntheticは実タスクではない。論文自身が結果をpreliminaryと呼び、完全なmemory/latency microbenchmark、cache budget・concurrency sensitivity、runtime disabled時挙動はextended versionへ延期している。",
+    "workloads":["MMLU multi-agent trace","MT-Bench multi-agent trace","GAIA multi-agent trace","GSM8K multi-agent trace","12-agent Synthetic chain"],
+    "baselines":["unmodified vLLM","Continuum KV cache TTL scheduling"],
+    "metrics":["GPU KV cache hit rate","turn単位end-to-end latency","throughput turns/s","first-turn shareable anchor fraction","next-agent conditional entropy reduction","runtime hot-path overhead","coordinator state size"],
+    "reproducibility":"GPU、model、framework、concurrency、block budget、trace数、遷移閾値tau=0.01、prediction weight=1.0、agent ID hashのskip=4/take=4など主要設定は本文にある。一方、著者公式コードURLと完全なmicrobenchmark・感度評価は現版で示されず、再現性は部分的である。"
   }
 }
