@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T04:11:46.969495+00:00",
+  "updated_at": "2026-09-14T04:15:21.175848+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T04:11:46.969495+00:00",
+      "last_recorded_at": "2026-09-14T04:15:21.175848+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 39,
+        "research_completed": 40,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19228,6 +19228,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34805322361:1",
+          "recorded_at": "2026-09-14T04:15:21.175848+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34805322361",
+            "run_attempt": "1",
+            "source_sha": "c7526880f48300b74f1bac421e1c3cb063840b05"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19540,6 +19554,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.17979",
           "title": "Harness Engineering for LLM-Driven GPU Kernel Generation",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-f023091bfca94e41",
+          "type": "research",
+          "canonical_id": "arXiv:2603.24595",
+          "title": "Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels",
           "from": "ready",
           "to": "completed"
         }

@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 13:14 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 13:15 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,10 +15,10 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **75** |
+| 未処理の論文候補（Research ready） | **74** |
 | 現在処理不能（Research blocked） | **0** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **314** |
+| 全文精読完了（累計） | **315** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
@@ -35,20 +35,20 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **OK** |
-| 未処理候補（Research ready） | **75** |
-| 処理中（Active claims） | **3** |
+| 未処理候補（Research ready） | **74** |
+| 処理中（Active claims） | **2** |
 | 今すぐ着手可能（Claimable） | **73** |
-| :30 通常worker Active claims | **1** |
+| :30 通常worker Active claims | **0** |
 | :00 補助worker Active claims | **2** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 13:14 JST** |
 | :00 補助worker 直近claim | **09-14 13:14 JST** |
-| 直近24h Research完了（:30 通常worker） | **24** |
+| 直近24h Research完了（:30 通常worker） | **25** |
 | 直近24h Research完了（:00 補助worker） | **26** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T12:30:00+09:00** |
-| 最新通常runのResearch完了 | **5** |
-| 最古の有効claimの経過時間 | **13 min** |
+| 最新通常runのResearch完了 | **6** |
+| 最古の有効claimの経過時間 | **14 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -64,7 +64,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 | 指標 | 件数 / 率 |
 |---|---:|
-| Research完了 | **50** |
+| Research完了 | **51** |
 | Repo収録 | **56** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
@@ -78,7 +78,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 50 → Repo収録 56**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 51 → Repo収録 56**
 
 ## 次に処理する候補
 
@@ -124,6 +124,7 @@ Run: **2026-09-13T11:00:00+09:00**
 
 ### 最近完了した論文
 
+- `arXiv:2603.24595` — Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels
 - `arXiv:2607.17979` — Harness Engineering for LLM-Driven GPU Kernel Generation
 - `arXiv:2602.12029` — PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving
 - `arXiv:2606.09061` — Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving
@@ -131,7 +132,6 @@ Run: **2026-09-13T11:00:00+09:00**
 - `arXiv:2603.08739` — Kareto: Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service
 - `arXiv:2608.18261` — Cacheable by Design? Reassessing Expert Locality for SSD-Offloaded Mixture-of-Experts Inference
 - `arXiv:2608.01536` — Celty: SpMspV GPU Kernel and SIMT Co-Design for Efficient Dual-Sparse LLM Inference
-- `arXiv:2510.18586` — Tokencake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications
 
 ### 7日比較
 
