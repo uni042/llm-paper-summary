@@ -52,7 +52,7 @@
 | :00 旧run由来の有効claim | **3** |
 | その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近lease活動 | **09-14 19:55 JST** |
-| :00 補助worker 直近lease活動 | **09-14 20:22 JST** |
+| :00 補助worker 直近lease活動 | **09-14 20:23 JST** |
 | 直近24h Research完了（:30 通常worker） | **30** |
 | 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
