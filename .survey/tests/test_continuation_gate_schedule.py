@@ -33,7 +33,7 @@ def make_args(**overrides):
     return argparse.Namespace(**data)
 
 
-def test_stops_when_next_paired_task_is_within_guard():
+def test_stops_when_next_scheduled_invocation_is_within_guard():
     result = mod.decide(make_args(seconds_to_next_scheduled_task=599))
     assert result["decision"] == "STOP_RUN"
     assert "next_scheduled_task_within_handoff_guard" in result["stop_reasons"]
@@ -44,7 +44,7 @@ def test_guard_boundary_is_stop():
     assert result["decision"] == "STOP_RUN"
 
 
-def test_continues_when_next_paired_task_is_outside_guard():
+def test_continues_when_next_scheduled_invocation_is_outside_guard():
     result = mod.decide(make_args(seconds_to_next_scheduled_task=601))
     assert result["decision"] == "CONTINUE"
 
