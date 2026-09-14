@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 18:29 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 18:30 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -42,13 +42,13 @@
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 17:52 JST** |
-| :00 補助worker 直近claim | **09-14 18:29 JST** |
+| :00 補助worker 直近claim | **09-14 18:30 JST** |
 | 直近24h Research完了（:30 通常worker） | **31** |
 | 直近24h Research完了（:00 補助worker） | **24** |
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **57 min** |
+| 最古の有効claimの経過時間 | **58 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -66,7 +66,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 指標 | 件数 / 率 |
 |---|---:|
 | Research完了 | **55** |
-| Repo収録 | **100** |
+| Repo収録 | **98** |
 | Audit完了 | **0** |
 | 探索評価候補 | **0** |
 | Research候補採用 | **0** |
@@ -74,12 +74,12 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | 重複率 | **—** |
 | :00 補助worker Discovery run（毎時枠） | **0** |
 | :00 補助worker Discovery round（stats観測） | **0** |
-| 通常worker run（ledger観測） | **6** |
+| 通常worker run（ledger観測） | **5** |
 | Fallback archive（全helper） | **1** |
 
 ### 24時間の流れ
 
-**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 55 → Repo収録 100**
+**探索評価 0 → 重複除外後 0 → Research候補採用 0 → Research完了 55 → Repo収録 98**
 
 ## 次に処理する候補
 
