@@ -56,8 +56,36 @@ def _dt(value: Any) -> datetime | None:
     return parsed.astimezone(timezone.utc)
 
 
-def _latest_run(entries: list[dict[str, Any]]) -> dict[str, Any]:
-    valid = [entry for entry in entries if isinstance(entry, dict)]
+def _is_ordinary_research_run(entry: dict[str, Any], maintenance: dict[str, Any]) -> bool:
+    """Return whether a ledger entry can represent an ordinary :30 paper-worker run."""
+    stamp = _dt(entry.get("run_key") or entry.get("last_recorded_at"))
+    if stamp is None:
+        return False
+    jst = stamp.astimezone(timezone(timedelta(hours=9)))
+    if jst.minute != 30:
+        return False
+    # 08:30 is always routed away from the ordinary paper worker: maintenance
+    # gate wins first, otherwise the dedicated framework/model update worker runs.
+    if jst.hour == 8:
+        return False
+    # When the maintenance counter has just reset, last_counted_run_key is the
+    # maintenance slot until the next counted ordinary run advances it.
+    if int(maintenance.get("runs_since_maintenance") or 0) == 0:
+        maintenance_key = str(maintenance.get("last_counted_run_key") or "")
+        if maintenance_key and str(entry.get("run_key") or "") == maintenance_key:
+            return False
+    return True
+
+
+def _latest_normal_run(
+    entries: list[dict[str, Any]],
+    maintenance: dict[str, Any],
+) -> dict[str, Any]:
+    valid = [
+        entry
+        for entry in entries
+        if isinstance(entry, dict) and _is_ordinary_research_run(entry, maintenance)
+    ]
     if not valid:
         return {}
     return max(
@@ -198,11 +226,12 @@ def render_section(repo_root: Path, now: datetime | None = None) -> str:
 
     queue = _load(repo_root / ".survey/work-queue/next-jobs.json")
     ledger = _load(repo_root / ".survey/work-queue/run-ledger.json")
+    maintenance = _load(repo_root / ".survey/work-queue/maintenance-cycle.json")
     claims = _load_claims(repo_root)
     research = ((queue.get("counts") or {}).get("research") or {})
     claiming = queue.get("claiming") or {}
     entries = [entry for entry in (ledger.get("entries") or []) if isinstance(entry, dict)]
-    latest = _latest_run(entries)
+    latest = _latest_normal_run(entries, maintenance)
 
     ready = int(research.get("ready") or 0)
     active = int(claiming.get("actively_claimed") or 0)
