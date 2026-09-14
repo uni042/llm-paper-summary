@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-be884a5e7da2da4e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.06302",
+      "title": "Tangram: Unlocking Non-Uniform KV Cache for Efficient Multi-turn LLM Serving",
+      "source_url": "https://arxiv.org/abs/2606.06302",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2606.06302-tangram-non-uniform-kv-serving.md",
+      "priority": 88,
+      "reason": "非一様KV圧縮はheadごとに保持量が異なるため、memory fragmentation、dynamic scheduling overhead、kernel utilization低下を招くというsystems上の問題に対し、head固有パターンから静的memory footprintを決めるDeterministic Budget Allocation、類似retention headを独立vectorized page tableへまとめるHead Group Page、静的budget profileによるAhead-of-Time load balancingを組み合わせる。accuracyを維持したまま既存baseline比throughput最大2.6倍を報告し、公開実装もある。KV compression algorithmではなくheterogeneous KVを実際のserving runtimeへ落とし込むpaging・scheduling設計として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-tangram-20",
+    "axis": "non-uniform KV compressionのpaging・static budget・load balancing",
+    "query_summary": "非一様KV圧縮をserving systemとして成立させる研究を探索し、Tangram（2606.06302）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はrecent 2608-2609のserving/memory/MoE systemへ戻り、Actions反映後のcandidate inventoryを再確認する。",
+    "empty_round_reason": null
+  }
+}
