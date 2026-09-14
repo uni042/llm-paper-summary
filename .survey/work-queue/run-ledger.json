@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T17:13:42.261077+00:00",
+  "updated_at": "2026-09-14T17:18:08.563415+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T17:13:42.261077+00:00",
+      "last_recorded_at": "2026-09-14T17:18:08.563415+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 63,
+        "research_completed": 64,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 9
       },
       "events": [
-        {
-          "event_id": "34796723011:1",
-          "recorded_at": "2026-09-14T01:41:32.596126+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34796723011",
-            "run_attempt": "1",
-            "source_sha": "7d62f8ffeec17eea007fc67a894708708e6d6eb1"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34796878579:1",
           "recorded_at": "2026-09-14T01:44:21.343165+00:00",
@@ -19596,6 +19582,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34873852136:1",
+          "recorded_at": "2026-09-14T17:18:08.563415+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34873852136",
+            "run_attempt": "1",
+            "source_sha": "c42ab3676aa041a95a41b29397526d217a88a2b9"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20108,6 +20108,14 @@
           "type": "research",
           "canonical_id": "arXiv:2603.04428",
           "title": "Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-706a6d2571f24fb8",
+          "type": "research",
+          "canonical_id": "arXiv:2603.09046",
+          "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
           "from": "ready",
           "to": "completed"
         }
