@@ -4,10 +4,47 @@
   "slot": "metadata",
   "attempt_id": "attempt-1f2447b8c5da322c3903a058",
   "job_id": "job-research-2070373a31124502",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-1f2447b8c5da322c3903a058",
-    "worker_id": "scheduled-chat-paper-20260915T0330JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2606.11916",
+    "arxiv_id": "2606.11916",
+    "doi": "10.48550/arXiv.2606.11916",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.SE", "cross_list": ["cs.AI"]},
+    "title": "Characterizing Software Aging in GPU-Based LLM Serving Systems",
+    "summary": "GPU上で長時間動作するLLMサービング基盤に、短時間の性能測定では見えないソフトウェア経年劣化があるかを実証的に調べる研究。Qwen2.5-7B-InstructをNVIDIA L40Sで提供するvLLM V1単体、Tritonで包んだvLLM V0、素朴なPyTorch+HuggingFace構成など6条件を各36時間、合計216時間連続運転し、GPU・プロセス・ホスト・クライアントの約34指標を同時監視する。自己相関を補正したMann-Kendall検定、Theil-Sen傾き推定、Benjamini-Hochbergによる偽発見率制御を組み合わせ、全構成でプロセス固有メモリの有意な増加を確認した。一方、遅延・スループット・VRAMは36時間ではほぼ安定し、経年劣化は利用者側の性能指標より先にホスト側メモリへ現れる。リーク率はvLLM V1単体の+1.8KB/時からTriton+V0の+157KB/時まで約2桁違い、モデル計算そのものではなく実行ランタイムとホスティング層の組合せが支配的であることを示す。",
+    "list_summary": "6種類のGPU LLMサービング構成を計216時間連続運転し、全構成でホスト側のメモリ経年劣化を検出。リーク率はvLLM V1単体+1.8KB/時からTriton+V0の+157KB/時まで大差があり、配置・ランタイム選択が長期信頼性を左右することを示す。",
+    "authors": ["Domenico Cotroneo", "Bojan Cukic"],
+    "authors_affiliations": "University of North Carolina at Charlotte, College of Computing and Informatics",
+    "published": "2026-06-10",
+    "publication": "arXiv:2606.11916v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-06-10提出）。一次資料から査読済み採録は確認できない。",
+    "lineage": "other-inference-systems",
+    "topics": ["LLMサービング", "ソフトウェア経年劣化", "メモリリーク", "vLLM", "NVIDIA Triton", "GPU信頼性", "長時間運転", "ソフトウェア若返り"],
+    "importance": "中〜高。既存のLLMサービング研究が短時間の速度・メモリ効率に集中する中、数十時間から数か月の連続運用で蓄積する信頼性劣化を独立した評価軸として導入し、ランタイム世代とホスティング層の組合せによってリーク率が約2桁変わることを示す。",
+    "hardware_evaluation": "実機評価。単一ホスト上のNVIDIA L40S 46GBを3基使用し、各構成は専用GPUを1基占有しつつCPU・DRAM・I/Oを共有する。",
+    "hardware_details": "NVIDIA L40S 46GB×3。Qwen2.5-7B-InstructをBF16で使用。主比較の3構成を同一ホストで並列稼働し、各36時間の6実験で合計216時間を観測する。",
+    "quality_effect": "モデルや生成アルゴリズムを変更する研究ではなく、同じモデル・同等ワークロードを長時間運転して信頼性劣化を測るため、生成品質を意図的に変化させない。",
+    "storage_targets": ["ホスト側プロセス固有メモリ", "仮想アドレス空間", "GPU VRAM", "KVキャッシュ"],
+    "bottlenecks": ["長時間運転で蓄積するプロセス固有メモリ", "ランタイム世代依存のメモリ解放挙動", "ホスティング層による追加割当", "短時間性能試験では観測できない経年劣化"],
+    "evidence_locations": ["§III Methodology", "Table I–II", "§IV-B–IV-E", "Table IV–V", "§V Threats to Validity"],
+    "source": "https://arxiv.org/abs/2606.11916",
+    "sources": ["https://arxiv.org/abs/2606.11916", "https://arxiv.org/html/2606.11916v1", "https://arxiv.org/pdf/2606.11916"],
+    "code": "",
+    "implementation": "新規サービングエンジンを実装する論文ではなく、vLLM、NVIDIA Triton、PyTorch/HuggingFaceを用いた再現可能な長時間ストレス試験・監視・統計解析手順を提案する。一次資料では専用コードリポジトリURLは確認できない。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {"canonical_id": "arXiv:2309.06180", "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention"},
+      {"canonical_id": "arXiv:2503.18292", "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity"},
+      {"canonical_id": "arXiv:2412.16434", "title": "SYMPHONY: Improving Memory Management for LLM Inference Workloads"},
+      {"canonical_id": "arXiv:2412.18169", "title": "KunServe: Elastic and Efficient Large Language Model Serving with Parameter-Centric Memory Management"},
+      {"canonical_id": "arXiv:2510.24188", "title": "Investigating Software Aging in LLM-Generated Software Systems"},
+      {"canonical_id": "arXiv:2511.03103", "title": "Adaptive Detection of Software Aging under Workload Shift"},
+      {"canonical_id": "arXiv:2405.04437", "title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention"}
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv:2606.11916v1参考文献節",
+    "references_total": 24
+  },
+  "reservation": {"claim_id": "claim-1f2447b8c5da322c3903a058", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
 }
