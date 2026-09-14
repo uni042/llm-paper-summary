@@ -70,6 +70,7 @@ class SerialScheduledChatClaimTests(unittest.TestCase):
             self.assertEqual(resumed["attempt_id"], first_assignment["attempt_id"])
             self.assertEqual(resumed["claimed_at"], first_assignment["claimed_at"])
             self.assertEqual(resumed["worker_id"], "scheduled-chat-20260913-1530")
+            self.assertIsNone(resumed["record_bank"])
             self.assertEqual(resumed["record_bank_fallback"], "library")
             self.assertEqual(second.get("reason"), "resumed active unsubmitted claim")
 
