@@ -1,13 +1,13 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 18:49 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 18:55 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
 上から順に、**現在の詰まり具合 → workerの稼働状況 → 直近24時間の処理量 → 最新run → 次に読む論文** を確認できます。日常確認はここまでで十分です。下部の「参考情報」は探索効率や履歴を詳しく見るための欄です。
 
 - **Research ready**: まだ全文精読が終わっていない論文候補。値が大きいほど「読む仕事」が溜まっています。
-- **Claim**: workerが処理権を確保している状態。Active claimsは処理中、Claimableは今すぐ別workerが着手できる件数です。
+- **Claim**: workerが処理権を確保するdurable lease。有効claimはleaseが未失効という意味で、実際に生存しているworkerプロセス数とは一致しません。Claimableは今すぐ別workerが着手できる件数です。
 - **Audit**: 既存の論文ページや要約の品質点検。新規論文の全文精読（Research）とは別工程です。
 - **Maintenance / Consistency**: queueやstateの定期保守と、リポジトリ全体の整合性チェックです。
 
@@ -18,10 +18,14 @@
 | 未処理の論文候補（Research ready） | **60** |
 | 現在処理不能（Research blocked） | **1** |
 | 保留中（Research deferred） | **3** |
-| 全文精読完了（累計） | **328** |
+| GitHub反映済みResearch完了（job） | **328** |
+| 耐久checkpoint済み・GitHub未反映（job） | **27** |
+| 精読済みユニーク論文（推定） | **355** |
 | 保守状態（Maintenance） | **passed** |
 | 整合性チェック（Consistency） | **passed** |
 | 保守カウンタ（通常run） | **0 / 24** |
+
+> **精読数の数え方**: 「GitHub反映済み」はResearch jobのterminal state、「耐久checkpoint済み・GitHub未反映」はworkerがcheckpoint_refをGitHubへ記録済みだがterminal stateが未反映のjobです。「精読済みユニーク論文（推定）」は両者をcanonical IDで重複排除して数えます。
 
 ### 要注意
 
@@ -36,11 +40,16 @@
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
 | 未処理候補（Research ready） | **60** |
-| 処理中（Active claims） | **4** |
+| 有効claim（lease） | **4** |
 | 今すぐ着手可能（Claimable） | **57** |
-| :30 通常worker Active claims | **1** |
-| :00 補助worker Active claims | **3** |
-| その他/帰属不明 Active claims | **0** |
+| 有効leaseを持つworker run | **3** |
+| :30 最新worker run | **2026-09-14T17:30:00+09:00** |
+| :30 最新run由来の有効claim | **1** |
+| :30 旧run由来の有効claim | **0** |
+| :00 最新worker run | **2026-09-14T18:00:00+09:00** |
+| :00 最新run由来の有効claim | **2** |
+| :00 旧run由来の有効claim | **1** |
+| その他/帰属不明の有効claim | **0** |
 | :30 通常worker 直近claim | **09-14 18:33 JST** |
 | :00 補助worker 直近claim | **09-14 18:49 JST** |
 | 直近24h Research完了（:30 通常worker） | **31** |
@@ -48,7 +57,7 @@
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T17:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **77 min** |
+| 最古の有効claimの経過時間 | **83 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -59,6 +68,8 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
 - **処理速度 LOW**: ready=60 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+
+有効claimは未失効のdurable leaseであり、Scheduled Chatプロセスの生存そのものではありません。ここではrun固有worker_idを優先して、最新run由来のleaseと旧run由来の残存leaseを分離します。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
