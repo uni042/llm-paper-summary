@@ -2,18 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-0661b76e4efb81bfbce1622c",
-  "job_id": "job-research-2bc48bb7d3eef940",
-  "data": {
-    "hardware":"主要評価はNVIDIA A100-80GB上でLlama-3-70B-Instructをテンソル並列度2で配信する構成をモデル化する。追加事例ではAMD Instinct MI300X 192GBを8 GPU/ノード、テンソル並列度8としてQwen3-235B-A22B FP8の配信群容量を推計する。",
-    "software":"vLLMのPagedAttention、連続バッチ処理、分割入力処理を前提とし、性能評価はVidurで較正した離散事象シミュレータを使用する。入口ルータはカテゴリ別指数移動平均、容量検査、総トークン予算閾値、負荷連動の振り替えを実装する。",
-    "model":"主要評価はLlama-3-70B-Instruct BF16、80層、KVヘッド8、ヘッド次元128。規模推計はQwen3-235B-A22B FP8、総235Bパラメータ・有効22B、94層、KVヘッド4、グループ化クエリアテンション16:1。",
-    "datasets":["Azure LLM Inference Dataset由来100,000要求","LMSYS-Chat-1M由来100,000要求"],
-    "baselines":["最大文脈65Kの一律vLLM配信群＋ラウンドロビン振り分け","提案の8K短文群＋65K長文群＋総トークン予算ルーティング"],
-    "correctness":"生成品質ではなく、安全な容量適合とサービス品質目標を検証する。短文群へ送る要求は推定総トークン予算が8,192以下であることを入口と振り替え後の二重容量検査で確認し、要求追い出し、メモリ不足、要求拒否率を信頼性指標として比較する。",
-    "settings":["各トレース100K要求、ポアソン到着","最大90%の総合利用率まで負荷を上げる","一律群・長文群は最大文脈65K、最大16系列、入力処理バッチ予算8K、毎秒2.8要求/インスタンス","短文群は最大文脈8K、最大128系列、入力処理バッチ予算16K、毎秒11.2要求/インスタンス","短文閾値8,192、指数移動平均係数0.95、安全側補正係数1.0","品質目標はP99入力開始待ち時間2秒以下、P99トークン間時間80ミリ秒以下"],
-    "methodology":"Azure由来トレースは80%が2K以下で最大64Kまでの長い裾を持ち、LMSYS由来トレースは平均入力69.5トークン・平均出力214.5トークンの短文中心分布として構成する。固定到着率で準備期間後の定常状態を測り、必要GPU数、入力開始待ち時間、トークン間時間、要求追い出し、メモリ不足、拒否、成功率を比較する。毎秒100、1,000、2,000要求で規模変化を確認し、閾値1K〜16K超の感度、カテゴリ別トークン推定の50観測時収束も測る。MI300X事例は論文のKV容量式とGPU時間単価を使う投影であり、実機ベンチマークではない。",
-    "scope":"実トレース分布を使うが主要結果は較正済みシミュレーションであり、本番配信群でのA/B試験ではない。二つの群、単一モデル配信群、既知の最大出力トークン数とカテゴリ判定を前提とする。モデル切替、カテゴリ分類誤り、異種GPU混在、ネットワーク障害、実機での入口ルータCPU負荷は十分に評価されていない。"
-  },
-  "reservation":{"claim_id":"claim-0661b76e4efb81bfbce1622c","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-9f45f06c2c2a94e865edcd0d",
+  "job_id": "job-research-b6c014b6c4d75daa",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-9f45f06c2c2a94e865edcd0d",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
