@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "request_id": "claim-20260914T103500Z-scheduled-chat-llm-survey-1930-next1",
+  "worker_id": "scheduled-chat-llm-survey-20260914T1930JST",
+  "worker_kind": "scheduled_chat",
+  "requested_at": "2026-09-14T10:35:00Z",
+  "max_jobs": 1,
+  "job_types": ["research", "audit"],
+  "checkpointed_jobs": [
+    {
+      "job_id": "job-research-f1288f57de066f0f",
+      "checkpoint_ref": "/LLM-survey-outbox/pending/20260914T163600JST-research-2607.17154-ordermoe-attempt-ff6b36a5a7ec2b4b9c26a5bd.json"
+    }
+  ]
+}
