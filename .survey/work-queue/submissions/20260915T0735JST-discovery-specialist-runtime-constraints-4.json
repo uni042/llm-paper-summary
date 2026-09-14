@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "job_id": "job-15c0335aaa7eded8",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.12449",
+      "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+      "source_url": "https://arxiv.org/abs/2609.12449",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.12449-heatcache-thermal-aware-energy-efficient-llm-inference-scheduling.md",
+      "priority": 80,
+      "reason": "持続可能な高温設定のエッジサーバ室で、液冷ループを一時的な熱バッファとして扱い、熱安全性とサービス水準目標（SLO）を守りながら要求を割り当てる推論スケジューラ。vLLM上の実装で計算エネルギーを最大18.0%削減、熱スロットリング曝露を81.7%削減し、48℃までSLO違反率0.9%未満を報告しており、従来のGPU負荷・遅延中心のスケジューリングに熱状態を直接組み込む運用系の差分が明確。"
+    },
+    {
+      "canonical_id": "arXiv:2609.04748",
+      "title": "Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.04748",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md",
+      "priority": 79,
+      "reason": "接頭辞キャッシュを透過的最適化とみなした場合の再現性コストを、2つの推論基盤・4つの重み形式・80エピソードのエージェント型ツール利用で測定する。キャッシュ有効化による軌跡変化が16-bitで36.2%、4-bitで75.0%に達し、キャッシュ無効時は800エピソードで反復実行がbit-identicalだったと報告する。性能だけでなく推論基盤の決定性・キャッシュ状態管理を設計軸として扱うため、サービング信頼性の未収録候補として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2609.12378",
+      "title": "An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference",
+      "source_url": "https://arxiv.org/abs/2609.12378",
+      "paper_path": "papers/inference/99-other-inference-systems/2026-2609.12378-odin-fhe-privacy-preserving-llama-inference.md",
+      "priority": 72,
+      "reason": "完全準同型暗号（FHE）の暗号文配置とLlama実行を共同設計するOdinを提案し、Llama-3-8Bの32層を単一H100 80GBでエンドツーエンド実行する公開実装を報告する。128-token入力で366.4秒・ピーク58.9GiB、同条件のTHOR比4.51倍高速としており、暗号化推論の実システム実装・GPUメモリ制約を扱う推論基盤候補として独立性がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T07:00:00+09:00",
+    "round": "specialist-runtime-constraints-4",
+    "axis": "熱・再現性・プライバシー制約を扱うLLM推論ランタイム",
+    "query_summary": "2026年9月の新着一次資料から、熱制約付き推論スケジューリング、キャッシュによる再現性劣化、完全準同型暗号を使うGPU推論実装を軽量評価した。送信直前に最新default branchのpaper identity indexとrepository codeをcanonical arXiv IDで再確認し、3件とも未収録・未job化であることを確認した。",
+    "candidate_count": 3,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "GPU通信オーバーラップ、集団通信、kernel/runtime compilation、異種GPU協調へ探索軸を移し、最近のサービング実行系を確認する。",
+    "empty_round_reason": null
+  }
+}
