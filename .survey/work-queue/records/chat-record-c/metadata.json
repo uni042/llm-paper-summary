@@ -4,10 +4,47 @@
   "slot": "metadata",
   "attempt_id": "attempt-28e497fe6b93098a0d17c7dc",
   "job_id": "job-research-6cb2a2d661fb6b3a",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-28e497fe6b93098a0d17c7dc",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2605.27744",
+    "arxiv_id": "2605.27744",
+    "doi": "10.48550/arXiv.2605.27744",
+    "openreview_id": null,
+    "arxiv_categories": {"primary": "cs.AI", "cross_list": []},
+    "title": "A Policy-Driven Runtime Layer for Agentic LLM Serving",
+    "summary": "本論文は、エージェント枠組みが知る役割・遷移構造と、推論エンジンが観測するキャッシュ・要求イベントの間に情報断絶があり、鍵値キャッシュ、バッチ形成、投機実行、公平性などが個別改修になっている問題を扱う。両者の間にエージェント実行時層を置き、観測、採点、予測、作用の四つを共通契約にする。実証事例のキャッシュスカウトはエージェント遷移をオンライン一次マルコフ連鎖で学習し、将来再利用される可能性を加味した鍵値追い出しと次エージェントの事前温存を行う。エヌビディア製高性能計算向け演算装置上の五ワークロードで、標準推論基盤比のキャッシュヒット率を十三〜三十七ポイント改善し、端から端までの遅延を六〜二十六パーセント、平均初回トークン待ち時間を要約報告で十二〜二十九パーセント低減し、処理量を六〜十四パーセント改善した。ただし九方針のうち実装評価は鍵値キャッシュ事例だけで、結果は予備的評価と位置付けられる。",
+    "list_summary": "エージェント識別子を共通座標に観測・採点・予測・作用の四原語を推論基盤へ挿入し、遷移学習を鍵値追い出しと先読みに使ってキャッシュヒット率と遅延を改善する。",
+    "authors": ["Rui Zhang", "Chaeeun Kim", "Liting Hu"],
+    "authors_affiliations": "カリフォルニア大学サンタクルーズ校。",
+    "published": "2026-05-26",
+    "publication": "arXiv:2605.27744v2",
+    "publication_type": "プレプリント",
+    "publication_status": "プレプリント。第二版は2026-07-30改訂。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["エージェント型大規模言語モデル提供", "鍵値キャッシュ", "予測的先読み", "追い出し方策", "実行時抽象化", "マルコフ遷移"],
+    "importance": "高。個別のエージェント対応最適化ではなく、エージェント意味情報とエンジンイベントの交点を独立した実行時層として定義し、複数方針を同じ観測流へ載せる設計を提案する。鍵値キャッシュ事例は小状態・低負担で実測利得も示す。",
+    "hardware_evaluation": "エヌビディアH100 80ギガバイト演算装置、Llama-3.1-8B-Instruct。四つの実タスクは並行度四・百二十ブロック予算、合成十二エージェント鎖は並行度一・二百五十ブロック予算。",
+    "hardware_details": "エヌビディアH100 80ギガバイト。六エージェント監督構成で多肢選択、対話、汎用助手、算数課題を評価し、合成十二エージェント鎖も使用。",
+    "quality_effect": "モデル出力品質を近似する手法ではなく、鍵値保持と先読みを変える。生成品質の低下を主評価にせず、ヒット率・遅延・処理量を評価する。先読みは通常推論経路を使い、短い利用者入力と一トークン生成で共有可能なエージェントアンカーだけを温める。",
+    "storage_targets": ["演算装置上の鍵値キャッシュ", "エージェントアンカー接頭辞", "エージェント遷移状態"],
+    "bottlenecks": ["セッション境界でのエージェントアンカー追い出し", "枠組みとエンジンのメタデータ断絶", "静的ワークフローグラフの不一致", "個別方針ごとのエンジン改造"],
+    "evidence_locations": ["第2.1〜2.3節", "第3.1〜3.4節", "図2", "図4", "第4節", "第6節"],
+    "source": "https://arxiv.org/abs/2605.27744",
+    "sources": ["https://arxiv.org/abs/2605.27744", "https://arxiv.org/html/2605.27744"],
+    "code": null,
+    "implementation": "キャッシュスカウトを大規模言語モデル推論基盤の鍵値キャッシュへ接続する事例実装を評価。必要なエンジンフックはブロック接触の観測転送と追い出し時の採点参照の二つ。著者公式コード公開先は本文で確認できない。",
+    "last_checked": "2026-09-14",
+    "references": [
+      {"canonical_id": "arXiv:2402.01869", "arxiv_id": "2402.01869"},
+      {"canonical_id": "arXiv:2510.18586", "arxiv_id": "2510.18586"},
+      {"canonical_id": "arXiv:2407.21783", "arxiv_id": "2407.21783"},
+      {"canonical_id": "arXiv:2511.02230", "arxiv_id": "2511.02230"},
+      {"canonical_id": "arXiv:2510.09665", "arxiv_id": "2510.09665"},
+      {"canonical_id": "arXiv:2502.13965", "arxiv_id": "2502.13965"},
+      {"canonical_id": "arXiv:2603.18897", "arxiv_id": "2603.18897"}
+    ],
+    "references_checked_at": "2026-09-14",
+    "references_source": "arXiv第二版の参考文献節",
+    "references_total": 36
+  },
+  "reservation": {"claim_id": "claim-28e497fe6b93098a0d17c7dc", "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST", "worker_kind": "scheduled_chat"}
 }
