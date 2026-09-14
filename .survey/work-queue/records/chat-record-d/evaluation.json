@@ -4,10 +4,11 @@
   "slot": "evaluation",
   "attempt_id": "attempt-2d0ab98b0f967d81be9c9946",
   "job_id": "job-research-0e6e5ba9063713ac",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-2d0ab98b0f967d81be9c9946",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": "全実験は単一NVIDIA A100 80GB GPUで実施する。モデルはLlama-3.1-8B-InstructとQwen3-4B-Instructをbf16で動作させ、学習可能アダプタはfloat32とする。保存済みKVはCPUメモリに置き、要求時にGPUへ転送するため、TTFTにはCPU→GPU転送も含まれる。",
+    "software": "公開実装は著者GitHubのKVPacket。比較対象は完全再計算、位置補正だけの単純再利用、文書なし、CacheBlend、A3、ランダム再計算、EPIC、SAM-KV。KV圧縮互換性ではKVPressライブラリのCUR、KVzap、LeverageScore、TOVA、ランダム削除を用いる。",
+    "methodology": "情報検索のNeedle-in-a-HaystackとBiography、多段推論のHotpotQAとMusiQueの4データセットで評価する。H/Tは各8ソフトトークン。AdamW、線形減衰、30エポック、256〜512学習例、バッチ64でアダプタだけを学習する。学習率はBiography、NIAH、MusiQueが5×10^-4、HotpotQAが1×10^-3。効率指標のFLOPsは生成前のKV準備処理を数え、KV PacketではRoPE位置補正のみ、再計算方式では選択トークンの部分順伝播を含む。TTFTは要求受信から最初の生成トークンまでで、CPUからGPUへのKV転送、RoPE補正または再計算、質問処理を含むが、オフラインKV生成とアダプタ学習は含めない。品質はF1で比較し、圧縮互換性と領域横断一般化、注意分布もアブレーションする。",
+    "scope": "主評価は単一GPUかつ8B/4B級の2モデル系で、複数GPU・分散KVストレージ・高並行サービングのスループットは直接測っていない。オフラインで文書KVを事前生成できる検索拡張生成を想定し、文書同士が概ね独立であることを設計前提とする。TTFTの比較ではオフライン生成費を除外しているため、文書更新が頻繁な環境では総費用評価が別途必要になる。"
+  },
+  "reservation": {"claim_id": "claim-2d0ab98b0f967d81be9c9946", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
