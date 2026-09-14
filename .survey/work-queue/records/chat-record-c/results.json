@@ -2,99 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-8c7e08c9a775139662598898",
-  "job_id": "job-research-b045bf747f93dbbe",
-  "data": {
-    "overview": "PASTEは、道具実行をLLM生成中へ投機的に重ねるだけでなく、道具完了によるGPUへの帰還集中を共同スケジューリングで抑えることでend-to-end遅延を改善する。平均task completion timeは最大43.5%、p99は最大55.4%削減し、tool側平均latencyは最大55.2%、p99は最大60.6%削減する。tool-only ablationでは道具は速くなる一方LLM queueが65秒まで増え、full PASTEは270秒・queue45秒へ改善するため、toolとLLMの共同制御が主要な寄与である。予測器のTop-1 accuracyは最大27.8%と高くないが、実際に投機開始した候補は安全性・価値filter後のhit rateが93.8%に達する。",
-    "key_results": [
-      {
-        "metric": "平均task completion time",
-        "value": "最大43.5%削減",
-        "baseline": "vLLM、Agentix、ORION、SpecFaaS",
-        "condition": "DeepResearchBench、SWE-bench、ScholarQAを含むagent workload、32×A100",
-        "interpretation": "LLM生成とtool実行の直列待ちを重ね、GPU帰還burstも抑えることでworkflow全体の完了時間を短縮する。"
-      },
-      {
-        "metric": "p99 task completion time",
-        "value": "最大55.4%削減",
-        "baseline": "比較対象群",
-        "condition": "bursty arrivalを含むmulti-session評価",
-        "interpretation": "平均だけでなくtool完了burstが作る尾部queueを共同schedulerが抑える。"
-      },
-      {
-        "metric": "tool平均遅延 / p99遅延",
-        "value": "最大55.2% / 60.6%削減",
-        "baseline": "非投機tool execution",
-        "condition": "pattern-aware speculation有効",
-        "interpretation": "正式callが生成される前にtool処理を進めるため、権威的callから見た露出待ち時間を大きく隠せる。"
-      },
-      {
-        "metric": "tool-side speedup",
-        "value": "ORION比平均1.71倍、SpecFaaS比平均1.83倍",
-        "baseline": "ORION / SpecFaaS",
-        "condition": "pooled tool requests",
-        "interpretation": "97%の要求でtool speedupが1倍を超え、特定taskだけの改善ではない。"
-      },
-      {
-        "metric": "time breakdown",
-        "value": "露出tool時間34秒、比較対象84〜89秒。LLM側186秒、比較対象226〜249秒",
-        "baseline": "tool-side baselines",
-        "condition": "代表workload breakdown",
-        "interpretation": "投機はtool待ちを約60%減らすだけでなく、共同制御によりLLM側時間も約18〜25%減らす。"
-      },
-      {
-        "metric": "高負荷scaling",
-        "value": "各concurrencyでvLLM比1.27倍以上、Agentix比1.24倍以上。pooledで1.50倍 / 1.30倍",
-        "baseline": "vLLM / Agentix",
-        "condition": "concurrency sweep",
-        "interpretation": "session数が増えてもtool投機の帰還burstを制御でき、利得が維持される。"
-      },
-      {
-        "metric": "ablation end-to-end latency",
-        "value": "tool-only 419秒、LLM-only 342秒、full PASTE 270秒",
-        "baseline": "各単独最適化",
-        "condition": "同一workload",
-        "interpretation": "toolのみを高速化するとLLM queueが65秒へ増え、両側を統合した場合に初めて最良end-to-endになる。"
-      },
-      {
-        "metric": "予測性能",
-        "value": "Top-1最大27.8%、Top-3 recall 43.9%、実行投機hit rate 93.8%",
-        "baseline": "pattern analyzer",
-        "condition": "confidence・実行可能性・価値filter後",
-        "interpretation": "raw予測精度より、実際に資源を使う候補を高精度に絞ることが重要である。"
-      },
-      {
-        "metric": "安全性",
-        "value": "潜在的副作用投機602件を全件commit前に阻止、最終出力差なし",
-        "baseline": "非投機baseline",
-        "condition": "2万件超のspeculation",
-        "interpretation": "投機結果を隔離して正式call一致時だけ採用することで意味保存を維持する。"
-      }
-    ],
-    "negative_results": [
-      {
-        "name": "toolだけを2倍速くすると高負荷でend-to-endが悪化",
-        "description": "道具完了が同期して多数sessionがGPUへ戻るとLLM queueが膨張する。したがってtool latencyの局所最小化をそのままagent latency最小化とはみなせず、LLM pressureに応じてtool優先度を抑える必要がある。"
-      },
-      {
-        "name": "raw Top-1予測精度は限定的",
-        "description": "次toolのTop-1 accuracyは最大27.8%で、無条件に予測候補を起動すれば誤投機が多い。高い93.8% hit rateはconfidence、安全性、argument解決可能性、resource budgetによる強いfilter後の値である。"
-      },
-      {
-        "name": "未来生成値に依存するtoolは先行実行できない",
-        "description": "argumentがまだ生成されていない自由記述textなどに依存する場合、late bindingできないため投機を見送る。効果は履歴patternと既存payloadから具体的invocationを構成できるworkflowほど大きい。"
-      },
-      {
-        "name": "副作用toolは実行形態に制約",
-        "description": "実状態を変更するtoolはそのまま投機できず、dry-run、staging、read-only equivalentなどcommitを分離できる場合に限られる。外部systemがそのような安全機構を提供しない場合は投機対象外になる。"
-      }
-    ],
-    "interpretation": "PASTEの結果は『toolを先読みすれば速い』だけではなく、agent servingではtool clusterとLLM GPUが閉ループqueueを形成することを示す。toolを速く終えると次のLLM要求を早く生成するため、下流GPUが混んでいる時には上流高速化が逆効果になり得る。そこで予測成功率、tool露出時間、CPU・外部resource、GPU decode/KV pressureを共同制御することがend-to-end最適化に必要となる。",
-    "quality_impact": "権威的LLM出力を変更せず、予測が一致した場合だけtool結果を再利用するため、投機そのものによる生成品質劣化を意図しない。安全性評価では副作用commitを防ぎ、最終task outputのbaselineとの差を観測しなかった。"
-  },
+  "attempt_id": "attempt-d81aec8e8c6ef0b775526983",
+  "job_id": "job-research-cc8a88103bff770a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8c7e08c9a775139662598898",
-    "worker_id": "scheduled-chat-discovery-overflow",
+    "claim_id": "claim-d81aec8e8c6ef0b775526983",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -2,38 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-8c7e08c9a775139662598898",
-  "job_id": "job-research-b045bf747f93dbbe",
-  "data": {
-    "hardware": "4ノード、各ノード96 vCPU AMD EPYC 7V13、512 GBメモリ、NVIDIA A100 80 GBを8基、合計32 A100 GPU。",
-    "software": "vLLMをLLM実行基盤に用い、PASTEはagent側middlewareとvLLM startup hookとして統合する。agent実装はgemini-cli、Qwen Deep Research、VirtualLab。",
-    "model": "Deep ResearchではQwen-DeepResearch-30B、coding/science系ではQwen3-30B-A3Bを使用する。",
-    "datasets": [
-      "DeepResearchBench",
-      "SWE-bench",
-      "ScholarQA",
-      "Azure Functions由来のproduction invocation traceによるbursty arrival"
-    ],
-    "baselines": [
-      "vLLM",
-      "Agentix",
-      "ORION",
-      "SpecFaaS"
-    ],
-    "correctness": "投機結果は正式LLM tool callと完全一致した時だけ採用する。副作用を持つ投機はcommit barrierで隔離し、評価中2万件超の投機のうち潜在的副作用を持つ602件をすべてcommit前に阻止した。最終task outputについてbaselineとの差は観測されない。",
-    "settings": [
-      "単一sessionおよび複数sessionのagent workloadを評価する。",
-      "道具呼出し予測は履歴patternとargument mappingからTop-k候補を作る。",
-      "負荷scalingではconcurrencyを増やし、PASTE、vLLM、Agentixのend-to-end latencyを比較する。",
-      "ablationではtool speculationのみ、LLM schedulingのみ、両者を統合したfull PASTEを比較する。",
-      "resource overheadではmoderate speculation budget下のCPU core、memory、bandwidthと削減latencyを測る。"
-    ],
-    "methodology": "end-to-end評価ではagent taskの開始から最終回答までを測り、平均とp99を比較する。tool-sideでは正式tool callが待つ露出時間と個々のtool latencyを測定し、LLM-sideではready turnのqueueと推論時間を分離する。scaling試験では同時session数を増やしてtool完了によるGPU帰還burstの影響を観察する。ablationにより投機道具だけを高速化した場合にLLM queueが増える現象と、共同スケジューリングでその悪化を回避できるかを検証する。予測器はTop-1 accuracy、Top-3 recall、実際に起動した投機のhit rateを測り、安全性では副作用toolのcommit可否と最終output一致を確認する。",
-    "scope": "tool patternが履歴から繰り返し学習でき、次の具体的argumentが既存payloadから組み立てられるagent workloadを主対象とする。完全に新規のtool sequenceや将来生成される値に依存するargumentは投機しない。また外部APIの課金・rate limitなどはresource budgetへ取り込む必要があり、すべてのtoolを無条件に投機する方式ではない。"
-  },
+  "attempt_id": "attempt-d81aec8e8c6ef0b775526983",
+  "job_id": "job-research-cc8a88103bff770a",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-8c7e08c9a775139662598898",
-    "worker_id": "scheduled-chat-discovery-overflow",
+    "claim_id": "claim-d81aec8e8c6ef0b775526983",
+    "worker_id": "scheduled-chat-discovery-overflow-20260914T1100JST",
     "worker_kind": "scheduled_chat"
   }
 }
