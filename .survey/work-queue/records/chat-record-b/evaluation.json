@@ -2,18 +2,39 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1c2c978dc673c6484d6228c8",
-  "job_id": "job-research-b045bf747f93dbbe",
+  "attempt_id": "attempt-9b568020f0bf44f551377551",
+  "job_id": "job-research-04150be55266345e",
   "data": {
-    "hardware": "4ノード、各ノード96 vCPU AMD EPYC 7V13、512 GBメモリ、NVIDIA A100 80 GBを8基、合計32 A100 GPU。",
-    "software": "vLLMをLLM実行基盤に用い、PASTEはagent側middlewareとvLLM startup hookとして統合する。agent実装はgemini-cli、Qwen Deep Research、VirtualLab。",
-    "model": "Deep ResearchではQwen-DeepResearch-30B、coding/science系ではQwen3-30B-A3Bを使用する。",
-    "datasets": ["DeepResearchBench", "SWE-bench", "ScholarQA", "Azure Functions由来のproduction invocation traceによるbursty arrival"],
-    "baselines": ["vLLM", "Agentix", "ORION", "SpecFaaS"],
-    "correctness": "投機結果は正式LLM tool callと完全一致した時だけ採用する。副作用を持つ投機はcommit barrierで隔離し、評価中2万件超の投機のうち潜在的副作用を持つ602件をすべてcommit前に阻止した。最終task outputについてbaselineとの差は観測されない。",
-    "settings": ["単一sessionおよび複数sessionのagent workloadを評価する。", "道具呼出し予測は履歴patternとargument mappingからTop-k候補を作る。", "負荷scalingではconcurrencyを増やし、PASTE、vLLM、Agentixのend-to-end latencyを比較する。", "ablationではtool speculationのみ、LLM schedulingのみ、両者を統合したfull PASTEを比較する。", "resource overheadではmoderate speculation budget下のCPU core、memory、bandwidthと削減latencyを測る。"],
-    "methodology": "end-to-end評価ではagent taskの開始から最終回答までを測り、平均とp99を比較する。tool-sideでは正式tool callが待つ露出時間と個々のtool latencyを測定し、LLM-sideではready turnのqueueと推論時間を分離する。scaling試験では同時session数を増やしてtool完了によるGPU帰還burstの影響を観察する。ablationにより投機道具だけを高速化した場合にLLM queueが増える現象と、共同スケジューリングでその悪化を回避できるかを検証する。予測器はTop-1 accuracy、Top-3 recall、実際に起動した投機のhit rateを測り、安全性では副作用toolのcommit可否と最終output一致を確認する。",
-    "scope": "tool patternが履歴から繰り返し学習でき、次の具体的argumentが既存payloadから組み立てられるagent workloadを主対象とする。完全に新規のtool sequenceや将来生成される値に依存するargumentは投機しない。また外部APIの課金・rate limitなどはresource budgetへ取り込む必要があり、すべてのtoolを無条件に投機する方式ではない。"
+    "hardware": "AMD EPYC 9554 64コアCPUと94GB NVIDIA H100 NVLを2基搭載した単一マシン。各LLM workerは1 GPU上の独立engine instanceとして動作する。",
+    "software": "HeliumはPythonで実装し、vLLM v0.16.0を基盤に自動prefix cachingとchunked prefillを有効化する。KVFlowのみ論文公開のSGLang実装を用いる。公式コードは https://github.com/mlsys-io/helium_demo 。",
+    "model": "主評価はQwen3-8BとQwen3-14B。感度分析ではLlama-3.1-8BとQwen3-32Bも使用する。",
+    "datasets": [
+      "MMLU: Map-Reduce/Debateで200問",
+      "TAT-QA: Map-Reduce/Debateで100 context×6問、Reflectionで200 context×6問",
+      "Amazon Reviews: Iterative 200 item、Parallel 100 item、各item 60 reviewを6 chunkへ分割",
+      "Trading: 100銘柄の2日分finance data。1日目をwarm-up、2日目を評価"
+    ],
+    "baselines": [
+      "vLLM naive query-wise execution",
+      "OpWise",
+      "LangGraph",
+      "AgentScope v0.1.6",
+      "Parrot",
+      "KVFlow"
+    ],
+    "correctness": "高速化は意味保存を前提とし、近似modelは使わない。出力cache置換は非LLM演算またはgreedy生成など決定論的LLM演算に限定し、全評価のLLM呼出しをgreedy samplingに固定する。",
+    "settings": [
+      "基本workflowはMap-Reduce、Multi-Agent Debate、Reflection、Iterative Refinement、Parallel Chainsの5種類。",
+      "Tradingは19 agent・88 LLM operatorを持ち、Parallel、Debate、Map-Reduceを複合する。",
+      "全systemでend-to-end batch latencyを計測し、Heliumはquery optimization、TRT構築、schedulingを含む。",
+      "単一batch microbenchmarkではproactive KV cachingとcache-aware schedulingだけを有効化し、batch間prompt cacheの効果を分離する。"
+    ],
+    "methodology": "まず5種類のprimitive workflowで、個別要求中心のvLLM、operator単位batchのOpWise、一般agent orchestrator、prefix-aware Parrot、workflow-aware KVFlowと比較する。次に19-agent Tradingで複合workflowのend-to-end latencyを測る。ablationではproactive KV、plan pruning、prompt cache、cache-aware schedulingを一つずつ無効化し、scheduling単独評価ではQueryWise、OpWise、Random、LSPFと比較する。小規模構成はMILPで理論最適scheduleを求めてtoken-step costのoptimality gapを測る。さらにbatch size、branch数、debate round、worker数、model size、KV容量、prefix共有率を変え、計画overheadと管理metadata memoryも測定する。",
+    "scope": "on-premiseで複数GPUを直接制御でき、workflowのDAG templateを実行前に解析できるbatch agent workloadを対象とする。remote API callは対象外で、同一workflow内のagentsは同じbase LLMを異なるprompt roleとして使う。したがって異なるmodel familyを跨ぐagent routingや、将来構造が完全に未確定なオンラインagent executionには直接適用しない。"
   },
-  "reservation": {"claim_id":"claim-1c2c978dc673c6484d6228c8","worker_id":"scheduled-chat-llm-survey-20260914T1030JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9b568020f0bf44f551377551",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

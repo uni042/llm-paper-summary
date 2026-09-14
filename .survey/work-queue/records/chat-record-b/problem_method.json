@@ -2,19 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-1c2c978dc673c6484d6228c8",
-  "job_id": "job-research-b045bf747f93dbbe",
+  "attempt_id": "attempt-9b568020f0bf44f551377551",
+  "job_id": "job-research-04150be55266345e",
   "data": {
-    "problem": "エージェント型LLMでは、LLMが道具呼出しを生成し、その呼出しを外部実行し、結果を次のLLM入力へ戻す処理が直列に繰り返される。一次資料の実測では、単一sessionでも道具実行がend-to-end時間の45〜57%を占める。一方、同じagentやtask familyでは道具列に強い規則性があり、例えば成功したfile_editor呼出しの55%はterminal実行へ続き、web visitのURLの95%は直前search結果の厳密な部分文字列である。この規則性を使って次の道具を先に実行できるが、単に投機数を増やすと誤投機がCPU・network資源を浪費し、副作用のある呼出しは安全性を壊す。さらに道具処理だけを高速化すると、多数sessionが短時間にLLMへ戻るためGPU queueが膨らみ、制御実験では道具を2倍速くしただけで高負荷時のend-to-end latencyが悪化する。したがって、予測、安全な投機、CPU/外部道具資源、GPU推論負荷を共同制御する必要がある。",
-    "novelty": "PASTEの中心は、次の道具名だけでなく『実行可能な具体的呼出し』を過去のworkflow patternから予測し、LLM生成と同時に走らせることである。Pattern Analyzerは道具eventの列だけでなくargument payload間の写像を学び、直前search結果のURLや過去file pathなど既に確定している値をlate bindingして次のargumentを構成する。Tool Speculation Schedulerは予測confidence、期待される露出遅延削減、投機予算、安全性policyを満たす候補だけを実行し、結果は権威的LLM呼出しが一致するまで隔離する。さらにLLM–Tool Co-Schedulerは、投機道具を早く終わらせる価値と、それによってsessionがGPUへ戻った際に生じるLLM queue/KV圧力を同じpriorityへ入れ、道具側の局所最速化が全体を悪化させる現象を抑える。",
-    "method_overview": "オフライン・継続学習側では、agent実行履歴をevent signatureとargument payloadへ正規化し、直前数eventのsuffixから次に現れる道具呼出しを数える。繰り返し現れるcontextについて、次道具のempirical confidenceが閾値を超えるpatternだけを保持し、引数については過去payloadのどのfield、substring、定数から生成されたかを推定してargument mappingを付与する。オンラインでは現在sessionのevent suffixをpattern tableへ照合し、現在までに観測済みのpayloadから具体的argumentを組み立てられる候補だけを投機対象にする。Schedulerは候補ごとにconfidence、予測される道具時間、resource budget、policy safetyを確認し、権威的な道具呼出しより低いpriorityでCPUや外部serviceへdispatchする。投機結果はsession本体から隔離し、LLMが同一toolと同一argumentを正式に出した時だけ既完了結果を即時返す。まだ実行中なら投機処理を昇格し、不一致なら破棄または低priorityのまま終了させる。副作用のあるtoolはdry-run、staging、non-mutating variantなどcommitを伴わない安全経路が存在する時だけ投機する。次にLLM–Tool Co-Schedulerが全sessionを見て、各投機候補のExposedToolGainを、現在のdecode loadとKV loadから作るLLMPressureで割り、starvation防止のagingを加えてpriorityを作る。tool完了によりGPUへ戻るsessionが多過ぎるとLLMPressureが上がり、投機toolの優先度を下げる。LLM側でもready turnを即座にすべて投入せず、engine pressureが所定帯域へ収まるようpre-engine admissionとin-engine load shapingを行う。これによりtoolとLLMを別々に最適化せず、片方の高速化が他方のqueueを悪化させない閉ループ制御を行う。",
+    "problem": "エージェント型ワークフローは、1つの利用者要求を複数のLLM呼出し、検索、変換、批評、集約へ展開し、同じ接頭辞や中間結果を別の演算子・別の入力バッチで繰り返し利用する。しかしvLLMなどの推論基盤は個々のLLM要求だけを見て連続バッチ処理や受動的な接頭辞キャッシュを行うため、まだ実行可能になっていない将来の呼出し、他演算子と共有する静的system prompt、同一入力で再登場する決定論的部分計算を事前に把握できない。一方、LangGraphや一般データ処理基盤はワークフローDAGを把握しても、KVキャッシュ、prefill/decodeの費用、連続バッチ処理などLLM固有の物理特性をブラックボックス化する。この論理計画と物理推論の情報分断により、共通部分の再計算、KV早期追い出し、負荷不均衡、依存待ちによる小さいバッチが発生する。",
+    "novelty": "Heliumは、エージェント型ワークフローをデータベースの問い合わせ計画として扱い、LLM呼出しを第一級の演算子へ昇格させる。まず不要演算子と同一部分グラフを論理計画から除去し、同一入力の決定論的演算子を大域的な結果キャッシュからの取得へ置換する。次に、複数演算子のprompt templateと依存辺を一つのテンプレート付き基数木へ統合し、まだ実行可能でない呼出しも含めた接頭辞共有構造を事前に可視化する。その構造とtoken費用、worker容量、依存待ちを使って、同じ接頭辞を持つ呼出しを近接実行しながら独立仕事を間に挟む費用認識スケジュールを作る。さらに静的接頭辞のKVを最初のbatchで事前計算してGPUへ固定するため、受動的LRUだけに依存しない。",
+    "method_overview": "利用者は同じ構造を多数の入力へ適用するエージェント型ワークフローを専用DSLで記述し、Heliumのparserが各LLM呼出し、検索、ローカル変換と依存関係をDAGへ変換する。論理最適化では最終出力へ寄与しない枝を後向き走査で削除し、同じ入力と構造を持つ部分DAGをhashして共通部分として統合する。さらに既に実行済みの決定論的演算子について、演算子種別と具体化済み入力から署名を作り、大域prompt cacheに一致すればその演算子を軽量なCacheFetchへ置き換える。次に物理計画器は、各LLM promptを静的token列と前段出力を埋め込むplaceholderへ分解し、全演算子の接頭辞階層とDAG依存を同時に持つテンプレート付き基数木を構築する。静的でbatchをまたいで不変な接頭辞は初回実行時にprefillしてKVをGPU上へ固定し、以後のbatchで再利用する。cache-aware schedulerは各呼出しをworkerへ割り当てるとともに順序を決める。費用モデルでは直前に同じworkerで実行した呼出しとの最長共通接頭辞を差し引いた新規prefill token数、生成中の累積decode token step、worker性能、依存する後続呼出しを待たせるprecedence delayを計上する。同じ接頭辞を持つ呼出しを連続させればKV再利用を増やせる一方、依存呼出しをすぐ実行せず独立呼出しを挟むとcontinuous batchingの有効batchを大きくできるため、両者のmakespanを共同最小化する。生成された実行計画をquery processorがready状態に従ってworkerへ送り、vLLMの通常continuous batchingとPinned prefix cacheを利用して実行する。",
     "components": [
-      {"name":"Pattern Analyzer","description":"履歴中のtool sequenceをevent signatureへ正規化し、直近contextごとに次のtool出現頻度を数えて経験的confidenceを持つpatternを抽出する。tool名だけでは実行できないため、argument payload間のデータ依存も解析する。例えば直前search結果のURL一覧から後続web visitのURLが選ばれる場合、固定文字列ではなく『直前payload中の該当fieldを参照する』写像として保存する。オンラインでは現在suffixに一致するpatternだけを候補化し、必要なargument sourceがすでに観測済みなら具体的なinvocationを構築する。予測不能な未来LLM textへ依存する引数は投機しないため、単純な次tool分類器より実行可能性を重視する。"},
-      {"name":"Tool Speculation Scheduler","description":"予測候補を無制限に起動せず、confidence、期待tool latency、現在の資源予算、policy safetyを使って投機価値を判定する。権威的なtool callは常に高priority、投機処理は低priority・preemptibleとして扱い、CPU coreや外部API容量を通常処理から奪い過ぎない。投機結果は正式callと照合するまで隔離され、同一tool・同一argumentならcompleted resultを再利用し、実行中ならauthoritativeへpromoteする。不一致なら結果をsessionへ露出しない。file更新や送信など副作用を伴うtoolは、dry-runやstaging、read-only equivalentがある場合だけ投機し、commit phaseは正式call確認後まで禁止する。"},
-      {"name":"LLM–Tool Co-Scheduler","description":"tool側だけを高速化するとready LLM turnが一斉に増えGPU queueが悪化するため、sessionごとのtool gainをGPU側pressureで正規化する。ExposedToolGainは今そのtoolを先に終わらせると隠せる待ち時間を表し、LLMPressureはdecode loadとKV cache負荷を組み合わせる。priorityにはagingも加えて低priority taskのstarvationを防ぐ。GPUが空いている時は価値の高いtool投機を積極化し、GPUが混雑している時はtool完了を意図的に平準化する。さらにready LLM turnのadmissionとengine内順序もpressure bandに合わせ、tool→LLM帰還burstを抑える。これによりCPU/外部serviceとGPUを別queueとして独立運用するのではなく、agent workflow全体の完了時間を目的に共同制御する。"},
-      {"name":"安全な投機結果再利用","description":"PASTEはLLM出力を予測値で置き換えるのではなく、正式なLLM callを真実のsourceとして残す。投機toolは別contextで実行し、その結果をまだagent stateへcommitしない。正式な呼出しが予測と一致した場合のみ結果を公開するため、予測が外れてもagentの論理実行はbaselineと同じになる。副作用toolはcommit barrierを持ち、潜在的に状態を書き換える602件の投機actionを評価中すべてcommit前に遮断した。これにより、投機的復号のaccept/rejectと類似した『一致時だけ高速経路を採用する』意味保存をtool executionへ拡張している。"}
+      {
+        "name": "論理DAGの共通部分除去と結果キャッシュ置換",
+        "description": "最初の最適化段階ではGPUへ割り当てる前に、ワークフロー自体から実行不要な仕事を減らす。最終出力から逆向きに辿って未使用枝を除去し、同じ入力に依存する同型部分グラフを共通部分式として一つへ統合する。さらに非LLM処理や温度0のLLM呼出しなど決定論的演算子に限り、演算子型と具体的入力値から署名を作って大域prompt cacheを照会し、既存出力があればCacheFetchへ置換する。これにより単なるKV接頭辞共有より粗い粒度で演算子全体を省略でき、複数batchで繰り返す日次分析や投機枝に有効となる。"
+      },
+      {
+        "name": "テンプレート付き基数木",
+        "description": "通常の基数木は実際に到着済みのtoken列だけを整理するため、依存先の出力がまだ生成されていない将来promptの構造を表せない。Heliumは静的token列に加え、前段演算子の出力が入る位置をplaceholderとして保持するテンプレート付き基数木を作る。各leafはLLM呼出しに対応し、leaf間にはDAG依存辺も保存するため、接頭辞階層と実行順序制約を一つの構造で表現できる。これによりオンライン到着を待たず、どの呼出しを連続させれば静的接頭辞KVを再利用できるか、どの独立呼出しを依存待ちの間に挟めるかを物理計画前に把握できる。"
+      },
+      {
+        "name": "先行KV・promptキャッシュ",
+        "description": "batchワークロードでは将来利用する静的system promptや文脈が事前に分かるため、受動的なcache hitを待つ必要がない。Heliumはテンプレート付き基数木からbatch間で不変な接頭辞を識別し、最初の実行時に専用要求としてvLLMへprefillさせ、そのKV blockをGPU上で優先保持する。容量圧力が高い場合はvLLMのblock単位LRUや最長接頭辞規則で追い出し、次batchで必要なら再生成する。これとは別に決定論的演算子の完全な出力を大域prompt cacheへ保持し、KV再利用と演算子省略を異なる粒度で併用する。"
+      },
+      {
+        "name": "費用・キャッシュ認識スケジューリング",
+        "description": "各workerに割り当てる呼出し順を、単純なready順や最大共通prefix順ではなく、prefillとdecodeのtoken stepおよび依存待ちを含むmakespanとして評価する。直前呼出しとの最低共通祖先より下のtokenだけを新規prefill費として数え、生成長からdecodeの累積費を見積もる。また前段が出力を生成している間に別の独立呼出しを進めれば後続呼出しがreadyになる時点でbatchを大きくできるため、precedence delayを明示的に入れる。こうしてKVを守る局所性と演算並列性の双方を考慮し、prefix hitを増やすだけでworker負荷が偏るParrot型heuristicを避ける。"
+      }
     ],
-    "system_design": "PASTEはagentとtool endpointの間にmiddleware/proxyとして入り、event履歴、pattern table、投機状態、tool resource budgetを管理する。LLM worker側はvLLM本体を改変せず起動hookからready turnのadmission/orderを調整する。agent側は約5,000行TypeScript、LLM側は約2,000行Pythonで、gemini-cli、Qwen Deep Research、VirtualLabにはdispatch wrapperを追加する。tool実行・LLM実行の完了eventを一つのschedulerへ戻し、現在のCPU/tool資源とGPU pressureを継続更新する。"
+    "system_design": "HeliumはDSL parser、論理問い合わせ最適化器、テンプレート付き基数木構築器、cache-aware scheduler、query processorからなる。各workerは独立したvLLM v0.16.0 engineを別processで動かしIPC queueで制御する。事前計算したprefix KVをpinできるようvLLMを拡張し、worker統計と想定出力token数は事前profileから取得する。実行時には最適化済みDAGのready演算子だけを連続バッチ処理へ投入し、依存解除とcache状態を更新しながら計画を進める。"
   },
-  "reservation": {"claim_id":"claim-1c2c978dc673c6484d6228c8","worker_id":"scheduled-chat-llm-survey-20260914T1030JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-9b568020f0bf44f551377551",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
