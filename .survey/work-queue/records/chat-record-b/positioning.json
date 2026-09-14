@@ -5,16 +5,13 @@
   "attempt_id": "attempt-eff39fce395692aeefdea477",
   "job_id": "job-research-bd7341cf457984b7",
   "data": {
-    "novelty_vs_prior": "vLLMなどの一般的なLLMサービングはバッチ・待ち行列・GPUメモリを主に扱い、DSO/GreenLLM系はDVFSで電力を下げるが冷却系の過渡状態を明示的な資源として扱わない。TAPASのような熱対応配置は温度・電力を使って低温GPUへ仕事を寄せる一方、AIO液冷ループの熱容量そのものをジョブごとの残余予算へ変換しない。CoolEdgeは冷却液側の制御が中心で、LLM要求のバッチ・GPU割当・SLOと発熱を共同最適化しない。HeatCacheはAIOの熱慣性を『今使える熱予算』としてスケジューラへ持ち込み、物理モデルと学習予測を接続する点が差分である。",
+    "novelty_vs_prior": "vLLMなどの一般的なLLMサービングはバッチ・待ち行列・GPUメモリを主に扱い、DSOやGreenLLM系はDVFSで電力を下げるが冷却系の過渡状態を明示的な資源として扱わない。TAPASのような熱対応配置は温度・電力を使って低温GPUへ仕事を寄せる一方、AIO液冷ループの熱容量そのものをジョブごとの残余予算へ変換しない。CoolEdgeは冷却液側の制御が中心で、LLM要求のバッチ・GPU割当・SLOと発熱を共同最適化しない。HeatCacheはAIOの熱慣性を現在使える熱予算としてスケジューラへ持ち込み、物理モデルと学習予測を接続する点が差分である。",
+    "differences": "既存の温度対応方式との決定的な違いは、観測温度を単なる危険信号として使うのではなく、GPU部品・冷却液・ラジエータへあと何ジュール蓄えられるかをRCモデルから計算し、候補ジョブの予測発熱量と同じエネルギー単位で比較する点にある。固定DVFSは負荷が軽い時も同じ抑制を続け、TAPAS型配置は温度の低いGPUを選んでもその冷却ループが直後に飽和する可能性を直接表せない。GreenLLM型の電力制御は計算電力へ主眼を置き、CoolEdge型の冷却制御は設備側へ主眼を置く。HeatCacheはvLLMの候補バッチ・GPU割当・周波数を、AIOの残余熱予算、ジョブ条件付き発熱予測、TTFT/TPOT上界の三つで同時に絞り込む。そのため、熱余裕がある短時間には高い計算密度を許して早く処理し、熱容量が尽きる前に抑制へ移るという時間的な使い分けが可能になる。",
     "implementation_status": "vLLM上のユーザー空間プラグインとして実装済みで、Kubernetes/KServe、NVIDIA DCGM、Kubeletプラグインを統合した実機プロトタイプを評価している。専用実装の公開リポジトリURLは論文本文とarXivメタデータから確認できない。",
-    "research_positioning": "llm-serving-scheduling-disaggregation系統の中でも、推論スケジューリングと設備・デバイス熱管理の境界に位置する。サーバの計算資源だけでなく冷却系の時間的な熱容量を制約資源として扱うため、エネルギー/炭素対応サービングや電力上限制御を、温度・冷却ダイナミクスまで拡張する研究として位置付けられる。",
+    "research_positioning": "llm-serving-scheduling-disaggregation系統の中でも、推論スケジューリングと設備・デバイス熱管理の境界に位置する。サーバの計算資源だけでなく冷却系の時間的な熱容量を制約資源として扱うため、エネルギー対応サービングや電力上限制御を、温度・冷却ダイナミクスまで拡張する研究として位置付けられる。",
     "relation_to_existing_repository": "vLLM/PagedAttentionなどの既存サービング基盤を置換せず上位制御として使う点で、スケジューラ系研究と補完関係にある。電力制御・炭素対応配置の論文が時間・価格・電力予算を扱うのに対し、HeatCacheは各GPU/AIOループの熱余裕を時間変化する予算として追加する。エッジ/オンデバイス系のEnerInferのような熱・電力制御とは問題意識を共有するが、HeatCacheは4GPUサーバのAIO液冷慣性とvLLMバッチ/ルーティングを直接結合する。",
     "limitations": "評価は単一ワークステーション、RTX 4090×4、改造AIO液冷、2m×2m囲いに限定される。施設配管型direct-to-chip/CDUや浸漬冷却では熱状態と操作ノブが異なり、そのまま最適とは限らない。複数サーバの配置・移行、共有ラック/クラスタ電力上限、マルチテナント制御、HVAC/CRACの設定温度や風量との共同最適化は扱わない。RCモデルは各GPU/AIO構成ごとにステップ負荷で校正が必要で、経年劣化や保守後に再校正が必要になり得る。HeatiTSの未知分布への一般化は限定的にしか評価されていない。計算エネルギーの主要比較では各AIOポンプ/ファン約25Wを除外しており、総施設エネルギー全体の削減率と同一ではない。24GB GPUへ収めるためモデルを量子化している。精密RC検証には約7%の遅延費用が報告される。",
     "audit_required": false
   },
-  "reservation": {
-    "claim_id": "claim-eff39fce395692aeefdea477",
-    "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-eff39fce395692aeefdea477", "worker_id": "scheduled-chat-discovery-overflow-20260915T0700JST", "worker_kind": "scheduled_chat"}
 }
