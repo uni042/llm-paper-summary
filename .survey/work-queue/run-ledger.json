@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T04:06:18.152590+00:00",
+  "updated_at": "2026-09-14T04:08:23.867511+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T04:06:18.152590+00:00",
+      "last_recorded_at": "2026-09-14T04:08:23.867511+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 37,
+        "research_completed": 38,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -19200,6 +19200,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34804932354:1",
+          "recorded_at": "2026-09-14T04:08:23.867511+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34804932354",
+            "run_attempt": "1",
+            "source_sha": "103c639c9c90b380257e207106e76d0b0500bcca"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19496,6 +19510,14 @@
           "type": "research",
           "canonical_id": "arXiv:2606.09061",
           "title": "Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-79f62fbfcb1294fd",
+          "type": "research",
+          "canonical_id": "arXiv:2602.12029",
+          "title": "PrefillShare: Shared Prefill Module and KV Reuse for Multi-LLM Serving",
           "from": "ready",
           "to": "completed"
         }
