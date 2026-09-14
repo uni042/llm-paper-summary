@@ -5,64 +5,24 @@
   "attempt_id": "attempt-6b041a0d266d15ef6cc2a08d",
   "job_id": "job-research-6ec0e9028edbe67e",
   "data": {
-    "overview": "AccelGenはvLLM、Orca、FastGen、Sarathi-Serve、FastServeに対し、4モデルの混合trace評価でtoken throughputを1.42〜11.21倍、request throughputを1.54〜10倍、goodputを1.43〜13.71倍に改善し、iteration-level SLO attainmentを37〜90%、JCT-SLO attainmentを34〜93%高める。JCTは1.61〜12.22倍短縮する。全未来情報を知るOracleとの差も比較し、throughputは12%低い、goodputは6%低い、SLO/JCT-SLO attainmentは1.1%低い程度まで近づく。機構除去ではdynamic chunkingを外すとthroughputが97%低下、SLO順序を外すとgoodput52%・SLO attainment42%低下、multi-resource batchingを外すとthroughput61%低下し、三機構の役割が分離される。",
+    "overview": "AccelGenはvLLM、Orca、FastGen、Sarathi-Serve、FastServeに対し、4モデルの混合要求履歴評価でトークン処理量を1.42〜11.21倍、要求処理量を1.54〜10倍、有効処理量を1.43〜13.71倍に改善し、反復単位SLO達成率を37〜90%、仕事完了時間SLO達成率を34〜93%高める。仕事完了時間は1.61〜12.22倍短縮する。将来到着と出力長を既知とする理想上限との差も比較し、処理量は12%低い、有効処理量は6%低い、SLO達成率は1.1%低い程度まで近づく。機構除去では動的分割を外すと処理量が97%低下、SLO順序付けを外すと有効処理量52%・SLO達成率42%低下、複数資源処理群形成を外すと処理量61%低下し、三機構の役割が分離される。",
     "key_results": [
-      {
-        "metric": "token throughput",
-        "value": "既存system比1.42〜11.21倍",
-        "baseline": "vLLM/Orca/FastGen/Sarathi/FastServe",
-        "condition": "A100実機、OPT/Llama 4モデル、mixed trace",
-        "interpretation": "SLO内でforward sizeを動的に満たし、KV cache制約でGPU budgetが余る状況を減らす効果が大きい。"
-      },
-      {
-        "metric": "goodput",
-        "value": "1.43〜13.71倍改善、Oracleより6%低い",
-        "baseline": "既存systemと未来情報既知Oracle",
-        "condition": "T=1s等の期限付き有効処理量",
-        "interpretation": "単純throughputだけでなく、SLOを守って完了した仕事量でも大幅に改善し、未来情報なしでもOracle近傍へ到達する。"
-      },
-      {
-        "metric": "SLO attainment",
-        "value": "iteration-level 37〜90%改善、JCT-SLO 34〜93%改善。Oracleとの差1.1%",
-        "baseline": "既存system",
-        "condition": "heterogeneous TTFT/TBT/JCT SLO",
-        "interpretation": "残猶予順のorderingで似たSLOをbatchし、厳しい要求をurgentとして先に入れる設計がSLO保証へ直接効く。"
-      },
-      {
-        "metric": "JCT",
-        "value": "1.61〜12.22倍短縮",
-        "baseline": "既存system",
-        "condition": "同一mixed trace",
-        "interpretation": "高throughputとKV cache早期解放によってqueue待ちを減らす。Oracleはさらに22%短い。"
-      },
-      {
-        "metric": "GPU/KV資源利用",
-        "value": "GPU compute utilization 31〜63%高、unallocated KVC 7.40〜13.20%低",
-        "baseline": "既存system",
-        "condition": "4モデル評価",
-        "interpretation": "GPU token budgetのみを最大化せず、KV cache残量も同時に埋めるbatch選択が片側資源の断片化を抑える。"
-      },
-      {
-        "metric": "scheduler overhead",
-        "value": "平均JCTの0.02%",
-        "baseline": "FCFS系はAccelGenより28〜93%低overhead、FastServeは95%高overhead",
-        "condition": "iterationごとのordering/chunk/batch選択",
-        "interpretation": "FCFSより制御計算は増えるが、JCT改善に対して絶対overheadは小さい。"
-      }
+      {"metric": "トークン処理量", "value": "既存システム比1.42〜11.21倍", "baseline": "vLLM/Orca/FastGen/Sarathi/FastServe", "condition": "A100実機、OPT/Llama 4モデル、混合要求履歴", "interpretation": "SLO内で順伝播量を動的に満たし、KVキャッシュ制約でGPU予算が余る状況を減らす効果が大きい。"},
+      {"metric": "有効処理量", "value": "1.43〜13.71倍改善、理想上限より6%低い", "baseline": "既存システムと未来情報既知の理想上限", "condition": "期限を満たした有効処理量", "interpretation": "単純な総処理量だけでなく、SLOを守って完了した仕事量でも大幅に改善し、未来情報なしでも理想上限近傍へ到達する。"},
+      {"metric": "SLO達成率", "value": "反復単位37〜90%改善、完了時間SLO 34〜93%改善。理想上限との差1.1%", "baseline": "既存システム", "condition": "異種TTFT/TBT/完了時間SLO", "interpretation": "残猶予順の並べ替えで似たSLOを同じ処理群へ集め、厳しい要求を緊急要求として先に入れる設計がSLO保証へ直接効く。"},
+      {"metric": "仕事完了時間", "value": "1.61〜12.22倍短縮", "baseline": "既存システム", "condition": "同一混合要求履歴", "interpretation": "高い処理量とKVキャッシュ早期解放によって待ち行列滞在時間を減らす。理想上限はさらに22%短い。"},
+      {"metric": "GPU/KV資源利用", "value": "GPU計算利用率31〜63%高、未割当KVキャッシュ7.40〜13.20%低", "baseline": "既存システム", "condition": "4モデル評価", "interpretation": "GPUトークン予算のみを最大化せず、KVキャッシュ残量も同時に埋める処理群選択が片側資源の断片化を抑える。"},
+      {"metric": "スケジューラ処理時間", "value": "平均仕事完了時間の0.02%", "baseline": "到着順方式はAccelGenより28〜93%低い処理時間、FastServeは95%高い", "condition": "反復ごとの順序付け・分割・処理群選択", "interpretation": "到着順より制御計算は増えるが、仕事完了時間改善に対して絶対的な制御負担は小さい。"}
     ],
     "negative_results": [
-      "AccelGenはOracleよりthroughputが12%、goodputが6%、JCTが22%劣る。未来の出力長と到着時刻を知らないことによる長期KV cache配置・preemption判断の余地が残る。",
-      "dynamic chunkingを外すとthroughputが97%低下し、長prompt比率が高い負荷への依存性が大きい。逆に長promptの少ない環境では相対利得が小さくなる可能性がある。",
-      "SLO orderingを外すとgoodput52%、SLO attainment42%低下する一方、throughput低下は35%で、throughput最適化だけではSLO性能を代表できない。",
-      "multi-resource batchingを外すとthroughput61%低下するが、scheduler計算量は増える。本文は現実装のscheduler latencyを今後さらに削減すべき制約として挙げる。",
-      "長promptをchunk化すると個々の長prompt処理が遅れる可能性があり、chunk sizeのより適応的な決定と長prompt preemption方針は未解決。"
+      "AccelGenは理想上限より処理量が12%、有効処理量が6%、仕事完了時間が22%劣る。未来の出力長と到着時刻を知らないことによる長期KVキャッシュ配置・中断判断の余地が残る。",
+      "動的分割を外すと処理量が97%低下し、長入力比率が高い負荷への依存性が大きい。逆に長入力の少ない環境では相対利得が小さくなる可能性がある。",
+      "SLO順序付けを外すと有効処理量52%、SLO達成率42%低下する一方、処理量低下は35%で、総処理量最適化だけではSLO性能を代表できない。",
+      "複数資源処理群形成を外すと処理量61%低下するが、スケジューラ計算量は増える。本文は現実装の制御遅延を今後さらに削減すべき制約として挙げる。",
+      "長入力を分割すると個々の長入力処理が遅れる可能性があり、より適応的な分割長決定と長入力の中断方針は未解決である。"
     ],
-    "interpretation": "AccelGenの本質は、SLO制御と資源充填を一つの単純なpriorityへ押し込めず、時間、GPU計算、KV memoryという三つの制約を段階的に扱うことにある。まず残SLOが実行順序とurgent集合を決め、次にSLO_minからそのiterationで安全な計算量を決め、最後にGPU/KVの二次元残量へ合う要求を選ぶ。固定chunkやFCFSが失敗するのは、forward tokenだけを満たしてもKV cacheが詰まれば次要求を載せられず、KVだけを空けても計算器が遊ぶためである。AblationでChunkはthroughput、Orderはgoodput/SLO、Batchは二資源利用へ異なる寄与を示しており、単一heuristicではなく三機構の組合せがOracle近傍性能を作っている。",
-    "quality_impact": "生成アルゴリズムや数値精度を変えないため出力品質への直接影響はない。schedulerがSLO見積りを誤ると要求の待ち時間やpreemption回数が悪化し、特に長promptのuser experienceへ影響し得る。"
+    "interpretation": "AccelGenの本質は、SLO制御と資源充填を一つの単純な優先度へ押し込めず、時間、GPU計算、KVメモリという三つの制約を段階的に扱うことにある。まず残SLOが実行順序と緊急要求集合を決め、次に最小SLOからその反復で安全な計算量を決め、最後にGPU/KVの二次元残量へ合う要求を選ぶ。固定分割や到着順処理が失敗するのは、順伝播トークンだけを満たしてもKVキャッシュが詰まれば次要求を載せられず、KVだけを空けても計算器が遊ぶためである。除去実験では分割機構は総処理量、順序付けは有効処理量とSLO、複数資源処理群形成は二資源利用へ異なる寄与を示しており、三機構の組合せが理想上限近傍性能を作っている。",
+    "quality_impact": "生成アルゴリズムや数値精度を変えないため出力品質への直接影響はない。スケジューラがSLO見積りを誤ると要求の待ち時間や中断回数が悪化し、特に長入力の利用体験へ影響し得る。"
   },
-  "reservation": {
-    "claim_id": "claim-6b041a0d266d15ef6cc2a08d",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id": "claim-6b041a0d266d15ef6cc2a08d", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
