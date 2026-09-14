@@ -2,18 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ae7a9021c536aa6d2ffcd6d3",
-  "job_id": "job-research-04150be55266345e",
-  "data": {
-    "hardware": "AMD EPYC 9554（64コア）CPUと94GB NVIDIA H100 NVL GPUを2基搭載した単一マシン。各LLM処理器は1 GPU上の独立した推論エンジンとして動作する。",
-    "software": "HeliumはPythonで実装し、vLLM v0.16.0を基盤に自動接頭辞キャッシュとチャンク化プリフィルを有効化する。KVFlowのみ論文公開のSGLang実装を用いる。公式コードは https://github.com/mlsys-io/helium_demo 。",
-    "model": "主評価はQwen3-8BとQwen3-14B。感度分析ではLlama-3.1-8BとQwen3-32Bも使用する。",
-    "datasets": ["MMLU: Map-Reduce/Debateで200問", "TAT-QA: Map-Reduce/Debateで100文脈×6問、Reflectionで200文脈×6問", "Amazon Reviews: Iterative 200項目、Parallel 100項目、各項目60レビューを6分割", "Trading: 100銘柄の2日分金融データ。1日目をウォームアップ、2日目を評価"],
-    "baselines": ["vLLMによる問い合わせ単位の逐次実行", "OpWise", "LangGraph", "AgentScope v0.1.6", "Parrot", "KVFlow"],
-    "correctness": "高速化は意味保存を前提とし、近似モデルは使わない。出力キャッシュ置換は非LLM演算または貪欲生成など決定論的LLM演算に限定し、全評価のLLM呼出しを貪欲生成に固定する。",
-    "settings": ["基本ワークフローはMap-Reduce、Multi-Agent Debate、Reflection、Iterative Refinement、Parallel Chainsの5種類。", "Tradingは19エージェント・88 LLM演算子を持ち、Parallel、Debate、Map-Reduceを複合する。", "全方式でエンドツーエンドのバッチ遅延を計測し、Heliumは問い合わせ最適化、TRT構築、スケジューリング時間も含める。", "単一バッチの細粒度評価では先行KVキャッシュとキャッシュ認識スケジューリングだけを有効化し、バッチ間の結果キャッシュ効果を分離する。"],
-    "methodology": "まず5種類の基本ワークフローで、個別要求中心のvLLM、演算子単位バッチのOpWise、一般エージェント実行基盤、接頭辞認識型Parrot、ワークフロー認識型KVFlowと比較する。次に19エージェントのTradingで複合ワークフローのエンドツーエンド遅延を測る。要素除去評価では先行KV、計画枝刈り、結果キャッシュ、キャッシュ認識スケジューリングを一つずつ無効化する。スケジューラ単独評価ではQueryWise、OpWise、Random、最長共有接頭辞優先（Longest Shared Prefix First; LSPF）と比較する。小規模構成は混合整数線形計画法（mixed-integer linear programming; MILP）で理論最適スケジュールを求め、トークン処理費用の最適解との差を測る。さらにバッチサイズ、分岐数、討論回数、処理器数、モデル規模、KV容量、接頭辞共有率を変え、計画時間と管理情報メモリも測定する。",
-    "scope": "複数GPUを直接制御でき、ワークフローのDAGテンプレートを実行前に解析できるバッチ型エージェント処理を対象とする。外部クラウドAPI呼出しは主対象外で、同一ワークフロー内のエージェントは同じ基盤LLMを異なる役割プロンプトで使う。異なるモデル族をまたぐ経路制御や、将来構造が完全に未確定なオンライン実行には直接適用しない。"
-  },
-  "reservation": {"claim_id": "claim-ae7a9021c536aa6d2ffcd6d3", "worker_id": "scheduled-chat-llm-survey-20260914T1130JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-14275c825f3527b15b5e8655",
+  "job_id": "job-research-c2ae91e7ef53c740",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-14275c825f3527b15b5e8655",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
