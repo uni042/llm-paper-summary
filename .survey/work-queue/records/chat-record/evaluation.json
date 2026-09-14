@@ -2,62 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
-  "job_id": "job-research-66748ca7517e3f9a",
-  "data": {
-    "hardware": [
-      "NVIDIA L4 24GB",
-      "NVIDIA A100 80GB",
-      "CPU DRAM 256GB/2TB"
-    ],
-    "software": [
-      "SwiftLLMベースのMorphServe",
-      "PagedAttention拡張",
-      "FlashAttention互換",
-      "AWQ INT4重み"
-    ],
-    "model": [
-      "Vicuna 7B v1.5",
-      "Llama 2 7B",
-      "Llama 3 8B",
-      "CodeLlama 34B"
-    ],
-    "datasets": [
-      "GovReport",
-      "QMSum",
-      "DuReader",
-      "Multi-News",
-      "BookSum Chapters"
-    ],
-    "baselines": [
-      "フル精度FP16固定サービング",
-      "静的AWQ INT4",
-      "静的一様INT4"
-    ],
-    "correctness": "形態変換中も処理中要求のKV状態と生成位置を維持するため、再プリフィルやセッション破棄を伴わない。一方、低精度層を通過したトークンには量子化誤差があり完全無損失ではないため、F1とROUGE-Lで品質を明示的に測定する。",
-    "settings": [
-      {
-        "name": "実負荷再生",
-        "description": "Azure LLM InferenceとBurstGPTから各72秒区間を使い、ハードウェア規模に合わせ到着率をそれぞれ4.75倍、1.75倍に縮小してバースト負荷を再現する。"
-      },
-      {
-        "name": "モデル別長さ設定",
-        "description": "Vicuna 7B/Llama 2 7Bでは入力512・出力256トークン、Llama 3 8B/CodeLlama 34Bでは入力1024・出力512トークン。追加の混合精度品質試験ではBookSum Chaptersの6K入力/2K出力も用いる。"
-      },
-      {
-        "name": "評価指標",
-        "description": "TTFTのP95、TPOTの平均/P95/P99、SLO違反率、飽和処理量、KV容量、F1、ROUGE-Lを測り、遅延・容量・品質の三者を同時比較する。"
-      },
-      {
-        "name": "層交換プロファイル",
-        "description": "LISを用いた交換順をヒューリスティックな前方順、後方順、ランダム順と比較し、WikiText-2校正からC4への一般化も評価する。"
-      }
-    ],
-    "methodology": "異なる注意機構とモデル規模を含む4モデル、2種類の実トラフィック、複数の要約・読解データセットを組み合わせ、負荷上昇に対する遅延とSLOだけでなく、動的量子化が生成品質へ与える影響と各機構のアブレーションを測る。",
-    "scope": "主評価は単一GPU上の7B〜34B級モデルで、分散実行への適用は議論に留まる。数百B級モデル、MoE、異種GPU群、低帯域PCIe環境は直接評価していない。"
-  },
+  "attempt_id": "attempt-f6e9bf75bac91682199c8e08",
+  "job_id": "job-research-f1288f57de066f0f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-51392e346b94b7a1e2807fcf",
+    "claim_id": "claim-f6e9bf75bac91682199c8e08",
     "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }

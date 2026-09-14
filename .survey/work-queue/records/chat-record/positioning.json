@@ -2,18 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
-  "job_id": "job-research-66748ca7517e3f9a",
-  "data": {
-    "limitations": "実行時交換のためフル精度と量子化版の重みをホスト側に保持する必要があり、CPUメモリ使用量が増える。評価はL4/A100と7B〜34B級モデルが中心で、巨大MoE、異種GPU、低帯域接続、多ノードでの層交換費用は直接検証されていない。MorphServeは負荷急増を予測せず、監視指標の悪化を見てから反応する。適応単位もTransformer層であり、注意機構やMLP単位のより細粒度な容量交換は将来課題である。",
-    "differences": "静的量子化は起動前にモデル精度を固定し、節約と品質損失を常時受ける。MorphServeは同一要求の実行途中でも選択層だけ低精度へ交換し、圧力低下後にフル精度へ戻せる。PagedAttentionはKVページを効率管理するが通常は重み用メモリとの境界を固定しており、本方式は量子化で解放した重み領域をKVページへ動的に移す。全面的なCPU/SSDオフロードとも異なり、通常計算はGPUに残し、必要な層バリアントだけCPUから短時間転送する。",
-    "implementation_status": "論文ではSwiftLLM上に約2,200行のPythonと約500行のC++/CUDAでLayerSwapper、KVResizer、監視制御を実装したと報告する。公式GitHubリポジトリはMITライセンスで公開されているが、2026-09-14確認時点のREADMEでは完全コードは公開準備中と明記され、リポジトリ内容はまだ限定的である。",
-    "research_positioning": "GPUメモリを『重み』と『KVキャッシュ』の固定用途へ分割せず、SLOと品質に応じて実行時に交換可能な資源として扱う弾力的サービング系統に位置する。特にCPU側の複数精度層を待機階層として利用し、GPU上の重み縮小分を動的KVへ渡すため、階層メモリ・オフロード研究との接点が強い。論文自身も将来課題としてSSDからホストへのオンデマンド層ストリーミングやGPUDirect Storageを挙げており、SSD階層を追加した発展余地が明確である。",
-    "relation_to_existing_repository": "既存のCPU/SSDオフロード系が『どのテンソルをどの階層へ置くか』を主問題にするのに対し、MorphServeはGPU内の用途境界そのものを負荷に応じて変える。KVオフロードやKV圧縮がKV側だけを縮小するのに対し、本方式は重み精度を下げてKV側を拡大する相補的手法であり、両者を組み合わせられる。",
-    "audit_required": false
-  },
+  "attempt_id": "attempt-f6e9bf75bac91682199c8e08",
+  "job_id": "job-research-f1288f57de066f0f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-51392e346b94b7a1e2807fcf",
+    "claim_id": "claim-f6e9bf75bac91682199c8e08",
     "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }

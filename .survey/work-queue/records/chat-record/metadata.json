@@ -2,89 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
-  "job_id": "job-research-66748ca7517e3f9a",
-  "data": {
-    "canonical_id": "arXiv:2506.02006",
-    "arxiv_id": "2506.02006",
-    "doi": "10.48550/arXiv.2506.02006",
-    "openreview_id": null,
-    "arxiv_categories": {
-      "primary": "cs.DC",
-      "cross_list": [
-        "cs.LG"
-      ]
-    },
-    "title": "MorphServe: Efficient and Workload-Aware LLM Serving via Runtime Quantized Layer Swapping and KV Cache Resizing",
-    "summary": "動的でバースト性の高いLLMサービングでは、固定フル精度構成はピーク時にGPUメモリを重みが占有してKVキャッシュ不足と待ち行列を招く一方、静的量子化は低負荷時にも品質低下を払い続ける。MorphServeは、負荷上昇時だけ影響の小さいTransformer層をFP16からW8/W4等へ非同期交換し、解放したGPUメモリをKVキャッシュへ再配分する。負荷低下時には高精度層を戻し、品質低下を必要な期間とトークンへ限定する。Azure LLM InferenceとBurstGPTの実負荷トレース、Vicuna/Llama/CodeLlama系モデルで、平均SLO違反を92.45%削減し、精度重視設定でもP95初回トークン遅延を2.2〜3.9倍改善した。",
-    "list_summary": "負荷ピーク時だけ低影響層を低ビット版へ非同期交換し、空いたGPUメモリをKVキャッシュへ振り替えることで、平均SLO違反を92.45%削減しP95初回トークン遅延を2.2〜3.9倍改善する。",
-    "authors": [
-      "Zhaoyuan Su",
-      "Zeyu Zhang",
-      "Tingfeng Lan",
-      "Zirui Wang",
-      "Haiying Shen",
-      "Juncheng Yang",
-      "Yue Cheng"
-    ],
-    "authors_affiliations": "University of Virginia; Harvard University",
-    "published": "2025-05-24",
-    "publication": "arXiv preprint; MLSys 2026 Oral",
-    "publication_type": "会議発表 / プレプリント",
-    "publication_status": "arXiv v2 (2026-01-07); MLSys 2026 Oral",
-    "lineage": "offload-hierarchical-memory",
-    "topics": [
-      "LLMサービング",
-      "実行時量子化",
-      "KVキャッシュ",
-      "GPUメモリ弾力化",
-      "サービス品質目標"
-    ],
-    "importance": "重み精度とKVキャッシュという二つの主要GPUメモリ消費先を独立した固定区画として扱わず、実時間の負荷圧力に応じて容量を交換する点が重要である。CPU側に待機させた複数精度の層をGPUへ一時交換するため、階層メモリと動的メモリ再配分の双方に直接関係する。",
-    "hardware_evaluation": "Vicuna 7B、Llama 2 7B、Llama 3 8BはNVIDIA L4 24GB、CodeLlama 34BはNVIDIA A100 80GBで評価。CPU DRAMはL4環境256GB、A100環境2TB。",
-    "quality_effect": "低負荷時はフル精度を維持し、負荷ピーク時だけ選択層を低精度化する。Llama 2 7BのDuReader評価ではAWQ静的INT4のF1 25.55に対してMorphServe 27.33、フル精度27.68であり、静的量子化より品質低下を大幅に抑える。",
-    "source": "https://arxiv.org/abs/2506.02006",
-    "sources": [
-      "https://arxiv.org/abs/2506.02006",
-      "https://arxiv.org/html/2506.02006v2",
-      "https://github.com/ds2-lab/MorphServe"
-    ],
-    "code": "https://github.com/ds2-lab/MorphServe",
-    "implementation": "論文ではSwiftLLM上に約2,200行のPythonと約500行のC++/CUDAで実装したと説明する。一方、公開GitHubリポジトリは2026-09-14確認時点でREADMEとライセンス中心で、完全な実装コードは公開準備中と明記されている。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {
-        "canonical_id": "arXiv:2401.17644",
-        "arxiv_id": "2401.17644"
-      }
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "primary paper bibliography; representative directly related workload reference",
-    "references_total": 1,
-    "storage_targets": [
-      "GPU上のモデル重み",
-      "CPU側の複数精度層バリアント",
-      "GPU上のKVキャッシュページプール"
-    ],
-    "bottlenecks": [
-      "負荷ピーク時のKV容量不足",
-      "固定精度による重みメモリ占有",
-      "プリエンプションと待ち行列増大",
-      "層交換のPCIe転送"
-    ],
-    "hardware_details": "NVIDIA L4 24GBとA100 80GB。複数精度の層バリアントは固定済みCPUメモリへ置き、PCIe Gen4転送と別CUDAストリームを利用する。",
-    "evidence_locations": [
-      "§4 System Design",
-      "§4.3 LayerSwapper",
-      "§4.4 KVResizer",
-      "§5 Experiment",
-      "Appendix C-D"
-    ],
-    "last_audited": null,
-    "audit_version": 0
-  },
+  "attempt_id": "attempt-f6e9bf75bac91682199c8e08",
+  "job_id": "job-research-f1288f57de066f0f",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-51392e346b94b7a1e2807fcf",
+    "claim_id": "claim-f6e9bf75bac91682199c8e08",
     "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
     "worker_kind": "scheduled_chat"
   }
