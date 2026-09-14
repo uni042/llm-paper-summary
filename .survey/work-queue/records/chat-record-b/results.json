@@ -2,30 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-ef9f513b924120f5f00f67aa",
-  "job_id": "job-research-b6c014b6c4d75daa",
-  "data": {
-    "overview":"A5000上のソフトウェアCeltyは、30%二重疎性では密cuBLASに対して固定費が大きく一部条件で遅いが、50%で平均1.49倍、70%で平均2.19倍高速化し、最大は5120×13824・70%条件の2.80倍である。同条件ではFlash-LLM比最大2.41倍、DASP比2.82倍、Coruscant比2.84倍を報告する。専用Sparse SIMT Coreの推定ではcuBLAS比平均速度向上が30%で1.78倍、50%で2.73倍、70%で4.06倍、最大5.27倍まで伸びる。LLaMA-2-13Bの単一トークンデコードは50%二重疎性で端から端2.28倍高速化するが、WikiText-2パープレキシティは密FP16 4.9から7.2へ悪化する。専用コアの面積増加はGPU世代換算0.03〜0.08%、電力増加はA5000換算88.90mW・TDPの0.04%と見積もられる。",
-    "key_results":[
-      {"metric":"ソフトウェアカーネル速度","value":"50%疎性で平均1.49倍、70%で平均2.19倍、最大2.80倍","baseline":"密cuBLAS","condition":"A5000、代表LLM全結合層","interpretation":"重みと活性値の交差部分だけを読み、共有メモリ集約で不規則更新を抑えると、中〜高疎性で密カーネルを上回る。"},
-      {"metric":"既存疎カーネル比","value":"最大2.41倍対Flash-LLM、2.82倍対DASP、2.84倍対Coruscant","baseline":"各疎GPUカーネル","condition":"5120×13824、70%二重疎性付近","interpretation":"重み疎性だけでなく入力活性疎性も列単位で利用する追加利得を示す。"},
-      {"metric":"Sparse SIMT Core推定速度","value":"平均1.78倍/2.73倍/4.06倍（30/50/70%）、最大5.27倍","baseline":"密cuBLAS","condition":"A5000改変カーネルによる専用機能性能推定","interpretation":"レジスタ部分和と専用走長復号でソフトウェア版の共有メモリ競合・索引復元費用を除く余地を示す。実シリコン測定ではない。"},
-      {"metric":"共有メモリ集約アブレーション","value":"平均14.4倍高速化","baseline":"部分和を直接グローバルメモリへ蓄積","condition":"A5000ソフトウェアカーネル","interpretation":"不規則な出力更新をオンチップへ局所化することが基本カーネル設計の主要因である。"},
-      {"metric":"レジスタ部分和アブレーション","value":"最大2.40倍","baseline":"全部分和を共有メモリへ保持","condition":"5120×5120、30%疎性、100%担当範囲をレジスタ化","interpretation":"専用SIMTコアで通常レジスタを蓄積器として再利用する効果を示す。"},
-      {"metric":"端から端デコード速度","value":"2.28倍","baseline":"密FP16 LLaMA-2-13B","condition":"50%二重疎性、161入力トークン後の単一トークン生成","interpretation":"個別全結合カーネルの利得がモデル全体の低バッチデコードにも残る。"},
-      {"metric":"端から端品質","value":"WikiText-2パープレキシティ4.9→7.2","baseline":"密FP16 LLaMA-2-13B","condition":"50% DuoGPT二重疎性","interpretation":"速度向上には明確な品質低下が伴い、無損失のシステム最適化ではない。"},
-      {"metric":"一般課題平均精度","value":"LLaMA-2-13B 68.3%→59.7%","baseline":"密モデル","condition":"50% DuoGPT二重疎性","interpretation":"SparseGPT非構造疎化64.8%より品質は低いが、Celtyが利用する活性疎性との組合せで速度を狙う。"},
-      {"metric":"面積・電力見積もり","value":"面積0.03% V100、0.04% A100、0.08% H100相当；A5000換算88.90mW、TDP 0.04%","baseline":"既存GPU","condition":"復号器RTL合成とプロセス尺度換算","interpretation":"専用疎機能を比較的小さいハードウェア追加で実装できる可能性を示すが、製造済みチップの値ではない。"},
-      {"metric":"エネルギー","value":"60%二重疎性で1.85倍削減","baseline":"Coruscant-STC","condition":"Sparse SIMT Core評価モデル","interpretation":"メモリ読出しと不要演算の削減が性能だけでなく推定エネルギーにも効く。"}
-    ],
-    "negative_results":[
-      {"name":"低疎性では密cuBLASに負ける条件がある","description":"30%程度では索引復号、共有メモリ集約、疎データ形式の固定費が削減した乗算・読出しを上回り、4096級形状などで密cuBLASより約1.2倍遅い条件がある。Celtyは疎性が十分高い低バッチ推論ほど有利である。"},
-      {"name":"二重疎化による品質低下","description":"LLaMA-2-13Bの50%条件でパープレキシティは4.9から7.2、一般課題平均は68.3%から59.7%へ下がる。SparseGPTの重みだけ50%疎化は平均64.8%であり、二重疎性には追加の品質代償がある。"},
-      {"name":"ソフトウェア版は共有メモリ競合と索引復号が残る","description":"疎性が高いほど実計算が減る一方、共有メモリのバンク競合とRLC索引復元が相対的に支配的になり、最大40%程度を占める。専用コアはこの限界を解くための提案である。"},
-      {"name":"専用コアの最大性能は推定","description":"5.27倍などSparse SIMT Coreの速度は、A5000カーネルから復号命令を除きレジスタアクセスを理想化した測定による。実際のハードウェア実装における配線、スケジューリング、クロック低下は未検証である。"}
-    ],
-    "interpretation":"Celtyは『疎であること』だけではGPUが速くならず、疎データ形式とSIMT実行単位を一致させる必要があることを示す。二重疎性では活性値ゼロをワープ単位の列省略へ変換し、重み疎性では列内の読出し量を減らすことで二つの削減を乗算する。一方、その結果として残る不規則な出力更新と索引復元を共有メモリ、さらにレジスタと専用復号器へ段階的に移すため、アルゴリズムとマイクロアーキテクチャの共同設計が性能差の中心である。",
-    "quality_impact":"二重疎化率を高めるほど速度と容量は改善するが、モデル品質は低下する。したがってCeltyのカーネル自体とDuoGPT等の疎化手法は分離して評価すべきで、同じカーネルをより精度の高い二重疎化手法と組み合わせられればシステム側の利得を保ったまま品質交換を改善できる余地がある。"
-  },
-  "reservation":{"claim_id":"claim-ef9f513b924120f5f00f67aa","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-2301ef4abff314e4c204d926",
+  "job_id": "job-research-1ecc150ce081a47b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-2301ef4abff314e4c204d926",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }

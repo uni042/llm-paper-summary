@@ -2,18 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-ef9f513b924120f5f00f67aa",
-  "job_id": "job-research-b6c014b6c4d75daa",
-  "data": {
-    "hardware":"ソフトウェアカーネルはNVIDIA A5000 Ampere（sm86、24GB GDDR6）1基で測定する。Sparse SIMT Coreは実チップではなく、専用機能の効果を模擬する改変A5000カーネルとRTL合成で評価する。",
-    "software":"CUDA 12.6、GCC 12.2。比較対象は密cuBLAS、Coruscantの疎行列×密行列、Flash-LLM、DASP。端から端LLM評価ではFlashAttentionを共通に使用し、Flash-LLM/DASP側の重み疎化はWanda、Celty側の二重疎化はDuoGPTを用いる。",
-    "model":"層形状評価はLLaMA-2-7B、LLaMA-2-13B、OPT-30B。端から端評価はLLaMA-2-13B。代表形状は4096×4096、4096×11008、5120×5120、5120×13824、7168×7168、7168×28672。",
-    "datasets":["ShareGPTから161入力トークンの代表プロンプト（端から端速度）","WikiText-2（パープレキシティ）","ARC-easy","ARC-challenge","HellaSwag","PIQA","WinoGrande等の一般課題精度"],
-    "baselines":["密cuBLAS","Coruscant","Flash-LLM","DASP","Macko","密FP16 LLaMA-2","SparseGPT非構造疎化","SparseGPT 2:4","ShortGPT","DuoGPT"],
-    "correctness":"速度だけでなく、二重疎化による言語モデル品質低下をWikiText-2パープレキシティと一般課題平均精度で測る。カーネル比較では既存疎手法へ同程度の重み保存量を与え、Celtyだけは重みと入力活性の両方の疎性を利用するため、利用できる疎性情報の違いを明示する。",
-    "settings":["二重疎性30%、50%、70%を中心に評価","カーネルの内側列タイルK=64を既定値","SpMM比較はTensor Core整列条件のためN次元を8へパディング","端から端評価は161トークン入力後の単一トークンデコード","専用走長復号器は400MHz・32nmで合成し7nmへ尺度換算","Sparse SIMT Core性能はA5000上で走長復号命令を除き直接レジスタアクセスへ置換した改変カーネルで推定"],
-    "methodology":"各代表全結合層でカーネル遅延を測り、密cuBLASと既存疎GPUカーネルに対する速度比を疎性ごとに比較する。ソフトウェアCeltyは実A5000測定で、Sparse SIMT Coreは専用復号とレジスタ部分和を理想化した改変カーネルの実測遅延をハードウェア性能見積もりとして使う。共有メモリ集約、内側タイル幅、レジスタ蓄積率を個別に変えるアブレーションも実施する。端から端ではLLaMA-2-13Bの全結合層を対象カーネルへ置換し、単一トークンデコード遅延とパープレキシティを測る。",
-    "scope":"ソフトウェアカーネルの速度値はA5000実測だが、専用Sparse SIMT Coreの最大5.27倍などは実シリコンではなく改変GPUカーネルによる性能推定である。面積・電力も論理合成とプロセス尺度換算に基づく。端から端評価は低バッチ・単一利用者デコードを主対象とし、大規模連続バッチ配信や学習処理は対象外。"
-  },
-  "reservation":{"claim_id":"claim-ef9f513b924120f5f00f67aa","worker_id":"scheduled-chat-discovery-overflow-20260914T1100JST","worker_kind":"scheduled_chat"}
+  "attempt_id": "attempt-2301ef4abff314e4c204d926",
+  "job_id": "job-research-1ecc150ce081a47b",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-2301ef4abff314e4c204d926",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
