@@ -2,27 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-11e0bc962a7c28c7d0c14bdf",
-  "job_id": "job-research-7505ea2231cb7ff0",
-  "data": {
-    "overview": "ShareGPT由来RTではBROSがvLLM比で正規化遅延を最大74.20%、RR比54.31%削減しながら、BE処理量低下をvLLM比11.29%、RR比8.80%に抑えた。LMSYS-CHAT-1Mでは遅延をvLLM比69.61%、RR比25.77%削減し、BE処理量低下は17.67%/15.18%だった。ShareGPTでTTFT SLO達成率はvLLM比36.38倍、TPOTは1.73倍、LMSYSでは21.42倍/2.62倍となる。双方向KVだけの要素除去でもTTFT/TPOT SLO達成率を1.23倍/1.63倍改善したが、反復スケジューリング自体は実行時間の約7.6〜9.5%を占める。",
-    "key_results": [
-      {"metric": "RT正規化遅延", "value": "ShareGPTでvLLM比最大74.20%削減、RR比54.31%削減", "baseline": "vLLM / Round-Robin", "condition": "OPT-13B/30B、Llama-3-70Bを含む混在RT/BE負荷", "interpretation": "SLO残余時間に応じて緊急RTを優先し、BEを余剰枠へ詰めることで先頭待ちを大幅に削減する。"},
-      {"metric": "LMSYS-CHAT-1M RT正規化遅延", "value": "vLLM比69.61%削減、RR比25.77%削減", "baseline": "vLLM / Round-Robin", "condition": "LMSYS-CHAT-1M由来RT + 合成BE", "interpretation": "異なる実会話長分布でも遅延改善傾向を維持する。"},
-      {"metric": "BE処理量の代償", "value": "ShareGPTでvLLM比11.29%低下、RR比8.80%低下。LMSYSで17.67%/15.18%低下", "baseline": "vLLM / Round-Robin", "condition": "RT遅延を優先する混在負荷", "interpretation": "RT遅延改善はBEを完全に飢餓させず、1〜2割弱の処理量低下との交換で得る。"},
-      {"metric": "TTFT SLO達成率", "value": "ShareGPTでvLLM比36.38倍、RR比11.75倍。LMSYSでvLLM比21.42倍、RR比14.23倍", "baseline": "vLLM / Round-Robin", "condition": "TTFT SLO 0.4秒", "interpretation": "到着順ではなく次トークン期限で優先する効果が最も強く現れる。"},
-      {"metric": "TPOT SLO達成率", "value": "ShareGPTでvLLM比1.73倍、RR比1.47倍。LMSYSで2.62倍/2.28倍", "baseline": "vLLM / Round-Robin", "condition": "TPOT SLO 0.2秒", "interpretation": "プリフィルだけを優先せず進行中RTのデコード期限も同じ制約へ入れることで継続出力を保護する。"},
-      {"metric": "双方向KV管理の要素除去", "value": "TTFT SLO達成率1.23倍、TPOT 1.63倍", "baseline": "双方向KV管理なし（KV不足時は再計算）", "condition": "OPT-30B、RT 10 req/s混在負荷", "interpretation": "スケジューラだけでなくKVブロック共有が緊急RT投入をメモリ面で可能にする。"},
-      {"metric": "純RTマイクロベンチ", "value": "vLLM比で遅延29.36%削減、処理量1.08倍", "baseline": "vLLM", "condition": "BE処理と双方向KV管理を外したBROSスケジューラ", "interpretation": "混在負荷専用機構を除いても反復バッチ実装自体に性能上の利点がある。"},
-      {"metric": "スケジューリング費", "value": "OPT-13Bで反復時間の9.12〜9.52%、OPT-30Bで7.56〜8.42%", "baseline": "総反復実行時間", "condition": "混在RT/BE負荷", "interpretation": "優先度整列と複数コストモデル照会は無視できないが、RT遅延改善を上回るほどではない。"}
-    ],
-    "negative_results": "BROSはRT遅延を大きく下げる代わりにBE処理量をShareGPT条件で最大11.29%、LMSYS条件で17.67%落とすため、BEスループットを完全維持する方式ではない。反復ごとのスケジューラも総反復時間の約7.6〜9.5%を消費する。RT/BE共置を単一サーバ内で扱う研究であり、別ノード間の移動やクラスタ全体の動的容量配分は扱わない。BE負荷は合成で、極端なメモリ不足ではBE、次いでRTのKVをCPUへ退避する必要が残る。",
-    "interpretation": "BROSの中心はRTを絶対優先することではなく、各RTトークンの期限から逆算した余剰時間をBEへ貸し出すことにある。計算側の動的詰込みだけではKVメモリ不足で緊急RTを投入できないため、双方向ブロック共有と遅延チェックポイントを組み合わせて初めて優先度制御が実行可能になる。したがってQoS別クラスタ分離の代替として、GPU容量の遊休をBE処理へ吸収する仕組みと読める。",
-    "quality_impact": "生成アルゴリズムは貪欲復号で統一し、BROSは同一モデルの要求順・バッチ・KV配置のみを変更するため、意味精度を近似で落とす方式ではない。サービス品質への影響はRTのTTFT/TPOTとBE処理量の交換として現れる。"
-  },
+  "attempt_id": "attempt-bd3408a2d7450155703f8645",
+  "job_id": "job-research-89a31b528bef1df7",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-11e0bc962a7c28c7d0c14bdf",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1130JST",
+    "claim_id": "claim-bd3408a2d7450155703f8645",
+    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
     "worker_kind": "scheduled_chat"
   }
 }
