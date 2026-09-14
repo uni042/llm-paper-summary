@@ -2,29 +2,14 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-08e554d84abc317af5940c6f",
-  "job_id": "job-research-382442b3f5faa67f",
+  "attempt_id": "attempt-8628bbc30b4a472434609741",
+  "job_id": "job-research-ea263cc3cccbe57a",
   "data": {
-    "overview": "Pancakeは既存のagent memory libraryに対し、単一agentの端から端までのthroughputを1.12〜26.18倍改善し、平均speedupは4.29倍超となる。memory operation単体は6.81倍超高速で、全実行時間に占めるmemory operationは平均3.2%（最大17.9%未満）まで低下する。2-agent混合では既存baselineが29.9〜55.9%低下するのに対しPancakeは9.8%以下、20 agentsまででも低下は10.2%未満に抑える。multi-level cacheは長時間負荷で最大2.23倍、hybrid graphはcoarse search costを20倍超削減し、GPU cacheはCPU版比最大1.92倍を示す。",
-    "key_results": [
-      {"metric":"単一agent end-to-end throughput","value":"1.12×〜26.18×、平均4.29×超","baseline":"A-Mem / MemGPT / LlamaIndex / LangMem","condition":"複数model・dataset・4 access patterns","interpretation":"外部memory処理が大きい条件ほど索引最適化がLLM serving全体へ直結する。"},
-      {"metric":"memory operation speedup","value":"6.81×超","baseline":"既存agent memory implementations","condition":"検索・挿入を含むmemory path","interpretation":"LLM計算ではなくANN memory layer自体を高速化した効果を分離して確認できる。"},
-      {"metric":"memory operation時間比","value":"平均3.2%、17.9%未満","baseline":"既存方式では規模増加時82%以上になり得る","condition":"end-to-end workloads","interpretation":"外部memoryが主要bottleneckになる状態を大きく緩和する。"},
-      {"metric":"2-agent mixed workload degradation","value":"9.8%以下","baseline":"既存baselineは29.9%〜55.9%低下","condition":"異なるdatasetを混合","interpretation":"hybrid graphとagent profileがcross-agent interferenceを抑える。"},
-      {"metric":"20-agent scaling degradation","value":"10.2%未満","baseline":"single-agent condition","condition":"最大20 concurrent agents","interpretation":"評価範囲ではagent数増加に対してほぼ線形にscalingする。"},
-      {"metric":"multi-level index cache","value":"最大2.23× latency reduction","baseline":"IVF static/split maintenance","condition":"long-serving dynamic workload","interpretation":"閾値splitの収束待ちより早くagent localityへ適応する。"},
-      {"metric":"coarse index search cost","value":"20×超削減","baseline":"agentごとの独立coarse index","condition":"multi-agent index management","interpretation":"hybrid graphによりagent数に比例する上位索引走査を避ける。"},
-      {"metric":"vector similarity computation","value":"hybrid graphで最大11.6%削減、agent profileでさらに平均21.8%削減","baseline":"independently constructed indexes","condition":"multi-agent shared memory","interpretation":"上位routingだけでなくfine-grained scan順にもagent-specific localityが効く。"},
-      {"metric":"GPU caching speedup","value":"CPU版比最大1.92×","baseline":"Pancake CPU","condition":"GPU cache、5〜15GB付近で多くのworkloadがplateau","interpretation":"索引全常駐なしでもhot clusterだけでGPU accelerationを引き出せる。"}
-    ],
-    "negative_results": [
-      {"name":"GPU効果はworkload依存","description":"会話型datasetではquery-relevant clusterが広く分散するため、十分なspeedupへ到達するのにより大きなGPU cacheが必要で、5〜15GBでplateauするという傾向もworkloadごとに異なる。"},
-      {"name":"streaming insertで一時spike","description":"GPU版でも挿入がcluster splitを引き起こす瞬間には追加計算によりlatency spikeが発生する。多くのcluster operationをGPUで行うことで影響は小さくなるが、完全には消えない。"},
-      {"name":"IVFのrecall劣化","description":"素のIVFはsearch-onlyでもrecall 0.9超のため最大128 cluster scanが必要で、search-update混在では挿入vectorの散在によりさらにrecallが悪化する。Pancakeの利点はこの動的劣化を局所性cacheで補う点にある。"},
-      {"name":"大規模分散agentは未検証","description":"最大20 agents、単一CPU-GPU nodeの範囲では良好にscaleするが、より大きなagent populationやnode間で共有するmemory indexの通信・整合性は評価していない。"}
-    ],
-    "interpretation": "Pancakeの本質はエージェント外部memoryを一般的なvector DBとして扱わず、検索と更新の順序、agent identity、共有scope、GPU残容量というserving runtime固有の情報をindex maintenanceへ取り込む点にある。特に、頻繁なsmall updateが一般DBのbatch-oriented rebalancingと相性が悪いことを示し、動的memoryでは『検索アルゴリズム』だけでなく『誰がいつどのclusterへアクセスするか』を階層cacheとhybrid graphへ反映する必要がある。KV cacheとは別系統の外部memory hierarchyだが、CPU大容量層とGPU高速層をhotnessで往復させるという点でLLM servingの階層メモリ研究と接続する。",
-    "quality_impact": "モデルの生成品質を直接変更しないシステム最適化だが、外部memory retrievalのrecallはagent出力へ影響し得る。そのためPancakeは単なるlatency短縮ではなくrecall-latency trade-offを測定し、動的更新下で高recallを保ちながらscan量を減らす。評価はretrieval recall中心で、最終的なtask accuracyへの影響を網羅的に評価したものではない。"
+    "overview": "提案MCは100%のservice rate、未処理penalty 0、total cost 8.92kドル、electricity cost 29.48ドル/10^9 tokensを達成する。論文が報告する総運用費削減は29.0%。30分先読みのMyopicはservice rate 95.43%、Staticは97.66%で、完全先読みと配置変更の価値が出る。特に読込時間を無視するZeroLeadTimeは物理制約再生時67.40%、TTFT無視は56.89%、TPOT無視は78.04%まで落ち、LLM固有制約を抜いた最適化が実行不能になることを示す。",
+    "key_results": [{"metric":"service rate","value":"100.00%","baseline":"B1 95.43%、B2 97.66%","condition":"3拠点・時変電力/価格・3モデル","interpretation":"将来を見越したモデル事前配置と配送の共同最適化で全需要を処理する。"},{"metric":"total operating cost","value":"8.92 k$、29.0%削減を報告","baseline":"NoPriceSignal 12.56 k$など","condition":"完全MC","interpretation":"サービス率を落とさず地域価格差も利用する。"},{"metric":"ZeroLeadTime service rate","value":"67.40%","baseline":"MC 100%","condition":"読込時間を無視して最適化後、実制約で再生","interpretation":"モデルが即時起動すると仮定すると大量の実行不能routingを生む。"},{"metric":"NoTTFT service rate","value":"56.89%","baseline":"MC 100%","condition":"TTFT容量制約を省略","interpretation":"GPU台数や最大throughputだけではprefill待ち時間を満たせない。"},{"metric":"NoTPOT service rate","value":"78.04%","baseline":"MC 100%","condition":"TPOT容量制約を省略","interpretation":"decode SLOも配送可能容量の独立した上限になる。"},{"metric":"先行配置時刻","value":"需要ピーク約23:00に対し約21:30から再配置","baseline":"事後的routing","condition":"DeepSeek-V3、readiness 60分","interpretation":"電力不足・価格上昇が予想される拠点から需要到来前に容量を移す必要がある。"}],
+    "negative_results": [{"name":"Myopicでは完全サービス不可","description":"30分先読みだけのB1は95.43%に留まり、DeepSeek-V3のように60分級のreadinessを持つモデルでは短い予見期間だけでは十分なcapacity preparationができない。"},{"name":"Static placementの非効率","description":"固定配置B2は97.66%のservice rateでtotal cost 21.05kドルとなり、地域ごとの電力不足・価格変動へモデル配置自体を追従させる必要がある。"},{"name":"安価な電力だけでは評価できない","description":"ZeroLeadTimeやNoTTFTはelectricity cost/10^9 tokensだけを見ると低く見えるが、実際には処理できない需要が多い。低単価は低サービス量の結果でもあり、未処理penaltyとservice rateを併せて評価する必要がある。"},{"name":"実運用展開ではない","description":"複数拠点での実機routing試験ではなく、公開trace・価格・hardware measurementsを用いた最適化case studyであるため、solver overheadや実際のdeployment failureなどは未検証。"}],
+    "interpretation": "地理分散LLM servingでは、routingとmodel placementの時間スケールが異なる。request routingは瞬時に変えられても、宛先で巨大モデルをservice-readyにするには数分から1時間必要なため、placementは需要・電力の予測を使う先行制御になる。MCはこの遅い状態遷移を明示し、TTFT/TPOTで速いserving制約へ接続する。したがって電力対応routingは単なるload balancerではなく、モデル配置・GPU memory・SLO・電力系統を跨ぐcross-layer scheduling問題として扱うべきだと示す。",
+    "quality_impact": "生成品質そのものは変更しない。品質に近い運用保証としてSLOを扱い、TTFT/TPOTを満たせない需要を処理可能容量として数えない点が重要である。ただし平均TTFTモデルと較正係数に依存するため、tail latencyや複雑なbatching挙動を直接シミュレートした保証ではない。"
   },
-  "reservation": {"claim_id":"claim-2af8f46851e9d4a8a008b32a","worker_id":"scheduled-chat-llm-discovery-20260914T2200JST","worker_kind":"scheduled_chat"}
+  "reservation": {"claim_id":"claim-5ac6a1a0c0dd3a5468aae2cc","worker_id":"scheduled-chat-llm-discovery-20260914T2200JST","worker_kind":"scheduled_chat"}
 }
