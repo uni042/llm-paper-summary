@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T17:07:31.528629+00:00",
+  "updated_at": "2026-09-14T17:13:42.261077+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T17:07:31.528629+00:00",
+      "last_recorded_at": "2026-09-14T17:13:42.261077+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 62,
+        "research_completed": 63,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 9
       },
       "events": [
-        {
-          "event_id": "34796174343:1",
-          "recorded_at": "2026-09-14T01:31:28.606578+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34796174343",
-            "run_attempt": "1",
-            "source_sha": "d204cccdb73a0b8f25191b80571e6196443acd8c"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34796723011:1",
           "recorded_at": "2026-09-14T01:41:32.596126+00:00",
@@ -19596,6 +19582,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34873389973:1",
+          "recorded_at": "2026-09-14T17:13:42.261077+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34873389973",
+            "run_attempt": "1",
+            "source_sha": "2dd83906c79c8d6b9430ede02f359abc087d9c05"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20100,6 +20100,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.17154",
           "title": "OrderMoE: An Expert Similarity Driven Distributed Edge MoE Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-60c04e3a8b0d8caf",
+          "type": "research",
+          "canonical_id": "arXiv:2603.04428",
+          "title": "Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices",
           "from": "ready",
           "to": "completed"
         }
