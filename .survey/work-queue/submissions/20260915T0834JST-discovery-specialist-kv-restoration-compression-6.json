@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-18b34945adc3866a",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2507.08045",
+      "title": "Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing",
+      "source_url": "https://arxiv.org/abs/2507.08045",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md",
+      "priority": 82,
+      "reason": "multi-turn対話のstate restorationで、全KVの再計算/再読込を避けるため、conversationごとのattention similarityに応じてcross-layer KV sharingの圧縮戦略を動的選択し、compressed KVのloadと必要部分のrecomputeをbubble-free pipelineで重畳する。token-wise heterogeneous similarity estimatorで選択自体の計算・保存負荷も抑える。実task評価で品質を維持しつつTTFTを1.5〜2.68倍、KV storageを1.33〜2.35倍改善しており、外部KV復元・圧縮・recompute/I/O schedulingの交点として価値が高い。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-kv-restoration-compression-6",
+    "axis": "multi-turn KV restoration・cross-layer sharing・recompute/load pipeline",
+    "query_summary": "CacheFlowのbackward/adjacent方向としてmulti-turn state restorationを探索し、Krul（arXiv:2507.08045）を評価した。最新identityのKV memory-management/offloading lineageに同IDがなく、identity-delta一覧にも2507.08045.jsonが存在しないことを確認したため候補化した。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はSSD/NVMe・SmartSSDでのKV importance evaluation/prefetch、またはCXL/NVMにおけるKV quantizationとinterface-aware data movementへ軸を切り替える。",
+    "empty_round_reason": null
+  }
+}
