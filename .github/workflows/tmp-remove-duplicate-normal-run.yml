@@ -1,0 +1,41 @@
+name: Temporary dashboard test patch
+on:
+  push:
+    branches: [fix/remove-duplicate-normal-run-dashboard-20260914]
+permissions:
+  contents: write
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/remove-duplicate-normal-run-dashboard-20260914
+      - name: Patch regression expectations
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('.survey/tests/test_status_dashboard.py')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('                "## 直近の通常worker",\n', '')
+          s = s.replace(
+              '            self.assertLess(text.index("## 直近24時間の処理量"), text.index("## 直近の通常worker"))\n'
+              '            self.assertLess(text.index("## 直近の通常worker"), text.index("## 次に処理する候補"))\n',
+              '            self.assertLess(text.index("## 直近24時間の処理量"), text.index("## 次に処理する候補"))\n'
+              '            self.assertNotIn("## 直近の通常worker", text)\n'
+          )
+          s = s.replace(
+              '            self.assertIn("## 直近の通常worker", text)\n',
+              '            self.assertNotIn("## 直近の通常worker", text)\n'
+          )
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit test and remove temporary workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm .github/workflows/tmp-remove-duplicate-normal-run.yml
+          git add .survey/tests/test_status_dashboard.py .github/workflows/tmp-remove-duplicate-normal-run.yml
+          git commit -m 'test: reject duplicate ledger-based normal run block'
+          git push origin HEAD:fix/remove-duplicate-normal-run-dashboard-20260914
