@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-787504f1ddde27c3",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2601.20309",
+      "title": "SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips",
+      "source_url": "https://arxiv.org/abs/2601.20309",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.20309-superinfer-slo-aware-rotary-scheduling-superchips.md",
+      "priority": 88,
+      "reason": "高request rateでKV budgetを使い切った際のhead-of-line blockingに対し、GH200等のNVLink-C2C接続CPU-GPU superchipを前提に、requestをproactiveにrotationしてresponsivenessを維持するSLO-aware scheduler RotaSchedと、full-duplex KV transferを行うDuplexKVを共同設計する。GH200上の複数model/datasetでstate-of-the-art比TTFT SLO attainmentを最大74.7%改善し、TBT/throughputを同等に維持する。高速CPU-GPU memory fabricをoffload先として使うscheduling/memory co-designで、PCIe offloadとの差を定量化する比較対象として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2603.17456",
+      "title": "Multi-stage Flow Scheduling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2603.17456",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.17456-mfs-multi-stage-flow-scheduling.md",
+      "priority": 91,
+      "reason": "disaggregated LLM servingでKV-block retrieval、collective communication、prefill-to-decode transfer等の依存stageがshared link上で競合し、stage-agnostic network schedulingがTTFT SLO violationを招く問題に対し、Least-Laxity-Firstを近似するDefer-and-Promote / Reverse Multi-Level Queueを導入する。requestのremaining slackを正確に知らなくてもeffective laxity低下に応じflow precedenceを動的promoteし、vLLMへpluggable moduleとして実装。8-server/32-GPU実機とlarge-scale simulationでTTFT SLO attainmentを1.2〜2.4倍改善し、KV transferとcollectiveのnetwork I/O schedulingを統合して扱う点が重要。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-slo-network-17",
+    "axis": "SLO-aware memory rotation・multi-stage KV/collective network flow scheduling",
+    "query_summary": "SLO-aware serving schedulerとnetwork contentionへ探索を広げ、SuperInfer（2601.20309）とMFS（2603.17456）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は最新Actions反映後のinventoryを再確認し、overflowへ達していなければrecent 2608-2609 serving systemsまたはMoE/KV近接論文を追加探索する。",
+    "empty_round_reason": null
+  }
+}
