@@ -4,10 +4,45 @@
   "slot": "metadata",
   "attempt_id": "attempt-10b0fd060950a22520ffad10",
   "job_id": "job-research-f3ec00db7d9723b7",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-10b0fd060950a22520ffad10",
-    "worker_id": "scheduled-chat-20260915T0530JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "canonical_id": "arXiv:2603.07770",
+    "arxiv_id": "2603.07770",
+    "doi": "10.48550/arXiv.2603.07770",
+    "openreview_id": null,
+    "arxiv_categories": {"primary":"cs.DC","cross_list":["cs.CL"]},
+    "title": "ArcLight: A Lightweight LLM Inference Architecture for Many-Core CPUs",
+    "summary": "ArcLightは、数十〜数百コアを複数NUMAノードに分割するサーバー向けCPUで、既存LLM推論基盤が遠隔NUMAメモリアクセスを十分に制御できず、コア数を増やしても帯域待ちで性能が伸びない問題を扱う。約10個のC++ヘッダ・ソースへ推論に必要な最小構成を再実装し、NUMAごとのローカルメモリプール、動的に分割できるスレッド群、静的計算グラフ、Scatter/Gatherによる並列部分グラフ、NUMA境界をまたぐ細粒度テンソル並列を統合する。192コア・4 NUMAのKunpeng-920環境では、ローカルメモリ帯域が遠隔アクセスの約4倍であることを示し、重みと活性を各ノードへ対応付けることで不要な遠隔読み出しを削減する。Qwen3-4B Q4_0の実測でllama.cppより推論スループットを最大46%向上させ、実装も公開している。",
+    "list_summary": "NUMAごとのメモリ配置、動的スレッド群、Scatter/Gather型テンソル並列を一体化し、多数コアCPUの遠隔メモリアクセス壁を避けて、192コアARM環境でllama.cpp比最大46%高い推論スループットを示す軽量CPU推論基盤。",
+    "authors": ["Yuzhuang Xu","Xu Han","Yuxuan Li","Wanxiang Che"],
+    "authors_affiliations": "Harbin Institute of Technology; Tsinghua University",
+    "published": "2026-03-08",
+    "publication": "ACL 2026 Demo / arXiv:2603.07770v2",
+    "publication_type": "査読済みデモ論文・arXivプレプリント",
+    "publication_status": "ACL 2026 Demo採択。arXiv v1は2026-03-08、v2は2026-05-13。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": ["CPU推論", "NUMA", "テンソル並列", "スレッド管理", "メモリ局所性", "ARM", "軽量推論基盤", "Qwen3"],
+    "importance": "高。GPUを前提としない推論経路で、CPUの演算器性能ではなくNUMAメモリ局所性とスレッド同期を主要ボトルネックとして扱う。CPUオフロードや異種メモリ階層を検討する際、CPU側が十分な帯域を引き出すための配置・並列化設計として直接比較対象になる。",
+    "hardware_evaluation": "実機評価。192コア、4 NUMAノードのARMサーバーを使用し、各ノードは48個のHUAWEI Kunpeng-920コアと6本のDDR4メモリチャネルを持つ。",
+    "hardware_details": "ARMv8.2 Kunpeng-920、4 NUMA、合計192コア、Ubuntu 22.04。演算はNEONベクトル命令。Qwen3-4BをQ4_0量子化して、短い15トークン入力＋256生成を主評価し、付録で300トークン入力のプリフィル・デコードも測定する。",
+    "quality_effect": "主目的は同一量子化モデルの実行速度改善で、推論アルゴリズムやモデル重みを変更しないため精度差は基本的に想定しない。Qwen3-4Bは両基盤でQ4_0量子化を使い、性能比較を実行系の差へ限定する。",
+    "storage_targets": ["NUMAノードごとのローカルDDR4", "重みテンソル", "活性テンソル", "KVキャッシュ", "事前確保メモリプール"],
+    "bottlenecks": ["遠隔NUMAメモリアクセス", "ノードをまたぐ重み・活性の不一致", "単一スレッドプールの硬直した実行", "全グループ同期による待機時間", "単一NUMAノードのメモリ帯域上限"],
+    "evidence_locations": ["§2 System Design", "§2.3 Memory Manager", "§2.4 Thread Manager", "§3 Cross-NUMA Tensor Parallelism", "§3.1 Cross-NUMA Memory Access", "§3.2–3.4", "§4 Experiments", "Limitations", "Appendix A.2"],
+    "source": "https://arxiv.org/abs/2603.07770",
+    "sources": ["https://arxiv.org/abs/2603.07770", "https://arxiv.org/html/2603.07770", "https://arxiv.org/pdf/2603.07770", "https://github.com/OpenBMB/ArcLight"],
+    "code": "https://github.com/OpenBMB/ArcLight",
+    "implementation": "OpenBMB/ArcLightとして公開。推論バックエンドをメモリ管理、スレッド管理、テンソルライブラリ、前向き計算グラフ構築、グラフ実行スケジューラの5モジュールに分け、低水準演算はllama.cpp由来実装を再利用する。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {"canonical_id":"arXiv:2309.06180","arxiv_id":"2309.06180","title":"PagedAttention"},
+      {"canonical_id":"arXiv:2312.07104","arxiv_id":"2312.07104","title":"SGLang"},
+      {"canonical_id":"arXiv:2307.08691","arxiv_id":"2307.08691","title":"FlashAttention-2"},
+      {"canonical_id":"arXiv:1909.08053","arxiv_id":"1909.08053","title":"Megatron-LM"},
+      {"canonical_id":"arXiv:2505.09388","arxiv_id":"2505.09388","title":"Qwen3 Technical Report"}
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv:2603.07770v2 HTML参考文献節",
+    "references_total": 16
+  },
+  "reservation": {"claim_id":"claim-10b0fd060950a22520ffad10","worker_id":"scheduled-chat-20260915T0530JST","worker_kind":"scheduled_chat"}
 }
