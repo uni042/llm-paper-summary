@@ -4,10 +4,20 @@
   "slot": "results",
   "attempt_id": "attempt-d3a3d4953747373a7d859a41",
   "job_id": "job-research-7c979683209fb954",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-d3a3d4953747373a7d859a41",
-    "worker_id": "scheduled-chat-discovery-specialist",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "overview": "TIEは混雑時ほど一点長予測より大きな差を示す。LMSYS-Chat-1M・Llama-3-8Bの100要求/秒では平均トークン当たり遅延をFCFS比4.73倍、SSJF比2.91倍、LTR比2.31倍短縮する。30→100要求/秒へ負荷が上がった際の平均トークン当たり遅延増加も3.68倍に抑え、FCFS 7.42倍、SSJF 8.55倍、LTR 6.17倍より変動へ強い。オフラインAlpacaでは3K完了時間をLTR比1.42倍短縮し、同じ3分でより多くの要求を完了する。異なるデータセット、70B、MoEを含むモデル群でも優位性が維持される。",
+    "key_results": [
+      {"metric": "100要求/秒での平均トークン当たり遅延", "value": "LTR比2.31倍短縮、SSJF比2.91倍、FCFS比4.73倍", "baseline": "FCFS、SSJF、LTR", "condition": "LMSYS-Chat-1M、Meta-Llama-3-8B-Instruct、オンラインチャット", "interpretation": "混雑時に重い裾を持つ要求を一点予測で短く誤認するHOLブロッキングを、CVaR込み優先度が抑える。"},
+      {"metric": "負荷急増時の遅延増幅", "value": "3.68倍", "baseline": "FCFS 7.42倍、SSJF 8.55倍、LTR 6.17倍", "condition": "要求率を30から100要求/秒へ増加", "interpretation": "待ち行列長に応じてβを増やすため、高圧時に長大出力リスクを強く回避し、性能劣化を緩和する。"},
+      {"metric": "70Bでの平均トークン当たり遅延", "value": "2.41秒/トークン", "baseline": "FCFS 9.08、SSJF 5.50、LTR 4.34秒/トークン", "condition": "LMSYS-Chat-1M、Meta-Llama-3-70B-Instruct、100要求/秒", "interpretation": "8B由来の予測器を70Bへ移しても、FCFS比3.77倍、LTR比約1.8倍の改善を維持する。"},
+      {"metric": "オフライン3K件完了時間", "value": "98.12秒", "baseline": "FCFS 229.37、SSJF 144.93、LTR 139.53秒", "condition": "LMSYS-Chat-1M学習、Llama-3-8B、Alpaca 10K要求", "interpretation": "LTR比1.42倍、SSJF比1.48倍、FCFS比2.34倍短縮し、短い生成を効率よく先に完了する。"},
+      {"metric": "3分以内のオフライン完了件数", "value": "4762件", "baseline": "FCFS 2292、SSJF 3488、LTR 3672件", "condition": "Llama-3-8B、Alpaca", "interpretation": "非先取りの順位変更だけでも同じ時間窓の有効スループットが大幅に増える。"},
+      {"metric": "分布パラメータ予測精度", "value": "μ R²=0.82、σ R²=0.76", "baseline": "要求ごとの反復生成から最尤推定した教師値", "condition": "DeBERTa-v3-base＋独立MLPヘッド", "interpretation": "中央傾向だけでなく出力長ばらつきもプロンプト意味から一定精度で予測でき、裾リスク優先度の基礎になる。"},
+      {"metric": "適応CVaRのアブレーション", "value": "平均0.67秒/トークン、3K完了98.12秒、3分4762件", "baseline": "期待値のみ0.75秒/トークン・108.51秒・4257件、固定β=0.1は0.72秒/トークン・104.76秒・4391件", "condition": "Llama-3-8B、オンラインLMSYSとオフラインAlpaca", "interpretation": "分布平均だけでなく裾リスクを加え、さらに混雑度で重みを変えることが総合性能に寄与する。"}
+    ],
+    "negative_results": "TIEは予測学習用に各プロンプトを複数回生成する必要があり、主設定では45K入力を20反復して900K生成例を作る。μは少数反復でも安定するが、裾の広がりを表すσは反復数が少ないと誤差が大きく、20反復をデータ収集費との妥協点としている。log-normalへ置き換えると平均トークン当たり遅延が1.63秒、3K完了142.21秒へ悪化し、裾形状のモデル選択が重要である。非先取りなので、実行開始後に予測外の超長要求になった場合は途中で追い越せず、スコアリングで事前にリスクを下げることしかできない。予測器学習分布から大きく外れた要求ではμ・σ推定誤差が増える可能性が残る。",
+    "interpretation": "一点予測方式では、平均的には良い長さ推定でも少数の大きな過小推定が待ち行列全体を止めるため、平均予測誤差だけではスケジューラ性能を説明できない。TIEは各要求の期待長に加えて上位10%の平均長を優先度へ入れ、混雑時ほどその罰則を強くすることで、誤予測と生成確率性の双方に対して堅牢になる。低負荷時はβを小さくするため、リスク回避のために短要求を過度に後回しにしない。待機時間減衰を別に持つことで、長要求の公平性と短要求中心の効率も分離して扱う。",
+    "quality_impact": "モデル重み、KV内容、サンプリング温度、生成アルゴリズムを変更せず、待ち行列から次に実行する要求だけを選び替える。そのため個々の要求の生成品質を直接変えない。利用者体験への影響は主として待ち時間とトークン当たり遅延で、長要求についてはSJF系の飢餓リスクがあるが、30秒単位の指数減衰で長時間待機した要求の優先度を上げる。"
+  },
+  "reservation": {"claim_id": "claim-d3a3d4953747373a7d859a41", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
 }
