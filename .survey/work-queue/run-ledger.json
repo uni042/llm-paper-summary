@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T02:36:49.597459+00:00",
+  "updated_at": "2026-09-14T02:39:32.036823+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T02:36:49.597459+00:00",
+      "last_recorded_at": "2026-09-14T02:39:32.036823+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 15,
+        "research_completed": 16,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18906,6 +18906,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34799923794:1",
+          "recorded_at": "2026-09-14T02:39:32.036823+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34799923794",
+            "run_attempt": "1",
+            "source_sha": "47645183c3d3f092575423c973204a45ddd84182"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19026,6 +19040,14 @@
           "type": "research",
           "canonical_id": "arXiv:2603.16104",
           "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-d0c3e0e607ad747e",
+          "type": "research",
+          "canonical_id": "arXiv:2506.01986",
+          "title": "SpecMemo: Speculative Decoding is in Your Pocket",
           "from": "ready",
           "to": "completed"
         }
