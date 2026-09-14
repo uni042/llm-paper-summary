@@ -2,24 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1f2447b8c5da322c3903a058",
-  "job_id": "job-research-2070373a31124502",
-  "data": {
-    "overview": "36時間の利用者側指標はほぼ安定していたが、全構成でプロセス固有メモリ（USS）に統計的に有意な増加が見つかった。主比較ではvLLM V1 standaloneが+1.8KB/時、PyTorch+HuggingFaceが+31KB/時、Triton+vLLM V0が+157KB/時で、同じモデル・推論経路でも約2桁の差がある。低負荷PyTorchでも+103KB/時へ増えたため、単純な飽和・要求数依存では説明できない。vLLM世代とホスティング層の2×2比較ではV0がV1より大きく、Tritonが両世代でリークを増幅した。特にTriton+V0だけは数MB単位の段階的なRSS/VMS増加を示す。一方、VRAM、CPU、スレッド、ファイル記述子、I/O、主要遅延・スループットには実用上目立つ経年悪化がなく、短時間ベンチマークだけでは内部メモリ劣化を見逃すことを示す。",
-    "key_results": [
-      {"metric": "USS増加率", "value": "+1.8 KB/時", "baseline": "vLLM V1 standalone E1", "condition": "36時間、2.55 RPS、L40S", "interpretation": "4つのvLLM構成で最小の持続リーク率。30日換算では約1MBで、短中期の運用影響は小さい。"},
-      {"metric": "USS増加率", "value": "+157 KB/時", "baseline": "Triton + vLLM V0 E2", "condition": "36時間、2.17 RPS、L40S", "interpretation": "主比較で最大。30日換算約110MBで、推論計算よりホスティング/ランタイム組合せの影響が大きい。"},
-      {"metric": "USS増加率", "value": "+31 KB/時", "baseline": "PyTorch + HuggingFace E3", "condition": "飽和負荷0.17 RPS", "interpretation": "素朴な実装が最悪ではなく、最適化度と経年劣化の大きさは単純には対応しない。"},
-      {"metric": "低負荷PyTorchのUSS増加率", "value": "+103 KB/時", "baseline": "同じPyTorch構成の飽和時+31 KB/時", "condition": "E3b、0.05 RPS", "interpretation": "リークは飽和やキュー滞留だけが原因ではなく、経過時間に依存するランタイム側の挙動を示唆する。"},
-      {"metric": "PyTorch低負荷時のVMS増加", "value": "+127 MB/時、36時間で約7.5GB", "baseline": "E3b", "condition": "RSS増加は約20MB、スレッド/FDは安定", "interpretation": "物理メモリより仮想アドレス空間予約が急増し、CUDAキャッシュアロケータ周辺のホスト側管理が候補になる。"},
-      {"metric": "vLLM V0/V1×ホスティング", "value": "Standalone V0 +13、V1 +1.8、Triton V0 +157、V1 +5.9 KB/時", "baseline": "2×2比較", "condition": "各36時間", "interpretation": "V0は両ホスティングでV1より大きく、Tritonも両世代で増幅するため、単一要因より組合せ効果が支配的。"},
-      {"metric": "Triton+V0のメモリ増分", "value": "上位1%の増分が約1.8MB、RSSとVMSの同時変化ρ≈0.83", "baseline": "他3 vLLM構成はρ<0.35", "condition": "E2", "interpretation": "連続的な微小リークとは異なり、周期的な領域割当と未解放を疑わせる段階的パターン。"},
-      {"metric": "クライアント性能", "value": "主要な遅延・先頭トークン時間・スループット・ドロップ率は概ね定常", "baseline": "6構成", "condition": "36時間", "interpretation": "内部メモリの経年劣化は36時間では利用者側SLOにほぼ現れず、外形監視だけでは発見できない。"},
-      {"metric": "VRAM", "value": "有意な増加傾向なし", "baseline": "全vLLM/主比較構成", "condition": "36時間", "interpretation": "観測された経年劣化はGPU上のKV/VRAM断片化より主にホスト側プロセスメモリへ現れた。"}
-    ],
-    "negative_results": "36時間ではユーザーが認識できる性能崩壊、GPU VRAMの継続増加、スレッド数やファイル記述子数の漏れは観測されなかった。E1ではp50遅延などに統計的傾向があるが36時間で約2%と小さく、出力スループットは逆に微増するため実用的な経年劣化とは解釈していない。リーク率自体も月次では数MB〜110MB程度で、直ちにOOMへ至る規模とは限らない。",
-    "interpretation": "LLMサービングの信頼性はモデルやGPUカーネルだけでなく、要求ライフサイクル、ホスト側メモリ管理、vLLMエンジン世代、Tritonの管理層まで含むデプロイ全体で決まる。短時間の速度比較で優れた構成でも長期信頼性が自動的に高いとは限らないため、本番運用では遅延・スループットに加えてUSS/RSS/VMSの傾向を長期間監視し、必要なら予防的な再起動や部分的若返りを設計する必要がある。",
-    "quality_impact": "モデル出力品質を変更する手法ではない。研究上の影響は、長時間運用の信頼性指標を性能評価へ追加する点にある。"
-  },
-  "reservation": {"claim_id": "claim-1f2447b8c5da322c3903a058", "worker_id": "scheduled-chat-paper-20260915T0330JST", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-ef6bb2e2e1d5f5bb044a43ed",
+  "job_id": "job-research-8f8cd2df2a210c58",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-ef6bb2e2e1d5f5bb044a43ed",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
