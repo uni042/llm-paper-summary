@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-be884a5e7da2da4e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation",
+      "source_url": "https://arxiv.org/abs/2606.24506",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2606.24506-crosspool-kv-weight-disaggregation-cold-moe.md",
+      "priority": 94,
+      "reason": "多数の低頻度MoEモデルを同時ホストすると、各モデルがworst-case KV容量を個別予約し、static FFN weightとdynamic KV cacheも同じGPU memory poolで競合する問題に対し、FFN weights poolとshared KV-cache poolをGPU間で分離する。KV planner/virtualizer、hidden-state transferを隠すlayer-wise pipeline scheduler、CPU-GPU control overheadを抑えるpersistent kernelを組み合わせ、bursty long-context workloadで既存KV-cache-based multi-LLM serving比P99 TBTを最大10.4倍削減する。cold MoEのweight/KV memory poolingを同時に扱うためexpert offload・KV capacityの交点として価値が高い。"
+    },
+    {
+      "canonical_id": "arXiv:2601.10729",
+      "title": "ORBITFLOW: SLO-Aware Long-Context LLM Serving with Fine-Grained KV Cache Reconfiguration",
+      "source_url": "https://arxiv.org/abs/2601.10729",
+      "paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2601.10729-orbitflow-fine-grained-kv-reconfiguration.md",
+      "priority": 90,
+      "reason": "長文脈servingでrequest長とbatch compositionが変動するため、固定KV offload policyではCPU→GPU transferが過剰化しSLO violationを招く問題に対し、requestごと・layerごとにGPUへ残すKVをlightweight ILPで選択し、runtime feedbackでplacementを継続再構成する。heavy load時は大memory-footprint requestを一時deferするfallbackも備える。既存offloading手法比TPOT/TBT SLO attainmentを最大66%/48%改善、P95 latencyを38%削減、throughputを最大3.3倍改善しており、fine-grained adaptive KV placementの強い比較対象となる。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-crosspool-orbitflow-21",
+    "axis": "cold MoE weight/KV disaggregation・SLO-aware fine-grained KV placement",
+    "query_summary": "memory poolingとadaptive offloadの近接研究を探索し、CrossPool（2606.24506）とORBITFLOW（2601.10729）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次はActions反映後にinventoryを再確認し、overflow未満なら2026年8-9月のrecent serving systemを追加探索する。",
+    "empty_round_reason": null
+  }
+}
