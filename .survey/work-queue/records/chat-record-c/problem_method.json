@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-027245079db110dbc6865d3e",
+  "attempt_id": "attempt-8c7ccdc94d77f30ad6ebd066",
   "job_id": "job-research-2070373a31124502",
   "data": {
     "problem": "LLMサービング研究の多くは数分から数時間のピーク性能を測るが、本番サーバは数日から数か月連続稼働する。長時間では解放漏れ、キャッシュやランタイム状態の蓄積、アドレス空間予約などにより資源使用量が徐々に増えるソフトウェア老朽化が起こり得る。GPU LLMサーバはPythonホストとCUDAデバイスに状態がまたがり、要求ごとの入力・出力長も大きく変動し、PagedAttentionや連続バッチングなど新しい資源管理機構を持つため、CPU中心の従来老朽化研究をそのまま当てはめられない。さらに監視時系列は強い自己相関を持つので、通常の独立標本を仮定した検定では微小な傾向を過大評価しやすい。",
@@ -31,8 +31,8 @@
     "failure_modes": "36時間で増加が統計的に見えても、そのまま数か月線形に増え続けるとは限らず、長期的に飽和・周期回収・別の障害へ遷移する可能性がある。各構成は独立反復が1回なのでrun間変動を十分評価できず、vLLM世代比較にはバージョン差も混ざる。Poisson到着と合成長分布は実運用のバースト、時間局所性、繰返し接頭辞を再現しない。単一L40S世代・単一7Bモデルの結果を他GPUや巨大モデルへ直接外挿できず、観測されたメモリ増加の具体的コード箇所を特定する故障注入・プロファイリングまでは行っていない。"
   },
   "reservation": {
-    "claim_id": "claim-027245079db110dbc6865d3e",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "claim_id": "claim-8c7ccdc94d77f30ad6ebd066",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
     "worker_kind": "scheduled_chat"
   }
 }

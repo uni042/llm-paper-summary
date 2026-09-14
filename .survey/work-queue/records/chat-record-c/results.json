@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-027245079db110dbc6865d3e",
+  "attempt_id": "attempt-8c7ccdc94d77f30ad6ebd066",
   "job_id": "job-research-2070373a31124502",
   "data": {
     "overview": "全6構成でプロセス固有メモリに統計的な増加が検出された一方、36時間の観測範囲ではクライアント側の遅延・スループット・要求失敗率とGPU VRAMに対応する悪化はほぼ見られなかった。主要3構成のUSS増加率はvLLM V1 standaloneが約+1.8 KB/h、PyTorch+HuggingFaceが約+31 KB/h、Triton+vLLM V0が約+157 KB/hで、同一モデルを提供しても約2桁の差がある。低負荷PyTorchでも約+103 KB/hで増加したため、飽和負荷だけが原因ではない。2×2比較ではV0がV1より大きく、Tritonラップも増幅要因となり、特にTriton+V0だけがRSSとVMSの数MB級の段階的ジャンプを示した。",
@@ -48,8 +48,8 @@
     "quality_impact": "生成品質そのものを変更する研究ではない。36時間内では老朽化が出力品質や大規模なサービス性能劣化へ波及した証拠は示されていない。将来的な影響は、メモリ増加がさらに長期化してホストメモリ圧迫、スワップ、OOM、GC停止などを誘発するかどうかに依存し、論文の観測窓では未確定である。"
   },
   "reservation": {
-    "claim_id": "claim-027245079db110dbc6865d3e",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "claim_id": "claim-8c7ccdc94d77f30ad6ebd066",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
     "worker_kind": "scheduled_chat"
   }
 }

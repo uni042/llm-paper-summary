@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-027245079db110dbc6865d3e",
+  "attempt_id": "attempt-8c7ccdc94d77f30ad6ebd066",
   "job_id": "job-research-2070373a31124502",
   "data": {
     "limitations": "各構成を36時間ずつ1回だけ実行しており、同一条件を独立反復した際のrun間ばらつきは測れていない。2×2要因比較ではvLLM V0/V1の世代差にソフトウェアバージョン差も重なるため、観測差をエンジン設計だけへ厳密に帰属できない。入力はarXiv由来の合成定常Poisson負荷で、実運用のバースト、昼夜変動、会話接頭辞再利用、障害復旧などを再現しない。ハードウェアはL40S、モデルはQwen2.5-7B-Instructに限られ、より大きなモデル、MoE、他GPU・CPUメモリ構成への一般化は未検証である。36時間より長い期間でリークが線形継続するか、飽和するか、実障害へ至るかも未確定で、具体的なコード上のリーク箇所は特定していない。",
@@ -13,8 +13,8 @@
     "audit_required": false
   },
   "reservation": {
-    "claim_id": "claim-027245079db110dbc6865d3e",
-    "worker_id": "scheduled-chat-llm-discovery-20260915T0000JST",
+    "claim_id": "claim-8c7ccdc94d77f30ad6ebd066",
+    "worker_id": "scheduled-chat-paper-20260915T0330JST",
     "worker_kind": "scheduled_chat"
   }
 }

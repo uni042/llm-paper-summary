@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-15 03:51 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-15 03:52 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -51,7 +51,7 @@
 | :00 最新run由来の有効claim | **0** |
 | :00 旧run由来の有効claim | **0** |
 | その他/帰属不明の有効claim | **0** |
-| :30 通常worker 直近lease活動 | **09-15 03:51 JST** |
+| :30 通常worker 直近lease活動 | **09-15 03:52 JST** |
 | :00 補助worker 直近lease活動 | **09-15 01:32 JST** |
 | 直近24h Research完了（:30 通常worker） | **42** |
 | 直近24h Research完了（:00 補助worker） | **26** |
@@ -87,7 +87,7 @@ Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有im
 | :00 補助worker Discovery run（毎時枠） | **2** |
 | :00 補助worker Discovery round（stats観測） | **3** |
 | 通常worker run（ledger観測） | **2** |
-| Fallback archive（全helper） | **14** |
+| Fallback archive（全helper） | **15** |
 
 ### 24時間の流れ
 
