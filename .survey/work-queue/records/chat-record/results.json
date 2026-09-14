@@ -2,27 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1ff47e348a4a8a751a184287",
-  "job_id": "job-research-73651b83b5a764d9",
-  "data": {
-    "overview": "PuzzleKVは、約60%のKV容量予算でQwen3-8BとLlama-3.1-8B-InstructのRULER・LongBench評価においてFull KV性能の96%以上を維持し、特に系列全体で基底を共有するGlobal SVDが局所情報を落とす課題で大きな差を示す。Llama3.1のRULER平均は16Kで88.82、32Kで84.39、Qwen3は90.73と87.53であり、Full KV比は96.2〜99.3%である。因子をINT4量子化すると容量を18.7%まで縮めてもRULER平均86.24/90.20を維持する。一方、分解はプリフィルへ追加費用を持ち、32Kでは圧縮なしの同一ページ実装よりTTFTが20.9%増えるが、TPOT増加は0.075 ms/token、0.18%に留まる。",
-    "key_results": [
-      {"metric": "RULER平均", "value": "Llama3.1: 16K 88.82、32K 84.39。Qwen3: 16K 90.73、32K 87.53", "baseline": "Full KVは順に92.33、87.54、91.41、89.44", "condition": "KV容量約60%、P=32、(rK,rV)=(16,14)", "interpretation": "4設定すべてでFull KVの96%以上を維持し、ページ局所低ランク化がモデルと文脈長をまたいで安定している。"},
-      {"metric": "Global SVDとの差", "value": "RULERでPuzzleKVが14.22〜26.21点上回る", "baseline": "同程度の容量へ合わせたGlobal SVD", "condition": "Llama3.1/Qwen3、16K/32K", "interpretation": "系列全体に共有する基底よりページ局所基底の方が、反復背景に埋もれる疎な重要情報を保持しやすい。"},
-      {"metric": "LongBench平均", "value": "Llama3.1 45.33、Qwen3 29.48", "baseline": "Full KV 45.83、29.86", "condition": "KV容量約60%", "interpretation": "実タスクでもFull KV比98.9%と98.7%を維持し、Qwen3では圧縮手法中1位、Llama3.1ではH2Oに0.28点差の2位である。"},
-      {"metric": "INT4併用時の容量と品質", "value": "容量18.7%、RULER 16K平均 Llama3.1 86.24、Qwen3 90.20", "baseline": "Full KV 92.33、91.41。非量子化PuzzleKV 88.82、90.73", "condition": "低ランク因子を対称INT4量子化", "interpretation": "低ランク化と量子化を重ねてもFull KV性能の93%以上を保持し、より強い容量削減へ拡張できる。"},
-      {"metric": "TTFT追加費", "value": "32KでRaw KV比20.9%増", "baseline": "圧縮なしの同一ページ実装Raw KV", "condition": "Qwen3、batch size 1、GH200", "interpretation": "ページ分解の計算費は主にプリフィル時へ集中し、メモリ削減には起動遅延との交換条件がある。"},
-      {"metric": "TPOT追加費", "value": "42.737 ms/token。Raw KV 42.662 ms/tokenより0.075 ms/token、0.18%増", "baseline": "Raw KV", "condition": "16K文脈、256生成トークン", "interpretation": "因子化ページを直接読む混合注意により、デコード中の追加費は小さい。"},
-      {"metric": "定常KV占有量", "value": "Raw KVの58.76%。16K+256トークンで更新完了1296.25 MiB対Raw 2205.90 MiB", "baseline": "Raw KV", "condition": "Qwen3システム効率評価", "interpretation": "増分ページ変換後の実容量は理論的な因子化ページ比58.6%へ近く、生成中も圧縮率を維持できる。"}
-    ],
-    "negative_results": [
-      {"name": "プリフィル分解費", "description": "32KではRaw KVよりTTFTが20.9%増える。ページ分解を行うため、短い要求やメモリ余裕が十分な場合には容量節約が遅延増を正当化しない可能性がある。"},
-      {"name": "初期ピークはFull KV相当", "description": "プリフィル直後はまず密KVを作ってから圧縮するため、Table 5では初期Prefill時にPuzzleKVも2204.85 MiBを使用する。定常容量は減るが、初期ピークメモリまで同率に削減する方式ではない。"},
-      {"name": "単一バッチ実装", "description": "現実装はbatch size 1の独立プロトタイプであり、連続バッチングや多数要求を処理する実サーバ上のスループット効果は未実証である。"},
-      {"name": "ページ長の交換条件", "description": "P=16から32では品質が明確に改善するが、64への拡大は品質利得が小さい一方で分解遅延が増えるため、局所性を細かくするほど常に有利ではない。"}
-    ],
-    "interpretation": "PuzzleKVがGlobal SVDを大きく上回るのは、長い系列全体の再構成誤差を最小化する基底が反復的な背景方向を優先し、局所的な鍵値や多段推論の中間情報を落としやすいのに対し、32トークン程度の各ページが独自基底を持つためである。NIAH-S1ではGlobal SVDがほぼ0点になる条件でもPuzzleKVは約99〜100点を保ち、Variable Trackingでも同じ傾向が出る。H2Oとの比較では、トークンを削除せず全履歴を近似保持することが長いUUIDの正確な復元に効く。実行時には分解費をプリフィルで払う代わり、デコードでは復元を避けるため追加費が小さい。したがってメモリ制約が強く長い生成を行うほど利点が大きく、短い文脈ではTTFT追加費との釣り合いが重要になる。",
-    "quality_impact": "無損失方式ではなく低ランク近似による品質差は生じる。ただし約60%容量ではFull KVに対する平均保持率が96%以上で、INT4併用の18.7%容量でも93%以上を報告する。追い出しと異なり全トークンを近似形で残すため、後から重要になる情報を完全に失う危険を避ける一方、ランク不足による近似誤差は残る。"
-  },
-  "reservation": {"claim_id": "claim-1ff47e348a4a8a751a184287", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-dbca4ee8fc632785a4cc9ca7",
+  "job_id": "job-research-16aaac9973021cd8",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-dbca4ee8fc632785a4cc9ca7",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
