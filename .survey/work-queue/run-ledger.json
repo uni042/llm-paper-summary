@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T02:02:50.300985+00:00",
+  "updated_at": "2026-09-14T02:07:38.181694+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,14 +18680,14 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T02:02:50.300985+00:00",
+      "last_recorded_at": "2026-09-14T02:07:38.181694+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
         "discovery_or_queue_expanded"
       ],
       "counts": {
-        "research_completed": 10,
+        "research_completed": 11,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 0,
@@ -18836,6 +18836,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34798130951:1",
+          "recorded_at": "2026-09-14T02:07:38.181694+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34798130951",
+            "run_attempt": "1",
+            "source_sha": "c9a6bf9cb65ce39b3d85c19e5de3841a48e4dbde"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -18916,6 +18930,14 @@
           "type": "research",
           "canonical_id": "arXiv:2607.17715",
           "title": "C²KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-73651b83b5a764d9",
+          "type": "research",
+          "canonical_id": "arXiv:2608.23843",
+          "title": "PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression",
           "from": "ready",
           "to": "completed"
         }
