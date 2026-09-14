@@ -2,17 +2,41 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-c578b7c423835dbc9202ea64",
+  "attempt_id": "attempt-edf8d212a130f009043d0d16",
   "job_id": "job-research-420858d196a868b6",
   "data": {
     "hardware": "単一ノードのNVIDIA A800 40GB GPU×4をNVLinkで接続し、2組のプリフィル／デコード対として使用する。",
     "software": "LLaMA-2-7BをFP16で実行。比較対象はvLLM v0.4.xの4GPUデータ並列構成と4-wayテンソル並列構成。StreamServeはNIXLによるGPU間KV転送を使用し、標準P2P転送への置換もアブレーションする。",
     "methodology": "ALPACA、GSM8K、HUMANEVAL、SUMの4ベンチマークを各80要求、合計320要求で評価する。主比較ではStreamServeの2組の分離レーンと、標準の自己回帰生成を使うvLLMデータ並列・テンソル並列を比較する。要求当たりエンドツーエンド遅延、入力と出力を合わせたトークン毎秒、出力1トークン当たり時間（TPOT）を測定する。さらに同時要求数を変えたスケーリング、p50〜p99遅延、FlowGuard・SpecuStream・分離実行・NIXLの個別除去、固定推測深さ3/5/7との比較を行う。",
     "scope": "モデルはLLaMA-2-7Bのみ、ハードウェアは4×A800単一ノードのみで、持続的な本番トレースや複数ノードは対象外。分離型のDistServe、Sarathi-Serve、Mooncakeとの直接実験比較は行っていない。",
-    "workloads": ["ALPACA: 命令追従、80要求", "GSM8K: 数学推論、80要求", "HUMANEVAL: コード生成、80要求", "SUM: 要約、80要求", "同時要求数を変える負荷試験"],
-    "baselines": ["vLLM v0.4.x データ並列: GPUごとに独立インスタンス", "vLLM v0.4.x 4-wayテンソル並列", "テンソル並列vLLM + EAGLE系固定推測深さ d=3", "同 d=5", "同 d=7", "StreamServeのラウンドロビン置換", "SpecuStream無効・FlowGuard無効・単一エンジン・標準P2Pなどのアブレーション"],
-    "metrics": ["エンドツーエンド遅延", "スループット（tokens/s）", "出力1トークン当たり時間（TPOT）", "p50/p90/p95/p99遅延", "同時実行時のスループットと遅延"],
+    "workloads": [
+      "ALPACA: 命令追従、80要求",
+      "GSM8K: 数学推論、80要求",
+      "HUMANEVAL: コード生成、80要求",
+      "SUM: 要約、80要求",
+      "同時要求数を変える負荷試験"
+    ],
+    "baselines": [
+      "vLLM v0.4.x データ並列: GPUごとに独立インスタンス",
+      "vLLM v0.4.x 4-wayテンソル並列",
+      "テンソル並列vLLM + EAGLE系固定推測深さ d=3",
+      "同 d=5",
+      "同 d=7",
+      "StreamServeのラウンドロビン置換",
+      "SpecuStream無効・FlowGuard無効・単一エンジン・標準P2Pなどのアブレーション"
+    ],
+    "metrics": [
+      "エンドツーエンド遅延",
+      "スループット（tokens/s）",
+      "出力1トークン当たり時間（TPOT）",
+      "p50/p90/p95/p99遅延",
+      "同時実行時のスループットと遅延"
+    ],
     "reproducibility": "主要なハードウェア、モデル、精度、要求数、ルーティング重み、過負荷閾値、推測深さ範囲は本文に記載される。一方、著者公式コードURL、完全なソフトウェア固定、入力選択乱数、到着過程などは本文から十分確認できず、厳密な再現には不足が残る。"
   },
-  "reservation": {"claim_id": "claim-c578b7c423835dbc9202ea64", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-edf8d212a130f009043d0d16",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }

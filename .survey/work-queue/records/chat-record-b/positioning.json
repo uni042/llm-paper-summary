@@ -2,7 +2,7 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-c578b7c423835dbc9202ea64",
+  "attempt_id": "attempt-edf8d212a130f009043d0d16",
   "job_id": "job-research-420858d196a868b6",
   "data": {
     "limitations": "評価はLLaMA-2-7B、4×A800 40GB、NVLink単一ノード、合計320要求に限定される。複数ノードではKVキャッシュ転送帯域と遅延が変わるため同じ改善幅を期待できるとは限らない。本番トレースや長時間の定常負荷も未評価である。また比較対象はvLLMのデータ並列・テンソル並列が中心で、DistServe、Sarathi-Serve、Mooncakeなど同じプリフィル／デコード分離系との直接比較がない。生成品質も正解率等では測られていない。",
@@ -12,5 +12,9 @@
     "relation_to_existing_repository": "既存リポジトリではプリフィル／デコード分離、KVキャッシュ転送、サービングのスケジューリング、推測デコードを個別に扱う系統との接点が強い。StreamServeの差分は、キャッシュ局所性・待ち行列・負荷を使う配置と、受理率・負荷・スループットを使う推測深さを一つのフィードバック系として結合したことにある。ストレージ／オフロード中心ではないため99-otherよりも、内容上はサービング・スケジューリング／分離実行系統に近いが、現jobのpaper_pathは正本指定を維持する。",
     "audit_required": false
   },
-  "reservation": {"claim_id": "claim-c578b7c423835dbc9202ea64", "worker_id": "scheduled-chat-discovery-specialist", "worker_kind": "scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-edf8d212a130f009043d0d16",
+    "worker_id": "scheduled-chat-discovery-specialist",
+    "worker_kind": "scheduled_chat"
+  }
 }
