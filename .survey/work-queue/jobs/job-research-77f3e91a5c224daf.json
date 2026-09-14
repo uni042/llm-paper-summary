@@ -14,5 +14,16 @@
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T18:15:00+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: metadata.references[1] requires a normalized identity | problem_method.method_overview must explain the end-to-end mechanism | problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[2].description is too short | problem_method.components[3].description is too short",
+  "validation_errors": [
+    "metadata.references[1] requires a normalized identity",
+    "problem_method.method_overview must explain the end-to-end mechanism",
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[2].description is too short",
+    "problem_method.components[3].description is too short"
+  ],
+  "last_validation_failed_at": "2026-09-14T22:22:36+00:00"
 }
