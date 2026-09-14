@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "job_id": "job-be884a5e7da2da4e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2605.17889",
+      "title": "CoX-MoE: Coalesced Expert Execution for High-Throughput MoE Inference with AMX-Enabled CPU-GPU Co-Execution",
+      "source_url": "https://arxiv.org/abs/2605.17889",
+      "paper_path": "papers/inference/06-expert-offloading/2026-2605.17889-cox-moe-coalesced-expert-cpu-gpu.md",
+      "priority": 89,
+      "reason": "MoE expert offloadでmicro-batchingがexpert GEMMの演算強度を落としてmemory-bound化し、CPU offloadもPCIe転送とattention適用範囲に制約される問題に対し、expert computationを通常batchへcoalesceするorchestration、attentionの選択的CPU offload、頻出expertをGPUへ静的配置するexpert-aware stratificationを共同設計する。AMX対応CPU-GPU co-executionによりFlexGen比最大7.1倍、MoE-Lightning比最大2.4倍のthroughputを報告し、CPU/GPU expert placementとbatchingの直接比較対象として有用。"
+    },
+    {
+      "canonical_id": "arXiv:2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2606.18600",
+      "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.18600-shuntserve-heterogeneous-spot-gpu-clusters.md",
+      "priority": 82,
+      "reason": "異種spot GPU clusterではGPU typeごとの性能差とavailability変動により既存homogeneous servingがload imbalanceと中断に弱い問題に対し、roofline modelベースの性能推定器とdynamic programmingでnode configuration・parallelization strategy・layer assignmentを共同最適化する。spot interruption時はoutput-preserving request migrationとshared tensor storeを用いたreplacement nodeのconcurrent initializationでdowntimeを隠す。L4/A10G/L40S混在AWS clusterでbaseline比throughputを1.42倍/1.35倍、on-demand比cost efficiencyを約32%改善し、heterogeneous serving配置・耐障害性の実装研究として価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-cox-shuntserve-22",
+    "axis": "CPU/GPU MoE co-execution・heterogeneous spot GPU serving",
+    "query_summary": "MoE CPU/GPU協調とheterogeneous cluster servingへ探索軸を広げ、CoX-MoE（2605.17889）とShuntServe（2606.18600）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で両IDとも既収録を確認できず、最新queueはresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 2,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は最新Actions反映後のinventoryを確認し、overflow未満ならdistributed KV/prefix cache schedulingかrecent 2608-2609 serving systemを探索する。",
+    "empty_round_reason": null
+  }
+}
