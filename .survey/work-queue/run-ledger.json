@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T07:17:07.724627+00:00",
+  "updated_at": "2026-09-14T07:45:40.082671+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,17 +18680,18 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T07:17:07.724627+00:00",
+      "last_recorded_at": "2026-09-14T07:45:40.082671+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
-        "discovery_or_queue_expanded"
+        "discovery_or_queue_expanded",
+        "job_blocked"
       ],
       "counts": {
         "research_completed": 53,
         "audit_completed": 0,
         "discovery_completed": 0,
-        "blocked": 0,
+        "blocked": 1,
         "new_jobs": 1,
         "new_papers": 57,
         "fallback_archived": 0
@@ -19438,6 +19439,20 @@
           "signals": [
             "paper_materialized"
           ]
+        },
+        {
+          "event_id": "34819336191:1",
+          "recorded_at": "2026-09-14T07:45:40.082671+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34819336191",
+            "run_attempt": "1",
+            "source_sha": "c4c2fdb25c85cb9ec4869ec578e3c27e026085c4"
+          },
+          "signals": [
+            "job_blocked"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -19864,6 +19879,14 @@
           "title": "The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing",
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-research-8d796418f10a7d6b",
+          "type": "research",
+          "canonical_id": "arXiv:2609.10861",
+          "title": "REACH: Controller-Managed Long-Span ECC for HBM AI Inference",
+          "from": "ready",
+          "to": "blocked"
         }
       ],
       "new_jobs": [
@@ -19938,7 +19961,7 @@
       "new_fallback_archive_files": [],
       "paper_active_count_before": 454,
       "paper_active_count_after": 517,
-      "last_successful_action": "paper_materialized"
+      "last_successful_action": "job_blocked"
     }
   ]
 }

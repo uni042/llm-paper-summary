@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 16:43 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 16:45 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -15,8 +15,8 @@
 
 | 指標 | 状態 |
 |---|---:|
-| 未処理の論文候補（Research ready） | **61** |
-| 現在処理不能（Research blocked） | **0** |
+| 未処理の論文候補（Research ready） | **60** |
+| 現在処理不能（Research blocked） | **1** |
 | 保留中（Research deferred） | **3** |
 | 全文精読完了（累計） | **328** |
 | 保守状態（Maintenance） | **passed** |
@@ -25,7 +25,7 @@
 
 ### 要注意
 
-- 現在、集計stateから重大な警告は検出されていません。
+- Research blocked が **1件** 残っています。
 
 <!-- research-throughput-status:start -->
 ## ワーカー稼働状況
@@ -35,10 +35,10 @@
 | :30 通常worker | **Research/Audit優先（高在庫）** |
 | :00 補助worker | **通常worker補助（Research/Audit）** |
 | 処理速度 | **LOW** |
-| 未処理候補（Research ready） | **61** |
-| 処理中（Active claims） | **5** |
+| 未処理候補（Research ready） | **60** |
+| 処理中（Active claims） | **4** |
 | 今すぐ着手可能（Claimable） | **57** |
-| :30 通常worker Active claims | **2** |
+| :30 通常worker Active claims | **1** |
 | :00 補助worker Active claims | **3** |
 | その他/帰属不明 Active claims | **0** |
 | :30 通常worker 直近claim | **09-14 16:40 JST** |
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **0** |
 | 最新通常run | **2026-09-14T15:30:00+09:00** |
 | 最新通常runのResearch完了 | **0** |
-| 最古の有効claimの経過時間 | **59 min** |
+| 最古の有効claimの経過時間 | **61 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
@@ -58,7 +58,7 @@ Research readyが **50本を超える間は`:00` workerも論文精読側** に�
 
 Research/Auditの通常配送は **claim-fast → 予約bank → attempt固有immutable descriptor → submission-fast** です。Actionsは **claim-fast / submission-fast / background** の3レーンです。旧固定 `chat-inbox.json` は通常経路では使いません。Library fallbackは復旧時にattempt固有immutable descriptorへ変換します。
 
-- **処理速度 LOW**: ready=61 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
+- **処理速度 LOW**: ready=60 の高在庫状態で、最新通常runのResearch完了は 0 件です。DiscoveryよりResearch消化を優先します。
 <!-- research-throughput-status:end -->
 
 ## 直近24時間の処理量
