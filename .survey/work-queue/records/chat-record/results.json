@@ -5,58 +5,18 @@
   "attempt_id": "attempt-51392e346b94b7a1e2807fcf",
   "job_id": "job-research-66748ca7517e3f9a",
   "data": {
-    "overview": "MorphServeはピーク時のみ低影響層を量子化して重みメモリをKVキャッシュへ振り替え、フル精度固定構成より飽和点を後ろへ移す。論文全体では平均SLO違反を92.45%削減し、精度重視設定でもP95初回トークン遅延を2.2〜3.9倍改善する。静的INT4より品質を高く維持しつつ、末尾TPOTと処理量も改善した。",
+    "overview": "MorphServeは、負荷ピーク時だけ品質影響の小さい層を低精度へ切り替え、その瞬間に空いたGPU重み領域をKVキャッシュへ振り替えることで、固定フル精度構成より同時実行容量を増やし、待ち行列とKV不足プリエンプションを減らす。4モデルとAzure/BurstGPT実負荷を用いた評価では平均SLO違反を92.45%削減し、精度重視設定でもP95初回トークン遅延を2.2〜3.9倍改善、飽和処理量を最大1.83倍へ高めた。単なる低ビット計算の高速化ではなく、負荷に応じて重み精度とKV容量の間でGPUメモリを可逆的に移すことが主要な効果である。低負荷時には高精度層へ戻るため、静的INT4のように常時品質低下を支払う必要がなく、DuReaderではFP16に近いF1を保ちながら大幅なTTFT短縮を実現した。",
     "key_results": [
-      {
-        "metric": "平均SLO違反",
-        "value": "92.45%削減",
-        "baseline": "フル精度固定サービング",
-        "condition": "4モデル、Azure/BurstGPT負荷",
-        "interpretation": "動的KV容量拡張により待ち行列とプリエンプションを抑制した。"
-      },
-      {
-        "metric": "P95初回トークン遅延",
-        "value": "2.2〜3.9倍改善",
-        "baseline": "フル精度固定",
-        "condition": "MorphServe精度重視設定",
-        "interpretation": "ピーク時に追加KVブロックを確保し、新規プリフィルの待ち時間を減らした。"
-      },
-      {
-        "metric": "飽和処理量",
-        "value": "最大1.83倍",
-        "baseline": "フル精度固定",
-        "condition": "要求到着率を増加させる負荷試験",
-        "interpretation": "量子化で空いた重み領域をKVへ再配分することで同時実行可能量が増えた。"
-      },
-      {
-        "metric": "TPOT末尾遅延",
-        "value": "P99最大1.23倍改善",
-        "baseline": "フル精度固定",
-        "condition": "Azureトレース",
-        "interpretation": "KV不足による退避・再計算の長い停止を減らした。"
-      },
-      {
-        "metric": "Llama 2 7B DuReader品質/遅延",
-        "value": "AWQ静的INT4 F1 25.55、MorphServe 27.33、FP16 27.68; P95 TTFT 1.2420秒対5.5223秒(FP16)",
-        "baseline": "静的AWQ INT4およびFP16",
-        "condition": "BurstGPTトレース",
-        "interpretation": "静的INT4よりフル精度に近い品質を保ちながら、FP16より大幅にTTFTを短縮する。"
-      },
-      {
-        "metric": "層交換費用",
-        "value": "Llama 2 7BのINT4層で完全交換約6ms",
-        "baseline": "同期的なモデル再構成",
-        "condition": "PCIe Gen4、別CUDAストリーム",
-        "interpretation": "交換を通常デコードへ重ねられるためTPOTへの追加費用が小さい。"
-      }
+      {"metric":"平均SLO違反","value":"92.45%削減","baseline":"フル精度固定サービング","condition":"4モデル、Azure/BurstGPT負荷","interpretation":"動的KV容量拡張により待ち行列とプリエンプションを抑制した。"},
+      {"metric":"P95初回トークン遅延","value":"2.2〜3.9倍改善","baseline":"フル精度固定","condition":"MorphServe精度重視設定","interpretation":"ピーク時に追加KVブロックを確保し、新規プリフィルの待ち時間を減らした。"},
+      {"metric":"飽和処理量","value":"最大1.83倍","baseline":"フル精度固定","condition":"要求到着率を増加させる負荷試験","interpretation":"量子化で空いた重み領域をKVへ再配分することで同時実行可能量が増えた。"},
+      {"metric":"TPOT末尾遅延","value":"P99最大1.23倍改善","baseline":"フル精度固定","condition":"Azureトレース","interpretation":"KV不足による退避・再計算の長い停止を減らした。"},
+      {"metric":"Llama 2 7B DuReader品質/遅延","value":"AWQ静的INT4 F1 25.55、MorphServe 27.33、FP16 27.68; P95 TTFT 1.2420秒対5.5223秒(FP16)","baseline":"静的AWQ INT4およびFP16","condition":"BurstGPTトレース","interpretation":"静的INT4よりフル精度に近い品質を保ちながら、FP16より大幅にTTFTを短縮する。"},
+      {"metric":"層交換費用","value":"Llama 2 7BのINT4層で完全交換約6ms","baseline":"同期的なモデル再構成","condition":"PCIe Gen4、別CUDAストリーム","interpretation":"交換を通常デコードへ重ねられるためTPOTへの追加費用が小さい。"}
     ],
     "negative_results": "複数精度の重みをCPUに保持するためホストメモリ使用量が増え、論文では通常モデルサイズの2倍未満とする。負荷適応は予測型ではなく圧力検出後に反応する。層単位より細粒度な注意機構/MLP単位の変換は未実装で、極端な持続高負荷では低精度化だけで容量不足を解消できない可能性がある。",
     "interpretation": "主要な効果は低ビットGEMMそのものの高速化だけではなく、重み用の固定GPUメモリを必要時だけKV容量へ変換してプリフィル待ちとデコード中断を減らす点にある。静的量子化との差は、負荷が下がった時にフル精度へ戻り恒常的な品質損失を避けることである。",
     "quality_impact": "低精度層を通過する一部トークンには品質低下が生じるが、LISによる層選択と負荷期間だけの適用により静的INT4より小さく抑える。したがって完全無損失方式ではなく、SLO維持のため一時的で制御された精度低下を許容する方式である。"
   },
-  "reservation": {
-    "claim_id": "claim-51392e346b94b7a1e2807fcf",
-    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "reservation": {"claim_id":"claim-51392e346b94b7a1e2807fcf","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
 }
