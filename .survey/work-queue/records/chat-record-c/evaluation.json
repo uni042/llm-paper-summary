@@ -1,13 +1,1 @@
-{
-  "schema_version": 1,
-  "transport_version": 10,
-  "slot": "evaluation",
-  "attempt_id": "attempt-022b9f637cf7cc5a822fdef4",
-  "job_id": "job-research-f023091bfca94e41",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-022b9f637cf7cc5a822fdef4",
-    "worker_id": "scheduled-chat-llm-survey-20260914T1230JST",
-    "worker_kind": "scheduled_chat"
-  }
-}
+{"schema_version":1,"transport_version":10,"slot":"evaluation","attempt_id":"attempt-022b9f637cf7cc5a822fdef4","job_id":"job-research-f023091bfca94e41","data":{"hardware":["HFProbeはGPU不要","既存比較ツールは必要に応じ簡略化CUDAカーネルで評価"],"software":["KLEE v3.1","LLVM IR","Z3","vLLM","Hugging Face Transformers","GPT-5 agent modeによる設定変異","Honeycomb","GKLEE","ESBMC-GPU"],"model":["vLLM text-generationモデル62種","Hugging Faceのcustom CUDA kernel利用モデル54種","最近の研究成果物由来モデル4種"],"datasets":["120モデル","173 CUDAカーネル","170,875行Python","139,951行CUDA","既知vLLMメモリバグ20件"],"baselines":["Honeycomb","GKLEE","ESBMC-GPU","HFProbeなしcuKLEE","小入力での実GPU動的実行","設定変異なしHFProbe"],"correctness":"発見候補を手動確認し真陽性・誤検出へ分類する。対象バグ種は整数オーバーフロー、範囲外アクセス、データ競合、NULLポインタ参照。既知vLLMバグ20件では既存ツールとの検出数比較を行うが、既存ツールが現代vLLMコードを直接扱えないため簡略化が必要だった点を明示する。","settings":["cuKLEEの初期ユーザー入力範囲はbatch size <=1000、sequence length <=1,000,000を既定とし、total token count=BS×SLの関係を付与する。","各カーネル解析は最大1時間。","HFProbeはGPU bindingをfake functionへ置き換え、重みをロードせずshapeだけを保持し、遅延KV cache割当も模擬する。","GPT-5 agentで生成した無効config変異は実行失敗時に破棄する。","20既知vLLMバグの内訳はinteger overflow 10件、追加buffer overflow 8件、NULL dereference 2件。"],"methodology":"3ソースからモデルとCUDAカーネルを収集してHFProbeで到達経路・引数関係を抽出し、1,274のモデル構成を8,562の一意解析文脈へ統合してcuKLEEを実行する。未知バグではソース別の真陽性・誤検出を数え、既知バグではHoneycomb/GKLEE/ESBMC-GPUとのcoverageを比較する。構成要素除去実験ではHFProbeなし、cuKLEEの代わりに実GPU小入力実行、設定変異なしを比較して、それぞれの誤検出、検出数、解析時間、timeoutへの影響を測る。総解析時間とagentコストも報告し、実用上の計算負荷を示す。","metrics":["未知バグ真陽性数","誤検出数・誤発見率","既知バグ検出数","解析時間","timeout件数","生成設定数・解析文脈数","構成要素除去時の誤検出・検出漏れ"],"scope":"120モデル・173 CUDAカーネルの大規模静的/動的混合検証だが、Hugging Face形式かつTensor入力のCUDAカーネルへ対象を限定する。Triton、TensorFlow、NPU命令、複数GPU間アクセスの一部は範囲外。性能ベンチマークではなく安全性検出性能の評価である。","reproducibility":"論文はHFProbe/cuKLEEのアルゴリズム、既定入力境界、解析時間上限、対象ソース、構成要素除去条件を詳細に記載する。一方、確認時点で一次資料から公式コード公開URLは特定できなかったため、再実行可能性は実装公開の有無に制約される。"},"reservation":{"claim_id":"claim-022b9f637cf7cc5a822fdef4","worker_id":"scheduled-chat-llm-survey-20260914T1230JST","worker_kind":"scheduled_chat"}}
