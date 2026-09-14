@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "ok": false,
+  "attempt_id": "attempt-ddaa9f60a004a664b188d7a2",
+  "job_id": "job-research-3ae94af47a718bbb",
+  "job_type": "research",
+  "job_status": null,
+  "artifact": null,
+  "submission": ".survey/work-queue/submissions/research/attempt-ddaa9f60a004a664b188d7a2.json",
+  "error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.overview must explain the main result and its practical meaning | results.key_results[0] missing: interpretation | results.key_results[1] missing: interpretation | results.key_results[2] missing: interpretation | results.key_results[3] missing: interpretation | results.key_results[4] missing: interpretation | results.key_results[5] missing: interpretation | results.key_results[6] missing: interpretation",
+  "processed_at": "2026-09-14T17:16:44+00:00",
+  "validation_errors": [
+    "problem_method.components[0].description is too short",
+    "problem_method.components[1].description is too short",
+    "problem_method.components[3].description is too short",
+    "problem_method.components[4].description is too short",
+    "results.overview must explain the main result and its practical meaning",
+    "results.key_results[0] missing: interpretation",
+    "results.key_results[1] missing: interpretation",
+    "results.key_results[2] missing: interpretation",
+    "results.key_results[3] missing: interpretation",
+    "results.key_results[4] missing: interpretation",
+    "results.key_results[5] missing: interpretation",
+    "results.key_results[6] missing: interpretation"
+  ]
+}
