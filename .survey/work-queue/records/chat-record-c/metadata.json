@@ -2,39 +2,12 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-df812e3e2b60a70b34f00cdf",
-  "job_id": "job-research-301f737893441797",
-  "data": {
-    "canonical_id": "arXiv:2509.23384",
-    "arxiv_id": "2509.23384",
-    "doi": "10.48550/arXiv.2509.23384",
-    "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.DC", "cross_list": []},
-    "title": "A Predictive and Synergistic Two-Layer Scheduling Framework for LLM Serving",
-    "summary": "大規模LLM配信は、クラスタルータが要求を複数推論実体へ振り分け、その後各実体の内部スケジューラが処理群を形成する二層構成が一般的だが、両層は互いの将来状態をほぼ知らない。上位ルータは過去平均遅延や待ち行列長など遅れた粗粒度指標に依存し、下位エンジンは固定トークン予算など静的経験則に依存するため、負荷変動・長文脈・異種GPUでSLO違反と資源浪費が生じる。本論文のNexusSchedは、GPU実行構造を反映したオンライン性能予測モデルを両層の共通情報源とし、エンジン側LENSが各反復の処理時間を予測してTTFT/TPOT SLOに応じた処理群サイズとトークン予算を動的選択し、クラスタ側PRISMが予測遅延、保留仕事量、有効KV空き容量、ピーク処理能力を受け取って要求を先読み配送する。8枚H100の同種クラスタとH100/A100/A6000混在クラスタで評価し、P50/P90端末間遅延を20〜50%削減、SLO達成率を平均43%以上改善し、長文脈要約ではSLO内処理可能要求数を最良比較方式の3倍超へ高める。異種環境でもP50遅延を7〜36%削減し、高負荷時のSLO達成率を10〜25ポイント高める。",
-    "list_summary": "オンライン性能モデルをエンジン内SLO対応処理群形成とクラスタ先読み配送の共通信号にし、二層間の情報断絶を閉じて動的・異種LLM配信の遅延とSLO達成率を改善する。",
-    "authors": ["Yue Zhang", "Yuansheng Chen", "Xuan Mo", "Alex Xi", "Jialun Li", "WeiGang Wu"],
-    "authors_affiliations": "Sun Yat-sen University; Kaon AI / FlowGPT; Guangdong Polytechnic Normal University",
-    "published": "2025-09-27",
-    "publication": "arXiv preprint arXiv:2509.23384",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint; v3 revised 2025-10-01",
-    "lineage": "cross-layer LLM serving / SLO-aware scheduling / predictive routing / heterogeneous inference",
-    "topics": ["LLM配信", "二層スケジューリング", "SLO対応処理群形成", "予測ルーティング", "異種GPU", "オンライン性能モデル", "KVキャッシュ認識配送"],
-    "importance": "エンジン内部の反復スケジューリングとクラスタルーティングを別々に最適化せず、同じ前向き性能モデルから得た容量・遅延予測で閉ループ協調させる。異種GPU環境で待ち行列長の意味がノードごとに変わる問題にも能力正規化で対応し、モデル未計測GPUへ30秒程度で適応する実運用志向の設計を示す。",
-    "hardware_evaluation": "同種クラスタはNVIDIA H100 80GB×8（NVLink接続）。異種クラスタはH100 80GB×1、A100 80GB×1、A6000 48GB×2。モデルはLlama3-8BとFP8量子化QwQ-32B。A6000上のLlama3-8Bのみ2-way tensor parallelism。",
-    "quality_effect": "モデル重み、量子化方式、生成アルゴリズムは比較方式間で変更せず、処理群形成と要求配送を変えるため生成品質を意図的に近似しない。主評価は遅延、TTFT、TPOT、SLO達成率である。",
-    "source": "https://arxiv.org/abs/2509.23384",
-    "sources": ["https://arxiv.org/abs/2509.23384", "https://arxiv.org/html/2509.23384v3"],
-    "code": null,
-    "implementation": "vLLMを約4000行拡張してLENSを実装し、プラガブルSLO対応スケジューラ、非同期オンライン学習、UDPベース状態報告を追加する。PRISMはvLLM Production-Stack上の独立マイクロサービスとして約1500行で実装し、Kubernetesへ展開する。古い状態への劣化処理も持つ。論文はSGLangやTensorRT-LLMへの移植可能性を述べる。一次資料中にNexusSched固有の公開コードURLは確認できない。",
-    "last_checked": "2026-09-14",
-    "references": [
-      {"canonical_id": "arXiv:2309.06180", "arxiv_id": "2309.06180"}
-    ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv v3 HTML版参考文献節",
-    "references_total": 75
-  },
-  "reservation": {"claim_id": "claim-df812e3e2b60a70b34f00cdf", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
+  "attempt_id": "attempt-900e0b9bd6c1839bbd58f9c3",
+  "job_id": "job-research-b16bdf4c09cb7905",
+  "data": {},
+  "reservation": {
+    "claim_id": "claim-900e0b9bd6c1839bbd58f9c3",
+    "worker_id": "scheduled-chat-llm-survey",
+    "worker_kind": "scheduled_chat"
+  }
 }
