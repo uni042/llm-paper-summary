@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T16:53:12.915086+00:00",
+  "updated_at": "2026-09-14T16:55:02.584636+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T16:53:12.915086+00:00",
+      "last_recorded_at": "2026-09-14T16:55:02.584636+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18689,7 +18689,7 @@
         "fallback_archived"
       ],
       "counts": {
-        "research_completed": 60,
+        "research_completed": 61,
         "audit_completed": 0,
         "discovery_completed": 0,
         "blocked": 1,
@@ -18698,20 +18698,6 @@
         "fallback_archived": 9
       },
       "events": [
-        {
-          "event_id": "34795790064:1",
-          "recorded_at": "2026-09-14T01:24:17.110084+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34795790064",
-            "run_attempt": "1",
-            "source_sha": "33202f393656df5f7bf0a4faba73b2e180051840"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34795990053:1",
           "recorded_at": "2026-09-14T01:28:02.591284+00:00",
@@ -19596,6 +19582,20 @@
           "signals": [
             "research_completed"
           ]
+        },
+        {
+          "event_id": "34871520462:1",
+          "recorded_at": "2026-09-14T16:55:02.584636+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey submission fast lane",
+            "run_id": "34871520462",
+            "run_attempt": "1",
+            "source_sha": "b755925885269f270ea4bd5cf9d25423789095ab"
+          },
+          "signals": [
+            "research_completed"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20084,6 +20084,14 @@
           "type": "research",
           "canonical_id": "arXiv:2602.09345",
           "title": "AgentCgroup: Understanding and Controlling OS Resources of AI Agents",
+          "from": "ready",
+          "to": "completed"
+        },
+        {
+          "job_id": "job-research-66748ca7517e3f9a",
+          "type": "research",
+          "canonical_id": "arXiv:2506.02006",
+          "title": "Efficient and Workload-Aware LLM Serving via Runtime Layer Swapping and KV Cache Resizing",
           "from": "ready",
           "to": "completed"
         }
