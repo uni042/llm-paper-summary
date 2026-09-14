@@ -16,9 +16,6 @@
   "created_at": "2026-09-13T00:33:41+00:00",
   "artifact_transport": "structured_record_v10",
   "repair_required": true,
-  "validation_error": "RecordValidationError: Japanese-first prose ratio is too low: 59.5% < 70% (Japanese=4868, Latin=3308)",
-  "validation_errors": [
-    "Japanese-first prose ratio is too low: 59.5% < 70% (Japanese=4868, Latin=3308)"
-  ],
-  "last_validation_failed_at": "2026-09-14T03:17:00+00:00"
+  "validation_error": "ValueError: record slot too large: .survey/work-queue/records/chat-record-c/problem_method.json (17108 bytes > 16384)",
+  "last_validation_failed_at": "2026-09-14T03:18:39+00:00"
 }
