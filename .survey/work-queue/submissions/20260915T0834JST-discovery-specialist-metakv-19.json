@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "job_id": "job-be884a5e7da2da4e",
+  "candidates": [
+    {
+      "canonical_id": "arXiv:2609.07966",
+      "title": "MetaKV: Adaptive KV Cache Compression for Constrained LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.07966",
+      "paper_path": "papers/inference/05-kv-cache-memory-management/2026-2609.07966-metakv-adaptive-kv-compression.md",
+      "priority": 82,
+      "reason": "固定KV compression設定ではpromptごとのaccuracy・latency・peak memory trade-offが異なる問題に対し、入力ごとにuser指定latency/memory budgetを満たすcompression configurationを適応選択するframeworkを提案する。KVQuant/H2O/RocketKV由来10構成とFP16について、lightweight predictorがend-to-end latency・peak memory・correct response probabilityを推定し制約内でaccuracyを最大化する。4 datasetでbest static configuration比constrained success rateを平均約0.07、最大0.135改善し、圧縮手法そのものではなくserving/resource constraintに応じたruntime policyとして比較価値がある。"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "2026-09-15T08:00:00+09:00",
+    "round": "specialist-metakv-19",
+    "axis": "prompt-adaptive KV compression policy under latency/memory budgets",
+    "query_summary": "2026年9月の新着からsystem-aware memory managementを探索し、MetaKV（2609.07966）を一次arXiv情報で軽量評価した。送信直前のdefault branch検索で同IDの既収録を確認できず、Actions反映後の最新queueもresearch ready 43でoverflow条件未満だった。",
+    "candidate_count": 1,
+    "duplicate_filtered_count": 0,
+    "duplicate_canonical_ids": [],
+    "next_axis_hint": "次は2026年9月新着のserving/scheduling/MoE systemを追加探索し、最新queueのoverflow判定を再確認する。",
+    "empty_round_reason": null
+  }
+}
