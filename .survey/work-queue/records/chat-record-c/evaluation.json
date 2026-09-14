@@ -4,10 +4,25 @@
   "slot": "evaluation",
   "attempt_id": "attempt-df812e3e2b60a70b34f00cdf",
   "job_id": "job-research-301f737893441797",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-df812e3e2b60a70b34f00cdf",
-    "worker_id": "scheduled-chat-llm-survey",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "hardware": ["同種クラスタ: NVIDIA H100 80GB×8（NVLink）", "異種クラスタ: H100 80GB×1、A100 80GB×1、A6000 48GB×2"],
+    "software": ["vLLM 0.9.2 v0", "vLLM 0.9.2 v1（Sarathi系chunked prefill比較）", "Kubernetes", "vLLM Production-Stack", "Python"],
+    "model": ["Llama3-8B", "QwQ-32B FP8"],
+    "datasets": ["FlowGPT production trace", "arXiv-Summarization", "Code-Reasoning", "ShareGPT"],
+    "baselines": ["vLLM + Round-Robin", "vLLM + Session Affinity", "Sarathi/vLLM-v1 + Round-Robin", "Sarathi/vLLM-v1 + Session Affinity", "異種評価: Latency-Based（直近2秒平均）", "異種評価: Weighted-Based（オフラインQPS重み）", "異種評価: Least-Loaded（待ち行列長）"],
+    "correctness": "エンジン方式とルータ方式を組み合わせた端末間比較を行い、同じモデル・クラスタ上でP50/P90端末間遅延、P50 TTFT、P50 TPOT、SLO達成率を測る。SLO達成率は指定TTFT/TPOT制約を満たして完了した要求割合として定義する。",
+    "settings": [
+      "同種評価と除去実験は8枚H100クラスタ。異種評価はH100×1、A100×1、A6000×2。",
+      "原則1 GPUに1モデル複製。A6000上のLlama3-8Bのみ2枚テンソル並列。",
+      "FlowGPT traceは実到着時刻を再現するtimestampモードと、一定QPSで送るsteady-stateモードを使用する。",
+      "FlowGPT平均入力4089、P99入力7014、平均出力177トークン。Coding平均入力440/出力283、ShareGPT 370/249、Summarization 8936/259。",
+      "FlowGPT対話ではTPOT SLO 12ms、SummarizationではTTFT SLO 2秒など、用途ごとに異なるSLOを設定。",
+      "LENS内のトークン予算二分探索は最大10反復。"
+    ],
+    "methodology": "まず同種8×H100で、実運用FlowGPT履歴のバースト再現・一定QPSと、長文要約、コード推論、対話の異なる入力/出力長特性を使い、NexusSchedとvLLM/Sarathi系エンジン×RR/Sessionルータの組合せを端末間評価する。次に高負荷でSarathi+RR、LENS+RR、Sarathi+PRISM、完全NexusSchedを比較し、エンジン内情報断絶とクラスタ間情報断絶を個別に閉じた効果を分離する。異種クラスタではすべてLENSを共通エンジンとして、PRISMと直近遅延、静的能力重み、待ち行列長による各ルータだけを比較し、能力認識配送の寄与を見る。ゼロ設定実験では事前計測していないH100を高負荷クラスタへ突然追加し、オンラインモデルがオフライン最適モデルへ収束する時間を測る。最後にH100/A100/A6000とLlama3-8B/QwQ-32Bの数千処理群で予測値と実測値を比較し、性能モデル精度とLENS/PRISMの制御負担を計測する。",
+    "metrics": ["P50/P90端末間遅延", "P50 TTFT", "P50 TPOT", "SLO達成率", "SLO制約下の処理可能要求数", "性能予測R²", "LENSスケジューリング時間", "PRISM要求あたりルーティング時間"],
+    "scope": "同種8×H100と4実体の異種GPUクラスタにおけるLlama3-8B/QwQ-32B配信を評価し、実FlowGPT履歴も含む。一方、複数ノード間KV転送を伴うプリフィル/デコード分離、MoE専門家並列、CPU/SSDオフロード、大規模数百GPUクラスタは直接評価しない。",
+    "reproducibility": "GPU構成、モデル、vLLM版、各公開負荷、FlowGPT統計、主要SLO、性能モデル式、LENS探索法、PRISM状態ベクトル、実装行数と通信方式が本文に記載される。FlowGPTの完全生履歴とNexusSched固有コードURLは一次資料で公開確認できず、本番評価の完全再現には一部非公開資産が必要である。"
+  },
+  "reservation": {"claim_id": "claim-df812e3e2b60a70b34f00cdf", "worker_id": "scheduled-chat-llm-survey", "worker_kind": "scheduled_chat"}
 }
