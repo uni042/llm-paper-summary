@@ -2,96 +2,99 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "results",
-  "attempt_id": "attempt-1029596fe50d541546a5dba8",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "overview": "Ariesの測定ではagent servingのcritical pathがGPU推論だけで決まらない。tool executionは13〜48%のend-to-end latency、harnessはさらに最大9%を占め、tool latencyは複数桁にまたがるlong tailを持つ。agent contextは通常会話より大きく、Qwen3.6で25GB KV budgetを固定すると最大resident capacityが176超から40へ約4.4倍低下する。DeepResearch/OpenClawはcontext overflowを消す160Kで95%成功に達するが、他workloadは中小windowでplateau/degradeし、最大history保持は常に有益ではない。32-session backlogではtoken pool utilizationが97%へ達する一方median concurrent requestは22、p95 internal queue delayは7.9s。sandboxはCPU 80%以上、memory 50%以上の時間idleだがtool call中はidle率20%未満へ落ちる。毎tool call後に停止するとinstance costは65%下がるもののsnapshot C/R込み総費用はpersistent baselineの4.9倍で、理想的state managementならbaseline比3倍まで総費用を下げる余地がある。",
+    "overview": "o4-miniは100課題でτ=0の正当性100%、τ=1の基準超え94%、τ=2で60%、τ=4で47%、τ≥8で25%を達成し、DeepSeek-V3.2はそれぞれ95%、80%、49%、40%、22%だった。代表演算では両モデルがSpMV CSRでcuSPARSEを上回り、2D畳み込みとDot ProductではcuDNN/cuBLASを上回る規模がある。Astraに対してはRMSNormでo4-miniが約35%優位で、SiLU&MulやMerge Attention Statesでも同等以上の規模を示す。選別プロファイルは全量プロファイルと同等の成功率を保ちつつ、API費用を最大32%、トークン量を30〜40%削減する。",
     "key_results": [
       {
-        "metric": "tool execution latency share",
-        "value": "13〜48%",
-        "baseline": "end-to-end trajectory latency",
-        "condition": "公開3 benchmark×複数harness",
-        "interpretation": "GPU token生成だけを改善しても最大半分近いcritical pathが残る。"
+        "metric": "機能正当性成功率",
+        "value": "100%",
+        "baseline": "DeepSeek-V3.2 95%",
+        "condition": "o4-mini、τ=0、100課題",
+        "interpretation": "多領域・二精度でも全課題で正当な候補を生成できた。"
       },
       {
-        "metric": "harness overhead share",
-        "value": "最大9%",
-        "baseline": "end-to-end trajectory latency",
-        "condition": "公開harness controlled profiling",
-        "interpretation": "tool以外のorchestrationもLLM呼び出し間を延ばし、state residencyを長期化する。"
+        "metric": "素朴基準を上回る成功率",
+        "value": "94%",
+        "baseline": "DeepSeek-V3.2 80%",
+        "condition": "o4-mini、τ=1",
+        "interpretation": "単に動くだけでなく大半の課題で速度改善を実現する。"
       },
       {
-        "metric": "resident capacity",
-        "value": "176超→40（約4.4倍低下）",
-        "baseline": "conventional request vs agent context",
-        "condition": "Qwen3.6、固定25GB KV budget",
-        "interpretation": "trajectory state amplificationが同時実行容量を大幅に削る。"
+        "metric": "2倍超の成功率",
+        "value": "60%",
+        "baseline": "DeepSeek-V3.2 49%",
+        "condition": "τ=2",
+        "interpretation": "大幅改善も半数超の課題で得られる。"
       },
       {
-        "metric": "DeepResearch task success",
-        "value": "160K contextで95%",
-        "baseline": "小さいcontext window",
-        "condition": "OpenClaw、context sweep",
-        "interpretation": "overflow回避まではcontext増加が効くが、その先は効用が頭打ちになる。"
+        "metric": "8倍以上の成功率",
+        "value": "25%",
+        "baseline": "DeepSeek-V3.2 22%",
+        "condition": "τ≥8",
+        "interpretation": "一部課題ではアルゴリズム・メモリアクセスを大きく改善できる。"
       },
       {
-        "metric": "KV/token-pool pressure",
-        "value": "utilization peak 97%、median concurrency 22",
-        "baseline": "32-session backlog",
-        "condition": "256K context、controlled serving",
-        "interpretation": "backlogがあっても長寿命状態がbatching可能数を制限する。"
+        "metric": "RMSNorm",
+        "value": "o4-miniがAstra比およそ35%高い速度向上",
+        "baseline": "Astra",
+        "condition": "複数入力規模",
+        "interpretation": "既存LLM向け自動最適化と比較しても優位な代表例。"
       },
       {
-        "metric": "internal queue p95",
-        "value": "7.9秒",
-        "baseline": "controlled serving",
-        "condition": "高KV圧力、32 active sessions",
-        "interpretation": "状態保持はtoken throughput以外のtail latencyとして表面化する。"
+        "metric": "2D Convolution",
+        "value": "生成カーネルが約1.8×前後の速度向上",
+        "baseline": "cuDNNは同一素朴基準比およそ1×",
+        "condition": "代表規模",
+        "interpretation": "閉源の高度最適化ライブラリを上回る規模がある。"
       },
       {
-        "metric": "sandbox idle fraction",
-        "value": "CPU >80%、memory >50%の時間idle",
-        "baseline": "trajectory time",
-        "condition": "OpenClaw/Hermesおよびproduction傾向",
-        "interpretation": "peak固定割当は大きなstranded capacityを生む。"
+        "metric": "Dot Product",
+        "value": "最大およそ52.45×",
+        "baseline": "cuBLASは同一素朴基準比およそ25〜27×",
+        "condition": "図5の複数規模",
+        "interpretation": "単純演算では専用実装が汎用ライブラリ呼び出しを大きく上回る場合がある。"
       },
       {
-        "metric": "per-tool-call teardown instance cost",
-        "value": "65%低下",
-        "baseline": "persistent sandbox",
-        "condition": "AWS Lambda MicroVM pricing replay",
-        "interpretation": "短keepalive自体はidle課金を下げる。"
+        "metric": "反復・デバッグの効果",
+        "value": "τ=1で94%",
+        "baseline": "No Debug 77%、Single Iteration 74%、Single Run 77%",
+        "condition": "o4-mini",
+        "interpretation": "計画の反復と体系的デバッグが両方重要。"
       },
       {
-        "metric": "snapshot C/R込みtotal cost",
-        "value": "persistent比4.9倍",
-        "baseline": "persistent sandbox",
-        "condition": "tool callごとteardown",
-        "interpretation": "現行capture/restoreが細粒度scale-to-zeroを逆に高価にする。"
-      },
-      {
-        "metric": "ideal sandbox total-cost opportunity",
-        "value": "persistent baseline比最大3倍削減余地",
-        "baseline": "persistent sandbox",
-        "condition": "snapshot/state overheadを理想化",
-        "interpretation": "状態と実行資源を分離したelasticityには大きな余地がある。"
-      },
-      {
-        "metric": "Linux CVE trend",
-        "value": "2026 Q2 published CVEがprevious record比3.5倍",
-        "baseline": "previous records",
-        "condition": "AI-assisted discovery proxy",
-        "interpretation": "agent tool sandboxは性能だけでなく攻撃面最小化が必要。"
+        "metric": "選別プロファイルのコスト",
+        "value": "o4-mini平均$0.2707/123,036 tokens",
+        "baseline": "Full Profile $0.3804/172,917 tokens",
+        "condition": "1課題平均",
+        "interpretation": "成功率をほぼ維持し、費用最大32%、トークン30〜40%を削減。"
       }
     ],
-    "negative_results": "文脈を最大まで保持しても全workloadで精度が上がるわけではなく、Terminal-Bench 2/SWE-Bench Proはoverflow解消後にplateauまたは悪化する。snapshot-based stateful scale-to-zeroは短keepaliveほどinstance費を減らすがcapture/restore費が支配し、tool callごとの停止はpersistentより総費用が高い。token throughputはtask goodput/solved tasks per hourと乖離し得るため、従来指標単独では最適化方向を誤る。",
-    "interpretation": "Agent workloadでは資源需要がtrajectory phaseに応じてGPU inference→host orchestration→tool sandboxへ移動し、contextはその間も残る。したがって最適化対象をtoken生成へ限定せず、進捗価値とstate costをtrajectory単位で測り、将来効用の低いcontextを圧縮/階層化し、tool burstだけCPU/memoryを垂直拡張する設計が合理的である。",
-    "quality_impact": "Ariesは性能改善のためにモデル出力を近似しない。context managementの候補政策は将来方向であり、測定結果はcontext削減が成功率へ影響するためworkload-specific thresholdを越えて攻撃的に圧縮すべきでないことを示す。"
+    "negative_results": [
+      {
+        "name": "モデル差が大きい",
+        "description": "同一CUDAMasterでもDeepSeek-V3.2はτ=1で80%、o4-miniは94%で、基盤モデルのコード生成・推論能力が最終性能を強く左右する。"
+      },
+      {
+        "name": "高倍率達成は限定的",
+        "description": "τ≥8の成功率はo4-miniでも25%であり、全演算を専門ライブラリ級へ自動最適化できるわけではない。"
+      },
+      {
+        "name": "単一GPU評価",
+        "description": "全性能計測がRTX 4090で、別GPU世代やデータセンターGPUへ同一方針・閾値がそのまま一般化するかは未検証。"
+      },
+      {
+        "name": "全量プロファイルは高コスト",
+        "description": "o4-miniではFull Profileが平均$0.3804・172,917 tokenで、Filteredの$0.2707・123,036 tokenより重い。情報量を増やせば改善するとは限らず、選別が必要。"
+      }
+    ],
+    "interpretation": "CUDAMasterの価値は、LLMへ『もっと速くせよ』と直接依頼することより、専門家の診断工程を構造化して提供する点にある。律速タイプに応じて必要なハードウェア指標だけを渡し、計画・実装・ビルド・デバッグを別役割に分けることで、長いプロファイル文脈とツール操作の混線を減らす。LLM推論システムへの直接的な意義は、RMSNorm、SiLU、Attention state mergeなど頻出カーネルについて、GPUごとの低層チューニングを自動化できる可能性にある。一方、サービング全体のTTFT/TPOT/throughputは測っておらず、カーネル速度向上がそのまま端から端性能へ等倍で反映されるとは限らない。",
+    "quality_impact": "数値精度を落として性能を得る方式ではない。FP32とBF16は別課題として評価され、それぞれ参照実装との誤差許容を満たすことが必須。したがって主なトレードオフは生成API費用、プロファイル量、探索反復時間、GPU世代への適応である。"
   },
   "reservation": {
-    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
+    "claim_id": "claim-f8c2699054e47548a5216a21",
+    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
     "worker_kind": "scheduled_chat"
   }
 }

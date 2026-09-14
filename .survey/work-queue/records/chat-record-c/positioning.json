@@ -2,19 +2,55 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "positioning",
-  "attempt_id": "attempt-1029596fe50d541546a5dba8",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "novelty_vs_prior": "vLLM/SGLang/DistServeなどはmodel requestを中心にGPUスケジューリング・KV・prefill/decodeを最適化し、Agentix/Kairos/Continuumなどはagent programやmulti-turn stateを扱う。Ariesは新しいscheduler自体ではなく、agent task semanticsとexecution stackを分離し、LLM・harness・sandboxのcross-layer telemetryを単一trajectoryへ結ぶ再現実験frameworkとproduction characterizationを提供する点が異なる。SideQuest/ACONなどのcontext管理やAgentCgroup/AgentServeSimなどのhost-side resource管理を評価・設計する共通観測層として補完的。",
-    "implementation_status": "Aries code、toolchain、匿名化production tracesは `https://github.com/hyscale-lab/aries` でopen sourceと論文本文が明記。OpenHands、Hermes Agent、OpenClawと複数sandbox substrateをadapterで接続するfull-stack frameworkとして実装済み。",
-    "research_positioning": "llm-serving-scheduling-disaggregation系統の上位に位置するagent-native serving characterization/measurement基盤。KV cache offload/compression、multi-turn scheduling、sandbox/OS resource control、agent benchmarkの交点をtrajectoryという共通単位で接続する。",
-    "relation_to_existing_repository": "ContinuumのKV TTL、SideQuestのmodel-driven KV管理、KVFlow/MemServeのprefix/context placementには『どのtrajectory stateをいつ残すか』というutility signalを与える上位観測面として関係する。AgentCgroupのtool単位CPU/memory制御やAgentServeSimのagent-aware schedulingには、実productionのidle/burst分布とtask progressを結ぶ入力・検証基盤になり得る。通常のvLLM/SGLang最適化とは競合せず、GPU改善がtask goodputへ実際に効いたかを判定する層。",
-    "limitations": "商用traceは匿名化され、LLM/model/toolのcross-layer eventが完全同期していないため、詳細な因果分析は公開harnessでの再現へ依存する。controlled experimentsは各benchmark 20 task×5反復、主にsingle H100/Qwen3.6であり、複数GPU・複数node・非常に大規模tenant数でのAries framework overheadやtelemetry storage costは評価されない。snapshot費用はAWS Lambda MicroVM pricing modelへのanalytic replayで、実際に各policyをcloud上でscale-to-zeroさせた実測ではない。future directionsのadaptive context control、vertical sandbox scaling、formal/minimal sandboxは設計ビジョンであり、提案controllerのend-to-end改善値は未提示。",
-    "audit_required": false
+    "limitations": [
+      {
+        "name": "単一GPU世代",
+        "description": "評価はRTX 4090のみで、H100/B200などアーキテクチャが異なるGPUでは律速閾値、最適化パターン、既存ライブラリとの相対性能が変わり得る。"
+      },
+      {
+        "name": "基盤モデルが2種類",
+        "description": "o4-miniとDeepSeek-V3.2だけを主評価しており、他の商用/公開モデルで同じ成功率や費用特性が出るかは示されていない。"
+      },
+      {
+        "name": "ベンチマーク範囲",
+        "description": "50演算は多領域だが有限であり、通信カーネル、複数GPU協調、動的shape、実際の推論サーバ全体のスケジューリング等は中心対象ではない。"
+      },
+      {
+        "name": "端から端効果の未評価",
+        "description": "個別カーネルの速度向上は測るが、vLLM/SGLangなどサービング基盤へ組み込んだ際のTTFT、TPOT、throughput、電力、コンパイル償却時間は評価していない。"
+      },
+      {
+        "name": "実装公開位置の不明確さ",
+        "description": "論文はフレームワークとベンチマークをオープンソース化すると述べるが、確認できた一次公開先はデモページで、本体リポジトリURLは今回特定できなかった。"
+      }
+    ],
+    "differences": [
+      {
+        "name": "KernelBench系との差",
+        "description": "PyTorch/LLM演算中心ではなく、純C/CUDAで疎行列、ステンシル、数値計算を含め、各演算を複数規模・FP32/BF16で評価する。"
+      },
+      {
+        "name": "CudaForge等との差",
+        "description": "単にプロファイルをLLMへ返すのではなく、全課題の計測分布から律速分類閾値を作り、タイプ別に必要な指標だけを選択することで文脈量を抑える。"
+      },
+      {
+        "name": "Astraとの差",
+        "description": "SGLang由来カーネルに限定せず一般HPC演算まで対象にし、カーネルコードに加えてコンパイル・実行ツールチェーンの生成/修正もエージェント系へ含める。"
+      },
+      {
+        "name": "学習型CUDA生成との差",
+        "description": "KevinやCUDA-L1/L2のように専用モデルを強化学習するのではなく、既存の強力な基盤モデルへ構造化プロファイルと複数エージェントの反復手順を与える訓練不要の実行時最適化である。"
+      }
+    ],
+    "implementation_status": "MSKernelBench/CUDAMasterの公開デモあり。論文はフレームワークとベンチマークのオープンソース化を明記するが、今回確認できた一次URLから本体GitHubリポジトリは特定できない。",
+    "research_positioning": "推論カーネル最適化系統では、FlashAttentionや手書きCUDAの個別アルゴリズムではなく、『ハードウェア計測を使ってLLMがGPUごとの実装を自動改良するメタシステム』に位置する。特にLLM演算以外の不規則ワークロードを含む評価を導入したことで、既知のLLM最適化コードを記憶から再現しただけか、それとも律速に応じて新しい変換を選べるかを検証しやすい。将来的にはSGLang/vLLM等のカーネル更新をGPU世代ごとに自動再調整する仕組みへ接続し得るが、本論文自体はサービング統合までは扱わない。"
   },
   "reservation": {
-    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
+    "claim_id": "claim-f8c2699054e47548a5216a21",
+    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
     "worker_kind": "scheduled_chat"
   }
 }

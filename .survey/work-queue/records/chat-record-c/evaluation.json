@@ -2,45 +2,55 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-1029596fe50d541546a5dba8",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "hardware": "制御実験: 96-core node、NVIDIA H100 94GB HBM×1。production characterization: 商用platformの10 LLM serving instanceと100超agent sandbox。",
-    "software": "Aries、OpenHands、Hermes Agent、OpenClaw、SGLang、Qwen3.6-35B-A3B-FP8。sandbox弾力性の解析ではAWS Lambda MicroVM pricing model、別のtool utilization再現ではcloud DeepSeek V4 Flash API。",
-    "methodology": "商用platformの8時間workday traceから10 serving instanceのrequest/context長と、100超sandboxのCPU/メモリを1分粒度で収集する。詳細cross-layer分析はSWE-Bench Pro、Terminal-Bench 2、DeepResearch Benchから各20 taskを選び、OpenClawで概ね50%成功になるセットを各5回反復。OpenClaw/Hermes/OpenHandsを比較し、trajectory breakdownを取る。context budget sweepではOpenClaw/Hermesでwindowを変え成功率・overflow/compactionを測定し、32 active session/256K windowで1秒ごとのbackend資源を計測。sandboxではOpenClaw/Hermesを1秒計測し、tool traceをAWS Lambda MicroVMのkeepalive/capture-restore費用モデルへreplayする。",
-    "scope": "実運用traceと公開benchmarkのcharacterization/measurement framework。Ariesは新しいLLM scheduler、KV圧縮アルゴリズム、sandbox autoscalerを実装して性能改善を直接競うものではなく、それらを設計するための観測基盤と問題設定を提供する。",
-    "workloads": [
-      "SWE-Bench Pro 20 task",
-      "Terminal-Bench 2 20 task",
-      "DeepResearch Bench 20 task",
-      "各task 5反復",
-      "production 8-hour trace",
-      "100超production agent sandbox"
+    "hardware": [
+      "NVIDIA RTX 4090"
     ],
+    "software": [
+      "CUDA/C++",
+      "NVIDIA Nsight Compute",
+      "MSKernelBench",
+      "CUDAMaster"
+    ],
+    "model": [
+      "OpenAI o4-mini",
+      "DeepSeek-V3.2"
+    ],
+    "datasets": "MSKernelBenchの50演算。密行列7、疎行列8、正規化4、活性化7、損失3、LLM演算列6、テンソル処理4、ステンシル5、数学・アルゴリズム6。各演算をFP32/BF16で評価し、合計100課題。",
     "baselines": [
-      "token-centric LLM metrics (TTFT/TPOT/token throughput)",
-      "conventional request-centric capacity",
-      "persistent sandbox",
-      "snapshot-based stateful scale-to-zero with multiple keepalive timeout"
+      "MSKernelBenchの素朴/参照CUDA実装",
+      "cuBLAS",
+      "cuDNN",
+      "cuSPARSE",
+      "Astraで最適化したSGLang演算"
     ],
-    "metrics": [
-      "end-to-end latency breakdown",
-      "tool/harness latency share",
-      "context overflow/compaction count",
-      "task success rate",
-      "KV/token-pool utilization",
-      "resident/concurrent request count",
-      "internal queueing delay",
-      "CPU/memory utilization CDF",
-      "sandbox instance cost",
-      "snapshot capture/restore cost",
-      "task goodput/solved tasks per token/hour"
+    "correctness": "各入力規模でランダム試験を生成し、ground-truth実装との数値誤差が許容値内であることを要求する。関数名・引数などCインターフェースも固定し、コンパイル失敗は不正解。累積成功率のτ=0は機能正当性を表す。",
+    "settings": [
+      {
+        "name": "全体評価",
+        "description": "50演算×FP32/BF16の100課題をRTX 4090で最適化。CUDAMasterはR=3反復、候補ごとにD=3デバッグ試行。"
+      },
+      {
+        "name": "性能計測",
+        "description": "各入力規模で3回ウォームアップ後50回実行し平均時間を計測。最終性能スコアは理論計算量に基づく複雑度加重平均速度向上。"
+      },
+      {
+        "name": "代表演算比較",
+        "description": "SpMV CSR、2D Convolution、Dot ProductをcuSPARSE/cuDNN/cuBLASと、RMSNorm、SiLU&Mul、Merge Attention StatesをAstra最適化カーネルと比較。"
+      },
+      {
+        "name": "アブレーション",
+        "description": "反復/デバッグのFull、No Debug、Single Iteration、Single Runを比較し、さらにFiltered Profile、No Profile、Full Profileを比較。"
+      }
     ],
-    "reproducibility": "論文はAries code/toolchainと匿名化production tracesをGitHubで公開すると明記。公開harness/benchmark、モデル、GPU、反復数、sampling粒度を記載。一方、商用traceはプライバシー上normalization/anonymizationされ、詳細platform構成と完全同期イベントは非公開。"
+    "methodology": "マクロ指標は性能閾値τを超える正当な課題の割合。τ=0は正当性、τ=1は素朴基準を上回る割合、τ=2/4/8以上は高い速度向上の達成率を示す。ミクロ指標は同一の素朴基準に対するCUDAMasterと既存ライブラリ/研究実装の速度向上を直接比較する。",
+    "scope": "評価ハードウェアはRTX 4090の単一GPU、生成モデルはo4-miniとDeepSeek-V3.2の2系統、ベンチマークは50演算である。H100など別GPUや、実運用のLLMサービング全体での端から端効果は直接評価していない。"
   },
   "reservation": {
-    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
+    "claim_id": "claim-f8c2699054e47548a5216a21",
+    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
     "worker_kind": "scheduled_chat"
   }
 }

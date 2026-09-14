@@ -2,129 +2,98 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-1029596fe50d541546a5dba8",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "canonical_id": "arXiv:2607.29069",
-    "arxiv_id": "2607.29069",
-    "doi": "10.48550/arXiv.2607.29069",
+    "canonical_id": "arXiv:2603.07169",
+    "arxiv_id": "2603.07169",
+    "doi": "10.48550/arXiv.2603.07169",
     "openreview_id": null,
     "arxiv_categories": {
-      "primary": "cs.DC",
+      "primary": "cs.LG",
       "cross_list": []
     },
-    "title": "Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework",
-    "summary": "Ariesは、従来のLLMサービングが個々のモデル呼び出しを単位に最初のトークンまでの時間（TTFT）、1出力トークン当たり時間（TPOT）、トークンスループットを最適化する一方、自律エージェントではLLM推論・長寿命コンテキスト・ハーネス処理・状態付きツール実行が一つの長い因果系列を構成するため、要求単位の指標だけでは実際の停滞箇所を捉えられない問題を扱う。Ariesはタスク仕様と実行仕様を分離し、モデル呼び出し・ツール呼び出し・ハーネス判断へ共通の軌跡/イベントIDを伝播させ、LLMバックエンドと複数サンドボックス基盤をアダプタで統一して、意味的なタスク進捗とCPU/GPU/メモリ等のテレメトリを同一のエージェント軌跡へ再構成する実験基盤である。商用プラットフォームの8時間トレースと100超のサンドボックス、OpenClaw・Hermes Agent・OpenHands、SWE-Bench Pro・Terminal-Bench 2・DeepResearch Benchを用いて特性を調べ、ツール実行だけでエンドツーエンド時間の13〜48%、ハーネス処理で最大9%を占めること、25GBのKV予算でエージェント状態により最大常駐要求数が176超から40へ4.4倍減ること、DeepResearchでは160K文脈で成功率95%へ達した後に追加履歴の効用が頭打ちになることを示す。さらにツールサンドボックスはCPUが80%以上、メモリが50%以上の時間アイドルである一方ツール呼び出し時だけ急激に資源を使い、各呼び出し後に停止する現行スナップショット方式ではインスタンス費を65%下げてもcapture/restore費により総費用が常駐比4.9倍になる。これらから、軌跡単位の指標、適応的コンテキスト管理、垂直伸縮可能な状態付きサンドボックス、攻撃面を限定した実行環境をエージェントネイティブな制御面として共同設計すべきと論じる。",
-    "list_summary": "AriesはLLM・ハーネス・状態付きツールを一つのエージェント軌跡として計測する実験基盤。実トレースと公開ベンチで、ツール/ハーネスが最大57%級の遅延要因、長期文脈が常駐容量を4.4倍圧迫、サンドボックスが大半アイドルだが瞬間的にバーストすることを示し、軌跡指標・適応コンテキスト・弾力的サンドボックスを提案する。",
+    "title": "Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts",
+    "summary": "GPUカーネルの自動最適化研究がPyTorch由来のLLM演算へ偏り、疎行列・科学計算など不規則なメモリアクセスを十分に評価していない問題に対し、50演算×FP32/BF16のMSKernelBenchと、ハードウェア計測を選別して複数エージェントへ渡すCUDAMasterを提案する。CUDAMasterは計算律速・メモリ遅延律速・メモリ帯域律速へ分類し、Planner/Coder/Compiler/Debugの4役が反復してコードと実行ツールチェーンを生成する。RTX 4090上の100最適化課題で、o4-miniは機能正当性100%、素朴基準を上回る成功率94%、2倍超60%を達成し、代表演算ではAstraやcuBLAS/cuSPARSE/cuDNNと同等以上のケースを示す。",
+    "list_summary": "50演算×FP32/BF16のMSKernelBenchと、律速別に選別したNsight Compute情報をPlanner/Coder/Compiler/Debugへ渡すCUDAMasterで、多領域CUDA最適化を自動化し、o4-miniで正当性100%・基準超え94%を達成する。",
     "authors": [
-      "Leonid Kondrashov",
-      "Hongrui Liu",
-      "JooYoung Park",
-      "Boxi Zhou",
-      "Zonghao Liu",
-      "Chengzhi Lu",
-      "Riccardo Mancini",
-      "Esha Choukse",
-      "Haris Javaid",
-      "German Sviridov",
-      "Tao Peng",
-      "Chen Zhao",
-      "Anastasia Avdeeva",
-      "Aleksei Gusev",
-      "Marios Kogias",
-      "Luo Mai",
-      "Dmitrii Ustiugov"
+      "Yuxuan Han",
+      "Meng-Hao Guo",
+      "Zhengning Liu",
+      "Wenguang Chen",
+      "Shi-Min Hu"
     ],
-    "authors_affiliations": "NTU Singapore、AWS、Microsoft、AMD Singapore、Ant Group、NCSpeech、Imperial College London、University of Edinburgh。",
-    "published": "2026-07-31",
-    "publication": "arXiv:2607.29069v1",
-    "publication_type": "プレプリント",
-    "publication_status": "arXiv v1（2026-07-31提出）。一次資料から査読済み採録は確認できない。",
-    "lineage": "llm-serving-scheduling-disaggregation",
+    "authors_affiliations": "Tsinghua University; Proxseer Inc.",
+    "published": "2026-03-07",
+    "publication": "arXiv:2603.07169v1",
+    "publication_type": "Preprint",
+    "publication_status": "プレプリント（arXiv v1、2026-03-07提出）",
+    "lineage": "GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン",
     "topics": [
-      "エージェント型LLMサービング",
-      "軌跡テレメトリ",
-      "長期コンテキスト",
-      "KVキャッシュ容量",
-      "サンドボックス",
-      "弾力的資源管理",
-      "タスクgoodput",
-      "セキュリティ"
+      "CUDA",
+      "GPUカーネル",
+      "自動最適化",
+      "LLMエージェント",
+      "Nsight Compute",
+      "ハードウェアプロファイル",
+      "HPC",
+      "LLM推論カーネル"
     ],
-    "importance": "高。単発LLM要求ではなく、モデル・ハーネス・ツール・長期状態をまたぐ軌跡をシステム最適化の単位へ引き上げ、既存のトークン中心サービング指標が見逃すCPU/ツール待ち、KV状態保持、サンドボックス弾力性を実運用トレースと制御実験で同時に定量化する。",
-    "hardware_evaluation": "制御実験は96 CPUコアのノードとNVIDIA H100 94GB HBM 1基。加えて商用プラットフォームの10 LLM-serving instanceと100超のagent sandboxから8時間の運用トレースを解析。",
-    "hardware_details": "主制御実験はQwen3.6-35B-A3B-FP8をSGLangでH100 94GB上にローカル配備。文脈保持実験では32同時セッションと256K最大文脈、25GB KV予算を使用。サンドボックス特性は商用トレースを1分粒度、制御環境を1秒粒度でCPU/メモリ計測。",
-    "quality_effect": "Aries自体はモデル近似方式ではない。文脈予算の変更に伴うタスク成功率を直接測定し、DeepResearch BenchではOpenClawの成功率が文脈オーバーフロー解消とともに160Kで95%に達する一方、Terminal-Bench 2/SWE-Bench Proでは最大文脈まで増やしても改善が頭打ちまたは悪化するため、状態削減にはタスク依存の品質境界がある。",
-    "storage_targets": [
-      "GPU HBM上の長寿命KVキャッシュ/トークンプール",
-      "ハーネスが保持するメッセージ/イベント履歴",
-      "サンドボックスのファイル・プロセス・キャッシュ・ネットワーク状態",
-      "低コスト階層へ移動可能な将来の軌跡状態"
-    ],
+    "importance": "既存のKernelBench系評価をLLM演算だけでなく疎行列・ステンシル・数値計算へ広げ、単一入力サイズではなく複数規模を複雑度加重で評価する。さらに大量のプロファイルをそのままLLMへ投入せず、律速分類に応じた指標だけを選別し、コード生成だけでなくコンパイル・実行・デバッグまで閉ループ化する点が、低層推論カーネルの自動最適化基盤として重要。",
+    "hardware_evaluation": "NVIDIA RTX 4090で全カーネルのコンパイル、実行、NVIDIA Nsight Computeによる計測を実施。",
+    "hardware_details": "評価GPUはNVIDIA RTX 4090。ハードウェア分析はNsight Computeの計算スループット、DRAM/メモリスループット、キャッシュヒット率、IPC、SM稼働率等を使用する。",
+    "quality_effect": "モデル推論品質を近似する方式ではなく、CUDAカーネルの数値正当性を保ったまま実行時間を短縮する。各入力規模で参照実装と出力誤差を検証し、許容範囲内の候補だけを性能評価する。",
+    "storage_targets": [],
     "bottlenecks": [
-      "ツール実行の長い裾を持つ待ち時間",
-      "ハーネスのホスト側オーケストレーション",
-      "長期文脈によるKVプール占有と同時実行数低下",
-      "高KV圧力時のプリエンプションと内部キュー待ち",
-      "大半アイドルだが瞬間的にバーストするCPU/メモリ需要",
-      "状態付きサンドボックスのスナップショットcapture/restore費",
-      "サンドボックス攻撃面"
+      "計算律速",
+      "メモリ遅延律速",
+      "メモリ帯域律速",
+      "過剰なハードウェアプロファイル文脈",
+      "コンパイル・実行・デバッグのツール切替"
     ],
     "evidence_locations": [
-      "§1–3",
-      "§4.1 Harnesses & Tools",
-      "§4.2 Long Context",
-      "§4.3 Tool Sandboxes",
-      "§4.4 Security",
-      "Figures 3–13",
-      "§5 Future Research Directions"
+      "§3 MSKernelBench",
+      "§4 CUDAMaster",
+      "§5 Experiment",
+      "Table 2",
+      "Figure 4",
+      "Figure 5",
+      "Table 3-5",
+      "Appendix A/C"
     ],
-    "source": "https://arxiv.org/abs/2607.29069",
-    "sources": [
-      "https://arxiv.org/abs/2607.29069",
-      "https://arxiv.org/html/2607.29069v1",
-      "https://arxiv.org/pdf/2607.29069",
-      "https://github.com/hyscale-lab/aries"
-    ],
-    "code": "https://github.com/hyscale-lab/aries",
-    "implementation": "論文はAriesのコード、ツールチェーン、匿名化したproduction tracesをGitHubで公開したと明記する。実装はtask/execution specification loader、runner、LLM backend adapter、sandbox adapter、trajectory/event IDを伝播するtelemetry collectorからなり、OpenHands・Hermes Agent・OpenClawと複数sandbox substrateを統一して実験できる。",
-    "last_checked": "2026-09-14",
     "references": [
       {
-        "canonical_id": "arXiv:2511.02230",
-        "title": "Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live"
+        "canonical_id": "arXiv:2507.11948",
+        "arxiv_id": "2507.11948"
       },
       {
-        "canonical_id": "arXiv:2602.22603",
-        "title": "SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning"
+        "canonical_id": "arXiv:2506.09092",
+        "arxiv_id": "2506.09092"
       },
       {
-        "canonical_id": "arXiv:2507.07400",
-        "title": "KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows"
-      },
-      {
-        "canonical_id": "arXiv:2406.17565",
-        "title": "MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool"
-      },
-      {
-        "canonical_id": "arXiv:2508.06948",
-        "title": "Kairos: Low-Latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud"
-      },
-      {
-        "title": "Agentix: An Efficient Serving Engine for LLM Agents as General Programs"
-      },
-      {
-        "canonical_id": "arXiv:2510.00615",
-        "title": "ACON: Optimizing Context Compression for Long-Horizon LLM Agents"
+        "canonical_id": "arXiv:2511.01884",
+        "arxiv_id": "2511.01884"
       }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2607.29069v1参考文献節",
-    "references_total": null
+    "references_source": "primary-reference-section",
+    "source": "https://arxiv.org/abs/2603.07169",
+    "sources": [
+      "https://arxiv.org/abs/2603.07169",
+      "https://arxiv.org/pdf/2603.07169",
+      "https://hanyx2021.github.io/MSKernelBenchDemo/"
+    ],
+    "code": null,
+    "implementation": "論文はMSKernelBenchとCUDAMasterをオープンソース化すると記載し、公開デモでは50演算のFP32/BF16を閲覧できる。今回確認できた一次公開URLはデモページで、フレームワーク本体のGitHubリポジトリURLは確認できなかった。",
+    "implementation_status": "公開デモあり。論文はフレームワークとベンチマークのオープンソース化を宣言するが、本体コードのリポジトリURLは今回の確認では特定できず。",
+    "evaluation_type": "実機測定",
+    "last_checked": "2026-09-14",
+    "last_audited": null,
+    "audit_version": 0
   },
   "reservation": {
-    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
+    "claim_id": "claim-f8c2699054e47548a5216a21",
+    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
     "worker_kind": "scheduled_chat"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T21:57:18.961889+00:00",
+  "updated_at": "2026-09-14T22:00:30.587202+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T21:57:18.961889+00:00",
+      "last_recorded_at": "2026-09-14T22:00:30.587202+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18695,23 +18695,9 @@
         "blocked": 1,
         "new_jobs": 6,
         "new_papers": 76,
-        "fallback_archived": 22
+        "fallback_archived": 23
       },
       "events": [
-        {
-          "event_id": "34804239123:1",
-          "recorded_at": "2026-09-14T03:55:47.326650+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34804239123",
-            "run_attempt": "1",
-            "source_sha": "85f068882d132eed8f44d5059fa79d1dea7bf9d1"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34804741299:1",
           "recorded_at": "2026-09-14T04:05:00.183098+00:00",
@@ -19598,6 +19584,20 @@
           "signals": [
             "fallback_archived"
           ]
+        },
+        {
+          "event_id": "34901516934:1",
+          "recorded_at": "2026-09-14T22:00:30.587202+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34901516934",
+            "run_attempt": "1",
+            "source_sha": "e4dc6bc9733dc56bb45524d95be72566312b3fe3"
+          },
+          "signals": [
+            "fallback_archived"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20383,7 +20383,8 @@
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2608.22643-neuroprefetcher.json",
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2604.08075-dualpool.json",
         ".survey/work-queue/fallback-archive/20260913T093000JST-research-2608.09291-unionsparse.json",
-        ".survey/work-queue/fallback-archive/20260915T035300JST-research-2607.29069-aries-attempt-1029596fe50d541546a5dba8.json"
+        ".survey/work-queue/fallback-archive/20260915T035300JST-research-2607.29069-aries-attempt-1029596fe50d541546a5dba8.json",
+        ".survey/work-queue/fallback-archive/20260915T035100JST-research-2603.07169-cudamaster-attempt-3c42eb75bc9ae2ee431ee157.json"
       ],
       "paper_active_count_before": 454,
       "paper_active_count_after": 536,

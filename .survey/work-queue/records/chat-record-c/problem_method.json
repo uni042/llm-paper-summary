@@ -2,41 +2,35 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "problem_method",
-  "attempt_id": "attempt-1029596fe50d541546a5dba8",
-  "job_id": "job-research-c6ac42b8bcec8aab",
+  "attempt_id": "attempt-3c42eb75bc9ae2ee431ee157",
+  "job_id": "job-research-d66acc5736f090e9",
   "data": {
-    "problem": "従来のLLMサービング基盤は一回のprompt→decodeを独立要求として扱い、TTFT/TPOT・トークンスループット・GPUメモリを中心に最適化する。しかしエージェントでは、1ユーザー課題が多数のLLM呼び出し、ハーネス判断、ツール呼び出し、状態更新を順序依存で繰り返す。ツールやハーネスで止まっている間も長期文脈やサンドボックス状態を保持するため、GPUだけ高速化しても課題完了時間は縮まらず、個別コンポーネントのログではどの停止がタスク進捗を妨げたかを因果的に追えない。さらにツール環境は状態付きでsandbox substrateごとにライフサイクル/観測IFが異なるため、公平な比較が難しい。",
-    "novelty": "Ariesはagent trajectoryを第一級の観測単位とし、(1) task specificationとexecution specificationを分離して同じ課題意味のままハーネス/モデル/sandboxを差し替え、(2) trajectory/event identifierと因果・順序メタデータをLLM/ツール境界へ伝播してcross-layer telemetryを再構成し、(3) 状態付きツールのsetup/invocation/state continuity/result/telemetryをsubstrate-independent interfaceへ統一する。単なるagent benchmarkでもLLM serving benchmarkでもなく、タスク成功と低水準資源挙動を同じ軌跡に結び付ける。",
-    "method_overview": "task loaderがワークロードと成功条件を、execution loaderがharness/model backend/sandbox/telemetry stackを検証する。runnerはadapter越しにLLM backendとsandboxを呼び、共通event schemaへtrajectory ID、event ID、因果/順序関係を記録する。telemetry collectorはモデル、ホスト、sandboxのメトリクスをeventへ対応付ける。これを公開agent stackの再現実験と商用platform traceのcharacterizationに使い、critical-path、context budget、sandbox utilization/cost/securityを分析する。",
+    "problem": "LLMによるGPUカーネル自動最適化はKernelBenchのようなPyTorch・深層学習演算へ集中しており、疎行列や科学計算のような不規則アクセスを含む一般GPUワークロードでの一般化能力を測りにくい。さらに単一入力サイズだけの速度比較では、最適化が規模に応じてどう効くかを隠しやすい。最適化側でも、Nsight Computeが出す大量の計測値から真の律速を選ぶ作業と、正当性確認・コード修正・コンパイル・実行の往復が専門家の手作業になっている。",
+    "novelty": "第一に、50種類の演算を密行列、疎行列、正規化、活性化、損失、LLM演算列、テンソル処理、ステンシル、数値計算へ分散し、各演算をFP32/BF16で複数入力規模に評価するMSKernelBenchを構築する。第二に、Nsight Computeの全出力をLLMへ投入せず、Otsu法と経験的条件で計算律速・メモリ遅延律速・メモリ帯域律速へ分類し、律速に必要な指標だけを残す。第三に、Planner・Coder・Compiler・Debugの4エージェントで、最適化案、CUDA実装、コンパイル/実行スクリプト、失敗修正を閉ループ化し、最良候補を継続更新する。",
+    "method_overview": "MSKernelBenchは純C/CUDAの共通ラッパーとテスト雛形を持ち、各演算にFP32/BF16の別実装を用意する。候補は全入力規模で参照実装との数値一致を確認し、3回のウォームアップ後に50回実行した平均時間から速度向上を測る。最終スコアは入力規模ごとの理論計算量で加重する。CUDAMasterはまず元カーネルを実行してNsight Compute計測を収集し、計算/DRAM/メモリのスループット閾値で律速を分類する。分類ごとにSM稼働率・IPC、L1/L2ヒット率、DRAM帯域など必要な指標だけを残し、Plannerが改善方針、Coderが実装、Compilerがビルド・実行系、Debugが不正解・ビルド失敗を修正する。評価では反復回数R=3、候補ごとのデバッグ回数D=3とし、正当かつ従来最良より高速な候補だけを採用する。",
     "components": [
       {
-        "name": "タスク/実行仕様の分離",
-        "description": "タスク入力・成功判定をharness固有設定から分離し、model backendやsandboxを差し替えても評価する意味を変えない。"
+        "name": "MSKernelBench",
+        "description": "50演算を9カテゴリから選び、各演算をFP32とBF16で実装するため100最適化課題となる。単一サイズではなく複数規模を使い、各規模でランダム試験を生成して参照実装との数値誤差を確認する。性能は3回ウォームアップ後50回の平均実行時間を測り、理論計算量に比例する重みで規模ごとの速度向上を集約するため、特定の小サイズだけに効く最適化を過大評価しにくい。"
       },
       {
-        "name": "軌跡相関テレメトリ",
-        "description": "LLM呼び出し、tool call/result、harness decisionに共通trajectory/event IDと因果関係を付与し、CPU/GPU/メモリ等の局所メトリクスを課題進捗へ結び付ける。"
+        "name": "ハードウェア分析フィルタ",
+        "description": "Nsight Computeの計測を基に、計算スループット30%を境に計算律速を判定し、低計算利用時はDRAM/メモリスループット30%を用いてメモリ遅延律速と帯域律速を分ける。計算律速にはSMスループットやIPC、遅延律速にはL1/L2ヒット率やMem Busy、帯域律速にはDRAM/メモリ帯域など、診断に必要な項目だけをエージェントへ渡す。"
       },
       {
-        "name": "状態付きsandbox adapter",
-        "description": "環境setup、tool invocation、状態継続、結果回収、telemetry hookを共通IF化し、異なるsandbox substrate上でもstateful tool executionを比較可能にする。"
+        "name": "4エージェント閉ループ",
+        "description": "Plannerが過去の最良コードと選別済み計測から高位の最適化案を作り、CoderがCUDAへ実装し、Compilerがコンパイルコマンド・実行スクリプト・コンパイラ最適化を管理する。候補がコンパイルまたは数値正当性で失敗するとDebugが原因を診断し、最大D回修正する。正当で性能が改善した候補のみ最良状態へ昇格させ、R回の反復で探索する。"
       },
       {
-        "name": "production+controlled triangulation",
-        "description": "商用8時間traceで実運用分布を押さえ、同期イベントが不足する箇所は公開harness/benchmarkをAries上で再現して秒以下の因果分析を行う。"
-      },
-      {
-        "name": "agent-native control-plane vision",
-        "description": "測定結果を基に、trajectory progress指標、将来効用に応じたcontext retention/階層配置、モデル信号を用いたsandbox vertical scaling、state externalization、minimal attack surfaceを将来制御面として整理する。"
+        "name": "完全ツールチェーン生成",
+        "description": "最終成果をカーネル断片だけにせず、ベンチマーク固定のテスト論理を変更しない範囲で、必要なコンパイル・実行スクリプトまで生成・修正する。これにより、LLMがコードを提案して人間がビルド環境を手直しする断絶を減らし、実行可能な最適化候補を反復評価できる。"
       }
     ],
-    "system_design": "Aries runnerの上位にtask/execution specification、下位にLLM backendとsandbox adapter、横断的にtelemetry collectorを置く。軌跡IDを全段で共有することで、同じユーザー課題の中でLLM待ち、harness処理、tool実行、context占有、sandbox資源を時系列に統合する。",
-    "why_it_works": "エージェントのボトルネックは呼び出しごとにGPU、CPU、外部tool、状態保持へ移るため、単一層の利用率やtoken/sではcritical pathを誤認する。因果ID付きの軌跡へ各層を投影すれば『遅いが進捗に必要な処理』『高速だが繰返して進まない処理』をタスク成果と結び付けられ、実装差とタスク差も分離できる。",
-    "failure_modes": "production traceは匿名化され、LLM側とsandbox側の完全同期cross-layer eventを持たないため、詳細因果は公開環境で再現した傾向に依存する。公開評価は各benchmark 20 task×5反復、主GPU 1×H100と限られ、複数GPU/分散sandboxでのAries自身のオーバーヘッドやスケール限界は主評価ではない。将来制御planeは測定に基づく方向性で、context効用推定やelastic sandbox policyそのものを実装・比較した研究ではない。"
+    "system_design": "各課題の元コードと実行スクリプトをローカル実行し、RTX 4090のNsight Compute計測をフィルタへ通す。フィルタ結果、過去の最良コード、過去の方針をPlannerへ入力し、Coder→Compiler→実行・正当性検証を進める。失敗時だけDebug分岐を使い、成功時は性能比較を行う。テストハーネスと正当性条件はエージェントから固定し、最適化対象とツールチェーンだけを変更する。"
   },
   "reservation": {
-    "claim_id": "claim-ca07a22d494aa3fd107fa4a1",
-    "worker_id": "scheduled-chat-discovery-overflow-20260914T1800JST",
+    "claim_id": "claim-f8c2699054e47548a5216a21",
+    "worker_id": "scheduled-chat-llm-discovery-20260914T2200JST",
     "worker_kind": "scheduled_chat"
   }
 }
