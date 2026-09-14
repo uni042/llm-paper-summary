@@ -4,10 +4,13 @@
   "slot": "positioning",
   "attempt_id": "attempt-b4f98614fa22d7e73fab59f5",
   "job_id": "job-research-25e24814dedb76cb",
-  "data": {},
-  "reservation": {
-    "claim_id": "claim-b4f98614fa22d7e73fab59f5",
-    "worker_id": "scheduled-chat-paper-20260915T0630JST",
-    "worker_kind": "scheduled_chat"
-  }
+  "data": {
+    "limitations": "主性能評価は実トレースで校正した離散事象シミュレーションであり、256基A100を用いた実サービング実験ではない。最も強い理論保証は中央待機プールと十分な待機要求を仮定し、負荷が非減少で推移する模型を中心に扱う。H>0の短期先読みは実験上有効だが、厳密な最悪時保証の中心はH=0である。公平性、P99尾部遅延、SLO、電力上限を共同最適化しておらず、整数最適化が本番のミリ秒級割当予算に収まるかも実機で未検証である。",
+    "differences": "vLLMやSGLangはKV管理・継続バッチングを改善し、DistServeはプリフィルとデコードを分離するが、BF-IOはそれらの上でデコードworker間の固定リクエスト配置を決める。JSQは要求数、FCFSは到着順を基準とし、実際のトークン負荷と同期障壁の最大値を直接抑えない。出力長予測型スケジューラと異なり、BF-IOは新規要求の総長を当てず、実行中要求の短期的な進行・完了だけを利用する。DVFSや炭素認識配置とも直交し、worker内の電力制御より上流で遊休時間そのものを減らす。",
+    "implementation_status": "BF-IOを含む負荷分散方策を評価する公開シミュレータがGitHubで確認できる。ShareGPT、ArXiv、BurstGPT等の要求列、FCFS、JSQ、ラウンドロビン、BF-IO、電力模型、パラメータ掃引を備える。一方、論文のBF-IOをvLLM/SGLang本番デコードクラスタへ組み込んだ実機実装・測定は一次資料で示されない。",
+    "research_positioning": "同期障壁を持つデータ並列LLMデコードの負荷分散を、オンライン整数最適化と最悪時解析で扱う理論・システム横断研究である。サービングエンジン内部のメモリ管理やカーネル最適化ではなく、KVを移動できないという実装制約を保持したまま配置判断だけを改善するため、既存基盤へ重ねやすい上流スケジューリング原理として位置付けられる。",
+    "relation_to_existing_repository": "既存のサービング・スケジューリング系統では、プリフィル/デコード分離、要求長予測、継続バッチ、異種GPU配置などが主に扱われる。本研究は同一デコード段階の同期障壁による最重worker待ちを独立した目的として切り出し、状態固定のまま将来数段階の偏りを整数最適化する点で補完的である。SSD/NVMeやMoE専門家オフロードを直接扱わないが、専門家読出しやKV下位階層アクセスがworker局所負荷を時間変動させる環境では、短期負荷予測を階層I/Oの配置判断と組み合わせる研究へ接続できる。",
+    "audit_required": false
+  },
+  "reservation": {"claim_id": "claim-b4f98614fa22d7e73fab59f5", "worker_id": "scheduled-chat-paper-20260915T0630JST", "worker_kind": "scheduled_chat"}
 }
