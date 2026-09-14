@@ -14,5 +14,12 @@
   "schema_version": 1,
   "workflow_version": 10,
   "created_at": "2026-09-12T15:10:13+00:00",
-  "artifact_transport": "structured_record_v10"
+  "artifact_transport": "structured_record_v10",
+  "repair_required": true,
+  "validation_error": "RecordValidationError: structured record validation failed: metadata.references_total must be a non-negative integer | Japanese-first prose ratio is too low: 57.0% < 70% (Japanese=4790, Latin=3609)",
+  "validation_errors": [
+    "metadata.references_total must be a non-negative integer",
+    "Japanese-first prose ratio is too low: 57.0% < 70% (Japanese=4790, Latin=3609)"
+  ],
+  "last_validation_failed_at": "2026-09-14T02:27:52+00:00"
 }

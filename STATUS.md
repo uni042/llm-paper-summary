@@ -1,6 +1,6 @@
 # 運用ダッシュボード
 
-> 自動生成: **2026-09-14 11:23 JST**。正本は `.survey/work-queue/` のdurable stateです。
+> 自動生成: **2026-09-14 11:27 JST**。正本は `.survey/work-queue/` のdurable stateです。
 
 ## このページの見方
 
@@ -48,7 +48,7 @@
 | 直近24h Research完了（帰属不明） | **2** |
 | 最新通常run | **2026-09-14T10:30:00+09:00** |
 | 最新通常runのResearch完了 | **7** |
-| 最古の有効claimの経過時間 | **81 min** |
+| 最古の有効claimの経過時間 | **86 min** |
 
 run別のResearch完了は、非同期Actionsの完了時刻ではなく **durable claimの元Scheduled Chat run** へ帰属させます。新形式はworker_id内のrun時刻を使い、旧形式worker_idはclaimed_atを直前の`:30`/`:00`枠へ正規化します。
 
