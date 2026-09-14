@@ -2,19 +2,11 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "evaluation",
-  "attempt_id": "attempt-443ec8e0bdeb1310d8bbdd8b",
-  "job_id": "job-research-87da19d91d5900c3",
-  "data": {
-    "hardware": "Ubuntuを動かすAMD Ryzen Threadripper PRO 7995WX搭載サーバ、主記憶512GB。cgroupで利用可能メモリ、tasksetでCPUコア数を制限し、資源制約端末を模擬する。論文は端末に強力なGPUがない状況を主対象としてCPU推論を評価する。",
-    "software": "llama.cppを828行のC/C++で拡張したFlexInfer試作。ストレージ読出しには直接入出力を使い、計算スレッドと複数の入出力スレッドを分離する。先読み窓の既定値は3層。",
-    "models": ["Llama 2 7B 4-bit", "Llama 2 13B 4-bit", "CodeLlama 34B 4-bit", "Llama 2 70B 4-bit"],
-    "datasets": ["自己回帰デコードのスループット評価"],
-    "baselines": ["llama.cpp mmap", "同期読出し", "先読みのみ", "均衡メモリ固定を除いた構成", "注意機構優先保持", "全結合ネットワーク優先保持"],
-    "methodology": "モデルごとに利用可能メモリ量を変化させ、トークン生成スループットを測る。mmapとの比較に加え、同期読出し、非同期先読み、均衡メモリ固定、柔軟テンソル保持を段階的に有効化した除去実験で各機構の寄与を測定する。保持戦略については注意機構テンソルを先に残す方式と全結合ネットワーク重みを先に残す方式を比較し、同じメモリ制約でどのテンソル構成が入出力待ちを減らすかを評価する。",
-    "scope": "実機測定ではあるが、スマートフォンや組み込み端末そのものではなく、高性能CPUサーバをcgroupとtasksetで制限して端末条件を模擬している。GPU/NPU経路、モバイルストレージ固有の帯域・熱制約、異なるモデル系列への一般化は直接評価していない。対象モデルは4ビット量子化されたLlama 2とCodeLlamaであり、規則的なTransformer層構造と反復デコードを前提とする。"
-  },
+  "attempt_id": "attempt-6a78403613000a4a7c102a5f",
+  "job_id": "job-research-5ae336587be983aa",
+  "data": {},
   "reservation": {
-    "claim_id": "claim-443ec8e0bdeb1310d8bbdd8b",
+    "claim_id": "claim-6a78403613000a4a7c102a5f",
     "worker_id": "scheduled-chat-discovery-specialist",
     "worker_kind": "scheduled_chat"
   }
