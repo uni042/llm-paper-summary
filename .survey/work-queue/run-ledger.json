@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "history_limit": 384,
-  "updated_at": "2026-09-14T23:11:27.346722+00:00",
+  "updated_at": "2026-09-14T23:14:08.997055+00:00",
   "entries": [
     {
       "run_key": "2026-09-10T23:30:00+09:00",
@@ -18680,7 +18680,7 @@
     {
       "run_key": "2026-09-14T08:30:00+09:00",
       "first_recorded_at": "2026-09-13T23:48:17.478426+00:00",
-      "last_recorded_at": "2026-09-14T23:11:27.346722+00:00",
+      "last_recorded_at": "2026-09-14T23:14:08.997055+00:00",
       "signals": [
         "paper_materialized",
         "research_completed",
@@ -18691,27 +18691,13 @@
       "counts": {
         "research_completed": 76,
         "audit_completed": 0,
-        "discovery_completed": 7,
+        "discovery_completed": 8,
         "blocked": 1,
-        "new_jobs": 14,
+        "new_jobs": 16,
         "new_papers": 79,
         "fallback_archived": 32
       },
       "events": [
-        {
-          "event_id": "34811008477:1",
-          "recorded_at": "2026-09-14T05:49:18.863068+00:00",
-          "github": {
-            "event_name": "push",
-            "workflow": "Survey submission fast lane",
-            "run_id": "34811008477",
-            "run_attempt": "1",
-            "source_sha": "3341575bce87b306e13addf637e2554eb6011400"
-          },
-          "signals": [
-            "research_completed"
-          ]
-        },
         {
           "event_id": "34811853139:1",
           "recorded_at": "2026-09-14T06:03:44.441396+00:00",
@@ -19599,6 +19585,20 @@
           "signals": [
             "discovery_or_queue_expanded"
           ]
+        },
+        {
+          "event_id": "34907581427:1",
+          "recorded_at": "2026-09-14T23:14:08.997055+00:00",
+          "github": {
+            "event_name": "push",
+            "workflow": "Survey helper worker",
+            "run_id": "34907581427",
+            "run_attempt": "1",
+            "source_sha": "166ce8aaf11efc33a6b0f349f8c2a3b7060f622a"
+          },
+          "signals": [
+            "discovery_or_queue_expanded"
+          ]
         }
       ],
       "terminal_transitions": [
@@ -20273,6 +20273,14 @@
           "title": null,
           "from": "ready",
           "to": "completed"
+        },
+        {
+          "job_id": "job-18b34945adc3866a",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null,
+          "from": "ready",
+          "to": "completed"
         }
       ],
       "new_jobs": [
@@ -20373,6 +20381,20 @@
           "type": "discovery",
           "canonical_id": null,
           "title": null
+        },
+        {
+          "job_id": "job-787504f1ddde27c3",
+          "status": "ready",
+          "type": "discovery",
+          "canonical_id": null,
+          "title": null
+        },
+        {
+          "job_id": "job-research-3540240bb76e82ea",
+          "status": "ready",
+          "type": "research",
+          "canonical_id": "arXiv:2507.08045",
+          "title": "Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing"
         }
       ],
       "new_paper_ids": [
@@ -20484,7 +20506,9 @@
         ".survey/work-queue/results/20260915T0812JST-discovery-specialist-pnm-kv-2.json",
         ".survey/work-queue/results/20260915T0817JST-discovery-specialist-cacheflow-3.json",
         ".survey/work-queue/results/20260915T0820JST-discovery-specialist-kv-tp-cost-4.json",
-        ".survey/work-queue/results/20260915T0826JST-discovery-specialist-tiered-storage-5.json"
+        ".survey/work-queue/results/20260915T0826JST-discovery-specialist-tiered-storage-5.json",
+        ".survey/work-queue/results/20260915T0834JST-discovery-specialist-kv-restoration-compression-6.json",
+        ".survey/work-queue/results/20260915T0840JST-discovery-specialist-adaptcache-7.json"
       ],
       "new_fallback_archive_files": [
         ".survey/work-queue/fallback-archive/claimed-attempt-d3e86eed6060f69be7fa32ff-run1357.json",

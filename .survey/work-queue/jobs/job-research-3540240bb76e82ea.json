@@ -1,0 +1,18 @@
+{
+  "job_id": "job-research-3540240bb76e82ea",
+  "type": "research",
+  "parent_job_id": "job-18b34945adc3866a",
+  "priority": 82,
+  "canonical_id": "arXiv:2507.08045",
+  "title": "Krul: Efficient State Restoration for Multi-turn Conversations with Dynamic Cross-layer KV Sharing",
+  "source_url": "https://arxiv.org/abs/2507.08045",
+  "paper_path": "papers/inference/05-kv-cache-memory-management/2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md",
+  "selection_reason": "multi-turn対話のstate restorationで、全KVの再計算/再読込を避けるため、conversationごとのattention similarityに応じてcross-layer KV sharingの圧縮戦略を動的選択し、compressed KVのloadと必要部分のrecomputeをbubble-free pipelineで重畳する。token-wise heterogeneous similarity estimatorで選択自体の計算・保存負荷も抑える。実task評価で品質を維持しつつTTFTを1.5〜2.68倍、KV storageを1.33〜2.35倍改善しており、外部KV復元・圧縮・recompute/I/O schedulingの交点として価値が高い。",
+  "status": "ready",
+  "workflow_version": 10,
+  "artifact_transport": "structured_record_v10",
+  "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+  "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+  "schema_version": 1,
+  "created_at": "2026-09-14T23:11:49+00:00"
+}
