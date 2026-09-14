@@ -1,61 +1,54 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-ca13ac4c701c1eb15266a055",
+  "job_id": "job-research-e2c6f510b1f31074",
   "slot": "results",
-  "attempt_id": "attempt-1ba4b34ba48ccb171084f2bf",
-  "job_id": "job-research-389da9d1d9bafee9",
   "data": {
-    "overview": "標準的なH100上Llama-3.1-8Bでは、VibeServeが生成した実行系は60反復後にvLLMとスループット・トークン間時間でほぼ同等、初回トークン時間も5%以内に到達し、SGLangをスループット5%、初回トークン時間3%上回る。一方、汎用基盤が対象固有の性質を使えない非標準条件では差が大きく、予測済み出力を使うコード編集は5.95倍、ハイブリッドモデルの共有接頭辞は3.45倍、ストリーミング音声認識は1.69倍、MacBook上JSON制約生成は2.6倍、Show-o2画像生成はMacBookで6.27倍、H100で21.4%高速化した。結果は、対象特化が主流条件でも極端な性能劣化を招かず、長い尾の条件では汎用抽象化が隠す最適化を引き出せることを示す。",
+    "overview": "Chimeraは異種モデル組合せと要求率をまたいで、単に待ち時間を削る基準よりも高いタスク性能を同時に達成するPareto前線を形成した。論文抄録は比較可能な条件の総括としてE2E遅延を1.2〜2.4倍改善し、タスク性能を平均8.0〜9.5ポイント向上と報告する。個別条件ではAPPSのQwen1.5B+7BでvLLM比3.4倍高速化と16.0ポイントの性能向上、Qwen1.5B+14Bで2.9倍高速化と10.5ポイント向上、3モデル構成で2.7倍高速化と8.2ポイント向上を示す。MATHではQwen1.5B+7Bで2.5倍高速化と2.2ポイント向上、Qwen1.5B+14Bで2.1倍高速化と5.0ポイント向上を示す。スケジューラ全体の追加費用はE2E遅延の最大2.2%で、多くの条件では1%未満だった。",
     "key_results": [
       {
-        "metric": "標準LLMサービング性能",
-        "value": "vLLMとスループット・TPOTほぼ同等、TTFTは5%以内；SGLang比スループット+5%、TTFT+3%",
-        "baseline": "vLLM、SGLang",
-        "condition": "Llama-3.1-8B-Instruct、NVIDIA H100、8/32/64/128要求毎秒、60反復",
-        "interpretation": "自動生成した専用実行系でも、最も成熟した主流条件で手作業の汎用基盤に近い性能まで到達できる。"
-      },
-      {
-        "metric": "予測出力コード編集の高速化",
-        "value": "vLLM通常デコード比5.95倍、vLLMドラフトモデル投機的デコード比2.0倍",
-        "baseline": "vLLM通常デコード／vLLM投機的デコード",
-        "condition": "Qwen3-32B、H100、CodeEditorBench、ユーザー提供の予測出力を16トークン塊で検証",
-        "interpretation": "既知の編集前コードを無料のドラフトとして使えるというワークロード契約を実行系へ直接組み込むことで、汎用投機的デコードのドラフト計算を不要にした。"
-      },
-      {
-        "metric": "ハイブリッドモデル共有接頭辞のスループット",
-        "value": "vLLM比3.45倍",
+        "metric": "APPS E2E遅延と性能",
+        "value": "vLLM比3.4倍高速化、性能+16.0ポイント",
         "baseline": "vLLM",
-        "condition": "Olmo-Hybrid-7B、NVIDIA L4、32k共有接頭辞＋128トークン固有接尾辞、同時実行20",
-        "interpretation": "AttentionのKVブロックだけでなくDeltaNetの再帰状態を接頭辞境界で保存する二重キャッシュを対象専用に実装し、汎用基盤の再計算を避けた。"
+        "condition": "Qwen2.5-1.5B + 7B、RPS 8/12/16の平均比較",
+        "interpretation": "要求別品質ルーティングと残りワークフロー長優先を組み合わせることで、速度だけを改善するLTR/MLFQより品質も同時に高める。"
       },
       {
-        "metric": "ストリーミング音声認識TTFT",
-        "value": "1.69倍高速化",
-        "baseline": "vLLM Moonshineプラグイン",
-        "condition": "Moonshine Streaming medium、L4、同時実行32、2秒ごとの音声チャンク",
-        "interpretation": "滑動窓Attentionに合わせたストリーム別エンコーダ状態とページ化KVキャッシュを第一級機能として実装し、既存プラグイン経路より再利用を増やした。"
+        "metric": "APPS E2E遅延と性能",
+        "value": "vLLM比2.9倍高速化、性能+10.5ポイント",
+        "baseline": "vLLM",
+        "condition": "Qwen2.5-1.5B + 14B",
+        "interpretation": "大きいモデルの性能利得を利用しつつ混雑時は軽量側へ逃がすことで、強モデル固定より良い前線を作る。"
       },
       {
-        "metric": "MacBook上JSON制約生成遅延",
-        "value": "22.1秒から8.6秒へ短縮、2.6倍高速化",
-        "baseline": "通常自己回帰生成",
-        "condition": "Llama-3.1-8B-Instruct、Apple M3 Pro、JSONSchemaBench",
-        "interpretation": "XGrammar、1Bドラフトモデルによる投機的デコード、対象入力長に合わせたprefill粒度を組み合わせ、Apple統合メモリ環境に合わせた高速経路を得た。"
+        "metric": "APPS 三モデル構成",
+        "value": "vLLM比2.7倍高速化、性能+8.2ポイント",
+        "baseline": "vLLM",
+        "condition": "Qwen2.5-1.5B + 3B + 14B",
+        "interpretation": "候補モデルが増えても、負荷と成功確率を共同利用するルーティングが有効。"
       },
       {
-        "metric": "Show-o2画像生成遅延",
-        "value": "MacBookで6.27倍、H100で21.4%改善",
-        "baseline": "PyTorch-MPS経路／H100基準実装",
-        "condition": "Show-o2 1.5B-HQ、432×432テキスト画像生成",
-        "interpretation": "MacBookではMLX移植、重複SigLIP処理除去、接頭辞KV再利用、CFG分岐の間引きを組み合わせ、H100ではCUDAグラフや不要diffusion token削減など別の最適化系列を生成した。"
+        "metric": "MATH E2E遅延と性能",
+        "value": "vLLM比2.5倍高速化、性能+2.2ポイント",
+        "baseline": "vLLM",
+        "condition": "Qwen2.5-1.5B + 7B",
+        "interpretation": "数学推論でも品質を犠牲にせずワークフロー待ち時間を削減する。"
+      },
+      {
+        "metric": "スケジューラ費用",
+        "value": "E2E遅延の最大2.2%、多くは1%未満",
+        "baseline": "Chimera E2E時間",
+        "condition": "APPS/MATH、RPS 8/16、Qwen1.5B+7B/14B",
+        "interpretation": "意味ルータと長さ予測を非同期バッチ化することで、予測制御自体の費用を小さく保つ。"
       }
     ],
-    "negative_results": "生成された最適化は常に有効ではない。ハイブリッドキャッシュでは最初の6反復が正当性検査に失敗した。ストリーミング音声認識は初期の動作版が既存基盤より遅い0.84倍だった。MacBook JSON生成では3Bドラフトモデルが1Bより遅く、KV量子化、別投機長、mx.compileは改善しなかった。Show-o2のH100評価では過度なトークン削減や単純バッチ化が品質を悪化させ、FlashAttention-2、GQA、torch.compile、fp16変更の一部は出力変化やNaNを生じた。MacBookでも計算律速の本体量子化は悪化し、帯域律速のheadだけINT4が残った。これらの失敗をGit履歴へ残して撤回できること自体が探索設計の一部である。",
-    "interpretation": "主流条件ではvLLMが既にページ化KVキャッシュ、連続バッチ、CUDAグラフ、高性能Attentionカーネルを持つため、自動生成が大幅に上回る余地は小さい。それでも同等まで到達できることが専用生成の基礎能力を示す。非標準条件では、予測出力、32k共有接頭辞と再帰状態、滑動窓音声エンコーダ、Apple統合メモリ、複雑な拡散・言語混成モデルといった配備契約を固定できるため、汎用基盤が維持する互換性や抽象化を捨てて専用データ構造と実行順序を選べる。その差が大きな速度向上につながる。",
-    "quality_impact": "性能候補はユーザー提供の参照実装と正当性チェッカーを通過したものだけが採用されるため、論文上の高速化は意図的な品質低下との交換ではない。ただしチェッカーが観測しない意味的差異まで完全に保証するものではなく、論文もこの制約を明示する。実際、Show-o2では品質回帰やNaNを起こす高速化候補が検査・評価で棄却されており、品質門が探索結果へ実際に影響している。"
+    "negative_results": "性能改善幅はデータセットとモデル組合せに強く依存する。MATHの三モデル構成ではvLLM比2.1倍高速化に対して性能向上は1.6ポイントに留まる。Llama3B+Ministral8BのAPPSでは出力が長く全体遅延が大きく、vLLM比の速度向上は1.2倍である。Oracle PredictorはQwen1.5B+7Bの厳しい遅延制約でさらに改善し、Oracle RouterはQwen1.5B+14Bで前線を改善するため、長さ予測・ルーティング誤差の余地が残る。",
+    "interpretation": "利得は一つのカーネル高速化からではなく、品質が必要な要求だけ強いモデルへ送り、混雑を予測トークン量で避け、さらに短いワークフローを先に完了させる三段階の協調から生じる。遅延スラックを変更すると、同じ実装で低遅延寄りから高性能寄りまで運用点を動かせる。",
+    "quality_impact": "ルーティングによって利用モデル自体を変えるため品質は運用点に依存する。Chimeraは品質を固定して速度だけを上げる方式ではなく、実測では同等遅延域でタスク性能も高めることを目的とする。"
   },
   "reservation": {
-    "claim_id": "claim-1ba4b34ba48ccb171084f2bf",
+    "claim_id": "claim-ca13ac4c701c1eb15266a055",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }

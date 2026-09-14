@@ -1,51 +1,123 @@
 {
   "schema_version": 1,
   "transport_version": 10,
+  "attempt_id": "attempt-ca13ac4c701c1eb15266a055",
+  "job_id": "job-research-e2c6f510b1f31074",
   "slot": "metadata",
-  "attempt_id": "attempt-1ba4b34ba48ccb171084f2bf",
-  "job_id": "job-research-389da9d1d9bafee9",
   "data": {
-    "canonical_id": "arXiv:2605.06068",
-    "arxiv_id": "2605.06068",
-    "doi": null,
+    "canonical_id": "arXiv:2603.22206",
+    "arxiv_id": "2603.22206",
+    "doi": "10.48550/arXiv.2603.22206",
     "openreview_id": null,
-    "arxiv_categories": {"primary": "cs.AI", "cross_list": ["cs.DC"]},
-    "title": "VibeServe: Can AI Agents Build Bespoke LLM Serving Systems?",
-    "summary": "汎用LLMサービング基盤は一般的なデコーダ専用モデルとNVIDIA GPUには高度に最適化されている一方、特殊なモデル構造、既知のワークロード、Apple Siliconなどの異種ハードウェアでは抽象化の都合で最適化機会を逃す。VibeServeはモデル、参照実装、正当性検査、性能ベンチマーク、対象ハードウェアを入力に、複数のコーディングエージェントがサービング基盤そのものを設計・実装・検証・測定する。外側の計画ループがGit履歴、課題表、長期記憶を使って次の最適化を選び、内側では実装担当、正当性判定担当、性能評価担当を新しい文脈で分離することで、長期探索の状態と正当性を保つ。標準条件ではvLLMとほぼ同等に到達し、非標準条件では対象固有の実行方式を自動生成して大幅な性能向上を得る。",
-    "list_summary": "モデル・ワークロード・ハードウェアごとに複数AIエージェントがLLMサービング基盤を生成し、標準条件ではvLLM相当、特殊条件では予測出力・ハイブリッドキャッシュ・Apple Silicon特化などを自動実装して最大6.27倍高速化する。",
-    "authors": ["Keisuke Kamahori", "Shihang Li", "Simon Peter", "Baris Kasikci"],
-    "authors_affiliations": "University of Washington",
-    "published": "2026-05-07",
-    "publication": "arXiv",
-    "publication_type": "Preprint",
-    "publication_status": "Preprint",
-    "lineage": "エージェント駆動システム最適化／LLMサービング基盤自動生成／対象特化実行系",
-    "topics": ["LLMサービング", "AIエージェント", "システム自動生成", "対象特化最適化", "性能探索", "異種ハードウェア"],
-    "importance": "既存のエージェント最適化が単一カーネルや一つの方策など狭いコード面を対象にするのに対し、VibeServeはスケジューラ、キャッシュ、デコード方式、バックエンド選択を含むサービング実行系全体を生成対象にする。汎用基盤を実行時に適応させる発想ではなく、配備前に用途ごとの専用基盤を生成する設計軸を実証している点が重要である。",
-    "hardware_evaluation": "実機評価。標準条件とコード編集にはNVIDIA H100、ハイブリッドモデルと音声認識にはNVIDIA L4 24 GB、ローカルJSON生成と画像生成にはApple M3 Pro・36 GB搭載MacBookを使用する。Show-o2画像生成ではH100とMacBook双方を評価する。",
-    "quality_effect": "各候補はユーザー提供の参照実装と正当性検査を通過したものだけを性能比較へ進める。高速化のために検査を弱めることは禁止され、正当性判定担当が差分と実行挙動を別文脈で検査する。ただし正当性の意味はユーザー提供チェッカーに依存し、論文も完全な意味的検証は対象外と明記する。Show-o2では過度な枝刈りや一部の演算置換が品質悪化やNaNを生じ、採用されなかった。",
-    "source": "https://arxiv.org/abs/2605.06068",
-    "sources": ["https://arxiv.org/abs/2605.06068", "https://arxiv.org/pdf/2605.06068", "https://github.com/uw-syfi/vibe-serve"],
-    "code": "https://github.com/uw-syfi/vibe-serve",
-    "implementation": "公開実装あり。VibeServeは対象ごとの隔離ワークスペース、外側計画ループ、内側の実装担当・正当性判定担当・性能評価担当、MCPを介した構造化状態、サービング知識のAgent Skillsライブラリ、ビルド・実行・測定環境を統合する。評価では各内側エージェントにCodex CLIを使用し、課題追跡型の外側方策で反復する。",
+    "arxiv_categories": {
+      "primary": "cs.LG",
+      "cross_list": []
+    },
+    "title": "Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs",
+    "summary": "複数エージェント型LLMでは、一つの利用者要求が計画・推論・検証など複数段階のLLM呼出しへ展開し、各段階の待ち時間がワークフロー全体の完了時間へ累積する。さらに異なるサイズ・能力のモデルを同時に配備すると、高性能モデルへ要求を集めるほど混雑が増え、単純なモデル選択と単純な待ち行列最適化を別々に行えない。Chimeraは、要求ごとのモデル成功確率を推定する意味ルータ、現在段階以降のワークフロー総出力長を予測するCPU回帰器、各モデルで実行中の予測トークン量を追跡する活動監視器を組み合わせ、最も速い候補から許容遅延範囲内で性能見込みが高いモデルを選ぶ。選択後は予測総出力長が短いワークフローを優先し、長い要求には加齢で救済する。vLLM上の実装をAPPSとMATH、1〜4段階ワークフロー、複数のQwen/Llama/Ministral構成で評価し、比較可能な条件でエンドツーエンド遅延を1.2〜2.4倍改善しつつ平均8.0〜9.5ポイントの性能向上を報告する。",
+    "list_summary": "異種LLM群で要求難易度、残りワークフロー長、実行中トークン量を同時予測し、モデル選択と待ち行列順序を共同制御して遅延とタスク性能のPareto前線を改善する。",
+    "authors": [
+      "Kangqi Ni",
+      "Wenyue Hua",
+      "Xiaoxiang Shi",
+      "Jiang Guo",
+      "Shiyu Chang",
+      "Tianlong Chen"
+    ],
+    "authors_affiliations": "University of North Carolina at Chapel Hill、Microsoft、Carnegie Mellon University、Amazon、University of California Santa Barbara。",
+    "published": "2026-03-23",
+    "publication": "arXiv:2603.22206v1",
+    "publication_type": "プレプリント",
+    "publication_status": "arXiv v1（2026-03-23）。本文はICMLをキーワードとして掲げるが、一次資料上で正式採録済みとは確認できない。",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "複数エージェント型LLMサービング",
+      "異種LLM",
+      "意味ルーティング",
+      "出力長予測",
+      "負荷分散",
+      "ワークフロー認識スケジューリング",
+      "vLLM"
+    ],
+    "importance": "高。異種モデル選択を品質だけでなく混雑による実時間遅延と結び付け、さらに個別要求ではなく残りワークフロー全体の仕事量で優先順位を決める。モデルルーティングとサービングスケジューリングを同一オンライン制御ループへ統合する点が重要である。",
+    "hardware_evaluation": "NVIDIA RTX A6000 49GB GPU実機。",
+    "hardware_details": "Qwen2.5-1.5B/3B/7B/14B-Instruct、Llama3.2-3B-Instruct、Ministral3-8B-Instructを異種組合せで配備し、vLLMを推論バックエンドに使用。",
+    "quality_effect": "高性能モデルを許容遅延範囲で選択するため、単純な最速ルーティングよりタスク性能を上げられる。一方、意味ルータの予測誤差が残り、Oracle Routerとの差がモデル組合せによって観測される。",
+    "storage_targets": [
+      "ワークフロー・モデル割当表",
+      "要求ごとの予測残り出力トークン量",
+      "モデル別実行中トークン量",
+      "モデル別待ち行列優先度"
+    ],
+    "bottlenecks": [
+      "異種モデル間の速度・精度差",
+      "複数段階ワークフローの累積待ち時間",
+      "高性能モデルへの集中による混雑",
+      "長い要求の飢餓",
+      "出力長・成功確率予測誤差"
+    ],
+    "evidence_locations": [
+      "§1",
+      "§3.1-3.8",
+      "§4.1-4.4",
+      "Appendix A-B"
+    ],
+    "source": "https://arxiv.org/abs/2603.22206",
+    "sources": [
+      "https://arxiv.org/abs/2603.22206",
+      "https://arxiv.org/html/2603.22206"
+    ],
+    "code": null,
+    "implementation": "vLLMの上位ミドルウェアとして実装し、OpenAI互換APIを維持する。意味ルータと長さ予測器は非同期バッチサービスとして別ワーカープールで動かし、推論エンジン側の連続バッチ、カーネル実行、KVキャッシュ管理はvLLMへ委譲する。一次資料から著者公式コード公開URLは確認できない。",
     "last_checked": "2026-09-14",
-    "storage_targets": ["GPU HBM", "KVキャッシュ", "Apple統合メモリ", "モデル固有の再帰状態キャッシュ"],
-    "bottlenecks": ["汎用実行系の抽象化オーバーヘッド", "特殊モデルの状態管理", "ワークロード固有の未活用構造", "長期エージェント探索の文脈ドリフト"],
-    "hardware_details": "NVIDIA H100、NVIDIA L4 24 GB、Apple M3 Pro 36 GB MacBook。モデル・ワークロードごとに異なる実機を使用。",
-    "evidence_locations": ["第3節 設計", "第4.1節 評価設定", "第4.2節 結果", "付録A 詳細評価シナリオ"],
     "references": [
-      {"canonical_id": "arXiv:2407.21783", "arxiv_id": "2407.21783"},
-      {"canonical_id": "arXiv:2602.00269", "arxiv_id": "2602.00269"},
-      {"canonical_id": "arXiv:2601.04426", "arxiv_id": "2601.04426"},
-      {"canonical_id": "arXiv:2602.02204", "arxiv_id": "2602.02204"},
-      {"canonical_id": "arXiv:2312.07104", "arxiv_id": "2312.07104"}
+      {
+        "canonical_id": "arXiv:2407.21783",
+        "arxiv_id": "2407.21783"
+      },
+      {
+        "canonical_id": "arXiv:2402.01680",
+        "arxiv_id": "2402.01680"
+      },
+      {
+        "canonical_id": "arXiv:2401.11181",
+        "arxiv_id": "2401.11181"
+      },
+      {
+        "canonical_id": "arXiv:2502.08773",
+        "arxiv_id": "2502.08773"
+      },
+      {
+        "canonical_id": "arXiv:2503.23037",
+        "arxiv_id": "2503.23037"
+      },
+      {
+        "canonical_id": "arXiv:2404.08509",
+        "arxiv_id": "2404.08509"
+      },
+      {
+        "canonical_id": "arXiv:2412.15115",
+        "arxiv_id": "2412.15115"
+      },
+      {
+        "canonical_id": "arXiv:2506.01048",
+        "arxiv_id": "2506.01048"
+      },
+      {
+        "canonical_id": "arXiv:2502.18482",
+        "arxiv_id": "2502.18482"
+      },
+      {
+        "canonical_id": "arXiv:2410.02223",
+        "arxiv_id": "2410.02223"
+      }
     ],
     "references_checked_at": "2026-09-14",
-    "references_source": "primary-reference-section",
-    "references_total": 81
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 47
   },
   "reservation": {
-    "claim_id": "claim-1ba4b34ba48ccb171084f2bf",
+    "claim_id": "claim-ca13ac4c701c1eb15266a055",
     "worker_id": "scheduled-chat-llm-discovery-overflow",
     "worker_kind": "scheduled_chat"
   }
