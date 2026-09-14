@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "workflow_version": 10,
+  "request_id": "claim-20260914T171731Z-scheduled-chat-llm-survey-14",
+  "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+  "worker_kind": "scheduled_chat",
+  "ok": true,
+  "assignments": [
+    {
+      "job_id": "job-research-3ae94af47a718bbb",
+      "claim_id": "claim-109544c151ee7ef15991a199",
+      "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+      "worker_kind": "scheduled_chat",
+      "attempt_id": "attempt-109544c151ee7ef15991a199",
+      "claimed_at": "2026-09-14T17:17:48+00:00",
+      "expires_at": "2026-09-14T18:47:48+00:00",
+      "kind": "research",
+      "depends_on_job_ids": [
+        "job-research-3ae94af47a718bbb"
+      ],
+      "job": {
+        "job_id": "job-research-3ae94af47a718bbb",
+        "type": "research",
+        "parent_job_id": "job-3e83c3cb3a02a998",
+        "priority": 80,
+        "canonical_id": "arXiv:2510.13223",
+        "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
+        "source_url": "https://arxiv.org/abs/2510.13223",
+        "paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.13223-banaserve-dynamic-module-migration.md",
+        "selection_reason": "分離サービングでプリフィル・デコード資源を固定せず、層単位の重み移動、注意機構単位のKV移動、共有Global KV Storeを組み合わせて実行中に再均衡する。接頭辞を考慮するルーティングによる局所的な偏りもキャッシュ配置からルータを解放して抑える設計で、vLLM比1.2〜3.9倍、DistServe比1.1〜2.8倍のスループット向上を報告する。重み移動とKV移動を粒度別に統合するため、分離サービングと階層メモリの交点として価値が高い。",
+        "status": "ready",
+        "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
+        "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
+        "schema_version": 1,
+        "workflow_version": 10,
+        "created_at": "2026-09-12T08:41:28+00:00",
+        "artifact_transport": "structured_record_v10",
+        "repair_required": true,
+        "validation_error": "RecordValidationError: structured record validation failed: problem_method.components[0].description is too short | problem_method.components[1].description is too short | problem_method.components[3].description is too short | problem_method.components[4].description is too short | results.overview must explain the main result and its practical meaning | results.key_results[0] missing: interpretation | results.key_results[1] missing: interpretation | results.key_results[2] missing: interpretation | results.key_results[3] missing: interpretation | results.key_results[4] missing: interpretation | results.key_results[5] missing: interpretation | results.key_results[6] missing: interpretation",
+        "last_validation_failed_at": "2026-09-14T17:16:44+00:00",
+        "validation_errors": [
+          "problem_method.components[0].description is too short",
+          "problem_method.components[1].description is too short",
+          "problem_method.components[3].description is too short",
+          "problem_method.components[4].description is too short",
+          "results.overview must explain the main result and its practical meaning",
+          "results.key_results[0] missing: interpretation",
+          "results.key_results[1] missing: interpretation",
+          "results.key_results[2] missing: interpretation",
+          "results.key_results[3] missing: interpretation",
+          "results.key_results[4] missing: interpretation",
+          "results.key_results[5] missing: interpretation",
+          "results.key_results[6] missing: interpretation"
+        ]
+      },
+      "record_bank": "b",
+      "record_bank_recovery": "repair-required-immutable-descriptor",
+      "record_bank_recovery_attempt_ids": [
+        "attempt-ddaa9f60a004a664b188d7a2"
+      ],
+      "record_bank_recovery_submission": ".survey/work-queue/submissions/research/attempt-ddaa9f60a004a664b188d7a2.json"
+    }
+  ],
+  "processed_at": "2026-09-14T17:17:48+00:00",
+  "checkpoint_released": 0
+}

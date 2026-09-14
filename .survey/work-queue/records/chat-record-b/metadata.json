@@ -2,49 +2,111 @@
   "schema_version": 1,
   "transport_version": 10,
   "slot": "metadata",
-  "attempt_id": "attempt-4b9a71ce575511cd9107babd",
-  "job_id": "job-research-706a6d2571f24fb8",
+  "attempt_id": "attempt-109544c151ee7ef15991a199",
+  "job_id": "job-research-3ae94af47a718bbb",
   "data": {
-    "canonical_id": "arXiv:2603.09046",
-    "arxiv_id": "2603.09046",
-    "doi": "10.48550/arXiv.2603.09046",
+    "canonical_id": "arXiv:2510.13223",
+    "arxiv_id": "2510.13223",
+    "doi": "10.1002/spe.70054",
     "openreview_id": null,
-    "arxiv_categories": {"primary":"cs.CR","cross_list":["cs.LG","cs.OS"]},
-    "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
-    "summary": "端末内大規模言語モデル（LLM）をARM TrustZoneのセキュア世界（secure world）で保護すると、GB級の連続セキュアメモリ確保、通常世界（normal world）と分断された資源管理、NPUの固定隔離が大きな起動遅延と通常アプリへの資源圧迫を生む。FlexServeはアクセス権と管理権を分離し、通常OSから内容は読めないままページ単位で割当・回収できるFlex-Memと、必要時だけセキュア世界へ切り替えるFlex-NPUを構築する。さらに層単位のセキュア推論パイプライン、モデル重み/KVの動的キャッシュ、二段階非同期回収、ワークフロー認識先読みを組み合わせる。NanoPC-T6実機で単一モデルの先頭トークン遅延を素朴なTrustZone構成比平均10.05倍、最適化TrustZone構成比平均2.44倍高速化し、通常アプリ性能を非推論時の97.2%に維持する。",
-    "list_summary": "TrustZoneのアクセス権と資源管理権を分離してページ単位セキュアメモリと切替可能NPUを実現し、LLM向けキャッシュ・回収・先読みでセキュア端末内推論の起動遅延を大幅に削減する。",
-    "authors": ["Yinpeng Wu","Yitong Chen","Lixiang Wang","Jinyu Gu","Zhichao Hua","Yubin Xia"],
-    "authors_affiliations": "Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University",
-    "published": "2026-03-10",
-    "publication": "arXiv:2603.09046v3",
-    "publication_type": "プレプリント",
-    "publication_status": "プレプリント（arXiv v3、2026-07-01改訂）",
-    "lineage": "on-device LLM serving / TEE / TrustZone / mobile NPU isolation",
-    "topics": ["端末内LLM","ARM TrustZone","TEE","NPU隔離","セキュアメモリ","KVキャッシュ","メモリ管理","マルチモデルエージェント"],
-    "importance": "従来のTrustZone設計で固定的にセキュア資源を切り出すのではなく、内容へのアクセスを禁止したまま通常OSへ資源管理権を残す権限分離で、セキュリティと端末資源利用率を両立する。モデル重み・KVの再利用特性までセキュアメモリ回収へ接続する点が、端末内LLMシステムとして重要である。",
-    "hardware_evaluation": "NanoPC-T6開発ボード（8-core CPU、16GB DRAM、6 TOPS NPU、2.65GB/s SSD）で実機評価する。",
-    "hardware_details": "Linux kernel 6.1.57、OP-TEE 4.5.0。NPUはベンダー非公開ランタイムの代わりにコミュニティのリバースエンジニアリング実装を利用してINT8 GEMMを実行する。",
-    "quality_effect": "FlexServe自体はモデルの数値近似を追加しない。同一のINT8モデルをセキュア世界で実行する隔離・資源管理方式であり、主要な交換条件は起動遅延、キャッシュ占有量、通常アプリ性能、保護範囲である。",
-    "storage_targets": ["Flex-Mem","通常世界DRAM","SSD","モデル重みキャッシュ","KVキャッシュ"],
-    "bottlenecks": ["GB級セキュアメモリの連続物理確保","NPUのsecure/normal切替","モデルロードI/O","暗号化・復号","secure/normal間で分断されたメモリ管理"],
-    "evidence_locations": ["§4 Recallable Resource Isolation","§5 FlexServe Framework","§6 Implementation","§7 Evaluation","§8.1 Security Analysis"],
-    "references": [
-      {"canonical_id":"arXiv:2511.13717","arxiv_id":"2511.13717"},
-      {"canonical_id":"arXiv:2409.00088","arxiv_id":"2409.00088"},
-      {"canonical_id":"arXiv:2509.00531","arxiv_id":"2509.00531"},
-      {"canonical_id":"arXiv:2412.08905","arxiv_id":"2412.08905"},
-      {"canonical_id":"arXiv:2503.19786","arxiv_id":"2503.19786"}
+    "arxiv_categories": {
+      "primary": "cs.DC",
+      "cross_list": []
+    },
+    "title": "BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure",
+    "summary": "BanaServeは、プリフィルとデコードを別GPU群へ固定分割する分離型LLMサービングで、負荷が変動すると一方が過負荷でも他方の計算・メモリ資源を使えない問題と、接頭辞キャッシュの局所性を優先するルーティングが高ヒット率ノードへ要求を集中させる問題を同時に扱う。粗い再均衡では連続するTransformer層の重みと対応KVキャッシュを別GPUへ移し、細かな再均衡では注意ヘッド単位にKV状態だけを低負荷GPUへ移して注意計算を分担する。さらにCPU/SSDを背後に持つ共有Global KV Cache Storeへ接頭辞KVを集約し、各プリフィルGPUが同じキャッシュへアクセスできるようにすることで、ルータをキャッシュ配置から解放し、計算・メモリ負荷だけで配送可能にする。KV転送は層ごとに次層の取得、現層の計算、前層の保存を重ねて隠蔽する。LLaMA-13BとOPT-13B、AlpacaとLongBench、1〜20 RPSでvLLM・DistServeと比較し、条件によりvLLM比1.2〜3.9倍、DistServe比1.1〜2.8倍のスループット向上と大幅な遅延低下を報告する。ただし制御は反応型で、異種ハードウェアや複数地域は未対応である。",
+    "list_summary": "分離サービングの固定GPU配分と接頭辞キャッシュ偏在を、層単位の重み移動・注意ヘッド単位のKV移動・CPU/SSD共有KVストアで切り離し、負荷だけを見た再配置とルーティングを可能にする。",
+    "authors": [
+      "Yiyuan He",
+      "Minxian Xu",
+      "Jingfeng Wu",
+      "Jianmin Hu",
+      "Chong Ma",
+      "Min Shen",
+      "Le Chen",
+      "Chengzhong Xu",
+      "Lin Qu",
+      "Kejiang Ye"
     ],
-    "references_checked_at": "2026-09-14",
-    "references_source": "arXiv:2603.09046v3 一次資料の参考文献節",
-    "references_total": 80,
-    "source": "https://arxiv.org/abs/2603.09046",
-    "sources": ["https://arxiv.org/abs/2603.09046","https://arxiv.org/pdf/2603.09046"],
-    "code": null,
-    "implementation": "NanoPC-T6上に試作実装。Flex-Monitor約4.5K LoC、C/C++の信頼アプリケーション（Trusted Application）としてFlexServe Framework約8.3K LoCを実装し、Llama3/Qwen3系列をサポートする。論文本文からFlexServe本体の公開リポジトリURLは確認できない。",
-    "last_checked": "2026-09-14",
-    "last_audited": null,
-    "audit_version": 0
+    "authors_affiliations": "Southern University of Science and Technology; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences; State Key Lab of IOTSC, University of Macau; Alibaba Group AIOS Team.",
+    "published": "2025-10-15",
+    "publication": "Software: Practice and Experience 2026; DOI 10.1002/spe.70054",
+    "publication_type": "学術誌論文",
+    "publication_status": "Journal reference listed on arXiv; arXiv v1 dated 2025-10-15",
+    "lineage": "llm-serving-scheduling-disaggregation",
+    "topics": [
+      "プリフィル・デコード分離",
+      "動的モジュール移動",
+      "KVキャッシュ共有",
+      "CPU/SSD KVストア",
+      "負荷分散",
+      "階層メモリ"
+    ],
+    "importance": "高。計算配置とKV状態配置の結合を解くため、重み・注意ヘッド・共有KVストアという異なる粒度を組み合わせ、分離サービングと階層メモリの双方に直接関係する。",
+    "hardware_evaluation": "実機評価。13Bモデルを用い、Alibaba AIOS Team提供の大規模実験基盤で性能検証したと本文が記載する。本文テキストから本評価クラスタのGPU型式・台数の完全な構成は確認できない。",
+    "hardware_details": "導入部の資源利用分析では単一A100上のLLaMA-13Bを使用。主評価ではLLaMA-13B/OPT-13Bを用いたが、HTML本文で評価クラスタのGPU型式・台数を明示する記述は確認できなかったため推測しない。共有KVストアはCPU/SSD-backedとして設計され、例示計算では200 Gbpsの有効帯域を用いる。",
+    "quality_effect": "システム性能を主対象とし、モデルの意味品質を変更する圧縮・近似は導入しない。層移動では重みとKV状態を共に移し、注意ヘッド分割でも部分結果を合成して元の注意計算を再現する設計だが、タスク品質指標の比較は主評価では報告されていない。",
+    "storage_targets": [
+      "GPU上のモデル重み",
+      "GPU上のKVキャッシュ",
+      "共有CPU/SSD-backed Global KV Cache Store"
+    ],
+    "bottlenecks": [
+      "固定されたプリフィル／デコードGPU比率",
+      "プリフィルとデコード間の計算・メモリ利用率非対称",
+      "接頭辞キャッシュ局所性によるルーティング偏り",
+      "重み移動コスト",
+      "KVキャッシュ転送",
+      "動的負荷変動"
+    ],
+    "evidence_locations": [
+      "§1 Introduction",
+      "§2.3–2.4",
+      "§4.1 Dynamic Migration For Modules",
+      "§4.2 Global KV Cache Store",
+      "§4.3 Performance Model",
+      "§4.4 Runtime Algorithms",
+      "§5 Evaluations",
+      "§6 Conclusions, Discussions and Future Work"
+    ],
+    "source": "https://arxiv.org/abs/2510.13223",
+    "sources": [
+      "https://arxiv.org/abs/2510.13223",
+      "https://arxiv.org/html/2510.13223v1",
+      "https://doi.org/10.1002/spe.70054"
+    ],
+    "code": "",
+    "implementation": "vLLMおよびDistServe系のサービング基盤上にBanaServeを実装したと本文に記載。確認したarXivページと本文には著者公式コードリポジトリURLの明示はない。",
+    "last_checked": "2026-09-15",
+    "references": [
+      {
+        "canonical_id": "arXiv:2407.00079",
+        "arxiv_id": "2407.00079"
+      },
+      {
+        "canonical_id": "arXiv:2406.17565",
+        "arxiv_id": "2406.17565"
+      },
+      {
+        "canonical_id": "arXiv:2501.14743",
+        "arxiv_id": "2501.14743"
+      },
+      {
+        "canonical_id": "arXiv:2504.19867",
+        "arxiv_id": "2504.19867"
+      },
+      {
+        "canonical_id": "arXiv:2401.08671",
+        "arxiv_id": "2401.08671"
+      }
+    ],
+    "references_checked_at": "2026-09-15",
+    "references_source": "arXiv v1 HTML参考文献節",
+    "references_total": 37
   },
-  "reservation": {"claim_id":"claim-4b9a71ce575511cd9107babd","worker_id":"scheduled-chat-llm-survey-20260915T0130JST","worker_kind":"scheduled_chat"}
+  "reservation": {
+    "claim_id": "claim-109544c151ee7ef15991a199",
+    "worker_id": "scheduled-chat-llm-survey-20260915T0130JST",
+    "worker_kind": "scheduled_chat"
+  }
 }
