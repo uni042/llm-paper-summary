@@ -66,6 +66,47 @@ class FallbackDispatchBatchTests(unittest.TestCase):
             self.assertFalse((inbox / "env-b.json").exists())
             self.assertEqual(result["deferred"][0]["id"], "env-a")
 
+    def test_record_wave_never_reuses_a_bank_before_it_is_pinned(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            inbox = root / ft.FALLBACK_INBOX
+            write_json(inbox / "env-a.json", {"id": "env-a", "kind": "research"})
+            write_json(inbox / "env-b.json", {"id": "env-b", "kind": "research"})
+            observed_exclusions: list[set[str]] = []
+
+            def materialize(_root: Path, raw: dict, *, excluded_banks=None) -> dict:
+                excluded = set(excluded_banks or ())
+                observed_exclusions.append(excluded)
+                bank = next(bank for bank in ("a", "b") if bank not in excluded)
+                return {
+                    "action": "materialized",
+                    "job_id": f"job-{raw['id']}",
+                    "record_bank": bank,
+                    "descriptor": f".survey/work-queue/submissions/research/attempt-{raw['id']}.json",
+                    "changed_paths": [],
+                }
+
+            with (
+                mock.patch.object(dispatcher, "_is_record_fallback", return_value=True),
+                mock.patch.object(dispatcher.record_replay, "materialize", side_effect=materialize),
+            ):
+                result = dispatcher.dispatch(root, max_items=50)
+
+            self.assertEqual([row["record_bank"] for row in result["processed"]], ["a", "b"])
+            self.assertEqual(observed_exclusions, [set(), {"a"}])
+
+    def test_record_only_mode_leaves_generic_fallback_for_ordinary_dispatch(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            inbox = root / ft.FALLBACK_INBOX
+            write_json(inbox / "generic.json", {"schema_version": 1, "id": "generic", "writes": []})
+
+            with mock.patch.object(dispatcher, "_is_record_fallback", return_value=False):
+                result = dispatcher.dispatch(root, max_items=50, record_only=True)
+
+            self.assertEqual(result["processed_count"], 0)
+            self.assertTrue((inbox / "generic.json").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()
